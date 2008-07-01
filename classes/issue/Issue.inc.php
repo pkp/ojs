@@ -1,18 +1,24 @@
 <?php
 
 /**
- * @file Issue.inc.php
+ * @defgroup issue
+ */
+ 
+/**
+ * @file classes/issue/Issue.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package issue
  * @class Issue
+ * @ingroup issue
+ * @see IssueDAO
  *
- * Class for Issue.
- *
- * $Id$
+ * @brief Class for Issue.
  */
+
+// $Id$
+
 
 define('ISSUE_DEFAULT', 0);
 define('OPEN_ACCESS', 1);

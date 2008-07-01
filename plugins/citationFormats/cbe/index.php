@@ -1,17 +1,22 @@
 <?php
 
 /**
- * @file index.php
+ * @defgroup plugins_citationFormats_cbe
+ */
+ 
+/**
+ * @file plugins/citationFormats/cbe/index.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Wrapper for CBE citation plugin.
+ * @ingroup plugins_citationFormats_cbe
+ * @brief Wrapper for CBE citation plugin.
  *
- * @package plugins.citationFormats.cbe
- *
- * $Id$
  */
+
+// $Id$
+
 
 require_once('CbeCitationPlugin.inc.php');
 

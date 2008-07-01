@@ -1,18 +1,23 @@
 <?php
 
 /**
- * @file FormError.inc.php
+ * @defgroup form
+ */
+ 
+/**
+ * @file classes/form/FormError.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package form
  * @class FormError
+ * @ingroup form
  *
- * Class to represent a form validation error.
- *
- * $Id$
+ * @brief Class to represent a form validation error.
  */
+
+// $Id$
+
 
 class FormError {
 

@@ -1,18 +1,20 @@
 <?php
 
 /**
- * @file RTDAO.inc.php
+ * @file classes/rt/ojs/RTDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package rt.ojs
  * @class RTDAO
+ * @ingroup rt_ojs
+ * @see RT
  *
- * DAO operations for the OJS Reading Tools interface.
- *
- * $Id$
+ * @brief DAO operations for the OJS Reading Tools interface.
  */
+
+// $Id$
+
 
 import('rt.ojs.JournalRT');
 

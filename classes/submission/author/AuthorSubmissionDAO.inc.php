@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file AuthorSubmissionDAO.inc.php
+ * @file classes/submission/author/AuthorSubmissionDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package submission
  * @class AuthorSubmissionDAO
+ * @ingroup submission
+ * @see AuthorSubmission
  *
- * Class for AuthorSubmission DAO.
- * Operations for retrieving and modifying AuthorSubmission objects.
- *
- * $Id$
+ * @brief Operations for retrieving and modifying AuthorSubmission objects.
  */
+
+// $Id$
+
 
 import('submission.author.AuthorSubmission');
 

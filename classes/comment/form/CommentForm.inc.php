@@ -1,18 +1,25 @@
 <?php
 
 /**
- * @file CommentForm.inc.php
+ * @defgroup rt_ojs_form
+ */
+ 
+
+/**
+ * @file classes/comment/form/CommentForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package rt.ojs.form
  * @class CommentForm
+ * @ingroup rt_ojs_form
+ * @see Comment, CommentDAO
  *
- * Form to change metadata information for an RT comment.
- *
- * $Id$
+ * @brief Form to change metadata information for an RT comment.
  */
+
+// $Id$
+
 
 import('form.Form');
 

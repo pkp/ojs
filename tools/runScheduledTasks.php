@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package tools
  * @class runScheduledTasks
+ * @ingroup tools
  *
- * CLI tool to execute a set of scheduled tasks.
- *
- * $Id$
+ * @brief CLI tool to execute a set of scheduled tasks.
  */
+
+// $Id$
+
 
 require(dirname(__FILE__) . '/includes/cliTool.inc.php');
 

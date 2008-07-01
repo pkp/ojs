@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file AuthorSubmitSuppFileForm.inc.php
+ * @file classes/author/form/submit/AuthorSubmitSuppFileForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package author.form.submit
  * @class AuthorSubmitSuppFileForm
+ * @ingroup author_form_submit
  *
- * Supplementary file author submission form.
- *
- * $Id$
+ * @brief Supplementary file author submission form.
  */
+
+// $Id$
+
 
 import('form.Form');
 

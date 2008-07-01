@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file VirtualArrayIterator.inc.php
+ * @file classes/core/VirtualArrayIterator.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package db
  * @class VirtualArrayIterator
+ * @ingroup db
  *
- * Provides paging and iteration for "virtual" arrays -- arrays for which only
+ * @brief Provides paging and iteration for "virtual" arrays -- arrays for which only
  * the current "page" is available, but are much bigger in entirety.
- *
- * $Id$
  */
+
+// $Id$
+
 
 import('core.ItemIterator');
 

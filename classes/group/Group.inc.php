@@ -1,19 +1,24 @@
 <?php
 
 /**
- * @file Group.inc.php
+ * @defgroup group
+ */
+ 
+/**
+ * @file classes/group/Group.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package group
  * @class Group
+ * @ingroup group
+ * @see GroupDAO
  *
- * Group class.
- * Describes user groups in journals.
- *
- * $Id$
+ * @brief Describes user groups in journals.
  */
+
+// $Id$
+
 
 define('GROUP_CONTEXT_EDITORIAL_TEAM',	0x000001);
 define('GROUP_CONTEXT_PEOPLE',		0x000002);

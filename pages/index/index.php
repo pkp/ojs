@@ -1,17 +1,22 @@
 <?php
 
 /**
- * @file index.php
+ * @defgroup pages_index
+ */
+ 
+/**
+ * @file pages/index/index.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Handle site index requests. 
+ * @ingroup pages_index
+ * @brief Handle site index requests. 
  *
- * @package pages.index
- *
- * $Id$
  */
+
+// $Id$
+
 
 define('HANDLER_CLASS', 'IndexHandler');
 

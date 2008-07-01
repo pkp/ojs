@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file UpgradeForm.inc.php
+ * @file classes/install/form/UpgradeForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package install.form
  * @class UpgradeForm
+ * @ingroup install_form
  *
- * Form for system upgrades.
- *
- * $Id$
+ * @brief Form for system upgrades.
  */
+
+// $Id$
+
 
 import('install.Upgrade');
 import('form.Form');

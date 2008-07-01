@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package tools
  * @class migrate
+ * @ingroup tools
  *
- * CLI tool for migrating OJS 1.x data to OJS 2.
- *
- * $Id$
+ * @brief CLI tool for migrating OJS 1.x data to OJS 2.
  */
+
+// $Id$
+
 
 require(dirname(__FILE__) . '/includes/cliTool.inc.php');
 

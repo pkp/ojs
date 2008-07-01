@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file PluginHelpMappingFile.inc.php
+ * @file classes/help/PluginHelpMappingFile.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package help
  * @class PluginHelpMappingFile
+ * @ingroup help
  * 
- * Abstracts the plugin's help mapping XML files.
- *
- * $Id$
+ * @brief Abstracts the plugin's help mapping XML files.
  */
+
+// $Id$
+
 
 import('help.HelpMappingFile');
 

@@ -1,19 +1,23 @@
 <?php
 
 /**
- * @file Locale.inc.php
+ * @defgroup i89
+ */
+ 
+/**
+ * @file classes/i18n/Locale.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package i18n
  * @class Locale
+ * @ingroup i18n
  *
- * Internationalization class. 
- * Provides methods for loading locale data and translating strings identified by unique keys
- *
- * $Id$
+ * @brief Provides methods for loading locale data and translating strings identified by unique keys
  */
+
+// $Id$
+
 
 import('i18n.LocaleFile');
 

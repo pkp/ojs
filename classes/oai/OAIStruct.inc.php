@@ -1,18 +1,20 @@
 <?php
 
 /**
- * @file OAIStruct.inc.php
+ * @file classes/oai/OAIStruct.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package oai
  * @class OAIConfig
+ * @ingroup oai
+ * @see OAI
  *
- * Data structures associated with the OAI request handler.
- *
- * $Id$
+ * @brief Data structures associated with the OAI request handler.
  */
+
+// $Id$
+
 
 /**
  * OAI repository configuration.

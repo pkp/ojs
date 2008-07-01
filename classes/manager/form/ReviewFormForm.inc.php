@@ -1,15 +1,16 @@
 <?php
 
 /**
- * @file ReviewFormForm.inc.php
+ * @file classes/manager/form/ReviewFormForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package manager.form
  * @class ReviewFormForm
+ * @ingroup manager_form
+ * @see ReviewForm
  *
- * Form for creating and modifying review forms.
+ * @brief Form for creating and modifying review forms.
  *
  */
 

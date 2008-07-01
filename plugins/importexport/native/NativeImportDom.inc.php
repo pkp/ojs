@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.importexport.native
  * @class NativeImportDom
+ * @ingroup plugins_importexport_native
  *
- * Native import/export plugin DOM functions for import
- *
- * $Id$
+ * @brief Native import/export plugin DOM functions for import
  */
+
+// $Id$
+
 
 import('xml.XMLCustomWriter');
 

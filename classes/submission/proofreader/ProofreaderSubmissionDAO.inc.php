@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file ProofreaderSubmissionDAO.inc.php
+ * @file classes/submission/proofreader/ProofreaderSubmissionDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package submission.proofreader
  * @class ProofreaderSubmissionDAO
+ * @ingroup submission_proofreader
+ * @see ProofreaderSubmission
  *
- * Class for ProofreaderSubmission DAO.
- * Operations for retrieving and modifying ProofreaderSubmission objects.
- *
- * $Id$
+ * @brief Operations for retrieving and modifying ProofreaderSubmission objects.
  */
+
+// $Id$
+
 
 import('submission.proofreader.ProofreaderSubmission');
 

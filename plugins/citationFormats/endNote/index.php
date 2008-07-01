@@ -1,17 +1,22 @@
 <?php
 
 /**
- * @file index.php
+ * @defgroup plugins_citationFormats_endNote
+ */
+ 
+/**
+ * @file plugins/citationFormats/endNote/index.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Wrapper for EndNote citation plugin.
+ * @ingroup plugins_citationFormats_endNote
+ * @brief Wrapper for EndNote citation plugin.
  *
- * @package plugins.citationFormats.endNote
- *
- * $Id$
  */
+
+// $Id$
+
 
 require_once('EndNoteCitationPlugin.inc.php');
 

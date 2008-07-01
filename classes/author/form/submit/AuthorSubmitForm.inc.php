@@ -1,18 +1,23 @@
 <?php
 
 /**
- * @file AuthorSubmitForm.inc.php
+ * @defgroup author_form_submit
+ */
+ 
+/**
+ * @file classes/author/form/submit/AuthorSubmitForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package author.form.submit
  * @class AuthorSubmitForm
+ * @ingroup author_form_submit
  *
- * Base class for journal author submit forms.
- *
- * $Id$
+ * @brief Base class for journal author submit forms.
  */
+
+// $Id$
+
 
 import('form.Form');
 

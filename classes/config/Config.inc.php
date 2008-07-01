@@ -1,18 +1,23 @@
 <?php
 
 /**
- * @file Config.inc.php
+ * @defgroup config
+ */
+ 
+/**
+ * @file classes/config/Config.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package config
  * @class Config
+ * @ingroup config
  *
- * Config class for accessing configuration parameters.
- *
- * $Id$
+ * @brief Config class for accessing configuration parameters.
  */
+
+// $Id$
+
 
 /** The path to the configuration file */
 define('CONFIG_FILE', Core::getBaseDir() . DIRECTORY_SEPARATOR . 'config.inc.php');

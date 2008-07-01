@@ -1,16 +1,16 @@
 <?php
 
 /**
- * @file ReviewFormResponse.inc.php
+ * @file classes/reviewForm/ReviewFormResponse.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package reivewForm
  * @class ReviewFormResponse
+ * @ingroup reviewForm
+ * @see ReviewFormResponseDAO
  *
- * ReviewFormResponse class.
- * Basic class describing a review form response.
+ * @brief Basic class describing a review form response.
  *
  */
 

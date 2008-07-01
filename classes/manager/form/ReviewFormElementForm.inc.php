@@ -1,15 +1,16 @@
 <?php
 
 /**
- * @file ReviewFormElementForm.inc.php
+ * @file classes/manager/form/ReviewFormElementForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package manager.form
  * @class ReviewFormElementForm
+ * @ingroup manager_form
+ * @see ReviewFormElement
  *
- * Form for creating and modifying review form elements.
+ * @brief Form for creating and modifying review form elements.
  *
  */
 

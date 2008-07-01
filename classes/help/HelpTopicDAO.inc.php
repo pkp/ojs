@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file HelpTopicDAO.inc.php
+ * @file classes/help/HelpTopicDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package help
  * @class HelpTopicDAO
+ * @ingroup help
+ * @see HelpTopic
  *
- * Class for HelpTopic DAO.
- * Operations for retrieving HelpTopic objects.
- *
- * $Id$
+ * @brief Operations for retrieving HelpTopic objects.
  */
+
+// $Id$
+
 
 import('help.HelpTopic');
 

@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file FormValidatorArray.inc.php
+ * @file classes/form/validation/FormValidatorArray.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package form.validation
  * @class FormValidatorArray
+ * @ingroup form_validation
  *
- * Form validation check that checks an array of fields.
- *
- * $Id$
+ * @brief Form validation check that checks an array of fields.
  */
+
+// $Id$
+
 
 import('form.validation.FormValidatorArray');
 

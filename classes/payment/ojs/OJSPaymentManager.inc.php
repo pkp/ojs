@@ -1,15 +1,16 @@
 <?php
 
 /**
- * @file PaymentManager.inc.php
+ * @file classes/payment/ojs/PaymentManager.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package payment
  * @class	OJSPaymentManager
+ * @ingroup payment
+ * @see OJSQueuedPayment
  *
- * Provides payment management functions.
+ * @brief Provides payment management functions.
  *
  */
 

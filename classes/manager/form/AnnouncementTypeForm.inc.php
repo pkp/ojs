@@ -1,18 +1,20 @@
 <?php
 
 /**
- * @file AnnouncementTypeForm.inc.php
+ * @file classes/manager/form/AnnouncementTypeForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package manager.form
  * @class AnnouncementTypeForm
+ * @ingroup manager_form
+ * @see AnnouncementForm
  *
- * Form for journal managers to create/edit announcement types.
- *
- * $Id$
+ * @brief Form for journal managers to create/edit announcement types.
  */
+
+// $Id$
+
 
 import('form.Form');
 

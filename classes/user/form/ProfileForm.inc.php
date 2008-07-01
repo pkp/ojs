@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file ProfileForm.inc.php
+ * @file classes/user/form/ProfileForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package user.form
  * @class ProfileForm
+ * @ingroup user_form
  *
- * Form to edit user profile.
- *
- * $Id$
+ * @brief Form to edit user profile.
  */
+
+// $Id$
+
 
 import('form.Form');
 

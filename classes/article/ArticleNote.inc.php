@@ -1,18 +1,20 @@
 <?php
 
 /**
- * @file ArticleNote.inc.php
+ * @file classes/article/ArticleNote.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package article
  * @class ArticleNote
+ * @ingroup article
+ * @see ArticleNoteDAO
  *
- * Class for ArticleNote.
- *
- * $Id$
+ * @brief Class for ArticleNote.
  */
+
+// $Id$
+
 
 import('article.ArticleFile');
 

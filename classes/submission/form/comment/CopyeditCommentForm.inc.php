@@ -1,18 +1,20 @@
 <?php
 
 /**
- * @file CopyeditCommentForm.inc.php
+ * @file classes/submission/form/comment/CopyeditCommentForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package submission.form
  * @class CopyeditCommentForm
+ * @ingroup submission_form
+ * @see Form
  *
- * CopyeditComment form.
- *
- * $Id$
+ * @brief CopyeditComment form.
  */
+
+// $Id$
+
 
 import("submission.form.comment.CommentForm");
 

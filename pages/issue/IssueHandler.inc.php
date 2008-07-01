@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package pages.issue
  * @class IssueHandler
+ * @ingroup pages_issue
  *
- * Handle requests for issue functions.
- *
- * $Id$
+ * @brief Handle requests for issue functions.
  */
+
+// $Id$
+
 
 import ('issue.IssueAction');
 

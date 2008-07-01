@@ -1,17 +1,22 @@
 <?php
 
 /**
- * @file index.php
+ * @defgroup plugins_blocks_help
+ */
+ 
+/**
+ * @file plugins/blocks/help/index.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Wrapper for help block plugin.
+ * @ingroup plugins_blocks_help
+ * @brief Wrapper for help block plugin.
  *
- * @package plugins.blocks.help
- *
- * $Id$
  */
+
+// $Id$
+
 
 require_once('HelpBlockPlugin.inc.php');
 

@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file SuppFileDAO.inc.php
+ * @file classes/article/SuppFileDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package article
  * @class SuppFileDAO
+ * @ingroup article
+ * @see SuppFile
  *
- * Class for SuppFile DAO.
- * Operations for retrieving and modifying SuppFile objects.
- *
- * $Id$
+ * @brief Operations for retrieving and modifying SuppFile objects.
  */
+
+// $Id$
+
 
 import('article.SuppFile');
 

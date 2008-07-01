@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file SubscriptionType.inc.php
+ * @file classes/subscription/SubscriptionType.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package subscription 
- * @class SubscriptionType
+ * @class Subscriptiontyoe
+ * @ingroup subscription 
+ * @see SubscriptionTypeDAO
  *
- * Subscription type class.
- * Basic class describing a subscription type.
- *
- * $Id$
+ * @brief Basic class describing a subscription type.
  */
+
+// $Id$
+
 
 /**
  * Subscription type formats

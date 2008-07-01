@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file FormValidatorLength.inc.php
+ * @file classes/form/validation/FormValidatorLength.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package form.validation
  * @class FormValidatorLength
+ * @ingroup form_validation
  *
- * Form validation check that checks if a field's length meets certain requirements.
- *
- * $Id$
+ * @brief Form validation check that checks if a field's length meets certain requirements.
  */
+
+// $Id$
+
 
 import ('form.validation.FormValidator');
 

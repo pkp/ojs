@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.translator
  * @class TranslatorAction
+ * @ingroup plugins_generic_translator
  *
- * Perform various tasks related to translation.
- *
- * $Id$
+ * @brief Perform various tasks related to translation.
  */
+
+// $Id$
+
 
 /** This command is used to execute tar. */
 define('TAR_COMMAND', '/bin/tar cz');

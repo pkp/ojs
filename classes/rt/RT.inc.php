@@ -1,18 +1,25 @@
 <?php
 
 /**
- * @file RT.inc.php
+ * @defgroup rt
+ */
+ 
+
+/**
+ * @file classes/rt/RT.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package rt
  * @class RT
+ * @ingroup rt
+ * @see RTDAO
  *
- * Class to process and respond to Reading Tools requests.
- *
- * $Id$
+ * @brief Class to process and respond to Reading Tools requests.
  */
+
+// $Id$
+
 
 import('rt.RTStruct');
 

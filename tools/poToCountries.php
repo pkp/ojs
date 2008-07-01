@@ -6,14 +6,15 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package tools
  * @class poToCountries
+ * @ingroup tools
  *
- * CLI tool to convert a .PO file for ISO3166 into the countries.xml format
+ * @brief CLI tool to convert a .PO file for ISO3166 into the countries.xml format
  * supported by the PKP suite.
- *
- * $Id$
  */
+
+// $Id$
+
 
 require(dirname(__FILE__) . '/includes/cliTool.inc.php');
 

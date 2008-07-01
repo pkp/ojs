@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file GenericPlugin.inc.php
+ * @file classes/plugins/GenericPlugin.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins
  * @class GenericPlugin
+ * @ingroup plugins
  *
- * Abstract class for generic plugins
- *
- * $Id$
+ * @brief Abstract class for generic plugins
  */
+
+// $Id$
+
 
 import('plugins.Plugin');
 

@@ -1,19 +1,19 @@
 <?php
 
 /**
- * @file ArticleHTMLGalley.inc.php
+ * @file classes/article/ArticleHTMLGalley.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package article
  * @class ArticleHTMLGalley
+ * @ingroup article
  *
- * ArticleHTMLGalley class.
- * An HTML galley may include an optional stylesheet and set of images.
- *
- * $Id$
+ * @brief An HTML galley may include an optional stylesheet and set of images.
  */
+
+// $Id$
+
 
 import('article.ArticleGalley');
 

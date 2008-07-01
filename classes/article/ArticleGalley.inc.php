@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file ArticleGalley.inc.php
+ * @file classes/article/ArticleGalley.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package article
  * @class ArticleGalley
+ * @ingroup article
+ * @see ArticleGalleyDAO
  *
- * ArticleGalley class.
- * A galley is a final presentation version of the full-text of an article.
- *
- * $Id$
+ * @brief A galley is a final presentation version of the full-text of an article.
  */
+
+// $Id$
+
 
 import('article.ArticleFile');
 

@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file FormValidatorArrayCustom.inc.php
+ * @file classes/form/validation/FormValidatorArrayCustom.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package form.validation
  * @class FormValidatorArrayCustom
+ * @ingroup form_validation
  *
- * Form validation check with a custom user function performing the validation check of an array of fields.
- *
- * $Id$
+ * @brief Form validation check with a custom user function performing the validation check of an array of fields.
  */
+
+// $Id$
+
 
 import('form.validation.FormValidator');
 

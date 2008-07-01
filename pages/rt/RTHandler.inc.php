@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package pages.rt
  * @class RTHandler
+ * @ingroup pages_rt
  *
- * Handle Reading Tools requests. 
- *
- * $Id$
+ * @brief Handle Reading Tools requests. 
  */
+
+// $Id$
+
 
 import('rt.RT');
 

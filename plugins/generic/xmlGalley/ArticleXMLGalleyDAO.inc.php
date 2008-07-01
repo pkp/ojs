@@ -6,15 +6,16 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.xmlGalley
  * @class ArticleXMLGalleyDAO
+ * @ingroup plugins_generic_xmlGalley
  *
- * Extended DAO methods for XML-derived galleys
+ * @brief Extended DAO methods for XML-derived galleys
  * NB: These require access to a number of hooks in ArticleGalleyDAO
  * to override the default methods; this is prime for refactoring!
- *
- * $Id$
  */
+
+// $Id$
+
 
 import('classes.article.ArticleGalleyDAO');
 

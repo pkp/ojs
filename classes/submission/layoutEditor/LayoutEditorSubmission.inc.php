@@ -1,19 +1,24 @@
 <?php
 
 /**
- * @file LayoutEditorSubmission.inc.php
+ * @defgroup submission_layoutEditor
+ */
+ 
+/**
+ * @file classes/submission/layoutEditor/LayoutEditorSubmission.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package submission.layoutEditor
  * @class LayoutEditorSubmission
+ * @ingroup submission_layoutEditor
+ * @see LayoutEditorSubmissionDAO
  *
- * LayoutEditorSubmission class.
- * Describes a layout editor's view of a submission
- *
- * $Id$
+ * @brief Describes a layout editor's view of a submission
  */
+
+// $Id$
+
 
 import('article.Article');
 

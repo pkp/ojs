@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.phpMyVisites
  * @class PhpMyVisitesPlugin
+ * @ingroup plugins_generic_phpMyVisites
  *
- * phpMyVisites plugin class
- *
- * $Id$
+ * @brief phpMyVisites plugin class
  */
+
+// $Id$
+
 
 import('classes.plugins.GenericPlugin');
 

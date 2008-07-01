@@ -1,18 +1,20 @@
 <?php
 
 /**
- * @file ArticleEmailLogDAO.inc.php
+ * @file classes/article/log/ArticleEmailLogDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package article.log
  * @class ArticleEmailLogDAO
+ * @ingroup article_log
+ * @see ArticleEmailLogEntry, ArticleLog
  *
- * Class for inserting/accessing article email log entries.
- *
- * $Id$
+ * @brief Class for inserting/accessing article email log entries.
  */
+
+// $Id$
+
 
 import ('article.log.ArticleEmailLogEntry');
 

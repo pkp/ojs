@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file HelpTopicSection.inc.php
+ * @file classes/help/HelpTopicSection.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package help
  * @class HelpTopicSection
+ * @ingroup help
  *
- * Help section class, designated a subsection of a topic.
+ * @brief Help section class, designated a subsection of a topic.
  * A HelpTopicSection is associated with a single HelpTopic.
- *
- * $Id$
  */
+
+// $Id$
+
 
 class HelpTopicSection extends DataObject {
 

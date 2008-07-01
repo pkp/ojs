@@ -6,13 +6,14 @@
  * Copyright (c) 2006-2007 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.cms
  * @class CmsHandler
+ * @ingroup plugins_generic_cms
  *
- * Find the content and display the appropriate page
- *
- * $Id$
+ * @brief Find the content and display the appropriate page
  */
+
+// $Id$
+
 
 import('core.Handler');
 import('classes.plugins.PluginRegistry');

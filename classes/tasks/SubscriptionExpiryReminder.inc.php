@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file SubscriptionExpiryReminder.inc.php
+ * @file classes/tasks/SubscriptionExpiryReminder.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package tasks
  * @class SubscriptionExpiryReminder
+ * @ingroup tasks
  *
- * Class to perform automated reminders for reviewers.
- *
- * $Id$
+ * @brief Class to perform automated reminders for reviewers.
  */
+
+// $Id$
+
 
 import('scheduledTask.ScheduledTask');
 

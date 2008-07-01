@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file SectionDAO.inc.php
+ * @file classes/journal/SectionDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package journal
  * @class SectionDAO
+ * @ingroup journal
+ * @see Section
  *
- * Class for section DAO.
- * Operations for retrieving and modifying Section objects.
- *
- * $Id$
+ * @brief Operations for retrieving and modifying Section objects.
  */
+
+// $Id$
+
 
 import ('journal.Section');
 

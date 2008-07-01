@@ -1,20 +1,21 @@
 <?php
 
 /**
- * @file Request.inc.php
+ * @file classes/core/Request.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package core
  * @class Request
+ * @ingroup core
  *
- * Class providing operations associated with HTTP requests.
+ * @brief Class providing operations associated with HTTP requests.
  * Requests are assumed to be in the format http://host.tld/index.php/<journal_id>/<page_name>/<operation_name>/<arguments...>
  * <journal_id> is assumed to be "index" for top-level site requests.
- *
- * $Id$
  */
+
+// $Id$
+
 
 // The base script through which all requests are routed
 define('INDEX_SCRIPTNAME', 'index.php');

@@ -1,18 +1,20 @@
 <?php
 
 /**
- * @file FormValidatorAlphaNum.inc.php
+ * @file classes/form/validation/FormValidatorAlphaNum.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package form.validation
  * @class FormValidatorAlphaNum
+ * @ingroup form_validation
+ * @see FormValidator
  *
- * Form validation check for alphanumeric (plus interior dash/underscore) characters only.
- *
- * $Id$
+ * @brief Form validation check for alphanumeric (plus interior dash/underscore) characters only.
  */
+
+// $Id$
+
 
 import('form.validation.FormValidatorRegExp');
 

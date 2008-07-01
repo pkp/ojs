@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.thesis
  * @class ThesisForm
+ * @ingroup plugins_generic_thesis
  *
- * Form for journal managers to create/edit thesis abstracts.
- *
- * $Id$
+ * @brief Form for journal managers to create/edit thesis abstracts.
  */
+
+// $Id$
+
 
 import('form.Form');
 

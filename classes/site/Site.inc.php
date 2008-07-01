@@ -1,19 +1,24 @@
 <?php
 
 /**
- * @file Site.inc.php
+ * @defgroup site
+ */
+ 
+/**
+ * @file classes/site/Site.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package site
  * @class Site
+ * @ingroup site
+ * @see SiteDAO
  *
- * Site class.
- * Describes system-wide site properties.
- *
- * $Id$
+ * @brief Describes system-wide site properties.
  */
+
+// $Id$
+
 
 class Site extends DataObject {
 	/**

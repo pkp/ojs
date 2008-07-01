@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file NotificationStatusDAO.inc.php
+ * @file classes/journal/NotificationStatusDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package journal
  * @class NotificationStatusDAO
+ * @ingroup journal
  *
- * Operations for retrieving and modifying users' journal notification status.
- *
- * $Id$
+ * @brief Operations for retrieving and modifying users' journal notification status.
  */
+
+// $Id$
+
 
 class NotificationStatusDAO extends DAO {
 	function &getJournalNotifications($userId) {

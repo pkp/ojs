@@ -1,17 +1,19 @@
 <?php
 
 /**
- * MetsExportDom.inc.php
+ * @file MetsExportDom.inc.php
  *
  * Copyright (c) 2003-2005 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package GatewayPlugin
+ * @class MetsExportDom
+ * @ingroup GatewayPlugin
  *
- * MetsExportDom export plugin DOM functions for export
- *
- * $Id$
+ * @brief MetsExportDom export plugin DOM functions for export
  */
+
+// $Id$
+
 
 import('xml.XMLCustomWriter');
 

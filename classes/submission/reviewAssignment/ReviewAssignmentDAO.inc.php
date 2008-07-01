@@ -1,18 +1,20 @@
 <?php
 
 /**
- * @file ReviewAssignmentDAO.inc.php
+ * @file classes/submission/reviewAssignment/ReviewAssignmentDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package submission
  * @class ReviewAssignmentDAO
+ * @ingroup submission
+ * @see ReviewAssignment
  *
- * Class for DAO relating reviewers to articles.
- *
- * $Id$
+ * @brief Class for DAO relating reviewers to articles.
  */
+
+// $Id$
+
 
 import('submission.reviewAssignment.ReviewAssignment');
 

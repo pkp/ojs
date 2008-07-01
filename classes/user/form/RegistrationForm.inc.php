@@ -1,18 +1,23 @@
 <?php
 
 /**
- * @file RegistrationForm.inc.php
+ * @defgroup user_form
+ */
+ 
+/**
+ * @file classes/user/form/RegistrationForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package user.form
  * @class RegistrationForm
+ * @ingroup user_form
  *
- * Form for user registration.
- *
- * $Id$
+ * @brief Form for user registration.
  */
+
+// $Id$
+
 
 import('form.Form');
 

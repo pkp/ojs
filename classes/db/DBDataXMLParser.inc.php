@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file DBDataXMLParser.inc.php
+ * @file classes/db/DBDataXMLParser.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package db
  * @class DBDataXMLParser
+ * @ingroup db
  *
- * Class to import and export database data from an XML format.
+ * @brief Class to import and export database data from an XML format.
  * See dbscripts/xml/dtd/xmldata.dtd for the XML schema used.
- *
- * $Id$
  */
+
+// $Id$
+
 
 import('xml.XMLParser');
 

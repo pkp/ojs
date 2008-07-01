@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file AdminLanguagesHandler.inc.php
+ * @file pages/admin/AdminLanguagesHandler.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package pages.admin
  * @class AdminLanguagesHandler
+ * @ingroup pages_admin
  *
- * Handle requests for changing site language settings. 
- *
- * $Id$
+ * @brief Handle requests for changing site language settings. 
  */
+
+// $Id$
+
 
 class AdminLanguagesHandler extends AdminHandler {
 

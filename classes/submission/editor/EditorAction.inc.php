@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file EditorAction.inc.php
+ * @file classes/submission/editor/EditorAction.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package submission
  * @class EditorAction
+ * @ingroup submission
  *
- * EditorAction class.
- *
- * $Id$
+ * @brief EditorAction class.
  */
+
+// $Id$
+
 
 import('submission.sectionEditor.SectionEditorAction');
 

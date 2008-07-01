@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.importexport.pubmed
  * @class PubMedExportPlugin
+ * @ingroup plugins_importexport_pubmed
  *
- * PubMed/MEDLINE XML metadata export plugin
- *
- * $Id$
+ * @brief PubMed/MEDLINE XML metadata export plugin
  */
+
+// $Id$
+
 
 import('classes.plugins.ImportExportPlugin');
 

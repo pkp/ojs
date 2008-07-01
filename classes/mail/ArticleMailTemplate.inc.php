@@ -1,19 +1,21 @@
 <?php
 
 /**
- * @file ArticleMailTemplate.inc.php
+ * @file classes/mail/ArticleMailTemplate.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package mail
  * @class ArticleMailTemplate
+ * @ingroup mail
  *
- * Subclass of MailTemplate for sending emails related to articles.
+ * @brief Subclass of MailTemplate for sending emails related to articles.
+ *
  * This allows for article-specific functionality like logging, etc.
- *
- * $Id$
  */
+
+// $Id$
+
 
 import('mail.MailTemplate');
 import('article.log.ArticleEmailLogEntry'); // Bring in log constants

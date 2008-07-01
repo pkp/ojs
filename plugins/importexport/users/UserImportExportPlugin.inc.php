@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.importexport.users
  * @class UserImportExportPlugin
+ * @ingroup plugins_importexport_users
  *
- * Users import/export plugin
- *
- * $Id$
+ * @brief Users import/export plugin
  */
+
+// $Id$
+
 
 import('classes.plugins.ImportExportPlugin');
 

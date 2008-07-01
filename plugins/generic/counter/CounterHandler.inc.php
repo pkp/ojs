@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.counter
  * @class CounterHandler
+ * @ingroup plugins_generic_counter
  *
- * Counter statistics request handler.
- *
- * $Id$
+ * @brief Counter statistics request handler.
  */
+
+// $Id$
+
 
 class CounterHandler extends Handler {
 	/**

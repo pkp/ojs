@@ -6,14 +6,15 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package tools
  * @class poToCurrencies
+ * @ingroup tools
  *
- * CLI tool to convert a .PO file for ISO4217 into the currencies.xml format
+ * @brief CLI tool to convert a .PO file for ISO4217 into the currencies.xml format
  * supported by the PKP suite.
- *
- * $Id$
  */
+
+// $Id$
+
 
 require(dirname(__FILE__) . '/includes/cliTool.inc.php');
 

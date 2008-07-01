@@ -1,18 +1,20 @@
 <?php
 
 /**
- * @file ArticleEventLogDAO.inc.php
+ * @file classes/article/log/ArticleEventLogDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package article.log
  * @class ArticleEventLogDAO
+ * @ingroup article_log
+ * @see ArticleEventLogEntry
  *
- * Class for inserting/accessing article history log entries.
- *
- * $Id$
+ * @brief Class for inserting/accessing article history log entries.
  */
+
+// $Id$
+
 
 import ('article.log.ArticleEventLogEntry');
 

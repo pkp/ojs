@@ -1,20 +1,21 @@
 <?php
 
 /**
- * @file ImplicitAuthPlugin.inc.php
+ * @file classes/plugins/ImplicitAuthPlugin.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins
  * @class ImplicitAuthPlugin
+ * @ingroup plugins
  *
- * Abstract class for implicit authentication plugins
+ * @brief Abstract class for implicit authentication plugins
  *
  * Contributed by Dan Galewsky, University of Texas
- *
- * $Id$
  */
+
+// $Id$
+
 
 import('plugins.Plugin');
 

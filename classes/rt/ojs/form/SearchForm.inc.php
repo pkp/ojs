@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file SearchForm.inc.php
+ * @file classes/rt/ojs/form/SearchForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package rt.ojs.form
  * @class SearchForm
+ * @ingroup rt_ojs_form
  *
- * Form to change metadata information for an RT search.
- *
- * $Id$
+ * @brief Form to change metadata information for an RT search.
  */
+
+// $Id$
+
 
 import('form.Form');
 

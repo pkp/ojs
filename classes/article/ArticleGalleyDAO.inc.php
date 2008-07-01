@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file ArticleGalleyDAO.inc.php
+ * @file classes/article/ArticleGalleyDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package article
  * @class ArticleGalleyDAO
+ * @ingroup article
+ * @see ArticleGalley
  *
- * Class for ArticleGalley DAO.
- * Operations for retrieving and modifying ArticleGalley/ArticleHTMLGalley objects.
- *
- * $Id$
+ * @brief Operations for retrieving and modifying ArticleGalley/ArticleHTMLGalley objects.
  */
+
+// $Id$
+
 
 import('article.ArticleGalley');
 import('article.ArticleHTMLGalley');

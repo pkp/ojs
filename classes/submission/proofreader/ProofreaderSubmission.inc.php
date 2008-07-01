@@ -1,19 +1,24 @@
 <?php
 
 /**
- * @file ProofreaderSubmission.inc.php
+ * @defgroup submission_proofreader
+ */
+ 
+/**
+ * @file classes/submission/proofreader/ProofreaderSubmission.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package submission.proofreader
  * @class ProofreaderSubmission
+ * @ingroup submission_proofreader
+ * @see ProofreaderSubmissionDAO
  *
- * ProofreaderSubmission class.
- * Describes a proofreader's view of a submission
- *
- * $Id$
+ * @brief Describes a proofreader's view of a submission
  */
+
+// $Id$
+
 
 import('article.Article');
 

@@ -1,17 +1,22 @@
 <?php 
 
 /**
- * @file index.php
+ * @defgroup plugins_generic_customLocale
+ */
+ 
+/**
+ * @file plugins/generic/customLocale/index.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Wrapper for custom locale plugin. Plugin based on Translator plugin.
+ * @ingroup plugins_generic_customLocale
+ * @brief Wrapper for custom locale plugin. Plugin based on Translator plugin.
  *
- * @package plugins.generic.customLocale
- *
- * $Id$
  */
+
+// $Id$
+
 
 require_once('CustomLocalePlugin.inc.php');
 

@@ -1,20 +1,22 @@
 <?php
 
 /**
- * @file ArticleSearch.inc.php
+ * @file classes/search/ArticleSearch.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package search
  * @class ArticleSearch
+ * @ingroup search
+ * @see ArticleSearchDAO
  *
- * Class for retrieving article search results.
+ * @brief Class for retrieving article search results.
  *
  * FIXME: NEAR; precedence w/o parens?; stemming; weighted counting
- *
- * $Id$
  */
+
+// $Id$
+
 
 // Search types
 define('ARTICLE_SEARCH_AUTHOR',			0x00000001);

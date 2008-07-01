@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file FormValidatorLocale.inc.php
+ * @file classes/form/validation/FormValidatorLocale.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package form.validation
  * @class FormValidatorLocale
+ * @ingroup form_validation
  *
- * Class to represent a form validation check for localized fields.
- *
- * $Id$
+ * @brief Class to represent a form validation check for localized fields.
  */
+
+// $Id$
+
 
 class FormValidatorLocale extends FormValidator {
 	/**

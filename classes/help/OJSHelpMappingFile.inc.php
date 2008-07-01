@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file OJSHelpMappingFile.inc.php
+ * @file classes/help/OJSHelpMappingFile.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package help
  * @class OJSHelpMappingFile
+ * @ingroup help
  * 
- * Abstracts the built-in help mapping XML file.
- *
- * $Id$
+ * @brief Abstracts the built-in help mapping XML file.
  */
+
+// $Id$
+
 
 import('help.HelpMappingFile');
 

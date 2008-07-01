@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.blocks.languageToggle
  * @class LanguageToggleBlockPlugin
+ * @ingroup plugins_blocks_languageToggle
  *
- * Class for language selector block plugin
- *
- * $Id$
+ * @brief Class for language selector block plugin
  */
+
+// $Id$
+
 
 import('plugins.BlockPlugin');
 

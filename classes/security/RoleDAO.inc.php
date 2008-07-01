@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file RoleDAO.inc.php
+ * @file classes/security/RoleDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package security
  * @class RoleDAO
+ * @ingroup security
+ * @see Role
  *
- * Class for Role DAO.
- * Operations for retrieving and modifying Role objects.
- *
- * $Id$
+ * @brief Operations for retrieving and modifying Role objects.
  */
+
+// $Id$
+
 
 import('security.Role');
 

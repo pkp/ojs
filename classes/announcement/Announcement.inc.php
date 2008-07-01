@@ -1,19 +1,24 @@
 <?php
 
 /**
- * @file Announcement.inc.php
+ * @defgroup announcement
+ */
+ 
+/**
+ * @file classes/announcement/Announcement.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package announcement 
  * @class Announcement
+ * @ingroup announcement 
+ * @see AnnouncementDAO
  *
- * Announcement class.
- * Basic class describing a announcement.
- *
- * $Id$
+ * @brief Basic class describing a announcement.
  */
+
+// $Id$
+
 
 define('ANNOUNCEMENT_EXPIRE_YEAR_OFFSET_FUTURE',	'+10');
 

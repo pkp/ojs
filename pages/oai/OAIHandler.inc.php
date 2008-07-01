@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package pages.oai
  * @class OAIHandler
+ * @ingroup pages_oai
  *
- * Handle OAI protocol requests. 
- *
- * $Id$
+ * @brief Handle OAI protocol requests. 
  */
+
+// $Id$
+
 
 define('SESSION_DISABLE_INIT', 1); // FIXME?
 

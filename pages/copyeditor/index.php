@@ -1,17 +1,22 @@
 <?php
 
 /**
- * @file index.php
+ * @defgroup pages_copyeditor
+ */
+ 
+/**
+ * @file pages/copyeditor/index.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Handle requests for copyeditor functions. 
+ * @ingroup pages_copyeditor
+ * @brief Handle requests for copyeditor functions. 
  *
- * @package pages.copyeditor
- *
- * $Id$
  */
+
+// $Id$
+
 
 define('HANDLER_CLASS', 'CopyeditorHandler');
 

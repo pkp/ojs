@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file RTAdmin.inc.php
+ * @file classes/rt/RTAdmin.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package rt
  * @class RTAdmin
+ * @ingroup rt
  *
- * Class to process and respond to Reading Tools administration requests.
- *
- * $Id$
+ * @brief Class to process and respond to Reading Tools administration requests.
  */
+
+// $Id$
+
 
 import('rt.RTStruct');
 

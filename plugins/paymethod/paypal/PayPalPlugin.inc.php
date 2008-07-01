@@ -6,10 +6,10 @@
  * Copyright (c) 2006-2007 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.paymethod.paypal
  * @class PayPalPlugin
+ * @ingroup plugins_paymethod_paypal
  *
- * PayPal Paymethod plugin class
+ * @brief PayPal Paymethod plugin class
  *
  */
 

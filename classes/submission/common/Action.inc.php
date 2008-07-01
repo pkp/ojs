@@ -1,18 +1,23 @@
 <?php
 
 /**
- * @file Action.inc.php
+ * @defgroup submission
+ */
+ 
+/**
+ * @file classes/submission/common/Action.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package submission
  * @class Action
+ * @ingroup submission
  *
- * Action class.
- *
- * $Id$
+ * @brief Action class.
  */
+
+// $Id$
+
 
 /* These constants correspond to editing decision "decision codes". */
 define('SUBMISSION_EDITOR_DECISION_ACCEPT', 1);

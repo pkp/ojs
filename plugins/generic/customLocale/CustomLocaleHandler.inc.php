@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.customLocale
  * @class CustomLocaleHandler
+ * @ingroup plugins_generic_customLocale
  *
- * This handles requests for the customLocale plugin.
- *
- * $Id$
+ * @brief This handles requests for the customLocale plugin.
  */
+
+// $Id$
+
 
 require_once('CustomLocalePlugin.inc.php');
 require_once('CustomLocaleAction.inc.php');

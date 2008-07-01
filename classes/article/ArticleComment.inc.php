@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file ArticleComment.inc.php
+ * @file classes/article/ArticleComment.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package article
  * @class ArticleComment
- *
- * Class for ArticleComment.
- *
- * $Id$
+ * @ingroup article
+ * @see ArticleCommentDAO
+ * @brief Class for ArticleComment.
  */
+
+// $Id$
+
 
 /** Comment associative types. All types must be defined here. */
 define('COMMENT_TYPE_PEER_REVIEW', 0x01);

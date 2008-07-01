@@ -1,19 +1,21 @@
 <?php
 
 /**
- * @file HelpToc.inc.php
+ * @file classes/help/HelpToc.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package help
  * @class HelpToc
+ * @ingroup help
+ * @see HelpTocDAO
  *
- * Help table of contents class.
+ * @brief Help table of contents class.
  * A HelpToc object is associated with zero or more HelpTopic objects.
- *
- * $Id$
  */
+
+// $Id$
+
 
 class HelpToc extends DataObject {
 

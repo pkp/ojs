@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file EditableLocaleFile.inc.php
+ * @file classes/i18n/EditableLocaleFile.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package i18n 
  * @class EditableLocaleFile
+ * @ingroup i18n 
  *
- * This extension of LocaleFile.inc.php supports updating.
- *
- * $Id$
+ * @brief This extension of LocaleFile.inc.php supports updating.
  */
+
+// $Id$
+
 
 import('file.EditableFile');
 

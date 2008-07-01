@@ -6,14 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.counter
  * @class LogEntryDAO
+ * @ingroup plugins_generic_counter
  *
- * Class for Log Entry DAO.
- * Operations for retrieving and modifying log entry objects.
- *
- * $Id$
+ * @brief Operations for retrieving and modifying log entry objects.
  */
+
+// $Id$
+
 
 require_once (dirname(__FILE__) . '/LogEntry.inc.php');
 

@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file Registry.inc.php
+ * @file classes/core/Registry.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package core
  * @class Registry
+ * @ingroup core
  *
- * Maintains a static table of keyed references.
+ * @brief Maintains a static table of keyed references.
  * Used for storing/accessing single instance objects and values.
- *
- * $Id$
  */
+
+// $Id$
+
 
 class Registry {
 

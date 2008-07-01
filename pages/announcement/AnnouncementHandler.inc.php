@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file AnnouncementHandler.inc.php
+ * @file pages/announcement/AnnouncementHandler.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package pages.announcement
  * @class AnnouncementHandler
+ * @ingroup pages_announcement
  *
- * Handle requests for public announcement functions. 
- *
- * $Id$
+ * @brief Handle requests for public announcement functions. 
  */
+
+// $Id$
+
 
 class AnnouncementHandler extends Handler {
 

@@ -1,18 +1,20 @@
 <?php
 
 /**
- * @file CopyeditorSubmission.inc.php
+ * @file classes/submission/copyeditor/CopyeditorSubmission.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package submission
  * @class CopyeditorSubmission
+ * @ingroup submission
+ * @see CopyeditorSubmissionDAO
  *
- * CopyeditorSubmission class.
- *
- * $Id$
+ * @brief CopyeditorSubmission class.
  */
+
+// $Id$
+
 
 import('article.Article');
 

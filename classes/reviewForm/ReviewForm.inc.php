@@ -1,16 +1,21 @@
 <?php
 
 /**
- * @file ReviewForm.inc.php
+ * @defgroup reviewForm
+ */
+ 
+
+/**
+ * @file classes/reviewForm/ReviewForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package reivewForm
  * @class ReviewForm
+ * @ingroup reviewForm
+ * @see ReviewerFormDAO
  *
- * ReviewForm class.
- * Basic class describing a review form.
+ * @brief Basic class describing a review form.
  *
  */
 

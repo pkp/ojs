@@ -1,18 +1,20 @@
 <?php
 
 /**
- * @file ArticleFile.inc.php
+ * @file classes/article/ArticleFile.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package article
  * @class ArticleFile
+ * @ingroup article
+ * @see ArticleFileDAO
  *
- * Article file class.
- *
- * $Id$
+ * @brief Article file class.
  */
+
+// $Id$
+
 
 class ArticleFile extends DataObject {
 

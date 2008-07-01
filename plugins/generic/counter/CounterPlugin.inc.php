@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.counter
  * @class CounterPlugin
+ * @ingroup plugins_generic_counter
  *
- * COUNTER plugin; provides COUNTER-compliant statistics.
- *
- * $Id$
+ * @brief COUNTER plugin; provides COUNTER-compliant statistics.
  */
+
+// $Id$
+
 
 define('COUNTER_UID_VAR', 'CounterPlugin_UID');
 import('classes.plugins.GenericPlugin');

@@ -1,19 +1,24 @@
 <?php
 
 /**
- * @file LayoutAssignment.inc.php
+ * @defgroup submission_layoutAssignment
+ */
+ 
+/**
+ * @file classes/submission/layoutAssignment/LayoutAssignment.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package submission.layoutAssignment
  * @class LayoutAssignment
+ * @ingroup submission_layoutAssignment
+ * @see LayoutAssignmentDAO
  *
- * LayoutAssignment class.
- * Describes layout editing assignments.
- *
- * $Id$
+ * @brief Describes layout editing assignments.
  */
+
+// $Id$
+
 
 class LayoutAssignment extends DataObject {
 

@@ -1,17 +1,22 @@
 <?php
 
 /**
- * @file index.php
+ * @defgroup pages_help
+ */
+ 
+/**
+ * @file pages/help/index.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Handle requests for viewing help pages. 
+ * @ingroup pages_help
+ * @brief Handle requests for viewing help pages. 
  *
- * @package pages.help
- *
- * $Id$
  */
+
+// $Id$
+
 
 define('HANDLER_CLASS', 'HelpHandler');
 

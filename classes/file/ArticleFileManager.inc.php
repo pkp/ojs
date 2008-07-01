@@ -1,15 +1,15 @@
 <?php
 
 /**
- * @file ArticleFileManager.inc.php
+ * @file classes/file/ArticleFileManager.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package file
  * @class ArticleFileManager
+ * @ingroup file
  *
- * Class defining operations for article file management.
+ * @brief Class defining operations for article file management.
  *
  * Article directory structure:
  * [article id]/note
@@ -22,9 +22,10 @@
  * [article id]/submission/layout
  * [article id]/supp
  * [article id]/attachment
- *
- * $Id$
  */
+
+// $Id$
+
 
 import('file.FileManager');
 

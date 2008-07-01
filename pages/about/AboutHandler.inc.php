@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file AboutHandler.inc.php
+ * @file pages/about/AboutHandler.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package pages.editor
  * @class AboutHandler
+ * @ingroup pages_editor
  *
- * Handle requests for editor functions. 
- *
- * $Id$
+ * @brief Handle requests for editor functions. 
  */
+
+// $Id$
+
 
 class AboutHandler extends Handler {
 
@@ -165,6 +166,7 @@ class AboutHandler extends Handler {
 
 	/**
 	 * Display group info for a particular group.
+	 * @param $args array
 	 */
 	function displayMembership($args) {
 		parent::validate(true);
@@ -203,6 +205,7 @@ class AboutHandler extends Handler {
 
 	/**
 	 * Display a biography for an editorial team member.
+	 * @param $args array
 	 */
 	function editorialTeamBio($args) {
 		parent::validate(true);

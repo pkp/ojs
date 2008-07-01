@@ -6,14 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.thesis
  * @class ThesisDAO
+ * @ingroup plugins_generic_thesis
  *
- * Class for Thesis DAO.
- * Operations for retrieving and modifying Thesis objects.
- *
- * $Id$
+ * @brief Operations for retrieving and modifying Thesis objects.
  */
+
+// $Id$
+
 
 import('db.DAO');
 

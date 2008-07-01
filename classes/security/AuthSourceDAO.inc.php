@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file AuthSourceDAO.inc.php
+ * @file classes/security/AuthSourceDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package security
  * @class AuthSourceDAO
+ * @ingroup security
+ * @see AuthSource
  *
- * Class for AuthSource DAO.
- * Operations for retrieving and modifying AuthSource objects.
- *
- * $Id$
+ * @brief Operations for retrieving and modifying AuthSource objects.
  */
+
+// $Id$
+
 
 import('security.AuthSource');
 

@@ -1,18 +1,23 @@
 <?php
 
 /**
- * @file JournalSetupForm.inc.php
+ * @defgroup manager_form_setup
+ */
+ 
+/**
+ * @file classes/manager/form/setup/JournalSetupForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package manager.form.setup
  * @class JournalSetupForm
+ * @ingroup manager_form_setup
  *
- * Base class for journal setup forms.
- *
- * $Id$
+ * @brief Base class for journal setup forms.
  */
+
+// $Id$
+
 
 import("manager.form.setup.JournalSetupForm");
 import('form.Form');

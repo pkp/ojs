@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file GatewayPlugin.inc.php
+ * @file classes/plugins/GatewayPlugin.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins
  * @class GatewayPlugin
+ * @ingroup plugins
  *
- * Abstract class for gateway plugins
- *
- * $Id$
+ * @brief Abstract class for gateway plugins
  */
+
+// $Id$
+
 
 class GatewayPlugin extends Plugin {
 	/**

@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file SearchHTMLParser.inc.php
+ * @file classes/search/SearchHTMLParser.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package search
  * @class SearchHTMLParser
+ * @ingroup search
  *
- * Class to extract text from an HTML file.
- *
- * $Id$
+ * @brief Class to extract text from an HTML file.
  */
+
+// $Id$
+
 
 import('search.SearchFileParser');
 import('core.String');

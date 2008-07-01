@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file AnnouncementTypeDAO.inc.php
+ * @file classes/announcement/AnnouncementTypeDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package announcement
  * @class AnnouncementTypeDAO
+ * @ingroup announcement
+ * @see AnnouncementType
  *
- * Class for AnnouncementType DAO.
- * Operations for retrieving and modifying AnnouncementType objects.
- *
- * $Id$
+ * @brief Operations for retrieving and modifying AnnouncementType objects.
  */
+
+// $Id$
+
 
 import('announcement.AnnouncementType');
 

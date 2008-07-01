@@ -6,10 +6,10 @@
  * Copyright (c) 2006-2007 Gunther Eysenbach, Juan Pablo Alperin
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.cmsRss
  * @class CmsRssSettingsForm
+ * @ingroup plugins_generic_cmsRss
  *
- * Form for journal managers to add the RSS feeds to aggregate
+ * @brief Form for journal managers to add the RSS feeds to aggregate
  *
  */
 

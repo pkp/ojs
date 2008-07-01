@@ -1,19 +1,23 @@
 <?php
 
 /**
- * @file ArticleLog.inc.php
+ * @defgroup article_log
+ */
+ 
+/**
+ * @file classes/article/log/ArticleLog.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package article.log
  * @class ArticleLog
+ * @ingroup article_log
  *
- * ArticleLog class.
- * Static class for adding / accessing article log entries.
- *
- * $Id$
+ * @brief Static class for adding / accessing article log entries.
  */
+
+// $Id$
+
 
 class ArticleLog {
 

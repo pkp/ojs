@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.importexport.pubmed
  * @class PubMedExportDom
+ * @ingroup plugins_importexport_pubmed
  *
- * PubMed XML export plugin DOM functions
- *
- * $Id$
+ * @brief PubMed XML export plugin DOM functions
  */
+
+// $Id$
+
 
 import('xml.XMLCustomWriter');
 

@@ -1,19 +1,24 @@
 <?php
 
 /**
- * @file Subscription.inc.php
+ * @defgroup subscription
+ */
+ 
+/**
+ * @file @file classes/subscription/Subscription.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package subscription 
  * @class Subscription
+ * @ingroup subscription 
+ * @see SubscriptionDAO
  *
- * Subscription class.
- * Basic class describing a subscription.
- *
- * $Id$
+ * @brief Basic class describing a subscription.
  */
+
+// $Id$
+
 
 define('SUBSCRIPTION_IP_RANGE_SEPERATOR', ';');
 define('SUBSCRIPTION_IP_RANGE_RANGE', '-');

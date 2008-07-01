@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file LanguageSettingsForm.inc.php
+ * @file classes/manager/form/LanguageSettingsForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package manager.form
  * @class LanguageSettingsForm
+ * @ingroup manager_form
  *
- * Form for modifying journal language settings.
- *
- * $Id$
+ * @brief Form for modifying journal language settings.
  */
+
+// $Id$
+
 
 import('form.Form');
 

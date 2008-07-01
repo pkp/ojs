@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file ArticleCommentDAO.inc.php
+ * @file classes/article/ArticleCommentDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package article
  * @class ArticleCommentDAO
+ * @ingroup article
+ * @see ArticleComment
  *
- * Class for ArticleComment DAO.
- * Operations for retrieving and modifying ArticleComment objects.
- *
- * $Id$
+ * @brief Operations for retrieving and modifying ArticleComment objects.
  */
+
+// $Id$
+
 
 import('article.ArticleComment');
 

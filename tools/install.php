@@ -1,18 +1,23 @@
 <?php
 
 /**
+ * @defgroup tools
+ */
+ 
+/**
  * @file install.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package tools
  * @class installTool
+ * @ingroup tools
  *
- * CLI tool for installing OJS.
- *
- * $Id$
+ * @brief CLI tool for installing OJS.
  */
+
+// $Id$
+
 
 require(dirname(__FILE__) . '/includes/cliTool.inc.php');
 

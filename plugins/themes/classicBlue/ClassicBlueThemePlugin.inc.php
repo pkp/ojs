@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.themes.classicBlue
  * @class ClassicBlueThemePlugin
+ * @ingroup plugins_themes_classicBlue
  *
- * "ClassicBlue" theme plugin
- *
- * $Id$
+ * @brief "ClassicBlue" theme plugin
  */
+
+// $Id$
+
 
 import('classes.plugins.ThemePlugin');
 

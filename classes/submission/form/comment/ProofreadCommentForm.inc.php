@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file ProofreadCommentForm.inc.php
+ * @file classes/submission/form/comment/ProofreadCommentForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package submission.form
  * @class ProofreadCommentForm
+ * @ingroup submission_form
  *
- * ProofreadComment form.
- *
- * $Id$
+ * @brief ProofreadComment form.
  */
+
+// $Id$
+
 
 import("submission.form.comment.CommentForm");
 

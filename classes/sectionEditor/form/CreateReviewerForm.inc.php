@@ -1,18 +1,24 @@
 <?php
 
 /**
- * @file CreateReviewerForm.inc.php
+ * @defgroup sectionEditor_form
+ */
+ 
+
+/**
+ * @file classes/sectionEditor/form/CreateReviewerForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package sectionEditor.form
  * @class CreateReviewerForm
+ * @ingroup sectionEditor_form
  *
- * Form for section editors to create reviewers.
- *
- * $Id$
+ * @brief Form for section editors to create reviewers.
  */
+
+// $Id$
+
 
 import('form.Form');
 

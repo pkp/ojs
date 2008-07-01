@@ -1,18 +1,20 @@
 <?php
 
 /**
- * @file OAIMetadataFormat_MARC.inc.php
+ * @file classes/oai/format/OAIMetadataFormat_MARC.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package oai.format
  * @class OAIMetadataFormat_MARC
+ * @ingroup oai_format
+ * @see OAI
  *
- * OAI metadata format class -- MARC.
- *
- * $Id$
+ * @brief OAI metadata format class -- MARC.
  */
+
+// $Id$
+
 
 class OAIMetadataFormat_MARC extends OAIMetadataFormat {
 

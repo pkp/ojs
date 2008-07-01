@@ -1,19 +1,21 @@
 <?php
 
 /**
- * GenericCache.inc.php
+ * @file classes/cache/GenericCache.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package cache
+ * @class GenericCache
+ * @ingroup cache
  *
- * Provides implementation-independent caching. Although this class is intended
+ * @brief Provides implementation-independent caching. Although this class is intended
  * to be overridden with a more specific implementation, it can be used as the
  * null cache.
- *
- * $Id$
  */
+
+// $Id$
+
 
 // Pseudotype to represent a cache miss
 class generic_cache_miss {

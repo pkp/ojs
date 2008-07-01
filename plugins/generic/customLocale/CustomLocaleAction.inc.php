@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.customLocaleAction
  * @class CustomLocaleAction
+ * @ingroup plugins_generic_customLocale
  *
- * Perform various tasks related to customization of locale strings.
- *
- * $Id$
+ * @brief Perform various tasks related to customization of locale strings.
  */
+
+// $Id$
+
 
 class CustomLocaleAction {
 

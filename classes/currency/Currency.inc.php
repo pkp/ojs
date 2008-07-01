@@ -1,16 +1,20 @@
 <?php
 
 /**
- * @file Currency.inc.php
+ * @defgroup currency
+ */
+ 
+/**
+ * @file classes/currency/Currency.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package currency 
  * @class Currency
+ * @ingroup currency 
+ * @see CurrencyDAO
  *
- * Currency class.
- * Basic class describing a currency.
+ * @brief Basic class describing a currency.
  *
  */
 

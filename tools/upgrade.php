@@ -6,15 +6,16 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package tools
  * @class upgradeTool
+ * @ingroup tools
  *
- * CLI tool for upgrading OJS.
+ * @brief CLI tool for upgrading OJS.
  *
  * Note: Some functions require fopen wrappers to be enabled.
- *
- * $Id$
  */
+
+// $Id$
+
 
 define('RUNNING_UPGRADE', 1);
 

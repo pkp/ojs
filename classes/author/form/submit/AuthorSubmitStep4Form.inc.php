@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file AuthorSubmitStep4Form.inc.php
+ * @file classes/author/form/submit/AuthorSubmitStep4Form.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package author.form.submit
  * @class AuthorSubmitStep4Form
+ * @ingroup author_form_submit
  *
- * Form for Step 4 of author article submission.
- *
- * $Id$
+ * @brief Form for Step 4 of author article submission.
  */
+
+// $Id$
+
 
 import("author.form.submit.AuthorSubmitForm");
 

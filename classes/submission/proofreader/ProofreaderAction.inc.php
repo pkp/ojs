@@ -1,18 +1,23 @@
 <?php
 
 /**
- * @file ProofreaderAction.inc.php
+ * @defgroup submission_proofreader_ProofreaderAction
+ */
+ 
+/**
+ * @file classes/submission/proofreader/ProofreaderAction.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package submission.proofreader.ProofreaderAction
  * @class ProofreaderAction
+ * @ingroup submission_proofreader_ProofreaderAction
  *
- * ProofreaderAction class.
- *
- * $Id$
+ * @brief ProofreaderAction class.
  */
+
+// $Id$
+
 
 import('submission.common.Action');
 

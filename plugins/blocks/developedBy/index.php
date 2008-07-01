@@ -1,17 +1,22 @@
 <?php
 
 /**
- * @file index.php
+ * @defgroup plugins_blocks_developedBy
+ */
+ 
+/**
+ * @file plugins/blocks/developedBy/index.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Wrapper for "developed by" block plugin.
+ * @ingroup plugins_blocks_developedBy
+ * @brief Wrapper for "developed by" block plugin.
  *
- * @package plugins.blocks.developedBy
- *
- * $Id$
  */
+
+// $Id$
+
 
 require_once('DevelopedByBlockPlugin.inc.php');
 

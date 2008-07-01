@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file ArticleEventLogEntry.inc.php
+ * @file classes/article/log/ArticleEventLogEntry.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package article.log
  * @class ArticleEventLogEntry
+ * @ingroup article_log
+ * @see ArticleEventLogDAO
  *
- * Article event log entry class.
- * Describes an entry in the article history log.
- *
- * $Id$
+ * @brief Describes an entry in the article history log.
  */
+
+// $Id$
+
 
 // Log levels
 define('ARTICLE_LOG_LEVEL_INFO', 'I');

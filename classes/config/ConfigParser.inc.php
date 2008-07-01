@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file ConfigParser.inc.php
+ * @file classes/config/ConfigParser.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package config
  * @class ConfigParser
+ * @ingroup config
  *
- * Class for parsing and modifying php.ini style configuration files.
- *
- * $Id$
+ * @brief Class for parsing and modifying php.ini style configuration files.
  */
+
+// $Id$
+
 
 class ConfigParser {
 

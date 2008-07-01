@@ -1,17 +1,20 @@
 <?php
 
 /**
- * MemcacheCache.inc.php
+ * @file classes/cache/MemcacheCache.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package cache
+ * @class MemcacheCache
+ * @ingroup cache
+ * @see GenericCache
  *
- * Provides caching based on Memcache.
- *
- * $Id$
+ * @brief Provides caching based on Memcache.
  */
+
+// $Id$
+
 
 import('cache.GenericCache');
 

@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file JournalDAO.inc.php
+ * @file classes/journal/JournalDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package journal
  * @class JournalDAO
+ * @ingroup journal
+ * @see Journal
  *
- * Class for Journal DAO.
- * Operations for retrieving and modifying Journal objects.
- *
- * $Id$
+ * @brief Operations for retrieving and modifying Journal objects.
  */
+
+// $Id$
+
 
 import ('journal.Journal');
 

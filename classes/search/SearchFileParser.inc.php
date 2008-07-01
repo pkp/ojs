@@ -1,18 +1,24 @@
 <?php
 
 /**
- * @file SearchFileParser.inc.php
+ * @defgroup search
+ */
+ 
+
+/**
+ * @file classes/search/SearchFileParser.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package search
  * @class SearchFileParser
+ * @ingroup search
  *
- * Abstract class to extract search text from a given file.
- *
- * $Id$
+ * @brief Abstract class to extract search text from a given file.
  */
+
+// $Id$
+
 
 class SearchFileParser {
 

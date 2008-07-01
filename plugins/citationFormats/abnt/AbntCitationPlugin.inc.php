@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file AbntCitationPlugin.inc.php
+ * @file plugins/citationFormats/abnt/AbntCitationPlugin.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.citationFormats.abnt
  * @class AbntCitationPlugin
+ * @ingroup plugins_citationFormats_abnt
  *
- * ABNT citation format plugin
- *
- * $Id$
+ * @brief ABNT citation format plugin
  */
+
+// $Id$
+
 
 import('classes.plugins.CitationPlugin');
 

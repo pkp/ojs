@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file PeerReviewCommentForm.inc.php
+ * @file classes/submission/form/comment/PeerReviewCommentForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package submission.form
  * @class PeerReviewCommentForm
+ * @ingroup submission_form
  *
- * Comment form.
- *
- * $Id$
+ * @brief Comment form.
  */
+
+// $Id$
+
 
 import("submission.form.comment.CommentForm");
 

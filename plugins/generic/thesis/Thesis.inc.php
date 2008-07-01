@@ -6,14 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.thesis
  * @class Thesis
+ * @ingroup plugins_generic_thesis
  *
- * Thesis class.
- * Basic class describing a thesis.
- *
- * $Id$
+ * @brief Basic class describing a thesis.
  */
+
+// $Id$
+
 
 define('THESIS_STATUS_INACTIVE',			0x01);
 define('THESIS_STATUS_ACTIVE',				0x02);

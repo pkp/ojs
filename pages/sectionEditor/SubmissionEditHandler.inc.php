@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package pages.sectionEditor
  * @class SubmissionEditHandler
+ * @ingroup pages_sectionEditor
  *
- * Handle requests for submission tracking. 
- *
- * $Id$
+ * @brief Handle requests for submission tracking. 
  */
+
+// $Id$
+
 
 define('SECTION_EDITOR_ACCESS_EDIT', 0x00001);
 define('SECTION_EDITOR_ACCESS_REVIEW', 0x00002);

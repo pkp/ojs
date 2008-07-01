@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package pages.editor
  * @class EditorHandler
+ * @ingroup pages_editor
  *
- * Handle requests for editor functions. 
- *
- * $Id$
+ * @brief Handle requests for editor functions. 
  */
+
+// $Id$
+
 
 import('sectionEditor.SectionEditorHandler');
 

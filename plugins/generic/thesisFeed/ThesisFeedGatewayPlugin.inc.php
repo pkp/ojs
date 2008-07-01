@@ -6,13 +6,15 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.thesisFeed
  * @class ThesisFeedGatewayPlugin
+ * @ingroup plugins_generic_thesisFeed
  *
- * Gateway component of thesis feed plugin
+ * @brief Gateway component of thesis feed plugin
  *
- * $Id$
  */
+
+// $Id$
+
 
 import('classes.plugins.GatewayPlugin');
 

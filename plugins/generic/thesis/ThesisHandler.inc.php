@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.thesis
  * @class ThesisHandler
+ * @ingroup plugins_generic_thesis
  *
- * Handle requests for public thesis abstract functions. 
- *
- * $Id$
+ * @brief Handle requests for public thesis abstract functions. 
  */
+
+// $Id$
+
 
 import('core.Handler');
 

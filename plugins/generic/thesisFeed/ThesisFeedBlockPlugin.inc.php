@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.thesisFeed
  * @class ThesisFeedBlockPlugin
+ * @ingroup plugins_generic_thesisFeed
  *
- * Class for block component of thesis feed plugin
- *
- * $Id$
+ * @brief Class for block component of thesis feed plugin
  */
+
+// $Id$
+
 
 import('plugins.BlockPlugin');
 

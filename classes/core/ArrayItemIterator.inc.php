@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file ArrayItemIterator.inc.php
+ * @file classes/core/ArrayItemIterator.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package db
  * @class ArrayItemIterator
+ * @ingroup db
  *
- * Provides paging and iteration for arrays.
- *
- * $Id$
+ * @brief Provides paging and iteration for arrays.
  */
+
+// $Id$
+
 
 import('core.ItemIterator');
 

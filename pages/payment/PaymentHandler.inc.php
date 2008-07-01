@@ -1,17 +1,19 @@
 <?php
 
 /**
- * PaymentHandler.inc.php
+ * @file PaymentHandler.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package pages.payment
+ * @class PaymentHandler
+ * @ingroup pages_payment
  *
- * Handle requests for payment functions.
- *
- * $Id$
+ * @brief Handle requests for payment functions.
  */
+
+// $Id$
+
 
 class PaymentHandler extends Handler {
 		 

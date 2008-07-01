@@ -1,17 +1,22 @@
 <?php
 
 /**
- * @file index.php
+ * @defgroup pages_layoutEditor
+ */
+ 
+/**
+ * @file pages/layoutEditor/index.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Handle requests for layout editor functions. 
+ * @ingroup pages_layoutEditor
+ * @brief Handle requests for layout editor functions. 
  *
- * @package pages.layoutEditor
- *
- * $Id$
  */
+
+// $Id$
+
 
 define('HANDLER_CLASS', 'LayoutEditorHandler');
 

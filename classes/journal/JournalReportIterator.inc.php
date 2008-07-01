@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file JournalReportIterator.inc.php
+ * @file classes/journal/JournalReportIterator.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package journal
  * @class JournalReportIterator
+ * @ingroup journal
  *
- * Wrapper around DBRowIterator providing "factory" features for journal
+ * @brief Wrapper around DBRowIterator providing "factory" features for journal
  * reports.
- *
- * $Id$
  */
+
+// $Id$
+
 
 import('db.DBRowIterator');
 

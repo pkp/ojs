@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.citationFormats.refWorks
  * @class RefWorksCitationPlugin
+ * @ingroup plugins_citationFormats_refWorks
  *
- * RefWorks citation format plugin
- *
- * $Id$
+ * @brief RefWorks citation format plugin
  */
+
+// $Id$
+
 
 import('classes.plugins.CitationPlugin');
 

@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file FormValidatorCaptcha.inc.php
+ * @file classes/form/validation/FormValidatorCaptcha.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package form.validation
  * @class FormValidatorCaptcha
+ * @ingroup form_validation
  *
- * Form validation check captcha values.
- *
- * $Id$
+ * @brief Form validation check captcha values.
  */
+
+// $Id$
+
 
 class FormValidatorCaptcha extends FormValidator {
 	var $captchaIdField;

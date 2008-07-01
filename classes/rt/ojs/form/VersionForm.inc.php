@@ -1,18 +1,20 @@
 <?php
 
 /**
- * @file VersionForm.inc.php
+ * @file classes/rt/ojs/form/VersionForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package rt.ojs.form
  * @class VersionForm
+ * @ingroup rt_ojs_form
+ * @see Version
  *
- * Form to change metadata information for an RT version.
- *
- * $Id$
+ * @brief Form to change metadata information for an RT version.
  */
+
+// $Id$
+
 
 import('form.Form');
 

@@ -6,13 +6,14 @@
  * Copyright (c) 2006-2007 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.cms
  * @class CmsBlockPlugin
+ * @ingroup plugins_generic_cms
  *
- * CMS plugin class, block component
- *
- * $Id$
+ * @brief CMS plugin class, block component
  */
+
+// $Id$
+
 
 import('classes.plugins.BlockPlugin');
 

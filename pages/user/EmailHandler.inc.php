@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package pages.user
  * @class EmailHandler
+ * @ingroup pages_user
  *
- * Handle requests for user emails.
- *
- * $Id$
+ * @brief Handle requests for user emails.
  */
+
+// $Id$
+
 
 class EmailHandler extends UserHandler {
 	function email($args) {

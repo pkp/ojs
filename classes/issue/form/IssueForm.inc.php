@@ -1,18 +1,24 @@
 <?php
 
 /**
- * @file IssueForm.inc.php
+ * @defgroup issue_form
+ */
+ 
+/**
+ * @file classes/form/IssueForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package issue.form
  * @class IssueForm
+ * @ingroup issue_form
+ * @see Issue
  *
- * Form to create or edit an issue
- *
- * $Id$
+ * @brief Form to create or edit an issue
  */
+
+// $Id$
+
 
 import('form.Form');
 import('issue.Issue'); // Bring in constants

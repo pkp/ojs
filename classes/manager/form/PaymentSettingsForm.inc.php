@@ -1,15 +1,15 @@
 <?php
 
 /**
- * @file PaymentSettingsForm.inc.php
+ * @file classes/manager/form/PaymentSettingsForm.inc.php
  *
  * Copyright (c) 2006 Gunther Eysenbach, Juan Pablo Alperin
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package manager.form
  * @class PaymentSettingsForm
+ * @ingroup manager_form
  *
- * Form for journal managers to modify Payment costs and settings
+ * @brief Form for journal managers to modify Payment costs and settings
  * 
  */
 

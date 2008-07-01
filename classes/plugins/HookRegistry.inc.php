@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file HookRegistry.inc.php
+ * @file classes/plugins/HookRegistry.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins
  * @class HookRegistry
+ * @ingroup plugins
  *
- * Class for linking core functionality with plugins
- *
- * $Id$
+ * @brief Class for linking core functionality with plugins
  */
+
+// $Id$
+
 
 class HookRegistry {
 	/**

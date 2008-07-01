@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file EditableFile.inc.php
+ * @file classes/file/EditableFile.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package file 
  * @class EditableFile
+ * @ingroup file 
  *
- * Hack-and-slash class to help with editing XML files without losing
+ * @brief Hack-and-slash class to help with editing XML files without losing
  * formatting and comments (i.e. unparsed editing).
- *
- * $Id$
  */
+
+// $Id$
+
 
 class EditableFile {
 	var $contents;

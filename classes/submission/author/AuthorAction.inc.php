@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file AuthorAction.inc.php
+ * @file classes/submission/author/AuthorAction.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package submission
  * @class AuthorAction
+ * @ingroup submission
  *
- * AuthorAction class.
- *
- * $Id$
+ * @brief AuthorAction class.
  */
+
+// $Id$
+
 
 import('submission.common.Action');
 

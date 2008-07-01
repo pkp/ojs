@@ -1,18 +1,24 @@
 <?php
 
 /**
- * @file Comment.inc.php
+ * @defgroup comment
+ */
+ 
+/**
+ * @file classes/comment/Comment.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package comment
  * @class Comment
+ * @ingroup comment
+ * @see CommentDAO
  *
- * Class for public Comment associated with article.
- *
- * $Id$
+ * @brief Class for public Comment associated with article.
  */
+
+// $Id$
+
 
 class Comment extends DataObject {
 

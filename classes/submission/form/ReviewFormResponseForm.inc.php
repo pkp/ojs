@@ -1,15 +1,16 @@
 <?php
 
 /**
- * @file ReviewFormResponseForm.inc.php
+ * @file classes/submission/form/ReviewFormResponseForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package submission.form
  * @class ReviewFormResponseForm
+ * @ingroup submission_form
+ * @see ReviewFormResponse
  *
- * Peer review form response form.
+ * @brief Peer review form response form.
  *
  */
 

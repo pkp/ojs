@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package tools
  * @class rebuildSearchIndex
+ * @ingroup tools
  *
- * CLI tool to rebuild the article keyword search database.
- *
- * $Id$
+ * @brief CLI tool to rebuild the article keyword search database.
  */
+
+// $Id$
+
 
 require(dirname(__FILE__) . '/includes/cliTool.inc.php');
 

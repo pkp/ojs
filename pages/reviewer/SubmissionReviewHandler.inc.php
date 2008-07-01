@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package pages.reviewer
  * @class SubmissionReviewHandler
+ * @ingroup pages_reviewer
  *
- * Handle requests for submission tracking. 
- *
- * $Id$
+ * @brief Handle requests for submission tracking. 
  */
+
+// $Id$
+
 
 class SubmissionReviewHandler extends ReviewerHandler {
 	/**

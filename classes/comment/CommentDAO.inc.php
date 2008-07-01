@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file CommentDAO.inc.php
+ * @file classes/comment/CommentDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package comment
  * @class CommentDAO
+ * @ingroup comment
+ * @see Comment
  *
- * Class for Comment DAO.
- * Operations for retrieving and modifying Comment objects.
- *
- * $Id$
+ * @brief Operations for retrieving and modifying Comment objects.
  */
+
+// $Id$
+
 
 import('comment.Comment');
 

@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file SearchHelperParser.inc.php
+ * @file classes/search/SearchHelperParser.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package search
  * @class SearchHelperParser
+ * @ingroup search
  *
- * Class to extract text from a file using an external helper program.
- *
- * $Id$
+ * @brief Class to extract text from a file using an external helper program.
  */
+
+// $Id$
+
 
 import('search.SearchFileParser');
 

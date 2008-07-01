@@ -1,18 +1,25 @@
 <?php
 
 /**
- * @file AuthSourceSettingsForm.inc.php
+ * @defgroup security_form
+ */
+ 
+
+/**
+ * @file classes/security/form/AuthSourceSettingsForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package security.form
  * @class AuthSourceSettingsForm
+ * @ingroup security_form
+ * @see AuthSource, AuthSourceDAO
  *
- * Form for editing authentication source settings.
- *
- * $Id$
+ * @brief Form for editing authentication source settings.
  */
+
+// $Id$
+
 
 import('form.Form');
 

@@ -1,18 +1,20 @@
 <?php
 
 /**
- * @file Author.inc.php
+ * @file classes/article/Author.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package article
  * @class Author
+ * @ingroup article
+ * @see AuthorDAO
  *
- * Article author metadata class.
- *
- * $Id$
+ * @brief Article author metadata class.
  */
+
+// $Id$
+
 
 class Author extends DataObject {
 

@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file ArticleDAO.inc.php
+ * @file classes/article/ArticleDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package article
  * @class ArticleDAO
+ * @ingroup article
+ * @see Article
  *
- * Class for Article DAO.
- * Operations for retrieving and modifying Article objects.
- *
- * $Id$
+ * @brief Operations for retrieving and modifying Article objects.
  */
+
+// $Id$
+
 
 import('article.Article');
 

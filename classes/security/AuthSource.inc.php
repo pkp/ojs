@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file AuthSource.inc.php
+ * @file classes/security/AuthSource.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package security
  * @class AuthSource
+ * @ingroup security
+ * @see AuthSourceDAO
  *
- * AuthSource class.
- * Describes an authentication source.
- *
- * $Id$
+ * @brief Describes an authentication source.
  */
+
+// $Id$
+
 
 import('plugins.AuthPlugin');
 

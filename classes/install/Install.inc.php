@@ -1,23 +1,29 @@
 <?php
 
 /**
- * @file Install.inc.php
+ * @defgroup install
+ */
+ 
+/**
+ * @file classes/install/Install.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package install
  * @class Install
+ * @ingroup install
+ * @see Installer, InstallForm
  *
- * Perform system installation.
+ * @brief Perform system installation.
  *
  * This script will:
  *  - Create the database (optionally), and install the database tables and initial data.
  *  - Update the config file with installation parameters.
  * It can also be used for a "manual install" to retrieve the SQL statements required for installation.
- *
- * $Id$
  */
+
+// $Id$
+
 
 // Default installation data
 define('INSTALLER_DEFAULT_SITE_TITLE', 'common.openJournalSystems');

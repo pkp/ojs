@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.xmlGalley
  * @class XMLGalleyPlugin
+ * @ingroup plugins_generic_xmlGalley
  *
- * XML Galley Plugin
- *
- * $Id$
+ * @brief XML Galley Plugin
  */
+
+// $Id$
+
 
 import('classes.plugins.GenericPlugin');
 

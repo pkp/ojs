@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package tools
  * @class genTestLocale
+ * @ingroup tools
  *
- * CLI tool to generate a test locale file by munging the message strings of a real locale file.
- *
- * $Id$
+ * @brief CLI tool to generate a test locale file by munging the message strings of a real locale file.
  */
+
+// $Id$
+
 
 require(dirname(__FILE__) . '/includes/cliTool.inc.php');
 

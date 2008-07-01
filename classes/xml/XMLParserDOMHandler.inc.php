@@ -1,19 +1,22 @@
 <?php
 
 /**
- * @file XMLParserDOMHandler.inc.php
+ * @file classes/xml/XMLParserDOMHandler.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package xml
  * @class XMLParserDOMHandler
+ * @ingroup xml
+ * @see XMLParser
  *
- * Default handler for XMLParser returning a simple DOM-style object.
+ * @brief Default handler for XMLParser returning a simple DOM-style object.
  * This handler parses an XML document into a tree structure of XMLNode objects.
  * 
- * $Id$
  */
+
+//$Id$
+
 
 import('xml.XMLNode');
 

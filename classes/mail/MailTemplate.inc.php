@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file MailTemplate.inc.php
+ * @file classes/mail/MailTemplate.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package mail
  * @class MailTemplate
+ * @ingroup mail
  *
- * Subclass of Mail for mailing a template email.
- *
- * $Id$
+ * @brief Subclass of Mail for mailing a template email.
  */
+
+// $Id$
+
 
 import('mail.Mail');
 

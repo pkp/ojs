@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package pages.manager
  * @class JournalLanguagesHandler
+ * @ingroup pages_manager
  *
- * Handle requests for changing journal language settings. 
- *
- * $Id$
+ * @brief Handle requests for changing journal language settings. 
  */
+
+// $Id$
+
 
 class JournalLanguagesHandler extends ManagerHandler {
 

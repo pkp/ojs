@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file DataObject.inc.php
+ * @file classes/core/DataObject.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package core
  * @class DataObject
+ * @ingroup core
+ * @see Core
  *
- * Abstract class for data objects. 
- * Any class with an associated DAO should extend this class.
- *
- * $Id$
+ * @brief Any class with an associated DAO should extend this class.
  */
+
+// $Id$
+
 
 class DataObject {
 	/** Array of object data */

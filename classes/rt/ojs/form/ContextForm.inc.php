@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file ContextForm.inc.php
+ * @file classes/rt/ojs/form/ContextForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package rt.ojs.form
  * @class ContextForm
+ * @ingroup rt_ojs_form
  *
- * Form to change metadata information for an RT context.
- *
- * $Id$
+ * @brief Form to change metadata information for an RT context.
  */
+
+// $Id$
+
 
 import('form.Form');
 

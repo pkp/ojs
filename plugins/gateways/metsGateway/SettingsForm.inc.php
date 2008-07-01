@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.gateways.metsGateway
  * @class SettingsForm
+ * @ingroup plugins_gateways_metsGateway
  *
- * Form for METS gateway plugin settings
- *
- * $Id$
+ * @brief Form for METS gateway plugin settings
  */
+
+// $Id$
+
 
 import('form.Form');
 

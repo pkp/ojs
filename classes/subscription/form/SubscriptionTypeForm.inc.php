@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file SubscriptionTypeForm.inc.php
+ * @file classes/subscription/form/SubscriptionTypeForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package manager.form
  * @class SubscriptionTypeForm
+ * @ingroup manager_form
  *
- * Form for journal managers to create/edit subscription types.
- *
- * $Id$
+ * @brief Form for journal managers to create/edit subscription types.
  */
+
+// $Id$
+
 
 import('form.Form');
 

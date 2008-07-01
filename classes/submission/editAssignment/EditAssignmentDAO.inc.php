@@ -1,18 +1,20 @@
 <?php
 
 /**
- * @file EditAssignmentDAO.inc.php
+ * @file classes/submission/editAssignment/EditAssignmentDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package submission
  * @class EditAssignmentDAO
+ * @ingroup submission
+ * @see EditAssignment
  *
- * Class for DAO relating editors to articles.
- *
- * $Id$
+ * @brief Class for DAO relating editors to articles.
  */
+
+// $Id$
+
 
 import('submission.editAssignment.EditAssignment');
 

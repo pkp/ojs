@@ -1,17 +1,22 @@
 <?php
 
 /**
- * @file index.php
+ * @defgroup plugins_generic_googleAnalytics
+ */
+ 
+/**
+ * @file plugins/generic/googleAnalytics/index.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Wrapper for Google Analytics plugin.
+ * @ingroup plugins_generic_googleAnalytics
+ * @brief Wrapper for Google Analytics plugin.
  *
- * @package plugins.generic.googleAnalytics
- *
- * $Id$
  */
+
+// $Id$
+
 
 require_once('GoogleAnalyticsPlugin.inc.php');
 

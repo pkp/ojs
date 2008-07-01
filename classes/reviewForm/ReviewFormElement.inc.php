@@ -1,16 +1,16 @@
 <?php
 
 /**
- * @file ReviewFormElement.inc.php
+ * @file classes/reviewForm/ReviewFormElement.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package reivewForm
  * @class ReviewFormElement
+ * @ingroup reviewForm
+ * @see ReviewFormElementDAO
  *
- * ReviewFormElement class.
- * Basic class describing a review form element.
+ * @brief Basic class describing a review form element.
  *
  */
 

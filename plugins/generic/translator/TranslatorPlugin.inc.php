@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.translator
  * @class TranslatorPlugin
+ * @ingroup plugins_generic_translator
  *
- * This plugin helps with translation maintenance.
- *
- * $Id$
+ * @brief This plugin helps with translation maintenance.
  */
+
+// $Id$
+
 
 import('classes.plugins.GenericPlugin');
 

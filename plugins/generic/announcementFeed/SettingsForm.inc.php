@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.annoucementFeed
  * @class SettingsForm
+ * @ingroup plugins_generic_annoucementFeed
  *
- * Form for journal managers to modify announcement feed plugin settings
- *
- * $Id$
+ * @brief Form for journal managers to modify announcement feed plugin settings
  */
+
+// $Id$
+
 
 import('form.Form');
 

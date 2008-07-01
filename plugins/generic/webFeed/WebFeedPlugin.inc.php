@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.block.webFeed
  * @class WebFeedPlugin
+ * @ingroup plugins_block_webFeed
  *
- * Web Feeds plugin class
- *
- * $Id$
+ * @brief Web Feeds plugin class
  */
+
+// $Id$
+
 
 import('classes.plugins.GenericPlugin');
 

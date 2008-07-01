@@ -1,17 +1,22 @@
 <?php
 
 /**
- * @file index.php
+ * @defgroup plugins_gateways_resolver
+ */
+ 
+/**
+ * @file plugins/gateways/resolver/index.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Wrapper for Resolver gateway plugin.
+ * @ingroup plugins_gateways_resolver
+ * @brief Wrapper for Resolver gateway plugin.
  *
- * @package plugins.gateways.resolver
- *
- * $Id$
  */
+
+// $Id$
+
 
 require_once('ResolverPlugin.inc.php');
 

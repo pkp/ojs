@@ -1,17 +1,22 @@
 <?php
 
 /**
- * @file index.php
+ * @defgroup plugins_blocks_information
+ */
+ 
+/**
+ * @file plugins/blocks/information/index.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Wrapper for information block plugin.
+ * @ingroup plugins_blocks_information
+ * @brief Wrapper for information block plugin.
  *
- * @package plugins.blocks.information
- *
- * $Id$
  */
+
+// $Id$
+
 
 require_once('InformationBlockPlugin.inc.php');
 

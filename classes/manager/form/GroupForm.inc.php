@@ -1,18 +1,20 @@
 <?php
 
 /**
- * @file GroupForm.inc.php
+ * @file classes/manager/form/GroupForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package manager.form
  * @class GroupForm
+ * @ingroup manager_form
+ * @see Group
  *
- * Form for journal managers to create/edit groups.
- *
- * $Id$
+ * @brief Form for journal managers to create/edit groups.
  */
+
+// $Id$
+
 
 import('form.Form');
 import('group.Group');

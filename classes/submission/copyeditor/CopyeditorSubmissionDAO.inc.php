@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file CopyeditorSubmissionDAO.inc.php
+ * @file classes/submission/copyeditor/CopyeditorSubmissionDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package submission
  * @class CopyeditorSubmissionDAO
+ * @ingroup submission
+ * @see CopyeditorSubmission
  *
- * Class for CopyeditorSubmission DAO.
- * Operations for retrieving and modifying CopyeditorSubmission objects.
- *
- * $Id$
+ * @brief Operations for retrieving and modifying CopyeditorSubmission objects.
  */
+
+// $Id$
+
 
 import('submission.copyeditor.CopyeditorSubmission');
 

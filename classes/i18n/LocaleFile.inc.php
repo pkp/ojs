@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file LocaleFile.inc.php
+ * @file classes/i18n/LocaleFile.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package i18n
  * @class LocaleFile
+ * @ingroup i18n
  *
- * Abstraction of a locale file
- *
- * $Id$
+ * @brief Abstraction of a locale file
  */
+
+// $Id$
+
 
 class LocaleFile {
 	/** @var $cache object Cache of this locale file */

@@ -1,18 +1,20 @@
 <?php
 
 /**
- * @file RTXMLParser.inc.php
+ * @file classes/rt/RTXMLParser.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package rt
  * @class RTXMLParser
+ * @ingroup rt
+ * @see RT
  *
- * Class to parse Reading Tools data from an XML format.
- *
- * $Id$
+ * @brief Class to parse Reading Tools data from an XML format.
  */
+
+// $Id$
+
 
 import('xml.XMLParser');
 import('rt.RTStruct');

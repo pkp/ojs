@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file JournalSiteSettingsForm.inc.php
+ * @file classes/manager/form/JournalSiteSettingsForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package admin.form
  * @class JournalSiteSettingsForm
+ * @ingroup admin_form
  *
- * Form for site administrator to edit basic journal settings.
- *
- * $Id$
+ * @brief Form for site administrator to edit basic journal settings.
  */
+
+// $Id$
+
 
 import('db.DBDataXMLParser');
 import('form.Form');

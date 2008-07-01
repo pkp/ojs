@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.xmlGalley
  * @class ArticleXMLGalley
+ * @ingroup plugins_generic_xmlGalley
  *
- * Article XML galley model object
- *
- * $Id$
+ * @brief Article XML galley model object
  */
+
+// $Id$
+
 
 import('article.ArticleHTMLGalley');
 import('article.SuppFileDAO');

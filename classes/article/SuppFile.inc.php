@@ -1,18 +1,20 @@
 <?php
 
 /**
- * @file SuppFile.inc.php
+ * @file classes/article/SuppFile.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package article
  * @class SuppFile
+ * @ingroup article
+ * @see SuppFileDAO
  *
- * Supplementary file class.
- *
- * $Id$
+ * @brief Supplementary file class.
  */
+
+// $Id$
+
 
 import('article.ArticleFile');
 

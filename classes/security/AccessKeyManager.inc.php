@@ -1,18 +1,20 @@
 <?php
 
 /**
- * @file AccessKeyManager.inc.php
+ * @file classes/security/AccessKeyManager.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package security
  * @class AccessKeyManager
+ * @ingroup security
+ * @see AccessKey
  *
- * Class defining operations for access key management.
- *
- * $Id$
+ * @brief Class defining operations for AccessKey management.
  */
+
+// $Id$
+
 
 class AccessKeyManager {
 	var $accessKeyDao;

@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package tools
  * @class mergeUsers
+ * @ingroup tools
  *
- * CLI tool for merging two OJS 2 user accounts.
- *
- * $Id$
+ * @brief CLI tool for merging two OJS 2 user accounts.
  */
+
+// $Id$
+
 
 require(dirname(__FILE__) . '/includes/cliTool.inc.php');
 

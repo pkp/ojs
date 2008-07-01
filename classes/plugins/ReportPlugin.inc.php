@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file ReportPlugin.inc.php
+ * @file classes/plugins/ReportPlugin.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins
  * @class ReportPlugin
+ * @ingroup plugins
  *
- * Abstract class for report plugins
- *
- * $Id$
+ * @brief Abstract class for report plugins
  */
+
+// $Id$
+
 
 class ReportPlugin extends Plugin {
 	/**

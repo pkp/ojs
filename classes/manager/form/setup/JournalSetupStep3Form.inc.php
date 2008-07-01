@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file JournalSetupStep3Form.inc.php
+ * @file classes/manager/form/setup/JournalSetupStep3Form.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package manager.form.setup
  * @class JournalSetupStep3Form
+ * @ingroup manager_form_setup
  *
- * Form for Step 3 of journal setup.
- *
- * $Id$
+ * @brief Form for Step 3 of journal setup.
  */
+
+// $Id$
+
 
 import("manager.form.setup.JournalSetupForm");
 

@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file Section.inc.php
+ * @file classes/journal/Section.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package journal
  * @class Section
+ * @ingroup journal
+ * @see SectionDAO
  *
- * Section class.
- * Describes basic section properties.
- *
- * $Id$
+ * @brief Describes basic section properties.
  */
+
+// $Id$
+
 
 class Section extends DataObject {
 

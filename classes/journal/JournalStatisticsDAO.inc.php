@@ -1,19 +1,19 @@
 <?php
 
 /**
- * @file JournalStatisticsDAO.inc.php
+ * @file classes/journal/JournalStatisticsDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package journal
  * @class JournalStatisticsDAO
+ * @ingroup journal
  *
- * Class for Journal Statistics DAO.
- * Operations for retrieving journal statistics.
- *
- * $Id$
+ * @brief Operations for retrieving journal statistics.
  */
+
+// $Id$
+
 
 define('REPORT_TYPE_JOURNAL',	0x00001);
 define('REPORT_TYPE_EDITOR',	0x00002);

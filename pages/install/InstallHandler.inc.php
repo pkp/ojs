@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package pages.install
  * @class InstallHandler
+ * @ingroup pages_install
  *
- * Handle installation requests. 
- *
- * $Id$
+ * @brief Handle installation requests. 
  */
+
+// $Id$
+
 
 /* FIXME Prevent classes from trying to initialize the session manager (and thus the database connection) */
 define('SESSION_DISABLE_INIT', 1);

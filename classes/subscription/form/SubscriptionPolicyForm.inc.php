@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file SubscriptionPolicyForm.inc.php
+ * @file classes/subscription/form/SubscriptionPolicyForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package manager.form
  * @class SubscriptionPolicyForm
+ * @ingroup manager_form
  *
- * Form for managers to setup subscription policies.
- *
- * $Id$
+ * @brief Form for managers to setup subscription policies.
  */
+
+// $Id$
+
 
 define('SUBSCRIPTION_OPEN_ACCESS_DELAY_MIN', '0');
 define('SUBSCRIPTION_OPEN_ACCESS_DELAY_MAX', '24');

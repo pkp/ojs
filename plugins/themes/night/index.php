@@ -1,17 +1,22 @@
 <?php
 
 /**
- * @file index.php
+ * @defgroup plugins_themes_night
+ */
+ 
+/**
+ * @file plugins/themes/night/index.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Wrapper for "night" theme plugin.
+ * @ingroup plugins_themes_night
+ * @brief Wrapper for "night" theme plugin.
  *
- * @package plugins.themes.night
- *
- * $Id$
  */
+
+// $Id$
+
 
 require_once('NightThemePlugin.inc.php');
 

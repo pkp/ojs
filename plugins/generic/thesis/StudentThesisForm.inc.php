@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.thesis
  * @class StudentThesisForm
+ * @ingroup plugins_generic_thesis
  *
- * Form for students to submit thesis abstract.
- *
- * $Id$
+ * @brief Form for students to submit thesis abstract.
  */
+
+// $Id$
+
 
 import('form.Form');
 

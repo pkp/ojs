@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file SectionEditorSubmissionDAO.inc.php
+ * @file classes/submission/sectionEditor/SectionEditorSubmissionDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package submission
  * @class SectionEditorSubmissionDAO
+ * @ingroup submission
+ * @see SectionEditorSubmission
  *
- * Class for SectionEditorSubmission DAO.
- * Operations for retrieving and modifying SectionEditorSubmission objects.
- *
- * $Id$
+ * @brief Operations for retrieving and modifying SectionEditorSubmission objects.
  */
+
+// $Id$
+
 
 import('submission.sectionEditor.SectionEditorSubmission');
 import('submission.author.AuthorSubmission'); // Bring in editor decision constants

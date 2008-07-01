@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file UserSettingsDAO.inc.php
+ * @file classes/user/UserSettingsDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package user
  * @class UserSettingsDAO
+ * @ingroup user
+ * @see User
  *
- * Class for User Settings DAO.
- * Operations for retrieving and modifying user settings.
- *
- * $Id$
+ * @brief Operations for retrieving and modifying user settings.
  */
+
+// $Id$
+
 
 class UserSettingsDAO extends DAO {
 	/**

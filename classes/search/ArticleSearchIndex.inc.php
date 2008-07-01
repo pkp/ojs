@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file ArticleSearchIndex.inc.php
+ * @file classes/search/ArticleSearchIndex.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package search
  * @class ArticleSearchIndex
+ * @ingroup search
  *
- * Class to add content to the article search index.
- *
- * $Id$
+ * @brief Class to add content to the article search index.
  */
+
+// $Id$
+
 
 import('search.SearchFileParser');
 import('search.SearchHTMLParser');

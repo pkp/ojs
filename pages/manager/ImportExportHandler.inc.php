@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package pages.manager
  * @class ImportExportHandler
+ * @ingroup pages_manager
  *
- * Handle requests for import/export functions. 
- *
- * $Id$
+ * @brief Handle requests for import/export functions. 
  */
+
+// $Id$
+
 
 define('IMPORTEXPORT_PLUGIN_CATEGORY', 'importexport');
 

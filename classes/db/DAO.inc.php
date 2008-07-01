@@ -1,19 +1,24 @@
 <?php
 
 /**
- * @file DAO.inc.php
+ * @defgroup db
+ */
+ 
+/**
+ * @file classes/db/DAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package db
  * @class DAO
+ * @ingroup db
+ * @see DAORegistry
  *
- * Data Access Object base class.
- * Operations for retrieving and modifying objects from a database.
- *
- * $Id$
+ * @brief Operations for retrieving and modifying objects from a database.
  */
+
+// $Id$
+
 
 class DAO {
 	/** The database connection object */

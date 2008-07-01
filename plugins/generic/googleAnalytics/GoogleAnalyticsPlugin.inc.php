@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.googleAnalytics
  * @class GoogleAnalyticsPlugin
+ * @ingroup plugins_generic_googleAnalytics
  *
- * Google Analytics plugin class
- *
- * $Id$
+ * @brief Google Analytics plugin class
  */
+
+// $Id$
+
 
 import('classes.plugins.GenericPlugin');
 

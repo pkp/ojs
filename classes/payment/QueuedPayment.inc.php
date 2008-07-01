@@ -1,15 +1,16 @@
 <?php
 
 /**
- * @file QueuedPayment.inc.php
+ * @file classes/payment/QueuedPayment.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package payment
  * @class QueuedPayment
+ * @ingroup payment
+ * @see QueuedPaymentDAO
  *
- * Queued (unfulfilled) payment data structure
+ * @brief Queued (unfulfilled) payment data structure
  *
  */
 

@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file Validation.inc.php
+ * @file classes/security/Validation.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package security
  * @class Validation
+ * @ingroup security
  *
- * Class providing user validation/authentication operations.
- *
- * $Id$
+ * @brief Class providing user validation/authentication operations.
  */
+
+// $Id$
+
 
 import('security.Role');
 

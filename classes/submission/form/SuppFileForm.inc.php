@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file SuppFileForm.inc.php
+ * @file classes/submission/form/SuppFileForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package submission.form
  * @class SuppFileForm
+ * @ingroup submission_form
  *
- * Supplementary file form.
- *
- * $Id$
+ * @brief Supplementary file form.
  */
+
+// $Id$
+
 
 import('form.Form');
 

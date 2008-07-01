@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file FormValidatorPost.inc.php
+ * @file classes/form/validation/FormValidatorPost.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package form.validation
  * @class FormValidatorPost
+ * @ingroup form_validation
  *
- * Form validation check to make sure the form is POSTed.
- *
- * $Id$
+ * @brief Form validation check to make sure the form is POSTed.
  */
+
+// $Id$
+
 
 import ('form.validation.FormValidator');
 

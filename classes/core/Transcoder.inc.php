@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file Transcoder.inc.php
+ * @file classes/core/Transcoder.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package db
  * @class Transcoder
+ * @ingroup db
  *
- * Multi-class transcoder; uses mbstring and iconv if available, otherwise falls back to built-in classes
- *
- * $Id$
+ * @brief Multi-class transcoder; uses mbstring and iconv if available, otherwise falls back to built-in classes
  */
+
+// $Id$
+
 
 class Transcoder {
 	/** @var $fromEncoding string Name of source encoding */

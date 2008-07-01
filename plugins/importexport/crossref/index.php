@@ -1,17 +1,22 @@
 <?php
 
 /**
- * @file index.php
+ * @defgroup plugins_importexport_crossref
+ */
+ 
+/**
+ * @file plugins/importexport/crossref/index.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Wrapper for CrossRef export plugin.
+ * @ingroup plugins_importexport_crossref
+ * @brief Wrapper for CrossRef export plugin.
  *
- * @package plugins.importexport.crossref
- *
- * $Id$
  */
+
+// $Id$
+
 
 require_once('CrossRefExportPlugin.inc.php');
 

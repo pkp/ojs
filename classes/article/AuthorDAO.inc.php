@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file AuthorDAO.inc.php
+ * @file classes/article/AuthorDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package article
  * @class AuthorDAO
+ * @ingroup article
+ * @see Author
  *
- * Class for Author DAO.
- * Operations for retrieving and modifying Author objects.
- *
- * $Id$
+ * @brief Operations for retrieving and modifying Author objects.
  */
+
+// $Id$
+
 
 import('article.Author');
 import('article.Article');

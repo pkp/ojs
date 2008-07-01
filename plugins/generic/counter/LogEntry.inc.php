@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.counter
  * @class LogEntry
+ * @ingroup plugins_generic_counter
  *
- * Log entry data object
- *
- * $Id$
+ * @brief Log entry data object
  */
+
+// $Id$
+
 
 define('LOG_ENTRY_TYPE_HTML_ARTICLE', 'html');
 define('LOG_ENTRY_TYPE_PDF_ARTICLE', 'pdf');

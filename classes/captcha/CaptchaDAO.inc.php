@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file CaptchaDAO.inc.php
+ * @file classes/captcha/CaptchaDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package captcha
  * @class CaptchaDAO
+ * @ingroup captcha
+ * @see Captcha
  *
- * Class for Captcha DAO.
- * Operations for retrieving and modifying Captcha keys.
- *
- * $Id$
+ * @brief Operations for retrieving and modifying Captcha keys.
  */
+
+// $Id$
+
 
 import('captcha.Captcha');
 

@@ -1,18 +1,24 @@
 <?php
 
 /**
- * @file ArticleGalleyForm.inc.php
+ * @defgroup submission_form
+ */
+ 
+/**
+ * @file classes/submission/form/ArticleGalleyForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package submission.form
  * @class ArticleGalleyForm
+ * @ingroup submission_form
+ * @see ArticleGalley
  *
- * Article galley editing form.
- *
- * $Id$
+ * @brief Article galley editing form.
  */
+
+// $Id$
+
 
 import('form.Form');
 

@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file JournalRTAdmin.inc.php
+ * @file classes/rt/ojs/JournalRTAdmin.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package rt.ojs
  * @class JournalRTAdmin
+ * @ingroup rt_ojs
  *
- * OJS-specific Reading Tools administration interface.
- *
- * $Id$
+ * @brief OJS-specific Reading Tools administration interface.
  */
+
+// $Id$
+
 
 import('rt.RTAdmin');
 import('rt.ojs.RTDAO');

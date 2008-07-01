@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.xmlGalley
  * @class XMLGalleySettingsForm
+ * @ingroup plugins_generic_xmlGalley
  *
- * Form for journal managers to modify Article XML Galley plugin settings
- *
- * $Id$
+ * @brief Form for journal managers to modify Article XML Galley plugin settings
  */
+
+// $Id$
+
 
 import('form.Form');
 

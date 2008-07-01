@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file VersionDAO.inc.php
+ * @file classes/site/VersionDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package site
  * @class VersionDAO
+ * @ingroup site
+ * @see Version
  *
- * Class for Version DAO.
- * Operations for retrieving and modifying Version objects.
- *
- * $Id$
+ * @brief Operations for retrieving and modifying Version objects.
  */
+
+// $Id$
+
 
 import('site.Version');
 

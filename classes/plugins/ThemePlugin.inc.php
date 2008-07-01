@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file ThemePlugin.inc.php
+ * @file classes/plugins/ThemePlugin.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins
  * @class ThemePlugin
+ * @ingroup plugins
  *
- * Abstract class for theme plugins
- *
- * $Id$
+ * @brief Abstract class for theme plugins
  */
+
+// $Id$
+
 
 class ThemePlugin extends Plugin {
 	/**

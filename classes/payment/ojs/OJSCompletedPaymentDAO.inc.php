@@ -1,16 +1,16 @@
 <?php
 
 /**
- * @file OJSCompletedPaymentDAO.inc.php
+ * @file classes/payment/ojs/OJSCompletedPaymentDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package payment
  * @class OJSCompletedPaymentDAO
+ * @ingroup payment
+ * @see OJSCompletedPayment, Payment
  *
- * Class for completed payment DAO.
- * Operations for retrieving and querying past payments
+ * @brief Operations for retrieving and querying past payments
  *
  */
 

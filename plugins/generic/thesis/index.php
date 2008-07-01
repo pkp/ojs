@@ -1,17 +1,22 @@
 <?php
 
 /**
- * @file index.php
+ * @defgroup plugins_generic_thesis
+ */
+ 
+/**
+ * @file plugins/generic/thesis/index.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Wrapper for Thesis Abstracts plugin.
+ * @ingroup plugins_generic_thesis
+ * @brief Wrapper for Thesis Abstracts plugin.
  *
- * @package plugins.generic.thesis
- *
- * $Id$
  */
+
+// $Id$
+
 
 require_once('ThesisPlugin.inc.php');
 

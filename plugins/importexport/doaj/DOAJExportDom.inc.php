@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.importexport.DOAJ
  * @class DOAJExportDom
+ * @ingroup plugins_importexport_DOAJ
  *
- * DOAJ import/export plugin DOM functions for export
- *
- * $Id$
+ * @brief DOAJ import/export plugin DOM functions for export
  */
+
+// $Id$
+
 
 import('xml.XMLCustomWriter');
 

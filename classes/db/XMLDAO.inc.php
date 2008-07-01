@@ -1,19 +1,19 @@
 <?php
 
 /**
- * @file XMLDAO.inc.php
+ * @file classes/db/XMLDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package db
  * @class XMLDAO
+ * @ingroup db
  *
- * XML Data Access Object base class.
- * Operations for retrieving and modifying objects from an XML data source.
- *
- * $Id$
+ * @brief Operations for retrieving and modifying objects from an XML data source.
  */
+
+// $Id$
+
 
 import('xml.XMLParser');
 

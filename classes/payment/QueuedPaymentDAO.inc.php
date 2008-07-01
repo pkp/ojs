@@ -1,16 +1,16 @@
 <?php
 
 /**
- * @file QueuedPaymentDAO.inc.php
+ * @file classes/payment/QueuedPaymentDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package payment
  * @class QueuedPaymentDAO
+ * @ingroup payment
+ * @see QueuedPayment
  *
- * Class for queued payment DAO.
- * Operations for retrieving and modifying queued payment objects.
+ * @brief Operations for retrieving and modifying queued payment objects.
  *
  */
 

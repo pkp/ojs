@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file ReviewAssignment.inc.php
+ * @file classes/submission/reviewAssignment/ReviewAssignment.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package submission
  * @class ReviewAssignment
+ * @ingroup submission
+ * @see ReviewAssignmentDAO
  *
- * ReviewAssignment class.
- * Describes review assignment properties.
- *
- * $Id$
+ * @brief Describes review assignment properties.
  */
+
+// $Id$
+
 
 define('SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT', 1);
 define('SUBMISSION_REVIEWER_RECOMMENDATION_PENDING_REVISIONS', 2);

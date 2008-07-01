@@ -1,18 +1,23 @@
 <?php
+/**
+ * @defgroup admin
+ */
 
 /**
- * @file LanguageAction.inc.php
+ * @file classes/i18n/LanguageAction.inc.php
+ * @defgroup admin
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package admin
  * @class LanguageAction
+ * @ingroup admin
  *
- * LanguageAction class.
- *
- * $Id$
+ * @brief LanguageAction class.
  */
+
+// $Id$
+
 
 define('LANGUAGE_PACK_DESCRIPTOR_URL', 'http://pkp.sfu.ca/ojs/xml/%s/locales.xml');
 define('LANGUAGE_PACK_TAR_URL', 'http://pkp.sfu.ca/ojs/xml/%s/%s.tar.gz');

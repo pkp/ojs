@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file UserManagementForm.inc.php
+ * @file classes/manager/form/UserManagementForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package manager.form
  * @class UserManagementForm
+ * @ingroup manager_form
  *
- * Form for journal managers to edit user profiles.
- *
- * $Id$
+ * @brief Form for journal managers to edit user profiles.
  */
+
+// $Id$
+
 
 import('form.Form');
 

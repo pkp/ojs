@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file ProofAssignment.inc.php
+ * @file classes/submission/proofAssignment/ProofAssignment.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package submission
  * @class ProofAssignment
+ * @ingroup submission
+ * @see ProofAssignmentDAO
  *
- * ProofAssignment class.
- * Describes proofread assignment properties.
- *
- * $Id$
+ * @brief Describes proofread assignment properties.
  */
+
+// $Id$
+
 
 class ProofAssignment extends DataObject {
 

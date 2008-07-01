@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file EditorSubmissionDAO.inc.php
+ * @file classes/editor/EditorSubmissionDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package submission
  * @class EditorSubmissionDAO
+ * @ingroup submission
+ * @see EditorSubmission
  *
- * Class for EditorSubmission DAO.
- * Operations for retrieving and modifying EditorSubmission objects.
- *
- * $Id$
+ * @brief Operations for retrieving and modifying EditorSubmission objects.
  */
+
+// $Id$
+
 
 import('submission.editor.EditorSubmission');
 import('submission.author.AuthorSubmission'); // Bring in editor decision constants

@@ -1,14 +1,18 @@
 <?php
 
 /**
- * @file index.php
+ * @defgroup plugins_blocks_subscription
+ */
+ 
+/**
+ * @file plugins/blocks/subscription/index.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Wrapper for subscription block plugin.
+ * @ingroup plugins_blocks_subscription
+ * @brief Wrapper for subscription block plugin.
  *
- * @package plugins.blocks.subscription
  *
  */
 

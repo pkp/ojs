@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file EditableEmailFile.inc.php
+ * @file classes/i18n/EditableEmailFile.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package i18n 
  * @class EditableEmailFile
+ * @ingroup i18n 
  *
- * This class supports updating for email XML files.
- *
- * $Id$
+ * @brief This class supports updating for email XML files.
  */
+
+// $Id$
+
 
 import('file.EditableFile');
 

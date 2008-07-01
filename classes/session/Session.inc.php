@@ -1,19 +1,24 @@
 <?php
 
 /**
- * @file Session.inc.php
+ * @defgroup session
+ */
+ 
+/**
+ * @file classes/session/Session.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package session
  * @class Session
+ * @ingroup session
+ * @see SessionDAO
  *
- * Session class.
- * Maintains user state information from one request to the next.
- *
- * $Id$
+ * @brief Maintains user state information from one request to the next.
  */
+
+// $Id$
+
 
 class Session extends DataObject  {
 

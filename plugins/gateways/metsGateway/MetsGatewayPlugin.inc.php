@@ -1,17 +1,19 @@
 <?php
 
 /**
- * MetsGatewayPlugin.inc.php
+ * @file MetsGatewayPlugin.inc.php
  *
  * Copyright (c) 2003-2005 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins
+ * @class METSGatewayPlugin
+ * @ingroup plugins
  *
- * A plugin to allow exposure of Journals in METS format for web service access
- *
- * $Id$
+ * @brief A plugin to allow exposure of Journals in METS format for web service access
  */
+
+// $Id$
+
 
 import('classes.plugins.GatewayPlugin');
 

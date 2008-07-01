@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file ArticleEmailLogEntry.inc.php
+ * @file classes/article/log/ArticleEmailLogEntry.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package article.log
  * @class ArticleEmailLogEntry
+ * @ingroup article_log
+ * @see ArticleEmailLogDAO
  *
- * Article email log entry class.
- * Describes an entry in the article email log.
- *
- * $Id$
+ * @brief Describes an entry in the article email log.
  */
+
+// $Id$
+
 
 // Email associative types. All types must be defined here
 define('ARTICLE_EMAIL_TYPE_DEFAULT', 		0);

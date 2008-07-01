@@ -1,18 +1,25 @@
 <?php
 
 /**
- * @file ScheduledTaskDAO.inc.php
+ * @defgroup scheduledTask
+ */
+ 
+
+/**
+ * @file classes/scheduledTask/ScheduledTaskDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package scheduledTask
  * @class ScheduledTaskDAO
+ * @ingroup scheduledTask
+ * @see ScheduledTask
  *
- * Operations for retrieving and modifying Scheduled Task data.
- *
- * $Id$
+ * @brief Operations for retrieving and modifying Scheduled Task data.
  */
+
+// $Id$
+
 
 import('scheduledTask.ScheduledTask');
 

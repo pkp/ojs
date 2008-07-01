@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.translator
  * @class TranslatorHandler
+ * @ingroup plugins_generic_translator
  *
- * This handles requests for the translator plugin.
- *
- * $Id$
+ * @brief This handles requests for the translator plugin.
  */
+
+// $Id$
+
 
 require_once('TranslatorAction.inc.php');
 

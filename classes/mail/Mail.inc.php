@@ -1,18 +1,23 @@
 <?php
 
 /**
- * @file Mail.inc.php
+ * @defgroup mail
+ */
+ 
+/**
+ * @file classes/mail/Mail.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package mail
  * @class Mail
+ * @ingroup mail
  *
- * Class defining basic operations for handling and sending emails.
- *
- * $Id$
+ * @brief Class defining basic operations for handling and sending emails.
  */
+
+// $Id$
+
 
 define('MAIL_EOL', Core::isWindows() ? "\r\n" : "\n");
 define('MAIL_WRAP', 76);

@@ -1,17 +1,22 @@
 <?php
 
 /**
- * @file index.php
+ * @defgroup plugins_importexport_sample
+ */
+ 
+/**
+ * @file plugins/importexport/sample/index.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Wrapper for sample import/export plugin.
+ * @ingroup plugins_importexport_sample
+ * @brief Wrapper for sample import/export plugin.
  *
- * @package plugins.importexport.sample
- *
- * $Id$
  */
+
+// $Id$
+
 
 require_once('SampleImportExportPlugin.inc.php');
 

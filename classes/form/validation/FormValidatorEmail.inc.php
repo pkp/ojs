@@ -1,18 +1,20 @@
 <?php
 
 /**
- * @file FormValidatorEmail.inc.php
+ * @file classes/form/validation/FormValidatorEmail.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package form.validation
  * @class FormValidatorEmail
+ * @ingroup form_validation
+ * @see FormValidator
  *
- * Form validation check for email addresses.
- *
- * $Id$
+ * @brief Form validation check for email addresses.
  */
+
+// $Id$
+
 
 import('form.validation.FormValidatorRegExp');
 

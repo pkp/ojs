@@ -1,25 +1,29 @@
 <?php
 
 /**
- * @file ImportOJS1Form.inc.php
+ * @file classes/admin/form/ImportOJS1Form.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package admin.form
  * @class ImportOJS1Form
+ * @ingroup admin_form
+ * @see ImportOJS1
  *
- * Form for site administrator to migrate data from an OJS 1.x system.
- *
- * $Id$
+ * @brief Form for site administrator to migrate data from an OJS 1.x system.
  */
+
+// $Id$
+
 
 import('site.ImportOJS1');
 import('form.Form');
 
 class ImportOJS1Form extends Form {
 
-	/** @var $importer ImportOJS1 */
+	/** 
+	 * @var ImportOJS1
+	 */
 	var $importer;
 
 	/**

@@ -1,18 +1,20 @@
 <?php
 
 /**
- * @file TemporaryFileManager.inc.php
+ * @file classes/file/TemporaryFileManager.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package file
  * @class TemporaryFileManager
+ * @ingroup file
+ * @see TemporaryFileDAO
  *
- * Class defining operations for temporary file management.
- *
- * $Id$
+ * @brief Class defining operations for temporary file management.
  */
+
+// $Id$
+
 
 import('file.FileManager');
 

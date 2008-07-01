@@ -1,18 +1,23 @@
 <?php
 
 /**
- * @file LayoutEditorAction.inc.php
+ * @defgroup submission_layoutEditor_LayoutEditorAction
+ */
+ 
+/**
+ * @file classes/submission/layoutEditor/LayoutEditorAction.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package submission.layoutEditor.LayoutEditorAction
  * @class LayoutEditorAction
+ * @ingroup submission_layoutEditor_LayoutEditorAction
  *
- * LayoutEditorAction class.
- *
- * $Id$
+ * @brief LayoutEditorAction class.
  */
+
+// $Id$
+
 
 import('submission.common.Action');
 

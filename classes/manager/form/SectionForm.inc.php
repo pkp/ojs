@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file SectionForm.inc.php
+ * @file classes/manager/form/SectionForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package manager.form
  * @class SectionForm
+ * @ingroup manager_form
  *
- * Form for creating and modifying journal sections.
- *
- * $Id$
+ * @brief Form for creating and modifying journal sections.
  */
+
+// $Id$
+
 
 import('form.Form');
 

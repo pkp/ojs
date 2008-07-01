@@ -1,18 +1,24 @@
 <?php
 
 /**
- * @file Article.inc.php
+ * @defgroup article
+ */
+ 
+/**
+ * @file classes/article/Article.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
- *
- * @package article
+ * 
  * @class Article
+ * @ingroup article
+ * @see ArticleDAO
  *
- * Article class.
- *
- * $Id$
+ * @brief Article class.
  */
+
+// $Id$
+
 
 // Submission status constants
 define('STATUS_ARCHIVED', 0);

@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.importexport.erudit
  * @class EruditExportPlugin
+ * @ingroup plugins_importexport_erudit
  *
- * Erudit english DTD article export plugin
- *
- * $Id$
+ * @brief Erudit english DTD article export plugin
  */
+
+// $Id$
+
 
 import('classes.plugins.ImportExportPlugin');
 

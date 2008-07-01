@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package pages.information
  * @class InformationHandler
+ * @ingroup pages_information
  *
- * Display journal information.
- *
- * $Id$
+ * @brief Display journal information.
  */
+
+// $Id$
+
 
 class InformationHandler extends Handler {
 

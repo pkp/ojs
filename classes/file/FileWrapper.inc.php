@@ -1,23 +1,24 @@
 <?php
 
 /**
- * @file FileWrapper.inc.php
+ * @file classes/file/FileWrapper.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package file
  * @class FileWrapper
+ * @ingroup file
  *
- * Class abstracting operations for reading remote files using various protocols.
+ * @brief Class abstracting operations for reading remote files using various protocols.
  * (for when allow_url_fopen is disabled).
  *
  * TODO:
  *     - Other protocols?
  *     - Write mode (where possible)
- *
- * $Id$
  */
+
+// $Id$
+
 
 class FileWrapper {
 

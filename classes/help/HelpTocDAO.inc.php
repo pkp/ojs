@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file HelpTocDAO.inc.php
+ * @file classes/help/HelpTocDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package help
  * @class HelpTocDAO
+ * @ingroup help
+ * @see HelpToc
  *
- * Class for HelpToc DAO.
- * Operations for retrieving HelpToc objects.
- *
- * $Id$
+ * @brief Operations for retrieving HelpToc objects.
  */
+
+// $Id$
+
 
 import('help.HelpToc');
 

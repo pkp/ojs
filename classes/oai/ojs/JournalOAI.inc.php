@@ -1,20 +1,26 @@
 <?php
 
 /**
- * @file JournalOAI.inc.php
+ * @defgroup oai_ojs
+ */
+ 
+/**
+ * @file classes/oai/ojs/JournalOAI.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package oai.ojs
  * @class JournalOAI
+ * @ingroup oai_ojs
+ * @see OAIDAO
  *
- * OJS-specific OAI interface.
+ * @brief OJS-specific OAI interface.
  * Designed to support both a site-wide and journal-specific OAI interface
  * (based on where the request is directed).
- *
- * $Id$
  */
+
+// $Id$
+
 
 import('oai.OAI');
 import('oai.ojs.OAIDAO');

@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file ImportOJS1.inc.php
+ * @file classes/site/ImportOJS1.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package site
  * @class ImportOJS1
+ * @ingroup site
  *
- * Class to import data from an OJS 1.x installation.
- *
- * $Id$
+ * @brief @brief Class to import data from an OJS 1.x installation.
  */
+
+// $Id$
+
 
 define('OJS1_MIN_VERSION', '1.1.5');
 define('OJS1_MIN_VERSION_SUBSCRIPTIONS', '1.1.8');

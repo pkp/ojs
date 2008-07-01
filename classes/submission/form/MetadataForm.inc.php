@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file MetadataForm.inc.php
+ * @file classes/submission/form/MetadataForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package submission.form
  * @class MetadataForm
+ * @ingroup submission_form
  *
- * Form to change metadata information for a submission.
- *
- * $Id$
+ * @brief Form to change metadata information for a submission.
  */
+
+// $Id$
+
 
 import('form.Form');
 

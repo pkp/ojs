@@ -6,13 +6,15 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.announcementFeed
  * @class AnnouncementFeedGatewayPlugin
+ * @ingroup plugins_generic_announcementFeed
  *
- * Gateway component of announcement feed plugin
+ * @brief Gateway component of announcement feed plugin
  *
- * $Id$
  */
+
+// $Id$
+
 
 import('classes.plugins.GatewayPlugin');
 

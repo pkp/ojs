@@ -1,18 +1,23 @@
 <?php
 
 /**
- * @file SubscriptionForm.inc.php
+ * @defgroup subscription_form
+ */
+ 
+/**
+ * @file classes/subscription/form/SubscriptionForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package subscription.form
  * @class SubscriptionForm
+ * @ingroup subscription_form
  *
- * Form for journal managers to create/edit subscriptions.
- *
- * $Id$
+ * @brief Form for journal managers to create/edit subscriptions.
  */
+
+// $Id$
+
 
 import('form.Form');
 

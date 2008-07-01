@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file LayoutEditorSubmissionDAO.inc.php
+ * @file classes/submission/layoutEditor/LayoutEditorSubmissionDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package submission.layoutEditor
  * @class LayoutEditorSubmissionDAO
+ * @ingroup submission_layoutEditor
+ * @see LayoutEditorSubmission
  *
- * Class for LayoutEditorSubmission DAO.
- * Operations for retrieving and modifying LayoutEditorSubmission objects.
- *
- * $Id$
+ * @brief Operations for retrieving and modifying LayoutEditorSubmission objects.
  */
+
+// $Id$
+
 
 import('submission.layoutEditor.LayoutEditorSubmission');
 

@@ -1,18 +1,20 @@
 <?php
 
 /**
- * @file TemporaryFile.inc.php
+ * @file classes/file/TemporaryFile.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package file
  * @class TemporaryFile
+ * @ingroup file
+ * @see TemporaryFileDAO
  *
- * Temporary file class.
- *
- * $Id$
+ * @brief Temporary file class.
  */
+
+// $Id$
+
 
 class TemporaryFile extends DataObject {
 

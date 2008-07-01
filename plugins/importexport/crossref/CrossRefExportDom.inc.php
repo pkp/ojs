@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.importexport.crossref
  * @class CrossRefExportDom
+ * @ingroup plugins_importexport_crossref
  *
- * CrossRef XML export plugin DOM functions
- *
- * $Id$
+ * @brief CrossRef XML export plugin DOM functions
  */
+
+// $Id$
+
 
 import('xml.XMLCustomWriter');
 

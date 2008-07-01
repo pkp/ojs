@@ -1,18 +1,20 @@
 <?php
 
 /**
- * @file PublishedArticle.inc.php
+ * @file classes/article/PublishedArticle.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package article
  * @class PublishedArticle
+ * @ingroup article
+ * @see PublishedArticleDAO
  *
- * Published article class.
- *
- * $Id$
+ * @brief Published article class.
  */
+
+// $Id$
+
 
 import('article.Article');
 

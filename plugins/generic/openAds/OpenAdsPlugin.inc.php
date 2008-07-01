@@ -6,13 +6,13 @@
  * Copyright (c) 2003-2008 Siavash Miri and Alec Smecher
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.openAds
  * @class OpenAdsPlugin
+ * @ingroup plugins_generic_openAds
  *
- * Integrate OpenAds ad manager with OJS.
- *
- * $Id: CounterPlugin.inc.php,v 1.0 2006/10/20 12:28pm
+ * @brief Integrate OpenAds ad manager with OJS.
  */
+
+// $Id: CounterPlugin.inc.php,v 1.0 2006/10/20 12:28pm
 
 define ('AD_ORIENTATION_LEFT',		1);
 define ('AD_ORIENTATION_RIGHT',		2);

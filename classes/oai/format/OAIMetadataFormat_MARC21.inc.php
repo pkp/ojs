@@ -1,18 +1,20 @@
 <?php
 
 /**
- * @file OAIMetadataFormat_MARC21.inc.php
+ * @file classes/oai/format/OAIMetadataFormat_MARC21.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package oai.format
  * @class OAIMetadataFormat_MARC21
+ * @ingroup oai_format
+ * @see OAI
  *
- * OAI metadata format class -- MARC21 (MARCXML).
- *
- * $Id$
+ * @brief OAI metadata format class -- MARC21 (MARCXML).
  */
+
+// $Id$
+
 
 class OAIMetadataFormat_MARC21 extends OAIMetadataFormat {
 	/**

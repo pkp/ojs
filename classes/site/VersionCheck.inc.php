@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file VersionCheck.inc.php
+ * @file classes/site/VersionCheck.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package site
  * @class VersionCheck
+ * @ingroup site
+ * @see Version
  *
- * VersionCheck class.
- * Provides methods to check for the latest version of OJS.
- *
- * $Id$
+ * @brief Provides methods to check for the latest version of OJS.
  */
+
+// $Id$
+
 
 define('VERSION_CHECK_URL', 'http://pkp.sfu.ca/ojs/xml/ojs-version.xml');
 define('VERSION_CODE_PATH', 'dbscripts/xml/version.xml');

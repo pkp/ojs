@@ -6,13 +6,13 @@
  * Copyright (c) 2003-2008 Siavash Miri and Alec Smecher
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.openAds
  * @class OpenAdsConnection
+ * @ingroup plugins_generic_openAds
  *
- * Abstracts the OpenAds link.
- *
- * $Id: CounterPlugin.inc.php,v 1.0 2006/10/20 12:28pm
+ * @brief Abstracts the OpenAds link.
  */
+
+// $Id: CounterPlugin.inc.php,v 1.0 2006/10/20 12:28pm
 
 class OpenAdsConnection {
 	/** @var $installPath string Path to config file */

@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file AdminPeopleHandler.inc.php
+ * @file pages/admin/AdminPeopleHandler.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package pages.admin
  * @class AdminPeopleHandler
+ * @ingroup pages_admin
  *
- * Handle requests for people management functions. 
- *
- * $Id$
+ * @brief Handle requests for people management functions. 
  */
+
+// $Id$
+
 
 class AdminPeopleHandler extends AdminHandler {
 

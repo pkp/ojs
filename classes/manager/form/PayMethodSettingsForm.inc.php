@@ -1,15 +1,15 @@
 <?php
 
 /**
- * @file PaymentSettingsForm.inc.php
+ * @file classes/manager/form/PaymentSettingsForm.inc.php
  *
  * Copyright (c) 2006-2007 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package manager.form
  * @class PayMethodSettingsForm
+ * @ingroup manager_form
  *
- * Form for conference managers to modify Payment Plugin settings
+ * @brief Form for conference managers to modify Payment Plugin settings
  * 
  */
 

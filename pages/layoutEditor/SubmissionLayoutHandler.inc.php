@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package pages.layoutEditor
  * @class SubmissionLayoutHandler
+ * @ingroup pages_layoutEditor
  *
- * Handle requests related to submission layout editing. 
- *
- * $Id$
+ * @brief Handle requests related to submission layout editing. 
  */
+
+// $Id$
+
 
 class SubmissionLayoutHandler extends LayoutEditorHandler {
 

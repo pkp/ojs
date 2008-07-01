@@ -1,16 +1,16 @@
 <?php
 
 /**
- * @file CurrencyDAO.inc.php
+ * @file classes/currency/CurrencyDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package currency
  * @class CurrencyDAO
+ * @ingroup currency
+ * @see Currency
  *
- * Class for Currency DAO.
- * Operations for retrieving and modifying Currency objects.
+ * @brief Operations for retrieving and modifying Currency objects.
  *
  */
 

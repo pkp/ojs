@@ -1,18 +1,20 @@
 <?php
 
 /**
- * @file EmailTemplateForm.inc.php
+ * @file classes/manager/form/EmailTemplateForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package manager.form
  * @class EmailTemplateForm
+ * @ingroup manager_form
+ * @see EmailTemplateDAO
  *
- * Form for creating and modifying email templates.
- *
- * $Id$
+ * @brief Form for creating and modifying email templates.
  */
+
+// $Id$
+
 
 import('form.Form');
 

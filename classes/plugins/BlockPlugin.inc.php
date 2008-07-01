@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file BlockPlugin.inc.php
+ * @file classes/plugins/BlockPlugin.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins
  * @class BlockPlugin
+ * @ingroup plugins
  *
- * Abstract class for block plugins
- *
- * $Id$
+ * @brief Abstract class for block plugins
  */
+
+// $Id$
+
 
 define('BLOCK_CONTEXT_LEFT_SIDEBAR',		0x00000001);
 define('BLOCK_CONTEXT_RIGHT_SIDEBAR', 		0x00000002);

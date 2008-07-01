@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file Installer.inc.php
+ * @file classes/install/Installer.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package install
  * @class Installer
+ * @ingroup install
  *
- * Base class for install and upgrade scripts.
- *
- * $Id$
+ * @brief Base class for install and upgrade scripts.
  */
+
+// $Id$
+
 
 // Database installation files
 define('INSTALLER_DATA_DIR', 'dbscripts/xml');

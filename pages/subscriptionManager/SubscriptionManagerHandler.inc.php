@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package pages.subscriptionManager
  * @class SubscriptionManagerHandler
+ * @ingroup pages_subscriptionManager
  *
- * Handle requests for subscription management functions. 
- *
- * $Id$
+ * @brief Handle requests for subscription management functions. 
  */
+
+// $Id$
+
 
 class SubscriptionManagerHandler extends Handler {
 	function index() {

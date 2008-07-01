@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file ChangePasswordForm.inc.php
+ * @file classes/user/form/ChangePasswordForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package user.form
  * @class ChangePasswordForm
+ * @ingroup user_form
  *
- * Form to change a user's password.
- *
- * $Id$
+ * @brief Form to change a user's password.
  */
+
+// $Id$
+
 
 import('form.Form');
 

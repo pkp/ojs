@@ -1,16 +1,16 @@
 <?php
 
 /**
- * @file ReviewFormElementDAO.inc.php
+ * @file classes/reviewForm/ReviewFormElementDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package reviewForm
  * @class ReviewFormElementDAO
+ * @ingroup reviewForm
+ * @see ReviewFormElement
  *
- * Class for review form element DAO.
- * Operations for retrieving and modifying ReviewFormElement objects.
+ * @brief Operations for retrieving and modifying ReviewFormElement objects.
  *
  */
 

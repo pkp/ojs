@@ -1,19 +1,24 @@
 <?php
 
 /**
+ * @defgroup index
+ */
+ 
+/**
  * @file driver.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package index
+ * @ingroup index
  *
- * Core system initialization code.
+ * @brief Core system initialization code.
  * This file is loaded before any others.
  * Any system-wide imports or initialization code should be placed here. 
- *
- * $Id$
  */
+
+// $Id$
+
 
 
 /**

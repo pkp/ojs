@@ -6,13 +6,15 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package pages.article
  * @class ArticleHandler
+ * @ingroup pages_article
  *
- * Handle requests for article functions. 
+ * @brief Handle requests for article functions. 
  *
- * $Id$
  */
+
+// $Id$
+
 
 import('rt.ojs.RTDAO');
 import('rt.ojs.JournalRT');

@@ -1,18 +1,20 @@
 <?php
 
 /**
- * @file ProofAssignmentDAO.inc.php
+ * @file classes/submission/proofAssignment/ProofAssignmentDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package submission
  * @class ProofAssignmentDAO
+ * @ingroup submission
+ * @see ProofAssignment
  *
- * Class for DAO relating proofreaders to articles.
- *
- * $Id$
+ * @brief Class for DAO relating proofreaders to articles.
  */
+
+// $Id$
+
 
 import('submission.proofAssignment.ProofAssignment');
 

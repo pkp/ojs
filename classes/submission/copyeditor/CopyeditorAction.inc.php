@@ -1,18 +1,20 @@
 <?php
 
 /**
- * @file CopyeditorAction.inc.php
+ * @file classes/submission/copyeditor/CopyeditorAction.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package submission
  * @class CopyeditorAction
+ * @ingroup submission
+ * @see CopyeditorSubmissionDAO
  *
- * CopyeditorAction class.
- *
- * $Id$
+ * @brief CopyeditorAction class.
  */
+
+// $Id$
+
 
 import('submission.common.Action');
 

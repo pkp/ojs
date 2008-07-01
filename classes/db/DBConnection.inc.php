@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file DBConnection.inc.php
+ * @file classes/db/DBConnection.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package db
  * @class DBConnection
+ * @ingroup db
  *
- * Class for accessing the low-level database connection.
+ * @brief Class for accessing the low-level database connection.
  * Currently integrated with ADOdb (from http://adodb.sourceforge.net).
- *
- * $Id$
  */
+
+// $Id$
+
 
 class DBConnection {
 

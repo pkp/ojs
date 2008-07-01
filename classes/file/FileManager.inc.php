@@ -1,18 +1,23 @@
 <?php
 
 /**
- * @file FileManager.inc.php
+ * @defgroup file
+ */
+ 
+/**
+ * @file classes/file/FileManager.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package file
  * @class FileManager
+ * @ingroup file
  *
- * Class defining basic operations for file management.
- *
- * $Id$
+ * @brief Class defining basic operations for file management.
  */
+
+// $Id$
+
 
 define('FILE_MODE_MASK', 0666);
 define('DIRECTORY_MODE_MASK', 0777);

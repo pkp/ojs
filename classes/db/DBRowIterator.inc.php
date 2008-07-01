@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file DBRowIterator.inc.php
+ * @file classes/db/DBRowIterator.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package db
  * @class DBRowIterator
+ * @ingroup db
  *
- * Wrapper around ADORecordSet providing "factory" features for generating 
+ * @brief Wrapper around ADORecordSet providing "factory" features for generating 
  * objects from DAOs.
- *
- * $Id$
  */
+
+// $Id$
+
 
 import('core.ItemIterator');
 

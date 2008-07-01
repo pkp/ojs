@@ -1,17 +1,22 @@
 <?php
 
 /**
- * @file index.php
+ * @defgroup plugins_generic_phpMyVisites
+ */
+ 
+/**
+ * @file plugins/generic/phpMyVisites/index.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Wrapper for phpMyVisites plugin.
+ * @ingroup plugins_generic_phpMyVisites
+ * @brief Wrapper for phpMyVisites plugin.
  *
- * @package plugins.generic.phpMyVisites
- *
- * $Id$
  */
+
+// $Id$
+
 
 require_once('PhpMyVisitesPlugin.inc.php');
 

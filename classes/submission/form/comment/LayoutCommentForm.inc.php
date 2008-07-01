@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file LayoutCommentForm.inc.php
+ * @file classes/submission/form/comment/LayoutCommentForm.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package submission.form
  * @class LayoutCommentForm
+ * @ingroup submission_form
  *
- * LayoutComment form.
- *
- * $Id$
+ * @brief LayoutComment form.
  */
+
+// $Id$
+
 
 import("submission.form.comment.CommentForm");
 

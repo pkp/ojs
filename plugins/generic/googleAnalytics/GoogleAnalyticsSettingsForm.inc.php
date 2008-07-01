@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.googleAnalytics
  * @class GoogleAnalyticsSettingsForm
+ * @ingroup plugins_generic_googleAnalytics
  *
- * Form for journal managers to modify Google Analytics plugin settings
- *
- * $Id$
+ * @brief Form for journal managers to modify Google Analytics plugin settings
  */
+
+// $Id$
+
 
 import('form.Form');
 

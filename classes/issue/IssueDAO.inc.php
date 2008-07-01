@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file IssueDAO.inc.php
+ * @file classes/issue/IssueDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package issue
  * @class IssueDAO
+ * @ingroup issue
+ * @see Issue
  *
- * Class for Issue DAO.
- * Operations for retrieving and modifying Issue objects.
- *
- * $Id$
+ * @brief Operations for retrieving and modifying Issue objects.
  */
+
+// $Id$
+
 
 import ('issue.Issue');
 

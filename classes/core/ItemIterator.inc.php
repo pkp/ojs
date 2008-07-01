@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file ItemIterator.inc.php
+ * @file classes/core/ItemIterator.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package db
  * @class ItemIterator
+ * @ingroup db
  *
- * Generic iterator class; needs to be overloaded by subclasses
+ * @brief Generic iterator class; needs to be overloaded by subclasses
  * providing specific implementations.
- *
- * $Id$
  */
+
+// $Id$
+
 
 class ItemIterator {
 	/**

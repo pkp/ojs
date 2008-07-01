@@ -1,18 +1,20 @@
 <?php
 
 /**
- * @file LayoutAssignmentDAO.inc.php
+ * @file classes/submission/layoutAssignment/LayoutAssignmentDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package submission.layoutAssignment
  * @class LayoutAssignmentDAO
+ * @ingroup submission_layoutAssignment
+ * @see LayoutAssignment
  *
- * DAO class for layout editing assignments.
- *
- * $Id$
+ * @brief DAO class for layout editing assignments.
  */
+
+// $Id$
+
 
 import('submission.layoutAssignment.LayoutAssignment');
 

@@ -1,13 +1,18 @@
 <?php 
+
 /**
- * index.php
+ * @defgroup plugins
+ */
+ 
+/**
+ * @file plugins/paymethod/manual/index.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins
+ * @ingroup plugins
+ * @brief Wrapper for manual payment plugin.
  *
- * Wrapper for manual payment plugin.
  *
  */
  

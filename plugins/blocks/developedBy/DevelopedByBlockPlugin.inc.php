@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.blocks.developedBy
  * @class DevelopedByBlockPlugin
+ * @ingroup plugins_blocks_developedBy
  *
- * Class for "developed by" block plugin
- *
- * $Id$
+ * @brief Class for "developed by" block plugin
  */
+
+// $Id$
+
 
 import('plugins.BlockPlugin');
 

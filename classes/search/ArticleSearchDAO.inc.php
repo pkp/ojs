@@ -1,18 +1,20 @@
 <?php
 
 /**
- * @file ArticleSearchDAO.inc.php
+ * @file classes/search/ArticleSearchDAO.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package search
  * @class ArticleSearchDAO
+ * @ingroup search
+ * @see ArticleSearch
  *
- * DAO class for article search index.
- *
- * $Id$
+ * @brief DAO class for article search index.
  */
+
+// $Id$
+
 
 import('search.ArticleSearch');
 

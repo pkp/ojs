@@ -1,17 +1,22 @@
 <?php
 
 /**
- * @file index.php
+ * @defgroup plugins_importexport_pubmed
+ */
+ 
+/**
+ * @file plugins/importexport/pubmed/index.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Wrapper for PubMed export plugin.
+ * @ingroup plugins_importexport_pubmed
+ * @brief Wrapper for PubMed export plugin.
  *
- * @package plugins.importexport.pubmed
- *
- * $Id$
  */
+
+// $Id$
+
 
 require_once('PubMedExportPlugin.inc.php');
 

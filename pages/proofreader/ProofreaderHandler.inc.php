@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package pages.proofreader
  * @class ProofreaderHandler
+ * @ingroup pages_proofreader
  *
- * Handle requests for proofreader functions. 
- *
- * $Id$
+ * @brief Handle requests for proofreader functions. 
  */
+
+// $Id$
+
 
 import('submission.proofreader.ProofreaderAction');
 

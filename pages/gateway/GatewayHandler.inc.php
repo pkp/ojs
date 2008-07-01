@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package pages.gateway
  * @class GatewayHandler
+ * @ingroup pages_gateway
  *
- * Handle external gateway requests. 
- *
- * $Id$
+ * @brief Handle external gateway requests. 
  */
+
+// $Id$
+
 
 class GatewayHandler extends Handler {
 

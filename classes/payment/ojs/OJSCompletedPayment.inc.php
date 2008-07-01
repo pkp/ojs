@@ -1,16 +1,20 @@
 <?php
 
 /**
- * @file OJSCompletedPayment.inc.php
+ * @defgroup payment_ojs
+ */
+ 
+/**
+ * @file classes/payment/ojs/OJSCompletedPayment.inc.php
  *
  * Copyright (c) 2006 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package payment.ojs
  * @class OJSCompletedPayment 
+ * @ingroup payment_ojs
+ * @see OJSCompletedPaymentDAO
  *
- * CompletedPayment class.
- * Class describing a payment ready to be in the database.
+ * @brief Class describing a payment ready to be in the database.
  *
  */
 import('payment.Payment');

@@ -6,13 +6,14 @@
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package pages.help
  * @class HelpHandler
+ * @ingroup pages_help
  *
- * Handle requests for viewing help pages. 
- *
- * $Id$
+ * @brief Handle requests for viewing help pages. 
  */
+
+// $Id$
+
 
 define('HELP_DEFAULT_TOPIC', 'index/topic/000000');
 define('HELP_DEFAULT_TOC', 'index/toc/000000');
