@@ -109,7 +109,7 @@ class SectionEditorAction extends Action {
 			$sectionDao =& DAORegistry::getDAO('SectionDAO');
 			$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
 
-			$sectionId =& $sectionEditorSubmission->getSectionId();
+			$sectionId = $sectionEditorSubmission->getSectionId();
 			$section =& $sectionDao->getSection($sectionId, $journalId);
 			if ($section && ($reviewFormId = (int) $section->getReviewFormId())) {
 				if ($reviewFormDao->reviewFormExists($reviewFormId, $journalId)) {
