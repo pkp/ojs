@@ -335,9 +335,10 @@
 		<field name="setting_name" type="C2" size="255">
 			<NOTNULL/>
 		</field>
-		<field name="journal_id" type="I8"/>
+		<field name="journal_id" type="I8">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
+		</field>
 		<field name="setting_value" type="X"/>
 		<field name="setting_type" type="C2" size="6">
 			<NOTNULL/>
