@@ -9,8 +9,7 @@
  * $Id$
  *}
 <!-- phpMyVisites -->
-<a href="http://www.phpmyvisites.net/" title="phpMyVisites"
-onclick="window.open(this.href);return(false);"><script type="text/javascript">
+<script type="text/javascript">
 <!--
 var a_vars = Array();
 var pagename='';
@@ -20,8 +19,5 @@ var phpmyvisitesURL = "{$phpmvUrl}/phpmyvisites.php";
 //-->
 </script>
 <script language="javascript" src="{$phpmvUrl}/phpmyvisites.js" type="text/javascript"></script>
-<noscript><p>phpMyVisites
-<img src="{$phpmvUrl}/phpmyvisites.php" alt="Statistics" style="border:0" />
-</p></noscript></a>
 <!-- /phpMyVisites -->
 
