@@ -154,7 +154,7 @@ class SectionEditorHandler extends Handler {
 	 */
 	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null, $showSidebar = true) {
 		$templateMgr = &TemplateManager::getManager();
-		$isEditor = Validation::isEditor();
+		$isEditor = Request::getRequestedPage() == 'editor';
 
 		if (Request::getRequestedPage() == 'editor') {
 			EditorHandler::setupTemplate(EDITOR_SECTION_SUBMISSIONS, $articleId, $parentPage);
