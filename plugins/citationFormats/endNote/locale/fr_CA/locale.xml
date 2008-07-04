@@ -13,7 +13,7 @@
   -->
  
 <locale name="fr_CA" full_name="Français (Canada)">
-	<message key="plugins.citationFormats.endNote.displayName">Plugiciel de format de citations EndNote</message>
+	<message key="plugins.citationFormats.endNote.displayName">Plugiciel de format de référence bibliographique EndNote</message>
 	<message key="plugins.citationFormats.endNote.citationFormatName">EndNote -- format EndNote (Macintosh et Windows)</message>
-	<message key="plugins.citationFormats.endNote.description">Ce plugiciel implante le format de citations EndNote.</message>
+	<message key="plugins.citationFormats.endNote.description">Ce plugiciel implante le format de référence bibliographique EndNote.</message>
 </locale>

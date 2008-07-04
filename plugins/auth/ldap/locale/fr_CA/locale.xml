@@ -14,19 +14,20 @@
  
 <locale name="fr_CA" full_name="Français (Canada)">
 	<message key="plugins.auth.ldap.displayName">Protocole LDAP</message>
-	<message key="plugins.auth.ldap.description">Ce plugiciel permet l'authentification et la synchronisation de comptes d'utilisateurs par rapport à une source de données LDAP externe.</message>
+	<message key="plugins.auth.ldap.description">Ce plugiciel permet l'authentification et la synchronisation de comptes d'utilisateurs au moyen d'
+une source de données LDAP externe.</message>
 	
 	<message key="plugins.auth.ldap.settings">Paramètres LDAP</message>
 	<message key="plugins.auth.ldap.settings.hostname">Nom d'hôte du serveur</message>
 	<message key="plugins.auth.ldap.settings.hostname.description">Par ex. : "ldap.exemple.com", ou "ldaps://ldap.exemple.com" (pour utiliser SSL)</message>
 	<message key="plugins.auth.ldap.settings.port">Port du serveur</message>
-	<message key="plugins.auth.ldap.settings.port.description">Facultatif. Va par défaut au 389 (LDAP) ou au 636 (LDAP sur SSL)</message>
+	<message key="plugins.auth.ldap.settings.port.description">Facultatif. Utilise par défaut 389 (LDAP) ou 636 (LDAP sur SSL)</message>
 	<message key="plugins.auth.ldap.settings.basedn">Nom distinct de la base</message>
 	<message key="plugins.auth.ldap.settings.basedn.description">Par ex. : "ou=personnes,dc=exemple,dc=com"</message>
 	<message key="plugins.auth.ldap.settings.managerdn">Nom distinct du gestionnaire</message>
 	<message key="plugins.auth.ldap.settings.managerdn.description">Par ex. : "cn=gestionnaire,dc=exemple,dc=com"</message>
 	<message key="plugins.auth.ldap.settings.managerpwd">Mot de passe du gestionnaire</message>
-	<message key="plugins.auth.ldap.settings.managerpwd.description">Le nom distinct et le mot de passe du gestionnaire ne sont requis que si la synchronisation du profil/du mot de passe de l'utilisateur ou les options de création d'un utilisateur sont activées. Si le protocole LDAP n'est utilisé que pour l'authentification, ces options peuvent être omises.</message>
+	<message key="plugins.auth.ldap.settings.managerpwd.description">Le nom distinct et le mot de passe du gestionnaire ne sont requis que si la synchronisation du profil/du mot de passe de l'utilisateur ou les options de création d'un utilisateur sont activées. Si le protocole LDAP n'est utilisé que pour l'authentification, ces options peuvent être ignorées.</message>
 	<message key="plugins.auth.ldap.settings.pwhash">Chiffrement du mot de passe</message>
 	<message key="plugins.auth.ldap.settings.pwhash.description"><![CDATA[Format de hachage pour les mots de passe mémorisés dans le serveur. SSHA est recommandé (requiert PHP >= 4.3.0).]]></message>
 	<message key="plugins.auth.ldap.settings.saslopt">Paramètres SASL (facultatifs)</message>
@@ -36,4 +37,6 @@
 	<message key="plugins.auth.ldap.settings.saslrealm">Domaine</message>
 	<message key="plugins.auth.ldap.settings.saslauthzid">Identification d'autorisation requise</message>
 	<message key="plugins.auth.ldap.settings.saslprop">Caractéristiques de sécurité SASL</message>
+	<message key="plugins.auth.ldap.settings.uid">Attribut du nom du compte</message>
+	<message key="plugins.auth.ldap.settings.uid.description">L'attribut dont la valeur identifie de façon unique un objet de l'utilisateur, tel que uid ou cn ou sAMAccountName.</message>
 </locale>

@@ -30,5 +30,5 @@
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">Aucun numéro ne correspond à l'identification de numéro spécifié "{$issueId}".</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">Aucun article ne correspond à l'identification d'article spécifié "{$articleId}".</message>
 
-	<message key="plugins.importexport.crossref.errors.noDOIprefix">Il faut spécifier un préfixe DOI valable dans la configuration de la revue afin d'utiliser ce plugiciel.</message>
+	<message key="plugins.importexport.crossref.errors.noDOIprefix">Il faut spécifier un préfixe DOI valide dans la configuration de la revue afin d'utiliser ce plugiciel.</message>
 </locale>

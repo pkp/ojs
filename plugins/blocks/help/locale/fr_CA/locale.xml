@@ -14,5 +14,5 @@
  
 <locale name="fr_CA" full_name="Français (Canada)">
 	<message key="plugins.block.help.displayName">Bloc d'Aide</message>
-	<message key="plugins.block.help.description">Ce plugiciel offre un lien à de l'aide dans l'encadré latéral.</message>
+	<message key="plugins.block.help.description">Ce plugiciel fournit un lien d'aide dans l'encadré latéral.</message>
 </locale>

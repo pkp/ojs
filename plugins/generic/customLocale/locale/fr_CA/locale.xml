@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.customLocale.name">Plugiciel de langue personnalisée</message>
+	<message key="plugins.generic.customLocale.description">Ce plugiciel permet de personnaliser le texte de l'interface utilisateur par défaut utilisé par OJS.</message>
+
+	<message key="plugins.generic.customLocale.longDescription">Cette page liste toutes les langues présentement installées pour la revue.</message>
+	<message key="plugins.generic.customLocale.localeDescription">Cette page liste tous les fichiers qui sont disponibles pour la langue sélectionnée.</message>
+	<message key="plugins.generic.customLocale.fileDescription">Entrer le texte dans la zone de texte personnalisée correspondante. Laisser la zone de texte vide si le texte OJS par défaut devrait être utilisé.</message>
+	<message key="plugins.generic.customLocale.localeName">Nom de la langue</message>
+	<message key="plugins.generic.customLocale.localeKey">Clé</message>
+	<message key="plugins.generic.customLocale.localeKeyValue">Valeur</message>
+	<message key="plugins.generic.customLocale.customize">Personnaliser</message>
+	<message key="plugins.generic.customLocale.availableLocales">Langues disponibles</message>
+
+	<message key="plugins.generic.customLocale.locale">{$locale} Langue</message>
+	<message key="plugins.generic.customLocale.localeFiles">Fichiers de langue</message>
+	<message key="plugins.generic.customLocale.file.filename">Nom de fichier</message>
+	<message key="plugins.generic.customLocale.file.edit">Modification de {$filename}</message>
+	<message key="plugins.generic.customLocale.file.reference">Texte par défaut</message>
+	<message key="plugins.generic.customLocale.file.custom">Texte personnalisé</message>
+</locale>

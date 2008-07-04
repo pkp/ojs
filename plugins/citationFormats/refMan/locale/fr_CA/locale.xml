@@ -13,7 +13,7 @@
   -->
  
 <locale name="fr_CA" full_name="Français (Canada)">
-	<message key="plugins.citationFormats.refMan.displayName">Plugiciel de format de citations Gestionnaire de références</message>
-	<message key="plugins.citationFormats.refMan.citationFormatName">Gestionnaire de références - Format RIS (Windows seulement)</message>
-	<message key="plugins.citationFormats.refMan.description">Ce plugiciel implante le format de citations Gestionnaire de références</message>
+	<message key="plugins.citationFormats.refMan.displayName">Plugiciel de format de référence bibliographique Reference Manager</message>
+	<message key="plugins.citationFormats.refMan.citationFormatName">Reference Manager - Format RIS (Windows seulement)</message>
+	<message key="plugins.citationFormats.refMan.description">Ce plugiciel implante le format de référence bibliographique Reference Manager</message>
 </locale>

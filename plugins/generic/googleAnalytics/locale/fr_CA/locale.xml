@@ -16,14 +16,18 @@
 
 	<!-- Google Analytics -->
 	<message key="plugins.generic.googleAnalytics.displayName">Plugiciel Google Analytics</message>
-	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Intégrez l'OJS à Google Analytics, l’application d'analyse de trafic sur le site Web de Google. Vous devez avoir un compte Google Analytics pour utiliser cette application. Veuillez consulter le <a href="http://www.google.com/analytics/" title="Google Analytics site">site Google Analytics </a> pour de plus amples renseignements.]]></message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Intégrez OJS à Google Analytics, l’application d'analyse de trafic sur le site Web de Google. Vous devez avoir un compte Google Analytics pour utiliser cette application. Veuillez consulter le <a href="http://www.google.com/analytics/" title="Google Analytics site">site Google Analytics </a> pour de plus amples renseignements.]]></message>
 
 	<!-- Google Analytics Settings Management -->
 	<message key="plugins.generic.googleAnalytics.manager.settings">Paramètres</message>
 	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">Paramètres de Google Analytics</message>
-	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p> Au moyen de ce plugiciel, vous pouvez utiliser Google Analytics pour collecter et analyser l'utilisation et le trafic sur ce site Web pour cette revue. Veuillez noter que pour utiliser ce plugiciel, vous devez déjà avoir un compte Google Analytics. Veuillez consulter le <a href="http://www.google.com/analytics/" title="Google Analytics site">site Google Analytics </a> pour de plus amples renseignements.</p>]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p> Au moyen de ce plugiciel, vous pouvez utiliser Google Analytics pour collecter et analyser l'utilisation et le trafic sur ce site Web pour cette revue. Veuillez noter que pour utiliser ce plugiciel, vous devez déjà avoir un compte Google Analytics. Veuillez consulter le <a href="http://www.google.com/analytics/" title="Google Analytics site">site Google Analytics </a> pour de plus amples renseignements.</p><p>Veuillez noter que Google Analytics peut nécessiter jusqu'à 24 heures avant que les statistiques soient colligées et analysées. Durant cette période, la fonction 'Vérifier l'état' peut ne pas indiquer correctement s'il a détecter le code de repérage de la revue.</p>]]></message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId">Numéro de compte</message>
-	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">À partir de Google Analytics, cliquez sur Vérifier l'état pour voir le code de localisation de votre site. Le numéro de compte est affiché dans le code de localisation : _uacct = "###". Entrez le texte correspondant à ###.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">À partir de Google Analytics, cliquez sur Vérifier l'état pour voir le code de repérage de votre site. Le numéro de compte est affiché dans le code de repérage : _uacct = "###". Pour un nouveau code de repérage, le numéro de compte est affiché dans le code de repérage : var pageTracker = _gat._getTracker("###"). Entrez le texte correspondant à ###.</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Veuillez entrer un numéro de compte.</message>
 
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCode">Code de repérage</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Prière de sélectionner le code de repérage à utiliser.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Code de repérage patrimonial (urchin.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Nouveau code de repérage (ga.js)</message>
 </locale>

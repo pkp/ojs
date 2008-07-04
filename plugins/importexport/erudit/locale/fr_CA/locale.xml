@@ -13,8 +13,8 @@
   -->
  
 <locale name="fr_CA" full_name="Français (Canada)">
-	<message key="plugins.importexport.erudit.displayName">Plugiciel d'exportation pour articles sur Érudit</message>
-	<message key="plugins.importexport.erudit.description">Exporter des articles en utilisant la DTD de la version anglaise d'Érudit</message>
+	<message key="plugins.importexport.erudit.displayName">Plugiciel d'exportation d'articles pour Érudit</message>
+	<message key="plugins.importexport.erudit.description">Exporter des articles en utilisant la version anglaise de la DTD d'Érudit</message>
 
 	<message key="plugins.importexport.erudit.cliUsage">Utilisation : {$scriptName} {$pluginName} [xmlFileName] [journalPath] [articleId] [galleyLabel]</message>
 	<message key="plugins.importexport.erudit.export">Exporter des données</message>
@@ -29,7 +29,7 @@
 	<message key="plugins.importexport.erudit.error.unknownJournal">Le chemin spécifié pour cette revue,"{$journalPath}", n'existe pas.</message>
 	<message key="plugins.importexport.erudit.export.error.couldNotWrite">Impossible d'écrire au fichier "{$fileName}".</message>
 	<message key="plugins.importexport.erudit.export.error.articleNotFound">Aucun article ne correspond à l'identification d'article spécifiée "{$articleId}".</message>
-	<message key="plugins.importexport.erudit.export.error.galleyNotFound">Aucune épreuve en placard ne correspond à l'étiquette d'épreuve en placard spécifiée "{$galleyLabel}".</message>
+	<message key="plugins.importexport.erudit.export.error.galleyNotFound">Aucune épreuve ne correspond à l'étiquette d'épreuve spécifiée "{$galleyLabel}".</message>
 
 	<message key="plugins.importexport.erudit.unavailable">Non disponible</message>
 </locale>

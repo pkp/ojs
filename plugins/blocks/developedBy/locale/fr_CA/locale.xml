@@ -13,6 +13,6 @@
   -->
  
 <locale name="fr_CA" full_name="Français (Canada)">
-	<message key="plugins.block.developedBy.displayName">Bloc « Conçu par »</message>
-	<message key="plugins.block.developedBy.description">Ce plugiciel offre un lien au bloc « Conçu par » dans l'encadré latéral.</message>
+	<message key="plugins.block.developedBy.displayName">Bloc « Développé par »</message>
+	<message key="plugins.block.developedBy.description">Ce plugiciel offre un lien au bloc « Développé par » dans l'encadré latéral.</message>
 </locale>

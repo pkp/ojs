@@ -35,10 +35,10 @@ Exemples :
 
 	Exporter tous les utilisateurs inscrits à titre de réviseurs, ainsi que leurs rôles de réviseur seulement :
 	{$scriptName} {$pluginName} exporter myExportFile.xml myJournal reviewer</message>
-	<message key="plugins.importexport.users.import.importUsers">Importer les utilisateurs</message>
-	<message key="plugins.importexport.users.import.instructions"><![CDATA[Sélectionner un fichier de données XML contenant des renseignements sur l’utilisateur à importer dans cette revue. Consulter l'aide pour les revues afin d’obtenir des renseignements concernant le format de ce fichier.<br /><br />Veuillez noter que si le fichier importé contient des noms d'utilisateurs ou des adresses courriel existant déjà dans le système, les données d’utilisateurs de ces utilisateurs ne seront pas importées, et tout nouveau rôle à créer sera assigné aux utilisateurs existants.]]></message>
-	<message key="plugins.importexport.users.import.failedToImportUser">Incapable d'importer l'utilisateur</message>
-	<message key="plugins.importexport.users.import.failedToImportRole">Incapable d'attribuer l'utilisateur à un rôle</message>
+	<message key="plugins.importexport.users.import.importUsers">Importation d'utilisateurs</message>
+	<message key="plugins.importexport.users.import.instructions">Choisir un fichier de données XML contenant l'information de l'utilisateur pour l'importer dans cette conférence planifiée. Voyez l'aide de la conférence planifiée pour les détails sur le format de ce fichier. Noter que si le fichier importé contient un ou plusieurs nom(s) d'utilisateur ou adresse(s) de courriel qui existent déjà dans le système, les données pour ces utilisateurs ne seront pas importées et tous les nouveaux rôles à créer seront assignés aux utilisateurs existants.</message>
+	<message key="plugins.importexport.users.import.failedToImportUser">L'importation de l'utilisateur à échouée</message>
+	<message key="plugins.importexport.users.import.failedToImportRole">L'assignation d'un rôle à l'utilisateur a échouée</message>
 	<message key="plugins.importexport.users.import.dataFile">Fichier de données de l'utilisateur</message>
 	<message key="plugins.importexport.users.import.sendNotify">Envoyer à chaque utilisateur importé un courriel d'avis contenant le nom et le mot de passe de l'utilisateur.</message>
 	<message key="plugins.importexport.users.import.continueOnError">Continuer à importer d'autres utilisateurs si un échec se produit.</message>
@@ -51,8 +51,8 @@ Exemples :
 	<message key="plugins.importexport.users.export.exportUsers">Exporter les utilisateurs</message>
 	<message key="plugins.importexport.users.export.exportByRole">Exporter par rôle</message>
 	<message key="plugins.importexport.users.export.exportAllUsers">Tout exporter</message>
-	<message key="plugins.importexport.users.export.errorsOccurred">Des erreurs sont se produites lors de l'exportation</message>
-	<message key="plugins.importexport.users.export.couldNotWriteFile">Incapable d'écrire au fichier "{$fileName}".</message>
+	<message key="plugins.importexport.users.export.errorsOccurred">Des erreurs sont se produites pendant l'exportation</message>
+	<message key="plugins.importexport.users.export.couldNotWriteFile">Incapable d'écrire dans le fichier "{$fileName}".</message>
 	<message key="plugins.importexport.users.import.warning">Avertissement</message>
-	<message key="plugins.importexport.users.import.encryptionMismatch">Ne peut utiliser les mots de passe hachés avec {$importHash}. L’OJS est configuré pour utiliser {$ojsHash}. Si vous continuez, vous devrez reconfigurer les mots de passe des utilisateurs importés.</message>
+	<message key="plugins.importexport.users.import.encryptionMismatch">Ne peut utiliser les mots de passe hachés avec {$importHash}. OJS est configuré pour utiliser {$ojsHash}. Si vous continuez, vous devrez reconfigurer les mots de passe des utilisateurs importés.</message>
 </locale>

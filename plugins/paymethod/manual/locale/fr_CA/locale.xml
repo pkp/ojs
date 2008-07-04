@@ -16,8 +16,8 @@
 	<message key="plugins.paymethod.manual.description">Le responsable inscrira manuellement la réception du paiement de l'utilisateur (en dehors de ce logiciel).</message>
 	<message key="plugins.paymethod.manual">Paiement manuel des frais</message>
 	<message key="plugins.paymethod.manual.settings">Paramètres pour le paiement manuel</message>
-	<message key="plugins.paymethod.manual.settings.instructions">Directives</message>
-	<message key="plugins.paymethod.manual.settings.manualInstructions">Directives du paiement des frais à l'intention des utilisateurs choisissant le paiement manuel des frais.</message>
+	<message key="plugins.paymethod.manual.settings.instructions">Instructions</message>
+	<message key="plugins.paymethod.manual.settings.manualInstructions">Instructions pour le paiement des frais à l'intention des utilisateurs choisissant le paiement manuel des frais.</message>
 	
 	<message key="plugins.paymethod.manual.purchase.title">Titre</message>
 	<message key="plugins.paymethod.manual.purchase.fee">Frais</message>	

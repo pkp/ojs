@@ -19,17 +19,17 @@
 
 	<message key="manager.plugins.cmsrss.edit">Modifier/ajouter les flux RSS</message>
 	<message key="plugins.generic.cmsrss.pagename">Nom de page</message>
-	<message key="plugins.generic.cmsrss.url">Flux URL</message>	
+	<message key="plugins.generic.cmsrss.url">URL de flux</message>	
 	<message key="plugins.generic.cmsrss.months">Plus vieux articles (en mois). 0 pour tous les articles disponibles.</message>		
 	<message key="plugins.generic.cmsrss.aggregate">Combinez les flux pour chaque page et classez par date</message>			
 	<message key="plugins.generic.cmsrss.form.introduction"><![CDATA[<p>Ce plugiciel RSS du SGC permet aux responsables de la revue d'ajouter des flux RSS aux pages du plugiciel SGC qui, autrement, sont statiques.</p><p>Le Nom de page doit correspondre à l'en-tête de la page SGC (qui figure dans la table des matières). Vous devez séparer les en-têtes par un ":".  Par exemple : en-tête1 : en-tête2.</p><p>Les flux URL ne sont pas validés. Assurez-vous donc que l'URL utilisé ici correspond au bon URL RSS.</p>]]></message>
-	<message key="plugins.generic.cmsrss.requiredFields">Chaque rangée requiert un nom de page et un flux URL</message>
+	<message key="plugins.generic.cmsrss.requiredFields">Chaque rangée requiert un nom de page et un URL de flux</message>
 	<message key="plugins.generic.cmsrss.sorting">Les rangées sont classées par nom de page</message>	
 	
 	<message key="plugins.generic.cmsrss.addUrl">Ajouter un autre flux</message>
-	<message key="plugins.generic.cmsrss.deleteUrl">Enlever le flux</message>	
+	<message key="plugins.generic.cmsrss.deleteUrl">Supprimer le flux</message>	
 	
 	<!-- RSS Template -->
-	<message key="plugins.generic.cmsrss.postedon">Affiché le</message>
+	<message key="plugins.generic.cmsrss.postedon">Soumis le</message>
 	<message key="plugins.generic.cmsrss.permalink">Lien permanent</message>	
 </locale>

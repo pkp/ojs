@@ -13,8 +13,8 @@
   -->
  
 <locale name="fr_CA" full_name="Français (Canada)">
-	<message key="plugins.citationFormats.apa.displayName">Plugiciel de format de citations APA</message>
+	<message key="plugins.citationFormats.apa.displayName">Plugiciel de format de référence bibliographique APA</message>
 	<message key="plugins.citationFormats.apa.citationFormatName">APA</message>
-	<message key="plugins.citationFormats.apa.description">Ce plugiciel implante le format de citations APA.</message>
-	<message key="plugins.citationFormats.apa.retrieved"><![CDATA[Extraite {$retrievedDate}, de <a href="{$url}" target="_new">{$url}</a>]]></message>
+	<message key="plugins.citationFormats.apa.description">Ce plugiciel implante le format de référence bibliographique APA.</message>
+	<message key="plugins.citationFormats.apa.retrieved"><![CDATA[Téléchargé le {$retrievedDate}, de <a href="{$url}" target="_new">{$url}</a>]]></message>
 </locale>

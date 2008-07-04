@@ -13,15 +13,15 @@
   -->
  
 <locale name="fr_CA" full_name="Français (Canada)">
-	<message key="plugins.generic.counter.description"><![CDATA[Le plugiciel COUNTER permet l'enregistrement et <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a>-le compte rendu conforme des activités du site.]]></message>
-	<message key="plugins.generic.counter">Statistiques du COUNTER</message>
+	<message key="plugins.generic.counter.description"><![CDATA[Le plugiciel COUNTER permet l'enregistrement et la production de compte-rendus conformes à <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a> des activités du site.]]></message>
+	<message key="plugins.generic.counter">Statistiques COUNTER</message>
 
-	<message key="plugins.generic.counter.clearLog">Effacer le registre</message>
-	<message key="plugins.generic.counter.confirmClear">Êtes-vous certain de vouloir effacer ce registre? Cette action est irréversible.</message>
-	<message key="plugins.generic.counter.browseLog">Naviguer le registre</message>
+	<message key="plugins.generic.counter.clearLog">Supprimer le registre</message>
+	<message key="plugins.generic.counter.confirmClear">Êtes-vous certain de vouloir supprimer ce registre? Cette action est irréversible.</message>
+	<message key="plugins.generic.counter.browseLog">Parcourir le registre</message>
 	<message key="plugins.generic.counter.browseLog.logBrowser">Navigateur du registre</message>
 
-	<message key="plugins.generic.counter.entry.timestamp">Estampille temporelle</message>
+	<message key="plugins.generic.counter.entry.timestamp">Estampille</message>
 	<message key="plugins.generic.counter.entry.site">Site</message>
 	<message key="plugins.generic.counter.entry.journal">Revue</message>
 	<message key="plugins.generic.counter.entry.user">Utilisateur</message>
@@ -34,13 +34,13 @@
 	<message key="plugins.generic.counter.1a.title">Rapport de revue 1 (R2) : Demandes de texte complet par mois et par revue</message>
 	<message key="plugins.generic.counter.1a.title1">Rapport de revue 1 (R2)</message>
 	<message key="plugins.generic.counter.1a.title2">Nombre de demandes de texte complet acceptées, par mois et par revue (Année {$year})</message>
-	<message key="plugins.generic.counter.1a.dateRun">Date d'éxécution :</message>
+	<message key="plugins.generic.counter.1a.dateRun">Date d'exécution :</message>
 	<message key="plugins.generic.counter.1a.publisher">Éditeur</message>
 	<message key="plugins.generic.counter.1a.platform">Plateforme</message>
-	<message key="plugins.generic.counter.1a.printIssn">Imprimer l'ISSN</message>
-	<message key="plugins.generic.counter.1a.onlineIssn">ISSN en ligne</message>
+	<message key="plugins.generic.counter.1a.printIssn">ISSN (imprimé)</message>
+	<message key="plugins.generic.counter.1a.onlineIssn">ISSN (numérique)</message>
 	<message key="plugins.generic.counter.1a.ytdTotal">Cumul annuel total</message>
-	<message key="plugins.generic.counter.1a.ytdHtml">Cumul annuel en HTML</message>
-	<message key="plugins.generic.counter.1a.ytdPdf">Cumul annuel en PDF</message>
+	<message key="plugins.generic.counter.1a.ytdHtml">Cumul annuel - HTML</message>
+	<message key="plugins.generic.counter.1a.ytdPdf">Cumul annuel - PDF</message>
 	<message key="plugins.generic.counter.1a.totalForAllJournals">Total pour toutes les revues</message>
 </locale>

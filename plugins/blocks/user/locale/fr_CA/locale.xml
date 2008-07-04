@@ -15,10 +15,10 @@
 <locale name="fr_CA" full_name="Français (Canada)">
 	<message key="plugins.block.user.displayName">Bloc de l'utilisateur</message>
 	<message key="plugins.block.user.description">Ce plugiciel offre des outils d'accès au compte de l'utilisateur dans l'encadré latéral (par ex. : ouverture de session, fermeture de session, lien au profil, etc.).</message>
-	<message key="plugins.block.user.loggedInAs">Vous avez ouvert une session sous le nom de...</message>
+	<message key="plugins.block.user.loggedInAs">Vous êtes connectés en tant que...</message>
 	<message key="plugins.block.user.myJournals">Mes revues</message>
 	<message key="plugins.block.user.myProfile">Mon Profil</message>
-	<message key="plugins.block.user.logout">Fermer la session</message>
+	<message key="plugins.block.user.logout">Se déconnecter</message>
 	<message key="plugins.block.user.signOutAsUser">Se déconnecter en tant qu'utilisateur</message>
-	<message key="plugins.block.user.rememberMe">Souvenez-vous de moi</message>
+	<message key="plugins.block.user.rememberMe">Mémoriser mon mot de passe</message>
 </locale>
