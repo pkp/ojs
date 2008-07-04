@@ -216,6 +216,13 @@ input.defaultButton {
 }
 
 
+/**
+ * Access icons and key
+ */
+#accessKey {
+	margin-bottom: 2em;
+}
+
 #accessKey img {
 	vertical-align: middle;
 	margin: 0;
@@ -402,20 +409,6 @@ table.tocArticle td.tocPages {
 	float: left;
 	width: 100px;
 	margin: 0 1em 1em 0;
-}
-
-
-/**
- * Key for access logos 
- */
-#accessKey {
-	margin-bottom: 2em;
-}
-
-#accessKey img {
-	display: inline;
-	margin: 0;
-	padding: 0;
 }
 
 
