@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../dtd/xmldata.dtd">
+
+<!--
+  * email_templates_data.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * (Norwegian translation from english by Karl Henrik Flyum, Dept. of teacher education and school development, University of Oslo, Norway, 2006-2007)
+  * Email templates data XML file (Norwegian).
+  *
+  * $Id$
+  -->
+
+<data>
+	<table name="email_templates_default_data">
+		<field_default name="locale">no_NO</field_default>
+
+		<!--
+		  *
+		  * General
+		  *
+		  -->
+		<row>
+			<field name="email_key">PASSWORD_RESET_CONFIRM</field>
+			<field name="subject">Fornying av passord bekreftes</field>
+			<field name="body">Vi har mottatt en forespørsel om å få fornyet passordet ditt til nettstedet for {$siteTitle}.
+
+Hvis du ikke har sendt oss en slik forespørsel, kan du beholde det gamle passordet ditt ved å ikke følge denne instruksen: Hvis du ønsker nytt passord, klikk på lenken nedenfor.
+
+Forny passordet: {$url}
+
+{$principalContactSignature}</field>
+			<field name="description">Denne e-posten sendes til registrerte brukere når de melder fra om at de har glemt passordet sitt, eller at de ikke klarer å logge inn. Den gir en URL-lenke brukeren kan følge for å fornye passordet sitt.</field>
+		</row>
+		<row>
+			<field name="email_key">PASSWORD_RESET</field>
+			<field name="subject">Fornying av passord</field>
+			<field name="body">Passordet ditt til nettstedet for {$siteTitle} er nå fornyet. Ta godt vare på brukernavnet og passordet, som du vil trenge for de oppgavene du skal utføre på nettstedet.
+
+Ditt brukernavn: {$username}
+Ditt nye passord: {$password}
+
+{$principalContactSignature}</field>
+			<field name="description">Denne e-posten sendes til en bruker som har fullført fornying av passordet sitt som beskrevet i PASSWORD_RESET_CONFIRM e-posten.</field>
+		</row>
+		<row>
+			<field name="email_key">USER_REGISTER</field>
+			<field name="subject">Du er nå registrert som bruker</field>
+			<field name="body">Takk for at du har registrert deg som bruker av nettstedet for {$journalName}. Ta godt vare på brukernavnet og passordet, som du vil trenge hver gang du skal utføre brukeroppgaver på nettstedet.
+
+Brukernavn: {$username}
+Passord: {$password}
+
+Vennlig hilsen,
+{$principalContactSignature}</field>
+			<field name="description">Denne e-posten sendes for å ønske nyregistrerte brukere velkommen som brukere av nettstedet, og gir dem opplysning om brukernavn og passord.</field>
+		</row>
+		<row>
+			<field name="email_key">PUBLISH_NOTIFY</field>
+			<field name="subject">Ny utgave</field>
+			<field name="body">Til registrerte lesere:
+
+{$journalName} har nettopp publisert en ny utgave på nettstedet {$journalUrl}. Her kan du lese Innholdfortegnelsen, før du går videre til nettstedet for å se nærmere på innholdet.
+
+Takk for den interessen du viser  for arbeidet vårt,
+{$editorialContactSignature}</field>
+			<field name="description">Denne e-posten sendes til registrerte brukere som har bedt om slikt varsel, via "Varsle Brukere"-lenken på den ansvarlige redaktørens brukerside. På denne måten får registrerte brukere varsel om den nye utgivelsen, og inviteres til å besøke nettstedet via en vedlagt URL-lenke.</field>
+		</row>
+		<row>
+			<field name="email_key">LOCKSS_EXISTING_ARCHIVE</field>
+			<field name="subject">Anmodning om arkivering av {$journalName}</field>
+			<field name="body"><![CDATA[Kjære [oppgi universitetsbibliotekar]
+
+{$journalName} <{$journalUrl}> er et tidsskrift der en av deres fagansatte, [oppgi medlemsnavn], har påtatt seg å være [oppgi rolletittel]. Tidsskriftet ønsker å etablere et LOCKSS (Lots of Copies Keep Stuff Safe) arkiv, i samarbeid med flere universitetsbibliotek.
+
+[Gi en kort beskrivelse av tidsskriftet]
+
+URL til det LOCKSS Publisher Manifest som gjelder for tidsskriftet vårt er: {$journalUrl}/gateway/lockss
+
+Vi forstår det slik at biblioteket deres allerede deltar i et LOCKSS-samarbeid. Hvis det er behov for det, bidrar vi gjerne med ytterligere nødvendige metadata for å få registrert tidsskriftet vårt med deres versjon av LOCKSS.
+
+Vennlig hilsen,
+{$principalContactSignature}]]></field>
+			<field name="description">Denne e-posten ber ansvarshavende bibliotekar ved et LOCKSS arkiv om å vurdere å innlemme tidsskriftet i deres samling. E-posten oppgir URL-lenken til tidsskriftets LOCKSS Publisher Manifest.</field>
+		</row>
+		<row>
+			<field name="email_key">LOCKSS_NEW_ARCHIVE</field>
+			<field name="subject">Anmodning om arkivering av {$journalName}</field>
+			<field name="body"><![CDATA[Kjære [oppgi universitetsbibliotekar]
+
+{$journalName} <{$journalUrl}>, er et tidsskrift der en av deres fagansatte, [oppgi medlemsnavn], har påtatt seg å være [oppgi rolletittel]. Tidsskriftet ønsker å etablere et LOCKSS (Lots of Copies Keep Stuff Safe) arkiv, i samarbeid med flere universitetsbibliotek.
+
+[Gi en kort beskrivelse av tidsskriftet]
+
+LOCKSS programmet <http://lockss.stanford.edu/> er et internasjonalt initiativ for bibliotek og utgivere. LOCKSS er et system for distribuert lagring og arkivering av digitalt innhold (for mer informasjon: se nedenfor). Programvaren kan kjøres fra en vanlig pc, og er gratis. Det er enkelt å få systemet på nett, og det krever ikke mye løpende vedlikehold.
+
+Det er i vår interesse at tidsskriftet vårt blir arkivert og distribuert ved hjelp av LOCKSS. Derfor oppfordrer vi dere til å bli med i LOCKSS samarbeidet, for å samle og bevare digitale publikasjoner laget av deres egne og andre forskere over hele verden. Vennligst besøk LOCKSS eget nettsted for mer informasjon om systemet. Vi ser fram til å høre fra dere, om det kan la seg gjøre for dere å yte denne typen arkivstøtte for tidsskriftet vårt.
+
+Vennlig hilsen,
+{$principalContactSignature}]]></field>
+			<field name="description">Denne e-posten oppfordrer mottakeren til å delta i LOCKSS samarbeidet, og å innlemme tidsskriftet i sin digitale samling. E-posten gir informasjon om LOCKSS initiativet, og om hvordan man kan bli med.</field>
+		</row>
+
+
+		<!--
+		  *
+		  * Submission-related
+		  *
+		  -->
+		<row>
+			<field name="email_key">SUBMISSION_ACK</field>
+			<field name="subject">Vi har mottatt ditt manuskript</field>
+			<field name="body">{$authorName}:
+
+Takk for at du har sendt inn manuskriptet "{$articleTitle}" til {$journalName}. Gjennom det nettbaserte publiseringssystemet vårt vil du kunne følge manuskriptet på sin vei gjennom den redasjonelle prosessen, ved å logge deg inn på tidsskriftets nettsted:
+
+Manuskript URL: {$submissionUrl}
+Brukernavn: {$authorUsername}
+
+Ta kontakt med meg, hvis det er noe mer du vil vite. Takk for at du velger tidsskriftet vårt som kanal for å publisere arbeidet ditt.
+
+{$editorialContactSignature}</field>
+			<field name="description">Når denne funksjonen er slått på, sendes denne e-posten automatisk til forfattere, så snart de har fullført prosedyren for innsending av manuskript til tidsskriftet. E-posten gir informasjon om å følge manuskriptet gjennom den redaksjonelle prosessen, og takker forfatteren for bidraget.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBMISSION_UNSUITABLE</field>
+			<field name="subject">Uegnet manuskript</field>
+			<field name="body">{$authorName}:
+
+Ved den redaksjonelle gjennomgangen av ditt manuskript "{$articleTitle}", har vi dessverre funnet at dette bidraget ikke passer med det faglige hovedfokuset og spennvidden for {$journalName}. For at du skal bli bedre kjent med vår faglige profil, vil jeg anbefale deg å se nærmere både på beskrivelsen av tidsskriftet vårt (under Om), og på våre tidligere utgaver. Du bør også vurdere om du kjenner til andre tidsskrift som egner seg bedre for publisering av dette bidraget.
+
+{$editorialContactSignature}</field>
+		</row>
+		<row>
+			<field name="email_key">SUBMISSION_COMMENT</field>
+			<field name="subject">Kommentar til manuskript</field>
+			<field name="body">{$name}:
+
+{$commentName} har skrevet inn en kommentar til manuskriptet "{$articleTitle}" i {$journalName}:
+
+{$comments}</field>
+			<field name="description">Denne e-posten varsler dem som er involvert i redigeringen av et manuskript om at en ny kommentar til manuskriptet er skrevet inn.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBMISSION_DECISION_REVIEWERS</field>
+			<field name="subject">Redaksjonell beslutning om "{$articleTitle}"</field>
+			<field name="body">Fordi du har vært med på å vurdere manuskriptet "{$articleTitle}," for publisering i {$journalName}, sender jeg deg herved de samme uttalelsene og beslutningene som forfatteren har mottatt. Samtidig vil jeg igjen takke for at du bidrar til arbeidet med  {$journalName}.
+ 
+{$editorialContactSignature}
+
+{$comments}</field>
+			<field name="description">Denne e-posten varsler fagfellene som har vurdert et manuskript om at den redaksjonelle prosessen for manuskriptet er fullført. E-posten omfatter informasjon om artikkelen, og om redaktørens beslutning, og takker dessuten fagfellene for deres innsats.</field>
+		</row>
+
+
+		<!--
+		  *
+		  * Editor
+		  *
+		  -->
+		<row>
+			<field name="email_key">EDITOR_ASSIGN</field>
+			<field name="subject">Redaksjonelt oppdrag</field>
+			<field name="body">{$editorialContactName}:
+
+Som seksjonsredaktør i {$journalName} er du herved oppnevnt til å føre det innsendte manuskriptet "{$articleTitle}" gjennom den redaksjonelle prosessen.  
+
+Manuskript URL: {$submissionUrl}
+Brukernavn: {$editorUsername}
+
+Vennlig hilsen,
+{$editorialContactSignature}</field>
+			<field name="description">Denne e-posten varsler en Seksjonsredaktør om at Ansvarlig redaktør har oppnevnt seksjonsredaktøren til å føre et innsendt manuskript gjennom den redaksjonelle prosessen. E-posten gir informasjon om det innsendte manuskriptet, og om tilgangen til tidsskriftets nettsted.</field>
+		</row>
+
+
+		<!--
+		  *
+		  * Peer Review
+		  *
+		  -->
+		<row>
+			<field name="email_key">REVIEW_REQUEST</field>
+			<field name="subject">Forespørsel om fagfellevurdering</field>
+			<field name="body">{$reviewerName}:
+
+Vårt tidsskrift {$journalName} har fått tilsendt manuskriptet "{$articleTitle}". Vi håper du er villig til å gi en fagfellevurdering av dette manuskriptet, fordi vi mener dette kan passe med din vurderingskompetanse. Sammendraget som var vedlagt manuskriptet er skrevet inn nedenfor, og jeg håper du vil påta deg dette viktige oppdraget for oss.
+
+Vennligst logg inn på tidsskriftets nettsted innen {$weekLaterDate}, for å bekrefte om du vil påta deg dette vurderingsoppdraget for oss eller ikke. Hvis du påtar deg oppdraget skal du også bruke nettstedet for å skrive inn vurderingen din, og for å registrere den anbefalingen du gir oss. Adressen til nettstedet er {$journalUrl}
+
+Vi venter vurderingsoppdraget ferdigstilt innen {$reviewDueDate}.
+
+Hvis har mistet eller glemt brukernavnet og passordet ditt til tidsskriftets nettsted, kan du bruke denne lenken for å fornye passordet (som du så får tilsendt i en e-post, sammen med brukernavnet ditt). {$passwordResetUrl}
+
+Manuskriptets URL: {$submissionReviewUrl}
+
+Takk for at du har sagt deg villig til å bidra til arbeidet vårt.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</field>
+			<field name="description">I denne e-posten ber Seksjonsredaktøren en Fagkonsulent om å akseptere eller avslå oppdraget med å fagfellevurdere et manuskript. E-posten gir informasjon om 1) manuskriptet (også tittel og sammendrag), 2) en ventet-ferdig dato for oppdraget, og 3) informasjon om pålogging og tilgang til manuskriptet. Denne e-posten brukes når Standard fagvurderingsprosess er valgt i Tidsskriftoppsett, Trinn 2. (Ellers: se e-posten REVIEW_REQUEST_ATTACHED.)</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REQUEST_ONECLICK</field>
+			<field name="subject">Forespørsel om fagfellevurdering</field>
+			<field name="body">{$reviewerName}:
+
+Vårt tidsskrift {$journalName} har fått tilsendt manuskriptet "{$articleTitle}". Vi håper du er villig til å gi en fagfellevurdering av dette manuskriptet, fordi vi mener dette kan passe med din vurderingskompetanse. Sammendraget som var vedlagt manuskriptet er skrevet inn nedenfor, og jeg håper du vil påta deg dette viktige oppdraget for oss.
+
+Vennligst logg inn på tidsskriftets nettsted innen {$weekLaterDate}, for å bekrefte om du vil påta deg dette vurderingsoppdraget for oss eller ikke. Hvis du påtar deg oppdraget skal du også bruke nettstedet for å skrive inn vurderingen din, og for å registrere den anbefalingen du gir oss.
+
+Vi venter vurderingsoppdraget ferdigstilt innen {$reviewDueDate}.
+
+Manuskriptets URL: {$submissionReviewUrl}
+
+Takk for at du har sagt deg villig til å bidra til arbeidet vårt.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</field>
+			<field name="description">I denne e-posten ber Seksjonsredaktøren en Fagkonsulent om å akseptere eller avslå oppdraget med å fagfellevurdere et manuskript. E-posten gir informasjon om 1) manuskriptet (også tittel og sammendrag), 2) en ventet-ferdig dato for oppdraget, og 3) informasjon om pålogging og tilgang til manuskriptet. Denne e-posten brukes når Standard fagvurderingsprosess er valgt i Tidsskriftoppsett, Trinn 2., og ettklikks tilgang for fagkonsulenter er slått på.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REQUEST_ATTACHED</field>
+			<field name="subject">Forespørsel om fagfellevurdering</field>
+			<field name="body">{$reviewerName}:
+
+Vårt tidsskrift {$journalName} har fått tilsendt manuskriptet "{$articleTitle}". Vi håper du er villig til å gi en fagfellevurdering av dette manuskriptet, fordi vi mener dette kan passe med din vurderingskompetanse. Tidsskriftets retningslinjer for fagfellevurdering følger nedenfor, og selve manuskriptet er vedlagt denne e-posten. Vurderingen og anbefalingen din returneres til meg som e-post, og er ventet ferdig innen {$reviewDueDate}.
+
+Vennligst send meg en svarpost innen {$weekLaterDate}, for å bekrefte om du vil påta deg dette vurderingsoppdraget for oss eller ikke. 
+
+Takk for at du har sagt deg villig til å bidra til arbeidet vårt.
+
+{$editorialContactSignature}
+
+
+Retningslinjer for fagvurdering
+
+{$reviewGuidelines}
+</field>
+			<field name="description">I denne e-posten ber Seksjonsredaktøren en Fagkonsulent om å akseptere eller avslå oppdraget med å fagfellevurdere et manuskript. Selve manuskriptet følger e-posten som vedlegg. Denne e-posten brukes når Fagvurderingsprosess med e-post-vedlegg er valgt i Tidsskriftoppsett, Trinn 2. (Ellers: se e-posten REVIEW_REQUEST.)</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_CANCEL</field>
+			<field name="subject">Forespørsel om fagfellevurdering - oppdrag avlyst</field>
+			<field name="body">{$reviewerName}:
+
+Vi vil med dette avlyse vurderingsoppdraget vi tidligere har bedt deg om å påta deg for {$journalName}, for manuskriptet "{$articleTitle}". Redaksjonen har bestemt at vi likevel ikke behøver din innsats i denne omgang. Vi beklager bryderiet, men håper at vi fortsatt kan be deg om å ta på deg vurderingsoppdrag for oss i fremtiden.
+
+Vennligst ta kontakt med meg, hvis du har spørsmål.
+
+{$editorialContactSignature}</field>
+			<field name="description">I denne e-posten fra Seksjonsredaktøren til en Fagkonsulent avlyses et vurderingsoppdrag som tidligere er bestilt.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_CONFIRM</field>
+			<field name="subject">Aksepterer vurderingsoppdrag</field>
+			<field name="body">{$editorialContactName}:
+
+Takk for forespørselen jeg har fått, om å fagfellevurdere manuskriptet "{$articleTitle}" for {$journalName}. Jeg sier meg med dette villig til å påta meg vurderingsoppdraget. Jeg tar sikte på å ferdigstille vurderingen min innen {$reviewDueDate}, om ikke før.
+
+{$reviewerName}</field>
+			<field name="description">Denne e-posten sendes fra en Fagkonsulent til Seksjonsredaktøren som svar på Forespørsel om fagfellevurdering for å varsle Seksjonsredaktøren om at forespørselen er mottatt og akseptert, og at vurderingen vil bli ferdigstilt innen angitt dato.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_CONFIRM_ACK</field>
+			<field name="subject">Bekrefter din aksept av vurderingsoppdrag</field>
+			<field name="body">{$reviewerName}:
+
+Takk for at du har tatt på deg å fagfellevurdere manuskriptet  "{$articleTitle}" for {$journalName} innen {$reviewDueDate}.
+
+{$editorialContactSignature}</field>
+			<field name="description">Denne e-posten sendes fra Seksjonsredaktøren for å bekrefte at Fagkonsulenten har akseptert vurderingsoppdraget, og tidsfristen for oppdraget.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_DECLINE</field>
+			<field name="subject">Kan ikke utføre vurderingsoppdraget</field>
+			<field name="body">{$editorialContactName}:
+
+Dessverre kan jeg ikke påta meg oppdraget med å vurdere manuskriptet "{$articleTitle}," for {$journalName} ved denne anledningen. Jeg takker for forespørselen, og ser fram til å bli spurt ved en senere anledning.
+
+{$reviewerName}</field>
+			<field name="description">Denne e-posten sendes av en Fagkonsulent til Seksjonsredaktøren som svar på en forespørsel om fagfellevurdering, for å varsle redaktøren om at oppdraget er avslått.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_COMPLETE</field>
+			<field name="subject">Vurderingsoppdraget er fullført</field>
+			<field name="body">{$editorialContactName}:
+
+Jeg har nå fullført fagfelelevurderingen av "{$articleTitle}" for {$journalName}, og jeg har anbefalt at manuskriptet "{$recommendation}."
+
+{$reviewerName}</field>
+			<field name="description">Denne e-posten sendes av en Fagkonsulent til Seksjonsredaktøren for å varsle om at oppdraget er fullført, og at kommentarer og anbefaling er registrert på tidsskriftets nettsted.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_ACK</field>
+			<field name="subject">Bekrefter at du har fullført vurderingsoppdrag</field>
+			<field name="body">{$reviewerName}:
+
+Takk for at du har fullført fagfellevurderingen din av manuskriptet "{$articleTitle}" for {$journalName}. Vi setter stor pris på at du på denne måten bidrar til å sikre den faglige kvaliteten i våre publikasjoner.
+
+{$editorialContactSignature}</field>
+			<field name="description">Denne e-posten sendes av en Seksjonsredaktør for å bekrefte at fagfellevurderingen er mottatt, og takke Fagkonsulenten for innsatsen.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REMIND</field>
+			<field name="subject">Fagfellevurdering - påminnelse</field>
+			<field name="body">{$reviewerName}:
+
+Jeg vil med dette minne deg på at du har tatt på deg å fagfellevurdere manuskriptet "{$articleTitle}" for {$journalName}. Jeg minner om at tidsfristen for oppdraget var satt til {$reviewDueDate}, og ser fram til å motta vurderingen din så snart den er klar.
+
+Hvis har mistet eller glemt brukernavnet og passordet ditt til tidsskriftets nettsted, kan du bruke denne lenken for å fornye passordet (som du så får tilsendt i en e-post, sammen med brukernavnet ditt). {$passwordResetUrl}
+
+Submission URL: {$submissionReviewUrl}
+
+Vennligst bekreft om du fortsatt regner med å fullføre dette vurderingsoppdraget for tidsskriftet vårt. Jeg ser fram til å høre fra deg.
+
+{$editorialContactSignature}</field>
+			<field name="description">Denne e-posten sendes av en Seksjonsredaktør til en Fagkonsulent for å minne om at vurderingen ventes ferdigstilt innen tidsfristen.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REMIND_ONECLICK</field>
+			<field name="subject">Fagfellevurdering - påminnelse</field>
+			<field name="body">{$reviewerName}:
+
+Jeg vil med dette minne deg på at du har tatt på deg å fagfellevurdere manuskriptet "{$articleTitle}" for {$journalName}. Jeg minner om at tidsfristen for oppdraget var satt til {$reviewDueDate}, og ser fram til å motta vurderingen din så snart den er klar.
+
+Manuskriptets URL: {$submissionReviewUrl}
+
+Vennligst bekreft om du fortsatt regner med å fullføre dette vurderingsoppdraget for tidsskriftet vårt. Jeg ser fram til å høre fra deg.
+
+{$editorialContactSignature}</field>
+			<field name="description">Denne e-posten sendes av en Seksjonsredaktør til en Fagkonsulent for å minne om at vurderingen ventes ferdigstilt innen tidsfristen.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REMIND_AUTO</field>
+			<field name="subject">Fagfellevurdering - påminnelse (automatisk e-post)</field>
+			<field name="body">{$reviewerName}:
+
+Jeg vil med dette minne deg på at du har tatt på deg å fagfellevurdere manuskriptet "{$articleTitle}" for {$journalName}. Jeg minner om at tidsfristen for oppdraget var satt til {$reviewDueDate}. Ved fristens utløp ble denne e-posten sendt automatisk. Jeg ser fortsatt fram til å motta vurderingen din, så snart du har den klar.
+
+Hvis har mistet eller glemt brukernavnet og passordet ditt til tidsskriftets nettsted, kan du bruke denne lenken for å fornye passordet (som du så får tilsendt i en e-post, sammen med brukernavnet ditt). {$passwordResetUrl}
+
+Manuskriptets URL: {$submissionReviewUrl}
+
+Vennligst bekreft om du fortsatt regner med å fullføre dette vurderingsoppdraget for tidsskriftet vårt. Jeg ser fram til å høre fra deg.
+
+{$editorialContactSignature}</field>
+			<field name="description">Denne e-posten sendes automatisk til Fagkonsulenten når tidsfristen for en fagfellevurdering utløper og etklikks fagkonsulenttilgang er slått av (se Fagvurdering-valgmuligheter under Tidsskriftoppsett, Trinn 2). Scheduled tasks må være slått på og konfigurert (kontakt nettstedsadministrator, og se konfigurasjonsfilen for nettstedet).</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REMIND_AUTO_ONECLICK</field>
+			<field name="subject">Fagfellevurdering - påminnelse (automatisk e-post)</field>
+			<field name="body">{$reviewerName}:
+
+Jeg vil med dette minne deg på at du har tatt på deg å fagfellevurdere manuskriptet "{$articleTitle}" for {$journalName}. Jeg minner om at tidsfristen for oppdraget var satt til {$reviewDueDate}. Ved fristens utløp ble denne e-posten sendt automatisk. Jeg ser fortsatt fram til å motta vurderingen din, så snart du har den klar.
+
+Manuskriptets URL: {$submissionReviewUrl}
+
+Vennligst bekreft om du fortsatt regner med å fullføre dette vurderingsoppdraget for tidsskriftet vårt. Jeg ser fram til å høre fra deg.
+
+{$editorialContactSignature}</field>
+			<field name="description">Denne e-posten sendes automatisk til Fagkonsulenten når tidsfristen for en fagfellevurdering utløper og etklikks fagkonsulenttilgang er slått på (se Fagvurdering-valgmuligheter under Tidsskriftoppsett, Trinn 2). Scheduled tasks må være slått på og konfigurert (kontakt nettstedsadministrator, og se konfigurasjonsfilen for nettstedet).</field>
+		</row>
+
+
+		<!--
+		  *
+		  * Editor Review
+		  *
+		  -->
+		<row>
+			<field name="email_key">EDITOR_REVIEW</field>
+			<field name="subject">Redaksjonell vurdering av ditt innsendte manuskript</field>
+			<field name="body">{$authorName}:
+
+Vi har nå fullført den faglige og redaksjonelle vurderingen av manuskriptet "{$articleTitle}". Vår beslutning er som følger...
+
+{$comments}.
+
+Ved å logge inn på tidsskriftets nettsted, kan du finne de øvrige kommentarene fra faglige og redaksjonelle vurderere:
+
+Manuskriptets URL: {$submissionUrl}
+Brukernavn: {$authorUsername}
+
+Hvis du har ytterligere spørsmål, kan du gjerne kontakte meg.
+
+{$editorialContactSignature}</field>
+			<field name="description">Denne e-posten sendes av en Seksjonsredaktør til Forfatteren for å varsle om at det innsendte manuskriptet er vurdert, og for å kunngjøre den redaksjonelle beslutningen.</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_REQUEST</field>
+			<field name="subject">Forespørsel om manusredigering</field>
+			<field name="body">{$copyeditorName}:
+
+Jeg vil med dette be om at du påtar deg manusredigering av manuskriptet "{$articleTitle}" for {$journalName}. Du finner manuskriptet på tidsskriftets nettsted, sammen med vår Instruks for manusredigering.
+
+Manuskript URL: {$submissionCopyeditingUrl}
+Brukernavn: {$copyeditorUsername}
+
+Hvis du ikke har anledning til å påta deg dette oppdraget, eller har ytterligere spørsmål, ber jeg om at du kontakter meg. Jeg vil dessuten benytte denne anledningen til å takke deg for at du har sagt deg villig til å bidra til arbeidet vårt.
+
+{$editorialContactSignature}</field>
+			<field name="description">Denne e-posten sendes av en Seksjonsredaktør til en Manusredaktør for å sette i gang arbeidet med manusredigeringen. E-posten gir informasjon om manuskriptet, og om hvordan manusredaktøren får tilgang til det.</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_COMPLETE</field>
+			<field name="subject">Manusredigeringen er fullført</field>
+			<field name="body">{$editorialContactName}:
+
+Jeg har nå fullført første runde med manusredigering av  manuskriptet "{$articleTitle}" for {$journalName}. Nå kan forfatter og redaktør gjennomgå mine spørsmål og forslag til endringer. 
+
+Jeg vil samtidig benytte anledningen til å takke for oppdraget,
+{$copyeditorName}</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_ACK</field>
+			<field name="subject">Bekrefter at du har fullført manusredigering</field>
+			<field name="body">{$copyeditorName}:
+
+Takk for at du har manusredigert manuskriptet "{$articleTitle}" for {$journalName}. Vi setter stor pris på at du på denne måten bidrar til å sikre kvaliteten i våre publikasjoner.
+
+{$editorialContactSignature}</field>
+			<field name="description">Denne e-posten sendes av Seksjonsredaktøren til manuskriptets Manusredaktør for å bekrefte at Manusredaktøren har fullført oppdraget, og takke for det utførte arbeidet.</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_AUTHOR_REQUEST</field>
+			<field name="subject">Ditt redigerte manuskript - til gjennomgang</field>
+			<field name="body">{$authorName}:
+
+Vi har nå redigert ditt manuskript "{$articleTitle}" for {$journalName}. Vi ber deg nå om at du går inn på tidsskriftets nettsted (lenke nedenfor) for å gjennomgå forslagene til endringer og svare på redaktørens spørsmål til forfatteren. Der vil du også finne vår Instruks for manusredigering. Last ned og åpne filen til Første manusredigering. Etter at du har gjennomgått og bearbeidet det redigerte manuskriptet, laster du opp den bearbeidete filen til redigeringsfase 2, og sender e-posten UTFØRT til redaktøren.
+
+Vennligst merk deg at dette er din aller siste mulighet til å gjøre vesentlige endringer i manuskriptet. Riktignok vil du senere også bli bedt om å korrekturlese de ferdig oppsatte sidene, men i den produksjonsfasen er det bare formatfeil og typografiske feil som kan korrigeres.
+
+Manuskript URL: {$submissionCopyeditingUrl}
+Brukernavn: {$authorUsername}
+ 
+Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg. Jeg vil med det samme takke deg for at du bidrar til arbeidet vårt.
+
+{$editorialContactSignature}</field>
+			<field name="description">Denne e-posten sendes av Seksjonsredaktøren for å be manuskriptets Forfatter om å gjennomgå de revisjonene manusredaktøren har bedt om. E-posten gir tilgangsinformasjon for manuskriptet, og varsler Forfatteren om at dette er siste mulighet til å gjøre vesentlige endringer i manuskriptet.</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_AUTHOR_COMPLETE</field>
+			<field name="subject">Gjennomgang av revidert manuskript er fullført</field>
+			<field name="body">{$editorialContactName}:
+
+Jeg har nå gått igjennom de revisjonene manusredaktøren har bedt om for mitt manuskript "{$articleTitle}" for {$journalName}, og det er nå klart for siste runde manusredigering før layoutredigeringen settes i gang.
+
+Takk for at deres bidrag til arbeidet mitt,
+{$authorName}</field>
+			<field name="description">Denne e-posten sendes av Forfatteren til Seksjonsredaktøren for å varsle om at Forfatterens manusredigering er fullført.</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_AUTHOR_ACK</field>
+			<field name="subject">Bekrefter at du har fullført manusrevisjon</field>
+			<field name="body">{$authorName}:
+
+Takk for at du har fullført gjennomgangen din av revisjonsforslagene til ditt manuskript "{$articleTitle}" for {$journalName}. Vi ser fram til å publisere arbeidet ditt.
+
+{$editorialContactSignature}</field>
+			<field name="description">Denne e-posten sendes fra Seksjonsredaktøren til Forfatteren for å bekrefte at forfatterens revisjon er gjennomført, og for å takke for innsatsen.</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_FINAL_REQUEST</field>
+			<field name="subject">Manusredigering - siste gjennomgang</field>
+			<field name="body">{$copyeditorName}:
+
+Forfatteren og redaktøren har nå gått igjennom revisjonsforslagene til manuskriptet "{$articleTitle}" for {$journalName}. Nå er tiden inne til å gjøre klar manuskriptet i en "renkopi" for layout. Vi ber om at du foretar siste gjennomgang og rensing av manuskriptfilen, ved å bekrefte de endringene som er akseptert, og fjerne alle andre merknader, markeringer og overflødige formateringer. Manuskriptfilen som sendes til layoutredigering skal være så ren som mulig.
+
+Manuskript URL: {$submissionCopyeditingUrl}
+Brukernavn: {$copyeditorUsername}
+
+{$journalName} takker deg for innsatsen,
+
+{$editorialContactSignature}</field>
+			<field name="description">Denne e-posten fra Seksjonsredaktøren til Manusredaktøren bestiller siste gjennomgang og klargjøring av manuskriptet, før det kan sendes til layoutredigering.</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_FINAL_COMPLETE</field>
+			<field name="subject">Manusredigering - siste gjennomgang fullført</field>
+			<field name="body">{$editorialContactName}:
+
+Jeg har nå gjort klar en ren og ferdig redigert filversjon av manuskriptet "{$articleTitle}" for {$journalName}. Manuskriptet er nå klart for layoutredigering.
+
+{$copyeditorName}</field>
+			<field name="description">Denne e-posten fra Manusredaktøren varsler Seksjonsredaktøren om at siste manusredigering av manuskriptet er fullført, og at layoutredigeringen kan settes i gang.</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_FINAL_ACK</field>
+			<field name="subject">Bekrefter at siste manusgjennomgang er fullført</field>
+			<field name="body">{$copyeditorName}:
+
+Takk for at du har fullført siste manusredigering av manuskriptet "{$articleTitle}" for {$journalName}. Framstillingen av en slik god "renkopi" for layoutredigering er et viktig trinn i den redaksjonelle prosessen.
+
+{$editorialContactSignature}</field>
+			<field name="description">Denne e-posten fra Seksjonsredaktøren til Manusredaktøren bekrefter at siste manusredigering er fullført, og takker for innsatsen.</field>
+		</row>
+
+
+		<!--
+		  *
+		  * Layout Editing
+		  *
+		  -->
+		<row>
+			<field name="email_key">LAYOUT_REQUEST</field>
+			<field name="subject">Forespørsel om layoutredigering - sideoppsett</field>
+			<field name="body">{$layoutEditorName}:
+
+Jeg vil med dette be deg om å layoutredigere sideoppsettet for manuskriptet "{$articleTitle}" for {$journalName}.
+
+Manuskript URL: {$submissionLayoutUrl}
+Brukernavn: {$layoutEditorUsername}
+
+Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg. Jeg vil med det samme takke deg for at du bidrar til arbeidet vårt.
+
+{$editorialContactSignature}</field>
+			<field name="description">Denne e-posten fra Seksjonsredaktøren til Layoutredaktøren bestiller layoutredigering av et manuskript. E-posten gir informasjon om manuskriptet, og om hvordan layoutredaktøren får tilgang til det.</field>
+		</row>
+		<row>
+			<field name="email_key">LAYOUT_COMPLETE</field>
+			<field name="subject">Sideoppsett fullført</field>
+			<field name="body">{$editorialContactName}:
+
+Sidene til manuskriptet "{$articleTitle}" er nå satt opp for {$journalName}, og er klare for korrekturlesing. 
+
+Hvis du har spørsmål til arbeidet jeg har utført, ber jeg om at du kontakter meg.
+
+{$layoutEditorName}</field>
+			<field name="description">Denne e-posten fra Layoutredaktøren til Seksjonsredaktøren varsler om at sideoppsettet er fullført.</field>
+		</row>
+		<row>
+			<field name="email_key">LAYOUT_ACK</field>
+			<field name="subject">Bekrefter at layoutredigering er fullført</field>
+			<field name="body">{$layoutEditorName}:
+
+Takk for at du har satt opp sidene til manuskriptet "{$articleTitle}" for {$journalName}. Du har med dette gitt et viktig bidrag til publiseringsarbeidet vårt.
+
+{$editorialContactSignature}</field>
+			<field name="description">Denne e-posten fra Seksjonsredaktøren til Layoutredaktøren bekrefter at layoutredigeringen er fullført, og takker layoutredaktøren for innsatsen.</field>
+		</row>
+
+
+		<!--
+		  *
+		  * Proofreading
+		  *
+		  -->
+		<row>
+			<field name="email_key">PROOFREAD_AUTHOR_REQUEST</field>
+			<field name="subject">Sluttkorrektur av manuskript (Forfatter)</field>
+			<field name="body">{$authorName}:
+
+Vi ber med dette om at du leser sluttkorrektur på de oppsatte sidene for ditt manuskript  "{$articleTitle}" for {$journalName}. For å få tilgang til den aktuelle manuskriptfilen ber vi deg om å logge inn på tidsskriftets nettsted med lenken nedenfor. Bruk deretter VIS KORREKTUR-lenken for å få se manuskriptsidene slik de vil bli publisert. Vi minner om at det bare er formatfeil og typografiske feil som kan korrigeres i denne produksjonsfasen. Vi ber deg om å følge vår Instruks for korrekturlesing. Oppgi slike feil i boksen som blir hentet fram av lenken Korrekturlesing: rettelser.
+
+Manuskript URL: {$submissionUrl}
+Brukernavn: {$authorUsername}
+
+Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg. Jeg vil med det samme takke deg for at du bidrar til arbeidet vårt.
+
+{$editorialContactSignature}</field>
+			<field name="description">Denne e-posten fra Seksjonsredaktøren til Forfatteren varsler om at de ferdig oppsatte sidene er klare for korrekturlesing. E-posten gir informasjon om manuskriptfilen, og om hvordan forfatteren får tilgang til den.</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_AUTHOR_COMPLETE</field>
+			<field name="subject">Sluttkorrektur gjennomført (Forfatter)</field>
+			<field name="body">{$editorialContactName}:
+
+Jeg har nå gjennomført min sluttkorrektur av mitt manuskript "{$articleTitle}" for {$journalName}. Manuskriptfilen er nå klar for endelig korrekturlesing av Korrekturleseren og Layoutredaktøren.
+
+{$authorName}</field>
+			<field name="description">Denne e-posten fra Forfatteren til Korrekturleseren og Redaktøren varsler dem om at Forfatteren har gjennomført sin korrekturlesing. De vil finne detaljene som kommentarer fra forfatteren til manuskriptfilen.</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_AUTHOR_ACK</field>
+			<field name="subject">Bekrefter gjennomført sluttkorrektur (Forfatter)</field>
+			<field name="body">{$authorName}:
+
+Takk for at du har gjennomført sluttkorrektur av ditt manuskript "{$articleTitle}" før publisering i {$journalName}. Vi ser nå fram til å publisere arbeidet ditt om ikke lenge.
+
+Hvis du har krysset av på din brukerside for å få e-post varsel når ny utgave blir publisert, vil du få Innholdsfortegnelsen til nye utgaver av tidsskriftet så snart de blir utgitt. Hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg.
+
+{$editorialContactSignature}</field>
+			<field name="description">Denne e-posten fra Seksjonsredaktøren til Forfatteren bekrefter at forfatteren har gjennomført sin sluttkorrektur, og takker for innsatsen.</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_REQUEST</field>
+			<field name="subject">Forespørsel om korrekturlesning</field>
+			<field name="body">{$proofreaderName}:
+
+Jeg ber deg med dette om å lese korrektur på de oppsatte sidene for manuskriptet "{$articleTitle}" for {$journalName}. 
+
+Manuskript URL: {$submissionUrl}
+Brukernavn: {$proofreaderUsername}
+
+Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg. Jeg vil med det samme takke deg for at du bidrar til arbeidet vårt.
+
+{$editorialContactSignature}</field>
+			<field name="description">Denne e-posten fra Seksjonsredaktøren til Korrekturleseren bestiller korrekturlesning av manuskriptet. E-posten gir informasjon om manuskriptfilen, og om hvordan forfatteren får tilgang til den.</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_COMPLETE</field>
+			<field name="subject">Korrektur gjennomført</field>
+			<field name="body">{$editorialContactName}:
+
+Jeg har nå gjennomført korrektur av manuskriptet "{$articleTitle}," for {$journalName}. Manuskriptfilen er nå klar for layoutredaktørens endelige korrektur.
+
+{$proofreaderName}</field>
+			<field name="description">Denne e-posten fra Korrekturleseren til Seksjonsredaktøren varsler om at korrekturen er gjennomført.</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_ACK</field>
+			<field name="subject">Bekrefter gjennomført korrektur</field>
+			<field name="body">{$proofreaderName}:
+
+Takk for at du har gjennomført korrektur av manuskriptet "{$articleTitle}" for {$journalName}. Med dette arbeidet har du gitt et viktig bidrag til publiseringsarbeidet vårt: takk for innsatsen.
+
+{$editorialContactSignature}</field>
+			<field name="description">Denne e-posten fra Seksjonsredaktøren til Korrekturleseren bekrefter at korrekturen er gjennomført, og takker for innsatsen.</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_LAYOUT_REQUEST</field>
+			<field name="subject">Forespørsel om korrektur (Layoutredaktør)</field>
+			<field name="body">{$layoutEditorName}:
+
+Vi ber med dette om at du utfører de rettelsene korrekturlesningen har påpekt behov for, i manuskriptet "{$articleTitle}" for {$journalName}.
+
+Manuskript URL: {$submissionUrl}
+Brukernavn: {$layoutEditorUsername}
+
+Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg. Jeg vil med det samme takke deg for at du bidrar til arbeidet vårt.
+
+{$editorialContactSignature}</field>
+			<field name="description">Denne e-posten fra Seksjonsredaktøren til Layoutredaktøren varsler om at manuskriptfilen er klar for siste feilretting etter korrekturlesningen. E-posten gir informasjon om manuskriptfilen, og om hvordan layoutredaktøren får tilgang til den.</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_LAYOUT_COMPLETE</field>
+			<field name="subject">Korrektur ferdigstilt (Layoutredaktør)</field>
+			<field name="body">{$editorialContactName}:
+
+Manuskriptfilen til manuskriptet "{$articleTitle}" er nå ferdigstilt etter korrektur for {$journalName}. Manuskriptfilen er med dette klar til publisering.
+
+{$layoutEditorName}</field>
+			<field name="description">Denne e-posten fra Layoutredaktøren til Seksjonsredaktøren varsler om at de siste korrigeringene i manuskriptfilen er gjennomført, og at den dermed er klar for publisering.</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_LAYOUT_ACK</field>
+			<field name="subject">Bekrefter ferdigstilt korrektur (Layoutredaktør)</field>
+			<field name="body">{$layoutEditorName}:
+
+Takk for at du har ferdigstilt maniskriptfilen til manuskriptet "{$articleTitle}" for publisering i {$journalName}. Med dette arbeidet har du gitt et viktig bidrag til publiseringsarbeidet vårt: takk for innsatsen.
+
+{$editorialContactSignature}</field>
+			<field name="description">Denne e-posten fra Seksjonsredaktøren til Layoutredaktøren bekrefter at manuskriptfilen er ferdigstilt for publisering, og takker for interessen.</field>
+		</row>
+		<row>
+			<field name="email_key">EMAIL_LINK</field>
+			<field name="subject">En artikkel som kan være av interesse for deg</field>
+			<field name="body">Jeg tenkte du kanskje kan være interessert i å lese artikkelen "{$articleTitle}". Den er skrevet av {$authorName} og publisert i Vol {$volume}, Nr {$number} ({$year}) av {$journalName}, og er tilgjengelig på nettet: "{$articleUrl}".</field>
+			<field name="description">Denne e-postmalen gir en registrert bruker muligheten til å sende e-post om en interessant artikkel til andre interesserte. Den er tilgjengelig via Leseverktøy, og må være slått på av Redaksjonslederen fra administrasjonssiden for Leseverktøy valg.</field>
+		</row>
+
+
+		<!--
+		  *
+		  * Subscriptions 
+		  *
+		  -->
+		<row>
+			<field name="email_key">SUBSCRIPTION_NOTIFY</field>
+			<field name="subject">Varsel om nyopprettet abonnement</field>
+			<field name="body">{$subscriberName}:
+
+Du er nå registrert som abonnent hos det nettbaserte tidsskriftet {$journalName}, med denne abonnementstypen:
+
+{$subscriptionType}
+
+Du får enkelt tilgang til tidsskriftet ved å logge inn med brukernavnet "{$username}".
+
+Så snart du har logget inn, kan du når som helst endre personinformasjonen og passordet som er knyttet til ditt brukernavn.
+
+Vennligst merk at institusjonsabonnement er satt opp slik at de enkelte brukerne på institusjonens datasystem ikke behøver å logge inn, fordi systemet verifiserer henvendelsene fra slike brukere automatisk.
+
+Hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg.
+
+{$subscriptionContactSignature}</field>
+			<field name="description">Denne e-posten varsler registrerte Lesere om at Redaksjonslederen har opprettet abonnement for dem. E-posten gir informasjon tidsskriftets URL, og om hvordan leseren får tilgang.</field>
+		</row>
+		<row>
+			<field name="email_key">OPEN_ACCESS_NOTIFY</field>
+			<field name="subject">Ny utgave i Open Access</field>
+			<field name="body">Til våre lesere:
+
+{$journalName} har nå gjort følgende utgave tilgjengelig i open access format. Innholdsfortegnelsen er her vedlagt. Vi inviterer deg med det samme til å besøk nettstedet vårt ({$journalUrl}) for å se nærmere på innholdet.
+
+Takk for at du viser interesse for arbeidet vårt,
+{$editorialContactSignature}</field>
+			<field name="description">Denne e-posten sendes til registrerte lesere som har bedt om å bli varslet når utgivelser blir gitt open access.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBSCRIPTION_BEFORE_EXPIRY</field>
+			<field name="subject">Varsel: abonnementet ditt utløper</field>
+			<field name="body">{$subscriberName}:
+
+Abonnementet ditt på {$journalName} utløper snart.
+
+{$subscriptionType}
+Utløpsdato: {$expiryDate}
+
+Hvis du fortsatt vil ha tilgang til dette tidsskriftet, må jeg be deg om å gå til tidsskriftets nettsted for å fornye abonnementet. Du logger inn med brukernavnet ditt: "{$username}".
+
+Hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg.
+
+{$subscriptionContactSignature}</field>
+			<field name="description">Denne e-posten varsler en abonnent om at abonnementet snart utløper. E-posten gir informasjon om tidsskriftets URL, og om hvordan abonnenten får tilgang.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBSCRIPTION_AFTER_EXPIRY</field>
+			<field name="subject">Varsel: abonnementet ditt er utløpt</field>
+			<field name="body">{$subscriberName}:
+
+Abonnementet ditt på {$journalName} er utløpt.
+
+{$subscriptionType}
+Utløpsdato: {$expiryDate}
+
+Hvis du vil fornye abonnementet ditt, må jeg be deg om å gå til tidsskriftets nettsted. Du logger inn med brukernavnet ditt: "{$username}".
+
+Hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg.
+
+{$subscriptionContactSignature}</field>
+			<field name="description">Denne e-posten varsler en abonnent om at abonnementet er utløpt. E-posten gir informasjon om tidsskriftets URL, og om hvordan abonnenten får tilgang.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBSCRIPTION_AFTER_EXPIRY_LAST</field>
+			<field name="subject">Abonnementet ditt er utløpt - siste varsel</field>
+			<field name="body">{$subscriberName}:
+
+Abonnementet ditt på {$journalName} er utløpt.
+Dette er det siste varselet du vil motta fra oss om dette.
+
+{$subscriptionType}
+Utløpsdato: {$expiryDate}
+
+Hvis du vil fornye abonnementet ditt, må jeg be deg om å gå til tidsskriftets nettsted. Du logger inn med brukernavnet ditt: "{$username}".
+
+Hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg.
+
+{$subscriptionContactSignature}</field>
+			<field name="description">Denne e-posten varsler en abonnent om at abonnementet er utløpt. E-posten gir informasjon om tidsskriftets URL, og om hvordan abonnenten får tilgang.</field>
+		</row>
+	</table>
+</data>
+
