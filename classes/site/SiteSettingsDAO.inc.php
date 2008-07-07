@@ -119,8 +119,8 @@ class SiteSettingsDAO extends DAO {
 			);
 		} else {
 			if (is_array($value)) foreach ($value as $locale => $localeValue) {
-				if (empty($localeValue)) continue;
 				$this->update('DELETE FROM site_settings WHERE setting_name = ? AND locale = ?', array($name, $locale));
+				if (empty($localeValue)) continue;
 				$type = null;
 				$this->update('INSERT INTO site_settings
 					(setting_name, setting_value, setting_type, locale)

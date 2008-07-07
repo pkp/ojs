@@ -126,8 +126,8 @@ class JournalSettingsDAO extends DAO {
 			);
 		} else {
 			if (is_array($value)) foreach ($value as $locale => $localeValue) {
-				if (empty($localeValue)) continue;
 				$this->update('DELETE FROM journal_settings WHERE journal_id = ? AND setting_name = ? AND locale = ?', array($journalId, $name, $locale));
+				if (empty($localeValue)) continue;
 				$type = null;
 				$this->update('INSERT INTO journal_settings
 					(journal_id, setting_name, setting_value, setting_type, locale)
