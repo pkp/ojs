@@ -145,7 +145,7 @@ class ReviewFormHandler extends ManagerHandler {
 		$templateMgr->assign('pageTitle', 'manager.reviewForms.preview');
 		$templateMgr->assign_by_ref('reviewForm', $reviewForm);
 		$templateMgr->assign('reviewFormElements', $reviewFormElements);
-		$templateMgr->register_function('form_language_chooser', array(&$this, 'smartyFormLanguageChooser'));
+		$templateMgr->register_function('form_language_chooser', array('ReviewFormHandler', 'smartyFormLanguageChooser'));
 		$templateMgr->assign('helpTopicId','journal.managementPages.reviewForms');
 		$templateMgr->display('manager/reviewForms/previewReviewForm.tpl');
 	}
