@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+<locale name="hr_HR"
+        full_name="Hrvatski">
+	<message key="plugins.implicitAuth.shibboleth.displayName">Dodatak za Shibauth</message>
+	<message key="plugins.implicitAuth.shibboleth.description">Dodatak za Shibboleth sustav federacije autorizacije (ShibAuth). Ovaj dodatak omogučuje se na razini cijele OJS instalacije u globalnoj konfiguracijskoj datoteci.</message>
+</locale>

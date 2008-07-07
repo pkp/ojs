@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2000-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the hr_HR (hrvatski) locale.
+  *
+ -->
+ 
+<locale name="hr_HR" full_name="Hrvatski">
+	<message key="plugins.paymethod.manual.displayName">Ručna uplata naknada</message>
+	<message key="plugins.paymethod.manual.description">Administrator pretplate će ručno evidentirati primitak korisnikove uplate (izvan ovog programa).</message>
+	<message key="plugins.paymethod.manual">Ručna uplata naknada</message>
+	<message key="plugins.paymethod.manual.settings">Postavke ručne uplate</message>
+	<message key="plugins.paymethod.manual.settings.instructions">Upute</message>
+	<message key="plugins.paymethod.manual.settings.manualInstructions">Upute za uplatu naknada za korisnike koji izaberu ručnu uplatu naknada</message>
+	
+	<message key="plugins.paymethod.manual.purchase.title">Naziv</message>
+	<message key="plugins.paymethod.manual.purchase.fee">Iznos</message>	
+</locale>

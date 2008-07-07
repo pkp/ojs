@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 Siavash Miri and Alec Smecher
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the hr_HR (hrvatski) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="hr_HR" full_name="Hrvatski">
+	<message key="plugins.generic.openads.description">OpenAds dodatak omogućuje prikaz dinamičnih oglasa prikupljenih sa OpenAds poslužitelja.</message>
+	<message key="plugins.generic.openads.descriptionUnconfigured"><![CDATA[OpenAds dodatak omogućuje umetanje dinamičnih oglasa prikupljenih sa OpenAds poslužitelja u OJS. <strong>Molimo pročitajte README datoteku u plugins/generic/openAds za informacije o aktiviranju ovog dodatka.</strong>]]></message>
+	<message key="plugins.generic.openads">OpenAds dodatak</message>
+	<message key="plugins.generic.openads.settings.description">Koristite ovaj obrazac kako biste odabrali OpenAds oglasne zone koje će se prikazati u OJS-u za svaku potencijalnu lokaciju.</message>
+	<message key="plugins.generic.openads.manager.settings">Postavke</message>
+
+	<message key="plugins.generic.openads.error.configFileNotFound">Nije moguć pristup konfiguracijskoj datoteci {$filename}.</message>
+	<message key="plugins.generic.openads.error.missingParameter">Barem jedan od potrebnih OpenAds konfiguracijskih parametara nije bilo moguće očitati iz konfiguracijske datoteka. Traženi parametri su: dbhost, dbuser, dbpassword, dbname, url_prefix i table_prefix.</message>
+	<message key="plugins.generic.openads.error.dbConnectionError">Povezivanje sa OpenAds bazom podataka nije uspjelo.</message>
+
+	<message key="plugins.generic.openads.headerAd">Oglas u zaglavlju</message>
+	<message key="plugins.generic.openads.contentAd">Oglas u sadržaju</message>
+	<message key="plugins.generic.openads.sidebarAd">Oglas u rubnom izborniku</message>
+
+	<message key="plugins.generic.openads.orientation.left">Lijevo</message>
+	<message key="plugins.generic.openads.orientation.centre">Centralno</message>
+	<message key="plugins.generic.openads.orientation.right">Desno</message>
+</locale>

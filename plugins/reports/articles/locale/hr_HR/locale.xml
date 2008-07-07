@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+<locale name="hr_HR"
+        full_name="Hrvatski">
+	<message key="plugins.reports.articles.displayName">Izvještaj o člancima</message>
+	<message key="plugins.reports.articles.description">Ovaj dodatak stvara CSV izvještaj sa listom članaka i informacijama o njima.</message>
+	<message key="plugins.reports.articles.nodecision">Odluka: NEMA</message>
+</locale>

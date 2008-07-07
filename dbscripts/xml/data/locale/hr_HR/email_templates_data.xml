@@ -27,9 +27,9 @@
 			<field name="subject">Potvrda o promjeni lozinke</field>
 			<field name="body">Zaprimili smo vaš zahtjev za promjenu lozinke za mrežnu stranicu {$siteTitle}.
 
-U slučaju da takav zahtjev niste poslali, molimo vas da ignorirate ovu e-poštu i vaša će lozinka ostati nepromijenjena. U slučaju da želite promijeniti lozinku, molimo vas da kliknete na dolje navedeni URL.
+U slučaju da takav zahtjev niste poslali, molimo vas da ignorirate ovu e-poštu i vaša će lozinka ostati nepromijenjena. U slučaju da želite promijeniti lozinku, molimo vas da kliknete na dolje priloženu poveznicu.
 
-Promjena lozinke {$url}
+Promjena lozinke: {$url}
 
 {$principalContactSignature}</field>
 			<field name="description">Ovaj obrazac e-pošte šalje se registriranim korisnicima kada informiraju sustav da su zaboravili svoju lozinku ili da se ne mogu prijaviti u sustav. U poruci se nalazi URL koji mogu slijediti kao bi postavili svoju novu lozinku.</field>
@@ -62,8 +62,7 @@ Srdačno,
 			<field name="subject">Objavljen novi broj</field>
 			<field name="body">Poštovani čitatelji,
 
-upravo je objavljen novi broj časopisa {$journalName} koji je dostupan na {$journalUrl}. Pozivamo vas da pregledate sadržaj i posjetite našu mrežnu stranicu kako bi pročitali članke i druge potencijalno zanimljive radove. 
-
+upravo je objavljen novi broj časopisa {$journalName} koji je dostupan na adresi {$journalUrl}. Pozivamo vas da pregledate sadržaj broja i posjetite našu mrežnu stranicu kako bi pročitali vama zanimljive članke i druge priloge. 
 
 Hvala vam na interesu za naš rad,
 {$editorialContactSignature}</field>
@@ -128,13 +127,14 @@ Srdačno,
 		</row>
 		<row>
 			<field name="email_key">SUBMISSION_UNSUITABLE</field>
-			<field name="subject">Tematski neprimjereni prilog</field>
+			<field name="subject">Tematski neprimjeren prilog</field>
 			<field name="body">Poštovana/i {$authorName},
 
 inicijalnom recenzijom članka "{$articleTitle}" ustanovili smo da se vaš prilog ne uklapa u djelokrug i područje časopisa {$journalName}. Predlažemo da pogledate opis časopisa (u sekciji "O časopisu") te sadržaj izdanih brojeva kako biste stekli bolji uvid o vrsti radova koje objavljujemo. Predlažemo vam da razmotrite prijavu ovog priloga nekom drugom, primjerenijem, časopisu.
 
 Srdačno,
 {$editorialContactSignature}</field>
+			<field name="description"></field>
 		</row>
 		<row>
 			<field name="email_key">SUBMISSION_COMMENT</field>
@@ -221,7 +221,7 @@ Molimo vas da se kao korisnik prijavite na mrežnu stranicu časopisa do {$weekL
 
 Sama recenzija trebala bi biti završena zaključno s {$reviewDueDate}.
 
-URL članka: {$submissionReviewUrl}
+Do priloga možete doći izravno prateći ovu kodiranu pozivnicu: {$submissionReviewUrl}
 
 Srdačno,
 {$editorialContactSignature}
@@ -266,22 +266,11 @@ Srdačno,
 			<field name="subject">U mogućnosti sam izvršiti recenziju</field>
 			<field name="body">Poštovana/i {$editorialContactName},
 
-u mogućnosti sam izvršiti recenziju članka "{$articleTitle}" za časopis {$journalName}. Recenziju namjeravam izvršiti  unutar dogovorenog vremenskog roka, {$reviewDueDate}, ako ne i prije.
+u mogućnosti sam izvršiti recenziju članka "{$articleTitle}" za časopis {$journalName}. Recenziju namjeravam izvršiti  unutar dogovorenog vremenskog roka, {$reviewDueDate}.
 
 Srdačno,
 {$reviewerName}</field>
 			<field name="description">Ovim obrascem e-pošte recenzent potvrđuje uredniku rubrike da prihvaća zahtjev za recenzijom.</field>
-		</row>
-		<row>
-			<field name="email_key">REVIEW_CONFIRM_ACK</field>
-			<field name="subject">Potvrda recenzentskog angažmana</field>
-			<field name="body">Poštovana/i {$reviewerName},
-
-hvala što ste pristali izraditi recenziju članka "{$articleTitle}" za časopis {$journalName}. Rok izrade recenzije je {$reviewDueDate}.
-
-Srdačno,
-{$editorialContactSignature}</field>
-			<field name="description">Ovim obrascem e-pošte urednik rubrike zahvaljuje recenzentu na pristanku za recenziju ili požuruje recenzenta da izradi recenziju.</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_DECLINE</field>
@@ -340,7 +329,8 @@ Srdačno,
 
 Željeli bismo vas samo podsjetiti da je rok koji smo dogovorili za recenziju članka, "{$articleTitle}," za časopis {$journalName} istekao {$reviewDueDate}. Bilo bi nam izuzetno drago ukoliko biste recenziju završili i predali čim je prije moguće.
 
-URL članka: {$submissionReviewUrl}
+Podsjećamo da do priloga možete doći izravno prateći ovu kodiranu pozivnicu: 
+{$submissionReviewUrl}
 
 Molimo vas da potvrdite da ste u mogućnosti privesti kraju ovaj ključan doprinos radu časopisa. Nadamo se skorom odgovoru.
  
@@ -371,6 +361,7 @@ Srdačno,
 
 željeli bismo vas samo podsjetiti da je rok koji smo dogovorili za recenziju članka "{$articleTitle}" za časopis {$journalName} istekao {$reviewDueDate}. Bilo bi nam izuzetno drago ukoliko biste recenziju završili i predali čim je prije moguće.
 
+Do priloga možete doći izravno prateći ovu kodiranu pozivnicu: 
 URL članka: {$submissionReviewUrl}
 
 Molimo vas da potvrdite da ste u mogućnosti privesti kraju ovaj ključan doprinos radu časopisa. Nadamo se skorom odgovoru.
@@ -401,7 +392,7 @@ Opširnije komentare urednika i recenzenata možete pročitati ukoliko se prijav
 URL priloga: {$submissionUrl}
 Korisničko ime: {$authorUsername}
 
-U slučaju da imate bilo kakvih dodatnih pitanja, molimo vas da nam se obratite.
+U slučaju da imate bilo kakvih pitanja, molimo vas da nam se obratite.
 
 Srdačno,
 {$editorialContactSignature}</field>
@@ -793,6 +784,33 @@ U slučaju da imate bilo kakvih dodatnih pitanja, molimo vas da nam se obratite.
 Srdačno,
 {$subscriptionContactSignature}</field>
 			<field name="description">Ovim se obrascem e-pošte obavještavaju pretplatnici da je njihova pretplata istekla. Poruka sadrži URL časopisa i upute za pristup.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEWER_REGISTER</field>
+			<field name="subject">Registrirani ste kao recenzent časopisa {$journalName}</field>
+			<field name="body">Imajući u vidu vaše područje ekspertize, odlučili smo registrirati vas u bazu recenzenata časopisa {$journalName}. Ovo vas ne obvezuje ni na koji način, već samo omogućava uredništvu da vas kontaktira sa informacijama o prilozima koje biste potencijalno mogli recenzirati. Po zaprimljenom pozivu za recenziju, bit ćete u mogućnosti pregledati naslov i sažetak konkretnog rada čiju recenziju predlažemo, te ćete uvijek biti u mogućnosti prihvatiti ili odbiti rencenzijsko zaduženje. Također, u bilo kojem trenutku možete zatražiti da uklonimo vaše ime iz baze recenzenata i zatvorimo vaš korisnički račun.
+
+Ovdje vam prilažemo vaše korisničko ime i lozinku, koja vam je potrebna za rad sa časopisom kroz naš sustav za elektroničko uređivanje. U njemu možete i dopuniti svoje korisničke detalje (npr. recenzentske interese). 
+
+Korisničko ime: {$username}
+Lozinka: {$password}
+
+Srdačno,
+{$principalContactSignature}</field>
+			<field name="description">Ova se poruka šalje recenzentima koje registriraju urednici. Njome se novoregistriranom recenzentu želi dobrodošlica te pružaju informacije o korisničkom imenu i lozinki.</field>
+		</row>
+		<row>
+			<field name="email_key">USER_VALIDATE</field>
+			<field name="subject">Validacija korisničkog računa</field>
+			<field name="body">{$userFullName}
+
+Hcala vam što ste kreirali korisnički račun pri časopisu {$journalName}. No, prije nego aktiviramo vaš račun trebate učiniti još jedan korak, a to je potvrda vaše adrese e-pošte. To ćete učiniti jednostavno tako što ćete slijediti poveznicu priloženu ovoj poruci:
+
+{$activateUrl}
+
+Srdačno,
+{$principalContactSignature}</field>
+			<field name="description">Ova se poruka šalje novoregistriranim korisnicima kako bi im se zaželila dobrodošlica na sistem i zatražila potvrda njihove adrese e-pošte.</field>
 		</row>
 	</table>
 </data>

@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
-
-<!--
+<!-- 
   * locale.xml
   *
   * Copyright (c) 2003-2008 John Willinsky
@@ -11,10 +10,19 @@
   *
   * $Id: locale.xml,v 1.2 Teo Matkovic (teo.matkovic@pravo.hr), 
   * Marija Matesic(mmatesi1@ffzg.hr), Tomislav Biscan (info@seofruits.com.hr) Exp $
-  -->
- 
-<locale name="hr_HR" full_name="hrvatski">
+   -->
+<locale name="hr_HR"
+        full_name="Hrvatski">
 	<message key="plugins.generic.webfeed.displayName">Dodatak za feed</message>
-	<message key="plugins.generic.webfeed.description">Ovaj funkcionalni dodatak kreira RSS/Atom mrežne podatkovne formate koji se koriste za predstavljanje sadržaja trenutnog broja.</message>
+	<message key="plugins.generic.webfeed.description"><![CDATA[Ovaj dodatak stvara RSS/Atom <i>feed</i> sadržaja trenutnog broja.]]></message>
+	<message key="plugins.generic.webfeed.settings">Postavke</message>
+	<message key="plugins.generic.webfeed.settings.issue"><![CDATA[Prikazuj poveznice na <i>feed</i> samo na stranicama brojeva.]]></message>
+	<message key="plugins.generic.webfeed.settings.all"><![CDATA[Prikazuj poveznice na <i>feed</i> na svim stranicama časopisa.]]></message>
+	<message key="plugins.generic.webfeed.settings.currentIssue">Prikazuj priloge u trenutnom broju.</message>
+	<message key="plugins.generic.webfeed.settings.recentArticles">najnovija objavljena priloga.</message>
+	<message key="plugins.generic.webfeed.settings.recentItemsRequired">Molimo unesite pozitivni cijeli broj kao broj prikazanih nedavno objavljene priloge.</message>
+	<message key="plugins.generic.webfeed.atom.altText">Atom logotip</message>
+	<message key="plugins.generic.webfeed.rss1.altText">RSS1 logotip</message>
+	<message key="plugins.generic.webfeed.rss2.altText">RSS2 logotip</message>
+	<message key="plugins.generic.webfeed.settings.homepage"><![CDATA[Prikazuj poveznice na <i>feed</i> na naslovnici časopisa i stranicama brojeva.]]></message>
 </locale>
-

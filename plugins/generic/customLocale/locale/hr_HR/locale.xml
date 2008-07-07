@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+<locale name="hr_HR"
+        full_name="Hrvatski">
+	<message key="plugins.generic.customLocale.name">Dodatak za prilagođavanje prijevoda</message>
+	<message key="plugins.generic.customLocale.description">Ovaj dodatak služi prilagođavanju standardnog teksta sučelja OJS-a.</message>
+	<message key="plugins.generic.customLocale.longDescription">Ova stranica prikazuje sve prijevode trenutno instalirane u časopisu.</message>
+	<message key="plugins.generic.customLocale.localeDescription">Ova stranica prikazuje sve dostupne datoteke odabranog prijevoda.</message>
+	<message key="plugins.generic.customLocale.fileDescription">Upišite tekst u odgovarajuće polje. Ostavite polje praznim ako želite koristiti standarni tekst.</message>
+	<message key="plugins.generic.customLocale.localeName"><![CDATA[Naziv Prijevoda (<i>Locale</i>)]]></message>
+	<message key="plugins.generic.customLocale.localeKey">Fraza</message>
+	<message key="plugins.generic.customLocale.localeKeyValue">Tekst</message>
+	<message key="plugins.generic.customLocale.customize">Prilagodi</message>
+	<message key="plugins.generic.customLocale.availableLocales">Dostupni prijevodi</message>
+	<message key="plugins.generic.customLocale.locale">Prijevod {$locale}</message>
+	<message key="plugins.generic.customLocale.localeFiles">Datoteke prijevoda</message>
+	<message key="plugins.generic.customLocale.file.filename">Ima datoteke</message>
+	<message key="plugins.generic.customLocale.file.edit">Uređujete {$filename}</message>
+	<message key="plugins.generic.customLocale.file.reference">Standardni tekst</message>
+	<message key="plugins.generic.customLocale.file.custom">Prilagođeni tekst</message>
+</locale>

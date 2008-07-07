@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+<locale name="hr_HR"
+        full_name="Hrvatski">
+	<message key="plugins.gateways.metsGateway.displayName">METS dodatak</message>
+	<message key="plugins.gateways.metsGateway.settings">Postavke</message>
+	<message key="plugins.gateways.metsGateway.description"><![CDATA[Ovaj dodatak stvara XML podatke odabranog časopisa u METS formatu. <strong>NAPOMENA: Nakana je ovoga spajanje sa Web servisima. Njegovo omogučavanje predstavlja potencijalni sigurnosni problem, jer omogučuje nekontrolirani pristup sadržaju časopisa u obliku XML-a.</strong>]]></message>
+	<message key="plugins.gateways.metsGateway.errors.errorMessage">Nije moguće izvesti podatke časopisa. METS dodatak mora biti omogućen, a identifikator časopisa koji se iznosi mora biti naveden u URL-u.</message>
+	<message key="plugins.gateways.metsGateway.settings.FContent">Sadržaj predstavi u base64 formatu</message>
+	<message key="plugins.gateways.metsGateway.settings.FLocat">Sadržaj predstavi kao URL "sirovih" podataka</message>
+	<message key="plugins.gateways.metsGateway.settings.organization">METS:agent XML atribut za organizaciju čvorova</message>
+	<message key="plugins.gateways.metsGateway.settings.preservationLevel">PREMIS razina metapodataka za očuvanje sadržaja</message>
+	<message key="plugins.gateways.metsGateway.settings.exportSuppFiles">Iznesi dopunske datoteke</message>
+</locale>

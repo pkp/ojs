@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the hr_HR (hrvatski) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="hr_HR" full_name="Hrvatski">
+	<message key="plugins.generic.xmlGalley.displayName">Dodatak za XML prijelom</message>
+	<message key="plugins.generic.xmlGalley.description">Ovaj dodatak generira XHTML prijelom iz XML članaka koristeći XSLT.</message>
+
+	<message key="plugins.generic.xmlGalley.manager.settings">Postavke</message>
+
+	<!-- XML Article Galleys Settings Management -->
+	<message key="plugins.generic.xmlGalley.settings.description"><![CDATA[<p>S ovim dodatkom, prijelom članaka će biti automatski prikazan temeljem izvorne poslane XML datoteke korištenjem specifične XSL stylesheet transformacije.</p>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.renderer">XSLT metoda prikaza</message>
+	<message key="plugins.generic.xmlGalley.settings.PHP5">PHP 5.0.0+ sa XSL funkcijama (libxslt)</message>
+	<message key="plugins.generic.xmlGalley.settings.PHP4">PHP 4.0.3+ sa XSLT funkcijama (Sablotron)</message>
+	<message key="plugins.generic.xmlGalley.settings.notAvailable">Nije na raspolaganju</message>
+
+	<message key="plugins.generic.xmlGalley.settings.externalXSLT">Vanjski XSLT alat za prikaz koji se poziva kroz komandnu liniju (npr. Xalan)</message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTDescription"><![CDATA[Unesite kompletnu putanju do XSLT alata za prikaz, zajedno sa potrebnim parametrima.  Koristite %xsl kao zamjenu za lokaciju XSL stylesheet datoteke i  %xml kao zamjenu za lokaciju izvorne XML datoteke; npr.: <br/><pre>/usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTTest">Testiraj XSLT</message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTSuccess">Test vanjskog XSLT alata uspješan.</message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTFailure">Test vanjskog XSLT alata nije uspio.</message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTRequired">Potrebno je specificirati vanjski XSLT alat koji se poziva kroz komandnu liniju.</message>
+
+	<message key="plugins.generic.xmlGalley.settings.stylesheet">XSL Stylesheet</message>
+	<message key="plugins.generic.xmlGalley.settings.xslNLM"><![CDATA[<a href="http://dtd.nlm.nih.gov/publishing/">NLM Journal Publishing DTD</a> → XHTML]]></message>
+
+	<message key="plugins.generic.xmlGalley.settings.xslFOP">Omogući prikaz PDF prijeloma koristeći XSL-FO (npr. FOP)</message>
+	<message key="plugins.generic.xmlGalley.settings.xslFOPDescription"><![CDATA[Unesite kompletnu putanju do FO alata, zajedno sa potrebnim parametrima.  Koristite %fo kao zamjenu za lokaciju XSL-FO datoteke i %pdf kao zamjenu za lokaciju PDF datoteke; npr.: <br/><pre>/usr/sbin/fop -fo %fo -pdf %pdf</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.xslFOPRequired">Potrebno je specificirati vanjski FO alat koji se poziva kroz komandnu liniju.</message>
+
+	<message key="plugins.generic.xmlGalley.settings.customXSL">Posebni XSL stylesheet</message>
+	<message key="plugins.generic.xmlGalley.settings.customXSLRequired">Potrebno je specificirati posebnu XSL stylesheet datoteku.</message>
+	<message key="plugins.generic.xmlGalley.settings.customXSLInvalid">Poslana XSL datoteka nije valjana. Molimo provjerite datoteku i pokušajte ponovo.</message>
+
+</locale>
+

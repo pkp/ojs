@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Google Analytics plugin localization strings for the hr_HR (hrvatski) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="hr_HR" full_name="Hrvatski">
+
+	<!-- Google Analytics -->
+	<message key="plugins.generic.googleAnalytics.displayName">Google Analytics dodatak</message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Ovaj dodatak integrira OJS sa Google Analytics,  aplikacijom za analizu web prometa. Ovo od vas zahtijeva da imate već postavljen Google Analytics korisnički račun. Za više informacija pogledajte <a href="http://www.google.com/analytics/" title="Google Analytics stranice">Google Analytics stranice</a>.]]></message>
+
+	<!-- Google Analytics Settings Management -->
+	<message key="plugins.generic.googleAnalytics.manager.settings">Postavke</message>
+	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">Google Analytics postavke</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p>Kad je ovaj dodatak aktiviran, moguće je koristiti Google Analytics za prikupljanje i analizu podataka o prometu i korištenju ovog časopisa. Za upotrebu ovog dodatka trebate imati već postavljen Google Analytics korisnički račun. Za više informacija molimo pogledajte <a href="http://www.google.com/analytics/" title="Google Analytics stranice">Google Analytics stranice</a>.</p>]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId">Broj računa</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions"><![CDATA[Unutar Google Analytics aplikacije odaberite <I>Check Status </I>kako biste vidjeli kod za praćenje (<I>tracking code</I>) vaše stranice. Broj korisničkog računa prikazan je unutar koda za praćenje: _uacct = "###". Enter the text that corresponds to ###.]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Molimo unesite broj računa.</message>
+
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCode">Kod za praćenje</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Molimo odaberite kod za praćenje koji ćete koristiti.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Naslijeđen kod za praćenje (urchin.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Novi kod za praćenje (ga.js)</message>
+</locale>

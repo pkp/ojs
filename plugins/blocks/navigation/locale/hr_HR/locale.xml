@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the hr_HR (hrvatski) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="hr_HR" full_name="Hrvatski">
+	<message key="plugins.block.navigation.displayName">Blok za navigaciju</message>
+	<message key="plugins.block.navigation.description">Ovaj dodatak omogućuje navigaciju sadržajem i pretraživanje časopisa u rubnom izborniku.</message>
+	<message key="plugins.block.navigation.journalContent">Sadržaj časopisa</message>
+</locale>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+<locale name="hr_HR"
+        full_name="Hrvatski">
+	<message key="plugins.importexport.METSExport.displayName">Dodatak za iznos u METS</message>
+	<message key="plugins.importexport.METSExport.description">Iznošenje časopisa u METS XML formatu</message>
+	<message key="plugins.importexport.METSExport.settings">Postavke</message>
+	<message key="plugins.importexport.METSExport.export">Iznošenje podataka</message>
+	<message key="plugins.importexport.METSExport.export.issues">Iznošenje brojeva</message>
+	<message key="plugins.importexport.METSExport.export.selectIssue">Odaberite brojeve za iznošenje</message>
+	<message key="plugins.importexport.METSExport.export.error.IssuesNotFound">Niti jedan broj nema navedeni identifikator "{$issueId}".</message>
+	<message key="plugins.importexport.METSExport.export.error.unknownIssue">Ne postoji staza {$journalPath}</message>
+	<message key="plugins.importexport.METSExport.settings.FContent">Sadržaj predstavi u base64 formatu</message>
+	<message key="plugins.importexport.METSExport.settings.FLocat">Sadržaj predstavi kao URL "sirovih" podataka</message>
+	<message key="plugins.importexport.METSExport.settings.organization">METS:agent XML atribut za organizaciju čvorova</message>
+	<message key="plugins.importexport.METSExport.settings.preservationLevel">PREMIS razina metapodataka za očuvanje sadržaja</message>
+	<message key="plugins.importexport.METSExport.settings.exportSuppFiles">Iznesi dopunske datoteke</message>
+</locale>

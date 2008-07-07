@@ -13,7 +13,7 @@
   * Marija Matesic(mmatesi1@ffzg.hr), Tomislav Biscan (info@seofruits.com.hr) Exp $
   -->
  
-<locale name="hr_HR" full_name="hrvatski">
+<locale name="hr_HR" full_name="Hrvatski">
 	<message key="plugins.importexport.crossref.displayName">Dodatak za CrossRef XML iznošenje</message>
 	<message key="plugins.importexport.crossref.description">Koristi se za iznošenje metapodataka članaka u CrossRef XML formatu.</message>
 	

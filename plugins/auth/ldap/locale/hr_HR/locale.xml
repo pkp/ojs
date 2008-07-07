@@ -13,7 +13,7 @@
   * Marija Matesic(mmatesi1@ffzg.hr), Tomislav Biscan (info@seofruits.com.hr) Exp $
   -->
  
-<locale name="hr_HR" full_name="hrvatski">
+<locale name="hr_HR" full_name="Hrvatski">
 	<message key="plugins.auth.ldap.displayName">LDAP poslužitelj</message>
 	<message key="plugins.auth.ldap.description">Ovaj dodatak služi za provjeru vjerodostojnosti i usklađivanje korisničkih računa preko LDAP poslužitelja.</message>
 	
@@ -37,5 +37,7 @@
 	<message key="plugins.auth.ldap.settings.saslrealm">Područje</message>
 	<message key="plugins.auth.ldap.settings.saslauthzid">Zatražen autorizacijski ID </message>
 	<message key="plugins.auth.ldap.settings.saslprop">Sigurnosne opcije SASL sučelja</message>
+	<message key="plugins.auth.ldap.settings.uid">Atributi korisničkog imena</message>
+	<message key="plugins.auth.ldap.settings.uid.description">Atributi čija vrijednost jedinstveno identificira objekt korisnika, kao što je uid ili cn ili sAMAccountName.</message>
 </locale>
 

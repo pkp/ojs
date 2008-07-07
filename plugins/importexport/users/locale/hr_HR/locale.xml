@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
-
-<!--
+<!-- 
   * locale.xml
   *
   * Copyright (c) 2003-2008 John Willinsky
@@ -11,13 +10,13 @@
   *
   * $Id: locale.xml,v 1.3 Teo Matkovic (teo.matkovic@pravo.hr), 
   * Marija Matesic(mmatesi1@ffzg.hr), Tomislav Biscan (info@seofruits.com.hr) Exp $
-  -->
- 
-<locale name="hr_HR" full_name="hrvatski">
+   -->
+<locale name="hr_HR"
+        full_name="Hrvatski">
 	<message key="plugins.importexport.users.displayName">Dodatak za XML korisnika</message>
 	<message key="plugins.importexport.users.description">Unošenje i iznošenje korisnika.</message>
 
-	<message key="plugins.importexport.users.cliUsage"><![CDATA[Primjena: {$scriptName} {$pluginName} [naredba] ...
+	<message key="plugins.importexport.users.cliUsage">Primjena: {$scriptName} {$pluginName} [naredba] ...
 Naredba:
 	import [xmlNazivDatoteke] [putanja_časopisa] [opcionalne oznake]
 	export [xmlNazivDatoteke] [putanja_časopisa]
@@ -36,13 +35,12 @@ Primjeri:
 	{$scriptName} {$pluginName} export mojaDatotekaIznosa.xml mojCasopis
 
 	Iznosi sve korisnike registrirane kao recenzente, zajedno s njihovim recenzentskim ulogama:
-	{$scriptName} {$pluginName} export mojaDatotekaIznosa.xml mojCasopis reviewer
-]]></message>
+	{$scriptName} {$pluginName} export mojaDatotekaIznosa.xml mojCasopis reviewer</message>
 	<message key="plugins.importexport.users.import.importUsers">Unesi korisnike</message>
-	<message key="plugins.importexport.users.import.instructions"><![CDATA[Molim odaberite XML datoteku koja sadrži informacije o korisnicima koje želite unijeti u ovaj časopis. Pogledajte pomoć časopisa za detalje o formatu ove datoteke.<br /><br />Uzmite u obzir da korisnici neće biti uneseni, te će njihove nove uloge biti dodijeljene postojećim ukoliko unesena datoteka sadrži bilo koja korisnička imena ili adrese e-pošte koje već postoje u sustavu.]]></message>
+	<message key="plugins.importexport.users.import.instructions"><![CDATA[Molim odaberite XML datoteku koja sadrži informacije o korisnicima koje želite unijeti u ovaj časopis. Konzultirajte pomoć časopisa za detalje o formatu ove datoteke.<br /><br />Ukoliko unesena datoteka sadrži bilo koja korisnička imena ili adrese e-pošte koje već postoje u sustavu, ti korisnici neće biti uneseni, već će njihove uloge biti dodijeljene onima postojećih korisnika.]]></message>
 	<message key="plugins.importexport.users.import.failedToImportUser">Neuspjelo unošenje korisnika</message>
 	<message key="plugins.importexport.users.import.failedToImportRole">Neuspjelo unošenje uloga korisnika</message>
-	<message key="plugins.importexport.users.import.dataFile">Podatkovna datoteka korisnika</message>
+	<message key="plugins.importexport.users.import.dataFile">Datoteka s podacima o korisnicima</message>
 	<message key="plugins.importexport.users.import.sendNotify">Pošalji e-poštom svakom unesenom korisniku obavijest koja sadrži njegovo korisničko ime i lozinku.</message>
 	<message key="plugins.importexport.users.import.continueOnError">U slučaju greške nastavi s unošenjem ostalih korisnika.</message>
 	<message key="plugins.importexport.users.import.noFileError">Datoteka nije poslana!</message>
@@ -56,4 +54,6 @@ Primjeri:
 	<message key="plugins.importexport.users.export.exportAllUsers">Iznesi sve</message>
 	<message key="plugins.importexport.users.export.errorsOccurred">Pogreške koje su se pojavile prilikom iznošenja</message>
 	<message key="plugins.importexport.users.export.couldNotWriteFile">Nije moguće pisati po datoteci "{$fileName}".</message>
+	<message key="plugins.importexport.users.import.warning">Upozorenje</message>
+	<message key="plugins.importexport.users.import.encryptionMismatch">Nije moguće koristiti lozinke pohranjene hash funkcijom {$importHash}; OJS je podešen da koristi {$ojsHash}. Ukoliko nastavite, morat ćete ponovno postaviti lozinke ovako unesenih korisnika.</message>
 </locale>

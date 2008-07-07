@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+<locale name="hr_HR"
+        full_name="Hrvatski">
+	<message key="plugins.block.subscription.displayName">Pretplatnički blok</message>
+	<message key="plugins.block.subscription.description">Ovaj dodatak u rubni izbornik dodaje informacije o pretplati.</message>
+	<message key="plugins.block.subscription.blockTitle">Pretplata</message>
+	<message key="plugins.block.subscription.expires">Ističe</message>
+	<message key="plugins.block.subscription.providedBy">Osnova pristupa:</message>
+	<message key="plugins.block.subscription.providedByInstitution">Pretplata vaše institucije</message>
+	<message key="plugins.block.subscription.comingFromIP">Sa IP adrese:</message>
+</locale>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+
+<locale name="hr_HR" full_name="Hrvatski">
+	<message key="plugins.theme.custom.name">Dodatak za prilagođavanje izgleda</message>
+	<message key="plugins.theme.custom.description">Ovim dodatkom možete sami prilagoditi stilsku temu časopisa.</message>
+	<message key="plugins.theme.custom.notWritable">NAPOMENA: Po CSS datoteci ovog dodatka, "{$stylesheetFileLocation}", trenutno nije moguče pisati. Po ovoj datoteci mora biti moguće pisati kako bi se ovaj dodatak mogao koristiti.</message>
+	<message key="plugins.theme.custom.settings">Postavke</message>
+	<message key="plugins.theme.custom.pickColour">Odaberi boju</message>
+	<message key="plugins.theme.custom.header">Zaglavlje</message>
+	<message key="plugins.theme.custom.link">Poveznice</message>
+	<message key="plugins.theme.custom.background">Pozadina</message>
+	<message key="plugins.theme.custom.foreground">Tekst</message>
+</locale>

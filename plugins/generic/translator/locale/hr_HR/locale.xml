@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the hr_HR (hrvatski) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="hr_HR" full_name="Hrvatski">
+	<message key="plugins.generic.translator.name">Dodatak za prevođenje</message>
+	<message key="plugins.generic.translator.description">Ovaj dodatak omogućuje izradu i ažuriranje datoteka prijevoda sustava preko mrežnog sučelja.</message>
+	<message key="plugins.generic.translator.longdescription">Ovaj dodatak omogućuje administratoru stranica da nadopuni, modificira i provjeri prijevod OJS sustava. Ove intervencije odnose se na čitav sustav te se ne bi smjele koristiti za prilagođavanje pojedinih OJS časopisa. Napravite li dopune ili ispravke prijevoda,  molimo vas da razmotrite prijavljivanje istih u Public Knowledge Project kako bi bili distribuirani u narednim verzijama OJS-a.</message>
+	<message key="plugins.generic.translator.localeDescription">Na ovoj su stranici ispisane sve komponente OJS prijevoda. Prevoditelj ima mogućnost urediti svaku od njih. Pun prijevod trebao bi sadržavati potpune prijevode svih komponenti.</message>
+
+	<message key="plugins.generic.translator.localeName">Naziv prijevoda sustava</message>
+	<message key="plugins.generic.translator.localeKey">Fraza</message>
+	<message key="plugins.generic.translator.localeKeyValue">Vrijednost</message>
+	<message key="plugins.generic.translator.translate">Prevedi</message>
+	<message key="plugins.generic.translator.availableLocales">Raspoloživi prijevodi</message>
+	<message key="plugins.generic.translator.check">Provjeri</message>
+
+	<message key="plugins.generic.translator.errors">Pogreške prijevoda</message>
+
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.title">Nedostaju fraze</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.title">Suvišne fraze</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.title">Neusklađena duljina fraza</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.title">Različit popis parametara</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.title">Nedostaju datoteke prijevoda</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.title">Nedostaju obrasci e-pošte</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.title">Suvišni obrasci e-pošte</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.title">Različit popis parametara u obrascima e-pošte</message>
+
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.message">Fraza "{$key}" nedostaje u  "{$filename}".  Za referencu je priložena engleska verzija fraze.</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.message">Fraza "{$key}" se više ne koristi i može se ukloniti iz "{$filename}".</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.message"><![CDATA[Prijevod fraze "{$key}" u "{$filename}" je značajno različite duljine od referentne:<ul>
+		<li>{$value} ({$locale})</li>
+		<li>{$reference} ({$referenceLocale})</li>
+	</ul>]]></message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.message">Prijevod fraze "{$key}" u "{$filename}" razlikuje se od onog u referentnm prijevodu po korištenju parametara. Molimo provjerite sadrži li sve relevantne parametre. Popis parametara koji se ne podudaraju:</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.message">Datoteka prijevoda "{$filename}" ne postoji ili nije čitljiva.</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.message">Obrazac poruke e-pošte "{$key}" ne postoji u prijevodu.</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.message">Obrazac poruke e-pošte "{$key}" se više ne koristi i može se ukloniti.</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.message">Obrazac poruke e-pošte "{$key}" razlikuje se od onog u referentnom prijevodu po korištenju parametara. Molimo provjerite sadrži li sve relevantne parametre. Popis parametara koji se ne podudaraju:</message>
+
+	<message key="plugins.generic.translator.locale">{$locale} prijevod sustava</message>
+	<message key="plugins.generic.translator.localeFiles">Datoteke prijevoda</message>
+	<message key="plugins.generic.translator.miscFiles">Ostale datoteke</message>
+	<message key="plugins.generic.translator.emails">Obrasci e-pošte</message>
+	<message key="plugins.generic.translator.file.filename">Naziv datoteke</message>
+	<message key="plugins.generic.translator.file.edit">Uređivanje {$filename}</message>
+	<message key="plugins.generic.translator.email.edit">Uređivanje {$emailKey}</message>
+	<message key="plugins.generic.translator.file.reference">Referentna verzija</message>
+	<message key="plugins.generic.translator.file.translation">Prijevod</message>
+	<message key="plugins.generic.translator.email.reference">Referentna verzija</message>
+	<message key="plugins.generic.translator.email.translation">Prijevod</message>
+	<message key="plugins.generic.translator.file.reset">Poništi</message>
+	<message key="plugins.generic.translator.file.resetToReference">Poništi i postavi tekst referentne verzije</message>
+	<message key="plugins.generic.translator.email.reset">Poništi</message>
+	<message key="plugins.generic.translator.email.resetToReference">Poništi i postavi tekst referentne verzije</message>
+	<message key="plugins.generic.translator.file.resetConfirm">Jeste li sigurni da želite poništiti sadržaj datoteke?</message>
+	<message key="plugins.generic.translator.email.resetConfirm">Jeste li sigurni da želite poništiti sadržaj obrazaca e-pošte?</message>
+	<message key="plugins.generic.translator.file.doesNotExistNote">* Ova datoteka još nije prevedena.</message>
+	<message key="plugins.generic.translator.file.confirmCreate">Datoteka "{$filename}" će biti kreirana koristeći englesku verziju; potom ćete trebati prevesti sve čestice u datoteci. Želite li nastaviti?</message>
+	<message key="plugins.generic.translator.email.description">U narednim poljima, prevedite naslov, tijelo i opis obrazaca e-pošte. Opis služi samo kao pomoć uredniku.</message>
+	<message key="plugins.generic.translator.confirmDelete">Jeste li sigurni da želite obrisati ovu česticu? Ova se akcija ne može opozvati.</message>
+	<message key="plugins.generic.translator.deleteKey">Izbriši ovu frazu</message>
+	<message key="plugins.generic.translator.deleteEmail">Izbriši ovaj obrazac e-pošte</message>
+	<message key="plugins.generic.translator.saveBeforeContinuing">Snimite promjene koje ste napravili na ovoj stranici prije nego nastavite, jer će u suprotnom one biti izgubljene. Želite li nastaviti? Ako da, sve promjene koje nisu snimljene bit će izgubljene.</message>
+</locale>

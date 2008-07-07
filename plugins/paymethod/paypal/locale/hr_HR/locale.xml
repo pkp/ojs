@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2006-2008 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the hr_HR (hrvatski) locale.
+  *
+ -->
+ 
+<locale name="hr_HR" full_name="Hrvatski">
+	<message key="plugins.paymethod.paypal.displayName">Uplata naknada putem PayPal-a</message>
+
+	<!-- PayPal Settings Form -->
+	<message key="plugins.paymethod.paypal.settings.paypalenable">Omogući PayPal</message>
+	<message key="plugins.paymethod.paypal.settings.paypalurl">IPN URL</message>
+	<message key="plugins.paymethod.paypal.settings.paypalurl.description"><![CDATA[Ovo je URL PayPal-ove <I> Instant Payment Notification </I>(IPN) usluge. Za testiranje, koristite <u>https://www.sandbox.paypal.com/cgi-bin/webscr</u>; za sustave u upotrebi koristite <u>https://www.paypal.com/cgi-bin/webscr</u>.]]></message>
+	<message key="plugins.paymethod.paypal.settings.selleraccount">Prodavačev račun</message>
+	<message key="plugins.paymethod.paypal.settings.selleraccount.description"><![CDATA[Ovo je korisničko ime PayPal prodavačevog računa koji će se koristiti za uplate, obično adresa e-pošte. Provjerite da li ste aktivirali <I> Instant Payment Notification </I> (IPN) u profilu vašeg prodavačevog računa.]]></message>
+	<message key="plugins.paymethod.paypal.settings.curlNotInstalled">Upozorenje: CURL podrška za PHP nije instalirana. Sustav potpore PayPal uplatama zahtjeva CURL biblioteku i neće funkcionirati dok ova nije instalirana.</message>
+	<message key="plugins.paymethod.paypal.settings">PayPal postavke</message>
+
+	<!-- PayPal -->
+	<message key="plugins.paymethod.paypal">Uplata naknada putem PayPal-a</message>
+	<message key="plugins.paymethod.paypal.description"><![CDATA[PayPal omogućuje korisnicima da vrše uplate svim poznatijim kreditnim karticama, bez obzira jesu li članovi PayPal servisa. Administrator pretplate će trebati kreirati <a href="http://www.paypal.com" target="_new">PayPal Business Account</a>.]]></message>
+	<message key="plugins.paymethod.paypal.warning">Odaberite "Nastavi" kako biste bili preusmjereni na stranice PayPal servisa, gdje možete izvršiti uplatu kreditnim karticama (za što se ne trebate učlaniti u PayPal).  Po uplati naknade, slijedite "Return to Merchant" opciju kako biste se vratili na ove stranice.</message>
+	<message key="plugins.paymethod.paypal.purchase.title">Naziv</message>
+	<message key="plugins.paymethod.paypal.purchase.fee">Iznos</message>
+	<message key="plugins.paymethod.paypal.purchase.description">Opis</message>
+	<message key="plugins.paymethod.paypal.purchase.cancelled">Vaša je kupovina opozvana.</message>
+	<message key="plugins.paymethod.paypal.purchase.cancelled.title">Uplata opozvana</message>
+</locale>

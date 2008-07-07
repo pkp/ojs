@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for this citation plugin in hr_HR.
+  *
+  * $Id$
+  -->
+ 
+<locale name="hr_HR" full_name="Hrvatski">
+	<message key="plugins.citationFormats.endNote.displayName">Dodatak za EndNote bibliografski standard</message>
+	<message key="plugins.citationFormats.endNote.citationFormatName">EndNote - EndNote format (Macintosh &amp; Windows)</message>
+	<message key="plugins.citationFormats.endNote.description">Ovaj dodatak implementira EndNote bibliografski standard.</message>
+</locale>

@@ -13,16 +13,16 @@
   * Marija Matesic(mmatesi1@ffzg.hr), Tomislav Biscan (info@seofruits.com.hr) Exp $
   -->
  
-<locale name="hr_HR" full_name="hrvatski">
-	<message key="plugins.generic.counter.description"><![CDATA[Brojač je dodatak koji omogućava bilježenje i izvještavanje o aktivnostima na stranicama u skladu s <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a> inicijativom.]]></message>
-	<message key="plugins.generic.counter">Statistike brojača</message>
+<locale name="hr_HR" full_name="Hrvatski">
+	<message key="plugins.generic.counter.description"><![CDATA[COUNTER je dodatak koji omogućava bilježenje aktivnosti na stranicama časopisa i izvještavanje o njima u skladu s <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a> inicijativom.]]></message>
+	<message key="plugins.generic.counter">COUNTER statistike</message>
 
-	<message key="plugins.generic.counter.clearLog">Izbriši zapis</message>
-	<message key="plugins.generic.counter.confirmClear">Želite li sigurno izbrisati ovaj zapis? Ovaj postupak se ne može opozvati.</message>
-	<message key="plugins.generic.counter.browseLog">Pregledaj zapis</message>
-	<message key="plugins.generic.counter.browseLog.logBrowser">Preglednik zapisa</message>
+	<message key="plugins.generic.counter.clearLog">Izbriši evidenciju</message>
+	<message key="plugins.generic.counter.confirmClear">Želite li sigurno izbrisati evidenciju? Ovaj postupak se ne može opozvati.</message>
+	<message key="plugins.generic.counter.browseLog">Pregledaj evidenciju</message>
+	<message key="plugins.generic.counter.browseLog.logBrowser">Preglednik evidencije</message>
 
-	<message key="plugins.generic.counter.entry.timestamp">Vremenska oznaka</message>
+	<message key="plugins.generic.counter.entry.timestamp">Vrijeme</message>
 	<message key="plugins.generic.counter.entry.site">Stranica</message>
 	<message key="plugins.generic.counter.entry.journal">Časopis</message>
 	<message key="plugins.generic.counter.entry.user">Korisnik</message>
@@ -32,9 +32,9 @@
 	<message key="plugins.generic.counter.entry.type.search">Pretraživanje</message>
 	<message key="plugins.generic.counter.entry.value">Vrijednost</message>
 
-	<message key="plugins.generic.counter.1a.title">Izvješće časopisa 1 (R2): Cijeli tekst članka zatražen po mjesecu i časopisu</message>
+	<message key="plugins.generic.counter.1a.title">Izvješće časopisa 1 (R2): Broj zahtjeva za punim tekstom članka po mjesecu i časopisu</message>
 	<message key="plugins.generic.counter.1a.title1">Izvješće časopisa 1 (R2)</message>
-	<message key="plugins.generic.counter.1a.title2">Broj uspješno pronađenih članaka s cijelim tekstom zatraženih po mjesecu i časopisu (Godina: {$year})</message>
+	<message key="plugins.generic.counter.1a.title2">Broj uspješno ispunjenih zahtjeva za punim tekstom članka po mjesecu i časopisu (Godina: {$year})</message>
 	<message key="plugins.generic.counter.1a.dateRun">Datum izvršavanja:</message>
 	<message key="plugins.generic.counter.1a.publisher">Nakladnik</message>
 	<message key="plugins.generic.counter.1a.platform">Platforma</message>

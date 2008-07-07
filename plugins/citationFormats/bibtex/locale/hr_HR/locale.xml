@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for this citation plugin in hr_HR.
+  *
+  * $Id$
+  -->
+ 
+<locale name="hr_HR" full_name="Hrvatski">
+	<message key="plugins.citationFormats.bibtex.displayName">Dodatak za BibTeX bibliografski standard</message>
+	<message key="plugins.citationFormats.bibtex.citationFormatName">BibTeX</message>
+	<message key="plugins.citationFormats.bibtex.description">Ovaj dodatak implementira BibTeX bibliografski standard.</message>
+</locale>

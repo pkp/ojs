@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
-
-<!--
+<!-- 
   * locale.xml
   *
   * Copyright (c) 2003-2008 John Willinsky
@@ -11,33 +10,32 @@
   *
   * $Id: locale.xml,v 1.3 2007/04/22 20:26:17 Teo Matkovic (teo.matkovic@pravo.hr), 
   * Marija Matesic(mmatesi1@ffzg.hr), Tomislav Biscan (info@seofruits.com.hr) Exp $
-  -->
- 
-<locale name="hr_HR" full_name="hrvatski">
+   -->
+<locale name="hr_HR"
+        full_name="Hrvatski">
 	<message key="plugins.generic.thesis.displayName">Sažeci radnji</message>
 	<message key="plugins.generic.thesis.description">Objavljivanje i prikupljanje sažetaka diplomskih, magistarskih, doktorskih i drugih radnji.</message>
 
-	<!-- Thesis Abstract Management -->
-	<message key="plugins.generic.thesis.manager.settings">Postavke</message>
+	<!--  Thesis Abstract Management  --><message key="plugins.generic.thesis.manager.settings">Postavke</message>
 	<message key="plugins.generic.thesis.manager.theses">Sažeci radnji</message>
 	<message key="plugins.generic.thesis.manager.status">Status</message>
-	<message key="plugins.generic.thesis.manager.status.inactive">Neaktivan</message>
-	<message key="plugins.generic.thesis.manager.status.active">Aktivan</message>
+	<message key="plugins.generic.thesis.manager.status.inactive">Neaktivna</message>
+	<message key="plugins.generic.thesis.manager.status.active">Aktivna</message>
 	<message key="plugins.generic.thesis.manager.degree">Akademski stupanj</message>
 	<message key="plugins.generic.thesis.manager.degree.masters">Magisterij</message>
 	<message key="plugins.generic.thesis.manager.degree.doctorate">Doktorat</message>
 	<message key="plugins.generic.thesis.manager.dateApproved">Datum odobrenja</message>
 	<message key="plugins.generic.thesis.manager.studentName">Ime studenta</message>
-	<message key="plugins.generic.thesis.manager.title">Naslov radnje</message>
+	<message key="plugins.generic.thesis.manager.title">Naslov</message>
 	<message key="plugins.generic.thesis.manager.confirmDelete">Želite li sigurno trajno izbrisati sažetak ove radnje?</message>
-	<message key="plugins.generic.thesis.manager.noneCreated">Nema kreiranih sažetaka radnji.</message>
+	<message key="plugins.generic.thesis.manager.noneCreated">Nema sažetaka radnji.</message>
 	<message key="plugins.generic.thesis.manager.create">Kreiraj sažetak za novu radnju</message>
 	<message key="plugins.generic.thesis.manager.createTitle">Kreiraj</message>
 	<message key="plugins.generic.thesis.manager.edit">Uredi sažetak radnje</message>
 	<message key="plugins.generic.thesis.manager.editTitle">Uredi</message>
 	<message key="plugins.generic.thesis.manager.form.status">Status</message>
 	<message key="plugins.generic.thesis.manager.form.statusRequired">Sažetak radnje je obavezan.</message>
-	<message key="plugins.generic.thesis.manager.form.statusValid">Odaberite ispravan status.</message>
+	<message key="plugins.generic.thesis.manager.form.statusValid">Odaberite valjani status.</message>
 	<message key="plugins.generic.thesis.manager.form.degree">Akademski stupanj</message>
 	<message key="plugins.generic.thesis.manager.form.degreeRequired">Stupanj radnje je obavezan.</message>
 	<message key="plugins.generic.thesis.manager.form.degreeValid">Odaberite ispravan stupanj radnje.</message>
@@ -52,9 +50,9 @@
 	<message key="plugins.generic.thesis.manager.form.titleRequired">Naslov radnje je obavezan.</message>
 	<message key="plugins.generic.thesis.manager.form.abstract">Sažetak</message>
 	<message key="plugins.generic.thesis.manager.form.abstractRequired">Sažetak radnje je obavezan.</message>
-	<message key="plugins.generic.thesis.manager.form.abstractInstructions"><![CDATA[Unesite prazne redove kako biste odvojili paragrafe. Postavite tekst između &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt; i &lt;u&gt;&lt;/u&gt; tagova za masno otisnut tekst, kurzivno otisnut tekst ili podcrtan tekst (npr. ova &lt;i&gt;riječ&lt;/i&gt; bit će kurzivno.)]]></message>
+	<message key="plugins.generic.thesis.manager.form.abstractInstructions"><![CDATA[Unesite prazne redove za razdvajanje odlomaka. Postavite tekst između &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt; i &lt;u&gt;&lt;/u&gt; oznaka za masno otisnut, kurzivni ili podcrtan tekst (npr. ova &lt;i&gt;riječ&lt;/i&gt; prikazat će se u kurzivu.)]]></message>
 	<message key="plugins.generic.thesis.manager.form.url">URL</message>
-	<message key="plugins.generic.thesis.manager.form.urlInstructions">ako su radnje objavljene online. Napišite http://, ftp://, itd. na početku (npr. http://www.sfu.ca/path/to/thesis.pdf).</message>
+	<message key="plugins.generic.thesis.manager.form.urlInstructions">ako je radnja objavljena na mreži, unesite http://, ftp://, itd. na početku (npr. http://www.sfu.ca/path/to/thesis.pdf).</message>
 	<message key="plugins.generic.thesis.manager.form.studentFirstName">Ime studenta</message>
 	<message key="plugins.generic.thesis.manager.form.studentFirstNameRequired">Ime studenta je obavezno.</message>
 	<message key="plugins.generic.thesis.manager.form.studentLastName">Prezime studenta</message>
@@ -71,31 +69,29 @@
 	<message key="plugins.generic.thesis.manager.form.supervisorEmailValid">Ispravna adresa e-pošte je obavezna.</message>
 	<message key="plugins.generic.thesis.manager.form.saveAndCreateAnother">Spremi i kreiraj novog</message>
 
-	<!-- Thesis Abstract Settings Management -->
-	<message key="plugins.generic.thesis.settings.description"><![CDATA[<p>Ovaj dodatak omogućuje studentima preko sustava prijave sažetke svojih diplomskih i drugih radnji koristeći obrazac prijave priloga.</p><p>Po predaji prijave mentor e-poštom zaprima obavijest o sažetku radnje. Mentor potom treba potvrditi vjerodostojnost podataka o prijavljenoj radnji slanjem e-pošte kontakt-osobi za sažetke radnji (koja treba imati ulogu "urednik časopisa"). Po zaprimanju potvrde od mentora kontakt-osoba može aktivirati prijavu sažetka radnje, mijenjajući njegov status iz "neaktivan" u "aktivan". Time sažetak radnje postaje dostupan javnosti odnosno korisnicima sustava.]]></message>
+	<!--  Thesis Abstract Settings Management  --><message key="plugins.generic.thesis.settings.description"><![CDATA[<p>Ovaj dodatak omogućuje studentima online prijavu sažetaka svojih diplomskih i drugih radnji  pomoću OJS sustava.</p><p> Studenti vrše prijavu online pomoću obrazasca prijave priloga. Po predaji prijave mentor e-poštom zaprima obavijest o sažetku radnje. Mentor potom treba potvrditi vjerodostojnost podataka o prijavljenoj radnji slanjem e-pošte kontakt-osobi za sažetke radnji (koja treba imati ulogu "urednik časopisa"). Po zaprimanju potvrde od mentora kontakt-osoba može aktivirati prijavu sažetka radnje, mijenjajući njezin status iz "neaktivan" u "aktivan". Time sažetak radnje postaje dostupan javnosti odnosno korisnicima sustava.]]></message>
 	<message key="plugins.generic.thesis.settings.thesisContact">Kontakt-osoba za sažetak radnje</message>
 	<message key="plugins.generic.thesis.settings.thesisIntroduction">Uvod</message>
-	<message key="plugins.generic.thesis.settings.thesisIntroductionDescription">Uvod koji će se pojaviti na vrhu stranice "sažeci radnje".</message>
+	<message key="plugins.generic.thesis.settings.thesisIntroductionDescription">Uvod koji će se pojaviti na vrhu stranice "sažeci radnji".</message>
 	<message key="plugins.generic.thesis.settings.thesisNameRequired">Ime kontakt-osobe za sažetak radnje mora biti navedeno.</message>
 	<message key="plugins.generic.thesis.settings.thesisEmailRequired">E-pošta kontakt-osobe za sažetak radnje mora biti navedeno.</message>
 
-	<!-- Thesis Abstracts -->
-	<message key="plugins.generic.thesis.theses">Sažeci radnji</message>
+	<!--  Thesis Abstracts  --><message key="plugins.generic.thesis.theses">Sažeci radnji</message>
 	<message key="plugins.generic.thesis.headerLink"><![CDATA[Sažeci&nbsp;radnji]]></message>
 	<message key="plugins.generic.thesis.submit">Predaj sažetak radnje</message>
 	<message key="plugins.generic.thesis.submitLink">Predaj sažetak radnje</message>
 	<message key="plugins.generic.thesis.submitButton">Predaj</message>
 	<message key="plugins.generic.thesis.view">Sažetak</message>
 	<message key="plugins.generic.thesis.viewTitle">Sažetak</message>
-	<message key="plugins.generic.thesis.noneExist">Nema objavljenih sažetaka radnji.</message>
+	<message key="plugins.generic.thesis.noneExist">Nema sažetaka radnji.</message>
 	<message key="plugins.generic.thesis.abstract">Sažetak</message>
-	<message key="plugins.generic.thesis.studentFullName">{$lastName}, {$firstName} {$middleName}</message>
-	<message key="plugins.generic.thesis.form.introduction">Predajom prijave mentoru će biti poslana e-pošta. Mentor će potom provjeriti vjerodostojnost podataka u prijavi. Kada časopis zaprimi potvrdu mentora, sažetak radnje bit će objavljen na sustavu.</message>
+	<message key="plugins.generic.thesis.studentFullName">{$firstName} {$middleName}{$space}{$lastName}</message>
+	<message key="plugins.generic.thesis.form.introduction">Predajom prijave mentoru će biti poslana obavijest e-poštom. Mentor će potom provjeriti vjerodostojnost podataka u prijavi. Kada časopis zaprimi potvrdu mentora, sažetak radnje bit će objavljen na sustavu.</message>
 	<message key="plugins.generic.thesis.form.status">Status</message>
 	<message key="plugins.generic.thesis.form.statusValid">Odaberite ispravan status.</message>
 	<message key="plugins.generic.thesis.form.degree">Akademski stupanj</message>
 	<message key="plugins.generic.thesis.form.degreeRequired">Stupanj radnje je obavezan.</message>
-	<message key="plugins.generic.thesis.form.degreeValid">Odaberite ispravan stupanj.</message>
+	<message key="plugins.generic.thesis.form.degreeValid">Odaberite valjan stupanj.</message>
 	<message key="plugins.generic.thesis.form.department">Odsjek</message>
 	<message key="plugins.generic.thesis.form.departmentRequired">Odsjek je obavezan.</message>
 	<message key="plugins.generic.thesis.form.university">Sveučilište</message>
@@ -107,9 +103,9 @@
 	<message key="plugins.generic.thesis.form.titleRequired">Naslov radnje je obavezan.</message>
 	<message key="plugins.generic.thesis.form.abstract">Sažetak</message>
 	<message key="plugins.generic.thesis.form.abstractRequired">Sažetak radnje je obavezan.</message>
-	<message key="plugins.generic.thesis.form.abstractInstructions"><![CDATA[Unesite prazne redove kako biste odvojili paragrafe. Smjestite tekst između &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt; i &lt;u&gt;&lt;/u&gt; tagova za masno otisnut tekst, kurzivno otisnut tekst ili podcrtan tekst (npr. ova &lt;i&gt;riječ&lt;/i&gt; će biti kurzivno.]]></message>
+	<message key="plugins.generic.thesis.form.abstractInstructions"><![CDATA[Unesite prazne redove za razdvajanje odlomaka. Postavite tekst između &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt; i &lt;u&gt;&lt;/u&gt; oznaka za masno otisnut, kurzivni ili podcrtan tekst (npr. ova &lt;i&gt;riječ&lt;/i&gt; prikazat će se u kurzivu.)]]></message>
 	<message key="plugins.generic.thesis.form.url">URL</message>
-	<message key="plugins.generic.thesis.form.urlInstructions">ako je radnja objavljena online. Napišite http://, ftp://, itd. na početku (npr. http://www.sfu.ca/path/to/thesis.pdf).</message>
+	<message key="plugins.generic.thesis.form.urlInstructions">ako je radnja objavljena na mreži, unesite http://, ftp://, itd. na početku (npr. http://www.sfu.ca/path/to/thesis.pdf).</message>
 	<message key="plugins.generic.thesis.form.studentFirstName">Ime studenta</message>
 	<message key="plugins.generic.thesis.form.studentFirstNameRequired">Ime studenta je obavezno.</message>
 	<message key="plugins.generic.thesis.form.studentLastName">Prezime studenta</message>
@@ -124,6 +120,86 @@
 	<message key="plugins.generic.thesis.form.supervisorMiddleName">Srednje ime mentora</message>
 	<message key="plugins.generic.thesis.form.supervisorEmail">E-pošta mentora</message>
 	<message key="plugins.generic.thesis.form.supervisorEmailValid">Ispravna adresa e-pošte je obavezna.</message>
-	<message key="plugins.generic.thesis.form.saveAndCreateAnother">Spremi i kreiraj novog</message>
+	
 
+	<message key="plugins.generic.thesis.manager.keyword">Ključne riječi</message>
+	<message key="plugins.generic.thesis.manager.studentFirstName">Ime</message>
+	<message key="plugins.generic.thesis.manager.studentLastName">Prezime</message>
+	<message key="plugins.generic.thesis.manager.studentEmail">Adresa e-pošte</message>
+	<message key="plugins.generic.thesis.manager.department">Odsjek</message>
+	<message key="plugins.generic.thesis.manager.university">Sveučilište</message>
+	<message key="plugins.generic.thesis.manager.abstract">Sažetak</message>
+	<message key="plugins.generic.thesis.manager.noResults">Nema rezultata</message>
+	<message key="plugins.generic.thesis.manager.form.degreeName">Naziv akademskog stupnja</message>
+	<message key="plugins.generic.thesis.manager.form.degreeNameRequired">Potrebno je unijeti naziv akademskog stupnja radnje</message>
+	<message key="plugins.generic.thesis.manager.form.degreeNameInstructions">Naziv akademskog stupnja radnje (npr. diplomski rad, magisterij struke, doktorat znanosti i sl.).</message>
+	<message key="plugins.generic.thesis.manager.form.comment">Komentari</message>
+	<message key="plugins.generic.thesis.manager.form.author">Autor i mentorstvo</message>
+	<message key="plugins.generic.thesis.manager.form.studentEmailPublish">Objavi adresu e-pošte studenta</message>
+	<message key="plugins.generic.thesis.manager.form.studentEmailPublishInstructions">Ukoliko je ova opcija označena, studentova adresa e-pošte bit će navedena uz sažetak radnje</message>
+	<message key="plugins.generic.thesis.manager.form.studentBio">Biografska bilješka o studentu</message>
+	<message key="plugins.generic.thesis.manager.form.studentBioInstructions"><![CDATA[Unesite prazne redove za razdvajanje odlomaka. Postavite tekst između &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt; i &lt;u&gt;&lt;/u&gt; oznaka za masno otisnut, kurzivni ili podcrtan tekst (npr. ova &lt;i&gt;riječ&lt;/i&gt; prikazat će se u kurzivu.)]]></message>
+	<message key="plugins.generic.thesis.manager.form.indexing">Indeksiranje</message>
+	<message key="plugins.generic.thesis.manager.form.indexingDescription">Unesite pojmove koji adekvatno opisuju sadržaj radnje prema zadanim odrednicama. Odijelite pojmove točka-zarezom (pojam1; pojam2; pojam3).</message>
+	<message key="plugins.generic.thesis.manager.form.discipline">Akademska disciplina i poddiscipline</message>
+	<message key="plugins.generic.thesis.manager.form.subjectClass">Predmetna klasifikacija</message>
+	<message key="plugins.generic.thesis.manager.form.keyword">Ključne riječi</message>
+	<message key="plugins.generic.thesis.manager.form.coverageGeo">Zemljopisni obuhvat</message>
+	<message key="plugins.generic.thesis.manager.form.coverageChron">Kronološki ili povijesni opseg</message>
+	<message key="plugins.generic.thesis.manager.form.coverageSample">Karakteristike korištenog uzorka</message>
+	<message key="plugins.generic.thesis.manager.form.method">Tip, metoda ili pristup</message>
+	<message key="plugins.generic.thesis.manager.form.language">Jezik</message>
+	<message key="plugins.generic.thesis.manager.form.languageInstructions"><![CDATA[Hrvatski=hr; Engleski=en; Francuski=fr; Španjolski=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Dodatni kôdovi</a>.]]></message>
+	<message key="plugins.generic.thesis.manager.form.urlPrefixIncluded">Molimo unesite punu URL adresu, uključujući http:// ili ftp:// na početku.</message>
+	<message key="plugins.generic.thesis.settings.submissions">Prijave radnji</message>
+	<message key="plugins.generic.thesis.settings.uploadCode">Koristite sljedeći kôd za prijavu radnje od strane djelatnika odsjeka:</message>
+	<message key="plugins.generic.thesis.settings.uploadCodeDescription">Kôd za slanje prijave (niz znakova) može se dodijeliti odsjecima koji žele pohraniti radnje u sustav u ime svojih studenata. Kad je kôd za slanje prijave unesen uz prijavu, neće biti poslana automatska poruka e-pošte kojom se od mentora traži provjera prijavljene radnje.</message>
+	<message key="plugins.generic.thesis.settings.uploadCodeRequired">Molimo unesite kôd za prijavu radnje.</message>
+	<message key="plugins.generic.thesis.settings.publishing">Objavljivanje</message>
+	<message key="plugins.generic.thesis.settings.order">Poredak objavljivanja</message>
+	<message key="plugins.generic.thesis.settings.order.submissionDateAsc">Datum prijave (od starijih ka novima)</message>
+	<message key="plugins.generic.thesis.settings.order.submissionDateDesc">Datum prijave (od novijih ka starijim)</message>
+	<message key="plugins.generic.thesis.settings.order.approvalDateAsc">Datum prihvaćanja (od starijih ka novima)</message>
+	<message key="plugins.generic.thesis.settings.order.approvalDateDesc">Datum prihvaćanja (od novijih ka starijim)</message>
+	<message key="plugins.generic.thesis.settings.order.lastNameAsc">Prezime studenta (od A do Ž)</message>
+	<message key="plugins.generic.thesis.settings.order.lastNameDesc">Prezime studenta (od Ž do A)</message>
+	<message key="plugins.generic.thesis.settings.order.titleAsc">Naziv (od A do Ž)</message>
+	<message key="plugins.generic.thesis.settings.order.titleDesc">Naziv (od Ž do A)</message>
+	<message key="plugins.generic.thesis.settings.thesisOrderValid">Molim odaberite valjani kriterij poretka objavljenih radnji.</message>
+	<message key="plugins.generic.thesis.searchLink">Pretraži sažetke radnji</message>
+	<message key="plugins.generic.thesis.noResults">Nema rezultata</message>
+	<message key="plugins.generic.thesis.title">Naslov</message>
+	<message key="plugins.generic.thesis.keyword">Ključna riječ</message>
+	<message key="plugins.generic.thesis.studentFirstName">Ime</message>
+	<message key="plugins.generic.thesis.studentLastName">Prezime</message>
+	<message key="plugins.generic.thesis.department">Odsjek</message>
+	<message key="plugins.generic.thesis.university">Sveučilište</message>
+	<message key="plugins.generic.thesis.fullText">Puni tekst (na vanjskoj stranici)</message>
+	<message key="plugins.generic.thesis.studentFullNameLast">{$lastName}, {$firstName}{$space}{$middleName}</message>
+	<message key="plugins.generic.thesis.supervisorFullNameLast">{$lastName}, {$firstName}{$space}{$middleName}</message>
+	<message key="plugins.generic.thesis.supervisorFullName">{$firstName} {$middleName}{$space}{$lastName}</message>
+	<message key="plugins.generic.thesis.form.degreeName">Naziv akademskog stupnja</message>
+	<message key="plugins.generic.thesis.form.degreeNameRequired">Potrebno je unijeti naziv akademskog stupnja radnje</message>
+	<message key="plugins.generic.thesis.form.degreeNameInstructions">Naziv akademskog stupnja radnje (npr. diplomski rad, magisterij struke, doktorat znanosti i sl.).</message>
+	<message key="plugins.generic.thesis.form.comment">Komentari</message>
+	<message key="plugins.generic.thesis.form.commentInstructions">Molimo unesite sve dodatne napomene koje bi mogle biti relevantne za vašu prijavu.</message>
+	<message key="plugins.generic.thesis.form.author">Autor i mentorstvo</message>
+	<message key="plugins.generic.thesis.form.studentBio">Biografska bilješka o studentu</message>
+	<message key="plugins.generic.thesis.form.studentBioInstructions"><![CDATA[Unesite prazne redove za razdvajanje odlomaka. Postavite tekst između &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt; i &lt;u&gt;&lt;/u&gt; oznaka za masno otisnut, kurzivni ili podcrtan tekst (npr. ova &lt;i&gt;riječ&lt;/i&gt; prikazat će se u kurzivu.)]]></message>
+	<message key="plugins.generic.thesis.form.indexing">Indeksiranje</message>
+	<message key="plugins.generic.thesis.form.indexingDescription">Unesite pojmove koji adekvatno opisuju sadržaj radnje prema zadanim odrednicama. Odijelite pojmove točka-zarezom (pojam1; pojam2; pojam3).</message>
+	<message key="plugins.generic.thesis.form.discipline">Akademska disciplina i poddiscipline</message>
+	<message key="plugins.generic.thesis.form.subjectClass">Predmetna klasifikacija</message>
+	<message key="plugins.generic.thesis.form.keyword">Ključne riječi</message>
+	<message key="plugins.generic.thesis.form.coverageGeo">Zemljopisni obuhvat</message>
+	<message key="plugins.generic.thesis.form.coverageChron">Kronološki ili povijesni opseg</message>
+	<message key="plugins.generic.thesis.form.coverageSample">Karakteristike korištenog uzorka</message>
+	<message key="plugins.generic.thesis.form.method">Tip, metoda ili pristup</message>
+	<message key="plugins.generic.thesis.form.language">Jezik</message>
+	<message key="plugins.generic.thesis.form.languageInstructions"><![CDATA[Hrvatski=hr; Engleski=en; Francuski=fr; Španjolski=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Dodatni kôdovi</a>.]]></message>
+	<message key="plugins.generic.thesis.form.urlPrefixIncluded">Molimo unesite punu URL adresu, uključujući http:// ili ftp:// na početku.</message>
+	<message key="plugins.generic.thesis.form.uploadCode">Kôd za prijavu radnje</message>
+	<message key="plugins.generic.thesis.form.uploadCodeInstructions">Samo za djelatnike odsjeka.</message>
+	<message key="plugins.generic.thesis.form.studentEmailPublish">Objavi adresu e-pošte studenta</message>
+	<message key="plugins.generic.thesis.form.studentEmailPublishInstructions">Ukoliko je ova opcija označena, studentova adresa e-pošte bit će navedena uz sažetak radnje</message>
 </locale>

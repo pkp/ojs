@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the hr_HR (hrvatski) locale.
+  *
+  -->
+ 
+<locale name="hr_HR" full_name="Hrvatski">
+	<message key="plugins.generic.cmsrss.displayName">CMS RSS dodatak</message>
+	<message key="plugins.generic.cmsrss.description">Ovaj dodatak omogućuje dodavanje RSS agregacije CMS stranicama</message>
+
+	<message key="plugins.generic.cmsrss.requirement.cms"><![CDATA[<strong>Za korištenje ovog dodatka potrebno je instalirati i omogućiti CMS dodatak.</strong>]]></message>	
+
+	<message key="manager.plugins.cmsrss.edit">Uredi/dodaj RSS feed</message>
+	<message key="plugins.generic.cmsrss.pagename">Naziv stranice</message>
+	<message key="plugins.generic.cmsrss.url">URL Feed-a</message>	
+	<message key="plugins.generic.cmsrss.months">Najstarije prikazane čestice (broj mjeseci). 0 za prikaz svih dostupnih čestica.</message>		
+	<message key="plugins.generic.cmsrss.aggregate">Kombiniraj feed-ove za svaku stranicu i sortiraj ih prema datumu</message>			
+	<message key="plugins.generic.cmsrss.form.introduction"><![CDATA[<p>Ovaj CMS RSS dodatak omogućuje glavnim urednicima da dodaju RSS feed sadržaje inače statičkim stranicama CMS dodatka.</p><p>Naziv stranice mora odgovarati naslovu CMS stranice (koji je naveden u sadržaju). Morate odijeliti imena naslova sa ":".  Na primjer: naslov1:naslov2.</p><p>Sustav ne validira URL adrese feed-ova, tako da je potrebno provjeriti da li se ovdje korišteni URL-ovi odnose na ispravne RSS URL adrese.</p>]]></message>
+	<message key="plugins.generic.cmsrss.requiredFields">Svaki redak zahtijeva naziv stranice i URL pri kojem se feed nalazi</message>
+	<message key="plugins.generic.cmsrss.sorting">Retci su sortirani prema nazivu stranice</message>	
+	
+	<message key="plugins.generic.cmsrss.addUrl">Dodaj još jedan Feed</message>
+	<message key="plugins.generic.cmsrss.deleteUrl">Ukloni Feed</message>	
+	
+	<!-- RSS Template -->
+	<message key="plugins.generic.cmsrss.postedon">Objavljeno dana</message>
+	<message key="plugins.generic.cmsrss.permalink">Permalink</message>	
+</locale>

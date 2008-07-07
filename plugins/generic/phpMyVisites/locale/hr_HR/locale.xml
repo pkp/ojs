@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * phpMyVisites plugin localization strings for the hr_HR (hrvatski) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="hr_HR" full_name="Hrvatski">
+
+	<!-- phpMyVisites -->
+	<message key="plugins.generic.phpmv.displayName">phpMyVisites dodatak</message>
+	<message key="plugins.generic.phpmv.description"><![CDATA[Integrirajte OJS sa phpMyVisites, besplatnom aplikacijom otvorenog koda namijenjenoj analizi mrežnog prometa. Aktivacija zahtijeva prethodnu instalaciju phpMyVisites aplikacije. Za više informacija konzultirajte <a href="http://www.phpmyvisites.us/" title="phpMyVisites stranice">phpMyVisites stranice</a>.]]></message>
+
+	<!-- phpMyVisites Settings Management -->
+	<message key="plugins.generic.phpmv.manager.settings">Postavke</message>
+	<message key="plugins.generic.phpmv.manager.phpmvSettings">phpMyVisites postavke</message>
+	<message key="plugins.generic.phpmv.manager.settings.description"><![CDATA[<p>Kad je ovaj dodatak aktiviran, moguće je koristiti phpMyVisites u svrhu prikupljanja i analize mrežnog prometa ovog časopisa. Imajte na umu da ovaj dodatak zahtijeva prethodnu instalaciju phpMyVisites aplikacije. Za više informacija molimo konzultirajte <a href="http://www.phpmyvisites.us/" title="phpMyVisites stranice">phpMyVisites stranice</a>.</p>]]></message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvUrl">phpMyVisites URL</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvUrlInstructions">Puna URL adresa vaše phpMyVisites instalacije (npr. http://mojserver.net/phpmv).</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvUrlRequired">Molimo unesite valjani URL. Ne zaboravite http:// na početku.</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteId">Broj profila mrežne stranice</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdInstructions"><![CDATA[Unutar phpMyVisites, odaberite <I>Administration->Modify site</I>. Broj profila  prikazan je uz naziv profila vaše stranice.]]></message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdRequired">Molimo unesite broj profila mrežne stranice.</message>
+
+</locale>

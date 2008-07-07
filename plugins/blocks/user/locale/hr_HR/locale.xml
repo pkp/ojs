@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the hr_HR (hrvatski) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="hr_HR" full_name="Hrvatski">
+	<message key="plugins.block.user.displayName">Korisnički blok</message>
+	<message key="plugins.block.user.description">Ovaj dodatak postavlja u rubni izbornik osnovne korisničke alate (npr.  prijava u sustav, odjava, poveznicu na profil korisnički profil itd).</message>
+	<message key="plugins.block.user.loggedInAs">Prijavljeni ste kao...</message>
+	<message key="plugins.block.user.myJournals">Moji časopisi</message>
+	<message key="plugins.block.user.myProfile">Moj profil</message>
+	<message key="plugins.block.user.logout">Odjava</message>
+	<message key="plugins.block.user.signOutAsUser">Odjavite se kao ovaj korisnik</message>
+	<message key="plugins.block.user.rememberMe">Zapamti me</message>
+</locale>

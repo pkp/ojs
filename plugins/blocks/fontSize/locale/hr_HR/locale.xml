@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the hr_HR (hrvatski) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="hr_HR" full_name="Hrvatski">
+	<message key="plugins.block.fontSize.displayName">Blok za veličinu znakova</message>
+	<message key="plugins.block.fontSize.description">Ovaj dodatak omogućuje izbor veličine znakova u rubnom izborniku.</message>
+	<message key="plugins.block.fontSize.title">Veličina znakova</message>
+	<message key="plugins.block.fontSize.small">Mali</message>
+	<message key="plugins.block.fontSize.medium">Srednji</message>
+	<message key="plugins.block.fontSize.large">Veliki</message>
+</locale>

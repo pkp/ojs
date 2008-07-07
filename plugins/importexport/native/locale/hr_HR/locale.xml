@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
-
-<!--
+<!-- 
   * locale.xml
   *
   * Copyright (c) 2003-2008 John Willinsky
@@ -11,9 +10,9 @@
   *
   * $Id: locale.xml,v 1.16 Teo Matkovic (teo.matkovic@pravo.hr), 
   * Marija Matesic(mmatesi1@ffzg.hr), Tomislav Biscan (info@seofruits.com.hr) Exp $
-  -->
- 
-<locale name="hr_HR" full_name="hrvatski">
+   -->
+<locale name="hr_HR"
+        full_name="Hrvatski">
 	<message key="plugins.importexport.native.displayName">XML dodatak za članke i brojeve</message>
 	<message key="plugins.importexport.native.description">Unošenje i iznošenje članaka i brojeva.</message>
 
@@ -52,19 +51,19 @@ Prihvatljivi su sljedeći formati:
 	<message key="plugins.importexport.native.import.articles.description">Datoteka koju unosite sadrži jedan ili više članaka. Morate odabrati broj i rubriku u koju ćete unijeti članke. Ako ih ne želite unijeti sve u istu rubriku i broj, možete ih ili odvojiti u različite XML datoteke ili premjestiti u odgovarajuće brojeve i rubrike nakon unošenja.</message>
 
 	<message key="plugins.importexport.native.import">Unošenje podataka</message>
-	<message key="plugins.importexport.native.import.description">Ovaj dodatak podržava unošenje podataka bazirane na native.dtd definiciji tipa dokumenta. Podržani glavni čvorovi su: &amp;lt;article&amp;gt;, &amp;lt;articles&amp;gt;, &amp;lt;issue&amp;gt; i &amp;lt;issues&amp;gt;.</message>
+        <message key="plugins.importexport.native.import.description"><![CDATA[Ovaj dodatak podržava unos podataka baziran na native.dtd definiciji. Podržani korijenski elementi su: &lt;article&gt;, &lt;articles&gt;, &lt;issue&gt; i &lt;issues&gt;.]]></message>
 
 	<message key="plugins.importexport.native.import.error">Pogreška prilikom unošenja</message>
-	<message key="plugins.importexport.native.import.error.description">Prilikom unošenja pojavila se jedna ili više pogrešaka. Molim provjerite da li format datoteke unošenja odgovara specifikaciji. Specifični detalji pogrešaka prilikom unošenja su izlistani ispod.</message>
+	<message key="plugins.importexport.native.import.error.description">Prilikom unosa pojavila se jedna ili više grešaka. Molimo provjerite da li format unesene datoteke odgovara specifikaciji. Detalji grešaka prilikom unosa ispisani su ispod.</message>
 
-	<message key="plugins.importexport.native.cliError">POGREŠKA:</message>
+	<message key="plugins.importexport.native.cliError">GREŠKA:</message>
 	<message key="plugins.importexport.native.error.unknownUser">Navedeni korisnik "{$userName}" ne postoji.</message>
 	<message key="plugins.importexport.native.error.unknownJournal">Navedena putanja časopisa "{$journalPath}" ne postoji.</message>
-	<message key="plugins.importexport.native.export.error.couldNotWrite">Nije moguće pisati po datoteci "{$fileName}".</message>
-	<message key="plugins.importexport.native.export.error.sectionNotFound">Niti jedna rubrika ne odgovara razvrstaču "{$sectionIdentifier}".</message>
-	<message key="plugins.importexport.native.export.error.issueNotFound">Niti jedan broj ne odgovara navedenom ID-u broja "{$issueId}".</message>
-	<message key="plugins.importexport.native.export.error.articleNotFound">Niti jedan članak ne odgovara navedenom ID-u članka "{$articleId}".</message>
-	<message key="plugins.importexport.native.import.error.unsupportedRoot">Ovaj dodatak ne podržava navedeni glavni čvor "{$rootName}". Molimo provjerite jesu li datoteke ispravno formirane i pokušajte ponovno.</message>
+	<message key="plugins.importexport.native.export.error.couldNotWrite">Nije moguće pisati u datoteku "{$fileName}".</message>
+	<message key="plugins.importexport.native.export.error.sectionNotFound">Niti jedna rubrika ne odgovara oznaci "{$sectionIdentifier}".</message>
+	<message key="plugins.importexport.native.export.error.issueNotFound">Niti jedan broj ne odgovara navedenom identifikatoru broja "{$issueId}".</message>
+	<message key="plugins.importexport.native.export.error.articleNotFound">Niti jedan članak ne odgovara navedenom identifikatoru članka "{$articleId}".</message>
+	<message key="plugins.importexport.native.import.error.unsupportedRoot">Ovaj dodatak ne podržava korijenski element "{$rootName}". Molimo provjerite jesu li datoteke ispravno formirane i pokušajte ponovno.</message>
 
 	<message key="plugins.importexport.native.import.error.titleMissing">Nedostajao je naslov broja.</message>
 	<message key="plugins.importexport.native.import.error.defaultTitle">NASLOV KOJI NEDOSTAJE</message>
@@ -76,7 +75,7 @@ Prihvatljivi su sljedeći formati:
 	<message key="plugins.importexport.native.import.error.illegalUrl">Navedeni URL "{$url}" za broj "{$issueTitle}" je bio nedopušten. Uvođenja putem web prijave podržavaju samo http, https, ftp ili ftps metode.</message>
 	<message key="plugins.importexport.native.import.error.unknownSuppFileType">Naveden je nepoznati tip dopunske datoteke "{$suppFileType}".</message>
 	<message key="plugins.importexport.native.import.error.couldNotCopy">Navedeni URL "{$url}" ne može se kopirati u lokalnu datoteku.</message>
-	<message key="plugins.importexport.native.import.error.duplicatePublicId">Javni ID dodijeljen za uvođenje broja "{$issueTitle}" već koristi drugi broj, "{$otherIssueTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicId">Javni identifikator dodijeljen za uvođenje broja "{$issueTitle}" već koristi drugi broj, "{$otherIssueTitle}".</message>
 	<message key="plugins.importexport.native.import.error.sectionTitleMissing">Nedostajao je naslov rubrike za broj "{$issueTitle}". Molimo vas, pobrinite se da XML dokument odgovara adekvatnom DTD-u.</message>
 	<message key="plugins.importexport.native.import.error.sectionMismatch">Rubrika "{$sectionTitle}" broja "{$issueTitle}" pristaje postojećoj rubrici časopisa, ali navedena kratica ("{$sectionAbbrev}") pristaje drugoj rubrici.</message>
 	<message key="plugins.importexport.native.import.error.articleTitleMissing">Nedostajao je naslov članka za broj "{$issueTitle}" u rubrici "{$sectionTitle}". Molimo vas, pobrinite se da XML dokument odgovara adekvatnom DTD-u, te da je naslov isporučen za lokalitet časopisa.</message>
@@ -88,4 +87,35 @@ Prihvatljivi su sljedeći formati:
 
 	<message key="plugins.importexport.native.import.success">Uvođenje uspješno</message>
 	<message key="plugins.importexport.native.import.success.description">Uvođenje je uspješno završeno. Uspješno uvedene stavke su izlistane ispod.</message>
+	<message key="plugins.importexport.native.import.error.issueTitleLocaleUnsupported">Naslov unesenog izdanja ("{$issueTitle}") je definiran na jeziku ("{$locale}") kojeg ovaj časopis ne koristi.</message>
+	<message key="plugins.importexport.native.import.error.issueDescriptionLocaleUnsupported">Opis unesenog izdanja "{$issueTitle}" je definiran na jeziku ("{$locale}") kojeg ovaj časopis ne koristi.</message>
+	<message key="plugins.importexport.native.import.error.coverLocaleUnsupported">Naslovnica unesenog izdanja "{$issueTitle}"  je definirana na jeziku ("{$locale}") kojeg ovaj časopis ne koristi.</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleLocaleUnsupported">Naziv rubrike ("{$sectionTitle}") unesen u izdanju "{$issueTitle}" je definiran na jeziku ("{$locale}") kojeg ovaj časopis ne koristi.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevLocaleUnsupported">Kratica rubrike ("{$sectionAbbrev}") unesena u izdanju "{$issueTitle}" je definirana na jeziku ("{$locale}") kojeg ovaj časopis ne koristi.</message>
+	<message key="plugins.importexport.native.import.error.sectionIdentifyTypeLocaleUnsupported">Identifikator čestice u rubrici ("{$sectionIdentifyType}") unesen u izdanju "{$issueTitle}" je definiran na jeziku ("{$locale}") kojeg ovaj časopis ne koristi.</message>
+	<message key="plugins.importexport.native.import.error.sectionPolicyLocaleUnsupported">Smjernice rubrike ("{$sectionPolicy}") unesene u izdanju "{$issueTitle}" su definirane na jeziku ("{$locale}") kojeg ovaj časopis ne koristi.</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMismatch">Naziv rubrike "{$section1Title}" i naziv rubrike "{$section2Title}" u izdanju "{$issueTitle}" podudaraju se sa različitim postojećim rubrikama časopisa.</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMatch">Naziv rubrike "{$sectionTitle}" u izdanju "{$issueTitle}" podudaraju se sa postojećim rubrikama časopisa, ali se drugi priloženi naziv rubrike ne podudara se sa drugim nazivom dotične postojeće rubrike.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMismatch">Kratica rubrike "{$section1Abbrev}" i kratica rubrike "{$section2Abbrev}" izdanja "{$issueTitle}" podudaraju se sa različitim postojećim rubrikama časopisa.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMatch">Kratica rubrike "{$sectionAbbrev}" u izdanju "{$issueTitle}" podudara se sa postojećom rubrikom,  ali se druga priložena kratica rubrike ne podudara se sa drugom kraticom dotične postojeće rubrike.</message>
+	<message key="plugins.importexport.native.import.error.articleDisciplineLocaleUnsupported">Disciplinarno područje priloga "{$articleTitle}" u izdanju "{$issueTitle}"  je definirano na jeziku ("{$locale}") kojeg ovaj časopis ne koristi.</message>
+	<message key="plugins.importexport.native.import.error.articleTypeLocaleUnsupported">Tip priloga unesen za prilog "{$articleTitle}" u izdanju "{$issueTitle}" je definiran na jeziku ("{$locale}") kojeg ovaj časopis ne koristi.</message>
+	<message key="plugins.importexport.native.import.error.articleSubjectLocaleUnsupported">Ključne riječi za prilog "{$articleTitle}" u izdanju "{$issueTitle}" su definirane na jeziku ("{$locale}") kojeg ovaj časopis ne koristi.</message>
+	<message key="plugins.importexport.native.import.error.articleSubjectClassLocaleUnsupported">Klasifikacija područja priloga "{$articleTitle}" u izdanju "{$issueTitle}" je definirana na jeziku ("{$locale}") kojeg ovaj časopis ne koristi.</message>
+	<message key="plugins.importexport.native.import.error.articleCoverageGeoLocaleUnsupported">Geografski obuhvat priloga "{$articleTitle}" u izdanju "{$issueTitle}" je definiran na jeziku ("{$locale}") kojeg ovaj časopis ne koristi.</message>
+	<message key="plugins.importexport.native.import.error.articleCoverageChronLocaleUnsupported">Kronološki ili povijesni opseg priloga "{$articleTitle}" u izdanju "{$issueTitle}" je definiran na jeziku ("{$locale}") kojeg ovaj časopis ne koristi.</message>
+	<message key="plugins.importexport.native.import.error.articleCoverageSampleLocaleUnsupported">Podaci o uzorkovanju priloga "{$articleTitle}" u izdanju "{$issueTitle}" su definirani na jeziku ("{$locale}") kojeg ovaj časopis ne koristi.</message>
+	<message key="plugins.importexport.native.import.error.articleSponsorLocaleUnsupported">Izvor potpore priloga "{$articleTitle}" u izdanju "{$issueTitle}" je definiran na jeziku ("{$locale}") kojeg ovaj časopis ne koristi.</message>
+	<message key="plugins.importexport.native.import.error.articleAuthorCompetingInterestsLocaleUnsupported">Izjava o sukobu interesa autora "{$authorFullName}" za članak "{$articleTitle}" u izdanju "{$issueTitle}" je definirana na jeziku ("{$locale}") kojeg ovaj časopis ne koristi.</message>
+	<message key="plugins.importexport.native.import.error.articleAuthorBiographyLocaleUnsupported">Autorska biografija za "{$authorFullName}" vezana uz članak "{$articleTitle}" u izdanju "{$issueTitle}" je definirana na jeziku ("{$locale}") kojeg ovaj časopis ne koristi.</message>
+	<message key="plugins.importexport.native.import.error.galleyLocaleUnsupported">Prijelom priloga "{$articleTitle}" u izdanju "{$issueTitle}" je definiran na jeziku ("{$locale}") kojeg ovaj časopis ne koristi.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileTitleLocaleUnsupported">Naziv dopunske datoteke ("{$suppFileTitle}") priloga "{$articleTitle}" u izdanju "{$issueTitle}" je definiran na jeziku ("{$locale}") kojeg ovaj časopis ne koristi.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileCreatorLocaleUnsupported">Autor ili kreator dopunske datoteke ("{$suppFileTitle}") priloga "{$articleTitle}" u izdanju "{$issueTitle}" je definiran na jeziku ("{$locale}") kojeg ovaj časopis ne koristi.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileSubjectLocaleUnsupported">Ključne riječi dopunske datoteke ("{$suppFileTitle}") priloga "{$articleTitle}" u izdanju "{$issueTitle}" su definirane na jeziku ("{$locale}") kojeg ovaj časopis ne koristi.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileTypeOtherLocaleUnsupported">Posebni tip dopunske datoteke ("{$suppFileTitle}") priloga "{$articleTitle}" u izdanju "{$issueTitle}" je definiran na jeziku ("{$locale}") kojeg ovaj časopis ne koristi.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileDescriptionLocaleUnsupported">Opis dopunske datoteke ("{$suppFileTitle}") priloga "{$articleTitle}" u izdanju "{$issueTitle}" je definiran na jeziku ("{$locale}") kojeg ovaj časopis ne koristi.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFilePublisherLocaleUnsupported">Izdavač dopunske datoteke ("{$suppFileTitle}") priloga "{$articleTitle}" u izdanju "{$issueTitle}" je definiran na jeziku ("{$locale}") kojeg ovaj časopis ne koristi.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileSponsorLocaleUnsupported">Izvor potpore dopunske datoteke ("{$suppFileTitle}") priloga "{$articleTitle}" u izdanju "{$issueTitle}" je definiran na jeziku ("{$locale}") kojeg ovaj časopis ne koristi.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileSourceLocaleUnsupported">Izvor dopunske datoteke ("{$suppFileTitle}") priloga "{$articleTitle}" u izdanju "{$issueTitle}" je definiran na jeziku ("{$locale}") kojeg ovaj časopis ne koristi.</message>
+	<message key="plugins.importexport.native.error.uploadFailed">Slanje podataka nije uspjelo. Molimo provjerite da li je slanje podataka na vaš poslužitelj omogućeno te da li je datoteka prevelika za trenutnu konfiguraciju vašeg PHP i mrežnog poslužitelja.</message>
 </locale>

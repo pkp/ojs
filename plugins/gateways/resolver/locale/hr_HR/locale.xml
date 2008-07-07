@@ -13,9 +13,9 @@
   * Marija Matesic(mmatesi1@ffzg.hr), Tomislav Biscan (info@seofruits.com.hr) Exp $
   -->
  
-<locale name="hr_HR" full_name="hrvatski">
-	<message key="plugins.gateways.resolver.displayName">Rješavač</message>
-	<message key="plugins.gateways.resolver.description">Ovaj dodatak pronalazi brojeve časopisa i članke na temelju informacije o citiranju.</message>
-	<message key="plugins.gateways.resolver.errors.errorMessage">Nije moguće pronaći jedinstveni entitet koristeći naznačene informacije o citiranju. Provjerite da li je informacija o citiranju potpuna te da li se odnosi na entitet koji se nalazi u ovom OJS časopisu.</message>
+<locale name="hr_HR" full_name="Hrvatski">
+	<message key="plugins.gateways.resolver.displayName">Resolver</message>
+	<message key="plugins.gateways.resolver.description"><![CDATA[Ovaj dodatak generira popis naslova časopisa ove OJS instalcije namijenjen <I>link resolver</I> programima. Uključuje nazive, ISSN, datum od kada su dostupni cjeloviti tekstovi itd.]]></message>
+	<message key="plugins.gateways.resolver.errors.errorMessage">Nije moguće izraditi jedinstveni entitet koristeći postojeće informacije. Provjerite da li su informacije o časopisima potpune te da li se odnose na entitete koji se nalaze u ovoj instalaciji OJS-a.</message>
 	<message key="plugins.gateways.resolver.exportHoldings">Iznesi fundus</message>
 </locale>
