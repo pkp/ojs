@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.theme.custom.name">Plugin de Pieles Personalizadas</message>
+	<message key="plugins.theme.custom.description">Este plugin implementa una piel personalizable</message>
+	<message key="plugins.theme.custom.notWritable">NOTA: El fichero de hoja de estilos de este plugin, "{$stylesheetFileLocation}", no es escribible actualmente. Este fichero debe ser escribible antes de que el plugin pueda ser utilizado.</message>
+	<message key="plugins.theme.custom.settings">Opciones</message>
+	<message key="plugins.theme.custom.pickColour">Escoja un color</message>
+	<message key="plugins.theme.custom.header">Encabezado</message>
+	<message key="plugins.theme.custom.link">Enlace</message>
+	<message key="plugins.theme.custom.background">Fondo</message>
+	<message key="plugins.theme.custom.foreground">Primer plano</message>
+</locale>

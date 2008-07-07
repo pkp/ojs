@@ -26,4 +26,8 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">En Google Analytics, pulse sobre "Check Status" para ver el código de seguimiento de su página. El número de cuenta aparece en el código de seguimiento: _uacct = "###". Introduzca los caracteres que corresponden a ###.</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Por favor, intoduzca un número de cuenta.</message>
 
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCode">Código de seguimiento</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Por favor seleccione un código de seguimiento a utilizar.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Código de seguimiento legado (urchin.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Código de seguimiento nuevo (ga.js)</message>
 </locale>

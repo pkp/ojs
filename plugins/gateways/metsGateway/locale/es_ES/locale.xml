@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2005 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.gateways.metsGateway.displayName">Plugin para Gateway METS</message>
+	<message key="plugins.gateways.metsGateway.settings">Opciones</message>
+	<message key="plugins.gateways.metsGateway.description"><![CDATA[Este plugin permite obtener datos XML sin refinar en formato METS para la revista especificada. <strong>NOTA: Este plugin está previsto para ser usado por servicios Web y habilitar este plugin genera un asunto de seguridad ya que permite acceso a la revista en formato XML (contenido codificado en base64) sin restricción.</strong>]]></message>
+	<message key="plugins.gateways.metsGateway.errors.errorMessage">No es posible exportar datos de la revista. El plugin para Gateway METS necesita estar habilitado y el id de la revista a exportar debe estar provisto en el URL.</message>
+	<message key="plugins.gateways.metsGateway.settings.FContent">Use codificación base64 para el "content wrapper"</message>
+	<message key="plugins.gateways.metsGateway.settings.FLocat">Use el URL del bitsream para el "content wrapper"</message>
+	<message key="plugins.gateways.metsGateway.settings.organization">METS:agente elemento organización atributo</message>
+	<message key="plugins.gateways.metsGateway.settings.preservationLevel">PREMIS nivel de conservación</message>
+	<message key="plugins.gateways.metsGateway.settings.exportSuppFiles">Exportar ficheros complementarios</message>
+</locale>

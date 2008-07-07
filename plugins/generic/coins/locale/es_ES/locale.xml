@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * COinS plugin localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.coins.displayName">Plugin COinS</message>
+	<message key="plugins.generic.coins.description">El plugin COinS añade un descriptor OpenURL a páginas del artículo (resumen y HTML) que puede ser usado por ejemplo para la extracción a herramientas de citaciones.</message>
+</locale>
