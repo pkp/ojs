@@ -33,8 +33,8 @@ class DAO {
 			$trace = debug_backtrace();
 			// Call hooks based on the calling entity, assuming
 			// this method is only called by a subclass. Results
-			// in hook calls named e.g. "SessionDAO::Constructor"
-			if (HookRegistry::call($trace[1]['class'] . '::Constructor', array(&$this, &$dataSource))) {
+			// in hook calls named e.g. "SessionDAO::_Constructor"
+			if (HookRegistry::call($trace[1]['class'] . '::_Constructor', array(&$this, &$dataSource))) {
 				return;
 			}
 		}
@@ -57,9 +57,9 @@ class DAO {
 			$trace = debug_backtrace();
 			// Call hooks based on the calling entity, assuming
 			// this method is only called by a subclass. Results
-			// in hook calls named e.g. "SessionDAO::getSession"
+			// in hook calls named e.g. "SessionDAO::_getSession"
 			$value = null;
-			if (HookRegistry::call($trace[1]['class'] . '::' . $trace[1]['function'], array(&$sql, &$params, &$value))) {
+			if (HookRegistry::call($trace[1]['class'] . '::_' . $trace[1]['function'], array(&$sql, &$params, &$value))) {
 				return $value;
 			}
 		}
@@ -83,9 +83,9 @@ class DAO {
 			$trace = debug_backtrace();
 			// Call hooks based on the calling entity, assuming
 			// this method is only called by a subclass. Results
-			// in hook calls named e.g. "SessionDAO::getSession"
+			// in hook calls named e.g. "SessionDAO::_getSession"
 			$value = null;
-			if (HookRegistry::call($trace[1]['class'] . '::' . $trace[1]['function'], array(&$sql, &$params, &$secsToCache, &$value))) {
+			if (HookRegistry::call($trace[1]['class'] . '::_' . $trace[1]['function'], array(&$sql, &$params, &$secsToCache, &$value))) {
 				return $value;
 			}
 		}
@@ -113,9 +113,9 @@ class DAO {
 			$trace = debug_backtrace();
 			// Call hooks based on the calling entity, assuming
 			// this method is only called by a subclass. Results
-			// in hook calls named e.g. "SessionDAO::getSession"
+			// in hook calls named e.g. "SessionDAO::_getSession"
 			$value = null;
-			if (HookRegistry::call($trace[1]['class'] . '::' . $trace[1]['function'], array(&$sql, &$params, &$numRows, &$offset, &$value))) {
+			if (HookRegistry::call($trace[1]['class'] . '::_' . $trace[1]['function'], array(&$sql, &$params, &$numRows, &$offset, &$value))) {
 				return $value;
 			}
 		}
@@ -138,9 +138,9 @@ class DAO {
 			$trace = debug_backtrace();
 			// Call hooks based on the calling entity, assuming
 			// this method is only called by a subclass. Results
-			// in hook calls named e.g. "SessionDAO::getSession"
+			// in hook calls named e.g. "SessionDAO::_getSession"
 			$value = null;
-			if (HookRegistry::call($trace[1]['class'] . '::' . $trace[1]['function'], array(&$sql, &$params, &$dbResultRange, &$value))) {
+			if (HookRegistry::call($trace[1]['class'] . '::_' . $trace[1]['function'], array(&$sql, &$params, &$dbResultRange, &$value))) {
 				return $value;
 			}
 		}
@@ -170,9 +170,9 @@ class DAO {
 			$trace = debug_backtrace();
 			// Call hooks based on the calling entity, assuming
 			// this method is only called by a subclass. Results
-			// in hook calls named e.g. "SessionDAO::updateSession"
+			// in hook calls named e.g. "SessionDAO::_updateSession"
 			$value = null;
-			if (HookRegistry::call($trace[1]['class'] . '::' . $trace[1]['function'], array(&$sql, &$params, &$value))) {
+			if (HookRegistry::call($trace[1]['class'] . '::_' . $trace[1]['function'], array(&$sql, &$params, &$value))) {
 				return $value;
 			}
 		}
