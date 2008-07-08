@@ -56,6 +56,10 @@ input.defaultButton {
 	padding-left: 10px;
 }
 
+td.tocGalleys {
+	padding-right: 10px;
+}
+
 #navbar {
 	padding-left: 10px;
 	border-bottom: 1px solid black;
