@@ -13,7 +13,7 @@
 {include file="common/header.tpl"}
 
 <form name="section" method="post" action="{url op="updateSection" path=$sectionId}" onsubmit="return checkEditorAssignments()">
-<input type="hidden" name="action" value="" />
+<input type="hidden" name="editorAction" value="" />
 <input type="hidden" name="userId" value="" />
 
 {literal}
@@ -21,13 +21,13 @@
 <!--
 
 function addSectionEditor(editorId) {
-	document.section.action.value = "addSectionEditor";
+	document.section.editorAction.value = "addSectionEditor";
 	document.section.userId.value = editorId;
 	document.section.submit();
 }
 
 function removeSectionEditor(editorId) {
-	document.section.action.value = "removeSectionEditor";
+	document.section.editorAction.value = "removeSectionEditor";
 	document.section.userId.value = editorId;
 	document.section.submit();
 }

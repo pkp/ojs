@@ -71,7 +71,7 @@ class SectionHandler extends ManagerHandler {
 		import('manager.form.SectionForm');
 		$sectionForm = &new SectionForm(!isset($args) || empty($args) ? null : ((int) $args[0]));
 
-		switch (Request::getUserVar('action')) {
+		switch (Request::getUserVar('editorAction')) {
 			case 'addSectionEditor':
 				$sectionForm->includeSectionEditor((int) Request::getUserVar('userId'));
 				$canExecute = false;
