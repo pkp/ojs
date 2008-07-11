@@ -201,8 +201,7 @@ input.defaultButton {
 }
 
 #content h4 {
-	margin: 0em 1em 0.25em 0em;
-	padding-top: 0.75em;
+	margin: .75em 1em 0.25em 0em;
 	font-family: Georgia,'Times New Roman',Times,serif;
 	font-weight: normal;
 	font-size: 1.5em;
