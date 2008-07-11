@@ -232,7 +232,7 @@
 	<message key="common.queue.long.active">Submissões Ativas</message>
 	<message key="common.queue.short.active">Ativo</message>
 	<message key="common.queue.long.completed">Arquivar</message>
-	<message key="common.queue.short.completed">Arquivar</message>
+	<message key="common.queue.short.completed">Arquivo</message>
 	
 	<!--
 	 *
@@ -757,27 +757,6 @@ Note que a interface OAI pode ser desativada para este portal nas configuraçõe
 	<message key="manager.statistics.statistics.note">Aviso: Percentuais para submissões avaliadas por pares podem não somar 100%, já que itens submetidos novamente podem ser aceitos, rejeitados ou ainda estarem em processo de avaliação ou edição.</message>
 
 	<message key="manager.statistics.reports">Relatórios</message>
-	<message key="manager.statistics.reports.dateFrom">De</message>
-	<message key="manager.statistics.reports.dateTo">Até</message>
-	<message key="manager.statistics.reports.reportType">Tipo de relatório</message>
-	<message key="manager.statistics.reports.type.journal">Relatório da Revista</message>
-	<message key="manager.statistics.reports.type.editor">Relatório Editorial</message>
-	<message key="manager.statistics.reports.type.reviewer">Relatório do Avaliador</message>
-	<message key="manager.statistics.reports.type.section">Relatório de Seção</message>
-	<message key="manager.statistics.reports.generate">Gerar Relatório</message>
-	<message key="manager.statistics.reports.status">Situação (Aceito, rejeitado, outro)</message>
-	<message key="manager.statistics.reports.dateDecided">Data da Decisão</message>
-	<message key="manager.statistics.reports.author">Autor #{$num}</message>
-	<message key="manager.statistics.reports.affiliation">Afiliação #{$num}</message>
-	<message key="manager.statistics.reports.country">País #{$num}</message>
-	<message key="manager.statistics.reports.reviewer">Avaliador #{$num}</message>
-	<message key="manager.statistics.reports.editor">Editor #{$num}</message>
-	<message key="manager.statistics.reports.score">Pontuação #{$num}</message>
-	<message key="manager.statistics.reports.singleScore">Pontuação</message>
-	<message key="manager.statistics.reports.recommendation">Recomendação #{$num}</message>
-	<message key="manager.statistics.reports.daysToDecision">Tempo até a Decisão</message>
-	<message key="manager.statistics.reports.daysToPublication">Tempo até a Publicação</message>
-
 	<!-- Plugin Management -->
 	<message key="manager.plugins.pluginManagement">Administração de Plugins</message>
 	<message key="manager.plugins.sitePlugin">Este é um plugin de uso geral. Somente o Administrador do Portal possui permissões de administração.</message>
@@ -953,25 +932,25 @@ Configurar o suporte ao LOCKSS para o SEER/OJS é necessário somente após a pu
 	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[O sistema adota o Protocolo para Coleta de Metadados do <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a>, que é um padrão emergente para proporcionar acesso com base na indexação a recursos eletrônicos de pesquisa em escala global. Os autores farão uso de um padrão similar para incluir os metadados da submissão. O Editor Geral da revista deverá escolher as categorias para indexação e apresentar aos autores exemplos relevantes para auxiliá-los na indexação, separando os termos com ponto-e-vírgula (Ex.: termo1; termo2). Os termos deverão ser informados como exemplos, utilizando as expressões "Ex." ou "Por exemplo,".]]></message>
 	<message key="manager.setup.discipline">Área e sub-área de Conhecimento Acadêmico</message>
 	<message key="manager.setup.disciplineDescription">Recomendado para revistas e/ou trabalhos multidisciplinares.</message>
-	<message key="manager.setup.disciplineProvideExamples">Informe exemplos de áreas do conhecimento relevantes para esta revista:</message>
+	<message key="manager.setup.disciplineProvideExamples">Informe exemplos de áreas do conhecimento relevantes para esta revista</message>
 	<message key="manager.setup.disciplineExamples">(Ex.: História; Educação; Sociologia; Psicologia; Direito; Ciência da Informação)</message>
 	<message key="manager.setup.subjectClassification">Classificação de Assunto</message>
 	<message key="manager.setup.subjectClassificationDescription"><![CDATA[A revista utiliza um sistema de classificação de assunto disponível na web.<br />
 Título do sistema de classificação:]]></message>
 	<message key="manager.setup.subjectClassificationExamples">(Ex.: Classificação de Assuntos da Matemática; Classificação da Biblioteca do Congresso)</message>
 	<message key="manager.setup.subjectKeywordTopic">Palavras-chave</message>
-	<message key="manager.setup.subjectProvideExamples">Informe exemplos de palavras-chave ou tópicos para auxiliar o autor:</message>
+	<message key="manager.setup.subjectProvideExamples">Informe exemplos de palavras-chave ou tópicos para auxiliar o autor</message>
 	<message key="manager.setup.subjectExamples">(Ex.: Fotossíntese; Buracos Negros; Arquitetura da Informação; Sistemas de Informação)</message>
 	<message key="manager.setup.coverage">Cobertura</message>
 	<message key="manager.setup.coverageDescription">Referente à cobertura geo-espacial, cronológica ou histórica, e/ou características da pesquisa.</message>
-	<message key="manager.setup.coverageGeoProvideExamples">Informe exemplos de termos geo-espaciais ou geográficos relevantes:</message>
+	<message key="manager.setup.coverageGeoProvideExamples">Informe exemplos de termos geo-espaciais ou geográficos relevantes</message>
 	<message key="manager.setup.coverageGeoExamples">(Ex.: Península Ibérica; Estratosfera; Floresta Boreal; Amazônia)</message>
 	<message key="manager.setup.coverageChronProvideExamples">Informe exemplos relevantes de termos cronológicos ou históricos</message>
 	<message key="manager.setup.coverageChronExamples">(Ex.: Renascença Européia; Período Jurássico; Terceiro Trimestre; Modernismo)</message>
-	<message key="manager.setup.coverageResearchSampleProvideExamples">Informe exemplos de características de pesquisa:</message>
+	<message key="manager.setup.coverageResearchSampleProvideExamples">Informe exemplos de características de pesquisa</message>
 	<message key="manager.setup.coverageResearchSampleExamples">(Ex.: por idade; por sexo; por etnia; grau de instrução)</message>
 	<message key="manager.setup.typeMethodApproach">Tipo (Método/Processo/Enfoque)</message>
-	<message key="manager.setup.typeProvideExamples">Informe exemplos de tipos relevantes de pesquisa, métodos e abordagens:</message>
+	<message key="manager.setup.typeProvideExamples">Informe exemplos de tipos relevantes de pesquisa, métodos e abordagens</message>
 	<message key="manager.setup.typeExamples">(Ex.: Pesquisa Histórica; Revisão de Literatura; Pesquisa Empírica de Campo; Entrevista Controlada; Prototipagem)</message>
 	<message key="manager.setup.registerJournalForIndexing">Cadastro da Revista para Indexação (Coleta de Metadados)</message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Para ter o conteúdo desta revista indexado dentro de um sistema global de distribuição de bases de pesquisa, <a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">cadastre</a> a URL da revista no <a href="http://www.pkp.ubc.ca/harvester/" target="_blank">Coletador de Metadados</a> do Public Knowledge Project. Esta ferramenta coleta os metadados de cada item indexado desta revista, possibilitando buscas coletivas e precisas entre os portais de pesquisa que utilizam o protocolo de coleta de metadados do <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative, OAI-PMH</a>.
@@ -1051,7 +1030,7 @@ Escolha um modelo para administrar os aspectos do processo editorial. (Para desi
 	<message key="manager.setup.numPageLinks">Links de Página</message>
 	<message key="manager.setup.useTextTitle">Texto Título</message>
 	<message key="manager.setup.useImageTitle">Imagem Título</message>
-	<message key="manager.setup.useImageLogo">Imagem de Logomarca</message>
+	<message key="manager.setup.useImageLogo">Imagem de Logotipo</message>
 	<message key="manager.setup.noImageFileUploaded">Nenhuma imagem para exibição.</message>
 	<message key="manager.setup.navigationBar">Barra de Navegação</message>
 	<message key="manager.setup.itemsDescription">Itens na Barra de Navegação, que aparece no topo da página, podem ser incluídos (Página Inicial, Sobre, Página do Usuário, etc.).</message>
@@ -1147,7 +1126,7 @@ Escolha um modelo para administrar os aspectos do processo editorial. (Para desi
 	<message key="manager.people.enrollment">Cadastrar</message>
 	<message key="manager.people.unenroll">Remover Papel</message>
 	<message key="manager.people.confirmUnenroll">Remover o usuário deste Papel?</message>
-	<message key="manager.people.mergeUsers.from.description">Escolha um usuário para mesclar seu cadastro dentro de outra conta (quando um usuário possui duas contas distintas, ao invés de acumular funções editoriais). O cadastro selecionado primeiro será excluído e suas submissões e histórico de tarefas atribuías ao segundo cadastro escolhido.</message>
+	<message key="manager.people.mergeUsers.from.description">Escolha um usuário para mesclar seu cadastro dentro de outra conta (quando um usuário possui duas contas distintas, em vez de acumular funções editoriais). O cadastro selecionado primeiro será excluído e suas submissões e histórico de tarefas atribuías ao segundo cadastro escolhido.</message>
 	<message key="manager.people.mergeUsers.into.description">Escolha um usuário a quem deseja atribuir as submissões e histórico de tarefas do cadastro anterior.</message>
 	<message key="manager.people.mergeUsers.confirm">Deseja realmente mesclar o cadastro do usuário "{$oldUsername}" no cadastro do usuário "{$newUsername}"? O cadastro de "{$oldUsername}" será excluído permanentemente. Esta ação não é reversível!</message>
 	<message key="manager.people.confirmRemove">Remover este usuário da revista? A ação removerá o cadastro do usuário de todas os seus papéis dentro do sistema.</message>
@@ -1295,7 +1274,7 @@ Escolha um modelo para administrar os aspectos do processo editorial. (Para desi
 
 	<!-- Subscription Management -->
 	<message key="manager.subscriptions.createTitle">Incluir</message>
-	<message key="manager.subscriptions.create">Incluir Nova Assinatura</message>
+	<message key="manager.subscriptions.create">Incluir Novo Assinante</message>
 	<message key="manager.subscriptions.select">Cadastrar Assinante</message>
 	<message key="manager.subscriptions.selectSubscriber">Escolher Assinante</message>
 	<message key="manager.subscriptions.selectSubscriber.desc">Editores Gerentes, Editores, Editores de Seção, Editores de Layout, Editores de Texto e Leitores de Prova terão automaticamente acesso ao conteúdo para Assinantes.</message>
@@ -1868,7 +1847,7 @@ com sinal positivo (+) indicando avaliação em progresso.]]></message>
 	<message key="user.login.registerNewAccount">Não está cadastrado? Cadastre-se no sistema</message>
 	<message key="user.login.forgotPassword">Esqueceu a senha?</message>
 	<message key="user.login.resetPassword">Nova Senha</message>
-	<message key="user.login.resetPasswordInstructions"><![CDATA[Por questões de segurança, o sistema envia uma nova senha a usuários cadastrados, ao invés de informar a senha atual.<br /><br />Digite o e-mail para obter uma nova senha. Um e-mail de confirmação será enviado a esse e-mail.]]></message>
+	<message key="user.login.resetPasswordInstructions"><![CDATA[Por questões de segurança, o sistema envia uma nova senha a usuários cadastrados, em vez de informar a senha atual.<br /><br />Digite o e-mail para obter uma nova senha. Um e-mail de confirmação será enviado a esse e-mail.]]></message>
 	<message key="user.login.lostPassword.invalidUser">Nenhum usuário cadastrado com o e-mail especificado.</message>
 	<message key="user.login.lostPassword.confirmationSent">Um e-mail de confirmação foi enviado. Siga as instruções para criar uma nova senha.</message>
 	<message key="user.login.lostPassword.invalidHash">O link acessado expirou ou é inválido. Lamentamos o inconveniente. Tente criar uma senha novamente.</message>
@@ -2066,7 +2045,7 @@ com sinal positivo (+) indicando avaliação em progresso.]]></message>
 	<message key="installer.upgradeOJS">Atualizar Sistema</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>Versão {$version}</h4>
 	
-	<p>Agradecemos seu interesse em utilizar o <strong>Sistema Eletrônico de Editoração de Revistas</strong>, desenvolvido pelo Public Knowledge Project. Antes de continuar, leia o documento <a href="{$baseUrl}/docs/README_pt">README_pt</a> incluído com o pacote. Para maiores informações sobre o Public Knowledge Project e outros sistemas desenvolvidos, acesse o <a href="http://www.pkp.ubc.ca/" target="_blank">portal do PKP</a>. Clique em <href="http://www.ibict.br" target="_blank">portal do Ibict/MCT</a> e em <a href="http://www.ibict.br/seer/" target="_blank">Seção sobre o SEER/OJS</a>para maiores informações sobre o envolvimento do Instituto Brasileiro de Informação em Ciência e Tecnologia com o sistema. Para reportar erros, sugestões ou dúvidas sobre o Sistema Eletrônico de Editoração de Revistas/Open Journal Systems visite <a href="forum.ibict.br">Forum do Ibict</a>, <a href="pkp.sfu.ca/support/forum">PKP Support Forum</a>, ou <a href="http://www.pkp.ubc.ca/bugzilla/" target="_blank">Sistema de Controle de erros Bugzilla</a> do PKP. Embora os fóruns sejam a forma preferencial de contato, também pode-se enviar e-mail para a <a href="mailto:seer@ibict.br">Equipe do SEER (seer@ibict.br)</a> e para a <a href="mailto:pkp-support@sfu.ca">Equipe do PKP (pkp-support@sfu.ca)</a>.</p>
+	<p>Agradecemos seu interesse em utilizar o <strong>Sistema Eletrônico de Editoração de Revistas</strong>, desenvolvido pelo Public Knowledge Project. Antes de continuar, leia o documento <a href="{$baseUrl}/docs/README_pt">README_pt</a> incluído com o pacote. Para maiores informações sobre o Public Knowledge Project e outros sistemas desenvolvidos, acesse o <a href="http://www.pkp.ubc.ca/" target="_blank">portal do PKP</a>. Clique em <a href="http://www.ibict.br" target="_blank">portal do Ibict/MCT</a> e em <a href="http://seer.ibict.br" target="_blank">Portal do SEER</a> para maiores informações sobre o envolvimento do Instituto Brasileiro de Informação em Ciência e Tecnologia com o sistema. Para reportar erros, sugestões ou dúvidas sobre o Sistema Eletrônico de Editoração de Revistas/Open Journal Systems visite <a href="forum.ibict.br">Forum do Ibict</a>, <a href="pkp.sfu.ca/support/forum">PKP Support Forum</a>, ou <a href="http://www.pkp.ubc.ca/bugzilla/" target="_blank">Sistema de Controle de erros Bugzilla</a> do PKP. Embora os fóruns sejam a forma preferencial de contato, também pode-se entrar em contato com a Equipe do SEER através dos formulários disponíveis na seção <a href="http://seer.ibict.br/index.php?option=com_content&task=view&id=270&Itemid=113" target="_blank">Fale conosco</a> no <a href="http://seer.ibict.br" target="_blank">portal do SEER</a> e para a <a href="mailto:pkp-support@sfu.ca">Equipe do PKP (pkp-support@sfu.ca)</a>.</p>
 
 <h4>Atualização</h4>
 
@@ -2078,7 +2057,7 @@ com sinal positivo (+) indicando avaliação em progresso.]]></message>
 	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= 4.2.x (incluindo PHP 5.x)</li>
 	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (incluindo MySQL 4.x) or <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (incluindo PosgreSQL 8.x)</li>
 	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x ou >= 2.0.4x ou Microsoft IIS 6</li>
-	<li>Sistema Operacional: Qualquer sistema operacional que suporte o software acima, incluindo<a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
+	<li>Sistema Operacional: Qualquer sistema operacional que suporte o software acima, incluindo <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
 </ul>
 
 <p>A falta de recursos impossibilita testes completos em todas as possibilidades de configuração e de plataformas, não havendo garantias de funcionamento ou de suporte implícitas. Solicita-se enviar comentários sobre problemas, sucessos, configurações de máquina, entre outros comentários e sugestões para os devidos foruns de discussão</p>
@@ -2094,7 +2073,7 @@ com sinal positivo (+) indicando avaliação em progresso.]]></message>
 <ol type="1">
 <li>Os seguintes arquivos e diretórios (e seus conteúdos) devem ter permissão de escrita:
 <ul>
-	<li>Permissão atual de <tt>config.inc.php</tt> (optional): {$writable_config}</li>
+	<li>Permissão atual de <tt>config.inc.php</tt> (opcional): {$writable_config}</li>
 	<li>Permissão atual de <tt>public/</tt>: {$writable_public}</li>
 	<li>Permissão atual de <tt>cache/</tt>: {$writable_cache}</li>
 	<li>Permissão atual de <tt>cache/t_cache/</tt>: {$writable_templates_cache}</li>
@@ -2143,7 +2122,7 @@ O servidor atualmente tem suporte a mbstring: <strong>{$supportsMBString}</stron
 	<message key="installer.databasePassword">Senha</message>
 	<message key="installer.databaseName">Nome da Base de Dados</message>
 	<message key="installer.databaseDriverInstructions"><![CDATA[<strong>Drivers de bancos de dados relacionados entre chaves ([]) não tiveram suas extensões PHP reconhecidas pelo sistema, e portanto não devem funcionar.</strong><br />Os drivers listados acima somente poderão ser utilizados pelo sistema se tiveram suas extensões PHP prévia e corretamente instaladas no servidor.]]></message>
-	<message key="installer.databaseHostInstructions">Deixe o nome do servidor em branco para conectar através de socket de domínio ao invés de TCP/IP. Não é necessário para o MySQL, que automaticamente utiliza sockets caso "localhost" seja digitado, porém é obrigatório para outras bases como o PostgreSQL.</message>
+	<message key="installer.databaseHostInstructions">Deixe o nome do servidor em branco para conectar através de socket de domínio em vez de TCP/IP. Não é necessário para o MySQL, que automaticamente utiliza sockets caso "localhost" seja digitado, porém é obrigatório para outras bases como o PostgreSQL.</message>
 	<message key="installer.createDatabase">Criar novo banco de dados</message>
 	<message key="installer.createDatabaseInstructions">Para utilizar esta opção o servidor de bases de dados deve permitir criação de bancos remotamente e o nome de usuário e senha deve possuir as permissões necessárias para criação de bancos e tabelas. Caso ocorra um erro durante a instalação, crie manualmente o banco de dados no servidor e execute novamente o instalador desabilitando esta opção.</message>
 	<message key="installer.miscSettings">Configurações Gerais</message>
@@ -2243,7 +2222,6 @@ O servidor atualmente tem suporte a mbstring: <strong>{$supportsMBString}</stron
 	<message key="rt.admin.selectedVersion">Itens Relacionados</message>
 	<message key="rt.admin.readingToolsEnabled">Ferramentas de Leitura</message>
 	<message key="rt.admin.selectedVersion">Itens Relacionados</message>
-	<message key="rt.admin.rtEnable">Entre em Configurações para habilitar a Ferramentas de Leitura ou alterar a versão.</message>
 	<message key="rt.admin.settings.description">As ferramentas de leitura são exibidas em um frame ao lado dos itens publicados, nas seções da revistas cuja indexação foi habilitada. As ferramentas consistem de itens opcionais relacionados ao item publicado, listados abaixo, e um conjunto de outras ferramentas que proporcionam acesso a mais itens relacionados, organizados por área do conhecimento e atividade.</message>
 	<message key="rt.admin.settings.enableReadingTools">Habilitar Ferramentas de Leitura para as seções escolhidas da revista.</message>
 	<message key="rt.admin.settings.abstract">Resumo (apresenta o resumo do item).</message>
@@ -2535,7 +2513,7 @@ Após o término de suas revisões, renomeie o arquivo de NomedoAutorQA.doc para
 	<message key="admin.mergeUsers">Mesclar Usuários</message>
 	<message key="admin.mergeUsers.mergeUser">Mesclar Usuários</message>
 	<message key="admin.mergeUsers.into.description">Escolha um usuário a quem deseja atribuir as submissões e histórico de tarefas do cadastro anterior.</message>
-	<message key="admin.mergeUsers.from.description">Escolha um usuário para mesclar seu cadastro dentro de outra conta (quando um usuário possui duas contas distintas, ao invés de acumular funções editoriais). O cadastro selecionado primeiro será excluído e suas submissões e histórico de tarefas atribuídas ao segundo cadastro escolhido.</message>
+	<message key="admin.mergeUsers.from.description">Escolha um usuário para mesclar seu cadastro dentro de outra conta (quando um usuário possui duas contas distintas, em vez de acumular funções editoriais). O cadastro selecionado primeiro será excluído e suas submissões e histórico de tarefas atribuídas ao segundo cadastro escolhido.</message>
 	<message key="admin.mergeUsers.allUsers">Todos os usuários</message>
 	<message key="admin.mergeUsers.confirm">Deseja realmente mesclar o cadastro do usuário "{$oldUsername}" no cadastro do usuário "{$newUsername}"? O cadastro de "{$oldUsername}" será excluído permanentemente. Esta ação não é reversível!</message>
 	<message key="admin.mergerUsers.noneEnrolled">Nenhum usuário cadastrado.</message>
@@ -2709,7 +2687,6 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="payment.type.publication">Taxa de Publicação</message>
 	<message key="payment.type.fastTrack">Taxa de Acompanhamento Rápido da Avaliação</message>
 	<message key="payment.type.membership">Taxa de Assinatura Individual</message>
-	<message key="payment.type.payPerView">Taxa de Pay-Per-View por Artigo</message>
 	<message key="payment.type.subscription">Taxa de Assinatura</message>
 	<message key="payment.type.donation">Doações</message>
 	<message key="payment.donation.makeDonation">Fazer doação</message>
@@ -2822,7 +2799,6 @@ Idiomas estão disponíveis para download manual no <a href="http://pkp.sfu.ca">
 	<message key="manager.payment.options.publicationFee">Publicação de Artigo</message>
 	<message key="manager.payment.options.fastTrackFee">Avaliação Fast-Track</message>
 	<message key="manager.payment.options.membershipFee">Taxa de Adesão</message>
-	<message key="manager.payment.options.payPerViewFee">Pay-Per-View de Artigo</message>
 	<message key="manager.payment.options.waiverPolicy">Política de Isenção de Taxas</message>
 	<message key="manager.payment.options.onlypdf">Restringir acesso apenas a versões PDF dos artigos</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Esta ação ativará pagamento para Assinaturas, sendo responsabilidade do Gerente de Assinaturas definir e gerenciar os tipos, taxas, duração e assinantes</message>
@@ -2831,7 +2807,6 @@ Idiomas estão disponíveis para download manual no <a href="http://pkp.sfu.ca">
 	<message key="default.journalSettings.fastTrackFeeDescription">O pagamento desta taxa garante que a avaliação, decisão editorial, e notificação do autor ocorram em no máximo 4 semanas.</message>
 	<message key="default.journalSettings.publicationFeeDescription">Caso este documento seja aceito para publicação, será necessário o pagamento de uma Taxa de Publicação de Artigo para auxiliar nos custos de publicação. Consulte a Política de Isenção de Taxas.</message>
 	<message key="default.journalSettings.waiverPolicy">Caso não possa pagar as taxas descritas, notifique a Equipe Editorial através do campo Comentários, pois não é de interesse impedir a publicação de trabalhos importantes.</message>
-	<message key="default.journalSettings.payPerViewFeeDescription">O pagamento desta taxa permite visualizar, baixar e imprimir este documento.</message>
 	<message key="default.journalSettings.membershipFeeDescription">O pagamento desta taxa garante sua inscrição nesta associação durante um ano, com acesso livre a esta revista.</message>
 	<message key="default.journalSettings.donationFeeDescription">Doações de qualquer valor são muito bem-vindas, e oferecem meios aos editores de manter a qualidade da revista no mais alto nível para seus leitores e usuários.</message>
 	<message key="reader.subscriptionRequiredLoginText">Assinatura exigida para acesso ao item. Para verificar sua assinatura, acesse a revista.</message>
@@ -2862,4 +2837,110 @@ Idiomas estão disponíveis para download manual no <a href="http://pkp.sfu.ca">
 	<message key="payment.paymentReceived">Pagamento Recebido</message>
 	<message key="payment.paymentSent">Pagamento já foi enviado</message>
 	<message key="payment.submission.paySubmission">Pagar Taxa de Submissão</message>
+	<message key="common.copy">Copiar</message>
+	<message key="common.preview">Visualizar</message>
+	<message key="common.publish">Publicar</message>
+	<message key="common.activate">Ativar</message>
+	<message key="common.deactivate">Desativar</message>
+	<message key="manager.reviewForms">Formulários de Avaliação</message>
+	<message key="manager.reviewForms.publishedReviewForms">Formulários de Avaliação publicados</message>
+	<message key="manager.reviewForms.unpublishedReviewForms">Formulários de Avaliação não publicados</message>
+	<message key="manager.reviewForms.noneCreated">Nenhum formulário de avaliação criado.</message>
+	<message key="manager.reviewForms.nonePublished">Nenhum formulário de avaliação publicado.</message>
+	<message key="manager.reviewForms.create">Criar formulário de avaliação</message>
+	<message key="manager.reviewForms.edit">Editar formulário de avaliação</message>
+	<message key="manager.reviewForms.reviewFormData">Dados do formulário de avaliação</message>
+	<message key="manager.reviewForms.title">Título</message>
+	<message key="manager.reviewForms.description">Descrição</message>
+	<message key="manager.reviewForms.preview">Visualizar formulário de avaliação</message>
+	<message key="manager.reviewForms.completed">Concluído</message>
+	<message key="manager.reviewForms.inReview">Em avaliação</message>
+	<message key="manager.reviewForms.confirmDeletePublished">Confirmar exclusão de formulário de avaliação publicado</message>
+	<message key="manager.reviewForms.confirmDeleteUnpublished">Confirmar exclusão de formulário de avaliação não publicado</message>
+	<message key="manager.reviewForms.form.titleRequired">Título do formulário de avaliação obrigatório.</message>
+	<message key="manager.reviewFormElements">Campos do formulário de avaliação</message>
+	<message key="manager.reviewFormElements.create">Criar novo campo</message>
+	<message key="manager.reviewFormElements.edit">Editar campo</message>
+	<message key="manager.reviewFormElements.noneCreated">Nenhum campo de formulário criado .</message>
+	<message key="manager.reviewFormElements.confirmDelete">Confimar exclusão de campo do formulário de avaliação publicado</message>
+	<message key="manager.reviewFormElements.copyTo">Copiar para</message>
+	<message key="manager.reviewFormElements.question">Pergunta</message>
+	<message key="manager.reviewFormElements.required">Campo de avaliação obrigatório</message>
+	<message key="manager.reviewFormElements.viewable">Disponível (aos autores)</message>
+	<message key="manager.reviewFormElements.elementType">Tipo de campo</message>
+	<message key="manager.reviewFormElements.possibleResponse">Resposta possível</message>
+	<message key="manager.reviewFormElements.addResponseItem">Incluir resposta possível</message>
+	<message key="manager.reviewFormElements.chooseType">Escolher tipo de campo</message>
+	<message key="manager.reviewFormElement.changeType">Alterando o tipo de campo do formluário</message>
+	<message key="manager.reviewFormElements.form.questionRequired">Uma pergunta para o campo do formulário é obrigatória</message>
+	<message key="manager.reviewFormElements.form.elementTypeRequired">O tipo do campo do formulário é obrigatório.</message>
+	<message key="manager.reviewFormElements.smalltextfield">Campo de texto pequeno</message>
+	<message key="manager.reviewFormElements.textfield">Campo de texto de uma linha</message>
+	<message key="manager.reviewFormElements.textarea">Campo de texto longo</message>
+	<message key="manager.reviewFormElements.checkboxes">Campo de seleção</message>
+	<message key="manager.reviewFormElements.radiobuttons">Campo de botão de rádio</message>
+	<message key="manager.reviewFormElements.dropdownbox">Campo de menu de opções</message>
+	<message key="submission.reviewForm">Formulário de avaliação</message>
+	<message key="submission.reviewFormResponse">Resposta do formulário de avaliação</message>
+	<message key="editor.article.reviewForms">Formulários de avaliação</message>
+	<message key="editor.article.selectReviewForm">Escolher formulário de avaliação</message>
+	<message key="editor.article.clearReviewForm">Limpar formulário de avaliação</message>
+	<message key="editor.article.confirmChangeReviewForm">Alterações no formulário de avaliação removerá as respostas...</message>
+	<message key="reviewer.article.enterReviewForm">Clique no ícone para preencher o formulário de avaliação</message>
+	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Preencha os campos obrigatórios.</message>
+	<message key="common.captchaField.altText">Imagem de verificação</message>
+	<message key="common.altText">Texto alternativo</message>
+	<message key="common.altTextInstructions">Informe um texto alternativo para a imagem, assegurando a acessibilidade a usuários com navegadores de texto ou equipamentos de auxílio a necessidades especiais.</message>
+	<message key="common.pageHeader.altText">Cabeçalho da página</message>
+	<message key="common.pageHeaderLogo.altText">Logo da página de cabeçalho</message>
+	<message key="common.homePageHeader.altText">Cabeçalho da página inicial</message>
+	<message key="common.homePageHeaderLogo.altText">Logo do cabeçalho da página inicial</message>
+	<message key="common.journalHomepageImage.altText">Imagem de capa da revista</message>
+	<message key="article.coverPage.altText">Imagem da capa</message>
+	<message key="article.accessLogoOpen.altText">Acesso Livre</message>
+	<message key="article.accessLogoRestricted.altText">Acesso restrito</message>
+	<message key="user.noRoles.chooseJournal">Seu cadastro não está associado a nenhuma revista. Por favor, escolha uma:</message>
+	<message key="user.noRoles.noRolesForJournal">Seu cadastro não possui nenhum papel nesta revista. Por favor, escolha quais dos disponíveis deseja adotar:</message>
+	<message key="user.noRoles.submitArticle">Enviar proposta</message>
+	<message key="user.noRoles.submitArticleRegClosed">Enviar submissão: o cadastro de autores está atualmente desabilitado.</message>
+	<message key="user.noRoles.regReviewer">Cadastrar como Avaliador</message>
+	<message key="user.noRoles.regReviewerClosed">Cadastrar como Avaliador: o cadastro de avaliadores está atualmente desabilitado.</message>
+	<message key="issue.coverPage.altText">Capa da revista</message>
+	<message key="admin.settings.homeHeaderImage.altText">Logo do portal</message>
+	<message key="manager.payment.options.purchaseArticleFee">Adquirir artigo</message>
+	<message key="plugins.categories.implicitAuth">Plugins de Autenticação Implícita</message>
+	<message key="plugins.categories.implicitAuth.description">Plugins de Autenticação Implícita implementam suporte para autenticação de usuários baseada nos cabeçalhos HTTP.</message>
+	<message key="manager.setup.enablePublicGalleyId">Identificadores personalizados serão utilizados para identificar composições finais (ex.: documentos HTML ou PDF) de itens publicados.</message>
+	<message key="manager.setup.journalHomepageHeader.altText">Cabeçalho da página inicial da revista</message>
+	<message key="manager.setup.journalLogo.altText">Logo da revista</message>
+	<message key="manager.language.reloadLocalizedDefaultSettings">Recarregar padrões iniciais do idioma específico</message>
+	<message key="manager.language.confirmDefaultSettingsOverwrite">A ação substituirá configurações específicas realizadas posteriormente no idioma selecionado</message>
+	<message key="manager.sections.hideTocAuthor">Omitir nomes dos autores dos itens publicados nesta seção no sumário da edição.</message>
+	<message key="editor.allEditors">Todos os editores</message>
+	<message key="editor.me">Mim</message>
+	<message key="editor.submissions.assignedTo">Designado a</message>
+	<message key="editor.submissions.inSection">Na seção</message>
+	<message key="editor.article.display">Exibir</message>
+	<message key="editor.article.hideTocAuthorDescription">Omitir nomes dos autores no sumário da edição</message>
+	<message key="editor.article.hideTocAuthorDefault">Padrão</message>
+	<message key="editor.article.hideTocAuthorHide">Omitir</message>
+	<message key="editor.article.hideTocAuthorShow">Exibir</message>
+	<message key="editor.article.cover">Capa</message>
+	<message key="editor.article.showCoverPage">Criar capa para este artigo com os seguintes elementos.</message>
+	<message key="editor.article.coverPage">Imagem de capa</message>
+	<message key="editor.article.coverPageInstructions">(Formatos permitidos: .gif, jpg ou .png)</message>
+	<message key="editor.article.uploaded">Enviado</message>
+	<message key="editor.article.removeCoverPage">Excluir imagem de capa?</message>
+	<message key="editor.article.remove">Excluir</message>
+	<message key="submission.layout.publicGalleyId">Identificador Público de Composição</message>
+	<message key="submission.layout.galleyPublicIdentificationExists">Identificador público de composição já existe.</message>
+	<message key="user.profile.form.profileImageInvalid">Formato de imagem para o perfil inválido ou excedo o tamanho permitido. Formatos permitidos são .gif, .jpg, ou .png e o tamanho da imagem não pode ser maior que 150x150 pixels.</message>
+	<message key="user.profile.form.profileImage">Imagem de perfil</message>
+	<message key="user.profile.publicProfile">Perfil do usuário</message>
+	<message key="about.aboutThisPublishingSystem.altText">Processo Editorial e de Publicação do Sistema</message>
+	<message key="announcement.posted">Publicado</message>
+	<message key="payment.type.purchaseArticle">Taxa de Acquisição de Artigo</message>
+	<message key="default.journalSettings.purchaseArticleFeeDescription">O pagamento da taxa permitirá visualizar, baixar e imprimir este artigo.</message>
+	<message key="plugins.categories.reports">Plugins de Relatório</message>
+	<message key="plugins.categories.reports.description">Plugins de Relatório são utilizados para implementar vários tipos de relatórios e extração de dados por parte dos Editores Gerentes</message>
 </locale>

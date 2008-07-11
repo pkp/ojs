@@ -21,5 +21,9 @@
 	<message key="plugins.generic.webfeed.settings.currentIssue">Exibir itens da edição atual.</message>
 	<message key="plugins.generic.webfeed.settings.recentArticles">itens mais recentes.</message>
 	<message key="plugins.generic.webfeed.settings.recentItemsRequired">Informe um inteiro positivo para o número de itens mais recentes.</message>
+	<message key="plugins.generic.webfeed.settings.homepage">Exibir canais públicos (feeds) de notícias na capa e na página de edição apenas.</message>
+	<message key="plugins.generic.webfeed.atom.altText">Logo Atom</message>
+	<message key="plugins.generic.webfeed.rss1.altText">Logo RSS1</message>
+	<message key="plugins.generic.webfeed.rss2.altText">Logo RSS2</message>
 </locale>
 
