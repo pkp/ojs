@@ -135,5 +135,4 @@ Os seguintes formatos são aceitos:
 	<message key="plugins.importexport.native.import.error.articleSuppFilePublisherLocaleUnsupported">A publisher of the supplementary file "{$suppFileTitle}" of the article "{$articleTitle}" in the issue "{$issueTitle}" was provided in a locale ("{$locale}") that this journal does not support.</message>
 	<message key="plugins.importexport.native.import.error.articleSuppFileSponsorLocaleUnsupported">A sponsor of the supplementary file "{$suppFileTitle}" of the article "{$articleTitle}" in the issue "{$issueTitle}" was provided in a locale ("{$locale}") that this journal does not support.</message>
 	<message key="plugins.importexport.native.import.error.articleSuppFileSourceLocaleUnsupported">A source of the supplementary file "{$suppFileTitle}" of the article "{$articleTitle}" in the issue "{$issueTitle}" was provided in a locale ("{$locale}") that this journal does not support.</message>
-	<message key="plugins.importexport.native.error.uploadFailed">O envio falhou. Verifique se o envio de arquivos está habilitado no servidor e que o arquivo não ultrapassa os limites de configuração do PHP e do servidor.</message>
 </locale>
