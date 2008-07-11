@@ -226,6 +226,10 @@ class SectionEditorAction extends Action {
 				$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 				return true;
 			} else {
+				if (!Request::getUserVar('continued') || $preventAddressChanges) {
+					$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
+				}
+
 				if (!Request::getUserVar('continued')) {
 					$weekLaterDate = strftime(Config::getVar('general', 'date_format_short'), strtotime('+1 week'));
 
@@ -251,7 +255,6 @@ class SectionEditorAction extends Action {
 						'passwordResetUrl' => Request::url(null, 'login', 'resetPassword', $reviewer->getUsername(), array('confirm' => Validation::generatePasswordResetHash($reviewer->getUserId())))
 					);
 					$email->assignParams($paramArray);
-					$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
 					if ($isEmailBasedReview) {
 						// An email-based review process was selected. Attach
 						// the current review version.
