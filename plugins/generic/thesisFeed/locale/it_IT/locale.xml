@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.thesisfeed.displayName">Plugin dei Feed RSS/Atom per gli Abstract delle Tesiiee</message>
+	<message key="plugins.generic.thesisfeed.description">Questo plugin produce feed RSS/Atom di diffusione web per gli abstract delle tesi.</message>
+
+	<message key="plugins.generic.thesisfeed.settings">Impostazioni</message>
+	<message key="plugins.generic.thesisfeed.settings.all">Mostra i link ai feed RSS in tutte le pagine della rivista.</message>
+	<message key="plugins.generic.thesisfeed.settings.homepage">Mostra i link ai feed RSS solo nella homepage e nella pagina degli abstract delle tesi.</message>
+	<message key="plugins.generic.thesisfeed.settings.thesis">Mostra i link ai feed RSS solo nella pagina degli abstract delle tesi.</message>
+	<message key="plugins.generic.thesisfeed.settings.recentThesis1">Limita i feed RSS ai</message>
+	<message key="plugins.generic.thesisfeed.settings.recentThesis2">abstract di tesi inserite più recenti.</message>
+	<message key="plugins.generic.thesisfeed.settings.recentItemsRequired">Per favore inserisci un integrale positivo per il numero di abstract delle tesi.</message>
+	<message key="plugins.generic.thesisfeed.atom.altText">Logo dell'atom</message>
+	<message key="plugins.generic.thesisfeed.rss1.altText">Logo del RSS1</message>
+	<message key="plugins.generic.thesisfeed.rss2.altText">Logo del RSS2</message>
+</locale>

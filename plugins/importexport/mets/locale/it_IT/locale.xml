@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2005 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.importexport.METSExport.displayName">Plugin di Export METS XML</message>
+	<message key="plugins.importexport.METSExport.description">Esporta le riviste in METS XML</message>
+	<message key="plugins.importexport.METSExport.settings">Impostazioni</message>
+	<message key="plugins.importexport.METSExport.export">Esporta i dati</message>
+	<message key="plugins.importexport.METSExport.export.issues">Esporta i fascicoli</message>
+	<message key="plugins.importexport.METSExport.export.selectIssue">Seleziona i fascicoli da esportare.</message>
+	<message key="plugins.importexport.METSExport.export.error.IssuesNotFound">Nessun fascicolo corrisponde all'ID del fascicolo specificato "{$issueId}".</message>
+	<message key="plugins.importexport.METSExport.export.error.unknownIssue">Percorso della rivista sconosciuto {$journalPath}</message>
+	<message key="plugins.importexport.METSExport.settings.FContent">Utilizza la codifica base64 per il wrapper del contenuto</message>
+	<message key="plugins.importexport.METSExport.settings.FLocat">Utilizza l'URL del bitstream per il wrapper del contenuto</message>
+	<message key="plugins.importexport.METSExport.settings.organization">METS:attributo dell'organizzazione dell'elemento agente</message>
+	<message key="plugins.importexport.METSExport.settings.preservationLevel">Livello PREMIS di preservazione</message>
+	<message key="plugins.importexport.METSExport.settings.exportSuppFiles">Esporta file supplementari</message>
+</locale>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.theme.custom.name">Plugin del Tema Personalizzato</message>
+	<message key="plugins.theme.custom.description">Questo plugin implementa un tema personalizzabile.</message>
+	<message key="plugins.theme.custom.notWritable">NOTA: Questo file del foglio di stile del plugin, "{$stylesheetFileLocation}", non è attualmente scrivibile. Questo file deve essere scrivibile per poter utilizzare il plugin.</message>
+	<message key="plugins.theme.custom.settings">Impostazioni</message>
+	<message key="plugins.theme.custom.pickColour">Scegli il colore</message>
+	<message key="plugins.theme.custom.header">Intestazione</message>
+	<message key="plugins.theme.custom.link">Link</message>
+	<message key="plugins.theme.custom.background">Sfondo</message>
+	<message key="plugins.theme.custom.foreground">Primo piano</message>
+</locale>

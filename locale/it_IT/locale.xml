@@ -3045,5 +3045,6 @@ Il numero nella tabella 3 non è allineato nella prima colonna
 <br />
 <pre>4. FORMATTAZIONE
 Il paragrafo che comincia con "Questo ultimo argomento..." non è allineato</pre></pre>]]></message>
+	<message key="manager.reviewForms.list.description">I moduli di peer review creati qui verranno presentati ai revisori per essere completati, invece del modulo di default che consiste di due caselle di testo vuote, la prima "per l'autore e per il curatore", e la seconda "per il curatore". I moduli di revisione possono essere designati per una sezione specifica della rivista, e i curatori avranno l'opzione di scegliere quale modulo usare nell'assegnare la revisione. In tutti i casi, i curatori avranno l'opzione di includere le revisioni in corrispondenza dell'autore.</message>
 </locale>
 

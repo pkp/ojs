@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.block.subscription.displayName">Modulo degli abbonamenti</message>
+	<message key="plugins.block.subscription.description">Questo plugin fornisce informazioni sugli abbonamenti in un menù laterale.</message>
+	<message key="plugins.block.subscription.blockTitle">Abbonamento</message>
+	<message key="plugins.block.subscription.expires">Scadenza</message>
+	<message key="plugins.block.subscription.providedBy">Accesso fornito da:</message>
+	<message key="plugins.block.subscription.providedByInstitution">Accesso fornito dalla tua istituzione</message>
+	<message key="plugins.block.subscription.comingFromIP">Venendo dall'IP:</message>
+</locale>

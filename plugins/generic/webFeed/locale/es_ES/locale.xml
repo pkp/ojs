@@ -19,9 +19,9 @@
 	<message key="plugins.generic.webfeed.settings.currentIssue">Mostrar elementos del último número publicado</message>
 	<message key="plugins.generic.webfeed.settings.recentArticles">Elementos más recientes</message>
 	<message key="plugins.generic.webfeed.settings.recentItemsRequired">Indique un valor (número natural) para el número de elementos publicados más recientes</message>
-	<message key="plugins.generic.webfeed.settings.issue">Mostrar agregadores sólo en las páginas interiores.</message>
-	<message key="plugins.generic.webfeed.settings.all">Mostrar agregadores en todas las páginas de la revista.</message>
-	<message key="plugins.generic.webfeed.settings.homepage">Mostrar agregadores solamente en la página de inicio y en la página del número.</message>
+	<message key="plugins.generic.webfeed.settings.issue">Mostrar enlaces al feed sólo en las páginas interiores.</message>
+	<message key="plugins.generic.webfeed.settings.all">Mostrar enlaces al feed en todas las páginas de la revista.</message>
+	<message key="plugins.generic.webfeed.settings.homepage">Mostrar enlaces al feed solamente en la página de inicio y en la página del número.</message>
 	<message key="plugins.generic.webfeed.atom.altText">Logo Atom</message>
 	<message key="plugins.generic.webfeed.rss1.altText">Logo RSS1</message>
 	<message key="plugins.generic.webfeed.rss2.altText">Logo RSS2</message>

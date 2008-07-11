@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.customLocale.name">Custom Locale Plugin</message>
+	<message key="plugins.generic.customLocale.description">This plugin enables customization of the default user interface text used by OJS.</message>
+
+	<message key="plugins.generic.customLocale.longDescription">This page lists all locales currently installed for the journal.</message>
+	<message key="plugins.generic.customLocale.localeDescription">This page lists all files that are available for the selected locale.</message>
+	<message key="plugins.generic.customLocale.fileDescription">Enter text into corresponding custom text field. Leave custom text field blank if the default OJS text should be used.</message>
+	<message key="plugins.generic.customLocale.localeName">Locale Name</message>
+	<message key="plugins.generic.customLocale.localeKey">Key</message>
+	<message key="plugins.generic.customLocale.localeKeyValue">Value</message>
+	<message key="plugins.generic.customLocale.customize">Customize</message>
+	<message key="plugins.generic.customLocale.availableLocales">Available Locales</message>
+
+	<message key="plugins.generic.customLocale.locale">{$locale} Locale</message>
+	<message key="plugins.generic.customLocale.localeFiles">Locale Files</message>
+	<message key="plugins.generic.customLocale.file.filename">Filename</message>
+	<message key="plugins.generic.customLocale.file.edit">Editing {$filename}</message>
+	<message key="plugins.generic.customLocale.file.reference">Default Text</message>
+	<message key="plugins.generic.customLocale.file.custom">Custom Text</message>
+</locale>

@@ -13,8 +13,8 @@
   -->
  
 <locale name="en_US" full_name="U.S. English">
-	<message key="plugins.theme.custom.name">Plugin de Pieles Personalizadas</message>
-	<message key="plugins.theme.custom.description">Este plugin implementa una piel personalizable</message>
+	<message key="plugins.theme.custom.name">Plugin de Aspecto Personalizado</message>
+	<message key="plugins.theme.custom.description">Este plugin hace posible la personalización del aspecto.</message>
 	<message key="plugins.theme.custom.notWritable">NOTA: El fichero de hoja de estilos de este plugin, "{$stylesheetFileLocation}", no es escribible actualmente. Este fichero debe ser escribible antes de que el plugin pueda ser utilizado.</message>
 	<message key="plugins.theme.custom.settings">Opciones</message>
 	<message key="plugins.theme.custom.pickColour">Escoja un color</message>

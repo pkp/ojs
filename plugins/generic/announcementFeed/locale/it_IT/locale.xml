@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.announcementfeed.displayName">Plugin dei Feed RSS/Atom per annunci</message>
+	<message key="plugins.generic.announcementfeed.description">Questo plugin produce feed RSS/Atom per la diffusione web per gli annunci della rivista.</message>
+
+	<message key="plugins.generic.announcementfeed.settings">Impostazioni</message>
+	<message key="plugins.generic.announcementfeed.settings.all">Mostra i link ai feeMostra i link ai feed RSS in tutte le pagine della rivista.si.</message>
+	<message key="plugins.generic.announcementfeed.settings.homepage">Mostra i link ai feed RSS solo nella homepage e nella pagina degli annunci</message>
+	<message key="plugins.generic.announcementfeed.settings.announcement">Mostra i link ai feed RSS solo nella pagina degli annunci.</message>
+	<message key="plugins.generic.announcementfeed.settings.recentAnnouncements1">Limita i feed RSS ai</message>
+	<message key="plugins.generic.announcementfeed.settings.recentAnnouncements2">annunci più recenti.</message>
+	<message key="plugins.generic.announcementfeed.settings.recentItemsRequired">Per favore inserisci un numero integrale positivo per gli annunci recenti.</message>
+	<message key="plugins.generic.announcementfeed.atom.altText">Logo dell'atom</message>
+	<message key="plugins.generic.announcementfeed.rss1.altText">Logo del RSS1</message>
+	<message key="plugins.generic.announcementfeed.rss2.altText">Logo del RSS2</message>
+</locale>
