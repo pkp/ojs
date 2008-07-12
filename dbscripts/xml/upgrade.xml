@@ -128,5 +128,6 @@
 		<data file="upgrade/2.2.1_update.xml" />
 		<code function="renamePayPerViewSettings" />
 		<code function="clearDataCache" />
+		<note file="release-notes/README-2.2.1" />
 	</upgrade>
 </install>
