@@ -112,6 +112,14 @@ class TinyMCEPlugin extends GenericPlugin {
 				$fields[] = 'mailingAddress';
 				$fields[] = 'biography';
 				break;
+			case 'manager/editReviewForm':
+			case 'manager/createReviewForm':
+				$fields[] = 'description';
+				break;
+			case 'manager/editReviewFormElement':
+			case 'manager/createReviewFormElement':
+				$fields[] = 'question';
+				break;
 			case 'manager/editSection':
 			case 'manager/updateSection':
 			case 'manager/createSection':
@@ -254,7 +262,7 @@ class TinyMCEPlugin extends GenericPlugin {
 			<script language="javascript" type="text/javascript">
 				tinyMCE_GZ.init({
 					relative_urls : "false",
-					plugins : "paste",
+					plugins : "paste,latex",
 					themes : "advanced",
 					languages : "' . join(',', $localeList) . '",
 					disk_cache : true
@@ -262,7 +270,7 @@ class TinyMCEPlugin extends GenericPlugin {
 			</script>
 			<script language="javascript" type="text/javascript">
 				tinyMCE.init({
-					plugins : "paste",
+					plugins : "paste,latex",
 					mode : "exact",
 					language : "' . String::substr(Locale::getLocale(), 0, 2) . '",
 					elements : "' . $enableFields . '",
@@ -270,7 +278,7 @@ class TinyMCEPlugin extends GenericPlugin {
 					forced_root_block : false,
 					apply_source_formatting : false,
 					theme : "advanced",
-					theme_advanced_buttons1 : "pasteword,bold,italic,underline,bullist,numlist,link,unlink,help,code",
+					theme_advanced_buttons1 : "pasteword,bold,italic,underline,bullist,numlist,link,unlink,help,code,latex",
 					theme_advanced_buttons2 : "",
 					theme_advanced_buttons3 : ""
 				});
