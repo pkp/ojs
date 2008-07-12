@@ -237,6 +237,7 @@ class Upgrade extends Installer {
 			'DevelopedByBlockPlugin',
 			'HelpBlockPlugin',
 			'UserBlockPlugin',
+			'RoleBlockPlugin',
 			'LanguageToggleBlockPlugin',
 			'NavigationBlockPlugin',
 			'FontSizeBlockPlugin',
@@ -429,7 +430,7 @@ class Upgrade extends Installer {
 		$result =& $userSettingsDao->retrieve('SELECT user_id, setting_name, journal_id, setting_value, setting_type FROM user_settings_old');
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
-			$userSettingsDao->update('INSERT INTO user_settings (user_id, setting_name, journal_id, setting_value, setting_type, locale) VALUES (?, ?, ?, ?, ?, ?)', array($row['user_id'], $row['setting_name'], $row['journal_id'], $row['setting_value'], $row['setting_type'], ''));
+			$userSettingsDao->update('INSERT INTO user_settings (user_id, setting_name, journal_id, setting_value, setting_type, locale) VALUES (?, ?, ?, ?, ?, ?)', array($row['user_id'], $row['setting_name'], (int) $row['journal_id'], $row['setting_value'], $row['setting_type'], ''));
 			$result->MoveNext();
 		}
 		$result->Close();
