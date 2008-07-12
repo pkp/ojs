@@ -36,7 +36,10 @@ class ReviewFormDAO extends DAO {
 		if ($journalId !== null) $params[] = (int) $journalId;
 
 		$result =& $this->retrieve (
-			'SELECT	rf.*,
+			'SELECT	rf.review_form_id,
+				rf.journal_id,
+				rf.seq,
+				rf.is_active,
 				COUNT(rac.review_id) AS complete_count,
 				COUNT(rai.review_id) AS incomplete_count
 			FROM	review_forms rf
@@ -51,7 +54,7 @@ class ReviewFormDAO extends DAO {
 				)
 			WHERE	rf.review_form_id = ?
 				' . ($journalId!==null?' AND rf.journal_id = ?':'') . '
-			GROUP BY rf.review_form_id',
+			GROUP BY rf.journal_id, rf.review_form_id, rf.seq, rf.is_active',
 			$params
 		);
 
@@ -219,7 +222,10 @@ class ReviewFormDAO extends DAO {
 	 */
 	function &getJournalReviewForms($journalId) {
 		$result =& $this->retrieveRange(
-			'SELECT	rf.*,
+			'SELECT	rf.review_form_id,
+				rf.journal_id,
+				rf.seq,
+				rf.is_active,
 				COUNT(rac.review_id) AS complete_count,
 				COUNT(rai.review_id) AS incomplete_count
 			FROM	review_forms rf
@@ -233,7 +239,7 @@ class ReviewFormDAO extends DAO {
 					rai.date_confirmed IS NULL
 				)
 			WHERE	rf.journal_id = ?
-			GROUP BY rf.review_form_id
+			GROUP BY rf.journal_id, rf.review_form_id, rf.seq, rf.is_active
 			ORDER BY rf.seq',
 			$journalId
 		);
@@ -250,7 +256,10 @@ class ReviewFormDAO extends DAO {
 	 */
 	function &getJournalActiveReviewForms($journalId, $rangeInfo = null) {
 		$result =& $this->retrieveRange(
-			'SELECT	rf.*,
+			'SELECT	rf.review_form_id,
+				rf.journal_id,
+				rf.seq,
+				rf.is_active,
 				COUNT(rac.review_id) AS complete_count,
 				COUNT(rai.review_id) AS incomplete_count
 			FROM	review_forms rf
@@ -265,7 +274,7 @@ class ReviewFormDAO extends DAO {
 				)
 			WHERE	rf.journal_id = ? AND
 				rf.is_active = 1
-			GROUP BY rf.review_form_id
+			GROUP BY rf.journal_id, rf.review_form_id, rf.seq, rf.is_active
 			ORDER BY rf.seq',
 			$journalId, $rangeInfo
 		);
@@ -282,7 +291,10 @@ class ReviewFormDAO extends DAO {
 	 */
 	function &getJournalUsedReviewForms($journalId, $rangeInfo = null) {
 		$result =& $this->retrieveRange(
-			'SELECT	rf.*,
+			'SELECT	rf.review_form_id,
+				rf.journal_id,
+				rf.seq,
+				rf.is_active,
 				COUNT(rac.review_id) AS complete_count,
 				COUNT(rai.review_id) AS incomplete_count
 			FROM	review_forms rf
@@ -297,8 +309,8 @@ class ReviewFormDAO extends DAO {
 				)
 			WHERE	rf.journal_id = ? AND
 				rf.is_active = 1
-			GROUP BY rf.review_form_id
-			HAVING complete_count > 0 OR incomplete_count > 0
+			GROUP BY rf.journal_id, rf.review_form_id, rf.seq, rf.is_active
+			HAVING COUNT(rac.review_id) > 0 OR COUNT(rai.review_id) > 0
 			ORDER BY rf.seq',
 			$journalId, $rangeInfo
 		);
@@ -315,7 +327,10 @@ class ReviewFormDAO extends DAO {
 	 */
 	function &getJournalUnusedReviewForms($journalId, $rangeInfo = null) {
 		$result =& $this->retrieveRange(
-			'SELECT	rf.*,
+			'SELECT	rf.review_form_id,
+				rf.journal_id,
+				rf.seq,
+				rf.is_active,
 				COUNT(rac.review_id) AS complete_count,
 				COUNT(rai.review_id) AS incomplete_count
 			FROM	review_forms rf
@@ -329,8 +344,8 @@ class ReviewFormDAO extends DAO {
 					rai.date_confirmed IS NULL
 				)
 			WHERE	rf.journal_id = ?
-			GROUP BY rf.review_form_id
-			HAVING complete_count = 0 AND incomplete_count = 0
+			GROUP BY rf.journal_id, rf.review_form_id, rf.seq, rf.is_active
+			HAVING COUNT(rac.review_id) = 0 AND COUNT(rai.review_id) = 0
 			ORDER BY rf.seq',
 			$journalId, $rangeInfo
 		);
@@ -372,7 +387,7 @@ class ReviewFormDAO extends DAO {
 		if ($journalId !== null) $params[] = (int) $journalId;
 
 		$result =& $this->retrieve (
-			'SELECT	rf.*,
+			'SELECT	rf.review_form_id,
 				COUNT(rac.review_id) AS complete_count,
 				COUNT(rai.review_id) AS incomplete_count
 			FROM	review_forms rf
