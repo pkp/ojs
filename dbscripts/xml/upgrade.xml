@@ -13,8 +13,6 @@
 
 <install version="2.2.1.0">
 	<upgrade minversion="2.0.0.0" maxversion="2.2.1.0">
-		<data file="upgrade/2.2.1_update.xml" />
-		<code function="renamePayPerViewSettings" />
 		<!-- Correct null public issue IDs; this caused problems with
 		     2.x -> 2.2.0 upgrades using public issue IDs.-->
 		<data file="upgrade/public_issue_ids.xml" />
@@ -119,6 +117,11 @@
 	<upgrade minversion="2.0.0.0" maxversion="2.2.0.0">
 		<!-- Fix bug #3321 (supportedLocales setting maybe missing) -->
 		<code function="ensureSupportedLocales" />
+	</upgrade>
+
+	<upgrade minversion="2.0.0.0" maxversion="2.2.1.0">
+		<data file="upgrade/2.2.1_update.xml" />
+		<code function="renamePayPerViewSettings" />
 		<code function="clearDataCache" />
 	</upgrade>
 </install>

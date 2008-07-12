@@ -12,25 +12,6 @@
   * $Id$
   -->
 <data>
-	<!-- Bug #3289: Allow for suppression of author infomation in ToC -->
-	<sql>
-		<!-- Syntax for MySQL. -->
-		<query driver="mysql">
-			ALTER TABLE sections ADD COLUMN hide_author TINYINT NOT NULL DEFAULT 0
-		</query>
-		<query driver="mysql">
-			ALTER TABLE articles ADD COLUMN hide_author TINYINT NOT NULL DEFAULT 0
-		</query>
-
-		<!-- Syntax for PostgreSQL. -->
-		<query driver="postgres7">
-			ALTER TABLE sections ADD COLUMN hide_author SMALLINT NOT NULL DEFAULT 0
-		</query>
-		<query driver="postgres7">
-			ALTER TABLE articles ADD COLUMN hide_author SMALLINT NOT NULL DEFAULT 0
-		</query>
-	</sql>
-
 	<!-- Bug #3488: Add RSS feed for thesis abstracts -->
 	<sql>
 		<!-- Syntax for MySQL. -->
@@ -66,47 +47,6 @@
 		<!-- Syntax for PostgreSQL. -->
 		<query driver="postgres7">
 			ALTER TABLE sections RENAME COLUMN abstracts_disabled TO abstracts_not_required
-		</query>
-	</sql>
-
-	<!-- Bug #3580: Add ability to indicate double issues -->
-	<sql>
-		<!-- Syntax for MySQL. -->
-		<query driver="mysql">
-			ALTER TABLE issues CHANGE COLUMN number number VARCHAR(10) 
-		</query>
-
-		<!-- Syntax for PostgreSQL. -->
-		<query driver="postgres7">
-			ALTER TABLE issues ADD COLUMN number_new VARCHAR(10)
-		</query>
-		<query driver="postgres7">
-			UPDATE issues SET number_new = CAST(number AS VARCHAR)
-		</query>
-		<query driver="postgres7">
-			ALTER TABLE issues DROP COLUMN number
-		</query>
-		<query driver="postgres7">
-			ALTER TABLE issues RENAME COLUMN number_new TO number
-		</query>
-	</sql>
-
-	<!-- Bug #3293: Enable user comments on a per section/article basis -->
-	<sql>
-		<!-- Syntax for MySQL. -->
-		<query driver="mysql">
-			ALTER TABLE sections ADD COLUMN disable_comments TINYINT NOT NULL DEFAULT 0
-		</query>
-		<query driver="mysql">
-			ALTER TABLE articles ADD COLUMN comments_status TINYINT NOT NULL DEFAULT 0
-		</query>
-
-		<!-- Syntax for PostgreSQL. -->
-		<query driver="postgres7">
-			ALTER TABLE sections ADD COLUMN disable_comments SMALLINT NOT NULL DEFAULT 0
-		</query>
-		<query driver="postgres7">
-			ALTER TABLE articles ADD COLUMN comments_status SMALLINT NOT NULL DEFAULT 0
 		</query>
 	</sql>
 

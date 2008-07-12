@@ -60,6 +60,10 @@ class VirtualArrayIterator extends ItemIterator {
 	 * @return object
 	 */
 	function &next() {
+		if (!is_array($this->theArray)) {
+			$nullVar = null;
+			return $nullVar;
+		}
 		$value = &current($this->theArray);
 		if (next($this->theArray)==null) {
 			$this->theArray = null;

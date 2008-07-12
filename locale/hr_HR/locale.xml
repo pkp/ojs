@@ -1745,7 +1745,8 @@ Sadržaj priložene datoteke možete provjeriti ukoliko kliknete na njezino ime.
 	<message key="author.suppFile.suppFilePublicIdentificationExists">Javna dopunska identifikacija datoteke već postoji.</message>
 	<message key="author.suppFile.publicSuppFileIdentifier">Identifikator javne dopunske datoteke</message>
 	
-	<!--  Article Submission Step 5  --><message key="author.submit.confirmationDescription">Završili ste prva četiri koraka postupka prijave. Kliknite <i>Dovrši prijavu</i> kako biste predali rukopis vašeg priloga za časopis {$journalTitle}. O tome ćete primiti potvrdu putem e-pošte. Informacije o kretanju prijavljenog priloga kroz urednički postupak moći ćete pratiti prijavljivanjem na mrežnu stranicu časopisa. Hvala vam na interesu za objavljivanje vašeg rada u časopisu {$journalTitle}.</message>
+	<!--  Article Submission Step 5  -->
+	<message key="author.submit.confirmationDescription"><![CDATA[Završili ste prva četiri koraka postupka prijave. Kliknite <i>Dovrši prijavu</i> kako biste predali rukopis vašeg priloga za časopis {$journalTitle}. O tome ćete primiti potvrdu putem e-pošte. Informacije o kretanju prijavljenog priloga kroz urednički postupak moći ćete pratiti prijavljivanjem na mrežnu stranicu časopisa. Hvala vam na interesu za objavljivanje vašeg rada u časopisu {$journalTitle}.]]></message>
 	<message key="author.submit.noFiles">Nema datoteka priloženih ovoj prijavi.</message>
 	<message key="author.submit.filesSummary">Kratak pregled datoteke</message>
 	<message key="author.submit.finishSubmission">Dovrši prijavu</message>
