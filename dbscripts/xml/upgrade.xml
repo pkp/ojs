@@ -75,8 +75,8 @@
 	</upgrade>
 
 	<upgrade minversion="2.0.0.0" maxversion="2.2.1.0">
-		<!-- 2.0.x to 2.0.2 -->
-		<data file="upgrade/2.0.2_preupdate.xml" />
+		<!-- 2.x to 2.2.1 -->
+		<data file="upgrade/2.2.1_preupdate.xml" />
 	</upgrade>
 
 	<!-- Common upgrade tasks -->
