@@ -74,6 +74,11 @@
 		<data file="upgrade/2.2.0_usersettings.xml" />
 	</upgrade>
 
+	<upgrade minversion="2.0.0.0" maxversion="2.2.1.0">
+		<!-- 2.0.x to 2.0.2 -->
+		<data file="upgrade/2.0.2_preupdate.xml" />
+	</upgrade>
+
 	<!-- Common upgrade tasks -->
 	<schema file="ojs_schema.xml" />
 

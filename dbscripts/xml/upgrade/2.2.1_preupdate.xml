@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../dtd/xmldata.dtd">
+
+<!--
+  * 2.2.1_preupdate.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 2.2.1 database updates XML file (run before schema is reconciled).
+  *
+  * $Id$
+  -->
+<data>
+	<!-- Bug #3461: "Requiring Abstracts" changed to be more versatile -->
+	<sql>
+		<!-- Syntax for MySQL. -->
+		<query driver="mysql">
+			ALTER TABLE sections CHANGE COLUMN abstracts_disabled abstracts_not_required TINYINT NOT NULL DEFAULT 0
+		</query>
+
+		<!-- Syntax for PostgreSQL. -->
+		<query driver="postgres7">
+			ALTER TABLE sections RENAME COLUMN abstracts_disabled TO abstracts_not_required
+		</query>
+	</sql>
+</data>
