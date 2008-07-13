@@ -2632,7 +2632,7 @@ After you are finished with your revisions, rename the file from AuthorNameQA.do
 	<message key="manager.statistics.statistics.registeredReaders">Eingeschriebene Leser</message>
 	<message key="manager.statistics.statistics.articleViews">Anzahl der Durchsichten (nur für Autoren)</message>
 	<message key="manager.statistics.reports.description">OJS dokumentiert im Einzelnen über einen bestimmten Zeitraum die Vorgänge bei eingegebenen Beiträgen aus der jeweiligen Perspektive der Eingeber, Redakteure, Gutachter, Abteilungen. Das Format ist CSV, die Dateien können mit einem Tabellenprogramm betrachtet werden.</message>
-	<message key="manager.plugins.description">Quf dieser Seite kann der Zeitschriftenverwalter alle installierten Zusatzprogramme überprüfen und konfigurieren. Die Programmeinschübe sind nach ihrer Funktion in Kategorien geordnet. Weiter unten die Kategorien und in jeder Kategorie die installierten Programmeinschübe (Plugins).</message>
+	<message key="manager.plugins.description">Auf dieser Seite kann der Zeitschriftenverwalter alle installierten Zusatzprogramme überprüfen und konfigurieren. Die Programmeinschübe sind nach ihrer Funktion in Kategorien geordnet. Weiter unten die Kategorien und in jeder Kategorie die installierten Programmeinschübe (Plugins).</message>
 	<message key="manager.payments">Zahlungen</message>
 	<message key="manager.payment.enable">Aktivieren</message>
 	<message key="manager.payment.action">Ausführung</message>
