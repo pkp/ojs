@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.customLocale.name">Plugin de Customização de Idioma</message>
+	<message key="plugins.generic.customLocale.description">Este plugin permite a customização do idioma da interface padrão do sistema.</message>
+
+	<message key="plugins.generic.customLocale.longDescription">Esta página lista todos os idiomas atualmente instalados na revista.</message>
+	<message key="plugins.generic.customLocale.localeDescription">Esta página lista todos os arquivos disponíveis para o idioma selecionado.</message>
+	<message key="plugins.generic.customLocale.fileDescription">Informe o texto no campo correspondente. Deixe o campo em branco para utilizar a tradução original.</message>
+	<message key="plugins.generic.customLocale.localeName">Nome da Tradução</message>
+	<message key="plugins.generic.customLocale.localeKey">Chave</message>
+	<message key="plugins.generic.customLocale.localeKeyValue">Valor</message>
+	<message key="plugins.generic.customLocale.customize">Customizar</message>
+	<message key="plugins.generic.customLocale.availableLocales">Idiomas disponíveis</message>
+
+	<message key="plugins.generic.customLocale.locale">Idioma {$locale}</message>
+	<message key="plugins.generic.customLocale.localeFiles">Arquivos de tradução</message>
+	<message key="plugins.generic.customLocale.file.filename">Nome do arquivo</message>
+	<message key="plugins.generic.customLocale.file.edit">Editando {$filename}</message>
+	<message key="plugins.generic.customLocale.file.reference">Texto original</message>
+	<message key="plugins.generic.customLocale.file.custom">Texto customizado</message>
+</locale>

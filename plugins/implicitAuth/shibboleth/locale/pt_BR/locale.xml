@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * Contributed by Dan Galewsky, University of Texas
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.implicitAuth.shibboleth.displayName">ShibAuthPlugin</message>
+	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Este é um plugin de alcance geral, habilitado no arquivo de configuração do sistema.</message>
+</locale>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2005 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.importexport.METSExport.displayName">Plugin de Exportação METS XML</message>
+	<message key="plugins.importexport.METSExport.description">Exportar revistas no formato METS XML</message>
+	<message key="plugins.importexport.METSExport.settings">Configurações</message>
+	<message key="plugins.importexport.METSExport.export">Exportar Dados</message>
+	<message key="plugins.importexport.METSExport.export.issues">Exportar Edições</message>
+	<message key="plugins.importexport.METSExport.export.selectIssue">Escolha a edição a ser exportada.</message>
+	<message key="plugins.importexport.METSExport.export.error.IssuesNotFound">Nenhuma edição encontrada com o ID "{$issueId}" especificado.</message>
+	<message key="plugins.importexport.METSExport.export.error.unknownIssue">Caminho da revista {$journalPath} desconhecido</message>
+	<message key="plugins.importexport.METSExport.settings.FContent">Utilizar codificação base64 para wrapper de conteúdo</message>
+	<message key="plugins.importexport.METSExport.settings.FLocat">Utilizar URL do bitsream para o wrapper de conteúdo</message>
+	<message key="plugins.importexport.METSExport.settings.organization">METS:agente elemento organização atributo</message>
+	<message key="plugins.importexport.METSExport.settings.preservationLevel">Nível de preservação PREMIS</message>
+	<message key="plugins.importexport.METSExport.settings.exportSuppFiles">Exportar documentos suplementares</message>
+</locale>

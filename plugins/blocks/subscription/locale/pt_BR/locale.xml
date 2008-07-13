@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.block.subscription.displayName">Bloco de Assinatura</message>
+	<message key="plugins.block.subscription.description">Este plugin oferece informações sobre a assinatura nas barras laterais.</message>
+	<message key="plugins.block.subscription.blockTitle">Assinatura</message>
+	<message key="plugins.block.subscription.expires">Expiração</message>
+	<message key="plugins.block.subscription.providedBy">Acesso fornecido por:</message>
+	<message key="plugins.block.subscription.providedByInstitution">Acesso fornecido pela instituição</message>
+	<message key="plugins.block.subscription.comingFromIP">IP de proveniência:</message>
+</locale>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.theme.custom.name">Plugin de Tema Customizado</message>
+	<message key="plugins.theme.custom.description">Este plugin implementa um tema customizado.</message>
+	<message key="plugins.theme.custom.notWritable">NOTA: A folha de estilos deste plugin, "{$stylesheetFileLocation}", não possui permissão de escrita. Este arquivo deve possuir permissão de escrita para poder utilizar o plugin.</message>
+	<message key="plugins.theme.custom.settings">Configurações</message>
+	<message key="plugins.theme.custom.pickColour">Escolha a cor</message>
+	<message key="plugins.theme.custom.header">Cabeçalho</message>
+	<message key="plugins.theme.custom.link">Link</message>
+	<message key="plugins.theme.custom.background">Fundo traseiro</message>
+	<message key="plugins.theme.custom.foreground">Fundo dianteiro</message>
+</locale>
