@@ -232,7 +232,7 @@ class ADODB2_postgres extends ADODB_DataDict {
 				$insertflds[] = $fld->name;
 				// identify the sequence name and the fld its on
 				if (isset($fld->primary_key) && $fld->primary_key && $fld->has_default &&
-					preg_match("/nextval\('(?:[^']+\.)*([^']+)'::text\)/",$fld->default_value,$matches)) {
+					preg_match("/nextval\('(?:[^']+\.)*([^']+)'::(text|regclass)\)/",$fld->default_value,$matches)) {
 					$seq_name = $matches[1];
 					$seq_fld = $fld->name;
 				}
