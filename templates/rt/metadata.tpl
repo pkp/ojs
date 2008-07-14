@@ -76,8 +76,8 @@
 	<td>5.</td>
 	<td>{translate key="rt.metadata.dublinCore.publisher"}</td>
 	<td>{translate key="rt.metadata.pkp.publisher"}</td>
-	{assign var=pubUrl value=$journalSettings.publisher.url|escape}
-	<td>{if $pubUrl}<a target="_new" href="{$pubUrl}">{/if}{$journalSettings.publisher.institution|escape}{if $pubUrl}</a>{/if}</td>
+	{assign var=pubUrl value=$currentJournal->getSetting('publisherUrl')|escape}
+	<td>{if $pubUrl}<a target="_new" href="{$pubUrl}">{/if}{$currentJournal->getSetting('publisherInstitution')|escape}{if $pubUrl}</a>{/if}</td>
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
 <tr valign="top">
