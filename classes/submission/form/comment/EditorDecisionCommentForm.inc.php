@@ -13,8 +13,7 @@
  */
 
 // $Id$
- *
- */
+
 
 import("submission.form.comment.CommentForm");
 
