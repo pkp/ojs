@@ -1,6 +1,6 @@
 OJS 2.2.1 Release Notes
 CVS tag: ojs-2_2_1-0
-Release date: June 13, 2008
+Release date: Jul 14, 2008
 =================================
 
 
@@ -20,8 +20,184 @@ New config.inc.php parameters:
 
 New Features
 ------------
-	- #xxxx# Pending
+	- #2313# Add suggestion to list with DOAJ to Setup
+	- #2968# Add support for logo ALT tags
+	- #3222# Add zh_TW locale
+	- #3243# Update tools/migrate to report user import conflicts
+	- #3264# Allow OpenX config file path to be specified
+	- #3287# Add Greek (el_GR) locale.
+	- #3325# Add support for anchors in ojs:// URLs
+	- #3400# Add widget to change publication date on Issue Data page
+	- #3422# Thumbnails for journals in multi-journal site view
+	- #3461# "Requiring Abstracts" changed to be more versatile.
+	- #3534# Add COinS support
+	- #3535# Add custom theme plugin
+	- #3536# Add commenting link from bottom of article page
+	- #3537# Add profile page for commenting users
+	- #3538# Add error to native import handling when upload fails
+	- #3547# Add form-based reviews
+	- #3558# Add Shibboleth support
+	- #3575# Prepare Doxygen API docs for publishing on pkp.sfu.ca
+	- #3602# Allow IPv6 IP addresses in sessions table
+	- #3653# Add Norwegian support
+	- #3531# Add help for translator plugin
+	- #2253# Access content published prior to subscription expiry date
+	- #3231# Request to add a public ID for article galley files
+	- #3235# Support redirection for imported OJS1 content to OJS2 urls
+	- #3249# Issue and article thumbnails
+	- #3256# CLI merge users
+	- #3289# allow for suppression of author infomation in ToC
+	- #3293# Enable user comments on a per section/article basis
+	- #3303# allow more types of uploadable media in HTML galleys
+	- #3324# Display current issue RSS feed on homepage
+	- #3362# Add ability to style table of contents listing via CSS
+	- #3378# Default filter for submissions based on editor assignment
+	- #3396# Subscription status block
+	- #3435# Font sizer in article view
+	- #3488# Add RSS feed for thesis abstracts
+	- #3516# Australian METS profile export/gateway plugin
+	- #3532# Add ability to style announcements listing
+	- #3550# Add date posted to announcement display
+	- #3551# Add search for subscriptions
+	- #3580# Add ability to indicate double issues
+	- #3436# Add alt text for access logos
 
 Bug Fixes
 ---------
-	- #xxxx# Pending
+	- #3565# Author can not register
+	- #3631# Can't install OJS (SQL errors)
+	- #3613# DBERROR: ERROR: invalid input syntax for integer...
+	- #3617# Failure deleting galley on PostgreSQL install with XML Galley Plugin
+	- #2640# Incorrect URL(s) in help files
+	- #2708# Some authors can edit metadata; others cannot
+	- #3161# LDAP authentication plugin can't work with Active Directory
+	- #3186# TinyMCE uses relative paths inappropriately
+	- #3190# Create Reviewer fatal error
+	- #3195# Call-time pass by reference in CMS plugin
+	- #3199# BibTeX citation cleanup
+	- #3200# Galley fallback to primary locale not working for readers
+	- #3202# Upgrade does not localize home/page title logos
+	- #3205# Payments and "comments to editor" on step 5
+	- #3207# Grep for potential XSS problems
+	- #3210# Some actions in tables are not separated using &nbsp;|&nbsp;
+	- #3211# typos in locale.xml
+	- #3212# TinyMCE functionality missing from Journal Setup Step 4
+	- #3213# Date check for setDueDate is broken
+	- #3214# templates/admin/journals.tpl contains pre-iterator code
+	- #3215# Request::getUserDateVar does not respect AM/PM
+	- #3219# Blank public IDs saved as empty strings rather than NULLs
+	- #3220# Misc. locale problems in OJS1 import
+	- #3221# Font Size Settings do not work in fr_CA locale
+	- #3223# Specialinvestor becomes bizterms
+	- #3224# Localization of OJS 1.x settings broken beyond Setup pg. 1
+	- #3227# 1.x migration missing pages, affiliations (?), publicatio...
+	- #3232# assoc_id can't be null if inserting in a postgresql table
+	- #3236# Change author naming structure in Google Scholar metadata
+	- #3239# Site logo upload does not save width and height
+	- #3240# Site title/logo setting does not properly track type
+	- #3246# "By Author" at site-wide level does not specify journal
+	- #3247# Note add/edit page unnecessarily queries all notes
+	- #3259# Wrong maxlength values for userUrl and affiliation textboxes
+	- #3262# author does not see article view count
+	- #3266# config.TEMPLATE.inc.php - "string" should be "strong"
+	- #3273# Unconfigured author payments leads to double line
+	- #3275# upgrade script adds values to Setup step 1.5: Publisher
+	- #3278# Invalid redirect on [section]editor's fee waive button
+	- #3281# Confirmation email BCC has parameters in wrong order
+	- #3288# Update English currencies list
+	- #3680# "Publisher" field empty in "Indexing Metadata" RT
+	- #3291# Webfeed browser RSS URLs not valid
+	- #3305# Non SA JMs cannot access COUNTER stats
+	- #3312# Payment settings form needs labels for the checkboxes
+	- #3313# X-Originating-IP not always properly set in outgoing emails
+	- #3315# miscellaneous stylesheet fixes
+	- #3321# Galley upload form languages list can be empty
+	- #3323# ItemIterator methods commented out
+	- #3345# Custom issue ordering misbehaves when new issues published
+	- #3359# Custom About Items / TinyMCE not working (Setup page 2)
+	- #3360# Access logo transparency grey in IE
+	- #3361# Differentiate access logos from article images via CSS
+	- #3373# Reference inconsistency: *Cache::setEntireCache function
+	- #3375# Spanish for "Revisions Required" decision incorrect
+	- #3381# 2.1.1 -> 2.2 Upgrade process column name mishap
+	- #3387# OJS1 import does not import all article reviews
+	- #3392# Manual install still tries to use site "title" column
+	- #3394# Editor-only sections available to submitting authors
+	- #3395# 2.2.0_preupdate.xml contains PSQL 8.x SQL
+	- #3398# Null issue publication date exports as 1969 for Crossref
+	- #3402# ADODB "Replace" function rounds "numbers"
+	- #3407# getPublishedArticles called by publishIssue w/wrong params
+	- #3417# 2.1.1 -> 2.2 upgrade assumes alternate locales set
+	- #3428# Warning message on author supp file download
+	- #3432# cms plugin not saving multiple languages
+	- #3453# CMS plugin cannot be disabled from sidebar
+	- #3454# Generic plugins that register Blocks loaded out of sequence
+	- #3466# Crossref plugin abbrev_title does not appear
+	- #3478# OAI DAO SQL error
+	- #3489# Author can edit metadata on published article
+	- #3494# Site map includes journals that are not yet enabled
+	- #3514# Bugs when Section Editor limited to Review or Editing only
+	- #3539# Import mislocates coverage & indexing nodes
+	- #3541# TinyMCE adds problematic paragraph tags
+	- #3548# Current Issue RSS displays only last author
+	- #3549# Formatting and links removed from RSS feeds
+	- #3552# Empty stats page in About the Journal
+	- #3553# Remove user disciplines
+	- #3557# Fix copyright dates to 2008
+	- #3561# Invalid UTF-8 sequences cause strings to become empty
+	- #3567# plugin management missing report plugin keys
+	- #3569# APA citation produces blank page
+	- #3570# Variable test inverted on email recipients count check
+	- #3577# Wording changes
+	- #3582# authorsArticleId should check published article state
+	- #3584# Issue Cover image not displaying on Current view
+	- #3585# Editor unable to change display order of back issues
+	- #3588# RT "Requires login" note appears in a <ul> without an <li>
+	- #3589# Import/export plugin tune-ups
+	- #3591# Archive list separators bunch up at the top
+	- #3596# RT add comment display
+	- #3606# problems validating Export Users XML
+	- #3607# User settings primary key needs to include journal id
+	- #3609# Remove Google Scholar plugin
+	- #3610# Site header image not completely deleted
+	- #3611# CAST(... AS CHAR(1)) SQL syntax not allowed in MySQL < 4.1
+	- #3616# DB Error: ERROR: relation "reviews" does not exist deleti...
+	- #3618# Add comment to unpublished article produces fatal error
+	- #3620# "Create Reviewer" cancel button redirect is incorrect
+	- #3621# OJS version missing from RSS feeds
+	- #3627# COUNTER stats menu addition should check for admin role
+	- #3629# Remove <noscript> code from phpmyvisites page tag
+	- #3633# Can't delete notes in Publisher Notes
+	- #3634# Submitting articles
+	- #3635# Error in link to Section Editor
+	- #3637# Problems with smaller screen resolution
+	- #3651# access key styles repeated in common.css
+	- #3654# Not receiving 'Notify Users' emails
+	- #3656# Long journal title line spacing
+	- #3659# Javascript forms don't work in IE6
+	- #3675# Role-specific block plugin does not auto-install on upgrade
+	- #3679# Announcement Feed plugins & management
+	- #3198# Sticky cancel button in Create New Reviewer form
+	- #3296# Disable display of empty additional navigation items
+	- #3298# Header image border style hard-coded in header template
+	- #3301# Misc. XHTML markup errors
+	- #3302# Pay-per-view wording misleading
+	- #3304# Hard-coded style for issue cover image, homepage image
+	- #3309# Web feed plugin fixed in block order
+	- #3320# Web feed plugin makes feed available on all pages
+	- #3388# Reviews imported from OJS1 include <br /> in reviews
+	- #3434# Issue select menu spills over into right sidebar
+	- #3452# 'Editor' breadcrumb for Section Editor
+	- #3498# TinyMCE disappears when saving subscription policies
+	- #3509# TinyMCE disappears in submission step 1 & 2
+	- #3546# Author Bio not displayed
+	- #3559# Flex-width right sidebar spacing in IE6
+	- #3564# Suppress undefined offset notices in OJS1 redirect scripts
+	- #3649# 'To' field lost adding attachment to reviewer request email
+	- #3666# Journal setup heading titles don't align with numbers
+	- #2181# Custom localization strings
+	- #2550# 'Return to Search Results' navigation link
+	- #3160# Improvement on submission notes page
+	- #3292# Announcements RSS plugin
+	- #3460# Upgrade to Google Analytics
+	- #3542# Update to latest TinyMCE
