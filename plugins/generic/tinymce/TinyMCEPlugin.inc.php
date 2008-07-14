@@ -17,8 +17,8 @@
 
 import('classes.plugins.GenericPlugin');
 
-define('TINYMCE_INSTALL_PATH', 'lib/tinymce');
-define('TINYMCE_JS_PATH', TINYMCE_INSTALL_PATH . '/jscripts/tiny_mce');
+define('TINYMCE_INSTALL_PATH', 'lib' . DIRECTORY_SEPARATOR . 'pkp' . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'tinymce');
+define('TINYMCE_JS_PATH', TINYMCE_INSTALL_PATH . DIRECTORY_SEPARATOR . 'jscripts' . DIRECTORY_SEPARATOR . 'tiny_mce');
 
 class TinyMCEPlugin extends GenericPlugin {
 	/**

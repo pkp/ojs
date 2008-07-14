@@ -21,10 +21,10 @@
 
 
 /* This definition is required by Smarty */
-define('SMARTY_DIR', Core::getBaseDir() . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'smarty' . DIRECTORY_SEPARATOR);
+define('SMARTY_DIR', Core::getBaseDir() . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'pkp' . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'smarty' . DIRECTORY_SEPARATOR);
 
-require_once('smarty/Smarty.class.php');
-require_once('smarty/plugins/modifier.escape.php'); // Seems to be needed?
+require_once('Smarty.class.php');
+require_once('plugins/modifier.escape.php'); // Seems to be needed?
 
 import('search.ArticleSearch');
 

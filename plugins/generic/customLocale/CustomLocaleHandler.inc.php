@@ -78,7 +78,7 @@ class CustomLocaleHandler extends Handler {
 		$templateMgr =& TemplateManager::getManager();
 
 		import('file.FileManager');
-		import('i18n.EditableLocaleFile');
+		import('file.EditableLocaleFile');
 		$journal = Request::getJournal();
 		$journalId = $journal->getJournalId();
 		$publicFilesDir = Config::getVar('files', 'public_files_dir');
@@ -144,7 +144,7 @@ class CustomLocaleHandler extends Handler {
 
 		// Create empty custom locale file if it doesn't exist
 		import('file.FileManager');
-		import('i18n.EditableLocaleFile');
+		import('file.EditableLocaleFile');
 		if (!FileManager::fileExists($customFilePath)) {
 			$numParentDirs = substr_count($customFilePath, DIRECTORY_SEPARATOR); 
 			$parentDirs = '';
@@ -153,7 +153,7 @@ class CustomLocaleHandler extends Handler {
 			}
 
 			$newFileContents = '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
-			$newFileContents .= '<!DOCTYPE locale SYSTEM "' . $parentDirs . 'locale' . DIRECTORY_SEPARATOR . 'locale.dtd' . '">' . "\n";
+			$newFileContents .= '<!DOCTYPE locale SYSTEM "' . $parentDirs . 'lib' . DIRECTORY_SEPARATOR . 'pkp' . DIRECTORY_SEPARATOR . 'dtd' . DIRECTORY_SEPARATOR . 'locale.dtd' . '">' . "\n";
 			$newFileContents .= '<locale name="' . $locale . '">' . "\n";
 			$newFileContents .= '</locale>';
 			FileManager::writeFile($customFilePath, $newFileContents);

@@ -94,7 +94,7 @@ class genTestLocale extends CommandLineTool {
 
 		fwrite($fp,
 					"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" .
-					"<!DOCTYPE locale SYSTEM \"../locale.dtd\">\n\n" .
+					"<!DOCTYPE locale SYSTEM \"../../lib/pkp/dtd/locale.dtd\">\n\n" .
 					"<!--\n" .
 					"  * locale.xml\n" .
 					"  *\n" .

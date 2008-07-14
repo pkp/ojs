@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE install SYSTEM "dtd/install.dtd">
+<!DOCTYPE install SYSTEM "../../lib/pkp/dtd/install.dtd">
 <!--
   * upgrade.xml
   *

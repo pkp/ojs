@@ -39,8 +39,9 @@ ini_set('include_path', '.'
 	. ENV_SEPARATOR . BASE_SYS_DIR . '/includes'
 	. ENV_SEPARATOR . BASE_SYS_DIR . '/classes'
 	. ENV_SEPARATOR . BASE_SYS_DIR . '/pages'
-	. ENV_SEPARATOR . BASE_SYS_DIR . '/lib'
-	. ENV_SEPARATOR . BASE_SYS_DIR . '/lib/smarty'
+	. ENV_SEPARATOR . BASE_SYS_DIR . '/lib/pkp/classes'
+	. ENV_SEPARATOR . BASE_SYS_DIR . '/lib/pkp/lib/adodb'
+	. ENV_SEPARATOR . BASE_SYS_DIR . '/lib/pkp/lib/smarty'
 	. ENV_SEPARATOR . ini_get('include_path')
 );
 

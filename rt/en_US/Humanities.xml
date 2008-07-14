@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE version SYSTEM "../rt-version.dtd">
+<!DOCTYPE version SYSTEM "../../lib/pkp/dtd/rtVersion.dtd">
 
 <!--
   * Humanities.xml

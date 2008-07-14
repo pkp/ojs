@@ -52,6 +52,7 @@
 // $Id$
 
 
+define('INDEX_FILE_LOCATION', __FILE__);
 /**
  * Handle a new request.
  */

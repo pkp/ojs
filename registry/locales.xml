@@ -14,7 +14,7 @@
   * $Id$
   -->
 
-<!DOCTYPE locales SYSTEM "../dbscripts/xml/dtd/locales.dtd">
+<!DOCTYPE locales SYSTEM "../lib/pkp/dtd/locales.dtd">
 
 <locales>
 	<locale key="de_DE" name="Deutsch (Deutschland)"/>
