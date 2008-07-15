@@ -15,7 +15,8 @@
 // $Id$
 
 
-import ('submission.author.AuthorAction');
+import('submission.author.AuthorAction');
+import('core.Handler');
 
 class AuthorHandler extends Handler {
 

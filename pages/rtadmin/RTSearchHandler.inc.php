@@ -64,6 +64,7 @@ class RTSearchHandler extends RTAdminHandler {
 
 			$templateMgr->assign_by_ref('version', $version);
 			$templateMgr->assign_by_ref('context', $context);
+			import('core.ArrayItemIterator');
 			$templateMgr->assign_by_ref('searches', new ArrayItemIterator($context->getSearches(), $rangeInfo->getPage(), $rangeInfo->getCount()));
 
 			$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.contexts');

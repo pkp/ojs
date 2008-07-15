@@ -15,6 +15,8 @@
 // $Id$
 
 
+import('core.Handler');
+
 class UserHandler extends Handler {
 
 	/**

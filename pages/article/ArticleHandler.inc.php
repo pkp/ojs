@@ -18,6 +18,7 @@
 
 import('rt.ojs.RTDAO');
 import('rt.ojs.JournalRT');
+import('core.Handler');
 
 class ArticleHandler extends Handler {
 

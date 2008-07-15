@@ -16,6 +16,7 @@
 
 
 import ('submission.copyeditor.CopyeditorAction');
+import('core.Handler');
 
 class CopyeditorHandler extends Handler {
 

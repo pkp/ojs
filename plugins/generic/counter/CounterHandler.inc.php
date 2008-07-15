@@ -15,6 +15,8 @@
 // $Id$
 
 
+import('core.Handler');
+
 class CounterHandler extends Handler {
 	/**
 	 * Display the main log analyzer page.
@@ -66,6 +68,7 @@ class CounterHandler extends Handler {
 			$page = 1;
 			$count = min(count($log), $journal->getSetting('itemsPerPage'));
 		}
+		import('core.ArrayItemIterator');
 		$logIterator = &new ArrayItemIterator($log, $page, $count);
 
 		$templateManager = &TemplateManager::getManager();

@@ -16,6 +16,7 @@
 
 
 import ('issue.IssueAction');
+import('core.Handler');
 
 class IssueHandler extends Handler {
 

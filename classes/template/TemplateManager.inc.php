@@ -424,6 +424,7 @@ class TemplateManager extends Smarty {
 	 * @return numerical help topic id
 	 */
 	function smartyGetHelpId($params, &$smarty) {
+		import('help.Help');
 		$help =& Help::getHelp();
 		if (isset($params) && !empty($params)) {
 			if (isset($params['key'])) {
@@ -451,6 +452,7 @@ class TemplateManager extends Smarty {
 	 * @return anchor link to related help topic
 	 */
 	function smartyHelpTopic($params, &$smarty) {
+		import('help.Help');
 		$help =& Help::getHelp();
 		if (isset($params) && !empty($params)) {
 			$translatedKey = isset($params['key']) ? $help->translate($params['key']) : $help->translate('');

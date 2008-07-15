@@ -58,6 +58,7 @@ class RTContextHandler extends RTAdminHandler {
 
 			$templateMgr->assign_by_ref('version', $version);
 
+			import('core.ArrayItemIterator');
 			$templateMgr->assign_by_ref('contexts', new ArrayItemIterator($version->getContexts(), $rangeInfo->getPage(), $rangeInfo->getCount()));
 
 			$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.contexts');

@@ -16,6 +16,7 @@
 
 
 import('submission.layoutEditor.LayoutEditorAction');
+import('core.Handler');
 
 class LayoutEditorHandler extends Handler {
 	/**

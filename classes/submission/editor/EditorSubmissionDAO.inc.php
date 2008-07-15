@@ -409,6 +409,7 @@ class EditorSubmissionDAO extends DAO {
 		unset($result);
 
 		if (isset($rangeInfo) && $rangeInfo->isValid()) {
+			import('core.ArrayItemIterator');
 			$returner = &new ArrayItemIterator($editorSubmissions, $rangeInfo->getPage(), $rangeInfo->getCount());
 		} else {
 			$returner = &new ArrayItemIterator($editorSubmissions);
@@ -471,6 +472,7 @@ class EditorSubmissionDAO extends DAO {
 		unset($result);
 
 		if (isset($rangeInfo) && $rangeInfo->isValid()) {
+			import('core.ArrayItemIterator');
 			$returner = &new ArrayItemIterator($editorSubmissions, $rangeInfo->getPage(), $rangeInfo->getCount());
 		} else {
 			$returner = &new ArrayItemIterator($editorSubmissions);
@@ -541,6 +543,7 @@ class EditorSubmissionDAO extends DAO {
 		unset($result);
 
 		if (isset($rangeInfo) && $rangeInfo->isValid()) {
+			import('core.ArrayItemIterator');
 			$returner = &new ArrayItemIterator($editorSubmissions, $rangeInfo->getPage(), $rangeInfo->getCount());
 		} else {
 			$returner = &new ArrayItemIterator($editorSubmissions);
@@ -591,8 +594,10 @@ class EditorSubmissionDAO extends DAO {
 		}
 
 		if (isset($rangeInfo) && $rangeInfo->isValid()) {
+			import('core.VirtualArrayIterator');
 			$returner = &new VirtualArrayIterator($editorSubmissions, $result->MaxRecordCount(), $rangeInfo->getPage(), $rangeInfo->getCount());
 		} else {
+			import('core.ArrayItemIterator');
 			$returner = &new ArrayItemIterator($editorSubmissions);
 		}
 

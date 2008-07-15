@@ -23,6 +23,7 @@ import('help.HelpTocDAO');
 import('help.HelpTopic');
 import('help.HelpTopicDAO');
 import('help.HelpTopicSection');
+import('core.Handler');
 
 class HelpHandler extends Handler {
 

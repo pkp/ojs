@@ -16,6 +16,7 @@
 
 
 import('submission.common.Action');
+import('db.DBRowIterator');
 
 class ArticleReportDAO extends DAO {
 	/**

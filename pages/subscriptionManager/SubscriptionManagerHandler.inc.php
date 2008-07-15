@@ -15,6 +15,8 @@
 // $Id$
 
 
+import('core.Handler');
+
 class SubscriptionManagerHandler extends Handler {
 	function index() {
 		SubscriptionManagerHandler::subscriptions();

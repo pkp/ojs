@@ -16,6 +16,7 @@
 
 
 import('submission.proofreader.ProofreaderAction');
+import('core.Handler');
 
 class ProofreaderHandler extends Handler {
 

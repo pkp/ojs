@@ -16,6 +16,7 @@
 
 
 import('submission.reviewer.ReviewerAction');
+import('core.Handler');
 
 class ReviewerHandler extends Handler {
 

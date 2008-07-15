@@ -15,10 +15,11 @@
 // $Id$
 
 
-import('submission.sectionEditor.SectionEditorAction');
-
 // Filter section
 define('FILTER_SECTION_ALL', 0);
+
+import('submission.sectionEditor.SectionEditorAction');
+import('core.Handler');
 
 class SectionEditorHandler extends Handler {
 

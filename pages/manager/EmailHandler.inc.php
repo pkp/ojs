@@ -29,6 +29,7 @@ class EmailHandler extends ManagerHandler {
 		$journal = &Request::getJournal();
 		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
 		$emailTemplates = &$emailTemplateDao->getEmailTemplates(Locale::getLocale(), $journal->getJournalId());
+		import('core.ArrayItemIterator');
 		if ($rangeInfo && $rangeInfo->isValid()) {
 			$emailTemplates =& new ArrayItemIterator($emailTemplates, $rangeInfo->getPage(), $rangeInfo->getCount());
 		} else {

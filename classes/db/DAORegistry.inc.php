@@ -16,6 +16,8 @@
 // $Id$
 
 
+import('db.DAO');
+
 class DAORegistry {
 
 	/**

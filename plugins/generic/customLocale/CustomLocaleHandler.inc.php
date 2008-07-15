@@ -17,6 +17,7 @@
 
 require_once('CustomLocalePlugin.inc.php');
 require_once('CustomLocaleAction.inc.php');
+import('core.Handler');
 
 class CustomLocaleHandler extends Handler {
 
@@ -28,6 +29,7 @@ class CustomLocaleHandler extends Handler {
 		$rangeInfo = Handler::getRangeInfo('locales');
 
 		$templateMgr =& TemplateManager::getManager();
+		import('core.ArrayItemIterator');
 		$templateMgr->assign('locales', new ArrayItemIterator($journal->getSupportedLocaleNames(), $rangeInfo->getPage(), $rangeInfo->getCount()));
 		$templateMgr->assign('masterLocale', MASTER_LOCALE);
 
@@ -51,6 +53,7 @@ class CustomLocaleHandler extends Handler {
 
 		$localeFilesRangeInfo = Handler::getRangeInfo('localeFiles');
 
+		import('core.ArrayItemIterator');
 		$templateMgr->assign('localeFiles', new ArrayItemIterator($localeFiles, $localeFilesRangeInfo->getPage(), $localeFilesRangeInfo->getCount()));
 
 		$templateMgr->assign('locale', $locale);
@@ -114,6 +117,7 @@ class CustomLocaleHandler extends Handler {
 
 		$templateMgr->assign('filename', $filename);
 		$templateMgr->assign('locale', $locale);
+		import('core.ArrayItemIterator');
 		$templateMgr->assign_by_ref('referenceLocaleContents', new ArrayItemIterator($referenceLocaleContents, $referenceLocaleContentsRangeInfo->getPage(), $referenceLocaleContentsRangeInfo->getCount()));
 		$templateMgr->assign('localeContents', $localeContents);
 

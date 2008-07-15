@@ -15,9 +15,10 @@
 // $Id$
 
 
-require_once('TranslatorAction.inc.php');
-
 ini_set('display_errors', E_ALL); // FIXME until I improve error handling
+
+require_once('TranslatorAction.inc.php');
+import('core.Handler');
 
 class TranslatorHandler extends Handler {
 	function index() {
@@ -27,6 +28,7 @@ class TranslatorHandler extends Handler {
 		$rangeInfo = Handler::getRangeInfo('locales');
 
 		$templateMgr =& TemplateManager::getManager();
+		import('core.ArrayItemIterator');
 		$templateMgr->assign('locales', new ArrayItemIterator(Locale::getAllLocales(), $rangeInfo->getPage(), $rangeInfo->getCount()));
 		$templateMgr->assign('masterLocale', MASTER_LOCALE);
 
@@ -59,6 +61,7 @@ class TranslatorHandler extends Handler {
 		$miscFilesRangeInfo = Handler::getRangeInfo('miscFiles');
 		$emailsRangeInfo = Handler::getRangeInfo('emails');
 
+		import('core.ArrayItemIterator');
 		$templateMgr->assign('localeFiles', new ArrayItemIterator($localeFiles, $localeFilesRangeInfo->getPage(), $localeFilesRangeInfo->getCount()));
 		$templateMgr->assign('miscFiles', new ArrayItemIterator($miscFiles, $miscFilesRangeInfo->getPage(), $miscFilesRangeInfo->getCount()));
 		$templateMgr->assign('emails', new ArrayItemIterator($emails, $emailsRangeInfo->getPage(), $emailsRangeInfo->getCount()));
@@ -226,6 +229,7 @@ class TranslatorHandler extends Handler {
 
 		$templateMgr->assign('filename', $filename);
 		$templateMgr->assign('locale', $locale);
+		import('core.ArrayItemIterator');
 		$templateMgr->assign_by_ref('localeContents', new ArrayItemIterator($localeContents, $localeContentsRangeInfo->getPage(), $localeContentsRangeInfo->getCount()));
 		$templateMgr->assign('referenceLocaleContents', EditableLocaleFile::load(TranslatorAction::determineReferenceFilename($locale, $filename)));
 

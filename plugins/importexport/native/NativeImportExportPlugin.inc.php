@@ -105,6 +105,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				$articleIds = $publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal($journal->getJournalId(), false);
 				$totalArticles = count($articleIds);
 				if ($rangeInfo->isValid()) $articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
+				import('core.VirtualArrayIterator');
 				$iterator = &new VirtualArrayIterator(ArticleSearch::formatResults($articleIds), $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
 				$templateMgr->assign_by_ref('articles', $iterator);
 				$templateMgr->display($this->getTemplatePath() . 'articles.tpl');

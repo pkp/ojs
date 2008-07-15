@@ -16,7 +16,10 @@
  * @brief Display a form for accepting donations
  *
  */
- 
+
+// $Id$
+
+
 import('core.Handler');
 
 class DonationsHandler extends Handler {
