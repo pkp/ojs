@@ -32,6 +32,14 @@ class OJSApplication extends PKPApplication {
 	}
 
 	/**
+	 * Get the locale key for the name of this application.
+	 * @return string
+	 */
+	function getNameKey() {
+		return('common.openJournalSystems');
+	}
+
+	/**
 	 * Determine whether or not the request is cacheable.
 	 * @return boolean
 	 */

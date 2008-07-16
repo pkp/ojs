@@ -29,22 +29,18 @@ class TemplateManager extends PKPTemplateManager {
 	function TemplateManager() {
 		parent::PKPTemplateManager();
 
-		$this->assign('pageTitle', 'common.openJournalSystems');
-
 		// Are we using implicit authentication?
 		$this->assign('implicitAuth', Config::getVar('security', 'implicit_auth'));
 
 		if (!defined('SESSION_DISABLE_INIT')) {
-			/* Kludge to make sure no code that tries to connect to the database is executed
-			 * (e.g., when loading installer pages). */
-			$this->assign('isUserLoggedIn', Validation::isLoggedIn());
+			/**
+			 * Kludge to make sure no code that tries to connect to
+			 * the database is executed (e.g., when loading
+			 * installer pages).
+			 */
 
 			$journal = &Request::getJournal();
 			$site = &Request::getSite();
-
-			$versionDAO = &DAORegistry::getDAO('VersionDAO'); 
-			$currentVersion = $versionDAO->getCurrentVersion();
-			$this->assign('currentVersionString', $currentVersion->getVersionString());
 
 			$siteFilesDir = Request::getBaseUrl() . '/' . PublicFileManager::getSiteFilesPath();
 			$this->assign('sitePublicFilesDir', $siteFilesDir);
@@ -101,8 +97,6 @@ class TemplateManager extends PKPTemplateManager {
 				$this->assign('displayPageHeaderTitle', $site->getSitePageHeaderTitle());
 
 				$this->assign('siteTitle', $site->getSiteTitle());
-				$this->assign('itemsPerPage', Config::getVar('interface', 'items_per_page'));
-				$this->assign('numPageLinks', Config::getVar('interface', 'page_links'));
 			}
 
 			if (!$site->getJournalRedirect()) {
