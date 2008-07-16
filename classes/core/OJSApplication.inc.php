@@ -91,6 +91,79 @@ class OJSApplication extends PKPApplication {
 		}
 		return $cacheFilename;
 	}
+
+	/**
+	 * Get the map of DAOName => full.class.Path for this application.
+	 * @return array
+	 */
+	function getDAOMap() {
+		return array(
+			'ArticleEmailLogDAO' => 'article.log.ArticleEmailLogDAO',
+			'ArticleEventLogDAO' => 'article.log.ArticleEventLogDAO',
+			'ArticleCommentDAO' => 'article.ArticleCommentDAO',
+			'ArticleDAO' => 'article.ArticleDAO',
+			'ArticleFileDAO' => 'article.ArticleFileDAO',
+			'ArticleGalleyDAO' => 'article.ArticleGalleyDAO',
+			'ArticleNoteDAO' => 'article.ArticleNoteDAO',
+			'AuthorDAO' => 'article.AuthorDAO',
+			'CaptchaDAO' => 'captcha.CaptchaDAO',
+			'PublishedArticleDAO' => 'article.PublishedArticleDAO',
+			'SuppFileDAO' => 'article.SuppFileDAO',
+			'DAO' => 'db.DAO',
+			'XMLDAO' => 'db.XMLDAO',
+			'HelpTocDAO' => 'help.HelpTocDAO',
+			'HelpTopicDAO' => 'help.HelpTopicDAO',
+			'IssueDAO' => 'issue.IssueDAO',
+			'JournalDAO' => 'journal.JournalDAO',
+			'CountryDAO' => 'i18n.CountryDAO',
+			'JournalStatisticsDAO' => 'journal.JournalStatisticsDAO',
+			'JournalSettingsDAO' => 'journal.JournalSettingsDAO',
+			'SectionDAO' => 'journal.SectionDAO',
+			'SectionEditorsDAO' => 'journal.SectionEditorsDAO',
+			'NotificationStatusDAO' => 'journal.NotificationStatusDAO',
+			'EmailTemplateDAO' => 'mail.EmailTemplateDAO',
+			'OAIDAO' => 'oai.ojs.OAIDAO',
+			'ScheduledTaskDAO' => 'scheduledTask.ScheduledTaskDAO',
+			'ArticleSearchDAO' => 'search.ArticleSearchDAO',
+			'RoleDAO' => 'security.RoleDAO',
+			'SessionDAO' => 'session.SessionDAO',
+			'SiteDAO' => 'site.SiteDAO',
+			'SiteSettingsDAO' => 'site.SiteSettingsDAO',
+			'VersionDAO' => 'site.VersionDAO',
+			'AuthorSubmissionDAO' => 'submission.author.AuthorSubmissionDAO',
+			'CopyAssignmentDAO' => 'submission.copyAssignment.CopyAssignmentDAO',
+			'CopyeditorSubmissionDAO' => 'submission.copyeditor.CopyeditorSubmissionDAO',
+			'EditAssignmentDAO' => 'submission.editAssignment.EditAssignmentDAO',
+			'EditorSubmissionDAO' => 'submission.editor.EditorSubmissionDAO',
+			'LayoutAssignmentDAO' => 'submission.layoutAssignment.LayoutAssignmentDAO',
+			'LayoutEditorSubmissionDAO' => 'submission.layoutEditor.LayoutEditorSubmissionDAO',
+			'ProofAssignmentDAO' => 'submission.proofAssignment.ProofAssignmentDAO',
+			'ProofreaderSubmissionDAO' => 'submission.proofreader.ProofreaderSubmissionDAO',
+			'ReviewAssignmentDAO' => 'submission.reviewAssignment.ReviewAssignmentDAO',
+			'ReviewerSubmissionDAO' => 'submission.reviewer.ReviewerSubmissionDAO',
+			'SectionEditorSubmissionDAO' => 'submission.sectionEditor.SectionEditorSubmissionDAO',
+			'UserDAO' => 'user.UserDAO',
+			'UserSettingsDAO' => 'user.UserSettingsDAO',
+			'RTDAO' => 'rt.ojs.RTDAO',
+			'CurrencyDAO' => 'currency.CurrencyDAO',
+			'SubscriptionDAO' => 'subscription.SubscriptionDAO',
+			'SubscriptionTypeDAO' => 'subscription.SubscriptionTypeDAO',
+			'AnnouncementDAO' => 'announcement.AnnouncementDAO',
+			'AnnouncementTypeDAO' => 'announcement.AnnouncementTypeDAO',
+			'TemporaryFileDAO' => 'file.TemporaryFileDAO',
+			'CommentDAO' => 'comment.CommentDAO',
+			'AuthSourceDAO' => 'security.AuthSourceDAO',
+			'AccessKeyDAO' => 'security.AccessKeyDAO',
+			'PluginSettingsDAO' => 'plugins.PluginSettingsDAO',
+			'GroupDAO' => 'group.GroupDAO',
+			'GroupMembershipDAO' => 'group.GroupMembershipDAO',
+			'QueuedPaymentDAO' => 'payment.QueuedPaymentDAO',
+			'OJSCompletedPaymentDAO' => 'payment.ojs.OJSCompletedPaymentDAO',
+			'ReviewFormDAO' => 'reviewForm.ReviewFormDAO',
+			'ReviewFormElementDAO' => 'reviewForm.ReviewFormElementDAO',
+			'ReviewFormResponseDAO' => 'reviewForm.ReviewFormResponseDAO'
+		);
+	}
 }
 
 ?>
