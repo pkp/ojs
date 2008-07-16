@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file cliTool.inc.php
+ * @file tools/includes/cliTool.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -14,6 +14,8 @@
 
 // $Id$
 
+
+define('INDEX_FILE_LOCATION', dirname(dirname(dirname(__FILE__))) . '/index.php');
 
 /** Initialization code */
 define('PWD', getcwd());

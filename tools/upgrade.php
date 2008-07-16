@@ -186,7 +186,8 @@ class upgradeTool extends CommandLineTool {
 	function download() {
 		$versionInfo = VersionCheck::getLatestVersion();
 		if (!$versionInfo) {
-			printf("Failed to load version info from %s\n", VersionCheck::getVersionCheckUrl());
+			$application =& PKPApplication::getApplication();
+			printf("Failed to load version info from %s\n", $application->getVersionDescriptorUrl());
 			exit(1);
 		}
 
@@ -242,7 +243,8 @@ class upgradeTool extends CommandLineTool {
 	 */
 	function checkVersion($versionInfo, $displayInfo = false) {
 		if (!$versionInfo) {
-			printf("Failed to load version info from %s\n", VersionCheck::getVersionCheckUrl());
+			$application =& PKPApplication::getApplication();
+			printf("Failed to load version info from %s\n", $application->getVersionDescriptorUrl());
 			exit(1);
 		}
 

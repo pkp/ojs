@@ -73,7 +73,7 @@ class SiteSettingsForm extends Form {
 		$this->_data = array(
 			'title' => $site->getTitle(null), // Localized
 			'intro' => $site->getIntro(null), // Localized
-			'redirect' => $site->getJournalRedirect(),
+			'redirect' => $site->getRedirect(),
 			'about' => $site->getAbout(null), // Localized
 			'contactName' => $site->getContactName(null), // Localized
 			'contactEmail' => $site->getContactEmail(null), // Localized
@@ -101,7 +101,7 @@ class SiteSettingsForm extends Form {
 		$site->setTitle($this->getData('title'), null); // Localized
 		$site->setIntro($this->getData('intro'), null); // Localized
 		$site->setAbout($this->getData('about'), null); // Localized
-		$site->setJournalRedirect($this->getData('redirect'));
+		$site->setRedirect($this->getData('redirect'));
 		$site->setContactName($this->getData('contactName'), null); // Localized
 		$site->setContactEmail($this->getData('contactEmail'), null); // Localized
 		$site->setMinPasswordLength($this->getData('minPasswordLength'));

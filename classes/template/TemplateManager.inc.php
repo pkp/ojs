@@ -99,7 +99,7 @@ class TemplateManager extends PKPTemplateManager {
 				$this->assign('siteTitle', $site->getSiteTitle());
 			}
 
-			if (!$site->getJournalRedirect()) {
+			if (!$site->getRedirect()) {
 				$this->assign('hasOtherJournals', true);
 			}
 		}
