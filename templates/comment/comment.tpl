@@ -61,9 +61,9 @@ function handleAnonymousCheckbox(theBox) {
 		<td class="value"><input type="text" class="textField" name="title" id="title" value="{$title|escape}" size="60" /></td>
 	</tr>
 	<tr valign="top">
-		<td class="label"><label for="bodyField">{translate key="comments.body"}</label></td>
-		<td class="value">
-			<textarea class="textArea" name="body" id="bodyField" rows="5" cols="60">{$body|escape}</textarea>
+		<td width="20%" class="label"><label for="commentBody">{translate key="comments.body"}</label></td>
+		<td width="80%" class="value">
+			<textarea class="textArea" name="body" id="commentBody" rows="5" cols="60">{$commentBody|escape}</textarea>
 		</td>
 	</tr>
 

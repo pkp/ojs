@@ -51,7 +51,7 @@ window.opener.location.reload();
 		{if $comment->getCommentTitle()}
 			<div class="commentTitle">{translate key="submission.comments.subject"}: {$comment->getCommentTitle()|escape}</div>
 		{/if}
-		<div class="comments">{$comment->getComments()|escape|nl2br}</div>
+		<div class="comments">{$comment->getComments()|strip_unsafe_html|nl2br}</div>
 	</td>
 </tr>
 {foreachelse}
