@@ -34,6 +34,7 @@ class DOAJExportDom {
 		$pubArticles =& $pubArticleDao->getPublishedArticlesByJournalId($journal->getJournalId());
 		while ($pubArticle =& $pubArticles->next()) {
 			$issue =& $issueDao->getIssueById($pubArticle->getIssueId());
+			if(!$issue) continue;
 			$section =& $sectionDao->getSection($pubArticle->getSectionId());
 
 			$articleNode =& DOAJExportDom::generateArticleDom($doc, $journal, $issue, $section, $pubArticle);
@@ -108,16 +109,29 @@ class DOAJExportDom {
 			if (strlen($locale) == 5) XMLCustomWriter::setAttribute($titleNode, 'language', DOAJExportDom::mapLang(String::substr($locale, 0, 2)));
 		}
 
-		/* --- Authors --- */
+		/* --- Authors and affiliations --- */
 		$authors =& XMLCustomWriter::createElement($doc, 'authors');
 		XMLCustomWriter::appendChild($root, $authors);
 
+		$affilList = DOAJExportDom::generateAffiliationsList($article->getAuthors());
+
 		foreach ($article->getAuthors() as $author) {
-			$authorNode =& DOAJExportDom::generateAuthorDom($doc, $root, $issue, $article, $author);
+			$authorNode =& DOAJExportDom::generateAuthorDom($doc, $root, $issue, $article, $author, $affilList);
 			XMLCustomWriter::appendChild($authors, $authorNode);
 			unset($authorNode);
 		}
-
+		
+		if (!empty($affilList[0])) {
+			$affils =& XMLCustomWriter::createElement($doc, 'affiliationsList');
+			XMLCustomWriter::appendChild($root, $affils);
+				
+			for ($i = 0; $i < count($affilList); $i++) {
+				$affilNode =& XMLCustomWriter::createChildWithText($doc, $affils, 'affiliationName', $affilList[$i]);
+				XMLCustomWriter::setAttribute($affilNode, 'affiliationId', $i);
+				unset($affilNode);
+			}
+		}
+		
 		/* --- Abstract --- */
 		foreach ((array) $article->getAbstract(null) as $locale => $abstract) {
 			if (empty($abstract)) continue;
@@ -150,15 +164,35 @@ class DOAJExportDom {
 	 * @param $issue object Issue
 	 * @param $article object Article
 	 * @param $author object Author
+	 * @param $affilList array List of author affiliations
 	 */
-	function &generateAuthorDom(&$doc, &$journal, &$issue, &$article, &$author) {
+	function &generateAuthorDom(&$doc, &$journal, &$issue, &$article, &$author, &$affilList) {
 		$root =& XMLCustomWriter::createElement($doc, 'author');
 
 		XMLCustomWriter::createChildWithText($doc, $root, 'name', $author->getFullName());
 		XMLCustomWriter::createChildWithText($doc, $root, 'email', $author->getEmail(), false);
-		XMLCustomWriter::createChildWithText($doc, $root, 'affiliation', $author->getAffiliation(), false);
 
+		if(in_array($author->getAffiliation(), $affilList)  && !empty($affilList[0])) {
+			XMLCustomWriter::createChildWithText($doc, $root, 'affiliationId', current(array_keys($affilList, $author->getAffiliation())));
+		}
+		
 		return $root;
+	}
+	
+	/**
+	 * Generate a list of affiliations among all authors of an article.
+	 * @param $authors object Array of article authors
+	 */
+	function &generateAffiliationsList($authors) {
+		$affilList = array();
+	
+		foreach ($authors as $author) {
+			if(!in_array($author->getAffiliation(), $affilList)) {
+				$affilList[] = $author->getAffiliation() ;
+			}
+		}
+
+		return $affilList;
 	}
 
 	/* --- Utility functions: --- */
