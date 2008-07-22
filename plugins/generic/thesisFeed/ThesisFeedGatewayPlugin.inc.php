@@ -70,6 +70,25 @@ class ThesisFeedGatewayPlugin extends GatewayPlugin {
 		$plugin =& $this->getThesisFeedPlugin();
 		return $plugin->getTemplatePath() . 'templates/';
 	}
+	
+	/**
+	 * Get whether or not this plugin is enabled. (Should always return true, as the
+	 * parent plugin will take care of loading this one when needed)
+	 * @return boolean
+	 */
+	function getEnabled() {
+		$plugin =& $this->getThesisFeedPlugin();
+		return $plugin->getEnabled(); // Should always be true anyway if this is loaded
+	}
+
+	/**
+	 * Get the management verbs for this plugin (override to none so that the parent
+	 * plugin can handle this)
+	 * @return array
+	 */
+	function getManagementVerbs() {
+		return array();
+	}
 
 	/**
 	 * Handle fetch requests for this plugin.
