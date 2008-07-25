@@ -20,6 +20,17 @@
 import('core.PKPApplication');
 
 class OJSApplication extends PKPApplication {
+	function OJSApplication() {
+		parent::PKPApplication();
+	}
+
+	function initialize(&$application) {
+		PKPApplication::initialize($application);
+
+		import('i18n.Locale');
+		import('core.Request');
+	}
+
 	/**
 	 * Get the "context depth" of this application, i.e. the number of
 	 * parts of the URL after index.php that represent the context of
@@ -57,7 +68,7 @@ class OJSApplication extends PKPApplication {
 		if (!Config::getVar('general', 'installed')) return false;
 		if (!empty($_POST) || Validation::isLoggedIn()) return false;
 		if (!Config::getVar('cache', 'web_cache')) return false;
-		if (!Request::isPathInfoEnabled()) {
+		if (!PKPRequest::isPathInfoEnabled()) {
 			$ok = array('journal', 'page', 'op', 'path');
 			if (!empty($_GET) && count(array_diff(array_keys($_GET), $ok)) != 0) {
 				return false;
@@ -66,7 +77,7 @@ class OJSApplication extends PKPApplication {
 			if (!empty($_GET)) return false;
 		}
 
-		if (in_array(Request::getRequestedPage(), array(
+		if (in_array(PKPRequest::getRequestedPage(), array(
 			'about', 'announcement', 'help', 'index', 'information', 'rt', 'issue', ''
 		))) return true;
 
@@ -80,7 +91,7 @@ class OJSApplication extends PKPApplication {
 	function getCacheFilename() {
 		static $cacheFilename;
 		if (!isset($cacheFilename)) {
-			if (Request::isPathInfoEnabled()) {
+			if (PKPRequest::isPathInfoEnabled()) {
 				$id = isset($_SERVER['PATH_INFO'])?$_SERVER['PATH_INFO']:'index';
 				$id .= '-' . Locale::getLocale();
 			} else {
