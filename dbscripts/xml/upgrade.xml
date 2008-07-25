@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE install SYSTEM "../../lib/pkp/dtd/install.dtd">
+<!DOCTYPE install SYSTEM "dtd/install.dtd">
 <!--
   * upgrade.xml
   *
@@ -11,8 +11,8 @@
   * $Id$
   -->
 
-<install version="2.2.1.0">
-	<upgrade minversion="2.0.0.0" maxversion="2.2.1.0">
+<install version="2.2.2.0">
+	<upgrade minversion="2.0.0.0" maxversion="2.2.0.0">
 		<!-- Correct null public issue IDs; this caused problems with
 		     2.x -> 2.2.0 upgrades using public issue IDs.-->
 		<data file="upgrade/public_issue_ids.xml" />
@@ -74,7 +74,7 @@
 		<data file="upgrade/2.2.0_usersettings.xml" />
 	</upgrade>
 
-	<upgrade minversion="2.0.0.0" maxversion="2.2.1.0">
+	<upgrade minversion="2.0.0.0" maxversion="2.2.0.0">
 		<!-- 2.x to 2.2.1 -->
 		<data file="upgrade/2.2.1_preupdate.xml" />
 	</upgrade>
@@ -124,7 +124,7 @@
 		<code function="ensureSupportedLocales" />
 	</upgrade>
 
-	<upgrade minversion="2.0.0.0" maxversion="2.2.1.0">
+	<upgrade minversion="2.0.0.0" maxversion="2.2.0.0">
 		<data file="upgrade/2.2.1_update.xml" />
 		<code function="renamePayPerViewSettings" />
 		<code function="clearDataCache" />
