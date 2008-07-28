@@ -47,7 +47,7 @@ class Install extends PKPInstall {
 	 * @return array
 	 */
 	function getCreateDirectories() {
-		$directories = Parent::getCreateDirectories();
+		$directories = parent::getCreateDirectories();
 		$directories[] = 'journals';
 		return $directories;
 	}
