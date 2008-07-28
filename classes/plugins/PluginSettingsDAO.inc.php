@@ -143,7 +143,7 @@ class PluginSettingsDAO extends DAO {
 	 * @param $name string
 	 */
 	function deleteSetting($journalId, $pluginName, $name) {
-		$cache =& $this->_getCache($pluginName);
+		$cache =& $this->_getCache($journalId, $pluginName);
 		$cache->setCache($name, null);
 
 		return $this->update(
@@ -154,14 +154,16 @@ class PluginSettingsDAO extends DAO {
 
 	/**
 	 * Delete all settings for a plugin.
+	 * @param $journalId int
 	 * @param $pluginName string
 	 */
-	function deleteSettingsByPlugin($pluginName) {
-		$cache =& $this->_getCache($pluginName);
+	function deleteSettingsByPlugin($journalId, $pluginName) {
+		$cache =& $this->_getCache($journalId, $pluginName);
 		$cache->flush();
 
 		return $this->update(
-				'DELETE FROM plugin_settings WHERE plugin_name = ?', $pluginName
+				'DELETE FROM plugin_settings WHERE journal_id = ? AND plugin_name = ?', 
+				array($journalId, $pluginName)
 		);
 	}
 
