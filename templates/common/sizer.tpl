@@ -10,7 +10,7 @@
  *}
 
 	<!-- Add javascript required for font sizer -->
-	<script type="text/javascript" src="{$baseUrl}/js/sizer.js" ></script>
+	<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/sizer.js" ></script>
 
 	<!-- Add stylesheets for the font sizer -->
 	<link rel="alternate stylesheet" title="{translate key="icon.font_small.alt"}" href="{$baseUrl}/styles/fontSmall.css" type="text/css" />
