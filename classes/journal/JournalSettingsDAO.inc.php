@@ -75,27 +75,20 @@ class JournalSettingsDAO extends DAO {
 			'SELECT setting_name, setting_value, setting_type, locale FROM journal_settings WHERE journal_id = ?', $journalId
 		);
 
-		if ($result->RecordCount() == 0) {
-			$returner = null;
-			$result->Close();
-			return $returner;
-
-		} else {
-			while (!$result->EOF) {
-				$row = &$result->getRowAssoc(false);
-				$value = $this->convertFromDB($row['setting_value'], $row['setting_type']);
-				if ($row['locale'] == '') $journalSettings[$row['setting_name']] = $value;
-				else $journalSettings[$row['setting_name']][$row['locale']] = $value;
-				$result->MoveNext();
-			}
-			$result->close();
-			unset($result);
-
-			$cache =& $this->_getCache($journalId);
-			$cache->setEntireCache($journalSettings);
-
-			return $journalSettings;
+		while (!$result->EOF) {
+			$row = &$result->getRowAssoc(false);
+			$value = $this->convertFromDB($row['setting_value'], $row['setting_type']);
+			if ($row['locale'] == '') $journalSettings[$row['setting_name']] = $value;
+			else $journalSettings[$row['setting_name']][$row['locale']] = $value;
+			$result->MoveNext();
 		}
+		$result->Close();
+		unset($result);
+
+		$cache =& $this->_getCache($journalId);
+		$cache->setEntireCache($journalSettings);
+
+		return $journalSettings;
 	}
 
 	/**
