@@ -25,26 +25,19 @@ class UserSettingsDAO extends DAO {
 	 * @return mixed
 	 */
 	function &getSetting($userId, $name, $journalId = null) {
-
-		if ($journalId == null) {
-			$result = &$this->retrieve(
-				'SELECT setting_value, setting_type FROM user_settings WHERE user_id = ? AND setting_name = ? AND journal_id = 0', array($userId, $name)
-			);
-		} else {
-			$result = &$this->retrieve(
-				'SELECT setting_value, setting_type FROM user_settings WHERE user_id = ? AND setting_name = ? AND journal_id = ?', array($userId, $name, $journalId)
-			);
-		}
+		$result =& $this->retrieve(
+			'SELECT setting_value, setting_type FROM user_settings WHERE user_id = ? AND setting_name = ? AND journal_id = ?',
+			array((int) $userId, $name, (int) $journalId)
+		);
 
 		if ($result->RecordCount() != 0) {
-			$row = &$result->getRowAssoc(false);
+			$row =& $result->getRowAssoc(false);
 			$returner = $this->convertFromDB($row['setting_value'], $row['setting_type']);
 		} else {
 			$returner = null;
 		}
 
 		return $returner;
-
 	}
 
 	/**
@@ -56,22 +49,15 @@ class UserSettingsDAO extends DAO {
 	 * @return DAOResultFactory matching Users
 	 */
 	function &getUsersBySetting($name, $value, $type = null, $journalId = null) {
-		$userDao = &DAORegistry::getDAO('UserDAO');
+		$userDao =& DAORegistry::getDAO('UserDAO');
 
 		$value = $this->convertToDB($value, $type);
-		if ($journalId == null) {
-			$result = &$this->retrieve(
-				'SELECT u.* FROM users u, user_settings s WHERE u.user_id = s.user_id AND s.setting_name = ? AND s.setting_value = ? AND s.journal_id = 0',
-				array($name, $value)
-			);
-		} else {				
-			$result = &$this->retrieve(
-				'SELECT u.* FROM users u, user_settings s WHERE u.user_id = s.user_id AND s.setting_name = ? AND s.setting_value = ? AND s.journal_id = ?',
-				array($name, $value, $journalId)
-			);
-		}
+		$result =& $this->retrieve(
+			'SELECT u.* FROM users u, user_settings s WHERE u.user_id = s.user_id AND s.setting_name = ? AND s.setting_value = ? AND s.journal_id = ?',
+			array($name, $value, (int) $journalId)
+		);
 
-		$returner = &new DAOResultFactory($result, $userDao, '_returnUserFromRow');
+		$returner =& new DAOResultFactory($result, $userDao, '_returnUserFromRow');
 		return $returner;
 	}
 
@@ -82,36 +68,23 @@ class UserSettingsDAO extends DAO {
 	 * @return array 
 	 */
 	function &getSettingsByJournal($userId, $journalId = null) {
-
 		$userSettings = array();
 
-		if ($journalId == null) {
-			$result = &$this->retrieve(
-				'SELECT setting_name, setting_value, setting_type FROM user_settings WHERE user_id = ? AND journal_id = 0', $userId
-			);
-		} else {
-			$result = &$this->retrieve(
-				'SELECT setting_name, setting_value, setting_type FROM user_settings WHERE user_id = ? and journal_id = ?', array($userId, $journalId)
-			);
+		$result =& $this->retrieve(
+			'SELECT setting_name, setting_value, setting_type FROM user_settings WHERE user_id = ? and journal_id = ?',
+			array((int) $userId, (int) $journalId)
+		);
+
+		while (!$result->EOF) {
+			$row =& $result->getRowAssoc(false);
+			$value = $this->convertFromDB($row['setting_value'], $row['setting_type']);
+			$userSettings[$row['setting_name']] = $value;
+			$result->MoveNext();
 		}
+		$result->Close();
+		unset($result);
 
-		if ($result->RecordCount() == 0) {
-			$returner = null;
-			$result->Close();
-			return $returner;
-
-		} else {
-			while (!$result->EOF) {
-				$row = &$result->getRowAssoc(false);
-				$value = $this->convertFromDB($row['setting_value'], $row['setting_type']);
-				$userSettings[$row['setting_name']] = $value;
-				$result->MoveNext();
-			}
-			$result->close();
-			unset($result);
-
-			return $userSettings;
-		}
+		return $userSettings;
 	}
 
 	/**
@@ -123,15 +96,10 @@ class UserSettingsDAO extends DAO {
 	 * @param $journalId int
 	 */
 	function updateSetting($userId, $name, $value, $type = null, $journalId = null) {
-		if ($journalId == null) {		
-			$result = $this->retrieve(
-				'SELECT COUNT(*) FROM user_settings WHERE user_id = ? AND setting_name = ? AND journal_id = 0', array($userId, $name)
-			);
-		} else {
-			$result = $this->retrieve(
-				'SELECT COUNT(*) FROM user_settings WHERE user_id = ? AND setting_name = ? AND journal_id = ?', array($userId, $name, $journalId)
-			);
-		}
+		$result = $this->retrieve(
+			'SELECT COUNT(*) FROM user_settings WHERE user_id = ? AND setting_name = ? AND journal_id = ?',
+			array($userId, $name, (int) $journalId)
+		);
 
 		$value = $this->convertToDB($value, $type);
 		if ($result->fields[0] == 0) {
@@ -140,26 +108,16 @@ class UserSettingsDAO extends DAO {
 					(user_id, setting_name, journal_id, setting_value, setting_type)
 					VALUES
 					(?, ?, ?, ?, ?)',
-				array($userId, $name, $journalId ? $journalId : 0, $value, $type)
+				array((int) $userId, $name, (int) $journalId, $value, $type)
 			);
 		} else {
-			if ($journalId == null) {
-				$returner = $this->update(
-					'UPDATE user_settings SET
-						setting_value = ?,
-						setting_type = ?
-						WHERE user_id = ? AND setting_name = ? AND journal_id = 0',
-					array($value, $type, $userId, $name)
-				);
-			} else {
-				$returner = $this->update(
-					'UPDATE user_settings SET
-						setting_value = ?,
-						setting_type = ?
-						WHERE user_id = ? AND setting_name = ? AND journal_id = ?',
-					array($value, $type, $userId, $name, $journalId)
-				);
-			}
+			$returner = $this->update(
+				'UPDATE user_settings SET
+					setting_value = ?,
+					setting_type = ?
+					WHERE user_id = ? AND setting_name = ? AND journal_id = ?',
+				array($value, $type, (int) $userId, $name, (int) $journalId)
+			);
 		}
 
 		$result->Close();
@@ -175,17 +133,10 @@ class UserSettingsDAO extends DAO {
 	 * @param $journalId int
 	 */
 	function deleteSetting($userId, $name, $journalId = null) {
-		if ($journalId == null) {
-			return $this->update(
-				'DELETE FROM user_settings WHERE user_id = ? AND setting_name = ? AND journal_id = 0',
-				array($userId, $name)
-			);
-		} else {		
-			return $this->update(
-				'DELETE FROM user_settings WHERE user_id = ? AND setting_name = ? AND journal_id = ?',
-				array($userId, $name, $journalId)
-			);
-		}
+		return $this->update(
+			'DELETE FROM user_settings WHERE user_id = ? AND setting_name = ? AND journal_id = ?',
+			array((int) $userId, $name, (int) $journalId)
+		);
 	}
 
 	/**
@@ -194,7 +145,7 @@ class UserSettingsDAO extends DAO {
 	 */
 	function deleteSettings($userId) {
 		return $this->update(
-				'DELETE FROM user_settings WHERE user_id = ?', $userId
+			'DELETE FROM user_settings WHERE user_id = ?', $userId
 		);
 	}
 }

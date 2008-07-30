@@ -56,7 +56,6 @@ class JournalSettingsDAO extends DAO {
 	function _cacheMiss(&$cache, $id) {
 		$settings =& $this->getJournalSettings($cache->getCacheId());
 		if (!isset($settings[$id])) {
-			// Make sure that even null values are cached
 			$cache->setCache($id, null);
 			return null;
 		}

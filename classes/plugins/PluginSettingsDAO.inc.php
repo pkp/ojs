@@ -152,8 +152,8 @@ class PluginSettingsDAO extends DAO {
 		$cache->flush();
 
 		return $this->update(
-				'DELETE FROM plugin_settings WHERE journal_id = ? AND plugin_name = ?', 
-				array($journalId, $pluginName)
+			'DELETE FROM plugin_settings WHERE journal_id = ? AND plugin_name = ?', 
+			array($journalId, $pluginName)
 		);
 	}
 
@@ -163,7 +163,7 @@ class PluginSettingsDAO extends DAO {
 	 */
 	function deleteSettingsByJournalId($journalId) {
 		return $this->update(
-				'DELETE FROM plugin_settings WHERE journal_id = ?', $journalId
+			'DELETE FROM plugin_settings WHERE journal_id = ?', $journalId
 		);
 	}
 
