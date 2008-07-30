@@ -78,6 +78,16 @@ class Plugin extends PKPPlugin {
 	}
 
 	/**
+	 * Get the filename of the settings data for this plugin to install
+	 * when a journal is created (i.e. journal-level plugin settings).
+	 * Subclasses using default settings should override this.
+	 * @return string
+	 */
+	function getNewJournalPluginSettingsFile() {
+		return null;
+	}
+
+	/**
 	 * Callback used to install settings on journal creation.
 	 * @param $hookName string
 	 * @param $args array
