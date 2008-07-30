@@ -89,7 +89,7 @@ class UserHandler extends Handler {
 			}
 
 			if ( $membershipEnabled ) {
-				$templateMgr->assign('dateEndMembership', $user->getDateEndMembership());
+				$templateMgr->assign('dateEndMembership', $user->getSetting('dateEndMembership', 0));
 			}
 
 			$templateMgr->assign('allowRegAuthor', $journal->getSetting('allowRegAuthor'));

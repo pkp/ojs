@@ -1,10 +1,6 @@
 <?php
 
 /**
- * @defgroup plugins
- */
- 
-/**
  * @file classes/plugins/Plugin.inc.php
  *
  * Copyright (c) 2003-2008 John Willinsky
@@ -19,7 +15,9 @@
 // $Id$
 
 
-class Plugin {
+import('plugins.PKPPlugin');
+
+class Plugin extends PKPPlugin {
 	/** @var $pluginPath String Path name to files for this plugin */
 	var $pluginPath;
 
@@ -30,31 +28,12 @@ class Plugin {
 	 * Constructor
 	 */
 	function Plugin() {
+		Parent::PKPPlugin();
 	}
 
-	/**
-	 * Get the path this plugin's files are located in.
-	 * @return String pathname
-	 */
-	function getPluginPath() {
-		return $this->pluginPath;
-	}
-
-	/**
-	 * Get the name of the category this plugin is registered to.
-	 * @return String category
-	 */
-	function getCategory() {
-		return $this->pluginCategory;
-	}
-
-	/**
-	 * Return a number indicating the sequence in which this plugin
-	 * should be registered compared to others of its category.
-	 * Higher = later.
-	 */
-	function getSeq() {
-		return 0;
+	function getTemplatePath() {
+		$basePath = dirname(dirname(dirname(__FILE__)));
+		return "file:$basePath/" . $this->getPluginPath() . '/';
 	}
 
 	/**
@@ -66,106 +45,11 @@ class Plugin {
 	 * 	the plugin will not be registered.
 	 */
 	function register($category, $path) {
-		$this->pluginPath = $path;
-		$this->pluginCategory = $category;
-		if ($this->getInstallSchemaFile()) {
-			HookRegistry::register ('Installer::postInstall', array(&$this, 'updateSchema'));
-		}
-		if ($this->getInstallSitePluginSettingsFile()) {
-			HookRegistry::register ('Installer::postInstall', array(&$this, 'installSiteSettings'));
-		}
+		$returner = Parent::register($category, $path);
 		if ($this->getNewJournalPluginSettingsFile()) {
 			HookRegistry::register ('JournalSiteSettingsForm::execute', array(&$this, 'installJournalSettings'));
 		}
-		if ($this->getInstallDataFile()) {
-			HookRegistry::register ('Installer::postInstall', array(&$this, 'installData'));
-		}
-		return true;
-	}
-
-	/**
-	 * Load locale data for this plugin.
-	 * @param $locale string
-	 * @return boolean
-	 */
-	function addLocaleData($locale = null) {
-		if ($locale == '') $locale = Locale::getLocale();
-		$localeFilename = $this->getLocaleFilename($locale);
-		if ($localeFilename) {
-			Locale::registerLocaleFile($locale, $this->getLocaleFilename($locale));
-			return true;
-		}
-		return false;
-	}
-
-	/**
-	 * Get the filename for the locale data for this plugin.
-	 * @param $locale string
-	 * @return string
-	 */
-	function getLocaleFilename($locale) {
-		return $this->getPluginPath() . DIRECTORY_SEPARATOR . 'locale' . DIRECTORY_SEPARATOR . $locale . DIRECTORY_SEPARATOR . 'locale.xml';
-	}
-
-	/**
-	 * Add help data for this plugin.
-	 * @param $locale string
-	 * @return boolean
-	 */
-	function addHelpData($locale = null) {
-		if ($locale == '') $locale = Locale::getLocale();
-		$help =& Help::getHelp();
-		import('help.PluginHelpMappingFile');
-		$pluginHelpMapping =& new PluginHelpMappingFile($this);
-		$help->addMappingFile($pluginHelpMapping);
-		return true;
-	}
-
-	/**
-	 * Get the path and filename of the help mapping file, if this
-	 * plugin includes help files.
-	 * @return string
-	 */
-	function getHelpMappingFilename() {
-		return $this->getPluginPath() . DIRECTORY_SEPARATOR . 'help.xml';
-	}
-
-	/**
-	 * Get the name of this plugin. The name must be unique within
-	 * its category, and should be suitable for part of a filename
-	 * (ie short, no spaces, and no dependencies on cases being unique).
-	 * @return String name of plugin
-	 */
-	function getName() {
-		return 'Plugin';
-	}
-
-	/**
-	 * Get the display name for this plugin.
-	 * @return string
-	 */
-	function getDisplayName() {
-		return $this->getName();
-	}
-
-	/**
-	 * Get a description of this plugin.
-	 */
-	function getDescription() {
-		return 'This is the base plugin class. It contains no concrete implementation. Its functions must be overridden by subclasses to provide actual functionality.';
-	}
-
-	function getTemplatePath() {
-		$basePath = dirname(dirname(dirname(__FILE__)));
-		return "file:$basePath/" . $this->getPluginPath() . '/';
-	}
-
-	/**
-	 * Load a PHP file from this plugin's installation directory.
-	 * @param $class string
-	 */
-	function import($class) {
-		require_once($this->getPluginPath() . '/' . str_replace('.', '/', $class) . '.inc.php');
+		return $returner;
 	}
 
 	function getSetting($journalId, $name) {
@@ -194,85 +78,6 @@ class Plugin {
 	}
 
 	/**
-	 * Site-wide plugins should override this function to return true.
-	 */
-	function isSitePlugin() {
-		return false;
-	}
-
-	/**
-	 * Get a list of management actions in the form of a page => value pair.
-	 * The management actions from this list are passed to the manage() function
-	 * when called.
-	 */
-	function getManagementVerbs() {
-		return null;
-	}
-
-	/**
-	 * Perform a management function.
-	 */
-	function manage($verb, $args) {
-		return false;
-	}
-
-	/**
-	 * Extend the {url ...} smarty to support plugins.
-	 */
-	function smartyPluginUrl($params, &$smarty) {
-		$path = array($this->getCategory(), $this->getName());
-		if (is_array($params['path'])) {
-			$params['path'] = array_merge($path, $params['path']);
-		} elseif (!empty($params['path'])) {
-			$params['path'] = array_merge($path, array($params['path']));
-		} else {
-			$params['path'] = $path;
-		}
-		return $smarty->smartyUrl($params, $smarty);
-	}
-
-	/**
-	 * Get the filename of the ADODB schema for this plugin.
-	 * Subclasses using SQL tables should override this.
-	 * @return string
-	 */
-	function getInstallSchemaFile() {
-		return null;
-	}
-
-	/**
-	 * Called during the install process to install the plugin schema,
-	 * if applicable.
-	 * @param $hookName string
-	 * @param $args array
-	 * @return boolean
-	 */
-	function updateSchema($hookName, $args) {
-		$installer =& $args[0];
-		$result =& $args[1];
-
-		$schemaXMLParser = &new adoSchema($installer->dbconn, $installer->dbconn->charSet);
-		$sql = $schemaXMLParser->parseSchema($this->getInstallSchemaFile());
-		if ($sql) {
-			$result = $installer->executeSQL($sql);
-		} else {
-			$installer->setError(INSTALLER_ERROR_DB, str_replace('{$file}', $this->getInstallSchemaFile(), Locale::translate('installer.installParseDBFileError')));
-			$result = false;
-		}
-		return false;
-	}
-
-	/**
-	 * Get the filename of the settings data for this plugin to install
-	 * when a journal is created (i.e. journal-level plugin settings).
-	 * Subclasses using default settings should override this.
-	 * @return string
-	 */
-	function getNewJournalPluginSettingsFile() {
-		return null;
-	}
-
-	/**
 	 * Callback used to install settings on journal creation.
 	 * @param $hookName string
 	 * @param $args array
@@ -288,18 +93,6 @@ class Plugin {
 		$pluginSettingsDao->installSettings($journal->getJournalId(), $this->getName(), $this->getNewJournalPluginSettingsFile());
 
 		return false;
-	}
-
-
-
-	/**
-	 * Get the filename of the settings data for this plugin to install
-	 * when the system is installed (i.e. site-level plugin settings).
-	 * Subclasses using default settings should override this.
-	 * @return string
-	 */
-	function getInstallSitePluginSettingsFile() {
-		return null;
 	}
 
 	/**
@@ -320,34 +113,6 @@ class Plugin {
 
 		return false;
 	}
-
-	/**
-	 * Get the filename of the install data for this plugin.
-	 * Subclasses using SQL tables should override this.
-	 * @return string
-	 */
-	function getInstallDataFile() {
-		return null;
-	}
-
-	/**
-	 * Callback used to install data files.
-	 * @param $hookName string
-	 * @param $args array
-	 * @return boolean
-	 */
-	function installData($hookName, $args) {
-		$installer =& $args[0];
-		$result =& $args[1];
-
-		$sql = $installer->dataXMLParser->parseData($this->getInstallDataFile());
-		if ($sql) {
-			$result = $installer->executeSQL($sql);
-		} else {
-			$installer->setError(INSTALLER_ERROR_DB, str_replace('{$file}', $this->getInstallDataFile(), Locale::translate('installer.installParseDBFileError')));
-			$result = false;
-		}
-		return false;
-	}
 }
+
 ?>

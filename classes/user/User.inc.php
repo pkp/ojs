@@ -24,42 +24,6 @@ class User extends PKPUser {
 		parent::PKPUser();
 	}
 
-	//
-	// Get/set methods
-	//
-
-	/**
-	 * Get date the user membership expires 
-	 * @return datestamp (YYYY-MM-DD HH:MM:SS)
-	 */
-	function getDateEndMembership() {
-		return $this->getData('dateEndMembership');
-	}
-
-	/**
-	 * Set date the user membership expires
-	 * @param $dateLastEmail datestamp (YYYY-MM-DD HH:MM:SS)
-	 */
-	function setDateEndMembership($dateEndMembership) {
-		return $this->setData('dateEndMembership', $dateEndMembership);
-	}
-	
-	/**
-	 * Get implicit auth ID string.
-	 * @return String
-	 */
-	function getAuthStr() {
-		return $this->getData('authStr');
-	}
-
-	/**
-	 * Set Shib ID string for this user.
-	 * @param $authStr string
-	 */
-	function setAuthStr($authStr) {
-		return $this->setData('authStr', $authStr);
-	}
-
 	/**
 	 * Retrieve array of user settings.
 	 * @param journalId int

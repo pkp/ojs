@@ -176,7 +176,6 @@ class Request extends PKPRequest {
 
 		return ((empty($overriddenBaseUrl)?Request::getIndexUrl():$overriddenBaseUrl) . $baseParams . $pathString . $additionalParams . $anchor);
 	}
-
 }
 
 ?>
