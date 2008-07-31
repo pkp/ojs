@@ -175,6 +175,16 @@ class OJSApplication extends PKPApplication {
 			'ReviewFormResponseDAO' => 'reviewForm.ReviewFormResponseDAO'
 		);
 	}
+
+	/**
+	 * Instantiate the help object for this application.
+	 * @return object
+	 */
+	function &instantiateHelp() {
+		import('help.Help');
+		$help =& new Help();
+		return $help;
+	}
 }
 
 ?>
