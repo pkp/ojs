@@ -1097,8 +1097,6 @@ Escolha um modelo para administrar os aspectos do processo editorial. (Para desi
 	<message key="manager.sections.policy">Política da Seção</message>
 	<message key="manager.sections.identifyType">Como metadado do artigo, identificar itens nesta seção como</message>
 	<message key="manager.sections.identifyTypeExamples">(Exemplo: "Avaliado por Pares", "Artigo Não Avaliado por Pares", "Artigo Solicitado", etc.)</message>
-	<message key="manager.sections.abstractsDisabled">NÃO exigir resumo.</message>
-
 	<!-- Import/Export -->
 	<message key="manager.importExport">Importar/Exportar Dados</message>
 
@@ -2716,9 +2714,6 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="rt.findingReferences">Pesquisando Referências</message>
 	<message key="rt.findingReferences.googleScholar">Google Acadêmico</message>
 	<message key="rt.findingReferences.windowsLiveAcademic">Windows Live Acadêmico</message>
-	<message key="icon.small.alt">Pequeno</message>
-	<message key="icon.medium.alt">Médio</message>
-	<message key="icon.large.alt">Grande</message>
 	<message key="debug.notes.currencyListLoad">Carregar lista de moedas "{$filename}" do arquivo XML</message>
 	<message key="debug.notes.helpMappingLoad">Foi recarregado o arquivo XML de mapeamento da ajuda {$filename} buscando por {$id}.</message>
 	<message key="default.journalSettings.checklist.addressesLinked">URLs para as referências foram informadas quando necessário.</message>
@@ -2839,14 +2834,10 @@ Idiomas estão disponíveis para download manual no <a href="http://pkp.sfu.ca">
 	<message key="payment.submission.paySubmission">Pagar Taxa de Submissão</message>
 	<message key="common.copy">Copiar</message>
 	<message key="common.preview">Visualizar</message>
-	<message key="common.publish">Publicar</message>
 	<message key="common.activate">Ativar</message>
 	<message key="common.deactivate">Desativar</message>
 	<message key="manager.reviewForms">Formulários de Avaliação</message>
-	<message key="manager.reviewForms.publishedReviewForms">Formulários de Avaliação publicados</message>
-	<message key="manager.reviewForms.unpublishedReviewForms">Formulários de Avaliação não publicados</message>
 	<message key="manager.reviewForms.noneCreated">Nenhum formulário de avaliação criado.</message>
-	<message key="manager.reviewForms.nonePublished">Nenhum formulário de avaliação publicado.</message>
 	<message key="manager.reviewForms.create">Criar formulário de avaliação</message>
 	<message key="manager.reviewForms.edit">Editar formulário de avaliação</message>
 	<message key="manager.reviewForms.reviewFormData">Dados do formulário de avaliação</message>
@@ -2943,4 +2934,32 @@ Idiomas estão disponíveis para download manual no <a href="http://pkp.sfu.ca">
 	<message key="default.journalSettings.purchaseArticleFeeDescription">O pagamento da taxa permitirá visualizar, baixar e imprimir este artigo.</message>
 	<message key="plugins.categories.reports">Plugins de Relatório</message>
 	<message key="plugins.categories.reports.description">Plugins de Relatório são utilizados para implementar vários tipos de relatórios e extração de dados por parte dos Editores Gerentes</message>
+	<message key="manager.reviewForms.list.description">Os formulários de avaliação pelos pares criados aqui estarão disponíveis aos avaliadores para preenchimento, em vez do formulário padrão que consiste em duas caixas de texto de comentários com comentários exclusivos para o autor e outra para o  Editor e o Autor. Formulários de avaliação podem ser designados a seções específicas, e os editores poderão escolher qual formulário utilizar no momento da avaliação. em todos os casos, os editores poderão incluir as avaliações nas correspondências com o autor.</message>
+	<message key="manager.reviewForms.noneChosen">Nenhuma / Formulário de avaliação padrão</message>
+	<message key="manager.reviewForms.noneUsed">Nenhum formulário de avaliação foi utilizado.</message>
+	<message key="article.comments.sectionDefault">Padrão</message>
+	<message key="article.comments.disable">Desabilitar</message>
+	<message key="article.comments.enable">Habilitar</message>
+	<message key="article.fontSize">Tamanho da fonte</message>
+	<message key="article.fontSize.small.altText">Menor</message>
+	<message key="article.fontSize.medium.altText">Média</message>
+	<message key="article.fontSize.large.altText">Maior</message>
+	<message key="submission.changeComments">Mudar para</message>
+	<message key="manager.sections.form.mustAllowPermission">Verifique que pelo menos uma opção está marcada para cada tarefa de Editor de Seção</message>
+	<message key="manager.sections.form.reviewFormId">É necessário escolher um formulário de avaliação válido</message>
+	<message key="manager.sections.disableComments">Desabilitar comentários dos leitores para esta seção</message>
+	<message key="manager.sections.abstractsNotRequired">Não exigir resumos</message>
+	<message key="manager.subscriptions.dateStartSearch">Início</message>
+	<message key="manager.subscriptions.dateEndSearch">Expiração</message>
+	<message key="manager.subscriptions.membership">Assinatura</message>
+	<message key="manager.subscriptions.domain">Dominio</message>
+	<message key="editor.issues.coverPageDisplay">Exibir</message>
+	<message key="editor.issues.hideCoverPageArchives">Não exibir miniatura da capa na lista de edições</message>
+	<message key="editor.issues.hideCoverPageCover">Não exibir imagem de capa antes do sumário</message>
+	<message key="editor.article.coverPageDisplay">Exibir</message>
+	<message key="editor.article.hideCoverPageToc">Não exibir miniatura da capa no sumário</message>
+	<message key="editor.article.hideCoverPageAbstract">Não exibir imagem de capa na página de resumo de artigo</message>
+	<message key="icon.font_small.alt">Menor</message>
+	<message key="icon.font_medium.alt">Médio</message>
+	<message key="icon.font_large.alt">Maior</message>
 </locale>

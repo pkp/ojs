@@ -26,4 +26,8 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">Dentro do Google Analytics, clique em Verificar Status (Check Status) para visualizar o código de acompanhamento do portal. O número da conta é exibido dentro o código de acompanhamento : _uacct = "###". Informe o texto que corresponde a ###.</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Informe o número da conta.</message>
 
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCode">Código de acompanhamento</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Escolha um código de acompanhamento</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Código de acompanhamento legado (urchin.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Novo código de acompanhamento (ga.js)</message>
 </locale>
