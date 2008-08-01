@@ -243,27 +243,29 @@ class ReviewAssignmentDAO extends DAO {
 		$files = array();
 
 		$result = &$this->retrieve(
-			'select f.*, a.reviewer_id as reviewer_id, a.review_id from review_assignments a, article_files f where reviewer_file_id = file_id and viewable=1 and a.article_id=? order by a.round, a.reviewer_id, a.review_id', 
-			(int) $articleId
+			'SELECT	f.*, a.reviewer_id AS reviewer_id, a.review_id
+			FROM	review_assignments a,
+				article_files f
+			WHERE	reviewer_file_id = file_id
+				AND viewable=1
+				AND a.article_id = ?
+			ORDER BY a.round, a.reviewer_id, a.review_id', 
+			array((int) $articleId)
 		);
 
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			if (!isset($files[$row['round']]) || !is_array($files[$row['round']])) {
 				$files[$row['round']] = array();
-				$this_reviewer_id = $row['reviewer_id'];
-				$reviewer_index = 0;
-			}
-			else if ($this_reviewer_id != $row['reviewer_id']) {
-				$this_reviewer_id = $row['reviewer_id'];
-				$reviewer_index++;
+				$thisReviewerId = $row['reviewer_id'];
+				$reviewerIndex = 0;
+			} else if ($thisReviewerId != $row['reviewer_id']) {
+				$thisReviewerId = $row['reviewer_id'];
+				$reviewerIndex++;
 			}
 
-			if (!isset($files[$row['round']][$reviewer_index]) || !is_array($files[$row['round']][$reviewer_index])) {
-				$files[$row['round']][$reviewer_index] = array();
-			}
-			$thisArticleFile = &$this->articleFileDao->_returnArticleFileFromRow($row);
-			$files[$row['round']][$reviewer_index][$row['review_id']] = $thisArticleFile;
+			$thisArticleFile =& $this->articleFileDao->_returnArticleFileFromRow($row);
+			$files[$row['round']][$reviewerIndex][$row['review_id']][] = $thisArticleFile;
 			$result->MoveNext();
 		}
 

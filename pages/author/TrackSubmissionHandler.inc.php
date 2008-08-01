@@ -147,7 +147,6 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$templateMgr->assign_by_ref('reviewAssignments', $reviewAssignments);
 		$templateMgr->assign_by_ref('submission', $authorSubmission);
 		$templateMgr->assign_by_ref('reviewFilesByRound', $reviewFilesByRound);
-		$templateMgr->assign_by_ref('reviewFilesByRound', $reviewFilesByRound);
 		$templateMgr->assign_by_ref('authorViewableFilesByRound', $authorViewableFilesByRound);
 		$templateMgr->assign_by_ref('reviewModifiedByRound', $reviewModifiedByRound);
 

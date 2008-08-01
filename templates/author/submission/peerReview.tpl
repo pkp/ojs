@@ -64,11 +64,13 @@
 		</td>
 		<td class="value" width="80%">
 			{foreach from=$viewableFiles item=reviewerFiles key=reviewer}
-				{foreach from=$reviewerFiles item=viewableFile key=reviewId}
+				{foreach from=$reviewerFiles item=viewableFilesForReviewer key=reviewId}
 					{assign var="roundIndex" value=$reviewIndexesByRound[$round][$reviewId]}
 					{assign var=thisReviewer value=$start+$roundIndex|chr}
-					{translate key="user.role.reviewer"} {$thisReviewer|escape}
-					<a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$viewableFile->getFileId():$viewableFile->getRevision()}" class="file">{$viewableFile->getFileName()|escape}</a>&nbsp;&nbsp;{$viewableFile->getDateModified()|date_format:$dateFormatShort}<br />
+					{foreach from=$viewableFilesForReviewer item=viewableFile}
+						{translate key="user.role.reviewer"} {$thisReviewer|escape}
+						<a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$viewableFile->getFileId():$viewableFile->getRevision()}" class="file">{$viewableFile->getFileName()|escape}</a>&nbsp;&nbsp;{$viewableFile->getDateModified()|date_format:$dateFormatShort}<br />
+					{/foreach}
 				{/foreach}
 			{foreachelse}
 				{translate key="common.none"}
