@@ -276,12 +276,12 @@ class TinyMCEPlugin extends GenericPlugin {
 				$localeList[] = String::substr($key, 0, 2);
 			}
 
-			$tinyMCE_scipt = '
+			$tinymceScipt = '
 			<script language="javascript" type="text/javascript" src="'.$baseUrl.'/'.TINYMCE_JS_PATH.'/tiny_mce_gzip.js"></script>
 			<script language="javascript" type="text/javascript">
 				tinyMCE_GZ.init({
 					relative_urls : "false",
-					plugins : "paste,latex",
+					plugins : "paste",
 					themes : "advanced",
 					languages : "' . join(',', $localeList) . '",
 					disk_cache : true
@@ -289,7 +289,7 @@ class TinyMCEPlugin extends GenericPlugin {
 			</script>
 			<script language="javascript" type="text/javascript">
 				tinyMCE.init({
-					plugins : "paste,latex",
+					plugins : "paste",
 					mode : "exact",
 					language : "' . String::substr(Locale::getLocale(), 0, 2) . '",
 					elements : "' . $enableFields . '",
@@ -297,13 +297,13 @@ class TinyMCEPlugin extends GenericPlugin {
 					forced_root_block : false,
 					apply_source_formatting : false,
 					theme : "advanced",
-					theme_advanced_buttons1 : "pasteword,bold,italic,underline,bullist,numlist,link,unlink,help,code,latex",
+					theme_advanced_buttons1 : "pasteword,bold,italic,underline,bullist,numlist,link,unlink,help,code",
 					theme_advanced_buttons2 : "",
 					theme_advanced_buttons3 : ""
 				});
 			</script>';
 
-			$templateManager->assign('additionalHeadData', $additionalHeadData."\n".$tinyMCE_scipt);
+			$templateManager->assign('additionalHeadData', $additionalHeadData."\n".$tinymceScipt);
 		}
 		return false;
 	}
