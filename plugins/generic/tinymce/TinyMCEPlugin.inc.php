@@ -276,7 +276,7 @@ class TinyMCEPlugin extends GenericPlugin {
 				$localeList[] = String::substr($key, 0, 2);
 			}
 
-			$tinymceScipt = '
+			$tinymceScript = '
 			<script language="javascript" type="text/javascript" src="'.$baseUrl.'/'.TINYMCE_JS_PATH.'/tiny_mce_gzip.js"></script>
 			<script language="javascript" type="text/javascript">
 				tinyMCE_GZ.init({
@@ -303,7 +303,7 @@ class TinyMCEPlugin extends GenericPlugin {
 				});
 			</script>';
 
-			$templateManager->assign('additionalHeadData', $additionalHeadData."\n".$tinymceScipt);
+			$templateManager->assign('additionalHeadData', $additionalHeadData."\n".$tinymceScript);
 		}
 		return false;
 	}
