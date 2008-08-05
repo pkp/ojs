@@ -336,7 +336,7 @@ class EditorSubmissionDAO extends DAO {
 		}
 
 		$result = &$this->retrieveRange(
-			$sql . ' ' . $searchSql . ' ORDER BY article_id ASC',
+			$sql . ' ' . $searchSql . ' ORDER BY a.article_id ASC',
 			count($params)===1?array_shift($params):$params,
 			$rangeInfo
 		);
