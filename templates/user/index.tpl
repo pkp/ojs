@@ -119,7 +119,7 @@
 	{/if}{* $userJournal *}
 
 	<li>&#187; <a href="{url page="login" op="signOut"}">{translate key="user.logOut"}</a></li>
-	{call_hook name="Templates::Admin::Index::MyAccount"}
+	{call_hook name="Templates::User::Index::MyAccount"}
 </ul>
 
 {include file="common/footer.tpl"}

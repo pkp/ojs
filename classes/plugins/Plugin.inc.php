@@ -18,12 +18,6 @@
 import('plugins.PKPPlugin');
 
 class Plugin extends PKPPlugin {
-	/** @var $pluginPath String Path name to files for this plugin */
-	var $pluginPath;
-
-	/** @var $pluginCategory String Category name this plugin is registered to*/
-	var $pluginCategory;
-
 	/**
 	 * Constructor
 	 */
