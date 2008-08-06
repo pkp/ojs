@@ -459,7 +459,7 @@ class PublishedArticleDAO extends DAO {
 				LEFT JOIN article_settings atl ON (a.article_id = atl.article_id AND atl.setting_name = ? AND atl.locale = ?)
 				LEFT JOIN article_settings atpl ON (a.article_id = atpl.article_id AND atpl.setting_name = ? AND atpl.locale = ?)
 			WHERE	pa.article_id = a.article_id
-				AND i.issue_id = pa.article_id
+				AND i.issue_id = pa.issue_id
 				AND i.published = 1
 				AND s.section_id IS NOT NULL' .
 				(isset($journalId)?' AND a.journal_id = ?':'') . ' ORDER BY article_title',
