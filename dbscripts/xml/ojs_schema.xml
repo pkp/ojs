@@ -1634,33 +1634,6 @@
 		</index>
 	</table>
 	
-	
-	<!-- OAI Tables -->
-	
-	<!--
-	 *
-	 * TABLE oai_resumption_tokens
-	 *
-	 -->
-	<table name="oai_resumption_tokens">
-		<field name="token" type="C2" size="32">
-			<NOTNULL />
-		</field>
-		<field name="expire" type="I8">
-			<NOTNULL/>
-		</field>
-		<field name="record_offset" type="I4">
-			<NOTNULL/>
-		</field>
-		<field name="params" type="X" />
-		<descr>Resumption tokens for the OAI protocol interface.</descr>
-		<index name="oai_resumption_tokens_pkey">
-			<col>token</col>
-			<UNIQUE/>
-		</index>
-	</table>
-	
-	
 	<!-- Reading Tools Tables -->
 	
 	<!--

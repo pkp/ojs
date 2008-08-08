@@ -53,6 +53,14 @@ class JournalOAI extends OAI {
 	}
 
 	/**
+	 * Return a list of ignorable GET parameters.
+	 * @return array
+	 */
+	function getNonPathInfoParams() {
+		return array('journal', 'page');
+	}
+
+	/**
 	 * Convert article ID to OAI identifier.
 	 * @param $articleId int
 	 * @return string

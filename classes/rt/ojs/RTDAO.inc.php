@@ -205,28 +205,6 @@ class RTDAO extends DAO {
 	}
 
 	/**
-	 * Return RT object from database row.
-	 * @param $row array
-	 * @return RTVersion
-	 */
-	function &_returnJournalRTFromRow(&$row) {
-		$rt = &new JournalRT($row['journal_id']);
-		$rt->setVersion($row['version_id']);
-		$rt->setCaptureCite($row['capture_cite']);
-		$rt->setViewMetadata($row['view_metadata']);
-		$rt->setSupplementaryFiles($row['supplementary_files']);
-		$rt->setPrinterFriendly($row['printer_friendly']);
-		$rt->setAuthorBio($row['author_bio']);
-		$rt->setDefineTerms($row['define_terms']);
-		$rt->setEmailAuthor($row['email_author']);
-		$rt->setEmailOthers($row['email_others']);
-
-		HookRegistry::call('RTDAO::_returnJournalRTFromRow', array(&$rt, &$row));
-
-		return $rt;
-	}
-
-	/**
 	 * Return RTVersion object from database row.
 	 * @param $row array
 	 * @return RTVersion
