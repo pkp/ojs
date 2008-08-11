@@ -8,14 +8,16 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageCrumbTitle" value="$subscriptionTitle"}
 {if $subscriptionId}
-{assign var="pageTitle" value="manager.subscriptions.edit"}
+	{assign var="pageTitle" value="manager.subscriptions.edit"}
 {else}
-{assign var="pageTitle" value="manager.subscriptions.create"}
+	{assign var="pageTitle" value="manager.subscriptions.create"}
 {/if}
 {assign var="pageId" value="manager.subscription.subscriptionForm"}
 {include file="common/header.tpl"}
+{/strip}
 
 <br/>
 

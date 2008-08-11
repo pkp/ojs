@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="manager.setup.journalSetup"}
 {include file="common/header.tpl"}
+{/strip}
 
 <h3>{translate key="manager.setup.stepsToJournalSite"}</h3>
 

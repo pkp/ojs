@@ -8,9 +8,11 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="editor.issues.futureIssues"}
 {url|assign:"currentUrl" page="layoutEditor" op="futureIssues"}
 {include file="common/header.tpl"}
+{/strip}
 
 <br />
 

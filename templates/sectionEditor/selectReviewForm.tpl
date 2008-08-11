@@ -7,8 +7,10 @@
  * Assign a review form to a review.
  *
  *}
+{strip}
 {assign var="pageTitle" value="editor.article.reviewForms"}
 {include file="common/header.tpl"}
+{/strip}
 
 <h3>{translate key="editor.article.selectReviewForm"}</h3>
 

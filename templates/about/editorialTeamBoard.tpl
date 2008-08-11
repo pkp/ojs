@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="about.editorialTeam"}
 {include file="common/header.tpl"}
+{/strip}
 
 {foreach from=$groups item=group}
 <h4>{$group->getGroupTitle()}</h4>

@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="user.profile.publicProfile"}
 {url|assign:"url" op="profile"}{include file="common/header.tpl"}
+{/strip}
 
 <div id="profilePicContent" style="float: right;">
 	{assign var="profileImage" value=$user->getSetting('profileImage')}

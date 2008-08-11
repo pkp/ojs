@@ -10,8 +10,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="about.aboutThisPublishingSystem"}
 {include file="common/header.tpl"}
+{/strip}
 
 <p>
 {if $currentJournal}

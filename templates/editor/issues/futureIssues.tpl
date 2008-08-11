@@ -8,8 +8,11 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="editor.issues.futureIssues"}
-{url|assign:"currentUrl" page="editor" op="issues"}{include file="common/header.tpl"}
+{url|assign:"currentUrl" page="editor" op="issues"}
+{include file="common/header.tpl"}
+{/strip}
 
 <ul class="menu">
         <li><a href="{url op="createIssue"}">{translate key="editor.navigation.createIssue"}</a></li>

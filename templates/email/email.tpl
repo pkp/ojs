@@ -8,9 +8,11 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="email.compose"}
 {assign var="pageCrumbTitle" value="email.email"}
 {include file="common/header.tpl"}
+{/strip}
 
 <script type="text/javascript">
 {literal}

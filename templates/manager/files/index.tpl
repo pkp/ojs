@@ -8,8 +8,11 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="manager.filesBrowser"}
 {include file="common/header.tpl"}
+{/strip}
+
 {assign var=displayDir value="/$currentDir"}
 <h3>{translate key="manager.files.indexOfDir" dir=$displayDir|escape}</h3>
 

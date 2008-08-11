@@ -7,8 +7,10 @@
  * Form for payment settings.
  *
  *}
+{strip}
 {assign var="pageTitle" value="manager.payment.feePaymentOptions"}
 {include file="common/header.tpl"}
+{/strip}
 
 <ul class="menu">
 	<li class="current"><a href="{url op="payments"}">{translate key="manager.payment.options"}</a></li>

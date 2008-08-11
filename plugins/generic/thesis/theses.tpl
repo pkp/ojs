@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="plugins.generic.thesis.manager.theses"}
 {include file="common/header.tpl"}
+{/strip}
 
 <a name="theses"></a>
 

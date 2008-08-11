@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var=pageTitle value="search.searchResults"}
 {include file="common/header.tpl"}
+{/strip}
 
 <script type="text/javascript">
 {literal}

@@ -7,8 +7,10 @@
  * Display list of review form elements.
  *
  *}
+{strip}
 {assign var="pageTitle" value="manager.reviewFormElements"}
 {include file="common/header.tpl"}
+{/strip}
 
 <script type="text/javascript">
 {literal}

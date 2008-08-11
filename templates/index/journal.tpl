@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitleTranslated" value=$siteTitle}
 {include file="common/header.tpl"}
+{/strip}
 
 <div>{$journalDescription}</div>
 

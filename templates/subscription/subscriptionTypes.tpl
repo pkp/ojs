@@ -8,9 +8,11 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="manager.subscriptionTypes"}
 {assign var="pageId" value="manager.subscriptionTypes"}
 {include file="common/header.tpl"}
+{/strip}
 
 <ul class="menu">
 	<li><a href="{url op="subscriptions"}">{translate key="manager.subscriptions"}</a></li>

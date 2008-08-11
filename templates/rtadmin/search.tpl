@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="rt.admin.searches.edit.editSearch"}
 {include file="common/header.tpl"}
+{/strip}
 
 <form action="{if $searchId}{url op="saveSearch" path=$versionId|to_array:$contextId:$searchId}{else}{url op="createSearch" path=$versionId|to_array:$contextId:"save"}{/if}" method="post">
 <table class="data" width="100%">

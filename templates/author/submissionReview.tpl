@@ -8,9 +8,11 @@
  *
  * $Id$
  *}
+{strip}
 {translate|assign:"pageTitleTranslated" key="submission.page.review" id=$submission->getArticleId()}
 {assign var="pageCrumbTitle" value="submission.review"}
 {include file="common/header.tpl"}
+{/strip}
 
 <ul class="menu">
 	<li><a href="{url op="submission" path=$submission->getArticleId()}">{translate key="submission.summary"}</a></li>

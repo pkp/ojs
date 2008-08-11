@@ -7,9 +7,10 @@
  * List of operations this plugin can perform
  *
  *}
-
+{strip}
 {assign var="pageTitle" value="plugins.importexport.METSExport.displayName"}
 {include file="common/header.tpl"}
+{/strip}
 
 <br/>
 

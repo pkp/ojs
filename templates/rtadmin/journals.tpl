@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="rt.readingTools"}
 {include file="common/header.tpl"}
+{/strip}
 
 <h3>{translate key="user.myJournals"}</h3>
 

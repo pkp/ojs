@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="manager.people.mergeUsers"}
 {include file="common/header.tpl"}
+{/strip}
 
 <p>{if $oldUserId != ''}{translate key="manager.people.mergeUsers.into.description"}{else}{translate key="manager.people.mergeUsers.from.description"}{/if}</p>
 

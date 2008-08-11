@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="about.journalSponsorship"}
 {include file="common/header.tpl"}
+{/strip}
 
 {if not(empty($publisherNote) && empty($publisherInstitution))}
 <h3>{translate key="common.publisher"}</h3>

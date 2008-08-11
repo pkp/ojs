@@ -8,7 +8,9 @@
  *
  * $Id$
  *}
+{strip}
 {include file="common/header.tpl"}
+{/strip}
 
 <p>{$content|nl2br}</p>
 

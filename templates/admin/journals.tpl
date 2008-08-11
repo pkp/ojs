@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="journal.journals"}
 {include file="common/header.tpl"}
+{/strip}
 
 <br />
 

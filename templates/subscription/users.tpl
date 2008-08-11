@@ -9,12 +9,14 @@
  * $Id$
  *
  *}
+{strip}
 {if $subscriptionId}
-{assign var="pageTitle" value="manager.subscriptions.selectSubscriber"}
+	{assign var="pageTitle" value="manager.subscriptions.selectSubscriber"}
 {else}
-{assign var="pageTitle" value="manager.subscriptions.select"}
+	{assign var="pageTitle" value="manager.subscriptions.select"}
 {/if}
 {include file="common/header.tpl"}
+{/strip}
 
 {if $subscriptionCreated}
 <br/>{translate key="manager.subscriptions.subscriptionCreatedSuccessfully"}<br/>

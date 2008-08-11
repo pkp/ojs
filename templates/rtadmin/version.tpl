@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="rt.admin.versions.edit.editVersion"}
 {include file="common/header.tpl"}
+{/strip}
 
 {if $versionId}
 	<ul class="menu">

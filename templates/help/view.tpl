@@ -8,7 +8,9 @@
  *
  * $Id$
  *}
+{strip}
 {include file="help/header.tpl"}
+{/strip}
 
 <div id="sidebar">
 	{include file="help/toc.tpl"}

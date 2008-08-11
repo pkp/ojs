@@ -8,10 +8,11 @@
  *
  * $Id$
  *}
-
+{strip}
 {assign var="pageTitle" value="plugins.importexport.METSExport.export.selectIssue"}
 {assign var="pageCrumbTitle" value="plugins.importexport.METSExport.export.selectIssue"}
 {include file="common/header.tpl"}
+{/strip}
 
 <script type="text/javascript">
 {literal}

@@ -8,7 +8,9 @@
  *
  * $Id$
  *}
+{strip}
 {include file="common/header.tpl"}
+{/strip}
 
 <h3>{translate key=$pageSubTitle}</h3>
 <form name="submit" method="post" action="{url op=$actionHandler path=$articleId}">

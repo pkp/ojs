@@ -8,8 +8,11 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="editor.issues.createIssue"}
-{url|assign:"currentUrl" page="editor" op="createIssue"}{include file="common/header.tpl"}
+{url|assign:"currentUrl" page="editor" op="createIssue"}
+{include file="common/header.tpl"}
+{/strip}
 
 {include file="common/formErrors.tpl"}
 

@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {translate|assign:"pageTitleTranslated" key="plugins.generic.translator.locale" locale=$locale}
 {include file="common/header.tpl"}
+{/strip}
 
 <ul class="menu">
 	<li class="current"><a href="{url op="edit" path=$locale}">{translate key="common.edit"}</a></li>

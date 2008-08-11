@@ -8,7 +8,9 @@
  *
  * $Id$
  *}
+{strip}
 {include file="help/header.tpl"}
+{/strip}
 
 <div id="main" style="margin: 0; width: 660px;">
 

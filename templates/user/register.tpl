@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="user.register"}
 {include file="common/header.tpl"}
+{/strip}
 
 <form name="register" method="post" action="{url op="registerUser"}">
 

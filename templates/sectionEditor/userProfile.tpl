@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="manager.people"}
 {include file="common/header.tpl"}
+{/strip}
 
 <h3>{translate key="user.profile"}: {$user->getFullName()|escape}</h3>
 

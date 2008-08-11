@@ -8,9 +8,11 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="plugins.importexport.erudit.selectArticle"}
 {assign var="pageCrumbTitle" value="plugins.importexport.erudit.selectArticle"}
 {include file="common/header.tpl"}
+{/strip}
 
 <br/>
 

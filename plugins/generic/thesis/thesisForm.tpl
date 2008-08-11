@@ -8,6 +8,7 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageCrumbTitle" value="$thesisTitle"}
 {if $thesisId}
 	{assign var="pageTitle" value="plugins.generic.thesis.manager.edit"}
@@ -15,6 +16,7 @@
 	{assign var="pageTitle" value="plugins.generic.thesis.manager.create"}
 {/if}
 {include file="common/header.tpl"}
+{/strip}
 
 <br/>
 

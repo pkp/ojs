@@ -9,8 +9,10 @@
  * $Id$
  *
  *}
+{strip}
 {assign var="pageTitle" value="manager.people.enrollment"}
 {include file="common/header.tpl"}
+{/strip}
 
 <form name="submit" method="post" action="{url op="enrollSearch" path=$articleId}">
 	<select name="searchField" size="1" class="selectMenu">

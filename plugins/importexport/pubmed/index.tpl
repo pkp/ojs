@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="plugins.importexport.pubmed.displayName"}
 {include file="common/header.tpl"}
+{/strip}
 
 <br/>
 

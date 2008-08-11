@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="plugins.generic.thesis.manager.settings"}
 {include file="common/header.tpl"}
+{/strip}
 
 <ul class="menu">
 	<li><a href="{plugin_url path="theses"}">{translate key="plugins.generic.thesis.manager.theses"}</a></li>

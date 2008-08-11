@@ -9,8 +9,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="installer.ojsUpgrade"}
 {include file="common/header.tpl"}
+{/strip}
 
 {translate key="installer.upgradeComplete" version=$newVersion->getVersionString()}
 

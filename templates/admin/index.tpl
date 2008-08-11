@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="admin.siteAdmin"}
 {include file="common/header.tpl"}
+{/strip}
 
 <h3>{translate key="admin.siteManagement"}</h3>
 

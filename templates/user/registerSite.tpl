@@ -8,7 +8,9 @@
  *
  * $Id$
  *}
+{strip}
 {include file="common/header.tpl"}
+{/strip}
 
 {iterate from=journals item=journal}
 	{if !$notFirstJournal}

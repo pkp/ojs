@@ -8,13 +8,15 @@
  *
  * $Id$
  *}
+{strip}
 {if $comment}
-{assign var=pageTitle value="comments.readerComments"}
-{assign var=pageCrumbTitleTranslated value=$comment->getTitle()|escape|truncate:50:"..."|default:"&nbsp;"}
+	{assign var=pageTitle value="comments.readerComments"}
+	{assign var=pageCrumbTitleTranslated value=$comment->getTitle()|escape|truncate:50:"..."|default:"&nbsp;"}
 {else}
-{assign var=pageTitle value="comments.readerComments"}
+	{assign var=pageTitle value="comments.readerComments"}
 {/if}
 {include file="common/header.tpl"}
+{/strip}
 
 {if $enableComments==COMMENTS_UNAUTHENTICATED || (($enableComments==COMMENTS_AUTHENTICATED || $enableComments==COMMENTS_ANONYMOUS) && $isUserLoggedIn)}
 	{assign var=postingAllowed value=1}

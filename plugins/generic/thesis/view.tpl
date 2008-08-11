@@ -8,9 +8,11 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageCrumbTitleTranslated" value=$thesis->getStudentLastName()}
 {assign var="pageTitleTranslated" value=$thesis->getTitle()}
 {include file="common/header.tpl"}
+{/strip}
 
 <table width="100%">
 	<tr valign="top">

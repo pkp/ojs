@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="plugins.importexport.native.import.error"}
 {include file="common/header.tpl"}
+{/strip}
 
 <p>{translate key="plugins.importexport.native.import.error.description"}</p>
 {if $error}

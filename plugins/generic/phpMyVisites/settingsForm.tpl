@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="plugins.generic.phpmv.manager.phpmvSettings"}
 {include file="common/header.tpl"}
+{/strip}
 
 {translate key="plugins.generic.phpmv.manager.settings.description"}
 

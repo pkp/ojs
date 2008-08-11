@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="manager.people"}
 {include file="common/header.tpl"}
+{/strip}
 
 <h3>{$user->getFullName()|escape}</h3>
 

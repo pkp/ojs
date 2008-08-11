@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="user.userHome"}
 {include file="common/header.tpl"}
+{/strip}
 
 {if $showAllJournals}
 

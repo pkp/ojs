@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var=pageTitle value="manager.groups.membership.addMember"}
 {include file="common/header.tpl"}
+{/strip}
 
 <form name="submit" method="post" action="{url op="addMembership" path=$group->getGroupId()}">
 	<select name="searchField" size="1" class="selectMenu">

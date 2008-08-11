@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="user.role.reviewers"}
 {include file="common/header.tpl"}
+{/strip}
 
 <h3>{translate key="editor.article.selectReviewer"}</h3>
 <form name="submit" method="post" action="{url op="selectReviewer" path=$articleId}">

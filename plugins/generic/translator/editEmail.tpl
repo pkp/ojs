@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {translate|escape|assign:"pageTitleTranslated" key="plugins.generic.translator.email.edit" emailKey=$emailKey}
 {include file="common/header.tpl"}
+{/strip}
 
 <p>{translate key="plugins.generic.translator.email.description"}</p>
 

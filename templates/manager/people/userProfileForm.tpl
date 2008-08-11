@@ -8,8 +8,11 @@
  *
  * $Id$
  *}
-{url|assign:"currentUrl" op="people" path="all"}{assign var="pageTitle" value="manager.people"}
+{strip}
+{url|assign:"currentUrl" op="people" path="all"}
+{assign var="pageTitle" value="manager.people"}
 {include file="common/header.tpl"}
+{/strip}
 
 {if not $userId}
 {assign var="passwordRequired" value="true"}

@@ -9,9 +9,11 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="submission.notes"}
 {assign var="pageCrumbTitle" value="submission.notes.breadcrumb"}
 {include file="common/header.tpl"}
+{/strip}
 
 {literal}
 <script type="text/javascript">

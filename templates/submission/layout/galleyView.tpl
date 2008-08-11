@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="submission.galley"}
 {include file="common/header.tpl"}
+{/strip}
 
 <p>{translate key="submission.layout.galleyFileData"}</p>
 

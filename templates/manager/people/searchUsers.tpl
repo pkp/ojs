@@ -9,7 +9,10 @@
  * $Id$
  *
  *}
-{translate|assign:"pageTitleTranslated" key="manager.people.roleEnrollment" role=$roleName|translate}{include file="common/header.tpl"}
+{strip}
+{translate|assign:"pageTitleTranslated" key="manager.people.roleEnrollment" role=$roleName|translate}
+{include file="common/header.tpl"}
+{/strip}
 
 <form name="disableUser" method="post" action="{url op="disableUser"}">
 	<input type="hidden" name="reason" value=""/>

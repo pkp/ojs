@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="rt.admin.validateUrls"}
 {include file="common/header.tpl"}
+{/strip}
 
 <p>{translate key="rt.admin.validateUrls.description"}</p>
 

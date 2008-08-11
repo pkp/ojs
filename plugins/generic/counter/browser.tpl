@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="plugins.generic.counter.browseLog.logBrowser"}
 {include file="common/header.tpl"}
+{/strip}
 
 <a name="entries"></a>
 

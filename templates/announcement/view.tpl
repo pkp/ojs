@@ -8,9 +8,11 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitleTranslated" value=$announcementTitle}
 {assign var="pageId" value="announcement.view"}
 {include file="common/header.tpl"}
+{/strip}
 
 <table width="100%">
 	<tr>

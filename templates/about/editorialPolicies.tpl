@@ -8,8 +8,10 @@
  * 
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="about.editorialPolicies"}
 {include file="common/header.tpl"}
+{/strip}
 
 <ul class="plain">
 	{if $currentJournal->getLocalizedSetting('focusScopeDesc') != ''}<li>&#187; <a href="{url op="editorialPolicies" anchor="focusAndScope"}">{translate key="about.focusAndScope"}</a></li>{/if}

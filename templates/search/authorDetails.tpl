@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="search.authorDetails"}
 {include file="common/header.tpl"}
+{/strip}
 
 <h3>{$lastName|escape}, {$firstName|escape}{if $middleName} {$middleName|escape}{/if}{if $affiliation} {$affiliation|escape}{/if}</h3>
 <ul>

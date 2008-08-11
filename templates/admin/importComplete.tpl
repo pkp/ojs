@@ -8,7 +8,9 @@
  *
  * $Id$
  *}
+{strip}
 {include file="common/header.tpl"}
+{/strip}
 
 <p>{translate key="admin.journals.importOJS1.success"}</p>
 

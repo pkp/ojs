@@ -7,9 +7,11 @@
  * Preview of a review form.
  *
  *}
+{strip}
 {assign var="pageId" value="manager.reviewFormElements.previewReviewForm"}
 {assign var="pageCrumbTitle" value=$pageTitle}
 {include file="common/header.tpl"}
+{/strip}
 
 {if $reviewForm->getCompleteCount()==0 && $reviewForm->getIncompleteCount()==0}
 	<ul class="menu">

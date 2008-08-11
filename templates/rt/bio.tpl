@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var=pageTitle value="rt.authorBio"}
 {include file="rt/header.tpl"}
+{/strip}
 
 <h3>{$article->getArticleTitle()|strip_unsafe_html}</h3>
 

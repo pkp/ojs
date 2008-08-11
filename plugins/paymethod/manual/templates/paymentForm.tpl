@@ -7,8 +7,10 @@
  * Manual payment page
  *
  *}
+{strip}
 {assign var="pageTitle" value="plugins.paymethod.manual"}
 {include file="common/header.tpl"}
+{/strip}
 
 <table class="data" width="100%">
 	<tr>

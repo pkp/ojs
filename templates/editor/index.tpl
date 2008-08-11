@@ -8,9 +8,11 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="editor.home"}
 {assign var="pageCrumbTitle" value="user.role.editor"}
 {include file="common/header.tpl"}
+{/strip}
 
 <h3>{translate key="article.submissions"}</h3>
 

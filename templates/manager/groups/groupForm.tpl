@@ -8,9 +8,11 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageId" value="manager.groups.groupForm"}
 {assign var="pageCrumbTitle" value=$pageTitle}
 {include file="common/header.tpl"}
+{/strip}
 
 {if $group}
 	<ul class="menu">

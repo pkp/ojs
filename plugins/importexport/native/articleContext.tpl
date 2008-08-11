@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="plugins.importexport.native.import.articles"}
 {include file="common/header.tpl"}
+{/strip}
 
 <p>{translate key="plugins.importexport.native.import.articles.description"}</p>
 

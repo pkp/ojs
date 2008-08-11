@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="plugins.gateways.metsGateway.displayName"}
 {include file="common/header.tpl"}
+{/strip}
 
 {url|assign:"directoryUrl" page="gateway" op="plugin" path="METSGatewayPlugin"}
 

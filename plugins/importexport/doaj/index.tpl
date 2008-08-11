@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="plugins.importexport.doaj.displayName"}
 {include file="common/header.tpl"}
+{/strip}
 
 <br/>
 

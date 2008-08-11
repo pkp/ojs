@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="about.statistics"}
 {include file="common/header.tpl"}
+{/strip}
 
 {* WARNING: This page should be kept roughly synchronized with the
    implementation of the Journal Manager's statistics page.        *}

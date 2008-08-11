@@ -8,9 +8,11 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="common.queue.long.$pageToDisplay"}
 {url|assign:"currentUrl" page="sectionEditor"}
 {include file="common/header.tpl"}
+{/strip}
 
 <ul class="menu">
 	<li{if ($pageToDisplay == "submissionsInReview")} class="current"{/if}><a href="{url path="submissionsInReview"}">{translate key="common.queue.short.submissionsInReview"}</a></li>

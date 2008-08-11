@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="common.languages"}
 {include file="common/header.tpl"}
+{/strip}
 
 <h3>{translate key="admin.languages.downloadLocales"}</h3>
 

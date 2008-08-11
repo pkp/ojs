@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="about.journalContact"}
 {include file="common/header.tpl"}
+{/strip}
 
 {if !empty($journalSettings.mailingAddress)}
 <h3>{translate key="common.mailingAddress"}</h3>

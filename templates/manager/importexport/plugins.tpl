@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="manager.importExport"}
 {include file="common/header.tpl"}
+{/strip}
 
 <ul>
 	{foreach from=$plugins item=plugin}

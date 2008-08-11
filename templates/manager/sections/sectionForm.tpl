@@ -8,9 +8,11 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="section.section"}
 {assign var="pageCrumbTitle" value="section.sections"}
 {include file="common/header.tpl"}
+{/strip}
 
 <form name="section" method="post" action="{url op="updateSection" path=$sectionId}" onsubmit="return checkEditorAssignments()">
 <input type="hidden" name="editorAction" value="" />

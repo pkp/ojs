@@ -7,8 +7,11 @@
  * About the Association memberships
  *
  *}
+{strip}
 {assign var="pageTitle" value="about.memberships"}
 {include file="common/header.tpl"}
+{/strip}
+
 <h3>{$membershipFeeName|escape}</h3>
 
 <p>{$membershipFeeDescription|nl2br}<br />

@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="about.submissions"}
 {include file="common/header.tpl"}
+{/strip}
 
 {if $currentJournal->getSetting('journalPaymentsEnabled') && 
 		($currentJournal->getSetting('submissionFeeEnabled') || $currentJournal->getSetting('fastTrackFeeEnabled') || $currentJournal->getSetting('publicationFeeEnabled')) }

@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var=pageTitle value="rt.findingReferences"}
 {include file="rt/header.tpl"}
+{/strip}
 
 <script type="text/javascript">
 {literal}

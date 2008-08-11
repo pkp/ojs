@@ -7,8 +7,10 @@
  * Form for submitting a PayPal payment
  *
  *}
+{strip}
 {assign var="pageTitle" value="plugins.paymethod.paypal"}
 {include file="common/header.tpl"}
+{/strip}
 
 <p><img src="{$baseUrl}/plugins/paymethod/paypal/images/paypal_cards.png" alt="paypal" /></p>
 <p>{translate key="plugins.paymethod.paypal.warning"}</p>

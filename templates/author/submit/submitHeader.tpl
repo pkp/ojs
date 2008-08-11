@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageCrumbTitle" value="author.submit"}
 {include file="common/header.tpl"}
+{/strip}
 
 <ul class="steplist">
 <li{if $submitStep == 1} class="current"{/if}>{if $submitStep != 1 && $submissionProgress >= 1}<a href="{url op="submit" path="1" articleId=$articleId}">{/if}

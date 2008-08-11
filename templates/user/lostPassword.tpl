@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="user.login.resetPassword"}
 {include file="common/header.tpl"}
+{/strip}
 
 <form name="reset" action="{url page="login" op="requestResetPassword"}" method="post">
 <p><span class="instruct">{translate key="user.login.resetPasswordInstructions"}</span></p>

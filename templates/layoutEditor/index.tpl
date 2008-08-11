@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="user.role.layoutEditor"}
 {include file="common/header.tpl"}
+{/strip}
 
 <h3>{translate key="article.submissions"}</h3>
 

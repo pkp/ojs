@@ -10,8 +10,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="about.siteMap"}
 {include file="common/header.tpl"}
+{/strip}
 
 <ul class="plain">
 <li>

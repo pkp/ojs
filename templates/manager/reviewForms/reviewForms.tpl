@@ -7,8 +7,10 @@
  * Display list of unpublished review forms in journal management.
  *
  *}
+{strip}
 {assign var="pageTitle" value="manager.reviewForms"}
 {include file="common/header.tpl"}
+{/strip}
 
 <p>{translate key="manager.reviewForms.list.description"}</p>
 

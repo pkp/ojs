@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value=`$roleName`s}
 {include file="common/header.tpl"}
+{/strip}
 
 <h3>{translate key="editor.article.selectEditor" roleName=$roleName|translate}</h3>
 

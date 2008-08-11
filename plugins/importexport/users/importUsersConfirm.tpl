@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="plugins.importexport.users.displayName"}
 {include file="common/header.tpl"}
+{/strip}
 
 {translate key="plugins.importexport.users.import.confirmUsers"}:
 <form action="{plugin_url path="import"}" method="post">

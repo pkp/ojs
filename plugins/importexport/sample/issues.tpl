@@ -8,9 +8,11 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="plugins.importexport.sample.selectIssue.long"}
 {assign var="pageCrumbTitle" value="plugins.importexport.sample.selectIssue.short"}
 {include file="common/header.tpl"}
+{/strip}
 
 <br/>
 

@@ -9,8 +9,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="installer.ojsInstallation"}
 {include file="common/header.tpl"}
+{/strip}
 
 {url|assign:"loginUrl" page="login"}
 {translate key="installer.installationComplete" loginUrl=$loginUrl}

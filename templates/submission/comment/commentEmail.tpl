@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="email.compose"}
 {include file="submission/comment/header.tpl"}
+{/strip}
 
 <script type="text/javascript">
 {literal}

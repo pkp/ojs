@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="manager.people.enrollment"}
 {include file="common/header.tpl"}
+{/strip}
 
 <h3>{translate key="manager.people.syncUsers"}</h3>
 

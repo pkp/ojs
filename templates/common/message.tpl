@@ -9,7 +9,9 @@
  *
  * $Id$
  *}
+{strip}
 {include file="common/header.tpl"}
+{/strip}
 
 <p>
 	{if !$messageTranslated}

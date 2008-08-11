@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="about.people"}
 {include file="common/header.tpl"}
+{/strip}
 
 <h4>{$group->getGroupTitle()}</h4>
 {assign var=groupId value=$group->getGroupId()}

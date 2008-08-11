@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="submission.comments.editComment"}
 {include file="submission/comment/header.tpl"}
+{/strip}
 
 <form method="post" action="{url op="saveComment" path=$commentId}">
 {if $hiddenFormParams}

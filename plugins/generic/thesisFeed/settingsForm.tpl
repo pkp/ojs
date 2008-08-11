@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="plugins.generic.thesisfeed.displayName"}
 {include file="common/header.tpl"}
+{/strip}
 
 {translate key="plugins.generic.thesisfeed.description"}
 

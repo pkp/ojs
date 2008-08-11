@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="plugins.theme.custom.name"}
 {include file="common/header.tpl"}
+{/strip}
 
 {translate key="plugins.theme.custom.description"}
 

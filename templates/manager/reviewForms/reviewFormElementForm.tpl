@@ -7,9 +7,11 @@
  * Form to create/modify a review form element.
  *
  *}
+{strip}
 {assign var="pageId" value="manager.reviewFormElements.reviewFormElementForm"}
 {assign var="pageCrumbTitle" value=$pageTitle}
 {include file="common/header.tpl"}
+{/strip}
 
 <script type="text/javascript">
 {literal}

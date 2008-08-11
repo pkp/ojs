@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="rt.admin.settings"}
 {include file="common/header.tpl"}
+{/strip}
 
 <form method="post" action="{url op="saveSettings"}">
 

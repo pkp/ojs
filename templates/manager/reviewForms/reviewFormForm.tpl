@@ -7,7 +7,9 @@
  * Form to create/modify a review form.
  *
  *}
+{strip}
 {include file="common/header.tpl"}
+{/strip}
 
 {if $reviewFormId}
 	<ul class="menu">

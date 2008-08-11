@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="plugins.importexport.users.import.importUsers"}
 {include file="common/header.tpl"}
+{/strip}
 
 {translate key="plugins.importexport.users.import.usersWereImported"}:
 <table width="100%" class="listing">

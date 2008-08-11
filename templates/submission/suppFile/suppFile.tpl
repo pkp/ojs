@@ -8,13 +8,15 @@
  *
  * $Id$
  *}
+{strip}
 {if $suppFileId}
-{assign var="pageTitle" value="author.submit.editSupplementaryFile"}
+	{assign var="pageTitle" value="author.submit.editSupplementaryFile"}
 {else}
-{assign var="pageTitle" value="author.submit.addSupplementaryFile"}
+	{assign var="pageTitle" value="author.submit.addSupplementaryFile"}
 {/if}
 {assign var="pageCrumbTitle" value="submission.supplementaryFiles"}
 {include file="common/header.tpl"}
+{/strip}
 
 <form name="suppFile" method="post" action="{url page=$rolePath op="saveSuppFile" path=$suppFileId}" enctype="multipart/form-data">
 <input type="hidden" name="articleId" value="{$articleId|escape}" />

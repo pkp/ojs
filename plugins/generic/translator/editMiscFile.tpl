@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {translate|escape|assign:"pageTitleTranslated" key="plugins.generic.translator.file.edit" filename=$filename}
 {include file="common/header.tpl"}
+{/strip}
 
 {assign var=filenameEscaped value=$filename|escape:"url"|escape:"url"}
 <form method="post" action="{url op="saveMiscFile" path=$locale|to_array:$filenameEscaped}" name="editor">

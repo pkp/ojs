@@ -8,14 +8,16 @@
  *
  * $Id$
  *}
+{strip}
 {if not $noIssue}
-{assign var="pageTitleTranslated" value=$issue->getIssueIdentification()|escape}
-{assign var="pageCrumbTitleTranslated" value=$issue->getIssueIdentification(false,true)|escape}
+	{assign var="pageTitleTranslated" value=$issue->getIssueIdentification()|escape}
+	{assign var="pageCrumbTitleTranslated" value=$issue->getIssueIdentification(false,true)|escape}
 {else}
-{assign var="pageTitle" value="editor.issues.noLiveIssues"}
-{assign var="pageCrumbTitle" value="editor.issues.noLiveIssues"}
+	{assign var="pageTitle" value="editor.issues.noLiveIssues"}
+	{assign var="pageCrumbTitle" value="editor.issues.noLiveIssues"}
 {/if}
 {include file="common/header.tpl"}
+{/strip}
 
 {if !$isLayoutEditor}{* Layout Editors can also access this page. *}
 	<ul class="menu">

@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="common.queue.long.$pageToDisplay"}
 {include file="common/header.tpl"}
+{/strip}
 
 <ul class="menu">
 	<li{if ($pageToDisplay == "active")} class="current"{/if}><a href="{url op="submissions" path="active"}">{translate key="common.queue.short.active"}</a></li>

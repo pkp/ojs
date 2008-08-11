@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var=pageTitle value="email.email"}
 {include file="rt/header.tpl"}
+{/strip}
 
 <p>{translate key="rt.email.sent"}</p>
 

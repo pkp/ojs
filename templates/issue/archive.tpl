@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="archive.archives"}
 {include file="common/header.tpl"}
+{/strip}
 
 <a name="issues"></a>
 

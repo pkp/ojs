@@ -8,9 +8,11 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="plugins.importexport.pubmed.export.selectArticle"}
 {assign var="pageCrumbTitle" value="plugins.importexport.pubmed.export.selectArticle"}
 {include file="common/header.tpl"}
+{/strip}
 
 <script type="text/javascript">
 {literal}

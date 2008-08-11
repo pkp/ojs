@@ -9,9 +9,11 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="admin.systemConfiguration"}
 {assign var="currentUrl" value="{url op="editSystemConfig"}"
 {include file="common/header.tpl"}
+{/strip}
 
 <br/>
 

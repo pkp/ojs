@@ -7,8 +7,10 @@
  * Table to view all past CompletedPayments
  *
  *}
+{strip}
 {assign var="pageTitle" value="common.payments"}
 {include file="common/header.tpl"}
+{/strip}
 
 <ul class="menu">
 	<li><a href="{url op="payments"}">{translate key="manager.payment.options"}</a></li>

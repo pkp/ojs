@@ -8,7 +8,11 @@
  *
  * $Id$
  *}
-{assign var="pageCrumbTitle" value="manager.setup.journalSetup"}{url|assign:"currentUrl" op="setup"}{include file="common/header.tpl"}
+{strip}
+{assign var="pageCrumbTitle" value="manager.setup.journalSetup"}
+{url|assign:"currentUrl" op="setup"}
+{include file="common/header.tpl"}
+{/strip}
 
 <ul class="steplist">
 	<li{if $setupStep == 1} class="current"{/if}><a href="{url op="setup" path="1"}">1. {translate key="manager.setup.details"}</a></li>

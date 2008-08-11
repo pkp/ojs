@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="about.editorialTeam"}
 {include file="common/header.tpl"}
+{/strip}
 
 {if count($editors) > 0}
 	{if count($editors) == 1}

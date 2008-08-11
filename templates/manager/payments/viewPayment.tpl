@@ -7,8 +7,10 @@
  * Page to view one CompletedPayment in detail
  *
  *}
+{strip}
 {assign var="pageTitle" value="common.payment"}
 {include file="common/header.tpl"}
+{/strip}
 
 <ul class="menu">
 	<li><a href="{url op="payments"}">{translate key="manager.payment.options"}</a></li>

@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="about.subscriptions"}
 {include file="common/header.tpl"}
+{/strip}
 
 <h3>{translate key="about.subscriptionsContact"}</h3>
 <p>

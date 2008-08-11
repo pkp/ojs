@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="manager.plugins.pluginManagement"}
 {include file="common/header.tpl"}
+{/strip}
 
 <p>{translate key="manager.plugins.description"}</p>
 

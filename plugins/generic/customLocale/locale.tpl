@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {translate|assign:"pageTitleTranslated" key="plugins.generic.customLocale.locale" locale=$locale}
 {include file="common/header.tpl"}
+{/strip}
 
 <p>{translate key="plugins.generic.customLocale.localeDescription"}</p>
 

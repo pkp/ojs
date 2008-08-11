@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="rt.admin.contexts.edit.editContext"}
 {include file="common/header.tpl"}
+{/strip}
 
 {if $contextId}
 	<ul class="menu">

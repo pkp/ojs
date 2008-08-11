@@ -8,7 +8,9 @@
  *
  * $Id$
  *}
+{strip}
 {include file="submission/comment/header.tpl"}
+{/strip}
 
 <script type="text/javascript">
 {literal}

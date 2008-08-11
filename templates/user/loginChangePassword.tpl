@@ -8,9 +8,11 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="user.changePassword"}
 {url|assign:"currentUrl" page="login" op="changePassword"}
 {include file="common/header.tpl"}
+{/strip}
 
 <form method="post" action="{url page="login" op="savePassword"}">
 

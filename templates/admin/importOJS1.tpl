@@ -8,9 +8,11 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="admin.journals.importOJS1"}
 {assign var="helpTopicId" value="site.siteManagement"}
 {include file="common/header.tpl"}
+{/strip}
 
 <form method="post" action="{url page="admin" op="doImportOJS1"}">
 

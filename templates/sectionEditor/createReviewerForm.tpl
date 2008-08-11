@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitle" value="sectionEditor.review.createReviewer"}
 {include file="common/header.tpl"}
+{/strip}
 
 <form method="post" name="reviewerForm" action="{url op="createReviewer" path=$articleId|to_array:"create"}">
 

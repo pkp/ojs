@@ -9,8 +9,10 @@
  *
  * $Id$
  *}
+{strip}
 {assign var="pageTitleTranslated" value="LOCKSS Publisher Manifest"}
 {include file="common/header.tpl"}
+{/strip}
 
 {if $journals}
 <h3>Archive of Published Issues</h3>
