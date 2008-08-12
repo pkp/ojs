@@ -47,7 +47,7 @@ class ProfileHandler extends UserHandler {
 		$profileForm = &new ProfileForm();
 		$profileForm->readInputData();
 
-		if (Request::getUserVar('profileImage')) {
+		if (Request::getUserVar('uploadProfileImage')) {
 			if (!$profileForm->uploadProfileImage()) {
 				$profileForm->addError('profileImage', Locale::translate('user.profile.form.profileImageInvalid'));
 			}
