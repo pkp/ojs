@@ -22,7 +22,7 @@ class Plugin extends PKPPlugin {
 	 * Constructor
 	 */
 	function Plugin() {
-		Parent::PKPPlugin();
+		parent::PKPPlugin();
 	}
 
 	function getTemplatePath() {
@@ -39,7 +39,7 @@ class Plugin extends PKPPlugin {
 	 * 	the plugin will not be registered.
 	 */
 	function register($category, $path) {
-		$returner = Parent::register($category, $path);
+		$returner = parent::register($category, $path);
 		if ($this->getNewJournalPluginSettingsFile()) {
 			HookRegistry::register ('JournalSiteSettingsForm::execute', array(&$this, 'installJournalSettings'));
 		}
