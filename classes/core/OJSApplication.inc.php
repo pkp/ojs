@@ -67,7 +67,6 @@ class OJSApplication extends PKPApplication {
 		if (defined('SESSION_DISABLE_INIT')) return false;
 		if (!Config::getVar('general', 'installed')) return false;
 		if (!empty($_POST) || Validation::isLoggedIn()) return false;
-		if (!Config::getVar('cache', 'web_cache')) return false;
 		if (!PKPRequest::isPathInfoEnabled()) {
 			$ok = array('journal', 'page', 'op', 'path');
 			if (!empty($_GET) && count(array_diff(array_keys($_GET), $ok)) != 0) {
