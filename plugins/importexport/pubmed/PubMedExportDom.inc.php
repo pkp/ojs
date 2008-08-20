@@ -163,7 +163,7 @@ class PubMedExportDom {
 			$articleFile = &$articleFileDao->getArticleFile($revisedFileID);
 
 			if ($articleFile) {
-i				$revisedNode =& PubMedExportDom::generatePubDateDom($doc, $articleFile->getDateModified(), 'revised');
+				$revisedNode =& PubMedExportDom::generatePubDateDom($doc, $articleFile->getDateModified(), 'revised');
 				XMLCustomWriter::appendChild($historyNode, $revisedNode);
 			}
 		}
