@@ -162,8 +162,10 @@ class PubMedExportDom {
 			$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 			$articleFile = &$articleFileDao->getArticleFile($revisedFileID);
 
-			$revisedNode =& PubMedExportDom::generatePubDateDom($doc, $articleFile->getDateModified(), 'revised');
-			XMLCustomWriter::appendChild($historyNode, $revisedNode);
+			if ($articleFile) {
+i				$revisedNode =& PubMedExportDom::generatePubDateDom($doc, $articleFile->getDateModified(), 'revised');
+				XMLCustomWriter::appendChild($historyNode, $revisedNode);
+			}
 		}
 
 		/* --- Abstract --- */
