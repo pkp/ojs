@@ -30,9 +30,6 @@
 		<field name="seq" type="F" />
 		<field name="is_active" type="I1" />
 		<descr>Review forms.</descr>
-		<index name="review_forms_review_form_id">
-			<col>review_form_id</col>
-		</index>
 	</table>
 	
 	<!--
@@ -84,9 +81,6 @@
 		<field name="element_type" type="I8" />
 		<field name="required" type="I1" />
 		<descr>Review form elements.</descr>
-		<index name="review_form_elements_review_form_element_id">
-			<col>review_form_element_id</col>
-		</index>
 	</table>
 	
 	<!--
@@ -1941,10 +1935,6 @@
 		<field name="currency_code_alpha" type="C2" size="3" />
 		<field name="payment_method_plugin_name" type="C2" size="80" />
 		<descr>Logs completed (fulfilled) payments.</descr>
-		<index name="completed_payments_hash">
-			<col>key_hash</col>
-			<col>completed_payment_id</col>
-		</index>
 	</table>
 
 	<!--

@@ -40,9 +40,6 @@
 			<NOTNULL/>
 		</field>
 		<descr>XML-Derived galleys.</descr>
-		<index name="xml_galleys_id">
-			<col>xml_galley_id</col>
-		</index>
 	</table>
 
 </schema>
