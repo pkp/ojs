@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE schema SYSTEM "../../../lib/pkp/dtd/xmlSchema.dtd">
+<!DOCTYPE schema SYSTEM "../../../dbscripts/xml/dtd/xmlschema.dtd">
 
 <!--
   * schema.xml
@@ -40,9 +40,6 @@
 			<NOTNULL/>
 		</field>
 		<descr>XML-Derived galleys.</descr>
-		<index name="xml_galleys_id">
-			<col>xml_galley_id</col>
-		</index>
 	</table>
 
 </schema>
