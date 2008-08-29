@@ -20,7 +20,7 @@ OJS release:
 
 3. Generate CVS ChangeLog for the release:
 
-    perl tools/cvs2cl.pl --delta <OLD-TAG>:<CURRENT-TAG> -f \
+    perl lib/pkp/classes/cliTool/cvs2cl.pl --delta <OLD-TAG>:<CURRENT-TAG> -f \
         docs/release-notes/ChangeLog-<VERSION>
 
 
