@@ -16,7 +16,8 @@
 // $Id$
 
 
-require(dirname(__FILE__) . '/includes/cliTool.inc.php');
+define('INDEX_FILE_LOCATION', dirname(dirname(__FILE__)) . '/index.php');
+require(dirname(dirname(__FILE__)) . '/lib/pkp/classes/cliTool/CliTool.inc.php');
 
 define('PO_TO_CSV_TOOL', '/usr/bin/po2csv');
 

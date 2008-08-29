@@ -15,7 +15,8 @@
 // $Id$
 
 
-require(dirname(__FILE__) . '/includes/cliTool.inc.php');
+define('INDEX_FILE_LOCATION', dirname(dirname(__FILE__)) . '/index.php');
+require(dirname(dirname(__FILE__)) . '/lib/pkp/classes/cliTool/CliTool.inc.php');
 
 define('DEFAULT_IN_LOCALE', 'en_US');
 define('DEFAULT_OUT_LOCALE', 'te_ST');

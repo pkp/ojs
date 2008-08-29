@@ -15,16 +15,9 @@
 // $Id$
 
 
-class Handler {
+import('core.PKPHandler');
 
-	/**
-	 * Fallback method in case request handler does not implement index method.
-	 */
-	function index() {
-		header('HTTP/1.0 404 Not Found');
-		fatalError('404 Not Found');
-	}
-
+class Handler extends PKPHandler {
 	/**
 	 * Perform request access validation based on security settings.
 	 * @param $requiresJournal boolean

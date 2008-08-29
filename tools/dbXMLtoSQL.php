@@ -15,8 +15,8 @@
 // $Id$
 
 
-
-require(dirname(__FILE__) . '/includes/cliTool.inc.php');
+define('INDEX_FILE_LOCATION', dirname(dirname(__FILE__)) . '/index.php');
+require(dirname(dirname(__FILE__)) . '/lib/pkp/classes/cliTool/CliTool.inc.php');
 
 /** Default XML file to parse if none is specified */
 define('DATABASE_XML_FILE', 'dbscripts/xml/ojs_schema.xml');
