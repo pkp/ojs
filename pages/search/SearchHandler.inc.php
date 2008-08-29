@@ -43,6 +43,7 @@ class SearchHandler extends Handler {
 		parent::validate();
 		SearchHandler::setupTemplate(false);
 		$templateMgr = &TemplateManager::getManager();
+		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 
 		if (Request::getJournal() == null) {
 			$journalDao = &DAORegistry::getDAO('JournalDAO');
@@ -50,9 +51,13 @@ class SearchHandler extends Handler {
 			$templateMgr->assign('siteSearch', true);
 			$templateMgr->assign('journalOptions', array('' => Locale::Translate('search.allJournals')) + $journals);
 			$journalPath = Request::getRequestedJournalPath();
-		}
+			$yearRange = $publishedArticleDao->getArticleYearRange(null);
+		} else {
+			$journal =& Request::getJournal();
+			$yearRange = $publishedArticleDao->getArticleYearRange($journal->getJournalId());
+		}	
 
-		SearchHandler::assignAdvancedSearchParameters($templateMgr);
+		SearchHandler::assignAdvancedSearchParameters($templateMgr, $yearRange);
 
 		$templateMgr->display('search/advancedSearch.tpl');
 	}
@@ -208,12 +213,15 @@ class SearchHandler extends Handler {
 
 		$rangeInfo = Handler::getRangeInfo('search');
 
+		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$searchJournalId = Request::getUserVar('searchJournal');
 		if (!empty($searchJournalId)) {
 			$journalDao = &DAORegistry::getDAO('JournalDAO');
 			$journal = &$journalDao->getJournal($searchJournalId);
+			$yearRange = $publishedArticleDao->getArticleYearRange($journal->getJournalId());
 		} else {
 			$journal =& Request::getJournal();
+			$yearRange = $publishedArticleDao->getArticleYearRange(null);
 		}
 
 		// Load the keywords array with submitted values
@@ -236,10 +244,10 @@ class SearchHandler extends Handler {
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign_by_ref('results', $results);
-		SearchHandler::assignAdvancedSearchParameters($templateMgr);
+		SearchHandler::assignAdvancedSearchParameters($templateMgr, $yearRange);
 
 		$templateMgr->display('search/searchResults.tpl');
-	}
+	}	
 
 	/**
 	 * Setup common template variables.
@@ -260,7 +268,7 @@ class SearchHandler extends Handler {
 		}
 	}
 
-	function assignAdvancedSearchParameters(&$templateMgr) {
+	function assignAdvancedSearchParameters(&$templateMgr, $yearRange) {
 		$templateMgr->assign('query', Request::getUserVar('query'));
 		$templateMgr->assign('searchJournal', Request::getUserVar('searchJournal'));
 		$templateMgr->assign('author', Request::getUserVar('author'));
@@ -285,6 +293,15 @@ class SearchHandler extends Handler {
 		$templateMgr->assign('dateToMonth', $toMonth);
 		$templateMgr->assign('dateToDay', $toDay);
 		$templateMgr->assign('dateToYear', $toYear);
+		
+		$startYear = '-' . (date('Y') - substr($yearRange[1], 0, 4));
+		if (substr($yearRange[0], 0, 4) >= date('Y')) {
+			$endYear = '+' . (substr($yearRange[0], 0, 4) - date('Y'));
+		} else {
+			$endYear = (substr($yearRange[0], 0, 4) - date('Y'));
+		}
+		$templateMgr->assign('endYear', $endYear);
+		$templateMgr->assign('startYear', $startYear);
 		if (!empty($toYear)) $templateMgr->assign('dateTo', date('Y-m-d H:i:s',mktime(0,0,0,$toMonth==null?12:$toMonth,$toDay==null?31:$toDay,$toYear)));
 	}
 }

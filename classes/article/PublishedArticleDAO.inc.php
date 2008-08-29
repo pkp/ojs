@@ -756,6 +756,24 @@ class PublishedArticleDAO extends DAO {
 
 		return $returner;
 	}
+	
+	/**
+	 * Return years of oldest/youngest published article on site or within a journal
+	 * @param $journalId int
+	 * @return array
+	 */
+	function getArticleYearRange($journalId = null) {
+		$result =& $this->retrieve(
+			'SELECT MAX(pa.date_published), MIN(pa.date_published) FROM published_articles pa, articles a WHERE pa.article_id = a.article_id' . (isset($journalId)?' AND a.journal_id = ?':''),
+			isset($journalId)?$journalId:false
+		);
+		$returner = array($result->fields[0], $result->fields[1]);
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
+	}
 }
 
 ?>

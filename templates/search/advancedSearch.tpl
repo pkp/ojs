@@ -86,12 +86,12 @@ function ensureKeyword() {
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="search.dateFrom"}</td>
-	<td class="value">{html_select_date prefix="dateFrom" time=$dateFrom all_extra="class=\"selectMenu\"" year_empty="" month_empty="" day_empty="" start_year="-5" end_year="+1"}</td>
+	<td class="value">{html_select_date prefix="dateFrom" time=$dateFrom all_extra="class=\"selectMenu\"" year_empty="" month_empty="" day_empty="" start_year="$startYear" end_year="$endYear"}</td>
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="search.dateTo"}</td>
 	<td class="value">
-		{html_select_date prefix="dateTo" time=$dateTo all_extra="class=\"selectMenu\"" year_empty="" month_empty="" day_empty="" start_year="-5" end_year="+1"}
+		{html_select_date prefix="dateTo" time=$dateTo all_extra="class=\"selectMenu\"" year_empty="" month_empty="" day_empty="" start_year="$startYear" end_year="$endYear"}
 		<input type="hidden" name="dateToHour" value="23" />
 		<input type="hidden" name="dateToMinute" value="59" />
 		<input type="hidden" name="dateToSecond" value="59" />
