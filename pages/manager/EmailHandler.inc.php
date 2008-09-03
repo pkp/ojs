@@ -26,17 +26,14 @@ class EmailHandler extends ManagerHandler {
 
 		$rangeInfo = Handler::getRangeInfo('emails');
 
-		$journal = &Request::getJournal();
-		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
-		$emailTemplates = &$emailTemplateDao->getEmailTemplates(Locale::getLocale(), $journal->getJournalId());
-		import('core.ArrayItemIterator');
-		if ($rangeInfo && $rangeInfo->isValid()) {
-			$emailTemplates =& new ArrayItemIterator($emailTemplates, $rangeInfo->getPage(), $rangeInfo->getCount());
-		} else {
-			$emailTemplates =& new ArrayItemIterator($emailTemplates);
-		}
+		$journal =& Request::getJournal();
+		$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
+		$emailTemplates =& $emailTemplateDao->getEmailTemplates(Locale::getLocale(), $journal->getJournalId());
 
-		$templateMgr = &TemplateManager::getManager();
+		import('core.ArrayItemIterator');
+		$emailTemplates =& ArrayItemIterator::fromRangeInfo($emailTemplates, $rangeInfo);
+
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy', array(array(Request::url(null, 'manager'), 'manager.journalManagement')));
 		$templateMgr->assign_by_ref('emailTemplates', $emailTemplates);
 		$templateMgr->assign('helpTopicId','journal.managementPages.emails');

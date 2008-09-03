@@ -408,12 +408,8 @@ class EditorSubmissionDAO extends DAO {
 		$result->Close();
 		unset($result);
 
-		if (isset($rangeInfo) && $rangeInfo->isValid()) {
-			import('core.ArrayItemIterator');
-			$returner = &new ArrayItemIterator($editorSubmissions, $rangeInfo->getPage(), $rangeInfo->getCount());
-		} else {
-			$returner = &new ArrayItemIterator($editorSubmissions);
-		}
+		import('core.ArrayItemIterator');
+		$returner =& ArrayItemIterator::fromRangeInfo($editorSubmissions, $rangeInfo);
 		return $returner;
 	}
 
@@ -471,12 +467,8 @@ class EditorSubmissionDAO extends DAO {
 		$result->Close();
 		unset($result);
 
-		if (isset($rangeInfo) && $rangeInfo->isValid()) {
-			import('core.ArrayItemIterator');
-			$returner = &new ArrayItemIterator($editorSubmissions, $rangeInfo->getPage(), $rangeInfo->getCount());
-		} else {
-			$returner = &new ArrayItemIterator($editorSubmissions);
-		}
+		import('core.ArrayItemIterator');
+		$returner =& ArrayItemIterator::fromRangeInfo($editorSubmissions, $rangeInfo);
 		return $returner;
 	}
 
@@ -542,12 +534,8 @@ class EditorSubmissionDAO extends DAO {
 		$result->Close();
 		unset($result);
 
-		if (isset($rangeInfo) && $rangeInfo->isValid()) {
-			import('core.ArrayItemIterator');
-			$returner = &new ArrayItemIterator($editorSubmissions, $rangeInfo->getPage(), $rangeInfo->getCount());
-		} else {
-			$returner = &new ArrayItemIterator($editorSubmissions);
-		}
+		import('core.ArrayItemIterator');
+		$returner =& ArrayItemIterator::fromRangeInfo($editorSubmissions, $rangeInfo);
 		return $returner;
 	}
 
