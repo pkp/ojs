@@ -1,0 +1,24 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE data SYSTEM "../../../dtd/xmldata.dtd">
+<!--
+  * sample.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+ * تحت مجوزGNU GPL v2 منتشرشد. برای دیدن متن کامل فایل docs/COPYING را ببینید.
+  * داده های نمونه برای بانک اطلاعاتی
+  *
+  * $Id$
+  --><data>
+  <table name="journals" >
+    <row>
+      <field name="title" >ژورنال ۱</field>
+      <field name="path" >ojs1</field>
+      <field name="seq" >1</field>
+    </row>
+    <row>
+      <field name="title" >ژورنال ۲</field>
+      <field name="path" >ojs2</field>
+      <field name="seq" >2</field>
+    </row>
+  </table>
+</data>

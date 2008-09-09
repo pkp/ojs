@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000011.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users - All Users 
+  *
+  * $Id$
+  --><topic title="کاربران ثبت نام کرده در این مجله" toc="journal/toc/000002" key="journal.users.allUsers" locale="fa_IR" id="journal/topic/000011" >
+  <section><![CDATA[<p>
+این لیست نشان دهنده تمامی کسانی هست که در این مجله ثبت نام کرده اند و حساب کاربری برای خود ایجاد نموده اند مدیر مجله نیز میتواند به عنوان یک کاربر در سایت وارد شود (Sine in)این مخصوصا زمانی مفید است که مدیر بخواهد به یک کاربر از راه دور کمک کند زیرا در این حالت قادراست به طور دقیق در جریان اشکالات قرار گیرد
+</p><p>
+در این قسمت مدیر سایت میتواند کل کاربران را یکجا پذیرش کرده ٫ کاربر جدید ایجاد کند و چند حساب کاربری یک فرد در ژورنالهای مختلف را با هم ادقام کند 
+</p>]]></section>
+</topic>

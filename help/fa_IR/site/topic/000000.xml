@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Site Administration Main 
+  *
+  * $Id$
+  --><topic title="مدیریت سایت " toc="index/toc/000000" subtoc="site/toc/000000" key="site.index" locale="fa_IR" id="site/topic/000000" >
+  <section><![CDATA[<p>
+این سیستم مدیریت وانتشار مجله به گونه ای طراحی شده است که بر روی یک وب سرور محلی نصب واجراء شود. پس از نصب مدیر سایت از این برنامه برای ایجاد هر تعداد مجله استفاده کرده و انتشار مجله را بر روی این وب سرور مدیریت میکند  
+</p>]]></section>
+</topic>

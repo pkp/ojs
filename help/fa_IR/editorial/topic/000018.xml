@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000018.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submissions - Archives 
+  *
+  * $Id$
+  --><topic title="آرشیوها" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.archives" locale="fa_IR" id="editorial/topic/000018" >
+  <section><![CDATA[<p>ساب میشن ها در صورت رد شدن در روند دبیری، در نوبت چاپ قرار گرفتن و یا چاپ شدن وارد این قسمت می شوند. از طریق این قسمت سردبیر یا دبیر انتخاب شده برای یک ساب میشن به سوابق (خلاصه، ساب میشن، کارشناسی، ویراستاری و تاریخچه) ‌آن دسترسی پیدا می کنند.</p><p><i>بازگرداندن یک ساب میشن آرشیو شده به روند دبیری</i>.سردبیر باید در صفحه سردبیری به به آرشیو رفته، و ساب میشن را بیابد. کلیک بر عنوان ساب میشن او را به صفحه خلاصه، کارشناسی، ویراستاری و تاریخچه آن ساب میشن می برد و در آن جا کلیک بر «بازگرداندن به لیست فعال» بسته به مرحله ای که در آن به آرشیو منتقلل شده است به در دست کارشناسی یا در دست ویراستاری بر می گرداند.</p>]]></section>
+</topic>

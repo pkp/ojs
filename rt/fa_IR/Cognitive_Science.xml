@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE version SYSTEM "../../lib/pkp/dtd/rtVersion.dtd">
+<!--
+  * Cognitive_Science.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reading Tools version: Cognitive Science (en_US)
+  *
+  * $Id$
+  -->
+<version id="علوم شناختی" locale="انگلیسی-آمریکایی">
+	<version_title>علوم شناختی</version_title>
+	<version_description>ابزار خواندن به خوانندگان اکمک می کند  تا از دامنه ی وسیعی از منابع موجود که امکان تفسیر ، قرار گرفتن و ارزیابی  را فراهم می کند ، استفاده کنند</version_description>
+	<context>
+		<context_title>وظیفه نویسنده</context_title>
+		<context_abbrev>دیگر وظایف</context_abbrev>
+		<context_description>با استفاده از ماشین های 
+OAI 
+دیگر وظایف را برای  نویسنده( ها) ی مقاله مشخص کند</context_description>
+		<author_terms/>
+		<search>
+			<search_title>گوگل اسکولار</search_title>
+			<search_description>گوگل اسکولار امکان جستجو های خاص را د ر زمینه ادبیات پژوهشی شامل  مقالات کارشناسی شده ، پایان نامه ها، کتب،،پیش پرینت ها، چکیده ها و گزارش های فنی فراهم می سازد.محتوای این حیطه شامل تعدادی از ناشران و تدوین کنند گان است که گوگل توسط آنها نسازمان یافته است.برای مثال انجمن محاسبه ی ماشین ها، 
+IEEE،
+سرویس جایگزین کتابخانه جهانی با دسترسی آزاد  و ... .نتیایج مشخص شده ورژن های متفاوتی از شاخه ها، تحلیل گفته ها و مکان کتابخانه را (فقط کتاب های موجود) را نشان می دهد.</search_description>
+			<url>http://scholar.google.com</url>
+			<search_url>http://scholar.google.com/scholar?ie=UTF-8&amp;oe=UTF-8&amp;hl=eng&amp;as_sauthors={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>OAISter
+(آرشیوی کامل از مباحث تحقیقاتی بکر)</search_title>
+			<search_description>پروژه ای است از سرویس های کتابخانه دیجیتال دانشگاه میشیگان، که می تواند جستجویی وسیع از انواع مجموعه ها از موسسات بیشمار را فرهم آورد.این موسسات از منابع دیجیتال خود  ثبتی ایجاد می کنند که که در دسترس است و تیم پروژه آنها را برای خدمات 
+OAIster
+جمع آوری و تدوین کرده است.</search_description>
+			<url>http://oaister.umdl.umich.edu/</url>
+			<search_url>http://oaister.umdl.umich.edu/cgi/b/bib/bib-idx?type=boolean&amp;size=10&amp;c=oaister&amp;q1=&amp;rgn1=entire+record&amp;op2=and&amp;q2=&amp;rgn2=entire+record&amp;op3=And&amp;q3=&amp;rgn3=title&amp;op4=And&amp;rgn4=author&amp;op5=And&amp;q5=&amp;rgn5=subject&amp;op6=And&amp;rgn6=norm&amp;q6=all+types&amp;sort=author%2Fcreator&amp;submit2=search&amp;q4={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>پابلیک نالج پراجکت اپن آرشیو هاروستر)پروژه آگاهی عمومی از آرشیو باز هاروستر</search_title>
+			<search_description>آرشیو کامل و باز
+PKP
+یک سیستم نمایه سازی آزاد از متا دیتا ها می باشد که با پروژه ی آگاهی عمومی از طریق کوشش های انجام شده توسط فدرال گسترش یافته تا دسترسی به جستجو را وسیع تر و بهتر سازد. 
+منابع اطلاعاتی 
+PKP OAI
+به شما این امکان را می دهد تا یک نمایه ی قابل جستجو از متا دیتا  ها را از آرشیو های باز و کامل اولیه مانندسایت های مورد استفاده در سیستم مجلات باز یا سیستم های کنفرانس باز ایجاد کنید.
+</search_description>
+			<url>http://pkp.sfu.ca/harvester/</url>
+			<search_url>http://pkp.sfu.ca/harvester/search.php?limit=author&amp;query={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>علوم رفتاری و مغزی</search_title>
+			<search_description>علوم رفتاری و مغزی در
+e
+پرینتها ( پرینتهای الکترونیکی) موجود می باشند. نرم افزار آرشیو باز 
+org
+سیستمی است متشکل از آرشیوهای آزاد قابل توزیع که در 
+eprints.org
+موجود می باشد. </search_description>
+			<url>http://www.bbsonline.org/perl/search</url>
+			<search_url>http://www.bbsonline.org/perl/search?title_abstract_keywords_srchtype=all&amp;authors_srchtype=all&amp;year=&amp;_satisfyall=ALL&amp;_order=order0&amp;submit=Search&amp;.cgifields=publication&amp;title_abstract_keywords=&amp;authors={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>cog
+پرینتها</search_title>
+			<search_description>cog
+پرینتها  آرشیوی الکترونیک برای مقالات در هر زمینه روانشناسی،  علم اعصاب ، زبانشناسی و بسیاری از حیطه های علم کامپیوتر و زیست شناسی هستند که از نرم افزار آرشیو مستقل (خودآرشیو) 
+eprints.org
+ استفاده می کنند.ااز این آرشیو می توان با نام نویسنده،عنوان یا واژهکلیدی جستجو کرد.همه مقالات پیش پرینت و هم چاپ شده ها  که به آنها رجوع شده در برگیرنده همه جزئیات تماس با هر نویسنده می باشد.</search_description>
+			<url>http://cogprints.soton.ac.uk/</url>
+			<search_url>http://cogprints.ecs.soton.ac.uk/perl/search/simple?meta=&amp;meta_merge=ALL&amp;full=&amp;full_merge=ALL&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=bytitle&amp;_action_search=Search&amp;person={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>های وایر</search_title>
+			<search_description>های وایر یکی از فشرده ترین مجلات در زمینه علم، تکنولوژی و پزشکی است. از مارس 2002 های وایر حاوی 11785877 مقاله در بیش از 4500 مجله مدلاین(پزشکی) و 405985 مقاله با موضوع آزاد از 321 مجله های وایر است.</search_description>
+			<url>http://highwire.stanford.edu/lists/freeart.dtl</url>
+			<search_url>http://highwire.stanford.edu/cgi/searchresults?andorexactfulltext=and&amp;resourcetype=1&amp;src=hw&amp;fulltext=&amp;pubdate_year=&amp;volume=&amp;firstpage=&amp;disp_type=&amp;author1={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>مدلاین</search_title>
+			<search_description>مدلاین کتابخانه ملی از رفرنس های پزشکی است با بیش از 11 میلیون مقاله چاپ شده در 4300 مجله پزشکی زیستی می باشد</search_description>
+			<url>http://www.ncbi.nlm.nih.gov/pubmed/</url>
+			<search_url>http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=PubMed&amp;orig_db=PubMed&amp;cmd=search&amp;cmd_current=&amp;query_key=1&amp;term={$formKeywords}</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>جستجوی واژه ها</context_title>
+		<context_abbrev>جستجوی واژه ها</context_abbrev>
+		<context_description>روی هر واژه در متن دبل کلیک کنید به صورت نقل قول؛ تعریف واژه ها و نقل قول یا جعبه ظاهر خواهد شد.همچنین می توانید کلمه مورد نظر را در جعبه تایپ یا پیست کنید. سپس از دستور العمل جستجو برای یافتن تعریفی مشخص برای آن کلمه استفاده کنید. این منابع به خاطر ارتباطشان و دسترسی آزاد به همه یا بخشی از مطالبشان انتخاب شدهاند.</context_description>
+		<define_terms/>
+		<search>
+			<search_title>گوگل</search_title>
+			<search_description>با استفاده از ماشین معروف جستجوی گوگل،تعاریف را جستجو کنید</search_description>
+			<url>http://www.google.com/</url>
+			<search_url>http://www.google.com/search?hl=en&amp;q=define%3A{$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>لغت نامه فلسفه ذهن</search_title>
+			<search_description>لغت نامه فلسفه ذهن یک عنوان قابل جستجو در مقالات کارشناسی شده از مفاهیم و اصول در زمینه فلسفه است.</search_description>
+			<url>http://www.artsci.wustl.edu/~philos/MindDict/</url>
+			<search_url>http://search.yahoo.com/search?vp=dictionary&amp;vs=artsci.wustl.edu&amp;va={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>لغتنامه آن لاین مریام - وبستر</search_title>
+			<search_description>این لغتنامه بر اساس دهمین چاپ دانشگاهی وبستر،1993است همراه با بیش از160000 لغت به روز که در هر چاپ سالانه اضافه می شود هر کلمه با تعریف، تلفظ، استفاده، ساختار گرامری و یک تاریخچه کوتاه شامل یک فرهنگ جامع، املای غلط و املاهای پیشنهادی می باشد. سیستم جستجوی این  لغتنامه جستجوهای غیر قابل پیش بینی و ناقص را فراهم می کند. همچنین راهنمای خوبی برای تلفظ و فایل های صداهای آن تلفظ برای بسیاری از واژه ها می باشد.</search_description>
+			<url>http://www.merriam-webster.com/</url>
+			<search_url>http://www.merriam-webster.com/cgi-bin/dictionary?book=Dictionary&amp;va={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>لغتنامه های وان لوک</search_title>
+			<search_description>وان لوک یک خود-لغتنامه است.یک کلمه یا سرنام انگلیسی را وارد کنید ، وان لوک نمایه آن را از 5292362 کلمه در 934 لغتنامه که در لغتنامه های عمومی و اختصاصی مورد دلخواه برای آن تعریف نمایه شده اند جستجو می کند.</search_description>
+			<url>http://www.onelook.com/index.html</url>
+			<search_url>http://www.onelook.com/?ls=a&amp;w={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>ورد نت</search_title>
+			<search_description>ورد نت یک سیستم مرجع(رفرنس) لغتی آنلاین است که طرح آن از تئوریهای رایج سایکولینگوئیستیک (زبانشناسی روان) از حافظه لغوی بشر نشات گرفته است. اسم ها، فعل ها ، صفتها و قیدهای انگلیسی به دسته هایی از مترادفها سازمان یافته اند که هر یک ارائه دهنده مفهوم لغت مورد نظر می باشد. رابطه های متفاوت این دسته مترادف ها را به هم لینک می کند.</search_description>
+			<url>http://www.cogsci.princeton.edu/~wn/</url>
+			<search_url>http://wordnet.princeton.edu/perl/webwn?sub=Search+WordNet&amp;o2=&amp;o0=1&amp;o7=&amp;o5=&amp;o1=1&amp;o6=&amp;o4=&amp;o3=&amp;h=&amp;s={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>ویکی پدیا: دایره المعارف آزاد</search_title>
+			<search_description>ویکی پدیا یک دایره المعارف با متنی آزاد و قابل دسترسی است که به طور مشترک توسط شرکت کنندگان در سرتاسر جهان نوشته شده است. این سایت "ویکی ویکی" است به این معنا که هر کس می تواند هر مقاله ای را ویرایش کند، نظر خود را بدون اشتباه سرمقاله ای بیان کنند، کیفیت محتوای این سایت به طور نمایشی تغییر می کند اما ارزش جستجو را دارد. نسخه انگلیسی صدها هزار کلمه دارد. اسپانیایی، فرانسوی و اسپرانتو(زبان بین المللی) نیز در بین زبانهای ارائه شده هستند.</search_description>
+			<url>http://en.wikipedia.org/wiki/Main_Page</url>
+			<search_url>http://en.wikipedia.org/wiki/Special:Search?go=Go&amp;fulltext=Search&amp;search={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>اینفو پلیز.کام</search_title>
+			<search_description>این سایت دربرگیرنده اینفورمیشن پلیز الماناکز(اطلاعات سالانه)، یک قسمت بیوگرافی، یک لغتنامه، یک اطلس، و مقالاتی از دایره المعارف کلمبیا می باشد. شما می توانید این رفرنس های آماده را با یکدیگر یا به طور مجزا جستجو کنید یا آلماناکز را بروز کنید. در این سایت همچنین سرمقالات هر هفته وجود دارد که اخبار و موضوعات را با لینک های مربوط به محتوای آلماناکز و دیگر منابع شبکه تحت پوشش قرار می دهد.</search_description>
+			<url>http://www.infoplease.com</url>
+			<search_url>http://www.infoplease.com/search?fr=iptn&amp;in=all&amp;x=0&amp;y=0&amp;query={$formKeywords}</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>جستجوی کتاب</context_title>
+		<context_abbrev>جستجوی کتاب</context_abbrev>
+		<context_description>منابع مربوط به کتاب</context_description>
+		<search>
+			<search_title>گوگل پرینت</search_title>
+			<search_description>گوگل با کتابخانه های دانشگاه های میشیگان، هاروارد، استنفورد، آکسفورد و کتابخانه عمومی نیویورک کار می کند تا کتابها را در مجموعه هایشان به صورت دیجیتالی در بیاورد و آنها را در گوگل پرینت قابل دسترس قرار دهد. یک پروژه ی عظیم جستجو که میلیونها شماره از کتابهای چاپ شده را در پایگاه داده های گوگل پرینت می آورد. روی عنوان یک کتاب کلیک کنید می توانید صفحه ای از کتاب را که واژه ی جستجوی شما را دارد ببینید، می توانید اطلاعات بیشتری را در یک کتاب خاص جستجو کنید، توضیح بیشتر یا اطلاعات مربوطه را پیدا کنید، در مورد ناشر بدانید یا کتاب را خریداری نمایید و کتابخانه هایی را که این کتاب را دارند پیدا کنید.</search_description>
+			<url>http://print.google.com</url>
+			<search_url>http://print.google.com/print?q={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>صفحه کتابهای آنلاین</search_title>
+			<search_description>صفحه کتابهای آنلاین توسط جان مارک آکربلوم در دانشگاه پنسیلوانیا ویرایش شد. این یک نقطه شروع عالی در جستجو برای متن کامل کتاب ها در اینترنت است. بیش از 20000 کار انگلیسی در شکلهای متفاوت در سایت های مختلف به صورت آنلاین در دسترس هستند. شما می توانید با نام نویسنده یا عنوان  جستجو را انجام دهید. یک ویژگی جالب به شما اجازه می دهد با لایبرری کانگرس دسته ای از شماره تلفن ها را بروز کنید. لیست های جدیدی به طور مرتب اضافه می شوند و در وب پیج های مجزا در 
+&lt;/a&gt;
+فهرست می شوند.
+</search_description>
+			<url>http://digital.library.upenn.edu/books/</url>
+			<search_url>http://onlinebooks.library.upenn.edu/webbin/book/search?tmode=words&amp;title={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>کتابها - آنلابن</search_title>
+			<search_description>مجموعه ای با بیش از 32935 عنوان که تنها بعضی از آنها گلچین شده اند. با موضوع بروز کنید یا با اسم نویسنده و عنوان جستجو کنید. همه موارد به صورت آزاد نیستند..</search_description>
+			<url>http://www.books-on-line.com/</url>
+			<search_url>http://www.books-on-line.com/bol/KeyWordSearch.cfm?RowCount=50&amp;Searchquery={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>کتابخانه جهانی</search_title>
+			<search_description>کتابخانه جهانی (یونیورسال لایبرری) بطور قابل توجهی موفق تر و دارای کتاب های بیشتری است. این کتابخانه دارای مجموعه ای انبوه از 100000 ای بوک است (بعضی از آنها از پروژه ی گوتن برگ می باشند) و هدفش ایجاد یک میلیون ای بوک تا پایان سال 2006 است..</search_description>
+			<url>http://tera-3.ul.cs.cmu.edu</url>
+			<search_url>http://tera-3.ul.cs.cmu.edu/cgi-bin/DBscripts/advsearch_db.cgi?perPage=25&amp;listStart=0&amp;author1=&amp;subject1=Any&amp;year1=&amp;year2=&amp;language1=Any&amp;scentre=Any&amp;search=Search&amp;title1={$formKeywords}</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>نظریه شناختی</context_title>
+		<context_abbrev>نظریه شناختی</context_abbrev>
+		<context_description>موارد موجود  در دایره المعارف را چک کنید تا اساس نظریه شناختی را به شما ارائه دهد.</context_description>
+		<search>
+			<search_title>دایره المعارف فلسفی استنفورد</search_title>
+			<search_description>دایره المعارف فلسفی استنفورد یک کار پویا در زمینه رفرنس است که به سرعت رشد کرده است. هدف از این پروژه ایجاد یک رفرنس قوی و جامع است در خدمت علم آکادمیک رشته فلسفه می باشد که به طور پویا به روز می شود تا همچنان برای آنهایی که در زمینه آکادمیک و عمومی هستند مفید و مثمر ثمر باشد.</search_description>
+			<url>http://plato.stanford.edu/about.html</url>
+			<search_url>http://plato.stanford.edu/cgi-bin/webglimpse.cgi?ID=1&amp;nonascii=on&amp;maxfiles=50&amp;maxlines=30&amp;maxchars=10000&amp;query={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>:MITECS
+MIT
+دایره المعارف عوم شناختی
+</search_title>
+			<search_description>:MITECS
+MIT
+دایره المعارف علوم شناختی یک دایره المعارف آزاد و آنلاین برای چکیده ها، فهرستها، و لینک هایی از این رفرنس جامع می باشد  ( برای خواندن کامل مطالب باید هزینه پرداخت کنید)
+</search_description>
+			<url>http://cognet.mit.edu/library/erefs/mitecs/</url>
+			<search_url>http://gb-server.mit.edu/search?btnG=Search&amp;site=mit&amp;client=mit&amp;proxyreload=1&amp;proxystylesheet=http%3A%2F%2Fcognet.mit.edu%2Fgoogle-mithome.xsl&amp;output=xml_no_dtd&amp;as_dt=i&amp;as_sitesearch=cognet.mit.edu&amp;q={$formKeywords}</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>مطالعات مشابه</context_title>
+		<context_abbrev>مطالعات مشابه</context_abbrev>
+		<context_description>با ایستفاده از یک لینک فعال در دسترسی آزاد به مباحث، می توانید به چکیده یا متن کامل مطالب مرتیط با موضوع خود در مطالعات مشابه دست یابید. </context_description>
+		<search>
+			<search_title>علوم آموزشگاهی شناختی</search_title>
+			<search_description>مرکز ملی تحقیقات علمی در فرانسه در حال ارتقاء در زمینه مطالعه شناخت مخصوصا در زمینه بشری است. بسیاری از مقالات در دست و لینکها به وب سایت های دیگر به زبان انگلیسی می باشد.</search_description>
+			<url>http://www.isc.cnrs.fr/index_en.htm</url>
+			<search_url>http://www.google.com/custom?cof=T%3Ablack%3BLW%3A118%3BALC%3Ared%3BL%3Ahttp%3A%2F%2Fwww.isc.cnrs.fr%2Flogoisc.gif%3BLC%3Ablue%3BLH%3A76%3BBGC%3Awhite%3BAH%3Acenter%3BVLC%3Apurple%3BAWFID%3Abbb9fffe574108ac%3B&amp;domains=www.isc.cnrs.fr&amp;sitesearch=www.isc.cnrs.fr&amp;q={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>دایره المعارف روانشناسی</search_title>
+			<search_description>هدف دایره المعارف روانشناسی ایجاد تسهیلات در بروز کردن در هر زمینه روانشناسی است </search_description>
+			<url>http://www.psychology.org/</url>
+			<search_url>http://www.psychology.org/cgi-bin/links2/search.cgi?query={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>دایره المعارف روانشناسی</search_title>
+			<search_description>دایره المعارف روانشناسی امکان جستجو در سایکوسنترال (مرکز روانشناسی) و چندین سایت بهداشت روان را برای شما فراهم می آورد. هر وقت که بخواهید امکان جستجو در سایکوسنترال و سایت های بهداشتی دیگر فراهم است.</search_description>
+			<url>http://www.enpsychlopedia.com/</url>
+			<search_url>http://www.enpsychlopedia.com/index.php?subber=&amp;site=&amp;qq={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>کاگ وب ( شبکه شناختی)</search_title>
+			<search_description>کاگ وب یک ابزار جستجو برای یافتن موارد مربوط به مطالعه در زمینه شناخت بشر نسبت به رابطه ها و هنر می باشد. این شبکه توسط فرانسیس استین استادیار بررسی روابط در 
+UCLA
+می باشد. کاگ وب دارای چند صد آیتم می باشد و آیتم های جدید نیز همیشه به آن اضافه می شوند.
+</search_description>
+			<url>http://cogweb.ucla.edu/</url>
+			<search_url>http://search.atomz.com/search/?sp-advanced=1&amp;sp-w-control=1&amp;sp-a=00070a1a-sp00000000&amp;sp-c=100&amp;sp-p=any&amp;sp-q={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>علوم رفتاری و مغزی</search_title>
+			<search_description>علوم رفتاری و مغزی در نرم افزار آرشیو باز 
+eprints.org.
+یک سیستم بایگانی قابل دسترس از 
+eprints.org.
+موجود می باشد.
+</search_description>
+			<url>http://www.bbsonline.org/perl/search</url>
+			<search_url>http://www.bbsonline.org/perl/search?title_abstract_keywords_srchtype=all&amp;authors=&amp;authors_srchtype=all&amp;year=&amp;_satisfyall=ALL&amp;_order=order0&amp;submit=Search&amp;.cgifields=publication&amp;title_abstract_keywords={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>کاگ پرینتز</search_title>
+			<search_description>کاگ پرینتز یک آرشیو الکترونیک برای مقالات در هر زمینه روانشناسی، علم اعصاب ، زبانشناسی و بسیاری از حیطه های علم کامپیوتر و زیست شناسی هستند که از نرم افزار آرشیو مستقل (خودآرشیو)
+eprints.org
+استفاده می کنند. این آرشیو می تواند با نام نویسنده، عنوان مقاله، یا واژه کلیدی مورد جستجو قرار گیرد. همه مقالات پیش پرینت و همه مقالات چاپ شده مرجع را با همه جزئیات تماس برای هر نویسنده در بردارد.
+</search_description>
+			<url>http://cogprints.soton.ac.uk/</url>
+			<search_url>http://cogprints.ecs.soton.ac.uk/perl/search/simple?meta=&amp;meta_merge=ALL&amp;full_merge=ALL&amp;person=&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=bytitle&amp;_action_search=Search&amp;full={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>های وایر</search_title>
+			<search_description>های وایر یکی از فشرده ترین مجلات در زمینه علم، تکنولوژی و پزشکی است. از مارس 2002 های وایر حاوی 11785877 مقاله در بیش از 4500 مجله مدلاین(پزشکی) و 405985 مقاله با موضوع آزاد از 321 مجله های وایر است.</search_description>
+			<url>http://highwire.stanford.edu/lists/freeart.dtl</url>
+			<search_url>http://highwire.stanford.edu/cgi/searchresults?andorexactfulltext=and&amp;resourcetype=1&amp;author1=&amp;src=ml&amp;disp_type=&amp;fulltext={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>مدلاین</search_title>
+			<search_description>مدلاین کتابخانه ملی از رفرنس های پزشکی است با بیش از 11 میلیون مقاله چاپ شده در 4300 مجله پزشکی زیستی می باشد</search_description>
+			<url>http://www.ncbi.nlm.nih.gov/pubmed/</url>
+			<search_url>http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=PubMed&amp;orig_db=PubMed&amp;cmd=search&amp;cmd_current=&amp;query_key=1&amp;term={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>سایکلوکای</search_title>
+			<search_description>یک آرشیو آزاد از ری پرینت های ( پرینت های مجدد) رجوع شده به همه مقالات مورد نظر، پیشنهادات و پاسخ هایی از سایکلوکای و یک مجله کارشناسی شده با نظرات مشترک با استفاده از سیستم آزاد می باشد که توسط انجمن روانشناسی آمریکا حمایت می شود
+و در 
+PsycINFO
+نمایه (ایندکس) شده و از سال 1990 چاپ شده است (آرشیو به طور کامل است).
+</search_description>
+			<url>http://psycprints.ecs.soton.ac.uk/</url>
+			<search_url>http://psycprints.ecs.soton.ac.uk/perl/search?_order=bytitle&amp;abstract%2Fkeywords%2Ftitle_srchtype=ALL&amp;_satisfyall=ALL&amp;abstract%2Fkeywords%2Ftitle={$formKeywords}</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>مشاهده هزینه بر</context_title>
+		<context_abbrev>مشاهده هزینه بر</context_abbrev>
+		<context_description>مشاهده هزینه بر برای آن دسته افرادی است که دسترسی مستقیم به مقالات مجلات الکترونیک را از طریق اشتراک ندارد. این نوع سرویس دهی به مشتریان این امکان را می دهد تا دسترسی مستقیم به یک مقاله را با پرداخت  کارت اعتباری با استفاده از مکانیزم پرداخت ایمن RSC پیدا کنند .  به فایل های مقالات مورد نیاز خود برای یک دوره 30 روزه دسترسی یابند.سریعا کارت آنان عتبار مجدد پیدا می کند و مشتریان می توانند </context_description>
+		<search>
+			<search_title>اینجنتا</search_title>
+			<search_description>اینجنتا دسترسی به متن کامل مقالات را محدود می سازد. اگرچه دسترسی به متن کامل هزینه بر می باشد، اما این سایت را می توان به عنوان نمایه به صورت رایگان استفاده کرد.</search_description>
+			<url>http://www.ingenta.com/</url>
+			<search_url>http://www.ingenta.com/isis/searching/Search/ingenta?database=1&amp;title={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>ابرری </search_title>
+			<search_description>محققان مستقلی که دسترسی آزاد به پایگاه های اطلاعاتی ابرری را ندارند از طریق کتابخانه هایشان می توانند همین حالا یک حساب شخصی با حداقل 5 دلار باز کنند. ابرری دیسکاور علوم آکادمیک چند گانه را به طور منسجم و واحد درمی آورد و دسترسی به بیش از 20000 عنوان معتبر را که در برگیرنده متن کامل، صفحه موسیقی، گزارشات و دیگر اسناد معتبر ار بیش از 175 ناشر راهنما مانند مجله دانشگاه کمبریج، رندم هوس، 
+Inc
+و شرکت های مک گرو هیل را میسر می سازد.
+</search_description>
+			<url>http://www.ebrary.com/corp/content.htm</url>
+			<search_url>http://shop.ebrary.com/Top?layout=search&amp;f00=text&amp;p01=&amp;f01=subject&amp;d=journal&amp;l=en&amp;sch=%A0%A0%A0%A0%A0Search%A0%A0%A0%A0%A0&amp;frm=adv.x&amp;p00={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>کوازتیا</search_title>
+			<search_description>کوازتیا دسترسی به بیش از 47000 کتاب، 375000 مجله، و مقالات روزنامه ای را فراهم می کند. هر صفحه را جستجو کنید همه کتابها و مقالات به طور کامل و تمام در دسترس می باشند-. میزان اشتراک از 19.05 در هر ماه تا 119.95 به طور سالانه متغیر می باشد.</search_description>
+			<url>http://www.questia.com/</url>
+			<search_url>http://www.questia.com/SM.qst?act=search&amp;keywordsSearchType=1000&amp;mediaType=book&amp;mediaType=journal&amp;mediaType=magazine&amp;mediaType=newspaper&amp;mediaType=encyclopedia&amp;mediaType=startpage&amp;keywords={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>ساینتیفیک ورلد(دنیای علمی)</search_title>
+			<search_description>ساینتیفیک ورلد با ارائه پایگاه علمی
+)sciBASE(
+دسترسی آزاد به مجموعه ای از پایگاههای تحقیقی علمی، تکنیکی و پزشکی را امکان پذیر می کند.
+)sciBASE(
+هم اکنون نیز تحویل فوری و دیجیتال متن کامل مقالات را می تواند انجام دهد.بیش از 700 مقاله با شرکت ناشران ایجاد شده است، و 
+)sciBASE(
+برای کاربرانی که از حمایت کتابخانه ای (محیط های بدون واسطه) برخوردار نیستند نقش ویژه و موثری دارد.
+</search_description>
+			<url>http://www.thescientificworld.com/</url>
+			<search_url>http://www.thescientificworld.com/SCIENTIFICWORLDJOURNAL/search/SearchResults.asp?From=Main&amp;Terms={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>ویلی اینتر ساینس: سرویس پرداخت با هر بار مشاهده </search_title>
+			<search_description>ویلی اینتر ساینس: سرویس پرداخت با هر بار مشاهده ، دسترسی  ثابت و کامل به متن مجموعه ای وسیع از مقالات مجلات یا فصل های موجود در یک کتاب را که روی ویلی اینترساینس موجود می باشد بدون نیاز به اشتراک فراهم می کند. این سرویس به هر فرد اجازه می دهد تا دسترسی به مقالات مجزای مجله یا فصول کتاب را بطور مستقیم با استفاده از یک کارت اعتباری پیدا کند. دسترسی تا 24 ساعت بطور مداوم وجود دارد.</search_description>
+			<url>http://www3.interscience.wiley.com/aboutus/ppv-articleselect.html</url>
+			<search_url>http://www3.interscience.wiley.com/search/allsearch</search_url>
+			<search_post>allContentSearchForm=&amp;mode=quicksearch&amp;WISindexid1=WISall&amp;WISsearch1={$formKeywords}</search_post>
+		</search>
+	</context>
+	<context>
+		<context_title>آنلاین عمومی</context_title>
+		<context_abbrev>آنلاین عمومی</context_abbrev>
+		<context_description>کلمه آنلاین را انتخاب کنید  دسترسی آزاد و عمومی متن مطالعات تحقیقاتی روی سایت شما قرار می گیرد.</context_description>
+		<search>
+			<search_title>COGSCL
+لیست مباحث علم شناختی
+t</search_title>
+			<search_description>COGSCL
+لیست مباحث علم شناختی یک وب سایت برای لیست مباحث علم شناخت بین المللی است.
+</search_description>
+			<url>http://cogsci.weenink.com/</url>
+			<search_url>https://listserv.surfnet.nl/scripts/wa.exe?S2=COGSCI&amp;0=S&amp;s=&amp;f=&amp;a=&amp;I=-3&amp;q={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>اینتیوت: علوم اجتماعی- کنفرانس ها و وقایع</search_title>
+			<search_description>اینتیوت: علوم اجتماعی- کنفرانس ها و وقایع، جستجو در زمینه کنفرانس ها و وقایع مربوط به علوم اجتماعی را امکان پذیر می سازد.</search_description>
+			<url>http://www.intute.ac.uk/socialsciences/conferences.html</url>
+			<search_url>http://www.intute.ac.uk/socialsciences/cgi-bin/conferences.pl?type=All+events&amp;subject=All%7CAll+subjects&amp;submit.x=0&amp;submit.y=0&amp;submit=Go&amp;term={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>مدیکال کنفرانسیز.کام: کنفرانس های پزشکی</search_title>
+			<search_description>مدیکال کنفرانسیز دات کام یک راهنمای کنفرانس اینترنتی همراه با کمیته تجاری حمایت کننده برای متخصصان مراقبت های پزشکی و بهداشت است. این پایگاه علمی قابل جستجو که بیش از 7000 کنفرانس پزشکی و وقایع 
+CME
+را در خود جای داده یک منبع بسیار گرانبها برای همه متخصصان مراقبت های بهداشتی است.
+</search_description>
+			<url>http://www.medicalconferences.com/</url>
+			<search_url>http://www.medicalconferences.com/scripts/search_partner.pl?PID=234523&amp;L=&amp;Q_DATE_STARTD=-&amp;Q_DATE_STARTM=-&amp;Q_DATE_STARTY=-&amp;Q_DATE_ENDD=-&amp;Q_DATE_ENDM=-&amp;Q_DATE_ENDY=-&amp;x=4&amp;y=11&amp;&amp;K={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>لیس زد تی</search_title>
+			<search_description>لیس زد تی که با تاپیکا هاست می شود یک سرویس آزاد است که به شما اجازه می دهد فهرست ایمیل ها را پیدا کنید، مدیریت کنید و در گروههای بحث در علم شناختی شرکت کنید </search_description>
+			<url>http://www.liszt.com/dir/?cid=1564</url>
+			<search_url>http://www.liszt.com/search/?search_type=cat&amp;query={$formKeywords}</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>چند رسانه ای</context_title>
+		<context_abbrev>چند رسانه ای</context_abbrev>
+		<context_description>منابع چند رسانه ای برای علوم شناختی </context_description>
+		<search>
+			<search_title>پروژه دوربین ویدئویی باز</search_title>
+			<search_description>پروژه دوربین ویدئویی باز مجموعه ای است از یک ویدئو دیجیتال عمومی که برای تحقیق و دیگر اهداف در دسترس می باشند. هدف از این پروژه ویدئویی باز جمع آوری و در دسترس قرار دادن مجموعه ای از محتوای ویدئویی دیجیتال شده برای این ویدئو، بازیابی چند رسانه ای، کتابخانه دیجیتال و دیگر انجمن ها می باشد.</search_description>
+			<url>http://www.open-video.org/index.php</url>
+			<search_url>http://www.open-video.org/results.php?search_field=all&amp;terms={$formKeywords}</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>فایلهای آموزشی	</context_title>
+		<context_abbrev>دستورالعملی</context_abbrev>
+		<context_description>فورا جستجویی بر اساس موضوع مقاله آغاز می شود و استفاده کنندگان به مقالات موجود یا بایگانی شده در آن زمینه از روزنامه های راهنما در سر تا سر جهان مرتبط می شوند.</context_description>
+		<search>
+			<search_title>آموزش علوم، ریاضیات، مهندسی و تکنولوژی (SMETE)</search_title>
+			<search_description>آموزش علوم، ریاضیات، مهندسی و تکنولوژی 
+(SMETE)
+حاوی یک نمونه اولیه قابل جستجو و فعال از کتابخانه دیجیتال ملی آموزش علم، ریاضیات، مهندسی وتکنولوژی است.
+</search_description>
+			<url>http://www.smete.org/</url>
+			<search_url>http://www.smete.org/smete/?path=/public/find/search_results.jhtml&amp;_DARGS=/smete/public/find/index_body.jhtml&amp;/smete/forms/FindLearningObjects.operation=search&amp;_D:/smete/forms/FindLearningObjects.operation=%20&amp;_D:/smete/forms/FindLearningObjects.keyword=%20&amp;/smete/forms/FindLearningObjects.learningResourceType=&amp;_D:/smete/forms/FindLearningObjects.learningResourceType=%20&amp;/smete/forms/FindLearningObjects.grade=0-Any&amp;_D:/smete/forms/FindLearningObjects.grade=%20&amp;/smete/forms/FindLearningObjects.title=&amp;_D:/smete/forms/FindLearningObjects.title=%20&amp;/smete/forms/FindLearningObjects.author=&amp;_D:/smete/forms/FindLearningObjects.author=%20&amp;/smete/forms/FindLearningObjects.hostCollection=&amp;_D:/smete/forms/FindLearningObjects.hostCollection=%20&amp;/smete/forms/FindLearningObjects.afterYear=&amp;_D:/smete/forms/FindLearningObjects.afterYear=%20&amp;/smete/forms/FindLearningObjects.beforeYear=&amp;_D:/smete/forms/FindLearningObjects.beforeYear=%20&amp;&amp;/smete/forms/FindLearningObjects.keyword={$formKeywords}</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>خط مشی دولت</context_title>
+		<context_abbrev>خط مشی دولت</context_abbrev>
+		<context_description>دسترسی به اطلاعات و سرویس های ورودی فراهم شده توسط دولت ایالات متحده و کانادا</context_description>
+		<search>
+			<search_title>دسترسی به اطلاعات و سرویس دولتی استرالیا</search_title>
+			<search_description>استرالین گاورمنت انتری پوینت (نقطه ورودی به دولت استرالیا) دسترسی جامع و کاملی به اطلاعات و سرویس این دولت را فراهم می سازد. می توانید از طریق این سایت و 
+&lt;a href=&quot;http://www.australia.gov.au&quot;&gt;www.australia.gov.au&lt;/a&gt;
+هسته ای متمرکز از اطلاعات دولت استرالیا را پیدا کنید. که در حال حاضر بعنوان راهنمای بیش از 700 وب سایت از دولت استرالیا است، و بیش از 5000000 صفحه نمایه (ایندکس) کرده که هم متا دیتا و هم متن کامل را در بر می گیرد تا مطمئن شوید این یک پرتال کاملا جامع می باشد.
+</search_description>
+			<url>http://www.fed.gov.au</url>
+			<search_url>http://govsearch.australia.gov.au/search/search.cgi?collection=gov&amp;form=au&amp;query=&amp;query_phrase=&amp;query_or=&amp;query_not=&amp;meta_f_sand=&amp;scope=&amp;fscope=512&amp;num_ranks=20&amp;chksummary=chksummary&amp;query_and={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>دولت کانادا</search_title>
+			<search_description>شما می توانید در همه بخش های دولتی، بخش های فدرال و دفاتر استانی، مرزی و شهری جستجو کنید. یک لینک بخش ها و ادارات (دیپارتمنتز اند ایجنسیز) وجود دارد و ایندکس 
+A
+تا 
+Z
+به شما یک کلید واژه جستجو برای برنامه ها و خدمات ارائه می دهد.
+پیشرفتی که اخیرا روی سایتهای دیپارتمنت انجام شده این است که در برگیرنده همه گفته ها و افشاء حقایق می باشد و صفحه ای نیز در مورد هزینه های مسافرت، مهمانی ها، قراردادها، ضمانت نامه ها و پاداش ها دارد.
+صفحه ابوت کانادا ( در مورد کانادا) شامل لینکهایی به بخش ها و دفاتر، ساختار دولت کانادا کمیته های تفحص و غیره می شود. به غیز از وب سایت دیپارتمنت، دولت کانادا پرتال هایی را ایجاد کرده است که اطلاعات بین فدرال و منابع استانی و سازمانهای غیر دولتی را جمع آوری و به یکدیگر متصل کرده است.
+</search_description>
+			<url>http://www.canada.gc.ca/main_e.html</url>
+			<search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple&amp;pg=q&amp;enc=iso88591&amp;site=main&amp;bridge=&amp;stt=&amp;lowercaseq=&amp;what=web&amp;user=searchintranet&amp;browser=N6E&amp;kl=XX&amp;op=a&amp;q={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>دیرکت گاو (دولت مستقیم)</search_title>
+			<search_description>دیرکت گاو سرویسی دولتی است که به مردم امکان دسترسی به جدیدترین و گسترده ترین دامنه ی سرویس اطلاعات عمومی را در مکانی روی شبکه (وب) و تلویزیون دیجیتال (دیجیتال تی وی) می دهد. دیرکت گاو از مشخصات طراحی شده و در نظر گرفته شده از طریق
+UK GovTalk
+استفاده می کند.
+</search_description>
+			<url>http://www.direct.gov.uk</url>
+			<search_url>http://www.direct.gov.uk/AdvancedSearch/SearchResults/fs/en?NP=1&amp;PO1=C&amp;PI1=W&amp;PF1=A&amp;PG=1&amp;RP=20&amp;SC=__dgov_site&amp;Z=1&amp;PT1={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>اینفو4 لوکال.گاو.یو کی (انگلستان)</search_title>
+			<search_description>یو کی گاو تاک</search_description>
+			<url>http://www.info4local.gov.uk</url>
+			<search_url>http://www.info4local.gov.uk/?view=Search+results&amp;subjects=all&amp;departmentsIds=0&amp;informationTypesIds=all&amp;query={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>پرتال دولت نیوزلند</search_title>
+			<search_description>پرتال دولت نیوزلند وب سایتی است که امکان جستجو برای لینکها را فراهم می کند و به اطلاعات آنلاین و آف لاین و سرویس هایی از بیشتر دفاتر دولتی متصل می شود. این سایت توسط کمیته سرویس های ایالتی (استیت سرویسیز کامیژن) که بخشی در دولت نیوزلند می باشد، مدیریت و حمایت می شود.</search_description>
+			<url>http://www.govt.nz</url>
+			<search_url>http://www.govt.nz/search?type=spider&amp;t=spider&amp;q={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>اروپا</search_title>
+			<search_description>اطلاعات موجود در کشورهای عضو اتحادیه اروپا شامل داده های آماری، سیاست ها، اخبار، اسناد اداری، متون قانونی و دیگر انتشارات</search_description>
+			<url>http://europa.eu.int/index_en.htm</url>
+			<search_url>http://europa.eu.int/geninfo/query/resultaction.jsp?page=1</search_url>
+			<search_post>Collection=EuropaFull&amp;ResultTemplate=/result_en.jsp&amp;ResultCount=25&amp;qtype=simple&amp;ResultMaxDocs=200&amp;DefaultLG=en&amp;QueryText={$formKeywords}</search_post>
+		</search>
+		<search>
+			<search_title>شبکه اطلاعات قانونی جهانی (گلابل لگال اینفورمیشن نت ورک)GLIN</search_title>
+			<search_description>GLIN
+یک پایگاه اطلاعاتی از قوانین، آیین نامه ها، تصمیمات قضایی و دیگر منابع تکمیلی قانونی می باشد که توسط دفاتر سازمان های دولتی و بین المللی منتشر شده است. اعضای 
+GLIN
+متن کامل و رسمی از اسناد چاپ شده را روی پایگاه هایی به زبان اصلی شان منتشر می کنند. هر سند با خلاصه انگلیسی و واژه های موضوعی انتخاب شده از ایندکس های چند زبانه در 
+GLIN
+همراه می باشد.
+</search_description>
+			<url>http://www.glin.gov</url>
+			<search_url>http://www.glin.gov/search.do?refineQuery=&amp;offset=0&amp;refineQueryType=&amp;fromSearch=true&amp;queryType=ALL&amp;searchBtn=Search&amp;includeAllFields=on&amp;searchAll=on&amp;sumLanguage=any&amp;pubLanguage=any&amp;pubJurisdiction=any&amp;publicationJurisdictionExclude=false&amp;searchPublicationDate=true&amp;dateFromDay=01&amp;dateFromMonth=01&amp;dateFromYear=&amp;dateToDay=01&amp;dateToMonth=01&amp;dateToYear=&amp;subjTerm=&amp;subjTermConjunction%5B0%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B1%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B2%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B3%5D=AND&amp;subjTerm=&amp;searchOrder=default&amp;hitsPerPage=10&amp;showSummary=on&amp;queryString={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>فرست گاو (دولت اول </search_title>
+			<search_description>فرست گاو (فدرال ایالات متحده) یک شرکت عمومی-خصوصی است که توسط یک هیات نمایندگی دوطرفه رهبری و هدایت می شود.</search_description>
+			<url>http://www.firstgov.gov/</url>
+			<search_url>http://www.firstgov.gov/fgsearch/index.jsp?db=www&amp;st=AS&amp;ms0=should&amp;mt0=all&amp;rn=2&amp;parsed=true&amp;x=2&amp;y=8&amp;mw0={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>سایتهای کانادا</search_title>
+			<search_description>سایت های کانادا دسترسی به یک ورودی اطلاعاتی و خدماتی را که توسط دولت کانادا و هر یک از استان ها در اختیارشان قرار داده شده امکان پذیر می سازند.</search_description>
+			<url>http://www.canada.gc.ca/main_e.html</url>
+			<search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple.html&amp;enc=iso88591&amp;pg=q&amp;kl=en&amp;site=main&amp;q={$formKeywords}</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>گزارشات رسانه ای</context_title>
+		<context_abbrev>گزارشات رسانه ای</context_abbrev>
+		<context_description>فورا جستجویی بر اساس موضوع مقاله آغاز می شود و استفاده کنندگان به مقالات موجود یا بایگانی شده در آن زمینه از روزنامه های راهنما در سر تا سر جهان مرتبط می شوند.</context_description>
+		<search>
+			<search_title>گوگل نیوز - اخبار گوگل</search_title>
+			<search_description>گزارش های خبری را با استفاده از ماشین جستجوی معروف اخبار گوگل (گوگل نیوز) جستجو کنید.</search_description>
+			<url>http://news.google.com/</url>
+			<search_url>http://news.google.com/news?hl=en&amp;q={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>ساینتیست</search_title>
+			<search_description>ساینتیست منبعی آنلاین برای مجلات چاپ شده می باشد. ساینتیست دسترسی به اطلاعات مفید برای کار در زمینه مطالعه علوم موجود در زندگی را فراهم می سازد.</search_description>
+			<url>http://www.the-scientist.com/</url>
+			<search_url>http://www.the-scientist.com/search/dosearch/</search_url>
+			<search_post>box_type=toolbar&amp;search_restriction=all&amp;order_by=date&amp;search_terms={$formKeywords}</search_post>
+		</search>
+		<search>
+			<search_title>ساینتیفیک امریکن آرشیو-آرشیو علمی آمریکایی</search_title>
+			<search_description>ساینتیفیک امریکن آرشیو منبع آنلاین علم و تکنولوژی است که دسترسی به هر صفحه و هر دوره از مجله ساینتیفیک امریکن را از سال 1993 تا کنون مهیا می سازد.</search_description>
+			<url>http://www.sciamdigital.com/</url>
+			<search_url>http://www.sciamdigital.com/index.cfm?fa=Search.ViewSearchForItemResultList&amp;AUTHOR_CHAR=&amp;TITLE_CHAR=&amp;FullText_CHAR={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>نیوز دایرکتوری- راهنمای خبری</search_title>
+			<search_description>در حال حاضر بیش از 8000 روزنامه، مجله و بیش از 1000 گوینده تلویزیونی آمریکایی فهرست شده اند. </search_description>
+			<url>http://www.newsdirectory.com/</url>
+			<search_url>http://www.newsdirectory.com/hbSearch.php</search_url>
+			<search_post>s={$formKeywords}&amp; submit=Go</search_post>
+		</search>
+	</context>
+	<context>
+		<context_title>جستجوی شبکه ای</context_title>
+		<context_abbrev>جستجوی شبکه ای</context_abbrev>
+		<context_description>یک واژه ی جستجو را برای منابع اینترنت وارد کنید تا از طریق ماشین های جستجو به نتیجه برسید</context_description>
+		<search>
+			<search_title>گوگل</search_title>
+			<search_description>با استفاده از ماشین های معرف چاوشگر گوگل جستجو کنید.</search_description>
+			<url>http://www.google.com/</url>
+			<search_url>http://www.google.com/search?q={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>گوگل اسکولار</search_title>
+			<search_description>گوگل اسکولار امکان جستجو های خاص را د ر زمینه ادبیات پژوهشی شامل  مقالات کارشناسی شده ، پایان نامه ها، کتب،،پیش پرینت ها، چکیده ها و گزارش های فنی فراهم می سازد.محتوای این حیطه شامل تعدادی از ناشران و تدوین کنند گان است که گوگل توسط آنها نسازمان یافته است.برای مثال انجمن محاسبه ی ماشین ها، 
+IEEE،
+سرویس جایگزین کتابخانه جهانی با دسترسی آزاد  و ... .نتیایج مشخص شده ورژن های متفاوتی از شاخه ها، تحلیل گفته ها و مکان کتابخانه را (فقط کتاب های موجود) را نشان می دهد</search_description>
+			<url>http://scholar.google.com</url>
+			<search_url>http://scholar.google.com/scholar?ie=UTF-8&amp;oe=UTF-8&amp;hl=en&amp;q={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>ماشین جستجوی تصادفی</search_title>
+			<search_description>این ابزار جستجو از ویویزمو نتایج تصادفی را از بین جستجوهای انتخاب شده ارائه می دهد. با متا سرچ کل شبکه را جستجو کنید یا با استفاده از عناوین اخبار، شایعات، تصاویر یا تولیدات ر از
+Bizrate
+یا
+eBoy این ابزار جستجو از ویویزمو نتایج تصادفی را از بین جستجوهای انتخاب شده ارائه می دهد. با متا سرچ کل شبکه را جستجو کنید یا با استفاده از عناوین، اخبار، شایعات، تصاویر یا تولیدات را از
+Bizrate
+یا
+eBoy 
+جستجو کنید.</search_description>
+			<url>http://clusty.com/about</url>
+			<search_url>http://clusty.com/search?query={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>ویویزمو</search_title>
+			<search_description>تکنولوژی تصادفی و جایزه بر ویویزمو که توسط دانشمندان واحد جستجوی کارنج میلون توسعه یافته در حال باز کردن ارزش اطلاعات ذخیره شده در 500 شرکت، وب سایتهای عالی، ناشران معتبر و آژانس های دولتی با دسته بندی کردن نتایج جستجو برای سفارشات معنی دار است،تا به پیشرفتی در زمینه شکافتن اطلاعات و دستیابی به اطلاعات مربوطه برسد.</search_description>
+			<url>http://vivisimo.com</url>
+			<search_url>http://vivisimo.com/search?tb=homepage&amp;v%3Asources=Web&amp;query={$formKeywords}</search_url>
+		</search>
+	</context>
+</version>

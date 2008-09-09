@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000030.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reviewer's Role Index - Submissions 
+  *
+  * $Id$
+  --><topic title="ساب میشن ها" toc="editorial/toc/000008" key="editorial.reviewersRole.submissions" locale="fa_IR" id="editorial/topic/000030" >
+  <section><![CDATA[<p>با ورود به مجله، کارشناس به صفحه خانگی کاربر وارد می شود. با کلیک بر «نقش کارشناس» (با توجه به این که ممکن است نقشهای دیگری مانند نویسنده هم برای وی تعریف شده باشد) وی به صفحه ساب میشن ها وارد می شود. در این صفحه لیست همه ساب میشن هایی که کارشناس آنها را کارشناسی کرده و یا در حال کارشناسی آنها می باشد، وجود دارد. این لیست همچنین مشخص می کند که ساب میشن در نوبت چندم کارشناسی است؛ چرا که بعضی از ساب میشن ها با نظر دبیر باید برای کارشناسی دوباره ساب میت شوند. در این صفحه امکان دسترسی به کارشناسیهایی که پیشتر توسط این کارشناس برای مجله به اتمام رسیده است نیز وجود دارد.</p>]]></section>
+</topic>

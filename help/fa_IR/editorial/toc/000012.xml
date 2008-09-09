@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+<!--
+  * 000012.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Copyeditor's Role
+  *
+  * $Id$
+  --><toc title="نقش ویراستار ادبی" parent_topic="editorial/topic/000012" locale="fa_IR" id="editorial/toc/000012" >
+  <topic title="ساب میشن ها" id="editorial/topic/000037" />
+  <topic title="ویراستاری ادبی" id="editorial/topic/000038" />
+  <breadcrumb title="روند دبیری" url="editorial/topic/000000" />
+  <breadcrumb title="نقش ویراستار ادبی" url="editorial/topic/000012" />
+</toc>

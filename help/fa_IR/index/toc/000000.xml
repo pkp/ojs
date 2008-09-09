@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Main table of contents for help. 
+  *
+  * $Id$
+  --><toc title="OJS Help" parent_topic="index/topic/000000" locale="fa_IR" id="index/toc/000000" >
+  <topic title="آشنایی با OJS" id="intro/topic/000000" />
+  <topic title="مدیر سایت" id="site/topic/000000" />
+  <topic title="هیات مدیره ژورنال" id="journal/topic/000000" />
+  <topic title="قسمت عضویت " id="submission/topic/000000" />
+  <topic title="قسمت سردبیری" id="editorial/topic/000000" />
+  <topic title="قسمت انتشارات" id="publishing/topic/000000" />
+  <topic title="وب سایت ژورنال" id="user/topic/000000" />
+</toc>

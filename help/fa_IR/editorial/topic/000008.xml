@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000008.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reviewer's Role Index 
+  *
+  * $Id$
+  --><topic title="نقش کارشناس" toc="editorial/toc/000000" key="editorial.reviewersRole" subtoc="editorial/toc/000008" locale="fa_IR" id="editorial/topic/000008" >
+  <section><![CDATA[<p>کارشناس از طریق یک ایمیل به انجام کارشناسی یک ساب میشن دعوت می شود. این ایمیل علاوه بر عنوان و چکیده ساب میشن، حاوی آدرس اینترنتی مجله، نام کاربری و کلمه عبور برای ورود به مجله نیز می باشد. مجله گزینه دیگری هم برای این منظور دارد و آن گزینه کارشناس است که ساب میشن را به همراه ایمیل دعوت به همکاری برای کارشناس ارسال می کند؛ در این حالت کارشناس نیز بایستی از طریق ایمیل نتیجه را بازگرداند. آن چه در این جا توضیح داده شده است روش اصلی انجام کارشناسی (و اطمینان از انجام کامل فرایند) از طریق مراجعه کارشناس به سایت مجله است.</p>]]></section>
+</topic>

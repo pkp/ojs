@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000020.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Proofreader 
+  *
+  * $Id$
+  --><topic title="ویرایشگرنهایی" toc="journal/toc/000003" key="journal.roles.proofreader" locale="fa_IR" id="journal/topic/000020" >
+  <section><![CDATA[<p>
+ویرایشگر نهایی نسخه های نهایی مقالات را که توسط صفحه آرا به فرمتهای مختلف تهیه شده اند به دقت برسی و آنهارا برای چاپ تایید میکند .ویرایشگر نهایی (مولف)مقاله را به دقت از لحاظ خطاهای نوشتاری و صفحه آرایی کنترل میکند و صفحه آرا در مرحله بعدی این خطاهارا اصلاح مینماید در برخی از مجلات ممکن است سردبیر یا سردبیر بخش نقش ویرایشگر نهایی را ایفا کنند
+</p><p>
+اطلاعات بیشتر را در اینجا میتوانید دریافت کنید
+{help_topic key="editorial.proofreadersRole" text="here"}.</p>]]></section>
+</topic>

@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process - Table of Contents
+  *
+  * $Id$
+  --><topic title="فهرست مطالب " toc="publishing/toc/000000" key="publishing.tableOfContents" locale="fa_IR" id="publishing/topic/000003" >
+  <section><![CDATA[<p>
+همینکه یک مقاله برای چاپ تایید شد در زیر عنوان بخش تهیه کننده آن در مجله در فهرست مطالب آن شماره نمایش داده میشود . اگر بخشی از مجله مقله ای برای چاپ در آن شماره نداشته باشد نام آن بخش در فهرست مطالب مجله نمایش داده نمیشود .سر دبیر میتواند خشهای مجله را باز آرایی کند و ترتیب مقالات مورد برسی در هر بخش را نیز تغییر دهد  
+</p><p>
+علاوه بر این اگر مدیر مجله گزینه کنترل اشتراک را برای یک شماره فعال کرده باشد سردبیر مقالات مشمول این قانون را در هر شماره مشخص میکند
+</p>]]></section>
+</topic>

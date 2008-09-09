@@ -1,0 +1,26 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000016.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Editor 
+  *
+  * $Id$
+  --><topic title="سردبیر" toc="journal/toc/000003" key="journal.roles.editor" locale="fa_ IR" id="journal/topic/000016" >
+  <section><![CDATA[<p>
+سردبیر بر کل فرآیند سردبیری و انتشار مجله نظارت دارد . سردبیر با همکاری مدیر مجله سیاست گذاری ها و فرآیند های عملکرد مجله را تعیین می کند که این سیاست گذاری ها در قسمت
+{help_topic key="journal.managementPages.setup" text="Setup"}
+ در دسترس می باشد . در فرآیند سردبیری ٫ سردبیر مطالب دریافتی را به سردبیران بخش ها می دهد تا آنان نیز مطالب را در اختیار بررسی کنندگان قراردهند . سردبیر همواره بر پیشرفت مطالب از بخشی به بخش دیگر نظارت دارد و در صورت بروز هر نوع مشکلی در این فرآیند به رفع آن می پردازد . پس از اتمام بررسی یک مقاله سردبیر معمولاْ از طریق
+{help_topic key="editorial.sectionEditorsRole.editing" text="Editing"}
+فرآیند را بررسی کرده و آن را به قسمت های بعدی هدایت می کند اگر چه در نهایت مسئولیت اصلی مطالب بر عهده سردبیر بخش است که از طریق
+{help_topic key="editorial.sectionEditorsRole.review" text="Review"}
+ بر آن نظارت دارد . سردبیر همچنین مطالب آماده شده را برای انتشار مرتب کرده و فهرست مطالب مجله را تهیه می کند .
+{help_topic key="publishing.index" text="Publishing Process"}
+سردبیر می تواند مطالب آرشیو شده را مجددا به صورت فعال در آورده و آنها را در قسمت 
+{help_topic key="editorial.editorsRole.submissions.archives" text="Archives"}
+در فهرست بازنگری یا ویرایش قرار دهد .
+</p>]]></section>
+</topic>

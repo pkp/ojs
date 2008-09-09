@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000022.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - In Editing
+  *
+  * $Id$
+  --><topic title="در دست ویراستاری" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.inEditing" locale="fa_IR" id="editorial/topic/000022" >
+  <section><![CDATA[<p>در قسمت ویراستاری، ساب میشن ها ویراستاری ادبی، صفحه آرایی و چک نهایی می شوند. وقتی یک سردبیر  یا دبیر بر عنوان یک ساب میشن در نوبت ویراستاری کلیک می کند به صفحه ویراستاری آن می رود. وقتی یک ساب میشن با طی مراحل ویراستاری در نوبت چاپ یک شماره قرار می گیرد، از این لیست حذف و به آرشیو منتقل می شود.</p><p>برای اطلاعات بیشتر در مورد روند ویراستاری به این آدرس مراجعه نمایید: {help_topic key="editorial.sectionEditorsRole.editing" text="In Editing"}.</p>]]></section>
+</topic>

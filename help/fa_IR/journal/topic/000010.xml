@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000010.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Files Browser
+  *
+  * $Id$
+  --><topic title="کاوشگر فایلها" toc="journal/toc/000001" key="journal.managementPages.fileBrowser" locale="fa_IR" id="journal/topic/000010" >
+  <section><![CDATA[<p>
+کاوشگرفایلها به مدیر مجله امکان میدهد فایلهایی که قرار است در وب سایت ژورنال بارگذاری شوند پیش از این کار برسی و مشاهده نماید (امکان برسی فایلهای بارگذاری شده هم وجود دارد)فایلها را میتوان به راحتی مشاهده ٫ حذف و جابجا نمود   
+</p><p>
+توجه داشته باشید که این صرفا یک ابزار مدیریتی است و در فرایند روزمره مدیریت مجله کاربرد ندارد .مطالب دریافتی مجله در مجموعه ای مرکب از سوابق بایگانی شده فیلها و بانکهای اطلاعاتی نگهداری میشوند و پاک کردن فایلهای مطالب دریافتی با استفاده از کاوشگر فایلها باعث حذف سوابق آنها در بانکهای اطلاعاتی مربوطه نمیگردد 
+</p>]]></section>
+</topic>

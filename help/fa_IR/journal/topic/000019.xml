@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000019.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Copyeditor 
+  *
+  * $Id$
+  --><topic title="ویرایشگر" toc="journal/toc/000003" key="journal.roles.copyeditor" locale="fr_IR" id="journal/topic/000019" >
+  <section><![CDATA[<p>
+ویراستارمقالات در یافتی را از لحاظ دستور زبان و شیوایی جملات کتترل کرده ٫ با موءلفین مقالات ارتباط برقرار کرده واز نظم مقاله و محتوای آن اطمینان حاصل میکند ٫ مقاله را از لحاظ کتابداری وسبک نوشناری اصلاح میکند و یک نسخه تر وتمیز و اصلاح شده  از مقاله را دراختیار صفحه آرا قرار میدهد تا آن را به فرمت مناسب برای انتشار تبدیل کند .در برخی از مجله ها سردبیر یا سردبیر بخش کارهای مربوط به ویرایشگر را انجام میدهد 
+</p><p>
+اطلاعات بیشتررا میتوانید در اینجا ملاحظه کنید
+{help_topic key="editorial.copyeditorsRole" text="here"}.</p>]]></section>
+</topic>

@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Table of contents for Introduction to OJS. 
+  *
+  * $Id$
+  --><toc title="آشنایی با OJS" parent_topic="intro/topic/000000" locale="fa_IR" id="intro/toc/000000" >
+  <topic title="سوالات رایج" id="intro/topic/000001" />
+  <breadcrumb title="آشنایی با OJS" url="intro/topic/000000" />
+</toc>

@@ -1,0 +1,39 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * LDAP authentication plugin localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  --><locale full_name="Farsi" name="fa_IR" >
+  <message key="plugins.auth.ldap.displayName" >LDAP</message>
+  <message key="plugins.auth.ldap.description" >این پلاگین مخصوص تایید هویت و همزمانسازی حساب کاربران با استفاده از یک منبع داده LDAP خارجی می باشد.</message>
+  <message key="plugins.auth.ldap.settings" >تنظیمات LDAP</message>
+  <message key="plugins.auth.ldap.settings.hostname" >سرور نام میزبانی</message>
+  <message key="plugins.auth.ldap.settings.hostname.description" >مانند &quot;ldap.example.com&quot; و یا &quot;ldaps://ldap.example.com&quot; (در صورت استفاده از SSL)</message>
+  <message key="plugins.auth.ldap.settings.port" >پورت سرور</message>
+  <message key="plugins.auth.ldap.settings.port.description" >اختیاری است. پیش فرض آن ۳۸۹ برای LDAP و ۶۳۶ برای LDAP روی SSL می باشد.</message>
+  <message key="plugins.auth.ldap.settings.basedn" >دی ان پایه</message>
+  <message key="plugins.auth.ldap.settings.basedn.description" >E.g., &quot;ou=people,dc=example,dc=com&quot;
+مانند &quot;ou=people,dc=example,dc=com&quot;</message>
+  <message key="plugins.auth.ldap.settings.managerdn" >دی ان مدیر</message>
+  <message key="plugins.auth.ldap.settings.managerdn.description" >مانند &quot;cn=Manager,dc=example,dc=com&quot;</message>
+  <message key="plugins.auth.ldap.settings.managerpwd" >رمز عبور مدیر</message>
+  <message key="plugins.auth.ldap.settings.managerpwd.description" >دی ان پایه و رمز عبور مدیر فقط وقتی لازم است که همزمان سازی کارنامه با رمز عبور کاربر و یا گزینه های ایجاد کاربر فعال شده باشد.</message>
+  <message key="plugins.auth.ldap.settings.pwhash" >رمز نگاری گذرواژه</message>
+  <message key="plugins.auth.ldap.settings.pwhash.description" >فورمات هش (نوعی رمزنگاری) برای گذرواژه های ذخیره شده بر روی سرور. SSHA توصیه می شود (در صورت داشتن PHP >= 4.3.0)</message>
+  <message key="plugins.auth.ldap.settings.saslopt" >تنظیمات SASL (اختیاری است)</message>
+  <message key="plugins.auth.ldap.settings.sasl" >بجای تایید هویت ساده از SASL استفاده کنید (در صورت PHP >= 5)</message>
+  <message key="plugins.auth.ldap.settings.saslmech" >مکانیسم SASL</message>
+  <message key="plugins.auth.ldap.settings.saslmech.description" >مانند, &quot;DIGEST-MD5&quot;</message>
+  <message key="plugins.auth.ldap.settings.saslrealm" >قلمرو</message>
+  <message key="plugins.auth.ldap.settings.saslauthzid" >آی دی درخواست شده برای تایید هویت</message>
+  <message key="plugins.auth.ldap.settings.saslprop" >ویژگی های امنیتی SASL</message>
+	<message key="plugins.auth.ldap.settings.basedn.description">مانند "ou=people,dc=example,dc=com"</message>
+	<message key="plugins.auth.ldap.settings.uid">ویژگی نام حساب کاربری</message>
+	<message key="plugins.auth.ldap.settings.uid.description">آن ویژگی که مقدار آن بصورتی منحصر به فرد یک کاربر را شناسائی می کند مانند: uid, cn یا sAMAccountName</message>
+</locale>

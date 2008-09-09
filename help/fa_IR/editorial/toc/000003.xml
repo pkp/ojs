@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Editor's Role - Submission Summary
+  *
+  * $Id$
+  --><toc title="خلاصه ساب میشن" parent_topic="editorial/topic/000003" locale="fa_IR" id="editorial/toc/000003" >
+  <topic title="ساماندهی ساب میشن" id="editorial/topic/000019" />
+  <topic title="متا دیتای ساب میشن" id="editorial/topic/000020" />
+  <breadcrumb title="روند دبیری" url="editorial/topic/000000" />
+  <breadcrumb title="نقش سردبیر" url="editorial/topic/000001" />
+  <breadcrumb title="خلاصه ساب میشن" url="editorial/topic/000003" />
+</toc>

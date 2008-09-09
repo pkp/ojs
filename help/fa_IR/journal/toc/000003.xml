@@ -1,0 +1,25 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Journal Management - Roles. 
+  *
+  * $Id$
+  --><toc title="سمتها" parent_topic="journal/topic/000003" locale="fa_IR" id="journal/toc/000003" >
+  <topic title="مدیر ژورنال" id="journal/topic/000015" />
+  <topic title="سردبیر" id="journal/topic/000016" />
+  <topic title="سردبیر بخش" id="journal/topic/000017" />
+  <topic title="ویراستار" id="journal/topic/000019" />
+  <topic title="صفحه آرا" id="journal/topic/000018" />
+  <topic title="غلط گیر" id="journal/topic/000020" />
+  <topic title="برسی کننده" id="journal/topic/000021" />
+  <topic title="مولف" id="journal/topic/000022" />
+  <topic title="خواننده" id="journal/topic/000023" />
+  <topic title="مدیر قسمت اشتراک" id="journal/topic/000032" />
+  <breadcrumb title="مدیر ژورنال " url="journal/topic/000000" />
+  <breadcrumb title="سمتها" url="journal/topic/000003" />
+</toc>

@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000014.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users - Email Users
+  *
+  * $Id$
+  --><topic title="ارسال ایمیل برای کاربران " toc="journal/toc/000002" key="journal.users.emailUsers" locale="fa_IR" id="journal/topic/000014" >
+  <section><![CDATA[<p>
+مدیر ژورنال میتواند به تکتک کاربران یا گروهی از آنها ایمیل بفرستد شایان ذکراست که قبل از انتشار هر شماره از مجله یک ایمیل اطلاع رسانی که حاوی فهرست مطالب شماره بعدی مجله است برای تمامی کاربران ارسال میگرددکه در آن 
+{help_topic key="publishing.index" text="publishing"}
+نام نویسنده و عنوان مقاله ها ذکر شده است .هر مجله در سیستم OJS باید یک استراتژی حفظ حرم خصوصی کاربران نیز داشته باشد که در قسمت تنظیمات برنامه مشخص شده و در قسمت درباره ژورنال موجود است و مشخص میکند که چگونه اطلاعات شخصی کاربران این مجله محافظت خواهد شد 
+</p>]]></section>
+</topic>

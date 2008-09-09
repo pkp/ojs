@@ -1,0 +1,24 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000044.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Ensuring a blind peer review
+  *
+  * $Id$
+  --><topic title="اطمینان از محرمانه بودن ویرایش" toc="editorial/toc/000001" key="editorial.sectionEditorsRole.review.blindPeerReview" locale="fa_IR" id="editorial/topic/000044" >
+  <section><![CDATA[<p>
+برای اطمینان از محرمانه بودن مراحل آماده سازی باید حداکثر تلاش بعمل آید تا مولف و ویرایشگران یکدیگر را نشناسند . بدین منظور اطمینان پیدا کنید که مراحل زیر در مورد متن مقاله و PROPERTIES فایل مقاله رعایت شده باشد .
+<ol><li>
+مولف مقاله بایستی نام خود را از متن مقاله حذف کرده و به جای آن از کدی که مدیر سایت در اختیار وی می گذارد برای ثبت هویت خود استفاده کند .
+</li>
+<li>
+اگر فایل مقاله با برنامه آفیس مایکروسافت تهیه شده است مشخصات مولف بایستی از قسمت پروپرتیز فایل با رفتن به منوی فایل سپس تولز سپس سکیوریتی و انتخاب گزینه حذف اطلاعات شخصی از فایل حذف گردد .
+</li>
+</li>
+اگر فایل مقاله به صورت PDF است نام مولف بایستی از پروترتیز فایل حذف شود .
+</ol></p>]]></section>
+</topic>

@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Site Administration - Installation 
+  *
+  * $Id$
+  --><topic title="نصب " toc="site/toc/000000" key="site.installation" locale="fa_IR" id="site/topic/000001" >
+  <section><![CDATA[<p>
+برنامه OJSیک برنامه اپن سورس است که آن را میتوان به طوررایگان دانلود کرده و بر روی هر کامپیوتر خانگی یا سرور نصب کرد . 
+</p>]]></section>
+  <section title="مالکیت معنوی" ><![CDATA[<p>
+برنامه OJSبر طبق توافقنامه کاربری زیل قابل استفاده است
+<a href="http://www.gnu.org/copyleft/gpl.html" target="_blank">
+</a>
+یک نسخه از توافقنامه کاربری برای استفاده از این برنامه به صورت نسخه اصلی یا اصلاح شده همراه با فایل نصب برنامه قابل دانلود است . 
+</p>]]></section>
+  <section title="حداقل سیستم مورد نیاز" ><![CDATA[<p>
+یک سرور که حد اقل دارای مشخصات ذیل باشد برای نصب و اجراء برنامه توصیه میشود
+</p>
+		<ul>
+			<li><a href="http://www.php.net/" target="_blank">PHP</a> >= 4.2.x</li>
+			<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (including 4.x) or <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (including
+	  PostgreSQL 8.x)</li>
+			<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x or Microsoft IIS 6+</li>
+			<li>
+سیستم عامل :هر سیستم عاملی که از نرم افزار فوق پشتیبانی کند شامل 
+<a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, and <a href="http://www.microsoft.com/">Windows</a></li>
+		</ul>
+		<p>
+برنامه OJSتا کنون فقط بر روی MYSQLوPOSTGRESQL تست شده است .اگرچه سایر سیستمهای مدیریت بانکهای اطلاعاتی زیر نیز با آن کار میکند 
+<a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a>
+ گزارش کاربران درباره کیفیت کارکرد برنامه موجب مزید امتنان است 
+</p>
+		]]></section>
+  <section title="دانلود" ><![CDATA[<p>
+برنامه OJSرا میتوان از وب سایت پروژه توسعه اطلاعات عمومی به آدرس 
+<a href="http://pkp.sfu.ca/ojs/" target="_blank">دانلود کرد</a>.</p>]]></section>
+  <section title="نصب " ><![CDATA[<p>
+برنامه OJSدارای یک دستورالعمل برپایه وب است که مدیر سیستم را در تمام مراحل نصب راهنمایی میکند .همچنین نصب آن از طریق تایپ کردن خطوط فرمان نیز انکتن پذیر است 
+</p>
+		<ol>
+			<li>
+				آرشیو OJSرا دانلود کنید 
+			</li>
+			<li>
+				آرشیو OJSرا روی وب سرور خود از حالت فشرده خارج کنید و آنرا در مسیر دلخواهی قرار دهید
+<br />
+				<tt>$ tar -zxf ojs-2.*.tar.gz<br />
+				$ mv ojs-* /var/www/myjournal</tt>
+			</li>
+			<li>
+				این فایلها و پوشه ها را طوری تغییر دهید که قابل اصلاح باشند (مثلا با استفاده از CHMOD)
+<br />
+				- config.inc.php (optional)<br />
+				- public<br />
+				- cache<br />
+				- cache/t_cache<br />
+				- cache/t_config<br />
+				- cache/t_compile<br />
+				- cache/_db
+			</li>
+			<li>
+				با استفاده از یک کاوشگر اینترنت به محل نصب برنامه بروید 
+( مثلا., http://www.mydomain.com/myjournal/)
+سپس دسنوراتی را که بر روی صفحه نمایش داده میشود اجراءکنید تا نصب برنامه کامل شود . برای اطلاعات بیشتر به فایلهای متنی راهنما در شاخه برنامه مراجعه کنید.
+			</li>
+		</ol>
+		]]></section>
+</topic>

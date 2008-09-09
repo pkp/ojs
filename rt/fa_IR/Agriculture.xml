@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE version SYSTEM "../../lib/pkp/dtd/rtVersion.dtd">
+<!--
+  * Agriculture.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reading Tools version: Agriculture (en_US)
+  *
+  * $Id$
+  --><version locale="fa_IR" id="Agriculture" >
+  <version_title>کشاورزی</version_title>
+  <version_description>ابزار خواندن می تواند برای خوانندگان این مطالعه در زمینه منابع موجود راهنمایی وسیعی ارائه دهد که این راهنمایی می تواند تفسیر، قرار گرفتن و ارزیابی کردن در زمینه آن مطالعه را فراهم آورد.</version_description>
+  <context>
+    <context_title>کار نویسندگان</context_title>
+    <context_abbrev>کارهای دیگر</context_abbrev>
+    <context_description>کارهای دیگر نویسنده (گان) مقاله را توسط موتورهای جستجوی OAI تشخیص می دهد.</context_description>
+    <author_terms/>
+    <search>
+      <search_title>گوگل اسکولار</search_title>
+      <search_description> گوگل اسکولار جستجوهای مشخصی در نوشتیجات علمی شامل دست نوشته های کارشناسی شده، پایان نامه ها، کتب، پیش پرینت ها، چکیده ها و گزارشات فنی، انجام می دهد. محتوای آن شامل طیف وسیعی از ناشران و مولفین است که گوگل با آنها رابطه دارد، برای مثال انجمن وسایل محاسباتی، IEEE، سرویس مشخص کننده آزاد کتابخانه WorldCat از شرکت OCLC و غیره. صفحات نتایج شامل دسته های مختلف، آنالیزهای رسمی، و موقعیت های کتابخانه ای (فقط کتب فعلی) خواهد بود.</search_description>
+      <url>http://scholar.google.com</url>
+      <search_url>http://scholar.google.com/scholar?ie=UTF-8&amp;oe=UTF-8&amp;hl=eng&amp;as_sauthors={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>OAIster (آرشیو باز پایگاههای داده ی تحقیقاتی ابتکاری ) </search_title>
+      <search_description>OAIster پروژه ی بخش خدمات تولید کتابخانه دیجیتال دانشگاه میشیگان می باشد که جستجو در طیف وسیعی از منابع و موسسات را فراهم می نماید. به این صورت که این موسسات اطلاعات منابع دیجیتالی خود را در اختیار قرار می دهند و اعضای پروژه آنها را در سرویس OAIster جمع آوری می کنند.</search_description>
+      <url>http://oaister.umdl.umich.edu/</url>
+      <search_url>http://oaister.umdl.umich.edu/cgi/b/bib/bib-idx?type=boolean&amp;size=10&amp;c=oaister&amp;q1=&amp;rgn1=entire+record&amp;op2=and&amp;q2=&amp;rgn2=entire+record&amp;op3=And&amp;q3=&amp;rgn3=title&amp;op4=And&amp;rgn4=author&amp;op5=And&amp;q5=&amp;rgn5=subject&amp;op6=And&amp;rgn6=norm&amp;q6=all+types&amp;sort=author%2Fcreator&amp;submit2=search&amp;q4={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>رایس بایبیلوگرافی(فهرست منابع رایس)</search_title>
+      <search_description>Rice Bibliography در سال 1961 آغاز بکار کرد و در حال حاضر بزرگترین منبع حاوی اطلاعات علمی درباره برنج می باشد. تقریبا هرساله  8000  رفرنس جدید به آن اضافه می شود که این امر تمام موضوعات مرتبط با برنج را پوشش می دهد.</search_description>
+      <url>http://ricelib.irri.cgiar.org:81/search/w</url>
+      <search_url>http://ricelib.irri.cgiar.org:81/search/?searchtype=w&amp;searcharg={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>آرشیو آزاد پروژه اطلاعات عمومی هاروست (PKP)</search_title>
+      <search_description>آرشیو آزاد هاروست (PKP) یک سامانه نمایه کردن اطلاعات رایگان است که توسط پروژه اطلاعات عمومی به منظور گسترش و ترویج دسترسی به تحقیقات ایجاد شده است. این سامانه به شما اجازه می دهد که یک لیست اطلاعات قابل جستجو از آرشیوهای آزاد بسازید. مانند سایتهایی که از سامانه های مجلات آزاد و یا کنفرانس های آزاد استفاده می کنند.</search_description>
+      <url>http://pkp.sfu.ca/harvester/</url>
+      <search_url>http://pkp.sfu.ca/harvester/search.php?limit=author&amp;query={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>جستجوی اگ اکان: تحقیق در اقتصاد کشاورزی</search_title>
+      <search_description>جستجوی AgEcon جهت توزیع الکترونیکی گزارشات مطالعات علمی در زمینه اقتصاد کشاورزی طراحی شده است.</search_description>
+      <url>http://agecon.lib.umn.edu/</url>
+      <search_url>http://agecon.lib.umn.edu/cgi-bin/view.pl?bool=AND&amp;fields=author&amp;detail=0&amp;keywords={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>کتابخانه دیجیتالی عمومی (DLC)</search_title>
+      <search_description>DLC دروازه ای به سوی نوشتیجات بین المللی عمومی است. این پایگاه اینترنتی شامل یک آرشیو مقالات در حال آماده سازی از مقالاتی است که نویسندگان ارسال کرده اند، می باشد. بعلاوه شامل متن کامل کنفرانس ها، پایان نامه ها، مقالات در حال آماده سازی و پیش پرینت ها و گزارشها می باشد.</search_description>
+      <url>http://dlc.dlib.indiana.edu/</url>
+      <search_url>http://dlc.dlib.indiana.edu/perl/search?abstract%2Fagency%2Fauthors%2Fconfdates%2Fconference%2Fconfloc%2Fcountry%2Fdiscipline%2Feditors%2Fkeywords%2Flanguage%2Fresearch%2Fseries%2Fsubjecttext%2Fthesistype%2Ftitle%2Fyear_srchtype=ALL&amp;_action_search=Search&amp;abstract%2Fagency%2Fauthors%2Fconfdates%2Fconference%2Fconfloc%2Fcountry%2Fdiscipline%2Feditors%2Fkeywords%2Flanguage%2Fresearch%2Fseries%2Fsubjecttext%2Fthesistype%2Ftitle%2Fyear={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>پایگاه داده اسناد PESTIS</search_title>
+      <search_description>سرویس اطلاعاتی افت کش (PESTIS)، یک پایگاه داده آن لاین در زمینه اصلاح استفاده افت کش ها و انجمن های کشاورزی می باشد که از طریق شبکه کامپیوتری EcoNet قابل دسترسی است. شامل بیش از 400 مورد خبری، هشدار، خبرنامه و صفحات آماری است.</search_description>
+      <url>http://www.panna.org/resources/pestis.html</url>
+      <search_url>http://www.panna.org/system/searchResults.html?p=1&amp;lang=en&amp;include=&amp;exclude=&amp;penalty=.05&amp;mode=&amp;searchScope=all&amp;q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>اسامی متداول برای بیماریهای گیاهان</search_title>
+      <search_description>این منبع یک نسخه الکترونیکی از کتاب &quot;اسامی متداول بیماریهای نباتی&quot; چاپ 1994 است. این مجموعه یک نسخه به روز شده و مرکب از لیست اسامی منتشر شده در اخبار آسیب شناسی گیاهی  را در اختیار می گذارد.</search_description>
+      <url>http://www.apsnet.org/online/common/</url>
+      <search_url>http://www.apsnet.org/online/common/query.asp</search_url>
+      <search_post>scope=/online/common/names/&amp;FreeText=on&amp;SearchString={$formKeywords}</search_post>
+    </search>
+    <search>
+      <search_title>Vegetable MD online</search_title>
+      <search_description>این منبع به منظور دستیابی به بسیاری از صفحات آماری تهیه شده شده توسط سرویس های رسانه ای کومل ایجاد شده است. وجود تصاویر رنگی این صفحات آماری، استفاده ابزاری جهت تشخیص بیماریهای گیاهی را افزایش داده است. این صفحات آماری همچنین شامل روشهای کاشت، آبیاری، هرس کردن، آفت ها، داشت (نگهداری)، انتخاب زمین زراعی و دیگر موارد وابسته به گیاهان و کشت آنها می باشد.</search_description>
+      <url>http://vegetablemdonline.ppath.cornell.edu/Vegmd.asp</url>
+      <search_url>http://vegetablemdonline.ppath.cornell.edu/Vegmd.asp?target={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>VITIS-VEA</search_title>
+      <search_description>این منبع – خلاصه مقالات شراب سازی- یک پایگاه داده ناشران انگلیسی و یا آلمانی زبان در زمینه تهیه شراب می باشد. مواردی از قبیل تاریخچه شراب سازی، فیزیولوژی و زیست شیمی، علوم خاکی، ژنتیک و تهیه مشروبات، آسیب شناسی گیاهی، محافظت از مشروبات، تکنیک های زیر زمینی، جنبه های اقتصادی تهیه شراب و میکروبیولوژی شراب را پوشش می دهد. </search_description>
+      <url>http://vitis-vea.zadi.de/stichwortsuche_eng.htm</url>
+      <search_url>http://vitis-vea.zadi.de/VITISVEA_ENG/SDF?STICHWORT_O=includes&amp;FORM_F1=AUT1&amp;FORM_SO=Ascend&amp;STICHWORT={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>مرکز جهانی اطلاعات کشاورزی (WAICENT)</search_title>
+      <search_description>این وب سایت حاوی اطلاعات مدیریتی و بهبود زمینهای بایر، توسعه نژادی و توان زایی محصول، استانداردهای غذایی، منابع ژنتیکی حیوانی، عملیات آینده هاروست، سیستم های غذایی و تنوع غذایی در مراکز شهری می باشد.</search_description>
+      <url>http://www.fao.org/waicent/index_en.asp</url>
+      <search_url>http://www.fao.org/waicent/search/simple_s_result.asp?publication=1&amp;webpage=2&amp;photo=3&amp;press=5&amp;CGIAR=1&amp;QueryString={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>مرکز اسناد فاو (FAO)</search_title>
+      <search_description>مرکز اسناد فاو اسناد این مربوط به این سازمان و غیر این سازمان را جمع آوری و منتشر می کند. سه روش جستجو در آن تدارک دیده شده و از چندین زبان پشتیبانی میشود.</search_description>
+      <url>http://www.fao.org/documents/</url>
+      <search_url>http://www.fao.org/documents/advanced_s_result.asp?form_c=AND&amp;RecordsPerPage=50&amp;QueryString={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>پیدا کردن اصطلاحات</context_title>
+    <context_abbrev>پیدا کردن اصطلاحات</context_abbrev>
+    <context_description>بر روی کلمه ی داخل متن دوبار کلیک کنید تا در قسمت &quot;معنی اصطلاح&quot; ظاهر شود. همچنین می توانید آنرا در کادر مشخص شده تایپ کرده و یا بچسبانید (paste). سپس می توانید معنی آن اصطلاح را با استفاده از جستجو پیدا کنید. این منابع به خاطر ارتباطشان با کلمه و همچنین قابلیت دسترسی آزادشان، از پیش انتخاب شده اند.</context_description>
+    <define_terms/>
+    <search>
+      <search_title>گوگل</search_title>
+      <search_description>با استفاده از موتور جستجوی محبوب گوگل لغات جستجو می شوند.</search_description>
+      <url>http://www.google.com/</url>
+      <search_url>http://www.google.com/search?hl=en&amp;q=define%3A{$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>فرهنگ لغات بیوتکنولوژی غذایی و کشاورزی فاو</search_title>
+      <search_description>این سایت فهرستی از لغات و تعاریف آنها را جمع آوری کرده اما امکان جستجو در آن وجود ندارد. جستجوهای آن لاین در آن رایگان است. یک نسخه کتابی از فرهنگ لغات نیز در آن به فروش میرسد.</search_description>
+      <url>http://www.fao.org/biotech/index_glossary.asp</url>
+      <search_url>http://www.fao.org/biotech/find-form-n.asp</search_url>
+      <search_post>terms={$formKeywords}</search_post>
+    </search>
+    <search>
+      <search_title>گنجینه کشاورزی نال</search_title>
+      <search_description>گنجینه کشاورزی نال جهت رفع نیازهای بخش کشاورزی ایالات متحده و سرویس تحقیقات کشاورزی طراحی و ساخته شد. این گنجینه برای تمام افرادی است که منابع کشاورزی را می خواهند دسته بندی، سازماندهی و تعریف کنند. منابعی مانند کتب، مقالات، کتاب فهرستها (کاتولوگ)، پایگاههای داده، اختراعات، بازیها، عناوین درسی، تصاویر، اسلایدها، فیلم، نوارهای ویدئویی، نرم افزار، دیگر رسانه های الکترونیکی یا وب سایت ها. این گنجینه در هفده عنوان دسته بندی شده است.</search_description>
+      <url>http://agclass.nal.usda.gov/agt/agt.htm</url>
+      <search_url>http://agclass.nal.usda.gov/agt/mtw.exe?k=default&amp;p=A&amp;l=60&amp;s=2&amp;t=1&amp;n=100&amp;w={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>مریام وبستر آن لاین</search_title>
+      <search_description>یک فرهنگ لغت که بر پایه ویراست دهم وبستر (1993) که هر ساله به روز می شود. با بیش از 160000 مدخل. هر کلمه با تعریف، تلفظ، کاربرد، نقش دستوری و خلاصه ای از ریشه ی آن همراه است. شامل یک گنجینه است. با وارد کردن غلط املایی یک واژه ی پیشنهادی نمایش می دهد (شکل صحیح کلمه). سامانه جستجوی فرهنگ لغت، از وایلدکارت داخلی و روش جستجوی برش دست راست پشتیبانی می کند. همچنین شامل راهنمای غنی از تلفظ ها و فایلهای صوتی تلفظ برای بسیاری از کلمه ها می باشد.</search_description>
+      <url>http://www.merriam-webster.com/</url>
+      <search_url>http://www.merriam-webster.com/cgi-bin/dictionary?book=Dictionary&amp;va={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>فرهنگ های لغات وان لوک</search_title>
+      <search_description>OneLook is a meta-dictionary. Enter an English language 
+word or acronym, and OneLook will search its index of 5,292,362 words in 934 
+dictionaries indexed in general and special interest dictionaries for the 
+definition.</search_description>
+      <url>http://www.onelook.com/index.html</url>
+      <search_url>http://www.onelook.com/?ls=a&amp;w={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>دانشنامه آزاد ویکی پدیا</search_title>
+      <search_description>&quot;ویکی پدیا یک دانشنامه آزاد است که به صورت مشارکتی از سرتاسر جهان نوشته می شود. این سایت یک ویکی ویکی است، بدین معنی که هرکسی می تواند یک مدخل را ویرایش کند&quot; بدون اشتباه ویرایشی، کیفیت محتوای این سایت گوناگون و متفاوت است با این حال ارزش جستجو کردن در مطالب را دارد. قسمت انگلیسی ویکی پدیا حاوی صدها هزار مدخل می باشد. اسپانیایی، فرانسوی و اسپرانتو، بخشی از زبانهای پشتیبانی شده در این سایت هستند.</search_description>
+      <url>http://en.wikipedia.org/wiki/Main_Page</url>
+      <search_url>http://en.wikipedia.org/wiki/Special:Search?go=Go&amp;fulltext=Search&amp;search={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>Infoplease.com</search_title>
+      <search_description>این سایت حاوی اطلاعات سالنامه پلیز، یک پایگاه داده ی بیوگرافی، یک دیکشنری، اطلس، و مقالاتی از دانشنامه کلمبیا است. میتوانید در این منابع جستجو کرده و یا از محتویات سالنامه استفاده کنید. هر هفته مطالبی از قبیل اخبار، و لینکهای ثابت به مقالات سالنامه و دیگر منابع روی وب بر روی وب سایت قرار می گیرد.</search_description>
+      <url>http://www.infoplease.com</url>
+      <search_url>http://www.infoplease.com/search?fr=iptn&amp;in=all&amp;x=0&amp;y=0&amp;query={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>مطالعات مرتبط</context_title>
+    <context_abbrev>مطالعات مرتبط</context_abbrev>
+    <context_description>به وسیله ایجاد یک پیوند (لینک) کاری با پایگاههای داده ی دسترسی آزاد، می توانید به چکیده ها و/یا متن کامل مطالعات مرتبط با موضوع خود، دسترسی پیدا کنید.</context_description>
+    <search>
+      <search_title>جستجوی اگ اکان: تحقیق در اقتصاد کشاورزی</search_title>
+      <search_description>جستجوی AgEcon جهت توزیع الکترونیکی گزارشات مطالعات علمی در زمینه اقتصاد کشاورزی طراحی شده است.</search_description>
+      <url>http://agecon.lib.umn.edu/</url>
+      <search_url>http://agecon.lib.umn.edu/cgi-bin/view.pl?bool=AND&amp;fields=key&amp;detail=0&amp;keywords={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>CropSEARCH</search_title>
+      <search_description>حاوی فهرستی از صدها گونه گیاهی</search_description>
+      <url>http://www.hort.purdue.edu/newcrop/SearchEngine.html</url>
+      <search_url>http://index.cc.purdue.edu:8765/query.html?col=pumerge&amp;charset=iso-8859-1&amp;ht=0&amp;qp=%2Bsite%3Ahort.purdue.edu&amp;qs=&amp;qc=&amp;pw=100%25&amp;ws=0&amp;la=en&amp;qm=0&amp;st=1&amp;nh=10&amp;lk=1&amp;rf=0&amp;rq=0&amp;si=0&amp;puhead=header.html&amp;pufoot=footer.html&amp;qt={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>کتابخانه دیجیتالی عمومی (DLC)</search_title>
+      <search_description>DLC دروازه ای به سوی نوشتیجات بین المللی عمومی است. این پایگاه اینترنتی شامل یک آرشیو مقالات در حال آماده سازی از مقالاتی است که نویسندگان ارسال کرده اند، می باشد. بعلاوه شامل متن کامل کنفرانس ها، پایان نامه ها، مقالات در حال آماده سازی و پیش پرینت ها و گزارشها می باشد.</search_description>
+      <url>http://dlc.dlib.indiana.edu/</url>
+      <search_url>http://dlc.dlib.indiana.edu/perl/search?abstract%2Fagency%2Fauthors%2Fconfdates%2Fconference%2Fconfloc%2Fcountry%2Fdiscipline%2Feditors%2Fkeywords%2Flanguage%2Fresearch%2Fseries%2Fsubjecttext%2Fthesistype%2Ftitle%2Fyear_srchtype=ALL&amp;_action_search=Search&amp;abstract%2Fagency%2Fauthors%2Fconfdates%2Fconference%2Fconfloc%2Fcountry%2Fdiscipline%2Feditors%2Fkeywords%2Flanguage%2Fresearch%2Fseries%2Fsubjecttext%2Fthesistype%2Ftitle%2Fyear={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>فاس آن لاین (FAS)</search_title>
+      <search_description>سرویس کشاورزی خارجی (FAS) اداره کشاورزی ایالات متحده آمریکا (USDA) هرساله صدها سند منتشر می کند که حاوی نمودارها و آنالیزهای تولید، مصرف، گردش تجاری و فرصتهای بازاریابی برای بیش از صد محصول است. شامل گزارشات تجاری و اجناس، آمار و اطلاعات، اخبار، هدایت کالا، برنامه های صادرات و واردات کالا و غیره.</search_description>
+      <url>http://www.fas.usda.gov/fassearch.asp</url>
+      <search_url>http://www.fas.usda.gov/FASSearch_results_H.asp?SearchString={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>بانک اسناد PESTIS</search_title>
+      <search_description>سرویس اطلاعاتی افت کش (PESTIS)، یک پایگاه داده آن لاین در زمینه اصلاح استفاده افت کش ها و انجمن های کشاورزی می باشد که از طریق شبکه کامپیوتری EcoNet قابل دسترسی است. شامل بیش از 400 مورد خبری، هشدار، خبرنامه و صفحات آماری است.</search_description>
+      <url>http://www.panna.org/resources/pestis.html</url>
+      <search_url>http://www.panna.org/system/searchResults.html?p=1&amp;lang=en&amp;include=&amp;exclude=&amp;penalty=.05&amp;mode=&amp;searchScope=all&amp;q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>PlantFacts</search_title>
+      <search_description>پلنت فکتس حاوی پاسخ پرسشهایی از 46 دانشگاه و نهاد دولتی از سرتاسر آمریکا و کانادا در زمینه مسائل گیاهی می باشد. با بیش از 20000 صفحه آماری و بولتین (پژوهشنامه)، این سایت تبدیل به یک منبع اطلاعاتی جامع در زمینه مسائل گیاهی شده است. پلنت فکتس چندین مجموعه دیجیتالی از دانشگاه ایالت اهایو را در خود جمع کرده تا تبدیل به یک بانک اطلاعات بین المللی و مرکز آموزش رسانه ای شود.</search_description>
+      <url>http://plantfacts.osu.edu/</url>
+      <search_url>http://plantfacts.osu.edu/action.lasso?-Layout=input&amp;-Search=-nothing&amp;-Response=results_list2.lasso&amp;-AnyError=error.lasso&amp;searchitem={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>پایگاه داده ملی PLANTS</search_title>
+      <search_description>این سایت بر روی گیاهان آوندی و غیر آوندی کشور آمریکا و حوزه هایش متمرکز شده است. شامل سیاهه ها (چک لیست)، اطلاعات توزیع پذیری، اطلاعات محصولات کشاورزی، آمار گیاهان، اطلاعات رشد گیاهان، منابع و دیگر اطلاعات گیاهی می باشد.</search_description>
+      <url>http://plants.usda.gov/</url>
+      <search_url>http://www.nrcs.usda.gov/search.asp?site=NPDC&amp;ct=ALL&amp;qu={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>اسامی متداول برای بیماریهای گیاهان</search_title>
+      <search_description>این منبع یک نسخه الکترونیکی از کتاب &quot;اسامی متداول بیماریهای نباتی&quot; چاپ 1994 است. این مجموعه یک نسخه به روز شده و مرکب از لیست اسامی منتشر شده در اخبار آسیب شناسی گیاهی  را در اختیار می گذارد.</search_description>
+      <url>http://www.apsnet.org/online/common/</url>
+      <search_url>http://www.apsnet.org/online/common/query.asp</search_url>
+      <search_post>scope=/online/common/names/&amp;FreeText=on&amp;SearchString={$formKeywords}</search_post>
+    </search>
+    <search>
+      <search_title>Rice bibliography</search_title>
+      <search_description>Rice Bibliography در سال 1961 آغاز بکار کرد و در حال حاضر بزرگترین منبع حاوی اطلاعات علمی درباره برنج می باشد. تقریبا هرساله  8000  رفرنس جدید به آن اضافه می شود که این امر تمام موضوعات مرتبط با برنج را پوشش می دهد.</search_description>
+      <url>http://ricelib.irri.cgiar.org:81/search/w</url>
+      <search_url>http://ricelib.irri.cgiar.org:81/search/w?SEARCH={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>Vegetable MD online</search_title>
+      <search_description>این منبع به منظور دستیابی به بسیاری از صفحات آماری تهیه شده شده توسط سرویس های رسانه ای کومل ایجاد شده است. وجود تصاویر رنگی این صفحات آماری، استفاده ابزاری جهت تشخیص بیماریهای گیاهی را افزایش داده است. این صفحات آماری همچنین شامل روشهای کاشت، آبیاری، هرس کردن، آفت ها، داشت (نگهداری)، انتخاب زمین زراعی و دیگر موارد وابسته به گیاهان و کشت آنها می باشد.</search_description>
+      <url>http://vegetablemdonline.ppath.cornell.edu/Vegmd.asp</url>
+      <search_url>http://vegetablemdonline.ppath.cornell.edu/Vegmd.asp?target={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>VITIS-VEA</search_title>
+      <search_description>این منبع – خلاصه مقالات شراب سازی- یک پایگاه داده ناشران انگلیسی و یا آلمانی زبان در زمینه تهیه شراب می باشد. مواردی از قبیل تاریخچه شراب سازی، فیزیولوژی و زیست شیمی، علوم خاکی، ژنتیک و تهیه مشروبات، آسیب شناسی گیاهی، محافظت از مشروبات، تکنیک های زیر زمینی، جنبه های اقتصادی تهیه شراب و میکروبیولوژی شراب را پوشش می دهد. </search_description>
+      <url>http://vitis-vea.zadi.de/stichwortsuche_eng.htm</url>
+      <search_url>http://vitis-vea.zadi.de/VITISVEA_ENG/SDF?STICHWORT_O=includes&amp;FORM_F1=AUT1&amp;FORM_SO=Ascend&amp;STICHWORT={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>سیاست های دولتی</context_title>
+    <context_abbrev>سیاست های دولتی</context_abbrev>
+    <context_description>منابع مختلف دولتی را بررسی می کند</context_description>
+    <search>
+      <search_title>دستیابی به سرویسها و اطلاعات دولتی استرالیا</search_title>
+      <search_description>این سایت یک دستیابی جامع و متمرکز به سرویسها و اطلاعات دولتی استرالیا فراهم آورده است.
+&lt;a href=&quot;http://www.australia.gov.au&quot;>www.australia.gov.au&lt;/a>
+در حال حاضر حاوی بیش از 700 وب سایت دولتی استرالیا است و بیش از 5000000 صفحه فهرست شده دارد. و هم از اطلاعات متادیتا و متن کامل فهرست می گیرد.
+</search_description>
+      <url>http://www.fed.gov.au</url>
+      <search_url>http://govsearch.australia.gov.au/search/search.cgi?collection=gov&amp;form=au&amp;query=&amp;query_phrase=&amp;query_or=&amp;query_not=&amp;meta_f_sand=&amp;scope=&amp;fscope=512&amp;num_ranks=20&amp;chksummary=chksummary&amp;query_and={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>دولت کانادا</search_title>
+      <search_description>شما می توانید در همه بخش های دولتی، بخش های فدرال و دفاتر استانی، مرزی و شهری جستجو کنید. یک لینک بخش ها و ادارات (دیپارتمنتز اند ایجنسیز) وجود دارد و ایندکس 
+A
+تا 
+Z
+به شما یک کلید واژه جستجو برای برنامه ها و خدمات ارائه می دهد.
+پیشرفتی که اخیرا روی سایتهای دیپارتمنت انجام شده این است که در برگیرنده همه گفته ها و افشاء حقایق می باشد و صفحه ای نیز در مورد هزینه های مسافرت، مهمانی ها، قراردادها، ضمانت نامه ها و پاداش ها دارد.
+صفحه ابوت کانادا ( در مورد کانادا) شامل لینکهایی به بخش ها و دفاتر، ساختار دولت کانادا کمیته های تفحص و غیره می شود. به غیز از وب سایت دیپارتمنت، دولت کانادا پرتال هایی را ایجاد کرده است که اطلاعات بین فدرال و منابع استانی و سازمانهای غیر دولتی را جمع آوری و به یکدیگر متصل کرده است.</search_description>
+      <url>http://www.canada.gc.ca/main_e.html</url>
+      <search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple&amp;pg=q&amp;enc=iso88591&amp;site=main&amp;bridge=&amp;stt=&amp;lowercaseq=&amp;what=web&amp;user=searchintranet&amp;browser=N6E&amp;kl=XX&amp;op=a&amp;q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>Directgov: دیرکت گاو </search_title>
+      <search_description>دیرکت گاو سرویسی دولتی است که به مردم امکان دسترسی به جدیدترین و گسترده ترین دامنه ی سرویس اطلاعات عمومی را در مکانی روی شبکه (وب) و تلویزیون دیجیتال (دیجیتال تی وی) می دهد. دیرکت گاو از مشخصات طراحی شده و در نظر گرفته شده از طریق
+UK GovTalk
+استفاده می کند.</search_description>
+      <url>http://www.direct.gov.uk</url>
+      <search_url>http://www.direct.gov.uk/AdvancedSearch/SearchResults/fs/en?NP=1&amp;PO1=C&amp;PI1=W&amp;PF1=A&amp;PG=1&amp;RP=20&amp;SC=__dgov_site&amp;Z=1&amp;PT1={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>اینفو۴ لوکال.گاو.یوکی(انگلستان)</search_title>
+      <search_description>اطلاعات برای دولت محلی از دولت مرکزی. این سایت به مقامات محلی این امکان را می دهد تا بتوانند سریعتر و راحت تر به اطلاعات روی سایت های کلیه ی گروههاآژانس ها و قسمت های عمومی دولت مرکزی دست یابند که این بخش وسیعی از اطلاعات را در بکارگیری دولت الکترونیک در برمی گیرد.</search_description>
+      <url>http://www.info4local.gov.uk</url>
+      <search_url>http://www.info4local.gov.uk/?view=Search+results&amp;subjects=all&amp;departmentsIds=0&amp;informationTypesIds=all&amp;query={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>پرتال دولت نیوزلند</search_title>
+      <search_description>پرتال دولت نیوزلند وب سایتی است که امکان جستجو را مهیا می سازد و لینک به اطلاعات و خدمات آنلاین و آفلاین بیشتر آژانس های دولتی را فراهم می سازد. این سایت توسط کمیته خدمات ایالتی که یک گروه دولتی است مدیریت و حمایت می شود.</search_description>
+      <url>http://www.govt.nz</url>
+      <search_url>http://www.govt.nz/search?type=spider&amp;t=spider&amp;q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>اروپا</search_title>
+      <search_description>Current information on the member countries of the European Union, including statistical data, policies, news, official documents, legal texts, and other publications.</search_description>
+      <url>http://europa.eu.int/index_en.htm</url>
+      <search_url>http://europa.eu.int/geninfo/query/resultaction.jsp?page=1</search_url>
+      <search_post>Collection=EuropaFull&amp;ResultTemplate=/result_en.jsp&amp;ResultCount=25&amp;qtype=simple&amp;ResultMaxDocs=200&amp;DefaultLG=en&amp;QueryText={$formKeywords}</search_post>
+    </search>
+    <search>
+      <search_title>The Global Legal Information Network (GLIN)</search_title>
+      <search_description>The Global Legal Information Network (GLIN) is a database of laws, regulations, judicial decisions, and other complementary legal sources contributed by governmental agencies and international organizations. These GLIN members contribute the official full texts of published documents to the database in their original language. Each document is accompanied by a summary in English and subject terms selected from the multilingual index to GLIN.</search_description>
+      <url>http://www.glin.gov</url>
+      <search_url>http://www.glin.gov/search.do?refineQuery=&amp;offset=0&amp;refineQueryType=&amp;fromSearch=true&amp;queryType=ALL&amp;searchBtn=Search&amp;includeAllFields=on&amp;searchAll=on&amp;sumLanguage=any&amp;pubLanguage=any&amp;pubJurisdiction=any&amp;publicationJurisdictionExclude=false&amp;searchPublicationDate=true&amp;dateFromDay=01&amp;dateFromMonth=01&amp;dateFromYear=&amp;dateToDay=01&amp;dateToMonth=01&amp;dateToYear=&amp;subjTerm=&amp;subjTermConjunction%5B0%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B1%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B2%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B3%5D=AND&amp;subjTerm=&amp;searchOrder=default&amp;hitsPerPage=10&amp;showSummary=on&amp;queryString={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>جستجوهای کتاب</context_title>
+    <context_abbrev>جستجوهای کتاب</context_abbrev>
+    <context_description>منابع کتاب مرتبط</context_description>
+    <search>
+      <search_title>گوگل پرینت</search_title>
+      <search_description>شرکت گوگل در حال حاضر با کتابخانه های دانشگاههایی از قبیل میشیگان، هاروارد، استنفورد، آکسفورد و کتابخانه ی عمومی نیویورک به منظور دیجیتالیزه کردن کتب این کتابخانه ها و قابل دسترس نمودن آنها از طریق بخش بانک گوگل پرینت، همکاری می نماید. روی عنوان یک کتاب کلیک می کنید و میتوانید صفحاتی را که لغات مورد نظر شما در آن وجود دارد مشاهده کنید و اطلاعات بیشتری را در کتاب مورد نظر بیابید. نظرات دیگران را درباره ان ببینید، اطلاعات مربوطه را بیابید و درباره ناشر اطلاعاتی بگیرید، یا آن را بخرید و حتی کتابخانه ای را که آن را دارد بیابید.</search_description>
+      <url>http://print.google.com</url>
+      <search_url>http://print.google.com/print?q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>Online books Page</search_title>
+      <search_description>این سایت (آن لاین بوک پیج) توسط جان مارک اوکربلوم تنظیم شده در دانشگاه پنسیلوانیا تهیه شده است. و یک نقطه شروع مناسب برای جستجوی متن کامل کتب در اینترنت می باشد. بیش از 20000 پروژه به زبان انگلیسی در فرمتهای مختلف در سایتهای مختلف وجود دارد. مدخلها براساس نام نویسنده یا عنوان جستجو می شوند. یک ویژگی جالب دارد که امکان جستجو را بوسیله کتابخانه کنگره در دسته های فراخوانی شده میدهد. لیست های جدید بطور منظم به آن اضافه میشوند که از آدرس زیر قابل دسترسی است.
+&lt;a
+href=&quot;http://onlinebooks.library.upenn.edu/new.html&quot;>http://onlinebooks.library.upenn.edu/new.html&lt;/a>.
+</search_description>
+      <url>http://digital.library.upenn.edu/books/</url>
+      <search_url>http://onlinebooks.library.upenn.edu/webbin/book/search?tmode=words&amp;title={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>Books-On-Line</search_title>
+      <search_description>مجموعه ای با بیش از 32935 عنوان، اگرچه برخی از آنها فقط اقتباس است. براساس موضوع یا اسم نویسنده یا عنوان جستجو کنید. تمام آیتم های این سایت مجانی نیست.</search_description>
+      <url>http://www.books-on-line.com/</url>
+      <search_url>http://www.books-on-line.com/bol/KeyWordSearch.cfm?RowCount=50&amp;Searchquery={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>یونیورسال لایبرری (کتابخانه ی جهانی)</search_title>
+      <search_description>The Universal Library is considerably more involved, and more ambitious -- it has amassed a collection of 100,000 e-books (some of them from Project Gutenberg), and is aiming for 1 million e-books by the end of 2006.</search_description>
+      <url>http://tera-3.ul.cs.cmu.edu/</url>
+      <search_url>http://tera-3.ul.cs.cmu.edu/cgi-bin/DBscripts/advsearch_db.cgi?perPage=25&amp;listStart=0&amp;author1=&amp;subject1=Any&amp;year1=&amp;year2=&amp;language1=Any&amp;scentre=Any&amp;search=Search&amp;title1={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>E-STREAMS</search_title>
+      <search_description>بررسی های الترونیکی در زمینه علوم و فن آوری. این منابع شامل مهندسی، کشاورزی، پزشکی و علوم میشود. هر مطلب شامل بیش از 30 بررسی است که عناوین جدیدی را در مهندسی، کشاورزی، پزشکی و علوم پوشش میدهد. هر بررسی امضا دارد و شامل آدرس ایمیل فرد کارشناس است. بررسیها دارای TOC هستند، لیستی از توزیع کنندگان و اطلاعات </search_description>
+      <url>http://www.e-streams.com/</url>
+      <search_url>http://www.e-streams.com/c3/cgi-bin/search.pl</search_url>
+      <search_post>boolean=AND&amp;case=Insensitive&amp;terms={$formKeywords}</search_post>
+    </search>
+  </context>
+  <context>
+    <context_title>مدخل های مرتبط</context_title>
+    <context_abbrev>مدخل های مرتبط</context_abbrev>
+    <context_description>یک مدخل برای دیگر وب سایت ها پیشنهاد می دهد.</context_description>
+    <search>
+      <search_title>AgNIC</search_title>
+      <search_description>این یک منبع کیفی از اطلاعات کشاورزی روی اینترنت است که توسط کتابخانه ملی کشاورزی، دانشگاههای لند-گرنت و دیگر موسسات انتخاب شده است.</search_description>
+      <url>http://www.agnic.org/</url>
+      <search_url>http://www.agnic.org/advsearch/?submitted=1&amp;searchtype=AgResource&amp;keywords={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>مقالات اگری کولا
+AGRICOLA(NAL Web: 1982- )</search_title>
+      <search_description>اگری کولا در برگیرنده ی حیطه های، اجرایی، قوانین، و قانونمند کردن حیط های مربوط به کشاورزی و نظام های آن، زمینه های اقتصاد کشاورزی، تعلیم و آموزش، دامنه های کشاورزی و کار مشاوره، مهندسی کشاورزی، محصولات، علم حیوان شناسی، علم حشره شناسی، علم آبزیان، ماهیگیری، علم تغذیه، محصولات غذایی، جنگلبانی، جغرافی، هواشناسی، اقلیم شناسی، تاریخ، اقتصاد خانواده، بومی شناسی انسان، منسوجات و پوشش خانگی، تغذیه انسان، منابع طبیعی، ضد آفت ها، علم گیاه شناسی، آلاینده ها، علم جامدات، جامعه شناسی روستایی، پیشرفت روستایی، و انگل شناسی انسانی را در بر می گیرد. اگری کولا مقالات و دیگر انتشارات از قبیل مواد آموزشی سمعی و بصری، نقشه ها، کتابها، نرم افزار، کنفرانس ها، پایان نامه ها، گزارشات تحقیقی و اسناد دولتی را نمایه (ایندکس) می نماید.</search_description>
+      <url>http://agricola.nal.usda.gov/</url>
+      <search_url>http://agricola.nal.usda.gov/cgi-bin/Pwebrecon.cgi?BOOL1=all+of+these&amp;FLD1=Keyword+Anywhere+%28GKEY%29&amp;GRP1=AND+with+next+set&amp;SAB2=&amp;BOOL2=any+of+these&amp;FLD2=Subject+%28SKEY%29&amp;GRP2=AND+with+next+set&amp;SAB3=&amp;BOOL3=as+a+phrase&amp;FLD3=Title+%28TKEY%29&amp;GRP3=AND+with+next+set&amp;SAB4=&amp;BOOL4=as+a+phrase&amp;FLD4=Author+Name+%28NKEY%29&amp;PID=4294&amp;SEQ=20060511212523&amp;CNT=25&amp;HIST=1&amp;SAB1={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>اگری سرف- موتور جستجوی کشاورزان</search_title>
+      <search_description>از مزارع خانوادگی گرفته تا تجارت کشاورزی تقریبا 20000 سایت و بسته ی آموزشی توسط خبرگان علم کشاورزی در دسته هایی طبقه بندی، نمایه و از نظر سرعت دسترسی و اعتبار درجه بندی شده اند، و بر چسب پرچم کشور اصلی شان روی آن زده شده است و با استفاده از واژگان کلیدی قابل جستجو است. یادداشت ها از توضیحات خود سایت گرفته شده اند.</search_description>
+      <url>http://www.agrisurf.com/agrisurfscripts/agrisurf.asp?index=_25</url>
+      <search_url>http://www.agrisurf.com/?cx=009099332680230023402%3Asp1yugldxek&amp;cof=FORID%3A10&amp;q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>فارمز دات کام</search_title>
+      <search_description>در سال 1995 تاسیس شد، فارمز دات کام به عنوان ابزاری در پیشرفت 
+Agricultural Internet
+( اینترنت کشاورزی) است. هم اکنون نیز در سرتاسر آمریکای شمالی به عنوان منبعی برای 
+Agricultural Internet
+شناخته شده است، فارمز دات کام به خوبی توانسته تجارب کشاورزی را با قدرت عظیم اینترنت ترکیب کرده تا برای تولید کنندگان امکان دسترسی به اطلاعات، خدمات و بازارهایی که آنان نیاز دارند تا تصمیم گیری شفاف و قاطع با سود بالا بگیرند را فراهم آورد.</search_description>
+      <url>http://canada.eharvest.com/</url>
+      <search_url>http://www.agrisurf.com/agrisurfscripts/inc/farms/search.asp?index=_25&amp;rbtn=ALL&amp;ft=on&amp;SearchString={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>Scirus</search_title>
+      <search_description>Scirus
+یکی از کاملترین موتورهای جستجوی علمی- تخصصی بر روی اینترنت می باشد که از جدیدترین تکنولوژی موتور جستجو گرفته شده است،
+Scirus
+بیش از 150 میلیون صفحه وب علمی-تخصصی را جستجو می کند.</search_description>
+      <url>http://www.scirus.com/srsapp/</url>
+      <search_url>http://www.scirus.com/search_simple/?frm=simple&amp;dsmem=on&amp;dsweb=on&amp;wordtype_1=phrase&amp;query_1={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>مرکز جهانی اطلاعات کشاورزی	
+WAICENT</search_title>
+      <search_description>این سایت شامل مدیریت اطلاعات و پخش داده ها، جنسیت و پیشرفت مداوم، استانداردهای تغذیه، منابع ژنتیکی حیوانی، عمل های پست هاروست (فرا نتیجه ای)، تنوع خاکی-زیستی و سیستم های غذایی در مراکز شهری، می باشد.</search_description>
+      <url>http://www.fao.org/waicent/index_en.asp</url>
+      <search_url>http://www.fao.org/waicent/search/simple_s_result.asp?publication=1&amp;webpage=2&amp;photo=3&amp;press=5&amp;CGIAR=1&amp;QueryString={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>اینتیوت :علم، مهندسی و فناوری</search_title>
+      <search_description>اینتیوت :علم، مهندسی و فناوری سرویسی آزاد و آنلاین است که برای شما امکان دسترسی به بهترین منابع شبکه ای برای آموزش و تحقیق را فراهم می کند، و توسط متخصصین شبکه ارزیابی و انتخاب شده است. اینتیوت علوم فیزیکی، مهندسی، محاسبه، جغرافی،ریاضیات و علم محیط را تحت پوشش قرار می دهد. این پایگاه اطلاعاتی در حال حاضر 33349 مورد دارد.</search_description>
+      <url>http://www.intute.ac.uk/sciences/</url>
+      <search_url>http://www.intute.ac.uk/sciences/cgi-bin/search.pl?submit.x=0&amp;submit.y=0&amp;submit=Go&amp;limit=0&amp;subject=sciences&amp;term1={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>کشاورزی در قرن ۲۱</search_title>
+      <search_description>در برگیرنده ی اخبار و رویدادهای شماره های مجلات کشاورزی و منابع غذایی در سراسر جهان از قبیل انتشارات قابل دانلود و لینک هایی به پایگاه داده ها راهنمای موضوعی و دسترسی به بخش های مختلف گروه کشاورزی فاو می باشد که دارای موتور جستجو نیز است. </search_description>
+      <url>http://www.fao.org/ag/</url>
+      <search_url>http://www.fao.org/ag/search/agfind.asp?Find=Find&amp;SortBy=rank[d]&amp;Scope=/ag&amp;CiuserParam3=agfind.asp&amp;lang=en&amp;FMMod=any&amp;FSRest=&lt;&amp;FSRestval=any&amp;Action=Execute&amp;SearchString={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>پایگاههای داده</context_title>
+    <context_abbrev>پایگاههای داده</context_abbrev>
+    <context_description>دسترسی شما را به پایگاههای داده ی چکیده و/یا متن کامل با دسترسی باز، امکان پذیر می کند.</context_description>
+    <search>
+      <search_title>مجموعه اسناد فاو</search_title>
+      <search_description>مجموعه اسناد فاو جمع آوری کننده و منتشر کننده ی تمامی مدراک وابسته به فاو و انتشارات از قبیل انتشارات منتخب غیر وابسته به فاو بر روی اینترنت است. سه نوع جستجو امکان پذیر می باشد و و چندین قالب زبان نیز در دسترس است.</search_description>
+      <url>http://www.fao.org/documents/</url>
+      <search_url>http://www.fao.org/documents/advanced_s_result.asp?form_c=AND&amp;RecordsPerPage=50&amp;QueryString={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>پایگاه داده های امنیتی ملی کشاورزی (NASD)</search_title>
+      <search_description>پایگاه امنیت داده های  ملی کشاورزی (NASD) پایگاهی است اختصاص یافته برای افزایش امنیت بهداشت و جلوگیری از جراحت در کشاورزی که با عنوان و نام ایالت فهرست شده اند. منابع ویدیویی نیز نمایه شده اند و فهرستی از کنفرانس های در حال برگزاری- پوسترها و دیگر موارد را نیز شامل می شود. </search_description>
+      <url>http://www.cdc.gov/search.htm</url>
+      <search_url>http://www.cdc.gov/search.do?action=search&amp;x=0&amp;y=0&amp;queryText={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>پاسخ های الکترونیک (ای انسرز)</search_title>
+      <search_description>مجموعه ای با بیش از ۲۵۰۰۰۰ صفحه از متن کامل اسناد الکترونیکی از خدمات وسیع و پایگاههای تجربی کشاورزی از بیش از ۱۵ ایالت در ایالات متحده, می باشد که با کلمات کلیدی و محل جغرافیایی آن کشور قابل جستجو است. دسترسی سینگل استاپ به انتشارات مفید و قابل اطمینان به موضوعات کشاورزی, موضوعات خانوادگی, مفاهیم رایج,محیط,اقتصاد و سیاست های عمومی نیز امکان پذیر است.</search_description>
+      <url>http://e-answers.adec.edu/</url>
+      <search_url>http://e-answers.adec.edu/cgi-bin/htsearch?config=ea-all&amp;words={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>پایگاه داده های ملی گیاهی</search_title>
+      <search_description>از گروه خدمات حفاظت منابع طبیعی و کشاورزی ایالات متحده,« پایگاه داده پلنتز(PLANTS)تنها منبع اطلاعات استاندارد در مورد گیاهان است که بر روی گیاهان آوندی,خزه ها, داروی جگر, داروی شیپوری و گلسنگ از ایلات متحده و نواحی آن متمرکز شده است. این پایگاه دربرگیرنده ی نامها, چک لیستها, ابزارهای خودکار, اطلاعات شناختی, خلاصه ای از گونه ها, اطلاعات توزیعی, اطلاعات محصول دادن, علائم گیاهی, اطلاعات رشد گیاهی, اطلاعات  آموزشی در مورد گیاه, لینک های مربوط به گیاهان, رفرنس ها و دیگر اطلاعات گیاهی می باشد. یک بخش فاو به علامتی لینک داده شده است که دسترسی به اطلاعات بیشتری را امکان پذیر می سازد.</search_description>
+      <url>http://plants.usda.gov/</url>
+      <search_url>http://www.nrcs.usda.gov/search.asp?site=NPDC&amp;ct=ALL&amp;qu={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>فروم های آن لاین</context_title>
+    <context_abbrev>فروم های آن لاین</context_abbrev>
+    <context_description>فروم های آن لاین و دارای دسترسی آزادی را انتخاب کنید که می توانند محتوای مطالعات تحقیقی موجود روی سایت شما را غنی کنند.</context_description>
+    <search>
+      <search_title>تقویم کنفرانس ها, همایش ها و سمینارهای کشاورزی</search_title>
+      <search_description>این تقویم بر آن است که کلیه همایش ها و دیگر رویدادهای علمی مهم در زمینه ی کشاورزی را در سطح ملی و بین المللی فراهم کند. ما تنها زمانی در همایش های محلی شر شرکت می کنیم که بدانیم از نظر علمی در سطح خوبی قرار دارند. همایش هایی که خارج از معیارهای ما باشند به تقویم های مناسب محلی, منطقه ای یا سازمان خاص دیگری فرستاده می شوند. زمانی که این تقویم ها در دسترس  باشند برای ایجاد لینکهایی به آنها برنامه ریزی می کنیم . این لینک مجموعه ای از اطلاعات و لینکهای مرتبط به کنفرانس های کشاورزی را با تاکید بر آنهایی که از نظر علمی برجسته تر می باشند را فراهم می کند. </search_description>
+      <url>http://www.agnic.org/mtg/</url>
+      <search_url>http://www.agnic.org/events/index.html?submitted=1&amp;searchtype=keyword&amp;keywords={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>Liszt</search_title>
+      <search_description>لیست که با تاپیکا هاست می شود یک سرویس آزاد است که به شما اجازه می دهد فهرست ایمیل ها را پیدا کنید، مدیریت کنید و در گروههای بحث در علم شناختی شرکت کنید
+</search_description>
+      <url>http://lists.topica.com/dir/?cid=187</url>
+      <search_url>http://www.liszt.com/search/?search_type=cat&amp;query={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>مایند: ایندکس همایش ها</search_title>
+      <search_description>این سرویس را برای مشخص کردن و قرار دادن سازمان دهنده ها و حامیان در کنفرانس ها, کنگره ها, همایش ها و نشست ها از قبیل برگزاری کنفرانس های (در پیش رو و گذشته)استفاده کنید.</search_description>
+      <url>http://www.interdok.com/</url>
+      <search_url>http://www.google.com/search?q=site%3Ainterdok.com+mind+{$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>گوگل اسکولار</search_title>
+      <search_description>گوگل اسکولار امکان جستجو های خاص را د ر زمینه ادبیات پژوهشی شامل  مقالات کارشناسی شده ، پایان نامه ها، کتب،،پیش پرینت ها، چکیده ها و گزارش های فنی فراهم می سازد.محتوای این حیطه شامل تعدادی از ناشران و تدوین کنند گان است که گوگل توسط آنها نسازمان یافته است.برای مثال انجمن محاسبه ی ماشین ها، آی ای ای ای ,سرویس جایگزین کتابخانه جهانی با دسترسی آزاد  و ... .نتیایج مشخص شده ورژن های متفاوتی از شاخه ها، تحلیل گفته ها و مکان کتابخانه را (فقط کتاب های موجود) را نشان می دهد</search_description>
+      <url>http://scholar.google.com</url>
+      <search_url>http://scholar.google.com/scholar?ie=UTF-8&amp;oe=UTF-8&amp;hl=en&amp;q={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>مجموعه های داده</context_title>
+    <context_abbrev>مجموعه های داده</context_abbrev>
+    <context_description>دسترسی شما را به آمار مربوط به کشاورزی فراهم می نماید.</context_description>
+    <search>
+      <search_title>بریدز آف لایو استاک (پرورش حیوانات اهلی)</search_title>
+      <search_description>این وب سایت به کاربران این امکان را می دهد تا اطلاعاتی را در مورد حیوانات اهلی بر اساس منطقه جغرافیایی یا نام نژادشان جستجو کنند. این اطلاعات در مورد گاوها, اسب ها, خوک ها و گرازها, بزها و گوسفندان در دسترس می باشد و مانند واژگان موجود در یک دایرة المعارف سازماندهی شده است.</search_description>
+      <url>http://www.ansi.okstate.edu/breeds/</url>
+      <search_url>http://www.google.com/search?q=site%3Aansi.okstate.edu+breeds+</search_url>
+    </search>
+    <search>
+      <search_title>سیستم اقتصادی و آماری یو اس دی ای(USDA)</search_title>
+      <search_description>سیستم اقتصادی و آماری یو اس دی ای(USDA) در برگیرنده ی بیش از ۴۰۰ نوع گزارش و پایگاه اطلاعاتی از آژانس های اقتصادی گروه کشاورزی ایالات متحده می باشد. این داده هااز ایالات متحده و کشاورزی بین المللی و موضوعات مربوط به آن می باشد. بیشتر گزارشات فایل های متنی هستند که دربرگیرنده اطلاعاتی از نظر زمانی حساس می باشند. بیشتر مجموعه داده ها به صورت اسپرد شیت (صفحات پراکنده) هستند و داده های توالی زمانی که سالانه به روز می شوند را شامل می شوند.</search_description>
+      <url>http://usda.mannlib.cornell.edu/</url>
+      <search_url>http://usda.mannlib.cornell.edu/MannUsda/search.do?action=fullKeywordSearch&amp;titlesearch=titlesearch&amp;includeAMS=includeAMS&amp;simple_search_term={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>نمایش پیش پرداخت</context_title>
+    <context_abbrev>نمایش پیش پرداخت</context_abbrev>
+    <context_description>یک طرح &quot;نمایش پیش پرداخت&quot;، امکانی است برای آن دسته که به مقالات الکترونیکی مجله از طریق اشتراک مجله دسترسی مستقیم ندارند. این سرویس به مشتریان اجازه می دهد که بوسیله پرداخت وجه از طریق مکانیسم امن پرداختی RSC بتوانند به یک مقاله مستقیما دسترسی پیدا کنند. جزئیات پرداخت وجه فورا بررسی شده و مشتری قادر خواهد بود برای مدت 30 روز به مقاله مورد نظر دسترسی پیدا کند.</context_description>
+    <search>
+      <search_title>اینجنتا</search_title>
+      <search_description>اینجنتا دسترسی به متن کامل مقالات را محدود می سازد. اگرچه دسترسی به متن کامل هزینه بر می باشد، اما این سایت را می توان به عنوان نمایه به صورت رایگان استفاده کرد</search_description>
+      <url>http://www.ingenta.com/</url>
+      <search_url>http://www.ingenta.com/isis/searching/Search/ingenta?database=1&amp;title={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>ابرری</search_title>
+      <search_description>محققان مستقلی که دسترسی آزاد به پایگاه های اطلاعاتی ابرری را ندارند از طریق کتابخانه هایشان می توانند همین حالا یک حساب شخصی با حداقل 5 دلار باز کنند. ابرری دیسکاور علوم آکادمیک چند گانه را به طور منسجم و واحد درمی آورد و دسترسی به بیش از 20000 عنوان معتبر را که در برگیرنده متن کامل، صفحه موسیقی، گزارشات و دیگر اسناد معتبر ار بیش از 175 ناشر راهنما مانند مجله دانشگاه کمبریج، رندم هوس، آی ان سی و شرکت های مک گرو هیل را میسر می سازد.</search_description>
+      <url>http://www.ebrary.com/corp/content.htm</url>
+      <search_url>http://shop.ebrary.com/Top?layout=search&amp;frm=smp.x&amp;sch=%A0%A0%A0%A0%A0Search%A0%A0%A0%A0%A0&amp;p00={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>کوازتیا</search_title>
+      <search_description>کوازتیا دسترسی به بیش از 47000 کتاب، 375000 مجله، و مقالات روزنامه ای را فراهم می کند. هر صفحه را جستجو کنید همه کتابها و مقالات به طور کامل و تمام در دسترس می باشند-. میزان اشتراک از 19.05 در هر ماه تا 119.95 به طور سالانه متغیر می باشد.</search_description>
+      <url>http://www.questia.com</url>
+      <search_url>http://www.questia.com/SM.qst?act=search&amp;keywordsSearchType=1000&amp;mediaType=book&amp;mediaType=journal&amp;mediaType=magazine&amp;mediaType=newspaper&amp;mediaType=encyclopedia&amp;mediaType=startpage&amp;keywords={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>ویلی اینتر ساینس: سرویس پرداخت با هر بار مشاهده </search_title>
+      <search_description>ویلی اینتر ساینس: سرویس پرداخت با هر بار مشاهده ، دسترسی  ثابت و کامل به متن مجموعه ای وسیع از مقالات مجلات یا فصل های موجود در یک کتاب را که روی ویلی اینترساینس موجود می باشد بدون نیاز به اشتراک فراهم می کند. این سرویس به هر فرد اجازه می دهد تا دسترسی به مقالات مجزای مجله یا فصول کتاب را بطور مستقیم با استفاده از یک کارت اعتباری پیدا کند. دسترسی تا 24 ساعت بطور مداوم وجود دارد.</search_description>
+      <url>http://www3.interscience.wiley.com/aboutus/ppv-articleselect.html</url>
+      <search_url>http://www3.interscience.wiley.com/search/allsearch</search_url>
+      <search_post>allContentSearchForm=&amp;mode=quicksearch&amp;WISindexid1=WISall&amp;WISsearch1={$formKeywords}</search_post>
+    </search>
+  </context>
+  <context>
+    <context_title>گزارشات رسانه ای</context_title>
+    <context_abbrev>گزارشات رسانه ای</context_abbrev>
+    <context_description>جستجویی بر پایه موضوع مقاله یا دست نوشته آغاز می کند که کاربران را به مقالات جاری و بایگانی شده رایگان در زمینه مربوطه از روزنامه های معتبر سراسر دنیا متصل می نماید.</context_description>
+    <search>
+      <search_title>گوگل نیوز (اخبار گوگل)</search_title>
+      <search_description>گزارش های خبری را با استفاده از ماشین جستجوی معروف اخبار گوگل (گوگل نیوز) جستجو کنید</search_description>
+      <url>http://news.google.com/</url>
+      <search_url>http://news.google.com/news?hl=en&amp;q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>اگری کالچر۲۱ (کشاورزی در قرن ۲۱)</search_title>
+      <search_description>در برگیرنده ی اخبار و رویدادهای شماره های مجلات کشاورزی و منابع غذایی در سراسر جهان از قبیل انتشارات قابل دانلود و لینک هایی به پایگاه داده ها راهنمای موضوعی و دسترسی به بخش های مختلف گروه کشاورزی فاو می باشد که دارای موتور جستجو نیز است. </search_description>
+      <url>http://www.fao.org/ag/</url>
+      <search_url>http://www.fao.org/ag/search/agfind.asp?SortBy=rank%5Bd%5D&amp;Scope=%2Fag&amp;FSRestVal=any&amp;Action=Execute&amp;SearchString={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>پیپلز دیلی: روزمره مردم</search_title>
+      <search_description>پیپلز دیلی: روزمره مردم، چین (ژانویه 1999)</search_description>
+      <url>http://english.peopledaily.com.cn/</url>
+      <search_url>http://search.people.com.cn/was40/people/GB/english_index.jsp?type=1&amp;channel=&amp;Content=&amp;searchword={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>گلوب اند میل (جهان و پست)</search_title>
+      <search_description>گلوب اند میل,جهان و پست، تورنتو (تا هفت روز )</search_description>
+      <url>http://www.globeandmail.com/</url>
+      <search_url>http://www.globeandmail.com/servlet/HTMLTemplate/search?tf=tgam/search/tgam/SearchResults.html&amp;cf=tgam/search/tgam/SearchResults.cfg&amp;current_row=1&amp;start_row=1&amp;num_rows=10&amp;keywords={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>میل اند گاردین نیوزپیپر (پست و روزنامه گاردین)</search_title>
+      <search_description>میل اند گاردین نیوزپیپر (پست و روزنامه گاردین), جنوب آفریقا(۱۹۹۴)</search_description>
+      <url>http://www.mg.co.za/</url>
+      <search_url>http://www.mg.co.za/mg_search_results.aspx?PrintEdition=PrintEdition&amp;DailyNews=DailyNews&amp;SearchSection=&amp;StartDay=&amp;StartMonth=&amp;StartYear=&amp;EndDay=&amp;EndMonth=&amp;EndYear=&amp;keywords={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>نشنال پابلیک ریدیو (رادیو عمومی ملی)</search_title>
+      <search_description>نشنال پابلیک ریدیو (رادیو عمومی ملی), ایالات متحده (نامحدود)</search_description>
+      <url>http://www.npr.org/archives/</url>
+      <search_url>http://www.npr.org/search.php?text={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>نیویورک تایمز</search_title>
+      <search_description>نیویورک تایمز, نیویورک (تا هفت روز)</search_description>
+      <url>http://www.nytimes.com/</url>
+      <search_url>http://query.nytimes.com/search/query?date=past30days&amp;submit.x=11&amp;submit.y=12&amp;query={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>جپن تایمز آنلاین </search_title>
+      <search_description>جپن تایمز آنلاین, ژاپن (ژانویه ۱۹۹۹)</search_description>
+      <url>http://www.japantimes.co.jp/</url>
+      <search_url>http://www.google.co.jp/custom?domains=japantimes.co.jp&amp;client=pub-4223870936880387&amp;forid=1&amp;ie=Shift_JIS&amp;oe=Shift_JIS&amp;term1=&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3AFFFFFF%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A60%3BLW%3A200%3BL%3Ahttp%3A%2F%2Fwww.japantimes.co.jp%2Fimages%2Fheader_title.gif%3BS%3Ahttp%3A%2F%2Fwww.japantimes.co.jp%2F%3BFORID%3A1%3B&amp;hl=ja&amp;advancesearch=&amp;q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>مسکو تایمز</search_title>
+      <search_description>مسکو تایمز, روسیه (۱۹۹۴)</search_description>
+      <url>http://www.moscowtimes.ru/doc/Search.html</url>
+      <search_url>http://www.moscowtimes.ru/cgi-bin/search?config=&amp;exclude=&amp;method=and&amp;format=long&amp;sort=score&amp;matchesperpage=10&amp;words={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>واشنگتن پست</search_title>
+      <search_description>واشنگتن پست, واشنگتن, DC (تا دو هفته)</search_description>
+      <url>http://www.washingtonpost.com/</url>
+      <search_url>http://www.washingtonpost.com/cgi-bin/search99.pl?searchsection=news&amp;searchdatabase=news&amp;x=11&amp;y=8&amp;searchtext={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>نیوز دیرکتری (کتاب راهنمای خبری)</search_title>
+      <search_description>نیوز دیرکتری (راهنمای خبری) یک راهنمای جامع و قابل جستجو برای رسانه های جهانی آنلاین و انگلیسی زبان است.در حال حاضر بیش از 8000 روزنامه، مجله و بیش از 1000 گوینده تلویزیونی آمریکایی در آن فهرست شده اند</search_description>
+      <url>http://www.newsdirectory.com/</url>
+      <search_url>http://www.newsdirectory.com/hbSearch.php</search_url>
+      <search_post>s={$formKeywords}&amp; submit=Go</search_post>
+    </search>
+  </context>
+  <context>
+    <context_title>جستجوی وب</context_title>
+    <context_abbrev>جستجوی وب</context_abbrev>
+    <context_description>کلمات مورد جستجو از طریق موتورهای جستجوی مختلف را وارد کنید.</context_description>
+    <search>
+      <search_title>گوگل</search_title>
+      <search_description>با استفاده از ماشین های معرف چاوشگر گوگل جستجو کنید</search_description>
+      <url>http://www.google.com/</url>
+      <search_url>http://www.google.com/search?q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>گوگل اسکولار</search_title>
+      <search_description>گوگل اسکولار امکان جستجو های خاص را د ر زمینه ادبیات پژوهشی شامل  مقالات کارشناسی شده ، پایان نامه ها، کتب،،پیش پرینت ها، چکیده ها و گزارش های فنی فراهم می سازد.محتوای این حیطه شامل تعدادی از ناشران و تدوین کنند گان است که گوگل توسط آنها نسازمان یافته  است.برای مثال انجمن محاسبه ی ماشین ها، آی ای ای ای,سرویس جایگزین کتابخانه جهانی با دسترسی آزاد  و ... .نتیایج مشخص شده ورژن های متفاوتی از شاخه ها، تحلیل گفته ها و مکان کتابخانه را (فقط کتاب های موجود) را نشان می دهد.</search_description>
+      <url>http://scholar.google.com</url>
+      <search_url>http://scholar.google.com/scholar?ie=UTF-8&amp;oe=UTF-8&amp;hl=en&amp;q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>کلاستی کلاسترینگ اینجین (موتور دسته بندی)</search_title>
+      <search_description>این ابزار جستجو از ویویزمو نتایج تصادفی را از بین جستجوهای انتخاب شده ارائه می دهد. با متا سرچ کل شبکه را جستجو کنید یا با استفاده از عناوین، اخبار، شایعات، تصاویر یا تولیدات را از بیزریت یا ای بوی جستجو کنید.</search_description>
+      <url>http://clusty.com/about</url>
+      <search_url>http://clusty.com/search?query={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>ویویزمو</search_title>
+      <search_description>تکنولوژی دسته بندی جایزه بر ویویزمو که توسط دانشمندان واحد جستجوی کارنج میلون توسعه یافته در حال باز کردن ارزش اطلاعات ذخیره شده در 500 شرکت، وب سایتهای عالی، ناشران معتبر و آژانس های دولتی است تا با دسته بندی کردن نتایج جستجو ی معنی داری ایجاد کند , تا به پیشرفتی مهم در زمینه شکافتن اطلاعات و دستیابی به اطلاعات مربوطه برسد.</search_description>
+      <url>http://vivisimo.com</url>
+      <search_url>http://vivisimo.com/search?tb=homepage&amp;v%3Asources=Web&amp;query={$formKeywords}</search_url>
+    </search>
+  </context>
+</version>

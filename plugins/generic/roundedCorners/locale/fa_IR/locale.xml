@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  --><locale full_name="Farsi" name="fa_IR" >
+  <message key="plugins.generic.roundedcorners.displayName" >گوشه های گرد</message>
+  <message key="plugins.generic.roundedcorners.description" >این پلاگین زمینه ای بر روی هر بلوک موجود در نوار حاشیه می اندازد و گوشه های آنرا گرد می سازد. برای تغییر رنگهای بکار رفته در آن می توان فایل استایل شیت این پلاگین را ویرایش کرد.</message>
+</locale>

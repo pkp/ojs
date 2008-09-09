@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000021.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Reviewer 
+  *
+  * $Id$
+  --><topic title="بازنگر" toc="journal/toc/000003" key="journal.roles.reviewer" locale="fa_IR" id="journal/topic/000021" >
+  <section><![CDATA[<p>
+بازنگر توسط سردبیر بخش برای بازنگری مقالات انتخاب میشودبازنگران همچنین ممکن است یک سری خلاصه مقالات را برای نمایش در وب سایت مجله تهیه کندومیتواند ضمیمه هایی را برای کمک به سردبیر و مولف  به مقاله اضافه کند بازنگران توسط سردبیر مجله رتبه بندی میشوند که این رتبه بندی بر اساس سیاست گزاریهای مجله میباشد  
+</p><p>
+اطلاعات بیشتر در این ضمینه را در اینجا میتوانید دریافت کنید
+{help_topic key="editorial.reviewersRole" text="here"}.</p>]]></section>
+</topic>

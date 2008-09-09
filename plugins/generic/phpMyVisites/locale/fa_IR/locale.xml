@@ -1,0 +1,24 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * phpMyVisites plugin localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  --><locale full_name="Farsi" name="fa_IR" >
+<!-- phpMyVisites -->  <message key="plugins.generic.phpmv.displayName" >پلاگین phpMyVisites</message>
+  <message key="plugins.generic.phpmv.description" ><![CDATA[ترکیب او جی اس با phpMyVisites - یک برنامه آزاد متن برای آنالیز ترافیک وب سایت. برای این کار لازم است که phpMyVisites را بر روی سایت خود راه اندازی کرده باشید. برای اطلاعات بیشتر لطفا به <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">phpMyVisites</a> مراجعه کنید.]]></message>
+<!--اداره تنظیمات phpMyVisites-->  <message key="plugins.generic.phpmv.manager.settings" >تنظیمات</message>
+  <message key="plugins.generic.phpmv.manager.phpmvSettings" >تنظیمات phpMyVisites</message>
+  <message key="plugins.generic.phpmv.manager.settings.description" ><![CDATA[<p>با فعال ساختن این پلاگین میتوان میزان استفاده از سایت و ترافیک آنرا جمع آوری و آنالیز کرد. برای این کار باید phpMyVisites قبلا نصب شده باشد. رای اطلاعات بیشتر لطفا به <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">phpMyVisites</a> مراجعه کنید.</p>]]></message>
+  <message key="plugins.generic.phpmv.manager.settings.phpmvUrl" >phpMyVisites Url</message>
+  <message key="plugins.generic.phpmv.manager.settings.phpmvUrlInstructions" >آدرس کامل محل نصب  phpMyVisites  مثلا (i.e. http://myserver.net/phpmv).</message>
+  <message key="plugins.generic.phpmv.manager.settings.phpmvUrlRequired" >لطفا یک آدرس صحیح و کامل (شامل http) وارد کنید. </message>
+  <message key="plugins.generic.phpmv.manager.settings.phpmvSiteId" >شماره پروفایل سایت</message>
+  <message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdInstructions" >در داخل phpMyVisites بر روی اداره -> تغییر سایت کلیک کنید. شماره پروفایل سایت را در کنار نام پروفایل سایت خود می بینید.</message>
+  <message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdRequired" >لطفا شماره پروفایل سایت را وارد کنید.</message>
+</locale>

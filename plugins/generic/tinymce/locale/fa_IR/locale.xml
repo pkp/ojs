@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  --><locale full_name="Farsi" name="fa_IR" >
+  <message key="plugins.generic.tinymce.name" >پلاگین TinyMCE</message>
+  <message key="plugins.generic.tinymce.description" ><![CDATA[با این پلاگین میتوان متون موجود در جعبه های متن را بصورتی که میخواهید ویرایش کنید. برای این کار از ویرایشگر محتوی <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> استفاده میشود.]]></message>
+  <message key="plugins.generic.tinymce.descriptionDisabled" ><![CDATA[با این پلاگین میتوان محتوی جعبه متن ها را بصورت پیشرفته ویرایش کرد. هنگام ویرایش متن به همان صورتی که میخواهید در خواهد آمد. رای این کار از ویرایشگر محتوی <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> استفاده میشود. <strong>به نظر میرسد TinyMCE بر روی سایت شما نصب نشده است. لطفا آنرا در فولدر {$tinyMcePath} نصب کنید.</strong>]]></message>
+  <message key="plugins.generic.tinymce.settings" >تنظیمات</message>
+</locale>

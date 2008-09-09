@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000016.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submissions - In Review 
+  *
+  * $Id$
+  --><topic title="در دست کارشناسی" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.inReview" locale="fa_IR" id="editorial/topic/000016" >
+  <section><![CDATA[<p>در این مرحله دبیر با بررسی ساب میشن درباره رد یا پذیرش آن تصمیم گیری می کند. مدت زمان فرایند کارشناسی به سیاستهای مجله در این زمینه بستگی دارد (مانند این که آیا کارشناسان همه قسمتهای یک مجله در بررسی ساب میشن نقش دارند؟ چند کارشناس یک ساب میشن را بررسی می کنند). وقتی یک دبیر یا یا سردبیر بر عنوان یک ساب میشن در قسمت در دست کارشناسی کلیک می کند به صفحه کارشناسی آن ساب میشن می رود. اگر یک دبیر ساب میشن را پذیرش نماید به قسمت در دست ویراستاری منتقل می شود و اگر آن را رد کند به آرشیو فرستاده خواهد شد.</p>]]></section>
+</topic>

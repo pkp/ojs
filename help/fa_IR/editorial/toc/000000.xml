@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process. 
+  *
+  * $Id$
+  --><toc title="روند دبیری" parent_topic="editorial/topic/000000" locale="fa_IR" id="editorial/toc/000000" >
+  <topic title="نقش سردبیر" id="editorial/topic/000001" />
+  <topic title="نقش دبیر" id="editorial/topic/000004" />
+  <topic title="نقش کارشناس" id="editorial/topic/000008" />
+  <topic title="نقش نویسنده" id="editorial/topic/000009" />
+  <topic title="نقش ویراستار" id="editorial/topic/000012" />
+  <topic title="نقش صفحه آرا" id="editorial/topic/000013" />
+  <topic title="نقش چک کننده نهایی" id="editorial/topic/000014" />
+  <breadcrumb title="روند دبیری" url="editorial/topic/000000" />
+</toc>

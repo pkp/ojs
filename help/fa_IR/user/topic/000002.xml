@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - About
+  *
+  * $Id$
+  --><topic title="درباره ما" toc="user/toc/000000" key="user.about" locale="fa_IR" id="user/topic/000002" >
+  <section><![CDATA[<p>
+در صفحه درباره ما مجله راهکارها . سیاست کلی و سایر اطلاعات مهم درباره خود رابا هدف شفاف سازی مسیر کاری مجله به کاربران ارایه می کند . در اینجا افرادی که قصد همکاری با مجله را دارند به خوبی می توانند با سبک کاری آن آشنا شده و یاد بگیرند که چگونه باید با مجله تعامل داشته باشند .
+</p>]]></section>
+</topic>

@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  --><locale full_name="Farsi" name="fa_IR" >
+  <message key="plugins.block.user.displayName" >بلوک کاربر</message>
+  <message key="plugins.block.user.description" >این پلاگین ابزاری برای اداره حساب کاربری در نوار حاشیه فراهم میکند -مانند لینک ورود - خروج - کارنامه و غیره).</message>
+  <message key="plugins.block.user.loggedInAs" >شما وارد شده اید به عنوان ...</message>
+  <message key="plugins.block.user.myJournals" >مجلات من</message>
+  <message key="plugins.block.user.myProfile" >کارنامه من</message>
+  <message key="plugins.block.user.logout" >خروج</message>
+  <message key="plugins.block.user.signOutAsUser" >خروج به عنوان</message>
+  <message key="plugins.block.user.rememberMe" >مرا به خاطر بسپار</message>
+</locale>

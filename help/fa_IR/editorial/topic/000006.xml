@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000006.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Review 
+  *
+  * $Id$
+  --><topic title="کارشناسی" toc="editorial/toc/000004" subtoc="editorial/toc/000006" key="editorial.sectionEditorsRole.review" locale="fa_IR" id="editorial/topic/000006" >
+  <section><![CDATA[<p>در صفحه کارشناسی مقاله لیست همه مواردی که دبیر برای انجام و تکمیل کارشناسی باید انجام دهد، وجود دارد. دبیر یک نسخه کارشناسی از مقاله آماده می کند، مقاله را به یک یا چند کارشناس ارجاع می دهد و تصمیم دبیر را وارد می نماید. بسته به تصمیم دبیر، مقاله از نوبت کارشناسی به نوبت ویراستاری یا آرشیو منتقل می شود و یا برای کارشناسی مجدد دوباره ساب میت می گردد.</p><p>برای اطلاعات بیشتر در مورد تهیه نسخه کارشناسی به این آدرس مراجعه نمایید:  {help_topic key="editorial.sectionEditorsRole.review.reviewVersion" text="Review Version"}.</p><p>برای اطلاعات بیشتر در مورد روند کارشناسی به این آدرس مراجعه نمایید:  {help_topic key="editorial.sectionEditorsRole.review.peerReview" text="Peer Review"}.</p><p>برای اطلاعات بیشتر در مورد تصمیم گیری دبیر به این آدرس مراجعه نمایید:  {help_topic key="editorial.sectionEditorsRole.review.editorDecision" text="Editor Decision"}.</p>]]></section>
+</topic>

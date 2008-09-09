@@ -1,0 +1,622 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE version SYSTEM "../../lib/pkp/dtd/rtVersion.dtd">
+<!--
+  * Social_Sciences.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reading Tools version: Social Sciences (en_US)
+  *
+  * $Id$
+  --><version locale="en_US" id="Social_Sciences" >
+  <version_title>علوم اجتماعی</version_title>
+  <version_description>ابزار خواندن می تواند برای خوانندگان این مطالعه در زمینه منابع موجود راهنمایی وسیعی ارائه دهد که این راهنمایی می تواند تفسیر، قرار گرفتن و ارزیابی کردن در زمینه آن مطالعه را فراهم آورد.</version_description>
+  <context>
+    <context_title>کار نویسندگان</context_title>
+    <context_abbrev>کارهای دیگر</context_abbrev>
+    <context_description>کارهای دیگر نویسنده (گان) مقاله را توسط موتورهای جستجوی OAI تشخیص می دهد.</context_description>
+    <author_terms/>
+    <search>
+      <search_title>گوگل اسکولار</search_title>
+      <search_description> گوگل اسکولار جستجوهای مشخصی در نوشتیجات علمی شامل دست نوشته های کارشناسی شده، پایان نامه ها، کتب، پیش پرینت ها، چکیده ها و گزارشات فنی، انجام می دهد. محتوای آن شامل طیف وسیعی از ناشران و مولفین است که گوگل با آنها رابطه دارد، برای مثال انجمن وسایل محاسباتی، IEEE، سرویس مشخص کننده آزاد کتابخانه WorldCat از شرکت OCLC و غیره. صفحات نتایج شامل دسته های مختلف، آنالیزهای رسمی، و موقعیت های کتابخانه ای (فقط کتب فعلی) خواهد بود.</search_description>
+      <url>http://scholar.google.com</url>
+      <search_url>http://scholar.google.com/scholar?ie=UTF-8&amp;oe=UTF-8&amp;hl=eng&amp;as_sauthors={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>OAIster (آرشیو باز پایگاههای داده ی تحقیقاتی ابتکاری ) </search_title>
+      <search_description>OAIster پروژه ی بخش خدمات تولید کتابخانه دیجیتال دانشگاه میشیگان می باشد که جستجو در طیف وسیعی از منابع و موسسات را فراهم می نماید. به این صورت که این موسسات اطلاعات منابع دیجیتالی خود را در اختیار قرار می دهند و اعضای پروژه آنها را در سرویس OAIster جمع آوری می کنند.</search_description>
+      <url>http://oaister.umdl.umich.edu/</url>
+      <search_url>http://oaister.umdl.umich.edu/cgi/b/bib/bib-idx?type=boolean&amp;size=10&amp;c=oaister&amp;q1=&amp;rgn1=entire+record&amp;op2=and&amp;q2=&amp;rgn2=entire+record&amp;op3=And&amp;q3=&amp;rgn3=title&amp;op4=And&amp;rgn4=author&amp;op5=And&amp;q5=&amp;rgn5=subject&amp;op6=And&amp;rgn6=norm&amp;q6=all+types&amp;sort=author%2Fcreator&amp;submit2=search&amp;q4={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>پابلیک نالج پراجکت اپن آرشیو هاروستر)پروژه آگاهی عمومی از آرشیو باز هاروستر</search_title>
+      <search_description>آرشیو کامل و باز
+PKP
+یک سیستم نمایه سازی آزاد از متا دیتا ها می باشد که با پروژه ی آگاهی عمومی از طریق کوشش های انجام شده توسط فدرال گسترش یافته تا دسترسی به جستجو را وسیع تر و بهتر سازد. 
+منابع اطلاعاتی 
+PKP OAI
+به شما این امکان را می دهد تا یک نمایه ی قابل جستجو از متا دیتا  ها را از آرشیو های باز و کامل اولیه مانندسایت های مورد استفاده در سیستم مجلات باز یا سیستم های کنفرانس باز ایجاد کنید.
+</search_description>
+      <url>http://pkp.sfu.ca/harvester/</url>
+      <search_url>http://pkp.sfu.ca/harvester/search.php?limit=author&amp;query={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>یافتن مقالات</search_title>
+      <search_description>قادر است تا در زمینه هایی از قبیل تجارت . بهداشت . سرگرمی و ورزش مطالبی از قبیل مقالات . خلاصه مقالات و کتب را از بیش از 300 مجله و روزنامه جستجوی کند .</search_description>
+      <url>http://www.findarticles.com/PI/index.jhtml</url>
+      <search_url>http://www.findarticles.com/cf_0/PI/search.jhtml?magR=all+magazines&amp;key={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>H-Net Reviews</search_title>
+      <search_description>این سایت که درزمینه علوم انسانی و اجتماعی فعال است منبعی برای نقدهای دانشگاهی آنلاین به شمار می رود . نقد های کتاب و مقالات در آن از طریق شبکه مباحثه آنلاین آن به اطلاع اعضا میرسد . با این کار می توان مقاله ای را در اختیار یک عده اعضای سایت قرار داد و آن را با سرعتی بی نظیر نقد کرد .همچنین با درگیر کردن اعضا در نقد مطالب فضایی پویا و پر انرژی را برای آنان فراهم می آورد . این سایت یکی از سایت های پیشگام در زمینه نقد مطالب دانشگاهی می باشد.</search_description>
+      <url>http://www2.h-net.msu.edu/reviews/</url>
+      <search_url>http://www2.h-net.msu.edu/reviews/search.cgi?maxlines=25&amp;maxfiles=25&amp;all=all&amp;query={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>اینتیوت : علوم اجتماعی</search_title>
+      <search_description>این یک سرویس آنلاین رایگان است که شما را به طیفی از بهترین منابع برای تحصیلات و تحقیقات مرتبط می نماید . مطالب موجود در این سرویس از قبیل علوم پزشکی ٫ مهندسی ٫ کامپیوتر ٫ جغرافیا ٫ ریاضیات و علوم زیست محیطی می باشند و در حال حاضر این مجموعه حاوی ۳۳۳۴۹ آرشیو بایگانی شده می باشد .</search_description>
+      <url>http://www.intute.ac.uk/socialsciences//</url>
+      <search_url>http://www.intute.ac.uk/socialsciences/cgi-bin/search.pl?submit.x=0&amp;submit.y=0&amp;submit=Go&amp;limit=0&amp;subject=socialsciences&amp;term1={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>SocioSite</search_title>
+      <search_description>این وب سایت درگاهی برای ارتباط با مطالب جدید در زمینه علوم اجتماعی در اینترنت است . یکی از اهداف اصلی ایجاد آن داشتن فهرستی جامع از منابع مرتبط با علوم اجتماعی در اینترنت بوده است .</search_description>
+      <url>http://www.pscw.uva.nl/sociosite/</url>
+      <search_url>http://www.google.com/u/sociosite?sa=sociosite&amp;domains=www2.fmg.uva.nl&amp;sitesearch=www2.fmg.uva.nl&amp;hq=inurl:www2.fmg.uva.nl/sociosite&amp;q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>آوای شاتل</search_title>
+      <search_description>ای سایت با تکیه بر منابع نظری و عملی موجود از قبیل مجلات و گروه های خبری آنلاین به بررسی ادبیات آمریکا می پردازد .</search_description>
+      <url>http://vos.ucsb.edu/</url>
+      <search_url>http://vos.ucsb.edu/search-results.asp?Submit=Go&amp;search={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>جستجوی عبارات</context_title>
+    <context_abbrev>جستجوی عبارات</context_abbrev>
+    <context_description>در این سرویس شما روی هر کلمه ای که دوبار کلیک کنید کادری با عنوان ( تعریف عبارت ) در کنار آن ظاهر می شود و توضیحاتی درباره آن عبارت به شما داده می شود . شما همچنین می توانید کلمه مورد نظرتان را در این کارت تایپ یا پیست کنید سپس می توانید از کلید جستجو برای یافتن تعریف آن عبارت استفاده کنید .در این سیستم مراجع مورد استفاده بر اساس فراوانی و میزان رایگان بودن در ارجحیت قرار داده شده اند .</context_description>
+    <define_terms/>
+    <search>
+      <search_title>گوگل</search_title>
+      <search_description>در اینجا می توانید با موتور جستجوی گوگل به دنبال تعاریف عبارات بگردید .</search_description>
+      <url>http://www.google.com/</url>
+      <search_url>http://www.google.com/search?hl=en&amp;q=define%3A{$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>دیکشنری آنلاین علوم اجتماعی</search_title>
+      <search_description>این دیکشنری سرشار از عبارات تخصصی علوم اجتماعی است و در آن امکان جستجوی عبارات و کلمات وجود دارد .</search_description>
+      <url>http://bitbucket.icaap.org/</url>
+      <search_url>http://bitbucket.icaap.org/dict.pl?fuzzy={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>دیکشنری وانلوک</search_title>
+      <search_description> دیکشنری وانلوک یک دیکشنری حاوی اطلاعات فرعی است . با وارد کردن یک کلمه انگلیسی در آن وانلوک فهرست 5292362 کلمه ای خود را که از 934 دیکشنری فهرست برداری شده است به دنبال تعاریف و انواع اطلاعات دیگر درباره آن جستجو می کند .</search_description>
+      <url>http://www.onelook.com/index.html</url>
+      <search_url>http://www.onelook.com/?ls=a&amp;w={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>دیکشنری آنلاین مریام - وبستر</search_title>
+      <search_description>این دیکشنری آنلاین بر پایه جلد دهم دیکشنری وبستر چاپ 1993 کار می کند و هر سال به روز رسانی می شود . در آن بیش از 160000 مدخل وجود دارد . همراه با هر کلمه تعریف . تلفظ . کاربرد . نقش دستوری و توضیحی مختصر درباره ریشه آن ذکرشده است . اگر کلمه ای را در این سیستم اشتباه تایپ کنید املای درست آن به شما پیشنهاد می شود . سیستم جستجوی این دیکشنری بسبار پیشرفته است . در این دیکشنری راهنمای بسیار غنی درباره تلفظ و همچنین یکسری فایل های صوتی مربوط به تلفظ کلمات وجود دارد .</search_description>
+      <url>http://www.merriam-webster.com/</url>
+      <search_url>http://www.merriam-webster.com/cgi-bin/dictionary?book=Dictionary&amp;va={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>ویکی پدیا : دایره المعارف رایگان</search_title>
+      <search_description>ویکی پدیا یک دایره المعارف رایگان است که با همکاری تمامی کاربران آن از سراسر جهان نوشته می شود . در این سایت هر کاربری می تواند بدون نیاز به مجوزی خاص هر مطلبی را ویرایش کند لذا مطالب موجود در آن کیفیت منتوعی دارد با این حال این سایت ارزش مشاهده را دارد . نسخه انگلیسی آن دارای صدها هزار مدخل است همچنین نسخه های اسپانیایی . فرانسوی . اسپرانتو و چند زبان دیگر از آن نیز وجود دارد .</search_description>
+      <url>http://en.wikipedia.org/wiki/Main_Page</url>
+      <search_url>http://en.wikipedia.org/wiki/Special:Search?go=Go&amp;fulltext=Search&amp;search={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>Infoplease.com</search_title>
+      <search_description>این سایت طراحی شده توسط موسسه آلاماناک می باشد و دارای یک بانک اطلاعاتی از بیوگرافی ها . یک دیکشنری . یک اطلس گیتا شناسی و مقالاتی از دایره المعارف کلمبیا می باشد .شما می توانید این منابع را به صورت تک تک یا گروهی بررسی کنید . لینک هایی به مطالب مختلف در سایت های دیگر نیز در آن وجود دارد .</search_description>
+      <url>http://www.infoplease.com</url>
+      <search_url>http://www.infoplease.com/search?fr=iptn&amp;in=all&amp;x=0&amp;y=0&amp;query={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>پژوهش های مرتبط</context_title>
+    <context_abbrev>پژوهش های مرتبط</context_abbrev>
+    <context_description>در اینجا می توانید با وارد کردن موضوع پژوهش خود سایر پژوهش های مرتبط با آنرا از بانک های اطلاعاتی مختلف بیابید .</context_description>
+    <search>
+      <search_title>CIAO (وب سایت اطلاع رسانی همایش های بین المللی دانشگاه کلمبیا)</search_title>
+      <search_description>این وب سایت در واقع میان کتابخانه های دانشگاه کلمبیا و انتشارات دانشگاه کلمبیا ایجاد همکاری می کند و در این راه از پشتیبانی بنیاد اندروملون بهره می برد .همچنین مجموعه ای از مطالب پژوهشی و نظریات را برای ارایه به همایش های بین المللی جمع آوری می کند . این مطالب که همگی توسط نهادهای پژوهشی فراهم شده اند از 1991 تا کنون در این گنجینه جمع آوری شده اند .</search_description>
+      <url>http://www.ciaonet.org/</url>
+      <search_url>http://usearch.cc.columbia.edu/ciao/query.html?qp=url%3Awps&amp;qp=url%3Aolj&amp;qp=url%3Apbei&amp;qp=url%3Abook&amp;qp=url%3Acasestudy&amp;op1=%2B&amp;fl1=&amp;ty1=w&amp;tx1=&amp;dt=in&amp;inthe=2147483647&amp;op0=&amp;fl0=&amp;ty0=w&amp;qt=&amp;ht=0&amp;qp=&amp;qs=&amp;col=ciao&amp;qc=ciao&amp;pw=100%25&amp;ws=0&amp;la=en&amp;qm=0&amp;st=1&amp;nh=25&amp;lk=1&amp;rf=0&amp;oq=&amp;rq=0&amp;si=0&amp;ql=a&amp;x=34&amp;y=8&amp;tx0={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>یافتن مقالات</search_title>
+      <search_description>قادر است تا در زمینه هایی از قبیل تجارت . بهداشت . سرگرمی و ورزش مطالبی از قبیل مقالات . خلاصه مقالات و کتب را از بیش از 300 مجله و روزنامه جستجوی کند .</search_description>
+      <url>http://www.findarticles.com/PI/index.jhtml</url>
+      <search_url>http://www.findarticles.com/cf_0/PI/search.jhtml?magR=all+magazines&amp;key={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>H-Net Reviews</search_title>
+      <search_description>این سایت که درزمینه علوم انسانی و اجتماعی فعال است منبعی برای نقدهای دانشگاهی آنلاین به شمار می رود . نقد های کتاب و مقالات در آن از طریق شبکه مباحثه آنلاین آن به اطلاع اعضا میرسد . با این کار می توان مقاله ای را در اختیار یک عده اعضای سایت قرار داد و آن را با سرعتی بی نظیر نقد کرد .همچنین با درگیر کردن اعضا در نقد مطالب فضایی پویا و پر انرژی را برای آنان فراهم می آورد . این سایت یکی از سایت های پیشگام در زمینه نقد مطالب دانشگاهی می باشد.</search_description>
+      <url>http://www2.h-net.msu.edu/reviews/</url>
+      <search_url>http://www2.h-net.msu.edu/reviews/search.cgi?maxlines=25&amp;maxfiles=25&amp;all=all&amp;query={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>اینتیوت : علوم اجتماعی</search_title>
+      <search_description>این یک سرویس آنلاین رایگان است که شما را به طیفی از بهترین منابع برای تحصیلات و تحقیقات مرتبط می نماید . مطالب موجود در این سرویس از قبیل علوم پزشکی ٫ مهندسی ٫ کامپیوتر ٫ جغرافیا ٫ ریاضیات و علوم زیست محیطی می باشند و در حال حاضر این مجموعه حاوی ۳۳۳۴۹ آرشیو بایگانی شده می باشد .</search_description>
+      <url>http://www.intute.ac.uk/socialsciences//</url>
+      <search_url>http://www.intute.ac.uk/socialsciences/cgi-bin/search.pl?submit.x=0&amp;submit.y=0&amp;submit=Go&amp;limit=0&amp;subject=socialsciences&amp;term1={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>SocioSite</search_title>
+      <search_description>این وب سایت درگاهی برای ارتباط با مطالب جدید در زمینه علوم اجتماعی در اینترنت است . یکی از اهداف اصلی ایجاد آن داشتن فهرستی جامع از منابع مرتبط با علوم اجتماعی در اینترنت بوده است .</search_description>
+      <url>http://www.pscw.uva.nl/sociosite/</url>
+      <search_url>http://www.google.com/u/sociosite?sa=sociosite&amp;domains=www2.fmg.uva.nl&amp;sitesearch=www2.fmg.uva.nl&amp;hq=inurl:www2.fmg.uva.nl/sociosite&amp;q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>آوای شاتل</search_title>
+      <search_description>ای سایت با تکیه بر منابع نظری و عملی موجود از قبیل مجلات و گروه های خبری آنلاین به بررسی ادبیات آمریکا می پردازد .</search_description>
+      <url>http://vos.ucsb.edu/</url>
+      <search_url>http://vos.ucsb.edu/search-results.asp?Submit=Go&amp;search={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>نقد کتاب</context_title>
+    <context_abbrev>نقد کتاب</context_abbrev>
+    <context_description>در اینجا با کلیک کردن روی لینک های جستجو می توانید نقدهای ارایه شده برای یک کتاب را در اینترنت جستجو کنید .</context_description>
+    <search>
+      <search_title>بانک اطلاعاتی نقدهای آنتروپولوژی (ARD)</search_title>
+      <search_description>این وب سایت با هدف بهبود میزان دسترسی متخصصان آنتروپولوژی به متون تخصصی این رشته ایجاد شده واین کار را از طریق آگاه ساختن آنان از جدیدترین کتب منتشر شده و طبقه بندی مطالب بر اساس موضوعات مختلف انجام می دهد .</search_description>
+      <url>http://wings.buffalo.edu/ARD/</url>
+      <search_url>http://wings.buffalo.edu/ARD/cgi/search.cgi?authors=&amp;subject=&amp;date1=&amp;date2=&amp;medium=&amp;reviewer=&amp;title={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>کتابهای حقوقی</search_title>
+      <search_description>این سایت به بررسی کتاب های جدید دانشگاهی و عمومی در زمینه حقوق می پردازد.</search_description>
+      <url>http://jurist.law.pitt.edu/lawbooks/</url>
+      <search_url>http://search.freefind.com/find.html?id=9814374&amp;pageid=r&amp;mode=ALL&amp;query={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>بررسی کتابهای حقوقی و سیاسی</search_title>
+      <search_description>این سایت با پشتیبانی کمسیون حقوقی انجمن علوم سیاسی آمریکا فعالیت می کند . در آن می توان تقریبا تمامی کتابهای حقوقی وسیاسی مرتبط با دولت آمریکا را مشاهده کرد و نقدهای ارایه شده توسط اعضا تا 6 ماه بعد برای کاربران در دسترس می باشد .</search_description>
+      <url>http://www.bsos.umd.edu/gvpt/lpbr/</url>
+      <search_url>http://www.searchum.umd.edu/search?btnG=Search&amp;output=xml_no_dtd&amp;proxystylesheet=UMCP&amp;as_sitesearch=http://www.bsos.umd.edu/gvpt/lpbr&amp;client=UMCP&amp;site=UMCP&amp;q={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>مشاهده غیر رایگان</context_title>
+    <context_abbrev>مشاهده غیر رایگان</context_abbrev>
+    <context_description>این سرویس برای کسانی مفید است که دسترسی مستقیم به مجلات الکترونیک از طریق اشتراک را ندارند . این سرویس از طریق مکانیسم های ایمن پرداخت پول کاربران را قادر می سازد تا برای دسترسی پیدا کردن به مطالب در همان زمان پول پرداخت کنند . بلافاصله پس از پرداخت پول دسترسی به مطلب مورد نظر امکان پذیر شده و تا 30 روز اعتبار دارد .</context_description>
+    <search>
+      <search_title>اینگنتا</search_title>
+      <search_description>اینگنتا سرویسی است که دسترسی به متن کامل مقالات را محدود می سازد . با این حال مدیر سایت می تواند فهرست رایگانی ازمطالب موجود را با آن به کاربران نشان دهد .</search_description>
+      <url>http://www.ingenta.com/</url>
+      <search_url>http://www.ingenta.com/isis/searching/Search/ingenta?database=1&amp;title={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>کتابخانه الکترونیک</search_title>
+      <search_description>پژوهشگران مستقل که به کتابخانه های تخصصی دسترسی ندارند با پرداخت ماهیانه فقط 5 دلار می توانند در این سرویس مشترک شوند . این سرویس قادر است بانک های اطلاعات بیش از 20000 نهاد و سایت مختلف و 175 کتابخانه معتبر جهانی مانند کتابخانه کمبریج را به دنبال موضوعی خاص جستجو کند . همچنین امکان </search_description>
+      <url>http://www.ebrary.com/corp/content.htm</url>
+      <search_url>http://shop.ebrary.com/Top?layout=search&amp;f00=text&amp;p01=&amp;f01=subject&amp;d=journal&amp;l=en&amp;sch=%A0%A0%A0%A0%A0Search%A0%A0%A0%A0%A0&amp;frm=adv.x&amp;p00={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>کوستیا</search_title>
+      <search_description>با کوستیا شما به بیش از 47000 کتاب و 375000 مجله و روزنامه دسترسی پیدا می کنید . تمام مطالب آن کامل هستند و هر صفحه دارای قابلیت جستجو است . هزینه اشتراک این سرویس از 19.05 دلار در ماه تا 119.95 دلار در سال متغیر است .</search_description>
+      <url>http://www.questia.com/</url>
+      <search_url>http://www.questia.com/SM.qst?act=search&amp;keywordsSearchType=1000&amp;mediaType=book&amp;mediaType=journal&amp;mediaType=magazine&amp;mediaType=newspaper&amp;mediaType=encyclopedia&amp;mediaType=startpage&amp;keywords={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>سرویس غیررایگان ویلی</search_title>
+      <search_description>این سرویس امکان دسترسی سریع و کامل به طیف وسیعی از مجلات و منابع علمی را بدون نیاز به اشتراک فراهم می آورد . همچنین با آن می توان یک مجله یا یک مقاله را به طور مستقیم با استفاده از کارت اعتباری خریداری کرد . بلافاصله پس از پرداخت پول مطلب مورد نظر در اختیار شماست و تا 24 ساعت ادامه دارد . </search_description>
+      <url>http://www3.interscience.wiley.com/aboutus/ppv-articleselect.html</url>
+      <search_url>http://www3.interscience.wiley.com/search/allsearch</search_url>
+      <search_post>allContentSearchForm=&amp;mode=quicksearch&amp;WISindexid1=WISall&amp;WISsearch1={$formKeywords}</search_post>
+    </search>
+  </context>
+  <context>
+    <context_title>بررسی ها</context_title>
+    <context_abbrev>بررسی ها</context_abbrev>
+    <context_description>در اینجا به بررسی های مهم تحقیقاتی در زمینه علوم اجتماعی می توانید دست پیدا کنید .</context_description>
+    <search>
+      <search_title>موسسه گالوپ</search_title>
+      <search_description>وب سایت موسسه گالوپ دارای ابزارهای قوی جستجو و یک فهرست موضوعی جامع می باشد و در آن می توان به نتایج نظر سنجی های مهم درباره موضوعاتی از قبیل سقط جنین . اقتصاد آزاد . داروهای غیر مجاز . مالیات و ...که برخی از آنها قدمتی در حدود 50 سال دارند را می توان یافت .</search_description>
+      <url>http://www.gallup.com/</url>
+      <search_url>http://www.gallup.com/search/results.aspx?SearchConType=&amp;SearchTypeAll=any&amp;SearchTypeExa=any&amp;SearchTypeAny=any&amp;SearchTypeNon=any&amp;SearchTextExa=&amp;SearchTextAny=&amp;SearchTextNon=&amp;SearchSiteInd=&amp;SearchSiteAll=&amp;SearchDateBef=&amp;SearchDateAft=&amp;SearchDateBMo=&amp;SearchDateAMo=&amp;SearchDateBDa=&amp;SearchDateADa=&amp;SearchDateBYe=&amp;SearchDateAYe=&amp;SearchTextAll={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>Public Agenda Online</search_title>
+      <search_description>این وب سایت که با پشتیبانی 14 نهاد خدمات اجتماعی اداره می شود در 21 زمینه از قبیل سقط جنین . جرم شناسی . بودجه فدرال . نژاد پرستی . امور انسان دوستانه مطالب مفیدی را ارایه می کند . غالب مطالب آن از نوع مقالات تحقیقی . خلاصه مقاله . نمودارهای نشان دهنده نظرسنجی ها و بازتاب موضوعات مختلف در رسانه های می باشد .</search_description>
+      <url>http://www.publicagenda.org/</url>
+      <search_url>http://www.publicagenda.org/search/search_details.cfm</search_url>
+      <search_post>StartRow=1&amp;searchstring={$formKeywords}</search_post>
+    </search>
+    <search>
+      <search_title>PollingReport.com</search_title>
+      <search_description>این یک سایت مستقل و منبعی مهم در زمینه نظر سنجی های عمومی در آمریکا می باشد .</search_description>
+      <url>http://www.pollingreport.com/</url>
+      <search_url>http://www.pollingreport.com/_vti_bin/shtml.exe/search.htm</search_url>
+      <search_post>VTI-GROUP=0&amp;search={$formKeywords}</search_post>
+    </search>
+  </context>
+  <context>
+    <context_title>Soc sci data</context_title>
+    <context_abbrev>Soc sci data</context_abbrev>
+    <context_description>در اینجا امکان دسترسی به آرشیوهای گسترده ای از علوم اجتماعی به منظور پژوهش یا آموزش وجود دارد .</context_description>
+    <search>
+      <search_title>کمیته تحقیقات اجتماعی و سیاسی میان دانشگاهی (ICPSR)</search_title>
+      <search_description>دروب سایت این کمیته آرشیوهایی حاوی حدود 5000 عنوان کتاب و بیش از 45000 فایل مجزای آموزشی از بیش از 300 موسسه بین المللی وجود دارد .</search_description>
+      <url>http://www.icpsr.umich.edu/</url>
+      <search_url>http://search.icpsr.umich.edu/ICPSR/query.html?nh=25&amp;rf=3&amp;ws=0&amp;op0=%2B&amp;fl0=&amp;ty0=w&amp;col=abstract&amp;col=series&amp;col=uncat&amp;op1=-&amp;tx1=restricted&amp;ty1=w&amp;fl1=availability%3A&amp;op2=%2B&amp;tx2=ICPSR&amp;ty2=w&amp;fl2=archive%3A&amp;tx0={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>OECD درگاه اطلاعات آماری</search_title>
+      <search_description>این درگاه اطلاعات آماری مورد نیاز برای تحلیل آماری اطلاعات کشورهای عضو سازمان ملل را فراهم می آورد .این نهاد استانداردهای بین المللی آماری و انواع فعالیت های چند جانبه آماری را با همکاری نهاد های بین المللی تدوین می نماید .</search_description>
+      <url>http://www.oecd.org/statsportal/0,2639,en_2825_293564_1_1_1_1_1,00.html</url>
+      <search_url>http://www.oecd.org/searchResult/0,2665,en_2825_293564_1_1_1_1_1,00.html?searchText=&amp;fpDepartment=293564&amp;fpSearchExact=3&amp;fpSearchText={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>آرشیو اطلاعات علوم اجتماعی استرالیا</search_title>
+      <search_description>این سایت عضوی از فدراسیون نهادهای اطلاعات بین المللی(IFDO) می باشد و در زمینه فعالیت های بین المللی مرتبط با علوم اجتماعی و تدوین منابع تحقیقاتی آن فعال می باشد .</search_description>
+      <url>http://assda.anu.edu.au/</url>
+      <search_url>http://assda.anu.edu.au/htdig/htsearch?method=and&amp;format=builtin-long&amp;sort=score&amp;config=assda&amp;restrict=http://assda.anu.edu.au/&amp;exclude=&amp;words={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>آرشیو اطلاعات انگلستان</search_title>
+      <search_description>این آرشیو که در دانشگاه اسکس انگلستان قرار دارد مجموعه ای از اطلاعات الکترونیکی درزمینه علوم اجتماعی و انسانی را از سراسر انگلستان گردآوری کرده است . این در واقع مرکز اطلاعاتی ملی است که با همکاری سایر نهادهای اطلاعاتی و بین المللی در 1967 تاسیس گردیده و درحال حاضر 7000 سری اطلاعاتی درزمینه های مختلف علمی در آن فراهم شده است .</search_description>
+      <url>http://www.data-archive.ac.uk/</url>
+      <search_url>http://www.data-archive.ac.uk/search/allSearch.asp?ct=xmlAll&amp;zoom_and=1&amp;q1={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title> اطلاعات علوم اجتماعی در اینترنت</search_title>
+      <search_description>این وب سایت اطلاعات آماری . راهنماها . کتابها و درگاههای اطلاعاتی موجود در بیش از 873 سایت اینترنتی را درخود گردآوری نموده است .</search_description>
+      <url>http://odwin.ucsd.edu/idata/</url>
+      <search_url>http://odwin.ucsd.edu/cgi-bin/easy_search2?print=notitle&amp;file+Data+on+the+Net=%2Fdata%2Fdata.html&amp;amp;skip=search.html&amp;header=%2Fheader%2Fheader&amp;search={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>نظریات اجتماعی</context_title>
+    <context_abbrev>نظریات اجتماعی</context_abbrev>
+    <context_description>در این سایت اطلاعات جامعی در زمینه نظریات علوم اجتماعی یافت می شود .</context_description>
+    <search>
+      <search_title>CTheory (برای استفاده از آن ثبت نام الزامی است)</search_title>
+      <search_description>نقدهای الکترونیکی بین المللی ارایه شده در مورد کتابها را در زمینه های مختلف در آن می توانید پیدا کنید . این سایت با پشتیبانی انجمن مجلات اجتماعی و سیاسی کانادا فعالیت می کند و به صورت منظم نقدهای جدید را برای کاربران خود ارسال می نماید .</search_description>
+      <url>http://www.ctheory.net/</url>
+      <search_url>http://www.google.com/search?q=site%3Awww.ctheory.net+{$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>جستجوی کتاب</context_title>
+    <context_abbrev>جستجوی کتاب</context_abbrev>
+    <context_description>جستجوی منابع مرتبط با کتابخانه ها</context_description>
+    <search>
+      <search_title>انتشارات گوگل</search_title>
+      <search_description>گوگل با کتابخانه های دانشگاههای میشیگان . هاروارد . استنفورد . آکسفورد و کتابخانه ملی نیویورک در حال همکاری است تا کتابخانه های موجود در آنها را به صورت دیجیتال در آورده و آنها را از طریق سرویس انتشارات گوگل در اختیار کاربران گوگل قرار دهد. این یک پروژه عظیم است که در آنها میلیون ها کتاب چاپی به فرمت دیجیتال در آمده و در بانک اطلاعاتی گوگل جمع آوری می گردد . در این سیستم روی عنوان هر کتابی که کلیک بکنید صفحه ای حاوی اطلاتی درباره آن کتاب ازقبیل نقدها کتابهای مشابه . ناشر . امکان خرید کتاب ونزدیکترین کتابخانه به شما که آن را دارد نمایش داده می شود .</search_description>
+      <url>http://print.google.com</url>
+      <search_url>http://print.google.com/print?q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>صفحه کتاب های آنلاین</search_title>
+      <search_description>این سایت توسط جان مارک اوکربلوم در دانشگاه پنسیلوانیا مدیریت می شود . اینجا مکانی مناسب برای آغاز جستجو بدنبال متن کامل کتابها در اینترنت است .در این سایت بیش از 20000 کتاب انگلیسی به فرمت های مختلف در دسترس می باشد . مدخل های آن را می توان بر اساس نام ناشر یا عنوان کتاب جستجو کرد . همچنین امکان جستجوی کتاب توسط سیستم جستجوی کتابخانه کنگره ملی آمریکا نیز وجود دارد . لیست جدیدترین کتابها دایما در صفحه ای مجزا &lt;a href=&quot;http://onlinebooks.library.upenn.edu/new.html&quot;>http://onlinebooks.library.upenn.edu/new.html&lt;/a>. در آن به روز رسانی میشود .</search_description>
+      <url>http://digital.library.upenn.edu/books/</url>
+      <search_url>http://onlinebooks.library.upenn.edu/webbin/book/search?tmode=words&amp;title={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>کتاب های آنلاین</search_title>
+      <search_description>این مجموعه ای از 32935 عنوان کتاب است که البته برخی از آنها صرفا نسخه نمایشی می باشند . امکان جستجو در آن بر اساس ناشر و عنوان کتاب وجود دارد . همه کتابهای آن رایگان نیستند .</search_description>
+      <url>http://www.books-on-line.com/</url>
+      <search_url>http://www.books-on-line.com/bol/KeyWordSearch.cfm?RowCount=50&amp;Searchquery={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>کتابخانه جهانی</search_title>
+      <search_description>این کتابخانه ای وسیع تر و مجهز تر است و دارای بیش از 100000 کتاب الکترونیک بوده و هدف آن است که تا پایان سال 2006 دارای بیش از 1000000 کتاب الکترونیک باشد ( برخی از کتابها از پروژه گوتنبرگ گرفته شده اند)</search_description>
+      <url>http://tera-3.ul.cs.cmu.edu/</url>
+      <search_url>http://tera-3.ul.cs.cmu.edu/cgi-bin/DBscripts/advsearch_db.cgi?perPage=25&amp;listStart=0&amp;author1=&amp;subject1=Any&amp;year1=&amp;year2=&amp;language1=Any&amp;scentre=Any&amp;search=Search&amp;title1={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>بانک های اطلاعاتی</context_title>
+    <context_abbrev>بانک های اطلاعاتی</context_abbrev>
+    <context_description>دسترسی به بانک های اطلاعاتی رایگان خلاصه مقالات و یا متن کامل مقالات را امکان پذیر می سازد .</context_description>
+    <search>
+      <search_title>پژوهش های بین المللی : سری راهنماهای فشرده</search_title>
+      <search_description>این سایت با استفاده از کتابخانه کنگره آمریکا اطلاعات گسترده ای را در زمینه سایر کشورها در اختیار کاربران قرار می دهد . در اینجا شما توضیحات کلی و تحلیل تاریخی . اجتماعی . اقتصادی و سیاسی ملت های مختلف جهان را در اختیار خواهید داشت .</search_description>
+      <url>http://lcweb2.loc.gov/frd/cs/cshome.html</url>
+      <search_url>http://search.loc.gov:8765/query.html?col=loc&amp;qp=url%3A%2Frr%2Ffrd%2F&amp;submit.x=11&amp;submit.y=9&amp;qt={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>بانک جهانی (IMF)</search_title>
+      <search_description>این وب سایت رسمی بانک جهانی (IMF) می باشد . در آن امکان جستجوی بانک اطلاعاتی انتشارات . گزارشات . مقالات و متون حقوقی وجود دارد .برخی از گزارش های آن کامل نیستند و برخی دیگر فاقد امکان چاپ می باشند .</search_description>
+      <url>http://www.imf.org/external/pubind.htm</url>
+      <search_url>http://www.imf.org/external/pubs/cat/shortres.cfm?auth_ed=&amp;subject=&amp;ser_note=All&amp;datecrit=During&amp;YEAR=Year&amp;Lang_F=All&amp;brtype=Date&amp;submit=Search&amp;TITLE={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>اسناد پروژه توسعه بانکهای خارج آمریکا</search_title>
+      <search_description>اسناد این پروژه توسعه بانکی در این وب سایت موجود بوده و بر اساس نام کشور و واحد اقتصادی مورد نظر قابل جستجو هستند .</search_description>
+      <url>http://www.iadb.org/exr/pic/index.cfm?language=english</url>
+      <search_url>http://search.iadb.org/search.asp?ServerKey=Primary&amp;collection=newcoll&amp;language=English&amp;ResultTemplate=default1.hts&amp;ResultStyle=normal&amp;ViewTemplate=docview.hts&amp;Querytext={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>کتاب اسناد منتشر شده جهانی CIA</search_title>
+      <search_description>سازمان امنیت آمریکا از 1971 هر ساله اسنادی را که حالت محرمانه خود را به مرور زمان از دست داده اند به صورت یک کتاب منتشر می کند . در این وب سایت می توان این اطلاعات را بر اساس ایالت . نواحی مختلف جهان و حتی اقیانوس ها جستجو کرد .(روی هم رفته 267 مدخل دارد ) همراه هر سند اطلاعات آماری و اقتصادی و نظامی و سیاسی مفید درباره آن نیز منتشر شده است .</search_description>
+      <url>https://www.cia.gov/library/publications/the-world-factbook/index.html</url>
+      <search_url>https://www.cia.gov/search?NS-search-page=results&amp;NS-tocstart-pat=/text/HTML-advquery-tocstart.pat</search_url>
+      <search_post>NS-search-type=NS-boolean-query&amp;NS-max-records=20&amp;NS-sort-by=&amp;NS-max-records=20&amp;NS-collection=Everything&amp;NS-query={$formKeywords}</search_post>
+    </search>
+  </context>
+  <context>
+    <context_title>درگاههای عمومی</context_title>
+    <context_abbrev>درگاههای عمومی</context_abbrev>
+    <context_description>درگاههای عمومی</context_description>
+    <search>
+      <search_title>آرشیو اطلاعات علوم اجتماعی استرالیا</search_title>
+      <search_description>این سایت عضوی از فدراسیون نهادهای اطلاعات بین المللی(IFDO) می باشد و در زمینه فعالیت های بین المللی مرتبط با علوم اجتماعی و تدوین منابع تحقیقاتی آن فعال می باشد .</search_description>
+      <url>http://assda.anu.edu.au/</url>
+      <search_url>http://assda.anu.edu.au/htdig/htsearch?method=and&amp;format=builtin-long&amp;sort=score&amp;config=assda&amp;restrict=http://assda.anu.edu.au/&amp;exclude=&amp;words={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>شبکه تحقیقاتی علوم اجتماعی (SSRN)</search_title>
+      <search_description>این سایت با هدف گسترش پژوهش های بین المللی و تحکیم شبکه های تحقیقاتی درزمینه علوم اجتماعی ایجاد شده است .</search_description>
+      <url>http://www.ssrn.com/</url>
+      <search_url>http://papers.ssrn.com/sol3/results.cfm</search_url>
+      <search_post>searchTitle=Title&amp;searchAbstract=Abstract&amp;txtAuthorsFName=&amp;txtAuthorsLName=&amp;optionDateLimit=0&amp;Form_Name=Abstract_Search&amp;txtKey_Words={$formKeywords}</search_post>
+    </search>
+    <search>
+      <search_title>SocioSite</search_title>
+      <search_description>این وب سایت درگاهی برای ارتباط با مطالب جدید در زمینه علوم اجتماعی در اینترنت است . یکی از اهداف اصلی ایجاد آن داشتن فهرستی جامع از منابع مرتبط با علوم اجتماعی در اینترنت بوده است .</search_description>
+      <url>http://www2.fmg.uva.nl/sociosite/</url>
+      <search_url>http://www.google.com/search?q=site:www2%2Efmg%2Euva%2Enl%2Fsociosite%2F+</search_url>
+    </search>
+    <search>
+      <search_title>منابع آماری در اینترنت</search_title>
+      <search_description>این سایت توسط مرکز اسناد دانشگاه میشیگان مدیریت می شود و در آن به منظور تسهیل پژوهش ها اطلاعات آماری گسترده ای در زمینه های مختلف وجود دارد .</search_description>
+      <url>http://www.lib.umich.edu/govdocs/statsnew.html</url>
+      <search_url>http://www.google.com/u/umlib?hl=en&amp;lr=&amp;ie=ISO-8859-1&amp;domains=www.lib.umich.edu&amp;sitesearch=www.lib.umich.edu&amp;q=inurl%3Agovdocs+-govdocs%2Fadnotes%2F+%0D%0A-govdocs%2Fgodort%2F&amp;q={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>تالارهای گفتمان آنلاین</context_title>
+    <context_abbrev>تالارهای گفتمان آنلاین</context_abbrev>
+    <context_description>در اینجا می توانید به تالار های گفتگوی رایگان اینترنتی دستیابی پیدا کنید که به کسترش اطلاعات عمومی شما در زمنیه های مختلف کمک کند . </context_description>
+    <search>
+      <search_title>وب سایت آنلاین علوم اجتماعی و انسانی H-NET</search_title>
+      <search_description>در این وب سایت منابع مفیدی در اختیار پژوهش گران علوم اجتماعی و انسانی قرارداده شده است .</search_description>
+      <url>http://www.h-net.msu.edu/</url>
+      <search_url>http://www.h-net.org/logsearch/index.cgi?type=keyword&amp;order=relevance&amp;list=All+lists&amp;hitlimit=25&amp;smonth=00&amp;syear=1989&amp;emonth=11&amp;eyear=2004&amp;phrase={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>اینتیوت : همایش های علوم اجتماعی</search_title>
+      <search_description>در این وب سایت امکان جستجو و مشاهده اطلاعات همایش های مربوط به علوم اجتماعی وجود دارد .</search_description>
+      <url>http://www.intute.ac.uk/socialsciences/conferences.html</url>
+      <search_url>http://www.intute.ac.uk/socialsciences/cgi-bin/conferences.pl?type=All+events&amp;subject=All%7CAll+subjects&amp;submit.x=0&amp;submit.y=0&amp;submit=Go&amp;term={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>جامعه شناسی آنلاین .</search_title>
+      <search_description>این سایت برای دانشجویان علوم اجتماعی . جرم شناسی و علوم انسانی بسیار مفید است . در آن اسلاید ها . کوییزها و مطالب آموزشی متنوعی وجود دارد .</search_description>
+      <url>http://www.sociologyonline.co.uk/</url>
+      <search_url>http://ccgi.sociologyonline.force9.co.uk/cgi-bin/site/searchnews.pl?dosearch</search_url>
+      <search_post>match=keywords&amp;searchin=(All)&amp;author=(All)&amp;category=(All)&amp;newsfrom=(All)&amp;resultnumber=10&amp;sort=new&amp;multipage=on&amp;linkcompression=10&amp;highlight=on&amp;searchquery={$formKeywords}</search_post>
+    </search>
+    <search>
+      <search_title>Liszt</search_title>
+      <search_description>این سرویس که به میزبانی شرکت تاپیکا ارایه می شود سرویسی رایگان برای عضویت و شرکت در گروه های مباحثه در زمینه علوم زیستی می باشد .</search_description>
+      <url>http://www.liszt.com/dir/?cid=0</url>
+      <search_url>http://www.liszt.com/search/?search_type=cat&amp;amp;query={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>منابع حقوقی</context_title>
+    <context_abbrev>منابع حقوقی</context_abbrev>
+    <context_description>این سایت منابع رایگان اینترنتی حقوقی را از کشورهای مختلف جمع آوری کرده است .</context_description>
+    <search>
+      <search_title>موسسه اطلاعات حقوقی استرالیا (AustLII)</search_title>
+      <search_description>در اینجا می توانید به منابع حقوقی استرالیا به طور رایگان دسترسی پیدا کنید . در حال حاضر این یکی از بزرگترین منابع مطالب حقوقی در اینترنت بوده و دارای بیش از 7 گیگا بایت اطلاعات وبیش از 1.5 میلیون صفحه اسناد حقوقی قابل جستجو می باشد .</search_description>
+      <url>http://www.austlii.org/</url>
+      <search_url>http://www.austlii.edu.au/cgi-bin/sinocgi.cgi?method=any&amp;meta=%2Fau&amp;results=50&amp;submit=Search&amp;rank=on&amp;callback=on&amp;query={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>موسسه اطلاعات حقوقی (آمریکا)</search_title>
+      <search_description>در این وب سایت منابع حقوقی گسترده ای در بیش از 100 زمینه وجود دارد که همگی در رابطه با سیستم قضایی آمریکا می باشد .</search_description>
+      <url>http://www.law.cornell.edu/</url>
+      <search_url>http://www.law.cornell.edu/wex/index.php/Special:Search?fulltext=Search&amp;search={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>موسسه اطلاعات حقوقی ایرلند و بریتانیا (BAILII)</search_title>
+      <search_description>دراینجا می توانید به منابع مهم حقوقی کشورهای ایرلند و بریتانیا به صورت رایگان دسترسی پیدا کنید .تا سپتامبر 2001 این سایت حاوی 19 بانک اطلاعاتی در 5 زمینه بوده است . این سیستم حاوی بیش از 2 گیگا بایت مطالب حقوقی و حدود 275000 سند حقوقی و حدود 10000000 لینک می باشد .</search_description>
+      <url>http://www.bailii.org/</url>
+      <search_url>http://www.bailii.org/cgi-bin/sino_search_1.cgi?sort=rank&amp;method=boolean&amp;highlight=1&amp;mask_path=/&amp;query={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>CanLII</search_title>
+      <search_description>این یک منبع دایمی از اطلاعات حقوقی کانادا است که در ابتدا با هدف ارایه خدمات عمومی حقوقی ایجاد گردید .</search_description>
+      <url>http://www.canlii.org/en/index.html</url>
+      <search_url>http://www.canlii.org/eliisa/search.do?language=en&amp;searchTitle=Search+all+CanLII+Databases&amp;searchPage=eliisa%2FmainPageSearch.vm&amp;id=&amp;startDate=&amp;endDate=&amp;legislation=legislation&amp;caselaw=courts&amp;boardTribunal=tribunals&amp;text={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>موسسه اطلاعات حقوقی جهانی (WorldLII)</search_title>
+      <search_description>این وب سایت موسسه مستقل و غیر انتفاعی بین المللی اطلاعات و تحقیقات حقوقی می باشد .</search_description>
+      <url>http://www.worldlii.org/</url>
+      <search_url>http://www.worldlii.org/form/search/?method=any&amp;meta=%2Fworldlii&amp;results=50&amp;submit=Search&amp;rank=on&amp;callback=on&amp;query={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>یافتن قوانین</search_title>
+      <search_description>این وب سایت یکی از نمونه های برتر در زمینه ارایه اطلاعات جانبی موضوعی میباشد . در آن صفحات اینترنتی حقوقی متعدد با امکان جستجو وجود دارد و یکی از بزرگترین بانک های اطلاعات پرونده های حقوقی در آن وجود دارد .</search_description>
+      <url>http://www.findlaw.com/</url>
+      <search_url>http://lawcrawler.findlaw.com/scripts/lc.pl?submit=search&amp;sites=findlaw.com&amp;entry={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>Jurist: شبکه اساتید حقوق</search_title>
+      <search_description>در اینجا امکان دسترسی به وب سایت بیش از 50 استاد حقوق و تعدادی وب سایت حقوقی معتبر وجود دارد .</search_description>
+      <url>http://www.law.pitt.edu/hibbitts/jurist.htm</url>
+      <search_url>http://www.picosearch.com/cgi-bin/ts.pl?index=110412&amp;opt=ALL&amp;SEARCH=Search+JURIST+5000&amp;query={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>سیاست گذاری های دولتی</context_title>
+    <context_abbrev>Gov Policy</context_abbrev>
+    <context_description>در اینجا می توانید به اطلاعات و خدمات ارایه شده توسط دولت فدرال آمریکا و دولت کانادا دسترسی پیدا کنید</context_description>
+    <search>
+      <search_title>دسترسی به اطلاعات و خدمات دولت استرالیا</search_title>
+      <search_description>این درگاه اطلاعاتی دولت استرالیاست که در آن می توانید اطلاعات بیش از 700 وب سایت دولتی و بیش از 5000000 صفحه اینترنتی دولتی را به طور کامل مشاهده و جستجو کنید .</search_description>
+      <url>http://www.fed.gov.au</url>
+      <search_url>http://govsearch.australia.gov.au/search/search.cgi?collection=gov&amp;form=au&amp;query=&amp;query_phrase=&amp;query_or=&amp;query_not=&amp;meta_f_sand=&amp;scope=&amp;fscope=512&amp;num_ranks=20&amp;chksummary=chksummary&amp;query_and={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>انتشارات دولت کانادا</search_title>
+      <search_description>در اینجا شما به اسناد رسمی منتشره به وزرات خانه های دولت کانادا دسترسی خواهید داشت . البته تمامی انتشارات وزارت خانه ها در اینجا ارایه نمی شوند لیکن تا کنون بیش از 10000 سند رسمی در این وب سایت جمع آوری شده است و این تعداد با همکاری وزارت خانه ها روبه افزایش است .</search_description>
+      <url>http://publications.gc.ca/helpAndInfo/abtpbs-e.htm</url>
+      <search_url>http://publications.gc.ca/control/quickPublicSearch?searchAction=2&amp;termValue={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>دولت کانادا</search_title>
+      <search_description>در اینجا می توانید در میان نهادها و وزارت خانه های دولتی به جستجو بپردازید همچنین یک فهرست الفبایی از برنامه ها و خدمات دولتی کانادا وجود دارد همچنین در آن صفحه جدیدی با عنوان (اقامت) وجود دارد که در آن هزینه های سفر و امکانات ارتباطی در کانادا ذکر شده است .در صفحه (درباره کانادا) لینک هایی برای دسترسی به وزارت خانه ها و نهاد ها و کمسیون های مختلف وجود دارد . علاوه بر وب سایت های وزارت خانه ها یک درگاه اطلاعاتی دولتی نیز درآن وجود دارد که اطلاعات نهادهای خصوصی ایالت ها نمایش داده می شود .</search_description>
+      <url>http://www.canada.gc.ca/main_e.html</url>
+      <search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple.html&amp;enc=iso88591&amp;pg=q&amp;kl=en&amp;site=main&amp;q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>Directgov</search_title>
+      <search_description>این یک سرویس دولتی است که به مردم امکان دسترسی به جدیدترین و وسیعترین اطلاعات مرتبط با خدمات عمومی را ارایه می کند . این سایت از دستورالعمل ها و همکاری سایت UK GovTALK بهره می برد  .</search_description>
+      <url>http://www.direct.gov.uk</url>
+      <search_url>http://www.direct.gov.uk/AdvancedSearch/SearchResults/fs/en?NP=1&amp;PO1=C&amp;PI1=W&amp;PF1=A&amp;PG=1&amp;RP=20&amp;SC=__dgov_site&amp;Z=1&amp;PT1={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>FirstGov</search_title>
+      <search_description>این یک وب سایت متعلق به دولت فدرال و ایالتی آمریکاست که توسط یک کمسیون مرکب از چندین نهاد اداره می شود .</search_description>
+      <url>http://www.firstgov.gov/</url>
+      <search_url>http://www.firstgov.gov/fgsearch/index.jsp?db=www-fed-all&amp;st=AS&amp;ms0=should&amp;mt0=all&amp;rn=2&amp;parsed=true&amp;x=5&amp;y=16&amp;mw0={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>Info4local.gov.uk</search_title>
+      <search_description>اطلاعات فرمانداری ها را از طریق دولت فدرال مرکزی نشان می دهد . در اینجا به سرعت و آسانی می توان انواع نهادهای خصوصی و دولتی را در زمینه های مختلف پیدا کرد همچنین درآن مطالب مفصلی درباره نحوه اجرای دولت الکترونیک موجود است .</search_description>
+      <url>http://www.info4local.gov.uk</url>
+      <search_url>http://www.info4local.gov.uk/?view=Search+results&amp;subjects=all&amp;departmentsIds=0&amp;informationTypesIds=all&amp;query={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>درگاه اطلاعاتی دولت نیوزلند</search_title>
+      <search_description>این درگاه اطلاعاتی وب سایتی است که دارای امکان جستجو و لینک هایی به خدمات و اطلاعات اکثر نهادهای دولتی می باشد . این سایت توسط کمسیون خدمات عمومی تحت نظارت وزارت کشور نیوزلند اداره می شود .</search_description>
+      <url>http://www.govt.nz</url>
+      <search_url>http://www.govt.nz/search?type=spider&amp;t=spider&amp;q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>اروپا</search_title>
+      <search_description>اطلاعات جدید درباره کشورهای عضو اتحادیه اروپا از قبیل اطلاعات آماری . راهکارها . اخبار . اسناد رسمی . متون حقوقی و ... را ارایه می کند .</search_description>
+      <url>http://europa.eu.int/index_en.htm</url>
+      <search_url>http://europa.eu.int/geninfo/query/resultaction.jsp?page=1</search_url>
+      <search_post>Collection=EuropaFull&amp;ResultTemplate=/result_en.jsp&amp;ResultCount=25&amp;qtype=simple&amp;ResultMaxDocs=200&amp;DefaultLG=en&amp;QueryText={$formKeywords}</search_post>
+    </search>
+    <search>
+      <search_title>شبکه اطلاعاتی حقوقی بین المللی (GLIN)</search_title>
+      <search_description>این یک بانک اطلاعاتی ازقوانین . آرای قضایی و سایر منابع مکمل حقوقی است که توسط نهاد های دولتی وبین المللی منتشرشده اند . اعضای این وب سایت می توانند متن کامل مطالب مذکور را به زبان دلخواه خود مشاهده کنند . هر مطلب در این سایت دارای یک خلاصه انگلیسی و همچنین یکسری کلمات کلیدی می باشد .</search_description>
+      <url>http://www.glin.gov</url>
+      <search_url>http://www.glin.gov/search.do?refineQuery=&amp;offset=0&amp;refineQueryType=&amp;fromSearch=true&amp;queryType=ALL&amp;searchBtn=Search&amp;includeAllFields=on&amp;searchAll=on&amp;sumLanguage=any&amp;pubLanguage=any&amp;pubJurisdiction=any&amp;publicationJurisdictionExclude=false&amp;searchPublicationDate=true&amp;dateFromDay=01&amp;dateFromMonth=01&amp;dateFromYear=&amp;dateToDay=01&amp;dateToMonth=01&amp;dateToYear=&amp;subjTerm=&amp;subjTermConjunction%5B0%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B1%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B2%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B3%5D=AND&amp;subjTerm=&amp;searchOrder=default&amp;hitsPerPage=10&amp;showSummary=on&amp;queryString={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>Eur-Lex --درگاه اطلاعات حقوقی اتحادیه اروپا</search_title>
+      <search_description>این یک سرویس رایگان است که در آن مجله رسمی اتحادیه اروپا. متن کامل قوانین اتحادیه و تمامی مصوبات و اسناد رسمی اتحادیه اروپا در اختیار کاربران قرا می گیرد .</search_description>
+      <url>http://europa.eu.int/eur-lex/en/index.html</url>
+      <search_url>http://europa.eu.int/search/s97.vts?Action=FilterSearch&amp;COLLECTION=EURLEXfiles&amp;Filter=EUROPA_filter.hts&amp;ResultTemplate=eur-lex_res-en.hts&amp;QueryMode=Simple&amp;SearchPage=%2Feur-lex%2Fen%2Findex.html&amp;SearchIn=http%3A%2F%2Feuropa.eu.int%2Feur-lex%2Fen&amp;SortField=Score&amp;SortOrder=desc&amp;StartDate=&amp;HTMLonly=&amp;ResultCount=25&amp;queryText={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>قانون گزاران</search_title>
+      <search_description>در این سایت لیستی از رهبران و روسای قوه قضاییه تمامی کشورها از 1700 میلادی به بعد وجود دارد . اطلاعات آن بر اساس نام کشور . رهبران مذهبی . و نهادهای مختلف طبقه بندی شده اند .</search_description>
+      <url>http://www.rulers.org/</url>
+      <search_url>http://www.google.com/search?q=site%3Arulers.org&amp;q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>اطلاعات حقوقی اینترنتی توماس</search_title>
+      <search_description>این وب سایت با استفاده از کتابخانه کنگره آمریکا اطلاعات مختلفی از قبیل جزییات بودجه آمریکا . متن کامل صورتجلسات کنگره . گزارش های کمیته های سنا و کنگره و برخی اسناد تاریخی را ارایه می کند .</search_description>
+      <url>http://thomas.loc.gov/</url>
+      <search_url>http://thomas.loc.gov/cgi-bin/thomas</search_url>
+      <search_post>congress=109&amp;database=text&amp;MaxDocs=1000&amp;querytype=phrase&amp;Search=SEARCH&amp;query={$formKeywords}</search_post>
+    </search>
+  </context>
+  <context>
+    <context_title>گزارش های رسانه ای</context_title>
+    <context_abbrev>گزارش های رسانه ای</context_abbrev>
+    <context_description>با دادن یک موضوع یا کلمه کلیدی به آن مطالب مربوطه را از آرشیو روزنامه های مطرح بین المللی برای شما جستجو می کند .</context_description>
+    <search>
+      <search_title>اخبار گوگل</search_title>
+      <search_description>گزارش های خبری را با استفاده از موتور جستجوی گوگل در اینجا می توانید جستجو کنید .</search_description>
+      <url>http://news.google.com/</url>
+      <search_url>http://news.google.com/news?hl=en&amp;q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>روزنامه گلوب اند میل</search_title>
+      <search_description>روزنامه گلوب اند میل چاپ تورنتو کانادا(نسخه های 7 روز گذشته)</search_description>
+      <url>http://www.globeandmail.com/</url>
+      <search_url>http://www.globeandmail.com/servlet/HTMLTemplate/search?tf=tgam/search/tgam/SearchResults.html&amp;cf=tgam/search/tgam/SearchResults.cfg&amp;current_row=1&amp;start_row=1&amp;num_rows=10&amp;keywords={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>روزنامه پیپیلز دیلی</search_title>
+      <search_description>روزنامه پیپیلز دیلی چاپ چین(شماره های ژانویه 1999 تاکنون)</search_description>
+      <url>http://english.peopledaily.com.cn/</url>
+      <search_url>http://search.people.com.cn/was40/people/GB/english_index.jsp?type=1&amp;channel=&amp;Content=&amp;searchword={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>روزنامه میل اند گاردین</search_title>
+      <search_description>روزنامه میل اند گاردین چاپ آفریقای جنوبی(1994)</search_description>
+      <url>http://www.mg.co.za/</url>
+      <search_url>http://www.mg.co.za/mg_search_results.aspx?PrintEdition=PrintEdition&amp;DailyNews=DailyNews&amp;SearchSection=&amp;StartDay=&amp;StartMonth=&amp;StartYear=&amp;EndDay=&amp;EndMonth=&amp;EndYear=&amp;keywords={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>رادیوی ملی</search_title>
+      <search_description>رادیوی ملی واقع در آمریکا (پخش نامحدود)</search_description>
+      <url>http://www.npr.org/archives/</url>
+      <search_url>http://www.npr.org/search.php?text={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>روزنامه نیویورک تایمز</search_title>
+      <search_description>روزنامه نیویورک تایمز چاپ نیویورک (شماره های هفت روز اخیر)</search_description>
+      <url>http://www.nytimes.com/</url>
+      <search_url>http://query.nytimes.com/search/query?date=site1week&amp;submit.x=1&amp;submit.y=9&amp;query={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>روزنامه ژاپن تایمز</search_title>
+      <search_description>روزنامه ژاپن تایمز چاپ ژاپن از ژانویه 1999 تا کنون</search_description>
+      <url>http://www.japantimes.co.jp/</url>
+      <search_url>http://www.google.co.jp/custom?domains=japantimes.co.jp&amp;client=pub-4223870936880387&amp;forid=1&amp;ie=Shift_JIS&amp;oe=Shift_JIS&amp;term1=&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3AFFFFFF%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A60%3BLW%3A200%3BL%3Ahttp%3A%2F%2Fwww.japantimes.co.jp%2Fimages%2Fheader_title.gif%3BS%3Ahttp%3A%2F%2Fwww.japantimes.co.jp%2F%3BFORID%3A1%3B&amp;hl=ja&amp;advancesearch=&amp;q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>روزنامه مسکو تایمز</search_title>
+      <search_description>روزنامه مسکو تایمز چاپ مسکو (شماره های 1994 تا کنون)</search_description>
+      <url>http://www.moscowtimes.ru/doc/Search.html</url>
+      <search_url>http://www.moscowtimes.ru/cgi-bin/search?config=&amp;exclude=&amp;method=and&amp;format=long&amp;sort=score&amp;matchesperpage=10&amp;words={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>Washington Post</search_title>
+      <search_description>روزنامه واشنگتن پست چاپ واشنگتن دی سی ( شماره های دوهفته اخیر)</search_description>
+      <url>http://www.washingtonpost.com/</url>
+      <search_url>http://www.washingtonpost.com/cgi-bin/search99.pl?searchsection=news&amp;searchdatabase=news&amp;x=11&amp;y=8&amp;searchtext={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>Newsdirectory</search_title>
+      <search_description>این یک راهنمای جامع برای ارتباط با رسانه های جهانی انگلیسی زبان آنلاین می باشد . درحال حاضر بیش از 8000 مجله و روزنامه و بیش از 1000 کانال تلویزیونی آمریکا در آن فهرست بندی شده اند .</search_description>
+      <url>http://www.newsdirectory.com/</url>
+      <search_url>http://www.newsdirectory.com/hbSearch.php</search_url>
+      <search_post>s={$formKeywords}&amp; submit=Go</search_post>
+    </search>
+  </context>
+  <context>
+    <context_title>جستجوی اینترنتی</context_title>
+    <context_abbrev>جستجوی اینترنتی</context_abbrev>
+    <context_description>در اینجا با وارد کردن یک کلمه کلیدی می توانید آن را از طریق چندین موتور جستجو در منابع اینترنتی جستجو کنید .</context_description>
+    <search>
+      <search_title>Google</search_title>
+      <search_description>در اینجا می توانید با استفاده از موتور جستجوی معروف گوگل بدنبال مطالب مورد نظر خود بگردید .</search_description>
+      <url>http://www.google.com/</url>
+      <search_url>http://www.google.com/search?q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>سرویسی دانشگاهی گوگل</search_title>
+      <search_description> در اینجا می توانید انواع مطالب دانشگاهی از قبیل مقالات کارشناسی شده . پایان نامه ها . کتاب ها . خلاصه مقالات و گزارشات فنی را در زمینه های مختلف مشاهده کنید . مطالب موجود در آن متعلق به چندین ناشر بزرگ است که گوگل با آنها قرارداد همکاری دایم دارد مانند انجمن ماشین های اداری آمریکا .IEEE,OCLC و ... </search_description>
+      <url>http://scholar.google.com</url>
+      <search_url>http://scholar.google.com/scholar?ie=UTF-8&amp;oe=UTF-8&amp;hl=en&amp;q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>کلاستی یا موتور جستجوی دسته بندی کننده</search_title>
+      <search_description>این یک سیستم جستجو گر است که نتایج حاصل از جستجو های خود در یک مورد خاص را دسته بندی کرده وبه کاربر ارایه می دهد . با آن می توان حتی اطلاعات فرعی و اخبار و محصولات سایت های تجاری مانند eBAY را جستجو کرد .</search_description>
+      <url>http://clusty.com/about</url>
+      <search_url>http://clusty.com/search?query={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>Vivisimo</search_title>
+      <search_description>تکنولوژي دسته بندی کننده اطلاعات وی ویس مو که توسط محققان بنیاد کارنگی ملون ابداع شده است اطلاعات وسیعی را از آرشیو نهادهای مختلف در یک زمینه جمع آوری کرده و آنها را به صورت دسته بندی شده در اختیار کاربر قرار می دهد .</search_description>
+      <url>http://vivisimo.com</url>
+      <search_url>http://vivisimo.com/search?tb=homepage&amp;v%3Asources=Web&amp;query={$formKeywords}</search_url>
+    </search>
+  </context>
+</version>

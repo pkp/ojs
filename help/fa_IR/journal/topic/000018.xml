@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000018.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Layout Editor 
+  *
+  * $Id$
+  --><topic title="صفحه آرا" toc="journal/toc/000003" key="journal.roles.layoutEditor" locale="fr_IR" id="journal/topic/000018" >
+  <section><![CDATA[<p>
+ویراستار نسخه های نهایی مطالب را بصورت فایل های HTML.PDF.PSو ... در می آورد که برای تهیه نسخه های الکترونیکی مجله استفاده می شوند . سیستم OJS به خودی خود دارای ابزاری برای تبدیل و ویرایش فرمت های مذکور ندارد بنابراین صفحه آرا باید از نرم افزارهای جانبی برای تهیه و ویرایش این فایل ها استفاده کند ( مانند آکروبات ریدر برای فایل های پی دی اف یا دریم ویور برای فایل های اچ تی ام ال ) همچنین در صورتی که استفاده از نسخه های الکترونیکی مجله در سیستم های دیگری مانند انواع بانک های اطلاعاتی و یا سایر ناشران مورد استفاده باشند صفحه آرا باید از نرم افزارهای مورد استفاده آنها برای تهیه نسخه های الکترونیک استفاده نماید (با مشاوره با صفحه آرای آن سیستم های یا ناشران)
+</p><p>
+اطلاعات بیشتر در این زمینه را در اینجا می توانید پیدا کنید .
+{help_topic key="editorial.layoutEditorsRole" text="here"}.</p>]]></section>
+</topic>

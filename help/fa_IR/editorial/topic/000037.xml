@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000037.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Copyeditor's Role - Submissions
+  *
+  * $Id$
+  --><topic title="ساب میشن ها" toc="editorial/toc/000012" key="editorial.copyeditorsRole.submissions" locale="fa_IR" id="editorial/topic/000037" >
+  <section><![CDATA[<p>وقتی ویراستار ادبی وارد صفحه شخصی در مجله خود می شود، با کلیک بر گزینه «ویراستار ادبی» به لیست ساب میشنهای در نوبت ویراستاری دست می یابد. این لیست در بر گیرنده کارهای ارجاع شده به وی برای ویراستاری ادبی است. البته امکان دسترسی به کارهای انجام شده قبلی نیز از طریق آرشیو وجود دارد.</p><p>برای دسترسی به صفحه ویراستاری یک ساب میشن خاص، ویراستار باید بر عنوان آن که در لیست آرشیو موجود است کلیک کند.</p>]]></section>
+</topic>

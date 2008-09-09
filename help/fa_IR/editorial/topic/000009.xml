@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000009.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Index 
+  *
+  * $Id$
+  --><topic title="نقش نویسنده" toc="editorial/toc/000000" key="editorial.authorsRole" subtoc="editorial/toc/000009" locale="fa_IR" id="editorial/topic/000009" >
+  <section><![CDATA[<p>نویسنده یک ساب میشن می تواند برای پیگیری آن و مشارکت در روند دبیری به سایت مجله وارد شود. اگر یک ساب میشن بیش از یک نویسنده داشته باشد، از نویسنده ساب میت کننده درخواست می شود تا مشخص نماید چه کسی نویسنده اصلی، مرجع همه پاسخگوییها به سردبیری و  دارای اجازه برای مراجعه به سایت مجله است. </p>]]></section>
+</topic>

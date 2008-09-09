@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users Index 
+  *
+  * $Id$
+  --><topic title="کاربران " toc="journal/toc/000000" key="journal.users.index" subtoc="journal/toc/000002" locale="fa_IR" id="journal/topic/000002" >
+  <section><![CDATA[<p>
+در OJSمدیریت کاربران بر عهده مدیر ژورنال است این کار شامل ایجاد کاربران ٫ غیرفعال سازی حسابهای کاربری ٫ مدیریت وظایف وغیره میباشد مدیر ژورنال میتواند کاربران فعلی را برسی کرده و افرادی را به آن بیفزاید ٫ پرونده کاری آنان را ویرایش کند ٫ حسابهای کاربری را ادغام کند و میان گروه های مختلف کاربران ارتباط ایجاد کند  
+</p>]]></section>
+</topic>

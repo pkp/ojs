@@ -1,0 +1,25 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Google Analytics plugin localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  --><locale full_name="Farsi" name="fa_IR" >
+<!--آنالیز گوگل-->  <message key="plugins.generic.googleAnalytics.displayName" >پلاگین آنالیز گوگل</message>
+  <message key="plugins.generic.googleAnalytics.description" ><![CDATA[ترکیب او جی اس با گوگل آنالیتیک - برنامه آنالیز ترافیک وب سایت. برای این کار لازم است از قبل یک حساب کاربری گوگل آنالیتیک داشته باشید. لطفا به <a href="http://www.google.com/analytics/" title="Google Analytics site">سایت گوگل آنالیتیک</a> برای اطلاعات بیشتر مراجعه کنید.]]></message>
+<!--اداره تنظیمات گوگل آنالیتیک-->  <message key="plugins.generic.googleAnalytics.manager.settings" >تنظیمات</message>
+  <message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings" >تنظیمات گوگل آنالیتیک</message>
+  <message key="plugins.generic.googleAnalytics.manager.settings.description" ><![CDATA[<p>با این پلاگین میتوان از گوگل آنالیتیک برای جمع آوری و آنالیز میزان استفاده از وب سایت و میزان ترافیک آن برای این مجله استفاده کرد. این پلاگین نیاز به این دارد که حساب کاربری گوگل آنالیتیک داشته باشید.  لطفا به <a href="http://www.google.com/analytics/" title="Google Analytics site">سایت گوگل آنالیتیک</a> برای اطلاعات بیشتر مراجعه کنید.</p>]]></message>
+  <message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId" >شماره حساب کاربری</message>
+  <message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions" >در گوگل آنالیتیک بر روی چک وضعیت کلیک کنید تا کد پیگیری برای سایت خود را مشاهده کنید. شماره حساب کاربری در درون کد پیگیری قرار دارد: _uacct = &quot;###&quot;. بجای ### متن مربوطه را وارد کنید.</message>
+  <message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired" >لطفا شماره حساب کاربری را وارد کنید.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCode">کد پیگیری</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">لطفا یک کد پیگیری انتخاب کنید</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">کد پیگیری سنتی (urchin.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.ga">کد پیگیری جدید  (ga.js)</message>
+</locale>

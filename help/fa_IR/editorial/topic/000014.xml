@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000014.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Proofreader's Role Index 
+  *
+  * $Id$
+  --><topic title="نقش چک کننده نهایی" toc="editorial/toc/000000" key="editorial.proofreadersRole" subtoc="editorial/toc/000014" locale="fa_IR" id="editorial/topic/000014" >
+  <section><![CDATA[<p>دبیر با ارسال یک ایمیل از چک کننده نهایی می خواهد تا یک مرحله یا مراحلی از چک نهایی را به اتمام رساند. این وظیفه چک کننده نهایی است که این مسؤولیت را قبول یا رد نماید؛ در صورت قبول، چک کننده با ورود به صفحه کاربری خود این می تواند این فرایند را آغاز نماید. </p>]]></section>
+</topic>

@@ -1,0 +1,25 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  --><locale full_name="Farsi" name="fa_IR" >
+  <message key="plugins.generic.webfeed.displayName" >پلاگین بازخوراند وب</message>
+  <message key="plugins.generic.webfeed.description" >این پلاگین بازخوراند وب برای شماره جاری تولید میکند.</message>
+  <message key="plugins.generic.webfeed.settings" >تنظیمات</message>
+  <message key="plugins.generic.webfeed.settings.issue" >نمایش بازخوراند وب فقط بر روی صفحات شماره مجله</message>
+  <message key="plugins.generic.webfeed.settings.all" >نمایش بازخوراند وب فقط بر روی تمام صفحات مجله</message>
+  <message key="plugins.generic.webfeed.settings.currentIssue" >نمایش موارد بر روی شماره جاری مجله</message>
+  <message key="plugins.generic.webfeed.settings.recentArticles" >آخرین موارد چاپ شده.</message>
+  <message key="plugins.generic.webfeed.settings.recentItemsRequired" >لطفا عدد صحیح مثبتی برای آخرین موارد چاپ شده وارد کنید.</message>
+	<message key="plugins.generic.webfeed.settings.homepage">لینک فید وب را فقط در صفحاتی که شماره مجله در آن نمایش مییابد نشان بده</message>
+	<message key="plugins.generic.webfeed.atom.altText">لوگوی اتم</message>
+	<message key="plugins.generic.webfeed.rss1.altText">لوگوی RSS1</message>
+	<message key="plugins.generic.webfeed.rss2.altText">لوگوی RSS2</message>
+</locale>

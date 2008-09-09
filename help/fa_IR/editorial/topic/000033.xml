@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000033.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Review Index - Peer Review
+  *
+  * $Id$
+  --><topic title="کارشناسی" toc="editorial/toc/000010" key="editorial.authorsRole.review.peerReview" locale="fa_IR" id="editorial/topic/000033" >
+  <section><![CDATA[<p>در این صفحه تاریخهای متعددی شامل تاریخ درخواست سردبیر از کارشناسان، تاریخ های شروع کارشناسی و تاریخی که هر کارشناس کار خود را به آخر رسانده است، ذکر شده است. نویسنده می تواند با مراجعه به دستورالعمل کارشناسی از چگونگی روند کارشناسی در مجله آگاه شود: {help_topic key="user.about" text="About the Journal"}.</p><p>کارشناسان می توانند برای تبادل نظر با نویسنده فالهایی را نظیر نسخه های حاوی نکات مد نظر خود از ساب میشن، فراگذاری نمایند (برای این تبادل نظر، نویسنده بر نام فایل کلیک می کند تا به فایل فراگذاری شده دست یابد و سپس آن را با و یا ابتدا ذخیره و سپس باز می کند).</p>]]></section>
+</topic>

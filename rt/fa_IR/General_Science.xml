@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE version SYSTEM "../../lib/pkp/dtd/rtVersion.dtd">
+<!--
+  * General_Science.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reading Tools version: General Science (en_US)
+  *
+  * $Id$
+  -->
+<version id="علم عمومی" locale="en_US">
+	<version_title>علم عمومی</version_title>
+	<version_description>ابزار خواندن به خوانندگان کمک می کند  تا از دامنه ی وسیعی از منابع موجود که امکان تفسیر ، قرار گرفتن و ارزیابی  را فراهم می کند، استفاده کنند</version_description>
+	<context>
+		<context_title>وظیفه نویسنده</context_title>
+		<context_abbrev>دیگر وظایف</context_abbrev>
+		<context_description>با استفاده از ماشین های 
+OAI 
+دیگر وظایف را برای  نویسنده( ها) ی مقاله مشخص کند</context_description>
+		<author_terms/>
+		<search>
+			<search_title>گوگل اسکولار</search_title>
+			<search_description>گوگل اسکولار امکان جستجو های خاص را د ر زمینه ادبیات پژوهشی شامل  مقالات کارشناسی شده ، پایان نامه ها، کتب،،پیش پرینت ها، چکیده ها و گزارش های فنی فراهم می سازد.محتوای این حیطه شامل تعدادی از ناشران و تدوین کنند گان است که گوگل توسط آنها نسازمان یافته است.برای مثال انجمن محاسبه ی ماشین ها، 
+IEEE،
+سرویس جایگزین کتابخانه جهانی با دسترسی آزاد  و ... .نتیایج مشخص شده ورژن های متفاوتی از شاخه ها، تحلیل گفته ها و مکان کتابخانه را (فقط کتاب های موجود) را نشان می دهد</search_description>
+			<url>http://scholar.google.com</url>
+			<search_url>http://scholar.google.com/scholar?ie=UTF-8&amp;oe=UTF-8&amp;hl=eng&amp;as_sauthors={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Intute: Science, Engineering &amp; Technology:اینتیوت :علم، مهندسی و فناوری</search_title>
+			<search_description>اینتیوت :علم، مهندسی و فناوری سرویسی آزاد و آنلاین است که برای شما امکان دسترسی به بهترین منابع شبکه ای برای آموزش و تحقیق را فراهم می کند، و توسط متخصصین شبکه ارزیابی و انتخاب شده است. اینتیوت علوم فیزیکی، مهندسی، محاسبه، جغرافی،ریاضیات و علم محیط را تحت پوشش قرار می دهد. این پایگاه اطلاعاتی در حال حاضر 33349 مورد دارد.</search_description>
+			<url>http://www.intute.ac.uk/sciences/</url>
+			<search_url>http://www.intute.ac.uk/sciences/cgi-bin/search.pl?submit.x=0&amp;submit.y=0&amp;submit=Go&amp;limit=0&amp;subject=sciences&amp;term1={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>OAIster (Open Archives Initiative research databases):: آرشیوهای باز جستجوی پایگاههای اطلاعاتی</search_title>
+			<search_description>OAIster
+پروژه ای است از سرویس های کتابخانه دیجیتال دانشگاه میشیگان، که می تواند جستجویی وسیع از انواع مجموعه ها از موسسات بیشمار را فرهم آورد.این موسسات از منابع دیجیتال خود  ثبتی ایجاد می کنند که که در دسترس است و تیم پروژه آنها را برای خدمات 
+OAlSster
+جمع آوری و تدوین کرده است
+</search_description>
+			<url>http://oaister.umdl.umich.edu/</url>
+			<search_url>http://oaister.umdl.umich.edu/cgi/b/bib/bib-idx?type=boolean&amp;size=10&amp;c=oaister&amp;q1=&amp;rgn1=entire+record&amp;op2=and&amp;q2=&amp;rgn2=entire+record&amp;op3=And&amp;q3=&amp;rgn3=title&amp;op4=And&amp;rgn4=author&amp;op5=And&amp;q5=&amp;rgn5=subject&amp;op6=And&amp;rgn6=norm&amp;q6=all+types&amp;sort=author%2Fcreator&amp;submit2=search&amp;q4={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>DOE Information Bridge:DOE
+پل اطلاعاتی
+</search_title>
+			<search_description>اینفورمیشن بریج (پل اطلاعات) منبعی آزاد برای دسترسی به متن کامل و فهرستهای ثبت شده از تحقیقات و گزارشات پیشرفته در
+DOE
+(گروه انرژی) در زمینه فیزیک، شیمی، مواد، بیولوژی، علوم زیستی، فن آوری انرژی، مهندسی، علم کامپیوتر و اطلاعات، انرژی قابل تجدید و موضوعات دیگر فراهم می آورد.</search_description>
+			<url>http://www.osti.gov/bridge/index.jsp</url>
+			<search_url>http://www.osti.gov/bridge/basicsearch.jsp?act=Search&amp;formname=basicsearch.jsp&amp;review=1&amp;SortBy=RELV&amp;SortOrder=DESC&amp;querytype=search&amp;searchFor={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Public Knowledge Project Open Archives Harvester:پروژه آگاهی عمومی از آرشیو باز 
+پابلیک نالج پراجکت اپن آرشیو هاروستر
+</search_title>
+			<search_description>آرشیو کامل و باز 
+PKP
+یک سیستم نمایه سازی آزاد از متا دیتا ها می باشد که با پروژه ی آگاهی عمومی از طریق کوشش های انجام شده توسط فدرال گسترش یافته تا دسترسی به جستجو را وسیع تر و بهتر سازد. 
+منابع اطلاعاتی 
+PKP OAI
+به شما این امکان را می دهد تا یک نمایه ی قابل جستجو از متا دیتا  ها را از آرشیو های باز و کامل اولیه مانندسایت های مورد استفاده در سیستم مجلات باز یا سیستم های کنفرانس باز ایجاد کنید</search_description>
+			<url>http://pkp.sfu.ca/harvester/</url>
+			<search_url>http://pkp.sfu.ca/harvester/search.php?limit=author&amp;query={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>HighWire:های وایر </search_title>
+			<search_description>های وایر یکی از فشرده ترین مجلات در زمینه علم، تکنولوژی و پزشکی است. از مارس 2002 های وایر حاوی 11785877 مقاله در بیش از 4500 مجله مدلاین(پزشکی) و 405985 مقاله با موضوع آزاد از 321 مجله های وایر است.</search_description>
+			<url>http://highwire.stanford.edu/</url>
+			<search_url>http://highwire.stanford.edu/cgi/searchresults?andorexactfulltext=and&amp;resourcetype=1&amp;src=hw&amp;fulltext=&amp;pubdate_year=&amp;volume=&amp;firstpage=&amp;disp_type=&amp;author1={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>NASA Technical Report Server:سرور گزارش فنی ناسا</search_title>
+			<search_description>سرور گزارش فنی ناسا
+NTRS
+برای آن است که برای محصلین، تحصیل کردگان و عموم امکان دسترسی به تاریخچه ی فنی ناسا را فراهم سازد. 
+NTRS
+همچنین اطلاعات علمی و تکنیکی را از سایت های خارج از ناسا جمع آوری می کند و این اطلاعات را در سطح گسترده تری در اختیار کاربران قرار می دهد.</search_description>
+			<url>http://ntrs.nasa.gov/index.jsp?method=aboutntrs</url>
+			<search_url>http://ntrs.nasa.gov/search.jsp?N=0&amp;Ntk=all&amp;Ntx=mode%20matchall&amp;Ntt={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>GrayLIT Network:شبکه 
+GrayLIT
+</search_title>
+			<search_description>شبکه 
+GrayLIT
+جستجوی متن کامل را از بین ادبیات قدیمی آژانس های چندگانه ی دولتی از طریق یک پرتال علمی با گزارش های فنی امکان پذیر می سازد. این پرتال به آرامی به ماشین های جستجوی مجموعه ادبیات قدیمی متصل می شود و استفاده کننده را قادر می سازد تا اطلاعات را بدون شناختن آژانس حامی پیدا کند.</search_description>
+			<url>http://graylit.osti.gov/</url>
+			<search_url>http://graylit.osti.gov/cgi-bin/dexplcgi</search_url>
+			<search_post>pp=all&amp;INTERFACE=1WINDOW&amp;FORM=DistributedSearch.html&amp;COLLECTION=dticft&amp;COLLECTION=jpl&amp;COLLECTION=gpoinfo&amp;COLLECTION=langley&amp;MAXDOCS=50&amp;QUERY={$formKeywords}</search_post>
+		</search>
+		<search>
+			<search_title>KOSMOI</search_title>
+			<search_description>KOSMOI
+شامل مقالات آموزشی، کتابها، پوسترها و لینکهای شبکه ای برای همه ی علاقه مندان به عجایب موجود در علم، فضا، فناوری، طبیعت و طراحی شبکه می شود که روزانه جدید و تازه می شود.
+</search_description>
+			<url>http://kosmoi.com/</url>
+			<search_url>http://www.google.com/custom?sa=Search&amp;cof=GIMP%3A%23cccccc%3BT%3A%23ffdd99%3BLW%3A468%3BALC%3Ared%3BL%3Ahttp%3A%2F%2Fencyclozine.com%2FPictures%2FBanner%2FEncycloZine2.jpg%3BGFNT%3A%23999999%3BLC%3A%23ffcc33%3BLH%3A60%3BBGC%3Ablack%3BAH%3Acenter%3BVLC%3A%23ffcc66%3BGL%3A2%3BGALT%3A%23ffffff%3BAWFID%3A29728ead1ae72975%3B&amp;domains=EncycloZine.com%3BKosmoi.com%3BEluzions.com&amp;sitesearch=Kosmoi.com&amp;q={$formKeywords}</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>جستجوی واژه ها</context_title>
+		<context_abbrev>جستجوی واژه ها</context_abbrev>
+		<context_description>روی هر واژه در متن دبل کلیک کنید به صورت نقل قول؛ تعریف واژه ها و نقل قول یا جعبه ظاهر خواهد شد.همچنین می توانید کلمه مورد نظر را در جعبه تایپ یا پیست کنید. سپس از دستور العمل جستجو برای یافتن تعریفی مشخص برای آن کلمه استفاده کنید. این منابع به خاطر ارتباطشان و دسترسی آزاد به همه یا بخشی از مطالبشان انتخاب شده اند</context_description>
+		<define_terms/>
+		<search>
+			<search_title>گوگل</search_title>
+			<search_description>با استفاده از ماشین معروف جستجوی گوگل،تعاریف را جستجو کنید</search_description>
+			<url>http://www.google.com/</url>
+			<search_url>http://www.google.com/search?hl=en&amp;q=define%3A{$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>لغتنامه آن لاین مریام – وبستر</search_title>
+			<search_description>این لغتنامه بر اساس دهمین چاپ دانشگاهی وبستر،1993است همراه با بیش از160000 لغت به روز که در هر چاپ سالانه اضافه می شود هر کلمه با تعریف، تلفظ، استفاده، ساختار گرامری و یک تاریخچه کوتاه شامل یک فرهنگ جامع، املای غلط و املاهای پیشنهادی می باشد. سیستم جستجوی فرهنگ لغت جستجوهای غیر قابل پیش بینی و ناقص را فراهم می کند. همچنین راهنمای خوبی برای تلفظ و فایل های صداهای آن تلفظ برای بسیاری از واژه ها می باشد.</search_description>
+			<url>http://www.merriam-webster.com/</url>
+			<search_url>http://www.merriam-webster.com/cgi-bin/dictionary?book=Dictionary&amp;va={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>لغتنامه های وان لوک </search_title>
+			<search_description>وان لوک یک خود-لغتنامه است.یک کلمه یا نام خلاصه انگلیسی را وارد کنید ، وان لوک نمایه آن را از 5292362 کلمه در 934 لغتنامه که در لغتنامه های عمومی و اختصاصی مورد دلخواه برای آن تعریف نمایه شده اند جستجو می کند.</search_description>
+			<url>http://www.onelook.com/index.html</url>
+			<search_url>http://www.onelook.com/?ls=a&amp;w={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Wikipedia: The Free Encyclopedia:ویکی پدیا: دایره المعارف آزاد</search_title>
+			<search_description>ویکی پدیا یک دایره المعارف با متنی آزاد و قابل دسترسی است که به طور مشترک توسط شرکت کنندگان در سرتاسر جهان نوشته شده است. این سایت "ویکی ویکی" است به این معنا که هر کس می تواند هر مقاله ای را ویرایش کند، نظر خود را بدون اشتباه سرمقاله ای بیان کنند، کیفیت محتوای این سایت به طور نمایشی تغییر می کند اما ارزش جستجو را دارد. نسخه انگلیسی صدها هزار کلمه دارد. اسپانیایی، فرانسوی و اسپرانتو(زبان بین المللی) نیز در بین زبانهای ارائه شده هستند.</search_description>
+			<url>http://en.wikipedia.org/wiki/Main_Page</url>
+			<search_url>http://en.wikipedia.org/wiki/Special:Search?go=Go&amp;fulltext=Search&amp;search={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Infoplease.com:اینفو پلیز.کام</search_title>
+			<search_description>این سایت دربرگیرنده اینفورمیشن پلیز الماناکز(اطلاعات سالانه)، یک قسمت بیوگرافی، یک لغتنامه، یک اطلس، و مقالاتی از دایره المعارف کلمبیا می باشد. شما می توانید این رفرنس های آماده را با یکدیگر یا به طور مجزا جستجو کنید یا آلماناکز را بروز کنید. در این سایت همچنین سرمقالات هر هفته وجود دارد که اخبار و موضوعات را با لینک های مربوط به محتوای آلماناکز و دیگر منابع شبکه تحت پوشش قرار می دهد.</search_description>
+			<url>http://www.infoplease.com</url>
+			<search_url>http://www.infoplease.com/search?fr=iptn&amp;in=all&amp;x=0&amp;y=0&amp;query={$formKeywords}</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>جستجوی کتاب</context_title>
+		<context_abbrev>جستجوی کتاب</context_abbrev>
+		<context_description>منابع مرتبط با کتاب</context_description>
+		<search>
+			<search_title>Science Books and Films:کتابهای و فیلمهای علمی</search_title>
+			<search_description>کتابهای و فیلمهای علمی مجله ی مروری 
+AAAS
+است که مواد آموزشی در زمینه مباحث علمی را برای همه ی سنین در بردارد که این مباحث شامل بررسی ها و پیشنهادات برای کتاب ها، ویدئو ها، نرم افزار و وب سایت ها است.</search_description>
+			<url>http://sbfonline.com/</url>
+			<search_url>http://sbfonline.com/sample/search.cgi?title_query_type=all&amp;author_query_type&amp;author=&amp;other=&amp;type=B&amp;type=F&amp;type=S&amp;title={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Google Print: گوگل پرینت</search_title>
+			<search_description>گوگل با کتابخانه های دانشگاه های میشیگان، هاروارد، استنفورد، آکسفورد و کتابخانه عمومی نیویورک کار می کند تا کتابها را در مجموعه هایشان به صورت دیجیتالی در بیاورد و آنها را در گوگل پرینت قابل دسترس قرار دهد. یک پروژه ی عظیم جستجو که میلیونها شماره از کتابهای چاپ شده را در پایگاه داده های گوگل پرینت می آورد. روی عنوان یک کتاب کلیک کنید می توانید صفحه ای از کتاب را که واژه ی جستجوی شما را دارد ببینید، می توانید اطلاعات بیشتری را در یک کتاب خاص جستجو کنید، توضیح بیشتر یا اطلاعات مربوطه را پیدا کنید، در مورد ناشر بدانید یا کتاب را خریداری نمایید و کتابخانه هایی را که این کتاب را دارند پیدا کنید.</search_description>
+			<url>http://print.google.com</url>
+			<search_url>http://print.google.com/print?q={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>National Academy Press(NAP):روزنامه آکادمی ملی
+NAP
+</search_title>
+			<search_description>روزنامه آکادمی ملی
+NAP
+سالانه بیش از 200 کتاب با موضوعات علمی، مهندسی، و بهداشت منتشر می کند و بیشترین دیدگاههای معتبر در زمینه موضوعات مهم در زمینه علم و سیاست های بهداشتی در اختیار دارد.</search_description>
+			<url>http://books.nap.edu/books/0309070317/html/177.html</url>
+			<search_url>http://search.nap.edu/nap-cgi/napsearch.cgi?term={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>E-STREAMS</search_title>
+			<search_description>E-STREAMS
+کارشناسی های الکترونیکی در زمینه رفرنس های علم و تکنولوژی را در برمی گیرد که مهندسی، کشاورزی، پزشکی و علم را تحت پوشش قرار می دهد. هر موضوع شامل 30+
+STM
+کارشناسی می باشد که عنوان های جدید در مهندسی، کشاورزی، پزشکی و علم را شامل می شود. هر کارشناسی مشخص و امضا شده است و دربرگیرنده ی آدرس ایمیل کارشناس می باشد. کارشناسی ها مشخص کننده ی 
+TOCs
+کوتاه، لیستی از همکاران و اطلاعات منابعی می باشند.</search_description>
+			<url>http://www.e-streams.com/</url>
+			<search_url>http://www.e-streams.com/c3/cgi-bin/search.pl</search_url>
+			<search_post>boolean=AND&amp;case=Insensitive&amp;terms={$formKeywords}</search_post>
+		</search>
+		<search>
+			<search_title>صفحه کتابهای آنلاین </search_title>
+			<search_description>صفحه کتابهای آنلاین توسط جان مارک آکربلوم در دانشگاه پنسیلوانیا ویرایش شد. این یک نقطه شروع عالی در جستجو برای متن کامل کتاب ها در اینترنت است. بیش از 20000 کار انگلیسی در شکلهای متفاوت در سایت های مختلف به صورت آنلاین در دسترس هستند. شما می توانید با نام نویسنده یا عنوان  جستجو را انجام دهید. یک ویژگی جالب به شما اجازه می دهد با لایبرری کانگرس دسته ای از شماره تلفن ها را بروز کنید. لیست های جدیدی به طور مرتب اضافه می شوند و در وب پیج های مجزا در 
+&lt;/a&gt;
+فهرست می شوند.</search_description>
+			<url>http://digital.library.upenn.edu/books/</url>
+			<search_url>http://onlinebooks.library.upenn.edu/webbin/book/search?tmode=words&amp;title={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Books-On-Line: کتابهای آنلاین</search_title>
+			<search_description>مجموعه ای با بیش از 32935 عنوان که تنها بعضی از آنها گلچین شده اند. با موضوع بروز کنید یا با اسم نویسنده و عنوان جستجو کنید. همه موارد به صورت آزاد نیستند.</search_description>
+			<url>http://www.books-on-line.com/</url>
+			<search_url>http://www.books-on-line.com/bol/KeyWordSearch.cfm?RowCount=50&amp;Searchquery={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Universal Library:کتابخانه جهانی </search_title>
+			<search_description>کتابخانه جهانی (یونیورسال لایبرری) بطور قابل توجهی موفق تر و دارای کتاب های بیشتری است. این کتابخانه دارای مجموعه ای انبوه از 100000 ای بوک است (بعضی از آنها از پروژه ی گوتن برگ می باشند) و هدفش ایجاد یک میلیون ای بوک تا پایان سال 2006 است.</search_description>
+			<url>http://tera-3.ul.cs.cmu.edu/</url>
+			<search_url>http://tera-3.ul.cs.cmu.edu/cgi-bin/DBscripts/advsearch_db.cgi?perPage=25&amp;listStart=0&amp;author1=&amp;subject1=Any&amp;year1=&amp;year2=&amp;language1=Any&amp;scentre=Any&amp;search=Search&amp;title1={$formKeywords}</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>پرتال های مرتبط</context_title>
+		<context_abbrev>پرتال های مرتبط</context_abbrev>
+		<context_description>پرتال های منبع علم عمومی</context_description>
+		<search>
+			<search_title>Science.gov</search_title>
+			<search_description>Science.gov
+ورودی است به بیش از 50 میلیون صفحه از اطلاعات علمی معتبر و انتخاب شده که توسط آژانس های دولت ایالات متحده تهیه شده است و در برگیرنده ی نتایج تحقیق و توسعه می باشد.</search_description>
+			<url>http://www.science.gov</url>
+			<search_url>http://www.science.gov/scigov/search.html?expression={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>SciCentral</search_title>
+			<search_description>SciCentral
+راهنمایی است به لینکهای اخبار فوری و جدید در هر روز، با موضوعاتی شامل علوم زیستی، بهداشت، فیزیک، شیمی، زمین و فضا، مهندسی. این لینکها همچنین مجلات مرتبط، پایگاههای اطلاعاتی، فرصت های شغلی و کنفرانس ها را در بر می گیرد.
+</search_description>
+			<url>http://scicentral.com/</url>
+			<search_url>http://www.google.com/custom?client=pub-2641291926759270&amp;forid=1&amp;channel=1291454416&amp;ie=ISO-8859-1&amp;oe=ISO-8859-1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23FFFFFF%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3AFFFFFF%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A9999FF%3BGIMP%3A9999FF%3BLH%3A50%3BLW%3A78%3BL%3Ahttp%3A%2F%2Fwww.scicentral.com%2Fimages%2Fscclogo_for_google.gif%3BS%3Ahttp%3A%2F%2Fwww.scicentral.com%3BFORID%3A1%3B&amp;hl=en&amp;q={$formKeywords}</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>مطالعات مرتبط</context_title>
+		<context_abbrev>مطالعات مرتبط</context_abbrev>
+		<context_description>با استفاده از یک لینک فعال در دسترسی آزاد به مباحث، می توانید به چکیده یا متن کامل مطالب مرتیط با موضوع خود در مطالعات مشابه دست یابید </context_description>
+		<search>
+			<search_title>Channel 4 Science:شبکه علمی 4</search_title>
+			<search_description>
+سایت علمی شبکه ی 4 دامنه ی وسیعی از موضوعات علمی موجود را از علم جامعه گرفته تا علم پزشکی، تحت پوشش قرار می دهد. این سایت به بخش های وسیعی تقسیم می شود که هر یک در برگیرنده ی موضوعات مرتبط، مقالات و اطلاعات برنامه ای هستند. منابع همراه با لیستی از سایت های مرتبط و ابزار خواندن در پایان مقالات وجود دارد. این سایت همچنین فرهنگ لغتی مفید و پرسش و پاسخی از گفته های متخصصین دارد که طرح پرسش ها علمی را از متخصصین علمی آسان می کند.</search_description>
+			<url>http://www.channel4.com/science/index.html</url>
+			<search_url>http://search.channel4.com/search?&amp;sort=date%3AD%3AL%3Ad1&amp;output=xml_no_dtd&amp;ie=UTF-8&amp;oe=UTF-8&amp;client=standard_c4&amp;proxystylesheet=standard_c4&amp;q={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Intute: Science, Engineering &amp; Technology:اینتیوت :علم، مهندسی و فناوری </search_title>
+			<search_description>اینتیوت :علم، مهندسی و فناوری سرویسی آزاد و آنلاین است که برای شما امکان دسترسی به بهترین منابع شبکه ای برای آموزش و تحقیق را فراهم می کند، و توسط متخصصین شبکه ارزیابی و انتخاب شده است. اینتیوت علوم فیزیکی، مهندسی، محاسبه، جغرافی،ریاضیات و علم محیط را تحت پوشش قرار می دهد. این پایگاه اطلاعاتی در حال حاضر 33349 مورد دارد.</search_description>
+			<url>http://www.intute.ac.uk/sciences/</url>
+			<search_url>http://www.intute.ac.uk/sciences/cgi-bin/search.pl?submit.x=0&amp;submit.y=0&amp;submit=Go&amp;limit=0&amp;subject=sciences&amp;term1={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>HighWire: های وایر</search_title>
+			<search_description>های وایر یکی از فشرده ترین مجلات در زمینه علم، تکنولوژی و پزشکی است. از مارس 2002 های وایر حاوی 11785877 مقاله در بیش از 4500 مجله مدلاین(پزشکی) و 405985 مقاله با موضوع آزاد از 321 مجله های وایر است.
+</search_description>
+			<url>http://highwire.stanford.edu/</url>
+			<search_url>http://highwire.stanford.edu/cgi/searchresults?author1=&amp;pubdate_year=&amp;volume=&amp;firstpage=&amp;src=hw&amp;hits=10&amp;hitsbrief=25&amp;resourcetype=1&amp;andorexactfulltext=and&amp;fulltext={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>FirstGov for Science:اولین دولت برای علم</search_title>
+			<search_description>Science.govورودی است به بیش از 50 میلیون صفحه از اطلاعات علمی معتبر و انتخاب شده که توسط آژانس های دولت ایالات متحده تهیه شده است و در برگیرنده ی نتایج تحقیق و توسعه می باشد.
+این ورودی شما را قادر می سازد تا 47 میلیون صفحه را در زمان واقعی جستجو کنید.</search_description>
+			<url>http://science.gov/</url>
+			<search_url>http://www.science.gov/search30/search.html?expression={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>DOE Information Bridge:DOE
+اینفورمیشن بریج
+پل ارتباطی</search_title>
+			<search_description>اینفورمیشن بریج (پل اطلاعات) منبعی آزاد برای دسترسی به متن کامل و فهرستهای ثبت شده از تحقیقات و گزارشات پیشرفته در
+DOE
+(گروه انرژی) در زمینه فیزیک، شیمی، مواد، بیولوژی، علوم زیستی، فن آوری انرژی، مهندسی، علم کامپیوتر و اطلاعات، انرژی قابل تجدید و موضوعات دیگر فراهم می آورد.</search_description>
+			<url>http://www.osti.gov/bridge/index.jsp</url>
+			<search_url>http://www.osti.gov/bridge/basicsearch.jsp?act=Search&amp;formname=basicsearch.jsp&amp;review=1&amp;SortBy=RELV&amp;SortOrder=DESC&amp;querytype=search&amp;searchFor={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>CASI Technical Report Server:CASI
+سرور گزارش فنی
+</search_title>
+			<search_description>CASI
+سرور گزارش فنی شامل گفته های فهرست شده و چکیده ها تا اسناد طبقه بندی نشده و اعلام نشده در گزارشات علمی و فنی فضایی بانضمام مجموعه اسناد تهیه شده از قبل توسط ناسا،
+The National Advisory Committee for Aeronautics
+کمیته ی ملی مشورت هوانوردی، و فایل تاریخچه ی باز ناسا می باشد که این تاریخچه همه ی چکیده ها و گفته ها را در زمینه های هوانوردی، علم فضا، شیمی، مهندسی، علم جفرافی، علم زندگی، ریاضیات و فیزیک در بردارد.</search_description>
+			<url>http://www.sti.nasa.gov/RECONselect.html</url>
+			<search_url>http://ntrs.nasa.gov/index.cgi?method=search&amp;limit=25&amp;offset=0&amp;mode=simple&amp;order=DESC&amp;keywords={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>GrayLIT Network:شبکه 
+GrayLIT
+</search_title>
+			<search_description>شبکه 
+GrayLIT
+جستجوی متن کامل را از بین ادبیات قدیمی آژانس های چندگانه ی دولتی از طریق یک پرتال علمی با گزارش های فنی امکان پذیر می سازد. این پرتال به آرامی به ماشین های جستجوی مجموعه ادبیات قدیمی متصل می شود و استفاده کننده را قادر می سازد تا اطلاعات را بدون شناختن آژانس حامی پیدا کند.</search_description>
+			<url>http://graylit.osti.gov/</url>
+			<search_url>http://graylit.osti.gov/cgi-bin/dexplcgi</search_url>
+			<search_post>pp=all&amp;INTERFACE=1WINDOW&amp;FORM=DistributedSearch.html&amp;COLLECTION=dticft&amp;COLLECTION=jpl&amp;COLLECTION=gpoinfo&amp;COLLECTION=langley&amp;MAXDOCS=50&amp;QUERY={$formKeywords}</search_post>
+		</search>
+		<search>
+			<search_title>KOSMOI</search_title>
+			<search_description>KOSMOI
+شامل مقالات آموزشی، کتابها، پوسترها و لینکهای شبکه ای برای همه ی علاقه مندان به عجایب موجود در علم، فضا، فناوری، طبیعت و طراحی شبکه می شود که روزانه جدید و تازه می شود.
+</search_description>
+			<url>http://kosmoi.com/</url>
+			<search_url>http://www.google.com/custom?sa=Search&amp;cof=GIMP%3A%23cccccc%3BT%3A%23ffdd99%3BLW%3A468%3BALC%3Ared%3BL%3Ahttp%3A%2F%2Fencyclozine.com%2FPictures%2FBanner%2FEncycloZine2.jpg%3BGFNT%3A%23999999%3BLC%3A%23ffcc33%3BLH%3A60%3BBGC%3Ablack%3BAH%3Acenter%3BVLC%3A%23ffcc66%3BGL%3A2%3BGALT%3A%23ffffff%3BAWFID%3A29728ead1ae72975%3B&amp;domains=EncycloZine.com%3BKosmoi.com%3BEluzions.com&amp;sitesearch=Kosmoi.com&amp;q={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>PhilSci Archive:آرشیو علم فلسفه</search_title>
+			<search_description>PhilSci Archive:آرشیو علم فلسفه آرشیوی است الکترونیک برای پیش پرینتهای علم فلسفه</search_description>
+			<url>http://philsci-archive.pitt.edu/</url>
+			<search_url>http://philsci-archive.pitt.edu/perl/search?_order=bytitle&amp;abstract%2Fkeywords%2Ftitle_srchtype=ALL&amp;_satisfyall=ALL&amp;_action_search=Search&amp;abstract%2Fkeywords%2Ftitle={$formKeywords}</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>مشاهده هزینه بر </context_title>
+		<context_abbrev>مشاهده هزینه بر </context_abbrev>
+		<context_description>مشاهده هزینه بر برای آن دسته افرادی است که دسترسی مستقیم به مقالات مجلات الکترونیک را از طریق اشتراک ندارد. این نوع سرویس دهی به مشتریان این امکان را می دهد تا دسترسی مستقیم به یک مقاله را با پرداخت  کارت اعتباری با استفاده از مکانیزم پرداخت ایمن 
+RSC 
+سریعا کارت آنان عتبار مجدد پیدا می کندو مشتریان می توانند به فایل های مقالات مورد نیاز خود برای یک دوره 30 روزه دسترسی پیدا کنند </context_description>
+		<search>
+			<search_title>Ingenta:اینجنتا</search_title>
+			<search_description>اینجنتا دسترسی به متن کامل مقالات را محدود می سازد. اگرچه دسترسی به متن کامل هزینه بر می باشد، اما این سایت را می توان به عنوان نمایه به صورت رایگان استفاده کرد.</search_description>
+			<url>http://www.ingenta.com/</url>
+			<search_url>http://www.ingenta.com/isis/searching/Search/ingenta?database=1&amp;title={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>ebrary:ابرری</search_title>
+			<search_description>محققان مستقلی که دسترسی آزاد به پایگاه های اطلاعاتی ابرری را ندارند از طریق کتابخانه هایشان می توانند همین حالا یک حساب شخصی با حداقل 5 دلار باز کنند. ابرری دیسکاور علوم آکادمیک چند گانه را به طور منسجم و واحد درمی آورد و دسترسی به بیش از 20000 عنوان معتبر را که در برگیرنده متن کامل، صفحه موسیقی، گزارشات و دیگر اسناد معتبر ار بیش از 175 ناشر راهنما مانند مجله دانشگاه کمبریج، رندم هوس، 
+Inc
+و شرکت های مک گرو هیل را میسر می سازد.</search_description>
+			<url>http://www.ebrary.com/corp/content.htm</url>
+			<search_url>http://shop.ebrary.com/Top?layout=search&amp;f00=text&amp;p01=&amp;f01=subject&amp;d=journal&amp;l=en&amp;sch=%A0%A0%A0%A0%A0Search%A0%A0%A0%A0%A0&amp;frm=adv.x&amp;p00={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Questia:کوازتیا</search_title>
+			<search_description>کوازتیا دسترسی به بیش از 47000 کتاب، 375000 مجله، و مقالات روزنامه ای را فراهم می کند. هر صفحه را جستجو کنید همه کتابها و مقالات به طور کامل و تمام در دسترس می باشند-. میزان اشتراک از 19.05 در هر ماه تا 119.95 به طور سالانه متغیر می باشد.</search_description>
+			<url>http://www.questia.com/</url>
+			<search_url>http://www.questia.com/SM.qst?act=search&amp;keywordsSearchType=1000&amp;mediaType=book&amp;mediaType=journal&amp;mediaType=magazine&amp;mediaType=newspaper&amp;mediaType=encyclopedia&amp;mediaType=startpage&amp;keywords={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>TheScientificWorld: دنیای علم</search_title>
+			<search_description>ساینتیفیک ورلد با ارائه پایگاه علمی
+)sciBASE(
+دسترسی آزاد به مجموعه ای از پایگاههای تحقیقی علمی، تکنیکی و پزشکی را امکان پذیر می کند.
+)sciBASE(
+هم اکنون نیز تحویل فوری و دیجیتال متن کامل مقالات را می تواند انجام دهد.بیش از 700 مقاله با شرکت ناشران ایجاد شده است، و 
+)sciBASE(
+برای کاربرانی که از حمایت کتابخانه ای (محیط های بدون واسطه) برخوردار نیستند نقش ویژه و موثری دارد.</search_description>
+			<url>http://www.thescientificworld.com/</url>
+			<search_url>http://www.thescientificworld.com/SCIENTIFICWORLDJOURNAL/search/SearchResults.asp?From=Main&amp;Terms={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Wiley InterScience Pay-per-view Service:ویلی اینتر ساینس: سرویس پرداخت با هر بار مشاهده </search_title>
+			<search_description>ویلی اینتر ساینس: سرویس پرداخت با هر بار مشاهده ، دسترسی  ثابت و کامل به متن مجموعه ای وسیع از مقالات مجلات یا فصل های موجود در یک کتاب را که روی ویلی اینترساینس موجود می باشد بدون نیاز به اشتراک فراهم می کند. این سرویس به هر فرد اجازه می دهد تا دسترسی به مقالات مجزای مجله یا فصول کتاب را بطور مستقیم با استفاده از یک کارت اعتباری پیدا کند. دسترسی تا 24 ساعت بطور مداوم وجود دارد.</search_description>
+			<url>http://www3.interscience.wiley.com/aboutus/ppv-articleselect.html</url>
+			<search_url>http://www3.interscience.wiley.com/search/allsearch</search_url>
+			<search_post>allContentSearchForm=&amp;mode=quicksearch&amp;WISindexid1=WISall&amp;WISsearch1={$formKeywords}</search_post>
+		</search>
+	</context>
+	<context>
+		<context_title>راهنما ها</context_title>
+		<context_abbrev>راهنماها</context_abbrev>
+		<context_description>به اطلاعات موسسات تحقیقاتی دسترسی پیدا کنید</context_description>
+		<search>
+			<search_title>Scholarly Societies Project Meeting/Conference Announcement List:لیست اعلان پروژه ها، ملاقات، و کنفرانس ها انجمن های دانشگاهی</search_title>
+			<search_description>لیست اعلان پروژه ها، ملاقات، و کنفرانس ها انجمن های دانشگاهی سرویس است قابل جستجو که توسط دانشگاه واترلو تهیه شده است.</search_description>
+			<url>http://www.scholarly-societies.org/</url>
+			<search_url>http://ssp-search.uwaterloo.ca/cd.cfm?search_type=advanced&amp;field1=any&amp;boolean1=and&amp;operator1=and&amp;field2=any&amp;textfield2=&amp;boolean2=and&amp;operator2=and&amp;field3=any&amp;textfield3=&amp;boolean3=and&amp;operator3=and&amp;founded=none&amp;&amp;textfield1={$formKeywords}</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>آنلاین عمومی</context_title>
+		<context_abbrev>آنلاین عمومی</context_abbrev>
+		<context_description>محل های آنلاین را انتخاب کنید ، دسترسی آزاد و عمومی متن مطالعات تحقیقاتی روی سایت شما قرار می گیرد</context_description>
+		<search>
+			<search_title>Ask the Experts:از متخصصین بپرس</search_title>
+			<search_description>از متخصصین بپرس توسط مجله علمی آمریکایی تهیه شده است. سوالات و پاسخ ها بایگانی و سازماندهی شده اند.</search_description>
+			<url>http://www.sciam.com/askexpert</url>
+			<search_url>http://www.google.com/search?q=site%3Asciam.com+%22ask+the+experts%22%2B+</search_url>
+		</search>
+		<search>
+			<search_title>EurekAlert!</search_title>
+			<search_description>یک سرویس روزنامه ای آنلاین است که توسط انجمن توسعه ی علم آمریکا ایجاد شده است
+(AAAS)
+هدف اصلی 
+EurekAlert!
+فراهم کردن پایگاهی عمومی است تا موسسات تحقیقاتی، دانشگاهها، آژانس های دولتی، شرکت ها و همه ی کسانی که خواهانند اخبار مرتبط با علم را به گزارشگران و رسانه های خبری ارائه دهند، این کار را براحتی انجام دهند.
+EurekAlert!
+این روزنامه ها را بایگانی می کند و به راحتی در دسترس عموم قرار می دهد.</search_description>
+			<url>http://www.eurekalert.org/links.php</url>
+			<search_url>http://search.eurekalert.org/e3/query.html?col=ev3rel&amp;qc=ev3rel&amp;x=8&amp;y=9&amp;qt={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Mad Science Net: آزمایشگاه وسیع 24 ساعته</search_title>
+			<search_description>Mad Science Net:آزمایشگاه وسیع 24 ساعته یک مجموعه ی کامل از دانشمندان که به سوالات شما پاسخ می دهند.</search_description>
+			<url>http://www.madsci.org/</url>
+			<search_url>http://www.madsci.org/cgi-bin/search?Submit=Submit+Query&amp;or=AND&amp;words=1&amp;index=MadSci+Archives&amp;MAX_TOTAL=25&amp;area=All+areas&amp;grade=All+grades&amp;query={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>JISCmail</search_title>
+			<search_description>
+سرویس فهرست میل آکادمی ملی که به میل
+JISC
+معروف است یکی از سرویس های 
+JANET
+است که بوسیله ی 
+JANET
+انگلستان
+(www.ja.net)
+تهیه و توسط 
+JISC
+(www.jisc.ac.uk)
+تاسیس شده است تا برای انجمن های یادگیری، تدریس و تحقیق مفید باشد. انجمن تسهیلات علمی و فناوری 
+(www.scitech.ac.uk)
+در حال حاضر میل
+JISC
+را اجرا توسعه می دهد تا به عنوان بخشی از 
+JANET(UK)
+باشد.
+</search_description>
+			<url>http://www.jiscmail.ac.uk/about/index.htm</url>
+			<search_url>http://www.jiscmail.ac.uk/../cgi-bin/listsearcher.cgi?opt=listsearcher&amp;listname=&amp;alpha=&amp;category=&amp;chk_phrase=&amp;chk_wds=ON&amp;thecriteria={$formKeywords}</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>فایلهای آموزشی</context_title>
+		<context_abbrev>دستورالعملی</context_abbrev>
+		<context_description>فورا جستجویی بر اساس موضوع مقاله آغاز می شود و استفاده کنندگان به مقالات موجود یا بایگانی شده در آن زمینه از روزنامه های راهنما در سر تا سر جهان مرتبط می شوند</context_description>
+		<search>
+			<search_title>Research Channel Programs: برنامه های کانال تحقیق: ویدئوهای علمی و آنلاین استنفورد</search_title>
+			<search_description>برنامه های کانال تحقیق: ویدئوهای علمی و آنلاین استنفورد کنسرسیومی است از دانشگاههای تحقیقاتی و شاخه های تحقیقاتی شرکتها که به منظور وسیع کردن دسترسی و تقدیر از فعالیتهای فردی و گروهی، ایده ها، فرصتها در تحقیقات اصلی و کاربردی بوجود آمده است.</search_description>
+			<url>http://www.researchchannel.org/program/displayseries.asp?collid=134</url>
+			<search_url>http://www.researchchannel.org/search/sitesearch.aspx?RecordsPerPage=5&amp;Order=Rank&amp;keywords=program&amp;Query={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>National Science Digital Library:کتابخانه دیجیتال علوم ملی</search_title>
+			<search_description>کتابخانه دیجیتال علوم ملی
+NSDL
+بوسیله موسسه علوم ملی ایجاد شده تا دسترسی سازمان یافته به منابعی با کیفیت بالا را فراهم آورد و همه ی ابزارهای حمایت کننده از نوآوریهای موجود در زمینه تدریس و یادگیری در همه ی سطوح علم، فن آوری، مهندسی و آموزش ریاضیات را مهیا سازد.</search_description>
+			<url>http://nsdl.org/about</url>
+			<search_url>http://nsdl.org/search/?</search_url>
+			<search_post>formview=searchresults&amp;verb=Search&amp;s=0&amp;n=10&amp;boost%5B%5D=compoundTitle&amp;boost%5B%5D=compoundDescription&amp;q={$formKeywords}</search_post>
+		</search>
+		<search>
+			<search_title>Science Learning Network:شبکه ی یادگیری علم</search_title>
+			<search_description>شبکه ی یادگیری علم کمیته ای است از تحصیل کردگان، محصلان، مدارس ، موزه های علمی، و دیگر موسسات که الگویی جدید برای پاسخ به سوالات را نشان می دهد و شامل انواع مشکلات و سوالات مطرح شده، اطلاعات، دلایل و آزمایشگاهها می باشد.</search_description>
+			<url>http://www.sln.org/</url>
+			<search_url>http://192.231.162.154:8080/query.html?col=first&amp;ht=0&amp;qp=&amp;qs=&amp;qc=&amp;pw=600&amp;ws=1&amp;la=&amp;qm=0&amp;st=1&amp;nh=25&amp;lk=1&amp;rf=0&amp;oq=&amp;rq=0&amp;si=0&amp;qt={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Science, Mathematics, Engineering and Technology Education (SMETE):آموزش علوم، ریاضیات، مهندسی و تکنولوژی 
+(SMETE)
+</search_title>
+			<search_description>آموزش علوم، ریاضیات، مهندسی و تکنولوژی 
+(SMETE)
+حاوی یک نمونه اولیه قابل جستجو و فعال از کتابخانه دیجیتال ملی آموزش علم، ریاضیات، مهندسی وتکنولوژی است.
+</search_description>
+			<url>http://www.smete.org/</url>
+			<search_url>http://www.smete.org/smete/?path=/public/find/search_results.jhtml&amp;_DARGS=/smete/public/find/index_body.jhtml&amp;/smete/forms/FindLearningObjects.operation=search&amp;_D:/smete/forms/FindLearningObjects.operation=%20&amp;_D:/smete/forms/FindLearningObjects.keyword=%20&amp;/smete/forms/FindLearningObjects.learningResourceType=&amp;_D:/smete/forms/FindLearningObjects.learningResourceType=%20&amp;/smete/forms/FindLearningObjects.grade=0-Any&amp;_D:/smete/forms/FindLearningObjects.grade=%20&amp;/smete/forms/FindLearningObjects.title=&amp;_D:/smete/forms/FindLearningObjects.title=%20&amp;/smete/forms/FindLearningObjects.author=&amp;_D:/smete/forms/FindLearningObjects.author=%20&amp;/smete/forms/FindLearningObjects.hostCollection=&amp;_D:/smete/forms/FindLearningObjects.hostCollection=%20&amp;/smete/forms/FindLearningObjects.afterYear=&amp;_D:/smete/forms/FindLearningObjects.afterYear=%20&amp;/smete/forms/FindLearningObjects.beforeYear=&amp;_D:/smete/forms/FindLearningObjects.beforeYear=%20&amp;&amp;/smete/forms/FindLearningObjects.keyword={$formKeywords}</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>چند رسانه ای</context_title>
+		<context_abbrev>چند رسانه ای</context_abbrev>
+		<context_description>محتوای چند رسانه ای</context_description>
+		<search>
+			<search_title>The Open Video Project:پروژه دوربین ویدئویی باز </search_title>
+			<search_description>پروژه دوربین ویدئویی باز مجموعه ای است از یک ویدئو دیجیتال عمومی که برای تحقیق و دیگر اهداف در دسترس می باشند. هدف از این پروژه ویدئویی باز جمع آوری و در دسترس قرار دادن مجموعه ای از محتوای ویدئویی دیجیتال شده برای این ویدئو، بازیابی چند رسانه ای، کتابخانه دیجیتال و دیگر انجمن ها می باشد.</search_description>
+			<url>http://www.open-video.org/index.php</url>
+			<search_url>http://www.open-video.org/results.php?search_field=all&amp;terms={$formKeywords}</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>خط مشی دولت </context_title>
+		<context_abbrev>خط مشی دولت </context_abbrev>
+		<context_description>دسترسی به اطلاعات و سرویس های ورودی فراهم شده توسط دولت ایالات متحده و کانادا پیدا کنید</context_description>
+		<search>
+			<search_title>Access to Australian Government Information and Services:دسترسی به اطلاعات و سرویس دولت استرالیا</search_title>
+			<search_description>رالین گاورمنت انتری پوینت (نقطه ورودی به دولت استرالیا) دسترسی جامع و کاملی به اطلاعات و سرویس این دولت را فراهم می سازد. می توانید از طریق این سایت و 
+&lt;a href=&quot;http://www.australia.gov.au&quot;&gt;www.australia.gov.au&lt;/a&gt;
+هسته ای متمرکز از اطلاعات دولت استرالیا را پیدا کنید. که در حال حاضر بعنوان راهنمای بیش از 700 وب سایت از دولت استرالیا است، و بیش از 5000000 صفحه نمایه (ایندکس) کرده که هم متا دیتا و هم متن کامل را در بر می گیرد تا مطمئن شوید این یک پرتال کاملا جامع می باشد.</search_description>
+			<url>http://www.fed.gov.au</url>
+			<search_url>http://govsearch.australia.gov.au/search/search.cgi?collection=gov&amp;form=au&amp;query=&amp;query_phrase=&amp;query_or=&amp;query_not=&amp;meta_f_sand=&amp;scope=&amp;fscope=512&amp;num_ranks=20&amp;chksummary=chksummary&amp;query_and={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>The Government of Canada: دولت کانادا</search_title>
+			<search_description>شما می توانید در همه بخش های دولتی، بخش های فدرال و دفاتر استانی، مرزی و شهری جستجو کنید. یک لینک بخش ها و ادارات (دیپارتمنتز اند ایجنسیز) وجود دارد و ایندکس 
+A
+تا 
+Z
+به شما یک کلید واژه جستجو برای برنامه ها و خدمات ارائه می دهد.
+پیشرفتی که اخیرا روی سایتهای دیپارتمنت انجام شده این است که در برگیرنده همه گفته ها و افشاء حقایق می باشد و صفحه ای نیز در مورد هزینه های مسافرت، مهمانی ها، قراردادها، ضمانت نامه ها و پاداش ها دارد.
+صفحه ابوت کانادا ( در مورد کانادا) شامل لینکهایی به بخش ها و دفاتر، ساختار دولت کانادا کمیته های تفحص و غیره می شود. به غیز از وب سایت دیپارتمنت، دولت کانادا پرتال هایی را ایجاد کرده است که اطلاعات بین فدرال و منابع استانی و سازمانهای غیر دولتی را جمع آوری و به یکدیگر متصل کرده است.</search_description>
+			<url>http://www.canada.gc.ca/main_e.html</url>
+			<search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple&amp;pg=q&amp;enc=iso88591&amp;site=main&amp;bridge=&amp;stt=&amp;lowercaseq=&amp;what=web&amp;user=searchintranet&amp;browser=N6E&amp;kl=XX&amp;op=a&amp;q={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Directgov</search_title>
+			<search_description>دیرکت گاو سرویسی دولتی است که به مردم امکان دسترسی به جدیدترین و گسترده ترین دامنه ی سرویس اطلاعات عمومی را در مکانی روی شبکه (وب) و تلویزیون دیجیتال (دیجیتال تی وی) می دهد. دیرکت گاو از مشخصات طراحی شده و در نظر گرفته شده از طریق
+UK GovTalk
+استفاده می کند.</search_description>
+			<url>http://www.direct.gov.uk</url>
+			<search_url>http://www.direct.gov.uk/AdvancedSearch/SearchResults/fs/en?NP=1&amp;PO1=C&amp;PI1=W&amp;PF1=A&amp;PG=1&amp;RP=20&amp;SC=__dgov_site&amp;Z=1&amp;PT1={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Info4local.gov.uk:اینفو4 لوکال.گاو.یو کی (انگلستان)</search_title>
+			<search_description>اطلاعات برای دولت محلی از دولت مرکزی. این سایت به مقامات محلی کمک می کند تا خیلی سریع و راحت بتوانند اطلاعات مربوطه را از وب سایت های گروههای دولت مرکزی، آژانس ها و دیگر قسمتهای عمومی پیدا کنند. این قسمت دارای اطلاعات وسیعی در زمینه بکارگیری دولت الکترونیک می باشد.</search_description>
+			<url>http://www.info4local.gov.uk</url>
+			<search_url>http://www.info4local.gov.uk/?view=Search+results&amp;subjects=all&amp;departmentsIds=0&amp;informationTypesIds=all&amp;query={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>The New Zealand government portal:پرتال دولت نیوزلند</search_title>
+			<search_description>پرتال دولت نیوزلند وب سایتی است که امکان جستجو برای لینکها را فراهم می کند و به اطلاعات آنلاین و آف لاین و سرویس هایی از بیشتر دفاتر دولتی متصل می شود. این سایت توسط کمیته سرویس های ایالتی (استیت سرویسیز کامیژن) که بخشی در دولت نیوزلند می باشد، مدیریت و حمایت می شود.</search_description>
+			<url>http://www.govt.nz</url>
+			<search_url>http://www.govt.nz/search?type=spider&amp;t=spider&amp;q={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>اروپا</search_title>
+			<search_description>اطلاعات موجود در کشورهای عضو اتحادیه اروپا شامل داده های آماری، سیاست ها، اخبار، اسناد اداری، متون قانونی و دیگر انتشارات</search_description>
+			<url>http://europa.eu.int/index_en.htm</url>
+			<search_url>http://europa.eu.int/geninfo/query/resultaction.jsp?page=1</search_url>
+			<search_post>Collection=EuropaFull&amp;ResultTemplate=/result_en.jsp&amp;ResultCount=25&amp;qtype=simple&amp;ResultMaxDocs=200&amp;DefaultLG=en&amp;QueryText={$formKeywords}</search_post>
+		</search>
+		<search>
+			<search_title>The Global Legal Information Network (GLIN):شبکه اطلاعات قانونی جهانی (گلابل لگال اینفورمیشن نت ورک)
+GLIN
+</search_title>
+			<search_description>GLIN
+یک پایگاه اطلاعاتی از قوانین، آیین نامه ها، تصمیمات قضایی و دیگر منابع تکمیلی قانونی می باشد که توسط دفاتر سازمان های دولتی و بین المللی منتشر شده است. اعضای 
+GLIN
+متن کامل و رسمی از اسناد چاپ شده را روی پایگاه هایی به زبان اصلی شان منتشر می کنند. هر سند با خلاصه انگلیسی و واژه های موضوعی انتخاب شده از ایندکس های چند زبانه در 
+GLIN
+همراه می باشد.
+</search_description>
+			<url>http://www.glin.gov</url>
+			<search_url>http://www.glin.gov/search.do?refineQuery=&amp;offset=0&amp;refineQueryType=&amp;fromSearch=true&amp;queryType=ALL&amp;searchBtn=Search&amp;includeAllFields=on&amp;searchAll=on&amp;sumLanguage=any&amp;pubLanguage=any&amp;pubJurisdiction=any&amp;publicationJurisdictionExclude=false&amp;searchPublicationDate=true&amp;dateFromDay=01&amp;dateFromMonth=01&amp;dateFromYear=&amp;dateToDay=01&amp;dateToMonth=01&amp;dateToYear=&amp;subjTerm=&amp;subjTermConjunction%5B0%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B1%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B2%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B3%5D=AND&amp;subjTerm=&amp;searchOrder=default&amp;hitsPerPage=10&amp;showSummary=on&amp;queryString={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>FirstGov</search_title>
+			<search_description>فرست گاو (فدرال ایالات متحده) یک شرکت عمومی-خصوصی است که توسط یک هیات نمایندگی دوطرفه رهبری و هدایت می شود.</search_description>
+			<url>http://www.firstgov.gov/</url>
+			<search_url>http://www.firstgov.gov/fgsearch/index.jsp?db=www&amp;st=AS&amp;ms0=should&amp;mt0=all&amp;rn=2&amp;parsed=true&amp;x=2&amp;y=8&amp;mw0={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Canada Sites: سایتهای کانادا</search_title>
+			<search_description>سایت های کانادا دسترسی به یک ورودی اطلاعاتی و خدماتی را که توسط دولت کانادا و هر یک از استان ها در اختیارشان قرار داده شده امکان پذیر می سازند.</search_description>
+			<url>http://www.canada.gc.ca/main_e.html</url>
+			<search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple.html&amp;enc=iso88591&amp;pg=q&amp;kl=en&amp;site=main&amp;q={$formKeywords}</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>گزارش های رسانه ای</context_title>
+		<context_abbrev>گزارش های رسانه ای</context_abbrev>
+		<context_description>فورا جستجویی بر اساس موضوع مقاله آغاز می شود و استفاده کنندگان به مقالات موجود یا بایگانی شده در آن زمینه از روزنامه های راهنما در سر تا سر جهان مرتبط می شوند</context_description>
+		<search>
+			<search_title>اخبار گوگل</search_title>
+			<search_description>گزارش های خبری را با استفاده از ماشین جستجوی معروف اخبار گوگل (گوگل نیوز) جستجو کنید.</search_description>
+			<url>http://news.google.com/</url>
+			<search_url>http://news.google.com/news?hl=en&amp;q={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Daily Science News from NewScientist:اخبار علمی روزانه از نیو ساینتیست</search_title>
+			<search_description>اخبار علمی روزانه از نیو ساینتیست، امکان استفاده از اخبار علمی تازه و به روز را در تمام طول روز برای شما فراهم می آورد.</search_description>
+			<url>http://www.newscientist.com/news/</url>
+			<search_url>http://www.newscientist.com/search.ns?doSearch=true&amp;query={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Nature Science Update:نیچر ساینس آپ دیت (خبرهای جدید طبیعت)</search_title>
+			<search_description>نیچر ساینس آپ دیت (خبرهای جدید طبیعت) داستانهای خبری روزانه را که بوسیله سردبیران مجله طبیعت (نیچر) نوشته می شود را به شما ارائه می دهد.</search_description>
+			<url>http://www.nature.com/nsu/</url>
+			<search_url>http://search.nature.com/search/?sp-x-9=cat&amp;sp-q-9=NEWS&amp;submit=go&amp;sp-a=sp1001702d&amp;sp-sfvl-field=subject%7Cujournal&amp;sp-t=results&amp;sp-x-1=ujournal&amp;sp-p-1=phrase&amp;sp-p=all&amp;sp-q={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Science News Online: اخبار علمی آنلاین</search_title>
+			<search_description>ساینس نیوز آنلاین (اخبار علمی آنلاین) یکی از مفیدترین مجلات خبری علمی آنلاین است. این هفته نامه 75 ساله هر هفته تعداد زیادی متن کامل مقالات را علاوه بر مجموعه ای از مقالات بایگانی شده از سال 1994 تا کنون را روی شبکه قرار می دهد </search_description>
+			<url>http://www.sciencenews.org/</url>
+			<search_url>http://www.sciencenews.org/pages/search_results.asp?search={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Newsdirectory:نیوز دیرکتری (راهنمای خبری) </search_title>
+			<search_description>نیوز دیرکتری (راهنمای خبری) یک راهنمای جامع و قابل جستجو برای رسانه های جهانی آنلاین و انگلیسی زبان است.در حال حاضر بیش از 8000 روزنامه، مجله و بیش از 1000 گوینده تلویزیونی آمریکایی فهرست شده اند</search_description>
+			<url>http://www.newsdirectory.com/</url>
+			<search_url>http://www.newsdirectory.com/hbSearch.php</search_url>
+			<search_post>s={$formKeywords}&amp; submit=Go</search_post>
+		</search>
+		<search>
+			<search_title>BBC Online: Science &amp; Nature:BBC
+آنلاین: علم و طبیعت
+</search_title>
+			<search_description>سرویس های
+BBC
+آنلاین: علم و طبیعت که شامل اطلاعات، منابع و اخبار روزمره ی با ارزشی هستند به دسته بندی های مشخصی تقسیم شده اند. این دسته بندی ها در برگیرنده جسم انسان، ژن ها، زندگی ماقبل تاریخ، فضا و حیوانات است. قسمت هات تاپیک یا عنوان داغ زمینه ی علمی نهفته در آخرین اخبار را کشف می کند</search_description>
+			<url>http://www.bbc.co.uk/sn/</url>
+			<search_url>http://www.bbc.co.uk/cgi-bin/search/results.pl?uri=%2Fsn%2F&amp;q={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Energy Science News:اخبار علم انرژی</search_title>
+			<search_description>توسط دفتر علمی گروه انرژی ایالات متحده منتشز می شود. هدف از این خبرنامه اطلاع رسانی به دانشمندان، مهندسان، تحصیل کردگان، محصلان و عموم، در مورد پیشرفتهای تحقیقاتی حمایت شده توسط دفتر علمی، است </search_description>
+			<url>http://www.eurekalert.org/doe/</url>
+			<search_url>http://search.eurekalert.org/e3/query.html?col=ev3rel+ev3feat&amp;ht=0&amp;qp=%2Binstitution%3ADOE+OR+%2Bfunder%3A%22US+Department+of+Energy%22&amp;qs=&amp;qc=ev3rel+ev3feat&amp;pw=%25&amp;ws=0&amp;la=&amp;si=1&amp;fs=&amp;ex=&amp;rq=0&amp;oq=&amp;qm=0&amp;ql=&amp;st=1&amp;nh=10&amp;lk=1&amp;rf=1&amp;qt={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>ScienceDaily: علم روزانه</search_title>
+			<search_description>آخرین اخبار تحقیقاتی</search_description>
+			<url>http://www.sciencedaily.com/index.htm</url>
+			<search_url>http://www.sciencedaily.com/search/?topic=all&amp;dates=1995&amp;dates=2005&amp;sort=relevance&amp;keyword={$formKeywords}</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>جستجوی شبکه ای</context_title>
+		<context_abbrev>جستجوی شبکه ای</context_abbrev>
+		<context_description>یک واژه ی جستجو را برای منابع اینترنت وارد کن تا از طریق ماشین های جستجو به نتیجه برسید</context_description>
+		<search>
+			<search_title>گوگل</search_title>
+			<search_description>با استفاده از ماشین های معرف چاوشگر گوگل جستجو کنید.</search_description>
+			<url>http://www.google.com/</url>
+			<search_url>http://www.google.com/search?q={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>گوگل اسکولار</search_title>
+			<search_description>گوگل اسکولار امکان جستجو های خاص را د ر زمینه ادبیات پژوهشی شامل  مقالات کارشناسی شده ، پایان نامه ها، کتب،،پیش پرینت ها، چکیده ها و گزارش های فنی فراهم می سازد.محتوای این حیطه شامل تعدادی از ناشران و تدوین کنند گان است که گوگل توسط آنها نسازمان یافته است.برای مثال انجمن محاسبه ی ماشین ها، 
+IEEE،
+سرویس جایگزین کتابخانه جهانی با دسترسی آزاد  و ... .نتیایج مشخص شده ورژن های متفاوتی از شاخه ها، تحلیل گفته ها و مکان کتابخانه را (فقط کتاب های موجود) را نشان می دهد</search_description>
+			<url>http://scholar.google.com</url>
+			<search_url>http://scholar.google.com/scholar?ie=UTF-8&amp;oe=UTF-8&amp;hl=en&amp;q={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Clusty the Clustering Engine</search_title>
+			<search_description>این ابزار جستجو از ویویزمو نتایج تصادفی را از بین جستجوهای انتخاب شده ارائه می دهد. با متا سرچ کل شبکه را جستجو کنید یا با استفاده از عناوین، اخبار، شایعات، تصاویر یا تولیدات را از
+Bizrate
+یا
+eBoy 
+جستجو کنید.</search_description>
+			<url>http://clusty.com/about</url>
+			<search_url>http://clusty.com/search?query={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Vivisimo</search_title>
+			<search_description>تکنولوژی تصادفی و جایزه بر ویویزمو که توسط دانشمندان واحد جستجوی کارنج میلون توسعه یافته در حال باز کردن ارزش اطلاعات ذخیره شده در 500 شرکت، وب سایتهای عالی، ناشران معتبر و آژانس های دولتی با دسته بندی کردن نتایج جستجو برای سفارشات معنی دار است،تا به پیشرفتی در زمینه شکافتن اطلاعات و دستیابی به اطلاعات مربوطه برسد.</search_description>
+			<url>http://vivisimo.com</url>
+			<search_url>http://vivisimo.com/search?tb=homepage&amp;v%3Asources=Web&amp;query={$formKeywords}</search_url>
+		</search>
+	</context>
+</version>

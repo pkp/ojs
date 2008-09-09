@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000017.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Section Editor 
+  *
+  * $Id$
+  --><topic title="سردبیر بخش" toc="journal/toc/000003" key="journal.roles.sectionEditor" locale="fr_IR" id="journal/topic/000017" >
+  <section><![CDATA[<p>
+مدیر بخش فرآیند ویرایش و بررسی مطالب دریافتی را در قسمت خود بر عهده دارد . در برخی از موارد سردبیر بخش علاوه بر وظایف خاص خودش موظف است تا از طریق
+{help_topic key="editorial.sectionEditorsRole.review" text="Review"} 
+سایر مطالبی را هم که درحال بررسی توسط سایر کاربران (مانند ویراستار ٫ غلط گیر و ...) است از طریق
+{help_topic key="editorial.sectionEditorsRole.editing" text="Editing"}
+در اکثر موارد سردبیر بخش تنها با فرآیند بازنگری و سردبیر مافوق خود سروکار دارد . در سیاست گذاری کلی مجله مشخص می شود که وظایف چگونه بین بخش ها و کاربران تقسیم شود .
+</p>]]></section>
+</topic>

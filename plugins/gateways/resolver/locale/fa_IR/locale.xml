@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  --><locale full_name="Farsi" name="fa_IR" >
+  <message key="plugins.gateways.resolver.displayName" >پلاگین تحلیل آدرس</message>
+  <message key="plugins.gateways.resolver.description" >این پلاگین بر اساس اطلاعات مرجع نویسی شماره های مجله و مقالات را تحلیل میکند.</message>
+  <message key="plugins.gateways.resolver.errors.errorMessage" >تحلیل آیتم مورد نظر بر مبنای اطلاعات مرجع نویسی داده شده ممکن نیست. لطفا اطمینان حاصل کنید که اطلاعات مرجع نویسی داده شده مفصل بوده و به یک مورد مشخص در این سایت او جی اس اشاره میکند.</message>
+  <message key="plugins.gateways.resolver.exportHoldings" >نگاهداری داده های استخراجی</message>
+</locale>

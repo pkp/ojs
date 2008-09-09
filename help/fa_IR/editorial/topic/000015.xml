@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000015.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submissions - Unassigned 
+  *
+  * $Id$
+  --><topic title="نامشخص" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.unassigned" locale="fa_IR" id="editorial/topic/000015" >
+  <section><![CDATA[<p>هر ساب میشن جدید در مجله با اضافه شدن به لیست موارد نامشخص وارد روند بررسی می شود. برای ارجاع یک ساب میشن به دبیر، سردبیر باید روی عنوان آن کلیک کند. این کار سردبیر را به صفحه مخصوص آن ساب میشن می برد و می تواند آن را به یک دبیر ارجاع دهد. پس از مشخص شدن دبیر، ساب میشن از لیست موارد نامشخص به لیست در دست کارشناسی منتقل می شود.</p>]]></section>
+</topic>

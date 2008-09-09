@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submissions Index 
+  *
+  * $Id$
+  --><topic title="ساب میشن ها" toc="editorial/toc/000001" subtoc="editorial/toc/000002" key="editorial.editorsRole.submissions" locale="fa_IR" id="editorial/topic/000002" >
+  <section><![CDATA[<p>همه ساب میشن های یک مجله، بسته به این که در کدام مرحله از روند دبیری باشند، در یکی از نوبت های چهارگانه صفحه ساب میشن ها یافت می شوند. سردبیران از طریق این صفحه به تمام ساب میشن های مجله دسترسی دارند، در حالی که دبیران تنها به ساب میشن هایی که دسترسی دارند که به آنها ارجاع شده باشد.</p>]]></section>
+</topic>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+<!--
+  * 000014.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Proofreader's Role
+  *
+  * $Id$
+  --><toc title="نقش چک کننده نهایی" parent_topic="editorial/topic/000014" locale="fa_IR" id="editorial/toc/000014" >
+  <topic title="ساب میشن ها" id="editorial/topic/000042" />
+  <topic title="چک نهایی" id="editorial/topic/000043" />
+  <breadcrumb title="روند دبیری" url="editorial/topic/000000" />
+  <breadcrumb title="نقش چک کننده نهایی" url="editorial/topic/000014" />
+</toc>

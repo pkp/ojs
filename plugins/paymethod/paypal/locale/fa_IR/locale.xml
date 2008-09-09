@@ -1,0 +1,30 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2006-2008 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+ --><locale full_name="Farsi" name="fa_IR" >
+  <message key="plugins.paymethod.paypal.displayName" >پرداخت از طریق PayPal</message>
+<!--فرم تنظیمات PayPal-->  <message key="plugins.paymethod.paypal.settings.paypalenable" >فعال سازی PayPal</message>
+  <message key="plugins.paymethod.paypal.settings.paypalurl" >IPN URL</message>
+  <message key="plugins.paymethod.paypal.settings.paypalurl.description" ><![CDATA[این آدرس سرویس اخباری پرداخت سریع PayPal یا IPN است. برای آزمایش <u>https://www.sandbox.paypal.com/cgi-bin/webscr</u>; و برای سیستم واقعی  <u>https://www.paypal.com/cgi-bin/webscr</u> بکار ببرید.]]></message>
+  <message key="plugins.paymethod.paypal.settings.selleraccount" >حساب فروشنده</message>
+  <message key="plugins.paymethod.paypal.settings.selleraccount.description" >این نام کار بری PayPal برای حساب فروشنده است که قرار است مورد استفاده قرار گیرد. بصورت تبپیک همان آدرس ایمیل است. مطمئن شوید که IPN در پروفایل حساب کاربری خود را فعال کرده اید.</message>
+  <message key="plugins.paymethod.paypal.settings.curlNotInstalled" >هشدار: CURL برای PHP نصب نشده است. PayPal نیاز به کتابخانه CURL دارد و تا وقتی نصب نشود عمل نمیکند.</message>
+  <message key="plugins.paymethod.paypal.settings" >تنظیمات PayPal</message>
+<!-- PayPal -->  <message key="plugins.paymethod.paypal" >پرداخت پول PayPal</message>
+  <message key="plugins.paymethod.paypal.description" ><![CDATA[بکمک PayPal کاربران صرف نظر از اینکه عضو PayPal باشند یا نباشند قادر میسازد تا تمام انواع کارت های اعتباری ماژور را برای پرداخت بکار برند. مدیر مجله باید که یک
+<a href="http://www.paypal.com" target="_new">حساب تجارتی PayPal</a> 
+راه اندازی کند.]]></message>
+  <message key="plugins.paymethod.paypal.warning" >بر روی ادامه در پائین کلیک کنید تا به سایت PayPal رفته و در آنجا بتوانید پرداخت کنید. پس از پرداخت بر روی &quot;Return to Merchant&quot; کلیک کنید تا به این سایت برگردید.</message>
+  <message key="plugins.paymethod.paypal.purchase.title" >عنوان</message>
+  <message key="plugins.paymethod.paypal.purchase.fee" >مبلغ</message>
+  <message key="plugins.paymethod.paypal.purchase.description" >توصیف</message>
+  <message key="plugins.paymethod.paypal.purchase.cancelled" >خرید شما کنسل شد.</message>
+  <message key="plugins.paymethod.paypal.purchase.cancelled.title" >خرید کنسل شد</message>
+</locale>

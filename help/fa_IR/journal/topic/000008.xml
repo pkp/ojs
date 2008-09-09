@@ -1,0 +1,41 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000008.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Stats & Reports
+  *
+  * $Id$
+  --><topic title="گزارشات و آمارها " toc="journal/toc/000001" key="journal.managementPages.statsAndReports" locale="fa_IR" id="journal/topic/000008" >
+  <section><![CDATA[<p>
+ اول اطلاعات در قسمت آمارها موجود بوده و در این قسمت خلاصه ای از اطلاعات در باره مطالب دریافتی ٫ عملکرد سردبیر و کاربران به طور خلاصه وجوددارد.نوع دوم اطلاعات گزارشهای متنوعی هستند که مدیر مجله از سری اطلاعات مختلف آنها را تهیه میکند 
+</p><p>
+چهار نوع گزارش موجود میباشد 
+<ul>
+			<li><strong>
+گزارش کلی مجله
+</strong>
+گزارشاتی در باره تمامی مطالب دریافتی مجله در یک دوره زمانی مشخص 
+</li>
+			<li><strong>
+گزارشات سردبیری
+</strong>
+گزارشات تمامی مطالب برسی شده بر اساس نام سردبیر 
+</li>
+			<li><strong>
+گزارشات برسی مقالات 
+</strong>
+
+گزارشات مطالب مجله بر اساس برسی کننده 
+</li>
+			<li><strong>
+گزارشات بخشهای مختلف مجله
+</strong>
+گزارشات مطالب مجله بر اساس بخشهای مجله
+</li>
+		</ul>
+این گزارشات به فرمت CSV (مقادیر تفکیک شده با کاما) تهیه شده و باید با برنامه های دارای چند صفحه کاری باز و مشاهده شوند]]></section>
+</topic>

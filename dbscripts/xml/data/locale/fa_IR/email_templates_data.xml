@@ -1,0 +1,1356 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE data SYSTEM "../../../../../lib/pkp/dtd/xmlData.dtd">
+<!--
+  * email_templates_data.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+ * تحت مجوزGNU GPL v2 منتشرشد. برای دیدن متن کامل فایل docs/COPYING را ببینید.
+  *
+  * داده های تمپلیت های ایمیل
+  *
+  * $Id$
+  --><data>
+  <table name="email_templates_default_data" >
+    <field_default name="locale" >fa_IR</field_default>
+<!--
+		  *
+		  * عمومی
+		  *
+		  -->    <row>
+      <field name="email_key" >PASSWORD_RESET_CONFIRM</field>
+      <field name="subject" >تائیدیه دوباره تنظیم کردن رمزعبور</field>
+      <field name="body" >درخواستی مبنی بر تنظیم دوباره رمزعبور شما مربوط به وب سایت &lt;$siteTitle> به ما رسیده است.
+
+لطفا چنانچه شما این درخواست را نفرستاده اید، به این ایمیل توجهی نکنید، در این صورت رمز عبور شما تغییری نخواهد کرد. اگر مایل به تنظیم دوباره رمزعبور خود هستید، برروی پیوند زیر کلیک نمائید.
+
+تنظیم مجدد رمز عبور: {$url}
+
+{$principalContactSignature}</field>
+      <field name="description" >This email is sent to a registered user when they indicate that they have forgotten their password or are unable to login. It provides a URL they can follow to reset their password.</field>
+    </row>
+    <row>
+      <field name="email_key" >PASSWORD_RESET</field>
+      <field name="subject" >رمز عبور دوباره تنظیم شد</field>
+      <field name="body" >رمزعبور شما برای استفاده از وب سایت {$journalName}، دوباره تنظیم شد. لطفا این کلمه کاربری و رمز عبور را محفوظ نگاه دارید، زیرا برای کارکردن با وب سایت مجله لازم است.
+
+نام کاربری شما: {$username}
+رمز عبور جدید شما: {$password}
+
+{$principalContactSignature}</field>
+      <field name="description" >This email is sent to a registered user when they have successfully reset their password following the process described in the PASSWORD_RESET_CONFIRM email.</field>
+    </row>
+    <row>
+      <field name="email_key" >USER_REGISTER</field>
+      <field name="subject" >ثبت نام کاربر جدید</field>
+      <field name="body" >برای ثبت نام در {$journalName} از شما سپاسگزارم. لطفا نام کاربری و رمز عبور خود را که برای ورود به وب سایت این مجله مورد نیاز می باشد به خاطر بسپارید.
+
+نام کاربری: {$username}
+رمز عبور: {$password}
+
+
+باتشکر
+{$principalContactSignature}</field>
+      <field name="description" >This email is sent to a newly registered user to welcome them to the system and provide them with a record of their username and password.</field>
+    </row>
+    <row>
+      <field name="email_key" >USER_VALIDATE</field>
+      <field name="subject" >حساب کاربری خود را تایید کنید</field>
+      <field name="body" >{$userFullName}
+
+حساب کاربری شما برای مجله {$journalName}, ایجاد شد. قبل از استفاده می بایست آن را تایید کنید. برای انجام این کار فقط کافی است که بر روی لینک زیر کلیک کنید:
+
+{$activateUrl}
+
+با تشکر
+{$principalContactSignature}</field>
+      <field name="description" >This email is sent to a newly registered user to welcome them to the system and provide them with a record of their username and password.</field>
+    </row>
+    <row>
+      <field name="email_key" >REVIEWER_REGISTER</field>
+      <field name="subject" >ثبت نام به عنوان کارشناس {$journalName}</field>
+      <field name="body" >با توجه با تجارب جنابعالی, {$journalName} فرصت را مغتنم شمرده و نام شما را در زمره کارشناسان مجله ثبت کرده است. لازم به تذکر است که صرف این عمل هیچگونه مسئولیت و تعهدی را متوجه جنابعالی نمی سازد و فقط ما را قادر می سازد تا جهت ارسال مقاله برای کارشناسی احتمالی توسط جنابعالی براحتی با شما تماس بگیریم. هنگامی که از شما برای انجام کارشناسی یک مقاله دعوت به عمل می آید شما مختار خواهید بود که پس از دیدن عنوان و چکیده مقاله دعوت را بپذیرید یا از انجام کارشناسی خودداری کنید. بعلاوه در هر زمان که اراده کنید میتوانید از ما بخواهید تا نام شما را از لیست کارشناسان مجله حذف کنیم.
+
+نام کاربری و رمز عبور شما برای سایت مجله که جهت انجام تمام امورات آنلاین با این مجله لازم است در زیر آمده است.
+
+نام کاربری: {$username}
+رمز عبور: {$password}
+
+با تشکر,
+{$principalContactSignature}</field>
+      <field name="description" >This email is sent to a newly registered reviewer to welcome them to the system and provide them with a record of their username and password.</field>
+    </row>
+    <row>
+      <field name="email_key" >PUBLISH_NOTIFY</field>
+      <field name="subject" >شماره جدید چاپ شد</field>
+      <field name="body" >خوانندگان گرامی:
+
+{$journalName}، آخرین شماره خود را به نشانی &lt;{$journalUrl}> چاپ کرده است. از شما دعوت میشود که پس از ملاحظه فهرست عناوین از وب سایت مجله حاوی مقاله ها و موضوع های مورد علاقه بازدید کنید.
+
+از توجه همیشگی مستمر شما نسبت به این مجله متشکریم.
+{$editorialContactSignature}</field>
+      <field name="description" >This email is sent to registered readers via the &quot;Notify Users&quot; link in the Editor's User Home. It notifies readers of a new issue and invites them to visit the journal at a supplied URL.</field>
+    </row>
+    <row>
+      <field name="email_key" >LOCKSS_EXISTING_ARCHIVE</field>
+      <field name="subject" >Archiving Request for {$journalName}</field>
+      <field name="body" ><![CDATA[Dear [University Librarian]
+
+{$journalName} <{$journalUrl}>, is a journal for which a member of your faculty, [name of member], serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.
+
+[Brief description of journal]
+
+The URL to the LOCKSS Publisher Manifest for our journal is: {$journalUrl}/gateway/lockss
+
+We understand that you are already participating in LOCKSS. If we can provide any additional metadata for purposes of registering our journal with your version of LOCKSS, we would be happy to provide it.
+
+Thank you,
+{$principalContactSignature}]]></field>
+      <field name="description" >This email requests the keeper of a LOCKSS archive to consider including this journal in their archive. It provides the URL to the journal's LOCKSS Publisher Manifest.</field>
+    </row>
+    <row>
+      <field name="email_key" >LOCKSS_NEW_ARCHIVE</field>
+      <field name="subject" >درخواست بایگانی کردن {$journalName}:</field>
+      <field name="body" ><![CDATA[مسئول محترم کتابخانه دانشگاه:
+{$journalName} <{$journalUrl}> ، عضو دانشکده شما می باشد <[name of member]>. این مجله خواستار ایجاد سیستم بایگانی LOCKSS با آن کتابخانه و کتابخانه های دیگر دانشگاهها می باشد.
+
+[Brief description of journal]
+
+برنامه LOCKSS تحت آدرس http://lockss.stanford.edu که یک ابتکار بین المللی مربوط به ناشر/کتابخانه می باشد. این نرم افزار رایگان، حتی توسط یک رایانه شخصی نیز اجرا می گردد. کل سامانه آن لاین شده است و به نگهداری مختصری نیازمند است.
+جهت کمک در بایگانی مجله ما، از شما دعوت می کنیم که عضو انجمن LOCKSS شوید تا به شما در جمع آوری و نگهداری عناوین تهیه شده توسط سازمان خود و دیگر پژوهشگران جهان، کمک کند. برای این کار، لطفا از وب سایت LOCKSS بازدید کنید تا اطلاعاتی درباره نحوه عملکرد این سامانه دراختیار شما قرار گیرد. منتظر اعلام خبر از شما راجع به امکان تهیه چنین سامانه ای برای این مجله هستم.
+
+
+باتشکر
+{$principalContactSignature}Dear [University Librarian]
+
+{$journalName} <{$journalUrl}>, is a journal for which a member of your faculty, [name of member] serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.
+
+[Brief description of journal]
+
+The LOCKSS Program <http://lockss.stanford.edu/>, an international library/publisher initiative, is a working example of a distributed preservation and archiving repository, additional details are below. The software, which runs on an ordinary personal computer is free; the system is easily brought on-line; very little ongoing maintenance is required.
+
+To assist in the archiving of our journal, we invite you to become a member of the LOCKSS community, to help collect and preserve titles produced by your faculty and by other scholars worldwide. To do so, please have someone on your staff visit the LOCKSS site for information on how this system operates. I look forward to hearing from you on the feasibility of providing this archiving support for this journal.
+
+Thank you,
+{$principalContactSignature}]]></field>
+      <field name="description" >This email encourages the recipient to participate in the LOCKSS initiative and include this journal in the archive. It provides information about the LOCKSS initiative and ways to become involved.</field>
+    </row>
+<!--
+		  *
+		  * Submission-related
+		  *
+		  -->    <row>
+      <field name="email_key" >SUBMISSION_ACK</field>
+      <field name="subject" >قدردانی برای ارسال مقاله</field>
+      <field name="body" >{$authorName}:
+
+از ارسال مقاله &quot;{$articleTitle}&quot; به {$journalName} متشکرم. با استفاده از سامانه الکترونیکی مدیریت مجله، که هم اکنون استفاده می شود، قادر خواهید بود ازطریق وارد شدن به وب سایت مجله، روند پیشرفت بررسی مقاله خود را پیگیری نمائید.
+
+آدرس مقاله : {$submissionUrl}
+نام کاربری: {$authorUsername}
+
+لطفا چنانچه سوالی دارید، با من تماس بگیرید.
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email, when enabled, is automatically sent to an author when he or she completes the process of submitting a manuscript to the journal. It provides information about tracking the submission through the process and thanks the author for the submission.</field>
+    </row>
+    <row>
+      <field name="email_key" >SUBMISSION_UNSUITABLE</field>
+      <field name="subject" >نا مناسب بودن مقاله برای مجله</field>
+      <field name="body" >{$authorName}:
+
+بررسی اولیه انجام شده برروی مقاله &quot;{$articleTitle}&quot; مشخص نموده است که این مقاله با چهارچوب و حیطه فعالیت {$journalName} مطابقت ندارد. توصیه می کنم که در راهنمای نویسندگان این مجله و همچنین در مقالات شماره اخیر جستجو کنید تا اطلاع بیشتری در مورد مقالات چاپ شده در این مجله کسب کنید.
+
+{$editorialContactSignature}</field>
+    </row>
+    <row>
+      <field name="email_key" >SUBMISSION_COMMENT</field>
+      <field name="subject" >اعلام نظر در مورد یک مقاله</field>
+      <field name="body" >{$name}:
+
+&lt;{$commentName}>، در مورد مقاله &quot;{$articleTitle}&quot; در مجله {$journalName} اعلام نظر کرده است.
+
+{$comments}</field>
+      <field name="description" >This email notifies the various people involved in a submission's editing process that a new comment has been posted.</field>
+    </row>
+    <row>
+      <field name="email_key" >SUBMISSION_DECISION_REVIEWERS</field>
+      <field name="subject" >تصمیم گیری درمورد مقاله &quot;{$articleTitle}&quot;</field>
+      <field name="body" >به عنوان یکی از کارشناسان مقاله ارسالی &quot;{$articleTitle}&quot;مربوط به {$journalName}، اینجانب نظرات داوری ارسال شده به نویسنده این متن را برای شما ارسال می کنم.
+باردیگر از شما به خاطر مشارکت فعالتان در این فرایند سپاسگزاری می کنم.
+
+{$editorialContactSignature}
+
+{$comments}</field>
+      <field name="description" >This email notifies the reviewers of a submission that the review process has been completed. It includes information about the article and the decision reached, and thanks the reviewers for their contributions.</field>
+    </row>
+<!--
+		  *
+		  * Editor
+		  *
+		  -->    <row>
+      <field name="email_key" >EDITOR_ASSIGN</field>
+      <field name="subject" >تعیین کارشناس مسئول</field>
+      <field name="body" >{$editorialContactName}:
+
+شما به عنوان کارشناس مسئول مقاله ضضض مربوط به {$journalName} انتخاب شده اید تا بر مراحل ویرایش آن نظارت داشته باشید.
+
+آدرس مقاله: {$submissionUrl}
+نام کاربری: {$editorUsername}
+
+متشکرم
+{$editorialContactSignature}</field>
+      <field name="description" >This email notifies a Section Editor that the Editor has assigned them the task of overseeing a submission through the editing process. It provides information about the submission and how to access the journal site.</field>
+    </row>
+<!--
+		  *
+		  * Peer Review
+		  *
+		  -->    <row>
+      <field name="email_key" >REVIEW_REQUEST</field>
+      <field name="subject" >درخواست کارشناسی مقاله</field>
+      <field name="body" >{$reviewerName}:
+
+شما به عنوان یک کارشناس ممتاز برای بررسی مقاله &quot;{$articleTitle}&quot;که برای {$journalName} ارسال شده است انتخاب شده اید. در ذیل، چکیده مقاله ارسالی برای شما گنجانده شده است و امیدوارم که در این زمینه مایل به همکاری با این مجله باشید
+
+لطفا قبل از تاریخ &quot;{$weekLaterDate}&quot; وارد وب سایت مجله شده و مشخص کنید که آیا مایل به قبول کارشناسی مقاله هستید یا خیر. همچنین به طور همزمان می توانید به مقاله ارسالی دسترسی پیدا کرده و متن کارشناسی و توصیه های خودرا ذخیره کنید. آدرس وب سایت مجله {$journalUrl} است.
+
+ضمنا آخرین مهلت بررسی این مقاله تا تاریخ &quot;{$reviewDueDate}&quot; می باشد
+
+چنانچه نام کاربری و رمز عبور خود مربوط به وب سایت این مجله را در دسترس ندارید می توانید از پیوند زیر جهت تنظیم دوباره رمزعبور خود استفاده کنید (که به همراه نام کاربری برایتان ارسال می گردد).
+
+{$passwordResetUrl}
+آدرس مقاله : {$submissionReviewUrl}
+
+از توجه شما به این درخواست سپاسگزاری می کنم.
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_ATTACHED.)</field>
+    </row>
+    <row>
+      <field name="email_key" >REVIEW_REQUEST_ONECLICK</field>
+      <field name="subject" >درخواست کارشناسی مقاله</field>
+      <field name="body" >{$reviewerName}:
+
+شما به عنوان یک کارشناس ممتاز برای بررسی مقاله &quot;{$articleTitle}&quot; که برای {$journalName} ارسال شده است انتخاب شده اید. در ذیل، چکیده مقاله ارسالی برای شما گنجانده شده است و امیدوارم که در این زمینه مایل به همکاری با این مجله باشید.
+
+لطفا قبل از تاریخ {$reviewDueDate} وارد وب سایت مجله شده و مشخص سازید که آیا مایل به قبول کارشناسی هستید یا خیر؟ همچنین به طور همزمان می توانید به مقاله ارسالی دسترسی پیدا کرده و متن کارشناسی و توصیه های خودرا ذخیره کنید.
+
+ضمنا آخرین مهلت بررسی این مقاله تا تاریخ {$reviewDueDate} می باشد.
+
+آدرس مقاله: {$submissionReviewUrl}
+
+از توجه شما به این درخواست متشکرم.
+
+{$editorialContactSignature}
+
+
+--------------------------------
+&quot;{$articleTitle}&quot;
+
+چکیده:
+{$articleAbstract}</field>
+      <field name="description" >This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2, and one-click reviewer access is enabled.</field>
+    </row>
+    <row>
+      <field name="email_key" >REVIEW_REQUEST_ATTACHED</field>
+      <field name="subject" >درخواست کارشناسی مقاله</field>
+      <field name="body" >{$reviewerName}:
+
+شما به عنوان یک کارشناس ممتاز برای بررسی مقاله &quot;{$articleTitle}&quot;که برای {$journalName} ارسال شده است انتخاب شده اید. در ذیل، چکیده مقاله ارسالی برای شما گنجانده شده است و امیدوارم که در این زمینه مایل به همکاری با این مجله باشید.
+در ذیل متن راهنمای کارشناسی برای این مجله آمده است و مقاله ارسالی به این ایمیل پیوست شده است. توجه داشته باشید که باید متن کارشناسی و توصیه خود را از طریق ایمیل ارسال کنید.
+
+لطفا با پاسخ دادن به این ایمیل قبل از تاریخ &lt;{$reviewDueDate}> مشخص سازید که آیا قادر به انجام کارشناسی هستید یا خیر؟
+از توجه شما به این درخواست سپاسگزارم.
+
+{$editorialContactSignature}
+
+راهنمای نویسندگان
+
+{$reviewGuidelines}</field>
+      <field name="description" >This email is sent by the Section Editor to a Reviewer to request that they accept or decline the task of reviewing a submission. It includes the submission as an attachment. This message is used when the Email-Attachment Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST.)</field>
+    </row>
+    <row>
+      <field name="email_key" >REVIEW_CANCEL</field>
+      <field name="subject" >درخواست لغو کارشناسی</field>
+      <field name="body" >{$reviewerName}:
+
+در این مرحله تصمیم بر آن شده که درخواست کارشناسی مقاله ضضض مربوط به {$journalName} که به شما محول شده بود، لغو گردد. پیشاپیش از بابت ایجاد هرگونه مشکلی از شما عذرخواهی کرده و امیدواریم که در آینده بتوانیم طی مرحله کارشناسی با شما همکاری داشته باشیم.
+
+لطفا چنانچه در این رابطه سوالی دارید، با من تماس بگیرید.
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email is sent by the Section Editor to a Reviewer who has a submission review in progress to notify them that the review has been cancelled.</field>
+    </row>
+    <row>
+      <field name="email_key" >REVIEW_CONFIRM</field>
+      <field name="subject" >کارشناسی را قبول می کنم</field>
+      <field name="body" >{$editorialContactName}:
+
+اینجانب کارشناسی مقاله ارسالی &quot;{$articleTitle}&quot;مربوط به {$journalName} را قبول می نمایم. از توجه شما متشکرم و بررسی آنرا در موعد مقرر انجام خواهد داد.
+
+مهلت کارشناسی: {$reviewDueDate}
+</field>
+      <field name="description" >This email is sent by a Reviewer to the Section Editor in response to a review request to notify the Section Editor that the review request has been accepted and will be completed by the specified date.</field>
+    </row>
+    <row>
+      <field name="email_key" >REVIEW_DECLINE</field>
+      <field name="subject" >قادر به کارشناسی نمی باشم</field>
+      <field name="body" >{$editorialContactName}:
+
+متاسفانه در حال حاضر قادر به کارشناسی مقاله ارسالی &quot;{$articleTitle}&quot;مربوط به {$journalName} نیستم.
+از توجه شما متشکرم . در دفعات بعدی آماده همکاری با این مجله هستم.
+
+{$reviewerName}</field>
+      <field name="description" >This email is sent by a Reviewer to the Section Editor in response to a review request to notify the Section Editor that the review request has been declined.</field>
+    </row>
+    <row>
+      <field name="email_key" >REVIEW_COMPLETE</field>
+      <field name="subject" >اتمام بررسی مقاله</field>
+      <field name="body" >{$editorialContactName}:
+
+بررسی مقاله &quot;{$articleTitle}&quot;مربوط به {$journalName} را تمام و نظر کارشناسی خود را نیز ارسال کرده ام.
+
+&quot;{$recommendation}&quot;
+
+{$reviewerName}</field>
+      <field name="description" >This email is sent by a Reviewer to the Section Editor to notify them that a review has been completed and the comments and recommendations have been recorded on the journal web site.</field>
+    </row>
+    <row>
+      <field name="email_key" >REVIEW_ACK</field>
+      <field name="subject" >قدردانی بخاطر بررسی مقاله</field>
+      <field name="body" >{$reviewerName}:
+
+برای بررسی مقاله ارسالی &quot;{$articleTitle}&quot;مربوط به {$journalName}، از شما سپاسگزاریم. مساعدت شما را که باعث ارتقاء سطح کیفی مقاله ای که چاپ شد، ارج می نهیم.
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email is sent by a Section Editor to confirm receipt of a completed review and thank the reviewer for their contributions.</field>
+    </row>
+    <row>
+      <field name="email_key" >REVIEW_REMIND</field>
+      <field name="subject" >یادآوری بررسی مقاله ارسالی</field>
+      <field name="body" >{$reviewerName}:
+
+این فقط یک یادآوری درخواست {$journalName} از شما جهت بررسی مقاله ارسالی &quot;{$articleTitle}&quot;است. امیدوار بودیم که متن کارشناسی شما تا تاریخ &lt;{$reviewDueDate}> به مجله ارسال شده باشد و بسیار خوشحال خواهیم شد اگر هرچه زودتر بتوانید آنرا آماده کرده و نسبت به ارسال آن اقدام کنید.
+
+چنانچه نام کاربری و رمز عبور خود مربوط به وب سایت این مجله را در دسترس ندارید، می توانید از پیوند زیر جهت دوباره تنظیم کردن رمزعبور خود استفاده کنید (که به همراه نام کاربری برایتان ارسال می گردد).
+
+{$passwordResetUrl}
+آدرس مقاله: {$submissionReviewUrl}
+
+لطفا آمادگی خودرا نسبت به انجام این کمک مهم به مجله اعلام نمائید. منتظر پاسخ شما هستیم.
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email is sent by a Section Editor to remind a reviewer that their review is due.</field>
+    </row>
+    <row>
+      <field name="email_key" >REVIEW_REMIND_ONECLICK</field>
+      <field name="subject" >یادآوری برای کارشناسی مقاله</field>
+      <field name="body" >{$reviewerName}:
+
+با عرض پوزش بدین وسیله یادآوری مینمایم که متعاقب ارسال درخواست اولیه مبنی بر انجام کارشناسی مقاله &quot;{$articleTitle},&quot; برای {$journalName}
+منتظر دریافت نظرات کارشناسی جنابعالی میباشیم. امیدواریم که نتیجه کارشناسی جنابعالی تا تاریخ {$reviewDueDate} به دست ما برسد.
+
+آدزس مقاله: {$submissionReviewUrl}
+
+در صورت امکان با ایمیل اطلاع دهید که آیا مایلید این کارسناسی را انجام دهید.
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email is sent by a Section Editor to remind a reviewer that their review is due.</field>
+    </row>
+    <row>
+      <field name="email_key" >REVIEW_REMIND_AUTO</field>
+      <field name="subject" >یادآوری اتوماتیک برای کارشناسی مقاله ارسالی</field>
+      <field name="body" >{$reviewerName}:
+
+این فقط یک یادآوری درخواست ما از شما جهت بررسی مقاله ارسالی &quot;{$articleTitle}&quot;مربوط به {$journalName} است. امیدوار بودیم که متن کارشناسی شما تا تاریخ &lt;{$reviewDueDate}> دریافت نماییم و به دلیل اتمام فرصت مقرر، این ایمیل به صورت اتوماتیک برای شما فرستاده می شود. بسیار خوشحال خواهیم شد اگر هرچه زودتر بتوانید نتیجه کارشناسی خود را برایمان ارسال کنید.
+
+چنانچه نام کاربری و رمز عبور خود مربوط به وب سایت این مجله را در دسترس ندارید می توانید از پیوند زیر جهت تنظیم دوباره رمزعبور خود استفاده کنید (که به همراه نام کاربری برایتان ارسال می گردد).
+
+{$passwordResetUrl}
+آدرس مقاله: {$submissionReviewUrl}
+
+لطفا آمادگی خودرا نسبت به انجام این کمک مهم به مجله اعلام نمائید. منتظر پاسخ شما هستم.
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email is automatically sent when a reviewer's due date elapses (see Review Options under Journal Setup, Step 2) and one-click reviewer access is disabled. Scheduled tasks must be enabled and configured (see the site configuration file).</field>
+    </row>
+    <row>
+      <field name="email_key" >REVIEW_REMIND_AUTO_ONECLICK</field>
+      <field name="subject" >یادآوری برای کارشناسی مقاله (اتوماتیک)</field>
+      <field name="body" >{$reviewerName}:
+
+با عرض پوزش بدین وسیله یادآوری مینمایم که متعاقب ارسال درخواست اولیه مبنی بر انجام کارشناسی مقاله &quot;{$articleTitle},&quot; برای {$journalName}
+منتظر دریافت نظرات کارشناسی جنابعالی میباشیم. امیدواریم که نتیجه کارشناسی جنابعالی تا تاریخ {$reviewDueDate} به دست ما برسد.
+
+آدزس مقاله: {$submissionReviewUrl}
+
+در صورت امکان با ایمیل اطلاع دهید که آیا مایلید این کارسناسی را انجام دهید.
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email is automatically sent when a reviewer's due date elapses (see Review Options under Journal Setup, Step 2) and one-click reviewer access is enabled. Scheduled tasks must be enabled and configured (see the site configuration file).</field>
+    </row>
+<!--
+		  *
+		  * Editor Review
+		  *
+		  -->    <row>
+      <field name="email_key" >EDITOR_REVIEW</field>
+      <field name="subject" >بررسی ویرایش مقاله</field>
+      <field name="body" >{$authorName}:
+
+درحال حاضر بررسی مقاله شما باعنوان &quot;{$articleTitle}&quot; به پایان رسیده است. تصمیم بر 
+{$comments}
+گرفته شده است. با وارد شدن به وب سایت مجله از طریق پیوندهای زیر، می توانید نظرات کارشناسان و روند مراحل ویرایشی، را ملاحظه کنید.
+
+آدرس مقاله: {$submissionUrl}
+نام کاربری: {$authorUsername}
+
+لطفا چنانچه سوالی دارید با من تماس بگیرید
+{$editorialContactSignature}</field>
+      <field name="description" >This email is sent by a Section Editor to a submission's Author to notify them that a decision has been reached in regard to a submission.</field>
+    </row>
+    <row>
+      <field name="email_key" >COPYEDIT_REQUEST</field>
+      <field name="subject" >درخواست انجام امور ویراستاری</field>
+      <field name="body" >{$copyeditorName}:
+
+از شما درخواست می شود که امور ویراستاری مقاله &quot;{$articleTitle}&quot; مربوط به {$journalName} را برعهده بگیرید. شما می توانید فایل مربوطه به همراه مجموعه ای از دستورالعمل های نحوه ویراستاری مقاله را در وب سایت مجله دریافت کنید.
+
+چنانچه در حال حاضر قادر به انجام امور مذکور نیستید و یا سوالی در این زمینه دارید، لطفا با من تماس بگیرید. پیشاپیش از قبول انجام امور ویراستاری برای این مجله سپاسگزارم.
+
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email is sent by a Section Editor to a submission's Copyeditor to request that they begin the copyediting process. It provides information about the submission and how to access it.</field>
+    </row>
+    <row>
+      <field name="email_key" >COPYEDIT_COMPLETE</field>
+      <field name="subject" >اتمام ویراستاری مقاله</field>
+      <field name="body" >{$editorialContactName}:
+
+هم اکنون ویراستاری مقاله جنابعالی با عنوان &quot;{$articleTitle}&quot; برای مجله {$journalName} به پایان رسید. برای بررسی نتیجه ویراستاری و پاسخ دادن به سؤالات احتمالی لطفا مراحل زیر را دنبال کنید:
+
+۱. با استفاده از نام کاربری و رمز عبور خود و بکمک لینک زیر وارد سایت مجله شوید (در صورت فراموش کردن نام کاربری یا رمز عبور از گزینه مربوط به فراموشی رمز  عبور استفاده کنید)
+۲. بر روی فایل موجود در مرحله اول ویراستاری کلیک کنید و آنرا دانلود کنید. پس از دانلود آنرا باز کنید.
+۳. مقاله را بدقت مطالعه کرده و قسمتهای ویراستاری شده را بررسی کنید. لازم به ذکر است که در فایل ورد ارسالی تغییرات اعمال شده با رنگ و علائم مخصوص براحتی قابل تشخیص است. ویراستار ممکن است در متن مقاله سؤالاتی کرده باشد که لازم است بدقت به آنها جواب دهید.
+۴. پس از وارد کردن پاسخ سؤالات  
+4. Save file to desktop and upload it in 2. Author Copyedit.
+5. Click the email icon under COMPLETE and send email to the editor.
+
+This is the last opportunity that you have to make substantial changes. You will be asked at a later stage to proofread the galleys, but at that point only minor typographical and layout errors can be corrected.
+
+Manuscript URL: {$submissionEditingUrl}
+Username: {$authorUsername}
+
+If you are unable to undertake this work at this time or have any questions,
+please contact me. Thank you for your contribution to this journal.
+
+{$copyeditorName}</field>
+    </row>
+    <row>
+      <field name="email_key" >COPYEDIT_ACK</field>
+      <field name="subject" >Copyediting Acknowledgement</field>
+      <field name="body" >{$copyeditorName}:
+
+Thank you for copyediting the manuscript, &quot;{$articleTitle},&quot; for {$journalName}. It will make an important contribution to the quality of this journal.
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email is sent by the Section Editor to a submission's Copyeditor to acknowledge that the Copyeditor has successfully completed the copyediting process and thank them for their contribution.</field>
+    </row>
+    <row>
+      <field name="email_key" >COPYEDIT_AUTHOR_REQUEST</field>
+      <field name="subject" >Copyediting Review Request</field>
+      <field name="body" >{$authorName}:
+
+Your submission &quot;{$articleTitle}&quot; for {$journalName} has been through the first step of copyediting, and is available for you to review by following these steps.
+
+1. Click on the Submission URL below.
+2. Log into the journal and click on the File that appears in Step 1.
+3. Open the downloaded submission.
+4. Review the text, including copyediting proposals and Author Queries.
+5. Make any copyediting changes that would further improve the text.
+6. When completed, upload the file in Step 2.
+7. Click on METADATA to check indexing information for completeness and accuracy.
+8. Send the COMPLETE email to the editor and copyeditor.
+
+Submission URL: {$submissionCopyeditingUrl}
+Username: {$authorUsername}
+
+This is the last opportunity to make substantial copyediting changes to the submission. The proofreading stage, that follows the preparation of the galleys, is restricted to correcting typographical and layout errors.
+
+If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email is sent by the Section Editor to a submission's Author to request that they proofread the work of the copyeditor. It provides access information for the manuscript and warns that this is the last opportunity the author has to make substantial changes.</field>
+    </row>
+    <row>
+      <field name="email_key" >COPYEDIT_AUTHOR_COMPLETE</field>
+      <field name="subject" >Copyediting Review Completed</field>
+      <field name="body" >{$editorialContactName}:
+
+I have now reviewed the copyediting of the manuscript, &quot;{$articleTitle},&quot; for {$journalName}, and it is ready for the final round of copyediting and preparation for Layout.
+
+Thank you for this contribution to my work,
+{$authorName}</field>
+      <field name="description" >This email is sent by the Author to the Section Editor to notify them that the Author's copyediting process has been completed.</field>
+    </row>
+    <row>
+      <field name="email_key" >COPYEDIT_AUTHOR_ACK</field>
+      <field name="subject" >Copyediting Review Acknowledgement</field>
+      <field name="body" >{$authorName}:
+
+Thank you for reviewing the copyediting of your manuscript, &quot;{$articleTitle},&quot; for {$journalName}. We look forward to publishing this work.
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email is sent by the Section Editor to a submission's Author to confirm completion of the Author's copyediting process and thank them for their contribution.</field>
+    </row>
+    <row>
+      <field name="email_key" >COPYEDIT_FINAL_REQUEST</field>
+      <field name="subject" >بررسی نهایی ویراستاری</field>
+      <field name="body" >{$copyeditorName}:
+
+مراحل ویراستاری مقاله &quot;{$articleTitle}&quot;مربوط به {$journalName} توسط نویسنده و سردبیر مربوطه کامل شده است. هم اکنون نسخه بدون اشکال نهایی آماده انجام امور صفحه آرایی می باشد.
+
+آدرس مقاله: {$submissionCopyeditingUrl}
+نام کاربری: {$copyeditorUsername}
+
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email from the Section Editor to the Copyeditor requests that they perform a final round of copyediting on a submission before it enters the layout process.</field>
+    </row>
+    <row>
+      <field name="email_key" >COPYEDIT_FINAL_COMPLETE</field>
+      <field name="subject" >بررسی نهایی ویراستاری کامل شد</field>
+      <field name="body" >{$editorialContactName}:
+
+در حال حاضر، یک نسخه ویراستاری شده ی بدون اشکال از مقاله شما با عنوان {$articleTitle}مربوط به {$journalName} آماده شده و آماده انجام امور صفحه آرایی و نسخه پیش از چاپ می باشد.
+
+{$copyeditorName}</field>
+      <field name="description" >This email from the Copyeditor to the Section Editor notifies them that the final round of copyediting has been completed and that the layout process may now begin.</field>
+    </row>
+    <row>
+      <field name="email_key" >COPYEDIT_FINAL_ACK</field>
+      <field name="subject" >Copyediting Final Review Acknowledgement</field>
+      <field name="body" >{$copyeditorName}:
+
+Thank you for completing the copyediting of the manuscript, &quot;{$articleTitle},&quot; for {$journalName}. This preparation of a &quot;clean copy&quot; for Layout is an important step in the editorial process.
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email from the Section Editor to the Copyeditor acknowledges completion of the final round of copyediting and thanks them for their contribution.</field>
+    </row>
+<!--
+		  *
+		  * Layout Editing
+		  *
+		  -->    <row>
+      <field name="email_key" >LAYOUT_REQUEST</field>
+      <field name="subject" >نسخه های پیش از چاپ مورد نیاز است</field>
+      <field name="body" >{$layoutEditorName}:
+
+از شما درخواست می شود که نسخه های پیش از چاپ مقاله &quot;{$articleTitle}&quot; مربوط به {$journalName} را آماده نمایید.
+
+آدرس مقاله: {$submissionLayoutUrl}
+نام کاربری: {$layoutEditorUsername}
+
+چنانچه در حال حاضر قادر به انجام این امور نیستید و یا سوالی در این رابطه دارید با من تماس بگیرید. پیشاپیش از همکاری شما با این مجله سپاسگزارم.
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email from the Section Editor to the Layout Editor notifies them that they have been assigned the task of performing layout editing on a submission. It provides information about the submission and how to access it.</field>
+    </row>
+    <row>
+      <field name="email_key" >LAYOUT_COMPLETE</field>
+      <field name="subject" >نسخه های پیش از چاپ کامل شده است</field>
+      <field name="body" >{$editorialContactName}:
+
+نسخه های پیش از چاپ مقاله ضضض مربوط به {$journalName} حاضر شده و آماده بررسی نهایی می باشد.
+لطفا چنانچه سوالی دارید، با من تماس بگیرید.
+
+
+{$layoutEditorName}</field>
+      <field name="description" >This email from the Layout Editor to the Section Editor notifies them that the layout process has been completed.</field>
+    </row>
+    <row>
+      <field name="email_key" >LAYOUT_ACK</field>
+      <field name="subject" >قدردانی بخاطر انجام امور صفحه آرایی</field>
+      <field name="body" >{$layoutEditorName}:
+
+از اینکه نسخه پیش از چاپ مقاله &quot;{$articleTitle}&quot;مربوط به {$journalName} را آماده نمودید از شما متشکرم. بدیهی است این امر کمک شایانی در روند چاپ خواهد بود.
+
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email from the Section Editor to the Layout Editor acknowledges completion of the layout editing process and thanks the layout editor for their contribution.</field>
+    </row>
+<!--
+		  *
+		  * Proofreading
+		  *
+		  -->    <row>
+      <field name="email_key" >PROOFREAD_AUTHOR_REQUEST</field>
+      <field name="subject" >درخواست بررسی نهایی از نویسنده</field>
+      <field name="body" >{$authorName}:
+
+از شما درخواست می شود که نمونه پیش از چاپ مقاله ارسالی خود را تحت عنوان ضضض مربوط به {$journalName}، مورد بررسی نهایی قراردهید. لطفا برای دیدن نمونه های پیش از چاپ، بوسیله پیوند زیر وارد وب سایت مجله شوید. جهت فقط خواندن موارد غلط های املایی و صفحه آرایی در نسخه ای که چاپ خواهد شد، از پیوند VIEW PROOF استفاده کنید. این غلط ها را در کادر اطلاعات نمونه خوانی ذخیره کرده و طبق دستورالعمل های مربوط به بررسی نهایی (نمونه خوانی) که در وب سایت گنجانده شده است، عمل نمایید.
+
+آدرس مقاله: {$submissionUrl}
+نام کاربری: {$authorUsername}
+
+چنانچه در حال حاضر قادر به انجام موارد فوق نیستید و یا در این رابطه سوالی دارید با من تماس بگیرید. پیشاپیش از همکاری شما با این مجله سپاسگزارم.
+
+
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email from the Section Editor to the Author notifies them that an article's galleys are ready for proofreading. It provides information about the article and how to access it.</field>
+    </row>
+    <row>
+      <field name="email_key" >PROOFREAD_AUTHOR_COMPLETE</field>
+      <field name="subject" >بررسی نهایی کامل شد (نویسنده)</field>
+      <field name="body" >بررسی نهایی کامل شد (نویسنده)</field>
+      <field name="description" >This email from the Author to the Proofreader and Editor notifies them that the Author's round of proofreading is complete and that details can be found in the article comments.</field>
+    </row>
+    <row>
+      <field name="email_key" >PROOFREAD_AUTHOR_ACK</field>
+      <field name="subject" >قدردانی از نویسنده بخاطر بررسی نهایی مقاله</field>
+      <field name="body" >{$authorName}:
+
+بخاطر بررسی نهایی مقاله خود تحت عنوان &quot;{$articleTitle}&quot; مربوط به {$journalName} از شما متشکریم. منتظر آن هستیم تا مقاله شما بزودی چاپ گردد. چنانچه مشترک خدمات اطلاع رسانی مجله ما باشید، ایمیلی حاوی فهرست مطالب را دریافت خواهید کرد. لطفا چنانچه سوالی دارید، با من تماس بگیرید.
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email from the Section Editor to the Author acknowledges completion of the initial proofreading process and thanks them for their contribution.</field>
+    </row>
+    <row>
+      <field name="email_key" >PROOFREAD_REQUEST</field>
+      <field name="subject" >درخواست بررسی نهایی</field>
+      <field name="body" >{$proofreaderName}:
+
+از شما درخواست می شود که بررسی نهایی مقاله &quot;{$articleTitle}&quot; مربوط به {$journalName} را انجام دهید.
+
+آدرس مقاله: {$submissionUrl}
+نام کاربری: {$proofreaderUsername}
+
+چنانچه در حال حاضر قادر به انجام موارد فوق نیستید و یا در این رابطه سوالی دارید، با من تماس بگیرید.
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email from the Section Editor to the Proofreader requests that they perform proofreading of an article's galleys. It provides information about the article and how to access it.</field>
+    </row>
+    <row>
+      <field name="email_key" >PROOFREAD_COMPLETE</field>
+      <field name="subject" >بررسی نهایی کامل شد</field>
+      <field name="body" >{$editorialContactName}:
+
+درحال حاضر بررسی نهایی مقاله &quot;{$articleTitle}&quot;مربوط به {$journalName} را به پایان رسانده ام. هم اکنون نمونه های پیش از چاپ، آماده اعمال تصحیح نهایی توسط صفحه آرا می باشد.
+
+{$proofreaderName}</field>
+      <field name="description" >This email from the Proofreader to the Section Editor notifies them that the Proofreader has completed the proofreading process.</field>
+    </row>
+    <row>
+      <field name="email_key" >PROOFREAD_ACK</field>
+      <field name="subject" >قدردانی بخاطر انجام نمونه خوانی (بررسی نهایی)</field>
+      <field name="body" >{$proofreaderName}:
+
+به خاطر بررسی نمونه پیش از چاپ مقاله &quot;{$articleTitle}&quot;مربوط به {$journalName} از شما متشکرم. بدیهی است این امر کمک شایانی در جهت ارتقاء سطح کیفی این مجله خواهد بود.
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email from the Section Editor to the Proofreader confirms completion of the proofreader's proofreading process and thanks them for their contribution.</field>
+    </row>
+    <row>
+      <field name="email_key" >PROOFREAD_LAYOUT_REQUEST</field>
+      <field name="subject" >درخواست بررسی نهایی از صفحه آرا</field>
+      <field name="body" >{$layoutEditorName}:
+
+از شما درخواست میگردد که براساس نتایج بررسی های نهایی مقاله &quot;{$articleTitle}&quot;مربوط به {$journalName}، اصلاحات لازم را ایجاد نمایید.
+
+آدرس مقاله: {$submissionUrl}
+نام کاربری: {$layoutEditorUsername}
+
+چنانچه در حال حاضر قادر به انجام امور مذکور نیستید و یا جهت طرح سوالات خود، با من تماس بگیرید.
+
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email from the Section Editor to the Layout Editor notifies them that an article's galleys are ready for final proofreading. It provides information on the article and how to access it.</field>
+    </row>
+    <row>
+      <field name="email_key" >PROOFREAD_LAYOUT_COMPLETE</field>
+      <field name="subject" >اتمام بررسی نهایی (از طرف صفحه آرا)</field>
+      <field name="body" >{$editorialContactName}:
+
+اصلاح نمونه های پیش از چاپ مقاله &quot;{$articleTitle}&quot;مربوط به {$journalName} تمام شده است. هم اکنون این قسمت آماده چاپ می باشد.
+
+
+{$layoutEditorName}</field>
+      <field name="description" >This email from the Layout Editor to the Section Editor notifies them that the final stage of proofreading has been completed and the article is now ready to publish.</field>
+    </row>
+    <row>
+      <field name="email_key" >PROOFREAD_LAYOUT_ACK</field>
+      <field name="subject" >قدردانی بخاطر بررسی نهایی مقاله (از صفحه آرا)</field>
+      <field name="body" >{$layoutEditorName}:
+
+به خاطر اصلاح نهایی نمونه های پیش از چاپ مقاله &quot;{$articleTitle}&quot;مربوط به {$journalName} از شما متشکرم. این امر، کمک شایان توجهی درجهت ارتقاء سطح کیفی مجله می باشد.
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email from the Section Editor to the Layout Editor acknowledges completion of the final stage of proofreading and thanks them for their contribution.</field>
+    </row>
+    <row>
+      <field name="email_key" >EMAIL_LINK</field>
+      <field name="subject" >شاید مایل به دیدن این مقاله باشید</field>
+      <field name="body" >به نظر می رسد که شما مایل به ملاحظه مقاله {$authorName}تحت عنوان &quot;{$articleTitle}&quot; باشید. این مقاله در شماره &lt;{$volume}> جلد &lt;$number> سال &lt;{$year}> {$journalName} به چاپ رسیده است.
+
+آدرس مقاله:
+{$articleUrl}</field>
+      <field name="description" >This email template provides a registered reader with the opportunity to send information about an article to somebody who may be interested. It is available via the Reading Tools and must be enabled by the Journal Manager in the Reading Tools Administration page.</field>
+    </row>
+<!--
+		  *
+		  * Subscriptions 
+		  *
+		  -->    <row>
+      <field name="email_key" >SUBSCRIPTION_NOTIFY</field>
+      <field name="subject" >اعلام اشتراک مجله</field>
+      <field name="body" >{$subscriberName}:
+
+درحال حاضر شما به عنوان مشترک {$journalName}، با ویژگی های اشتراکی زیر در سامانه الکترونیکی مدیریت مجله ی ما ثبت نام شده اید:
+
+{$subscriptionType}
+
+به منظور دستیابی به محتویات که فقط برای مشترکان در دسترس می باشد، براحتی با استفاده از نام کاربری تان &lt;{$username}> در این سامانه واردشوید.
+
+بلافاصله پس از ورود به این سامانه، می توانید جزئیات اشتراک خود و رمز عبورتان را تغییر بدهید.
+لطفا توجه کنید درصورتی که دارای اشتراک سازمانی باشید، نیازی به ورود به سیستم ندارید، زیرا این سامانه بصورت اتوماتیک درخواست های اشتراک را تایید می کند.
+لطفا در صورت وجود سوال در این زمینه، با من تماس بگیرید.
+
+{$subscriptionContactSignature}</field>
+      <field name="description" >This email notifies a registered reader that the Manager has created a subscription for them. It provides the journal's URL along with instructions for access.</field>
+    </row>
+    <row>
+      <field name="email_key" >OPEN_ACCESS_NOTIFY</field>
+      <field name="subject" >اکنون مجله قابل دسترس است</field>
+      <field name="body" >خوانندگان گرامی:
+
+{$journalName}، شماره جاری خود را بصورت دسترسی آزاد (Open Access) در اختیار خوانندگان قرار داده است. از شما دعوت میگردد که پس از ملاحظه فهرست مقالات در ذیل این نامه، به منظور بررسی مقالات و موضوع های مورد علاقه، از وب سایت مجله دیدن فرمایید.
+
+از توجه همیشگی شما نسبت به این مجله متشکریم.
+
+آدرس وب سایت مجله: {$journalUrl}
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email is sent to registered readers who have requested to receive a notification email when an issue becomes open access.</field>
+    </row>
+    <row>
+      <field name="email_key" >SUBSCRIPTION_BEFORE_EXPIRY</field>
+      <field name="subject" >یادآوری پایان یافتن مدت اشتراک</field>
+      <field name="body" >{$subscriberName}:
+
+اشتراک {$journalName} برای شما درحال اتمام می باشد.
+
+{$subscriptionType}
+jhvdo hkrqh: {$expiryDate}
+
+به منظور اطمینان از دسترسی تان به این مجله، لطفا به وب سایت مجله مراجعه کرده و اشتراک خود را تمدید کنید. شما می توانید که با نام کاربری خود &lt;نام کاربری> وارد این سامانه شوید.
+
+لطفا در صورت وجود سوال در این زمینه، با من تماس بگیرید.
+
+{$subscriptionContactSignature}</field>
+      <field name="description" >This email notifies a subscriber that their subscription will soon expire. It provides the journal's URL along with instructions for access.</field>
+    </row>
+    <row>
+      <field name="email_key" >SUBSCRIPTION_AFTER_EXPIRY</field>
+      <field name="subject" >مدت اشتراک شما پایان یافته است</field>
+      <field name="body" >{$subscriberName}:
+
+اشتراک {$journalName} برای شما به پایان رسیده است.
+
+{$subscriptionType}
+تاریخ انقضاء: {$expiryDate}
+
+به منظور تجدید اشتراک خود، لطفا به وب سایت مجله مراجعه نمائید. شما قادر خواهید بود که با استفاده از نام کاربری خود &lt;نام کاربری> وارد این سامانه شوید.
+
+لطفا در صورت وجود سوال در این زمینه، با من تماس بگیرید.
+
+{$subscriptionContactSignature}</field>
+      <field name="description" >This email notifies a subscriber that their subscription has expired. It provides the journal's URL along with instructions for access.</field>
+    </row>
+    <row>
+      <field name="email_key" >SUBSCRIPTION_AFTER_EXPIRY_LAST</field>
+      <field name="subject" >اشتراک شما پایان یافت-آخرین یادآوری</field>
+      <field name="body" >{$subscriberName}:
+
+اشتراک {$journalName} برای شما به پایان رسیده است.لطفا توجه کنید که این آخرین یادآوری است که برای شما ارسال خواهد شد.
+
+{$subscriptionType}
+تاریخ انقضاء: {$expiryDate}
+
+به منظور تجدید اشتراک خود، لطفا به وب سایت مجله مراجعه نمائید. شما قادر خواهید بود که با استفاده از نام کاربری خود &lt;نام کاربری> وارد شوید.
+
+لطفا در صورت وجود سوال در این زمینه، با من تماس بگیرید.
+
+{$subscriptionContactSignature}</field>
+      <field name="description" >This email notifies a subscriber that their subscription has expired. It provides the journal's URL along with instructions for access.</field>
+    </row>
+    <row>
+      <field name="email_key" >REVIEWER_RECOMMEND</field>
+      <field name="subject" >({$articleId}) معرفی کارشناس</field>
+      <field name="body" >جناب آقای / خانم  دکتر {$authorName}:
+برای تسریع در امر رسیدگی به مقاله شما با عنوان &quot;{$articleTitle} ({$articleId}),&quot; و همچنین جهت افزایش کیفیت مقالاتی که چاپ میشوند, میتوانید کارشناسانی را برای انجام کارشناسی مقاله خود معرفی نمائید. به عنوان راهنمائی خدمت شما عرض میشود که شما میتوانید کارشناسان مناسبی از بین مراجع مقاله خود پیدا کرده و به ما معرفی کنید. به ازای هر کارشناسی که میخواهید معرفی کنید لطفا اطلاعات زیر را در مورد وی ارسال نمائید:
+نام:
+نام خانوادگی:
+عنوان سازمان:
+ایمیل:
+
+هنگام انتخاب کارشناس لطفا نکات زیر را در نظر داشته باشید:
+
+۱. کارشناسان معرفی شده نباید از گروه یا مؤسسه خود شما باشند و همچنین نباید ظرف ۵ سال گذشته با شما و یا سایر نویسندگان مقاله شما مقاله مشترک چاپ کرده باشند.
+۲.لطفا توجه داشته باشید که معرفی کارشناس از سوی شما فقط به منظور کمک به پردازش مقاله خودتان میباشد و هیچگونه اجباری برای سردبیر برای قبول این کارشناسان وجود ندارد.
+۳. در صورت داشتن هرگونه سؤال با اینجانب تماس بگیرید
+
+از توجه شما متشکرم 
+{$journalName}
+
+{$editorialContactSignature}</field>
+      <field name="description" >این ایمیل از نویسندگان میخواهد تا کارشناس برای مقاله خود معرفی کنند.</field>
+    </row>
+    <row>
+      <field name="email_key" >COPYEDIT_ACK</field>
+      <field name="subject" >تشکر بخاطر ویراستاری ({$articleId})</field>
+      <field name="body" >{$copyeditorName}:
+
+از اینکه زحمت کشیده و مقاله &quot;{$articleTitle},&quot; را برای مجله {$journalName} ویرایش کردید متشکرم.
+این اقدام شما به منزله کمک بزرگی در راه ارتقا مجله میباشد.
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email is sent by the Section Editor to a submission's Copyeditor to acknowledge that the Copyeditor has successfully completed the copyediting process and thank them for their contribution.</field>
+    </row>
+    <row>
+      <field name="email_key" >COPYEDIT_AUTHOR_REQUEST</field>
+      <field name="subject" >درخواست بررسی مقاله ویرایش شده ({$articleId})</field>
+      <field name="body" >{$authorName}:
+
+مقاله شما با عنوان
+&quot;{$articleTitle}&quot;
+ارسال شده به مجله
+{$journalName}
+مرحله اول ویرایش را پشت سر گذاشت و اکنون برای بررسی و اظهار نظر جنابعالی آماده است. برای این منظور مراحل زیر را دنبال کنید:
+
+بر روی لینک ساب میشن مقاله در قسمت زیر کلیک کنید. صفحه ورودی مجله ظاهر میشود
+با استفاده از نام کاربری و اسم رمز خود وارد سایت مجله شوید و سپس بر روی لینک واقع فایل در مرحله یک کلیک کنید تا آنرا دانلود کنید
+مقاله دانلود شده را باز کرده ومتن آنرا مخصوصا قسمتهائی که توسط ویراستار حذف, اضافه شده یا تغییر یافته بدقت مطالعه کنید. همچنین به سؤالاتی که از شما شده است پاسخ دهید.
+هر گونه تغییر که لازم میدانید در متن بدهید تا آنرا مناسب تر کنید.
+پس از تکمیل مقاله را ذخیره و آنرا در مرحله دوم آپلود کنید
+بر روی فراداده های مقاله کلیک کنید تا آنرا نیز بررسی و تصحیح کنید.
+بر روی شکلک زیر عبارت کامل شد کلیک کرده و ایمیل باز شده را ارسال کنید. این ایمیل برای ویراستار و دبیر مقاله خواهد رفت
+
+آدزس مقاله:
+{$submissionCopyeditingUrl}
+نام کاربری: {$authorUsername}
+
+لطفا توجه فرمائید که این آخرین فرصت برای شما جهت اعمال تغییرات قابل توجه در مقاله میباشد. در مرحله بازبینی که متعاقب صفحه آرائی خواهد آمد فقط امکان تغییرات جزئی وجود دارد.
+
+چنانچه در حال حاضر به علت گرفتاری قادر به انجام این کار نیستید و یا هر سؤال دیگری دارید, لطفا مرا در جریان بگذارید.
+از اینکه با ما همکاری میکنید متشکریم
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email is sent by the Section Editor to a submission's Author to request that they proofread the work of the copyeditor. It provides access information for the manuscript and warns that this is the last opportunity the author has to make substantial changes.</field>
+    </row>
+    <row>
+      <field name="email_key" >COPYEDIT_AUTHOR_COMPLETE</field>
+      <field name="subject" >بررسی مقاله ویرایش شده به اتمام رسید ({$articleId})</field>
+      <field name="body" >{$editorialContactName}:
+
+&quot;{$articleTitle}&quot;
+{$journalName}
+
+هم اکنون بررسی مقاله ویرایش شده را به اتمام رساندم و اعلام میدارم که این مقاله آماده برای آخرین دور ویراستاری و ارسال برای صفحه آرائی میباشد.
+
+با تشکر
+{$authorName}</field>
+      <field name="description" >This email is sent by the Author to the Section Editor to notify them that the Author's copyediting process has been completed.</field>
+    </row>
+    <row>
+      <field name="email_key" >COPYEDIT_AUTHOR_ACK</field>
+      <field name="subject" >تشکر بخاطر بررسی مقاله ویرایش شده ({$articleId})</field>
+      <field name="body" >{$authorName}:
+
+&quot;{$articleTitle}&quot;
+{$journalName}
+
+از اینکه مقاله ویرایش شده را بررسی کردید متشکرم. هماکنون مقاله شما برای صفحه آرائی ارسال میشود.
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email is sent by the Section Editor to a submission's Author to confirm completion of the Author's copyediting process and thank them for their contribution.</field>
+    </row>
+    <row>
+      <field name="email_key" >COPYEDIT_FINAL_ACK</field>
+      <field name="subject" >تشکر بخاطر انجام آخرین مرحله ویراستاری ({$articleId})</field>
+      <field name="body" >{$copyeditorName}:
+
+&quot;{$articleTitle}&quot;
+{$journalName}
+
+از اینکه آخرین مرحله ویرایش مقاله را انجام دادید متشکرم. این اقدام مرحله ای مهم در روند ادیتوریال میباشد.
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email from the Section Editor to the Copyeditor acknowledges completion of the final round of copyediting and thanks them for their contribution.</field>
+    </row>
+    <row>
+      <field name="email_key" >SUBMISSION_ACK</field>
+      <field name="subject" >قدردانی برای ارسال مقاله ({$articleId})</field>
+      <field name="body" >{$authorName}: ({$articleId})
+
+از ارسال مقاله &quot;{$articleTitle}&quot; به {$journalName} متشکرم. با استفاده از سامانه الکترونیکی مدیریت مجله، که هم اکنون استفاده می شود، قادر خواهید بود ازطریق وارد شدن به وب سایت مجله، روند پیشرفت بررسی مقاله خود را پیگیری نمائید.
+
+آدرس مقاله : {$submissionUrl}
+نام کاربری: {$authorUsername}
+
+لطفا چنانچه سوالی دارید، با من تماس بگیرید.
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email, when enabled, is automatically sent to an author when he or she completes the process of submitting a manuscript to the journal. It provides information about tracking the submission through the process and thanks the author for the submission.</field>
+    </row>
+    <row>
+      <field name="email_key" >SUBMISSION_UNSUITABLE</field>
+      <field name="subject" >نا مناسب بودن مقاله برای مجله ({$articleId})</field>
+      <field name="body" >{$authorName}: ({$articleId})
+
+بررسی اولیه انجام شده برروی مقاله &quot;{$articleTitle}&quot; مشخص نموده است که این مقاله با چهارچوب و حیطه فعالیت {$journalName} مطابقت ندارد. توصیه می کنم که در راهنمای نویسندگان این مجله و همچنین در مقالات شماره اخیر جستجو کنید تا اطلاع بیشتری در مورد مقالات چاپ شده در این مجله کسب کنید.
+
+{$editorialContactSignature}</field>
+      <field name="description" />
+    </row>
+    <row>
+      <field name="email_key" >SUBMISSION_COMMENT</field>
+      <field name="subject" >اعلام نظر در مورد یک مقاله ({$articleId})</field>
+      <field name="body" ><![CDATA[{$name}: ({$articleId})
+
+<{$commentName}>، در مورد مقاله "{$articleTitle}" در مجله {$journalName} اعلام نظر کرده است.
+
+{$comments}]]></field>
+      <field name="description" >This email notifies the various people involved in a submission's editing process that a new comment has been posted.</field>
+    </row>
+    <row>
+      <field name="email_key" >SUBMISSION_DECISION_REVIEWERS</field>
+      <field name="subject" >تصمیم گیری درمورد مقاله ({$articleId})</field>
+      <field name="body" >به عنوان یکی از کارشناسان مقاله ارسالی &quot;{$articleTitle}&quot;مربوط به {$journalName}، اینجانب نظرات داوری ارسال شده به نویسنده این متن را برای شما ارسال می کنم.
+باردیگر از شما به خاطر مشارکت فعالتان در این فرایند سپاسگزاری می کنم.
+
+{$editorialContactSignature}
+
+{$comments}</field>
+      <field name="description" >This email notifies the reviewers of a submission that the review process has been completed. It includes information about the article and the decision reached, and thanks the reviewers for their contributions.</field>
+    </row>
+    <row>
+      <field name="email_key" >EDITOR_ASSIGN</field>
+      <field name="subject" >تعیین کارشناس مسئول ({$articleId})</field>
+      <field name="body" >{$editorialContactName}:
+
+شما به عنوان کارشناس مسئول مقاله ضضض مربوط به {$journalName} انتخاب شده اید تا بر مراحل ویرایش آن نظارت داشته باشید.
+
+آدرس مقاله: {$submissionUrl}
+نام کاربری: {$editorUsername}
+
+متشکرم
+{$editorialContactSignature}</field>
+      <field name="description" >This email notifies a Section Editor that the Editor has assigned them the task of overseeing a submission through the editing process. It provides information about the submission and how to access the journal site.</field>
+    </row>
+    <row>
+      <field name="email_key" >REVIEW_REQUEST</field>
+      <field name="subject" >درخواست کارشناسی مقاله ({$articleId})</field>
+      <field name="body" >{$reviewerName}:
+
+شما به عنوان یک کارشناس ممتاز برای بررسی مقاله &quot;{$articleTitle}&quot;که برای {$journalName} ارسال شده است انتخاب شده اید. در ذیل، چکیده مقاله ارسالی برای شما گنجانده شده است و امیدوارم که در این زمینه مایل به همکاری با این مجله باشید
+
+لطفا قبل از تاریخ &quot;{$weekLaterDate}&quot; وارد وب سایت مجله شده و مشخص کنید که آیا مایل به قبول کارشناسی مقاله هستید یا خیر. همچنین به طور همزمان می توانید به مقاله ارسالی دسترسی پیدا کرده و متن کارشناسی و توصیه های خودرا ذخیره کنید. آدرس وب سایت مجله {$journalUrl} است.
+
+ضمنا آخرین مهلت بررسی این مقاله تا تاریخ &quot;{$reviewDueDate}&quot; می باشد
+
+چنانچه نام کاربری و رمز عبور خود مربوط به وب سایت این مجله را در دسترس ندارید می توانید از پیوند زیر جهت تنظیم دوباره رمزعبور خود استفاده کنید (که به همراه نام کاربری برایتان ارسال می گردد).
+
+{$passwordResetUrl}
+آدرس مقاله : {$submissionReviewUrl}
+
+از توجه شما به این درخواست سپاسگزاری می کنم.
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_ATTACHED.)</field>
+    </row>
+    <row>
+      <field name="email_key" >REVIEW_REQUEST_ONECLICK</field>
+      <field name="subject" >درخواست کارشناسی مقاله ({$articleId})</field>
+      <field name="body" >{$reviewerName}:
+
+شما به عنوان یک کارشناس ممتاز برای بررسی مقاله &quot;{$articleTitle}&quot; که برای {$journalName} ارسال شده است انتخاب شده اید. در ذیل، چکیده مقاله ارسالی برای شما گنجانده شده است و امیدوارم که در این زمینه مایل به همکاری با این مجله باشید.
+
+لطفا قبل از تاریخ {$reviewDueDate} وارد وب سایت مجله شده و مشخص سازید که آیا مایل به قبول کارشناسی هستید یا خیر؟ همچنین به طور همزمان می توانید به مقاله ارسالی دسترسی پیدا کرده و متن کارشناسی و توصیه های خودرا ذخیره کنید.
+
+ضمنا آخرین مهلت بررسی این مقاله تا تاریخ {$reviewDueDate} می باشد.
+
+آدرس مقاله: {$submissionReviewUrl}
+
+از توجه شما به این درخواست متشکرم.
+
+{$editorialContactSignature}
+
+
+--------------------------------
+&quot;{$articleTitle}&quot;
+
+چکیده:
+{$articleAbstract}</field>
+      <field name="description" >This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2, and one-click reviewer access is enabled.</field>
+    </row>
+    <row>
+      <field name="email_key" >REVIEW_REQUEST_ATTACHED</field>
+      <field name="subject" >درخواست کارشناسی مقاله ({$articleId})</field>
+      <field name="body" ><![CDATA[{$reviewerName}:
+
+شما به عنوان یک کارشناس ممتاز برای بررسی مقاله "{$articleTitle}"که برای {$journalName} ارسال شده است انتخاب شده اید. در ذیل، چکیده مقاله ارسالی برای شما گنجانده شده است و امیدوارم که در این زمینه مایل به همکاری با این مجله باشید.
+در ذیل متن راهنمای کارشناسی برای این مجله آمده است و مقاله ارسالی به این ایمیل پیوست شده است. توجه داشته باشید که باید متن کارشناسی و توصیه خود را از طریق ایمیل ارسال کنید.
+
+لطفا با پاسخ دادن به این ایمیل قبل از تاریخ <{$reviewDueDate}> مشخص سازید که آیا قادر به انجام کارشناسی هستید یا خیر؟
+از توجه شما به این درخواست سپاسگزارم.
+
+{$editorialContactSignature}
+
+راهنمای نویسندگان
+
+{$reviewGuidelines}]]></field>
+      <field name="description" >This email is sent by the Section Editor to a Reviewer to request that they accept or decline the task of reviewing a submission. It includes the submission as an attachment. This message is used when the Email-Attachment Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST.)</field>
+    </row>
+    <row>
+      <field name="email_key" >REVIEW_CANCEL</field>
+      <field name="subject" >درخواست لغو کارشناسی ({$articleId})</field>
+      <field name="body" >{$reviewerName}:
+
+در این مرحله تصمیم بر آن شده که درخواست کارشناسی مقاله ضضض مربوط به {$journalName} که به شما محول شده بود، لغو گردد. پیشاپیش از بابت ایجاد هرگونه مشکلی از شما عذرخواهی کرده و امیدواریم که در آینده بتوانیم طی مرحله کارشناسی با شما همکاری داشته باشیم.
+
+لطفا چنانچه در این رابطه سوالی دارید، با من تماس بگیرید.
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email is sent by the Section Editor to a Reviewer who has a submission review in progress to notify them that the review has been cancelled.</field>
+    </row>
+    <row>
+      <field name="email_key" >REVIEW_CONFIRM</field>
+      <field name="subject" >کارشناسی را قبول می کنم ({$articleId})</field>
+      <field name="body" >{$editorialContactName}:
+
+اینجانب کارشناسی مقاله ارسالی &quot;{$articleTitle}&quot;مربوط به {$journalName} را قبول می نمایم. از توجه شما متشکرم و بررسی آنرا در موعد مقرر انجام خواهد داد.
+
+مهلت کارشناسی: {$reviewDueDate}</field>
+      <field name="description" >This email is sent by a Reviewer to the Section Editor in response to a review request to notify the Section Editor that the review request has been accepted and will be completed by the specified date.</field>
+    </row>
+    <row>
+      <field name="email_key" >REVIEW_DECLINE</field>
+      <field name="subject" >قادر به کارشناسی نمی باشم ({$articleId})</field>
+      <field name="body" >{$editorialContactName}:
+
+متاسفانه در حال حاضر قادر به کارشناسی مقاله ارسالی &quot;{$articleTitle}&quot;مربوط به {$journalName} نیستم.
+از توجه شما متشکرم . در دفعات بعدی آماده همکاری با این مجله هستم.
+
+{$reviewerName}</field>
+      <field name="description" >This email is sent by a Reviewer to the Section Editor in response to a review request to notify the Section Editor that the review request has been declined.</field>
+    </row>
+    <row>
+      <field name="email_key" >REVIEW_COMPLETE</field>
+      <field name="subject" >اتمام بررسی مقاله ({$articleId})</field>
+      <field name="body" >{$editorialContactName}:
+
+بررسی مقاله &quot;{$articleTitle}&quot;مربوط به {$journalName} را تمام و نظر کارشناسی خود را نیز ارسال کرده ام.
+
+&quot;{$recommendation}&quot;
+
+{$reviewerName}</field>
+      <field name="description" >This email is sent by a Reviewer to the Section Editor to notify them that a review has been completed and the comments and recommendations have been recorded on the journal web site.</field>
+    </row>
+    <row>
+      <field name="email_key" >REVIEW_ACK</field>
+      <field name="subject" >قدردانی بخاطر بررسی مقاله ({$articleId})</field>
+      <field name="body" >{$reviewerName}:
+
+برای بررسی مقاله ارسالی &quot;{$articleTitle}&quot;مربوط به {$journalName}، از شما سپاسگزاریم. مساعدت شما را که باعث ارتقاء سطح کیفی مقاله ای که چاپ شد، ارج می نهیم.
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email is sent by a Section Editor to confirm receipt of a completed review and thank the reviewer for their contributions.</field>
+    </row>
+    <row>
+      <field name="email_key" >REVIEW_REMIND</field>
+      <field name="subject" >یادآوری بررسی مقاله ارسالی ({$articleId})</field>
+      <field name="body" ><![CDATA[{$reviewerName}:
+
+این فقط یک یادآوری درخواست {$journalName} از شما جهت بررسی مقاله ارسالی "{$articleTitle}"است. امیدوار بودیم که متن کارشناسی شما تا تاریخ <{$reviewDueDate}> به مجله ارسال شده باشد و بسیار خوشحال خواهیم شد اگر هرچه زودتر بتوانید آنرا آماده کرده و نسبت به ارسال آن اقدام کنید.
+
+چنانچه نام کاربری و رمز عبور خود مربوط به وب سایت این مجله را در دسترس ندارید، می توانید از پیوند زیر جهت دوباره تنظیم کردن رمزعبور خود استفاده کنید (که به همراه نام کاربری برایتان ارسال می گردد).
+
+{$passwordResetUrl}
+آدرس مقاله: {$submissionReviewUrl}
+
+لطفا آمادگی خودرا نسبت به انجام این کمک مهم به مجله اعلام نمائید. منتظر پاسخ شما هستیم.
+
+{$editorialContactSignature}]]></field>
+      <field name="description" >This email is sent by a Section Editor to remind a reviewer that their review is due.</field>
+    </row>
+    <row>
+      <field name="email_key" >REVIEW_REMIND_ONECLICK</field>
+      <field name="subject" >یادآوری برای کارشناسی مقاله ({$articleId})</field>
+      <field name="body" >{$reviewerName}:
+
+با عرض پوزش بدین وسیله یادآوری مینمایم که متعاقب ارسال درخواست اولیه مبنی بر انجام کارشناسی مقاله &quot;{$articleTitle},&quot; برای {$journalName}
+منتظر دریافت نظرات کارشناسی جنابعالی میباشیم. امیدواریم که نتیجه کارشناسی جنابعالی تا تاریخ {$reviewDueDate} به دست ما برسد.
+
+آدزس مقاله: {$submissionReviewUrl}
+
+در صورت امکان با ایمیل اطلاع دهید که آیا مایلید این کارسناسی را انجام دهید.
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email is sent by a Section Editor to remind a reviewer that their review is due.</field>
+    </row>
+    <row>
+      <field name="email_key" >REVIEW_REMIND_AUTO</field>
+      <field name="subject" >یادآوری اتوماتیک برای کارشناسی مقاله ارسالی ({$articleId})</field>
+      <field name="body" ><![CDATA[{$reviewerName}:
+
+این فقط یک یادآوری درخواست ما از شما جهت بررسی مقاله ارسالی "{$articleTitle}"مربوط به {$journalName} است. امیدوار بودیم که متن کارشناسی شما تا تاریخ <{$reviewDueDate}> دریافت نماییم و به دلیل اتمام فرصت مقرر، این ایمیل به صورت اتوماتیک برای شما فرستاده می شود. بسیار خوشحال خواهیم شد اگر هرچه زودتر بتوانید نتیجه کارشناسی خود را برایمان ارسال کنید.
+
+چنانچه نام کاربری و رمز عبور خود مربوط به وب سایت این مجله را در دسترس ندارید می توانید از پیوند زیر جهت تنظیم دوباره رمزعبور خود استفاده کنید (که به همراه نام کاربری برایتان ارسال می گردد).
+
+{$passwordResetUrl}
+آدرس مقاله: {$submissionReviewUrl}
+
+لطفا آمادگی خودرا نسبت به انجام این کمک مهم به مجله اعلام نمائید. منتظر پاسخ شما هستم.
+
+{$editorialContactSignature}]]></field>
+      <field name="description" >This email is automatically sent when a reviewer's due date elapses (see Review Options under Journal Setup, Step 2) and one-click reviewer access is disabled. Scheduled tasks must be enabled and configured (see the site configuration file).</field>
+    </row>
+    <row>
+      <field name="email_key" >REVIEW_REMIND_AUTO_ONECLICK</field>
+      <field name="subject" >یادآوری برای کارشناسی مقاله (اتوماتیک) ({$articleId})</field>
+      <field name="body" >{$reviewerName}:
+
+با عرض پوزش بدین وسیله یادآوری مینمایم که متعاقب ارسال درخواست اولیه مبنی بر انجام کارشناسی مقاله &quot;{$articleTitle},&quot; برای {$journalName}
+منتظر دریافت نظرات کارشناسی جنابعالی میباشیم. امیدواریم که نتیجه کارشناسی جنابعالی تا تاریخ {$reviewDueDate} به دست ما برسد.
+
+آدزس مقاله: {$submissionReviewUrl}
+
+در صورت امکان با ایمیل اطلاع دهید که آیا مایلید این کارسناسی را انجام دهید.
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email is automatically sent when a reviewer's due date elapses (see Review Options under Journal Setup, Step 2) and one-click reviewer access is enabled. Scheduled tasks must be enabled and configured (see the site configuration file).</field>
+    </row>
+    <row>
+      <field name="email_key" >EDITOR_REVIEW</field>
+      <field name="subject" >بررسی ویرایش مقاله ({$articleId})</field>
+      <field name="body" >{$authorName}:
+
+درحال حاضر بررسی مقاله شما باعنوان &quot;{$articleTitle}&quot; به پایان رسیده است. تصمیم بر 
+{$comments}
+گرفته شده است. با وارد شدن به وب سایت مجله از طریق پیوندهای زیر، می توانید نظرات کارشناسان و روند مراحل ویرایشی، را ملاحظه کنید.
+
+آدرس مقاله: {$submissionUrl}
+نام کاربری: {$authorUsername}
+
+لطفا چنانچه سوالی دارید با من تماس بگیرید
+{$editorialContactSignature}</field>
+      <field name="description" >This email is sent by a Section Editor to a submission's Author to notify them that a decision has been reached in regard to a submission.</field>
+    </row>
+    <row>
+      <field name="email_key" >COPYEDIT_REQUEST</field>
+      <field name="subject" >درخواست انجام امور ویراستاری ({$articleId})</field>
+      <field name="body" >{$copyeditorName}:
+
+از شما درخواست می شود که امور ویراستاری مقاله &quot;{$articleTitle}&quot; مربوط به {$journalName} را برعهده بگیرید. شما می توانید فایل مربوطه به همراه مجموعه ای از دستورالعمل های نحوه ویراستاری مقاله را در وب سایت مجله دریافت کنید.
+
+چنانچه در حال حاضر قادر به انجام امور مذکور نیستید و یا سوالی در این زمینه دارید، لطفا با من تماس بگیرید. پیشاپیش از قبول انجام امور ویراستاری برای این مجله سپاسگزارم.
+
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email is sent by a Section Editor to a submission's Copyeditor to request that they begin the copyediting process. It provides information about the submission and how to access it.</field>
+    </row>
+    <row>
+      <field name="email_key" >COPYEDIT_COMPLETE</field>
+      <field name="subject" >اتمام ویراستاری مقاله ({$articleId})</field>
+      <field name="body" >{$editorialContactName}:
+
+هم اکنون ویراستاری مقاله جنابعالی با عنوان &quot;{$articleTitle}&quot; برای مجله {$journalName} به پایان رسید. برای بررسی نتیجه ویراستاری و پاسخ دادن به سؤالات احتمالی لطفا مراحل زیر را دنبال کنید:
+
+۱. با استفاده از نام کاربری و رمز عبور خود و بکمک لینک زیر وارد سایت مجله شوید (در صورت فراموش کردن نام کاربری یا رمز عبور از گزینه مربوط به فراموشی رمز  عبور استفاده کنید)
+۲. بر روی فایل موجود در مرحله اول ویراستاری کلیک کنید و آنرا دانلود کنید. پس از دانلود آنرا باز کنید.
+۳. مقاله را بدقت مطالعه کرده و قسمتهای ویراستاری شده را بررسی کنید. لازم به ذکر است که در فایل ورد ارسالی تغییرات اعمال شده با رنگ و علائم مخصوص براحتی قابل تشخیص است. ویراستار ممکن است در متن مقاله سؤالاتی کرده باشد که لازم است بدقت به آنها جواب دهید.
+۴. پس از وارد کردن پاسخ سؤالات  
+4. Save file to desktop and upload it in 2. Author Copyedit.
+5. Click the email icon under COMPLETE and send email to the editor.
+
+This is the last opportunity that you have to make substantial changes. You will be asked at a later stage to proofread the galleys, but at that point only minor typographical and layout errors can be corrected.
+
+Manuscript URL: {$submissionEditingUrl}
+Username: {$authorUsername}
+
+If you are unable to undertake this work at this time or have any questions,
+please contact me. Thank you for your contribution to this journal.
+
+{$copyeditorName}</field>
+      <field name="description" />
+    </row>
+    <row>
+      <field name="email_key" >COPYEDIT_FINAL_REQUEST</field>
+      <field name="subject" >بررسی نهایی ویراستاری ({$articleId})</field>
+      <field name="body" >{$copyeditorName}:
+
+مراحل ویراستاری مقاله &quot;{$articleTitle}&quot;مربوط به {$journalName} توسط نویسنده و سردبیر مربوطه کامل شده است. هم اکنون نسخه بدون اشکال نهایی آماده انجام امور صفحه آرایی می باشد.
+
+آدرس مقاله: {$submissionCopyeditingUrl}
+نام کاربری: {$copyeditorUsername}
+
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email from the Section Editor to the Copyeditor requests that they perform a final round of copyediting on a submission before it enters the layout process.</field>
+    </row>
+    <row>
+      <field name="email_key" >COPYEDIT_FINAL_COMPLETE</field>
+      <field name="subject" >بررسی نهایی ویراستاری کامل شد ({$articleId})</field>
+      <field name="body" >{$editorialContactName}:
+
+در حال حاضر، یک نسخه ویراستاری شده ی بدون اشکال از مقاله شما با عنوان {$articleTitle}مربوط به {$journalName} آماده شده و آماده انجام امور صفحه آرایی و نسخه پیش از چاپ می باشد.
+
+{$copyeditorName}</field>
+      <field name="description" >This email from the Copyeditor to the Section Editor notifies them that the final round of copyediting has been completed and that the layout process may now begin.</field>
+    </row>
+    <row>
+      <field name="email_key" >LAYOUT_REQUEST</field>
+      <field name="subject" >نسخه های پیش از چاپ مورد نیاز است ({$articleId})</field>
+      <field name="body" >{$layoutEditorName}:
+
+از شما درخواست می شود که نسخه های پیش از چاپ مقاله &quot;{$articleTitle}&quot; مربوط به {$journalName} را آماده نمایید.
+
+آدرس مقاله: {$submissionLayoutUrl}
+نام کاربری: {$layoutEditorUsername}
+
+چنانچه در حال حاضر قادر به انجام این امور نیستید و یا سوالی در این رابطه دارید با من تماس بگیرید. پیشاپیش از همکاری شما با این مجله سپاسگزارم.
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email from the Section Editor to the Layout Editor notifies them that they have been assigned the task of performing layout editing on a submission. It provides information about the submission and how to access it.</field>
+    </row>
+    <row>
+      <field name="email_key" >LAYOUT_COMPLETE</field>
+      <field name="subject" >نسخه های پیش از چاپ کامل شده است ({$articleId})</field>
+      <field name="body" >{$editorialContactName}:
+
+نسخه های پیش از چاپ مقاله ضضض مربوط به {$journalName} حاضر شده و آماده بررسی نهایی می باشد.
+لطفا چنانچه سوالی دارید، با من تماس بگیرید.
+
+
+{$layoutEditorName}</field>
+      <field name="description" >This email from the Layout Editor to the Section Editor notifies them that the layout process has been completed.</field>
+    </row>
+    <row>
+      <field name="email_key" >LAYOUT_ACK</field>
+      <field name="subject" >قدردانی بخاطر انجام امور صفحه آرایی ({$articleId})</field>
+      <field name="body" >{$layoutEditorName}:
+
+از اینکه نسخه پیش از چاپ مقاله &quot;{$articleTitle}&quot;مربوط به {$journalName} را آماده نمودید از شما متشکرم. بدیهی است این امر کمک شایانی در روند چاپ خواهد بود.
+
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email from the Section Editor to the Layout Editor acknowledges completion of the layout editing process and thanks the layout editor for their contribution.</field>
+    </row>
+    <row>
+      <field name="email_key" >PROOFREAD_AUTHOR_REQUEST</field>
+      <field name="subject" >درخواست بررسی نهایی از نویسنده ({$articleId})</field>
+      <field name="body" >{$authorName}:
+
+از شما درخواست می شود که نمونه پیش از چاپ مقاله ارسالی خود را تحت عنوان ضضض مربوط به {$journalName}، مورد بررسی نهایی قراردهید. لطفا برای دیدن نمونه های پیش از چاپ، بوسیله پیوند زیر وارد وب سایت مجله شوید. جهت فقط خواندن موارد غلط های املایی و صفحه آرایی در نسخه ای که چاپ خواهد شد، از پیوند VIEW PROOF استفاده کنید. این غلط ها را در کادر اطلاعات نمونه خوانی ذخیره کرده و طبق دستورالعمل های مربوط به بررسی نهایی (نمونه خوانی) که در وب سایت گنجانده شده است، عمل نمایید.
+
+آدرس مقاله: {$submissionUrl}
+نام کاربری: {$authorUsername}
+
+چنانچه در حال حاضر قادر به انجام موارد فوق نیستید و یا در این رابطه سوالی دارید با من تماس بگیرید. پیشاپیش از همکاری شما با این مجله سپاسگزارم.
+
+
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email from the Section Editor to the Author notifies them that an article's galleys are ready for proofreading. It provides information about the article and how to access it.</field>
+    </row>
+    <row>
+      <field name="email_key" >PROOFREAD_AUTHOR_COMPLETE</field>
+      <field name="subject" >بررسی نهایی کامل شد (نویسنده) ({$articleId})</field>
+      <field name="body" >بررسی نهایی کامل شد (نویسنده)</field>
+      <field name="description" >This email from the Author to the Proofreader and Editor notifies them that the Author's round of proofreading is complete and that details can be found in the article comments.</field>
+    </row>
+    <row>
+      <field name="email_key" >PROOFREAD_AUTHOR_ACK</field>
+      <field name="subject" >قدردانی از نویسنده بخاطر بررسی نهایی مقاله ({$articleId})</field>
+      <field name="body" >{$authorName}:
+
+بخاطر بررسی نهایی مقاله خود تحت عنوان &quot;{$articleTitle}&quot; مربوط به {$journalName} از شما متشکریم. منتظر آن هستیم تا مقاله شما بزودی چاپ گردد. چنانچه مشترک خدمات اطلاع رسانی مجله ما باشید، ایمیلی حاوی فهرست مطالب را دریافت خواهید کرد. لطفا چنانچه سوالی دارید، با من تماس بگیرید.
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email from the Section Editor to the Author acknowledges completion of the initial proofreading process and thanks them for their contribution.</field>
+    </row>
+    <row>
+      <field name="email_key" >PROOFREAD_REQUEST</field>
+      <field name="subject" >درخواست بررسی نهایی ({$articleId})</field>
+      <field name="body" >{$proofreaderName}:
+
+از شما درخواست می شود که بررسی نهایی مقاله &quot;{$articleTitle}&quot; مربوط به {$journalName} را انجام دهید.
+
+آدرس مقاله: {$submissionUrl}
+نام کاربری: {$proofreaderUsername}
+
+چنانچه در حال حاضر قادر به انجام موارد فوق نیستید و یا در این رابطه سوالی دارید، با من تماس بگیرید.
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email from the Section Editor to the Proofreader requests that they perform proofreading of an article's galleys. It provides information about the article and how to access it.</field>
+    </row>
+    <row>
+      <field name="email_key" >PROOFREAD_COMPLETE</field>
+      <field name="subject" >بررسی نهایی کامل شد ({$articleId})</field>
+      <field name="body" >{$editorialContactName}:
+
+درحال حاضر بررسی نهایی مقاله &quot;{$articleTitle}&quot;مربوط به {$journalName} را به پایان رسانده ام. هم اکنون نمونه های پیش از چاپ، آماده اعمال تصحیح نهایی توسط صفحه آرا می باشد.
+
+{$proofreaderName}</field>
+      <field name="description" >This email from the Proofreader to the Section Editor notifies them that the Proofreader has completed the proofreading process.</field>
+    </row>
+    <row>
+      <field name="email_key" >PROOFREAD_ACK</field>
+      <field name="subject" >قدردانی بخاطر انجام نمونه خوانی بررسی نهایی ({$articleId})</field>
+      <field name="body" >{$proofreaderName}:
+
+به خاطر بررسی نمونه پیش از چاپ مقاله &quot;{$articleTitle}&quot;مربوط به {$journalName} از شما متشکرم. بدیهی است این امر کمک شایانی در جهت ارتقاء سطح کیفی این مجله خواهد بود.
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email from the Section Editor to the Proofreader confirms completion of the proofreader's proofreading process and thanks them for their contribution.</field>
+    </row>
+    <row>
+      <field name="email_key" >PROOFREAD_LAYOUT_REQUEST</field>
+      <field name="subject" >درخواست بررسی نهایی از صفحه آرا ({$articleId})</field>
+      <field name="body" >{$layoutEditorName}:
+
+از شما درخواست میگردد که براساس نتایج بررسی های نهایی مقاله &quot;{$articleTitle}&quot;مربوط به {$journalName}، اصلاحات لازم را ایجاد نمایید.
+
+آدرس مقاله: {$submissionUrl}
+نام کاربری: {$layoutEditorUsername}
+
+چنانچه در حال حاضر قادر به انجام امور مذکور نیستید و یا جهت طرح سوالات خود، با من تماس بگیرید.
+
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email from the Section Editor to the Layout Editor notifies them that an article's galleys are ready for final proofreading. It provides information on the article and how to access it.</field>
+    </row>
+    <row>
+      <field name="email_key" >PROOFREAD_LAYOUT_COMPLETE</field>
+      <field name="subject" >اتمام بررسی نهایی از طرف صفحه آرا ({$articleId})</field>
+      <field name="body" >{$editorialContactName}:
+
+اصلاح نمونه های پیش از چاپ مقاله &quot;{$articleTitle}&quot;مربوط به {$journalName} تمام شده است. هم اکنون این قسمت آماده چاپ می باشد.
+
+
+{$layoutEditorName}</field>
+      <field name="description" >This email from the Layout Editor to the Section Editor notifies them that the final stage of proofreading has been completed and the article is now ready to publish.</field>
+    </row>
+    <row>
+      <field name="email_key" >PROOFREAD_LAYOUT_ACK</field>
+      <field name="subject" >قدردانی بخاطر بررسی نهایی مقاله از صفحه آرا ({$articleId})</field>
+      <field name="body" >{$layoutEditorName}:
+
+به خاطر اصلاح نهایی نمونه های پیش از چاپ مقاله &quot;{$articleTitle}&quot;مربوط به {$journalName} از شما متشکرم. این امر، کمک شایان توجهی درجهت ارتقاء سطح کیفی مجله می باشد.
+
+{$editorialContactSignature}</field>
+      <field name="description" >This email from the Section Editor to the Layout Editor acknowledges completion of the final stage of proofreading and thanks them for their contribution.</field>
+    </row>
+  </table>
+</data>

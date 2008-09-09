@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Author Submission Process. 
+  *
+  * $Id$
+  --><toc title="راهنمای ارسال مقالات " parent_topic="submission/topic/000000" locale="fa_IR" id="submission/toc/000000" >
+  <topic title="راهنمای مولفان " id="submission/topic/000001" />
+  <topic title="ملزومات ارسال مقالات " id="submission/topic/000002" />
+  <topic title="فهرست برداری واطلاعات جانبی " id="submission/topic/000003" />
+  <topic title="فایلهای مکمل" id="submission/topic/000004" />
+  <breadcrumb title="فرایند ارسال مقالات " url="submission/topic/000000" />
+</toc>

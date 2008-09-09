@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+<!--
+  * 000006.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Section Editor's Role - Review
+  *
+  * $Id$
+  --><toc title="کارشناسی" parent_topic="editorial/topic/000006" locale="fa_IR" id="editorial/toc/000006" >
+  <topic title="نسخه کارشناسی" id="editorial/topic/000024" />
+  <topic title="کارشناسی" id="editorial/topic/000025" />
+  <topic title="تصمیم سردبیر" id="editorial/topic/000026" />
+  <breadcrumb title="روند دبیری" url="editorial/topic/000000" />
+  <breadcrumb title="نقش دبیر" url="editorial/topic/000004" />
+  <breadcrumb title="کارشناسی" url="editorial/topic/000006" />
+</toc>

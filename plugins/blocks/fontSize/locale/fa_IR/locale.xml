@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  --><locale full_name="Farsi" name="fa_IR" >
+  <message key="plugins.block.fontSize.displayName" >بلوک اندازه فونت</message>
+  <message key="plugins.block.fontSize.description" >این پلاگین لینکی در نوار حاشیه برای تغییر اندازه فونت صفحه ایجاد می کند.</message>
+  <message key="plugins.block.fontSize.title" >اندازه فونت</message>
+  <message key="plugins.block.fontSize.small.alt" >کوچک</message>
+  <message key="plugins.block.fontSize.medium.alt" >متوسط</message>
+  <message key="plugins.block.fontSize.large.alt" >بزرگ</message>
+	<message key="plugins.block.fontSize.small">کوچک</message>
+	<message key="plugins.block.fontSize.medium">متوسط</message>
+	<message key="plugins.block.fontSize.large">بزرگ</message>
+</locale>

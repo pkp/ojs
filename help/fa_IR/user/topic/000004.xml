@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Current and Archives
+  *
+  * $Id$
+  --><topic title="شماره فعلی مجله و آرشیو مجله" toc="user/toc/000000" key="user.currentAndArchives" locale="fa_IR" id="user/topic/000004" >
+  <section><![CDATA[<p>
+در  وب سایت مجله جدیدترین شماره آن و همچنین آرشیوی از شماره های قبلی وجود دارد . مدیر مجله مشخص می کند که چند شماره از مجله در قسمت شماره های اخیر بماند و هر شماره جدید از مجله پس از چه مدتی به آرشیو انتقال پیدا کند .
+</p>]]></section>
+</topic>

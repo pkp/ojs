@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Journal Management - Users. 
+  *
+  * $Id$
+  --><toc title="کاربران" parent_topic="journal/topic/000002" locale="fa_IR" id="journal/toc/000002" >
+  <topic title="کاربران ثبت نام کرده در این ژورنال " id="journal/topic/000011" />
+  <topic title="ایجاد کاربر جدید" id="journal/topic/000012" />
+  <topic title="ادقام کاربران" id="journal/topic/000033" />
+  <breadcrumb title="مدیریت ژورنال " url="journal/topic/000000" />
+  <breadcrumb title="کاربران" url="journal/topic/000002" />
+</toc>

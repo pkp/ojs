@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Search and Browse
+  *
+  * $Id$
+  --><topic title="جستجو و مشاهده" toc="user/toc/000000" key="user.searchAndBrowse" locale="fa_IR" id="user/topic/000005" >
+  <section><![CDATA[<p>
+مطالب موجود در وب سایت مجله را می توان بر اساس نام مولف . عنوان . خلاصه مقاله و عبارات کلیدی جستجو کرد . متن کامل مطالب نیز به دو فرمت HTMLو PDF در دسترس می باشد همچنین با استفاده از کلید مشاهده در نوار سمت راست صفحه می توان مطالب را بر اساس عنوان و مولف مشاهده کرد همچنین سایر مقالاتی که با سیستم PJS منتشر شده اند قابل مشاهده هستند .
+</p>]]></section>
+</topic>

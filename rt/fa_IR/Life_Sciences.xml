@@ -1,0 +1,547 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE version SYSTEM "../../lib/pkp/dtd/rtVersion.dtd">
+<!--
+  * Life_Sciences.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reading Tools version: Life Sciences (en_US)
+  *
+  * $Id$
+  --><version locale="en_US" id="Life_Sciences" >
+  <version_title>علوم اجتماعی</version_title>
+  <version_description>ابزار خواندن می تواند برای خوانندگان این مطالعه در زمینه منابع موجود راهنمایی وسیعی ارائه دهد که این راهنمایی می تواند تفسیر، قرار گرفتن و ارزیابی کردن در زمینه آن مطالعه را فراهم آورد.</version_description>
+  <context>
+    <context_title>کار نویسندگان</context_title>
+    <context_abbrev>کارهای دیگر</context_abbrev>
+    <context_description>کارهای دیگر نویسنده (گان) مقاله را توسط موتورهای جستجوی OAI تشخیص می دهد.</context_description>
+    <author_terms/>
+    <search>
+      <search_title>گوگل اسکولار</search_title>
+      <search_description> گوگل اسکولار جستجوهای مشخصی در نوشتیجات علمی شامل دست نوشته های کارشناسی شده، پایان نامه ها، کتب، پیش پرینت ها، چکیده ها و گزارشات فنی، انجام می دهد. محتوای آن شامل طیف وسیعی از ناشران و مولفین است که گوگل با آنها رابطه دارد، برای مثال انجمن وسایل محاسباتی، IEEE، سرویس مشخص کننده آزاد کتابخانه WorldCat از شرکت OCLC و غیره. صفحات نتایج شامل دسته های مختلف، آنالیزهای رسمی، و موقعیت های کتابخانه ای (فقط کتب فعلی) خواهد بود.</search_description>
+      <url>http://scholar.google.com</url>
+      <search_url>http://scholar.google.com/scholar?ie=UTF-8&amp;oe=UTF-8&amp;hl=eng&amp;as_sauthors={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>OAIster (آرشیو باز پایگاههای داده ی تحقیقاتی ابتکاری ) </search_title>
+      <search_description>OAIster پروژه ی بخش خدمات تولید کتابخانه دیجیتال دانشگاه میشیگان می باشد که جستجو در طیف وسیعی از منابع و موسسات را فراهم می نماید. به این صورت که این موسسات اطلاعات منابع دیجیتالی خود را در اختیار قرار می دهند و اعضای پروژه آنها را در سرویس OAIster جمع آوری می کنند.</search_description>
+      <url>http://oaister.umdl.umich.edu/</url>
+      <search_url>http://oaister.umdl.umich.edu/cgi/b/bib/bib-idx?type=boolean&amp;size=10&amp;c=oaister&amp;q1=&amp;rgn1=entire+record&amp;op2=and&amp;q2=&amp;rgn2=entire+record&amp;op3=And&amp;q3=&amp;rgn3=title&amp;op4=And&amp;rgn4=author&amp;op5=And&amp;q5=&amp;rgn5=subject&amp;op6=And&amp;rgn6=norm&amp;q6=all+types&amp;sort=author%2Fcreator&amp;submit2=search&amp;q4={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>سایروس</search_title>
+      <search_description>سایروس قادر است انواع مجلات مرجع رایگان و غیر رایگان را جستجو کند . در حال حاضرسایروس بر ساینس دایرکت .مدلاین . بیلستین . نوروسیکون و بیومد احاطه دارد .</search_description>
+      <url>http://www.scirus.com/</url>
+      <search_url>http://www.scirus.com/search_simple/?frm=simple&amp;dsmem=on&amp;dsweb=on&amp;wordtype_1=phrase&amp;query_1={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>پابلیک نالج پراجکت اپن آرشیو هاروستر)پروژه آگاهی عمومی از آرشیو باز هاروستر</search_title>
+      <search_description>آرشیو کامل و باز
+PKP
+یک سیستم نمایه سازی آزاد از متا دیتا ها می باشد که با پروژه ی آگاهی عمومی از طریق کوشش های انجام شده توسط فدرال گسترش یافته تا دسترسی به جستجو را وسیع تر و بهتر سازد. 
+منابع اطلاعاتی 
+PKP OAI
+به شما این امکان را می دهد تا یک نمایه ی قابل جستجو از متا دیتا  ها را از آرشیو های باز و کامل اولیه مانندسایت های مورد استفاده در سیستم مجلات باز یا سیستم های کنفرانس باز ایجاد کنید.
+</search_description>
+      <url>http://pkp.sfu.ca/harvester/</url>
+      <search_url>http://pkp.sfu.ca/harvester/search.php?limit=author&amp;query={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>مراکز کنترل و پیشگیری از بیماری ها(CBC)</search_title>
+      <search_description>وب سایت CBC کاربران را به منابع مرجع کامل منتشر شده توسط انتشارات MMWR و سایر انتشارات تحت نظارت CBC مرتبط می سازد . امکان جستجوی یک موضوع خاص در میان مطالب منتشر شده وجود دارد .</search_description>
+      <url>http://www.cdc.gov/</url>
+      <search_url>http://www.cdc.gov/search.do?action=search&amp;x=0&amp;y=0&amp;queryText={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>های وایر</search_title>
+      <search_description>های وایر یکی از موثرترین مجلات در زمینه علوم تجربی . تکنولوژی و پزشکی بوده است . تا ماه مارس 2002 های وایر حاوی بیش از 11785877 مقاله از بیش از 4500 مجله پزشکی و 405385 مقاله رایگان کامل از 321 مجله مختلف بوده است .</search_description>
+      <url>http://highwire.stanford.edu/lists/freeart.dtl</url>
+      <search_url>http://highwire.stanford.edu/cgi/searchresults?andorexactfulltext=and&amp;resourcetype=1&amp;src=hw&amp;fulltext=&amp;pubdate_year=&amp;volume=&amp;firstpage=&amp;disp_type=&amp;author1={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>MEDLINE/PubMed</search_title>
+      <search_description>این بانک اطلاعاتی کتابخانه ملی پزشکی است و دارای بیش از 11000 مقاله چاپ شده از بیش از 4300 مجله پزشکی می باشد .</search_description>
+      <url>http://www.ncbi.nlm.nih.gov/pubmed/</url>
+      <search_url>http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=PubMed&amp;orig_db=PubMed&amp;cmd=search&amp;cmd_current=&amp;query_key=1&amp;term={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>NetPrints</search_title>
+      <search_description>این سایت به مولفان امکان می دهد که مقالات خود را قبل . در حین و پس از اتمام تا زمان ارایه به ناشر نگهداری کنند . افق کاری آن عمدتاْ بر کارهای پزشکی و بهداشتی متمرکز است .</search_description>
+      <url>http://clinmed.netprints.org/search.dtl</url>
+      <search_url>http://www.google.com/search?hl=en&amp;q=site%3Aclinmed.netprints.org+{$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>اینتیوت : علوم زیستی و بهداشتی</search_title>
+      <search_description>در این سایت سرویس آنلاین رایگانی وجود دارد که به شما امکان دسترسی به بهترین منابع در زمینه آموزش و تحقیق را می دهد . بیش از 31000 مرجع در اینجا لیست شده اند که بصورت رایگان در دسترس کاربران بوده و امکان جستجو میان آنها نیز وجود دارد . این سرویس قبلاْ به نام BIOME شناخته می شد .</search_description>
+      <url>http://www.intute.ac.uk/healthandlifesciences/</url>
+      <search_url>http://www.intute.ac.uk/healthandlifesciences/cgi-bin/search.pl?submit.x=20&amp;submit.y=16&amp;submit=Go&amp;limit=0&amp;subject=healthandlifesciences&amp;term1={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>جستجوی عبارات</context_title>
+    <context_abbrev>جستجوی عبارات</context_abbrev>
+    <context_description>در این سرویس شما روی هر کلمه ای که دوبار کلیک کنید کادری با عنوان ( تعریف عبارت ) در کنار آن ظاهر می شود و توضیحاتی درباره آن عبارت به شما داده می شود . شما همچنین می توانید کلمه مورد نظرتان را در این کارت تایپ یا پیست کنید سپس می توانید از کلید جستجو برای یافتن تعریف آن عبارت استفاده کنید .در این سیستم مراجع مورد استفاده بر اساس فراوانی و میزان رایگان بودن در ارجحیت قرار داده شده اند .</context_description>
+    <define_terms/>
+    <search>
+      <search_title>گوگل</search_title>
+      <search_description>در اینجا می توانید با موتور جستجوی گوگل به دنبال تعاریف عبارات بگردید .</search_description>
+      <url>http://www.google.com/</url>
+      <search_url>http://www.google.com/search?hl=en&amp;q=define%3A{$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>دایره المعارف پزشکی ADAM</search_title>
+      <search_description>دایره المعارف پزشکی ADAM حاوی بیش از 4000 مقاله درباره بیماری ها . تست شناسایی بیماری ها . علایم . جراحات و جراحی می باشد همچنین حاوی کتابخانه غنی از تصویر ها و نمودارهای پزشکی است .</search_description>
+      <url>http://www.nlm.nih.gov/medlineplus/encyclopedia.html</url>
+      <search_url>http://search.nlm.nih.gov/medlineplus/query?DISAMBIGUATION=true&amp;FUNCTION=search&amp;SHOWTOPICS=5&amp;SERVER2=server2&amp;SERVER1=server1&amp;ASPECT=-1&amp;START=0&amp;END=0&amp;x=29&amp;y=10&amp;PARAMETER={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>دیکشنری علوم زیستی تهیه شده توسط بیوتک</search_title>
+      <search_description>دیکشنری علوم زیستی تهیه شده توسط بیوتک حاوی بیش از 8300 عبارت کلیدی مرتبط با بیو شیمی . بیوتکنولوژی .گیاهشناسی . بیولوژی سلولی و ژنتیک و همچنین مقداری مطلب درباره اکولوژی . لیمینولوژی(زیست شناسی جانواران آب شیرین ) داروسازی و پزشکی می باشد .</search_description>
+      <url>http://biotech.icmb.utexas.edu/search/dict-search.html</url>
+      <search_url>http://biotech.icmb.utexas.edu/search/dict-search2.html?bo1=AND&amp;search_type=normal&amp;def=&amp;word={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title> دیشکنری پزشکی MEDTERMS</search_title>
+      <search_description>این یک دیکشنری دایره المعارفی تهیه شده توسط جمعی از پزشکان است که تقریباْ هر روز مطالب آن آبدیت می شود . در آن یک فهرست الف تا ی از موضوعات و همچنین امکان جستجو وجود دارد .</search_description>
+      <url>http://www.medicinenet.com/script/main/AlphaIdx.asp?li=MNI&amp;p=A_DICT</url>
+      <search_url>http://www.medicinenet.com/script/main/srchCont.asp?li=MNI&amp;ArtTypeID=DICT&amp;op=MM&amp;SRC={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>دیکشنری آنلاین مریام - وبستر</search_title>
+      <search_description>این دیکشنری آنلاین که بر اساس چاپ دهم دیکشنری وبستر منتشر شده در 1993 است همه ساله مورد بازنگری قرار می گیرد . در آن بیش از 16000 مدخل وجود دارد . همراه هر کلمه تعریف . تلفظ . کاربرد . نقش دستوری و توضیح مختصری درباره ریشه آن ذکر شده است . اگر کلمه ای را اشتباه تایپ کنید املای صحیح آن به شما پیشنهاد می شود . امکانات جستجو در این دیکشنری بسیار گسترده است همچنین راهنمای کاملی درباره نحوه تلفظ و فایل های صوتی تلفظ صداها در آن وجود دارد .</search_description>
+      <url>http://www.merriam-webster.com/</url>
+      <search_url>http://www.merriam-webster.com/cgi-bin/dictionary?book=Dictionary&amp;va={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>دیکشنری وانلوک</search_title>
+      <search_description> دیکشنری وانلوک یک دیکشنری حاوی اطلاعات فرعی است . با وارد کردن یک کلمه انگلیسی در آن وانلوک فهرست 5292362 کلمه ای خود را که از 934 دیکشنری فهرست برداری شده است به دنبال تعاریف و انواع اطلاعات دیگر درباره آن جستجو می کند .</search_description>
+      <url>http://www.onelook.com/index.html</url>
+      <search_url>http://www.onelook.com/?ls=a&amp;w={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>دیکشنری پزشکی آنلاین</search_title>
+      <search_description>ایجاد این دیکشنری از اوایل سال 1997 آغاز شد و در حال حاضر حاوی بیش از 46000 تعریف درباره عبارات و اصطلاحات مختلف می باشد . هر تعریف در آن به سایر تعاریف مشابه خود ارتباط دارد . استفاده از این دیکشنری رایگان است . در آن می توان اطلاعاتی درباره بسیاری مفاهیم بیوشیمی . بیولوژی سلولی . شیمی . پزشکی . بیولوژی ملکولی . فیزیک . بیولوژی گیاهی و رادیو بیولوژی بدست آورد .</search_description>
+      <url>http://cancerweb.ncl.ac.uk/cgi-bin/omd?</url>
+      <search_url>http://cancerweb.ncl.ac.uk/cgi-bin/omd?query={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>ویکی پدیا : دایره المعارف رایگان</search_title>
+      <search_description>ویکی پدیا یک دایره المعارف رایگانی است که مطالب آن با همکاری تمامی کاربران آن از سراسر جهان نوشته می شود . در این سایت هر کسی می تواند هر مقاله ای را بدون مجوزی خاص ویرایش کند لذا کیفیت مطالب موجود در آن تنوع شدیدی دارد با این حال این دایره المعارف ارزش مشاهده را دارد . نسخه انگلیسی آن دراری صدها هزار مدخل است نسخه های اسپانیایی . فرانسوی . اسپرانتو و چندین زبان دیگر ازآن نیز وجود دارد .</search_description>
+      <url>http://en.wikipedia.org/wiki/Main_Page</url>
+      <search_url>http://en.wikipedia.org/wiki/Special:Search?go=Go&amp;fulltext=Search&amp;search={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>Infoplease.com</search_title>
+      <search_description>این سایت طراحی شده توسط موسسه آلاماناک می باشد و دارای یک بانک اطلاعاتی از بیوگرافی ها . یک دیکشنری . یک اطلس گیتا شناسی و مقالاتی از دایره المعارف کلمبیا می باشد . شما می توانید این منابع را بصورت تک تک یا گروهی بررسی کنید .لینک هایی به مطالب مختلف درسایت های دیگر نیز در آن وجود دارد .</search_description>
+      <url>http://www.infoplease.com</url>
+      <search_url>http://www.infoplease.com/search?fr=iptn&amp;in=all&amp;x=0&amp;y=0&amp;query={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>پژوهش های مرتبط</context_title>
+    <context_abbrev>پژوهش های مرتبط</context_abbrev>
+    <context_description>در اینجا می توانید با وارد کردن موضوع پژوهش خود سایر پژوهش های مرتبط با آنرا از بانک های اطلاعاتی مختلف بیابید .</context_description>
+    <search>
+      <search_title>مرکز کنترل و پیشگیری از بیماریها (CDC)</search_title>
+      <search_description>در این سایت امکان دسترسی به متن کامل مقالات شرکت MMWR و سایر انتشارات شرکت CDC وجود دارد . </search_description>
+      <url>http://www.cdc.gov/</url>
+      <search_url>http://www.cdc.gov/search.do?action=search&amp;x=0&amp;y=0&amp;queryText={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>ClinicalTrials.gov</search_title>
+      <search_description>سایت CLINICALTRIALS.COM اطلاعاتی را درباره جدیدترین تحقیقات پزشکی دراختیار کاربران قرار می دهد .</search_description>
+      <url>http://www.clinicaltrials.gov</url>
+      <search_url>http://search.nhsdirect.nhs.uk/kbroker/nhsdirect/nhsdirect/search.lsim?hs=0&amp;sm=0&amp;ha=1054&amp;sc=nhsdirect&amp;mt=0&amp;sb=0&amp;nh=3&amp;qt={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>سایروس</search_title>
+      <search_description>سایروس مجلات اینترنتی رایگان وغیر رایگان را جستجو می کند . در حال حاضر قادر است سایت های ساینس دایرکت . مدلاین . بیلستین . نوروسکیون . بیومد و USPTO را جستجو کند .</search_description>
+      <url>http://www.scirus.com/</url>
+      <search_url>http://www.scirus.com/search_simple/?frm=simple&amp;dsmem=on&amp;dsweb=on&amp;wordtype_1=phrase&amp;query_1={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>Emedicine</search_title>
+      <search_description>این یک سایت حاوی مقالات جدید پزشکی می باشد که در زمینه های پزشکی و پرستاری می باشد .</search_description>
+      <url>http://www.emedicine.com/</url>
+      <search_url>http://www.emedicine.com/cgi-bin/foxweb.exe/searchengine@/em/searchengine?boolean=and&amp;book=all&amp;maxhits=100&amp;HiddenURL=&amp;query={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>HealthWeb</search_title>
+      <search_description>لینک هایی را برای دستیابی به مطالب ارزشیابی شده و درجه بندی شده از کتابخانه ها و نهادهای معتبر پزشکی در اختیار کاربران قرار می دهد . هدف از ایجاد این سایت تبادل اطلاعات میان متخصصان و عموم مردم در زمینه مسایل پزشکی بوده است .</search_description>
+      <url>http://www.healthweb.org/</url>
+      <search_url>http://www.healthweb.org/quicksearch_results5.cfm?StartRow=1&amp;maxrows=25&amp;Criteria_required=You+Must+enter+a+Keyword&amp;where=1&amp;criteria={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>HighWire</search_title>
+      <search_description>این یکی ازمهمترین مجلات درزمینه علم و تکنولوژی و پزشکی می باشد . تا ماه مارس 2002 این سایت حاوی 11785877 مقاله از بیش از 4500 مجله پزشکی و 405385 مقاله کامل از 321 شماره مجله های وایر بوده است . </search_description>
+      <url>http://highwire.stanford.edu/lists/freeart.dtl</url>
+      <search_url>http://highwire.stanford.edu/cgi/searchresults?andorexactfulltext=and&amp;resourcetype=1&amp;author1=&amp;src=ml&amp;disp_type=&amp;fulltext={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>MEDLINE/PubMed</search_title>
+      <search_description>مدلاین بانک اطلاعاتی کتابخانه ملی پزشکی می باشد که دارای بیش از 11000 میلیون مقاله از 4300 مجله پزشکی میباشد .</search_description>
+      <url>http://www.ncbi.nlm.nih.gov/pubmed/</url>
+      <search_url>http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=PubMed&amp;orig_db=PubMed&amp;cmd=search&amp;cmd_current=&amp;query_key=1&amp;term={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>MEDLINEplus</search_title>
+      <search_description>این سایت شما را در جهت یافتن پاسخ پرسشهای پزشکی به مطالب علمی مختلفی هدایت می کند . در اینجا می توانید بزرگترین بانک های اطلاعاتی پزشکی اینترنتی را به دنبال موضوعی خاص جستجو کنید . این سایت هم برای متخصصان و هم برای کاربران عادی مفید است و اطلاعات وسیعی در زمینه انواع بیماریها دارا می باشد .</search_description>
+      <url>http://medlineplus.gov/</url>
+      <search_url>http://search.nlm.nih.gov/medlineplus/query?DISAMBIGUATION=true&amp;FUNCTION=search&amp;SERVER2=server2&amp;SERVER1=server1&amp;PARAMETER={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>NetPrints</search_title>
+      <search_description>این سایت به مولفان اجازه می دهد تا آثار خود را قبل . در حین و پس از تهیه قبل از ارایه به ناشر در آن ذخیره کنند و . حیطه کاری آن عمدتاْ  در زمینه پزشکی متمرکز است .</search_description>
+      <url>http://clinmed.netprints.org/search.dtl</url>
+      <search_url>http://www.google.com/search?hl=en&amp;q=site%3Aclinmed.netprints.org+{$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>اینتیوت : علوم زیستی و بهداشتی</search_title>
+      <search_description>اینتیوت یک سرویس رایگان آنلاین است که به کاربران امکان دسترسی به بهترین منابع اینترنتی درزمینه تحصیلات و پژوهش را می دهد . مراجع آن توسط شبکه ای از متخصصان ارزشیابی و دسته بندی شده اند . در آن بیش از 31000 منبع رایگان طبقه بندی شده اند و امکان جستجو میان آنها نیز وجود دارد .</search_description>
+      <url>http://www.intute.ac.uk/healthandlifesciences/</url>
+      <search_url>http://www.intute.ac.uk/healthandlifesciences/cgi-bin/search.pl?submit.x=20&amp;submit.y=16&amp;submit=Go&amp;limit=0&amp;subject=healthandlifesciences&amp;term1={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>چندرسانه ای</context_title>
+    <context_abbrev>جند رسانه ای</context_abbrev>
+    <context_description>مطالب چندرسانه ای</context_description>
+    <search>
+      <search_title>پروژه فایل های تصویری آموزشی</search_title>
+      <search_description>در این پروژه مجموعه ای از فیلم های علمی جهت استفاده در امور تحقیقات وآموزش جمع آوری و طبق بندی گردیده اند .  درا این طرح سعی بر آن است یک کتابخانه دیجیتال تصویری تهیه شود و سپس این مجموعه به سایر نهادهای تحقیقاتی مرتبط گردد .</search_description>
+      <url>http://www.open-video.org/index.php</url>
+      <search_url>http://www.open-video.org/results.php?search_field=all&amp;terms={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>جستجوی کتاب</context_title>
+    <context_abbrev>جستجوی کتاب</context_abbrev>
+    <context_description>جستجوی منابع مرتبط با کتاب خانه ها</context_description>
+    <search>
+      <search_title>انتشارات گوگل</search_title>
+      <search_description>گوگل با کتابخانه های دانشگاههای میشیگان . هاروارد . استنفورد . آکسفورد و کتابخانه ملی نیویورک در حال همکاری است تا کتابهای موجود در آنها را به صورت دیجیتال درآورده و آنها را از طریق سرویس انتشارات گوگل در اختیار کاربران اینترنت قرار دهد . این یک پروژه بسیار عظیم است که در آن میلیو ن ها جلد کتابها چاپی به فرمت دیجیتال در آمده و در بانک اطلاعاتی گوگل جمع آوری می گردد . در این سیستم روی عنوان هر کتابی که کلیک بکنید صفحه ای حاوی اطلاعاتی درباره آن کتاب از قبیل نقدها . کتابهای مشابه . ناشر . امکان خرید کتاب و نزدیک ترین کتابخانه به شما که آنرا دارد نمایش داده می شود .</search_description>
+      <url>http://print.google.com</url>
+      <search_url>http://print.google.com/print?q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>صفحه کتابهای آنلاین </search_title>
+      <search_description>این سایت توسط جان مارک اوکر بلوم در دانشگاه پنسیلوانیا مدیریت می شود . اینجا مکانی مناسب برای آغاز جستجو برای متن کامل کتابها در اینترنت است . در این سایت بیش از 20000 کتاب انگلیسی به فرمت های مختلف در دسترس می باشد . مدخل های آن را می توان بر اساس نام ناشر یا عنوان کتاب جستجو کرد همچنین امکان جستجوی کتاب توسط سیستم جستجوی کتابخانه کنگره ملی آمریکا نیز وجود دارد . لیست جدیدترین کتابها دایماْ در صفحه ای مجزا به آدرس &lt;a href=&quot;http://onlinebooks.library.upenn.edu/new.html&quot;>http://onlinebooks.library.upenn.edu/new.html&lt;/a>.در آن بروز رسانی می شود .</search_description>
+      <url>http://digital.library.upenn.edu/books/</url>
+      <search_url>http://onlinebooks.library.upenn.edu/webbin/book/search?tmode=words&amp;title={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>کتابهای آنلاین</search_title>
+      <search_description>این مجموعه ای 32935 عنوان کتاب است که البته برخی از آنها صرفاْ نسخه نمایشی می باشد . امکان جستجو در آن بر اساس ناشر و عنوان کتاب وجود دارد . همه کتابهای آن رایگان نیستند .</search_description>
+      <url>http://www.books-on-line.com/</url>
+      <search_url>http://www.books-on-line.com/bol/KeyWordSearch.cfm?RowCount=50&amp;Searchquery={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>انتشارات آکادمی ملی (NAP)</search_title>
+      <search_description>انتشارات آکادمی ملی هر ساله بیش از 200 عنوان کتاب در زمینه موضوعات گسترده ای از قبیل علوم تجربی . مهندسی و بهداشت منتشر می نماید و همواره در زمینه امور انتشارات علمی یکی از چهره های شناخته شده و مطرح بوده است .</search_description>
+      <url>http://books.nap.edu/books/0309070317/html/177.html</url>
+      <search_url>http://search.nap.edu/nap-cgi/napsearch.cgi?term={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>کتابخانه جهانی</search_title>
+      <search_description>این کتابخانه ای وسیع تر و مجهز تر است و دارای بیش از 100000 کتاب الکترونیک بوده و هدف آن است که تا پایان سال 2006 دارای بیش از 1000000 کتاب الکترونیک باشد ( برخی از کتابها از پروژه گوتنبرگ گرفته شده اند)</search_description>
+      <url>http://tera-3.ul.cs.cmu.edu/</url>
+      <search_url>http://tera-3.ul.cs.cmu.edu/cgi-bin/DBscripts/advsearch_db.cgi?perPage=25&amp;listStart=0&amp;author1=&amp;subject1=Any&amp;year1=&amp;year2=&amp;language1=Any&amp;scentre=Any&amp;search=Search&amp;title1={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>مشاهده غیر رایگان</context_title>
+    <context_abbrev>مشاهده غیر رایگان</context_abbrev>
+    <context_description>این سرویس برای کسانی مفید است که دسترسی مستقیم به مجلات الکترونیک از طریق اشتراک را ندارند . این سرویس از طریق مکانیسم های ایمن پرداخت پول کاربران را قادر می سازد تا برای دسترسی پیدا کردن به مطالب در همان زمان پول پرداخت کنند . بلافاصله پس از پرداخت پول دسترسی به مطلب مورد نظر امکان پذیر شده و تا 30 روز اعتبار دارد .</context_description>
+    <search>
+      <search_title>اینگنتا</search_title>
+      <search_description>اینگنتا سرویسی است که دسترسی به متن کامل مقالات را محدود می سازد . با این حال مدیر سایت می تواند فهرست رایگانی ازمطالب موجود را با آن به کاربران نشان دهد .</search_description>
+      <url>http://www.ingenta.com/</url>
+      <search_url>http://www.ingenta.com/isis/searching/Search/ingenta?database=1&amp;title={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>کتابخانه الکترونیک</search_title>
+      <search_description>پژوهشگران مستقل که به کتابخانه های تخصصی دسترسی ندارند با پرداخت ماهیانه فقط 5 دلار می توانند در این سرویس مشترک شوند . این سرویس قادر است بانک های اطلاعات بیش از 20000 نهاد و سایت مختلف و 175 کتابخانه معتبر جهانی مانند کتابخانه کمبریج را به دنبال موضوعی خاص جستجو کند . همچنین امکان </search_description>
+      <url>http://www.ebrary.com/corp/content.htm</url>
+      <search_url>http://shop.ebrary.com/Top?layout=search&amp;f00=text&amp;p01=&amp;f01=subject&amp;d=journal&amp;l=en&amp;sch=%A0%A0%A0%A0%A0Search%A0%A0%A0%A0%A0&amp;frm=adv.x&amp;p00={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>کوستیا</search_title>
+      <search_description>با کوستیا شما به بیش از 47000 کتاب و 375000 مجله و روزنامه دسترسی پیدا می کنید . تمام مطالب آن کامل هستند و هر صفحه دارای قابلیت جستجو است . هزینه اشتراک این سرویس از 19.05 دلار در ماه تا 119.95 دلار در سال متغیر است .</search_description>
+      <url>http://www.questia.com</url>
+      <search_url>http://www.questia.com/SM.qst?act=search&amp;keywordsSearchType=1000&amp;mediaType=book&amp;mediaType=journal&amp;mediaType=magazine&amp;mediaType=newspaper&amp;mediaType=encyclopedia&amp;mediaType=startpage&amp;keywords={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>جهان علم </search_title>
+      <search_description>با این سرویس شما به یک بانک اطلاعاتی از مطالبی گسترده در زمینه علمی و فنی و متون پژوهشی دسترسی پیدا می کنید .</search_description>
+      <url>http://www.thescientificworld.com/</url>
+      <search_url>http://www.thescientificworld.com/SCIENTIFICWORLDJOURNAL/search/SearchResults.asp?From=Main&amp;Terms={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>سرویس غیر رایگان ویلی</search_title>
+      <search_description>این سرویس امکان دسترسی سریع و کامل به طیف وسیعی از مجلات و منابع علمی را بدون نیاز به اشتراک فراهم می آورد . همچنین با آن می توان یک مجله یا یک مقاله را به طور مستقیم با استفاده از کارت اعتباری خریداری کرد . بلافاصله پس از پرداخت پول مطلب مورد نظر در اختیار شماست و تا 24 ساعت ادامه دارد . </search_description>
+      <url>http://www3.interscience.wiley.com/aboutus/ppv-articleselect.html</url>
+      <search_url>http://www3.interscience.wiley.com/search/allsearch</search_url>
+      <search_post>allContentSearchForm=&amp;mode=quicksearch&amp;WISindexid1=WISall&amp;WISsearch1={$formKeywords}</search_post>
+    </search>
+  </context>
+  <context>
+    <context_title>سایت های بهداشتی دولتی</context_title>
+    <context_abbrev>سایت های بهداشتی دولتی</context_abbrev>
+    <context_description>در اینجا می توانید به اطلاعات پزشکی که در منابع دولتی وجود دارد دسترسی پیدا کنید .</context_description>
+    <search>
+      <search_title>شبکه بهداشتی کانادا</search_title>
+      <search_description>این یک شبکه رو به گسترش است که بهترین و جدیدترین اطلاعات مربوط به حیطه پزشکی را در کانادا در اختیار کاربران قرار می دهد .</search_description>
+      <url>http://www.canadian-health-network.ca/servlet/ContentServer?pagename=CHN-RCS/Page/HomePageTemplate&amp;cid=1038611684536&amp;c=Page&amp;lang=En</url>
+      <search_url>http://www.canadian-health-network.ca/servlet/ContentServer?cid=1046357853421&amp;pagename=CHN-RCS%2FPage%2FSearchPageTemplate&amp;c=Page&amp;lang=En&amp;orderBy=ORDER_RANK&amp;searchType=ALL_WORDS&amp;logSearch=true&amp;searchStr={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>Directgov</search_title>
+      <search_description>این سایت که به جای سایت UK آنلاین فعالیت خواهد کرد مکانی برای دسترسی به جدیدترین و گسترده ترین اطلاعات در زمینه امور بهداشتی از دولت انگلستان است .</search_description>
+      <url>http://www.direct.gov.uk/Homepage/fs/en</url>
+      <search_url>http://www.direct.gov.uk/AdvancedSearch/SearchResults/fs/en?NP=1&amp;PO1=C&amp;PI1=W&amp;PF1=A&amp;PG=1&amp;RP=20&amp;SC=__dgov_site&amp;Z=1&amp;PT1={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>HealthInsite</search_title>
+      <search_description>این سایت که با هدف بهبود وضعیت بهداشت در استرالیا راه اندازی شده است اطلاعات با ارزشی در زمینه امور بهداشتی در اختیار کاربران قرارد می دهد .</search_description>
+      <url>http://www.healthinsite.gov.au</url>
+      <search_url>http://www.healthinsite.gov.au/search97cgi/s97_cgi?Action=FilterSearch&amp;Filter=ve_quick_search_filter.hts&amp;ResultErrorTemplate=ve_error.hts&amp;ResultCount=10&amp;ResultMaxDocs=600&amp;gl_search_collection=full&amp;searchtype=simple&amp;collection=healthinsite_coll&amp;SortSpec=Score+desc+VDKDate_Modified+desc+VdkMeta_Title+asc+vdktarget_comp_num+asc&amp;ResultTemplate=ve_search_results_new.hts&amp;gl_search_text={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>NHS Direct</search_title>
+      <search_description>این یک درگاه اطلاعاتی برای دسترسی به اطلاعات بهداشتی در انگلستان است . این سایت دارای مقدار زیادی توصیه های بهداشتی است و درآن یک مشاوره پزشکی 24 ساعته فعال می باشد .</search_description>
+      <url>http://www.nhsdirect.nhs.uk</url>
+      <search_url>http://search.nhsdirect.nhs.uk/kbroker/nhsdirect/nhsdirect/search.lsim?hs=0&amp;sm=0&amp;ha=1054&amp;sc=nhsdirect&amp;mt=0&amp;sb=0&amp;nh=3&amp;qt={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>PubMed Central</search_title>
+      <search_description>این یک آرشیو رایگان آنلاین از مقالات کامل از مقالات کامل و ارزشیابی شده در زمینه علوم زیستی است .</search_description>
+      <url>http://pubmedcentral.nih.gov/</url>
+      <search_url>http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pmc&amp;cmd=search&amp;pmfilter_Fulltext=on&amp;pmfilter_Relevance=on&amp;term={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>درگاههای پیوسته</context_title>
+    <context_abbrev>درگاه های پیوسته</context_abbrev>
+    <context_description>در اینجا شما به انبوهی ازسایتهای مرتبط به موضوع مورد نظرتان هدایت می شوید .</context_description>
+    <search>
+      <search_title>آرشیو اطلاعات بهداشتی هاردین </search_title>
+      <search_description>این لیستی از لیست های موجود در کتابخانه هاردین واقع در دانشگاه آیووا است . به تناسب موضوع مورد جستجو این لیست طویلتر یا کوتاهتر می شود همچنین هر ساله بنیاد هاردین به بهترین سایت های جستجوی پزشکی که میزان دقت عمل آنها حداقل 93٪ باشد جایزه ای اهدا می کند .</search_description>
+      <url>http://www.lib.uiowa.edu/hardin/md/index.html</url>
+      <search_url>http://search.atomz.com/search/?sp-a=00050f6e-sp00000000&amp;sp-q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>AMEDEO</search_title>
+      <search_description>آمدو به منظور رفع نیازهای پژوهشی متخصصان امور بهداشتی طراحی شده است . این سایت به مشترکان خود به صورت هفتگی ایمیل هایی می فرستد که در آنها اطلاعاتی درباره جدیدترین انتشارات پزشکی و همچنین صفحات وب مفید برای کسب اطلاعات در این زمینه وجود دارد .</search_description>
+      <url>http://www.amedeo.com</url>
+      <search_url>http://www.google.com/custom?sa=Search&amp;sitesearch=www.amedeo.com&amp;q={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>بانک های اطلاعاتی</context_title>
+    <context_abbrev>بانک های اطلاعاتی</context_abbrev>
+    <context_description>دسترسی به خلاصه مقالات و متن کامل مقالات در زمینه های مختلف را امکان پذیر می باشد .</context_description>
+    <search>
+      <search_title>مجله پزشکی AMA</search_title>
+      <search_description>وب سایت انجمن پزشکی آمریکا در اینجا آدرس های مختلف اینترنتی و منابع مفیدی در زمینه آموزش و پژوهش را که توسط پزشکان معتبر در آمریکا تهیه شده اند در اختیار شما قرار می دهد . در اینجا می توانید مطالب را بر اساس نام پزشک مولف و یا تخصص پزشکی جستجو کنید. </search_description>
+      <url>http://www.ama-assn.org/aps/amahg.htm</url>
+      <search_url>http://search.ama-assn.org/Search/query.html?qc=public+amnews&amp;qt={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>بانک اطلاعاتی بیماری ها نسخه 1.6</search_title>
+      <search_description>این فهرست جامعی از بیماری های انسانی . درمان آنها . علایم آنها و جدیدترین یافته ها درباره آنها می باشد . همچنین دارای تعدادی کتاب و لینک های جستجو می باشد </search_description>
+      <url>http://www.diseasesdatabase.com/begin.asp?gif=1</url>
+      <search_url>http://www.diseasesdatabase.com/item_choice.asp? bytSearchType=0&amp;strUserInput={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>Drugs.com</search_title>
+      <search_description>این منبع رایگان برای  متخصصان بهداشتی و عموم مردم است که اطلاعات عمومی قابل اطمینانی را در زمینه مصرف داروها ارایه می کند . همچنین اطلاعات تخصصی و عمومی انواع داروها در آن وجود دارد .در آن فهرستی الفبایی از انواع داروها وجود دارد و همچنین در آن می توان امکان مصرف همزمان مصرف دو دارو و یا یک دارو و یک غدا را بررسی کرد .</search_description>
+      <url>http://www.drugs.com/</url>
+      <search_url>http://www.drugs.com/search.php?is_main_search=1&amp;searchterm={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>مرکز ملی اطلاعات بیوتکنولوژی</search_title>
+      <search_description>این مرکز علاوه بر داشتن بانک اطلاعاتی از توالی اسید های نوکلییک ژنم انسانی دارای اطلاعات جامع و منابع مفیدی در زمینه های مختلف بیوتکنولوژي می باشد .منابع تحلیلی آن عبارتند از BLAST,ELECTERONIC PCR,ORF FINDERو ...</search_description>
+      <url>http://www.ncbi.nlm.nih.gov/</url>
+      <search_url>http://www.ncbi.nlm.nih.gov/gquery/gquery.fcgi?term={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>RxList</search_title>
+      <search_description>این فهرست دارویی اینترنتی اطلاعات مفیدی را درباره انواع داروهای ساخت آمریکا در اختیار کاربران قرار می دهد .</search_description>
+      <url>http://www.rxlist.com/</url>
+      <search_url>http://www.rxlist.com/cgi/rxlist.cgi?drug=acetaminophen</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>تالارهای گفتمان آنلاین</context_title>
+    <context_abbrev>تالارهای گفتمان آنلاین</context_abbrev>
+    <context_description>در اینجا می توانید به تالار های گفتگوی رایگان اینترنتی دستیابی پیدا کنید که به کسترش اطلاعات عمومی شما در زمنیه های مختلف کمک کند . </context_description>
+    <search>
+      <search_title>EurekAlert!</search_title>
+      <search_description>این یک سرویس مطبوعاتی آنلاین است که توسط انجمن پیشرفت علوم آمریکا(AAAS) طراحی شده است و هدف اصلی از ایجاد آن ایجاد همکاری میان نهادهای پژوهشی و سازمان های دولتی در جهت گسترش علوم مختلف بوده است . همچنین هدف دیگر از ایجاد آن داشتن آرشیوی از انواع مطالب علمی منتشر شده بوده است .</search_description>
+      <url>http://www.eurekalert.org/links.php</url>
+      <search_url>http://search.eurekalert.org/e3/query.html?col=ev3rel&amp;qc=ev3rel&amp;qt={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>Liszt</search_title>
+      <search_description>این سرویس که به میزبانی شرکت تاپیکا ارایه می شود سرویسی رایگان برای عضویت و شرکت در گروه های مباحثه در زمینه علوم زیستی می باشد .</search_description>
+      <url>http://www.liszt.com/dir/?cid=0</url>
+      <search_url>http://www.liszt.com/search/?search_type=cat&amp;amp;query={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>Mad Science Net: The 24-hour exploding laboratory</search_title>
+      <search_description>این یک مجموعه بسیار جامع از منابع علمی است که به صورت 24 ساعته متخصصان آن به پرسش های شما پاسخ می دهند .</search_description>
+      <url>http://www.madsci.org/</url>
+      <search_url>http://www.madsci.org/cgi-bin/search?Submit=Submit+Query&amp;or=AND&amp;words=1&amp;index=MadSci+Archives&amp;MAX_TOTAL=25&amp;area=All+areas&amp;grade=All+grades&amp;query={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>فایل های آموزشی</context_title>
+    <context_abbrev>راهنما</context_abbrev>
+    <context_description>بر اساس کلمه کلیدی یا موضوعی که به آن می دهید آرشیوهای مختلف روزنامه های جهانی را به دنبال آن جستجو می کند .</context_description>
+    <search>
+      <search_title>آموزش علوم تجربی . ریاضی . مهندسی و تکنولوژي(SMETE)</search_title>
+      <search_description>این وب سایت حاوی نسخه آزمایشی کتابخانه دیجیتال علوم و تکنولوژي است که امکانات جستجو نیز در آن قرار داده شده است .</search_description>
+      <url>http://www.smete.org/</url>
+      <search_url>http://www.smete.org/smete/?path=/public/find/search_results.jhtml&amp;_DARGS=/smete/public/find/index_body.jhtml&amp;/smete/forms/FindLearningObjects.operation=search&amp;_D:/smete/forms/FindLearningObjects.operation=%20&amp;_D:/smete/forms/FindLearningObjects.keyword=%20&amp;/smete/forms/FindLearningObjects.learningResourceType=&amp;_D:/smete/forms/FindLearningObjects.learningResourceType=%20&amp;/smete/forms/FindLearningObjects.grade=0-Any&amp;_D:/smete/forms/FindLearningObjects.grade=%20&amp;/smete/forms/FindLearningObjects.title=&amp;_D:/smete/forms/FindLearningObjects.title=%20&amp;/smete/forms/FindLearningObjects.author=&amp;_D:/smete/forms/FindLearningObjects.author=%20&amp;/smete/forms/FindLearningObjects.hostCollection=&amp;_D:/smete/forms/FindLearningObjects.hostCollection=%20&amp;/smete/forms/FindLearningObjects.afterYear=&amp;_D:/smete/forms/FindLearningObjects.afterYear=%20&amp;/smete/forms/FindLearningObjects.beforeYear=&amp;_D:/smete/forms/FindLearningObjects.beforeYear=%20&amp;&amp;/smete/forms/FindLearningObjects.keyword={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>سیاست گذاری های دولتی</context_title>
+    <context_abbrev>Gov Policy</context_abbrev>
+    <context_description>در اینجا می توانید به اطلاعات و خدمات ارایه شده توسط دولت فدرال آمریکا و دولت کانادا دسترسی پیدا کنید</context_description>
+    <search>
+      <search_title>دسترسی به اطلاعات و خدمات دولت استرالیا</search_title>
+      <search_description>این درگاه اطلاعاتی دولت استرالیاست که در آن می توانید اطلاعات بیش از 700 وب سایت دولتی و بیش از 5000000 صفحه اینترنتی دولتی را به طور کامل مشاهده و جستجو کنید .</search_description>
+      <url>http://www.fed.gov.au</url>
+      <search_url>http://govsearch.australia.gov.au/search/search.cgi?collection=gov&amp;form=au&amp;query=&amp;query_phrase=&amp;query_or=&amp;query_not=&amp;meta_f_sand=&amp;scope=&amp;fscope=512&amp;num_ranks=20&amp;chksummary=chksummary&amp;query_and={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>دولت کانادا</search_title>
+      <search_description>در اینجا می توانید در میان نهادها و وزارت خانه های دولتی به جستجو بپردازید همچنین یک فهرست الفبایی از برنامه ها و خدمات دولتی کانادا وجود دارد همچنین در آن صفحه جدیدی با عنوان (اقامت) وجود دارد که در آن هزینه های سفر و امکانات ارتباطی در کانادا ذکر شده است .در صفحه (درباره کانادا) لینک هایی برای دسترسی به وزارت خانه ها و نهاد ها و کمسیون های مختلف وجود دارد . علاوه بر وب سایت های وزارت خانه ها یک درگاه اطلاعاتی دولتی نیز درآن وجود دارد که اطلاعات نهادهای خصوصی ایالت ها نمایش داده می شود .</search_description>
+      <url>http://www.canada.gc.ca/main_e.html</url>
+      <search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple&amp;pg=q&amp;enc=iso88591&amp;site=main&amp;bridge=&amp;stt=&amp;lowercaseq=&amp;what=web&amp;user=searchintranet&amp;browser=N6E&amp;kl=XX&amp;op=a&amp;q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>Directgov</search_title>
+      <search_description>این یک سرویس دولتی است که به مردم امکان دسترسی به جدیدترین و وسیعترین اطلاعات مرتبط با خدمات عمومی را ارایه می کند . این سایت از دستورالعمل ها و همکاری سایت UK GovTALK بهره می برد  .</search_description>
+      <url>http://www.direct.gov.uk</url>
+      <search_url>http://www.direct.gov.uk/AdvancedSearch/SearchResults/fs/en?NP=1&amp;PO1=C&amp;PI1=W&amp;PF1=A&amp;PG=1&amp;RP=20&amp;SC=__dgov_site&amp;Z=1&amp;PT1={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>Info4local.gov.uk</search_title>
+      <search_description>اطلاعات فرمانداری ها را از طریق دولت فدرال مرکزی نشان می دهد . در اینجا به سرعت و آسانی می توان انواع نهادهای خصوصی و دولتی را در زمینه های مختلف پیدا کرد همچنین درآن مطالب مفصلی درباره نحوه اجرای دولت الکترونیک موجود است .</search_description>
+      <url>http://www.info4local.gov.uk</url>
+      <search_url>http://www.info4local.gov.uk/?view=Search+results&amp;subjects=all&amp;departmentsIds=0&amp;informationTypesIds=all&amp;query={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>درگاه اطلاعاتی دولت نیوزلند</search_title>
+      <search_description>این درگاه اطلاعاتی وب سایتی است که دارای امکان جستجو و لینک هایی به خدمات و اطلاعات اکثر نهادهای دولتی می باشد . این سایت توسط کمسیون خدمات عمومی تحت نظارت وزارت کشور نیوزلند اداره می شود .</search_description>
+      <url>http://www.govt.nz</url>
+      <search_url>http://www.govt.nz/search?type=spider&amp;t=spider&amp;q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>اروپا</search_title>
+      <search_description>اطلاعات جدید درباره کشورهای عضو اتحادیه اروپا از قبیل اطلاعات آماری . راهکارها . اخبار . اسناد رسمی . متون حقوقی و ... را ارایه می کند .</search_description>
+      <url>http://europa.eu.int/index_en.htm</url>
+      <search_url>http://europa.eu.int/geninfo/query/resultaction.jsp?page=1</search_url>
+      <search_post>Collection=EuropaFull&amp;ResultTemplate=/result_en.jsp&amp;ResultCount=25&amp;qtype=simple&amp;ResultMaxDocs=200&amp;DefaultLG=en&amp;QueryText={$formKeywords}</search_post>
+    </search>
+    <search>
+      <search_title>شبکه اطلاعاتی حقوقی بین المللی (GLIN)</search_title>
+      <search_description>این یک بانک اطلاعاتی ازقوانین . آرای قضایی و سایر منابع مکمل حقوقی است که توسط نهاد های دولتی وبین المللی منتشرشده اند . اعضای این وب سایت می توانند متن کامل مطالب مذکور را به زبان دلخواه خود مشاهده کنند . هر مطلب در این سایت دارای یک خلاصه انگلیسی و همچنین یکسری کلمات کلیدی می باشد .</search_description>
+      <url>http://www.glin.gov</url>
+      <search_url>http://www.glin.gov/search.do?refineQuery=&amp;offset=0&amp;refineQueryType=&amp;fromSearch=true&amp;queryType=ALL&amp;searchBtn=Search&amp;includeAllFields=on&amp;searchAll=on&amp;sumLanguage=any&amp;pubLanguage=any&amp;pubJurisdiction=any&amp;publicationJurisdictionExclude=false&amp;searchPublicationDate=true&amp;dateFromDay=01&amp;dateFromMonth=01&amp;dateFromYear=&amp;dateToDay=01&amp;dateToMonth=01&amp;dateToYear=&amp;subjTerm=&amp;subjTermConjunction%5B0%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B1%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B2%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B3%5D=AND&amp;subjTerm=&amp;searchOrder=default&amp;hitsPerPage=10&amp;showSummary=on&amp;queryString={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>بهداشت کانادا</search_title>
+      <search_description>این یک وزارت خانه فدرال است که هدف آن بهبود وضعیت بهداشتی کانادا می باشد . در آن سعی شده تا به کاربران مطالب بهداشتی مفیدی آموزش داده شود تا وضعیت بهداشتی آنان از لحاظ معیار های جهانی بهداشت مانند طول عمر . سبک زندگی و استفاده موثر از امکانات بهداشتی اجتماع به حداکثر برسد .</search_description>
+      <url>http://search.hc-sc.gc.ca/cgi-bin/query?mss=hcsearch</url>
+      <search_url>http://search.hc-sc.gc.ca/cgi-bin/query?mss=hcresult&amp;pg=aq&amp;enc=iso88591&amp;ft=adverse+drug&amp;doc=all&amp;results=any&amp;exclude=&amp;r=&amp;kl=en&amp;subsite=both&amp;search=Search&amp;q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>FirstGov</search_title>
+      <search_description>این یک وب سایت عمومی است که توسط شورایی از چندین نهاد بهداشتی آمریکا اداره می شود .</search_description>
+      <url>http://www.firstgov.gov/</url>
+      <search_url>http://www.firstgov.gov/fgsearch/index.jsp?db=www&amp;st=AS&amp;ms0=should&amp;mt0=all&amp;rn=2&amp;parsed=true&amp;x=2&amp;y=8&amp;mw0={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>سایت های کانادا</search_title>
+      <search_description>این سایت یک درگاه اطلاعاتی و خدماتی تحت مدیریت دولت کانادا می باشد .</search_description>
+      <url>http://www.canada.gc.ca/main_e.html</url>
+      <search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple.html&amp;enc=iso88591&amp;pg=q&amp;kl=en&amp;site=main&amp;q={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>گزارش های رسانه ای</context_title>
+    <context_abbrev>گزارش های رسانه ای</context_abbrev>
+    <context_description>با دادن یک موضوع یا کلمه کلیدی به آن مطالب مربوطه را از آرشیو روزنامه های مطرح بین المللی برای شما جستجو می کند .</context_description>
+    <search>
+      <search_title>اخبار گوگل</search_title>
+      <search_description>گزارش های خبری را با استفاده از موتور جستجوی گوگل در اینجا می توانید جستجو کنید .</search_description>
+      <url>http://news.google.com/</url>
+      <search_url>http://news.google.com/news?hl=en&amp;q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>Nature Science Update</search_title>
+      <search_description>سرمقاله های خبری هر روز را که توسط سردبیران مجله طبیعت نوشته می شود در اینجا می توانید مطالعه کنید .</search_description>
+      <url>http://www.nature.com/nsu/</url>
+      <search_url>http://search.nature.com/search/?sp-x-9=cat&amp;sp-q-9=NEWS&amp;submit=go&amp;sp-a=sp1001702d&amp;sp-sfvl-field=subject%7Cujournal&amp;sp-t=results&amp;sp-x-1=ujournal&amp;sp-p-1=phrase&amp;sp-p=all&amp;sp-q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>The Scientist</search_title>
+      <search_description>این وب سایت مجله ساینتیست می باشد . در آن مطالب علمی متنوعی یافت میشود .</search_description>
+      <url>http://www.the-scientist.com/</url>
+      <search_url>http://www.the-scientist.com/search/dosearch/</search_url>
+      <search_post>box_type=toolbar&amp;search_restriction=all&amp;order_by=date&amp;search_terms={$formKeywords}</search_post>
+    </search>
+    <search>
+      <search_title>نیویورک تایمز</search_title>
+      <search_description>وب سایت مجله نیویورک تایمز(حاوی شماره های هفت روز اخیر)</search_description>
+      <url>http://www.nytimes.com/</url>
+      <search_url>http://query.nytimes.com/search/query?date=site1week&amp;submit.x=1&amp;submit.y=9&amp;query={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>آرشیو مجله ساینتیفیک آمریکن</search_title>
+      <search_description> این در واقع یک منبع مفید در زمینه مطالب علمی است که حاوی تمامی شماره های مجله ساینتیفیک آمریکن از 1993 تا کنون می باشد . </search_description>
+      <url>http://www.sciamdigital.com/</url>
+      <search_url>http://www.sciamdigital.com/index.cfm?fa=Search.ViewSearchForItemResultList&amp;AUTHOR_CHAR=&amp;TITLE_CHAR=&amp;FullText_CHAR={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>Newsdirectory</search_title>
+      <search_description>این یک راهنمای جامع برای ارتباط با رسانه های جهانی انگلیسی زبان آنلاین می باشد . درحال حاضر بیش از 8000 مجله و روزنامه و بیش از 1000 کانال تلویزیونی آمریکا در آن فهرست بندی شده اند .</search_description>
+      <url>http://www.newsdirectory.com/</url>
+      <search_url>http://www.newsdirectory.com/hbSearch.php</search_url>
+      <search_post>s={$formKeywords}&amp; submit=Go</search_post>
+    </search>
+  </context>
+  <context>
+    <context_title>جستجوی اینترنتی</context_title>
+    <context_abbrev>جستجوی اینترنتی</context_abbrev>
+    <context_description> در اینجا با وارد کردن یک کلمه کلیدی می توانید آن را با چندین موتور جستجو همزمان جستجو کنید .</context_description>
+    <search>
+      <search_title>Google</search_title>
+      <search_description>با موتور جستجوی معروف گوگل به دنبال مطالب مورد نظر خود بگردید .</search_description>
+      <url>http://www.google.com/</url>
+      <search_url>http://www.google.com/search?q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>سرویس دانشگاهی گوگل</search_title>
+      <search_description> در اینجا می توانید انواع مطالب دانشگاهی از قبیل مقالات کارشناسی شده . پایان نامه ها . کتاب ها . خلاصه مقالات و گزارشات فنی را در زمینه های مختلف مشاهده کنید . مطالب موجود در آن متعلق به چندین ناشر بزرگ است که گوگل با آنها قرارداد همکاری دایم دارد مانند انجمن ماشین های اداری آمریکا .IEEE,OCLC و ... </search_description>
+      <url>http://scholar.google.com</url>
+      <search_url>http://scholar.google.com/scholar?ie=UTF-8&amp;oe=UTF-8&amp;hl=en&amp;q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>کلاستی یا موتور جستجوی دسته بندی کننده</search_title>
+      <search_description>این یک سیستم جستجو گر است که نتایج حاصل از جستجو های خود در یک مورد خاص را دسته بندی کرده وبه کاربر ارایه می دهد . با آن می توان حتی اطلاعات فرعی و اخبار و محصولات سایت های تجاری مانند eBAY را جستجو کرد .</search_description>
+      <url>http://clusty.com/about</url>
+      <search_url>http://clusty.com/search?query={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>Vivisimo</search_title>
+      <search_description>تکنولوژي دسته بندی کننده اطلاعات وی ویس مو که توسط محققان بنیاد کارنگی ملون ابداع شده است اطلاعات وسیعی را از آرشیو نهادهای مختلف در یک زمینه جمع آوری کرده و آنها را به صورت دسته بندی شده در اختیار کاربر قرار می دهد .</search_description>
+      <url>http://vivisimo.com</url>
+      <search_url>http://vivisimo.com/search?tb=homepage&amp;v%3Asources=Web&amp;query={$formKeywords}</search_url>
+    </search>
+  </context>
+</version>

@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000031.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Import/Export
+  *
+  * $Id$
+  --><topic title="وارد و خارج کردن اطلاعات  " toc="journal/toc/000001" key="journal.managementPages.importExport" locale="fa_IR" id="journal/topic/000031" >
+  <section><![CDATA[<p>
+ویژگی وارد و خارج کردن اطلاعات که در قسمت مدیریت مجله موجود است به مدیر مجله اجازه میدهد که اطلاعات را به برنامه OJSوارد کرده ویا از آن خارج کند 
+</p><p>
+ورود وخروج اطلاعات از طریق پلاگینها انجام میشود که هر نوع اطلاعات دارای پلاگین خاص خود برای ورود و خروج است برای اطلاعات بیشتر به فایلهای متنی همراه پلاگینها که در شاخه پلاگینها در برنامه OJSقرار دارند مراجعه کنید
+</p><p>
+پنج نوع پلاگین مخصوص ورود وخروج اطلاعات در برنامه OJSفعال هستندکه در ادامه به آنها خواهیم پرداخت  
+</p><p>
+ورود و خروج اطلاعات به صورت فرمانهایی که تایپ میشوند نیز قابل اجراست . برای اطلاعات بیشتر به فایل IMPORTEXPORT.PHPدر شاخه TOOLSمراجعه کنید
+</p>]]></section>
+  <section title="پلاگین XMLکاربران " ><![CDATA[<p>
+از پلاگیت XMLکاربران میتوان برای وارد و خارج کردن اطلاعات کاربران و سمتهای آنها استفاده کرد.برای اطلاعات بیشتر به فایل DTDدرشاخه
+"plugins/importexport/users/users.dtd"
+مراجعه کنید
+</p>]]></section>
+  <section title="پلاگین استخراج مقاله ارودیت" ><![CDATA[<p>
+پلاگین استخراج مقاله ارودیت ابزاری برای استخراج مقالات به صورت موردی میباشد نگاه کنید به
+ <a href="http://www.erudit.org">http://www.erudit.org</a>
+برای اطلاعات بیشتر
+</p>]]></section>
+  <section title="پلاگین XMLمقالات " ><![CDATA[<p>
+پلاگین XMLمقالات ابزار اصلی برای استخراج چندتایی مقالات است.از این ابزار میتوان برای انتقال تکی ودسته جمعی مقالات و خلاصه مقالات استفاده کرد برای اطلاعات بیشتر درباره این پلاگین به فایل DTDبه آدرس  
+ "plugins/importexport/native/native.dtd"
+مراجعه کنید
+.</p>]]></section>
+  <section title="پلاگین XMLاستخراج  PUBMED" ><![CDATA[<p>
+پلاگین استخراج مقالات PUBMEDیک پلاگین بسیارمهم برای ثبت اطلاعات کتابشناسی مقالات طبق استاندارد PUBMEDبه فرمت XMLبرای ثبت مقالات در بانک اطلاعاتی NLM PUBMED/MEDLINE میباشد اطلاعات بیشتر درباره فرمت XMLو سایر اطلاعات ضروری را میتوانبد در اینجا پیدا کنید 
+<a href="http://www.ncbi.nlm.nih.gov/entrez/query/static/spec.html">http://www.ncbi.nlm.nih.gov/entrez/query/static/spec.html</a>
+اطلاعات بیشتر در مورد این پلاگین را میتوانید در آدرس 
+"plugins/importexport/pubmed"
+پیدا کنید
+</p>]]></section>
+  <section title="پلاگین XMLاستخراج مقالات CROSSREF" ><![CDATA[<p>
+پلاگین استخراج مقالات CROSSREF ابزاری است که با آن میتوان اطلاعات جانبی را به مقالات افزود تا در سیستم فهرست بندی CROSSREF ثبت شوند اطلاعات بیشتر درباره فرمت XMLوسایر اطلاعات ضروری را میتوانید در اینجا پیدا کنید
+<a href="http://www.crossref.org/schema">http://www.crossref.org/schema</a>
+اطلاعات بیشتر درباره این پلاگین را در اینجا پیدا کنید
+"plugins/importexport/crossref"
+</p>]]></section>
+</topic>

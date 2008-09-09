@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000007.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Languages 
+  *
+  * $Id$
+  --><topic title="زبانها" toc="journal/toc/000001" key="journal.managementPages.languages" locale="fa_IR" id="journal/topic/000007" >
+  <section><![CDATA[<p>
+این سیستم از ژورنالهای چند زبانه و همچنین تهیه ژورنال به زبانی غیر از انگلیسی پشتیبانی میکند مدیر مجله در قسمت مدیریت زبانهای مجاز را برای مجله تعریف میکند  اگر مجله ای به بیش از یک زبان موجود باشد بازدیدکنندگان از سایت میتوانند زبان مورد نظرشان را از طریق یک منوی کشویی انتخاب کنند همچنین کاربران برای ثبت نام میتوانند اطلاعات خود را به زبانهای مجاز در سایت وارد کنند 
+</p>]]></section>
+</topic>

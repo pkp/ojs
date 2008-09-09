@@ -1,0 +1,28 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Journal Management - Management Pages. 
+  *
+  * $Id$
+  --><toc title="صفحات مدیریت" parent_topic="journal/topic/000001" locale="fa_IR" id="journal/toc/000001" >
+  <topic title="اعلامیه ها" id="journal/topic/000034" />
+  <topic title="کاوشگر فایلها" id="journal/topic/000010" />
+  <topic title="بخشهای ژورنال " id="journal/topic/000005" />
+  <topic title="زبانها" id="journal/topic/000007" />
+  <topic title="مستد" id="journal/topic/000029" />
+  <topic title="امورمالی" id="journal/topic/000035" />
+  <topic title="ایمیلهای أماده شده" id="journal/topic/000006" />
+  <topic title="ابزارهای خواندن" id="journal/topic/000009" />
+  <topic title="تنظیمات" id="journal/topic/000004" />
+  <topic title="گزارشها" id="journal/topic/000008" />
+  <topic title="اشتراک مجله" id="journal/topic/000025" />
+  <topic title="پلاگینهای سیستم" id="journal/topic/000030" />
+  <topic title="ورود و خروج اطلاعات" id="journal/topic/000031" />
+  <breadcrumb title="مدیریت ژورنال " url="journal/topic/000000" />
+  <breadcrumb title="صفحات مدیریت" url="journal/topic/000001" />
+</toc>

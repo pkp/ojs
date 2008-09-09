@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages Index 
+  *
+  * $Id$
+  --><topic title="صفحات مدیریتی " toc="journal/toc/000000" key="journal.managementPages.index" subtoc="journal/toc/000001" locale="fa_IR" id="journal/topic/000001" >
+  <section><![CDATA[<p>
+مدی ژورنال  از طرق صفحات مدیریتی سیستم را تنظیم کرده و انسجام می بخشد این فرایند با اجرای ۵گام اصلی ایجاد سیستم آغاز میشود ولی در کنار آن بخشهای مختلف مجله ٫ نوع متن استاندارد مجله برای ایمیلها ٫ زبانهای که مجله به آنها باید ترجمه شود ٫ تیراژ چاپ و ابزارهایی که مجله در اختیار خوانندگان قرار میدهد نیز باید مشخص شود 
+</p>]]></section>
+</topic>

@@ -1,0 +1,472 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE version SYSTEM "../../lib/pkp/dtd/rtVersion.dtd">
+<!--
+  * Mathematics.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reading Tools version: Mathematics (en_US)
+  *
+  * $Id$
+  --><version locale="en_US" id="Mathematics" >
+  <version_title>ریاضیات</version_title>
+  <version_description>ابزار خواندن می تواند برای خوانندگان این مطالعه در زمینه منابع موجود راهنمایی وسیعی ارائه دهد که این راهنمایی می تواند تفسیر، قرار گرفتن و ارزیابی کردن در زمینه آن مطالعه را فراهم آورد.</version_description>
+  <context>
+    <context_title>کار سایر نویسندگان</context_title>
+    <context_abbrev>کارهای دیگر</context_abbrev>
+    <context_description>کارهای دیگر نویسنده (گان) مقاله را توسط موتورهای جستجوی OAI تشخیص می دهد.</context_description>
+    <author_terms/>
+    <search>
+      <search_title>سرویس دانشگاهی گوگل</search_title>
+      <search_description> گوگل اسکولار جستجوهای مشخصی در نوشتیجات علمی شامل دست نوشته های کارشناسی شده، پایان نامه ها، کتب، پیش پرینت ها، چکیده ها و گزارشات فنی، انجام می دهد. محتوای آن شامل طیف وسیعی از ناشران و مولفین است که گوگل با آنها رابطه دارد، برای مثال انجمن وسایل محاسباتی، IEEE، سرویس مشخص کننده آزاد کتابخانه WorldCat از شرکت OCLC و غیره. صفحات نتایج شامل دسته های مختلف، آنالیزهای رسمی، و موقعیت های کتابخانه ای (فقط کتب فعلی) خواهد بود.</search_description>
+      <url>http://scholar.google.com</url>
+      <search_url>http://scholar.google.com/scholar?ie=UTF-8&amp;oe=UTF-8&amp;hl=eng&amp;as_sauthors={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>اینتیوت : علوم زیستی و بهداشتی</search_title>
+      <search_description>در این سایت سرویس آنلاین رایگانی وجود دارد که به شما امکان دسترسی به بهترین منابع در زمینه آموزش و تحقیق را می دهد . بیش از 31000 مرجع در اینجا لیست شده اند که بصورت رایگان در دسترس کاربران بوده و امکان جستجو میان آنها نیز وجود دارد . این سرویس قبلاْ به نام BIOME شناخته می شد .</search_description>
+      <url>http://www.intute.ac.uk/sciences/</url>
+      <search_url>http://www.intute.ac.uk/sciences/cgi-bin/search.pl?submit.x=0&amp;submit.y=0&amp;submit=Go&amp;limit=0&amp;subject=sciences&amp;term1={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>پروژه OAIster ( بانک های اطلاعاتی تحقیقاتی آرشیوهای باز ) </search_title>
+      <search_description>جمع آوری کننده آرشیو های باز PKP یک سیستم رایگان فهرست بندی متادیتا است که توسط پروژهء اطلاعات عمومی بر اثر تلاشهای صورت گرفته در این پروژه به منظور گسترش و بهینه سازی دسترسی به تحقیقات ابداء شده است هزینه این پروژه از طریق بودجه فدرال تامین شده است جمع آوری کنندهء PKP OAI به شما امکان میدهد که یک فهرست با قابلیت جستجو را از متادیتاهای آرشیوهای باز مانند سایتهایی که از سیستمهای ژورنال آزاد یا سیستمهای کنفرانس ازاد استفاده میکنند تهیه کنید </search_description>
+      <url>http://oaister.umdl.umich.edu/</url>
+      <search_url>http://oaister.umdl.umich.edu/cgi/b/bib/bib-idx?type=boolean&amp;size=10&amp;c=oaister&amp;q1=&amp;rgn1=entire+record&amp;op2=and&amp;q2=&amp;rgn2=entire+record&amp;op3=And&amp;q3=&amp;rgn3=title&amp;op4=And&amp;rgn4=author&amp;op5=And&amp;q5=&amp;rgn5=subject&amp;op6=And&amp;rgn6=norm&amp;q6=all+types&amp;sort=author%2Fcreator&amp;submit2=search&amp;q4={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>جمع اورکنندهء آرشیوهای پروژهء اطلاعات عمومی</search_title>
+      <search_description>جمع آوری کننده آرشیو های باز PKP یک سیستم رایگان فهرست بندی متادیتا است که توسط پروژهء اطلاعات عمومی بر اثر تلاشهای صورت گرفته در این پروژه به منظور گسترش و بهینه سازی دسترسی به تحقیقات ابداء شده است هزینه این پروژه از طریق بودجه فدرال تامین شده است جمع آوری کنندهء PKP OAI به شما امکان میدهد که یک فهرست با قابلیت جستجو را از متادیتاهای آرشیوهای باز مانند سایتهایی که از سیستمهای ژورنال آزاد یا سیستمهای کنفرانس ازاد استفاده میکنند تهیه کنید </search_description>
+      <url>http://pkp.sfu.ca/harvester/</url>
+      <search_url>http://pkp.sfu.ca/harvester/search.php?limit=author&amp;query={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>euler</search_title>
+      <search_description>یک سرویس علمی جهانی است که در آن مطالب علمی گسترده ای در حوزه ریاضیات از قبیل اطلاعات کتابشناسی . خلاصه مقالات یا مقالات کارشناسی شده . فهرست های مختلف . طبقه بندی و تحقیقات و خدمات کتابخانه ای وجود دارد .</search_description>
+      <url>http://www.emis.ams.org/projects/EULER/</url>
+      <search_url>http://www.emis.de/projects/EULER/search?q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>آرشیوهای ریاضیات : مباحثی از ریاضی</search_title>
+      <search_description>این مجموعه ای بزرگ و با قابلیت جستجو از متون آموزشی . نرم افزار و لینک های اینترنتی است . در اینجا می توانید با وارد کردن عنوان یک مبحث ریاضی فهرستی از سایت های حاوی آن را مشاهده کنید .</search_description>
+      <url>http://archives.math.utk.edu/topics/</url>
+      <search_url>http://www.google.com/search?q=site%3Aarchives.math.utk.edu+topics+{$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>جستجوی ریاضی</search_title>
+      <search_description>این یک ابزار بی نظیر برای جستجو میان بیش از 80000 سایت ریاضیات در اینترنت می باشد که توسط دانشگاه سیدنی استرالیا تهیه شده است .</search_description>
+      <url>http://www.maths.usyd.edu.au:8000/MathSearch.html</url>
+      <search_url>http://www.maths.usyd.edu.au:8000/s/search/p?p2=&amp;p3=&amp;p4=&amp;p1={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>MPRESS/MATHNET</search_title>
+      <search_description>این سرویسی است که امکان فهرست برداری کیفی از متون ریاضیات را فراهم می آورد . این سرویس قادر است با استفاده از امکانات جستجوی پیشرفته خود حجم انبوهی از مطالب را درباره هر مطلب جستجو کرده و در اختیار کاربر قرار دهد .</search_description>
+      <url>http://mathnet.preprints.org/</url>
+      <search_url>http://mathnet.preprints.org/cgi-bin/harvest/MPRESS.pl.cgi?title=&amp;metaquery=&amp;keyword=&amp;query=&amp;broker=FraGer&amp;errorflag=0&amp;wordflag=off&amp;opaqueflag=off&amp;csumflag=off&amp;maxobjflag=10000&amp;maxlineflag=10000&amp;maxresultflag=10000&amp;author={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>CiteSeer</search_title>
+      <search_description>این یک بانک اطلاعاتی گسترده و کاملا فهرست برداری شده از مقالات تحقیقی در زمینه های مختلف ریاضیات و کامپیوتر است .</search_description>
+      <url>http://citeseer.ist.psu.edu/cs</url>
+      <search_url>http://citeseer.ist.psu.edu/cs?submit=Search+Documents&amp;cs=1&amp;q={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>جستجوی عبارات</context_title>
+    <context_abbrev>جستجوی عبارات</context_abbrev>
+    <context_description>در این سرویس شما روی هر کلمه ای که دوبار کلیک کنید کادری با عنوان ( تعریف عبارت ) در کنار آن ظاهر می شود و توضیحاتی درباره آن عبارت به شما داده می شود . شما همچنین می توانید کلمه مورد نظرتان را در این کارت تایپ یا پیست کنید سپس می توانید از کلید جستجو برای یافتن تعریف آن عبارت استفاده کنید .در این سیستم مراجع مورد استفاده بر اساس فراوانی و میزان رایگان بودن در ارجحیت قرار داده شده اند .</context_description>
+    <define_terms/>
+    <search>
+      <search_title>گوگل</search_title>
+      <search_description>با موتور جستجوی معروف گوگل به دنبال مطالب مورد نظر خود بگردید .</search_description>
+      <url>http://www.google.com/</url>
+      <search_url>http://www.google.com/search?hl=en&amp;q=define%3A{$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>توابع ریاضی ولفرام</search_title>
+      <search_description>تا جولای 2003 در این وب سایت بیش از 37000 راه حل برای توابع ریاضی در آن موجود بوده است . این سایت خود منبع مفیدی برای آموزش ریاضیات و آشنایی با جوامع علمی است .جامع ترین اطلاعات درباره توابع ریاضی دراین سایت وجود دارد . این سایت همچنین دارای مطالبی درباره ارتباط ریاضیات در فیزیک با تحلیل توابع در اختیار کاربران قرار می دهد .</search_description>
+      <url>http://functions.wolfram.com/</url>
+      <search_url>http://functions.wolfram.com/search/index.cgi?filter=1&amp;q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>دیکشنری آنلاین مریام - وبستر</search_title>
+      <search_description>A dictionary based on the Weاین دیکشنری آنلاین که بر اساس چاپ دهم دیکشنری وبستر منتشر شده در 1993 است همه ساله مورد بازنگری قرار می گیرد . در آن بیش از 16000 مدخل وجود دارد . همراه هر کلمه تعریف . تلفظ . کاربرد . نقش دستوری و توضیح مختصری درباره ریشه آن ذکر شده است . اگر کلمه ای را اشتباه تایپ کنید املای صحیح آن به شما پیشنهاد می شود . امکانات جستجو در این دیکشنری بسیار گسترده است همچنین راهنمای کاملی درباره نحوه تلفظ و فایل های صوتی تلفظ صداها در آن وجود دارد .bster 10th Collegiate edition, 1993, with updates added annually. More than 160,000 entries. Each word is accompanied by definition, pronunciation, usage, grammatical function, and a brief etymology. Includes a thesaurus. Misspellings return suggested spellings. The dictionary's search system supports internal wildcards and right hand truncation searching. Includes an extensive pronunciation guide and sound files for the pronunciation of many terms.</search_description>
+      <url>http://www.merriam-webster.com/</url>
+      <search_url>http://www.merriam-webster.com/cgi-bin/dictionary?book=Dictionary&amp;va={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>دیکشنری وانلوک</search_title>
+      <search_description> دیکشنری وانلوک یک دیکشنری حاوی اطلاعات فرعی است . با وارد کردن یک کلمه انگلیسی در آن وانلوک فهرست 5292362 کلمه ای خود را که از 934 دیکشنری فهرست برداری شده است به دنبال تعاریف و انواع اطلاعات دیگر دربارهش آن جستجو می کند .</search_description>
+      <url>http://www.onelook.com/index.html</url>
+      <search_url>http://www.onelook.com/?ls=a&amp;w={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>ویکی پدیا : دایره المعارف رایگان</search_title>
+      <search_description>ویکی پدیا یک دایره المعارف رایگانی است که مطالب آن با همکاری تمامی کاربران آن از سراسر جهان نوشته می شود . در این سایت هر کسی می تواند هر مقاله ای را بدون مجوزی خاص ویرایش کند لذا کیفیت مطالب موجود در آن تنوع شدیدی دارد با این حال این دایره المعارف ارزش مشاهده را دارد . نسخه انگلیسی آن دراری صدها هزار مدخل است نسخه های اسپانیایی . فرانسوی . اسپرانتو و چندین زبان دیگر ازآن نیز وجود دارد .</search_description>
+      <url>http://en.wikipedia.org/wiki/Main_Page</url>
+      <search_url>http://en.wikipedia.org/wiki/Special:Search?go=Go&amp;fulltext=Search&amp;search={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>Infoplease.com</search_title>
+      <search_description>این سایت طراحی شده توسط موسسه آلاماناک می باشد و دارای یک بانک اطلاعاتی از بیوگرافی ها . یک دیکشنری . یک اطلس گیتا شناسی و مقالاتی از دایره المعارف کلمبیا می باشد . شما می توانید این منابع را بصورت تک تک یا گروهی بررسی کنید .لینک هایی به مطالب مختلف درسایت های دیگر نیز در آن وجود دارد .</search_description>
+      <url>http://www.infoplease.com</url>
+      <search_url>http://www.infoplease.com/search?fr=iptn&amp;in=all&amp;x=0&amp;y=0&amp;query={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>جستجوی کتاب</context_title>
+    <context_abbrev>جستجوی کتاب</context_abbrev>
+    <context_description>جستجوی منابع مرتبط با کتابخانه ها</context_description>
+    <search>
+      <search_title>انتشارات گوگل</search_title>
+      <search_description>گوگل با کتابخانه های دانشگاههای میشیگان . هاروارد . استنفورد . آکسفورد و کتابخانه ملی نیویورک در حال همکاری است تا کتابخانه های موجود در آنها را به صورت دیجیتال در آورده و آنها را از طریق سرویس انتشارات گوگل در اختیار کاربران گوگل قرار دهد. این یک پروژه عظیم است که در آنها میلیون ها کتاب چاپی به فرمت دیجیتال در آمده و در بانک اطلاعاتی گوگل جمع آوری می گردد . در این سیستم روی عنوان هر کتابی که کلیک بکنید صفحه ای حاوی اطلاتی درباره آن کتاب ازقبیل نقدها کتابهای مشابه . ناشر . امکان خرید کتاب ونزدیکترین کتابخانه به شما که آن را دارد نمایش داده می شود .</search_description>
+      <url>http://print.google.com</url>
+      <search_url>http://print.google.com/print?q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>صفحه کتاب های آنلاین</search_title>
+      <search_description>این سایت توسط جان مارک اوکربلوم در دانشگاه پنسیلوانیا مدیریت می شود . اینجا مکانی مناسب برای آغاز جستجو بدنبال متن کامل کتابها در اینترنت است .در این سایت بیش از 20000 کتاب انگلیسی به فرمت های مختلف در دسترس می باشد . مدخل های آن را می توان بر اساس نام ناشر یا عنوان کتاب جستجو کرد . همچنین امکان جستجوی کتاب توسط سیستم جستجوی کتابخانه کنگره ملی آمریکا نیز وجود دارد . لیست جدیدترین کتابها دایما در صفحه ای مجزا &lt;a href=&quot;http://onlinebooks.library.upenn.edu/new.html&quot;>http://onlinebooks.library.upenn.edu/new.html&lt;/a>. در آن به روز رسانی میشود .</search_description>
+      <url>http://digital.library.upenn.edu/books/</url>
+      <search_url>http://onlinebooks.library.upenn.edu/webbin/book/search?tmode=words&amp;title={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>کتابهای آنلاین</search_title>
+      <search_description>این مجموعه ای از 32935 عنوان کتاب است که البته برخی از آنها صرفا نسخه نمایشی می باشند . امکان جستجو در آن بر اساس ناشر و عنوان کتاب وجود دارد . همه کتابهای آن رایگان نیستند .</search_description>
+      <url>http://www.books-on-line.com/</url>
+      <search_url>http://www.books-on-line.com/bol/KeyWordSearch.cfm?RowCount=50&amp;Searchquery={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>کتابخانه جهانی</search_title>
+      <search_description>این کتابخانه ای وسیع تر و مجهز تر است و دارای بیش از 100000 کتاب الکترونیک بوده و هدف آن است که تا پایان سال 2006 دارای بیش از 1000000 کتاب الکترونیک باشد ( برخی از کتابها از پروژه گوتنبرگ گرفته شده اند)</search_description>
+      <url>http://tera-3.ul.cs.cmu.edu/</url>
+      <search_url>http://tera-3.ul.cs.cmu.edu/cgi-bin/DBscripts/advsearch_db.cgi?perPage=25&amp;listStart=0&amp;author1=&amp;subject1=Any&amp;year1=&amp;year2=&amp;language1=Any&amp;scentre=Any&amp;search=Search&amp;title1={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>بانک های اطلاعاتی</context_title>
+    <context_abbrev>بانک های اطلاعاتی</context_abbrev>
+    <context_description>بانک های اطلاعاتی</context_description>
+    <search>
+      <search_title>تاریخچه ریاضیات مک تاتر</search_title>
+      <search_description>در این سایت بیوگرافی بیش از 1100 ریاضیدان برجسته و همچنین فهرست ویژه ای از زنان ریاضیدان برجسته وجود دارد.</search_description>
+      <url>http://www-groups.dcs.st-and.ac.uk/%7Ehistory/index.html</url>
+      <search_url>http://www-history.mcs.st-andrews.ac.uk/Search/historysearch.cgi?SUGGESTION={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>نظریه ریاضیات</context_title>
+    <context_abbrev>نظریه ریاضیات</context_abbrev>
+    <context_description>در اینجا فهرستی الفبایی از انواع مطالب ریاضی در سطوح مختلف از آسان تا پیشرفته وجود دارد .</context_description>
+    <search>
+      <search_title>دنیای ریاضیات اریک ویستیم</search_title>
+      <search_description>این یک بانک اطلاعاتی بسیار مفید در زمینه ریاضیات است . این سایت دارای بیش از 10228 مدخل قابل جستجو . 89364 منبع مرتبط با هم . 4205 نمودار . 125 گرافیک انیمیشن . 964 برنامه جاوا می باشد و ماهیانه به طور متوسط 135 مدخل جدید به آن اضافه می شود .</search_description>
+      <url>http://mathworld.wolfram.com/</url>
+      <search_url>http://mathworld.wolfram.com/search/?x=0&amp;y=0&amp;query={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>پژوهش های مرتبط</context_title>
+    <context_abbrev>پژوهش های مرتبط</context_abbrev>
+    <context_description>در اینجا با وارد کردن موضوع تحقیق خود می توانید به بانک های اطلاعاتی رایگان که دارای پژوهش هایی مرتبط با آن هستند وصل شده و از خلاصه یا متن کامل مقالات آنها استفاده کنید.</context_description>
+    <search>
+      <search_title>CiteSeer</search_title>
+      <search_description>این یک بانک اطلاعاتی گسترده و کاملا فهرست برداری شده از مقالات تحقیقی در زمینه های مختلف ریاضیات و کامپیوتر است .</search_description>
+      <url>http://citeseer.ist.psu.edu/cs</url>
+      <search_url>http://citeseer.ist.psu.edu/cs?submit=Search+Documents&amp;cs=1&amp;q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>اینتیوت : علوم زیستی و بهداشتی</search_title>
+      <search_description>در این سایت سرویس آنلاین رایگانی وجود دارد که به شما امکان دسترسی به بهترین منابع در زمینه آموزش و تحقیق را می دهد . بیش از 31000 مرجع در اینجا لیست شده اند که بصورت رایگان در دسترس کاربران بوده و امکان جستجو میان آنها نیز وجود دارد . این سرویس قبلاْ به نام BIOME شناخته می شد .</search_description>
+      <url>http://www.intute.ac.uk/sciences/</url>
+      <search_url>http://www.intute.ac.uk/sciences/cgi-bin/search.pl?submit.x=0&amp;submit.y=0&amp;submit=Go&amp;limit=0&amp;subject=sciences&amp;term1={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>EULER</search_title>
+      <search_description>یک سرویس علمی جهانی است که در آن مطالب علمی گسترده ای در حوزه ریاضیات از قبیل اطلاعات کتابشناسی . خلاصه مقالات یا مقالات کارشناسی شده . فهرست های مختلف . طبقه بندی و تحقیقات و خدمات کتابخانه ای وجود دارد .</search_description>
+      <url>http://www.emis.ams.org/projects/EULER/</url>
+      <search_url>http://www.emis.de/projects/EULER/search?q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>آرشیو ریاضیات : مباحثی از ریاضی</search_title>
+      <search_description>این مجموعه ای بزرگ و با قابلیت جستجو از متون آموزشی . نرم افزار و لینک های اینترنتی است . در اینجا می توانید با وارد کردن عنوان یک مبحث ریاضی فهرستی از سایت های حاوی آن را مشاهده کنید .</search_description>
+      <url>http://archives.math.utk.edu/topics/</url>
+      <search_url>http://www.google.com/search?q=site%3Aarchives.math.utk.edu+topics+{$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>جستجوی ریاضیات</search_title>
+      <search_description>این یک ابزار بی نظیر برای جستجو میان بیش از 80000 سایت ریاضیات در اینترنت می باشد که توسط دانشگاه سیدنی استرالیا تهیه شده است .</search_description>
+      <url>http://www.maths.usyd.edu.au:8000/MathSearch.html</url>
+      <search_url>http://www.maths.usyd.edu.au:8000/s/search/p?p2=&amp;p3=&amp;p4=&amp;p1={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>MPRESS/MATHNET</search_title>
+      <search_description>این سرویسی است که امکان فهرست برداری کیفی از متون ریاضیات را فراهم می آورد . این سرویس قادر است با استفاده از امکانات جستجوی پیشرفته خود حجم انبوهی از مطالب را درباره هر مطلب جستجو کرده و در اختیار کاربر قرار دهد .</search_description>
+      <url>http://mathnet.preprints.org/</url>
+      <search_url>http://mathnet.preprints.org/cgi-bin/harvest/MPRESS.pl.cgi?author=&amp;keyword=&amp;title=&amp;metaquery=&amp;broker=FraGer&amp;errorflag=0&amp;wordflag=off&amp;opaqueflag=off&amp;csumflag=off&amp;maxobjflag=10000&amp;maxlineflag=10000&amp;maxresultflag=10000&amp;query={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>SIAM Review</search_title>
+      <search_description>این سایت دارای 5 قسمت است که هر کدام دارای طیف وسیعی از مقالات می باشند . در اینجا شما نقدهای کارشناسی مقالاتی در زمینه های مطرح ریاضیات و علوم رایانه را خواهید یافت .</search_description>
+      <url>http://epubs.siam.org/sam-bin/dbq/toclist/SIREV</url>
+      <search_url>http://epubs.siam.org/search/search.pl</search_url>
+      <search_post>field1=anyfield&amp;jrnlname=all&amp;boolean1=and&amp;search_field=anyfield&amp;quicksearchstring={$formKeywords}</search_post>
+    </search>
+    <search>
+      <search_title>Zentralblatt MATH</search_title>
+      <search_description>این کاملترین و قدیمیترین سرویس ارایه خلاصه مقالات و کارشناسی مقالات در زمینه ریاضیات محض و کاربردی است . بانک اطلاعاتی آن حاوی بیش از 2000000 مدخل می باشد که از بیش از 2300 مجله جمع آوری شده اند .</search_description>
+      <url>http://www.zblmath.fiz-karlsruhe.de/serials/</url>
+      <search_url>http://www.zblmath.fiz-karlsruhe.de/serials/?hits_per_page=10&amp;is=&amp;bi={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>مشاهده غیر رایگان</context_title>
+    <context_abbrev>مشاهده غیر رایگان</context_abbrev>
+    <context_description>این سرویس برای کسانی مفید است که دسترسی مستقیم به مجلات الکترونیک از طریق اشتراک را ندارند . این سرویس از طریق مکانیسم های ایمن پرداخت پول کاربران را قادر می سازد تا برای دسترسی پیدا کردن به مطالب در همان زمان پول پرداخت کنند . بلافاصله پس از پرداخت پول دسترسی به مطلب مورد نظر امکان پذیر شده و تا 30 روز اعتبار دارد .</context_description>
+    <search>
+      <search_title>اینگنتا</search_title>
+      <search_description>اینگنتا سرویسی است که دسترسی به متن کامل مقالات را محدود می سازد . با این حال مدیر سایت می تواند فهرست رایگانی ازمطالب موجود را با آن به کاربران نشان دهد .</search_description>
+      <url>http://www.ingenta.com/</url>
+      <search_url>http://www.ingenta.com/isis/searching/Search/ingenta?database=1&amp;title={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>کتابخانه الکترونیک</search_title>
+      <search_description>پژوهشگران مستقل که به کتابخانه های تخصصی دسترسی ندارند با پرداخت ماهیانه فقط 5 دلار می توانند در این سرویس مشترک شوند . این سرویس قادر است بانک های اطلاعات بیش از 20000 نهاد و سایت مختلف و 175 کتابخانه معتبر جهانی مانند کتابخانه کمبریج را به دنبال موضوعی خاص جستجو کند . همچنین امکان </search_description>
+      <url>http://www.ebrary.com/corp/content.htm</url>
+      <search_url>http://shop.ebrary.com/Top?layout=search&amp;f00=text&amp;p01=&amp;f01=subject&amp;d=journal&amp;l=en&amp;sch=%A0%A0%A0%A0%A0Search%A0%A0%A0%A0%A0&amp;frm=adv.x&amp;p00={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>کوستیا</search_title>
+      <search_description>با کوستیا شما به بیش از 47000 کتاب و 375000 مجله و روزنامه دسترسی پیدا می کنید . تمام مطالب آن کامل هستند و هر صفحه دارای قابلیت جستجو است . هزینه اشتراک این سرویس از 19.05 دلار در ماه تا 119.95 دلار در سال متغیر است .</search_description>
+      <url>http://www.questia.com/</url>
+      <search_url>http://www.questia.com/SM.qst?act=search&amp;keywordsSearchType=1000&amp;mediaType=book&amp;mediaType=journal&amp;mediaType=magazine&amp;mediaType=newspaper&amp;mediaType=encyclopedia&amp;mediaType=startpage&amp;keywords={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>جهان علم</search_title>
+      <search_description>با این سرویس شما به یک بانک اطلاعاتی از مطالبی گسترده در زمینه علمی و فنی و متون پژوهشی دسترسی پیدا می کنید .</search_description>
+      <url>http://www.thescientificworld.com/</url>
+      <search_url>http://www.thescientificworld.com/SCIENTIFICWORLDJOURNAL/search/SearchResults.asp?From=Main&amp;Terms={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>سرویس غیر رایگان ویلی</search_title>
+      <search_description>این سرویس امکان دسترسی سریع و کامل به طیف وسیعی از مجلات و منابع علمی را بدون نیاز به اشتراک فراهم می آورد . همچنین با آن می توان یک مجله یا یک مقاله را به طور مستقیم با استفاده از کارت اعتباری خریداری کرد . بلافاصله پس از پرداخت پول مطلب مورد نظر در اختیار شماست و تا 24 ساعت ادامه دارد . </search_description>
+      <url>http://www3.interscience.wiley.com/aboutus/ppv-articleselect.html</url>
+      <search_url>http://www3.interscience.wiley.com/search/allsearch</search_url>
+      <search_post>allContentSearchForm=&amp;mode=quicksearch&amp;WISindexid1=WISall&amp;WISsearch1={$formKeywords}</search_post>
+    </search>
+  </context>
+  <context>
+    <context_title>تالارهای گفتمان آنلاین</context_title>
+    <context_abbrev>تالارهای گفتمان آنلاین</context_abbrev>
+    <context_description>در اینجا می توانید به تالار های گفتگوی رایگان اینترنتی دستیابی پیدا کنید که به کسترش اطلاعات عمومی شما در زمنیه های مختلف کمک کند . </context_description>
+    <search>
+      <search_title>اطلس ریاضیات : دروازه ای به سوی ریاضیات مدرن</search_title>
+      <search_description>این وب سایت دارای امکانات جستجو بوده و مجموعه ای از مقالات را درمورد بسیاری زیر شاخه های ریاضیات ارایه می کند که در زمینه های تعاریف . بیوگرافی مختصر مشاهیر ریاضی و فایل های آموزشی می باشد. هر موضوعی در آن دارای قسمت های تاریخچه . زمینه های مرتبط و زیر شاخه ها و همچنین قسمتی با عنوان کتب و منابع اینترنتی مرتبط می باشد .</search_description>
+      <url>http://www.math-atlas.org/</url>
+      <search_url>http://www.math.niu.edu/cgi-bin/ffw.cgi/known-math?&amp;go=Search&amp;key={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>تالارهای گفتمان ریاضی</search_title>
+      <search_description>این سایت امکاناتی از قبیل منابع علمی . فعالیت های مختلف . آشنایی متخصصان با یکدیگر و ارایه کالاها و خدمات آموزشی در زمینه های تکنولوژی را ارایه می کند .اغلب مطالب آن در زمینه ریاضیات وآموزش آن می باشد اگرچه دارای گروه های خبری . لیست ارسال ایمیل و تالار های گفتمان در زمینه ریاضیات نیز می باشد .</search_description>
+      <url>http://mathforum.com/discussions/epi-search/all.html</url>
+      <search_url>http://mathforum.org/search/results.html?bool_type=and&amp;whole_words=yes&amp;match_case=no&amp;ctrlfile=/var/www/search/ctrl/all.search.ctrl&amp;textsearch={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>کنفرانس ها و همایش های AMS</search_title>
+      <search_description>این سایت که توسط انجمن ریاضیات آمریکا (AMS) طراحی شده است حاوی لیست بسیار کاملی از اطلاعات همایش های مهم ریاضیات می باشد .</search_description>
+      <url>http://www.ams.org/meetings/</url>
+      <search_url>http://www.google.com/search?q=site%3Awww.ams.org%2Fmeetings%2F+{$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>فایل های آموزشی</context_title>
+    <context_abbrev>راهنما</context_abbrev>
+    <context_description>بر اساس کلمه کلیدی یا موضوعی که به آن می دهید آرشیوهای مختلف روزنامه های جهانی را به دنبال آن جستجو می کند .</context_description>
+    <search>
+      <search_title>کتابخانه دیجیتال ملی علوم</search_title>
+      <search_description>این کتابخانه توسط بنیاد ملی علوم به منظور دسترسی کاربران به منابع ارزشمند در زمینه آموزش و یادگیری در تمامی سطوح علوم تجربی . تکنولوژی . مهندسی و ریاضیات ایجاد شده است . </search_description>
+      <url>http://nsdl.org/about</url>
+      <search_url>http://nsdl.org/search/?</search_url>
+      <search_post>formview=searchresults&amp;verb=Search&amp;s=0&amp;n=10&amp;boost%5B%5D=compoundTitle&amp;boost%5B%5D=compoundDescription&amp;q={$formKeywords}</search_post>
+    </search>
+    <search>
+      <search_title>MSTE</search_title>
+      <search_description>این سایت پایگاهی برای دسترسی به مطالب خلاقانه و معتبر علمی در زمینه ریاضیات و علوم دیگر می باشد .</search_description>
+      <url>http://www.mste.uiuc.edu/</url>
+      <search_url>http://www.google.com/custom?ie=UTF-8&amp;oe=UTF-8&amp;sa=&amp;cof=GALT%3A%2393AAC6%3BS%3Ahttp%3A%2F%2Fwww.mste.uiuc.edu%2F%3BGL%3A1%3BVLC%3Aorange%3BAH%3Acenter%3BBGC%3A%233d4b66%3BLH%3A255%3BLC%3Aorange%3BGFNT%3A%2393AAC6%3BL%3Ahttp%3A%2F%2Fwww.mste.uiuc.edu%2Fimages%2Fmstelogo.gif%3BALC%3A%23d3d3d3%3BLW%3A600%3BT%3A%23FFFFFF%3BGIMP%3A%2393AAC6%3BAWFID%3A174a51c6937b9927%3B&amp;domains=http%3A%2F%2Fwww.mste.uiuc.edu%2F&amp;sitesearch=http%3A%2F%2Fwww.mste.uiuc.edu%2F&amp;q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>پرتوی از علم</search_title>
+      <search_description>این سایت با هدف بهبود آموزش و یادگیری ریاضیات تاسیس شده است . در آن درس های متنوعی برای دانشجویان . طرح تدریس برای اساتید و مطالب کمک آموزشی وجود دارد که همگی بر اساس سطح آموزش طبقه بندی شده اند . این سایت همچنین دارای مجموعه بزرگی از منابع اینترنتی است که بر اساس زمینه تحصیلی و سطح آموزش طبقه بندی شده اند . این سایت توسط شورای ملی مدرسان ریاضی (NCTM) مدیریت می شود .</search_description>
+      <url>http://illuminations.nctm.org/</url>
+      <search_url>http://marcopolosearch.org/MPSearch/Search_Results.asp?orgn_id=6&amp;log_type=1&amp;hdnFilter=&amp;hdnPerPage=15&amp;selUsing=all&amp;txtSearchFor={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>مطالب اینترنتی مارکوپولو برای کلاس درس</search_title>
+      <search_description>این وب سایت سازمان ملی آموزش ریاضیات است که با هدف قراردادن منابع ارزشمند اینترنتی در دسترس اساتید و دانشجویان در سراسر آمریکا تاسیس شده است . موضوعاتی که در این سایت درباره آنها مطلب وجود دارد عبارتند از هنر . اقتصاد . زبان های خارجی . جغرافیا .ریاضیات . فلسفه و مذهب و علوم اجتماعی .</search_description>
+      <url>http://www.marcopolo-education.org/home.aspx</url>
+      <search_url>http://www.marcopolosearch.org/mpsearch/Search_Results.asp?orgn_id=2&amp;log_type=1&amp;hdnFilter=&amp;hdnPerPage=15&amp;selUsing=all&amp;txtSearchFor={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>تالار گفتمان ریاضی</search_title>
+      <search_description>این سایت منابع بسیار مفیدی را در زمینه ریاضیات و تدریس آن در اختیار کاربران قرار می دهد همچنین منابعی برای استفاده در سایر سایت های آموزشی نیز در آن وجود دارد .سرفصل بعضی مطالب آن عبارتند از : 5 راه برای جستجوی دقیق یک مطلب . سایت های پویا . سایت های چند زبانه . انتخاب فهرست منابع بر اساس میزان تحصیلات ومطالبی که به صورت چند قسمتی ارایه می شوند .</search_description>
+      <url>http://mathforum.org/grepform.html</url>
+      <search_url>http://mathforum.org/search/results.html?bool_type=and&amp;whole_words=yes&amp;match_case=no&amp;ctrlfile=%2Fvar%2Fwww%2Fsearch%2Fctrl%2Fall.search.ctrl&amp;textsearch={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>PBS Mathline</search_title>
+      <search_description>در اینجا مطالب مفیدی برای معلمان کلاس دوازدهم وجود دارد . هر ماه یک مقاله کامل و هر روز یک مطلب کوتاه در زمینه آموزش ریاضی در آن درج می شود همچنین دارای یکسری برنامه های آموزشی بسیار گسترده می باشد .</search_description>
+      <url>http://www.pbs.org/teachersource/math.htm</url>
+      <search_url>http://www.pbs.org/teachersource/search/standards_results.shtm?start=1&amp;end=20&amp;subjects=NULL&amp;grades=NULL&amp;query={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>آموزش علوم تجربی . ریاضی . مهندسی و تکنولوژي(SMETE)</search_title>
+      <search_description>این وب سایت حاوی نسخه آزمایشی کتابخانه دیجیتال علوم و تکنولوژي است که امکانات جستجو نیز در آن قرار داده شده است .</search_description>
+      <url>http://www.smete.org/</url>
+      <search_url>http://www.smete.org/smete/?path=/public/find/search_results.jhtml&amp;_DARGS=/smete/public/find/index_body.jhtml&amp;/smete/forms/FindLearningObjects.operation=search&amp;_D:/smete/forms/FindLearningObjects.operation=%20&amp;_D:/smete/forms/FindLearningObjects.keyword=%20&amp;/smete/forms/FindLearningObjects.learningResourceType=&amp;_D:/smete/forms/FindLearningObjects.learningResourceType=%20&amp;/smete/forms/FindLearningObjects.grade=0-Any&amp;_D:/smete/forms/FindLearningObjects.grade=%20&amp;/smete/forms/FindLearningObjects.title=&amp;_D:/smete/forms/FindLearningObjects.title=%20&amp;/smete/forms/FindLearningObjects.author=&amp;_D:/smete/forms/FindLearningObjects.author=%20&amp;/smete/forms/FindLearningObjects.hostCollection=&amp;_D:/smete/forms/FindLearningObjects.hostCollection=%20&amp;/smete/forms/FindLearningObjects.afterYear=&amp;_D:/smete/forms/FindLearningObjects.afterYear=%20&amp;/smete/forms/FindLearningObjects.beforeYear=&amp;_D:/smete/forms/FindLearningObjects.beforeYear=%20&amp;&amp;/smete/forms/FindLearningObjects.keyword={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>از دکتر ریاضی بپرسید</search_title>
+      <search_description>در اینجا می توانید آرشیوهای اینترنتی را به دنبال مطالب مفید برای ریاضیات از ابتدایی تا دانشگاه جستجوی کنید . دانشگاه درکسل پشتیبان این سایت است .</search_description>
+      <url>http://www.mathforum.org/library/drmath/</url>
+      <search_url>http://mathforum.org/library/drmath/results.html?textsearch_bool_type=and&amp;textsearch_whole_words=no&amp;textsearch={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>سیاست گذاری های دولتی</context_title>
+    <context_abbrev>Gov Policy</context_abbrev>
+    <context_description>در اینجا می توانید به اطلاعات و خدمات ارایه شده توسط دولت فدرال آمریکا و دولت کانادا دسترسی پیدا کنید</context_description>
+    <search>
+      <search_title>دسترسی به اطلاعات و خدمات دولت استرالیا</search_title>
+      <search_description>این درگاه اطلاعاتی دولت استرالیاست که در آن می توانید اطلاعات بیش از 700 وب سایت دولتی و بیش از 5000000 صفحه اینترنتی دولتی را به طور کامل مشاهده و جستجو کنید .</search_description>
+      <url>http://www.fed.gov.au</url>
+      <search_url>http://govsearch.australia.gov.au/search/search.cgi?collection=gov&amp;form=au&amp;query=&amp;query_phrase=&amp;query_or=&amp;query_not=&amp;meta_f_sand=&amp;scope=&amp;fscope=512&amp;num_ranks=20&amp;chksummary=chksummary&amp;query_and={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>دولت کانادا</search_title>
+      <search_description>You can search across all government departments federal departments and agencies as well as provincial, territorial and municipal governments. There is a Departments and Agencies link, and the A to Z Index offers a keyword search to programmes and services. 
+
+A recent development on Departmental sites is the inclusion of a &quot;Proactive Disclosure&quot; page, which outlines travel and hospitality expenses, disclosure of contracts, grants and awards. 
+
+The About Canada page includes links to Departments and Agencies, Structure of the Canadian Government, Commissions of Inquiry and more. 
+
+In addition to Department web sites, the government has been creating Portals which bring together information from across federal and provincial sources, and non-governmental organizations as well.</search_description>
+      <url>http://www.canada.gc.ca/main_e.html</url>
+      <search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple&amp;pg=q&amp;enc=iso88591&amp;site=main&amp;bridge=&amp;stt=&amp;lowercaseq=&amp;what=web&amp;user=searchintranet&amp;browser=N6E&amp;kl=XX&amp;op=a&amp;q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>Directgov</search_title>
+      <search_description>در اینجا می توانید در میان نهادها و وزارت خانه های دولتی به جستجو بپردازید همچنین یک فهرست الفبایی از برنامه ها و خدمات دولتی کانادا وجود دارد همچنین در آن صفحه جدیدی با عنوان (اقامت) وجود دارد که در آن هزینه های سفر و امکانات ارتباطی در کانادا ذکر شده است .در صفحه (درباره کانادا) لینک هایی برای دسترسی به وزارت خانه ها و نهاد ها و کمسیون های مختلف وجود دارد . علاوه بر وب سایت های وزارت خانه ها یک درگاه اطلاعاتی دولتی نیز درآن وجود دارد که اطلاعات نهادهای خصوصی ایالت ها نمایش داده می شود .</search_description>
+      <url>http://www.direct.gov.uk</url>
+      <search_url>http://www.direct.gov.uk/AdvancedSearch/SearchResults/fs/en?NP=1&amp;PO1=C&amp;PI1=W&amp;PF1=A&amp;PG=1&amp;RP=20&amp;SC=__dgov_site&amp;Z=1&amp;PT1={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>Info4local.gov.uk</search_title>
+      <search_description>اطلاعات فرمانداری ها را از طریق دولت فدرال مرکزی نشان می دهد . در اینجا به سرعت و آسانی می توان انواع نهادهای خصوصی و دولتی را در زمینه های مختلف پیدا کرد همچنین درآن مطالب مفصلی درباره نحوه اجرای دولت الکترونیک موجود است .</search_description>
+      <url>http://www.info4local.gov.uk</url>
+      <search_url>http://www.info4local.gov.uk/?view=Search+results&amp;subjects=all&amp;departmentsIds=0&amp;informationTypesIds=all&amp;query={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>درگاه اطلاعاتی دولت نیوزلند</search_title>
+      <search_description>این درگاه اطلاعاتی وب سایتی است که دارای امکان جستجو و لینک هایی به خدمات و اطلاعات اکثر نهادهای دولتی می باشد . این سایت توسط کمسیون خدمات عمومی تحت نظارت وزارت کشور نیوزلند اداره می شود .</search_description>
+      <url>http://www.govt.nz</url>
+      <search_url>http://www.govt.nz/search?type=spider&amp;t=spider&amp;q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>اروپا</search_title>
+      <search_description>اطلاعات جدید درباره کشورهای عضو اتحادیه اروپا از قبیل اطلاعات آماری . راهکارها . اخبار . اسناد رسمی . متون حقوقی و ... را ارایه می کند .</search_description>
+      <url>http://europa.eu.int/index_en.htm</url>
+      <search_url>http://europa.eu.int/geninfo/query/resultaction.jsp?page=1</search_url>
+      <search_post>Collection=EuropaFull&amp;ResultTemplate=/result_en.jsp&amp;ResultCount=25&amp;qtype=simple&amp;ResultMaxDocs=200&amp;DefaultLG=en&amp;QueryText={$formKeywords}</search_post>
+    </search>
+    <search>
+      <search_title>شبکه اطلاعاتی حقوقی بین المللی (GLIN)</search_title>
+      <search_description>این یک بانک اطلاعاتی ازقوانین . آرای قضایی و سایر منابع مکمل حقوقی است که توسط نهاد های دولتی وبین المللی منتشرشده اند . اعضای این وب سایت می توانند متن کامل مطالب مذکور را به زبان دلخواه خود مشاهده کنند . هر مطلب در این سایت دارای یک خلاصه انگلیسی و همچنین یکسری کلمات کلیدی می باشد .</search_description>
+      <url>http://www.glin.gov</url>
+      <search_url>http://www.glin.gov/search.do?refineQuery=&amp;offset=0&amp;refineQueryType=&amp;fromSearch=true&amp;queryType=ALL&amp;searchBtn=Search&amp;includeAllFields=on&amp;searchAll=on&amp;sumLanguage=any&amp;pubLanguage=any&amp;pubJurisdiction=any&amp;publicationJurisdictionExclude=false&amp;searchPublicationDate=true&amp;dateFromDay=01&amp;dateFromMonth=01&amp;dateFromYear=&amp;dateToDay=01&amp;dateToMonth=01&amp;dateToYear=&amp;subjTerm=&amp;subjTermConjunction%5B0%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B1%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B2%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B3%5D=AND&amp;subjTerm=&amp;searchOrder=default&amp;hitsPerPage=10&amp;showSummary=on&amp;queryString={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>FirstGov</search_title>
+      <search_description>این یک وب سایت متعلق به دولت فدرال و ایالتی آمریکاست که توسط یک کمسیون مرکب از چندین نهاد اداره می شود .</search_description>
+      <url>http://www.firstgov.gov/</url>
+      <search_url>http://www.firstgov.gov/fgsearch/index.jsp?db=www&amp;st=AS&amp;ms0=should&amp;mt0=all&amp;rn=2&amp;parsed=true&amp;x=2&amp;y=8&amp;mw0={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>سایت های کانادایی</search_title>
+      <search_description>این وب سایت درگاه اطلاعاتی وخدماتی دولت کانادا و فرمانداری های ایالتی آن است .</search_description>
+      <url>http://www.canada.gc.ca/main_e.html</url>
+      <search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple.html&amp;enc=iso88591&amp;pg=q&amp;kl=en&amp;site=main&amp;q={$formKeywords}</search_url>
+    </search>
+  </context>
+  <context>
+    <context_title>گزارش های رسانه ای</context_title>
+    <context_abbrev>گزارش های رسانه ای</context_abbrev>
+    <context_description>با دادن یک موضوع یا کلمه کلیدی به آن مطالب مربوطه را از آرشیو روزنامه های مطرح بین المللی برای شما جستجو می کند .</context_description>
+    <search>
+      <search_title>اخبار گوگل</search_title>
+      <search_description>گزارش های خبری را با استفاده از موتور جستجوی گوگل در اینجا می توانید جستجو کنید .</search_description>
+      <url>http://news.google.com/</url>
+      <search_url>http://news.google.com/news?hl=en&amp;q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>خبرنامه انجمن ریاضیات آمریکا</search_title>
+      <search_description>این خبرنامه یکی از پرمخاطب ترین نشریات منظم در زمینه ریاضیات می باشد .</search_description>
+      <url>http://www.ams.org/noticessearch/</url>
+      <search_url>http://www.google.com/custom?sa=Search+Notices&amp;cof=S%3Ahttp%3A%2F%2Fwww.ams.org%2Fnotices%3BGL%3A0%3BVLC%3A%23004080%3BAH%3Aleft%3BBGC%3A%23ffffff%3BLH%3A55%3BLC%3A+%23004080%3BL%3Ahttp%3A%2F%2Fwww.ams.org%2Fimages%2Fnotices-search-banner.gif%3BALC%3A%23ff2b2b%3BLW%3A1200%3BT%3A%23000000%3BAWFID%3A39742761a368da0f%3B&amp;domains=www.ams.org%2Fnotices&amp;sitesearch=www.ams.org%2Fnotices&amp;q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>سرمقاله های مجله نیچرساینس</search_title>
+      <search_description>سرمقاله های خبری هر روز را که توسط سردبیران مجله طبیعت نوشته می شود در اینجا می توانید مطالعه کنید .</search_description>
+      <url>http://www.nature.com/nsu/</url>
+      <search_url>http://search.nature.com/search/?sp-x-9=cat&amp;sp-q-9=NEWS&amp;submit=go&amp;sp-a=sp1001702d&amp;sp-sfvl-field=subject%7Cujournal&amp;sp-t=results&amp;sp-x-1=ujournal&amp;sp-p-1=phrase&amp;sp-p=all&amp;sp-q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>اخبار آنلاین علمی</search_title>
+      <search_description>این یکی از مفیدترین مجلات خبری علمی آنلاین است . این مجله هفتگی 75 ساله هر هفته مقالات کامل بسیار مفیدی را در اختیار کاربران قرار می دهد و آرشیوی از مقالات خود از سال 1994 تا کنون نیز دارد .</search_description>
+      <url>http://www.sciencenews.org/search.asp</url>
+      <search_url>http://www.sciencenews.org/pages/search_results.asp?search={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title> آرشیو مجله ساینتیفیک آمریکن</search_title>
+      <search_description>این منبعی مفید از مطالب مربوط به علوم و تکنولوژی است و در آن به هر صفحه و هر شماره از مجله ساینتیفیک آمریکن از 1993 تا کنون دسترسی خواهید داشت .</search_description>
+      <url>http://www.sciamdigital.com/</url>
+      <search_url>http://www.sciamdigital.com/index.cfm?fa=Search.ViewSearchForItemResultList&amp;AUTHOR_CHAR=&amp;TITLE_CHAR=&amp;FullText_CHAR={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>Newsdirectory</search_title>
+      <search_description>این یک راهنمای جامع برای ارتباط با رسانه های جهانی انگلیسی زبان آنلاین می باشد . درحال حاضر بیش از 8000 مجله و روزنامه و بیش از 1000 کانال تلویزیونی آمریکا در آن فهرست بندی شده اند .</search_description>
+      <url>http://www.newsdirectory.com/</url>
+      <search_url>http://www.newsdirectory.com/hbSearch.php</search_url>
+      <search_post>s={$formKeywords}&amp; submit=Go</search_post>
+    </search>
+  </context>
+  <context>
+    <context_title>جستجوی اینترنتی</context_title>
+    <context_abbrev>جستجوی اینترنتی</context_abbrev>
+    <context_description>در اینجا با وارد کردن یک کلمه کلیدی می توانید آن را از طریق چندین موتور جستجو در منابع اینترنتی جستجو کنید .</context_description>
+    <search>
+      <search_title>Google</search_title>
+      <search_description>در اینجا می توانید با استفاده از موتور جستجوی معروف گوگل بدنبال مطالب مورد نظر خود بگردید .</search_description>
+      <url>http://www.google.com/</url>
+      <search_url>http://www.google.com/search?q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>سرویسی دانشگاهی گوگل</search_title>
+      <search_description> در اینجا می توانید انواع مطالب دانشگاهی از قبیل مقالات کارشناسی شده . پایان نامه ها . کتاب ها . خلاصه مقالات و گزارشات فنی را در زمینه های مختلف مشاهده کنید . مطالب موجود در آن متعلق به چندین ناشر بزرگ است که گوگل با آنها قرارداد همکاری دایم دارد مانند انجمن ماشین های اداری آمریکا .IEEE,OCLC و ... </search_description>
+      <url>http://scholar.google.com</url>
+      <search_url>http://scholar.google.com/scholar?ie=UTF-8&amp;oe=UTF-8&amp;hl=en&amp;q={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>کلاستی یا موتور جستجوی دسته بندی کننده</search_title>
+      <search_description>این یک سیستم جستجو گر است که نتایج حاصل از جستجو های خود در یک مورد خاص را دسته بندی کرده وبه کاربر ارایه می دهد . با آن می توان حتی اطلاعات فرعی و اخبار و محصولات سایت های تجاری مانند eBAY را جستجو کرد .</search_description>
+      <url>http://clusty.com/about</url>
+      <search_url>http://clusty.com/search?query={$formKeywords}</search_url>
+    </search>
+    <search>
+      <search_title>Vivisimo</search_title>
+      <search_description>تکنولوژي دسته بندی کننده اطلاعات وی ویس مو که توسط محققان بنیاد کارنگی ملون ابداع شده است اطلاعات وسیعی را از آرشیو نهادهای مختلف در یک زمینه جمع آوری کرده و آنها را به صورت دسته بندی شده در اختیار کاربر قرار می دهد .</search_description>
+      <url>http://vivisimo.com</url>
+      <search_url>http://vivisimo.com/search?tb=homepage&amp;v%3Asources=Web&amp;query={$formKeywords}</search_url>
+    </search>
+  </context>
+</version>

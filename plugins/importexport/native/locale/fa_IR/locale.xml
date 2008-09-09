@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  --><locale full_name="Farsi" name="fa_IR" >
+  <message key="plugins.importexport.native.displayName" >پلاگین XML مقالات و شماره ها</message>
+  <message key="plugins.importexport.native.description" >ورود و خروج مقالات و شماره ها</message>
+  <message key="plugins.importexport.native.cliUsage" ><![CDATA[نحوه استفاده: {$scriptName} {$pluginName} [command] ...
+فرامین:
+	import [xmlFileName] [journal_path] [user_name] ...
+	export [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
+	export [xmlFileName] [journal_path] article [articleId]
+	export [xmlFileName] [journal_path] issues [issueId1] [issueId2] ...
+	export [xmlFileName] [journal_path] issue [issueId]
+
+برای وارد کردن داده ها پارامترهای دیگری به شرح ذیل بسته به root node سند XML لازم است:
+چنانچه root node موجود <article> و یا <articles> باشد پارامترهای دیگری نیز لازم است. الگوهای زیر قابل قبول است:
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
+	issue_id [issueId] section_id [sectionId]
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
+	issue_id [issueId] section_name [name]
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path]
+	issue_id [issueId] section_abbrev [abbrev]
+]]></message>
+  <message key="plugins.importexport.native.export" >استخراج داده</message>
+  <message key="plugins.importexport.native.export.issues" >استخراج شماره ها</message>
+  <message key="plugins.importexport.native.export.sections" >استخراج انواع مقالات</message>
+  <message key="plugins.importexport.native.export.articles" >استخراج مقالات</message>
+  <message key="plugins.importexport.native.selectIssue" >انتخاب شماره مجله</message>
+  <message key="plugins.importexport.native.selectArticle" >انتخاب مقاله</message>
+  <message key="plugins.importexport.native.import.articles" >وارد کردن مقالات</message>
+  <message key="plugins.importexport.native.import.articles.description" >فایل ذکر شده یک یا چند مقاله دارد. اگر نمیخواهید تمام مقالات به عنوان یک نوع مقاله وارد شوند باید یک شماره مجله و نوع مقاله ای مناسب برای وارد کردن این مقالات وارد کنید. حتی میتوانید پس از انتقال آنها در فایل های XML مختلف قرار دهید و یا وارد شماره ها و انواع مختلف مقالات کنید.</message>
+  <message key="plugins.importexport.native.import" >وارد کردن داده</message>
+  <message key="plugins.importexport.native.import.description" >این پلاگین بر مبنای native.dtd داده ها را وارد میکند. نود های ریشه مورد حمایت این dtd عبارت است از &amp;lt;article&amp;gt;, &amp;lt;articles&amp;gt;, &amp;lt;issue&amp;gt; و &amp;lt;issues&amp;gt;</message>
+  <message key="plugins.importexport.native.import.error" >انتقال خطا</message>
+  <message key="plugins.importexport.native.import.error.description" >در هنگام انتقال داده ها خطا روی داد. لطفا مطمئن شوید که فورمات فایل ورودی مطابق با مشخصات خواسته شده است. خطاهای روی داده در زیر ذکر شده است.</message>
+  <message key="plugins.importexport.native.cliError" >خطا:</message>
+  <message key="plugins.importexport.native.error.unknownUser" >کاربر ذکر شده &quot;{$userName}&quot; وجود ندارد.</message>
+  <message key="plugins.importexport.native.error.unknownJournal" >مجله ذکر شده &quot;{$journalPath}&quot; وجود ندارد.</message>
+  <message key="plugins.importexport.native.export.error.couldNotWrite" >نوشتن در قایل &quot;{$fileName}&quot; ممکن نیست.</message>
+  <message key="plugins.importexport.native.export.error.sectionNotFound" >نوع مقاله ذکر شده &quot;{$sectionIdentifier}&quot; وجود ندارد.</message>
+  <message key="plugins.importexport.native.export.error.issueNotFound" >شماره مجله ای به این ID وجود ندارد &quot;{$issueId}&quot;.</message>
+  <message key="plugins.importexport.native.export.error.articleNotFound" >مقاله ای با این ID وجود ندارد &quot;{$articleId}&quot;.</message>
+  <message key="plugins.importexport.native.import.error.unsupportedRoot" >این پلاگین از نود ریشه ذکر شده &quot;{$rootName}&quot; حمایت نمی کند. لطفا چک کنید که فایل بطرز صحیحی فرمات شده باشد.</message>
+  <message key="plugins.importexport.native.import.error.titleMissing" >عنوان یک شماره ذکر نشده است.</message>
+  <message key="plugins.importexport.native.import.error.defaultTitle" >فقدان عنوان</message>
+  <message key="plugins.importexport.native.import.error.unknownIdentificationType" >نوع نامشخصی از هویت &quot;{$identificationType}&quot; به عنوان ویژگی &quot;identification&quot; به عنصر &quot;issue&quot; در مجله &quot;{$issueTitle}&quot; انتساب داده شده است.</message>
+  <message key="plugins.importexport.native.import.error.invalidBooleanValue" >مقدار بولی اشتباهی &quot;{$value}&quot; ذکر شده است. لطفا فقط از مقادیر &quot;true&quot; یا &quot;false&quot; استفاده شود.</message>
+  <message key="plugins.importexport.native.import.error.invalidDate" >تاریخ ذکر شده &quot;{$value}&quot; معتبر نیست.</message>
+  <message key="plugins.importexport.native.import.error.unknownEncoding" >داده های موجود در فایل کدگذاری نامشخصی &quot;{$type}&quot; دارد</message>
+  <message key="plugins.importexport.native.import.error.couldNotWriteFile" >قادر به ذخیره فایل &quot;{$originalName}&quot; نیست.</message>
+  <message key="plugins.importexport.native.import.error.illegalUrl" >آدرس ذکر شده &quot;{$url}&quot; برای شماره مجله &quot;{$issueTitle}&quot; مجاز نیست. فقط http - ftp و https و یا ftps مجاز است.</message>
+  <message key="plugins.importexport.native.import.error.unknownSuppFileType" >نوع نامشخصی از فایل الحاقی &quot;{$suppFileType}&quot;</message>
+  <message key="plugins.importexport.native.import.error.couldNotCopy" >از آدرس ذکر شده &quot;{$url}&quot; نمیتوان به فایل لوکال کپی کرد.</message>
+  <message key="plugins.importexport.native.import.error.duplicatePublicId" >شماره ID ذکر شده برای مجله ورودی &quot;{$issueTitle}&quot; در حال حاضر توسط شماره مجله دیگری &quot;{$otherIssueTitle}&quot; استفاده میشود.</message>
+  <message key="plugins.importexport.native.import.error.sectionTitleMissing" >عنوان نوع مقاله برای شماره مجله &quot;{$issueTitle}&quot; ذکر نشده است. لطفا اطمینان حاصل کنید که سند XML استاندارد است.</message>
+  <message key="plugins.importexport.native.import.error.sectionMismatch" >نوع مقاله &quot;{$sectionTitle}&quot; برای شماره مجله &quot;{$issueTitle}&quot; صحیح است ولی علامت اختصاری ذکر شده (&quot;{$sectionAbbrev}&quot;) مربوط به نوع مقاله دیگری است.</message>
+  <message key="plugins.importexport.native.import.error.articleTitleMissing" >عنوان یک مقاله برای شماره مجله &quot;{$issueTitle}&quot; از نوع مقاله &quot;{$sectionTitle}&quot; ذکر نشده است. لطفا مطمئن شوید سند XML استاندارد است و مقاله مذکور دارای یک عنوان به زبان مجله میباشد.</message>
+  <message key="plugins.importexport.native.import.error.articleTitleLocaleUnsupported" >در شماره مجله &quot;{$issueTitle}&quot; برای مقاله ای یک عنوان (&quot;{$articleTitle}&quot;) به زبان (&quot;{$locale}&quot;) که مجله حمایت نمی کند ذکر شده است.</message>
+  <message key="plugins.importexport.native.import.error.articleAbstractLocaleUnsupported" >چکیده مقاله &quot;{$articleTitle}&quot; در شماره مجله &quot;{$issueTitle}&quot; به زبان (&quot;{$locale}&quot;)  مورد حمایت مجله نیست.</message>
+  <message key="plugins.importexport.native.import.error.galleyLabelMissing" >مقاله &quot;{$articleTitle}&quot; از نوع &quot;{$sectionTitle}&quot; در شماره مجله &quot;{$issueTitle}&quot; فاقد برچسب گالی است.</message>
+  <message key="plugins.importexport.native.import.error.suppFileMissing" >مقاله &quot;{$articleTitle}&quot; از نو ع &quot;{$sectionTitle}&quot; در شماره مجله &quot;{$issueTitle}&quot; فاقد یک فایل الحاقی است.</message>
+  <message key="plugins.importexport.native.import.error.galleyFileMissing" >مقاله &quot;{$articleTitle}&quot; از نوع &quot;{$sectionTitle}&quot; در شماره مجله &quot;{$issueTitle}&quot; فاقد فایل گالی است.</message>
+  <message key="plugins.importexport.native.import.error.issueTitleLocaleUnsupported" >عنوان شماره ذکر شده به زبانی (&quot;{$locale}&quot;) است که این مجله حمایت نمی کند.</message>
+  <message key="plugins.importexport.native.import.error.issueDescriptionLocaleUnsupported" >توصیف ذکر شده برای شماره مجله &quot;{$issueTitle}&quot; به زبانی (&quot;{$locale}&quot;) است که مجله حمایت نمیکند.</message>
+  <message key="plugins.importexport.native.import.error.coverLocaleUnsupported" >پشت جلد ذکر شده برای شماره مجله &quot;{$issueTitle}&quot; به زبانی (&quot;{$locale}&quot;) است که این مجله حمایت نمی کند.</message>
+  <message key="plugins.importexport.native.import.error.sectionTitleLocaleUnsupported" >عنوان نوع مقاله (&quot;{$sectionTitle}&quot;) در شماره مجله &quot;{$issueTitle}&quot; به زبانی (&quot;{$locale}&quot;) است که این مجله حمایت نمیکند.</message>
+  <message key="plugins.importexport.native.import.error.sectionAbbrevLocaleUnsupported" >علامت اختصاری نوع مقاله (&quot;{$sectionAbbrev}&quot;) داده شده در شماره مجله (&quot;{$issueTitle}&quot;) به زبانی  است که این مجله حمایت نمی کند.</message>
+  <message key="plugins.importexport.native.import.error.sectionIdentifyTypeLocaleUnsupported" >نام شناساپی نوع مقاله (&quot;{$sectionIdentifyType}&quot;) در شماره مجله (&quot;{$issueTitle}&quot;) به زبانی (&quot;{$locale}&quot;) است که این مجله حمایت نمیکند.</message>
+  <message key="plugins.importexport.native.import.error.sectionPolicyLocaleUnsupported" >سیاست نوع مقاله (&quot;{$sectionPolicy}&quot;) در شماره مجله (&quot;{$issueTitle}&quot;) به زبانی است که این مجله حمایت نمیکند.</message>
+  <message key="plugins.importexport.native.import.error.sectionTitleMismatch" >نوع مقاله ذکر شده &quot;{$section1Title}&quot; و &quot;{$section2Title}&quot; در شماره مجله &quot;{$issueTitle}&quot; برای نوع دیگری از مقاله در این مجله بکار رفته است.</message>
+  <message key="plugins.importexport.native.import.error.sectionTitleMatch" >عنوان نوع مقاله &quot;{$sectionTitle}&quot; در شماره مجله &quot;{$issueTitle}&quot; برای یک نوع دیگز مقاله بکار رفته است ولی عنوان دیگر این نوع مقاله تکراری نیست.</message>
+  <message key="plugins.importexport.native.import.error.sectionAbbrevMismatch" >علامت اختصاری نوع مقاله اول &quot;{$section1Abbrev}&quot; و دوم &quot;{$section2Abbrev}&quot; در مجله شماره &quot;{$issueTitle}&quot; مطابقت با مجلات مختلفی دارند.</message>
+  <message key="plugins.importexport.native.import.error.sectionAbbrevMatch" >علامت اختصاری &quot;{$sectionAbbrev}&quot; در شماره مجله &quot;{$issueTitle}&quot; مطابق با مجله موجودی است ولی علامت اختصاری دیگر آن مطابقت ندارد.</message>
+  <message key="plugins.importexport.native.import.error.articleDisciplineLocaleUnsupported" >رشته علمی ذکر شده برای مقاله &quot;{$articleTitle}&quot; در شماره مجله &quot;{$issueTitle}&quot; به زبانی (&quot;{$locale}&quot;) است که این مجله حمایت نمیکند.</message>
+  <message key="plugins.importexport.native.import.error.articleTypeLocaleUnsupported" >نوع مقاله ذکر شده برای مقاله &quot;{$articleTitle}&quot; در شماره مجله &quot;{$issueTitle}&quot; به زبانی (&quot;{$locale}&quot;) است که این مجله حمایت نمی کند.</message>
+  <message key="plugins.importexport.native.import.error.articleSubjectLocaleUnsupported" >سوژه مقاله &quot;{$articleTitle}&quot; در شماره &quot;{$issueTitle}&quot; به زبانی (&quot;{$locale}&quot;) است که این مجله حمایت نمیکند.</message>
+  <message key="plugins.importexport.native.import.error.articleSubjectClassLocaleUnsupported" >طبقه بندی موضوعی ارائه شده برای مقاله &quot;{$articleTitle}&quot; در شماره مجله &quot;{$issueTitle}&quot; به زبانی (&quot;{$locale}&quot;) است که مجله حمایت نمیکند.</message>
+  <message key="plugins.importexport.native.import.error.articleCoverageGeoLocaleUnsupported" >پوشش جغرافیائی داده شده برای مقاله &quot;{$articleTitle}&quot; در شماره مجله &quot;{$issueTitle}&quot; بخ زبانی (&quot;{$locale}&quot;) است که مجله حمایت نمیکند.</message>
+  <message key="plugins.importexport.native.import.error.articleCoverageChronLocaleUnsupported" >پوشش جغرافیائی ذکر شده برای مقاله &quot;{$articleTitle}&quot; ذر شماره مجله &quot;{$issueTitle}&quot; به زبانی (&quot;{$locale}&quot;) است که این مجله حمایت نمیکند.</message>
+  <message key="plugins.importexport.native.import.error.articleCoverageSampleLocaleUnsupported" >پوشش نمونه ذکر شده برای مقاله &quot;{$articleTitle}&quot; در شماره مجله &quot;{$issueTitle}&quot; به زبانی (&quot;{$locale}&quot;) است که این مجله حمایت نمیکند.</message>
+  <message key="plugins.importexport.native.import.error.articleSponsorLocaleUnsupported" >اسپانسور ذکر شده برای مقاله &quot;{$articleTitle}&quot; در شماره مجله &quot;{$issueTitle}&quot; به زبانی (&quot;{$locale}&quot;) است که این مجله حمایت نمیکند.</message>
+  <message key="plugins.importexport.native.import.error.articleAuthorCompetingInterestsLocaleUnsupported" >تضاد منافع ذکر شده برای مقاله &quot;{$articleTitle}&quot; در مورد نویسنده &quot;{$authorFullName}&quot; در شماره مجله &quot;{$issueTitle}&quot; به زبانی (&quot;{$locale}&quot;) است که این مجله حمایت نمیکند.</message>
+  <message key="plugins.importexport.native.import.error.articleAuthorBiographyLocaleUnsupported" >بیوگرافی ذکر شده در مقاله &quot;{$articleTitle}&quot; برای نویسنده &quot;{$authorFullName}&quot; در شماره مجله &quot;{$issueTitle}&quot; به زبانی (&quot;{$locale}&quot;) است که این مجله حمایت نمیکند.</message>
+  <message key="plugins.importexport.native.import.error.galleyLocaleUnsupported" >گالی مقاله &quot;{$articleTitle}&quot; در شماره مجله &quot;{$issueTitle}&quot; به زبانی (&quot;{$locale}&quot;) است که این مجله حمایت نمیکند.</message>
+  <message key="plugins.importexport.native.import.error.articleSuppFileTitleLocaleUnsupported" >عنوان ذکر شده فایل الحاقی برای مقاله &quot;{$articleTitle}&quot; در شماره مجله &quot;{$issueTitle}&quot; به زبانی است که این مجله حمایت نمیکند.</message>
+  <message key="plugins.importexport.native.import.error.articleSuppFileCreatorLocaleUnsupported" >ایجاد کننده فایل الحاقی &quot;{$suppFileTitle}&quot; برای مقاله &quot;{$articleTitle}&quot; در شماره مجله &quot;{$issueTitle}&quot; به زبانی (&quot;{$locale}&quot;) است که این مجله حمایت نمیکند. </message>
+  <message key="plugins.importexport.native.import.error.articleSuppFileSubjectLocaleUnsupported" >موضوع فایل الحاقی &quot;{$suppFileTitle}&quot; برای مقاله &quot;{$articleTitle}&quot; در شماره مجله &quot;{$issueTitle}&quot; به زبانی (&quot;{$locale}&quot;) است که این مجله حمایت نمیکند.</message>
+  <message key="plugins.importexport.native.import.error.articleSuppFileTypeOtherLocaleUnsupported" >تایپ سفارشی فایل الحاقی &quot;{$suppFileTitle}&quot; برای مقاله &quot;{$articleTitle}&quot; در شماره مجله &quot;{$issueTitle}&quot; به زبانی (&quot;{$locale}&quot;) است که این مجله حمایت نمیکند.</message>
+  <message key="plugins.importexport.native.import.error.articleSuppFileDescriptionLocaleUnsupported" >توصیف فایل الحاقی &quot;{$suppFileTitle}&quot; برای مقاله &quot;{$articleTitle}&quot; در شماره مجله &quot;{$issueTitle}&quot; به زبانی (&quot;{$locale}&quot;) است که این مجله حمایت نمیکند.</message>
+  <message key="plugins.importexport.native.import.error.articleSuppFilePublisherLocaleUnsupported" >ناشر فایل الحاقی &quot;{$suppFileTitle}&quot; برای مقاله &quot;{$articleTitle}&quot; در شماره مجله &quot;{$issueTitle}&quot; به زبانی (&quot;{$locale}&quot;) است که این مجله حمایت نمیکند.</message>
+  <message key="plugins.importexport.native.import.error.articleSuppFileSponsorLocaleUnsupported" >اسپانسور فایل الحاقی &quot;{$suppFileTitle}&quot; برای مقاله &quot;{$articleTitle}&quot; در شماره مجله &quot;{$issueTitle}&quot; به زبانی (&quot;{$locale}&quot;) است که این مجله حمایت نمیکند.</message>
+  <message key="plugins.importexport.native.import.error.articleSuppFileSourceLocaleUnsupported" >منبع فایل الحاقی &quot;{$suppFileTitle}&quot; برای مقاله &quot;{$articleTitle}&quot; در شماره مجله &quot;{$issueTitle}&quot; به زبانی (&quot;{$locale}&quot;) است که این مجله حمایت نمیکند.</message>
+  <message key="plugins.importexport.native.import.success" >واردات مقاله با موفقیت انجام شد</message>
+  <message key="plugins.importexport.native.import.success.description" >واردات مقاله موفق بود. موارد وارد شده در پائین ذکر شده است.</message>
+	<message key="plugins.importexport.native.error.uploadFailed">آپلود شکست خورد - لطفا مشخص کنید که آیا سرورشما اجازه آپلود میدهد و اینکه اندازه فایل بیش از حد تعیین شده در تنظیمات php نیست</message>
+</locale>

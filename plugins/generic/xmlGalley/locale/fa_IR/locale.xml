@@ -1,0 +1,37 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  --><locale full_name="Farsi" name="fa_IR" >
+  <message key="plugins.generic.xmlGalley.displayName" >پلاگین گالی ایکس ام ال</message>
+  <message key="plugins.generic.xmlGalley.description" >این پلاگین گالی ایکس اچ تی ام ال از روی ایکس ام ال مقاله با استفاده از ایکس اس ال تی تولید میکند.</message>
+  <message key="plugins.generic.xmlGalley.manager.settings" >تنظیمات</message>
+<!--اداره تنظیمات گالی ایکیس ام ال مقاله-->  <message key="plugins.generic.xmlGalley.settings.description" ><![CDATA[<p>با این پلاگین گالی های مقالات بطور اتوماتیک از منبع ایکس ام ال آپلود شده تولید میشود.</p>]]></message>
+  <message key="plugins.generic.xmlGalley.settings.renderer" >متد تولید مربوط به ایکس اس ال تی</message>
+  <message key="plugins.generic.xmlGalley.settings.PHP5" >پی اچ پی ۵ یا بالاتر همرا با توابع ایکس اس ال (libxslt) لازم است.</message>
+  <message key="plugins.generic.xmlGalley.settings.PHP4" >پی اچ پی ۴ یا بالاتر همرا با توابع ایکس اس ال تی (Sablotron) لازم است.</message>
+  <message key="plugins.generic.xmlGalley.settings.notAvailable" >موجود نیست</message>
+  <message key="plugins.generic.xmlGalley.settings.externalXSLT" >تولید کننده اکسترنال خط فرمان ایکس اس ال تی (مانند Xalan)</message>
+  <message key="plugins.generic.xmlGalley.settings.externalXSLTDescription" ><![CDATA[آدرس کامل ابزار تولید کننده ایکس اس ال تی وهر گونه پارامتر لازمه را وارد کنید. بجای %xsl آدرس فایل استایل شیت ایکس اس ال و بجای %xml آدرس فایل ایکس ام ال را وارد کنید. مانند <br/><pre>/usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl</pre>]]></message>
+  <message key="plugins.generic.xmlGalley.settings.externalXSLTTest" >ازمایش ایکس اس ال تی</message>
+  <message key="plugins.generic.xmlGalley.settings.externalXSLTSuccess" >آزمایش ایکس اس ال تی خارجی با موفقیت انجام شد.</message>
+  <message key="plugins.generic.xmlGalley.settings.externalXSLTFailure" >آزمایش ایکس اس ال تی خارجی شکست خورد.</message>
+  <message key="plugins.generic.xmlGalley.settings.externalXSLTRequired" >پردازشگر خارجی خط فرمان ایکس اس ال تی میبایست ذکر شود</message>
+  <message key="plugins.generic.xmlGalley.settings.stylesheet" >استایل شیت ایکس اس ال</message>
+  <message key="plugins.generic.xmlGalley.settings.xslNLM" ><![CDATA[<a href="http://dtd.nlm.nih.gov/publishing/">NLM Journal Publishing DTD</a> &rarr; XHTML]]></message>
+  <message key="plugins.generic.xmlGalley.settings.xslFOP" >تولید گالی PDF  بکمک XSL-FO (مانند FOP)</message>
+  <message key="plugins.generic.xmlGalley.settings.xslFOPDescription" ><![CDATA[آدرس کامل پردازشگر FO و سایر پارامترهای لازمه را وارد کنید. بجای %fo ادرس XSL-FO و بجای %pdf آدرس فایل PDF قرار دهید. مانند 
+<br/><pre>/usr/sbin/fop -fo %fo -pdf %pdf</pre>]]></message>
+  <message key="plugins.generic.xmlGalley.settings.xslFOPRequired" >پردازشگر خارجی خط فرمان FO باید ذکر شود.</message>
+  <message key="plugins.generic.xmlGalley.settings.customXSL" >استایل شیت XSL سفارشی شده</message>
+  <message key="plugins.generic.xmlGalley.settings.customXSLRequired" >استایل شیت XSL سفارشی شده میبایست ذکر شود.</message>
+  <message key="plugins.generic.xmlGalley.settings.customXSLInvalid" >فایل XSL آپلود شده معتبر نیست. لطفا فایل را چک و دوباره امتحان کنید.</message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTTest">ازمایش XSLT</message>
+</locale>

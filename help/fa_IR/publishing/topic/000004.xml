@@ -1,0 +1,24 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process - Publish
+  *
+  * $Id$
+  --><topic title="چاپ" toc="publishing/toc/000000" key="publishing.publish" locale="fa_IR" id="publishing/topic/000004" >
+  <section><![CDATA[<p>
+وقتی زمان چاپ یک شماره از مجله میرسد سردبیر روی 
+"{translate key="editor.issues.publishIssue"}" 
+کلیک میکند و دستور چاپ آن را صادر مینماید و بااین کار فهرست مطالب آن شماره بسته میشود .صدور فرمان چاپ یک شماره باعث میشود وقتی کاربران سایت روی 
+{translate key="navigation.current"}
+کلیک میکنند فهرست مطالب و تصویر جلد آن شماره به نمایش در آید .شماره ای که قبلا در 
+{translate key="navigation.current"}
+بود حال به اینجا میرود
+{translate key="navigation.archives"}
+اگر تصویری از جلد آن شماره وجورد نداشته باشد صرفا فهرست مطالب آن به نمایش در میآید.صدور فرمان چاپ یک شماره همچنین یک ایمیل اطلاع رسانی را برای تمامی مشترکین مجله ارسال میکند که حاوی فهرست مطالب و یک لینک به وب سایت مجله میباشد  
+</p>]]></section>
+</topic>

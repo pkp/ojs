@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000021.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - In Review
+  *
+  * $Id$
+  --><topic title="در دست کارشناسی" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.inReview" locale="fa_IR" id="editorial/topic/000021" >
+  <section><![CDATA[<p>ساب میشن های در دست کارشناسی روندی را طی می نمایند که در نتیجه آن دبیر درباره رد یا پذیرش ساب میشن تصمیم گیری می نماید. چگونگی انجام کارشناسی شامل این که چه کارشناسانی و چند کارشناس یک ساب میشن را بررسی نمایند، در سیاست کارشناسی مجله توسط مدیر مسؤول یا سردبیر تعریف می شود. وقتی یک دبیر یا سردبیر در لیست در نوبت کارشناسی بر عنوان یک ساب میشن کلیک کند به صفحه کارشناسی آن می رود؛ جایی که کارشناسان ذیربط و تصمیم دبیری مربوط به آن ساب میشن قابل مشاهده است. اگر دبیر یک ساب میشن را پذیرش نماید، آن ساب میشن به قسمت در انتظار ویراستاری منتقل می شود. اگر هم ساب میشن رد شود به آرشیو منتقل خواهد شد.</p><p>برای اطلاعات بیشتر در مورد روند کارشناسی به این آدرس مراجعه نمایید: {help_topic key="editorial.sectionEditorsRole.review" text="In Review"}.</p>]]></section>
+</topic>

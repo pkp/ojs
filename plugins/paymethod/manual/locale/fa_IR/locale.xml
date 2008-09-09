@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2000-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+ --><locale full_name="Farsi" name="fa_IR" >
+  <message key="plugins.paymethod.manual.displayName" >پرداخت بصورت دستی</message>
+  <message key="plugins.paymethod.manual.description" >مدیر مجله بصورت دستی پرداخت توسط یک کاربر را ثبت میکند (در خارج از این نرم افزار).</message>
+  <message key="plugins.paymethod.manual" >پرداخت بصورت دستی</message>
+  <message key="plugins.paymethod.manual.settings" >تنظیمات پرداخت دستی</message>
+  <message key="plugins.paymethod.manual.settings.instructions" >دستورالعمل ها</message>
+  <message key="plugins.paymethod.manual.settings.manualInstructions" >راهنمای پرداخت دستی</message>
+  <message key="plugins.paymethod.manual.purchase.title" >عنوان</message>
+  <message key="plugins.paymethod.manual.purchase.fee" >مبلغ</message>
+</locale>

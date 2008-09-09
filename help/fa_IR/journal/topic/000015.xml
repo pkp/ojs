@@ -1,0 +1,26 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000015.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Journal Manager 
+  *
+  * $Id$
+  --><topic title="مدیرمجله" toc="journal/toc/000003" key="journal.roles.journalManager" locale="fr_IR" id="journal/topic/000015" >
+  <section><![CDATA[<p>
+	مدیر مجله مسئول اداره سیستم انتشار است . این امر مستلزم هیچگونه مهارت فنی خاصی نمی باشد ولی مدیر مجله باید یکسری مدارک اداری را پیدا کرده و فایل ها را روی وب سایت مجله بارگذاری کند .مدیر مجله
+{help_topic key="journal.managementPages.setup" text="Setup"}
+را برای مجله انجام داده و سردبیران ٫ سردبیران بخش ها ٫ ویراستاران ٫ غلط گیران و بررسی کنندگان را ثبت نام و به سمت هایشان منصوب می کند . البته باید توجه داشت که نام و سایر مشخصات کاربران را از طریق بانک های اطلاعاتی دیگر نیز می توان وارد سیستم OJS کرد که این کار از طریق قسمت وارد کردن کاربران که در پاپین
+ {help_topic key="journal.managementPages.importExport" text="Import/Export Data"}
+قرار دارد امکان پذیر است . مدیر مجله همچنین به سایر سیستم های مدیریتی دسترسی دارد و می تواند بخش های مجله را تعریف کرده ٫ سری ایمیل های پیش فرض سیستم را ویرایش کرده 
+{help_topic key="journal.managementPages.readingTools" text="Reading Tools"}
+را که در داخل مجله موجود است ویرایش کرده 
+{help_topic key="journal.managementPages.statsAndReports" text="Journal Statistics"}
+را که سیستم می تواند تهیه کند بررسی می نماید . 
+</p><p>
+توجه داشته باشید که اگر چه نقش مدیر در درون مجله محدود به نظر می رسد لیکن مدیران مجلات باید به عنوان کاربرانی تلقی شوند که مورد اعتماد بوده و در تمامی قسمت های مجله فعال می باشند زیرا آنها هستند که هویت و عملکرد کاربران را در مجله تعیین می کنند .
+</p>]]></section>
+</topic>

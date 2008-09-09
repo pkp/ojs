@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for User Interface. 
+  *
+  * $Id$
+  --><toc title="وب سایت مجله " parent_topic="user/topic/000000" locale="fa_IR" id="user/toc/000000" >
+  <topic title="صفحه خانگی" id="user/topic/000001" />
+  <topic title="درباره مجله " id="user/topic/000002" />
+  <topic title="صفحه خانگی کاربر" id="user/topic/000007" />
+  <topic title="ثبت نام و پرونده کاربر" id="user/topic/000003" />
+  <topic title="آرشیوها و مطالب فعلی" id="user/topic/000004" />
+  <topic title="جستجو وگشت وگزار" id="user/topic/000005" />
+  <topic title="ابزارهای خواندن" id="user/topic/000006" />
+  <breadcrumb title="Journal Web Site" url="user/topic/000000" />
+</toc>

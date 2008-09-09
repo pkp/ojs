@@ -1,0 +1,67 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  --><locale full_name="Farsi" name="fa_IR" >
+  <message key="plugins.generic.translator.name" >پلاگین ترجمه</message>
+  <message key="plugins.generic.translator.description" >با این پلاگین میتوان ترجمه فایل های قابل تر جمه موجود بر روی سایت را اداره کرد.</message>
+  <message key="plugins.generic.translator.longdescription" >در این ناحیه مدیر سایت میتواند نسبت به ایجاد - تغییر  و چک ترجمه او جی اس اقدام کند. این عمل بر روی تمام سایت و نه فقط یک مجله صورت میگیرد. در صورت تصحیح و یا تکمیل یک ترجمه لطفا آنرا به پروژه دانش عمومی بفرستید تا در اختیار همگان قرار گیرد و در نسخه های بعدی گنجانده شود.</message>
+  <message key="plugins.generic.translator.localeDescription" >در این صفحه لیست اجزای قابل ترجمه او جی اس آمده است که از اینجا میتوان ترجمه را شروع یا ویرایش کرد. در یک ترجمه باید تمامی اجزا ترجمه شوند.</message>
+  <message key="plugins.generic.translator.localeName" >نام زبان</message>
+  <message key="plugins.generic.translator.localeKey" >کلید</message>
+  <message key="plugins.generic.translator.localeKeyValue" >مقدار</message>
+  <message key="plugins.generic.translator.translate" >انجام ترجمه</message>
+  <message key="plugins.generic.translator.availableLocales" >زبان های موجود</message>
+  <message key="plugins.generic.translator.check" >چک</message>
+  <message key="plugins.generic.translator.errors" >خطاهای زبان</message>
+  <message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.title" >کلیدهای مفقود</message>
+  <message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.title" >کلیدهای اضافی</message>
+  <message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.title" >کلیدهای مشکوک</message>
+  <message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.title" >لیستهای حاوی پارامترهای ناهمگون</message>
+  <message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.title" >فایلهای زبان مفقودی</message>
+  <message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.title" >ایمیل های مفقودی</message>
+  <message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.title" >ایمیل های اضافی</message>
+  <message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.title" >لیستهای پارامترهای ایمیل متفاوت</message>
+  <message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.message" >کلید &quot;{$key}&quot; در فایل &quot;{$filename}&quot; موجود نیست. بجای آن از نسخه انگلیسی استفاده شد.</message>
+  <message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.message" >کلید &quot;{$key}&quot; دیگر بکار نمیرود و میتوان آنرا از فایل &quot;{$filename}&quot; حذف کرد.</message>
+  <message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.message" ><![CDATA[اندازه کلید "{$key}" در فایل "{$filename}" بطور قابل ملاحظه ای متفاوت با کلید مرجع است:
+<ul><li>{$value} ({$locale})</li>
+<li>{$reference} ({$referenceLocale})</li>
+</ul>]]></message>
+  <message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.message" >کلید &quot;{$key}&quot; در فایل &quot;{$filename}&quot; از نظر نحوه استفاده پارامترها متفاوت با مرجع است. لطفا چک کنید که کلید مزبور دارای تمام پارامترهای لازم باشد. پارامترهای مطابقت داده شده عبازت است از:</message>
+  <message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.message" >فایل زبانی &quot;{$filename}&quot; موجود نیست یا قابل خواندن نیست.</message>
+  <message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.message" >ایمیل &quot;{$key}&quot; در این ترجمه نیست.</message>
+  <message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.message" >ایمیل &quot;{$key}&quot; دیگر استفاده نمیشود. میتوانید آنرا حذف کنید.</message>
+  <message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.message" >ایمیل &quot;{$key}&quot; از نظر استفاده از پارامترها متفاوت با مرجع است. پارامترهای مطابقت داده شده عبارت است از:</message>
+  <message key="plugins.generic.translator.locale" >زبان {$locale}</message>
+  <message key="plugins.generic.translator.localeFiles" >فایل های زبانی</message>
+  <message key="plugins.generic.translator.miscFiles" >فایلهای متفرقه</message>
+  <message key="plugins.generic.translator.emails" >نمونه های ایمیل</message>
+  <message key="plugins.generic.translator.file.filename" >نام فایل</message>
+  <message key="plugins.generic.translator.file.edit" >ویرایش {$filename}</message>
+  <message key="plugins.generic.translator.email.edit" >ویرایش{$emailKey} </message>
+  <message key="plugins.generic.translator.file.reference" >نسخه مرجع</message>
+  <message key="plugins.generic.translator.file.translation" >ترجمه</message>
+  <message key="plugins.generic.translator.email.reference" >نسخه مرجع</message>
+  <message key="plugins.generic.translator.email.translation" >ترجمه</message>
+  <message key="plugins.generic.translator.file.reset" >برگشت به اول</message>
+  <message key="plugins.generic.translator.file.resetToReference" >برگشت به مرجع</message>
+  <message key="plugins.generic.translator.email.reset" >برگشت به اول</message>
+  <message key="plugins.generic.translator.email.resetToReference" >برگشت به مرجع</message>
+  <message key="plugins.generic.translator.file.resetConfirm" >آیا مطمئن هستید میخواهید محتوای فایل را به اول بازگردانید؟</message>
+  <message key="plugins.generic.translator.email.resetConfirm" >آیا مطمئن هستید میخواهید محتوای ایمیل را به اول بازگردانید؟</message>
+  <message key="plugins.generic.translator.file.doesNotExistNote" >* این فایل ترجمه نشده است</message>
+  <message key="plugins.generic.translator.file.confirmCreate" >فایل &quot;{$filename}&quot; از انگلیسی کپی خواهد شد. شما باید تمام رشته های این فایل را ترجمه کنید. آیا از این کار مطمئن هستید؟</message>
+  <message key="plugins.generic.translator.email.description" >در فرم زیر عنوان - بدنه و توصیف ایمیل را ترجمه کنید. البته متن توصیف فقط برای استفاده مدیر مجله است.</message>
+  <message key="plugins.generic.translator.confirmDelete" >ایا مطمئن هستید میخواهید این مورد را حذف کنید؟ این عمل غیر قابل برگشت است.</message>
+  <message key="plugins.generic.translator.deleteKey" >این کلید را حذف کن</message>
+  <message key="plugins.generic.translator.deleteEmail" >این ایمیل را حذف کن</message>
+  <message key="plugins.generic.translator.saveBeforeContinuing" >قبل از ترک این صفحه مطمئن شوید که تمام تغییرات را ذخیره کرده اید و گرنه از بین خواهند رفت. آیا میخواهید ادامه دهید؟ در این صورت هر گونه تغییر ذخیره نشده از بین خواهد رفت.</message>
+</locale>

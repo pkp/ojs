@@ -1,0 +1,27 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 Siavash Miri and Alec Smecher
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  --><locale full_name="Farsi" name="fa_IR" >
+  <message key="plugins.generic.openads.description" >بکمک اوپن اد میتوان امکانات تبلیغات دینامیک از سرور اوپن اد به داخل او جی اس وارد کرد.</message>
+  <message key="plugins.generic.openads.descriptionUnconfigured" ><![CDATA[بکمک اوپن اد میتوان امکانات تبلیغات دینامیک از سرور اوپن اد به داخل او جی اس وارد کرد.<strong> لطفابرای اطلاعات بیشتر درمورد فعال ساختن این پلاگین فایل README در فولدر plugins/generic/openAds را مطالعه کنید.</strong>]]></message>
+  <message key="plugins.generic.openads" >پلاگین اوپن اد</message>
+  <message key="plugins.generic.openads.settings.description" >از این فرم برای انتخاب اوپن اد وتعیین قسمتی از صفخات او جی اس که در آن باید نمایش یابد استفاده کنید.</message>
+  <message key="plugins.generic.openads.manager.settings" >تنظیمات</message>
+  <message key="plugins.generic.openads.error.configFileNotFound" >فایل تنظیمات, {$filename}, قابل دستیابی نیست.</message>
+  <message key="plugins.generic.openads.error.missingParameter" >خداقل یکی از پارامترهای تنظیم اوپن اد قابل خواندن از فایل تنظیمات نیست. پارامترهای مورد لزوم dbhost - dbuser - dbpassword - dbname - url_prefix و table_prefix میباشد.</message>
+  <message key="plugins.generic.openads.error.dbConnectionError" >امکان اتصال به بانک اطلاعاتی اپن اد نیست</message>
+  <message key="plugins.generic.openads.headerAd" >هدر تبلیغات</message>
+  <message key="plugins.generic.openads.contentAd" >محتوای تبلیغات</message>
+  <message key="plugins.generic.openads.sidebarAd" >تبلیغات نوار حاشیه</message>
+  <message key="plugins.generic.openads.orientation.left" >چپ</message>
+  <message key="plugins.generic.openads.orientation.centre" >مرکز</message>
+  <message key="plugins.generic.openads.orientation.right" >راست</message>
+</locale>

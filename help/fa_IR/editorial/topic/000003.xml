@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submission Summary Index 
+  *
+  * $Id$
+  --><topic title="خلاصه ساب میشن" toc="editorial/toc/000001" key="editorial.editorsRole.submissionSummary" subtoc="editorial/toc/000003" locale="fa_IR" id="editorial/topic/000003" >
+  <section><![CDATA[<p>سردبیر از صفحه خلاصه هر ساب میشن برای مدیریت فایلها، متادیتا و اطلاعات شاخص آن ساب میشن استفاده می کند. </p>]]></section>
+</topic>

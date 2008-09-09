@@ -1,0 +1,28 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  --><locale full_name="Farsi" name="fa_IR" >
+  <message key="plugins.importexport.crossref.displayName" >پلاگین استخراج CrossRef XML</message>
+  <message key="plugins.importexport.crossref.description" >استخراج متاداده مقاله با الگوی CrossRef XML</message>
+  <message key="plugins.importexport.crossref.export" >استخراج داده</message>
+  <message key="plugins.importexport.crossref.export.issues" >استخراج شماره ها</message>
+  <message key="plugins.importexport.crossref.export.selectIssue" >یک شماره مجله برای استخراج انتخاب کنید.</message>
+  <message key="plugins.importexport.crossref.export.articles" >استخراج مقالات</message>
+  <message key="plugins.importexport.crossref.export.selectArticle" >انتخاب مقالات برای استخراج</message>
+  <message key="plugins.importexport.crossref.cliUsage" ><![CDATA[نحوه استفاده: 
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
+]]></message>
+  <message key="plugins.importexport.crossref.cliError" >خطا:</message>
+  <message key="plugins.importexport.crossref.export.error.issueNotFound" >هیچ کدام از شماره های مجله با ID ذکر شده &quot;{$issueId}&quot; مطابق نیست.</message>
+  <message key="plugins.importexport.crossref.export.error.articleNotFound" >هیچ مقاله ای با ID مقابه ذکر شده &quot;{$articleId}&quot; مطابقت ندارد.</message>
+  <message key="plugins.importexport.crossref.errors.noDOIprefix" >برای استفاده از این پلاگین پیش شماره DOI در تنظیمات مجله باید وارد شود.</message>
+</locale>

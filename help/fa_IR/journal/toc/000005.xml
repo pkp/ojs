@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Journal Management - Management Pages - Reading Tools.
+  *
+  * $Id$
+  --><toc title="ابزارهای خواندن" parent_topic="journal/topic/000009" locale="fa_IR" id="journal/toc/000005" >
+  <topic title="گذینه های ابزارهای خواندن" id="journal/topic/000026" />
+  <topic title="سری آیتمهای مرتبط " id="journal/topic/000027" />
+  <topic title="متون" id="journal/topic/000028" />
+  <breadcrumb title="مدیریت ژورنال" url="journal/topic/000000" />
+  <breadcrumb title="صفحات مدیریتی" url="journal/topic/000001" />
+  <breadcrumb title="ابزارهای خواندن" url="journal/topic/000009" />
+</toc>

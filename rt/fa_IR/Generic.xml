@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE version SYSTEM "../../lib/pkp/dtd/rtVersion.dtd">
+<!--
+  * Generic.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reading Tools version: Generic (en_US)
+  *
+  * $Id$
+  -->
+<version id="عمومی" locale="en_US">
+	<version_title>عمومی</version_title>
+	<version_description>ابزار خواندن به خوانندگان کمک می کند  تا از دامنه ی وسیعی از منابع موجود که امکان تفسیر ، قرار گرفتن و ارزیابی را فراهم می کند، استفاده کنند</version_description>
+	<context>
+		<context_title>وظیفه نویسنده</context_title>
+		<context_abbrev>دیگر وظایف</context_abbrev>
+		<context_description>با استفاده از ماشین های 
+OAI 
+دیگر وظایف را برای  نویسنده( ها) ی مقاله مشخص کند</context_description>
+		<author_terms/>
+		<search>
+			<search_title>گوگل اسکولار</search_title>
+			<search_description>گوگل اسکولار امکان جستجو های خاص را د ر زمینه ادبیات پژوهشی شامل  مقالات کارشناسی شده ، پایان نامه ها، کتب،،پیش پرینت ها، چکیده ها و گزارش های فنی فراهم می سازد.محتوای این حیطه شامل تعدادی از ناشران و تدوین کنند گان است که گوگل توسط آنها نسازمان یافته است.برای مثال انجمن محاسبه ی ماشین ها، 
+IEEE،
+سرویس جایگزین کتابخانه جهانی با دسترسی آزاد  و ... .نتیایج مشخص شده ورژن های متفاوتی از شاخه ها، تحلیل گفته ها و مکان کتابخانه را (فقط کتاب های موجود) را نشان می دهد</search_description>
+			<url>http://scholar.google.com</url>
+			<search_url>http://scholar.google.com/scholar?ie=UTF-8&amp;oe=UTF-8&amp;hl=eng&amp;as_sauthors={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Intute: Repository Search:اینتیوت: جستجوی انباری (حجیم)</search_title>
+			<search_description>از این سرویس برای پیدا کردن توضیحات در مورد بیش از 152000 مقاله ی فعال، مقاله ی موجود در مجلات، گزارش ها، مقاله های کنفرانس، و دیگر موارد دانشگاهی استفاده کنید که در انبار
+eprints
+(پرینت های الکترونیک) انگلستان ذخیره و بایگانی شده است. نتایج جستجو به موارد اصلی یعنی جایی که توسط موسسات مبدا در دسترس قرار گرفته اند، لینک یا متصل می شوند.</search_description>
+			<url>http://irs.ukoln.ac.uk/</url>
+			<search_url>http://irs.ukoln.ac.uk/search/?view=&amp;submit.x=0&amp;submit.y=0&amp;submit=Go&amp;query={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>OAIster (Open Archives Initiative research databases): آرشیوهای باز جستجوی پایگاههای اطلاعاتی</search_title>
+			<search_description>OAIster
+پروژه ای است از سرویس های کتابخانه دیجیتال دانشگاه میشیگان، که می تواند جستجویی وسیع از انواع مجموعه ها از موسسات بیشمار را فرهم آورد.این موسسات از منابع دیجیتال خود  ثبتی ایجاد می کنند که که در دسترس است و تیم پروژه آنها را برای خدمات 
+OAlSster
+جمع آوری و تدوین کرده است
+</search_description>
+			<url>http://oaister.umdl.umich.edu/</url>
+			<search_url>http://oaister.umdl.umich.edu/cgi/b/bib/bib-idx?type=boolean&amp;size=10&amp;c=oaister&amp;q1=&amp;rgn1=entire+record&amp;op2=and&amp;q2=&amp;rgn2=entire+record&amp;op3=And&amp;q3=&amp;rgn3=title&amp;op4=And&amp;rgn4=author&amp;op5=And&amp;q5=&amp;rgn5=subject&amp;op6=And&amp;rgn6=norm&amp;q6=all+types&amp;sort=author%2Fcreator&amp;submit2=search&amp;q4={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Public Knowledge Project Open Archives Harvester:پروژه آگاهی عمومی از آرشیو باز 
+پابلیک نالج پراجکت اپن آرشیو هاروستر
+</search_title>
+			<search_description>آرشیو کامل و باز 
+PKP
+یک سیستم نمایه سازی آزاد از متا دیتا ها می باشد که با پروژه ی آگاهی عمومی از طریق کوشش های انجام شده توسط فدرال گسترش یافته تا دسترسی به جستجو را وسیع تر و بهتر سازد. 
+منابع اطلاعاتی 
+PKP OAI
+به شما این امکان را می دهد تا یک نمایه ی قابل جستجو از متا دیتا  ها را از آرشیو های باز و کامل اولیه مانندسایت های مورد استفاده در سیستم مجلات باز یا سیستم های کنفرانس باز ایجاد کنید</search_description>
+			<url>http://pkp.sfu.ca/harvester/</url>
+			<search_url>http://pkp.sfu.ca/harvester/search.php?limit=author&amp;query={$formKeywords}</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>جستجوی واژه ها</context_title>
+		<context_abbrev>جستجوی واژه ها</context_abbrev>
+		<context_description>روی هر واژه در متن دبل کلیک کنید به صورت نقل قول؛ تعریف واژه ها و نقل قول یا جعبه ظاهر خواهد شد.همچنین می توانید کلمه مورد نظر را در جعبه تایپ یا پیست کنید. سپس از دستور العمل جستجو برای یافتن تعریفی مشخص برای آن کلمه استفاده کنید. این منابع به خاطر ارتباطشان و دسترسی آزاد به همه یا بخشی از مطالبشان انتخاب شده اند</context_description>
+		<define_terms/>
+		<search>
+			<search_title>گوگل</search_title>
+			<search_description>با استفاده از ماشین معروف جستجوی گوگل،تعاریف را جستجو کنید</search_description>
+			<url>http://www.google.com/</url>
+			<search_url>http://www.google.com/search?hl=en&amp;q=define%3A{$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Columbia Encyclopedia:دایره المعارف کلمبیا</search_title>
+			<search_description>به عنوان اولین کمک و راهنما، چاپ ششم دایره المعارف کلمبیا حاوی بیش از 51000 ورودی با 80000 لینک اضافه بر متن دارد.</search_description>
+			<url>http://www.bartleby.com/65/</url>
+			<search_url>http://www.bartleby.com/cgi-bin/texis/webinator/65search?search_type=full&amp;query={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Encyclopedia.com</search_title>
+			<search_description>نسخه ی آنلاین از دایره المعارف الکترونیک و دقیق. ورودی ها و موارد موجود در آن بسیار کوتاه هستند به همین دلیل این سایت برای چک کردن مناسب تر است تا تحقیق.</search_description>
+			<url>http://www.encyclopedia.com/</url>
+			<search_url>http://www.encyclopedia.com/searchpool.asp?target={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Merriam-Webster Online:لغتنامه آن لاین مریام – وبستر</search_title>
+			<search_description>این لغتنامه بر اساس دهمین چاپ دانشگاهی وبستر،1993است همراه با بیش از160000 لغت به روز که در هر چاپ سالانه اضافه می شود هر کلمه با تعریف، تلفظ، استفاده، ساختار گرامری و یک تاریخچه کوتاه شامل یک فرهنگ جامع، املای غلط و املاهای پیشنهادی می باشد. سیستم جستجوی فرهنگ لغت جستجوهای غیر قابل پیش بینی و ناقص را فراهم می کند. همچنین راهنمای خوبی برای تلفظ و فایل های صداهای آن تلفظ برای بسیاری از واژه ها می باشد.</search_description>
+			<url>http://www.merriam-webster.com/</url>
+			<search_url>http://www.merriam-webster.com/cgi-bin/dictionary?book=Dictionary&amp;va={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>لغتنامه های وان لوک</search_title>
+			<search_description>وان لوک یک خود-لغتنامه است.یک کلمه یا نام خلاصه انگلیسی را وارد کنید ، وان لوک نمایه آن را از 5292362 کلمه در 934 لغتنامه که در لغتنامه های عمومی و اختصاصی مورد دلخواه برای آن تعریف نمایه شده اند جستجو می کند.</search_description>
+			<url>http://www.onelook.com/index.html</url>
+			<search_url>http://www.onelook.com/?ls=a&amp;w={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Wikipedia: The Free Encyclopedia:ویکی پدیا: دایره المعارف آزاد</search_title>
+			<search_description>ویکی پدیا یک دایره المعارف با متنی آزاد و قابل دسترسی است که به طور مشترک توسط شرکت کنندگان در سرتاسر جهان نوشته شده است. این سایت "ویکی ویکی" است به این معنا که هر کس می تواند هر مقاله ای را ویرایش کند، نظر خود را بدون اشتباه سرمقاله ای بیان کنند، کیفیت محتوای این سایت به طور نمایشی تغییر می کند اما ارزش جستجو را دارد. نسخه انگلیسی صدها هزار کلمه دارد. اسپانیایی، فرانسوی و اسپرانتو(زبان بین المللی) نیز در بین زبانهای ارائه شده هستند.</search_description>
+			<url>http://en.wikipedia.org/wiki/Main_Page</url>
+			<search_url>http://en.wikipedia.org/wiki/Special:Search?go=Go&amp;fulltext=Search&amp;search={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>اینفو پلیز.کام</search_title>
+			<search_description>این سایت دربرگیرنده اینفورمیشن پلیز الماناکز(اطلاعات سالانه)، یک قسمت بیوگرافی، یک لغتنامه، یک اطلس، و مقالاتی از دایره المعارف کلمبیا می باشد. شما می توانید این رفرنس های آماده را با یکدیگر یا به طور مجزا جستجو کنید یا آلماناکز را بروز کنید. در این سایت همچنین سرمقالات هر هفته وجود دارد که اخبار و موضوعات را با لینک های مربوط به محتوای آلماناکز و دیگر منابع شبکه تحت پوشش قرار می دهد.</search_description>
+			<url>http://www.infoplease.com</url>
+			<search_url>http://www.infoplease.com/search?fr=iptn&amp;in=all&amp;x=0&amp;y=0&amp;query={$formKeywords}</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>سیاست دولت</context_title>
+		<context_abbrev>سیاست دولت</context_abbrev>
+		<context_description>منابع متفاوت دولت را چک کنید.</context_description>
+		<search>
+			<search_title>Access to Australian Government Information and Services:دسترسی به اطلاعات و سرویس دولت استرالیا</search_title>
+			<search_description>استرالین گاورمنت انتری پوینت (نقطه ورودی به دولت استرالیا) دسترسی جامع و کاملی به اطلاعات و سرویس این دولت را فراهم می سازد. می توانید از طریق این سایت و 
+&lt;a href=&quot;http://www.australia.gov.au&quot;&gt;www.australia.gov.au&lt;/a&gt;
+هسته ای متمرکز از اطلاعات دولت استرالیا را پیدا کنید. که در حال حاضر بعنوان راهنمای بیش از 700 وب سایت از دولت استرالیا است، و بیش از 5000000 صفحه نمایه (ایندکس) کرده که هم متا دیتا و هم متن کامل را در بر می گیرد تا مطمئن شوید این یک پرتال کاملا جامع می باشد.</search_description>
+			<url>http://www.fed.gov.au</url>
+			<search_url>http://govsearch.australia.gov.au/search/search.cgi?collection=gov&amp;form=au&amp;query=&amp;query_phrase=&amp;query_or=&amp;query_not=&amp;meta_f_sand=&amp;scope=&amp;fscope=512&amp;num_ranks=20&amp;chksummary=chksummary&amp;query_and={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>The Government of Canada: دولت کانادا</search_title>
+			<search_description>شما می توانید در همه بخش های دولتی، بخش های فدرال و دفا 
+In addition to Departmenتر استانی، مرزی و شهری جستجو کنید. یک لینک بخش ها و ادارات (دیپارتمنتز اند ایجنسیز) وجود دارد و ایندکس 
+A
+تا 
+Z
+به شما یک کلید واژه جستجو برای برنامه ها و خدمات ارائه می دهد.
+پیشرفتی که اخیرا روی سایتهای دیپارتمنت انجام شده این است که در برگیرنده همه گفته ها و افشاء حقایق می باشد و صفحه ای نیز در مورد هزینه های مسافرت، مهمانی ها، قراردادها، ضمانت نامه ها و پاداش ها دارد.
+صفحه ابوت کانادا ( در مورد کانادا) شامل لینکهایی به بخش ها و دفاتر، ساختار دولت کانادا کمیته های تفحص و غیره می شود. به غیز از وب سایت دیپارتمنت، دولت کانادا پرتال هایی را ایجاد کرده است که اطلاعات بین فدرال و منابع استانی و سازمانهای غیر دولتی را جمع آوری و به یکدیگر متصل کرده است.</search_description>
+			<url>http://www.canada.gc.ca/main_e.html</url>
+			<search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple&amp;pg=q&amp;enc=iso88591&amp;site=main&amp;bridge=&amp;stt=&amp;lowercaseq=&amp;what=web&amp;user=searchintranet&amp;browser=N6E&amp;kl=XX&amp;op=a&amp;q={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Directgov</search_title>
+			<search_description>دیرکت گاو سرویسی دولتی است که به مردم امکان دسترسی به جدیدترین و گسترده ترین دامنه ی سرویس اطلاعات عمومی را در مکانی روی شبکه (وب) و تلویزیون دیجیتال (دیجیتال تی وی) می دهد. دیرکت گاو از مشخصات طراحی شده و در نظر گرفته شده از طریق
+UK GovTalk
+استفاده می کند.</search_description>
+			<url>http://www.direct.gov.uk</url>
+			<search_url>http://www.direct.gov.uk/AdvancedSearch/SearchResults/fs/en?NP=1&amp;PO1=C&amp;PI1=W&amp;PF1=A&amp;PG=1&amp;RP=20&amp;SC=__dgov_site&amp;Z=1&amp;PT1={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Info4local.gov.uk: اینفو4 لوکال.گاو.یو کی (انگلستان)</search_title>
+			<search_description>اطلاعات برای دولت محلی از دولت مرکزی. این سایت به مقامات محلی کمک می کند تا خیلی سریع و راحت بتوانند اطلاعات مربوطه را از وب سایت های گروههای دولت مرکزی، آژانس ها و دیگر قسمتهای عمومی پیدا کنند. این قسمت دارای اطلاعات وسیعی در زمینه بکارگیری دولت الکترونیک می باشد.</search_description>
+			<url>http://www.info4local.gov.uk</url>
+			<search_url>http://www.info4local.gov.uk/?view=Search+results&amp;subjects=all&amp;departmentsIds=0&amp;informationTypesIds=all&amp;query={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>The New Zealand government portal:پرتال دولت نیوزلند</search_title>
+			<search_description>پرتال دولت نیوزلند وب سایتی است که امکان جستجو برای لینکها را فراهم می کند و به اطلاعات آنلاین و آف لاین و سرویس هایی از بیشتر دفاتر دولتی متصل می شود. این سایت توسط کمیته سرویس های ایالتی (استیت سرویسیز کامیژن) که بخشی در دولت نیوزلند می باشد، مدیریت و حمایت می شود.</search_description>
+			<url>http://www.govt.nz</url>
+			<search_url>http://www.govt.nz/search?type=spider&amp;t=spider&amp;q={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Europa: اروپا </search_title>
+			<search_description>اطلاعات موجود در کشورهای عضو اتحادیه اروپا شامل داده های آماری، سیاست ها، اخبار، اسناد اداری، متون قانونی و دیگر انتشارات</search_description>
+			<url>http://europa.eu.int/index_en.htm</url>
+			<search_url>http://europa.eu.int/geninfo/query/resultaction.jsp?page=1</search_url>
+			<search_post>Collection=EuropaFull&amp;ResultTemplate=/result_en.jsp&amp;ResultCount=25&amp;qtype=simple&amp;ResultMaxDocs=200&amp;DefaultLG=en&amp;QueryText={$formKeywords}</search_post>
+		</search>
+		<search>
+			<search_title>The Global Legal Information Network (GLIN):شبکه اطلاعات قانونی جهانی (گلابل لگال اینفورمیشن نت ورک)
+GLIN
+</search_title>
+			<search_description>GLIN
+یک پایگاه اطلاعاتی از قوانین، آیین نامه ها، تصمیمات قضایی و دیگر منابع تکمیلی قانونی می باشد که توسط دفاتر سازمان های دولتی و بین المللی منتشر شده است. اعضای 
+GLIN
+متن کامل و رسمی از اسناد چاپ شده را روی پایگاه هایی به زبان اصلی شان منتشر می کنند. هر سند با خلاصه انگلیسی و واژه های موضوعی انتخاب شده از ایندکس های چند زبانه در 
+GLIN
+همراه می باشد.
+</search_description>
+			<url>http://www.glin.gov</url>
+			<search_url>http://www.glin.gov/search.do?refineQuery=&amp;offset=0&amp;refineQueryType=&amp;fromSearch=true&amp;queryType=ALL&amp;searchBtn=Search&amp;includeAllFields=on&amp;searchAll=on&amp;sumLanguage=any&amp;pubLanguage=any&amp;pubJurisdiction=any&amp;publicationJurisdictionExclude=false&amp;searchPublicationDate=true&amp;dateFromDay=01&amp;dateFromMonth=01&amp;dateFromYear=&amp;dateToDay=01&amp;dateToMonth=01&amp;dateToYear=&amp;subjTerm=&amp;subjTermConjunction%5B0%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B1%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B2%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B3%5D=AND&amp;subjTerm=&amp;searchOrder=default&amp;hitsPerPage=10&amp;showSummary=on&amp;queryString={$formKeywords}</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>جستجوی کتابها</context_title>
+		<context_abbrev>جستجوی کتابها</context_abbrev>
+		<context_description>منابع مرتبط با کتاب</context_description>
+		<search>
+			<search_title>Google Print</search_title>
+			<search_description>گوگل با کتابخانه های دانشگاه های میشیگان، هاروارد، استنفورد، آکسفورد و کتابخانه عمومی نیویورک کار می کند تا کتابها را در مجموعه هایشان به صورت دیجیتالی در بیاورد و آنها را در گوگل پرینت قابل دسترس قرار دهد. یک پروژه ی عظیم جستجو که میلیونها شماره از کتابهای چاپ شده را در پایگاه داده های گوگل پرینت می آورد. روی عنوان یک کتاب کلیک کنید می توانید صفحه ای از کتاب را که واژه ی جستجوی شما را دارد ببینید، می توانید اطلاعات بیشتری را در یک کتاب خاص جستجو کنید، توضیح بیشتر یا اطلاعات مربوطه را پیدا کنید، در مورد ناشر بدانید یا کتاب را خریداری نمایید و کتابخانه هایی را که این کتاب را دارند پیدا کنید.</search_description>
+			<url>http://print.google.com</url>
+			<search_url>http://print.google.com/print?q={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Online books Page: صفحه کتابهای آنلاین</search_title>
+			<search_description>صفحه کتابهای آنلاین توسط جان مارک آکربلوم در دانشگاه پنسیلوانیا ویرایش شد. این یک نقطه شروع عالی در جستجو برای متن کامل کتاب ها در اینترنت است. بیش از 20000 کار انگلیسی در شکلهای متفاوت در سایت های مختلف به صورت آنلاین در دسترس هستند. شما می توانید با نام نویسنده یا عنوان  جستجو را انجام دهید. یک ویژگی جالب به شما اجازه می دهد با لایبرری کانگرس دسته ای از شماره تلفن ها را بروز کنید. لیست های جدیدی به طور مرتب اضافه می شوند و در وب پیج های مجزا در 
+&lt;/a&gt;
+فهرست می شوند.
+</search_description>
+			<url>http://digital.library.upenn.edu/books/</url>
+			<search_url>http://onlinebooks.library.upenn.edu/webbin/book/search?tmode=words&amp;title={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Books-On-Line: کتابها-آنلاین</search_title>
+			<search_description>مجموعه ای با بیش از 32935 عنوان که تنها بعضی از آنها گلچین شده اند. با موضوع بروز کنید یا با اسم نویسنده و عنوان جستجو کنید. همه موارد به صورت آزاد نیستند.</search_description>
+			<url>http://www.books-on-line.com/</url>
+			<search_url>http://www.books-on-line.com/bol/KeyWordSearch.cfm?RowCount=50&amp;Searchquery={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Universal Library: کتابخانه جهانی</search_title>
+			<search_description>کتابخانه جهانی (یونیورسال لایبرری) بطور قابل توجهی موفق تر و دارای کتاب های بیشتری است. این کتابخانه دارای مجموعه ای انبوه از 100000 ای بوک است (بعضی از آنها از پروژه ی گوتن برگ می باشند) و هدفش ایجاد یک میلیون ای بوک تا پایان سال 2006 است.</search_description>
+			<url>http://tera-3.ul.cs.cmu.edu/</url>
+			<search_url>http://tera-3.ul.cs.cmu.edu/cgi-bin/DBscripts/advsearch_db.cgi?perPage=25&amp;listStart=0&amp;author1=&amp;subject1=Any&amp;year1=&amp;year2=&amp;language1=Any&amp;scentre=Any&amp;search=Search&amp;title1={$formKeywords}</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>مرور کتابها</context_title>
+		<context_abbrev>مرور کتابها</context_abbrev>
+		<context_description>منابع کارشناسی کتاب آنلاین دانشگاهی را چک کنید</context_description>
+		<search>
+			<search_title>H-Net Reviews</search_title>
+			<search_description>کارشناسی های
+H-Net
+در علوم انسانی و اجتماعی یک منبع کارشناسی آنلاین دانشگاهی است. کارشناسی ها از طریق شبکه های مباحثه ای و وب سایت 
+H-Net
+به صورت آنلاین چاپ می شوند. این سایت کارشناسی ها یمان را با سرعتی بی نظیر نسبت به دیگر رسانه ها برای دانشجویان مهیا می سازد. همچنین این سایت یک نوع جدید از تعامل را ممکن می سازد تا جایی که کارشناسان، نویسندگان و خوانندگان می توانند در مباحثه های کارشناسی آنلاین شرکت کنند. از طریق ایمیل و شبکه
+H-Net
+به کارشناسی دانشگاهی آنلاین نیز کمک شده است.</search_description>
+			<url>http://www2.h-net.msu.edu/reviews/</url>
+			<search_url>http://www2.h-net.msu.edu/reviews/search.cgi?maxlines=25&amp;maxfiles=25&amp;all=all&amp;query={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>New York Review of Books:کارشناسی نیویورک در مورد کتاب</search_title>
+			<search_description>کارشناسی های طولانی و بلند از کارهای پرینت شده و با ارزش. آرشیو واژگان کلیدی قابل جستجو به همراه بسیاری از کارشناسی های آزاد از سال 1983 تا کنون را در برمی گیرد.</search_description>
+			<url>http://www.nybooks.com/index</url>
+			<search_url>http://www.nybooks.com/archives/search?author_name=%20&amp;reviewed_author=&amp;reviewed_item=&amp;form=&amp;year=&amp;title={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>CM : Canadian Review of Materials:CM:
+کارشناسی کانادا از مواد آموزشی
+</search_title>
+			<search_description>CM:
+کارشناسی کانادا از مواد آموزشی مجله ای است کارشناسی و الکترونیک. کارشناسی های 
+CM
+همه ی موارد مربوط به مباحث مورد علاقه ی کودکان و جوانان را بررسی می کند که محصولات منتشر شده در کانادا، یا در جاهای دیگر است اما مورد توجه خاص یا ویژه ی کانادایی ها است، مانند آنهایی که نویسنده ، موضوع یا توضیحی در مورد کانادا دارد. ما کتابها، ویدئوها و صداهای ضبط شده و
+CD-ROM
+ها را بررسی می کنیم.</search_description>
+			<url>http://www.umanitoba.ca/cm/</url>
+			<search_url>http://google.cc.umanitoba.ca/search?btnG=Search&amp;sort=date%3AD%3AL%3Ad1&amp;output=xml_no_dtd&amp;site=default_collection&amp;ie=UTF-8&amp;oe=UTF-8&amp;client=default_frontend&amp;proxystylesheet=default_frontend&amp;as_dt=i&amp;as_sitesearch=http%3A%2F%2Fwww.umanitoba.ca%2Foutreach%2Fcm&amp;q={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Leonardo Digital Book Reviews: کارشناسی دیجیتال لئوناردو در مورد کتاب </search_title>
+			<search_description>کارشناسی دیجیتال لئوناردو از کتاب به بررسی کتاب ها از انجمن بین المللی گرفته تا هنر، علم و فناوری می پردازد.</search_description>
+			<url>http://www.leonardo.info/</url>
+			<search_url>http://www.google.com/search?hl=en&amp;btnG=Search&amp;q=site%3Awww.leonardo.info%2Freviews%2F+{$formKeywords}</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>Dissertations</context_title>
+		<context_abbrev>Dissertations</context_abbrev>
+		<context_description>Provides access to a repository of rich graduate educational material contributed by a number of member institutions worldwide.</context_description>
+		<search>
+			<search_title>CRL Foreign Doctoral Dissertation Databases: CRL
+پایگاه اطلاعاتی رساله های دکترای خارجی
+</search_title>
+			<search_description>CRL
+(مرکز تحقیقات کتابخانه ها) در خارج از ایالات متحده و کانادا هنوز در مرحله ی ساخت است  تا این لحظه 15000 مورد از 750000 مورد در این پایگاه ثبت شده است که با نام نویسنده، نام موسسه، عنوان، سال، عنوان ترجمه شده، موضوع، واژگان کلیدی، زبان و کشور قابل جستجو می باشند. این پایگاه همچنین دستوالعملی را برای مراحل امانت گرفتن از کتابخانه ارائه می دهد.</search_description>
+			<url>http://www.crl.edu/content.asp?l1=5&amp;l2=23&amp;l3=44&amp;l4=25</url>
+			<search_url>http://www.crl.edu/DBSearch/dissertationsSummary.asp?language=English&amp;title={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Dissertation.com</search_title>
+			<search_description>ناشران دانشگاهی از پایان نامه های استادان و رساله های دکترای 
+PhD.
+چکیده های 1000 رساله را در این پایگاه جستجو کنید.</search_description>
+			<url>http://dissertation.com/</url>
+			<search_url>http://dissertation.com/browse.php?criteria=all&amp;submit.x=23&amp;submit.y=5&amp;keyword={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Networked Digital Library of Theses and Dissertations Union Catalog:کتابخانه ی دیجیتال شبکه ای از کاتالوگ اتحادیه پایان نامه ها و رساله ها</search_title>
+			<search_description>کاتالوگ این اتحادیه به عنوان انباری غنی از مواد آموزشی فارغ التحصیلان است که با همکاری تعدادی از اعضای موسسات در سراسر جهان ایجاد شده است. این پروژه یک کار تلفیقی با همکاری
+NDLTD 
+و
+VTLS
+است. امید است که این پروژه دسترسی به تحقیقات دانشجویی را برای دانشگاهیان و دانشجویان صاحب نظر افزایش دهد تا پیامی غنی تر را از طریق استفاده از تکنولوژی های چند رسانه ای و غیرمستقیم و پیشرفته ی کتابخانه ی دیجیتال در سراسر دنیا به همه برساند.</search_description>
+			<url>http://zippo.vtls.com/cgi-bin/ndltd/chameleon</url>
+			<search_url>http://zippo.vtls.com/cgi-bin/ndltd/chameleon?sessionid=2006051219043826835&amp;skin=ndltd&amp;submittheform=Search&amp;usersrch=1&amp;beginsrch=1&amp;elementcount=3&amp;function=INITREQ&amp;search=SCAN&amp;lng=en&amp;pos=1&amp;conf=.%2Fchameleon.conf&amp;u1=4&amp;host=localhost%2B3668%2BDEFAULT&amp;t1={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Scirus ETD Search</search_title>
+			<search_description>NDLTD
+سرویس جستجویی را توسط 
+Scirus
+برای شما فراهم می کند که بر اساس داده های حاصل از 
+Union Archive
+است و با
+OCLC
+هاست می شود.</search_description>
+			<url>http://www.ndltd.org/info/description.en.html</url>
+			<search_url>http://www.scirus.com/srsapp/search?rep=ndl&amp;q={$formKeywords}</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>محل های آنلاین</context_title>
+		<context_abbrev>محل های آنلاین</context_abbrev>
+		<context_description>محل های آنلاین را انتخاب کنید ، دسترسی آزاد و عمومی متن مطالعات تحقیقاتی روی سایت شما قرار می گیرد</context_description>
+		<search>
+			<search_title>Liszt</search_title>
+			<search_description>لیس زد تی که با تاپیکا هاست می شود یک سرویس آزاد است که به شما اجازه می دهد فهرست ایمیل ها را پیدا کنید، مدیریت کنید و در گروههای بحث در زمینه های متفاوت شرکت کنید </search_description>
+			<url>http://www.liszt.com/dir/?cid=0</url>
+			<search_url>http://www.liszt.com/search/?search_type=cat&amp;amp;query={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>MInd: the Meetings Index:نمایه ی جلسات</search_title>
+			<search_description>از این سرویس برای مشخص کردن و محلی کردن سازمان دهنده ها و حامیان برای کنفرانس ها، سمینارها، ملاقات ها، نشست ها، و همایش ها ( در آینده و گذشته) استفاده می شود.</search_description>
+			<url>http://www.interdok.com/</url>
+			<search_url>http://www.google.com/search?q=site%3Ainterdok.com+mind+{$formKeywords}</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>Quotations</context_title>
+		<context_abbrev>Quotations</context_abbrev>
+		<context_description>Search familiear or famous quotation resources on the Internet</context_description>
+		<search>
+			<search_title>Bartlett's Familiar Quotations: گفته های آشنای بارتلت</search_title>
+			<search_description>مجموعه ای از صفحات، فریزها و گفتارهای حکیمانه و منابع شان با تاریخچه قدیم و جدیدشان (چاپ در سال 1919)</search_description>
+			<url>http://www.bartleby.com/100/</url>
+			<search_url>http://www.bartleby.com/cgi-bin/texis/webinator/sitesearch?FILTER=col100%20&amp;x=9&amp;y=11&amp;query={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Quotations Page: صفحه ی گفتارها</search_title>
+			<search_description>پایگاه اطلاعاتی از چندین منبع گفته های حکیمانه در اینترنت. 
+Quotations Collections
+مجموعه گفتارها را با توضیحی در مورد آنها می توانید ببینید.
+</search_description>
+			<url>http://www.quotationspage.com/</url>
+			<search_url>http://www.quotationspage.com/search.php3?Author=&amp;C=mgm&amp;C=motivate&amp;C=classic&amp;C=coles&amp;C=lindsly&amp;C=poorc&amp;C=net&amp;C=devils&amp;C=contrib&amp;x=60&amp;y=11&amp;Search={$formKeywords}</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>مشاهده هزینه بر </context_title>
+		<context_abbrev>مشاهده هزینه بر </context_abbrev>
+		<context_description>مشاهده هزینه بر برای آن دسته افرادی است که دسترسی مستقیم به مقالات مجلات الکترونیک را از طریق اشتراک ندارد. این نوع سرویس دهی به مشتریان این امکان را می دهد تا دسترسی مستقیم به یک مقاله را با پرداخت  کارت اعتباری با استفاده از مکانیزم پرداخت ایمن 
+RSC 
+سریعا کارت آنان عتبار مجدد پیدا می کندو مشتریان می توانند به فایل های مقالات مورد نیاز خود برای یک دوره 30 روزه دسترسی پیدا کنند </context_description>
+		<search>
+			<search_title>Ingenta</search_title>
+			<search_description>اینجنتا دسترسی به متن کامل مقالات را محدود می سازد. اگرچه دسترسی به متن کامل هزینه بر می باشد، اما این سایت را می توان به عنوان نمایه به صورت رایگان استفاده کرد.</search_description>
+			<url>http://www.ingenta.com/</url>
+			<search_url>http://www.ingenta.com/isis/searching/Search/ingenta?database=1&amp;title={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>ebrary</search_title>
+			<search_description>محققان مستقلی که دسترسی آزاد به پایگاه های اطلاعاتی ابرری را ندارند از طریق کتابخانه هایشان می توانند همین حالا یک حساب شخصی با حداقل 5 دلار باز کنند. ابرری دیسکاور علوم آکادمیک چند گانه را به طور منسجم و واحد درمی آورد و دسترسی به بیش از 20000 عنوان معتبر را که در برگیرنده متن کامل، صفحه موسیقی، گزارشات و دیگر اسناد معتبر ار بیش از 175 ناشر راهنما مانند مجله دانشگاه کمبریج، رندم هوس، 
+Inc
+و شرکت های مک گرو هیل را میسر می سازد.</search_description>
+			<url>http://www.ebrary.com/corp/content.htm</url>
+			<search_url>http://shop.ebrary.com/Top?layout=search&amp;f00=text&amp;p01=&amp;f01=subject&amp;d=journal&amp;l=en&amp;sch=%A0%A0%A0%A0%A0Search%A0%A0%A0%A0%A0&amp;frm=adv.x&amp;p00={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Questia</search_title>
+			<search_description>کوازتیا دسترسی به بیش از 47000 کتاب، 375000 مجله، و مقالات روزنامه ای را فراهم می کند. هر صفحه را جستجو کنید همه کتابها و مقالات به طور کامل و تمام در دسترس می باشند-. میزان اشتراک از 19.05 در هر ماه تا 119.95 به طور سالانه متغیر می باشد.</search_description>
+			<url>http://www.questia.com/</url>
+			<search_url>http://www.questia.com/SM.qst?act=search&amp;keywordsSearchType=1000&amp;mediaType=book&amp;mediaType=journal&amp;mediaType=magazine&amp;mediaType=newspaper&amp;mediaType=encyclopedia&amp;mediaType=startpage&amp;keywords={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Wiley InterScience Pay-per-view Service:ویلی اینتر ساینس: سرویس پرداخت با هر بار مشاهده </search_title>
+			<search_description>ویلی اینتر ساینس: سرویس پرداخت با هر بار مشاهده ، دسترسی  ثابت و کامل به متن مجموعه ای وسیع از مقالات مجلات یا فصل های موجود در یک کتاب را که روی ویلی اینترساینس موجود می باشد بدون نیاز به اشتراک فراهم می کند. این سرویس به هر فرد اجازه می دهد تا دسترسی به مقالات مجزای مجله یا فصول کتاب را بطور مستقیم با استفاده از یک کارت اعتباری پیدا کند. دسترسی تا 24 ساعت بطور مداوم وجود دارد.</search_description>
+			<url>http://www3.interscience.wiley.com/aboutus/ppv-articleselect.html</url>
+			<search_url>http://www3.interscience.wiley.com/search/allsearch</search_url>
+			<search_post>allContentSearchForm=&amp;mode=quicksearch&amp;WISindexid1=WISall&amp;WISsearch1={$formKeywords}</search_post>
+		</search>
+	</context>
+	<context>
+		<context_title>منابع</context_title>
+		<context_abbrev>منابع</context_abbrev>
+		<context_description>منابع کلی</context_description>
+		<search>
+			<search_title>BBC Learning:يادگيري از 
+BBC
+</search_title>
+			<search_description>با آموزش آنلاين
+BBC
+به بهترين منابع يادگيري براي بزرگسالان و كودكان دسترسي پيدا كنيد. بسياري از موضوعات تاريخي، علمي،‌زبانها، بهداشت،‌مهارتهاي شغلي، فرهنگ، فن آوري، هنر،‌ادبيات، تجارت، طبيعت، زندگي، تفريح را در بر دارد.</search_description>
+			<url>http://www.bbc.co.uk/learning/</url>
+			<search_url>http://www.bbc.co.uk/cgi-bin/search/results.pl?go.x=0&amp;go.y=0&amp;go=go&amp;uri=%2Flearning%2F&amp;q={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Intute: Repository Search:اینتیوت: جستجوی انباری (حجیم)</search_title>
+			<search_description>از این سرویس برای پیدا کردن توضیحات در مورد بیش از 152000 مقاله ی فعال، مقاله ی موجود در مجلات، گزارش ها، مقاله های کنفرانس، و دیگر موارد دانشگاهی استفاده کنید که در انبار
+eprints
+(پرینت های الکترونیک) انگلستان ذخیره و بایگانی شده است. نتایج جستجو به موارد اصلی یعنی جایی که توسط موسسات مبدا در دسترس قرار گرفته اند، لینک یا متصل می شوند.</search_description>
+			<url>http://irs.ukoln.ac.uk/</url>
+			<search_url>http://irs.ukoln.ac.uk/search/?view=&amp;submit.x=0&amp;submit.y=0&amp;submit=Go&amp;query={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>High Beam Research</search_title>
+			<search_description>High Beam Research
+یک تک ماشین جستجو برای همه ی موضوعات می باشد. نتایج را جستجو می کند و با ایمیل تحویل می دهد. چکیده ها و متن را تنها برای آنهایی که ثبت نام کرده اند می فرستد.
+</search_description>
+			<url>http://www.highbeam.com/library/index.asp</url>
+			<search_url>http://www.highbeam.com/Search.aspx?st=NL&amp;nml=True&amp;t=&amp;a=&amp;src=ALM&amp;src=BOOKS&amp;src=DICT&amp;src=ENCY&amp;src=MAGS&amp;src=MAPS&amp;src=NEWS&amp;src=PICS&amp;src=THES&amp;src=TRAN&amp;src=WHITEPAPER&amp;count=10&amp;offset=0&amp;sort=RK&amp;sortdir=D&amp;pst=INCLUDE_ALL&amp;cn=&amp;storage=ALL&amp;display=ALL&amp;sponsor=ALL&amp;docclass=ALL&amp;relatedid=&amp;bid=&amp;embargo=False&amp;q={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>RAND Research</search_title>
+			<search_description>بیش از 50 سال است که شرکت
+RAND
+ماموریت های بدون سود خود را با رهبری تحقیقات بر روی موضوعات پیچیده و مهم، انجام می دهد. در ابتدا
+RAND
+(این نام که از آن گرفته شده از تلفیق لغات تحقیق و توسعه گرفته شده است)
+بر روی موضوعات امنیت ملی تمرکز داشت. اما کم کم به ارائه ی دیدگاههای دیگر مباحث و موضوعات از قبیل تجارت، آموزش و پرورش، بهداشت، قانون و علم نیز پرداخت. دیدگاه مبتکرانه ی
+RAND
+به موضوع حل مسئله برای دیگران از اهمیت ویژه ای برخوردار بوده است. موضوعات داغ در 
+RAND به تحلیل آموزش و پرورش و موضوعات جهانی می پردازد.</search_description>
+			<url>http://www.rand.org/hot_topics/index.html</url>
+			<search_url>http://vivisimo.rand.org/vivisimo/cgi-bin/query-meta?input-form=simple&amp;Go=Search&amp;query={$formKeywords}</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>گزارش های رسانه ای</context_title>
+		<context_abbrev>گزارش های رسانه ای</context_abbrev>
+		<context_description>فورا جستجویی بر اساس موضوع مقاله آغاز می شود و استفاده کنندگان به مقالات موجود یا بایگانی شده در آن زمینه از روزنامه های راهنما در سر تا سر جهان مرتبط می شوند</context_description>
+		<search>
+			<search_title>Google News: اخبار گوگل</search_title>
+			<search_description>گزارش های خبری را با استفاده از ماشین جستجوی معروف اخبار گوگل (گوگل نیوز) جستجو کنید.</search_description>
+			<url>http://news.google.com/</url>
+			<search_url>http://news.google.com/news?hl=en&amp;q={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Globe and Mail</search_title>
+			<search_description>Globe and Mail:جهان و پست، تورنتو (هفت روز اخیر)</search_description>
+			<url>http://www.globeandmail.com/</url>
+			<search_url>http://www.globeandmail.com/servlet/HTMLTemplate/search?tf=tgam/search/tgam/SearchResults.html&amp;cf=tgam/search/tgam/SearchResults.cfg&amp;current_row=1&amp;start_row=1&amp;num_rows=10&amp;keywords={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>People's Daily</search_title>
+			<search_description>روزمره مردم، چین (ژانویه 1999)</search_description>
+			<url>http://english.peopledaily.com.cn/</url>
+			<search_url>http://search.people.com.cn/was40/people/GB/english_index.jsp?type=1&amp;channel=&amp;Content=&amp;searchword={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Mail &amp; Guardian Newspaper</search_title>
+			<search_description>Mail &amp; Guardian Newspaper, South Africa (1994-): میل و 
+amp;
+گاردین نیوزپیپر
+آفریقای جنوبی1994</search_description>
+			<url>http://www.mg.co.za/</url>
+			<search_url>http://www.mg.co.za/mg_search_results.aspx?PrintEdition=PrintEdition&amp;DailyNews=DailyNews&amp;SearchSection=&amp;StartDay=&amp;StartMonth=&amp;StartYear=&amp;EndDay=&amp;EndMonth=&amp;EndYear=&amp;keywords={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>National Public Radio: رادیوی ملی و عمومی</search_title>
+			<search_description>National Public Radio: رادیوی ملی و عمومی، ایالات متحده، نامحدود</search_description>
+			<url>http://www.npr.org/archives/</url>
+			<search_url>http://www.npr.org/search.php?text={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>New York Times: نیویورک تایمز</search_title>
+			<search_description>New York Times, نیویورک تایمز، نیویورک ، ایالات متحده: هفت روز اخیر</search_description>
+			<url>http://www.nytimes.com/</url>
+			<search_url>http://query.nytimes.com/search/query?date=past30days&amp;submit.x=11&amp;submit.y=12&amp;query={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>The Japan Times Online</search_title>
+			<search_description>The Japan Times Online, تایمز آنلاین ژاپن: ژاپن 1999</search_description>
+			<url>http://www.japantimes.co.jp/</url>
+			<search_url>http://www.google.co.jp/custom?domains=japantimes.co.jp&amp;client=pub-4223870936880387&amp;forid=1&amp;ie=Shift_JIS&amp;oe=Shift_JIS&amp;term1=&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3AFFFFFF%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A60%3BLW%3A200%3BL%3Ahttp%3A%2F%2Fwww.japantimes.co.jp%2Fimages%2Fheader_title.gif%3BS%3Ahttp%3A%2F%2Fwww.japantimes.co.jp%2F%3BFORID%3A1%3B&amp;hl=ja&amp;advancesearch=&amp;q={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>The Moscow Times</search_title>
+			<search_description>The Moscow Times:مسکو تایمز، روسیه 1994</search_description>
+			<url>http://www.moscowtimes.ru/doc/Search.html</url>
+			<search_url>http://www.moscowtimes.ru/cgi-bin/search?config=&amp;exclude=&amp;method=and&amp;format=long&amp;sort=score&amp;matchesperpage=10&amp;words={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Washington Post</search_title>
+			<search_description>Washington Post, واشنگتن پست، واشنگتن،دی سی ( دو هفته اخیر)</search_description>
+			<url>http://www.washingtonpost.com/</url>
+			<search_url>http://www.washingtonpost.com/cgi-bin/search99.pl?searchsection=news&amp;searchdatabase=news&amp;x=11&amp;y=8&amp;searchtext={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Newsdirectory</search_title>
+			<search_description>نیوز دیرکتری (راهنمای خبری) یک راهنمای جامع و قابل جستجو برای رسانه های جهانی آنلاین و انگلیسی زبان است.در حال حاضر بیش از 8000 روزنامه، مجله و بیش از 1000 گوینده تلویزیونی آمریکایی فهرست شده اند</search_description>
+			<url>http://www.newsdirectory.com/</url>
+			<search_url>http://www.newsdirectory.com/hbSearch.php</search_url>
+			<search_post>s={$formKeywords}&amp; submit=Go</search_post>
+		</search>
+	</context>
+	<context>
+		<context_title>جستجوی شبکه ای</context_title>
+		<context_abbrev>جستجوی شبکه ای</context_abbrev>
+		<context_description>یک واژه ی جستجو را برای منابع اینترنت وارد کن تا از طریق ماشین های جستجو به نتیجه برسید</context_description>
+		<search>
+			<search_title>گوگل</search_title>
+			<search_description>با استفاده از ماشین های معرف چاوشگر گوگل جستجو کنید.</search_description>
+			<url>http://www.google.com/</url>
+			<search_url>http://www.google.com/search?q={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>گوگل اسکولار</search_title>
+			<search_description>گوگل اسکولار امکان جستجو های خاص را د ر زمینه ادبیات پژوهشی شامل  مقالات کارشناسی شده ، پایان نامه ها، کتب،،پیش پرینت ها، چکیده ها و گزارش های فنی فراهم می سازد.محتوای این حیطه شامل تعدادی از ناشران و تدوین کنند گان است که گوگل توسط آنها نسازمان یافته است.برای مثال انجمن محاسبه ی ماشین ها، 
+IEEE،
+سرویس جایگزین کتابخانه جهانی با دسترسی آزاد  و ... .نتیایج مشخص شده ورژن های متفاوتی از شاخه ها، تحلیل گفته ها و مکان کتابخانه را (فقط کتاب های موجود) را نشان می دهد</search_description>
+			<url>http://scholar.google.com</url>
+			<search_url>http://scholar.google.com/scholar?ie=UTF-8&amp;oe=UTF-8&amp;hl=en&amp;q={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Clusty the Clustering Engine</search_title>
+			<search_description>این ابزار جستجو از ویویزمو نتایج تصادفی را از بین جستجوهای انتخاب شده ارائه می دهد. با متا سرچ کل شبکه را جستجو کنید یا با استفاده از عناوین، اخبار، شایعات، تصاویر یا تولیدات را از
+Bizrate
+یا
+eBoy 
+جستجو کنید.</search_description>
+			<url>http://clusty.com/about</url>
+			<search_url>http://clusty.com/search?query={$formKeywords}</search_url>
+		</search>
+		<search>
+			<search_title>Vivisimo</search_title>
+			<search_description>تکنولوژی تصادفی و جایزه بر ویویزمو که توسط دانشمندان واحد جستجوی کارنج میلون توسعه یافته در حال باز کردن ارزش اطلاعات ذخیره شده در 500 شرکت، وب سایتهای عالی، ناشران معتبر و آژانس های دولتی با دسته بندی کردن نتایج جستجو برای سفارشات معنی دار است،تا به پیشرفتی در زمینه شکافتن اطلاعات و دستیابی به اطلاعات مربوطه برسد.</search_description>
+			<url>http://vivisimo.com</url>
+			<search_url>http://vivisimo.com/search?tb=homepage&amp;v%3Asources=Web&amp;query={$formKeywords}</search_url>
+		</search>
+	</context>
+</version>
