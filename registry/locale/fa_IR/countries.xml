@@ -1,0 +1,262 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!--
+  * countries.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * تحت مجوزGNU GPL v2 منتشرشد. برای دیدن متن کامل فایل docs/COPYING را ببینید.
+  *
+  * لیست بومی کشورها.
+  *
+  * $Id$
+  -->
+
+<!DOCTYPE countries [
+	<!ELEMENT countries (country+)>
+	<!ELEMENT country EMPTY>
+		<!ATTLIST country
+			code CDATA #REQUIRED
+			name CDATA #REQUIRED>
+]>
+	
+<countries>
+	<country code="AX" name="جزایر آلند" />
+	<country code="AF" name="افغانستان" />
+	<country code="AL" name="آلبانی" />
+	<country code="DZ" name="الجزیره" />
+	<country code="AS" name="ساموا آمریکا" />
+	<country code="AD" name="آندورا" />
+	<country code="AO" name="آنگولا" />
+	<country code="AI" name="آنگویلا" />
+	<country code="AQ" name="جنوبگان" />
+	<country code="AG" name="آنتیگوا و باربودا" />
+	<country code="AR" name="آرژانتین" />
+	<country code="AM" name="ارمنستان" />
+	<country code="AW" name="آروبا" />
+	<country code="AU" name="استرالیا" />
+	<country code="AT" name="اطریش" />
+	<country code="AZ" name="آذربایجان" />
+	<country code="BS" name="باهاما" />
+	<country code="BH" name="بحرین" />
+	<country code="BD" name="بنگلادش" />
+	<country code="BB" name="باربادوس" />
+	<country code="BY" name="بلاروس" />
+	<country code="BE" name="بلژیک" />
+	<country code="BZ" name="بلیز" />
+	<country code="BJ" name="بنین" />
+	<country code="BM" name="برمودا" />
+	<country code="BT" name="بوتان" />
+	<country code="BO" name="بولیوی" />
+	<country code="BA" name="بوسنی و هرزگوین" />
+	<country code="BW" name="بوتسوانا" />
+	<country code="BV" name="جزایر بوت" />
+	<country code="BR" name="برزیل" />
+	<country code="IO" name="ناحیه اقیانوس آرام هند بریتانیاپی" />
+	<country code="BN" name="داروسلام برونیی" />
+	<country code="BG" name="بلغارستان" />
+	<country code="BF" name="بورکینافاسو" />
+	<country code="BI" name="بوروندی" />
+	<country code="KH" name="کامبوج" />
+	<country code="CM" name="کامرون" />
+	<country code="CA" name="کانادا" />
+	<country code="CV" name="کیپ ورذ" />
+	<country code="KY" name="جزایر کایمان" />
+	<country code="CF" name="جمهوری مرکزی آفریقا" />
+	<country code="TD" name="چاد" />
+	<country code="CL" name="شیلی" />
+	<country code="CN" name="چین" />
+	<country code="CX" name="جزایر کریسمس" />
+	<country code="CC" name="جزایر کاکاءو" />
+	<country code="CO" name="کلمبیا" />
+	<country code="KM" name="کومورس" />
+	<country code="CG" name="کونگو" />
+	<country code="CD" name="جمهوری خلق کونگو" />
+	<country code="CK" name="جزایر کوک" />
+	<country code="CR" name="کاستاریکا" />
+	<country code="CI" name="کوتد لاواریه" />
+	<country code="HR" name="کرواسی" />
+	<country code="CU" name="کوبا" />
+	<country code="CY" name="قبرس" />
+	<country code="CZ" name="جمهوری چک" />
+	<country code="DK" name="دانمارک" />
+	<country code="DJ" name="جی بوتی" />
+	<country code="DM" name="دومنیکن" />
+	<country code="DO" name="جمهوری دومنیکن" />
+	<country code="EC" name="اکوادور" />
+	<country code="EG" name="مصر" />
+	<country code="SV" name="السالوادور" />
+	<country code="GQ" name="گینه نو" />
+	<country code="ER" name="اریتره" />
+	<country code="EE" name="استونی" />
+	<country code="ET" name="اتیوپی" />
+	<country code="FK" name="جزایر فالک لند" />
+	<country code="FO" name="جزایر فاره" />
+	<country code="FJ" name="فوجی" />
+	<country code="FI" name="فند لاند" />
+	<country code="FR" name="فرانسه" />
+	<country code="GF" name="گینه فرانسه" />
+	<country code="PF" name="پلی نزی فرانسه" />
+	<country code="TF" name="ناهیه جنوبی فرانسه" />
+	<country code="GA" name="گابون" />
+	<country code="GM" name="گامبیا" />
+	<country code="GE" name="جورجیا" />
+	<country code="DE" name="آلمان" />
+	<country code="GH" name="قنا" />
+	<country code="GI" name="جبل ال عطار" />
+	<country code="GR" name="یونان" />
+	<country code="GL" name="گرین لند" />
+	<country code="GD" name="گرانادا" />
+	<country code="GP" name="گادلوپ" />
+	<country code="GU" name="گوام" />
+	<country code="GT" name="گواتمالا" />
+	<country code="GN" name="گینه" />
+	<country code="GW" name="گینه بیساو" />
+	<country code="GY" name="گویان" />
+	<country code="HT" name="هاییتی" />
+	<country code="HM" name="جزایر هرت و مکدونالد" />
+	<country code="VA" name="واتیکان" />
+	<country code="HN" name="هاندوراس" />
+	<country code="HK" name="هنگ کنگ" />
+	<country code="HU" name="مجارستان" />
+	<country code="IS" name="ایسلند" />
+	<country code="IN" name="هند" />
+	<country code="ID" name="اندونزی" />
+	<country code="IR" name="ایران" />
+	<country code="IQ" name="عراق" />
+	<country code="IE" name="ایرلند" />
+	<country code="IT" name="ایتالیا" />
+	<country code="IL" name="اسرائیل" />
+	<country code="JM" name="جاماییکا" />
+	<country code="JP" name="ژاپن" />
+	<country code="JO" name="امان" />
+	<country code="KZ" name="قزاقستان" />
+	<country code="KE" name="کنیا" />
+	<country code="KI" name="کریباتی" />
+	<country code="KP" name="جمهوری دمکراتیک خلق کره" />
+	<country code="KW" name="کویت" />
+	<country code="KR" name="جمهوری کره" />
+	<country code="KG" name="قرقیزستان" />
+	<country code="LA" name="جمهوری خلق لائوس" />
+	<country code="LV" name="لاتویا" />
+	<country code="LB" name="لبنان" />
+	<country code="LS" name="لسوتو" />
+	<country code="LR" name="لیبری" />
+	<country code="LY" name="لیبی" />
+	<country code="LI" name="لیختن اشتاین" />
+	<country code="LT" name="لیتوانی" />
+	<country code="LU" name="لوکسامبورگ" />
+	<country code="MO" name="ماکائو" />
+	<country code="MK" name="مقدونیه ـ جمهوری یوگوسلاوی سابق" />
+	<country code="MG" name="ماداگاسکار" />
+	<country code="MW" name="مالاوی" />
+	<country code="MY" name="مالزی" />
+	<country code="MV" name="مالدیو" />
+	<country code="ML" name="مالی" />
+	<country code="MT" name="مالت" />
+	<country code="MH" name="جزایر مارشال" />
+	<country code="MQ" name="مارتینیک" />
+	<country code="MR" name="موریتانی" />
+	<country code="MU" name="ماریتیووس" />
+	<country code="YT" name="مایوت" />
+	<country code="MX" name="مکزیک" />
+	<country code="FM" name="ایالات متحده میکرونزی" />
+	<country code="MD" name="جمهوری مالدیو" />
+	<country code="MC" name="موناکو" />
+	<country code="MN" name="مغولستان" />
+	<country code="MS" name="مونتسرا" />
+	<country code="MA" name="موروکو" />
+	<country code="MZ" name="موزامبیک" />
+	<country code="MM" name="میانمار" />
+	<country code="NA" name="نامیبیا" />
+	<country code="NR" name="نارو" />
+	<country code="NP" name="نپال" />
+	<country code="NL" name="هلند" />
+	<country code="AN" name="آنتیل هلند" />
+	<country code="NC" name="کالدونی جدید" />
+	<country code="NZ" name="نیوزلند" />
+	<country code="NE" name="نیجریه" />
+	<country code="NI" name="نیکاراگوء" />
+	<country code="NG" name="نیجریه" />
+	<country code="NU" name="نئو" />
+	<country code="NF" name="جزایر نورفالک" />
+	<country code="MP" name="جزایر ماریانای شمالی" />
+	<country code="NO" name="نروژ" />
+	<country code="OM" name="عمان" />
+	<country code="PK" name="پاکستان" />
+	<country code="PW" name="پالائو" />
+	<country code="PS" name="سرزمین فلستین" />
+	<country code="PA" name="پاناما" />
+	<country code="PG" name="پاپائو - گینه نو" />
+	<country code="PY" name="پاراگوء" />
+	<country code="PE" name="پرو" />
+	<country code="PH" name="فیلیپین" />
+	<country code="PN" name="پیتکایرن" />
+	<country code="PL" name="لهستان" />
+	<country code="PT" name="پرتقال" />
+	<country code="PR" name="پرتوریکو" />
+	<country code="QA" name="قطر" />
+	<country code="RE" name="ریونیون" />
+	<country code="RO" name="رمانی" />
+	<country code="RU" name="فدراسیون روسیه" />
+	<country code="RW" name="رواندا" />
+	<country code="SH" name="سنت هلن" />
+	<country code="KN" name="سنت کیدس و نویس" />
+	<country code="LC" name="سنت لوسی" />
+	<country code="PM" name="سنت پیر و میگوئل" />
+	<country code="VC" name="سنت ونسان وگرنادیدها" />
+	<country code="WS" name="ساموا" />
+	<country code="SM" name="سان مارینو" />
+	<country code="ST" name="ساواتوم" />
+	<country code="SA" name="عربستان سعودی" />
+	<country code="SN" name="سنگال" />
+	<country code="CS" name="سربستان مونتنگرو" />
+	<country code="SC" name="سیچلییس" />
+	<country code="SL" name="سیرا لئون" />
+	<country code="SG" name="سنگاپور" />
+	<country code="SK" name="اسلوواکی" />
+	<country code="SI" name="اسلوانی" />
+	<country code="SB" name="جزایر سالامون" />
+	<country code="SO" name="سومالی" />
+	<country code="ZA" name="افریقای شمالی" />
+	<country code="GS" name="جزایر جنوبی جورجیا وجزایر ساندویچ جنوبی" />
+	<country code="ES" name="اسپانیا" />
+	<country code="LK" name="سریلانکا" />
+	<country code="SD" name="سودان" />
+	<country code="SR" name="سوری نام" />
+	<country code="SJ" name="اسوالبور و جان ماریان" />
+	<country code="SZ" name="سوییزلند" />
+	<country code="SE" name="سوئد" />
+	<country code="CH" name="سوییس" />
+	<country code="SY" name="جمهوری عربی سوریه" />
+	<country code="TW" name="تایوان" />
+	<country code="TJ" name="تاجیکستان" />
+	<country code="TZ" name="جمهوری خلق تانزانیا" />
+	<country code="TH" name="تایلند" />
+	<country code="TL" name="تیمور گرمسیر" />
+	<country code="TG" name="تووگو" />
+	<country code="TK" name="توکلائو" />
+	<country code="TO" name="تانگا" />
+	<country code="TT" name="ترینیداد و توباگو" />
+	<country code="TN" name="توونس" />
+	<country code="TR" name="ترکیه" />
+	<country code="TM" name="ترکمنستان" />
+	<country code="TC" name="جزایر ترکی کایکو" />
+	<country code="TV" name="تووالوو" />
+	<country code="UG" name="اوگاندا" />
+	<country code="UA" name="اکراین" />
+	<country code="AE" name="جمهوری عربی امارات" />
+	<country code="GB" name="انگلیس" />
+	<country code="US" name="امریکا" />
+	<country code="UM" name="جزایر کوچک امریکایی" />
+	<country code="UY" name="اوروگوئه" />
+	<country code="UZ" name="ازبکستان" />
+	<country code="VU" name="وانواتوو" />
+	<country code="VE" name="ونزوئلا" />
+	<country code="VG" name="دیار بکر بریتانیا" />
+	<country code="VN" name="ویتنام" />
+	<country code="VI" name="دیار بکر" />
+	<country code="WF" name="والیز و فوتونا" />
+	<country code="EH" name="صحرای غربی" />
+	<country code="YE" name="یمن" />
+	<country code="ZM" name="زامبیا" />
+	<country code="ZW" name="زیمباوه" />
+</countries>

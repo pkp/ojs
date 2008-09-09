@@ -1,0 +1,194 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!--
+  * currencies.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+ * تحت مجوزGNU GPL v2 منتشرشد. برای دیدن متن کامل فایل docs/COPYING را ببینید.
+  *
+  * داده های XML واحدهای پول بر اساس ISO 4217.
+  *
+  * $Id$
+  -->
+
+<!DOCTYPE currencies [
+	<!ELEMENT currencies (currency+)>
+		<!ATTLIST currencies
+			locale CDATA #REQUIRED>
+	<!ELEMENT currency EMPTY>
+		<!ATTLIST currency
+			code_alpha CDATA #REQUIRED
+			code_numeric CDATA #REQUIRED
+			name CDATA #REQUIRED>
+]>
+
+<currencies locale="fa_IR" >
+	<currency name="افغانی" code_numeric="971" code_alpha="AFN" />
+	<currency name="دینار الجزیره" code_numeric="12" code_alpha="DZD" />
+	<currency name="پسکو آرژانتین" code_numeric="32" code_alpha="ARS" />
+	<currency name="درم ارمنستان" code_numeric="51" code_alpha="AMD" />
+	<currency name="گیلدر آروبان" code_numeric="533" code_alpha="AWG" />
+	<currency name="دلار استرالیا" code_numeric="36" code_alpha="AUD" />
+	<currency name="منات آذربایجان" code_numeric="31" code_alpha="AZM" />
+	<currency name="دلار باهاما" code_numeric="44" code_alpha="BSD" />
+	<currency name="دینار بهرین" code_numeric="48" code_alpha="BHD" />
+	<currency name="بهت" code_numeric="764" code_alpha="THB" />
+	<currency name="بالبوا" code_numeric="590" code_alpha="PAB" />
+	<currency name="دلار باربادوس" code_numeric="52" code_alpha="BBD" />
+	<currency name="روبل بلاروس" code_numeric="974" code_alpha="BYR" />
+	<currency name="دلار بلیز" code_numeric="84" code_alpha="BZD" />
+	<currency name="دلار برمودا" code_numeric="" code_alpha="BMD" />
+	<currency name="بلیوار" code_numeric="862" code_alpha="VEB" />
+	<currency name="بلیویانو" code_numeric="68" code_alpha="BOB" />
+	<currency name="رئال برزیل" code_numeric="986" code_alpha="BRL" />
+	<currency name="دلار برونی" code_numeric="96" code_alpha="BND" />
+	<currency name="لو بلغارستان" code_numeric="975" code_alpha="BGN" />
+	<currency name="فرانک برندی" code_numeric="108" code_alpha="BIF" />
+	<currency name="دلار کانادا" code_numeric="124" code_alpha="CAD" />
+	<currency name="کیپ ورده اسکدو" code_numeric="132" code_alpha="CVE" />
+	<currency name="دلار جزایر کایمن" code_numeric="136" code_alpha="KYD" />
+	<currency name="سدی" code_numeric="288" code_alpha="GHC" />
+	<currency name="CFA Franc BCEAO" code_numeric="952" code_alpha="XOF" />
+	<currency name="CFA Franc BEAC" code_numeric="950" code_alpha="XAF" />
+	<currency name="فرانک CFP" code_numeric="953" code_alpha="XAF" />
+	<currency name="پسوی شیلی" code_numeric="152" code_alpha="CLP" />
+	<currency name="پسوی کلمبیا" code_numeric="170" code_alpha="COP" />
+	<currency name="فرانک کومورو" code_numeric="174" code_alpha="KMF" />
+	<currency name="مارک کامورتیبل" code_numeric="977" code_alpha="BAM" />
+	<currency name="اروی کودوبا" code_numeric="558" code_alpha="NIO" />
+	<currency name="کلن کستا ریکن" code_numeric="188" code_alpha="CRC" />
+	<currency name="کنا کروتین" code_numeric="191" code_alpha="HRK" />
+	<currency name="پسوی کوبا" code_numeric="192" code_alpha="CUP" />
+	<currency name="پوند سیپروس" code_numeric="196" code_alpha="CYP" />
+	<currency name="کرونای چک" code_numeric="203" code_alpha="CZK" />
+	<currency name="دالاسی" code_numeric="270" code_alpha="GMD" />
+	<currency name="کرون دانیش" code_numeric="208" code_alpha="DKK" />
+	<currency name="دینار" code_numeric="807" code_alpha="MKD" />
+	<currency name="فرانک دجبوتی" code_numeric="262" code_alpha="DJF" />
+	<currency name="دوبرا" code_numeric="678" code_alpha="STD" />
+	<currency name="پسوی دومینیکان" code_numeric="214" code_alpha="DOP" />
+	<currency name="دنگ" code_numeric="704" code_alpha="VND" />
+	<currency name="دلار کاریبین شرقی" code_numeric="951" code_alpha="XCD" />
+	<currency name="پند اگیبت" code_numeric="818" code_alpha="EGP" />
+	<currency name="کلن السالوادور" code_numeric="222" code_alpha="SVC" />
+	<currency name="بیر اتیوپی" code_numeric="230" code_alpha="ETB" />
+	<currency name="یورو" code_numeric="978" code_alpha="EUR" />
+	<currency name="پند جزایر فالکلند" code_numeric="238" code_alpha="FKP" />
+	<currency name="دلار فیجی" code_numeric="242" code_alpha="FJD" />
+	<currency name="فورینت" code_numeric="348" code_alpha="HUF" />
+	<currency name="فرانک کونگلایس" code_numeric="976" code_alpha="CDF" />
+	<currency name="وند گیبرالتر" code_numeric="292" code_alpha="GIP" />
+	<currency name="گرده" code_numeric="332" code_alpha="HTG" />
+	<currency name="گورانی" code_numeric="600" code_alpha="PYG" />
+	<currency name="فرانک گینه" code_numeric="324" code_alpha="GNF" />
+	<currency name="پسوی گینه ی نو" code_numeric="624" code_alpha="GWP" />
+	<currency name="دلار گویانا" code_numeric="328" code_alpha="GYD" />
+	<currency name="دلار هنگ کنگ" code_numeric="344" code_alpha="HKD" />
+	<currency name="هریونیا" code_numeric="980" code_alpha="UAH" />
+	<currency name="کرونای ایسلند" code_numeric="352" code_alpha="ISK" />
+	<currency name="روپیه ی هند" code_numeric="356" code_alpha="INR" />
+	<currency name="ریال ایران" code_numeric="364" code_alpha="IRR" />
+	<currency name="دینار عراق" code_numeric="368" code_alpha="IQD" />
+	<currency name="دلار جامائیکا" code_numeric="388" code_alpha="JMD" />
+	<currency name="دینار جردن" code_numeric="400" code_alpha="JOD" />
+	<currency name="شیلینگ کنیان" code_numeric="404" code_alpha="KES" />
+	<currency name="کینا" code_numeric="598" code_alpha="PGK" />
+	<currency name="کیپ" code_numeric="418" code_alpha="LAK" />
+	<currency name="کرون" code_numeric="233" code_alpha="EEK" />
+	<currency name="دینار کویت" code_numeric="414" code_alpha="KWD" />
+	<currency name="کواچا" code_numeric="454" code_alpha="MWK" />
+	<currency name="وانزا" code_numeric="973" code_alpha="AOA" />
+	<currency name="کیات" code_numeric="104" code_alpha="MMK" />
+	<currency name="لاری" code_numeric="981" code_alpha="GEL" />
+	<currency name="لاتوین لتس" code_numeric="428" code_alpha="LVL" />
+	<currency name="پند لبان" code_numeric="422" code_alpha="LBP" />
+	<currency name="لک" code_numeric="8" code_alpha="ALL" />
+	<currency name="لمپیرا" code_numeric="340" code_alpha="HNL" />
+	<currency name="لئون" code_numeric="694" code_alpha="SLL" />
+	<currency name="لئو" code_numeric="642" code_alpha="ROL" />
+	<currency name="دلار لایبری" code_numeric="430" code_alpha="LRD" />
+	<currency name="دینارلیبی" code_numeric="434" code_alpha="LYD" />
+	<currency name="لیلانگنی" code_numeric="748" code_alpha="SZL" />
+	<currency name="لیتونین لیتاس" code_numeric="440" code_alpha="LTL" />
+	<currency name="لتی" code_numeric="426" code_alpha="LSL" />
+	<currency name="اریاری مالاگاسی" code_numeric="969" code_alpha="MGA" />
+	<currency name="فرانک مالاگاسی" code_numeric="450" code_alpha="MGF" />
+	<currency name="رینگیت مالزی" code_numeric="458" code_alpha="MYR" />
+	<currency name="لیره ی مالتس" code_numeric="470" code_alpha="MTL" />
+	<currency name="منات" code_numeric="795" code_alpha="TMM" />
+	<currency name="روپیه ی ماریتیوس" code_numeric="480" code_alpha="MUR" />
+	<currency name="مریکال" code_numeric="508" code_alpha="MZM" />
+	<currency name="پسوی مکزیک" code_numeric="484" code_alpha="MXN" />
+	<currency name="یونیداد د اینورژن مکزیک" code_numeric="979" code_alpha="MXV" />
+	<currency name="لئوی مولدو" code_numeric="498" code_alpha="MDL" />
+	<currency name="درهم موروکان" code_numeric="504" code_alpha="MAD" />
+	<currency name="مودول" code_numeric="984" code_alpha="BOV" />
+	<currency name="نایرا" code_numeric="566" code_alpha="NGN" />
+	<currency name="ناکفا" code_numeric="232" code_alpha="ERN" />
+	<currency name="دلار نامیبی" code_numeric="516" code_alpha="NAD" />
+	<currency name="روبیه ی نپال" code_numeric="524" code_alpha="NPR" />
+	<currency name="هلند انتیان گیکدر" code_numeric="532" code_alpha="ANG" />
+	<currency name="شقل اسرائیل" code_numeric="376" code_alpha="ILS" />
+	<currency name="دلار تایوان" code_numeric="901" code_alpha="TWD" />
+	<currency name="لیره ی جدید ترکیه" code_numeric="949" code_alpha="TRY" />
+	<currency name="دلار زلاند نو" code_numeric="554" code_alpha="NZD" />
+	<currency name="نگولتروم" code_numeric="64" code_alpha="BTN" />
+	<currency name="ون کره ی شمالی" code_numeric="408" code_alpha="KPW" />
+	<currency name="کرون نروژ" code_numeric="578" code_alpha="NOK" />
+	<currency name="نیوو سل" code_numeric="604" code_alpha="PEN" />
+	<currency name="لیره ی قدیمیه ترکیه" code_numeric="792" code_alpha="TRL" />
+	<currency name="اگویا" code_numeric="478" code_alpha="MRO" />
+	<currency name="پانگا" code_numeric="776" code_alpha="TOP" />
+	<currency name="روپیه ی پاکستان" code_numeric="586" code_alpha="PKR" />
+	<currency name="پاتاکا" code_numeric="446" code_alpha="MOP" />
+	<currency name="پسوی اروگوئه" code_numeric="858" code_alpha="UYU" />
+	<currency name="پسوی فیلیپین" code_numeric="608" code_alpha="PHP" />
+	<currency name="پند استرلینگ" code_numeric="826" code_alpha="GBP" />
+	<currency name="پولا" code_numeric="72" code_alpha="BWP" />
+	<currency name="ریال قطر" code_numeric="634" code_alpha="QAR" />
+	<currency name="کتزال" code_numeric="320" code_alpha="GTQ" />
+	<currency name="راند" code_numeric="710" code_alpha="ZAR" />
+	<currency name="ریال امانی" code_numeric="512" code_alpha="OMR" />
+	<currency name="ریل" code_numeric="116" code_alpha="KHR" />
+	<currency name="روفیه" code_numeric="462" code_alpha="MVR" />
+	<currency name="روپیا" code_numeric="360" code_alpha="IDR" />
+	<currency name="ربل روسیه" code_numeric="643" code_alpha="RUB" />
+	<currency name="فرانک راواندا" code_numeric="646" code_alpha="RWF" />
+	<currency name="پند سیانت هلنا" code_numeric="654" code_alpha="SHP" />
+	<currency name="ریال سعودی" code_numeric="682" code_alpha="SAR" />
+	<currency name="دینار صربها" code_numeric="891" code_alpha="CSD" />
+	<currency name="روپیه ی سیچل" code_numeric="690" code_alpha="SCR" />
+	<currency name="دلار سنگاپور" code_numeric="702" code_alpha="SGD" />
+	<currency name="کورونای اسلواکی" code_numeric="703" code_alpha="SKK" />
+	<currency name="دلار جزایر سولونا" code_numeric="90" code_alpha="SBD" />
+	<currency name="سام" code_numeric="417" code_alpha="KGS" />
+	<currency name="شیلینگ سومالی" code_numeric="706" code_alpha="SOS" />
+	<currency name="سمانی" code_numeric="972" code_alpha="TJS" />
+	<currency name="روپیه ی سریلانکا" code_numeric="144" code_alpha="LKR" />
+	<currency name="دینار سودان" code_numeric="736" code_alpha="SDD" />
+	<currency name="دلار سورینام" code_numeric="968" code_alpha="SRD" />
+	<currency name="کرونای سوئد" code_numeric="752" code_alpha="SEK" />
+	<currency name="فرانک سویس" code_numeric="756" code_alpha="CHF" />
+	<currency name="پند سیریان" code_numeric="760" code_alpha="SYP" />
+	<currency name="تاکا" code_numeric="50" code_alpha="BDT" />
+	<currency name="تالا" code_numeric="882" code_alpha="WST" />
+	<currency name="شیلینگ تانزانیا" code_numeric="834" code_alpha="TZS" />
+	<currency name="تنگ" code_numeric="398" code_alpha="KZT" />
+	<currency name="تلار" code_numeric="705" code_alpha="SIT" />
+	<currency name="دلار ترینیداد و توباگو" code_numeric="780" code_alpha="TTD" />
+	<currency name="تاگریک" code_numeric="496" code_alpha="MNT" />
+	<currency name="دینار تونس" code_numeric="788" code_alpha="TND" />
+	<currency name="دینار UAE" code_numeric="784" code_alpha="AED" />
+	<currency name="شیلینگ یوگاندا" code_numeric="800" code_alpha="UGX" />
+	<currency name="رئال یونیدد د والور" code_numeric="970" code_alpha="COU" />
+	<currency name="یونیدیدز د فور لانکو" code_numeric="990" code_alpha="CLF" />
+	<currency name="دلار امریکا" code_numeric="840" code_alpha="USD" />
+	<currency name="سام ازبکستان" code_numeric="860" code_alpha="UZS" />
+	<currency name="واتو" code_numeric="548" code_alpha="VUV" />
+	<currency name="یورو ویر" code_numeric="947" code_alpha="CHE" />
+	<currency name="فرانک ویر" code_numeric="948" code_alpha="CHW" />
+	<currency name="ون" code_numeric="410" code_alpha="KRW" />
+	<currency name="ریال یمن" code_numeric="886" code_alpha="YER" />
+	<currency name="ین" code_numeric="392" code_alpha="JPY" />
+	<currency name="یوان رنمیمبی" code_numeric="156" code_alpha="CNY" />
+	<currency name="دلار زیمبابو" code_numeric="716" code_alpha="ZWD" />
+</currencies>
