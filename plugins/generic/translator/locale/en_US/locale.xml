@@ -20,6 +20,7 @@
 
 	<message key="plugins.generic.translator.localeName">Locale Name</message>
 	<message key="plugins.generic.translator.localeKey">Key</message>
+	<message key="plugins.generic.translator.localeKey.description">Enter an entire locale key to search for.</message>
 	<message key="plugins.generic.translator.localeKeyValue">Value</message>
 	<message key="plugins.generic.translator.translate">Translate</message>
 	<message key="plugins.generic.translator.availableLocales">Available Locales</message>

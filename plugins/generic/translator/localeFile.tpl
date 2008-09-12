@@ -22,7 +22,7 @@
 <form name="localeSearch" action="{url op="editLocaleFile" path=$locale|to_array:$filenameEscaped anchor="localeContents"}" method="post">
 	{translate key="plugins.generic.translator.localeKey"}&nbsp;&nbsp;
 	<input type="text" name="searchKey" class="textField" />&nbsp;&nbsp;
-	<input type="submit" class="button defaultButton" onclick="document.locale.redirectUrl.value=document.localeSearch.action);document.locale.submit();return false;" value="{translate key="common.search"}" />
+	<input type="submit" class="button defaultButton" onclick="document.locale.redirectUrl.value=document.localeSearch.action);document.locale.submit();return false;" value="{translate key="common.search"}" /> {translate key="plugins.generic.translator.localeKey.description"}
 </form>
 
 <form name="locale" action="{url op="saveLocaleFile" path=$locale|to_array:$filenameEscaped}" method="post">
