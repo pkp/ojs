@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+<!DOCTYPE locale SYSTEM "../locale.dtd">
 
 <!--
   * locale.xml
@@ -755,27 +755,6 @@ Lưu ý là có thể vô hiệu giao diện tìm kiếm OAI trên website này 
 	<message key="manager.statistics.statistics.note">Lưu ý: Tỷ lệ phần trăm bài nộp được phản biện chuyên gia có thể không đạt tới 100% vì bài viết nộp cho tạp chí hoặc sẽ được chấp nhận, từ chối hoặc đang còn xử lý.</message>
 
 	<message key="manager.statistics.reports">Tạo báo cáo</message>
-	<message key="manager.statistics.reports.dateFrom">Từ</message>
-	<message key="manager.statistics.reports.dateTo">Đến</message>
-	<message key="manager.statistics.reports.reportType">Loại báo cáo</message>
-	<message key="manager.statistics.reports.type.journal">Báo cáo Tạp chí</message>
-	<message key="manager.statistics.reports.type.editor">Báo cáo BTV</message>
-	<message key="manager.statistics.reports.type.reviewer">Báo cáo Người phản biện</message>
-	<message key="manager.statistics.reports.type.section">Báo cáo Chuyên mục</message>
-	<message key="manager.statistics.reports.generate">Tạo báo cáo</message>
-	<message key="manager.statistics.reports.status">Trạng thái (Chấp nhận, từ chối, khác)</message>
-	<message key="manager.statistics.reports.dateDecided">Ngày từ chối</message>
-	<message key="manager.statistics.reports.author">Tác giả #{$num}</message>
-	<message key="manager.statistics.reports.affiliation">Cơ quan #{$num}</message>
-	<message key="manager.statistics.reports.country">Quốc gia #{$num}</message>
-	<message key="manager.statistics.reports.reviewer">Người phản biện #{$num}</message>
-	<message key="manager.statistics.reports.editor">BTV #{$num}</message>
-	<message key="manager.statistics.reports.score">Điểm #{$num}</message>
-	<message key="manager.statistics.reports.singleScore">Điểm</message>
-	<message key="manager.statistics.reports.recommendation">Khuyến nghị #{$num}</message>
-	<message key="manager.statistics.reports.daysToDecision">Số ngày ra quyết định</message>
-	<message key="manager.statistics.reports.daysToPublication">Số ngày xuất bản</message>
-
 	<!-- Plugin Management -->
 	<message key="manager.plugins.pluginManagement">Quản lý công cụ hỗ trợ</message>
 	<message key="manager.plugins.sitePlugin">Đây là công cụ hỗ trợ website. Chỉ Người quản trị mới có quyền quản lý công cụ này.</message>
@@ -1113,8 +1092,6 @@ Lựa chọn một mô hình để xử lý những khía cạnh này của quá
 	<message key="manager.sections.policy">Chính sách của Chuyên mục</message>
 	<message key="manager.sections.identifyType">Để dễ dàng mô tả, xác định mọi bài viết trong chuyện mục này là</message>
 	<message key="manager.sections.identifyTypeExamples">(Ví dụ, "Bài viết có phản biện chuyên gia", "Bài viết không phản biện", "Bài viết đặt hàng", v.v...)</message>
-	<message key="manager.sections.abstractsDisabled">Không cần tóm tắt</message>
-
 	<!-- Import/Export -->
 	<message key="manager.importExport">Nhập/Xuất Dữ liệu</message>
 
@@ -2239,7 +2216,6 @@ Máy chủ của quý vị hiện có hỗ trợ mbstring: <strong>{$supportsMBS
 
 	<message key="rt.admin.readingToolsEnabled">Công cụ đọc</message>
 	<message key="rt.admin.selectedVersion">Các mục liên quan</message>
-	<message key="rt.admin.rtEnable">Để kích hoạt các Công cụ đọc, vào mục Các lựa chọn Công cụ đọc.</message>
 	<message key="rt.admin.settings.description">Các công cụ đọc xuất hiện ở khung bên cạnh các bài viết đã được xuất bản trong các chuyên mục của tạp chí được gắn công cụ. Các công cụ đọc bao gồm một tập hợp các công cụ liên quan đến các bài đã xuất bản, được liệt kê sau đây, và một tập hợp công cụ cho phép truy cập các bài viết liên quan, được sắp xếp theo lĩnh vực hoặc ngành.</message>
 	<message key="rt.admin.settings.enableReadingTools">Kích hoạt các Công cụ đọc cho các chuyên mục của tạp chí được chỉ định.</message>
 	<message key="rt.admin.settings.abstract">Tóm tắt (hiển thị tóm tắt của bài viết).</message>
@@ -2576,7 +2552,6 @@ Sau khi kết thúc hiệu đính, đổi tên file từ AuthorNameQA.doc thành
 	<message key="manager.payment.options.publicationFee">Đăng bài</message>
 	<message key="manager.payment.options.fastTrackFee">Duyệt nhanh</message>
 	<message key="manager.payment.options.membershipFee">Hội viên</message>
-	<message key="manager.payment.options.payPerViewFee">Trả theo Lượt xem</message>
 	<message key="manager.payment.options.waiverPolicy">Chính sách Miễn giảm</message>
 	<message key="manager.payment.options.onlypdf">Chỉ giới hạn truy cập vào file PDF của bài viết</message>
 	<message key="manager.payment.options.donationFee">Tài trợ cho tạp chí</message>
@@ -2709,7 +2684,7 @@ Authors who publish with this journal agree to the following terms:
 	<message key="manager.reviewForms.confirmDeletePublished">Khẳng định việc xóa một mẫu phiếu phản biện đã công bố.</message>
 	<message key="manager.reviewForms.confirmDeleteUnpublished">Khẳng định việc xóa một mẫu phiếu phản biện chưa công bố.</message>
 	<message key="manager.reviewForms.form.titleRequired">Mẫu phiếu phản biện phải được đặt tên.</message>
-	<message key="manager.reviewFormElements">Các mục trên mẫu phiếu</message>
+	<message key="manager.reviewFormElements">Các mục trên phiếu</message>
 	<message key="manager.reviewFormElements.create">Tạo một mục mới</message>
 	<message key="manager.reviewFormElements.edit">Sửa mục</message>
 	<message key="manager.reviewFormElements.noneCreated">Chưa có mục nào được tạo.</message>
@@ -2771,4 +2746,227 @@ Authors who publish with this journal agree to the following terms:
 	<message key="admin.journals.importOJS1.redirect.desc">Để hướng người đọc từ các tạp chí dùng OJS 1 sang OJS 2, tạp các file PHP sau sử dụng nội dung dưới đây. Những file tương ứng có thể được đặt trong đường dẫn hệ thống OJS 1, hoặc trong đường dẫn file hệ thống OJS 2  đối với trường hợp phần mềm chỉ dùng cho một tạp chí.</message>
 	<message key="admin.journals.importOJS1.redirect.ojs1root">Đặt trong đường dẫn hệ thống file OJS 1 cũ (ví dụ, /var/www/ojs1).</message>
 	<message key="admin.journals.importOJS1.redirect.ojs1orojs2root">Đặt trong đường dẫn hệ thống file OJS 1 cũ (ví dụ, /var/www/ojs1), hoặc trong đường dẫn file hệ thống OJS 2  đối với trường hợp phần mềm chỉ dùng cho một tạp chí (ví dụ, /var/www/ojs2)</message>
+	<message key="admin.journals.redirect">Tạo mã để ánh xạ các đường dẫn của OJS 1 sang OJS 2</message>
+	<message key="manager.payment.options.purchaseArticleFee">Bài viết phải trả tiền</message>
+	<message key="plugins.categories.implicitAuth">Công cụ phụ trợ Xác thực  Ngầm định</message>
+	<message key="plugins.categories.implicitAuth.description">Công cụ phụ trợ Xác thực  Ngầm định hỗ trợ xác thực người dùng dựa trên đầu biểu http</message>
+	<message key="plugins.categories.reports">Công cụ phụ trợ Báo cáo</message>
+	<message key="plugins.categories.reports.description">Công cụ phụ trợ Báo cáo thực hiện các báo cáo khác nhau và trích xuất dữ liệu cho Ban Tổ chức Hội nghị</message>
+	<message key="manager.setup.enablePublicGalleyId">Dấu hiệu tự đặt được dùng để xác đinh</message>
+	<message key="manager.setup.journalHomepageHeader.altText">Măng séc Trang chủ Tạp chí</message>
+	<message key="manager.setup.journalLogo.altText">Lô-gô Tạp chí</message>
+	<message key="manager.language.reloadLocalizedDefaultSettings">Tải lại tham số mặc định theo ngôn ngữ</message>
+	<message key="manager.language.confirmDefaultSettingsOverwrite">Tác vụ này sẽ thay thế bất kỳ tham số nào bạn đã đặt cho ngôn ngữ này</message>
+	<message key="manager.sections.form.mustAllowPermission">Đảm bảo rằng ít nhất một ô được đánh dấu cho mỗi đầu việc giao cho Biên tập viên Chuyên mục.</message>
+	<message key="manager.sections.form.reviewFormId">Đảm bảo rằng bạn đã chọn mẫu phiếu phản biện hợp lệ</message>
+	<message key="manager.sections.hideTocAuthor">Bỏ tên tác giả khỏi các bài trong chuyên mục trên mục lục của các số tạp chí</message>
+	<message key="manager.sections.disableComments">Không có bạn đọc bình luận chuyên mục này.</message>
+	<message key="manager.sections.abstractsNotRequired">Không yêu cầu tóm tắt</message>
+	<message key="manager.groups.enableBoard">Tổng biên tập quy định chức danh và xếp người vào mỗi chức danh</message>
+	<message key="manager.groups.disableBoard">Phần mềm OJS liệt kê thành viên của Ban Biên tập theo những chức vai trò được giao (Tổng biên tập, Biên tập viên bản thảo,...)</message>
+	<message key="manager.groups.context.editorialTeam.short">Ban Biên tập</message>
+	<message key="manager.groups.context.editorialTeam">Chức danh được nêu dưới mục Ban Biên tập trong phần Nhân sự của trang Giới thiệu Tạp chí (v.d., Biên tập viên)</message>
+	<message key="manager.groups.context.people">Chức danh được nêu dưới mục ở mục riêng trong phần Nhân sự (v.d., Hội đồng Biên tập)</message>
+	<message key="manager.people.allUsers">Tất cả người dùng đã được bổ nhiệm</message>
+	<message key="manager.people.allEnrolledUsers">Người dùng được bổ nhiệm trong Tạp chí này</message>
+	<message key="manager.people.allSiteUsers">Bổ nhiệm một người dùng trên website này vào Tạp chí</message>
+	<message key="manager.people.mustChooseRole">Vui lòng chọn một vai trò ở trên đầu trang trước nhi nhấp chuột vào nút "Bổ nhiệm"</message>
+	<message key="manager.people.enrollExistingUser">Bộ nhiệm một người dùng hiện có</message>
+	<message key="manager.people.roleEnrollment">Bổ nhiệm</message>
+	<message key="manager.people.enrollUserAsDescription">Người dùng có thể được bổ nhiệm, miễn nhiệm khỏi một vài trò bất cứ lúc nào.</message>
+	<message key="manager.people.mustProvideName">Ít nhất phải cung cấp Họ của người dùng.</message>
+	<message key="manager.subscriptionPolicies.expiry">Hết hạn sử dụng tạp chí</message>
+	<message key="manager.subscriptionPolicies.expiryDescription">Khi hết hạn sử dụng tạp chí, độc giả có thể bị từ chối quyền truy cập tất cả nội dung đăng ký sử dụng, hoặc có thể tiếp tục truy cập được nội dung đăng ký sử dụng được xuất bản trước ngày hết hạn sử dụng tạp chí.</message>
+	<message key="manager.subscriptionPolicies.expirySelectOne">Chọn một trong các lựa chọn sau:</message>
+	<message key="manager.subscriptionPolicies.expiryFull">Hết hạn toàn bộ</message>
+	<message key="manager.subscriptionPolicies.expiryFullDescription">Độc giả bị từ chối quyền truy cập tất cả nội dung đăng ký sử dụng khi hết hạn.</message>
+	<message key="manager.subscriptionPolicies.expiryPartial">Hết hạn một phần</message>
+	<message key="manager.subscriptionPolicies.expiryPartialDescription">Độc giả bị từ chối quyền truy cập tất cả nội dung đăng ký sử dụng được xuất bản gần đây, nhưng có thể tiếp tục truy cập được nội dung đăng ký sử dụng được xuất bản trước ngày hết hạn sử dụng tạp chí.</message>
+	<message key="manager.subscriptionTypes.form.public">Hình thức đặt tạp chí này sẽ không công khai (chẳng hạn, dưới mục Đặt tạp chí trong trang Giới thiệu Tạp chí).</message>
+	<message key="manager.subscriptions.dateStartSearch">Ngày bắt đầu</message>
+	<message key="manager.subscriptions.dateEndSearch">Ngày kết thúc</message>
+	<message key="manager.subscriptions.membership">Hội viên</message>
+	<message key="manager.subscriptions.domain">Tên miền</message>
+	<message key="editor.allEditors">Tất cả Biên tập viên</message>
+	<message key="editor.me">Tôi</message>
+	<message key="editor.submissionReview.emailWillArchive">Bài nộp này sẽ được lưu sau khi email Thông báo cho Tác giả được gửi đi hoặc nút "Bỏ qua Email" được sử dụng.</message>
+	<message key="editor.notifyUsers.inProgress">Đang thông báo cho người dùng...</message>
+	<message key="editor.issues.volumeRequired">Bắt buộc có Tập tạp chí và phải là một số nguyên dương</message>
+	<message key="editor.issues.numberRequired">Bắt buộc phải có Số tạp chí và phải là một số nguyên dương</message>
+	<message key="editor.issues.yearRequired">Bắt buộc phải có Năm XB và phải là một số nguyên dương</message>
+	<message key="editor.issues.titleRequired">Số tạp chí này phải có Tiêu đề riêng</message>
+	<message key="editor.issues.issueIdentificationRequired">Bắt buộc phải có định danh số tạp chí. Vui lòng chọn ít nhất một trong số các lựa chọn định danh sau.</message>
+	<message key="editor.issues.showCoverPage">Tạo trang bìa cho số tạp chí này với các thành phần sau.</message>
+	<message key="editor.issues.coverPageDisplay">Hiển thị</message>
+	<message key="editor.issues.hideCoverPageArchives">Không hiển thị hình nhỏ của bìa khi liệt kê các số tạp chí.</message>
+	<message key="editor.issues.hideCoverPageCover">Không hiện thị ảnh bìa trước mục lục tạp chí.</message>
+	<message key="editor.article.commentsRequired">Trường lời bình là bắt buộc.</message>
+	<message key="editor.submissions.assignedTo">Giao cho</message>
+	<message key="editor.submissions.inSection">Trong chuyên mục</message>
+	<message key="editor.article.display">Hiển thị</message>
+	<message key="editor.article.hideTocAuthorDescription">Không hiển thị tên tác giả trong mục lục tạp chí</message>
+	<message key="editor.article.hideTocAuthorDefault">Mặc định</message>
+	<message key="editor.article.hideTocAuthorHide">Loại bỏ</message>
+	<message key="editor.article.hideTocAuthorShow">Hiển thị</message>
+	<message key="editor.article.coverPageDisplay">Hiển thị</message>
+	<message key="editor.article.cover">Trang bìa</message>
+	<message key="editor.article.showCoverPage">Tạo trang bìa cho số tạp chí này với các thành phần sau.</message>
+	<message key="editor.article.hideCoverPageToc">Không hiển thị hình nhỏ của bìa khi liệt kê các số tạp chí.</message>
+	<message key="editor.article.hideCoverPageAbstract">Không hiện thị ảnh bìa khi xem tóm tắt tạp bài viết</message>
+	<message key="editor.article.coverPage">Ảnh bìa</message>
+	<message key="editor.article.coverPageInstructions">(Định dạng cho phép: .gif, .jpg, or .png )</message>
+	<message key="editor.article.uploaded">Tải lên</message>
+	<message key="editor.article.removeCoverPage">Loại bỏ ảnh bìa?</message>
+	<message key="editor.article.remove">Loại bỏ</message>
+	<message key="sectionEditor.review.enrollReviewer">Bổ nhiệm một người dùng hiện có làm Người phản biện</message>
+	<message key="submission.layout.imageInvalid">Định dạng ảnh không phù hợp. Định dạng cho phép là .gif, .jpg, and .png.</message>
+	<message key="reviewer.article.restrictedFileAccess">Bài nộp sẽ được cung cấp nếu và khi người phản biện đồng ý tiến hành phản biện.</message>
+	<message key="reviewer.competingInterests">Lợi ích xung đột</message>
+	<message key="author.competingInterests"><![CDATA[Lợi&nbsp;ích&nbsp;xung&nbsp;đột <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Chính&nbsp;sách&nbsp;CI</a>]]></message>
+	<message key="author.submit.startHereTitle">Nộp một bài mới</message>
+	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Nhấp chuột vào đây</a> để chuyển sang bước đầu tiên trong quá trình nộp bài gồm năm bước.]]></message>
+	<message key="author.submit.requestWaiver">Đề nghị miễn thu phí</message>
+	<message key="author.submit.qualityForWaiver">Vui lòng xem xét miễn Phí Nộp bài cho bài viết này</message>
+	<message key="author.submit.addReasonsForWaiver">Sử dụng ô dưới đây để giải thích tại sao nên miễn thu phí.</message>
+	<message key="author.submit.reorderInstructions">Xếp lại thứ tự tác giả theo thứ tự sẽ được liệt kê khi xuất bản.</message>
+	<message key="author.submit.form.abstractRequired">Vui lòng nhập tóm tắt của bài viết.</message>
+	<message key="author.submit.supplementaryFiles.saveToUpload">Nhấp chuột vào nút Ghi (Save) để tải file lên (sau đó có thể tải thêm các file bổ sung).</message>
+	<message key="submission.layout.galleyLanguageRequired">Bắt buộc có ngôn ngữ của bản bông.</message>
+	<message key="user.login.activate">Kích hoạt tài khoản</message>
+	<message key="user.profile.form.profileImage">Ảnh hồ sơ</message>
+	<message key="about.authorFees">Phí tác giả</message>
+	<message key="about.authorFeesMessage">Tạp chí sẽ thu các loại phí tác giả sau.</message>
+	<message key="about.memberships">Thành viên</message>
+	<message key="about.aboutThisPublishingSystem.altText">Quy trình Biên tập và Xuất bản trong phần mềm OJS</message>
+	<message key="help.searchResultsFor">Kết quả tương ứng với</message>
+	<message key="help.searchReturnResults">Trở lại Kết quả tìm kiếm</message>
+	<message key="donations.thankYou">Cảm ơn!</message>
+	<message key="donations.thankYouMessage">Cảm ơn quý vị đã tài trợ. Sự đóng góp của quý vị luôn được trân trọng.</message>
+	<message key="payment.loginRequired">Bạn phải đăng nhập để thanh toán.</message>
+	<message key="payment.paid">Đã thanh toán</message>
+	<message key="payment.payNow">Thanh toán</message>
+	<message key="payment.waive">Miễn phí</message>
+	<message key="payment.alreadyPaid">Đã thanh toán</message>
+	<message key="payment.paymentReceived">Đã nhận tiền</message>
+	<message key="payment.paymentSent">Khoản thanh toán đã gửi đi</message>
+	<message key="payment.type.submission">Lệ phí Nộp bài</message>
+	<message key="payment.type.publication">Lệ phí Xuất bản</message>
+	<message key="payment.type.fastTrack">Lệ phí Phản biện nhanh</message>
+	<message key="payment.type.membership">Lệ phí Hội viên cá nhân</message>
+	<message key="payment.type.purchaseArticle">Lệ phí Mua bài viết</message>
+	<message key="payment.type.subscription">Lệ phí Đặt tạp chí</message>
+	<message key="payment.type.donation">Tài trợ</message>
+	<message key="payment.donation.makeDonation">Tài trợ cho tạp chí</message>
+	<message key="payment.publication.payPublication">Trả tiền xuất bản</message>
+	<message key="payment.subscription.renew">Gia hạn Đặt tạp chí</message>
+	<message key="payment.subscription.expires">Hết hạn</message>
+	<message key="editor.submissionReview.cannotSendToCopyediting">Trước khi gửi bài nộp đi biên tập bản thảo, bạn cần đảm bảo rằng bản hiệu đính đã sẵn sàng và tác giả đã được thông báo về quyết định đó thông qua đường dẫn Báo cho Tác giả trên đây.</message>
+	<message key="editor.issues.resetIssueOrder"><![CDATA[Tạp chí này xếp thứ tự số theo cách riêng. <a href="{$url}" class="action">Khôi phục lại cách chuẩn</a>]]></message>
+	<message key="editor.article.payment.publicationFeeNotPaid">Phí Xuất bản chưa trả. Xếp bài để xuất bản sẽ báo cho tác giả trả phí hoặc miễn thu phí.</message>
+	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Hãy khai liệu quý vị có lợi ích xung đột nào liên quan tới với nghiên cứu này không (xem <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Chính&nbsp;sách&nbsp;lợi&nbsp;ích&nbsp;xung&nbsp;đột</a>).]]></message>
+	<message key="author.submit.howToSubmit"><![CDATA[Gặp khó khăn? Liên hệ với <a href="mailto:{$supportEmail}">{$supportName}</a> để được trợ giúp ({$supportPhone}).]]></message>
+	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Gặp khó khăn? Liên hệ với <a href="mailto:{$supportEmail}">{$supportName}</a> để được trợ giúp.]]></message>
+	<message key="author.submit.journalSectionDescription"><![CDATA[Lựa chọn chuyên mục phù hợp cho bài nộp này (xem Chuyên mục và Chính sách trong trang <a href="{$aboutUrl}" target="_new">Giới thiệu</a> Tạp chí).]]></message>
+	<message key="author.submit.submissionIndexingDescription">Nhập các từ khóa để lập chỉ mục cho bài nộp; phân tách các từ khóa bằng dấu chấm phẩy (từ khóa 1; từ khóa 2; từ khóa 3).</message>
+	<message key="author.submit.supplementaryFilesInstructions">Bước không bắt buộc này cho phép tải lên các File phụ trợ cho bài nộp. Những file này, ở bất cứ định dạng nào, có thể bao gồm (a) công cụ nghiên cứu, (b) tập hợp dữ liệu, phù hợp với các điều khoản về đạo đức của nghiên cứu này, (c) các nguồn dữ liệu mà nếu không đưa vào độc giả sẽ không tiếp cận được, (d) các bảng và biểu đồ không thể tích hợp vào trong bài nộp, hoặc các tài liệu khác bổ trợ cho bài viết.</message>
+	<message key="author.submit.forgottenSubmitSuppFile">Quý vị có chắc muốn tiếp tục mà không tải lên file phụ trợ đã chọn?</message>
+	<message key="author.submit.confirmationDescription">Để nộp bản thảo cho tạp chí {$journalTitle}, nhấp chuột vào nút Kết thúc nộp bài. Người liên hệ chính của bài nộp sẽ nhận được một thư xác nhận qua email và có thể xem được tiến trình của bài nộp trong quá trình biên tập bằng cách đăng nhập vào website tạp chí. Cảm ơn quý vị gửi bài viết cho tạp chí {$journalTitle}.</message>
+	<message key="submission.layout.noLayoutFile">Chưa có (Tải bản bản thảo cuối cùng làm Bản trình bày cùng trước khi gửi yêu cầu)</message>
+	<message key="submission.layout.publicGalleyId">Đạnh danh Bản bông công cộng</message>
+	<message key="submission.layout.galleyPublicIdentificationExists">Định danh bản bông công cộng này đã có.</message>
+	<message key="submission.layout.galleyLocaleRequired">Bắt buộc chọn ngôn ngữ cho bản bông.</message>
+	<message key="submission.layout.referenceLinking">Liên kết bài trích dẫn</message>
+	<message key="user.login.accountNotValidated">Địa chỉ email của quý vị chưa được xác nhận. Vui lòng kiểm tra email và làm theo hướng dẫn gửi kèm. Nếu quý vị chưa nhận được email, quý vị cần liên lạc với người quản trị để được trợ giúp.</message>
+	<message key="user.login.activated">Cảm ơn quý vị đã kích hoạt tài khoản. Quý vị có thể đăng nhập bằng thông tin tài khoản quý vị cung cấp khi tạo account cho mình.</message>
+	<message key="author.submit.authorSubmitLoginMessage">Để nộp bài viết cho tạp chí này, quý vị cần có một tài khoản người dùng. Điều này cho phép các biên tập viên theo dõi bài nộp của quý vị và liên lạc với quý vị khi trạng thái của bài nộp thay đổi, hoặc khi cần thêm thông tin từ quý vị.</message>
+	<message key="user.profile.form.profileImageInvalid">Định dạng ảnh không phù hợp hoặc ảnh quá lớn. Định dạng cho phép là .gif, .jpg, or .png, và ảnh không lớn quá 150x150 pixels.</message>
+	<message key="user.profile.form.urlInvalid">Đường dẫn URL không đúng. Vui lòng kiểm tra lại đường dẫn URL và thử lại. (Gợi ý: Thử thêm htt:// vào trước đường dẫn URL.)</message>
+	<message key="user.profile.publicProfile">Hồ sơ Người dùng</message>
+	<message key="announcement.posted">Đã đăng</message>
+	<message key="payment.loginRequired.forArticle">Cần phải đăng ký sử dụng hoặc mua để xem được bài viết. Để kiểm tra đơn đặt tạp chí, truy cập những lần mua trước, hoặc mua bài viết, hãy đăng nhập vào tạp chí.</message>
+	<message key="payment.loginRequired.forDonation">Quý vị cần đăng nhập để tài trợ.</message>
+	<message key="payment.submission.paySubmission">Trả Lệ phí nộp bài</message>
+	<message key="payment.fastTrack.payFastTrack">Trả để Phản biện nhanh</message>
+	<message key="payment.fastTrack.inFastTrack">trong Phản biện nhanh</message>
+	<message key="payment.publication.publicationPaid">Lệ phí Xuất bản đã trả</message>
+	<message key="payment.membership.buyMembership">Mua suất Hội viên Cá nhân</message>
+	<message key="payment.membership.renewMembership">Gia hạn Hội viên Cá nhân</message>
+	<message key="payment.membership.ends">Kết thúc</message>
+	<message key="rt.admin.settings.printerFriendly">Bản để in (phiên bản bài viết dùng để in)</message>
+	<message key="rt.admin.settings.addComment.authenticated">Người dùng phải đăng ký và đăng nhập để gửi bình luận, không chấp nhận ẩn danh.</message>
+	<message key="rt.admin.settings.addComment.anonymous">Người dùng phải đăng ký và đăng nhập để gửi bình luận, chấp nhận ẩn danh.</message>
+	<message key="rt.admin.settings.addComment.unauthenticated">Người dùng không phải đăng ký và đăng nhập để gửi bình luận, chấp nhận ẩn danh.</message>
+	<message key="rt.admin.settings.findingReferences">Tìm Tài liệu trích dẫn</message>
+	<message key="rt.metadata.pkp.doi">Định danh Đối tượng số</message>
+	<message key="rt.captureCite.format">Định dạng Trích dẫn</message>
+	<message key="rt.findingReferences">Tìm Tài liệu trích dẫn</message>
+	<message key="rt.findingReferences.googleScholar">Google Scholar</message>
+	<message key="rt.findingReferences.windowsLiveAcademic">Windows Live Academic</message>
+	<message key="icon.font_small.alt">Nhỏ</message>
+	<message key="icon.font_medium.alt">Vừa</message>
+	<message key="icon.font_large.alt">Lớn</message>
+	<message key="default.journalSettings.checklist.addressesLinked">Đường dẫn của tài liệu tham khảo được cung cấp, nếu có.</message>
+	<message key="default.journalSettings.submissionFeeDescription">Tác giả phải nộp một khoản Phí Nộp bài trong quá trình nộp để đóng góp cho các chi phí phản biện.</message>
+	<message key="default.journalSettings.fastTrackFeeDescription">Với việc trả khoản lệ phí này, việc phản biện ra quyết định biên tập, và thông báo cho tác giả về bài viết này được đảm bảo thực hiện trong 4 tuần.</message>
+	<message key="default.journalSettings.publicationFeeDescription">Nếu bài viết được chấp nhận để xuất bản, quý vị sẽ được yêu cầu trả Phí Xuất bản bài viết để trang trải chi phí xuất bản.</message>
+	<message key="default.journalSettings.purchaseArticleFeeDescription">Việc trả phí này sẽ cho phép quý vị xem, tải xuống và in ra bài viết này.</message>
+	<message key="payment.alreadyPaidMessage">Chọn hộp này nếu quý vị đã trả tiền cho tạp chí nhằm kết thúc quá trình nộp bài. Bài nộp sẽ không được phản biện cho tới khi tạp chí nhận được tiền thanh toán. Nhấp chuột vào nút TRẢ TIỀN trên đây để biết hướng dẫn trả tiền.</message>
+	<message key="installer.installationWrongPhp"><![CDATA[<br/><strong>CẢNH BÁO: Phiên bản PHP hiện thời của quý vị không đáp ứng những yêu cầu tối thiểu để cài đặt. Xin khuyến nghị nâng cấp lên phiên bản PHP mới hơn.</strong>]]></message>
+	<message key="rt.admin.settings.addComment">Thêm lời bình</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName} đã từ chối phản biện vòng {$round} cho bài viết {$articleId} thay {$reviewerName}.</message>
+	<message key="log.editor.decision">Quyết định của biên tập viên ({$decision}) đối với bài viết {$articleId} đã được {$editorName} ghi lại.</message>
+	<message key="debug.notes.currencyListLoad">Danh sách tiền tệ "{$filename}" được tải từ XML</message>
+	<message key="debug.notes.helpMappingLoad">XML được tải lại giúp ánh xạ file {$filename} khi tìm kiếm {$id}.</message>
+	<message key="default.journalSettings.waiverPolicy">Nếu quý vị không tiền để trả những khoản phí này, quý vị có cơ hội để được miễn từng loại phí. Chúng tôi không muốn vì lệ phí mà không xuất bản tác phẩm có giá trị.</message>
+	<message key="default.journalSettings.membershipFeeDescription">Việc trả khoản phí này sẽ giúp quý vị trở thành hội viên của hiệp hội trong một năm và truy cập miễn phí tạp chí này.</message>
+	<message key="installer.connectionCharsetInstructions"><![CDATA[Kiểu mã hoá dùng cho dữ liệu nhận được và gửi đi từ cơ sở dữ liệu này. Kiểu mã hoá này nên giống mã hoá trình duyệt người dùng sử dụng. Lưu ý rằng chức năng này cho được hỗ trợ với phiên bản MySQL >= 4.1.1 hoặc PostgreSQL >= 7.1. Chọn "Không áp dụng" nếu máy chủ cơ sở dữ liệu không đáp ứng yêu cầu này.]]></message>
+	<message key="installer.databaseCharsetInstructions"><![CDATA[Kiểu mã hoá dùng cho dữ liệu lưu trong cơ sở dữ liệu này. Kiểu mã hoá này nên giống mã hoá trình duyệt người dùng sử dụng. Lưu ý rằng chức năng này cho được hỗ trợ với phiên bản MySQL >= 4.1.1 hoặc PostgreSQL >= 7.1. Chọn "Không áp dụng" nếu máy chủ cơ sở dữ liệu không đáp ứng yêu cầu này.]]></message>
+	<message key="installer.databaseSettingsInstructions">Phần mềm OJS cần truy cập cơ sở dữ liệu SQL để lưu dữ liệu. Xem yêu cầu về hệ thống trên đây để biết danh mục các cơ sở dữ liệu được hỗ trợ. Nhập vào các trường dưới đây dùng để kết nối với cơ sở dữ liệu.</message>
+	<message key="default.journalSettings.donationFeeDescription">Các khoản tài trợ cho tạp chí dù trị giá bao nhiêu cũng đều được hoan nghênh và cung cấp cho các biên tập viên công cụ để tạo ra cho độc giả một tạp chí có chất lượng cao nhất.</message>
+	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Để thêm liên kết tới tài liệu tham khảo trong quá trình dàn trang</h4>
+	<p>Khi chuyển bài nộp sang định dạng HTML hoặc PDF, đảm bảo là tất cả các siêu liên kết trong bài nộp vẫn hoạt động.</p>
+	<h4>A. Khi tác giả cung cấp liên kết của tài liệu trích dẫn</h4>
+	<ol>
+	<li>Khi bài nộp vẫn còn ở định dạng soạn thảo văn bản (v.d., Word), thêm cụm từ Xem tài liệu ở cuối tài liệu nào có địa chỉ web URL đi kèm.</li>
+	<li>Chuyển cụm từ đó thành một siêu liên kết bằng cách bôi đen cụm từ đó, và dùng công cụ Insert Hyperlink trong word và địa chỉ web có sắn ở bước #2.</li>
+	</ol>
+	<h4>B. Cho phép bạn đọc tìm tài liệu trích dẫn trong bài viết trên Google Scholar</h4>
+	<ol>
+	<li>Khi bài nộp vẫn còn ở định dạng soạn thảo văn bản (v.d., Word), copy tiêu đề của tác phẩm được trích dẫn có trong danh mục tài liệu trích dẫn (nếu nó là một tiêu đề quá phổ biến, v.d., "Hòa Bình" – hãy copy tác giả và tiêu đề).</li>
+	<li>Dán tiêu đề tài liệu trích dẫn đó và giữa ký %22's, thêm dấu + vào giữa mỗi từ: http://scholar.google.com/scholar?q=%22DÁN+TIÊU+ĐỀ+VÀO+ĐÂY%22&hl=en&lr=&btnG=Search</li>
+	<li>Thêm cụm từ Tìm trên Google Scholar ở cuối mỗi tài liệu trích dẫn có trong danh mục Tài liệu trích dẫn.</li>
+	<li>Chuyển cụm từ đó thành một siêu liên kết bằng cách bôi đen cụm từ đó, và dùng công cụ Insert Hyperlink trong word và địa chỉ web có sắn ở bước #2.</li>
+	</ol>
+	<h4>C. Cho phép bạn đọc tìm tài liệu trích dẫn bằng Định danh Đối tượng số (DOI)</h4>
+	<ol>
+	<li>Khi bài nộp vẫn còn ở dạng Word, copy một loạt tài liệu trích dẫn vào CrossRef Text Query http://www.crossref.org/freeTextQuery/</li>
+	<li>Dãn mỗi DOI mà Query cung cấp vào địa chỉ web sau (giữa = và &): http://www.cmaj.ca/cgi/external_ref?access_num=DÁN DOI#VÀO ĐÂY&link_type=DOI</li>
+	<li>Thêm cụm từ CrossRef vào cuối mỗi tài liệu trích dẫn trong danh mục tài liệu trích dẫn của bài nộp.</li>
+	<li>Chuyển cụm từ đó thành một siêu liên kết bằng cách bôi đen cụm từ đó, và dùng công cụ Insert Hyperlink trong word và địa chỉ web có sắn ở bước #2.</li>
+	</ol>]]></message>
+	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>Bước soát lỗi nhằm phát hiện bất kỳ lỗi nào về chính tả, ngữ pháp và định dạng trong bản bông. Những thay đổi lớn hơn không thể làm ở bước này, trừ khi đã trao đổi với Biên tập viên Chuyên mục. Ở bước Dàn trang, nhấp chuột vào nút Xem bản soát lỗi để xem định dạng HTML, PDF và các định dạng file khác dùng để xuất bản bài viết này.</p>
+<h4>Đối với các lỗi chính tả và ngữ pháp</h4>
+
+<p>Copy từ hoặc cụm từ có vấn đề và dán chúng vào hộp Sửa lỗi với hướng dẫn "ĐỔI-THÀNH" dành cho biên tập viên như sau...</p>
+
+<pre>1. Đổi...
+vào những người khác
+Thành...
+và những người khác</pre>
+<br />
+<pre>2. Đổi...
+Nguyễn Cảnh Toan
+Thành...
+Nguyễn Cảnh Toàn</pre>
+<br />
+
+<h4>Đối với các lỗi định dạng</h4>
+
+<p>Mô tả vị trí và bản chất của vấn đề trong hộp Sửa lỗi sau khi nhập tiêu đề "ĐỊNH DẠNG" như sau...</p>
+<br />
+<pre>3. ĐỊNH DẠNG
+Các số ở Bảng 3 không thẳng hàng trong cột thứ ba.</pre>
+<br />
+<pre>4. ĐỊNH DẠNG
+Đoạn bắt đầu bằng "Chủ đề cuối cùng này..." chưa được lùi vào.</pre>]]></message>
 </locale>

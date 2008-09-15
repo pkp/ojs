@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
 
 <!--
   * locale.xml
@@ -87,4 +87,35 @@ The following formats are accepted:
 
 	<message key="plugins.importexport.native.import.success">Import Successful</message>
 	<message key="plugins.importexport.native.import.success.description">The import was successful. Successfully-imported items are listed below.</message>
+	<message key="plugins.importexport.native.error.uploadFailed">Không tải file lên được; hãy đảm bảo là máy chủ cho phép tải file lên và file không quá lớn so với mức thiết lập của PHP và máy chủ.</message>
+	<message key="plugins.importexport.native.import.error.issueTitleLocaleUnsupported">Tiêu đề riêng của số tạp chí ("{$issueTitle}") được lập ở ngôn ngữ ("{$locale}") mà tạp chí không hỗ trợ.</message>
+	<message key="plugins.importexport.native.import.error.issueDescriptionLocaleUnsupported">Mô tả số tạp chí có tiêu đề ("{$issueTitle}") được lập ở ngôn ngữ ("{$locale}") mà tạp chí không hỗ trợ.</message>
+	<message key="plugins.importexport.native.import.error.coverLocaleUnsupported">Trang bìa của số tạp chí có tiêu đề ("{$issueTitle}") được lập ở ngôn ngữ ("{$locale}") mà tạp chí không hỗ trợ.</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleLocaleUnsupported">Tên chuyên mục ("{$issueTitle}") được lập ở ngôn ngữ ("{$locale}") mà tạp chí không hỗ trợ.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevLocaleUnsupported">Tên viết tắt của chuyên mục ("{$sectionAbbrev}") trong số tạp chí ("{$issueTitle}") được lập ở ngôn ngữ ("{$locale}") mà tạp chí không hỗ trợ.</message>
+	<message key="plugins.importexport.native.import.error.sectionIdentifyTypeLocaleUnsupported">Kiểu định danh chuyên mục ("{$sectionIdentifyType}") trong số tạp chí ("{$issueTitle}") được lập ở ngôn ngữ ("{$locale}") mà tạp chí không hỗ trợ.</message>
+	<message key="plugins.importexport.native.import.error.sectionPolicyLocaleUnsupported">Chính sách chuyên mục ("{$sectionPolicy}") trong số tạp chí ("{$issueTitle}") được lập ở ngôn ngữ ("{$locale}") mà tạp chí không hỗ trợ.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileSponsorLocaleUnsupported">Nhà tài trợ của file phụ trợ "{$suppFileTitle}" cho bài viết "{$articleTitle}" trong số tạp chí "{$issueTitle}" được lập ở ngôn ngữ ("{$locale}") mà tạp chí này không hỗ trợ.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileSourceLocaleUnsupported">Nguồn của file phụ trợ "{$suppFileTitle}" cho bài viết "{$articleTitleỉtong số tạp chí "{$issueTitle}" được lập ở ngôn ngữ ("{$locale}") mà tạp chí này không hỗ trợ.</message>
+	<message key="plugins.importexport.native.import.error.articleDisciplineLocaleUnsupported">Ngành khoa học của bài viết "{$articleTitle}" trong số tạp chí "{$issueTitle}" được lập ở ngôn ngữ ("{$locale}") mà tạp chí này không hỗ trợ.</message>
+	<message key="plugins.importexport.native.import.error.articleTypeLocaleUnsupported">Loại hình của bài viết "{$articleTitle}" trong số tạp chí "{$issueTitle}" được lập ở ngôn ngữ ("{$locale}") mà tạp chí này không hỗ trợ.</message>
+	<message key="plugins.importexport.native.import.error.articleSubjectLocaleUnsupported">Chủ đề mô tả bài viết "{$articleTitle}" trong số tạp chí "{$issueTitle}" được lập ở ngôn ngữ ("{$locale}") mà tạp chí này không hỗ trợ.</message>
+	<message key="plugins.importexport.native.import.error.articleSubjectClassLocaleUnsupported">Phạm vi địa lý của bài viết "{$articleTitle}" trong số tạp chí "{$issueTitle}" được lập ở ngôn ngữ ("{$locale}") mà tạp chí này không hỗ trợ.</message>
+	<message key="plugins.importexport.native.import.error.articleCoverageGeoLocaleUnsupported">Phạm vi địa lý của bài viết "{$articleTitle}" trong số tạp chí "{$issueTitle}" được lập ở ngôn ngữ ("{$locale}") mà tạp chí này không hỗ trợ.</message>
+	<message key="plugins.importexport.native.import.error.articleCoverageChronLocaleUnsupported">Phạm vi lịch đại của bài viết "{$articleTitle}" trong số tạp chí "{$issueTitle}" được lập ở ngôn ngữ ("{$locale}") mà tạp chí này không hỗ trợ.</message>
+	<message key="plugins.importexport.native.import.error.articleCoverageSampleLocaleUnsupported">Bìa mẫu dành cho bài viết "{$articleTitle}" trong số tạp chí "{$issueTitle}" được lập ở ngôn ngữ ("{$locale}") mà tạp chí này không hỗ trợ.</message>
+	<message key="plugins.importexport.native.import.error.articleSponsorLocaleUnsupported">Người tài trợ được liệt kê cho bài viết "{$articleTitle}" trong số tạp chí "{$issueTitle}" được lập ở ngôn ngữ ("{$locale}") mà tạp chí này không hỗ trợ.</message>
+	<message key="plugins.importexport.native.import.error.articleAuthorCompetingInterestsLocaleUnsupported">Lợi ích xung đột liệt kê cho "{$authorFullName}", tác giả bài viết "{$articleTitle}" trong số tạp chí "{$issueTitle}" được lập ở ngôn ngữ ("{$locale}") mà tạp chí này không hỗ trợ.</message>
+	<message key="plugins.importexport.native.import.error.articleAuthorBiographyLocaleUnsupported">Tiểu sử của "{$authorFullName}", tác giả bài viết "{$articleTitle}" trong số tạp chí "{$issueTitle}" được lập ở ngôn ngữ ("{$locale}") mà tạp chí này không hỗ trợ.</message>
+	<message key="plugins.importexport.native.import.error.galleyLocaleUnsupported">Bản bông của bài viết "{$articleTitle}" trong số tạp chí "{$issueTitle}" được lập ở ngôn ngữ ("{$locale}") mà tạp chí này không hỗ trợ.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileTitleLocaleUnsupported">Tiêu đề của file phụ trợ "{$suppFileTitle}" cho bài viết "{$articleTitle}" trong số tạp chí "{$issueTitle}" được lập ở ngôn ngữ ("{$locale}") mà tạp chí này không hỗ trợ.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileCreatorLocaleUnsupported">Tác giả file phụ trợ "{$suppFileTitle}" cho bài viết "{$articleTitle}" trong số tạp chí "{$issueTitle}" được lập ở ngôn ngữ ("{$locale}") mà tạp chí này không hỗ trợ.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileSubjectLocaleUnsupported">Chủ đề file phụ trợ "{$suppFileTitle}" cho bài viết "{$articleTitle}" trong số tạp chí "{$issueTitle}" được lập ở ngôn ngữ ("{$locale}") mà tạp chí này không hỗ trợ.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileTypeOtherLocaleUnsupported">Kiểu riêng của file phụ trợ "{$suppFileTitle}" cho bài viết "{$articleTitle}" trong số tạp chí "{$issueTitle}" được lập ở ngôn ngữ ("{$locale}") mà tạp chí này không hỗ trợ.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileDescriptionLocaleUnsupported">Mô tả file phụ trợ "{$suppFileTitle}" cho bài viết "{$articleTitle}" trong số tạp chí "{$issueTitle}" được lập ở ngôn ngữ ("{$locale}") mà tạp chí này không hỗ trợ.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFilePublisherLocaleUnsupported">Cơ quan xuất bản file phụ trợ "{$suppFileTitle}" cho bài viết "{$articleTitle}" trong số tạp chí "{$issueTitle}" được lập ở ngôn ngữ ("{$locale}") mà tạp chí này không hỗ trợ.</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMismatch">Tiêu đề chuyên mục "{$section1Title}" và tiêu đề chuyên mục "{$section2Title}" trong số tạp chí "{$issueTitle}" trùng với những tiêu đề chuyên mục khác đã có của tạp chí.</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMatch">Tiêu đề chuyên mục "{$sectionTitle}" trong số tạp chí "{$issueTitle}" trùng với một tiêu đề chuyên mục khác, nhưng tiêu đề thứ hai của chuyên mục này không trùng với tiêu đề thứ hai của chuyên mục kia.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMismatch">Tên chuyên mục viết tắt "{$section1Abbrev}" và tên chuyên mục viết tắt "{$section2Abbrev}" của số tạp chí "{$issueTitle}" trùng với các tên chuyên mục viết tắt đã có của tạp chí.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMatch">Tên chuyên mục viết tắt "{$sectionAbbrev}" của số tạp chí "{$issueTitle}" trùng với các tên chuyên mục viết tắt đã có của tạp chí, nhưng tên chuyên mục viết tắt thứ hai của chuyên mục này không trùng với với tên chuyên mục viết tắt thứ hai của chuyên mục kia.</message>
 </locale>

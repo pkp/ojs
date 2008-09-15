@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
 
 <!--
   * locale.xml
@@ -36,4 +36,6 @@
 	<message key="plugins.auth.ldap.settings.saslrealm">Realm</message>
 	<message key="plugins.auth.ldap.settings.saslauthzid">Requested authorization ID</message>
 	<message key="plugins.auth.ldap.settings.saslprop">SASL security properties</message>
+	<message key="plugins.auth.ldap.settings.uid">Thuộc tính của tên tài khoản</message>
+	<message key="plugins.auth.ldap.settings.uid.description">Thuộc tính mà giá trị của nó xác định duy nhất một đối tượng người dùng, ví dụ như uid hoặc cn hoặc sAMAccountNam.</message>
 </locale>

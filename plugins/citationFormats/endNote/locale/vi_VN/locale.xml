@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for this citation plugin in en_US.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.citationFormats.endNote.displayName">Công cụ định dạnh trích dẫn EndNote</message>
+	<message key="plugins.citationFormats.endNote.citationFormatName"><![CDATA[EndNote - định dạng EndNote (Macintosh & Windows)]]></message>
+	<message key="plugins.citationFormats.endNote.description">Công cụ này áp dụng định dạng trích dẫn EndNote.</message>
+</locale>
