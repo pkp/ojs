@@ -163,4 +163,44 @@
 	<message key="plugins.generic.thesis.form.uploadCodeInstructions">Dành cho Khoa</message>
 	<message key="plugins.generic.thesis.form.studentEmailPublish">Công bố email của SV</message>
 	<message key="plugins.generic.thesis.form.studentEmailPublishInstructions">Nếu chọn, email của SV sẽ được công bố cùng với tóm tắt luận văn.</message>
+	<message key="plugins.generic.thesis.manager.keyword">Từ khóa</message>
+	<message key="plugins.generic.thesis.manager.studentFirstName">Tên</message>
+	<message key="plugins.generic.thesis.manager.studentLastName">Họ</message>
+	<message key="plugins.generic.thesis.manager.department">Khoa</message>
+	<message key="plugins.generic.thesis.manager.university">Trường ĐH</message>
+	<message key="plugins.generic.thesis.manager.abstract">Tóm tắt</message>
+	<message key="plugins.generic.thesis.manager.noResults">Không có kết quả</message>
+	<message key="plugins.generic.thesis.manager.form.degreeName">Tên của học vị</message>
+	<message key="plugins.generic.thesis.manager.form.degreeNameRequired">Bắt buộc có tên của bằng tốt nghiệp nhờ luận văn.</message>
+	<message key="plugins.generic.thesis.manager.form.degreeNameInstructions">Tên bằng tốt nghiệp (v.d. Cử nhân Nghệ thuật, Tiến sỹ, v.v...)</message>
+	<message key="plugins.generic.thesis.manager.form.comment">Lời bình</message>
+	<message key="plugins.generic.thesis.manager.form.author">Tác giả và Hướng dẫn nghiên cứu</message>
+	<message key="plugins.generic.thesis.manager.form.studentEmailPublish">Công bố email sinh viên</message>
+	<message key="plugins.generic.thesis.manager.form.studentEmailPublishInstructions">Nếu chọn, địa chỉ email của sinh viên sẽ được xuất bản trong tóm tắt luận văn.</message>
+	<message key="plugins.generic.thesis.manager.form.studentBio">Tiểu sử sinh viên</message>
+	<message key="plugins.generic.thesis.manager.form.indexing">Lập chỉ mục</message>
+	<message key="plugins.generic.thesis.manager.form.discipline">Các ngành khoa học và chuyên ngành</message>
+	<message key="plugins.generic.thesis.manager.form.subjectClass">Phân loại theo chủ đề</message>
+	<message key="plugins.generic.thesis.manager.form.keyword">Từ khóa</message>
+	<message key="plugins.generic.thesis.manager.form.coverageGeo">Phạm vi địa lý</message>
+	<message key="plugins.generic.thesis.manager.form.coverageChron">Phạm vi thời gian hoặc lịch sử</message>
+	<message key="plugins.generic.thesis.manager.form.coverageSample">Đặc điểm của mẫu nghiên cứu</message>
+	<message key="plugins.generic.thesis.manager.form.method">Kiểu, phương pháp hoặc cách tiếp cận</message>
+	<message key="plugins.generic.thesis.manager.form.language">Ngôn ngữ</message>
+	<message key="plugins.generic.thesis.manager.form.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">Các mã khác</a>.]]></message>
+	<message key="plugins.generic.thesis.manager.form.urlPrefixIncluded">Vui lòng cung cấp đường dẫn URL đầy đủ, bao gồm cả http:// hoặc ftp:// ở đầu.</message>
+	<message key="plugins.generic.thesis.settings.submissions">Bài nộp</message>
+	<message key="plugins.generic.thesis.settings.uploadCode">Sử dụng mã tải lên sau cho các bài nộp của khoa:</message>
+	<message key="plugins.generic.thesis.settings.uploadCodeRequired">Vui lòng nhập mã tải lên</message>
+	<message key="plugins.generic.thesis.settings.order">Thứ tự Xuất bản</message>
+	<message key="plugins.generic.thesis.settings.thesisOrderValid">Vui lòng chọn một thứ tự xuất bản phù hợp</message>
+	<message key="plugins.generic.thesis.form.degreeName">Tên bằng</message>
+	<message key="plugins.generic.thesis.form.degreeNameRequired">Phải có tên của bằng tốt nghiệp</message>
+	<message key="plugins.generic.thesis.form.degreeNameInstructions">Tên của bằng tốt nghiệp (v.d. Cử nhân Nghệ thuật, Tiến sỹ, v.v...)</message>
+	<message key="plugins.generic.thesis.form.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">Các mã khác</a>.]]></message>
+	<message key="plugins.generic.thesis.manager.studentEmail">Email</message>
+	<message key="plugins.generic.thesis.manager.form.indexingDescription">Chọn những từ khoá mô tả tốt nhất nội dung của luận văn này theo những mục được sử dụng trong tạp chí này. Phân tách các từ khoá bằng một dấu chấm phẩy (từ khoá 1; từ khoá 2; từ khoá 3).</message>
+	<message key="plugins.generic.thesis.manager.form.studentBioInstructions"><![CDATA[Chèn dòng trống để phân tách các đoạn. Đặt chữ vào giữa các ký hiệu &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, và &lt;u&gt;&lt;/u&gt; in đậm, in nghiêng hoặc gạch dưới tương ứng (v.d., &lt;i&gt;từ này &lt;/i&gt; sẽ được in nghiêng.)]]></message>
+	<message key="plugins.generic.thesis.settings.uploadCodeDescription">Một mã tải lên (một trật tự của ký tự hoặc số) có thể được thông báo tới các khoa đào tạo mong muốn tải tóm tắt luận văn lên hệ thống thay mặt sinh viên. Khi mã tải lên được một khoa gửi tới, hệ thống sẽ tự động gửi email cho người quản lý để xác thực bài nộp.</message>
+	<message key="plugins.generic.thesis.form.studentBioInstructions"><![CDATA[Chèn dòng trống để phân tách các đoạn. Đặt chữ vào giữa các ký hiệu &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, và &lt;u&gt;&lt;/u&gt; in đậm, in nghiêng hoặc gạch dưới tương ứng (v.d., &lt;i&gt;từ này&lt;/i&gt; sẽ được in nghiêng.)]]></message>
 </locale>

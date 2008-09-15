@@ -182,7 +182,7 @@ Xin trân trọng cảm ơn,
 		  -->
 		<row>
 			<field name="email_key">REVIEW_REQUEST</field>
-			<field name="subject">Đề nghị phản biện bài viết</field>
+			<field name="subject">Đề nghị phản biện bài nộp</field>
 			<field name="body">{$reviewerName}:
 
 Tôi tin rằng quý vị sẽ là người phản biện xuất sắc đối với bản thảo bài viết, "{$articleTitle}," nộp cho tạp chí {$journalName}. Tóm tắt của bài nộp được kèm ở cuối thư, hy vọng rằng quý vị sẽ cân nhắc nhận giúp cho công việc quan trọng này.
@@ -209,7 +209,7 @@ Cảm ơn vì đã xem xét đề nghị này.
 		</row>
 		<row>
 			<field name="email_key">REVIEW_REQUEST_ONECLICK</field>
-			<field name="subject">Đề nghị phản biện bài viết</field>
+			<field name="subject">Đề nghị phản biện bài nộp</field>
 			<field name="body">{$reviewerName}:
 
 Tôi tin rằng quý vị sẽ là người phản biện xuất sắc đối với bản thảo bài viết, "{$articleTitle}," nộp cho tạp chí {$journalName}. Tóm tắt của bài nộp được kèm ở cuối thư, hy vọng rằng quý vị sẽ cân nhắc nhận giúp cho công việc quan trọng này.
@@ -234,7 +234,7 @@ Cảm ơn vì đã xem xét đề nghị này.
 		</row>
 		<row>
 			<field name="email_key">REVIEW_REQUEST_ATTACHED</field>
-			<field name="subject">Đề nghị phản biện bài viết</field>
+			<field name="subject">Đề nghị phản biện bài nộp</field>
 			<field name="body">{$reviewerName}:
 
 Tôi tin rằng quý vị sẽ là người phản biện xuất sắc đối với bản thảo bài viết, "{$articleTitle}," và tôi xin đề nghị quý vị nhận giúp công việc quan trọng này. Bản Hướng dẫn Phản biện cho tạp chí này được gửi kèm sau đây và bài nộp được gửi trong file đính kèm. Xin gửi phản biện về bài nộp cùng với khuyến nghị của quý vị về cho tôi trước ngày {$reviewDueDate}.
@@ -248,8 +248,7 @@ Cảm ơn quý vị đã xem xét đề nghị này.
 
 Hướng dẫn phản biện
 
-{$reviewGuidelines}
-</field>
+{$reviewGuidelines}</field>
 			<field name="description">Email này được BTV chuyên mục gửi tới Người phản biện hỏi xem Người phản biện nhận lời hay từ chối phản biện một bài nộp. Email gửi kèm theo bài nộp dưới dạng file đính kèm. Thông điệp này được sử dụng khi Quá trình Phản biện Đính kèm Email được lựa chọn ở Bước 2, Thiết lập Tạp chí. (Nếu không, xem REVIEW_REQUEST.)</field>
 		</row>
 		<row>
@@ -286,17 +285,17 @@ Tôi sợ rằng vào thời điểm này tôi không thể phản biện bài n
 		</row>
 		<row>
 			<field name="email_key">REVIEW_COMPLETE</field>
-			<field name="subject">Hoàn thành phản biện bài viết</field>
+			<field name="subject">Hoàn thành phản biện bài nộp</field>
 			<field name="body">{$editorialContactName}:
 
-Tôi đã hoàn thành phản biện bài "{$articleTitle}" cho tạp chí {$journalName}, và đã gửi khuyến nghị, "{$recommendation}."
+Tôi đã hoàn thành phản biện bài viết "{$articleTitle}" cho tạp chí {$journalName}, và đã gửi khuyến nghị, "{$recommendation}."
 
 {$reviewerName}</field>
 			<field name="description">Email này được Người phản biện gửi cho BTV chuyên mục thông báo rằng bài phản biện đã hoàn thành và lời bình cũng như khuyến nghị đã được ghi lại trên website của tạp chí.</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_ACK</field>
-			<field name="subject">Xác nhận phản biện bài viết</field>
+			<field name="subject">Khẳng định đã nhận được phản biện</field>
 			<field name="body">{$reviewerName}:
 
 Cảm ơn quý vị đã hoàn thành phản biện bài nộp, "{$articleTitle}," cho tạp chí {$journalName}. Chúng tôi biết ơn sự đóng góp của quý vị cho chất lượng của tác phẩm mà chúng tôi xuất bản.
@@ -744,6 +743,33 @@ Nếu quý vị có bất kỳ câu hỏi nào, xin vui lòng liên lạc với 
 
 {$subscriptionContactSignature}</field>
 			<field name="description">Email này thông báo cho người đặt tạp chí rằng tài khoản đặt tạp chí của họ đã hết hạn. Email cung cấp đường dẫn của tạp chí và hướng dẫn truy cập.</field>
+		</row>
+		<row>
+			<field name="email_key">USER_VALIDATE</field>
+			<field name="subject">Xác nhận tài khoản</field>
+			<field name="body">{$userFullName}
+
+Quý vị đã khởi tạo một tài khoản với tạp chí {$journalName}, tuy nhiên trước khi quý vị sử dụng tài khoản, quý vị cần xác nhận địa chỉ email của quý vị. Để làm việc này, quý vị chỉ cần nhấp chuột vào đường dẫn sau:
+
+{$activateUrl}
+
+Trân trọng cảm ơn,
+{$principalContactSignature}</field>
+			<field name="description">Email này được gửi tới những người dùng mới đăng ký để chào mừng họ đến với hệ thống phần mềm và cung cấp thông tin về bí danh và mật khẩu.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEWER_REGISTER</field>
+			<field name="subject">Đăng ký làm Người phản biện với tạp chí {$journalName}</field>
+			<field name="body">Trên cơ sở chuyên môn của quý vị, chúng tôi đã tự đăng ký tên quý vị vào cơ sở dữ liệu người phản biện cho tạp chí {$journalName}. Việc này không hình thành bất kỳ cam kết nào về phía quý vị, mà đơn giản chỉ là cho phép chúng tôi có cơ hội đề nghị quý vị phản biện một bài nộp cho tạp chí. Khi được mời phản biện, quý vị sẽ được xem tiêu đề và tóm tắt của bài viết, và quý vị luôn có quyền nhận lời hoặc từ chối lời mời phản biện. Quý vị cũng có thể yêu cầu đưa tên quý vị ra khỏi danh sách người phản biện bất cứ lúc nào.
+
+Chúng tôi cung cấp cho quý vị một bí danh và mật khẩu sẽ được sử dụng trong tất cả các giao tiếp của quý vị với tạp chí thông qua website. Ví dụ, quý vị có thể cập nhật hồ sơ cá nhân và những chủ đề muốn phản biện
+
+Bí danh: {$username}
+Mật khẩu: {$password}
+
+Trân trọng cảm ơn,
+{$principalContactSignature}</field>
+			<field name="description">Email này được gửi tới người phản biện mới được đăng ký để chào mừng họ đến với hệ thống phần mềm và cung cấp cho họ bí danh và mật khẩu.</field>
 		</row>
 	</table>
 </data>

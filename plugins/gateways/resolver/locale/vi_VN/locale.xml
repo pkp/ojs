@@ -13,8 +13,8 @@
   -->
  
 <locale name="vi_VN" full_name="Tiếng Việt">
-	<message key="plugins.gateways.resolver.displayName">Resolver Plugin</message>
-	<message key="plugins.gateways.resolver.description">This plugin resolves issues and articles based on citation information.</message>
-	<message key="plugins.gateways.resolver.errors.errorMessage">Unable to resolve a single entity using the specified citation information. Please ensure that the citation information is comprehensive and refers to an entity in this deployment of OJS.</message>
-	<message key="plugins.gateways.resolver.exportHoldings">Export Holdings</message>
+	<message key="plugins.gateways.resolver.displayName">Công cụ Phân giải</message>
+	<message key="plugins.gateways.resolver.description">Công cụ này phân giải các số tạp chí và bài viết dựa trên thông tin trích dẫn.</message>
+	<message key="plugins.gateways.resolver.errors.errorMessage">Không thể phân giả một đối tượng sử dụng thông tin trích dẫn cụ thể đã cho. Đảm bảo rằng thông tin trích dẫn đầy đủ và tham chiếu tới một đối tượng trong phiên bản phần mềm OJS này.</message>
+	<message key="plugins.gateways.resolver.exportHoldings">Xuất kho dữ liệu</message>
 </locale>
