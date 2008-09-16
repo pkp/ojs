@@ -3,7 +3,7 @@
 /**
  * @defgroup plugins
  */
- 
+
 /**
  * @file plugins/importexport/mets/index.php
  *
