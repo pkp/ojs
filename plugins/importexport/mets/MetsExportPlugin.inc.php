@@ -5,7 +5,7 @@
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
- * 
+ *
  * @class PubMedExportPlugin
  * @ingroup plugins
  *
@@ -48,25 +48,25 @@ class METSExportPlugin extends ImportExportPlugin {
 	}
 
 	function display(&$args) {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		parent::display($args);
-		$issueDao = &DAORegistry::getDAO('IssueDAO');
-		$journal = &Request::getJournal();
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$journal =& Request::getJournal();
 		switch (array_shift($args)) {
 			case 'exportIssues':
 				$issueIds = Request::getUserVar('issueId');
 				if (!isset($issueIds)) $issueIds = array();
 				$issues = array();
 				foreach ($issueIds as $issueId) {
-					$issue = &$issueDao->getIssueById($issueId);
+					$issue =& $issueDao->getIssueById($issueId);
 					if (!$issue) Request::redirect();
-					$issues[] = &$issue;
+					$issues[] =& $issue;
 				}
 				$this->exportIssues($journal, $issues);
 				break;
 			case 'exportIssue':
 				$issueId = array_shift($args);
-				$issue = &$issueDao->getIssueById($issueId);
+				$issue =& $issueDao->getIssueById($issueId);
 				if (!$issue) Request::redirect();
 				$issues = array($issue);
 				$this->exportIssues($journal, $issues);
@@ -74,10 +74,10 @@ class METSExportPlugin extends ImportExportPlugin {
 			case 'issues':
 				// Display a list of issues for export
 				$this->setBreadcrumbs(array(), true);
-				$issueDao = &DAORegistry::getDAO('IssueDAO');
-				$issues = &$issueDao->getIssues($journal->getJournalId(), Handler::getRangeInfo('issues'));
+				$issueDao =& DAORegistry::getDAO('IssueDAO');
+				$issues =& $issueDao->getIssues($journal->getJournalId(), Handler::getRangeInfo('issues'));
 
-				$siteDao = &DAORegistry::getDAO('SiteDAO');
+				$siteDao =& DAORegistry::getDAO('SiteDAO');
 				$site = $siteDao->getSite();
 				$organization = $site->getSiteTitle();
 
@@ -93,8 +93,8 @@ class METSExportPlugin extends ImportExportPlugin {
 
 	function exportIssues(&$journal, &$issues){
 		$this->import('MetsExportDom');
-		$doc = &XMLCustomWriter::createDocument('', null);
-		$root = &XMLCustomWriter::createElement($doc, 'METS:mets');
+		$doc =& XMLCustomWriter::createDocument('', null);
+		$root =& XMLCustomWriter::createElement($doc, 'METS:mets');
 		XMLCustomWriter::setAttribute($root, 'xmlns:METS', 'http://www.loc.gov/METS/');
 		XMLCustomWriter::setAttribute($root, 'xmlns:xlink', 'http://www.w3.org/TR/xlink');
 		XMLCustomWriter::setAttribute($root, 'xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance');
@@ -102,20 +102,20 @@ class METSExportPlugin extends ImportExportPlugin {
 		XMLCustomWriter::setAttribute($root, 'TYPE', 'journal');
 		XMLCustomWriter::setAttribute($root, 'OBJID', 'J-'.$journal->getJournalId());
 		XMLCustomWriter::setAttribute($root, 'xsi:schemaLocation', 'http://www.loc.gov/METS/ http://www.loc.gov/mets/mets.xsd');
-		$HeaderNode = &MetsExportDom::createmetsHdr($doc);
-		XMLCustomWriter::appendChild($root, $HeaderNode);
+		$headerNode =& MetsExportDom::createmetsHdr($doc);
+		XMLCustomWriter::appendChild($root, $headerNode);
 		MetsExportDom::generateJournalDmdSecDom($doc, $root, $journal);
-		$fileSec = &XMLCustomWriter::createElement($doc, 'METS:fileSec');
-		$fileGrpOriginal = &XMLCustomWriter::createElement($doc, 'METS:fileGrp');
+		$fileSec =& XMLCustomWriter::createElement($doc, 'METS:fileSec');
+		$fileGrpOriginal =& XMLCustomWriter::createElement($doc, 'METS:fileGrp');
 		XMLCustomWriter::setAttribute($fileGrpOriginal, 'USE', 'original');
-		$fileGrpDerivative = &XMLCustomWriter::createElement($doc, 'METS:fileGrp');
+		$fileGrpDerivative =& XMLCustomWriter::createElement($doc, 'METS:fileGrp');
 		XMLCustomWriter::setAttribute($fileGrpDerivative, 'USE', 'derivative');
 		foreach ($issues as $issue) {
 			MetsExportDom::generateIssueDmdSecDom($doc, $root, $issue, $journal);
-			MetsExportDom::generateIssueFileSecDom($doc, $fileGrpOriginal, $issue);
-			MetsExportDom::generateIssueHtmlGalleyFileSecDom($doc, $fileGrpDerivative, $issue);
+			MetsExportDom::generateIssueFileSecDom($doc, $fileGrpOriginal, $issue, $journal);
+			MetsExportDom::generateIssueHtmlGalleyFileSecDom($doc, $fileGrpDerivative, $issue, $journal);
 		}
-		$amdSec = &MetsExportDom::createmetsamdSec($doc, $root, $journal);
+		$amdSec =& MetsExportDom::createmetsamdSec($doc, $root, $journal);
 		XMLCustomWriter::appendChild($root, $amdSec);
 		XMLCustomWriter::appendChild($fileSec, $fileGrpOriginal);
 		XMLCustomWriter::appendChild($fileSec, $fileGrpDerivative);
@@ -128,6 +128,6 @@ class METSExportPlugin extends ImportExportPlugin {
 		XMLCustomWriter::printXML($doc);
 		return true;
 	}
-
 }
+
 ?>
