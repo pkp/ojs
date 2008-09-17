@@ -51,7 +51,7 @@ class Locale extends PKPLocale {
 				// it to override. (Necessary when locale is
 				// being set, as cookie will not yet be re-set)
 				$locale = Request::getUserVar('setLocale');
-				if (empty($locale) || !in_array($locale, Locale::getSupportedLocales())) $locale = Request::getCookieVar('currentLocale');
+				if (empty($locale) || !in_array($locale, array_keys(Locale::getSupportedLocales()))) $locale = Request::getCookieVar('currentLocale');
 			} else {
 				$sessionManager = &SessionManager::getManager();
 				$session = &$sessionManager->getUserSession();
