@@ -14,13 +14,14 @@
   * $Id$
   -->
 
-<!DOCTYPE locales SYSTEM "../lib/pkp/dtd/locales.dtd">
+<!DOCTYPE locales SYSTEM "../dbscripts/xml/dtd/locales.dtd">
 
 <locales>
 	<locale key="de_DE" name="Deutsch (Deutschland)"/>
 	<locale key="en_US" name="English"/>
 	<locale key="el_GR" name="Greek"/>
 	<locale key="es_ES" name="Español (España)"/>
+	<locale key="fa_IR" name="Persian"/>
 	<locale key="fr_CA" name="Français (Canada)"/>
 	<locale key="hr_HR" name="Hrvatski"/>
 	<locale key="it_IT" name="Italiano"/>
