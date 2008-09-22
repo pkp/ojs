@@ -413,7 +413,7 @@ class UserDAO extends DAO {
 				$var = "$value%";
 				break;
 			case USER_FIELD_INTERESTS:
-				$sql .= ', user_settings us WHERE us.user_id = u.user_id AND u.setting_name = \'interests\' AND LOWER(us.setting_value) ' . ($match == 'is' ? '=' : 'LIKE') . ' LOWER(?)';
+				$sql .= ', user_settings us WHERE us.user_id = u.user_id AND us.setting_name = \'interests\' AND LOWER(us.setting_value) ' . ($match == 'is' ? '=' : 'LIKE') . ' LOWER(?)';
 				$var = $match == 'is' ? $value : "%$value%";
 				break;
 			case USER_FIELD_EMAIL:
