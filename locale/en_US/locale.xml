@@ -991,6 +991,9 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="plugins.categories.importexport">Import/Export Plugins</message>
 	<message key="plugins.categories.importexport.description">Import/Export Plugins can be used to transfer content to and from other systems.</message>
 
+	<message key="plugins.categories.oaiMetadataFormats">OAI Metadata Format Plugins</message>
+	<message key="plugins.categories.oaiMetadataFormats.description">These format plugins express metadata in OAI communications.</message>
+
 	<message key="plugins.categories.paymethod">Payment Plugins</message>
 	<message key="plugins.categories.paymethod.description">Payment Method plugins implement support for various ways of processing payments online.</message>
 

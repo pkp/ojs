@@ -341,7 +341,7 @@ class OAIDAO extends DAO {
 		// FIXME Use public ID in OAI identifier?
 		// FIXME Use "last-modified" field for datestamp?
 		$record->identifier = $this->oai->articleIdToIdentifier($row['article_id']);
-		$record->datestamp = $this->oai->UTCDate(strtotime($this->datetimeFromDB($row['date_published'])));
+		$record->datestamp = OAIUtils::UTCDate(strtotime($this->datetimeFromDB($row['date_published'])));
 		$record->sets = array($journal->getPath() . ':' . $section->getSectionAbbrev());
 
 		$record->url = Request::url($journal->getPath(), 'article', 'view', array($articleId));
@@ -432,7 +432,7 @@ class OAIDAO extends DAO {
 		$record =& new OAIRecord();
 
 		$record->identifier = $this->oai->articleIdToIdentifier($row['article_id']);
-		$record->datestamp = $this->oai->UTCDate(strtotime($this->datetimeFromDB($row['date_published'])));
+		$record->datestamp = OAIUtils::UTCDate(strtotime($this->datetimeFromDB($row['date_published'])));
 		$record->sets = array($journal->getPath() . ':' . $section->getSectionAbbrev());
 
 		return $record;

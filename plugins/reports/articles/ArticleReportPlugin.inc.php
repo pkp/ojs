@@ -94,26 +94,31 @@ class ArticleReportPlugin extends ReportPlugin {
 			'biography' => Locale::translate('user.biography'),
 			'section_title' => Locale::translate('section.title'),
 			'language' => Locale::translate('common.language'),
+			'editor_decision' => Locale::translate('submission.editorDecision'),
 			'status' => Locale::translate('common.status')
 		);
 
 		$fp = fopen('php://output', 'wt');
 		String::fputcsv($fp, array_values($columns));
 
+		import('article.Article'); // Bring in getStatusMap function
+		$statusMap =& Article::getStatusMap();
+
 		while ($row =& $articlesIterator->next()) {
-			foreach ($columns as $index => $junk) {
-				if ( $index == "article_id" ){
-					$columns[$index] = $row[$index];
-					if (isset($decisions[$row[$index]])) {
-						$columns['status'] = $decisionMessages[$decisions[$row[$index]]];
+			foreach ($columns as $index => $junk) switch ($index) {
+				case 'editor_decision':
+					if (isset($decisions[$row['article_id']])) {
+						$columns[$index] = $decisionMessages[$decisions[$row['article_id']]];
 					} else {
-						$columns['status'] = $decisionMessages[NULL];
+						$columns[$index] = $decisionMessages[null];
 					}
-				} else if ($index == "status") {
-					continue;
-				} else {
+					break;
+				case 'status':
+					$columns[$index] = Locale::translate($statusMap[$row[$index]]);
+					break;
+				default:
 					$columns[$index] = $row[$index];
-				}
+					break;
 			}
 			String::fputcsv($fp, $columns);
 			unset($row);
