@@ -853,6 +853,36 @@ class Article extends DataObject {
 	}
 
 	/**
+	 * Get a map for status constant to locale key.
+	 * @return array
+	 */
+	function &getStatusMap() {
+		static $statusMap;
+		if (!isset($statusMap)) {
+			$statusMap = array(
+				STATUS_ARCHIVED => 'submissions.archived',
+				STATUS_QUEUED => 'submissions.queued',
+				STATUS_PUBLISHED => 'submissions.published',
+				STATUS_DECLINED => 'submissions.declined',
+				STATUS_QUEUED_UNASSIGNED => 'submissions.queuedUnassigned',
+				STATUS_QUEUED_REVIEW => 'submissions.queuedReview',
+				STATUS_QUEUED_EDITING => 'submissions.queuedEditing',
+				STATUS_INCOMPLETE => 'submissions.incomplete'
+			);
+		}
+		return $statusMap;
+	}
+
+	/**
+	 * Get a locale key for the article's current status.
+	 * @return string
+	 */
+	function getStatusKey() {
+		$statusMap =& $this->getStatusMap();
+		return $statusMap[$this->getStatus()];
+	}
+
+	/**
 	 * Get submission progress (most recently completed submission step).
 	 * @return int
 	 */

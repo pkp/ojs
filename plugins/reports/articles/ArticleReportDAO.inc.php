@@ -28,7 +28,7 @@ class ArticleReportDAO extends DAO {
 		$locale = Locale::getLocale();
 
 		$result =& $this->retrieve(
-			'SELECT
+			'SELECT	a.status AS status,
 				a.article_id AS article_id,
 				COALESCE(asl1.setting_value, aspl1.setting_value) AS title,
 				COALESCE(asl2.setting_value, aspl2.setting_value) AS abstract,
