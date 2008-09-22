@@ -31,6 +31,9 @@ class JournalStatisticsDAO extends DAO {
 	 * @return array
 	 */
 	function getArticleStatistics($journalId, $sectionIds = null, $dateStart = null, $dateEnd = null) {
+		// Bring in status constants
+		import('article.Article');
+
 		$params = array($journalId);
 		if (!empty($sectionIds)) {
 			$sectionSql = ' AND (a.section_id = ?';
@@ -46,7 +49,8 @@ class JournalStatisticsDAO extends DAO {
 				a.date_submitted,
 				pa.date_published,
 				pa.pub_id,
-				d.decision
+				d.decision,
+				a.status
 			FROM	articles a
 				LEFT JOIN published_articles pa ON (a.article_id = pa.article_id)
 				LEFT JOIN edit_decisions d ON (d.article_id = a.article_id)
@@ -88,11 +92,11 @@ class JournalStatisticsDAO extends DAO {
 				$articleIds[] = $row['article_id'];
 				$returner['numSubmissions']++;
 
-				if (!empty($row['pub_id'])) {
+				if (!empty($row['pub_id']) && $row['status'] == STATUS_PUBLISHED) {
 					$returner['numPublishedSubmissions']++;
 				}
 
-				if (!empty($row['date_submitted']) && !empty($row['date_published'])) {
+				if (!empty($row['date_submitted']) && !empty($row['date_published']) && $row['status'] == STATUS_PUBLISHED) {
 					$timeSubmitted = strtotime($this->datetimeFromDB($row['date_submitted']));
 					$timePublished = strtotime($this->datetimeFromDB($row['date_published']));
 					if ($timePublished > $timeSubmitted) {
@@ -371,247 +375,6 @@ class JournalStatisticsDAO extends DAO {
 		$returner['reviewedSubmissionsCount'] = count($articleIds);
 
 		return $returner;
-	}
-
-	function &getCountryDistribution($journalId, $locale = null) {
-		if ($locale == null) $locale = Locale::getLocale();
-		$result = &$this->retrieve(
-			'SELECT DISTINCT u.country AS country FROM users u, roles r WHERE r.journal_id = ? AND r.user_id = u.user_id',
-			$journalId
-		);
-
-		$countries = array();
-		$countryDao =& DAORegistry::getDAO('CountryDAO');
-		while (!$result->EOF) {
-			$row = $result->GetRowAssoc(false);
-			array_push($countries, $countryDao->getCountry($row['country'], $locale));
-			$result->moveNext();
-		}
-
-		$result->Close();
-		unset($result);
-
-		return $countries;
-	}
-
-	/**
-	 * Generate a Journal Report between the given dates (optional)
-	 * @param $journalId int The journal to report on
-	 * @param $dateStart string The start date
-	 * @param $dateEnd string The end date
-	 */
-	function &getJournalReport($journalId, $dateStart = null, $dateEnd = null) {
-		$result = &$this->retrieve(
-			'SELECT	a.article_id,
-				pa.pub_id,
-				pa.date_published,
-				s.section_id,
-				a.date_submitted,
-				a.status
-			FROM	articles a
-				LEFT JOIN sections s ON (s.section_id = a.section_id)
-				LEFT JOIN published_articles pa ON (a.article_id = pa.article_id)
-			WHERE a.journal_id = ? AND s.section_id IS NOT NULL' .
-			($dateStart !== null ? ' AND a.date_submitted >= ' . $this->datetimeToDB($dateStart) : '') .
-			($dateEnd !== null ? ' AND a.date_submitted <= ' . $this->datetimeToDB($dateEnd) : '') .
-			' ORDER BY a.date_submitted',
-			$journalId
-		);
-		import('journal.JournalReportIterator');
-		$report =& new JournalReportIterator($journalId, $result, $dateStart, $dateEnd, REPORT_TYPE_JOURNAL);
-		return $report;
-	}
-
-	/**
-	 * Generate a Section Report between the given dates (optional)
-	 * @param $journalId int The journal to report on
-	 * @param $dateStart string The start date
-	 * @param $dateEnd string The end date
-	 */
-	function &getSectionReport($journalId, $dateStart = null, $dateEnd = null) {
-		$result = &$this->retrieve(
-			'SELECT	a.article_id,
-				pa.pub_id,
-				pa.date_published,
-				s.section_id,
-				a.date_submitted,
-				a.status
-			FROM	articles a
-				LEFT JOIN sections s ON (s.section_id = a.section_id)
-				LEFT JOIN published_articles pa ON (a.article_id = pa.article_id)
-			WHERE	a.journal_id = ? AND s.section_id IS NOT NULL' .
-			($dateStart !== null ? ' AND a.date_submitted >= ' . $this->datetimeToDB($dateStart) : '') .
-			($dateEnd !== null ? ' AND a.date_submitted <= ' . $this->datetimeToDB($dateEnd) : '') .
-			' ORDER BY s.section_id, a.date_submitted',
-			$journalId
-		);
-		import('journal.JournalReportIterator');
-		$report =& new JournalReportIterator($journalId, $result, $dateStart, $dateEnd, REPORT_TYPE_SECTION);
-		return $report;
-	}
-
-	/**
-	 * Generate a Reviewer Report between the given dates (optional)
-	 * @param $journalId int The journal to report on
-	 * @param $dateStart string The start date
-	 * @param $dateEnd string The end date
-	 */
-	function &getReviewerReport($journalId, $dateStart = null, $dateEnd = null) {
-		$result = &$this->retrieve(
-			'SELECT	ra.reviewer_id,
-				ra.quality,
-				a.article_id,
-				pa.pub_id AS pub_id,
-				pa.date_published AS date_published,
-				s.section_id,
-				a.date_submitted AS date_submitted,
-				a.status AS status
-			FROM	review_assignments ra,
-				articles a
-				LEFT JOIN sections s ON (s.section_id = a.section_id)
-				LEFT JOIN published_articles pa ON (a.article_id = pa.article_id)
-			WHERE	a.journal_id = ? AND s.section_id IS NOT NULL
-				AND ra.article_id = a.article_id ' .
-			($dateStart !== null ? ' AND a.date_submitted >= ' . $this->datetimeToDB($dateStart) : '') .
-			($dateEnd !== null ? ' AND a.date_submitted <= ' . $this->datetimeToDB($dateEnd) : '') .
-			' ORDER BY ra.reviewer_id, a.date_submitted',
-			$journalId
-		);
-		import('journal.JournalReportIterator');
-		$report =& new JournalReportIterator($journalId, $result, $dateStart, $dateEnd, REPORT_TYPE_REVIEWER);
-		return $report;
-	}
-
-	/**
-	 * Generate an Editor Report between the given dates (optional)
-	 * @param $journalId int The journal to report on
-	 * @param $dateStart string The start date
-	 * @param $dateEnd string The end date
-	 */
-	function &getEditorReport($journalId, $dateStart = null, $dateEnd = null) {
-		$result = &$this->retrieve(
-			'SELECT	ee.editor_id,
-				a.article_id,
-				pa.pub_id,
-				pa.date_published,
-				s.section_id,
-				a.date_submitted,
-				a.status AS status
-			FROM	articles a
-				LEFT JOIN edit_assignments ee ON (ee.article_id = a.article_id)
-				LEFT JOIN sections s ON (s.section_id = a.section_id)
-				LEFT JOIN published_articles pa ON (a.article_id = pa.article_id)
-			WHERE	a.journal_id = ? AND s.section_id IS NOT NULL' .
-			($dateStart !== null ? ' AND a.date_submitted >= ' . $this->datetimeToDB($dateStart) : '') .
-			($dateEnd !== null ? ' AND a.date_submitted <= ' . $this->datetimeToDB($dateEnd) : '') .
-			' ORDER BY ee.editor_id, a.date_submitted',
-			$journalId
-		);
-		import('journal.JournalReportIterator');
-		$report =& new JournalReportIterator($journalId, $result, $dateStart, $dateEnd, REPORT_TYPE_EDITOR);
-		return $report;
-	}
-
-	/**
-	 * Determine, within a given journal and date range (optional),
-	 * the maximum number of authors that a single submission has.
-	 * @param $journalId int
-	 * @param $dateStart string
-	 * @param $dateEnd string
-	 */
-	function getMaxAuthorCount($journalId, $dateStart, $dateEnd) {
-		$result = &$this->retrieve(
-			'SELECT	COUNT(aa.author_id)
-			FROM	articles a,
-				article_authors aa
-			WHERE	a.journal_id = ?
-				AND aa.article_id = a.article_id ' .
-			($dateStart !== null ? ' AND a.date_submitted >= ' . $this->datetimeToDB($dateStart) : '') .
-			($dateEnd !== null ? ' AND a.date_submitted <= ' . $this->datetimeToDB($dateEnd) : '') .
-			' GROUP BY a.article_id',
-			$journalId
-		);
-
-		$max = null;
-		while (!$result->EOF) {
-			if ($max === null || $max < $result->fields[0]) {
-				$max = $result->fields[0];
-			}
-			$result->moveNext();
-		}
-
-		$result->Close();
-		unset($result);
-
-		return $max;
-	}
-
-	/**
-	 * Determine, within a given journal and date range (optional),
-	 * the maximum number of reviewers that a single submission has.
-	 * @param $journalId int
-	 * @param $dateStart string
-	 * @param $dateEnd string
-	 */
-	function getMaxReviewerCount($journalId, $dateStart, $dateEnd) {
-		$result = &$this->retrieve(
-			'SELECT	COUNT(r.review_id)
-			FROM	articles a,
-				review_assignments r
-			WHERE	a.journal_id = ?
-				AND r.article_id = a.article_id ' .
-			($dateStart !== null ? ' AND a.date_submitted >= ' . $this->datetimeToDB($dateStart) : '') .
-			($dateEnd !== null ? ' AND a.date_submitted <= ' . $this->datetimeToDB($dateEnd) : '') .
-			' GROUP BY r.article_id',
-			$journalId
-		);
-
-		$max = null;
-		while (!$result->EOF) {
-			if ($max === null || $max < $result->fields[0]) {
-				$max = $result->fields[0];
-			}
-			$result->moveNext();
-		}
-
-		$result->Close();
-		unset($result);
-
-		return $max;
-	}
-
-	/**
-	 * Determine, within a given journal and date range (optional),
-	 * the maximum number of editors that a single submission has.
-	 * @param $journalId int
-	 * @param $dateStart string
-	 * @param $dateEnd string
-	 */
-	function getMaxEditorCount($journalId, $dateStart, $dateEnd) {
-		$result = &$this->retrieve(
-			'SELECT	COUNT(e.editor_id)
-			FROM	articles a,
-				edit_assignments e
-			WHERE	a.journal_id = ?
-				AND e.article_id = a.article_id ' .
-			($dateStart !== null ? ' AND a.date_submitted >= ' . $this->datetimeToDB($dateStart) : '') .
-			($dateEnd !== null ? ' AND a.date_submitted <= ' . $this->datetimeToDB($dateEnd) : '') .
-			' GROUP BY e.article_id',
-			$journalId
-		);
-
-		$max = null;
-		while (!$result->EOF) {
-			if ($max === null || $max < $result->fields[0]) {
-				$max = $result->fields[0];
-			}
-			$result->moveNext();
-		}
-
-		$result->Close();
-		unset($result);
-
-		return $max;
 	}
 }
 
