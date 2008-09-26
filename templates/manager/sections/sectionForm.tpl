@@ -154,6 +154,8 @@ function checkEditorAssignments() {
 </tr>
 {/if}
 </table>
+
+{if $sectionId}{* Disable section editor selection if this is a new section *}
 <div class="separator"></div>
 
 <h3>{translate key="user.role.sectionEditors"}</h3>
@@ -228,6 +230,8 @@ function checkEditorAssignments() {
 		<td colspan="5" class="endseparator">&nbsp;</td>
 	</tr>
 </table>
+
+{/if}{* $sectionId *}
 
 <p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="sections" escape=false}'" /></p>
 
