@@ -206,7 +206,9 @@ class SectionForm extends Form {
 
 		$section->setTitle($this->getData('title'), null); // Localized
 		$section->setAbbrev($this->getData('abbrev'), null); // Localized
-		$section->setReviewFormId($this->getData('reviewFormId'));
+		$reviewFormId = $this->getData('reviewFormId');
+		if ($reviewFormId === '') $reviewFormId = null;
+		$section->setReviewFormId($reviewFormId);
 		$section->setMetaIndexed($this->getData('metaIndexed') ? 0 : 1); // #2066: Inverted
 		$section->setMetaReviewed($this->getData('metaReviewed') ? 0 : 1); // #2066: Inverted
 		$section->setAbstractsNotRequired($this->getData('abstractsNotRequired') ? 1 : 0);
