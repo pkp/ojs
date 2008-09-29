@@ -131,4 +131,9 @@
 		<code function="clearDataCache" />
 		<note file="docs/release-notes/README-2.2.1" />
 	</upgrade>
+
+	<upgrade minversion="2.0.0.0" maxversion="2.2.2.0">
+		<data file="upgrade/2.2.3_update.xml" />
+		<note file="release-notes/README-2.2.3" />
+	</upgrade>
 </install>
