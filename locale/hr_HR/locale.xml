@@ -2926,8 +2926,8 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="announcement.posted">Objavljeno</message>
 	<message key="help.searchReturnResults">Povratak na rezultate pretraživanja</message>
 	<message key="payment.type.purchaseArticle">Cijena pristupa pojedinom članku</message>
-	<message key="icon.font_small.alt">Mala</message>
-	<message key="icon.font_medium.alt">Srednja</message>
-	<message key="icon.font_large.alt">Velika</message>
+	<message key="icon.font_small.alt">Mali</message>
+	<message key="icon.font_medium.alt">Srednji</message>
+	<message key="icon.font_large.alt">Veliki</message>
 	<message key="default.journalSettings.purchaseArticleFeeDescription">Plaćanje ove naknade omogućit će vam neograničen pristup, preuzimanje i štampanje ovog članka.</message>
 </locale>
