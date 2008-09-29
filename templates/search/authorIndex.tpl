@@ -24,10 +24,26 @@
 		<h3>{$firstLetter|escape}</h3>
 	{/if}
 
-	<a href="{url op="authors" path="view" firstName=$author->getFirstName() middleName=$author->getMiddleName() lastName=$author->getLastName() affiliation=$author->getAffiliation() country=$author->getCountry()}">
-		{$author->getLastName(true)|escape},
-		{$author->getFirstName()|escape}{if $author->getMiddleName()} {$author->getMiddleName()|escape}{/if}{if $author->getAffiliation()}, {$author->getAffiliation()|escape}{/if}
-	</a>
+	{assign var=lastAuthorName value=$authorName}
+	{assign var=lastAuthorCountry value=$authorCountry}
+
+	{assign var=authorAffiliation value=$author->getAffiliation()}
+	{assign var=authorCountry value=$author->getCountry()}
+
+	{assign var=authorFirstName value=$author->getFirstName()}
+	{assign var=authorMiddleName value=$author->getMiddleName()}
+	{assign var=authorLastName value=$author->getLastName()}
+	{assign var=authorName value="$authorLastName, $authorFirstName"}
+
+	{if $authorMiddleName != ''}{assign var=authorName value="$authorName $authorMiddleName"}{/if}
+	{strip}
+		<a href="{url op="authors" path="view" firstName=$authorFirstName middleName=$authorMiddleName lastName=$authorLastName affiliation=$authorAffiliation country=$authorCountry}">{$authorName|escape}</a>
+		{if $authorAffiliation}, {$authorAffiliation|escape}{/if}
+		{if $lastAuthorName == $authorName && $lastAuthorCountry != $authorCountry}
+			{* Disambiguate with country if necessary (i.e. if names are the same otherwise) *}
+			{if $authorCountry} ({$author->getCountryLocalized()}){/if}
+		{/if}
+	{/strip}
 	<br/>
 {/iterate}
 {if !$authors->wasEmpty()}

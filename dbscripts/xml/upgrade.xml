@@ -134,4 +134,9 @@
 	<upgrade minversion="2.0.0.0" maxversion="2.2.1.0">
 		<note file="release-notes/README-2.2.2" />
 	</upgrade>
+
+	<upgrade minversion="2.0.0.0" maxversion="2.2.2.0">
+		<data file="upgrade/2.2.3_update.xml" />
+		<note file="release-notes/README-2.2.3" />
+	</upgrade>
 </install>
