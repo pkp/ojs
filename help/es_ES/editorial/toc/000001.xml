@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Tabla de Contenido para el Proceso Editorial - Rol del Editor 
+  *
+  * Translated by Juan Arias, Corporación Parque Tecnológico de Mérida: juanarias@ula.ve.
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000001" locale="en_US" title="Rol del Editor" parent_topic="editorial/topic/000001">
+	<topic id="editorial/topic/000002" title="Envios" />
+	<topic id="editorial/topic/000003" title="Resumen de Envios" />
+	<topic id="editorial/topic/000044" title="Asegurar una Revisión ciega por expertos" />
+
+	<breadcrumb url="editorial/topic/000000" title="Proceso Editorial" />
+	<breadcrumb url="editorial/topic/000001" title="Rol del Editor" />
+</toc>

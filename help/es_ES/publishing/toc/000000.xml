@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Tabla de Contenidos  del Proceso de Publicación. 
+  *
+  * Translated by Juan Arias, Corporación Parque Tecnológico de Mérida: juanarias@ula.ve.
+  *
+  * $Id$
+  -->
+
+<toc id="publishing/toc/000000" locale="en_US" title="Proceso de Publicación" parent_topic="publishing/topic/000000">
+	<topic id="publishing/topic/000001" title="Crear Edición" />
+	<topic id="publishing/topic/000002" title="Horario de Envíos" />
+	<topic id="publishing/topic/000003" title="Tabla de contenidos" />
+	<topic id="publishing/topic/000004" title="Publicar" />
+	<breadcrumb url="publishing/topic/000000" title="Proceso de Publicación" />
+</toc>

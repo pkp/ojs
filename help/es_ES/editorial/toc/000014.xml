@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000014.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Tabla de Contenido para el Proceso Editorial - Rol del Corrector de Pruebas
+  *
+  * Translated by Juan Arias, Corporación Parque Tecnológico de Mérida: juanarias@ula.ve.
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000014" locale="en_US" title="Rol del Corrector de Pruebas" parent_topic="editorial/topic/000014">
+	<topic id="editorial/topic/000042" title="Envios" />
+	<topic id="editorial/topic/000043" title="Correción de Pruebas" />
+
+	<breadcrumb url="editorial/topic/000000" title="Proceso Editorial" />
+	<breadcrumb url="editorial/topic/000014" title="Rol del Corrector de Pruebas" />
+</toc>
