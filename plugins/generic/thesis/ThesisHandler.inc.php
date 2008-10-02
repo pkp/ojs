@@ -23,6 +23,7 @@ class ThesisHandler extends Handler {
 	 * Display thesis index page.
 	 */
 	function index() {
+		parent::validate();
 		ThesisHandler::setupTemplate();
 		$journal = &Request::getJournal();
 
@@ -83,6 +84,7 @@ class ThesisHandler extends Handler {
 	 * Display form to submit a thesis.
 	 */
 	function submit() {
+		parent::validate();
 		ThesisHandler::setupTemplate();
 		$journal = &Request::getJournal();
 
@@ -123,6 +125,7 @@ class ThesisHandler extends Handler {
 	 * @param $args array optional, first parameter is the ID of the thesis to display 
 	 */
 	function view($args = array()) {
+		parent::validate();
 		ThesisHandler::setupTemplate();
 		$journal = &Request::getJournal();
 
@@ -212,6 +215,7 @@ class ThesisHandler extends Handler {
 	 * Captcha support.
 	 */
 	function viewCaptcha($args) {
+		parent::validate();
 		$captchaId = (int) array_shift($args);
 		import('captcha.CaptchaManager');
 		$captchaManager =& new CaptchaManager();
@@ -231,7 +235,7 @@ class ThesisHandler extends Handler {
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
 	function setupTemplate($subclass = false) {
-		parent::validate();
+		parent::setupTemplate();
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageHierachy', array(array(Request::url(null, 'theses'), 'plugins.generic.thesis.theses')));

@@ -186,6 +186,7 @@ class CustomLocaleHandler extends Handler {
 	}
 
 	function setupTemplate(&$plugin, $subclass = true) {
+		parent::setupTemplate();
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->register_function('plugin_url', array(&$plugin, 'smartyPluginUrl'));
 		$pageHierarchy = array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'manager'), 'user.role.manager'));

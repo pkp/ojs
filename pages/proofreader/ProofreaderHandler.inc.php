@@ -108,6 +108,8 @@ class ProofreaderHandler extends Handler {
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
 	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null, $showSidebar = true) {
+		parent::setupTemplate();
+		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_SUBMISSION));
 		$templateMgr = &TemplateManager::getManager();
 		$pageHierarchy = $subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'proofreader'), 'user.role.proofreader'))
 				: array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'proofreader'), 'user.role.proofreader'));

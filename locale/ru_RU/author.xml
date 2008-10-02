@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * ojs2-devel/locale/ru_RU/author.xml
+  *
+  * Copyright (c) 2000-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Russian) locale.
+  *
+  * $Id$
+  -->
+
+<locale name="ru_RU" full_name = "Russian">
+	<message key="author.submit">Новая статья</message>
+	<message key="author.track">Активные статьи</message>
+	<message key="author.submit.submitArticle">Послать статью</message>
+	<message key="author.submit.stepsToSubmit">Пять шагов к публикации</message>
+	<message key="author.submit.step1">Шаг 1. Начало отправки</message>
+	<message key="author.submit.step2">Шаг 2. Ввод метаданных</message>
+	<message key="author.submit.step3">Шаг 3. Загрузить статью</message>
+	<message key="author.submit.step4">Шаг 4. Загрузить дополн. файлы</message>
+	<message key="author.submit.step4a">Шаг 4a. Загрузить дополн. файл</message>
+	<message key="author.submit.step5">Шаг 5. Подтверждение</message>
+	<message key="author.submit.start">1. Старт</message>
+	<message key="author.submit.metadata">2. Ввести метаданные</message>
+	<message key="author.submit.upload">3. Загрузить статью</message>
+	<message key="author.submit.supplementaryFiles">4. Загрузить дополн. файлы</message>
+	<message key="author.submit.confirmation">5. Подтверждение</message>
+	<message key="author.submit.cancelSubmission">You can complete this submission at a later date by selecting Active Submissions from the Author home.</message>
+	<message key="author.submit.notAccepting">This journal is not accepting submissions at this time.</message>
+	<message key="author.submissions.uploadCopyeditedVersion">Загрузить редакционный файл</message>
+	<message key="author.submissions.proofreadingCorrections">Исправления</message>
+	<message key="author.submissions.confirmDelete">Хотите стереть эту неполную статью?</message>
+	<message key="author.submissions.viewStatus">Посмотреть статус</message>
+	<message key="author.submissions.noSubmissions">Нет статей.</message>
+	<message key="author.submit.journalSection">Раздел журнала</message>
+	<message key="author.submit.selectSection">Выбрать раздел...</message>
+	<message key="author.submit.submissionChecklist">Требования к статье</message>
+	<message key="author.submit.submissionChecklistDescription">Авторы должны подтвердить, что их материал соответствует всем приведенным ниже условиям. Только в этом случае они могут перейти к следующему этапу депонирования статьи (Шаг 2).</message>
+	<message key="author.submit.verifyChecklist">Маркируйте все указанные условия</message>
+	<message key="author.submit.commentsForEditor">Вниманию редакторов</message>
+	<message key="author.submit.comments">Введите текст (по желанию)</message>
+	<message key="author.submit.form.sectionRequired">Выберите раздел журнала</message>
+	<message key="author.submit.privacyStatement">Заявление о конфиденциальности</message>
+	<message key="author.submit.selectPrincipalContact">Лицо (автор) для связи с редактором.</message>
+	<message key="author.submit.addAuthor">Добавить автора</message>
+	<message key="author.submit.deleteAuthor">Удалить автора</message>
+	<message key="author.submit.submissionSupportingAgencies">Спонсоры Вашего исследования</message>
+	<message key="author.submit.submissionSupportingAgenciesDescription">Укажите организацию или институт, которые предоставили Вам материальную и/или финансовую поддержку.</message>
+	<message key="author.submit.agencies">Организации</message>
+	<message key="author.submit.coverageInstructions">Опишите географический и исторический (временной) охват Вашего исследования.</message>
+	<message key="author.submit.subjectClassInstructions">Используйте классификационную схему, указанную под линком внизу, для выбора подходящей категории (или классификационного номера) для Вашего исследования.</message>
+	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Russian=ru. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Дополнительные коды</a>.]]></message>
+	<message key="author.submit.form.authorRequired">Требуется минимум один автор.</message>
+	<message key="author.submit.form.authorRequiredFields">Нужно ввести имя, фамилию и мейл каждого автора.</message>
+	<message key="author.submit.form.titleRequired">Введите название Вашей статьи</message>
+	<message key="author.submit.submissionFile">Файл статьи</message>
+	<message key="author.submit.uploadSubmissionFile">Загрузить файл</message>
+	<message key="author.submit.replaceSubmissionFile">Заменить файл</message>
+	<message key="author.submit.noSubmissionFile">Нет загруженных файлов</message>
+	<message key="author.submit.noSupplementaryFiles">Нет дополнительных файлов к этой статье.</message>
+	<message key="author.submit.backToSupplementaryFiles">Обратно к дополнительным файлам</message>
+	<message key="author.submit.confirmDeleteSuppFile">Стереть этот дополнительный файл?</message>
+	<message key="author.submit.uploadSuppFile">Загрузить дополнительный файл</message>
+	<message key="author.submit.addSupplementaryFile">Добавить дополнительный файл</message>
+	<message key="author.submit.editSupplementaryFile">Редактировать дополнительный файл</message>
+	<message key="author.submit.supplementaryFileData">Метаданные дополнительного файла</message>
+	<message key="author.submit.supplementaryFileDataDescription">Для индексации дополнительного материала нужна следующая информация.</message>
+	<message key="author.submit.supplementaryFileUpload">Дополнительный файл</message>
+	<message key="author.submit.suppFile.createrOrOwner">Автор (собственник) файла</message>
+	<message key="author.submit.suppFile.researchInstrument">Исследовательские инструменты</message>
+	<message key="author.submit.suppFile.researchMaterials">Материалы исследования</message>
+	<message key="author.submit.suppFile.researchResults">Результаты исследования</message>
+	<message key="author.submit.suppFile.transcripts">Транскрипты</message>
+	<message key="author.submit.suppFile.dataAnalysis">Анализ данных</message>
+	<message key="author.submit.suppFile.dataSet">Данные</message>
+	<message key="author.submit.suppFile.sourceText">Чистый текст</message>
+	<message key="author.submit.suppFile.briefDescription">Краткое описание</message>
+	<message key="author.submit.suppFile.contributorOrSponsor">Спонсор</message>
+	<message key="author.submit.suppFile.availableToPeers">Представить чистый текст (без метаданных) рецензентам, чтобы статья могла быть рецензирована анонимно.</message>
+	<message key="author.submit.suppFile.publisherDescription">Описание: Использовать только для официально опубликованных материалов.</message>
+	<message key="author.submit.suppFile.dateDescription">Дата создания инструмента.</message>
+	<message key="author.submit.suppFile.sourceDescription">Название исследования или других источников.</message>
+	<message key="author.submit.suppFile.specifyOtherType">Уточнить какие</message>
+	<message key="author.submit.suppFile.noFile">Нет загруженных материалов</message>
+	<message key="author.submit.suppFile.form.titleRequired">Введите название дополнительного файла</message>
+	<message key="author.submit.suppFile.form.subjectRequired">Введите предмет</message>
+	<message key="author.submit.suppFile.form.descriptionRequired">Введите описание</message>
+	<message key="author.submit.noFiles">У этой статьи нет прикрепленных файлов</message>
+	<message key="author.submit.filesSummary">Резюме файлов</message>
+	<message key="author.submit.finishSubmission">Закончить отправку</message>
+	<message key="author.submit.submissionComplete">Статья отправлена. Спасибо.</message>
+	<message key="author.article.uploadAuthorVersion">Upload Author Version</message>
+	<message key="author.article.copyeditedFile">Copyedited File</message>
+	<message key="author.article.authorRevisedFile">Author File</message>
+</locale>

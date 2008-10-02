@@ -117,6 +117,16 @@ class Handler extends PKPHandler {
 
 		return $returner;
 	}
+
+	/**
+	 * Set up the template.
+	 */
+	function setupTemplate() {
+		parent::setupTemplate();
+		Locale::requireComponents(array(
+			LOCALE_COMPONENT_OJS_COMMON
+		));
+	}
 }
 
 ?>

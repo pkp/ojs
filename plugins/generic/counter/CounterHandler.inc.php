@@ -210,6 +210,7 @@ class CounterHandler extends Handler {
 	 * @param $subclass boolean set to true if caller is below this handler in the heirarchy
 	 */
 	function setupTemplate($subclass = false) {
+		parent::setupTemplate();
 		$templateMgr = &TemplateManager::getManager();
 
 		$pageHierarchy = array(array(Request::url(null, 'user'), 'navigation.user'));

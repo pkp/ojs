@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * ojs2-devel/locale/de_DE/author.xml
+  *
+  * Copyright (c) 2000-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
+  *
+  * $Id$
+  -->
+
+<locale name="de_DE" full_name = "Deutsch (Deutschland)">
+	<message key="author.submit">Neue Eingabe</message>
+	<message key="author.track">Bestehende Eingaben</message>
+	<message key="author.submit.submitArticle">Beitrag einreichen</message>
+	<message key="author.submit.stepsToSubmit">Fünf Schritte zur Eingabe </message>
+	<message key="author.submit.step1">Schritt 1. Eingabe beginnen</message>
+	<message key="author.submit.step2">Schritt 2. Metadaten des Beitrags eingeben </message>
+	<message key="author.submit.step3">Schritt 3. Beitrag hochladen</message>
+	<message key="author.submit.step4">Schritt 4. Zusatzdateien hochladen</message>
+	<message key="author.submit.step4a">Schritt 4a. Zusatzdatei hinzufügen</message>
+	<message key="author.submit.step5">Schritt 5. Eingabe bestätigen</message>
+	<message key="author.submit.start">1. Beginn</message>
+	<message key="author.submit.metadata">2. Metadaten eingeben</message>
+	<message key="author.submit.upload">3. Beitrag hochladen</message>
+	<message key="author.submit.supplementaryFiles">4. Zusatzdateien hochladen</message>
+	<message key="author.submit.confirmation">5. Eingabe bestätigen</message>
+	<message key="author.submit.cancelSubmission">Sie können die Eingabe auch später beenden, indem Sie Aktuelle Eingaben auf der Eingangsseite des Verfassers auswählen.</message>
+	<message key="author.submit.notAccepting">Die Zeitschrift nimmt zur Zeit keine Eingaben an.</message>
+	<message key="author.submissions.uploadCopyeditedVersion">Bearbeitete Datei hochladen</message>
+	<message key="author.submissions.proofreadingCorrections">Korrektur</message>
+	<message key="author.submissions.confirmDelete">Sind Sie sicher, dass Sie diese unvollständige Eingabe löschen wollen?</message>
+	<message key="author.submissions.viewStatus">Zustand der Eingabe anzeigen</message>
+	<message key="author.submissions.noSubmissions">Keine Eingaben.</message>
+	<message key="author.submit.journalSection">Rubrik der Zeitschrift</message>
+	<message key="author.submit.selectSection">Wählen Sie eine Rubrik...</message>
+	<message key="author.submit.submissionChecklist">Prüfliste für die Eingabe</message>
+	<message key="author.submit.submissionChecklistDescription">Überprüfen Sie im Folgenden, dass die Zeitschrift den Beitrag in Betracht ziehen kann (Kommentare für die Redaktion können weiter unten hinzugefügt werden).</message>
+	<message key="author.submit.verifyChecklist">Überprüfen Sie alle Punkte der Prüfliste bevor Sie mit der Eingabe fortfahren </message>
+	<message key="author.submit.copyrightNoticeAgree">Die Verfasser sind mit diesem Copyrightparagraphen zu den Autorenrechten für den Fall der Veröffentlichung des Beitrags in dieser Zeitschrift einverstanden. (Kommentare für den Redakteur können unten angefügt werden.</message>
+	<message key="author.submit.copyrightNoticeAgreeRequired">Sie müssen der Copyrightnote zustimmen, bevor Sie fortfahren.</message>
+	<message key="author.submit.commentsForEditor">Kommentare für den Redakteur</message>
+	<message key="author.submit.comments">Text eingeben (optional)</message>
+	<message key="author.submit.form.sectionRequired">Wählen Sie eine passende Rubrik für den Beitrag.</message>
+	<message key="author.submit.privacyStatement">Datenschutzmaßgaben der Zeitschrift</message>
+	<message key="author.submit.selectPrincipalContact">Hauptkontakt für die redaktionelle Korrespondenz.</message>
+	<message key="author.submit.addAuthor">Verfasser hinzufügen</message>
+	<message key="author.submit.deleteAuthor">Verfasser entfernen</message>
+	<message key="author.submit.submissionSupportingAgencies">Unterstützende Organismen</message>
+	<message key="author.submit.submissionSupportingAgenciesDescription">Organismen benennen, die den vorliegenden Beitrag unterstützt oder finanziert haben.</message>
+	<message key="author.submit.agencies">Organismen</message>
+	<message key="author.submit.coverageInstructions">Bezieht sich auf eine räumlich-geographische Zuordnung, auf einen chronologischen oder historischen Zeitraum und/oder auf Charakteristika der Forschungsgegenstände.</message>
+	<message key="author.submit.subjectClassInstructions">Klassifizierungsbegriffe aus der Hyperlinkklassifizierung oder, falls passend, Zahlen verwenden.</message>
+	<message key="author.submit.languageInstructions"><![CDATA[englisch=an; französisch=fr; spanisch=es; deutsch=de. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">zusätzliche Kodierungen</a>.]]></message>
+	<message key="author.submit.form.authorRequired">Mindestens ein Verfasser erforderlich.</message>
+	<message key="author.submit.form.authorRequiredFields">Vorname, Name, Emailadresse für jeden Verfasser erforderlich.</message>
+	<message key="author.submit.form.titleRequired">Bitte den Titel Ihres Beitrags eingeben.</message>
+	<message key="author.submit.submissionFile">Datei des Beitrags</message>
+	<message key="author.submit.uploadSubmissionFile">Datei des Beitrags hochladen</message>
+	<message key="author.submit.replaceSubmissionFile">Datei des Beitrags ersetzen</message>
+	<message key="author.submit.noSubmissionFile">Keine Datei zum Beitrag hochgeladen.</message>
+	<message key="author.submit.noSubmissionConfirm">Sind Sie sicher, dass Sie, ohne den Beitrag hochzuladen, fortfahren wollen?</message>
+	<message key="author.submit.noSupplementaryFiles">Der Eingabe wurden keine Zusatzdateien beigegeben.</message>
+	<message key="author.submit.backToSupplementaryFiles">Zurück zu Zusatzdateien</message>
+	<message key="author.submit.confirmDeleteSuppFile">Sind Sie sicher, dass Sie diese Zusatzdatei löschen wollen?</message>
+	<message key="author.submit.uploadSuppFile">Zusatzdatei hochladen</message>
+	<message key="author.submit.addSupplementaryFile">Zusatzdatei hinzufügen</message>
+	<message key="author.submit.editSupplementaryFile">Zusatzdatei ändern</message>
+	<message key="author.submit.supplementaryFileData">Metadaten der Zusatzdatei</message>
+	<message key="author.submit.supplementaryFileDataDescription"> Zusätzliche Materialien werden indiziert indem zur hochgeladenen Datei die folgenden Metadaten angegeben werden. </message>
+	<message key="author.submit.supplementaryFileUpload">Zusatzdatei</message>
+	<message key="author.submit.suppFile.createrOrOwner">Verfasser (oder Eigentümer) der Datei</message>
+	<message key="author.submit.suppFile.researchInstrument">Untersuchungsinstrument</message>
+	<message key="author.submit.suppFile.researchMaterials">Forschungsmaterial </message>
+	<message key="author.submit.suppFile.researchResults">Forschungsergebnisse</message>
+	<message key="author.submit.suppFile.transcripts">Transkripte</message>
+	<message key="author.submit.suppFile.dataAnalysis">Datenanalyse </message>
+	<message key="author.submit.suppFile.dataSet">Datensatz</message>
+	<message key="author.submit.suppFile.sourceText">Quellentext</message>
+	<message key="author.submit.suppFile.briefDescription">Kurze Beschreibung</message>
+	<message key="author.submit.suppFile.contributorOrSponsor">Zulieferer oder Sponsor </message>
+	<message key="author.submit.suppFile.availableToPeers">Datei den Gutachtern zugänglich machen (ohne Metadaten), sie beeinträchtigt die Anonymität nicht.</message>
+	<message key="author.submit.suppFile.publisherDescription">Nur mit regulär veröffentlichen Materialien verwenden.</message>
+	<message key="author.submit.suppFile.dateDescription">Datum der Datenerhebung oder der Erstellung des Untersuchungsinstruments.</message>
+	<message key="author.submit.suppFile.sourceDescription">Bezeichnung der Untersuchung oder andere Herkunftsbezeichnung.</message>
+	<message key="author.submit.suppFile.specifyOtherType">Genauere Bezeichnung</message>
+	<message key="author.submit.suppFile.noFile">Keine Datei hochgeladen.</message>
+	<message key="author.submit.suppFile.form.titleRequired">Bitte Titel der Zusatzdatei eingeben.</message>
+	<message key="author.submit.suppFile.form.subjectRequired">Bitte Gegenstand eingeben.</message>
+	<message key="author.submit.suppFile.form.descriptionRequired">Bitte Beschreibung eingeben.</message>
+	<message key="author.suppFile.suppFilePublicIdentificationExists">Die öffentliche Bezeichnung der Zusatzdatei existiert bereits.</message>
+	<message key="author.suppFile.publicSuppFileIdentifier">Öffentliche Bezeichnung der Zusatzdatei.</message>
+	<message key="author.submit.noFiles">Dem Beitrag wurden keine Zusatzdateien beigegeben.</message>
+	<message key="author.submit.filesSummary">Zusammenfassung</message>
+	<message key="author.submit.finishSubmission">Eingabe beenden</message>
+	<message key="author.submit.submissionComplete">Die Eingabe ist abgeschlossen. Danke für Ihr Interesse in {$revueTitre} zu veröffentlichen.</message>
+	<message key="author.submit.expedite"><![CDATA[Falls der Beitrag so wie er ist, ohne Begutachtung, Bearbeitung oder Layoutänderungen zur Veröffentlichung steht, kann er direkt zur Warteliste des Zeitplans gehen:  <a href="{$expediteUrl}" class="action">Hier klicken</a>. (Achtung: Nur die Redakteure der Zeitschrift haben diese Möglichkeit für ihre Beiträge.)]]></message>
+	<message key="author.article.uploadAuthorVersion">Verfasserversion hochladen</message>
+	<message key="author.article.copyeditedFile">Bearbeitete Datei</message>
+	<message key="author.article.authorRevisedFile">Revidierte Verfasserdatei</message>
+</locale>

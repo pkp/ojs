@@ -32,13 +32,14 @@ class IssueHandler extends Handler {
 	 */
 	function current($args = null) {
 		parent::validate(true);
+		IssueHandler::setupTemplate();
 
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 
-		$issueDao = &DAORegistry::getDAO('IssueDAO');
-		$issue = &$issueDao->getCurrentIssue($journal->getJournalId());
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$issue =& $issueDao->getCurrentIssue($journal->getJournalId());
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 
 		if ($issue != null) {
 			import('file.PublicFileManager');
@@ -135,6 +136,7 @@ class IssueHandler extends Handler {
 	 */
 	function view($args) {
 		parent::validate(true);
+		IssueHandler::setupTemplate();
 
 		$issueId = isset($args[0]) ? $args[0] : 0;
 		$showToc = isset($args[1]) ? $args[1] : '';
@@ -263,6 +265,7 @@ class IssueHandler extends Handler {
 	 */
 	function archive() {
 		parent::validate(true);
+		IssueHandler::setupTemplate();
 
 		$journal = &Request::getJournal();
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
@@ -283,6 +286,10 @@ class IssueHandler extends Handler {
 		$templateMgr->display('issue/archive.tpl');
 	}
 
+	function setupTemplate() {
+		parent::setupTemplate();
+		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_READER));
+	}
 }
 
 ?>

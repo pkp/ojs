@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * ojs2-devel/locale/no_NO/editor.xml
+  *
+  * Copyright (c) 2000-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the no_NO (Norwegian) locale.
+  *
+  * $Id$
+  -->
+
+<locale name="no_NO" full_name = "Norwegian">
+	<message key="editor.home">Ansvarlig redaktør</message>
+	<message key="editor.submissionsAndPublishing">Manuskript og publisering</message>
+	<message key="editor.submissionQueue">Manuskriptarbeidsplan</message>
+	<message key="editor.submissionArchive">Manuskriptarkiv</message>
+	<message key="editor.publishing">Publisering</message>
+	<message key="editor.publishedIssues">Publiserte Utgaver</message>
+	<message key="editor.allSections">Alle Tidsskriftseksjoner</message>
+	<message key="editor.submissionArchive.noSubmissions">Ingen manuskript i arkivet.</message>
+	<message key="editor.submissionArchive.saveChanges">Lagre endringer til arkivert manuskript? Manuskript som er merket for sletting vil bli slettet for alltid.</message>
+	<message key="editor.submissionArchive.confirmDelete">Er du sikker på at du vil slette dette manuskriptet for alltid?</message>
+	<message key="editor.submissionReview.confirmDecision">Er du sikker på at du vil registrere denne beslutningen?</message>
+	<message key="editor.submissionReview.notes">Ventet-ferdig viser antall uker som gjenstår til vurderingens ventet-dato. Eller (-) uker på overtid. Ventet-datoen skrives inn når en fagkonsulent aksepterer forespørselen om vurderingsoppdrag.</message>
+	<message key="editor.notifyUsers">Varsle Brukere</message>
+	<message key="editor.usersNotified">Brukere varslet</message>
+	<message key="editor.notifyUsers.allUsers">Send denne meldingen til alle brukere som er knyttet til dette tidsskriftet ({$count} brukere)</message>
+	<message key="editor.notifyUsers.interestedUsers">Send denne meldingen til de brukerne som er knyttet til dette tidsskriftet, og som har oppgitt at de ønsker å holdes orientert ({$count} brukere)</message>
+	<message key="editor.notifyUsers.includeToc">Inkluder innholdsoversikten fra denne utgaven:</message>
+	<message key="editor.editorAdministration">Ansvarlig redaktør Administration</message>
+	<message key="editor.issues.createIssue">Opprett utgave</message>
+	<message key="editor.issues.backIssues">Tidligere utgaver</message>
+	<message key="editor.issues.futureIssues">Framtidige Utgaver</message>
+	<message key="editor.issues.currentIssue">Nyeste utgave</message>
+	<message key="editor.issues.numArticles">Element</message>
+	<message key="editor.issues.noArticles">Ingen elementer er for øyeblikket planlagt for denne utgaven.</message>
+	<message key="editor.issues.confirmDelete">Er du sikker på at du vil slette denne utgaven for alltid?</message>
+	<message key="editor.issues.published">Publisert</message>
+	<message key="editor.issues.unpublished">Ikke publisert</message>
+	<message key="editor.issues.volumeRequired">Volum er påkrevet for utgaven.</message>
+	<message key="editor.issues.numberRequired">Nummer er påkrevet for utgaven.</message>
+	<message key="editor.issues.yearRequired">År er påkrevet for utgaven.</message>
+	<message key="editor.issues.issueIdentification">Utgaveidentifikasjon</message>
+	<message key="editor.issues.publicIssueIdentifier">Offentlig utgaveidentifikator</message>
+	<message key="editor.issues.description">Beskrivelse</message>
+	<message key="editor.issues.accessStatus">Tilgangsstatus</message>
+	<message key="editor.issues.accessDate">Open Access dato</message>
+	<message key="editor.issues.invalidAccessDate">Tilgangsdato er ikke gyldig.</message>
+	<message key="editor.issues.issuePublicIdentificationExists">Offentlig utgaveidentifikasjon finnes allerede.</message>
+	<message key="editor.issues.coverPage">Forsidebilde</message>
+	<message key="editor.issues.coverPageInstructions">(Tillatte format: .gif, .jpg, eller .png )</message>
+	<message key="editor.issues.uploaded">Opplastet</message>
+	<message key="editor.issues.remove">Fjern</message>
+	<message key="editor.issues.proofed">Korrigert</message>
+	<message key="editor.issues.removeCoverPage">Fjern forsidebilde?</message>
+	<message key="editor.issues.invalidCoverPageFormat">Ugyldig forside format. Aksepterte format er .gif, .jpg, eller .png.</message>
+	<message key="editor.issues.styleFile">Stylesheet</message>
+	<message key="editor.issues.invalidStyleFormat">Ugyldig stylesheetformat. Sjekk at innsendt fil er en gyldig CSS. (Merk at stylesheets med som innledes med kommentarer kan bli avvist.)</message>
+	<message key="editor.issues.removeStyleFile">Fjern stylesheet?</message>
+	<message key="editor.issues.coverPageCaption">Forside caption</message>
+	<message key="editor.issues.showCoverPage">Opprett tilpasset forside for denne utgaven.</message>
+	<message key="editor.issues.openAccess">Open Access</message>
+	<message key="editor.issues.subscription">Abonnement</message>
+	<message key="editor.issues.identification">Identifikasjon</message>
+	<message key="editor.issues.access">Tilgang</message>
+	<message key="editor.issues.cover">Forside</message>
+	<message key="editor.issues.confirmIssueDelete">Alle artikler vil bli sendt tilbake til manusbehandlingskøen, og alle tilknyttete filer vil bli fjernet for alltid.  Er du sikker på at du vil fjerne denne utgaven?</message>
+	<message key="editor.issues.resetSectionOrder"><![CDATA[Denne utgaven bruker tilpasset seksjonsorden. <a href="{$url}" class="action">Tilbakestill til default</a>]]></message>
+	<message key="editor.issues.issueData">Utgavedata</message>
+	<message key="editor.issues.saveChanges">Lagre endringer til innholdsoversikten?</message>
+	<message key="editor.issues.default">Default</message>
+	<message key="editor.issues.order">Ordne</message>
+	<message key="editor.issues.publicId">Offentlig Id</message>
+	<message key="editor.issues.publishIssue">Publiser utgaven</message>
+	<message key="editor.issues.previewIssue">Forhåndsvis utgaven</message>
+	<message key="editor.issues.preview">(Forhåndsvis)</message>
+	<message key="editor.issues.confirmPublish">Er du sikker på at du vil publisere den nye utgaven?</message>
+	<message key="editor.issues.publicArticleIdExists">Kan ikke lagre offentlig id for artikkel:</message>
+	<message key="editor.issues.noLiveIssues">Ingen akive Utgaver</message>
+	<message key="editor.issues.open">Nå åpent</message>
+	<message key="editor.issues.pages">Sider</message>
+	<message key="editor.navigation.issues">Utgaver</message>
+	<message key="editor.navigation.futureIssues">Framtidige Utgaver</message>
+	<message key="editor.navigation.createIssue">Opprett utgave</message>
+	<message key="editor.navigation.issueArchive">Tidligere utgaver</message>
+	<message key="editor.article.designateReviewVersion">Registrer originalfilen som Fagvurderingsversjon</message>
+	<message key="editor.article.uploadReviewVersion">Last opp en omarbeidet Fagvurderingsversjon</message>
+	<message key="editor.article.showSuppFile">Vis fram filen til fagkonsulenter</message>
+	<message key="editor.article.layoutAndProof">Layout &amp; Korrektur</message>
+	<message key="editor.article.clear">Tøm</message>
+	<message key="editor.article.clearReviewer">Tøm fagkonsulent</message>
+	<message key="editor.article.changeSection">Endre Seksjon</message>
+	<message key="editor.article.setDueDate">Sett Ventet-dato</message>
+	<message key="editor.article.addReviewer">Legg til Fagkonsulent</message>
+	<message key="editor.article.toReviewer">Til Fagkonsulent</message>
+	<message key="editor.article.notifyReviewer">Send beskjed til Fagkonsulent</message>
+	<message key="editor.article.initiateReview">Sett i gang Fagvurdering</message>
+	<message key="editor.article.cancelReview">Avbryt Bestilling</message>
+	<message key="editor.article.clearReview">Tøm fagvurdering</message>
+	<message key="editor.article.enterRecommendation">Skriv inn Anbefaling</message>
+	<message key="editor.article.enterReviewerRecommendation">Skriv inn fagkonsulentens Anbefaling</message>
+	<message key="editor.article.recommendation">Anbefaling</message>
+	<message key="editor.article.selectReviewer">Velg Fagkonsulent</message>
+	<message key="editor.article.replaceReviewer">Erstatt Fagkonsulent</message>
+	<message key="editor.article.editorToEnter">Redaktøren skal kunne skrive inn anbefaling/kommentarer for fagkonsulent</message>
+	<message key="editor.article.uploadReviewForReviewer">Last opp vurderingsoppdrag</message>
+	<message key="editor.article.peerReviewOptions">Fagfellevurdering-valg</message>
+	<message key="editor.article.decision">Beslutning</message>
+	<message key="editor.article.noEditorSelected">Ingen redaktør valgt.</message>
+	<message key="editor.article.recordDecision">Journalfør beslutning</message>
+	<message key="editor.article.cannotRecord">Seksjonsredaktør ikke registrert.</message>
+	<message key="editor.article.reviewersSeeAuthorsVersion">Fagkonsulenter skal kunne se forfatterversjon</message>
+	<message key="editor.article.designateDueDate">Registrer en Ventet-dato</message>
+	<message key="editor.article.designateDueDateDescription">Skriv inn dato eller antall uker for den nye ventet-datoen.</message>
+	<message key="editor.article.todaysDate">Dags dato</message>
+	<message key="editor.article.requestedByDate">Bestilt innen dato</message>
+	<message key="editor.article.dueDateFormat">Format: YYYY-MM-DD</message>
+	<message key="editor.article.numberOfWeeks">Antall uker</message>
+	<message key="editor.article.selectCopyeditor">Oppnevn Manusredaktør</message>
+	<message key="editor.article.replaceCopyeditor">Erstatt Manusredaktør</message>
+	<message key="editor.article.editorsCopyedit">Redaktørens manusredigering</message>
+	<message key="editor.article.showAuthor">La forfatter se filen</message>
+	<message key="editor.article.showCopyeditor">Vis versjon til manusredaktør</message>
+	<message key="editor.article.rateReviewer">Fagkonsulent rangering</message>
+	<message key="editor.article.reviewerRating.veryGood">5 (best)</message>
+	<message key="editor.article.reviewerRating.good">4</message>
+	<message key="editor.article.reviewerRating.average">3</message>
+	<message key="editor.article.reviewerRating.poor">2</message>
+	<message key="editor.article.reviewerRating.veryPoor">1 (verst)</message>
+	<message key="editor.article.comments">Kommentarer</message>
+	<message key="editor.article.saveRating">Lagre rangering</message>
+	<message key="editor.article.noneSelected">Ingen valgt</message>
+	<message key="editor.article.authorProofing">Forfatter Korrekturlesing</message>
+	<message key="editor.article.archiveSubmission">Arkiver Manuskript</message>
+	<message key="editor.article.restoreToQueue">Gjenopprett til Aktive-listen</message>
+	<message key="editor.article.assignSectionEditor">Legg til Seksj.redaktør</message>
+	<message key="editor.article.assignEditor">Legg til Redaktør</message>
+	<message key="editor.article.selectEditor">Velg {$roleName}</message>
+	<message key="editor.article.selectDecision">Velg beslutning</message>
+	<message key="editor.article.decision.accept">Aksepter Manuskript</message>
+	<message key="editor.article.decision.pendingRevisions">Omarbeiding påkrevet</message>
+	<message key="editor.article.decision.resubmit">Send inn igjen for Fagvurdering</message>
+	<message key="editor.article.decision.decline">Avvis Manuskript</message>
+	<message key="editor.article.selectLayoutEditor">Velg Layoutredaktør</message>
+	<message key="editor.article.replaceLayoutEditor">Erstatt Layoutredaktør</message>
+	<message key="editor.article.reviewSubmission">Fagvurdering av manuskript</message>
+	<message key="editor.article.resubmitForReview">Send inn fil igjen til Fagvurdering</message>
+	<message key="editor.article.resubmitFileForPeerReview">Send inn den valgte filen igjen til fagvurdering</message>
+	<message key="editor.article.sendToCopyedit">Send fil til Manusredigering</message>
+	<message key="editor.article.sendFileToCopyedit">Velg fil til Manusredigering</message>
+	<message key="editor.article.selectProofreader">Oppnevn Korrekturleser</message>
+	<message key="editor.article.replaceProofreader">Erstatt Korrekturleser</message>
+	<message key="editor.article.authorComments">Forfatter kommentarer</message>
+	<message key="editor.article.proofreaderComments">Korrekturleser kommentarer</message>
+	<message key="editor.article.layoutEditorFinal">Layoutredaktør Siste</message>
+	<message key="editor.article.noDate">(dato)</message>
+	<message key="editor.submissions.showBy">Sorter etter</message>
+	<message key="editor.submissions.submitMMDD">Send inn MM-DD</message>
+	<message key="editor.submissions.activeAssignments">Aktive Oppdrag</message>
+	<message key="editor.submissions.invite">Invite</message>
+	<message key="editor.submissions.accept">Aksepter</message>
+	<message key="editor.submissions.noSubmissions">Ingen Manuskript</message>
+	<message key="editor.submissions.lastAssigned">Siste</message>
+	<message key="editor.submissions.averageTime">Uker</message>
+	<message key="editor.submissions.lastCompleted">Siste utført</message>
+	<message key="editor.article.scheduleForPublication">Planlegg for publisering i</message>
+	<message key="editor.article.scheduleForPublication.toBeAssigned">Skal oppnevnes</message>
+</locale>

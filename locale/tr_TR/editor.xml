@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * ojs2-devel/locale/tr_TR/editor.xml
+  *
+  * Copyright (c) 2000-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the tr_TR (Türkiye Türkçesi) locale.
+  *
+  * $Id$
+  -->
+
+<locale name="tr_TR" full_name = "Türkiye Türkçesi">
+	<message key="editor.home">Editör ana sayfa</message>
+	<message key="editor.submissionsAndPublishing">Yazı kayıt ve basım</message>
+	<message key="editor.submissionQueue">Kayıt sırası</message>
+	<message key="editor.submissionArchive">Kayıt arşivi</message>
+	<message key="editor.publishing">Basım</message>
+	<message key="editor.publishedIssues">Basılı sayılar</message>
+	<message key="editor.allSections">Tüm bölümler</message>
+	<message key="editor.submissionArchive.noSubmissions">Arşivde kayıtlı yazı yok</message>
+	<message key="editor.submissionArchive.saveChanges">Arşivdeki kayıtlı yazılardaki değişiklikleri kaydet? Silinmek üzere işaretli kayıtlı yazılar sistemden tamamen silinecektir</message>
+	<message key="editor.submissionArchive.confirmDelete">Bu kaydı tamamen silmek istediğinizden emin misiniz?</message>
+	<message key="editor.submissionReview.confirmDecision">Bu kararı kaydetmek istediğinizden emin misiniz?</message>
+	<message key="editor.submissionReview.notes">Hakemin inceleme için kalan haftasını göstermektedir. Rakam eksi (-) ise zamanın geçtiğini gösterir. Süre hakem incelemeyi kabul ettiğinde başlatılır.</message>
+	<message key="editor.notifyUsers">Kullanıcıları uyar</message>
+	<message key="editor.usersNotified">Kullanıcılar uyarıldı</message>
+	<message key="editor.notifyUsers.allUsers">Bu mesajı dergi ile bağlantılı tüm kullanıcılara gönder ({$count} users)</message>
+	<message key="editor.notifyUsers.interestedUsers">Bu mesajı dergi ile bağlantılı ve değişikliklerden bilgilendirilmek isteyen tüm kullanıcılara gönder ({$count} users)</message>
+	<message key="editor.notifyUsers.includeToc">Bu sayının içerik listesini ekle:</message>
+	<message key="editor.editorAdministration">Editör yönetimi</message>
+	<message key="editor.issues.createIssue">Sayı oluştur</message>
+	<message key="editor.issues.backIssues">Eski sayılar</message>
+	<message key="editor.issues.futureIssues">Gelecek sayılar</message>
+	<message key="editor.issues.currentIssue">Şimdiki sayı</message>
+	<message key="editor.issues.numArticles">Yazılar</message>
+	<message key="editor.issues.noArticles">Bu sayı için seçilmiş yazı yok</message>
+	<message key="editor.issues.confirmDelete">Bu sayıyı tamamen silmek istediğinizden emin misiniz?</message>
+	<message key="editor.issues.published">Basılmış</message>
+	<message key="editor.issues.unpublished">Basılmamış</message>
+	<message key="editor.issues.issueIdentification">Sayı kimliği</message>
+	<message key="editor.issues.publicIssueIdentifier">Genel sayı belirleyicisi</message>
+	<message key="editor.issues.description">Tanımlama</message>
+	<message key="editor.issues.accessStatus">Ulaşım durumu</message>
+	<message key="editor.issues.accessDate">Ulaşım tarihini aç</message>
+	<message key="editor.issues.invalidAccessDate">Ulaşım tarihi geçersiz</message>
+	<message key="editor.issues.issuePublicIdentificationExists">Genel tanımlama sayısı önceden belirlenmiş</message>
+	<message key="editor.issues.coverPage">Kapak görüntüsü</message>
+	<message key="editor.issues.coverPageInstructions">(Uygun dosya biçimleri: .gif, .jpg, or .png )</message>
+	<message key="editor.issues.uploaded">Yüklenmiş</message>
+	<message key="editor.issues.remove">Çıkart</message>
+	<message key="editor.issues.proofed">Prova görülmüş</message>
+	<message key="editor.issues.removeCoverPage">Kapak görüntüsünü çıkart</message>
+	<message key="editor.issues.invalidCoverPageFormat">Geçersiz kapak görüntüsü dosya biçimi. Uygun dosya biçimleri: .gif, .jpg, or .png.</message>
+	<message key="editor.issues.styleFile">Biçimlendirme dosyası</message>
+	<message key="editor.issues.invalidStyleFormat">Uygunsuz biçimlendirme dosyası. Gönderdiğiniz dosyanın geçerli bir biçimlendirme dosyası olduğundan emin olunuz (CSS).(Dikkat başlangıcında yorumlar olan biçimlendirme dosyaları reddedilebilir.)</message>
+	<message key="editor.issues.removeStyleFile">içimlendirme dosyasını sil</message>
+	<message key="editor.issues.coverPageCaption">Kapak başlığı</message>
+	<message key="editor.issues.openAccess">Ulaşıma aç</message>
+	<message key="editor.issues.subscription">Kayıt</message>
+	<message key="editor.issues.identification">Tanımlama</message>
+	<message key="editor.issues.access">Ulaşım</message>
+	<message key="editor.issues.cover">Kapak</message>
+	<message key="editor.issues.confirmIssueDelete">Tüm yazılar yayın bekleme kuyruğuna geri gönderilecek ve tüm ilişkili dosyalar kaldırılacaktır. Bu sayıyı kaldırmak istediğinizden emin misiniz?</message>
+	<message key="editor.issues.resetSectionOrder"><![CDATA[Bu sayı özelleştirilmiş bölüm sıralaması içeriyor. <a href="{$url}" class="action">Ön tanımlı sıraya geri dön</a>]]></message>
+	<message key="editor.issues.issueData">Sayı verisi</message>
+	<message key="editor.issues.saveChanges">İçindekiler kaydedilsin mi?</message>
+	<message key="editor.issues.default">Varsayılan</message>
+	<message key="editor.issues.order">Sıra</message>
+	<message key="editor.issues.publicId">Genel Numara</message>
+	<message key="editor.issues.publishIssue">Sayıyı yayınla</message>
+	<message key="editor.issues.previewIssue">Sayıyı önizle</message>
+	<message key="editor.issues.preview">(Önizleme)</message>
+	<message key="editor.issues.confirmPublish">Yeni sayıyı yayınlamak istediğinizden emin misiniz?</message>
+	<message key="editor.issues.publicArticleIdExists">Aşağıdaki makale için Genel Numara kaydedilemiyor:</message>
+	<message key="editor.issues.noLiveIssues">Yayınlanan sayılar yok</message>
+	<message key="editor.issues.open">Aç</message>
+	<message key="editor.issues.pages">Sayfalar</message>
+	<message key="editor.navigation.issues">Sayı</message>
+	<message key="editor.navigation.futureIssues">Gelecek Sayılar</message>
+	<message key="editor.navigation.createIssue">Sayı Çıkar</message>
+	<message key="editor.navigation.issueArchive">Önceki Sayılar</message>
+	<message key="editor.article.designateReviewVersion">Orjinal dosyayı Değerlendirme Sürümü olarak belirle</message>
+	<message key="editor.article.uploadReviewVersion">Düzeltilmiş Değerlendirme Dosyası Yükle</message>
+	<message key="editor.article.showSuppFile">Dosyayı hakemlere göster</message>
+	<message key="editor.article.layoutAndProof">Sayfa Düzeni ve Dizgi Provası</message>
+	<message key="editor.article.clear">Sil</message>
+	<message key="editor.article.clearReviewer">Hakemi sil</message>
+	<message key="editor.article.changeSection">Bölümü değiştir</message>
+	<message key="editor.article.setDueDate">Son tarihi ayarla</message>
+	<message key="editor.article.addReviewer">Hakem ekle</message>
+	<message key="editor.article.toReviewer">Hakeme</message>
+	<message key="editor.article.notifyReviewer">Hakeme bildir</message>
+	<message key="editor.article.initiateReview">Değerlendirmeyi başlat</message>
+	<message key="editor.article.cancelReview">İsteğini iptal et</message>
+	<message key="editor.article.clearReview">Hakemi sil</message>
+	<message key="editor.article.enterRecommendation">Öneri gir</message>
+	<message key="editor.article.enterReviewerRecommendation">Hakem önerisi gir</message>
+	<message key="editor.article.recommendation">Öneri</message>
+	<message key="editor.article.selectReviewer">Hakem seç</message>
+	<message key="editor.article.replaceReviewer">Hakemi değiştir</message>
+	<message key="editor.article.editorToEnter">Editör tarafından hakeme öneri/yorum gir</message>
+	<message key="editor.article.uploadReviewForReviewer">Değerlendirmeyi sisteme gönder</message>
+	<message key="editor.article.peerReviewOptions">Hakemli değerlendirme seçeneği</message>
+	<message key="editor.article.decision">Karar</message>
+	<message key="editor.article.noEditorSelected">Editör seçilmedi</message>
+	<message key="editor.article.recordDecision">Kararı kaydet</message>
+	<message key="editor.article.cannotRecord">Bölüm editörü daha atanmamamış.</message>
+	<message key="editor.article.reviewersSeeAuthorsVersion">Hakemlerin yazar sürümünü görmeleri için</message>
+	<message key="editor.article.designateDueDate">Son değerlendirme tarihini ayarla</message>
+	<message key="editor.article.designateDueDateDescription">Son değerlendirme tarihi olarak yeni bir tarih ya da eklenecek hafta sayısını giriniz.</message>
+	<message key="editor.article.todaysDate">Bugünün tarihi</message>
+	<message key="editor.article.requestedByDate">Tarihle istenildi</message>
+	<message key="editor.article.dueDateFormat">Biçim: (Lütfen YYYY-MM-DD olarak biçimleyin)</message>
+	<message key="editor.article.numberOfWeeks">Hafta sayısı</message>
+	<message key="editor.article.selectCopyeditor">Sayfa Düzenleyici ata</message>
+	<message key="editor.article.replaceCopyeditor">Sayfa Düzenleyicisini değiştir</message>
+	<message key="editor.article.editorsCopyedit">Editörün Sayfa Düzenlemesi</message>
+	<message key="editor.article.showAuthor">Yazarın dozyayı görmesine izin ver</message>
+	<message key="editor.article.showCopyeditor">Sürümü Sayfa Düzenleyicisine gösteriniz</message>
+	<message key="editor.article.rateReviewer">Hakemi değerlendir</message>
+	<message key="editor.article.reviewerRating.veryGood">5 Çok iyi</message>
+	<message key="editor.article.reviewerRating.good">4</message>
+	<message key="editor.article.reviewerRating.average">3 Orta</message>
+	<message key="editor.article.reviewerRating.poor">2</message>
+	<message key="editor.article.reviewerRating.veryPoor">1 Kötü</message>
+	<message key="editor.article.comments">Yorumlar</message>
+	<message key="editor.article.saveRating">Derecelendirmeyi kaydet</message>
+	<message key="editor.article.noneSelected">Hiçbiri seçilmedi</message>
+	<message key="editor.article.authorProofing">Yazar dizgi provası</message>
+	<message key="editor.article.archiveSubmission">Makale başvurusunu arşivle</message>
+	<message key="editor.article.restoreToQueue">Aktif listeyi yenile</message>
+	<message key="editor.article.assignSectionEditor">Bölüm editörü ata</message>
+	<message key="editor.article.assignEditor">Editör ata</message>
+	<message key="editor.article.selectEditor">$roleName} seçin</message>
+	<message key="editor.article.selectDecision">Karar seç</message>
+	<message key="editor.article.decision.accept">Yayına Kabul</message>
+	<message key="editor.article.decision.pendingRevisions">Düzeltme Gerekli</message>
+	<message key="editor.article.decision.resubmit">Değerlendirme için Yeniden Başvuru </message>
+	<message key="editor.article.decision.decline">Red</message>
+	<message key="editor.article.selectLayoutEditor">Mizanpajcı</message>
+	<message key="editor.article.replaceLayoutEditor">Mizanpajcıyı değiştir</message>
+	<message key="editor.article.reviewSubmission">Makale başvurusunu değerlendir</message>
+	<message key="editor.article.resubmitForReview">Değerlendirme için Yeniden Başvuru Dosyası</message>
+	<message key="editor.article.resubmitFileForPeerReview">Seçilen dosyayı yaniden hakem değerlendirmesine gönder</message>
+	<message key="editor.article.sendToCopyedit">Dosyayı Sayfa Düzenleyicisine gönder</message>
+	<message key="editor.article.sendFileToCopyedit">Dosyayı Sayfa Düzenleme için seç</message>
+	<message key="editor.article.selectProofreader">Düzeltmen ata</message>
+	<message key="editor.article.replaceProofreader">Düzeltmeni değiştir</message>
+	<message key="editor.article.authorComments">Yazar yorumları</message>
+	<message key="editor.article.proofreaderComments">Düzeltmen yorumları</message>
+	<message key="editor.article.layoutEditorFinal">Son mizanpajcı</message>
+	<message key="editor.article.noDate">(tarih)</message>
+	<message key="editor.submissions.showBy">Göster</message>
+	<message key="editor.submissions.submitMMDD">Başvur AA-GG</message>
+	<message key="editor.submissions.activeAssignments">Aktif Atamalar</message>
+	<message key="editor.submissions.invite">Davet et</message>
+	<message key="editor.submissions.accept">Kabul</message>
+	<message key="editor.submissions.noSubmissions">Başvuru yok</message>
+	<message key="editor.submissions.lastAssigned">En son</message>
+	<message key="editor.submissions.averageTime">Günler</message>
+	<message key="editor.submissions.lastCompleted">Son tamamlanan</message>
+	<message key="editor.article.scheduleForPublication">Yayınlanmak üzere planlandığı sayı: </message>
+	<message key="editor.article.scheduleForPublication.toBeAssigned">Yayın planı yapılacak</message>
+</locale>

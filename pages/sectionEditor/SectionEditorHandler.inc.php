@@ -154,37 +154,27 @@ class SectionEditorHandler extends Handler {
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
 	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null, $showSidebar = true) {
-		$templateMgr = &TemplateManager::getManager();
+		parent::setupTemplate();
+		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_OJS_EDITOR));
+		$templateMgr =& TemplateManager::getManager();
 		$isEditor = Validation::isEditor();
 
 		if (Request::getRequestedPage() == 'editor') {
-			EditorHandler::setupTemplate(EDITOR_SECTION_SUBMISSIONS, $articleId, $parentPage);
 			$templateMgr->assign('helpTopicId', 'editorial.editorsRole');
 
 		} else {
 			$templateMgr->assign('helpTopicId', 'editorial.sectionEditorsRole');
-
-			$pageHierarchy = $subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, $isEditor?'editor':'sectionEditor'), $isEditor?'user.role.editor':'user.role.sectionEditor'), array(Request::url(null, 'sectionEditor'), 'article.submissions'))
-				: array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, $isEditor?'editor':'sectionEditor'), $isEditor?'user.role.editor':'user.role.sectionEditor'));
-
-			import('submission.sectionEditor.SectionEditorAction');
-			$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'sectionEditor');
-			if (isset($submissionCrumb)) {
-				$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
-			}
-			$templateMgr->assign('pageHierarchy', $pageHierarchy);
 		}
-	}
 
-	/**
-	 * Display submission management instructions.
-	 * @param $args (type)
-	 */
-	function instructions($args) {
+		$pageHierarchy = $subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, $isEditor?'editor':'sectionEditor'), $isEditor?'user.role.editor':'user.role.sectionEditor'), array(Request::url(null, 'sectionEditor'), 'article.submissions'))
+			: array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, $isEditor?'editor':'sectionEditor'), $isEditor?'user.role.editor':'user.role.sectionEditor'));
+
 		import('submission.sectionEditor.SectionEditorAction');
-		if (!isset($args[0]) || !SectionEditorAction::instructions($args[0])) {
-			Request::redirect(null, Request::getRequestedPage());
+		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'sectionEditor');
+		if (isset($submissionCrumb)) {
+			$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
 		}
+		$templateMgr->assign('pageHierarchy', $pageHierarchy);
 	}
 
 	//

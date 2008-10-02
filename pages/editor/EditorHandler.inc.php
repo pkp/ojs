@@ -467,6 +467,8 @@ class EditorHandler extends SectionEditorHandler {
 	 * @param $level int set to 0 if caller is at the same level as this handler in the hierarchy; otherwise the number of levels below this handler
 	 */
 	function setupTemplate($level = EDITOR_SECTION_HOME, $articleId = 0, $parentPage = null) {
+		parent::setupTemplate();
+
 		// Layout Editors have access to some Issue Mgmt functions. Make sure we give them
 		// the appropriate breadcrumbs and sidebar.
 		$isLayoutEditor = Request::getRequestedPage() == 'layoutEditor';

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * ojs2-devel/locale/de_DE/editor.xml
+  *
+  * Copyright (c) 2000-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
+  *
+  * $Id$
+  -->
+
+<locale name="de_DE" full_name = "Deutsch (Deutschland)">
+	<message key="editor.article.reviewForms">Gutachtenformulare</message>
+	<message key="editor.article.selectReviewForm">Gutachtenformular auswählen</message>
+	<message key="editor.article.clearReviewForm">Einträge löschen</message>
+	<message key="editor.article.confirmChangeReviewForm">Bei Änderung des Gutachtenformulars werden alle Einträge gelöscht...</message>
+	<message key="editor.home">Startseite des Redakteurs</message>
+	<message key="editor.submissionsAndPublishing">Beiträge und Veröffentlichung</message>
+	<message key="editor.submissionQueue">Warteliste der Beiträge</message>
+	<message key="editor.submissionArchive">Beitragsarchiv</message>
+	<message key="editor.publishing">Veröffentlichung</message>
+	<message key="editor.publishedIssues">Veröffentlichte Ausgaben</message>
+	<message key="editor.allSections">Alle Rubriken</message>
+	<message key="editor.submissionArchive.noSubmissions">Kein Beitrag in den Archiven.</message>
+	<message key="editor.submissionArchive.saveChanges">Änderungen der Archivliste speichern? Als zu löschen gekennzeichnete Beiträge werden engültig aus dem System entfernt.</message>
+	<message key="editor.submissionArchive.confirmDelete">Sind Sie sicher, dass Sie diesen Beitrag endgültig löschen wollen?</message>
+	<message key="editor.submissionReview.confirmDecision">Sind Sie sicher, dass Sie diese Entscheidung protokolliern wollen?</message>
+	<message key="editor.submissionReview.notes">Der Termin gibt die verbleibende Wochenzahl bis zum Fälligkeitsdatum des Gutachtens an, oder (-) die Wochenzahl der Fälligkeitsüberschreitung. Dies Feld wird gefüllt, wenn ein Gutachter die Begutachtung angenommen hat.</message>
+	<message key="editor.notifyUsers">Benutzer benachrichtigen</message>
+	<message key="editor.usersNotified">Benutzer benachrichtigt</message>
+	<message key="editor.notifyUsers.allUsers">Nachricht allen Benutzern der Zeischrift  ({$count} Benutzer) senden</message>
+	<message key="editor.notifyUsers.interestedUsers">Nachricht Benutzern senden, die angegeben haben, dass Sie auf dem Laufenden gehalten werden wollen ({$count} Benutzer)</message>
+	<message key="editor.notifyUsers.includeToc">Das Inhaltsverzeichnis dieser Nummer anfügen:</message>
+	<message key="editor.editorAdministration">Redakteurverwaltung</message>
+	<message key="editor.issues.createIssue">Ausgabe erstellen</message>
+	<message key="editor.issues.backIssues">Frühere Ausgaben</message>
+	<message key="editor.issues.futureIssues">Zukünftige Ausgaben</message>
+	<message key="editor.issues.currentIssue">Laufende Ausgabe</message>
+	<message key="editor.issues.numArticles">Zahl der Beiträge</message>
+	<message key="editor.issues.noArticles">Zur Zeit kein Beitrag im Zeitplan für diese Ausgabe.</message>
+	<message key="editor.issues.confirmDelete">Sind Sie sicher, dass Sie diese Ausgabe endgültig entfernen wollen?</message>
+	<message key="editor.issues.published">Veröffentlicht</message>
+	<message key="editor.issues.unpublished">Unveröffentlicht</message>
+	<message key="editor.issues.issueIdentification">Signatur der Ausgabe </message>
+	<message key="editor.issues.publicIssueIdentifier">Öffentliche Signatur </message>
+	<message key="editor.issues.description">Beschreibung</message>
+	<message key="editor.issues.accessStatus">Zugangsstatus</message>
+	<message key="editor.issues.accessDate">Datum für freien Zugang</message>
+	<message key="editor.issues.invalidAccessDate">Zugangsdatum ungültig.</message>
+	<message key="editor.issues.issuePublicIdentificationExists">Die öffentliche Kennung existiert bereits.</message>
+	<message key="editor.issues.coverPage">Graphik der Umschlagseite</message>
+	<message key="editor.issues.coverPageInstructions">(Gültige Formate : .gif, .jpg, ou .png )</message>
+	<message key="editor.issues.uploaded">Hochgeladen</message>
+	<message key="editor.issues.remove">Entfernen</message>
+	<message key="editor.issues.proofed">Geprüft</message>
+	<message key="editor.issues.removeCoverPage">Graphik der Umschlagseite entfernen?</message>
+	<message key="editor.issues.invalidCoverPageFormat">Format der Umschlagseite ungültig. Gültig sind die Formate .gif, .jpg, ou .png.</message>
+	<message key="editor.issues.styleFile">Stylesheet</message>
+	<message key="editor.issues.invalidStyleFormat">Format des Stylesheet ungültig. Vergewissern Sie sich, dass die hochgeladene Datei eine gültige .css Datei ist.</message>
+	<message key="editor.issues.removeStyleFile">Stylesheet entfernen</message>
+	<message key="editor.issues.coverPageCaption">Legende der Umschlagseite</message>
+	<message key="editor.issues.openAccess">Freier Zugang</message>
+	<message key="editor.issues.subscription">Abonnement</message>
+	<message key="editor.issues.identification">Identifizierung</message>
+	<message key="editor.issues.access">Zugang</message>
+	<message key="editor.issues.cover">Umschlagseite</message>
+	<message key="editor.issues.confirmIssueDelete">Alle Beiträge gehen zur Veröffentlichungswarteliste zurück und alle Zusatzdateien werden unwiederbringlich gelöscht. Sind Sie sicher, dass Sie diese Ausgabe entfernen wollen?</message>
+	<message key="editor.issues.resetSectionOrder"><![CDATA[Diese Ausgabe hat eine spezielle Rubrikenreihenfolge. <a href="{$url}" class="action">Auf den Standard zurücksetzen</a>]]></message>
+	<message key="editor.issues.issueData">Daten der Ausgabe</message>
+	<message key="editor.issues.saveChanges">Änderungen im Inhaltsverzeichnis speichern?</message>
+	<message key="editor.issues.default">Standard</message>
+	<message key="editor.issues.order">Reihenfolge</message>
+	<message key="editor.issues.publicId">Öffentliche Signatur</message>
+	<message key="editor.issues.publishIssue">Ausgabe veröffentlichen</message>
+	<message key="editor.issues.previewIssue">Voransicht der Nummer</message>
+	<message key="editor.issues.preview">(Voransicht)</message>
+	<message key="editor.issues.confirmPublish">Sind Sie sicher, dass Sie die neue Nummer veröffentlichen wollen?</message>
+	<message key="editor.issues.publicArticleIdExists">Die öffentliche Kennung konnte nicht gespeichert werden für Beitrag:</message>
+	<message key="editor.issues.noLiveIssues">Keine zur Veröffentlichung anstehende Ausgaben</message>
+	<message key="editor.issues.open">Offen</message>
+	<message key="editor.issues.pages">Seiten</message>
+	<message key="editor.navigation.issues">Ausgaben</message>
+	<message key="editor.navigation.futureIssues">Zukünftige Ausgaben</message>
+	<message key="editor.navigation.createIssue">Ausgabe erstellen</message>
+	<message key="editor.navigation.issueArchive">Frühere Ausgaben</message>
+	<message key="editor.article.designateReviewVersion">Die ursprüngliche Datei als die Gutachterversion bezeichnen</message>
+	<message key="editor.article.uploadReviewVersion">Revidierte Gutachterversion hochladen</message>
+	<message key="editor.article.showSuppFile">Datei den Gutachtern vorstellen</message>
+	<message key="editor.article.layoutAndProof">Layout &amp; Korrektur</message>
+	<message key="editor.article.clear">Entfernen</message>
+	<message key="editor.article.clearReviewer">Gutachter entfernen</message>
+	<message key="editor.article.changeSection">Rubrik ändern</message>
+	<message key="editor.article.setDueDate">Frist angeben</message>
+	<message key="editor.article.addReviewer">Gutachter hinzufügen</message>
+	<message key="editor.article.toReviewer">Zum Gutachter</message>
+	<message key="editor.article.notifyReviewer">Den Gutachter benachrichtigen</message>
+	<message key="editor.article.initiateReview">Gutachten in Auftrag geben</message>
+	<message key="editor.article.cancelReview">Gutachterauftrag annullieren </message>
+	<message key="editor.article.clearReview">Gutachter löschen</message>
+	<message key="editor.article.enterRecommendation">Empfehlung eingeben</message>
+	<message key="editor.article.enterReviewerRecommendation">Empfehlung des Gutachters eingeben</message>
+	<message key="editor.article.recommendation">Empfehlung</message>
+	<message key="editor.article.selectReviewer">Gutachter auswählen</message>
+	<message key="editor.article.replaceReviewer">Den Gutachter ersetzen</message>
+	<message key="editor.article.editorToEnter">Redakteur: Empfehlungen/Kommentare für den Gutachter eingeben</message>
+	<message key="editor.article.uploadReviewForReviewer">Gutachten hochladen</message>
+	<message key="editor.article.peerReviewOptions">Optionen für die kollegiale Begutachtung</message>
+	<message key="editor.article.decision">Beurteilung</message>
+	<message key="editor.article.noEditorSelected">Kein Redakteur ausgewählt.</message>
+	<message key="editor.article.recordDecision">Beurteilung speichern</message>
+	<message key="editor.article.cannotRecord">Die Beiträge müssen einem Redakteur zugewiesen werden, bevor eine Beurteilung gespeichert werden kann. Standardmässig wird die Gutachterversion zur Redakteursversion.</message>
+	<message key="editor.article.reviewersSeeAuthorsVersion">Gutachter denen Verfasserversion zugeht</message>
+	<message key="editor.article.designateDueDate">Abgabetermin vorgeben</message>
+	<message key="editor.article.designateDueDateDescription">Geben Sie ein anderes Datum oder eine Zeitdauer in Wochen ein, falls Sie den Standardtermin für den Gutachter ändern wollen.</message>
+	<message key="editor.article.todaysDate">Heutiges Datum</message>
+	<message key="editor.article.requestedByDate">Datum der Anforderung</message>
+	<message key="editor.article.dueDateFormat">Format : JJJJ-MM-TT</message>
+	<message key="editor.article.numberOfWeeks">Wochenzahl</message>
+	<message key="editor.article.selectCopyeditor">Lektor zuweisen</message>
+	<message key="editor.article.replaceCopyeditor">Lektor ersetzen</message>
+	<message key="editor.article.editorsCopyedit">Lektorat durch Redakteur</message>
+	<message key="editor.article.showAuthor">Verfasser die Datei zur Ansicht bringen</message>
+	<message key="editor.article.showCopyeditor">Version dem Lektor zur Ansicht bringen</message>
+	<message key="editor.article.rateReviewer">Gutachter benoten</message>
+	<message key="editor.article.reviewerRating.veryGood">5 Ausgezeichnet </message>
+	<message key="editor.article.reviewerRating.good">4 Gut</message>
+	<message key="editor.article.reviewerRating.average">3 Mittelmässig</message>
+	<message key="editor.article.reviewerRating.poor">2</message>
+	<message key="editor.article.reviewerRating.veryPoor">1 Schwach</message>
+	<message key="editor.article.comments">Kommentare</message>
+	<message key="editor.article.saveRating">Benotung speichern</message>
+	<message key="editor.article.noneSelected">Keine Wahl getroffen</message>
+	<message key="editor.article.authorProofing">Korrekturlesen des Verfassers</message>
+	<message key="editor.article.archiveSubmission">Beitrag archivieren</message>
+	<message key="editor.article.restoreToQueue">Wieder in die Warteliste aufnehmen</message>
+	<message key="editor.article.assignSectionEditor">Rubrikredakteur zuweisen</message>
+	<message key="editor.article.assignEditor">Redakteur zuweisen</message>
+	<message key="editor.article.selectEditor">{$roleName} auswählen</message>
+	<message key="editor.article.selectDecision">Auswahl treffen</message>
+	<message key="editor.article.decision.accept">Beitrag annehmen</message>
+	<message key="editor.article.decision.pendingRevisions">Gutachten anhängig</message>
+	<message key="editor.article.decision.resubmit">Erneut einreichen</message>
+	<message key="editor.article.decision.decline">Beitrag ablehnen</message>
+	<message key="editor.article.selectLayoutEditor">Layoutredakteur auswählen</message>
+	<message key="editor.article.replaceLayoutEditor">Layouter ersetzen</message>
+	<message key="editor.article.reviewSubmission">Beitrag begutachten</message>
+	<message key="editor.article.resubmitForReview">Datei erneut begutachten</message>
+	<message key="editor.article.resubmitFileForPeerReview">Datei erneut zur kollegialen Begutachtung einreichen</message>
+	<message key="editor.article.sendToCopyedit">Zum Lektorat schicken</message>
+	<message key="editor.article.sendFileToCopyedit">Datei zum Lektorat senden</message>
+	<message key="editor.article.selectProofreader">Korrekturlektor zuweisen</message>
+	<message key="editor.article.replaceProofreader">Korrekturleser ersetzen</message>
+	<message key="editor.article.authorComments">Verfasserkommentare</message>
+	<message key="editor.article.proofreaderComments">Kommentare des Korrekturlesers</message>
+	<message key="editor.article.layoutEditorFinal">Endgültige Version des Layoutredakteurs.</message>
+	<message key="editor.article.noDate">(Datum)</message>
+	<message key="editor.submissions.showBy">Vorzeigen</message>
+	<message key="editor.submissions.submitMMDD">Eingereicht MM TT</message>
+	<message key="editor.submissions.activeAssignments">Bestehende Zuweisungen</message>
+	<message key="editor.submissions.invite">Einladen</message>
+	<message key="editor.submissions.accept">Annehmen</message>
+	<message key="editor.submissions.noSubmissions">Keine Beiträge</message>
+	<message key="editor.submissions.lastAssigned">Spätestens</message>
+	<message key="editor.submissions.averageTime">Tage</message>
+	<message key="editor.submissions.lastCompleted">Letzte Ergänzung</message>
+	<message key="editor.article.scheduleForPublication">Zur Veröffentlichung verplanen in</message>
+	<message key="editor.article.scheduleForPublication.toBeAssigned">Wird zugewiesen</message>
+</locale>

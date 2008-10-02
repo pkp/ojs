@@ -663,8 +663,9 @@ class IssueManagementHandler extends EditorHandler {
 	 * @param $level int set to one of EDITOR_SECTION_? defined in EditorHandler.
 	 */
 	function setupTemplate($level) {
+		parent::setupTemplate($level);
+
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('isLayoutEditor', Request::getRequestedPage() == 'layoutEditor');
-		EditorHandler::setupTemplate($level);
 	}
 }

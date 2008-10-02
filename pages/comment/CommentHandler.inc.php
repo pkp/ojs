@@ -172,6 +172,7 @@ class CommentHandler extends Handler {
 	}
 
 	function setupTemplate($article, $galleyId, $comment = null) {
+		parent::setupTemplate();
 		$templateMgr = &TemplateManager::getManager();
 		$journal =& Request::getJournal();
 

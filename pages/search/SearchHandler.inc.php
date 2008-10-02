@@ -259,7 +259,7 @@ class SearchHandler extends Handler {
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
 	function setupTemplate($subclass = false) {
-		parent::validate();
+		parent::setupTemplate();
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', 'user.searchAndBrowse');
 		$templateMgr->assign('pageHierarchy',

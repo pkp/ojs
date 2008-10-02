@@ -563,6 +563,7 @@ class SubscriptionManagerHandler extends Handler {
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
 	function setupTemplate($subclass = false) {
+		parent::setupTemplate();
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy',
 			$subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'subscriptionManager'), 'subscriptionManager.subscriptionManagement'))

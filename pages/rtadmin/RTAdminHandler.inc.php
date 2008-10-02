@@ -252,6 +252,7 @@ class RTAdminHandler extends Handler {
 	 * @param $search object The current search, if applicable
 	 */
 	function setupTemplate($subclass = false, $version = null, $context = null, $search = null) {
+		parent::setupTemplate();
 		$templateMgr = &TemplateManager::getManager();
 
 		$pageHierarchy = array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'manager'), 'manager.journalManagement'));

@@ -177,7 +177,9 @@ class LayoutEditorHandler extends Handler {
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
 	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null) {
-		$templateMgr = &TemplateManager::getManager();
+		parent::setupTemplate();
+		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_SUBMISSION));
+		$templateMgr =& TemplateManager::getManager();
 		$pageHierarchy = $subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'layoutEditor'), 'user.role.layoutEditor'))
 				: array(array(Request::url(null, 'user'), 'navigation.user'));
 

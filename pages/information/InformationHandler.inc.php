@@ -92,6 +92,7 @@ class InformationHandler extends Handler {
 	 * Initialize the template.
 	 */
 	function setupTemplate() {
+		parent::setupTemplate();
 		$journal =& Request::getJournal();
 		$templateMgr =& TemplateManager::getManager();
 		if (!$journal || !$journal->getSetting('restrictSiteAccess')) {
