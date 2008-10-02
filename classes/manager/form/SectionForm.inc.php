@@ -121,15 +121,15 @@ class SectionForm extends Form {
 	 * Initialize form data from current settings.
 	 */
 	function initData() {
+		$journal = &Request::getJournal();
+		$sectionEditorsDao =& DAORegistry::getDAO('SectionEditorsDAO');
 		if (isset($this->sectionId)) {
-			$journal = &Request::getJournal();
-			$sectionDao = &DAORegistry::getDAO('SectionDAO');
-			$section = &$sectionDao->getSection($this->sectionId, $journal->getJournalId());
+			$sectionDao =& DAORegistry::getDAO('SectionDAO');
+			$section =& $sectionDao->getSection($this->sectionId, $journal->getJournalId());
 
 			if ($section == null) {
 				unset($this->sectionId);
 			} else {
-				$sectionEditorsDao =& DAORegistry::getDAO('SectionEditorsDAO');
 				$this->_data = array(
 					'title' => $section->getTitle(null), // Localized
 					'abbrev' => $section->getAbbrev(null), // Localized
@@ -148,6 +148,10 @@ class SectionForm extends Form {
 					'unassignedEditors' => $sectionEditorsDao->getEditorsNotInSection($journal->getJournalId(), $this->sectionId)
 				);
 			}
+		} else {
+			$this->_data = array(
+				'unassignedEditors' => $sectionEditorsDao->getEditorsNotInSection($journal->getJournalId(), null)
+			);
 		}
 	}
 
