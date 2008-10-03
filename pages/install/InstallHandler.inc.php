@@ -107,7 +107,7 @@ class InstallHandler extends Handler {
 
 	function setupTemplate() {
 		parent::setupTemplate();
-		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_INSTALL));
+		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_INSTALLER));
 	}
 }
 
