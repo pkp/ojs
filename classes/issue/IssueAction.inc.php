@@ -74,12 +74,15 @@ class IssueAction {
 	 * Checks if this user is granted reader access to pre-publication articles
 	 * based on their roles in the journal (i.e. Manager, Editor, etc).
 	 * @param $journal object
+	 * @param $article object
 	 * @return bool
 	 */
-	function allowedPrePublicationAccess(&$journal) {
+	function allowedPrePublicationAccess(&$journal, &$article) {
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$user =& Request::getUser();
 		if ($user && $journal) {
+			$journalId = $journal->getJournalId();
+			$userId = $user->getUserId();
 			$subscriptionAssumedRoles = array(
 				ROLE_ID_JOURNAL_MANAGER,
 				ROLE_ID_EDITOR,
@@ -90,9 +93,14 @@ class IssueAction {
 				ROLE_ID_SUBSCRIPTION_MANAGER
 			);
 
-			$roles =& $roleDao->getRolesByUserId($user->getUserId(), $journal->getJournalId());
+			$roles =& $roleDao->getRolesByUserId($userId, $journalId);
 			foreach ($roles as $role) {
 				if (in_array($role->getRoleId(), $subscriptionAssumedRoles)) return true;
+			}
+
+			if (Validation::isAuthor($journalId)) {
+				if ($article && $article->getUserId() == $userId) return true;
+				if ($publishedArticle && $publishedArticle->getUserId() == $userId) return true;
 			}
 		}
 
@@ -104,11 +112,13 @@ class IssueAction {
 	 * @return bool
 	 */
 	function subscribedUser(&$journal, $issueId = null, $articleId = null) {
-		$user = &Request::getUser();
-		$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
+		$user =& Request::getUser();
+		$subscriptionDao =& DAORegistry::getDAO('SubscriptionDAO');
+		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId); 
 		$result = false;
 		if (isset($user) && isset($journal)) {
-			if (IssueAction::allowedPrePublicationAccess($journal)) {
+			if (IssueAction::allowedPrePublicationAccess($journal, $publishedArticle)) {
 				 $result = true;
 			} else {
 				$result = $subscriptionDao->isValidSubscription(null, null, $user->getUserId(), $journal->getJournalId());
@@ -118,8 +128,6 @@ class IssueAction {
 			// that was valid during publication date of requested content
 			if (!$result && $journal->getSetting('subscriptionExpiryPartial')) {
 				if (isset($articleId)) {
-					$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-					$publishedArticle = &$publishedArticleDao->getPublishedArticleByArticleId($articleId); 
 					if (isset($publishedArticle)) {
 						import('subscription.SubscriptionDAO');
 						$result = $subscriptionDao->isValidSubscription(null, null, $user->getUserId(), $journal->getJournalId(), SUBSCRIPTION_DATE_END, $publishedArticle->getDatePublished());

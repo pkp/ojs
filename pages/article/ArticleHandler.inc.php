@@ -341,9 +341,8 @@ class ArticleHandler extends Handler {
 		}
 
 		if (!HookRegistry::call('ArticleHandler::viewFile', array(&$article, &$galley, &$fileId))) {
-			// reuse section editor's view file function
-			import('submission.sectionEditor.SectionEditorAction');
-			SectionEditorAction::viewFile($article->getArticleId(), $fileId);
+			import('submission.common.Action');
+			Action::viewFile($article->getArticleId(), $fileId);
 		}
 	}
 
@@ -401,18 +400,20 @@ class ArticleHandler extends Handler {
 
 		import('issue.IssueAction');
 
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		$journalId = $journal->getJournalId();
 		$article = $publishedArticle = $issue = null;
+		$user =& Request::getUser();	
+		$userId = $user?$user->getUserId():0;
 
-		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		if ($journal->getSetting('enablePublicArticleId')) {
-			$publishedArticle = &$publishedArticleDao->getPublishedArticleByBestArticleId($journalId, $articleId);
+			$publishedArticle =& $publishedArticleDao->getPublishedArticleByBestArticleId($journalId, $articleId);
 		} else {
-			$publishedArticle = &$publishedArticleDao->getPublishedArticleByArticleId((int) $articleId, $journalId);
+			$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId((int) $articleId, $journalId);
 		}
 
-		$issueDao = &DAORegistry::getDAO('IssueDAO');
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		if (isset($publishedArticle)) {
 			$issue = &$issueDao->getIssueByArticleId($publishedArticle->getArticleId(), $journalId);
 		} else {
@@ -421,8 +422,8 @@ class ArticleHandler extends Handler {
 		}
 
 		// If this is an editorial user who can view unpublished/unscheduled
-		// articles, bypass further validation.
-		if (($article || $publishedArticle) && IssueAction::allowedPrePublicationAccess($journal)) {
+		// articles, bypass further validation. Likewise for its author.
+		if (($article || $publishedArticle) && (($article && IssueAction::allowedPrePublicationAccess($journal, $article) || ($publishedArticle && IssueAction::allowedPrePublicationAccess($journal, $publishedArticle))))) {
 			return array($journal, $issue, $publishedArticle?$publishedArticle:$article);
 		}
 
@@ -467,8 +468,6 @@ class ArticleHandler extends Handler {
 						if (!Validation::isLoggedIn()) {
 							Validation::redirectLogin("payment.loginRequired.forArticle");
 						}	
-						$user = &Request::getUser();	
-						$userId = $user->getUserId();
 				
 						/* if the article has been paid for then forget about everything else
 						 * and just let them access the article */
