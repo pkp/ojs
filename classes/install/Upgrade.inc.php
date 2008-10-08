@@ -23,8 +23,8 @@ class Upgrade extends Installer {
 	 * Constructor.
 	 * @param $params array upgrade parameters
 	 */
-	function Upgrade($params) {
-		parent::Installer('upgrade.xml', $params);
+	function Upgrade($params, $installFile = 'upgrade.xml', $isPlugin = false) {
+		parent::Installer($installFile, $params, $isPlugin);
 	}
 
 

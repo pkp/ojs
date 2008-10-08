@@ -11,7 +11,7 @@
   * $Id$
   -->
 
-<install version="2.2.1.0">
+<install version="2.3.0.0">
 	<code function="createDirectories"/>
 	<code function="createDatabase"/>
 	<schema file="lib/pkp/xml/pkp_schema.xml"/>

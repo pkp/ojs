@@ -11,8 +11,9 @@
   -->
 
 <!DOCTYPE version [
-	<!ELEMENT version (application, release, tag, date, info, package, patch+)>
+	<!ELEMENT version (application, type, release, tag, date, info, package, patch+)>
 	<!ELEMENT application (#PCDATA)>
+	<!ELEMENT type (#PCDATA)>
 	<!ELEMENT release (#PCDATA)>
 	<!ELEMENT tag (#PCDATA)>
 	<!ELEMENT date (#PCDATA)>
@@ -25,6 +26,7 @@
 
 <version>
 	<application>ojs2</application>
+	<type>core</type>
 	<release>2.3.0.0</release>
 	<tag>ojs-2_3_0-0</tag>
 	<date>2008-07-14</date>

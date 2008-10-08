@@ -43,6 +43,14 @@ class OJSApplication extends PKPApplication {
 	}
 
 	/**
+	 * Get the symbolic name of this application
+	 * @return string
+	 */
+	function getName() {
+		return 'ojs2';
+	}
+
+	/**
 	 * Get the locale key for the name of this application.
 	 * @return string
 	 */
