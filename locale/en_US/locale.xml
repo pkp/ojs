@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+<!DOCTYPE locale SYSTEM "../locale.dtd">
 
 <!--
   * locale.xml
@@ -1040,6 +1040,12 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.setup.issnDescription"><![CDATA[The ISSN (International Standard Serial Number) is an eight-digit number which identifies periodical publications as such, including electronic serials. It is managed by a world wide network of National Centres coordinated by an International Centre based in Paris, backed by Unesco and the French Government. A number can be obtained from the <a href="http://www.issn.org" target="_new">ISSN web site</a>.  This can be done at any point in operating the journal.]]></message>
 	<message key="manager.setup.doiPrefix">DOI Prefix</message>
 	<message key="manager.setup.doiPrefixDescription"><![CDATA[The DOI (Digital Object Identifier) Prefix is assigned by <a href="http://www.crossref.org" target="_new">CrossRef</a> and is in the format 10.xxxx (e.g. 10.1234).]]></message>
+	<message key="manager.setup.doiSuffix">DOI Suffix</message>
+	<message key="manager.setup.doiSuffixDefault">Use default pattern (%j.v%vi%i.%a).</message>
+	<message key="manager.setup.doiSuffixPattern">Use the pattern entered below to generate DOI suffixes.  Use %j for journal initials, %v for the volume number, %i for the issue number, %a for the OJS article ID, and %p for the page number.</message>
+	<message key="manager.setup.doiSuffixPattern.example">For example, vol%viss%ipp%p could create a DOI such as 10.1234/vol3iss2pp230</message>
+	<message key="manager.setup.doiSuffixDescription">A DOI suffix can take any form, but must be unique for each published item.</message>
+	<message key="manager.setup.doiSuffixCustomIdentifier">Use the "Custom Identifier" for published items as the DOI suffix (must be enabled in Step 4).</message>
 	<message key="manager.setup.mailingAddressDescription">The journal's physical location and mailing address.</message>
 	<message key="manager.setup.sectionsAndSectionEditors">Sections and Section Editors</message>
 	<message key="manager.setup.editorialReviewBoard">Editorial / Review Board</message>
@@ -1071,6 +1077,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.setup.form.contactEmailRequired">The primary contact email is required.</message>
 	<message key="manager.setup.form.supportNameRequired">The support name is required.</message>
 	<message key="manager.setup.form.supportEmailRequired">The support email is required.</message>
+	<message key="manager.setup.form.doiPrefixPattern">The DOI pattern must be in the form 10.xxxx.</message>
 
 	<!-- Setup Step 2 -->
 	<message key="manager.setup.journalPolicies">Step 2. Journal Policies</message>

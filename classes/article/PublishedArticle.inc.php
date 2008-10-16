@@ -270,14 +270,36 @@ class PublishedArticle extends Article {
 			$journal =& $journalDao->getJournal($journalId);
 		}
 
+		if (($doiPrefix = $journal->getSetting('doiPrefix')) == '') return null;
+		$doiSuffixSetting = $journal->getSetting('doiSuffix');
+
 		// Get the issue
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		$issue =& $issueDao->getIssueByArticleId($this->getArticleId());
 
-		if (!$issue || !$journal || $journal->getJournalId() != $issue->getJournalId() || ($doiPrefix = $journal->getSetting('doiPrefix')) == '') return null;
-
-		return $doiPrefix . '/' . strtolower($journal->getLocalizedSetting('initials')) . '.v' . $issue->getVolume() . 'i' . $issue->getNumber() . '.' . $this->getArticleId();
-
+		if (!$issue || !$journal || $journal->getJournalId() != $issue->getJournalId() ) return null;
+				
+		switch ( $doiSuffixSetting ) {
+			case 'customIdentifier': 
+				return $doiPrefix . '/' . $this->getBestArticleId();
+				break;	
+			case 'pattern':		
+				$suffixPattern = $journal->getSetting('doiSuffixPattern');
+				// %j - journal initials
+				$suffixPattern = String::regexp_replace('/%j/', String::strtolower($journal->getLocalizedSetting('initials')), $suffixPattern);
+				// %v - volume number  
+				$suffixPattern = String::regexp_replace('/%v/', $issue->getVolume(), $suffixPattern);
+				// %i - issue number
+				$suffixPattern = String::regexp_replace('/%i/', $issue->getNumber(), $suffixPattern);
+				// %a - article id
+				$suffixPattern = String::regexp_replace('/%a/', $this->getArticleId(), $suffixPattern);
+				// %p - page number
+				$suffixPattern = String::regexp_replace('/%p/', $this->getPages(), $suffixPattern);    
+				return $doiPrefix . '/' . $suffixPattern; 														 
+				break;
+			default:
+				return $doiPrefix . '/' . String::strtolower($journal->getLocalizedSetting('initials')) . '.v' . $issue->getVolume() . 'i' . $issue->getNumber() . '.' . $this->getArticleId();
+		}
 	}
 }
 
