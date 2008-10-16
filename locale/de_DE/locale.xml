@@ -783,8 +783,8 @@ Ihr Server unterstützt derzeit : <strong>{$supportsMBString}</strong>]]></messa
 	<message key="installer.localeInstructions">Erste Systemsprache. Falls Sie an hier nicht aufgeführten Sprachen interessiert sind, die OJS Dokumentation befragen.</message>
 	<message key="installer.additionalLocalesInstructions">Wählen Sie alle weiteren Sprachen, die das System unterstützen soll. Diese Sprachen stehen den Zeitschriften der Website zur Verfügung. Weitere Sprachen können jederzeit über die Websiteverwaltungsschnittstelle eingerichtet werden.</message>
 	<message key="installer.filesDirInstructions">Vollständigen Pfad für ein existierendes Verzeichnis angeben, das die hochgeladenen Dateien aufnimmt. Das Verzeichnis darf nicht unmittelbar im Web zugänglich sein. Stellen Sie vor der Installation sicher, dass das Verzeichnis existiert und Schreibzugang erlaubt. In Pfadbezeichnungen für Windows Vorwärts-Schrägstriche verwenden, z.B. "C:/MeineZs/dateien".</message>
-	<message key="installer.installOJS">Einrichtung Open Journal System</message>
-	<message key="installer.upgradeOJS">Aktualisierung Open Journal System</message>
+	<message key="installer.installApplication">Einrichtung Open Journal System</message>
+	<message key="installer.upgradeApplication">Aktualisierung Open Journal System</message>
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Achtung!:</strong> Falls die Einrichtung der Datenbank nicht gelungen ist, müssen vor einem erneuten Versuch die OJS Datenbank oder Tabellen unter Umständen gelöscht werden.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>WICHTIG!</h4>
 <p>Das Installationsprogramm konnte die Konfigurationsdatei nicht automatisch überschreiben. Öfnnen Sie <tt>config.inc.php</tt> in einer geeigneten Textverarbeitung und ersetzen Sie den Inhalt durch den Inhalt des untenstehenden Textfeldes, bevor Sie das System zu benutzen versuchen.</p>]]></message>

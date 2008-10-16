@@ -1017,8 +1017,8 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 
 
 
-	<message key="installer.installOJS">Install Slavica Journals</message>
-	<message key="installer.upgradeOJS">Upgrade Slavica Journals</message>
+	<message key="installer.installApplication">Install Slavica Journals</message>
+	<message key="installer.upgradeApplication">Upgrade Slavica Journals</message>
 
 
 

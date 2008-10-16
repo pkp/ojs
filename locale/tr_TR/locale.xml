@@ -800,8 +800,8 @@ Sunucunuz mbstring'i güncel olarak destekler: <strong>{$supportsMBString}</stro
 	<message key="installer.localeInstructions">Bu sistemi kullanmak için birincil dil. Eğer burada belirtilmemiş diller konusunda destek istiyorsanız lütfen ADS belgelerine bakın.</message>
 	<message key="installer.additionalLocalesInstructions">Bu sistemi desteklemek için ekli herhangi bir dili seçin. Bu diller, bu sitede yer verilen dergiler tarafından kullanıma hazır olacaktır. Başka diller site yönetim arayüzünden herhangi bir zamanda yüklenebilir.</message>
 	<message key="installer.filesDirInstructions"><![CDATA[Yüklenen dosyaların tutulacağı bir dizinin tam erişim yolunu yazınız. Bu dizin doğrudan web ulaşımına açık olmayabilir. <strong>Lütfen yükleme öncesi bu dizinin var olduğundan ve yazılabilir olduğundan emin olun.</strong> İşletim sistemi Windows ise örnekteki gibi bölü kullanın, örneğin "C:/myjournal/files".]]></message>
-	<message key="installer.installOJS">Açık Dergi Sistemlerini yükle </message>
-	<message key="installer.upgradeOJS">Açık Dergi Sistemleri yazılımını güncelle</message>
+	<message key="installer.installApplication">Açık Dergi Sistemlerini yükle </message>
+	<message key="installer.upgradeApplication">Açık Dergi Sistemleri yazılımını güncelle</message>
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Dikkat:</strong>Eğer yükleme, veritabanının yüklenmesi yoluyla başarısız olmuşsa veritabanını yeniden yüklemeyi denemeden önce ADS veritabanını veya veritabanı tablolarını indirmeniz gerekebilir.  ]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>IMPORTANT!</h4>
 <p>Yükleyici konfigürasyon dosyasını otomatik olarak yazamaz. Sistemi kullanmayı denemeden önce lütfen açınız. <tt>config.inc.php</tt>aşağıdakine uygun bir metin editöründe ve içeriklerini aşağıdaki metin alanının içerikleri ile değiştirin.</p>]]></message>

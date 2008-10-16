@@ -847,8 +847,8 @@ Din server støtter for øyeblikket mbstring: <strong>{$supportsMBString}</stron
 	<message key="installer.localeInstructions">Primærspråket som skal brukes i dette systemet. Vennligst slå opp i OJS-dokumentasjonen hvis du er interessert i støtte for språk som ikke er oppført her.</message>
 	<message key="installer.additionalLocalesInstructions">Velg øvrige språk som skal støttes i dette systemet. Disse språkene vil bli tilgjengelig til bruk for de tidsskrift nettstedet er vert for. Flere språk kan også installeres når som helst, gjennom grensesnittet for nettstedsadministrasjon.</message>
 	<message key="installer.filesDirInstructions"><![CDATA[Enter full pathname to an existing directory hvor uploaded files are to be kept. Denne directory should not be directly web-accessible. <strong>Vennligst ensure that denne mappen exists og er overskrivbar prior to installasjon.</strong> Windows filsti names bør use forward slashes, for eks. "C:/myjournal/files".]]></message>
-	<message key="installer.installOJS">Installer Open Journal Systems</message>
-	<message key="installer.upgradeOJS">Oppgrader Open Journal Systems</message>
+	<message key="installer.installApplication">Installer Open Journal Systems</message>
+	<message key="installer.upgradeApplication">Oppgrader Open Journal Systems</message>
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Advarsel:</b> Hvis installasjon failed part way gjennom database installasjon du may need to drop din OJS database eller database tables før attempting to reinstall the database.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>IMPORTANT!</h4>
 <p>The installer kunne ikke automatisk overskrive the konfigurasjonsfilen. Før attempting å bruke systemet, vennligst open <tt>config.inc.php</tt> i et egnet tekstbehandlingsprogram og erstatte innholdet i den med innholdet i tekstfeltet nedenfor.</p>]]></message>

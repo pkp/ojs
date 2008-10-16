@@ -814,8 +814,8 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="installer.oaiRepositoryIdInstructions">
     <![CDATA[<a href="http://www.openarchives.org/" target="_blank">オープン・アーカイブズ・イニシアティブ</a>のメタデータハーベスティングプロトコルを使ってこのサイトから提供するメタデータレコードを識別するために使用するユニークな識別子。]]>
   </message>
-  <message key="installer.installOJS">オープン･ジャーナル･システムのインストール</message>
-  <message key="installer.upgradeOJS">オープン･ジャーナル･システムのバージョンアップ</message>
+  <message key="installer.installApplication">オープン･ジャーナル･システムのインストール</message>
+  <message key="installer.upgradeApplication">オープン･ジャーナル･システムのバージョンアップ</message>
   <message key="installer.installFileError">
     <![CDATA[インストールファイル <tt>dbscripts/xml/install.xml</tt> が存在しない、または、読めません。]]>
   </message>

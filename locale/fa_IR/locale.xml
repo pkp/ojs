@@ -625,8 +625,8 @@ http://journals.mui.ac.ir/index.php/index/index
   <message key="installer.localeInstructions" >زبان اولیه برای استفاده با این سیستم. در صورتی که به داشتن حمایت برای زبان دیگری علاقه مند هستید به مستندات OJS مراجعه کنید.</message>
   <message key="installer.additionalLocalesInstructions" >زبانهای اضافی را که مایلید این سیستم پشتیبانی کند انتخاب کنید. این زبانها در دسترس مجلات این سایت برای استفاده قرار خواهند گرفت. البته زبانهای اضافی را در زمانهای دیگر نیز میتوانید از طریق صفحه مدیریت سایت نصب کنید.</message>
   <message key="installer.filesDirInstructions" ><![CDATA[آدرس کامل پوشه ای که قرار است فایل های آپلود شده را نگه دارد. بهتر اشت این پوشه مستقیما قابل دستیابی از طریق وب نباشد.  <strong>لطفا قبل از نصب برنامه اطمینان حاصل کنید که این پوشه وجود دارد و قابل نوشتن است.</strong> مسیر های آدرس برای سیستم عامل ویندوز باید اسلاش رو به جلو بکار ببرد.مانند "C:/myjournal/files".]]></message>
-  <message key="installer.installOJS" >نصب سیستم مجلات آزاد</message>
-  <message key="installer.upgradeOJS" >بروزرسانی سیستم مجلات آزاد</message>
+  <message key="installer.installApplication" >نصب سیستم مجلات آزاد</message>
+  <message key="installer.upgradeApplication" >بروزرسانی سیستم مجلات آزاد</message>
   <message key="installer.reinstallAfterDatabaseError" ><![CDATA[<b>اخطار:</b> چنانچه نصب بصورت نیمه کاره رها شود ممکن است لازم شود بانک اطلاعاتی و یا جداول ایجاد شده را حذف کنید و سپس اقدام به نصب مجدد کنید.]]></message>
   <message key="installer.overwriteConfigFileInstructions" ><![CDATA[<h4>مهم!</h4>
 <p>برنامه نصب کننده نمی تواند بطور اتوماتیک در فایل تنظیمات بنویسد. قبل از شروع کار با سیستم لطفا فایل <tt>config.inc.php</tt> را در یک ویرایشگر مناسب متنی باز کرده و محتوای آنرا با محتوای جعبه متن زیر عوض کنید..</p>]]></message>

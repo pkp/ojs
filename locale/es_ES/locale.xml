@@ -812,8 +812,8 @@ Su servidor soporta mbstring en este momento: <strong>{$supportsMBString}</stron
 	<message key="installer.localeInstructions">El idioma primario de este sistema. Por favor, consulte la documentación de OJS si está interesado en el soporte de idiomas que no están listados aquí.</message>
 	<message key="installer.additionalLocalesInstructions">Seleccione otros idiomas adicionales para soportar en este sistema. Estos idiomas estarán disponibles para las revistas alojadas en este sitio web. Se pueden instalar idiomas adicionales en cualquier momento desde el interfaz administrativo.</message>
 	<message key="installer.filesDirInstructions"><![CDATA[Introduzca la ruta completa a un directorio existente donde se subirán los ficheros. Este directorio no debería ser accesible por web. <strong>Asegúrese de que este directorio existe y de que tiene permisos de escritura antes de proceder con la instalación</strong>. Las rutas en windows se deben indicar con barra invertida, p.e. "C:/mirevista/ficheros".]]></message>
-	<message key="installer.installOJS">instalar Sistema Open Journal</message>
-	<message key="installer.upgradeOJS">Actualizar Sistema Open Journal</message>
+	<message key="installer.installApplication">instalar Sistema Open Journal</message>
+	<message key="installer.upgradeApplication">Actualizar Sistema Open Journal</message>
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Cuidado:</strong> Si la instalación falló justo cuando estaba instalando la base de datos es posible que sea necesario eliminar la base de datos OJS o las tablas antes de intentar reinstalar la base de datos.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>¡IMPORTANTE!</h4>
 <p>El instalador no ha podido sobreescribir automáticamente el fichero de configuración. Antes de usar el sistema abra <tt>config.inc.php</tt> en un editor de textos y reemplace su contenido con el contenido del fichero que le mostramos abajo.</p>]]></message>

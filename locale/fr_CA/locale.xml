@@ -735,8 +735,8 @@ Votre serveur soutient actuellement mbstring: <strong>{$supportsMBString}</stron
 	<message key="installer.localeInstructions">La langue primaire à utiliser pour ce système. Veuillez consulter la documentation OJS si vous êtes intéressé à la prise en charge de langues non indiquées ici.</message>
 	<message key="installer.additionalLocalesInstructions">Sélectionner une ou plusieurs langues supplémentaires à prendre en charge dans ce système. Ces langues seront disponibles pour utilisation par des revues hébergées sur le site. D'autres langues peuvent aussi être installées en tout temps à partir de l'interface de gestion du site.</message>
 	<message key="installer.filesDirInstructions">Entrer le nom complet du chemin d'accès à un répertoire existant où les fichiers téléchargés doivent être gardés. Ce répertoire ne doit pas être directement accessible sur le Web. Veuillez vous assurer que ce répertoire existe et qu'il est programmable avant l'installation. Les noms de chemin d'accès de Windows doivent utiliser des barres obliques, par ex., "C:/myJournal/files".</message>
-	<message key="installer.installOJS">Installation Open Journal Systems</message>
-	<message key="installer.upgradeOJS">Mise à jour Open Journal Systems</message>
+	<message key="installer.installApplication">Installation Open Journal Systems</message>
+	<message key="installer.upgradeApplication">Mise à jour Open Journal Systems</message>
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Avertissement :</strong> Si l'installation de la base de données n'a pas réussi, vous devrez peut-être laisser tomber votre base de données OJS ou les tables de votre base de données avant de tenter de réinstaller la base de données.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>IMPORTANT!</h4>
 <p>L'installateur n'a pas pu écraser automatiquement le fichier de configuration. Avant de tenter d'utiliser le système, veuillez ouvrir <tt>config.inc.php</tt> dans le rédacteur de texte approprié et remplacer son contenu par le contenu de la zone de texte simple ci dessous.</p>]]></message>

@@ -825,8 +825,8 @@ Il vostro server supporta mbstring: <strong>{$supportsMBString}</strong>]]></mes
 	<message key="installer.localeInstructions">La lingua principale utilizzata dal sistema. Consultate la documentazione di OJS se siete interessati al supporto di lingue non presenti nell'elenco.</message>
 	<message key="installer.additionalLocalesInstructions">Selezionate le altre lingue che devono essere supportate dal sistema, in modo che possano essere utilizzate dai giornali presenti nel sito. Ulteriori aggiunte possono essere fatte in qualsiasi momento dall'interfaccia di amministrazione del sito.</message>
 	<message key="installer.filesDirInstructions">Inserite il percorso completo di una directory esistente dove conservare i file di cui &#x00E8; stato fatto l'upload. Questa directory non dovrebbe essere accessibile direttamente dal web. Assicuratevi che la directory esista e siano gi� stati concessi i permessi di scrittura. I percorsi Windows devono avere il separatore "/", come ad esempio "C:/myjournal/files".</message>
-	<message key="installer.installOJS">Installa Open Journal Systems</message>
-	<message key="installer.upgradeOJS">Upgrade Open Journal Systems</message>
+	<message key="installer.installApplication">Installa Open Journal Systems</message>
+	<message key="installer.upgradeApplication">Upgrade Open Journal Systems</message>
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Attenzione:</strong> Se l'installazione &#x00E8; fallita durante la creazione del database potrebbe essere necessario cancellare la base di dati di OJS o le tabelle contenute prima di ripetere il processo.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>IMPORTANTE!</h4>
 <p>Il programma d'installazione non &#x00E8; riuscito a sovrascrivere il file di configurazione. Prima di utilizzare OJS, apite il file <tt>config.inc.php</tt> con un editor di testo e sostituitene il contenuto con quello del campo sottostante..</p>]]></message>

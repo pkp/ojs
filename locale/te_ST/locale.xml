@@ -1945,8 +1945,8 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.miscSettings">Mîþçèllåñèóüþ ßèttîñgþ</message>
 	<message key="installer.oaiRepositoryId">ÒÆÎ rèpóþîtórý îðèñtîfîèr</message>
 	<message key="installer.oaiRepositoryIdInstructions"><![CDATA[Æ üñîqüè îðèñtîfîèr üþèð tó îðèñtîfý mètåðåtå rèçórðþ îñðèxèð fróm thîþ þîtè üþîñg thè <a href="http://www.openarchives.org/" target="_blank">Òpèñ Ærçhîvèþ Îñîtîåtîvè</a> Prótóçól fór Mètåðåtå Hårvèþtîñg.]]></message>
-	<message key="installer.installOJS">Îñþtåll Òpèñ Jóürñål ßýþtèmþ</message>
-	<message key="installer.upgradeOJS">Üpgråðè Òpèñ Jóürñål ßýþtèmþ</message>
+	<message key="installer.installApplication">Îñþtåll Òpèñ Jóürñål ßýþtèmþ</message>
+	<message key="installer.upgradeApplication">Üpgråðè Òpèñ Jóürñål ßýþtèmþ</message>
 	<message key="installer.manualInstall">Måñüål Îñþtåll</message>
 	<message key="installer.manualUpgrade">Måñüål Üpgråðè</message>
 	<message key="installer.form.localeRequired">Æ lóçålè müþt bè þèlèçtèð.</message>

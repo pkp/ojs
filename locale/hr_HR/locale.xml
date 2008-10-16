@@ -789,8 +789,8 @@ Vaš poslužitelj trenutno podržava mbstring: <strong>{$supportsMBString}</stro
 	<message key="installer.localeInstructions">Primarni jezik za korištenju u ovom sustavu. Molimo pogledajte OJS dokumentaciju ako ste zainteresirani za podršku za jezike koji nisu izlistani ovdje.</message>
 	<message key="installer.additionalLocalesInstructions">Odaberite bilo koji dodatni jezik koji želite podržati u ovom sustavu. Ti jezici će biti omogućeni za korištenje za časopise udomaćene na stranici. Dodatni jezici također mogu biti instalirani u bilo koje vrijeme iz sučelja za administraciju stranice.</message>
 	<message key="installer.filesDirInstructions"><![CDATA[Unesite puno ime putanje prema postojećem direktoriju gdje će se pohranjivati poslane datoteke. Taj direktorij ne bi smio biti direktno dostupan preko mreže. <strong>Molimo osigurajte da taj direktorij postoji i da se može pisati po njemu prije istalacije.</strong> Imena Windows putanji trebaju koristiti kose crte unaprijed, npr. "C:/mojicasopisi/datoteke".]]></message>
-	<message key="installer.installOJS">Instaliraj Open Journal Systems</message>
-	<message key="installer.upgradeOJS">Nadogradi Open Journal Systems</message>
+	<message key="installer.installApplication">Instaliraj Open Journal Systems</message>
+	<message key="installer.upgradeApplication">Nadogradi Open Journal Systems</message>
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Upozorenje:</b> Ako je instalacija neuspjela djelomično prilikom instalacije baze podataka morat ćete izbrisati vašu OJS bazu podataka ili tablice baze podataka prije ponovnog pokušaja instalacije baze podataka.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>VAŽNO!</h4>
 <p>Instalacijski program ne može automatski pisati preko konfiguracijske datoteke. Prije pokušanja korištenja sustava, molimo otvorite <tt>config.inc.php</tt> u odgovarajućem uređivaču teksta i zamijenite njegov sadržaj sa sadržajem teksta koji se nalazi u polju ispod.</p>]]></message>

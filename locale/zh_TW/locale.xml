@@ -849,8 +849,8 @@
 	<message key="installer.localeInstructions">使用本系統的主要語言。如果您有意支援不列在這裡的語系，請參見OJS的說明文件。</message>
 	<message key="installer.additionalLocalesInstructions">選擇額外的語系以支援本系統。這些語言可以被本站的期刊所使用。也可以在任何時間點透過網站管理介面來安裝額外的語系。</message>
 	<message key="installer.filesDirInstructions"><![CDATA[輸入一個儲存上傳檔案的既存目錄的完整路徑名稱。這個目錄不應該直接透過網頁存取。<strong>請確定這個目錄存在而且可寫入</strong> Windows路徑名稱應該使用右斜線，例如："C:/myjournal/files".]]></message>
-	<message key="installer.installOJS">安裝開放期刊系統</message>
-	<message key="installer.upgradeOJS">升級開放期刊系統</message>
+	<message key="installer.installApplication">安裝開放期刊系統</message>
+	<message key="installer.upgradeApplication">升級開放期刊系統</message>
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>警告：</strong>如果安裝失敗部分是因為安裝資料庫的關係，在嘗試重新安裝資料庫之前，您可能需要刪除您的OJS資料庫或者資料表。]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>重要！</h4>
 <p>安裝檔無法自動覆寫設定檔。在嘗試使用本系統之前，請以合適的編輯器開啟<tt>config.inc.php</tt>並且變更其內容為下列文字欄位中的內容。</p>]]></message>

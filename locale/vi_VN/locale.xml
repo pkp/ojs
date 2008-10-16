@@ -763,8 +763,8 @@ Máy chủ của quý vị hiện có hỗ trợ mbstring: <strong>{$supportsMBS
 	<message key="installer.localeInstructions">Ngôn ngữ chủ đạo dùng cho phần mềm này. Vui lòng tham khảo tài liệu hướng dẫn OJS nến quý vị quan tâm tới việc hỗ trợ các ngôn ngữ khác không liệt kê ở đây.</message>
 	<message key="installer.additionalLocalesInstructions">Lựa chọn bất kỳ ngôn ngữ nào khác sẽ hỗ trợ trong phần mềm này. Những ngôn ngữ được lựa chọn sẽ được dùng cho các tạp chí đặt trên website này. Các ngôn ngữ bổ sung có thể được cài đặt bất kỳ lúc nào trên giao diện quản trị website.</message>
 	<message key="installer.filesDirInstructions"><![CDATA[Nhập đường dẫn đầy đủ dẫn tới một thư mục đã có sẵn dùng để lưu giữ các file được tải lên. Thư mục này không nên là thư mục truy cập được trực tiếp từ web. <strong>Vui lòng đảm bảo rằng thư mục này có sẵn và ghi được trước khi cài đặt.</strong> Trong hệ điều hành Windows, đường dẫn cần sử dụng dấu "/", v.d. "C:/myjournal/files".]]></message>
-	<message key="installer.installOJS">Cài đặt phần mềm OJS</message>
-	<message key="installer.upgradeOJS">Nâng cấp phần mềm OJS</message>
+	<message key="installer.installApplication">Cài đặt phần mềm OJS</message>
+	<message key="installer.upgradeApplication">Nâng cấp phần mềm OJS</message>
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Cảnh báo:</strong> Nếu cài đặt CSDL thất bại giữa chừng, quý vị có thể cần bỏ CSDL OJS hoặc các bảng trong CSDL trước khi cài đặt lại CSDL.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>QUAN TRỌNG!</h4>
 <p>Bộ cài đặt không thể tự động ghi đè lên file cấu hình. Trước khi thử sử dụng phần mềm, vui lòng mở file <tt>config.inc.php</tt> bằng một phần mềm soạn thảo văn bản thô (text) phù hợp và thay thế nội dung của file bằng nội dung sau đây.</p>]]></message>
