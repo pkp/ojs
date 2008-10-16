@@ -59,7 +59,7 @@ class PeopleHandler extends ManagerHandler {
 			$search = $searchInitial;
 		}
 
-		$rangeInfo = Handler::getRangeInfo('users');
+		$rangeInfo = PKPHandler::getRangeInfo('users');
 
 		if ($roleId) {
 			$users = &$roleDao->getUsersByRoleId($roleId, $journal->getJournalId(), $searchType, $search, $searchMatch, $rangeInfo);
@@ -168,7 +168,7 @@ class PeopleHandler extends ManagerHandler {
 			$search = $searchInitial;
 		}
 
-		$rangeInfo = Handler::getRangeInfo('users');
+		$rangeInfo = PKPHandler::getRangeInfo('users');
 
 		$users = &$userDao->getUsersByField($searchType, $searchMatch, $search, true, $rangeInfo);
 
@@ -542,7 +542,7 @@ class PeopleHandler extends ManagerHandler {
 			$search = $searchInitial;
 		}
 
-		$rangeInfo = Handler::getRangeInfo('users');
+		$rangeInfo = PKPHandler::getRangeInfo('users');
 
 		if ($roleId) {
 			$users = &$roleDao->getUsersByRoleId($roleId, $journalId, $searchType, $search, $searchMatch, $rangeInfo);

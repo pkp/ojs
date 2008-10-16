@@ -16,9 +16,9 @@
 
 
 import('submission.reviewer.ReviewerAction');
-import('core.Handler');
+import('core.PKPHandler');
 
-class ReviewerHandler extends Handler {
+class ReviewerHandler extends PKPHandler {
 
 	/**
 	 * Display reviewer index page.
@@ -30,7 +30,7 @@ class ReviewerHandler extends Handler {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
-		$rangeInfo = Handler::getRangeInfo('submissions');
+		$rangeInfo = PKPHandler::getRangeInfo('submissions');
 
 		$page = isset($args[0]) ? $args[0] : '';
 		switch($page) {

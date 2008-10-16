@@ -15,9 +15,9 @@
 // $Id$
 
 
-import('core.Handler');
+import('core.PKPHandler');
 
-class AdminHandler extends Handler {
+class AdminHandler extends PKPHandler {
 
 	/**
 	 * Display site admin index page.

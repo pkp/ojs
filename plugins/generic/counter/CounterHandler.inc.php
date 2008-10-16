@@ -15,9 +15,9 @@
 // $Id$
 
 
-import('core.Handler');
+import('core.PKPHandler');
 
-class CounterHandler extends Handler {
+class CounterHandler extends PKPHandler {
 	/**
 	 * Display the main log analyzer page.
 	 */
@@ -47,7 +47,7 @@ class CounterHandler extends Handler {
 		CounterHandler::setupTemplate(true);
 
 		$journal =& Request::getJournal();
-		$rangeInfo = Handler::getRangeInfo('entries');
+		$rangeInfo = PKPHandler::getRangeInfo('entries');
 
 		$logEntryDao =& DAORegistry::getDAO('LogEntryDAO');
 		$log =& $logEntryDao->parse();

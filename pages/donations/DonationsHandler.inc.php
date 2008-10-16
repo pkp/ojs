@@ -20,9 +20,9 @@
 // $Id$
 
 
-import('core.Handler');
+import('core.PKPHandler');
 
-class DonationsHandler extends Handler {
+class DonationsHandler extends PKPHandler {
 	function index( $args ) {
 		import('payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();

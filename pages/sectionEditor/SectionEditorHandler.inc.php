@@ -19,9 +19,9 @@
 define('FILTER_SECTION_ALL', 0);
 
 import('submission.sectionEditor.SectionEditorAction');
-import('core.Handler');
+import('core.PKPHandler');
 
-class SectionEditorHandler extends Handler {
+class SectionEditorHandler extends PKPHandler {
 
 	/**
 	 * Display section editor index page.
@@ -34,7 +34,7 @@ class SectionEditorHandler extends Handler {
 		$journalId = $journal->getJournalId();
 		$user = &Request::getUser();
 
-		$rangeInfo = Handler::getRangeInfo('submissions');
+		$rangeInfo = PKPHandler::getRangeInfo('submissions');
 
 		// Get the user's search conditions, if any
 		$searchField = Request::getUserVar('searchField');

@@ -312,13 +312,13 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		// submission notes
 		$articleNoteDao = &DAORegistry::getDAO('ArticleNoteDAO');
 
-		$rangeInfo = &Handler::getRangeInfo('submissionNotes');
+		$rangeInfo =& PKPHandler::getRangeInfo('submissionNotes');
 		$submissionNotes =& $articleNoteDao->getArticleNotes($articleId, $rangeInfo);
 
 		import('article.log.ArticleLog');
-		$rangeInfo = &Handler::getRangeInfo('eventLogEntries');
+		$rangeInfo =& PKPHandler::getRangeInfo('eventLogEntries');
 		$eventLogEntries = &ArticleLog::getEventLogEntries($articleId, $rangeInfo);
-		$rangeInfo = &Handler::getRangeInfo('emailLogEntries');
+		$rangeInfo =& PKPHandler::getRangeInfo('emailLogEntries');
 		$emailLogEntries = &ArticleLog::getEmailLogEntries($articleId, $rangeInfo);
 
 		$templateMgr = &TemplateManager::getManager();
@@ -396,7 +396,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				$search = $searchInitial;
 			}
 
-			$rangeInfo = &Handler::getRangeInfo('reviewers');
+			$rangeInfo =& PKPHandler::getRangeInfo('reviewers');
 			$reviewers = $sectionEditorSubmissionDao->getReviewersForArticle($journal->getJournalId(), $articleId, $submission->getCurrentRound(), $searchType, $search, $searchMatch, $rangeInfo);
 
 			$journal = Request::getJournal();
@@ -487,7 +487,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$user = &Request::getUser();
 
-		$rangeInfo = Handler::getRangeInfo('users');
+		$rangeInfo = PKPHandler::getRangeInfo('users');
 		$templateMgr = &TemplateManager::getManager();
 		parent::setupTemplate(true);
 
@@ -880,7 +880,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			Request::redirect(null, null, 'submissionReview', $articleId);
 		} else {
 			$journal =& Request::getJournal();
-			$rangeInfo =& Handler::getRangeInfo('reviewForms');
+			$rangeInfo =& PKPHandler::getRangeInfo('reviewForms');
 			$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
 			$reviewForms =& $reviewFormDao->getJournalActiveReviewForms($journal->getJournalId(), $rangeInfo);
 			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
@@ -1662,7 +1662,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->display('sectionEditor/submissionEventLogEntry.tpl');
 
 		} else {
-			$rangeInfo = &Handler::getRangeInfo('eventLogEntries');
+			$rangeInfo =& PKPHandler::getRangeInfo('eventLogEntries');
 
 			import('article.log.ArticleLog');
 			$eventLogEntries = &ArticleLog::getEventLogEntries($articleId, $rangeInfo);
@@ -1681,7 +1681,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId, 'history');
 
-		$rangeInfo = &Handler::getRangeInfo('eventLogEntries');
+		$rangeInfo =& PKPHandler::getRangeInfo('eventLogEntries');
 		$logDao = &DAORegistry::getDAO('ArticleEventLogDAO');
 		$eventLogEntries = &$logDao->getArticleLogEntriesByAssoc($articleId, $assocType, $assocId, $rangeInfo);
 
@@ -1742,7 +1742,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->display('sectionEditor/submissionEmailLogEntry.tpl');
 
 		} else {
-			$rangeInfo = &Handler::getRangeInfo('emailLogEntries');
+			$rangeInfo =& PKPHandler::getRangeInfo('emailLogEntries');
 
 			import('article.log.ArticleLog');
 			$emailLogEntries = &ArticleLog::getEmailLogEntries($articleId, $rangeInfo);
@@ -1761,7 +1761,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId, 'history');
 
-		$rangeInfo = &Handler::getRangeInfo('eventLogEntries');
+		$rangeInfo =& PKPHandler::getRangeInfo('eventLogEntries');
 		$logDao = &DAORegistry::getDAO('ArticleEmailLogDAO');
 		$emailLogEntries = &$logDao->getArticleLogEntriesByAssoc($articleId, $assocType, $assocId, $rangeInfo);
 
@@ -1855,7 +1855,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId, 'history');
 
-		$rangeInfo = &Handler::getRangeInfo('submissionNotes');
+		$rangeInfo =& PKPHandler::getRangeInfo('submissionNotes');
 		$articleNoteDao = &DAORegistry::getDAO('ArticleNoteDAO');
 
 		// submission note edit

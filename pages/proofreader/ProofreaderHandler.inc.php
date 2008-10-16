@@ -16,9 +16,9 @@
 
 
 import('submission.proofreader.ProofreaderAction');
-import('core.Handler');
+import('core.PKPHandler');
 
-class ProofreaderHandler extends Handler {
+class ProofreaderHandler extends PKPHandler {
 
 	/**
 	 * Display proofreader index page.
@@ -42,7 +42,7 @@ class ProofreaderHandler extends Handler {
 		$toDate = Request::getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
 		if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
 
-		$rangeInfo = Handler::getRangeInfo('submissions');
+		$rangeInfo = PKPHandler::getRangeInfo('submissions');
 
 		$page = isset($args[0]) ? $args[0] : '';
 		switch($page) {

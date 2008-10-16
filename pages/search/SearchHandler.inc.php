@@ -16,9 +16,9 @@
 
 
 import('search.ArticleSearch');
-import('core.Handler');
+import('core.PKPHandler');
 
-class SearchHandler extends Handler {
+class SearchHandler extends PKPHandler {
 
 	/**
 	 * Show the advanced form
@@ -136,7 +136,7 @@ class SearchHandler extends Handler {
 		} else {
 			// Show the author index
 			$searchInitial = Request::getUserVar('searchInitial');
-			$rangeInfo = Handler::getRangeInfo('authors');
+			$rangeInfo = PKPHandler::getRangeInfo('authors');
 
 			$authors = &$authorDao->getAuthorsAlphabetizedByJournal(
 				isset($journal)?$journal->getJournalId():null,
@@ -163,7 +163,7 @@ class SearchHandler extends Handler {
 
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 
-		$rangeInfo = Handler::getRangeInfo('search');
+		$rangeInfo = PKPHandler::getRangeInfo('search');
 
 		$articleIds = &$publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal(isset($journal)?$journal->getJournalId():null);
 		$totalResults = count($articleIds);
@@ -183,7 +183,7 @@ class SearchHandler extends Handler {
 		parent::validate();
 		SearchHandler::setupTemplate(true);
 
-		$rangeInfo = Handler::getRangeInfo('search');
+		$rangeInfo = PKPHandler::getRangeInfo('search');
 
 		$searchJournalId = Request::getUserVar('searchJournal');
 		if (!empty($searchJournalId)) {
@@ -216,7 +216,7 @@ class SearchHandler extends Handler {
 		parent::validate();
 		SearchHandler::setupTemplate(true);
 
-		$rangeInfo = Handler::getRangeInfo('search');
+		$rangeInfo = PKPHandler::getRangeInfo('search');
 
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$searchJournalId = Request::getUserVar('searchJournal');

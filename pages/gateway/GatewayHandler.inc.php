@@ -15,9 +15,9 @@
 // $Id$
 
 
-import('core.Handler');
+import('core.PKPHandler');
 
-class GatewayHandler extends Handler {
+class GatewayHandler extends PKPHandler {
 
 	function index() {
 		Request::redirect(null, 'index');

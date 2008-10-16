@@ -16,9 +16,9 @@
 
 
 import('submission.author.AuthorAction');
-import('core.Handler');
+import('core.PKPHandler');
 
-class AuthorHandler extends Handler {
+class AuthorHandler extends PKPHandler {
 
 	/**
 	 * Display journal author index page.
@@ -28,7 +28,7 @@ class AuthorHandler extends Handler {
 		AuthorHandler::setupTemplate();
 
 		$user = &Request::getUser();
-		$rangeInfo = &Handler::getRangeInfo('submissions');
+		$rangeInfo =& PKPHandler::getRangeInfo('submissions');
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
 
 		$page = isset($args[0]) ? $args[0] : '';

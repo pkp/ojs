@@ -16,9 +16,9 @@
 
 
 import('rt.ojs.JournalRTAdmin');
-import('core.Handler');
+import('core.PKPHandler');
 
-class RTAdminHandler extends Handler {
+class RTAdminHandler extends PKPHandler {
 
 	/**
 	 * If no journal is selected, display list of journals.

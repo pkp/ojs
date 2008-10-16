@@ -253,7 +253,7 @@ class ArticleFileManager extends FileManager {
 			}
 
 		} else {
-			$files =  &$articleFileDao->getArticleFileRevisions($fileId);
+			$files =& $articleFileDao->getArticleFileRevisions($fileId);
 		}
 
 		foreach ($files as $f) {

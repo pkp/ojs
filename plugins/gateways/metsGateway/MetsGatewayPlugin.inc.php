@@ -104,7 +104,7 @@ class METSGatewayPlugin extends GatewayPlugin {
 			$issueId = array_shift($args);
 			if (!$issueId)
 			{
-				$issuesResultSet = &$issueDao->getIssues($journal->getJournalId(), Handler::getRangeInfo('issues'));
+				$issuesResultSet = &$issueDao->getIssues($journal->getJournalId(), PKPHandler::getRangeInfo('issues'));
 				$issues = array();
 
 				while (!$issuesResultSet->eof())

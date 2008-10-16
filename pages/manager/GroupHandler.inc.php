@@ -24,7 +24,7 @@ class GroupHandler extends ManagerHandler {
 		list($journal) = GroupHandler::validate();
 		GroupHandler::setupTemplate();
 
-		$rangeInfo = &Handler::getRangeInfo('groups');
+		$rangeInfo =& PKPHandler::getRangeInfo('groups');
 
 		$groupDao =& DAORegistry::getDAO('GroupDAO');
 		$groups =& $groupDao->getGroups($journal->getJournalId(), null, $rangeInfo);
@@ -151,7 +151,7 @@ class GroupHandler extends ManagerHandler {
 		$groupId = isset($args[0])?(int)$args[0]:0;
 		list($journal, $group) = GroupHandler::validate($groupId);
 
-		$rangeInfo = &Handler::getRangeInfo('memberships');
+		$rangeInfo =& PKPHandler::getRangeInfo('memberships');
 
 		GroupHandler::setupTemplate($group, true);
 		$groupMembershipDao =& DAORegistry::getDAO('GroupMembershipDAO');

@@ -16,9 +16,9 @@
 
 
 import('submission.layoutEditor.LayoutEditorAction');
-import('core.Handler');
+import('core.PKPHandler');
 
-class LayoutEditorHandler extends Handler {
+class LayoutEditorHandler extends PKPHandler {
 	/**
 	 * Display layout editor index page.
 	 */
@@ -63,7 +63,7 @@ class LayoutEditorHandler extends Handler {
 		$toDate = Request::getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
 		if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
 
-		$rangeInfo = Handler::getRangeInfo('submissions');
+		$rangeInfo = PKPHandler::getRangeInfo('submissions');
 		$submissions = $layoutEditorSubmissionDao->getSubmissions($user->getUserId(), $journal->getJournalId(), $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $active, $rangeInfo);
 
 		$templateMgr = &TemplateManager::getManager();
@@ -108,7 +108,7 @@ class LayoutEditorHandler extends Handler {
 		parent::validate();
 		$journal = &Request::getJournal();
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
-		$rangeInfo = Handler::getRangeInfo('issues');
+		$rangeInfo = PKPHandler::getRangeInfo('issues');
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign_by_ref('issues', $issueDao->getUnpublishedIssues($journal->getJournalId(), $rangeInfo));
 		$templateMgr->assign('helpTopicId', 'publishing.index');

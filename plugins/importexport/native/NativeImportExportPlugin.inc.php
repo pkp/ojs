@@ -92,7 +92,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				// Display a list of issues for export
 				$this->setBreadcrumbs(array(), true);
 				$issueDao = &DAORegistry::getDAO('IssueDAO');
-				$issues = &$issueDao->getIssues($journal->getJournalId(), Handler::getRangeInfo('issues'));
+				$issues = &$issueDao->getIssues($journal->getJournalId(), PKPHandler::getRangeInfo('issues'));
 
 				$templateMgr->assign_by_ref('issues', $issues);
 				$templateMgr->display($this->getTemplatePath() . 'issues.tpl');
@@ -101,7 +101,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				// Display a list of articles for export
 				$this->setBreadcrumbs(array(), true);
 				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-				$rangeInfo = Handler::getRangeInfo('articles');
+				$rangeInfo = PKPHandler::getRangeInfo('articles');
 				$articleIds = $publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal($journal->getJournalId(), false);
 				$totalArticles = count($articleIds);
 				if ($rangeInfo->isValid()) $articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
@@ -149,7 +149,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 					// import articles within an appropriate context. If not,
 					// prompt them for the.
 					if (!isset($context['issue']) || !isset($context['section'])) {
-						$issues = &$issueDao->getIssues($journal->getJournalId(), Handler::getRangeInfo('issues'));
+						$issues = &$issueDao->getIssues($journal->getJournalId(), PKPHandler::getRangeInfo('issues'));
 						$templateMgr->assign_by_ref('issues', $issues);
 						$templateMgr->assign('sectionOptions', array('0' => Locale::translate('author.submit.selectSection')) + $sectionDao->getSectionTitles($journal->getJournalId(), false));
 						$templateMgr->assign('temporaryFileId', $temporaryFile->getFileId());

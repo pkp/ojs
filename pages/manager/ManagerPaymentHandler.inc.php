@@ -79,7 +79,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 	  * Display all payments previously made
 	  */
 	 function viewPayments($args) {
-		$rangeInfo = &Handler::getRangeInfo('CompletedPayments');
+		$rangeInfo =& PKPHandler::getRangeInfo('CompletedPayments');
 		$paymentDao = &DAORegistry::getDAO('OJSCompletedPaymentDAO');
 		$journal =& Request::getJournal();
 		$templateMgr = &TemplateManager::getManager();

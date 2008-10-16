@@ -41,7 +41,10 @@ class OJSApplication extends PKPApplication {
 	function getContextDepth() {
 		return 1;
 	}
-
+		
+	function getContextList() {
+		return array('journal');
+	}
 	/**
 	 * Get the symbolic name of this application
 	 * @return string

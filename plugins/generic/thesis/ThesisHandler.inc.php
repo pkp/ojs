@@ -15,9 +15,9 @@
 // $Id$
 
 
-import('core.Handler');
+import('core.PKPHandler');
 
-class ThesisHandler extends Handler {
+class ThesisHandler extends PKPHandler {
 
 	/**
 	 * Display thesis index page.
@@ -50,7 +50,7 @@ class ThesisHandler extends Handler {
 			}			
 
 			$thesisDao = &DAORegistry::getDAO('ThesisDAO');
-			$rangeInfo = &Handler::getRangeInfo('theses');
+			$rangeInfo =& PKPHandler::getRangeInfo('theses');
 			$resultOrder = $thesisPlugin->getSetting($journalId, 'thesisOrder');
 
 			$theses = &$thesisDao->getActiveThesesByJournalId($journalId, $searchField, $search, $searchMatch, null, null, $resultOrder, $rangeInfo);

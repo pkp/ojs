@@ -89,7 +89,7 @@ class PubMedExportPlugin extends ImportExportPlugin {
 				// Display a list of issues for export
 				$this->setBreadcrumbs(array(), true);
 				$issueDao = &DAORegistry::getDAO('IssueDAO');
-				$issues = &$issueDao->getIssues($journal->getJournalId(), Handler::getRangeInfo('issues'));
+				$issues = &$issueDao->getIssues($journal->getJournalId(), PKPHandler::getRangeInfo('issues'));
 
 				$templateMgr->assign_by_ref('issues', $issues);
 				$templateMgr->display($this->getTemplatePath() . 'issues.tpl');
@@ -98,7 +98,7 @@ class PubMedExportPlugin extends ImportExportPlugin {
 				// Display a list of articles for export
 				$this->setBreadcrumbs(array(), true);
 				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-				$rangeInfo = Handler::getRangeInfo('articles');
+				$rangeInfo = PKPHandler::getRangeInfo('articles');
 				$articleIds = $publishedArticleDao->getPublishedArticleIdsByJournal($journal->getJournalId(), false);
 				$totalArticles = count($articleIds);
 				if ($rangeInfo->isValid()) $articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());

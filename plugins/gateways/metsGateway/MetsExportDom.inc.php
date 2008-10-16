@@ -289,7 +289,7 @@ class MetsExportDom {
 		$i = 0;
 		$authorsArray = &$article->getAuthors();
 		while ($i < sizeof($authorsArray)) {
-			$PresenterNode =  &MetsExportDom::generateAuthorDom($doc, $authorsArray[$i]);
+			$PresenterNode =& MetsExportDom::generateAuthorDom($doc, $authorsArray[$i]);
 			XMLCustomWriter::appendChild($mods, $PresenterNode);
 			$i++; 
 		}

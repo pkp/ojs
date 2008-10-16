@@ -25,7 +25,7 @@ class SectionHandler extends ManagerHandler {
 		parent::setupTemplate(true);
 
 		$journal = &Request::getJournal();
-		$rangeInfo = &Handler::getRangeInfo('sections');
+		$rangeInfo =& PKPHandler::getRangeInfo('sections');
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$sections = &$sectionDao->getJournalSections($journal->getJournalId(), $rangeInfo);
 

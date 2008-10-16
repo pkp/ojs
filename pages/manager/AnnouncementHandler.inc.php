@@ -29,7 +29,7 @@ class AnnouncementHandler extends ManagerHandler {
 		AnnouncementHandler::setupTemplate();
 
 		$journal = &Request::getJournal();
-		$rangeInfo = &Handler::getRangeInfo('announcements');
+		$rangeInfo =& PKPHandler::getRangeInfo('announcements');
 		$announcementDao = &DAORegistry::getDAO('AnnouncementDAO');
 		$announcements = &$announcementDao->getAnnouncementsByJournalId($journal->getJournalId(), $rangeInfo);
 
@@ -160,7 +160,7 @@ class AnnouncementHandler extends ManagerHandler {
 		AnnouncementHandler::setupTemplate(true);
 
 		$journal = &Request::getJournal();
-		$rangeInfo = &Handler::getRangeInfo('announcementTypes');
+		$rangeInfo =& PKPHandler::getRangeInfo('announcementTypes');
 		$announcementTypeDao = &DAORegistry::getDAO('AnnouncementTypeDAO');
 		$announcementTypes = &$announcementTypeDao->getAnnouncementTypesByJournalId($journal->getJournalId(), $rangeInfo);
 

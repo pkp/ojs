@@ -24,7 +24,7 @@ class AdminJournalHandler extends AdminHandler {
 		parent::validate();
 		parent::setupTemplate(true);
 
-		$rangeInfo = Handler::getRangeInfo('journals');
+		$rangeInfo = PKPHandler::getRangeInfo('journals');
 
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$journals = &$journalDao->getJournals($rangeInfo);

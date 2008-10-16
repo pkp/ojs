@@ -36,7 +36,9 @@ ini_set('include_path', '.'
 	. ENV_SEPARATOR . BASE_SYS_DIR . '/includes'
 	. ENV_SEPARATOR . BASE_SYS_DIR . '/classes'
 	. ENV_SEPARATOR . BASE_SYS_DIR . '/pages'
+	. ENV_SEPARATOR . BASE_SYS_DIR . '/lib/pkp/'
 	. ENV_SEPARATOR . BASE_SYS_DIR . '/lib/pkp/classes'
+	. ENV_SEPARATOR . BASE_SYS_DIR . '/lib/pkp/pages'
 	. ENV_SEPARATOR . BASE_SYS_DIR . '/lib/pkp/lib/adodb'
 	. ENV_SEPARATOR . BASE_SYS_DIR . '/lib/pkp/lib/phputf8'
 	. ENV_SEPARATOR . BASE_SYS_DIR . '/lib/pkp/lib/smarty'
@@ -53,5 +55,4 @@ require('functions.inc.php');
 import('core.OJSApplication');
 $ojsApplication =& new OJSApplication();
 PKPApplication::initialize($ojsApplication);
-
 ?>

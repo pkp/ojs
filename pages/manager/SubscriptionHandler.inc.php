@@ -25,7 +25,7 @@ class SubscriptionHandler extends ManagerHandler {
 		SubscriptionHandler::setupTemplate();
 
 		$journal = &Request::getJournal();
-		$rangeInfo = &Handler::getRangeInfo('subscriptions');
+		$rangeInfo =& PKPHandler::getRangeInfo('subscriptions');
 		$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
 
 		// Get the user's search conditions, if any
@@ -185,7 +185,7 @@ class SubscriptionHandler extends ManagerHandler {
 			$search = $searchInitial;
 		}
 
-		$rangeInfo = Handler::getRangeInfo('users');
+		$rangeInfo = PKPHandler::getRangeInfo('users');
 
 		$users = &$userDao->getUsersByField($searchType, $searchMatch, $search, true, $rangeInfo);
 
@@ -263,7 +263,7 @@ class SubscriptionHandler extends ManagerHandler {
 		SubscriptionHandler::setupTemplate(true);
 
 		$journal = &Request::getJournal();
-		$rangeInfo = &Handler::getRangeInfo('subscriptionTypes');
+		$rangeInfo =& PKPHandler::getRangeInfo('subscriptionTypes');
 		$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionTypes = &$subscriptionTypeDao->getSubscriptionTypesByJournalId($journal->getJournalId(), $rangeInfo);
 

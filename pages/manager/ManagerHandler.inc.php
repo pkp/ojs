@@ -15,9 +15,9 @@
 // $Id$
 
 
-import('core.Handler');
+import('core.PKPHandler');
 
-class ManagerHandler extends Handler {
+class ManagerHandler extends PKPHandler {
 
 	/**
 	 * Display journal management index page.

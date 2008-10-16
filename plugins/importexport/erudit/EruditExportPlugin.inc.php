@@ -73,7 +73,7 @@ class EruditExportPlugin extends ImportExportPlugin {
 				// Display a list of articles for export
 				$this->setBreadcrumbs();
 				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-				$rangeInfo = Handler::getRangeInfo('articles');
+				$rangeInfo = PKPHandler::getRangeInfo('articles');
 				$articleIds = $publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal($journal->getJournalId(), false);
 				$totalArticles = count($articleIds);
 				$articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());

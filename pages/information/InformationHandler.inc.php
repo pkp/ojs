@@ -15,9 +15,9 @@
 // $Id$
 
 
-import('core.Handler');
+import('core.PKPHandler');
 
-class InformationHandler extends Handler {
+class InformationHandler extends PKPHandler {
 
 	/**
 	 * Display the information page for the journal..

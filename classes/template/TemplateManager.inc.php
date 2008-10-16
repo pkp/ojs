@@ -49,7 +49,10 @@ class TemplateManager extends PKPTemplateManager {
 			$siteStyleFilename = PublicFileManager::getSiteFilesPath() . '/' . $site->getSiteStyleFilename();
 			if (file_exists($siteStyleFilename)) $this->addStyleSheet(Request::getBaseUrl() . '/' . $siteStyleFilename);
 
+			$this->assign('homeContext', array());
+
 			if (isset($journal)) {
+				
 				$this->assign_by_ref('currentJournal', $journal);
 				$journalTitle = $journal->getJournalTitle();
 				$this->assign('siteTitle', $journalTitle);
@@ -160,17 +163,22 @@ class TemplateManager extends PKPTemplateManager {
 		// Extract the variables named in $paramList, and remove them
 		// from the params array. Variables remaining in params will be
 		// passed along to Request::url as extra parameters.
-		$paramList = array('journal', 'page', 'op', 'path', 'anchor', 'escape');
-		foreach ($paramList as $param) {
-			if (isset($params[$param])) {
-				$$param = $params[$param];
-				unset($params[$param]);
-			} else {
-				$$param = null;
-			}
-		}
+		$context = array();
+		$contextList = OJSApplication::getContextList();
 
-		return Request::url($journal, $page, $op, $path, $params, $anchor, !isset($escape) || $escape);
+		if ( !isset($params['context']) ) {
+			foreach ($contextList as $contextName) {
+				if (isset($params[$contextName])) {
+					$context[$contextName] = $params[$contextName];
+					unset($params[$contextName]);
+				} else {
+					$context[$contextName] = null;				
+				}
+			}
+			$params['context'] = $context;
+		}
+		
+		return parent::smartyUrl($params, &$smarty);
 	}
 
 	/**

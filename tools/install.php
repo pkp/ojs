@@ -39,7 +39,7 @@ class OJSInstallTool extends InstallTool {
 
 		parent::readParams();
 
-		$this->readParamBoolean('install', 'installer.installOJS');
+		$this->readParamBoolean('install', 'installer.installApplication');
 
 		return $this->params['install'];
 	}

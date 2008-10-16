@@ -18,9 +18,9 @@
 define('SESSION_DISABLE_INIT', 1); // FIXME?
 
 import('oai.ojs.JournalOAI');
-import('core.Handler');
+import('core.PKPHandler');
 
-class OAIHandler extends Handler {
+class OAIHandler extends PKPHandler {
 
 	function index() {
 		OAIHandler::validate();

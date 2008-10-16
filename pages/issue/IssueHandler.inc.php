@@ -16,9 +16,9 @@
 
 
 import ('issue.IssueAction');
-import('core.Handler');
+import('core.PKPHandler');
 
-class IssueHandler extends Handler {
+class IssueHandler extends PKPHandler {
 
 	/**
 	 * Display about index page.
@@ -269,7 +269,7 @@ class IssueHandler extends Handler {
 
 		$journal = &Request::getJournal();
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
-		$rangeInfo = Handler::getRangeInfo('issues');
+		$rangeInfo = PKPHandler::getRangeInfo('issues');
 
 		$publishedIssuesIterator = $issueDao->getPublishedIssues($journal->getJournalId(), $rangeInfo);
 

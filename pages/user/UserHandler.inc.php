@@ -15,9 +15,9 @@
 // $Id$
 
 
-import('core.Handler');
+import('core.PKPHandler');
 
-class UserHandler extends Handler {
+class UserHandler extends PKPHandler {
 
 	/**
 	 * Display user index page.

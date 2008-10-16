@@ -72,7 +72,7 @@ function handleRequest() {
 	// If a hook has been registered to handle this page, give it the
 	// opportunity to load required resources and set HANDLER_CLASS.
 	if (!HookRegistry::call('LoadHandler', array(&$page, &$op, &$sourceFile))) {
-		if (file_exists($sourceFile)) require($sourceFile);
+		if (file_exists($sourceFile) || file_exists('lib/pkp/'.$sourceFile)) require($sourceFile);
 		else require('pages/index/index.php');
 	}
 
