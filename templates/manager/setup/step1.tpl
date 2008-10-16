@@ -60,8 +60,44 @@
 		<br />
 		<span class="instruct">{translate key="manager.setup.doiPrefixDescription"}</span>
 		</td>		
-	</tr>
+	</tr>	
 	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="doiSuffix" key="manager.setup.doiSuffix"}</td>
+		<td width="80%" class="value">
+			<table width="100%" class="data">
+				<tr>
+				<td width="5%" class="label" align="right" valign="top">
+					<input type="radio" name="doiSuffix" id="doiSuffix-pattern" value="pattern" {if $doiSuffix eq "pattern"}checked{/if} />
+				</td>
+				<td width="95%" class="value">
+					{fieldLabel name="doiSuffixPattern" key="manager.setup.doiSuffixPattern"}			
+					<br />
+					<input type="text" name="doiSuffixPattern" value="{$doiSuffixPattern|escape}" size="15" maxlength="15" id="doiSuffixPattern" class="textField" />
+					<br />
+					<span class="instruct">{translate key="manager.setup.doiSuffixPattern.example"}</span>										
+				</td>
+				</tr>
+				<tr>
+				<td width="5%" class="label" align="right" valign="top">
+					<input type="radio" name="doiSuffix" id="doiSuffix-default" value="default" {if ($doiSuffix neq "pattern" && $doiSuffix neq "customIdentifier")}checked{/if} />
+				</td>
+				<td width="95%" class="value">
+					{fieldLabel name="doiSuffix" key="manager.setup.doiSuffixDefault"}			
+				</td>
+				</tr>
+				<tr>
+				<td width="5%" class="label" align="right" valign="top">
+					<input type="radio" name="doiSuffix" id="doiSuffix-customIdentifier" value="customIdentifier" {if $doiSuffix eq "customIdentifier"}checked{/if} />
+				</td>
+				<td width="95%" class="value">
+					{fieldLabel name="doiSuffix" key="manager.setup.doiSuffixCustomIdentifier"}			
+				</td>	
+				</tr>			
+			</table>
+			<span class="instruct">{translate key="manager.setup.doiSuffixDescription"}</span>
+		</td>
+	</tr>
+	<tr valign="top">	
 		<td width="20%" class="label">{fieldLabel name="mailingAddress" key="common.mailingAddress"}</td>
 		<td width="80%" class="value">
 			<textarea name="mailingAddress" id="mailingAddress" rows="3" cols="40" class="textArea">{$mailingAddress|escape}</textarea>

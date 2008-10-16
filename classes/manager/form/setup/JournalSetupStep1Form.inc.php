@@ -31,6 +31,8 @@ class JournalSetupStep1Form extends JournalSetupForm {
 				'printIssn' => 'string',
 				'onlineIssn' => 'string',
 				'doiPrefix' => 'string',
+				'doiSuffix' => 'string',
+				'doiSuffixPattern' => 'string',				
 				'mailingAddress' => 'string',
 				'useEditorialBoard' => 'bool',
 				'contactName' => 'string',
@@ -61,6 +63,7 @@ class JournalSetupStep1Form extends JournalSetupForm {
 		// Validation checks for this form
 		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'manager.setup.form.journalTitleRequired'));
 		$this->addCheck(new FormValidatorLocale($this, 'initials', 'required', 'manager.setup.form.journalInitialsRequired'));
+		$this->addCheck(new FormValidatorRegExp($this, 'doiPrefix', 'optional', 'manager.setup.form.doiPrefixPattern', '/^10\.[0-9][0-9][0-9][0-9][0-9]?$/'));		
 		$this->addCheck(new FormValidator($this, 'contactName', 'required', 'manager.setup.form.contactNameRequired'));
 		$this->addCheck(new FormValidatorEmail($this, 'contactEmail', 'required', 'manager.setup.form.contactEmailRequired'));
 		$this->addCheck(new FormValidator($this, 'supportName', 'required', 'manager.setup.form.supportNameRequired'));
