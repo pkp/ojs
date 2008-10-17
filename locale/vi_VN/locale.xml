@@ -262,11 +262,7 @@
 	<message key="comments.authenticated">{$userName}</message>
 
 	<!-- Site Administration -->
-	<message key="admin.hostedJournals">Các tạp chí trên Website</message>
 	
-	<message key="admin.settings.journalRedirect">Chuyển hướng tạp chí</message>
-	<message key="admin.settings.journalRedirectInstructions">Website chính sẽ được chuyển hướng sáng tạp chí này. Điều này hữu ích khi website chỉ có một tạp chí.</message>
-	<message key="admin.settings.noJournalRedirect">Không chuyển hướng</message>
 	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Để nội dung của tất cả các tạp chí đặt trên website này được đưa vào chỉ mục của một hệ thống các cơ sở dữ liệu nghiên cứu đặt rải rác trên toàn cầu, hãy <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">đăng ký</a> địa chỉ URL website của quý vị với <a href="http://pkp.sfu.ca/harvester/" target="_blank">công cụ thu thập siêu dữ liệu</a> của Public Knowledge Project. Công cụ này thu thập siêu dữ liệu (dữ liệu mô tả) từ các bài viết đã được lập chỉ mục trong tạp chí này, cho phép tìm kiếm chính xác và cùng lúc trên nhiều website khác nhau cùng tuân theo tiêu chuẩn <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
 <br /><br />
 <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Nhấp chuột vào đây</a> và nhập đường dẫn <span class="highlight">{$siteUrl}</span> vào mục <strong>Site URL</strong>, và <span class="highlight">{$oaiUrl}</span> vào mục <strong>Base URL for OAI Archive</strong>.
@@ -276,54 +272,19 @@ Lưu ý là có thể vô hiệu giao diện tìm kiếm OAI trên website này 
 	
 	
 	<!-- Languages -->
-	<message key="admin.languages.primaryLocaleInstructions">Đây sẽ là ngôn ngữ mặc định cho web site và cho bất kỳ tạp chí nào đặt trên web site này.</message>
-	<message key="admin.languages.supportedLocalesInstructions">Lựa chọn tất cả các ngôn ngữ sẽ được sử dụng trên web site. Các ngôn ngữ được lựa chọn có thể được sử dụng cho tất cả các tạp chí và xuất hiện trong menu có ở mỗi tạp chí (có thể được đặt khác đi ở từng trang tạp chí cụ thể). Nếu chỉ có một ngôn ngữ được lựa chọn, menu ngôn ngữ sẽ không xuất hiện và không thể thiết lập thêm cho ngôn ngữ.</message>
-	<message key="admin.languages.confirmUninstall">Quý có chắc chắn muốn loại bỏ ngôn ngữ này? Điều này có thể ảnh hưởng tới bất kỳ tạp chí nào hiện đang đặt trên web site sử dụng ngôn ngữ đó.</message>
-	<message key="admin.languages.installNewLocalesInstructions">Lựa chọn bất kỳ ngôn ngữ bổ sung nào để cài đặt hỗ trợ cho hệ thống này. Ngôn ngữ phải được cài đặt trước khi nó có thể được sử dụng trên các tạp chí đặt trên web site này. Xem tài liệu hướng dẫn sử dụng OJS để có thêm thông tin về cài đặt thêm ngôn ngữ mới.</message>
-	
-	<message key="admin.auth.ojs">CSDL người dùng OJS</message>
-	<message key="admin.auth.enableSyncProfiles">Cho phép đồng nhất hồ sơ người sử dụng(nếu công cụ xác thực này hỗ trợ). Thông tin hồ sơ của người dùng sẽ được cập nhật tự động bằng nguồn từ xa, và những thay đổi trong hồ sơ (gồm cả thay đổi mật khẩu) trên phần mềm OJS cũng sẽ được cập nhật tự động lên nguồn từ xa. Nếu tính năng này không được kích hoạt, thông tin hồ sơ trên OJS sẽ được lưu giữ độc lập với thông tin hồ sơ nguồn từ xa.</message>
-	<message key="admin.auth.enableSyncPasswords">Cho phép sửa mật khẩu người dùng (nếu công cụ xác thực này hỗ trợ). Kích hoạt lựa chọn này sẽ cho phép người dùng sửa mật khẩu của họ trong phần mềm OJS và sử dụng chức năng "quên mật khẩu" để khởi tạo lại mật khẩu. Những chức năng này sẽ không dành cho người dùng từ nguồn xác thực này nếu lựa chọn không được kích hoạt.</message>
-	<message key="admin.auth.enableCreateUsers">Cho phép tạo người dùng (nếu công cụ xác thực này hỗ trợ). Người dùng được khởi tạo trong OJS bằng công cụ xác thực này sẽ được cập nhật tự động lên nguồn xác thực từ xa nếu như người dùng đó chưa có trên nguồn này. Ngoài ra, nếu nguồn này la nguồn xác thực mặc định, những tài khoản người dùng do người dùng tự đăng ký trên OJS cũng sẽ được cập nhật lên nguồn xác thực từ xa.</message>
+
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Việc chỉ định một nguồn xác thực khác OJS sẽ có các hiệu lực sau:</p>
 <ul>
 	<li>Nếu một người dùng muốn đăng ký một tài khoản mới với website này với bí danh (username) đã có trên nguồn xác thực (nhưng chưa có trên CSDL của OJS), đăng ký này sẽ không được phép nếu mật khẩu trùng với mật khẩu dành cho người trùng bí danh trên nguồn xác thực.</li>
 </ul>]]></message>
 	
 	<!-- System Information -->
-	<message key="admin.systemVersion">Phiên bản OJS</message>
-	<message key="admin.systemConfiguration">Cấu hình OJS</message>
-	<message key="admin.systemConfigurationDescription"><![CDATA[Cấu hình OJS ghi trong <tt>config.inc.php</tt>.]]></message>
 	<message key="admin.editSystemConfigInstructions"><![CDATA[Sử dụng mẫu này để sửa cấu hình hệ thống (File <tt>config.inc.php</tt>). Nhấp chuột vào nút Ghi để ghi lại cấu hình mới, hoặc nút "Hiển thị" để chỉ hiển thị cấu hình cập nhật nhất mà không sửa.
 <br /><br />
 <span class="formError">Cảnh báo: Sửa những thông số này có thể khiến website của quý vị trong tình trạng không truy cập được (và đòi hỏi phải sửa lại file cấu hình bằng tay). Chúng tôi khuyến nghị là q không nên thay đổi gì trừ khi quý vị biết chính xác điều quý vị đang làm.</span>]]></message>
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>LƯU Ý!</div>
 <p>Hệ thống không thể tự động ghi đè lên file cấu hình. Để thực hiện những thay đổi cấu hình quý vị phải mở file <tt>config.inc.php</tt> bằng phần mềm soạn thảo text phù hợp và thay nội dung file bằng nội dung dưới đây.</p>]]></message>
 	
-	<message key="admin.journals.journalSettings">Thiết lập tạp chí</message>
-	<message key="admin.journals.noneCreated">Chưa có tạp chí nào được khởi tạo.</message>
-	<message key="admin.journals.confirmDelete">Quý vị có chắc chắn muốn xóa vĩnh viễn tạp chí này và tất cả nội dung của tạp chí?</message>
-	<message key="admin.journals.create">Khởi tạp một tạp chí</message>
-	<message key="admin.journals.createInstructions">Quý vị sẽ tự động được bổ nhiệm là người quản lý (Tổng biên tập) tạp chí này. Sau khi tạo một tạp chí mới, đăng nhập vào với tư cách Tổng biên tập để tiếp tục thiết lập cho tạp chí và bổ nhiệm người dùng.</message>
-	<message key="admin.journals.urlWillBe">Địa chỉ của tạp chí sẽ là {$sampleUrl}</message>
-	<message key="admin.journals.form.titleRequired">Phải có tên tạp chí.</message>
-	<message key="admin.journals.form.pathRequired">Phải có đường dẫn.</message>
-	<message key="admin.journals.form.pathAlphaNumeric">Đường dẫn chỉ được phép có các ký tự chữ cái, chữ số, dấu gạch dưới, gạch ngang và phải bắt đầu bằng chữ cái, chữ số.</message>
-	<message key="admin.journals.form.pathExists">Đường dẫn vừa chọn đã được dùng cho một tạp chí khác.</message>
-	<message key="admin.journals.enableJournalInstructions">Để tạp chí này xuất hiện công khai trên web site</message>
-	<message key="admin.journals.journalDescription">Mô tả tạp chí</message>
-	<message key="admin.journals.importOJS1">Nhập từ OJS 1</message>
-	<message key="admin.journals.importOJS1.editMigratedJournal">Sửa các tạp chí từ phiên bản trước</message>
-	<message key="admin.journals.importOJS1.conflict.desc">Một số tài khoản người dùng có thông tin trùng nhau. Phiên bản OJS 1.x cho phép nhiều tài khoản dùng chung một địa chỉ email, trong khi phiên bản không hỗ trợ điều này. Trong danh sách sau, tài khoản thứ hai được tạm thời gắn cho một địa chỉ email. Người quản trị cần sửa bằng tay, bằng cách hoặc gắn cho một địa chỉ email khác hoặc sáp nhập các tài khoản thành một.</message>
-	<message key="admin.journals.importOJS1.conflict">{$firstUsername} ({$firstName}) và {$secondUsername} ({$secondName})</message>
-	<message key="admin.journals.importOJS1Instructions">Tham khảo tài liệu NÂNG CẤP phát hành cùng OJS để xem chi tiết thông tin về việc nhập dữ liệu từ OJS 1 sang OJS 2.</message>
-	<message key="admin.journal.pathImportInstructions">Đường dẫn hiện tại của tạp chí hoặc đường dẫn cần tạo (v.d., "ojs").</message>
-	<message key="admin.journal.importPath">Đường dẫn OJS 1</message>
-	<message key="admin.journal.importPathInstructions">Nhập đường dẫn nội bộ tới phần cài đặt OJS 1 (v.d., "/var/www/ojs").</message>
-	<message key="admin.journals.importSubscriptions">Nhập khách hàng đặt tạp chí</message>
-	<message key="admin.journals.transcode">Chuyển mã dữ liệu mô tả từ chuẩn ISO8859-1</message>
-	<message key="admin.journals.form.importPathRequired">Phải có đường dẫn để nhập.</message>
-	<message key="admin.journals.importErrors">Nhập dữ liệu không thành công</message>
 	
 	<!-- Subscription Management -->
 	<message key="subscriptionManager.subscriptionManagement">Quản lý phát hành</message>
@@ -974,25 +935,12 @@ Sau khi kết thúc hiệu đính, đổi tên file từ AuthorNameQA.doc thành
 	<message key="reader.openAccess">Truy cập Tự do</message>
 	<message key="reader.subscriptionAccess">Truy cập có Thuê bao</message>
 	<message key="reader.subscriptionOrFeeAccess">Thuê bao hoặc Truy cập Tự do</message>
-	<message key="admin.languages.downloadLocales">Tải Ngôn ngữ</message>
-	<message key="admin.languages.downloadFailed">Ngôn ngữ không tải được. Thông báo lỗi dưới đây giải thích về sự cố này.</message>
-	<message key="admin.languages.localeInstalled">Ngôn ngữ "{$locale}" đã được cài đặt.</message>
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Việc tải các gói ngôn ngữ từ máy chủ của Dự án Tri thức Công cộng hiện không thực hiện được vì:</p>
 	<ul>
 		<li>Máy chủ của quý vị không cho phép giải nén file nén chuẩn "tar"</li>
 		<li>Phần mềm OJS không sửa được file đăng ký ngôn ngữ, thường là "registry/locales.xml".</li>
 	</ul>
 <p>Có thể tự tải các gói ngôn ngữ từ website của <a href="http://pkp.sfu.ca">PKP</a>.</p>]]></message>
-	<message key="admin.languages.download">Tải Ngôn ngữ</message>
-	<message key="admin.languages.download.cannotOpen">Không mở được định danh ngôn ngữ từ website của PKP.</message>
-	<message key="admin.languages.download.cannotModifyRegistry">Không thể thêm ngôn ngữ mới vào file đăng ký ngôn ngữ, thường là "registry/locales.xml".</message>
-	<message key="admin.mergeUsers">Hợp nhất người dùng</message>
-	<message key="admin.mergeUsers.mergeUser">Hợp nhất người dùng</message>
-	<message key="admin.mergeUsers.from.description">Chọn một người dùng để hợp nhất vào một tài khoản người dùng khác (v.d., khi một người có 2 tài khoản. Tài khoản được lựa chọn trước sẽ bị xoá và các bài nộp, bài được giao,... sẽ được chuyển sang tài khoản thứ hai.</message>
-	<message key="admin.mergeUsers.allUsers">Tất cả người dùng đã bổ nhiệm</message>
-	<message key="admin.mergeUsers.confirm">Quý vị có chắc chắn muốn hợp nhất tài khoản có bí danh "{$oldUsername}" vào tài khoản có bí danh "{$newUsername}"? Tài khoản có bí danh "{$oldUsername}" sau đó sẽ không còn tồn tại. Tác vụ này không thể thay đổi lại.</message>
-	<message key="admin.mergerUsers.noneEnrolled">Chưa có người dùng được bổ nhiệm</message>
-	<message key="admin.mergeUsers.into.description">Chọn một người dùng sẽ tiếp nhận các quyền tác giả và công việc biên tập của người dùng trước đây.</message>
 	<message key="plugins.categories.citationFormats.description">Phụ trợ định dạng Trích dẫn tài liệu tham khảo cung cấp cho người dùng các định dạng khác nhau khi trích dẫn một bài viết.</message>
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Thông báo về Bản quyền đề xuất theo Creative Commons</h3>
 <h4>1. Chính sách đề xuất dành cho Tạp chí cho Truy cập Tự do</h4>
@@ -1023,10 +971,6 @@ Authors who publish with this journal agree to the following terms:
 <li><strong>Thêm một Công cụ đọc</strong><p>Tổng biên tập có thể thêm "Tìm các bài trích dẫn" vào các Công cụ đọc đi kèm với bài viết được xuất bản, giúp cho bạn đọc dùng tiêu đề của một bài viết được trích dẫn để tìm bài viết đó trong các cơ sở dữ liệu đã được lựa chọn trước</p></li>
 </li><strong>Đường dẫn gắn sẵn trong Danh mục Tài liệu trích dẫn</strong>BTV trình bày có thể thêm một đường dẫn vào các tài liệu được trích dẫn có thể tìm thấy trên mạng bằng cách sử dụng các hướng dẫn sau đây (có thể sửa được).</p></li>
 </ol>]]></message>
-	<message key="common.copy">Copy</message>
-	<message key="common.preview">Xem trước</message>
-	<message key="common.activate">Kích hoạt</message>
-	<message key="common.deactivate">Bỏ kích hoạt</message>
 	<message key="submission.reviewForm">Mẫu phiếu Phản biện</message>
 	<message key="submission.reviewFormResponse">Phản hồi Mẫu phiếu Phản biện</message>
 	<message key="reviewer.article.enterReviewForm">Nhập chuột vào biểu tượng để điền vào mẫu phiếu phản biện.</message>
@@ -1051,11 +995,6 @@ Authors who publish with this journal agree to the following terms:
 	<message key="user.noRoles.regReviewer">Đăng ký làm Người Phản biện</message>
 	<message key="user.noRoles.regReviewerClosed">Đăng ký làm Người Phản biện: Đăng ký hiện đang tạm ngừng.</message>
 	<message key="issue.coverPage.altText">Trang Bìa</message>
-	<message key="admin.journals.importOJS1.success">Tạp chí đã được nhập vào thành công.</message>
-	<message key="admin.journals.importOJS1.redirect.desc">Để hướng người đọc từ các tạp chí dùng OJS 1 sang OJS 2, tạp các file PHP sau sử dụng nội dung dưới đây. Những file tương ứng có thể được đặt trong đường dẫn hệ thống OJS 1, hoặc trong đường dẫn file hệ thống OJS 2  đối với trường hợp phần mềm chỉ dùng cho một tạp chí.</message>
-	<message key="admin.journals.importOJS1.redirect.ojs1root">Đặt trong đường dẫn hệ thống file OJS 1 cũ (ví dụ, /var/www/ojs1).</message>
-	<message key="admin.journals.importOJS1.redirect.ojs1orojs2root">Đặt trong đường dẫn hệ thống file OJS 1 cũ (ví dụ, /var/www/ojs1), hoặc trong đường dẫn file hệ thống OJS 2  đối với trường hợp phần mềm chỉ dùng cho một tạp chí (ví dụ, /var/www/ojs2)</message>
-	<message key="admin.journals.redirect">Tạo mã để ánh xạ các đường dẫn của OJS 1 sang OJS 2</message>
 	<message key="plugins.categories.implicitAuth">Công cụ phụ trợ Xác thực  Ngầm định</message>
 	<message key="plugins.categories.implicitAuth.description">Công cụ phụ trợ Xác thực  Ngầm định hỗ trợ xác thực người dùng dựa trên đầu biểu http</message>
 	<message key="sectionEditor.review.enrollReviewer">Bổ nhiệm một người dùng hiện có làm Người phản biện</message>

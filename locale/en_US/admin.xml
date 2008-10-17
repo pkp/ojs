@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * ojs2-devel/locale/en_US/admin.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (English) locale.
+  *
+  * $Id$
+  -->
+
+<locale name="en_US" full_name = "English">
+	<message key="admin.hostedJournals">Hosted Journals</message>
+	<message key="admin.settings.journalRedirect">Journal redirect</message>
+	<message key="admin.settings.journalRedirectInstructions">Requests to the main site will be redirected to this journal. This may be useful if the site is hosting only a single journal, for example.</message>
+	<message key="admin.settings.noJournalRedirect">Do not redirect</message>
+	<message key="admin.languages.primaryLocaleInstructions">This will be the default language for the site and any hosted journals.</message>
+	<message key="admin.languages.supportedLocalesInstructions">Select all locales to support on the site. The selected locales will be available for use by all journals hosted on the site, and also appear in a language select menu to appear on each site page (which can be overridden on journal-specific pages). If multiple locales are not selected, the language toggle menu will not appear and extended language settings will not be available to journals.</message>
+	<message key="admin.languages.confirmUninstall">Are you sure you want to uninstall this locale? This may affect any hosted journals currently using the locale.</message>
+	<message key="admin.languages.installNewLocalesInstructions">Select any additional locales to install support for in this system. Locales must be installed before they can be used by hosted journals. See the OJS documentation for information on adding support for new languages.</message>
+	<message key="admin.languages.downloadLocales">Download Locales</message>
+	<message key="admin.languages.downloadFailed">The locale download failed. The error message(s) below describe the failure.</message>
+	<message key="admin.languages.localeInstalled">The "{$locale}" locale has been installed. </message>
+	<message key="admin.languages.download">Download Locale</message>
+	<message key="admin.languages.download.cannotOpen">Cannot open language descriptor from PKP web site.</message>
+	<message key="admin.languages.download.cannotModifyRegistry">Cannot add the new locale to the locale registry file, typically "registry/locales.xml".</message>
+	<message key="admin.auth.ojs">OJS User Database</message>
+	<message key="admin.auth.enableSyncProfiles">Enable user profile synchronization (if supported by this authentication plug-in). User profile information will be automatically updated from the remote source when a user logs in, and profile changes (including password changes) made within OJS will be automatically updated on the remote source. If this option is not enabled OJS profile information will be kept separate from remote source profile information.</message>
+	<message key="admin.auth.enableSyncPasswords">Enable user password modification (if supported by this authentication plug-in). Enabling this option allows users to modify their password from within OJS and to use the OJS "lost password" feature to reset a forgotten password. These functions will be unavailable to users with this authentication source if this option is not enabled.</message>
+	<message key="admin.auth.enableCreateUsers">Enable user creation (if supported by this authentication plug-in). Users created within OJS with this authentication source will be automatically added to the remote authentication source if they do not already exist. Additionally, if this source is the default authentication source, OJS accounts created through user registration will also be added to the remote authentication source.</message>
+	<message key="admin.systemVersion">OJS Version</message>
+	<message key="admin.systemConfiguration">OJS Configuration</message>
+	<message key="admin.systemConfigurationDescription"><![CDATA[OJS configuration settings from <tt>config.inc.php</tt>.]]></message>
+	<message key="admin.journals.journalSettings">Journal Settings</message>
+	<message key="admin.journals.noneCreated">No journals have been created.</message>
+	<message key="admin.journals.confirmDelete">Are you sure you want to permanently delete this journal and all of its contents?</message>
+	<message key="admin.journals.create">Create Journal</message>
+	<message key="admin.journals.createInstructions">You will automatically be enrolled as the manager of this journal. After creating a new journal, enter it as a manager to continue with its setup and user enrollment.</message>
+	<message key="admin.journals.urlWillBe">The journal's URL will be {$sampleUrl}</message>
+	<message key="admin.journals.form.titleRequired">A title is required.</message>
+	<message key="admin.journals.form.pathRequired">A path is required.</message>
+	<message key="admin.journals.form.pathAlphaNumeric">The path can contain only alphanumeric characters, underscores, and hyphens, and must begin and end with an alphanumeric character.</message>
+	<message key="admin.journals.form.pathExists">The selected path is already in use by another journal.</message>
+	<message key="admin.journals.enableJournalInstructions">Enable this journal to appear publicly on the site</message>
+	<message key="admin.journals.journalDescription">Journal description</message>
+	<message key="admin.journals.importOJS1">Import from OJS 1</message>
+	<message key="admin.journals.importOJS1.success">Journal import has completed successfully.</message>
+	<message key="admin.journals.importOJS1.editMigratedJournal">Edit Migrated Journal</message>
+	<message key="admin.journals.importOJS1.redirect.desc">To redirect OJS 1 URLs to OJS 2 URLs, create the following PHP files using the file contents below. The corresponding files can then be placed in the OJS 1 filesystem path, or, for single journal installations, in the OJS 2 filesystem path.</message>
+	<message key="admin.journals.importOJS1.redirect.ojs1root">Place in the old OJS 1 filesystem path (i.e., /var/www/ojs1).</message>
+	<message key="admin.journals.importOJS1.redirect.ojs1orojs2root">Place in the old OJS 1 filesystem path (i.e., /var/www/ojs1), or, for single journal installations, in the new OJS 2 filesystem path (i.e., /var/www/ojs2).</message>
+	<message key="admin.journals.importOJS1.conflict.desc">Some user accounts had conflicting information. OJS 1.x allows multiple user accounts to share the same email address, while OJS 2.x does not. In the list below, the second account listed has had a temporary email account assigned to it. These should be corrected by hand, either by assigning a different email account, or by merging accounts.</message>
+	<message key="admin.journals.importOJS1.conflict">{$firstUsername} ({$firstName}) and {$secondUsername} ({$secondName})</message>
+	<message key="admin.journals.importOJS1Instructions">Consult the UPGRADE document distributed with OJS for detailed information on migrating data from OJS 1 to OJS 2.</message>
+	<message key="admin.journal.pathImportInstructions">Existing journal path or path to create (e.g., "ojs").</message>
+	<message key="admin.journal.importPath">OJS 1 path</message>
+	<message key="admin.journal.importPathInstructions">Complete local filesystem path to the OJS 1 installation (e.g., "/var/www/ojs").</message>
+	<message key="admin.journals.importSubscriptions">Import subscriptions</message>
+	<message key="admin.journals.transcode">Transcode article metadata from ISO8859-1</message>
+	<message key="admin.journals.redirect">Generate code to map OJS 1 URLs to OJS 2 URLs</message>
+	<message key="admin.journals.form.importPathRequired">The import path is required.</message>
+	<message key="admin.journals.importErrors">Importing failed to complete successfully</message>
+	<message key="admin.mergeUsers">Merge Users</message>
+	<message key="admin.mergeUsers.mergeUser">Merge User</message>
+	<message key="admin.mergeUsers.into.description">Select a user to whom to attribute the previous user's authorships, editing assignments, etc.</message>
+	<message key="admin.mergeUsers.from.description">Select a user to merge into another user account (e.g., when someone has two user accounts). The account selected first will be deleted and its submissions, assignments, etc. will be attributed to the second account.</message>
+	<message key="admin.mergeUsers.allUsers">All Enrolled Users</message>
+	<message key="admin.mergeUsers.confirm">Are you sure you wish to merge the account with the username "{$oldUsername}" into the account with the username "{$newUsername}"? The account with the username "{$oldUsername}" will not exist afterwards. This action is not reversible.</message>
+	<message key="admin.mergerUsers.noneEnrolled">No enrolled users.</message>
+</locale>

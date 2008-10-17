@@ -4,7 +4,7 @@
 <!--
   * ojs2-devel/locale/fr_CA/manager.xml
   *
-  * Copyright (c) 2000-2008 John Willinsky
+  * Copyright (c) 2003-2008 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the fr_CA (Français (Canada)) locale.
@@ -88,12 +88,10 @@
 	<message key="manager.people.roleEnrollment">{$role} Enrollment</message>
 	<message key="manager.people.syncUserDescription">La synchronisation de l'enrôlement enrôlera tous les usagers déjà enrôlés à jouer un rôle donné dans la revue donnée à occuper le même rôle dans cette revue. Cette fonction permet à un groupe d'usagers (i.e. évaluateurs) d'être synchronisés entre diverses revues.</message>
 	<message key="manager.plugins.description">Cette page permet au gestionnaire de la revue de réviser et possiblement de configurer les plugiciels présentement installés. Les plugiciels sont divisisés en catégories, selon leur fonction. Vous trouverez ci-dessous la liste des catégories et, pour chacune des catégories, la liste des plugiciels actuels.</message>
-	<message key="manager.reviewFormElement.changeType">Changer le type d'élément du formulaire...</message>
 	<message key="manager.reviewFormElements">Éléments du formulaire</message>
 	<message key="manager.reviewFormElements.addResponseItem">Ajouter la sélection</message>
 	<message key="manager.reviewFormElements.checkboxes">Cases à cocher (en choisir une ou plusieurs)</message>
 	<message key="manager.reviewFormElements.chooseType">Choisir un type d'élément</message>
-	<message key="manager.reviewFormElements.confirmDelete">Confirmer la suppression d'un élément de formulaire publié...</message>
 	<message key="manager.reviewFormElements.copyTo">Copier vers :</message>
 	<message key="manager.reviewFormElements.create">Créer un nouvel élément</message>
 	<message key="manager.reviewFormElements.dropdownbox">Zone déroulante</message>
@@ -109,11 +107,8 @@
 	<message key="manager.reviewFormElements.smalltextfield">Zone de texte uniterme</message>
 	<message key="manager.reviewFormElements.textarea">Zone de texte multiligne</message>
 	<message key="manager.reviewFormElements.textfield">Zone de texte simple</message>
-	<message key="manager.reviewFormElements.viewable">Visualisable (pour les auteurs)</message>
 	<message key="manager.reviewForms">Formulaires d'évaluation</message>
 	<message key="manager.reviewForms.completed">Complété</message>
-	<message key="manager.reviewForms.confirmDeletePublished">Confirmer la suppression d'un formulaire d'évaluation publié...</message>
-	<message key="manager.reviewForms.confirmDeleteUnpublished">Confirmer la suppression d'un formulaire d'évaluation non publié...</message>
 	<message key="manager.reviewForms.create">Créer un formulaire d'évaluation</message>
 	<message key="manager.reviewForms.description">Description et directives</message>
 	<message key="manager.reviewForms.edit">Formulaire d'évaluation</message>
@@ -122,9 +117,7 @@
 	<message key="manager.reviewForms.list.description">Les formulaires d'évaluation par les pairs créés ici seront présentés aux évaluateurs pour complétion, au lieu du formulaire par défaut qui consiste en deux boîtes de texte libre, la première "pour l'auteur et le rédacteur" et la deuxième "pour le rédacteur". Des formulaire d'évaluation peuvent être attribués à une section spécifique de la revue, et les rédacteurs auront l'option de choisir quel formulaire utiliser en assignant l'évaluation. Dans tous les cas, les rédacteurs auront l'option d'inclure les évaluations lors de leurs communications avec l'auteur.</message>
 	<message key="manager.reviewForms.noneChosen">Aucun / Formulaire d'évaluation libre</message>
 	<message key="manager.reviewForms.noneCreated">Aucun formulaire d'évaluation n'a été créé.</message>
-	<message key="manager.reviewForms.noneUsed">Aucun formulaire d'évaluation n'a été utilisé.</message>
 	<message key="manager.reviewForms.preview">Prévisualiser le formulaire</message>
-	<message key="manager.reviewForms.reviewFormData">Données du formulaire d'évaluation</message>
 	<message key="manager.reviewForms.title">Titre</message>
 	<message key="manager.sections.abstractsNotRequired">Résumés non obligatoire</message>
 	<message key="manager.sections.assigned">rédacteur de cette rubrique</message>

@@ -262,11 +262,7 @@
 	<message key="comments.authenticated">{$userName}</message>
 
 	<!-- Site Administration -->
-	<message key="admin.hostedJournals">Revues hébergées</message>
 	
-	<message key="admin.settings.journalRedirect">Réacheminement de la revue</message>
-	<message key="admin.settings.journalRedirectInstructions">Les demandes faites au site principal seront réacheminées vers cette revue. Cela pourrait être utile si le site héberge, par exemple, une seule revue.</message>
-	<message key="admin.settings.noJournalRedirect">Ne pas réacheminer</message>
 	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Pour indexer le contenu de toutes les revues hébergées sur ce site selon un système distribué de bases de données de recherche, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">inscrire</a> l'adresse URL de votre site dans le <a href="http://pkp.sfu.ca/harvester/" target="_blank">collecteur</a> de métadonnées du Public Knowledge Project. Cet outil récolte les métadonnées de chaque article indexé de la revue, permettant ainsi une recherche précise et globale parmi les sites de recherche qui adhèrent au protocole de collecte de métadonnées du <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative</a>.
 <br /><br />
 <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Cliquer ici</a> et entrer <span class="highlight">{$siteUrl}</span> sous <b>Site URL</b>, et <span class="highlight">{$oaiUrl}</span> sous <b>Base URL for OAI Archive</b>.
@@ -276,54 +272,19 @@
 	
 	
 	<!-- Languages -->
-	<message key="admin.languages.primaryLocaleInstructions">Cette langue sera la langue par défaut du site et de toute revue hébergée.</message>
-	<message key="admin.languages.supportedLocalesInstructions">Sélectionner toutes les langues supportées dans le site. Les langues sélectionnées vont être disponibles pour toutes les revues hébergées sur le site, et vont également apparaître dans un menu de sélection de langue présent sur chaque page (qui peut être désactivé pour les pages spécifiques à une revue). S'il n'y a pas plusieurs langues sélectionnées, le menu de sélection de langue n'apparaîtra pas et les paramètres d'extension de langues ne seront pas disponibles aux revues.</message>
-	<message key="admin.languages.confirmUninstall">Êtes-vous sûr de vouloir désinstaller cette langue? Ceci affectera toute revue actuellement hébergée utilisant cette langue.</message>
-	<message key="admin.languages.installNewLocalesInstructions">Sélectionner toute autre langue pour en installer le support sur ce système. Les langues doivent être installées avant qu'elles ne puissent être utilisées pas les revues hébergées. Lire la documentation OJS pour plus d'information sur le support de nouvelles langues.</message>
-	
-	<message key="admin.auth.ojs">Base de données OJS de l'utilisateur</message>
-	<message key="admin.auth.enableSyncProfiles">Activer la synchronisation du profil de l'utilisateur (si supporté par ce plugiciel d'authentification). Les informations du profil de l'utilisateur seront automatiquement mises à jour depuis la source distante quand un utilisateur se connecte, et les modifications du profil (y compris le mot de passe) effectuées avec OJS vont automatiquement être mises à jour sur la source distante. Si cette option n'est pas activée, les informations du profil OJS vont rester séparées de celles du profil sur la source distante.</message>
-	<message key="admin.auth.enableSyncPasswords">Permettre la modification du mot de passe de l'utilisateur (si supporté par ce plugiciel d'authentification). Activer cette option permettra aux utilisateurs de modifier leurs mot de passe OJS et d'utiliser la fonction "mot de passe oublié" pour réinitialiser un mot de passe perdu. Ces fonctions seront indisponibles pour les utilisateurs utilisant une source d'authentification où cette option n'est pas activée.</message>
-	<message key="admin.auth.enableCreateUsers">Permettre la création d'utilisateurs (si supporté par ce plugiciel d'authentification).Les utilisateurs créés avec OJS à l'aide de cette source d'authentification vont automatiquement être ajoutés à la source d'authentification distante s'ils n'existent pas déjà. De plus, si cette source est la source d'authentification par défaut, les comptes OJS créés par une inscription d'un utilisateur vont aussi être ajoutés à la source distante d'authentification.</message>
+
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Définir une source d'authentification par défaut autre que celle d'OJS entraîne les effets suivants:
 <ul>
 	<li>Si un utilisateur tente de créer un nouveau compte sur ce site avec un nom d'utilisateur déjà existant dans la source d'authentification (mais pas dans la base de données OJS), la tentative d'inscription n'est permise que si le mot de passe fourni est valide pour ce compte.</li>
 </ul>]]></message>
 
 	<!-- System Information -->
-	<message key="admin.systemVersion">Version OJS</message>
-	<message key="admin.systemConfiguration">Configuration OJS</message>
-	<message key="admin.systemConfigurationDescription"><![CDATA[Paramètres de configuration OJS de <tt>config.inc.php</tt>.]]></message>
 	<message key="admin.editSystemConfigInstructions"><![CDATA[Utiliser ce formulaire pour modifier la configuration de votre système (le fichier <tt>config.inc.php</tt>). Cliquer sur "Enregistrer" pour enregistrer votre nouvelle configuration, ou "Afficher" pour uniquement voir la mise à jour du fichier de configuration et ne pas modifier la configuration actuelle.
 <br /><br />
 <span class="formError">Avertissement: Modifier ces paramètres peut éventuellement rendre votre site inaccessible (vous obligeant à réparer manuellement votre fichier de configuration). Il est fortement déconseillé d'appliquer ces changements si vous ne savez pas exactement ce que vous faites.</span>]]></message>
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NOTE!</div>
 <p>Le système n'a pu modifier automatiquement le fichier de configuration. Pour appliquer les changements à votre fichier de configuration, vous devez ouvrir le <tt>config.inc.php</tt> dans un éditeur de texte adéquat et remplacer son contenu par le contenu de la zone de texte ci-dessous.</p>]]></message>
 	
-	<message key="admin.journals.journalSettings">Paramètres de la revue</message>
-	<message key="admin.journals.noneCreated">Aucune revue n'a été créée.</message>
-	<message key="admin.journals.confirmDelete">Êtes-vous certain de vouloir supprimer définitivement cette revue et tout son contenu?</message>
-	<message key="admin.journals.create">Créer une revue</message>
-	<message key="admin.journals.createInstructions">Vous deviendrez automatiquement responsable de cette revue. Après avoir créé une nouvelle revue, entrez-y à titre de responsable pour poursuivre sa configuration et pour l'inscription des utilisateurs.</message>
-	<message key="admin.journals.urlWillBe">L'URL de la revue sera {$sampleUrl}</message>
-	<message key="admin.journals.form.titleRequired">Le titre est obligatoire.</message>
-	<message key="admin.journals.form.pathRequired">Le chemin est obligatoire.</message>
-	<message key="admin.journals.form.pathAlphaNumeric">Le chemin ne peut contenir que des caractères alphanumériques, des caractères de soulignement, et des tirets, et doit commencer et finir par un caractère alphanumérique.</message>
-	<message key="admin.journals.form.pathExists">Le chemin sélectionné est déjà utilisé par une autre revue.</message>
-	<message key="admin.journals.enableJournalInstructions">Permettre à cette revue d'apparaître publiquement sur le site</message>
-	<message key="admin.journals.journalDescription">Description de la revue</message>
-	<message key="admin.journals.importOJS1">Importer d'OJS 1</message>
-	<message key="admin.journals.importOJS1.editMigratedJournal">Modifier la revue importée</message>
-	<message key="admin.journals.importOJS1.conflict.desc">Certains comptes utilisateurs ont des informations contradictoires. OJS 1.x permet en effet le partage d'une adresse courriel par plusieurs utilisateurs, ce qui n'est pas le cas d'OJS 2.x. Dans la liste ci-dessous, le second compte s'est vu affecter une adresse de courriel temporaire. Ceci doit être corrigé manuellement, soit en changeant l'adresse de courriel, soit en fusionnant les comptes.</message>
-	<message key="admin.journals.importOJS1.conflict">{$firstUsername} ({$firstName}) et {$secondUsername} ({$secondName})</message>
-	<message key="admin.journals.importOJS1Instructions">Consulter le document UPGRADE distribué avec OJS pour plus d'information sur la migration des données d'OJS 1 à OJS 2.</message>
-	<message key="admin.journal.pathImportInstructions">Chemin d'accès à la revue existant ou à créer (par ex., "ojs").</message>
-	<message key="admin.journal.importPath">Chemin OJS 1</message>
-	<message key="admin.journal.importPathInstructions">Compléter le chemin d'accès local vers le dossier d'installation d'OJS 1 (ex. "/var/www/ojs").</message>
-	<message key="admin.journals.importSubscriptions">Importer les abonnements</message>
-	<message key="admin.journals.transcode">Conversion des métadonnées de l'article à partir de la norme ISO 8859-1</message>
-	<message key="admin.journals.form.importPathRequired">Le chemin d'importation est obligatoire.</message>
-	<message key="admin.journals.importErrors">L'importation a échoué</message>
 	
 	<!-- Subscription Management -->
 	<message key="subscriptionManager.subscriptionManagement">Gestion des abonnements</message>
@@ -945,18 +906,6 @@ Après que vos révisions sont terminées, changer le nom du fichier AuthorNameQ
 	<message key="reader.openAccess">Libre-accès</message>
 	<message key="reader.subscriptionAccess">Accès à l'abonnement</message>
 	<message key="reader.subscriptionOrFeeAccess">Accès à l'abonnement ou aux frais</message>
-	<message key="admin.languages.downloadLocales">Télécharger les langues</message>
-	<message key="admin.languages.downloadFailed">Le téléchargement du paramètre de lieu a échoué. Des explications sont contenues dans le message d'erreur ci-dessous.</message>
-	<message key="admin.languages.localeInstalled">Le paramètre de lieu "{$locale}" a été installé.</message>
-	<message key="admin.languages.download">Télécharger la langue</message>
-	<message key="admin.languages.download.cannotOpen">Ne peut ouvrir le descripteur de langues du site Web PKP.</message>
-	<message key="admin.languages.download.cannotModifyRegistry">Ne peut ajouter le nouveau paramètre de lieu au fichier de registre de paramètre de lieu, généralement "registry/locales.xml".</message>
-	<message key="admin.mergeUsers">Fusionner les utilisateurs</message>
-	<message key="admin.mergeUsers.mergeUser">Fusionner l'utilisateur</message>
-	<message key="admin.mergeUsers.into.description">Sélectionnez un utilisateur à qui attribuer la paternité de textes, les assignations de révisions etc. de l'utilisateur précédent.</message>
-	<message key="admin.mergeUsers.from.description">Sélectionnez un utilisateur à fusionner au compte d'un autre utilisateur (par ex. : lorsque quelqu'un possède deux comptes d'utilisateur). Le compte sélectionné en premier sera supprimé et ses soumissions, attributions, etc. seront affectées au second compte.</message>
-	<message key="admin.mergeUsers.allUsers">Tous les utilisateurs inscrits</message>
-	<message key="admin.mergerUsers.noneEnrolled">Aucun utilisateur inscrit.</message>
 	<message key="plugins.categories.citationFormats.description">Les plugiciels de format de citation permettent aux utilisateurs d'accéder aux citations d'articles par divers formats.</message>
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Le téléchargement des progiciels de langues à partir du serveur Web du Public Knowledge Project n'est pas disponible pour l'instant, car :</p>
 	<ul>
@@ -965,7 +914,6 @@ Après que vos révisions sont terminées, changer le nom du fichier AuthorNameQ
 		<li>OJS n'est pas capable de modifier le fichier de registre du paramètre de lieu, généralement "registry/locales.xml".</li>
 	</ul>
 <p>Les progiciels de langes peuvent être téléchargés manuellement à partir de <a href="http://pkp.sfu.ca">PKP web site</a>.</p>]]></message>
-	<message key="admin.mergeUsers.confirm">Êtes-vous certain de vouloir fusionner le compte portant le nom d'utilisateur "{$oldUsername}" avec le compte portant le nom d'utilisateur "{$newUsername}"? Le compte portant le nom d'utilisateur "{$oldUsername}" sera supprimé. Cette action n'est pas réversible.</message>
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Suggestion d'avis de droits d'auteurs Common Creative</h3>
 <h4>1. Suggestion de politique à l'intention de revues offrant le libre-accès</h4>
 Les auteurs qui publient dans cette revue acceptent les termes suivants : 
@@ -1082,10 +1030,6 @@ Les chiffres dans le tableau 3 ne sont pas alignés dans la troisième colonne.<
 <br />
 <pre>4. FORMATAGE
 Le paragraphe qui commence « Ce dernier sujet... » est à effacer. </pre>]]></message>
-	<message key="common.copy">Copier</message>
-	<message key="common.preview">Aperçu</message>
-	<message key="common.activate">Activer</message>
-	<message key="common.deactivate">Désactiver</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Prière de remplir les champs obligatoires.</message>
 	<message key="common.pageHeader.altText">Entête de la page</message>
 	<message key="common.homePageHeader.altText">Entête de la page d'accueil</message>
@@ -1107,17 +1051,12 @@ Le paragraphe qui commence « Ce dernier sujet... » est à effacer. </pre>]]></
 	<message key="user.noRoles.regReviewer">S'inscrire en tant que qu'évaluateur</message>
 	<message key="user.noRoles.regReviewerClosed">S'inscrire en tant que qu'évaluateur : l'inscription d'évaluateur est présentement désactivée.</message>
 	<message key="issue.coverPage.altText">Page couverture</message>
-	<message key="admin.journals.importOJS1.success">L'importation de la revue a été complétée avec succès.</message>
 	<message key="plugins.categories.implicitAuth">Plugiciels d'authentification implicite</message>
 	<message key="user.profile.form.profileImageInvalid">Format d'image du profil invalide ou image trop grande. Les formats acceptés sont .gif, .jpg, ou .png., et l'image ne doit pas dépasser 150x150 pixels.</message>
 	<message key="help.searchReturnResults">Retourner aux résultats de recherche</message>
 	<message key="submission.reviewForm">Formulaire d'évaluation</message>
 	<message key="submission.reviewFormResponse">Réponse au formulaire d'évaluation</message>
 	<message key="reviewer.article.enterReviewForm">Cliquer sur l'icône pour compléter le formulaire d'évaluation.</message>
-	<message key="admin.journals.importOJS1.redirect.desc">Pour réacheminer les URLs d'OJS 1 vers les URLs d'OJS 2, créer les fichiers PHP suivants, en utilisant le contenu du fichier ci-dessous. Les fichiers correspondants peuvent alors être placés dans le chemin du système de fichier d'OJS 1, ou, pour les installations d'une seule revue, dans le chemin du système de fichier d'OJS 2.</message>
-	<message key="admin.journals.importOJS1.redirect.ojs1root">Placer dans l'ancien chemin du système de fichier d'OJS 1 (i.e., /var/www/ojs1).</message>
-	<message key="admin.journals.importOJS1.redirect.ojs1orojs2root">Placer dans l'ancien chemin du système de fichier d'OJS 1 (i.e., /var/www/ojs1), ou, pour les installations d'une seule revue, dans le nouveau chemin du système de fichier d'OJS 2 (i.e., /var/www/ojs2).</message>
-	<message key="admin.journals.redirect">Générer le code pour faire la correspondance entre les URLS d'OJS 1 et d'OJS 2</message>
 	<message key="plugins.categories.implicitAuth.description">Les plugiciels d'authentification implicite mettent en place le support pour l'authentification des utilisateurs basée sur les entêtes HTTP.</message>
 	<message key="submission.layout.publicGalleyId">Identifiant de l'épreuve publique</message>
 	<message key="submission.layout.galleyPublicIdentificationExists">l'identifiant de l'épreuve publique existe déjà.</message>

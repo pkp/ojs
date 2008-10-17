@@ -219,11 +219,7 @@
   <message key="comments.authenticated" >{$userName}</message>
   <message key="comments.confirmDeleteChildren" >پاک کردن این توضیح پاسخ های آن را نیز پاک می کند . آیا مطمئنید که 
 می خواهید این کار را بکنید ؟</message>
-<!-- ادمین سایت -->  <message key="admin.hostedJournals" >مجلات میزبان</message>
-  <message key="admin.settings.journalRedirect" >تغییر جهت دادن به مجله</message>
-  <message key="admin.settings.journalRedirectInstructions" >تقاضاهای ارسالی به سایت اصلی به این مجله ارجاع می شود . کاربرد آن ققط وقتی است که فقط یک مجله میزبان باشد.</message>
-  <message key="admin.settings.noJournalRedirect" >تغییر جهت داده نشود.</message>
-  <message key="admin.settings.homeHeaderImageInvalid" >فایل گرافیک انتخاب شده فاقد فرمات مناسب است. فرمات های مناسب :
+<!-- ادمین سایت -->  <message key="admin.settings.homeHeaderImageInvalid" >فایل گرافیک انتخاب شده فاقد فرمات مناسب است. فرمات های مناسب :
 gif, gpj, png</message>
   <message key="admin.settings.oaiRegistrationDescription" ><![CDATA[چنانچه مایل باشید محتوای مجلات این سایت در یک سیستم گسترده از بانکهای اطلاعاتی پژوهشی اندکس شود ، آدرس سایت خود را در سیستم 
 <a href="http://pkp.sfu.ca/harvester/" target="_blank">
@@ -255,24 +251,13 @@ http://journals.mui.ac.ir/index.php/index/index
   <message key="admin.confirmExpireSessions" >
 آیا شما مطمئن هستید که می خواهید کاربران را اخراج کنید. 
 تمام کاربرانی که اکنون وارد سیستم شده اند مجبور خواهند شد که دوباره به  سیستم وارد شوند (منجمله خودتان).</message>
-<!-- زبانها -->  <message key="admin.languages.primaryLocaleInstructions" >این زبان زبان پیش فرض سایت و مجلات آن خواهد بود.</message>
-  <message key="admin.languages.supportedLocalesInstructions" >ز این لیست زبانهای دلخواه را برای سایت انتخاب کنید. زبانهای انتخاب شده در دسترس تمام مجلات سایت خواهد بود و مدیرهر مجله در صورت تمایل می تواند آنرا برای سایت خود انتخاب کند. و همچنین در منوی انتخاب زبان در تمام صفحات موجود خواهد بود. چنانچه فقط یک زبان در سایت باشد منوی انتخاب زبان و تنظیمات مربوطه موجود نخواهد بود.</message>
-  <message key="admin.languages.confirmUninstall" >آیا می خواهید این زبان را عزل کنید؟ این کار ممکن است بر روی مجلات سایت که از این زبانها استفاده میکنند تاثیر بگذارد</message>
-  <message key="admin.languages.installNewLocalesInstructions" >زبانهائی را که میخواهید در این سیستم حمایت شود انتخاب کنید. زبانها قبل از استفاده می بایست نصب شوند. برای اطلاع از چگونگی انجام این کار به راهنمای او ج اس مراحعه کنید.</message>
-  <message key="admin.auth.ojs" > پاگاه داده کاربران او ج اس</message>
-  <message key="admin.auth.enableSyncProfiles" >فعال ساختن نظام هماهنگ کاربران. البته این پلاگین تایید هویت میبایست آنرا حمایت کند. وقتی که کاربر وارد سیستم شود پرونده وی از منبع تایید کننده خارجی بروزرسانی می شود و چنانچه در سیستم او ج اس پرونده خود را تغییر دهد این تغییرات در منبع تایید کننده مورد نظر نیز اعمال میگردد. این موضوع شامل رمز عبور نیز می شود. چنانچه این گزینه فعال نشود اطلاعات پرونده کاربر در سیستم او ج اس بصورت مستقل از سیستم خارجی تایید کننده هویت می باشد.</message>
-  <message key="admin.auth.enableSyncPasswords" >فعال سازی امکان تغییر رمز عبور کاربر. البته میبایست توسط سیستم تایید کننده هویت خارجی حمایت شود. با فعال سازی این گزینه کاربران میتوانند رمز عبور خودرا از داخل سیستم او ج اس تغییر داده و از قسمت رمز عبور فراموش ده نیز بهره بگیرند. در صورتی که این گزینه فعال نشود کاربرانی که از این سیستم خارجی تایید هویت استفاده می کنند قادر به استفاده از این امکانات یعنی رمز عبور فراموش ده نیستند.</message>
-  <message key="admin.auth.enableCreateUsers" >امکان ایجاد کاربر جدید در صورتی که سیستم تایید کننده هویت خارجی حمایت کند. کاربرانی که درون او ج اس با استفاده از این سیستم خارجی اضافه می شوند به سیستم خارجی نیز اضافه می شوند. همچنین چنانچه این سیستم خارجی سیستم پیش فرض تایید کننده هویت باشد. کابران ایجاد شده هنگام ثبت نام به سیستم خارجی نیز اضافه می شوند.</message>
-  <message key="admin.auth.defaultSourceDescription" ><![CDATA[تایید یک منبع تایید کننده هویت پیش فرض جدای از او ج اس دارای این مزیات است:
+<!-- زبانها -->  <message key="admin.auth.defaultSourceDescription" ><![CDATA[تایید یک منبع تایید کننده هویت پیش فرض جدای از او ج اس دارای این مزیات است:
 <ul>
 <li>
 چنانچه کاربری بخواهد در این سایت با نام کاربری که در منبع تایید هویت خارجی  و نه در خود سیستم او ج اس وجود دارد ثبت نام کند  موقعی موفق می شود که رمز عبور مناسب سیستم خارجی را وارد کند.
 </li>
 </ul>]]></message>
-<!-- اطلاعات سیستم -->  <message key="admin.systemVersion" >نسخه او ج اس</message>
-  <message key="admin.systemConfiguration" >پیکره بندی او ج اس</message>
-  <message key="admin.systemConfigurationDescription" ><![CDATA[تنظیمات پیکره بندی او ج اس بر گرفته از فایل config.inc.php]]></message>
-  <message key="admin.editSystemConfigInstructions" ><![CDATA[از این فرم برای تغییر تنظیمات سیستم استفاده کنید.بر روی ذخیره کلیک کنید تا تغییرات را ذخیره کنید. بر روی مشاهده کلکیک کنید تا فایل تنظیمات بروز رسانی شده را نمایش دهید.
+<!-- اطلاعات سیستم -->  <message key="admin.editSystemConfigInstructions" ><![CDATA[از این فرم برای تغییر تنظیمات سیستم استفاده کنید.بر روی ذخیره کلیک کنید تا تغییرات را ذخیره کنید. بر روی مشاهده کلکیک کنید تا فایل تنظیمات بروز رسانی شده را نمایش دهید.
 
 <span class="formError">
 هشدار: تغییر این تنظیمات ممکن است سایت شما را غیر قابل دسترس سازد و لازم شود که بطور دستی فایل تنظیمات را تغییر دهید. شدیدا توصیه میشود که به این تنضیمات دست نزنید مگر اینکه  دقیقا بدانید که چکار می کنید.
@@ -294,40 +279,9 @@ http://journals.mui.ac.ir/index.php/index/index
   <message key="admin.configFileUpdatedInstructions" ><![CDATA[فایل تنظیمات با موفقیت بروز رسانی شد. چنانچه سایت بطور صحیحی عمل نکرد میبایست بصورت دستی فایل
 <tt>config.inc.php</tt>
 را ویرایش کرده و خطا را بر طرف کنید.]]></message>
-  <message key="admin.journals.journalSettings" >تنظمات مجله</message>
-  <message key="admin.journals.noneCreated" >هیچ مجله ای تعریف نشده است</message>
-  <message key="admin.journals.confirmDelete" >آیا مطمئنید که می خواهید به طور دائم این مجله و تمام محتویات آن را پاک کنید؟</message>
-  <message key="admin.journals.create" >مجله جدید</message>
-  <message key="admin.journals.createInstructions" >شما بطور اتوماتیک مدیر این مجله خواهید بود.پس از ایجاد یک مجله جدید ، به عنوان مدیر وارد آن شوید تا راه اندازی اولیه آنرا انجام دهید.</message>
-  <message key="admin.journals.urlWillBe" >URL مجله این است: {$sampleUrl}</message>
-  <message key="admin.journals.form.titleRequired" >عنوان الزامی است</message>
-  <message key="admin.journals.form.pathRequired" >مسیر الزامی است</message>
-  <message key="admin.journals.form.pathAlphaNumeric" >مسیر فقط می تواند شامل کاراکترهای حروف و عدد باشد</message>
-  <message key="admin.journals.form.pathExists" >مسیر انتخاب شده قبلا توسط یک مجله دیگر انتخاب شده است</message>
-  <message key="admin.journals.enableJournalInstructions" >این مجله را فعال کنید تا به صورت عمومی روی سایت نمایش داده شود</message>
-  <message key="admin.journals.journalDescription" >توصیف مجله</message>
   <message key="admin.journals.outsideJournalInstructions" >این مجله در خارج از این سایت قرار دارد. آدرس را در قسمت زیر وارد کنید.</message>
   <message key="admin.journals.outsideJournalUrl" >آدرس مجله خارج از سایت</message>
-  <message key="admin.journals.importOJS1" >انتقال از او ج اس ۱</message>
-  <message key="admin.journals.importOJS1.editMigratedJournal" >مجله منتقل شده را ویرایش کن</message>
-  <message key="admin.journals.importOJS1.conflict.desc" >پرونده بعضی کاربران اطلاعات ضد ونقیضی دارد. در OJS 1.x  چند کاربر میتوانند ایمیل یکسانی داشته باشند ، ولی OJS 2.x این اجازه را نمیدهد. در لیست زیر ، برای کاربر دوم یک ایمیل موقت در نظر گرفته شده است که باید به جای آن ایمیل واقعی کاربر درج شود. برای این کار می توان یک ایمیل متفاوت با دیگر کاربران منظور کرد و یا دو کاربر را در هک ادغام کرد.</message>
-  <message key="admin.journals.importOJS1.conflict" >{$firstUsername} ({$firstName}) و {$secondUsername} ({$secondName})</message>
-  <message key="admin.journals.importOJS1Instructions" >برای اطلاعات بیشتر در مورد مهاجرت دادها از OJS 1 به 2 اطلاعات مندرج در فایل UPGRADE در شاخه doc مراجعه کنید.</message>
-  <message key="admin.journal.pathImportInstructions" >مسیر موجود یا مسیری که باید ایجاد شود. مثال: ojs</message>
-  <message key="admin.journal.importPath" >OJS 1 مسیر</message>
-  <message key="admin.journal.importPathInstructions" >مسیر کامل سیستم فایل موضعی به سوی محلی که OJS 1 نصب شده است. مانند: &quot;/var/www/ojs&quot;.</message>
-  <message key="admin.journals.importSubscriptions" >وارد کردن اشتراک ها</message>
-  <message key="admin.journals.transcode" >انتقال کد دادههای مقاله از ISO8859-1</message>
-  <message key="admin.journals.form.importPathRequired" >برای واردات مسیر مورد نیاز است</message>
-  <message key="admin.journals.importErrors" >واردات با موفقیت انجام نشد</message>
-<!-- سایت ادمین ادغام کاربران -->  <message key="admin.mergeUsers" >ادغام کاربران</message>
-  <message key="admin.mergeUsers.mergeUser" >ادغام کاربر</message>
-  <message key="admin.mergeUsers.into.description" >کاربری را که مسئولیتها و انتسابهای کاربر قبلی باید به آن نسبت داده شود را انتخاب نمایید</message>
-  <message key="admin.mergeUsers.from.description" >کاربری را برای ادغام با حساب کاربر دیگر انتخاب کنید (مثال وقتی که شخصی دو حساب کاربری دارد ) حسابی که در ابتدا انتخاب شده پاک می شود و سابمیشن ها , انتسابها و غیره مربوط به آن به حساب دوم نسبت داده می شود</message>
-  <message key="admin.mergeUsers.allUsers" >تمام کاربران نام نویسی شده</message>
-  <message key="admin.mergeUsers.confirm" >آیا مطمئن هستید که می خواهید حساب با نام کاربری &quot;{$oldUsername}&quot; را با حساب با نام کاربری&quot;{$newUsername}&quot; ادغام کنید؟ حساب با نام کاربری&quot;{$oldUsername}&quot; دیگر وجود نخواهد داشت . این عملیات قابل بازگشت نیست</message>
-  <message key="admin.mergerUsers.noneEnrolled" >هیچ کاربر نام نویسی شده ای وجود ندارد</message>
-<!-- اداره اشتراک -->  <message key="subscriptionManager.subscriptionManagement" >مدیریت اشتراکها</message>
+<!-- سایت ادمین ادغام کاربران --><!-- اداره اشتراک -->  <message key="subscriptionManager.subscriptionManagement" >مدیریت اشتراکها</message>
 <!-- اداره مجله --><!-- آمار و گزارش -->  <message key="manager.statistics.reports.dateFrom" >از تاریخ</message>
   <message key="manager.statistics.reports.dateTo" >تا تاریخ</message>
   <message key="manager.statistics.reports.reportType" >نوع گزارش</message>
@@ -788,11 +742,7 @@ Malinowski
   <message key="navigation.browseByAuthor" >مرور بر اساس نویسنده</message>
   <message key="submission.event.logLevel.info" >اطلاعات سطح وقایع نگاری</message>
   <message key="submission.event.logLevel.notice" >تذکرات سطح وقایع نگاری</message>
-  <message key="admin.mergerUsers.noneEnrolled" >هیچ کاربر نام نویسی شده ای وجود ندارد</message>
   <message key="reader.subscriptionRequiredLoginText" >برای دستیابی به این آیتم احتیاج به اشتراک دارید. در صورتی که مشترک هستید با استفاده از نام کاربری و رمز عبور وارد سایت شوید</message>
-  <message key="admin.languages.downloadLocales" >دانلود فایل (های) زبانی</message>
-  <message key="admin.languages.downloadFailed" >دانلود فایل (های) زبانی شکست خورد. پیامهای خطای زیر جزئیات موضوع را نشان میدهند</message>
-  <message key="admin.languages.localeInstalled" >زبان &quot;{$locale}&quot; نصب شد</message>
   <message key="admin.languages.downloadUnavailable" ><![CDATA[<p>
 در حال حاضر امکان دانلود از سایت پروژه دانش عمومی وجود ندارد, زیرا:
 </p>
@@ -808,9 +758,6 @@ Malinowski
 بسته های زبانی را میتوان بصورت دستی از وب سایت پی کی پی در آدرس زیر دانلود کرد.
 <a href="http://pkp.sfu.ca">وب سایت پی کی پی</a>.
 </p>]]></message>
-  <message key="admin.languages.download" >دانلود فایل (های) زبانی</message>
-  <message key="admin.languages.download.cannotOpen" >قادر به باز کردن فایل توصیف کننده زبان از سایت پی کی پی نیست</message>
-  <message key="admin.languages.download.cannotModifyRegistry" >افزودن زبان جدید به فایل رجیستری زبان ممکن نیست</message>
   <message key="manager.payment.options.payPerViewFee" >پرداخت جهت مشاهده</message>
   <message key="manager.setup.authorCopyrightNotice.sample" ><![CDATA[<h3>
 بیانیه کپی رایت پیشنهادی Creative Commons
@@ -902,7 +849,6 @@ Malinowski
   <message key="navigation.browseByAuthor" >مرور بر اساس نویسنده</message>
   <message key="submission.event.logLevel.info" >اطلاعات</message>
   <message key="submission.event.logLevel.notice" >تذکرات</message>
-  <message key="admin.mergerUsers.noneEnrolled" >هیچ کاربر نام نویسی شده ای وجود ندارد</message>
   <message key="sectionEditor.regrets.breadcrumb" >موارد عدم تمایل به انجام کارشناسی</message>
   <message key="sectionEditor.regrets" >موارد عدم تمایل به انجام کارشناسی</message>
   <message key="sectionEditor.regrets.regret" >موارد عدم تمایل به انجام کارشناسی</message>
@@ -1026,14 +972,9 @@ http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI
   <message key="default.journalSettings.checklist.bibliographicRequirements" ><![CDATA[متن مقاله بر طبق اصول مقاله نویسی و مرجع نگاری  <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines"> راهنمای نویسندگان </a> میباشد که در قسمت در باره مجله یافت میشود.]]></message>
   <message key="default.journalSettings.checklist.anonymous" ><![CDATA[در صورتی که مقاله قرار باشد کارشناسی شود ، ساب میشن از نظر  <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">رعایت کارشناسی محرمانه </a>) دستورالعمل های لازم رعایت شده است.]]></message>
   <message key="default.journalSettings.privacyStatement" >نام ها و ایمیل های وارد شده در این سایت مجله فقط به منظور بیان شده بکار میرود و در دسترس هیچ شخص یا سازمان دیگری قرار نخواهد گرفت.</message>
-  <message key="common.copy" >کپی</message>
-  <message key="common.preview" >نگاه اجمالی</message>
-  <message key="common.activate" >فعال کن</message>
-  <message key="common.deactivate" >غیر فعال کن</message>
   <message key="submission.reviewForm" >فرم کارشناسی</message>
   <message key="submission.reviewFormResponse" >پاسخ فرم کارشناسی</message>
   <message key="navigation.browseByAuthor" >بر اساس نویسنده</message>
-  <message key="admin.mergerUsers.noneEnrolled" >هیچ کاربری یافت نشد</message>
   <message key="sectionEditor.regrets.breadcrumb" >انصرافات</message>
   <message key="sectionEditor.regrets" >انصرافات</message>
   <message key="sectionEditor.regrets.regret" >انصراف</message>
@@ -1060,11 +1001,6 @@ http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI
   <message key="user.noRoles.regReviewer" >ثبت نام به عنوان کارشناس</message>
   <message key="user.noRoles.regReviewerClosed" >ثبت نام به عنوان کارشناس: در حال حاضر ثبت نام کارشناسان غیر فعال است</message>
   <message key="issue.coverPage.altText" >پشت جلد</message>
-  <message key="admin.journals.importOJS1.success" >وارد کردن مجله با موفقیت تمام شد</message>
-  <message key="admin.journals.importOJS1.redirect.desc" >برای تغییر مسیر آدرس او ج اس ۱ به آدرس او ج اس ۲ فایلهای پی اج پی با محتوای زیر را ایجاد کرده و در پوشه های مربوطه در او ج اس ۱ قرار دهید. در صورتی که اوج اس ۲ شما تک مجله ای است میتوانید این فایها را در پوشه های مربوطه در اوج اس ۲ بگذارید.</message>
-  <message key="admin.journals.importOJS1.redirect.ojs1root" >در پوشه او ج اس ۱ قرار دهید</message>
-  <message key="admin.journals.importOJS1.redirect.ojs1orojs2root" >در پوشه های مربوطه در او ج اس ۱ قرار دهید. در صورتی که اوج اس ۲ شما تک مجله ای است میتوانید این فایها را در پوشه های مربوطه در اوج اس ۲ بگذارید.</message>
-  <message key="admin.journals.redirect" >تولید کد لازم برای تطبیق آدرس او ج اس ۱ به ۲</message>
   <message key="plugins.categories.implicitAuth" >پلاگین تایید هویت ضمنی</message>
   <message key="plugins.categories.implicitAuth.description" >بکمک پلاگین تایید هویت امکان تایید هویت کاربران از روی هدر اچ تی تی پی بوجود می آید</message>
   <message key="submission.layout.publicGalleyId" >شناسه عمومی گالی</message>

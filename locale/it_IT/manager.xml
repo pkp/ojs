@@ -4,7 +4,7 @@
 <!--
   * ojs2-devel/locale/it_IT/manager.xml
   *
-  * Copyright (c) 2000-2008 John Willinsky
+  * Copyright (c) 2003-2008 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the it_IT (Italiano) locale.
@@ -87,12 +87,10 @@
 	<message key="manager.people.roleEnrollment">{$role} Iscrizione</message>
 	<message key="manager.people.syncUserDescription">La sincronizzazione della iscrizione inscriver&#x00E0; tutti gli utenti inseriti nel ruolo e nella rivista specificato, all'interno dello stesso ruolo in questa rivista. Questa funzione permette ad un insieme comune di utenti  (e.g., revisori)di essere sincronizzati tra le riviste.</message>
 	<message key="manager.plugins.description">QUesta pagina permette all'Amministratore della rivista di rivedere e potenzialmente di configurare i plugin che sono installati attualmente. I plugin sono suddivisi in categorie, a secondo delle loro funzioni. Le categorie sono elencate di seguito, e dentro ogni categoria, il suo attuale gruppo di plugin.</message>
-	<message key="manager.reviewFormElement.changeType">Cambia il tipo</message>
 	<message key="manager.reviewFormElements">Item del modulo</message>
 	<message key="manager.reviewFormElements.addResponseItem">Aggiungi una selezione</message>
 	<message key="manager.reviewFormElements.checkboxes">Checkbox (Possibile una o più scelte)</message>
 	<message key="manager.reviewFormElements.chooseType">Scegli il tipo</message>
-	<message key="manager.reviewFormElements.confirmDelete">Conferma la cancellazione di un documento pubblicato</message>
 	<message key="manager.reviewFormElements.copyTo">Copia in:</message>
 	<message key="manager.reviewFormElements.create">Crea un nuovo item</message>
 	<message key="manager.reviewFormElements.dropdownbox">Menù a tendina</message>
@@ -108,11 +106,8 @@
 	<message key="manager.reviewFormElements.smalltextfield">Text box per una sola parola</message>
 	<message key="manager.reviewFormElements.textarea">Text box per testi lunghi</message>
 	<message key="manager.reviewFormElements.textfield">Text box su una linea</message>
-	<message key="manager.reviewFormElements.viewable">Visibile (per gli autori)</message>
 	<message key="manager.reviewForms">Modulo di revisione</message>
 	<message key="manager.reviewForms.completed">Completato</message>
-	<message key="manager.reviewForms.confirmDeletePublished">Conferma la cancellazione di un modulo di revisione pubblicato...</message>
-	<message key="manager.reviewForms.confirmDeleteUnpublished">Conferma la cancellazione di un modulo di revisione non pubblicato ...</message>
 	<message key="manager.reviewForms.create">Crea un modulo di revisione</message>
 	<message key="manager.reviewForms.description">Descrizione e Istruzioni</message>
 	<message key="manager.reviewForms.edit">Modulo di revisione</message>
@@ -121,9 +116,7 @@
 	<message key="manager.reviewForms.list.description">I moduli di peer review creati qui verranno presentati ai revisori per essere completati, invece del modulo di default che consiste di due caselle di testo vuote, la prima "per l'autore e per il curatore", e la seconda "per il curatore". I moduli di revisione possono essere designati per una sezione specifica della rivista, e i curatori avranno l'opzione di scegliere quale modulo usare nell'assegnare la revisione. In tutti i casi, i curatori avranno l'opzione di includere le revisioni in corrispondenza dell'autore.</message>
 	<message key="manager.reviewForms.noneChosen">Nessuno / Revisione del modulo libero</message>
 	<message key="manager.reviewForms.noneCreated">Non è stato creato nessun modulo di revisione</message>
-	<message key="manager.reviewForms.noneUsed">Non è stato usato nessun modulo di revisione</message>
 	<message key="manager.reviewForms.preview">Modulo di anteprima</message>
-	<message key="manager.reviewForms.reviewFormData">Data del modulo di revisione</message>
 	<message key="manager.reviewForms.title">Titolo</message>
 	<message key="manager.sections.abstractsNotRequired">Non richiede abstract.</message>
 	<message key="manager.sections.assigned">Editor di questa sezione</message>

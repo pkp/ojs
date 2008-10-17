@@ -4,7 +4,7 @@
 <!--
   * ojs2-devel/locale/vi_VN/editor.xml
   *
-  * Copyright (c) 2000-2008 John Willinsky
+  * Copyright (c) 2003-2008 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the vi_VN (Tiếng Việt) locale.
@@ -16,7 +16,6 @@
 	<message key="editor.article.reviewForms">Mẫu phiếu Phản biện</message>
 	<message key="editor.article.selectReviewForm">Chọn Mẫu phiếu Phản biện</message>
 	<message key="editor.article.clearReviewForm">Xóa Mẫu phiếu Phản biện</message>
-	<message key="editor.article.confirmChangeReviewForm">Thay mẫu phiếu phản biện sẽ xóa đi các phản hồi</message>
 	<message key="editor.home">Trang BTV chính</message>
 	<message key="editor.submissionsAndPublishing">Bài nộp và Xuất bản</message>
 	<message key="editor.submissionQueue">Bài nộp đang chờ</message>

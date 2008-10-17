@@ -4,7 +4,7 @@
 <!--
   * ojs2-devel/locale/hr_HR/editor.xml
   *
-  * Copyright (c) 2000-2008 John Willinsky
+  * Copyright (c) 2003-2008 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the hr_HR (Hrvatski) locale.
@@ -16,7 +16,6 @@
 	<message key="editor.article.reviewForms">Recenzijski obrasci</message>
 	<message key="editor.article.selectReviewForm">Odaberite recenzijski obrazac</message>
 	<message key="editor.article.clearReviewForm">Očistite sadržaj recenzijskog obrasca</message>
-	<message key="editor.article.confirmChangeReviewForm">Promjena recenzijskog obrasca će izbrisati sve odgovore...</message>
 	<message key="editor.submissionsAndPublishing">Prijave i objavljivanja</message>
 	<message key="editor.submissionQueue">Red čekanja prijave</message>
 	<message key="editor.submissionArchive">Arhiva prijava</message>

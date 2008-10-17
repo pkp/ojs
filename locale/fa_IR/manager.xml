@@ -4,7 +4,7 @@
 <!--
   * ojs2-devel/locale/fa_IR/manager.xml
   *
-  * Copyright (c) 2000-2008 John Willinsky
+  * Copyright (c) 2003-2008 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the fa_IR (Persian) locale.
@@ -87,12 +87,10 @@
 	<message key="manager.people.roleEnrollment">اعطای نقش {$role}</message>
 	<message key="manager.people.syncUserDescription">هماهنگی اعطای نقش موجب میشود تا تمام کاربران در یک نقش خاص در یک مجله خاص با همان نقشها وارد این مجله شوند. این اقدام موجب پیدایش مجموعه مشترکی از کاربران خواهد شد.</message>
 	<message key="manager.plugins.description">این صفحه به مدیر ژورنال این امکان را می دهد که پلاگین های نصب شده فعلی را مشاهده کرده و یا آنها را پیکره بندی کند . پلاگین ها با توجه به کاربردشان به دسته های مختلف تقسیم می شوند . دسته ها در زیر لیست شده اند و در هر دسته مجموعه پلاگین های آن دسته</message>
-	<message key="manager.reviewFormElement.changeType">تغییر نوع آیتم فرم</message>
 	<message key="manager.reviewFormElements">آیتم های فرم</message>
 	<message key="manager.reviewFormElements.addResponseItem">افزودن گزینه</message>
 	<message key="manager.reviewFormElements.checkboxes">جعبه چک مارک: یک یا چند گزینه قابل انتخاب است</message>
 	<message key="manager.reviewFormElements.chooseType">انتخاب نوع آیتم</message>
-	<message key="manager.reviewFormElements.confirmDelete">لطفا خذف آیتم فرم منتشر شده را تایید نمائید</message>
 	<message key="manager.reviewFormElements.copyTo">کپی به:</message>
 	<message key="manager.reviewFormElements.create">ایجاد آیتم جدید</message>
 	<message key="manager.reviewFormElements.dropdownbox">جعبه منوی کرکره ای</message>
@@ -108,11 +106,8 @@
 	<message key="manager.reviewFormElements.smalltextfield">جعبه متن یک کلمه ای</message>
 	<message key="manager.reviewFormElements.textarea">جعبه متن طویل</message>
 	<message key="manager.reviewFormElements.textfield">جعبه متن یک سطری</message>
-	<message key="manager.reviewFormElements.viewable">قابل مشاهده توسط نویسندگان</message>
 	<message key="manager.reviewForms">فرم های کارشناسی</message>
 	<message key="manager.reviewForms.completed">موارد تکمیل شده</message>
-	<message key="manager.reviewForms.confirmDeletePublished">لطفا خذف فرم منتشر شده را تایید نمائید</message>
-	<message key="manager.reviewForms.confirmDeleteUnpublished">لطفا خذف فرم منتشر نشده را تایید نمائید</message>
 	<message key="manager.reviewForms.create">ایجاد فرم کارشناسی</message>
 	<message key="manager.reviewForms.description">تعاریف و دستورالعمل ها</message>
 	<message key="manager.reviewForms.edit">فرم کارشناسی</message>
@@ -121,9 +116,7 @@
 	<message key="manager.reviewForms.list.description">این فرم های کارشناسی به جای فرم پیش فرض در اختیار کارشناسان قرار میگیرند. فزم پیش فرض فقط دارای دو جعبه متن یکی برای وارد کردن نظراتی که فقط دبیر مقاله باید ببیند و دیگری برای دبیر مقاله و نویسنده مقاله. فرمهای کارشناسی را میتوان برای نوع خاصی از مقالات در نظر گرفت - به علاوه دبیر مقاله این اختیار را دارد که کدام فرم یا فرمهای کارشناسی برای کدام کارشناس برود. در تمامی این حالات دبیر مقاله مختار است که ماحصل این فرم های کارشناسی را در اختیار نویسنده مقاله قرار بدهد یا خیر.</message>
 	<message key="manager.reviewForms.noneChosen">هیچکدام / فرم کارشناسی آزاد</message>
 	<message key="manager.reviewForms.noneCreated">هیچ فرم کارشناسی تولید نشده است</message>
-	<message key="manager.reviewForms.noneUsed">هیچ فزم کارشناسی مورد استفاده قرار نگرفته است</message>
 	<message key="manager.reviewForms.preview">فرم کارشناسی</message>
-	<message key="manager.reviewForms.reviewFormData">داده های فرم کارشناسی</message>
 	<message key="manager.reviewForms.title">عنوان</message>
 	<message key="manager.sections.abstractsNotRequired">نیاز به چکیده ندارد</message>
 	<message key="manager.sections.assigned">دبیر این نوع مقاله</message>

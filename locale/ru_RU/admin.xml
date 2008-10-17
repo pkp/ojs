@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * ojs2-devel/locale/ru_RU/admin.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Russian) locale.
+  *
+  * $Id$
+  -->
+
+<locale name="ru_RU" full_name = "Russian">
+	<message key="admin.hostedJournals">Журналы на сайте</message>
+	<message key="admin.settings.journalRedirect">Перенаправить</message>
+	<message key="admin.settings.journalRedirectInstructions">Основной страницей сайта станет страница выбранного журнала, если у него основной статус или он единственный на сайте.</message>
+	<message key="admin.settings.noJournalRedirect">Не перенаправлять</message>
+	<message key="admin.languages.primaryLocaleInstructions">Это будет язык по умолчанию для всех журналов на сайте.</message>
+	<message key="admin.languages.supportedLocalesInstructions">Выберите языки поддержки сайта. The selected locales will be available for use by all journals hosted on the site, and also appear in a language select menu to appear on each site page (which can be overridden on journal-specific pages). If multiple locales are not selected, the language toggle menu will not appear and extended language settings will not be available to journals.</message>
+	<message key="admin.languages.confirmUninstall">Вы уверены, что хотите деинсталировать язык? Это может затронуть журналы, которые используют этот язык.</message>
+	<message key="admin.languages.installNewLocalesInstructions">Выберите дополнительные языки для интерфейса. Языки должны быть инсталированы с тем, чтобы использовать их в журналах. Посмотрите документацию.</message>
+	<message key="admin.systemVersion">OJS версия</message>
+	<message key="admin.systemConfiguration">OJS конфигурация</message>
+	<message key="admin.systemConfigurationDescription"><![CDATA[OJS configuration settings from <tt>config.inc.php</tt>.]]></message>
+	<message key="admin.journals.journalSettings">Настройки журнала</message>
+	<message key="admin.journals.noneCreated">Нет созданных журналов.</message>
+	<message key="admin.journals.confirmDelete">Стереть этот журнал навсегда?</message>
+	<message key="admin.journals.create">Создать журнал</message>
+	<message key="admin.journals.createInstructions">Вы автоматически превратитесь в издателя журнала. После создания нового журнала войдите как издатель и настройте его.</message>
+	<message key="admin.journals.urlWillBe"><![CDATA[Адрес журнала {$path}/&lt;path&gt;]]></message>
+	<message key="admin.journals.form.titleRequired">Нужно название.</message>
+	<message key="admin.journals.form.pathRequired">Нужен путь.</message>
+	<message key="admin.journals.form.pathAlphaNumeric">Путь должен содержать только буквы или цифры в сочетании с дефисом.</message>
+	<message key="admin.journals.form.pathExists">Выбранный путь уже забронирован другим пользователем системы.</message>
+	<message key="admin.journals.enableJournalInstructions">Активировать этот журнал</message>
+	<message key="admin.journals.journalDescription">Описание журнала</message>
+	<message key="admin.journals.importOJS1">Импорт из системы OJS 1</message>
+	<message key="admin.journals.importOJS1Instructions">Прочитайте UPGRADE документы.</message>
+	<message key="admin.journal.pathImportInstructions">Существующий или новый путь (например "ojs").</message>
+	<message key="admin.journal.importPath">OJS 1 путь</message>
+	<message key="admin.journal.importPathInstructions">Задайте путь к существующему архиву OJS 1 инсталяции (напр. "/var/www/ojs").</message>
+	<message key="admin.journals.importSubscriptions">Указания для импорта</message>
+	<message key="admin.journals.form.importPathRequired">Нужно указать путь.</message>
+	<message key="admin.journals.importErrors">Импорт провалился</message>
+</locale>

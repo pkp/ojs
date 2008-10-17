@@ -4,7 +4,7 @@
 <!--
   * ojs2-devel/locale/fr_CA/editor.xml
   *
-  * Copyright (c) 2000-2008 John Willinsky
+  * Copyright (c) 2003-2008 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the fr_CA (Français (Canada)) locale.
@@ -16,7 +16,6 @@
 	<message key="editor.article.reviewForms">Formulaires d'évaluation</message>
 	<message key="editor.article.selectReviewForm">Sélectionner un formulaire d'évaluation</message>
 	<message key="editor.article.clearReviewForm">Effacer le formulaire d'évaluation</message>
-	<message key="editor.article.confirmChangeReviewForm">Changer le formulaire d'évaluation supprimera les réponses...</message>
 	<message key="editor.home">Page d'accueil du rédacteur</message>
 	<message key="editor.submissionsAndPublishing">Soumissions et Édition</message>
 	<message key="editor.submissionQueue">Soumission Queue</message>

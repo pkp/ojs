@@ -4,7 +4,7 @@
 <!--
   * ojs2-devel/locale/fa_IR/editor.xml
   *
-  * Copyright (c) 2000-2008 John Willinsky
+  * Copyright (c) 2003-2008 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the fa_IR (Persian) locale.
@@ -16,7 +16,6 @@
 	<message key="editor.article.reviewForms">فرم های کارشناسی</message>
 	<message key="editor.article.selectReviewForm">انتخاب فرم کارشناسی</message>
 	<message key="editor.article.clearReviewForm">حذف فرم کارشناسی</message>
-	<message key="editor.article.confirmChangeReviewForm">تغییر فرم کارشناسی موجب از بین رفتن پاسخ های وارد شده میشود</message>
 	<message key="editor.home">خانه دبیر</message>
 	<message key="editor.submissionsAndPublishing">ساب میشن ها و چاپ</message>
 	<message key="editor.submissionQueue">نوبت ساب میشن</message>

@@ -279,10 +279,6 @@
         <message key="comments.authenticated">{$userName}</message>
 
         <!-- Site Administration -->
-        <message key="admin.hostedJournals">Φιλοξενούμενα Περιοδικά</message>
-        <message key="admin.settings.journalRedirect">Προώθηση σε URL Περιοδικού</message>
-        <message key="admin.settings.journalRedirectInstructions">Αιτήματα πρόσβασης στον κυρίως ιστότοπο της συλλογής θα προωθούνται στην ιστοσελίδα του περιοδικού. Αυτό μπορεί να φανεί χρήσιμο αν η συλλογή φιλοξενεί για παράδειγμα μόνο ένα περιοδικό.</message>
-        <message key="admin.settings.noJournalRedirect">Καμία προώθηση</message>
         <message key="admin.settings.oaiRegistrationDescription"><![CDATA[Για να ευρετηριάζονταιτα περιεχόμενα των περιοδικών της συλλογής, μέσω ενός αποκεντρωμένου συστήματος βάσεων δεδομένων ανά τον κόσμο, μπορείτε να <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">δηλώσετε</a> το URL της συλλογής στο <a href="http://pkp.sfu.ca/harvester/" target="_blank">Σύστημα Συλλογής Μεταδεδομένων (Harvester)</a> του Public Knowledge Project. Το σύστημα συλλέγει τα μεταδεδομένα κάθε ευρετηριαζόμενου τεκμηρίου των περιοδικών της συλλογής, ενεργοποιώντας την δυνατότητα της ακριβής και συγκεντρωτικής αναζήτησης του περιεχομένου μεταξύ όλων των συλλογών που υλοποιούν το <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
         <br /><br />
         <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Συνδεθείτε εδώ</a> και εισάγετε <span class="highlight">{$siteUrl}</span> στο πεδίο <strong>Site URL</strong>, and <span class="highlight">{$oaiUrl}</span> στο πεδίο <strong>Base URL for OAI Archive</strong>.
@@ -292,75 +288,27 @@
 
 
         <!-- Languages -->
-        <message key="admin.languages.primaryLocaleInstructions">Αυτή θα είναι η εξ'ορισμού γλώσσα της συλλογής και των φιλοξενούμενων περιοδικών.</message>
-        <message key="admin.languages.supportedLocalesInstructions">Επιλέξτε όλες τις τοπικές ρυθμίσεις που θέλετε να υποστηρίζονται στη συλλογή. Οι επιλεγμένες τοπικές ρυθμίσεις θα είναι διαθέσιμες για χρήση από όλα τα περιοδικά της συλλογής, και θα εμφανίζονται σε ένα Μενού Επιλογής Γλώσσας στην ιστοσελίδα κάθε περιοδικού. Εάν δεν επιλεχθούν πολλαπλές τοπικές ρυθμίσεις, το παραπάνων Μενού Επιλογής Γλώσσας δεν θα εμφανίζεται και συνεπώς δεν θα είναι δυνατή η ρύθμιση της γλώσσας στις ιστοσελίδες των περιοδικών.</message>
-        <message key="admin.languages.confirmUninstall">Είστε σίγουρος ότι θέλετε να απεγκαταστήσετε αυτή τη ρύθμιση; Αυτό θα επηρεάσει όσα περιοδικά χρησιμοποιούν αυτή την ρύθμιση.</message> 
-        <message key="admin.languages.installNewLocalesInstructions">Επιλέξτε  τις επιπρόσθετες τοπικές ρυθμίσεις που  θέλετε να εγκαταστήσετε για να τις  υποστηρίζει το σύστημα. Οι ρυθμίσεις πρέπει  να εγκατασταθούν πριν χρησιμοποιηθούν από  κάποιο περιοδικό. Δείτε την τεκμηρίωση του OJS  για πληροφορίες και τεκμηρίωση για την  προσθήκη νέων γλωσσών.</message>
-				<message key="admin.languages.downloadLocales">Κατεβάστε Τοπικές Ρυθμίσεις</message>
-				<message key="admin.languages.downloadFailed">Το κατέβασμα της τοπικής ρύθμισης απέτυχε. Στο(α) μήνυμα(τα) περιγράφεται το σφάλμα.</message>
-				<message key="admin.languages.localeInstalled">Η τοπική ρύθμιση "{$locale}" εγκαταστάθηκε. </message>
 				<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Το κατέβασμα πακέτων γλώσσας από το ιστότοπο του Public Knowledge Project δεν προσωρινά διαθέσιμη γιατί:</p>
 				<ul>
 					<li>Ο εξυπηρετητής σας (server) δεν έχει ή δεν επιτρέπει την εκτέλεση GNU "tar" utility</li>
 					<li>Το OJS δεν μπορεί να is unable to μετατρέψει το registry αρχείο των τοπικών ρυθμίσεων, συνήθως το "registry/locales.xml".</li>
 					</ul>
 				<p>Τα πακέτα γλωσσών μπορούν να κατέβουν από τον <a href="http://pkp.sfu.ca">ιστότοπο του PKP</a>.</p>]]></message>
-				<message key="admin.languages.download">Κατέβασμα Τοπικής Ρύθμισης</message>
-				<message key="admin.languages.download.cannotOpen">Cannot open language descriptor from PKP web site.</message>
-				<message key="admin.languages.download.cannotModifyRegistry">Η νέα τοπική ρύθμιση δεν μπορεί να προστεθεί στο registry αρχείο των τοπικών ρυθμίσεων, συνήθως το "registry/locales.xml".</message>
 
-        <message key="admin.auth.ojs">OJS Βάση Δεδομένων Χρήστη</message>
-        <message key="admin.auth.enableSyncProfiles">Ενεργοποιήστε τον  συγχρονισμό του προφίλ του χρήστη. (εάν  υποστηρίζεται από το συγκεκριμένο plug-in). Οι  πληροφορίες του προφίλ του χρήστη θα  ενημερώνονται αυτόματα από την  απομακρυσμένη πηγή όταν ο χρήστης συνδέεται  στο σύστημα, και οι αλλαγές στο προφίλ του  χρήστη (συμπεριλαμβανομένων των αλλαγών στον  κωδικό πρόσβασης-password) που θα γίνονται μέσα  στο OJS θα ενημερώνουν αυτόματα και την  απομαρκυσμένη πηγή. Εάν αυτή επιλογή δεν  ενεργοποηθεί οι σχετικές αποθηκευμένες στο  OJS πληροφορίες θα φυλάσσονται χωριστά από την  απομακρυσμένη πηγή.</message>
-        <message key="admin.auth.enableSyncPasswords">Ενεργοποιήστε την  δυνατότητα τροποποίησης του κωδικού  πρόσβασης (εάν υποστηρίζεται από το  συγκεκριμένο plug-in). Η επιλογή αυτή επιτρέπει  στους χρήστες να τροποποιούν τους  προσωπικούς τους κωδικούς πρόσβασης (password)  μέσα από το OJS και να χρησιμοποιούν την  δυνατότητα "χαμένος κωδικός πρόσβασης" του OJS  για να επαναρυθμίσει έναν ξεχασμένο κωδικό  πρόσβασης. Αυτές οι λειτουργίες δεν θα είναι  διαθέσιμες στους χρήστες όπου εφαρμόζεται η  συγκεκριμένη πηγή πιστοποίησης αν αυτή η  επιλογή δεν ενεργοποιηθεί.</message>
-        <message key="admin.auth.enableCreateUsers">Ενεργοποιήστε την  δυνατότητα δημιουργίας χρήστη  (εάν υποστηρίζεται από το συγκεκριμένο plug-in).  Οι χρήστες που δημιουργούνται εντός του OJS με  αυτή την πηγή πιστοποίησης θα προστίθενται  αυτόματα στην απομακρυσμένη πηγή  πιστοποίησης εάν δεν υπάρχουν ήδη.  Επιπρόσθετα εάν αυτή η πηγή είναι η  εξ'ορισμού καθορισμένη πηγή πιστοποίησης, οι  λογαριασμοί που δημιουργούνται στο OJS κατά  την διάρκεια της εγγραφής του χρήστη (registration)  θα προστεθούν και στην απομακρυσμένη  πηγή.</message>
         <message key="admin.auth.defaultSourceDescription"><![CDATA[Η επιλογή  μιας προκαθορισμένης πηγής πιστοποίησης  διαφορετικής από την OJS έχει τα παρακάτω  αποτελέσματα:  
         <ul>          
         <li>Εάν ένα χρήστης προσπαθήσει να εγγραφεί  και να δημιουργήσει ένα νέο λογαριασμό μέσα  στην  συλλογή χρησιμοποιώντας ένα όνομα  χρήστη (username) που ήδη χρησιμοποιείται από την  πηγή πιστοποίησης (αλλά όχι από την βάση  δεδομένων του OJS),  η εγγραφή επιτρέπεται μόνο  εάν ο κωδικός πρόσβασης (password) είναι έγκυρος  για τον λογαριασμό του χρήστη.</li> 
         </ul>]]></message>
 
         <!-- System Information -->
-        <message key="admin.systemVersion">OJS Έκδοση</message>
-        <message key="admin.systemConfiguration">Ρυθμίσεις (Configuration) OJS  </message>
-        <message key="admin.systemConfigurationDescription"><![CDATA[Διαμόρφωση  Ρυθμίσεων (configuration) OJS  από  <tt>config.inc.php</tt>.]]></message>
         <message key="admin.editSystemConfigInstructions"><![CDATA[Χρησιμοποιήστε  αυτή τη φόρμα για να επεξεργαστείτε τις  ρυθμίσεις του συστήματός σας (το αρχείο  <tt>config.inc.php</tt>). Πατήστε “Αποθήκευση Ρυθμίσεων”,  ή "Εμφάνιση Νέων Ρυθμίσεων" απλά για να  προβληθούν στην οθόνη σας οι ενημερωμένες  ρυθμίσεις χωρίς να μεταβληθεί το υπάρχον  αρχείο ρυθμίσεων. 
         <br /><br />  
         <span class="formError">Προειδοποίηση: Αλλάγες αυτών των  ρυθμίσεων είναι πιθανόν να καταστήσει τον  ιστότοπο (συλλογή) απροσπέλαστο (απαιτώντας  να διορθωθει το αρχείο ρυθμίσεων μη αυτόματα).  Συνίσταται να μην κάνετε καμία αλλαγή εκτός  και γνωρίζετε ακριβώς τι κάνετε.</span>]]></message>
         <message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ΣΗΜΕΙΩΣΗ!</div>  
         <p>Δεν ήταν δυνατή η αυτόματη αντικατάσταση του αρχείου ρυθμίσεων από το σύστημα. Για να εφαρμόσετε τις αλλαγές στις ρυθμίσεις πρέπει να ανοίξετε <tt>config.inc.php</tt> με κατάλληλο πρόγραμμα διόρθωσης κειμένων και να αντικαταστήσετε τα περιεχόμενα αυτού με τα περιεχόμενου του πεδίου κειμένου που βρίσκονται παρακάτω.</p>]]></message>
         
-        <message key="admin.journals.journalSettings">Ρυθμίσεις  Περιοδικού</message>
-        <message key="admin.journals.noneCreated">Δεν έχει δημιουργηθεί  κανένα περιοδικό.</message>
-        <message key="admin.journals.confirmDelete">Είστε σίγουροι ότι  θέλετε να διαγράψετε μόνιμα αυτό το  περιοδικό και το σύνολο του περιεχομένου  του;</message>
-        <message key="admin.journals.create">Δημιουργία  Περιοδικού</message>
-        <message key="admin.journals.createInstructions">Αυτόματα θα σας  αποδοθεί ο  ρόλος του Διαχειριστή Περιοδικού  για αυτό το περιοδικό. Μόλις δημιουργήσετε  ένα νέο περιοδικό, συνδεθείτε με αυτό ως  Διαχειριστής Περιοδικού για να συνεχίσετε με  τις απαραίτητες ρυθμίσεις και τις υπόλοιπες  αναθέσεις - αποδόσεις ρόλων.</message>
-        <message key="admin.journals.urlWillBe">Το URL του περιοδικού θα  είναι {$sampleUrl}</message>
-        <message key="admin.journals.form.titleRequired">Η συμπλήρωση του  τίτλου περιοδικού είναι υποχρεωτική.</message>
-        <message key="admin.journals.form.pathRequired">Η συμπλήρωση του  πεδίου της διαδρομής είναι υποχρεωτική.</message>
-        <message key="admin.journals.form.pathAlphaNumeric">Η διαδρομή (path)  μπορεί να περιέχει μόνο αλφαριθμητικούς  χαρακτήρες, χαρακτήρες υπογράμμισης, και παύλες και  πρέπει να αρχίζει και να τελειώνει με έναν  αλφαρηθμητικό χαρακτήρα.</message>
-        <message key="admin.journals.form.pathExists">Η διαδρομή που  συμπληρώσατε χρησιμοποιείται ήδη από ένα  άλλο περιοδικό.</message>
-        <message key="admin.journals.enableJournalInstructions">Ενεργοποιήστε  την επιλογή αυτό το περιοδικό να εμφανίζεται  δημόσια στην συλλογή</message>
-        <message key="admin.journals.journalDescription">Περιγραφή  Περιοδικού</message>
-        <message key="admin.journals.importOJS1">Εισαγωγή από OJS 1</message>
-        <message key="admin.journals.importOJS1.editMigratedJournal">Επεξεργασία  Εισαχθέντος Περιοδικού</message>
-        <message key="admin.journals.importOJS1.conflict.desc">Μερικοί  λογαριασμοί χρηστών περιέχουν  αντικρουόμενες πληροφορίες. Το OJS 1.x επιτρέπει  σε πολλαπλούς λογαριασμούς χρηστών να  μοιράζονται την ίδια διεύθυνση ηλεκτρονικού  ταχυδρομείου (email), ενώ η έκδοση OJS 2.x όχι. Στην  παρακάτω λίστα, στον δεύτερο λογαριασμό έχει  συμπληρωθεί ένας προσωρινός λογαριασμός email.  Αυτά θα πρέπει να διορθωθούν μη αυτόματα,  είτε συμπληρώνοντας ένα διαφορετικό email, είτε  συγχωνεύοντας λογαριασμούς χρηστών.</message>
-        <message key="admin.journals.importOJS1.conflict">{$firstUsername} ({$firstName})  και {$secondUsername} ({$secondName})</message>
-        <message key="admin.journals.importOJS1Instructions">Συμβουλευτείτε  το ΑΝΑΒΑΘΜΙΣΜΕΝΟ έγγραφο που διανέμεται με  το OJS για αναλυτικές πληροφορίες στην  μεταφορά δεδομένων από την έκδοση OJS 1 στην OJS  2.</message>
-        <message key="admin.journal.pathImportInstructions">Υπάρχουσα  διαδρομή περιοδικού (journal path) ή διαδρομή για  δημιουργία (π.χ., "ojs").</message>
-        <message key="admin.journal.importPath">Διαδρομή OJS 1 </message>
-        <message key="admin.journal.importPathInstructions">Ολοκληρωμένη  διαδρομή τοπικού συστήματος αρχείων στην  εγκατάσταση του OJS 1 (π.χ., "/var/www/ojs").</message>
-        <message key="admin.journals.importSubscriptions">Εισαγωγή  συνδρομών</message>
-        <message key="admin.journals.transcode">Μετατροπή  μεταδεδομένων άρθρων από ISO8859-1</message>
-        <message key="admin.journals.form.importPathRequired">Η συμπλήρωση  του πεδίου της διαδρομής της εισαγωγής είναι  υποχρεωτικό.</message>
-        <message key="admin.journals.importErrors">Η εισαγωγή δεν ολοκληρώθηκε επιτυχώς</message>
      		
      		<!-- Site Administrator Merge Users -->	
-     		<message key="admin.mergeUsers">Συγχώνευση Χρηστών</message>
-				<message key="admin.mergeUsers.mergeUser">Συγχώνευση Χρηστών</message>
-				<message key="admin.mergeUsers.into.description">Επιλέξτε έναν χρήστη στον οποίο θα αποδώσετε τα δικαιώματα του ποηγούμενου χρήστη.</message>
-				<message key="admin.mergeUsers.from.description">Επιλέξτε έναν χρήστη για συγχώνευση σε έναν άλλο λογαριασμό χρήστη (π.χ., όταν κάποιος χρήστης έχει δύο λογαριασμούς). Ο λογαριασμός που θα επιλεγεί πρώτος θα δθιαγραφεί και οι υποβολές του καθώς και τα δικαιώματά του θα αποδοθούν στον δεύτερο λογαριασμό.</message>
-				<message key="admin.mergeUsers.allUsers">Όλοι οι εγγεγραμμένοι Χρήστες</message>
-				<message key="admin.mergeUsers.confirm">Είστε σίγουρος ότι επιθυμείτε να συγχωνεύσετε τον λογαριασμό με όνομα χρήστη  "{$oldUsername}" στον λογαριασμό με όνομα χρήστη "{$newUsername}"? Ο λογαριασμός  "{$oldUsername}" θα διαγραφεί. Αυτή η ενέργεια δεν είναι αναστρέψιμη.</message>
-				<message key="admin.mergerUsers.noneEnrolled">Κανένας εγγεγραμμένος χρήστης.</message>
 
         <!-- Subscription Management -->
         <message key="subscriptionManager.subscriptionManagement">Διαχείριση  Συνδρομών</message>

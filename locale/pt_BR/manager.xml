@@ -4,7 +4,7 @@
 <!--
   * ojs2-devel/locale/pt_BR/manager.xml
   *
-  * Copyright (c) 2000-2008 John Willinsky
+  * Copyright (c) 2003-2008 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the pt_BR (Português (Brasil)) locale.
@@ -88,12 +88,10 @@
 	<message key="manager.people.roleEnrollment">{$role} Cadastro</message>
 	<message key="manager.people.syncUserDescription">Sincronizar Cadastro cadastrará nesta revista todos os usuários com a função específica na revista especificada. Esta função permite que um grupo padrão de usuários (exemplo: avaliadores) seja compartilhado entre revistas.</message>
 	<message key="manager.plugins.description">Esta página permite ao Editor-Gerente verificar e possivelmente configurar os plugins atualmente instalados. Os Plugins estão divididos por categorias, de acordo com sua função. As categorias estão listadas a seguir, cada uma com seu conjunto de plugins.</message>
-	<message key="manager.reviewFormElement.changeType">Alterando o tipo de campo do formluário</message>
 	<message key="manager.reviewFormElements">Campos do formulário de avaliação</message>
 	<message key="manager.reviewFormElements.addResponseItem">Incluir resposta possível</message>
 	<message key="manager.reviewFormElements.checkboxes">Campo de seleção</message>
 	<message key="manager.reviewFormElements.chooseType">Escolher tipo de campo</message>
-	<message key="manager.reviewFormElements.confirmDelete">Confimar exclusão de campo do formulário de avaliação publicado</message>
 	<message key="manager.reviewFormElements.copyTo">Copiar para</message>
 	<message key="manager.reviewFormElements.create">Criar novo campo</message>
 	<message key="manager.reviewFormElements.dropdownbox">Campo de menu de opções</message>
@@ -109,11 +107,8 @@
 	<message key="manager.reviewFormElements.smalltextfield">Campo de texto pequeno</message>
 	<message key="manager.reviewFormElements.textarea">Campo de texto longo</message>
 	<message key="manager.reviewFormElements.textfield">Campo de texto de uma linha</message>
-	<message key="manager.reviewFormElements.viewable">Disponível (aos autores)</message>
 	<message key="manager.reviewForms">Formulários de Avaliação</message>
 	<message key="manager.reviewForms.completed">Concluído</message>
-	<message key="manager.reviewForms.confirmDeletePublished">Confirmar exclusão de formulário de avaliação publicado</message>
-	<message key="manager.reviewForms.confirmDeleteUnpublished">Confirmar exclusão de formulário de avaliação não publicado</message>
 	<message key="manager.reviewForms.create">Criar formulário de avaliação</message>
 	<message key="manager.reviewForms.description">Descrição</message>
 	<message key="manager.reviewForms.edit">Editar formulário de avaliação</message>
@@ -122,9 +117,7 @@
 	<message key="manager.reviewForms.list.description">Os formulários de avaliação pelos pares criados aqui estarão disponíveis aos avaliadores para preenchimento, em vez do formulário padrão que consiste em duas caixas de texto de comentários com comentários exclusivos para o autor e outra para o  Editor e o Autor. Formulários de avaliação podem ser designados a seções específicas, e os editores poderão escolher qual formulário utilizar no momento da avaliação. em todos os casos, os editores poderão incluir as avaliações nas correspondências com o autor.</message>
 	<message key="manager.reviewForms.noneChosen">Nenhuma / Formulário de avaliação padrão</message>
 	<message key="manager.reviewForms.noneCreated">Nenhum formulário de avaliação criado.</message>
-	<message key="manager.reviewForms.noneUsed">Nenhum formulário de avaliação foi utilizado.</message>
 	<message key="manager.reviewForms.preview">Visualizar formulário de avaliação</message>
-	<message key="manager.reviewForms.reviewFormData">Dados do formulário de avaliação</message>
 	<message key="manager.reviewForms.title">Título</message>
 	<message key="manager.sections.abstractsNotRequired">Não exigir resumos</message>
 	<message key="manager.sections.assigned">Editores desta Seção</message>

@@ -4,7 +4,7 @@
 <!--
   * ojs2-devel/locale/es_ES/editor.xml
   *
-  * Copyright (c) 2000-2008 John Willinsky
+  * Copyright (c) 2003-2008 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the es_ES (Español (España)) locale.
@@ -16,7 +16,6 @@
 	<message key="editor.article.reviewForms">Formularios de Revisión</message>
 	<message key="editor.article.selectReviewForm">Escoger Formulario de Revisión</message>
 	<message key="editor.article.clearReviewForm">Limpiar Formulario de Revisión</message>
-	<message key="editor.article.confirmChangeReviewForm">Cambiar el formulario de revisión removerá las respuestas...</message>
 	<message key="editor.home">Home de editor/a</message>
 	<message key="editor.submissionsAndPublishing">Envíos y publicación</message>
 	<message key="editor.submissionQueue">Cola de envíos</message>

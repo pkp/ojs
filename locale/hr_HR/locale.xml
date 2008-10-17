@@ -255,11 +255,7 @@
 	<message key="comments.authenticated">{$userName}</message>
 
 	<!--  Site Administration  --><message key="admin.siteAdmin">Administracija stranice</message>
-	<message key="admin.hostedJournals">Časopisi u sustavu</message>
 	
-	<message key="admin.settings.journalRedirect">Izravno preusmjeravanje na časopis</message>
-	<message key="admin.settings.journalRedirectInstructions">Svi upiti i posjeti glavnoj stranici bit će preusmjereni na odabrani časopis. To može biti izuzetno korisno ako je na sustavu postavljen samo jedan časopis.</message>
-	<message key="admin.settings.noJournalRedirect">Ne preusmjeravaj</message>
 	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Kako biste učinili sadržaj svih časopisa izdanih u okviru ovih stranica indeksiranim unutar globalno distribuiranog sustava istraživačkih baza podataka, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registrirajte</a> URL ove stranice pri <a href="http://pkp.sfu.ca/harvester/" target="_blank">sakupljaču</a> metapodataka Public Knowledge Project-a. Ovaj alat sakuplja metapodatke iz svakog indeksiranog priloga svakog časopisa na ovim stranicama, omogućujući precizno i kolektivno pretraživanje istraživačkih stranica koje sudjeluju u <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
 <br /><br />
 Za registraciju pri PKP sakupljaču <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">kliknite ovdje</a> i upišite: <span class="highlight">{$siteUrl}</span> unutar <b>Site URL</b>-a i <span class="highlight">{$oaiUrl}</span> unutar <b>Base URL for OAI Archive</b>.
@@ -269,55 +265,21 @@ Aktivirani OAI protokol može biti isključen na razini čitave stranice promjen
 	
 	
 	<!--  Languages  --><message key="admin.languages.languageSettings">Postavke jezika</message>
-	<message key="admin.languages.primaryLocaleInstructions">Ovo će biti standardni jezik stranice i svakog časopisa koji se na njoj nalazi.</message>
-	<message key="admin.languages.supportedLocalesInstructions">Izaberite sve jezike za koje želite da budu podržani na stranici. Izabrane prijevode bit će moguće koristiti sa svim časopisima postavljenim u sustavu, te će se na svakoj stranici prikazivati i izbornik jezika (što se može uključiti ili isključiti na razini pojedinog časopisa). Ako je izabran samo jedan jezik, jezični izbornik se neće prikazivati, niti će glavnim urednicima pojedinih časopisa biti na raspolaganu jezične postavke.</message>
 	
 	
-	<message key="admin.languages.confirmUninstall">Jeste li sigurni da želite deinstalirati ovaj prijevod? To može utjecati na časopise koji trenutno koriste taj prijevod.</message>
-	<message key="admin.languages.installNewLocalesInstructions">Izaberite bilo koji od ispod navedenih prijevoda kako biste instalirali podršku za taj jezik u sustavu. Prijevodi moraju biti instalirani prije nego što se mogu aktivirati i koristiti u pojedinim časopisima. Pogledajte OJS dokumentaciju za informacije o dodavanju podrške za nove jezike.</message>
 	
-	<message key="admin.auth.ojs">OJS korisnička baza</message>
-	<message key="admin.auth.enableSyncProfiles">Omogući sinkronizaciju korisničkog profila (ako je podržana ovim autentifikacijskim dodatkom). Informacije o korisničkom profilu bit će automatski ažurirane preko udaljenog izvora prilikom prijave korisnika. Također, izmjene profila (uključujući promjenu lozinke) izvršene unutar OJS-a bit će automatski ažurirane na udaljenom izvoru. Informacije o OJS profilu bit će odvojene od informacija o profilu na udaljenom izvoru, ako ova opcija nije uključena.</message>
-	<message key="admin.auth.enableSyncPasswords">Omogući promjenu korisničke lozinke (ako je podržana ovim autentifikacijskim dodatkom). Uključivanje ove opcije dopušta korisnicima da promjene svoje lozinke unutar OJS-a te korištenje OJS opcije "izdaj novu lozinku" kako bi se umjesto zaboravljene lozinke izdala nova. Te opcije neće biti dostupne korisnicima s ovim izvorom autentifikacije, ako ova opcija nije uključena.</message>
-	<message key="admin.auth.enableCreateUsers">Omogući kreiranja korisnika (ako je podržano ovim autentifikacijskim dodatkom). Korisnici kreirani unutar OJS-a s ovim autentifikacijskim izvorom bit će automatski dodani na udaljeni izvor autentifikacije ukoliko već ne postoje. Osim toga, ako je ovaj izvor primaran, OJS računi kreirani preko korisničke registracije bit će također dodani na udaljeni izvor.</message>
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Određivanje primarnog izvora autentifikacije izvan OJS-a rezultira sljedećim:</p>
 <ul>
  <li>Ako korisnik pokuša registrirati novi korisnički račun na ovoj stranici s korisničkim imenom koje postoji na izvoru autentifikacije (ali ne i u OJS bazi podataka), registracija je dopuštena ukoliko je isporučena lozinka valjana za taj korisnički račun.</li>
 </ul>]]></message>
 	
 	<!--  System Information  --><message key="admin.systemVersion">Verzija OJS-a</message>
-	<message key="admin.systemConfiguration">Konfiguracija OJS-a</message>
-	<message key="admin.systemConfigurationDescription"><![CDATA[OJS konfiguracijske postavke iz <tt>config.inc.php</tt> datoteke.]]></message>
 	<message key="admin.editSystemConfigInstructions"><![CDATA[Koristite ovaj formular kako biste izmijenili svoju konfiguraciju sustava (datoteku <tt>config.inc.php</tt>). Kliknite "spremi" kako biste pohranili svoju novu konfiguraciju ili "prikaži" da biste jednostavno prikazali ažuriranu konfiguracijsku datoteku i ne izmijenili već postojeću konfiguraciju. 
 <br /><br />
 <span class="formError">Upozorenje: Izmjenjivanje ovih postavki može potencijalno ostaviti svoju stranicu u stanju  nepristupačnosti (što uključuje ručno ispravljanje vaše konfiguracijske datoteke). Iznimno je preporučljivo da ne činite nikakve promjene ukoliko ne znate što točno radite.</span>]]></message>
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>OBAVIJEST!</h4>
 <p>Sustav ne može automatski obaviti prepisivanje preko konfiguracijske datoteke. Kako biste primjenili konfiguracijske izmjene morate otvoriti datoteku <tt>config.inc.php</tt> u prikladnom uređivaču teksta i zamijeniti njegov sadržaj sa sadržajem teksta u polju ispod.</p>]]></message>
 	
-	<message key="admin.journals.journalSettings">Postavke časopisa</message>
-	<message key="admin.journals.noneCreated">Nema kreiranih časopisa.</message>
-	<message key="admin.journals.confirmDelete">Jeste li sigurni da želite trajno izbrisati ovaj časopis i sav njegov sadržaj?</message>
-	<message key="admin.journals.create">Kreiraj časopis</message>
-	<message key="admin.journals.createInstructions">Automatski ćete biti evidentirani  kao glavni urednik ovog časopisa. Po kreiranju novog časopisa, pristupite mu kao glavni urednik kako biste nastavili s podešavanjem i upisom korisnika.</message>
-	<message key="admin.journals.urlWillBe">URL časopisa će biti {$sampleUrl}</message>
-	<message key="admin.journals.form.titleRequired">Naslov je obavezan.</message>
-	<message key="admin.journals.form.pathRequired">Putanja je obavezna.</message>
-	<message key="admin.journals.form.pathAlphaNumeric">Putanja smije sadržavati samo alfanumeričke znakove, podvlačenja i povlake, mora početi, a i završiti s alfanumeričkim znakom.</message>
-	<message key="admin.journals.form.pathExists">Odabrana putanja je već u korištenju drugog časopisa.</message>
-	<message key="admin.journals.enableJournalInstructions">Omogućite ovom časopisu da se pojavi javno na stranici.</message>
-	<message key="admin.journals.journalDescription">Opis časopisa</message>
-	<message key="admin.journals.importOJS1">Prijenos iz OJS 1</message>
-	<message key="admin.journals.importOJS1.editMigratedJournal">Uredi premješteni časopis</message>
-	<message key="admin.journals.importOJS1.conflict.desc">Neki korisnički računi imaju proturječne informacije. OJS 1.x dozvoljava višestrukim korisničkim računima da dijele istu adresu e-pošte, dok OJS 2.x to ne dozvoljava. U listi ispod, drugi račun na listi imao je privremeno dodijeljen račun e-pošte. To bi trebalo biti ručno ispravljeno dodijeljivanjem drugog računa e-pošte ili udruživanjem računa.</message>
-	<message key="admin.journals.importOJS1.conflict">{$firstUsername} ({$firstName}) i {$secondUsername} ({$secondName})</message>
-	<message key="admin.journals.importOJS1Instructions">Za detaljnije informacije o migraciji podataka s OJS 1 na OJS 2 pročitajte dokument UPGRADE koji se nalazi među datotekama distribucije OJS-a.</message>
-	<message key="admin.journal.pathImportInstructions">Postojeća putanja časopisa ili putanja koju treba kreirati (npr. "ojs").</message>
-	<message key="admin.journal.importPath">OJS 1 putanja</message>
-	<message key="admin.journal.importPathInstructions">Cjelovita putanja lokalnog datotečnog sustava na kojoj se nalazi OJS 1 instalacija koju prenosite (npr. "/var/www/ojs").</message>
-	<message key="admin.journals.importSubscriptions">Prenesi pretplate i pretplatnike</message>
-	<message key="admin.journals.transcode">Prekodiraj metapodatke prenesenih članaka iz ISO8859-1</message>
-	<message key="admin.journals.form.importPathRequired">Putanja uvođenja je obavezna.</message>
-	<message key="admin.journals.importErrors">Neuspješno uvođenje</message>
 	
 	<!--  Subscription Management  --><message key="subscriptionManager.subscriptionManagement">Upravljanje pretplatama</message>
 	
@@ -1027,25 +989,12 @@ Paragraf koji počinje s "Posljednja tema..." nije uvučen.</pre>
 	<message key="reader.openAccess">Otvoren pristup</message>
 	<message key="reader.subscriptionAccess">Pretplatnički pristup</message>
 	<message key="reader.subscriptionOrFeeAccess">Pretplatnički ili otvoren pristup</message>
-	<message key="admin.languages.downloadLocales">Preuzmi lokalizacije</message>
-	<message key="admin.languages.downloadFailed">Preuzimanje lokalizacije nije uspjelo. Ispod priložena poruka opisuje grešku.</message>
-	<message key="admin.languages.localeInstalled">Lokalizacija "{$locale}" je uspješno postavljena.</message>
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Preuzimanje datoteke s jezicima sa Public Knowledge Project mrežnog poslužitelja trenutno nije dostupno jer:</p>
 	<ul>
 		<li>Vaš poslužitelj nema ili ne dozvoljava pokretanje GNU "tar" programa</li>
 		<li>OJS ne može modificirati lokalizacijsku registry datoteku, obično "registry/locales.xml".</li>
 	</ul>
 <p>Datoteku s jezicima možete ručno preuzeti sa <a href="http://pkp.sfu.ca">PKP web site</a>.</p>]]></message>
-	<message key="admin.languages.download">Preuzmi lokalizaciju</message>
-	<message key="admin.languages.download.cannotOpen">Nije moguće otvoriti deskriptor jezika sa PKP mrežne stranice.</message>
-	<message key="admin.languages.download.cannotModifyRegistry">Nije moguće dodati lokalizaciju u lokalizacijsku registry datoteku, obično "registry/locales.xml".</message>
-	<message key="admin.mergeUsers">Spajanje korisnika</message>
-	<message key="admin.mergeUsers.mergeUser">Spoji korisnika</message>
-	<message key="admin.mergeUsers.into.description">Odaberite korisnika kojem želite pripisati radove, urednička zaduženja, itd. prošlog korisnika</message>
-	<message key="admin.mergeUsers.from.description">Odaberite korisnika kojeg ćete spojiti s drugim korisničkim računom (npr. u slučaju da neki korisnik posjeduje dva korisnička računa). Račun koji prvi odaberete bit će obrisan, a svi njegovi prilogzi, zaduženja itd. bit će pridruženi drugom računu.</message>
-	<message key="admin.mergeUsers.allUsers">Svi evidentirani korisnici</message>
-	<message key="admin.mergeUsers.confirm">Jeste li sigurni da želite spojiti račun korisnika "{$oldUsername}" s računom korisnika "{$newUsername}"? Račun korisničkog imena "{$oldUsername}" više neće postojati nakon toga. Ovo je nepovratna radnja.</message>
-	<message key="admin.mergerUsers.noneEnrolled">Nema evidentiranih korisnika.</message>
 	<message key="plugins.categories.citationFormats.description">Dodaci za oblikovanje referenci omogućuju korisnicima preuzimanje referenci u različitim bibliografskim standardima.</message>
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Predložene Creative Commons odredbe o autorskim pravima</h3>
 <h4>1. Prijedlog za časopise koji omogućuju otvoren pristup</h4>
@@ -1149,10 +1098,6 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="default.journalSettings.membershipFeeDescription">Plaćanjem ove naknade postat ćete član ove organizacije na godinu dana, što će vam omogućiti besplatan pristup ovom časopisu.</message>
 	<message key="default.journalSettings.donationFeeDescription">Časopis sa velikom zahvalnošću prihvaća donacije u bilo kojem iznosu. One uvelike doprinose našim naporima redovnog izlaženja i unaprjeđenja kvalitete časopisa.</message>
 	<message key="reviewer.article.restrictedFileAccess">Tekst prijave će biti na raspolaganju kada i ako recenzent prihvati ponudu izrade recenzije.</message>
-	<message key="common.copy">Kopiraj</message>
-	<message key="common.preview">Prethodni pregled</message>
-	<message key="common.activate">Aktiviraj</message>
-	<message key="common.deactivate">Deaktiviraj</message>
 	<message key="submission.reviewForm">Recenzijski obrazac</message>
 	<message key="submission.reviewFormResponse">Odgovor na recenziju</message>
 	<message key="reviewer.article.enterReviewForm">Kliknite na sličicu na zaslonu kako biste ispunili recenzijski obrazac.</message>
@@ -1177,11 +1122,6 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="user.noRoles.regReviewer">Registrirajte se kao recenzent</message>
 	<message key="user.noRoles.regReviewerClosed">Registracija kao recenzent: Registracija recenzenata trenutno je onemogućena.</message>
 	<message key="issue.coverPage.altText">Slika naslovnice broja</message>
-	<message key="admin.journals.importOJS1.success">Prijenos podataka iz starije verzije sustava uspješno je završen.</message>
-	<message key="admin.journals.importOJS1.redirect.desc">Da biste preusmjerili OJS 1 URL-ove na OJS 2 URL-ove, kreirajte sljedeće PHP datoteke koristeći niže priloženi sadržaj. Te se datoteke tada mogu postaviti u OJS 1 filesystem path, ili za instalacije sa samo jednim časopisom, u OJS 2 filesystem path.</message>
-	<message key="admin.journals.importOJS1.redirect.ojs1root">Postavi u stari OJS 1 filesystem path (t.j. /var/www/ojs1).</message>
-	<message key="admin.journals.importOJS1.redirect.ojs1orojs2root">Postavi u stari OJS 1 filesystem path (t.j. /var/www/ojs1) ili, za instalacije sa samo jednim časopisom, u novi OJS 2 filesystem path (t.j. /var/www/ojs2)</message>
-	<message key="admin.journals.redirect">Generiraj kod koji će mapirati OJS 1 URL-ove u OJS 2 URL-ove</message>
 	<message key="plugins.categories.implicitAuth">Dodaci za implicitnu provjeru identiteta</message>
 	<message key="plugins.categories.implicitAuth.description">Dodaci za implicitnu provjeru identiteta implementiraju podršku za provjeru korisničkih identiteta temeljem http zaglavlja.</message>
 	<message key="about.aboutThisPublishingSystem.altText">Proces uređivanja i izdavanja u OJS-u</message>

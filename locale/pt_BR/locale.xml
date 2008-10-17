@@ -264,11 +264,7 @@
 	<message key="comments.authenticated">{$userName}</message>
 
 	<!-- Site Administration -->
-	<message key="admin.hostedJournals">Revistas Hospedadas</message>
 	
-	<message key="admin.settings.journalRedirect">Redirecionamento da Revista</message>
-	<message key="admin.settings.journalRedirectInstructions">As solicitações realizadas no Portal Principal serão direcionadas a esta revista. Esta opção pode ser útil caso o Portal hospede apenas uma revista.</message>
-	<message key="admin.settings.noJournalRedirect">Não redirecionar</message>
 	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Para indexar todo o conteúdo das revistas hospedadas neste portal em um sistema global de bases de dados de pesquisa integradas, <a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">cadastre</a> a URL do portal no <a href="http://www.pkp.ubc.ca/harvester/" target="_blank">coletador de metadados</a> do Public Knowledge Project. Esta ferramenta coleta os metadados de cada item indexado na revista, permitindo pesquisa coletiva e precisa dentro dos portais que adotam o <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Protocolo de Arquivos Abertos para Coleta de Metadados - OAI PMH</a>.
 <br /><br />
 <a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">Clique aqui</a> e insira <span class="highlight">{$siteUrl}</span> no campo <strong>URL do Portal</strong>, e <span class="highlight">{$oaiUrl}</span> no campo <strong>URL Base para o Arquivo OAI</strong>.
@@ -278,55 +274,20 @@ Note que a interface OAI pode ser desativada para este portal nas configuraçõe
 	
 	
 	<!-- Languages -->
-	<message key="admin.languages.primaryLocaleInstructions">Este será o idioma padrão para o portal e todas as revistas hospedadas.</message>
-	<message key="admin.languages.supportedLocalesInstructions">Os idiomas selecionados estarão disponíveis para todas as revistas no portal, e constarão da lista de idiomas que aparece em cada página do sistema (esta opção pode ser desativada individualmente por revista). Caso não sejam selecionados vários idiomas, a lista de idiomas não estará disponível e a opção "configurações de idioma" não estará disponível para as revistas.</message>
-	<message key="admin.languages.confirmUninstall">Deseja realmente remover este idioma? A execução pode afetar revistas hospedas que podem estar utilizando o idioma.</message>
-	<message key="admin.languages.installNewLocalesInstructions">Selecionar idiomas adicionais para uso no sistema. Os idiomas devem ser instalados antes que possam ser utilizados pelas revistas hospedadas.  Veja a documentação para informações sobre como incluir novos idiomas no sistema.</message>
 
-	<message key="admin.auth.ojs">Usuário da Base de Dados - SEER/OJS</message>
-	<message key="admin.auth.enableSyncProfiles">Habilitar sincronização de perfil de usuários (caso suportado pelo plugin de autenticação!). Os perfis dos usuários serão atualizados com o conteúdo da fonte remota assim que o usuário acessar o sistema, e alterações no perfil (incluindo alteração de senha) realizadas dentro do sistema atualizarão a fonte remota. Caso esta opção não esteja habilitada, os perfis no sistema serão mantidos separados da fonte remota.</message>
-	<message key="admin.auth.enableSyncPasswords">Habilitar alteração de senha de usuário (caso suportado pelo plugin de autenticação!). Habilitar esta opção permite ao usuário modificar a senha do sistema e fazer uso da opção de recuperação de senha para criar uma nova senha. Estas funcionalidades não estarão disponíveis aos usuários com esta fonte de autenticação, caso não seja habilitada.</message>
-	<message key="admin.auth.enableCreateUsers">Habilitar criação de usuários (caso suportado pelo plugin de autenticação!). Usuários criados no sistema serão automaticamente incluídos na fonte de autenticação remota, caso não existam ainda. Inclusive, usuários criados através do cadastro de usuários também serão incluídos automaticamente na fonte remota, caso esta seja a fonte de autenticação padrão.</message>
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Definir uma fonte de autenticação padrão diferente da do sistema implica em:</p>
 <ul>
 	<li>Caso um usuário tente cadastrar uma nova conta com um login já existente na fonte de autenticação (mas não na base do sistema), o cadastro só será permitido se a senha informada for válida para a conta em questão.</li>
 </ul>]]></message> 
 	
 	<!-- System Information -->
-	<message key="admin.systemVersion">Versão do SEER/OJS</message>
-	<message key="admin.systemConfiguration">Configuração do SEER/OJS</message>
-	<message key="admin.systemConfigurationDescription"><![CDATA[Configurações do sistema SEER/OJS do documento <tt>config.inc.php</tt>.]]></message>
 	<message key="admin.editSystemConfigInstructions"><![CDATA[Utilize o formulário para modificar as configurações do sistema (o documento <tt>config.inc.php</tt>). Clique em "Salvar" para concluir as alterações de configuração, ou "Exibir" para apenas mostrar as configurações atualizadas sem realizar as modificações.
 <br /><br />
 <span class="formError">Advertência: Alterações nas configurações podem deixar o portal inacessível (obrigando a alterar manualmente o documento). É altamente recomendado que as alterações sejam realizadas por um especialista.</span>]]></message>
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>AVISO!</div>
 <p>O sistema não pôde alterar automaticamente o documento de configuração. Para aplicar as alterações é necessário editar o documento <tt>config.inc.php</tt> manualmente em algum editor de texto, substituindo-o com o conteúdo do campo a seguir.</p>]]></message>
 	
-	<message key="admin.journals.journalSettings">Configurações da Revista</message>
-	<message key="admin.journals.noneCreated">Nenhuma revista criada.</message>
-	<message key="admin.journals.confirmDelete">Deseja realmente excluir permanentemente esta revista e seu conteúdo?</message>
-	<message key="admin.journals.create">Criar Revista</message>
-	<message key="admin.journals.createInstructions">Seu cadastro como Editor-Gerente da revista será automático. Após criação de uma revista, acesse-a como gerente e continue com as configurações da revista e cadastro de usuários.</message>
-	<message key="admin.journals.urlWillBe">A URL da revista será: {$sampleUrl}</message>
-	<message key="admin.journals.form.titleRequired">Título obrigatório</message>
-	<message key="admin.journals.form.pathRequired">Caminho obrigatório.</message>
-	<message key="admin.journals.form.pathAlphaNumeric">O caminho pode conter apenas caracteres alfanuméricos, sublinhado, hífens, e deve começar e terminar com um caractere alfanumérico.</message>
-	<message key="admin.journals.form.pathExists">O caminho selecionado já está em uso por outra revista.</message>
-	<message key="admin.journals.enableJournalInstructions">Permitir Acesso Livre a esta revista no portal</message>
-	<message key="admin.journals.journalDescription">Descrição da Revista</message>
 
-	<message key="admin.journals.transcode">Transcodificar metadados do artigo de ISO8859-1</message>
-	<message key="admin.journal.importPath">Caminho da versão 1.x</message>
-	<message key="admin.journal.importPathInstructions">Caminho físico completo da instalação da versão 1.x (ex.:</message>
-	<message key="admin.journal.pathImportInstructions">Caminho existente ou caminho a ser criado (ex.:</message>
-	<message key="admin.journals.form.importPathRequired">Caminho a importar obrigatório.</message>
-	<message key="admin.journals.importErrors">Importação não concluída com êxito.</message>
-	<message key="admin.journals.importOJS1">Importar de versão 1.x</message>
-	<message key="admin.journals.importOJS1.editMigratedJournal">Editar Revista Importada</message>
-	<message key="admin.journals.importOJS1.conflict.desc">Alguns usuários possuem cadastros conflitantes. A versão 1.x permite vários usuários com o mesmo e-mail, enquanto a versão 2.x não permite. Nos cadastros abaixo, foi designado um e-mail temporário à segunda lista dos cadastros. Estes deverão ser corrigidos manualmente, informando um novo e-mail ou mesclando as contas.</message>
-	<message key="admin.journals.importOJS1.conflict">{$firstUsername} ({$firstName}) e {$secondUsername} ({$secondName})</message>
-	<message key="admin.journals.importOJS1Instructions">Consulte o UPGRADE distribuído com o sistema para informações detalhadas sobre como migrar da versão 1.x para a versão 2.</message>
-	<message key="admin.journals.importSubscriptions">Importar Assinaturas</message>
 	
 	<!-- Subscription Management -->
 	<message key="subscriptionManager.subscriptionManagement">Controle de Assinaturas</message>
@@ -972,13 +933,6 @@ Após o término de suas revisões, renomeie o arquivo de NomedoAutorQA.doc para
 	<message key="reader.openAccess">Acesso Livre</message>
 	<message key="reader.subscriptionAccess">Acesso Restrito</message>
 	<message key="reader.subscriptionOrFeeAccess">Acesso Restrito ou Pago</message>
-	<message key="admin.mergeUsers">Mesclar Usuários</message>
-	<message key="admin.mergeUsers.mergeUser">Mesclar Usuários</message>
-	<message key="admin.mergeUsers.into.description">Escolha um usuário a quem deseja atribuir as submissões e histórico de tarefas do cadastro anterior.</message>
-	<message key="admin.mergeUsers.from.description">Escolha um usuário para mesclar seu cadastro dentro de outra conta (quando um usuário possui duas contas distintas, em vez de acumular funções editoriais). O cadastro selecionado primeiro será excluído e suas submissões e histórico de tarefas atribuídas ao segundo cadastro escolhido.</message>
-	<message key="admin.mergeUsers.allUsers">Todos os usuários</message>
-	<message key="admin.mergeUsers.confirm">Deseja realmente mesclar o cadastro do usuário "{$oldUsername}" no cadastro do usuário "{$newUsername}"? O cadastro de "{$oldUsername}" será excluído permanentemente. Esta ação não é reversível!</message>
-	<message key="admin.mergerUsers.noneEnrolled">Nenhum usuário cadastrado.</message>
 	<message key="plugins.categories.citationFormats.description">Plugins de Formatos de Citação oferecem aos usuários vários formatos para acessar a citação do documento.</message>
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Proposta de Aviso de Direito Autoral Creative Commons</h3>
 <h4>1. Proposta de Política para Periódicos de Acesso Livre</h4>
@@ -1087,18 +1041,12 @@ Os números na Tabela 3 não estão alinhadas na 3ª coluna.</pre>
 <br />
 <pre>4. FORMATAÇÃO
 O parágrafo iniciado em "Este último elemento..." não está recuado.</pre>]]></message>
-	<message key="admin.languages.downloadLocales">Baixar idiomas</message>
-	<message key="admin.languages.downloadFailed">Erro ao baixar idioma. A seguir, um detalhamento do(s) erro(s).</message>
-	<message key="admin.languages.localeInstalled">Iioma "{$locale}" instalado.</message>
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Não é possível baixar idiomas do servidor do Public Knowledge Project. Os motivos possíveis são:
 	<ul>
 		<li>Seu servidor não possui ou permite a execução da ferramenta "tar" GNU</li>
 		<li>O sistema não possui permissão para alterar o arquivo de registro de idiomas, normalmente "registry/locales.xml".</li>
 	</ul>
 Idiomas estão disponíveis para download manual no <a href="http://pkp.sfu.ca">portal do PKP</a>.</p>]]></message>
-	<message key="admin.languages.download">Baixar idioma</message>
-	<message key="admin.languages.download.cannotOpen">Não é possível abrir a identificação de idioma do portal do PKP.</message>
-	<message key="admin.languages.download.cannotModifyRegistry">Não é possível incluir novo idioma no arquivo de registro de idiomas, normalmente "registry/locales.xml".</message>
 	<message key="default.journalSettings.submissionFeeDescription">Os Autores são obrigados a pagar uma Taxa de Submissão de artigos no Passo 1 do processo de submissão, como contribuição com os custos de avaliação. Consulte a Política de Isenção de Taxas.</message>
 	<message key="default.journalSettings.fastTrackFeeDescription">O pagamento desta taxa garante que a avaliação, decisão editorial, e notificação do autor ocorram em no máximo 4 semanas.</message>
 	<message key="default.journalSettings.publicationFeeDescription">Caso este documento seja aceito para publicação, será necessário o pagamento de uma Taxa de Publicação de Artigo para auxiliar nos custos de publicação. Consulte a Política de Isenção de Taxas.</message>
@@ -1106,11 +1054,6 @@ Idiomas estão disponíveis para download manual no <a href="http://pkp.sfu.ca">
 	<message key="default.journalSettings.membershipFeeDescription">O pagamento desta taxa garante sua inscrição nesta associação durante um ano, com acesso livre a esta revista.</message>
 	<message key="default.journalSettings.donationFeeDescription">Doações de qualquer valor são muito bem-vindas, e oferecem meios aos editores de manter a qualidade da revista no mais alto nível para seus leitores e usuários.</message>
 	<message key="reader.subscriptionRequiredLoginText">Assinatura exigida para acesso ao item. Para verificar sua assinatura, acesse a revista.</message>
-	<message key="admin.journals.importOJS1.success">Importação da revista concluída com sucesso.</message>
-	<message key="admin.journals.importOJS1.redirect.desc">Para redirecionar URLs da versão 1 para URLs da versão 2, crie os seguintes arquivos PHP utilizando o conteúdo a seguir. Os arquivos correspondentes podem ser colcoados na pasta raíz da versão 1 da revista, ou na pasta raíz da versão 2 para revistas individuais, ou seja, sem uso da administração de várias revistas em uma única instalação - ou portal de revistas.</message>
-	<message key="admin.journals.importOJS1.redirect.ojs1root">Coloque na pasta raíz da antifa versão 1 do sistema (ex.: /var/www/ojs1)</message>
-	<message key="admin.journals.importOJS1.redirect.ojs1orojs2root">Coloque na pasta raíz da antifa versão 1 do sistema (ex.: /var/www/ojs1) ou na pasta raíz da versão 2 (ex.: /var/www/ojs2), para revistas individuais, sem uso da administração como portal de revistas.</message>
-	<message key="admin.journals.redirect">Gerar código para mapear URLs OJS 1 para URLs 2</message>
 	<message key="about.authorFees">Taxas para Autores</message>
 	<message key="about.authorFeesMessage">Este periódico cobra as seguintes taxas aos autores</message>
 	<message key="about.memberships">Associação</message>
@@ -1123,10 +1066,6 @@ Idiomas estão disponíveis para download manual no <a href="http://pkp.sfu.ca">
 	<message key="payment.paymentReceived">Pagamento Recebido</message>
 	<message key="payment.paymentSent">Pagamento já foi enviado</message>
 	<message key="payment.submission.paySubmission">Pagar Taxa de Submissão</message>
-	<message key="common.copy">Copiar</message>
-	<message key="common.preview">Visualizar</message>
-	<message key="common.activate">Ativar</message>
-	<message key="common.deactivate">Desativar</message>
 	<message key="submission.reviewForm">Formulário de avaliação</message>
 	<message key="submission.reviewFormResponse">Resposta do formulário de avaliação</message>
 	<message key="reviewer.article.enterReviewForm">Clique no ícone para preencher o formulário de avaliação</message>

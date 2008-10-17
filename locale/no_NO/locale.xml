@@ -271,11 +271,7 @@
 	<message key="comments.authenticated">{$userName}</message>
 
 	<!-- Site Administration -->
-	<message key="admin.hostedJournals">Nettstedets tidsskrift</message>
 	
-	<message key="admin.settings.journalRedirect">Tidsskrift redirect</message>
-	<message key="admin.settings.journalRedirectInstructions">Henvendelser til hovednettstedet vil bli omdirigert til dette tidsskriftet. Dette er nyttig hvis nettstedet for eksempel bare er vert for ett tidsskrift.</message>
-	<message key="admin.settings.noJournalRedirect">Ikke redirect</message>
 	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[For å få indeksert innholdet i alle tidsskrift på dette nettstedet i et verdensomspennende nettverk av forskningsdatabaser, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registrer</a> nettstedets URL hos Public Knowledge Project metadata <a href="http://pkp.sfu.ca/harvester/" target="_blank">harvester</a>. Dette verktøyet samler metadata fra hvert indeksert element i dette tidsskriftet, og gjør det dermed mulig å søke presis og samlet i alle forkningsnettsted som følger <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative protokollen for metadata innhøsting</a>.
 <br /><br />
 <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Klikk her</a> og skriv inn <span class="highlight">{$siteUrl}</span> under <b>Nettsted URL</b>, og <span class="highlight">{$oaiUrl}</span> under <b>Base URL for OAI Arkiv</b>.
@@ -284,56 +280,21 @@ Merk at OAI-grensesnittet slås av for dette nettstedet ved å redigere OJS syst
 	
 	
 	<!-- Languages -->
- 	<message key="admin.languages.primaryLocaleInstructions">Dette vil bli default språk for nettstedet og alle de tidsskriftene det er vert for. (OJS ble oversatt til norsk i 2006 av universitetslektor Karl Henrik Flyum, Institutt for lærerutdanning og skoleutvikling, Universitetet i Oslo. Ta kontakt hvis du har spørsmål til oversettelsen, eller vil melde fra om feil.  (k.h.flyum@ils.uio.no)</message>
-	<message key="admin.languages.supportedLocalesInstructions">Velg alle lokalinnstillinger som nettstedet skal støtte. De valgte lokalinnstillingene vil bli tilgjengelig til bruk for alle tidsskrift nettstedet er vert for, og de vil også bli vist i en språkvalgmeny som vil vises på hver nettstedside (men som kan overstyres tidsskriftspesifikke sider). Hvis multiple lokalinnstillinger ikke er valgt, vil språkvekslingsmenyen ikke bli vist og utvidete språkinnstillinger vil ikke være tilgjengelig for tidsskriftet.</message>
 	<message key="admin.languages.languageOptions">Språk: Valg</message>
 	<message key="admin.languages.profileLocales">Ved registrering av medarbeidere (redaktører, fagkonsulenter, manusredaktører, etc.), bør arbeidsspråk føres inn i Brukerprofilene til bruk for tidsskriftredaktørene.</message>
-	<message key="admin.languages.confirmUninstall">Er du sikker på at du vil avinstallere denne lokalinnstillingen? Dette kan påvirke alle lokale tidsskrift som for tiden bruker lokalinnstillingen.</message>
-	<message key="admin.languages.installNewLocalesInstructions">Velg øvrige lokalinnstillinger å installere støtte for i dette systemet. Lokalinnstillinger må være installert før de kan brukes av lokale tidsskrift. Konsulter OJS-dokumentasjonen for informasjon om å legge til støtte for flere språk.</message>
 	
-	<message key="admin.auth.ojs">OJS Brukerdatabase</message>
-	<message key="admin.auth.enableSyncProfiles">Slå på brukerprofilsynkronisering (hvis støttet av denne validerings-pluginen). Brukerprofilinformasjon vil bli automatisk oppdatert fra den eksterne kilden når en bruker logger inn, og profilendringer (herunder passordendringer) som gjøres innenfor OJS vil bli automatisk oppdatert på den eksterne kilden. Hvis denne valgmuligheten ikke er slått på, vil OJS profilinformasjon bli holdt atskilt fra den eksterne kildens profilinformasjon.</message>
-	<message key="admin.auth.enableSyncPasswords">Slå på endring av brukerpassord (hvis støttet av denne validerings-pluginen). Ved å slå på denne valgmuligheten tillater brukere å endre passordet sitt innenfra OJS og å bruke OJS "lost password"-funksjonen for å lage seg nytt passord. Disse funksjonene vil ikke være tilgjengelig for brukere hos denne valideringskilden, hvis denne valgmuligheten ikke er slått på.</message>
-	<message key="admin.auth.enableCreateUsers">Slå på brukeroppretting (hvis støttet av denne validerings-pluginen). Brukere opprettet innenfor OJS med denne valideringskilden vil automatisk bli lagt til i den eksterne valideringskilden, hvis de ikke allerede finnes der. Hvis denne kilden er default valideringskilde, vil dessuten alle OJS-kontoer opprettet gjennom brukerregistrering også bli lagt til i den eksterne valideringskilden.</message>
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[Det å spesifisere en annen default valideringskilde enn OJS har følgende virkning:
 <ul>
 	<li>Hvis en bruker forsøker å registrere en ny konto hos dette nettstedet med et brukernavn som finnes på valideringskilden (men ikke i OJS-databasen), vil registreringen bare bli tillatt hvis det innskrevne passordet er gyldig for den aktuelle brukerkontoen.</li>
 </ul>]]></message>
 	
 	<!-- System Information -->
-	<message key="admin.systemVersion">OJS versjon</message>
-	<message key="admin.systemConfiguration">OJS konfigurasjon</message>
- 	<message key="admin.systemConfigurationDescription"><![CDATA[OJS konfigurasjonsinnstillinger fra <tt>config.inc.php</tt>.]]></message>
 	<message key="admin.editSystemConfigInstructions"><![CDATA[Bruk dette skjemaet for å modifisere systemkonfigurasjonen (<tt>config.inc.php</tt> filen). Klikk Lagre for å lagre din nye konfigurasjon, eller 'Vis' bare å vise den oppdaterte konfigurasjonsfilen og ikke modifisere den eksisterende konfigurasjonen.
 <br /><br />
 <span class="formError">Advarsel: Hvis disse innstillingene modifiseres kan nettstedet bli utilgjengelig (noe som vil kreve at konfigurasjonsfilen repareres manuelt). Du bør ikke gjøre endringer her, medmindre du vet nøyaktig hva du holder på med.</span>]]></message>
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NOTE!</div>
 <p>Systemet kunne ikke automatisk overskrive konfigurasjonsfilen. For å endre konfigurasjonen må du åpne <tt>config.inc.php</tt> i et egnet tekstbehandlingsprogram, og erstatte innholdet i den med innholdet i tekstfeltet nedenfor.</p>]]></message>
 	
-	<message key="admin.journals.journalSettings">Tidsskriftinnstillinger</message>
-	<message key="admin.journals.noneCreated">Ingen tidsskrift er opprettet.</message>
- 	<message key="admin.journals.confirmDelete">Er du sikker på at du vil slette dette tidsskriftet for alltid, også alt innhold?</message>
-	<message key="admin.journals.create">Opprett tidsskrift</message>
-	<message key="admin.journals.createInstructions">Du vil automatisk bli vervet som redaksjonsleder for dette tidsskriftet. Etter å ha opprettet et nytt tidsskrift, må du logge inn som redaksjonsleder for å fortsette med  oppsett og brukerverving.</message>
-	<message key="admin.journals.urlWillBe">Tidsskriftets URL vil bli {$sampleUrl}</message>
-	<message key="admin.journals.form.titleRequired">En tittel er påkrevet.</message>
-	<message key="admin.journals.form.pathRequired">En filsti er påkrevet.</message>
-	<message key="admin.journals.form.pathAlphaNumeric">Filstien kan bare inneholde alfanumeriske tegn, understrek og bindestrek, og må begynne og slutte med et alfanumerisk tegn.</message>
-	<message key="admin.journals.form.pathExists">Den valgte filstien er allerede tatt i bruk av et annet tidsskrift.</message>
-	<message key="admin.journals.enableJournalInstructions">Tillat at dette tidsskriftetvises offentlig på nettstedet</message>
-	<message key="admin.journals.journalDescription">Tidsskriftbeskrivelse</message>
-	<message key="admin.journals.importOJS1">Importer fra OJS 1</message>
-	<message key="admin.journals.importOJS1.editMigratedJournal">Rediger migrert Tidsskrift</message>
-	<message key="admin.journals.importOJS1.conflict.desc">Noen brukerkontoer inneholdt motstridende informasjon. OJS 1.x tillater multiple brukerkontoer å dele samme e-postadresse, men det gjør ikke OJS 2.x. I listen nedenfor har den andre kontoen på listen hatt en midlertidig e-postkonto tilknyttet. Dette må rettes for hånd, enten ved å tilordne en annen e-postkonto, eller ved å slå sammen kontoer.</message>
-	<message key="admin.journals.importOJS1.conflict">{$firstUsername} ({$firstName}) og {$secondUsername} ({$secondName})</message>
-	<message key="admin.journals.importOJS1Instructions">Konsulter UPGRADE dokumentet som fulgte med OJS for detaljert informasjon om migrering av data fra OJS 1 til OJS 2.</message>
-	<message key="admin.journal.pathImportInstructions">Eksisterende tidsskriftfilsti, eller filsti som skal opprettes (for eks. "ojs").</message>
-	<message key="admin.journal.importPath">OJS 1 filsti</message>
-	<message key="admin.journal.importPathInstructions">Fullstendig lokal filsystem filsti til OJS 1 installasjonen (for eks. "/var/www/ojs").</message>
-	<message key="admin.journals.importSubscriptions">Importer abonnement</message>
-	<message key="admin.journals.transcode">Transcode artikkelens metadata fra ISO8859-1</message>
-	<message key="admin.journals.form.importPathRequired">Import filsti er påkrevet.</message>
-	<message key="admin.journals.importErrors">Importeringen var ikke vellykket</message>
 	
 	<!-- Subscription Management -->
 	<message key="subscriptionManager.subscriptionManagement">Abonnementsadministrasjon</message>

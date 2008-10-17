@@ -4,7 +4,7 @@
 <!--
   * ojs2-devel/locale/it_IT/editor.xml
   *
-  * Copyright (c) 2000-2008 John Willinsky
+  * Copyright (c) 2003-2008 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the it_IT (Italiano) locale.
@@ -16,7 +16,6 @@
 	<message key="editor.article.reviewForms">Moduli di revisione</message>
 	<message key="editor.article.selectReviewForm">Seleziona il modulo di revisione</message>
 	<message key="editor.article.clearReviewForm">Pulisci il modulo di revisione</message>
-	<message key="editor.article.confirmChangeReviewForm">Modifcare il modulo di revisione rimuoverà le risposte</message>
 	<message key="editor.home">Home page dell'editor</message>
 	<message key="editor.submissionsAndPublishing">Submission e Pubblicazioni</message>
 	<message key="editor.submissionQueue">Coda delle submission</message>

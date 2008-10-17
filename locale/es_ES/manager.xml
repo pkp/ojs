@@ -4,7 +4,7 @@
 <!--
   * ojs2-devel/locale/es_ES/manager.xml
   *
-  * Copyright (c) 2000-2008 John Willinsky
+  * Copyright (c) 2003-2008 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the es_ES (Español (España)) locale.
@@ -87,12 +87,10 @@
 	<message key="manager.people.roleEnrollment">{$role} Rol asociado</message>
 	<message key="manager.people.syncUserDescription">La sincronización de la inscripción añadirá a todos/as los/as usuarios/as del rol especificado en el mismo rol de la revista especificada en esta revista. Esta función permite a un grupo de usuarias/os comunes (p.e., revisores) ser sincronizados entre revistas.</message>
 	<message key="manager.plugins.description">Esta página permite al Gestor de Revista revisar y configurar los complementos que están actualmente instalados. Los complementos están divididos en categorías conforme a su función.</message>
-	<message key="manager.reviewFormElement.changeType">Cambiando el tipo de elemento del formulario...</message>
 	<message key="manager.reviewFormElements">Elementos del Formulario</message>
 	<message key="manager.reviewFormElements.addResponseItem">Añadir selección</message>
 	<message key="manager.reviewFormElements.checkboxes">Casillas de selección (checkboxes: selección múltiple)</message>
 	<message key="manager.reviewFormElements.chooseType">Escojer tipo de elemento</message>
-	<message key="manager.reviewFormElements.confirmDelete">Confirma borrado de un elemento de formulario publicado...</message>
 	<message key="manager.reviewFormElements.copyTo">Copia a:</message>
 	<message key="manager.reviewFormElements.create">Crear Nuevo Elemento</message>
 	<message key="manager.reviewFormElements.dropdownbox">Caja desplegable</message>
@@ -108,11 +106,8 @@
 	<message key="manager.reviewFormElements.smalltextfield">Caja de texto de una palabra</message>
 	<message key="manager.reviewFormElements.textarea">Caja de texto extendida.</message>
 	<message key="manager.reviewFormElements.textfield">Caja de texto de una línea</message>
-	<message key="manager.reviewFormElements.viewable">Visible (por autores)</message>
 	<message key="manager.reviewForms">Formularios Revisión</message>
 	<message key="manager.reviewForms.completed">Completado</message>
-	<message key="manager.reviewForms.confirmDeletePublished">Confirmar borrado del formulario de revisión publicado...</message>
-	<message key="manager.reviewForms.confirmDeleteUnpublished">Confirmar borrado del formulario de revisión no publicado...</message>
 	<message key="manager.reviewForms.create">Crear Formulario Revisión</message>
 	<message key="manager.reviewForms.description">Descripción e Instrucciones</message>
 	<message key="manager.reviewForms.edit">Formulario Revisión</message>
@@ -121,9 +116,7 @@
 	<message key="manager.reviewForms.list.description">Los formularios de revisión creados aquí serán presentados a los revisores para ser completados, en vez del formulario por defecto el cual consiste en dos cajas de texto, la primera "para autor y editor", y la segunda "para editor". Formularios de revisión pueden ser designados para una sección específica de una revista, y los editores tendrán la opción de seleccionar cuál formulario usar al asignar la revisión. En todos los casos, los editores tendrán la opción de incluir las revisiones en correspondencia con el autor.</message>
 	<message key="manager.reviewForms.noneChosen">Ninguno / Revisión libre</message>
 	<message key="manager.reviewForms.noneCreated">No se han creado formularios de revisión.</message>
-	<message key="manager.reviewForms.noneUsed">No se han usado formularios de revisión.</message>
 	<message key="manager.reviewForms.preview">Previsualizar Formulario</message>
-	<message key="manager.reviewForms.reviewFormData">Datos Formulario Revisión</message>
 	<message key="manager.reviewForms.title">Título</message>
 	<message key="manager.sections.abstractsNotRequired">No requiere resumenes</message>
 	<message key="manager.sections.assigned">Editor/a de esta sección</message>

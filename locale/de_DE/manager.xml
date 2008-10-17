@@ -4,7 +4,7 @@
 <!--
   * ojs2-devel/locale/de_DE/manager.xml
   *
-  * Copyright (c) 2000-2008 John Willinsky
+  * Copyright (c) 2003-2008 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
@@ -48,12 +48,10 @@
 	<message key="manager.people.mergeUsers.into.description">Wählen Sie einen Benutzer dem die Aufgaben und Rechte des alten Kontos zugeführt werden sollen. </message>
 	<message key="manager.people.syncUserDescription">Mit der Synchronisation werden alle in einer bestimmten Zeitschrift in einer bestimmten Funktion eingeschriebenen Benutzer in dieser Zeitschrift mit der gleichen Funktioin eingeschrieben. So können Zeitschriften eine bestimmte Benutzergruppe miteinander abstimmen (z.B. Gutachter).</message>
 	<message key="manager.plugins.description">Auf dieser Seite kann der Zeitschriftenverwalter alle installierten Zusatzprogramme überprüfen und konfigurieren. Die Programmeinschübe sind nach ihrer Funktion in Kategorien geordnet. Weiter unten die Kategorien und in jeder Kategorie die installierten Programmeinschübe (Plugins).</message>
-	<message key="manager.reviewFormElement.changeType">Rubriktyp ändern</message>
 	<message key="manager.reviewFormElements">Formularrubriken</message>
 	<message key="manager.reviewFormElements.addResponseItem">Typ hinzufügen</message>
 	<message key="manager.reviewFormElements.checkboxes">Häkchenfeld</message>
 	<message key="manager.reviewFormElements.chooseType">Rubriktyp wählen</message>
-	<message key="manager.reviewFormElements.confirmDelete">Löschen einer öffentlichen Formularrubrik bestätigen...</message>
 	<message key="manager.reviewFormElements.copyTo">Kopieren nach:</message>
 	<message key="manager.reviewFormElements.create">Neue Rubrik erstellen</message>
 	<message key="manager.reviewFormElements.dropdownbox">Ausklappfeld</message>
@@ -69,11 +67,8 @@
 	<message key="manager.reviewFormElements.smalltextfield">Ein-Wort-Textfeld</message>
 	<message key="manager.reviewFormElements.textarea">Erweitertes Textfeld</message>
 	<message key="manager.reviewFormElements.textfield">Einzeiliges Textfeld</message>
-	<message key="manager.reviewFormElements.viewable">Einsehbar (für Autoren)</message>
 	<message key="manager.reviewForms">Formulare Gutachten</message>
 	<message key="manager.reviewForms.completed">Fertig</message>
-	<message key="manager.reviewForms.confirmDeletePublished">Löschen eines öffentlichen Gutachtenformulars bestätigen...</message>
-	<message key="manager.reviewForms.confirmDeleteUnpublished">Löschen eines nichtöffentlichen Gutachtenformulars bestätigen...</message>
 	<message key="manager.reviewForms.create">Gutachtenformulare erstellen</message>
 	<message key="manager.reviewForms.description">Beschreibung und Anleitung</message>
 	<message key="manager.reviewForms.edit">Gutachtenformular</message>
@@ -82,9 +77,7 @@
 	<message key="manager.reviewForms.list.description">Die Formulare werden den Gutachtern zugeleitet. Sie treten anstelle der ursprünglichen Formulare, die aus zwei Textfeldern bestanden, das eine "für Autor und Redakteur", das andere "für den Redakteur". Gutachtenformulare können für eine bestimmte Zeitschriftenkategorie ausgelegt werden und Herausgeber können die für die Zeitschrift geeignete Form wählen. Die Redakteure können die Gutachten immer in ihre Korrepondenz mit dem Autor aufnehmen.</message>
 	<message key="manager.reviewForms.noneChosen">Keine / Freie Form</message>
 	<message key="manager.reviewForms.noneCreated">Es wurden keine Gutachtenformulare erstellt.</message>
-	<message key="manager.reviewForms.noneUsed">Es wurden keine Gutachtenformulare verwendet.</message>
 	<message key="manager.reviewForms.preview">Voransicht</message>
-	<message key="manager.reviewForms.reviewFormData">Einträge Gutachtenformular</message>
 	<message key="manager.reviewForms.title">Titel</message>
 	<message key="manager.sections.assigned">Redakteur dieser Rubrik </message>
 	<message key="manager.sections.confirmDelete">Sind Sie sicher, dass Sie diese Rubrik endgültig entfernen wollen? Sie müssen alle Artikel dieser Rubrik aufs neue veröffentlichen.</message>

@@ -262,11 +262,7 @@
 	<message key="comments.authenticated">{$userName} </message>
 
 	<!-- Verwaltung der Website -->
-	<message key="admin.hostedJournals">Zeitschriften auf dieser Website</message>
 	
-	<message key="admin.settings.journalRedirect">Umleitung der Zeitschriften</message>
-	<message key="admin.settings.journalRedirectInstructions">Anfragen beim zentralen Rechner werden zu dieser Zeitschrift umgeleitet. Nützlich wenn die Website z.B. nur die Zeitschrift beherbergt.</message>
-	<message key="admin.settings.noJournalRedirect">Nicht umleiten</message>
 	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Um den Inhalt aller von dieser Website beherbergten Zeitschriften bei einem allgemein verbreiteten System von Forschungsdatenbanken zu indexieren <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registrieren Sie</a> die URL ihrer Website in den Metadatenarchiven des Public Knowledge Project <a href="http://pkp.sfu.ca/harvester/" target="_blank">Sammlers</a>. Der Sammler sammelt die Metadaten aller Artikel dieser Zeitschrift und macht so eine umfassende und genaue Suche auf allen Websites, die im Projekt <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank"> Open Archives Metadatenprotokoll (Open Archives Initiative Protocol for Metadata Harvesting) mitarbeiten</a>.
 <br /><br />
 <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Hier klicken</a> und <span class="highlight">{$siteUrl}</span> <strong>als URL der Website</strong>, und <span class="highlight">{$oaiUrl}</span> bei <strong> als Basis-URL für OAI (Open Access Archives)eingeben </strong>.
@@ -276,54 +272,19 @@ Nehmen Sie bitte zur Kenntnis, dass die OAI-Schnittstelle unter Umständen deakt
 	
 	
 	<!-- Sprachen -->
-	<message key="admin.languages.primaryLocaleInstructions">Diese Sprache ist die Standardsprache der Website und aller ihrer Zeitschriften.</message>
-	<message key="admin.languages.supportedLocalesInstructions">Alle Regionaleinstellungen für die Website auswählen. Die gewählten Parameter können von allen Zeitschriften, die die Website beherbergt, verwendet werden und erscheinen auch im Sprachenmenü auf jeder Seite der Website (bestimmte Zeitschrift-spezifische Seiten ausgenommen). Wenn nicht mehrere Regionaleinstellungen ausgewählt werden, erscheint das Sprachenmenü nicht, und die Zeitschriften können nicht über erweiterte Sprachdatensätze verfügen..</message>
-	<message key="admin.languages.confirmUninstall">Sind Sie sicher, dass Sie diesen Regionalparametersatz deinstallieren wollen? Jede Zeitschrift, die diesen Datensatz verwendet, wird in Mitleidenschaft gezogen.</message>
-	<message key="admin.languages.installNewLocalesInstructions">Wählen Sie alle zusätzlichen Regionaleinstellungen, die dieses System unterstützen soll. Regionaleinstellungen müssen vor ihrer Verwendung durch Zeitschriften eingerichtet werden. Weitere Informationen zur Unterstützung neuer Sprachen in der OJS Dokumentation.</message>
-	
-	<message key="admin.auth.ojs">OJS-Benutzerdatenbank</message>
-	<message key="admin.auth.enableSyncProfiles">Synchronisation des Benutzerprofils(wenn dies Zugangshilfsprogramm das zulässt). Benutzerprofile werden automatisch von der Quelle aktualisiert, wenn ein Benutzer sich einloggt, und Profiländerungen (einschliesslich Passwortänderungen) innerhalb von OJS bewirken automatisch die Aktualisierung der Quelle. Wenn diese Option nicht zugelassen ist, bleibt das OJS Profil vom Quellprofil getrennt.</message>
-	<message key="admin.auth.enableSyncPasswords">Passwortänderung eines Benutzers aktivieren (wenn dies Zugangshilfsprogramm das zulässt). Erlaubt den Benutzern ihr Passwort innerhalb des OJS zu ändern und die OJS-Funktion "Passwort verloren?" zur Wiederherstellung eines vergessenen Passwortes zu verwenden. Nur verfügbar für Benutzer dieser Zugangsdatenquelle, wenn die Option aktiviert ist.</message>
-	<message key="admin.auth.enableCreateUsers">Einrichtung eines Benutzers zulassen (wenn dies Zugangshilfsprogramm das zulässt). Benutzer, die im OJS mit Hilfe dieser Zugangsdatenquelle eingerichtet werden, werden automatisch auch der Quelle hinzugefügt, wenn sie dort nicht schon eingerichtet sind. Wenn die Quelle die Standardzugangsdatenquelle ist, werden auch die im OJS bei der Registrierung von Benutzern eingerichteten Konten der Zugangsdatenquelle hinzugefügt. </message>
+
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Eine Zugangsdatenquelle ausserhalb vom OJS hat folgende Auswirkungen:</p>
 <ul>
 	<li>Versucht ein Benutzer auf diesem Site mit einem Benutzernamen, der in der Zugangsdatenquelle existiert (aber nicht in der OJS-Datenbank), ein neues Konto einzurichten, dann gelingt das nur, wenn das gelieferte Passwort für dieses Konto gültig ist.</li>
 </ul>]]></message>
 
 	<!-- Systeminformation -->
-	<message key="admin.systemVersion">Version OJS</message>
-	<message key="admin.systemConfiguration">OJS-Konfiguration</message>
-	<message key="admin.systemConfigurationDescription"><![CDATA[OJS Konfigurationsparameter <tt>config.inc.php</tt>.]]></message>
 	<message key="admin.editSystemConfigInstructions"><![CDATA[Verwenden Sie dieses Formular um ihre Systemkonfiguration zu ändern (die Datei <tt>config.inc.php</tt>). Auf " Speichern " klicken um die neue Konfiguration zu sichern oder auf " Anzeigen " um die aktualisierte Konfigurationsdatei nur anzuzeigen, ohne die bestehende Konfiguration zu ändern.
 <br /><br />
 <span class="formError"> Warnung: Änderungen dieser Parameter können Ihre Website unzugänglich machen (die Konfigurationsdatei muss dann von Hand wiederhergestellt werden). Daher die unbedingte Empfehlung, nichts zu modifizieren, wenn Sie nicht genau wissen, was Sie tun.</span>]]></message>
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NOTE!</div>
 <p>Das System konnte die Konfigurationsdatei nicht automatisch löschen. Öffnen Sie  <tt>config.inc.php</tt> mit einem geeigneten Textverarbeitungsprogramm und ersetzen Sie den Inhalt durch den Text im nachstehenden Textfeld.</p>]]></message>
 	
-	<message key="admin.journals.journalSettings">Parameter der Zeitschrift</message>
-	<message key="admin.journals.noneCreated">Es wurde keine Zeitschrift eingerichtet.</message>
-	<message key="admin.journals.confirmDelete">Sind Sie sicher, dass Sie diese Zeitschrift mit ihrem ganzen Inhalt endgültig löschen möchten?</message>
-	<message key="admin.journals.create">Eine Zeitschrift einrichten</message>
-	<message key="admin.journals.createInstructions">Sie werden automatisch Herausgeber dieser Zeitschrift. Nach der Einrichtung einer neuen Zeitschrift dort als Herausgeber einloggen, die Konfiguration fortsetzen und Benutzer einschreiben.</message>
-	<message key="admin.journals.urlWillBe"><![CDATA[Die URL der Zeitschrift ist {$path}/&lt;path&gt;]]></message>
-	<message key="admin.journals.form.titleRequired">Ein Titel ist erforderlich.</message>
-	<message key="admin.journals.form.pathRequired">Ein Zugangspfad ist erforderlich.</message>
-	<message key="admin.journals.form.pathAlphaNumeric">Der Zugangspfad kann nur Buchstaben und Zahlen, Unterstriche und Bindestriche enthalten und muss mit einem Buchstaben oder einer Zahl beginnen und enden.</message>
-	<message key="admin.journals.form.pathExists">Der gewählte Zugangspfad wird bereits für eine andere Zeitschrift verwendet.</message>
-	<message key="admin.journals.enableJournalInstructions">Permettre la publication du journal sur le site Web.</message>
-	<message key="admin.journals.journalDescription">Beschreibung der Zeitschrift </message>
-	<message key="admin.journals.importOJS1">Aus OJS 1 importieren</message>
-	<message key="admin.journals.importOJS1.editMigratedJournal">Die verschobene Zeitschrift redigieren</message>
-	<message key="admin.journals.importOJS1.conflict.desc">Benutzer erhielten widersprüchliche Angaben. OJS 1.x erlaubt Benutzerkonten von Mehrfachbenutzern mit gleicher Emailadresse, während OJS 2.x das nicht gestattet. In untenstehender Liste erhalten die weiteren Konten temporäre Emailadressen. Die sollten manuell korrigiert werden, indem sie entweder durch andere ersetzt oder zusammengefaßt werden.</message>
-	<message key="admin.journals.importOJS1.conflict">{$firstUsername} ({$firstName}) und {$secondUsername} ({$secondName})</message>
-	<message key="admin.journals.importOJS1Instructions">Konsultieren Sie das Dokument UPGRADE von OJS. Dort nähere Angaben zur Umsetzung der Daten von  OJS 1 nach  OJS 2.</message>
-	<message key="admin.journal.pathImportInstructions">Existierender oder einzurichtender Zugangspfad zur Zeitschrift (z.B. "ojs").</message>
-	<message key="admin.journal.importPath">Zugangspfad zu OJS 1</message>
-	<message key="admin.journal.importPathInstructions">Nennen Sie den Zugangspfad des Dateiensystems zur Installation von OJS 1 (z.B. "/var/www/ojs").</message>
-	<message key="admin.journals.importSubscriptions">Abonnements importieren</message>
-	<message key="admin.journals.transcode">Metadaten des Artikels aus ISO8859-1 umkodieren</message>
-	<message key="admin.journals.form.importPathRequired">Ein Importpfad muss angegeben werden.</message>
-	<message key="admin.journals.importErrors">Der Import ist fehlgeschlagen. </message>
 	
 	<!-- Abonnementverwaltung -->
 	<message key="subscriptionManager.subscriptionManagement">Leitung der Abonnements</message>
@@ -984,10 +945,6 @@ After you are finished with your revisions, rename the file from AuthorNameQA.do
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Wir fordern die Bibliotheken auf, diese Zeitschrift in die Liste ihrer elektronischen Zeitschriften aufzunehmen. Auch mag Beachtung verdienen, dass das offene System dieser Zeitschrift Bibliotheken die Möglichkeit gibt, Zeitschriften von Universitätsmitgliedern zu beherbergen. Mehr dazu und zur Verwendung von Open Journal Systems zur Verwaltung und Veröffentlichung Zeitschriften mit kollegialer Begutachtung s. <a href="http://pkp.sfu.ca">Public Knowledge Project</a>.]]></message>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Die Zeitschrift verwendet LOCKSS zur Verbreitung in den Archiven der im System teilnehmenden Bibliotheken und ermöglicht diesen Bibliotheken permanente Archivierung zwecks Erhaltung und Wiederherstellung. <a href="http://lockss.stanford.edu/">Mehr...</a>]]></message>
 
-	<message key="common.copy">Kopie</message>
-	<message key="common.preview">Voransicht</message>
-	<message key="common.activate">Aktivieren</message>
-	<message key="common.deactivate">Deaktivieren</message>
 	<message key="submission.reviewForm">Gutachtenformular</message>
 	<message key="submission.reviewFormResponse">Antwort Gutachtenformular</message>
 	<message key="reviewer.article.enterReviewForm">Gutachterformular ausfüllen: auf das Symbol klicken</message>
@@ -1022,28 +979,10 @@ After you are finished with your revisions, rename the file from AuthorNameQA.do
 	<message key="reader.openAccess">Zugang offen</message>
 	<message key="reader.subscriptionAccess">Zugang für Abonenten</message>
 	<message key="reader.subscriptionOrFeeAccess">Zugang für Abonenten oder gegen Bezahlung</message>
-	<message key="admin.languages.downloadLocales">Regionalisierungsdatensätze herunterladen</message>
-	<message key="admin.languages.downloadFailed">Fehler beim Herunterladen. Siehe untenstehende Fehlermeldung(en).</message>
-	<message key="admin.languages.localeInstalled">"{$locale}" Regionalisierungsdatensatz installiert.</message>
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Herunterladen der Sprachdatensätze vom Webserver des Public Knowledge Projects zur Zeit nicht möglich weil: </p>
 	<ul>
 		<li>Ihr Server das GNU "tar" Programm nicht akzeptiert</li>
 		<li>OJS die Registrierung, typischerweise die Datei "registry/locales.xml" nicht ändern kann</li>
 	</ul>
 <p>Sprachdatensätze können von Hand heruntergeladen werden: <a href="http://pkp.sfu.ca">PKP web site</a>.</p>]]></message>
-	<message key="admin.languages.download">Sprachdaten herunterladen</message>
-	<message key="admin.languages.download.cannotOpen">Sprachdeskriptor der PKP Webseite konnte nicht geöffnet werden.</message>
-	<message key="admin.languages.download.cannotModifyRegistry">Neuer Sprachdatensatz kann der lokalen Datei, typischerweise "registry/locales.xml", nicht hinzugefügt werden.</message>
-	<message key="admin.journals.importOJS1.success">Import erfolgreich.</message>
-	<message key="admin.journals.importOJS1.redirect.desc">Sie möchten OJS 1 Links in OJS 2 Links überführen: erstellen Sie PHP-Dateien mit untenstehenden Inhalten. Die Dateien können dann in den OJS 1 Dateienpfad oder, bei nur einer installierten Zeitschrift, in den OJS 2 Pfad eingestellt werden.</message>
-	<message key="admin.journals.importOJS1.redirect.ojs1root">In den alten OJS 1 Dateienpfad einstellen (d.i. /var/www/ojs1)</message>
-	<message key="admin.journals.importOJS1.redirect.ojs1orojs2root">In den alten OJS 1 Dateienpfad (/var/www/ojs1) oder, bei nur einer installierten Zeitschrift, in den neuen OJS2 Pfad (/var/www/ojs2) einstellen.</message>
-	<message key="admin.journals.redirect">Programmkode für die Überführung von OJS 1 Links in OJS 2</message>
-	<message key="admin.mergeUsers">Benutzerkonsolidierung</message>
-	<message key="admin.mergeUsers.mergeUser">konsolidiere Benutzer</message>
-	<message key="admin.mergeUsers.into.description">Einen Adressaten für die Daten, Autorenschaften, Redaktionszuschreibungen etc. des vorherigen Benutzers auswählen</message>
-	<message key="admin.mergeUsers.from.description">Benutzer wählen, dessen Daten in ein anderes Benutzerkonto überführt werden sollen (wenn jemand zum Beispiel zwei Benutzerkonten hat). Das gewählte Konto wird gelöscht und die Daten dem zweiten Konto zugeordnet.</message>
-	<message key="admin.mergeUsers.allUsers">Alle eingeschriebenen Benutzer</message>
-	<message key="admin.mergeUsers.confirm">Sind Sie sicher, dass Sie das Konto mit dem Benutzernamen "{$oldUsername}" in das Konto mit dem Namen "{$newUsername}" überführen wollen? Das Konto mit dem Namen "{$oldUsername}" existiert dann nicht mehr. Der Vorgang ist nicht rückgängig zu machen.</message>
-	<message key="admin.mergerUsers.noneEnrolled">Keine eingeschriebenen Benutzer</message>
 </locale>
