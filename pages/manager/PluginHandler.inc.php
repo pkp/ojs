@@ -16,22 +16,29 @@
 
 
 class PluginHandler extends ManagerHandler {
+	
 	/**
 	 * Display a list of plugins along with management options.
 	 */
 	function plugins($args) {
 		$category = isset($args[0])?$args[0]:null;
-
-		parent::validate();
-
 		$categories = PluginRegistry::getCategories();
+		
+		$templateMgr =& TemplateManager::getManager();
+		parent::validate();
 
 		if (isset($category)) {
 			// The user specified a category of plugins to view;
 			// get the plugins in that category only.
+			$mainPage = false;
 			$plugins =& PluginRegistry::loadCategory($category);
+
+			parent::setupTemplate(false);
+			$templateMgr->assign('pageTitle', 'plugins.categories.' . $category);
+			$templateMgr->assign('pageHierarchy', PluginHandler::setBreadcrumbs(true));
 		} else {
 			// No plugin specified; display all.
+			$mainPage = true;
 			$plugins = array();
 			foreach ($categories as $category) {
 				$newPlugins =& PluginRegistry::loadCategory($category);
@@ -39,16 +46,18 @@ class PluginHandler extends ManagerHandler {
 					$plugins = array_merge($plugins, PluginRegistry::loadCategory($category));
 				}
 			}
+			
+			parent::setupTemplate(true);
+			$templateMgr->assign('pageTitle', 'manager.plugins.pluginManagement');
+			$templateMgr->assign('pageHierarchy', PluginHandler::setBreadcrumbs(false));
 		}
 
-		parent::setupTemplate(true);
-
-		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('plugins', $plugins);
 		$templateMgr->assign_by_ref('categories', $categories);
+		$templateMgr->assign('mainPage', $mainPage);
 		$templateMgr->assign('isSiteAdmin', Validation::isSiteAdmin());
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.plugins');
-
+		
 		$templateMgr->display('manager/plugins/plugins.tpl');
 	}
 
@@ -67,6 +76,37 @@ class PluginHandler extends ManagerHandler {
 			Request::redirect(null, null, 'plugins');
 		}
 	}
+	
+	/**
+	 * Set the page's breadcrumbs
+	 * @param $subclass boolean
+	 */
+	function setBreadcrumbs($subclass = false) {
+		$templateMgr = &TemplateManager::getManager();
+		$pageCrumbs = array(
+			array(
+				Request::url(null, 'user'),
+				'navigation.user',
+				false
+			),
+			array(
+				Request::url(null, 'manager'),
+				'manager.journalManagement',
+				false
+			)
+		);
+		
+		if ($subclass) {
+			$pageCrumbs[] = array(
+				Request::url(null, 'manager', 'plugins'),
+				'manager.plugins.pluginManagement',
+				false
+			);
+		}
+
+		return $pageCrumbs;
+	}
+	
 }
 
 ?>
