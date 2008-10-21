@@ -80,11 +80,24 @@ class TranslatorHandler extends PKPHandler {
 		$locale = array_shift($args);
 		if (!Locale::isLocaleValid($locale)) Request::redirect(null, null, 'index');
 
+		$localeFiles = TranslatorAction::getLocaleFiles($locale);
+		$unwriteableFiles = array();
+		foreach ($localeFiles as $localeFile) {
+			$filename = Core::getBaseDir() . DIRECTORY_SEPARATOR . $localeFile;
+			if (file_exists($filename) && !is_writeable($filename)) {
+				$unwriteableFiles[] = $localeFile; 
+			}
+		}
+
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('locale', $locale);
 		$templateMgr->assign('errors', Locale::testLocale($locale, MASTER_LOCALE));
 		$templateMgr->assign('emailErrors', Locale::testEmails($locale, MASTER_LOCALE));
 		$templateMgr->assign('localeFiles', TranslatorAction::getLocaleFiles($locale));
+		if(!empty($unwriteableFiles)) {
+			$templateMgr->assign('error', true);
+			$templateMgr->assign('unwriteableFiles', $unwriteableFiles);
+		}
 		$templateMgr->display($plugin->getTemplatePath() . 'errors.tpl');
 	}
 
@@ -202,6 +215,9 @@ class TranslatorHandler extends PKPHandler {
 		}
 
 		$templateMgr =& TemplateManager::getManager();
+		if(!is_writeable(Core::getBaseDir() . DIRECTORY_SEPARATOR . $filename)) { 
+			$templateMgr->assign('error', true);
+		}
 
 
 		import('file.EditableLocaleFile');

@@ -23,6 +23,15 @@
 <form action="{url op="saveLocaleChanges" path=$locale}" method="post">
 <input type="hidden" name="redirectUrl" value="{url op="translate"}" />
 
+{if $error}
+	<span class="formError">{translate key="plugins.generic.translator.filesNotWriteable"}</span>
+	<ul class="formErrorList">
+		{foreach from=$unwriteableFiles item=unwriteableFile}
+			<li>{$unwriteableFile}</li>
+		{/foreach}
+	</ul>
+{/if}
+
 {foreach from=$errors key=type item=categoryErrors}
 	{if !empty($categoryErrors)}
 		<h2>{translate key="plugins.generic.translator.errors.$type.title"}</h2>

@@ -19,6 +19,13 @@
 {foreach from=referenceLocaleContents key=key item=value}<input type="hidden" name="{$key|escape}" value="{$key|escape}"/>{/foreach}
 </form>
 
+{if $error}
+	<span class="formError">{translate key="form.errorsOccurred"}:</span>
+	<ul class="formErrorList">
+		<li>{translate key="plugins.generic.translator.fileNotWriteable"}</li>
+	</ul>
+{/if}
+
 <form name="localeSearch" action="{url op="editLocaleFile" path=$locale|to_array:$filenameEscaped anchor="localeContents"}" method="post">
 	{translate key="plugins.generic.translator.localeKey"}&nbsp;&nbsp;
 	<input type="text" name="searchKey" class="textField" />&nbsp;&nbsp;
@@ -42,8 +49,13 @@
 
 {iterate from=localeContents key=key item=value}
 {assign var=filenameEscaped value=$filename|escape:"url"|escape:"url"}
+	{* extra row for the key *}
 	<tr valign="top"{if $key == $searchKey} class="highlight"{/if}>
-		<td>{$key|escape}</td>
+		<td colspan="3">{$key|escape}</td>
+	</tr>
+	<tr valign="top"{if $key == $searchKey} class="highlight"{/if}>
+		{* empty first column where the key used to be *}
+		<td>&nbsp;</td>
 		<td>
 			<input type="hidden" name="changes[]" value="{$key|escape}" />
 			{assign var=referenceValue value=$referenceLocaleContents.$key}
