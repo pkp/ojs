@@ -13,5 +13,5 @@
   <message key="plugins.citationFormats.abnt.displayName" >پلاگین الگوی مرجع نویسی آ بی ان تی</message>
   <message key="plugins.citationFormats.abnt.citationFormatName" >آ بی ان تی</message>
   <message key="plugins.citationFormats.abnt.description" >این پلاگین الگوی مرجع نویسی آ بی ان تی را اعمال میکند.</message>
-  <message key="plugins.citationFormat.acao.location" >آمریکای شمالی</message>
+  <message key="plugins.citationFormat.abnt.location" >آمریکای شمالی</message>
 </locale>

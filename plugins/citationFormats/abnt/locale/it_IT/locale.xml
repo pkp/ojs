@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
 
 <!--
   * locale.xml
@@ -16,5 +16,5 @@
 	<message key="plugins.citationFormats.abnt.displayName">Plugin del formato di citazioni ABNT</message>
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">Questo plugin implementa il formato di citazioni ABNT.</message>
-	<message key="plugins.citationFormat.acao.location">Nord America</message>
+	<message key="plugins.citationFormat.abnt.location">Nord America</message>
 </locale>
