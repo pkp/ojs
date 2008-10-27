@@ -2159,9 +2159,6 @@
 			<KEY />
 			<AUTOINCREMENT/>
 		</field>
-		<field name="key_hash" type="C2" size="40">
-			<NOTNULL/>
-		</field>
 		<field name="date_created" type="T">
 			<NOTNULL/>
 		</field>
@@ -2170,10 +2167,6 @@
 		</field>
 		<field name="payment_data" type="X" />
 		<descr>Logs queued (unfulfilled) payments.</descr>
-		<index name="queued_payments_hash">
-			<col>key_hash</col>
-			<col>queued_payment_id</col>
-		</index>
 	</table>
 	
 	<!--
