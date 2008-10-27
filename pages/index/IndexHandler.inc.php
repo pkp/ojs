@@ -25,14 +25,15 @@ class IndexHandler extends PKPHandler {
 	 */
 	function index($args) {
 		parent::validate();
+		IndexHandler::setupTemplate();
 
-		$templateMgr = &TemplateManager::getManager();
-		$journalDao = &DAORegistry::getDAO('JournalDAO');
+		$templateMgr =& TemplateManager::getManager();
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$journalPath = Request::getRequestedJournalPath();
 		$templateMgr->assign('helpTopicId', 'user.home');
 
 		if ($journalPath != 'index' && $journalDao->journalExistsByPath($journalPath)) {
-			$journal = &Request::getJournal();
+			$journal =& Request::getJournal();
 
 			// Assign header and content for home page
 			$templateMgr->assign('displayPageHeaderTitle', $journal->getJournalPageHeaderTitle(true));
@@ -42,8 +43,8 @@ class IndexHandler extends PKPHandler {
 			$templateMgr->assign('journalDescription', $journal->getLocalizedSetting('description'));
 
 			$displayCurrentIssue = $journal->getSetting('displayCurrentIssue');
-			$issueDao = &DAORegistry::getDAO('IssueDAO');
-			$issue = &$issueDao->getCurrentIssue($journal->getJournalId());
+			$issueDao =& DAORegistry::getDAO('IssueDAO');
+			$issue =& $issueDao->getCurrentIssue($journal->getJournalId());
 			if ($displayCurrentIssue && isset($issue)) {
 				import('pages.issue.IssueHandler');
 				// The current issue TOC/cover page should be displayed below the custom home page.
@@ -67,7 +68,7 @@ class IndexHandler extends PKPHandler {
 			$templateMgr->display('index/journal.tpl');
 		} else {
 			$siteDao = &DAORegistry::getDAO('SiteDAO');
-			$site = &$siteDao->getSite();
+			$site =& $siteDao->getSite();
 
 			if ($site->getRedirect() && ($journal = $journalDao->getJournal($site->getJournalRedirect())) != null) {
 				Request::redirect($journal->getPath());
