@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
   * locale.xml
@@ -16,5 +16,5 @@
 	<message key="plugins.citationFormats.abnt.displayName">Công cụ định dạng trích dẫn ABNT</message>
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">Công cụ này áp dụng định dạng trích dẫn ABNT.</message>
-	<message key="plugins.citationFormat.acao.location">Bắc Mỹ</message>
+	<message key="plugins.citationFormat.abnt.location">Bắc Mỹ</message>
 </locale>

@@ -16,5 +16,5 @@
 	<message key="plugins.citationFormats.abnt.displayName">ABNT 引用形式プラグイン</message>
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">このプラグインはABNT引用形式を実装します。</message>
-	<message key="plugins.citationFormat.acao.location">北米</message>
+	<message key="plugins.citationFormat.abnt.location">北米</message>
 </locale>

@@ -16,5 +16,5 @@
 	<message key="plugins.citationFormats.abnt.displayName">Plugiciel de format de référence bibliographique ABNT</message>
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">Ce plugiciel implante le format de référence bibliographique ABNT.</message>
-	<message key="plugins.citationFormat.acao.location">Amérique du Nord</message>
+	<message key="plugins.citationFormat.abnt.location">Amérique du Nord</message>
 </locale>

@@ -16,5 +16,5 @@
 	<message key="plugins.citationFormats.abnt.displayName">Plugin Formato de Citação ABNT</message>
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">Este plugin implementa o formato de citação ABNT.</message>
-	<message key="plugins.citationFormat.acao.location">América do Norte</message>
+	<message key="plugins.citationFormat.abnt.location">América do Norte</message>
 </locale>
