@@ -33,24 +33,10 @@ class ArticleReportDAO extends DAO {
 				a.article_id AS article_id,
 				COALESCE(asl1.setting_value, aspl1.setting_value) AS title,
 				COALESCE(asl2.setting_value, aspl2.setting_value) AS abstract,
-				u.first_name AS fname,
-				u.middle_name AS mname,
-				u.last_name AS lname,
-				u.email AS email,
-				u.affiliation AS affiliation,
-				u.country AS country,
-				u.phone AS phone,
-				u.fax AS fax,
-				u.url AS url,
-				u.mailing_address AS address,
-				COALESCE(usl.setting_value, uspl.setting_value) AS biography,
 				COALESCE(sl.setting_value, spl.setting_value) AS section_title,
 				a.language AS language
 			FROM
 				articles a
-					LEFT JOIN users u ON a.user_id=u.user_id
-					LEFT JOIN user_settings uspl ON (u.user_id=uspl.user_id AND uspl.setting_name = ? AND uspl.locale = ?)
-					LEFT JOIN user_settings usl ON (u.user_id=usl.user_id AND usl.setting_name = ? AND usl.locale = ?)
 					LEFT JOIN article_settings aspl1 ON (aspl1.article_id=a.article_id AND aspl1.setting_name = ? AND aspl1.locale = ?)
 					LEFT JOIN article_settings asl1 ON (asl1.article_id=a.article_id AND asl1.setting_name = ? AND asl1.locale = ?)
 					LEFT JOIN article_settings aspl2 ON (aspl2.article_id=a.article_id AND aspl2.setting_name = ? AND aspl2.locale = ?)
@@ -62,10 +48,6 @@ class ArticleReportDAO extends DAO {
 			ORDER BY
 				title',
 			array(
-				'biography',
-				$primaryLocale,
-				'biography',
-				$locale,
 				'title',
 				$primaryLocale,
 				'title',
@@ -94,7 +76,6 @@ class ArticleReportDAO extends DAO {
 			array($journalId)
 		);
 		$decisionDatesIterator =& new DBRowIterator($result);
-		$decisions = array();
 		$decisionsReturner = array();
 		while ($row =& $decisionDatesIterator->next()) {
 			$result =& $this->retrieve(
@@ -111,8 +92,37 @@ class ArticleReportDAO extends DAO {
 			$decisionsReturner[] =& new DBRowIterator($result);
 			unset($result);
 		}
+		
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$articles =& $articleDao->getArticlesByJournalId($journalId);
+		$authorsReturner = array();
+		$index = 1;
+		while ($article =& $articles->next()) {
+			$result =& $this->retrieve(
+				'SELECT	aa.first_name AS fname,
+					aa.middle_name AS mname,
+					aa.last_name AS lname,
+					aa.email AS email,
+					aa.affiliation AS affiliation,
+					aa.country AS country,
+					aa.url AS url,
+					aas.setting_value AS biography
+				FROM article_authors aa
+					LEFT JOIN articles a ON aa.article_id=a.article_id
+					LEFT JOIN article_author_settings aas ON aa.author_id=aas.author_id
+				WHERE
+					a.journal_id = ? AND
+					aa.article_id = ? AND
+					aas.setting_name = \'biography\'',
+				array($journalId, $article->getArticleId())
+			);
+			$authorIterator =& new DBRowIterator($result);
+			$authorsReturner[] = $authorIterator;
+			$index++;
+			unset($article);
+		}
 
-		return array($articlesReturner, $decisionsReturner);
+		return array($articlesReturner, $authorsReturner, $decisionsReturner);
 	}
 }
 
