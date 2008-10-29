@@ -197,15 +197,6 @@
 			<NOTNULL/>
 		</field>
 		<descr>Locale-specific user data</descr>
-		<index name="user_settings_user_id">
-			<col>user_id</col>
-		</index>
-		<index name="user_settings_pkey">
-			<col>user_id</col>
-			<col>locale</col>
-			<col>setting_name</col>
-			<UNIQUE />
-		</index>
 	</table>
 
 	<!--
