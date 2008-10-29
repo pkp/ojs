@@ -52,6 +52,8 @@ class PluginManagementHandler extends ManagerHandler {
 			case 'deletePlugin':
 				PluginManagementHandler::deletePlugin($plugin);
 				break;
+			default:
+				Request::redirect(null, 'manager', 'plugins'); 				
 		}
 	
 		parent::setupTemplate(true);
