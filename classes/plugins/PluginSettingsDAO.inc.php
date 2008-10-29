@@ -132,14 +132,26 @@ class PluginSettingsDAO extends DAO {
 	 * @param $pluginName int
 	 * @param $name string
 	 */
-	function deleteSetting($journalId, $pluginName, $name) {
-		$cache =& $this->_getCache($journalId, $pluginName);
-		$cache->setCache($name, null);
-
-		return $this->update(
-			'DELETE FROM plugin_settings WHERE plugin_name = ? AND setting_name = ? AND journal_id = ?',
-			array($pluginName, $name, $journalId)
-		);
+	function deleteSetting($pluginName, $name, $journalId = null) {
+		if ( $journalId ) {
+			$cache =& $this->_getCache($journalId, $pluginName);
+			$cache->setCache($name, null);
+	
+			return $this->update(
+				'DELETE FROM plugin_settings WHERE plugin_name = ? AND setting_name = ? AND journal_id = ?',
+				array($pluginName, $name, $journalId)
+			);
+		} else {
+			import('cache.CacheManager');
+			$cacheManager =& CacheManager::getManager();
+			// NB: this actually deletes all plugins' settings cache			
+			$cacheManager->flush('pluginSettings');
+			
+			return $this->update(
+				'DELETE FROM plugin_settings WHERE plugin_name = ? AND setting_name = ?', 
+				array($pluginName, $name)
+			);					
+		}
 	}
 
 	/**
@@ -147,14 +159,26 @@ class PluginSettingsDAO extends DAO {
 	 * @param $journalId int
 	 * @param $pluginName string
 	 */
-	function deleteSettingsByPlugin($journalId, $pluginName) {
-		$cache =& $this->_getCache($journalId, $pluginName);
-		$cache->flush();
-
-		return $this->update(
-			'DELETE FROM plugin_settings WHERE journal_id = ? AND plugin_name = ?', 
-			array($journalId, $pluginName)
-		);
+	function deleteSettingsByPlugin($pluginName, $journalId = null) {
+		if ( $journalId ) {
+			$cache =& $this->_getCache($journalId, $pluginName);
+			$cache->flush();
+	
+			return $this->update(
+				'DELETE FROM plugin_settings WHERE journal_id = ? AND plugin_name = ?', 
+				array($journalId, $pluginName)
+			);
+		} else {
+			import('cache.CacheManager');
+			$cacheManager =& CacheManager::getManager();
+			// NB: this actually deletes all plugins' settings cache			
+			$cacheManager->flush('pluginSettings');
+			
+			return $this->update(
+				'DELETE FROM plugin_settings WHERE plugin_name = ?', 
+				array($pluginName)
+			);			
+		}
 	}
 
 	/**
