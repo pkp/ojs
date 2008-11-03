@@ -125,4 +125,11 @@
 	<message key="plugins.generic.thesis.form.supervisorEmailValid">Eine gültige Emailadresse ist erforderlich.</message>
 	<message key="plugins.generic.thesis.form.saveAndCreateAnother">Speichern und weitere erstellen</message>
 
+	<message key="plugins.generic.thesis.manager.form.keyword">Stichwörter</message>
+	<message key="plugins.generic.thesis.manager.form.language">Sprache</message>
+	<message key="plugins.generic.thesis.title">Titel</message>
+	<message key="plugins.generic.thesis.keyword">Stichwort</message>
+	<message key="plugins.generic.thesis.form.comment">Kommentare</message>
+	<message key="plugins.generic.thesis.form.keyword">Stichwörter</message>
+	<message key="plugins.generic.thesis.form.language">Sprache</message>
 </locale>

@@ -297,18 +297,6 @@
 			<field name="description">このメールは、査読者からセクションエディタに査読依頼を受諾し、指定された期日までに査読を終了させる意思を伝えるものです。</field>
 		</row>
 		<row>
-			<field name="email_key">REVIEW_CONFIRM_ACK</field>
-			<field name="subject">査読受諾のお礼</field>
-			<field name="body">{$reviewerName} 殿:
-
-雑誌『{$journalName}』への投稿原稿「{$articleTitle}」に対する期限日{$reviewDueDate}の査読を引き受けていただき、ありがとうございました。
-
-よろしくお願いいたします。
-
-{$editorialContactSignature}</field>
-			<field name="description">このメールはセクションエディタから査読者に査読依頼の受諾を感謝し、査読作業の遂行を促すものです。</field>
-		</row>
-		<row>
 			<field name="email_key">REVIEW_DECLINE</field>
 			<field name="subject">査読依頼の謝絶</field>
 			<field name="body">{$editorialContactName} 殿:
@@ -861,6 +849,35 @@
 
 {$subscriptionContactSignature}</field>
 			<field name="description">このメールは、購読者に購読期間が終了したことを通知するものです。メールでは雑誌のURLとアクセス方法を提供しています。</field>
+		</row>
+		<row>
+			<field name="email_key">USER_VALIDATE</field>
+			<field name="subject">アカウントの有効化</field>
+			<field name="body">{$userFullName}　様
+
+『{$journalName}』へのアカウントの登録を受け付けました。このアカウントを使用するには、有効化処理を行う必要があります。以下のリンクをクリックして指示に従ってアカウントを有効化してください。
+
+{$activateUrl}
+
+ご登録ありがとうございました。
+
+{$principalContactSignature}</field>
+			<field name="description"></field>
+		</row>
+		<row>
+			<field name="email_key">REVIEWER_REGISTER</field>
+			<field name="subject">{$journalName}の査読者として登録させていただきました</field>
+			<field name="body">貴殿の専門性を鑑みて、勝手ながら貴殿の名前を雑誌『{$journalName}.』の査読者データベースに登録させていただきました。これにより貴殿に何らかの責務が発生することはございません。ただ、我々が投稿物に対する査読を貴殿にお願いできるようにするだけです。査読をお願いする場合は、貴殿は対象となる論文のタイトルと要旨を見る機会が与えられ、常に査読を受諾または謝絶することができます。また、いつでもこの査読者リストから貴殿の名前を削除することを要求することができます。
+
+貴殿には下記のユーザ名とパスワードを用意しました。これを使うことにより雑誌のWebサイトにおける全ての操作を行うことができます。たとえば、査読する関心分野などのプロフィールの変更を行うことができます。
+
+ユーザ名: {$username}
+パスワード: {$password}
+
+よろしくお願いいたします。
+
+{$principalContactSignature}</field>
+			<field name="description">このメールは、新たに登録された査読者に送られるもので、このシステムへの登録を歓迎し、ユーザ名とパスワードを通知するものです。</field>
 		</row>
 	</table>
 </data>
