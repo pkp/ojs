@@ -21,5 +21,9 @@
 	<message key="plugins.generic.webfeed.settings.currentIssue">最新号のアイテムを表示する。</message>
 	<message key="plugins.generic.webfeed.settings.recentArticles">最新公開アイテム。</message>
 	<message key="plugins.generic.webfeed.settings.recentItemsRequired">通知する最新公開アイテムの数を正の整数で指定してください。</message>
+	<message key="plugins.generic.webfeed.atom.altText">Atom ロゴ</message>
+	<message key="plugins.generic.webfeed.rss1.altText">RSS1 ロゴ</message>
+	<message key="plugins.generic.webfeed.rss2.altText">RSS2 ロゴ</message>
+	<message key="plugins.generic.webfeed.settings.homepage">雑誌ホームページと巻号ページにのみフィードを表示する。</message>
 </locale>
 
