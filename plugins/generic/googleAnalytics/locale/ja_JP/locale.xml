@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
 
 <!--
   * locale.xml
@@ -26,4 +26,5 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">アカウント番号は以下の手順で確認できます。Google Analyticsの[Analytics 設定] ページで、該当するプロファイルの横にある [編集] リンクをクリックし、表の右上にある [ステータスを確認] を選択します。アカウント番号はトラッキングコード内に _uacct = "###" という形で表示されています。###に該当するテキストを入力してください。</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">アカウント番号を入力してください。</message>
 
+	<message key="plugins.generic.googleAnalytics.manager.settings.ga">新しいトラッキングコード (ga.js)</message>
 </locale>

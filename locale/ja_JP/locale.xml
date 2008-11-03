@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+<!DOCTYPE locale SYSTEM "../locale.dtd">
 
 <!--
   * locale.xml
@@ -36,8 +36,8 @@
   <message key="common.all">すべて</message>
   <message key="common.on">オン</message>
   <message key="common.off">オフ</message>
-  <message key="common.enabled">有効</message>
-  <message key="common.disabled">無効</message>
+  <message key="common.enabled">有効化</message>
+  <message key="common.disabled">無効化</message>
   <message key="common.openJournalSystems">オープン・ジャーナル・システム</message>
   <message key="common.delete">削除</message>
   <message key="common.edit">編集</message>
@@ -2825,4 +2825,84 @@ OJSのシステム設定を変更することにより、このサイト全体�
 	<message key="default.journalSettings.membershipFeeDescription">この料金を支払うと、あなたはこの協会の会員として１年間登録され、この雑誌に自由にアクセスすることができます。</message>
 	<message key="default.journalSettings.donationFeeDescription">寄付はどんな額であれありがたく頂戴し、編集者が最高の品質の雑誌を読者に提供し続けるために利用します。</message>
 	<message key="manager.payment.options.fastTrackFee">迅速審査</message>
+	<message key="common.preview">プレビュー</message>
+	<message key="common.activate">有効</message>
+	<message key="common.deactivate">無効</message>
+	<message key="manager.reviewForms">査読フォーム</message>
+	<message key="manager.reviewForms.noneCreated">査読フォームが作成されていません。</message>
+	<message key="manager.reviewForms.create">査読フォームの作成</message>
+	<message key="manager.reviewForms.completed">完了</message>
+	<message key="manager.reviewForms.form.titleRequired">査読フォームにはタイトルが必要です。</message>
+	<message key="manager.reviewFormElements">フォームアイテム</message>
+	<message key="manager.reviewFormElements.create">新規アイテムの作成</message>
+	<message key="manager.reviewFormElements.edit">フォームアイテムの編集</message>
+	<message key="manager.reviewFormElements.noneCreated">フォームアイテムが作成されていません。</message>
+	<message key="manager.reviewFormElements.question">アイテム</message>
+	<message key="manager.reviewFormElements.elementType">アイテム種別</message>
+	<message key="manager.reviewFormElements.chooseType">アイテム種別の選択</message>
+	<message key="manager.reviewFormElement.changeType">フォームのアイテム種別を選択する</message>
+	<message key="manager.reviewFormElements.form.elementTypeRequired">アイテム種別がフォームアイテムには必要です。</message>
+	<message key="manager.reviewFormElements.checkboxes">チェックボックス (ひとつしか選択できません)</message>
+	<message key="manager.reviewFormElements.radiobuttons">ラジオボタン (ひとつしか選択できません)</message>
+	<message key="manager.reviewFormElements.dropdownbox">ドロップダウンボックス</message>
+	<message key="submission.reviewForm">査読フォーム</message>
+	<message key="editor.article.reviewForms">査読フォーム</message>
+	<message key="editor.article.selectReviewForm">査読フォームの選択</message>
+	<message key="editor.article.clearReviewForm">査読フォームのクリア</message>
+	<message key="reviewer.article.enterReviewForm">アイコンをクリックして査読フォームに記入してください。</message>
+	<message key="reviewer.article.reviewFormResponse.form.responseRequired">必要事項を記入してください。</message>
+	<message key="common.altText">代替テキスト</message>
+	<message key="common.pageHeader.altText">ページヘッダ</message>
+	<message key="common.pageHeaderLogo.altText">ページヘッダロゴ</message>
+	<message key="common.homePageHeader.altText">ホームページヘッダ</message>
+	<message key="common.homePageHeaderLogo.altText">ホームページヘッダロゴ</message>
+	<message key="article.accessLogoOpen.altText">オープンアクセス</message>
+	<message key="article.accessLogoRestricted.altText">アクセス制限</message>
+	<message key="article.comments.sectionDefault">デフォルト</message>
+	<message key="article.fontSize">フォントサイズ</message>
+	<message key="article.fontSize.small.altText">小</message>
+	<message key="article.fontSize.medium.altText">中</message>
+	<message key="article.fontSize.large.altText">大</message>
+	<message key="user.noRoles.regReviewer">査読者として登録する</message>
+	<message key="admin.settings.homeHeaderImage.altText">サイトロゴ</message>
+	<message key="manager.setup.journalHomepageHeader.altText">雑誌ホームページのヘッダ</message>
+	<message key="manager.subscriptions.dateStartSearch">開始日</message>
+	<message key="manager.subscriptions.dateEndSearch">終了日</message>
+	<message key="manager.reviewForms.noneUsed">査読フォームが使用されていません。</message>
+	<message key="manager.reviewForms.edit">査読フォーム</message>
+	<message key="manager.reviewForms.title">タイトル</message>
+	<message key="common.journalHomepageImage.altText">雑誌ホームページ画像</message>
+	<message key="article.coverPage.altText">カバー画像</message>
+	<message key="article.comments.disable">有効</message>
+	<message key="article.comments.enable">無効</message>
+	<message key="user.noRoles.chooseJournal">現在、あなたのアカウントは、どの雑誌に登録されていません。登録する雑誌を選択してください。</message>
+	<message key="user.noRoles.noRolesForJournal">現在、あなたのアカウントは、この雑誌での役割が指定されていません。下記から選択してください。</message>
+	<message key="admin.journals.importOJS1.success">インポートが成功しました。</message>
+	<message key="manager.setup.journalLogo.altText">雑誌ロゴ</message>
+	<message key="editor.issues.coverPageDisplay">表示</message>
+	<message key="editor.issues.hideCoverPageArchives">巻号リストにカバー画像サムネイルを表示しない</message>
+	<message key="editor.article.display">表示</message>
+	<message key="editor.article.hideTocAuthorDefault">デフォルト</message>
+	<message key="editor.article.coverPageDisplay">表示</message>
+	<message key="editor.article.coverPage">カバー画像</message>
+	<message key="editor.article.uploaded">アップロード済</message>
+	<message key="editor.article.removeCoverPage">カバー画像を削除しますか?</message>
+	<message key="editor.article.remove">削除</message>
+	<message key="user.profile.publicProfile">ユーザ情報</message>
+	<message key="help.searchReturnResults">検索結果に戻る</message>
+	<message key="icon.font_small.alt">小</message>
+	<message key="icon.font_medium.alt">中</message>
+	<message key="icon.font_large.alt">大</message>
+	<message key="common.copy">コピー</message>
+	<message key="manager.reviewForms.reviewFormData">査読フォームデータ</message>
+	<message key="manager.reviewForms.preview">フォームのプレビュー</message>
+	<message key="default.journalSettings.purchaseArticleFeeDescription">この料金を支払うと、この論文の閲覧、ダウンロード、プリントアウトが可能になります。</message>
+	<message key="submission.changeComments">変更する</message>
+	<message key="issue.coverPage.altText">カバーページ</message>
+	<message key="plugins.categories.reports">レポートプラグイン</message>
+	<message key="manager.sections.disableComments">このセクションで読者からのコメントを無効にする。</message>
+	<message key="manager.sections.abstractsNotRequired">要旨は不要である</message>
+	<message key="manager.subscriptionPolicies.expirySelectOne">次の中からひとつを選択してください。</message>
+	<message key="manager.subscriptions.membership">会員</message>
+	<message key="editor.issues.hideCoverPageCover">目次の前にカバー画像を表示しない。</message>
 </locale>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
 
 <!--
   * locale.xml
@@ -116,4 +116,5 @@
 	<message key="plugins.importexport.native.import.error.articleSuppFilePublisherLocaleUnsupported">巻号（"{$issueTitle}"）の論文（"{$articleTitle}"）の補助ファイル（"{$suppFileTitle}"）の出版社に、この雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
 	<message key="plugins.importexport.native.import.error.articleSuppFileSponsorLocaleUnsupported">巻号（"{$issueTitle}"）の論文（"{$articleTitle}"）の補助ファイル（"{$suppFileTitle}"）のスポンサーに、この雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
 	<message key="plugins.importexport.native.import.error.articleSuppFileSourceLocaleUnsupported">巻号（"{$issueTitle}"）の論文（"{$articleTitle}"）の補助ファイル（"{$suppFileTitle}"）の情報源に、この雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
+	<message key="plugins.importexport.native.error.uploadFailed">アップロードが失敗しました。ファイルのアップロードがサーバで許可されているか、またアップロードされたファイルの容量がPHPおよびWebサーバの設定の上限値をこえていないかどうかを確認してください。</message>
 </locale>
