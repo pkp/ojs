@@ -9,63 +9,6 @@
  * $Id$
  *}
 {strip}
-{include file="help/header.tpl"}
+{translate|assign:applicationHelpTranslated key="help.ojsHelp"}
+{include file="core:help/searchResults.tpl"}
 {/strip}
-
-<div id="main" style="margin: 0; width: 660px;">
-
-	<h4>{translate key="help.ojsHelp"}</h4>
-
-	<div class="thickSeparator"></div>
-
-	<div id="breadcrumb">
-		<a href="{get_help_id key="index.index" url="true"}">{translate key="navigation.home"}</a>
-	</div>
-
-	<h2>{translate key="help.searchResults"}</h2>
-
-	<div id="content">
-		<h4>{translate key="help.searchResultsFor"} "{$helpSearchKeyword|escape}"</h4>
-		<div id="search">
-		{if count($searchResults) > 0}
-			<h5>{translate key="help.matchesFound" matches=$searchResults|@count}</h5>
-			<ul>
-			{assign var=resultNum value=0}
-			{foreach name=results from=$searchResults item=result}
-				{assign var=sections value=$result.topic->getSections()}
-				{assign var=resultNum value=$resultNum+1}
-				<li id="result{$resultNum}">
-					<a href="{url op="view" path=$result.topic->getId()|explode:"/" keyword=$helpSearchKeyword|escape result=$resultNum}">{$result.topic->getTitle()}</a>
-					{eval var=$sections[0]->getContent()|strip_tags|truncate:200}
-					<div class="searchBreadcrumb">
-						<a href="{url op="view" path="index"|to_array:"topic":"000000"}">{translate key="navigation.home"}</a>
-						{foreach name=breadcrumbs from=$result.toc->getBreadcrumbs() item=breadcrumb key=key}
-							{if $breadcrumb != $result.topic->getId()}
-							 &gt; <a href="{url op="view" path=$breadcrumb|explode:"/"}">{$key|escape}</a>
-							{/if}
-						{/foreach}
-						{if $result.topic->getId() != "index/topic/000000"}
-						&gt; <a href="{url op="view" path=$result.topic->getId()|explode:"/" keyword=$helpSearchKeyword|escape result=$resultNum}" class="current">{$result.topic->getTitle()}</a>
-						{/if}
-					</div>
-				</li>
-			{/foreach}
-			</ul>
-		{else}
-			<em>{translate key="help.noMatchingTopics"}</em>
-		{/if}
-		</div>
-
-		<div class="separator"></div>
-
-		<div>
-			<h4>{translate key="help.search"}</h4>
-			<form action="{url op="search"}" method="post" style="display: inline">
-			{translate key="help.searchFor"}&nbsp;&nbsp;<input type="text" name="keyword" size="30" maxlength="60" value="{$helpSearchKeyword|escape}" class="textField" />
-			<input type="submit" value="{translate key="common.search"}" class="button" />
-			</form>
-		</div>
-	</div>
-</div>
-
-{include file="help/footer.tpl"}
