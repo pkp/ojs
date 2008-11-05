@@ -147,7 +147,7 @@ class PublishedArticleDAO extends DAO {
 			$rangeInfo
 		);
 
-		$returner =& new DAOResultFactory($result, $this, $func);
+		$returner = new DAOResultFactory($result, $this, $func);
 		return $returner;
 	}
 
@@ -297,7 +297,7 @@ class PublishedArticleDAO extends DAO {
 		);
 		$row = $result->GetRowAssoc(false);
 
-		$publishedArticle = &new PublishedArticle();
+		$publishedArticle = new PublishedArticle();
 		$publishedArticle->setPubId($row['pub_id']);
 		$publishedArticle->setArticleId($row['article_id']);
 		$publishedArticle->setIssueId($row['issue_id']);
@@ -528,7 +528,7 @@ class PublishedArticleDAO extends DAO {
 	 * @return PublishedArticle object
 	 */
 	function &_returnSimplePublishedArticleFromRow($row, $callHooks = true) {
-		$publishedArticle = &new PublishedArticle();
+		$publishedArticle = new PublishedArticle();
 		$publishedArticle->setPubId($row['pub_id']);
 		$publishedArticle->setIssueId($row['issue_id']);
 		$publishedArticle->setDatePublished($this->datetimeFromDB($row['date_published']));
@@ -707,7 +707,7 @@ class PublishedArticleDAO extends DAO {
 
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
-			$author = &new Author();
+			$author = new Author();
 			$author->setAuthorId($row['author_id']);
 			$author->setArticleId($row['article_id']);
 			$author->setFirstName($row['first_name']);

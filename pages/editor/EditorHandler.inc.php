@@ -52,7 +52,7 @@ class EditorHandler extends SectionEditorHandler {
 
 		// Bring in the print_issue_id function (FIXME?)
 		import('issue.IssueAction');
-		$issueAction = &new IssueAction();
+		$issueAction = new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
 
 		// If a search was performed, get the necessary info.
@@ -85,7 +85,7 @@ class EditorHandler extends SectionEditorHandler {
 			
 			// EditorSubmissionDAO does not return edit assignments, so we need this.
 			$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
-			$submissions = &new DAOResultFactory($rawSubmissions, $sectionEditorSubmissionDao, '_returnSectionEditorSubmissionFromRow');
+			$submissions = new DAOResultFactory($rawSubmissions, $sectionEditorSubmissionDao, '_returnSectionEditorSubmissionFromRow');
 
 
 			$templateMgr->assign_by_ref('submissions', $submissions);
@@ -224,7 +224,7 @@ class EditorHandler extends SectionEditorHandler {
 		$templateMgr->assign('dateFieldOptions', EditorHandler::getDateFieldOptions());
 
 		import('issue.IssueAction');
-		$issueAction = &new IssueAction();
+		$issueAction = new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
 
 		$templateMgr->assign('helpTopicId', $helpTopicId);
@@ -441,7 +441,7 @@ class EditorHandler extends SectionEditorHandler {
 		if ($article->getJournalId() == $journal->getJournalId() && ($status == STATUS_DECLINED || $status == STATUS_ARCHIVED)) {
 			// Delete article files
 			import('file.ArticleFileManager');
-			$articleFileManager = &new ArticleFileManager($articleId);
+			$articleFileManager = new ArticleFileManager($articleId);
 			$articleFileManager->deleteArticleTree();
 
 			// Delete article database entries

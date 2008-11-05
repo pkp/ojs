@@ -103,7 +103,7 @@ class AuthorSubmissionDAO extends DAO {
 	 * @return AuthorSubmission
 	 */
 	function &_returnAuthorSubmissionFromRow(&$row) {
-		$authorSubmission = &new AuthorSubmission();
+		$authorSubmission = new AuthorSubmission();
 
 		// Article attributes
 		$this->articleDao->_articleFromRow($authorSubmission, $row);
@@ -264,7 +264,7 @@ class AuthorSubmissionDAO extends DAO {
 			$rangeInfo
 		);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnAuthorSubmissionFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnAuthorSubmissionFromRow');
 		return $returner;
 	}
 

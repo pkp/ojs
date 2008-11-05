@@ -66,7 +66,7 @@ class ProofreaderAction extends Action {
 		$useProofreaders = $journal->getSetting('useProofreaders');
 
 		import('mail.ArticleMailTemplate');
-		$email = &new ArticleMailTemplate($sectionEditorSubmission, $mailType);
+		$email = new ArticleMailTemplate($sectionEditorSubmission, $mailType);
 
 		switch($mailType) {
 			case 'PROOFREAD_AUTHOR_REQUEST':
@@ -451,7 +451,7 @@ class ProofreaderAction extends Action {
 		if (!HookRegistry::call('ProofreaderAction::viewProofreadComments', array(&$article))) {
 			import("submission.form.comment.ProofreadCommentForm");
 
-			$commentForm = &new ProofreadCommentForm($article, ROLE_ID_PROOFREADER);
+			$commentForm = new ProofreadCommentForm($article, ROLE_ID_PROOFREADER);
 			$commentForm->initData();
 			$commentForm->display();
 		}
@@ -466,7 +466,7 @@ class ProofreaderAction extends Action {
 		if (!HookRegistry::call('ProofreaderAction::postProofreadComment', array(&$article, &$emailComment))) {
 			import("submission.form.comment.ProofreadCommentForm");
 
-			$commentForm = &new ProofreadCommentForm($article, ROLE_ID_PROOFREADER);
+			$commentForm = new ProofreadCommentForm($article, ROLE_ID_PROOFREADER);
 			$commentForm->readInputData();
 
 			if ($commentForm->validate()) {
@@ -492,7 +492,7 @@ class ProofreaderAction extends Action {
 		if (!HookRegistry::call('ProofreaderAction::viewLayoutComments', array(&$article))) {
 			import("submission.form.comment.LayoutCommentForm");
 
-			$commentForm = &new LayoutCommentForm($article, ROLE_ID_PROOFREADER);
+			$commentForm = new LayoutCommentForm($article, ROLE_ID_PROOFREADER);
 			$commentForm->initData();
 			$commentForm->display();
 		}
@@ -507,7 +507,7 @@ class ProofreaderAction extends Action {
 		if (!HookRegistry::call('ProofreaderAction::postLayoutComment', array(&$article, &$emailComment))) {
 			import("submission.form.comment.LayoutCommentForm");
 
-			$commentForm = &new LayoutCommentForm($article, ROLE_ID_PROOFREADER);
+			$commentForm = new LayoutCommentForm($article, ROLE_ID_PROOFREADER);
 			$commentForm->readInputData();
 
 			if ($commentForm->validate()) {

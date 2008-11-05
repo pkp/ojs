@@ -46,7 +46,7 @@ class ArticleHandler extends PKPHandler {
 			else if ($galley->isPdfGalley()) return ArticleHandler::viewPDFInterstitial($args, $galley);
 			else if ($galley->isInlineable()) {
 				import('file.ArticleFileManager');
-				$articleFileManager = &new ArticleFileManager($article->getArticleId());
+				$articleFileManager = new ArticleFileManager($article->getArticleId());
 				return $articleFileManager->viewFile($galley->getFileId());
 			} else return ArticleHandler::viewDownloadInterstitial($args, $galley);
 		}
@@ -189,7 +189,7 @@ class ArticleHandler extends PKPHandler {
 			$locale = Locale::getLocale();
 			if (isset($article) && $article->getFileName($locale) && $article->getShowCoverPage($locale) && !$article->getHideCoverPageAbstract($locale)) {
 				import('file.PublicFileManager');
-				$publicFileManager = &new PublicFileManager();
+				$publicFileManager = new PublicFileManager();
 				$coverPagePath = Request::getBaseUrl() . '/';
 				$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
 				$templateMgr->assign('coverPagePath', $coverPagePath);
@@ -365,7 +365,7 @@ class ArticleHandler extends PKPHandler {
 
 		if ($article && $galley && !HookRegistry::call('ArticleHandler::downloadFile', array(&$article, &$galley))) {
 			import('file.ArticleFileManager');
-			$articleFileManager = &new ArticleFileManager($article->getArticleId());
+			$articleFileManager = new ArticleFileManager($article->getArticleId());
 			$articleFileManager->downloadFile($galley->getFileId());
 		}
 	}
@@ -384,7 +384,7 @@ class ArticleHandler extends PKPHandler {
 
 		if ($article && $suppFile) {
 			import('file.ArticleFileManager');
-			$articleFileManager = &new ArticleFileManager($article->getArticleId());
+			$articleFileManager = new ArticleFileManager($article->getArticleId());
 			if ($suppFile->isInlineable()) {
 				$articleFileManager->viewFile($suppFile->getFileId());
 			} else {

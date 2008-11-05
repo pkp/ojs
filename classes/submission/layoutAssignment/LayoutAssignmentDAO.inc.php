@@ -104,7 +104,7 @@ class LayoutAssignmentDAO extends DAO {
 	 * @return LayoutAssignment
 	 */
 	function &_returnLayoutAssignmentFromRow(&$row) {
-		$layoutAssignment = &new LayoutAssignment();
+		$layoutAssignment = new LayoutAssignment();
 		$layoutAssignment->setLayoutId($row['layouted_id']);
 		$layoutAssignment->setArticleId($row['article_id']);
 		$layoutAssignment->setEditorId($row['editor_id']);

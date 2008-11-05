@@ -79,7 +79,7 @@ class ProofAssignmentDAO extends DAO {
 	 * @return ProofAssignment
 	 */
 	function &_returnProofAssignmentFromRow(&$row) {
-		$proofAssignment = &new ProofAssignment();
+		$proofAssignment = new ProofAssignment();
 		$proofAssignment->setProofId($row['proof_id']);
 		$proofAssignment->setArticleId($row['article_id']);
 		$proofAssignment->setProofreaderId($row['proofreader_id']);

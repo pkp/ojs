@@ -163,7 +163,7 @@ class genTestLocale extends CommandLineTool {
 
 }
 
-$tool = &new genTestLocale(isset($argv) ? $argv : array());
+$tool = new genTestLocale(isset($argv) ? $argv : array());
 $tool->execute();
 
 ?>

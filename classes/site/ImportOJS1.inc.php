@@ -149,7 +149,7 @@ class ImportOJS1 {
 
 		// Assumes no character set (not supported by OJS 1.x)
 		// Forces open a new connection
-		$this->importDBConn = &new DBConnection($db_config['type'], $db_config['host'], $db_config['uname'], $db_config['password'], $db_config['name'], false, false, true, false, true);
+		$this->importDBConn = new DBConnection($db_config['type'], $db_config['host'], $db_config['uname'], $db_config['password'], $db_config['name'], false, false, true, false, true);
 		$dbconn = &$this->importDBConn->getDBConn();
 
 		if (!$this->importDBConn->isConnected()) {
@@ -157,7 +157,7 @@ class ImportOJS1 {
 			return false;
 		}
 
-		$this->importDao = &new DAO($dbconn);
+		$this->importDao = new DAO($dbconn);
 
 		if (!$this->loadJournalConfig()) {
 			$this->error('Unsupported or unrecognized OJS version');
@@ -236,7 +236,7 @@ class ImportOJS1 {
 
 		// Create journal
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
-		$journal = &new Journal();
+		$journal = new Journal();
 		$journal->setPrimaryLocale(Locale::getLocale());
 		$journal->setPath($this->journalPath);
 		$journal->setEnabled(1);
@@ -248,7 +248,7 @@ class ImportOJS1 {
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		$admins = $roleDao->getUsersByRoleId(ROLE_ID_SITE_ADMIN);
 		foreach ($admins->toArray() as $admin) {
-			$role = &new Role();
+			$role = new Role();
 			$role->setJournalId($this->journalId);
 			$role->setUserId($admin->getUserId());
 			$role->setRoleId(ROLE_ID_JOURNAL_MANAGER);
@@ -257,7 +257,7 @@ class ImportOJS1 {
 
 		// Install the default RT versions.
 		import('rt.ojs.JournalRTAdmin');
-		$journalRtAdmin = &new JournalRTAdmin($this->journalId);
+		$journalRtAdmin = new JournalRTAdmin($this->journalId);
 		$journalRtAdmin->restoreVersions(false);
 
 		// Publishers, sponsors, and contributors
@@ -521,7 +521,7 @@ class ImportOJS1 {
 		$row = &$result->fields;
 
 		import('rt.ojs.JournalRT');
-		$rt = &new JournalRT($this->journalId);
+		$rt = new JournalRT($this->journalId);
 		$rt->setVersion($versionId);
 		$rt->setCaptureCite($row['bCaptureCite']);
 		$rt->setViewMetadata($row['bViewMetadata']);
@@ -580,7 +580,7 @@ class ImportOJS1 {
 
 			// Get username, email and transliterate to ASCII
 			import('core.Transcoder');
-			$trans =& new Transcoder('UTF-8', 'ASCII', true);
+			$trans = new Transcoder('UTF-8', 'ASCII', true);
 			$username = $trans->trans(Core::cleanVar($row['chUsername']));
 			$email = $trans->trans(Core::cleanVar($row['chEmail']));
 
@@ -590,7 +590,7 @@ class ImportOJS1 {
 
 			if (!isset($user)) {
 				// Create new user
-				$user = &new User();
+				$user = new User();
 				$user->setUsername($username);
 				$user->setPassword(Validation::encryptCredentials($username, Core::cleanVar($row['chPassword'])));
 				$user->setFirstName(Core::cleanVar($row['chFirstName']));
@@ -631,7 +631,7 @@ class ImportOJS1 {
 			}
 
 			if ($row['fkEditorID']) {
-				$role = &new Role();
+				$role = new Role();
 				$role->setJournalId($this->journalId);
 				$role->setUserId($userId);
 				switch ($editorRole) {
@@ -656,7 +656,7 @@ class ImportOJS1 {
 			}
 
 			if ($row['fkAuthorID']) {
-				$role = &new Role();
+				$role = new Role();
 				$role->setJournalId($this->journalId);
 				$role->setUserId($userId);
 				$role->setRoleId(ROLE_ID_AUTHOR);
@@ -666,7 +666,7 @@ class ImportOJS1 {
 			}
 
 			if ($row['fkReviewerID']) {
-				$role = &new Role();
+				$role = new Role();
 				$role->setJournalId($this->journalId);
 				$role->setUserId($userId);
 				$role->setRoleId(ROLE_ID_REVIEWER);
@@ -676,7 +676,7 @@ class ImportOJS1 {
 			}
 
 			if ($row['fkCopyEdID']) {
-				$role = &new Role();
+				$role = new Role();
 				$role->setJournalId($this->journalId);
 				$role->setUserId($userId);
 				$role->setRoleId(ROLE_ID_COPYEDITOR);
@@ -686,7 +686,7 @@ class ImportOJS1 {
 			}
 
 			if ($row['fkProofID']) {
-				$role = &new Role();
+				$role = new Role();
 				$role->setJournalId($this->journalId);
 				$role->setUserId($userId);
 				$role->setRoleId(ROLE_ID_PROOFREADER);
@@ -696,7 +696,7 @@ class ImportOJS1 {
 			}
 
 			if ($row['fkReaderID']) {
-				$role = &new Role();
+				$role = new Role();
 				$role->setJournalId($this->journalId);
 				$role->setUserId($userId);
 				$role->setRoleId(ROLE_ID_READER);
@@ -742,7 +742,7 @@ class ImportOJS1 {
 		while (!$result->EOF) {
 			$row = &$result->fields;
 
-			$subscriptionType = &new SubscriptionType();
+			$subscriptionType = new SubscriptionType();
 			$subscriptionType->setJournalId($this->journalId);
 			$subscriptionType->setName(Core::cleanVar($row['chSubscriptionType']), Locale::getLocale());
 			$subscriptionType->setDescription(Core::cleanVar($row['chSubscriptionTypeDesc']), Locale::getLocale());
@@ -765,7 +765,7 @@ class ImportOJS1 {
 		while (!$result->EOF) {
 			$row = &$result->fields;
 
-			$subscription = &new Subscription();
+			$subscription = new Subscription();
 			$subscription->setJournalId($this->journalId);
 			$subscription->setUserId(isset($this->userMap[$row['nUserID']]) ? $this->userMap[$row['nUserID']] : 0);
 			$subscription->setTypeId(isset($subscriptionTypeMap[$row['fkSubscriptionTypeID']]) ? $subscriptionTypeMap[$row['fkSubscriptionTypeID']] : 0);
@@ -812,7 +812,7 @@ class ImportOJS1 {
 		while (!$result->EOF) {
 			$row = &$result->fields;
 
-			$issue = &new Issue();
+			$issue = new Issue();
 			$issue->setJournalId($this->journalId);
 			$issue->setTitle(Core::cleanVar($row['chIssueTitle']), Locale::getLocale());
 			$issue->setVolume($row['nVolume']);
@@ -850,7 +850,7 @@ class ImportOJS1 {
 			while (!$result->EOF) {
 				list($year) = $result->fields;
 
-				$issue = &new Issue();
+				$issue = new Issue();
 				$issue->setJournalId($this->journalId);
 				$issue->setTitle('');
 				$issue->setVolume('');
@@ -908,7 +908,7 @@ class ImportOJS1 {
 		while (!$result->EOF) {
 			$row = &$result->fields;
 
-			$section = &new Section();
+			$section = new Section();
 			$section->setJournalId($this->journalId);
 			$section->setTitle(Core::cleanVar($row['chTitle']), Locale::getLocale());
 			$section->setAbbrev(Core::cleanVar($row['chAbbrev']), Locale::getLocale());
@@ -987,7 +987,7 @@ class ImportOJS1 {
 			}
 
 			$locale = Locale::getLocale();
-			$article = &new Article();
+			$article = new Article();
 			$article->setUserId(1);
 			$article->setJournalId($this->journalId);
 			$article->setSectionId(isset($this->sectionMap[$row['fkSectionID']]) ? $this->sectionMap[$row['fkSectionID']] : 0);
@@ -1016,7 +1016,7 @@ class ImportOJS1 {
 			while (!$authorResult->EOF) {
 				$authorRow = &$authorResult->fields;
 
-				$author = &new Author();
+				$author = new Author();
 				$author->setFirstName(Core::cleanVar($authorRow['chFirstName']));
 				$author->setMiddleName(Core::cleanVar($authorRow['chMiddleInitial']));
 				$author->setLastName(Core::cleanVar($authorRow['chSurname']));
@@ -1053,7 +1053,7 @@ class ImportOJS1 {
 			}
 
 			if ($row['fkIssueID']) {
-				$publishedArticle = &new PublishedArticle();
+				$publishedArticle = new PublishedArticle();
 				$publishedArticle->setArticleId($articleId);
 				$publishedArticle->setIssueId($this->issueMap[$row['fkIssueID']]);
 				$publishedArticle->setDatePublished($row['dtDatePublished'] ? $row['dtDatePublished'] : $row['dtDateSubmitted']);
@@ -1080,7 +1080,7 @@ class ImportOJS1 {
 			}
 
 			if ($row['dtDateSubmitted']) {
-				$fileManager = &new ArticleFileManager($articleId);
+				$fileManager = new ArticleFileManager($articleId);
 
 				if ($article->getSubmissionFileId()) {
 					// Copy submission file to review version (not separate in OJS 1.x)
@@ -1110,7 +1110,7 @@ class ImportOJS1 {
 				// Article galleys
 				if ($row['fkFileHTMLID']) {
 					$fileId = $this->addArticleFile($articleId, $row['fkFileHTMLID'], ARTICLE_FILE_PUBLIC);
-					$galley = &new ArticleHTMLGalley();
+					$galley = new ArticleHTMLGalley();
 					$galley->setArticleId($articleId);
 					$galley->setFileId($fileId);
 					$galley->setLabel('HTML');
@@ -1125,7 +1125,7 @@ class ImportOJS1 {
 				}
 				if ($row['fkFilePDFID']) {
 					$fileId = $this->addArticleFile($articleId, $row['fkFilePDFID'], ARTICLE_FILE_PUBLIC);
-					$galley = &new ArticleGalley();
+					$galley = new ArticleGalley();
 					$galley->setArticleId($articleId);
 					$galley->setFileId($fileId);
 					$galley->setLabel('PDF');
@@ -1135,7 +1135,7 @@ class ImportOJS1 {
 				}
 				if ($row['fkFilePostScriptID']) {
 					$fileId = $this->addArticleFile($articleId, $row['fkFilePostScriptID'], ARTICLE_FILE_PUBLIC);
-					$galley = &new ArticleGalley();
+					$galley = new ArticleGalley();
 					$galley->setArticleId($articleId);
 					$galley->setFileId($fileId);
 					$galley->setLocale(Locale::getLocale());
@@ -1147,7 +1147,7 @@ class ImportOJS1 {
 				// Create submission management assignment records
 				if ($row['nEditorUserID']) {
 					// Editor assignment
-					$editAssignment = &new EditAssignment();
+					$editAssignment = new EditAssignment();
 					$editAssignment->setArticleId($articleId);
 					$editAssignment->setEditorId($this->userMap[$row['nEditorUserID']]);
 					$editAssignment->setCanEdit(1);
@@ -1158,7 +1158,7 @@ class ImportOJS1 {
 				}
 
 				// Copyediting assignment
-				$copyAssignment = &new CopyeditorSubmission();
+				$copyAssignment = new CopyeditorSubmission();
 				$copyAssignment->setArticleId($articleId);
 				$copyResult = &$this->importDao->retrieve('SELECT tblcopyedit.*, nUserID FROM tblcopyedit, tblarticlesassigned, tblusers WHERE tblcopyedit.fkArticleID = tblarticlesassigned.fkArticleID AND tblusers.fkCopyEdID = tblarticlesassigned.fkCopyEdID AND bReplaced = 0 AND bDeclined = 0 AND tblcopyedit.fkArticleID = ?', $row['nArticleID']);
 				if ($copyResult->RecordCount() != 0) {
@@ -1191,11 +1191,11 @@ class ImportOJS1 {
 				$copyResult->Close();
 				$copyAssignmentDao->insertCopyeditorSubmission($copyAssignment);
 
-				$layoutAssignment = &new LayoutAssignment();
+				$layoutAssignment = new LayoutAssignment();
 				$layoutAssignment->setArticleId($articleId);
 
 				// Proofreading assignment
-				$proofAssignment = &new ProofAssignment();
+				$proofAssignment = new ProofAssignment();
 				$proofAssignment->setArticleId($articleId);
 				$proofResult = &$this->importDao->retrieve('SELECT tblproofread.*, nUserID, dtDateSchedule FROM tblproofread, tblarticlesassigned, tblusers, tblarticles WHERE tblproofread.fkArticleID = tblarticles.nArticleID AND tblproofread.fkArticleID = tblarticlesassigned.fkArticleID AND tblusers.fkProofID = tblarticlesassigned.fkProofID AND bReplaced = 0 AND bDeclined = 0 AND tblproofread.fkArticleID = ?', $row['nArticleID']);
 				if ($proofResult->RecordCount() != 0) {
@@ -1241,7 +1241,7 @@ class ImportOJS1 {
 					$reviewRow = &$reviewResult->fields;
 					$reviewerOrder = $reviewRow['nOrder'];
 
-					$reviewAssignment = &new ReviewAssignment();
+					$reviewAssignment = new ReviewAssignment();
 
 					if ($reviewRow['fkFileRevCopyID']) {
 						$fileId = $this->addArticleFile($articleId, $reviewRow['fkFileRevCopyID'], ARTICLE_FILE_REVIEW);
@@ -1296,7 +1296,7 @@ class ImportOJS1 {
 
 			$fileId = $this->addArticleFile($this->articleMap[$row['fkArticleID']], $row['fkFileID'], ARTICLE_FILE_SUPP);
 
-			$suppFile = &new SuppFile();
+			$suppFile = new SuppFile();
 			$suppFile->setFileId($fileId);
 			$suppFile->setArticleId($this->articleMap[$row['fkArticleID']]);
 			$suppFile->setTitle(Core::cleanVar($row['chTitle']), Locale::getLocale());
@@ -1330,7 +1330,7 @@ class ImportOJS1 {
 				$row['chAuthor'] .= ', ' . Core::cleanVar($row['chAffiliation']);
 			}
 
-			$comment = &new Comment();
+			$comment = new Comment();
 			$comment->setArticleId($this->articleMap[$row['fkArticleID']]);
 			$comment->setPosterIP('');
 			$comment->setPosterName(Core::cleanVar($row['chAuthor']));
@@ -1399,7 +1399,7 @@ class ImportOJS1 {
 			// Replace <br /> in comment text with newline
 			$curComment = str_replace("<br />", "\n", $row['chComment']);
 
-			$articleComment = &new ArticleComment();
+			$articleComment = new ArticleComment();
 			$articleComment->setCommentType($commentTypes[$row['chType']]);
 			$articleComment->setRoleId($roleId);
 			$articleComment->setArticleId($this->articleMap[$row['fkArticleID']]);
@@ -1453,7 +1453,7 @@ class ImportOJS1 {
 
 		list($width, $height) = getimagesize($oldPath);
 
-		$fileManager = &new PublicFileManager();
+		$fileManager = new PublicFileManager();
 		$extension = $fileManager->getExtension(Core::cleanVar($this->journalInfo[$oldName]));
 
 		$uploadName = $newName . '.' . $extension;
@@ -1492,12 +1492,12 @@ class ImportOJS1 {
 		$row = &$result->fields;
 		$oldPath = Core::cleanVar($this->journalConfigInfo['chFilePath']) . Core::cleanVar($row['chFilePath']);
 
-		$fileManager = &new ArticleFileManager($articleId);
+		$fileManager = new ArticleFileManager($articleId);
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 
 		$articleOldFileName = !empty($row['chOldFileName']) ? $row['chOldFileName'] : $row['chFileName'];
 
-		$articleFile = &new ArticleFile();
+		$articleFile = new ArticleFile();
 		$articleFile->setArticleId($articleId);
 		$articleFile->setFileName('temp');
 		$articleFile->setOriginalFileName(Core::cleanVar($articleOldFileName));
@@ -1546,7 +1546,7 @@ class ImportOJS1 {
 			}
 
 			if (!isset($fileManager)) {
-				$fileManager = &new ArticleFileManager($galley->getArticleId());
+				$fileManager = new ArticleFileManager($galley->getArticleId());
 				$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 				$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 			}
@@ -1564,7 +1564,7 @@ class ImportOJS1 {
 				}
 			}
 
-			$articleFile = &new ArticleFile();
+			$articleFile = new ArticleFile();
 			$articleFile->setArticleId($galley->getArticleId());
 			$articleFile->setFileName('temp');
 			$articleFile->setOriginalFileName($file);

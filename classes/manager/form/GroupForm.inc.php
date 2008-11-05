@@ -94,7 +94,7 @@ class GroupForm extends Form {
 		$journal = &Request::getJournal();
 
 		if (!isset($this->group)) {
-			$this->group = &new Group();
+			$this->group = new Group();
 		}
 
 		$this->group->setJournalId($journal->getJournalId());

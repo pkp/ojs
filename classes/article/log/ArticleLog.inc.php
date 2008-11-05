@@ -77,7 +77,7 @@ class ArticleLog {
 	 * @param $messageParams array
 	 */
 	function logEventLevel($articleId, $logLevel, $eventType, $assocType = 0, $assocId = 0, $messageKey = null, $messageParams = array()) {
-		$entry = &new ArticleEventLogEntry();
+		$entry = new ArticleEventLogEntry();
 		$entry->setLogLevel($logLevel);
 		$entry->setEventType($eventType);
 		$entry->setAssocType($assocType);

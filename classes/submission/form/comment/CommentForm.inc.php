@@ -106,7 +106,7 @@ class CommentForm extends Form {
 		$article = $this->article;
 
 		// Insert new comment		
-		$comment = &new ArticleComment();
+		$comment = new ArticleComment();
 		$comment->setCommentType($this->commentType);
 		$comment->setRoleId($this->roleId);
 		$comment->setArticleId($article->getArticleId());
@@ -130,7 +130,7 @@ class CommentForm extends Form {
 		$journal = &Request::getJournal();
 
 		import('mail.ArticleMailTemplate');
-		$email = &new ArticleMailTemplate($article, 'SUBMISSION_COMMENT');
+		$email = new ArticleMailTemplate($article, 'SUBMISSION_COMMENT');
 		$email->setFrom($this->user->getEmail(), $this->user->getFullName());
 
 		$commentText = $this->getData('comments');

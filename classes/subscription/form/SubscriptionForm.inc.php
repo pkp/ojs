@@ -186,7 +186,7 @@ class SubscriptionForm extends Form {
 		}
 
 		if (!isset($subscription)) {
-			$subscription = &new Subscription();
+			$subscription = new Subscription();
 		}
 
 		$subscription->setJournalId($journal->getJournalId());
@@ -244,7 +244,7 @@ class SubscriptionForm extends Form {
 			);
 
 			import('mail.MailTemplate');
-			$mail = &new MailTemplate('SUBSCRIPTION_NOTIFY');
+			$mail = new MailTemplate('SUBSCRIPTION_NOTIFY');
 			$mail->setFrom($subscriptionEmail, $subscriptionName);
 			$mail->assignParams($paramArray);
 			$mail->addRecipient($user->getEmail(), $user->getFullName());

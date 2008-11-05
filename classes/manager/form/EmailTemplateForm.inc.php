@@ -104,7 +104,7 @@ class EmailTemplateForm extends Form {
 		$emailTemplate = &$emailTemplateDao->getLocaleEmailTemplate($this->emailKey, $journal->getJournalId());
 
 		if (!$emailTemplate) {
-			$emailTemplate = &new LocaleEmailTemplate();
+			$emailTemplate = new LocaleEmailTemplate();
 			$emailTemplate->setCustomTemplate(true);
 			$emailTemplate->setCanDisable(false);
 			$emailTemplate->setEnabled(true);

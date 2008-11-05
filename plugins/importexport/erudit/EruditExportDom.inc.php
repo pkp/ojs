@@ -169,7 +169,7 @@ class EruditExportDom {
 		XMLCustomWriter::appendChild($root, $bodyNode);
 
 		import('file.ArticleFileManager');
-		$articleFileManager = &new ArticleFileManager($article->getArticleId());
+		$articleFileManager = new ArticleFileManager($article->getArticleId());
 		$file = &$articleFileManager->getFile($galley->getFileId());
 
 		$parser = &SearchFileParser::fromFile($file);

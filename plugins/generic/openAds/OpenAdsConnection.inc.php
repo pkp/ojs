@@ -85,7 +85,7 @@ class OpenAdsConnection {
 		$returner = array();
 		$this->plugin->import('Ad');
 		while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
-			$ad =& new Ad($this);
+			$ad = new Ad($this);
 			$ad->setName($row['zonename']);
 			$ad->setAdId($row['zoneid']);
 			$returner[] =& $ad;

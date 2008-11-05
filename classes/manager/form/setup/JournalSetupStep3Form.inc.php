@@ -68,7 +68,7 @@ class JournalSetupStep3Form extends JournalSetupForm {
 	 */
 	function display() {
 		import('mail.MailTemplate');
-		$mail = &new MailTemplate('SUBMISSION_ACK');
+		$mail = new MailTemplate('SUBMISSION_ACK');
 		if ($mail->isEnabled()) {
 			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign('submissionAckEnabled', true);

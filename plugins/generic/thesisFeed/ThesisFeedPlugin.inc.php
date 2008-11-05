@@ -76,12 +76,12 @@ class ThesisFeedPlugin extends GenericPlugin {
 		switch ($category) {
 			case 'blocks':
 				$this->import('ThesisFeedBlockPlugin');
-				$blockPlugin =& new ThesisFeedBlockPlugin();
+				$blockPlugin = new ThesisFeedBlockPlugin();
 				$plugins[$blockPlugin->getSeq()][$blockPlugin->getPluginPath()] =& $blockPlugin;
 				break;
 			case 'gateways':
 				$this->import('ThesisFeedGatewayPlugin');
-				$gatewayPlugin =& new ThesisFeedGatewayPlugin();
+				$gatewayPlugin = new ThesisFeedGatewayPlugin();
 				$plugins[$gatewayPlugin->getSeq()][$gatewayPlugin->getPluginPath()] =& $gatewayPlugin;
 				break;
 		}
@@ -151,7 +151,7 @@ class ThesisFeedPlugin extends GenericPlugin {
 				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 
 				$this->import('SettingsForm');
-				$form =& new SettingsForm($this, $journal->getJournalId());
+				$form = new SettingsForm($this, $journal->getJournalId());
 
 				if (Request::getUserVar('save')) {
 					$form->readInputData();

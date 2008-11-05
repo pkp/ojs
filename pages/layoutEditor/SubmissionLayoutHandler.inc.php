@@ -104,7 +104,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			case 'galley':
 				import('submission.form.ArticleGalleyForm');
 
-				$galleyForm = &new ArticleGalleyForm($articleId);
+				$galleyForm = new ArticleGalleyForm($articleId);
 				$galleyId = $galleyForm->execute('layoutFile');
 
 				Request::redirect(null, null, 'editGalley', array($articleId, $galleyId));
@@ -112,7 +112,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			case 'supp':
 				import('submission.form.SuppFileForm');
 
-				$suppFileForm = &new SuppFileForm($submission);
+				$suppFileForm = new SuppFileForm($submission);
 				$suppFileForm->setData('title', Locale::translate('common.untitled'));
 				$suppFileId = $suppFileForm->execute('layoutFile');
 
@@ -138,7 +138,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		if (SubmissionLayoutHandler::layoutEditingEnabled($submission)) {
 			import('submission.form.ArticleGalleyForm');
 
-			$submitForm = &new ArticleGalleyForm($articleId, $galleyId);
+			$submitForm = new ArticleGalleyForm($articleId, $galleyId);
 
 			if ($submitForm->isLocaleResubmit()) {
 				$submitForm->readInputData();
@@ -174,7 +174,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 
 		import('submission.form.ArticleGalleyForm');
 
-		$submitForm = &new ArticleGalleyForm($articleId, $galleyId);
+		$submitForm = new ArticleGalleyForm($articleId, $galleyId);
 		$submitForm->readInputData();
 
 		if ($submitForm->validate()) {
@@ -319,7 +319,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		if (SubmissionLayoutHandler::layoutEditingEnabled($submission)) {
 			import('submission.form.SuppFileForm');
 
-			$submitForm = &new SuppFileForm($submission, $suppFileId);
+			$submitForm = new SuppFileForm($submission, $suppFileId);
 
 			if ($submitForm->isLocaleResubmit()) {
 				$submitForm->readInputData();
@@ -357,7 +357,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 
 		import('submission.form.SuppFileForm');
 
-		$submitForm = &new SuppFileForm($submission, $suppFileId);
+		$submitForm = new SuppFileForm($submission, $suppFileId);
 		$submitForm->readInputData();
 
 		if ($submitForm->validate()) {
@@ -517,7 +517,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$journal =& Request::getJournal();
 		$templates = $journal->getSetting('templates');
 		import('file.JournalFileManager');
-		$journalFileManager =& new JournalFileManager($journal);
+		$journalFileManager = new JournalFileManager($journal);
 		$templateId = (int) array_shift($args);
 		if ($templateId >= count($templates) || $templateId < 0) Request::redirect(null, 'layoutEditor');
 		$template =& $templates[$templateId];

@@ -28,7 +28,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		// If the submission is incomplete, allow the author to delete it.
 		if ($authorSubmission->getSubmissionProgress()!=0) {
 			import('file.ArticleFileManager');
-			$articleFileManager = &new ArticleFileManager($articleId);
+			$articleFileManager = new ArticleFileManager($articleId);
 			$articleFileManager->deleteArticleTree();
 
 			$articleDao = &DAORegistry::getDAO('ArticleDAO');
@@ -186,7 +186,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 
 			import('submission.form.SuppFileForm');
 
-			$submitForm = &new SuppFileForm($authorSubmission);
+			$submitForm = new SuppFileForm($authorSubmission);
 
 			if ($submitForm->isLocaleResubmit()) {
 				$submitForm->readInputData();
@@ -212,7 +212,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 
 			import('submission.form.SuppFileForm');
 
-			$submitForm = &new SuppFileForm($authorSubmission, $suppFileId);
+			$submitForm = new SuppFileForm($authorSubmission, $suppFileId);
 
 			if ($submitForm->isLocaleResubmit()) {
 				$submitForm->readInputData();
@@ -259,7 +259,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 
 			import('submission.form.SuppFileForm');
 
-			$submitForm = &new SuppFileForm($authorSubmission, $suppFileId);
+			$submitForm = new SuppFileForm($authorSubmission, $suppFileId);
 			$submitForm->readInputData();
 
 			if ($submitForm->validate()) {
@@ -347,7 +347,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 
 		import('file.PublicFileManager');
-		$publicFileManager = &new PublicFileManager();
+		$publicFileManager = new PublicFileManager();
 		$publicFileManager->removeJournalFile($journal->getJournalId(),$submission->getFileName($formLocale));
 		$submission->setFileName('', $formLocale);
 		$submission->setOriginalFileName('', $formLocale);

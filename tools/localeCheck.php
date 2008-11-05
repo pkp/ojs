@@ -136,7 +136,7 @@ class localeCheck extends CommandLineTool {
 
 }
 
-$tool = &new localeCheck(isset($argv) ? $argv : array());
+$tool = new localeCheck(isset($argv) ? $argv : array());
 $tool->execute();
 
 ?>

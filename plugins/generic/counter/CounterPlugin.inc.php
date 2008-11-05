@@ -36,7 +36,7 @@ class CounterPlugin extends GenericPlugin {
 			HookRegistry::register ('TemplateManager::display', array(&$this, 'logRequest'));
 
 			$this->import('LogEntryDAO');
-			$logEntryDao =& new LogEntryDAO();
+			$logEntryDao = new LogEntryDAO();
 			DAORegistry::registerDAO('LogEntryDAO', $logEntryDao);
 		}
 		return $success;
@@ -106,7 +106,7 @@ class CounterPlugin extends GenericPlugin {
 				// view -- don't include it. (FIXME?)
 				if (!$galley) return false;
 
-				$logEntry =& new LogEntry();
+				$logEntry = new LogEntry();
 				$logEntry->setSite($site->getTitle($site->getPrimaryLocale()));
 				$logEntry->setJournal($journal->getTitle($journal->getPrimaryLocale()));
 				$logEntry->setJournalUrl(Request::url(null, 'index'));
@@ -123,7 +123,7 @@ class CounterPlugin extends GenericPlugin {
 				break;
 			case 'search/searchResults.tpl':
 				// Log the request as a search.
-				$logEntry =& new LogEntry();
+				$logEntry = new LogEntry();
 				$article = $templateManager->get_template_vars('article');
 				$logEntry->setSite($site->getTitle($site->getPrimaryLocale()));
 				$logEntry->setJournal($journal->getTitle($journal->getPrimaryLocale()));

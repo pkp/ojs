@@ -57,7 +57,7 @@ class OpenAdsPlugin extends GenericPlugin {
 		switch ($category) {
 			case 'blocks':
 				$this->import('OpenAdsBlockPlugin');
-				$openAdsBlockPlugin =& new OpenAdsBlockPlugin();
+				$openAdsBlockPlugin = new OpenAdsBlockPlugin();
 				$plugins[$category][$openAdsBlockPlugin->getSeq()] =& $openAdsBlockPlugin;
 				break;
 		}
@@ -103,7 +103,7 @@ class OpenAdsPlugin extends GenericPlugin {
 		if ($journal) {
 			$journalId = $journal->getJournalId();
 			$this->import('OpenAdsConnection');
-			$openAdsConnection =& new OpenAdsConnection($this, $this->getInstallationPath());
+			$openAdsConnection = new OpenAdsConnection($this, $this->getInstallationPath());
 			$headerAdHtml = $openAdsConnection->getAdHtml($this->getSetting($journalId, 'headerAdId'));
 			$headerAdOrientation = $this->getSetting($journal->getJournalId(), 'headerAdOrientation');
 			$contentAdHtml = $openAdsConnection->getAdHtml($this->getSetting($journalId, 'contentAdId'));
@@ -160,7 +160,7 @@ class OpenAdsPlugin extends GenericPlugin {
 
 		//Get the ad settings.
 		$this->import('OpenAdsConnection');
-		$openAdsConnection =& new OpenAdsConnection($this, $this->getInstallationPath());
+		$openAdsConnection = new OpenAdsConnection($this, $this->getInstallationPath());
 		$sidebarAdHtml = $openAdsConnection->getAdHtml($this->getSetting($journal->getJournalId(), 'sidebarAdId'));
 
 		$index = strrpos($output, '<h5>' . Locale::translate('rt.readingTools') . '</h5>');
@@ -232,9 +232,9 @@ class OpenAdsPlugin extends GenericPlugin {
 			case 'settings':
 				$this->import('OpenAdsSettingsForm');
 				$this->import('OpenAdsConnection');
-				$openAdsConnection =& new OpenAdsConnection($this, $this->getInstallationPath());
+				$openAdsConnection = new OpenAdsConnection($this, $this->getInstallationPath());
 				$openAdsConnection->loadConfig();
-				$form =& new OpenAdsSettingsForm($this, $openAdsConnection, $journal->getJournalId());
+				$form = new OpenAdsSettingsForm($this, $openAdsConnection, $journal->getJournalId());
 				if (array_shift($args) == 'save') {
 					$form->readInputData();
 					$form->execute();
@@ -254,7 +254,7 @@ class OpenAdsPlugin extends GenericPlugin {
 	 */
 	function isConfigured() {
 		$this->import('OpenAdsConnection');
-		$config =& new OpenAdsConnection($this, $this->getInstallationPath());
+		$config = new OpenAdsConnection($this, $this->getInstallationPath());
 		return $config->isConfigured();
 	}
 

@@ -95,7 +95,7 @@ class AnnouncementTypeForm extends Form {
 		}
 
 		if (!isset($announcementType)) {
-			$announcementType = &new AnnouncementType();
+			$announcementType = new AnnouncementType();
 		}
 
 		$announcementType->setJournalId($journal->getJournalId());

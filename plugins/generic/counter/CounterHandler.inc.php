@@ -69,7 +69,7 @@ class CounterHandler extends PKPHandler {
 			$count = min(count($log), $journal->getSetting('itemsPerPage'));
 		}
 		import('core.ArrayItemIterator');
-		$logIterator = &new ArrayItemIterator($log, $page, $count);
+		$logIterator = new ArrayItemIterator($log, $page, $count);
 
 		$templateManager = &TemplateManager::getManager();
 		$templateManager->assign_by_ref ('entries', $logIterator);

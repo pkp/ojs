@@ -247,7 +247,7 @@ class OJSCompletedPaymentDAO extends DAO {
 			'SELECT * FROM completed_payments WHERE journal_id = ? ORDER BY timestamp DESC', $journalId, $rangeInfo
 		);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnPaymentFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnPaymentFromRow');
 		return $returner;
 	}		
 	
@@ -259,7 +259,7 @@ class OJSCompletedPaymentDAO extends DAO {
 	function &_returnPaymentFromRow(&$row) {
 		import('payment.ojs.OJSCompletedPayment');
 
-		$payment = &new OJSCompletedPayment();
+		$payment = new OJSCompletedPayment();
 		$payment->setTimestamp($this->datetimeFromDB($row['timestamp']));
 		$payment->setPaymentId($row['completed_payment_id']);
 		$payment->setType($row['payment_type']); 

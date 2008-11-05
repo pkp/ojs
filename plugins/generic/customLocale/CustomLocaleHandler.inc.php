@@ -163,7 +163,7 @@ class CustomLocaleHandler extends PKPHandler {
 			FileManager::writeFile($customFilePath, $newFileContents);
 		}
 
-		$file =& new EditableLocaleFile($locale, $customFilePath);
+		$file = new EditableLocaleFile($locale, $customFilePath);
 
 		while (!empty($changes)) {
 			$key = array_shift($changes);

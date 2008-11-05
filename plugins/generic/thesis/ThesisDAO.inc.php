@@ -113,7 +113,7 @@ class ThesisDAO extends DAO {
 		$thesisPlugin = &PluginRegistry::getPlugin('generic', 'ThesisPlugin');
 		$thesisPlugin->import('Thesis');
 
-		$thesis = &new Thesis();
+		$thesis = new Thesis();
 		$thesis->setThesisId($row['thesis_id']);
 		$thesis->setJournalId($row['journal_id']);
 		$thesis->setStatus($row['status']);
@@ -396,7 +396,7 @@ class ThesisDAO extends DAO {
 			$rangeInfo
 		);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnThesisFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnThesisFromRow');
 		return $returner;
 	}
 
@@ -498,7 +498,7 @@ class ThesisDAO extends DAO {
 			$rangeInfo
 		);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnThesisFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnThesisFromRow');
 		return $returner;
 	}
 

@@ -92,7 +92,7 @@ class GroupHandler extends ManagerHandler {
 				'manager.groups.editTitle'
 		);
 
-		$groupForm = &new GroupForm($group);
+		$groupForm = new GroupForm($group);
 		if ($groupForm->isLocaleResubmit()) {
 			$groupForm->readInputData();
 		} else {
@@ -122,7 +122,7 @@ class GroupHandler extends ManagerHandler {
 
 		import('manager.form.GroupForm');
 
-		$groupForm =& new GroupForm($group);
+		$groupForm = new GroupForm($group);
 		$groupForm->readInputData();
 
 		if ($groupForm->validate()) {
@@ -182,7 +182,7 @@ class GroupHandler extends ManagerHandler {
 			$groupMembership =& $groupMembershipDao->getMembership($group->getGroupId(), $user->getUserId());
 
 			if (!$groupMembership) {
-				$groupMembership =& new GroupMembership();
+				$groupMembership = new GroupMembership();
 				$groupMembership->setGroupId($group->getGroupId());
 				$groupMembership->setUserId($user->getUserId());
 				// For now, all memberships are displayed in About

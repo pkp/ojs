@@ -25,7 +25,7 @@ class AdminSettingsHandler extends AdminHandler {
 
 		import('admin.form.SiteSettingsForm');
 
-		$settingsForm = &new SiteSettingsForm();
+		$settingsForm = new SiteSettingsForm();
 		if ($settingsForm->isLocaleResubmit()) {
 			$settingsForm->readInputData();
 		} else {
@@ -44,7 +44,7 @@ class AdminSettingsHandler extends AdminHandler {
 
 		import('admin.form.SiteSettingsForm');
 
-		$settingsForm = &new SiteSettingsForm();
+		$settingsForm = new SiteSettingsForm();
 		$settingsForm->readInputData();
 
 		if (Request::getUserVar('uploadSiteStyleSheet')) {
@@ -52,14 +52,14 @@ class AdminSettingsHandler extends AdminHandler {
 				$settingsForm->addError('siteStyleSheet', Locale::translate('admin.settings.siteStyleSheetInvalid'));
 			}
 		} elseif (Request::getUserVar('deleteSiteStyleSheet')) {
-			$publicFileManager =& new PublicFileManager();
+			$publicFileManager = new PublicFileManager();
 			$publicFileManager->removeSiteFile($site->getSiteStyleFilename());
 		} elseif (Request::getUserVar('uploadPageHeaderTitleImage')) {
 			if (!$settingsForm->uploadPageHeaderTitleImage($settingsForm->getFormLocale())) {
 				$settingsForm->addError('pageHeaderTitleImage', Locale::translate('admin.settings.homeHeaderImageInvalid'));
 			}
 		} elseif (Request::getUserVar('deletePageHeaderTitleImage')) {
-			$publicFileManager =& new PublicFileManager();
+			$publicFileManager = new PublicFileManager();
 			$setting = $site->getData('pageHeaderTitleImage');
 			$formLocale = $settingsForm->getFormLocale();
 			if (isset($setting[$formLocale])) {

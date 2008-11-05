@@ -109,7 +109,7 @@ class JournalOAI extends OAI {
 	 * @see OAI#repositoryInfo
 	 */
 	function &repositoryInfo() {
-		$info = &new OAIRepository();
+		$info = new OAIRepository();
 
 		if (isset($this->journal)) {
 			$info->repositoryName = $this->journal->getJournalTitle();
@@ -211,7 +211,7 @@ class JournalOAI extends OAI {
 	 * @see OAI#saveResumptionToken
 	 */
 	function &saveResumptionToken($offset, $params) {
-		$token = &new OAIResumptionToken(null, $offset, $params, time() + $this->config->tokenLifetime);
+		$token = new OAIResumptionToken(null, $offset, $params, time() + $this->config->tokenLifetime);
 		$this->dao->insertToken($token);
 		return $token;
 	}

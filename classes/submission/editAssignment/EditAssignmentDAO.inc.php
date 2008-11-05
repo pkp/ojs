@@ -52,7 +52,7 @@ class EditAssignmentDAO extends DAO {
 			$articleId
 			);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnEditAssignmentFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnEditAssignmentFromRow');
 		return $returner;
 	}
 
@@ -67,7 +67,7 @@ class EditAssignmentDAO extends DAO {
 			$articleId
 			);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnEditAssignmentFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnEditAssignmentFromRow');
 		return $returner;
 	}
 
@@ -83,7 +83,7 @@ class EditAssignmentDAO extends DAO {
 			$articleId
 		);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnEditAssignmentFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnEditAssignmentFromRow');
 		return $returner;
 	}
 
@@ -99,7 +99,7 @@ class EditAssignmentDAO extends DAO {
 			$articleId
 			);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnEditAssignmentFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnEditAssignmentFromRow');
 		return $returner;
 	}
 
@@ -114,7 +114,7 @@ class EditAssignmentDAO extends DAO {
 			$userId
 			);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnEditAssignmentFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnEditAssignmentFromRow');
 		return $returner;
 	}
 
@@ -124,7 +124,7 @@ class EditAssignmentDAO extends DAO {
 	 * @return EditAssignment
 	 */
 	function &_returnEditAssignmentFromRow(&$row) {
-		$editAssignment = &new EditAssignment();
+		$editAssignment = new EditAssignment();
 		$editAssignment->setEditId($row['edit_id']);
 		$editAssignment->setArticleId($row['article_id']);
 		$editAssignment->setEditorId($row['editor_id']);

@@ -86,7 +86,7 @@ class EditorSubmissionDAO extends DAO {
 	 * @return EditorSubmission
 	 */
 	function &_returnEditorSubmissionFromRow(&$row) {
-		$editorSubmission = &new EditorSubmission();
+		$editorSubmission = new EditorSubmission();
 
 		// Article attributes
 		$this->articleDao->_articleFromRow($editorSubmission, $row);
@@ -189,7 +189,7 @@ class EditorSubmissionDAO extends DAO {
 			' ORDER BY article_id ASC';
 
 		$result = &$this->retrieveRange($sql, $params, $rangeInfo);
-		$returner = &new DAOResultFactory($result, $this, '_returnEditorSubmissionFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnEditorSubmissionFromRow');
 		return $returner;
 	}
 
@@ -583,10 +583,10 @@ class EditorSubmissionDAO extends DAO {
 
 		if (isset($rangeInfo) && $rangeInfo->isValid()) {
 			import('core.VirtualArrayIterator');
-			$returner = &new VirtualArrayIterator($editorSubmissions, $result->MaxRecordCount(), $rangeInfo->getPage(), $rangeInfo->getCount());
+			$returner = new VirtualArrayIterator($editorSubmissions, $result->MaxRecordCount(), $rangeInfo->getPage(), $rangeInfo->getCount());
 		} else {
 			import('core.ArrayItemIterator');
-			$returner = &new ArrayItemIterator($editorSubmissions);
+			$returner = new ArrayItemIterator($editorSubmissions);
 		}
 
 		$result->Close();
@@ -751,7 +751,7 @@ class EditorSubmissionDAO extends DAO {
 			$paramArray, $rangeInfo
 		);
 
-		$returner = &new DAOResultFactory($result, $this->userDao, '_returnUserFromRowWithData');
+		$returner = new DAOResultFactory($result, $this->userDao, '_returnUserFromRowWithData');
 		return $returner;
 	}
 

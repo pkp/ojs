@@ -132,7 +132,7 @@ class SectionDAO extends DAO {
 	 * @return Section
 	 */
 	function &_returnSectionFromRow(&$row) {
-		$section = &new Section();
+		$section = new Section();
 		$section->setSectionId($row['section_id']);
 		$section->setJournalId($row['journal_id']);
 		$section->setReviewFormId($row['review_form_id']);
@@ -348,7 +348,7 @@ class SectionDAO extends DAO {
 			$journalId, $rangeInfo
 		);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnSectionFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnSectionFromRow');
 		return $returner;
 	}
 

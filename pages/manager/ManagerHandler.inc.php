@@ -55,7 +55,7 @@ class ManagerHandler extends PKPHandler {
 		$user = &Request::getUser();
 
 		import('mail.MailTemplate');
-		$email = &new MailTemplate(Request::getUserVar('template'), Request::getUserVar('locale'));
+		$email = new MailTemplate(Request::getUserVar('template'), Request::getUserVar('locale'));
 
 		if (Request::getUserVar('send') && !$email->hasErrors()) {
 			$email->send();

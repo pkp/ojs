@@ -29,7 +29,7 @@ class OJSPaymentManager extends PaymentManager {
 	function &getManager() {
 		static $manager;
 		if (!isset($manager)) {
-			$manager =& new OJSPaymentManager();
+			$manager = new OJSPaymentManager();
 		}
 		return $manager;
 	}
@@ -42,7 +42,7 @@ class OJSPaymentManager extends PaymentManager {
 	function &createQueuedPayment($journalId, $type, $userId, $assocId, $amount, $currencyCode = null) {
 		$journalSettingsDAO =& DAORegistry::getDAO('JournalSettingsDAO');
 		if ( is_null($currencyCode) ) $currencyCode = $journalSettingsDAO->getSetting($journalId, 'currency');
-		$payment =& new OJSQueuedPayment($amount, $currencyCode, $userId, $assocId);
+		$payment = new OJSQueuedPayment($amount, $currencyCode, $userId, $assocId);
 		$payment->setJournalId($journalId);
 		$payment->setType($type);
 
@@ -78,7 +78,7 @@ class OJSPaymentManager extends PaymentManager {
 	
 	function &createCompletedPayment( $queuedPayment, $payMethod ) {
 		import('payment.ojs.OJSCompletedPayment');
-		$payment =& new OJSCompletedPayment();
+		$payment = new OJSCompletedPayment();
 		$payment->setJournalId($queuedPayment->getJournalId());
 		$payment->setType($queuedPayment->getType());
 		$payment->setAmount($queuedPayment->getAmount());

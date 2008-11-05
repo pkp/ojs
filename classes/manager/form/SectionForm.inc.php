@@ -203,7 +203,7 @@ class SectionForm extends Form {
 		}
 
 		if (!isset($section)) {
-			$section = &new Section();
+			$section = new Section();
 			$section->setJournalId($journalId);
 			$section->setSequence(REALLY_BIG_NUMBER);
 		}

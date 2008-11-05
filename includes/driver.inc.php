@@ -53,6 +53,6 @@ require('functions.inc.php');
  */
 
 import('core.OJSApplication');
-$ojsApplication =& new OJSApplication();
+$ojsApplication = new OJSApplication();
 PKPApplication::initialize($ojsApplication);
 ?>

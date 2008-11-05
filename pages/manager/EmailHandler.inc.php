@@ -59,7 +59,7 @@ class EmailHandler extends ManagerHandler {
 
 		import('manager.form.EmailTemplateForm');
 
-		$emailTemplateForm = &new EmailTemplateForm($emailKey);
+		$emailTemplateForm = new EmailTemplateForm($emailKey);
 		$emailTemplateForm->initData();
 		$emailTemplateForm->display();
 	}
@@ -74,7 +74,7 @@ class EmailHandler extends ManagerHandler {
 
 		$emailKey = Request::getUserVar('emailKey');
 
-		$emailTemplateForm = &new EmailTemplateForm($emailKey);
+		$emailTemplateForm = new EmailTemplateForm($emailKey);
 		$emailTemplateForm->readInputData();
 
 		if ($emailTemplateForm->validate()) {

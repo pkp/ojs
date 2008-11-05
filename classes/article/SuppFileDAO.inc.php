@@ -116,7 +116,7 @@ class SuppFileDAO extends DAO {
 	 * @return SuppFile
 	 */
 	function &_returnSuppFileFromRow(&$row) {
-		$suppFile = &new SuppFile();
+		$suppFile = new SuppFile();
 		$suppFile->setSuppFileID($row['supp_id']);
 		$suppFile->setPublicSuppFileID($row['public_supp_file_id']);
 		$suppFile->setFileId($row['file_id']);

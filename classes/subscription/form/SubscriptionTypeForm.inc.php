@@ -149,7 +149,7 @@ class SubscriptionTypeForm extends Form {
 		}
 
 		if (!isset($subscriptionType)) {
-			$subscriptionType = &new SubscriptionType();
+			$subscriptionType = new SubscriptionType();
 		}
 
 		$subscriptionType->setJournalId($journal->getJournalId());

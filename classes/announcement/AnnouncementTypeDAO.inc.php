@@ -108,7 +108,7 @@ class AnnouncementTypeDAO extends DAO {
 	 * @return AnnouncementType
 	 */
 	function &_returnAnnouncementTypeFromRow(&$row) {
-		$announcementType = &new AnnouncementType();
+		$announcementType = new AnnouncementType();
 		$announcementType->setTypeId($row['type_id']);
 		$announcementType->setJournalId($row['journal_id']);
 		$this->getDataObjectSettings('announcement_type_settings', 'type_id', $row['type_id'], $announcementType);
@@ -217,7 +217,7 @@ class AnnouncementTypeDAO extends DAO {
 			'SELECT * FROM announcement_types WHERE journal_id = ? ORDER BY type_id', $journalId, $rangeInfo
 		);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnAnnouncementTypeFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnAnnouncementTypeFromRow');
 		return $returner;
 	}
 

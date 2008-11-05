@@ -79,7 +79,7 @@ class LDAPAuthPlugin extends AuthPlugin {
 	 * @return LDAPuthPlugin
 	 */
 	function &getInstance($settings, $authId) {
-		$returner =& new LDAPAuthPlugin($settings, $authId);
+		$returner = new LDAPAuthPlugin($settings, $authId);
 		return $returner;
 	}
 

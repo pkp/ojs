@@ -195,7 +195,7 @@ class ThesisForm extends Form {
 		}
 
 		if (!isset($thesis)) {
-			$thesis = &new Thesis();
+			$thesis = new Thesis();
 		}
 
 		$thesis->setJournalId($journalId);

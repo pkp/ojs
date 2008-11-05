@@ -80,7 +80,7 @@ class OpenAdsBlockPlugin extends BlockPlugin {
 		// Get the ad settings.
 		$plugin =& $this->getOpenAdsPlugin();
 		$this->import('OpenAdsConnection');
-		$openAdsConnection =& new OpenAdsConnection($plugin, $plugin->getInstallationPath());
+		$openAdsConnection = new OpenAdsConnection($plugin, $plugin->getInstallationPath());
 		$sidebarAdHtml = $openAdsConnection->getAdHtml($plugin->getSetting($journal->getJournalId(), 'sidebarAdId'));
 		return '<div class="block">' . $sidebarAdHtml . '</div>';
 	}

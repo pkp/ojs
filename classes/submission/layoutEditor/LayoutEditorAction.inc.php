@@ -56,7 +56,7 @@ class LayoutEditorAction extends Action {
 		$galley = &$galleyDao->getGalley($galleyId, $article->getArticleId());
 
 		if (isset($galley) && !HookRegistry::call('LayoutEditorAction::deleteGalley', array(&$article, &$galley))) {
-			$articleFileManager = &new ArticleFileManager($article->getArticleId());
+			$articleFileManager = new ArticleFileManager($article->getArticleId());
 
 			if ($galley->getFileId()) {
 				$articleFileManager->deleteFile($galley->getFileId());
@@ -89,7 +89,7 @@ class LayoutEditorAction extends Action {
 			$images =& $articleGalleyDao->getGalleyImages($galley->getGalleyId());
 			foreach ($images as $imageFile) {
 				if ($imageFile->getArticleId() == $submission->getArticleId() && $fileId == $imageFile->getFileId() && $imageFile->getRevision() == $revision) {
-					$articleFileManager = &new ArticleFileManager($submission->getArticleId());
+					$articleFileManager = new ArticleFileManager($submission->getArticleId());
 					$articleFileManager->deleteFile($imageFile->getFileId(), $imageFile->getRevision());
 				}
 			}
@@ -127,7 +127,7 @@ class LayoutEditorAction extends Action {
 		$suppFile = &$suppFileDao->getSuppFile($suppFileId, $article->getArticleId());
 		if (isset($suppFile) && !HookRegistry::call('LayoutEditorAction::deleteSuppFile', array(&$article, &$suppFile))) {
 			if ($suppFile->getFileId()) {
-				$articleFileManager = &new ArticleFileManager($article->getArticleId());
+				$articleFileManager = new ArticleFileManager($article->getArticleId());
 				$articleFileManager->deleteFile($suppFile->getFileId());
 				import('search.ArticleSearchIndex');
 				ArticleSearchIndex::deleteTextIndex($article->getArticleId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $suppFile->getFileId());
@@ -152,7 +152,7 @@ class LayoutEditorAction extends Action {
 		}
 
 		import('mail.ArticleMailTemplate');
-		$email = &new ArticleMailTemplate($submission, 'LAYOUT_COMPLETE');
+		$email = new ArticleMailTemplate($submission, 'LAYOUT_COMPLETE');
 
 		$editAssignments = &$submission->getEditAssignments();
 		if (empty($editAssignments)) return;
@@ -205,7 +205,7 @@ class LayoutEditorAction extends Action {
 	 */
 	function uploadLayoutVersion($submission) {
 		import('file.ArticleFileManager');
-		$articleFileManager = &new ArticleFileManager($submission->getArticleId());
+		$articleFileManager = new ArticleFileManager($submission->getArticleId());
 		$layoutEditorSubmissionDao = &DAORegistry::getDAO('LayoutEditorSubmissionDAO');
 
 		$layoutDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
@@ -231,7 +231,7 @@ class LayoutEditorAction extends Action {
 		if (!HookRegistry::call('LayoutEditorAction::viewLayoutComments', array(&$article))) {
 			import("submission.form.comment.LayoutCommentForm");
 
-			$commentForm = &new LayoutCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
+			$commentForm = new LayoutCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
 			$commentForm->initData();
 			$commentForm->display();
 		}
@@ -245,7 +245,7 @@ class LayoutEditorAction extends Action {
 		if (!HookRegistry::call('LayoutEditorAction::postLayoutComment', array(&$article, &$emailComment))) {
 			import("submission.form.comment.LayoutCommentForm");
 
-			$commentForm = &new LayoutCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
+			$commentForm = new LayoutCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
 			$commentForm->readInputData();
 
 			if ($commentForm->validate()) {
@@ -271,7 +271,7 @@ class LayoutEditorAction extends Action {
 		if (!HookRegistry::call('LayoutEditorAction::viewProofreadComments', array(&$article))) {
 			import("submission.form.comment.ProofreadCommentForm");
 
-			$commentForm = &new ProofreadCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
+			$commentForm = new ProofreadCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
 			$commentForm->initData();
 			$commentForm->display();
 		}
@@ -285,7 +285,7 @@ class LayoutEditorAction extends Action {
 		if (!HookRegistry::call('LayoutEditorAction::postProofreadComment', array(&$article, &$emailComment))) {
 			import('submission.form.comment.ProofreadCommentForm');
 
-			$commentForm = &new ProofreadCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
+			$commentForm = new ProofreadCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
 			$commentForm->readInputData();
 
 			if ($commentForm->validate()) {

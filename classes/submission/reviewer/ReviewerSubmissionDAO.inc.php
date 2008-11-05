@@ -99,7 +99,7 @@ class ReviewerSubmissionDAO extends DAO {
 	 * @return ReviewerSubmission
 	 */
 	function &_returnReviewerSubmissionFromRow(&$row) {
-		$reviewerSubmission = &new ReviewerSubmission();
+		$reviewerSubmission = new ReviewerSubmission();
 
 		// Editor Assignment
 		$editAssignments =& $this->editAssignmentDao->getEditAssignmentsByArticleId($row['article_id']);
@@ -243,7 +243,7 @@ class ReviewerSubmissionDAO extends DAO {
 			$rangeInfo
 		);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnReviewerSubmissionFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnReviewerSubmissionFromRow');
 		return $returner;
 	}
 

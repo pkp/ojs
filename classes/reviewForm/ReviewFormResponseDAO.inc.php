@@ -54,7 +54,7 @@ class ReviewFormResponseDAO extends DAO {
 	 */
 	function &_returnReviewFormResponseFromRow(&$row) {
 		$responseValue = $this->convertFromDB($row['response_value'], $row['response_type']);
-		$reviewFormResponse =& new ReviewFormResponse();
+		$reviewFormResponse = new ReviewFormResponse();
 		$reviewFormResponse->setReviewId($row['review_id']);
 		$reviewFormResponse->setReviewFormElementId($row['review_form_element_id']);
 		$reviewFormResponse->setValue($responseValue);

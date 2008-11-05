@@ -37,7 +37,7 @@ class AuthorAction extends Action {
 	 */
 	function designateReviewVersion($authorSubmission, $designate = false) {
 		import('file.ArticleFileManager');
-		$articleFileManager = &new ArticleFileManager($authorSubmission->getArticleId());
+		$articleFileManager = new ArticleFileManager($authorSubmission->getArticleId());
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
 
 		if ($designate && !HookRegistry::call('AuthorAction::designateReviewVersion', array(&$authorSubmission))) {
@@ -64,7 +64,7 @@ class AuthorAction extends Action {
 	function deleteArticleFile($article, $fileId, $revisionId) {
 		import('file.ArticleFileManager');
 
-		$articleFileManager = &new ArticleFileManager($article->getArticleId());
+		$articleFileManager = new ArticleFileManager($article->getArticleId());
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
 
@@ -92,7 +92,7 @@ class AuthorAction extends Action {
 	 */
 	function uploadRevisedVersion($authorSubmission) {
 		import("file.ArticleFileManager");
-		$articleFileManager = &new ArticleFileManager($authorSubmission->getArticleId());
+		$articleFileManager = new ArticleFileManager($authorSubmission->getArticleId());
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
 
 		$fileName = 'upload';
@@ -133,7 +133,7 @@ class AuthorAction extends Action {
 
 		$user = &Request::getUser();
 		import('mail.ArticleMailTemplate');
-		$email = &new ArticleMailTemplate($authorSubmission, 'COPYEDIT_AUTHOR_COMPLETE');
+		$email = new ArticleMailTemplate($authorSubmission, 'COPYEDIT_AUTHOR_COMPLETE');
 
 		$editAssignments = $authorSubmission->getEditAssignments();
 
@@ -216,7 +216,7 @@ class AuthorAction extends Action {
 	 */
 	function uploadCopyeditVersion($authorSubmission, $copyeditStage) {
 		import("file.ArticleFileManager");
-		$articleFileManager = &new ArticleFileManager($authorSubmission->getArticleId());
+		$articleFileManager = new ArticleFileManager($authorSubmission->getArticleId());
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 
@@ -254,7 +254,7 @@ class AuthorAction extends Action {
 	function viewLayoutComments($article) {
 		if (!HookRegistry::call('AuthorAction::viewLayoutComments', array(&$article))) {
 			import("submission.form.comment.LayoutCommentForm");
-			$commentForm = &new LayoutCommentForm($article, ROLE_ID_EDITOR);
+			$commentForm = new LayoutCommentForm($article, ROLE_ID_EDITOR);
 			$commentForm->initData();
 			$commentForm->display();
 		}
@@ -269,7 +269,7 @@ class AuthorAction extends Action {
 		if (!HookRegistry::call('AuthorAction::postLayoutComment', array(&$article, &$emailComment))) {
 			import("submission.form.comment.LayoutCommentForm");
 
-			$commentForm = &new LayoutCommentForm($article, ROLE_ID_AUTHOR);
+			$commentForm = new LayoutCommentForm($article, ROLE_ID_AUTHOR);
 			$commentForm->readInputData();
 
 			if ($commentForm->validate()) {
@@ -295,7 +295,7 @@ class AuthorAction extends Action {
 		if (!HookRegistry::call('AuthorAction::viewEditorDecisionComments', array(&$article))) {
 			import("submission.form.comment.EditorDecisionCommentForm");
 
-			$commentForm = &new EditorDecisionCommentForm($article, ROLE_ID_AUTHOR);
+			$commentForm = new EditorDecisionCommentForm($article, ROLE_ID_AUTHOR);
 			$commentForm->initData();
 			$commentForm->display();
 		}
@@ -312,7 +312,7 @@ class AuthorAction extends Action {
 
 		$user = &Request::getUser();
 		import('mail.ArticleMailTemplate');
-		$email = &new ArticleMailTemplate($authorSubmission);
+		$email = new ArticleMailTemplate($authorSubmission);
 
 		$editAssignments = $authorSubmission->getEditAssignments();
 		$editors = array();
@@ -325,7 +325,7 @@ class AuthorAction extends Action {
 			$email->send();
 
 			$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
-			$articleComment =& new ArticleComment();
+			$articleComment = new ArticleComment();
 			$articleComment->setCommentType(COMMENT_TYPE_EDITOR_DECISION);
 			$articleComment->setRoleId(ROLE_ID_AUTHOR);
 			$articleComment->setArticleId($authorSubmission->getArticleId());
@@ -364,7 +364,7 @@ class AuthorAction extends Action {
 		if (!HookRegistry::call('AuthorAction::viewCopyeditComments', array(&$article))) {
 			import("submission.form.comment.CopyeditCommentForm");
 
-			$commentForm = &new CopyeditCommentForm($article, ROLE_ID_AUTHOR);
+			$commentForm = new CopyeditCommentForm($article, ROLE_ID_AUTHOR);
 			$commentForm->initData();
 			$commentForm->display();
 		}
@@ -378,7 +378,7 @@ class AuthorAction extends Action {
 		if (!HookRegistry::call('AuthorAction::postCopyeditComment', array(&$article, &$emailComment))) {
 			import("submission.form.comment.CopyeditCommentForm");
 
-			$commentForm = &new CopyeditCommentForm($article, ROLE_ID_AUTHOR);
+			$commentForm = new CopyeditCommentForm($article, ROLE_ID_AUTHOR);
 			$commentForm->readInputData();
 
 			if ($commentForm->validate()) {
@@ -404,7 +404,7 @@ class AuthorAction extends Action {
 		if (!HookRegistry::call('AuthorAction::viewProofreadComments', array(&$article))) {
 			import("submission.form.comment.ProofreadCommentForm");
 
-			$commentForm = &new ProofreadCommentForm($article, ROLE_ID_AUTHOR);
+			$commentForm = new ProofreadCommentForm($article, ROLE_ID_AUTHOR);
 			$commentForm->initData();
 			$commentForm->display();
 		}
@@ -419,7 +419,7 @@ class AuthorAction extends Action {
 		if (!HookRegistry::call('AuthorAction::postProofreadComment', array(&$article, &$emailComment))) {
 			import("submission.form.comment.ProofreadCommentForm");
 
-			$commentForm = &new ProofreadCommentForm($article, ROLE_ID_AUTHOR);
+			$commentForm = new ProofreadCommentForm($article, ROLE_ID_AUTHOR);
 			$commentForm->readInputData();
 
 			if ($commentForm->validate()) {

@@ -49,7 +49,7 @@ class RegistrationForm extends Form {
 			$this->existingUser = Request::getUserVar('existingUser') ? 1 : 0;
 	
 			import('captcha.CaptchaManager');
-			$captchaManager =& new CaptchaManager();
+			$captchaManager = new CaptchaManager();
 			$this->captchaEnabled = ($captchaManager->isEnabled() && Config::getVar('captcha', 'captcha_on_register'))?true:false;
 	
 			// Validation checks for this form
@@ -98,7 +98,7 @@ class RegistrationForm extends Form {
 
 		if ($this->captchaEnabled) {
 			import('captcha.CaptchaManager');
-			$captchaManager =& new CaptchaManager();
+			$captchaManager = new CaptchaManager();
 			$captcha =& $captchaManager->createCaptcha();
 			if ($captcha) {
 				$templateMgr->assign('captchaEnabled', $this->captchaEnabled);
@@ -197,7 +197,7 @@ class RegistrationForm extends Form {
 
 		} else {
 			// New user
-			$user = &new User();
+			$user = new User();
 
 			$user->setUsername($this->getData('username'));
 			$user->setSalutation($this->getData('salutation'));
@@ -277,7 +277,7 @@ class RegistrationForm extends Form {
 		foreach ($allowedRoles as $k => $v) {
 			$roleId = $roleDao->getRoleIdFromPath($k);
 			if ($this->getData($v) && !$roleDao->roleExists($journal->getJournalId(), $userId, $roleId)) {
-				$role = &new Role();
+				$role = new Role();
 				$role->setJournalId($journal->getJournalId());
 				$role->setUserId($userId);
 				$role->setRoleId($roleId);
@@ -291,11 +291,11 @@ class RegistrationForm extends Form {
 			if ($requireValidation) {
 				// Create an access key
 				import('security.AccessKeyManager');
-				$accessKeyManager =& new AccessKeyManager();
+				$accessKeyManager = new AccessKeyManager();
 				$accessKey = $accessKeyManager->createKey('RegisterContext', $user->getUserId(), null, Config::getVar('email', 'validation_timeout'));
 
 				// Send email validation request to user
-				$mail =& new MailTemplate('USER_VALIDATE');
+				$mail = new MailTemplate('USER_VALIDATE');
 				$mail->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 				$mail->assignParams(array(
 					'userFullName' => $user->getFullName(),
@@ -307,7 +307,7 @@ class RegistrationForm extends Form {
 			}
 			if ($this->getData('sendPassword')) {
 				// Send welcome email to user
-				$mail = &new MailTemplate('USER_REGISTER');
+				$mail = new MailTemplate('USER_REGISTER');
 				$mail->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 				$mail->assignParams(array(
 					'username' => $this->getData('username'),

@@ -141,19 +141,19 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 
 		// Create additional submission mangement records
 		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
-		$copyeditorSubmission = &new CopyeditorSubmission();
+		$copyeditorSubmission = new CopyeditorSubmission();
 		$copyeditorSubmission->setArticleId($article->getArticleId());
 		$copyeditorSubmission->setCopyeditorId(0);
 		$copyeditorSubmissionDao->insertCopyeditorSubmission($copyeditorSubmission);
 
 		$layoutDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
-		$layoutAssignment = &new LayoutAssignment();
+		$layoutAssignment = new LayoutAssignment();
 		$layoutAssignment->setArticleId($article->getArticleId());
 		$layoutAssignment->setEditorId(0);
 		$layoutDao->insertLayoutAssignment($layoutAssignment);
 
 		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
-		$proofAssignment = &new ProofAssignment();
+		$proofAssignment = new ProofAssignment();
 		$proofAssignment->setArticleId($article->getArticleId());
 		$proofAssignment->setProofreaderId(0);
 		$proofAssignmentDao->insertProofAssignment($proofAssignment);
@@ -169,7 +169,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 
 		// Send author notification email
 		import('mail.ArticleMailTemplate');
-		$mail = &new ArticleMailTemplate($article, 'SUBMISSION_ACK');
+		$mail = new ArticleMailTemplate($article, 'SUBMISSION_ACK');
 		$mail->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 		if ($mail->isEnabled()) {
 			$mail->addRecipient($user->getEmail(), $user->getFullName());

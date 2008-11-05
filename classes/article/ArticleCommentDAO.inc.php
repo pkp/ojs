@@ -143,7 +143,7 @@ class ArticleCommentDAO extends DAO {
 	 * @return ArticleComment object
 	 */
 	function &_returnArticleCommentFromRow($row) {
-		$articleComment = &new ArticleComment();
+		$articleComment = new ArticleComment();
 		$articleComment->setCommentId($row['comment_id']);
 		$articleComment->setCommentType($row['comment_type']);
 		$articleComment->setRoleId($row['role_id']);

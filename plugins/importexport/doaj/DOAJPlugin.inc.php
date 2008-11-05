@@ -126,7 +126,7 @@ class DOAJPlugin extends ImportExportPlugin {
 		$issn = $journal->getSetting('printIssn');
 
 		import('mail.MailTemplate');
-		$mail =& new MailTemplate('DOAJ_EMAIL_REP');
+		$mail = new MailTemplate('DOAJ_EMAIL_REP');
 
 		if ($send && !$mail->hasErrors()) {
 			$mail->send();

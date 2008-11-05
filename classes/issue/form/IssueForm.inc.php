@@ -115,7 +115,7 @@ class IssueForm extends Form {
 		}
 
 		import('file.PublicFileManager');
-		$publicFileManager =& new PublicFileManager();
+		$publicFileManager = new PublicFileManager();
 
 		if ($publicFileManager->uploadedFileExists('coverPage')) {
 			$type = $publicFileManager->getUploadedFileType('coverPage');
@@ -309,7 +309,7 @@ class IssueForm extends Form {
 			$issue = $issueDao->getIssueById($issueId);
 			$isNewIssue = false;
 		} else {
-			$issue =& new Issue();
+			$issue = new Issue();
 			$isNewIssue = true;
 		}
 		$volume = $this->getData('volume');
@@ -386,7 +386,7 @@ class IssueForm extends Form {
 		}
 
 		import('file.PublicFileManager');
-		$publicFileManager =& new PublicFileManager();
+		$publicFileManager = new PublicFileManager();
 		if ($publicFileManager->uploadedFileExists('coverPage')) {
 			$journal = Request::getJournal();
 			$originalFileName = $publicFileManager->getUploadedFileName('coverPage');

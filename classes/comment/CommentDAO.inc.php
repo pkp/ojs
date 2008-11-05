@@ -131,7 +131,7 @@ class CommentDAO extends DAO {
 	function &_returnCommentFromRow($row, $childLevels = 0) {
 		$userDao =& DAORegistry::getDAO('UserDAO');
 
-		$comment =& new Comment();
+		$comment = new Comment();
 		$comment->setCommentId($row['comment_id']);
 		$comment->setArticleId($row['article_id']);
 		$comment->setUser($userDao->getUser($row['user_id']), true);

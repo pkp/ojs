@@ -53,7 +53,7 @@ class ReviewerHandler extends PKPHandler {
 		$templateMgr->assign_by_ref('reviewerRecommendationOptions', ReviewAssignment::getReviewerRecommendationOptions());
 
 		import('issue.IssueAction');
-		$issueAction = &new IssueAction();
+		$issueAction = new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
 		$templateMgr->assign('helpTopicId', 'editorial.reviewersRole.submissions');
 		$templateMgr->display('reviewer/index.tpl');
@@ -90,7 +90,7 @@ class ReviewerHandler extends PKPHandler {
 		define('REVIEWER_ACCESS_KEY_SESSION_VAR', 'ReviewerAccessKey');
 
 		import('security.AccessKeyManager');
-		$accessKeyManager =& new AccessKeyManager();
+		$accessKeyManager = new AccessKeyManager();
 
 		$session =& Request::getSession();
 		// Check to see if a new access key is being used.

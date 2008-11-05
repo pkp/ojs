@@ -97,7 +97,7 @@ class ProofreaderSubmissionDAO extends DAO {
 	 * @return ProofreaderSubmission
 	 */
 	function &_returnSubmissionFromRow(&$row) {
-		$submission = &new ProofreaderSubmission();
+		$submission = new ProofreaderSubmission();
 		$this->articleDao->_articleFromRow($submission, $row);
 		$submission->setMostRecentProofreadComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_PROOFREAD, $row['article_id']));
 		$submission->setProofAssignment($this->proofAssignmentDao->getProofAssignmentByArticleId($row['article_id']));
@@ -267,7 +267,7 @@ class ProofreaderSubmissionDAO extends DAO {
 
 		$result = &$this->retrieveRange($sql . ' ' . $searchSql, $params, $rangeInfo);
 
-		$returner = &new DAOResultFactory ($result, $this, '_returnSubmissionFromRow');
+		$returner = new DAOResultFactory ($result, $this, '_returnSubmissionFromRow');
 		return $returner;
 	}
 

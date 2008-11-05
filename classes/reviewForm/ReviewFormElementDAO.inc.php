@@ -44,7 +44,7 @@ class ReviewFormElementDAO extends DAO {
 	 * @return ReviewFormElement
 	 */
 	function &_returnReviewFormElementFromRow(&$row) {
-		$reviewFormElement =& new ReviewFormElement();
+		$reviewFormElement = new ReviewFormElement();
 		$reviewFormElement->setReviewFormElementId($row['review_form_element_id']);
 		$reviewFormElement->setReviewFormId($row['review_form_id']);
 		$reviewFormElement->setSequence($row['seq']);
@@ -210,7 +210,7 @@ class ReviewFormElementDAO extends DAO {
 			$reviewFormId, $rangeInfo
 		);
 
-		$returner =& new DAOResultFactory($result, $this, '_returnReviewFormElementFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnReviewFormElementFromRow');
 		return $returner;
 	}
 

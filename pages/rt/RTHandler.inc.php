@@ -260,7 +260,7 @@ class RTHandler extends ArticleHandler {
 		}
 
 		import('mail.MailTemplate');
-		$email = &new MailTemplate('EMAIL_LINK');
+		$email = new MailTemplate('EMAIL_LINK');
 
 		if (Request::getUserVar('send') && !$email->hasErrors()) {
 			$email->send();
@@ -304,7 +304,7 @@ class RTHandler extends ArticleHandler {
 		}
 
 		import('mail.MailTemplate');
-		$email = &new MailTemplate();
+		$email = new MailTemplate();
 		$email->setAddressFieldsEnabled(false);
 
 		if (Request::getUserVar('send') && !$email->hasErrors()) {

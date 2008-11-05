@@ -34,7 +34,7 @@ class SubmitHandler extends AuthorHandler {
 		$formClass = "AuthorSubmitStep{$step}Form";
 		import("author.form.submit.$formClass");
 
-		$submitForm = &new $formClass($article);
+		$submitForm = new $formClass($article);
 		if ($submitForm->isLocaleResubmit()) {
 			$submitForm->readInputData();
 		} else {
@@ -59,7 +59,7 @@ class SubmitHandler extends AuthorHandler {
 		$formClass = "AuthorSubmitStep{$step}Form";
 		import("author.form.submit.$formClass");
 
-		$submitForm = &new $formClass($article);
+		$submitForm = new $formClass($article);
 		$submitForm->readInputData();
 
 		// Check for any special cases before trying to save
@@ -175,7 +175,7 @@ class SubmitHandler extends AuthorHandler {
 		list($journal, $article) = SubmitHandler::validate($articleId, 4);
 
 		import("author.form.submit.AuthorSubmitSuppFileForm");
-		$submitForm = &new AuthorSubmitSuppFileForm($article);
+		$submitForm = new AuthorSubmitSuppFileForm($article);
 		$submitForm->setData('title', Locale::translate('common.untitled'));
 		$suppFileId = $submitForm->execute();
 
@@ -196,7 +196,7 @@ class SubmitHandler extends AuthorHandler {
 		list($journal, $article) = SubmitHandler::validate($articleId, 4);
 
 		import("author.form.submit.AuthorSubmitSuppFileForm");
-		$submitForm = &new AuthorSubmitSuppFileForm($article, $suppFileId);
+		$submitForm = new AuthorSubmitSuppFileForm($article, $suppFileId);
 
 		if ($submitForm->isLocaleResubmit()) {
 			$submitForm->readInputData();
@@ -220,7 +220,7 @@ class SubmitHandler extends AuthorHandler {
 		list($journal, $article) = SubmitHandler::validate($articleId, 4);
 
 		import("author.form.submit.AuthorSubmitSuppFileForm");
-		$submitForm = &new AuthorSubmitSuppFileForm($article, $suppFileId);
+		$submitForm = new AuthorSubmitSuppFileForm($article, $suppFileId);
 		$submitForm->readInputData();
 
 		if ($submitForm->validate()) {
@@ -251,7 +251,7 @@ class SubmitHandler extends AuthorHandler {
 		$suppFileDao->deleteSuppFileById($suppFileId, $articleId);
 
 		if ($suppFile->getFileId()) {
-			$articleFileManager = &new ArticleFileManager($articleId);
+			$articleFileManager = new ArticleFileManager($articleId);
 			$articleFileManager->deleteFile($suppFile->getFileId());
 		}
 

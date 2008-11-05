@@ -65,7 +65,7 @@ class GatewayHandler extends PKPHandler {
 				$showInfo = false;
 			}
 
-			$issues = &new DAOResultFactory($result, $issueDao, '_returnIssueFromRow');
+			$issues = new DAOResultFactory($result, $issueDao, '_returnIssueFromRow');
 
 			$prevYear = null;
 			$nextYear = null;

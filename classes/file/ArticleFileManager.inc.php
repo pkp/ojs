@@ -370,7 +370,7 @@ class ArticleFileManager extends FileManager {
 	 */
 	function copyAndRenameFile($sourceFileId, $sourceRevision, $destType, $destFileId = null) {
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-		$articleFile = &new ArticleFile();
+		$articleFile = new ArticleFile();
 
 		$destTypePath = $this->typeToPath($destType);
 		$destDir = $this->filesDir . $destTypePath . '/';
@@ -433,7 +433,7 @@ class ArticleFileManager extends FileManager {
 	 */
 	function &generateDummyFile(&$article) {
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-		$articleFile = &new ArticleFile();
+		$articleFile = new ArticleFile();
 		$articleFile->setArticleId($article->getArticleId());
 		$articleFile->setFileName('temp');
 		$articleFile->setOriginalFileName('temp');
@@ -498,7 +498,7 @@ class ArticleFileManager extends FileManager {
 			$articleFile = &$this->generateDummyFile($this->article);
 		} else {
 			$dummyFile = false;
-			$articleFile = &new ArticleFile();
+			$articleFile = new ArticleFile();
 			$articleFile->setRevision($articleFileDao->getRevisionNumber($fileId)+1);
 			$articleFile->setArticleId($this->articleId);
 			$articleFile->setFileId($fileId);
@@ -552,7 +552,7 @@ class ArticleFileManager extends FileManager {
 			$articleFile = &$this->generateDummyFile($this->article);
 		} else {
 			$dummyFile = false;
-			$articleFile = &new ArticleFile();
+			$articleFile = new ArticleFile();
 			$articleFile->setRevision($articleFileDao->getRevisionNumber($fileId)+1);
 			$articleFile->setArticleId($this->articleId);
 			$articleFile->setFileId($fileId);
@@ -605,7 +605,7 @@ class ArticleFileManager extends FileManager {
 			$articleFile = &$this->generateDummyFile($this->article);
 		} else {
 			$dummyFile = false;
-			$articleFile = &new ArticleFile();
+			$articleFile = new ArticleFile();
 			$articleFile->setRevision($articleFileDao->getRevisionNumber($fileId)+1);
 			$articleFile->setArticleId($this->articleId);
 			$articleFile->setFileId($fileId);

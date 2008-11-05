@@ -129,7 +129,7 @@ class preCompile extends CommandLineTool {
 
 }
 
-$tool = &new preCompile(isset($argv) ? $argv : array());
+$tool = new preCompile(isset($argv) ? $argv : array());
 $tool->execute();
 
 ?>

@@ -64,7 +64,7 @@ class Request extends PKPRequest {
 	 * Get the journal associated with the current request.
 	 * @return Journal
 	 */
-	function &getJournal() {
+	static function &getJournal() {
 		static $journal;
 
 		if (!isset($journal)) {
@@ -128,7 +128,7 @@ class Request extends PKPRequest {
 	 * @param $anchor string Optional name of anchor to add to URL
 	 * @param $escape boolean Whether or not to escape ampersands for this URL; default false.
 	 */
-	function url($journalPath = null, $page = null, $op = null, $path = null, 
+	static function url($journalPath = null, $page = null, $op = null, $path = null, 
 			$params = null, $anchor = null, $escape = false) {
 		return parent::url(array($journalPath), $page, $op, $path, $params, $anchor, $escape);
 	}

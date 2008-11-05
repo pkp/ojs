@@ -250,7 +250,7 @@ class MailTemplate extends Mail {
 	 */
 	function displayEditForm($formActionUrl, $hiddenFormParams = null, $alternateTemplate = null, $additionalParameters = array()) {
 		import('form.Form');
-		$form = &new Form($alternateTemplate!=null?$alternateTemplate:'email/email.tpl');
+		$form = new Form($alternateTemplate!=null?$alternateTemplate:'email/email.tpl');
 
 		$form->setData('formActionUrl', $formActionUrl);
 		$form->setData('subject', $this->getSubject());
@@ -398,7 +398,7 @@ class MailTemplate extends Mail {
 	 */
 	function _handleAttachments($userId) {
 		import('file.TemporaryFileManager');
-		$temporaryFileManager = &new TemporaryFileManager();
+		$temporaryFileManager = new TemporaryFileManager();
 
 		$this->attachmentsEnabled = true;
 		$this->persistAttachments = array();
@@ -436,7 +436,7 @@ class MailTemplate extends Mail {
 	 */
 	function _clearAttachments($userId) {
 		import('file.TemporaryFileManager');
-		$temporaryFileManager = &new TemporaryFileManager();
+		$temporaryFileManager = new TemporaryFileManager();
 
 		$persistAttachments = Request::getUserVar('persistAttachments');
 		if (is_array($persistAttachments)) foreach ($persistAttachments as $fileId) {

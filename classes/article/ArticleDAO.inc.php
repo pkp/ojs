@@ -104,7 +104,7 @@ class ArticleDAO extends DAO {
 	 * @return Article
 	 */
 	function &_returnArticleFromRow(&$row) {
-		$article = &new Article();
+		$article = new Article();
 		$this->_articleFromRow($article, $row);
 		return $article;
 	}
@@ -336,7 +336,7 @@ class ArticleDAO extends DAO {
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		$articleFiles = &$articleFileDao->getArticleFilesByArticle($articleId);
 
-		$articleFileManager = &new ArticleFileManager($articleId);
+		$articleFileManager = new ArticleFileManager($articleId);
 		foreach ($articleFiles as $articleFile) {
 			$articleFileManager->deleteFile($articleFile->getFileId());
 		}
@@ -382,7 +382,7 @@ class ArticleDAO extends DAO {
 			)
 		);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnArticleFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnArticleFromRow');
 		return $returner;
 	}
 

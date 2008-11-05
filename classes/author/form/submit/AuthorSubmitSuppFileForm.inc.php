@@ -154,7 +154,7 @@ class AuthorSubmitSuppFileForm extends Form {
 	 */
 	function execute() {
 		import("file.ArticleFileManager");
-		$articleFileManager = &new ArticleFileManager($this->articleId);
+		$articleFileManager = new ArticleFileManager($this->articleId);
 		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 
 		$fileName = 'uploadSuppFile';
@@ -183,7 +183,7 @@ class AuthorSubmitSuppFileForm extends Form {
 			}
 
 			// Insert new supplementary file		
-			$suppFile = &new SuppFile();
+			$suppFile = new SuppFile();
 			$suppFile->setArticleId($this->articleId);
 			$suppFile->setFileId($fileId);
 			$this->setSuppFileData($suppFile);

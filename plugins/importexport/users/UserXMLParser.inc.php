@@ -40,7 +40,7 @@ class UserXMLParser {
 	 * @param $journalId int assumed to be a valid journal ID
 	 */
 	function UserXMLParser($journalId) {
-		$this->parser = &new XMLParser();
+		$this->parser = new XMLParser();
 		$this->journalId = $journalId;
 	}
 
@@ -67,7 +67,7 @@ class UserXMLParser {
 			foreach ($tree->getChildren() as $user) {
 				if ($user->getName() == 'user') {
 					// Match user element
-					$newUser = &new ImportedUser();
+					$newUser = new ImportedUser();
 
 					foreach ($user->getChildren() as $attrib) {
 						switch ($attrib->getName()) {
@@ -154,7 +154,7 @@ class UserXMLParser {
 							case 'role':
 								$roleType = $attrib->getAttribute('type');
 								if ($this->validRole($roleType)) {
-									$role = &new Role();
+									$role = new Role();
 									$role->setRoleId($roleDao->getRoleIdFromPath($roleType));
 									$newUser->addRole($role);
 								}
@@ -186,7 +186,7 @@ class UserXMLParser {
 		if ($sendNotify) {
 			// Set up mail template to send to added users
 			import('mail.MailTemplate');
-			$mail = &new MailTemplate('USER_REGISTER');
+			$mail = new MailTemplate('USER_REGISTER');
 
 			$journalDao = &DAORegistry::getDAO('JournalDAO');
 			$journal = &$journalDao->getJournal($this->journalId);

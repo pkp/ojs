@@ -28,7 +28,7 @@ class ArticleReportPlugin extends ReportPlugin {
 		$success = parent::register($category, $path);
 		if ($success) {
 			$this->import('ArticleReportDAO');
-			$articleReportDAO =& new ArticleReportDAO();
+			$articleReportDAO = new ArticleReportDAO();
 			DAORegistry::registerDAO('ArticleReportDAO', $articleReportDAO);
 		}
 		$this->addLocaleData();

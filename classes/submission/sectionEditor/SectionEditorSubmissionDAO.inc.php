@@ -125,7 +125,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * @return SectionEditorSubmission
 	 */
 	function &_returnSectionEditorSubmissionFromRow(&$row) {
-		$sectionEditorSubmission = &new SectionEditorSubmission();
+		$sectionEditorSubmission = new SectionEditorSubmission();
 
 		// Article attributes
 		$this->articleDao->_articleFromRow($sectionEditorSubmission, $row);
@@ -272,7 +272,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		if ($sectionEditorSubmission->getCopyedId()) {
 			$copyeditorSubmission = &$this->copyeditorSubmissionDao->getCopyeditorSubmission($sectionEditorSubmission->getArticleId());
 		} else {
-			$copyeditorSubmission = &new CopyeditorSubmission();
+			$copyeditorSubmission = new CopyeditorSubmission();
 		}
 
 		// Only update the fields that an editor can modify.
@@ -717,10 +717,10 @@ class SectionEditorSubmissionDAO extends DAO {
 
 		if (isset($rangeInfo) && $rangeInfo->isValid()) {
 			import('core.VirtualArrayIterator');
-			$returner = &new VirtualArrayIterator($submissions, $result->MaxRecordCount(), $rangeInfo->getPage(), $rangeInfo->getCount());
+			$returner = new VirtualArrayIterator($submissions, $result->MaxRecordCount(), $rangeInfo->getPage(), $rangeInfo->getCount());
 		} else {
 			import('core.ArrayItemIterator');
-			$returner = &new ArrayItemIterator($submissions);
+			$returner = new ArrayItemIterator($submissions);
 		}
 
 		$result->Close();
@@ -947,7 +947,7 @@ class SectionEditorSubmissionDAO extends DAO {
 			$paramArray, $rangeInfo
 		);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnReviewerUserFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnReviewerUserFromRow');
 		return $returner;
 	}
 

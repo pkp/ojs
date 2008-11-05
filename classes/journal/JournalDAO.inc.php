@@ -63,7 +63,7 @@ class JournalDAO extends DAO {
 	 * @return Journal
 	 */
 	function &_returnJournalFromRow(&$row) {
-		$journal = &new Journal();
+		$journal = new Journal();
 		$journal->setJournalId($row['journal_id']);
 		$journal->setPath($row['path']);
 		$journal->setSequence($row['seq']);
@@ -193,7 +193,7 @@ class JournalDAO extends DAO {
 			false, $rangeInfo
 		);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnJournalFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnJournalFromRow');
 		return $returner;
 	}
 
@@ -206,7 +206,7 @@ class JournalDAO extends DAO {
 			'SELECT * FROM journals WHERE enabled=1 ORDER BY seq'
 		);
 
-		$resultFactory = &new DAOResultFactory($result, $this, '_returnJournalFromRow');
+		$resultFactory = new DAOResultFactory($result, $this, '_returnJournalFromRow');
 		return $resultFactory;
 	}
 

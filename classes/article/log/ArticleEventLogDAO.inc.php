@@ -81,7 +81,7 @@ class ArticleEventLogDAO extends DAO {
 			$params, $rangeInfo
 		);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnLogEntryFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnLogEntryFromRow');
 		return $returner;
 	}
 
@@ -91,7 +91,7 @@ class ArticleEventLogDAO extends DAO {
 	 * @return ArticleEventLogEntry
 	 */
 	function &_returnLogEntryFromRow(&$row) {
-		$entry = &new ArticleEventLogEntry();
+		$entry = new ArticleEventLogEntry();
 		$entry->setLogId($row['log_id']);
 		$entry->setArticleId($row['article_id']);
 		$entry->setUserId($row['user_id']);

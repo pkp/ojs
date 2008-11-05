@@ -44,7 +44,7 @@ class StudentThesisForm extends Form {
 		);
 
 		import('captcha.CaptchaManager');
-		$captchaManager =& new CaptchaManager();
+		$captchaManager = new CaptchaManager();
 		$this->captchaEnabled = $captchaManager->isEnabled() ? true : false;
 
 		$this->uploadCodeEnabled = $thesisPlugin->getSetting($journalId, 'enableUploadCode');
@@ -117,7 +117,7 @@ class StudentThesisForm extends Form {
 
 		if ($this->captchaEnabled) {
 			import('captcha.CaptchaManager');
-			$captchaManager =& new CaptchaManager();
+			$captchaManager = new CaptchaManager();
 			$captcha =& $captchaManager->createCaptcha();
 			if ($captcha) {
 				$templateMgr->assign('captchaEnabled', $this->captchaEnabled);
@@ -201,7 +201,7 @@ class StudentThesisForm extends Form {
 		$journal = &Request::getJournal();
 		$journalId = $journal->getJournalId();
 
-		$thesis = &new Thesis();
+		$thesis = new Thesis();
 
 		$thesis->setJournalId($journalId);
 		$thesis->setStatus(THESIS_STATUS_INACTIVE);
@@ -282,7 +282,7 @@ class StudentThesisForm extends Form {
 			);
 
 			import('mail.MailTemplate');
-			$mail = &new MailTemplate('THESIS_ABSTRACT_CONFIRM');
+			$mail = new MailTemplate('THESIS_ABSTRACT_CONFIRM');
 			$mail->setFrom($thesisEmail, "\"" . $thesisName . "\"");
 			$mail->assignParams($paramArray);
 			$mail->addRecipient($thesis->getSupervisorEmail(), "\"" . $supervisorName . "\"");

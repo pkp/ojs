@@ -61,7 +61,7 @@ class AuthSourcesHandler extends AdminHandler {
 	function createAuthSource() {
 		parent::validate();
 
-		$auth = &new AuthSource();
+		$auth = new AuthSource();
 		$auth->setPlugin(Request::getUserVar('plugin'));
 
 		$authDao = &DAORegistry::getDAO('AuthSourceDAO');
@@ -80,7 +80,7 @@ class AuthSourcesHandler extends AdminHandler {
 		parent::setupTemplate(true);
 
 		import('security.form.AuthSourceSettingsForm');
-		$form = &new AuthSourceSettingsForm((int)@$args[0]);
+		$form = new AuthSourceSettingsForm((int)@$args[0]);
 		$form->initData();
 		$form->display();
 	}
@@ -92,7 +92,7 @@ class AuthSourcesHandler extends AdminHandler {
 		parent::validate();
 
 		import('security.form.AuthSourceSettingsForm');
-		$form = &new AuthSourceSettingsForm((int)@$args[0]);
+		$form = new AuthSourceSettingsForm((int)@$args[0]);
 		$form->readInputData();
 		$form->execute();
 		Request::redirect(null, null, 'auth');

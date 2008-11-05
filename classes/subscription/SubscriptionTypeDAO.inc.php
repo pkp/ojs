@@ -165,7 +165,7 @@ class SubscriptionTypeDAO extends DAO {
 	 * @return SubscriptionType
 	 */
 	function &_returnSubscriptionTypeFromRow(&$row) {
-		$subscriptionType = &new SubscriptionType();
+		$subscriptionType = new SubscriptionType();
 		$subscriptionType->setTypeId($row['type_id']);
 		$subscriptionType->setJournalId($row['journal_id']);
 		$subscriptionType->setCost($row['cost']);
@@ -338,7 +338,7 @@ class SubscriptionTypeDAO extends DAO {
 			$journalId, $rangeInfo
 		);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnSubscriptionTypeFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnSubscriptionTypeFromRow');
 		return $returner;
 	}
 

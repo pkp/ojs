@@ -26,7 +26,7 @@ class JournalLanguagesHandler extends ManagerHandler {
 
 		import('manager.form.LanguageSettingsForm');
 
-		$settingsForm = &new LanguageSettingsForm();
+		$settingsForm = new LanguageSettingsForm();
 		$settingsForm->initData();
 		$settingsForm->display();
 	}
@@ -40,7 +40,7 @@ class JournalLanguagesHandler extends ManagerHandler {
 
 		import('manager.form.LanguageSettingsForm');
 
-		$settingsForm = &new LanguageSettingsForm();
+		$settingsForm = new LanguageSettingsForm();
 		$settingsForm->readInputData();
 
 		if ($settingsForm->validate()) {

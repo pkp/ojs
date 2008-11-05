@@ -242,7 +242,7 @@ class MetadataForm extends Form {
 		$article->setAbstract($this->getData('abstract'), null); // Localized
 
 		import('file.PublicFileManager');
-		$publicFileManager =& new PublicFileManager();
+		$publicFileManager = new PublicFileManager();
 		if ($publicFileManager->uploadedFileExists('coverPage')) {
 			$journal = Request::getJournal();
 			$originalFileName = $publicFileManager->getUploadedFileName('coverPage');
@@ -303,7 +303,7 @@ class MetadataForm extends Form {
 
 			} else {
 				// Create a new author
-				$author = &new Author();
+				$author = new Author();
 				$isExistingAuthor = false;
 			}
 

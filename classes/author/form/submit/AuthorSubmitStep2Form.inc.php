@@ -171,7 +171,7 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 
 			} else {
 				// Create a new author
-				$author = &new Author();
+				$author = new Author();
 				$isExistingAuthor = false;
 			}
 

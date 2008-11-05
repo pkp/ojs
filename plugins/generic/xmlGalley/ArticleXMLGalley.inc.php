@@ -101,7 +101,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 				case 'custom';
 					// get file path for custom XSL sheet
 					import('file.JournalFileManager');
-					$journalFileManager =& new JournalFileManager($journal);
+					$journalFileManager = new JournalFileManager($journal);
 					$xslSheet = $journalFileManager->filesDir . $xmlGalleyPlugin->getSetting($journal->getJournalId(), 'customXSL');
 					break;
 			}
@@ -234,7 +234,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 
 			// create temporary FO file and write the contents
 			import('file.TemporaryFileManager');
-			$temporaryFileManager = &new TemporaryFileManager();
+			$temporaryFileManager = new TemporaryFileManager();
 			$tempFoName = $temporaryFileManager->filesDir . $this->getFileName() . '-' . $this->getGalleyId() . '.fo';
 
 			$temporaryFileManager->writeFile($tempFoName, $contents);

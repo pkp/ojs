@@ -112,7 +112,7 @@ class CustomThemePlugin extends ThemePlugin {
 		$templateMgr->setCacheability(CACHEABILITY_MUST_REVALIDATE);
 
 		$this->import('CustomThemeSettingsForm');
-		$form = &new CustomThemeSettingsForm($this, $journal->getJournalId());
+		$form = new CustomThemeSettingsForm($this, $journal->getJournalId());
 		if (Request::getUserVar('save')) {
 			$form->readInputData();
 			if ($form->validate()) {

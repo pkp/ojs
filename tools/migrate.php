@@ -73,7 +73,7 @@ class migrate extends CommandLineTool {
 	 * Execute the import command.
 	 */
 	function execute() {
-		$importer = &new ImportOJS1();
+		$importer = new ImportOJS1();
 		if ($importer->import($this->journalPath, $this->importPath, $this->options)) {
 			$redirects = $importer->getRedirects();
 			$conflicts = $importer->getConflicts();
@@ -140,6 +140,6 @@ class migrate extends CommandLineTool {
 
 }
 
-$tool = &new migrate(isset($argv) ? $argv : array());
+$tool = new migrate(isset($argv) ? $argv : array());
 $tool->execute();
 ?>

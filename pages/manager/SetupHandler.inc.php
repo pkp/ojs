@@ -33,7 +33,7 @@ class SetupHandler extends ManagerHandler {
 			$formClass = "JournalSetupStep{$step}Form";
 			import("manager.form.setup.$formClass");
 
-			$setupForm = &new $formClass();
+			$setupForm = new $formClass();
 			if ($setupForm->isLocaleResubmit()) {
 				$setupForm->readInputData();
 			} else {
@@ -64,7 +64,7 @@ class SetupHandler extends ManagerHandler {
 			$formClass = "JournalSetupStep{$step}Form";
 			import("manager.form.setup.$formClass");
 
-			$setupForm = &new $formClass();
+			$setupForm = new $formClass();
 			$setupForm->readInputData();
 			$formLocale = $setupForm->getFormLocale();
 
@@ -180,7 +180,7 @@ class SetupHandler extends ManagerHandler {
 					$journal =& Request::getJournal();
 					$templates = $journal->getSetting('templates');
 					import('file.JournalFileManager');
-					$journalFileManager =& new JournalFileManager($journal);
+					$journalFileManager = new JournalFileManager($journal);
 					if (Request::getUserVar('addTemplate')) {
 						// Add a layout template
 						$editData = true;
@@ -335,7 +335,7 @@ class SetupHandler extends ManagerHandler {
 		$journal =& Request::getJournal();
 		$templates = $journal->getSetting('templates');
 		import('file.JournalFileManager');
-		$journalFileManager =& new JournalFileManager($journal);
+		$journalFileManager = new JournalFileManager($journal);
 		$templateId = (int) array_shift($args);
 		if ($templateId >= count($templates) || $templateId < 0) Request::redirect(null, null, 'setup');
 		$template =& $templates[$templateId];

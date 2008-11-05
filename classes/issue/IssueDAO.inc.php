@@ -101,7 +101,7 @@ class IssueDAO extends DAO {
 		}
 
 		$result = &$this->retrieve($sql, $params);
-		$returner = &new DAOResultFactory($result, $this, '_returnIssueFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnIssueFromRow');
 		return $returner;
 	}
 
@@ -176,7 +176,7 @@ class IssueDAO extends DAO {
 	 * @return Issue object
 	 */
 	function &_returnIssueFromRow($row) {
-		$issue = &new Issue();
+		$issue = new Issue();
 		$issue->setIssueId($row['issue_id']);
 		$issue->setJournalId($row['journal_id']);
 		$issue->setVolume($row['volume']);
@@ -351,7 +351,7 @@ class IssueDAO extends DAO {
 	 */
 	function deleteIssue(&$issue) {
 		import('file.PublicFileManager');
-		$publicFileManager = &new PublicFileManager();
+		$publicFileManager = new PublicFileManager();
 		
 		if (is_array($issue->getFileName(null))) foreach ($issue->getFileName(null) as $fileName) {
 			if ($fileName != '') {
@@ -464,7 +464,7 @@ class IssueDAO extends DAO {
 		$sql = 'SELECT i.* FROM issues i WHERE journal_id = ? ORDER BY current DESC, date_published DESC';
 		$result = &$this->retrieveRange($sql, $journalId, $rangeInfo);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnIssueFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnIssueFromRow');
 		return $returner;
 	}
 
@@ -480,7 +480,7 @@ class IssueDAO extends DAO {
 			$journalId, $rangeInfo
 		);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnIssueFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnIssueFromRow');
 		return $returner;
 	}
 
@@ -496,7 +496,7 @@ class IssueDAO extends DAO {
 			$journalId, $rangeInfo
 		);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnIssueFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnIssueFromRow');
 		return $returner;
 	}
 

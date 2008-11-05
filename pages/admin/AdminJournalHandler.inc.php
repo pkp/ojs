@@ -52,7 +52,7 @@ class AdminJournalHandler extends AdminHandler {
 
 		import('admin.form.JournalSiteSettingsForm');
 
-		$settingsForm = &new JournalSiteSettingsForm(!isset($args) || empty($args) ? null : $args[0]);
+		$settingsForm = new JournalSiteSettingsForm(!isset($args) || empty($args) ? null : $args[0]);
 		if ($settingsForm->isLocaleResubmit()) {
 			$settingsForm->readInputData();
 		} else {
@@ -69,7 +69,7 @@ class AdminJournalHandler extends AdminHandler {
 
 		import('admin.form.JournalSiteSettingsForm');
 
-		$settingsForm = &new JournalSiteSettingsForm(Request::getUserVar('journalId'));
+		$settingsForm = new JournalSiteSettingsForm(Request::getUserVar('journalId'));
 		$settingsForm->readInputData();
 
 		if ($settingsForm->validate()) {
@@ -98,13 +98,13 @@ class AdminJournalHandler extends AdminHandler {
 				// Delete journal file tree
 				// FIXME move this somewhere better.
 				import('file.FileManager');
-				$fileManager = &new FileManager();
+				$fileManager = new FileManager();
 
 				$journalPath = Config::getVar('files', 'files_dir') . '/journals/' . $journalId;
 				$fileManager->rmtree($journalPath);
 
 				import('file.PublicFileManager');
-				$publicFileManager = &new PublicFileManager();
+				$publicFileManager = new PublicFileManager();
 				$publicFileManager->rmtree($publicFileManager->getJournalFilesPath($journalId));
 			}
 		}
@@ -139,7 +139,7 @@ class AdminJournalHandler extends AdminHandler {
 
 		import('admin.form.ImportOJS1Form');
 
-		$importForm = &new ImportOJS1Form();
+		$importForm = new ImportOJS1Form();
 		$importForm->initData();
 		$importForm->display();
 	}
@@ -152,7 +152,7 @@ class AdminJournalHandler extends AdminHandler {
 
 		import('admin.form.ImportOJS1Form');
 
-		$importForm = &new ImportOJS1Form();
+		$importForm = new ImportOJS1Form();
 		$importForm->readInputData();
 
 		if ($importForm->validate() && ($journalId = $importForm->execute()) !== false) {

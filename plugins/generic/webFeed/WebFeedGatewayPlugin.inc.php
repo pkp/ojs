@@ -118,7 +118,7 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		if ($displayItems == 'recent' && $recentItems > 0) {
 			import('db.DBResultRange');
-			$rangeInfo =& new DBResultRange($recentItems, 1);
+			$rangeInfo = new DBResultRange($recentItems, 1);
 			$publishedArticleObjects =& $publishedArticleDao->getPublishedArticlesByJournalId($journal->getJournalId(), $rangeInfo);
 			while ($publishedArticle =& $publishedArticleObjects->next()) {
 				$publishedArticles[]['articles'][] = &$publishedArticle;

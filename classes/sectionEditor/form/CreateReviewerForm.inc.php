@@ -118,7 +118,7 @@ class CreateReviewerForm extends Form {
 	 */
 	function execute() {
 		$userDao = &DAORegistry::getDAO('UserDAO');
-		$user = &new User();
+		$user = new User();
 
 		$user->setSalutation($this->getData('salutation'));
 		$user->setFirstName($this->getData('firstName'));
@@ -171,7 +171,7 @@ class CreateReviewerForm extends Form {
 
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		$journal = &Request::getJournal();
-		$role = &new Role();
+		$role = new Role();
 		$role->setJournalId($journal->getJournalId());
 		$role->setUserId($userId);
 		$role->setRoleId(ROLE_ID_REVIEWER);
@@ -180,7 +180,7 @@ class CreateReviewerForm extends Form {
 		if ($sendNotify) {
 			// Send welcome email to user
 			import('mail.MailTemplate');
-			$mail = &new MailTemplate('REVIEWER_REGISTER');
+			$mail = new MailTemplate('REVIEWER_REGISTER');
 			$mail->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 			$mail->assignParams(array('username' => $this->getData('username'), 'password' => $password, 'userFullName' => $user->getFullName()));
 			$mail->addRecipient($user->getEmail(), $user->getFullName());

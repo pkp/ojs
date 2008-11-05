@@ -169,7 +169,7 @@ class SearchHandler extends PKPHandler {
 		$totalResults = count($articleIds);
 		$articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 		import('core.VirtualArrayIterator');
-		$results = &new VirtualArrayIterator(ArticleSearch::formatResults($articleIds), $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
+		$results = new VirtualArrayIterator(ArticleSearch::formatResults($articleIds), $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign_by_ref('results', $results);

@@ -125,7 +125,7 @@ class poToCountries extends CommandLineTool {
 	}
 }
 
-$tool = &new poToCountries(isset($argv) ? $argv : array());
+$tool = new poToCountries(isset($argv) ? $argv : array());
 $tool->execute();
 
 ?>

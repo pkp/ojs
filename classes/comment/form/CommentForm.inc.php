@@ -55,7 +55,7 @@ class CommentForm extends Form {
 		$this->comment = &$commentDao->getComment($commentId, $articleId);
 
 		import('captcha.CaptchaManager');
-		$captchaManager =& new CaptchaManager();
+		$captchaManager = new CaptchaManager();
 		$this->captchaEnabled = ($captchaManager->isEnabled() && Config::getVar('captcha', 'captcha_on_comments'))?true:false;
 
 		if (isset($this->comment)) {
@@ -114,7 +114,7 @@ class CommentForm extends Form {
 
 		if ($this->captchaEnabled) {
 			import('captcha.CaptchaManager');
-			$captchaManager =& new CaptchaManager();
+			$captchaManager = new CaptchaManager();
 			$captcha =& $captchaManager->createCaptcha();
 			if ($captcha) {
 				$templateMgr->assign('captchaEnabled', $this->captchaEnabled);
@@ -161,7 +161,7 @@ class CommentForm extends Form {
 
 		$comment = $this->comment;
 		if (!isset($comment)) {
-			$comment = &new Comment();
+			$comment = new Comment();
 		}
 
 		$user = &Request::getUser();

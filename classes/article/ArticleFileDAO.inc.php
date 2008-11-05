@@ -233,7 +233,7 @@ class ArticleFileDAO extends DAO {
 	 * @return ArticleFile
 	 */
 	function &_returnArticleFileFromRow(&$row) {
-		$articleFile = &new ArticleFile();
+		$articleFile = new ArticleFile();
 		$articleFile->setFileId($row['file_id']);
 		$articleFile->setSourceFileId($row['source_file_id']);
 		$articleFile->setSourceRevision($row['source_revision']);

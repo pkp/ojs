@@ -162,7 +162,7 @@ class ArticleGalleyDAO extends DAO {
 	 */
 	function &_returnGalleyFromRow(&$row) {
 		if ($row['html_galley']) {
-			$galley = &new ArticleHTMLGalley();
+			$galley = new ArticleHTMLGalley();
 
 			// HTML-specific settings
 			$galley->setStyleFileId($row['style_file_id']);
@@ -175,7 +175,7 @@ class ArticleGalleyDAO extends DAO {
 			$galley->setImageFiles($images); 
 
 		} else {
-			$galley = &new ArticleGalley();
+			$galley = new ArticleGalley();
 		}
 		$galley->setGalleyId($row['galley_id']);
 		$galley->setPublicGalleyId($row['public_galley_id']);

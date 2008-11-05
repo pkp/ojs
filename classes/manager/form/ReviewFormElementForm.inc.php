@@ -106,7 +106,7 @@ class ReviewFormElementForm extends Form {
 		}
 
 		if (!isset($reviewFormElement)) {
-			$reviewFormElement =& new ReviewFormElement();
+			$reviewFormElement = new ReviewFormElement();
 			$reviewFormElement->setReviewFormId($this->reviewFormId);
 			$reviewFormElement->setSequence(REALLY_BIG_NUMBER);
 		}

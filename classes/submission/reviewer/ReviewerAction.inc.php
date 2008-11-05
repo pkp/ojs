@@ -51,7 +51,7 @@ class ReviewerAction extends Action {
 		// he has not previously done so.
 		if ($reviewAssignment->getDateConfirmed() == null) {
 			import('mail.ArticleMailTemplate');
-			$email = &new ArticleMailTemplate($reviewerSubmission, $decline?'REVIEW_DECLINE':'REVIEW_CONFIRM');
+			$email = new ArticleMailTemplate($reviewerSubmission, $decline?'REVIEW_DECLINE':'REVIEW_CONFIRM');
 			// Must explicitly set sender because we may be here on an access
 			// key, in which case the user is not technically logged in
 			$email->setFrom($reviewer->getEmail(), $reviewer->getFullName());
@@ -71,7 +71,7 @@ class ReviewerAction extends Action {
 				import('article.log.ArticleLog');
 				import('article.log.ArticleEventLogEntry');
 
-				$entry = &new ArticleEventLogEntry();
+				$entry = new ArticleEventLogEntry();
 				$entry->setArticleId($reviewAssignment->getArticleId());
 				$entry->setUserId($reviewer->getUserId());
 				$entry->setDateLogged(Core::getCurrentDate());
@@ -134,7 +134,7 @@ class ReviewerAction extends Action {
 		// no recommendation has previously been submitted.
 		if ($reviewAssignment->getRecommendation() === null || $reviewAssignment->getRecommendation === '') {
 			import('mail.ArticleMailTemplate');
-			$email = &new ArticleMailTemplate($reviewerSubmission, 'REVIEW_COMPLETE');
+			$email = new ArticleMailTemplate($reviewerSubmission, 'REVIEW_COMPLETE');
 			// Must explicitly set sender because we may be here on an access
 			// key, in which case the user is not technically logged in
 			$email->setFrom($reviewer->getEmail(), $reviewer->getFullName());
@@ -155,7 +155,7 @@ class ReviewerAction extends Action {
 				import('article.log.ArticleLog');
 				import('article.log.ArticleEventLogEntry');
 
-				$entry = &new ArticleEventLogEntry();
+				$entry = new ArticleEventLogEntry();
 				$entry->setArticleId($reviewAssignment->getArticleId());
 				$entry->setUserId($reviewer->getUserId());
 				$entry->setDateLogged(Core::getCurrentDate());
@@ -207,7 +207,7 @@ class ReviewerAction extends Action {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');		
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 
-		$articleFileManager = &new ArticleFileManager($reviewAssignment->getArticleId());
+		$articleFileManager = new ArticleFileManager($reviewAssignment->getArticleId());
 
 		// Only upload the file if the reviewer has yet to submit a recommendation
 		// and if review forms are not used
@@ -235,7 +235,7 @@ class ReviewerAction extends Action {
 			$userDao =& DAORegistry::getDAO('UserDAO');
 			$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId());
 
-			$entry = &new ArticleEventLogEntry();
+			$entry = new ArticleEventLogEntry();
 			$entry->setArticleId($reviewAssignment->getArticleId());
 			$entry->setUserId($reviewer->getUserId());
 			$entry->setDateLogged(Core::getCurrentDate());
@@ -262,7 +262,7 @@ class ReviewerAction extends Action {
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 
 		if (!HookRegistry::call('ReviewerAction::deleteReviewerVersion', array(&$reviewAssignment, &$fileId, &$revision))) {
-			$articleFileManager = &new ArticleFileManager($reviewAssignment->getArticleId());
+			$articleFileManager = new ArticleFileManager($reviewAssignment->getArticleId());
 			$articleFileManager->deleteFile($fileId, $revision);
 		}
         }
@@ -277,7 +277,7 @@ class ReviewerAction extends Action {
 		if (!HookRegistry::call('ReviewerAction::viewPeerReviewComments', array(&$user, &$article, &$reviewId))) {
 			import("submission.form.comment.PeerReviewCommentForm");
 
-			$commentForm = &new PeerReviewCommentForm($article, $reviewId, ROLE_ID_REVIEWER);
+			$commentForm = new PeerReviewCommentForm($article, $reviewId, ROLE_ID_REVIEWER);
 			$commentForm->setUser($user);
 			$commentForm->initData();
 			$commentForm->setData('reviewId', $reviewId);
@@ -296,7 +296,7 @@ class ReviewerAction extends Action {
 		if (!HookRegistry::call('ReviewerAction::postPeerReviewComment', array(&$user, &$article, &$reviewId, &$emailComment))) {
 			import("submission.form.comment.PeerReviewCommentForm");
 
-			$commentForm = &new PeerReviewCommentForm($article, $reviewId, ROLE_ID_REVIEWER);
+			$commentForm = new PeerReviewCommentForm($article, $reviewId, ROLE_ID_REVIEWER);
 			$commentForm->setUser($user);
 			$commentForm->readInputData();
 
@@ -324,7 +324,7 @@ class ReviewerAction extends Action {
 		if (!HookRegistry::call('ReviewerAction::editReviewFormResponse', array($reviewId, $reviewFormId))) {
 			import('submission.form.ReviewFormResponseForm');
 
-			$reviewForm =& new ReviewFormResponseForm($reviewId, $reviewFormId);
+			$reviewForm = new ReviewFormResponseForm($reviewId, $reviewFormId);
 			$reviewForm->initData();
 			$reviewForm->display();
 		}
@@ -339,7 +339,7 @@ class ReviewerAction extends Action {
 		if (!HookRegistry::call('ReviewerAction::saveReviewFormResponse', array($reviewId, $reviewFormId))) {
 			import('submission.form.ReviewFormResponseForm');
 
-			$reviewForm =& new ReviewFormResponseForm($reviewId, $reviewFormId);
+			$reviewForm = new ReviewFormResponseForm($reviewId, $reviewFormId);
 			$reviewForm->readInputData();
 			if ($reviewForm->validate()) {
 				$reviewForm->execute();
@@ -408,7 +408,7 @@ class ReviewerAction extends Action {
 		if (!HookRegistry::call('ReviewerAction::editComment', array(&$article, &$comment, &$reviewId))) {
 			import ("submission.form.comment.EditCommentForm");
 
-			$commentForm =& new EditCommentForm ($article, $comment);
+			$commentForm = new EditCommentForm ($article, $comment);
 			$commentForm->initData();
 			$commentForm->setData('reviewId', $reviewId);
 			$commentForm->display(array('reviewId' => $reviewId));

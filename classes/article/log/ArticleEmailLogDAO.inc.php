@@ -79,7 +79,7 @@ class ArticleEmailLogDAO extends DAO {
 			$params, $rangeInfo
 		);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnLogEntryFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnLogEntryFromRow');
 		return $returner;
 	}
 
@@ -89,7 +89,7 @@ class ArticleEmailLogDAO extends DAO {
 	 * @return ArticleEmailLogEntry
 	 */
 	function &_returnLogEntryFromRow(&$row) {
-		$entry = &new ArticleEmailLogEntry();
+		$entry = new ArticleEmailLogEntry();
 		$entry->setLogId($row['log_id']);
 		$entry->setArticleId($row['article_id']);
 		$entry->setSenderId($row['sender_id']);

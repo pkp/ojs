@@ -59,7 +59,7 @@ class Action {
 	function viewMetadata($article, $roleId) {
 		if (!HookRegistry::call('Action::viewMetadata', array(&$article, &$roleId))) {
 			import("submission.form.MetadataForm");
-			$metadataForm = &new MetadataForm($article, $roleId);
+			$metadataForm = new MetadataForm($article, $roleId);
 			if ($metadataForm->getCanEdit() && $metadataForm->isLocaleResubmit()) {
 				$metadataForm->readInputData();
 			} else {
@@ -76,7 +76,7 @@ class Action {
 	function saveMetadata($article) {
 		if (!HookRegistry::call('Action::saveMetadata', array(&$article))) {
 			import("submission.form.MetadataForm");
-			$metadataForm = &new MetadataForm($article);
+			$metadataForm = new MetadataForm($article);
 			$metadataForm->readInputData();
 
 			if (!$metadataForm->validate()) {
@@ -167,7 +167,7 @@ class Action {
 	 */
 	function downloadFile($articleId, $fileId, $revision = null) {
 		import('file.ArticleFileManager');
-		$articleFileManager = &new ArticleFileManager($articleId);
+		$articleFileManager = new ArticleFileManager($articleId);
 		return $articleFileManager->downloadFile($fileId, $revision);
 	}
 
@@ -179,7 +179,7 @@ class Action {
 	 */
 	function viewFile($articleId, $fileId, $revision = null) {
 		import('file.ArticleFileManager');
-		$articleFileManager = &new ArticleFileManager($articleId);
+		$articleFileManager = new ArticleFileManager($articleId);
 		return $articleFileManager->viewFile($fileId, $revision);
 	}
 
@@ -234,7 +234,7 @@ class Action {
 		if (!HookRegistry::call('Action::editComment', array(&$article, &$comment))) {
 			import("submission.form.comment.EditCommentForm");
 
-			$commentForm = &new EditCommentForm($article, $comment);
+			$commentForm = new EditCommentForm($article, $comment);
 			$commentForm->initData();
 			$commentForm->display();
 		}
@@ -248,7 +248,7 @@ class Action {
 		if (!HookRegistry::call('Action::saveComment', array(&$article, &$comment, &$emailComment))) {
 			import("submission.form.comment.EditCommentForm");
 
-			$commentForm = &new EditCommentForm($article, $comment);
+			$commentForm = new EditCommentForm($article, $comment);
 			$commentForm->readInputData();
 
 			if ($commentForm->validate()) {

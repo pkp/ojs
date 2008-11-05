@@ -130,7 +130,7 @@ class ArticleGalleyForm extends Form {
 	 */
 	function execute($fileName = null) {
 		import('file.ArticleFileManager');
-		$articleFileManager = &new ArticleFileManager($this->articleId);
+		$articleFileManager = new ArticleFileManager($this->articleId);
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 
 		$fileName = isset($fileName) ? $fileName : 'galleyFile';
@@ -189,9 +189,9 @@ class ArticleGalleyForm extends Form {
 
 			if (isset($fileType) && strstr($fileType, 'html')) {
 				// Assume HTML galley
-				$galley = &new ArticleHTMLGalley();
+				$galley = new ArticleHTMLGalley();
 			} else {
-				$galley = &new ArticleGalley();
+				$galley = new ArticleGalley();
 			}
 
 			$galley->setArticleId($this->articleId);
@@ -239,7 +239,7 @@ class ArticleGalleyForm extends Form {
 	 */
 	function uploadImage() {
 		import('file.ArticleFileManager');
-		$fileManager = &new ArticleFileManager($this->articleId);
+		$fileManager = new ArticleFileManager($this->articleId);
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 
 		$fileName = 'imageFile';
@@ -268,7 +268,7 @@ class ArticleGalleyForm extends Form {
 	 */
 	function deleteImage($imageId) {
 		import('file.ArticleFileManager');
-		$fileManager = &new ArticleFileManager($this->articleId);
+		$fileManager = new ArticleFileManager($this->articleId);
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 
 		if (isset($this->galley)) {

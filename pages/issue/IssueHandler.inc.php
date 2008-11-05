@@ -43,7 +43,7 @@ class IssueHandler extends PKPHandler {
 
 		if ($issue != null) {
 			import('file.PublicFileManager');
-			$publicFileManager = &new PublicFileManager();
+			$publicFileManager = new PublicFileManager();
 
 			if ($styleFileName = $issue->getStyleFileName()) {
 				$templateMgr->addStyleSheet(
@@ -184,7 +184,7 @@ class IssueHandler extends PKPHandler {
 			$locale = Locale::getLocale();
 
 			import('file.PublicFileManager');
-			$publicFileManager = &new PublicFileManager();
+			$publicFileManager = new PublicFileManager();
 			$coverPagePath = Request::getBaseUrl() . '/';
 			$coverPagePath .= $publicFileManager->getJournalFilesPath($journalId) . '/';
 			$templateMgr->assign('coverPagePath', $coverPagePath);
@@ -203,7 +203,7 @@ class IssueHandler extends PKPHandler {
 				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 				$publishedArticles = &$publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId(), true);
 
-				$publicFileManager = &new PublicFileManager();
+				$publicFileManager = new PublicFileManager();
 				$templateMgr->assign('publishedArticles', $publishedArticles);
 				$showToc = true;
 			}
@@ -250,7 +250,7 @@ class IssueHandler extends PKPHandler {
 
 		if ($styleFileName = $issue->getStyleFileName()) {
 			import('file.PublicFileManager');
-			$publicFileManager = &new PublicFileManager();
+			$publicFileManager = new PublicFileManager();
 			$templateMgr->addStyleSheet(
 				Request::getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journalId) . '/' . $styleFileName
 			);
@@ -274,7 +274,7 @@ class IssueHandler extends PKPHandler {
 		$publishedIssuesIterator = $issueDao->getPublishedIssues($journal->getJournalId(), $rangeInfo);
 
 		import('file.PublicFileManager');
-		$publicFileManager = &new PublicFileManager();
+		$publicFileManager = new PublicFileManager();
 		$coverPagePath = Request::getBaseUrl() . '/';
 		$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
 

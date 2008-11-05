@@ -105,7 +105,7 @@ class AdminFunctionsHandler extends AdminHandler {
 		$templateMgr = &TemplateManager::getManager();
 
 		// Update contents of configuration file
-		$configParser = &new ConfigParser();
+		$configParser = new ConfigParser();
 		if (!$configParser->updateConfig(Config::getConfigFileName(), $configData)) {
 			// Error reading config file (this should never happen)
 			$templateMgr->assign('errorMsg', 'admin.systemConfigFileReadError');

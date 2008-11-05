@@ -31,7 +31,7 @@ class RTSearchHandler extends RTAdminHandler {
 		$context = &$rtDao->getContext($contextId);
 
 		import('rt.ojs.form.SearchForm');
-		$searchForm = &new SearchForm(null, $contextId, $versionId);
+		$searchForm = new SearchForm(null, $contextId, $versionId);
 
 		if (isset($args[2]) && $args[2]=='save') {
 			$searchForm->readInputData();
@@ -89,7 +89,7 @@ class RTSearchHandler extends RTAdminHandler {
 		if (isset($version) && isset($context) && isset($search) && $context->getVersionId() == $version->getVersionId() && $search->getContextId() == $context->getContextId()) {
 			import('rt.ojs.form.SearchForm');
 			RTAdminHandler::setupTemplate(true, $version, $context, $search);
-			$searchForm = &new SearchForm($searchId, $contextId, $versionId);
+			$searchForm = new SearchForm($searchId, $contextId, $versionId);
 			$searchForm->initData();
 			$searchForm->display();
 		}
@@ -133,7 +133,7 @@ class RTSearchHandler extends RTAdminHandler {
 
 		if (isset($version) && isset($context) && isset($search) && $context->getVersionId() == $version->getVersionId() && $search->getContextId() == $context->getContextId()) {
 			import('rt.ojs.form.SearchForm');
-			$searchForm = &new SearchForm($searchId, $contextId, $versionId);
+			$searchForm = new SearchForm($searchId, $contextId, $versionId);
 			$searchForm->readInputData();
 			$searchForm->execute();
 		}

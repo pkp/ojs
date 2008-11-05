@@ -65,7 +65,7 @@ class METSGatewayPlugin extends GatewayPlugin {
 			case 'settings':
 				$journal =& Request::getJournal();
 				$this->import('SettingsForm');
-				$form =& new SettingsForm($this, $journal->getJournalId());
+				$form = new SettingsForm($this, $journal->getJournalId());
 				if (Request::getUserVar('save')) {
 					$form->readInputData();
 					if ($form->validate()) {

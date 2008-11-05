@@ -123,7 +123,7 @@ class PluginManagementHandler extends ManagerHandler {
 		
 		if (Request::getUserVar('uploadPlugin')) {
 			import('file.TemporaryFileManager');
-			$temporaryFileManager = &new TemporaryFileManager();
+			$temporaryFileManager = new TemporaryFileManager();
 			$user = &Request::getUser();
 		
 			if ($temporaryFile = $temporaryFileManager->handleUpload('newPlugin', $user->getUserId())) {
@@ -188,7 +188,7 @@ class PluginManagementHandler extends ManagerHandler {
 			$installFile = $pluginDest . DIRECTORY_SEPARATOR . INSTALL_FILE;
 			if(FileManager::fileExists($installFile)) {
 				$params = PluginManagementHandler::setConnectionParams();
-				$installer = &new Install($params, $installFile, true);
+				$installer = new Install($params, $installFile, true);
 
 				if ($installer->execute()) {
 					$newVersion = &$installer->getNewVersion();
@@ -270,7 +270,7 @@ class PluginManagementHandler extends ManagerHandler {
 			$upgradeFile = $pluginDest . DIRECTORY_SEPARATOR . UPGRADE_FILE;
 			if(FileManager::fileExists($upgradeFile)) {
 				$params = PluginManagementHandler::setConnectionParams();
-				$installer = &new Upgrade($params, $upgradeFile, true);
+				$installer = new Upgrade($params, $upgradeFile, true);
 
 				if (!$installer->execute()) {
 					$templateMgr->assign('message', array('manager.plugins.upgradeFailed', $installer->getErrorString()));

@@ -254,7 +254,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		list($journal, $submission) = SubmissionCopyeditHandler::validate($articleId);
 
 		import('file.PublicFileManager');
-		$publicFileManager = &new PublicFileManager();
+		$publicFileManager = new PublicFileManager();
 		$publicFileManager->removeJournalFile($journal->getJournalId(),$submission->getFileName($formLocale));
 		$submission->setFileName('', $formLocale);
 		$submission->setOriginalFileName('', $formLocale);

@@ -312,7 +312,7 @@ class NativeImportDom {
 
 		if (($node = $coverNode->getChildByName('image'))) {
 			import('file.PublicFileManager');
-			$publicFileManager = &new PublicFileManager();
+			$publicFileManager = new PublicFileManager();
 			$newName = 'cover_issue_' . $issue->getIssueId()."_{$locale}"  . '.';
 
 			if (($href = $node->getChildByName('href'))) {
@@ -516,7 +516,7 @@ class NativeImportDom {
 			// we're not maintaining a list of created
 			// sections to delete in case the import fails.
 			unset($section);
-			$section = &new Section();
+			$section = new Section();
 
 			$section->setTitle($titles, null);
 			$section->setAbbrev($abbrevs, null);
@@ -706,20 +706,20 @@ class NativeImportDom {
 
 		// Create submission mangement records
 		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
-		$copyeditorSubmission = &new CopyeditorSubmission();
+		$copyeditorSubmission = new CopyeditorSubmission();
 		$copyeditorSubmission->setArticleId($article->getArticleId());
 		$copyeditorSubmission->setCopyeditorId(0);
 		$copyeditorSubmissionDao->insertCopyeditorSubmission($copyeditorSubmission);
 
 		$layoutDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
-		$layoutAssignment = &new LayoutAssignment();
+		$layoutAssignment = new LayoutAssignment();
 		$layoutAssignment->setArticleId($article->getArticleId());
 		$layoutAssignment->setEditorId(0);
 		$layoutAssignment->setDateAcknowledged(Core::getCurrentDate()); // Make sure that imported articles go directly into the Archive. FIXME?
 		$layoutDao->insertLayoutAssignment($layoutAssignment);
 
 		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
-		$proofAssignment = &new ProofAssignment();
+		$proofAssignment = new ProofAssignment();
 		$proofAssignment->setArticleId($article->getArticleId());
 		$proofAssignment->setProofreaderId(0);
 		$proofAssignmentDao->insertProofAssignment($proofAssignment);
@@ -737,7 +737,7 @@ class NativeImportDom {
 		);
 
 		// Insert published article entry.
-		$publishedArticle = &new PublishedArticle();
+		$publishedArticle = new PublishedArticle();
 		$publishedArticle->setArticleId($article->getArticleId());
 		$publishedArticle->setIssueId($issue->getIssueId());
 
@@ -762,7 +762,7 @@ class NativeImportDom {
 
 		/* --- Galleys (html or otherwise handled simultaneously) --- */
 		import('file.ArticleFileManager');
-		$articleFileManager = &new ArticleFileManager($article->getArticleId());
+		$articleFileManager = new ArticleFileManager($article->getArticleId());
 
 		/* --- Handle galleys --- */
 		$hasErrors = false;
@@ -806,7 +806,7 @@ class NativeImportDom {
 		$journalSupportedLocales = array_keys($journal->getSupportedLocaleNames()); // => journal locales must be set up before
 		$journalPrimaryLocale = $journal->getPrimaryLocale();
 		
-		$author = &new Author();
+		$author = new Author();
 		if (($node = $authorNode->getChildByName('firstname'))) $author->setFirstName($node->getValue());
 		if (($node = $authorNode->getChildByName('middlename'))) $author->setMiddleName($node->getValue());
 		if (($node = $authorNode->getChildByName('lastname'))) $author->setLastName($node->getValue());
@@ -850,8 +850,8 @@ class NativeImportDom {
 
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 
-		if ($isHtml) $galley = &new ArticleHtmlGalley();
-		else $galley = &new ArticleGalley();
+		if ($isHtml) $galley = new ArticleHtmlGalley();
+		else $galley = new ArticleGalley();
 
 		$galley->setArticleId($article->getArticleId());
 		$galley->setSequence($galleyCount);
@@ -979,7 +979,7 @@ class NativeImportDom {
 
 		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 			
-		$suppFile = &new SuppFile();
+		$suppFile = new SuppFile();
 		$suppFile->setArticleId($article->getArticleId());
 
 		for ($index=0; ($node = $suppNode->getChildByName('title', $index)); $index++) {

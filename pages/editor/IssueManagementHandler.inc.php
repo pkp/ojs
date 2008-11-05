@@ -112,7 +112,7 @@ class IssueManagementHandler extends EditorHandler {
 		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 		$templateMgr->assign('helpTopicId', 'publishing.createIssue');
 
-		$issueForm = &new IssueForm('editor/issues/createIssue.tpl');
+		$issueForm = new IssueForm('editor/issues/createIssue.tpl');
 
 		if ($issueForm->isLocaleResubmit()) {
 			$issueForm->readInputData();
@@ -130,7 +130,7 @@ class IssueManagementHandler extends EditorHandler {
 		IssueManagementHandler::setupTemplate(EDITOR_SECTION_ISSUES);
 
 		import('issue.form.IssueForm');
-		$issueForm = &new IssueForm('editor/issues/createIssue.tpl');
+		$issueForm = new IssueForm('editor/issues/createIssue.tpl');
 		$issueForm->readInputData();
 
 		if ($issueForm->validate()) {
@@ -158,7 +158,7 @@ class IssueManagementHandler extends EditorHandler {
 		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 
 		import('issue.form.IssueForm');
-		$issueForm = &new IssueForm('editor/issues/issueData.tpl');
+		$issueForm = new IssueForm('editor/issues/issueData.tpl');
 
 		if ($issueForm->isLocaleResubmit()) {
 			$issueForm->readInputData();
@@ -191,7 +191,7 @@ class IssueManagementHandler extends EditorHandler {
 		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 
 		import('issue.form.IssueForm');
-		$issueForm = &new IssueForm('editor/issues/issueData.tpl');
+		$issueForm = new IssueForm('editor/issues/issueData.tpl');
 		$issueForm->readInputData();
 
 		if ($issueForm->validate($issueId)) {
@@ -215,7 +215,7 @@ class IssueManagementHandler extends EditorHandler {
 
 		import('file.PublicFileManager');
 		$journal = &Request::getJournal();
-		$publicFileManager = &new PublicFileManager();
+		$publicFileManager = new PublicFileManager();
 		$publicFileManager->removeJournalFile($journal->getJournalId(),$issue->getFileName($formLocale));
 		$issue->setFileName('', $formLocale);
 		$issue->setOriginalFileName('', $formLocale);
@@ -237,7 +237,7 @@ class IssueManagementHandler extends EditorHandler {
 
 		import('file.PublicFileManager');
 		$journal = &Request::getJournal();
-		$publicFileManager = &new PublicFileManager();
+		$publicFileManager = new PublicFileManager();
 		$publicFileManager->removeJournalFile($journal->getJournalId(),$issue->getStyleFileName());
 		$issue->setStyleFileName('');
 		$issue->setOriginalStyleFileName('');
@@ -554,7 +554,7 @@ class IssueManagementHandler extends EditorHandler {
 		$templateMgr = &TemplateManager::getManager();
 
 		import('mail.MassMail');
-		$email = &new MassMail('PUBLISH_NOTIFY');
+		$email = new MassMail('PUBLISH_NOTIFY');
 
 		if (Request::getUserVar('send') && !$email->hasErrors()) {
 			$email->addRecipient($user->getEmail(), $user->getFullName());

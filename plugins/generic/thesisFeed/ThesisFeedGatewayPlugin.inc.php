@@ -128,7 +128,7 @@ class ThesisFeedGatewayPlugin extends GatewayPlugin {
 		$journalId = $journal->getJournalId();
 		if ($limitRecentItems && $recentItems > 0) {
 			import('db.DBResultRange');
-			$rangeInfo =& new DBResultRange($recentItems, 1);
+			$rangeInfo = new DBResultRange($recentItems, 1);
 			$theses =& $thesisDao->getActiveThesesByJournalId($journalId, null, null, null, null, null, null, $rangeInfo);
 		} else {
 			$theses =& $thesisDao->getActiveThesesByJournalId($journalId);

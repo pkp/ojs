@@ -29,7 +29,7 @@ class RegistrationHandler extends UserHandler {
 		if ($journal != null) {
 			import('user.form.RegistrationForm');
 
-			$regForm = &new RegistrationForm();
+			$regForm = new RegistrationForm();
 			if ($regForm->isLocaleResubmit()) {
 				$regForm->readInputData();
 			} else {
@@ -54,7 +54,7 @@ class RegistrationHandler extends UserHandler {
 		RegistrationHandler::validate();
 		import('user.form.RegistrationForm');
 
-		$regForm = &new RegistrationForm();
+		$regForm = new RegistrationForm();
 		$regForm->readInputData();
 
 		if ($regForm->validate()) {
@@ -122,7 +122,7 @@ class RegistrationHandler extends UserHandler {
 
 		// Checks user & token
 		import('security.AccessKeyManager');
-		$accessKeyManager =& new AccessKeyManager();
+		$accessKeyManager = new AccessKeyManager();
 		$accessKeyHash = AccessKeyManager::generateKeyHash($accessKeyCode);
 		$accessKey =& $accessKeyManager->validateKey(
 			'RegisterContext',

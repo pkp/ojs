@@ -144,7 +144,7 @@ class SubscriptionHandler extends ManagerHandler {
 				$templateMgr->assign('subscriptionTitle', 'manager.subscriptions.editTitle');	
 			}
 
-			$subscriptionForm = &new SubscriptionForm($subscriptionId, $userId);
+			$subscriptionForm = new SubscriptionForm($subscriptionId, $userId);
 			$subscriptionForm->initData();
 			$subscriptionForm->display();
 
@@ -223,7 +223,7 @@ class SubscriptionHandler extends ManagerHandler {
 
 		if (($subscriptionId != null && $subscriptionDao->getSubscriptionJournalId($subscriptionId) == $journal->getJournalId()) || $subscriptionId == null) {
 
-			$subscriptionForm = &new SubscriptionForm($subscriptionId);
+			$subscriptionForm = new SubscriptionForm($subscriptionId);
 			$subscriptionForm->readInputData();
 
 			if ($subscriptionForm->validate()) {
@@ -344,7 +344,7 @@ class SubscriptionHandler extends ManagerHandler {
 				$templateMgr->assign('subscriptionTypeTitle', 'manager.subscriptionTypes.editTitle');	
 			}
 
-			$subscriptionTypeForm = &new SubscriptionTypeForm($subscriptionTypeId);
+			$subscriptionTypeForm = new SubscriptionTypeForm($subscriptionTypeId);
 			if ($subscriptionTypeForm->isLocaleResubmit()) {
 				$subscriptionTypeForm->readInputData();
 			} else {
@@ -378,7 +378,7 @@ class SubscriptionHandler extends ManagerHandler {
 
 		if (($subscriptionTypeId != null && $subscriptionTypeDao->getSubscriptionTypeJournalId($subscriptionTypeId) == $journal->getJournalId()) || $subscriptionTypeId == null) {
 
-			$subscriptionTypeForm = &new SubscriptionTypeForm($subscriptionTypeId);
+			$subscriptionTypeForm = new SubscriptionTypeForm($subscriptionTypeId);
 			$subscriptionTypeForm->readInputData();
 
 			if ($subscriptionTypeForm->validate()) {
@@ -392,7 +392,7 @@ class SubscriptionHandler extends ManagerHandler {
 					$templateMgr->assign('subscriptionTypeTitle', 'manager.subscriptionTypes.createTitle');
 					$templateMgr->assign('subscriptionTypeCreated', '1');
 
-					$subscriptionTypeForm = &new SubscriptionTypeForm($subscriptionTypeId);
+					$subscriptionTypeForm = new SubscriptionTypeForm($subscriptionTypeId);
 					$subscriptionTypeForm->initData();
 					$subscriptionTypeForm->display();
 
@@ -436,7 +436,7 @@ class SubscriptionHandler extends ManagerHandler {
 			$templateMgr->assign('scheduledTasksEnabled', true);
 		}
 
-		$subscriptionPolicyForm = &new SubscriptionPolicyForm();
+		$subscriptionPolicyForm = new SubscriptionPolicyForm();
 		if ($subscriptionPolicyForm->isLocaleResubmit()) {
 			$subscriptionPolicyForm->readInputData();
 		} else {
@@ -453,7 +453,7 @@ class SubscriptionHandler extends ManagerHandler {
 
 		import('subscription.form.SubscriptionPolicyForm');
 
-		$subscriptionPolicyForm = &new SubscriptionPolicyForm();
+		$subscriptionPolicyForm = new SubscriptionPolicyForm();
 		$subscriptionPolicyForm->readInputData();
 
 		if ($subscriptionPolicyForm->validate()) {

@@ -126,7 +126,7 @@ class SubscriptionDAO extends DAO {
 	 * @return Subscription
 	 */
 	function &_returnSubscriptionFromRow(&$row) {
-		$subscription = &new Subscription();
+		$subscription = new Subscription();
 		$subscription->setSubscriptionId($row['subscription_id']);
 		$subscription->setJournalId($row['journal_id']);
 		$subscription->setUserId($row['user_id']);
@@ -363,7 +363,7 @@ class SubscriptionDAO extends DAO {
 			'SELECT s.* FROM subscriptions s, users u WHERE s.user_id = u.user_id ORDER BY u.last_name ASC, s.subscription_id', false, $rangeInfo
 		);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnSubscriptionFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnSubscriptionFromRow');
 
 		return $returner;
 	}
@@ -449,7 +449,7 @@ class SubscriptionDAO extends DAO {
 			$rangeInfo
 		);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnSubscriptionFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnSubscriptionFromRow');
 
 		return $returner;
 	}
@@ -481,7 +481,7 @@ class SubscriptionDAO extends DAO {
 			), $rangeInfo
 		);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnSubscriptionFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnSubscriptionFromRow');
 
 		return $returner;
 	}

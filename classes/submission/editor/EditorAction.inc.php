@@ -40,7 +40,7 @@ class EditorAction extends SectionEditorAction {
 		if (!isset($sectionEditor)) return true;
 
 		import('mail.ArticleMailTemplate');
-		$email = &new ArticleMailTemplate($editorSubmission, 'EDITOR_ASSIGN');
+		$email = new ArticleMailTemplate($editorSubmission, 'EDITOR_ASSIGN');
 
 		if ($user->getUserId() === $sectionEditorId || !$email->isEnabled() || ($send && !$email->hasErrors())) {
 			HookRegistry::call('EditorAction::assignEditor', array(&$editorSubmission, &$sectionEditor, &$isEditor, &$email));
@@ -49,7 +49,7 @@ class EditorAction extends SectionEditorAction {
 				$email->send();
 			}
 
-			$editAssignment = &new EditAssignment();
+			$editAssignment = new EditAssignment();
 			$editAssignment->setArticleId($articleId);
 			$editAssignment->setCanEdit(1);
 			$editAssignment->setCanReview(1);
@@ -132,13 +132,13 @@ class EditorAction extends SectionEditorAction {
 			import('file.ArticleFileManager');
 			$copyeditFile =& $sectionEditorSubmission->getCopyeditFile();
 			$fileType = $copyeditFile->getFileType();
-			$articleFileManager =& new ArticleFileManager($article->getArticleId());
+			$articleFileManager = new ArticleFileManager($article->getArticleId());
 			$fileId = $articleFileManager->copyPublicFile($copyeditFile->getFilePath(), $fileType);
 
 			if (strstr($fileType, 'html')) {
-				$galley =& new ArticleHTMLGalley();
+				$galley = new ArticleHTMLGalley();
 			} else {
-				$galley =& new ArticleGalley();
+				$galley = new ArticleGalley();
 			}
 			$galley->setArticleId($article->getArticleId());
 			$galley->setFileId($fileId);

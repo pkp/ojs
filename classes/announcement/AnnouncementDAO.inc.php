@@ -64,7 +64,7 @@ class AnnouncementDAO extends DAO {
 	 * @return Announcement
 	 */
 	function &_returnAnnouncementFromRow(&$row) {
-		$announcement = &new Announcement();
+		$announcement = new Announcement();
 		$announcement->setAnnouncementId($row['announcement_id']);
 		$announcement->setJournalId($row['journal_id']);
 		$announcement->setTypeId($row['type_id']);
@@ -186,7 +186,7 @@ class AnnouncementDAO extends DAO {
 			'SELECT * FROM announcements WHERE journal_id = ? ORDER BY announcement_id DESC', $journalId, $rangeInfo
 		);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnAnnouncementFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnAnnouncementFromRow');
 		return $returner;
 	}
 
@@ -200,7 +200,7 @@ class AnnouncementDAO extends DAO {
 			'SELECT * FROM announcements WHERE type_id = ? ORDER BY announcement_id DESC', $typeId, $rangeInfo
 		);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnAnnouncementFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnAnnouncementFromRow');
 		return $returner;
 	}
 
@@ -214,7 +214,7 @@ class AnnouncementDAO extends DAO {
 			'SELECT * FROM announcements WHERE journal_id = ? ORDER BY announcement_id DESC LIMIT ?', array($journalId, $numAnnouncements), $rangeInfo
 		);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnAnnouncementFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnAnnouncementFromRow');
 		return $returner;
 	}
 
@@ -228,7 +228,7 @@ class AnnouncementDAO extends DAO {
 			'SELECT * FROM announcements WHERE journal_id = ? AND (date_expire IS NULL OR date_expire > CURRENT_DATE) ORDER BY announcement_id DESC', $journalId, $rangeInfo
 		);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnAnnouncementFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnAnnouncementFromRow');
 		return $returner;
 	}
 
@@ -242,7 +242,7 @@ class AnnouncementDAO extends DAO {
 			'SELECT * FROM announcements WHERE journal_id = ? AND (date_expire IS NULL OR date_expire > CURRENT_DATE) ORDER BY announcement_id DESC LIMIT ?', array($journalId, $numAnnouncements), $rangeInfo
 		);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnAnnouncementFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnAnnouncementFromRow');
 		return $returner;
 	}
 

@@ -76,12 +76,12 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 		switch ($category) {
 			case 'blocks':
 				$this->import('AnnouncementFeedBlockPlugin');
-				$blockPlugin =& new AnnouncementFeedBlockPlugin();
+				$blockPlugin = new AnnouncementFeedBlockPlugin();
 				$plugins[$blockPlugin->getSeq()][$blockPlugin->getPluginPath()] =& $blockPlugin;
 				break;
 			case 'gateways':
 				$this->import('AnnouncementFeedGatewayPlugin');
-				$gatewayPlugin =& new AnnouncementFeedGatewayPlugin();
+				$gatewayPlugin = new AnnouncementFeedGatewayPlugin();
 				$plugins[$gatewayPlugin->getSeq()][$gatewayPlugin->getPluginPath()] =& $gatewayPlugin;
 				break;
 		}
@@ -148,7 +148,7 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 
 				$this->import('SettingsForm');
-				$form =& new SettingsForm($this, $journal->getJournalId());
+				$form = new SettingsForm($this, $journal->getJournalId());
 
 				if (Request::getUserVar('save')) {
 					$form->readInputData();

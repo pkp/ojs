@@ -21,7 +21,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 	 function payments($args) {
 		parent::validate();
 		import('manager.form.PaymentSettingsForm');
-		$form =& new PaymentSettingsForm();
+		$form = new PaymentSettingsForm();
 
 		$journal = &Request::getJournal();
 		$journalSettingsDAO =& DAORegistry::getDAO('JournalSettingsDAO');
@@ -45,7 +45,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 	 function savePaymentSettings($args) {
 		parent::validate();
 		import('manager.form.PaymentSettingsForm');
-		$settingsForm =& new PaymentSettingsForm();
+		$settingsForm = new PaymentSettingsForm();
 
 		$journal = &Request::getJournal();
 		$journalSettingsDAO =& DAORegistry::getDAO('JournalSettingsDAO');
@@ -123,7 +123,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 
 		import('manager.form.PayMethodSettingsForm');
 		
-		$settingsForm = &new PayMethodSettingsForm();
+		$settingsForm = new PayMethodSettingsForm();
 		$settingsForm->initData();
 		$settingsForm->display();
 	}
@@ -140,7 +140,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 
 		import('manager.form.PayMethodSettingsForm');
 
-		$settingsForm = &new PayMethodSettingsForm();
+		$settingsForm = new PayMethodSettingsForm();
 		$settingsForm->readInputData();
 
  		$templateMgr = &TemplateManager::getManager();

@@ -23,7 +23,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 		if (parent::register($category, $path)) {
 			if ($this->getEnabled()) {
 				$this->import('ArticleXMLGalleyDAO');
-				$xmlGalleyDao = &new ArticleXMLGalleyDAO();
+				$xmlGalleyDao = new ArticleXMLGalleyDAO();
 				DAORegistry::registerDAO('ArticleXMLGalleyDAO', $xmlGalleyDao);
 
 				// NB: These hooks essentially modify/overload the existing ArticleGalleyDAO methods
@@ -74,7 +74,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 		$articleId =& $args[1];
 		$returner =& $args[2];
 
-		$xmlGalleyDao = &new ArticleXMLGalleyDAO();
+		$xmlGalleyDao = new ArticleXMLGalleyDAO();
 		$xmlGalley = $xmlGalleyDao->_getXMLGalleyFromId($galleyId, $articleId);
 		if ($xmlGalley) {
 			$xmlGalley->setGalleyId($galleyId);
@@ -213,7 +213,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 
 		$this->import('XMLGalleySettingsForm');
-		$form =& new XMLGalleySettingsForm($this, $journal->getJournalId());
+		$form = new XMLGalleySettingsForm($this, $journal->getJournalId());
 
 		switch ($verb) {
 			case 'test':
@@ -260,7 +260,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 					import('file.JournalFileManager');
 
 					// if the a valid custom XSL is uploaded, process it
-					$fileManager = &new JournalFileManager($journal);
+					$fileManager = new JournalFileManager($journal);
 					if ($fileManager->uploadedFileExists('customXSL')) {
 
 						// check type and extension -- should be text/xml and xsl, respectively
@@ -298,7 +298,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 					import('file.JournalFileManager');
 
 					// if the a valid custom XSL is uploaded, process it
-					$fileManager = &new JournalFileManager($journal);
+					$fileManager = new JournalFileManager($journal);
 
 					// delete the file from the journal files folder
 					$fileName = $this->getSetting($journal->getJournalId(), 'customXSL');

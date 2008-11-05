@@ -145,7 +145,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 
 		import('file.PublicFileManager');
-		$fileManager = &new PublicFileManager();
+		$fileManager = new PublicFileManager();
 		if ($fileManager->uploadedFileExists($settingName)) {
 			$type = $fileManager->getUploadedFileType($settingName);
 			$extension = $fileManager->getImageExtension($type);
@@ -186,7 +186,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 		$setting = $settingsDao->getSetting($journal->getJournalId(), $settingName);
 
 		import('file.PublicFileManager');
-		$fileManager = &new PublicFileManager();
+		$fileManager = new PublicFileManager();
 		if ($fileManager->removeJournalFile($journal->getJournalId(), $locale !== null ? $setting[$locale]['uploadName'] : $setting['uploadName'] )) {
 			$returner = $settingsDao->deleteSetting($journal->getJournalId(), $settingName, $locale);
 			// Ensure page header is refreshed
@@ -212,7 +212,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 
 		import('file.PublicFileManager');
-		$fileManager = &new PublicFileManager();
+		$fileManager = new PublicFileManager();
 		if ($fileManager->uploadedFileExists($settingName)) {
 			$type = $fileManager->getUploadedFileType($settingName);
 			if ($type != 'text/plain' && $type != 'text/css') {

@@ -28,7 +28,7 @@ class RTContextHandler extends RTAdminHandler {
 		$version = &$rtDao->getVersion($versionId, $journal->getJournalId());
 
 		import('rt.ojs.form.ContextForm');
-		$contextForm = &new ContextForm(null, $versionId);
+		$contextForm = new ContextForm(null, $versionId);
 
 		if (isset($args[1]) && $args[1]=='save') {
 			$contextForm->readInputData();
@@ -81,7 +81,7 @@ class RTContextHandler extends RTAdminHandler {
 		if (isset($version) && isset($context) && $context->getVersionId() == $version->getVersionId()) {
 			import('rt.ojs.form.ContextForm');
 			RTAdminHandler::setupTemplate(true, $version, $context);
-			$contextForm = &new ContextForm($contextId, $versionId);
+			$contextForm = new ContextForm($contextId, $versionId);
 			$contextForm->initData();
 			$contextForm->display();
 		}
@@ -121,7 +121,7 @@ class RTContextHandler extends RTAdminHandler {
 
 		if (isset($version) && isset($context) && $context->getVersionId() == $version->getVersionId()) {
 			import('rt.ojs.form.ContextForm');
-			$contextForm = &new ContextForm($contextId, $versionId);
+			$contextForm = new ContextForm($contextId, $versionId);
 			$contextForm->readInputData();
 			$contextForm->execute();
 		}

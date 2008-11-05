@@ -63,7 +63,7 @@ class ArticleReportDAO extends DAO {
 				$journalId
 			)
 		);
-		$articlesReturner =& new DBRowIterator($result);
+		$articlesReturner = new DBRowIterator($result);
 
 		$result =& $this->retrieve(
 			'SELECT	MAX(ed.date_decided) AS date,
@@ -75,7 +75,7 @@ class ArticleReportDAO extends DAO {
 			GROUP BY ed.article_id',
 			array($journalId)
 		);
-		$decisionDatesIterator =& new DBRowIterator($result);
+		$decisionDatesIterator = new DBRowIterator($result);
 		$decisionsReturner = array();
 		while ($row =& $decisionDatesIterator->next()) {
 			$result =& $this->retrieve(
@@ -89,7 +89,7 @@ class ArticleReportDAO extends DAO {
 					$row['article_id']
 				)
 			);
-			$decisionsReturner[] =& new DBRowIterator($result);
+			$decisionsReturner[] = new DBRowIterator($result);
 			unset($result);
 		}
 		
@@ -116,7 +116,7 @@ class ArticleReportDAO extends DAO {
 					aas.setting_name = \'biography\'',
 				array($journalId, $article->getArticleId())
 			);
-			$authorIterator =& new DBRowIterator($result);
+			$authorIterator = new DBRowIterator($result);
 			$authorsReturner[] = $authorIterator;
 			$index++;
 			unset($article);

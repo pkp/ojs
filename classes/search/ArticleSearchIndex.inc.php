@@ -64,7 +64,7 @@ class ArticleSearchIndex {
 	 */
 	function updateFileIndex($articleId, $type, $fileId) {
 		import('file.ArticleFileManager');
-		$fileMgr = &new ArticleFileManager($articleId);
+		$fileMgr = new ArticleFileManager($articleId);
 		$file = &$fileMgr->getFile($fileId);
 
 		if (isset($file)) {

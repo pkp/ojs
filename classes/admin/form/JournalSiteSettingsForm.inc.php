@@ -110,7 +110,7 @@ class JournalSiteSettingsForm extends Form {
 		}
 
 		if (!isset($journal)) {
-			$journal = &new Journal();
+			$journal = new Journal();
 		}
 
 		$journal->setPath($this->getData('path'));
@@ -134,7 +134,7 @@ class JournalSiteSettingsForm extends Form {
 			$sessionManager = &SessionManager::getManager();
 			$userSession = &$sessionManager->getUserSession();
 			if ($userSession->getUserId() != null && $userSession->getUserId() != 0 && !empty($journalId)) {
-				$role = &new Role();
+				$role = new Role();
 				$role->setJournalId($journalId);
 				$role->setUserId($userSession->getUserId());
 				$role->setRoleId(ROLE_ID_JOURNAL_MANAGER);
@@ -163,12 +163,12 @@ class JournalSiteSettingsForm extends Form {
 
 			// Install the default RT versions.
 			import('rt.ojs.JournalRTAdmin');
-			$journalRtAdmin = &new JournalRTAdmin($journalId);
+			$journalRtAdmin = new JournalRTAdmin($journalId);
 			$journalRtAdmin->restoreVersions(false);
 
 			// Create a default "Articles" section
 			$sectionDao = &DAORegistry::getDAO('SectionDAO');
-			$section = &new Section();
+			$section = new Section();
 			$section->setJournalId($journal->getJournalId());
 			$section->setTitle(Locale::translate('section.default.title'), $journal->getPrimaryLocale());
 			$section->setAbbrev(Locale::translate('section.default.abbrev'), $journal->getPrimaryLocale());

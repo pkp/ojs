@@ -75,7 +75,7 @@ class ReviewFormDAO extends DAO {
 	 * @return ReviewForm
 	 */
 	function &_returnReviewFormFromRow(&$row) {
-		$reviewForm =& new ReviewForm();
+		$reviewForm = new ReviewForm();
 		$reviewForm->setReviewFormId($row['review_form_id']);
 		$reviewForm->setJournalId($row['journal_id']);
 		$reviewForm->setSequence($row['seq']);
@@ -244,7 +244,7 @@ class ReviewFormDAO extends DAO {
 			$journalId
 		);
 
-		$returner =& new DAOResultFactory($result, $this, '_returnReviewFormFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnReviewFormFromRow');
 		return $returner;
 	}
 
@@ -279,7 +279,7 @@ class ReviewFormDAO extends DAO {
 			$journalId, $rangeInfo
 		);
 
-		$returner =& new DAOResultFactory($result, $this, '_returnReviewFormFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnReviewFormFromRow');
 		return $returner;
 	}
 
@@ -315,7 +315,7 @@ class ReviewFormDAO extends DAO {
 			$journalId, $rangeInfo
 		);
 
-		$returner =& new DAOResultFactory($result, $this, '_returnReviewFormFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnReviewFormFromRow');
 		return $returner;
 	}
 
@@ -350,7 +350,7 @@ class ReviewFormDAO extends DAO {
 			$journalId, $rangeInfo
 		);
 
-		$returner =& new DAOResultFactory($result, $this, '_returnReviewFormFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnReviewFormFromRow');
 		return $returner;
 	}
 

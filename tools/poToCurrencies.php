@@ -130,7 +130,7 @@ class poToCurrencies extends CommandLineTool {
 	}
 }
 
-$tool = &new poToCurrencies(isset($argv) ? $argv : array());
+$tool = new poToCurrencies(isset($argv) ? $argv : array());
 $tool->execute();
 
 ?>

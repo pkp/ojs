@@ -50,7 +50,7 @@ class PayPalPlugin extends PaymethodPlugin {
 			if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return null;
 			$this->addLocaleData();
 			$this->import('PayPalDAO');
-			$payPalDao =& new PayPalDAO();
+			$payPalDao = new PayPalDAO();
 			DAORegistry::registerDAO('PayPalDAO', $payPalDao);
 			return true;
 		}
@@ -150,7 +150,7 @@ class PayPalPlugin extends PaymethodPlugin {
 		import('mail.MailTemplate');
 		$contactName = $journal->getSetting('contactName');
 		$contactEmail = $journal->getSetting('contactEmail');
-		$mail = &new MailTemplate('PAYPAL_INVESTIGATE_PAYMENT');
+		$mail = new MailTemplate('PAYPAL_INVESTIGATE_PAYMENT');
 		$mail->setFrom($contactEmail, $contactName);
 		$mail->addRecipient($contactEmail, $contactName);
 

@@ -205,7 +205,7 @@ class PhpMyVisitesPlugin extends GenericPlugin {
 			case 'settings':
 				if ($this->getEnabled()) {
 					$this->import('PhpMyVisitesSettingsForm');
-					$form = &new PhpMyVisitesSettingsForm($this, $journal->getJournalId());
+					$form = new PhpMyVisitesSettingsForm($this, $journal->getJournalId());
 					if (Request::getUserVar('save')) {
 						$form->readInputData();
 						if ($form->validate()) {

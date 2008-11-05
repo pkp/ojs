@@ -29,7 +29,7 @@ class RTDAO extends DAO {
 	 * @return RT
 	 */
 	function &getJournalRTByJournal(&$journal) {
-		$rt = &new JournalRT($journal->getJournalId());
+		$rt = new JournalRT($journal->getJournalId());
 		$rt->setEnabled($journal->getSetting('rtEnabled')?true:false);
 		$rt->setVersion((int) $journal->getSetting('rtVersionId'));
 		$rt->setAbstract($journal->getSetting('rtAbstract')?true:false);
@@ -91,7 +91,7 @@ class RTDAO extends DAO {
 			$pagingInfo
 		);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnVersionFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnVersionFromRow');
 		return $returner;
 	}
 
@@ -210,7 +210,7 @@ class RTDAO extends DAO {
 	 * @return RTVersion
 	 */
 	function &_returnVersionFromRow(&$row) {
-		$version = &new RTVersion();
+		$version = new RTVersion();
 		$version->setVersionId($row['version_id']);
 		$version->setKey($row['version_key']);
 		$version->setLocale($row['locale']);
@@ -231,7 +231,7 @@ class RTDAO extends DAO {
 	 * @return RTSearch
 	 */
 	function &_returnSearchFromRow(&$row) {
-		$search = &new RTSearch();
+		$search = new RTSearch();
 		$search->setSearchId($row['search_id']);
 		$search->setContextId($row['context_id']);
 		$search->setTitle($row['title']);
@@ -289,7 +289,7 @@ class RTDAO extends DAO {
 			$pagingInfo
 		);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnContextFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnContextFromRow');
 		return $returner;
 	}
 
@@ -401,7 +401,7 @@ class RTDAO extends DAO {
 	 * @return RTContext
 	 */
 	function &_returnContextFromRow(&$row) {
-		$context = &new RTContext();
+		$context = new RTContext();
 		$context->setContextId($row['context_id']);
 		$context->setVersionId($row['version_id']);
 		$context->setTitle($row['title']);
@@ -464,7 +464,7 @@ class RTDAO extends DAO {
 			$pagingInfo
 		);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnSearchFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnSearchFromRow');
 		return $returner;
 	}
 

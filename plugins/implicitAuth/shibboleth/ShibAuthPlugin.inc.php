@@ -165,7 +165,7 @@ class ShibAuthPlugin extends ImplicitAuthPlugin {
 		
 		// Create a new user object and set it's fields from the header variables
 		
-		$user = &new User();
+		$user = new User();
 		
 		$user->setAuthStr($_SERVER[$uin]);
 
@@ -230,7 +230,7 @@ class ShibAuthPlugin extends ImplicitAuthPlugin {
 				
 				// make them an admin
 				
-				$role = &new Role();
+				$role = new Role();
 				$role->setJournalId(0);
 				$role->setUserId($userID);
 				$role->setRoleId(ROLE_ID_SITE_ADMIN);

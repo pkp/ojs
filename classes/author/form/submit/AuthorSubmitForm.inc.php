@@ -90,7 +90,7 @@ class AuthorSubmitForm extends Form {
 		$sectionEditors =& $sectionEditorsDao->getEditorsBySectionId($journal->getJournalId(), $sectionId);
 
 		foreach ($sectionEditors as $sectionEditorEntry) {
-			$editAssignment =& new EditAssignment();
+			$editAssignment = new EditAssignment();
 			$editAssignment->setArticleId($article->getArticleId());
 			$editAssignment->setEditorId($sectionEditorEntry['user']->getUserId());
 			$editAssignment->setCanReview($sectionEditorEntry['canReview']);

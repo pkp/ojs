@@ -112,7 +112,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 			$journal = &Request::getJournal();
 			$user = &Request::getUser();
 
-			$this->article = &new Article();
+			$this->article = new Article();
 			$this->article->setUserId($user->getUserId());
 			$this->article->setJournalId($journal->getJournalId());
 			$this->article->setSectionId($this->getData('sectionId'));
@@ -123,7 +123,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 
 			// Set user to initial author
 			$user = &Request::getUser();
-			$author = &new Author();
+			$author = new Author();
 			$author->setFirstName($user->getFirstName());
 			$author->setMiddleName($user->getMiddleName());
 			$author->setLastName($user->getLastName());

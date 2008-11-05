@@ -51,7 +51,7 @@ class ProfileForm extends Form {
 		if (!$profileImage) return false;
 
 		import('file.PublicFileManager');
-		$fileManager = &new PublicFileManager();
+		$fileManager = new PublicFileManager();
 		if ($fileManager->removeSiteFile($profileImage['uploadName'])) {
 			return $user->updateSetting('profileImage', null);
 		} else {
@@ -61,7 +61,7 @@ class ProfileForm extends Form {
 
 	function uploadProfileImage() {
 		import('file.PublicFileManager');
-		$fileManager = &new PublicFileManager();
+		$fileManager = new PublicFileManager();
 
 		$user =& $this->user;
 
@@ -262,7 +262,7 @@ class ProfileForm extends Form {
 		// Roles
 		$journal =& Request::getJournal();
 		if ($journal) {
-			$role =& new Role();
+			$role = new Role();
 			$role->setUserId($user->getUserId());
 			$role->setJournalId($journal->getJournalId());
 			if ($journal->getSetting('allowRegReviewer')) {

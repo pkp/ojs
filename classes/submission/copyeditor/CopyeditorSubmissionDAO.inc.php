@@ -101,7 +101,7 @@ class CopyeditorSubmissionDAO extends DAO {
 	 * @return CopyeditorSubmission
 	 */
 	function &_returnCopyeditorSubmissionFromRow(&$row) {
-		$copyeditorSubmission = &new CopyeditorSubmission();
+		$copyeditorSubmission = new CopyeditorSubmission();
 
 		// Article attributes
 		$this->articleDao->_articleFromRow($copyeditorSubmission, $row);
@@ -360,7 +360,7 @@ class CopyeditorSubmissionDAO extends DAO {
 			count($params)==1?array_shift($params):$params,
 			$rangeInfo);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnCopyeditorSubmissionFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnCopyeditorSubmissionFromRow');
 		return $returner;
 	}
 

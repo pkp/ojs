@@ -294,7 +294,7 @@ class EditCommentForm extends Form {
 	 */
 	function email($recipients) {
 		import('mail.ArticleMailTemplate');
-		$email = &new ArticleMailTemplate($this->article, 'SUBMISSION_COMMENT');
+		$email = new ArticleMailTemplate($this->article, 'SUBMISSION_COMMENT');
 		$journal =& Request::getJournal();
 		if ($journal) $email->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 

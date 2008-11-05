@@ -42,7 +42,7 @@ class ArticleHTMLGalley extends ArticleGalley {
 	 */
 	function getHTMLContents() {
 		import('file.ArticleFileManager');
-		$fileManager = &new ArticleFileManager($this->getArticleId());
+		$fileManager = new ArticleFileManager($this->getArticleId());
 		$contents = $fileManager->readFile($this->getFileId());
 		$journal =& Request::getJournal();
 
@@ -172,14 +172,14 @@ class ArticleHTMLGalley extends ArticleGalley {
 			case 'sitepublic':
 					array_shift($urlParts);
 					import ('file.PublicFileManager');
-					$publicFileManager = &new PublicFileManager();
+					$publicFileManager = new PublicFileManager();
 					$url = Request::getBaseUrl() . '/' . $publicFileManager->getSiteFilesPath() . '/' . implode('/', $urlParts) . ($anchor?'#' . $anchor:'');
 				break;
 			case 'public':
 					array_shift($urlParts);
 					$journal = &Request::getJournal();
 					import ('file.PublicFileManager');
-					$publicFileManager = &new PublicFileManager();
+					$publicFileManager = new PublicFileManager();
 					$url = Request::getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/' . implode('/', $urlParts) . ($anchor?'#' . $anchor:'');
 				break;
 		}

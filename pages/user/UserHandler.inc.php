@@ -162,7 +162,7 @@ class UserHandler extends PKPHandler {
 		}
 
 		if ($journal->getSetting($setting)) {
-			$role =& new Role();
+			$role = new Role();
 			$role->setJournalId($journal->getJournalId());
 			$role->setRoleId($roleId);
 			$role->setUserId($user->getUserId());
@@ -262,7 +262,7 @@ class UserHandler extends PKPHandler {
 	function viewCaptcha($args) {
 		$captchaId = (int) array_shift($args);
 		import('captcha.CaptchaManager');
-		$captchaManager =& new CaptchaManager();
+		$captchaManager = new CaptchaManager();
 		if ($captchaManager->isEnabled()) {
 			$captchaDao =& DAORegistry::getDAO('CaptchaDAO');
 			$captcha =& $captchaDao->getCaptcha($captchaId);

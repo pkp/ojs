@@ -217,7 +217,7 @@ class PeopleHandler extends ManagerHandler {
 		if ($users != null && is_array($users) && $rolePath != '' && $rolePath != 'admin') {
 			for ($i=0; $i<count($users); $i++) {
 				if (!$roleDao->roleExists($journal->getJournalId(), $users[$i], $roleId)) {
-					$role = &new Role();
+					$role = new Role();
 					$role->setJournalId($journal->getJournalId());
 					$role->setUserId($users[$i]);
 					$role->setRoleId($roleId);
@@ -351,7 +351,7 @@ class PeopleHandler extends ManagerHandler {
 		import('manager.form.UserManagementForm');
 
 		$templateMgr->assign('currentUrl', Request::url(null, null, 'people', 'all'));
-		$userForm = &new UserManagementForm($userId);
+		$userForm = new UserManagementForm($userId);
 		if ($userForm->isLocaleResubmit()) {
 			$userForm->readInputData();
 		} else {
@@ -682,7 +682,7 @@ class PeopleHandler extends ManagerHandler {
 
 		import('manager.form.UserManagementForm');
 
-		$userForm = &new UserManagementForm($userId);
+		$userForm = new UserManagementForm($userId);
 		$userForm->readInputData();
 
 		if ($userForm->validate()) {
@@ -692,7 +692,7 @@ class PeopleHandler extends ManagerHandler {
 				$templateMgr = &TemplateManager::getManager();
 				$templateMgr->assign('currentUrl', Request::url(null, null, 'people', 'all'));
 				$templateMgr->assign('userCreated', true);
-				$userForm = &new UserManagementForm();
+				$userForm = new UserManagementForm();
 				$userForm->initData();
 				$userForm->display();
 

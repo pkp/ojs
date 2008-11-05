@@ -79,7 +79,7 @@ class CopyAssignmentDAO extends DAO {
 	 * @return CopyAssignment
 	 */
 	function &_returnCopyAssignmentFromRow(&$row) {
-		$copyAssignment = &new CopyAssignment();
+		$copyAssignment = new CopyAssignment();
 
 		// Copyedit Assignment
 		$copyAssignment->setCopyedId($row['copyed_id']);

@@ -30,7 +30,7 @@ class ThesisPlugin extends GenericPlugin {
 		$this->addLocaleData();
 		if ($success && $this->getEnabled()) {
 			$this->import('ThesisDAO');
-			$thesisDao = &new ThesisDAO();
+			$thesisDao = new ThesisDAO();
 			$returner = &DAORegistry::registerDAO('ThesisDAO', $thesisDao);
 
 			// Handler for public thesis abstract pages
@@ -234,7 +234,7 @@ class ThesisPlugin extends GenericPlugin {
 			case 'settings':
 				if ($this->getEnabled()) {
 					$this->import('ThesisSettingsForm');
-					$form = &new ThesisSettingsForm($this, $journal->getJournalId());
+					$form = new ThesisSettingsForm($this, $journal->getJournalId());
 					if (Request::getUserVar('save')) {
 						$form->readInputData();
 						if ($form->validate()) {
@@ -288,7 +288,7 @@ class ThesisPlugin extends GenericPlugin {
 						$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 						$journalSettings = &$journalSettingsDao->getJournalSettings($journal->getJournalId());
 
-						$thesisForm = &new ThesisForm($thesisId);
+						$thesisForm = new ThesisForm($thesisId);
 						$thesisForm->initData();
 						$this->setBreadCrumbs(true);
 						$templateMgr->assign('journalSettings', $journalSettings);
@@ -308,7 +308,7 @@ class ThesisPlugin extends GenericPlugin {
 
 					if (($thesisId != null && $thesisDao->getThesisJournalId($thesisId) == $journal->getJournalId()) || $thesisId == null) {
 
-						$thesisForm = &new ThesisForm($thesisId);
+						$thesisForm = new ThesisForm($thesisId);
 						$thesisForm->readInputData();
 
 						if ($thesisForm->validate()) {

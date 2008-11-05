@@ -71,7 +71,7 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 	function uploadSubmissionFile($fileName) {
 		import("file.ArticleFileManager");
 
-		$articleFileManager = &new ArticleFileManager($this->articleId);
+		$articleFileManager = new ArticleFileManager($this->articleId);
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 
 		if ($articleFileManager->uploadedFileExists($fileName)) {

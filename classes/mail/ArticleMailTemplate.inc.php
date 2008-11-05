@@ -123,7 +123,7 @@ class ArticleMailTemplate extends MailTemplate {
 	function log() {
 		import('article.log.ArticleEmailLogEntry');
 		import('article.log.ArticleLog');
-		$entry = &new ArticleEmailLogEntry();
+		$entry = new ArticleEmailLogEntry();
 		$article = &$this->article;
 
 		// Log data
@@ -144,7 +144,7 @@ class ArticleMailTemplate extends MailTemplate {
 
 		// Add attachments
 		import('file.ArticleFileManager');
-		$articleFileManager =& new ArticleFileManager($article->getArticleId());
+		$articleFileManager = new ArticleFileManager($article->getArticleId());
 		foreach ($this->getAttachmentFiles() as $attachment) {
 			$articleFileManager->temporaryFileToArticleFile(
 				$attachment,

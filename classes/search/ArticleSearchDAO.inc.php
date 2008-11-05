@@ -65,7 +65,7 @@ class ArticleSearchDAO extends DAO {
 		import('db.DBRowIterator');
 		if (empty($phrase)) {
 			$results = false;
-			$returner = &new DBRowIterator($results);
+			$returner = new DBRowIterator($results);
 			return $returner;
 		}
 
@@ -122,7 +122,7 @@ class ArticleSearchDAO extends DAO {
 			3600 * $cacheHours // Cache for 24 hours
 		);
 
-		$returner = &new DBRowIterator($result);
+		$returner = new DBRowIterator($result);
 		return $returner;
 	}
 

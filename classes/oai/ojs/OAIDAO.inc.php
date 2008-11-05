@@ -324,7 +324,7 @@ class OAIDAO extends DAO {
 	 * @return OAIRecord
 	 */
 	function &_returnRecordFromRow(&$row) {
-		$record =& new OAIRecord();
+		$record = new OAIRecord();
 
 		$articleId = $row['article_id'];
 		if ($this->journalSettingsDao->getSetting($row['journal_id'], 'enablePublicArticleId')) {
@@ -429,7 +429,7 @@ class OAIDAO extends DAO {
 		$journal =& $this->getJournal($row['journal_id']);
 		$section =& $this->getSection($row['section_id']);
 
-		$record =& new OAIRecord();
+		$record = new OAIRecord();
 
 		$record->identifier = $this->oai->articleIdToIdentifier($row['article_id']);
 		$record->datestamp = OAIUtils::UTCDate(strtotime($this->datetimeFromDB($row['date_published'])));
@@ -471,7 +471,7 @@ class OAIDAO extends DAO {
 
 		} else {
 			$row =& $result->getRowAssoc(false);
-			$token =& new OAIResumptionToken($row['token'], $row['record_offset'], unserialize($row['params']), $row['expire']);
+			$token = new OAIResumptionToken($row['token'], $row['record_offset'], unserialize($row['params']), $row['expire']);
 		}
 
 		$result->Close();

@@ -96,7 +96,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 	 * @return LayoutEditorSubmission
 	 */
 	function &_returnSubmissionFromRow(&$row) {
-		$submission = &new LayoutEditorSubmission();
+		$submission = new LayoutEditorSubmission();
 		$this->articleDao->_articleFromRow($submission, $row);
 		$submission->setLayoutAssignment($this->layoutDao->getLayoutAssignmentByArticleId($row['article_id']));
 
@@ -270,7 +270,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 			$rangeInfo
 		);
 
-		$returner = &new DAOResultFactory($result, $this, '_returnSubmissionFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnSubmissionFromRow');
 		return $returner;
 	}
 

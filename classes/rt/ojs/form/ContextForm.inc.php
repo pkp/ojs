@@ -111,7 +111,7 @@ class ContextForm extends Form {
 
 		$context = $this->context;
 		if (!isset($context)) {
-			$context = &new RTContext();
+			$context = new RTContext();
 			$context->setVersionId($this->versionId);
 		}
 

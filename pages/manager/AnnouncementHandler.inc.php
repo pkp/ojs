@@ -86,7 +86,7 @@ class AnnouncementHandler extends ManagerHandler {
 				$templateMgr->assign('announcementTitle', 'manager.announcements.editTitle');	
 			}
 
-			$announcementForm = &new AnnouncementForm($announcementId);
+			$announcementForm = new AnnouncementForm($announcementId);
 			if ($announcementForm->isLocaleResubmit()) {
 				$announcementForm->readInputData();
 			} else {
@@ -120,7 +120,7 @@ class AnnouncementHandler extends ManagerHandler {
 
 		if (($announcementId != null && $announcementDao->getAnnouncementJournalId($announcementId) == $journal->getJournalId()) || $announcementId == null) {
 
-			$announcementForm = &new AnnouncementForm($announcementId);
+			$announcementForm = new AnnouncementForm($announcementId);
 			$announcementForm->readInputData();
 
 			if ($announcementForm->validate()) {
@@ -217,7 +217,7 @@ class AnnouncementHandler extends ManagerHandler {
 				$templateMgr->assign('announcementTypeTitle', 'manager.announcementTypes.editTitle');	
 			}
 
-			$announcementTypeForm = &new AnnouncementTypeForm($typeId);
+			$announcementTypeForm = new AnnouncementTypeForm($typeId);
 			if ($announcementTypeForm->isLocaleResubmit()) {
 				$announcementTypeForm->readInputData();
 			} else {
@@ -251,7 +251,7 @@ class AnnouncementHandler extends ManagerHandler {
 
 		if (($typeId != null && $announcementTypeDao->getAnnouncementTypeJournalId($typeId) == $journal->getJournalId()) || $typeId == null) {
 
-			$announcementTypeForm = &new AnnouncementTypeForm($typeId);
+			$announcementTypeForm = new AnnouncementTypeForm($typeId);
 			$announcementTypeForm->readInputData();
 
 			if ($announcementTypeForm->validate()) {

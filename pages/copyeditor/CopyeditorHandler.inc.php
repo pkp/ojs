@@ -85,7 +85,7 @@ class CopyeditorHandler extends PKPHandler {
 		));
 
 		import('issue.IssueAction');
-		$issueAction = &new IssueAction();
+		$issueAction = new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
 		$templateMgr->assign('helpTopicId', 'editorial.copyeditorsRole.submissions');
 		$templateMgr->display('copyeditor/index.tpl');

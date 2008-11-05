@@ -52,7 +52,7 @@ class NativeExportDom {
 					$imageNode = &XMLCustomWriter::createElement($doc, 'image');
 					XMLCustomWriter::appendChild($coverNode, $imageNode);
 					import('file.PublicFileManager');
-					$publicFileManager = &new PublicFileManager();
+					$publicFileManager = new PublicFileManager();
 					$coverPagePath = $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
 					$coverPagePath .= $coverFile;
 					$embedNode = &XMLCustomWriter::createChildWithText($doc, $imageNode, 'embed', base64_encode($publicFileManager->readFile($coverPagePath)));
@@ -288,7 +288,7 @@ class NativeExportDom {
 		$isHtml = $galley->isHTMLGalley();
 
 		import('file.ArticleFileManager');
-		$articleFileManager = &new ArticleFileManager($article->getArticleId());
+		$articleFileManager = new ArticleFileManager($article->getArticleId());
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 
 		$root = &XMLCustomWriter::createElement($doc, $isHtml?'htmlgalley':'galley');
@@ -414,7 +414,7 @@ class NativeExportDom {
 		}
 		
 		import('file.ArticleFileManager');
-		$articleFileManager = &new ArticleFileManager($article->getArticleId());
+		$articleFileManager = new ArticleFileManager($article->getArticleId());
 		$fileNode = &XMLCustomWriter::createElement($doc, 'file');
 		XMLCustomWriter::appendChild($root, $fileNode);
 		$embedNode = &XMLCustomWriter::createChildWithText($doc, $fileNode, 'embed', base64_encode($articleFileManager->readFile($suppFile->getFileId())));

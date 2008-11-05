@@ -111,7 +111,7 @@ class ThesisHandler extends PKPHandler {
 			$templateMgr->assign('journalSettings', $journalSettings);
 			$thesisDao = &DAORegistry::getDAO('ThesisDAO');
 
-			$thesisForm = &new StudentThesisForm();
+			$thesisForm = new StudentThesisForm();
 			$thesisForm->initData();
 			$thesisForm->display();
 
@@ -187,7 +187,7 @@ class ThesisHandler extends PKPHandler {
 			$thesisDao = &DAORegistry::getDAO('ThesisDAO');
 			$thesisPlugin->import('StudentThesisForm');
 
-			$thesisForm = &new StudentThesisForm();
+			$thesisForm = new StudentThesisForm();
 			$thesisForm->readInputData();
 
 			if ($thesisForm->validate()) {
@@ -218,7 +218,7 @@ class ThesisHandler extends PKPHandler {
 		parent::validate();
 		$captchaId = (int) array_shift($args);
 		import('captcha.CaptchaManager');
-		$captchaManager =& new CaptchaManager();
+		$captchaManager = new CaptchaManager();
 		if ($captchaManager->isEnabled()) {
 			$captchaDao =& DAORegistry::getDAO('CaptchaDAO');
 			$captcha =& $captchaDao->getCaptcha($captchaId);

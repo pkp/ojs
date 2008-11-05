@@ -57,7 +57,7 @@ class UserSettingsDAO extends DAO {
 			array($name, $value, (int) $journalId)
 		);
 
-		$returner =& new DAOResultFactory($result, $userDao, '_returnUserFromRow');
+		$returner = new DAOResultFactory($result, $userDao, '_returnUserFromRow');
 		return $returner;
 	}
 
