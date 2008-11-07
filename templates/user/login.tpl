@@ -27,7 +27,7 @@
 {if $implicitAuth}
 	<a href="{url page="login" op="implicitAuthLogin"}">Login</a>	
 {else}
-	<form method="post" action="{url page="login" op="signIn"}">
+	<form name="login" method="post" action="{url page="login" op="signIn"}">
 {/if}
 
 <input type="hidden" name="source" value="{$source|escape}" />
@@ -63,7 +63,7 @@
 
 <script type="text/javascript">
 <!--
-	document.login.{if $username}password{else}username{/if}.focus();
+	document.login.{if $username}loginPassword{else}loginUsername{/if}.focus();
 // -->
 </script>
 </form>
