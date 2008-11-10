@@ -64,6 +64,7 @@ class preCompile extends CommandLineTool {
 		$this->templateMgr->register_function('print_issue_id', array(new IssueAction(), 'smartyPrintIssueId'));
 		$this->templateMgr->register_function('fieldLabel', array(new Form(null), 'smartyFieldLabel'));
 		$this->templateMgr->register_modifier('validate_url', 'smarty_rtadmin_validate_url');
+		$this->templateMgr->register_function('form_language_chooser', array(new Form(null), 'smartyFormLanguageChooser'));
 
 		import('plugins.ImportExportPlugin'); // plugin_url ALSO USED IN GatewayPlugin (!!)
 		$this->templateMgr->register_function('plugin_url', array(new ImportExportPlugin(), 'smartyPluginUrl'));

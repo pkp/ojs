@@ -13,8 +13,9 @@
 # $Id$
 #
 
-CVSROOT=:pserver:anonymous@pkp.sfu.ca:/cvs
-MODULE=ojs2
+CVSROOT=:pserver:anonymous@lib-pkp.lib.sfu.ca:/cvs
+OJSMODULE=ojs2
+PKPMODULE=pkp
 PRECOMPILE=1
 
 if [ -z "$1" ]; then
@@ -30,18 +31,10 @@ BUILD=$PREFIX-$VERSION
 TMPDIR=`mktemp -d $PREFIX.XXXXXX` || exit 1
 
 EXCLUDE="dbscripts/xml/data/locale/en_US/sample.xml		\
-dbscripts/xml/data/locale/te_ST					\
 dbscripts/xml/data/sample.xml					\
 docs/dev							\
-docs/doxygen							\
-lib/adodb/CHANGED_FILES						\
-lib/adodb/diff							\
-lib/smarty/CHANGED_FILES					\
-lib/smarty/diff							\
 locale/te_ST							\
-cache/*.php							\
 tools/buildpkg.sh						\
-tools/cvs2cl.pl							\
 tools/genLocaleReport.sh					\
 tools/genTestLocale.php						\
 tools/test"
@@ -49,9 +42,19 @@ tools/test"
 
 cd $TMPDIR
 
-echo -n "Exporting $MODULE with tag $TAG ... "
-cvs -Q -d $CVSROOT export -r $TAG -d $BUILD $MODULE || exit 1
+echo -n "Exporting $OJSMODULE with tag $TAG ... "
+cvs -Q -d $CVSROOT export -r $TAG -d $BUILD $OJSMODULE || exit 1
 echo "Done"
+
+echo -n "Exporting $PKPMODULE with tag $TAG ... "
+cvs -Q -d $CVSROOT export -r HEAD $PKPMODULE || exit 1
+echo "Done"
+
+if [ ! -d $BUILD/lib ]; then
+	mkdir $BUILD/lib
+fi
+
+mv $PKPMODULE $BUILD/lib/$PKPMODULE
 
 cd $BUILD
 
@@ -91,7 +94,7 @@ fi
 cd ..
 
 echo -n "Building doxygen documentation... "
-doxygen docs/dev/ojs2.doxygen > /dev/null && cd docs/doxygen && tar czf ../../${BUILD}-doxygen.tar.gz html latex && cd ../..
+doxygen docs/dev/ojs2.doxygen > /dev/null && cd docs/dev/doxygen && tar czf ../../../${BUILD}-doxygen.tar.gz html && cd ../../..
 
 echo "Done"
 
