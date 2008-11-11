@@ -1902,19 +1902,21 @@ class SectionEditorAction extends Action {
 								foreach ($reviewFormElements as $reviewFormElement) {
 									$body .= $reviewFormElement->getReviewFormElementQuestion() . ": \n";
 									$reviewFormResponse = $reviewFormResponseDao->getReviewFormResponse($reviewId, $reviewFormElement->getReviewFormElementId());
-			
-									$possibleResponses = $reviewFormElement->getReviewFormElementPossibleResponses();
-									if (in_array($reviewFormElement->getElementType(), $reviewFormElement->getMultipleResponsesElementTypes())) {
-										if ($reviewFormElement->getElementType() == REVIEW_FORM_ELEMENT_TYPE_CHECKBOXES) {
-											foreach ($reviewFormResponse->getValue() as $value) {
-												$body .= "\t" . String::html2utf(strip_tags($possibleResponses[$value-1]['content'])) . "\n";
+									
+									if ($reviewFormResponse) {
+										$possibleResponses = $reviewFormElement->getReviewFormElementPossibleResponses();
+										if (in_array($reviewFormElement->getElementType(), $reviewFormElement->getMultipleResponsesElementTypes())) {
+											if ($reviewFormElement->getElementType() == REVIEW_FORM_ELEMENT_TYPE_CHECKBOXES) {
+												foreach ($reviewFormResponse->getValue() as $value) {
+													$body .= "\t" . String::html2utf(strip_tags($possibleResponses[$value-1]['content'])) . "\n";
+												}
+											} else {
+												$body .= "\t" . String::html2utf(strip_tags($possibleResponses[$reviewFormResponse->getValue()-1]['content'])) . "\n";
 											}
+											$body .= "\n";
 										} else {
-											$body .= "\t" . String::html2utf(strip_tags($possibleResponses[$reviewFormResponse->getValue()-1]['content'])) . "\n";
+											$body .= "\t" . String::html2utf(strip_tags($reviewFormResponse->getValue())) . "\n\n";
 										}
-										$body .= "\n";
-									} else {
-										$body .= "\t" . String::html2utf(strip_tags($reviewFormResponse->getValue())) . "\n\n";
 									}
 								
 								}
