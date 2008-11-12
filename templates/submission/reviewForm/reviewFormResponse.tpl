@@ -16,9 +16,9 @@
 {include file="common/formErrors.tpl"}
 {/if}
 
-{assign var=disabled value=""}
+{assign var=disabled value=0}
 {if $isLocked || $editorPreview}
-	{assign var=disabled value="disabled=\"disabled\" "}
+	{assign var=disabled value=1}
 {/if}
 
 <h3>{$reviewForm->getReviewFormTitle()}</h3>
@@ -29,23 +29,23 @@
 		<p>{$reviewFormElement->getReviewFormElementQuestion()} {if $reviewFormElement->getRequired() == 1}*{/if}</p>
 		<p>
 			{if $reviewFormElement->getElementType() == REVIEW_FORM_ELEMENT_TYPE_SMALL_TEXT_FIELD}
-				<input {$disabled}type="text" name="reviewFormResponses[{$elementId}]" id="reviewFormResponses-{$elementId}" value="{$reviewFormResponses[$elementId]|escape}" size="10" maxlength="40" class="textField" />
+				<input {if $disabled}onkeypress="return (event.keyCode >= 37 && event.keyCode <= 40);" {/if}type="text" name="reviewFormResponses[{$elementId}]" id="reviewFormResponses-{$elementId}" value="{$reviewFormResponses[$elementId]|escape}" size="10" maxlength="40" class="textField" />
 			{elseif $reviewFormElement->getElementType() == REVIEW_FORM_ELEMENT_TYPE_TEXT_FIELD}
-				<input {$disabled}type="text" name="reviewFormResponses[{$elementId}]" id="reviewFormResponses-{$elementId}" value="{$reviewFormResponses[$elementId]|escape}" size="40" maxlength="120" class="textField" />
+				<input {if $disabled}onkeypress="return (event.keyCode >= 37 && event.keyCode <= 40);" {/if}type="text" name="reviewFormResponses[{$elementId}]" id="reviewFormResponses-{$elementId}" value="{$reviewFormResponses[$elementId]|escape}" size="40" maxlength="120" class="textField" />
 			{elseif $reviewFormElement->getElementType() == REVIEW_FORM_ELEMENT_TYPE_TEXTAREA}
-				<textarea {$disabled}name="reviewFormResponses[{$elementId}]" id="reviewFormResponses-{$elementId}" rows="4" cols="40" class="textArea">{$reviewFormResponses[$elementId]|escape}</textarea>
+				<textarea {if $disabled}onkeypress="return (event.keyCode >= 37 && event.keyCode <= 40);" {/if}name="reviewFormResponses[{$elementId}]" id="reviewFormResponses-{$elementId}" rows="4" cols="40" class="textArea">{$reviewFormResponses[$elementId]|escape}</textarea>
 			{elseif $reviewFormElement->getElementType() == REVIEW_FORM_ELEMENT_TYPE_CHECKBOXES}
 				{assign var=possibleResponses value=$reviewFormElement->getReviewFormElementPossibleResponses()}
 				{foreach name=responses from=$possibleResponses key=responseId item=responseItem}
-					<input {$disabled}type="checkbox" name="reviewFormResponses[{$elementId}][]" id="reviewFormResponses-{$elementId}-{$smarty.foreach.responses.iteration}" value="{$smarty.foreach.responses.iteration}"{if !empty($reviewFormResponses[$elementId]) && in_array($smarty.foreach.responses.iteration, $reviewFormResponses[$elementId])} checked="checked"{/if} /><label for="reviewFormResponses-{$elementId}-{$smarty.foreach.responses.iteration}">{$responseItem.content}</label><br/>
+					<input {if $disabled}disabled="disabled" {/if}type="checkbox" name="reviewFormResponses[{$elementId}][]" id="reviewFormResponses-{$elementId}-{$smarty.foreach.responses.iteration}" value="{$smarty.foreach.responses.iteration}"{if !empty($reviewFormResponses[$elementId]) && in_array($smarty.foreach.responses.iteration, $reviewFormResponses[$elementId])} checked="checked"{/if} /><label for="reviewFormResponses-{$elementId}-{$smarty.foreach.responses.iteration}">{$responseItem.content}</label><br/>
 				{/foreach}
 			{elseif $reviewFormElement->getElementType() == REVIEW_FORM_ELEMENT_TYPE_RADIO_BUTTONS}
 				{assign var=possibleResponses value=$reviewFormElement->getReviewFormElementPossibleResponses()}
 				{foreach name=responses from=$possibleResponses key=responseId item=responseItem}
-					<input {$disabled}type="radio"  name="reviewFormResponses[{$elementId}]" id="reviewFormResponses-{$elementId}-{$smarty.foreach.responses.iteration}" value="{$smarty.foreach.responses.iteration}"{if $smarty.foreach.responses.iteration == $reviewFormResponses[$elementId]} checked="checked"{/if}/><label for="reviewFormResponses-{$elementId}-{$smarty.foreach.responses.iteration}">{$responseItem.content}</label><br/>
+					<input {if $disabled}disabled="disabled" {/if}type="radio"  name="reviewFormResponses[{$elementId}]" id="reviewFormResponses-{$elementId}-{$smarty.foreach.responses.iteration}" value="{$smarty.foreach.responses.iteration}"{if $smarty.foreach.responses.iteration == $reviewFormResponses[$elementId]} checked="checked"{/if}/><label for="reviewFormResponses-{$elementId}-{$smarty.foreach.responses.iteration}">{$responseItem.content}</label><br/>
 				{/foreach}
 			{elseif $reviewFormElement->getElementType() == REVIEW_FORM_ELEMENT_TYPE_DROP_DOWN_BOX}
-				<select {$disabled}name="reviewFormResponses[{$elementId}]" id="reviewFormResponses-{$elementId}" size="1" class="selectMenu">
+				<select {if $disabled}disabled="disabled" {/if}name="reviewFormResponses[{$elementId}]" id="reviewFormResponses-{$elementId}" size="1" class="selectMenu">
 					<option label="" value=""></option>
 					{assign var=possibleResponses value=$reviewFormElement->getReviewFormElementPossibleResponses()}
 					{foreach name=responses from=$possibleResponses key=responseId item=responseItem}
@@ -61,7 +61,7 @@
 	{if $editorPreview}
 		<p><input type="button" value="{translate key="common.close"}" class="button defaultButton" onclick="window.close()" /></p>
 	{else}
-		<p><input {$disabled}type="submit" name="save" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.close"}" class="button" onclick="document.location.href='{url op="submission" path=$reviewId}'" /></p>
+		<p><input {if $disabled}disabled="disabled" {/if}type="submit" name="save" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.close"}" class="button" onclick="document.location.href='{url op="submission" path=$reviewId}'" /></p>
 	{/if}
 
 	<p><span class="formRequired">{translate key="common.requiredField"}</span></p>
