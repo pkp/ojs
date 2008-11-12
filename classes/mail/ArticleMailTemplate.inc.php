@@ -40,7 +40,7 @@ class ArticleMailTemplate extends MailTemplate {
 	/**
 	 * Constructor.
 	 * @param $article object
-	 * @param $emailType int optional
+	 * @param $emailType string optional
 	 * @param $locale string optional
 	 * @param $enableAttachments boolean optional
 	 * @param $journal object optional
