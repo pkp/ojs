@@ -159,7 +159,7 @@ class AnnouncementDAO extends DAO {
 	function deleteAnnouncementByTypeId($typeId) {
 		$announcements =& $this->getAnnouncementsByTypeId($typeId);
 		while (($announcement =& $announcements->next())) {
-			$this->deleteAnnouncement($announcement->getAnnouncementId());
+			$this->deleteAnnouncement($announcement);
 			unset($announcement);
 		}
 	}
