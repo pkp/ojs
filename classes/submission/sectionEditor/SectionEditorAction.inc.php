@@ -1875,14 +1875,47 @@ class SectionEditorAction extends Action {
 						if ($reviewAssignment->getDateCompleted() != null && !$reviewAssignment->getCancelled()) {
 							// Get the comments associated with this review assignment
 							$articleComments = &$articleCommentDao->getArticleComments($sectionEditorSubmission->getArticleId(), COMMENT_TYPE_PEER_REVIEW, $reviewAssignment->getReviewId());
-							$body .= "------------------------------------------------------\n";
-							$body .= Locale::translate('submission.comments.importPeerReviews.reviewerLetter', array('reviewerLetter' => chr(ord('A') + $reviewIndexes[$reviewAssignment->getReviewId()]))) . "\n";
-							if (is_array($articleComments)) {
-								foreach ($articleComments as $comment) {
-									// If the comment is viewable by the author, then add the comment.
-									if ($comment->getViewable()) {
-										$body .= $comment->getComments() . "\n\n";
+							if($articleComments) {
+								$body .= "------------------------------------------------------\n";
+								$body .= Locale::translate('submission.comments.importPeerReviews.reviewerLetter', array('reviewerLetter' => chr(ord('A') + $reviewIndexes[$reviewAssignment->getReviewId()]))) . "\n";
+								if (is_array($articleComments)) {
+									foreach ($articleComments as $comment) {
+										// If the comment is viewable by the author, then add the comment.
+										if ($comment->getViewable()) {
+											$body .= $comment->getComments() . "\n\n";
+										}
 									}
+								}
+							} 
+							if ($reviewFormId = $reviewAssignment->getReviewFormId()) {
+								$reviewId = $reviewAssignment->getReviewId();
+								
+								$reviewFormResponseDao =& DAORegistry::getDAO('ReviewFormResponseDAO');
+								$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
+								$reviewFormElements =& $reviewFormElementDao->getReviewFormElements($reviewFormId);
+								if(!$articleComments) {
+									$body .= "------------------------------------------------------\n";
+									$body .= Locale::translate('submission.comments.importPeerReviews.reviewerLetter', array('reviewerLetter' => chr(ord('A') + $reviewIndexes[$reviewAssignment->getReviewId()]))) . "\n\n";
+								}
+								foreach ($reviewFormElements as $reviewFormElement) {
+									$body .= $reviewFormElement->getReviewFormElementQuestion() . ": \n";
+									$reviewFormResponse = $reviewFormResponseDao->getReviewFormResponse($reviewId, $reviewFormElement->getReviewFormElementId());
+									
+									if ($reviewFormResponse) {
+										$possibleResponses = $reviewFormElement->getReviewFormElementPossibleResponses();
+										if (in_array($reviewFormElement->getElementType(), $reviewFormElement->getMultipleResponsesElementTypes())) {
+											if ($reviewFormElement->getElementType() == REVIEW_FORM_ELEMENT_TYPE_CHECKBOXES) {
+												foreach ($reviewFormResponse->getValue() as $value) {
+													$body .= "\t" . String::html2utf(strip_tags($possibleResponses[$value-1]['content'])) . "\n";
+												}
+											} else {
+												$body .= "\t" . String::html2utf(strip_tags($possibleResponses[$reviewFormResponse->getValue()-1]['content'])) . "\n";
+											}
+											$body .= "\n";
+										} else {
+											$body .= "\t" . String::html2utf(strip_tags($reviewFormResponse->getValue())) . "\n\n";
+										}
+									}								
 								}
 							}
 							$body .= "------------------------------------------------------\n\n";
