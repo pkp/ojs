@@ -18,11 +18,12 @@
 
 import('i18n.PKPLocale');
 
-define('LOCALE_COMPONENT_APPLICATION_COMMON',		0x00000101);
+define('LOCALE_COMPONENT_APPLICATION_COMMON',	0x00000101);
 define('LOCALE_COMPONENT_OJS_AUTHOR',		0x00000102);
 define('LOCALE_COMPONENT_OJS_EDITOR',		0x00000103);
 define('LOCALE_COMPONENT_OJS_MANAGER',		0x00000104);
-define('LOCALE_COMPONENT_OJS_DEFAULT',		0x00000105);
+define('LOCALE_COMPONENT_OJS_ADMIN',		0x00000105);
+define('LOCALE_COMPONENT_OJS_DEFAULT',		0x00000106);
 
 class Locale extends PKPLocale {
 	/**
@@ -157,6 +158,7 @@ class Locale extends PKPLocale {
 		$componentMap[LOCALE_COMPONENT_OJS_AUTHOR] = $baseDir . 'author.xml';
 		$componentMap[LOCALE_COMPONENT_OJS_EDITOR] = $baseDir . 'editor.xml';
 		$componentMap[LOCALE_COMPONENT_OJS_MANAGER] = $baseDir . 'manager.xml';
+		$componentMap[LOCALE_COMPONENT_OJS_ADMIN] = $baseDir . 'admin.xml';
 		$componentMap[LOCALE_COMPONENT_OJS_DEFAULT] = $baseDir . 'default.xml';
 		return $componentMap;
 	}

@@ -84,15 +84,15 @@ class OAIMetadataFormatPlugin extends Plugin {
 	function callback_formatRequest($hookName, $args) {
 		$namesOnly = $args[0];
 		$identifier = $args[1];
-		$formats = &$args[2];
+		$formats =& $args[2];
 
 		if ($namesOnly) {
 			$formats = array_merge($formats,array($this->getMetadataPrefix()));
 		} else {
-			$format_class = $this->getFormatClass();
+			$formatClass = $this->getFormatClass();
 			$formats = array_merge(
 				$formats,
-				array($this->getMetadataPrefix() => new $format_class($this->getMetadataPrefix(),$this->getSchema(),$this->getNamespace()))
+				array($this->getMetadataPrefix() => new $formatClass($this->getMetadataPrefix(), $this->getSchema(), $this->getNamespace()))
 			);
 		}
 		return false;

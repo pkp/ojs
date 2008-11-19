@@ -21,33 +21,85 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat {
 	 * @see OAIMetadataFormat#toXML
 	 */
 	function toXML(&$record) {
+		$article =& $record->getData('article');
+		$issue =& $record->getData('issue');
+		$journal =& $record->getData('journal');
+		$section =& $record->getData('section');
+		$galleys =& $record->getData('galleys');
+
+		// Format creators
+		$creators = array();
+		$authors = $article->getAuthors();
+		for ($i = 0, $num = count($authors); $i < $num; $i++) {
+			$authorName = $authors[$i]->getFullName();
+			$affiliation = $authors[$i]->getAffiliation();
+			if (!empty($affiliation)) {
+				$authorName .= '; ' . $affiliation;
+			}
+			$creators[] = $authorName;
+		}
+
+		$subjects = array_merge_recursive(
+			$this->stripAssocArray((array) $article->getDiscipline(null)),
+			$this->stripAssocArray((array) $article->getSubject(null)),
+			$this->stripAssocArray((array) $article->getSubjectClass(null))
+		);
+		$subject = isset($subjects[$journal->getPrimaryLocale()])?$subjects[$journal->getPrimaryLocale()]:'';
+
+		$publisher = $journal->getJournalTitle(); // Default
+		$publisherInstitution = $journal->getSetting('publisherInstitution');
+		if (!empty($publisherInstitution)) {
+			$publisher = $publisherInstitution;
+		}
+
+		// Format
+		$format = array();
+		foreach ($galleys as $galley) {
+			$format[] = $galley->getFileType();
+		}
+
+		// Sources contains journal title, issue ID, and pages
+		$source = $journal->getJournalTitle(null) . '; ' . $issue->getIssueIdentification();
+		$pages = $article->getPages();
+
+		// Relation
+		$relation = array();
+		foreach ($article->getSuppFiles() as $suppFile) {
+			$record->relation[] = Request::url($journal->getPath(), 'article', 'download', array($article->getArticleId(), $suppFile->getFileId()));
+		}
+
+		// Coverage
+		$coverage = array(
+			$article->getArticleCoverageGeo(),
+			$article->getArticleCoverageChron(),
+			$article->getArticleCoverageSample()
+		);
+
 		$response = "<record\n" .
 			"\txmlns=\"http://www.loc.gov/MARC21/slim\"\n" .
 			"\txmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n" .
 			"\txsi:schemaLocation=\"http://www.loc.gov/MARC21/slim\n" .
 			"\thttp://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd\">\n" .
 			"\t<leader>     cam         3u     </leader>\n" .
-			"\t<controlfield tag=\"008\">\"" . date('ymd', strtotime($record->date)) . " " . date("Y", strtotime($record->date)) ."                        eng  \"</controlfield>\n" .
+			"\t<controlfield tag=\"008\">\"" . date('ymd Y', strtotime($issue->getDatePublished())) . "                        eng  \"</controlfield>\n" .
 			$this->formatElement('042', ' ', ' ', 'a', 'dc') .
-			$this->formatElement('245', '0', '0', 'a', $record->titles[$record->primaryLocale]) .
-			$this->formatElement('720', ' ', ' ', 'a', $record->creator) .
-			$this->formatElement('653', ' ', ' ', 'a', $this->getLocalizedData($record->subjects, $record->primaryLocale)) .
-			$this->formatElement('520', ' ', ' ', 'a', $this->getLocalizedData($record->descriptions, $record->primaryLocale)) .
-			$this->formatElement('260', ' ', ' ', 'b', $record->publishers[$record->primaryLocale]) .
-			$this->formatElement('720', ' ', ' ', 'a', $this->getLocalizedData($record->contributors, $record->primaryLocale)) .
-			$this->formatElement('260', ' ', ' ', 'c', $record->date) .
-			$this->formatElement('655', ' ', '7', 'a', $record->types[$record->primaryLocale]) .
-			$this->formatElement('856', ' ', ' ', 'q', $record->format) .
-			$this->formatElement('856', '4', '0', 'u', $record->url) .
-			$this->formatElement('786', '0', ' ', 'n', $record->sources[$record->primaryLocale] . (!empty($record->pages)?"; " . $record->pages:"")) .
-			$this->formatElement('546', ' ', ' ', 'a', $record->language) .
+			$this->formatElement('245', '0', '0', 'a', $article->getTitle($journal->getPrimaryLocale())) .
+			$this->formatElement('720', ' ', ' ', 'a', $creators) .
+			$this->formatElement('653', ' ', ' ', 'a', $subject) .
+			$this->formatElement('520', ' ', ' ', 'a', $article->getArticleAbstract()) .
+			$this->formatElement('260', ' ', ' ', 'b', $publisher) .
+			$this->formatElement('720', ' ', ' ', 'a', strip_tags($article->getArticleSponsor(null))) .
+			$this->formatElement('260', ' ', ' ', 'c', $issue->getDatePublished()) .
+			$this->formatElement('655', ' ', '7', 'a', $section->getSectionIdentifyType()) .
+			$this->formatElement('856', ' ', ' ', 'q', $format) .
+			$this->formatElement('856', '4', '0', 'u', Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId()))) .
+			$this->formatElement('786', '0', ' ', 'n', $source) .
+
+			$this->formatElement('546', ' ', ' ', 'a', $article->getLanguage()) .
 			$this->formatElement('787', '0', ' ', 'n', $record->relation) .
-			$this->formatElement('500', ' ', ' ', 'a', $this->getLocalizedData($record->coverage, $record->primaryLocale));
-			if(isset($record->rights[$record->primaryLocale]))			
-				$response.= $this->formatElement('540', ' ', ' ', 'a', $record->rights[$record->primaryLocale]);
-			else
-				$response.= $this->formatElement('540', ' ', ' ', 'a', $record->rights);
-			$response.= "</record>\n";
+			$this->formatElement('500', ' ', ' ', 'a', $coverage) .
+			$this->formatElement('540', ' ', ' ', 'a', strip_tags($journal->getLocalizedSetting('copyrightNotice'))) .
+			"</record>\n";
 
 		return $response;
 	}

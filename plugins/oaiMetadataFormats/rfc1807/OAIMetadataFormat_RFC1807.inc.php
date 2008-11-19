@@ -21,28 +21,81 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 	 * @see OAIMetadataFormat#toXML
 	 */
 	function toXML(&$record) {
+		$article =& $record->getData('article');
+		$journal =& $record->getData('journal');
+		$section =& $record->getData('section');
+		$issue =& $record->getData('issue');
+		$galleys =& $record->getData('galleys');
+
+		// Publisher
+		$publisher = $journal->getJournalTitle(); // Default
+		$publisherInstitution = $journal->getLocalizedSetting('publisherInstitution');
+		if (!empty($publisherInstitution)) {
+			$publisher = $publisherInstitution;
+		}
+
+		// Sources contains journal title, issue ID, and pages
+		$source = $issue->getIssueIdentification();
+		$pages = $article->getPages();
+		if (!empty($pages)) $source .= '; ' . $pages;
+
+		// Relation
+		$relation = array();
+		foreach ($article->getSuppFiles() as $suppFile) {
+			$relation[] = Request::url($journal->getPath(), 'article', 'download', array($article->getArticleId(), $suppFile->getFileId()));
+		}
+
+		// Format creators
+		$creators = array();
+		$authors = $article->getAuthors();
+		for ($i = 0, $num = count($authors); $i < $num; $i++) {
+			$authorName = $authors[$i]->getFullName();
+			$affiliation = $authors[$i]->getAffiliation();
+			if (!empty($affiliation)) {
+				$authorName .= '; ' . $affiliation;
+			}
+			$creators[] = $authorName;
+		}
+
+		// Subject
+		$subjects = array_merge_recursive(
+			$this->stripAssocArray((array) $article->getDiscipline(null)),
+			$this->stripAssocArray((array) $article->getSubject(null)),
+			$this->stripAssocArray((array) $article->getSubjectClass(null))
+		);
+		$subject = isset($subjects[$journal->getPrimaryLocale()])?$subjects[$journal->getPrimaryLocale()]:'';
+
+		// Coverage
+		$coverage = array(
+			$article->getArticleCoverageGeo(),
+			$article->getArticleCoverageChron(),
+			$article->getArticleCoverageSample()
+		);
+
+		$url = Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId()));
 		$response = "<rfc1807\n" .
 			"\txmlns=\"http://info.internet.isi.edu:80/in-notes/rfc/files/rfc1807.txt\"\n" .
 			"\txmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n" .
 			"\txsi:schemaLocation=\"http://info.internet.isi.edu:80/in-notes/rfc/files/rfc1807.txt\n" .
 			"\thttp://www.openarchives.org/OAI/1.1/rfc1807.xsd\">\n" .
 			"\t<bib-version>v2</bib-version>\n" .
-			$this->formatElement('id', $record->url) .
+			$this->formatElement('id', $url) .
 			$this->formatElement('entry', $record->datestamp) .
-			$this->formatElement('organization', $this->getLocalizedData($record->publishers, $record->primaryLocale)) .
-			$this->formatElement('organization', $this->getLocalizedData($record->sources, $record->primaryLocale)) .
-			$this->formatElement('title', $this->getLocalizedData($record->titles, $record->primaryLocale)) .
-			$this->formatElement('type', $this->getLocalizedData($record->types, $record->primaryLocale)) .
-			$this->formatElement('type', $record->relation) .
-			$this->formatElement('author', $record->creator) .
-			$this->formatElement('date', $record->date) .
-			$this->formatElement('copyright', $record->rights) .
-			$this->formatElement('other_access', 'url:' . $record->url) .
-			$this->formatElement('keyword', $this->getLocalizedData($record->subjects, $record->primaryLocale)) .
-			$this->formatElement('period', $record->coverage) .
-			$this->formatElement('monitoring', $this->getLocalizedData($record->contributors, $record->primaryLocale)) .
-			$this->formatElement('language', $record->language) .
-			$this->formatElement('abstract', $this->getLocalizedData($record->descriptions, $record->primaryLocale)) .
+			$this->formatElement('organization', $publisher) .
+			$this->formatElement('organization', $source) .
+			$this->formatElement('title', $article->getArticleTitle()) .
+			$this->formatElement('type', $section->getSectionIdentifyType()) .
+
+			$this->formatElement('type', $relation) .
+			$this->formatElement('author', $creators) .
+			$this->formatElement('date', $issue->getDatePublished()) .
+			$this->formatElement('copyright', strip_tags($journal->getLocalizedSetting('copyrightNotice'))) .
+			$this->formatElement('other_access', "url:$url") .
+			$this->formatElement('keyword', $subject) .
+			$this->formatElement('period', $coverage) .
+			$this->formatElement('monitoring', $article->getArticleSponsor()) .
+			$this->formatElement('language', $article->getLanguage()) .
+			$this->formatElement('abstract', strip_tags($article->getArticleAbstract())) .
 			"</rfc1807>\n";
 
 		return $response;

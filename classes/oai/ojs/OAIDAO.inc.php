@@ -26,7 +26,8 @@ class OAIDAO extends DAO {
  	/** Helper DAOs */
  	var $journalDao;
  	var $sectionDao;
-	var $articleDao;
+	var $publishedArticleDao;
+	var $articleGalleyDao;
 	var $issueDao;
  	var $authorDao;
  	var $suppFileDao;
@@ -42,7 +43,8 @@ class OAIDAO extends DAO {
 		parent::DAO();
 		$this->journalDao =& DAORegistry::getDAO('JournalDAO');
 		$this->sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$this->articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$this->publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$this->articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 		$this->issueDao =& DAORegistry::getDAO('IssueDAO');
 		$this->authorDao =& DAORegistry::getDAO('AuthorDAO');
 		$this->suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
@@ -274,13 +276,6 @@ class OAIDAO extends DAO {
 		return $records;
 	}
 
-	function stripAssocArray($values) {
-		foreach (array_keys($values) as $key) {
-			$values[$key] = strip_tags($values[$key]);
-		}
-		return $values;
-	}
-
 	/**
 	 * Cached function to get a journal
 	 * @param $journalId int
@@ -327,95 +322,22 @@ class OAIDAO extends DAO {
 		$record = new OAIRecord();
 
 		$articleId = $row['article_id'];
-		if ($this->journalSettingsDao->getSetting($row['journal_id'], 'enablePublicArticleId')) {
-			if (!empty($row['public_article_id'])) {
-				$articleId = $row['public_article_id'];
-			}
-		}
 
-		$article =& $this->articleDao->getArticle($articleId);
+		$publishedArticle =& $this->publishedArticleDao->getPublishedArticleByArticleId($articleId);
 		$journal =& $this->getJournal($row['journal_id']);
 		$section =& $this->getSection($row['section_id']);
 		$issue =& $this->getIssue($row['issue_id']);
+		$galleys =& $this->articleGalleyDao->getGalleysByArticle($articleId);
 
-		// FIXME Use public ID in OAI identifier?
-		// FIXME Use "last-modified" field for datestamp?
+		$record->setData('article', $publishedArticle);
+		$record->setData('journal', $journal);
+		$record->setData('section', $section);
+		$record->setData('issue', $issue);
+		$record->setData('galleys', $galleys);
+
 		$record->identifier = $this->oai->articleIdToIdentifier($row['article_id']);
 		$record->datestamp = OAIUtils::UTCDate(strtotime($this->datetimeFromDB($row['date_published'])));
 		$record->sets = array($journal->getPath() . ':' . $section->getSectionAbbrev());
-
-		$record->url = Request::url($journal->getPath(), 'article', 'view', array($articleId));
-
-		$record->titles = $this->stripAssocArray((array) $article->getTitle(null));
-
-		$record->subjects = array_merge_recursive(
-			$this->stripAssocArray((array) $article->getDiscipline(null)),
-			$this->stripAssocArray((array) $article->getSubject(null)),
-			$this->stripAssocArray((array) $article->getSubjectClass(null))
-		);
-		$record->descriptions = $this->stripAssocArray((array) $article->getAbstract(null));
-		$record->publishers = $this->stripAssocArray((array) $journal->getTitle(null)); // Provide a default; may be overridden later
-		$record->contributors = $this->stripAssocArray((array) $article->getSponsor(null));
-		$record->date = date('Y-m-d', strtotime($issue->getDatePublished()));
-		$types = $this->stripAssocArray((array) $section->getIdentifyType(null));
-		$record->types = empty($types)?array(Locale::getLocale() => Locale::translate('rt.metadata.pkp.peerReviewed')):$types;
-		$record->format = array();
-
-		$record->sources = $this->stripAssocArray((array) $journal->getTitle(null));
-		foreach ($record->sources as $key => $source) {
-			$record->sources[$key] .= '; ' . $this->_formatIssueId($row);
-		}
-
-		$record->language = strip_tags($article->getLanguage());
-		$record->relation = array();
-		$record->coverage = array_merge_recursive(
-			$this->stripAssocArray((array) $article->getCoverageGeo(null)),
-			$this->stripAssocArray((array) $article->getCoverageChron(null)),
-			$this->stripAssocArray((array) $article->getCoverageSample(null))
-		);
-
-		$record->rights = (array) $this->journalSettingsDao->getSetting($row['journal_id'], 'copyrightNotice');
-		$record->pages = $article->getPages();
-
-		// Get publisher (may override earlier publisher)
-		$publisherInstitution = (array) $journal->getSetting('publisherInstitution');
-		if (!empty($publisherInstitution)) {
-			$record->publishers = $publisherInstitution;
-		}
-
-		// Get author names
-		$authors = $this->authorDao->getAuthorsByArticle($row['article_id']);
-		$record->creator = array();
-		for ($i = 0, $num = count($authors); $i < $num; $i++) {
-			$authorName = $authors[$i]->getFullName();
-			$affiliation = $authors[$i]->getAffiliation();
-			if (!empty($affiliation)) {
-				$authorName .= '; ' . $affiliation;
-			}
-			$record->creator[] = $authorName;
-		}
-
-		// Get galley formats
-		$result =& $this->retrieve(
-			'SELECT DISTINCT(f.file_type) FROM article_galleys g, article_files f WHERE g.file_id = f.file_id AND g.article_id = ?',
-			$row['article_id']
-		);
-		while (!$result->EOF) {
-			$record->format[] = $result->fields[0];
-			$result->MoveNext();
-		}
-
-		$result->Close();
-		unset($result);
-
-		// Get supplementary files
-		$suppFiles =& $this->suppFileDao->getSuppFilesByArticle($row['article_id']);
-		for ($i = 0, $num = count($suppFiles); $i < $num; $i++) {
-			// FIXME replace with correct URL
-			$record->relation[] = Request::url($journal->getPath(), 'article', 'download', array($articleId, $suppFiles[$i]->getFileId()));
-		}
-
-		$record->primaryLocale = $journal->getPrimaryLocale();
 
 		return $record;
 	}
@@ -438,11 +360,6 @@ class OAIDAO extends DAO {
 		return $record;
 	}
 
-	// FIXME Common code with issue.Issue
-	function _formatIssueId(&$row) {
-		$issue =& $this->getIssue($row['issue_id']);
-		return $issue->getIssueIdentification();
-	}
 
 	//
 	// Resumption tokens

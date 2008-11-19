@@ -30,6 +30,7 @@ class ArticleHandler extends PKPHandler {
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 
 		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
+		ArticleHandler::setupTemplate();
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = $rtDao->getJournalRTByJournal($journal);
@@ -72,6 +73,7 @@ class ArticleHandler extends PKPHandler {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
+		ArticleHandler::setupTemplate();
 
 		if (!$galley) {
 			$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
@@ -99,6 +101,7 @@ class ArticleHandler extends PKPHandler {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
+		ArticleHandler::setupTemplate();
 
 		if (!$galley) {
 			$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
@@ -126,6 +129,7 @@ class ArticleHandler extends PKPHandler {
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 
 		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
+		ArticleHandler::setupTemplate();
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = $rtDao->getJournalRTByJournal($journal);
@@ -253,6 +257,7 @@ class ArticleHandler extends PKPHandler {
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 
 		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
+		ArticleHandler::setupTemplate();
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = $rtDao->getJournalRTByJournal($journal);
