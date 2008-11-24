@@ -799,7 +799,7 @@ class PeopleHandler extends ManagerHandler {
 	 * Restore original user account after signing in as a user.
 	 */
 	function signOutAsUser() {
-		Handler::validate();
+		PKPHandler::validate();
 
 		$session = &Request::getSession();
 		$signedInAs = $session->getSessionVar('signedInAs');
