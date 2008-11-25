@@ -21,7 +21,7 @@ class OAIMetadataFormat_DC extends OAIMetadataFormat {
 	/**
 	 * @see OAIMetadataFormat#toXML
 	 */
-	function toXML(&$record) {
+	function toXml(&$record, $format = null) {
 		$article =& $record->getData('article');
 		$journal =& $record->getData('journal');
 		$section =& $record->getData('section');
@@ -69,7 +69,7 @@ class OAIMetadataFormat_DC extends OAIMetadataFormat {
 		// Relation
 		$relation = array();
 		foreach ($article->getSuppFiles() as $suppFile) {
-			$record->relation[] = Request::url($journal->getPath(), 'article', 'download', array($article->getArticleId(), $suppFile->getFileId()));
+			$relation[] = Request::url($journal->getPath(), 'article', 'download', array($article->getArticleId(), $suppFile->getFileId()));
 		}
 
 		$response = "<oai_dc:dc\n" .
@@ -98,7 +98,7 @@ class OAIMetadataFormat_DC extends OAIMetadataFormat {
 			$this->formatElement('identifier', Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId()))) .
 			$this->formatElement('source', $sources, true) .
 			$this->formatElement('language', strip_tags($article->getLanguage())) .
-			$this->formatElement('relation', $record->relation) .
+			$this->formatElement('relation', $relation) .
 			$this->formatElement(
 				'coverage',
 				array_merge_recursive(
