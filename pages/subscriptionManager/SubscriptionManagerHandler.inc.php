@@ -455,6 +455,7 @@ class SubscriptionManagerHandler extends PKPHandler {
 	 */
 	function saveSubscriptionPolicies($args = array()) {
 		SubscriptionManagerHandler::validate();
+		SubscriptionManagerHandler::setupTemplate(true);
 
 		import('subscription.form.SubscriptionPolicyForm');
 
@@ -463,8 +464,6 @@ class SubscriptionManagerHandler extends PKPHandler {
 
 		if ($subscriptionPolicyForm->validate()) {
 			$subscriptionPolicyForm->execute();
-
-			SubscriptionManagerHandler::setupTemplate(true);
 
 			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign('helpTopicId', 'journal.managementPages.subscriptions');
@@ -541,6 +540,7 @@ class SubscriptionManagerHandler extends PKPHandler {
 			$userForm->execute();
 
 			if (Request::getUserVar('createAnother')) {
+				SubscriptionManagerHandler::setupTemplate(true);
 				$templateMgr = &TemplateManager::getManager();
 				$templateMgr->assign('currentUrl', Request::url(null, null, 'index'));
 				$templateMgr->assign('userCreated', true);
@@ -564,6 +564,7 @@ class SubscriptionManagerHandler extends PKPHandler {
 	 */
 	function setupTemplate($subclass = false) {
 		parent::setupTemplate();
+		Locale::requireComponents(array(LOCALE_COMPONENT_OJS_MANAGER));
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy',
 			$subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'subscriptionManager'), 'subscriptionManager.subscriptionManagement'))
