@@ -56,7 +56,7 @@ class ReferralPlugin extends GenericPlugin {
 		return false;
 	}
 
-	function handleTemplateInclude($hookName, $args) {
+	function handleAuthorTemplateInclude($hookName, $args) {
 		$templateMgr =& $args[0];
 		$params =& $args[1];
 		if (!isset($params['smarty_include_tpl_file'])) return false;
@@ -72,7 +72,24 @@ class ReferralPlugin extends GenericPlugin {
 			
 				$templateMgr->assign('referrals', $referrals);
 				$templateMgr->assign('referralFilter', $referralFilter);
-				$templateMgr->display($this->getTemplatePath() . 'referrals.tpl', 'text/html', 'ReferralPlugin::addReferralContent');
+				$templateMgr->display($this->getTemplatePath() . 'authorReferrals.tpl', 'text/html', 'ReferralPlugin::addAuthorReferralContent');
+				break;
+		}
+		return false;
+	}
+
+	function handleReaderTemplateInclude($hookName, $args) {
+		$templateMgr =& $args[0];
+		$params =& $args[1];
+		if (!isset($params['smarty_include_tpl_file'])) return false;
+		switch ($params['smarty_include_tpl_file']) {
+			case 'article/comments.tpl':
+				$referralDao =& DAORegistry::getDAO('ReferralDAO');
+				$article = $templateMgr->get_template_vars('article');
+				$referrals =& $referralDao->getPublishedReferralsForArticle($article->getArticleId());
+			
+				$templateMgr->assign('referrals', $referrals);
+				$templateMgr->display($this->getTemplatePath() . 'readerReferrals.tpl', 'text/html', 'ReferralPlugin::addReaderReferralContent');
 				break;
 		}
 		return false;
@@ -87,6 +104,7 @@ class ReferralPlugin extends GenericPlugin {
 
 		switch ($template) {
 			case 'article/article.tpl':
+				HookRegistry::register ('TemplateManager::include', array(&$this, 'handleReaderTemplateInclude'));
 			case 'article/interstitial.tpl':
 			case 'article/pdfInterstitial.tpl':
 				$this->logArticleRequest($templateMgr);
@@ -95,7 +113,7 @@ class ReferralPlugin extends GenericPlugin {
 				// Slightly convoluted: register a hook to
 				// display the administration options at the
 				// end of the normal content
-				HookRegistry::register ('TemplateManager::include', array(&$this, 'handleTemplateInclude'));
+				HookRegistry::register ('TemplateManager::include', array(&$this, 'handleAuthorTemplateInclude'));
 				break;
 		}
 		return false;
@@ -106,10 +124,10 @@ class ReferralPlugin extends GenericPlugin {
 		if (!$article) return false;
 		$articleId = $article->getArticleId();
 
-		$referrer = $_SERVER['HTTP_REFERER'];
+		$referrer = isset($_SERVER['HTTP_REFERER'])?$_SERVER['HTTP_REFERER']:null;
 
 		// Check if referrer is empty or is the local journal
-//		if (empty($referrer) || strpos($referrer, Request::getIndexUrl()) !== FALSE) return false;
+		if (empty($referrer) || strpos($referrer, Request::getIndexUrl()) !== false) return false;
 
 		$referralDao =& DAORegistry::getDAO('ReferralDAO');
 		if ($referralDao->referralExistsByUrl($articleId, $referrer)) {
