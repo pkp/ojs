@@ -506,6 +506,10 @@ class ArticleHandler extends PKPHandler {
 		return array($journal, $issue, $publishedArticle);
 	}
 
+	function setupTemplate() {
+		parent::setupTemplate();
+		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_READER));
+	}
 }
 
 ?>

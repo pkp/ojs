@@ -226,7 +226,7 @@ class AnnouncementHandler extends ManagerHandler {
 			$announcementTypeForm->display();
 
 		} else {
-				Request::redirect(null, null, 'announcementTypes');
+			Request::redirect(null, null, 'announcementTypes');
 		}
 	}
 
@@ -279,7 +279,7 @@ class AnnouncementHandler extends ManagerHandler {
 			}
 
 		} else {
-				Request::redirect(null, null, 'announcementTypes');
+			Request::redirect(null, null, 'announcementTypes');
 		}	
 	}	
 
