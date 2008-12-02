@@ -621,7 +621,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function rateReviewer() {
 		$articleId = Request::getUserVar('articleId');
 		SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
-		list($journal, $submission) = parent::setupTemplate(true, $articleId, 'review');
+		parent::setupTemplate(true, $articleId, 'review');
 
 		$reviewId = Request::getUserVar('reviewId');
 		$quality = Request::getUserVar('quality');
