@@ -40,10 +40,10 @@
         -->
 
         <!-- Common Messages -->
-        <message key="common.openJournalSystems">Κοσμόπολις</message>
-				<message key="common.confirmComplete">Είστε σίγουροι ότι επιθυμείτε να επισημάνετε αυτή την εργασία ως ολοκληρωμένη; Ίσως να μην μπορείτε να κάνετε αλλαγές αργότερα.</message>
-				<message key="common.payment">Πληρωμή</message>
-				<message key="common.payments">Πληρωμές</message>
+	<message key="common.openJournalSystems">Κοσμόπολις</message>
+	<message key="common.confirmComplete">Είστε σίγουροι ότι επιθυμείτε να επισημάνετε αυτή την εργασία ως ολοκληρωμένη; Ίσως να μην μπορείτε να κάνετε αλλαγές αργότερα.</message>
+	<message key="common.payment">Πληρωμή</message>
+	<message key="common.payments">Πληρωμές</message>
 
         <!-- Common Form Messages -->
 
@@ -54,31 +54,31 @@
         <!-- Common Error Messages -->
                 
         <!-- Navigation -->
-        <message key="navigation.journalHelp">Βοήθεια</message>
-        <message key="navigation.archives">Αρχείο Τευχών</message>
-        <message key="navigation.current">Τρέχον Τεύχος</message>
-        <message key="navigation.otherJournals">Λίστα Περιοδικών</message>
-        <message key="navigation.browseByIssue">Κατά τεύχος</message>
-        <message key="navigation.browseByAuthor">Κατά συγγραφέα</message>
-        <message key="navigation.infoForAuthors">Για συγγραφείς</message>
-        <message key="navigation.infoForLibrarians">Για βιβλιοθηκονόμους</message>
-				<message key="navigation.competingInterestGuidelines">Οδηγίες για Συγκρουόμενα Συμφέροντα</message>
-        <message key="navigation.infoForAuthors.long">Περισσότερες πληροφορίες για συγγραφείς</message>
-        <message key="navigation.infoForLibrarians.long">Περισσότερες πληροφορίες για βιβλιοθηκονόμους</message>
+	<message key="navigation.journalHelp">Βοήθεια</message>
+	<message key="navigation.archives">Αρχείο Τευχών</message>
+	<message key="navigation.current">Τρέχον Τεύχος</message>
+	<message key="navigation.otherJournals">Λίστα Περιοδικών</message>
+	<message key="navigation.browseByIssue">Κατά τεύχος</message>
+	<message key="navigation.browseByAuthor">Κατά συγγραφέα</message>
+	<message key="navigation.infoForAuthors">Για συγγραφείς</message>
+	<message key="navigation.infoForLibrarians">Για βιβλιοθηκονόμους</message>
+	<message key="navigation.competingInterestGuidelines">Οδηγίες για Συγκρουόμενα Συμφέροντα</message>
+	<message key="navigation.infoForAuthors.long">Περισσότερες πληροφορίες για συγγραφείς</message>
+	<message key="navigation.infoForLibrarians.long">Περισσότερες πληροφορίες για βιβλιοθηκονόμους</message>
         
         <!-- Article Queues -->
-        <message key="common.queue.long.submissionsUnassigned">Χωρίς Ανάθεση</message>
-        <message key="common.queue.short.submissionsUnassigned">Χωρίς Ανάθεση</message>
-        <message key="common.queue.long.submissionsInEditing">Υποβολές προς Διαμόρφωση</message>
-        <message key="common.queue.short.submissionsInEditing">Προς Διαμόρφωση</message>
-        <message key="common.queue.long.submissionsInReview">Υποβολές προς Αξιολόγηση</message>
-        <message key="common.queue.short.submissionsInReview">Προς Αξιολογηση</message>
-        <message key="common.queue.long.submissionsArchives">Αρχεία   </message>
-        <message key="common.queue.short.submissionsArchives">Αρχεία</message>
-        <message key="common.queue.long.active">Ενεργές Υποβολές</message>
-        <message key="common.queue.short.active">Ενεργό</message>
-        <message key="common.queue.long.completed">Αρχείο</message>
-        <message key="common.queue.short.completed">Αρχείο</message>
+	<message key="common.queue.long.submissionsUnassigned">Χωρίς Ανάθεση</message>
+	<message key="common.queue.short.submissionsUnassigned">Χωρίς Ανάθεση</message>
+	<message key="common.queue.long.submissionsInEditing">Υποβολές προς Διαμόρφωση</message>
+	<message key="common.queue.short.submissionsInEditing">Προς Διαμόρφωση</message>
+	<message key="common.queue.long.submissionsInReview">Υποβολές προς Αξιολόγηση</message>
+	<message key="common.queue.short.submissionsInReview">Προς Αξιολογηση</message>
+	<message key="common.queue.long.submissionsArchives">Αρχεία   </message>
+	<message key="common.queue.short.submissionsArchives">Αρχεία</message>
+	<message key="common.queue.long.active">Ενεργές Υποβολές</message>
+	<message key="common.queue.short.active">Ενεργό</message>
+	<message key="common.queue.long.completed">Αρχείο</message>
+	<message key="common.queue.short.completed">Αρχείο</message>
         
         <!--
          *
@@ -88,178 +88,178 @@
         -->
 
         <!-- Common Section Terms -->
-        <message key="section.section">Ενότητα</message>
-        <message key="section.sections">Ενότητες Περιοδικού</message>
-        <message key="section.title">Τίτλος Ενότητας</message>
-        <message key="section.abbreviation">Συντομογραφία</message>
-        <message key="section.abbreviation.example">(π.χ. Άρθρα=ΑΡΘΡΟ)</message>
-        <message key="section.default.title">Άρθρα</message>
-        <message key="section.default.abbrev">ΑΡΘΡΟ</message>
-        <message key="section.default.policy"></message>
+	<message key="section.section">Ενότητα</message>
+	<message key="section.sections">Ενότητες Περιοδικού</message>
+	<message key="section.title">Τίτλος Ενότητας</message>
+	<message key="section.abbreviation">Συντομογραφία</message>
+	<message key="section.abbreviation.example">(π.χ. Άρθρα=ΑΡΘΡΟ)</message>
+	<message key="section.default.title">Άρθρα</message>
+	<message key="section.default.abbrev">ΑΡΘΡΟ</message>
+	<message key="section.default.policy"></message>
 
         <!-- Common Article Terms -->
-        <message key="article.articles">Άρθρα</message>
-        <message key="article.submissionId">Κωδικός Υποβολής</message>
-        <message key="article.title">Τίτλος</message>
-        <message key="article.authors">Συγγραφείς</message>
-        <message key="article.indexingInformation">Πληροφορίες Ευρετηρίασης</message>
-        <message key="article.metadata">Μεταδεδομένα</message>
-        <message key="article.journalSection">Ενότητα Περιοδικού</message>
-        <message key="article.file">Αρχείο</message>
-        <message key="article.suppFile">Συμπληρωματικό Αρχείο </message>
-        <message key="article.suppFiles">Συμπληρωματικό (-ά) Αρχείο(-α)</message>
-        <message key="article.suppFilesAbbrev">Συμπλ. αρχεία</message>
-        <message key="article.discipline">Επιστημονικός κλάδος και υπο-κατηγορίες</message>
-        <message key="article.subjectClassification">Θεματική Ταξινόμηση</message>
-        <message key="article.subject">Λέξεις κλειδιά</message>
-        <message key="article.coverage">Κάλυψη</message>
-        <message key="article.coverageGeo">Χωροταξική κάλυψη</message>
-        <message key="article.coverageChron">Χρονολογική ή ιστορική κάλυψη</message>
-        <message key="article.coverageSample">Χαρακτηριστικά ερευνητικού δείγματος</message>
-        <message key="article.type">Τύπος, μέθοδος ή προσέγγιση</message>
-        <message key="article.language">Γλώσσα</message>
-        <message key="article.sectionEditor">ΕΕ</message>
-        <message key="article.commentsToEditor">Σχόλια επιμελητή</message>
-        <message key="article.submission">Υποβολή</message>
-        <message key="article.submissions">Υποβολές</message>
-        <message key="article.abstract">Περίληψη</message>
-        <message key="article.details">Λεπτομέρειες</message>
+	<message key="article.articles">Άρθρα</message>
+	<message key="article.submissionId">Κωδικός Υποβολής</message>
+	<message key="article.title">Τίτλος</message>
+	<message key="article.authors">Συγγραφείς</message>
+	<message key="article.indexingInformation">Πληροφορίες Ευρετηρίασης</message>
+	<message key="article.metadata">Μεταδεδομένα</message>
+	<message key="article.journalSection">Ενότητα Περιοδικού</message>
+	<message key="article.file">Αρχείο</message>
+	<message key="article.suppFile">Συμπληρωματικό Αρχείο </message>
+	<message key="article.suppFiles">Συμπληρωματικό (-ά) Αρχείο(-α)</message>
+	<message key="article.suppFilesAbbrev">Συμπλ. αρχεία</message>
+	<message key="article.discipline">Επιστημονικός κλάδος και υπο-κατηγορίες</message>
+	<message key="article.subjectClassification">Θεματική Ταξινόμηση</message>
+	<message key="article.subject">Λέξεις κλειδιά</message>
+	<message key="article.coverage">Κάλυψη</message>
+	<message key="article.coverageGeo">Χωροταξική κάλυψη</message>
+	<message key="article.coverageChron">Χρονολογική ή ιστορική κάλυψη</message>
+	<message key="article.coverageSample">Χαρακτηριστικά ερευνητικού δείγματος</message>
+	<message key="article.type">Τύπος, μέθοδος ή προσέγγιση</message>
+	<message key="article.language">Γλώσσα</message>
+	<message key="article.sectionEditor">ΕΕ</message>
+	<message key="article.commentsToEditor">Σχόλια επιμελητή</message>
+	<message key="article.submission">Υποβολή</message>
+	<message key="article.submissions">Υποβολές</message>
+	<message key="article.abstract">Περίληψη</message>
+	<message key="article.details">Λεπτομέρειες</message>
 
         <!-- Submission Tracking - Common -->
-        <message key="submission.submissionEditing">Υποβολή Διορθωμένου κειμένου</message>
-        <message key="submission.changeSection">Αλλάξτε σε</message>
-				<message key="submission.sent">Εστάλη</message>
-        <message key="submission.editorDecision">Απόφαση Επιμελητή</message>
-        <message key="submission.round">Γύρος&amp;nbsp;{$round}</message>
-        <message key="submission.editorReview">Αξιολόγηση Επιμελητή</message>
-        <message key="submission.notifyAuthor">Ενημέρωση Συγγραφέα</message>
-        <message key="submission.notifyEditor">Ενημέρωση Επιμελητή</message>
-        <message key="submission.editorAuthorRecord">Ηλεκτρονική επικοινωνία Επιμελητή/Συγγραφέα</message>
-        <message key="submission.reviewersVersion">Έκδοση με σχόλια Αξιολογητή</message>
-        <message key="submission.postReviewVersion">Έκδοση μετά την Αξιολόγηση</message>
-        <message key="submission.editorVersion">Έκδοση Επιμελητή</message>
-        <message key="submission.authorsRevisedVersion">Αναθεωρημένη έκδοση Συγγραφέα</message>
-        <message key="submission.authorVersion">Έκδοση Συγγραφέα</message>
-        <message key="submission.copyediting">Επιμέλεια Κειμένου</message>
-        <message key="submission.copyedit">Επιμέλεια Κειμένου</message>
-        <message key="submission.proofreading">Επιμέλεια Τυπογραφικού Δοκιμίου</message>
-        <message key="submission.scheduling">Προγραμματισμός</message>
-        <message key="submission.scheduledIn">Προγραμματίστηκε για δημοσίευση στο {$issueName}.</message>
-        <message key="submission.scheduledIn.tba">(TBA)</message>
+	<message key="submission.submissionEditing">Υποβολή Διορθωμένου κειμένου</message>
+	<message key="submission.changeSection">Αλλάξτε σε</message>
+	<message key="submission.sent">Εστάλη</message>
+	<message key="submission.editorDecision">Απόφαση Επιμελητή</message>
+	<message key="submission.round">Γύρος&amp;nbsp;{$round}</message>
+	<message key="submission.editorReview">Αξιολόγηση Επιμελητή</message>
+	<message key="submission.notifyAuthor">Ενημέρωση Συγγραφέα</message>
+	<message key="submission.notifyEditor">Ενημέρωση Επιμελητή</message>
+	<message key="submission.editorAuthorRecord">Ηλεκτρονική επικοινωνία Επιμελητή/Συγγραφέα</message>
+	<message key="submission.reviewersVersion">Έκδοση με σχόλια Αξιολογητή</message>
+	<message key="submission.postReviewVersion">Έκδοση μετά την Αξιολόγηση</message>
+	<message key="submission.editorVersion">Έκδοση Επιμελητή</message>
+	<message key="submission.authorsRevisedVersion">Αναθεωρημένη έκδοση Συγγραφέα</message>
+	<message key="submission.authorVersion">Έκδοση Συγγραφέα</message>
+	<message key="submission.copyediting">Επιμέλεια Κειμένου</message>
+	<message key="submission.copyedit">Επιμέλεια Κειμένου</message>
+	<message key="submission.proofreading">Επιμέλεια Τυπογραφικού Δοκιμίου</message>
+	<message key="submission.scheduling">Προγραμματισμός</message>
+	<message key="submission.scheduledIn">Προγραμματίστηκε για δημοσίευση στο {$issueName}.</message>
+	<message key="submission.scheduledIn.tba">(TBA)</message>
         
-        <message key="submissions.sec">Sec</message>
-        <message key="submissions.step1">Βήμα 1</message>
-        <message key="submissions.step3">Βήμα 3</message>
-        <message key="submissions.queuedReview">Σε αναμονή για αξιολόγηση</message>
-        <message key="submissions.scheduled">Προγραμματισμένα</message>
-        <message key="submissions.published">Δημοσιευμένα</message>
-        <message key="submissions.initial">Αρχική</message>
-        <message key="submissions.proofread"> Επιμέλεια Τυπογραφικού Δοκιμίου </message>
-        <message key="submissions.initialProof">Αρχική Επιμέλεια Τυπογραφικού Δοκιμίου</message>
-        <message key="submissions.postAuthor">Post-Author</message>
-        <message key="submissions.reviewRound">Γύρος Αξιολόγησης</message>
-        <message key="submissions.proof">Διόρθωση Τυπογραφικού Δοκιμίου</message>
-        <message key="submissions.editorDecision">Απόφαση Επιμελητή</message>
-        <message key="submissions.editorRuling">Δικαίωμα Επιμελητή (Editor Ruling)</message>
-        <message key="submission.eventLog">Event Log</message>
+	<message key="submissions.sec">Sec</message>
+	<message key="submissions.step1">Βήμα 1</message>
+	<message key="submissions.step3">Βήμα 3</message>
+	<message key="submissions.queuedReview">Σε αναμονή για αξιολόγηση</message>
+	<message key="submissions.scheduled">Προγραμματισμένα</message>
+	<message key="submissions.published">Δημοσιευμένα</message>
+	<message key="submissions.initial">Αρχική</message>
+	<message key="submissions.proofread"> Επιμέλεια Τυπογραφικού Δοκιμίου </message>
+	<message key="submissions.initialProof">Αρχική Επιμέλεια Τυπογραφικού Δοκιμίου</message>
+	<message key="submissions.postAuthor">Post-Author</message>
+	<message key="submissions.reviewRound">Γύρος Αξιολόγησης</message>
+	<message key="submissions.proof">Διόρθωση Τυπογραφικού Δοκιμίου</message>
+	<message key="submissions.editorDecision">Απόφαση Επιμελητή</message>
+	<message key="submissions.editorRuling">Δικαίωμα Επιμελητή (Editor Ruling)</message>
+	<message key="submission.eventLog">Event Log</message>
 
         <!-- Submission list search engine -->
-        <message key="submissions.copyeditComplete">Διορθωμένα Κείμενα </message>
-        <message key="submissions.layoutComplete">Σελιδοποιημένα Κείμενα</message>
-        <message key="submissions.proofreadingComplete">Διορθωμένα Τυπογραφικά Δοκίμια</message>
+	<message key="submissions.copyeditComplete">Διορθωμένα Κείμενα </message>
+	<message key="submissions.layoutComplete">Σελιδοποιημένα Κείμενα</message>
+	<message key="submissions.proofreadingComplete">Διορθωμένα Τυπογραφικά Δοκίμια</message>
 
         <!-- Submission Notes -->
         
         <!-- Common Journal Terms -->
-        <message key="journal.currentIssue">Τρέχον Τεύχος</message>
-        <message key="journal.journals">Περιοδικά</message>
-        <message key="journal.path">Διαδρομή</message>
-        <message key="journal.journal">Περιοδικό</message>
+	<message key="journal.currentIssue">Τρέχον Τεύχος</message>
+	<message key="journal.journals">Περιοδικά</message>
+	<message key="journal.path">Διαδρομή</message>
+	<message key="journal.journal">Περιοδικό</message>
 
         <!-- User -->
-        <message key="user.showAllJournals">Τα περιοδικά μου</message>
-        <message key="user.registerForOtherJournals">Εγγραφείτε για άλλα περιοδικά</message>
-        <message key="user.myJournals">Τα Περιοδικά μου</message>
+	<message key="user.showAllJournals">Τα περιοδικά μου</message>
+	<message key="user.registerForOtherJournals">Εγγραφείτε για άλλα περιοδικά</message>
+	<message key="user.myJournals">Τα Περιοδικά μου</message>
 
         <!-- Roles -->
-        <message key="user.role.manager">Διαχειριστής περιοδικού</message>
-        <message key="user.role.editor">Επιμελητής Περιοδικού</message>
-        <message key="user.role.sectionEditor">Επιμελητής Ενότητας </message>
-        <message key="user.role.layoutEditor">Επιμελητής Σελιδοποίησης </message>
-        <message key="user.role.copyeditor">Επιμελητής Κειμένων</message>
-        <message key="user.role.proofreader">Επιμελητής Τυπογραφικών Δοκιμίων</message>
-        <message key="user.role.author">Συγγραφέας</message>
-        <message key="user.role.subscriptionManager">Διαχειριστής Συνδρομών</message>
-        <message key="user.role.managers">Διαχειριστές Περιοδικών </message>
-        <message key="user.role.editors">Επιμελητές</message>
-        <message key="user.role.sectionEditors">Επιμελητές Ενότητας</message>
-        <message key="user.role.layoutEditors">Επιμελητές Σελιδοποίησης</message>
-        <message key="user.role.copyeditors">Επιμελητές Κειμένων</message>
-        <message key="user.role.proofreaders">Επιμελητές Τυπογραφικών Δοκιμίων</message>
-        <message key="user.role.authors">Συγγραφείς</message>
-        <message key="user.role.subscriptionManagers">Διαχειριστές Συνδρομών</message>
+	<message key="user.role.manager">Διαχειριστής περιοδικού</message>
+	<message key="user.role.editor">Επιμελητής Περιοδικού</message>
+	<message key="user.role.sectionEditor">Επιμελητής Ενότητας </message>
+	<message key="user.role.layoutEditor">Επιμελητής Σελιδοποίησης </message>
+	<message key="user.role.copyeditor">Επιμελητής Κειμένων</message>
+	<message key="user.role.proofreader">Επιμελητής Τυπογραφικών Δοκιμίων</message>
+	<message key="user.role.author">Συγγραφέας</message>
+	<message key="user.role.subscriptionManager">Διαχειριστής Συνδρομών</message>
+	<message key="user.role.managers">Διαχειριστές Περιοδικών </message>
+	<message key="user.role.editors">Επιμελητές</message>
+	<message key="user.role.sectionEditors">Επιμελητές Ενότητας</message>
+	<message key="user.role.layoutEditors">Επιμελητές Σελιδοποίησης</message>
+	<message key="user.role.copyeditors">Επιμελητές Κειμένων</message>
+	<message key="user.role.proofreaders">Επιμελητές Τυπογραφικών Δοκιμίων</message>
+	<message key="user.role.authors">Συγγραφείς</message>
+	<message key="user.role.subscriptionManagers">Διαχειριστές Συνδρομών</message>
         
         <!-- Common Issue Terms -->
-        <message key="issue.issue">Τεύχος</message>
-        <message key="issue.issues">Τεύχη</message>
-        <message key="issue.title">Τίτλος</message>
-        <message key="issue.volume">Τόμος</message>
-        <message key="issue.number">Αριθμός</message>
-        <message key="issue.vol">Τόμ.</message>
-        <message key="issue.no">Αρ.</message>
-        <message key="issue.year">Έτος</message>
-        <message key="issue.noIssues">Αρ. Τεύχους</message>
-        <message key="issue.toc">Πίνακας Περιεχομένων</message>
-        <message key="issue.abstract">Περίληψη</message>
+	<message key="issue.issue">Τεύχος</message>
+	<message key="issue.issues">Τεύχη</message>
+	<message key="issue.title">Τίτλος</message>
+	<message key="issue.volume">Τόμος</message>
+	<message key="issue.number">Αριθμός</message>
+	<message key="issue.vol">Τόμ.</message>
+	<message key="issue.no">Αρ.</message>
+	<message key="issue.year">Έτος</message>
+	<message key="issue.noIssues">Αρ. Τεύχους</message>
+	<message key="issue.toc">Πίνακας Περιεχομένων</message>
+	<message key="issue.abstract">Περίληψη</message>
 
         <!--
          *
          * LOG - This section contains entries related to log entries.
          *
         -->
-        <message key="submission.event.logLevel">Επίπεδο</message>
-        <message key="submission.event.logLevel.info">Πληροφορίες</message>
-        <message key="submission.event.logLevel.notice">Σημείωση</message>
-        <message key="submission.event.logLevel.warning">Προειδοποίηση</message>
-        <message key="submission.event.logLevel.error">Σφάλμα</message>
+	<message key="submission.event.logLevel">Επίπεδο</message>
+	<message key="submission.event.logLevel.info">Πληροφορίες</message>
+	<message key="submission.event.logLevel.notice">Σημείωση</message>
+	<message key="submission.event.logLevel.warning">Προειδοποίηση</message>
+	<message key="submission.event.logLevel.error">Σφάλμα</message>
         
-        <message key="submission.event.general.defaultEvent">Συμβάν Υποβολής</message>
-        <message key="submission.event.general.articleSubmitted">Υποβολή Άρθρου</message>
-        <message key="submission.event.general.issueScheduled"> Το άρθρο βρίσκεται στο στάδιο προγραμματισμού για δημοσίευση (Submission sent to issue scheduling queue)</message>
-        <message key="submission.event.general.issueAssigned"> Προγραμματισμένο για δημοσίευση (Submission assigned to Issue)</message>
-        <message key="submission.event.general.articlePublished">Το άρθρο δημοσιεύτηκε</message>
+	<message key="submission.event.general.defaultEvent">Συμβάν Υποβολής</message>
+	<message key="submission.event.general.articleSubmitted">Υποβολή Άρθρου</message>
+	<message key="submission.event.general.issueScheduled"> Το άρθρο βρίσκεται στο στάδιο προγραμματισμού για δημοσίευση (Submission sent to issue scheduling queue)</message>
+	<message key="submission.event.general.issueAssigned"> Προγραμματισμένο για δημοσίευση (Submission assigned to Issue)</message>
+	<message key="submission.event.general.articlePublished">Το άρθρο δημοσιεύτηκε</message>
 
-        <message key="submission.event.author.authorRevision">Υποβολή αξιολόγησης συγγραφέα</message>
+	<message key="submission.event.author.authorRevision">Υποβολή αξιολόγησης συγγραφέα</message>
 
-        <message key="submission.event.general.authorRevision">Το αρχείο αξιολόγησης συγγραφέα ενημερώθηκε</message>
+	<message key="submission.event.general.authorRevision">Το αρχείο αξιολόγησης συγγραφέα ενημερώθηκε</message>
         
-        <message key="submission.event.editor.editorAssigned">Ανάθεση σε επιμελητή </message>
-        <message key="submission.event.editor.editorUnassigned">Ακύρωση ανάθεσης σε επιμελητή / Editor unassigned from submission</message>
-        <message key="submission.event.editor.editorDecision">Απόφαση Επιμελητή</message>
-        <message key="submission.event.editor.editorFile">Το αρχείο επιμελητή ενημερώθηκε</message>
-        <message key="submission.event.editor.submissionArchived">Η υποβολή αρχειοθετήθηκε</message>
-        <message key="submission.event.editor.submissionRestored">Επαναφορά υποβολής από αρχείο</message>
+	<message key="submission.event.editor.editorAssigned">Ανάθεση σε επιμελητή </message>
+	<message key="submission.event.editor.editorUnassigned">Ακύρωση ανάθεσης σε επιμελητή / Editor unassigned from submission</message>
+	<message key="submission.event.editor.editorDecision">Απόφαση Επιμελητή</message>
+	<message key="submission.event.editor.editorFile">Το αρχείο επιμελητή ενημερώθηκε</message>
+	<message key="submission.event.editor.submissionArchived">Η υποβολή αρχειοθετήθηκε</message>
+	<message key="submission.event.editor.submissionRestored">Επαναφορά υποβολής από αρχείο</message>
         
         
-        <message key="submission.event.copyedit.copyeditorAssigned">Ανάθεση σε Επιμελητή Κειμένου </message>
-        <message key="submission.event.copyedit.copyeditorUnassigned">Ακύρωση Ανάθεσης σε Επιμελητή Κειμένου</message>
-        <message key="submission.event.copyedit.copyeditInitiated">Ενεργοποίηση Επιμέλειας Κειμένου</message>
-        <message key="submission.event.copyedit.copyeditRevision">Το αρχείο αξιολόγησης του Επιμελητή Κειμένου ενημερώθηκε</message>
-        <message key="submission.event.copyedit.copyeditInitialCompleted">Η αρχική επιμέλεια κειμένου ολοκληρώθηκε</message>
-        <message key="submission.event.copyedit.copyeditFinalCompleted">Η τελική επιμέλεια κειμένου ολοκληρώθηκε</message>
-        <message key="submission.event.copyedit.copyeditSetFile">To αρχείο επιμέλειας κειμένου ενημερώθηκε</message>
+	<message key="submission.event.copyedit.copyeditorAssigned">Ανάθεση σε Επιμελητή Κειμένου </message>
+	<message key="submission.event.copyedit.copyeditorUnassigned">Ακύρωση Ανάθεσης σε Επιμελητή Κειμένου</message>
+	<message key="submission.event.copyedit.copyeditInitiated">Ενεργοποίηση Επιμέλειας Κειμένου</message>
+	<message key="submission.event.copyedit.copyeditRevision">Το αρχείο αξιολόγησης του Επιμελητή Κειμένου ενημερώθηκε</message>
+	<message key="submission.event.copyedit.copyeditInitialCompleted">Η αρχική επιμέλεια κειμένου ολοκληρώθηκε</message>
+	<message key="submission.event.copyedit.copyeditFinalCompleted">Η τελική επιμέλεια κειμένου ολοκληρώθηκε</message>
+	<message key="submission.event.copyedit.copyeditSetFile">To αρχείο επιμέλειας κειμένου ενημερώθηκε</message>
         
-        <message key="submission.event.proofread.proofreaderAssigned">Ανάθεση Επιμελητή τυπογραφικού δοκιμίου / Proofreader assigned to submission</message>
-        <message key="submission.event.proofread.proofreaderUnassigned">Ακύρωση ανάθεσης σε Επιμελητή τυπογραφικού δοκιμίου </message>
-        <message key="submission.event.proofread.proofreadInitiated">Ενεργοποίηση Επιμέλειας τυπογραφικού δοκιμίου</message>
-        <message key="submission.event.proofread.proofreadRevision">Το αρχείο επιμέλειας τυπογραφικού δοκιμίου ενημερώθηκε</message>
-        <message key="submission.event.proofread.proofreadCompleted">Η επιμέλεια του τυπογραφικού δοκιμίου ολοκληρώθηκε</message>
+	<message key="submission.event.proofread.proofreaderAssigned">Ανάθεση Επιμελητή τυπογραφικού δοκιμίου / Proofreader assigned to submission</message>
+	<message key="submission.event.proofread.proofreaderUnassigned">Ακύρωση ανάθεσης σε Επιμελητή τυπογραφικού δοκιμίου </message>
+	<message key="submission.event.proofread.proofreadInitiated">Ενεργοποίηση Επιμέλειας τυπογραφικού δοκιμίου</message>
+	<message key="submission.event.proofread.proofreadRevision">Το αρχείο επιμέλειας τυπογραφικού δοκιμίου ενημερώθηκε</message>
+	<message key="submission.event.proofread.proofreadCompleted">Η επιμέλεια του τυπογραφικού δοκιμίου ολοκληρώθηκε</message>
         
-        <message key="submission.event.layout.layoutEditorAssigned"> Ανάθεση σε Επιμελητή Σελιδοποίησης </message>
-        <message key="submission.event.layout.layoutEditorUnassigned">Ακύρωση ανάθεσης σε Επιμελητή Σελιδοποίησης </message>
-        <message key="submission.event.layout.layoutInitiated">Ενεργοποίηση Επιμέλειας Σελιδοποίησης</message>
-        <message key="submission.event.layout.layoutGalleyCreated">Το τυπογραφικό δοκίμιο ενημερώθηκε</message>
-        <message key="submission.event.layout.layoutComplete">Η σελιδοποίηση ολοκληρώθηκε</message>
+	<message key="submission.event.layout.layoutEditorAssigned"> Ανάθεση σε Επιμελητή Σελιδοποίησης </message>
+	<message key="submission.event.layout.layoutEditorUnassigned">Ακύρωση ανάθεσης σε Επιμελητή Σελιδοποίησης </message>
+	<message key="submission.event.layout.layoutInitiated">Ενεργοποίηση Επιμέλειας Σελιδοποίησης</message>
+	<message key="submission.event.layout.layoutGalleyCreated">Το τυπογραφικό δοκίμιο ενημερώθηκε</message>
+	<message key="submission.event.layout.layoutComplete">Η σελιδοποίηση ολοκληρώθηκε</message>
         <!--
          *
          * INTERFACE - Contains phrases organized by the section of the
@@ -268,18 +268,18 @@
         -->
 
         <!-- Reader article view -->
-        <message key="reader.fullTextSubscribersOnly">Πλήρες Κείμενο: Μόνο συνδρομητές</message>
-				<message key="reader.subscriptionRequiredLoginText">Απαιτείται συνδρομή για την πρόσβαση στο άρθρο. Για να πιστοποιήσετε την συνδρομή σας, συνδεθείτε στο περιοδικό.</message>  
-				<message key="reader.openAccess">Ανοικτή Πρόσβαση</message>
-				<message key="reader.subscriptionAccess">Συνδρομητική Πρόσβαση</message>
-				<message key="reader.subscriptionOrFeeAccess">Πρόσβαση βάση συνδρομής ή Εισφοράς</message>
+	<message key="reader.fullTextSubscribersOnly">Πλήρες Κείμενο: Μόνο συνδρομητές</message>
+	<message key="reader.subscriptionRequiredLoginText">Απαιτείται συνδρομή για την πρόσβαση στο άρθρο. Για να πιστοποιήσετε την συνδρομή σας, συνδεθείτε στο περιοδικό.</message>  
+	<message key="reader.openAccess">Ανοικτή Πρόσβαση</message>
+	<message key="reader.subscriptionAccess">Συνδρομητική Πρόσβαση</message>
+	<message key="reader.subscriptionOrFeeAccess">Πρόσβαση βάση συνδρομής ή Εισφοράς</message>
 
         <!-- Reader Comments -->
-        <message key="comments.commentsOnArticle">Σχόλια σε αυτό το άρθρο</message>
-        <message key="comments.authenticated">{$userName}</message>
+	<message key="comments.commentsOnArticle">Σχόλια σε αυτό το άρθρο</message>
+	<message key="comments.authenticated">{$userName}</message>
 
         <!-- Site Administration -->
-        <message key="admin.settings.oaiRegistrationDescription"><![CDATA[Για να ευρετηριάζονταιτα περιεχόμενα των περιοδικών της συλλογής, μέσω ενός αποκεντρωμένου συστήματος βάσεων δεδομένων ανά τον κόσμο, μπορείτε να <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">δηλώσετε</a> το URL της συλλογής στο <a href="http://pkp.sfu.ca/harvester/" target="_blank">Σύστημα Συλλογής Μεταδεδομένων (Harvester)</a> του Public Knowledge Project. Το σύστημα συλλέγει τα μεταδεδομένα κάθε ευρετηριαζόμενου τεκμηρίου των περιοδικών της συλλογής, ενεργοποιώντας την δυνατότητα της ακριβής και συγκεντρωτικής αναζήτησης του περιεχομένου μεταξύ όλων των συλλογών που υλοποιούν το <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
+	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Για να ευρετηριάζονταιτα περιεχόμενα των περιοδικών της συλλογής, μέσω ενός αποκεντρωμένου συστήματος βάσεων δεδομένων ανά τον κόσμο, μπορείτε να <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">δηλώσετε</a> το URL της συλλογής στο <a href="http://pkp.sfu.ca/harvester/" target="_blank">Σύστημα Συλλογής Μεταδεδομένων (Harvester)</a> του Public Knowledge Project. Το σύστημα συλλέγει τα μεταδεδομένα κάθε ευρετηριαζόμενου τεκμηρίου των περιοδικών της συλλογής, ενεργοποιώντας την δυνατότητα της ακριβής και συγκεντρωτικής αναζήτησης του περιεχομένου μεταξύ όλων των συλλογών που υλοποιούν το <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
         <br /><br />
         <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Συνδεθείτε εδώ</a> και εισάγετε <span class="highlight">{$siteUrl}</span> στο πεδίο <strong>Site URL</strong>, and <span class="highlight">{$oaiUrl}</span> στο πεδίο <strong>Base URL for OAI Archive</strong>.
         <br /><br /> 
@@ -288,72 +288,72 @@
 
 
         <!-- Languages -->
-				<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Το κατέβασμα πακέτων γλώσσας από το ιστότοπο του Public Knowledge Project δεν προσωρινά διαθέσιμη γιατί:</p>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Το κατέβασμα πακέτων γλώσσας από το ιστότοπο του Public Knowledge Project δεν προσωρινά διαθέσιμη γιατί:</p>
 				<ul>
 					<li>Ο εξυπηρετητής σας (server) δεν έχει ή δεν επιτρέπει την εκτέλεση GNU "tar" utility</li>
 					<li>Το OJS δεν μπορεί να is unable to μετατρέψει το registry αρχείο των τοπικών ρυθμίσεων, συνήθως το "registry/locales.xml".</li>
 					</ul>
 				<p>Τα πακέτα γλωσσών μπορούν να κατέβουν από τον <a href="http://pkp.sfu.ca">ιστότοπο του PKP</a>.</p>]]></message>
 
-        <message key="admin.auth.defaultSourceDescription"><![CDATA[Η επιλογή  μιας προκαθορισμένης πηγής πιστοποίησης  διαφορετικής από την OJS έχει τα παρακάτω  αποτελέσματα:  
+	<message key="admin.auth.defaultSourceDescription"><![CDATA[Η επιλογή  μιας προκαθορισμένης πηγής πιστοποίησης  διαφορετικής από την OJS έχει τα παρακάτω  αποτελέσματα:  
         <ul>          
         <li>Εάν ένα χρήστης προσπαθήσει να εγγραφεί  και να δημιουργήσει ένα νέο λογαριασμό μέσα  στην  συλλογή χρησιμοποιώντας ένα όνομα  χρήστη (username) που ήδη χρησιμοποιείται από την  πηγή πιστοποίησης (αλλά όχι από την βάση  δεδομένων του OJS),  η εγγραφή επιτρέπεται μόνο  εάν ο κωδικός πρόσβασης (password) είναι έγκυρος  για τον λογαριασμό του χρήστη.</li> 
         </ul>]]></message>
 
         <!-- System Information -->
-        <message key="admin.editSystemConfigInstructions"><![CDATA[Χρησιμοποιήστε  αυτή τη φόρμα για να επεξεργαστείτε τις  ρυθμίσεις του συστήματός σας (το αρχείο  <tt>config.inc.php</tt>). Πατήστε “Αποθήκευση Ρυθμίσεων”,  ή "Εμφάνιση Νέων Ρυθμίσεων" απλά για να  προβληθούν στην οθόνη σας οι ενημερωμένες  ρυθμίσεις χωρίς να μεταβληθεί το υπάρχον  αρχείο ρυθμίσεων. 
+	<message key="admin.editSystemConfigInstructions"><![CDATA[Χρησιμοποιήστε  αυτή τη φόρμα για να επεξεργαστείτε τις  ρυθμίσεις του συστήματός σας (το αρχείο  <tt>config.inc.php</tt>). Πατήστε “Αποθήκευση Ρυθμίσεων”,  ή "Εμφάνιση Νέων Ρυθμίσεων" απλά για να  προβληθούν στην οθόνη σας οι ενημερωμένες  ρυθμίσεις χωρίς να μεταβληθεί το υπάρχον  αρχείο ρυθμίσεων. 
         <br /><br />  
         <span class="formError">Προειδοποίηση: Αλλάγες αυτών των  ρυθμίσεων είναι πιθανόν να καταστήσει τον  ιστότοπο (συλλογή) απροσπέλαστο (απαιτώντας  να διορθωθει το αρχείο ρυθμίσεων μη αυτόματα).  Συνίσταται να μην κάνετε καμία αλλαγή εκτός  και γνωρίζετε ακριβώς τι κάνετε.</span>]]></message>
-        <message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ΣΗΜΕΙΩΣΗ!</div>  
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ΣΗΜΕΙΩΣΗ!</div>  
         <p>Δεν ήταν δυνατή η αυτόματη αντικατάσταση του αρχείου ρυθμίσεων από το σύστημα. Για να εφαρμόσετε τις αλλαγές στις ρυθμίσεις πρέπει να ανοίξετε <tt>config.inc.php</tt> με κατάλληλο πρόγραμμα διόρθωσης κειμένων και να αντικαταστήσετε τα περιεχόμενα αυτού με τα περιεχόμενου του πεδίου κειμένου που βρίσκονται παρακάτω.</p>]]></message>
         
      		
      		<!-- Site Administrator Merge Users -->	
 
         <!-- Subscription Management -->
-        <message key="subscriptionManager.subscriptionManagement">Διαχείριση  Συνδρομών</message>
+	<message key="subscriptionManager.subscriptionManagement">Διαχείριση  Συνδρομών</message>
         
         <!-- Journal Management -->
 
         <!-- Statistics & Reports -->
 
-        <message key="manager.statistics.reports.dateFrom">Από</message>
-        <message key="manager.statistics.reports.dateTo">Μέχρι</message>
-        <message key="manager.statistics.reports.reportType">Τύπος  έκθεσης</message>
-        <message key="manager.statistics.reports.type.journal">Έκθεση  Περιοδικού</message>
-        <message key="manager.statistics.reports.type.editor">Έκθεση  Επιμελητή</message>
-        <message key="manager.statistics.reports.type.reviewer">Έκθεση  Αξιολογητή</message>
-        <message key="manager.statistics.reports.type.section">Έκθεση  Ενότητας</message>
-        <message key="manager.statistics.reports.generate">Δημιουργία  Έκθεσης</message>
-        <message key="manager.statistics.reports.status">Κατάσταση (Δεκτά, Μη Αποδεκτά, άλλο)</message>
-        <message key="manager.statistics.reports.dateDecided">Ημερομηνία  Απόφασης</message>
-        <message key="manager.statistics.reports.author">Συγγραφέας  #{$num}</message>
-        <message key="manager.statistics.reports.affiliation">Συνεργαζόμενοι  Οργανισμοί #{$num}</message>
-        <message key="manager.statistics.reports.country">Χώρα #{$num}</message>
-        <message key="manager.statistics.reports.reviewer">Αξιολογητές  #{$num}</message>
-        <message key="manager.statistics.reports.editor">Επιμελητής  #{$num}</message>
-        <message key="manager.statistics.reports.score">Βαθμολογία #{$num}</message>
-        <message key="manager.statistics.reports.singleScore">Βαθμολογία</message>
-        <message key="manager.statistics.reports.recommendation">Εισήγηση  #{$num}</message>
-        <message key="manager.statistics.reports.daysToDecision">Ημέρες για  απόφαση</message>
-        <message key="manager.statistics.reports.daysToPublication">Ημέρες για  Δημοσίευση</message>
+	<message key="manager.statistics.reports.dateFrom">Από</message>
+	<message key="manager.statistics.reports.dateTo">Μέχρι</message>
+	<message key="manager.statistics.reports.reportType">Τύπος  έκθεσης</message>
+	<message key="manager.statistics.reports.type.journal">Έκθεση  Περιοδικού</message>
+	<message key="manager.statistics.reports.type.editor">Έκθεση  Επιμελητή</message>
+	<message key="manager.statistics.reports.type.reviewer">Έκθεση  Αξιολογητή</message>
+	<message key="manager.statistics.reports.type.section">Έκθεση  Ενότητας</message>
+	<message key="manager.statistics.reports.generate">Δημιουργία  Έκθεσης</message>
+	<message key="manager.statistics.reports.status">Κατάσταση (Δεκτά, Μη Αποδεκτά, άλλο)</message>
+	<message key="manager.statistics.reports.dateDecided">Ημερομηνία  Απόφασης</message>
+	<message key="manager.statistics.reports.author">Συγγραφέας  #{$num}</message>
+	<message key="manager.statistics.reports.affiliation">Συνεργαζόμενοι  Οργανισμοί #{$num}</message>
+	<message key="manager.statistics.reports.country">Χώρα #{$num}</message>
+	<message key="manager.statistics.reports.reviewer">Αξιολογητές  #{$num}</message>
+	<message key="manager.statistics.reports.editor">Επιμελητής  #{$num}</message>
+	<message key="manager.statistics.reports.score">Βαθμολογία #{$num}</message>
+	<message key="manager.statistics.reports.singleScore">Βαθμολογία</message>
+	<message key="manager.statistics.reports.recommendation">Εισήγηση  #{$num}</message>
+	<message key="manager.statistics.reports.daysToDecision">Ημέρες για  απόφαση</message>
+	<message key="manager.statistics.reports.daysToPublication">Ημέρες για  Δημοσίευση</message>
 
         <!-- Plugin Management -->
 
 				<!-- Payment Management -->
-				<message key="manager.payment.options.payPerViewFee">Πληρωμή Άρθρου ανά προβολή (Pay-Per-View)</message>
+	<message key="manager.payment.options.payPerViewFee">Πληρωμή Άρθρου ανά προβολή (Pay-Per-View)</message>
 				
 				
 			
 
 
         <!-- General plugin information -->
-        <message key="plugins.categories.generic.description">Τα γενικά plugins χρησιμοποιύνται για επέκταση του Open Journal System με διάφορους τρόπους που δεν υποστηρίζονται από άλλες κατηγορίες plugin.</message>
-        <message key="plugins.categories.auth.description">Τα Plugin πιστοποίησης επιτρέπουν στο Κοσμόπολις την ανάθεση εργασιών πιστοποίησης χρήστη σε άλλα συστήματα, όπως  LDAP servers.</message>
+	<message key="plugins.categories.generic.description">Τα γενικά plugins χρησιμοποιύνται για επέκταση του Open Journal System με διάφορους τρόπους που δεν υποστηρίζονται από άλλες κατηγορίες plugin.</message>
+	<message key="plugins.categories.auth.description">Τα Plugin πιστοποίησης επιτρέπουν στο Κοσμόπολις την ανάθεση εργασιών πιστοποίησης χρήστη σε άλλα συστήματα, όπως  LDAP servers.</message>
 
 
 
-				<message key="plugins.categories.citationFormats.description">Τα Plugins Μορφής Βιβλιογραφικής Αναφοράς παρέχουν στους χρήστες την δυνατότητα επιλογής διαφόρων τύπων πρόσβασης και προβολής των βιβλιογραφικών πληροφοριών των άρθρων.</message>
+	<message key="plugins.categories.citationFormats.description">Τα Plugins Μορφής Βιβλιογραφικής Αναφοράς παρέχουν στους χρήστες την δυνατότητα επιλογής διαφόρων τύπων πρόσβασης και προβολής των βιβλιογραφικών πληροφοριών των άρθρων.</message>
 				
 				
 				
@@ -369,12 +369,12 @@
 				
 
 
-        <message key="manager.setup.lockssDescription"><![CDATA[Το OJS υποστηρίζει το σύστημα <a href="http://lockss.stanford.edu/" target="_blank">LOCKSS</a> (Lots  of Copies Keep Stuff Safe) για διασφάλιση ύπαρξης ασφαλούς και μόνιμου αρχείου για το περιοδικό. Το LOCKSS αποτελεί ανοικτό λογισμικό που δημιουργήθηκε στη Βιβλιοθήκη του Πανεπιστημίου του Stanford και παρέχει τη δυνατότητα στις βιβλιοθήκες να διατηρούν επιλεγμένα διαδικτυακά περιοδικά μέσω τακτικής σφυγμομέτρησης των εγγεγραμμένων ιστοτόπων των περιοδικών για περιεχόμενο που έχει δημοσιευτεί πρόσφατα και για αρχειοθέτηση αυτού. Κάθε αρχείο επικυρώνεται συνεχώς έναντι άλλων προσωρινών μνημών βιβλιοθηκών, και ένα εντοπιστεί κατεστραμμένα ή απολεσθέντα περιεχόμενα, για την αποκατάσταση τους χρησιμοποιούνται άλλες προσωρινές μνήμες ή το ίδιο το περιοδικό.
+	<message key="manager.setup.lockssDescription"><![CDATA[Το OJS υποστηρίζει το σύστημα <a href="http://lockss.stanford.edu/" target="_blank">LOCKSS</a> (Lots  of Copies Keep Stuff Safe) για διασφάλιση ύπαρξης ασφαλούς και μόνιμου αρχείου για το περιοδικό. Το LOCKSS αποτελεί ανοικτό λογισμικό που δημιουργήθηκε στη Βιβλιοθήκη του Πανεπιστημίου του Stanford και παρέχει τη δυνατότητα στις βιβλιοθήκες να διατηρούν επιλεγμένα διαδικτυακά περιοδικά μέσω τακτικής σφυγμομέτρησης των εγγεγραμμένων ιστοτόπων των περιοδικών για περιεχόμενο που έχει δημοσιευτεί πρόσφατα και για αρχειοθέτηση αυτού. Κάθε αρχείο επικυρώνεται συνεχώς έναντι άλλων προσωρινών μνημών βιβλιοθηκών, και ένα εντοπιστεί κατεστραμμένα ή απολεσθέντα περιεχόμενα, για την αποκατάσταση τους χρησιμοποιούνται άλλες προσωρινές μνήμες ή το ίδιο το περιοδικό.
         <br /><br />  
         Δεν είναι αναγκαία η ρύθμιση της υποστήριξης LOCKSS για το περιοδικό σας μέχρι την πλήρη δρομολόγηση της δημοσίευσης. Στο σημείο αυτό ακολουθείστε τα ακόλουθα δύο βήματα:]]></message>
 
         <!-- Setup Step 3 -->
-       	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Προτεινόμενες Δηλώσεις Προστασίας Πνευματικών Δικαιωμάτων Creative Commons </h3>
+	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Προτεινόμενες Δηλώσεις Προστασίας Πνευματικών Δικαιωμάτων Creative Commons </h3>
 <h4>1. Προτεινόμενη Πολιτική για περιοδικά Ανοικτής Πρόσβασης</h4>
 Οι Συγγραφείς που δημοσιεύουν εργασίες τους σε αυτό το περιοδικό συμφωνούν στους παρακάτω όρους:
 <ol type="a">
@@ -390,18 +390,18 @@
 	 <li>Οι Συγγραφείς μπορούν να συνάπτουν ξεχωριστές, και πρόσθετες συμβάσεις και συμφωνίες για την μη αποκλειστική διανομή της εργασίας όπως δημοσιεύτηκε στο περιοδικό αυτό (π.χ. κατάθεση σε ένα ακαδημαϊκό καταθετήριο ή δημοσίευση σε ένα βιβλίο), με την προϋπόθεση της αναγνώρισης και την αναφοράς της πρώτης δημοσίευσης σε αυτό το περιοδικό.</li>
 	 <li>Το περιοδικό επιτρέπει και ενθαρρύνει τους Συγγραφείς να καταθέτουν τις εργασίες τους online (π.χ. σε ένα ακαδημαϊκό καταθετήριο ή στους προσωπικές τους ιστοσελίδες) πριν και μετά από τις διαδικασίες της δημοσίευσης, καθώς αυτό μπορεί να οδηγήσει σε παραγωγικές ανταλλαγές ιδεών και σκέψεων καθώς επίσης και σε γρηγορότερη και μεγαλύτερη χρήση και ευρετηρίαση της δημοσιευμένης εργασίας (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
 </ol>]]></message>
-        <message key="manager.setup.subjectClassificationDescription"><![CDATA[[Το περιοδικό χρησιμοποιεί σύστημα θεματικής ταξινόμησης που είναι διαθέσιμο στον Παγκόσμιο Ιστό (web).<br /> 
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Το περιοδικό χρησιμοποιεί σύστημα θεματικής ταξινόμησης που είναι διαθέσιμο στον Παγκόσμιο Ιστό (web).<br /> 
          Τίτλος συστήματος]]></message>
-        <message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Για να ευρετηριάζοντα τα περιεχόμενα του περιοδικού σας εντός ενός παγκοσμίως κατανεμημένου συστήματος βάσεων δεδομένων αναζήτησης  , <a href="http://pkp.sfu.ca/harvester/add.php"  target="_blank">καταχωρίστε</a> το URL του περιοδικού στον Public Knowledge Project  metadata <a href="http://pkp.sfu.ca/harvester/" target="_blank">harvester</a>. Το εργαλείο αυτό συλλέγει μεταδεδόμενα από κάθε ευρετηριασμένο τεκμήριο στο περιοδικό αυτό, παρέχοντας τη δυνατότητα ακριβούς και συλλογικής αναζήτησης στους ιστοτόπους αναζήτησης που τηρούν το <a  href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction"  target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.  
+	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Για να ευρετηριάζοντα τα περιεχόμενα του περιοδικού σας εντός ενός παγκοσμίως κατανεμημένου συστήματος βάσεων δεδομένων αναζήτησης  , <a href="http://pkp.sfu.ca/harvester/add.php"  target="_blank">καταχωρίστε</a> το URL του περιοδικού στον Public Knowledge Project  metadata <a href="http://pkp.sfu.ca/harvester/" target="_blank">harvester</a>. Το εργαλείο αυτό συλλέγει μεταδεδόμενα από κάθε ευρετηριασμένο τεκμήριο στο περιοδικό αυτό, παρέχοντας τη δυνατότητα ακριβούς και συλλογικής αναζήτησης στους ιστοτόπους αναζήτησης που τηρούν το <a  href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction"  target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.  
         <br /><br />  
         Λάβετε υπόψη σας ότι σε περίπτωση όπου ο διαχειριστής του ιστοτόπου έχει ήδη καταχωρίσει τον ιστότοπο αυτό στον PKP Harvester, το περιοδικό θα ευρετηριαστεί αυτόματα και δεν θα είναι απαραίτητη η καταχώριση του περιοδικού.  
         <br /><br />  
         <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Κάντε κλικ εδώ</a> και εισαγάγετε <span class="highlight">{$siteUrl}</span> under <strong>Site URL</strong>, και <span  class="highlight">{$oaiUrl}</span> under <strong> URL Βάσης για Αρχεία OAI</strong>.]]></message>
 
         <!-- Setup Step 4 -->
-        <message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Βήματα:  Σειρά αναμονής &gt; Αξιολόγηση υποβολής &gt; Διαμόρφωση υποβολής &gt; Πίνακας περιεχομένων.<br /><br />  
+	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Βήματα:  Σειρά αναμονής &gt; Αξιολόγηση υποβολής &gt; Διαμόρφωση υποβολής &gt; Πίνακας περιεχομένων.<br /><br />  
         Επιλέξτε ένα μοντέλο για χειρισμό των διαφόρων φάσεων της διαδικασίας επιμέλειας. (Για να καθορίζετε Επιμελητή διαχείρισης και επιμελητές ενοτήτων, μεταβείτε στους «Επιμελητές» στη «Διαχείριση περιοδικού».)]]></message>
-				<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>Για να δίνεται η δυνατότητα στους αναγνώστες να εντοπίζουν online εκδόσεις των εργασιών που αναφέρονται από έναν συγγραφέα, οι παρακάτω επιλογές είναι διαθέσιμες.</p>
+	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>Για να δίνεται η δυνατότητα στους αναγνώστες να εντοπίζουν online εκδόσεις των εργασιών που αναφέρονται από έναν συγγραφέα, οι παρακάτω επιλογές είναι διαθέσιμες.</p>
 				
 				<ol>
 				<li><strong>Προσθήκη ενός Εργαλείου Ανάγνωσης</strong><p>Ο Διαχειριστής του Περιοδικού μπορεί να προσθέσει την επιλογή "Εύρεση Αναφορών" στα Εργαλεία Ανάγνωσης που συνοδεύουν τα δημοσιευμένα τεκμήρια, που δίνουν την δυνατότητα στους αναγνώστες να επικολήσουν τον τίτλο της αναφοράς και να αναζητήσουν την αντίστοιχη εργασία σε προεπιλεγμένες επσιτημονικές βάσεις δεδομένων.</p></li>
@@ -414,7 +414,7 @@
         
         
         <!-- Section Management -->
-        <message key="manager.sections.abstractsDisabled">Δεν απαιτούνται περιλήψεις </message>
+	<message key="manager.sections.abstractsDisabled">Δεν απαιτούνται περιλήψεις </message>
 
         <!-- Import/Export -->
 
@@ -423,10 +423,10 @@
 
 
         <!-- People Management -->
-        <message key="manager.people.confirmDisable">Απενεργοποίηση του χρήστη; Η ενέργεια αυτή δεν θα επιτρέπει τη σύνδεση του χρήστη στο σύστημα. 
+	<message key="manager.people.confirmDisable">Απενεργοποίηση του χρήστη; Η ενέργεια αυτή δεν θα επιτρέπει τη σύνδεση του χρήστη στο σύστημα. 
  
         Προοαιρετικά, μπορεί να χρειαστεί να υποβάλλετε τους λόγους για απενεργοποίηση του λογαριασμού του χρήστη.</message>
-        <message key="manager.people.noAdministrativeRights"><![CDATA[Δεν έχετε δικαιώματα διαχείρισης για τον συγκεκριμένο χρήση. Αυτό μπορεί να οφείλεται:                  
+	<message key="manager.people.noAdministrativeRights"><![CDATA[Δεν έχετε δικαιώματα διαχείρισης για τον συγκεκριμένο χρήση. Αυτό μπορεί να οφείλεται:                  
         <ul>                          
         <li>Ο χρήστης είναι ο διαχειριστής του ιστοτόπου</li>  
        <li>Ο χρήστης είναι ενεργός σε περιοδικά που δεν διαχειρίζεστε</li>                  
@@ -449,7 +449,7 @@
         <!-- Announcements Management -->
 
         <!-- Editor -->
-       	<message key="editor.submissionReview.notes"><![CDATA[<ol>
+	<message key="editor.submissionReview.notes"><![CDATA[<ol>
 				<li>Τα τονισμένα τεκμήρια υποδυκνείουν απαιτούμενη ενέργεια από τον Επιμελητή του Περιοδικού.</li>
 				<li>Το πεδίο "Προθεσμία Αξιολόγησης" συμπληρώνεται όταν ο Αξιολογητής αποδέχεται το αίτημα για αξιολόγηση της υποβολής. Προβάλει τον αριθμό των εβδομάδων μέχρι την προθεσμία αξιολόγησης ή (-) που έχουν περάσει από την συγκεκριμένη προθεσμία.</li>
 				</ol>]]></message>
@@ -465,7 +465,7 @@
         <!-- Navigation sidebar menu -->
         
         <!-- Used by editor in submission review / editing -->
-        <message key="editor.article.selectReviewerNotes"><![CDATA[Το όνομα αποτελεί σύνδεσμο για το προφίλ του αξιολογητή.<br/>  
+	<message key="editor.article.selectReviewerNotes"><![CDATA[Το όνομα αποτελεί σύνδεσμο για το προφίλ του αξιολογητή.<br/>  
         Για την βαθμολογική κατάταξη η μέγιστη τιμή είναι 5 (Άριστα).<br/> 
          Με την ένδειξη “εβδομάδες” υποδεικνύεται η μέση χρονική περίοδος για την ολοκλήρωση της αξιολόγησης.<br/>  
          Με την ένδειξη “τελευταία” υποδεικνύεται η ημερομηνία για την πιο πρόσφατα αποδεκτή αξιολόγηση.<br/>  
@@ -476,96 +476,96 @@
 				
 
         <!-- Section Editor -->
-        <message key="sectionEditor.activeEditorialAssignments">Ενεργές αναθέσεις στον επιμελητή ενότητας</message>
-        <message key="sectionEditor.completedEditorialAssignments">Ολοκληρωμένες αναθέσεις στον επιμελητή ενότητας</message>
-        <message key="sectionEditor.noneAssigned">Δεν έχουν ανατεθεί υποβολές.</message>
-        <message key="sectionEditor.copyedit.confirmRenotify">Ενημερώνοντας ξανά τον συγκεκριμένο επιμελητή κειμένων θα επανακινηθεί η ανάθεση των εργασιών τους. Είστε βέβαιοι ότι επιθυμείτε να προχωρήσετε;</message>
-        <message key="sectionEditor.author.confirmRenotify"> Ενημερώνοντας ξανά τον συγκεκριμένο συγγραφέα, θα επανακινηθεί η ανάθεση των εργασιών τους. Είστε βέβαιοι ότι επιθυμείτε να προχωρήσετε;</message>
-        <message key="sectionEditor.layout.confirmRenotify">Ενημερώνοντας ξανά τον συγκεκριμένο επιμελητή σελιδοποίησης, θα επανακινηθεί η ανάθεση των εργασιών τους. Είστε βέβαιοι ότι επιθυμείτε να προχωρήσετε;</message>
-        <message key="sectionEditor.proofreader.confirmRenotify"> Ενημερώνοντας ξανά τον συγκεκριμένο επιμελητή τυπογραφικών δοκιμίων, θα επανακινηθεί η ανάθεση των εργασιών τους. Είστε βέβαιοι ότι επιθυμείτε να προχωρήσετε;</message>
+	<message key="sectionEditor.activeEditorialAssignments">Ενεργές αναθέσεις στον επιμελητή ενότητας</message>
+	<message key="sectionEditor.completedEditorialAssignments">Ολοκληρωμένες αναθέσεις στον επιμελητή ενότητας</message>
+	<message key="sectionEditor.noneAssigned">Δεν έχουν ανατεθεί υποβολές.</message>
+	<message key="sectionEditor.copyedit.confirmRenotify">Ενημερώνοντας ξανά τον συγκεκριμένο επιμελητή κειμένων θα επανακινηθεί η ανάθεση των εργασιών τους. Είστε βέβαιοι ότι επιθυμείτε να προχωρήσετε;</message>
+	<message key="sectionEditor.author.confirmRenotify"> Ενημερώνοντας ξανά τον συγκεκριμένο συγγραφέα, θα επανακινηθεί η ανάθεση των εργασιών τους. Είστε βέβαιοι ότι επιθυμείτε να προχωρήσετε;</message>
+	<message key="sectionEditor.layout.confirmRenotify">Ενημερώνοντας ξανά τον συγκεκριμένο επιμελητή σελιδοποίησης, θα επανακινηθεί η ανάθεση των εργασιών τους. Είστε βέβαιοι ότι επιθυμείτε να προχωρήσετε;</message>
+	<message key="sectionEditor.proofreader.confirmRenotify"> Ενημερώνοντας ξανά τον συγκεκριμένο επιμελητή τυπογραφικών δοκιμίων, θα επανακινηθεί η ανάθεση των εργασιών τους. Είστε βέβαιοι ότι επιθυμείτε να προχωρήσετε;</message>
 
-        <message key="sectionEditor.regrets.breadcrumb">Αδυναμία αποδοχής</message>
-        <message key="sectionEditor.regrets.title">#{$articleId} Αδυναμία αποδοχής από αξιολογητή,  Ακυρώσεις &amp; Αρχικά Στάδια</message>
-        <message key="sectionEditor.regrets"> Αδυναμία αποδοχής </message>
-        <message key="sectionEditor.regrets.link">Προβολή αδυναμιών αποδοχής, ακυρώσεων, προηγούμενων σταδίων</message>
-        <message key="sectionEditor.regrets.reviewRound">Αξιολόγηση από ομότιμους αξιολογητές, γύρος {$round}</message>
-        <message key="sectionEditor.regrets.decisionRound">Απόφαση επιμελητή, γύρος  {$round}</message>
-        <message key="sectionEditor.regrets.regretsAndCancels">Αδυναμία αποδοχής αξιολογητή &amp;  Ακυρώσεις</message>
-        <message key="sectionEditor.regrets.regret"> Αδυναμία αποδοχής </message>
-        <message key="sectionEditor.regrets.result">Αποτέλεσμα</message>
-        <message key="sectionEditor.review.enrollReviewer">Εγγραφή υπάρχοντος χρήστη ως αξιολογητή</message>
-        <message key="sectionEditor.review.createReviewer">Δημιουργία νέου αξιολογητή</message>
+	<message key="sectionEditor.regrets.breadcrumb">Αδυναμία αποδοχής</message>
+	<message key="sectionEditor.regrets.title">#{$articleId} Αδυναμία αποδοχής από αξιολογητή,  Ακυρώσεις &amp; Αρχικά Στάδια</message>
+	<message key="sectionEditor.regrets"> Αδυναμία αποδοχής </message>
+	<message key="sectionEditor.regrets.link">Προβολή αδυναμιών αποδοχής, ακυρώσεων, προηγούμενων σταδίων</message>
+	<message key="sectionEditor.regrets.reviewRound">Αξιολόγηση από ομότιμους αξιολογητές, γύρος {$round}</message>
+	<message key="sectionEditor.regrets.decisionRound">Απόφαση επιμελητή, γύρος  {$round}</message>
+	<message key="sectionEditor.regrets.regretsAndCancels">Αδυναμία αποδοχής αξιολογητή &amp;  Ακυρώσεις</message>
+	<message key="sectionEditor.regrets.regret"> Αδυναμία αποδοχής </message>
+	<message key="sectionEditor.regrets.result">Αποτέλεσμα</message>
+	<message key="sectionEditor.review.enrollReviewer">Εγγραφή υπάρχοντος χρήστη ως αξιολογητή</message>
+	<message key="sectionEditor.review.createReviewer">Δημιουργία νέου αξιολογητή</message>
 
         <!-- Layout Editor -->
-        <message key="layoutEditor.activeEditorialAssignments">Ενεργές αναθέσεις επιμελητή</message>
-        <message key="layoutEditor.completedEditorialAssignments">Ολοκληρωμένες αναθέσεις επιμελητή</message>
-        <message key="layoutEditor.noActiveAssignments">Δεν υπάρχουν ενεργές αναθέσεις επιμελητή.</message>
-        <message key="layoutEditor.layoutEditingAssignments">Αναθέσεις επιμελητή σελιδοποίησης.</message>
-        <message key="layoutEditor.galley.uploadGalleyFormat">Φόρτωση μορφής τυπογραφικών δοκιμίων</message>
-        <message key="layoutEditor.galley.replaceGalley">Αντικατάσταση αρχείου</message>
-        <message key="layoutEditor.galley.uploadSuppFile">Φόρτωση συμπληρωματικού αρχείου</message>
-        <message key="submission.layout.galleryNoImages">Δεν υπάρχουν εικόνες</message>
-				<message key="submission.layout.imageInvalid">Μή έγκυρη μορφή αρχείου εικόνας. Έγκυρες μορφές αρχείων είναι .gif, .jpg, ή .png.</message>
+	<message key="layoutEditor.activeEditorialAssignments">Ενεργές αναθέσεις επιμελητή</message>
+	<message key="layoutEditor.completedEditorialAssignments">Ολοκληρωμένες αναθέσεις επιμελητή</message>
+	<message key="layoutEditor.noActiveAssignments">Δεν υπάρχουν ενεργές αναθέσεις επιμελητή.</message>
+	<message key="layoutEditor.layoutEditingAssignments">Αναθέσεις επιμελητή σελιδοποίησης.</message>
+	<message key="layoutEditor.galley.uploadGalleyFormat">Φόρτωση μορφής τυπογραφικών δοκιμίων</message>
+	<message key="layoutEditor.galley.replaceGalley">Αντικατάσταση αρχείου</message>
+	<message key="layoutEditor.galley.uploadSuppFile">Φόρτωση συμπληρωματικού αρχείου</message>
+	<message key="submission.layout.galleryNoImages">Δεν υπάρχουν εικόνες</message>
+	<message key="submission.layout.imageInvalid">Μή έγκυρη μορφή αρχείου εικόνας. Έγκυρες μορφές αρχείων είναι .gif, .jpg, ή .png.</message>
 
         <!-- Reviewer -->
-        <message key="reviewer.pendingReviews">Άρθρα για τα οποία εκκρεμεί αξιολόγηση</message>
-        <message key="reviewer.completedReviews">Ολοκληρώθηκε</message>
-        <message key="reviewer.averageQuality">Βαθμολογική κατάταξη</message>
+	<message key="reviewer.pendingReviews">Άρθρα για τα οποία εκκρεμεί αξιολόγηση</message>
+	<message key="reviewer.completedReviews">Ολοκληρώθηκε</message>
+	<message key="reviewer.averageQuality">Βαθμολογική κατάταξη</message>
         
         <!-- Used in submission review -->
-        <message key="reviewer.article.fileToBeReviewed">Άρθρο προς αξιολόγηση</message>
-        <message key="reviewer.article.notifyTheEditor">Ενημέρωση του επιμελητή</message>
-        <message key="reviewer.article.canDoReview">Θα αναλάβει την αξιολόγηση</message>
-        <message key="reviewer.article.cannotDoReview">Δεν μπορεί να αναλάβει την αξιολόγηση</message>
-        <message key="reviewer.article.restrictedFileAccess">Η προβολή των αρχείων είναι εφικτή μόνο αν και όταν ο αξιολογητής δεχτεί να αναλάβει την αξιολόγηση.</message>
-        <message key="reviewer.article.submissionEditor">Αναθέτων Επιμελητής</message>
-        <message key="reviewer.article.reviewerCommentsDescription">Πληκτρολογήστε ή επικολλήστε σχόλια αξιολόγησης εδώ</message>
-        <message key="reviewer.article.editorToEnter">Επιμελητής προς καταχώριση</message>
-        <message key="reviewer.article.sendReminder">Αποστολή υπενθύμισης</message>
-        <message key="reviewer.article.automatic">(Αυτόματα)</message>
-        <message key="reviewer.article.selectRecommendation">Επιλογή Εισήγησης</message>
-        <message key="reviewer.article.recommendation">Εισήγηση</message>
-        <message key="reviewer.article.submitReview">Υποβολή αξιολόγησης στον επιμελητή</message>
-        <message key="reviewer.article.reviewerComments">Σχόλια</message>
-        <message key="reviewer.article.uploadedFile">Αρχεία που έχουν φορτωθεί</message>        
-        <message key="reviewer.article.reviewersAnnotatedVersion">Έκδοση που έχει φορτωθεί από τον αξιολογητή</message>
-        <message key="reviewer.article.reviewersAnnotatedVersionDescription">(Εάν επιθυμείτε να καταχωρήσετε και επισημείωση στο αρχείο, για τον επιμελητή, αποθηκεύστε στον υπολογιστή σας και χρησιμοποιήστε τις επιλογές Εύρεση/Φόρτωσης.)</message>
-        <message key="reviewer.article.schedule.request">Αίτημα επιμελητή</message>
-        <message key="reviewer.article.schedule.response">Η απάντησή σας</message>
-        <message key="reviewer.article.schedule.submitted">Υποβολή αξιολόγησης</message>
-        <message key="reviewer.article.schedule.due">Προσθεσμία αξιολόγησης</message>
-        <message key="reviewer.article.decision.accept">Αποδοχή υποβολής</message>
-        <message key="reviewer.article.decision.pendingRevisions">Απαιτούνται αναθεωρήσεις</message>
-        <message key="reviewer.article.decision.resubmitHere">Εκ νέου υποβολή για αξιολόγηση</message>
-        <message key="reviewer.article.decision.resubmitElsewhere">Εκ νέου υποβολή σε άλλη ενότητα</message>
-        <message key="reviewer.article.decision.decline">Απόρριψη υποβολής</message>
-        <message key="reviewer.article.decision.seeComments">Ανατρέξτε στα σχόλια</message>
-        <message key="reviewer.article.schedule">Πρόγραμμα</message>
-        <message key="reviewer.article.submissionToBeReviewed">Υποβολή προς αξιολόγηση</message>
-        <message key="reviewer.article.reviewSchedule">Πρόγραμμα αξιολόγησης</message>
-        <message key="reviewer.article.reviewSteps">Βήματα αξιολόγησης</message>
-        <message key="reviewer.article.reviewerGuidelines">Οδηγίες προς αξιολογητή</message>
-        <message key="reviewer.article.notifyEditorA">Ενημέρωση του Αναθέτωντα Επιμελητή</message>
-        <message key="reviewer.article.notifyEditorB">αν θα αναλάβετε την αξιολόγηση.</message>
-        <message key="reviewer.article.consultGuidelines">Αν αναλάβετε την αξιολόγηση, συμβουλευτείτε της Οδηγίες προς τον Αξιολογητή παρακάτω.</message>
-        <message key="reviewer.article.downloadSubmission">Επιλέξτε τα ονόματα των αρχείων για να κατεβάσετε και να δείτε (στην οθόνη ή εκτυπώνοντάς τα) τα αρχεία που σχετίζονται με αυτή την υποβολή.</message>
-        <message key="reviewer.article.enterCompetingInterests"><![CDATA[Δηλώστε αν υπάρχουν ή όχι συγκρουόμενα συμφέροντα σχετικά με την αξιολόγηση εκ μέρους σας αυτής της έρευνας (βλ. <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>).]]></message>
-				<message key="reviewer.competingInterests">Συγκρουόμενα Συμφέροντα</message>
-        <message key="reviewer.article.enterReviewA">Πληκτρολογήστε ή επικολλήστε την αξιολόγησή σας για αυτή την υποβολή.</message>
-        <message key="reviewer.article.uploadFile">Συμπληρωματικά μπορείτε να φορτώσετε συμβουλευτικά αρχεία για τον Επιμελητή ή/και τους συγγραφείς.</message>
-        <message key="reviewer.article.selectRecommendation">Επιλέξετε μια εισήγηση και υποβάλλετε την αξιολόγηση ώστε να ολοκληρωθεί η διαδικασία. Πριν επιλέξετε μια εισήγηση θα πρέπει πρώτα να εισάγετε μια αξιολόγηση ή ένα σχετικό αρχείο. </message>
-        <message key="reviewer.article.mustSelectDecision">Δεν έχει επιλεχθεί εισήγηση. Πρέπει να επιλέξετε εισήγηση για υποβολή.</message>
-        <message key="reviewer.article.confirmDecision">Μετά από την καταγραφή απόφασης, δεν θα μπορείτε να πραγματοποιήσετε αλλαγές στη συγκεκριμένη αξιολόγηση. Είστε βέβαιοι ότι επιθυμείτε να συνεχίσετε;</message>
-        <message key="reviewer.article.ensuringBlindReview">Διασφάλιση "τυφλής" αξιολόγησης</message>
+	<message key="reviewer.article.fileToBeReviewed">Άρθρο προς αξιολόγηση</message>
+	<message key="reviewer.article.notifyTheEditor">Ενημέρωση του επιμελητή</message>
+	<message key="reviewer.article.canDoReview">Θα αναλάβει την αξιολόγηση</message>
+	<message key="reviewer.article.cannotDoReview">Δεν μπορεί να αναλάβει την αξιολόγηση</message>
+	<message key="reviewer.article.restrictedFileAccess">Η προβολή των αρχείων είναι εφικτή μόνο αν και όταν ο αξιολογητής δεχτεί να αναλάβει την αξιολόγηση.</message>
+	<message key="reviewer.article.submissionEditor">Αναθέτων Επιμελητής</message>
+	<message key="reviewer.article.reviewerCommentsDescription">Πληκτρολογήστε ή επικολλήστε σχόλια αξιολόγησης εδώ</message>
+	<message key="reviewer.article.editorToEnter">Επιμελητής προς καταχώριση</message>
+	<message key="reviewer.article.sendReminder">Αποστολή υπενθύμισης</message>
+	<message key="reviewer.article.automatic">(Αυτόματα)</message>
+	<message key="reviewer.article.selectRecommendation">Επιλογή Εισήγησης</message>
+	<message key="reviewer.article.recommendation">Εισήγηση</message>
+	<message key="reviewer.article.submitReview">Υποβολή αξιολόγησης στον επιμελητή</message>
+	<message key="reviewer.article.reviewerComments">Σχόλια</message>
+	<message key="reviewer.article.uploadedFile">Αρχεία που έχουν φορτωθεί</message>        
+	<message key="reviewer.article.reviewersAnnotatedVersion">Έκδοση που έχει φορτωθεί από τον αξιολογητή</message>
+	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(Εάν επιθυμείτε να καταχωρήσετε και επισημείωση στο αρχείο, για τον επιμελητή, αποθηκεύστε στον υπολογιστή σας και χρησιμοποιήστε τις επιλογές Εύρεση/Φόρτωσης.)</message>
+	<message key="reviewer.article.schedule.request">Αίτημα επιμελητή</message>
+	<message key="reviewer.article.schedule.response">Η απάντησή σας</message>
+	<message key="reviewer.article.schedule.submitted">Υποβολή αξιολόγησης</message>
+	<message key="reviewer.article.schedule.due">Προσθεσμία αξιολόγησης</message>
+	<message key="reviewer.article.decision.accept">Αποδοχή υποβολής</message>
+	<message key="reviewer.article.decision.pendingRevisions">Απαιτούνται αναθεωρήσεις</message>
+	<message key="reviewer.article.decision.resubmitHere">Εκ νέου υποβολή για αξιολόγηση</message>
+	<message key="reviewer.article.decision.resubmitElsewhere">Εκ νέου υποβολή σε άλλη ενότητα</message>
+	<message key="reviewer.article.decision.decline">Απόρριψη υποβολής</message>
+	<message key="reviewer.article.decision.seeComments">Ανατρέξτε στα σχόλια</message>
+	<message key="reviewer.article.schedule">Πρόγραμμα</message>
+	<message key="reviewer.article.submissionToBeReviewed">Υποβολή προς αξιολόγηση</message>
+	<message key="reviewer.article.reviewSchedule">Πρόγραμμα αξιολόγησης</message>
+	<message key="reviewer.article.reviewSteps">Βήματα αξιολόγησης</message>
+	<message key="reviewer.article.reviewerGuidelines">Οδηγίες προς αξιολογητή</message>
+	<message key="reviewer.article.notifyEditorA">Ενημέρωση του Αναθέτωντα Επιμελητή</message>
+	<message key="reviewer.article.notifyEditorB">αν θα αναλάβετε την αξιολόγηση.</message>
+	<message key="reviewer.article.consultGuidelines">Αν αναλάβετε την αξιολόγηση, συμβουλευτείτε της Οδηγίες προς τον Αξιολογητή παρακάτω.</message>
+	<message key="reviewer.article.downloadSubmission">Επιλέξτε τα ονόματα των αρχείων για να κατεβάσετε και να δείτε (στην οθόνη ή εκτυπώνοντάς τα) τα αρχεία που σχετίζονται με αυτή την υποβολή.</message>
+	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Δηλώστε αν υπάρχουν ή όχι συγκρουόμενα συμφέροντα σχετικά με την αξιολόγηση εκ μέρους σας αυτής της έρευνας (βλ. <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>).]]></message>
+	<message key="reviewer.competingInterests">Συγκρουόμενα Συμφέροντα</message>
+	<message key="reviewer.article.enterReviewA">Πληκτρολογήστε ή επικολλήστε την αξιολόγησή σας για αυτή την υποβολή.</message>
+	<message key="reviewer.article.uploadFile">Συμπληρωματικά μπορείτε να φορτώσετε συμβουλευτικά αρχεία για τον Επιμελητή ή/και τους συγγραφείς.</message>
+	<message key="reviewer.article.selectRecommendation">Επιλέξετε μια εισήγηση και υποβάλλετε την αξιολόγηση ώστε να ολοκληρωθεί η διαδικασία. Πριν επιλέξετε μια εισήγηση θα πρέπει πρώτα να εισάγετε μια αξιολόγηση ή ένα σχετικό αρχείο. </message>
+	<message key="reviewer.article.mustSelectDecision">Δεν έχει επιλεχθεί εισήγηση. Πρέπει να επιλέξετε εισήγηση για υποβολή.</message>
+	<message key="reviewer.article.confirmDecision">Μετά από την καταγραφή απόφασης, δεν θα μπορείτε να πραγματοποιήσετε αλλαγές στη συγκεκριμένη αξιολόγηση. Είστε βέβαιοι ότι επιθυμείτε να συνεχίσετε;</message>
+	<message key="reviewer.article.ensuringBlindReview">Διασφάλιση "τυφλής" αξιολόγησης</message>
 
         <!-- Used in submission editing -->
-        <message key="copyeditor.article.fileToCopyedit">Αρχείο προς επιμέλεια κειμένου</message>
-        <message key="copyeditor.article.copyeditorFile">Αρχείο επιμελητή κειμένου </message>
-        <message key="copyeditor.article.uploadedFile">Φορτωμένο Αρχείο </message>
-        <message key="copyeditor.article.copyeditorFinalFile"> Αρχείο επιμελητή κειμένου </message>
+	<message key="copyeditor.article.fileToCopyedit">Αρχείο προς επιμέλεια κειμένου</message>
+	<message key="copyeditor.article.copyeditorFile">Αρχείο επιμελητή κειμένου </message>
+	<message key="copyeditor.article.uploadedFile">Φορτωμένο Αρχείο </message>
+	<message key="copyeditor.article.copyeditorFinalFile"> Αρχείο επιμελητή κειμένου </message>
         
         <!-- Proofreader -->
-        <message key="proofreader.noProofreadingAssignments">Καμία ανάθεση για επιμέλεια τυπογραφικών δοκιμίων</message>
+	<message key="proofreader.noProofreadingAssignments">Καμία ανάθεση για επιμέλεια τυπογραφικών δοκιμίων</message>
 
         <!-- Author -->
 
@@ -576,7 +576,7 @@
         <!-- Article Submission Step 2 -->
         
         <!-- Article Submission Step 3 -->
-        <message key="author.submit.uploadInstructions"><![CDATA[  
+	<message key="author.submit.uploadInstructions"><![CDATA[  
         <p>Για να φορτώσετε χειρόγραφο σε αυτό το περιοδικό, ακολουθήστε τα ακόλουθα βήματα.    
         <ol>  
         <li>Σε αυτή τη σελίδα, κάντε κλικ στην επιλογή Εύρεση (ή Επιλογή αρχείου) που ανοίγει το παράθυρο Επιλογή αρχείου για εντοπισμό του αρχείου στον σκληρό δίσκο του ηλεκτρονικού σας υπολογιστή.</li>  
@@ -593,96 +593,96 @@
         <!-- Article Submission Step 5 -->
 
         <!-- Used in submission review / editing -->
-        <message key="submission.review.mustUploadFileForReview">Το μήνυμα για υποβολή αιτήματος δεν μπορεί να αποσταλλεί μέχρι να υπάρξει Έκδοση αξιολόγησης.</message>
+	<message key="submission.review.mustUploadFileForReview">Το μήνυμα για υποβολή αιτήματος δεν μπορεί να αποσταλλεί μέχρι να υπάρξει Έκδοση αξιολόγησης.</message>
 
         <!-- Submission Tracking - Copyedit Specific -->
-        <message key="submission.copyedit.mustUploadFileForInitialCopyedit"> Το μήνυμα για υποβολή αιτήματος δεν μπορεί να αποσταλλεί μέχρι το αρχείο να επιλεγεί για επιμέλεια κειμένου από την εντολή "Απόφαση Επιμελητή" στην σελίδα "Αξιολόγηση".</message>
-        <message key="submission.copyedit.mustUploadFileForCopyedit"> Το μήνυμα ηλεκτρονικού ταχυδρομείου για υποβολή αιτήματος δεν μπορεί να αποσταλλεί εάν δεν φορτωθεί αρχείο για επιμέλεια κειμένου.</message>
-        <message key="submission.copyedit.initialCopyedit">Αρχική επιμέλεια κειμένου</message>
-        <message key="submission.copyedit.editorsCopyedit">Επιμέλεια κειμένου από τον Επιμελητή Περιοδικού</message>
-        <message key="submission.copyedit.editorAuthorReview">Επιμέλεια κειμένου από τον συγγραφέα</message>
-        <message key="submission.copyedit.finalCopyedit">Τελική επιμέλεια κειμένου</message>
-        <message key="submission.copyedit.copyeditVersion">Έκδοση Επιμελημένου Κειμένου(C/E)</message>
-        <message key="submission.copyedit.selectCopyeditor">Ανάθεση σε επιμελητή κειμένου </message>
-        <message key="submission.copyedit.useFile">Χρήση αρχείου</message>
-        <message key="submission.copyedit.copyeditComments">Σχόλια επιμέλειας κειμένων</message>
-        <message key="submission.copyedit.instructions">Οδηγίες επιμέλειας κειμένων</message>
+	<message key="submission.copyedit.mustUploadFileForInitialCopyedit"> Το μήνυμα για υποβολή αιτήματος δεν μπορεί να αποσταλλεί μέχρι το αρχείο να επιλεγεί για επιμέλεια κειμένου από την εντολή "Απόφαση Επιμελητή" στην σελίδα "Αξιολόγηση".</message>
+	<message key="submission.copyedit.mustUploadFileForCopyedit"> Το μήνυμα ηλεκτρονικού ταχυδρομείου για υποβολή αιτήματος δεν μπορεί να αποσταλλεί εάν δεν φορτωθεί αρχείο για επιμέλεια κειμένου.</message>
+	<message key="submission.copyedit.initialCopyedit">Αρχική επιμέλεια κειμένου</message>
+	<message key="submission.copyedit.editorsCopyedit">Επιμέλεια κειμένου από τον Επιμελητή Περιοδικού</message>
+	<message key="submission.copyedit.editorAuthorReview">Επιμέλεια κειμένου από τον συγγραφέα</message>
+	<message key="submission.copyedit.finalCopyedit">Τελική επιμέλεια κειμένου</message>
+	<message key="submission.copyedit.copyeditVersion">Έκδοση Επιμελημένου Κειμένου(C/E)</message>
+	<message key="submission.copyedit.selectCopyeditor">Ανάθεση σε επιμελητή κειμένου </message>
+	<message key="submission.copyedit.useFile">Χρήση αρχείου</message>
+	<message key="submission.copyedit.copyeditComments">Σχόλια επιμέλειας κειμένων</message>
+	<message key="submission.copyedit.instructions">Οδηγίες επιμέλειας κειμένων</message>
         
         <!-- Submission Tracking - Layout Specific -->
-				<message key="submission.layout.noLayoutFile">Κανένα (Φορτώστε την τελική έκδοση του επιμελημένου κειμένου ως Έκδοση Σελιδοποίησης πριν την αποστολή αιτήματος σελιδοποίησης)</message>
-        <message key="submission.layout.assignLayoutEditor">Ανάθεση σε επιμελητή σελιδοποίησης</message>
-        <message key="submission.layout.replaceLayoutEditor">Αντικατάσταση επιμελητή σελιδοποίησης</message>
-        <message key="submission.layout.layoutComments">Σχόλια Σελιδοποίησης</message>
-        <message key="submission.layout.instructions">Οδηγίες σελιδοποίησης</message>
-				<message key="submission.layout.referenceLinking">Σύνδεση αναφορών</message>
+	<message key="submission.layout.noLayoutFile">Κανένα (Φορτώστε την τελική έκδοση του επιμελημένου κειμένου ως Έκδοση Σελιδοποίησης πριν την αποστολή αιτήματος σελιδοποίησης)</message>
+	<message key="submission.layout.assignLayoutEditor">Ανάθεση σε επιμελητή σελιδοποίησης</message>
+	<message key="submission.layout.replaceLayoutEditor">Αντικατάσταση επιμελητή σελιδοποίησης</message>
+	<message key="submission.layout.layoutComments">Σχόλια Σελιδοποίησης</message>
+	<message key="submission.layout.instructions">Οδηγίες σελιδοποίησης</message>
+	<message key="submission.layout.referenceLinking">Σύνδεση αναφορών</message>
 
 
         <!-- Submission Tracking - Proofread Specific -->
-        <message key="submission.proofreadingComments">Σχόλια επιμέλειας τυπογραφικών δοκιμίων</message>
-        <message key="submission.archiveSubmission">Αρχειοθέτηση Υποβολών</message>
-        <message key="submission.proofread.corrections">Διορθώσεις τυπογραφικών δοκιμίων</message>
-        <message key="submission.proofread.instructions">Οδηγίες επιμέλειας τυπογραφικών δοκιμίων</message>
+	<message key="submission.proofreadingComments">Σχόλια επιμέλειας τυπογραφικών δοκιμίων</message>
+	<message key="submission.archiveSubmission">Αρχειοθέτηση Υποβολών</message>
+	<message key="submission.proofread.corrections">Διορθώσεις τυπογραφικών δοκιμίων</message>
+	<message key="submission.proofread.instructions">Οδηγίες επιμέλειας τυπογραφικών δοκιμίων</message>
 
         <!-- Submission History -->
         
-        <message key="submission.logType.article">Άρθρο</message>
-        <message key="submission.logType.author">Συγγραφέας</message>
-        <message key="submission.logType.editor">Επιμελητής</message>
-        <message key="submission.logType.review">Αξιολόγηση</message>
-        <message key="submission.logType.copyedit">Επιμέλεια κειμένων</message>
-        <message key="submission.logType.layout">Σελιδοποίηση</message>
-        <message key="submission.logType.proofread">Επιμέλεια τυπογραφικών δοκιμίων</message>
+	<message key="submission.logType.article">Άρθρο</message>
+	<message key="submission.logType.author">Συγγραφέας</message>
+	<message key="submission.logType.editor">Επιμελητής</message>
+	<message key="submission.logType.review">Αξιολόγηση</message>
+	<message key="submission.logType.copyedit">Επιμέλεια κειμένων</message>
+	<message key="submission.logType.layout">Σελιδοποίηση</message>
+	<message key="submission.logType.proofread">Επιμέλεια τυπογραφικών δοκιμίων</message>
         
         <!-- Submission Event Log -->
 
         <!-- Submission Email Log -->
         
         <!-- Submission Comments -->
-        <message key="submission.comments.editorAuthorCorrespondence">Αλληλογραφία Επιμελητή/Συγγραφέα</message>
-        <message key="submission.comments.copyeditComments">Σχόλια επιμέλειας κειμένων</message>
-        <message key="submission.comments.viewableDescription"><![CDATA[Τα συγκεκριμένα σχόλια μπορούν να γνωστοποιηθούν και στον συγγραφέα.<br />  
+	<message key="submission.comments.editorAuthorCorrespondence">Αλληλογραφία Επιμελητή/Συγγραφέα</message>
+	<message key="submission.comments.copyeditComments">Σχόλια επιμέλειας κειμένων</message>
+	<message key="submission.comments.viewableDescription"><![CDATA[Τα συγκεκριμένα σχόλια μπορούν να γνωστοποιηθούν και στον συγγραφέα.<br />  
         (Μετά από την αποθήκευση, μπορεί να γίνει προσθήκη πρόσθετων σχολίων.)]]></message>
-        <message key="submission.comments.canShareWithAuthor">Για συγγραφέα και επιμελητή περιοδικού</message>
-        <message key="submission.comments.cannotShareWithAuthor">Για επιμελητή περιοδικού</message>
-        <message key="submission.comments.blindCcReviewers">Μετά από την αποστολή, παρουσιάστε ένα αντίγραφο BCC με δυνατότητα διαμόρφωσης για αποστολή στους αξιολογητές.</message>
-        <message key="submission.comments.forAuthorEditor">Για συγγραφέα και επιμελητή περιοδικού</message>
-        <message key="submission.comments.forEditor">Για επιμελητή περιοδικού</message>
-        <message key="submission.comments.saveAndEmailAuthor">Αποθήκευση και αποστολή email στον συγγραφέα</message>
-        <message key="submission.comments.saveAndEmailEditor"> Αποθήκευση και αποστολή email στον επιμελητή περιοδικού</message>
+	<message key="submission.comments.canShareWithAuthor">Για συγγραφέα και επιμελητή περιοδικού</message>
+	<message key="submission.comments.cannotShareWithAuthor">Για επιμελητή περιοδικού</message>
+	<message key="submission.comments.blindCcReviewers">Μετά από την αποστολή, παρουσιάστε ένα αντίγραφο BCC με δυνατότητα διαμόρφωσης για αποστολή στους αξιολογητές.</message>
+	<message key="submission.comments.forAuthorEditor">Για συγγραφέα και επιμελητή περιοδικού</message>
+	<message key="submission.comments.forEditor">Για επιμελητή περιοδικού</message>
+	<message key="submission.comments.saveAndEmailAuthor">Αποθήκευση και αποστολή email στον συγγραφέα</message>
+	<message key="submission.comments.saveAndEmailEditor"> Αποθήκευση και αποστολή email στον επιμελητή περιοδικού</message>
         
         <!-- Login -->
-        <message key="user.login.registerNewAccount">Δεν είστε χρήστης;  Εγγραφείτε στην συλλογή.</message>
-        <message key="user.login.resetPasswordInstructions"><![CDATA[Για λόγους  ασφαλείας το σύστημα στέλνει email για την αναθεώρηση του Κωδικού  Πρόσβασης (password) στους εγγεγραμμένους χρήστες, από το να τους υπενθυμίζει το τρέχον.<br /><br  />Εισάγετε τη διεύθυνση του ηλεκτρονικού ταχυδρομείου σας παρακάτω, για να αλλάξετε  τον κωδικό πρόσβασής σας. Ένα μήνυμα επιβεβαίωσης θα σταλεί σε αυτή τη διεύθυνση.]]></message>
+	<message key="user.login.registerNewAccount">Δεν είστε χρήστης;  Εγγραφείτε στην συλλογή.</message>
+	<message key="user.login.resetPasswordInstructions"><![CDATA[Για λόγους  ασφαλείας το σύστημα στέλνει email για την αναθεώρηση του Κωδικού  Πρόσβασης (password) στους εγγεγραμμένους χρήστες, από το να τους υπενθυμίζει το τρέχον.<br /><br  />Εισάγετε τη διεύθυνση του ηλεκτρονικού ταχυδρομείου σας παρακάτω, για να αλλάξετε  τον κωδικό πρόσβασής σας. Ένα μήνυμα επιβεβαίωσης θα σταλεί σε αυτή τη διεύθυνση.]]></message>
 
         <!-- Profile -->
 
         <!-- Registration -->
-        <message key="user.register.repeatPassword">Επαναλάβετε τον κωδικό πρόσβασης (password)</message>
-        <message key="user.register.selectJournal">Επιλέξτε ένα  περιοδικό για να εγγραφείτε</message>
-        <message key="user.register.noJournals">Δεν υπάρχουν περιοδικά στα οποία μπορείτε να εγγραφείτε στον ιστότοπο αυτό.</message>
-        <message key="user.register.privacyStatement">Πολιτική Προστασίας Προσωπικών Δεδομένων</message>
-        <message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a  href="{$registerUrl}">Πατήστε εδώ</a> εάν είστε ήδη  εγγεγραμμένος χρήστης σε αυτό ή σε άλλο  περιοδικό της συλλογής.]]></message>
-        <message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a  href="{$registerUrl}">Πατήστε εδώ</a> εάν <strong>ΔΕΝ</strong> είστε  ήδη εγγεγραμμένος σε αυτό ή σε άλλο περιοδικό  της συλλογής.]]></message>
-        <message key="user.register.loginToRegister">Εισαγάγετε το υπάρχον όνομα χρήστη και τον κωδικό πρόσβασής σας για να εγγραφείτε σε  αυτό το περιοδικό.</message>
-        <message key="user.register.registrationDisabled">Το περιοδικό αυτό προς το παρόν δεν αποδέχεται εγγραφές χρηστών.</message>
-        <message key="user.register.form.passwordLengthTooShort">Ο κωδικός πρόσβασης που εισάγατε περιέχει λιγότερους χαρακτήρες από τον ελάχιστο επιτρεπτό αριθμό χαρακτήρων.</message>
-        <message key="user.register.readerDescription"><!--Θα ενημερώνεστε με μήνυμα ηλεκτρονικού ταχυδρομείου για την δημοσίευση ενός τεύχους του περιοδικού.--></message>
-        <message key="user.register.openAccessNotificationDescription">Θα  ενημερώνεστε με μήνυμα ηλεκτρονικού ταχυδρομείου όταν ένα τεύχος του  περιοδικού μετατρέπεται σε ανοικτής πρόσβασης.</message>
-        <message key="user.register.authorDescription">Δυνατότητα υποβολής άρθρων στο περιοδικό.</message>
-        <message key="user.register.reviewerDescriptionNoInterests">Επιθυμία για συμμετοχή στην αξιολόγηση υποβολών στο περιοδικό.</message>
-        <message key="user.register.reviewerDescription"> Επιθυμία για συμμετοχή στην αξιολόγηση υποβολών στο περιοδικό. Προσδιορίστε τα θέματα αξιολόγησης που σας ενδιαφέρουν.</message>
+	<message key="user.register.repeatPassword">Επαναλάβετε τον κωδικό πρόσβασης (password)</message>
+	<message key="user.register.selectJournal">Επιλέξτε ένα  περιοδικό για να εγγραφείτε</message>
+	<message key="user.register.noJournals">Δεν υπάρχουν περιοδικά στα οποία μπορείτε να εγγραφείτε στον ιστότοπο αυτό.</message>
+	<message key="user.register.privacyStatement">Πολιτική Προστασίας Προσωπικών Δεδομένων</message>
+	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a  href="{$registerUrl}">Πατήστε εδώ</a> εάν είστε ήδη  εγγεγραμμένος χρήστης σε αυτό ή σε άλλο  περιοδικό της συλλογής.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a  href="{$registerUrl}">Πατήστε εδώ</a> εάν <strong>ΔΕΝ</strong> είστε  ήδη εγγεγραμμένος σε αυτό ή σε άλλο περιοδικό  της συλλογής.]]></message>
+	<message key="user.register.loginToRegister">Εισαγάγετε το υπάρχον όνομα χρήστη και τον κωδικό πρόσβασής σας για να εγγραφείτε σε  αυτό το περιοδικό.</message>
+	<message key="user.register.registrationDisabled">Το περιοδικό αυτό προς το παρόν δεν αποδέχεται εγγραφές χρηστών.</message>
+	<message key="user.register.form.passwordLengthTooShort">Ο κωδικός πρόσβασης που εισάγατε περιέχει λιγότερους χαρακτήρες από τον ελάχιστο επιτρεπτό αριθμό χαρακτήρων.</message>
+	<message key="user.register.readerDescription"><!--Θα ενημερώνεστε με μήνυμα ηλεκτρονικού ταχυδρομείου για την δημοσίευση ενός τεύχους του περιοδικού.--></message>
+	<message key="user.register.openAccessNotificationDescription">Θα  ενημερώνεστε με μήνυμα ηλεκτρονικού ταχυδρομείου όταν ένα τεύχος του  περιοδικού μετατρέπεται σε ανοικτής πρόσβασης.</message>
+	<message key="user.register.authorDescription">Δυνατότητα υποβολής άρθρων στο περιοδικό.</message>
+	<message key="user.register.reviewerDescriptionNoInterests">Επιθυμία για συμμετοχή στην αξιολόγηση υποβολών στο περιοδικό.</message>
+	<message key="user.register.reviewerDescription"> Επιθυμία για συμμετοχή στην αξιολόγηση υποβολών στο περιοδικό. Προσδιορίστε τα θέματα αξιολόγησης που σας ενδιαφέρουν.</message>
 
 
 
         <!-- Search -->
-        <message key="search.browseAuthorIndex">Σάρωση κατά Συγγραφέα</message>
-        <message key="search.searchFor">Αναζήτηση άρθρων για</message>
-        <message key="search.author">Συγγραφέας</message>
-        <message key="search.withinJournal">Μέσα σε</message>
-        <message key="search.allJournals">Όλα τα περιοδικά</message>
-        <message key="search.authorIndex">Ευρετήριο Συγγραφέων</message>
-        <message key="search.authorDetails">Λεπτομέρειες Συγγραφέα</message>
-        <message key="search.syntaxInstructions"><![CDATA[Συμβουλές αναζήτησης:  <ul> 
+	<message key="search.browseAuthorIndex">Σάρωση κατά Συγγραφέα</message>
+	<message key="search.searchFor">Αναζήτηση άρθρων για</message>
+	<message key="search.author">Συγγραφέας</message>
+	<message key="search.withinJournal">Μέσα σε</message>
+	<message key="search.allJournals">Όλα τα περιοδικά</message>
+	<message key="search.authorIndex">Ευρετήριο Συγγραφέων</message>
+	<message key="search.authorDetails">Λεπτομέρειες Συγγραφέα</message>
+	<message key="search.syntaxInstructions"><![CDATA[Συμβουλές αναζήτησης:  <ul> 
         <li>Τα αποτελέσματα της αναζήτησης περιέχουν τους όρους αναζήτησης όπως ακριβώς εισάγονται</li> 
         <li>Συνήθεις λέξεις δεν λαμβάνονται υπόψη κατά την αναζήτηση</li> 
         <li>Εξ ορισμού τα αποτελέσματα της αναζήτησης περιλαμβάνουν άρθρα που περιέχουν <em>όλους</em> τους όρους αναζήτησης (π.χ. ο όρος <em>AND</em> υπονοείται)</li> 
@@ -694,121 +694,121 @@
         </ul>]]></message>
 
         <!-- Interstitial page for PDFs -->
-        <message key="article.pdf.title">Portable Document Format (PDF)</message>
-        <message key="article.pdf.note"><![CDATA[Εάν το πρόγραμμα φυλλομέτρησης που διαθέτετε έχει εγκατεστημένο plug-in προγράμματος ανάγνωσης αρχείων PDF, πρέπει να πραγματοποιήσετε φόρτωση του αρχείο PDF που επιλέξατε (για παράδειγμα, πρόσφατη έκδοση <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>). Εναλλακτικά, το αρχείο PDF θα κατέβει στον ηλεκτρονικό σας υπολογιστή όπου θα μπορεί να ανοίξει και με χρήση προγράμματος ανάγνωσης αρχείων PDF. Εάν επιθυμείτε περισσότερες πληροφορίες σχετικά με τον τρόπο εκτύπωσης, αποθήκευσης και εργασίας με αρχεία PDF, το Highwire Press παρέχει βοήθεια στο <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Συχνές ερωτήσεις σχετικά με PDF</a>.<br /><br />Εάν το αρχείο δεν κατέβει αυτόματα,<a href="{$url}">κάντε κλικ εδώ</a>.]]></message>         
+	<message key="article.pdf.title">Portable Document Format (PDF)</message>
+	<message key="article.pdf.note"><![CDATA[Εάν το πρόγραμμα φυλλομέτρησης που διαθέτετε έχει εγκατεστημένο plug-in προγράμματος ανάγνωσης αρχείων PDF, πρέπει να πραγματοποιήσετε φόρτωση του αρχείο PDF που επιλέξατε (για παράδειγμα, πρόσφατη έκδοση <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>). Εναλλακτικά, το αρχείο PDF θα κατέβει στον ηλεκτρονικό σας υπολογιστή όπου θα μπορεί να ανοίξει και με χρήση προγράμματος ανάγνωσης αρχείων PDF. Εάν επιθυμείτε περισσότερες πληροφορίες σχετικά με τον τρόπο εκτύπωσης, αποθήκευσης και εργασίας με αρχεία PDF, το Highwire Press παρέχει βοήθεια στο <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Συχνές ερωτήσεις σχετικά με PDF</a>.<br /><br />Εάν το αρχείο δεν κατέβει αυτόματα,<a href="{$url}">κάντε κλικ εδώ</a>.]]></message>         
         
         <!-- Interstitial page for non-PDF non-HTML galleys -->
-        <message key="article.nonpdf.title">Κατέβασμα άρθρου</message>
-        <message key="article.nonpdf.note"><![CDATA[Το αρχείο που επιλέξατε πρέπει να κατέβει αυτόματα. Εάν αυτό δεν συμβεί, κάντε κλικ στον παρακάτω σύνδεσμο. Λάβετε υπόψη σας ότι για την προβολή του συγκεκριμένου αρχείου μπορείς να είναι απαραίτητο ένα ειδικό πρόγραμμα προβολής ή ένα plugin.<br /><br /> Εάν το αρχείο δεν κατέβει αυτόματα, <a href="{$url}"> κάντε κλικ εδώ</a>.]]></message>
+	<message key="article.nonpdf.title">Κατέβασμα άρθρου</message>
+	<message key="article.nonpdf.note"><![CDATA[Το αρχείο που επιλέξατε πρέπει να κατέβει αυτόματα. Εάν αυτό δεν συμβεί, κάντε κλικ στον παρακάτω σύνδεσμο. Λάβετε υπόψη σας ότι για την προβολή του συγκεκριμένου αρχείου μπορείς να είναι απαραίτητο ένα ειδικό πρόγραμμα προβολής ή ένα plugin.<br /><br /> Εάν το αρχείο δεν κατέβει αυτόματα, <a href="{$url}"> κάντε κλικ εδώ</a>.]]></message>
         
         <!-- Site index -->
-        <message key="site.journalsHosted">Περιοδικά Συλλογής</message>
-        <message key="site.journalView">Προβολή Περιοδικού</message>
-        <message key="site.journalRegister">Εγγραφείτε</message>
-        <message key="site.journalCurrent">Τρέχον Τεύχος</message>
+	<message key="site.journalsHosted">Περιοδικά Συλλογής</message>
+	<message key="site.journalView">Προβολή Περιοδικού</message>
+	<message key="site.journalRegister">Εγγραφείτε</message>
+	<message key="site.journalCurrent">Τρέχον Τεύχος</message>
         
 
         <!-- Current index -->
-        <message key="current.current">Τρέχον</message>
-        <message key="current.noCurrentIssue">Δεν υπάρχει τρέχον τεύχος</message>
-        <message key="current.noCurrentIssueDesc">Το συγκεκριμένο περιοδικό δεν έχει δημοσιεύσει τεύχη.</message>
+	<message key="current.current">Τρέχον</message>
+	<message key="current.noCurrentIssue">Δεν υπάρχει τρέχον τεύχος</message>
+	<message key="current.noCurrentIssueDesc">Το συγκεκριμένο περιοδικό δεν έχει δημοσιεύσει τεύχη.</message>
 
         <!-- Archive index -->
-        <message key="archive.archives">Αρχείο Τευχών</message>
-        <message key="archive.browse">Περιηγηθείτε σε παλαιότερα τεύχη</message>
-        <message key="archive.issueUnavailable">Μη διαθέσιμο τεύχος</message>
+	<message key="archive.archives">Αρχείο Τευχών</message>
+	<message key="archive.browse">Περιηγηθείτε σε παλαιότερα τεύχη</message>
+	<message key="archive.issueUnavailable">Μη διαθέσιμο τεύχος</message>
         
         <!-- About The Journal -->
-        <message key="about.statistics">Στατιστικά</message>
-        <message key="about.journalContact">Επικοινωνία</message>
-        <message key="about.aboutTheJournal">Σχετικά με το περιοδικό</message>
-        <message key="about.editorialTeam">Συντακτική Ομάδα</message>
-        <message key="about.editorialTeam.biography">Βιογραφικό</message>
-        <message key="about.editorialPolicies">Πολιτικές Σύνταξης</message>
-        <message key="about.focusAndScope"> Θεματική περιοχή και Περιεχόμενο</message>
-        <message key="about.sectionPolicies">Πολιτικές ενότητας</message>
-        <message key="about.submissions">Υποβολές</message>
-        <message key="about.sponsors">Χορηγοί</message>
-        <message key="about.contributors">Πηγές Υποστήριξης</message>
-        <message key="about.onlineSubmissions">Online υποβολές</message>
-        <message key="about.onlineSubmissions.haveAccount">Έχετε ήδη όνομα χρήστη/κωδικό πρόσβασης για το περιοδικό {$journalTitle};</message>
-        <message key="about.onlineSubmissions.login">Συνδεθείτε</message>
-        <message key="about.onlineSubmissions.needAccount">Χρειάζεστε ένα όνομα χρήστη/κωδικό πρόσβασης;</message>
-        <message key="about.onlineSubmissions.registration">Εγγραφή χρήστη</message>
-        <message key="about.onlineSubmissions.registrationRequired">Η εγγραφή και η σύνδεση είναι απαραίτητες για την υποβολή τεκμηρίων online και για έλεγχο της κατάστασης τρέχουσων υποβολών.</message>
-        <message key="about.authorGuidelines">Οδηγίες για τους συγγραφείς</message>
-        <message key="about.submissionPreparationChecklist">Πίνακας Ελέγχου προετοιμασίας υποβολής</message>
-        <message key="about.submissionPreparationChecklist.description">Ως μέρος της διαδικασίας υποβολής, είναι απαραίτητο οι συγγραφείας να ελέγχουν τη συμμόρφωση της υποβολής με όλα τα ακόλουθα τεκμήρια, και οι υποβολές που δεν τηρούν τις Οδηγίες για τους συγγραφείς μπορούν να επιστραφούν στους συγγραφείς.</message>
-        <message key="about.copyrightNotice"> Ενημέρωση για τα πνευματικά δικαιώματα </message>
-        <message key="about.privacyStatement">Πολιτική Προστασίας Προσωπικών Δεδομένων</message>
-				<message key="about.authorFees">Εισφορά Συγγραφέων</message>
-				<message key="about.authorFeesMessage">ΤΟ περιοδικό επιβαρύνει τους συγγραφείς με τις παρακάτω εισφορές.</message>
-        <message key="about.peerReviewProcess">Διαδικασία αξιολόγησης από ομότιμους αξιολογητές</message>
-        <message key="about.publicationFrequency">Συχνότητα δημοσίευσης</message>
-        <message key="about.openAccessPolicy">Πολιτική Ανοικτής Πρόσβασης</message>
-        <message key="about.delayedOpenAccess">Καθυστερημένη ανοικτή πρόσβαση</message>
-        <message key="about.delayedOpenAccessDescription1">Τα περιεχόμενα του συγκεκριμένου περιοδικού θα είναι διαθέσιμα υπό το καθεστώς ανοικτής πρόσβασης</message>
-        <message key="about.delayedOpenAccessDescription2">μήνα(-ες) μετά από την έκδοση τεύχους.</message>
-        <message key="about.authorSelfArchive">Δυνατότητα τήρησης προσωπικού ψηφιακού αρχείου του συγγραφέα</message>
-        <message key="about.archiving">Αρχειοθέτηση</message>
-        <message key="about.subscriptions">Συνδρομές</message>
-        <message key="about.subscriptionsContact">Υπεύθυνος επικοινωνίας συνδρομών</message>
-        <message key="about.availableSubscriptionTypes">Τύποι συνδρομών</message>
-				<message key="about.memberships">Μέλη</message>
-        <message key="about.journalSponsorship">Χορηγοί Περιοδικού</message>
-        <message key="about.aboutThisPublishingSystem">Σχετικά με το Open Journals System</message>
-        <message key="about.aboutOJSJournal"><![CDATA[Το περιοδικό αυτό χρησιμοποιεί το <a href="http://pkp.sfu.ca/?q=ojs">Open Journal Systems {$ojsVersion}</a>, το οποίο είναι ένα λογισμικό διαχείρισης και δημοσίευσης περιοδικών εκδόσεων ανοικτού κώδικα, που έχει αναπτυχθεί, υποστηρίζεται και διανέμεται ελεύθερα από το <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> κάτω από την αδειοδότηση GNU General Public License.]]></message>
-        <message key="about.aboutOJSSite"><![CDATA[Ο ιστότοπος αυτός χρησιμοποιεί το <a href="http://pkp.sfu.ca/?q=ojs">Open Journal Systems {$ojsVersion},</a> το οποίο είναι ένα λογισμικό διαχείρισης και δημοσίευσης περιοδικών εκδόσεων ανοικτού κώδικα, που έχει αναπτυχθεί, υποστηρίζεται και διανέμεται ελεύθερα από το <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> κάτω από την αδειοδότηση GNU General Public License.]]></message>         
+	<message key="about.statistics">Στατιστικά</message>
+	<message key="about.journalContact">Επικοινωνία</message>
+	<message key="about.aboutTheJournal">Σχετικά με το περιοδικό</message>
+	<message key="about.editorialTeam">Συντακτική Ομάδα</message>
+	<message key="about.editorialTeam.biography">Βιογραφικό</message>
+	<message key="about.editorialPolicies">Πολιτικές Σύνταξης</message>
+	<message key="about.focusAndScope"> Θεματική περιοχή και Περιεχόμενο</message>
+	<message key="about.sectionPolicies">Πολιτικές ενότητας</message>
+	<message key="about.submissions">Υποβολές</message>
+	<message key="about.sponsors">Χορηγοί</message>
+	<message key="about.contributors">Πηγές Υποστήριξης</message>
+	<message key="about.onlineSubmissions">Online υποβολές</message>
+	<message key="about.onlineSubmissions.haveAccount">Έχετε ήδη όνομα χρήστη/κωδικό πρόσβασης για το περιοδικό {$journalTitle};</message>
+	<message key="about.onlineSubmissions.login">Συνδεθείτε</message>
+	<message key="about.onlineSubmissions.needAccount">Χρειάζεστε ένα όνομα χρήστη/κωδικό πρόσβασης;</message>
+	<message key="about.onlineSubmissions.registration">Εγγραφή χρήστη</message>
+	<message key="about.onlineSubmissions.registrationRequired">Η εγγραφή και η σύνδεση είναι απαραίτητες για την υποβολή τεκμηρίων online και για έλεγχο της κατάστασης τρέχουσων υποβολών.</message>
+	<message key="about.authorGuidelines">Οδηγίες για τους συγγραφείς</message>
+	<message key="about.submissionPreparationChecklist">Πίνακας Ελέγχου προετοιμασίας υποβολής</message>
+	<message key="about.submissionPreparationChecklist.description">Ως μέρος της διαδικασίας υποβολής, είναι απαραίτητο οι συγγραφείας να ελέγχουν τη συμμόρφωση της υποβολής με όλα τα ακόλουθα τεκμήρια, και οι υποβολές που δεν τηρούν τις Οδηγίες για τους συγγραφείς μπορούν να επιστραφούν στους συγγραφείς.</message>
+	<message key="about.copyrightNotice"> Ενημέρωση για τα πνευματικά δικαιώματα </message>
+	<message key="about.privacyStatement">Πολιτική Προστασίας Προσωπικών Δεδομένων</message>
+	<message key="about.authorFees">Εισφορά Συγγραφέων</message>
+	<message key="about.authorFeesMessage">ΤΟ περιοδικό επιβαρύνει τους συγγραφείς με τις παρακάτω εισφορές.</message>
+	<message key="about.peerReviewProcess">Διαδικασία αξιολόγησης από ομότιμους αξιολογητές</message>
+	<message key="about.publicationFrequency">Συχνότητα δημοσίευσης</message>
+	<message key="about.openAccessPolicy">Πολιτική Ανοικτής Πρόσβασης</message>
+	<message key="about.delayedOpenAccess">Καθυστερημένη ανοικτή πρόσβαση</message>
+	<message key="about.delayedOpenAccessDescription1">Τα περιεχόμενα του συγκεκριμένου περιοδικού θα είναι διαθέσιμα υπό το καθεστώς ανοικτής πρόσβασης</message>
+	<message key="about.delayedOpenAccessDescription2">μήνα(-ες) μετά από την έκδοση τεύχους.</message>
+	<message key="about.authorSelfArchive">Δυνατότητα τήρησης προσωπικού ψηφιακού αρχείου του συγγραφέα</message>
+	<message key="about.archiving">Αρχειοθέτηση</message>
+	<message key="about.subscriptions">Συνδρομές</message>
+	<message key="about.subscriptionsContact">Υπεύθυνος επικοινωνίας συνδρομών</message>
+	<message key="about.availableSubscriptionTypes">Τύποι συνδρομών</message>
+	<message key="about.memberships">Μέλη</message>
+	<message key="about.journalSponsorship">Χορηγοί Περιοδικού</message>
+	<message key="about.aboutThisPublishingSystem">Σχετικά με το Open Journals System</message>
+	<message key="about.aboutOJSJournal"><![CDATA[Το περιοδικό αυτό χρησιμοποιεί το <a href="http://pkp.sfu.ca/?q=ojs">Open Journal Systems {$ojsVersion}</a>, το οποίο είναι ένα λογισμικό διαχείρισης και δημοσίευσης περιοδικών εκδόσεων ανοικτού κώδικα, που έχει αναπτυχθεί, υποστηρίζεται και διανέμεται ελεύθερα από το <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> κάτω από την αδειοδότηση GNU General Public License.]]></message>
+	<message key="about.aboutOJSSite"><![CDATA[Ο ιστότοπος αυτός χρησιμοποιεί το <a href="http://pkp.sfu.ca/?q=ojs">Open Journal Systems {$ojsVersion},</a> το οποίο είναι ένα λογισμικό διαχείρισης και δημοσίευσης περιοδικών εκδόσεων ανοικτού κώδικα, που έχει αναπτυχθεί, υποστηρίζεται και διανέμεται ελεύθερα από το <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> κάτω από την αδειοδότηση GNU General Public License.]]></message>         
 
         <!-- Announcement -->
 
         <!-- Help -->
-        <message key="help.ojsHelp">Βοήθεια για Open Journal Systems</message>
-        <message key="help.ojsHelpAbbrev">Βοήθεια για OJS</message>        
+	<message key="help.ojsHelp">Βοήθεια για Open Journal Systems</message>
+	<message key="help.ojsHelpAbbrev">Βοήθεια για OJS</message>        
 
 				<!-- Donations -->
-				<message key="donations.thankYou">Σας Ευχαριστούμε</message>
-				<message key="donations.thankYouMessage">Σας ευχαριστούμε πολύ για την συνεισφορά σας. Εκτιμούμε ιδιαίτερα την υποστήριξή σας στην εκπλήρωση των στόχων του περιοδικού μας.</message>
+	<message key="donations.thankYou">Σας Ευχαριστούμε</message>
+	<message key="donations.thankYouMessage">Σας ευχαριστούμε πολύ για την συνεισφορά σας. Εκτιμούμε ιδιαίτερα την υποστήριξή σας στην εκπλήρωση των στόχων του περιοδικού μας.</message>
 				
 				<!-- Payments -->
-				<message key="payment.loginRequired">Πρέπει να συνδεθείτε στο σύστημα για να προχωρήσετε στην διαδικασία πληρωμής.</message>
-				<message key="payment.loginRequired.forArticle">Για την πρόσβαση στο άρθρο απαιτείται συνδρομή στο περιοδικό ή Πληρωμή Άρθρου ανά προβολή (pay-per-view). Για να  επαληθεύσετε την συνδρομή σας ή να πληρώσετε την εισφορά για την προβολή του συγκεκριμένου άρθρου (pay-per-view), συνδεθείτε (log in) στο περιοδικό.  </message>
-				<message key="payment.loginRequired.forDonation">Πρέπει να είστε συνδεδεμένος στο σύστημα.</message>
+	<message key="payment.loginRequired">Πρέπει να συνδεθείτε στο σύστημα για να προχωρήσετε στην διαδικασία πληρωμής.</message>
+	<message key="payment.loginRequired.forArticle">Για την πρόσβαση στο άρθρο απαιτείται συνδρομή στο περιοδικό ή Πληρωμή Άρθρου ανά προβολή (pay-per-view). Για να  επαληθεύσετε την συνδρομή σας ή να πληρώσετε την εισφορά για την προβολή του συγκεκριμένου άρθρου (pay-per-view), συνδεθείτε (log in) στο περιοδικό.  </message>
+	<message key="payment.loginRequired.forDonation">Πρέπει να είστε συνδεδεμένος στο σύστημα.</message>
 				
-				<message key="payment.paid">Πληρώθηκε</message>
-				<message key="payment.payNow">Πληρώστε τώρα</message>
-				<message key="payment.waive">Παράβλεψη Εισφοράς</message>
-				<message key="payment.alreadyPaid">Έχει ήδη πληρωθεί</message>
-				<message key="payment.alreadyPaidMessage">Επιλέξτε αυτό το κουτί αν έχετε ήδη αποστείλει την πληρωμή σας στο περιοδικό ώστε να ολοκληρωθεί η διαδικασία υποβολής. Η διαδικασία αξιολόγησης της υποβολής σας δεν θα προχωρήσει μέχρι την παραλαβή της πληρωμής σας. Πατήστε το "Πληρώστε τώρα" παραπάνω για συμβουλευτείτε τις οδηγίες πληρωμής.</message>
-				<message key="payment.paymentReceived">Η πληρωμή παραλήφθηκε</message>
-				<message key="payment.paymentSent">Η πληρωμή έχει ήδη αποσταλεί</message>
-				<message key="payment.type.submission">Εισφορά υποβολής (Συγγραφέα)</message>
-				<message key="payment.type.publication">Εισφορά Δημοσίευσης</message>
-				<message key="payment.type.fastTrack">Εισφορά Γρήγορης Επισκόπης άρθρου</message>
-				<message key="payment.type.membership">Εισφορά ατομικής συνδρομής</message>
-				<message key="payment.type.payPerView">Εισφορά μεθόδου "Πληρωμής κατά Προβολή άρθρου" (Pay-Per-View)</message>
-				<message key="payment.type.subscription">Εισφορά Συνδρομής</message>
-				<message key="payment.type.donation">Δωρεές</message>
+	<message key="payment.paid">Πληρώθηκε</message>
+	<message key="payment.payNow">Πληρώστε τώρα</message>
+	<message key="payment.waive">Παράβλεψη Εισφοράς</message>
+	<message key="payment.alreadyPaid">Έχει ήδη πληρωθεί</message>
+	<message key="payment.alreadyPaidMessage">Επιλέξτε αυτό το κουτί αν έχετε ήδη αποστείλει την πληρωμή σας στο περιοδικό ώστε να ολοκληρωθεί η διαδικασία υποβολής. Η διαδικασία αξιολόγησης της υποβολής σας δεν θα προχωρήσει μέχρι την παραλαβή της πληρωμής σας. Πατήστε το "Πληρώστε τώρα" παραπάνω για συμβουλευτείτε τις οδηγίες πληρωμής.</message>
+	<message key="payment.paymentReceived">Η πληρωμή παραλήφθηκε</message>
+	<message key="payment.paymentSent">Η πληρωμή έχει ήδη αποσταλεί</message>
+	<message key="payment.type.submission">Εισφορά υποβολής (Συγγραφέα)</message>
+	<message key="payment.type.publication">Εισφορά Δημοσίευσης</message>
+	<message key="payment.type.fastTrack">Εισφορά Γρήγορης Επισκόπης άρθρου</message>
+	<message key="payment.type.membership">Εισφορά ατομικής συνδρομής</message>
+	<message key="payment.type.payPerView">Εισφορά μεθόδου "Πληρωμής κατά Προβολή άρθρου" (Pay-Per-View)</message>
+	<message key="payment.type.subscription">Εισφορά Συνδρομής</message>
+	<message key="payment.type.donation">Δωρεές</message>
 				
-				<message key="payment.donation.makeDonation">Κάντε μια Δωρεά</message>
+	<message key="payment.donation.makeDonation">Κάντε μια Δωρεά</message>
 				
-				<message key="payment.submission.paySubmission">Πληρώστε την Εισφορά υποβολής </message>
-				<message key="payment.fastTrack.payFastTrack">Πληρώστε την Εισφορά Γρήγορης Επισκόπης άρθρου</message>
-				<message key="payment.fastTrack.inFastTrack">για γρήγορη επισκόπηση</message>
-				<message key="payment.publication.payPublication">Πληρώστε την Εισφορά Δημοσίευσης</message>
-				<message key="payment.publication.publicationPaid">Η εισφορά δημοσίευσης πληρώθηκε</message>
+	<message key="payment.submission.paySubmission">Πληρώστε την Εισφορά υποβολής </message>
+	<message key="payment.fastTrack.payFastTrack">Πληρώστε την Εισφορά Γρήγορης Επισκόπης άρθρου</message>
+	<message key="payment.fastTrack.inFastTrack">για γρήγορη επισκόπηση</message>
+	<message key="payment.publication.payPublication">Πληρώστε την Εισφορά Δημοσίευσης</message>
+	<message key="payment.publication.publicationPaid">Η εισφορά δημοσίευσης πληρώθηκε</message>
 				
-				<message key="payment.membership.buyMembership">Αγοράστε Ατομική Συνδρομή</message>
-				<message key="payment.membership.renewMembership">Ανανεώστε την Ατομική Συνδρομή σας</message>
-				<message key="payment.membership.ends">Λήγει</message>
+	<message key="payment.membership.buyMembership">Αγοράστε Ατομική Συνδρομή</message>
+	<message key="payment.membership.renewMembership">Ανανεώστε την Ατομική Συνδρομή σας</message>
+	<message key="payment.membership.ends">Λήγει</message>
 				
-				<message key="payment.subscription.renew">Ανανεώστε την Συνδρομή σας</message>
-				<message key="payment.subscription.expires">Λήγει</message>
+	<message key="payment.subscription.renew">Ανανεώστε την Συνδρομή σας</message>
+	<message key="payment.subscription.expires">Λήγει</message>
 
         <!-- Installer -->
-        <message key="installer.ojsInstallation">Εγκατάσταση OJS</message>
-        <message key="installer.ojsUpgrade">Αναβάθμιση OJS</message>
-        <message key="installer.installationInstructions"><![CDATA[<h4>Έκδοση OJS {$version}</h4>  
+	<message key="installer.ojsInstallation">Εγκατάσταση OJS</message>
+	<message key="installer.ojsUpgrade">Αναβάθμιση OJS</message>
+	<message key="installer.installationInstructions"><![CDATA[<h4>Έκδοση OJS {$version}</h4>  
         
         <p>Σας ευχαριστούμε που προτιμήσατε το <strong>Open Journal Systems</strong> του Public Knowledge Project. Πριν να προχωρήσετε, συμβουλευτείτε το αρχείο <a href="{$baseUrl}/docs/README">README</a> που παρέχεται μαζί με το λογισμικό. Για περισσότερες πληροφορίες σχετικά με το Public Knowledge Project και τα έργα λογισμικού, επισκεφτείτε τον ιστότοπο του PKP <a href="http://pkp.sfu.ca/" target="_blank"> </a>. Εάν έχετε αναφορές σφαλμάτων ή ερωτήματα για την τεχνική υποστήριξη σχετικά με το Open Journal Systems, ανατρέξτε στο φόρουμ υποστήριξης <a href="http://pkp.sfu.ca/support/forum"></a> ή επισκεφτείτε το σύστημα σύνταξης αναφορών του PKP online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank"></a>. Παρόλο που το φόρουμ υποστήριξης είναι η προτιμώμενη μέθοδος επικοινωνίας, μπορείτε επίσης να επικοινωνήσετε με την ομάδα μέσω ηλεκτρονικού ταχυδρομείου στη διεύθυνση <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>  
        
@@ -850,99 +850,99 @@
         <h4>Μη αυτόματη εγκατάσταση</h4>  
         
         <p>Επιλέξτε <strong>Μη αυτόματη εγκατάσταση</strong> για να προβάλλετε τις δηλώσεις SQL που είναι απαραίτητες για τη δημιουργία σχήματος βάσης δεδομένων OJS και αρχικών δεδομένων ώστε να είναι δυνατή η μη αυτόματη εκτέλεση της εγκατάστασης της βάσης δεδομένων. Η συγκεκριμένη επιλογή είναι χρήσιμη κατά την εξουδετέρωση σφαλμάτων από προβλήματα της εγκατάστασης, ειδικότερα σε πλατφόρμες που δεν υποστηρίζονται. Λάβετε υπόψη ότι η συγκεκριμένη μέθοδος εγκατάστασης δεν θα επιχειρήσει τη δημιουργία βάσης δεδομένων ή πινάκων, παρόλο που το αρχείο ρυθμίσεων θα εγγραφεί με τις παρεχόμενες ρυθμίσεις της βάσης δεδομένων.</p>]]></message>                 
-				<message key="installer.upgradeInstructions"><![CDATA[<h4>Έκδοση OJS{$version}</h4>        
+	<message key="installer.upgradeInstructions"><![CDATA[<h4>Έκδοση OJS{$version}</h4>        
 				
 				<p>Σας ευχαριστούμε που προτιμήσατε το <strong>Open Journal Systems</strong> του Public Knowledge Project. Πριν να προχωρήσετε παρακάτω, συμβουλευτείτε τα αρχεία <a href=""{$baseUrl}/docs/README"">README</a> και <a href=""{$baseUrl}/docs/UPGRADE"">UPGRADE</a> που παρέχονται μαζί με αυτό το λογισμικό. Για περισσότερες πληροφορίες σχετικά με το Public Knowledge Project και τα έργα λογισμικού αυτού, επισκεφτείτε τον ιστότοπο του PKP <a href=""http://pkp.sfu.ca/"" target=""_blank""></a>. Εάν έχετε αναφορές σφαλμάτων ή ερωτήματα για την τεχνική υποστήριξη σχετικά με το Open Journal Systems, ανατρέξτε στο φόρουμ υποστήριξης <a href=""http://pkp.sfu.ca/support/forum""></a> ή επισκεφτείτε το σύστημα σύνταξης αναφορών του PKP online <a href=""http://pkp.sfu.ca/bugzilla/"" target=""_blank""></a>. Παρόλο που το φόρουμ υποστήριξης είναι η προτιμώμενη μέθοδος επικοινωνίας, μπορείτε επίσης να επικοινωνήσετε με την ομάδα μέσω ηλεκτρονικού ταχυδρομείου στη διεύθυνση <a href=""mailto:pkp-support@sfu.ca"">pkp-support@sfu.ca</a>.</p>
 				<p><strong>Συνίσταται αυστηρώς</strong> η δημιουργία εφεδρικών αντιγράφων ασφαλαίας (back up) της βάσης δεδομένων, του καταλόγου αρχείων και του καταλόγου εγκατάστασης του OJS πριν να προχωρήσετε παρακάτω.</p>
 				<p>Εάν εκτελείτε το πρόγραμμα σε <a href="http://www.php.net/features.safe-mode" target="_blank">Ασφαλή λειτουργία PHP (Safe Mode)</a>, βεβαιωθείτε ότι η οδηγία max_execution_time στο αρχείο ρυθμίσεων php.ini έχει οριστεί σε υψηλό όριο. Εάν η αναβάθμιση φτάσει το συγκεκριμένο χρονικό όριο ή οποιοδήποτε άλλο (π.χ. η οδηγία ""Timeout"" του Apache) και διακοπεί, ενδέχεται να χρειάζεται μη αυτόματη παρέμβαση.</p>]]></message>
-				<message key="installer.localeSettingsInstructions"><![CDATA[Για ολοκληρωμένη υποστήριξη Unicode (UTF-8), επιλέξτε UTF-8 για όλα τις ρυθμίσεις του συνόλου χαρακτήρων. Λάβετε υπόψη ότι η συγκεκριμένη υποστήριξη απαιτεί εξυπηρετητή βάσης δεδομένων MySQL >= 4.1.1 ή PostgreSQL >= 7.1. Λάβετε, επίσης, υπόψη ότι η πλήρης υποστήριξη Unicode απαιτεί PHP >= 4.3.0 που μεταγλωττίζεται με υποστήριξη για την <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> βιβλιοθήκη(που ενεργοποιείται από προεπιλογή στις πιο πρόσφατες εγκαταστάσεις PHP). Ενδέχεται να αντιμετωπίσετε προβλήματα με τη χρήση των επεκτάσεων συνόλων χαρακτήρων σε περίπτωση όπου ο εξυπηρετητής σας δεν ανταποκρίνεται στις συγκεκριμένες απαιτήσεις.
+	<message key="installer.localeSettingsInstructions"><![CDATA[Για ολοκληρωμένη υποστήριξη Unicode (UTF-8), επιλέξτε UTF-8 για όλα τις ρυθμίσεις του συνόλου χαρακτήρων. Λάβετε υπόψη ότι η συγκεκριμένη υποστήριξη απαιτεί εξυπηρετητή βάσης δεδομένων MySQL >= 4.1.1 ή PostgreSQL >= 7.1. Λάβετε, επίσης, υπόψη ότι η πλήρης υποστήριξη Unicode απαιτεί PHP >= 4.3.0 που μεταγλωττίζεται με υποστήριξη για την <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> βιβλιοθήκη(που ενεργοποιείται από προεπιλογή στις πιο πρόσφατες εγκαταστάσεις PHP). Ενδέχεται να αντιμετωπίσετε προβλήματα με τη χρήση των επεκτάσεων συνόλων χαρακτήρων σε περίπτωση όπου ο εξυπηρετητής σας δεν ανταποκρίνεται στις συγκεκριμένες απαιτήσεις.
 				<br /><br /> 
 				Ο διακομιστής σας υποστηρίζει mbstring: <strong>{$supportsMBString}</strong>]]></message>
-        <message key="installer.localeInstructions">Η κύρια γλώσσα για χρήση από το συγκεκριμένο σύστημα. Ανατρέξτε στα έγγραφα τεκμηρίωσης του OJS, εάν επιθυμείτε να υποστηρίξετε γλώσσες που δεν περιλαμβάνονται εδώ.</message>
-        <message key="installer.additionalLocalesInstructions">Επιλογή άλλων πρόσθετων γλωσσών για υποστήριξη στο συγκεκριμένο σύστημα. Οι γλώσσες αυτές θα είναι διαθέσιμες για χρήση από περιοδικά που φιλοξενούνται στον ιστότοπο. Πρόσθετες γλώσσες μπορούν να εγκαταστασθούν ανά πάσα στιγμή από τη διεπαφή διαχείρισης.</message>
-        <message key="installer.filesDirInstructions"><![CDATA[Εισαγάγετε το πλήρες όνομα της διαδρομής σε έναν υπάρχον φάκελο (directory) όπου θα φυλάσσονται τα αρχεία που έχουν φορτωθεί (upload). Ο φακελος αυτός δεν πρέπει να είναι άμεσα προσβάσιμος μέσω του Παγκόσμιου Ιστού.<strong>Βεβαιωθείτε ότι ο φάκελος αυτός υπάρχει ήδη και είναι εγγράψιμος  (writeable) πριν από αυτή την εγκατάσταση.</strong> Τα ονόματα των διαδρομών των Windows πρέπει στην αρχή να χρησιμοποιούν καθέτους, π.χ. "C:/myjournal/files".]]></message>
-				<message key="installer.databaseSettingsInstructions">Το OJS απαιτεί πρόσβαση σε μια SQL βάση δεδομένων για να αποθηκεύσει τα δεδομένα του. Συμβουλευτείτε τις απαιτήσεις του συστήματος παραπάνων για την λίστα με τις υποστηριζόμενες βάσεις δεδομένων. Στα παρακάτω πεδία, συμπληρώστε τις απαραίτητες ρυθμίσεις για την σύνδεση με την βάση δεδομένων.</message>
-        <message key="installer.installApplication">Εγκατάσταση Open Journal Systems</message>
-        <message key="installer.upgradeApplication">Αναβάθμιση Open Journal Systems</message>
-        <message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Προσοχή:</strong> If Η εγκατάσταση δεν ολοκληρώθηκε επιτυχώς κατά την την εγκατάσταση της βάσης δεδομένων και ενδέχεται να χρειαστεί να διαγράψετε (drop) τη βάση δεδομένων OJS ή τους πίνακες της βάσης δεδομένων πριν να επιχειρήσετε εκ νέου.]]></message>
-        <message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>ΣΗΜΑΝΤΙΚΟ!</h4> 
+	<message key="installer.localeInstructions">Η κύρια γλώσσα για χρήση από το συγκεκριμένο σύστημα. Ανατρέξτε στα έγγραφα τεκμηρίωσης του OJS, εάν επιθυμείτε να υποστηρίξετε γλώσσες που δεν περιλαμβάνονται εδώ.</message>
+	<message key="installer.additionalLocalesInstructions">Επιλογή άλλων πρόσθετων γλωσσών για υποστήριξη στο συγκεκριμένο σύστημα. Οι γλώσσες αυτές θα είναι διαθέσιμες για χρήση από περιοδικά που φιλοξενούνται στον ιστότοπο. Πρόσθετες γλώσσες μπορούν να εγκαταστασθούν ανά πάσα στιγμή από τη διεπαφή διαχείρισης.</message>
+	<message key="installer.filesDirInstructions"><![CDATA[Εισαγάγετε το πλήρες όνομα της διαδρομής σε έναν υπάρχον φάκελο (directory) όπου θα φυλάσσονται τα αρχεία που έχουν φορτωθεί (upload). Ο φακελος αυτός δεν πρέπει να είναι άμεσα προσβάσιμος μέσω του Παγκόσμιου Ιστού.<strong>Βεβαιωθείτε ότι ο φάκελος αυτός υπάρχει ήδη και είναι εγγράψιμος  (writeable) πριν από αυτή την εγκατάσταση.</strong> Τα ονόματα των διαδρομών των Windows πρέπει στην αρχή να χρησιμοποιούν καθέτους, π.χ. "C:/myjournal/files".]]></message>
+	<message key="installer.databaseSettingsInstructions">Το OJS απαιτεί πρόσβαση σε μια SQL βάση δεδομένων για να αποθηκεύσει τα δεδομένα του. Συμβουλευτείτε τις απαιτήσεις του συστήματος παραπάνων για την λίστα με τις υποστηριζόμενες βάσεις δεδομένων. Στα παρακάτω πεδία, συμπληρώστε τις απαραίτητες ρυθμίσεις για την σύνδεση με την βάση δεδομένων.</message>
+	<message key="installer.installApplication">Εγκατάσταση Open Journal Systems</message>
+	<message key="installer.upgradeApplication">Αναβάθμιση Open Journal Systems</message>
+	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Προσοχή:</strong> If Η εγκατάσταση δεν ολοκληρώθηκε επιτυχώς κατά την την εγκατάσταση της βάσης δεδομένων και ενδέχεται να χρειαστεί να διαγράψετε (drop) τη βάση δεδομένων OJS ή τους πίνακες της βάσης δεδομένων πριν να επιχειρήσετε εκ νέου.]]></message>
+	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>ΣΗΜΑΝΤΙΚΟ!</h4> 
         <p>Το πρόγραμμα εγκατάστασης δεν κατάφερε να αντικαταστήσει αυτόματα το αρχείο ρυθμίσεων. Πριν να επιχειρήσετε να χρησιμοποιήσετε το σύστημα, ανοίξτε το αρχείο <tt>config.inc.php</tt> με κατάλληλο πρόγραμμα επεξεργασίας κειμένου και αντικαταστήστε τα περιεχόμενα αυτού με τα περιεχόμενα του πεδίου κειμένου που βρίσκονται παρακάτω.</p>]]></message>
-        <message key="installer.manualSQLInstructions"><![CDATA[<h4>Μη αυτόματη (Manual) εγκατάσταση</h4> 
+	<message key="installer.manualSQLInstructions"><![CDATA[<h4>Μη αυτόματη (Manual) εγκατάσταση</h4> 
         <p>Οι SQL statements που είναι απαραίτητες για τη δημιουργία σχήματος βάσης δεδομένων OJS και αρχικών δεδομένων παρουσιάζονται παρακάτω. Λάβετε υπόψη ότι το σύστημα δεν θα είναι δυνατό να χρησιμοποιηθεί μέχρι να γίνει η μη αυτόματη εκτέλεση των δηλώσεων. Πρέπει, επίσης, να ρυθμίσετε χειρωνακτικά το αρχείο ρυθμίσεων <tt>config.inc.php</tt>.</p>]]></message>
-        <message key="installer.installationComplete"><![CDATA[<p>Η εγκατάσταση του OJS έχει ολοκληρωθεί επιτυχώς.</p> 
+	<message key="installer.installationComplete"><![CDATA[<p>Η εγκατάσταση του OJS έχει ολοκληρωθεί επιτυχώς.</p> 
         <p>Για έναρξη χρήσης του συστήματος, <a href="{$loginUrl}">συνδεθείτε</a> με το όνομα χρήστη και τον κωδικό πρόσβασης που καταχωρίσατε στην προηγούμενη σελίδα.</p> 
         <p>Εάν επιθυμείτε να λαμβάνετε νέα και ενημερώσεις, <strong>εγγραφείτε στο <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Εάν έχετε σχόλια και ερωτήσεις, επισκεφτείτε το φόρουμ υποστήριξης <a href="http://pkp.sfu.ca/support/forum" target="_new"> </a>.</p>]]></message>
-        <message key="installer.upgradeComplete"><![CDATA[<p>Η αναβάθμιση του OJS στην έκδοση{$version} ολοκληρώθηκε επιτυχώς.</p> 
+	<message key="installer.upgradeComplete"><![CDATA[<p>Η αναβάθμιση του OJS στην έκδοση{$version} ολοκληρώθηκε επιτυχώς.</p> 
         <p>Μην ξεχάσετε να ρυθμίσετε την "εγκατεστημένη" ρύθμιση στο αρχείο διαμόρφωσης config.inc.php ξανά σε <em>On</em>.</p> 
         <p>Εάν δεν έχετε ήδη εγγραφεί και επιθυμείτε να λαμβάνετε ειδήσεις και ενημερώσεις, <strong>εγγραφείτε στο <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Εάν έχετε σχόλια και ερωτήσεις, επισκεφτείτε το φόρουμ υποστήριξης <a href="http://pkp.sfu.ca/support/forum" target="_new"></a>.</p>]]></message>
 
 
         <!-- Article Logs -->
-        <message key="log.author.submitted">O/H {$authorName} καταχώρισε νέα υποβολή, ID {$submissionId}.</message>
-        <message key="log.author.documentRevised">O/H {$authorName} αναθεώρησε το άρθρο {$articleId}. Το νεό ID του αρχείου είναι {$fileId}.</message>
-        <message key="log.review.reviewerAssigned">O/H {$reviewerName} έχει αναλάβει την αξιολόγηση της υποβολής {$articleId} για τo γύρο αξιολόγησης {$round}.</message>
-        <message key="log.review.reviewerUnassigned">Έχει ακυρωθεί η ανάθεση της αξιολόγησης της υποβολής {$articleId} στον/ην {$reviewerName} για το γύρο αξιολόγησης {$round}.</message>
-        <message key="log.review.reviewInitiated">Ξεκίνησε ο γύρος αξιολόγησης {$round} από τον/ην {$reviewerName} για την υποβολή {$articleId}.</message>
-        <message key="log.review.reviewReinitiated"> Ξεκίνησε εκ νέου ο γύρος αξιολόγησης {$round} από τον/ην {$reviewerName} για την υποβολή {$articleId}.</message>
-        <message key="log.review.reviewCancelled"> Ο γύρος αξιολόγησης {$round} από τον/ην {$reviewerName} για την υποβολή {$articleId} ακυρώθηκε.</message>
-        <message key="log.review.reviewCleared">Εκκαθαρίστηκε ο γύρος αξιολόγησης {$round} από τον/ην {$reviewerName} για την υποβολή {$articleId}.</message>
-        <message key="log.review.reviewerRated">Ο/Η {$reviewerName} βαθμολογήθηκε για τον γύρο αξιολόγησης {$round} της υποβολής {$articleId}.</message>
-        <message key="log.review.reviewDueDateSet">Η ημερομηνία προθεσμίας για τον γύρο αξιολόγησης {$round} της υποβολής {$articleId} από τον/ην {$reviewerName} έχει οριστεί η {$dueDate}.</message>
-        <message key="log.review.reviewRecommendationSet">Έχει οριστεί η εισήγηση για τον γύρο αξιολόγησης {$round} της υποβολής {$articleId} από τον/ην {$reviewerName}.</message>
-        <message key="log.review.reviewRecommendationSetByProxy"> Έχει οριστεί η εισήγηση για τον γύρο αξιολόγησης {$round} της υποβολής {$articleId} από τον επιμελητή {$editorName}, για λογαριασμό του αξιολογητή {$reviewerName}.</message>
-        <message key="log.review.resubmit">Το {$articleId} υποβλήθηκε ξανά για αξιολόγηση.</message>
-        <message key="log.review.reviewDeclined"> Ο/Η {$reviewerName} έχει απορρίψει τον γύρο αξιολόγησης {$round} για την υποβολή {$articleId}.</message>
-        <message key="log.review.reviewAccepted"> Ο/Η {$reviewerName} έχει αποδεχτεί τον γύρο αξιολόγησης {$round} για την υποβολή {$articleId}.</message>
-				<message key="log.review.reviewDeclinedByProxy">Ο/Η {$userName} έχει απορρίψει τον γύρο αξιολόγησης {$round} για την υποβολή {$articleId} για λογαριασμό του/της {$reviewerName}.</message>
-        <message key="log.review.reviewAcceptedByProxy">Ο/Η {$userName} έχει αποδεκτεί τον γύρο  {$round} της αξιολόγησης για την υποβολή  {$articleId} για λογαριασμό του/της {$reviewerName}.</message>
-        <message key="log.review.reviewFileByProxy">Ο επιλητής του περιοδικού, {$userName}, έχει φορτώσει ένα αναθεωρημένο αρχείο αξιολόγησης για τον γύρο {$round} της υποβολής {$articleId} για λογαριασμό του αξιολογητή, {$reviewerName}.</message>
-        <message key="log.review.reviewerFile">Έχει φορτωθεί αρχείο αξιολογητή.</message>
-				<message key="log.editor.decision">Μια απόφαση του Επιμελητή του Περιοδικού ({$decision}) για το άρθρο  {$articleId} καταχωρήθηκε από τον/την  {$editorName}.</message>
+	<message key="log.author.submitted">O/H {$authorName} καταχώρισε νέα υποβολή, ID {$submissionId}.</message>
+	<message key="log.author.documentRevised">O/H {$authorName} αναθεώρησε το άρθρο {$articleId}. Το νεό ID του αρχείου είναι {$fileId}.</message>
+	<message key="log.review.reviewerAssigned">O/H {$reviewerName} έχει αναλάβει την αξιολόγηση της υποβολής {$articleId} για τo γύρο αξιολόγησης {$round}.</message>
+	<message key="log.review.reviewerUnassigned">Έχει ακυρωθεί η ανάθεση της αξιολόγησης της υποβολής {$articleId} στον/ην {$reviewerName} για το γύρο αξιολόγησης {$round}.</message>
+	<message key="log.review.reviewInitiated">Ξεκίνησε ο γύρος αξιολόγησης {$round} από τον/ην {$reviewerName} για την υποβολή {$articleId}.</message>
+	<message key="log.review.reviewReinitiated"> Ξεκίνησε εκ νέου ο γύρος αξιολόγησης {$round} από τον/ην {$reviewerName} για την υποβολή {$articleId}.</message>
+	<message key="log.review.reviewCancelled"> Ο γύρος αξιολόγησης {$round} από τον/ην {$reviewerName} για την υποβολή {$articleId} ακυρώθηκε.</message>
+	<message key="log.review.reviewCleared">Εκκαθαρίστηκε ο γύρος αξιολόγησης {$round} από τον/ην {$reviewerName} για την υποβολή {$articleId}.</message>
+	<message key="log.review.reviewerRated">Ο/Η {$reviewerName} βαθμολογήθηκε για τον γύρο αξιολόγησης {$round} της υποβολής {$articleId}.</message>
+	<message key="log.review.reviewDueDateSet">Η ημερομηνία προθεσμίας για τον γύρο αξιολόγησης {$round} της υποβολής {$articleId} από τον/ην {$reviewerName} έχει οριστεί η {$dueDate}.</message>
+	<message key="log.review.reviewRecommendationSet">Έχει οριστεί η εισήγηση για τον γύρο αξιολόγησης {$round} της υποβολής {$articleId} από τον/ην {$reviewerName}.</message>
+	<message key="log.review.reviewRecommendationSetByProxy"> Έχει οριστεί η εισήγηση για τον γύρο αξιολόγησης {$round} της υποβολής {$articleId} από τον επιμελητή {$editorName}, για λογαριασμό του αξιολογητή {$reviewerName}.</message>
+	<message key="log.review.resubmit">Το {$articleId} υποβλήθηκε ξανά για αξιολόγηση.</message>
+	<message key="log.review.reviewDeclined"> Ο/Η {$reviewerName} έχει απορρίψει τον γύρο αξιολόγησης {$round} για την υποβολή {$articleId}.</message>
+	<message key="log.review.reviewAccepted"> Ο/Η {$reviewerName} έχει αποδεχτεί τον γύρο αξιολόγησης {$round} για την υποβολή {$articleId}.</message>
+	<message key="log.review.reviewDeclinedByProxy">Ο/Η {$userName} έχει απορρίψει τον γύρο αξιολόγησης {$round} για την υποβολή {$articleId} για λογαριασμό του/της {$reviewerName}.</message>
+	<message key="log.review.reviewAcceptedByProxy">Ο/Η {$userName} έχει αποδεκτεί τον γύρο  {$round} της αξιολόγησης για την υποβολή  {$articleId} για λογαριασμό του/της {$reviewerName}.</message>
+	<message key="log.review.reviewFileByProxy">Ο επιλητής του περιοδικού, {$userName}, έχει φορτώσει ένα αναθεωρημένο αρχείο αξιολόγησης για τον γύρο {$round} της υποβολής {$articleId} για λογαριασμό του αξιολογητή, {$reviewerName}.</message>
+	<message key="log.review.reviewerFile">Έχει φορτωθεί αρχείο αξιολογητή.</message>
+	<message key="log.editor.decision">Μια απόφαση του Επιμελητή του Περιοδικού ({$decision}) για το άρθρο  {$articleId} καταχωρήθηκε από τον/την  {$editorName}.</message>
 
 
-        <message key="log.copyedit.initiate">Η επιμέλεια των κειμένων στην υποβολή {$articleId} έχει ξεκινήσει από τον/την {$copyeditorName}.</message>
-        <message key="log.copyedit.copyeditFileSet">Το προεπιλεγμένο αρχείο επιμέλειας κειμένων έχει επιλεχθεί.</message>
-        <message key="log.copyedit.initialEditComplete">Ο/Η {$copyeditorName} έχει ολοκληρώσει την αρχική επιμέλεια του κειμένου της υποβολής {$articleId}.</message>
-        <message key="log.copyedit.finalEditComplete">Ο/Η {$copyeditorName} έχει ολοκληρώσει την τελική επιμέλεια του κειμένου της υποβολής {$articleId}.</message>
-        <message key="log.copyedit.copyeditorAssigned">Ο/Η {$copyeditorName} έχει αναλάβει την επιμέλεια του κειμένου της υποβολής {$articleId}.</message>
-        <message key="log.copyedit.copyeditorFile">Η έκδοση του επιμελητή κειμένων για το αρχείο της υποβολής έχει φορτωθεί.</message>
-        <message key="log.copyedit.authorFile">Μια έκδοση του αρχείου της υποβολής, διορθωμένης από τον συγγραφέα έχει φορτωθεί.</message>
+	<message key="log.copyedit.initiate">Η επιμέλεια των κειμένων στην υποβολή {$articleId} έχει ξεκινήσει από τον/την {$copyeditorName}.</message>
+	<message key="log.copyedit.copyeditFileSet">Το προεπιλεγμένο αρχείο επιμέλειας κειμένων έχει επιλεχθεί.</message>
+	<message key="log.copyedit.initialEditComplete">Ο/Η {$copyeditorName} έχει ολοκληρώσει την αρχική επιμέλεια του κειμένου της υποβολής {$articleId}.</message>
+	<message key="log.copyedit.finalEditComplete">Ο/Η {$copyeditorName} έχει ολοκληρώσει την τελική επιμέλεια του κειμένου της υποβολής {$articleId}.</message>
+	<message key="log.copyedit.copyeditorAssigned">Ο/Η {$copyeditorName} έχει αναλάβει την επιμέλεια του κειμένου της υποβολής {$articleId}.</message>
+	<message key="log.copyedit.copyeditorFile">Η έκδοση του επιμελητή κειμένων για το αρχείο της υποβολής έχει φορτωθεί.</message>
+	<message key="log.copyedit.authorFile">Μια έκδοση του αρχείου της υποβολής, διορθωμένης από τον συγγραφέα έχει φορτωθεί.</message>
 
-        <message key="log.layout.layoutEditorAssigned">Ο/Η {$editorName} έχει αναλάβει την επιμέλεια της σελιδοποίησης της υποβολής {$articleId}.</message>
-        <message key="log.layout.layoutEditorUnassigned">Έχει ακυρωθεί η ανάθεση της επιμέλειας της σελιδοποίησης της υποβολής {$articleId} στον/ην {$editorName}.</message>
-        <message key="log.layout.layoutEditComplete">Ο/Η {$editorName} έχει ολοκληρώσει την επιμέλεια της σελιδοποίησης για την υποβολή {$articleId}.</message>
+	<message key="log.layout.layoutEditorAssigned">Ο/Η {$editorName} έχει αναλάβει την επιμέλεια της σελιδοποίησης της υποβολής {$articleId}.</message>
+	<message key="log.layout.layoutEditorUnassigned">Έχει ακυρωθεί η ανάθεση της επιμέλειας της σελιδοποίησης της υποβολής {$articleId} στον/ην {$editorName}.</message>
+	<message key="log.layout.layoutEditComplete">Ο/Η {$editorName} έχει ολοκληρώσει την επιμέλεια της σελιδοποίησης για την υποβολή {$articleId}.</message>
 
-        <message key="log.editor.metadataModified">Τα μεταδεδομένα για το συγκεκριμένο άρθρο τροποποιήθηκαν από τον/την {$editorName}.</message>
-        <message key="log.editor.editorFile">Έχει φορτωθεί έκδοση του αρχείου υποβολής από τον επιμελητή του περιοδικού.</message>
-        <message key="log.editor.archived">Η υποβολή {$articleId} αρχειοθετήθηκε.</message>
-        <message key="log.editor.restored">Η υποβολή {$articleId} επανατοποθετήθηκε στη σειρά αναμονής.</message>
-        <message key="log.editor.editorAssigned">Ο/Η {$editorName} έχει αναλάβει ως επιμελητής της υποβολής {$articleId}.</message>
-        <message key="log.editor.submissionExpedited">Ο/Η {$editorName} έχει επιταχύνει τη διαδικασία αξιολόγησης για το άρθρο {$articleId}.</message>
+	<message key="log.editor.metadataModified">Τα μεταδεδομένα για το συγκεκριμένο άρθρο τροποποιήθηκαν από τον/την {$editorName}.</message>
+	<message key="log.editor.editorFile">Έχει φορτωθεί έκδοση του αρχείου υποβολής από τον επιμελητή του περιοδικού.</message>
+	<message key="log.editor.archived">Η υποβολή {$articleId} αρχειοθετήθηκε.</message>
+	<message key="log.editor.restored">Η υποβολή {$articleId} επανατοποθετήθηκε στη σειρά αναμονής.</message>
+	<message key="log.editor.editorAssigned">Ο/Η {$editorName} έχει αναλάβει ως επιμελητής της υποβολής {$articleId}.</message>
+	<message key="log.editor.submissionExpedited">Ο/Η {$editorName} έχει επιταχύνει τη διαδικασία αξιολόγησης για το άρθρο {$articleId}.</message>
 
-        <message key="log.proofread.assign">Ο/Η {$assignerName} ανέθεσε στον/ην {$proofreaderName} την επιμέλεια του τυπογραφικού δοκιμίου της υποβολής {$articleId}.</message>
-        <message key="log.proofread.complete">Ο/Η {$proofreaderName} υπέβαλλε το {$articleId} για προγραμματισμό.</message>
+	<message key="log.proofread.assign">Ο/Η {$assignerName} ανέθεσε στον/ην {$proofreaderName} την επιμέλεια του τυπογραφικού δοκιμίου της υποβολής {$articleId}.</message>
+	<message key="log.proofread.complete">Ο/Η {$proofreaderName} υπέβαλλε το {$articleId} για προγραμματισμό.</message>
         
-        <message key="log.imported">Ο/Η {$userName} έχει εισάγει το άρθρο {$articleId}.</message>
+	<message key="log.imported">Ο/Η {$userName} έχει εισάγει το άρθρο {$articleId}.</message>
 
         <!-- Reading Tools entries -->
 
 
         <!-- RT Settings -->
-        <message key="rt.admin.settings">Επιλογές εργαλείων ανάγνωσης</message>
+	<message key="rt.admin.settings">Επιλογές εργαλείων ανάγνωσης</message>
 
-        <message key="rt.admin.rtEnable">Για ενεργοποίηση των Εργαλείων ανάγνωσης για το περιοδικό αυτό, μεταβείτε στις Επιλογές εργαλείων ανάγνωσης.</message>
-        <message key="rt.admin.settings.description">Το εργαλείο ανάγνωσης εμφανίζεται σε πλαίδιο δίπλα από δημοσιευμένα τεκμήρια στις ενότητες του περιοδικού που έχουν καθοριστεί για ευρετηρίαση. Τα εργαλεία ανάγνωσης αποτελούνται από ένα σύνολο προαιρετικών εργαλείων σε σχέση με το δημοσιευμένο τεκμήριο, και ένα σύνολο εργαλείων για παροχή πρόσβασης σε σχετικά τεκμήρια, οργανωμένα κατά πεδίο και κλάδο.</message>
-        <message key="rt.admin.settings.enableReadingTools">Ενεργοποίηση εργαλείων ανάγνωσης για καθορισμένες ενότητες του περιοδικού</message>
-        <message key="rt.admin.settings.relatedItems">Πεδίο</message>
-        <message key="rt.admin.settings.relatedItemsLink"><![CDATA[Ανατρέξτε σε <a href="{$relatedItemsLink}" class="action">Σύνολα σχετικών τεκμηρίων</a> για να προβάλετε, να προσθέσετε, να διορθώσετε ή να διαγράψετε τεκμήρια για κάθε πεδίο.]]></message>
+	<message key="rt.admin.rtEnable">Για ενεργοποίηση των Εργαλείων ανάγνωσης για το περιοδικό αυτό, μεταβείτε στις Επιλογές εργαλείων ανάγνωσης.</message>
+	<message key="rt.admin.settings.description">Το εργαλείο ανάγνωσης εμφανίζεται σε πλαίδιο δίπλα από δημοσιευμένα τεκμήρια στις ενότητες του περιοδικού που έχουν καθοριστεί για ευρετηρίαση. Τα εργαλεία ανάγνωσης αποτελούνται από ένα σύνολο προαιρετικών εργαλείων σε σχέση με το δημοσιευμένο τεκμήριο, και ένα σύνολο εργαλείων για παροχή πρόσβασης σε σχετικά τεκμήρια, οργανωμένα κατά πεδίο και κλάδο.</message>
+	<message key="rt.admin.settings.enableReadingTools">Ενεργοποίηση εργαλείων ανάγνωσης για καθορισμένες ενότητες του περιοδικού</message>
+	<message key="rt.admin.settings.relatedItems">Πεδίο</message>
+	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Ανατρέξτε σε <a href="{$relatedItemsLink}" class="action">Σύνολα σχετικών τεκμηρίων</a> για να προβάλετε, να προσθέσετε, να διορθώσετε ή να διαγράψετε τεκμήρια για κάθε πεδίο.]]></message>
 
-        <message key="rt.admin.options">Εργαλεία τεκμηρίων περιοδικού</message>
-        <message key="rt.admin.relatedItems">Εργαλεία Σχετιζόμενων Τεκμηρίων</message>
+	<message key="rt.admin.options">Εργαλεία τεκμηρίων περιοδικού</message>
+	<message key="rt.admin.relatedItems">Εργαλεία Σχετιζόμενων Τεκμηρίων</message>
 
-        <message key="rt.admin.settings.addComment">Προσθήκη σχολίου (παρέχει τη δυνατότητα στους χρήστες να καταχωρούν σχόλια, τα οποία οι Διαχειριστές του περιοδικού μπορούν να διαγράψουν. </message>
-				<message key="rt.admin.settings.addComment.authenticated">Οι χρήστες θα πρέπει να εγγραφούν και συνδεθούν στο σύστημα για να αποστείλουν σχόλια για το περιοδικό. Καταχώριση ανώνυμων σχολίων ΔΕΝ επιτρέπεται.</message>
-				<message key="rt.admin.settings.addComment.anonymous">Οι χρήστες θα πρέπει να εγγραφούν και συνδεθούν στο σύστημα για να αποστείλουν σχόλια για το περιοδικό. Η καταχώριση ανώνυμων σχολίων επιτρέπεται.</message>
-				<message key="rt.admin.settings.addComment.unauthenticated">Οι χρήστες δεν απαραίτητο να εγγραφούν στο σύστημα για να αποστείλουν σχόλια. Η καταχώριση ανώνυμων σχολίων επιτρέπεται.</message>
+	<message key="rt.admin.settings.addComment">Προσθήκη σχολίου (παρέχει τη δυνατότητα στους χρήστες να καταχωρούν σχόλια, τα οποία οι Διαχειριστές του περιοδικού μπορούν να διαγράψουν. </message>
+	<message key="rt.admin.settings.addComment.authenticated">Οι χρήστες θα πρέπει να εγγραφούν και συνδεθούν στο σύστημα για να αποστείλουν σχόλια για το περιοδικό. Καταχώριση ανώνυμων σχολίων ΔΕΝ επιτρέπεται.</message>
+	<message key="rt.admin.settings.addComment.anonymous">Οι χρήστες θα πρέπει να εγγραφούν και συνδεθούν στο σύστημα για να αποστείλουν σχόλια για το περιοδικό. Η καταχώριση ανώνυμων σχολίων επιτρέπεται.</message>
+	<message key="rt.admin.settings.addComment.unauthenticated">Οι χρήστες δεν απαραίτητο να εγγραφούν στο σύστημα για να αποστείλουν σχόλια. Η καταχώριση ανώνυμων σχολίων επιτρέπεται.</message>
 
 
         <!-- RT Versions -->
@@ -951,7 +951,7 @@
 
         <!-- RT Searches -->
 
-        <message key="rt.admin.validateUrls.description"><![CDATA[Τα πιθανά μη έγκυρα URL για ιστοτόπους αναζήτησης εμφανίζονται παρακάτω.<br/> 
+	<message key="rt.admin.validateUrls.description"><![CDATA[Τα πιθανά μη έγκυρα URL για ιστοτόπους αναζήτησης εμφανίζονται παρακάτω.<br/> 
         Πρέπει με μη αυτόματο τρόπο να επαληθεύσετε οποιοδήποτε URL που θεωρείται μη έγκυρο, επειδή η συγκεκριμένη δοκιμή δεν είναι 100% ακριβής.<br/> 
         Η επικύρωση ενδέχεται να μην ολοκληρωθεί σε URLs αναζήτησης που απαιτούν δεδομένα posted form.]]></message>
 
@@ -960,22 +960,22 @@
 
 
 
-        <message key="rt.metadata.dublinCore.primaryAuthor">Δημιουργός</message>
+	<message key="rt.metadata.dublinCore.primaryAuthor">Δημιουργός</message>
 
-        <message key="rt.metadata.pkp.primaryAuthor"> Όνομα, Υπαγωγή (affiliation), χώρα συγγραφέα</message>
-        <message key="rt.metadata.pkp.peerReviewed">Άρθρο που αξιολογήθηκε από ομότιμους αξιολογητές</message>
-				<message key="rt.metadata.pkp.doi">Digital Object Identifier</message>
+	<message key="rt.metadata.pkp.primaryAuthor"> Όνομα, Υπαγωγή (affiliation), χώρα συγγραφέα</message>
+	<message key="rt.metadata.pkp.peerReviewed">Άρθρο που αξιολογήθηκε από ομότιμους αξιολογητές</message>
+	<message key="rt.metadata.pkp.doi">Digital Object Identifier</message>
 
 
 
 
         
-        <message key="rt.beNotifiedWhen">Ενημέρωση όταν...</message>
+	<message key="rt.beNotifiedWhen">Ενημέρωση όταν...</message>
 
-        <message key="rt.thisJournal">Αναζήτηση στο περιοδικό</message>
+	<message key="rt.thisJournal">Αναζήτηση στο περιοδικό</message>
         
 
-        <message key="rt.context.authorTermsDescription">Για τεκμήρια με περισσότερους από ένα συγγραφείς, αφήστε επιλεγμένα όλα τα ονόματα για αναζήτηση εργασιών που έχουν προέλθει από συνεργασία συγγραφέων ή πραγματοποιήστε αναζήτηση επιλέγοντας ένα και μόνο όνομα κάθε φορά. Για περισσότερες πληροφορίες σχετικά με τους πόρους στους οποίους πραγματοποιήθηκε αναζήτηση, κάντε κλικ στο "ΣΧΕΤΙΚΑ". Οι πόροι αυτοί έχουν επιλεχθεί με βάση τη σχέση τους και την παροχή ανοικτής πρόσβασης σε όλα τα περιεχόμενα ή σε τμήμα αυτών.</message>
+	<message key="rt.context.authorTermsDescription">Για τεκμήρια με περισσότερους από ένα συγγραφείς, αφήστε επιλεγμένα όλα τα ονόματα για αναζήτηση εργασιών που έχουν προέλθει από συνεργασία συγγραφέων ή πραγματοποιήστε αναζήτηση επιλέγοντας ένα και μόνο όνομα κάθε φορά. Για περισσότερες πληροφορίες σχετικά με τους πόρους στους οποίους πραγματοποιήθηκε αναζήτηση, κάντε κλικ στο "ΣΧΕΤΙΚΑ". Οι πόροι αυτοί έχουν επιλεχθεί με βάση τη σχέση τους και την παροχή ανοικτής πρόσβασης σε όλα τα περιεχόμενα ή σε τμήμα αυτών.</message>
 
 
         <!--
@@ -984,97 +984,11 @@
          *
         -->
         <!-- Icons: Default "alt" text -->
-				<message key="icon.small.alt">Μικρή</message>
-				<message key="icon.medium.alt">Μεσαία</message>
-				<message key="icon.large.alt">Μεγάλη</message>
+	<message key="icon.small.alt">Μικρή</message>
+	<message key="icon.medium.alt">Μεσαία</message>
+	<message key="icon.large.alt">Μεγάλη</message>
 
         <!-- Debug messages -->
-				<message key="debug.notes.currencyListLoad">Η λίστα νομισματικών μονάδων  "{$filename}" φορτώθηκε από XML</message>
-				<message key="debug.notes.helpMappingLoad">Η επαναφόρτωση XML βοηθάει την χαρτογράφηση του αρχείου {$filename} για την αναζήτηση {$id}.</message>
-
-        <!--
-         *
-         * DEFAULT - Default settings for setup items.
-         *
-        -->
-        <message key="default.journalSettings.checklist.notPreviouslyPublished">Η υποβολή δεν έχει δημοσιευτεί εκ των προτέρων, ούτε έχει υποβληθεί σε άλλο περιοδικό για εξέταση (ή δεν έχει δοθεί εξήγηση στα Σχόλια προς τον επιμελητή).</message>
-        <message key="default.journalSettings.checklist.fileFormat">Το αρχείο υποβολής είναι σε μορφή αρχείου εγγράφου Microsoft Word, RTF, ή WordPerfect.</message>
-        <message key="default.journalSettings.checklist.addressesLinked"><![CDATA[Όταν είναι διαθέσιμα, παρέχονται τα URL για πρόσβαση σε αναφορές online.]]></message>
-        <message key="default.journalSettings.checklist.submissionAppearance">Το κείμενο έχει μονό διάκενο, χρησιμοποιεί γραμματοσειρά μεγέθους 12, χρησιμοποιεί όπου απαιτείται κείμενο σε πλάγια γραφή και όχι με υπογράμμιση (εκτός από τις διευθύνσεις URL) και όλες οι εικόνες, τα σχήματα και οι πίνακες τοποθετούνται εντός του κειμένου σε κατάλληλα σημεία, και όχι στο τέλος αυτού.</message>
-        <message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Το κείμενο τηρεί τις στυλιστικές και βιβλιογραφικές απαιτήσεις που ορίζονται στις Οδηγίες πρους τους συγγραφείς <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">  </a>, που βρίσκονται στο μενού "Σχετικά με το περιοδικό".]]></message>         
-        <message key="default.journalSettings.checklist.anonymous"><![CDATA[Κατά την υποβολή σε ενότητα του περιοδικού που έχει αξιολογηθεί από ομότιμους ειδικούς, ακολουθούνται οι οδηγίες που ορίζονται στη <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">Διασφάλιση "τυφλής" αξιολόγησης</a>).]]></message>
-        <message key="default.journalSettings.privacyStatement">Τα ονόματα και οι διευθύνσεις ηλεκτρονικού ταχυδρομείου που καταχωρούνται στις ιστοσελίδες του περιοδικού θα χρησιμοποιούνται αποκλειστικά για τους καθορισμένους σκοπούς του περιοδικού και δεν θα διατίθεται για κανένα άλλο σκοπό ή σε κανένα τρίτο μέρος.</message>
-        <message key="default.journalSettings.openAccessPolicy">Το συγκεκριμένο περιοδικό παρέχει άμεση ανοικτή πρόσβαση στο περιεχόμενό του υποστηρίζοντας την αρχή της υποστήριξης της παγκόσμιας ανταλλαγής γνώσεων καθιστώντας διαθέσιμη ελεύθερα στο κοινό τα αποτελέσματα της επιστημονικής έρευνας.</message>
-        <message key="default.journalSettings.authorSelfArchivePolicy">Το περιοδικό επιτρέπει στους συγγραφείς και τους ενθαρρύνει να καταχωρίσουν τεκμήρια που έχουν υποβληθεί στο συγκεκριμένο περιοδικό σε ιδιωτικούς ιστοτόπους  ή καταθετήρια (repositories) ακαδημαϊκών ιδρυμάτων και επιστημονικών - ερευνητικών φορέων, πριν και μετά από τη δημοσίευση (παρέχοντας παράλληλα τις απαραίτητες βιβλιογραφικές λεπτομέρειες για τη συγκεκριμένη δημοσίευση).</message>
-        <message key="default.journalSettings.copyeditInstructions"><![CDATA[Το στάδιο της επιμέλειας των κειμένων έχει ως σκοπό τη βελτίωση της ροής, της σαφήνειας, της γραμματικής, των λέξεων και της μορφής του άρθρου. Εδώ ο συγγραφέας διαθέτει τη τελευταία ευκαιρία για πραγματοποίηση αλλαγών στο κείμενο, μιας και το επόμενο στάδιο επιτρέπει μόνο ορθογραφικές διορθώσεις και διορθώσεις μορφής.   
-        
-        Το αρχείο που προορίζεται για διόρθωση βρίσκεται σε μορφή Word ή .rtf και μπορεί, συνεπώς, να διαμορφωθεί εύκολα ως έγγραφο επεξεργασίας κειμένου. Το σύνολο των οδηγιών που υπάρχει εδώ προτείνει δύο προσεγγίσεις για τη διόρθωση κειμένων. Η μια βασίζεται στην λειτουργία Word's Track Changes της Microsoft και απαιτεί από τον Επιμελητή Κειμένων, τον Επιμελητή του Πεδιοδικού και τον Συγγραφέα να έχουν πρόσβαση στο συγκεκριμένο πρόγραμμα. Το Harvard Educational Review έχει δανείσει με άδεια ένα δεύτερο σύστημα, το οποίο δεν εξαρτάται από κάποιο λογισμικό. Ο επιμελητής του περιοδικού μπορεί να τροποποιήσει τις οδηγίες αυτές, συνεπώς, μπορούν να γίνουν προτάσεις για βελτίωση της διαδικασίας για το περιοδικό αυτό.    
-        
-        <h4>Συστήματα διόρθωσης κειμένων</h4>  
-        <strong>1. Word's Track Changes της Microsoft</strong> 
-         Στην ενότητα Εργαλεία στο μενού, η λειτουργία Εντοπισμός αλλαγών επιτρέπει στον υπεύθυνο διόρθωσης κειμένων να πραγματοποιεί ενθέσεις (το κείμενο που εμφανίζεται είναι έγχρωμο) και διαγραφές (το κείμενο εμφανίζεται με διαγραφή και έγχρωμο ή στα κενά ως διεγραμμένο). Ο υπεύθυνος διόρθωσης κειμένων μπορεί να καταχωρίσει ερωτήματα και για τον συγγραφέα (Ερωτήματα για συγγραφέα) και για τον επιμελητή (Ερωτήματα για τον επιμελητή), βάζοντας τα ερωτήματα αυτά εντός αγκυλών. Η έκδοση που έχει διορθωθεί στη συνέχεια φορτώνεται και γνωστοποιείται ο επιμελητής. Ο τελευταίος με τη σειρά του αξιολογεί και γνωστοποιεί τον συγγραφέα.   Ο επιμελητής και ο συγγραφέας πρέπει να μην ασχοληθούν με τις αλλαγές με τις οποίες είναι ικανοποιημένοι. Εάν κριθούν απαραίτητες περαιτέρω αλλαγές, ο επιμελητής και ο συγγραφέας μπορούν να τις πραγματοποιήσουν στις αρχικές ενθέσεις ή διαγραφές, καθώς και να πραγματοποιήσουν νέες κάπου άλλου στο κείμενο. Οι συγγραφείς και οι επιμελητές πρέπει να ανταποκρίνονται σε καθένα από τα ερωτήματα που τους απευθύνεται και να τοποθετούν τις απαντήσεις τους εντός αγκυλών.   Μετά από την αξιολόγηση του κειμένου από τον επιμελητή και τον συγγραφέα, ο υπεύθυνος διόρθωσης κειμένων θα κάνει ένα τελικό έλεγχο στο κείμενο πριν αποδεχτεί τις αλλαγές και θα το προετοιμάσει για το στάδιο της διάταξης και του εκτύπου.     
-         
-         <strong>2. Harvard Educational Review </strong> 
-         
-          <strong>Οδηγίες για πραγματοποίηση ηλεκτρονικών αναθεωρήσεων στο χειρόγραφο</strong>  
-          Ακολουθήστε το πρωτόκολλο για την πραγματοποίηση ηλεκτρονικών αναθεωρήσεων στο χειρόγραφο:  
-          <strong>Ανταπόκριση στις προτεινώμενες αλλαγές</strong> 
-          &nbsp; Για καθεμια από τις προτεινώμενες αλλαγές τις οποίες αποδέχεστε, αναιρέστε την έντονη γραφή του κειμένου 
-          &nbsp; Για καθεμια από τις προτεινώμενες αλλαγές τις οποίες αποδέχεστε, καταχωρίστε ξανά το αρχικό κείμενο με <strong>έντονη γραφή</strong>  
-          <strong>Πραγματοποίηση προσθηκών και διαγραφών</strong> 
-          &nbsp; Προσδσιορίστε τις προσθήκες με <strong>έντονη γραφή</strong> στο νέο κείμενο 
-          &nbsp. Αντικαταστήστε τις ενότητες που έχουν διαγραφεί με: <strong>[διεγραμμένο κείμενο]</strong> &nbsp. Εάν διαγράψετε μια ή περισσότερες προτάσεις, προσδιορίστε το με μια σημείωση, π.χ. <strong>[διαγραφή 2 προτάσεων]</strong>  <strong>Ανταπόκριση στα ερωτήματα προς τον συγγραφέα (QAs)</strong> &nbsp; Διατηρήστε ανέπαφες όλες τις ερωτήσεις προς τον συγγραφέα (QAs) και με έντονη γραφή στο κείμενο. Μην τις διαγράψετε &nbsp. Για να απαντήσετε σε μια QA, προσθέστε ένα σχόλιο μετά από αυτή. Τα σχόλια πρέπει να περιορίζονται χρησιμοποιώντας <strong>[Σχόλιο:</strong>] &nbsp. Π.χ. <strong>[Σχόλιο: Πραγματοποιήθηκε η επέκταση της συζήτησης της μεθοδολογίας κατόπιν συστάσεως]</strong>  <strong>Πραγματοποίηση σχολίων</strong> &nbsp; Χρήση σχολίων για να επεξηγήσετε οργανωτικές αλλαγές ή σημαντικές αναθεωρήσεις &nbsp. Π.χ., <strong>[Σχόλιο: Μετακίνηση της παραπάνω παραγράφου από τη σ. 5 στη σ. 7]</strong> &nbsp; Σημείωση: Όταν αναφέρεστε σε αριθμούς σελίδας, χρησιμοποιήστε τους αριθμούς σελίδας από το τυπωμένο 
-        αντίγραφο του χειρογράφου που σας απεστάλη. Πρόκειται για σημαντική υπόδειξη από τη στιγμή που ενδέχεται να αλλάξουν οι αριθμοί σελίδας καθώς το έγγραφο αναθεωρείται ηλεκτρονικά.  
-        
-        <h4>Απεικόνιση ηλεκτρονικής αναθεώρησης</h4>  
-        
-        <strong>Το πρωτότυπο αρχείο "χειρογράφου"</strong>  
-        
-        Πριν να πραγματοποιήσετε σημαντικές παρεκκλίσεις από τη δομή και την οργάνωση του πρωτότυπου χειρογράφου, ελέγξτε με τους υπόλοιπους υπευθύνους για τη δημοσίευση. Αφού ολοκληρώσετε τις αναθεωρήσεις, μετονομάστε το αρχείο από AuthorNameQA.doc σε AuthorNameQAR.doc (π.χ., από LeeQA.doc σε LeeQAR.doc). Εκτυπώστε αντίγραφο του χειρογράφου και ταχυδρομήστε το μαζί με δισκέτα που θα περιέχει το πλήρως αναθεωρημένο και μετονομασμένο αρχείο επεξεργασίας κειμένου.   
-        <strong>Το χειρόγραφο επεστράφη στον συγγραφέα με ερωτήματα και προτάσεις</strong>  
-        Πριν να πραγματοποιήσετε σημαντικές παρεκκλίσεις από τη δομή και την οργάνωση του <strong>χειρογράφου που σας επιστρέφεται</strong>, ελέγξτε μαζί με <strong>τους συνυπεύθυνους επιμελητές</strong> το έργο σας. 
-        Αφού ολοκληρώσετε τις αναθεωρήσεις, μετονομάστε το αρχείο από AuthorNameQA.doc σε AuthorNameQAR.doc (π.χ., από LeeQA.doc σε LeeQAR.doc). Εκτυπώστε αντίγραφο του χειρογράφου και ταχυδρομήστε το μαζί με δισκέτα που θα περιέχει το πλήρως αναθεωρημένο και μετονομασμένο αρχείο επεξεργασίας κειμένου.<strong>[QA: Στη συγκεκριμένη παράγραφο, ενδέχεται να αποδειχτεί σημαντικό να τονίσετε τη σημασία της προσεκτικής τήρησης των οδηγιών για δημιουργία ηλεκτρονικών αναθεωρήσεων. Σε διαφορετική περίπτωση, ενδέχεται η διαδικασία επιμέλειας να καθυστερήσει σημαντικά]</strong>  
-        
-        <strong>Αναθεωρημένο χειρόγραφο που επεστράφη σε HER</strong> 
-         Πριν να πραγματοποιήσετε σημαντικές παρεκκλίσεις από τη δομή και την οργάνωση του χειρογράφου που σας επιστρέφουμε, ελέγξτε μαζί με τους συνυπεύθυνους επιμελητές το έργο σας. <strong>Λάβετε υπόψη σας ότι σε περίπτωση όπου δεν μπορέσετε να ακολουθήσετε επιτυχώς τις οδηγίες, ενδέχεται να καθυστερήσει η δημοσίευση του χειρογράφου.</strong>  
-         Αφού ολοκληρώσετε τις αναθεωρήσεις, μετονομάστε το αρχείο από AuthorNameQA.doc σε AuthorNameQAR.doc (π.χ., από LeeQA.doc σε LeeQAR.doc). Εκτυπώστε αντίγραφο του χειρογράφου και ταχυδρομήστε το μαζί με δισκέτα που θα περιέχει το πλήρως αναθεωρημένο και μετονομασμένο αρχείο επεξεργασίας κειμένου για τη <strong>[διεγραμμένη λέξη]</strong>.<strong>[QA: Στη συγκεκριμένη παράγραφο, ενδέχεται να αποδειχτεί σημαντικό να τονίσετε τη σημασία της προσεκτικής τήρησης των οδηγιών για δημιουργία ηλεκτρονικών αναθεωρήσεων. Σε διαφορετική περίπτωση, ενδέχεται η διαδικασία επιμέλειας να καθυστερήσει σημαντικά]</ [Σχόλιο: Προσθήκη πρότασης ως απάντηση στην σύστασή σας.]</strong>  <strong>Σημειώσεις:</strong> &bull; Κείμενο χωρίς έντονη γραφή υποδηλώνει αποδοχή των προτεινόμενων αλλαγών στην πρώτη πρόταση &bull. Πρόταση που προστέθηκε ως απάντηση σε ερώτηση προς τον συγγραφέα. Κείμενο με έντονη γραφή υποδηλώνει νέο κείμενο &bull.[διεγραμμένη λέξη] υποδηλώνει τη διαγραφή του "πλήρως" &bull. Το σχόλιο περιλαμβάνει απάντηση στη ερωτήσεις προς τον συγγραφέα των επιμελητών]]></message> 
-				
-				
-				
-				<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Για να προσθέσετε Σύνδεσμο σε Αναφορά κατά την διάρκεια της διαδικασίας Σελιδοποίησης</h4>
-				 <p>Όταν μετατρέπετε μια υποβολή σε HTML ή PDF, σιγουρευτείτε ότι όλοι οι υπερσύνδεσμοι που περιέχονται στην υποβολή είναι ενεργοί.</p>
-				 <h4>Α. Όταν ο Συγγραφέας παρέχει έναν σύνδεσμο με την Αναφορά</h4>
-				 <ol>
-				 <li>Όταν ακόμα η υποβολή βρίσκεται σε επεξεργάσιμη μορφή (π.χ. αρχείο Word), προσθέτε την φράση "ΠΡΟΒΟΛΗ ΤΕΚΜΗΡΙΟΥ" στο τέλος της αναφοράς που είναι συνδεδεμένη με ένα URL.</li>
-				 <li>Αφού επιλέξετε την φράση, μετατρέψτε την σε Υπερσύνδεσμο χρησιμοποιώντας το σχετικό εργαλείο του Word "Εισαγωγή Υπερ-σύνδεσης" και το δεδομένο URL.</li>
-				 </ol>
-				 <h4>Β. Επιτρέποντας στους Αναγνώστες να αναζητούν στο Google Scholar για αναφορές</h4>
-				 <ol>
-				 <li>Όταν ακόμα η υποβολή βρίσκεται σε επεξεργάσιμη μορφή (π.χ. αρχείο Word), αντιγράψτε τον τίτλο της εργασίας που αναφέρεται στην λίστα αναφορών του άρθρου (αν αυτός φαίνεται κοινότυπος π.χ. ""Ειρήνη" - τότε αντιγράψτε και τον συγγραφέα και τον τίτλο).</li>
-				 <li>Επικολλήστε τον τίτλο της αναφοράς μεταξύ των %22', τοποθετώντας το σύμβολο + μεταξύ κάθες λέξης: http://scholar.google.com/scholar?q=%22PASTE+TITLE+HERE%22&hl=en&lr=&btnG=Search</li>
-				 <li>Προσθέστε την φράση ΑΝΑΖΗΤΗΣΗ ΣΤΟ GOOGLE SCHOLAR στο τέλος της αντίστοιχης αναφοράς στη λίστα Αναφορών του άρθρου .</li>
-				 <li>Αφού επιλέξετε την φράση, μετατρέψτε την σε Υπερσύνδεσμο χρησιμοποιώντας το σχετικό εργαλείο του Word "Εισαγωγή Υπερ-σύνδεσης" και το δεδομένο URL.</li>
-				 </ol>
-				 <h4>Γ. Επιτρέποντας στους Αναγνώστες να αναζητούν για αναφορές με DOI</h4>
-				 <ol>
-				 <li>Όταν ακόμα η υποβολή βρίσκεται σε επεξεργάσιμη μορφή (π.χ. αρχείο Word), αντιγράψτε τις αναφορές που θέλετε από την λίστα Αναφορών του άρθρου στο CrossRef Text Query http://www.crossref.org/freeTextQuery/</li>
-				 <li>Από τα αποτελέσμαστα της αναζήτησης επικολλήστε κάθε DOI άρθρου στο παρακάτω URL (μεταξύ = και &): http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI</li>
-				 <li>Προσθέστε την φράση CrossRef στο τέλος της αντίστοιχης αναφοράς στη λίστα Αναφορών του άρθρου.</li>
-				 <li>Αφού επιλέξετε την φράση, μετατρέψτε την σε Υπερσύνδεσμο χρησιμοποιώντας το σχετικό εργαλείο του Word "Εισαγωγή Υπερ-σύνδεσης" και το δεδομένο URL.</li>
-				 </ol>]]></message>
-        <message key="default.journalSettings.proofingInstructions"><![CDATA[Το στάδιο της διόρθωσης τυπογραφικών δοκιμίων αφορά τον εντοπισμό σφαλμάτων στην ορθογραφία, τη γραμματική και τη μορφή του εκτύπου. Σε αυτό το στάδιο δεν μπορούν να πραγματοποιηθούν πιο ουσιαστικές αλλαγές, εκτός και εάν προηγηθεί συζήτηση με τον Επιμελητή της ενότητας. Στη Διάταξη, κάντε κλικ στο ΠΡΟΒΟΛΗ ΔΙΟΡΘΩΣΗΣ για να προβάλετε μορφές αρχείων HTML, PDF και λοιπές διαθέσιμες μορφές αρχείων που χρησιμοποιούνται στη δημοσίευση του συγκεκριμένου τεκμηρίου.   <strong>Για ορθογραφικά και γραμματικά σφάλματα</strong>  Αντιγράψτε την προβληματική λέξη ή τις ομάδες λέξεων και επικολλήστε τες στο πλαίσιο Διορθώσεις με τις οδηγίες "ΑΛΛΑΓΗ-ΣΕ" προς τον επιμελητή όπως εμφανίζονται παρακάτω...  1. ΑΛΛΑΓΗ... then the others ΣΕ... than the others  2. ΑΛΛΑΓΗ... Malinowsky ΣΕ... Malinowski   <strong>Για σφάλματα μορφοποίησης</strong>  Περιγράψτε την τοποθεσία και τη φύση του προβλήματος στο πλαίδιο Διορθώσεις αφού τυπώσετε στον τίτλο "ΜΟΡΦΟΠΟΙΗΣΗ" οπως εμφανίζεται παρακάτω...  3. ΜΟΡΦΟΠΟΙΗΣΗ Οι αριθμοί στον Πίνακα 3 δεν ευθυγραμμίζονται στη Τρίτη στήλη.  4. ΜΟΡΦΟΠΟΙΗΣΗ Το κείμενο της παραγράφου που ξεκινάει «Το τελευταίο θέμα....» δεν έχει εσοχή.]]></message>
-        <message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________ {$journalName} {$indexUrl}/{$journalPath} ]]></message>
-        <message key="default.journalSettings.forReaders"><![CDATA[Η χρήση της συλλογής Κοσμόπολις είναι ελεύθερη και δωρεάν για όλους και δεν απαιτείται η χρήση κωδικών πρόσβασης. Παρ'όλα ενθαρρύνουμε τους τακτικούς χρήστες - αναγνώστες των περιοδικών της συλλογής να <strong>εγγραφούν</strong> στη υπηρεσία ενημέρωσης για αυτό ή και άλλα περιοδικά. Χρησιμοποιώντας τον σύνδεσμο <a href="{$indexUrl}/{$journalPath}/user/register">Εγγραφείτε</a> στην κορυφή της αρχικής σελίδας του περιοδικού. Κάθε εγεγγραμμένος χρήστης θα λαμβάνει με e-mail τους πίνακες περιεχομένων κάθε νέου τεύχους που δημοσιεύεται στην συλλογή. Επίσης η λίστα των καταχωρημένων χρηστών-αναγνωστών επιτρέπει στον περιοδικό να διαπιστώσει το πραγματικό επίπεδο ανταπόκρισης και χρήσης του. Ενημερωθείτε για την <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Πολιτική Προστασίας Προσωπικών Δεδομένων</a> της συλλογής, που διαβεβαιώνει ότι τα στοιχεία και τα e-mail των καταχωρημένων χρηστών-αναγνωστών δεν θα χρησιμοποιηθούν για άλλους λόγους.]]></message>
-        <message key="default.journalSettings.forAuthors"><![CDATA[Ενδιαφέρεστε να πραγματοποιήσετε υποβολή στο συγκεκριμένο περιοδικό; Συνίσταται η αναθεώρηση της σελίδας <a href="{$indexUrl}/{$journalPath}/about">Σχετικά με το περιοδικό</a> για τις πολιτικές της ενότητας του περιοδικού, καθώς και της σελίδας <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Κατευθυντήριες γραμμές συγγραφέα</a>. Οι συγγραφείς πρέπει να <a href="{$indexUrl}/{$journalPath}/user/register">εγγραφούν</a> στο περιοδικό πριν από την υποβολή, ή σε περίπτωση που έχουν ήδη εγγραφεί μπορούν απλά <a href="{$indexUrl}/index/login">να συνδεθούν</a> και να ξεκινήσουν τη διαδικασία με τα 5 βήματα.]]></message>
-        <message key="default.journalSettings.forLibrarians"><![CDATA[Βασική επιδίωξη και επιθυμία της συλλογής είναι καταχώρηση αυτού ή/και άλλων περιοδικών της συλλογής στις συλλογές ηλεκτρονικών περιοδικών και πηγών πληροφόρησης των βιβλιοθηκών. Επίσης, είναι πιθανόν χρήσιμο να τονιστεί ότι το χρησιμοποιούμενο σύστημα ηλεκτρονικής δημοσίευσης της συλλογής Κοσμόπολις, είναι ανοικτού κώδικα και μπορεί να χρησιμοποιηθεί από τις βιβλιοθήκες για την φιλοξενία περιοδικών ή/και την εξυπηρέτηση των μελών της ακαδημαϊκής κοινότητας που είναι μέλη της συντακτικής ομάδας κάποιου περιοδικού. (Διαβάστε περισσότερα για το <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
-        <message key="default.journalSettings.lockssLicense"><![CDATA[Το συγκεκριμένο περιοδικό χρησιμοποιεί το σύστημα LOCKSS για τη δημιουργία διανεμόμενου συστήματος αρχειοθέτησης μεταξύ των βιβλιοθηκών που συμμετέχουν και να τους δώσει τη δυνατότητα να δημιουργήσουν μόνιμα αρχεία του περιοδικού με στόχο τη συντήρηση και την αποκατάσταση. <a href="http://lockss.stanford.edu/">Περισσότερα...</a>]]></message>  
-
-				<!-- Default settings for payment items. -->
-				<message key="default.journalSettings.submissionFeeDescription">Οι Συγγραφείς απαιτείται να πληρώσουν μια Εισφορά Υποβολής Άρθρου ως μέρος της διαδικασίας υποβολής και για συνεισφέρουν στα έξοδα αξιολόγησης.</message>
-				<message key="default.journalSettings.fastTrackFeeDescription">Με την εισφορά αυτή εξασφαλίζεται ότι η αξιολόγηση και η τελική ενημέρωση του συγγραφέα από τον Επιμελητή για τα αποτελέσματα της αξιολόγησης θα ολοκληρωθούν μέσα σε 4 εβδομάδες.</message>
-				<message key="default.journalSettings.publicationFeeDescription">Αν το άρθρο αυτό εγκριθεί για δημοσίευση, θα ερωτηθείτε για να πληρώσετε μια Εισφορά Δημοσίευσης του Άρθρου ώστε να καλυφθεί ένα μέρος των εξόδων δημοσίευσης.</message>
-				<message key="default.journalSettings.waiverPolicy">Αν δεν διαθέτετε τους πόρους για να καλύψετε τις σχετικές εισφορές, θα έχετε μια δυνατότητα παράβλεψης των εισφορών. Δεν επιθυμούμε τέτοιου είδους θέματα να εμποδίσουν την δημοσίευση μιας χρήσιμης εργασίας..</message>
-				<message key="default.journalSettings.payPerViewFeeDescription">Η πληρωμή αυτής της εισφοράς θα σας επιτρέψει να δείτε, να "κατεβάσετε" και να τυπώσετε αυτό το άρθρο.</message>
-				<message key="default.journalSettings.membershipFeeDescription">Με την πληρωμή αυτής της εισφοράς θα γίνεται μέλος του οργανισμού μας για ένα χρόνο και θα έχετε δικαίωμα ελεύθερης πρόσβασης στα περιεχόμενα αυτού του περιοδικού.</message>
-				<message key="default.journalSettings.donationFeeDescription">Καλωσορίζουμε με ιδιαίτερη ευχαρίστηση κάθε είδους δωρεές οι οποίες βοηθούν την Συντακτική Ομάδα του Περιοδικού να εκδίδει και να παρέχει στους αναγνώστες ένα ποιοτικό και έγκυρο περιοδικό.</message>
-				</locale>
+	<message key="debug.notes.currencyListLoad">Η λίστα νομισματικών μονάδων  "{$filename}" φορτώθηκε από XML</message>
+	<message key="debug.notes.helpMappingLoad">Η επαναφόρτωση XML βοηθάει την χαρτογράφηση του αρχείου {$filename} για την αναζήτηση {$id}.</message>
+</locale>

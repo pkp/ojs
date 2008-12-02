@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * defaultSettings.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fr_CA (Français (Canada)) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="fr_CA" full_name="Français (Canada)">
+	<message key="default.journalSettings.checklist.notPreviouslyPublished">La soumission n'a pas été précédemment publiée, et elle ne précède pas une autre revue pour examen (ou une explication a été fournie dans Commentaires au rédacteur).</message>
+	<message key="default.journalSettings.checklist.fileFormat">Le fichier de la présentation est en format de fichier document Microsoft WORD, RTF, ou WordPerfect.</message>
+	<message key="default.journalSettings.checklist.submissionAppearance">Le texte est à simple interligne; utiliser une police à 12 points; employer l'italique plutôt que le souligné (sauf pour les adresses URL); et placer toutes les illustrations, figures, et tables aux endroits appropriés dans le texte plutôt qu'à la fin.</message>
+	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Le texte se conforme aux exigences stylistiques et bibliographiques décrites dans <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Instructions aux auteurs</a>, qui se trouve dans « Au sujet de la revue ».]]></message>
+	<message key="default.journalSettings.checklist.anonymous"><![CDATA[Dans le cas d'une soumission à une rubrique évaluée par les pairs dans cette revue, les instructions dans <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">S'assurer d'une évaluation en aveugle</a> ont été suivies.]]></message>
+	<message key="default.journalSettings.privacyStatement">Les noms et adresses électroniques entrés dans ce site de la revue seront utilisés exclusivement aux fins indiquées de cette revue et ne serviront à aucune autre fin, ni à toute autre partie.</message>
+	<message key="default.journalSettings.openAccessPolicy">Cette revue procure un libre accès immédiat à son contenu se basant sur le principe qu'en mettant la recherche publiquement disponible facilite un plus grand échange du savoir, à l'échelle de la planète.</message>
+	<message key="default.journalSettings.authorSelfArchivePolicy">Les auteurs ont la permission d'afficher leurs ouvrages sur un site Web personnel ou institutionnel avant et après leur publication dans cette revue (tout en donnant les détails bibliographiques à cette publication).</message>
+	<message key="default.journalSettings.copyeditInstructions"><![CDATA[L'étape de la révision de texte vise à améliorer le débit, la clarté, la grammaire, la formulation, et le formatage de l'article. Elle représente la dernière occasion pour l'auteur d'apporter des modifications substantielles au texte, la prochaine étape étant limitée aux corrections d'erreurs typographiques et de formatage. 
+
+Le fichier à réviser est en format WORD ou .rtf et peut donc être facilement révisé comme un document de traitement de texte. Les instructions affichées ici proposent deux voies pour la révision de texte. L'une est basée sur la fonctionnalité Suivi des modifications de Microsoft Word et exige que l'évaluateur, le rédacteur et l'auteur aient accès à ce programme. L'autre, un logiciel indépendant, a été emprunté, avec autorisation, du Harvard Educational Review. Le rédacteur de la revue peut modifier ces instructions, et l'on peut faire des suggestions pour améliorer le processus pour cette revue. 
+
+<h4>Système de révision de texte</h4>
+
+<strong>1. Suivi des modifications de Microsoft Word</strong>
+
+Sous Outils dans la barre de menu, la fonction Suivi des modifications permet au évaluateur de faire des insertions (le texte apparaît en couleur) et des suppressions (le texte apparaît en couleur et barré ou dans la marge comme supprimé). l'évaluateur peut afficher les requêtes de l'auteur (Requêtes de l'auteur) et du rédacteur (Requêtes du rédacteur) en insérant ces requêtes dans des crochets. La version du fichier est alors téléchargée et le le rédacteur reçoit un avis. le rédacteur révise le texte et en avise l'auteur. 
+
+le rédacteur et l'auteur doivent laisser les modifications dont ils sont satisfaits. Si d'autres modifications sont nécessaires, le rédacteur et l'auteur peuvent modifier les insertions ou les suppressions initiales, et aussi faire de nouvelles insertions ou suppressions ailleurs dans le texte. Les auteurs et les rédacteurs doivent répondre à chacune des requêtes qui leur sont adressées, les réponses étant placées entre crochets. 
+
+Après que le texte a été évalué par le rédacteur et l'auteur, l'évaluateur revoit une dernière fois le texte et accepte les modifications en préparation du travail éditorial et de l'épreuve en placard. 
+
+
+<strong>2. Harvard Educational Review</strong>
+
+<strong>Comment procéder aux révisions électroniques du manuscrit</strong>
+
+Veuillez suivre le protocole suivant pour faire les révisions électroniques de votre manuscrit:
+
+<strong>Répondre aux modifications suggérées</strong>
+&nbsp; Pour chaque modification suggérée que vous acceptez, enlever le gras du texte
+&nbsp; Pour chaque modification suggérée que vous refusez, remettre le texte original et le mettre en <strong>gras</strong>
+
+<strong>Adjonctions et suppressions</strong>
+&nbsp; Indiquer les adjonctions en <strong>mettant en gras</strong> le nouveau texte
+&nbsp; Remplacer les rubriques supprimées par: <strong>[texte supprimé]</strong>
+&nbsp; Si vous supprimez une phrase ou plus, veuillez l'indiquer dans une note, par ex., <strong>[ ai supprimé 2 phrases]</strong>
+
+<strong>Répondre aux requêtes de l'auteur (QetR)</strong>
+&nbsp; Garder toutes les QetR intactes et en gras dans le texte. Ne pas les supprimer &nbsp; Pour répondre à une QetR, ajouter un commentaire après. Les commentaires doivent être limités Ã  :
+<strong>[Commentaire :</strong>]
+&nbsp; par ex., <strong>[Commentaire : Discussion élargie de la méthodologie comme vous l'avez suggéré]</strong>
+
+<strong>Apporter des commentaires</strong>
+&nbsp; Utiliser les commentaires pour expliquer les modifications organisationnelles ou les révisions majeures
+&nbsp; par ex., <strong>[Commentaire : Déplacer le paragraphe ci-dessus de la p. 5 à la p. 7]</strong>
+&nbsp; Nota : Lors du renvoi à des numéros de page, veuillez utiliser les numéros de page de la copie imprimée du manuscrit qui vous a été envoyée. Cela est important car les numéros de page peuvent changer lorsqu'un document est révisé électroniquement.
+
+<h4>Illustration d'une révision électronique</h4>
+
+<strong>Fichier " manuscrit " original</strong>
+
+Avant d'apporter des changements importants à la structure ou à l'organisation de votre manuscrit original, veuillez communiquer avec les co-évaluateurs de votre article. Après que vous avez terminé vos révisions, changer le nom du fichier AuthorNameQA.doc pour AuthorNameQAR.doc (par ex., de GagnonQA.doc à GagnonQAR.doc). Imprimer une copie papier de votre manuscrit et la poster avec une disquette contenant le fichier de traitement de texte complètement révisé et renommé. 
+
+
+<strong>Manuscrit retourné à l'auteur avec requêtes et suggestions</strong>
+
+Avant d'apporter des changements importants à la structure ou à l'organisation <strong>du manuscrit que nous vous retournons</strong>, veuillez communiquer avec les <strong>les rédacteurs  qui révisent</strong> votre article. Après que vos modifications sont terminées, changer le nom du fichier AuthorNameQA.doc pour AuthorNameQAR.doc (par ex., de Gagnon QA.doc à GagnonQAR.doc). Imprimer une copie papier de votre manuscrit et la poster avec une disquette contenant le fichier de traitement de texte complètement révisé et renommé. <strong>[QetR : Dans ce paragraphe, il serait utile d'insister sur l'importance de suivre attentivement les instructions pour la présentation des révisions électroniques. Sinon, le processus de publication pourrait être considérablement ralenti.]</strong>
+ 
+<strong>Manuscrit révisé retourné à HER</strong>
+
+Avant d'apporter des changements importants à la structure et à l'organisation du manuscrit que nous vous retournons, veuillez communiquer avec les <strong>rédacteurs qui révisent</strong> votre article. Sinon, le processus de publication pourrait être considérablement ralenti.</strong>
+
+Après que vos révisions sont terminées, changer le nom du fichier AuthorNameQA.doc pour AuthorNameQAR.doc (par ex., de GagnonQA.doc à GagnonQAR.doc). Imprimer une copie papier de votre manuscrit et la poster avec une disquette contenant le fichier de traitement de texte <strong>[mot supprimé</strong> révisé et renommé. <strong>[QetR : Dans ce paragraphe, il serait utile d'insister sur l'importance de suivre attentivement les instructions pour la présentation des révisions électroniques. Sinon, le processus de publication pourrait être considérablement ralenti.] [Commentaire : J'ai ajouté une phrase en réponse à votre suggestion.]</strong>
+
+<strong>Notes :</strong>
+&bull; La suppression du gras dans le texte indique que vous acceptez les modifications suggérées à la première phrase.
+&bull; Phrase ajoutée en réponse à QetR. Le texte en gras indique un ajout au nouveau texte
+&bull; [mot supprimé] indique la suppression de "entièrement "
+&bull; Le commentaire contient une réponse aux QetR des rédacteurs]]></message>
+
+	<message key="default.journalSettings.emailSignature">________________________________________________________________________
+{$journalName}
+{$indexUrl}/{$journalPath}</message>
+	<message key="default.journalSettings.forReaders"><![CDATA[Nous incitons les lecteurs à s'inscrire pour recevoir les avis de publication pour cette revue. Utiliser le <a href="{$indexUrl}/{$journalPath}/user/register">Inscrire</a> le lien en haut de la page d'accueil de la revue. Cette inscription permettra au lecteur de recevoir par courriel la table des matières de chaque nouveau numéro de la revue. Cette liste permet aussi à la revue d'inscrire un certain niveau de soutien ou de lectorat. Voir la rubrique de la revue <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Protection des données personnelles</a> qui confirme aux lecteurs que leur nom et leur adresse électronique ne seront pas utilisés à d'autres fins.]]></message>
+	<message key="default.journalSettings.forAuthors"><![CDATA[Intéressé à faire une soumission à cette revue? Nous vous recommandons de consulter les rubriques de la revue à la page <a href="{$indexUrl}/{$journalPath}/about">Au sujet de la revue</a> <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Instructions aux auteurs</a>. Les auteurs doivent <a href="{$indexUrl}/{$journalPath}/user/register">s'inscrire</a> auprès de la revue avant de présenter une soumission, ou s'ils sont déjà inscrits, simplement <a href="{$indexUrl}/index/login">ouvrir une session</a> et commencer les 5 étapes du processus.]]></message>
+	<message key="default.journalSettings.forLibrarians"><![CDATA[Nous incitons les bibliothèques à indiquer l'accès libre à cette revue parmi les revues électroniques qu'elles conservent. Ce système de publication est aussi conçu pour être hébergé et exploité par les bibliothèques de recherche afin de soutenir les travaux des membres de ses facultés associées publiés dans la revue. Pour en savoir plus sur l'utilisation de Open Journal Systems pour gérer et publier les revues évaluées par les pairs, voir <a href="http://pkp.sfu.ca">Public Knowledge Project</a>.]]></message>
+	<message key="default.journalSettings.lockssLicense"><![CDATA[Cette revue utilise le système LOCKSS pour créer un système de distribution des archives parmi les bibliothèques participantes et permet à ces bibliothèques de créer des archives permanentes pour fins de préservation et de restauration. <a href="http://lockss.stanford.edu/">More...</a>]]></message>
+	<message key="default.journalSettings.checklist.addressesLinked">Quand cela a été possible, les URL des références ont été offerts.</message>
+	<message key="default.journalSettings.submissionFeeDescription">Les auteurs doivent payer des frais de soumission d'article dans le cadre du processus de soumission afin de contribuer aux coûts de révision.</message>
+	<message key="default.journalSettings.fastTrackFeeDescription">Avec le paiement de ces frais, la révision, la décision éditoriale et la notification à l'auteur de ce manuscrit sont garanties dans les quatre prochaines semaines.</message>
+	<message key="default.journalSettings.publicationFeeDescription">Si cet article est accepté pour fin de publication, vous devrez payer les frais de publication d'article pour couvrir les frais de publication.</message>
+	<message key="default.journalSettings.waiverPolicy">Si vous n'êtes pas en mesure de payer de tels frais, vous aurez l'occasion de supprimer les frais. Nous ne voulons pas que les frais empêchent la publication d'ouvrages méritants.</message>
+	<message key="default.journalSettings.membershipFeeDescription">Le paiement des frais vous inscrira à titre de membre de cette association pendant un an et vous accordera un accès gratuit à ce journal.</message>
+	<message key="default.journalSettings.donationFeeDescription">Les dons à cette revue, quels que soient le montant, sont les bienvenus et permettent aux éditeurs de continuer à offrir une revue de la plus haute qualité à ses lecteurs.</message>
+	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Déclarer si vous avez un conflit d'intérêts  concernant cette recherche (voir <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Politique</a>).]]></message>
+	<message key="debug.notes.helpMappingLoad">Fichier de mappage d'aide XML {$filename} retéléchargé à la recherche de {$id}.</message>
+	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Pour ajouter un lien aux références du processus de mise en page</h4>
+	<p>Quand vous convertissez une soumission en format HTML ou PDF, assurez-vous que tous les hyperliens dans les soumissions son actifs.</p>
+	<h4>A. Quand l'auteur fournit un lien avec la référence</h4>
+	<ol>
+	<li>Quand la soumission est encore dans son format de traitement de texte (p. ex. : Word), ajouter la phrase VISIONNER ARTICLE à la fin de la référence possédant un URL.</li>
+	<li>Convertir cette phrase en hyperlien en la surlignant et en utilisant l'outil d'insertion d'hyperliens de Word et le URL préparé au no 2.</li>
+	</ol>
+	<h4>B. Permettre aux lecteurs d'utiliser Google pour les références</h4>
+	<ol>
+	<li>Quand la soumission est encore dans son format de traitement de texte (p. ex. : Word), copier le titre de l'ouvrage concerné dans la liste Références (si le titre semble être trop commun – p. ex. : « Paix » - copier alors l'auteur et le titre).</li>
+	<li>Coller le titre de la référence entre le %22, en mettant un + entre chaque mot : http://scholar.google.com/scholar?q=%22PASTE+TITLE+HERE%22&hl=en&lr=&btnG=Search</li>
+	<li>Ajouter la phrase RECHERCHE CG à la fin de chaque citation dans la liste de références de la soumission.</li>
+	<li>Convertir cette phrase en un hyperlien en la surlignant et en utilisant l'outil d'insertion d'hyperliens de Word et le URL préparé au no 2.</li>
+	</ol>
+	<h4>C. Permettre aux lecteurs de chercher des références avec un DOI</h4>
+	<ol>
+	<li>Quand la soumission est encore en format Word, copier le groupe de références dans la demande de texte de référence croisée http://www.crossref.org/freeTextQuery/</li>
+	<li>Copier chaque DOI fourni par la demande dans l'URL suivant (entre = and &) : http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI</li>
+	<li>Ajouter la phrase Référence croisée à la fin de chaque citation dans la liste de références de la soumission.</li>
+	<li>Convertir cette phrase en un hyperlien en la surlignant et en utilisant l'outil d'insertion d'hyperliens de Word et le URL préparé au no 2.</li>
+	</ol>]]></message>
+	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>L'étape de correction d'épreuves vise à corriger toute erreur dans le formatage, la grammaire et l'orthographe de l'épreuve en placard. Des changements plus considérables ne peuvent être effectués à cette étape, à moins que cela ne soit discuté avec l'éditeur de la section. Dans Mise en page, cliquer sur VISIONNER L'ÉPREUVE pour voir le HTML, le PDF et d'autres formats de fichiers disponibles utilisés dans la publication de cet article.</p>
+<h4>Pour les erreurs de grammaire et d'orthographe</h4>
+
+<p>Copier le mot problème ou les groupes de mots et les coller dans la case Corrections d'épreuves avec les directives « CHANGER À » à l'éditeur comme suit...</p>
+
+<pre>1. CHANGER...
+puis les autres
+À...
+puis les autres</pre>
+<br />
+<pre>2. CHANGER...
+Malinowsky
+À...
+Malinowski</pre>
+<br />
+
+<h4>Pour les erreurs de formatage</h4>
+
+<p>Décrire l'emplacement et la nature du problème dans la case Corrections d'épreuves après avoir entré le titre « FORMATAGE » comme suit...</p>
+<br />
+<pre>3. FORMATAGE
+Les chiffres dans le tableau 3 ne sont pas alignés dans la troisième colonne.</pre>
+<br />
+<pre>4. FORMATAGE
+Le paragraphe qui commence « Ce dernier sujet... » est à effacer. </pre>]]></message>
+	<message key="default.journalSettings.purchaseArticleFeeDescription">Le paiement de ces frais vous permettra d'afficher, de télécharger sur votre poste, et d'imprimer cet article.</message>
+</locale>

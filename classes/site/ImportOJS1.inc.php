@@ -234,6 +234,9 @@ class ImportOJS1 {
 			printf("Importing journal\n");
 		}
 
+		// Bring in the locale text for default journal settings
+		Locale::requireComponents(array(LOCALE_COMPONENT_OJS_DEFAULT_SETTINGS));
+
 		// Create journal
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$journal = new Journal();

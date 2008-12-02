@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * defaultSettings.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Russian) locale.
+  *
+  * $Id$
+  -->
+
+<locale name="ru_RU" full_name="Russian">
+	<message key="default.journalSettings.checklist.notPreviouslyPublished">Эта статья не была раньше опубликована, а также не предоставлена другому журналу для рассмотрения и публикации. Если подобное имеет место, то случай должен быть объяснен в примечаниях к отправленной статье (Шаг 5).</message>
+	<message key="default.journalSettings.checklist.fileFormat">Отправляемый материал набран в текстовом редакторе Microsoft Word, формат DOC или RTF; страницы без пагинации, без переносов, без колонтитулов, без абзацного отступа (абзацный отступ не задан при помощи табуляции), выравнивание по ширине; все иллюстрации, схемы, фигуры и таблицы расположены в тексте в соответствующем месте, а не в конце статьи.</message>
+	<message key="default.journalSettings.checklist.submissionAppearance">Шрифт Times New Roman, 12 pt; все остальные использованные шрифты должны быть архивированы и отправлены в дополнительном файле в качестве приложения; межстрочный интервал - 1; используется курсив вместо подчеркивания (с исключением подчеркнутых URL адресов).</message>
+	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Текст обработан в соответствии с требованиями, предъявляемыми к авторам. С конкретными требованиями можно ознакомиться на странице <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Редакционные требования</a>, которая находится в разделе О нас.]]></message>
+	<message key="default.journalSettings.checklist.anonymous">Если отправленный текст представляет собой теоретическую статью, он будет рецензирован анонимно (peer-review). С этой целью имена авторов будут удалены. Если автор ссылается на свои работы, то в ссылках и библиографии его имя должно быть замено на Автор (напр. Автор 1996: 156). Имя автора не должно присутствовать и в свойствах (Properties) документа.</message>
+
+	<message key="default.journalSettings.privacyStatement">Имена и адреса, указанные Вами при регистрации на этом сайте, будут использованы исключительно для технических целей: контакта с Вами или с рецензентами (редакторами) в процессе подготовки Вашей статьи к публикации. Они ни в коем случае не будут предоставляться другим лицам и организациям.</message>
+	<message key="default.journalSettings.copyeditInstructions"><![CDATA[The copyediting stage is intended to improve the flow, clarity, grammar, wording, and formatting of the article. It represents the last chance for the author to make any substantial changes to the text, as the next stage is restricted to typos and formatting corrections. 
+
+The file to be copyedited is in Word or .rtf format and therefore can be easily edited as a word processing document. This set of  instructions displayed here proposes two approaches to copyediting. The one is based on Microsoft Word's Track Changes feature and requires that the copyeditor, editor and author have access to this program. A second system, that is software independent, has been borrowed, with permission, from the Harvard Educational Review. The journal editor is in a position to modify these instructions, so suggestions can be made to improve the process for this journal. 
+
+<h4>Copyediting Systems</h4>
+
+<strong>1. Microsoft Word's Track Changes</strong>
+
+Under Tools in the menu bar, the feature Track Changes enables the copyeditor to make insertions (text appears in color) and deletions (text appears crossed out in color or in the margins as deleted). The copyeditor can post queries to both the author (Author Queries) and to the editor (Editor Queries) by inserting these queries in square brackets. The copyedited version is then uploaded and the editor is notified. The editor then reviews the text and notifies the author. 
+
+The editor and author should leave those changes with which they are satisfied. If further changes are necessary, the editor and author can make changes to the initial insertions or deletions, as well as make new insertions or deletions elsewhere in the text. Authors and editors should respond to each of the queries addressed to them, with responses placed inside the square brackets. 
+
+After the text has been reviewed by editor and author, the copyeditor will make a final pass over the text accepting the changes in preparation for the layout and galley stage. 
+
+
+<strong>2. Harvard Educational Review </strong>
+
+<strong>Instructions for Making Electronic Revisions to the Manuscript</strong>
+
+Please follow the following protocol for making electronic revisions to your manuscript:
+
+<strong>Responding to suggested changes</strong>
+&nbsp; For each of the suggested changes that you accept, unbold the text
+&nbsp; For each of the suggested changes that you do not accept, re-enter the original text and <strong>bold</strong> it
+
+<strong>Making additions and deletions</strong>
+&nbsp; Indicate additions by <strong>bolding</strong> the new text
+&nbsp; Replace deleted sections with: <strong>[deleted text]</strong>
+&nbsp; If you delete a sentence or more, please indicate with a note, e.g., <strong>[deleted 2 sentences]</strong>
+
+<strong>Responding to Queries to the Author (QAs)</strong>
+&nbsp; Keep all QAs intact and bolded within the text. Do not delete them
+&nbsp; To reply to a QA, add a comment after it. Comments should be delimited using:
+<strong>[Comment:</strong>]
+&nbsp; e.g., <strong>[Comment: Expanded discussion of methodology as you suggested]</strong>
+
+<strong>Making comments</strong>
+&nbsp; Use comments to explain organizational changes or major revisions
+&nbsp; e.g., <strong>[Comment: Moved the above paragraph from p. 5 to p. 7]</strong>
+&nbsp; Note: When referring to page numbers, please use the page numbers from the printed copy of the manuscript that was sent to you. This is important since page numbers may change as a document is revised electronically.
+
+<h4>An Illustration of an Electronic Revision</h4>
+
+<strong>The original "manuscript" file</strong>
+
+Before making dramatic departures from the structure and organization of your original manuscript, please check in with the co-chairs of your piece. After you are finished with your revisions, rename the file from AuthorNameQA.doc to AuthorNameQAR.doc (e.g., from LeeQA.doc to LeeQAR.doc). Print out a hardcopy of your manuscript and mail it with a floppy disk containing the completely revised and renamed word processing file.
+
+
+<strong>Manuscript returned to the author with queries and suggestions</strong>
+
+Before making dramatic departures from the structure and organization of <strong>the manuscript that we are returning to you</strong>, please check in with the <strong>editors who are co-chairing</strong> your piece. After you are finished with your revisions, rename the file from AuthorNameQA.doc to AuthorNameQAR.doc (e.g., from LeeQA.doc to LeeQAR.doc). Print out a hardcopy of your manuscript and mail it with a floppy disk containing the completely revised and renamed word processing file. <strong>[QA: In this paragraph, it might help to stress the importance of following carefully the instructions for making electronic revisions. Otherwise the editing process may be slowed considerably]</strong>
+
+<strong>Revised manuscript sent back to HER</strong>
+
+Before making dramatic departures from the structure and organization of the manuscript that we are returning to you, please check in with the editors who are co-chairing your piece. <strong>Please understand that failure to follow the following instructions may significantly delay the publication of your manuscript.</strong>
+
+After you are finished with your revisions, rename the file from AuthorNameQA.doc to AuthorNameQAR.doc (e.g., from LeeQA.doc to LeeQAR.doc). Print out a hardcopy of your manuscript and mail it with a floppy disk containing the <strong>[deleted word]</strong> revised and renamed word processing file. <strong>[QA: In this paragraph, it might help to stress the importance of following carefully the instructions for making electronic revisions. Otherwise the editing process may be slowed considerably] [Comment: I added a sentence in response to your suggestion.]</strong>
+
+<strong>Notes:</strong>
+&bull; Unbolded text indicates acceptance of the suggested changes to the first sentence
+&bull; Sentence added in response to QA. Bold text indicates addition of new text
+&bull; [deleted word] indicates deletion of "completely"
+&bull; Comment contains a reply to the editors' QA]]></message>
+
+	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________
+{$journalName}
+{$indexUrl}/{$journalPath}
+]]></message>
+	<message key="default.journalSettings.forReaders"><![CDATA[Мы приглашаем наших читателей подписаться на рассылки с последними новостями. Для этого нужно <a href="{$indexUrl}/{$journalPath}/user/register">зарегистрироваться</a>. Регистрация позволить Вам выбрать роль автора, а также подписаться на журнальные рассылки с содержанием последнего выпуска журнала. Таким образом издатели журнала получат обратную информацию о читательском интересе. Посмотрите также страницу <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Конфиденциальность</a>.]]></message>
+	<message key="default.journalSettings.forAuthors"><![CDATA[Вы хотите отправить Ваши материалы для публикации в этом журнале? Просмотрите, пожалуйста, раздел <a href="{$indexUrl}/{$journalPath}/about">О нас</a>, где Вы сможете ознакомиться с редакционной политикой и<a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">требованиями к авторам</a>. Будущим авторам нужно <a href="{$indexUrl}/{$journalPath}/user/register">зарегистрироваться</a> в роли Автора, <a href="{$indexUrl}/index/login">войти</a> в свой акаунт и <a href="{$indexUrl}/author/submit">заполнить</a> форму отправки статей.]]></message>
+	<message key="default.journalSettings.forLibrarians"><![CDATA[Мы надеемся, что сотрудники библиотек впишут этот журнал в их список электронных журналов. Данная издательская система создана для того, чтобы дать возможность академическим и научным библиотекам организовать собственные электронные журналы для преподователей и научных работников. Больше об этих возможностей, см. сайт разработчиков <a href="http://pkp.sfu.ca">Public Knowledge Project</a>.]]></message>
+
+	<message key="default.journalSettings.lockssLicense"><![CDATA[Этот журнал использует систему LOCKSS для создания общих архивов участвующих библиотек и издателей с тем, чтобы повысить надежность и доступность публикаций. Больше об этом, см. <a href="http://lockss.stanford.edu/">здесь</a>.]]></message>
+</locale>

@@ -22,7 +22,7 @@ class AdminJournalHandler extends AdminHandler {
 	 */
 	function journals() {
 		parent::validate();
-		parent::setupTemplate(true);
+		AdminJournalHandler::setupTemplate();
 
 		$rangeInfo = PKPHandler::getRangeInfo('journals');
 
@@ -48,7 +48,7 @@ class AdminJournalHandler extends AdminHandler {
 	 */
 	function editJournal($args = array()) {
 		parent::validate();
-		parent::setupTemplate(true);
+		AdminJournalHandler::setupTemplate();
 
 		import('admin.form.JournalSiteSettingsForm');
 
@@ -78,7 +78,7 @@ class AdminJournalHandler extends AdminHandler {
 			Request::redirect(null, null, 'journals');
 
 		} else {
-			parent::setupTemplate(true);
+			AdminJournalHandler::setupTemplate();
 			$settingsForm->display();
 		}
 	}
@@ -135,7 +135,7 @@ class AdminJournalHandler extends AdminHandler {
 	 */
 	function importOJS1() {
 		parent::validate();
-		parent::setupTemplate(true);
+		AdminJournalHandler::setupTemplate();
 
 		import('admin.form.ImportOJS1Form');
 
@@ -149,6 +149,7 @@ class AdminJournalHandler extends AdminHandler {
 	 */
 	function doImportOJS1() {
 		parent::validate();
+		AdminJournalHandler::setupTemplate();
 
 		import('admin.form.ImportOJS1Form');
 
@@ -165,11 +166,17 @@ class AdminJournalHandler extends AdminHandler {
 			$templateMgr->assign('conflicts', $conflicts);
 			$templateMgr->display('admin/importComplete.tpl');
 		} else {
-			parent::setupTemplate(true);
 			$importForm->display();
 		}
 	}
 
+	/**
+	 * Set up the template.
+	 */
+	function setupTemplate() {
+		parent::setupTemplate(true);
+		Locale::requireComponents(array(LOCALE_COMPONENT_OJS_MANAGER));
+	}
 }
 
 ?>
