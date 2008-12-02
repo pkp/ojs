@@ -35,7 +35,7 @@
 		<td width="80%" class="value"><input type="text" name="title[{$formLocale|escape}]" id="title" value="{$title[$formLocale]|escape}" size="40" maxlength="120" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="initials" required="true" key="manager.setup.journalInitials"}</td>
+		<td width="20%" class="label">{fieldLabel name="initials" key="manager.setup.journalInitials"}</td>
 		<td width="80%" class="value"><input type="text" name="initials[{$formLocale|escape}]" id="initials" value="{$initials[$formLocale]|escape}" size="8" maxlength="16" class="textField" /></td>
 	</tr>
 	<tr valign="top">
