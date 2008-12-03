@@ -115,6 +115,8 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign('search', $search);
 		$templateMgr->assign('searchInitial', Request::getUserVar('searchInitial'));
 
+		$templateMgr->assign_by_ref('roleSettings', parent::retrieveRoleAssignmentPreferences($journal->getJournalId()));
+
 		if ($roleId == ROLE_ID_REVIEWER) {
 			$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 			$templateMgr->assign('rateReviewerOnQuality', $journal->getSetting('rateReviewerOnQuality'));
@@ -176,6 +178,8 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign('searchMatch', $searchMatch);
 		$templateMgr->assign('search', $search);
 		$templateMgr->assign('searchInitial', Request::getUserVar('searchInitial'));
+
+		$templateMgr->assign_by_ref('roleSettings', parent::retrieveRoleAssignmentPreferences($journal->getJournalId()));
 
 		$templateMgr->assign('roleId', $roleId);
 		$templateMgr->assign('roleName', $roleDao->getRoleName($roleId));
@@ -349,6 +353,8 @@ class PeopleHandler extends ManagerHandler {
 		}
 
 		import('manager.form.UserManagementForm');
+
+		$templateMgr->assign_by_ref('roleSettings', parent::retrieveRoleAssignmentPreferences($journal->getJournalId()));
 
 		$templateMgr->assign('currentUrl', Request::url(null, null, 'people', 'all'));
 		$userForm = new UserManagementForm($userId);
@@ -550,6 +556,8 @@ class PeopleHandler extends ManagerHandler {
 		} else {
 			$users = &$roleDao->getUsersByJournalId($journalId, $searchType, $search, $searchMatch, $rangeInfo);
 		}
+
+		$templateMgr->assign_by_ref('roleSettings', parent::retrieveRoleAssignmentPreferences($journal->getJournalId()));
 
 		$templateMgr->assign('currentUrl', Request::url(null, null, 'people', 'all'));
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.mergeUsers');

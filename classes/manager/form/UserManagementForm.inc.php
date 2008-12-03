@@ -72,21 +72,36 @@ class UserManagementForm extends Form {
 		} else {
 			$helpTopicId = 'journal.users.createNewUser';
 		}
-		if (Validation::isJournalManager()) $templateMgr->assign('roleOptions',
-			array(
+	
+		$journal = &Request::getJournal();
+		$journalId = $journal == null ? 0 : $journal->getJournalId();
+		$rolePrefs = PeopleHandler::retrieveRoleAssignmentPreferences($journalId);
+		$activeRoles = array(
 				'' => 'manager.people.doNotEnroll',
 				'manager' => 'user.role.manager',
 				'editor' => 'user.role.editor',
 				'sectionEditor' => 'user.role.sectionEditor',
-				'layoutEditor' => 'user.role.layoutEditor',
-				'reviewer' => 'user.role.reviewer',
-				'copyeditor' => 'user.role.copyeditor',
-				'proofreader' => 'user.role.proofreader',
-				'author' => 'user.role.author',
-				'reader' => 'user.role.reader',
-				'subscriptionManager' => 'user.role.subscriptionManager'
-			)
-		);
+				);
+		foreach($rolePrefs as $roleKey=>$use) {
+			if($use){
+				switch($roleKey){
+
+				case 'useLayoutEditors': $activeRoles['layoutEditor'] = 'user.role.layoutEditor';break;
+				case 'useCopyeditors': $activeRoles['copyeditor'] = 'user.role.copyeditor';break;
+				case 'useProofreaders': $activeRoles['proofreader'] = 'user.role.proofreader';break;
+
+				}
+			}
+		}
+		$activeRoles = array_merge($activeRoles,array(
+					'reviewer'=>'user.role.reviewer',
+					'author'=>'user.role.author',
+					'reader'=>'user.role.reader',
+					'subscriptionManager' => 'user.role.subscriptionManager'
+					)
+				);
+
+		if (Validation::isJournalManager()) $templateMgr->assign('roleOptions',$activeRoles);
 		else $templateMgr->assign('roleOptions', // Subscription Manager
 			array(
 				'' => 'manager.people.doNotEnroll',

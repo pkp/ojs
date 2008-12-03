@@ -32,6 +32,7 @@ class ManagerHandler extends PKPHandler {
 		$announcementsEnabled = $journalSettingsDao->getSetting($journal->getJournalId(), 'enableAnnouncements'); 
 
 		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign_by_ref('roleSettings', ManagerHandler::retrieveRoleAssignmentPreferences($journal->getJournalId()));
 		$templateMgr->assign('subscriptionsEnabled', $subscriptionsEnabled);
 		$templateMgr->assign('announcementsEnabled', $announcementsEnabled);
 		$templateMgr->assign('helpTopicId','journal.index');
@@ -733,8 +734,27 @@ class ManagerHandler extends PKPHandler {
 	function viewPayment($args) {
 		import('pages.manager.ManagerPaymentHandler');
 		ManagerPaymentHandler::viewPayment($args);	
-	}	 
+	}
+	 
+	/**
+	 * Retrieves a list of special Journal Management settings related to the journal's inclusion of individual copyeditors, layout editors, and proofreaders.
+	 * @param $journalId int Journal ID of the journal from which the settings will be obtained
+	 * @return array
+	 */	
+	function &retrieveRoleAssignmentPreferences($journalId) {
+		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+		$journalSettings = $journalSettingsDao->getJournalSettings($journalId);
+  		$returner = array('useLayoutEditors'=>0,'useCopyeditors'=>0,'useProofreaders'=>0);
 
+		foreach($returner as $specific=>$value) {
+			if(isset($journalSettings[$specific])) {
+				if($journalSettings[$specific]) {
+					$returner[$specific]=1;
+				}
+			}
+		}
+		return $returner;
+	}
 }
 
 ?>

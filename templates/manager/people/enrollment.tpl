@@ -50,9 +50,15 @@ function confirmAndPrompt(userId) {
 		<option {if $roleSymbolic=='managers'}selected="selected" {/if}value="managers">{translate key="user.role.managers"}</option>
 		<option {if $roleSymbolic=='editors'}selected="selected" {/if}value="editors">{translate key="user.role.editors"}</option>
 		<option {if $roleSymbolic=='sectionEditors'}selected="selected" {/if}value="sectionEditors">{translate key="user.role.sectionEditors"}</option>
-		<option {if $roleSymbolic=='layoutEditors'}selected="selected" {/if}value="layoutEditors">{translate key="user.role.layoutEditors"}</option>
-		<option {if $roleSymbolic=='copyeditors'}selected="selected" {/if}value="copyeditors">{translate key="user.role.copyeditors"}</option>
-		<option {if $roleSymbolic=='proofreaders'}selected="selected" {/if}value="proofreaders">{translate key="user.role.proofreaders"}</option>
+		{if $roleSettings.useLayoutEditors}
+			<option {if $roleSymbolic=='layoutEditors'}selected="selected" {/if}value="layoutEditors">{translate key="user.role.layoutEditors"}</option>
+		{/if}
+		{if $roleSettings.useCopyeditors}
+			<option {if $roleSymbolic=='copyeditors'}selected="selected" {/if}value="copyeditors">{translate key="user.role.copyeditors"}</option>
+		{/if}
+		{if $roleSettings.useProofreaders}
+			<option {if $roleSymbolic=='proofreaders'}selected="selected" {/if}value="proofreaders">{translate key="user.role.proofreaders"}</option>
+		{/if}
 		<option {if $roleSymbolic=='reviewers'}selected="selected" {/if}value="reviewers">{translate key="user.role.reviewers"}</option>
 		<option {if $roleSymbolic=='authors'}selected="selected" {/if}value="authors">{translate key="user.role.authors"}</option>
 		<option {if $roleSymbolic=='readers'}selected="selected" {/if}value="readers">{translate key="user.role.readers"}</option>
@@ -75,9 +81,15 @@ function confirmAndPrompt(userId) {
 	<li><a href="{url path="managers"}">{translate key="user.role.managers"}</a></li>
 	<li><a href="{url path="editors"}">{translate key="user.role.editors"}</a></li>
 	<li><a href="{url path="sectionEditors"}">{translate key="user.role.sectionEditors"}</a></li>
-	<li><a href="{url path="layoutEditors"}">{translate key="user.role.layoutEditors"}</a></li>
-	<li><a href="{url path="copyeditors"}">{translate key="user.role.copyeditors"}</a></li>
-	<li><a href="{url path="proofreaders"}">{translate key="user.role.proofreaders"}</a></li>
+	{if $roleSettings.useLayoutEditors}
+		<li><a href="{url path="layoutEditors"}">{translate key="user.role.layoutEditors"}</a></li>
+	{/if}
+	{if $roleSettings.useCopyeditors}
+		<li><a href="{url path="copyeditors"}">{translate key="user.role.copyeditors"}</a></li>
+	{/if}
+	{if $roleSettings.useProofreaders}
+		<li><a href="{url path="proofreaders"}">{translate key="user.role.proofreaders"}</a></li>
+	{/if}
 	<li><a href="{url path="reviewers"}">{translate key="user.role.reviewers"}</a></li>
 	<li><a href="{url path="authors"}">{translate key="user.role.authors"}</a></li>
 	<li><a href="{url path="readers"}">{translate key="user.role.readers"}</a></li>
