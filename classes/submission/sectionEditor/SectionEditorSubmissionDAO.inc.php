@@ -460,7 +460,10 @@ class SectionEditorSubmissionDAO extends DAO {
 			case SUBMISSION_FIELD_TITLE:
 				if ($searchMatch === 'is') {
 					$searchSql = ' AND LOWER(atl.setting_value) = LOWER(?)';
-				} else {
+				} elseif ($searchMatch === 'contains') {
+					$searchSql = ' AND LOWER(atl.setting_value) LIKE LOWER(?)';
+					$search = '%' . $search . '%';
+				} else { // $searchMatch === 'startsWith'
 					$searchSql = ' AND LOWER(atl.setting_value) LIKE LOWER(?)';
 					$search = '%' . $search . '%';
 				}
@@ -474,9 +477,12 @@ class SectionEditorSubmissionDAO extends DAO {
 
 				if ($searchMatch === 'is') {
 					$searchSql = " AND (LOWER(aa.last_name) = LOWER(?) OR LOWER($first_last) = LOWER(?) OR LOWER($first_middle_last) = LOWER(?) OR LOWER($last_comma_first) = LOWER(?) OR LOWER($last_comma_first_middle) = LOWER(?))";
-				} else {
+				} elseif ($searchMatch === 'contains') {
 					$searchSql = " AND (LOWER(aa.last_name) LIKE LOWER(?) OR LOWER($first_last) LIKE LOWER(?) OR LOWER($first_middle_last) LIKE LOWER(?) OR LOWER($last_comma_first) LIKE LOWER(?) OR LOWER($last_comma_first_middle) LIKE LOWER(?))";
 					$search = '%' . $search . '%';
+				} else { // $searchMatch === 'startsWith
+					$searchSql = " AND (LOWER(aa.last_name) LIKE LOWER(?) OR LOWER($first_last) LIKE LOWER(?) OR LOWER($first_middle_last) LIKE LOWER(?) OR LOWER($last_comma_first) LIKE LOWER(?) OR LOWER($last_comma_first_middle) LIKE LOWER(?))";
+					$search = $search . '%';
 				}
 				$params[] = $params[] = $params[] = $params[] = $params[] = $search;
 				break;
@@ -487,9 +493,12 @@ class SectionEditorSubmissionDAO extends DAO {
 				$last_comma_first_middle = $this->_dataSource->Concat('ed.last_name', '\', \'', 'ed.first_name', '\' \'', 'ed.middle_name');
 				if ($searchMatch === 'is') {
 					$searchSql = " AND (LOWER(ed.last_name) = LOWER(?) OR LOWER($first_last) = LOWER(?) OR LOWER($first_middle_last) = LOWER(?) OR LOWER($last_comma_first) = LOWER(?) OR LOWER($last_comma_first_middle) = LOWER(?))";
-				} else {
+				} elseif ($searchMatch === 'contains') {
 					$searchSql = " AND (LOWER(ed.last_name) LIKE LOWER(?) OR LOWER($first_last) LIKE LOWER(?) OR LOWER($first_middle_last) LIKE LOWER(?) OR LOWER($last_comma_first) LIKE LOWER(?) OR LOWER($last_comma_first_middle) LIKE LOWER(?))";
 					$search = '%' . $search . '%';
+				} else { // $searchMatch === 'startsWith'
+					$searchSql = " AND (LOWER(ed.last_name) LIKE LOWER(?) OR LOWER($first_last) LIKE LOWER(?) OR LOWER($first_middle_last) LIKE LOWER(?) OR LOWER($last_comma_first) LIKE LOWER(?) OR LOWER($last_comma_first_middle) LIKE LOWER(?))";
+					$search = $search . '%';
 				}
 				$params[] = $params[] = $params[] = $params[] = $params[] = $search;
 				break;
@@ -599,7 +608,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * @param $journalId int
 	 * @param $sectionId int
 	 * @param $searchField int Symbolic SUBMISSION_FIELD_... identifier
-	 * @param $searchMatch string "is" or "contains"
+	 * @param $searchMatch string "is" or "contains" or "startsWith"
 	 * @param $search String to look in $searchField for
 	 * @param $dateField int Symbolic SUBMISSION_FIELD_DATE_... identifier
 	 * @param $dateFrom String date to search from
@@ -648,7 +657,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * @param $journalId int
 	 * @param $sectionId int
 	 * @param $searchField int Symbolic SUBMISSION_FIELD_... identifier
-	 * @param $searchMatch string "is" or "contains"
+	 * @param $searchMatch string "is" or "contains" or "startsWith"
 	 * @param $search String to look in $searchField for
 	 * @param $dateField int Symbolic SUBMISSION_FIELD_DATE_... identifier
 	 * @param $dateFrom String date to search from
@@ -695,7 +704,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * @param $journalId int
 	 * @param $sectionId int
 	 * @param $searchField int Symbolic SUBMISSION_FIELD_... identifier
-	 * @param $searchMatch string "is" or "contains"
+	 * @param $searchMatch string "is" or "contains" or "startsWith"
 	 * @param $search String to look in $searchField for
 	 * @param $dateField int Symbolic SUBMISSION_FIELD_DATE_... identifier
 	 * @param $dateFrom String date to search from
@@ -894,36 +903,45 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * Retrieve a list of all reviewers along with information about their current status with respect to an article's current round.
 	 * @param $journalId int
 	 * @param $articleId int
+	 * @param $round int
+	 * @param $searchType int USER_FIELD_...
+	 * @param $search string
+	 * @param $searchMatch string "is" or "contains" or "startsWith"
+	 * @param $rangeInfo RangeInfo optional
 	 * @return DAOResultFactory containing matching Users
 	 */
 	function &getReviewersForArticle($journalId, $articleId, $round, $searchType = null, $search = null, $searchMatch = null, $rangeInfo = null) {
 		$paramArray = array('interests', $articleId, $round, $journalId, RoleDAO::getRoleIdFromPath('reviewer'));
 		$searchSql = '';
 
-		if (isset($search)) switch ($searchType) {
+		$searchTypeMap = array(
+			USER_FIELD_FIRSTNAME => 'u.first_name',
+			USER_FIELD_LASTNAME => 'u.last_name',
+			USER_FIELD_USERNAME => 'u.username',
+			USER_FIELD_EMAIL => 'u.email',
+			USER_FIELD_INTERESTS => 's.setting_value'
+		);
+
+		if (isset($search) && isset($searchTypeMap[$searchType])) {
+			$fieldName = $searchTypeMap[$searchType];
+			switch ($searchMatch) {
+				case 'is':
+					$searchSql = "AND LOWER($fieldName) = LOWER(?)";
+					$paramArray[] = $search;
+					break;
+				case 'contains':
+					$searchSql = "AND LOWER($fieldName) LIKE LOWER(?)";
+					$paramArray[] = '%' . $search . '%';
+					break;
+				case 'startsWith':
+					$searchSql = "AND LOWER($fieldName) LIKE LOWER(?)";
+					$paramArray[] = $search . '%';
+					break;
+			}
+		} elseif (isset($search)) switch ($searchType) {
 			case USER_FIELD_USERID:
 				$searchSql = 'AND user_id=?';
 				$paramArray[] = $search;
-				break;
-			case USER_FIELD_FIRSTNAME:
-				$searchSql = 'AND LOWER(first_name) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
-				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
-				break;
-			case USER_FIELD_LASTNAME:
-				$searchSql = 'AND LOWER(last_name) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
-				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
-				break;
-			case USER_FIELD_USERNAME:
-				$searchSql = 'AND LOWER(username) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
-				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
-				break;
-			case USER_FIELD_EMAIL:
-				$searchSql = 'AND LOWER(email) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
-				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
-				break;
-			case USER_FIELD_INTERESTS:
-				$searchSql = 'AND LOWER(s.setting_value) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
-				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
 				break;
 			case USER_FIELD_INITIAL:
 				$searchSql = 'AND (LOWER(last_name) LIKE LOWER(?) OR LOWER(username) LIKE LOWER(?))';
@@ -1017,30 +1035,34 @@ class SectionEditorSubmissionDAO extends DAO {
 		$paramArray = array('interests', $articleId, $journalId, RoleDAO::getRoleIdFromPath('copyeditor'));
 		$searchSql = '';
 
-		if (isset($search)) switch ($searchType) {
+		$searchTypeMap = array(
+			USER_FIELD_FIRSTNAME => 'u.first_name',
+			USER_FIELD_LASTNAME => 'u.last_name',
+			USER_FIELD_USERNAME => 'u.username',
+			USER_FIELD_EMAIL => 'u.email',
+			USER_FIELD_INTERESTS => 's.setting_value'
+		);
+
+		if (isset($search) && isset($searchTypeMap[$searchType])) {
+			$fieldName = $searchTypeMap[$searchType];
+			switch ($searchMatch) {
+				case 'is':
+					$searchSql = "AND LOWER($fieldName) = LOWER(?)";
+					$paramArray[] = $search;
+					break;
+				case 'contains':
+					$searchSql = "AND LOWER($fieldName) LIKE LOWER(?)";
+					$paramArray[] = '%' . $search . '%';
+					break;
+				case 'startsWith':
+					$searchSql = "AND LOWER($fieldName) LIKE LOWER(?)";
+					$paramArray[] = $search . '%';
+					break;
+			}
+		} elseif (isset($search)) switch ($searchType) {
 			case USER_FIELD_USERID:
 				$searchSql = 'AND user_id=?';
 				$paramArray[] = $search;
-				break;
-			case USER_FIELD_FIRSTNAME:
-				$searchSql = 'AND LOWER(first_name) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
-				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
-				break;
-			case USER_FIELD_LASTNAME:
-				$searchSql = 'AND LOWER(last_name) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
-				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
-				break;
-			case USER_FIELD_USERNAME:
-				$searchSql = 'AND LOWER(username) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
-				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
-				break;
-			case USER_FIELD_EMAIL:
-				$searchSql = 'AND LOWER(email) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
-				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
-				break;
-			case USER_FIELD_INTERESTS:
-				$searchSql = 'AND LOWER(setting_value) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
-				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
 				break;
 			case USER_FIELD_INITIAL:
 				$searchSql = 'AND (LOWER(last_name) LIKE LOWER(?) OR LOWER(username) LIKE LOWER(?))';

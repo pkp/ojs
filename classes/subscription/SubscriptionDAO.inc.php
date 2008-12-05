@@ -153,9 +153,12 @@ class SubscriptionDAO extends DAO {
 		$last_comma_first_middle = $this->_dataSource->Concat($prefix.'last_name', '\', \'', $prefix.'first_name', '\' \'', $prefix.'middle_name');
 		if ($searchMatch === 'is') {
 			$searchSql = " AND (LOWER({$prefix}last_name) = LOWER(?) OR LOWER($first_last) = LOWER(?) OR LOWER($first_middle_last) = LOWER(?) OR LOWER($last_comma_first) = LOWER(?) OR LOWER($last_comma_first_middle) = LOWER(?))";
-		} else {
+		} elseif ($searchMatch === 'contains') {
 			$searchSql = " AND (LOWER({$prefix}last_name) LIKE LOWER(?) OR LOWER($first_last) LIKE LOWER(?) OR LOWER($first_middle_last) LIKE LOWER(?) OR LOWER($last_comma_first) LIKE LOWER(?) OR LOWER($last_comma_first_middle) LIKE LOWER(?))";
 			$search = '%' . $search . '%';
+		} else { // $searchMatch === 'startsWith'
+			$searchSql = " AND (LOWER({$prefix}last_name) LIKE LOWER(?) OR LOWER($first_last) LIKE LOWER(?) OR LOWER($first_middle_last) LIKE LOWER(?) OR LOWER($last_comma_first) LIKE LOWER(?) OR LOWER($last_comma_first_middle) LIKE LOWER(?))";
+			$search = $search . '%';
 		}
 		$params[] = $params[] = $params[] = $params[] = $params[] = $search;
 		return $searchSql;
@@ -372,7 +375,7 @@ class SubscriptionDAO extends DAO {
 	 * Retrieve subscriptions matching a particular journal ID.
 	 * @param $journalId int
 	 * @param $searchField int
-	 * @param $searchMatch string "is" or "contains"
+	 * @param $searchMatch string "is" or "contains" or "startsWith"
 	 * @param $search String to look in $searchField for
 	 * @param $dateField int 
 	 * @param $dateFrom String date to search from
@@ -391,27 +394,36 @@ class SubscriptionDAO extends DAO {
 			case SUBSCRIPTION_MEMBERSHIP:
 				if ($searchMatch === 'is') {
 					$searchSql = ' AND LOWER(s.membership) = LOWER(?)';
-				} else {
+				} elseif ($searchMatch === 'contains') {
 					$searchSql = ' AND LOWER(s.membership) LIKE LOWER(?)';
 					$search = '%' . $search . '%';
+				} else { // $searchMatch === 'startsWith'
+					$searchSql = ' AND LOWER(s.membership) LIKE LOWER(?)';
+					$search = $search . '%';
 				}
 				$params[] = $search;
 				break;
 			case SUBSCRIPTION_DOMAIN:
 				if ($searchMatch === 'is') {
 					$searchSql = ' AND LOWER(s.domain) = LOWER(?)';
-				} else {
+				} elseif ($searchMatch === 'contains') {
 					$searchSql = ' AND LOWER(s.domain) LIKE LOWER(?)';
 					$search = '%' . $search . '%';
+				} else { // $searchMatch === 'startsWith'
+					$searchSql = ' AND LOWER(s.domain) LIKE LOWER(?)';
+					$search = $search . '%';
 				}
 				$params[] = $search;
 				break;
 			case SUBSCRIPTION_IP_RANGE:
 				if ($searchMatch === 'is') {
 					$searchSql = ' AND LOWER(s.ip_range) = LOWER(?)';
-				} else {
+				} elseif ($searchMatch === 'contains') {
 					$searchSql = ' AND LOWER(s.ip_range) LIKE LOWER(?)';
 					$search = '%' . $search . '%';
+				} else { // $searchMatch === 'startsWith'
+					$searchSql = ' AND LOWER(s.ip_range) LIKE LOWER(?)';
+					$search = $search . '%';
 				}
 				$params[] = $search;
 				break;
