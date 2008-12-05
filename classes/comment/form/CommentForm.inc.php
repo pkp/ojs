@@ -51,8 +51,8 @@ class CommentForm extends Form {
 
 		$this->articleId = $articleId;
 
-		$commentDao = &DAORegistry::getDAO('CommentDAO');
-		$this->comment = &$commentDao->getComment($commentId, $articleId);
+		$commentDao =& DAORegistry::getDAO('CommentDAO');
+		$this->comment =& $commentDao->getComment($commentId, $articleId);
 
 		import('captcha.CaptchaManager');
 		$captchaManager = new CaptchaManager();
@@ -76,7 +76,7 @@ class CommentForm extends Form {
 	 */
 	function initData() {
 		if (isset($this->comment)) {
-			$comment = &$this->comment;
+			$comment =& $this->comment;
 			$this->_data = array(
 				'title' => $comment->getTitle(),
 				'body' => $comment->getBody(),
@@ -84,11 +84,14 @@ class CommentForm extends Form {
 				'posterEmail' => $comment->getPosterEmail()
 			);
 		} else {
+			$commentDao =& DAORegistry::getDAO('CommentDAO');
+			$comment =& $commentDao->getComment($this->parentId, $this->articleId);
 			$this->_data = array();
 			$user = Request::getUser();
 			if ($user) {
 				$this->_data['posterName'] = $user->getFullName();
 				$this->_data['posterEmail'] = $user->getEmail();
+				$this->_data['title'] = ($comment?Locale::translate('common.re') . ' ' . $comment->getTitle():'');
 			}
 		}
 	}
@@ -99,7 +102,7 @@ class CommentForm extends Form {
 	function display() {
 		$journal = Request::getJournal();
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 
 		if (isset($this->comment)) {
 			$templateMgr->assign_by_ref('comment', $this->comment);
@@ -154,17 +157,17 @@ class CommentForm extends Form {
 	 * @return int the comment ID
 	 */
 	function execute() {
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		$enableComments = $journal->getSetting('enableComments');
 
-		$commentDao = &DAORegistry::getDAO('CommentDAO');
+		$commentDao =& DAORegistry::getDAO('CommentDAO');
 
 		$comment = $this->comment;
 		if (!isset($comment)) {
 			$comment = new Comment();
 		}
 
-		$user = &Request::getUser();
+		$user =& Request::getUser();
 
 		$comment->setTitle($this->getData('title'));
 		$comment->setBody($this->getData('body'));
