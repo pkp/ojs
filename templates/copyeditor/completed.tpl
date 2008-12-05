@@ -43,57 +43,57 @@
 &nbsp;
 
 <div id="submissions">
-	<table width="100%" class="listing">
-		<tr><td colspan="8" class="headseparator">&nbsp;</td></tr>
-		<tr class="heading" valign="bottom">
-			<td width="5%">{translate key="common.id"}</td>
-			<td width="5%"><span class="disabled">MM-DD</span><br />{translate key="common.assign"}</td>
-			<td width="5%">{translate key="submissions.sec"}</td>
-			<td width="25%">{translate key="article.authors"}</td>
-			<td width="30%">{translate key="article.title"}</td>
-			<td width="5%">{translate key="submission.complete"}</td>
-			<td width="25%" align="right">{translate key="common.status"}</td>
-		</tr>
-		<tr><td colspan="8" class="headseparator">&nbsp;</td></tr>
-	{iterate from=submissions item=submission}
-		{assign var="articleId" value=$submission->getArticleId()}
-		<tr valign="top">
-			<td>{$articleId|escape}</td>
-			<td>{$submission->getDateNotified()|date_format:$dateFormatTrunc}</td>
-			<td>{$submission->getSectionAbbrev()|escape}</td>
-			<td>{$submission->getAuthorString(true)|truncate:40:"..."|escape}</td>
-			<td><a href="{url op="submission" path=$articleId}" class="action">{$submission->getArticleTitle()|strip_unsafe_html|truncate:60:"..."}</a></td>
-			<td>{$submission->getDateFinalCompleted()|date_format:$dateFormatTrunc}</td>
-			<td align="right">
-				{assign var="status" value=$submission->getStatus()}
-				{if $status == STATUS_ARCHIVED}
-					{translate key="submissions.archived"}
-				{elseif $status == STATUS_QUEUED}
-					{translate key="submissions.queued"}
-				{elseif $status == STATUS_PUBLISHED}
-					{print_issue_id articleId="$articleId"}			
-				{elseif $status == STATUS_DECLINED}
-					{translate key="submissions.declined"}								
-				{/if}
-			</td>
-		</tr>
-	
-		<tr>
-			<td colspan="7" class="{if $submissions->eof()}end{/if}separator">&nbsp;</td>
-		</tr>
-	{/iterate}
-	{if $submissions->wasEmpty()}
-		<tr>
-			<td colspan="7" class="nodata">{translate key="submissions.noSubmissions"}</td>
-		</tr>
-		<tr>
-			<td colspan="7" class="endseparator">&nbsp;</td>
-		</tr>
-	{else}
-		<tr>
-			<td colspan="5" align="left">{page_info iterator=$submissions}</td>
-			<td colspan="3" align="right">{page_links anchor="submissions" name="submissions" iterator=$submissions searchField=$searchField searchMatch=$searchMatch search=$search dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateFromMonth=$dateFromMonth dateToDay=$dateToDay dateToYear=$dateToYear dateToMonth=$dateToMonth}</td>
-		</tr>
-	{/if}
-	</table>
+<table width="100%" class="listing">
+	<tr><td colspan="8" class="headseparator">&nbsp;</td></tr>
+	<tr class="heading" valign="bottom">
+		<td width="5%">{translate key="common.id"}</td>
+		<td width="5%"><span class="disabled">MM-DD</span><br />{translate key="common.assign"}</td>
+		<td width="5%">{translate key="submissions.sec"}</td>
+		<td width="25%">{translate key="article.authors"}</td>
+		<td width="30%">{translate key="article.title"}</td>
+		<td width="5%">{translate key="submission.complete"}</td>
+		<td width="25%" align="right">{translate key="common.status"}</td>
+	</tr>
+	<tr><td colspan="8" class="headseparator">&nbsp;</td></tr>
+{iterate from=submissions item=submission}
+	{assign var="articleId" value=$submission->getArticleId()}
+	<tr valign="top">
+		<td>{$articleId|escape}</td>
+		<td>{$submission->getDateNotified()|date_format:$dateFormatTrunc}</td>
+		<td>{$submission->getSectionAbbrev()|escape}</td>
+		<td>{$submission->getAuthorString(true)|truncate:40:"..."|escape}</td>
+		<td><a href="{url op="submission" path=$articleId}" class="action">{$submission->getArticleTitle()|strip_unsafe_html|truncate:60:"..."}</a></td>
+		<td>{$submission->getDateFinalCompleted()|date_format:$dateFormatTrunc}</td>
+		<td align="right">
+			{assign var="status" value=$submission->getStatus()}
+			{if $status == STATUS_ARCHIVED}
+				{translate key="submissions.archived"}
+			{elseif $status == STATUS_QUEUED}
+				{translate key="submissions.queued"}
+			{elseif $status == STATUS_PUBLISHED}
+				{print_issue_id articleId="$articleId"}			
+			{elseif $status == STATUS_DECLINED}
+				{translate key="submissions.declined"}								
+			{/if}
+		</td>
+	</tr>
+
+	<tr>
+		<td colspan="7" class="{if $submissions->eof()}end{/if}separator">&nbsp;</td>
+	</tr>
+{/iterate}
+{if $submissions->wasEmpty()}
+	<tr>
+		<td colspan="7" class="nodata">{translate key="submissions.noSubmissions"}</td>
+	</tr>
+	<tr>
+		<td colspan="7" class="endseparator">&nbsp;</td>
+	</tr>
+{else}
+	<tr>
+		<td colspan="5" align="left">{page_info iterator=$submissions}</td>
+		<td colspan="3" align="right">{page_links anchor="submissions" name="submissions" iterator=$submissions searchField=$searchField searchMatch=$searchMatch search=$search dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateFromMonth=$dateFromMonth dateToDay=$dateToDay dateToYear=$dateToYear dateToMonth=$dateToMonth}</td>
+	</tr>
+{/if}
+</table>
 </div>

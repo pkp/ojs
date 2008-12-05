@@ -68,67 +68,67 @@ function ensureKeyword() {
 {/if}
 
 <div id="results">
-	<table width="100%" class="listing">
-	<tr><td colspan="{$numCols|escape}" class="headseparator">&nbsp;</td></tr>
-	<tr class="heading" valign="bottom">
-		{if !$currentJournal}<td width="20%">{translate key="journal.journal"}</td>{/if}
-		<td width="{if !$currentJournal}20%{else}40%{/if}">{translate key="issue.issue"}</td>
-		<td width="60%" colspan="2">{translate key="article.title"}</td>
-	</tr>
-	<tr><td colspan="{$numCols|escape}" class="headseparator">&nbsp;</td></tr>
-	
-	{iterate from=results item=result}
-	{assign var=publishedArticle value=$result.publishedArticle}
-	{assign var=article value=$result.article}
-	{assign var=issue value=$result.issue}
-	{assign var=issueAvailable value=$result.issueAvailable}
-	{assign var=journal value=$result.journal}
-	{assign var=section value=$result.section}
-	<tr valign="top">
-		{if !$currentJournal}<td><a href="{url journal=$journal->getPath()}">{$journal->getJournalTitle()|escape}</a></td>{/if}
-		<td><a href="{url journal=$journal->getPath() page="issue" op="view" path=$issue->getBestIssueId($journal)}">{$issue->getIssueIdentification()|escape}</a></td>
-		<td width="30%">{$article->getArticleTitle()|strip_unsafe_html}</td>
-		<td width="30%" align="right">
-			{if $publishedArticle->getAccessStatus() || $issueAvailable}
-				{assign var=hasAccess value=1}
-			{else}
-				{assign var=hasAccess value=0}
-			{/if}
-			{if $publishedArticle->getArticleAbstract() != ""}
-				{assign var=hasAbstract value=1}
-			{else}
-				{assign var=hasAbstract value=0}
-			{/if}
-			{if !$hasAccess || $hasAbstract}<a href="{url journal=$journal->getPath() page="article" op="view" path=$publishedArticle->getBestArticleId($journal)}" class="file">{if !$hasAbstract}{translate key="article.details"}{else}{translate key="article.abstract"}{/if}{/if}</a>{if $hasAccess}{foreach from=$publishedArticle->getLocalizedGalleys() item=galley name=galleyList}&nbsp;<a href="{url journal=$journal->getPath() page="article" op="view" path=$publishedArticle->getBestArticleId($journal)|to_array:$galley->getBestGalleyId($journal)}" class="file">{$galley->getGalleyLabel()|escape}</a>{/foreach}{/if}
-		</td>
-	</tr>
+<table width="100%" class="listing">
+<tr><td colspan="{$numCols|escape}" class="headseparator">&nbsp;</td></tr>
+<tr class="heading" valign="bottom">
+	{if !$currentJournal}<td width="20%">{translate key="journal.journal"}</td>{/if}
+	<td width="{if !$currentJournal}20%{else}40%{/if}">{translate key="issue.issue"}</td>
+	<td width="60%" colspan="2">{translate key="article.title"}</td>
+</tr>
+<tr><td colspan="{$numCols|escape}" class="headseparator">&nbsp;</td></tr>
+
+{iterate from=results item=result}
+{assign var=publishedArticle value=$result.publishedArticle}
+{assign var=article value=$result.article}
+{assign var=issue value=$result.issue}
+{assign var=issueAvailable value=$result.issueAvailable}
+{assign var=journal value=$result.journal}
+{assign var=section value=$result.section}
+<tr valign="top">
+	{if !$currentJournal}<td><a href="{url journal=$journal->getPath()}">{$journal->getJournalTitle()|escape}</a></td>{/if}
+	<td><a href="{url journal=$journal->getPath() page="issue" op="view" path=$issue->getBestIssueId($journal)}">{$issue->getIssueIdentification()|escape}</a></td>
+	<td width="30%">{$article->getArticleTitle()|strip_unsafe_html}</td>
+	<td width="30%" align="right">
+		{if $publishedArticle->getAccessStatus() || $issueAvailable}
+			{assign var=hasAccess value=1}
+		{else}
+			{assign var=hasAccess value=0}
+		{/if}
+		{if $publishedArticle->getArticleAbstract() != ""}
+			{assign var=hasAbstract value=1}
+		{else}
+			{assign var=hasAbstract value=0}
+		{/if}
+		{if !$hasAccess || $hasAbstract}<a href="{url journal=$journal->getPath() page="article" op="view" path=$publishedArticle->getBestArticleId($journal)}" class="file">{if !$hasAbstract}{translate key="article.details"}{else}{translate key="article.abstract"}{/if}{/if}</a>{if $hasAccess}{foreach from=$publishedArticle->getLocalizedGalleys() item=galley name=galleyList}&nbsp;<a href="{url journal=$journal->getPath() page="article" op="view" path=$publishedArticle->getBestArticleId($journal)|to_array:$galley->getBestGalleyId($journal)}" class="file">{$galley->getGalleyLabel()|escape}</a>{/foreach}{/if}
+	</td>
+</tr>
+<tr>
+	<td colspan="{$numCols|escape}" style="padding-left: 30px;font-style: italic;">
+		{foreach from=$article->getAuthors() item=authorItem name=authorList}
+			{$authorItem->getFullName()|escape}{if !$smarty.foreach.authorList.last},{/if}
+		{/foreach}
+	</td>
+</tr>
+<tr><td colspan="{$numCols|escape}" class="{if $results->eof()}end{/if}separator">&nbsp;</td></tr>
+{/iterate}
+{if $results->wasEmpty()}
+<tr>
+<td colspan="{$numCols|escape}" class="nodata">{translate key="search.noResults"}</td>
+</tr>
+<tr><td colspan="{$numCols|escape}" class="endseparator">&nbsp;</td></tr>
+{else}
 	<tr>
-		<td colspan="{$numCols|escape}" style="padding-left: 30px;font-style: italic;">
-			{foreach from=$article->getAuthors() item=authorItem name=authorList}
-				{$authorItem->getFullName()|escape}{if !$smarty.foreach.authorList.last},{/if}
-			{/foreach}
-		</td>
+		<td {if !$currentJournal}colspan="2" {/if}align="left">{page_info iterator=$results}</td>
+		{if $basicQuery}
+			<td colspan="2" align="right">{page_links anchor="results" iterator=$results name="search" query=$basicQuery searchField=$searchField}</td>
+		{else}
+			<td colspan="2" align="right">{page_links anchor="results" iterator=$results name="search" query=$query searchJournal=$searchJournal author=$author title=$title fullText=$fullText supplementaryFiles=$supplementaryFiles discipline=$discipline subject=$subject type=$type coverage=$coverage dateFromMonth=$dateFromMonth dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateToMonth=$dateToMonth dateToDay=$dateToDay dateToYear=$dateToYear}</td>
+		{/if}
 	</tr>
-	<tr><td colspan="{$numCols|escape}" class="{if $results->eof()}end{/if}separator">&nbsp;</td></tr>
-	{/iterate}
-	{if $results->wasEmpty()}
-	<tr>
-	<td colspan="{$numCols|escape}" class="nodata">{translate key="search.noResults"}</td>
-	</tr>
-	<tr><td colspan="{$numCols|escape}" class="endseparator">&nbsp;</td></tr>
-	{else}
-		<tr>
-			<td {if !$currentJournal}colspan="2" {/if}align="left">{page_info iterator=$results}</td>
-			{if $basicQuery}
-				<td colspan="2" align="right">{page_links anchor="results" iterator=$results name="search" query=$basicQuery searchField=$searchField}</td>
-			{else}
-				<td colspan="2" align="right">{page_links anchor="results" iterator=$results name="search" query=$query searchJournal=$searchJournal author=$author title=$title fullText=$fullText supplementaryFiles=$supplementaryFiles discipline=$discipline subject=$subject type=$type coverage=$coverage dateFromMonth=$dateFromMonth dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateToMonth=$dateToMonth dateToDay=$dateToDay dateToYear=$dateToYear}</td>
-			{/if}
-		</tr>
-	{/if}
-	</table>
-	
-	<p>{translate key="search.syntaxInstructions"}</p>
+{/if}
+</table>
+
+<p>{translate key="search.syntaxInstructions"}</p>
 </div>	
 
 {include file="common/footer.tpl"}

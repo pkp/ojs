@@ -21,54 +21,54 @@
 </ul>
 
 <div id="referrals">
-	<table width="100%" class="listing">
-		<tr><td class="headseparator" colspan="6">&nbsp;</td></tr>
-		<tr class="heading" valign="bottom">
-			<td width="7%">{translate key="plugins.generic.referral.dateAdded"}</td>
-			<td width="3%">{translate key="plugins.generic.referral.count"}</td>
-			<td>{translate key="common.url"}</td>
-			<td>{translate key="common.title"}</td>
-			<td>{translate key="common.status"}</td>
-			<td width="10%" align="right">{translate key="common.action"}</td>
-		</tr>
-		<tr><td class="headseparator" colspan="6">&nbsp;</td></tr>
-	{iterate from=referrals item=referral}
-		<tr valign="top">
-			<td>{$referral->getDateAdded()|date_format:$dateFormatShort}</td>
-			<td>{$referral->getLinkCount()|escape}</td>
-			<td><a href="{$referral->getUrl()|escape}">{$referral->getUrl()|truncate:50|escape}</a></td>
-			<td>{$referral->getReferralName()|truncate:50|escape}</td>
-			<td>{translate key=$referral->getStatusKey()}</td>
-			<td align="right">
-				<a class="action" href="{url page="referral" op="editReferral" path=$referral->getReferralId()}">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a class="action" onclick="return confirm('{translate|escape:"jsparam" key="plugins.generic.referral.confirmDelete"}')" href="{url page="referral" op="deleteReferral" path=$referral->getReferralId()}">{translate key="common.delete"}</a>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td colspan="6" class="{if $referrals->eof()}end{/if}separator">&nbsp;</td>
-		</tr>
-	{/iterate}
-	{if $referrals->wasEmpty()}
-		<tr valign="top">
-			<td colspan="6" class="nodata">
-				{if $referralFilter == null}
-					{translate key="plugins.generic.referral.all.empty"}
-				{elseif $referralFilter == $smarty.const.REFERRAL_STATUS_NEW}
-					{translate key="plugins.generic.referral.status.new.empty"}
-				{elseif $referralFilter == $smarty.const.REFERRAL_STATUS_ACCEPT}
-					{translate key="plugins.generic.referral.status.accept.empty"}
-				{else}{* REFERRAL_STATUS_DECLINE *}
-					{translate key="plugins.generic.referral.status.decline.empty"}
-				{/if}
-			</td>
-		</tr>
-		<tr valign="top">
-			<td colspan="6" class="endseparator">&nbsp;</td>
-		</tr>
-	{else}
-		<tr>
-			<td colspan="3" align="left">{page_info iterator=$referrals}</td>
-			<td colspan="3" align="right">{page_links anchor="referrals" name="referrals" iterator=$referrals}</td>
-		</tr>
-	{/if}
-	</table>
+<table width="100%" class="listing">
+	<tr><td class="headseparator" colspan="6">&nbsp;</td></tr>
+	<tr class="heading" valign="bottom">
+		<td width="7%">{translate key="plugins.generic.referral.dateAdded"}</td>
+		<td width="3%">{translate key="plugins.generic.referral.count"}</td>
+		<td>{translate key="common.url"}</td>
+		<td>{translate key="common.title"}</td>
+		<td>{translate key="common.status"}</td>
+		<td width="10%" align="right">{translate key="common.action"}</td>
+	</tr>
+	<tr><td class="headseparator" colspan="6">&nbsp;</td></tr>
+{iterate from=referrals item=referral}
+	<tr valign="top">
+		<td>{$referral->getDateAdded()|date_format:$dateFormatShort}</td>
+		<td>{$referral->getLinkCount()|escape}</td>
+		<td><a href="{$referral->getUrl()|escape}">{$referral->getUrl()|truncate:50|escape}</a></td>
+		<td>{$referral->getReferralName()|truncate:50|escape}</td>
+		<td>{translate key=$referral->getStatusKey()}</td>
+		<td align="right">
+			<a class="action" href="{url page="referral" op="editReferral" path=$referral->getReferralId()}">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a class="action" onclick="return confirm('{translate|escape:"jsparam" key="plugins.generic.referral.confirmDelete"}')" href="{url page="referral" op="deleteReferral" path=$referral->getReferralId()}">{translate key="common.delete"}</a>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td colspan="6" class="{if $referrals->eof()}end{/if}separator">&nbsp;</td>
+	</tr>
+{/iterate}
+{if $referrals->wasEmpty()}
+	<tr valign="top">
+		<td colspan="6" class="nodata">
+			{if $referralFilter == null}
+				{translate key="plugins.generic.referral.all.empty"}
+			{elseif $referralFilter == $smarty.const.REFERRAL_STATUS_NEW}
+				{translate key="plugins.generic.referral.status.new.empty"}
+			{elseif $referralFilter == $smarty.const.REFERRAL_STATUS_ACCEPT}
+				{translate key="plugins.generic.referral.status.accept.empty"}
+			{else}{* REFERRAL_STATUS_DECLINE *}
+				{translate key="plugins.generic.referral.status.decline.empty"}
+			{/if}
+		</td>
+	</tr>
+	<tr valign="top">
+		<td colspan="6" class="endseparator">&nbsp;</td>
+	</tr>
+{else}
+	<tr>
+		<td colspan="3" align="left">{page_info iterator=$referrals}</td>
+		<td colspan="3" align="right">{page_links anchor="referrals" name="referrals" iterator=$referrals}</td>
+	</tr>
+{/if}
+</table>
 </div>

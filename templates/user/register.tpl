@@ -207,10 +207,10 @@
 {/if}{* !$implicitAuth *}
 
 <div id="privacyStatement">
-	{if $privacyStatement}
-		<h3>{translate key="user.register.privacyStatement"}</h3>
-		<p>{$privacyStatement|nl2br}</p>
-	{/if}
+{if $privacyStatement}
+	<h3>{translate key="user.register.privacyStatement"}</h3>
+	<p>{$privacyStatement|nl2br}</p>
+{/if}
 </div>
 
 </form>

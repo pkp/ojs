@@ -63,58 +63,58 @@
 {/if}
 
 <div id="users">
-	<table width="100%" class="listing">
-		<tr>
-			<td colspan="4" class="headseparator">&nbsp;</td>
-		</tr>
-		<tr class="heading" valign="bottom">
-			<td width="29%">{translate key="user.username"}</td>
-			<td width="29%">{translate key="user.name"}</td>
-			<td width="29%">{translate key="user.email"}</td>
-			<td width="13%" align="right">{translate key="common.action"}</td>
-		</tr>
-		<tr>
-			<td colspan="4" class="headseparator">&nbsp;</td>
-		</tr>
-		{iterate from=users item=user}
-		{assign var=userExists value=1}
-		<tr valign="top">
-			<td>{$user->getUsername()|escape|wordwrap:15:" ":true}</td>
-			<td>{$user->getFullName()|escape}</td>
-			<td class="nowrap">
-				{assign var=emailString value="`$user->getFullName()` <`$user->getEmail()`>"}
-				{url|assign:"redirectUrl" path=$roleSymbolic}
-				{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$redirectUrl}
-				{$user->getEmail()|truncate:15:"..."|escape}&nbsp;{icon name="mail" url=$url}
-			</td>
-			<td align="right">
-				{if $oldUserId != ''}
-					{if $oldUserId != $user->getUserId()}
-						<a href="#" onclick="confirmAction('{url oldUserId=$oldUserId newUserId=$user->getUserId()}', '{translate|escape:"jsparam" key="admin.mergeUsers.confirm" oldUsername=$oldUsername newUsername=$user->getUsername()}')" class="action">{translate key="admin.mergeUsers.mergeUser"}</a>
-					{/if}
-				{elseif $thisUser->getUserId() != $user->getUserId()}
-					<a href="{url oldUserId=$user->getUserId()}" class="action">{translate key="admin.mergeUsers.mergeUser"}</a>
+<table width="100%" class="listing">
+	<tr>
+		<td colspan="4" class="headseparator">&nbsp;</td>
+	</tr>
+	<tr class="heading" valign="bottom">
+		<td width="29%">{translate key="user.username"}</td>
+		<td width="29%">{translate key="user.name"}</td>
+		<td width="29%">{translate key="user.email"}</td>
+		<td width="13%" align="right">{translate key="common.action"}</td>
+	</tr>
+	<tr>
+		<td colspan="4" class="headseparator">&nbsp;</td>
+	</tr>
+	{iterate from=users item=user}
+	{assign var=userExists value=1}
+	<tr valign="top">
+		<td>{$user->getUsername()|escape|wordwrap:15:" ":true}</td>
+		<td>{$user->getFullName()|escape}</td>
+		<td class="nowrap">
+			{assign var=emailString value="`$user->getFullName()` <`$user->getEmail()`>"}
+			{url|assign:"redirectUrl" path=$roleSymbolic}
+			{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$redirectUrl}
+			{$user->getEmail()|truncate:15:"..."|escape}&nbsp;{icon name="mail" url=$url}
+		</td>
+		<td align="right">
+			{if $oldUserId != ''}
+				{if $oldUserId != $user->getUserId()}
+					<a href="#" onclick="confirmAction('{url oldUserId=$oldUserId newUserId=$user->getUserId()}', '{translate|escape:"jsparam" key="admin.mergeUsers.confirm" oldUsername=$oldUsername newUsername=$user->getUsername()}')" class="action">{translate key="admin.mergeUsers.mergeUser"}</a>
 				{/if}
-			</td>
-		</tr>
-		<tr>
-			<td colspan="4" class="{if $users->eof()}end{/if}separator">&nbsp;</td>
-		</tr>
-	{/iterate}
-	{if $users->wasEmpty()}
-		<tr>
-			<td colspan="4" class="nodata">{translate key="admin.mergeUsers.noneEnrolled"}</td>
-		</tr>
-		<tr>
-			<td colspan="4" class="endseparator">&nbsp;</td>
-		</tr>
-	{else}
-		<tr>
-			<td colspan="2" align="left">{page_info iterator=$users}</td>
-			<td colspan="2" align="right">{page_links anchor="users" name="users" iterator=$users searchField=$searchField searchMatch=$searchMatch search=$search dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateFromMonth=$dateFromMonth dateToDay=$dateToDay dateToYear=$dateToYear dateToMonth=$dateToMonth roleSymbolic=$roleSymbolic oldUserId=$oldUserId}</td>
-		</tr>
-	{/if}
-	</table>
+			{elseif $thisUser->getUserId() != $user->getUserId()}
+				<a href="{url oldUserId=$user->getUserId()}" class="action">{translate key="admin.mergeUsers.mergeUser"}</a>
+			{/if}
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" class="{if $users->eof()}end{/if}separator">&nbsp;</td>
+	</tr>
+{/iterate}
+{if $users->wasEmpty()}
+	<tr>
+		<td colspan="4" class="nodata">{translate key="admin.mergeUsers.noneEnrolled"}</td>
+	</tr>
+	<tr>
+		<td colspan="4" class="endseparator">&nbsp;</td>
+	</tr>
+{else}
+	<tr>
+		<td colspan="2" align="left">{page_info iterator=$users}</td>
+		<td colspan="2" align="right">{page_links anchor="users" name="users" iterator=$users searchField=$searchField searchMatch=$searchMatch search=$search dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateFromMonth=$dateFromMonth dateToDay=$dateToDay dateToYear=$dateToYear dateToMonth=$dateToMonth roleSymbolic=$roleSymbolic oldUserId=$oldUserId}</td>
+	</tr>
+{/if}
+</table>
 </div>
 
 {include file="common/footer.tpl"}
