@@ -48,7 +48,7 @@
 </div>
 
 <div id="body">
-<a name="top"></a>
+<div id="top"></div>
 
 <div id="main">
 

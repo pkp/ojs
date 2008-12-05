@@ -29,8 +29,9 @@
 	{foreach from=$plugins item=plugin}
 		{if $plugin->getCategory() != $category}
 			{assign var=category value=$plugin->getCategory()}
-			<a name="{$category|escape}"></a>
-			<p>{translate key="plugins.categories.$category.description"}</p>
+			<div id="{$category|escape}">
+				<p>{translate key="plugins.categories.$category.description"}</p>
+			</div>
 		{/if}
 	{/foreach}
 	
@@ -38,9 +39,10 @@
 	{foreach from=$plugins item=plugin}
 		{if $plugin->getCategory() != $category}
 			{assign var=category value=$plugin->getCategory()}
-			<a name="{$category|escape}"></a>
-			<h3>{translate key="plugins.categories.$category"}</h3>
-			<p>{translate key="plugins.categories.$category.description"}</p>
+			<div id="{$category|escape}">
+				<h3>{translate key="plugins.categories.$category"}</h3>
+				<p>{translate key="plugins.categories.$category.description"}</p>
+			</div>
 		{/if}
 		<li><h4>{$plugin->getDisplayName()|escape}</h4>
 		<p>

@@ -206,12 +206,13 @@
 	<p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 {/if}{* !$implicitAuth *}
 
-<a name="privacyStatement"></a>
+<div id="privacyStatement">
+	{if $privacyStatement}
+		<h3>{translate key="user.register.privacyStatement"}</h3>
+		<p>{$privacyStatement|nl2br}</p>
+	{/if}
+</div>
 
-{if $privacyStatement}
-	<h3>{translate key="user.register.privacyStatement"}</h3>
-	<p>{$privacyStatement|nl2br}</p>
-{/if}
 </form>
 
 {include file="common/footer.tpl"}

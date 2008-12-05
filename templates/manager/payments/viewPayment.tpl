@@ -25,7 +25,7 @@
 		<tr>
 			<td colspan="4" class="headseparator">&nbsp;</td>
 		</tr>
-		<a name="payment"></a>
+		<div id="payment">
 		<tr valign="top">
 		<tr>
 			<td width="25%">{translate key="manager.payment.paymentId"}</td>
@@ -72,6 +72,7 @@
 		<tr>
 			<td colspan="2" class="endseparator">&nbsp;</td>
 		</tr>
+		</div>
 	</table>
 {else}
 	{translate key="manager.payment.paymentId"} {translate key="manager.payment.notFound"}

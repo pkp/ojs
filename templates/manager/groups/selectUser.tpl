@@ -27,39 +27,39 @@
 
 <p>{foreach from=$alphaList item=letter}<a href="{url path=$group->getGroupId() searchInitial=$letter}">{if $letter == $searchInitial}<strong>{$letter|escape}</strong>{else}{$letter|escape}{/if}</a> {/foreach}<a href="{url path=$group->getGroupId()}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
 
-<a name="users"></a>
-
-<table width="100%" class="listing">
-<tr><td colspan="2" class="headseparator">&nbsp;</td></tr>
-<tr class="heading" valign="bottom">
-	<td width="80%">{translate key="user.name"}</td>
-	<td width="20%">{translate key="common.action"}</td>
-</tr>
-<tr><td colspan="2" class="headseparator">&nbsp;</td></tr>
-{iterate from=users item=user}
-{assign var="userid" value=$user->getUserId()}
-<tr valign="top">
-	<td><a class="action" href="{url op="userProfile" path=$userid}">{$user->getFullName(true)|escape}</a></td>
-	<td>
-		<a href="{url op="addMembership" path=$group->getGroupId()|to_array:$user->getUserId()}" class="action">{translate key="manager.groups.membership.addMember"}</a>
-	</td>
-</tr>
-<tr><td colspan="2" class="{if $users->eof()}end{/if}separator">&nbsp;</td></tr>
-{/iterate}
-{if $users->wasEmpty()}
-	<tr>
-	<td colspan="2" class="nodata">{translate key="manager.groups.membership.noUsers"}</td>
+<div id="users">
+	<table width="100%" class="listing">
+	<tr><td colspan="2" class="headseparator">&nbsp;</td></tr>
+	<tr class="heading" valign="bottom">
+		<td width="80%">{translate key="user.name"}</td>
+		<td width="20%">{translate key="common.action"}</td>
 	</tr>
-	<tr><td colspan="2" class="endseparator">&nbsp;</td></tr>
-{else}
-	<tr>
-		<td align="left">{page_info iterator=$users}</td>
-		<td align="right">{page_links anchor="users" name="users" iterator=$users searchField=$searchField searchMatch=$searchMatch search=$search dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateFromMonth=$dateFromMonth dateToDay=$dateToDay dateToYear=$dateToYear dateToMonth=$dateToMonth}</td>
+	<tr><td colspan="2" class="headseparator">&nbsp;</td></tr>
+	{iterate from=users item=user}
+	{assign var="userid" value=$user->getUserId()}
+	<tr valign="top">
+		<td><a class="action" href="{url op="userProfile" path=$userid}">{$user->getFullName(true)|escape}</a></td>
+		<td>
+			<a href="{url op="addMembership" path=$group->getGroupId()|to_array:$user->getUserId()}" class="action">{translate key="manager.groups.membership.addMember"}</a>
+		</td>
 	</tr>
-{/if}
-</table>
-{if $backLink}
-<a href="{$backLink}">{translate key="$backLinkLabel"}</a>
-{/if}
+	<tr><td colspan="2" class="{if $users->eof()}end{/if}separator">&nbsp;</td></tr>
+	{/iterate}
+	{if $users->wasEmpty()}
+		<tr>
+		<td colspan="2" class="nodata">{translate key="manager.groups.membership.noUsers"}</td>
+		</tr>
+		<tr><td colspan="2" class="endseparator">&nbsp;</td></tr>
+	{else}
+		<tr>
+			<td align="left">{page_info iterator=$users}</td>
+			<td align="right">{page_links anchor="users" name="users" iterator=$users searchField=$searchField searchMatch=$searchMatch search=$search dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateFromMonth=$dateFromMonth dateToDay=$dateToDay dateToYear=$dateToYear dateToMonth=$dateToMonth}</td>
+		</tr>
+	{/if}
+	</table>
+	{if $backLink}
+	<a href="{$backLink}">{translate key="$backLinkLabel"}</a>
+	{/if}
+</div>
 
 {include file="common/footer.tpl"}

@@ -26,53 +26,57 @@
 	{if $authorFees}<li>&#187; <a href="{url page="about" op="submissions" anchor="authorFees"}">{translate key="about.authorFees"}</a></li>{/if}	
 </ul>
 
-<a name="onlineSubmissions"></a><h3>{translate key="about.onlineSubmissions"}</h3>
-<p>
-	{translate key="about.onlineSubmissions.haveAccount" journalTitle=$siteTitle|escape}<br />
-	<a href="{url page="login"}" class="action">{translate key="about.onlineSubmissions.login"}</a>
-</p>
-<p>
-	{translate key="about.onlineSubmissions.needAccount"}<br />
-	<a href="{url page="user" op="register"}" class="action">{translate key="about.onlineSubmissions.registration"}</a>
-</p>
-<p>{translate key="about.onlineSubmissions.registrationRequired"}</p>
-
-<div class="separator">&nbsp;</div>
+<div id="onlineSubmissions"><h3>{translate key="about.onlineSubmissions"}</h3>
+	<p>
+		{translate key="about.onlineSubmissions.haveAccount" journalTitle=$siteTitle|escape}<br />
+		<a href="{url page="login"}" class="action">{translate key="about.onlineSubmissions.login"}</a>
+	</p>
+	<p>
+		{translate key="about.onlineSubmissions.needAccount"}<br />
+		<a href="{url page="user" op="register"}" class="action">{translate key="about.onlineSubmissions.registration"}</a>
+	</p>
+	<p>{translate key="about.onlineSubmissions.registrationRequired"}</p>
+	
+	<div class="separator">&nbsp;</div>
+</div>
 
 {if $currentJournal->getLocalizedSetting('authorGuidelines') != ''}
-<a name="authorGuidelines"></a><h3>{translate key="about.authorGuidelines"}</h3>
-<p>{$currentJournal->getLocalizedSetting('authorGuidelines')|nl2br}</p>
-
-<div class="separator">&nbsp;</div>
+<div id="authorGuidelines"><h3>{translate key="about.authorGuidelines"}</h3>
+	<p>{$currentJournal->getLocalizedSetting('authorGuidelines')|nl2br}</p>
+	
+	<div class="separator">&nbsp;</div>
+</div>
 {/if}
 
-<a name="submissionPreparationChecklist"></a><h3>{translate key="about.submissionPreparationChecklist"}</h3>
-<p>{translate key="about.submissionPreparationChecklist.description"}</p>
-<ol>
-	{foreach from=$submissionChecklist item=checklistItem}
-		<li>{$checklistItem.content|nl2br}</li>	
-	{/foreach}
-</ol>
-
-<div class="separator">&nbsp;</div>
+<div id="submissionPreparationChecklist"><h3>{translate key="about.submissionPreparationChecklist"}</h3>
+	<p>{translate key="about.submissionPreparationChecklist.description"}</p>
+	<ol>
+		{foreach from=$submissionChecklist item=checklistItem}
+			<li>{$checklistItem.content|nl2br}</li>	
+		{/foreach}
+	</ol>
+	
+	<div class="separator">&nbsp;</div>
+</div>
 
 {if $currentJournal->getLocalizedSetting('copyrightNotice') != ''}
-<a name="copyrightNotice"></a><h3>{translate key="about.copyrightNotice"}</h3>
-<p>{$currentJournal->getLocalizedSetting('copyrightNotice')|nl2br}</p>
-
-<div class="separator">&nbsp;</div>
+<div id="copyrightNotice"><h3>{translate key="about.copyrightNotice"}</h3>
+	<p>{$currentJournal->getLocalizedSetting('copyrightNotice')|nl2br}</p>
+	
+	<div class="separator">&nbsp;</div>
+</div>
 {/if}
 
-{if $currentJournal->getLocalizedSetting('privacyStatement') != ''}<a name="privacyStatement"></a><h3>{translate key="about.privacyStatement"}</h3>
-<p>{$currentJournal->getLocalizedSetting('privacyStatement')|nl2br}</p>
-
-<div class="separator">&nbsp;</div>
-
+{if $currentJournal->getLocalizedSetting('privacyStatement') != ''}<div id="privacyStatement"><h3>{translate key="about.privacyStatement"}</h3>
+	<p>{$currentJournal->getLocalizedSetting('privacyStatement')|nl2br}</p>
+	
+	<div class="separator">&nbsp;</div>
+</div>
 {/if}
 
 {if $authorFees}
 
-<a name="authorFees"></a><h3>{translate key="manager.payment.authorFees"}</h3>
+<div id="authorFees"><h3>{translate key="manager.payment.authorFees"}</h3>
 	<p>{translate key="about.authorFeesMessage"}</p>
 	{if $currentJournal->getSetting('submissionFeeEnabled')}
 		<p>{$currentJournal->getLocalizedSetting('submissionFeeName')|escape}: {$currentJournal->getSetting('submissionFee')|string_format:"%.2f"} ({$currentJournal->getSetting('currency')})<br />
@@ -89,5 +93,6 @@
 	{if $currentJournal->getLocalizedSetting('waiverPolicy') != ''}
 		<p>{$currentJournal->getLocalizedSetting('waiverPolicy')|escape}</p>
 	{/if}
+</div>
 {/if}
 {include file="common/footer.tpl"}

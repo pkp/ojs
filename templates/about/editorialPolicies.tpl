@@ -30,94 +30,103 @@
 </ul>
 
 {if $currentJournal->getLocalizedSetting('focusScopeDesc') != ''}
-<a name="focusAndScope"></a><h3>{translate key="about.focusAndScope"}</h3>
-<p>{$currentJournal->getLocalizedSetting('focusScopeDesc')|nl2br}</p>
-
-<div class="separator">&nbsp;</div>
+<div id="focusAndScope"><h3>{translate key="about.focusAndScope"}</h3>
+	<p>{$currentJournal->getLocalizedSetting('focusScopeDesc')|nl2br}</p>
+	
+	<div class="separator">&nbsp;</div>
+</div>
 {/if}
 
-<a name="sectionPolicies"></a><h3>{translate key="about.sectionPolicies"}</h3>
-{foreach from=$sections item=section}{if !$section->getHideAbout()}
-	<h4>{$section->getSectionTitle()}</h4>
-	{if strlen($section->getSectionPolicy()) > 0}
-		<p>{$section->getSectionPolicy()|nl2br}</p>
-	{/if}
-
-	{assign var="hasEditors" value=0}
-	{foreach from=$sectionEditorEntriesBySection item=sectionEditorEntries key=key}
-		{if $key == $section->getSectionId()}
-			{foreach from=$sectionEditorEntries item=sectionEditorEntry}
-				{assign var=sectionEditor value=$sectionEditorEntry.user}
-				{if 0 == $hasEditors++}
-				{translate key="user.role.editors"}
-				<ul class="plain">
-				{/if}
-				<li>{$sectionEditor->getFirstName()|escape} {$sectionEditor->getLastName()|escape}{if strlen($sectionEditor->getAffiliation()) > 0}, {$sectionEditor->getAffiliation()|escape}{/if}</li>
-			{/foreach}
+<div id="sectionPolicies"><h3>{translate key="about.sectionPolicies"}</h3>
+	{foreach from=$sections item=section}{if !$section->getHideAbout()}
+		<h4>{$section->getSectionTitle()}</h4>
+		{if strlen($section->getSectionPolicy()) > 0}
+			<p>{$section->getSectionPolicy()|nl2br}</p>
 		{/if}
-	{/foreach}
-	{if $hasEditors}</ul>{/if}
-
-	<table class="plain" width="60%">
-		<tr>
-			<td width="33%">{if !$section->getEditorRestricted()}{icon name="checked"}{else}{icon name="unchecked"}{/if} {translate key="manager.sections.open"}</td>
-			<td width="33%">{if $section->getMetaIndexed()}{icon name="checked"}{else}{icon name="unchecked"}{/if} {translate key="manager.sections.indexed"}</td>
-			<td width="34%">{if $section->getMetaReviewed()}{icon name="checked"}{else}{icon name="unchecked"}{/if} {translate key="manager.sections.reviewed"}</td>
-		</tr>
-	</table>
-{/if}{/foreach}
+	
+		{assign var="hasEditors" value=0}
+		{foreach from=$sectionEditorEntriesBySection item=sectionEditorEntries key=key}
+			{if $key == $section->getSectionId()}
+				{foreach from=$sectionEditorEntries item=sectionEditorEntry}
+					{assign var=sectionEditor value=$sectionEditorEntry.user}
+					{if 0 == $hasEditors++}
+					{translate key="user.role.editors"}
+					<ul class="plain">
+					{/if}
+					<li>{$sectionEditor->getFirstName()|escape} {$sectionEditor->getLastName()|escape}{if strlen($sectionEditor->getAffiliation()) > 0}, {$sectionEditor->getAffiliation()|escape}{/if}</li>
+				{/foreach}
+			{/if}
+		{/foreach}
+		{if $hasEditors}</ul>{/if}
+	
+		<table class="plain" width="60%">
+			<tr>
+				<td width="33%">{if !$section->getEditorRestricted()}{icon name="checked"}{else}{icon name="unchecked"}{/if} {translate key="manager.sections.open"}</td>
+				<td width="33%">{if $section->getMetaIndexed()}{icon name="checked"}{else}{icon name="unchecked"}{/if} {translate key="manager.sections.indexed"}</td>
+				<td width="34%">{if $section->getMetaReviewed()}{icon name="checked"}{else}{icon name="unchecked"}{/if} {translate key="manager.sections.reviewed"}</td>
+			</tr>
+		</table>
+	{/if}{/foreach}
+</div>
 
 <div class="separator">&nbsp;</div>
 
-{if $currentJournal->getLocalizedSetting('reviewPolicy') != ''}<a name="peerReviewProcess"></a><h3>{translate key="about.peerReviewProcess"}</h3>
-<p>{$currentJournal->getLocalizedSetting('reviewPolicy')|nl2br}</p>
-
-<div class="separator">&nbsp;</div>
+{if $currentJournal->getLocalizedSetting('reviewPolicy') != ''}<div id="peerReviewProcess"><h3>{translate key="about.peerReviewProcess"}</h3>
+	<p>{$currentJournal->getLocalizedSetting('reviewPolicy')|nl2br}</p>
+	
+	<div class="separator">&nbsp;</div>
+</div>
 {/if}
 
 {if $currentJournal->getLocalizedSetting('pubFreqPolicy') != ''}
-<a name="publicationFrequency"></a><h3>{translate key="about.publicationFrequency"}</h3>
-<p>{$currentJournal->getLocalizedSetting('pubFreqPolicy')|nl2br}</p>
-
-<div class="separator">&nbsp;</div>
+<div id="publicationFrequency"><h3>{translate key="about.publicationFrequency"}</h3>
+	<p>{$currentJournal->getLocalizedSetting('pubFreqPolicy')|nl2br}</p>
+	
+	<div class="separator">&nbsp;</div>
+</div>
 {/if}
 
 {if empty($journalSettings.enableSubscriptions) && $currentJournal->getLocalizedSetting('openAccessPolicy') != ''} 
-<a name="openAccessPolicy"></a><h3>{translate key="about.openAccessPolicy"}</h3>
-<p>{$currentJournal->getLocalizedSetting('openAccessPolicy')|nl2br}</p>
-
-<div class="separator">&nbsp;</div>
+<div id="openAccessPolicy"><h3>{translate key="about.openAccessPolicy"}</h3>
+	<p>{$currentJournal->getLocalizedSetting('openAccessPolicy')|nl2br}</p>
+	
+	<div class="separator">&nbsp;</div>
+</div>
 {/if}
 
 {if !empty($journalSettings.enableSubscriptions) && !empty($journalSettings.enableAuthorSelfArchive)} 
-<a name="authorSelfArchivePolicy"></a><h3>{translate key="about.authorSelfArchive"}</h3> 
-<p>{$currentJournal->getLocalizedSetting('authorSelfArchivePolicy')|nl2br}</p>
-
-<div class="separator">&nbsp;</div>
+<div id="authorSelfArchivePolicy"><h3>{translate key="about.authorSelfArchive"}</h3> 
+	<p>{$currentJournal->getLocalizedSetting('authorSelfArchivePolicy')|nl2br}</p>
+	
+	<div class="separator">&nbsp;</div>
+</div>
 {/if}
 
 {if !empty($journalSettings.enableSubscriptions) && !empty($journalSettings.enableDelayedOpenAccess)}
-<a name="delayedOpenAccessPolicy"></a><h3>{translate key="about.delayedOpenAccess"}</h3> 
-<p>{translate key="about.delayedOpenAccessDescription1"} {$journalSettings.delayedOpenAccessDuration} {translate key="about.delayedOpenAccessDescription2"}</p>
-{if $currentJournal->getLocalizedSetting('delayedOpenAccessPolicy') != ''}
-	<p>{$currentJournal->getLocalizedSetting('delayedOpenAccessPolicy')|nl2br}</p>
-{/if}
-
-<div class="separator">&nbsp;</div>
+<div id="delayedOpenAccessPolicy"><h3>{translate key="about.delayedOpenAccess"}</h3> 
+	<p>{translate key="about.delayedOpenAccessDescription1"} {$journalSettings.delayedOpenAccessDuration} {translate key="about.delayedOpenAccessDescription2"}</p>
+	{if $currentJournal->getLocalizedSetting('delayedOpenAccessPolicy') != ''}
+		<p>{$currentJournal->getLocalizedSetting('delayedOpenAccessPolicy')|nl2br}</p>
+	{/if}
+	
+	<div class="separator">&nbsp;</div>
+</div>
 {/if}
 
 {if $journalSettings.enableLockss && $currentJournal->getLocalizedSetting('lockssLicense') != ''}
-<a name="archiving"></a><h3>{translate key="about.archiving"}</h3>
-<p>{$currentJournal->getLocalizedSetting('lockssLicense')|nl2br}</p>
-
-<div class="separator">&nbsp;</div>
+<div id="archiving"><h3>{translate key="about.archiving"}</h3>
+	<p>{$currentJournal->getLocalizedSetting('lockssLicense')|nl2br}</p>
+	
+	<div class="separator">&nbsp;</div>
+</div>
 {/if}
 
 {foreach key=key from=$currentJournal->getLocalizedSetting('customAboutItems') item=customAboutItem name=customAboutItems}
 	{if !empty($customAboutItem.title)}
-		<a name="custom{$key|escape}"></a><h3>{$customAboutItem.title|escape}</h3>
-		<p>{$customAboutItem.content|nl2br}</p>
-		{if !$smarty.foreach.customAboutItems.last}<div class="separator">&nbsp;</div>{/if}
+		<div id="custom{$key|escape}"><h3>{$customAboutItem.title|escape}</h3>
+			<p>{$customAboutItem.content|nl2br}</p>
+			{if !$smarty.foreach.customAboutItems.last}<div class="separator">&nbsp;</div>{/if}
+		</div>
 	{/if}
 {/foreach}
 

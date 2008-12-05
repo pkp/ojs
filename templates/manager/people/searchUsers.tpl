@@ -90,59 +90,59 @@ function confirmAndPrompt(userId) {
 	</script>
 {/if}
 
-<a name="users"></a>
-
-<table width="100%" class="listing">
-<tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
-<tr class="heading" valign="bottom">
-	<td width="5%">&nbsp;</td>
-	<td width="25%">{translate key="user.username"}</td>
-	<td width="30%">{translate key="user.name"}</td>
-	<td width="30%">{translate key="user.email"}</td>
-	<td width="10%" align="right">{translate key="common.action"}</td>
-</tr>
-<tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
-{iterate from=users item=user}
-{assign var="userid" value=$user->getUserId()}
-{assign var="stats" value=$statistics[$userid]}
-<tr valign="top">
-	<td><input type="checkbox" name="users[]" value="{$user->getUserId()}" /></td>
-	<td><a class="action" href="{url op="userProfile" path=$userid}">{$user->getUsername()}</a></td>
-	<td>{$user->getFullName(true)|escape}</td>
-	<td class="nowrap">
-		{assign var=emailString value="`$user->getFullName()` <`$user->getEmail()`>"}
-		{url|assign:"url" page="user" op="email" to=$emailString|to_array}
-		{$user->getEmail()|truncate:20:"..."|escape}&nbsp;{icon name="mail" url=$url}
-	</td>
-	<td align="right" class="nowrap">
-		{if $roleId}
-		<a href="{url op="enroll" path=$roleId userId=$user->getUserId()}" class="action">{translate key="manager.people.enroll"}</a>
-		{else}
-		<a href="#" onclick="enrollUser({$user->getUserId()})" class="action">{translate key="manager.people.enroll"}</a>
-		{/if}
-		{if $thisUser->getUserId() != $user->getUserId()}
-			{if $user->getDisabled()}
-				|&nbsp;<a href="{url op="enableUser" path=$user->getUserId()}" class="action">{translate key="manager.people.enable"}</a>
+<div id="users">
+	<table width="100%" class="listing">
+	<tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
+	<tr class="heading" valign="bottom">
+		<td width="5%">&nbsp;</td>
+		<td width="25%">{translate key="user.username"}</td>
+		<td width="30%">{translate key="user.name"}</td>
+		<td width="30%">{translate key="user.email"}</td>
+		<td width="10%" align="right">{translate key="common.action"}</td>
+	</tr>
+	<tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
+	{iterate from=users item=user}
+	{assign var="userid" value=$user->getUserId()}
+	{assign var="stats" value=$statistics[$userid]}
+	<tr valign="top">
+		<td><input type="checkbox" name="users[]" value="{$user->getUserId()}" /></td>
+		<td><a class="action" href="{url op="userProfile" path=$userid}">{$user->getUsername()}</a></td>
+		<td>{$user->getFullName(true)|escape}</td>
+		<td class="nowrap">
+			{assign var=emailString value="`$user->getFullName()` <`$user->getEmail()`>"}
+			{url|assign:"url" page="user" op="email" to=$emailString|to_array}
+			{$user->getEmail()|truncate:20:"..."|escape}&nbsp;{icon name="mail" url=$url}
+		</td>
+		<td align="right" class="nowrap">
+			{if $roleId}
+			<a href="{url op="enroll" path=$roleId userId=$user->getUserId()}" class="action">{translate key="manager.people.enroll"}</a>
 			{else}
-				|&nbsp;<a href="javascript:confirmAndPrompt({$user->getUserId()})" class="action">{translate key="manager.people.disable"}</a>
+			<a href="#" onclick="enrollUser({$user->getUserId()})" class="action">{translate key="manager.people.enroll"}</a>
 			{/if}
-		{/if}
-	</td>
-</tr>
-<tr><td colspan="5" class="{if $users->eof()}end{/if}separator">&nbsp;</td></tr>
-{/iterate}
-{if $users->wasEmpty()}
-	<tr>
-	<td colspan="5" class="nodata">{translate key="common.none"}</td>
+			{if $thisUser->getUserId() != $user->getUserId()}
+				{if $user->getDisabled()}
+					|&nbsp;<a href="{url op="enableUser" path=$user->getUserId()}" class="action">{translate key="manager.people.enable"}</a>
+				{else}
+					|&nbsp;<a href="javascript:confirmAndPrompt({$user->getUserId()})" class="action">{translate key="manager.people.disable"}</a>
+				{/if}
+			{/if}
+		</td>
 	</tr>
-	<tr><td colspan="5" class="endseparator">&nbsp;</td></tr>
-{else}
-	<tr>
-		<td colspan="3" align="left">{page_info iterator=$users}</td>
-		<td colspan="2" align="right">{page_links anchor="users" name="users" iterator=$users searchField=$searchField searchMatch=$searchMatch search=$search dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateFromMonth=$dateFromMonth dateToDay=$dateToDay dateToYear=$dateToYear dateToMonth=$dateToMonth roleId=$roleId}</td>
-	</tr>
-{/if}
-</table>
+	<tr><td colspan="5" class="{if $users->eof()}end{/if}separator">&nbsp;</td></tr>
+	{/iterate}
+	{if $users->wasEmpty()}
+		<tr>
+		<td colspan="5" class="nodata">{translate key="common.none"}</td>
+		</tr>
+		<tr><td colspan="5" class="endseparator">&nbsp;</td></tr>
+	{else}
+		<tr>
+			<td colspan="3" align="left">{page_info iterator=$users}</td>
+			<td colspan="2" align="right">{page_links anchor="users" name="users" iterator=$users searchField=$searchField searchMatch=$searchMatch search=$search dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateFromMonth=$dateFromMonth dateToDay=$dateToDay dateToYear=$dateToYear dateToMonth=$dateToMonth roleId=$roleId}</td>
+		</tr>
+	{/if}
+	</table>
+</div>
 
 <input type="submit" value="{translate key="manager.people.enrollSelected"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="manager" escape=false}'" />
 
