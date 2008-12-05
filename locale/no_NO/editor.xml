@@ -134,7 +134,6 @@
 	<message key="editor.article.saveRating">Lagre rangering</message>
 	<message key="editor.article.noneSelected">Ingen valgt</message>
 	<message key="editor.article.authorProofing">Forfatter Korrekturlesing</message>
-	<message key="editor.article.archiveSubmission">Arkiver Manuskript</message>
 	<message key="editor.article.restoreToQueue">Gjenopprett til Aktive-listen</message>
 	<message key="editor.article.assignSectionEditor">Legg til Seksj.redaktør</message>
 	<message key="editor.article.assignEditor">Legg til Redaktør</message>

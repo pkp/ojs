@@ -563,7 +563,6 @@ artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Dizgiprovası yorumları</message>
-	<message key="submission.archiveSubmission">Başvuruyu arşivle</message>
 	<message key="submission.proofread.corrections">Dizgi provası düzeltmeleri </message>
 	<message key="submission.proofread.instructions">Dizgi provası yönergesi </message>
 

@@ -420,7 +420,6 @@ http://journals.mui.ac.ir/index.php/index/index
   <message key="submission.layout.layoutComments" >نظرات صفحه آرا</message>
   <message key="submission.layout.instructions" >دستوالعمل صفحه آرائی</message>
 <!-- پیگیری ساب میشن - ویژه بازبین -->  <message key="submission.proofreadingComments" >نظرات چک کننده نهائی</message>
-  <message key="submission.archiveSubmission" >ساب میشن های جاری</message>
   <message key="submission.proofread.corrections" >تصحیحات چک کننده نهائی</message>
   <message key="submission.proofread.instructions" >دستورالعمل چک نهائی</message>
 <!-- تاریخچه ساب میشن -->  <message key="submission.logType.article" >مقاله</message>

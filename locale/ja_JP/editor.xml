@@ -140,7 +140,6 @@
 	<message key="editor.article.saveRating">評価の保存</message>
 	<message key="editor.article.noneSelected">1つも選択されていません</message>
 	<message key="editor.article.authorProofing">著者校正</message>
-	<message key="editor.article.archiveSubmission">投稿物をアーカイブ</message>
 	<message key="editor.article.restoreToQueue">アクティブリストに戻す</message>
 	<message key="editor.article.assignSectionEditor">セクションエディタを任命</message>
 	<message key="editor.article.assignEditor">編集者を任命</message>

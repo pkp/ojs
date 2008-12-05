@@ -149,7 +149,6 @@
 	<message key="editor.article.saveRating">ذخیره امتیاز</message>
 	<message key="editor.article.noneSelected">هیچ کس انتخاب نشده است</message>
 	<message key="editor.article.authorProofing">چک توسط نویسنده</message>
-	<message key="editor.article.archiveSubmission">بایگانی کردن ساب میشن</message>
 	<message key="editor.article.restoreToQueue">برگرداندن به لیست جاری</message>
 	<message key="editor.article.assignSectionEditor">افزودن دبیر</message>
 	<message key="editor.article.assignEditor">افزودن سردبیر</message>

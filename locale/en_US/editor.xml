@@ -149,7 +149,7 @@
 	<message key="editor.article.saveRating">Save Rating</message>
 	<message key="editor.article.noneSelected">None Selected</message>
 	<message key="editor.article.authorProofing">Author Proofing</message>
-	<message key="editor.article.archiveSubmission">Archive Submission</message>
+	<message key="editor.article.archiveSubmission">Reject and Archive Submission</message>
 	<message key="editor.article.restoreToQueue">Restore to Active List</message>
 	<message key="editor.article.assignSectionEditor">Add Section Editor</message>
 	<message key="editor.article.assignEditor">Add Editor</message>

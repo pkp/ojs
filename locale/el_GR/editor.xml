@@ -140,7 +140,6 @@
 	<message key="editor.article.saveRating">Αποθήκευση βαθμολογίας</message>
 	<message key="editor.article.noneSelected">Δεν έχει γίνει επιλογή</message>
 	<message key="editor.article.authorProofing">Διόρθωση κειμένων συγγραφέα</message>
-	<message key="editor.article.archiveSubmission">Υποβολή αρχείου</message>
 	<message key="editor.article.restoreToQueue">Επαναφορά στην Λίστα ενεργών</message>
 	<message key="editor.article.assignSectionEditor">Προσθήκη Επιμελητή ενότητας</message>
 	<message key="editor.article.assignEditor">Προσθήκη επιμελητή</message>

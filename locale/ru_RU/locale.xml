@@ -758,7 +758,6 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Комментарии по правке</message>
 	<message key="submission.queueForScheduling">В очередь на публикацию</message>
-	<message key="submission.archiveSubmission">Архив присланных статей</message>
 	<message key="submission.proofread.corrections">Правки</message>
 
 	<message key="submission.proofread.instructions">Указания корректорам</message>

@@ -526,7 +526,6 @@ com sinal positivo (+) indicando avaliação em progresso.]]></message>
 	
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Comentários da Leitura de Prova</message>
-	<message key="submission.archiveSubmission">Arquivar Submissão</message>
 	<message key="submission.proofread.corrections">Correções na Leitura de Prova</message>
 	<message key="submission.proofread.instructions">Diretrizes para Leitura de Prova</message>
 

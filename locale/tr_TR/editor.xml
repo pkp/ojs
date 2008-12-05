@@ -130,7 +130,6 @@
 	<message key="editor.article.saveRating">Derecelendirmeyi kaydet</message>
 	<message key="editor.article.noneSelected">Hiçbiri seçilmedi</message>
 	<message key="editor.article.authorProofing">Yazar dizgi provası</message>
-	<message key="editor.article.archiveSubmission">Makale başvurusunu arşivle</message>
 	<message key="editor.article.restoreToQueue">Aktif listeyi yenile</message>
 	<message key="editor.article.assignSectionEditor">Bölüm editörü ata</message>
 	<message key="editor.article.assignEditor">Editör ata</message>

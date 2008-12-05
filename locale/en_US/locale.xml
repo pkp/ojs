@@ -644,7 +644,6 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Proofreading Comments</message>
-	<message key="submission.archiveSubmission">Archive Submission</message>
 	<message key="submission.proofread.corrections">Proofreading Corrections</message>
 	<message key="submission.proofread.instructions">Proofing Instructions</message>
 

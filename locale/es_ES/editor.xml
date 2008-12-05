@@ -148,7 +148,6 @@
 	<message key="editor.article.saveRating">Guardar puntuación</message>
 	<message key="editor.article.noneSelected">Ninguna seleccionada</message>
 	<message key="editor.article.authorProofing">Pruebas autor/a</message>
-	<message key="editor.article.archiveSubmission">Envío de archivo</message>
 	<message key="editor.article.restoreToQueue">Devolver a lista activa</message>
 	<message key="editor.article.assignSectionEditor">Añadir editor/a de sección</message>
 	<message key="editor.article.assignEditor">Añadir editor/a</message>

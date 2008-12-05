@@ -526,7 +526,6 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Lời bình về soát lỗi</message>
-	<message key="submission.archiveSubmission">Lưu kho bài cũ</message>
 	<message key="submission.proofread.corrections">Sửa lỗi</message>
 	<message key="submission.proofread.instructions">Hướng dẫn soát lỗi</message>
 

@@ -123,7 +123,6 @@
 	<message key="editor.article.saveRating">Сохранить оценку</message>
 	<message key="editor.article.noneSelected">Ничего не выбрано</message>
 	<message key="editor.article.authorProofing">Авторская верстка</message>
-	<message key="editor.article.archiveSubmission">Архивировать статью</message>
 	<message key="editor.article.restoreToQueue">Восстановить в списке обрабатываемых статьей</message>
 	<message key="editor.article.assignEditor">Назначить секционного редактора</message>
 	<message key="editor.article.selectEditor">Выбрать {$roleName}</message>

@@ -149,7 +149,6 @@
 	<message key="editor.article.saveRating">Salva la valutazione</message>
 	<message key="editor.article.noneSelected">Nessuna selezione effettuata</message>
 	<message key="editor.article.authorProofing">Correzione delle bozze dell'autore</message>
-	<message key="editor.article.archiveSubmission">Archivia la submission</message>
 	<message key="editor.article.restoreToQueue">Ripristina nella lista attiva</message>
 	<message key="editor.article.assignSectionEditor">Assegna ad un section editor</message>
 	<message key="editor.article.assignEditor">Assegna ad un editor</message>

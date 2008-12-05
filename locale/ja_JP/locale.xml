@@ -562,7 +562,6 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="submission.layout.instructions">レイアウトの手引き</message>
   <!-- Submission Tracking - Proofread Specific -->
   <message key="submission.proofreadingComments">校正者のコメント</message>
-  <message key="submission.archiveSubmission">アーカイブされた投稿物</message>
   <message key="submission.proofread.corrections">校正による修正</message>
   <message key="submission.proofread.instructions">校正の手引き</message>
   <!-- Submission History -->

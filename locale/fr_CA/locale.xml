@@ -515,7 +515,6 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Correction d'épreuves -- Commentaires</message>
-	<message key="submission.archiveSubmission">Archiver la soumission</message>
 	<message key="submission.proofread.corrections">Correction d'épreuves -- Corrections</message>
 	<message key="submission.proofread.instructions">Instructions pour la correction d'épreuves</message>
 

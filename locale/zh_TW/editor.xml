@@ -134,7 +134,6 @@
 	<message key="editor.article.saveRating">儲存評分</message>
 	<message key="editor.article.noneSelected">未選擇任何項目</message>
 	<message key="editor.article.authorProofing">作者校對</message>
-	<message key="editor.article.archiveSubmission">典藏稿件</message>
 	<message key="editor.article.restoreToQueue">復原至檔案櫃列表</message>
 	<message key="editor.article.assignSectionEditor">新增文稿類型編輯</message>
 	<message key="editor.article.assignEditor">新增編輯</message>

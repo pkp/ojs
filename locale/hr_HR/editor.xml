@@ -141,7 +141,6 @@
 	<message key="editor.article.saveRating">Spremi ocjenu</message>
 	<message key="editor.article.noneSelected">Ništa nije izabrano</message>
 	<message key="editor.article.authorProofing">Korektura autora</message>
-	<message key="editor.article.archiveSubmission">Arhiviraj prijavu</message>
 	<message key="editor.article.restoreToQueue">Obnovi na aktivnoj listi</message>
 	<message key="editor.article.assignSectionEditor">Dodaj uredniku rubrika</message>
 	<message key="editor.article.assignEditor">Dodaj uredniku</message>

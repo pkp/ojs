@@ -569,7 +569,6 @@ Activas es el número de revisiones que en este momento están consideradas como
 	
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Comentarios de corrección de prueba</message>
-	<message key="submission.archiveSubmission">Archivar envío</message>
 	<message key="submission.proofread.corrections">Correcciones de prueba</message>
 	<message key="submission.proofread.instructions">Instrucciones de corrección de prueba</message>
 

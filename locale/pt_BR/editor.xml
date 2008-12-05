@@ -149,7 +149,6 @@
 	<message key="editor.article.saveRating">Salvar Classificação</message>
 	<message key="editor.article.noneSelected">Nenhum designado</message>
 	<message key="editor.article.authorProofing">Leitura de Prova pelo Autor</message>
-	<message key="editor.article.archiveSubmission">Arquivar Submissão</message>
 	<message key="editor.article.restoreToQueue">Restaurar para Lista Ativa</message>
 	<message key="editor.article.assignSectionEditor">Incluir Editor de Seção</message>
 	<message key="editor.article.assignEditor">Incluir Editor</message>

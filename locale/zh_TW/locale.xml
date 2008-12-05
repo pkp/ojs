@@ -610,7 +610,6 @@
 	
 	<!-- Submission Tracking - Proofread Specific 稿件追蹤-校對階段-->
 	<message key="submission.proofreadingComments">校對意見</message>
-	<message key="submission.archiveSubmission">典藏稿件</message>
 	<message key="submission.proofread.corrections">校對修訂</message>
 	<message key="submission.proofread.instructions">校對指引</message>
 

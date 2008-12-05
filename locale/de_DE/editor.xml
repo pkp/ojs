@@ -133,7 +133,6 @@
 	<message key="editor.article.saveRating">Benotung speichern</message>
 	<message key="editor.article.noneSelected">Keine Wahl getroffen</message>
 	<message key="editor.article.authorProofing">Korrekturlesen des Verfassers</message>
-	<message key="editor.article.archiveSubmission">Beitrag archivieren</message>
 	<message key="editor.article.restoreToQueue">Wieder in die Warteliste aufnehmen</message>
 	<message key="editor.article.assignSectionEditor">Rubrikredakteur zuweisen</message>
 	<message key="editor.article.assignEditor">Redakteur zuweisen</message>

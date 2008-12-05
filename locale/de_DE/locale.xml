@@ -546,7 +546,6 @@ mit einem (+), das anzeigt, dass das Gutachten in Arbeit ist.]]></message>
 	
 	<!-- Beitragslauf - Korrekturlektorat -->
 	<message key="submission.proofreadingComments">Korrekturlektorat -- Kommentare</message>
-	<message key="submission.archiveSubmission">Beitrag archivieren</message>
 	<message key="submission.proofread.corrections">Korrekturlektorat Korrekturen</message>
 	<message key="submission.proofread.instructions">Richtlinien für die Korrektur </message>
 

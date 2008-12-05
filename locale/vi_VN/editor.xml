@@ -149,7 +149,6 @@
 	<message key="editor.article.saveRating">Ghi lại đánh giá</message>
 	<message key="editor.article.noneSelected">Không lựa chọn</message>
 	<message key="editor.article.authorProofing">Tác giả soát lỗi</message>
-	<message key="editor.article.archiveSubmission">Lưu kho bài nộp</message>
 	<message key="editor.article.restoreToQueue">Đưa trở về danh sách đang xử lý</message>
 	<message key="editor.article.assignSectionEditor">Thêm BTV chuyên mục</message>
 	<message key="editor.article.assignEditor">Thêm BTV chính</message>

@@ -619,7 +619,6 @@
 
         <!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Σχόλια επιμέλειας τυπογραφικών δοκιμίων</message>
-	<message key="submission.archiveSubmission">Αρχειοθέτηση Υποβολών</message>
 	<message key="submission.proofread.corrections">Διορθώσεις τυπογραφικών δοκιμίων</message>
 	<message key="submission.proofread.instructions">Οδηγίες επιμέλειας τυπογραφικών δοκιμίων</message>
 

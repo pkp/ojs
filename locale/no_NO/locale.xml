@@ -606,7 +606,6 @@ Du kan senere åpne filen ved å klikke på filnavnet. En ny eller omarbeidet fi
 	
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Korrekturlesing kommentarer</message>
-	<message key="submission.archiveSubmission">Arkiver Manuskript</message>
 	<message key="submission.proofread.corrections">Korrekturlesing: rettelser</message>
 	<message key="submission.proofread.instructions">Instruks for korrekturlesing</message>
 

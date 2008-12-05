@@ -582,7 +582,6 @@ Attivo &#x00E8; il numero di quante revisioni si stanno considerando o stanno an
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Commenti del correttore di bozze</message>
 
-	<message key="submission.archiveSubmission">Archivio delle Submission</message>
 	<message key="submission.proofread.corrections">Correzioni dei correttori di bozze</message>
 	<message key="submission.proofread.instructions">Istruzioni dei correttori di bozze</message>
 

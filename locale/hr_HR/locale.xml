@@ -555,7 +555,6 @@ Sadržaj priložene datoteke možete provjeriti ukoliko kliknete na njezino ime.
 	
 	
 	<!--  Submission Tracking - Proofread Specific  --><message key="submission.proofreadingComments">Korekturno čitanje komentara</message>
-	<message key="submission.archiveSubmission">Arhivirajte prijavu</message>
 	<message key="submission.proofread.corrections">Popis korekcija</message>
 	<message key="submission.proofread.instructions">Upute za korekturu</message>
 
