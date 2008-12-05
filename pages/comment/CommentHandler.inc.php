@@ -173,6 +173,7 @@ class CommentHandler extends PKPHandler {
 
 	function setupTemplate($article, $galleyId, $comment = null) {
 		parent::setupTemplate();
+		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_READER));
 		$templateMgr = &TemplateManager::getManager();
 		$journal =& Request::getJournal();
 
