@@ -253,6 +253,7 @@ class RTAdminHandler extends PKPHandler {
 	 */
 	function setupTemplate($subclass = false, $version = null, $context = null, $search = null) {
 		parent::setupTemplate();
+		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_READER));
 		$templateMgr = &TemplateManager::getManager();
 
 		$pageHierarchy = array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'manager'), 'manager.journalManagement'));
