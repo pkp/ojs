@@ -1820,17 +1820,28 @@ class SectionEditorAction extends Action {
 
 		$user =& Request::getUser();
 		import('mail.ArticleMailTemplate');
-		$email = new ArticleMailTemplate($sectionEditorSubmission);
+
+		$decisionTemplateMap = array(
+			SUBMISSION_EDITOR_DECISION_ACCEPT => 'EDITOR_DECISION_ACCEPT',
+			SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS => 'EDITOR_DECISION_REVISIONS',
+			SUBMISSION_EDITOR_DECISION_RESUBMIT => 'EDITOR_DECISION_RESUBMIT',
+			SUBMISSION_EDITOR_DECISION_DECLINE => 'EDITOR_DECISION_DECLINE'
+		);
+
+		$decisions = $sectionEditorSubmission->getDecisions();
+		$decisions = array_pop($decisions); // Rounds
+		$decision = (int) array_pop($decisions);
+
+		$email = new ArticleMailTemplate(
+			$sectionEditorSubmission,
+			isset($decisionTemplateMap[$decision])?$decisionTemplateMap[$decision]:null
+		);
 
 		$copyeditor =& $sectionEditorSubmission->getCopyeditor();
 
 		if ($send && !$email->hasErrors()) {
 			HookRegistry::call('SectionEditorAction::emailEditorDecisionComment', array(&$sectionEditorSubmission, &$send));
 			$email->send();
-
-			$decisions = $sectionEditorSubmission->getDecisions();
-			$decisions = array_pop($decisions); // Rounds
-			$decision = array_pop($decisions);
 
 			if ($decision && $decision['decision'] == SUBMISSION_EDITOR_DECISION_DECLINE) {
 				// If the most recent decision was a decline,
@@ -1857,6 +1868,11 @@ class SectionEditorAction extends Action {
 			if (!Request::getUserVar('continued')) {
 				$authorUser =& $userDao->getUser($sectionEditorSubmission->getUserId());
 				$authorEmail = $authorUser->getEmail();
+				$email->assignParams(array(
+					'editorialContactSignature' => $user->getContactSignature(),
+					'authorName' => $authorUser->getFullName(),
+					'journalTitle' => $journal->getJournalTitle()
+				));
 				$email->addRecipient($authorEmail, $authorUser->getFullName());
 				if ($journal->getSetting('notifyAllAuthorsOnDecision')) foreach ($sectionEditorSubmission->getAuthors() as $author) {
 					if ($author->getEmail() != $authorEmail) {

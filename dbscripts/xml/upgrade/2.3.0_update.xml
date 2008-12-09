@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * 2.3.0_update.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 2.3.0 database updates XML file.
+  *
+  * $Id$
+  -->
+<data>
+	<!-- Bug #3861: Add email templates. -->
+	<sql>
+		<query>INSERT INTO email_templates_default (email_key, can_edit, can_disable, from_role_id, to_role_id) VALUES ('EDITOR_DECISION_ACCEPT', 1, 0, 512, 65536)</query>
+		<query>INSERT INTO email_templates_default (email_key, can_edit, can_disable, from_role_id, to_role_id) VALUES ('EDITOR_DECISION_REVISIONS', 1, 0, 512, 65536)</query>
+		<query>INSERT INTO email_templates_default (email_key, can_edit, can_disable, from_role_id, to_role_id) VALUES ('EDITOR_DECISION_RESUBMIT', 1, 0, 512, 65536)</query>
+		<query>INSERT INTO email_templates_default (email_key, can_edit, can_disable, from_role_id, to_role_id) VALUES ('EDITOR_DECISION_DECLINE', 1, 0, 512, 65536)</query>
+		<query>INSERT INTO email_templates_default_data (locale, email_key, subject, body, description) VALUES ('en_US', 'EDITOR_DECISION_ACCEPT', 'Editor Decision', '{$authorName}:\n\nWe have reached a decision regarding your submission to {$journalTitle}, \"{$articleTitle}\".\n\nOur decision is to:\n\n{$editorialContactSignature}\n', 'This email from the Editor or Section Editor to an Author notifies them of a final decision regarding their submission.')</query>
+		<query>INSERT INTO email_templates_default_data (locale, email_key, subject, body, description) VALUES ('en_US', 'EDITOR_DECISION_REVISIONS', 'Editor Decision', '{$authorName}:\n\nWe have reached a decision regarding your submission to {$journalTitle}, \"{$articleTitle}\".\n\nOur decision is to:\n\n{$editorialContactSignature}\n', 'This email from the Editor or Section Editor to an Author notifies them of a final decision regarding their submission.')</query>
+		<query>INSERT INTO email_templates_default_data (locale, email_key, subject, body, description) VALUES ('en_US', 'EDITOR_DECISION_RESUBMIT', 'Editor Decision', '{$authorName}:\n\nWe have reached a decision regarding your submission to {$journalTitle}, \"{$articleTitle}\".\n\nOur decision is to:\n\n{$editorialContactSignature}\n', 'This email from the Editor or Section Editor to an Author notifies them of a final decision regarding their submission.')</query>
+		<query>INSERT INTO email_templates_default_data (locale, email_key, subject, body, description) VALUES ('en_US', 'EDITOR_DECISION_DECLINE', 'Editor Decision', '{$authorName}:\n\nWe have reached a decision regarding your submission to {$journalTitle}, \"{$articleTitle}\".\n\nOur decision is to:\n\n{$editorialContactSignature}\n', 'This email from the Editor or Section Editor to an Author notifies them of a final decision regarding their submission.')</query>
+	</sql>
+</data>

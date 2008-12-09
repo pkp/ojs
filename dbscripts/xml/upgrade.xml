@@ -136,4 +136,9 @@
 		<data file="dbscripts/xml/upgrade/2.2.3_update.xml" />
 		<note file="docs/release-notes/README-2.2.3" />
 	</upgrade>
+
+	<upgrade minversion="2.0.0.0" maxversion="2.2.3.0">
+		<data file="dbscripts/xml/upgrade/2.3.0_update.xml" />
+		<note file="docs/release-notes/README-2.3.0" />
+	</upgrade>
 </install>

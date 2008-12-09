@@ -393,6 +393,58 @@ Please confirm your ability to complete this vital contribution to the work of t
 {$editorialContactSignature}</field>
 			<field name="description">This email is automatically sent when a reviewer's due date elapses (see Review Options under Journal Setup, Step 2) and one-click reviewer access is enabled. Scheduled tasks must be enabled and configured (see the site configuration file).</field>
 		</row>
+		<row>
+			<field name="email_key">EDITOR_DECISION_ACCEPT</field>
+			<field name="subject">Editor Decision</field>
+			<field name="body">{$authorName}:
+
+We have reached a decision regarding your submission to {$journalTitle}, "{$articleTitle}".
+
+Our decision is to:
+
+{$editorialContactSignature}
+</field>
+			<field name="description">This email from the Editor or Section Editor to an Author notifies them of a final decision regarding their submission.</field>
+		</row>
+		<row>
+			<field name="email_key">EDITOR_DECISION_REVISIONS</field>
+			<field name="subject">Editor Decision</field>
+			<field name="body">{$authorName}:
+
+We have reached a decision regarding your submission to {$journalTitle}, "{$articleTitle}".
+
+Our decision is to:
+
+{$editorialContactSignature}
+</field>
+			<field name="description">This email from the Editor or Section Editor to an Author notifies them of a final decision regarding their submission.</field>
+		</row>
+		<row>
+			<field name="email_key">EDITOR_DECISION_RESUBMIT</field>
+			<field name="subject">Editor Decision</field>
+			<field name="body">{$authorName}:
+
+We have reached a decision regarding your submission to {$journalTitle}, "{$articleTitle}".
+
+Our decision is to:
+
+{$editorialContactSignature}
+</field>
+			<field name="description">This email from the Editor or Section Editor to an Author notifies them of a final decision regarding their submission.</field>
+		</row>
+		<row>
+			<field name="email_key">EDITOR_DECISION_DECLINE</field>
+			<field name="subject">Editor Decision</field>
+			<field name="body">{$authorName}:
+
+We have reached a decision regarding your submission to {$journalTitle}, "{$articleTitle}".
+
+Our decision is to:
+
+{$editorialContactSignature}
+</field>
+			<field name="description">This email from the Editor or Section Editor to an Author notifies them of a final decision regarding their submission.</field>
+		</row>
 
 
 		<!--
