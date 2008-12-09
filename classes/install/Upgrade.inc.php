@@ -328,7 +328,11 @@ class Upgrade extends Installer {
 			'journalPageFooter' => 'journalPageFooter',
 			'additionalHomeContent' => 'additionalHomeContent',
 			'description' => 'description',
-			'navItems' => 'navItems'
+			'navItems' => 'navItems',
+			// Subscription policies
+			'subscriptionAdditionalInformation',
+			'delayedOpenAccessPolicy',
+			'authorSelfArchivePolicy'
 		);
 
 		foreach ($settingNames as $oldName => $newName) {
