@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for this citation plugin in nl_NL.
+  *
+  * Translated by Martin van Luijt, m.van.luijt 'at' hccnet.nl
+  *
+  * $Id$
+  -->
+ 
+<locale name="nl_NL" full_name="Nederlands">
+	<message key="plugins.citationFormats.refWorks.displayName">RefWorks citatieformaat plugin</message>
+	<message key="plugins.citationFormats.refWorks.citationFormatName">RefWorks</message>
+	<message key="plugins.citationFormats.refWorks.description">Deze plugin implementeert het RefWorks citatieformaat.</message>
+	<message key="plugins.citationFormats.refWorks.export">Exporteer naar RefWorks</message>
+</locale>
