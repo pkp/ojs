@@ -21,7 +21,8 @@ class ManagerPaymentHandler extends ManagerHandler {
 	 function payments($args) {
 		parent::validate();
 		import('manager.form.PaymentSettingsForm');
-		$form = new PaymentSettingsForm();
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$form =& new PaymentSettingsForm();
 
 		$journal = &Request::getJournal();
 		$journalSettingsDAO =& DAORegistry::getDAO('JournalSettingsDAO');
@@ -45,7 +46,8 @@ class ManagerPaymentHandler extends ManagerHandler {
 	 function savePaymentSettings($args) {
 		parent::validate();
 		import('manager.form.PaymentSettingsForm');
-		$settingsForm = new PaymentSettingsForm();
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$settingsForm =& new PaymentSettingsForm();
 
 		$journal = &Request::getJournal();
 		$journalSettingsDAO =& DAORegistry::getDAO('JournalSettingsDAO');
@@ -123,7 +125,8 @@ class ManagerPaymentHandler extends ManagerHandler {
 
 		import('manager.form.PayMethodSettingsForm');
 		
-		$settingsForm = new PayMethodSettingsForm();
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$settingsForm =& new PayMethodSettingsForm();
 		$settingsForm->initData();
 		$settingsForm->display();
 	}
@@ -140,7 +143,8 @@ class ManagerPaymentHandler extends ManagerHandler {
 
 		import('manager.form.PayMethodSettingsForm');
 
-		$settingsForm = new PayMethodSettingsForm();
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$settingsForm =& new PayMethodSettingsForm();
 		$settingsForm->readInputData();
 
  		$templateMgr = &TemplateManager::getManager();

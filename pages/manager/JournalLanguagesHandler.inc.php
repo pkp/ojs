@@ -26,7 +26,8 @@ class JournalLanguagesHandler extends ManagerHandler {
 
 		import('manager.form.LanguageSettingsForm');
 
-		$settingsForm = new LanguageSettingsForm();
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$settingsForm =& new LanguageSettingsForm();
 		$settingsForm->initData();
 		$settingsForm->display();
 	}
@@ -40,7 +41,8 @@ class JournalLanguagesHandler extends ManagerHandler {
 
 		import('manager.form.LanguageSettingsForm');
 
-		$settingsForm = new LanguageSettingsForm();
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$settingsForm =& new LanguageSettingsForm();
 		$settingsForm->readInputData();
 
 		if ($settingsForm->validate()) {

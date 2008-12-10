@@ -75,7 +75,8 @@ class ReviewFormDAO extends DAO {
 	 * @return ReviewForm
 	 */
 	function &_returnReviewFormFromRow(&$row) {
-		$reviewForm = new ReviewForm();
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$reviewForm =& new ReviewForm();
 		$reviewForm->setReviewFormId($row['review_form_id']);
 		$reviewForm->setJournalId($row['journal_id']);
 		$reviewForm->setSequence($row['seq']);

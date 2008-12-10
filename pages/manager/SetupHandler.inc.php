@@ -33,7 +33,8 @@ class SetupHandler extends ManagerHandler {
 			$formClass = "JournalSetupStep{$step}Form";
 			import("manager.form.setup.$formClass");
 
-			$setupForm = new $formClass();
+			// FIXME: Need construction by reference or validation always fails on PHP 4.x
+			$setupForm =& new $formClass();
 			if ($setupForm->isLocaleResubmit()) {
 				$setupForm->readInputData();
 			} else {
@@ -64,7 +65,8 @@ class SetupHandler extends ManagerHandler {
 			$formClass = "JournalSetupStep{$step}Form";
 			import("manager.form.setup.$formClass");
 
-			$setupForm = new $formClass();
+			// FIXME: Need construction by reference or validation always fails on PHP 4.x
+			$setupForm =& new $formClass();
 			$setupForm->readInputData();
 			$formLocale = $setupForm->getFormLocale();
 

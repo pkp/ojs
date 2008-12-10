@@ -52,7 +52,8 @@ class AdminJournalHandler extends AdminHandler {
 
 		import('admin.form.JournalSiteSettingsForm');
 
-		$settingsForm = new JournalSiteSettingsForm(!isset($args) || empty($args) ? null : $args[0]);
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$settingsForm =& new JournalSiteSettingsForm(!isset($args) || empty($args) ? null : $args[0]);
 		if ($settingsForm->isLocaleResubmit()) {
 			$settingsForm->readInputData();
 		} else {
@@ -69,7 +70,8 @@ class AdminJournalHandler extends AdminHandler {
 
 		import('admin.form.JournalSiteSettingsForm');
 
-		$settingsForm = new JournalSiteSettingsForm(Request::getUserVar('journalId'));
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$settingsForm =& new JournalSiteSettingsForm(Request::getUserVar('journalId'));
 		$settingsForm->readInputData();
 
 		if ($settingsForm->validate()) {
@@ -139,7 +141,8 @@ class AdminJournalHandler extends AdminHandler {
 
 		import('admin.form.ImportOJS1Form');
 
-		$importForm = new ImportOJS1Form();
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$importForm =& new ImportOJS1Form();
 		$importForm->initData();
 		$importForm->display();
 	}
@@ -153,7 +156,8 @@ class AdminJournalHandler extends AdminHandler {
 
 		import('admin.form.ImportOJS1Form');
 
-		$importForm = new ImportOJS1Form();
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$importForm =& new ImportOJS1Form();
 		$importForm->readInputData();
 
 		if ($importForm->validate() && ($journalId = $importForm->execute()) !== false) {

@@ -234,7 +234,8 @@ class ThesisPlugin extends GenericPlugin {
 			case 'settings':
 				if ($this->getEnabled()) {
 					$this->import('ThesisSettingsForm');
-					$form = new ThesisSettingsForm($this, $journal->getJournalId());
+					// FIXME: Need construction by reference or validation always fails on PHP 4.x
+					$form =& new ThesisSettingsForm($this, $journal->getJournalId());
 					if (Request::getUserVar('save')) {
 						$form->readInputData();
 						if ($form->validate()) {
@@ -288,7 +289,8 @@ class ThesisPlugin extends GenericPlugin {
 						$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 						$journalSettings = &$journalSettingsDao->getJournalSettings($journal->getJournalId());
 
-						$thesisForm = new ThesisForm($thesisId);
+						// FIXME: Need construction by reference or validation always fails on PHP 4.x
+						$thesisForm =& new ThesisForm($thesisId);
 						$thesisForm->initData();
 						$this->setBreadCrumbs(true);
 						$templateMgr->assign('journalSettings', $journalSettings);
@@ -308,7 +310,8 @@ class ThesisPlugin extends GenericPlugin {
 
 					if (($thesisId != null && $thesisDao->getThesisJournalId($thesisId) == $journal->getJournalId()) || $thesisId == null) {
 
-						$thesisForm = new ThesisForm($thesisId);
+						// FIXME: Need construction by reference or validation always fails on PHP 4.x
+						$thesisForm =& new ThesisForm($thesisId);
 						$thesisForm->readInputData();
 
 						if ($thesisForm->validate()) {

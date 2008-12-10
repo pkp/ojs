@@ -264,7 +264,8 @@ class CopyeditorAction extends Action {
 		if (!HookRegistry::call('CopyeditorAction::viewLayoutComments', array(&$article))) {
 			import("submission.form.comment.LayoutCommentForm");
 
-			$commentForm = new LayoutCommentForm($article, ROLE_ID_COPYEDITOR);
+			// FIXME: Need construction by reference or validation always fails on PHP 4.x
+			$commentForm =& new LayoutCommentForm($article, ROLE_ID_COPYEDITOR);
 			$commentForm->initData();
 			$commentForm->display();
 		}
@@ -278,7 +279,8 @@ class CopyeditorAction extends Action {
 		if (!HookRegistry::call('CopyeditorAction::postLayoutComment', array(&$article, &$emailComment))) {
 			import("submission.form.comment.LayoutCommentForm");
 
-			$commentForm = new LayoutCommentForm($article, ROLE_ID_COPYEDITOR);
+			// FIXME: Need construction by reference or validation always fails on PHP 4.x
+			$commentForm =& new LayoutCommentForm($article, ROLE_ID_COPYEDITOR);
 			$commentForm->readInputData();
 
 			if ($commentForm->validate()) {
@@ -304,7 +306,8 @@ class CopyeditorAction extends Action {
 		if (!HookRegistry::call('CopyeditorAction::viewCopyeditComments', array(&$article))) {
 			import("submission.form.comment.CopyeditCommentForm");
 
-			$commentForm = new CopyeditCommentForm($article, ROLE_ID_COPYEDITOR);
+			// FIXME: Need construction by reference or validation always fails on PHP 4.x
+			$commentForm =& new CopyeditCommentForm($article, ROLE_ID_COPYEDITOR);
 			$commentForm->initData();
 			$commentForm->display();
 		}
@@ -318,7 +321,8 @@ class CopyeditorAction extends Action {
 		if (!HookRegistry::call('CopyeditorAction::postCopyeditComment', array(&$article, &$emailComment))) {
 			import("submission.form.comment.CopyeditCommentForm");
 
-			$commentForm = new CopyeditCommentForm($article, ROLE_ID_COPYEDITOR);
+			// FIXME: Need construction by reference or validation always fails on PHP 4.x
+			$commentForm =& new CopyeditCommentForm($article, ROLE_ID_COPYEDITOR);
 			$commentForm->readInputData();
 
 			if ($commentForm->validate()) {

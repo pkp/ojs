@@ -234,7 +234,8 @@ class OpenAdsPlugin extends GenericPlugin {
 				$this->import('OpenAdsConnection');
 				$openAdsConnection = new OpenAdsConnection($this, $this->getInstallationPath());
 				$openAdsConnection->loadConfig();
-				$form = new OpenAdsSettingsForm($this, $openAdsConnection, $journal->getJournalId());
+				// FIXME: Need construction by reference or validation always fails on PHP 4.x
+				$form =& new OpenAdsSettingsForm($this, $openAdsConnection, $journal->getJournalId());
 				if (array_shift($args) == 'save') {
 					$form->readInputData();
 					$form->execute();

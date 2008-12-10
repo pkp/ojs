@@ -149,7 +149,8 @@ class SubscriptionManagerHandler extends PKPHandler {
 				$templateMgr->assign('subscriptionTitle', 'manager.subscriptions.editTitle');	
 			}
 
-			$subscriptionForm = new SubscriptionForm($subscriptionId, $userId);
+			// FIXME: Need construction by reference or validation always fails on PHP 4.x
+			$subscriptionForm =& new SubscriptionForm($subscriptionId, $userId);
 			$subscriptionForm->initData();
 			$subscriptionForm->display();
 
@@ -228,7 +229,8 @@ class SubscriptionManagerHandler extends PKPHandler {
 
 		if (($subscriptionId != null && $subscriptionDao->getSubscriptionJournalId($subscriptionId) == $journal->getJournalId()) || $subscriptionId == null) {
 
-			$subscriptionForm = new SubscriptionForm($subscriptionId);
+			// FIXME: Need construction by reference or validation always fails on PHP 4.x
+			$subscriptionForm =& new SubscriptionForm($subscriptionId);
 			$subscriptionForm->readInputData();
 
 			if ($subscriptionForm->validate()) {
@@ -349,7 +351,8 @@ class SubscriptionManagerHandler extends PKPHandler {
 				$templateMgr->assign('subscriptionTypeTitle', 'manager.subscriptionTypes.editTitle');	
 			}
 
-			$subscriptionTypeForm = new SubscriptionTypeForm($subscriptionTypeId);
+			// FIXME: Need construction by reference or validation always fails on PHP 4.x
+			$subscriptionTypeForm =& new SubscriptionTypeForm($subscriptionTypeId);
 			if ($subscriptionTypeForm->isLocaleResubmit()) {
 				$subscriptionTypeForm->readInputData();
 			} else {
@@ -383,7 +386,8 @@ class SubscriptionManagerHandler extends PKPHandler {
 
 		if (($subscriptionTypeId != null && $subscriptionTypeDao->getSubscriptionTypeJournalId($subscriptionTypeId) == $journal->getJournalId()) || $subscriptionTypeId == null) {
 
-			$subscriptionTypeForm = new SubscriptionTypeForm($subscriptionTypeId);
+			// FIXME: Need construction by reference or validation always fails on PHP 4.x
+			$subscriptionTypeForm =& new SubscriptionTypeForm($subscriptionTypeId);
 			$subscriptionTypeForm->readInputData();
 
 			if ($subscriptionTypeForm->validate()) {
@@ -397,7 +401,8 @@ class SubscriptionManagerHandler extends PKPHandler {
 					$templateMgr->assign('subscriptionTypeTitle', 'manager.subscriptionTypes.createTitle');
 					$templateMgr->assign('subscriptionTypeCreated', '1');
 
-					$subscriptionTypeForm = new SubscriptionTypeForm($subscriptionTypeId);
+					// FIXME: Need construction by reference or validation always fails on PHP 4.x
+					$subscriptionTypeForm =& new SubscriptionTypeForm($subscriptionTypeId);
 					$subscriptionTypeForm->initData();
 					$subscriptionTypeForm->display();
 
@@ -441,7 +446,8 @@ class SubscriptionManagerHandler extends PKPHandler {
 			$templateMgr->assign('scheduledTasksEnabled', true);
 		}
 
-		$subscriptionPolicyForm = new SubscriptionPolicyForm();
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$subscriptionPolicyForm =& new SubscriptionPolicyForm();
 		if ($subscriptionPolicyForm->isLocaleResubmit()) {
 			$subscriptionPolicyForm->readInputData();
 		} else {
@@ -459,7 +465,8 @@ class SubscriptionManagerHandler extends PKPHandler {
 
 		import('subscription.form.SubscriptionPolicyForm');
 
-		$subscriptionPolicyForm = new SubscriptionPolicyForm();
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$subscriptionPolicyForm =& new SubscriptionPolicyForm();
 		$subscriptionPolicyForm->readInputData();
 
 		if ($subscriptionPolicyForm->validate()) {
@@ -514,7 +521,8 @@ class SubscriptionManagerHandler extends PKPHandler {
 		import('manager.form.UserManagementForm');
 
 		$templateMgr->assign('currentUrl', Request::url(null, null, 'createUser'));
-		$userForm = new UserManagementForm();
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$userForm =& new UserManagementForm();
 		if ($userForm->isLocaleResubmit()) {
 			$userForm->readInputData();
 		} else {
@@ -533,7 +541,8 @@ class SubscriptionManagerHandler extends PKPHandler {
 
 		import('manager.form.UserManagementForm');
 
-		$userForm = new UserManagementForm();
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$userForm =& new UserManagementForm();
 		$userForm->readInputData();
 
 		if ($userForm->validate()) {
@@ -544,7 +553,8 @@ class SubscriptionManagerHandler extends PKPHandler {
 				$templateMgr = &TemplateManager::getManager();
 				$templateMgr->assign('currentUrl', Request::url(null, null, 'index'));
 				$templateMgr->assign('userCreated', true);
-				$userForm = new UserManagementForm();
+				// FIXME: Need construction by reference or validation always fails on PHP 4.x
+				$userForm =& new UserManagementForm();
 				$userForm->initData();
 				$userForm->display();
 

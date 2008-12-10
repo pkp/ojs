@@ -729,7 +729,8 @@ class SectionEditorAction extends Action {
 			$reviewFormId = $reviewAssignment->getReviewFormId();
 			if ($reviewFormId != null) {
 				import('submission.form.ReviewFormResponseForm');
-				$reviewForm = new ReviewFormResponseForm($reviewId, $reviewFormId);
+				// FIXME: Need construction by reference or validation always fails on PHP 4.x
+				$reviewForm =& new ReviewFormResponseForm($reviewId, $reviewFormId);
 				$reviewForm->initData();
 				$reviewForm->display();
 			}
@@ -1733,7 +1734,8 @@ class SectionEditorAction extends Action {
 
 		import('submission.form.comment.PeerReviewCommentForm');
 
-		$commentForm = new PeerReviewCommentForm($article, $reviewId, Validation::isEditor()?ROLE_ID_EDITOR:ROLE_ID_SECTION_EDITOR);
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$commentForm =& new PeerReviewCommentForm($article, $reviewId, Validation::isEditor()?ROLE_ID_EDITOR:ROLE_ID_SECTION_EDITOR);
 		$commentForm->initData();
 		$commentForm->display();
 	}
@@ -1749,7 +1751,8 @@ class SectionEditorAction extends Action {
 
 		import('submission.form.comment.PeerReviewCommentForm');
 
-		$commentForm = new PeerReviewCommentForm($article, $reviewId, Validation::isEditor()?ROLE_ID_EDITOR:ROLE_ID_SECTION_EDITOR);
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$commentForm =& new PeerReviewCommentForm($article, $reviewId, Validation::isEditor()?ROLE_ID_EDITOR:ROLE_ID_SECTION_EDITOR);
 		$commentForm->readInputData();
 
 		if ($commentForm->validate()) {
@@ -1775,7 +1778,8 @@ class SectionEditorAction extends Action {
 
 		import('submission.form.comment.EditorDecisionCommentForm');
 
-		$commentForm = new EditorDecisionCommentForm($article, Validation::isEditor()?ROLE_ID_EDITOR:ROLE_ID_SECTION_EDITOR);
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$commentForm =& new EditorDecisionCommentForm($article, Validation::isEditor()?ROLE_ID_EDITOR:ROLE_ID_SECTION_EDITOR);
 		$commentForm->initData();
 		$commentForm->display();
 	}
@@ -1790,7 +1794,8 @@ class SectionEditorAction extends Action {
 
 		import('submission.form.comment.EditorDecisionCommentForm');
 
-		$commentForm = new EditorDecisionCommentForm($article, Validation::isEditor()?ROLE_ID_EDITOR:ROLE_ID_SECTION_EDITOR);
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$commentForm =& new EditorDecisionCommentForm($article, Validation::isEditor()?ROLE_ID_EDITOR:ROLE_ID_SECTION_EDITOR);
 		$commentForm->readInputData();
 
 		if ($commentForm->validate()) {
@@ -2016,7 +2021,8 @@ class SectionEditorAction extends Action {
 
 		import('submission.form.comment.CopyeditCommentForm');
 
-		$commentForm = new CopyeditCommentForm($article, Validation::isEditor()?ROLE_ID_EDITOR:ROLE_ID_SECTION_EDITOR);
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$commentForm =& new CopyeditCommentForm($article, Validation::isEditor()?ROLE_ID_EDITOR:ROLE_ID_SECTION_EDITOR);
 		$commentForm->initData();
 		$commentForm->display();
 	}
@@ -2031,7 +2037,8 @@ class SectionEditorAction extends Action {
 
 		import('submission.form.comment.CopyeditCommentForm');
 
-		$commentForm = new CopyeditCommentForm($article, Validation::isEditor()?ROLE_ID_EDITOR:ROLE_ID_SECTION_EDITOR);
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$commentForm =& new CopyeditCommentForm($article, Validation::isEditor()?ROLE_ID_EDITOR:ROLE_ID_SECTION_EDITOR);
 		$commentForm->readInputData();
 
 		if ($commentForm->validate()) {
@@ -2057,7 +2064,8 @@ class SectionEditorAction extends Action {
 
 		import('submission.form.comment.LayoutCommentForm');
 
-		$commentForm = new LayoutCommentForm($article, Validation::isEditor()?ROLE_ID_EDITOR:ROLE_ID_SECTION_EDITOR);
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$commentForm =& new LayoutCommentForm($article, Validation::isEditor()?ROLE_ID_EDITOR:ROLE_ID_SECTION_EDITOR);
 		$commentForm->initData();
 		$commentForm->display();
 	}
@@ -2072,7 +2080,8 @@ class SectionEditorAction extends Action {
 
 		import('submission.form.comment.LayoutCommentForm');
 
-		$commentForm = new LayoutCommentForm($article, Validation::isEditor()?ROLE_ID_EDITOR:ROLE_ID_SECTION_EDITOR);
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$commentForm =& new LayoutCommentForm($article, Validation::isEditor()?ROLE_ID_EDITOR:ROLE_ID_SECTION_EDITOR);
 		$commentForm->readInputData();
 
 		if ($commentForm->validate()) {
@@ -2098,7 +2107,8 @@ class SectionEditorAction extends Action {
 
 		import('submission.form.comment.ProofreadCommentForm');
 
-		$commentForm = new ProofreadCommentForm($article, Validation::isEditor()?ROLE_ID_EDITOR:ROLE_ID_SECTION_EDITOR);
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$commentForm =& new ProofreadCommentForm($article, Validation::isEditor()?ROLE_ID_EDITOR:ROLE_ID_SECTION_EDITOR);
 		$commentForm->initData();
 		$commentForm->display();
 	}
@@ -2113,7 +2123,8 @@ class SectionEditorAction extends Action {
 
 		import('submission.form.comment.ProofreadCommentForm');
 
-		$commentForm = new ProofreadCommentForm($article, Validation::isEditor()?ROLE_ID_EDITOR:ROLE_ID_SECTION_EDITOR);
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$commentForm =& new ProofreadCommentForm($article, Validation::isEditor()?ROLE_ID_EDITOR:ROLE_ID_SECTION_EDITOR);
 		$commentForm->readInputData();
 
 		if ($commentForm->validate()) {

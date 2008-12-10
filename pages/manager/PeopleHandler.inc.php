@@ -357,7 +357,8 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign_by_ref('roleSettings', parent::retrieveRoleAssignmentPreferences($journal->getJournalId()));
 
 		$templateMgr->assign('currentUrl', Request::url(null, null, 'people', 'all'));
-		$userForm = new UserManagementForm($userId);
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$userForm =& new UserManagementForm($userId);
 		if ($userForm->isLocaleResubmit()) {
 			$userForm->readInputData();
 		} else {
@@ -690,7 +691,8 @@ class PeopleHandler extends ManagerHandler {
 
 		import('manager.form.UserManagementForm');
 
-		$userForm = new UserManagementForm($userId);
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$userForm =& new UserManagementForm($userId);
 		$userForm->readInputData();
 
 		if ($userForm->validate()) {
@@ -700,7 +702,8 @@ class PeopleHandler extends ManagerHandler {
 				$templateMgr = &TemplateManager::getManager();
 				$templateMgr->assign('currentUrl', Request::url(null, null, 'people', 'all'));
 				$templateMgr->assign('userCreated', true);
-				$userForm = new UserManagementForm();
+				// FIXME: Need construction by reference or validation always fails on PHP 4.x
+				$userForm =& new UserManagementForm();
 				$userForm->initData();
 				$userForm->display();
 

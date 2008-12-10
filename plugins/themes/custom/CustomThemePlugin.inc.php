@@ -112,7 +112,8 @@ class CustomThemePlugin extends ThemePlugin {
 		$templateMgr->setCacheability(CACHEABILITY_MUST_REVALIDATE);
 
 		$this->import('CustomThemeSettingsForm');
-		$form = new CustomThemeSettingsForm($this, $journal->getJournalId());
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$form =& new CustomThemeSettingsForm($this, $journal->getJournalId());
 		if (Request::getUserVar('save')) {
 			$form->readInputData();
 			if ($form->validate()) {

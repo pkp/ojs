@@ -53,7 +53,8 @@ class SectionHandler extends ManagerHandler {
 
 		import('manager.form.SectionForm');
 
-		$sectionForm = new SectionForm(!isset($args) || empty($args) ? null : ((int) $args[0]));
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$sectionForm =& new SectionForm(!isset($args) || empty($args) ? null : ((int) $args[0]));
 		if ($sectionForm->isLocaleResubmit()) {
 			$sectionForm->readInputData();
 		} else {
@@ -69,7 +70,8 @@ class SectionHandler extends ManagerHandler {
 		parent::validate();
 
 		import('manager.form.SectionForm');
-		$sectionForm = new SectionForm(!isset($args) || empty($args) ? null : ((int) $args[0]));
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$sectionForm =& new SectionForm(!isset($args) || empty($args) ? null : ((int) $args[0]));
 
 		switch (Request::getUserVar('editorAction')) {
 			case 'addSectionEditor':

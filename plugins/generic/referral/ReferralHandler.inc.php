@@ -41,7 +41,8 @@ class ReferralHandler extends PKPHandler {
 			$templateMgr->assign('referralTitle', 'plugins.generic.referral.editReferral');	
 		}
 
-		$referralForm = new ReferralForm($plugin, $article, $referralId);
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$referralForm =& new ReferralForm($plugin, $article, $referralId);
 		if ($referralForm->isLocaleResubmit()) {
 			$referralForm->readInputData();
 		} else {
@@ -71,7 +72,8 @@ class ReferralHandler extends PKPHandler {
 
 		$plugin->import('ReferralForm');
 
-		$referralForm = new ReferralForm($plugin, $article, $referralId);
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$referralForm =& new ReferralForm($plugin, $article, $referralId);
 		$referralForm->readInputData();
 
 		if ($referralForm->validate()) {

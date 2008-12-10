@@ -80,7 +80,8 @@ class AuthSourcesHandler extends AdminHandler {
 		parent::setupTemplate(true);
 
 		import('security.form.AuthSourceSettingsForm');
-		$form = new AuthSourceSettingsForm((int)@$args[0]);
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$form =& new AuthSourceSettingsForm((int)@$args[0]);
 		$form->initData();
 		$form->display();
 	}
@@ -92,7 +93,8 @@ class AuthSourcesHandler extends AdminHandler {
 		parent::validate();
 
 		import('security.form.AuthSourceSettingsForm');
-		$form = new AuthSourceSettingsForm((int)@$args[0]);
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+		$form =& new AuthSourceSettingsForm((int)@$args[0]);
 		$form->readInputData();
 		$form->execute();
 		Request::redirect(null, null, 'auth');
