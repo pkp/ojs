@@ -107,7 +107,7 @@ class CounterPlugin extends GenericPlugin {
 				if (!$galley) return false;
 
 				$logEntry = new LogEntry();
-				$logEntry->setSite($site->getTitle($site->getPrimaryLocale()));
+				$logEntry->setSite($site->getSiteTitle());
 				$logEntry->setJournal($journal->getTitle($journal->getPrimaryLocale()));
 				$logEntry->setJournalUrl(Request::url(null, 'index'));
 				$logEntry->setPrintIssn($journal->getSetting('printIssn'));
@@ -125,7 +125,7 @@ class CounterPlugin extends GenericPlugin {
 				// Log the request as a search.
 				$logEntry = new LogEntry();
 				$article = $templateManager->get_template_vars('article');
-				$logEntry->setSite($site->getTitle($site->getPrimaryLocale()));
+				$logEntry->setSite($site->getSiteTitle());
 				$logEntry->setJournal($journal->getTitle($journal->getPrimaryLocale()));
 				$logEntry->setJournalUrl(Request::url(null, 'index'));
 				$logEntry->setUser($logUser);
