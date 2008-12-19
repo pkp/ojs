@@ -21,10 +21,10 @@
 
 
 /* This definition is required by Smarty */
-define('SMARTY_DIR', Core::getBaseDir() . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'pkp' . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'smarty' . DIRECTORY_SEPARATOR);
+define('SMARTY_DIR', Core::getBaseDir() . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'smarty' . DIRECTORY_SEPARATOR);
 
-require_once('Smarty.class.php');
-require_once('plugins/modifier.escape.php'); // Seems to be needed?
+require_once('smarty/Smarty.class.php');
+require_once('smarty/plugins/modifier.escape.php'); // Seems to be needed?
 
 import('search.ArticleSearch');
 
@@ -561,6 +561,7 @@ class TemplateManager extends Smarty {
 			$smarty->assign('debugExecutionTime', Core::microtime() - Registry::get('system.debug.startTime'));
 			$dbconn = &DBConnection::getInstance();
 			$smarty->assign('debugNumDatabaseQueries', $dbconn->getNumQueries());
+			$smarty->assign('debugMemoryUsage', memory_get_usage());
 			$smarty->assign_by_ref('debugNotes', Registry::get('system.debug.notes'));
 		}
 
