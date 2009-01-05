@@ -82,7 +82,8 @@ class LogEntryDAO extends DAO {
 				$logEntry->setType($type);
 				$logEntry->setValue($value);
 				$logEntry->setJournalUrl($journalUrl);
-				$entries[] = &$logEntry;
+				$entries[] =& $logEntry;
+				unset($logEntry);
 			}
 		}
 
