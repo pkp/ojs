@@ -634,7 +634,7 @@ span.formError {
 	font-size: 1em;
 }
 
-ul.formErrorList {
+ul.formErrorList a {
 	color: #900;
 }
 
