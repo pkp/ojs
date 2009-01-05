@@ -73,7 +73,7 @@ class PluginHandler extends ManagerHandler {
 
 		$plugins =& PluginRegistry::loadCategory($category);
 		if (!isset($plugins[$plugin]) || !$plugins[$plugin]->manage($verb, $args)) {
-			Request::redirect(null, null, 'plugins');
+			Request::redirect(null, null, 'plugins', $category);
 		}
 	}
 	
