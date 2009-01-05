@@ -397,7 +397,7 @@ class SuppFile extends ArticleFile {
 		// Retrieve the journal, if necessary.
 		if (!isset($journal)) {
 			$articleDao = &DAORegistry::getDAO('ArticleDAO');
-			$article = &$articleDao->getArticleById($this->getArticleId());
+			$article = &$articleDao->getArticle($this->getArticleId());
 			$journalDao = &DAORegistry::getDAO('JournalDAO');
 			$journal = &$journalDao->getJournal($article->getJournalId());
 		}
