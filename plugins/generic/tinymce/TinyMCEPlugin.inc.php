@@ -180,7 +180,7 @@ class TinyMCEPlugin extends GenericPlugin {
 						$fields[] = 'proofInstructions';
 						break;
 					case 5:
-						$fields[] = 'journalDescription';
+						$fields[] = 'description';
 						$fields[] = 'additionalHomeContent';
 						$fields[] = 'journalPageHeader';
 						$fields[] = 'journalPageFooter';
