@@ -71,7 +71,7 @@ class LogEntryDAO extends DAO {
 			list($stamp, $user, $site, $journal, $publisher, $printIssn, $onlineIssn, $type, $value, $journalUrl) = $fragments;
 			$entryYear = strftime('%Y', strtotime($stamp));
 			if ($year === null || $entryYear == $year) {
-				$logEntry = &new LogEntry();
+				$logEntry = new LogEntry();
 				$logEntry->setStamp($stamp);
 				$logEntry->setUser($user);
 				$logEntry->setSite($site);
@@ -82,7 +82,8 @@ class LogEntryDAO extends DAO {
 				$logEntry->setType($type);
 				$logEntry->setValue($value);
 				$logEntry->setJournalUrl($journalUrl);
-				$entries[] = &$logEntry;
+				$entries[] =& $logEntry;
+				unset($logEntry);
 			}
 		}
 
