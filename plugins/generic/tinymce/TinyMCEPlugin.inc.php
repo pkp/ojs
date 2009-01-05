@@ -176,7 +176,9 @@ class TinyMCEPlugin extends GenericPlugin {
 						$fields[] = 'readerInformation';
 						$fields[] = 'librarianInformation';
 						$fields[] = 'authorInformation';
+						break;
 				}
+				break;
 			case 'reviewer/submission':
 				$fields[] = 'competingInterests';
 				break;
