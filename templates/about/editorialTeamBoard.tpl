@@ -14,16 +14,16 @@
 {/strip}
 
 {foreach from=$groups item=group}
-<h4>{$group->getGroupTitle()}</h4>
-{assign var=groupId value=$group->getGroupId()}
-{assign var=members value=$teamInfo[$groupId]}
+	<h4>{$group->getGroupTitle()}</h4>
+	{assign var=groupId value=$group->getGroupId()}
+	{assign var=members value=$teamInfo[$groupId]}
 
-{foreach from=$members item=member}
-	{assign var=user value=$member->getUser()}
-	<a href="javascript:openRTWindow('{url op="editorialTeamBio" path=$user->getUserId()}')">{$user->getFullName()|escape}</a>{if $user->getAffiliation()}, {$user->getAffiliation()|escape}{/if}{if $user->getCountry()}{assign var=countryCode value=$user->getCountry()}{assign var=country value=$countries.$countryCode}, {$country|escape}{/if}
-	<br />
-{/foreach}
-{/foreach}
-
+	<ol class="editorialTeam">
+		{foreach from=$members item=member}
+			{assign var=user value=$member->getUser()}
+			<li><a href="javascript:openRTWindow('{url op="editorialTeamBio" path=$user->getUserId()}')">{$user->getFullName()|escape}</a>{if $user->getAffiliation()}, {$user->getAffiliation()|escape}{/if}{if $user->getCountry()}{assign var=countryCode value=$user->getCountry()}{assign var=country value=$countries.$countryCode}, {$country|escape}{/if}</li>
+		{/foreach}{* $members *}
+	</ol>
+{/foreach}{* $groups *}
 
 {include file="common/footer.tpl"}

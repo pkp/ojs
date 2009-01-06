@@ -462,6 +462,23 @@ table.tocArticle td.tocPages {
 
 
 /**
+ * Editorial Team Lists
+ */
+
+ol.editorialTeam {
+}
+
+ol.editorialTeam li {
+	list-style: none;
+}
+
+ol.editorialTeam, ol.editorialTeam li {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+
+/**
  * Footer elements
  */
 
