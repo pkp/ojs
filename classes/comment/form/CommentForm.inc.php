@@ -65,6 +65,7 @@ class CommentForm extends Form {
 		$this->parentId = $parentId;
 		$this->galleyId = $galleyId;
 
+		$this->addCheck(new FormValidator($this, 'title', 'required', 'comments.titleRequired'));
 		if ($this->captchaEnabled) {
 			$this->addCheck(new FormValidatorCaptcha($this, 'captcha', 'captchaId', 'common.captchaField.badCaptcha'));
 		}
