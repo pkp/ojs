@@ -18,7 +18,7 @@
 {/literal}{if $issue}{literal}	volume = {{/literal}{$issue->getVolume()|escape}{literal}},
 	number = {{/literal}{$issue->getNumber()|escape}{literal}},{/literal}{/if}{literal}
 	year = {{/literal}{$article->getDatePublished()|date_format:'%Y'}{literal}},
-	keywords = {{/literal}{$article->getArticleSubject()|strip_tags:false}{literal}},
+	keywords = {{/literal}{$article->getArticleSubject()|escape}{literal}},
 	abstract = {{/literal}{$article->getArticleAbstract()|strip_tags:false}{literal}},
 {/literal}{assign var=onlineIssn value=$journal->getSetting('onlineIssn')|escape}
 {assign var=issn value=$journal->getSetting('issn')|escape}{if $issn}{literal}	issn = {{/literal}{$issn|escape}{literal}},{/literal}
