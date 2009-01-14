@@ -156,20 +156,27 @@ class CoinsPlugin extends GenericPlugin {
 		return false;
 	}
 
-	/**
-	 * Perform management functions
-	 */
-	function manage($verb, $args) {
+ 	/*
+ 	 * Execute a management verb on this plugin
+ 	 * @param $verb string
+ 	 * @param $args array
+	 * @param $message string Location for the plugin to put a result msg
+ 	 * @return boolean
+ 	 */
+	function manage($verb, $args, &$message) {
 		switch ($verb) {
 			case 'enable':
 				$this->setEnabled(true);
+				$message = Locale::translate('plugins.generic.coins.enabled');
 				break;
 			case 'disable':
 				$this->setEnabled(false);
+				$message = Locale::translate('plugins.generic.coins.disabled');
 				break;
 			default:
 				Request::redirect(null, 'manager');
 		}
+		
 		return false;
 	}
 }

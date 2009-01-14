@@ -170,10 +170,14 @@ class WebFeedPlugin extends GenericPlugin {
 		return $verbs;
 	}
 
-	/**
-	 * Perform management functions
-	 */
-	function manage($verb, $args) {
+ 	/*
+ 	 * Execute a management verb on this plugin
+ 	 * @param $verb string
+ 	 * @param $args array
+	 * @param $message string Location for the plugin to put a result msg
+ 	 * @return boolean
+ 	 */
+	function manage($verb, $args, &$message) {
 		$returner = true;
 		$journal =& Request::getJournal();
 
@@ -201,10 +205,12 @@ class WebFeedPlugin extends GenericPlugin {
 				break;
 			case 'enable':
 				$this->updateSetting($journal->getJournalId(), 'enabled', true);
+				$message = Locale::translate('plugins.generic.webfeed.enabled');
 				$returner = false;
 				break;
 			case 'disable':
 				$this->updateSetting($journal->getJournalId(), 'enabled', false);
+				$message = Locale::translate('plugins.generic.webfeed.disabled');
 				$returner = false;
 				break;	
 		}

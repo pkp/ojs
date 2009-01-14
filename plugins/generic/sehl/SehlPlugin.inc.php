@@ -153,17 +153,27 @@ class SehlPlugin extends GenericPlugin {
 		));
 	}
 
-	function manage($verb, $args) {
+ 	/*
+ 	 * Execute a management verb on this plugin
+ 	 * @param $verb string
+ 	 * @param $args array
+	 * @param $message string Location for the plugin to put a result msg
+ 	 * @return boolean
+ 	 */
+	function manage($verb, $args, &$message) {
 		$journal =& Request::getJournal();
 		$journalId = $journal?$journal->getJournalId():0;
 		switch ($verb) {
 			case 'enable':
 				$this->updateSetting($journalId, 'enabled', true);
+				$message = Locale::translate('plugins.generic.sehl.enabled');
 				break;
 			case 'disable':
 				$this->updateSetting($journalId, 'enabled', false);
+				$message = Locale::translate('plugins.generic.sehl.disabled');
 				break;
 		}
+		
 		return false;
 	}
 }

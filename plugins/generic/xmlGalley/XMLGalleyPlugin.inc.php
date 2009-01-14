@@ -203,10 +203,14 @@ class XMLGalleyPlugin extends GenericPlugin {
 		return false;
 	}
 
-	/**
-	 * Perform management functions
-	 */
-	function manage($verb, $args) {
+ 	/*
+ 	 * Execute a management verb on this plugin
+ 	 * @param $verb string
+ 	 * @param $args array
+	 * @param $message string Location for the plugin to put a result msg
+ 	 * @return boolean
+ 	 */
+	function manage($verb, $args, &$message) {
 		$journal =& Request::getJournal();
 
 		$templateMgr = &TemplateManager::getManager();
@@ -320,9 +324,11 @@ class XMLGalleyPlugin extends GenericPlugin {
 				return true;
 			case 'enable':
 				$this->setEnabled(true);
+				$message = Locale::translate('plugins.generic.xmlGalley.enabled');
 				return false;
 			case 'disable':
 				$this->setEnabled(false);
+				$message = Locale::translate('plugins.generic.xmlGalley.disabled');
 				return false;
 		}
 	}

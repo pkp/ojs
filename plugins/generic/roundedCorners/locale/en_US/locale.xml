@@ -15,4 +15,6 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.roundedcorners.displayName">Rounded Corners</message>
 	<message key="plugins.generic.roundedcorners.description">This Plugin puts a background on each sidebar block and rounds its corners.  Changes can be made to the colours used by editing the CSS stylesheet found in the plugin.</message>
+	<message key="plugins.generic.roundedcorners.enabled">The Rounded Corners Plugin has been enabled.</message>
+	<message key="plugins.generic.roundedcorners.disabled">The Rounded Corners Plugin has been disabled.</message>
 </locale>

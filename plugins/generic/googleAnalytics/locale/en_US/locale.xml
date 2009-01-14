@@ -17,6 +17,8 @@
 	<!-- Google Analytics -->
 	<message key="plugins.generic.googleAnalytics.displayName">Google Analytics Plugin</message>
 	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Integrate OJS with Google Analytics, Google's web site traffic analysis application. Requires that you have already setup a Google Analytics account. Please see the <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics site</a> for more information.]]></message>
+	<message key="plugins.generic.googleAnalytics.enabled">The Google Analytics  Plugin has been enabled.</message>
+	<message key="plugins.generic.googleAnalytics.disabled">The Google Analytics  Plugin has been disabled.</message>
 
 	<!-- Google Analytics Settings Management -->
 	<message key="plugins.generic.googleAnalytics.manager.settings">Settings</message>

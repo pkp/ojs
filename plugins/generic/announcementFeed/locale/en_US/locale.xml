@@ -15,7 +15,9 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.announcementfeed.displayName">Announcement Feed Plugin</message>
 	<message key="plugins.generic.announcementfeed.description">This plugin produces RSS/Atom web syndication feeds for journal announcements.</message>
-
+	<message key="plugins.generic.announcementfeed.enabled">The Announcement Feed Plugin has been enabled.</message>
+	<message key="plugins.generic.announcementfeed.disabled">The Announcement Feed Plugin has been disabled.</message>
+	
 	<message key="plugins.generic.announcementfeed.settings">Settings</message>
 	<message key="plugins.generic.announcementfeed.settings.all">Display feed links on all journal pages.</message>
 	<message key="plugins.generic.announcementfeed.settings.homepage">Display feed links only on homepage and announcement page.</message>

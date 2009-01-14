@@ -112,17 +112,26 @@ class CustomLocalePlugin extends GenericPlugin {
 		return $verbs;
 	}
 
-	function manage($verb, $args) {
+ 	/*
+ 	 * Execute a management verb on this plugin
+ 	 * @param $verb string
+ 	 * @param $args array
+	 * @param $message string Location for the plugin to put a result msg
+ 	 * @return boolean
+ 	 */
+	function manage($verb, $args, &$message) {
 		$this->import('CustomLocaleHandler');
 		$returner = true;
 
 		switch ($verb) {
 			case 'enable':
 				$this->setEnabled(true);
+				$message = Locale::translate('plugins.generic.customLocale.enabled');
 				$returner = false;
 				break;
 			case 'disable':
 				$this->setEnabled(false);
+				$message = Locale::translate('plugins.generic.customLocale.disabled');
 				$returner = false;
 				break;
 			case 'index':

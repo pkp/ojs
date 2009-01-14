@@ -218,17 +218,25 @@ class OpenAdsPlugin extends GenericPlugin {
 		return false;
 	}
 
-	/**
-	 * Perform management functions
-	 */
-	function manage($verb, $args) {
+ 	/*
+ 	 * Execute a management verb on this plugin
+ 	 * @param $verb string
+ 	 * @param $args array
+	 * @param $message string Location for the plugin to put a result msg
+ 	 * @return boolean
+ 	 */
+	function manage($verb, $args, &$message) {
 		$templateMgr = &TemplateManager::getManager();
 		$journal = &Request::getJournal();
 		$returner = false;
 
 		switch ($verb) {
-			case 'enable': $this->setEnabled(true); break;
-			case 'disable': $this->setEnabled(false); break;
+			case 'enable': $this->setEnabled(true); 
+				$message = Locale::translate('plugins.generic.openAds.enabled');
+				break;
+			case 'disable': $this->setEnabled(false); 
+				$message = Locale::translate('plugins.generic.openAds.disabled');
+				break;
 			case 'settings':
 				$this->import('OpenAdsSettingsForm');
 				$this->import('OpenAdsConnection');

@@ -73,15 +73,24 @@ class TranslatorPlugin extends GenericPlugin {
 		return $verbs;
 	}
 
-	function manage($verb, $args) {
+ 	/*
+ 	 * Execute a management verb on this plugin
+ 	 * @param $verb string
+ 	 * @param $args array
+	 * @param $message string Location for the plugin to put a result msg
+ 	 * @return boolean
+ 	 */
+	function manage($verb, $args, &$message) {
 		if (!Validation::isSiteAdmin()) return false;
 
 		switch ($verb) {
 			case 'enable':
 				$this->updateSetting(0, 'enabled', true);
+				$message = Locale::translate('plugins.generic.translator.enabled');
 				break;
 			case 'disable':
 				$this->updateSetting(0, 'enabled', false);
+				$message = Locale::translate('plugins.generic.translator.disabled');
 				break;
 			case 'translate':
 				Request::redirect('index', 'translate');

@@ -15,4 +15,6 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.coins.displayName">COinS Plugin</message>
 	<message key="plugins.generic.coins.description">The COinS plugin adds an OpenURL descriptor to article pages (abstract and HTML) that can be used e.g. for extraction to citation tools.</message>
+	<message key="plugins.generic.coins.enabled">The COinS Plugin has been enabled.</message>
+	<message key="plugins.generic.coins.disabled">The COinS Plugin has been disabled.</message>
 </locale>

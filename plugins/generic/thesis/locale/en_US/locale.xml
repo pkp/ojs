@@ -204,4 +204,6 @@
 	<message key="plugins.generic.thesis.form.supervisorEmail">Supervisor email</message>
 	<message key="plugins.generic.thesis.form.supervisorEmailValid">A valid supervisor's email is required.</message>
 
+	<message key="plugins.generic.thesis.enabled">The Thesis Plugin has been enabled.</message>
+	<message key="plugins.generic.thesis.disabled">The Thesis Plugin has been disabled.</message>
 </locale>

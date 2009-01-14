@@ -721,6 +721,10 @@ ul.filter li {
 	display: inline;
 }
 
+li.pluginManaged { 
+	color: green; 
+}
+
 div.separator {
 	width: 100%;
 	margin-top: 1em;
