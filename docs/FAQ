@@ -263,3 +263,23 @@ A: OJS supports indexing of non-text files via external conversion applications.
 A: The only reconfiguration that is required after a change in the site URL is
    to update the value of the "base_url" configuration setting in
    config.inc.php.
+   
+   -----------------------------------------------------------------------------
+
+   4) How can I remove "index.php" from the URLs in OJS?
+
+A: OJS uses a REST-style URL syntax for all of its links.  To force OJS to remove the
+   "index.php" portion of all URLs, edit config.inc.php and set "restful_urls" to "On".
+   
+   In addition, your server will have to support URL rewriting in order to recognize
+   the new URLs.  Apache servers use the mod_rewrite plugin, which must be enabled
+   in your httpd.conf, and the following section added to the correct section of either
+   your httpd.conf or an .htaccess file (preferred) in your OJS root directory (the same
+   location as config.inc.php):
+   
+   <IfModule mod_rewrite.c>
+   RewriteEngine on
+   RewriteCond %{REQUEST_FILENAME} !-d
+   RewriteCond %{REQUEST_FILENAME} !-f
+   RewriteRule ^(.*)$ index.php/$1 [QSA,L]
+  </IfModule>

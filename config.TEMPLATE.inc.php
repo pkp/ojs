@@ -73,6 +73,11 @@ disable_path_info = Off
 ; base_url[myJournal] = http://www.myUrl.com/myJournal
 ; base_url[myOtherJournal] = http://myOtherJournal.myUrl.com
 
+; Generate RESTful URLs using mod_rewrite.  This requires the
+; rewrite directive to be enabled in your .htaccess or httpd.conf.
+; See README for more details.
+restful_urls = Off
+
 ;;;;;;;;;;;;;;;;;;;;;
 ; Database Settings ;
 ;;;;;;;;;;;;;;;;;;;;;
@@ -223,7 +228,7 @@ allowed_html = "<a> <em> <strong> <cite> <code> <ul> <ol> <li> <dl> <dt> <dd> <b
 ;implicit_auth_header_phone = HTTP_TDL_TELEPHONENUMBER
 ;implicit_auth_header_initials = HTTP_TDL_METADATA_INITIALS
 ;implicit_auth_header_mailing_address = HTTP_TDL_METADATA_TDLHOMEPOSTALADDRESS
-;implicit_auth_header_uin = HTTP_TDL_TDLUID 
+;implicit_auth_header_uin = HTTP_TDL_TDLUID
 
 ; A space delimited list of uins to make admin
 ;implicit_auth_admin_list = "100000040@tdl.org 85B7FA892DAA90F7@utexas.edu 100000012@tdl.org"
