@@ -16,13 +16,12 @@
 
 
 class SectionHandler extends ManagerHandler {
-
 	/**
 	 * Display a list of the sections within the current journal.
 	 */
 	function sections() {
 		parent::validate();
-		parent::setupTemplate(true);
+		SectionHandler::setupTemplate();
 
 		$journal = &Request::getJournal();
 		$rangeInfo =& PKPHandler::getRangeInfo('sections');
@@ -49,7 +48,7 @@ class SectionHandler extends ManagerHandler {
 	 */
 	function editSection($args = array()) {
 		parent::validate();
-		parent::setupTemplate(true);
+		SectionHandler::setupTemplate();
 
 		import('manager.form.SectionForm');
 
@@ -93,7 +92,7 @@ class SectionHandler extends ManagerHandler {
 			Request::redirect(null, null, 'sections');
 
 		} else {
-			parent::setupTemplate(true);
+			SectionHandler::setupTemplate();
 			$sectionForm->display();
 		}
 	}
@@ -135,5 +134,9 @@ class SectionHandler extends ManagerHandler {
 		Request::redirect(null, null, 'sections');
 	}
 
+	function setupTemplate() {
+		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_PKP_READER));
+		parent::setupTemplate(true);
+	}
 }
 ?>
