@@ -55,7 +55,7 @@
 {else}
 	<tr>
 		<td align="left">{page_info iterator=$memberships}</td>
-		<td align="right">{page_links anchor="membership" name="membership" iterator=$memberships}</td>
+		<td align="right">{page_links anchor="membership" name="memberships" iterator=$memberships}</td>
 	</tr>
 {/if}
 </table>
