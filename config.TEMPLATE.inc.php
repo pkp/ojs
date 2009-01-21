@@ -75,7 +75,7 @@ disable_path_info = Off
 
 ; Generate RESTful URLs using mod_rewrite.  This requires the
 ; rewrite directive to be enabled in your .htaccess or httpd.conf.
-; See README for more details.
+; See FAQ for more details.
 restful_urls = Off
 
 ;;;;;;;;;;;;;;;;;;;;;
