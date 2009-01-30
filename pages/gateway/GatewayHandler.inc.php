@@ -25,6 +25,7 @@ class GatewayHandler extends PKPHandler {
 
 	function lockss() {
 		parent::validate();
+		parent::setupTemplate();
 
 		$journal = &Request::getJournal();
 		$templateMgr = &TemplateManager::getManager();

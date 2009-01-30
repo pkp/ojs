@@ -90,10 +90,10 @@ class ReviewFormHandler extends ManagerHandler {
 		$journal =& Request::getJournal();
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
 		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, $journal->getJournalId());
-
 		if ($reviewFormId != null && (!isset($reviewForm) || $reviewForm->getCompleteCount() != 0 || $reviewForm->getIncompleteCount() != 0)) {
 			Request::redirect(null, null, 'reviewForms');
 		}
+		ReviewFormHandler::setupTemplate(true, $reviewForm);
 
 		import('manager.form.ReviewFormForm');
 		// FIXME: Need construction by reference or validation always fails on PHP 4.x

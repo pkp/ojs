@@ -137,6 +137,7 @@ class StatisticsHandler extends ManagerHandler {
 
 	function report($args) {
 		parent::validate();
+		parent::setupTemplate();
 
 		$journal =& Request::getJournal();
 

@@ -42,6 +42,7 @@ class DonationsHandler extends PKPHandler {
 	
 	function thankYou( $args ) {
 		$templateMgr =& TemplateManager::getManager();
+		parent::setupTemplate();
 		$journal =& Request::getJournal();
 		
 		$templateMgr->assign(array(
