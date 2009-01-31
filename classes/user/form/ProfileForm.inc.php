@@ -111,7 +111,7 @@ class ProfileForm extends Form {
 		$notificationStatusDao = &DAORegistry::getDAO('NotificationStatusDAO');
 		$userSettingsDao = &DAORegistry::getDAO('UserSettingsDAO');
 
-		$journals = &$journalDao->getJournals();
+		$journals = &$journalDao->getEnabledJournals();
 		$journals = &$journals->toArray();
 
 		foreach ($journals as $thisJournal) {
@@ -122,7 +122,7 @@ class ProfileForm extends Form {
 			}
 		}
 
-		$journals = &$journalDao->getJournals();
+		$journals = &$journalDao->getEnabledJournals();
 		$journals = &$journals->toArray();
 		$journalNotifications = &$notificationStatusDao->getJournalNotifications($user->getUserId());
 
@@ -288,7 +288,7 @@ class ProfileForm extends Form {
 			}
 		}
 
-		$journals = &$journalDao->getJournals();
+		$journals = &$journalDao->getEnabledJournals();
 		$journals = &$journals->toArray();
 		$journalNotifications = $notificationStatusDao->getJournalNotifications($user->getUserId());
 
@@ -306,7 +306,7 @@ class ProfileForm extends Form {
 		$openAccessNotify = Request::getUserVar('openAccessNotify');
 
 		$userSettingsDao = &DAORegistry::getDAO('UserSettingsDAO');
-		$journals = &$journalDao->getJournals();
+		$journals = &$journalDao->getEnabledJournals();
 		$journals = &$journals->toArray();
 
 		foreach ($journals as $thisJournal) {
