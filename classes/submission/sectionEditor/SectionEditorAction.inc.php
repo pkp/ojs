@@ -125,7 +125,7 @@ class SectionEditorAction extends Action {
 			$journal = &Request::getJournal();
 			$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 			$settings = &$settingsDao->getJournalSettings($journal->getJournalId());
-			if (isset($settings['numWeeksPerReview'])) SectionEditorAction::setDueDate($sectionEditorSubmission->getArticleId(), $reviewAssignment->getReviewId(), null, $settings['numWeeksPerReview']);
+			if (isset($settings['numWeeksPerReview'])) SectionEditorAction::setDueDate($sectionEditorSubmission->getArticleId(), $reviewAssignment->getReviewId(), null, $settings['numWeeksPerReview'], false);
 
 			// Add log
 			import('article.log.ArticleLog');
@@ -539,8 +539,9 @@ class SectionEditorAction extends Action {
 	 * @param $reviewId int
 	 * @param $dueDate string
 	 * @param $numWeeks int
+	 * @param $logEntry boolean
 	 */
-	function setDueDate($articleId, $reviewId, $dueDate = null, $numWeeks = null) {
+	function setDueDate($articleId, $reviewId, $dueDate = null, $numWeeks = null, $logEntry = false) {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$user = &Request::getUser();
@@ -571,23 +572,25 @@ class SectionEditorAction extends Action {
 			$reviewAssignment->stampModified();
 			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 
-			// Add log
-			import('article.log.ArticleLog');
-			import('article.log.ArticleEventLogEntry');
-			ArticleLog::logEvent(
-				$articleId,
-				ARTICLE_LOG_REVIEW_SET_DUE_DATE,
-				ARTICLE_LOG_TYPE_REVIEW,
-				$reviewAssignment->getReviewId(),
-				'log.review.reviewDueDateSet',
-				array(
-					'reviewerName' => $reviewer->getFullName(),
-					'dueDate' => strftime(Config::getVar('general', 'date_format_short'),
-					strtotime($reviewAssignment->getDateDue())),
-					'articleId' => $articleId,
-					'round' => $reviewAssignment->getRound()
-				)
-			);
+			if ($logEntry) {
+				// Add log
+				import('article.log.ArticleLog');
+				import('article.log.ArticleEventLogEntry');
+				ArticleLog::logEvent(
+					$articleId,
+					ARTICLE_LOG_REVIEW_SET_DUE_DATE,
+					ARTICLE_LOG_TYPE_REVIEW,
+					$reviewAssignment->getReviewId(),
+					'log.review.reviewDueDateSet',
+					array(
+						'reviewerName' => $reviewer->getFullName(),
+						'dueDate' => strftime(Config::getVar('general', 'date_format_short'),
+						strtotime($reviewAssignment->getDateDue())),
+						'articleId' => $articleId,
+						'round' => $reviewAssignment->getRound()
+					)
+				);
+			}
 		}
 	}
 
