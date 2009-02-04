@@ -159,7 +159,7 @@ function checkEditorAssignments() {
 
 <h3>{translate key="user.role.sectionEditors"}</h3>
 {url|assign:"sectionEditorsUrl" op="people" path="sectionEditors"|to_array}
-<p><span class="instruct">{translate key="manager.section.sectionEditorInstructions" sectionEditorsUrl=$sectionEditorsUrl}</span></p>
+<p><span class="instruct">{translate key="manager.section.sectionEditorInstructions"}</span></p>
 <h4>{translate key="manager.sections.unassigned"}</h4>
 
 <table width="100%" class="listing" id="unassignedSectionEditors">
