@@ -248,16 +248,16 @@ class ArticleSearch {
 				$publishedArticleCache[$articleId] = &$publishedArticleDao->getPublishedArticleByArticleId($articleId);
 				$articleCache[$articleId] = &$articleDao->getArticle($articleId);
 			}
-			unset($article);
+			unset($article, $publishedArticle);
 			$article = &$articleCache[$articleId];
 			$publishedArticle = &$publishedArticleCache[$articleId];
 
-			$sectionId = $article->getSectionId();
-			if (!isset($sectionCache[$sectionId])) {
-				$sectionCache[$sectionId] = &$sectionDao->getSection($sectionId);
-			}
-
 			if ($publishedArticle && $article) {
+				$sectionId = $article->getSectionId();
+				if (!isset($sectionCache[$sectionId])) {
+					$sectionCache[$sectionId] =& $sectionDao->getSection($sectionId);
+				}
+
 				// Get the journal, storing in cache if necessary.
 				$journalId = $article->getJournalId();
 				if (!isset($journalCache[$journalId])) {
