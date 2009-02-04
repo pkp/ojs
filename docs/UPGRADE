@@ -241,21 +241,13 @@ Additional notes regarding migration:
       numerous revisions and enhancements to these components in OJS 2
     - Migrated subscription types are given a 12-month duration and public
       visibility by default -- these settings can be modified post-migration
-    - OJS 2 currently does not support per-issue ordering of sections. If the
-      ordering of the sections in your issues appears incorrect after importing,
-      adjust the section ordering in Journal Management (all issues will have
-      the same section ordering)
 
 
 OJS 1.x features that are currently not supported in 2.x:
 
-    - OJS 2 currently only includes an English localization (see the README for
-      information on producing a translation for other languages)
-    - Editorial/review board support is currently not supported, but may appear
-      in a future release
-    - Distinct "Book/Media Review" listings are not currently and are not likely
-      to ever be supported
-    - LOCKSS support is currently unavailable, but will likely appear in a
-      future release
-    - The journal statistics component is currently not implemented, but will be
-      added to a future release
+    - Distinct "Book/Media Review" listings are not currently and are not
+      likely to ever be supported
+
+If you encounter DB errors (e.g. "DB Error: Table 'journals' doesn't exist"),
+you may need to temporarily remove the database connection code from the bottom
+of include/db.php in the OJS1 installation.
