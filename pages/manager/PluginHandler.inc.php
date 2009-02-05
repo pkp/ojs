@@ -72,6 +72,7 @@ class PluginHandler extends ManagerHandler {
 		parent::validate();
 
 		$plugins =& PluginRegistry::loadCategory($category);
+		$message = null;
 		if (!isset($plugins[$plugin]) || !$plugins[$plugin]->manage($verb, $args, $message)) {
 			if ($message) {
 				$templateMgr =& TemplateManager::getManager();
