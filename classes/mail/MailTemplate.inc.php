@@ -418,7 +418,7 @@ class MailTemplate extends Mail {
 			}
 		}
 
-		if (Request::getUserVar('addAttachment')) {
+		if (Request::getUserVar('addAttachment') && Request::getUserVar('newAttachment') != '') {
 			$user = &Request::getUser();
 
 			$this->persistAttachments[] = $temporaryFileManager->handleUpload('newAttachment', $user->getUserId());
