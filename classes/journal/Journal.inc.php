@@ -175,14 +175,6 @@ class Journal extends DataObject {
 	function getJournalId() {
 		return $this->getData('journalId');
 	}
-	
-	/**
-	 * Get ID of journal (for generic calls in PKP WAL).
-	 * @return int
-	 */
-	function getId() {
-		return $this->getData('journalId');
-	}
 
 	/**
 	 * Set ID of journal.

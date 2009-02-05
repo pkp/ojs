@@ -53,17 +53,6 @@ class Role extends DataObject {
 	function getRolePath() {
 		return RoleDAO::getRolePath($this->getData('roleId'));
 	}
-	
-	/**
-	 * Get the URL to the home page for this role.
-	 * @return String the URL
-	 */
-	function getRoleHomePage() {
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journal =& $journalDao->getJournal($this->getJournalId());
-
-		return Request::url($journal->getPath(), $this->getRolePath());
-	}
 
 	//
 	// Get/set methods
