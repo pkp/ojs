@@ -132,7 +132,7 @@ class ArticleSearch {
 
 		foreach ($keyword['+'] as $phrase) {
 			$results = &ArticleSearch::_getMergedPhraseResults($journal, $phrase, $type, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours);
-			if ($mergedResults == null) {
+			if ($mergedResults === null) {
 				$mergedResults = $results;
 			} else {
 				foreach ($mergedResults as $articleId => $count) {
