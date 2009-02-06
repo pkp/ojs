@@ -35,41 +35,49 @@ class UserHandler extends PKPHandler {
 
 		$journal = &Request::getJournal();
 		$templateMgr->assign('helpTopicId', 'user.userHome');
+		
+		$user =& Request::getUser();
+		$userId = $user->getUserId();
+		
+		$setupIncomplete = array();
+		$submissionsCount = array();
+		$isValid = array();
 
-		if ($journal == null) {
-			// Prevent variable clobbering
+		if ($journal == null) { // Curently at site level
 			unset($journal);
 
 			// Show roles for all journals
 			$journalDao = &DAORegistry::getDAO('JournalDAO');
 			$journals = &$journalDao->getJournals();
 
-			$allJournals = array();
-			$journalsToDisplay = array();
-			$rolesToDisplay = array();
-
 			// Fetch the user's roles for each journal
 			while ($journal =& $journals->next()) {
-				$roles =& $roleDao->getRolesByUserId($session->getUserId(), $journal->getJournalId());
-				if (!empty($roles)) {
-					$journalsToDisplay[] = $journal;
-					$rolesToDisplay[$journal->getJournalId()] = &$roles;
+				$journalId = $journal->getJournalId();
+				
+				// Determine if journal setup is incomplete, to provide a message for JM
+				$setupIncomplete[$journalId] = UserHandler::checkCompleteSetup($journal);
+							
+				if ($journal->getEnabled()) {
+					$userJournals[] =& $journal;
+					UserHandler::getRoleDataForJournal($userId, $journalId, $submissionsCount, $isValid);
 				}
-				if ($journal->getEnabled()) $allJournals[] =& $journal;
+
 				unset($journal);
 			}
 
-			$templateMgr->assign_by_ref('allJournals', $allJournals);
+			$templateMgr->assign_by_ref('userJournals', $userJournals);
 			$templateMgr->assign('showAllJournals', 1);
-			$templateMgr->assign_by_ref('userJournals', $journalsToDisplay);
 
 		} else { // Currently within a journal's context.
-			// Show roles for the currently selected journal
-			$roles =& $roleDao->getRolesByUserId($session->getUserId(), $journal->getJournalId());
-
-			$journal =& Request::getJournal();
-			$user =& Request::getUser();
-
+			$journalId = $journal->getJournalId();
+			
+			// Determine if journal setup is incomplete, to provide a message for JM
+			$setupIncomplete[$journalId] = UserHandler::checkCompleteSetup($journal);
+			
+			$userJournals = array($journal);
+			
+			UserHandler::getRoleDataForJournal($userId, $journalId, $submissionsCount, $isValid);
+			
 			import('payment.ojs.OJSPaymentManager');
 			$paymentManager =& OJSPaymentManager::getManager();
 			$membershipEnabled = $paymentManager->membershipEnabled();
@@ -95,13 +103,79 @@ class UserHandler extends PKPHandler {
 			$templateMgr->assign('allowRegAuthor', $journal->getSetting('allowRegAuthor'));
 			$templateMgr->assign('allowRegReviewer', $journal->getSetting('allowRegReviewer'));
 
-			$rolesToDisplay[$journal->getJournalId()] = &$roles;
-			$templateMgr->assign_by_ref('userJournal', $journal);
+			$templateMgr->assign_by_ref('userJournals', $userJournals);
 		}
 
-		$templateMgr->assign('isSiteAdmin', $roleDao->getRole(0, $session->getUserId(), ROLE_ID_SITE_ADMIN));
-		$templateMgr->assign('userRoles', $rolesToDisplay);
+		$templateMgr->assign('isValid', $isValid);
+		$templateMgr->assign('submissionsCount', $submissionsCount);
+		$templateMgr->assign('setupIncomplete', $setupIncomplete); 
+		$templateMgr->assign('isSiteAdmin', $roleDao->getRole(0, $userId, ROLE_ID_SITE_ADMIN));
 		$templateMgr->display('user/index.tpl');
+	}
+	
+	/**
+	 * Gather information about a user's role within a journal.
+	 * @param $userId int
+	 * @param $journalId int 
+	 * @param $submissionsCount array reference
+	 * @param $isValid array reference
+	
+	 */
+	function getRoleDataForJournal($userId, $journalId, &$submissionsCount, &$isValid) {
+		if (Validation::isJournalManager($journalId)) {
+			$journalDao = &DAORegistry::getDAO('JournalDAO');
+			$isValid["JournalManager"][$journalId] = true;
+		}
+		if (Validation::isSubscriptionManager($journalId)) {
+			$isValid["SubscriptionManager"][$journalId] = true;
+		}
+		if (Validation::isAuthor($journalId)) {
+			$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
+			$submissionsCount["Author"][$journalId] = $authorSubmissionDao->getSubmissionsCount($userId, $journalId);
+			$isValid["Author"][$journalId] = true;
+		}
+		if (Validation::isCopyeditor($journalId)) {
+			$copyeditorSubmissionDao =& DAORegistry::getDAO('CopyeditorSubmissionDAO');
+			$submissionsCount["Copyeditor"][$journalId] = $copyeditorSubmissionDao->getSubmissionsCount($userId, $journalId);
+			$isValid["Copyeditor"][$journalId] = true;
+		}
+		if (Validation::isLayoutEditor($journalId)) {
+			$layoutEditorSubmissionDao =& DAORegistry::getDAO('LayoutEditorSubmissionDAO');
+			$submissionsCount["LayoutEditor"][$journalId] = $layoutEditorSubmissionDao->getSubmissionsCount($userId, $journalId);
+			$isValid["LayoutEditor"][$journalId] = true;
+		}
+		if (Validation::isEditor($journalId)) {
+			$editorSubmissionDao =& DAORegistry::getDAO('EditorSubmissionDAO');
+			$submissionsCount["Editor"][$journalId] = $editorSubmissionDao->getEditorSubmissionsCount($journalId);
+			$isValid["Editor"][$journalId] = true;
+		}
+		if (Validation::isSectionEditor($journalId)) {
+			$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+			$submissionsCount["SectionEditor"][$journalId] = $sectionEditorSubmissionDao->getSectionEditorSubmissionsCount($userId, $journalId);
+			$isValid["SectionEditor"][$journalId] = true;
+		}
+		if (Validation::isProofreader($journalId)) {
+			$proofreaderSubmissionDao =& DAORegistry::getDAO('ProofreaderSubmissionDAO');
+			$submissionsCount["Proofreader"][$journalId] = $proofreaderSubmissionDao->getSubmissionsCount($userId, $journalId);
+			$isValid["Proofreader"][$journalId] = true;
+		}
+		if (Validation::isReviewer($journalId)) {
+			$reviewerSubmissionDao =& DAORegistry::getDAO('ReviewerSubmissionDAO');
+			$submissionsCount["Reviewer"][$journalId] = $reviewerSubmissionDao->getSubmissionsCount($userId, $journalId);
+			$isValid["Reviewer"][$journalId] = true;
+		}
+	}
+	
+	/**
+	 * Determine if the journal's setup has been sufficiently completed.
+	 * @param $journal Object 
+	 * @return boolean True iff setup is incomplete
+	 */
+	function checkCompleteSetup($journal) {
+		if($journal->getJournalInitials() == "" || $journal->getSetting('contactEmail') == "" || 
+		   $journal->getSetting('contactName') == "" || $journal->getLocalizedSetting('abbreviation') == "") {
+			return true;
+		} else return false;
 	}
 
 	/**
@@ -195,6 +269,7 @@ class UserHandler extends PKPHandler {
 	 */
 	function setupTemplate($subclass = false) {
 		parent::setupTemplate();
+		Locale::requireComponents(array(LOCALE_COMPONENT_OJS_AUTHOR, LOCALE_COMPONENT_OJS_EDITOR, LOCALE_COMPONENT_OJS_MANAGER));
 		$templateMgr = &TemplateManager::getManager();
 		if ($subclass) {
 			$templateMgr->assign('pageHierarchy', array(array(Request::url(null, 'user'), 'navigation.user')));
