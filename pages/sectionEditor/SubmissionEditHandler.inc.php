@@ -29,8 +29,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 
-		// FIXME? For comments.readerComments under Status
-		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_READER));
+		// FIXME? For comments.readerComments under Status and
+		// author.submit.selectPrincipalContact under Metadata
+		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_OJS_AUTHOR));
 
 		parent::setupTemplate(true, $articleId);
 
