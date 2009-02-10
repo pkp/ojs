@@ -120,6 +120,7 @@ class LanguageAction {
 		$wrapper =& FileWrapper::wrapper($languagePackUrl);
 		if (!$wrapper->open()) {
 			$errors[] = Locale::translate('admin.languages.download.cannotOpen');
+			return false;
 		}
 
 		stream_set_blocking($pipes[0], 0);
