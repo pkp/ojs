@@ -62,8 +62,8 @@ function checkEditorAssignments() {
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
 		<td width="80%" class="value">
-			{if $sectionId}{url|assign:"sectionFormUrl" op="editSection" path=$sectionId}
-			{else}{url|assign:"sectionFormUrl" op="createSection" path=$sectionId}
+			{if $sectionId}{url|assign:"sectionFormUrl" op="editSection" path=$sectionId escape=false}
+			{else}{url|assign:"sectionFormUrl" op="createSection" path=$sectionId escape=false}
 			{/if}
 			{form_language_chooser form="section" url=$sectionFormUrl}
 			<span class="instruct">{translate key="form.formLanguage.description"}</span>

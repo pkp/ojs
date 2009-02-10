@@ -39,7 +39,7 @@ function moveAuthor(dir, authorIndex) {
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
 		<td width="80%" class="value">
-			{url|assign:"submitFormUrl" op="submit" path="2" articleId=$articleId}
+			{url|assign:"submitFormUrl" op="submit" path="2" articleId=$articleId escape=false}
 			{* Maintain localized author info across requests *}
 			{foreach from=$authors key=authorIndex item=author}
 				{if $currentJournal->getSetting('requireAuthorCompetingInterests')}
