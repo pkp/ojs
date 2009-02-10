@@ -45,7 +45,7 @@ function doSubmit() {
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
 		<td width="80%" class="value">
-			{url|assign:"settingsUrl" op="editJournal" path=$journalId}
+			{url|assign:"settingsUrl" op="editJournal" path=$journalId escape=false}
 			{form_language_chooser form="journal" url=$settingsUrl}
 			<span class="instruct">{translate key="form.formLanguage.description"}</span>
 		</td>

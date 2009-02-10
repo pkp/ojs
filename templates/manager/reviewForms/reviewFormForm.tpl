@@ -31,8 +31,8 @@
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
 		<td width="80%" class="value">
-			{if $reviewFormId}{url|assign:"reviewFormFormUrl" op="editReviewForm" path=$reviewFormId}
-			{else}{url|assign:"reviewFormFormUrl" op="createReviewForm"}
+			{if $reviewFormId}{url|assign:"reviewFormFormUrl" op="editReviewForm" path=$reviewFormId escape=false}
+			{else}{url|assign:"reviewFormFormUrl" op="createReviewForm" escape=false}
 			{/if}
 			{form_language_chooser form="reviewFormForm" url=$reviewFormFormUrl}
 			<span class="instruct">{translate key="form.formLanguage.description"}</span>

@@ -40,8 +40,8 @@ function togglePossibleResponses(newValue, multipleResponsesElementTypesString) 
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
 		<td width="80%" class="value">
-			{if $reviewFormElementId}{url|assign:"reviewFormElementFormUrl" op="editReviewFormElement" path=$reviewFormId|to_array:$reviewFormElementId}
-			{else}{url|assign:"reviewFormElementFormUrl" op="createReviewFormElement"}
+			{if $reviewFormElementId}{url|assign:"reviewFormElementFormUrl" op="editReviewFormElement" path=$reviewFormId|to_array:$reviewFormElementId escape=false}
+			{else}{url|assign:"reviewFormElementFormUrl" op="createReviewFormElement" escape=false}
 			{/if}
 			{form_language_chooser form="reviewFormElementForm" url=$reviewFormElementFormUrl}
 			<span class="instruct">{translate key="form.formLanguage.description"}</span>

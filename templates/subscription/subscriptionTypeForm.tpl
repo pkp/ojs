@@ -35,8 +35,8 @@
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
 		<td width="80%" class="value">
-			{if $typeId}{url|assign:"subscriptionTypeUrl" op="editSubscriptionType" path=$typeId}
-			{else}{url|assign:"subscriptionTypeUrl" op="createSubscriptionType"}
+			{if $typeId}{url|assign:"subscriptionTypeUrl" op="editSubscriptionType" path=$typeId escape=false}
+			{else}{url|assign:"subscriptionTypeUrl" op="createSubscriptionType" escape=false}
 			{/if}
 			{form_language_chooser form="subscriptionType" url=$subscriptionTypeUrl}
 			<span class="instruct">{translate key="form.formLanguage.description"}</span>

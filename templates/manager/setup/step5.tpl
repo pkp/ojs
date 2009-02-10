@@ -99,7 +99,7 @@ function prepBlockFields() {
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
 		<td width="80%" class="value">
-			{url|assign:"setupFormUrl" op="setup" path="5"}
+			{url|assign:"setupFormUrl" op="setup" path="5" escape=false}
 			{form_language_chooser form="setupForm" url=$setupFormUrl}
 			<span class="instruct">{translate key="form.formLanguage.description"}</span>
 		</td>

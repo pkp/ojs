@@ -31,8 +31,8 @@
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
 		<td width="80%" class="value">
-			{if $typeId}{url|assign:"announcementUrl" op="editAnnouncement" path=$announcementId}
-			{else}{url|assign:"announcementUrl" op="createAnnouncement"}
+			{if $typeId}{url|assign:"announcementUrl" op="editAnnouncement" path=$announcementId escape=false}
+			{else}{url|assign:"announcementUrl" op="createAnnouncement" escape=false}
 			{/if}
 			{form_language_chooser form="announcementForm" url=$announcementUrl}
 			<span class="instruct">{translate key="form.formLanguage.description"}</span>

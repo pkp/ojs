@@ -32,8 +32,8 @@
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
 		<td width="80%" class="value">
-			{if $group}{url|assign:"groupFormUrl" op="editGroup" path=$group->getGroupId()}
-			{else}{url|assign:"groupFormUrl" op="createGroup"}
+			{if $group}{url|assign:"groupFormUrl" op="editGroup" path=$group->getGroupId() escape=false}
+			{else}{url|assign:"groupFormUrl" op="createGroup" escape=false}
 			{/if}
 			{form_language_chooser form="groupForm" url=$groupFormUrl}
 			<span class="instruct">{translate key="form.formLanguage.description"}</span>

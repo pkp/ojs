@@ -18,7 +18,7 @@
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
 		<td width="80%" class="value">
-			{url|assign:"formUrl" path=$articleId}
+			{url|assign:"formUrl" path=$articleId escape=false}
 			<form name="metadata" action="{$formUrl}" method="post">
 			{form_language_chooser form="metadata" url=$formUrl}
 			<span class="instruct">{translate key="form.formLanguage.description"}</span>
