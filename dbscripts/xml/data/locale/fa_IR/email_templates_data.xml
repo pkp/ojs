@@ -1,48 +1,50 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<!DOCTYPE data SYSTEM "../../../../../lib/pkp/dtd/xmlData.dtd">
+<!DOCTYPE data SYSTEM "../../../dtd/xmldata.dtd">
 <!--
   * email_templates_data.xml
   *
   * Copyright (c) 2003-2008 John Willinsky
- * تحت مجوزGNU GPL v2 منتشرشد. برای دیدن متن کامل فایل docs/COPYING را ببینید.
+  * تحت مجوزGNU GPL v2 منتشرشد. برای دیدن متن کامل فایل docs/COPYING را ببینید.
   *
   * داده های تمپلیت های ایمیل
   *
   * $Id$
-  --><data>
-  <table name="email_templates_default_data" >
-    <field_default name="locale" >fa_IR</field_default>
-<!--
+  -->
+<data>
+	<table name="email_templates_default_data" >
+		<field_default name="locale" >fa_IR</field_default>
+		<!--
 		  *
 		  * عمومی
 		  *
-		  -->    <row>
-      <field name="email_key" >PASSWORD_RESET_CONFIRM</field>
-      <field name="subject" >تائیدیه دوباره تنظیم کردن رمزعبور</field>
-      <field name="body" >درخواستی مبنی بر تنظیم دوباره رمزعبور شما مربوط به وب سایت &lt;$siteTitle> به ما رسیده است.
+		  -->
+		<row>
+			<field name="email_key" >PASSWORD_RESET_CONFIRM</field>
+			<field name="subject" >تائیدیه دوباره تنظیم کردن رمزعبور</field>
+			<field name="body" >درخواستی مبنی بر تنظیم دوباره رمزعبور شما مربوط به وب سایت &lt;$siteTitle> به ما رسیده است.
 
 لطفا چنانچه شما این درخواست را نفرستاده اید، به این ایمیل توجهی نکنید، در این صورت رمز عبور شما تغییری نخواهد کرد. اگر مایل به تنظیم دوباره رمزعبور خود هستید، برروی پیوند زیر کلیک نمائید.
 
 تنظیم مجدد رمز عبور: {$url}
 
 {$principalContactSignature}</field>
-      <field name="description" >This email is sent to a registered user when they indicate that they have forgotten their password or are unable to login. It provides a URL they can follow to reset their password.</field>
-    </row>
-    <row>
-      <field name="email_key" >PASSWORD_RESET</field>
-      <field name="subject" >رمز عبور دوباره تنظیم شد</field>
-      <field name="body" >رمزعبور شما برای استفاده از وب سایت {$journalName}، دوباره تنظیم شد. لطفا این کلمه کاربری و رمز عبور را محفوظ نگاه دارید، زیرا برای کارکردن با وب سایت مجله لازم است.
+			<field name="description" >This email is sent to a registered user when they indicate that they have forgotten their password or are unable to login. It provides a URL they can follow to reset their password.</field>
+		</row>
+		<row>
+			<field name="email_key" >PASSWORD_RESET</field>
+			<field name="subject" >رمز عبور دوباره تنظیم شد</field>
+			<field name="body" >رمزعبور شما برای استفاده از وب سایت {$journalName}، دوباره تنظیم شد. لطفا این کلمه کاربری و رمز عبور را محفوظ نگاه دارید، زیرا برای کارکردن با وب سایت مجله لازم است.
 
 نام کاربری شما: {$username}
 رمز عبور جدید شما: {$password}
 
 {$principalContactSignature}</field>
-      <field name="description" >This email is sent to a registered user when they have successfully reset their password following the process described in the PASSWORD_RESET_CONFIRM email.</field>
-    </row>
-    <row>
-      <field name="email_key" >USER_REGISTER</field>
-      <field name="subject" >ثبت نام کاربر جدید</field>
-      <field name="body" >برای ثبت نام در {$journalName} از شما سپاسگزارم. لطفا نام کاربری و رمز عبور خود را که برای ورود به وب سایت این مجله مورد نیاز می باشد به خاطر بسپارید.
+			<field name="description" >This email is sent to a registered user when they have successfully reset their password following the process described in the PASSWORD_RESET_CONFIRM email.</field>
+		</row>
+		<row>
+			<field name="email_key" >USER_REGISTER</field>
+			<field name="subject" >ثبت نام کاربر جدید</field>
+			<field name="body" >برای ثبت نام در {$journalName} از شما سپاسگزارم. لطفا نام کاربری و رمز عبور خود را که برای ورود به وب سایت این مجله مورد نیاز می باشد به خاطر بسپارید.
 
 نام کاربری: {$username}
 رمز عبور: {$password}
