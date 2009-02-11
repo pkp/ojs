@@ -78,8 +78,6 @@ class DOAJExportDom {
 
 		XMLCustomWriter::createChildWithText($doc, $root, 'issue',  $issue->getNumber(), false);
 
-		XMLCustomWriter::createChildWithText($doc, $root, 'doi',  $article->getDoi(), false);
-
 		/** --- FirstPage / LastPage (from PubMed plugin)---
 		 * there is some ambiguity for online journals as to what
 		 * "page numbers" are; for example, some journals (eg. JMIR)
@@ -95,6 +93,8 @@ class DOAJExportDom {
 			XMLCustomWriter::createChildWithText($doc, $root, 'startPage', $matches[1]);
 			XMLCustomWriter::createChildWithText($doc, $root, 'endPage', $matches[1]);
 		}
+
+		XMLCustomWriter::createChildWithText($doc, $root, 'doi',  $article->getDoi(), false);
 
 		/* --- Article's publication date, volume, issue, DOI --- */
 		XMLCustomWriter::createChildWithText($doc, $root, 'publisherRecordId',  $article->getPubId(), false);
