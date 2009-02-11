@@ -34,6 +34,10 @@ class ManagerHandler extends PKPHandler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign_by_ref('roleSettings', ManagerHandler::retrieveRoleAssignmentPreferences($journal->getJournalId()));
 		$templateMgr->assign('subscriptionsEnabled', $subscriptionsEnabled);
+
+		$session = &Request::getSession();
+		$session->unsetSessionVar('enrolmentReferrer');
+
 		$templateMgr->assign('announcementsEnabled', $announcementsEnabled);
 		$templateMgr->assign('helpTopicId','journal.index');
 		$templateMgr->display('manager/index.tpl');
