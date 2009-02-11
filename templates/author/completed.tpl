@@ -46,10 +46,7 @@
 			</td>
 		{/if}
 		<td align="right">
-			{if $status == STATUS_ARCHIVED}{translate key="submissions.archived"}
-			{elseif $status==STATUS_QUEUED_UNASSIGNED}{translate key="submissions.queuedUnassigned"}
-			{elseif $status==STATUS_QUEUED_EDITING}{translate key="submissions.queuedEditing"}
-			{elseif $status==STATUS_QUEUED_REVIEW}{translate key="submissions.queuedReview"}
+			{if $status==STATUS_ARCHIVED}{translate key="submissions.archived"}
 			{elseif $status==STATUS_PUBLISHED}{print_issue_id articleId="$articleId"}
 			{elseif $status==STATUS_DECLINED}{translate key="submissions.declined"}
 			{/if}
