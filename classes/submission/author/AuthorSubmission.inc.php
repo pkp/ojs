@@ -170,15 +170,27 @@ class AuthorSubmission extends Article {
 		if (empty($editAssignments)) 
 			return (STATUS_QUEUED_UNASSIGNED);
 
-		$decisions = $this->getDecisions();
-		$decision = array_pop($decisions);
-		if (!empty($decision)) {
-			$latestDecision = array_pop($decision);
-			if ($latestDecision['decision'] == SUBMISSION_EDITOR_DECISION_ACCEPT || $latestDecision['decision'] == SUBMISSION_EDITOR_DECISION_DECLINE) {
+		$latestDecision = $this->getMostRecentDecision();
+		if ($latestDecision) {
+			if ($latestDecision == SUBMISSION_EDITOR_DECISION_ACCEPT || $latestDecision == SUBMISSION_EDITOR_DECISION_DECLINE) {
 				return STATUS_QUEUED_EDITING;
 			}
 		}
 		return STATUS_QUEUED_REVIEW;
+	}
+
+	/**
+	 * Get the most recent decision.
+	 * @return int SUBMISSION_EDITOR_DECISION_...
+	 */
+	function getMostRecentDecision() {
+		$decisions = $this->getDecisions();
+		$decision = array_pop($decisions);
+		if (!empty($decision)) {
+			$latestDecision = array_pop($decision);
+			if (isset($latestDecision['decision'])) return $latestDecision['decision'];
+		}
+		return null;
 	}
 
 	//

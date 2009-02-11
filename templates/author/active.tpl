@@ -34,12 +34,23 @@
 			<td><a href="{url op="submission" path=$articleId}" class="action">{if $submission->getArticleTitle()}{$submission->getArticleTitle()|strip_unsafe_html|truncate:60:"..."}{else}{translate key="common.untitled"}{/if}</a></td>
 			<td align="right">
 				{assign var="status" value=$submission->getSubmissionStatus()}
-				{if $status==STATUS_ARCHIVED}{translate key="submissions.archived"}
-				{elseif $status==STATUS_QUEUED_UNASSIGNED}{translate key="submissions.queuedUnassigned"}
-				{elseif $status==STATUS_QUEUED_EDITING}<a href="{url op="submissionEditing" path=$articleId}" class="action">{translate key="submissions.queuedEditing"}</a>
-				{elseif $status==STATUS_QUEUED_REVIEW}<a href="{url op="submissionReview" path=$articleId}" class="action">{translate key="submissions.queuedReview"}</a>
-				{elseif $status==STATUS_PUBLISHED}{translate key="submissions.published"}
-				{elseif $status==STATUS_DECLINED}{translate key="submissions.declined"}
+				{if $status==STATUS_QUEUED_UNASSIGNED}{translate key="submissions.queuedUnassigned"}
+				{elseif $status==STATUS_QUEUED_REVIEW}
+					<a href="{url op="submissionReview" path=$articleId}" class="action">
+						{assign var=decision value=$submission->getMostRecentDecision()}
+						{if $decision == $smarty.const.SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS}{translate key="author.submissions.queuedReviewRevisions"}
+						{elseif $submission->getCurrentRound() > 1}{translate key="author.submissions.queuedReviewSubsequent" round=$submission->getCurrentRound()}
+						{else}{translate key="submissions.queuedReview"}
+						{/if}
+					</a>
+				{elseif $status==STATUS_QUEUED_EDITING}
+					{assign var=proofAssignment value=$submission->getProofAssignment()}
+					<a href="{url op="submissionEditing" path=$articleId}" class="action">
+						{if $submission->getCopyeditorDateAuthorNotified() && !$submission->getCopyeditorDateAuthorCompleted()}{translate key="author.submissions.queuedEditingCopyedit"}
+						{elseif $proofAssignment && $proofAssignment->getDateAuthorNotified() && !$proofAssignment->getDateAuthorCompleted()}{translate key="author.submissions.queuedEditingProofread"}
+						{else}{translate key="submissions.queuedEditing"}
+						{/if}
+					</a>
 				{/if}
 
 				{** Payment related actions *}

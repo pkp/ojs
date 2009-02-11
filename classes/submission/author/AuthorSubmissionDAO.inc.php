@@ -248,7 +248,7 @@ class AuthorSubmissionDAO extends DAO {
 				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
 				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
 			WHERE	a.user_id = ? AND a.journal_id = ? AND ' .
-			($active?'a.status = 1':'(a.status <> 1 AND a.submission_progress = 0)'),
+			($active?('a.status = ' . STATUS_QUEUED):('(a.status <> ' . STATUS_QUEUED . ' AND a.submission_progress = 0)')),
 			array(
 				'title',
 				$primaryLocale,

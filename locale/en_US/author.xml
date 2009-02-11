@@ -36,6 +36,10 @@
 	<message key="author.submit.requestWaiver">Request Waiver</message>
 	<message key="author.submit.qualityForWaiver">Please consider waiving the Article Submission Fee for this article</message>
 	<message key="author.submit.addReasonsForWaiver">Please use the comments box below to indicate why fees should be waived.</message>
+	<message key="author.submissions.queuedReviewSubsequent">In Review Round {$round}</message>
+	<message key="author.submissions.queuedReviewRevisions">In Review: Revisions Required</message>
+	<message key="author.submissions.queuedEditingCopyedit">In Editing: Copyedit Requested</message>
+	<message key="author.submissions.queuedEditingProofread">In Editing: Proofread Requested</message>
 	<message key="author.submissions.uploadCopyeditedVersion">Upload Copyedited Version</message>
 	<message key="author.submissions.proofreadingCorrections">Proofreading Corrections</message>
 	<message key="author.submissions.confirmDelete">Are you sure you want to delete this incomplete submission?</message>

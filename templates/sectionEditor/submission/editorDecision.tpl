@@ -86,7 +86,7 @@
 			<td width="20%">&nbsp;</td>
 			<td width="80%">
 				{translate key="editor.article.resubmitFileForPeerReview"}
-				<input type="submit" name="resubmit" {if !($editorRevisionExists or $authorRevisionExists)}disabled="disabled" {/if}value="{translate key="form.resubmit"}" class="button" />
+				<input type="submit" name="resubmit" {if !($editorRevisionExists or $authorRevisionExists or $reviewVersionExists)}disabled="disabled" {/if}value="{translate key="form.resubmit"}" class="button" />
 			</td>
 		</tr>
 	{elseif $lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT}
