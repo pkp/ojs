@@ -31,6 +31,10 @@ class ManagerHandler extends Handler {
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('subscriptionsEnabled', $subscriptionsEnabled);
+
+		$session = &Request::getSession();
+		$session->unsetSessionVar('enrolmentReferrer');
+
 		$templateMgr->assign('announcementsEnabled', $announcementsEnabled);
 		$templateMgr->assign('helpTopicId','journal.index');
 		$templateMgr->display('manager/index.tpl');
