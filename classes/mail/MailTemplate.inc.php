@@ -57,8 +57,9 @@ class MailTemplate extends Mail {
 	 * @param $locale string locale of the template
 	 * @param $enableAttachments boolean optional Whether or not to enable article attachments in the template
 	 * @param $journal object optional The journal this message relates to
+	 * @param $includeSignature boolean optional
 	 */
-	function MailTemplate($emailKey = null, $locale = null, $enableAttachments = null, $journal = null) {
+	function MailTemplate($emailKey = null, $locale = null, $enableAttachments = null, $journal = null, $includeSignature = true) {
 		parent::Mail();
 		$this->emailKey = isset($emailKey) ? $emailKey : null;
 
@@ -76,7 +77,7 @@ class MailTemplate extends Mail {
 
 		$userSig = '';
 		$user =& Request::getUser();
-		if ($user) {
+		if ($user && $includeSignature) {
 			$userSig = $user->getUserSignature();
 			if (!empty($userSig)) $userSig = "\n" . $userSig;
 		}
