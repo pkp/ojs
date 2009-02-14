@@ -296,8 +296,8 @@ class MetsExportDom {
 		if($article->getArticleSubject() != ''){
 			$modsSubject =& XMLCustomWriter::createElement($doc, 'mods:subject');
 			$modsTopic = XMLCustomWriter::createChildWithText($doc, $modsSubject, 'mods:topic', $article->getArticleSubject());
-			if($article->getSubjectClass() != '')
-				XMLCustomWriter::setAttribute($modsSubject, 'authority', $article->getSubjectClass());
+			if($article->getArticleSubjectClass() != '')
+				XMLCustomWriter::setAttribute($modsSubject, 'authority', $article->getArticleSubjectClass());
 			XMLCustomWriter::appendChild($mods, $modsSubject);
 		}
 		if($article->getArticleCoverageGeo() != ''){
