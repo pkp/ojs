@@ -197,7 +197,6 @@ class ArticleSearchDAO extends DAO {
 	 * @return $keywordId
 	 */
 	function insertObjectKeyword($objectId, $keyword, $position) {
-		// FIXME Cache recently retrieved keywords?
 		$keywordId = $this->insertKeyword($keyword);
 		if ($keywordId === null) return null; // Bug #2324
 		$this->update(
