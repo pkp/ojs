@@ -17,7 +17,7 @@
 {if $pageFooter}
 <br /><br />
 {$pageFooter}
-{else}{strip}{* Include the ISSN as a default footer, if available. *}
+{elseif $currentJournal}{strip}{* Include the ISSN as a default footer, if available. *}
 	{if $currentJournal->getSetting('onlineIssn')}{assign var="issn" value=$currentJournal->getSetting('onlineIssn')}
 	{elseif $currentJournal->getSetting('printIssn')}{assign var="issn" value=$currentJournal->getSetting('printIssn')}
 	{elseif $currentJournal->getSetting('issn')}{assign var="issn" value=$currentJournal->getSetting('issn')}
