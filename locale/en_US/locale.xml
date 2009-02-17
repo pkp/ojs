@@ -203,6 +203,7 @@
 	<message key="journal.journals">Journals</message>
 	<message key="journal.path">Path</message>
 	<message key="journal.journal">Journal</message>
+	<message key="journal.issn">ISSN</message>
 
 	<!-- User -->
 	<message key="user.showAllJournals">Show My Journals</message>
