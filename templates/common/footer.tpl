@@ -17,7 +17,15 @@
 {if $pageFooter}
 <br /><br />
 {$pageFooter}
-{/if}
+{else}{strip}{* Include the ISSN as a default footer, if available. *}
+	{if $currentJournal->getSetting('onlineIssn')}{assign var="issn" value=$currentJournal->getSetting('onlineIssn')}
+	{elseif $currentJournal->getSetting('printIssn')}{assign var="issn" value=$currentJournal->getSetting('printIssn')}
+	{elseif $currentJournal->getSetting('issn')}{assign var="issn" value=$currentJournal->getSetting('issn')}
+	{/if}
+	{if $issn}<br/><br/>
+	        {translate key="journal.issn"}:&nbsp;{$issn|escape}
+	{/if}
+{/strip}{/if}
 {call_hook name="Templates::Common::Footer::PageFooter"}
 </div><!-- content -->
 </div><!-- main -->
