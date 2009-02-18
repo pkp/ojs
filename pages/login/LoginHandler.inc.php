@@ -170,12 +170,20 @@ class LoginHandler extends Handler {
 			$templateMgr->display('user/lostPassword.tpl');
 
 		} else {
-			$site = &Request::getSite();
+			$site =& Request::getSite();
+			$journal =& Request::getJournal();
 
 			// Send email confirming password reset
 			import('mail.MailTemplate');
-			$mail = &new MailTemplate('PASSWORD_RESET_CONFIRM');
-			$mail->setFrom($site->getSiteContactEmail(), $site->getSiteContactName());
+			$mail =& new MailTemplate('PASSWORD_RESET_CONFIRM');
+
+			// Set the sender based on the current context
+			if ($journal) {
+				$email->setFrom($journal->getSetting('supportEmail'), $journal->getSetting('supportName'));
+			} else {
+				$mail->setFrom($site->getSiteContactEmail(), $site->getSiteContactName());
+			}
+
 			$mail->assignParams(array(
 				'url' => Request::url(null, 'login', 'resetPassword', $user->getUsername(), array('confirm' => $hash)),
 				'siteTitle' => $site->getSiteTitle()
@@ -235,10 +243,19 @@ class LoginHandler extends Handler {
 			$userDao->updateUser($user);
 
 			// Send email with new password
-			$site = &Request::getSite();
+			$site =& Request::getSite();
+			$journal =& Request::getJournal();
+
 			import('mail.MailTemplate');
-			$mail = &new MailTemplate('PASSWORD_RESET');
-			$mail->setFrom($site->getSiteContactEmail(), $site->getSiteContactName());
+			$mail =& new MailTemplate('PASSWORD_RESET');
+
+			// Set the sender based on the current context
+			if ($journal) {
+				$email->setFrom($journal->getSetting('supportEmail'), $journal->getSetting('supportName'));
+			} else {
+				$mail->setFrom($site->getSiteContactEmail(), $site->getSiteContactName());
+			}
+
 			$mail->assignParams(array(
 				'username' => $user->getUsername(),
 				'password' => $newPassword,
