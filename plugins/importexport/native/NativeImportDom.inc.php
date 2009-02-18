@@ -113,7 +113,7 @@ class NativeImportDom {
 			// Set a placeholder title so that further errors are
 			// somewhat meaningful; this placeholder will not be
 			// inserted into the database.
-			$issue->setTitle(Locale::translate('plugins.importexport.native.import.error.defaultTitle'));
+			$issue->setTitle(Locale::translate('plugins.importexport.native.import.error.defaultTitle'), $journalPrimaryLocale);
 			$hasErrors = true;
 		}	
 		
