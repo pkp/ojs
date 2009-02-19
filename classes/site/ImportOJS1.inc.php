@@ -849,7 +849,7 @@ class ImportOJS1 {
 
 		if (!$this->showVolume && !$this->showNumber && $this->showYear) {		
 			// Insert issues for each year in "publish by year" mode
-			$result = &$this->importDao->retrieve('SELECT DISTINCT(DATE_FORMAT(dtDatePublished, \'%Y\')) FROM tblarticles WHERE bPublished = 1 ORDER BY year');
+			$result = &$this->importDao->retrieve('SELECT DISTINCT(DATE_FORMAT(dtDatePublished, \'%Y\')) AS year FROM tblarticles WHERE bPublished = 1 ORDER BY year');
 			while (!$result->EOF) {
 				list($year) = $result->fields;
 
