@@ -9,7 +9,7 @@
  * @class CounterPlugin
  * @ingroup plugins_generic_counter
  *
- * @brief COUNTER plugin; provides COUNTER-compliant statistics.
+ * @brief COUNTER plugin; provides COUNTER statistics.
  */
 
 // $Id$
