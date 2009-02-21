@@ -58,8 +58,11 @@ class UserHandler extends PKPHandler {
 				$setupIncomplete[$journalId] = UserHandler::checkCompleteSetup($journal);
 							
 				if ($journal->getEnabled()) {
-					$userJournals[] =& $journal;
-					UserHandler::getRoleDataForJournal($userId, $journalId, $submissionsCount, $isValid);
+					$roles =& $roleDao->getRolesByUserId($userId, $journalId);
+					if (!empty($roles)) {
+						$userJournals[] =& $journal;
+						UserHandler::getRoleDataForJournal($userId, $journalId, $submissionsCount, $isValid);
+					}
 				}
 
 				unset($journal);
