@@ -68,27 +68,59 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 			$templateMgr->assign('itemCurrencyCode', $queuedPayment->getCurrencyCode()); 
 		}
 		$templateMgr->assign('manualInstructions', $this->getSetting($journal->getJournalId(), 'manualInstructions'));
+		$templateMgr->assign('queuedPaymentId', $queuedPaymentId);
 
 		$templateMgr->display($this->getTemplatePath() . 'paymentForm.tpl');
-
-		if ($queuedPayment->getAmount() > 0) {
-			import('mail.MailTemplate');
-			$contactName = $journal->getSetting('contactName');
-			$contactEmail = $journal->getSetting('contactEmail');
-			$mail = &new MailTemplate('MANUAL_PAYMENT_NOTIFICATION');
-			$mail->setFrom($contactEmail, $contactName);
-			$mail->addRecipient($contactEmail, $contactName);
-			$mail->assignParams(array(
-				'journalName' => $journal->getJournalTitle(),
-				'userFullName' => $user?$user->getFullName():('(' . Locale::translate('common.none') . ')'),
-				'userName' => $user?$user->getUsername():('(' . Locale::translate('common.none') . ')'),
-				'itemName' => $queuedPayment->getName(),
-				'itemCost' => $queuedPayment->getAmount(),
-				'itemCurrencyCode' => $queuedPayment->getCurrencyCode()
-			));
-			$mail->send();
-		}
 	}
+	
+	/**
+	 * Handle incoming requests/notifications
+	 */
+	function handle($args) {
+		$journal =& Request::getJournal();
+		$templateMgr =& TemplateManager::getManager();
+		$user =& Request::getUser();
+		$op = array_shift($args);
+		$queuedPaymentId = (int) array_shift($args);
+
+		import('payment.ojs.OJSPaymentManager');
+		$ojsPaymentManager =& OJSPaymentManager::getManager();
+		$queuedPayment =& $ojsPaymentManager->getQueuedPayment($queuedPaymentId);
+		// if the queued payment doesn't exist, redirect away from payments
+		if ( !$queuedPayment ) Request::redirect(null, null, 'index');
+
+		switch ( $op ) {
+			case 'notify':	
+				import('mail.MailTemplate');
+				
+				$contactName = $journal->getSetting('contactName');
+				$contactEmail = $journal->getSetting('contactEmail');
+				$mail = new MailTemplate('MANUAL_PAYMENT_NOTIFICATION');
+				$mail->setFrom($contactEmail, $contactName);
+				$mail->addRecipient($contactEmail, $contactName);
+				$mail->assignParams(array(
+					'journalName' => $journal->getJournalTitle(),
+					'userFullName' => $user?$user->getFullName():('(' . Locale::translate('common.none') . ')'),
+					'userName' => $user?$user->getUsername():('(' . Locale::translate('common.none') . ')'),
+					'itemName' => $queuedPayment->getName(),
+					'itemCost' => $queuedPayment->getAmount(),
+					'itemCurrencyCode' => $queuedPayment->getCurrencyCode()
+				));
+				$mail->send();
+				
+				$templateMgr->assign(array(
+					'currentUrl' => Request::url(null, null, 'payment', 'plugin', array('notify', $queuedPaymentId)),
+					'pageTitle' => 'plugins.paymethod.manual.paymentNotification',
+					'message' => 'plugins.paymethod.manual.notificationSent',
+					'backLink' => $queuedPayment->getRequestUrl(),
+					'backLinkLabel' => 'common.continue'
+				));
+				$templateMgr->display('common/message.tpl');
+				exit();
+				break;			
+		}
+		parent::handle($args); // Don't know what to do with it
+	}		
 
 	function getInstallDataFile() {
 		return ($this->getPluginPath() . DIRECTORY_SEPARATOR . 'data.xml');
