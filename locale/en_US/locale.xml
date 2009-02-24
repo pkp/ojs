@@ -1054,13 +1054,16 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.setup.technicalSupportContact">Technical Support Contact</message>
 	<message key="manager.setup.technicalSupportContactDescription">This person will be listed on the journal's Contact page for the use of editors, authors, and reviewers, and should have experience working through the system from the perspective of all of its roles. As this journal system requires very little technical support, this should be seen as a part-time assignment. There may be occasions, for example, when authors and reviewers have difficulties with the instructions or file formats, or there's a need to ensure that the journal is regularly backed up on the server.</message>
 	<message key="manager.setup.publisher">Publisher</message>
+	<message key="manager.setup.publisherNoteDescription">This text will appear below the "Publisher" heading and above the publisher name/url under "Journal Sponsorship" on the "About" page.</message>
 	<message key="manager.setup.publisherDescription">The name of the organization publishing the journal will appear in About the Journal.</message>
 	<message key="manager.setup.sponsors">Sponsoring Organizations</message>
+	<message key="manager.setup.sponsorNoteDescription">This text will appear below the "Sponsors" heading and above the list of sponsor names and urls under "Journal Sponsorship" on the "About" page.</message>
 	<message key="manager.setup.sponsorsDescription">The name of the organizations (e.g., scholarly associations, university departments, cooperatives, etc.) sponsoring the journal will appear in About the Journal and may be accompanied by a note of acknowledgement.</message>
 	<message key="manager.setup.addSponsor">Add Sponsoring Organization</message>
 	<message key="manager.setup.note">Note</message>
 	<message key="manager.setup.institution">Institution</message>
 	<message key="manager.setup.contributors">Sources of Support</message>
+	<message key="manager.setup.contributorNoteDescription">This text will appear below the "Sources of Support" heading and above the list of names and urls for supporting organizartions under "Journal Sponsorship" on the "About" page.</message>
 	<message key="manager.setup.contributorsDescription">Additional agencies or organizations that provide financial or in-kind support for the journal will appear in About the Journal and may be accompanied by a note of acknowledgement.</message>
 	<message key="manager.setup.contributor">Contributor</message>
 	<message key="manager.setup.addContributor">Add Contributor</message>
