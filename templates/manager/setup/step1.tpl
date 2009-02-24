@@ -204,7 +204,11 @@
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="publisherNote" key="manager.setup.note"}</td>
-		<td width="80%" class="value"><textarea name="publisherNote[{$formLocale|escape}]" id="publisherNote" rows="5" cols="40" class="textArea">{$publisherNote[$formLocale]|escape}</textarea></td>
+		<td width="80%" class="value">
+			<textarea name="publisherNote[{$formLocale|escape}]" id="publisherNote" rows="5" cols="40" class="textArea">{$publisherNote[$formLocale]|escape}</textarea>
+			<br/>
+			<span class="instruct">{translate key="manager.setup.publisherNoteDescription"}</span>
+			</td>
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="publisherInstitution" key="manager.setup.institution"}</td>
@@ -225,7 +229,11 @@
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="sponsorNote" key="manager.setup.note"}</td>
-		<td width="80%" class="value"><textarea name="sponsorNote[{$formLocale|escape}]" id="sponsorNote" rows="5" cols="40" class="textArea">{$sponsorNote[$formLocale]|escape}</textarea></td>
+		<td width="80%" class="value">
+			<textarea name="sponsorNote[{$formLocale|escape}]" id="sponsorNote" rows="5" cols="40" class="textArea">{$sponsorNote[$formLocale]|escape}</textarea>
+			<br/>
+			<span class="instruct">{translate key="manager.setup.sponsorNoteDescription"}</span>
+		</td>
 	</tr>
 {foreach name=sponsors from=$sponsors key=sponsorId item=sponsor}
 	<tr valign="top">
@@ -266,7 +274,11 @@
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="contributorNote" key="manager.setup.note"}</td>
-		<td width="80%" class="value"><textarea name="contributorNote[{$formLocale|escape}]" id="contributorNote" rows="5" cols="40" class="textArea">{$contributorNote[$formLocale]|escape}</textarea></td>
+		<td width="80%" class="value">
+			<textarea name="contributorNote[{$formLocale|escape}]" id="contributorNote" rows="5" cols="40" class="textArea">{$contributorNote[$formLocale]|escape}</textarea>
+			<br/>
+			<span class="instruct">{translate key="manager.setup.contributorNoteDescription"}</span>
+		</td>
 	</tr>
 {foreach name=contributors from=$contributors key=contributorId item=contributor}
 	<tr valign="top">

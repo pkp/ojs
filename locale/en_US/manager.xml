@@ -202,6 +202,7 @@
 	<message key="manager.setup.competingInterests.requireReviewers">Require Reviewers to file a CI statement with each peer review they submit.</message>
 	<message key="manager.setup.contributor">Contributor</message>
 	<message key="manager.setup.contributors">Sources of Support</message>
+	<message key="manager.setup.contributorNoteDescription">This text will appear below the "Sources of Support" heading and above the list of names and urls for supporting organizartions under "Journal Sponsorship" on the "About" page.</message>
 	<message key="manager.setup.contributorsDescription">Additional agencies or organizations that provide financial or in-kind support for the journal will appear in About the Journal and may be accompanied by a note of acknowledgement.</message>
 	<message key="manager.setup.copyediting">Copyeditors</message>
 	<message key="manager.setup.copyeditInstructions">Copyedit Instructions</message>
@@ -392,6 +393,7 @@
 	<message key="manager.setup.publicationScheduling">Publication Scheduling</message>
 	<message key="manager.setup.publicIdentifier">Identification of Journal Content</message>
 	<message key="manager.setup.publisher">Publisher</message>
+	<message key="manager.setup.publisherNoteDescription">This text will appear below the "Publisher" heading and above the publisher name/url under "Journal Sponsorship" on the "About" page.</message>
 	<message key="manager.setup.publisherDescription">The name of the organization publishing the journal will appear in About the Journal.</message>
 	<message key="manager.setup.referenceLinking">Reference Linking</message>
 	<message key="manager.setup.refLinkInstructions.description">Layout Instructions for Reference Linking</message>
@@ -439,6 +441,7 @@
 	<message key="manager.setup.showGalleyLinksDescription">Always show galley links and indicate restricted access.</message>
 	<message key="manager.setup.siteAccess">Additional Site and Article Access Restrictions</message>
 	<message key="manager.setup.sponsors">Sponsoring Organizations</message>
+	<message key="manager.setup.sponsorNoteDescription">This text will appear below the "Sponsors" heading and above the list of sponsor names and urls under "Journal Sponsorship" on the "About" page.</message>
 	<message key="manager.setup.sponsorsDescription">The name of the organizations (e.g., scholarly associations, university departments, cooperatives, etc.) sponsoring the journal will appear in About the Journal and may be accompanied by a note of acknowledgement.</message>
 	<message key="manager.setup.stepsToJournalSite">Five Steps to a Journal Web Site</message>
 	<message key="manager.setup.subjectClassification">Subject Classification</message>
