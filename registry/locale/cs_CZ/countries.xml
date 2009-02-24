@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	
+<!--
+  * countries.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized list of countries.
+  *
+  * Translated by František Chmelik, frantisek.chmelik 'at' upol.cz
+  *
+  * $Id$
+  -->
+
+<!DOCTYPE countries [
+	<!ELEMENT countries (country+)>
+	<!ELEMENT country EMPTY>
+		<!ATTLIST country
+			code CDATA #REQUIRED
+			name CDATA #REQUIRED>
+]>
+	
+<countries>
+	<country name="Afghánistán" code="AF"/>
+	<country name="Aalandské ostrovy" code="AX"/>
+	<country name="Albánie" code="AL"/>
+	<country name="Alžírsko" code="DZ"/>
+	<country name="Americká Samoa" code="AS"/>
+	<country name="Andorra" code="AD"/>
+	<country name="Angola" code="AO"/>
+	<country name="Anguilla" code="AI"/>
+	<country name="Antarktida" code="AQ"/>
+	<country name="Antigua a Barbuda" code="AG"/>
+	<country name="Argentina" code="AR"/>
+	<country name="Arménie" code="AM"/>
+	<country name="Aruba" code="AW"/>
+	<country name="Austrálie" code="AU"/>
+	<country name="Rakousko" code="AT"/>
+	<country name="Ázerbajdžán" code="AZ"/>
+	<country name="Bahamy" code="BS"/>
+	<country name="Bahrajn" code="BH"/>
+	<country name="Bangladéš" code="BD"/>
+	<country name="Barbados" code="BB"/>
+	<country name="Bělorusko" code="BY"/>
+	<country name="Belgie" code="BE"/>
+	<country name="Belize" code="BZ"/>
+	<country name="Benin" code="BJ"/>
+	<country name="Bermuda" code="BM"/>
+	<country name="Bhútán" code="BT"/>
+	<country name="Bolívie" code="BO"/>
+	<country name="Bosna a Herzegovina" code="BA"/>
+	<country name="Botswana" code="BW"/>
+	<country name="Ostrov Bouvet" code="BV"/>
+	<country name="Brazílie" code="BR"/>
+	<country name="Britské indickooceánské území" code="IO"/>
+	<country name="Brunej" code="BN"/>
+	<country name="Bulharsko" code="BG"/>
+	<country name="Burkina Faso" code="BF"/>
+	<country name="Burundská republika" code="BI"/>
+	<country name="Kambodža" code="KH"/>
+	<country name="Kamerun" code="CM"/>
+	<country name="Kanada" code="CA"/>
+	<country name="Kapverdy" code="CV"/>
+	<country name="Kajmanské ostrovy" code="KY"/>
+	<country name="Středoafrická republika" code="CF"/>
+	<country name="Čad" code="TD"/>
+	<country name="Čile" code="CL"/>
+	<country name="Čína" code="CN"/>
+	<country name="Vánoční ostrov" code="CX"/>
+	<country name="Kokosové ostrovy" code="CC"/>
+	<country name="Kolumbie" code="CO"/>
+	<country name="Komory" code="KM"/>
+	<country name="Kongo" code="CG"/>
+	<country name="Kongo, Demokratická republika" code="CD"/>
+	<country name="Cookovy ostrovy" code="CK"/>
+	<country name="Kostarika" code="CR"/>
+	<country name="Pobřeží slonoviny" code="CI"/>
+	<country name="Chorvatsko" code="HR"/>
+	<country name="Kuba" code="CU"/>
+	<country name="Kypr" code="CY"/>
+	<country name="Česká republika" code="CZ"/>
+	<country name="Dánsko" code="DK"/>
+	<country name="Djibouti" code="DJ"/>
+	<country name="Dominika" code="DM"/>
+	<country name="Dominikánská republika" code="DO"/>
+	<country name="Ekvádor" code="EC"/>
+	<country name="Egypt" code="EG"/>
+	<country name="El Salvador" code="SV"/>
+	<country name="Rovníková Guinea" code="GQ"/>
+	<country name="Eritrea" code="ER"/>
+	<country name="Estonsko" code="EE"/>
+	<country name="Etiopie" code="ET"/>
+	<country name="Falklandské ostrovy" code="FK"/>
+	<country name="Faroe ostrovy" code="FO"/>
+	<country name="Fidži" code="FJ"/>
+	<country name="Finsko" code="FI"/>
+	<country name="Francie" code="FR"/>
+	<country name="Francouzská Guinea" code="GF"/>
+	<country name="Francouzská Polynésie" code="PF"/>
+	<country name="Francouzské jižní teritorium" code="TF"/>
+	<country name="Gabon" code="GA"/>
+	<country name="Gambie" code="GM"/>
+	<country name="Gruzie" code="GE"/>
+	<country name="Německo" code="DE"/>
+	<country name="Ghana" code="GH"/>
+	<country name="Gibraltar" code="GI"/>
+	<country name="Řecko" code="GR"/>
+	<country name="Grónsko" code="GL"/>
+	<country name="Grenada" code="GD"/>
+	<country name="Guadeloupe" code="GP"/>
+	<country name="Guam" code="GU"/>
+	<country name="Guatemala" code="GT"/>
+	<country name="Guinea" code="GN"/>
+	<country name="Guinea-Bissau" code="GW"/>
+	<country name="Guyana" code="GY"/>
+	<country name="Haiti" code="HT"/>
+	<country name="Heardův ostrov a McDonaldovy ostrovy" code="HM"/>
+	<country name="Vatikán" code="VA"/>
+	<country name="Honduras" code="HN"/>
+	<country name="Hong Kong" code="HK"/>
+	<country name="Maďarsko" code="HU"/>
+	<country name="Island" code="IS"/>
+	<country name="Indie" code="IN"/>
+	<country name="Indonésie" code="ID"/>
+	<country name="Írán" code="IR"/>
+	<country name="Irák" code="IQ"/>
+	<country name="Irsko" code="IE"/>
+	<country name="Izrael" code="IL"/>
+	<country name="Itálie" code="IT"/>
+	<country name="Jamajka" code="JM"/>
+	<country name="Japonsko" code="JP"/>
+	<country name="Jordán" code="JO"/>
+	<country name="Kazachstán" code="KZ"/>
+	<country name="Keňa" code="KE"/>
+	<country name="Kiribati" code="KI"/>
+	<country name="Korejská lidově demokratická republika" code="KP"/>
+	<country name="Korejská republika" code="KR"/>
+	<country name="Kuvajt" code="KW"/>
+	<country name="Kyrgyzstán" code="KG"/>
+	<country name="Laoská lidově demokratická republika" code="LA"/>
+	<country name="Lotyšsko" code="LV"/>
+	<country name="Libanon" code="LB"/>
+	<country name="Lesotho" code="LS"/>
+	<country name="Libérie" code="LR"/>
+	<country name="Libyan Arab Jamahiriya" code="LY"/>
+	<country name="Lichtenštejnsko" code="LI"/>
+	<country name="Litva" code="LT"/>
+	<country name="Lucembursko" code="LU"/>
+	<country name="Makao" code="MO"/>
+	<country name="Makedonie" code="MK"/>
+	<country name="Madagaskar" code="MG"/>
+	<country name="Malawi" code="MW"/>
+	<country name="Malajsie" code="MY"/>
+	<country name="Maledivy" code="MV"/>
+	<country name="Mali" code="ML"/>
+	<country name="Malta" code="MT"/>
+	<country name="Marshallovy ostrovy" code="MH"/>
+	<country name="Martinik" code="MQ"/>
+	<country name="Mauritánie" code="MR"/>
+	<country name="Mauricius" code="MU"/>
+	<country name="Mayotte" code="YT"/>
+	<country name="Mexiko" code="MX"/>
+	<country name="Mikronésie" code="FM"/>
+	<country name="Moldavsko" code="MD"/>
+	<country name="Monako" code="MC"/>
+	<country name="Mongolsko" code="MN"/>
+	<country name="Montserrat" code="MS"/>
+	<country name="Maroko" code="MA"/>
+	<country name="Mosambik" code="MZ"/>
+	<country name="Myanmar" code="MM"/>
+	<country name="Namíbie" code="NA"/>
+	<country name="Nauru" code="NR"/>
+	<country name="Nepál" code="NP"/>
+	<country name="Nizozemsko" code="NL"/>
+	<country name="Nizozemské Antily" code="AN"/>
+	<country name="Nová Kaledonie" code="NC"/>
+	<country name="Nový Zéland" code="NZ"/>
+	<country name="Nikaragua" code="NI"/>
+	<country name="Niger" code="NE"/>
+	<country name="Nigérie" code="NG"/>
+	<country name="Niue" code="NU"/>
+	<country name="Norfolkské ostrovy" code="NF"/>
+	<country name="Severní Mariánské ostrovy" code="MP"/>
+	<country name="Norsko" code="NO"/>
+	<country name="Omán" code="OM"/>
+	<country name="Pákistán" code="PK"/>
+	<country name="Palau" code="PW"/>
+	<country name="Palestinské okupované území" code="PS"/>
+	<country name="Panama" code="PA"/>
+	<country name="Papua-Nová Guinea" code="PG"/>
+	<country name="Paraguay" code="PY"/>
+	<country name="Peru" code="PE"/>
+	<country name="Filipíny" code="PH"/>
+	<country name="Pitcairn" code="PN"/>
+	<country name="Polsko" code="PL"/>
+	<country name="Portugalsko" code="PT"/>
+	<country name="Puerto Rico" code="PR"/>
+	<country name="Katar" code="QA"/>
+	<country name="Réunion" code="RE"/>
+	<country name="Rumunsko" code="RO"/>
+	<country name="Ruskon" code="RU"/>
+	<country name="Rwanda" code="RW"/>
+	<country name="Svatá Helena" code="SH"/>
+	<country name="Svatý Kryštof a Nevis" code="KN"/>
+	<country name="Svatá Lucie" code="LC"/>
+	<country name="Svatý Petr a Miquelon" code="PM"/>
+	<country name="Svatý Vincenc a Grenadiny" code="VC"/>
+	<country name="Samoa" code="WS"/>
+	<country name="San Marino" code="SM"/>
+	<country name="Svatý Tomáš a Princův ostrov" code="ST"/>
+	<country name="Saudská Arábie" code="SA"/>
+	<country name="Senegal" code="SN"/>
+	<country name="Srbsko a Černá Hora" code="CS"/>
+	<country name="Seychely" code="SC"/>
+	<country name="Sierra Leone" code="SL"/>
+	<country name="Singapur" code="SG"/>
+	<country name="Slovensko" code="SK"/>
+	<country name="Slovinsko" code="SI"/>
+	<country name="Solomonské ostrovy" code="SB"/>
+	<country name="Somálsko" code="SO"/>
+	<country name="Jihoafrická republika" code="ZA"/>
+	<country name="South Georgia and the South Sandwich Islands" code="GS"/>
+	<country name="Španělsko" code="ES"/>
+	<country name="Srí Lanka" code="LK"/>
+	<country name="Súdán" code="SD"/>
+	<country name="Surinam" code="SR"/>
+	<country name="Svalbard a Jan Mayen" code="SJ"/>
+	<country name="Svazijsko" code="SZ"/>
+	<country name="Švédsko" code="SE"/>
+	<country name="Švýcarsko" code="CH"/>
+	<country name="Sýrie" code="SY"/>
+	<country name="Tchaj-wan" code="TW"/>
+	<country name="Tádžigistán" code="TJ"/>
+	<country name="Tanzánie" code="TZ"/>
+	<country name="Thajsko" code="TH"/>
+	<country name="Východní Timor" code="TL"/>
+	<country name="Togo" code="TG"/>
+	<country name="Tokelau" code="TK"/>
+	<country name="Tonga" code="TO"/>
+	<country name="Trinidad a Tobago" code="TT"/>
+	<country name="Tunisko" code="TN"/>
+	<country name="Turecko" code="TR"/>
+	<country name="Turkmenistán" code="TM"/>
+	<country name="Turks a Caicos" code="TC"/>
+	<country name="Tuvalu" code="TV"/>
+	<country name="Uganda" code="UG"/>
+	<country name="Ukrajina" code="UA"/>
+	<country name="Spojené arabské emiráty" code="AE"/>
+	<country name="Spojené království" code="GB"/>
+	<country name="Spojené státy americké" code="US"/>
+	<country name="United States Minor Outlying Islands" code="UM"/>
+	<country name="Uruguay" code="UY"/>
+	<country name="Uzbekistán" code="UZ"/>
+	<country name="Vanuatu" code="VU"/>
+	<country name="Venezuela" code="VE"/>
+	<country name="Vietnam" code="VN"/>
+	<country name="Panenské ostrovy, Britské" code="VG"/>
+	<country name="Panenské ostrovy, Americké" code="VI"/>
+	<country name="Wallis a Futuna" code="WF"/>
+	<country name="Západní Sahara" code="EH"/>
+	<country name="Jemen" code="YE"/>
+	<country name="Zambie" code="ZM"/>
+	<country name="Zimbabwe" code="ZW"/>
+</countries>

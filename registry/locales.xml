@@ -17,6 +17,7 @@
 <!DOCTYPE locales SYSTEM "../dbscripts/xml/dtd/locales.dtd">
 
 <locales>
+	<locale key="cs_CZ" name="Czech"/>
 	<locale key="de_DE" name="Deutsch (Deutschland)"/>
 	<locale key="en_US" name="English"/>
 	<locale key="el_GR" name="Greek"/>
