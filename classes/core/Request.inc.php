@@ -132,6 +132,39 @@ class Request extends PKPRequest {
 			$params = null, $anchor = null, $escape = false) {
 		return parent::url(array($journalPath), $page, $op, $path, $params, $anchor, $escape);
 	}
+	
+		
+	/**
+	 * Redirect to user home page (or the role home page if the user has one role).
+	 */
+	function redirectHome() {
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$user = Request::getUser();
+		$userId = $user->getUserId();
+
+		if ($journal =& Request::getJournal()) { 
+			// The user is in the journal context, see if they have one role only
+			$roles =& $roleDao->getRolesByUserId($userId, $journal->getJournalId());
+			if(count($roles) == 1) {
+				$role = array_shift($roles);
+				Request::redirect(null, $role->getRolePath());
+			} else {
+				Request::redirect(null, 'user');
+			}
+		} else {
+			// The user is at the site context, check to see if they are
+			// only registered in one place w/ one role
+			$journalDao =& DAORegistry::getDAO('JournalDAO');
+			$journals =& $journalDao->getJournals();
+			$roles = $roleDao->getRolesByUserId($userId);
+			
+			if(count($roles) == 1) {
+				$role = array_shift($roles);
+				$journal = $journalDao->getJournal($role->getJournalId());
+				Request::redirect($journal->getPath(), $role->getRolePath());
+			} else Request::redirect('index', 'user');
+		}
+	}
 }
 
 ?>
