@@ -79,8 +79,12 @@
 		<data file="dbscripts/xml/upgrade/2.2.1_preupdate.xml" />
 	</upgrade>
 
-	<!-- Common upgrade tasks -->
-	<schema file="lib/pkp/xml/pkp_schema.xml" />
+	<!-- PKP schema components -->
+	<schema file="lib/pkp/xml/schema/common.xml" />
+	<schema file="lib/pkp/xml/schema/scheduledTasks.xml" />
+	<schema file="lib/pkp/xml/schema/temporaryFiles.xml" />
+
+	<!-- OJS schema -->
 	<schema file="dbscripts/xml/ojs_schema.xml" />
 
 	<!--

@@ -14,8 +14,16 @@
 <install version="2.3.0.0">
 	<code function="createDirectories"/>
 	<code function="createDatabase"/>
-	<schema file="lib/pkp/xml/pkp_schema.xml"/>
-	<schema file="dbscripts/xml/ojs_schema.xml"/>
+
+	<!-- PKP schema components -->
+	<schema file="lib/pkp/xml/schema/common.xml" />
+	<schema file="lib/pkp/xml/schema/scheduledTasks.xml" />
+	<schema file="lib/pkp/xml/schema/temporaryFiles.xml" />
+
+	<!-- OJS schema -->
+	<schema file="dbscripts/xml/ojs_schema.xml" />
+
+	<!-- Other install tasks -->
 	<data file="dbscripts/xml/data/email_templates.xml"/>
 	<data file="dbscripts/xml/data/locale/{$installedLocale}/email_templates_data.xml"/>
 	<code function="createData"/>
