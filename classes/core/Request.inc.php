@@ -161,7 +161,8 @@ class Request extends PKPRequest {
 			if(count($roles) == 1) {
 				$role = array_shift($roles);
 				$journal = $journalDao->getJournal($role->getJournalId());
-				Request::redirect($journal->getPath(), $role->getRolePath());
+				isset($journal) ? Request::redirect($journal->getPath(), $role->getRolePath()) :
+								  Request::redirect('index', 'user');
 			} else Request::redirect('index', 'user');
 		}
 	}
