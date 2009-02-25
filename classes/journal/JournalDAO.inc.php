@@ -170,7 +170,7 @@ class JournalDAO extends DAO {
 		$roleDao->deleteRoleByJournalId($journalId);
 
 		$groupDao = &DAORegistry::getDAO('GroupDAO');
-		$groupDao->deleteGroupsByJournalId($journalId);
+		$groupDao->deleteGroupsByAssocId(ASSOC_TYPE_JOURNAL, $journalId);
 
 		$pluginSettingsDao = &DAORegistry::getDAO('PluginSettingsDAO');
 		$pluginSettingsDao->deleteSettingsByJournalId($journalId);

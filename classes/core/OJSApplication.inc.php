@@ -19,6 +19,8 @@
 
 import('core.PKPApplication');
 
+define('ASSOC_TYPE_JOURNAL',	0x0000100);
+
 class OJSApplication extends PKPApplication {
 	function OJSApplication() {
 		parent::PKPApplication();

@@ -79,8 +79,14 @@
 		<data file="dbscripts/xml/upgrade/2.2.1_preupdate.xml" />
 	</upgrade>
 
+	<upgrade minversion="2.0.0.0" maxversion="2.2.3.0">
+		<!-- 2.x to 2.3 -->
+		<data file="dbscripts/xml/upgrade/2.3.0_preupdate.xml" />
+	</upgrade>
+
 	<!-- PKP schema components -->
 	<schema file="lib/pkp/xml/schema/common.xml" />
+	<schema file="lib/pkp/xml/schema/groups.xml" />
 	<schema file="lib/pkp/xml/schema/scheduledTasks.xml" />
 	<schema file="lib/pkp/xml/schema/temporaryFiles.xml" />
 

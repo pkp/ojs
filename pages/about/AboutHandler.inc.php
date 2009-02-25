@@ -48,7 +48,7 @@ class AboutHandler extends PKPHandler {
 			}
 
 			$groupDao =& DAORegistry::getDAO('GroupDAO');
-			$groups =& $groupDao->getGroups($journal->getJournalId(), GROUP_CONTEXT_PEOPLE);
+			$groups =& $groupDao->getGroups(ASSOC_TYPE_JOURNAL, $journal->getJournalId(), GROUP_CONTEXT_PEOPLE);
 
 			$templateMgr->assign_by_ref('peopleGroups', $groups);
 			$templateMgr->assign('helpTopicId', 'user.about');
@@ -144,7 +144,7 @@ class AboutHandler extends PKPHandler {
 			$groupDao =& DAORegistry::getDAO('GroupDAO');
 			$groupMembershipDao =& DAORegistry::getDAO('GroupMembershipDAO');
 
-			$allGroups =& $groupDao->getGroups($journal->getJournalId(), GROUP_CONTEXT_EDITORIAL_TEAM);
+			$allGroups =& $groupDao->getGroups(ASSOC_TYPE_JOURNAL, $journal->getJournalId(), GROUP_CONTEXT_EDITORIAL_TEAM);
 			$teamInfo = array();
 			$groups = array();
 			while ($group =& $allGroups->next()) {
@@ -270,7 +270,7 @@ class AboutHandler extends PKPHandler {
 			$groupDao =& DAORegistry::getDAO('GroupDAO');
 			$groupMembershipDao =& DAORegistry::getDAO('GroupMembershipDAO');
 
-			$allGroups =& $groupDao->getGroups($journal->getJournalId());
+			$allGroups =& $groupDao->getGroups(ASSOC_TYPE_JOURNAL, $journal->getJournalId());
 			while ($group =& $allGroups->next()) {
 				if (!$group->getAboutDisplayed()) continue;
 				$allMemberships =& $groupMembershipDao->getMemberships($group->getGroupId());

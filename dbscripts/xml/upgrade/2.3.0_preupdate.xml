@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * 2.3.0_preupdate.xml
+  *
+  * Copyright (c) 2000-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 2.3.0 database updates XML file, run prior schema sync.
+  *
+  -->
+
+<data>
+	<!-- Bug #3941: abstract groups -->
+	<sql>
+		<rename table="groups" column="journal_id" to="assoc_id" />
+	</sql>
+</data>
