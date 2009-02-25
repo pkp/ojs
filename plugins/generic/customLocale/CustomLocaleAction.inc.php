@@ -20,7 +20,7 @@ class CustomLocaleAction {
 	function getLocaleFiles($locale) {
 		if (!Locale::isLocaleValid($locale)) return null;
 
-		$localeFiles = array(Locale::getMainLocaleFilename($locale));
+		$localeFiles =& Locale::makeComponentMap($locale);
 		$plugins =& PluginRegistry::loadAllPlugins();
 		foreach (array_keys($plugins) as $key) {
 			$plugin =& $plugins[$key];

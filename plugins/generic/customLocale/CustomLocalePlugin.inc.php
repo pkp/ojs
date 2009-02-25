@@ -24,26 +24,47 @@ class CustomLocalePlugin extends GenericPlugin {
 			$this->addLocaleData();
 
 			if ($this->getEnabled()) {
-				import('file.FileManager');
+				// Add custom locale data for already registered locale files.
+				$locale = Locale::getLocale();
+				$localeFiles = Locale::getLocaleFiles($locale);
 				$journal = Request::getJournal();
 				$journalId = $journal->getJournalId();
-				$locale = Locale::getLocale();
-				$localeFiles = Locale::getLocaleFiles($locale); 
 				$publicFilesDir = Config::getVar('files', 'public_files_dir');
-				$customLocaleDir = $publicFilesDir . DIRECTORY_SEPARATOR . 'journals' . DIRECTORY_SEPARATOR . $journalId . DIRECTORY_SEPARATOR . CUSTOM_LOCALE_DIR;
+				$customLocalePathBase = $publicFilesDir . DIRECTORY_SEPARATOR . 'journals' . DIRECTORY_SEPARATOR . $journalId . DIRECTORY_SEPARATOR . CUSTOM_LOCALE_DIR . DIRECTORY_SEPARATOR . $locale . DIRECTORY_SEPARATOR;
 
+				import('file.FileManager');
 				foreach ($localeFiles as $localeFile) {
-					$localeFilename = $localeFile->getFilename();
-					$customLocalePath = $customLocaleDir . DIRECTORY_SEPARATOR . $locale . DIRECTORY_SEPARATOR . $localeFilename;
+					$customLocalePath = $customLocalePathBase . $localeFile->getFilename();
 					if (FileManager::fileExists($customLocalePath)) {
 						Locale::registerLocaleFile($locale, $customLocalePath, true);
 					}
 				}
+
+				// Add custom locale data for all locale files registered after this plugin
+				HookRegistry::register('PKPLocale::registerLocaleFile', array(&$this, 'addCustomLocale'));
 			}
 
 			return true;
 		}
 		return false;
+	}
+
+	function addCustomLocale($hookName, $args) {
+		$locale =& $args[0];		
+		$localeFilename =& $args[1];
+
+		$journal = Request::getJournal();
+		$journalId = $journal->getJournalId();
+		$publicFilesDir = Config::getVar('files', 'public_files_dir');
+		$customLocalePath = $publicFilesDir . DIRECTORY_SEPARATOR . 'journals' . DIRECTORY_SEPARATOR . $journalId . DIRECTORY_SEPARATOR . CUSTOM_LOCALE_DIR . DIRECTORY_SEPARATOR . $locale . DIRECTORY_SEPARATOR . $localeFilename;
+
+		import('file.FileManager');
+		if (FileManager::fileExists($customLocalePath)) {
+			Locale::registerLocaleFile($locale, $customLocalePath, true);
+		}
+
+		return true;
+
 	}
 
 	function getName() {
