@@ -33,6 +33,20 @@
 	<message key="common.preview">Preview</message>
 	<message key="common.activate">Activate</message>
 	<message key="common.deactivate">Deactivate</message>
+	<message key="common.ccLicense"><![CDATA[
+	<br /><br />
+	<a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
+	<br />
+	This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new">Creative Commons Attribution 3.0 License</a>.
+	]]></message>
+	<message key="common.ccLicense.rt"><![CDATA[
+	<div class="rtBlock">
+		<br />
+		<a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
+		<br />
+		This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new">Creative Commons Attribution 3.0 License</a>.
+	</div>
+	]]></message>
 
 	<!-- Journal Management -->
 	<message key="manager.reviewForms">Review Forms</message>
