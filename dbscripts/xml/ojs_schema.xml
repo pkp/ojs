@@ -1419,7 +1419,6 @@
 		<field name="copyeditor_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="copyedit_revision" type="I8"/>
 		<field name="date_notified" type="T"/>
 		<field name="date_underway" type="T"/>
 		<field name="date_completed" type="T"/>
