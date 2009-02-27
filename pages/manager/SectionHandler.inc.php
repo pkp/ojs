@@ -48,7 +48,7 @@ class SectionHandler extends ManagerHandler {
 	 */
 	function editSection($args = array()) {
 		parent::validate();
-		SectionHandler::setupTemplate();
+		SectionHandler::setupTemplate(true);
 
 		import('manager.form.SectionForm');
 
@@ -92,7 +92,7 @@ class SectionHandler extends ManagerHandler {
 			Request::redirect(null, null, 'sections');
 
 		} else {
-			SectionHandler::setupTemplate();
+			SectionHandler::setupTemplate(true);
 			$sectionForm->display();
 		}
 	}
@@ -134,9 +134,13 @@ class SectionHandler extends ManagerHandler {
 		Request::redirect(null, null, 'sections');
 	}
 
-	function setupTemplate() {
+	function setupTemplate($subclass = false) {
 		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_PKP_READER));
 		parent::setupTemplate(true);
+		if ($subclass) {
+			$templateMgr = &TemplateManager::getManager();
+			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'sections'), 'section.sections'));
+		}
 	}
 }
 ?>

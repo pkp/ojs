@@ -10,7 +10,7 @@
  *}
 {strip}
 {assign var="pageTitle" value="section.section"}
-{assign var="pageCrumbTitle" value="section.sections"}
+{assign var="pageCrumbTitle" value="section.section"}
 {include file="common/header.tpl"}
 {/strip}
 
