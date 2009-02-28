@@ -202,22 +202,6 @@ class ArticleFile extends DataObject {
 	}
 
 	/**
-	 * Get status of the file.
-	 * @return string
-	 */
-	function getStatus() {
-		return $this->getData('status');	
-	}
-
-	/**
-	 * Set status of the file.
-	 * @param $status string
-	 */
-	function setStatus($status) {
-		return $this->setData('status', $status);	
-	}
-
-	/**
 	 * Get uploaded date of file.
 	 * @return date
 	 */

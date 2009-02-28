@@ -191,7 +191,6 @@ class ArticleGalleyDAO extends DAO {
 		$galley->setOriginalFileName($row['original_file_name']);
 		$galley->setFileType($row['file_type']);
 		$galley->setFileSize($row['file_size']);
-		$galley->setStatus($row['status']);
 		$galley->setDateModified($this->datetimeFromDB($row['date_modified']));
 		$galley->setDateUploaded($this->datetimeFromDB($row['date_uploaded']));
 

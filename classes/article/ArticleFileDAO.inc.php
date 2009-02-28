@@ -245,7 +245,6 @@ class ArticleFileDAO extends DAO {
 		$articleFile->setOriginalFileName($row['original_file_name']);
 		$articleFile->setType($row['type']);
 		$articleFile->setAssocId($row['assoc_id']);
-		$articleFile->setStatus($row['status']);
 		$articleFile->setDateUploaded($this->datetimeFromDB($row['date_uploaded']));
 		$articleFile->setDateModified($this->datetimeFromDB($row['date_modified']));
 		$articleFile->setRound($row['round']);
@@ -271,7 +270,6 @@ class ArticleFileDAO extends DAO {
 			$articleFile->getFileSize(),
 			$articleFile->getOriginalFileName(),
 			$articleFile->getType(),
-			$articleFile->getStatus(),
 			(int) $articleFile->getRound(),
 			$articleFile->getViewable(),
 			$articleFile->getAssocId()
@@ -283,9 +281,9 @@ class ArticleFileDAO extends DAO {
 
 		$this->update(
 			sprintf('INSERT INTO article_files
-				(' . ($fileId ? 'file_id, ' : '') . 'revision, article_id, source_file_id, source_revision, file_name, file_type, file_size, original_file_name, type, status, date_uploaded, date_modified, round, viewable, assoc_id)
+				(' . ($fileId ? 'file_id, ' : '') . 'revision, article_id, source_file_id, source_revision, file_name, file_type, file_size, original_file_name, type, date_uploaded, date_modified, round, viewable, assoc_id)
 				VALUES
-				(' . ($fileId ? '?, ' : '') . '?, ?, ?, ?, ?, ?, ?, ?, ?, ?, %s, %s, ?, ?, ?)',
+				(' . ($fileId ? '?, ' : '') . '?, ?, ?, ?, ?, ?, ?, ?, ?, %s, %s, ?, ?, ?)',
 				$this->datetimeToDB($articleFile->getDateUploaded()), $this->datetimeToDB($articleFile->getDateModified())),
 			$params
 		);
@@ -313,7 +311,6 @@ class ArticleFileDAO extends DAO {
 					file_size = ?,
 					original_file_name = ?,
 					type = ?,
-					status = ?,
 					date_uploaded = %s,
 					date_modified = %s,
 					round = ?,
@@ -330,7 +327,6 @@ class ArticleFileDAO extends DAO {
 				$articleFile->getFileSize(),
 				$articleFile->getOriginalFileName(),
 				$articleFile->getType(),
-				$articleFile->getStatus(),
 				(int) $articleFile->getRound(),
 				$articleFile->getViewable(),
 				$articleFile->getAssocId(),

@@ -133,7 +133,6 @@ class SuppFileDAO extends DAO {
 		$suppFile->setOriginalFileName($row['original_file_name']);
 		$suppFile->setFileType($row['file_type']);
 		$suppFile->setFileSize($row['file_size']);
-		$suppFile->setStatus($row['status']);
 		$suppFile->setDateModified($this->datetimeFromDB($row['date_modified']));
 		$suppFile->setDateUploaded($this->datetimeFromDB($row['date_uploaded']));
 

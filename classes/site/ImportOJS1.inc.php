@@ -1507,7 +1507,6 @@ class ImportOJS1 {
 		$articleFile->setFileType(Core::cleanVar($row['chFileType']));
 		$articleFile->setFileSize(filesize($oldPath));
 		$articleFile->setType($fileManager->typeToPath($fileType));
-		$articleFile->setStatus('');
 		$articleFile->setDateUploaded($row['dtDateUploaded']);
 		$articleFile->setDateModified($row['dtDateUploaded']);
 		$articleFile->setRound(1);
@@ -1574,7 +1573,6 @@ class ImportOJS1 {
 			$articleFile->setFileType($mimeType);
 			$articleFile->setFileSize(filesize($oldPath));
 			$articleFile->setType($fileManager->typeToPath($fileType));
-			$articleFile->setStatus('');
 			$articleFile->setDateUploaded(date('Y-m-d', filemtime($oldPath)));
 			$articleFile->setDateModified($articleFile->getDateUploaded());
 			$articleFile->setRound(1);

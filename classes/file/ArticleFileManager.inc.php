@@ -401,7 +401,6 @@ class ArticleFileManager extends FileManager {
 		$articleFile->setFileSize($sourceArticleFile->getFileSize());
 		$articleFile->setOriginalFileName($sourceArticleFile->getFileName());
 		$articleFile->setType($destTypePath);
-		$articleFile->setStatus($sourceArticleFile->getStatus());
 		$articleFile->setDateUploaded(Core::getCurrentDate());
 		$articleFile->setDateModified(Core::getCurrentDate());
 		$articleFile->setRound($this->article->getCurrentRound()); // FIXME This field is only applicable for review files?
@@ -440,7 +439,6 @@ class ArticleFileManager extends FileManager {
 		$articleFile->setFileType('temp');
 		$articleFile->setFileSize(0);
 		$articleFile->setType('temp');
-		$articleFile->setStatus('temp');
 		$articleFile->setDateUploaded(Core::getCurrentDate());
 		$articleFile->setDateModified(Core::getCurrentDate());
 		$articleFile->setRound(0);
@@ -510,7 +508,6 @@ class ArticleFileManager extends FileManager {
 		$articleFile->setFileSize($_FILES[$fileName]['size']);
 		$articleFile->setOriginalFileName(ArticleFileManager::truncateFileName($_FILES[$fileName]['name'], 127));
 		$articleFile->setType($typePath);
-		$articleFile->setStatus(''); // FIXME wtf is this for?
 		$articleFile->setRound($this->article->getCurrentRound());
 
 		$newFileName = $this->generateFilename($articleFile, $type, $this->getUploadedFileName($fileName));
@@ -564,7 +561,6 @@ class ArticleFileManager extends FileManager {
 		$articleFile->setFileSize(strlen($contents));
 		$articleFile->setOriginalFileName(ArticleFileManager::truncateFileName($fileName, 127));
 		$articleFile->setType($typePath);
-		$articleFile->setStatus(''); // FIXME wtf is this for?
 		$articleFile->setRound($this->article->getCurrentRound());
 
 		$newFileName = $this->generateFilename($articleFile, $type, $fileName);
@@ -616,7 +612,6 @@ class ArticleFileManager extends FileManager {
 		$articleFile->setFileType($mimeType);
 		$articleFile->setOriginalFileName(ArticleFileManager::truncateFileName(basename($url), 127));
 		$articleFile->setType($typePath);
-		$articleFile->setStatus(''); // FIXME wtf is this for?
 		$articleFile->setRound($this->article->getCurrentRound());
 
 		$newFileName = $this->generateFilename($articleFile, $type, $articleFile->getOriginalFileName());
@@ -653,7 +648,6 @@ class ArticleFileManager extends FileManager {
 		$articleFile->setFileType($temporaryFile->getFileType());
 		$articleFile->setOriginalFileName($temporaryFile->getOriginalFileName());
 		$articleFile->setType($typePath);
-		$articleFile->setStatus(''); // FIXME wtf is this for?
 		$articleFile->setRound($this->article->getCurrentRound());
 		$articleFile->setAssocId($assocId);
 

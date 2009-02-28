@@ -873,9 +873,6 @@
 		<field name="type" type="C2" size="40">
 			<NOTNULL/>
 		</field>
-		<field name="status" type="C2" size="40">
-			<NOTNULL/>
-		</field>
 		<field name="viewable" type="I1" />
 		<field name="date_uploaded" type="T">
 			<NOTNULL/>

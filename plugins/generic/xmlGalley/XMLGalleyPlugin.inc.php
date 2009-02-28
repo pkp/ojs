@@ -142,7 +142,6 @@ class XMLGalleyPlugin extends GenericPlugin {
 		$articleXMLGalley->setOriginalFileName($galley->getOriginalFileName());
 		$articleXMLGalley->setFileType($galley->getFileType());
 		$articleXMLGalley->setFileSize($galley->getFileSize());
-		$articleXMLGalley->setStatus($galley->getStatus());
 		$articleXMLGalley->setDateModified($galley->getDateModified());
 		$articleXMLGalley->setDateUploaded($galley->getDateUploaded());
 		$articleXMLGalley->setLocale($galley->getLocale());
