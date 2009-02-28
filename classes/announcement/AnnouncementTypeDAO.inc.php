@@ -59,8 +59,8 @@ class AnnouncementTypeDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT COALESCE(l.setting_value, p.setting_value) FROM announcement_type_settings l LEFT JOIN announcement_type_settings p ON (p.type_id = ? AND p.setting_name = ? AND p.locale = ?) WHERE l.type_id = ? AND l.setting_name = ? AND l.locale = ?', 
 			array(
-				$typeId, 'name', Locale::getLocale(),
-				$typeId, 'name', Locale::getPrimaryLocale()
+				$typeId, 'name', Locale::getPrimaryLocale(),
+				$typeId, 'name', Locale::getLocale()
 			)
 		);
 
