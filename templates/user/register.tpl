@@ -127,7 +127,7 @@
 
 		<tr valign="top">
 			<td class="label">{fieldLabel name="signature" key="user.signature"}</td>
-			<td class="value"><textarea name="signature[{$formLocale|escape}]" id="signature" rows="5" cols="40" class="textArea">{$signature[$formLocale]|escape|nl2br}</textarea></td>
+			<td class="value"><textarea name="signature[{$formLocale|escape}]" id="signature" rows="5" cols="40" class="textArea">{$signature[$formLocale]|escape}</textarea></td>
 		</tr>
 
 		<tr valign="top">
