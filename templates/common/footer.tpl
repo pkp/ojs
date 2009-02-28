@@ -11,7 +11,7 @@
 {if $pageFooter==''}
 	{if $currentJournal && $currentJournal->getSetting('onlineIssn')}
 		{assign var=issn value=$currentJournal->getSetting('onlineIssn')}
-	{elseif $currentJournal->getSetting('printIssn')}
+	{elseif $currentJournal && $currentJournal->getSetting('printIssn')}
 		{assign var=issn value=$currentJournal->getSetting('printIssn')}
 	{/if}
 	{if $issn}
