@@ -27,6 +27,9 @@ class MetadataForm extends Form {
 	/** @var boolean can view authors */
 	var $canViewAuthors;
 
+	/** @var boolean is an Editor, can edit all metadata */
+	var $isEditor;
+
 	/**
 	 * Constructor.
 	 */
@@ -37,10 +40,12 @@ class MetadataForm extends Form {
 		$user = &Request::getUser();
 		$roleId = $roleDao->getRoleIdFromPath(Request::getRequestedPage());
 
-		// If the user is an editor of this article, make the form editable.
+		// If the user is an editor of this article, make the entire form editable.
 		$this->canEdit = false;
+		$this->isEditor = false;
 		if ($roleId != null && ($roleId == ROLE_ID_EDITOR || $roleId == ROLE_ID_SECTION_EDITOR)) {
 			$this->canEdit = true;
+			$this->isEditor = true;
 		}
 
 		// If the user is an author and the article hasn't passed the Copyediting stage, make the form editable.
@@ -169,7 +174,7 @@ class MetadataForm extends Form {
 			$templateMgr->assign_by_ref('section', $sectionDao->getSection($this->article->getSectionId()));
 		}
 
-		if ($this->canEdit) {
+		if ($this->isEditor) {
 			import('article.Article');
 			$hideAuthorOptions = array(
 				AUTHOR_TOC_DEFAULT => Locale::Translate('editor.article.hideTocAuthorDefault'),
@@ -177,6 +182,7 @@ class MetadataForm extends Form {
 				AUTHOR_TOC_SHOW => Locale::Translate('editor.article.hideTocAuthorShow')
 			);
 			$templateMgr->assign('hideAuthorOptions', $hideAuthorOptions);
+			$templateMgr->assign('isEditor', true);
 		}
 
 		parent::display();
@@ -291,7 +297,9 @@ class MetadataForm extends Form {
 		$article->setType($this->getData('type'), null); // Localized
 		$article->setLanguage($this->getData('language')); // Localized
 		$article->setSponsor($this->getData('sponsor'), null); // Localized
-		$article->setHideAuthor($this->getData('hideAuthor') ? $this->getData('hideAuthor') : 0);
+		if ($this->isEditor) {
+			$article->setHideAuthor($this->getData('hideAuthor') ? $this->getData('hideAuthor') : 0);
+		}
 
 		// Update authors
 		$authors = $this->getData('authors');
