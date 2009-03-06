@@ -372,7 +372,7 @@ function moveAuthor(dir, authorIndex) {
 
 <div class="separator"></div>
 
-
+{if $isEditor}
 <h3>{translate key="editor.article.display"}</h3>
 
 <table width="100%" class="data">
@@ -385,7 +385,7 @@ function moveAuthor(dir, authorIndex) {
 		</td>
 	</tr>
 </table>
-
+{/if}
 
 <div class="separator"></div>
 
