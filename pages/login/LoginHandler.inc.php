@@ -178,7 +178,7 @@ class LoginHandler extends Handler {
 			$mail =& new MailTemplate('PASSWORD_RESET_CONFIRM');
 
 			// Set the sender based on the current context
-			if ($journal) {
+			if ($journal && $journal->getSetting('supportEmail')) {
 				$email->setFrom($journal->getSetting('supportEmail'), $journal->getSetting('supportName'));
 			} else {
 				$mail->setFrom($site->getSiteContactEmail(), $site->getSiteContactName());
