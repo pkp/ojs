@@ -3,7 +3,7 @@
 /**
  * @defgroup author_form_submit
  */
- 
+
 /**
  * @file classes/author/form/submit/AuthorSubmitForm.inc.php
  *
@@ -40,7 +40,7 @@ class AuthorSubmitForm extends Form {
 	function AuthorSubmitForm($article, $step) {
 		parent::Form(sprintf('author/submit/step%d.tpl', $step));
 		$this->addCheck(new FormValidatorPost($this));
-		$this->step = $step;
+		$this->step = (int) $step;
 		$this->article = $article;
 		$this->articleId = $article ? $article->getArticleId() : null;
 	}
@@ -58,10 +58,10 @@ class AuthorSubmitForm extends Form {
 		}
 
 		switch($this->step) {
-			case '2':
+			case 3:
 				$helpTopicId = 'submission.indexingAndMetadata';
 				break;
-			case '4':
+			case 4:
 				$helpTopicId = 'submission.supplementaryFiles';
 				break;
 			default:

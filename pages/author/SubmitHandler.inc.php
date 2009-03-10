@@ -9,7 +9,7 @@
  * @class SubmitHandler
  * @ingroup pages_author
  *
- * @brief Handle requests for author article submission. 
+ * @brief Handle requests for author article submission.
  */
 
 // $Id$
@@ -67,6 +67,13 @@ class SubmitHandler extends AuthorHandler {
 		// Check for any special cases before trying to save
 		switch ($step) {
 			case 2:
+				if (Request::getUserVar('uploadSubmissionFile')) {
+					$submitForm->uploadSubmissionFile('submissionFile');
+					$editData = true;
+				}
+				break;
+
+			case 3:
 				if (Request::getUserVar('addAuthor')) {
 					// Add a sponsor
 					$editData = true;
@@ -122,13 +129,6 @@ class SubmitHandler extends AuthorHandler {
 						}
 					}
 					$submitForm->setData('authors', $authors);
-				}
-				break;
-
-			case 3:
-				if (Request::getUserVar('uploadSubmissionFile')) {
-					$submitForm->uploadSubmissionFile('submissionFile');
-					$editData = true;
 				}
 				break;
 

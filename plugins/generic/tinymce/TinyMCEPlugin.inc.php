@@ -83,7 +83,7 @@ class TinyMCEPlugin extends GenericPlugin {
 			case 'author/saveSubmit':
 				switch (array_shift(Request::getRequestedArgs())) {
 					case 1: $fields[] = 'commentsToEditor'; break;
-					case 2:
+					case 3:
 						$count = max(1, count($templateMgr->get_template_vars('authors')));
 						for ($i=0; $i<$count; $i++) {
 							$fields[] = "authors-$i-biography";

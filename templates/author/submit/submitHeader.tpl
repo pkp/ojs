@@ -18,10 +18,10 @@
 {translate key="author.submit.start"}{if $submitStep != 1 && $submissionProgress >= 1}</a>{/if}</li>
 
 <li{if $submitStep == 2} class="current"{/if}>{if $submitStep != 2 && $submissionProgress >= 2}<a href="{url op="submit" path="2" articleId=$articleId}">{/if}
-{translate key="author.submit.metadata"}{if $submitStep != 2 && $submissionProgress >= 2}</a>{/if}</li>
+{translate key="author.submit.upload"}{if $submitStep != 2 && $submissionProgress >= 2}</a>{/if}</li>
 
 <li{if $submitStep == 3} class="current"{/if}>{if $submitStep != 3 && $submissionProgress >= 3}<a href="{url op="submit" path="3" articleId=$articleId}">{/if}
-{translate key="author.submit.upload"}{if $submitStep != 3 && $submissionProgress >= 3}</a>{/if}</li>
+{translate key="author.submit.metadata"}{if $submitStep != 3 && $submissionProgress >= 3}</a>{/if}</li>
 
 <li{if $submitStep == 4} class="current"{/if}>{if $submitStep != 4 && $submissionProgress >= 4}<a href="{url op="submit" path="4" articleId=$articleId}">{/if}
 {translate key="author.submit.supplementaryFiles"}{if $submitStep != 4 && $submissionProgress >= 4}</a>{/if}</li>
