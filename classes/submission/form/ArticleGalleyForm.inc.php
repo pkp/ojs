@@ -3,7 +3,7 @@
 /**
  * @defgroup submission_form
  */
- 
+
 /**
  * @file classes/submission/form/ArticleGalleyForm.inc.php
  *
@@ -224,6 +224,18 @@ class ArticleGalleyForm extends Form {
 				$galley->setLabel($this->getData('label'));
 			}
 			$galley->setLocale($this->getData('galleyLocale'));
+
+			if ($enablePublicGalleyId) {
+				// check to make sure the assigned public id doesn't already exist
+				$publicGalleyId = $galley->getPublicgalleyId();
+				$suffix = '';
+				$i = 1;
+				while ($galleyDao->publicGalleyIdExists($publicGalleyId . $suffix, '')) {
+					$suffix = '_'.$i++;
+				}
+
+				$galley->setPublicgalleyId($publicGalleyId . $suffix);
+			}
 
 			// Insert new galley
 			$galleyDao->insertGalley($galley);
