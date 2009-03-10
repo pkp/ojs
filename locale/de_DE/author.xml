@@ -24,8 +24,8 @@
 	<message key="author.submit.step4a">Schritt 4a. Zusatzdatei hinzufügen</message>
 	<message key="author.submit.step5">Schritt 5. Eingabe bestätigen</message>
 	<message key="author.submit.start">1. Beginn</message>
-	<message key="author.submit.metadata">2. Metadaten eingeben</message>
-	<message key="author.submit.upload">3. Beitrag hochladen</message>
+	<message key="author.submit.metadata">3. Metadaten eingeben</message>
+	<message key="author.submit.upload">2. Beitrag hochladen</message>
 	<message key="author.submit.supplementaryFiles">4. Zusatzdateien hochladen</message>
 	<message key="author.submit.confirmation">5. Eingabe bestätigen</message>
 	<message key="author.submit.cancelSubmission">Sie können die Eingabe auch später beenden, indem Sie Aktuelle Eingaben auf der Eingangsseite des Verfassers auswählen.</message>

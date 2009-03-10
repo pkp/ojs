@@ -27,8 +27,8 @@
 	<message key="author.submit.step4a">Passo 4a. Incluir Documento Suplementar</message>
 	<message key="author.submit.step5">Passo 5. Confirmação da Submissão</message>
 	<message key="author.submit.start">1. Início</message>
-	<message key="author.submit.metadata">2. Inclusão de Metadados</message>
-	<message key="author.submit.upload">3. Transferência do Manuscrito</message>
+	<message key="author.submit.metadata">3. Inclusão de Metadados</message>
+	<message key="author.submit.upload">2. Transferência do Manuscrito</message>
 	<message key="author.submit.supplementaryFiles">4. Transferência de Documentos Suplementares</message>
 	<message key="author.submit.confirmation">5. Confirmação</message>
 	<message key="author.submit.cancelSubmission">A submissão pode ser concluída em uma data posterior, clicando em Submissões Ativas nas opções da página do Autor.</message>

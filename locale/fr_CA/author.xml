@@ -27,8 +27,8 @@
 	<message key="author.submit.step4a">Étape 4a. Ajouter un fichier supplémentaire</message>
 	<message key="author.submit.step5">Étape 5. Confirmer la soumission</message>
 	<message key="author.submit.start">1. Commencer</message>
-	<message key="author.submit.metadata">2. Entrer les métadonnées</message>
-	<message key="author.submit.upload">3. Télécharger la soumission</message>
+	<message key="author.submit.metadata">3. Entrer les métadonnées</message>
+	<message key="author.submit.upload">2. Télécharger la soumission</message>
 	<message key="author.submit.supplementaryFiles">4. Télécharger les fichiers supplémentaires</message>
 	<message key="author.submit.confirmation">5. Confirmer la soumission</message>
 	<message key="author.submit.cancelSubmission">Vous pouvez terminer cette soumission plus tard en sélectionnant Soumissions actives à la page d'accueil de l'auteur.</message>

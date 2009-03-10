@@ -25,8 +25,8 @@
 	<message key="author.submit.step4a">Trinn 4a. Legg til en tilleggsfil</message>
 	<message key="author.submit.step5">Trinn 5. Bekreft innsendingen</message>
 	<message key="author.submit.start">1. Start</message>
-	<message key="author.submit.metadata">2. Skriv inn metadata</message>
-	<message key="author.submit.upload">3. Last opp manuskript</message>
+	<message key="author.submit.metadata">3. Skriv inn metadata</message>
+	<message key="author.submit.upload">2. Last opp manuskript</message>
 	<message key="author.submit.supplementaryFiles">4. Last opp tilleggsfiler</message>
 	<message key="author.submit.confirmation">5. Bekreftelse</message>
 	<message key="author.submit.cancelSubmission">Du kan fullføre denne innsendingen senere, ved å velge Aktive manus fra forfattersiden din.</message>

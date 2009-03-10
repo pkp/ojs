@@ -26,7 +26,7 @@
 	<message key="author.submit.step5">مرحله پنجم: تایید ساب میشن</message>
 	<message key="author.submit.start">1. شروع</message>
 	<message key="author.submit.metadata">2: وارد کردن متاداده</message>
-	<message key="author.submit.upload">3. آپلود ساب میشن</message>
+	<message key="author.submit.upload">2. آپلود ساب میشن</message>
 	<message key="author.submit.supplementaryFiles">4. آپلود فایلهای الحاقی</message>
 	<message key="author.submit.confirmation">5. تایید</message>
 	<message key="author.submit.cancelSubmission">میتوانید این ساب میشن را در وقتی دیگر کامل کنید. برای این کار به صفحه خانگی نویسنده رفته و ساب میشن های جاری را انتخاب کنید</message>
