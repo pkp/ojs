@@ -58,7 +58,10 @@ class OAIMetadataFormat_DC extends OAIMetadataFormat {
 		// Types
 		Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
 		$types = $this->stripAssocArray((array) $section->getIdentifyType(null));
-		$types = empty($types)?array(Locale::getLocale() => Locale::translate('rt.metadata.pkp.peerReviewed')):$types;
+		$types = array_merge_recursive(
+			empty($types)?array(Locale::getLocale() => Locale::translate('rt.metadata.pkp.peerReviewed')):$types,
+			$this->stripAssocArray((array) $article->getType(null))
+		);
 
 		// Formats
 		$formats = array();
