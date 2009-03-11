@@ -358,7 +358,10 @@ class OAIDAO extends DAO {
 		$record->contributors = $this->stripAssocArray((array) $article->getSponsor(null));
 		$record->date = date('Y-m-d', strtotime($issue->getDatePublished()));
 		$types = $this->stripAssocArray((array) $section->getIdentifyType(null));
-		$record->types = empty($types)?array(Locale::getLocale() => Locale::translate('rt.metadata.pkp.peerReviewed')):$types;
+		$record->types = array_merge_recursive(
+			empty($types)?array(Locale::getLocale() => Locale::translate('rt.metadata.pkp.peerReviewed')):$types,
+			$this->stripAssocArray((array) $article->getType(null))
+		);
 		$record->format = array();
 
 		$record->sources = $this->stripAssocArray((array) $journal->getTitle(null));
@@ -378,9 +381,9 @@ class OAIDAO extends DAO {
 		$record->pages = $article->getPages();
 
 		// Get publisher (may override earlier publisher)
-		$publisherInstitution = (array) $journal->getSetting('publisherInstitution');
+		$publisherInstitution = $journal->getSetting('publisherInstitution');
 		if (!empty($publisherInstitution)) {
-			$record->publishers = $publisherInstitution;
+			$record->publishers = array($journal->getPrimaryLocale() => $publisherInstitution);
 		}
 
 		// Get author names
