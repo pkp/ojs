@@ -18,14 +18,14 @@
 	<message key="author.submit.submitArticle">Makale başvurusu yap</message>
 	<message key="author.submit.stepsToSubmit">Başvuru için beş basamak</message>
 	<message key="author.submit.step1">1. Basamak Başvuruya başlama</message>
-	<message key="author.submit.step2">2. Basamak Başvurusuyla ilgili bilgileri girme</message>
-	<message key="author.submit.step3">3. Basamak Başvuru dosyalarını yükleme</message>
+	<message key="author.submit.step2">2. Basamak Başvuru dosyalarını yükleme</message>
+	<message key="author.submit.step3">3. Basamak Başvurusuyla ilgili bilgileri girme</message>
 	<message key="author.submit.step4">4. Basamak Ek dosyaları yükleme</message>
 	<message key="author.submit.step4a">4a Basamağı Ek dosya yükle</message>
 	<message key="author.submit.step5">5. Basamak Başvuru onayı</message>
 	<message key="author.submit.start">1. Başla</message>
-	<message key="author.submit.metadata">3. Bilgileri gir</message>
 	<message key="author.submit.upload">2. Başvuruyu yükle</message>
+	<message key="author.submit.metadata">3. Bilgileri gir</message>
 	<message key="author.submit.supplementaryFiles">4. Ek dosyaları yükle</message>
 	<message key="author.submit.confirmation">5. Onay</message>
 	<message key="author.submit.cancelSubmission">Bu başvuruyu, yazar anasayfasında, Aktif Başvurulardan seçerek daha sonra tamamlayabilirsiniz..</message>

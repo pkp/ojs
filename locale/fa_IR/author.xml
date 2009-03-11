@@ -19,14 +19,14 @@
 	<message key="author.submit.stepsToSubmit">پنج مرحله ساب میت</message>
 	<message key="author.submit.startHereTitle">ارسال مقاله جدید</message>
 	<message key="author.submit.step1">مرحله اول: شروع ساب میشن</message>
-	<message key="author.submit.step2">مرحله دوم: وارد کردن متاداده ساب میشن</message>
-	<message key="author.submit.step3">مرحله سوم: آپلود ساب میشن</message>
+	<message key="author.submit.step2">مرحله سوم: آپلود ساب میشن</message>
+	<message key="author.submit.step3">مرحله دوم: وارد کردن متاداده ساب میشن</message>
 	<message key="author.submit.step4">مرحله چهارم: آپلود فایلهای الحاقی</message>
 	<message key="author.submit.step4a">مرحله چهارم آ: افزودن یک فایل الحاقی</message>
 	<message key="author.submit.step5">مرحله پنجم: تایید ساب میشن</message>
 	<message key="author.submit.start">1. شروع</message>
-	<message key="author.submit.metadata">2: وارد کردن متاداده</message>
 	<message key="author.submit.upload">2. آپلود ساب میشن</message>
+	<message key="author.submit.metadata">3. وارد کردن متاداده</message>
 	<message key="author.submit.supplementaryFiles">4. آپلود فایلهای الحاقی</message>
 	<message key="author.submit.confirmation">5. تایید</message>
 	<message key="author.submit.cancelSubmission">میتوانید این ساب میشن را در وقتی دیگر کامل کنید. برای این کار به صفحه خانگی نویسنده رفته و ساب میشن های جاری را انتخاب کنید</message>

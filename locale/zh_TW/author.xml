@@ -19,14 +19,14 @@
 	<message key="author.submit.stepsToSubmit">投稿五步驟</message>
 	<message key="author.submit.startHereLink">點擊這裡開始進行投稿</message>
 	<message key="author.submit.step1">步驟 1. 開始投稿</message>
-	<message key="author.submit.step2">步驟 2. 輸入稿件的後設資料(metadata)</message>
-	<message key="author.submit.step3">步驟 3. 上傳稿件</message>
+	<message key="author.submit.step2">步驟 2. 上傳稿件</message>
+	<message key="author.submit.step3">步驟 3. 輸入稿件的後設資料(metadata)</message>
 	<message key="author.submit.step4">步驟 4. 上傳補充檔案</message>
 	<message key="author.submit.step4a">步驟 4a. 新增一個補充檔案</message>
 	<message key="author.submit.step5">步驟 5. 確認投稿</message>
 	<message key="author.submit.start">1. 開始</message>
-	<message key="author.submit.metadata">3.  輸入後設資料</message>
 	<message key="author.submit.upload">2. 上傳稿件</message>
+	<message key="author.submit.metadata">3.  輸入後設資料</message>
 	<message key="author.submit.supplementaryFiles">4. 上傳補充檔案</message>
 	<message key="author.submit.confirmation">5. 確認</message>
 	<message key="author.submit.cancelSubmission">您可以在「作者」角色的使用者首頁中選擇「進行中的稿件」以在稍後任一個時間點完成此投稿程序。</message>

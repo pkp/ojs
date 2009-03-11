@@ -21,14 +21,14 @@
 	<message key="author.submit.startHereTitle">Έναρξη νέας υποβολής </message>
 	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Πατήστε εδώ</a> για να πάτε στο Βήμα 1 από τα 5 συνολικά βήματα της διαδικασίας υποβολής.]]></message>
 	<message key="author.submit.step1">Βήμα 1. Έναρξη της υποβολής</message>
-	<message key="author.submit.step2"> Βήμα 2. Καταχώριση των μεταδεδομένων </message>
-	<message key="author.submit.step3"> Βήμα 3. Φόρτωση της υποβολής</message>
-	<message key="author.submit.step4"> Βήμα 4. Φόρτωση των συμπληρωματικών αρχείων</message>
-	<message key="author.submit.step4a"> Βήμα 4α. Προσθήκη συμπληρωματικού αρχείου</message>
-	<message key="author.submit.step5"> Βήμα 5. Επιβεβαίωση της υποβολής</message>
+	<message key="author.submit.step2">Βήμα 2. Φόρτωση της υποβολής</message>
+	<message key="author.submit.step3">Βήμα 3. Καταχώριση των μεταδεδομένων </message>
+	<message key="author.submit.step4">Βήμα 4. Φόρτωση των συμπληρωματικών αρχείων</message>
+	<message key="author.submit.step4a">Βήμα 4α. Προσθήκη συμπληρωματικού αρχείου</message>
+	<message key="author.submit.step5">Βήμα 5. Επιβεβαίωση της υποβολής</message>
 	<message key="author.submit.start">1. Έναρξη</message>
-	<message key="author.submit.metadata">3. Καταχωρίστε τα μεταδεδομένα</message>
 	<message key="author.submit.upload">2. Φορτώστε την υποβολή</message>
+	<message key="author.submit.metadata">3. Καταχωρίστε τα μεταδεδομένα</message>
 	<message key="author.submit.supplementaryFiles">4. Φορτώστε τα συμπληρωματικά αρχεία (αν υπάρχουν)</message>
 	<message key="author.submit.confirmation">5. Επιβεβαίωση</message>
 	<message key="author.submit.cancelSubmission">Μπορείτε να ολοκληρώσετε την υποβολή αργότερα επιλέγοντας "Ενεργές Υποβολές" από την αρχική σελίδα του συγγραφέα.</message>

@@ -21,14 +21,14 @@
 	<message key="author.submit.startHereTitle">Nộp một bài mới</message>
 	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Nhấp chuột vào đây</a> để chuyển sang bước đầu tiên trong quá trình nộp bài gồm năm bước.]]></message>
 	<message key="author.submit.step1">Bước 1. Bắt đầu nộp bài</message>
-	<message key="author.submit.step2">Bước 2. Nhập dữ liệu mô tả về bài nộp</message>
-	<message key="author.submit.step3">Bước 3. Tải bài nộp lên</message>
+	<message key="author.submit.step2">Bước 2. Tải bài nộp lên</message>
+	<message key="author.submit.step3">Bước 3. Nhập dữ liệu mô tả về bài nộp</message>
 	<message key="author.submit.step4">Bước 4. Tải các file phụ trợ lên</message>
 	<message key="author.submit.step4a">Bước 4a. Thêm một file phụ trợ</message>
 	<message key="author.submit.step5">Bước 5. Khẳng định nộp bài</message>
 	<message key="author.submit.start">1. Bắt đầu</message>
-	<message key="author.submit.metadata">3. Nhập dữ liệu mô tả</message>
 	<message key="author.submit.upload">2. Tải bài nộp lên</message>
+	<message key="author.submit.metadata">3. Nhập dữ liệu mô tả</message>
 	<message key="author.submit.supplementaryFiles">4. Tải các file phụ trợ lên</message>
 	<message key="author.submit.confirmation">5. Khẳng định</message>
 	<message key="author.submit.cancelSubmission">Tác giả có thể hoàn thành việc nộp bài viết vào thời gian khác bằng cách lựa chọn mục Các bài đang nộp dở trong trang dành cho Tác giả.</message>

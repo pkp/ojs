@@ -18,14 +18,14 @@
 	<message key="author.submit.submitArticle">Послать статью</message>
 	<message key="author.submit.stepsToSubmit">Пять шагов к публикации</message>
 	<message key="author.submit.step1">Шаг 1. Начало отправки</message>
-	<message key="author.submit.step2">Шаг 2. Ввод метаданных</message>
-	<message key="author.submit.step3">Шаг 3. Загрузить статью</message>
+	<message key="author.submit.step2">Шаг 2. Загрузить статью</message>
+	<message key="author.submit.step3">Шаг 3. Ввод метаданных</message>
 	<message key="author.submit.step4">Шаг 4. Загрузить дополн. файлы</message>
 	<message key="author.submit.step4a">Шаг 4a. Загрузить дополн. файл</message>
 	<message key="author.submit.step5">Шаг 5. Подтверждение</message>
 	<message key="author.submit.start">1. Старт</message>
-	<message key="author.submit.metadata">3. Ввести метаданные</message>
 	<message key="author.submit.upload">2. Загрузить статью</message>
+	<message key="author.submit.metadata">3. Ввести метаданные</message>
 	<message key="author.submit.supplementaryFiles">4. Загрузить дополн. файлы</message>
 	<message key="author.submit.confirmation">5. Подтверждение</message>
 	<message key="author.submit.cancelSubmission">You can complete this submission at a later date by selecting Active Submissions from the Author home.</message>

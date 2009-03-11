@@ -21,14 +21,14 @@
 	<message key="author.submit.startHereTitle">Inizia una nouva submission</message>
 	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Clica qui</a> per andare al primo passo dei cinque passi del processo di submission.]]></message>
 	<message key="author.submit.step1">Fase 1. Inizio della submission</message>
-	<message key="author.submit.step2">Fase 2. Inserimento dei metadati della submission</message>
-	<message key="author.submit.step3">Fase 3. Upload della submission</message>
+	<message key="author.submit.step2">Fase 2. Upload della submission</message>
+	<message key="author.submit.step3">Fase 3. Inserimento dei metadati della submission</message>
 	<message key="author.submit.step4">Fase 4. Upload dei file supplementari</message>
 	<message key="author.submit.step4a">Fase 4a. Aggiungi un file supplementare</message>
 	<message key="author.submit.step5">Fase 5. Conferma la submission</message>
 	<message key="author.submit.start">1. Inizio</message>
-	<message key="author.submit.metadata">3. Inserisci i metadati</message>
 	<message key="author.submit.upload">2. Upload della submission</message>
+	<message key="author.submit.metadata">3. Inserisci i metadati</message>
 	<message key="author.submit.supplementaryFiles">4. Upload dei file supplementari</message>
 	<message key="author.submit.confirmation">5. Conferma</message>
 	<message key="author.submit.cancelSubmission">Potete completare questa submission in un momento successivo, selezionando la voce "Submission attive" nell'home page della sezione Autore.</message>

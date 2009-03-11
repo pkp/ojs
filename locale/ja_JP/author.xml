@@ -21,14 +21,14 @@
 	<message key="author.submit.startHereTitle">新規投稿を開始</message>
 	<message key="author.submit.startHereLink"><![CDATA[投稿の5ステップを開始するには<a href="{$submitUrl}" class="action">ここをクリック</a>してください。]]></message>
 	<message key="author.submit.step1">ステップ 1. 投稿の開始</message>
-	<message key="author.submit.step2">ステップ 2. 投稿物のメタデータ入力</message>
-	<message key="author.submit.step3">ステップ 3. 投稿物のアップロード</message>
+	<message key="author.submit.step2">ステップ 2. 投稿物のアップロード</message>
+	<message key="author.submit.step3">ステップ 3. 投稿物のメタデータ入力</message>
 	<message key="author.submit.step4">ステップ 4. 補足ファイルのアップロード</message>
 	<message key="author.submit.step4a">ステップ 4a. 補足ファイルの追加</message>
 	<message key="author.submit.step5">ステップ 5. 投稿の確認</message>
 	<message key="author.submit.start">1. 開始</message>
-	<message key="author.submit.metadata">3. メタデータ入力</message>
 	<message key="author.submit.upload">2. 投稿物アップロード</message>
+	<message key="author.submit.metadata">3. メタデータ入力</message>
 	<message key="author.submit.supplementaryFiles">4. 補足ファイルアップロード</message>
 	<message key="author.submit.confirmation">5. 確認</message>
 	<message key="author.submit.cancelSubmission">後日、著者のホームページからこの投稿物を選択することにより、この投稿を完了することもできます。</message>

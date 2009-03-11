@@ -19,14 +19,14 @@
 	<message key="author.submit.stepsToSubmit">Fem trinn for å sende inn et manuskript</message>
 	<message key="author.submit.startHereLink">Klikk her for å starte innsendingsprosessen</message>
 	<message key="author.submit.step1">Trinn 1. Start innsending av manuskript</message>
-	<message key="author.submit.step2">Trinn 2. Skriv inn manuskriptets metadata</message>
-	<message key="author.submit.step3">Trinn 3. Last opp manuskriptet</message>
+	<message key="author.submit.step2">Trinn 2. Last opp manuskriptet</message>
+	<message key="author.submit.step3">Trinn 3. Skriv inn manuskriptets metadata</message>
 	<message key="author.submit.step4">Trinn 4. Last opp tilleggsfiler</message>
 	<message key="author.submit.step4a">Trinn 4a. Legg til en tilleggsfil</message>
 	<message key="author.submit.step5">Trinn 5. Bekreft innsendingen</message>
 	<message key="author.submit.start">1. Start</message>
-	<message key="author.submit.metadata">3. Skriv inn metadata</message>
 	<message key="author.submit.upload">2. Last opp manuskript</message>
+	<message key="author.submit.metadata">3. Skriv inn metadata</message>
 	<message key="author.submit.supplementaryFiles">4. Last opp tilleggsfiler</message>
 	<message key="author.submit.confirmation">5. Bekreftelse</message>
 	<message key="author.submit.cancelSubmission">Du kan fullføre denne innsendingen senere, ved å velge Aktive manus fra forfattersiden din.</message>

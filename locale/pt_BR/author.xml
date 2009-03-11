@@ -21,14 +21,14 @@
 	<message key="author.submit.startHereTitle">Iniciar Nova Submissão</message>
 	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Clique aqui</a> para iniciar os cinco passos do processo de Submissão.]]></message>
 	<message key="author.submit.step1">Passo 1. Iniciar Submissão</message>
-	<message key="author.submit.step2">Passo 2. Metadados da Submissão (Indexação)</message>
-	<message key="author.submit.step3">Passo 3. Transferência do Manuscrito</message>
+	<message key="author.submit.step2">Passo 2. Transferência do Manuscrito</message>
+	<message key="author.submit.step3">Passo 3. Metadados da Submissão (Indexação)</message>
 	<message key="author.submit.step4">Passo 4. Transferência de Documentos Suplementares</message>
 	<message key="author.submit.step4a">Passo 4a. Incluir Documento Suplementar</message>
 	<message key="author.submit.step5">Passo 5. Confirmação da Submissão</message>
 	<message key="author.submit.start">1. Início</message>
-	<message key="author.submit.metadata">3. Inclusão de Metadados</message>
 	<message key="author.submit.upload">2. Transferência do Manuscrito</message>
+	<message key="author.submit.metadata">3. Inclusão de Metadados</message>
 	<message key="author.submit.supplementaryFiles">4. Transferência de Documentos Suplementares</message>
 	<message key="author.submit.confirmation">5. Confirmação</message>
 	<message key="author.submit.cancelSubmission">A submissão pode ser concluída em uma data posterior, clicando em Submissões Ativas nas opções da página do Autor.</message>

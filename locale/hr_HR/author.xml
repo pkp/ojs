@@ -20,14 +20,14 @@
 	<message key="author.submit.startHereTitle">Započnite prijavu novog priloga</message>
 	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Kliknite ovdje</a>  kako biste započeli postupak prijave priloga.]]></message>
 	<message key="author.submit.step1"> 1.korak Započnite s prijavom</message>
-	<message key="author.submit.step2">2.korak Unesite metapodatke prijave</message>
-	<message key="author.submit.step3">3.korak Prilaganje datoteke</message>
+	<message key="author.submit.step2">2.korak Prilaganje datoteke</message>
+	<message key="author.submit.step3">3.korak Unesite metapodatke prijave</message>
 	<message key="author.submit.step4">4.korak Postavite dopunsku datoteku</message>
 	<message key="author.submit.step4a">4a.korak Dodajte dopunsku datoteku</message>
 	<message key="author.submit.step5">5.korak Potvrdite prijavu</message>
 	<message key="author.submit.start">1. Početak</message>
-	<message key="author.submit.metadata">3. Metapodaci</message>
 	<message key="author.submit.upload">2. Prilaganje datoteke</message>
+	<message key="author.submit.metadata">3. Metapodaci</message>
 	<message key="author.submit.supplementaryFiles">4. Dopunske datoteke</message>
 	<message key="author.submit.confirmation">5. Potvrda</message>
 	<message key="author.submit.cancelSubmission">Ovu prijavu možete dovršiti nekom drugom prilikom ukoliko odaberete Aktivne prijave s autorove naslovne stranice.</message>
