@@ -42,7 +42,7 @@ class ArticleGalleyDAO extends DAO {
 		if ($articleId !== null) $params[] = (int) $articleId;
 		$result = &$this->retrieve(
 			'SELECT	g.*,
-				a.file_name, a.original_file_name, a.file_type, a.file_size, a.status, a.date_uploaded, a.date_modified
+				a.file_name, a.original_file_name, a.file_type, a.file_size, a.date_uploaded, a.date_modified
 			FROM	article_galleys g
 				LEFT JOIN article_files a ON (g.file_id = a.file_id)
 			WHERE	g.galley_id = ?' .
@@ -91,7 +91,7 @@ class ArticleGalleyDAO extends DAO {
 	function &getGalleyByPublicGalleyId($publicGalleyId, $articleId) {
 		$result = &$this->retrieve(
 			'SELECT	g.*,
-				a.file_name, a.original_file_name, a.file_type, a.file_size, a.status, a.date_uploaded, a.date_modified
+				a.file_name, a.original_file_name, a.file_type, a.file_size, a.date_uploaded, a.date_modified
 			FROM	article_galleys g
 				LEFT JOIN article_files a ON (g.file_id = a.file_id)
 			WHERE	g.public_galley_id = ? AND
@@ -122,7 +122,7 @@ class ArticleGalleyDAO extends DAO {
 
 		$result = &$this->retrieve(
 			'SELECT g.*,
-			a.file_name, a.original_file_name, a.file_type, a.file_size, a.status, a.date_uploaded, a.date_modified
+			a.file_name, a.original_file_name, a.file_type, a.file_size, a.date_uploaded, a.date_modified
 			FROM article_galleys g
 			LEFT JOIN article_files a ON (g.file_id = a.file_id)
 			WHERE g.article_id = ? ORDER BY g.seq',
@@ -172,7 +172,7 @@ class ArticleGalleyDAO extends DAO {
 
 			// Retrieve images
 			$images = &$this->getGalleyImages($row['galley_id']);
-			$galley->setImageFiles($images); 
+			$galley->setImageFiles($images);
 
 		} else {
 			$galley = new ArticleGalley();
@@ -202,7 +202,7 @@ class ArticleGalleyDAO extends DAO {
 	/**
 	 * Insert a new ArticleGalley.
 	 * @param $galley ArticleGalley
-	 */	
+	 */
 	function insertGalley(&$galley) {
 		$this->update(
 			'INSERT INTO article_galleys
@@ -325,7 +325,7 @@ class ArticleGalleyDAO extends DAO {
 	 * @param $galleyId int
 	 */
 	function incrementViews($galleyId) {
-		if ( !HookRegistry::call('ArticleGalleyDAO::incrementGalleyViews', array(&$galleyId)) ) {			
+		if ( !HookRegistry::call('ArticleGalleyDAO::incrementGalleyViews', array(&$galleyId)) ) {
 			return $this->update(
 				'UPDATE article_galleys SET views = views + 1 WHERE galley_id = ?',
 				$galleyId

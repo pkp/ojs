@@ -30,7 +30,7 @@ class SuppFileDAO extends DAO {
 		if ($articleId) $params[] = $articleId;
 
 		$result = &$this->retrieve(
-			'SELECT s.*, a.file_name, a.original_file_name, a.file_type, a.file_size, a.status, a.date_uploaded, a.date_modified FROM article_supplementary_files s LEFT JOIN article_files a ON (s.file_id = a.file_id) WHERE s.supp_id = ?' . ($articleId?' AND s.article_id = ?':''),
+			'SELECT s.*, a.file_name, a.original_file_name, a.file_type, a.file_size, a.date_uploaded, a.date_modified FROM article_supplementary_files s LEFT JOIN article_files a ON (s.file_id = a.file_id) WHERE s.supp_id = ?' . ($articleId?' AND s.article_id = ?':''),
 			$params
 		);
 
@@ -53,7 +53,7 @@ class SuppFileDAO extends DAO {
 	 */
 	function &getSuppFileByPublicSuppFileId($publicSuppId, $articleId) {
 		$result = &$this->retrieve(
-			'SELECT s.*, a.file_name, a.original_file_name, a.file_type, a.file_size, a.status, a.date_uploaded, a.date_modified FROM article_supplementary_files s LEFT JOIN article_files a ON (s.file_id = a.file_id) WHERE s.public_supp_file_id = ? AND s.article_id = ?',
+			'SELECT s.*, a.file_name, a.original_file_name, a.file_type, a.file_size, a.date_uploaded, a.date_modified FROM article_supplementary_files s LEFT JOIN article_files a ON (s.file_id = a.file_id) WHERE s.public_supp_file_id = ? AND s.article_id = ?',
 			array($publicSuppId, $articleId)
 		);
 
@@ -77,7 +77,7 @@ class SuppFileDAO extends DAO {
 		$suppFiles = array();
 
 		$result = &$this->retrieve(
-			'SELECT s.*, a.file_name, a.original_file_name, a.file_type, a.file_size, a.status, a.date_uploaded, a.date_modified FROM article_supplementary_files s LEFT JOIN article_files a ON (s.file_id = a.file_id) WHERE s.article_id = ? ORDER BY s.seq',
+			'SELECT s.*, a.file_name, a.original_file_name, a.file_type, a.file_size, a.date_uploaded, a.date_modified FROM article_supplementary_files s LEFT JOIN article_files a ON (s.file_id = a.file_id) WHERE s.article_id = ? ORDER BY s.seq',
 			$articleId
 		);
 
@@ -146,7 +146,7 @@ class SuppFileDAO extends DAO {
 	/**
 	 * Insert a new SuppFile.
 	 * @param $suppFile SuppFile
-	 */	
+	 */
 	function insertSuppFile(&$suppFile) {
 		if ($suppFile->getDateSubmitted() == null) {
 			$suppFile->setDateSubmitted(Core::getCurrentDate());
