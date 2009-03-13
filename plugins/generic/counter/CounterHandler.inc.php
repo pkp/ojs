@@ -25,57 +25,12 @@ class CounterHandler extends PKPHandler {
 		list($plugin) = CounterHandler::validate();
 		CounterHandler::setupTemplate();
 
-		// Fetch a list of years for which reports can be generated.
-		$years = array();
-		$logEntryDao =& DAORegistry::getDAO('LogEntryDAO');
-		$log =& $logEntryDao->parse();
-		foreach ($log as $entry) {
-			$year = strftime('%Y', strtotime($entry->getStamp()));
-			if (!in_array($year, $years)) {
-				$years[] = $year;
-			}
-		}
-		unset($log);
+		$counterReportDao =& DAORegistry::getDAO('CounterReportDAO');
+		$years = $counterReportDao->getYears();
 
-		$templateManager = &TemplateManager::getManager();
+		$templateManager =& TemplateManager::getManager();
 		$templateManager->assign('years', $years);
 		$templateManager->display($plugin->getTemplatePath() . 'index.tpl');
-	}
-
-	function browseLog() {
-		list($plugin) = CounterHandler::validate();
-		CounterHandler::setupTemplate(true);
-
-		$journal =& Request::getJournal();
-		$rangeInfo = PKPHandler::getRangeInfo('entries');
-
-		$logEntryDao =& DAORegistry::getDAO('LogEntryDAO');
-		$log =& $logEntryDao->parse();
-
-		// Map session IDs to something more readable
-		$sessions = array();
-		$userNum = 0;
-		foreach ($log as $entry) {
-			if (!isset($sessions[$entry->getUser()])) {
- 				$sessions[$entry->getUser()] = Locale::translate('plugins.generic.counter.sessionNumber', array('sessionNumber' => ++$userNum));
-			}
-		}
-
-		if ($rangeInfo->isValid()) {
-			$page = $rangeInfo->getPage();
-			$count = $rangeInfo->getCount();
-		} else {
-			$page = 1;
-			$count = min(count($log), $journal->getSetting('itemsPerPage'));
-		}
-		import('core.ArrayItemIterator');
-		$logIterator = new ArrayItemIterator($log, $page, $count);
-
-		$templateManager = &TemplateManager::getManager();
-		$templateManager->assign_by_ref ('entries', $logIterator);
-		$templateManager->assign ('sessions', $sessions);
-
-		$templateManager->display($plugin->getTemplatePath() . 'browser.tpl');
 	}
 
 	function report() {
@@ -211,7 +166,7 @@ class CounterHandler extends PKPHandler {
 	 */
 	function setupTemplate($subclass = false) {
 		parent::setupTemplate();
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 
 		$pageHierarchy = array(array(Request::url(null, 'user'), 'navigation.user'));
 

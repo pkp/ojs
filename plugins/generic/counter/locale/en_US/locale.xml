@@ -17,22 +17,7 @@
 	<message key="plugins.generic.counter">COUNTER Statistics</message>
 	<message key="plugins.generic.counter.enabled">The COUNTER Plugin has been enabled.</message>
 	<message key="plugins.generic.counter.disabled">The COUNTER Plugin has been disabled.</message>
-
-	<message key="plugins.generic.counter.clearLog">Clear Log</message>
-	<message key="plugins.generic.counter.confirmClear">Are you sure you wish to clear the log? This action cannot be undone.</message>
-	<message key="plugins.generic.counter.browseLog">Browse Log</message>
-	<message key="plugins.generic.counter.browseLog.logBrowser">Log Browser</message>
-
-	<message key="plugins.generic.counter.entry.timestamp">Timestamp</message>
-	<message key="plugins.generic.counter.entry.site">Site</message>
-	<message key="plugins.generic.counter.entry.journal">Journal</message>
-	<message key="plugins.generic.counter.entry.user">User</message>
-	<message key="plugins.generic.counter.sessionNumber">Session #{$sessionNumber}</message>
-	<message key="plugins.generic.counter.entry.type">Type</message>
-	<message key="plugins.generic.counter.entry.type.article">Article</message>
-	<message key="plugins.generic.counter.entry.type.search">Search</message>
-	<message key="plugins.generic.counter.entry.value">Value</message>
-
+	<message key="plugins.generic.counter.migrate">Migrate Log File</message>
 	<message key="plugins.generic.counter.1a.title">Journal Report 1 (R2): Full-Text Article Requests by Month and Journal</message>
 	<message key="plugins.generic.counter.1a.title1">Journal Report 1 (R2)</message>
 	<message key="plugins.generic.counter.1a.title2">Number of Successful Full-Text Article Requests by Month and Journal (Year {$year})</message>
