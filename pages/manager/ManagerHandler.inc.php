@@ -73,7 +73,7 @@ class ManagerHandler extends PKPHandler {
 					// Check for a group ID and add recipients.
 					$groupDao =& DAORegistry::getDAO('GroupDAO');
 					$group =& $groupDao->getGroup($groupId);
-					if ($group && $group->getJournalId() == $journal->getJournalId()) {
+					if ($group && $group->getAssocId() == $journal->getJournalId() && $group->getAssocType() == ASSOC_TYPE_JOURNAL) {
 						$groupMembershipDao =& DAORegistry::getDAO('GroupMembershipDAO');
 						$memberships =& $groupMembershipDao->getMemberships($group->getGroupId());
 						$memberships =& $memberships->toArray();

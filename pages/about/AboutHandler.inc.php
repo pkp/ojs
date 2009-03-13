@@ -184,7 +184,8 @@ class AboutHandler extends PKPHandler {
 
 		if (	!$journal || !$group ||
 			$group->getContext() != GROUP_CONTEXT_PEOPLE ||
-			$group->getJournalId() != $journal->getJournalId()
+			$group->getAssocType() != ASSOC_TYPE_JOURNAL ||
+			$group->getAssocId() != $journal->getJournalId()
 		) {
 			Request::redirect(null, 'about');
 		}
