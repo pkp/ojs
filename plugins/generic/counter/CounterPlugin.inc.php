@@ -167,7 +167,9 @@ class CounterPlugin extends GenericPlugin {
 				$verbs[] = array(
 					'migrate',
 					Locale::translate('plugins.generic.counter.migrate')
-			);
+				);
+			}
+		}
 		$verbs[] = array(
 			($isEnabled?'disable':'enable'),
 			Locale::translate($isEnabled?'manager.plugins.disable':'manager.plugins.enable')
