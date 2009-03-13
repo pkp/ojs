@@ -314,6 +314,7 @@ class Upgrade extends Installer {
 			'openAccessPolicy' => 'openAccessPolicy',
 			'announcementsIntroduction' => 'announcementsIntroduction',
 			// Setup page 5
+			'homeHeaderLogoImage' => 'homeHeaderLogoImage',
 			'homeHeaderTitleType' => 'homeHeaderTitleType',
 			'homeHeaderTitle' => 'homeHeaderTitle',
 			'homeHeaderTitleImage' => 'homeHeaderTitleImage',
