@@ -15,7 +15,6 @@
 // $Id$
 
 
-define('COUNTER_UID_VAR', 'CounterPlugin_UID');
 import('classes.plugins.GenericPlugin');
 
 class CounterPlugin extends GenericPlugin {
@@ -34,10 +33,11 @@ class CounterPlugin extends GenericPlugin {
 			HookRegistry::register ('Templates::Manager::Index::ManagementPages', array(&$this, 'displayMenuOption'));
 			HookRegistry::register ('LoadHandler', array(&$this, 'handleRequest'));
 			HookRegistry::register ('TemplateManager::display', array(&$this, 'logRequest'));
+			HookRegistry::register ('FileManager::downloadFile', array(&$this, 'logRequestInline'));
 
-			$this->import('LogEntryDAO');
-			$logEntryDao = new LogEntryDAO();
-			DAORegistry::registerDAO('LogEntryDAO', $logEntryDao);
+			$this->import('CounterReportDAO');
+			$counterReportDao = new CounterReportDAO();
+			DAORegistry::registerDAO('CounterReportDAO', $counterReportDao);
 		}
 		return $success;
 	}
@@ -61,6 +61,13 @@ class CounterPlugin extends GenericPlugin {
 		return Locale::translate('plugins.generic.counter.description');
 	}
 
+	/**
+	 * Get the filename of the ADODB schema for this plugin.
+	 */
+	function getInstallSchemaFile() {
+		return $this->getPluginPath() . '/' . 'schema.xml';
+	}
+
 	function displayMenuOption($hookName, $args) {
 		if (!Validation::isSiteAdmin()) return false;
 
@@ -71,6 +78,17 @@ class CounterPlugin extends GenericPlugin {
 		$this->addLocaleData();
 		$output .= '<li>&#187; <a href="' . Request::url(null, 'counter') . '">' . Locale::translate('plugins.generic.counter') . '</a></li>';
 		return false;
+	}
+
+	/**
+	 * Log a request for an lineable galley (e.g. text file).
+	 */
+	function logRequestInline($hookName, $args) {
+		$journal =& Request::getJournal();
+		if (!$journal || Request::getRequestedPage() != 'article' || Request::getRequestedOp() != 'view') return false;
+		
+		$counterReportDao =& DAORegistry::getDAO('CounterReportDAO');
+		$counterReportDao->incrementCount($journal->getJournalId(), (int) strftime('%Y'), ((int) strftime('%m')) - 1, false, false);
 	}
 
 	/**
@@ -88,11 +106,6 @@ class CounterPlugin extends GenericPlugin {
 		$session =& Request::getSession();
 
 		if (!$journal) return false;
-
-		if (($logUser = $session->getSessionVar(COUNTER_UID_VAR))=='') {
-			$logUser = Core::getCurrentDate() . '_' . $session->getId();
-			$session->setSessionVar(COUNTER_UID_VAR, $logUser);
-		}
 
 		switch ($template) {
 			case 'article/article.tpl':
@@ -144,10 +157,19 @@ class CounterPlugin extends GenericPlugin {
 		// Non-site admin managers cannot manage Counter plugin.
 		if (!Validation::isSiteAdmin()) return $verbs;
 
-		if ($isEnabled) $verbs[] = array(
-			'counter',
-			Locale::translate('plugins.generic.counter')
-		);
+		if ($isEnabled) {
+			$verbs[] = array(
+				'counter',
+				Locale::translate('plugins.generic.counter')
+			);
+			$counterReportDao =& DAORegistry::getDAO('CounterReportDAO');
+			if (file_exists($counterReportDao->getOldLogFilename())) {
+				$verbs[] = array(
+					'migrate',
+					Locale::translate('plugins.generic.counter.migrate')
+				);
+			}
+		}
 		$verbs[] = array(
 			($isEnabled?'disable':'enable'),
 			Locale::translate($isEnabled?'manager.plugins.disable':'manager.plugins.enable')
@@ -169,6 +191,11 @@ class CounterPlugin extends GenericPlugin {
 		$isEnabled = $this->getSetting(0, 'enabled');
 		$this->addLocaleData();
 		switch ($verb) {
+			case 'migrate':
+				$counterReportDao =& DAORegistry::getDAO('CounterReportDAO');
+				$counterReportDao->upgradeFromLogFile();
+				Request::redirect('index', 'counter');
+				break;
 			case 'enable':
 				$this->updateSetting(0, 'enabled', true);
 				$message = Locale::translate('plugins.generic.counter.enabled');
