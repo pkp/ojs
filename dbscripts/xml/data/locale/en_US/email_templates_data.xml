@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE data SYSTEM "../../../../../lib/pkp/dtd/xmlData.dtd">
+<!DOCTYPE data SYSTEM "../../../dtd/xmldata.dtd">
 
 <!--
   * email_templates_data.xml
@@ -49,7 +49,7 @@ Your new password: {$password}
 			<field name="subject">Journal Registration</field>
 			<field name="body">{$userFullName}
 
-You have now been registered as a user with {$journalName}. We have included your username and password in this email, which are needed for all work with this journal though its website. At any point, you can ask to be removed from the journal's list of users by contacting me.
+You have now been registered as a user with {$journalName}. We have included your username and password in this email, which are needed for all work with this journal through its website. At any point, you can ask to be removed from the journal's list of users by contacting me.
 
 Username: {$username}
 Password: {$password}
