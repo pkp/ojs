@@ -22,23 +22,21 @@
 	</td>
 	{/if}
 
-	<td class="tocTitle">{$article->getArticleTitle()|strip_unsafe_html}</td>
+	{if $article->getArticleAbstract() == ""}
+		{assign var=hasAbstract value=0}
+	{else}
+		{assign var=hasAbstract value=1}
+	{/if}
+
+	{assign var=articleId value=$article->getArticleId()}
+	{if (!$subscriptionRequired || $article->getAccessStatus() || $subscribedUser || $subscribedDomain || ($subscriptionExpiryPartial && $articleExpiryPartial.$articleId))}
+		{assign var=hasAccess value=1}
+	{else}
+		{assign var=hasAccess value=0}
+	{/if}
+
+	<td class="tocTitle">{if !$hasAccess || $hasAbstract}<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}">{$article->getArticleTitle()|strip_unsafe_html}</a>{else}{$article->getArticleTitle()|strip_unsafe_html}{/if}</td>
 	<td class="tocGalleys">
-		{if $article->getArticleAbstract() == ""}
-			{assign var=hasAbstract value=0}
-		{else}
-			{assign var=hasAbstract value=1}
-		{/if}
-
-		{assign var=articleId value=$article->getArticleId()}
-		{if (!$subscriptionRequired || $article->getAccessStatus() || $subscribedUser || $subscribedDomain || ($subscriptionExpiryPartial && $articleExpiryPartial.$articleId))}
-			{assign var=hasAccess value=1}
-		{else}
-			{assign var=hasAccess value=0}
-		{/if}
-
-		{if !$hasAccess || $hasAbstract}<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}" class="file">{if $hasAbstract}{translate key=article.abstract}{else}{translate key="article.details"}{/if}</a>{/if}
-
 		{if $hasAccess || ($subscriptionRequired && $showGalleyLinks)}
 			{foreach from=$article->getLocalizedGalleys() item=galley name=galleyList}
 				<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getBestGalleyId($currentJournal)}" class="file">{$galley->getGalleyLabel()|escape}</a>
