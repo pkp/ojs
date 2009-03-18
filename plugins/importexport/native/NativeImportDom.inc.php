@@ -108,14 +108,6 @@ class NativeImportDom {
 			$issue->setTitle($node->getValue(), $locale);
 			$titleExists = true;
 		}
-		if (!$titleExists) {
-			$errors[] = array('plugins.importexport.native.import.error.titleMissing', array());
-			// Set a placeholder title so that further errors are
-			// somewhat meaningful; this placeholder will not be
-			// inserted into the database.
-			$issue->setTitle(Locale::translate('plugins.importexport.native.import.error.defaultTitle'), $journalPrimaryLocale);
-			$hasErrors = true;
-		}	
 		
 		for ($index=0; ($node = $issueNode->getChildByName('description', $index)); $index++) {
 			$locale = $node->getAttribute('locale');
@@ -181,6 +173,15 @@ class NativeImportDom {
 				$errors[] = array('plugins.importexport.native.import.error.unknownIdentificationType', array('identificationType' => $value, 'issueTitle' => $issue->getIssueTitle()));
 				$hasErrors = true;
 				break;
+		}
+		
+		if (($issueNode->getAttribute('identification') == 'title' || $issueNode->getAttribute('identification') == '') && (!$titleExists)) {
+			$errors[] = array('plugins.importexport.native.import.error.titleMissing', array());
+			// Set a placeholder title so that further errors are
+			// somewhat meaningful; this placeholder will not be
+			// inserted into the database.
+			$issue->setTitle(Locale::translate('plugins.importexport.native.import.error.defaultTitle'), $journalPrimaryLocale);
+			$hasErrors = true;
 		}
 
 		switch(($value = $issueNode->getAttribute('published'))) {
