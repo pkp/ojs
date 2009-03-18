@@ -152,7 +152,6 @@ class ManagerPaymentHandler extends ManagerHandler {
 
 		if ($settingsForm->validate()) {
 			$settingsForm->execute();
-
 			$templateMgr->assign(array(
 				'currentUrl' => Request::url(null, null, 'payMethodSettings'),
 				'pageTitle' => 'manager.payment.paymentMethods',

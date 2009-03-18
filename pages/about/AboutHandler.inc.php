@@ -557,10 +557,6 @@ class AboutHandler extends PKPHandler {
 			$templateMgr->assign('subscriptionStatistics', $subscriptionStatistics);
 		}
 
-		$notificationStatusDao =& DAORegistry::getDAO('NotificationStatusDAO');
-		$notifiableUsers = $notificationStatusDao->getNotifiableUsersCount($journal->getJournalId());
-		$templateMgr->assign('notifiableUsers', $notifiableUsers);
-
 		$templateMgr->display('about/statistics.tpl');
 	}
 

@@ -305,6 +305,15 @@ class ReviewerAction extends Action {
 			if ($commentForm->validate()) {
 				$commentForm->execute();
 
+				// Send a notification to associated users
+				import('notification.Notification');
+				$notificationUsers = $article->getAssociatedUserIds();
+				foreach ($notificationUsers as $user) {
+					$url = Request::url(null, $user['role'], 'submissionReview', $article->getArticleId(), null, 'peerReview');
+					Notification::createNotification($user['id'], "notification.type.reviewerComment",
+						$article->getArticleTitle(), $url, 1, NOTIFICATION_TYPE_REVIEWER_COMMENT);
+				}
+				
 				if ($emailComment) {
 					$commentForm->email();
 				}
@@ -347,6 +356,21 @@ class ReviewerAction extends Action {
 			$reviewForm->readInputData();
 			if ($reviewForm->validate()) {
 				$reviewForm->execute();
+
+				// Send a notification to associated users
+				import('notification.Notification');
+				$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+				$reviewAssignment = $reviewAssignmentDao->getReviewAssignmentById($reviewId);
+				$articleId = $reviewAssignment->getArticleId();
+				$articleDao =& DAORegistry::getDAO('ArticleDAO'); 
+				$article =& $articleDao->getArticle($articleId);
+				$notificationUsers = $article->getAssociatedUserIds();
+				foreach ($notificationUsers as $user) {
+					$url = Request::url(null, $user['role'], 'submissionReview', $article->getArticleId(), null, 'peerReview');
+					Notification::createNotification($user['id'], "notification.type.reviewerFormComment",
+						$article->getArticleTitle(), $url, 1, NOTIFICATION_TYPE_REVIEWER_FORM_COMMENT);
+				}
+				
 			} else {
 				$reviewForm->display();
 				return false;

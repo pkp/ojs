@@ -144,6 +144,25 @@ class SubmitHandler extends AuthorHandler {
 			$articleId = $submitForm->execute();
 
 			if ($step == 5) {
+				// Send a notification to associated users
+				import('notification.Notification');
+				$articleDao =& DAORegistry::getDAO('ArticleDAO'); 
+				$article =& $articleDao->getArticle($articleId);
+				$roleDao = &DAORegistry::getDAO('RoleDAO');
+				$notificationUsers = array();
+				$journalManagers = $roleDao->getUsersByRoleId(ROLE_ID_JOURNAL_MANAGER);
+				$allUsers = $journalManagers->toArray();
+				$editors = $roleDao->getUsersByRoleId(ROLE_ID_EDITOR);
+				array_merge($allUsers, $editors->toArray());
+				foreach ($allUsers as $user) {
+					$notificationUsers[] = array('id' => $user->getUserId());
+				}
+				foreach ($notificationUsers as $user) {
+					$url = Request::url(null, 'editor', 'submission', $articleId);
+					Notification::createNotification($user['id'], "notification.type.articleSubmitted",
+						$article->getArticleTitle(), $url, 1, NOTIFICATION_TYPE_ARTICLE_SUBMITTED);
+				}
+				
 				$journal = &Request::getJournal();
 				$templateMgr = &TemplateManager::getManager();
 				$templateMgr->assign_by_ref('journal', $journal);

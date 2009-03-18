@@ -423,6 +423,74 @@ class Article extends Submission {
 		);
 		return $commentsStatusOptions;
 	}
+	
+	/**
+	 * Get an array of user IDs associated with this article
+	 * @param $authors boolean
+	 * @param $reviewers boolean
+	 * @param $editors boolean
+	 * @param $proofreaders boolean
+	 * @param $copyeditors boolean
+	 * @param $layoutEditors boolean
+	 * @return array User IDs
+	 */
+	function getAssociatedUserIds($authors = true, $reviewers = true, $editors = true, $proofreaders = true, $copyeditors = true, $layoutEditors = true) {
+		$articleId = $this->getArticleId();
+		
+		$userIds = array();
+
+		if($authors) {
+			$authorDao = &DAORegistry::getDAO('AuthorDAO');
+			$authors = $authorDao->getAuthorsByArticle($articleId);
+			foreach ($authors as $author) {
+				$userIds[] = array('id' => $author->getAuthorId(), 'role' => 'author');
+			}
+		}
+		
+		if($editors) {
+			$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
+			$editAssignments =& $editAssignmentDao->getEditorAssignmentsByArticleId($articleId);
+			while ($editAssignment =& $editAssignments->next()) {
+				$userIds[] = array('id' => $editAssignment->getEditorId(), 'role' => 'editor');
+				unset($editAssignment);
+			}
+		}
+		
+		if($copyeditors) {
+			$copyAssignmentDao = &DAORegistry::getDAO('CopyAssignmentDAO');
+			$copyAssignment =& $copyAssignmentDao->getCopyAssignmentByArticleId($articleId);
+			if ($copyAssignment != null && $copyAssignment->getCopyeditorId() > 0) {
+				$userIds[] =array('id' =>  $copyAssignment->getCopyeditorId(), 'role' => 'copyeditor');
+			}
+		}
+		
+		if($layoutEditors) {
+			$layoutAssignmentDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
+			$layoutEditorId = $layoutAssignmentDao->getLayoutEditorIdByArticleId($articleId);
+			if ($layoutEditorId != null && $layoutEditorId > 0) {
+				$userIds[] = array('id' => $layoutEditorId, 'role' => 'layoutEditor');
+			}
+		}	
+		
+		if($proofreaders) {
+			$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
+			$proofAssignment =& $proofAssignmentDao->getProofAssignmentByArticleId($articleId);
+			if ($proofAssignment != null && $proofAssignment->getProofreaderId() > 0) {
+				$userIds[] = array('id' => $proofAssignment->getProofreaderId(), 'role' => 'proofreader');
+			}
+		}
+		
+		if($reviewers) {
+			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+			$reviewAssignments =& $reviewAssignmentDao->getReviewAssignmentsByArticleId($articleId);
+			foreach ($reviewAssignments as $reviewAssignment) {
+				$userIds[] = array('id' => $reviewAssignment->getReviewerId(), 'role' => 'reviewer');
+				unset($reviewAssignment);
+			}
+		}
+				
+		return $userIds;
+	}
 }
 
 ?>

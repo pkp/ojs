@@ -651,7 +651,13 @@ span.formError {
 	font-size: 1em;
 }
 
-ul.formErrorList a {
+span.formSuccess {
+	color: #090;
+	font-weight: bold;
+	font-size: 1em;
+}
+
+ul.formErrorList {
 	color: #900;
 }
 
@@ -741,4 +747,15 @@ div.progressbar {
 	height: 27px;
 	width: 505px;
 	z-index:1;
+}
+
+td.notificationContent {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+td.notificationFunction {
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: right;
 }

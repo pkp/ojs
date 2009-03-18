@@ -277,6 +277,15 @@ class AuthorAction extends Action {
 			if ($commentForm->validate()) {
 				$commentForm->execute();
 
+				// Send a notification to associated users
+				import('notification.Notification');
+				$notificationUsers = $article->getAssociatedUserIds(true, false);
+				foreach ($notificationUsers as $user) {
+					$url = Request::url(null, $user['role'], 'submissionEditing', $article->getArticleId(), null, 'layout');
+					Notification::createNotification($user['id'], "notification.type.layoutComment",
+						$article->getArticleTitle(), $url, 1, NOTIFICATION_TYPE_LAYOUT_COMMENT);
+				}
+				
 				if ($emailComment) {
 					$commentForm->email();
 				}
@@ -389,6 +398,15 @@ class AuthorAction extends Action {
 			if ($commentForm->validate()) {
 				$commentForm->execute();
 
+				// Send a notification to associated users
+				import('notification.Notification');
+				$notificationUsers = $article->getAssociatedUserIds(true, false);
+				foreach ($notificationUsers as $user) {
+					$url = Request::url(null, $user['role'], 'submissionEditing', $article->getArticleId(), null, 'copyedit');
+					Notification::createNotification($user['id'], "notification.type.copyeditComment",
+						$article->getArticleTitle(), $url, 1, NOTIFICATION_TYPE_COPYEDIT_COMMENT);
+				}
+				
 				if ($emailComment) {
 					$commentForm->email();
 				}
@@ -432,6 +450,15 @@ class AuthorAction extends Action {
 			if ($commentForm->validate()) {
 				$commentForm->execute();
 
+				// Send a notification to associated users
+				import('notification.Notification');
+				$notificationUsers = $article->getAssociatedUserIds(true, false);
+				foreach ($notificationUsers as $user) {
+					$url = Request::url(null, $user['role'], 'submissionEditing', $article->getArticleId(), null, 'proofread');
+					Notification::createNotification($user['id'], "notification.type.proofreadComment",
+						$article->getArticleTitle(), $url, 1, NOTIFICATION_TYPE_PROOFREAD_COMMENT);
+				}
+				
 				if ($emailComment) {
 					$commentForm->email();
 				}

@@ -147,7 +147,6 @@ class OJSApplication extends PKPApplication {
 			'JournalStatisticsDAO' => 'journal.JournalStatisticsDAO',
 			'LayoutAssignmentDAO' => 'submission.layoutAssignment.LayoutAssignmentDAO',
 			'LayoutEditorSubmissionDAO' => 'submission.layoutEditor.LayoutEditorSubmissionDAO',
-			'NotificationStatusDAO' => 'journal.NotificationStatusDAO',
 			'OAIDAO' => 'oai.ojs.OAIDAO',
 			'OJSCompletedPaymentDAO' => 'payment.ojs.OJSCompletedPaymentDAO',
 			'PluginSettingsDAO' => 'plugins.PluginSettingsDAO',

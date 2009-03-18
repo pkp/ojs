@@ -230,7 +230,6 @@ class SubscriptionHandler extends ManagerHandler {
 
 			if ($subscriptionForm->validate()) {
 				$subscriptionForm->execute();
-
 				if (Request::getUserVar('createAnother')) {
 					Request::redirect(null, null, 'selectSubscriber', null, array('subscriptionCreated', 1));
 				} else {
@@ -465,7 +464,6 @@ class SubscriptionHandler extends ManagerHandler {
 
 		if ($subscriptionPolicyForm->validate()) {
 			$subscriptionPolicyForm->execute();
-
 			SubscriptionHandler::setupTemplate(true);
 
 			$templateMgr = &TemplateManager::getManager();

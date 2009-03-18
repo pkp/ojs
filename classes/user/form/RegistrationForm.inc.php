@@ -320,16 +320,6 @@ class RegistrationForm extends Form {
 			}
 		}
 
-		// By default, self-registering readers will receive
-		// journal updates. (The double set is here to prevent a
-		// duplicate insert error msg if there was a notification entry
-		// left over from a previous role.)
-		if (isset($allowedRoles['reader']) && $this->getData($allowedRoles['reader'])) {
-			$notificationStatusDao = &DAORegistry::getDAO('NotificationStatusDAO');
-			$notificationStatusDao->setJournalNotifications($journal->getJournalId(), $userId, false);
-			$notificationStatusDao->setJournalNotifications($journal->getJournalId(), $userId, true);
-		}
-
 		if (isset($allowedRoles['reader']) && $this->getData('openAccessNotification')) {
 			$userSettingsDao = &DAORegistry::getDAO('UserSettingsDAO');
 			$userSettingsDao->updateSetting($userId, 'openAccessNotification', true, 'bool', $journal->getJournalId());

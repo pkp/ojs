@@ -139,24 +139,6 @@
 </tr>
 {/if}
 
-{foreach from=$journals name=journalNotifications key=thisJournalId item=thisJournal}
-	{assign var=thisJournalId value=$thisJournal->getJournalId()}
-	{assign var=notificationEnabled value=`$journalNotifications.$thisJournalId`}
-	{if !$notFirstJournal}
-		{assign var=notFirstJournal value=1}
-		<tr valign="top">
-			<td class="label">{translate key="user.profile.form.publishedNotifications"}</td>
-			<td class="value">
-	{/if}
-
-			<input type="checkbox" name="journalNotify[]" {if $notificationEnabled}checked="checked" {/if}id="journalNotify-{$thisJournalId|escape}" value="{$thisJournalId|escape}" /> <label for="journalNotify-{$thisJournalId|escape}">{$thisJournal->getJournalTitle()|escape}</label><br/>
-
-	{if $smarty.foreach.journalNotifications.last}
-			</td>
-		</tr>
-	{/if}
-{/foreach}
-
 {if $displayOpenAccessNotification}
 	{assign var=notFirstJournal value=0}
 	{foreach from=$journals name=journalOpenAccessNotifications key=thisJournalId item=thisJournal}

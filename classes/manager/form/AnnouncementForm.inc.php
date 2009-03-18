@@ -129,6 +129,7 @@ class AnnouncementForm extends Form {
 	function execute() {
 		$announcementDao = &DAORegistry::getDAO('AnnouncementDAO');
 		$journal = &Request::getJournal();
+		$journalId = $journal->getJournalId();
 
 		if (isset($this->announcementId)) {
 			$announcement = &$announcementDao->getAnnouncement($this->announcementId);
@@ -138,7 +139,7 @@ class AnnouncementForm extends Form {
 			$announcement = new Announcement();
 		}
 
-		$announcement->setJournalId($journal->getJournalId());
+		$announcement->setJournalId($journalId);
 		$announcement->setTitle($this->getData('title'), null); // Localized
 		$announcement->setDescriptionShort($this->getData('descriptionShort'), null); // Localized
 		$announcement->setDescription($this->getData('description'), null); // Localized
@@ -162,6 +163,25 @@ class AnnouncementForm extends Form {
 			$announcement->setDatetimePosted(Core::getCurrentDate());
 			$announcementDao->insertAnnouncement($announcement);
 		}
+		
+		// Send a notification to associated users
+		import('notification.Notification');
+		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$notificationUsers = array();
+		$allUsers = $roleDao->getUsersByJournalId($journalId);
+		while (!$allUsers->eof()) {
+			$user = &$allUsers->next();
+			$notificationUsers[] = array('id' => $user->getUserId());
+			unset($user);
+		}
+		$url = Request::url(null, 'announcement', 'view', array(1));
+		foreach ($notificationUsers as $user) {
+			Notification::createNotification($user['id'], "notification.type.newAnnouncement",
+				null, $url, 1, NOTIFICATION_TYPE_NEW_ANNOUNCEMENT);
+		}
+		$notificationDao = &DAORegistry::getDAO('NotificationDAO');
+		$notificationDao->sendToMailingList(Notification::createNotification(0, "notification.type.newAnnouncement",
+				null, $url, 1, NOTIFICATION_TYPE_NEW_ANNOUNCEMENT));
 	}
 }
 

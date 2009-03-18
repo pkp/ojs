@@ -22,6 +22,57 @@
 		  *
 		  -->
 		<row>
+			<field name="email_key">NOTIFICATION</field>
+			<field name="subject">New notification from {$siteTitle}</field>
+			<field name="body">You have a new notification from {$siteTitle}:
+
+{$notificationContents}
+
+Link: {$url}
+
+{$principalContactSignature}</field>
+			<field name="description">The email is sent to registered users that have selected to have this type of notification emailed to them.</field>
+		</row>
+		<row>
+			<field name="email_key">NOTIFICATION_MAILLIST</field>
+			<field name="subject">New notification from {$siteTitle}</field>
+			<field name="body">You have a new notification from {$siteTitle}:
+--
+{$notificationContents}
+
+Link: {$url}
+--
+
+If you wish to stop receiving notification emails, please go to {$unsubscribeLink} and enter your email address and password.
+
+{$principalContactSignature}</field>
+			<field name="description">This email is sent to unregistered users on the notification mailing list.</field>
+		</row>
+		<row>
+			<field name="email_key">NOTIFICATION_MAILLIST_WELCOME</field>
+			<field name="subject">Welcome to the the {$siteTitle} mailing list!</field>
+			<field name="body">You have signed up to receive notifications from {$siteTitle}.
+			
+Please click on this link to confirm your request and add your email address to the mailing list: {$confirmLink}
+
+If you wish to stop receiving notification emails, please go to {$unsubscribeLink} and enter your email address and password.
+
+Your password for disabling notification emails is: {$password}
+
+{$principalContactSignature}</field>
+			<field name="description">This email is sent to an unregistered user who just registered with the notification mailing list.</field>
+		</row>
+		<row>
+			<field name="email_key">NOTIFICATION_MAILLIST_PASSWORD</field>
+			<field name="subject">Your notification mailing list information for {$siteTitle}</field>
+			<field name="body">Your new password for disabling notification emails is: {$password}
+
+If you wish to stop receiving notification emails, please go to {$unsubscribeLink} and enter your email address and password.
+
+{$principalContactSignature}</field>
+			<field name="description">This email is sent to an unregistered user on the notification mailing list when they indicate that they have forgotten their password or are unable to login. It provides a URL they can follow to reset their password.</field>
+		</row>
+		<row>
 			<field name="email_key">PASSWORD_RESET_CONFIRM</field>
 			<field name="subject">Password Reset Confirmation</field>
 			<field name="body">We have received a request to reset your password for the {$siteTitle} web site.

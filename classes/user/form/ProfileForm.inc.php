@@ -108,7 +108,6 @@ class ProfileForm extends Form {
 
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
-		$notificationStatusDao = &DAORegistry::getDAO('NotificationStatusDAO');
 		$userSettingsDao = &DAORegistry::getDAO('UserSettingsDAO');
 
 		$journals = &$journalDao->getEnabledJournals();
@@ -124,7 +123,6 @@ class ProfileForm extends Form {
 
 		$journals = &$journalDao->getEnabledJournals();
 		$journals = &$journals->toArray();
-		$journalNotifications = &$notificationStatusDao->getJournalNotifications($user->getUserId());
 
 		$countryDao =& DAORegistry::getDAO('CountryDAO');
 		$countries =& $countryDao->getCountries();
@@ -257,7 +255,6 @@ class ProfileForm extends Form {
 
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
-		$notificationStatusDao = &DAORegistry::getDAO('NotificationStatusDAO');
 
 		// Roles
 		$journal =& Request::getJournal();
@@ -285,21 +282,6 @@ class ProfileForm extends Form {
 				$wantsRole = Request::getUserVar('readerRole');
 				if ($hasRole && !$wantsRole) $roleDao->deleteRole($role);
 				if (!$hasRole && $wantsRole) $roleDao->insertRole($role);
-			}
-		}
-
-		$journals = &$journalDao->getEnabledJournals();
-		$journals = &$journals->toArray();
-		$journalNotifications = $notificationStatusDao->getJournalNotifications($user->getUserId());
-
-		$readerNotify = Request::getUserVar('journalNotify');
-
-		foreach ($journals as $thisJournal) {
-			$thisJournalId = $thisJournal->getJournalId();
-			$currentlyReceives = !empty($journalNotifications[$thisJournalId]);
-			$shouldReceive = !empty($readerNotify) && in_array($thisJournal->getJournalId(), $readerNotify);
-			if ($currentlyReceives != $shouldReceive) {
-				$notificationStatusDao->setJournalNotifications($thisJournalId, $user->getUserId(), $shouldReceive);
 			}
 		}
 

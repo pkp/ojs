@@ -142,9 +142,6 @@ class JournalDAO extends DAO {
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 		$issueDao->deleteIssuesByJournal($journalId);
 
-		$notificationStatusDao = &DAORegistry::getDAO('NotificationStatusDAO');
-		$notificationStatusDao->deleteNotificationStatusByJournal($journalId);
-
 		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
 		$emailTemplateDao->deleteEmailTemplatesByJournal($journalId);
 

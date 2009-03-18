@@ -41,28 +41,6 @@
 	<br/>
 {/if}
 
-<h3>{translate key="email.recipients"}</h3>
-<table class="data" width="100%">
-<tr valign="top">
-	<td width="5%">
-		<input checked type="radio" name="whichUsers" id="interestedUsers" value="interestedUsers"/>
-	</td>
-	<td width="75%" class="label">
-		<label for="interestedUsers">{translate key="editor.notifyUsers.interestedUsers" count=$notifiableCount}</label>
-	</td>
-</tr>
-<tr valign="top">
-	<td width="5%">
-		<input type="radio" id="allUsers" name="whichUsers" value="allUsers"/>
-	</td>
-	<td width="95%" class="label">
-		<label for="allUsers">{translate key="editor.notifyUsers.allUsers" count=$allUsersCount}</label>
-	</td>
-</tr>
-</table>
-
-<br/>
-
 <h3>{translate key="issue.issue"}</h3>
 <table class="data" width="100%">
 <tr valign="top">

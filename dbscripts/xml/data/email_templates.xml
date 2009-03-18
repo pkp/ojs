@@ -21,6 +21,21 @@
 		  *
 		  -->
 		<row>
+			<field name="email_key">NOTIFICATION</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">0</field>
+		</row>
+		<row>
+			<field name="email_key">NOTIFICATION_MAILLIST</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">0</field>
+		</row>
+		<row>
+			<field name="email_key">NOTIFICATION_MAILLIST_PASSWORD</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">0</field>
+		</row>
+		<row>
 			<field name="email_key">PASSWORD_RESET_CONFIRM</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>

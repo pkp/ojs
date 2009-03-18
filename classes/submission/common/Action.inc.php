@@ -148,7 +148,16 @@ class Action {
 					return $metadataForm->display();
 				}
 				$metadataForm->execute();
-
+				
+				// Send a notification to associated users
+				import('notification.Notification');
+				$notificationUsers = $article->getAssociatedUserIds();
+				foreach ($notificationUsers as $user) {
+					$url = Request::url(null, $user['role'], 'submission', $article->getArticleId(), null, 'metadata');
+					Notification::createNotification($user['id'], "notification.type.metadataModified",
+						$article->getArticleTitle(), $url, 1, NOTIFICATION_TYPE_METADATA_MODIFIED);
+				}
+		
 				// Add log entry
 				$user = &Request::getUser();
 				import('article.log.ArticleLog');
@@ -256,6 +265,15 @@ class Action {
 			if ($commentForm->validate()) {
 				$commentForm->execute();
 
+				// Send a notification to associated users
+				import('notification.Notification');
+				$notificationUsers = $article->getAssociatedUserIds(true, false);
+				foreach ($notificationUsers as $user) {
+					$url = Request::url(null, $user['role'], 'submissionReview', $article->getArticleId(), null, 'editorDecision');
+					Notification::createNotification($user['id'], "notification.type.submissionComment",
+						$article->getArticleTitle(), $url, 1, NOTIFICATION_TYPE_SUBMISSION_COMMENT);
+				}
+				
 				if ($emailComment) {
 					$commentForm->email($commentForm->emailHelper());
 				}

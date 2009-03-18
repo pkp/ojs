@@ -1004,7 +1004,28 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	
 
 	<message key="rt.context.authorTermsDescription">For items with more than one author, leave all names checked to search for similarly co-authored work, or search one at a time by checking only a single name. To learn more about the resource searched, click on ABOUT. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</message>
-
+	
+	
+	
+	<!-- Notification Types -->
+	<message key="notification.type.articleSubmitted">A new article, "{$param}", has been submitted.</message>
+	<message key="notification.type.copyeditComment">A copyeditor has left a comment on "{$param}".</message>
+	<message key="notification.type.editing">Editing Events</message>
+	<message key="notification.type.editorDecisionComment">A comment has been left on the editor decision for "{$param}".</message>
+	<message key="notification.type.galleyModified">A galley has been modified for "{$param}".</message>
+	<message key="notification.type.issuePublished">An issue has been published.</message>
+	<message key="notification.type.layoutComment">A comment has been left about "{$param}'s" layout.</message>
+	<message key="notification.type.metadataModified">"{$param}'s" metadata has been modified.</message>
+	<message key="notification.type.newAnnouncement">A new announcement has been created.</message>	
+	<message key="notification.type.proofreadComment">A comment has been left by a proofreader on "{$param}".</message>
+	<message key="notification.type.reviewerComment">A reviewer has commented on "{$param}".</message>
+	<message key="notification.type.reviewerFormComment">A review form review has been submitted for "{$param}".</message>
+	<message key="notification.type.reviewing">Reviewing Events</message>
+	<message key="notification.type.site">Site Events</message>
+	<message key="notification.type.submissionComment">An editor has made a comment on "{$param}".</message>
+	<message key="notification.type.submissions">Submission Events</message>
+	<message key="notification.type.suppFileModified">"{$param}'s" supplementary file(s) has been modified.</message>
+	<message key="notification.type.userComment">A reader has made a comment on "{$param}"</message>
 
 	<!--
 	 *

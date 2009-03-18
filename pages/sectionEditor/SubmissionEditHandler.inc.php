@@ -1219,6 +1219,18 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		if ($submitForm->validate()) {
 			$submitForm->execute();
+
+			// Send a notification to associated users
+			import('notification.Notification');
+			$articleDao =& DAORegistry::getDAO('ArticleDAO'); 
+			$article =& $articleDao->getArticle($articleId);
+			$notificationUsers = $article->getAssociatedUserIds(true, false);
+			foreach ($notificationUsers as $user) {
+				$url = Request::url(null, $user['role'], 'submissionEditing', $article->getArticleId(), null, 'layout');
+				Notification::createNotification($user['id'], "notification.type.suppFileModified",
+					$article->getArticleTitle(), $url, 1, NOTIFICATION_TYPE_SUPP_FILE_MODIFIED);
+			}
+			
 			Request::redirect(null, null, SubmissionEditHandler::getFrom(), $articleId);
 		} else {
 			parent::setupTemplate(true, $articleId, 'summary');
@@ -1466,8 +1478,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		// FIXME: Need construction by reference or validation always fails on PHP 4.x
 		$galleyForm =& new ArticleGalleyForm($articleId);
-		$galleyId = $galleyForm->execute($fileName);
-
+		
 		Request::redirect(null, null, 'editGalley', array($articleId, $galleyId));
 	}
 
@@ -1512,7 +1523,18 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$submitForm->readInputData();
 		if ($submitForm->validate()) {
 			$submitForm->execute();
-
+			
+			// Send a notification to associated users
+			import('notification.Notification');
+			$articleDao =& DAORegistry::getDAO('ArticleDAO'); 
+			$article =& $articleDao->getArticle($articleId);
+			$notificationUsers = $article->getAssociatedUserIds(true, false);
+			foreach ($notificationUsers as $user) {
+				$url = Request::url(null, $user['role'], 'submissionEditing', $article->getArticleId(), null, 'layout');
+				Notification::createNotification($user['id'], "notification.type.galleyModified",
+					$article->getArticleTitle(), $url, 1, NOTIFICATION_TYPE_GALLEY_MODIFIED);
+			}
+			
 			if (Request::getUserVar('uploadImage')) {
 				$submitForm->uploadImage();
 				Request::redirect(null, null, 'editGalley', array($articleId, $galleyId));

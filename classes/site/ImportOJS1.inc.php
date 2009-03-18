@@ -555,7 +555,6 @@ class ImportOJS1 {
 
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
-		$notifyDao = &DAORegistry::getDAO('NotificationStatusDAO');
 
 		$result = &$this->importDao->retrieve('SELECT *, DECODE(chPassword, ?) AS chPassword FROM tblusers ORDER BY nUserID', $this->journalConfigInfo['chPasswordSalt']);
 		while (!$result->EOF) {
@@ -624,14 +623,6 @@ class ImportOJS1 {
 				$userDao->insertUser($user);
 			}
 			$userId = $user->getUserId();
-
-			if ($row['bNotify']) {
-				if ($existingUser) {
-					// Just in case
-					$notifyDao->setJournalNotifications($this->journalId, $userId, 0);
-				}
-				$notifyDao->setJournalNotifications($this->journalId, $userId, 1);
-			}
 
 			if ($row['fkEditorID']) {
 				$role = new Role();
