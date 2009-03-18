@@ -36,10 +36,10 @@ function smarty_modifier_truncate($string, $length = 80, $etc = '...',
 		if($skip_tags) {
 			if ($middle) {
 				$tagsReverse = array();
-				remove_tags($string, $tagsReverse, true);
+				remove_tags($string, $tagsReverse, true, $length);
 			}
 			$tags = array();
-			$string = remove_tags($string, $tags);
+			$string = remove_tags($string, $tags, false, $length);
 		}
         $length -= min($length, strlen($etc));
         
@@ -95,12 +95,13 @@ function smarty_modifier_truncate($string, $length = 80, $etc = '...',
  * @param string
  * @param array
  * @param boolean
+ * @param int
  * @return string
  */
-function remove_tags($string, &$tags, $reverse = false) {
+function remove_tags($string, &$tags, $reverse = false, $length) {
 	if($reverse) {
-		return remove_tags_aux_reverse($string, 0, &$tags);
-	} else return remove_tags_aux($string, 0, &$tags);
+		return remove_tags_aux_reverse($string, 0, &$tags, $length);
+	} else return remove_tags_aux($string, 0, &$tags, $length);
 }
 
 /**
@@ -109,18 +110,20 @@ function remove_tags($string, &$tags, $reverse = false) {
  * @param string
  * @param int
  * @param array
+ * @param int
  * @return string
  */
-function remove_tags_aux($string, $loc, &$tags) {
-	if(strlen($string) > 0) {
+function remove_tags_aux($string, $loc, &$tags, $length) {
+	if(strlen($string) > 0 && $length > 0) {
+		$length--;
 		if($string[0] == '<') {
 			$closeBrack = strpos($string, '>')+1;
 			if($closeBrack) {
 				$tags[] = array(substr($string, 0, $closeBrack), $loc);
-				return remove_tags_aux(substr($string, $closeBrack), $loc+$closeBrack, $tags);
+				return remove_tags_aux(substr($string, $closeBrack), $loc+$closeBrack, $tags, $length);
 			}
 		}
-		return $string[0] . remove_tags_aux(substr($string, 1), $loc+1, $tags);
+		return $string[0] . remove_tags_aux(substr($string, 1), $loc+1, $tags, $length);
 	}
 }
 
@@ -131,11 +134,13 @@ function remove_tags_aux($string, $loc, &$tags) {
  * @param string
  * @param int loc Keeps track of position from the back of original string 
  * @param array
+ * @param int
  * @return string
  */
-function remove_tags_aux_reverse($string, $loc, &$tags) {
+function remove_tags_aux_reverse($string, $loc, &$tags, $length) {
 	$backLoc = strlen($string)-1;
-	if($backLoc >= 0) {
+	if($backLoc >= 0 && $length > 0) {
+		$length--;
 		if($string[$backLoc] == '>') {
 			$tag = '>';
 			$openBrack = 1;
@@ -149,10 +154,10 @@ function remove_tags_aux_reverse($string, $loc, &$tags) {
 			$tags[] = array($tag, $loc);
 			//echo "loc: " . $loc . "\n";
 			//echo "openBrack: " . $openBrack . "\n";
-			return remove_tags_aux_reverse(substr($string, 0, -$openBrack), $loc+$openBrack, $tags);
+			return remove_tags_aux_reverse(substr($string, 0, -$openBrack), $loc+$openBrack, $tags, $length);
 			
 		}
-		return remove_tags_aux_reverse(substr($string, 0, -1), $loc+1, $tags) . $string[$backLoc];
+		return remove_tags_aux_reverse(substr($string, 0, -1), $loc+1, $tags, $length) . $string[$backLoc];
 	}
 }
 
