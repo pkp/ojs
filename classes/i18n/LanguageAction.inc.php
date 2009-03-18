@@ -95,7 +95,7 @@ class LanguageAction {
 	 * @return boolean
 	 */
 	function downloadLocale($locale, &$errors) {
-		$downloadableLocales =& $this->getDownloadableLocales();
+		$downloadableLocales = $this->getDownloadableLocales();
 		if (!is_array($downloadableLocales) || !isset($downloadableLocales[$locale])) {
 			$errors[] = Locale::translate('admin.languages.download.cannotOpen');
 			return false;
