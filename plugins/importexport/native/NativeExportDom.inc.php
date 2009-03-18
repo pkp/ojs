@@ -227,6 +227,31 @@ class NativeExportDom {
 		}
 
 		/* --- */
+		if (is_array($article->getShowCoverPage(null))) foreach (array_keys($article->getShowCoverPage(null)) as $locale) {
+			if ($article->getShowCoverPage($locale)) {
+				$coverNode = &XMLCustomWriter::createElement($doc, 'cover');
+				XMLCustomWriter::appendChild($root, $coverNode);
+				XMLCustomWriter::setAttribute($coverNode, 'locale', $locale);
+				
+				XMLCustomWriter::createChildWithText($doc, $coverNode, 'altText', $issue->getCoverPageDescription($locale), false);
+				
+				$coverFile = $article->getFileName($locale);
+				if ($coverFile != '') {
+					$imageNode = &XMLCustomWriter::createElement($doc, 'image');
+					XMLCustomWriter::appendChild($coverNode, $imageNode);
+					import('file.PublicFileManager');
+					$publicFileManager = &new PublicFileManager();
+					$coverPagePath = $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
+					$coverPagePath .= $coverFile;
+					$embedNode = &XMLCustomWriter::createChildWithText($doc, $imageNode, 'embed', base64_encode($publicFileManager->readFile($coverPagePath)));
+					XMLCustomWriter::setAttribute($embedNode, 'filename', $article->getOriginalFileName($locale));
+					XMLCustomWriter::setAttribute($embedNode, 'encoding', 'base64');
+					XMLCustomWriter::setAttribute($embedNode, 'mime_type', String::mime_content_type($coverPagePath));
+				}				
+				
+				unset($coverNode);
+			}
+		}
 
 		XMLCustomWriter::createChildWithText($doc, $root, 'pages', $article->getPages(), false);
 

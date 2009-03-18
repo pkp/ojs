@@ -360,6 +360,76 @@ class NativeImportDom {
 		}
 		return true;
 	}
+	
+	function handleArticleCoverNode(&$journal, &$coverNode, &$article, &$errors, $isCommandLine) {
+		$errors = array();
+		$hasErrors = false;
+
+		$journalSupportedLocales = array_keys($journal->getSupportedLocaleNames()); // => journal locales must be set up before
+		$journalPrimaryLocale = $journal->getPrimaryLocale();
+
+		$locale = $coverNode->getAttribute('locale');
+		if ($locale == '') {
+			$locale = $journalPrimaryLocale;
+		} elseif (!in_array($locale, $journalSupportedLocales)) {
+				$errors[] = array('plugins.importexport.native.import.error.coverLocaleUnsupported', array('issueTitle' => $issue->getIssueIdentification(), 'locale' => $locale));
+				return false;			
+		}
+		
+		$article->setShowCoverPage(1, $locale);
+
+		if (($node = $coverNode->getChildByName('altText'))) $article->setCoverPageAltText($node->getValue(), $locale);
+
+		if (($node = $coverNode->getChildByName('image'))) {
+			import('file.PublicFileManager');
+			$publicFileManager = &new PublicFileManager();
+			$newName = 'cover_article_' . $article->getArticleId()."_{$locale}"  . '.';
+
+			if (($href = $node->getChildByName('href'))) {
+				$url = $href->getAttribute('src');
+				if ($isCommandLine || NativeImportDom::isAllowedMethod($url)) {
+					if ($isCommandLine && NativeImportDom::isRelativePath($url)) {
+						// The command-line tool does a chdir; we need to prepend the original pathname to relative paths so we're not looking in the wrong place.
+						$url = PWD . '/' . $url;
+					}
+
+					$originalName = basename($url);
+					$newName .= $publicFileManager->getExtension($originalName);
+					if (!$publicFileManager->copyJournalFile($journal->getJournalId(), $url, $newName)) {
+						$errors[] = array('plugins.importexport.native.import.error.couldNotCopy', array('url' => $url));
+						$hasErrors = true;
+					}
+					$article->setFileName($newName, $locale);
+					$article->setOriginalFileName($publicFileManager->truncateFileName($originalName, 127), $locale);
+				}
+			}
+			if (($embed = $node->getChildByName('embed'))) {
+				if (($type = $embed->getAttribute('encoding')) !== 'base64') {
+					$errors[] = array('plugins.importexport.native.import.error.unknownEncoding', array('type' => $type));
+					$hasErrors = true;
+				} else {
+					$originalName = $embed->getAttribute('filename');
+					$newName .= $publicFileManager->getExtension($originalName);
+					$article->setFileName($newName, $locale);
+					$article->setOriginalFileName($publicFileManager->truncateFileName($originalName, 127), $locale);
+					if ($publicFileManager->writeJournalFile($journal->getJournalId(), $newName, base64_decode($embed->getValue()))===false) {
+						$errors[] = array('plugins.importexport.native.import.error.couldNotWriteFile', array('originalName' => $originalName));
+						$hasErrors = true;
+					}
+				}
+			}
+			// Store the image dimensions.
+			list($width, $height) = getimagesize($publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/' . $newName);
+			$article->setWidth($width, $locale);
+			$article->setHeight($height, $locale);	
+			
+		}
+
+		if ($hasErrors) {
+			return false;
+		}
+		return true;
+	}
 
 	function isRelativePath($url) {
 		// FIXME This is not very comprehensive, but will work for now.
@@ -700,6 +770,14 @@ class NativeImportDom {
 			}
 		}
 		if ($hasErrors) return false;
+		
+		/* --- Handle covers --- */
+		for ($index = 0; ($node = $articleNode->getChildByName('cover', $index)); $index++) {
+			if (!NativeImportDom::handleArticleCoverNode($journal, $node, $article, $coverErrors, $isCommandLine)) {
+				$errors = array_merge($errors, $coverErrors);
+				$hasErrors = true;
+			}
+		}
 
 		$articleDao->insertArticle($article);
 		$dependentItems[] = array('article', $article);
