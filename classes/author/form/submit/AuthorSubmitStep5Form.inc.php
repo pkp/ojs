@@ -23,9 +23,19 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 	 * Constructor.
 	 */
 	function AuthorSubmitStep5Form($article) {
-		parent::AuthorSubmitForm($article, 5);
+		parent::AuthorSubmitForm($article, 5);		
+				
+		$this->addCheck(new FormValidatorCustom($this, 'qualifyForWaiver', 'optional', 'author.submit.mustEnterWaiverReason', array(&$this, 'checkWaiverReason')));		
 	}
 
+	/**
+	 * Check that if the user choses a Waiver that they enter text in the comments to Editor
+	 */
+	function checkWaiverReason() { 
+		if ( Request::getUserVar('qualifyForWaiver') == false ) return true;
+		else return  (Request::getUserVar('commentsToEditor') != '');
+	}
+	
 	/**
 	 * Display the form.
 	 */
@@ -77,7 +87,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('qualifyForWaiver', 'commentsToEditor'));
+		$this->readUserVars(array('paymentSent', 'qualifyForWaiver', 'commentsToEditor'));
 	}	
 
 	/**
@@ -87,7 +97,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		import('payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
 		if ( $paymentManager->submissionEnabled() ) {
-			if ( !$this->isValid() ) return false;
+			if ( !parent::validate() ) return false;
 	
 			$journal =& Request::getJournal();
 			$journalId = $journal->getJournalId();

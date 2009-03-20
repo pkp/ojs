@@ -56,7 +56,7 @@
 			<h3>{translate key="payment.alreadyPaid"}</h3>
 			<table class="data" width="100%">
 				<tr valign="top">
-				<td width="5%" align="left"><input type="checkbox" name="paymentSent" value="1" /></td>
+				<td width="5%" align="left"><input type="checkbox" name="paymentSent" value="1" {if $paymentSent}checked{/if} /></td>
 				<td width="95%">{translate key="payment.paymentSent"}</td>
 				</tr>
 				<tr>
@@ -68,7 +68,7 @@
 		<h3>{translate key="author.submit.requestWaiver"}</h3>
 		<table class="data" width="100%">
 			<tr valign="top">
-				<td width="5%" align="left"><input type="checkbox" name="qualifyForWaiver" value="1" /></td>
+				<td width="5%" align="left"><input type="checkbox" name="qualifyForWaiver" value="1" {if $qualifyForWaiver}checked{/if}/></td>
 				<td width="95%">{translate key="author.submit.qualityForWaiver"}</td>
 			</tr>
 			<tr>
