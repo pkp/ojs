@@ -284,6 +284,9 @@ require_validation = Off
 ; Maximum number of days before an unvalidated account expires and is deleted
 validation_timeout = 14
 
+; Display an error message when an email is not successfully sent
+display_errors = On
+
 
 ;;;;;;;;;;;;;;;;;;;
 ; Search Settings ;
