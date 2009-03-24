@@ -126,14 +126,14 @@ class EmailTemplateDAO extends DAO {
 				COALESCE(e.enabled, 1) AS enabled,
 				d.email_key, d.can_edit, d.can_disable,
 				e.journal_id, e.email_id,
-				COALESCE(ddl.locale, ddp.locale) AS locale,
+				COALESCE(ddl.locale, ddpl.locale) AS locale,
 				d.from_role_id, d.to_role_id
 			FROM	email_templates_default d
 				LEFT JOIN email_templates_default_data ddpl ON (ddpl.email_key = d.email_key AND ddpl.locale = ?)
 				LEFT JOIN email_templates_default_data ddl ON (ddl.email_key = d.email_key AND ddl.locale = ?)
 				LEFT JOIN email_templates e ON (d.email_key = e.email_key AND e.journal_id = ?)
 				LEFT JOIN email_templates_data edpl ON (edpl.email_key = e.email_key AND edpl.journal_id = e.journal_id AND edpl.locale = ?)
-				LEFT JOIN email_templates_data edl ON (edl.email_key = e.email_key AND edl.conference_id = e.conference_id AND edl.locale = ?)
+				LEFT JOIN email_templates_data edl ON (edl.email_key = e.email_key AND edl.journal_id = e.journal_id AND edl.locale = ?)
 			WHERE	d.email_key = ?',
 			array($primaryLocale, $locale, $journalId, $primaryLocale, $locale, $emailKey)
 		);
