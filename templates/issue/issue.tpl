@@ -12,12 +12,14 @@
 {if $section.title}<h4 class="tocSectionTitle">{$section.title|escape}</h4>{/if}
 
 {foreach from=$section.articles item=article}
+	{assign var=articlePath value=$article->getBestArticleId($currentJournal)}
+	
 <table class="tocArticle" width="100%">
 <tr valign="top">
 	{if $article->getFileName($locale) && $article->getShowCoverPage($locale) && !$article->getHideCoverPageToc($locale)}
 	<td rowspan="2">
 		<div class="tocArticleCoverImage">
-		<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}" class="file">
+		<a href="{url page="article" op="view" path=$articlePath}" class="file">
 		<img src="{$coverPagePath|escape}{$article->getFileName($locale)|escape}"{if $article->getCoverPageAltText($locale) != ''} alt="{$article->getCoverPageAltText($locale)|escape}"{else} alt="{translate key="article.coverPage.altText"}"{/if}/></a></div>
 	</td>
 	{/if}
@@ -35,11 +37,11 @@
 		{assign var=hasAccess value=0}
 	{/if}
 
-	<td class="tocTitle">{if !$hasAccess || $hasAbstract}<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}">{$article->getArticleTitle()|strip_unsafe_html}</a>{else}{$article->getArticleTitle()|strip_unsafe_html}{/if}</td>
+	<td class="tocTitle">{if !$hasAccess || $hasAbstract}<a href="{url page="article" op="view" path=$articlePath}">{$article->getArticleTitle()|strip_unsafe_html}</a>{else}{$article->getArticleTitle()|strip_unsafe_html}{/if}</td>
 	<td class="tocGalleys">
 		{if $hasAccess || ($subscriptionRequired && $showGalleyLinks)}
 			{foreach from=$article->getLocalizedGalleys() item=galley name=galleyList}
-				<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getBestGalleyId($currentJournal)}" class="file">{$galley->getGalleyLabel()|escape}</a>
+				<a href="{url page="article" op="view" path=$articlePath|to_array:$galley->getBestGalleyId($currentJournal)}" class="file">{$galley->getGalleyLabel()|escape}</a>
 				{if $subscriptionRequired && $showGalleyLinks && $restrictOnlyPdf}
 					{if $article->getAccessStatus() || !$galley->isPdfGalley()}	
 						<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_open_medium.gif" alt="{translate key="article.accessLogoOpen.altText"}" />
