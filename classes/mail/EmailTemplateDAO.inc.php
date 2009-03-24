@@ -118,21 +118,24 @@ class EmailTemplateDAO extends DAO {
 	 * @return EmailTemplate
 	 */
 	function &getEmailTemplate($emailKey, $locale, $journalId) {
+		$primaryLocale = Locale::getPrimaryLocale();
+
 		$result = &$this->retrieve(
-			'SELECT	COALESCE(ed.subject, dd.subject) AS subject,
-				COALESCE(ed.body, dd.body) AS body,
+			'SELECT	COALESCE(edl.subject, ddl.subject, edpl.subject, ddpl.subject) AS subject,
+				COALESCE(edl.body, ddl.body, edpl.body, ddpl.body) AS body,
 				COALESCE(e.enabled, 1) AS enabled,
 				d.email_key, d.can_edit, d.can_disable,
 				e.journal_id, e.email_id,
-				dd.locale,
+				COALESCE(ddl.locale, ddpl.locale) AS locale,
 				d.from_role_id, d.to_role_id
 			FROM	email_templates_default d
-				LEFT JOIN email_templates_default_data dd ON (dd.email_key = d.email_key)
+				LEFT JOIN email_templates_default_data ddpl ON (ddpl.email_key = d.email_key AND ddpl.locale = ?)
+				LEFT JOIN email_templates_default_data ddl ON (ddl.email_key = d.email_key AND ddl.locale = ?)
 				LEFT JOIN email_templates e ON (d.email_key = e.email_key AND e.journal_id = ?)
-				LEFT JOIN email_templates_data ed ON (ed.email_key = e.email_key AND ed.journal_id = e.journal_id AND ed.locale = dd.locale)
-			WHERE	d.email_key = ? AND
-				dd.locale = ?',
-			array($journalId, $emailKey, $locale)
+				LEFT JOIN email_templates_data edpl ON (edpl.email_key = e.email_key AND edpl.journal_id = e.journal_id AND edpl.locale = ?)
+				LEFT JOIN email_templates_data edl ON (edl.email_key = e.email_key AND edl.journal_id = e.journal_id AND edl.locale = ?)
+			WHERE	d.email_key = ?',
+			array($primaryLocale, $locale, $journalId, $primaryLocale, $locale, $emailKey)
 		);
 
 		$returner = null;
