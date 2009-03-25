@@ -28,6 +28,15 @@ function confirmAndPrompt(userId) {
 
 	document.disableUser.submit();
 }
+
+function toggleChecked() {
+	var elements = document.enroll.elements;
+	for (var i=0; i < elements.length; i++) {
+		if (elements[i].name == 'users[]') {
+			elements[i].checked = !elements[i].checked;
+		}
+	}
+}
 // -->
 {/literal}
 </script>
@@ -135,7 +144,7 @@ function confirmAndPrompt(userId) {
 {/if}
 </table>
 
-<input type="submit" value="{translate key="manager.people.enrollSelected"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$enrolmentReferrerUrl}'" />
+<input type="submit" value="{translate key="manager.people.enrollSelected"}" class="button defaultButton" /> <input type="button" value="{translate key="common.selectAll"}" class="button" onclick="toggleChecked()" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="manager" escape=false}'" />
 
 </form>
 
