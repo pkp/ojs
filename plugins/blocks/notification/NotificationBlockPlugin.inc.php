@@ -52,30 +52,11 @@ class NotificationBlockPlugin extends BlockPlugin {
 	}
 
 	/**
-	 * Get the block context. Overrides parent so that the plugin will be
-	 * displayed during install.
-	 * @return int
-	 */
-	function getBlockContext() {
-		if (!Config::getVar('general', 'installed')) return BLOCK_CONTEXT_RIGHT_SIDEBAR;
-		return parent::getBlockContext();
-	}
-
-	/**
 	 * Get the supported contexts (e.g. BLOCK_CONTEXT_...) for this block.
 	 * @return array
 	 */
 	function getSupportedContexts() {
 		return array(BLOCK_CONTEXT_LEFT_SIDEBAR, BLOCK_CONTEXT_RIGHT_SIDEBAR);
-	}
-
-	/**
-	 * Determine the plugin sequence. Overrides parent so that
-	 * the plugin will be displayed during install.
-	 */
-	function getSeq() {
-		if (!Config::getVar('general', 'installed')) return 1;
-		return parent::getSeq();
 	}
 
 	/**
