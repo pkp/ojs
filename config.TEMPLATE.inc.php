@@ -62,6 +62,12 @@ time_format = "%I:%M %p"
 ; variable.
 disable_path_info = Off
 
+; Use fopen(...) for URL-based reads. Modern versions of dspace
+; will not accept requests using fopen, as it does not provide a
+; User Agent, so this option is disabled by default. If this feature
+; is disabled by PHP's configuration, this setting will be ignored.
+allow_url_fopen = Off
+
 ; Base URL override settings: Entries like the following examples can
 ; be used to override the base URLs used by OJS. If you want to use a
 ; proxy to rewrite URLs to OJS, configure your proxy's URL here.
