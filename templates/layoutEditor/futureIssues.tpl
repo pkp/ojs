@@ -12,6 +12,11 @@
 {url|assign:"currentUrl" page="layoutEditor" op="futureIssues"}
 {include file="common/header.tpl"}
 
+<ul class="menu">
+        <li class="current"><a href="{url op="futureIssues"}">{translate key="editor.navigation.futureIssues"}</a></li>
+        <li><a href="{url op="backIssues"}">{translate key="editor.navigation.issueArchive"}</a></li>
+</ul>
+
 <br />
 
 <a name="issues"></a>

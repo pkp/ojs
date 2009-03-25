@@ -113,6 +113,38 @@ class LayoutEditorHandler extends Handler {
 		$templateMgr->assign('helpTopicId', 'publishing.index');
 		$templateMgr->display('layoutEditor/futureIssues.tpl');
 	}
+	
+	/**
+	 * Displays the listings of back (published) issues
+	 */
+	function backIssues() {
+		parent::validate();
+
+		$journal = &Request::getJournal();
+		$issueDao = &DAORegistry::getDAO('IssueDAO');
+
+		$rangeInfo = Handler::getRangeInfo('issues');
+
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign_by_ref('issues', $issueDao->getPublishedIssues($journal->getJournalId(), $rangeInfo));
+
+		$allIssuesIterator = $issueDao->getPublishedIssues($journal->getJournalId());
+		$issueMap = array();
+		while ($issue =& $allIssuesIterator->next()) {
+			$issueMap[$issue->getIssueId()] = $issue->getIssueIdentification();
+			unset($issue);
+		}
+		$templateMgr->assign('allIssues', $issueMap);
+
+		$currentIssue =& $issueDao->getCurrentIssue($journal->getJournalId());
+		$currentIssueId = $currentIssue?$currentIssue->getIssueId():null;
+		$templateMgr->assign('currentIssueId', $currentIssueId);
+
+		$templateMgr->assign('helpTopicId', 'publishing.index');
+		$templateMgr->assign('usesCustomOrdering', $issueDao->customIssueOrderingExists($journal->getJournalId()));
+		$templateMgr->display('layoutEditor/backIssues.tpl');
+	}
+
 
 	function issueData($args) {
 		import('pages.editor.EditorHandler');
