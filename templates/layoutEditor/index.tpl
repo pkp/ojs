@@ -24,6 +24,7 @@
 
 <ul class="plain">
 	<li>&#187; <a href="{url op="futureIssues"}">{translate key="editor.navigation.futureIssues"}</a></li>
+	<li>&#187; <a href="{url op="backIssues"}">{translate key="editor.navigation.issueArchive"}</a></li>
 </ul>
 
 {include file="common/footer.tpl"}

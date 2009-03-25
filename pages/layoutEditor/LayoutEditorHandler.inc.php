@@ -106,6 +106,8 @@ class LayoutEditorHandler extends PKPHandler {
 	 */
 	function futureIssues() {
 		parent::validate();
+		LayoutEditorHandler::setupTemplate(true);
+
 		$journal = &Request::getJournal();
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 		$rangeInfo = PKPHandler::getRangeInfo('issues');
@@ -114,6 +116,39 @@ class LayoutEditorHandler extends PKPHandler {
 		$templateMgr->assign('helpTopicId', 'publishing.index');
 		$templateMgr->display('layoutEditor/futureIssues.tpl');
 	}
+	
+	/**
+	 * Displays the listings of back (published) issues
+	 */
+	function backIssues() {
+		parent::validate();
+		LayoutEditorHandler::setupTemplate(true);
+
+		$journal = &Request::getJournal();
+		$issueDao = &DAORegistry::getDAO('IssueDAO');
+
+		$rangeInfo = PKPHandler::getRangeInfo('issues');
+
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign_by_ref('issues', $issueDao->getPublishedIssues($journal->getJournalId(), $rangeInfo));
+
+		$allIssuesIterator = $issueDao->getPublishedIssues($journal->getJournalId());
+		$issueMap = array();
+		while ($issue =& $allIssuesIterator->next()) {
+			$issueMap[$issue->getIssueId()] = $issue->getIssueIdentification();
+			unset($issue);
+		}
+		$templateMgr->assign('allIssues', $issueMap);
+
+		$currentIssue =& $issueDao->getCurrentIssue($journal->getJournalId());
+		$currentIssueId = $currentIssue?$currentIssue->getIssueId():null;
+		$templateMgr->assign('currentIssueId', $currentIssueId);
+
+		$templateMgr->assign('helpTopicId', 'publishing.index');
+		$templateMgr->assign('usesCustomOrdering', $issueDao->customIssueOrderingExists($journal->getJournalId()));
+		$templateMgr->display('layoutEditor/backIssues.tpl');
+	}
+
 
 	function issueData($args) {
 		import('pages.editor.EditorHandler');
@@ -178,7 +213,7 @@ class LayoutEditorHandler extends PKPHandler {
 	 */
 	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null) {
 		parent::setupTemplate();
-		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_SUBMISSION));
+		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_OJS_EDITOR));
 		$templateMgr =& TemplateManager::getManager();
 		$pageHierarchy = $subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'layoutEditor'), 'user.role.layoutEditor'))
 				: array(array(Request::url(null, 'user'), 'navigation.user'));
