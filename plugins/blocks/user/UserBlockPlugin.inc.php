@@ -79,6 +79,11 @@ class UserBlockPlugin extends BlockPlugin {
 			$session =& Request::getSession();
 			$templateMgr->assign_by_ref('userSession', $session);
 			$templateMgr->assign('loggedInUsername', $session->getSessionVar('username'));
+			$loginUrl = Request::url(null, 'login', 'signIn');
+			if (Config::getVar('security', 'force_login_ssl')) {
+				$loginUrl = String::regexp_replace('/^http:/', 'https:', $loginUrl);
+			}
+			$templateMgr->assign('userBlockLoginUrl', $loginUrl);
 		}
 		return parent::getContents($templateMgr);
 	}
