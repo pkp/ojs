@@ -56,6 +56,15 @@ class WebFeedPlugin extends GenericPlugin {
 	}
 
 	/**
+	 * Get the name of the settings file to be installed on new journal
+	 * creation.
+	 * @return string
+	 */
+	function getNewJournalPluginSettingsFile() {
+		return $this->getPluginPath() . '/settings.xml';
+	}
+
+	/**
 	 * Check whether or not this plugin is enabled
 	 * @return boolean
 	 */
