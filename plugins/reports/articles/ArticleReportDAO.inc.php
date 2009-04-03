@@ -5,7 +5,7 @@
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
- * 
+ *
  * @class ArticleReportDAO
  * @ingroup plugins_reports_article
  *
@@ -29,8 +29,7 @@ class ArticleReportDAO extends DAO {
 		$locale = Locale::getLocale();
 
 		$result =& $this->retrieve(
-			'SELECT	a.status AS status,
-				a.article_id AS article_id,
+			'SELECT	a.article_id AS article_id,
 				COALESCE(asl1.setting_value, aspl1.setting_value) AS title,
 				COALESCE(asl2.setting_value, aspl2.setting_value) AS abstract,
 				COALESCE(sl.setting_value, spl.setting_value) AS section_title,
@@ -92,7 +91,7 @@ class ArticleReportDAO extends DAO {
 			$decisionsReturner[] = new DBRowIterator($result);
 			unset($result);
 		}
-		
+
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$articles =& $articleDao->getArticlesByJournalId($journalId);
 		$authorsReturner = array();
