@@ -64,123 +64,126 @@ class SubmitHandler extends AuthorHandler {
 		$submitForm =& new $formClass($article);
 		$submitForm->readInputData();
 
-		// Check for any special cases before trying to save
-		switch ($step) {
-			case 2:
-				if (Request::getUserVar('uploadSubmissionFile')) {
-					$submitForm->uploadSubmissionFile('submissionFile');
-					$editData = true;
-				}
-				break;
+		if (!HookRegistry::call('SubmitHandler::saveSubmit', array($step, &$journal, &$article, &$submitForm))) {
 
-			case 3:
-				if (Request::getUserVar('addAuthor')) {
-					// Add a sponsor
-					$editData = true;
-					$authors = $submitForm->getData('authors');
-					array_push($authors, array());
-					$submitForm->setData('authors', $authors);
-
-				} else if (($delAuthor = Request::getUserVar('delAuthor')) && count($delAuthor) == 1) {
-					// Delete an author
-					$editData = true;
-					list($delAuthor) = array_keys($delAuthor);
-					$delAuthor = (int) $delAuthor;
-					$authors = $submitForm->getData('authors');
-					if (isset($authors[$delAuthor]['authorId']) && !empty($authors[$delAuthor]['authorId'])) {
-						$deletedAuthors = explode(':', $submitForm->getData('deletedAuthors'));
-						array_push($deletedAuthors, $authors[$delAuthor]['authorId']);
-						$submitForm->setData('deletedAuthors', join(':', $deletedAuthors));
+			// Check for any special cases before trying to save
+			switch ($step) {
+				case 2:
+					if (Request::getUserVar('uploadSubmissionFile')) {
+						$submitForm->uploadSubmissionFile('submissionFile');
+						$editData = true;
 					}
-					array_splice($authors, $delAuthor, 1);
-					$submitForm->setData('authors', $authors);
+					break;
 
-					if ($submitForm->getData('primaryContact') == $delAuthor) {
-						$submitForm->setData('primaryContact', 0);
-					}
+				case 3:
+					if (Request::getUserVar('addAuthor')) {
+						// Add a sponsor
+						$editData = true;
+						$authors = $submitForm->getData('authors');
+						array_push($authors, array());
+						$submitForm->setData('authors', $authors);
 
-				} else if (Request::getUserVar('moveAuthor')) {
-					// Move an author up/down
-					$editData = true;
-					$moveAuthorDir = Request::getUserVar('moveAuthorDir');
-					$moveAuthorDir = $moveAuthorDir == 'u' ? 'u' : 'd';
-					$moveAuthorIndex = (int) Request::getUserVar('moveAuthorIndex');
-					$authors = $submitForm->getData('authors');
+					} else if (($delAuthor = Request::getUserVar('delAuthor')) && count($delAuthor) == 1) {
+						// Delete an author
+						$editData = true;
+						list($delAuthor) = array_keys($delAuthor);
+						$delAuthor = (int) $delAuthor;
+						$authors = $submitForm->getData('authors');
+						if (isset($authors[$delAuthor]['authorId']) && !empty($authors[$delAuthor]['authorId'])) {
+							$deletedAuthors = explode(':', $submitForm->getData('deletedAuthors'));
+							array_push($deletedAuthors, $authors[$delAuthor]['authorId']);
+							$submitForm->setData('deletedAuthors', join(':', $deletedAuthors));
+						}
+						array_splice($authors, $delAuthor, 1);
+						$submitForm->setData('authors', $authors);
 
-					if (!(($moveAuthorDir == 'u' && $moveAuthorIndex <= 0) || ($moveAuthorDir == 'd' && $moveAuthorIndex >= count($authors) - 1))) {
-						$tmpAuthor = $authors[$moveAuthorIndex];
-						$primaryContact = $submitForm->getData('primaryContact');
-						if ($moveAuthorDir == 'u') {
-							$authors[$moveAuthorIndex] = $authors[$moveAuthorIndex - 1];
-							$authors[$moveAuthorIndex - 1] = $tmpAuthor;
-							if ($primaryContact == $moveAuthorIndex) {
-								$submitForm->setData('primaryContact', $moveAuthorIndex - 1);
-							} else if ($primaryContact == ($moveAuthorIndex - 1)) {
-								$submitForm->setData('primaryContact', $moveAuthorIndex);
-							}
-						} else {
-							$authors[$moveAuthorIndex] = $authors[$moveAuthorIndex + 1];
-							$authors[$moveAuthorIndex + 1] = $tmpAuthor;
-							if ($primaryContact == $moveAuthorIndex) {
-								$submitForm->setData('primaryContact', $moveAuthorIndex + 1);
-							} else if ($primaryContact == ($moveAuthorIndex + 1)) {
-								$submitForm->setData('primaryContact', $moveAuthorIndex);
+						if ($submitForm->getData('primaryContact') == $delAuthor) {
+							$submitForm->setData('primaryContact', 0);
+						}
+
+					} else if (Request::getUserVar('moveAuthor')) {
+						// Move an author up/down
+						$editData = true;
+						$moveAuthorDir = Request::getUserVar('moveAuthorDir');
+						$moveAuthorDir = $moveAuthorDir == 'u' ? 'u' : 'd';
+						$moveAuthorIndex = (int) Request::getUserVar('moveAuthorIndex');
+						$authors = $submitForm->getData('authors');
+
+						if (!(($moveAuthorDir == 'u' && $moveAuthorIndex <= 0) || ($moveAuthorDir == 'd' && $moveAuthorIndex >= count($authors) - 1))) {
+							$tmpAuthor = $authors[$moveAuthorIndex];
+							$primaryContact = $submitForm->getData('primaryContact');
+							if ($moveAuthorDir == 'u') {
+								$authors[$moveAuthorIndex] = $authors[$moveAuthorIndex - 1];
+								$authors[$moveAuthorIndex - 1] = $tmpAuthor;
+								if ($primaryContact == $moveAuthorIndex) {
+									$submitForm->setData('primaryContact', $moveAuthorIndex - 1);
+								} else if ($primaryContact == ($moveAuthorIndex - 1)) {
+									$submitForm->setData('primaryContact', $moveAuthorIndex);
+								}
+							} else {
+								$authors[$moveAuthorIndex] = $authors[$moveAuthorIndex + 1];
+								$authors[$moveAuthorIndex + 1] = $tmpAuthor;
+								if ($primaryContact == $moveAuthorIndex) {
+									$submitForm->setData('primaryContact', $moveAuthorIndex + 1);
+								} else if ($primaryContact == ($moveAuthorIndex + 1)) {
+									$submitForm->setData('primaryContact', $moveAuthorIndex);
+								}
 							}
 						}
+						$submitForm->setData('authors', $authors);
 					}
-					$submitForm->setData('authors', $authors);
-				}
-				break;
+					break;
 
-			case 4:
-				if (Request::getUserVar('submitUploadSuppFile')) {
-					SubmitHandler::submitUploadSuppFile();
-					return;
-				}
-				break;
-		}
-
-		if (!isset($editData) && $submitForm->validate()) {
-			$articleId = $submitForm->execute();
-
-			if ($step == 5) {
-				// Send a notification to associated users
-				import('notification.Notification');
-				$articleDao =& DAORegistry::getDAO('ArticleDAO'); 
-				$article =& $articleDao->getArticle($articleId);
-				$roleDao = &DAORegistry::getDAO('RoleDAO');
-				$notificationUsers = array();
-				$journalManagers = $roleDao->getUsersByRoleId(ROLE_ID_JOURNAL_MANAGER);
-				$allUsers = $journalManagers->toArray();
-				$editors = $roleDao->getUsersByRoleId(ROLE_ID_EDITOR);
-				array_merge($allUsers, $editors->toArray());
-				foreach ($allUsers as $user) {
-					$notificationUsers[] = array('id' => $user->getUserId());
-				}
-				foreach ($notificationUsers as $user) {
-					$url = Request::url(null, 'editor', 'submission', $articleId);
-					Notification::createNotification($user['id'], "notification.type.articleSubmitted",
-						$article->getArticleTitle(), $url, 1, NOTIFICATION_TYPE_ARTICLE_SUBMITTED);
-				}
-				
-				$journal = &Request::getJournal();
-				$templateMgr = &TemplateManager::getManager();
-				$templateMgr->assign_by_ref('journal', $journal);
-				// If this is an editor and there is a
-				// submission file, article can be expedited.
-				if (Validation::isEditor($journal->getJournalId()) && $article->getSubmissionFileId()) {
-					$templateMgr->assign('canExpedite', true);
-				}
-				$templateMgr->assign('articleId', $articleId);
-				$templateMgr->assign('helpTopicId','submission.index');
-				$templateMgr->display('author/submit/complete.tpl');
-
-			} else {
-				Request::redirect(null, null, 'submit', $step+1, array('articleId' => $articleId));
+				case 4:
+					if (Request::getUserVar('submitUploadSuppFile')) {
+						SubmitHandler::submitUploadSuppFile();
+						return;
+					}
+					break;
 			}
 
-		} else {
-			$submitForm->display();
+			if (!isset($editData) && $submitForm->validate()) {
+				$articleId = $submitForm->execute();
+
+				if ($step == 5) {
+					// Send a notification to associated users
+					import('notification.Notification');
+					$articleDao =& DAORegistry::getDAO('ArticleDAO');
+					$article =& $articleDao->getArticle($articleId);
+					$roleDao = &DAORegistry::getDAO('RoleDAO');
+					$notificationUsers = array();
+					$journalManagers = $roleDao->getUsersByRoleId(ROLE_ID_JOURNAL_MANAGER);
+					$allUsers = $journalManagers->toArray();
+					$editors = $roleDao->getUsersByRoleId(ROLE_ID_EDITOR);
+					array_merge($allUsers, $editors->toArray());
+					foreach ($allUsers as $user) {
+						$notificationUsers[] = array('id' => $user->getUserId());
+					}
+					foreach ($notificationUsers as $user) {
+						$url = Request::url(null, 'editor', 'submission', $articleId);
+						Notification::createNotification($user['id'], "notification.type.articleSubmitted",
+							$article->getArticleTitle(), $url, 1, NOTIFICATION_TYPE_ARTICLE_SUBMITTED);
+					}
+
+					$journal = &Request::getJournal();
+					$templateMgr = &TemplateManager::getManager();
+					$templateMgr->assign_by_ref('journal', $journal);
+					// If this is an editor and there is a
+					// submission file, article can be expedited.
+					if (Validation::isEditor($journal->getJournalId()) && $article->getSubmissionFileId()) {
+						$templateMgr->assign('canExpedite', true);
+					}
+					$templateMgr->assign('articleId', $articleId);
+					$templateMgr->assign('helpTopicId','submission.index');
+					$templateMgr->display('author/submit/complete.tpl');
+
+				} else {
+					Request::redirect(null, null, 'submit', $step+1, array('articleId' => $articleId));
+				}
+
+			} else {
+				$submitForm->display();
+			}
 		}
 	}
 
