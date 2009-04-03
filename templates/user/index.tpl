@@ -51,15 +51,15 @@
 				{assign var="editorSubmissionsCount" value=$submissionsCount.Editor.$journalId}
 				<td>&#187; <a href="{url journal=$journalPath page="editor"}">{translate key="user.role.editor"}</a></td>
 				<td>{if $editorSubmissionsCount[0]}
-						<a href="{url journal=$journalPath page="editor" op="submissions" path="submissionsUnassigned"}">{$editorSubmissionsCount[0]}</a> {translate key="common.queue.short.submissionsUnassigned"}
+						<a href="{url journal=$journalPath page="editor" op="submissions" path="submissionsUnassigned"}">{$editorSubmissionsCount[0]} {translate key="common.queue.short.submissionsUnassigned"}</a>
 					{else}<span class="disabled">0 {translate key="common.queue.short.submissionsUnassigned"}</span>{/if}
 				</td>
 				<td>{if $editorSubmissionsCount[1]}
-						<a href="{url journal=$journalPath page="editor" op="submissions" path="submissionsInReview"}">{$editorSubmissionsCount[1]}</a> {translate key="common.queue.short.submissionsInReview"}
+						<a href="{url journal=$journalPath page="editor" op="submissions" path="submissionsInReview"}">{$editorSubmissionsCount[1]} {translate key="common.queue.short.submissionsInReview"}</a>
 					{else}<span class="disabled">0 {translate key="common.queue.short.submissionsInReview"}</span>{/if}
 				</td>
 				<td>{if $editorSubmissionsCount[2]}
-						<a href="{url journal=$journalPath page="editor" op="submissions" path="submissionsInEditing"}">{$editorSubmissionsCount[2]}</a> {translate key="common.queue.short.submissionsInEditing"}
+						<a href="{url journal=$journalPath page="editor" op="submissions" path="submissionsInEditing"}">{$editorSubmissionsCount[2]} {translate key="common.queue.short.submissionsInEditing"}</a>
 					{else}<span class="disabled">0 {translate key="common.queue.short.submissionsInEditing"}</span>{/if}
 				</td>
 				<td align="right">[<a href="{url journal=$journalPath page="editor" op="createIssue"}">{translate key="editor.issues.createIssue"}</a>] [<a href="{url journal=$journalPath page="editor" op="notifyUsers"}">{translate key="editor.notifyUsers"}</a>]</td>
@@ -71,11 +71,11 @@
 				<td>&#187; <a href="{url journal=$journalPath page="SectionEditor"}">{translate key="user.role.sectionEditor"}</a></td>
 				<td></td>
 				<td>{if $sectionEditorSubmissionsCount[0]}
-						<a href="{url journal=$journalPath page="sectionEditor" op="index" path="submissionsInReview"}">{$sectionEditorSubmissionsCount[0]}</a> {translate key="common.queue.short.submissionsInReview"}
+						<a href="{url journal=$journalPath page="sectionEditor" op="index" path="submissionsInReview"}">{$sectionEditorSubmissionsCount[0]} {translate key="common.queue.short.submissionsInReview"}</a>
 					{else}<span class="disabled">0 {translate key="common.queue.short.submissionsInReview"}</span>{/if}
 				</td>
 				<td>{if $sectionEditorSubmissionsCount[1]}
-						<a href="{url journal=$journalPath page="sectionEditor" op="index" path="submissionsInEditing"}">{$sectionEditorSubmissionsCount[1]}</a> {translate key="common.queue.short.submissionsInEditing"}
+						<a href="{url journal=$journalPath page="sectionEditor" op="index" path="submissionsInEditing"}">{$sectionEditorSubmissionsCount[1]} {translate key="common.queue.short.submissionsInEditing"}</a>
 					{else}<span class="disabled">0 {translate key="common.queue.short.submissionsInEditing"}</span>{/if}
 				</td>
 				<td align="right"></td>
@@ -88,7 +88,7 @@
 				<td></td>
 				<td></td>
 				<td>{if $layoutEditorSubmissionsCount[0]}
-						<a href="{url journal=$journalPath page="layoutEditor"}">{$layoutEditorSubmissionsCount[0]}</a> {translate key="common.queue.short.submissionsInEditing"}
+						<a href="{url journal=$journalPath page="layoutEditor"}">{$layoutEditorSubmissionsCount[0]} {translate key="common.queue.short.submissionsInEditing"}</a>
 					{else}<span class="disabled">0 {translate key="common.queue.short.submissionsInEditing"}</span>{/if}
 				</td>
 				<td align="right"></td>
@@ -101,7 +101,7 @@
 				<td></td>
 				<td></td>
 				<td>{if $copyeditorSubmissionsCount[0]}
-						<a href="{url journal=$journalPath page="copyeditor"}">{$copyeditorSubmissionsCount[0]}</a> {translate key="common.queue.short.submissionsInEditing"}
+						<a href="{url journal=$journalPath page="copyeditor"}">{$copyeditorSubmissionsCount[0]} {translate key="common.queue.short.submissionsInEditing"}</a>
 					{else}<span class="disabled">0 {translate key="common.queue.short.submissionsInEditing"}</span>{/if}
 				</td>
 				<td align="right"></td>
@@ -114,7 +114,7 @@
 				<td></td>
 				<td></td>
 				<td>{if $proofreaderSubmissionsCount[0]}
-						<a href="{url journal=$journalPath page="proofreader"}">{$proofreaderSubmissionsCount[0]}</a> {translate key="common.queue.short.submissionsInEditing"}
+						<a href="{url journal=$journalPath page="proofreader"}">{$proofreaderSubmissionsCount[0]} {translate key="common.queue.short.submissionsInEditing"}</a>
 					{else}<span class="disabled">0 {translate key="common.queue.short.submissionsInEditing"}</span>{/if}
 				</td>
 				<td align="right"></td>
@@ -130,7 +130,7 @@
 				<td></td>
 				<td></td>
 				<td>{if $authorSubmissionsCount[0]}
-						<a href="{url journal=$journalPath page="author"}">{$authorSubmissionsCount[0]}</a> {translate key="common.queue.short.active"}
+						<a href="{url journal=$journalPath page="author"}">{$authorSubmissionsCount[0]} {translate key="common.queue.short.active"}</a>
 					{else}<span class="disabled">0 {translate key="common.queue.short.active"}</span>{/if}
 				</td>
 				<td align="right">[<a href="{url journal=$journalPath page="author" op="submit"}">{translate key="author.submit"}</a>]</td>
@@ -143,7 +143,7 @@
 				<td></td>
 				<td></td>
 				<td>{if $reviewerSubmissionsCount[0]}
-						<a href="{url journal=$journalPath page="reviewer"}">{$reviewerSubmissionsCount[0]}</a> {translate key="common.queue.short.active"}
+						<a href="{url journal=$journalPath page="reviewer"}">{$reviewerSubmissionsCount[0]} {translate key="common.queue.short.active"}</a>
 					{else}<span class="disabled">0 {translate key="common.queue.short.active"}</span>{/if}
 				</td>
 				</td align="right"></td>
