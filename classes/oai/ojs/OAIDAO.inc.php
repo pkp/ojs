@@ -333,7 +333,7 @@ class OAIDAO extends DAO {
 			}
 		}
 
-		$article =& $this->articleDao->getArticle($articleId);
+		$article =& $this->articleDao->getArticle($row['article_id']);
 		$journal =& $this->getJournal($row['journal_id']);
 		$section =& $this->getSection($row['section_id']);
 		$issue =& $this->getIssue($row['issue_id']);
