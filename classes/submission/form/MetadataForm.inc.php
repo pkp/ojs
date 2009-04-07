@@ -115,6 +115,7 @@ class MetadataForm extends Form {
 				'type' => $article->getType(null), // Localized
 				'language' => $article->getLanguage(),
 				'sponsor' => $article->getSponsor(null), // Localized
+				'citations' => $article->getCitations(),
 				'hideAuthor' => $article->getHideAuthor()
 			);
 
@@ -150,7 +151,7 @@ class MetadataForm extends Form {
 	function getLocaleFieldNames() {
 		return array(
 			'title', 'abstract', 'coverPageAltText', 'showCoverPage', 'hideCoverPageToc', 'hideCoverPageAbstract', 'originalFileName', 'fileName', 'width', 'height',
-			'discipline', 'subjectClass', 'subject', 'coverageGeo', 'coverageChron', 'coverageSample', 'type', 'sponsor'
+			'discipline', 'subjectClass', 'subject', 'coverageGeo', 'coverageChron', 'coverageSample', 'type', 'sponsor', 'citations'
 		);
 	}
 
@@ -221,6 +222,7 @@ class MetadataForm extends Form {
 				'type',
 				'language',
 				'sponsor',
+				'citations',
 				'hideAuthor'
 			)
 		);
@@ -300,6 +302,7 @@ class MetadataForm extends Form {
 		$article->setType($this->getData('type'), null); // Localized
 		$article->setLanguage($this->getData('language')); // Localized
 		$article->setSponsor($this->getData('sponsor'), null); // Localized
+		$article->setCitations($this->getData('citations'));
 		if ($this->isEditor) {
 			$article->setHideAuthor($this->getData('hideAuthor') ? $this->getData('hideAuthor') : 0);
 		}

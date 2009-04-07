@@ -46,6 +46,7 @@ class JournalSetupStep3Form extends JournalSetupForm {
 				'metaCoverageResearchSampleExamples' => 'string',
 				'metaType' => 'bool',
 				'metaTypeExamples' => 'string',
+				'metaCitations' => 'bool',
 				'copySubmissionAckPrimaryContact' => 'bool',
 				'copySubmissionAckSpecified' => 'bool',
 				'copySubmissionAckAddress' => 'string'

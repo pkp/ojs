@@ -56,7 +56,8 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 				'type' => $article->getType(null), // Localized
 				'language' => $article->getLanguage(),
 				'sponsor' => $article->getSponsor(null), // Localized
-				'section' => $sectionDao->getSection($article->getSectionId())
+				'section' => $sectionDao->getSection($article->getSectionId()),
+				'citations' => $article->getCitations()
 			);
 
 			$authors = &$article->getAuthors();
@@ -102,7 +103,8 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 				'coverageSample',
 				'type',
 				'language',
-				'sponsor'
+				'sponsor',
+				'citations'
 			)
 		);
 
@@ -159,6 +161,7 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 		$article->setType($this->getData('type'), null); // Localized
 		$article->setLanguage($this->getData('language'));
 		$article->setSponsor($this->getData('sponsor'), null); // Localized
+		$article->setCitations($this->getData('citations'));
 		if ($article->getSubmissionProgress() <= $this->step) {
 			$article->stampStatusModified();
 			$article->setSubmissionProgress($this->step + 1);

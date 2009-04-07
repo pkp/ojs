@@ -37,6 +37,16 @@
 	<span class="instruct">{translate key="manager.setup.htmlSetupInstructions"}</span>
 </p>
 
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="5%" class="label">
+			<input type="checkbox" name="metaCitations" id="metaCitations" value="1"{if $metaCitations} checked="checked"{/if} />
+		</td>
+		<td width="95%" class="value"><label for="metaCitations">{translate key="manager.setup.citations"}</label>
+		</td>
+	</tr>
+</table>
+
 <h4>{translate key="manager.setup.submissionPreparationChecklist"}</h4>
 
 <p>{translate key="manager.setup.submissionPreparationChecklistDescription"}</p>

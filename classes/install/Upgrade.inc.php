@@ -155,7 +155,7 @@ class Upgrade extends Installer {
 		// Drop the old label_format column once all values are migrated.
 		$issueDao->update('ALTER TABLE issues DROP COLUMN label_format');
 
-		// Migrate old publicationFormat journal setting to new journal settings. 
+		// Migrate old publicationFormat journal setting to new journal settings.
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 		$result =& $journalDao->retrieve('SELECT j.journal_id AS journal_id, js.setting_value FROM journals j LEFT JOIN journal_settings js ON (js.journal_id = j.journal_id AND js.setting_name = ?)', 'publicationFormat');
@@ -174,7 +174,7 @@ class Upgrade extends Installer {
 				case 3: // ISSUE_LABEL_YEAR
 					$settings['publicationFormatYear'] = true;
 					break;
- 				case 2: // ISSUE_LABEL_VOL_YEAR 		
+ 				case 2: // ISSUE_LABEL_VOL_YEAR
 					$settings['publicationFormatVolume'] = true;
 					$settings['publicationFormatYear'] = true;
 					break;
@@ -306,6 +306,7 @@ class Upgrade extends Installer {
 			'metaCoverageChronExamples' => 'metaCoverageChronExamples',
 			'metaCoverageResearchSampleExamples' => 'metaCoverageResearchSampleExamples',
 			'metaTypeExamples' => 'metaTypeExamples',
+			'metaCitations' => 'metaCitations',
 			// Setup page 4
 			'pubFreqPolicy' => 'pubFreqPolicy',
 			'copyeditInstructions' => 'copyeditInstructions',
@@ -464,7 +465,7 @@ class Upgrade extends Installer {
 		$tables = array(
 			'versions', 'site', 'site_settings', 'scheduled_tasks',
 			'sessions', 'journal_settings',
-			'plugin_settings', 'roles', 
+			'plugin_settings', 'roles',
 			'section_settings', 'section_editors', 'issue_settings',
 			'custom_issue_orders', 'custom_section_orders',
 			'article_settings', 'article_author_settings',
@@ -537,7 +538,7 @@ class Upgrade extends Installer {
 	}
 
 	/**
-	 * For 2.2.1 upgrade: Replace "payPerView" to "purchaseArticle" in settings. 
+	 * For 2.2.1 upgrade: Replace "payPerView" to "purchaseArticle" in settings.
 	 * @return boolean
 	 */
 	function renamePayPerViewSettings() {

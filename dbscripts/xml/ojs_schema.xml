@@ -591,6 +591,7 @@
 			<DEFAULT VALUE="en"/>
 		</field>
 		<field name="comments_to_ed" type="X"/>
+		<field name="citations" type="X"/>
 		<field name="date_submitted" type="T"/>
 		<field name="last_modified" type="T"/>
 		<field name="date_status_modified" type="T"/>

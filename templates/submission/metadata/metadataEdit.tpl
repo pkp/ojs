@@ -88,8 +88,16 @@ function moveAuthor(dir, authorIndex) {
 		<td class="value"><input type="text" name="authors[{$authorIndex|escape}][lastName]" id="authors-{$authorIndex|escape}-lastName" value="{$author.lastName|escape}" size="20" maxlength="90" class="textField" /></td>
 	</tr>
 	<tr valign="top">
+		<td class="label">{fieldLabel name="authors-$authorIndex-email" required="true" key="user.email"}</td>
+		<td class="value"><input type="text" name="authors[{$authorIndex|escape}][email]" id="authors-{$authorIndex|escape}-email" value="{$author.email|escape}" size="30" maxlength="90" class="textField" /></td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{fieldLabel name="authors-$authorIndex-url" key="user.url"}</td>
+		<td class="value"><input type="text" name="authors[{$authorIndex|escape}][url]" id="authors-{$authorIndex|escape}-url" value="{$author.url|escape}" size="30" maxlength="90" class="textField" /></td>
+	</tr>
+	<tr valign="top">
 		<td class="label">{fieldLabel name="authors-$authorIndex-affiliation" key="user.affiliation"}</td>
-		<td class="value"><input type="text" name="authors[{$authorIndex|escape}][affiliation]" id="authors-{$authorIndex|escape}-affiliation" value="{$author.affiliation|escape}" size="30" maxlength="255" class="textField" /></td>
+		<td class="value"><textarea name="authors[{$authorIndex|escape}][affiliation]" class="textArea" id="authors-{$authorIndex|escape}-affiliation" rows="5" cols="40">{$author.affiliation|escape}</textarea></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="authors-$authorIndex-country" key="common.country"}</td>
@@ -99,14 +107,6 @@ function moveAuthor(dir, authorIndex) {
 				{html_options options=$countries selected=$author.country|escape}
 			</select>
 		</td>
-	</tr>
-	<tr valign="top">
-		<td class="label">{fieldLabel name="authors-$authorIndex-email" required="true" key="user.email"}</td>
-		<td class="value"><input type="text" name="authors[{$authorIndex|escape}][email]" id="authors-{$authorIndex|escape}-email" value="{$author.email|escape}" size="30" maxlength="90" class="textField" /></td>
-	</tr>
-	<tr valign="top">
-		<td class="label">{fieldLabel name="authors-$authorIndex-url" key="user.url"}</td>
-		<td class="value"><input type="text" name="authors[{$authorIndex|escape}][url]" id="authors-{$authorIndex|escape}-url" value="{$author.url|escape}" size="30" maxlength="90" class="textField" /></td>
 	</tr>
 	{if $currentJournal->getSetting('requireAuthorCompetingInterests')}
 		<tr valign="top">
@@ -371,6 +371,21 @@ function moveAuthor(dir, authorIndex) {
 
 
 <div class="separator"></div>
+
+{if $journalSettings.metaCitations}
+<h3>{translate key="submission.citations"}</h3>
+
+<p>{translate key="author.submit.submissionCitations"}</p>
+
+<table width="100%" class="data">
+<tr valign="top">
+	<td width="20%" class="label">{fieldLabel name="citations" key="article.citations"}</td>
+	<td width="80%" class="value"><textarea name="citations" id="citations" class="textArea" rows="15" cols="60">{$citations|escape}</textarea></td>
+</tr>
+</table>
+
+<div class="separator"></div>
+{/if}
 
 {if $isEditor}
 <h3>{translate key="editor.article.display"}</h3>

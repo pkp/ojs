@@ -58,6 +58,13 @@
 		<br />
 	{/if}
 
+	{if $article->getCitations()}
+		<h4>{translate key="article.citations"}</h4>
+		<br />
+		<div>{$article->getCitations()|strip_unsafe_html|nl2br}</div>
+		<br />
+	{/if}
+
 	{if (!$subscriptionRequired || $article->getAccessStatus() || $subscribedUser || $subscribedDomain)}
 		{assign var=hasAccess value=1}
 	{else}
