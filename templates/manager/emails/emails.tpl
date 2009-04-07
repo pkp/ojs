@@ -29,7 +29,7 @@
 	<tr valign="top">
 		<td>
 			{url|assign:"emailUrl" op="email" template=$emailTemplate->getEmailKey()}
-			{$emailTemplate->getEmailKey()|escape|truncate:20:"..."}&nbsp;{icon name="mail" url=$emailUrl}
+			{$emailTemplate->getEmailKey()|escape|replace:"_":" "}&nbsp;{icon name="mail" url=$emailUrl}
 		</td>
 		<td>{translate key=$emailTemplate->getFromRoleName()}</td>
 		<td>{translate key=$emailTemplate->getToRoleName()}</td>
