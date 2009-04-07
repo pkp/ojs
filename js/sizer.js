@@ -30,7 +30,10 @@ function getStylesheets() {
 		}
 	}
 	for (x = 0; styleNodes[x]; x++) {
-		sheets[sheets.length] = styleNodes[x];
+		var rel = styleNodes[x].rel ? styleNodes[x].rel : styleNodes[x].getAttribute ? styleNodes[x].getAttribute('rel') : '';
+		if (typeof(rel) == 'string' && rel.toLowerCase().indexOf('style') != -1) {
+			sheets[sheets.length] = styleNodes[x];
+		}
 	}
 	return sheets;
 }
