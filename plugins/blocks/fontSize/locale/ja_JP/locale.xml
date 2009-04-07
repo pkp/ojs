@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
 
 <!--
   * locale.xml
@@ -14,7 +14,7 @@
  
 <locale name="ja_JP" full_name="日本語">
 	<message key="plugins.block.fontSize.displayName">フォントサイズブロック</message>
-	<message key="plugins.block.fontSize.description">このプラグインはサイドバーにフォントサイズ変更リンクを付けます。</message>
+	<message key="plugins.block.fontSize.description">サイドバーにフォントサイズを変更するリンクを付けます。</message>
 	<message key="plugins.block.fontSize.title">フォントサイズ</message>
 	<message key="plugins.block.fontSize.small">小</message>
 	<message key="plugins.block.fontSize.medium">中</message>

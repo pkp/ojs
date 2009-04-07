@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.sehl.name">Plugin SEHL</message>
+	<message key="plugins.generic.sehl.description">Tento plugin zavádí zvýrazňovač pro vyhledávací nástroj. Pokud vyhledávací nástroj nalezne HTML článek, jsou v něm zvýrazněny hledaná výrazy.</message>
+</locale>

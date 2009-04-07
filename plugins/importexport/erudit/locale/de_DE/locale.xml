@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
 
 <!--
   * locale.xml
   *
-  * Copyright (c) 2003-2008 John Willinsky
-  * Weitergabe nach GNU GPL v2. Vollständiger Text s. docs/COPYING.
+  * Copyright (c) 2003-2007 John Willinsky
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Regionalisierungszeichenketten für die de_DE (deutsche) Regionaleinstellung.
-  *
-  * $Id$
+  * Regionalisierungszeichenketten für die de_DE (Deutsche) Regionaleinstellung.
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  
   -->
- 
+  
 <locale name="de_DE" full_name="German">
-	<message key="plugins.importexport.erudit.displayName">Erudit Beitrag Export Einschub</message>
-	<message key="plugins.importexport.erudit.description">Beiträge über die englische Erudit DTD exportieren</message>
+	<message key="plugins.importexport.erudit.displayName">Erudit Artikel-Export-PlugIn</message>
+	<message key="plugins.importexport.erudit.description">Beiträge über die englische Erudit-DTD exportieren</message>
 
 	<message key="plugins.importexport.erudit.cliUsage"><![CDATA[Gebrauch: {$scriptName} {$pluginName} [xmlFileName] [journalPath] [articleId] [galleyLabel]
 ]]></message>

@@ -27,4 +27,7 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">アカウント番号を入力してください。</message>
 
 	<message key="plugins.generic.googleAnalytics.manager.settings.ga">新しいトラッキングコード (ga.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCode">トラッキングコード</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">使用するトラッキングコードを選択してください。</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">以前のトラッキングコード (urchin.js)</message>
 </locale>

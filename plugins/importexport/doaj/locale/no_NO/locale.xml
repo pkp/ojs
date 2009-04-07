@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.importexport.doaj.displayName">DOAJ eksportplugin</message>
+	<message key="plugins.importexport.doaj.description">Eksporter tidsskrift til DOAJ og e-post tidsskriftinformasjon til DOAJs ansvarlige</message>
+
+	
+	<message key="plugins.importexport.doaj.export">Eksporter tidsskriftdata til DOAJ</message>
+	<message key="plugins.importexport.doaj.export.journal">Eksporter tidsskrift</message>
+	<message key="plugins.importexport.doaj.export.email">E-post DOAJs ansvarlige</message>
+	<message key="plugins.importexport.doaj.export.journalInfo">Eksporter artikkelinformasjon i XML til arkivering i DOAJ</message>
+	<message key="plugins.importexport.doaj.export.emailInfo">Vennligst fyll ut den informasjonen som ennå mangler i dette skjemaet så godt du kan, før informasjonen sendes til DOAJ for vurdering.</message>
+
+</locale>

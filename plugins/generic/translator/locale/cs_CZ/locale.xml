@@ -74,4 +74,5 @@
 	<message key="plugins.generic.translator.deleteKey">Smazat tento klíč</message>
 	<message key="plugins.generic.translator.deleteEmail">Smazat tento email</message>
 	<message key="plugins.generic.translator.saveBeforeContinuing">Ujistěte se, že jste uložili všechny změny provedené na této stránce, než budete pokračovat. Jinak budou ztraceny. Chcete pokračovat? Pokud ano všechny neuložené změny budou ztraceny.</message>
+	<message key="plugins.generic.translator.localeKey.description">Vložte celý klíč, který má být vyhledán.</message>
 </locale>

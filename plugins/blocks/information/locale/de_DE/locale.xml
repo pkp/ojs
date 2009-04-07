@@ -5,15 +5,15 @@
   * locale.xml
   *
   * Copyright (c) 2003-2007 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Regionalisierungszeichenketten für die de_DE (Deutsche) Regionaleinstellung.
   *
-  * $Id$
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
   -->
  
-<locale name="en_US" full_name="U.S. English">
-	<message key="plugins.block.information.displayName">Informations Block</message>
-	<message key="plugins.block.information.description">Information Link Plugin für die Seitenleiste</message>
-	<message key="plugins.block.information.link">Information</message>
+<locale name="de_DE" full_name="German">
+	<message key="plugins.block.information.displayName">Informationen-Block</message>
+	<message key="plugins.block.information.description">Dieses Plug-In liefert den Informationen-Link für die Sidebar.</message>
+	<message key="plugins.block.information.link">Informationen</message>
 </locale>

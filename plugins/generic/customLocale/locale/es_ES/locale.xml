@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
 
 <!--
   * locale.xml
@@ -31,4 +31,5 @@
 	<message key="plugins.generic.customLocale.file.edit">Editando {$filename}</message>
 	<message key="plugins.generic.customLocale.file.reference">Texto por defecto</message>
 	<message key="plugins.generic.customLocale.file.custom">Texto personalizado</message>
+	<message key="plugins.generic.customLocale.localeKey.description">Inserte una clave completa de sitio (locale) para buscar.</message>
 </locale>

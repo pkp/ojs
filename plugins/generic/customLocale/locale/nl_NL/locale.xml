@@ -33,4 +33,5 @@
 	<message key="plugins.generic.customLocale.file.edit">In bewerking: {$filename}</message>
 	<message key="plugins.generic.customLocale.file.reference">Standaard tekst</message>
 	<message key="plugins.generic.customLocale.file.custom">Aangepaste tekst</message>
+	<message key="plugins.generic.customLocale.localeKey.description">Geef een complete taalcode om naar te zoeken.</message>
 </locale>

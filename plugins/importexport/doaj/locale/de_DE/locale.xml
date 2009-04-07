@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.importexport.doaj.displayName">DOAJ-Export-Plug-In</message>
+	<message key="plugins.importexport.doaj.description">Zeitschrift für DOAJ exportieren und Zeitschrifteninformationen an die/den DOAJ-Vertreter/in per E-Mail schicken</message>
+
+	
+	<message key="plugins.importexport.doaj.export">Zeitschriftendaten zum DOAJ exportieren</message>
+	<message key="plugins.importexport.doaj.export.journal">Zeitschrift exportieren</message>
+	<message key="plugins.importexport.doaj.export.email">E-Mail an DOAJ-Vertreterin senden</message>
+	<message key="plugins.importexport.doaj.export.journalInfo">Artikelinformationen in XML exportieren, um sie im DOAJ zu archivieren</message>
+	<message key="plugins.importexport.doaj.export.emailInfo">Zur Berücksichtigung Ihrer Zeitschrift im DOAJ übermitteln Sie bitte dieses teilweise automatisch ausgefüllte Formular an das DOAJ und ergänzen Sie fehlende Informationen so gut wie möglich.</message>
+
+</locale>

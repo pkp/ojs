@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+ -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.paymethod.manual.displayName">Ruční platba polatku</message>
+	<message key="plugins.paymethod.manual.description">Manažer ručně zaznamená přijetí platby uživatele (mimo tento software).</message>
+	<message key="plugins.paymethod.manual">Ruční platba polatku</message>
+	<message key="plugins.paymethod.manual.settings">Nastavení ruční platby</message>
+	<message key="plugins.paymethod.manual.settings.instructions">Instrukce</message>
+	<message key="plugins.paymethod.manual.settings.manualInstructions">Instrukce pro platbu poplatku pro uživatele, kteří zvolili ruční platbu poplatku</message>
+	
+	<message key="plugins.paymethod.manual.sendNotificationOfPayment">Poslat oznámení o platbě</message>
+	<message key="plugins.paymethod.manual.paymentNotification">Oznámení o platbě</message>
+	<message key="plugins.paymethod.manual.notificationSent">Oznámení o platbě odesláno</message>
+	
+	<message key="plugins.paymethod.manual.purchase.title">Název</message>
+	<message key="plugins.paymethod.manual.purchase.fee">Poplatek</message>	
+</locale>

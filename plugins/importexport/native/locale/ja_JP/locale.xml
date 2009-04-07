@@ -13,8 +13,8 @@
   -->
  
 <locale name="ja_JP" full_name="日本語">
-	<message key="plugins.importexport.native.displayName">論文および巻号XMLプラグイン</message>
-	<message key="plugins.importexport.native.description">論文および巻号をインポート・エクスポート</message>
+	<message key="plugins.importexport.native.displayName">データ入出力プラグイン</message>
+	<message key="plugins.importexport.native.description">論文と巻号をインポート・エクスポートします。</message>
 
 	<message key="plugins.importexport.native.cliUsage"><![CDATA[使用法: {$scriptName} {$pluginName} [command] ...
 コマンド:
@@ -24,10 +24,10 @@
 	export [xmlFileName] [journal_path] issues [issueId1] [issueId2] ...
 	export [xmlFileName] [journal_path] issue [issueId]
 
-データのインポートには、XML文書のルートノードにより、以下の通り追加パラメタが必要です。
+データのインポートには、XML文書のルートノードにより以下の通り追加パラメタが必要です。
 
-ルートノードが<article>または<articles>の場合は、追加パラメタが必要です。
-以下のフォーマットが使用できます。
+ルートノードが<article>または<articles>の場合は、追加パラメタが必要で、
+以下の形式が使用できます。
 
 {$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
 	issue_id [issueId] section_id [sectionId]
@@ -47,22 +47,22 @@
 	<message key="plugins.importexport.native.selectArticle">論文の選択</message>
 
 	<message key="plugins.importexport.native.import.articles">論文のインポート</message>
-	<message key="plugins.importexport.native.import.articles.description">インポート中のファイルには複数の論文が含まれています。これらの論文をインポートする号およびセクションを選択する必要があります。これらの論文をすべて同じセクションおよび号にインポートすることを望まない場合は、(1)異なるXMLファイルに分割するか、(2)インポート後に適当な号およびセクションに移動するか、のいずれかの対応をしてください。</message>
+	<message key="plugins.importexport.native.import.articles.description">インポート中のファイルには複数の論文が含まれています。これらの論文をインポートする巻号とセクションを指定する必要があります。これらの論文をすべて同じ巻号の同じセクションにインポートしたくない場合は、(1)XMLファイルを分割する、(2)インポート後に適当な巻号およびセクションに移動する、のいずれかの対応をしてください。</message>
 
 	<message key="plugins.importexport.native.import">データのインポート</message>
-	<message key="plugins.importexport.native.import.description">このプラグインは、文書型定義 native.dtd に基づくデータインポートをサポートします。サポートするルートノードは、&amp;lt;article&amp;gt;、&amp;lt;articles&amp;gt;、&amp;lt;issue&amp;gt;と&amp;lt;issues&amp;gt;です。</message>
+	<message key="plugins.importexport.native.import.description">文書型定義 native.dtd に基づくデータのインポートをサポートしています。サポートしているルートノードは、&amp;lt;article&amp;gt;、&amp;lt;articles&amp;gt;、&amp;lt;issue&amp;gt;、&amp;lt;issues&amp;gt;です。</message>
 
 	<message key="plugins.importexport.native.import.error">インポートエラー</message>
-	<message key="plugins.importexport.native.import.error.description">インポート処理中にエラーが発生しました。インポートファイルのフォーマットが仕様にあっているか確認してください。エラーの内容は以下の通りです。</message>
+	<message key="plugins.importexport.native.import.error.description">インポート処理中にエラーが発生しました。インポートファイルのフォーマットが仕様に準拠していることを確認してください。エラーの内容は以下の通りです。</message>
 
 	<message key="plugins.importexport.native.cliError">エラー:</message>
 	<message key="plugins.importexport.native.error.unknownUser">指定したユーザ "{$userName}" は存在しません。</message>
-	<message key="plugins.importexport.native.error.unknownJournal">指定した雑誌用パス名 "{$journalPath}"　は存在しません。</message>
-	<message key="plugins.importexport.native.export.error.couldNotWrite">ファイル "{$fileName}" に書き込むことができませんでした。</message>
+	<message key="plugins.importexport.native.error.unknownJournal">指定した雑誌パス名 "{$journalPath}"　は存在しません。</message>
+	<message key="plugins.importexport.native.export.error.couldNotWrite">ファイル "{$fileName}" に書き込むことができません。</message>
 	<message key="plugins.importexport.native.export.error.sectionNotFound">指定した識別子 "{$sectionIdentifier}"　に合致するセクションはありませんでした。</message>
 	<message key="plugins.importexport.native.export.error.issueNotFound">指定した巻号ID "{$issueId}" に合致する号はありませんでした。</message>
 	<message key="plugins.importexport.native.export.error.articleNotFound">指定した論文ID "{$articleId}" に合致する論文はありませんでした。</message>
-	<message key="plugins.importexport.native.import.error.unsupportedRoot">このプラグインは入力したルートノード "{$rootName}" をサポートしていません。ファイルのフォーマットを確認して、もう一度実行してください。</message>
+	<message key="plugins.importexport.native.import.error.unsupportedRoot">このプラグインは指定したルートノード "{$rootName}" をサポートしていません。ファイルのフォーマットを確認して、もう一度実行してください。</message>
 
 	<message key="plugins.importexport.native.import.error.titleMissing">巻号のタイトルがありません。</message>
 	<message key="plugins.importexport.native.import.error.defaultTitle">タイトル記載なし</message>
@@ -116,5 +116,5 @@
 	<message key="plugins.importexport.native.import.error.articleSuppFilePublisherLocaleUnsupported">巻号（"{$issueTitle}"）の論文（"{$articleTitle}"）の補助ファイル（"{$suppFileTitle}"）の出版社に、この雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
 	<message key="plugins.importexport.native.import.error.articleSuppFileSponsorLocaleUnsupported">巻号（"{$issueTitle}"）の論文（"{$articleTitle}"）の補助ファイル（"{$suppFileTitle}"）のスポンサーに、この雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
 	<message key="plugins.importexport.native.import.error.articleSuppFileSourceLocaleUnsupported">巻号（"{$issueTitle}"）の論文（"{$articleTitle}"）の補助ファイル（"{$suppFileTitle}"）の情報源に、この雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
-	<message key="plugins.importexport.native.error.uploadFailed">アップロードが失敗しました。ファイルのアップロードがサーバで許可されているか、またアップロードされたファイルの容量がPHPおよびWebサーバの設定の上限値をこえていないかどうかを確認してください。</message>
+	<message key="plugins.importexport.native.error.uploadFailed">アップロードが失敗しました。サーバがアップロードを許可していること、ファイルサイズがPHPやWebサーバの許容量を超えていないことを確認してください。</message>
 </locale>

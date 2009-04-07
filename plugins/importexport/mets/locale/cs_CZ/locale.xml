@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2005 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.importexport.METSExport.displayName">Plugin pro export METS XML</message>
+	<message key="plugins.importexport.METSExport.description">Export časopisů do METS XML</message>
+	<message key="plugins.importexport.METSExport.settings">Nastavení</message>
+	<message key="plugins.importexport.METSExport.export">Export dat</message>
+	<message key="plugins.importexport.METSExport.export.issues">Export čísel</message>
+	<message key="plugins.importexport.METSExport.export.selectIssue">Vybrat čísla pro export.</message>
+	<message key="plugins.importexport.METSExport.export.error.IssuesNotFound">Žádné číslo neodpovídá uvedenému ID čísla "{$issueId}".</message>
+	<message key="plugins.importexport.METSExport.export.error.unknownIssue">Neznámá cesta {$journalPath}</message>
+	<message key="plugins.importexport.METSExport.settings.FContent">Použít base64 encoding pro balič obsahu</message>
+	<message key="plugins.importexport.METSExport.settings.FLocat">Použít URL bitsreamu pro balič obsahu</message>
+	<message key="plugins.importexport.METSExport.settings.organization">METS:agent element organization attribute</message>
+	<message key="plugins.importexport.METSExport.settings.preservationLevel">Úroveň zachování PREMIS</message>
+	<message key="plugins.importexport.METSExport.settings.exportSuppFiles">Export doplňkových souborů</message>
+</locale>

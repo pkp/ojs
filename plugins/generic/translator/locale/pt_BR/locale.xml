@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
 
 <!--
   * locale.xml
@@ -72,4 +72,5 @@
 	<message key="plugins.generic.translator.deleteKey">Excluir chave</message>
 	<message key="plugins.generic.translator.deleteEmail">Excluir e-mail</message>
 	<message key="plugins.generic.translator.saveBeforeContinuing">Certifique-se de salvar qualquer alteração efetuada nesta página antes de continuar ou elas serão perdidas. Deseja continuar? Se sim, quaisquer mudança não salva será perdida.</message>
+	<message key="plugins.generic.translator.localeKey.description">Digite uma chave de tradução completa para pesquisar.</message>
 </locale>

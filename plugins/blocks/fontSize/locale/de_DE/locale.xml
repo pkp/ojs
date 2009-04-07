@@ -5,18 +5,18 @@
   * locale.xml
   *
   * Copyright (c) 2003-2007 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * DWeiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Regionalisierungszeichenketten für die de_DE (Deutsche) Regionaleinstellung.
   *
-  * $Id$
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
   -->
  
-<locale name="en_US" full_name="U.S. English">
-	<message key="plugins.block.fontSize.displayName">Schriftgröße Block</message>
-	<message key="plugins.block.fontSize.description">Schriftgröße Plugin für die Seitenleiste</message>
+<locale name="de_DE" full_name="German">
+	<message key="plugins.block.fontSize.displayName">Schriftgröße-Plug-In</message>
+	<message key="plugins.block.fontSize.description">Dieses Plug-In liefert einen Siderbar-Link, um die Schriftgröße einzustellen.</message>
 	<message key="plugins.block.fontSize.title">Schriftgröße</message>
-	<message key="plugins.block.fontSize.small.alt">Klein</message>
-	<message key="plugins.block.fontSize.medium.alt">Mittel</message>
-	<message key="plugins.block.fontSize.large.alt">Groß</message>
+	<message key="plugins.block.fontSize.small">Klein</message>
+	<message key="plugins.block.fontSize.medium">Mittel</message>
+	<message key="plugins.block.fontSize.large">Groß</message>
 </locale>

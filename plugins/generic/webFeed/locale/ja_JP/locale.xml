@@ -14,16 +14,16 @@
  
 <locale name="ja_JP" full_name="日本語">
 	<message key="plugins.generic.webfeed.displayName">フィードプラグイン</message>
-	<message key="plugins.generic.webfeed.description">このプラグインは、最新号からRSS/Atom配信フィードを提供します。</message>
+	<message key="plugins.generic.webfeed.description">最新号のRSS/Atom配信フィードを提供します。</message>
 	<message key="plugins.generic.webfeed.settings">設定</message>
 	<message key="plugins.generic.webfeed.settings.issue">巻号ページのみにフィードリンクを表示する。</message>
-	<message key="plugins.generic.webfeed.settings.all">全てのページにフィードリンクを表示する。</message>
-	<message key="plugins.generic.webfeed.settings.currentIssue">最新号のアイテムを表示する。</message>
-	<message key="plugins.generic.webfeed.settings.recentArticles">最新公開アイテム。</message>
-	<message key="plugins.generic.webfeed.settings.recentItemsRequired">通知する最新公開アイテムの数を正の整数で指定してください。</message>
-	<message key="plugins.generic.webfeed.atom.altText">Atom ロゴ</message>
-	<message key="plugins.generic.webfeed.rss1.altText">RSS1 ロゴ</message>
-	<message key="plugins.generic.webfeed.rss2.altText">RSS2 ロゴ</message>
-	<message key="plugins.generic.webfeed.settings.homepage">雑誌ホームページと巻号ページにのみフィードを表示する。</message>
+	<message key="plugins.generic.webfeed.settings.all">雑誌のすべてのページにフィードリンクを表示する。</message>
+	<message key="plugins.generic.webfeed.settings.homepage">ホームページと巻号ページのみにフィードリンクを表示する。</message>
+	<message key="plugins.generic.webfeed.settings.currentIssue">現在公開されている巻号のアイテムを表示する。</message>
+	<message key="plugins.generic.webfeed.settings.recentArticles">件の最新公開アイテム。</message>
+	<message key="plugins.generic.webfeed.settings.recentItemsRequired">送信するアイテムの件数は正の整数で指定してください。</message>
+	<message key="plugins.generic.webfeed.atom.altText">Atomロゴ</message>
+	<message key="plugins.generic.webfeed.rss1.altText">RSS1ロゴ</message>
+	<message key="plugins.generic.webfeed.rss2.altText">RSS2ロゴ</message>
 </locale>
 

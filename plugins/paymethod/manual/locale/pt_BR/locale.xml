@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
 
 <!--
   * locale.xml
@@ -20,4 +20,7 @@
 	<message key="plugins.paymethod.manual.settings.manualInstructions">Instruções para usuários que escolhem Método de Pagamento Manual</message>
 	<message key="plugins.paymethod.manual.purchase.title">Título</message>
 	<message key="plugins.paymethod.manual.purchase.fee">Taxa</message>
+	<message key="plugins.paymethod.manual.sendNotificationOfPayment">Enviar notificação de pagamento</message>
+	<message key="plugins.paymethod.manual.paymentNotification">Notificação de Pagamento</message>
+	<message key="plugins.paymethod.manual.notificationSent">Notificação de pagamento enviada</message>
 </locale>

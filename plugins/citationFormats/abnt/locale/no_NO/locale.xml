@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for this citation plugin in en_US.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.citationFormats.abnt.displayName">ABNT siteringsformat plugin</message>
+	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
+	<message key="plugins.citationFormats.abnt.description">Denne plugin'en implementerer ABNT-siteringsformatet.</message>
+	<message key="plugins.citationFormat.abnt.location">Nord-Amerika</message>
+	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Tilgjengelig: <a href="{$url}" target="_new">{$url}</a>. Nedlastet dato: {$retrievedDate}]]></message>
+</locale>

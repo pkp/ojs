@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
 
 <!--
   * locale.xml
   *
   * Copyright (c) 2003-2008 John Willinsky
-  * Weitergabe nach GNU GPL v2. Vollständiger Text s. docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Regionalisierungszeichenketten für die de_DE (deutsche) Regionaleinstellung.
+  * Regionalisierungszeichenketten für die de_DE (Deutsche) Regionaleinstellung.
   *
-  * $Id$
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
   -->
- 
+  
 <locale name="de_DE" full_name="German">
-	<message key="plugins.importexport.crossref.displayName">CrossRef XML Export Einschub</message>
-	<message key="plugins.importexport.crossref.description">Metadaten des Beitrags im CrossRef XML Format exportieren.</message>
+	<message key="plugins.importexport.crossref.displayName">CrossRef-XML-Export-Plug-In</message>
+	<message key="plugins.importexport.crossref.description">Metadaten des Beitrags im CrossRef-XML-Format exportieren.</message>
 	
 	<message key="plugins.importexport.crossref.export">Daten exportieren</message>
-	<message key="plugins.importexport.crossref.export.issues">Bände exportieren</message>
-	<message key="plugins.importexport.crossref.export.selectIssue">Zu exportierenden Band auswählen.</message>
-	<message key="plugins.importexport.crossref.export.articles">Beitrag exportieren</message>
-	<message key="plugins.importexport.crossref.export.selectArticle">Zu exportierenden Beitrag auswählen.</message>
+	<message key="plugins.importexport.crossref.export.issues">Ausgaben exportieren</message>
+	<message key="plugins.importexport.crossref.export.selectIssue">Zu exportierende Ausgabe auswählen.</message>
+	<message key="plugins.importexport.crossref.export.articles">Beiträge exportieren</message>
+	<message key="plugins.importexport.crossref.export.selectArticle">Zu exportierende Beiträge auswählen.</message>
 	
 	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Gebrauch: 
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] Beiträge [articleId1] [articleId2] ...
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] Band [issueId]
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] …
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
 ]]></message>
 	<message key="plugins.importexport.crossref.cliError">FEHLER:</message>
 
-	<message key="plugins.importexport.crossref.export.error.issueNotFound">Kein Band unter der angegebenen Signatur "{$issueId}" gefunden.</message>
-	<message key="plugins.importexport.crossref.export.error.articleNotFound">Kein Beitrag unter der angegebenen Signatur "{$articleId}" gefunden.</message>
+	<message key="plugins.importexport.crossref.export.error.issueNotFound">Keine Ausgabe passt zu der angegebenen Kennzeichnung "{$issueId}".</message>
+	<message key="plugins.importexport.crossref.export.error.articleNotFound">Kein Beitrag passt zu der angegebenen Kennzeichnung "{$articleId}".</message>
 
-	<message key="plugins.importexport.crossref.errors.noDOIprefix">Zur Verwendung dieses Einschubs muss ein gültiges DOI Präfix bei der Einrichtung der Zeitschrift angegeben werden.</message>
+	<message key="plugins.importexport.crossref.errors.noDOIprefix">Zur Verwendung dieses Plug-Ins muss ein gültiger DOI-Präfix in der Zeitschriftenverwaltung angegeben werden.</message>
 </locale>

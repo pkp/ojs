@@ -64,4 +64,5 @@
   <message key="plugins.generic.translator.deleteKey" >این کلید را حذف کن</message>
   <message key="plugins.generic.translator.deleteEmail" >این ایمیل را حذف کن</message>
   <message key="plugins.generic.translator.saveBeforeContinuing" >قبل از ترک این صفحه مطمئن شوید که تمام تغییرات را ذخیره کرده اید و گرنه از بین خواهند رفت. آیا میخواهید ادامه دهید؟ در این صورت هر گونه تغییر ذخیره نشده از بین خواهد رفت.</message>
+	<message key="plugins.generic.translator.localeKey.description">کلید بومی را بصورت کامل برای جستجو وارد کنید.</message>
 </locale>

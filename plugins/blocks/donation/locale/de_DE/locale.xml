@@ -4,15 +4,15 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2003-2007 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * * Copyright (c) 2003-2007 John Willinsky
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Regionalisierungszeichenketten für die de_DE (Deutsche) Regionaleinstellung.
   *
-  * $Id$
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
   -->
- 
-<locale name="en_US" full_name="U.S. English">
-	<message key="plugins.block.donation.displayName">Spenden Block</message>
-	<message key="plugins.block.donation.description">Spendenlink Plugin für die Seitenleiste</message>
+  
+<locale name="de_DE" full_name="German">
+	<message key="plugins.block.donation.displayName">Spenden</message>
+	<message key="plugins.block.donation.description">Dieses Plug-In liefert einen Link in der Sidebar, um Spenden anzunehmen.</message>
 </locale>

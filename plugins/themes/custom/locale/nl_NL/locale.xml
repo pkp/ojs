@@ -15,9 +15,9 @@
   -->
  
 <locale name="nl_NL" full_name="Nederlands">
-	<message key="plugins.theme.custom.name">Aangepaste thema's plugin</message>
+	<message key="plugins.theme.custom.name">Aangepast thema plugin</message>
 	<message key="plugins.theme.custom.description">Deze plugin implementeert een aanpasbaar thema.</message>
-	<message key="plugins.theme.custom.notWritable">NOOT: De stylesheet van deze plugin, "{$stylesheetFileLocation}", is momenteel niet wijzigbaar. Dit bestand moet wijzigbaar zijn voordat de plugin gebruikt kan worden.</message>
+	<message key="plugins.theme.custom.notWritable">ATTENTIE: De stylesheet van deze plugin, "{$stylesheetFileLocation}", is momenteel niet wijzigbaar. Dit bestand moet wijzigbaar zijn voordat de plugin gebruikt kan worden.</message>
 	<message key="plugins.theme.custom.settings">Instellingen</message>
 	<message key="plugins.theme.custom.pickColour">Kies kleur</message>
 	<message key="plugins.theme.custom.header">Kop</message>

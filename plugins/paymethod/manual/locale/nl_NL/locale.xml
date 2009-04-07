@@ -23,4 +23,7 @@
 	
 	<message key="plugins.paymethod.manual.purchase.title">Titel</message>
 	<message key="plugins.paymethod.manual.purchase.fee">Bedrag</message>	
+	<message key="plugins.paymethod.manual.sendNotificationOfPayment">Stuur betalingsbevestiging</message>
+	<message key="plugins.paymethod.manual.paymentNotification">Betalingsbevestiging</message>
+	<message key="plugins.paymethod.manual.notificationSent">Betalingsbevestiging verstuurd</message>
 </locale>

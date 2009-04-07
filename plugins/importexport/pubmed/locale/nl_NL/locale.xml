@@ -27,7 +27,7 @@
 	<message key="plugins.importexport.pubmed.cliUsage">Gebruik: 
 {$scriptName} {$pluginName} [xmlBestandNaam] [tijdschrift_pad] artikelen [artikelId1] [artikelId2] ...
 {$scriptName} {$pluginName} [xmlBestandsNaam] [tijdschrift_pad] nummer [nummerId]</message>
-	<message key="plugins.importexport.pubmed.cliError">FOUTt:</message>
+	<message key="plugins.importexport.pubmed.cliError">FOUT:</message>
 
 	<message key="plugins.importexport.pubmed.export.error.issueNotFound">Het opgegeven nummer-ID bestaat niet "{$issueId}".</message>
 	<message key="plugins.importexport.pubmed.export.error.articleNotFound">Het opgegeven artikel-ID bestaat niet "{$articleId}".</message>

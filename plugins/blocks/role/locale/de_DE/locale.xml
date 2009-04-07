@@ -5,14 +5,14 @@
   * locale.xml
   *
   * Copyright (c) 2003-2007 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Regionalisierungszeichenketten für die de_DE (Deutsche) Regionaleinstellung.
   *
-  * $Id$
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
   -->
- 
-<locale name="en_US" full_name="U.S. English">
-	<message key="plugins.block.role.displayName">Rollenbedingter Block</message>
-	<message key="plugins.block.role.description">Plugin für die Seitenleiste mit rollenbedingter Information</message>
+  
+<locale name="de_DE" full_name="German">
+	<message key="plugins.block.role.displayName">Funktionenspezifischer Block</message>
+	<message key="plugins.block.role.description">Dieses Plug-In stellt einen Block in der Sidebar bereit, der funktionenspezifische Informationen enthält wie z.B. die Zählung eingereichter Beiträge oder Links zum schnellen Zugriff für Redakteur/innen, Autor/innen etc..</message>
 </locale>

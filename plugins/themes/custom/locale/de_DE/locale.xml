@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  *
+  * Regionalisierungszeichenketten für die de_DE (Deutsche) Regionaleinstellung.
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen querelles-net und Forum Qualitative Sozialforschung (FQS).
+  *
+  * $Id$
+  -->
+ 
+<locale name="de_DE" full_name="German">
+	<message key="plugins.theme.custom.name">Plug-In für eine anpassbare Designvorlage</message>
+	<message key="plugins.theme.custom.description">Dieses Plug-In implementiert eine anpassbare Designvorlage.</message>
+	<message key="plugins.theme.custom.notWritable">HINWEIS: In die Stylesheet-Datei dieses Plug-Ins, "{$stylesheetFileLocation}", kann derzeit nicht geschrieben werden. Dies ist aber erforderlich, damit das Plug-In genutzt werden kann.</message>
+	<message key="plugins.theme.custom.settings">Einstellungen</message>
+	<message key="plugins.theme.custom.pickColour">Farbe auswählen</message>
+	<message key="plugins.theme.custom.header">Überschrift</message>
+	<message key="plugins.theme.custom.link">Link</message>
+	<message key="plugins.theme.custom.background">Hintergrund</message>
+	<message key="plugins.theme.custom.foreground">Vordergrund</message>
+</locale>

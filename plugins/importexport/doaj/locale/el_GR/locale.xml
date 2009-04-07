@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.importexport.doaj.displayName">DOAJ Export Plugin</message>
+	<message key="plugins.importexport.doaj.description">Εξαγωγή δεδομένων του περιοδικού στο DOAJ και αποστολή email με τα στοιχεία του περιοδικού.</message>
+
+	
+	<message key="plugins.importexport.doaj.export">Εξαγωγή δεδομένων του περιοδικού στο DOAJ</message>
+	<message key="plugins.importexport.doaj.export.journal">Εξαγωγή περιοδικού</message>
+	<message key="plugins.importexport.doaj.export.email">Αποστολή Email στον αντιπρόσωπο του DOAJ</message>
+	<message key="plugins.importexport.doaj.export.journalInfo">Εξαγωγή πληροφοριών άρθρου σε XML για αρχειοθέτηση στο DOAJ</message>
+	<message key="plugins.importexport.doaj.export.emailInfo">Για την προβολή του περιοδικού σας στο DOAJ, σας παρακαλούμε υποβάλλετε αυτή την φόρμα στο DOAJ, συμπληρώνοντας τα κενά πεδία όσο καλύτεροα μπορείτε.</message>
+
+</locale>

@@ -74,4 +74,5 @@
 	<message key="plugins.generic.translator.deleteKey">Verwijder deze sleutel</message>
 	<message key="plugins.generic.translator.deleteEmail">Verwijder deze e-mail</message>
 	<message key="plugins.generic.translator.saveBeforeContinuing">Bewaar de wijzigingen in deze pagina voor u verdergaat, anders gaan ze verloren. Wilt u doorgaan? Alle niet-bewaarde wijzigingen zullen verloren gaan.</message>
+	<message key="plugins.generic.translator.localeKey.description">Geef een complete taalcode om naar te zoeken.</message>
 </locale>

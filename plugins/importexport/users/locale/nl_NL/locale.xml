@@ -44,13 +44,13 @@ Voorbeelden:
 	<message key="plugins.importexport.users.import.failedToImportRole">Toekennen van gebruiker aan rol mislukt</message>
 	<message key="plugins.importexport.users.import.dataFile">Bestand met gebruikersgegevens</message>
 	<message key="plugins.importexport.users.import.sendNotify">Stuur ter bevestiging een e-mail met naam en wachtwoord naar iedere geïmporteerde gebuiker.</message>
-	<message key="plugins.importexport.users.import.continueOnError">Ga door met importeren als er iets foutloopt</message>
+	<message key="plugins.importexport.users.import.continueOnError">Ga door met importeren als er iets foutloopt.</message>
 	<message key="plugins.importexport.users.import.noFileError">Geen bestand geladen!</message>
 	<message key="plugins.importexport.users.import.usersWereImported">De volgende gebruikers zijn met succes geïmporteerd in het systeem</message>
 	<message key="plugins.importexport.users.import.errorsOccurred">Er zijn fouten opgetreden tijdens het importeren</message>
 	<message key="plugins.importexport.users.import.confirmUsers">Wilt u deze gebruikers in het systeem importeren</message>
 	<message key="plugins.importexport.users.import.warning">Waarschuwing</message>
-	<message key="plugins.importexport.users.import.encryptionMismatch">Wachtwoorden gecodeerd volgens {$importHash} kunnen niet geïmporteerd worden. OJS is geconfigureerd voor {$ojsHash}. Als u doorgaat, moet u de wachtwoorden van de geimporterde gebruikers opnieuw instellen.</message>
+	<message key="plugins.importexport.users.import.encryptionMismatch">Wachtwoorden gecodeerd volgens {$importHash} kunnen niet geïmporteerd worden. OJS is geconfigureerd voor {$ojsHash}. Als u doorgaat, moet u de wachtwoorden van de geïmporteerde gebruikers opnieuw instellen.</message>
 	<message key="plugins.importexport.users.unknownJournal">Het pad naar tijdschrift  "{$journalPath}" is onbekend.</message>
 
 	<message key="plugins.importexport.users.export.exportUsers">Exporteer gebruikers</message>

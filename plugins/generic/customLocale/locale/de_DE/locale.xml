@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  *
+  * Regionalisierungszeichenketten für die de_DE (Deutsche) Regionaleinstellung.
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen querelles-net und Forum Qualitative Sozialforschung (FQS).
+  *
+  * $Id$
+  -->
+ 
+<locale name="de_DE" full_name="German">
+	<message key="plugins.generic.customLocale.name">Plug-In für die Regionalanpassung</message>
+	<message key="plugins.generic.customLocale.description">Dieses Plug-In ermöglicht die Anpassung der Standardeinstellungen für die Texte der von OJS verwandten Benutzungsoberfläche.</message>
+
+	<message key="plugins.generic.customLocale.longDescription">Auf dieser Seite werden alle Regionaleinstellungsdateien, die derzeit im System verfügbar sind, angezeigt.</message>
+	<message key="plugins.generic.customLocale.localeDescription">Auf dieser Seite werden alle Dateien angezeigt, die für die gewählte Sprachumgebung verfügbar sind.</message>
+	<message key="plugins.generic.customLocale.fileDescription">Geben Sie den angepassten Text in das jeweilige Feld ein. Lassen Sie das Feld leer, wenn der OJS-Standardtext genutzt werden soll.</message>
+	<message key="plugins.generic.customLocale.localeName">Name der Regionaleinstellung</message>
+	<message key="plugins.generic.customLocale.localeKey">Schlüssel</message>
+	<message key="plugins.generic.customLocale.localeKeyValue">Wert</message>
+	<message key="plugins.generic.customLocale.customize">Anpassen</message>
+	<message key="plugins.generic.customLocale.availableLocales">Verfügbare Regionaleinstellungen</message>
+
+	<message key="plugins.generic.customLocale.locale">{$locale} Regionaleinstellung</message>
+	<message key="plugins.generic.customLocale.localeFiles">Regionaleinstellungsdateien</message>
+	<message key="plugins.generic.customLocale.file.filename">Dateiname</message>
+	<message key="plugins.generic.customLocale.file.edit">{$filename} bearbeiten</message>
+	<message key="plugins.generic.customLocale.file.reference">Standardtext</message>
+	<message key="plugins.generic.customLocale.file.custom">Angepasster Text</message>
+	<message key="plugins.generic.customLocale.localeKey.description">Geben Sie einen kompletten locale-Schlüssel an, nach dem gesucht werden soll.</message>
+</locale>
