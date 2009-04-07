@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+<!DOCTYPE locale SYSTEM "../locale.dtd">
 
 <!--
   * locale.xml
@@ -149,7 +149,7 @@
 
 	<!-- Common Form Messages -->
 	<message key="form.errorsOccurred">Des erreurs se sont produites pendant le traitement du formulaire</message>
-	<message key="form.saveToUpload">Utiliser Enregistrer pour télécharger le fichier vers le serveur.</message>
+	<message key="form.saveToUpload">Utiliser Enregistrer pour télécharger le fichier.</message>
 	<message key="form.contains">contient</message>
 	<message key="form.is">est</message>
 	<message key="form.required">(* Obligatoire)</message>
@@ -327,7 +327,7 @@
 	<message key="submission.copyediting">Correction de texte</message>
 	<message key="submission.copyedit">Corriger</message>
 	<message key="submission.layout">Mise en page</message>
-	<message key="submission.proofreading">Correction d'épreuve</message>
+	<message key="submission.proofreading">Correction d'épreuves</message>
 	<message key="submission.scheduling">Calendrier des soumissions</message>
 	<message key="submission.scheduledIn">Sera publié dans {$issueName}.</message>
 	<message key="submission.scheduledIn.tba">(AC)</message>
@@ -348,16 +348,16 @@
 	<message key="submissions.completed">Terminé</message>
 	<message key="submissions.active">Actif</message>
 	<message key="submissions.queuedUnassigned">En attente d'assignation</message>
-	<message key="submissions.queuedEditing">En attente de révision</message>
-	<message key="submissions.queuedReview">En attente d'évaluation</message>
+	<message key="submissions.queuedEditing">En révision</message>
+	<message key="submissions.queuedReview">En évaluation</message>
 	<message key="submissions.archived">Archivé</message>
 	<message key="submissions.scheduled">Au calendrier</message>
 	<message key="submissions.published">Publié</message>
 	<message key="submissions.declined">Rejeté</message>
 	<message key="submissions.queued">En attente</message>
 	<message key="submissions.initial">Initiale</message>
-	<message key="submissions.proofread">Effectuer la correction d'épreuve</message>
-	<message key="submissions.initialProof">Première correction d'épreuve</message>
+	<message key="submissions.proofread">Faire la correction d'épreuves</message>
+	<message key="submissions.initialProof">Première correction d'épreuves</message>
 	<message key="submissions.postAuthor">Après l'auteur</message>
 	<message key="submissions.reviewRound">Cycle d'évaluation</message>
 	<message key="submissions.incomplete">Incomplet</message>
@@ -979,7 +979,7 @@ Prendre note que si votre administrateur de site a déjà inscrit ce site auprè
 	<message key="manager.setup.editorialProcess1">Un ou plusieurs rédacteurs s'occupent des étapes de base sans rôle désigné.</message>
 	<message key="manager.setup.editorialProcess2">Le Rédacteur en chef gère la File d'attente des soumissions et le Sommaire, tandis que les Chefs de rubrique se chargent de l'Évaluation des soumissions et de la Révision des soumissions.</message>
 	<message key="manager.setup.editorialProcess3">Le Rédacteur en chef gère la File d'attente des soumissions, la Révision des soumissions et le Sommaire, tandis que les Chefs de rubrique se chargent de l'Évaluation des soumissions.</message>
-	<message key="manager.setup.copyediting">Correcteurs de texte</message>
+	<message key="manager.setup.copyediting">Réviseurs</message>
 	<message key="manager.setup.copyeditInstructions">Instructions pour la correction de texte</message>
 	<message key="manager.setup.copyeditInstructionsDescription">Les instructions pour la correction de texte seront mises à la disposition des évaluateurs, auteurs, et chefs de rubrique à l'étape de la révision de la soumission. Voir ci-dessous un ensemble d'instructions par défaut en HTML, qui peuvent être modifiées ou remplacées par le directeur de la revue en tout temps (en HTML ou texte brut).</message>
 	<message key="manager.setup.layoutAndGalleys">Responsables de la mise en page</message>
@@ -1605,12 +1605,12 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Fichier à réviser</message>
-	<message key="copyeditor.article.copyeditorFile"> Fichier du réviseur</message>
+	<message key="copyeditor.article.copyeditorFile">Fichier du réviseur</message>
 	<message key="copyeditor.article.uploadedFile">Fichier téléchargé</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Fichier du réviseur</message>
 	
 	<!-- Proofreader -->
-	<message key="proofreader.noProofreadingAssignments">Aucune assignation de correction d'épreuve</message>
+	<message key="proofreader.noProofreadingAssignments">Aucune assignation de correction d'épreuves</message>
 
 	<!-- Author -->
 	<message key="author.submit">Nouvelle soumission</message>
@@ -1631,8 +1631,8 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="author.submit.cancelSubmission">Vous pouvez terminer cette soumission plus tard en sélectionnant Soumissions actives à la page d'accueil de l'auteur.</message>
 	<message key="author.submit.notAccepting">Cette revue n'accepte pas de présentations pour le moment.</message>
 	
-	<message key="author.submissions.uploadCopyeditedVersion">Télécharger  le fichier révisé</message>
-	<message key="author.submissions.proofreadingCorrections">Correction d'épreuve</message>
+	<message key="author.submissions.uploadCopyeditedVersion">Télécharger le fichier révisé</message>
+	<message key="author.submissions.proofreadingCorrections">Corrections d'épreuves</message>
 	<message key="author.submissions.confirmDelete">Êtes-vous certain de vouloir supprimer cette soumission incomplète?</message>
 	<message key="author.submissions.viewStatus">Voir l'état</message>
 	<message key="author.submissions.noSubmissions">Aucune soumission.</message>
@@ -1739,8 +1739,8 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="submission.layout.layoutFile">Fichier de mise en page</message>
 	<message key="submission.layout.galleys">Épreuves</message>
 	<message key="submission.layout.newGalley">Créer une nouvelle épreuve</message>
-	<message key="submission.layout.assignLayoutEditor">Assigner un réviseur de la mise en page</message>
-	<message key="submission.layout.replaceLayoutEditor">Remplacer le réviseur de la mise en page</message>
+	<message key="submission.layout.assignLayoutEditor">Assigner un responsable de la mise en page</message>
+	<message key="submission.layout.replaceLayoutEditor">Remplacer le responsable de la mise en page</message>
 	<message key="submission.layout.initialGalleyCreation">Création de l'épreuve en placard initiale</message>
 	<message key="submission.layout.supplementaryFiles">Révision du fichier supplémentaire</message>
 	<message key="submission.layout.layoutComments">Mise en page -- Commentaires</message>
@@ -1891,7 +1891,7 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="search.author">Auteurs</message>
 	<message key="search.title">Titre</message>
 	<message key="search.abstract">Résumé</message>
-	<message key="search.fullText">Texte complet</message>
+	<message key="search.fullText">Texte intégral</message>
 	<message key="search.indexTerms">Mots clés</message>
 	<message key="search.withinJournal">Dans</message>
 	<message key="search.allJournals">Toutes les revues</message>
@@ -1908,34 +1908,34 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="search.authorIndex">Explorer l'index des auteurs</message>
 	<message key="search.titleIndex">Explorer l'index des titres</message>
 	<message key="search.authorDetails">Détails sur les auteurs</message>
-	<message key="search.searchResults"> Résultats de la recherche</message>
+	<message key="search.searchResults">Résultats de la recherche</message>
 	<message key="search.reviseSearch">Réviser la recherche</message>
 	<message key="search.noResults">Aucun résultat</message>
 	<message key="search.noKeywordError">Vous devez entrer au moins un mot clé de recherche.</message>
-	<message key="search.syntaxInstructions"><![CDATA[Search tips: <ul>
-<li>Les termes de recherche sont insensibles à la casse.</li>
+	<message key="search.syntaxInstructions"><![CDATA[Pistes de recherche : <ul>
+<li>Les termes de recherche sont insensibles à la casse</li>
 <li>Les noms communs sont ignorés</li>
-<li>Par défaut seulement les articles contenant <em>tout</em> les termes de la recherche sont retournés. (i.e., <em>ET</em> est implicite)</li>
-<li>Combiner plusieurs mots avec <em>OU</em>pour trouver l'un ou l'autre terme. i.e. <em>éducation OR recherche</em></li>
-<li>Utiliser des parenthèses pour faire une recherche plus complexe. i.e. <em>archive ((revue OU conférence) PAS celles-ci)</em></li>
-<li>Rechercher une phrase exacte en la mettant entre des guillemets; i.e. <em>"Publication à libre accès"</em></li>
-<li>Exclure un mot en le préfixant avec <strong>-</strong> ou <em>PAS</em>; e.g. <em>en ligne -politiques</em> ou <em>en ligne NON politiques</em></li>
-<li>Utiliser  <strong>*</strong> comme caractère de remplacement dans un terme marier toute séquence de caractères; i.e. <em>soci* moralité</em> feront apparaître les documents contenant «sociologique » ou « socialisme »</li>
+<li>Par défaut, seulement les articles contenant <em>tous</em> les termes de recherche sont retournés (c.-à-d. <em>ET</em> est implicite)</li>
+<li>Combiner plusieurs mots avec <em>OU</em> pour trouver l'un ou l'autre terme, c.-à-d. <em>éducation OR recherche</em></li>
+<li>Utiliser des parenthèses pour faire une recherche plus complexe i.e. <em>archive ((revue OU conférence) SAUF thèses)</em></li>
+<li>Rechercher une phrase exacte en la mettant entre guillemets, c.-à-d. <em>"Publication à libre accès"</em></li>
+<li>Exclure un mot en le préfixant avec <strong>-</strong> ou <em>SAUF</em>, c.-à-d. <em>en ligne -politiques</em> ou <em>en ligne NON politiques</em></li>
+<li>Utiliser <strong>*</strong> comme caractère de remplacement dans un terme pour y faire correspondre toute séquence de caractères, c.-à-d. <em>soci* moralité</em> feront apparaître les documents contenant « sociologique » ou « socialisme »</li>
 </ul>]]></message>
-	<message key="search.operator.not">non</message>
+	<message key="search.operator.not">sauf</message>
 	<message key="search.operator.and">et</message>
 	<message key="search.operator.or">ou</message>
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	<message key="article.pdf.note"><![CDATA[Le fichier PDF que vous avez choisi devrait se télécharger ici, si votre navigateur Web dispose d'un lecteur PDF (par exemple, une  version récente de <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>). Le fichier PDF peut aussi être téléchargé à votre ordinateur, où il peut aussi être ouvert à l'aide d'un lecteur PDF. Pour plus de renseignements sur la façon d'imprimer, sauvegarder, et travailler en PDF, Highwire Press offre une page de<a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Foire aux questions sur les PDF</a>.<br /><br />Si le fichier ne se télécharge pas automatiquement, <a href="{$url}">cliquer ici</a>.]]></message>
+	<message key="article.pdf.note"><![CDATA[Le fichier PDF que vous avez choisi devrait se télécharger ici, si votre navigateur Web dispose d'un lecteur PDF (par exemple, une  version récente de <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>). Le fichier PDF peut aussi être téléchargé sur votre ordinateur, où il peut être ouvert à l'aide d'une application de lecture de fichiers PDF. Pour plus de renseignements sur la façon d'imprimer, de sauvegarder, et de manipuler des fichiers PDF, Highwire Press offre une page de<a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Foire aux questions sur les PDF</a>.<br /><br />Si le fichier ne se télécharge pas automatiquement, <a href="{$url}">cliquer ici</a>.]]></message>
 	
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Télécharger l'article</message>
-	<message key="article.nonpdf.note"><![CDATA[Le fichier que vous avez sélectionné devrait commencer à se télécharger automatiquement. S'il ne le fait pas, cliquer sur le lien ci-dessous. Noter que ce fichier peut exiger un écran spécial ou un plugiciel pour être visible.<br /><br />Si le fichier ne se télécharge pas automatiquement, <a href="{$url}">cliquer ici</a>.]]></message>
+	<message key="article.nonpdf.note"><![CDATA[Le fichier que vous avez sélectionné devrait commencer à se télécharger automatiquement. S'il ne le fait pas, cliquer sur le lien ci-dessous. Noter que ce fichier peut exiger une application particulière ou un plugiciel pour être visible.<br /><br />Si le fichier ne se télécharge pas automatiquement, <a href="{$url}">cliquer ici</a>.]]></message>
 	
 	<!-- Site index -->
-	<message key="site.journalsHosted">revues hébergées dans ce site</message>
+	<message key="site.journalsHosted">Revues hébergées dans ce site</message>
 	<message key="site.journalView">Voir la revue</message>
 	<message key="site.journalRegister">S'inscrire</message>
 	<message key="site.journalCurrent">Numéro courant</message>
@@ -1957,11 +1957,11 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="about.contact.principalContact">Contact principal</message>
 	<message key="about.contact.supportContact">Contact de soutien</message>
 	<message key="about.contact.phone">Téléphone</message>
-	<message key="about.contact.fax">Fax</message>
+	<message key="about.contact.fax">Télécopieur</message>
 	<message key="about.contact.email">Courriel</message>
 	<message key="about.statistics">Statistiques</message>
 	<message key="about.journalContact">Personne-ressource pour la revue</message>
-	<message key="about.aboutTheJournal">Au sujet de la revue</message>
+	<message key="about.aboutTheJournal">À propos de la revue</message>
 	<message key="about.editorialTeam">Comité éditorial</message>
 	<message key="about.editorialTeam.biography">Biographie</message>
 	<message key="about.editorialPolicies">Politiques éditoriales</message>
@@ -2353,8 +2353,8 @@ Votre serveur soutient actuellement mbstring: <strong>{$supportsMBString}</stron
 	<message key="debug.databaseQueries">Nombre de requêtes de la base de données</message>
 
 	<message key="debug.notes">Notes:</message>
-	<message key="debug.notes.localeLoad">Loaded locale file "{$localeFile}" from XML</message>
-	<message key="debug.notes.localeListLoad">Loaded locale list "{$localeList}" from XML</message>
+	<message key="debug.notes.localeLoad">Fichier de langue "{$localeFile}" chargé à partir du XML</message>
+	<message key="debug.notes.localeListLoad">Liste de langue "{$localeList}" chargée à partir du XML</message>
 	<message key="debug.notes.missingLocaleKey">Clé locale manquante "{$key}".</message>
 
 	<!--
@@ -2441,36 +2441,36 @@ Après que vos révisions sont terminées, changer le nom du fichier AuthorNameQ
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Nous incitons les bibliothèques à indiquer l'accès libre à cette revue parmi les revues électroniques qu'elles conservent. Ce système de publication est aussi conçu pour être hébergé et exploité par les bibliothèques de recherche afin de soutenir les travaux des membres de ses facultés associées publiés dans la revue. Pour en savoir plus sur l'utilisation de Open Journal Systems pour gérer et publier les revues évaluées par les pairs, voir <a href="http://pkp.sfu.ca">Public Knowledge Project</a>.]]></message>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Cette revue utilise le système LOCKSS pour créer un système de distribution des archives parmi les bibliothèques participantes et permet à ces bibliothèques de créer des archives permanentes pour fins de préservation et de restauration. <a href="http://lockss.stanford.edu/">More...</a>]]></message>
 
-	<message key="common.confirmComplete">Are you sure you wish to mark this task as completed? You may not be able to make changes afterwards.</message>
+	<message key="common.confirmComplete">Êtes-vous certaine que vous souhaitez identifiée cette tâche comme complétée? Il est possible que vous ne puissiez plus faire de modifications par la suite.</message>
 	<message key="common.captchaField">Validation</message>
-	<message key="common.captchaField.description">Please enter the letters as they appear in the image above.</message>
-	<message key="common.captchaField.badCaptcha">The characters you entered did not match the characters in the image. Please check the characters and try again.</message>
-	<message key="submission.sent">Sent</message>
+	<message key="common.captchaField.description">Prière de saisir les lettres telles qu'elles apparaissent dans l'image au-dessus.</message>
+	<message key="common.captchaField.badCaptcha">Les caractères que vous avez entrés ne correspondent pas aux caractères dans l'image. Prière de vérifier les caractères et d'essayer de nouveau.</message>
+	<message key="submission.sent">Envoyé</message>
 	<message key="user.sendPassword">Confirmation</message>
-	<message key="user.sendPassword.description">Send me a confirmation email including my username and password</message>
+	<message key="user.sendPassword.description">M'envoyer un courriel de confirmation incluant mon nom d'utilisateur et mon mot de passe</message>
 	<message key="user.signature">Signature</message>
-	<message key="admin.settings.siteStyleSheet">Site style sheet</message>
-	<message key="admin.settings.siteStyleSheetInvalid">Invalid site stylesheet format. Accepted format is .css.</message>
-	<message key="manager.setup.enableUserRegistration.author">Authors (can submit materials to the journal)</message>
-	<message key="manager.setup.enableUserRegistration.reader">Readers (will recieve notifications and be counted as equivalent to a subscriber)</message>
-	<message key="manager.setup.enableUserRegistration.reviewer">Reviewers (available for reviewing submissions)</message>
-	<message key="manager.setup.reviewerDatabaseLink">Potential Reviewer Database</message>
-	<message key="manager.setup.reviewerDatabaseLink.desc">Add to the Select Reviewer page a link to a relevant literature database that can be searched for potential reviewers and is open to editors without subscription.</message>
-	<message key="manager.setup.addReviewerDatabaseLink">Add New Database Link</message>
-	<message key="manager.sections.hideAbout">Omit this section from About the Journal.</message>
-	<message key="manager.people.roleEnrollment">{$role} Enrollment</message>
-	<message key="editor.submissionReview.cannotSendToCopyediting">Before you can send this submission to copyediting, you must ensure that a revision is available and that the author has been notified of the decision using the Notify Author link above.</message>
-	<message key="editor.article.commentsRequired">The comments field is required.</message>
-	<message key="submission.layout.imageInvalid">Invalid image format. Accepted formats are .gif, .jpg, and .png.</message>
-	<message key="author.submit.startHereTitle">Start a New Submission</message>
-	<message key="submission.layout.noLayoutFile">None (Upload final copyedit version as Layout Version prior to sending request)</message>
-	<message key="author.submit.authorSubmitLoginMessage">A user account is required to submit to this journal. This allows our editors to track your submissions and contact you when the status of your submission changes, or if additional information is required from you.</message>
-	<message key="installer.databaseSettingsInstructions">OJS requires access to a SQL database to store its data. See the system requirements above for a list of supported databases. In the fields below, provide the settings to be used to connect to the database.</message>
-	<message key="log.review.reviewDeclinedByProxy">{$userName} has declined the round {$round} review for submission {$articleId} on behalf of {$reviewerName}.</message>
-	<message key="log.editor.decision">An editor decision ({$decision}) for article {$articleId} was recorded by {$editorName}.</message>
-	<message key="rt.admin.settings.addComment.authenticated">Users must be registered and log into to post, with anonymity not permitted.</message>
-	<message key="rt.admin.settings.addComment.anonymous">Users must be registered and log into to post, with anonymity permitted.</message>
-	<message key="rt.admin.settings.addComment.unauthenticated">Users do not need to be registered to post, with anonymity permitted.</message>
+	<message key="admin.settings.siteStyleSheet">Feuille de style du site</message>
+	<message key="admin.settings.siteStyleSheetInvalid">Format de la feuille de style du site invalide. Le format accepté est .css.</message>
+	<message key="manager.setup.enableUserRegistration.author">Auteurs (peut soumettre des textes à la revue)</message>
+	<message key="manager.setup.enableUserRegistration.reader">Lecteurs (vont recevoir des avis et seront considérés de la même façon que les abonnés)</message>
+	<message key="manager.setup.enableUserRegistration.reviewer">Évaluateurs (disponible pour l'évaluation de soumissions)</message>
+	<message key="manager.setup.reviewerDatabaseLink">Base de données des évaluateurs potentiels</message>
+	<message key="manager.setup.reviewerDatabaseLink.desc">Ajouter à la page "Sélectionner un évaluateur" un lien à une base de données pertinente qui peut être utilisée pour repérer des évaluateurs potentiels et qui est accessible aux rédacteurs, sans abonnement.</message>
+	<message key="manager.setup.addReviewerDatabaseLink">Ajouter un nouveau lien de base de données</message>
+	<message key="manager.sections.hideAbout">Omettre cette section de "À propos de cette revue".</message>
+	<message key="manager.people.roleEnrollment">Inscription comme {$role}</message>
+	<message key="editor.submissionReview.cannotSendToCopyediting">Avant d'envoyer cette soumission en correction de texte, vous devez vous assurer qu'une révision est disponible et que l'auteur a été averti de la décision à l'aide du lien "Aviser l'auteur" ci-dessus.</message>
+	<message key="editor.article.commentsRequired">Le champ commentaires est obligatoire.</message>
+	<message key="submission.layout.imageInvalid">Format d'aimge invalide. Les formats acceptés sont .gif, .jpg, et .png.</message>
+	<message key="author.submit.startHereTitle">Commencer une nouvelle soumission</message>
+	<message key="submission.layout.noLayoutFile">Aucun (Télécharger la version de révision finale avant d'envoyer une demande)</message>
+	<message key="author.submit.authorSubmitLoginMessage">Un compte utilisateur est obligatoire pour envoyer des soumissions à cette revue. Cela permet aux rédacteurs d'effectuer le suivi de vos soumissions et de vous contacter lorsque le statut de votre soumission change, ou si vous devez fournir des informations supplémentaires.</message>
+	<message key="installer.databaseSettingsInstructions">OJS nécessite l'accès à une base de données SQL pour entreposer ses données. Voir la configuration nécessaire ci-jait pour une liste des base de données supportées. Dans les champs ci-bas, fournissez les paramètres à utiliser pour se connecter à la base de données.</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName} a refusé le cycle {$round} d'évaluation pour la soumission {$articleId} au nom de {$reviewerName}.</message>
+	<message key="log.editor.decision">Une décision du rédacteur ({$decision}) pour l'article {$articleId} a été enregistré par{$editorName}.</message>
+	<message key="rt.admin.settings.addComment.authenticated">Les utilisateurs doivent être inscrits et connectés pour publier, l'anonymat n'étant pas permise.</message>
+	<message key="rt.admin.settings.addComment.anonymous">Les utilisateurs doivent être inscrit et connectés pour publier, l'anonymat n'étant pas permise.</message>
+	<message key="rt.admin.settings.addComment.unauthenticated">Les utilisateurs n'ont pas besoin d'être inscrit pour publier, l'anonymat étant permise.</message>
 	<message key="debug.notes.currencyListLoad">Liste téléchargée des unités monétaires"{$filename}" de XML</message>
 	<message key="common.add">Ajouter</message>
 	<message key="common.discipline">Discipline</message>
@@ -2610,7 +2610,7 @@ le droit de première publication de l’œuvre [SPÉCIFIER LA PÉRIODE DE TEMPS
 	<message key="manager.setup.publicationFormatNumber">Numéro</message>
 	<message key="manager.setup.publicationFormatVolume">Volume</message>
 	<message key="manager.setup.publicationFormatTitle">Titre</message>
-	<message key="manager.setup.useCopyeditors">Un réviseur d'épreuve sera assigné à chaque soumission.</message>
+	<message key="manager.setup.useCopyeditors">Un réviseur sera assigné à chaque soumission.</message>
 	<message key="manager.setup.noUseCopyeditors">La correction de texte sera assurée par un réviseur ou un chef de rubrique assigné à la soumission.</message>
 	<message key="manager.setup.useLayoutEditors">Un responsable de la mise en page sera assigné à la constitution de fichiers en format HTML, PDF, etc., aux fins de publication numérique.</message>
 	<message key="manager.setup.noUseLayoutEditors">Un rédacteur ou un chef de rubrique assigné à la soumission préparera les fichiers en format HTML, PDF, etc.</message>
@@ -2814,9 +2814,9 @@ Le paragraphe qui commence « Ce dernier sujet... » est à effacer. </pre>]]></
 	<message key="article.comments.disable">Désactiver</message>
 	<message key="article.comments.enable">Activer</message>
 	<message key="article.fontSize">Taille de police</message>
-	<message key="article.fontSize.small.altText">Petit</message>
-	<message key="article.fontSize.medium.altText">Moyen</message>
-	<message key="article.fontSize.large.altText">Grand</message>
+	<message key="article.fontSize.small.altText">Petite</message>
+	<message key="article.fontSize.medium.altText">Moyenne</message>
+	<message key="article.fontSize.large.altText">Grande</message>
 	<message key="submission.changeComments">Changer pour</message>
 	<message key="user.noRoles.chooseJournal">Votre compte n'est présentement associé à aucune revue. Prière de choisir une revue :</message>
 	<message key="user.noRoles.noRolesForJournal">Votre compte n'a présentement aucun rôle pour cette revue. Prière de choisir parmi les actions ci-dessous :</message>
@@ -2855,19 +2855,16 @@ Le paragraphe qui commence « Ce dernier sujet... » est à effacer. </pre>]]></
 	<message key="user.profile.publicProfile">Profil</message>
 	<message key="announcement.posted">Publié</message>
 	<message key="help.searchReturnResults">Retourner aux résultats de recherche</message>
-	<message key="icon.font_small.alt">Petit</message>
-	<message key="icon.font_medium.alt">Moyen</message>
-	<message key="icon.font_large.alt">Grand</message>
+	<message key="icon.font_small.alt">Petite</message>
+	<message key="icon.font_medium.alt">Moyenne</message>
+	<message key="icon.font_large.alt">Grande</message>
 	<message key="manager.reviewForms.noneChosen">Aucun / Formulaire d'évaluation libre</message>
 	<message key="manager.reviewForms.noneCreated">Aucun formulaire d'évaluation n'a été créé.</message>
-	<message key="manager.reviewForms.noneUsed">Aucun formulaire d'évaluation n'a été utilisé.</message>
 	<message key="manager.reviewForms.create">Créer un formulaire d'évaluation</message>
 	<message key="manager.reviewForms.edit">Formulaire d'évaluation</message>
-	<message key="manager.reviewForms.reviewFormData">Données du formulaire d'évaluation</message>
 	<message key="manager.reviewForms.description">Description et directives</message>
 	<message key="manager.reviewForms.preview">Prévisualiser le formulaire</message>
 	<message key="manager.reviewForms.inReview">En évaluation</message>
-	<message key="manager.reviewForms.confirmDeletePublished">Confirmer la suppression d'un formulaire d'évaluation publié...</message>
 	<message key="manager.reviewForms.confirmDeleteUnpublished">Confirmer la suppression d'un formulaire d'évaluation non publié...</message>
 	<message key="manager.reviewForms.form.titleRequired">Le titre est obligatoire pour le formulaire d'évaluation.</message>
 	<message key="manager.reviewFormElements">Éléments du formulaire</message>
@@ -2878,7 +2875,6 @@ Le paragraphe qui commence « Ce dernier sujet... » est à effacer. </pre>]]></
 	<message key="manager.reviewFormElements.copyTo">Copier vers :</message>
 	<message key="manager.reviewFormElements.question">Élément</message>
 	<message key="manager.reviewFormElements.required">Les évaluateurs doivent compléter l'élément</message>
-	<message key="manager.reviewFormElements.viewable">Visualisable (pour les auteurs)</message>
 	<message key="manager.reviewFormElements.elementType">Type d'élément</message>
 	<message key="manager.reviewFormElements.chooseType">Choisir un type d'élément</message>
 	<message key="manager.reviewFormElement.changeType">Changer le type d'élément du formulaire...</message>
@@ -2928,4 +2924,31 @@ Le paragraphe qui commence « Ce dernier sujet... » est à effacer. </pre>]]></
 	<message key="about.aboutThisPublishingSystem.altText">Processus éditorial et d'édition d'OJS</message>
 	<message key="payment.type.purchaseArticle">Frais d'achat de l'article</message>
 	<message key="default.journalSettings.purchaseArticleFeeDescription">Le paiement de ces frais vous permettra d'afficher, de télécharger sur votre poste, et d'imprimer cet article.</message>
+	<message key="common.ccLicense"><![CDATA[<br /><br />
+	<a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
+	<br />
+	Cette création est mise à disposition sous un <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new">contrat Creative Commons</a>.]]></message>
+	<message key="common.ccLicense.rt"><![CDATA[<div class="rtBlock">
+		<br />
+		<a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
+		<br />
+	Cette création est mise à disposition sous un <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new">contrat Creative Commons</a>.
+	</div>]]></message>
+	<message key="journal.issn">ISSN</message>
+	<message key="manager.setup.doiSuffix">Suffixe DOI</message>
+	<message key="manager.setup.doiSuffixDefault">Utilisez le format par défaut (%j.v%vi%i.%a).</message>
+	<message key="manager.setup.doiSuffixPattern">Utilisez le format ci-dessous pour générer le suffixe DOI. Utilisez %j pour le titre abrégé de la revue, %v pour le volume, %i pour le numéro, %a pour l'identifiant d'article OJS et %p pour le numéro de page.</message>
+	<message key="manager.setup.doiSuffixPattern.example">Par exemple, vol%viss%ipp%p créerait le DOI 10.1234/vol3iss2pp230</message>
+	<message key="manager.setup.doiSuffixDescription">Un suffixe DOI peut prendre n'importe quelle format mais doit être unique pour chaque élément publié.</message>
+	<message key="debug.memoryUsage">Utilisation de la mémoire :</message>
+	<message key="manager.setup.doiSuffixCustomIdentifier">Utiliser l'"Identifiant personnalisé" comme suffixe DOI pour les éléments publiés (doit être activé à l'Étape 4).</message>
+	<message key="manager.setup.publisherNoteDescription">Ce texte apparaîtra sous l'entête "Éditeur" et au-dessus du nom/url de l'éditeur sous "Commandites" dans la page "À propos".</message>
+	<message key="manager.setup.sponsorNoteDescription">Ce texte apparaîtra sous l'entête "Commanditaires" et au-dessus de la liste des noms et urls des commenditaires sous "Commandites" dans la page "À propos".</message>
+	<message key="manager.setup.contributorNoteDescription">Ce texte apparaîtra sous l'entête "Sources de soutien" et au-dessus de la liste des noms et urls des organismes de soutien sous "Commandites" dans la page "À propos".</message>
+	<message key="manager.setup.form.doiPrefixPattern">Le DOI doit avoir le format 10.xxxx.</message>
+	<message key="author.submit.mustEnterWaiverReason">Si vous appliquer pour une dérogation, vous devez entrer une raison dans l'espace fourni à cet effet.</message>
+	<message key="author.submissions.queuedReviewSubsequent">En ronde d'évaluation {$round}</message>
+	<message key="author.submissions.queuedReviewRevisions">En évaluation : révisions requises</message>
+	<message key="author.submissions.queuedEditingCopyedit">En révision : corrections requires</message>
+	<message key="author.submissions.queuedEditingProofread">En révision : corrections d'épreuves requises</message>
 </locale>

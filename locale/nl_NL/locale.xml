@@ -73,7 +73,7 @@
 	<message key="common.notes">Opmerkingen</message>
 	<message key="common.date">Datum</message>
 	<message key="common.weeks">weken</message>
-	<message key="common.source">Bronce</message>
+	<message key="common.source">Bron</message>
 	<message key="common.language">Taal</message>
 	<message key="common.id">ID</message>
 	<message key="common.status">Status</message>
@@ -166,7 +166,7 @@
 	<!-- Common Form Messages -->
 	<message key="form.errorsOccurred">Er zijn fouten opgetreden bij het verwerken van dit formulier</message>
 	<message key="form.postRequired">Het formulier is niet op de juiste manier afgesloten.</message>
-	<message key="form.saveToUpload">Gebruik Opslaan om een bestand te laden.</message>
+	<message key="form.saveToUpload">Gebruik Opslaan om het bestand te laden.</message>
 	<message key="form.contains">bevat</message>
 	<message key="form.is">is</message>
 	<message key="form.required">(* Verplicht)</message>
@@ -188,7 +188,7 @@
 	<message key="email.subject">Onderwerp</message>
 	<message key="email.body">Hoofdtekst</message>
 	<message key="email.send">Verstuur</message>
-	<message key="email.skip">sla e-mail over</message>
+	<message key="email.skip">Sla e-mail over</message>
 	<message key="email.compose">Stuur e-mail</message>
 	<message key="email.compose.tooSoon">U probeert een bericht te snel na het laatste bericht te versturen. Wacht met het verzenden van nog een bericht.</message>
 	<message key="email.compose.tooManyRecipients">U probeert een bericht naar teveel ontvangers te versturen.</message>
@@ -728,7 +728,7 @@ Merk op dat de OAI interface voor deze site uitgeschakeld kan worden door de con
 	<message key="admin.version.checkForUpdates">Zoek naar verbeteringen</message>
 	<message key="admin.version.latest">Nieuwste versie</message>
 	<message key="admin.version.upToDate">Uw systeem is up-to-date</message>
-	<message key="admin.version.updateAvailable">Er is een verbeterde versie beschikbaar</message>
+	<message key="admin.version.updateAvailable">Er is een bijgewerkte versie beschikbaar</message>
 	<message key="admin.version.downloadPackage">Download</message>
 	<message key="admin.version.downloadPatch">Download verbetering</message>
 	<message key="admin.version.moreInfo">Meer Informatie</message>
@@ -754,7 +754,7 @@ Merk op dat de OAI interface voor deze site uitgeschakeld kan worden door de con
 	<message key="admin.journal.importPath">OJS 1 pad</message>
 	<message key="admin.journal.importPathInstructions">Volledig bestandssysteem-pad naar de OJS 1 installatie (bijvoorbeeld "/var/www/ojs").</message>
 	<message key="admin.journals.importSubscriptions">Importeer abonnees</message>
-	<message key="admin.journals.transcode">vertaal artikel-metadata van ISO8859-1</message>
+	<message key="admin.journals.transcode">Vertaal artikel-metadata van ISO8859-1</message>
 	<message key="admin.journals.form.importPathRequired">Het import-pad is verplicht.</message>
 	<message key="admin.journals.importErrors">Importeren is niet gelukt</message>
 
@@ -779,7 +779,7 @@ Merk op dat de OAI interface voor deze site uitgeschakeld kan worden door de con
 	<message key="manager.people">Mensen</message>
 	<message key="manager.filesBrowser">Bestanden bekijken</message>
 	<message key="manager.groups">Redactieteam</message>
-	<message key="manager.managementPages">Beheerpagnina's</message>
+	<message key="manager.managementPages">Beheerpagina's</message>
 	<message key="manager.plugins">Systeemplugins</message>
 	<message key="manager.users">Gebruikers</message>
 	<message key="manager.roles">Rollen</message>
@@ -916,7 +916,7 @@ Merk op dat de OAI interface voor deze site uitgeschakeld kan worden door de con
 	<message key="manager.setup.details">Details</message>
 	<message key="manager.setup.details.description">Naam van het tijdschrift, ISSN, contacten, sponsors, en zoekmachines.</message>
 	<message key="manager.setup.policies">Beleid</message>
-	<message key="manager.setup.policies.description">Doelgroep, peer review, secties, privacy, beveiliging en andere gegevens over het tijdschrift.</message>
+	<message key="manager.setup.policies.description">Focus, peer review, secties, privacy, beveiliging en andere gegevens over het tijdschrift.</message>
 	<message key="manager.setup.submissions">Inzendingen</message>
 	<message key="manager.setup.submissions.description">Auteursrichtlijnen, copyright, and indexering (inclusief registratie).</message>
 	<message key="manager.setup.management">Beheer</message>
@@ -963,7 +963,7 @@ Merk op dat de OAI interface voor deze site uitgeschakeld kan worden door de con
 	<message key="manager.setup.searchEngineIndexing">Zoek-indexering</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Geef hier sleutelwoorden (gescheiden door puntkommas) en een korte omschrijving van het tijdschrift om de gebruikers van zoekmachines te helpen bij het vinden van het tijdschrift.</message>
 	<message key="manager.setup.customTags">Eigen tags</message>
-	<message key="manager.setup.customTagsDescription">Eigen HTML header tags die toegevoegd moeten worden aan de header van iedere pagina (bv. META tags).</message>
+	<message key="manager.setup.customTagsDescription">Eigen HTML header tags die toegevoegd worden aan de header van iedere pagina (bv. META tags).</message>
 	<message key="manager.setup.form.journalTitleRequired">De tijdschrifttitel is verplicht.</message>
 	<message key="manager.setup.form.journalInitialsRequired">Initialen voor het tijdschrift zijn verplicht.</message>
 	<message key="manager.setup.form.contactNameRequired">De naam van de eerste contactpersoon is verplicht.</message>
@@ -986,7 +986,7 @@ Merk op dat de OAI interface voor deze site uitgeschakeld kan worden door de con
 	<message key="manager.setup.reviewOptions.numWeeksPerReview">De typische tijd die wordt gegund voor een review</message>
         <message key="manager.setup.reviewOptions.noteOnModification">Kan gewijzigd worden tijdens het redactieproces.</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Herinneringen aan de reviewer</message>
-        <message key="manager.setup.reviewOptions.automatedReminders">Atomatische e-mail herinneringen (beschikbaar in de standaard e-mails van OJS) kunnen op twee momenten naar de reviewer gestuurd worden (de redacteur kan de reviewer altijd direct e-mailen)</message>
+        <message key="manager.setup.reviewOptions.automatedReminders">Automatische e-mail herinneringen (beschikbaar in de standaard e-mails van OJS) kunnen op twee momenten naar de reviewer gestuurd worden (de redacteur kan de reviewer altijd direct e-mailen)</message>
         <message key="manager.setup.reviewOptions.remindForInvite1">Als de reviewer niet gereageerd heeft op een verzoek voor een review binnen</message>
         <message key="manager.setup.reviewOptions.remindForInvite2">dagen.</message>
         <message key="manager.setup.reviewOptions.remindForSubmit1">Als de reviewer geen aanbeveling heeft geleverd binnen</message>
@@ -997,13 +997,13 @@ Merk op dat de OAI interface voor deze site uitgeschakeld kan worden door de con
 	<message key="manager.setup.reviewOptions.reviewerAccess">Toegang voor reviewers</message>
         <message key="manager.setup.reviewOptions.restrictReviewerFileAccess">Reviewers hebben pas toegang tot een inzending nadat ze toegestemd hebben om die te beoordelen.</message>
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled">Schakel één-klik toegang voor reviewers in.</message>
-	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Noot:</strong> De e-mail uitnodiging voor reviewers zal een speciale URL bevatten die uitgenodigde reviewers meteen naar de review-pagina voor de betreffende inzending brengt (toegang tot andere pagina's vereist inloggen). Om redenen van beveiliging kunnen redacteuren geen e-mails adressen veranderen of CC's of BCC's toevoegen voor het verzenden van uitnodigen aan reviewers als deze optie is ingeschakeld.]]></message>
+	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Noot:</strong> De e-mail uitnodiging voor reviewers zal een speciale URL bevatten die uitgenodigde reviewers meteen naar de review-pagina voor de betreffende inzending brengt (toegang tot andere pagina's vereist inloggen). Om redenen van beveiliging kunnen redacteuren geen e-mails adressen veranderen of CC's of BCC's toevoegen voor het verzenden van uitnodigingen aan reviewers als deze optie is ingeschakeld.]]></message>
 
 	<message key="manager.setup.reviewOptions.blindReview">Blinde review</message>
 	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Maak links naar <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Verzeker een blinde review</a> op pagina's waar auteurs en reviewers bestanden laden.]]></message>
 	<message key="manager.setup.peerReviewPolicy2">Peer review beleid</message>
 	<message key="manager.setup.reviewGuidelines">Review richtlijnen</message>
-	<message key="manager.setup.reviewGuidelinesDescription"><![CDATA[De review richtlijnen verschaffen de reviewers de criteria voor het beoordelen van de geschiktheid van een inzending voor publicatie in dit tijdschrift. Ze bevatten ook instructie voor het maken van een effectief en behulpzaam review. Bij het uitvoeren van het review krijgen reviewers twee tekstvelden, de eerste "voor auteur en redacteur" en de tweede "voor redacteur". Het is ook mogelijk dat de tijdschriftbeheerder een reviewformulier aanmaakt onder <a href="{$reviewFormsUrl}" class="action">Reviewformulieren</a>. In alle gevallen krijgen redacteuren de optie om de reviews op te nemen in hun correspondentie met de auteur.]]></message>
+	<message key="manager.setup.reviewGuidelinesDescription"><![CDATA[De review richtlijnen verschaffen de reviewers de criteria voor het beoordelen van de geschiktheid van een inzending voor publicatie in dit tijdschrift. Ze bevatten ook instructies voor het maken van een effectief en behulpzaam review. Bij het uitvoeren van het review krijgen reviewers twee tekstvelden, de eerste "voor auteur en redacteur" en de tweede "voor redacteur". Het is ook mogelijk dat de tijdschriftbeheerder een reviewformulier aanmaakt onder <a href="{$reviewFormsUrl}" class="action">Reviewformulieren</a>. In alle gevallen krijgen redacteuren de optie om de reviews op te nemen in hun correspondentie met de auteur.]]></message>
 	<message key="manager.setup.reviewProcess">Reviewproces</message>
 	<message key="manager.setup.reviewProcessDescription"><![CDATA[OJS kent twee modellen voor het beheer van het reviewproces. Het standaard reviewproces wordt aanbevolen omdat het de reviewers stap voor stap door het proces leidt, wat een complete review-historie voor iedere inzending oplevert. Het maakt gebruik van automatische herinneringen en standaard aanbevelingen voor inzendingen (Accepteer; Accepteer met revisies; Inzenden voor review; Elders inzenden; Weiger; Zie opmerkingen).<br /><br />Kies een van de volgende:]]></message>
 	<message key="manager.setup.reviewProcessStandard">Standaard reviewproces</message>
@@ -1025,7 +1025,7 @@ Merk op dat de OAI interface voor deze site uitgeschakeld kan worden door de con
 	<message key="manager.setup.emailSignature">Ondertekening</message>
 	<message key="manager.setup.emailSignatureDescription">De voorbewerkte e-mails die door het systeem namens het tijdschrift verzonden worden, krijgen de volgende ondertekening toegevoegd aan het einde. De tekst van de voorbwerkte e-mails kan aangepast worden bij tijdschriftbeheer.</message>
 	<message key="manager.setup.editorDecision">Beslissing redacteur</message>
-	<message key="manager.setup.notifyAllAuthorsOnDecision">Gebuik de e-mailadressen van alle co-auteurs bij het gebruik van de bericht-auteur e-mail, niet alleen dat van e auteur die het atrikel instuurt.</message>
+	<message key="manager.setup.notifyAllAuthorsOnDecision">Gebruik ook de e-mailadressen van alle co-auteurs bij het versturen van de bericht-auteur e-mail, niet alleen dat van de auteur die het atrikel instuurt.</message>
 	<message key="manager.setup.addItemtoAboutJournal">Toon item in "Over dit tijdschrift"</message>
 	<message key="manager.setup.aboutItemContent">Inhoud</message>
 	<message key="manager.setup.addAboutItem">Over item toevoegen</message>
@@ -1034,7 +1034,7 @@ Merk op dat de OAI interface voor deze site uitgeschakeld kan worden door de con
 	<message key="manager.setup.securitySettingsDescription">OJS biedt een aantal aan beveiliging gerelateerde opties die de toegang tot de inhoud van het tijdschrift kunnen beperken en kan additionele informatie over inzendingen bewaren voor controledoeleinden.</message>
 	<message key="manager.setup.userRegistration">Registratie van gebuikers</message>
 	<message key="manager.setup.enableUserRegistration">Gebruikers kunnen zichzelf registreren bij het tijdschrift in een of meer van de volgende rollen:</message>
-	<message key="manager.setup.enableUserRegistration.author">Auteur (kan materiaal inzenden)</message>
+	<message key="manager.setup.enableUserRegistration.author">Auteurs (kunnen materiaal inzenden)</message>
 	<message key="manager.setup.enableUserRegistration.reader">Lezers (krijgen notificaties en tellen mee als abonnee)</message>
 	<message key="manager.setup.enableUserRegistration.reviewer">Reviewer (beschikbaar voor het beoordelen van inzendingen)</message>
 	<message key="manager.setup.disableUserRegistration">De tijdschriftbeheerder kan alle gebruikers registreren, redacteuren en sectieredacteuren kunnen alleen reviewers registreren.</message>
@@ -1175,7 +1175,7 @@ Kies een model voor deze aspecten van het redactieproces. (Voor het aanwijzen va
 	<message key="manager.setup.provideRefLinkInstructions">Lever instructies aan opmaakredacteuren.</message>
 	<message key="manager.setup.refLinkInstructions.description">Opmaakinstructies voor het linken van referenties</message>
 	<message key="manager.setup.proofreading">Proeflezers</message>
-	<message key="manager.setup.useProofreaders">Een proeflezer wordt toegewezen om (samen met de auteur) de proefdrukken voor publicatie te controleren.</message>
+	<message key="manager.setup.useProofreaders">Een proeflezer wordt toegewezen om (naast de auteur) de proefdrukken voor publicatie te controleren.</message>
 	<message key="manager.setup.noUseProofreaders">Een redacteur of sectieredacteur die aan de inzending is toegewezen, controleert de preofdrukken.</message>
 	<message key="manager.setup.proofingInstructions">Instructies voor proeflezen</message>
 	<message key="manager.setup.proofingInstructionsDescription">De instructies voor proeflezen worden beschikbaar gesteld aan proeflezers, auteurs, opmaakredacteuren en sectieredacteuren tijdens de inzendingsbewerking-fase. Hieronder een standaard set instucties in HTML, die door de tijdschriftbeheerder op ieder moment veranderd of vervangen kan worden  (in HTML of tekst).</message>
@@ -1277,7 +1277,7 @@ Kies een model voor deze aspecten van het redactieproces. (Voor het aanwijzen va
 	<message key="manager.sections.assigned">De redacteuren van deze sectie</message>
 	<message key="manager.sections.form.titleRequired">Een titel voor de sectie is verplicht.</message>
 	<message key="manager.sections.form.abbrevRequired">Een korte titel voor de sectie is verplicht</message>
-	<message key="manager.section.sectionEditorInstructions"><![CDATA[Voeg een sectieredacteur toe aan deze sectie. Bepaal na het toevoegen of de sectieredacteur de REVIEW (peer review) en/of REDACTIE (tekstbewerken, opmaak en proeflezen) gaat regelen voor inzendingen voor deze sectie. Sectieredacteuren worden toegevoegd door te klikken op <a href={$sectionEditorsUrl}">Sectieredacteuren</a> bij Rollen in Tijdschriftbeheer.]]></message>
+	<message key="manager.section.sectionEditorInstructions">Voeg een sectieredacteur toe aan deze sectie. Bepaal na het toevoegen of de sectieredacteur de REVIEW (peer review) en/of REDACTIE (tekstbewerken, opmaak en proeflezen) gaat regelen voor inzendingen voor deze sectie. Sectieredacteuren worden toegevoegd door te klikken op Sectieredacteuren bij Rollen in Tijdschriftbeheer.</message>
 	<message key="manager.section.submissionsToThisSection">Inzendingen voor deze sectie van het tijdschrift</message>
 	<message key="manager.sections.submissionIndexing">Worden niet opgenomen bij het indexeren van het tijdschrift</message>
 	<message key="manager.sections.submissionReview">Worden niet peer-reviewed</message>
@@ -1403,10 +1403,10 @@ Eventueel kunt u de gebruiker een reden voor het blokkeren geven.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContact">Abonnementenbeheerder</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">De contactpersoon die genoemd wordt onder Abonnementen bij Over dit tijdschrift.</message>
 	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformation">Abonnementen informatie</message>
-	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformationDescription">De amonnementsvormen en prijsstructuur worden automatisch geplaatst worden bij Abonnementen en Over dit tijdschrift, samen met de naam en contactinformatie van de abonnementenbeheerder. Additionele informatie zoals betalingsmethoden of hulp voor abonnees in ontwikkelingslanden kan hier toegevoegd worden</message>
+	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformationDescription">De abonnementsvormen en prijsstructuur worden automatisch getoond bij Abonnementen en Over dit tijdschrift, samen met de naam en contactinformatie van de abonnementenbeheerder. Additionele informatie zoals betalingsmethoden of hulp voor abonnees in ontwikkelingslanden kan hier toegevoegd worden</message>
 	<message key="manager.subscriptionPolicies.htmlInstructions"><![CDATA[In het tekstveld kan HTML  gebruikt worden (voor lettergrootte, kleur enz.), waarbij "returns" opgevat worden als <tt><br></tt>; HTML bewerken werkt in de Firefox browser.]]></message>
 	<message key="manager.subscriptionPolicies.openAccessOptions">Open Access opties voor tijdschriften met abonnement</message>
-	<message key="manager.subscriptionPolicies.openAccessOptionsDescription">Tijdschriften met abonnement kunnen  "vertraagde open access" bieden voor hun gepubliceerde inhoud en ze kunnen publicatie door de auteurs toestaan. Beide verhogen de lezersaantallen en citaties.</message>
+	<message key="manager.subscriptionPolicies.openAccessOptionsDescription">Tijdschriften met abonnement kunnen "vertraagde open access" bieden voor hun gepubliceerde inhoud en ze kunnen publicatie door de auteurs toestaan. Beide verhogen de lezersaantallen en citaties.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Vertraagde Open Access</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">In het geval van vertraagde open access kunnen redacteuren specifieke artikelen binnen een nummer aanwijzen als open access.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">Oude nummers van dit tijdschrift zullen beschikbaar komen in een open access formaat</message>
@@ -1429,7 +1429,7 @@ Eventueel kunt u de gebruiker een reden voor het blokkeren geven.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">maand(en) na afloop van het abonnement.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Herinner abonnees per e-mail</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">we(e)k(en) na afloop van het abonnement.</message>
-	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">geef een geldig e-mailadres op.</message>
+	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Geef een geldig e-mailadres op.</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Gebruik het aankruisvak.</message>
 	<message key="manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid">Geef een geldige waarde voor het aantal maanden voordat het abonnement afloopt.</message>
 	<message key="manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid">Geef een geldige waarde voor het aantal weken voordat het abonnement afloopt.</message>
@@ -1577,7 +1577,7 @@ Eventueel kunt u de gebruiker een reden voor het blokkeren geven.</message>
 	<message key="editor.publishedIssues">Gepubliceerde nummers</message>
 	<message key="editor.allSections">Alle secties</message>
 	<message key="editor.submissionArchive.noSubmissions">Geen inzendingen in het archief.</message>
-	<message key="editor.submissionArchive.saveChanges">De veranderingen van de gearchiveerde inzendingen opslaan? Inzendingen die gemarkeerd zijn voor verwijdering worden definitief uit het systeem verwijderd.</message>
+	<message key="editor.submissionArchive.saveChanges">De veranderingen aan de gearchiveerde inzendingen opslaan? Inzendingen die gemarkeerd zijn voor verwijdering worden definitief uit het systeem verwijderd.</message>
 	<message key="editor.submissionArchive.confirmDelete">Weet u zeker dat u deze inzending definitief wilt verwijderen?</message>
 	<message key="editor.submissionReview.confirmDecision">Weet u zeker dat u deze beslissing wilt vastleggen?</message>
 	<message key="editor.submissionReview.emailWillArchive">Deze inzending wordt gearchiveerd nadat de notificatie e-mail naar de auteur is verstuurd of de Sla e-mail over functie is gekozen.</message>
@@ -1750,7 +1750,7 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="editor.submissions.noSubmissions">Geen inzendingen</message>
 	<message key="editor.submissions.lastAssigned">Nieuwste</message>
 	<message key="editor.submissions.averageTime">Weken</message>
-	<message key="editor.submissions.lastCompleted">Laatst voltooid</message>
+	<message key="editor.submissions.lastCompleted">Laatste voltooid</message>
 
 	<message key="editor.article.scheduleForPublication">Inplannen voor publicatie in</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Nog toe te wijzen</message>
@@ -1786,7 +1786,7 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="layoutEditor.galley.uploadGalleyFormat">Proefdruk formaat laden</message>
 	<message key="layoutEditor.galley.replaceGalley">Vervang bestand</message>
 	<message key="layoutEditor.galley.uploadSuppFile">Aanvullend bestand laden</message>
-	<message key="submission.layout.galleyNoImages">Er zijn geen afbeeldingen toegevoegd aan deze proefdruk.</message>
+	<message key="submission.layout.galleyNoImages">No images have been added to this galley.</message>
 	<message key="submission.layout.imageInvalid">Ongeldig afbeeldingsformaat. Toegestaan zijn .gif, .jpg, en .png.</message>
 	
 	<!-- Reviewer -->
@@ -1921,7 +1921,7 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 <li>Lokaliseer het bestand en selecteer het.</li>
 <li>Klik Open in het bestandskeuzevenster, waarna de naam van het bestand op deze pagina getoond wordt.</li>
 <li>Klik Laden op deze pagina, waarna het bestand van uw computer in de website van het tijdschrift wordt geladen. Het bestand krijgt een naam volgens de conventies van het tijdschrift</li>
-<li>Once the submission is uploaded, click Save and Continue at the bottom of this page.</li>
+<li>Als de inzending geladen is, klik dan op Bewaren en Doorgaan onderaan de pagina.</li>
 </ol>]]></message>
 	<message key="author.submit.submissionFile">In te sturen bestand</message>
 	<message key="author.submit.uploadSubmissionFile">In te sturen bestand laden</message>
@@ -2055,7 +2055,7 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	
 	<!-- Submission Event Log -->
 	<message key="submission.event.confirmClearLog">Weet u zeker dat u het logboek van deze inzending wilt wissen?</message>
-	<message key="submission.event.confirmDeleteLogEntry">weet u zeker dat u deze gebeurtenis uit het logboek wilt verwijderen?</message>
+	<message key="submission.event.confirmDeleteLogEntry">Weet u zeker dat u deze gebeurtenis uit het logboek wilt verwijderen?</message>
 	<message key="submission.event.deleteLogEntry">Verwijder uit logboek</message>
 	<message key="submission.event.backToEventLog">Terug naar logboek</message>
 
@@ -2091,7 +2091,7 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="submission.comments.saveAndEmailEditor">Bewaar en e-mail redacteur</message>
 	
 	<!-- Login -->
-	<message key="user.login.loginError">Verkeerde gebruikersnaam of wachtwoord. Probeer het opineuw</message>
+	<message key="user.login.loginError">Verkeerde gebruikersnaam of wachtwoord. Probeer het opnieuw</message>
 	<message key="user.login.accountDisabled">Uw toegang is geblokkeerd. Neem contact op met de beheerder voor meer informatie.</message>
 	<message key="user.login.accountDisabledWithReason">Uw toegang is geblokkeerd vanwege de volgende reden: {$reason}</message>
 	<message key="user.login.accountNotValidated">Uw e-mail adres is niet gevalideerd. Controleer uw e-mail en volg de gegeven instructies. Als u geen e-mail heeft ontvangen, kunt u contact opnemen met de beheerder.</message>
@@ -2490,9 +2490,9 @@ Uw server ondersteunt momenteel mbstring: <strong>{$supportsMBString}</strong>]]
 	<message key="log.copyedit.initiate">Tekstredactie voor inzending  {$articleId} is gestart door {$copyeditorName}.</message>
 	<message key="log.copyedit.copyeditFileSet">Het standaard tekstredactiebestand is gekozen.</message>
 	<message key="log.copyedit.initialEditComplete">{$copyeditorName} heeft de initiële tekstredactie van inzending {$articleId} voltooid.</message>
-	<message key="log.copyedit.finalEditComplete">{$assignerName} heeft {$proofreaderName} aangwezen voor het proeflezen van inzending {$articleId}.</message>
+	<message key="log.copyedit.finalEditComplete">{$copyeditorName} heeft de definitieve tekstredactie van inzending {$articleId} voltooid.</message>
 	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} heeft de tekstredactie van inzending {$articleId} toegewezen gekregen.</message>
-	<message key="log.copyedit.copyeditorFile">{$copyeditorName} heeft de finale tekstredactie van inzending {$articleId} voltooid.</message>
+	<message key="log.copyedit.copyeditorFile">Een tekstredacteurs-versie van de inzending is geladen.</message>
 	<message key="log.copyedit.authorFile">Een versie van de inzending die door de auteur geredigeerd is, is geladen.</message>
 
 	<message key="log.layout.layoutEditorAssigned">{$editorName} is als opmaakredacteur toegewezen aan inzending {$articleId}.</message>
@@ -2638,7 +2638,7 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	<message key="rt.metadata.pkp.abstract">Samenvatting</message>
 	<message key="rt.metadata.pkp.publisher">Organisator, locatie</message>
 	<message key="rt.metadata.pkp.sponsors">Sponsor(s)</message>
-	<message key="rt.metadata.pkp.date">(YYYY-MM-DD)</message>
+	<message key="rt.metadata.pkp.date">(JJJJ-MM-DD)</message>
 	<message key="rt.metadata.pkp.type">Type</message>
 	<message key="rt.metadata.pkp.genre"><![CDATA[Status & genre]]></message>
 	<message key="rt.metadata.pkp.peerReviewed">Peer reviewed artikel</message>
@@ -2858,34 +2858,30 @@ De paragraaf die begint met  "Dit laatste onderwerp..." is niet ingesprongen.</p
 	<message key="manager.reviewForms.list.description">Hier aangemaakte reviewformulieren worden aangeboden aan reviewers om verder in te vullen. Ze komen in de plaats van het standaardformulier dat uit twee tekstvelden bestaat, het eerste "voor auteur en redacteur"  en het tweede "voor redacteur". Reviewformulieren kunnen ontworpen worden voor een specifieke sectie van het tijdschrift. Redacteuren kunnen kiezen welk formulier gebruikt moet worden bij het toekennen van de review. In alle gevallen hebben redacteuren de mogelijkheid om de reviews op te nemen in de correspondentie met de auteur.</message>
 	<message key="manager.reviewForms.noneChosen">Geen / Vrije vorm review</message>
 	<message key="manager.reviewForms.noneCreated">Er zijn geen reviewformulieren aangemaakt</message>
-	<message key="manager.reviewForms.noneUsed">Er zijn geen reviewformulieren gebruikt</message>
 	<message key="manager.reviewForms.create">Maak reviewformulier aan</message>
 	<message key="manager.reviewForms.edit">Reviewformulier</message>
-	<message key="manager.reviewForms.reviewFormData">Reviewformulier gegevens</message>
 	<message key="manager.reviewForms.description">Beschrijving en instructies</message>
 	<message key="manager.reviewForms.preview">Voorvertoningsformulier</message>
 	<message key="manager.reviewForms.completed">Afgerond</message>
 	<message key="manager.reviewForms.inReview">Onder review</message>
-	<message key="manager.reviewForms.confirmDeletePublished">Bevestig het verwijderen van een gepubliceerd reviewformulier...</message>
 	<message key="manager.reviewForms.confirmDeleteUnpublished">Bevestig het verwijderen van een niet-gepubliceerd reviewformulier...</message>
 	<message key="manager.reviewForms.form.titleRequired">Een titel is verplicht voor het reviewformulier</message>
-	<message key="manager.reviewFormElements">Formulierelementen</message>
-	<message key="manager.reviewFormElements.create">Maak nieuw element</message>
-	<message key="manager.reviewFormElements.edit">Bewerk formulierelement</message>
-	<message key="manager.reviewFormElements.noneCreated">Er zijn geen elementen aangemaakt</message>
-	<message key="manager.reviewFormElements.confirmDelete">Bevestig het verwijderen van een gepubliceerd element...</message>
+	<message key="manager.reviewFormElements">Formulieritems</message>
+	<message key="manager.reviewFormElements.create">Maak nieuw item</message>
+	<message key="manager.reviewFormElements.edit">Bewerk formulieritem</message>
+	<message key="manager.reviewFormElements.noneCreated">Er zijn geen items aangemaakt</message>
+	<message key="manager.reviewFormElements.confirmDelete">Bevestig het verwijderen van een gepubliceerd item...</message>
 	<message key="manager.reviewFormElements.copyTo">Kopieer naar</message>
-	<message key="manager.reviewFormElements.question">Element</message>
-	<message key="manager.reviewFormElements.required">Reviewers moeten dit element afronden</message>
-	<message key="manager.reviewFormElements.viewable">Zichtbaar (voor auteurs)</message>
+	<message key="manager.reviewFormElements.question">Item</message>
+	<message key="manager.reviewFormElements.required">Reviewers moeten dit item afronden</message>
 	<message key="manager.reviewFormElements.elementType">Elementtype</message>
 	<message key="manager.reviewFormElements.addResponseItem">Selectie toevoegen</message>
-	<message key="manager.reviewFormElements.chooseType">Kies elementtype</message>
+	<message key="manager.reviewFormElements.chooseType">Kies itemtype</message>
 	<message key="user.profile.publicProfile">Gebruikersprofiel</message>
 	<message key="about.aboutThisPublishingSystem.altText">OJS Redactie- en publicatieproces</message>
 	<message key="announcement.posted">Geplaatst</message>
 	<message key="help.searchReturnResults">Terug naar zoekresultaten</message>
-	<message key="payment.type.purchaseArticle">Prijs voor dit artikel</message>
+	<message key="payment.type.purchaseArticle">Prijs van dit artikel</message>
 	<message key="icon.font_small.alt">Klein</message>
 	<message key="icon.font_medium.alt">Middel</message>
 	<message key="icon.font_large.alt">Groot</message>
@@ -2893,7 +2889,7 @@ De paragraaf die begint met  "Dit laatste onderwerp..." is niet ingesprongen.</p
 	<message key="submission.layout.galleyPublicIdentificationExists">Publieke proefdruk identificatie bestaat al.</message>
 	<message key="user.profile.form.profileImageInvalid">Onbruikbaar afbeeldingsformaat of te grote afbeelding. Bruikbare formaten zijn .gf, .jpg en .png. De afbeelding mag niet groter zijn dan 150x150 pixels.</message>
 	<message key="user.profile.form.profileImage">Profielafbeelding</message>
-	<message key="manager.reviewFormElement.changeType">Formulierelementtype veranderen...</message>
+	<message key="manager.reviewFormElement.changeType">Waarschuwing: Het veranderen van elementtype van het reviewformulier van multiple-choice naar open vraag zal resulteren in het verwijderen van de multiple-choice opties.</message>
 	<message key="manager.reviewFormElements.form.questionRequired">En vraag is verplicht bij een formulierelement</message>
 	<message key="manager.reviewFormElements.form.elementTypeRequired">Een elementtype is verplicht voor een formulierelement</message>
 	<message key="manager.reviewFormElements.smalltextfield">Tekstveld voor één woord</message>
@@ -2920,7 +2916,7 @@ De paragraaf die begint met  "Dit laatste onderwerp..." is niet ingesprongen.</p
 	<message key="editor.article.reviewForms">Reviewformulieren</message>
 	<message key="editor.article.selectReviewForm">Kies reviewformulier</message>
 	<message key="editor.article.clearReviewForm">Wis reviewformulier</message>
-	<message key="editor.article.confirmChangeReviewForm">Bij het veranderen van het reviewformulier worden de reacties verwijderd...</message>
+	<message key="editor.article.confirmChangeReviewForm">Waarschuwing: Het veranderen van het reviewformulier heeft gevolgen voor de antwoorden die reviewers met dit formulier hebben gegeven. Weet u zeker dat u door wil gaan?</message>
 	<message key="reviewer.article.enterReviewForm">Klik op het ikoon om het reviewformulier in te vullen</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Gelieve de verplichte velden in te vullen</message>
 	<message key="common.captchaField.altText">Validatie-afbeelding</message>
@@ -2931,7 +2927,7 @@ De paragraaf die begint met  "Dit laatste onderwerp..." is niet ingesprongen.</p
 	<message key="common.homePageHeader.altText">Home-pagina kop</message>
 	<message key="common.homePageHeaderLogo.altText">Home-pagina loga</message>
 	<message key="common.journalHomepageImage.altText">Tijdschrift home-pagina afbeelding</message>
-	<message key="article.coverPage.altText">Kaft afbeelding</message>
+	<message key="article.coverPage.altText">Omslagafbeelding</message>
 	<message key="article.accessLogoOpen.altText">Vrije toegang</message>
 	<message key="article.accessLogoRestricted.altText">Beperkte toegang</message>
 	<message key="editor.issues.hideCoverPageCover">Toon omslag niet eerder dan de inhoudsopgave</message>
@@ -2959,7 +2955,7 @@ De paragraaf die begint met  "Dit laatste onderwerp..." is niet ingesprongen.</p
 	<message key="admin.journals.importOJS1.redirect.desc">Om OJS 1 URL's naar OJS 2 URL's om te leiden, moeten de volgende PHP bestanden aangemaakt worden  met de inhoud als hieronder. De bestanden kunnen dan geplaatst worden in het OJS 1 pad op het bestandssysteem, of, bij installaties met één tijdschrift, in het OJS 2 pad in het bestandssysteem</message>
 	<message key="admin.journals.importOJS1.redirect.ojs1root">Plaats in het oude OJS 1 bestandssysteem-pad (bv. /var/www/ojs1).</message>
 	<message key="admin.journals.importOJS1.redirect.ojs1orojs2root">Plaats in het oude OJS 1 bestandssysteem-pad (bv. /var/www/ojs1), of, bij installaties met één tijdschrift, in het nieuwe OJS 2 bestandssysteem-pad (bv. /var/www/ojs2).</message>
-	<message key="admin.journals.redirect">Genereeer code om OJS 1 URL's om te leiden naar OJS 2 URL's</message>
+	<message key="admin.journals.redirect">Genereer code om OJS 1 URL's om te leiden naar OJS 2 URL's</message>
 	<message key="manager.payment.options.purchaseArticleFee">Koop artikel</message>
 	<message key="plugins.categories.implicitAuth">Impliciete authenticatie plugins</message>
 	<message key="plugins.categories.implicitAuth.description">Impliciete authenticatie plugins implementeren de ondersteuning voor authenticatie van gebruikers op basis van http headers.</message>
@@ -2978,7 +2974,7 @@ De paragraaf die begint met  "Dit laatste onderwerp..." is niet ingesprongen.</p
 	<message key="manager.sections.abstractsNotRequired">Samenvattingen niet verplicht stellen</message>
 	<message key="manager.subscriptionPolicies.expiry">Afloop van het abonnement</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">Als het abonnement afloopt kunnen gebruikers de toegang tot alle inhoud verliezen of toegang houden tot de de inhoud voorafgaand aan de afloopdatum.</message>
-	<message key="manager.subscriptionPolicies.expirySelectOne">Kier een van de volgende</message>
+	<message key="manager.subscriptionPolicies.expirySelectOne">Kies een van de volgende</message>
 	<message key="manager.subscriptionPolicies.expiryFull">Volledig verlopen</message>
 	<message key="manager.subscriptionPolicies.expiryFullDescription">Lezers krijgen geen enkele toegang tot de inhoud als het abonnement afloopt.</message>
 	<message key="manager.subscriptionPolicies.expiryPartial">Gedeeltelijke verlopen</message>
@@ -2990,4 +2986,31 @@ De paragraaf die begint met  "Dit laatste onderwerp..." is niet ingesprongen.</p
 	<message key="editor.allEditors">Alle redacteuren</message>
 	<message key="editor.me">Ik</message>
 	<message key="editor.issues.coverPageDisplay">Toon</message>
+	<message key="common.ccLicense"><![CDATA[<br /><br />
+	<a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
+	<br />
+	Dit werk valt onder een <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new">Creative Commons Attribution 3.0 Licentie</a>.]]></message>
+	<message key="common.ccLicense.rt"><![CDATA[<div class="rtBlock">
+		<br />
+		<a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
+		<br />
+		Dit werk valt onder een <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new">Creative Commons Attribution 3.0 Licentie</a>.
+	</div>]]></message>
+	<message key="journal.issn">ISSN</message>
+	<message key="manager.setup.doiSuffix">DOI achtervoegsel</message>
+	<message key="manager.setup.doiSuffixDefault">Gebruik standaard patroon (%j.v%vi%i.%a).</message>
+	<message key="manager.setup.doiSuffixPattern">Gebruik het patroon hieronder voor het genereren van DOI achtervoegsels.  Gebruik %j voor de initialen van het tijdschrift, %v voor het volume , %i voor het nummer, %a voor het OJS artikel-ID, en %p voor het paginanummer.</message>
+	<message key="manager.setup.doiSuffixPattern.example">Voorbeeld: vol%viss%ipp%p kan leiden tot een DOI als 10.1234/vol3iss2pp230</message>
+	<message key="manager.setup.doiSuffixDescription">Een DOI achtervoegsel kan iedere vorm hebben, maar moet uniek zijn voor ieder gepubliceerd item.</message>
+	<message key="manager.setup.form.doiPrefixPattern">Het DOI patroon moet de vorm hebben van 10.xxxx.</message>
+	<message key="manager.setup.doiSuffixCustomIdentifier">Gebruik de "Eigen identificatie" als DOI achtervoegsel voor gepubliceerde items (moet ingeschakeld worden in stap 4)</message>
+	<message key="manager.setup.publisherNoteDescription">Deze tekst wordt getoond onder de "Uitgever" kop en boven de uitgeversnaam/url bij "Tijdschriftsponsor" op de "Over" pagina</message>
+	<message key="manager.setup.sponsorNoteDescription">Deze tekst wordt getoond onder "Sponsors"-kop en boven de lijst met sponsornamen en -urls bij "Tijdschriftsponsors" op de "Over" pagina.</message>
+	<message key="manager.setup.contributorNoteDescription">Deze tekst wordt getoond onder de "Ondersteuners"-kop en en boven de lijst met namen en urls van ondersteunende organisaties onder "Tijdschriftsponsors" op de "Over" pagina.</message>
+	<message key="author.submit.mustEnterWaiverReason">Als u om een vrijwaring vraagt, moet u een reden opgeven in de daartoe bestemde ruimte</message>
+	<message key="author.submissions.queuedReviewSubsequent">In reviewronde {$round}</message>
+	<message key="author.submissions.queuedReviewRevisions">In review: Revisies nodig</message>
+	<message key="author.submissions.queuedEditingCopyedit">Onder redactie: Tekstredactie gevraagd</message>
+	<message key="author.submissions.queuedEditingProofread">Onder redactie: Proeflezen gevraagd</message>
+	<message key="debug.memoryUsage">Geheugengebruik:</message>
 </locale>

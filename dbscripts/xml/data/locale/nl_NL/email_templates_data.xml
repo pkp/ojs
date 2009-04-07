@@ -76,7 +76,7 @@ Dank u,
 		<row>
 			<field name="email_key">REVIEWER_REGISTER</field>
 			<field name="subject">Registratie als Reviewer bij {$journalName}</field>
-			<field name="body">Met het oog op uw expertise hebben wij de vrijheid genomen om u naam op te nemen in de lijst reviewers van {$journalName}. Dit verplicht u tot niets maar geeft ons de mogelijkheid u te benaderen met het verzoek eventueel een inzending te reviewen. Bij de uitnodiging krijgt u de gelegenheid de titel en samenvatting van het stuk in kwestie te bekijken. U kunt de uitnodiging te allen tijde accepteren of weigeren. U kunt ook altijd vragen om uw naam van deze lijst te laten verwijderen.
+			<field name="body">Met het oog op uw expertise hebben wij de vrijheid genomen om uw naam op te nemen in de lijst met reviewers van {$journalName}. Dit verplicht u tot niets maar geeft ons de mogelijkheid u te benaderen met het verzoek eventueel een inzending te reviewen. Bij de uitnodiging krijgt u de gelegenheid de titel en samenvatting van het stuk in kwestie te bekijken. U kunt de uitnodiging te allen tijde accepteren of weigeren. U kunt ook altijd vragen om uw naam van deze lijst te laten verwijderen.
 
 We geven u een gebruikersnaam en wachtwoord, die gebruikt worden voor alle interacties met de website van het tijdschrift. Zo kunt u bijvoorbeeld uw profiel bijwerken, waaronder uw review-interesses.
 
@@ -103,7 +103,7 @@ Dank voor uw interesse in ons werk,
 			<field name="subject">Verzoek tot archivering voor {$journalName}</field>
 			<field name="body"><![CDATA[Beste [Universiteitsbibliothecaris]
 
-{$journalName} <{$journalUrl}>, is een tijdschrift waarvoor een lid van uw faculteit, [naam van het lid], fungeert als [titel van de positie]. Het tijdschrift streeft naar het starten van een LOCKSS (Lots of Copies Keep Stuff Safe) archief met deze en andere universiteitsbibliotheken.
+{$journalName} <{$journalUrl}> is een tijdschrift waarvoor een lid van uw faculteit, [naam van het lid], fungeert als [titel van de positie]. Het tijdschrift streeft naar het starten van een LOCKSS (Lots of Copies Keep Stuff Safe) archief met deze en andere universiteitsbibliotheken.
 
 [Korte beschrijving van het tijdschrift]
 
@@ -120,7 +120,7 @@ Dank u,
 			<field name="subject">Verzoek voor archivering van {$journalName}</field>
 			<field name="body"><![CDATA[Beste [Universiteitsbibliothecaris]
 
-{$journalName} <{$journalUrl}>, is een tijdschrift waarbij een lid van uw faculteit, [naam van het lid] fungeert als [title of position]. Het tijdschrift streeft naar een LOCKSS (Lots of Copies Keep Stuff Safe) archief met deze en andere universiteitsbibliotheken.
+{$journalName} <{$journalUrl}>, is een tijdschrift waarbij een lid van uw faculteit, [naam van het lid] fungeert als [totel van de positie]. Het tijdschrift streeft naar een LOCKSS (Lots of Copies Keep Stuff Safe) archief met deze en andere universiteitsbibliotheken.
 
 [Korte beschrijving van het tijdschrift]
 
@@ -177,7 +177,7 @@ Een eerste review van "{$articleTitle}" heeft duidelijk gemaakt dat deze inzendi
 		<row>
 			<field name="email_key">SUBMISSION_DECISION_REVIEWERS</field>
 			<field name="subject">Beslissing over "{$articleTitle}"</field>
-			<field name="body">Als een van de reviewers van inzending "{$articleTitle}" bij {$journalName}, stuur ik u de reviews en de redactionele beslissing die naar de auteur van dit stuk gestuurd is. Nogmaals dank voor uw belangrijke bijdrage aan dit proces.
+			<field name="body">Als een van de reviewers van inzending "{$articleTitle}" bij {$journalName}, stuur ik u de reviews en de redactionele beslissing die naar de auteur van dit stuk is gestuurd. Nogmaals dank voor uw belangrijke bijdrage aan dit proces.
  
 {$editorialContactSignature}
 
@@ -217,7 +217,7 @@ Dank u,
 			<field name="subject">Artikel review verzoek</field>
 			<field name="body">{$reviewerName}:
 
-Ik geloof dat u een excellente reviewer zou zijn voor het manuscript "{$articleTitle}" dat is ingestuurd bij {$journalName}. De samenvatting van de inzending staat hieronder. ik hoop dat u wilt overwegen deze belangrijke taak voor ons uit te voeren.
+Ik geloof dat u een excellente reviewer zou zijn voor het manuscript "{$articleTitle}" dat is ingestuurd bij {$journalName}. De samenvatting van de inzending staat hieronder. Ik hoop dat u wilt overwegen deze belangrijke taak voor ons uit te voeren.
 
 Wilt u voor {$weekLaterDate} inloggen op de website van het tijdschrift om aan te geven of u de review al of niet doet. Daar kunt u ook de inzending vinden en uw review en aanbeveling vastleggen. De website is {$journalUrl}
 
@@ -244,9 +244,9 @@ Dank u voor het overwegen van dit verzoek.
 			<field name="subject">Artikel review verzoek</field>
 			<field name="body">{$reviewerName}:
 
-Ik geloof dat u een excellente reviewer zou zijn voor het manuscript "{$articleTitle}" dat is ingestuurd bij {$journalName}. De samenvatting van de inzending staat hieronder. ik hoop dat u wilt overwegen deze belangrijke taak voor ons uit te voeren.
+Ik geloof dat u een excellente reviewer zou zijn voor het manuscript "{$articleTitle}" dat is ingestuurd bij {$journalName}. De samenvatting van de inzending staat hieronder. Ik hoop dat u wilt overwegen deze belangrijke taak voor ons uit te voeren.
 
-Wilt u voor {$weekLaterDate} inloggen op de website van et tijdschrift om aan te geven of u de review al of niet doet. Daar kunt u ook de inzending vinden en uw review en aanbeveling vastleggen. De website is {$journalUrl}
+Wilt u voor {$weekLaterDate} inloggen op de website van het tijdschrift om aan te geven of u de review al of niet doet. Daar kunt u ook de inzending vinden en uw review en aanbeveling vastleggen. De website is {$journalUrl}
 
 Het review wordt verwacht op {$reviewDueDate}.
 
@@ -446,7 +446,7 @@ Gerbruikersnaam: {$copyeditorUsername}
 			<field name="subject">Tekstredactie gereed</field>
 			<field name="body">{$editorialContactName}:
 
-We hebben de tekstredactievan uw inzending "{$articleTitle}" voor {$journalName} uitgevoerd. Volg deze stappen om de voorgestelde veranderingen te beoordelen en te reageren op de auteursvragen:
+We hebben de tekstredactie van uw inzending "{$articleTitle}" voor {$journalName} uitgevoerd. Volg deze stappen om de voorgestelde veranderingen te beoordelen en te reageren op de auteursvragen:
 
 1. Log in bij het tijdschrift met de URL hieronder. Gebruik uw gebruikersnaam en wachtwoord (gebruik de Vergeten link indien nodig).
 2. Klik op het bestand bij 1. Initiële tekstredactie om het bestand te downloaden en open het.
@@ -703,7 +703,7 @@ Dank u voor het proeflezen van de proeven van manuscript "{$articleTitle}" voor 
 			<field name="subject">Verzoek voor proeflezen (opmaakredacteur)</field>
 			<field name="body">{$layoutEditorName}:
 
-De inzending "{$articleTitle}" bij {$journalName} is proefgelezen door auteur en proeflezer en correcties kunnen nu aangebracht worden door de volgende stapen te volgen.
+De inzending "{$articleTitle}" bij {$journalName} is proefgelezen door auteur en proeflezer. Correcties kunnen nu aangebracht worden door de volgende stapen te volgen.
 1. Klik op de URL van de inzending hieronder.
 2. Log in bij het tijdschrift en bebijk Proefleescorrecties om gecorrigeerde proeven te maken.
 3. Laad de herziene proeven.

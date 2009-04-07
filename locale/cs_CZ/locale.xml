@@ -314,7 +314,7 @@
 	<message key="submission.changeSection">Změnit na</message>
 	<message key="submission.initiated">Zahájeno</message>
 	<message key="submission.lastModified">Naposledy změněno</message>
-	<message key="submission.ask">Zeptat se</message>
+	<message key="submission.ask">Vyžádáno</message>
 	<message key="submission.request">Vyžádat</message>
 	<message key="submission.underway">Zpracovává se</message>
 	<message key="submission.start">Zahájit</message>
@@ -330,9 +330,9 @@
 	<message key="submission.noReviewAssignments">Žádné přidělené recenze</message>
 	<message key="submission.sent">Odesláno</message>
 	<message key="submission.reviewVersion">Verze recenze</message>
-	<message key="submission.peerReview">Recenzní&amp;nbsp;řízení</message>
+	<message key="submission.peerReview"><![CDATA[Recenzní&nbsp;řízení]]></message>
 	<message key="submission.editorDecision">Rozhodnutí editora</message>
-	<message key="submission.round">Kolo&amp;nbsp;{$round}</message>
+	<message key="submission.round">Kolo {$round}</message>
 	<message key="submission.editorReview">Posudek editora</message>
 	<message key="submission.notifyAuthor">Informovat autora</message>
 	<message key="submission.notifyEditor">Informovat editora</message>
@@ -2859,16 +2859,13 @@ Odstavec, který začíná "Toto poslední téma..." nebyl zamýšlený.</pre>]]
 	<message key="manager.reviewForms">Formuláře posudků</message>
 	<message key="manager.reviewForms.noneChosen">Žádný / Nepodléhá recenzování</message>
 	<message key="manager.reviewForms.noneCreated">Nebyly vytvořeny žádné formuláře posudků.</message>
-	<message key="manager.reviewForms.noneUsed">Nebyly použity žádné formuláře posudků.</message>
 	<message key="manager.reviewForms.create">Vytvořit formulář posudku</message>
 	<message key="manager.reviewForms.edit">Formulář posudku</message>
-	<message key="manager.reviewForms.reviewFormData">Data formuláře posudku</message>
 	<message key="manager.reviewForms.title">Název</message>
 	<message key="manager.reviewForms.description">Popis a instrukce</message>
 	<message key="manager.reviewForms.preview">Náhled formuláře</message>
 	<message key="manager.reviewForms.completed">Dokončeno</message>
 	<message key="manager.reviewForms.inReview">V recenzi</message>
-	<message key="manager.reviewForms.confirmDeletePublished">Potvrdit smazání publikovaného formuláře posudku...</message>
 	<message key="manager.reviewForms.confirmDeleteUnpublished">Potvrdit smazání nepublikovaného formuláře posudku...</message>
 	<message key="manager.reviewForms.form.titleRequired">Pro formulář posudku je vyžadován název.</message>
 	<message key="manager.reviewFormElements">Položky formuláře</message>
@@ -2888,7 +2885,6 @@ Odstavec, který začíná "Toto poslední téma..." nebyl zamýšlený.</pre>]]
 	<message key="manager.reviewFormElements.copyTo">Kopírovat do:</message>
 	<message key="manager.reviewFormElements.question">Položka</message>
 	<message key="manager.reviewFormElements.required">Recenzenti musí vyplnit položku</message>
-	<message key="manager.reviewFormElements.viewable">Zobrazitelné (pro autory)</message>
 	<message key="manager.reviewFormElements.elementType">Typ položky</message>
 	<message key="manager.reviewFormElements.possibleResponse">Výběr</message>
 	<message key="manager.reviewFormElements.addResponseItem">Přidat výběr</message>
@@ -2995,4 +2991,30 @@ Odstavec, který začíná "Toto poslední téma..." nebyl zamýšlený.</pre>]]
 	<message key="manager.sections.hideTocAuthor">Vypustit jména autorů pro položky sekce z obsahu čísla.</message>
 	<message key="manager.reviewForms.list.description">Zde vytvořené formuláře posudků budou předloženy recenzetům k vyplnění namísto výchozího formuláře, který obsahuje dvě otevřená pole - první "pro autora a editora" a druhé "pro editora". Formuláře posudků mohou být vyhrazeny pro jednotlivé sekce a editoři budou mít možnost zvolit, který formulář použít při přidělování recenze. V každém případě budou mít editoři možnost zahrnout recenze do korespondence s autorem.</message>
 	<message key="manager.setup.enablePublicGalleyId">Pro identifikaci sazebnic (např. HTML nebo PDF souborů) publikovaných položek budou použity uživatelské identifikátory.</message>
+	<message key="common.ccLicense"><![CDATA[<br /><br />
+<a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new"><img alt="Licence Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />
+Tato práce je licencována pod <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new">Creative Commons Attribution 3.0 licencí</a>.]]></message>
+	<message key="journal.issn">ISSN</message>
+	<message key="manager.setup.doiSuffix">DOI přípona</message>
+	<message key="manager.setup.doiSuffixDefault">Použít výchozí vzorec (%j.v%vi%i.%a).</message>
+	<message key="manager.setup.doiSuffixPattern">Pro generování DOI přípon použít níže vložený vzorec. Použít %j pro iniciály časopisu, %v pro číslo ročníku, %i pro číslo čísla, %a pro ID článku v OJS a %p pro číslo stránky.</message>
+	<message key="manager.setup.doiSuffixPattern.example">Například vol%viss%ipp%p by vytvořilo DOI jako 10.1234/vol3iss2pp230</message>
+	<message key="manager.setup.doiSuffixDescription">DOI přípona může mít libovolnou formu, ale musí být pro každou publikovanou položku jedinečná.</message>
+	<message key="manager.setup.doiSuffixCustomIdentifier">Použít "Uživatelský identifikátor" jako DOI příponu u publikovaných položek (musí být povoleno v Kroku 4).</message>
+	<message key="manager.setup.publisherNoteDescription">Tento text se zobrazí pod titulkem "Vydavatel" a nad jménem/url vydavatele pod "Sponzorování časopisu" na stránce "O časopisu".</message>
+	<message key="manager.setup.sponsorNoteDescription">Tento text se zobrazí pod titulkem "Sponzoři" a nad seznamem jmen a url adres sponzorů pod "Sponzorování časopisu" na stránce "O časopisu".</message>
+	<message key="manager.setup.contributorNoteDescription">Tento text se zobrazí pod titulkem "Zdroje podpory" a nad seznamem jmen a url adres podporujících organizací pod "Sponzorování časopisu" na stránce "O časopisu".</message>
+	<message key="manager.setup.form.doiPrefixPattern">DOI vzorec musí být ve formátu 10.xxxx.</message>
+	<message key="author.submit.mustEnterWaiverReason">Pokud žádáte o prominutí platby, musíte do patřičné kolonky uvést důvod.</message>
+	<message key="author.submissions.queuedReviewSubsequent">V recenzním kole {$round}</message>
+	<message key="author.submissions.queuedReviewRevisions">V recenzi: Vyžadováno přepracování</message>
+	<message key="author.submissions.queuedEditingCopyedit">Editování: Vyžádáno redigování</message>
+	<message key="author.submissions.queuedEditingProofread">Editování: Vyžádána korektura</message>
+	<message key="debug.memoryUsage">Využití paměti:</message>
+	<message key="common.ccLicense.rt"><![CDATA[<div class="rtBlock">
+		<br />
+		<a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new"><img alt="Licence Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
+		<br />
+		Tato práce je licencována pod <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new">Creative Commons Attribution 3.0 licencí</a>.
+	</div>]]></message>
 </locale>

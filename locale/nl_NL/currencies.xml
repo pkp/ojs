@@ -91,7 +91,7 @@
 	<currency name="Ijslandse Kroon" code_alpha="ISK" code_numeric="352" />
 	<currency name="Indiase Rupee" code_alpha="INR" code_numeric="356" />
 	<currency name="Iraanse Rial" code_alpha="IRR" code_numeric="364" />
-	<currency name="Iraaakse Dinar" code_alpha="IQD" code_numeric="368" />
+	<currency name="Iraakse Dinar" code_alpha="IQD" code_numeric="368" />
 	<currency name="Jamaicaanse Dollar" code_alpha="JMD" code_numeric="388" />
 	<currency name="Jordaanse Dinar" code_alpha="JOD" code_numeric="400" />
 	<currency name="Keniaanse Shilling" code_alpha="KES" code_numeric="404" />

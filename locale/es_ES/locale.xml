@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+<!DOCTYPE locale SYSTEM "../locale.dtd">
 
 <!--
   * locale.xml
@@ -297,7 +297,7 @@
 	<message key="submission.metadata">Envío de metadatos</message>
 	<message key="submission.originalFile">Fichero original</message>
 	<message key="submission.addSuppFile">Añadir fichero adicional</message>
-	<message key="submission.submitter">Persona que hace el envío</message>
+	<message key="submission.submitter">Remitente</message>
 	<message key="submission.changeSection">Cambiar a</message>
 	<message key="submission.initiated">Iniciado</message>
 	<message key="submission.lastModified">Última modificación</message>
@@ -352,7 +352,7 @@
 	<message key="submissions.active">Activo</message>
 	<message key="submissions.queuedUnassigned">Esperando asignación</message>
 	<message key="submissions.queuedEditing">En cola para edición</message>
-	<message key="submissions.queuedReview">En cola para revisión</message>
+	<message key="submissions.queuedReview">En revisión</message>
 	<message key="submissions.archived">Archivado</message>
 	<message key="submissions.scheduled">Agendado</message>
 	<message key="submissions.published">Publicado</message>
@@ -466,7 +466,7 @@
 	<message key="user.role.layoutEditors">Editores/as de composición</message>
 	<message key="user.role.reviewers">Revisores/as</message>
 	<message key="user.role.copyeditors">Correctores/as</message>
-	<message key="user.role.proofreaders">Correctores/as de pruebas</message>
+	<message key="user.role.proofreaders">Correctores</message>
 	<message key="user.role.authors">Autoras/es</message>
 	<message key="user.role.readers">Lectores/as</message>
 	<message key="user.role.subscriptionManagers">Gestores/as de suscripción</message>
@@ -761,28 +761,6 @@ Tenga en cuenta que el interfaz OAI se puede desactivar editando la configuraci�
 	
 
 	<message key="manager.statistics.reports">Generador de informes</message>
-	<message key="manager.statistics.reports.dateFrom">Desde</message>
-	<message key="manager.statistics.reports.dateTo">Hasta</message>
-	<message key="manager.statistics.reports.type.journal">Informe de revista</message>
-	<message key="manager.statistics.reports.type.editor">Informe de editores/as</message>
-	<message key="manager.statistics.reports.type.reviewer">Informe de revisores/as</message>
-	<message key="manager.statistics.reports.type.section">Informe de secciones</message>
-	<message key="manager.statistics.reports.generate">Generar informe</message>
-	<message key="manager.statistics.reports.status">Estado (Aceptado, rechazado, otro)</message>
-	<message key="manager.statistics.reports.dateDecided">Fecha de decisión</message>
-	<message key="manager.statistics.reports.author">Autor/a #{$num}</message>
-	<message key="manager.statistics.reports.affiliation">Afiliación #{$num}</message>
-	<message key="manager.statistics.reports.country">País #{$num}</message>
-	<message key="manager.statistics.reports.reviewer">Revisor/a #{$num}</message>
-	<message key="manager.statistics.reports.editor">Editor/a #{$num}</message>
-	<message key="manager.statistics.reports.score">Puntuación #{$num}</message>
-	<message key="manager.statistics.reports.singleScore">Puntuación</message>
-	<message key="manager.statistics.reports.recommendation">Recomendación #{$num}</message>
-	<message key="manager.statistics.reports.daysToDecision">Días hasta tomar decisión</message>
-	<message key="manager.statistics.reports.daysToPublication">Días hasta publicar</message>
-	<message key="manager.statistics.reports.reportType">Tipo de informe</message>	
-	
-
 	<!-- Plugin Management -->
 	<message key="manager.plugins.pluginManagement">Gestión de plugins</message>
 	<message key="manager.plugins.sitePlugin">Este es un sitio que emplea plugins. Sólo el/la gestor/a del sitio puede gestionar este plugin.</message>
@@ -1019,7 +997,7 @@ Seleccione un modelo para manejar aquellos aspectos del proceso editorial. (Para
 	<message key="manager.setup.layoutAndGalleys">Editores/as de maquetación</message>
 	<message key="manager.setup.layoutInstructions">Instrucciones de maquetación</message>
 	<message key="manager.setup.layoutInstructionsDescription">Las instrucciones de maquetación se pueden preparar para el formateo de elementos de publicación en la revista y se pueden poner en HTML o texto plano a continuación. Estarán disponibles para el/la editor/a de maquetación y el/la editor/a de sección en la página de edición de cada uno de los envíos. (Como cada revista puede usar sus propios formatos de fichero, normas bibliográficas, hojas de estilo, etc., no se proporcionan instrucciones por defecto.)</message>
-	<message key="manager.setup.proofreading">Correctores/as de pruebas</message>
+	<message key="manager.setup.proofreading">Correctores</message>
 	<message key="manager.setup.proofingInstructions">Instrucciones de corrección de pruebas</message>
 	<message key="manager.setup.proofingInstructionsDescription">Las instrucciones de corrección de pruebas estarán disponibles para correctores/as de pruebas, autores/as, editores/as de maquetación, y editores/as de sección en la fase de edición de envíos. A continuación se muestran una serie de instrucciones por defecto en HTML que pueden ser modificadas o reemplazadas por el/la gestor/a de la revista en cualquier momento (en HTML o texto plano).</message>
 	<message key="manager.setup.volumePerYear">Volúmenes por año</message>
@@ -1124,7 +1102,6 @@ Seleccione un modelo para manejar aquellos aspectos del proceso editorial. (Para
 	<message key="manager.sections.policy">Política de sección</message>
 	<message key="manager.sections.identifyType">En sus metadatos, identificar los elementos de esta sección como</message>
 	<message key="manager.sections.identifyTypeExamples">(Por ejemplo, "Artículo revisado por pares", "Artículo no evaluado", "Artículo invitado", etc.)</message>
-	<message key="manager.sections.abstractsDisabled">No necesitan resumen</message>
 	<message key="manager.section.submissionsToThisSection">Envíos a esta sección de la revista</message>
 	<message key="manager.sections.submissionReview">No serán revisado por pares</message>
 	<message key="manager.sections.reviewed">Revisión por pares</message>		
@@ -1181,7 +1158,7 @@ Opcionalmente le puede indicar el motivo por el que se le ha desactivado la cuet
 	<message key="manager.people.enable">Activar</message>
 	<message key="manager.people.remove">Eliminar</message>
 	<message key="manager.people.emailUsers">Enviar correo-e</message>
-	<message key="manager.people.emailUsers.emailSelectedUsers">Enviar correo-e a las personas seleccionadas</message>
+	<message key="manager.people.emailUsers.emailSelectedUsers">Escribir a los usuarios seleccionados</message>
 	<message key="manager.people.emailUsers.emailUsersEnrolledAs">Enviar correo-e a las personas inscritas como</message>
 	<message key="manager.people.emailUsers.selectUsers">Seleccione las/usuarias/os a los que quiere enviar un correo-e marcando las casillas junto a su nombre</message>
 	<message key="manager.people.emailUsers.selectTemplate">Seleccione una plantilla</message>
@@ -1843,7 +1820,7 @@ Activas es el número de revisiones que en este momento están consideradas como
 	<message key="submission.logType.review">Revisión</message>
 	<message key="submission.logType.copyedit">Corrección</message>
 	<message key="submission.logType.layout">Maquetación</message>
-	<message key="submission.logType.proofread">Corrección de pruebas</message>
+	<message key="submission.logType.proofread">Corrección</message>
 	
 	<!-- Submission Event Log -->
 	<message key="submission.event.confirmClearLog">¿Seguro que quiere limpiar el registro de eventos de este envío?</message>
@@ -1880,8 +1857,8 @@ Activas es el número de revisiones que en este momento están consideradas como
 	<message key="submission.comments.forAuthorEditor">Para autor/a y editor/a</message>
 	<message key="submission.comments.forEditor">Para editor/a</message>
 	<message key="submission.comments.sendDecisionToReviewers">Enviar decisión de revisores/as y editorial</message>
-	<message key="submission.comments.saveAndEmailAuthor">Guardar y enviar correo-e al / a la autor/a</message>
-	<message key="submission.comments.saveAndEmailEditor">Guardar y enviar correo-e al / a la editor/a</message>
+	<message key="submission.comments.saveAndEmailAuthor">Guardar y enviar correo al autor</message>
+	<message key="submission.comments.saveAndEmailEditor">Guardar y enviar correo al autor</message>
 	
 	<!-- Login -->
 	<message key="user.login.loginError">Nombre de usuaria/o o contraseña no válida. Inténtelo de nuevo.</message>
@@ -2264,8 +2241,6 @@ Su servidor soporta mbstring en este momento: <strong>{$supportsMBString}</stron
 	<message key="rt.admin.settings">Configuración</message>
 
 	<message key="rt.admin.selectedVersion">Versión seleccionada</message>
-	<message key="rt.admin.rtEnable">Introduzca los parámetros para activar las HL o cambiar la versión seleccionada.</message>
-
 	<message key="rt.admin.options">Opciones</message>
 	<message key="rt.admin.relatedItems">Herramientas de Elementos Relacionados</message>
 
@@ -2611,7 +2586,6 @@ Una vez haya finalizado sus revisones renombre el fichero de NombreAutorPA.doc a
 	<message key="manager.payment.readerFeesDescription">Las opciones seleccionadas, junto con su descripción y tarifas (que pueden editarse a continuación), aparecerán en la sección "La revista" en Políticas, así como en los pasos que requieran realizar pagos.</message>
 	<message key="manager.payment.generalFeesDescription">La sección "Afiliación" aparecerá en la sección "La revista" en "Políticas", y el vínculo para donaciones aparecerá sobre la función de búsqueda en el marco derecho.</message>
 	<message key="manager.payment.options.fastTrackFee">Revisión rápida</message>
-	<message key="manager.payment.options.payPerViewFee">Pago por acceso a artículo</message>
 	<message key="manager.payment.options.waiverPolicy">Política de derechos</message>
 	<message key="manager.payment.options.onlypdf">Sólo acceso restringido a la versión PDF de los artículos</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Esto activará los pagos por suscripción, donde el tipo, el coste, la duración y los suscriptores se gestionan desde el "Gestor de Suscripciones"</message>
@@ -2788,7 +2762,6 @@ Los autores que publiquen en esta revista acceden a las siguientes condiciones:
 	<message key="payment.type.publication">Tarifa por Publicación</message>
 	<message key="payment.type.fastTrack">Tarifa de Revisión Rápida</message>
 	<message key="payment.type.membership">Tarifa de Afililación Individual</message>
-	<message key="payment.type.payPerView">Tarifa de Consulta de Artículo</message>
 	<message key="payment.type.subscription">Tarifa de Suscripción</message>
 	<message key="payment.type.donation">Donaciones</message>
 	<message key="payment.donation.makeDonation">Realizar una donación</message>
@@ -2819,9 +2792,6 @@ Los autores que publiquen en esta revista acceden a las siguientes condiciones:
 	<message key="rt.findingReferences">Buscar referencias</message>
 	<message key="rt.findingReferences.googleScholar">Google Scholar</message>
 	<message key="rt.findingReferences.windowsLiveAcademic">Windows Live Academic</message>
-	<message key="icon.small.alt">Pequeño</message>
-	<message key="icon.medium.alt">Medio</message>
-	<message key="icon.large.alt">Grande</message>
 	<message key="debug.notes.currencyListLoad">Cargada la lista de monedas "{$filename}" de XML</message>
 	<message key="default.journalSettings.checklist.addressesLinked">Se han añadido direcciones web para las referencias donde ha sido posible.</message>
 	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Para añadir vínculos al proceso de diagramación</h4>
@@ -2874,7 +2844,6 @@ El tercer párrafo no está justificado.</pre>]]></message>
 	<message key="default.journalSettings.fastTrackFeeDescription">Con el pago de esta tarifa, se garantiza una revisión y una decisión sobre la publicación en un plazo de 4 semanas.</message>
 	<message key="default.journalSettings.publicationFeeDescription">En el caso de que este artículo sea aceptado para su publicación, se le solicitará el pago de una Tarifa de Publicación para cubrir los costes asociados.</message>
 	<message key="default.journalSettings.waiverPolicy">Si no ha podido obtener fondos para las tarifas, puede solicitar una exención de pago.</message>
-	<message key="default.journalSettings.payPerViewFeeDescription">El pago de esta tarifa le permite ver, descargar e imprimir este artículo.</message>
 	<message key="default.journalSettings.membershipFeeDescription">El pago de esta tarifa supone la inclusión como miembro de esta asociación por el plazo de un año y le permitirá el acceso al contenido de la revista.</message>
 	<message key="default.journalSettings.donationFeeDescription">Las donaciones a la revista son bienvenidas y se utilizarán para el sostenimiento económico de las actividades propias del proceso de publicación.</message>
 	<message key="debug.notes.helpMappingLoad">Fichero de ayuda de mapeo XML {$filename} recargado al buscar {$id}.</message>
@@ -2885,16 +2854,13 @@ El tercer párrafo no está justificado.</pre>]]></message>
 	<message key="manager.reviewForms">Formularios Revisión</message>
 	<message key="manager.reviewForms.noneChosen">Ninguno / Revisión libre</message>
 	<message key="manager.reviewForms.noneCreated">No se han creado formularios de revisión.</message>
-	<message key="manager.reviewForms.noneUsed">No se han usado formularios de revisión.</message>
 	<message key="manager.reviewForms.create">Crear Formulario Revisión</message>
 	<message key="manager.reviewForms.edit">Formulario Revisión</message>
-	<message key="manager.reviewForms.reviewFormData">Datos Formulario Revisión</message>
 	<message key="manager.reviewForms.title">Título</message>
 	<message key="manager.reviewForms.description">Descripción e Instrucciones</message>
 	<message key="manager.reviewForms.preview">Previsualizar Formulario</message>
 	<message key="manager.reviewForms.completed">Completado</message>
 	<message key="manager.reviewForms.inReview">En Revisión</message>
-	<message key="manager.reviewForms.confirmDeletePublished">Confirmar borrado del formulario de revisión publicado...</message>
 	<message key="manager.reviewForms.confirmDeleteUnpublished">Confirmar borrado del formulario de revisión no publicado...</message>
 	<message key="manager.reviewForms.form.titleRequired">Un título es necesario para el formulario de revisión.</message>
 	<message key="manager.reviewFormElements">Elementos del Formulario</message>
@@ -2905,7 +2871,6 @@ El tercer párrafo no está justificado.</pre>]]></message>
 	<message key="manager.reviewFormElements.copyTo">Copia a:</message>
 	<message key="manager.reviewFormElements.question">Elemento</message>
 	<message key="manager.reviewFormElements.required">Se requieren Revisiores para completar el elemento</message>
-	<message key="manager.reviewFormElements.viewable">Visible (por autores)</message>
 	<message key="manager.reviewFormElements.elementType">Tipo de elemento</message>
 	<message key="manager.reviewFormElements.possibleResponse">Selección</message>
 	<message key="manager.reviewFormElements.addResponseItem">Añadir selección</message>
@@ -2929,10 +2894,10 @@ El tercer párrafo no está justificado.</pre>]]></message>
 	<message key="common.captchaField.altText">Imagen de validación</message>
 	<message key="common.altText">Texto alternativo</message>
 	<message key="common.altTextInstructions">Por favor ingrese un texto alternativo para esta imagen para asegurar la accesibilidad a usuarios con navegadores de solo-texto o con dispositivos de ayuda</message>
-	<message key="common.pageHeader.altText">Encabezado de la página</message>
+	<message key="common.pageHeader.altText">Título de página</message>
 	<message key="common.pageHeaderLogo.altText">Logo del Encabezado de la Página</message>
-	<message key="common.homePageHeader.altText">Encabezado de la Página de Inicio</message>
-	<message key="common.homePageHeaderLogo.altText">Logo del Encabezado de la Página de Inicio</message>
+	<message key="common.homePageHeader.altText">Título (Página de Inicio)</message>
+	<message key="common.homePageHeaderLogo.altText">Logo del Título (Página de Inicio)</message>
 	<message key="common.journalHomepageImage.altText">Imagen de la Página Inicial de la Revista</message>
 	<message key="article.coverPage.altText">Imagen de la portada</message>
 	<message key="article.accessLogoOpen.altText">Acceso Abierto</message>
@@ -2966,7 +2931,7 @@ El tercer párrafo no está justificado.</pre>]]></message>
 	<message key="plugins.categories.reports">"Plugins" de Reportes</message>
 	<message key="plugins.categories.reports.description">Los "Plugins" de Reportes son usados para implementar varios tipos de reportes y extractos de datos para los Administradores de Conferencias</message>
 	<message key="manager.setup.enablePublicGalleyId">Identificadores personalizados serán usados para identificar galeras (e.g. ficheros HTML o PDF) para artículos publicados.</message>
-	<message key="manager.setup.journalHomepageHeader.altText">Encabezado de la Página de Inicio de la Revista</message>
+	<message key="manager.setup.journalHomepageHeader.altText">Título de la Página de Inicio de la Revista</message>
 	<message key="manager.setup.journalLogo.altText">Logo de la Revista</message>
 	<message key="manager.sections.form.mustAllowPermission">Por favor asegúrese de que al menos una casilla de verificación está seleccionada para cada asignación de Editor de Sección</message>
 	<message key="manager.sections.form.reviewFormId">Por favor asegúrese de que usted ha escogido un formulario de revisión válido</message>
@@ -3019,4 +2984,31 @@ El tercer párrafo no está justificado.</pre>]]></message>
 	<message key="icon.font_medium.alt">Mediana</message>
 	<message key="icon.font_large.alt">Grande</message>
 	<message key="default.journalSettings.purchaseArticleFeeDescription">El pago de esta suma le permitirá ver, descargar, e imprimir este artículo</message>
+	<message key="common.ccLicense"><![CDATA[<br /><br />
+	<a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
+	<br />
+	Este trabajo está autorizado por una <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new">Licencia de Atribución de Bienes Comunes Creativos (CC) 3.0 </a>.]]></message>
+	<message key="common.ccLicense.rt"><![CDATA[<div class="rtBlock">
+		<br />
+		<a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
+		<br />
+		Este trabajo está autorizado por una <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new">Licencia de Atribución de Bienes Comunes Creativos (CC) 3.0</a>.
+	</div>]]></message>
+	<message key="journal.issn">ISSN</message>
+	<message key="manager.setup.doiSuffix">Sufijo DOI</message>
+	<message key="manager.setup.doiSuffixDefault">Emplee el valor predefinido (%j.v%vi%i.%a).</message>
+	<message key="manager.setup.doiSuffixPattern">Emplee los patrones siguientes para generar sufijos DOI. Emplee %j para las iniciales de las revistas, %v para el número del volumen, %i para la numeración del número, %a para el ID del artículo en el OJS y %p para el número de página</message>
+	<message key="manager.setup.doiSuffixPattern.example">Por ejemplo, vol%viss%ipp%p puede crear un DOI como 10.1234/vol3iss2pp230</message>
+	<message key="manager.setup.doiSuffixDescription">Un sufijo DOI puede tener cualquier forma, pero debe ser único para cada artículo publicado.</message>
+	<message key="manager.setup.doiSuffixCustomIdentifier">Emplee el “Identificador personalizado” para los artículos publicados con sufijo DOI (debe ser habilitado en el Paso 4)</message>
+	<message key="manager.setup.publisherNoteDescription">Este texto aparecerá debajo del encabezado “Editor” y sobre el nombre/url del editor en “Patrocinio de la Revista” en la página “Acerca de la Revista”</message>
+	<message key="manager.setup.sponsorNoteDescription">Este texto aparecerá debajo del encabezado “Patrocinadores” y sobre la lista de nombres y url de los patrocinadores en “Patrocinio de la Revista” en la página “Acerca de la Revista”</message>
+	<message key="manager.setup.contributorNoteDescription">Este texto aparecerá debajo del encabezado “Soporte” y sobre la lista de nombres y url de las organizaciones que sustentan la revista en “Patrocinio de la Revista” en la página “Acerca de la Revista”</message>
+	<message key="manager.setup.form.doiPrefixPattern">El patrón DOI debe tener forma 10.xxxx.</message>
+	<message key="author.submit.mustEnterWaiverReason">Si usted está solicitando una dispensa debe dar una razón en el espacio proporcionado.</message>
+	<message key="author.submissions.queuedReviewSubsequent">Ronda en Revisión {$round}</message>
+	<message key="author.submissions.queuedReviewRevisions">En Revisión: Revisiones Solicitadas</message>
+	<message key="author.submissions.queuedEditingCopyedit">En Edición: Edición de Composición Solicitada</message>
+	<message key="author.submissions.queuedEditingProofread">En Edición: Corrección Solicitada</message>
+	<message key="debug.memoryUsage">Empleo de Memoria:</message>
 </locale>

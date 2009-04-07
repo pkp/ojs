@@ -32,7 +32,7 @@
 	<country name="Anguilla" code="AI"/>
 	<country name="Antarctica" code="AQ"/>
 	<country name="Antigua en Barbuda" code="AG"/>
-	<country name="Argentië" code="AR"/>
+	<country name="Argentinië" code="AR"/>
 	<country name="Armenië" code="AM"/>
 	<country name="Aruba" code="AW"/>
 	<country name="Australië" code="AU"/>
@@ -137,18 +137,18 @@
 	<country name="Democratische Volksrepubliek Korea (Noord-Korea)" code="KP"/>
 	<country name="Republiek Korea (Zuid-Korea)" code="KR"/>
 	<country name="Koeweit" code="KW"/>
-	<country name="Kyrgyzstan" code="KG"/>
+	<country name="Kirgizië" code="KG"/>
 	<country name="Democratische volksrebubliek Laos" code="LA"/>
 	<country name="Letland" code="LV"/>
 	<country name="Libanon" code="LB"/>
 	<country name="Lesotho" code="LS"/>
 	<country name="Liberia" code="LR"/>
-	<country name="Libisch-Arbische Jamahiriya" code="LY"/>
+	<country name="Libisch-Arabische Jamahiriya" code="LY"/>
 	<country name="Liechtenstein" code="LI"/>
 	<country name="Litouwen" code="LT"/>
 	<country name="Luxemburg" code="LU"/>
 	<country name="Macau" code="MO"/>
-	<country name="Vorrmalige Joegaslavische Republiek Macedonië" code="MK"/>
+	<country name="Voormalige Joegoslavische Republiek Macedonië" code="MK"/>
 	<country name="Madagaskar" code="MG"/>
 	<country name="Malawi" code="MW"/>
 	<country name="Maleisië" code="MY"/>
@@ -191,7 +191,7 @@
 	<country name="Papoea-Nieuw-Guinea" code="PG"/>
 	<country name="Paraguay" code="PY"/>
 	<country name="Peru" code="PE"/>
-	<country name="Filipijnen" code="PH"/>
+	<country name="Filippijnen" code="PH"/>
 	<country name="Pitcairneilanden" code="PN"/>
 	<country name="Polen" code="PL"/>
 	<country name="Portugal" code="PT"/>
@@ -215,9 +215,9 @@
 	<country name="Seychellen" code="SC"/>
 	<country name="Sierra Leone" code="SL"/>
 	<country name="Singapore" code="SG"/>
-	<country name="Slovakije" code="SK"/>
+	<country name="Slowakije" code="SK"/>
 	<country name="Slovenië" code="SI"/>
-	<country name="Salomonseilanden" code="SB"/>
+	<country name="Solomon eilanden" code="SB"/>
 	<country name="Somalië" code="SO"/>
 	<country name="Zuid-Afrika" code="ZA"/>
 	<country name="Zuid-Georgië en de Zuidelijke Sandwicheilanden" code="GS"/>

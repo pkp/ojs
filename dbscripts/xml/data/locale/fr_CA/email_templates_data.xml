@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE data SYSTEM "../../../../../lib/pkp/dtd/xmlData.dtd">
+<!DOCTYPE data SYSTEM "../../../dtd/xmldata.dtd">
 
 <!--
   * email_templates_data.xml
@@ -133,7 +133,7 @@ Cordialement.
 		  -->
 		<row>
 			<field name="email_key">SUBMISSION_ACK</field>
-			<field name="subject">Accusé réception de la soumission</field>
+			<field name="subject">Accusé de réception de la soumission</field>
 			<field name="body">Bonjour,
 
 Nous vous remercions d'avoir soumis le manuscrit intitulé « {$articleTitle} » à la revue {$journalName}. Grâce à notre système de gestion en ligne, vous pourrez suivre votre soumission tout au long du processus d'édition simplement en accédant au site web de la revue.
@@ -225,7 +225,7 @@ Cordialement.
 		  -->
 		<row>
 			<field name="email_key">REVIEW_REQUEST</field>
-			<field name="subject">Demande pour l'évaluation d'un article</field>
+			<field name="subject">Demande d'évaluation d'un article</field>
 			<field name="body">Bonjour,
 
 Nous croyons que vous seriez un excellent évaluateur pour le manuscrit intitulé « {$articleTitle} » qui a été soumis à la revue {$journalName}. Vous trouverez un résumé de la soumission ci-dessous.  Nous espérons que vous accepterez ce travail essentiel à la publication de la revue.
@@ -269,7 +269,7 @@ Résumé
 		</row>
 		<row>
 			<field name="email_key">REVIEW_REQUEST_ATTACHED</field>
-			<field name="subject">Demande pour l'évaluation d'un article joint</field>
+			<field name="subject">Demande d'évaluation d'un article</field>
 			<field name="body">Bonjour,
 
 Nous croyons que vous feriez un excellent évaluateur pour le manuscrit intitulé « {$articleTitle} ».  Nous espérons que vous accepterez ce travail important pour notre revue. Les lignes directrices en matière d'évaluation se trouvent ci-dessous et la soumission est jointe au présent courriel. 
@@ -300,7 +300,7 @@ Cordialement.
 		</row>
 		<row>
 			<field name="email_key">REVIEW_CONFIRM</field>
-			<field name="subject">Confirmation de l'évaluation</field>
+			<field name="subject">Acceptation d'évaluation</field>
 			<field name="body">Bonjour,
 
 Je suis en mesure d'évaluer la soumission intitulée « {$articleTitle} » pour la revue {$journalName}. Je vous remercie d'avoir pensé à moi. 
@@ -314,7 +314,7 @@ Cordialement.
 		</row>
 		<row>
 			<field name="email_key">REVIEW_DECLINE</field>
-			<field name="subject">Refus d'évaluer le manuscrit</field>
+			<field name="subject">Refus d'évaluation</field>
 			<field name="body">Bonjour,
 
 Pour le moment, il m'est impossible d'évaluer la soumission intitulée « {$articleTitle} » pour {$journalName}. 
@@ -338,7 +338,7 @@ J'ai effectué l'évaluation de la soumission intitulée « {$articleTitle} »
 		</row>
 		<row>
 			<field name="email_key">REVIEW_ACK</field>
-			<field name="subject">Accusé réception pour l'évaluation d'une soumission</field>
+			<field name="subject">Accusé de réception de l'évaluation d'une soumission</field>
 			<field name="body">{$reviewerName},
 
 Nous vous remercions d'avoir révisé la soumission intitulée « {$articleTitle} » pour {$journalName}. Nous vous sommes reconnaissants de votre contribution à la qualité des travaux que nous publions.
@@ -348,7 +348,7 @@ Nous vous remercions d'avoir révisé la soumission intitulée « {$articleTitl
 		</row>
 		<row>
 			<field name="email_key">REVIEW_REMIND</field>
-			<field name="subject">Rappel concernant l'évaluation d'une soumission</field>
+			<field name="subject">Rappel d'évaluation d'une soumission</field>
 			<field name="body">{$reviewerName},
 
 Juste un petit mot pour vous rappeler notre demande à propos de l'évaluation de la soumission intitulée « {$articleTitle} » pour {$journalName}. Nous espérions recevoir votre évaluation avant le {$reviewDueDate}, et nous serions heureux de la recevoir dès que possible.
@@ -364,7 +364,7 @@ Veuillez confirmer que vous êtes en mesure d'effectuer ce travail important pou
 		</row>
 		<row>
 			<field name="email_key">REVIEW_REMIND_ONECLICK</field>
-			<field name="subject">Rappel au évaluateur d'une soumission en un clic</field>
+			<field name="subject">Rappel d'évaluation d'une soumission</field>
 			<field name="body">{$reviewerName}:
 
 Juste un petit mot pour vous rappeler notre demande d'évaluer la soumission intitulée  "{$articleTitle}," pour {$journalName}. Nous espérions recevoir votre évaluation le {$reviewDueDate} et nous serions heureux de la recevoir aussitôt qu'il vous sera possible de le faire.
@@ -378,7 +378,7 @@ S.V.P. confirmer  si vous êtes en mesure de compléter ce travail très importa
 		</row>
 		<row>
 			<field name="email_key">REVIEW_REMIND_AUTO</field>
-			<field name="subject">Rappel automatique pour l'évaluation d'une soumission</field>
+			<field name="subject">Rappel automatique d'évaluation d'une soumission</field>
 			<field name="body">{$reviewerName},
 
 Juste un petit mot pour vous rappeler notre demande à propos de l'évaluation de la soumission intitulée « {$articleTitle} » pour {$journalName}. Nous espérions recevoir votre évaluation avant le {$reviewDueDate}. Ce courriel a été envoyé automatiquement parce que la date d'échéance est passée. Nous serions quand même heureux de recevoir votre évaluation dès que possible.
@@ -394,7 +394,7 @@ Veuillez confirmer que vous êtes en mesure d'effectuer ce travail important pou
 		</row>
 		<row>
 			<field name="email_key">REVIEW_REMIND_AUTO_ONECLICK</field>
-			<field name="subject">Rappel automatique à l'évaluateur en un clic.</field>
+			<field name="subject">Rappel automatique d'évaluation</field>
 			<field name="body">{$reviewerName}:
 
 Juste un petit mot au sujet de notre demande vous demandant d'évaluer la soumission "{$articleTitle}," pour {$journalName}. Nous espérions avoir cette évaluation avant le {$reviewDueDate}, et ce courriel vous a été envoyé automatiquement parce que la date d'échéance est passée. Nous serions heureux de la recevoir dès qu'il vous sera possible de nous l'envoyer.
@@ -461,7 +461,7 @@ Merci,
 		</row>
 		<row>
 			<field name="email_key">COPYEDIT_ACK</field>
-			<field name="subject">Accusé de réception pour la révision</field>
+			<field name="subject">Accusé de réception de la révision</field>
 			<field name="body">{$copyeditorName},
 
 Nous vous remercions d'avoir révisé le manuscrit intitulé « {$articleTitle} » pour {$journalName}. Votre collaboration contribue grandement à la qualité de la revue.
@@ -499,7 +499,7 @@ Je vous remercie de votre contribution.
 		</row>
 		<row>
 			<field name="email_key">COPYEDIT_AUTHOR_ACK</field>
-			<field name="subject">Accusé de réception pour la révision finale</field>
+			<field name="subject">Accusé de réception de la révision finale</field>
 			<field name="body">{$authorName},
 
 Nous vous remercions d'avoir bien voulu relire la version révisée de votre manuscrit intitulé « {$articleTitle} » pour {$journalName}. Nous sommes heureux de pouvoir publier vos travaux dans notre revue.
@@ -534,7 +534,7 @@ J'ai terminé la préparation de la version révisée définitive du manuscrit i
 		</row>
 		<row>
 			<field name="email_key">COPYEDIT_FINAL_ACK</field>
-			<field name="subject">Accusé de réception pour la révision de la version définitive</field>
+			<field name="subject">Accusé de réception de la révision finale</field>
 			<field name="body">{$copyeditorName},
 
 Nous vous remercions d'avoir effectué la révision du manuscrit intitulé « {$articleTitle} » pour {$journalName}. La préparation de la version définitive avant la mise en page est une étape importante du processus de publication.
@@ -610,7 +610,7 @@ Si vous ne pouvez pas effectuer ce travail pour le moment ou si vous avez des qu
 		</row>
 		<row>
 			<field name="email_key">PROOFREAD_AUTHOR_COMPLETE</field>
-			<field name="subject">Correction d'épreuves terminée par l'auteur</field>
+			<field name="subject">Correction d'épreuves terminée (auteur)</field>
 			<field name="body">{$editorialContactName},
 
 J'ai terminé la correction d'épreuves du manuscrit intitulé « {$articleTitle} » pour {$journalName}. Les épreuves peuvent maintenant être relues par le correcteur d'épreuves et le responsable de la mise en page.
@@ -620,7 +620,7 @@ J'ai terminé la correction d'épreuves du manuscrit intitulé « {$articleTitl
 		</row>
 		<row>
 			<field name="email_key">PROOFREAD_AUTHOR_ACK</field>
-			<field name="subject">Accusé de réception pour la correction d'épreuves par l'auteur.</field>
+			<field name="subject">Accusé de réception pour la correction d'épreuves (auteur)</field>
 			<field name="body">{$authorName},
 
 Nous vous remercions d'avoir accepté de corriger les épreuves de votre manuscrit intitulé « {$articleTitle} » pour {$journalName}. Nous sommes heureux de publier vos travaux dans notre revue.
@@ -667,7 +667,7 @@ Nous vous remercions d'avoir accepté de corriger les épreuves du manuscrit int
 		</row>
 		<row>
 			<field name="email_key">PROOFREAD_LAYOUT_REQUEST</field>
-			<field name="subject">Demande de révision de la mise en page</field>
+			<field name="subject">Demande de révision (responsable de la mise en page)</field>
 			<field name="body">{$layoutEditorName},
 
 Nous aimerions que vous insériez les modifications nécessaires à la suite de la correction d'épreuves du manuscrit intitulé « {$articleTitle} » pour {$journalName}.
@@ -682,7 +682,7 @@ Si vous ne pouvez pas effectuer ce travail pour le moment ou si vous avez des qu
 		</row>
 		<row>
 			<field name="email_key">PROOFREAD_LAYOUT_COMPLETE</field>
-			<field name="subject">Correction d'épreuves de la mise en page terminée</field>
+			<field name="subject">Correction d'épreuves terminée (responsable de la mise en page)</field>
 			<field name="body">{$editorialContactName},
 
 Les corrections ont été insérées dans le manuscrit intitulé « {$articleTitle} » pour {$journalName}. Ce document est prêt pour sa publication.
@@ -692,12 +692,12 @@ Les corrections ont été insérées dans le manuscrit intitulé « {$articleTi
 		</row>
 		<row>
 			<field name="email_key">PROOFREAD_LAYOUT_ACK</field>
-			<field name="subject">Accusé  de réception pour la correction d'épreuves de la mise en page.</field>
+			<field name="subject">Accusé de réception de la correction d'épreuves (responsable de la mise en page)</field>
 			<field name="body">{$layoutEditorName},
 
 Nous vous remercions d'avoir corrigé les épreuves du manuscrit intitulé « {$articleTitle} » pour {$journalName}. Votre contribution est importante pour la revue.
 {$editorialContactSignature}</field>
-			<field name="description"> Ce courriel du chef de rubrique à le responsable de la mise en page reconnaît l'achèvement par ce dernier de l'étape finale de la correction d'épreuves et le remercie de sa contribution.</field>
+			<field name="description">Ce courriel du chef de rubrique à le responsable de la mise en page reconnaît l'achèvement par ce dernier de l'étape finale de la correction d'épreuves et le remercie de sa contribution.</field>
 		</row>
 		<row>
 			<field name="email_key">EMAIL_LINK</field>
@@ -796,7 +796,7 @@ Si vous avez des questions, ne pas hésiter à communiquer avec moi.
 		</row>
 		<row>
 			<field name="email_key">USER_VALIDATE</field>
-			<field name="subject">Validez votre compte</field>
+			<field name="subject">Valider votre compte</field>
 			<field name="body">{$userFullName}
 
 Vous avez créé un compte avec {$journalName}, mais avant de pouvoir commencer à l'utiliser, vous devez valider votre compte de courriel. Pour le faire, suivez simplement le lien ci-dessous :

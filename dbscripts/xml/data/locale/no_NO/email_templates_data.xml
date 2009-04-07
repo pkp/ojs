@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE data SYSTEM "../../../../../lib/pkp/dtd/xmlData.dtd">
+<!DOCTYPE data SYSTEM "../../../dtd/xmldata.dtd">
 
 <!--
   * email_templates_data.xml
@@ -273,16 +273,6 @@ Takk for forespørselen jeg har fått, om å fagfellevurdere manuskriptet "{$art
 
 {$reviewerName}</field>
 			<field name="description">Denne e-posten sendes fra en Fagkonsulent til Seksjonsredaktøren som svar på Forespørsel om fagfellevurdering for å varsle Seksjonsredaktøren om at forespørselen er mottatt og akseptert, og at vurderingen vil bli ferdigstilt innen angitt dato.</field>
-		</row>
-		<row>
-			<field name="email_key">REVIEW_CONFIRM_ACK</field>
-			<field name="subject">Bekrefter din aksept av vurderingsoppdrag</field>
-			<field name="body">{$reviewerName}:
-
-Takk for at du har tatt på deg å fagfellevurdere manuskriptet  "{$articleTitle}" for {$journalName} innen {$reviewDueDate}.
-
-{$editorialContactSignature}</field>
-			<field name="description">Denne e-posten sendes fra Seksjonsredaktøren for å bekrefte at Fagkonsulenten har akseptert vurderingsoppdraget, og tidsfristen for oppdraget.</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_DECLINE</field>
@@ -761,6 +751,33 @@ Hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg.
 
 {$subscriptionContactSignature}</field>
 			<field name="description">Denne e-posten varsler en abonnent om at abonnementet er utløpt. E-posten gir informasjon om tidsskriftets URL, og om hvordan abonnenten får tilgang.</field>
+		</row>
+		<row>
+			<field name="email_key">USER_VALIDATE</field>
+			<field name="subject">Bekreft brukerkontoen din</field>
+			<field name="body">{$userFullName}
+
+Du har opprettet en brukerkonto hos {$journalName}, men før du kan begynne å bruke den, må du først bekrefte e-postkontoen din. Følg lenken nedenfor for å bekrefte e-postkontoen din:
+
+{$activateUrl}
+
+Takk,
+{$principalContactSignature}</field>
+			<field name="description">Denne e-posten sendes til nyregistrerte brukere for å ønske dem velkommen til systemet og gi dem tilgang til en oversikt over deres eget brukernavn og passord.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEWER_REGISTER</field>
+			<field name="subject">Registrering som fagkonsulent for {$journalName}</field>
+			<field name="body">På grunn av ditt faglige omdømme har vi tillatt oss å registrere navnet ditt databasen over potensielle fagkonsulenter for {$journalName}. Dette innebærer ingen form for forpliktelse fra din side, men gir oss en enkel mulighet til å henvende oss til deg hvis vi får manuskript vi tror du vil være interessert i være fagkonsulent for. Hvis du blir bedt om å påta deg et slikt oppdrag, vil du få mulighet til å se tittel og sammendrag for det aktuelle manuskriptet gjennom nettstedet vårt, og du vil alltid stå fritt til å akseptere eller avslå oppdraget. Du kan dessuten når som helst be om at navnet ditt blir fjernet fra databasen vår over potensielle fagkonsulenter.
+
+Vi gir deg her et brukernavn og et passord til nettstedet vårt, som kan brukes til alt alminnelig samarbeid med {$journalName}. der kan du også endre profilopplysningene dine; som for eksempel institusjonstilknytning og faginteresser.
+
+Brukernavn: {$username}
+Passord: {$password}
+
+På forhånd takk,
+{$principalContactSignature}</field>
+			<field name="description">Denne e-posten sendes til nyregistrerte fagkonsulenter for å ønske dem velkommen til systemet, og gi dem tilgang til deres brukernavn og passord.</field>
 		</row>
 	</table>
 </data>

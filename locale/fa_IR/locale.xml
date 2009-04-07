@@ -2986,4 +2986,39 @@ http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI
   <message key="icon.font_large.alt" >بزرگ</message>
   <message key="debug.memoryUsage" >مصرف حافظه</message>
   <message key="default.journalSettings.purchaseArticleFeeDescription" >با پرداخت این وجه میتوانیذ ببینید و دانلود یا چاپ کنید</message>
+	<message key="common.ccLicense"><![CDATA[<br /><br />
+	<a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
+	<br />
+این محصول تحت لیشانس	
+ <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new">Creative Commons Attribution 3.0 License</a>
+عرشه میشود.]]></message>
+	<message key="common.ccLicense.rt"><![CDATA[<div class="rtBlock">
+		<br />
+		<a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
+		<br />
+این محصول تحت لیشانس	
+		 <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new">Creative Commons Attribution 3.0 License</a>
+عرضه میشود.
+	</div>]]></message>
+	<message key="journal.issn">شابن</message>
+	<message key="manager.setup.doiSuffix">پسوند دی او آی</message>
+	<message key="manager.setup.doiSuffixDefault">استفاده از الگوی پیشفرض (%j.v%vi%i.%a).</message>
+	<message key="manager.setup.doiSuffixPattern">الگوی زیر را برای تولید پسوندهای دی او آی بکار ببر. برای حروف اول نام مجله از %j, برای شماره دوره از  %v, برای شماره مجله از %i, برای شناسه او ج اس مقاله از %a, و برای شماره صفحه از %p استفاده کنید.</message>
+	<message key="manager.setup.doiSuffixPattern.example">مثلا vol%viss%ipp%p دی او آی مانند 10.1234/vol3iss2pp230 تولید میکند</message>
+	<message key="manager.setup.doiSuffixDescription">پسوند دی او آی به هر شکلی میتواند باشد ولی برای هر آیتم منتشر شده میبایست منحصر به فرد باشد.</message>
+	<message key="manager.setup.doiSuffixCustomIdentifier">برای دی او آی از شناسه دلخواه استفاده شود (باید در مرحله ۴ فعال گردد).</message>
+	<message key="manager.setup.publisherNoteDescription">این متن در زیر قسمت ناشر و در بالای نام و آدرس وب وی در قسمت اسپانسرمجله در صفحه در باره ظاهر میشود.</message>
+	<message key="manager.setup.sponsorNoteDescription">این متن در زیر عنوان اسپانسر و بالاب لیست اسپانسرها و آدرس وب آنها در قسمت اسپانسر مجله در صفحه در باره ظاهر میشود.</message>
+	<message key="manager.setup.contributorNoteDescription">این متن در پائین منابع مالی و بالای لیست اسامی و آدرسهای وب آنها برای هر سازمان حمایت کننده در قسمت اسپانسر مجله در صفحه درباره ظاهر میشود.</message>
+	<message key="manager.setup.form.doiPrefixPattern">پسوند دی او آی میبایست به صورت 10.xxxx باشد.</message>
+	<message key="author.submit.mustEnterWaiverReason">چنانچه متقاضی تخفیف هستید باید در قسمت مربوطه دلیل خود را ذکر کنید.</message>
+	<message key="author.submissions.queuedReviewSubsequent">در راند کارشناسی {$round}</message>
+	<message key="author.submissions.queuedReviewRevisions">در حال کارشناسی: نیازمند اصلاح</message>
+	<message key="author.submissions.queuedEditingCopyedit">در حال ویرایش: درخواست از ویراستار</message>
+	<message key="author.submissions.queuedEditingProofread">در حال ویرایش: درخواست پروف</message>
+	<message key="email.bcc">رم</message>
+	<message key="author.submit.howToSubmit">در صورت برخورد با مشکل با {$supportName} به شماره {$supportPhone} تماس بگیرید.</message>
+	<message key="author.submit.submissionIndexingDescription">وازههائی برای اندکس ساب میشن وارد کنید - بین وازه ها سمی کولون بگذارید (واژه۱; واژه۲; واژه۳)</message>
+	<message key="rt.admin.settings.addComment">نظردهی: خوانندگان میتوانند نظردهی کنند و مدیر مجله میتواند آنرا حذف کند</message>
+	<message key="rt.admin.settings.emailOthers">اطلاع به همکار: به صورا ارسال ایمیل از قبل آماده شده</message>
 </locale>

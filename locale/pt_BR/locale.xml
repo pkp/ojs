@@ -87,7 +87,7 @@
 	<message key="common.dateUploaded">Data de transferência</message>
 	<message key="common.dateModified">Data de modificação</message>
 	<message key="common.other">Outro</message>
-	<message key="common.fileSize">Tamanho do Documento</message>
+	<message key="common.fileSize">Tamanho do documento</message>
 	<message key="common.size">Tamanho</message>
 	<message key="common.fileType">Tipo do Documento</message>
 	<message key="common.originalFileName">Nome original do Documento</message>
@@ -192,13 +192,13 @@
 	<message key="common.error.framesRequired"><![CDATA[Esta página requer frames. <a href="{$url}">Clique aqui </a> para a versão sem frames.]]></message>
 		
 	<!-- Navigation -->
-	<message key="navigation.home">Página inicial</message>
+	<message key="navigation.home">Capa</message>
 	<message key="navigation.about">Sobre</message>
 	<message key="navigation.userHome">Página do usuário</message>
 	<message key="navigation.login">Acesso</message>
 	<message key="navigation.register">Cadastro</message>
 	<message key="navigation.user">Usuário</message>
-	<message key="navigation.archives">Arquivos</message>
+	<message key="navigation.archives">Edições Anteriores</message>
 	<message key="navigation.current">Atual</message>
 	<message key="navigation.search">Pesquisa</message>
 	<message key="navigation.otherJournals">Outras revistas</message>
@@ -216,8 +216,8 @@
 	<message key="navigation.previousStep">Voltar</message>
 	<message key="navigation.nextStep">Avançar</message>
 	<message key="navigation.stepNumber">Passo {$step}</message>
-	<message key="navigation.previousPage"><![CDATA[&lt;&lt;]]></message>
-	<message key="navigation.nextPage"><![CDATA[&gt;&gt;]]></message>
+	<message key="navigation.previousPage"><![CDATA[<<]]></message>
+	<message key="navigation.nextPage"><![CDATA[>>]]></message>
 	<message key="navigation.items">{$from} a {$to} de {$total} Itens</message>
 	
 	<!-- Article Queues -->
@@ -380,7 +380,7 @@
 	<message key="submission.galley">Composição</message>
 	<message key="submission.emailLog">Histórico de E-mail (log)</message>
 	<message key="submission.eventLog">Histórico de Eventos (log)</message>
-	<message key="submission.uploadFileTo">Transferir documento para</message>
+	<message key="submission.uploadFileTo">Transferir documento</message>
 
 	<!-- Submission Notes -->
 	<message key="submission.notes">Notas sobre a Submissão</message>
@@ -544,7 +544,7 @@
 	<message key="submission.event.layout.layoutEditorAssigned">Editor de Layout designado para a submissão</message>
 	<message key="submission.event.layout.layoutEditorUnassigned">Editor de Layout liberado da submissão</message>
 	<message key="submission.event.layout.layoutInitiated">Tarefa de Layout iniciada</message>
-	<message key="submission.event.layout.layoutGalleyCreated">Composição de Layout atualizada</message>
+	<message key="submission.event.layout.layoutGalleyCreated">Layout de artigo atualizado</message>
 	<message key="submission.event.layout.layoutComplete">Tarefa de Layout concluída</message>
 	<!--
 	 *
@@ -724,7 +724,7 @@ Note que a interface OAI pode ser desativada para este portal nas configuraçõe
 	<message key="manager.managementPages">Área Administrativa</message>
 	<message key="manager.plugins">Plugins do Sistema</message>
 	<message key="manager.users">Usuários</message>
-	<message key="manager.roles">Funções</message>
+	<message key="manager.roles">Papéis</message>
 	<message key="manager.subscriptionTypes">Tipos de Assinaturas</message>
 	<message key="manager.subscriptions">Assinaturas</message>
 	<message key="manager.subscriptionPolicies">Políticas de Assinaturas</message>
@@ -1124,7 +1124,7 @@ Escolha um modelo para administrar os aspectos do processo editorial. (Para desi
 	<message key="manager.people.enrollment">Cadastrar</message>
 	<message key="manager.people.unenroll">Remover Papel</message>
 	<message key="manager.people.confirmUnenroll">Remover o usuário deste Papel?</message>
-	<message key="manager.people.mergeUsers.from.description">Escolha um usuário para mesclar seu cadastro dentro de outra conta (quando um usuário possui duas contas distintas, em vez de acumular funções editoriais). O cadastro selecionado primeiro será excluído e suas submissões e histórico de tarefas atribuías ao segundo cadastro escolhido.</message>
+	<message key="manager.people.mergeUsers.from.description">Escolha um usuário para mesclar seu cadastro dentro de outra conta (quando um usuário possui duas contas distintas, em vez de acumular papéis editoriais). O cadastro selecionado primeiro será excluído e suas submissões e histórico de tarefas serão atribuídas ao segundo cadastro escolhido.</message>
 	<message key="manager.people.mergeUsers.into.description">Escolha um usuário a quem deseja atribuir as submissões e histórico de tarefas do cadastro anterior.</message>
 	<message key="manager.people.mergeUsers.confirm">Deseja realmente mesclar o cadastro do usuário "{$oldUsername}" no cadastro do usuário "{$newUsername}"? O cadastro de "{$oldUsername}" será excluído permanentemente. Esta ação não é reversível!</message>
 	<message key="manager.people.confirmRemove">Remover este usuário da revista? A ação removerá o cadastro do usuário de todas os seus papéis dentro do sistema.</message>
@@ -1165,7 +1165,7 @@ Escolha um modelo para administrar os aspectos do processo editorial. (Para desi
 	<message key="manager.people.syncUsers">Sincronizar cadastro de usuários</message>
 	<message key="manager.people.syncUserDescription">Sincronizar Cadastro cadastrará nesta revista todos os usuários com a função específica na revista especificada. Esta função permite que um grupo padrão de usuários (exemplo: avaliadores) seja compartilhado entre revistas.</message>
 	<message key="manager.people.enrollSync">Sincronizar Cadastro</message>
-	<message key="manager.people.enrollSyncRole">Sincronizar Função</message>
+	<message key="manager.people.enrollSyncRole">Sincronizar Papéis</message>
 	<message key="manager.people.enrollSyncJournal">Com a revista</message>	
 	
 	<!-- Email Management -->
@@ -1736,7 +1736,7 @@ com sinal positivo (+) indicando avaliação em progresso.]]></message>
 	<message key="submission.copyedit.mustUploadFileForCopyedit">E-mail de solicitação será enviado somente após a transferência de um documento para edição.</message>
 	<message key="submission.copyedit.initialCopyedit">Edição de Texto Inicial</message>
 	<message key="submission.copyedit.editorsCopyedit">Edição de Texto do Editor</message>
-	<message key="submission.copyedit.editorAuthorReview">Edição de Texto do Author</message>
+	<message key="submission.copyedit.editorAuthorReview">Edição de Texto pelo Autor</message>
 	<message key="submission.copyedit.finalCopyedit">Edição de Texto Final</message>
 	<message key="submission.copyedit.copyeditVersion">Versão de Edição de Texto (C/E)</message>
 	<message key="submission.copyedit.selectCopyeditor">Designar Editor de Texto</message>
@@ -1745,22 +1745,22 @@ com sinal positivo (+) indicando avaliação em progresso.]]></message>
 	<message key="submission.copyedit.instructions">Diretrizes para Edição de Texto</message>
 	
 	<!-- Submission Tracking - Layout Specific -->
-	<message key="submission.layout.layoutVersion">Versão de Layout</message>
+	<message key="submission.layout.layoutVersion">para Layout</message>
 	<message key="submission.layout.layoutFile">Documento de Layout</message>
-	<message key="submission.layout.galleys">Composição</message>
+	<message key="submission.layout.galleys">para Publicação</message>
 	<message key="submission.layout.newGalley">Criar Nova Composição</message>
 	<message key="submission.layout.assignLayoutEditor">Designar Editor de Layout</message>
 	<message key="submission.layout.replaceLayoutEditor">Substituir Editor de Layout</message>
 	<message key="submission.layout.initialGalleyCreation">Composição Inicial</message>
 	<message key="submission.layout.supplementaryFiles">Avaliação de Documento Suplementar</message>
 	<message key="submission.layout.layoutComments">Comentários do Layout</message>
-	<message key="submission.layout.galleyLabelRequired">Rótulo da Composição obrigatório.</message>
+	<message key="submission.layout.galleyLabelRequired">Rótulo obrigatório.</message>
 	<message key="submission.layout.confirmDeleteGalley">Deseja realmente excluir permanentemente esta composição?</message>
 	<message key="submission.layout.newSupplementaryFile">Transferir Novo Documento Suplementar</message>
 	<message key="submission.layout.confirmDeleteSupplementaryFile">Deseja realmente excluir permanentemente estes documentos suplementares?</message>
 	<message key="submission.layout.editGalley">Editar a Composição do Layout</message>
 	<message key="submission.layout.addGalley">Incluir Composição do Layout</message>
-	<message key="submission.layout.galleyFileData">Informação sobre Documento de Composição</message>
+	<message key="submission.layout.galleyFileData">Informações sobre o documento</message>
 	<message key="submission.layout.galleyLabel">Rótulo</message>
 	<message key="submission.layout.galleyLabelInstructions">O rótulo é utilizado para identificar o formato do documento (ex.: HTML, PDF, etc).</message>
 	<message key="submission.layout.galleyHTMLData">Documentos da Composição HTML</message>
@@ -1772,7 +1772,7 @@ com sinal positivo (+) indicando avaliação em progresso.]]></message>
 	<message key="submission.layout.galleyStyle">Estilo</message>
 	<message key="submission.layout.galleyImages">Imagens</message>
 	<message key="submission.layout.viewingGalley">Visualizando a Composição</message>
-	<message key="submission.layout.galleyFormat">Formato da Composição</message>
+	<message key="submission.layout.galleyFormat">Formato para Publicação</message>
 	<message key="submission.layout.viewProof">Ler Prova</message>
 	<message key="submission.layout.instructions">Diretrizes para Layout</message>
 	
@@ -2495,7 +2495,7 @@ Após o término de suas revisões, renomeie o arquivo de NomedoAutorQA.doc para
 	<message key="submission.sent">Enviado</message>
 	<message key="user.sendPassword">Confirmação</message>
 	<message key="user.sendPassword.description">Enviar e-mail de confirmação incluindo login e senha</message>
-	<message key="user.salutation">Forma de tratamento</message>
+	<message key="user.salutation">Pronome de tratamento</message>
 	<message key="user.gender">Sexo</message>
 	<message key="user.masculine">M</message>
 	<message key="user.feminine">F</message>
@@ -2511,7 +2511,7 @@ Após o término de suas revisões, renomeie o arquivo de NomedoAutorQA.doc para
 	<message key="admin.mergeUsers">Mesclar Usuários</message>
 	<message key="admin.mergeUsers.mergeUser">Mesclar Usuários</message>
 	<message key="admin.mergeUsers.into.description">Escolha um usuário a quem deseja atribuir as submissões e histórico de tarefas do cadastro anterior.</message>
-	<message key="admin.mergeUsers.from.description">Escolha um usuário para mesclar seu cadastro dentro de outra conta (quando um usuário possui duas contas distintas, em vez de acumular funções editoriais). O cadastro selecionado primeiro será excluído e suas submissões e histórico de tarefas atribuídas ao segundo cadastro escolhido.</message>
+	<message key="admin.mergeUsers.from.description">Escolha um usuário para mesclar seu cadastro dentro de outra conta (quando um usuário possui duas contas distintas, em vez de acumular papéis editoriais). O cadastro selecionado primeiro será excluído e suas submissões e histórico de tarefas serão atribuídas ao segundo cadastro escolhido.</message>
 	<message key="admin.mergeUsers.allUsers">Todos os usuários</message>
 	<message key="admin.mergeUsers.confirm">Deseja realmente mesclar o cadastro do usuário "{$oldUsername}" no cadastro do usuário "{$newUsername}"? O cadastro de "{$oldUsername}" será excluído permanentemente. Esta ação não é reversível!</message>
 	<message key="admin.mergerUsers.noneEnrolled">Nenhum usuário cadastrado.</message>
@@ -2623,7 +2623,7 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="manager.groups.create">Criar Título da Equipe Editorial</message>
 	<message key="manager.groups.enableBoard.description"><![CDATA[Exibir em <a href="{$aboutEditorialTeamUrl}">Equipe Editorial</a> no Sobre a Revista:]]></message>
 	<message key="manager.groups.enableBoard">O Editor-Gerente da revista criará equipes editoriais e seus títulos, e incluirá as pessoas em cada grupo.</message>
-	<message key="manager.groups.disableBoard">O sistema gerará automaticamente a lista de participantes sob cada função editorial (Editor-Gerente, Editor, Editor de Seção, Editor de Texto, etc.)</message>
+	<message key="manager.groups.disableBoard">O sistema gerará automaticamente a lista de participantes sob cada papel editorial (Editor-Gerente, Editor, Editor de Seção, Editor de Texto, etc.)</message>
 	<message key="manager.groups.context.editorialTeam.short">Equipe Editorial</message>
 	<message key="manager.groups.context.editorialTeam">Exibir título em Equipe Editorial na seção Pessoal do Sobre a Revista (ex.: Editor)</message>
 	<message key="manager.groups.context.people">Exibir título como categoria própria em Pessoal (ex.: Comitê Editorial)</message>
@@ -2840,13 +2840,11 @@ Idiomas estão disponíveis para download manual no <a href="http://pkp.sfu.ca">
 	<message key="manager.reviewForms.noneCreated">Nenhum formulário de avaliação criado.</message>
 	<message key="manager.reviewForms.create">Criar formulário de avaliação</message>
 	<message key="manager.reviewForms.edit">Editar formulário de avaliação</message>
-	<message key="manager.reviewForms.reviewFormData">Dados do formulário de avaliação</message>
 	<message key="manager.reviewForms.title">Título</message>
 	<message key="manager.reviewForms.description">Descrição</message>
 	<message key="manager.reviewForms.preview">Visualizar formulário de avaliação</message>
 	<message key="manager.reviewForms.completed">Concluído</message>
 	<message key="manager.reviewForms.inReview">Em avaliação</message>
-	<message key="manager.reviewForms.confirmDeletePublished">Confirmar exclusão de formulário de avaliação publicado</message>
 	<message key="manager.reviewForms.confirmDeleteUnpublished">Confirmar exclusão de formulário de avaliação não publicado</message>
 	<message key="manager.reviewForms.form.titleRequired">Título do formulário de avaliação obrigatório.</message>
 	<message key="manager.reviewFormElements">Campos do formulário de avaliação</message>
@@ -2857,7 +2855,6 @@ Idiomas estão disponíveis para download manual no <a href="http://pkp.sfu.ca">
 	<message key="manager.reviewFormElements.copyTo">Copiar para</message>
 	<message key="manager.reviewFormElements.question">Pergunta</message>
 	<message key="manager.reviewFormElements.required">Campo de avaliação obrigatório</message>
-	<message key="manager.reviewFormElements.viewable">Disponível (aos autores)</message>
 	<message key="manager.reviewFormElements.elementType">Tipo de campo</message>
 	<message key="manager.reviewFormElements.possibleResponse">Resposta possível</message>
 	<message key="manager.reviewFormElements.addResponseItem">Incluir resposta possível</message>
@@ -2926,7 +2923,7 @@ Idiomas estão disponíveis para download manual no <a href="http://pkp.sfu.ca">
 	<message key="submission.layout.publicGalleyId">Identificador Público de Composição</message>
 	<message key="submission.layout.galleyPublicIdentificationExists">Identificador público de composição já existe.</message>
 	<message key="user.profile.form.profileImageInvalid">Formato de imagem para o perfil inválido ou excedo o tamanho permitido. Formatos permitidos são .gif, .jpg, ou .png e o tamanho da imagem não pode ser maior que 150x150 pixels.</message>
-	<message key="user.profile.form.profileImage">Imagem de perfil</message>
+	<message key="user.profile.form.profileImage">Foto</message>
 	<message key="user.profile.publicProfile">Perfil do usuário</message>
 	<message key="about.aboutThisPublishingSystem.altText">Processo Editorial e de Publicação do Sistema</message>
 	<message key="announcement.posted">Publicado</message>
@@ -2936,7 +2933,6 @@ Idiomas estão disponíveis para download manual no <a href="http://pkp.sfu.ca">
 	<message key="plugins.categories.reports.description">Plugins de Relatório são utilizados para implementar vários tipos de relatórios e extração de dados por parte dos Editores Gerentes</message>
 	<message key="manager.reviewForms.list.description">Os formulários de avaliação pelos pares criados aqui estarão disponíveis aos avaliadores para preenchimento, em vez do formulário padrão que consiste em duas caixas de texto de comentários com comentários exclusivos para o autor e outra para o  Editor e o Autor. Formulários de avaliação podem ser designados a seções específicas, e os editores poderão escolher qual formulário utilizar no momento da avaliação. em todos os casos, os editores poderão incluir as avaliações nas correspondências com o autor.</message>
 	<message key="manager.reviewForms.noneChosen">Nenhuma / Formulário de avaliação padrão</message>
-	<message key="manager.reviewForms.noneUsed">Nenhum formulário de avaliação foi utilizado.</message>
 	<message key="article.comments.sectionDefault">Padrão</message>
 	<message key="article.comments.disable">Desabilitar</message>
 	<message key="article.comments.enable">Habilitar</message>
@@ -2962,4 +2958,30 @@ Idiomas estão disponíveis para download manual no <a href="http://pkp.sfu.ca">
 	<message key="icon.font_small.alt">Menor</message>
 	<message key="icon.font_medium.alt">Médio</message>
 	<message key="icon.font_large.alt">Maior</message>
+	<message key="common.ccLicense"><![CDATA[<br /><br />
+	<a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new"><img alt="Licença Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
+	<br />Esta obra está licenciada sob uma <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new">Licença Creative Commons Attribution 3.0</a>.]]></message>
+	<message key="common.ccLicense.rt"><![CDATA[<div class="rtBlock">
+		<br />
+		<a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
+		<br />
+Esta obra está licenciada sob uma <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new">Licença Creative Commons Attribution 3.0</a>.
+	</div>]]></message>
+	<message key="journal.issn">ISSN</message>
+	<message key="manager.setup.doiSuffix">Sufixo DOI</message>
+	<message key="manager.setup.doiSuffixDefault">Usar padrão original (%j.v%vi%i.%a).</message>
+	<message key="manager.setup.doiSuffixPattern">Use o padrão informado abaixo para gerar sufixos DOI. Use %j para iniciais do periódico, %v para o volume, %i para o número da edição, %a para o ID do artigo no OJS e %p para o número da pagina.</message>
+	<message key="manager.setup.doiSuffixPattern.example">Por exemplo: vol%viss%ipp%p poderia criar um DOI do tipo 10.1234/vol3iss2pp230</message>
+	<message key="manager.setup.doiSuffixDescription">Um sufixo DOI pode possuir qualquer formato, mas, deve ser único para cada item publicado.</message>
+	<message key="manager.setup.doiSuffixCustomIdentifier">Usar o "Identificador Personalizado" para itens publicados como sufixo DOI (deve ser habilitado no Passo 4).</message>
+	<message key="manager.setup.publisherNoteDescription">Este texto aparecerá abaixo do título "Publicador" e acima do nome/URL do publicador, na seção "Patrocínio da Revista"</message>
+	<message key="manager.setup.sponsorNoteDescription">Este texto aparecerá abaixo do título "Patrocinadores" e acima da lista de patrocinadores e suas URLs, na seção "Patrocínio da Revista", na página"Sobre".</message>
+	<message key="manager.setup.contributorNoteDescription">Este texto aparecerá abaixo do título "Instituições de Fomento" e acima da lista de nomes e URLs das organizações que fomentam o periódico, na seção "Patrocínio da Revista", na página "Sobre".</message>
+	<message key="manager.setup.form.doiPrefixPattern">O padrão DOI deve estar na forma 10.xxxx.</message>
+	<message key="author.submit.mustEnterWaiverReason">Infome o motivo da solicitação de isenção de taxa.</message>
+	<message key="author.submissions.queuedReviewSubsequent">Em Rodada de Avaliação {$round}</message>
+	<message key="author.submissions.queuedReviewRevisions">Em Avaliação: Correções Obrigatórias</message>
+	<message key="author.submissions.queuedEditingCopyedit">Em Edição: Edição de texto solicitada</message>
+	<message key="author.submissions.queuedEditingProofread">Em Edição: Leitura de Prova solicitada</message>
+	<message key="debug.memoryUsage">Uso de Memória:</message>
 </locale>

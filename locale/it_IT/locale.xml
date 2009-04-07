@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+<!DOCTYPE locale SYSTEM "../locale.dtd">
 
 <!--
   * locale.xml
@@ -756,28 +756,6 @@ Da notare che l'interfaccia OAI pu&#x00F2; essere disabilitata per questo sito t
 	<message key="manager.statistics.statistics.note">Nota: Le percentuali per le submission peer reviewed non possono raggiungere il 100%, dato che gli items risottomessi sono accettati, rifiutati, o ancora nel processo editoriale.</message>	
 
 	<message key="manager.statistics.reports">Generatore di rapporti</message>
-	<message key="manager.statistics.reports.reportType">Tipo di rapporto</message>
-	<message key="manager.statistics.reports.dateFrom">Da</message>
-	<message key="manager.statistics.reports.dateTo">Fino a</message>
-	<message key="manager.statistics.reports.type.journal">Rapporti della rivista</message>
-	<message key="manager.statistics.reports.type.editor">Rapporti dell'editor</message>
-	<message key="manager.statistics.reports.type.reviewer">Rapporti del revisore</message>
-	<message key="manager.statistics.reports.type.section">Rapporto di sezione</message>
-	<message key="manager.statistics.reports.generate">Genera rapporto</message>
-	<message key="manager.statistics.reports.status">Stato (Accettato, rifiutato, altro)</message>
-	<message key="manager.statistics.reports.dateDecided">Data fissata</message>
-	<message key="manager.statistics.reports.author">Autore #{$num}</message>
-	<message key="manager.statistics.reports.affiliation">Istituto/Organizzazione #{$num}</message>
-	<message key="manager.statistics.reports.country">Nazione #{$num}</message>
-	<message key="manager.statistics.reports.reviewer">Revisore #{$num}</message>
-	<message key="manager.statistics.reports.editor">Editor #{$num}</message>
-	<message key="manager.statistics.reports.score">Score #{$num}</message>
-	<message key="manager.statistics.reports.singleScore">Score</message>
-	<message key="manager.statistics.reports.recommendation">Raccomandazione #{$num}</message>
-	<message key="manager.statistics.reports.daysToDecision">Giorni per la decisione</message>
-	<message key="manager.statistics.reports.daysToPublication">Giorni per la pubblicazione</message>
-	
-
 	<!-- Plugin Management -->
 	<message key="manager.plugins.pluginManagement">Gestione Plugin</message>
 	<message key="manager.plugins.sitePlugin">Questo &#x00E8; site-wide plugin. Solo il Manager del sito pu&#x00F2; gestire questi plugin.</message>
@@ -1129,8 +1107,6 @@ Fate <a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">click qui
 	<message key="manager.sections.policy">Policy di sezione</message>
 	<message key="manager.sections.identifyType">Nei metadata, identifica gli items in questa sezione come</message>
 	<message key="manager.sections.identifyTypeExamples">(Per esempio, "Articolo peer-review", "Articolo non peer-review", etc.)</message>
-	<message key="manager.sections.abstractsDisabled">Gli item pubblicati in questa sezione non avranno abstract.</message>
-
 	<!-- Import/Export -->
 	<message key="manager.importExport">Importa/Exporta i Dati</message>
 
@@ -2281,7 +2257,6 @@ Il vostro server supporta mbstring: <strong>{$supportsMBString}</strong>]]></mes
 
 	<message key="rt.admin.readingToolsEnabled">Reading tools</message>
 	<message key="rt.admin.selectedVersion">Versione selezionata</message>
-	<message key="rt.admin.rtEnable">Per abilitare i Reading Tools per questo journal, vai alle opzioni dei Reading Tool.</message>
 	<message key="rt.admin.settings.description">I reading tools si trovano in un frame accanto agli item pubblicati in quelle sezioni del journal desigante per l'indicizzazione. I reading tools consistono di un insieme di strumenti correlati con gli item pubblicati, elencati sotto, e un insieme di strumenti che forniscono accesso ad item correlati, e sono organizzati per materia e disciplina.</message>
 	<message key="rt.admin.settings.enableReadingTools">Abilita i Reading Tools per determinate sezioni del journal.</message>
 	<message key="rt.admin.settings.abstract">Abstract (mostra l'abstract dell'item).</message>
@@ -2633,7 +2608,6 @@ Dopo che avete finito con le vostre revisioni, rinominare il file da NomeAutoreQ
 	<message key="manager.payment.options.submissionFee">Submission dell'articolo</message>
 	<message key="manager.payment.options.publicationFee">Pubblicazione dell'articolo</message>
 	<message key="manager.payment.options.membershipFee">Association Membership</message>
-	<message key="manager.payment.options.payPerViewFee">Articolo Pay-Per-View</message>
 	<message key="manager.payment.options.waiverPolicy">Policy di rinuncia</message>
 	<message key="manager.payment.options.onlypdf">Solo accesso ristretto alle versioni PDF degli articoli</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Questo attiverà i pagamenti per le sottoscrizioni, dove le tipologie, il costo, la durata e i sottoscrittori sono amministrati dall'Amministratore delle sottoscrizioni.</message>
@@ -2772,9 +2746,6 @@ Authors who publish with this journal agree to the following terms:
 	<message key="rt.captureCite.format">Formato della citazione</message>
 	<message key="rt.findingReferences.googleScholar">Google Scholar</message>
 	<message key="rt.findingReferences.windowsLiveAcademic">Windows Live Academic</message>
-	<message key="icon.small.alt">Piccolo</message>
-	<message key="icon.medium.alt">Medio</message>
-	<message key="icon.large.alt">Grande</message>
 	<message key="default.journalSettings.submissionFeeDescription">Agli autori è richiesto di pagare una quota per la submission dell'articolo come parte del processo di submission per contribuire ai costi della rivista.</message>
 	<message key="default.journalSettings.fastTrackFeeDescription">Con il pagamento di questa quota, la revisione, la decisione editoriale, e la notifica all'autore su questo lavoro sono garantite entro 4 settimane.</message>
 	<message key="default.journalSettings.publicationFeeDescription">Se questo articolo viene accettato per la pubblicazione, ti sarà chiesto di pagare una quota di pubblicazione per l'articolo per coprire i costi della pubblicazione.</message>
@@ -2839,7 +2810,6 @@ Authors who publish with this journal agree to the following terms:
 	<li>Trasforma questa frase in un hyperlink evidenziando la frase e usando lo strumento Inserisci Hyperlink di Word e la URL appropriata preparata in #2.</li>
 	</ol>]]></message>
 	<message key="default.journalSettings.waiverPolicy">Se non hai fondi per pagare tali quote, avrai l'opportunità di derogare ogni quota. Non vogliamo impedire la pubblicazione di lavori notevoli.</message>
-	<message key="default.journalSettings.payPerViewFeeDescription">Il pagamento di questa quota ti permetterà di vedere, scaricare, e stampare questo articolo.</message>
 	<message key="default.journalSettings.membershipFeeDescription">Il pagamento di questa quota ti iscriverà come membro a questa associazione per un anno e ti permetterà l'accesso libero a questa rivista.</message>
 	<message key="default.journalSettings.donationFeeDescription">Donazioni di qualsiasi somma a questa rivista sono bene accette e fornisconi mezzi ai curatori per continuare a permettere alla rivista la più alta qualità per i suoi lettori.</message>
 	<message key="manager.setup.competingInterests">Interessi concorrenziali</message>
@@ -2861,7 +2831,6 @@ Authors who publish with this journal agree to the following terms:
 	<message key="author.submit.journalSectionDescription"><![CDATA[Seleziona la sezione appropriata per questa submission (Vedi Policy delle sezioni in <a href="{$aboutUrl}" target="_new">Info</a> ).]]></message>
 	<message key="submission.layout.galleyLanguageRequired">E' neccessaria una lingua della bozza.</message>
 	<message key="payment.loginRequired.forArticle">E' neccesaria la sottoscrizione  o il pay-per-view per accedere all'articolo. Per verificare la sottoscrizione o pagare la quota, effettua il log in alla rivista.</message>
-	<message key="payment.type.payPerView">Quota della pay-per-view dell'articolo</message>
 	<message key="manager.payment.timestamp">Marcatura oraria</message>
 	<message key="manager.groups.context.people">Fai apparire il titolo come categoria a sè sotto Persone (es. Redazione)</message>
 	<message key="submission.layout.galleyLocaleRequired">E' necessaria una lingua della bozza.</message>
@@ -2872,16 +2841,13 @@ Authors who publish with this journal agree to the following terms:
 	<message key="manager.reviewForms">Modulo di revisione</message>
 	<message key="manager.reviewForms.noneChosen">Nessuno / Revisione del modulo libero</message>
 	<message key="manager.reviewForms.noneCreated">Non è stato creato nessun modulo di revisione</message>
-	<message key="manager.reviewForms.noneUsed">Non è stato usato nessun modulo di revisione</message>
 	<message key="manager.reviewForms.create">Crea un modulo di revisione</message>
 	<message key="manager.reviewForms.edit">Modulo di revisione</message>
-	<message key="manager.reviewForms.reviewFormData">Data del modulo di revisione</message>
 	<message key="manager.reviewForms.title">Titolo</message>
 	<message key="manager.reviewForms.description">Descrizione e Istruzioni</message>
 	<message key="manager.reviewForms.preview">Modulo di anteprima</message>
 	<message key="manager.reviewForms.completed">Completato</message>
 	<message key="manager.reviewForms.inReview">In revisione</message>
-	<message key="manager.reviewForms.confirmDeletePublished">Conferma la cancellazione di un modulo di revisione pubblicato...</message>
 	<message key="manager.reviewForms.confirmDeleteUnpublished">Conferma la cancellazione di un modulo di revisione non pubblicato ...</message>
 	<message key="manager.reviewForms.form.titleRequired">E' necessario inserire un titolo per il modulo</message>
 	<message key="manager.reviewFormElements">Item del modulo</message>
@@ -2892,7 +2858,6 @@ Authors who publish with this journal agree to the following terms:
 	<message key="manager.reviewFormElements.copyTo">Copia in:</message>
 	<message key="manager.reviewFormElements.question">Item</message>
 	<message key="manager.reviewFormElements.required">E' necessario che i revisori completino il documento</message>
-	<message key="manager.reviewFormElements.viewable">Visibile (per gli autori)</message>
 	<message key="manager.reviewFormElements.elementType">Tipo di item</message>
 	<message key="manager.reviewFormElements.possibleResponse">Selezione</message>
 	<message key="manager.reviewFormElements.addResponseItem">Aggiungi una selezione</message>
@@ -3046,5 +3011,32 @@ Il numero nella tabella 3 non è allineato nella prima colonna
 <pre>4. FORMATTAZIONE
 Il paragrafo che comincia con "Questo ultimo argomento..." non è allineato</pre></pre>]]></message>
 	<message key="manager.reviewForms.list.description">I moduli di peer review creati qui verranno presentati ai revisori per essere completati, invece del modulo di default che consiste di due caselle di testo vuote, la prima "per l'autore e per il curatore", e la seconda "per il curatore". I moduli di revisione possono essere designati per una sezione specifica della rivista, e i curatori avranno l'opzione di scegliere quale modulo usare nell'assegnare la revisione. In tutti i casi, i curatori avranno l'opzione di includere le revisioni in corrispondenza dell'autore.</message>
+	<message key="journal.issn">ISSN</message>
+	<message key="manager.setup.doiSuffix">Suffisso DOI</message>
+	<message key="common.ccLicense"><![CDATA[<br /><br />
+	<a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
+	<br />
+	A questo lavoro è stata attribuita una <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new">Licenza Creative Commons Attribution 3.0</a>.]]></message>
+	<message key="common.ccLicense.rt"><![CDATA[<div class="rtBlock">
+		<br />
+		<a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
+		<br />
+		A questo lavoro è stata attribuita una <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new">Licenza Creative Commons Attribution 3.0</a>.
+	</div>]]></message>
+	<message key="manager.setup.doiSuffixDefault">Usa i pattern di default (%j.v%vi%i.%a).</message>
+	<message key="manager.setup.doiSuffixPattern">Usa i pattern inseriti qui sotto per generare i suffissi DOI. Utilizza %j per le iniziali della rivista, %v per il numero del volume, %i per il numero del fascicolo, %a per l'ID dell'articolo in OJS, e %p per il numero della pagina.</message>
+	<message key="manager.setup.doiSuffixPattern.example">Per esempio, vol%viss%ipp%p potrebbe creare un DOI come 10.1234/vol3iss2pp230</message>
+	<message key="manager.setup.doiSuffixDescription">Un suffisso DOi può avere qualsiasi formato, ma deve essere unico per ogni articolo pubblicato.</message>
+	<message key="manager.setup.doiSuffixCustomIdentifier">Come suffisso DOI, utilizza il "Custom Identifier" per gli articoli pubblicati  (deve essere abilitato nel Punto 4).</message>
+	<message key="manager.setup.publisherNoteDescription">Questo testo apparirà sotto l'intestazione "Editore" e sopra il nome/url dell'editore sotto "Sponsor della rivista" nella pagina "Info".</message>
+	<message key="manager.setup.sponsorNoteDescription">Questo testo apparirà sotto l'intestazione "Sponsor" e sopra la lista dei nomi e degli url degli sponsor sotto "Sponsor della rivista" nella pagina "Info".</message>
+	<message key="manager.setup.contributorNoteDescription">Questo testo apparirà sotto l'intestazione "Fonti di supporto" e sopra la lista dei nomi e degli url degli enti di supporto sotto "Sponsor della rivista" nella pagina "Info".</message>
+	<message key="manager.setup.form.doiPrefixPattern">Il pattern DOI deve essere nel formato 10.xxxx.</message>
+	<message key="author.submit.mustEnterWaiverReason">Se stai facendo domanda di rinuncia, deve inserire una motivazione nello spazio apposito.</message>
+	<message key="author.submissions.queuedReviewSubsequent">Nel ciclo di revisione {$round}</message>
+	<message key="author.submissions.queuedReviewRevisions">In revisione: revisioni richieste</message>
+	<message key="author.submissions.queuedEditingCopyedit">In Editing: Copyedit richiesto</message>
+	<message key="author.submissions.queuedEditingProofread">In Editing: Correzione di bozze richiesta</message>
+	<message key="debug.memoryUsage">Utilizzo della memoria:</message>
 </locale>
 
