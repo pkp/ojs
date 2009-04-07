@@ -86,10 +86,12 @@ class TinyMCEPlugin extends GenericPlugin {
 					case 3:
 						$count = max(1, count($templateMgr->get_template_vars('authors')));
 						for ($i=0; $i<$count; $i++) {
+							$fields[] = "authors-$i-affiliation";
 							$fields[] = "authors-$i-biography";
 							$fields[] = "authors-$i-competingInterests";
 						}
 						$fields[] = 'abstract';
+						$fields[] = 'citations';
 						break;
 				}
 				break;
@@ -227,10 +229,12 @@ class TinyMCEPlugin extends GenericPlugin {
 			case 'copyeditor/saveMetadata':
 				$count = max(1, count($templateMgr->get_template_vars('authors')));
 				for ($i=0; $i<$count; $i++) {
+					$fields[] = "authors-$i-affiliation";
 					$fields[] = "authors-$i-biography";
 					$fields[] = "authors-$i-competingInterests";
 				}
 				$fields[] = 'abstract';
+				$fields[] = 'citations';
 				break;
 			case 'sectionEditor/editSuppFile':
 			case 'editor/editSuppFile':
