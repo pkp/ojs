@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE data SYSTEM "../../../../../lib/pkp/dtd/xmlData.dtd">
+<!DOCTYPE data SYSTEM "../../../dtd/xmldata.dtd">
 
 <!--
  * email_templates_data.xml
@@ -130,7 +130,7 @@ Teşekkür ederiz,
 
 [Brief description of journal]
 
-LOCKSS programı <http://lockss.stanford.edu/>, uluslararası bir kütüphane/yayımcı organizasyonu olup bir arşivin yaygın ve güvenilir olarak kullanılmasını sağlayan etkin bir örnektir. Diğer detaylar aşağıda belirtilmiştir. Standart kişisel bilgisayarlarda kullanılabilen yazılım ücretsizdir, sistem kolaylıkla aktif olabilmekte ve çok az bakım gerektirmektedir. 
+LOCKSS programı <http://lockss.org/>, uluslararası bir kütüphane/yayımcı organizasyonu olup bir arşivin yaygın ve güvenilir olarak kullanılmasını sağlayan etkin bir örnektir. Diğer detaylar aşağıda belirtilmiştir. Standart kişisel bilgisayarlarda kullanılabilen yazılım ücretsizdir, sistem kolaylıkla aktif olabilmekte ve çok az bakım gerektirmektedir. 
 
 Derginizin arşivlenebilmesi için sizi LOCKSS topluluğunun üyesi olmaya davet ediyoruz. Böylelikle gerek fakültenizden gerek dünya çapında diğer araştırma birimlerinden çalışmaları toplayabilir ve güvenle saklayabilirsiniz. Bu amaçla bir çalışanınızı görevlendirerek LOCKSS sitesini ziyaret etmesini ve sistem çalışması ile ilgili bilgileri edinmesini sağlayınız. Sizden bu derginin arşiv desteğinin fizibilitesi ile ilgili haber bekliyor olacağım.
 

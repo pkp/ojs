@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE data SYSTEM "../../../../../lib/pkp/dtd/xmlData.dtd">
+<!DOCTYPE data SYSTEM "../../../dtd/xmldata.dtd">
 
 <!--
   * email_templates_data.xml
@@ -114,7 +114,7 @@ Grazie,
 
 [Breve descrizione del journal]
 
-Il programma LOCKSS <http://lockss.stanford.edu/>, una iniziativa biblioteca/editore, &#x00E8; un esempio funzionante di un deposito distribuito di preservazione e archiviazione, dettagli aggiuntivi sono di sotto. Il software, che funziona su personal computer ordinario &#x00E8; libero; il sistema &#x00E8; portato facilmente on-line; la manutenzione continua &#x00E8; pochissima.
+Il programma LOCKSS <http://lockss.org/>, una iniziativa biblioteca/editore, &#x00E8; un esempio funzionante di un deposito distribuito di preservazione e archiviazione, dettagli aggiuntivi sono di sotto. Il software, che funziona su personal computer ordinario &#x00E8; libero; il sistema &#x00E8; portato facilmente on-line; la manutenzione continua &#x00E8; pochissima.
 
 Per assistere nell'archiviazione del nostro journal, vi invitiamo a diventare membri della comunit&#x00E0; LOCKSS, per aiutare a collezionare e preservare titoli prodotti dalla vostra facolt&#x00E0; e di altri studiosi a livello mondiale. Per fare questo, si prega di avere qualcuno nel vostro staff che visiti il sito LOCKSS per informazioni su come il sistema opera. Aspetto con impazienza di sentire a voi la possibilit&#x00E0; di fornire questo supporto di archiviazione per questo journal.
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE data SYSTEM "../../../../../lib/pkp/dtd/xmlData.dtd">
+<!DOCTYPE data SYSTEM "../../../dtd/xmldata.dtd">
 
 <!--
   * email_templates_data.xml
@@ -180,7 +180,7 @@ Agradecendo desde já sua atenção,
 
 [Breve descrição da revista]
 
-O sistema LOCKSS <http://lockss.stanford.edu/>, uma initiativa internacional de bibliotecas e editores, é um exemplo funcional de um repositório digital de preservação e arquivamento distribuído. O sistema, que é operado em ambiente tecnológico idêntico ao de um computador pessoal, é gratuito, permite sua implementação e disponibilização online rápida, e sua manutenção é mínima.
+O sistema LOCKSS <http://lockss.org/>, uma initiativa internacional de bibliotecas e editores, é um exemplo funcional de um repositório digital de preservação e arquivamento distribuído. O sistema, que é operado em ambiente tecnológico idêntico ao de um computador pessoal, é gratuito, permite sua implementação e disponibilização online rápida, e sua manutenção é mínima.
 
 Para auxiliar no arquivamento de nossa revista, convidamos sua biblioteca a se tornar membro da comunidade LOCKSS, e ajudar a colecionar e preservar títulos produzidos mundialmente. Para isso, visite o site do LOCKSS para saber como funciona o sistema e como fazer parte da comunidade. Aguardamos sua resposta sobre sua disponibilidade para arquivamento desta revista site for information on how this system operates. 
 

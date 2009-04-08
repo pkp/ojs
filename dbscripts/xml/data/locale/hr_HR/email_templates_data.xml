@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE data SYSTEM "../../../../../lib/pkp/dtd/xmlData.dtd">
+<!DOCTYPE data SYSTEM "../../../dtd/xmldata.dtd">
 
 <!--
   * email_templates_data.xml
@@ -94,7 +94,7 @@ Unaprijed hvala,
 
 [Kratki opis časopisa]
 
-Međunarodna bibliotekarska/izdavačka inicijativa Program LOCKSS <http://lockss.stanford.edu/> predstavlja funkcionalni primjer distribuiranog repozitorija namijenjenog čuvanju i arhiviranju sadržaja. Dodatne informacije možete pročitati u nastavku teksta. Potreban software koji se može koristiti i na običnom osobnom računalu je besplatan; sustav se vrlo jednostavno postavlja on-line te zahtijeva vrlo malo kontinuiranog održavanja.
+Međunarodna bibliotekarska/izdavačka inicijativa Program LOCKSS <http://lockss.org/> predstavlja funkcionalni primjer distribuiranog repozitorija namijenjenog čuvanju i arhiviranju sadržaja. Dodatne informacije možete pročitati u nastavku teksta. Potreban software koji se može koristiti i na običnom osobnom računalu je besplatan; sustav se vrlo jednostavno postavlja on-line te zahtijeva vrlo malo kontinuiranog održavanja.
 
 Kako biste doprinijeli arhiviranju našeg časopisa, pozivamo vas da postanete član LOCKSS zajednice čime biste pripomogli u sakupljanju i očuvanju naslova koje izdaje vaš fakultet i drugi znanstvenici diljem svijeta. Želite li se uključiti, molimo vas da jedan/a od vaših djelatnika/ca posjeti stranicu LOCKSS-a kako bi dobio/la informacije o funkcioniranju sustava. Nadamo se da ćete nas uskoro kontaktirati u vezi s izvedivošću pružanja ovakve podrške arhiviranju časopisa.
 
