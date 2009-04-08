@@ -1,7 +1,7 @@
 {**
  * @file paymentForm.tpl
  *
- * Copyright (c) 2006-2007 Gunther Eysenbach, Juan Pablo Alperin
+ * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Form for submitting a PayPal payment
