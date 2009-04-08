@@ -5,11 +5,11 @@
 	<!--  VERSION:   1.0                                               -->
 	<!--  DATE:      August 2006                                       -->
 	<!--                                                               -->
-	<!--  Copyright 2006, MJ Suhonos <mj@robotninja.com>               -->
+	<!--  Copyright 2006-2009 MJ Suhonos <mj@robotninja.com>           -->
 	<!--  Contributions by Alf Eaton <alf@hubmed.org>                  -->
 	<!--                                                               -->
- 	<!-- Distributed under the GNU GPL v2.							   -->
-	<!-- For full terms see the file docs/COPYING.					   -->
+ 	<!-- Distributed under the GNU GPL v2.                             -->
+	<!-- For full terms see the file docs/COPYING.                     -->
 	<!--                                                               -->
 	<!-- ============================================================= -->
 

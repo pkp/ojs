@@ -1,7 +1,7 @@
 {**
  * viewPayments.tpl
  *
- * Copyright (c) 2006 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
+ * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Table to view all past CompletedPayments
