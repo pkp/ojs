@@ -22,7 +22,7 @@
 	<message key="plugins.importexport.METSExport.export.error.IssuesNotFound">Žádné číslo neodpovídá uvedenému ID čísla "{$issueId}".</message>
 	<message key="plugins.importexport.METSExport.export.error.unknownIssue">Neznámá cesta {$journalPath}</message>
 	<message key="plugins.importexport.METSExport.settings.FContent">Použít base64 encoding pro balič obsahu</message>
-	<message key="plugins.importexport.METSExport.settings.FLocat">Použít URL bitsreamu pro balič obsahu</message>
+	<message key="plugins.importexport.METSExport.settings.FLocat">Použít URL bitstreamu pro balič obsahu</message>
 	<message key="plugins.importexport.METSExport.settings.organization">METS:agent element organization attribute</message>
 	<message key="plugins.importexport.METSExport.settings.preservationLevel">Úroveň zachování PREMIS</message>
 	<message key="plugins.importexport.METSExport.settings.exportSuppFiles">Export doplňkových souborů</message>

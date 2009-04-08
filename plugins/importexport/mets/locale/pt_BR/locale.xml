@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
 
 <!--
   * locale.xml
@@ -22,7 +22,7 @@
 	<message key="plugins.importexport.METSExport.export.error.IssuesNotFound">Nenhuma edição encontrada com o ID "{$issueId}" especificado.</message>
 	<message key="plugins.importexport.METSExport.export.error.unknownIssue">Caminho da revista {$journalPath} desconhecido</message>
 	<message key="plugins.importexport.METSExport.settings.FContent">Utilizar codificação base64 para wrapper de conteúdo</message>
-	<message key="plugins.importexport.METSExport.settings.FLocat">Utilizar URL do bitsream para o wrapper de conteúdo</message>
+	<message key="plugins.importexport.METSExport.settings.FLocat">Utilizar URL do bitstream para o wrapper de conteúdo</message>
 	<message key="plugins.importexport.METSExport.settings.organization">METS:agente elemento organização atributo</message>
 	<message key="plugins.importexport.METSExport.settings.preservationLevel">Nível de preservação PREMIS</message>
 	<message key="plugins.importexport.METSExport.settings.exportSuppFiles">Exportar documentos suplementares</message>
