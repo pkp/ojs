@@ -3,7 +3,7 @@
 /**
  * @file TranslatorHandler.inc.php
  *
- * Copyright (c) 2003-2008 John Willinsky
+ * Copyright (c) 2003-2009 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class TranslatorHandler
@@ -121,7 +121,7 @@ class TranslatorHandler extends Handler {
 		}
 
 		// Save the changes file by file.
-		import('file.EditableLocaleFile');
+		import('i18n.EditableLocaleFile');
 		foreach ($changesByFile as $filename => $changes) {
 			$file =& new EditableLocaleFile($locale, $filename);
 			foreach ($changes as $key => $value) {
@@ -153,7 +153,7 @@ class TranslatorHandler extends Handler {
 		}
 
 		// Deal with email removals
-		import('file.EditableEmailFile');
+		import('i18n.EditableEmailFile');
 		$deleteEmails = Request::getUserVar('deleteEmail');
 		if (!empty($deleteEmails)) {
 			$file =& new EditableEmailFile($locale, Locale::getEmailTemplateFilename($locale));
@@ -200,7 +200,7 @@ class TranslatorHandler extends Handler {
 		$templateMgr =& TemplateManager::getManager();
 
 
-		import('file.EditableLocaleFile');
+		import('i18n.EditableLocaleFile');
 		$localeContentsRangeInfo = Handler::getRangeInfo('localeContents');
 		$localeContents = EditableLocaleFile::load($filename);
 
@@ -265,7 +265,7 @@ class TranslatorHandler extends Handler {
 			Request::redirect(null, null, 'edit', $locale);
 		}
 
-		import('file.EditableLocaleFile');
+		import('i18n.EditableLocaleFile');
 		$changes = Request::getUserVar('changes');
 		$file =& new EditableLocaleFile($locale, $filename);
 
@@ -372,7 +372,7 @@ class TranslatorHandler extends Handler {
 
 		if (!in_array($emailKey, array_keys($emails))) Request::redirect(null, null, 'index');
 
-		import('file.EditableEmailFile');
+		import('i18n.EditableEmailFile');
 		$file =& new EditableEmailFile($locale, Locale::getEmailTemplateFilename($locale));
 
 		$subject = Request::getUserVar('subject');
@@ -396,7 +396,7 @@ class TranslatorHandler extends Handler {
 
 		if (!in_array($emailKey, array_keys($referenceEmails)) && !in_array($emailKey, array_keys($emails))) Request::redirect(null, null, 'index');
 
-		import('file.EditableEmailFile');
+		import('i18n.EditableEmailFile');
 		$file =& new EditableEmailFile($locale, Locale::getEmailTemplateFilename($locale));
 
 		$subject = TranslatorHandler::correctCr(Request::getUserVar('subject'));

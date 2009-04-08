@@ -3,7 +3,7 @@
 /**
  * @file dbXMLtoSQL.php
  *
- * Copyright (c) 2003-2008 John Willinsky
+ * Copyright (c) 2003-2009 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class dbXMLtoSQL
@@ -92,10 +92,10 @@ class dbXMLtoSQL extends CommandLineTool {
 
 	/**
 	 * Parse an XML database file and output the corresponding SQL statements.
-	 * See lib/pkp/dtd/xmlSchema.dtd for the format of the XML files.
+	 * See dbscripts/xml/xmlschema.dtd for the format of the XML files.
 	 */
 	function execute() {
-		require_once('adodb-xmlschema.inc.php');
+		require('adodb/adodb-xmlschema.inc.php');
 
 		if (in_array($this->command, array('print', 'save'))) {
 			// Don't connect to actual database (so parser won't build upgrade XML)

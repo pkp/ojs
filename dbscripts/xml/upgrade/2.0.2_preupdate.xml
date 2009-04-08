@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+<!DOCTYPE data SYSTEM "../dtd/xmldata.dtd">
 
 <!--
   * 2.0.2_preupdate.xml
   *
-  * Copyright (c) 2003-2008 John Willinsky
+  * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * 2.0.2 database updates XML file (executed before database schema updates).

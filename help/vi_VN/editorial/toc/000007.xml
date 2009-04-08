@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
 
 <!--
   * 000007.xml
   *
-  * Copyright (c) 2003-2008 John Willinsky
+  * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * table of contents for Editorial Process - Section Editor's Role - Editing

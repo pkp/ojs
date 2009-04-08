@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE version SYSTEM "../../lib/pkp/dtd/rtVersion.dtd">
+<!DOCTYPE version SYSTEM "../rt-version.dtd">
 
 <!--
   * Mathematics.xml
   *
-  * Copyright (c) 2003-2008 John Willinsky
+  * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Reading Tools version: Mathematics (en_US)
