@@ -13,6 +13,6 @@
   -->
  
 <locale name="ja_JP" full_name="日本語">
-	<message key="plugins.block.role.displayName">担当固有ブロック</message>
-	<message key="plugins.block.role.description">このプラグインは各ユーザの担当に合った情報（投稿数、編集者や著者へのクイックリンクなど）を持つサイドバーブロックを表示します。</message>
+	<message key="plugins.block.role.displayName">役割固有ブロック</message>
+	<message key="plugins.block.role.description">サイドバーにユーザの役割に関係する情報（投稿数、編集者や著者へのクイックリンクなど）を表示します。</message>
 </locale>

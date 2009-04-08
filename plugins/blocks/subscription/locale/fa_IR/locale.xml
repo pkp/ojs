@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.block.subscription.displayName">بلوک اشتراک</message>
+	<message key="plugins.block.subscription.description">این پلاگین اطلاعات اشتراک را در نوار حاشیه نمایش میدهد.</message>
+	<message key="plugins.block.subscription.blockTitle">اشتراک</message>
+	<message key="plugins.block.subscription.expires">انقضا</message>
+	<message key="plugins.block.subscription.providedBy">ایجاد دسترسی توسط:</message>
+	<message key="plugins.block.subscription.providedByInstitution">دسترسی توسط مؤسسه شما فراهم شده است.</message>
+	<message key="plugins.block.subscription.comingFromIP">مربوط است به IP:</message>
+</locale>

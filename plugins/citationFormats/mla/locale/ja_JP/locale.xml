@@ -15,5 +15,5 @@
 <locale name="ja_JP" full_name="日本語">
 	<message key="plugins.citationFormats.mla.displayName">MLA引用形式プラグイン</message>
 	<message key="plugins.citationFormats.mla.citationFormatName">MLA</message>
-	<message key="plugins.citationFormats.mla.description">このプラグインはMLA引用形式を実装します。</message>
+	<message key="plugins.citationFormats.mla.description">MLA引用形式を実装します。</message>
 </locale>

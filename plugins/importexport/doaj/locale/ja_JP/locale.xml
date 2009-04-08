@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ja_JP (日本語) locale.
+  *
+  * $Id$
+  -->
+
+<locale name="ja_JP" full_name="日本語">
+	<message key="plugins.importexport.doaj.displayName">DOAJエクスポートプラグイン</message>
+	<message key="plugins.importexport.doaj.description">DOAJに報告する雑誌データをエクスポートし、DOAJにメールで送信します。</message>
+
+	
+	<message key="plugins.importexport.doaj.export">雑誌データをDOAJにエクスポートする</message>
+	<message key="plugins.importexport.doaj.export.journal">雑誌情報をエクスポートする</message>
+	<message key="plugins.importexport.doaj.export.email">DOAJにメールする</message>
+	<message key="plugins.importexport.doaj.export.journalInfo">DOAJでアーカイブするための論文情報をXML形式でエクスポートします。</message>
+	<message key="plugins.importexport.doaj.export.emailInfo">この雑誌をDOAJに登録するために、このフォームを使ってDOAJにメールしてください。</message>
+
+</locale>

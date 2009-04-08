@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.theme.custom.name">Plugin for designtema</message>
+	<message key="plugins.theme.custom.description">Denne plugin'en gjør det mulig å tilpasse nettstedets designtema for tidsskriftet.</message>
+	<message key="plugins.theme.custom.notWritable">MERK: Denne plugin'ens stilark (css-fil), "{$stylesheetFileLocation}", er for øyeblikket ikke en overskrivbar fil. Filen må åpnes for overskriving før plugin'en kan brukes.</message>
+	<message key="plugins.theme.custom.settings">Innstillinger</message>
+	<message key="plugins.theme.custom.pickColour">Velg farge</message>
+	<message key="plugins.theme.custom.header">Topptekst</message>
+	<message key="plugins.theme.custom.link">Lenke</message>
+	<message key="plugins.theme.custom.background">Bakgrunn</message>
+	<message key="plugins.theme.custom.foreground">Forgrunn</message>
+</locale>

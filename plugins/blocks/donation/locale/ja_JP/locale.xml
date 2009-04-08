@@ -14,5 +14,5 @@
  
 <locale name="ja_JP" full_name="日本語">
 	<message key="plugins.block.donation.displayName">寄付ブロック</message>
-	<message key="plugins.block.donation.description">このプラグインは寄付を受け付けるためのリンクをサイドバーに付けます。</message>
+	<message key="plugins.block.donation.description">サイドバーに寄付を受け付けるリンクを付けます。</message>
 </locale>

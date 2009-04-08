@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for this citation plugin in nl_NL.
+  *
+  * Translated by Martin van Luijt, m.van.luijt 'at' hccnet.nl
+  *
+  * $Id$
+  -->
+ 
+<locale name="nl_NL" full_name="Nederlands">
+	<message key="plugins.citationFormats.abnt.displayName">ABNT citatieformaat plugin</message>
+	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
+	<message key="plugins.citationFormats.abnt.description">Dize plugin implementeert het ABNT citatieformaat.</message>
+	<message key="plugins.citationFormat.abnt.location">Noord-Amerika</message>
+	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Beschikbaar op: <a href="{$url}" target="_new">{$url}</a>. Datum gebruik: {$retrievedDate}]]></message>
+</locale>

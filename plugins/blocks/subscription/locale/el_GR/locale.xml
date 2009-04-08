@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.block.subscription.displayName">Block Συνδρομών</message>
+	<message key="plugins.block.subscription.description">Το plugin αυτό παρέχει πληροφορίες συνδρομών στην πλαϊνή μπάρα.</message>
+	<message key="plugins.block.subscription.blockTitle">Συνδρομή</message>
+	<message key="plugins.block.subscription.expires">Λήγει</message>
+	<message key="plugins.block.subscription.providedBy">Η πρόσβαση παρέχετε από:</message>
+	<message key="plugins.block.subscription.providedByInstitution">Η πρόσβαση παρέχεται από το ίδρυμά σας</message>
+	<message key="plugins.block.subscription.comingFromIP">'Ελεγχος IP:</message>
+</locale>

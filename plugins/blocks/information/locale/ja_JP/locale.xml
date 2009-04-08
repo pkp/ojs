@@ -14,6 +14,6 @@
  
 <locale name="ja_JP" full_name="日本語">
 	<message key="plugins.block.information.displayName">情報ブロック</message>
-	<message key="plugins.block.information.description">このプラグインはサイドバーに情報リンクを付けます。</message>
-	<message key="plugins.block.information.link">情報</message>
+	<message key="plugins.block.information.description">サイドバーに情報リンクを付けます。</message>
+	<message key="plugins.block.information.link">ご案内</message>
 </locale>

@@ -72,4 +72,5 @@
 	<message key="plugins.generic.translator.deleteKey">Izbriši ovu frazu</message>
 	<message key="plugins.generic.translator.deleteEmail">Izbriši ovaj obrazac e-pošte</message>
 	<message key="plugins.generic.translator.saveBeforeContinuing">Snimite promjene koje ste napravili na ovoj stranici prije nego nastavite, jer će u suprotnom one biti izgubljene. Želite li nastaviti? Ako da, sve promjene koje nisu snimljene bit će izgubljene.</message>
+	<message key="plugins.generic.translator.localeKey.description">Unesite puni naziv fraze koju tražite.</message>
 </locale>

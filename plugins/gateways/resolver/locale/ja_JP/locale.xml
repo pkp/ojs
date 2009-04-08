@@ -14,7 +14,7 @@
  
 <locale name="ja_JP" full_name="日本語">
 	<message key="plugins.gateways.resolver.displayName">リゾルバプラグイン</message>
-	<message key="plugins.gateways.resolver.description">このプラグインは、引用情報に基づいて巻号および論文をリゾルブします。</message>
-	<message key="plugins.gateways.resolver.errors.errorMessage">指定された引用情報では単一のエンティティをリゾルブできませんでした。引用情報を追加して、このサイトにある単一のエンティティを参照できるようにしていください。</message>
+	<message key="plugins.gateways.resolver.description">引用情報に基づいて巻号と論文をリゾルブします。</message>
+	<message key="plugins.gateways.resolver.errors.errorMessage">指定された引用情報では1つの実体（巻号または論文）に絞り込むことができませんでした。引用情報を追加して、1つの実体を参照できるようにしてください。</message>
 	<message key="plugins.gateways.resolver.exportHoldings">所蔵情報のエクスポート</message>
 </locale>

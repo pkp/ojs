@@ -30,4 +30,8 @@
 	<message key="plugins.generic.webfeed.settings.currentIssue">Εμφάνιση στοιχείων στο τρέχον τεύχος.</message>
 	<message key="plugins.generic.webfeed.settings.recentArticles">πιο πρόφαστα δημοσιευμένα στοιχεία.</message>
 	<message key="plugins.generic.webfeed.settings.recentItemsRequired">Παρακαλούμε εισάγετε έναν θετικό ακέραιο αριθμό για πρόσφατα δημοσιευμένα στοιχεία.</message>
+	<message key="plugins.generic.webfeed.settings.homepage">Εμφάνιση συνδέσμων web feed μόνο στην αρχική σελίδα και στις σελίδες του τεύχους.</message>
+	<message key="plugins.generic.webfeed.atom.altText">Atom logo</message>
+	<message key="plugins.generic.webfeed.rss1.altText">RSS1 logo</message>
+	<message key="plugins.generic.webfeed.rss2.altText">RSS2 logo</message>
 </locale>

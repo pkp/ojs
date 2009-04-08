@@ -174,7 +174,7 @@
 	<message key="plugins.generic.thesis.studentFullNameLast">{$lastName}, {$firstName}{$space}{$middleName}</message>
 	<message key="plugins.generic.thesis.supervisorFullNameLast">{$lastName}, {$firstName}{$space}{$middleName}</message>
 	<message key="plugins.generic.thesis.supervisorFullName">{$firstName} {$middleName}{$space}{$lastName}</message>
-	<message key="plugins.generic.thesis.form.degreeName">Nombre de la titulación</message>
+	<message key="plugins.generic.thesis.form.degreeName">Titulación académica</message>
 	<message key="plugins.generic.thesis.form.degreeNameRequired">Se necesita nombre del título académico</message>
 	<message key="plugins.generic.thesis.form.degreeNameInstructions">El nombre del título académico</message>
 	<message key="plugins.generic.thesis.form.comment">Comentarios</message>

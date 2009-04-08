@@ -4,43 +4,43 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2003-2008 John Willinsky
-  * Weitergabe nach GNU GPL v2. Vollständiger Text s. docs/COPYING.
+  * Copyright (c) 2003-2007 John Willinsky
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Regionalisierungszeichenketten für die de_DE (deutsche) Regionaleinstellung.
-  *
-  * $Id$
+  * Regionalisierungszeichenketten für die de_DE (Deutsche) Regionaleinstellung.
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  
   -->
- 
+  
 <locale name="de_DE" full_name="German">
-	<message key="plugins.generic.counter.description"><![CDATA[Der Zählereinschub ermöglicht Aufzeichnung und <a href="http://www.projectcounter.org/about.html" target="_new">ZÄHLER</a> Wiedergabe der Webseitenaktivität.]]></message>
-	<message key="plugins.generic.counter">ZÄHLER-Statistik</message>
+	<message key="plugins.generic.counter.description"><![CDATA[Das Counter-Plug-In ermöglicht die Aufzeichnung und <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a>-entsprechende Wiedergabe der Webseitenaktivität.]]></message>
+	<message key="plugins.generic.counter">COUNTER-Statistik</message>
 
 	<message key="plugins.generic.counter.clearLog">Aufzeichnung löschen</message>
-	<message key="plugins.generic.counter.confirmClear">Sind Sie sicher, dass Sie das Protokoll löschen wollen? Die Aktion ist unwiederruflich.</message>
+	<message key="plugins.generic.counter.confirmClear">Sind Sie sicher, dass Sie das Protokoll löschen wollen? Die Aktion ist unwiderruflich.</message>
 	<message key="plugins.generic.counter.browseLog">Protokolleinträge auflisten</message>
 	<message key="plugins.generic.counter.browseLog.logBrowser">Protokollbrowser</message>
 
 	<message key="plugins.generic.counter.entry.timestamp">Zeitstempel</message>
 	<message key="plugins.generic.counter.entry.site">Webseite</message>
 	<message key="plugins.generic.counter.entry.journal">Zeitschrift</message>
-	<message key="plugins.generic.counter.entry.user">Benutzer</message>
+	<message key="plugins.generic.counter.entry.user">Benutzer/in</message>
 	<message key="plugins.generic.counter.sessionNumber">Sitzung #{$sessionNumber}</message>
 	<message key="plugins.generic.counter.entry.type">Typ</message>
 	<message key="plugins.generic.counter.entry.type.article">Beitrag</message>
 	<message key="plugins.generic.counter.entry.type.search">Suche</message>
 	<message key="plugins.generic.counter.entry.value">Zahl</message>
 
-	<message key="plugins.generic.counter.1a.title">Zeitschrift-Report 1 (R2): Volltext-Beitragsanforderungen pro Monat und Zeitschrift</message>
-	<message key="plugins.generic.counter.1a.title1">Zeitschrift-Report (R2)</message>
-	<message key="plugins.generic.counter.1a.title2">Zahl abgeschlossener Volltext-Anforderungen pro Monat und Zeitschrift (Year {$year})</message>
+	<message key="plugins.generic.counter.1a.title">Zeitschriften-Report 1 (R2): Volltext-Seitenaufrufe pro Monat und Zeitschrift</message>
+	<message key="plugins.generic.counter.1a.title1">Zeitschriften-Report 1 (R2)</message>
+	<message key="plugins.generic.counter.1a.title2">Zahl erfolgreicher Volltext-Seitenaufrufe pro Monat und Zeitschrift (Jahr {$year})</message>
 	<message key="plugins.generic.counter.1a.dateRun">Datum:</message>
-	<message key="plugins.generic.counter.1a.publisher">Herausgeber</message>
+	<message key="plugins.generic.counter.1a.publisher">Verlag</message>
 	<message key="plugins.generic.counter.1a.platform">Plattform</message>
-	<message key="plugins.generic.counter.1a.printIssn">ISSN Printmedium</message>
-	<message key="plugins.generic.counter.1a.onlineIssn">ISSN Online</message>
-	<message key="plugins.generic.counter.1a.ytdTotal">YTD Summe</message>
-	<message key="plugins.generic.counter.1a.ytdHtml">YTD HTML</message>
-	<message key="plugins.generic.counter.1a.ytdPdf">YTD PDF</message>
+	<message key="plugins.generic.counter.1a.printIssn">Print-ISSN</message>
+	<message key="plugins.generic.counter.1a.onlineIssn">Online-ISSN</message>
+	<message key="plugins.generic.counter.1a.ytdTotal">YTD-Summe</message>
+	<message key="plugins.generic.counter.1a.ytdHtml">YTD-HTML</message>
+	<message key="plugins.generic.counter.1a.ytdPdf">YTD-PDF</message>
 	<message key="plugins.generic.counter.1a.totalForAllJournals">Gesamtsumme für alle Zeitschriften</message>
 </locale>

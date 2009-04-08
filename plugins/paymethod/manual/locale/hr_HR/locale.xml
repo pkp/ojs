@@ -21,4 +21,7 @@
 	
 	<message key="plugins.paymethod.manual.purchase.title">Naziv</message>
 	<message key="plugins.paymethod.manual.purchase.fee">Iznos</message>	
+	<message key="plugins.paymethod.manual.sendNotificationOfPayment">Pošalji obavijest o plaćanju</message>
+	<message key="plugins.paymethod.manual.paymentNotification">Obavijest o plaćanju</message>
+	<message key="plugins.paymethod.manual.notificationSent">Obavijest o plaćanju poslana</message>
 </locale>

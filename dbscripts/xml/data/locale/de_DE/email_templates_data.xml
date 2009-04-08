@@ -752,5 +752,32 @@ Falls Sie Fragen haben, zögern Sie bitte nicht, sich an mich zu wenden.
 {$subscriptionContactSignature}</field>
 			<field name="description">Diese Email ist die letzte Benachrichtigung eines Abonnenten, dass sein Abonnement ausgelaufen ist. Die Webadresse der Zeitschrift wird mitgeteilt und der Zugang angegeben.</field>
 		</row>
+		<row>
+			<field name="email_key">USER_VALIDATE</field>
+			<field name="subject">Bestätigen Sie Ihr Konto</field>
+			<field name="body">{$userFullName}
+
+Sie haben ein Konto bei {$journalName} angelegt, aber bevor Sie mit der Benutzung beginnen können, müssen Sie Ihr E-Mail-Konto bestätigen. Dazu folgen Sie einfach dem unten stehenden Link:
+
+{$activateUrl}
+
+Danke,
+{$principalContactSignature}</field>
+			<field name="description">Diese E-Mail wird an neu registrierte Benutzer/innen geschickt, um sie beim System zu begrüßen und um ihnen einen Beleg über ihren Benutzer/innen-Name und ihr Passwort zukommen zu lassen.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEWER_REGISTER</field>
+			<field name="subject">Registrierung als Gutachter/in bei {$journalName}</field>
+			<field name="body">Angesichts Ihrer Erfahrung haben wir uns die Freiheit genommen, Ihren Namen in der Gutachter/innen-Datenbank von {$journalName} zu registrieren. Dies bedingt keinerlei Verpflichtung von Ihrer Seite, erlaubt uns aber, Ihnen einen Vorschlag für ein mögliches Gutachten zu machen. Wenn Sie eingeladen werden zu begutachten, werden Sie Gelegenheit haben, den Titel und das Abstract des fraglichen Artikels zu sehenn, und Sie werden jederzeit in der Lage sein, die Einladung zu akzeptieren oder abzulehnen. Außerdem können Sie zu jedem Zeitpunkt ihren Namen von der Gutachter/innenliste entfernen lassen.
+
+Wir lassen Ihnen einen Benutzer/innennamen und ein Passwort zukommen, das in allen Interaktionen mit der Zeitschrift über deren Website benutzt wird. Zum Beispiel möchten Sie vielleicht Ihr Profil inklusive Ihrer Begutachtungsinteressen aktualisieren
+
+Benutzer/innenname: {$username}
+Passwort: {$password}
+
+Danke,
+{$principalContactSignature}</field>
+			<field name="description">Diese E-Mail wird an eine/n neu registrierte Gutachter/in gesendet, um sie/ihn beim System zu begrüßen und mit einem Beleg über ihren/seinen Benutzer/innennamen und ihr/sein Passwort zur versorgen.</field>
+		</row>
 	</table>
 </data>

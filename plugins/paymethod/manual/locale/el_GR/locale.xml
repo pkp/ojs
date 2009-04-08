@@ -29,4 +29,7 @@
 	
 	<message key="plugins.paymethod.manual.purchase.title">Τίτλος</message>
 	<message key="plugins.paymethod.manual.purchase.fee">Εισφορά</message>	
+	<message key="plugins.paymethod.manual.sendNotificationOfPayment">Αποστολή γνωστοποίησης πληρωμής</message>
+	<message key="plugins.paymethod.manual.paymentNotification">Γνωστοποίηση πληρωμής</message>
+	<message key="plugins.paymethod.manual.notificationSent">Η γνωστοποίηση πληρωμής απεστάλλει.</message>
 </locale>

@@ -17,6 +17,7 @@
 <!DOCTYPE locales SYSTEM "../lib/pkp/dtd/locales.dtd">
 
 <locales>
+	<locale key="cs_CZ" name="Czech"/>
 	<locale key="de_DE" name="Deutsch (Deutschland)"/>
 	<locale key="en_US" name="English"/>
 	<locale key="el_GR" name="Greek"/>
@@ -26,6 +27,7 @@
 	<locale key="hr_HR" name="Hrvatski"/>
 	<locale key="it_IT" name="Italiano"/>
 	<locale key="ja_JP" name="日本語"/>
+	<locale key="nl_NL" name="Nederlands"/>
 	<locale key="no_NO" name="Norwegian"/>
 	<locale key="pt_BR" name="Português (Brasil)"/>
 	<locale key="ru_RU" name="Russian"/>

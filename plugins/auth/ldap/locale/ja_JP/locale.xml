@@ -14,19 +14,19 @@
  
 <locale name="ja_JP" full_name="日本語">
 	<message key="plugins.auth.ldap.displayName">LDAP</message>
-	<message key="plugins.auth.ldap.description">このプラグインは、外部のLDAPデータソースによるユーザアカウントの認証と同期化を可能にします。</message>
+	<message key="plugins.auth.ldap.description">外部のLDAPデータソースを用いてユーザアカウントの認証と同期を行うようにします。</message>
 	
 	<message key="plugins.auth.ldap.settings">LDAPの設定</message>
 	<message key="plugins.auth.ldap.settings.hostname">サーバホスト名</message>
 	<message key="plugins.auth.ldap.settings.hostname.description">例えば、"ldap.example.com" や "ldaps://ldap.example.com"（SSLを使用する場合）</message>
 	<message key="plugins.auth.ldap.settings.port">ポート番号</message>
 	<message key="plugins.auth.ldap.settings.port.description">オプション。デフォルトは、389（LDAP）または、636（LDAP over SSL）。</message>
-	<message key="plugins.auth.ldap.settings.basedn">ベースDN</message>
+	<message key="plugins.auth.ldap.settings.basedn">基底DN</message>
 	<message key="plugins.auth.ldap.settings.basedn.description">例えば、"ou=people,dc=example,dc=com"</message>
 	<message key="plugins.auth.ldap.settings.managerdn">管理者DN</message>
 	<message key="plugins.auth.ldap.settings.managerdn.description">例えば、"cn=Manager,dc=example,dc=com"</message>
 	<message key="plugins.auth.ldap.settings.managerpwd">管理者パスワード</message>
-	<message key="plugins.auth.ldap.settings.managerpwd.description">管理者のDNとパスワードは、ユーザ情報/パスワード同期機能またはユーザ作成機能を有効にした場合のみ、必要です。LDAPのみを認証に使用する場合は、これらの機能は省略することができます。</message>
+	<message key="plugins.auth.ldap.settings.managerpwd.description">管理者のDNとパスワードは、ユーザ情報/パスワード同期機能またはユーザ作成機能を有効にした場合のみ必要です。LDAPだけを認証に使用する場合は設定を省略することができます。</message>
 	<message key="plugins.auth.ldap.settings.pwhash">パスワード暗号化</message>
 	<message key="plugins.auth.ldap.settings.pwhash.description">サーバに保存するパスワードのハッシュ方式。SSHAを推奨します（PHP 4.3.0以降が必要）。</message>
 	<message key="plugins.auth.ldap.settings.saslopt">SASL設定（オプション）</message>
@@ -36,4 +36,6 @@
 	<message key="plugins.auth.ldap.settings.saslrealm">レルム</message>
 	<message key="plugins.auth.ldap.settings.saslauthzid">認可識別子</message>
 	<message key="plugins.auth.ldap.settings.saslprop">SASLセキュリティ属性</message>
+	<message key="plugins.auth.ldap.settings.uid">アカウント名属性</message>
+	<message key="plugins.auth.ldap.settings.uid.description">uid, cn, sAMAccountNameなどの、ユーザオブジェクトを一意に識別する値を持つ属性。</message>
 </locale>

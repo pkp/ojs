@@ -21,4 +21,7 @@
 	
 	<message key="plugins.paymethod.manual.purchase.title">Titolo</message>
 	<message key="plugins.paymethod.manual.purchase.fee">Quota</message>	
+	<message key="plugins.paymethod.manual.sendNotificationOfPayment">Invia una notifica di pagamento</message>
+	<message key="plugins.paymethod.manual.paymentNotification">Notifica di pagamento</message>
+	<message key="plugins.paymethod.manual.notificationSent">Notifica di pagamento spedita</message>
 </locale>

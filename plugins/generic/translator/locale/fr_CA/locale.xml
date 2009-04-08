@@ -15,7 +15,7 @@
 <locale name="fr_CA" full_name="Français (Canada)">
 	<message key="plugins.generic.translator.name">Plugiciel de traduction</message>
 	<message key="plugins.generic.translator.description">Ce plugiciel permet l'entretien en ligne de fichiers de traduction.</message>
-	<message key="plugins.generic.translator.longdescription">Cette zone permet à l'Administrateur du site de créer, modifier et vérifier les traductions de OJS.Elle s'applique à l'ensemble du site et ne devrait pas être utilisée  pour personnaliser une revue en libre accès particulière. Si vous corrigez ou créez une traduction, veuillez la soumettre au Public Knowledge Project pour qu'elle puisse être distribuée dans des versions futures.</message>
+	<message key="plugins.generic.translator.longdescription">Cette zone permet à l'Administrateur du site de créer, modifier et vérifier les traductions de l'OJS. Elle s'applique à l'ensemble du site et ne devrait pas être utilisée  pour personnaliser une revue en accès libre particulière. Si vous corrigez ou créez une traduction, veuillez la soumettre au Public Knowledge Project pour qu'elle puisse être distribuée dans des versions futures.</message>
 	<message key="plugins.generic.translator.localeDescription">Cette page liste toutes les composantes d'une traduction de l'OJS et permet au traducteur de modifier chacune d'entre elles. Une traduction complète devrait inclure les traductions de toutes les composantes.</message>
 
 	<message key="plugins.generic.translator.localeName">Nom de la langue</message>
@@ -72,4 +72,5 @@
 	<message key="plugins.generic.translator.deleteKey">Supprimer cette clé</message>
 	<message key="plugins.generic.translator.deleteEmail">Supprimer ce courriel</message>
 	<message key="plugins.generic.translator.saveBeforeContinuing">Assurez-vous de sauvegarder tous les changements effectués sur cette page avant de continuer ou ils seront perdus. Voulez-vous continuer? Si c'est le cas, tout changement non sauvegardé sera perdu.</message>
+	<message key="plugins.generic.translator.localeKey.description">Saisir une clé de langue complète à rechercher.</message>
 </locale>

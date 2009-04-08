@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
   * locale.xml
   *
-  * Copyright (c) 2003-2008 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Copyright (c) 2003-2007 John Willinsky
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Regionalisierungszeichenketten für die de_DE (Deutsche) Regionaleinstellung.
   *
-  * $Id$
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen querelles-net und Forum Qualitative Sozialforschung (FQS).
   -->
- 
-<locale name="en_US" full_name="U.S. English">
-	<message key="plugins.block.developedBy.displayName">"Entwickelt von" Block</message>
-	<message key="plugins.block.developedBy.description">"Entwickelt von" link Plugin für die Seitenleiste</message>
+  
+<locale name="de_DE" full_name="German">
+	<message key="plugins.block.developedBy.displayName">"Entwickelt von"</message>
+	<message key="plugins.block.developedBy.description">Dieses Plug-In liefert den "Entwickelt von"-Link für die Sidebar.</message>
 </locale>

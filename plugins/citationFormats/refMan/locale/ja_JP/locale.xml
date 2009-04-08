@@ -15,5 +15,5 @@
 <locale name="ja_JP" full_name="日本語">
 	<message key="plugins.citationFormats.refMan.displayName">Reference Manager引用形式プラグイン</message>
 	<message key="plugins.citationFormats.refMan.citationFormatName">Reference Manager - RIS形式（Windowsのみ）</message>
-	<message key="plugins.citationFormats.refMan.description">このプラグインはReference Manager引用形式を実装します。</message>
+	<message key="plugins.citationFormats.refMan.description">Reference Manager引用形式を実装します。</message>
 </locale>

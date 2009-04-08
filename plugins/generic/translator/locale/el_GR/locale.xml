@@ -79,4 +79,5 @@
 	<message key="plugins.generic.translator.deleteKey">Διαγράψτε αυτό το κλειδί</message>
 	<message key="plugins.generic.translator.deleteEmail">Διαγράψτε αυτό το email</message>
 	<message key="plugins.generic.translator.saveBeforeContinuing">Σιγουρευτείε ότι αποθηκεύεται κάθε αλλαγή σε αυτή τη σελίδα πριν συνεχίσετε γιατί αλλιώς θα χαθούν. Επιθυμείτε να συνεχίσετε; Αν ναι, όλες οι αλλαγές που δεν έχουν αποθηκευτεί θα χαθούν.</message>
+	<message key="plugins.generic.translator.localeKey.description">Εισάγετε ένα κλειδί τοπικής ρύθμισης για αναζήτηση.</message>
 </locale>

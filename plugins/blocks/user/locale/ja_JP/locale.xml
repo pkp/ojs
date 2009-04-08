@@ -14,7 +14,7 @@
  
 <locale name="ja_JP" full_name="日本語">
 	<message key="plugins.block.user.displayName">ユーザブロック</message>
-	<message key="plugins.block.user.description">このプラグインは、サイドバーにユーザアカウントツール（ログイン、ログアウト、プロフィールリンクなど）を付けます。</message>
+	<message key="plugins.block.user.description">サイドバーにユーザアカウントツール（ログイン、ログアウト、プロフィールリンクなど）を付けます。</message>
 	<message key="plugins.block.user.loggedInAs">次のアカウントでログインされています</message>
 	<message key="plugins.block.user.myJournals">マイ･ジャーナル</message>
 	<message key="plugins.block.user.myProfile">マイ･プロフィール</message>

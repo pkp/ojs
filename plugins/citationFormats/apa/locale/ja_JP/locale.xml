@@ -15,6 +15,6 @@
 <locale name="ja_JP" full_name="日本語">
 	<message key="plugins.citationFormats.apa.displayName">APA引用形式プラグイン</message>
 	<message key="plugins.citationFormats.apa.citationFormatName">APA</message>
-	<message key="plugins.citationFormats.apa.description">このプラグインはAPA引用形式を実装します。</message>
+	<message key="plugins.citationFormats.apa.description">APA引用形式を実装します。</message>
 	<message key="plugins.citationFormats.apa.retrieved"><![CDATA[<a href="{$url}" target="_new">{$url}</a>から {$retrievedDate}に抽出]]></message>
 </locale>

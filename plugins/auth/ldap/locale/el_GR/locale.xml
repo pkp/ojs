@@ -43,4 +43,6 @@
 	<message key="plugins.auth.ldap.settings.saslrealm">Realm</message>
 	<message key="plugins.auth.ldap.settings.saslauthzid">Αίτηση ID πιστοποίησης</message>
 	<message key="plugins.auth.ldap.settings.saslprop">Ιδιότητες ασφαλείας SASL </message>
+	<message key="plugins.auth.ldap.settings.uid">Χαρακτηριστικό Λογαριασμού</message>
+	<message key="plugins.auth.ldap.settings.uid.description">Χαρακτηριστική ιδιότητα, η τιμή της οποίας χαρακτηρίζει μοναδικά ένα αντικείμενο χρήστη, όπως uid ή cn ή sAMAccountName.</message>
 </locale>

@@ -13,8 +13,8 @@
   -->
  
 <locale name="pt_BR" full_name="Português do Brasil">
-	<message key="plugins.generic.xmlGalley.displayName">Plugin Composião em XML</message>
-	<message key="plugins.generic.xmlGalley.description">Este plugin gera composições em XHTML de uma submissão em XML utilizando XSLT.</message>
+	<message key="plugins.generic.xmlGalley.displayName">Plugin Composição em XML</message>
+	<message key="plugins.generic.xmlGalley.description">Este plugin gera composições em XHTML de uma submissão em XML utilizando uma XSLT.</message>
 
 	<message key="plugins.generic.xmlGalley.manager.settings">Configurações</message>
 

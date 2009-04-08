@@ -17,4 +17,7 @@
   <message key="plugins.paymethod.manual.settings.manualInstructions" >راهنمای پرداخت دستی</message>
   <message key="plugins.paymethod.manual.purchase.title" >عنوان</message>
   <message key="plugins.paymethod.manual.purchase.fee" >مبلغ</message>
+	<message key="plugins.paymethod.manual.sendNotificationOfPayment">ارسال ایمیل یادآور پرداخت</message>
+	<message key="plugins.paymethod.manual.paymentNotification">یادآوری پرداخت</message>
+	<message key="plugins.paymethod.manual.notificationSent">یادآور پرداخت ارسال شد</message>
 </locale>

@@ -33,4 +33,8 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">Μέσα στο Google Analytics, πατήστε στο Check Status για να δείτε τον κωδικό ανίχνευσης (tracking code) για τον ιστότοπό σας. Ο αριθμός λογαριασμού προβάλλεται μέσα στον κωδικό αυτό : _uacct = "###". Εισάγετ το κείμενο που αντιστοιχεί στο ###.</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Σας παρακαλούμε εισάγετε έναν αριθμός λογαριασμού.</message>
 
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCode">Tracking code</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Επιλέξτε ένα tracking code για χρήση.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Legacy tracking code (urchin.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Νέο tracking code (urchin.js)</message>
 </locale>

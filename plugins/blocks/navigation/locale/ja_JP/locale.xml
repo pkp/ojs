@@ -14,6 +14,6 @@
  
 <locale name="ja_JP" full_name="日本語">
 	<message key="plugins.block.navigation.displayName">ナビゲーションブロック</message>
-	<message key="plugins.block.navigation.description">このプラグインはサイドバーにナビゲーションリンクを付けます。</message>
+	<message key="plugins.block.navigation.description">サイドバーにナビゲーションリンクを付けます。</message>
 	<message key="plugins.block.navigation.journalContent">ジャーナルコンテンツ</message>
 </locale>

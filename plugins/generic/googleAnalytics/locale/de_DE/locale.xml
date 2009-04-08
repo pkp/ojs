@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  *
+  * Regionalisierungszeichenketten für die de_DE (Deutsche) Regionaleinstellung.
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  
+  -->
+  
+<locale name="de_DE" full_name="German">
+
+	<!-- Google Analytics -->
+	<message key="plugins.generic.googleAnalytics.displayName">"Google Analytics"-Plugin</message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Verbinden Sie OJS mit Google Analytics, der Google-Anwendung zur Nutzungsanalyse von Webseiten-Traffic. Voraussetzung ist, dass Sie bereits einen Google-Analytics-Zugang haben. Siehe <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics</a> für weitere Informationen.]]></message>
+
+	<!-- Google-Analytics-Einstellungen verwalten -->
+	<message key="plugins.generic.googleAnalytics.manager.settings">Einstellungen</message>
+	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">Google-Analytics-Einstellungen</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p>Mit diesem Plug-In ist es möglich, Nutzung und Traffic für diese Zeitschrift zu erheben und zu analysieren. Bitte beachten Sie, dass Sie hierfür bereits einen Google-Analytics-Zugang haben müssen. Siehe <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics</a> für weitere Informationen.</p>]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId">Account-ID</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">Klicken Sie in Google Analytics auf "Check Status", um die Aufzeichnungen für Ihre Webseite einsehen zu können. Die Account-ID wird angezeigt im Code: _uacct = "###". Geben Sie den Text ein, der ### entspricht.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Bitte geben Sie die Account-ID ein.</message>
+
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCode">Tracking-Code</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Bitte wählen Sie einen Tracking-Code zur Verwendung aus.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Neuer Tracking-Code (ga.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Legacy Tracking Code (urchin.js)</message>
+</locale>

@@ -18,4 +18,5 @@
 	<message key="plugins.generic.customLocale.file.edit">Uređujete {$filename}</message>
 	<message key="plugins.generic.customLocale.file.reference">Standardni tekst</message>
 	<message key="plugins.generic.customLocale.file.custom">Prilagođeni tekst</message>
+	<message key="plugins.generic.customLocale.localeKey.description">Unesite puni naziv fraze koju tražite.</message>
 </locale>

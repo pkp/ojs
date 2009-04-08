@@ -15,5 +15,5 @@
 <locale name="ja_JP" full_name="日本語">
 	<message key="plugins.citationFormats.cbe.displayName">CBE引用形式プラグイン</message>
 	<message key="plugins.citationFormats.cbe.citationFormatName">CBE</message>
-	<message key="plugins.citationFormats.cbe.description">このプラグインはCBE引用形式を実装します。</message>
+	<message key="plugins.citationFormats.cbe.description">CBE引用形式を実装します。</message>
 </locale>

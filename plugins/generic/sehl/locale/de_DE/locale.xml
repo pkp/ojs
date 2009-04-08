@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  *
+  * Regionalisierungszeichenketten für die de_DE (Deutsche) Regionaleinstellung.
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  
+  -->
+  
+<locale name="de_DE" full_name="German">
+	<message key="plugins.generic.sehl.name">SEHL-Plug-In</message>
+	<message key="plugins.generic.sehl.description">Dieses Plug-In implementiert "Search Engine HighLighting" (SEHL), sodass die Schlagworte, die von Suchmaschinen in einem HTML-Artikel gefunden werden, hervorgehoben werden.</message>
+</locale>

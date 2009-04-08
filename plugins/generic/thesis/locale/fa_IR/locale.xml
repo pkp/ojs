@@ -219,7 +219,7 @@
 	<message key="plugins.generic.thesis.manager.abstract">چکیده</message>
 	<message key="plugins.generic.thesis.manager.confirmDelete">آیا مطمئن هستید که می خواهید این چکیده پایان نامه را حذف کنید؟</message>
 	<message key="plugins.generic.thesis.manager.noneCreated">چکیده پایان نامه ای نیست</message>
-	<message key="plugins.generic.thesis.manager.noResults">هیچ نتیجه ای یافت نشد</message>
+	<message key="plugins.generic.thesis.manager.noResults">بی نتیجه</message>
 	<message key="plugins.generic.thesis.manager.create">ایجاد مورد جدید چکیده پایان نامه</message>
 	<message key="plugins.generic.thesis.manager.createTitle">ایجاد</message>
 	<message key="plugins.generic.thesis.manager.edit">ویرایش چکیده پایان نامه</message>

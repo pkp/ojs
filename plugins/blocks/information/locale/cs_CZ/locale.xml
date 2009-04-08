@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for this plugin in Czech.
+  *
+  * Translated by František Chmelik, frantisek.chmelik 'at' upol.cz
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.block.information.displayName">Informační blok</message>
+	<message key="plugins.block.information.description">Tento plugin poskytne v postraním panelu odkaz na informace.</message>
+	<message key="plugins.block.information.link">Informace</message>
+</locale>

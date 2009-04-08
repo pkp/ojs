@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  *
+  * Regionalisierungszeichenketten für die de_DE (Deutsche) Regionaleinstellung.
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen querelles-net und Forum Qualitative Sozialforschung (FQS).
+  *
+  * $Id$
+  -->
+
+<locale name="de_DE" full_name="German">
+	<message key="plugins.reports.articles.displayName">Artikel-Statistiken</message>
+	<message key="plugins.reports.articles.description">Dieses Plug-In implementiert einen CSV-Bericht mit einer Auflistung der Artikel und zugehörigen Informationen.</message>
+	<message key="plugins.reports.articles.nodecision">Keine Entscheidung</message>
+</locale>

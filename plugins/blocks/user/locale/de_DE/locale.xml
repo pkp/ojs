@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
   * locale.xml
   *
-  * Copyright (c) 2003-2008 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Copyright (c) 2003-2007 John Willinsky
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Regionalisierungszeichenketten für die de_DE (Deutsche) Regionaleinstellung.
   *
-  * $Id$
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
   -->
- 
-<locale name="en_US" full_name="U.S. English">
-	<message key="plugins.block.user.displayName">Benutzer Block</message>
-	<message key="plugins.block.user.description">Benutzer Konto Zugang (Login, Logout, Profil-Link, usw.) Plugin für die Seitenleiste</message>
-	<message key="plugins.block.user.loggedInAs">Sie sind eingeloggt als...</message>
+  
+<locale name="de_DE" full_name="German">
+	<message key="plugins.block.user.displayName">Benutzer/innen-Block</message>
+	<message key="plugins.block.user.description">Dieses Plug-In stellt Werkzeuge für die Benutzer/innen-Konten (z.B. Anmelden, Abmelden, Link zum Konto etc.) in der Sidebar bereit.</message>
+	<message key="plugins.block.user.loggedInAs">Sie sind eingeloggt als…</message>
 	<message key="plugins.block.user.myJournals">Meine Zeitschriften</message>
-	<message key="plugins.block.user.myProfile">Mein Profil</message>
-	<message key="plugins.block.user.logout">Ausloggen</message>
-	<message key="plugins.block.user.signOutAsUser">Als Benutzer ausloggen</message>
-	<message key="plugins.block.user.rememberMe">Behalten Sie mich in Erinnerung</message>
+	<message key="plugins.block.user.myProfile">Mein Konto</message>
+	<message key="plugins.block.user.logout">Abmelden</message>
+	<message key="plugins.block.user.signOutAsUser">Als Benutzer/in abmelden</message>
+	<message key="plugins.block.user.rememberMe">An mich erinnern</message>
 </locale>

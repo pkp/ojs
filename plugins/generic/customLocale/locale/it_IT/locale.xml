@@ -31,4 +31,5 @@
 	<message key="plugins.generic.customLocale.file.edit">Editing {$filename}</message>
 	<message key="plugins.generic.customLocale.file.reference">Default Text</message>
 	<message key="plugins.generic.customLocale.file.custom">Custom Text</message>
+	<message key="plugins.generic.customLocale.localeKey.description">Inserisci una chiave intera da cercare.</message>
 </locale>

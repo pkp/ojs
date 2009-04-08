@@ -72,4 +72,5 @@
 	<message key="plugins.generic.translator.deleteKey">Cancella questa chiave</message>
 	<message key="plugins.generic.translator.deleteEmail">Cancella questa email</message>
 	<message key="plugins.generic.translator.saveBeforeContinuing">Assicurati di salvare ogni cambiamento fatto in questa pagina prima di continuare o saranno persi. Vuoi continuare? Se sì, ogni modifica non salvata verrà persa.</message>
+	<message key="plugins.generic.translator.localeKey.description">Inserisci una chiave intera da cercare.</message>
 </locale>

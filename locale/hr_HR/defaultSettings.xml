@@ -11,7 +11,7 @@
   * $Id: locale.xml,v 1.484 2007/04/22 20:26:17 Teo Matkovic (teo.matkovic@pravo.hr), 
   * Marija Matesic(mmatesi1@ffzg.hr), Tomislav Biscan (info@seofruits.com.hr) Exp $
    -->
-<locale name="hr_HR"
+<locale name="hr_HR">
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">Prijavljeni članak nije prethodno objavljivan niti se nalazi u recenzijskom postupku pri nekom drugom časopisu. U suprotnom, molimo to obrazložiti pod "komentari uredniku".</message>
 	<message key="default.journalSettings.checklist.fileFormat">Datoteka koja sadrži rad je u Microsoft Word ili RTF formatu.</message>
 	<message key="default.journalSettings.checklist.addressesLinked">URL adrese za mrežno dostupne bibliografske čestice su priložene.</message>
