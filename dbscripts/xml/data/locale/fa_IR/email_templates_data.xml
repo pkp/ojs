@@ -94,24 +94,7 @@
 			<field name="description" >This email is sent to registered readers via the &quot;Notify Users&quot; link in the Editor's User Home. It notifies readers of a new issue and invites them to visit the journal at a supplied URL.</field>
 		</row>
 		<row>
-			<field name="email_key" >LOCKSS_EXISTING_ARCHIVE</field>
-			<field name="subject" >Archiving Request for {$journalName}</field>
-			<field name="body" ><![CDATA[Dear [University Librarian]
-
-{$journalName} <{$journalUrl}>, is a journal for which a member of your faculty, [name of member], serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.
-
-[Brief description of journal]
-
-The URL to the LOCKSS Publisher Manifest for our journal is: {$journalUrl}/gateway/lockss
-
-We understand that you are already participating in LOCKSS. If we can provide any additional metadata for purposes of registering our journal with your version of LOCKSS, we would be happy to provide it.
-
-Thank you,
-{$principalContactSignature}]]></field>
-			<field name="description" >This email requests the keeper of a LOCKSS archive to consider including this journal in their archive. It provides the URL to the journal's LOCKSS Publisher Manifest.</field>
-		</row>
-		<row>
-			<field name="email_key" >LOCKSS_NEW_ARCHIVE</field>
+			<field name="email_key">LOCKSS_NEW_ARCHIVE</field>
 			<field name="subject" >درخواست بایگانی کردن {$journalName}:</field>
 			<field name="body" ><![CDATA[مسئول محترم کتابخانه دانشگاه:
 {$journalName} <{$journalUrl}> ، عضو دانشکده شما می باشد <[name of member]>. این مجله خواستار ایجاد سیستم بایگانی LOCKSS با آن کتابخانه و کتابخانه های دیگر دانشگاهها می باشد.
