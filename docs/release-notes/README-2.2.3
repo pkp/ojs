@@ -1,8 +1,17 @@
 OJS 2.2.3 Release Notes
 CVS tag: ojs-2_2_3-0
-Release date: Apr 8, 2009
+Release date: Apr 9, 2009
 =================================
 
+Users of the COUNTER report plugin should be advised that the storage format
+of COUNTER logs has changed since OJS 2.2.2. To migrate the existing logs
+to the new structure, login in as Journal Manager, go to System Plugins,
+find the COUNTER statistics plugin, and use the "migrate" link to read the
+old (deprecated) log file into the new database structure. Sufficient time
+should be allocated to this process, as it may take time. It may be necessary
+to ensure that all journal URLs in the deprecated COUNTER log are correct,
+or the migration process will not be able to determine which journal they
+refer to and will ignore those log entries.
 
 New Features
 ------------
