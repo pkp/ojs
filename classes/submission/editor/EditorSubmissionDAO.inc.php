@@ -623,6 +623,7 @@ class EditorSubmissionDAO extends DAO {
 			$decision = array_pop($decisions);
 			if (!empty($decision)) {
 				$latestDecision = array_pop($decision);
+				import('submission.common.Action');
 				if ($latestDecision['decision'] == SUBMISSION_EDITOR_DECISION_ACCEPT) {
 					$inReview = false;
 				}
