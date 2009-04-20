@@ -40,6 +40,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function submission($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$this->validate($articleId);
+		$journal =& Request::getJournal();
 		$submission =& $this->submission;
 		
 		// FIXME? For comments.readerComments under Status and
@@ -121,6 +122,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function submissionRegrets($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$this->validate($articleId);
+		$journal =& Request::getJournal();		
 		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId, 'review');
 
@@ -163,6 +165,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function submissionReview($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
+		$journal =& Request::getJournal();
 		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId);
 
@@ -265,6 +268,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function submissionEditing($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
+		$journal =& Request::getJournal();
 		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId);
 
@@ -368,7 +372,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 	function recordDecision() {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = $this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
+		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
+		$submission =& $this->submission;
 
 		$decision = Request::getUserVar('decision');
 
@@ -391,6 +396,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function selectReviewer($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
+		$journal =& Request::getJournal();
 		$submission =& $this->submission;
 
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
@@ -559,6 +565,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function enroll($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
+		$journal =& Request::getJournal();
 		$submission =& $this->submission;
 
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
@@ -1003,6 +1010,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function selectCopyeditor($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
+		$journal =& Request::getJournal();
 		$submission =& $this->submission;
 
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
@@ -1123,7 +1131,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 	function notifyFinalCopyedit($args = array()) {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = $this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
+		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
+		$submission =& $this->submission;
 
 		$send = Request::getUserVar('send')?true:false;
 		$this->setupTemplate(true, $articleId, 'editing');
@@ -1441,6 +1450,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$editorId = isset($args[1]) ? (int) $args[1] : 0;
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
+		$journal =& Request::getJournal();		
 		$submission =& $this->submission;
 
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
@@ -1543,9 +1553,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		import('submission.form.ArticleGalleyForm');
 
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$galleyForm =& new ArticleGalleyForm($articleId);
-		
 		Request::redirect(null, null, 'editGalley', array($articleId, $galleyId));
 	}
 
@@ -2362,6 +2369,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = (int) array_shift($args);
 		$markAsPaid = Request::getUserVar('markAsPaid');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
+		$journal =& Request::getJournal();
 		$submission =& $this->submission;
 
 		import('payment.ojs.OJSPaymentManager');
@@ -2390,6 +2398,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$sendToScheduling = Request::getUserVar('sendToScheduling')?true:false;
 		
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
+		$journal =& Request::getJournal();
 		$submission =& $this->submission;
 
 		import('payment.ojs.OJSPaymentManager');
@@ -2430,7 +2439,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 */
 	function validate($articleId, $access = null) {
 		parent::validate();
-
 		$isValid = true;
 
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
