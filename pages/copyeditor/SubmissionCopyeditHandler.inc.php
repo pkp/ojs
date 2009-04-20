@@ -14,6 +14,7 @@
 
 // $Id$
 
+import('pages.copyeditor.CopyeditorHandler');
 
 class SubmissionCopyeditHandler extends CopyeditorHandler {
 	/** submission associated with the request **/

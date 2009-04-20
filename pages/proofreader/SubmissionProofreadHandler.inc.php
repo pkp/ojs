@@ -14,6 +14,7 @@
 
 // $Id$
 
+import('pages.proofreader.ProofreaderHandler');
 
 class SubmissionProofreadHandler extends ProofreaderHandler {
 	/** submission associated with the request **/

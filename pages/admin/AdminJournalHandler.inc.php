@@ -14,6 +14,7 @@
 
 // $Id$
 
+import('pages.admin.AdminHandler');
 
 class AdminJournalHandler extends AdminHandler {
 

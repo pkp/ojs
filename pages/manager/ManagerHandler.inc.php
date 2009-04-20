@@ -15,8 +15,7 @@
 // $Id$
 
 import('handler.Handler');
-import('handler.validation.HandlerValidatorJournal');
-import('handler.validation.HandlerValidatorRoles');
+import('pages.manager.ManagerHandler');
 
 class ManagerHandler extends Handler {
 	/**

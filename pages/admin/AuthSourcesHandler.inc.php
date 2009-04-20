@@ -14,9 +14,9 @@
 
 // $Id$
 
-
 import('plugins.AuthPlugin');
 import('security.AuthSourceDAO');
+import('pages.admin.AdminHandler');
 
 class AuthSourcesHandler extends AdminHandler {
 

@@ -15,6 +15,8 @@
 // $Id$
 
 
+import('pages.manager.ManagerHandler');
+
 class PeopleHandler extends ManagerHandler {
 
 	/**

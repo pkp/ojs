@@ -14,6 +14,7 @@
 
 // $Id$
 
+import('pages.user.UserHandler');
 
 class EmailHandler extends UserHandler {
 	function email($args) {

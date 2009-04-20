@@ -16,6 +16,7 @@
 
 
 import('rt.ojs.JournalRTAdmin');
+import('pages.rtadmin.RTAdminHandler');
 
 class RTVersionHandler extends RTAdminHandler {
 	function createVersion($args) {

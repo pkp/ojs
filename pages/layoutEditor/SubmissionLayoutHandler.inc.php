@@ -14,6 +14,7 @@
 
 // $Id$
 
+import('pages.layoutEditor.LayoutEditorHandler');
 
 class SubmissionLayoutHandler extends LayoutEditorHandler {
 

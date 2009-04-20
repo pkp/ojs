@@ -14,6 +14,8 @@
  * $Id$
  */
 
+import('pages.admin.AdminHandler');
+
 class AdminSettingsHandler extends AdminHandler {
 
 	/**

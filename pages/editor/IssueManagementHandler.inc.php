@@ -14,6 +14,7 @@
 
 // $Id$
 
+import('pages.editor.EditorHandler');
 
 class IssueManagementHandler extends EditorHandler {
 

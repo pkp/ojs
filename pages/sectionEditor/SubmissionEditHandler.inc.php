@@ -18,6 +18,8 @@
 define('SECTION_EDITOR_ACCESS_EDIT', 0x00001);
 define('SECTION_EDITOR_ACCESS_REVIEW', 0x00002);
 
+import('pages.sectionEditor.SectionEditorHandler');
+
 class SubmissionEditHandler extends SectionEditorHandler {
 	/** submission associated with the request **/
 	var $submission;

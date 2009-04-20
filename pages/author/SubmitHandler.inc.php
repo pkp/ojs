@@ -14,6 +14,7 @@
 
 // $Id$
 
+import('pages.author.AuthorHandler');
 
 class SubmitHandler extends AuthorHandler {
 	/** article associated with the request **/

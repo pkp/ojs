@@ -13,6 +13,8 @@
  *
 */
 
+import('pages.manager.ManagerHandler');
+
 class ReviewFormHandler extends ManagerHandler {
 
 	/**

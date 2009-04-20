@@ -16,6 +16,7 @@
 
 
 import('rt.ojs.JournalRTAdmin');
+import('pages.rtadmin.RTAdminHandler');
 
 class RTSearchHandler extends RTAdminHandler {
 	function createSearch($args) {
