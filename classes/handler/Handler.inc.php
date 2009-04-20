@@ -24,7 +24,7 @@ class Handler extends PKPHandler{
 		$journal =& Request::getJournal();
 		$page = Request::getRequestedPage();
 		if ( $journal && $journal->getSetting('restrictSiteAccess')) { 
-			$this->addCheck(new HandlerValidatorCustom(&$this, create_function('$page', 'if (!Validation::isLoggedIn() && !in_array($page, Handler::getLoginExemptions())) return false; else return true;'), array($page)));
+			$this->addCheck(new HandlerValidatorCustom($this, null, null, null, create_function('$page', 'if (!Validation::isLoggedIn() && !in_array($page, Handler::getLoginExemptions())) return false; else return true;'), array($page)));
 		}
 	}
 }
