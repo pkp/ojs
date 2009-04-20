@@ -17,6 +17,13 @@
 import('pages.user.UserHandler');
 
 class EmailHandler extends UserHandler {
+	/**
+	 * Constructor
+	 **/
+	function EmailHandler() {
+		parent::UserHandler();
+	}
+	
 	function email($args) {
 		$this->validate();
 

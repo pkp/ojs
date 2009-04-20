@@ -16,6 +16,12 @@
 import('pages.manager.ManagerHandler');
 
 class ReviewFormHandler extends ManagerHandler {
+	/**
+	 * Constructor
+	 **/
+	function ReviewFormHandler() {
+		parent::ManagerHandler();
+	}
 
 	/**
 	 * Display a list of review forms within the current journal.

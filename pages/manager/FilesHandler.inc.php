@@ -17,6 +17,12 @@
 import('pages.manager.ManagerHandler');
 
 class FilesHandler extends ManagerHandler {
+	/**
+	 * Constructor
+	 **/
+	function FilesHandler() {
+		parent::ManagerHandler();
+	}
 
 	/**
 	 * Display the files associated with a journal.

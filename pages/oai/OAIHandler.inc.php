@@ -20,7 +20,13 @@ define('SESSION_DISABLE_INIT', 1); // FIXME?
 import('oai.ojs.JournalOAI');
 import('handler.Handler');
 
-class OAIHandler extends Handler{
+class OAIHandler extends Handler {
+	/**
+	 * Constructor
+	 **/
+	function OAIHandler() {
+		parent::Handler();
+	}
 
 	function index() {
 		$this->validate();

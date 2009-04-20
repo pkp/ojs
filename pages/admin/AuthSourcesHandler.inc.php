@@ -19,6 +19,12 @@ import('security.AuthSourceDAO');
 import('pages.admin.AdminHandler');
 
 class AuthSourcesHandler extends AdminHandler {
+	/**
+	 * Constructor
+	 **/
+	function AuthSourcesHandler() {
+		parent::AdminHandler();
+	}
 
 	/**
 	 * Display a list of authentication sources.

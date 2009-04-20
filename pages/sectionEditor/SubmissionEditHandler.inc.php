@@ -23,6 +23,13 @@ import('pages.sectionEditor.SectionEditorHandler');
 class SubmissionEditHandler extends SectionEditorHandler {
 	/** submission associated with the request **/
 	var $submission;
+		
+	/**
+	 * Constructor
+	 **/
+	function SubmissionEditHandler() {
+		parent::SectionEditorHandler();
+	}
 	
 	function getFrom($default = 'submissionEditing') {
 		$from = Request::getUserVar('from');

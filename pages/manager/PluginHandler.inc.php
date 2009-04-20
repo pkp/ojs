@@ -17,6 +17,12 @@
 import('pages.manager.ManagerHandler');
 
 class PluginHandler extends ManagerHandler {
+	/**
+	 * Constructor
+	 **/
+	function PluginHandler() {
+		parent::ManagerHandler();
+	}
 	
 	/**
 	 * Display a list of plugins along with management options.

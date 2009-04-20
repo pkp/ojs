@@ -27,6 +27,13 @@ class GroupHandler extends ManagerHandler {
 	var $user;
 	
 	/**
+	 * Constructor
+	 **/
+	function GroupHandler() {
+		parent::ManagerHandler();
+	}
+	
+	/**
 	 * Display a list of groups for the current journal.
 	 */
 	function groups() {

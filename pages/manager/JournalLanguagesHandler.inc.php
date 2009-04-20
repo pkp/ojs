@@ -17,6 +17,12 @@
 import('pages.manager.ManagerHandler');
 
 class JournalLanguagesHandler extends ManagerHandler {
+	/**
+	 * Constructor
+	 **/
+	function JournalLanguagesHandler() {
+		parent::ManagerHandler();
+	}
 
 	/**
 	 * Display form to edit language settings.

@@ -17,6 +17,12 @@
 import('pages.admin.AdminHandler');
 
 class AdminSettingsHandler extends AdminHandler {
+	/**
+	 * Constructor
+	 **/
+	function AdminSettingsHandler() {
+		parent::AdminHandler();
+	}
 
 	/**
 	 * Display form to modify site settings.

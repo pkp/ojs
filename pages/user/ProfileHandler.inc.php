@@ -17,6 +17,12 @@
 import('pages.user.UserHandler');
 
 class ProfileHandler extends UserHandler {
+	/**
+	 * Constructor
+	 **/
+	function ProfileHandler() {
+		parent::UserHandler();
+	}
 
 	/**
 	 * Display form to edit user's profile.

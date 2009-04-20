@@ -17,7 +17,16 @@
 
 import('handler.Handler');
 
-class SubscriptionManagerHandler extends Handler{
+class SubscriptionManagerHandler extends Handler {	
+	/**
+	 * Constructor
+	 **/
+	function SubscriptionManagerHandler() {
+		parent::Handler();
+		$this->addCheck(new HandlerValidatorJournal($this));
+		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_SUBSCRIPTION_MANAGER)));
+	}
+
 	function index() {
 		$this->subscriptions();
 	}
@@ -491,18 +500,6 @@ class SubscriptionManagerHandler extends Handler{
 
 			$subscriptionPolicyForm->display();
 		}
-	}
-
-	/**
-	 * Validate that user has permissions to manage subscriptions for the
-	 * selected journal. Redirects to user index page if not properly
-	 * authenticated.
-	 */
-	function validate() {
-		$this->addCheck(new HandlerValidatorJournal($this));
-		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_SUBSCRIPTION_MANAGER)));		
-		parent::validate();
-		return true;
 	}
 
 	/**

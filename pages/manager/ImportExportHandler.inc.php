@@ -19,6 +19,12 @@ define('IMPORTEXPORT_PLUGIN_CATEGORY', 'importexport');
 import('pages.manager.ManagerHandler');
 
 class ImportExportHandler extends ManagerHandler {
+	/**
+	 * Constructor
+	 **/
+	function ImportExportHandler() {
+		parent::ManagerHandler();
+	}
 	function importexport($args) {
 		$this->validate();
 		$this->setupTemplate(true);

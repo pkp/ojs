@@ -17,6 +17,12 @@
 import('pages.user.UserHandler');
 
 class RegistrationHandler extends UserHandler {
+	/**
+	 * Constructor
+	 **/
+	function RegistrationHandler() {
+		parent::UserHandler();
+	}
 
 	/**
 	 * Display registration form for new users.

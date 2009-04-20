@@ -17,6 +17,12 @@
 import('pages.admin.AdminHandler');
 
 class AdminPeopleHandler extends AdminHandler {
+	/**
+	 * Constructor
+	 **/
+	function AdminPeopleHandler() {
+		parent::AdminHandler();
+	}
 
 	/**
 	 * Allow the Site Administrator to merge user accounts, including attributed articles etc.

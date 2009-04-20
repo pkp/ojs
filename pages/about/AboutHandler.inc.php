@@ -17,7 +17,13 @@
 
 import('handler.Handler');
 
-class AboutHandler extends Handler{
+class AboutHandler extends Handler {
+	/**
+	 * Constructor
+	 **/
+	function AboutHandler() {
+		parent::Handler();
+	}
 
 	/**
 	 * Display about index page.

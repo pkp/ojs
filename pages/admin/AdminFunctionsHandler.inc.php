@@ -21,6 +21,12 @@ import('site.VersionCheck');
 import('pages.admin.AdminHandler');
 
 class AdminFunctionsHandler extends AdminHandler {
+	/**
+	 * Constructor
+	 **/
+	function AdminFunctionsHandler() {
+		parent::AdminHandler();
+	}
 
 	/**
 	 * Show system information summary.

@@ -24,6 +24,12 @@ import('article.ArticleHandler');
 
 class RTHandler extends ArticleHandler {
 	/**
+	 * Constructor
+	 **/
+	function RTHandler() {
+		parent::ArticleHandler();
+	}
+	/**
 	 * Display an author biography
 	 */
 	function bio($args) {

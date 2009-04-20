@@ -19,6 +19,13 @@ import('pages.author.AuthorHandler');
 class TrackSubmissionHandler extends AuthorHandler {
 	/** submission associated with the request **/
 	var $submission;
+	
+	/**
+	 * Constructor
+	 **/
+	function TrackSubmissionHandler() {
+		parent::AuthorHandler();
+	}
 
 	/**
 	 * Delete a submission.
@@ -474,7 +481,9 @@ class TrackSubmissionHandler extends AuthorHandler {
 			Request::redirect(null, Request::getRequestedPage());
 		}
 
-		return array($journal, $authorSubmission);
+		$this->journal =& $journal;
+		$this->submission =& $authorSubmission;
+		return true;
 	}
 
 	//

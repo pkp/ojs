@@ -17,6 +17,12 @@
 import('pages.copyeditor.CopyeditorHandler');
 
 class SubmissionCopyeditHandler extends CopyeditorHandler {
+	/**
+	 * Constructor
+	 **/
+	function SubmissionCopyeditHandler() {
+		parent::CopyeditorHandler();
+	}
 	/** submission associated with the request **/
 	var $submission;
 

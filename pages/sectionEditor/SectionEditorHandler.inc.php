@@ -21,7 +21,22 @@ define('FILTER_SECTION_ALL', 0);
 import('submission.sectionEditor.SectionEditorAction');
 import('handler.Handler');
 
-class SectionEditorHandler extends Handler{
+class SectionEditorHandler extends Handler {
+	/**
+	 * Constructor
+	 **/
+	function SectionEditorHandler() {
+		parent::Handler();
+		
+		$this->addCheck(new HandlerValidatorJournal($this));
+		// FIXME This is kind of evil
+		$page = Request::getRequestedPage();
+		if ( $page == 'sectionEditor' )  
+			$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_SECTION_EDITOR)));
+		elseif ( $page == 'editor' ) 		
+			$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_EDITOR)));
+
+	}
 
 	/**
 	 * Display section editor index page.
@@ -133,22 +148,6 @@ class SectionEditorHandler extends Handler{
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
 
 		$templateMgr->display('sectionEditor/index.tpl');
-	}
-
-	/**
-	 * Validate that user is a section editor in the selected journal.
-	 * Redirects to user index page if not properly authenticated.
-	 */
-	function validate() {
-		$this->addCheck(new HandlerValidatorJournal($this));
-		// FIXME This is kind of evil
-		$page = Request::getRequestedPage();
-		if ( $page == 'sectionEditor' )  
-			$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_SECTION_EDITOR)));
-		elseif ( $page == 'editor' ) 		
-			$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_EDITOR)));
-		parent::validate();
-		return true;		
 	}
 
 	/**

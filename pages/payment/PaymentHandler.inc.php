@@ -17,7 +17,13 @@
 
 import('handler.Handler');
 
-class PaymentHandler extends Handler{
+class PaymentHandler extends Handler {
+	/**
+	 * Constructor
+	 **/
+	function PaymentHandler() {
+		parent::Handler();
+	}
 		 
 	/**
 	 * Display scheduled conference view page.

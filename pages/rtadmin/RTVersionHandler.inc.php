@@ -19,6 +19,13 @@ import('rt.ojs.JournalRTAdmin');
 import('pages.rtadmin.RTAdminHandler');
 
 class RTVersionHandler extends RTAdminHandler {
+	/**
+	 * Constructor
+	 **/
+	function RTVersionHandler() {
+		parent::RTAdminHandler();
+	}
+	
 	function createVersion($args) {
 		$this->validate();
 

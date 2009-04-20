@@ -18,7 +18,15 @@
 import('submission.author.AuthorAction');
 import('handler.Handler');
 
-class AuthorHandler extends Handler{
+class AuthorHandler extends Handler {
+	/**
+	 * Constructor
+	 **/
+	function AuthorHandler() {
+		parent::Handler();
+
+		$this->addCheck(new HandlerValidatorJournal($this));		
+	}
 
 	/**
 	 * Display journal author index page.
@@ -78,10 +86,8 @@ class AuthorHandler extends Handler{
 	 * Redirects to user index page if not properly authenticated.
 	 */
 	function validate($reason = null) {
-		$this->addCheck(new HandlerValidatorJournal($this));
 		$this->addCheck(new HandlerValidatorRoles($this, true, $reason, null, array(ROLE_ID_AUTHOR)));		
-		parent::validate();
-		return true;
+		return parent::validate();
 	}
 
 	/**

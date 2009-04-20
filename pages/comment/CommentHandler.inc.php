@@ -20,12 +20,19 @@ import('rt.ojs.RTDAO');
 import('rt.ojs.JournalRT');
 import('handler.Handler');
 
-class CommentHandler extends Handler{
+class CommentHandler extends Handler {
 	/** issue associated with this request **/
 	var $issue;
 	
 	/** article associated with this request **/
 	var $article;
+
+	/**
+	 * Constructor
+	 **/
+	function CommentHandler() {
+		parent::Handler();
+	}
 	
 	function view($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;

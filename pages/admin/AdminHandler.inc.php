@@ -17,7 +17,16 @@
 
 import('handler.Handler');
 
-class AdminHandler extends Handler{
+class AdminHandler extends Handler {
+	/**
+	 * Constructor
+	 **/
+	function AdminHandler() {
+		parent::Handler();
+		
+		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_SITE_ADMIN)));
+		$this->addCheck(new HandlerValidatorCustom($this, true, null, null, create_function(null, 'return Request::getRequestedJournalPath() == \'index\';')));
+	}
 
 	/**
 	 * Display site admin index page.
@@ -29,17 +38,6 @@ class AdminHandler extends Handler{
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', 'site.index');
 		$templateMgr->display('admin/index.tpl');
-	}
-
-	/**
-	 * Validate that user has admin privileges and is not trying to access the admin module with a journal selected.
-	 * Redirects to the user index page if not properly authenticated.
-	 */
-	function validate() {
-		parent::validate();
-		if (!Validation::isSiteAdmin() || Request::getRequestedJournalPath() != 'index') {
-			Validation::redirectLogin();
-		}
 	}
 
 	/**

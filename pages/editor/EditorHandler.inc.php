@@ -28,6 +28,12 @@ define('FILTER_EDITOR_ME', 1);
 import ('submission.editor.EditorAction');
 
 class EditorHandler extends SectionEditorHandler {
+	/**
+	 * Constructor
+	 **/
+	function EditorHandler() {
+		parent::SectionEditorHandler();
+	}
 
 	/**
 	 * Displays the editor role selection page.

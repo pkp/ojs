@@ -18,7 +18,16 @@
 import('submission.layoutEditor.LayoutEditorAction');
 import('handler.Handler');
 
-class LayoutEditorHandler extends Handler{
+class LayoutEditorHandler extends Handler {
+	/**
+	 * Constructor
+	 **/
+	function LayoutEditorHandler() {
+		parent::Handler();
+		
+		$this->addCheck(new HandlerValidatorJournal($this));
+		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_LAYOUT_EDITOR)));		
+	}
 	/**
 	 * Display layout editor index page.
 	 */
@@ -147,17 +156,6 @@ class LayoutEditorHandler extends Handler{
 		$templateMgr->assign('helpTopicId', 'publishing.index');
 		$templateMgr->assign('usesCustomOrdering', $issueDao->customIssueOrderingExists($journal->getJournalId()));
 		$templateMgr->display('layoutEditor/backIssues.tpl');
-	}
-
-	/**
-	 * Validate that user is a layout editor in the selected journal.
-	 * Redirects to user index page if not properly authenticated.
-	 */
-	function validate() {
-		$this->addCheck(new HandlerValidatorJournal($this));
-		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_LAYOUT_EDITOR)));		
-		parent::validate();
-		return true;
 	}
 
 	/**

@@ -17,13 +17,22 @@
 import('pages.editor.EditorHandler');
 
 class IssueManagementHandler extends EditorHandler {
+	/** issue associated with the request **/
+	var $issue;
+
+	/**
+	 * Constructor
+	 **/
+	function IssueManagementHandler() {
+		parent::EditorHandler();
+	}
 
 	/**
 	 * Displays the listings of future (unpublished) issues
 	 */
 	function futureIssues() {
-		IssueManagementHandler::validate(null, true);
-		IssueManagementHandler::setupTemplate(EDITOR_SECTION_ISSUES);
+		$this->validate(null, true);
+		$this->setupTemplate(EDITOR_SECTION_ISSUES);
 
 		$journal = &Request::getJournal();
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
@@ -38,8 +47,8 @@ class IssueManagementHandler extends EditorHandler {
 	 * Displays the listings of back (published) issues
 	 */
 	function backIssues() {
-		IssueManagementHandler::validate();
-		IssueManagementHandler::setupTemplate(EDITOR_SECTION_ISSUES);
+		$this->validate();
+		$this->setupTemplate(EDITOR_SECTION_ISSUES);
 
 		$journal = &Request::getJournal();
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
@@ -71,7 +80,8 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function removeIssue($args) {
 		$issueId = isset($args[0]) ? (int) $args[0] : 0;
-		$issue = IssueManagementHandler::validate($issueId);
+		$this->validate($issueId);
+		$issue =& $this->issue; 
 
 		// remove all published articles and return original articles to editing queue
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
@@ -102,8 +112,8 @@ class IssueManagementHandler extends EditorHandler {
 	 * Displays the create issue form
 	 */
 	function createIssue() {
-		IssueManagementHandler::validate();
-		IssueManagementHandler::setupTemplate(EDITOR_SECTION_ISSUES);
+		$this->validate();
+		$this->setupTemplate(EDITOR_SECTION_ISSUES);
 
 		import('issue.form.IssueForm');
 
@@ -127,8 +137,8 @@ class IssueManagementHandler extends EditorHandler {
 	 * Saves the new issue form
 	 */
 	function saveIssue() {
-		IssueManagementHandler::validate();
-		IssueManagementHandler::setupTemplate(EDITOR_SECTION_ISSUES);
+		$this->validate();
+		$this->setupTemplate(EDITOR_SECTION_ISSUES);
 
 		import('issue.form.IssueForm');
 		// FIXME: Need construction by reference or validation always fails on PHP 4.x
@@ -152,8 +162,9 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function issueData($args) {
 		$issueId = isset($args[0]) ? $args[0] : 0;
-		$issue = IssueManagementHandler::validate($issueId, true);
-		IssueManagementHandler::setupTemplate(EDITOR_SECTION_ISSUES);
+		$this->validate($issueId, true);
+		$issue =& $this->issue; 
+		$this->setupTemplate(EDITOR_SECTION_ISSUES);
 
 		$templateMgr = &TemplateManager::getManager();
 		import('issue.IssueAction');
@@ -181,8 +192,9 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function editIssue($args) {
 		$issueId = isset($args[0]) ? (int) $args[0] : 0;
-		$issue = IssueManagementHandler::validate($issueId, true);
-		IssueManagementHandler::setupTemplate(EDITOR_SECTION_ISSUES);
+		$this->validate($issueId, true);
+		$issue =& $this->issue; 
+		$this->setupTemplate(EDITOR_SECTION_ISSUES);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('issueId', $issueId);
@@ -215,7 +227,8 @@ class IssueManagementHandler extends EditorHandler {
 	function removeCoverPage($args) {
 		$issueId = isset($args[0]) ? (int)$args[0] : 0;
 		$formLocale = $args[1];
-		$issue = IssueManagementHandler::validate($issueId, true);
+		$this->validate($issueId, true);
+		$issue =& $this->issue; 
 
 		import('file.PublicFileManager');
 		$journal = &Request::getJournal();
@@ -237,7 +250,8 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function removeStyleFile($args) {
 		$issueId = isset($args[0]) ? (int)$args[0] : 0;
-		$issue = IssueManagementHandler::validate($issueId, true);
+		$this->validate($issueId, true);
+		$issue =& $this->issue; 
 
 		import('file.PublicFileManager');
 		$journal = &Request::getJournal();
@@ -257,8 +271,9 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function issueToc($args) {
 		$issueId = isset($args[0]) ? $args[0] : 0;
-		$issue = IssueManagementHandler::validate($issueId, true);
-		IssueManagementHandler::setupTemplate(EDITOR_SECTION_ISSUES);
+		$this->validate($issueId, true);
+		$issue =& $this->issue; 
+		$this->setupTemplate(EDITOR_SECTION_ISSUES);
 
 		$templateMgr = &TemplateManager::getManager();
 
@@ -333,7 +348,7 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function updateIssueToc($args) {
 		$issueId = isset($args[0]) ? $args[0] : 0;
-		IssueManagementHandler::validate($issueId, true);
+		$this->validate($issueId, true);
 
 		$journal = &Request::getJournal();
 
@@ -385,11 +400,12 @@ class IssueManagementHandler extends EditorHandler {
 		$journal = &Request::getJournal();
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 		if ($issueId) {
-			$issue = IssueManagementHandler::validate($issueId);
+			$this->validate($issueId);
+			$issue =& $this->issue; 
 			$issue->setCurrent(1);
 			$issueDao->updateCurrentIssue($journal->getJournalId(), $issue);
 		} else {
-			IssueManagementHandler::validate();
+			$this->validate();
 			$issueDao->updateCurrentIssue($journal->getJournalId());
 		}
 		Request::redirect(null, null, 'backIssues');
@@ -400,7 +416,8 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function moveIssue($args) {
 		$issueId = isset($args[0]) ? $args[0] : 0;
-		$issue = IssueManagementHandler::validate($issueId);
+		$this->validate($issueId);
+		$issue =& $this->issue; 
 		$journal = &Request::getJournal();
 
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
@@ -419,7 +436,7 @@ class IssueManagementHandler extends EditorHandler {
 	 * Reset issue ordering to defaults.
 	 */
 	function resetIssueOrder($args) {
-		IssueManagementHandler::validate();
+		$this->validate();
 
 		$journal =& Request::getJournal();
 
@@ -434,7 +451,8 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function moveSectionToc($args) {
 		$issueId = isset($args[0]) ? $args[0] : 0;
-		$issue = IssueManagementHandler::validate($issueId, true);
+		$this->validate($issueId, true);
+		$issue =& $this->issue; 
 		$journal = &Request::getJournal();
 
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
@@ -457,7 +475,8 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function resetSectionOrder($args) {
 		$issueId = isset($args[0]) ? $args[0] : 0;
-		$issue = IssueManagementHandler::validate($issueId, true);
+		$this->validate($issueId, true);
+		$issue =& $this->issue; 
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$sectionDao->deleteCustomSectionOrdering($issueId);
@@ -470,7 +489,8 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function moveArticleToc($args) {
 		$issueId = isset($args[0]) ? $args[0] : 0;
-		$issue = IssueManagementHandler::validate($issueId, true);
+		$this->validate($issueId, true);
+		$issue =& $this->issue; 
 
 		$journal = &Request::getJournal();
 
@@ -491,7 +511,8 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function publishIssue($args) {
 		$issueId = isset($args[0]) ? (int) $args[0] : 0;
-		$issue = IssueManagementHandler::validate($issueId);
+		$this->validate($issueId);
+		$issue =& $this->issue; 
 
 		$journal = &Request::getJournal();
 		$journalId = $journal->getJournalId();
@@ -564,8 +585,9 @@ class IssueManagementHandler extends EditorHandler {
 	 * Allows editors to write emails to users associated with the journal.
 	 */
 	function notifyUsers($args) {
-		$issue = IssueManagementHandler::validate(Request::getUserVar('issue'));
-		IssueManagementHandler::setupTemplate(EDITOR_SECTION_ISSUES);
+		$this->validate(Request::getUserVar('issue'));
+		$issue =& $this->issue; 
+		$this->setupTemplate(EDITOR_SECTION_ISSUES);
 
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
@@ -672,7 +694,8 @@ class IssueManagementHandler extends EditorHandler {
 			}
 		}
 
-		return $issue;
+		$this->issue =& $issue;
+		return true;
 	}
 
 	/**

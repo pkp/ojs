@@ -17,6 +17,12 @@
 import('pages.manager.ManagerHandler');
 
 class SetupHandler extends ManagerHandler {
+	/**
+	 * Constructor
+	 **/
+	function SetupHandler() {
+		parent::ManagerHandler();
+	}
 
 	/**
 	 * Display journal setup form for the selected step.

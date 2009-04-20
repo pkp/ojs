@@ -18,7 +18,13 @@
 import ('submission.copyeditor.CopyeditorAction');
 import('handler.Handler');
 
-class CopyeditorHandler extends Handler{
+class CopyeditorHandler extends Handler {
+	/**
+	 * Constructor
+	 **/
+	function CopyeditorHandler() {
+		parent::Handler();
+	}
 
 	/**
 	 * Display copyeditor index page.

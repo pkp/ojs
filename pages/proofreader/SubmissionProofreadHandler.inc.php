@@ -21,6 +21,13 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 	var $submission;
 	
 	/**
+	 * Constructor
+	 **/
+	function SubmissionProofreadHandler() {
+		parent::ProofreaderHandler();
+	}
+	
+	/**
 	 * Submission - Proofreading view
 	 */
 	function submission($args) {

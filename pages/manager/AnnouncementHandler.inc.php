@@ -18,6 +18,12 @@ import('manager.PKPAnnouncementHandler');
 
 class AnnouncementHandler extends PKPAnnouncementHandler {
 	/**
+	 * Constructor
+	 **/
+	function AnnouncementHandler() {
+		parent::PKPAnnouncementHandler();
+	}
+	/**
 	 * Display a list of announcements for the current journal.
 	 */
 	function announcements() {

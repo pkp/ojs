@@ -18,6 +18,12 @@
 import('pages.copyeditor.SubmissionCopyeditHandler');
 
 class SubmissionCommentsHandler extends CopyeditorHandler {
+	/**
+	 * Constructor
+	 **/
+	function SubmissionCommentsHandler() {
+		parent::CopyeditorHandler();
+	}
 	/** comment associated with this request **/
 	var $comment;
 

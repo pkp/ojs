@@ -17,6 +17,12 @@
 import('pages.admin.AdminHandler');
 
 class AdminLanguagesHandler extends AdminHandler {
+	/**
+	 * Constructor
+	 **/
+	function AdminLanguagesHandler() {
+		parent::AdminHandler();
+	}
 
 	/**
 	 * Display form to modify site language settings.

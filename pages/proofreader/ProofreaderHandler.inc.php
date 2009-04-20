@@ -18,7 +18,16 @@
 import('submission.proofreader.ProofreaderAction');
 import('handler.Handler');
 
-class ProofreaderHandler extends Handler{
+class ProofreaderHandler extends Handler {
+	/**
+	 * Constructor
+	 **/
+	function ProofreaderHandler() {
+		parent::Handler();
+
+		$this->addCheck(new HandlerValidatorJournal($this));
+		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_PROOFREADER)));		
+	}
 
 	/**
 	 * Display proofreader index page.
@@ -89,17 +98,6 @@ class ProofreaderHandler extends Handler{
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
 		$templateMgr->assign('helpTopicId', 'editorial.proofreadersRole.submissions');
 		$templateMgr->display('proofreader/index.tpl');
-	}
-
-	/**
-	 * Validate that user is a proofreader in the selected journal.
-	 * Redirects to user index page if not properly authenticated.
-	 */
-	function validate() {
-		$this->addCheck(new HandlerValidatorJournal($this));
-		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_PROOFREADER)));		
-		parent::validate();
-		return true;
 	}
 
 	/**

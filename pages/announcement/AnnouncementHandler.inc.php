@@ -18,6 +18,12 @@
 import('announcement.PKPAnnouncementHandler');
 
 class AnnouncementHandler extends PKPAnnouncementHandler {
+	/**
+	 * Constructor
+	 **/
+	function AnnouncementHandler() {
+		parent::PKPAnnouncementHandler();
+	}
 	function _getAnnouncementsEnabled() {
 		$journal =& Request::getJournal();
 		return $journal->getSetting('enableAnnouncements');

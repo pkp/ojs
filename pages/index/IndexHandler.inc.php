@@ -18,6 +18,12 @@
 import('handler.Handler');
 
 class IndexHandler extends Handler {
+	/**
+	 * Constructor
+	 **/
+	function IndexHandler() {
+		parent::Handler();
+	}
 
 	/**
 	 * If no journal is selected, display list of journals.

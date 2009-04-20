@@ -22,7 +22,13 @@
 
 import('handler.Handler');
 
-class DonationsHandler extends Handler{
+class DonationsHandler extends Handler {
+	/**
+	 * Constructor
+	 **/
+	function DonationsHandler() {
+		parent::Handler();
+	}
 	function index( $args ) {
 		import('payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();

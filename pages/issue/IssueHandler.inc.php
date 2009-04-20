@@ -18,7 +18,15 @@
 import ('issue.IssueAction');
 import('handler.Handler');
 
-class IssueHandler extends Handler{
+class IssueHandler extends Handler {
+	/**
+	 * Constructor
+	 **/
+	function IssueHandler() {
+		parent::Handler();
+		
+		$this->addCheck(new HandlerValidatorJournal($this));
+	}
 
 	/**
 	 * Display about index page.
@@ -284,14 +292,6 @@ class IssueHandler extends Handler{
 		$templateMgr->assign_by_ref('issues', $publishedIssuesIterator);
 		$templateMgr->assign('helpTopicId', 'user.currentAndArchives');
 		$templateMgr->display('issue/archive.tpl');
-	}
-
-	/**
-	 * Validate that a joural is selected.
-	 */
-	function validate() {
-		$this->addCheck(new HandlerValidatorJournal($this));
-		parent::validate();
 	}
 		
 	function setupTemplate() {

@@ -16,6 +16,12 @@
 import('pages.manager.ManagerHandler');
 
 class ManagerPaymentHandler extends ManagerHandler {
+	/**
+	 * Constructor
+	 **/
+	function ManagerPaymentHandler() {
+		parent::ManagerHandler();
+	}
 
 	/**
 	 * Display Settings Form (main payments page)

@@ -17,6 +17,18 @@
 import('pages.layoutEditor.LayoutEditorHandler');
 
 class SubmissionLayoutHandler extends LayoutEditorHandler {
+	/** journal associated with the request **/
+	var $journal;
+	
+	/** submission associated with the request **/
+	var $submission;
+	
+	/**
+	 * Constructor
+	 **/
+	function SubmissionLayoutHandler() {
+		parent::LayoutEditorHandler();
+	}
 
 	//
 	// Submission Management
@@ -47,7 +59,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			$layoutDao->updateSubmission($submission);
 		}
 
-		$disableEdit = !SubmissionLayoutHandler::layoutEditingEnabled($submission);
+		$disableEdit = !$this->layoutEditingEnabled($submission);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign_by_ref('submission', $submission);
@@ -149,7 +161,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 
 		$this->setupTemplate(true, $articleId, 'editing');
 
-		if (SubmissionLayoutHandler::layoutEditingEnabled($submission)) {
+		if ($this->layoutEditingEnabled($submission)) {
 			import('submission.form.ArticleGalleyForm');
 
 			// FIXME: Need construction by reference or validation always fails on PHP 4.x
@@ -314,7 +326,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 
 			} else {
 				// View non-HTML file inline
-				SubmissionLayoutHandler::viewFile(array($articleId, $galley->getFileId()));
+				$this->viewFile(array($articleId, $galley->getFileId()));
 			}
 		}
 	}
@@ -355,7 +367,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 
 		$this->setupTemplate(true, $articleId, 'editing');
 
-		if (SubmissionLayoutHandler::layoutEditingEnabled($submission)) {
+		if ($this->layoutEditingEnabled($submission)) {
 			import('submission.form.SuppFileForm');
 
 			// FIXME: Need construction by reference or validation always fails on PHP 4.x
@@ -469,7 +481,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$fileId = isset($args[1]) ? $args[1] : 0;
 		$revision = isset($args[2]) ? $args[2] : null;
 
-		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId);
+		list($journal, $submission) = $this->validate($articleId);
 		if (!LayoutEditorAction::downloadFile($submission, $fileId, $revision)) {
 			Request::redirect(null, null, 'submission', $articleId);
 		}
@@ -484,7 +496,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$fileId = isset($args[1]) ? $args[1] : 0;
 		$revision = isset($args[2]) ? $args[2] : null;
 
-		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId);
+		list($journal, $submission) = $this->validate($articleId);
 		if (!LayoutEditorAction::viewFile($articleId, $fileId, $revision)) {
 			Request::redirect(null, null, 'submission', $articleId);
 		}
@@ -500,7 +512,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	function layoutEditorProofreadingComplete($args) {
 		$articleId = Request::getUserVar('articleId');
 
-		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId);
+		list($journal, $submission) = $this->validate($articleId);
 		$this->setupTemplate(true, $articleId);
 
 		$send = false;
@@ -541,7 +553,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			if (!isset($layoutAssignment)) $isValid = false;
 			elseif ($layoutAssignment->getEditorId() == $user->getUserId()) {
 				if ($checkEdit) {
-					$isValid = SubmissionLayoutHandler::layoutEditingEnabled($submission);
+					$isValid = $this->layoutEditingEnabled($submission);
 				} else {
 					$isValid = true;
 				}
@@ -551,7 +563,10 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		if (!$isValid) {
 			Request::redirect(null, Request::getRequestedPage());
 		}
-		return array($journal, $submission);
+		
+		$this->journal =& $journal;
+		$this->submission =& $submission;
+		return true;
 	}
 
 	/**

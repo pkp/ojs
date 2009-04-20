@@ -20,7 +20,24 @@ import('rt.ojs.RTDAO');
 import('rt.ojs.JournalRT');
 import('handler.Handler');
 
-class ArticleHandler extends Handler{
+class ArticleHandler extends Handler {
+	/** journal associated with the request **/
+	var $journal;
+	
+	/** issue associated with the request **/
+	var $issue;
+	
+	/** article associated with the request **/
+	var $article;
+
+	/**
+	 * Constructor
+	 **/
+	function ArticleHandler() {
+		parent::Handler();
+		
+		$this->addCheck(new HandlerValidatorJournal($this));		
+	}
 
 	/**
 	 * View Article.
@@ -29,8 +46,11 @@ class ArticleHandler extends Handler{
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 
-		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
-		ArticleHandler::setupTemplate();
+		$this->validate($articleId, $galleyId);
+		$journal =& $this->journal;
+		$issue =& $this->issue;
+		$article =& $this->article;
+		$this->setupTemplate();
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = $rtDao->getJournalRTByJournal($journal);
@@ -43,13 +63,13 @@ class ArticleHandler extends Handler{
 		}
 
 		if (!$journalRt->getEnabled()) {
-			if (!$galley || $galley->isHtmlGalley()) return ArticleHandler::viewArticle($args);
-			else if ($galley->isPdfGalley()) return ArticleHandler::viewPDFInterstitial($args, $galley);
+			if (!$galley || $galley->isHtmlGalley()) return $this->viewArticle($args);
+			else if ($galley->isPdfGalley()) return $this->viewPDFInterstitial($args, $galley);
 			else if ($galley->isInlineable()) {
 				import('file.ArticleFileManager');
 				$articleFileManager = new ArticleFileManager($article->getArticleId());
 				return $articleFileManager->viewFile($galley->getFileId());
-			} else return ArticleHandler::viewDownloadInterstitial($args, $galley);
+			} else return $this->viewDownloadInterstitial($args, $galley);
 		}
 
 		if (!$article) {
@@ -72,8 +92,11 @@ class ArticleHandler extends Handler{
 	function viewPDFInterstitial($args, $galley = null) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? $args[1] : 0;
-		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
-		ArticleHandler::setupTemplate();
+		$this->validate($articleId, $galleyId);
+		$journal =& $this->journal;
+		$issue =& $this->issue;
+		$article =& $this->article;		
+		$this->setupTemplate();
 
 		if (!$galley) {
 			$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
@@ -102,8 +125,11 @@ class ArticleHandler extends Handler{
 	function viewDownloadInterstitial($args, $galley = null) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? $args[1] : 0;
-		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
-		ArticleHandler::setupTemplate();
+		$this->validate($articleId, $galleyId);
+		$journal =& $this->journal;
+		$issue =& $this->issue;
+		$article =& $this->article;		
+		$this->setupTemplate();
 
 		if (!$galley) {
 			$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
@@ -132,8 +158,11 @@ class ArticleHandler extends Handler{
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 
-		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
-		ArticleHandler::setupTemplate();
+		$this->validate($articleId, $galleyId);
+		$journal =& $this->journal;
+		$issue =& $this->issue;
+		$article =& $this->article;		
+		$this->setupTemplate();
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = $rtDao->getJournalRTByJournal($journal);
@@ -260,8 +289,11 @@ class ArticleHandler extends Handler{
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 
-		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
-		ArticleHandler::setupTemplate();
+		$this->validate($articleId, $galleyId);
+		$journal =& $this->journal;
+		$issue =& $this->issue;
+		$article =& $this->article;		
+		$this->setupTemplate();
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = $rtDao->getJournalRTByJournal($journal);
@@ -330,7 +362,10 @@ class ArticleHandler extends Handler{
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 		$fileId = isset($args[2]) ? (int) $args[2] : 0;
 
-		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
+		$this->validate($articleId, $galleyId);
+		$journal =& $this->journal;
+		$issue =& $this->issue;
+		$article =& $this->article;		
 
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		if ($journal->getSetting('enablePublicGalleyId')) {
@@ -350,7 +385,7 @@ class ArticleHandler extends Handler{
 			}
 		}
 
-		if (!HookRegistry::call('ArticleHandler::viewFile', array(&$article, &$galley, &$fileId))) {
+		if (!HookRegistry::call('$this->viewFile', array(&$article, &$galley, &$fileId))) {
 			import('submission.common.Action');
 			Action::viewFile($article->getArticleId(), $fileId);
 		}
@@ -362,7 +397,10 @@ class ArticleHandler extends Handler{
 	function download($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? $args[1] : 0;
-		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
+		$this->validate($articleId, $galleyId);
+		$journal =& $this->journal;
+		$issue =& $this->issue;
+		$article =& $this->article;		
 
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		if ($journal->getSetting('enablePublicGalleyId')) {
@@ -372,7 +410,7 @@ class ArticleHandler extends Handler{
 		}
 		$galleyDao->incrementViews($galleyId);
 
-		if ($article && $galley && !HookRegistry::call('ArticleHandler::downloadFile', array(&$article, &$galley))) {
+		if ($article && $galley && !HookRegistry::call('$this->downloadFile', array(&$article, &$galley))) {
 			import('file.ArticleFileManager');
 			$articleFileManager = new ArticleFileManager($article->getArticleId());
 			$articleFileManager->downloadFile($galley->getFileId());
@@ -382,7 +420,10 @@ class ArticleHandler extends Handler{
 	function downloadSuppFile($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$suppId = isset($args[1]) ? $args[1] : 0;
-		list($journal, $issue, $article) = ArticleHandler::validate($articleId);
+		$this->validate($articleId);
+		$journal =& $this->journal;
+		$issue =& $this->issue;
+		$article =& $this->article;		
 
 		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 		if ($journal->getSetting('enablePublicSuppFileId')) {
@@ -406,7 +447,7 @@ class ArticleHandler extends Handler{
 	 * Validation
 	 */
 	function validate($articleId, $galleyId = null) {
-		parent::validate(true);
+		parent::validate();
 
 		import('issue.IssueAction');
 
@@ -434,7 +475,9 @@ class ArticleHandler extends Handler{
 		// If this is an editorial user who can view unpublished/unscheduled
 		// articles, bypass further validation. Likewise for its author.
 		if (($article || $publishedArticle) && (($article && IssueAction::allowedPrePublicationAccess($journal, $article) || ($publishedArticle && IssueAction::allowedPrePublicationAccess($journal, $publishedArticle))))) {
-			return array($journal, $issue, $publishedArticle?$publishedArticle:$article);
+			$this->journal =& $journal;
+			$this->issue =& $issue;
+			$this->article =& $publishedArticle?$publishedArticle:$article;
 		}
 
 		// Make sure the reader has rights to view the article/issue.
@@ -471,7 +514,10 @@ class ArticleHandler extends Handler{
 								$galley =& $galleyDAO->getGalleyByBestGalleyId($galleyId, $articleId);
 							}
 							if ( $galley && !$galley->isPdfGalley() ) {
-								return array($journal, $issue, $publishedArticle);
+								$this->journal =& $journal;
+								$this->issue =& $issue;
+								$this->article =& $publishedArticle;
+								return true;
 							}
 						}
 
@@ -485,7 +531,10 @@ class ArticleHandler extends Handler{
 						$dateEndMembership = $user->getSetting('dateEndMembership', 0);
 						if ( $completedPaymentDAO->hasPaidPerViewArticle($userId, $articleId)
 							|| (!is_null($dateEndMembership) && $dateEndMembership > time()) ) {
-							return array($journal, $issue, $publishedArticle);
+							$this->journal =& $journal;
+							$this->issue =& $issue;
+							$this->article =& $publishedArticle;
+							return true;
 						} else {
 							$queuedPayment =& $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_PURCHASE_ARTICLE, $user->getUserId(), $articleId, $journal->getSetting('purchaseArticleFee'));
 							$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
@@ -507,7 +556,10 @@ class ArticleHandler extends Handler{
 		} else {
 			Request::redirect(null, 'index');
 		}
-		return array($journal, $issue, $publishedArticle);
+		$this->journal =& $journal;
+		$this->issue =& $issue;
+		$this->article =& $publishedArticle;
+		return true;
 	}
 
 	function setupTemplate() {

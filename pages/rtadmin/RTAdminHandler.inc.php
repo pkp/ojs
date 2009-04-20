@@ -18,7 +18,16 @@
 import('rt.ojs.JournalRTAdmin');
 import('handler.Handler');
 
-class RTAdminHandler extends Handler{
+class RTAdminHandler extends Handler {
+	/**
+	 * Constructor
+	 **/
+	function RTAdminHandler() {
+		parent::Handler();
+
+		$this->addCheck(new HandlerValidatorJournal($this));
+		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_SITE_ADMIN, ROLE_ID_JOURNAL_MANAGER)));		
+	}
 
 	/**
 	 * If no journal is selected, display list of journals.
@@ -69,15 +78,6 @@ class RTAdminHandler extends Handler{
 			// Not logged in.
 			Validation::redirectLogin();
 		}
-	}
-
-	/**
-	 * Ensure that this page is available to the user.
-	 */
-	function validate() {
-		$this->addCheck(new HandlerValidatorJournal($this));
-		$this->addCheck(new HandlerValidatorRoles($this, array(ROLE_ID_SITE_ADMIN, ROLE_ID_JOURNAL_MANAGER)));
-		parent::validate();
 	}
 
 	function validateUrls($args) {

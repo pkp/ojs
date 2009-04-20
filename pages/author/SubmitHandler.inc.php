@@ -17,6 +17,12 @@
 import('pages.author.AuthorHandler');
 
 class SubmitHandler extends AuthorHandler {
+	/**
+	 * Constructor
+	 **/
+	function SubmitHandler() {
+		parent::AuthorHandler();
+	}
 	/** article associated with the request **/
 	var $article;
 	

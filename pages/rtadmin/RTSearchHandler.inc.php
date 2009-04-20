@@ -19,6 +19,13 @@ import('rt.ojs.JournalRTAdmin');
 import('pages.rtadmin.RTAdminHandler');
 
 class RTSearchHandler extends RTAdminHandler {
+	/**
+	 * Constructor
+	 **/
+	function RTSearchHandler() {
+		parent::RTAdminHandler();
+	}
+	
 	function createSearch($args) {
 		$this->validate();
 

@@ -20,6 +20,13 @@ import('pages.proofreader.SubmissionProofreadHandler');
 class SubmissionCommentsHandler extends ProofreaderHandler {
 	/** comment associated with the request **/
 	var $comment;
+	
+	/**
+	 * Constructor
+	 **/
+	function SubmissionCommentsHandler() {
+		parent::ProofreaderHandler();
+	}
 
 	/**
 	 * View proofread comments.

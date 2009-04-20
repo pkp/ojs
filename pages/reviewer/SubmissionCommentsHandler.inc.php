@@ -22,6 +22,13 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 	var $comment;
 	
 	/**
+	 * Constructor
+	 **/
+	function SubmissionCommentsHandler() {
+		parent::ReviewerHandler();
+	}
+	
+	/**
 	 * View peer review comments.
 	 */
 	function viewPeerReviewComments($args) {

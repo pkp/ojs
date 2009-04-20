@@ -1,3 +1,4 @@
+
 <?php
 
 /**
@@ -22,6 +23,13 @@ class SubmissionReviewHandler extends ReviewerHandler {
 	
 	/** user associated with the request **/
 	var $user;
+		
+	/**
+	 * Constructor
+	 **/
+	function SubmissionReviewHandler() {
+		parent::ReviewerHandler();
+	}
 
 	/**
 	 * Display the submission review page.

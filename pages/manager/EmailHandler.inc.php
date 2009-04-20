@@ -17,6 +17,12 @@
 import('pages.manager.ManagerHandler');
 
 class EmailHandler extends ManagerHandler {
+	/**
+	 * Constructor
+	 **/
+	function EmailHandler() {
+		parent::ManagerHandler();
+	}
 
 	/**
 	 * Display a list of the emails within the current journal.

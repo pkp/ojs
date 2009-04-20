@@ -18,6 +18,12 @@
 import('pages.layoutEditor.SubmissionLayoutHandler');
 
 class SubmissionCommentsHandler extends LayoutEditorHandler {
+	/**
+	 * Constructor
+	 **/
+	function SubmissionCommentsHandler() {
+		parent::LayoutEditorHandler();
+	}
 	/** comment associated with the request **/
 	var $comment;
 	

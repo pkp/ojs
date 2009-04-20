@@ -17,6 +17,12 @@
 import('pages.admin.AdminHandler');
 
 class AdminJournalHandler extends AdminHandler {
+	/**
+	 * Constructor
+	 **/
+	function AdminJournalHandler() {
+		parent::AdminHandler();
+	}
 
 	/**
 	 * Display a list of the journals hosted on the site.

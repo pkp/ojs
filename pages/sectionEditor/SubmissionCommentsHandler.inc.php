@@ -20,6 +20,13 @@ import('pages.sectionEditor.SubmissionEditHandler');
 class SubmissionCommentsHandler extends SectionEditorHandler {
 	/** comment associated with the request **/
 	var $comment;
+		
+	/**
+	 * Constructor
+	 **/
+	function SubmissionCommentsHandler() {
+		parent::SectionEditorHandler();
+	}
 
 	/**
 	 * View peer review comments.

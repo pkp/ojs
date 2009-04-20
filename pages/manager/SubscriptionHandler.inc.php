@@ -17,6 +17,12 @@
 import('pages.manager.ManagerHandler');
 
 class SubscriptionHandler extends ManagerHandler {
+	/**
+	 * Constructor
+	 **/
+	function SubscriptionHandler() {
+		parent::ManagerHandler();
+	}
 
 	/**
 	 * Display a list of subscriptions for the current journal.

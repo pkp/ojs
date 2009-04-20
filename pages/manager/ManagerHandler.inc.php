@@ -19,6 +19,14 @@ import('pages.manager.ManagerHandler');
 
 class ManagerHandler extends Handler {
 	/**
+	 * Constructor
+	 **/
+	function ManagerHandler() {
+		parent::Handler();
+		$this->addCheck(new HandlerValidatorJournal($this));
+		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_SITE_ADMIN, ROLE_ID_JOURNAL_MANAGER)));
+	}
+	/**
 	 * Display journal management index page.
 	 */
 	function index() {
@@ -101,12 +109,6 @@ class ManagerHandler extends Handler {
 			$subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'manager'), 'manager.journalManagement'))
 				: array(array(Request::url(null, 'user'), 'navigation.user'))
 		);
-	}
-
-	function validate() {
-		$this->addCheck(new HandlerValidatorJournal($this));
-		$this->addCheck(new HandlerValidatorRoles($this, array(ROLE_ID_SITE_ADMIN, ROLE_ID_JOURNAL_MANAGER)));
-		parent::validate();
 	}
 	 
 	/**
