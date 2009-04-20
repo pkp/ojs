@@ -290,7 +290,7 @@ class IssueHandler extends Handler{
 	 * Validate that a joural is selected.
 	 */
 	function validate() {
-		$this->addCheck(new HandlerValidatorJournal(&$this));
+		$this->addCheck(new HandlerValidatorJournal($this));
 		parent::validate();
 	}
 		

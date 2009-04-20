@@ -96,8 +96,8 @@ class CopyeditorHandler extends Handler{
 	 * Redirects to user index page if not properly authenticated.
 	 */
 	function validate() {
-		$this->addCheck(new HandlerValidatorJournal(&$this));
-		$this->addCheck(new HandlerValidatorRoles(&$this, true, null, null, array(ROLE_ID_COPYEDITOR)));		
+		$this->addCheck(new HandlerValidatorJournal($this));
+		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_COPYEDITOR)));		
 		parent::validate();
 		return true;
 	}

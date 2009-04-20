@@ -65,8 +65,8 @@ class ReviewerHandler extends Handler{
 	 * Note that subclasses using access keys should not call this method.
 	 */
 	function validate() {
-		$this->addCheck(new HandlerValidatorJournal(&$this));
-		$this->addCheck(new HandlerValidatorRoles(&$this, true, null, null, array(ROLE_ID_REVIEWER)));		
+		$this->addCheck(new HandlerValidatorJournal($this));
+		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_REVIEWER)));		
 		parent::validate();
 		return true;
 	}

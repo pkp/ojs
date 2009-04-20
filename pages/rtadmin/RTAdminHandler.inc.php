@@ -75,8 +75,8 @@ class RTAdminHandler extends Handler{
 	 * Ensure that this page is available to the user.
 	 */
 	function validate() {
-		$this->addCheck(new HandlerValidatorJournal(&$this));
-		$this->addCheck(new HandlerValidatorRoles(&$this, array(ROLE_ID_SITE_ADMIN, ROLE_ID_JOURNAL_MANAGER)));
+		$this->addCheck(new HandlerValidatorJournal($this));
+		$this->addCheck(new HandlerValidatorRoles($this, array(ROLE_ID_SITE_ADMIN, ROLE_ID_JOURNAL_MANAGER)));
 		parent::validate();
 	}
 

@@ -78,8 +78,8 @@ class AuthorHandler extends Handler{
 	 * Redirects to user index page if not properly authenticated.
 	 */
 	function validate($reason = null) {
-		$this->addCheck(new HandlerValidatorJournal(&$this));
-		$this->addCheck(new HandlerValidatorRoles(&$this, true, $reason, null, array(ROLE_ID_AUTHOR)));		
+		$this->addCheck(new HandlerValidatorJournal($this));
+		$this->addCheck(new HandlerValidatorRoles($this, true, $reason, null, array(ROLE_ID_AUTHOR)));		
 		parent::validate();
 		return true;
 	}

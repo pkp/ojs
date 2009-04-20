@@ -456,8 +456,8 @@ class EditorHandler extends SectionEditorHandler {
 	 * Redirects to user index page if not properly authenticated.
 	 */
 	function validate() {
-		$this->addCheck(new HandlerValidatorJournal(&$this));
-		$this->addCheck(new HandlerValidatorRoles(&$this, true, null, null, array(ROLE_ID_EDITOR)));
+		$this->addCheck(new HandlerValidatorJournal($this));
+		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_EDITOR)));
 		
 		return parent::validate();
 	}
