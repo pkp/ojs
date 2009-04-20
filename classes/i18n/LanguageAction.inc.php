@@ -51,7 +51,7 @@ class LanguageAction {
 
 		// Check to see that we're using at least PHP 4.3 for
 		// stream_set_blocking.
-		if (!version_compare(phpversion(), '4.3.0')) return false;
+		if (!checkPhpVersion('4.3.0')) return false;
 
 		// Check to see that tar can be executed
 		$fds = array(
@@ -167,7 +167,7 @@ class LanguageAction {
 				return false;
 			}
 			fwrite($fp, $contents);
-			fclose($fwrite);
+			fclose($fp);
 		}
 
 		return true;
