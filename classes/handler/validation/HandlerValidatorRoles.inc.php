@@ -24,8 +24,8 @@ class HandlerValidatorRoles extends HandlerValidator {
 	 * @param $roles array of role id's 
 	 * @param $all bool flag for whether all roles must exist or just 1
 	 */	 
-	function HandlerValidatorRoles(&$handler, $roles, $all = false) {
-		parent::HandlerValidator($handler);
+	function HandlerValidatorRoles(&$handler, $redirectLogin = true, $message = null, $additionalArgs = array(), $roles, $all = false) {
+		parent::HandlerValidator($handler, $redirectLogin, $message, $additionalArgs);
 		$this->roles = $roles;
 		$this->all = $all;
 	}

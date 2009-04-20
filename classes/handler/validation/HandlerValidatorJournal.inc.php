@@ -20,8 +20,8 @@ class HandlerValidatorJournal extends HandlerValidator {
 	 * @param $message string the error message for validation failures (i18n key)
 	 */
 	 
-	function HandlerValidatorJournal(&$handler) {
-		parent::HandlerValidator($handler);
+	function HandlerValidatorJournal(&$handler, $redirectToLogin = false, $message = null, $additionalArgs = array()) {
+		parent::HandlerValidator($handler, $redirectToLogin, $message, $additionalArgs);
 	}
 
 	/**
