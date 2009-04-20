@@ -9,7 +9,7 @@
  * @class ArticleHandler
  * @ingroup pages_article
  *
- * @brief Handle requests for article functions. 
+ * @brief Handle requests for article functions.
  *
  */
 
@@ -84,6 +84,8 @@ class ArticleHandler extends PKPHandler {
 			}
 		}
 
+		if (!$galley) Request::redirect(null, null, 'view', $articleId);
+
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
@@ -111,6 +113,8 @@ class ArticleHandler extends PKPHandler {
 				$galley =& $galleyDao->getGalley($galleyId, $article->getArticleId());
 			}
 		}
+
+		if (!$galley) Request::redirect(null, null, 'view', $articleId);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
@@ -176,7 +180,7 @@ class ArticleHandler extends PKPHandler {
 			}
 
 			$templateMgr->assign('subscribedUser', IssueAction::subscribedUser($journal, isset($issue) ? $issue->getIssueId() : null, isset($article) ? $article->getArticleId() : null));
-			$templateMgr->assign('subscribedDomain', IssueAction::subscribedDomain($journal, isset($issue) ? $issue->getIssueId() : null, isset($article) ? $article->getArticleId() : null)); 
+			$templateMgr->assign('subscribedDomain', IssueAction::subscribedDomain($journal, isset($issue) ? $issue->getIssueId() : null, isset($article) ? $article->getArticleId() : null));
 
 			$templateMgr->assign('showGalleyLinks', $journal->getSetting('showGalleyLinks'));
 
@@ -246,7 +250,7 @@ class ArticleHandler extends PKPHandler {
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('defineTermsContextId', isset($defineTermsContextId)?$defineTermsContextId:null);
 		$templateMgr->assign('comments', isset($comments)?$comments:null);
-		$templateMgr->display('article/article.tpl');	
+		$templateMgr->display('article/article.tpl');
 	}
 
 	/**
@@ -296,7 +300,7 @@ class ArticleHandler extends PKPHandler {
 
 		$enableComments = $journal->getSetting('enableComments');
 		$templateMgr->assign('postingAllowed', (
-			$article->getEnableComments() && 
+			$article->getEnableComments() &&
 			$enableComments != COMMENTS_DISABLED
 		));
 
@@ -314,7 +318,7 @@ class ArticleHandler extends PKPHandler {
 			}
 		}
 
-		$templateMgr->display('rt/rt.tpl');	
+		$templateMgr->display('rt/rt.tpl');
 	}
 
 	/**
@@ -409,7 +413,7 @@ class ArticleHandler extends PKPHandler {
 		$journal =& Request::getJournal();
 		$journalId = $journal->getJournalId();
 		$article = $publishedArticle = $issue = null;
-		$user =& Request::getUser();	
+		$user =& Request::getUser();
 		$userId = $user?$user->getUserId():0;
 
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
@@ -452,11 +456,11 @@ class ArticleHandler extends PKPHandler {
 				$subscribedUser = IssueAction::subscribedUser($journal, $issue->getIssueId(), $articleId);
 
 				if (!(!$subscriptionRequired || $publishedArticle->getAccessStatus() || $subscribedUser)) {
-					// if payment information is enabled, 
+					// if payment information is enabled,
 					import('payment.ojs.OJSPaymentManager');
 					$paymentManager =& OJSPaymentManager::getManager();
 
-					if ( $paymentManager->purchaseArticleEnabled() || $paymentManager->membershipEnabled() ) { 
+					if ( $paymentManager->purchaseArticleEnabled() || $paymentManager->membershipEnabled() ) {
 						/* if only pdf files are being restricted, then approve all non-pdf galleys
 						 * and continue checking if it is a pdf galley */
 						if ( $paymentManager->onlyPdfEnabled() ) {
@@ -468,35 +472,35 @@ class ArticleHandler extends PKPHandler {
 							}
 							if ( $galley && !$galley->isPdfGalley() ) {
 								return array($journal, $issue, $publishedArticle);
-							} 
-						} 
-					
+							}
+						}
+
 						if (!Validation::isLoggedIn()) {
 							Validation::redirectLogin("payment.loginRequired.forArticle");
-						}	
-				
+						}
+
 						/* if the article has been paid for then forget about everything else
 						 * and just let them access the article */
 						$completedPaymentDAO =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
 						$dateEndMembership = $user->getSetting('dateEndMembership', 0);
-						if ( $completedPaymentDAO->hasPaidPerViewArticle($userId, $articleId) 
-							|| (!is_null($dateEndMembership) && $dateEndMembership > time()) ) { 
+						if ( $completedPaymentDAO->hasPaidPerViewArticle($userId, $articleId)
+							|| (!is_null($dateEndMembership) && $dateEndMembership > time()) ) {
 							return array($journal, $issue, $publishedArticle);
-						} else {					
+						} else {
 							$queuedPayment =& $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_PURCHASE_ARTICLE, $user->getUserId(), $articleId, $journal->getSetting('purchaseArticleFee'));
 							$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
-					
-							$templateMgr =& TemplateManager::getManager();							
+
+							$templateMgr =& TemplateManager::getManager();
 							$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
-							exit;	
-						}	
+							exit;
+						}
 					}
-								
+
 					if (!isset($galleyId) || $galleyId) {
 						if (!Validation::isLoggedIn()) {
 							Validation::redirectLogin("reader.subscriptionRequiredLoginText");
-						}						
-						Request::redirect(null, 'about', 'subscriptions');	
+						}
+						Request::redirect(null, 'about', 'subscriptions');
 					}
 				}
 			}
