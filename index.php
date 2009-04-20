@@ -75,7 +75,6 @@ function handleRequest() {
 	// Determine the handler for this request
 	$page = Request::getRequestedPage();
 	$op = Request::getRequestedOp();
-
 	$sourceFile = sprintf('pages/%s/index.php', $page);
 
 	// If a hook has been registered to handle this page, give it the
@@ -95,11 +94,17 @@ function handleRequest() {
 
 	if (in_array(strtolower($op), $methods)) {
 		// Call a specific operation
-		call_user_func(array(HANDLER_CLASS, $op), Request::getRequestedArgs());
+		//call_user_func(array(HANDLER_CLASS, $op), Request::getRequestedArgs());
+		$HandlerClass = HANDLER_CLASS;
+		$handler = new $HandlerClass;
+		$handler->$op(Request::getRequestedArgs());
 
 	} else {
 		// Call the selected handler's index operation
-		call_user_func(array(HANDLER_CLASS, 'index'), Request::getRequestedArgs());
+		//call_user_func(array(HANDLER_CLASS, 'index'), Request::getRequestedArgs());
+		$HandlerClass = HANDLER_CLASS;
+		$handler = new $HandlerClass;
+		$handler->index(Request::getRequestedArgs());
 	}
 }
 

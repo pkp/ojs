@@ -18,7 +18,9 @@
 import('pages.reviewer.SubmissionReviewHandler');
 
 class SubmissionCommentsHandler extends ReviewerHandler {
-
+	/** comment associated with the request **/
+	var $comment;
+	
 	/**
 	 * View peer review comments.
 	 */
@@ -26,8 +28,12 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$articleId = $args[0];
 		$reviewId = $args[1];
 
-		list($journal, $submission, $user) = SubmissionReviewHandler::validate($reviewId);
-		ReviewerHandler::setupTemplate(true);
+		$submissionReviewHandler =& new SubmissionReviewHandler();
+		$submissionReviewHandler->validate($reviewId);
+		$submission =& $submissionReviewHandler->submission;
+		$user =& $submissionReviewHandler->user;
+
+		$this->setupTemplate(true);
 		ReviewerAction::viewPeerReviewComments($user, $submission, $reviewId);
 
 	}
@@ -42,9 +48,12 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
-		list($journal, $submission, $user) = SubmissionReviewHandler::validate($reviewId);
+		$submissionReviewHandler =& new SubmissionReviewHandler();
+		$submissionReviewHandler->validate($reviewId);
+		$submission =& $submissionReviewHandler->submission;
+		$user =& $submissionReviewHandler->user;
 
-		ReviewerHandler::setupTemplate(true);
+		$this->setupTemplate(true);
 		if (ReviewerAction::postPeerReviewComment($user, $submission, $reviewId, $emailComment)) {
 			ReviewerAction::viewPeerReviewComments($user, $submission, $reviewId);
 		}
@@ -61,10 +70,14 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$article = $articleDao->getArticle($articleId);
 
-		list($journal, $submission, $user) = SubmissionReviewHandler::validate($reviewId);
-		list($comment) = SubmissionCommentsHandler::validate($user, $commentId);
+		$submissionReviewHandler =& new SubmissionReviewHandler();
+		$submissionReviewHandler->validate($reviewId);
+		$submission =& $submissionReviewHandler->submission;
+		$user =& $submissionReviewHandler->user;
+		$this->validate($commentId);
+		$comment =& $this->comment;
 
-		ReviewerHandler::setupTemplate(true);
+		$this->setupTemplate(true);
 
 		ReviewerAction::editComment($article, $comment, $reviewId);
 	}
@@ -80,13 +93,17 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$article = $articleDao->getArticle($articleId);
 
-		list($journal, $submission, $user) = SubmissionReviewHandler::validate($reviewId);
-		list($comment) = SubmissionCommentsHandler::validate($user, $commentId);
+		$submissionReviewHandler =& new SubmissionReviewHandler();
+		$submissionReviewHandler->validate($reviewId);
+		$submission =& $submissionReviewHandler->submission;
+		$user =& $submissionReviewHandler->user;
+		$this->validate($commentId);
+		$comment =& $this->comment;
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
-		ReviewerHandler::setupTemplate(true);
+		$this->setupTemplate(true);
 
 		ReviewerAction::saveComment($article, $comment, $emailComment);
 
@@ -108,10 +125,14 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$commentId = $args[1];
 		$reviewId = Request::getUserVar('reviewId');
 
-		list($journal, $submission, $user) = SubmissionReviewHandler::validate($reviewId);
-		list($comment) = SubmissionCommentsHandler::validate($user, $commentId);
+		$submissionReviewHandler =& new SubmissionReviewHandler();
+		$submissionReviewHandler->validate($reviewId);
+		$submission =& $submissionReviewHandler->submission;
+		$user =& $submissionReviewHandler->user;
+		$this->validate($commentId);
+		$comment =& $this->comment;
 
-		ReviewerHandler::setupTemplate(true);
+		$this->setupTemplate(true);
 
 		ReviewerAction::deleteComment($commentId, $user);
 
@@ -145,7 +166,8 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 			Request::redirect(null, Request::getRequestedPage());
 		}
 
-		return array($comment);
+		$this->comment =& $comment;
+		return true;
 	}
 }
 ?>

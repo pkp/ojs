@@ -15,16 +15,16 @@
 // $Id$
 
 
-import('core.PKPHandler');
+import('handler.Handler');
 
-class InformationHandler extends PKPHandler {
+class InformationHandler extends Handler{
 
 	/**
 	 * Display the information page for the journal..
 	 */
 	function index($args) {
-		parent::validate();
-		InformationHandler::setupTemplate();
+		$this->validate();
+		$this->setupTemplate();
 		$journal = Request::getJournal();
 
 		if ($journal == null) {
@@ -69,23 +69,23 @@ class InformationHandler extends PKPHandler {
 	}
 
 	function readers() {
-		InformationHandler::index(array('readers'));
+		$this->index(array('readers'));
 	}
 
 	function authors() {
-		InformationHandler::index(array('authors'));
+		$this->index(array('authors'));
 	}
 
 	function librarians() {
-		InformationHandler::index(array('librarians'));
+		$this->index(array('librarians'));
 	}
 
 	function competingInterestGuidelines() {
-		InformationHandler::index(array('competingInterestGuidelines'));
+		$this->index(array('competingInterestGuidelines'));
 	}
 
 	function sampleCopyrightWording() {
-		InformationHandler::index(array('sampleCopyrightWording'));
+		$this->index(array('sampleCopyrightWording'));
 	}
 
 	/**

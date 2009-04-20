@@ -16,14 +16,17 @@
 
 
 class TrackSubmissionHandler extends AuthorHandler {
+	/** submission associated with the request **/
+	var $submission;
 
 	/**
 	 * Delete a submission.
 	 */
 	function deleteSubmission($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
-		parent::setupTemplate(true);
+		$this->validate($articleId);
+		$authorSubmission =& $this->submission;
+		$this->setupTemplate(true);
 
 		// If the submission is incomplete, allow the author to delete it.
 		if ($authorSubmission->getSubmissionProgress()!=0) {
@@ -47,7 +50,9 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$fileId = isset($args[1]) ? (int) $args[1] : 0;
 		$revisionId = isset($args[2]) ? (int) $args[2] : 0;
 
-		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
+		$this->validate($articleId);
+		$authorSubmission =& $this->submission;
+
 		if ($authorSubmission->getStatus() != STATUS_PUBLISHED && $authorSubmission->getStatus() != STATUS_ARCHIVED) {
 			AuthorAction::deleteArticleFile($authorSubmission, $fileId, $revisionId);
 		}
@@ -63,8 +68,9 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$user = &Request::getUser();
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
-		parent::setupTemplate(true, $articleId);
+		$this->validate($articleId);
+		$submission =& $this->submission;
+		$this->setupTemplate(true, $articleId);
 
 		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		$journalSettings = $journalSettingsDao->getJournalSettings($journal->getJournalId());
@@ -129,8 +135,9 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$user = &Request::getUser();
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 
-		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
-		parent::setupTemplate(true, $articleId);
+		$this->validate($articleId);
+		$authorSubmission =& $this->submission;
+		$this->setupTemplate(true, $articleId);
 
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewModifiedByRound = $reviewAssignmentDao->getLastModifiedByRound($articleId);
@@ -180,9 +187,11 @@ class TrackSubmissionHandler extends AuthorHandler {
 	 */
 	function addSuppFile($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
+		$this->validate($articleId);
+		$authorSubmission =& $this->submission;
+
 		if ($authorSubmission->getStatus() != STATUS_PUBLISHED && $authorSubmission->getStatus() != STATUS_ARCHIVED) {
-			parent::setupTemplate(true, $articleId, 'summary');
+			$this->setupTemplate(true, $articleId, 'summary');
 
 			import('submission.form.SuppFileForm');
 
@@ -207,9 +216,11 @@ class TrackSubmissionHandler extends AuthorHandler {
 	function editSuppFile($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$suppFileId = isset($args[1]) ? (int) $args[1] : 0;
-		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
+		$this->validate($articleId);
+		$authorSubmission =& $this->submission;
+
 		if ($authorSubmission->getStatus() != STATUS_PUBLISHED && $authorSubmission->getStatus() != STATUS_ARCHIVED) {
-			parent::setupTemplate(true, $articleId, 'summary');
+			$this->setupTemplate(true, $articleId, 'summary');
 
 			import('submission.form.SuppFileForm');
 
@@ -233,7 +244,8 @@ class TrackSubmissionHandler extends AuthorHandler {
 	 */
 	function setSuppFileVisibility($args) {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
+		$this->validate($articleId);
+		$authorSubmission =& $this->submission;
 
 		if ($authorSubmission->getStatus() != STATUS_PUBLISHED && $authorSubmission->getStatus() != STATUS_ARCHIVED) {
 			$suppFileId = Request::getUserVar('fileId');
@@ -254,7 +266,8 @@ class TrackSubmissionHandler extends AuthorHandler {
 	 */
 	function saveSuppFile($args) {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
+		$this->validate($articleId);
+		$authorSubmission =& $this->submission;
 
 		if ($authorSubmission->getStatus() != STATUS_PUBLISHED && $authorSubmission->getStatus() != STATUS_ARCHIVED) {
 			$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
@@ -269,7 +282,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 				$submitForm->execute();
 				Request::redirect(null, null, 'submission', $articleId);
 			} else {
-				parent::setupTemplate(true, $articleId, 'summary');
+				$this->setupTemplate(true, $articleId, 'summary');
 				$submitForm->display();
 			}
 		} else {
@@ -285,8 +298,9 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$user = &Request::getUser();
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
-		parent::setupTemplate(true, $articleId);
+		$this->validate($articleId);
+		$submission =& $this->submission;
+		$this->setupTemplate(true, $articleId);
 
 		AuthorAction::copyeditUnderway($submission);
 		import('submission.proofreader.ProofreaderAction');
@@ -313,8 +327,9 @@ class TrackSubmissionHandler extends AuthorHandler {
 	 */
 	function uploadRevisedVersion() {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);	
-		parent::setupTemplate(true);
+		$this->validate($articleId);
+		$submission =& $this->submission;	
+		$this->setupTemplate(true);
 
 		AuthorAction::uploadRevisedVersion($submission);
 
@@ -323,16 +338,18 @@ class TrackSubmissionHandler extends AuthorHandler {
 
 	function viewMetadata($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
-		parent::setupTemplate(true, $articleId, 'summary');
+		$this->validate($articleId);
+		$submission =& $this->submission;
+		$this->setupTemplate(true, $articleId, 'summary');
 
 		AuthorAction::viewMetadata($submission, ROLE_ID_AUTHOR);
 	}
 
 	function saveMetadata() {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
-		parent::setupTemplate(true, $articleId);
+		$this->validate($articleId);
+		$submission =& $this->submission;
+		$this->setupTemplate(true, $articleId);
 
 		// If the copy editor has completed copyediting, disallow
 		// the author from changing the metadata.
@@ -347,7 +364,9 @@ class TrackSubmissionHandler extends AuthorHandler {
 	function removeCoverPage($args) {
 		$articleId = isset($args[0]) ? (int)$args[0] : 0;
 		$formLocale = $args[1];
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		$this->validate($articleId);
+		$submission =& $this->submission;
+		$journal =& Request::getJournal();
 
 		import('file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
@@ -367,8 +386,9 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$copyeditStage = Request::getUserVar('copyeditStage');
 		$articleId = Request::getUserVar('articleId');
 
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
-		parent::setupTemplate(true, $articleId);
+		$this->validate($articleId);
+		$submission =& $this->submission;
+		$this->setupTemplate(true, $articleId);
 
 		AuthorAction::uploadCopyeditVersion($submission, $copyeditStage);
 
@@ -377,8 +397,9 @@ class TrackSubmissionHandler extends AuthorHandler {
 
 	function completeAuthorCopyedit($args) {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
-		parent::setupTemplate(true);		
+		$this->validate($articleId);
+		$submission =& $this->submission;
+		$this->setupTemplate(true);		
 
 		if (AuthorAction::completeAuthorCopyedit($submission, Request::getUserVar('send'))) {
 			Request::redirect(null, null, 'submissionEditing', $articleId);
@@ -398,7 +419,8 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$fileId = isset($args[1]) ? $args[1] : 0;
 		$revision = isset($args[2]) ? $args[2] : null;
 
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		$this->validate($articleId);
+		$submission =& $this->submission;
 		if (!AuthorAction::downloadAuthorFile($submission, $fileId, $revision)) {
 			Request::redirect(null, null, 'submission', $articleId);
 		}
@@ -413,7 +435,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$fileId = isset($args[1]) ? $args[1] : 0;
 		$revision = isset($args[2]) ? $args[2] : null;
 
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		$this->validate($articleId);
 		Action::downloadFile($articleId, $fileId, $revision);
 	}
 
@@ -463,8 +485,8 @@ class TrackSubmissionHandler extends AuthorHandler {
 	 */
 	function authorProofreadingComplete($args) {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
-		parent::setupTemplate(true);
+		$this->validate($articleId);
+		$this->setupTemplate(true);
 
 		$send = isset($args[0]) && $args[0] == 'send' ? true : false;
 
@@ -482,7 +504,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 	function proofGalley($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		$this->validate($articleId);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
@@ -497,7 +519,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 	function proofGalleyTop($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		$this->validate($articleId);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
@@ -513,7 +535,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 	function proofGalleyFile($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		$this->validate($articleId);
 
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley = &$galleyDao->getGalley($galleyId, $articleId);
@@ -547,7 +569,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$fileId = isset($args[1]) ? $args[1] : 0;
 		$revision = isset($args[2]) ? $args[2] : null;
 
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		$this->validate($articleId);
 		if (!AuthorAction::viewFile($articleId, $fileId, $revision)) {
 			Request::redirect(null, null, 'submission', $articleId);
 		}
@@ -564,8 +586,10 @@ class TrackSubmissionHandler extends AuthorHandler {
 	function paySubmissionFee($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
-		parent::setupTemplate(true, $articleId);
+		$this->validate($articleId);
+		$this->setupTemplate(true, $articleId);
+		
+		$journal =& Request::getJournal();
 		
 		import('payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
@@ -584,9 +608,11 @@ class TrackSubmissionHandler extends AuthorHandler {
 	function payFastTrackFee($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
-		parent::setupTemplate(true, $articleId);
+		$this->validate($articleId);
+		$this->setupTemplate(true, $articleId);
 		
+		$journal =& Request::getJournal();
+				
 		import('payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
 		$user =& Request::getUser();
@@ -604,8 +630,10 @@ class TrackSubmissionHandler extends AuthorHandler {
 	function payPublicationFee($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
-		parent::setupTemplate(true, $articleId);
+		$this->validate($articleId);
+		$this->setupTemplate(true, $articleId);
+		
+		$journal =& Request::getJournal();
 		
 		import('payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();

@@ -18,13 +18,15 @@
 import('pages.author.TrackSubmissionHandler');
 
 class SubmissionCommentsHandler extends AuthorHandler {
+	/** comment associated with the request **/
+	var $comment;
 
 	/**
 	 * View editor decision comments.
 	 */
 	function viewEditorDecisionComments($args) {
-		AuthorHandler::validate();
-		AuthorHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$articleId = $args[0];
 
@@ -36,8 +38,8 @@ class SubmissionCommentsHandler extends AuthorHandler {
 	 * View copyedit comments.
 	 */
 	function viewCopyeditComments($args) {
-		AuthorHandler::validate();
-		AuthorHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$articleId = $args[0];
 
@@ -50,8 +52,8 @@ class SubmissionCommentsHandler extends AuthorHandler {
 	 * Post copyedit comment.
 	 */
 	function postCopyeditComment() {
-		AuthorHandler::validate();
-		AuthorHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$articleId = Request::getUserVar('articleId');
 
@@ -69,8 +71,8 @@ class SubmissionCommentsHandler extends AuthorHandler {
 	 * View proofread comments.
 	 */
 	function viewProofreadComments($args) {
-		AuthorHandler::validate();
-		AuthorHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$articleId = $args[0];
 
@@ -83,8 +85,8 @@ class SubmissionCommentsHandler extends AuthorHandler {
 	 * Post proofread comment.
 	 */
 	function postProofreadComment() {
-		AuthorHandler::validate();
-		AuthorHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$articleId = Request::getUserVar('articleId');
 
@@ -102,8 +104,8 @@ class SubmissionCommentsHandler extends AuthorHandler {
 	 * View layout comments.
 	 */
 	function viewLayoutComments($args) {
-		AuthorHandler::validate();
-		AuthorHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$articleId = $args[0];
 
@@ -116,8 +118,8 @@ class SubmissionCommentsHandler extends AuthorHandler {
 	 * Post layout comment.
 	 */
 	function postLayoutComment() {
-		AuthorHandler::validate();
-		AuthorHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$articleId = Request::getUserVar('articleId');
 
@@ -148,14 +150,17 @@ class SubmissionCommentsHandler extends AuthorHandler {
 	 * Edit comment.
 	 */
 	function editComment($args) {
-		AuthorHandler::validate();
-		AuthorHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$articleId = $args[0];
 		$commentId = $args[1];
 
-		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
-		list($comment) = SubmissionCommentsHandler::validate($commentId);
+		$trackSubmissionHandler =& new TrackSubmissionHandler();
+		$trackSubmissionHandler->validate($articleId);
+		$authorSubmission =& $trackSubmissionHandler->submission;
+		$this->validate($commentId);
+		$comment =& $this->comment;
 
 		if ($comment->getCommentType() == COMMENT_TYPE_EDITOR_DECISION) {
 			// Cannot edit an editor decision comment.
@@ -170,8 +175,8 @@ class SubmissionCommentsHandler extends AuthorHandler {
 	 * Save comment.
 	 */
 	function saveComment() {
-		AuthorHandler::validate();
-		AuthorHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$articleId = Request::getUserVar('articleId');
 		$commentId = Request::getUserVar('commentId');
@@ -179,8 +184,11 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
-		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
-		list($comment) = SubmissionCommentsHandler::validate($commentId);
+		$trackSubmissionHandler =& new TrackSubmissionHandler();
+		$trackSubmissionHandler->validate($articleId);
+		$authorSubmission =& $trackSubmissionHandler->submission;
+		$this->validate($commentId);
+		$comment =& $this->comment;
 
 		if ($comment->getCommentType() == COMMENT_TYPE_EDITOR_DECISION) {
 			// Cannot edit an editor decision comment.
@@ -208,8 +216,8 @@ class SubmissionCommentsHandler extends AuthorHandler {
 	 * Delete comment.
 	 */
 	function deleteComment($args) {
-		AuthorHandler::validate();
-		AuthorHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$articleId = $args[0];
 		$commentId = $args[1];
@@ -217,8 +225,11 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		$comment = &$articleCommentDao->getArticleCommentById($commentId);
 
-		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
-		list($comment) = SubmissionCommentsHandler::validate($commentId);
+		$trackSubmissionHandler =& new TrackSubmissionHandler();
+		$trackSubmissionHandler->validate($articleId);
+		$authorSubmission =& $trackSubmissionHandler->submission;
+		$this->validate($commentId);
+		$comment =& $this->comment;
 		AuthorAction::deleteComment($commentId);
 
 		// Redirect back to initial comments page
@@ -262,7 +273,8 @@ class SubmissionCommentsHandler extends AuthorHandler {
 			Request::redirect(null, Request::getRequestedPage());
 		}
 
-		return array($comment);
+		$this->comment =& $comment;
+		return true;
 	}
 }
 ?>

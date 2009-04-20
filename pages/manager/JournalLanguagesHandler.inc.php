@@ -21,8 +21,8 @@ class JournalLanguagesHandler extends ManagerHandler {
 	 * Display form to edit language settings.
 	 */
 	function languages() {
-		parent::validate();
-		parent::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		import('manager.form.LanguageSettingsForm');
 
@@ -36,8 +36,8 @@ class JournalLanguagesHandler extends ManagerHandler {
 	 * Save changes to language settings.
 	 */
 	function saveLanguageSettings() {
-		parent::validate();
-		parent::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		import('manager.form.LanguageSettingsForm');
 
@@ -70,8 +70,8 @@ class JournalLanguagesHandler extends ManagerHandler {
 			Request::redirect(null, null, 'languages');
 		}
 
-		parent::validate();
-		parent::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 					
 		$journal = &Request::getJournal();
 		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');

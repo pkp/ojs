@@ -17,9 +17,68 @@
 
 // $Id$
 
-
-define('HANDLER_CLASS', 'LayoutEditorHandler');
-
-import('pages.layoutEditor.LayoutEditorHandler');
+switch ($op) {
+	//
+	// issue 
+	//
+	case 'issueData':
+	case 'issueToc':
+	case 'resetSectionOrder':
+	case 'updateIssueToc':
+	case 'moveSectionToc':
+	case 'moveArticleToc':
+	case 'editIssue':
+	case 'removeIssueCoverPage':
+	case 'removeStyleFile':
+		define('HANDLER_CLASS', 'EditorHandler');
+		import('pages.editor.EditorHandler');
+		break;
+	case 'viewMetadata':
+	//
+	// Submission Layout Editing
+	//
+	case 'submission':
+	case 'submissionEditing':
+	case 'completeAssignment':
+	case 'uploadLayoutFile':
+	case 'editGalley':
+	case 'saveGalley':
+	case 'deleteGalley':
+	case 'orderGalley':
+	case 'proofGalley':
+	case 'proofGalleyTop':
+	case 'proofGalleyFile':
+	case 'editSuppFile':
+	case 'saveSuppFile':
+	case 'deleteSuppFile':
+	case 'orderSuppFile':
+	case 'downloadFile':
+	case 'viewFile':
+	case 'downloadLayoutTemplate':
+	case 'deleteArticleImage':
+	//
+	// Proofreading Actions
+	//
+	case 'layoutEditorProofreadingComplete':
+		define('HANDLER_CLASS', 'SubmissionLayoutHandler');
+		import('pages.layoutEditor.SubmissionLayoutHandler');
+		break;
+	//
+	// Submission Comments
+	//
+	case 'viewLayoutComments':
+	case 'postLayoutComment':
+	case 'viewProofreadComments':
+	case 'postProofreadComment':
+	case 'editComment':
+	case 'saveComment':
+	case 'deleteComment':
+		define('HANDLER_CLASS', 'SubmissionCommentsHandler');
+		import('pages.layoutEditor.SubmissionCommentsHandler');
+		break;
+	default:
+		define('HANDLER_CLASS', 'LayoutEditorHandler');
+		import('pages.layoutEditor.LayoutEditorHandler');
+}
 
 ?>

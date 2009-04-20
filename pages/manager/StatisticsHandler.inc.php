@@ -22,8 +22,8 @@ class StatisticsHandler extends ManagerHandler {
 	 * with the reader's statistics view in the About pages.
 	 */
 	function statistics() {
-		parent::validate();
-		parent::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$journal = &Request::getJournal();
 		$templateMgr = &TemplateManager::getManager();
@@ -36,7 +36,7 @@ class StatisticsHandler extends ManagerHandler {
 		if (!is_array($sectionIds)) $sectionIds = array();
 		$templateMgr->assign('sectionIds', $sectionIds);
 
-		foreach (StatisticsHandler::getPublicStatisticsNames() as $name) {
+		foreach ($this->getPublicStatisticsNames() as $name) {
 			$templateMgr->assign($name, $journal->getSetting($name));
 		}
 		$templateMgr->assign('statViews', $journal->getSetting('statViews'));
@@ -93,7 +93,7 @@ class StatisticsHandler extends ManagerHandler {
 		// The manager wants to save the list of sections used to
 		// generate statistics.
 
-		parent::validate();
+		$this->validate();
 
 		$journal = &Request::getJournal();
 
@@ -125,10 +125,10 @@ class StatisticsHandler extends ManagerHandler {
 	}
 
 	function savePublicStatisticsList() {
-		parent::validate();
+		$this->validate();
 
 		$journal =& Request::getJournal();
-		foreach (StatisticsHandler::getPublicStatisticsNames() as $name) {
+		foreach ($this->getPublicStatisticsNames() as $name) {
 			$journal->updateSetting($name, Request::getUserVar($name)?true:false);
 		}
 		$journal->updateSetting('statViews', Request::getUserVar('statViews')?true:false);
@@ -136,8 +136,8 @@ class StatisticsHandler extends ManagerHandler {
 	}
 
 	function report($args) {
-		parent::validate();
-		parent::setupTemplate();
+		$this->validate();
+		$this->setupTemplate();
 
 		$journal =& Request::getJournal();
 

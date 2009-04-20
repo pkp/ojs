@@ -18,8 +18,51 @@
 // $Id$
 
 
-define('HANDLER_CLASS', 'CopyeditorHandler');
-
-import('pages.copyeditor.CopyeditorHandler');
+switch ($op) {
+	//
+	// Assignment Tracking
+	//
+	case 'submission':
+	case 'completeCopyedit':
+	case 'completeFinalCopyedit':
+	case 'uploadCopyeditVersion':
+	//
+	// Misc.
+	//
+	case 'downloadFile':
+	case 'viewFile':
+	//
+	// Proofreading Actions
+	//
+	case 'authorProofreadingComplete':
+	case 'proofGalley':
+	case 'proofGalleyTop':
+	case 'proofGalleyFile':
+	//
+	// Metadata Actions
+	//
+	case 'viewMetadata':
+	case 'saveMetadata':
+	case 'removeArticleCoverPage':
+		define('HANDLER_CLASS', 'SubmissionCopyeditHandler');
+		import('pages.copyeditor.SubmissionCopyeditHandler');
+		break;
+	//
+	// Submission Comments
+	//
+	case 'viewLayoutComments':
+	case 'postLayoutComment':
+	case 'viewCopyeditComments':
+	case 'postCopyeditComment':
+	case 'editComment':
+	case 'saveComment':
+	case 'deleteComment':	
+		define('HANDLER_CLASS', 'SubmissionCommentsHandler');
+		import('pages.copyeditor.SubmissionCommentsHandler');
+		break;
+	default:	
+		define('HANDLER_CLASS', 'CopyeditorHandler');
+		import('pages.copyeditor.CopyeditorHandler');
+}
 
 ?>

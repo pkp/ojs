@@ -15,17 +15,17 @@
 // $Id$
 
 
-import('core.PKPHandler');
+import('handler.Handler');
 
-class IndexHandler extends PKPHandler {
+class IndexHandler extends Handler {
 
 	/**
 	 * If no journal is selected, display list of journals.
 	 * Otherwise, display the index page for the selected journal.
 	 */
 	function index($args) {
-		parent::validate();
-		IndexHandler::setupTemplate();
+		$this->validate();
+		$this->setupTemplate();
 
 		$templateMgr =& TemplateManager::getManager();
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
@@ -60,7 +60,7 @@ class IndexHandler extends PKPHandler {
 				if ($enableAnnouncementsHomepage) {
 					$numAnnouncementsHomepage = $journal->getSetting('numAnnouncementsHomepage');
 					$announcementDao = &DAORegistry::getDAO('AnnouncementDAO');
-					$announcements = &$announcementDao->getNumAnnouncementsNotExpiredByJournalId($journal->getJournalId(), $numAnnouncementsHomepage);
+					$announcements = &$announcementDao->getNumAnnouncementsNotExpiredByAssocId(ASSOC_TYPE_JOURNAL, $journal->getJournalId(), $numAnnouncementsHomepage);
 					$templateMgr->assign('announcements', $announcements);
 					$templateMgr->assign('enableAnnouncementsHomepage', $enableAnnouncementsHomepage);
 				}

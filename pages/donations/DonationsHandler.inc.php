@@ -20,9 +20,9 @@
 // $Id$
 
 
-import('core.PKPHandler');
+import('handler.Handler');
 
-class DonationsHandler extends PKPHandler {
+class DonationsHandler extends Handler{
 	function index( $args ) {
 		import('payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
@@ -42,7 +42,7 @@ class DonationsHandler extends PKPHandler {
 	
 	function thankYou( $args ) {
 		$templateMgr =& TemplateManager::getManager();
-		parent::setupTemplate();
+		$this->setupTemplate();
 		$journal =& Request::getJournal();
 		
 		$templateMgr->assign(array(

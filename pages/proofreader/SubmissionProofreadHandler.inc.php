@@ -16,15 +16,18 @@
 
 
 class SubmissionProofreadHandler extends ProofreaderHandler {
-
+	/** submission associated with the request **/
+	var $submission;
+	
 	/**
 	 * Submission - Proofreading view
 	 */
 	function submission($args) {
 		$articleId = isset($args[0]) ? (int)$args[0] : 0;
 
-		list($journal, $submission) = SubmissionProofreadHandler::validate($articleId);
-		parent::setupTemplate(true, $articleId);
+		$this->validate($articleId);
+		$submission =& $this->submission;
+		$this->setupTemplate(true, $articleId);
 
 		$useProofreaders = $journal->getSetting('useProofreaders');
 
@@ -61,8 +64,8 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 	function completeProofreader($args) {
 		$articleId = Request::getUserVar('articleId');
 
-		SubmissionProofreadHandler::validate($articleId);
-		parent::setupTemplate(true);
+		$this->validate($articleId);
+		$this->setupTemplate(true);
 
 		if (ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_COMPLETE', Request::getUserVar('send')?'':Request::url(null, 'proofreader', 'completeProofreader'))) {
 			Request::redirect(null, null, 'submission', $articleId);
@@ -71,8 +74,9 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 
 	function viewMetadata($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		list($journal, $submission) = SubmissionProofreadHandler::validate($articleId);
-		parent::setupTemplate(true, $articleId, 'summary');
+		$this->validate($articleId);
+		$submission =& $this->submission;
+		$this->setupTemplate(true, $articleId, 'summary');
 
 		ProofreaderAction::viewMetadata($submission, ROLE_ID_PROOFREADER);
 	}
@@ -102,8 +106,9 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		if (!$isValid) {
 			Request::redirect(null, Request::getRequestedPage());
 		}
-
-		return array($journal, $submission);
+		
+		$this->submission =& $submission;
+		return true;
 	}
 
 	//
@@ -119,7 +124,8 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		$fileId = isset($args[1]) ? $args[1] : 0;
 		$revision = isset($args[2]) ? $args[2] : null;
 
-		list($journal, $submission) = SubmissionProofreadHandler::validate($articleId);
+		$this->validate($articleId);
+		$submission =& $this->submission;
 		if (!ProofreaderAction::downloadProofreaderFile($submission, $fileId, $revision)) {
 			Request::redirect(null, null, 'submission', $articleId);
 		}
@@ -132,7 +138,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 	function proofGalley($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		list($journal, $submission) = SubmissionProofreadHandler::validate($articleId);
+		$this->validate($articleId);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
@@ -147,7 +153,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 	function proofGalleyTop($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		list($journal, $submission) = SubmissionProofreadHandler::validate($articleId);
+		$this->validate($articleId);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
@@ -163,7 +169,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 	function proofGalleyFile($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		list($journal, $submission) = SubmissionProofreadHandler::validate($articleId);
+		$this->validate($articleId);
 
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley = &$galleyDao->getGalley($galleyId, $articleId);
@@ -183,7 +189,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 
 			} else {
 				// View non-HTML file inline
-				SubmissionProofreadHandler::viewFile(array($articleId, $galley->getFileId()));
+				$this->viewFile(array($articleId, $galley->getFileId()));
 			}
 		}
 	}
@@ -197,7 +203,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		$fileId = isset($args[1]) ? $args[1] : 0;
 		$revision = isset($args[2]) ? $args[2] : null;
 
-		list($journal, $submission) = SubmissionProofreadHandler::validate($articleId);
+		$this->validate($articleId);
 		if (!ProofreaderAction::viewFile($articleId, $fileId, $revision)) {
 			Request::redirect(null, null, 'submission', $articleId);
 		}

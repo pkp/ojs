@@ -16,20 +16,21 @@
 
 
 class SubmitHandler extends AuthorHandler {
-
+	/** article associated with the request **/
+	var $article;
+	
 	/**
 	 * Display journal author article submission.
 	 * Displays author index page if a valid step is not specified.
 	 * @param $args array optional, if set the first parameter is the step to display
 	 */
 	function submit($args) {
-		parent::validate('author.submit.authorSubmitLoginMessage');
-		parent::setupTemplate(true);
-
 		$step = isset($args[0]) ? (int) $args[0] : 0;
 		$articleId = Request::getUserVar('articleId');
 
-		list($journal, $article) = SubmitHandler::validate($articleId, $step);
+		$this->validate($articleId, $step, 'author.submit.authorSubmitLoginMessage');
+		$article =& $this->article;
+		$this->setupTemplate(true);
 
 		$formClass = "AuthorSubmitStep{$step}Form";
 		import("author.form.submit.$formClass");
@@ -49,13 +50,11 @@ class SubmitHandler extends AuthorHandler {
 	 * @param $args array first parameter is the step being saved
 	 */
 	function saveSubmit($args) {
-		parent::validate();
-		parent::setupTemplate(true);
-
 		$step = isset($args[0]) ? (int) $args[0] : 0;
 		$articleId = Request::getUserVar('articleId');
 
-		list($journal, $article) = SubmitHandler::validate($articleId, $step);
+		$this->validate($articleId, $step);
+		$article =& $this->article;
 
 		$formClass = "AuthorSubmitStep{$step}Form";
 		import("author.form.submit.$formClass");
@@ -191,12 +190,11 @@ class SubmitHandler extends AuthorHandler {
 	 * Create new supplementary file with a uploaded file.
 	 */
 	function submitUploadSuppFile() {
-		parent::validate();
-		parent::setupTemplate(true);
-
 		$articleId = Request::getUserVar('articleId');
 
-		list($journal, $article) = SubmitHandler::validate($articleId, 4);
+		$this->validate($articleId, 4);
+		$article =& $this->article;
+		$this->setupTemplate(true);
 
 		import("author.form.submit.AuthorSubmitSuppFileForm");
 		// FIXME: Need construction by reference or validation always fails on PHP 4.x
@@ -212,13 +210,12 @@ class SubmitHandler extends AuthorHandler {
 	 * @param $args array optional, if set the first parameter is the supplementary file to edit
 	 */
 	function submitSuppFile($args) {
-		parent::validate();
-		parent::setupTemplate(true);
-
 		$articleId = Request::getUserVar('articleId');
 		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
 
-		list($journal, $article) = SubmitHandler::validate($articleId, 4);
+		$this->validate($articleId, 4);
+		$article =& $this->article;
+		$this->setupTemplate(true);
 
 		import("author.form.submit.AuthorSubmitSuppFileForm");
 		// FIXME: Need construction by reference or validation always fails on PHP 4.x
@@ -243,7 +240,9 @@ class SubmitHandler extends AuthorHandler {
 		$articleId = Request::getUserVar('articleId');
 		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
 
-		list($journal, $article) = SubmitHandler::validate($articleId, 4);
+		$this->validate($articleId, 4);
+		$article =& $this->article;
+		$this->setupTemplate(true);
 
 		import("author.form.submit.AuthorSubmitSuppFileForm");
 		// FIXME: Need construction by reference or validation always fails on PHP 4.x
@@ -271,7 +270,9 @@ class SubmitHandler extends AuthorHandler {
 		$articleId = Request::getUserVar('articleId');
 		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
 
-		list($journal, $article) = SubmitHandler::validate($articleId, 4);
+		$this->validate($articleId, 4);
+		$article =& $this->article;
+		$this->setupTemplate(true);
 
 		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 		$suppFile = $suppFileDao->getSuppFile($suppFileId, $articleId);
@@ -287,8 +288,9 @@ class SubmitHandler extends AuthorHandler {
 
 	function expediteSubmission() {
 		$articleId = (int) Request::getUserVar('articleId');
-		list($journal, $article) = SubmitHandler::validate($articleId);
-
+		$this->validate($articleId);
+		$article =& $this->article;
+		
 		// The author must also be an editor to perform this task.
 		if (Validation::isEditor($journal->getJournalId()) && $article->getSubmissionFileId()) {
 			import('submission.editor.EditorAction');
@@ -305,7 +307,8 @@ class SubmitHandler extends AuthorHandler {
 	 * @param $articleId int
 	 * @param $step int
 	 */
-	function validate($articleId = null, $step = false) {
+	function validate($articleId = null, $step = false, $reason = null) {
+		parent::validate($reason);
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$user = &Request::getUser();
 		$journal = &Request::getJournal();
@@ -323,7 +326,9 @@ class SubmitHandler extends AuthorHandler {
 				Request::redirect(null, null, 'submit');
 			}
 		}
-		return array(&$journal, &$article);
+		
+		$this->article =& $article;
+		return true;
 	}
 }
 ?>

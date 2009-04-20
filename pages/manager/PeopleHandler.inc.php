@@ -22,8 +22,8 @@ class PeopleHandler extends ManagerHandler {
 	 * @param $args array first parameter is the role ID to display
 	 */	
 	function people($args) {
-		parent::validate();
-		parent::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 
@@ -59,7 +59,7 @@ class PeopleHandler extends ManagerHandler {
 			$search = $searchInitial;
 		}
 
-		$rangeInfo = PKPHandler::getRangeInfo('users');
+		$rangeInfo = Handler::getRangeInfo('users');
 
 		if ($roleId) {
 			$users = &$roleDao->getUsersByRoleId($roleId, $journal->getJournalId(), $searchType, $search, $searchMatch, $rangeInfo);
@@ -115,7 +115,7 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign('search', $search);
 		$templateMgr->assign('searchInitial', Request::getUserVar('searchInitial'));
 
-		$templateMgr->assign_by_ref('roleSettings', parent::retrieveRoleAssignmentPreferences($journal->getJournalId()));
+		$templateMgr->assign_by_ref('roleSettings', $this->retrieveRoleAssignmentPreferences($journal->getJournalId()));
 
 		if ($roleId == ROLE_ID_REVIEWER) {
 			$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
@@ -147,7 +147,7 @@ class PeopleHandler extends ManagerHandler {
 	 * @param $args array first parameter is the selected role ID
 	 */
 	function enrollSearch($args) {
-		parent::validate();
+		$this->validate();
 
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
@@ -158,7 +158,7 @@ class PeopleHandler extends ManagerHandler {
 
 		$templateMgr = &TemplateManager::getManager();
 
-		parent::setupTemplate(true);
+		$this->setupTemplate(true);
 
 		$searchType = null;
 		$searchMatch = null;
@@ -174,7 +174,7 @@ class PeopleHandler extends ManagerHandler {
 			$search = $searchInitial;
 		}
 
-		$rangeInfo = PKPHandler::getRangeInfo('users');
+		$rangeInfo = Handler::getRangeInfo('users');
 
 		$users = &$userDao->getUsersByField($searchType, $searchMatch, $search, true, $rangeInfo);
 
@@ -183,7 +183,7 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign('search', $search);
 		$templateMgr->assign('searchInitial', Request::getUserVar('searchInitial'));
 
-		$templateMgr->assign_by_ref('roleSettings', parent::retrieveRoleAssignmentPreferences($journal->getJournalId()));
+		$templateMgr->assign_by_ref('roleSettings', $this->retrieveRoleAssignmentPreferences($journal->getJournalId()));
 
 		$templateMgr->assign('roleId', $roleId);
 		$templateMgr->assign('roleName', $roleDao->getRoleName($roleId));
@@ -212,7 +212,7 @@ class PeopleHandler extends ManagerHandler {
 	 * Enroll a user in a role.
 	 */
 	function enroll($args) {
-		parent::validate();
+		$this->validate();
 		$roleId = (int)(isset($args[0])?$args[0]:Request::getUserVar('roleId'));
 
 		// Get a list of users to enroll -- either from the
@@ -249,7 +249,7 @@ class PeopleHandler extends ManagerHandler {
 	 */
 	function unEnroll($args) {
 		$roleId = isset($args[0])?$args[0]:0;
-		parent::validate();
+		$this->validate();
 
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$journal = &$journalDao->getJournalByPath(Request::getRequestedJournalPath());
@@ -266,7 +266,7 @@ class PeopleHandler extends ManagerHandler {
 	 * Show form to synchronize user enrollment with another journal.
 	 */
 	function enrollSyncSelect($args) {
-		parent::validate();
+		$this->validate();
 
 		$rolePath = isset($args[0]) ? $args[0] : '';
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
@@ -295,7 +295,7 @@ class PeopleHandler extends ManagerHandler {
 	 * Synchronize user enrollment with another journal.
 	 */
 	function enrollSync($args) {
-		parent::validate();
+		$this->validate();
 
 		$journal = &Request::getJournal();
 		$rolePath = Request::getUserVar('rolePath');
@@ -330,7 +330,7 @@ class PeopleHandler extends ManagerHandler {
 	 * already used by the system. (Poor-man's AJAX.)
 	 */
 	function suggestUsername() {
-		parent::validate();
+		$this->validate();
 		$suggestion = Validation::suggestUsername(
 			Request::getUserVar('firstName'),
 			Request::getUserVar('lastName')
@@ -343,8 +343,8 @@ class PeopleHandler extends ManagerHandler {
 	 * @param $args array optional, if set the first parameter is the ID of the user to edit
 	 */
 	function editUser($args = array()) {
-		parent::validate();
-		parent::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$journal = &Request::getJournal();
 
@@ -364,7 +364,7 @@ class PeopleHandler extends ManagerHandler {
 
 		import('manager.form.UserManagementForm');
 
-		$templateMgr->assign_by_ref('roleSettings', parent::retrieveRoleAssignmentPreferences($journal->getJournalId()));
+		$templateMgr->assign_by_ref('roleSettings', $this->retrieveRoleAssignmentPreferences($journal->getJournalId()));
 
 		$templateMgr->assign('currentUrl', Request::url(null, null, 'people', 'all'));
 		// FIXME: Need construction by reference or validation always fails on PHP 4.x
@@ -381,8 +381,8 @@ class PeopleHandler extends ManagerHandler {
 	 * Allow the Journal Manager to merge user accounts, including attributed articles etc.
 	 */
 	function mergeUsers($args) {
-		parent::validate();
-		parent::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$userDao =& DAORegistry::getDAO('UserDAO');
@@ -448,7 +448,7 @@ class PeopleHandler extends ManagerHandler {
 			$search = $searchInitial;
 		}
 
-		$rangeInfo = PKPHandler::getRangeInfo('users');
+		$rangeInfo = Handler::getRangeInfo('users');
 
 		if ($roleId) {
 			$users = &$roleDao->getUsersByRoleId($roleId, $journalId, $searchType, $search, $searchMatch, $rangeInfo);
@@ -457,7 +457,7 @@ class PeopleHandler extends ManagerHandler {
 			$users = &$roleDao->getUsersByJournalId($journalId, $searchType, $search, $searchMatch, $rangeInfo);
 		}
 
-		$templateMgr->assign_by_ref('roleSettings', parent::retrieveRoleAssignmentPreferences($journal->getJournalId()));
+		$templateMgr->assign_by_ref('roleSettings', $this->retrieveRoleAssignmentPreferences($journal->getJournalId()));
 
 		$templateMgr->assign('currentUrl', Request::url(null, null, 'people', 'all'));
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.mergeUsers');
@@ -495,8 +495,8 @@ class PeopleHandler extends ManagerHandler {
 	 * @param $args array the ID of the user to disable
 	 */
 	function disableUser($args) {
-		parent::validate();
-		parent::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$userId = isset($args[0])?$args[0]:Request::getUserVar('userId');
 		$user = &Request::getUser();
@@ -530,8 +530,8 @@ class PeopleHandler extends ManagerHandler {
 	 * @param $args array the ID of the user to enable
 	 */
 	function enableUser($args) {
-		parent::validate();
-		parent::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$userId = isset($args[0])?$args[0]:null;
 		$user = &Request::getUser();
@@ -553,8 +553,8 @@ class PeopleHandler extends ManagerHandler {
 	 * @param $args array the ID of the user to remove
 	 */
 	function removeUser($args) {
-		parent::validate();
-		parent::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$userId = isset($args[0])?$args[0]:null;
 		$user = &Request::getUser();
@@ -572,7 +572,7 @@ class PeopleHandler extends ManagerHandler {
 	 * Save changes to a user profile.
 	 */
 	function updateUser() {
-		parent::validate();
+		$this->validate();
 
 		$journal = &Request::getJournal();
 		$userId = Request::getUserVar('userId');
@@ -612,7 +612,7 @@ class PeopleHandler extends ManagerHandler {
 			}
 
 		} else {
-			parent::setupTemplate(true);
+			$this->setupTemplate(true);
 			$userForm->display();
 		}
 	}
@@ -622,8 +622,8 @@ class PeopleHandler extends ManagerHandler {
 	 * @param $args array first parameter is the ID or username of the user to display
 	 */
 	function userProfile($args) {
-		parent::validate();
-		parent::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('currentUrl', Request::url(null, null, 'people', 'all'));
@@ -672,7 +672,7 @@ class PeopleHandler extends ManagerHandler {
 	 * @param $args array ($userId)
 	 */
 	function signInAsUser($args) {
-		parent::validate();
+		$this->validate();
 
 		if (isset($args[0]) && !empty($args[0])) {
 			$userId = (int)$args[0];
@@ -709,7 +709,7 @@ class PeopleHandler extends ManagerHandler {
 	 * Restore original user account after signing in as a user.
 	 */
 	function signOutAsUser() {
-		PKPHandler::validate();
+		Handler::validate();
 
 		$session = &Request::getSession();
 		$signedInAs = $session->getSessionVar('signedInAs');

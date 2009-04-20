@@ -21,8 +21,8 @@ class FilesHandler extends ManagerHandler {
 	 * Display the files associated with a journal.
 	 */
 	function files($args) {
-		parent::validate();
-		parent::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		import('file.FileManager');
 
@@ -72,7 +72,7 @@ class FilesHandler extends ManagerHandler {
 	 * Upload a new file.
 	 */
 	function fileUpload($args) {
-		parent::validate();
+		$this->validate();
 
 		FilesHandler::parseDirArg($args, $currentDir, $parentDir);
 		$currentPath = FilesHandler::getRealFilesDir($currentDir);
@@ -92,7 +92,7 @@ class FilesHandler extends ManagerHandler {
 	 * Create a new directory
 	 */
 	function fileMakeDir($args) {
-		parent::validate();
+		$this->validate();
 
 		FilesHandler::parseDirArg($args, $currentDir, $parentDir);
 
@@ -109,7 +109,7 @@ class FilesHandler extends ManagerHandler {
 	}
 
 	function fileDelete($args) {
-		parent::validate();
+		$this->validate();
 
 		FilesHandler::parseDirArg($args, $currentDir, $parentDir);
 		$currentPath = FilesHandler::getRealFilesDir($currentDir);

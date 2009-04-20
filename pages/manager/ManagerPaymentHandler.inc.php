@@ -19,7 +19,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 	 * Display Settings Form (main payments page)
 	 */
 	 function payments($args) {
-		parent::validate();
+		$this->validate();
 		import('manager.form.PaymentSettingsForm');
 		// FIXME: Need construction by reference or validation always fails on PHP 4.x
 		$form =& new PaymentSettingsForm();
@@ -30,7 +30,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
 		$templateMgr->assign('enableSubscripitons', $journalSettingsDAO->getSetting($journal->getJournalId(), 'enableSubscriptions'));
 
-		parent::setupTemplate(true);
+		$this->setupTemplate(true);
 
 		if ($form->isLocaleResubmit()) {
 			$form->readInputData();
@@ -44,7 +44,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 	  * Execute the form or display it again if there are problems
 	  */
 	 function savePaymentSettings($args) {
-		parent::validate();
+		$this->validate();
 		import('manager.form.PaymentSettingsForm');
 		// FIXME: Need construction by reference or validation always fails on PHP 4.x
 		$settingsForm =& new PaymentSettingsForm();
@@ -55,7 +55,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
 		$templateMgr->assign('enableSubscripitons', $journalSettingsDAO->getSetting($journal->getJournalId(), 'enableSubscriptions'));
 
-		parent::setupTemplate(true);
+		$this->setupTemplate(true);
 		
 		$settingsForm->readInputData();
 
@@ -81,7 +81,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 	  * Display all payments previously made
 	  */
 	 function viewPayments($args) {
-		$rangeInfo =& PKPHandler::getRangeInfo('CompletedPayments');
+		$rangeInfo =& Handler::getRangeInfo('CompletedPayments');
 		$paymentDao = &DAORegistry::getDAO('OJSCompletedPaymentDAO');
 		$journal =& Request::getJournal();
 		$templateMgr = &TemplateManager::getManager();
@@ -90,7 +90,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 
 		$templateMgr->assign_by_ref('payments', $payments);
 
-		parent::setupTemplate(true);
+		$this->setupTemplate(true);
 		$templateMgr->display('manager/payments/viewPayments.tpl');
 	 }
 
@@ -106,7 +106,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
 		$templateMgr->assign_by_ref('payment', $payment);
 
-		parent::setupTemplate(true);
+		$this->setupTemplate(true);
 		$templateMgr->display('manager/payments/viewPayment.tpl');
 	 }
 
@@ -114,8 +114,8 @@ class ManagerPaymentHandler extends ManagerHandler {
 	 * Display form to edit program settings.
 	 */
 	function payMethodSettings() {
-		parent::validate();
-		parent::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 		
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
@@ -135,8 +135,8 @@ class ManagerPaymentHandler extends ManagerHandler {
 	 * Save changes to payment settings.
 	 */
 	function savePayMethodSettings() {
-		parent::validate();
-		parent::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$journal =& Request::getJournal();
 		if (!$journal) Request::redirect (null, null, 'index');

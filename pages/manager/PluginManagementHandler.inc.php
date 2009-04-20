@@ -35,28 +35,28 @@ class PluginManagementHandler extends ManagerHandler {
 		
 		switch($path) {
 			case 'install':
-				PluginManagementHandler::showInstallForm();
+				$this->showInstallForm();
 				break;
 			case 'installPlugin':
-				PluginManagementHandler::uploadPlugin('install');
+				$this->uploadPlugin('install');
 				break;
 			case 'upgrade':
-				PluginManagementHandler::showUpgradeForm($plugin);
+				$this->showUpgradeForm($plugin);
 				break;
 			case 'upgradePlugin':
-				PluginManagementHandler::uploadPlugin('upgrade');
+				$this->uploadPlugin('upgrade');
 				break;
 			case 'delete':
-				PluginManagementHandler::showDeleteForm($plugin);
+				$this->showDeleteForm($plugin);
 				break;
 			case 'deletePlugin':
-				PluginManagementHandler::deletePlugin($plugin);
+				$this->deletePlugin($plugin);
 				break;
 			default:
 				Request::redirect(null, 'manager', 'plugins'); 				
 		}
 	
-		parent::setupTemplate(true);
+		$this->setupTemplate(true);
 	}
 
 	/**
@@ -64,12 +64,12 @@ class PluginManagementHandler extends ManagerHandler {
 	 */
 	function showInstallForm() {
 		$templateMgr =& TemplateManager::getManager();
-		parent::setupTemplate(true);
+		$this->setupTemplate(true);
 		
 		$templateMgr->assign('path', 'install');
 		$templateMgr->assign('uploaded', false);
 		$templateMgr->assign('error', false);
-		$templateMgr->assign('pageHierarchy', PluginManagementHandler::setBreadcrumbs(true));
+		$templateMgr->assign('pageHierarchy', $this->setBreadcrumbs(true));
 
 		$templateMgr->display('manager/plugins/managePlugins.tpl');
 	}
@@ -80,12 +80,12 @@ class PluginManagementHandler extends ManagerHandler {
 	 */
 	function showUpgradeForm($plugin) {
 		$templateMgr =& TemplateManager::getManager();
-		parent::setupTemplate(true);
+		$this->setupTemplate(true);
 
 		$templateMgr->assign('path', 'upgrade');
 		$templateMgr->assign('plugin', $plugin);
 		$templateMgr->assign('uploaded', false);
-		$templateMgr->assign('pageHierarchy', PluginManagementHandler::setBreadcrumbs(true));
+		$templateMgr->assign('pageHierarchy', $this->setBreadcrumbs(true));
 
 		$templateMgr->display('manager/plugins/managePlugins.tpl');
 	}
@@ -96,13 +96,13 @@ class PluginManagementHandler extends ManagerHandler {
 	 */
 	function showDeleteForm($plugin) {
 		$templateMgr =& TemplateManager::getManager();
-		parent::setupTemplate(true);
+		$this->setupTemplate(true);
 		
 		$templateMgr->assign('path', 'delete');
 		$templateMgr->assign('plugin', $plugin);
 		$templateMgr->assign('deleted', false);
 		$templateMgr->assign('error', false);
-		$templateMgr->assign('pageHierarchy', PluginManagementHandler::setBreadcrumbs(true));
+		$templateMgr->assign('pageHierarchy', $this->setBreadcrumbs(true));
 
 		$templateMgr->display('manager/plugins/managePlugins.tpl');
 	}
@@ -114,12 +114,12 @@ class PluginManagementHandler extends ManagerHandler {
 	 */
 	function uploadPlugin($function) {
 		$templateMgr = &TemplateManager::getManager();
-		parent::setupTemplate(true);
+		$this->setupTemplate(true);
 		
 		$templateMgr->assign('error', false);
 		$templateMgr->assign('uploaded', false);
 		$templateMgr->assign('path', $function);
-		$templateMgr->assign('pageHierarchy', PluginManagementHandler::setBreadcrumbs(true));
+		$templateMgr->assign('pageHierarchy', $this->setBreadcrumbs(true));
 		
 		if (Request::getUserVar('uploadPlugin')) {
 			import('file.TemporaryFileManager');
@@ -133,9 +133,9 @@ class PluginManagementHandler extends ManagerHandler {
 				exec('tar -xzf ' . escapeshellarg($temporaryFile->getFilePath()) . ' -C ' . escapeshellarg($pluginDir));
 				
 				if ($function == 'install') {
-					PluginManagementHandler::installPlugin($pluginDir . DIRECTORY_SEPARATOR . $pluginName, $templateMgr);
+					$this->installPlugin($pluginDir . DIRECTORY_SEPARATOR . $pluginName, $templateMgr);
 				} else if ($function == 'upgrade') { 
-					PluginManagementHandler::upgradePlugin($pluginDir . DIRECTORY_SEPARATOR . $pluginName, $templateMgr);
+					$this->upgradePlugin($pluginDir . DIRECTORY_SEPARATOR . $pluginName, $templateMgr);
 				}
 			} else {
 				$templateMgr->assign('error', true);
@@ -187,7 +187,7 @@ class PluginManagementHandler extends ManagerHandler {
 			// If plugin has an install.xml file, update database with it
 			$installFile = $pluginDest . DIRECTORY_SEPARATOR . INSTALL_FILE;
 			if(FileManager::fileExists($installFile)) {
-				$params = PluginManagementHandler::setConnectionParams();
+				$params = $this->setConnectionParams();
 				$installer = new Install($params, $installFile, true);
 
 				if ($installer->execute()) {
@@ -211,11 +211,11 @@ class PluginManagementHandler extends ManagerHandler {
 			$versionDao->insertVersion($newVersion);
 			return true;
 		} else {
-			if (PluginManagementHandler::checkIfNewer($pluginName, $pluginVersion)) {
+			if ($this->checkIfNewer($pluginName, $pluginVersion)) {
 				$templateMgr->assign('message', 'manager.plugins.pleaseUpgrade');
 				return false;
 			}
-			if (!PluginManagementHandler::checkIfNewer($pluginName, $pluginVersion)) {
+			if (!$this->checkIfNewer($pluginName, $pluginVersion)) {
 				$templateMgr->assign('message', 'manager.plugins.installedVersionOlder');
 				return false;
 			}
@@ -251,7 +251,7 @@ class PluginManagementHandler extends ManagerHandler {
 			return false;
 		}
 		
-		if (PluginManagementHandler::checkIfNewer($pluginName, $pluginVersion)) {
+		if ($this->checkIfNewer($pluginName, $pluginVersion)) {
 			$templateMgr->assign('message', 'manager.plugins.installedVersionNewer');
 			return false;
 		} else {
@@ -269,7 +269,7 @@ class PluginManagementHandler extends ManagerHandler {
 			
 			$upgradeFile = $pluginDest . DIRECTORY_SEPARATOR . UPGRADE_FILE;
 			if(FileManager::fileExists($upgradeFile)) {
-				$params = PluginManagementHandler::setConnectionParams();
+				$params = $this->setConnectionParams();
 				$installer = new Upgrade($params, $upgradeFile, true);
 
 				if (!$installer->execute()) {
@@ -296,12 +296,12 @@ class PluginManagementHandler extends ManagerHandler {
 	 */
 	function deletePlugin($plugin) {
 		$templateMgr =& TemplateManager::getManager();
-		parent::setupTemplate(true);
+		$this->setupTemplate(true);
 		
 		$templateMgr->assign('path', 'delete');
 		$templateMgr->assign('deleted', false);
 		$templateMgr->assign('error', false);
-		$templateMgr->assign('pageHierarchy', PluginManagementHandler::setBreadcrumbs(true));
+		$templateMgr->assign('pageHierarchy', $this->setBreadcrumbs(true));
 
 		$versionDao =& DAORegistry::getDAO('VersionDAO'); 
 		$installedPlugin = $versionDao->getCurrentVersion($plugin);

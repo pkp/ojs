@@ -17,16 +17,16 @@
 
 require_once('CustomLocalePlugin.inc.php');
 require_once('CustomLocaleAction.inc.php');
-import('core.PKPHandler');
+import('handler.Handler');
 
-class CustomLocaleHandler extends PKPHandler {
+class CustomLocaleHandler extends Handler{
 
 	function index() {
 		list($plugin) = CustomLocaleHandler::validate();
 		CustomLocaleHandler::setupTemplate($plugin, false);
 
 		$journal = Request::getJournal();
-		$rangeInfo = PKPHandler::getRangeInfo('locales');
+		$rangeInfo = Handler::getRangeInfo('locales');
 
 		$templateMgr =& TemplateManager::getManager();
 		import('core.ArrayItemIterator');
@@ -51,7 +51,7 @@ class CustomLocaleHandler extends PKPHandler {
 
 		$templateMgr =& TemplateManager::getManager();
 
-		$localeFilesRangeInfo = PKPHandler::getRangeInfo('localeFiles');
+		$localeFilesRangeInfo = Handler::getRangeInfo('localeFiles');
 
 		import('core.ArrayItemIterator');
 		$templateMgr->assign('localeFiles', new ArrayItemIterator($localeFiles, $localeFilesRangeInfo->getPage(), $localeFilesRangeInfo->getCount()));
@@ -94,7 +94,7 @@ class CustomLocaleHandler extends PKPHandler {
 		}
 
 		$referenceLocaleContents = EditableLocaleFile::load($filename);
-		$referenceLocaleContentsRangeInfo = PKPHandler::getRangeInfo('referenceLocaleContents');
+		$referenceLocaleContentsRangeInfo = Handler::getRangeInfo('referenceLocaleContents');
 
 		// Handle a search, if one was executed.
 		$searchKey = Request::getUserVar('searchKey');

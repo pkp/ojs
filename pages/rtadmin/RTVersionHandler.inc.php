@@ -19,7 +19,7 @@ import('rt.ojs.JournalRTAdmin');
 
 class RTVersionHandler extends RTAdminHandler {
 	function createVersion($args) {
-		RTAdminHandler::validate();
+		$this->validate();
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 
@@ -34,13 +34,13 @@ class RTVersionHandler extends RTAdminHandler {
 			$versionForm->execute();
 			Request::redirect(null, null, 'versions');
 		} else {
-			RTAdminHandler::setupTemplate(true);
+			$this->setupTemplate(true);
 			$versionForm->display();
 		}
 	}
 
 	function exportVersion($args) {
-		RTAdminHandler::validate();
+		$this->validate();
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 
@@ -58,7 +58,7 @@ class RTVersionHandler extends RTAdminHandler {
 	}
 
 	function importVersion() {
-		RTAdminHandler::validate();
+		$this->validate();
 		$journal = &Request::getJournal();
 
 		$fileField = 'versionFile';
@@ -70,7 +70,7 @@ class RTVersionHandler extends RTAdminHandler {
 	}
 
 	function restoreVersions() {
-		RTAdminHandler::validate();
+		$this->validate();
 
 		$journal = &Request::getJournal();
 		$rtAdmin = new JournalRTAdmin($journal->getJournalId());
@@ -90,13 +90,13 @@ class RTVersionHandler extends RTAdminHandler {
 	}
 
 	function versions() {
-		RTAdminHandler::validate();
-		RTAdminHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$journal = Request::getJournal();
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
-		$rangeInfo = PKPHandler::getRangeInfo('versions');
+		$rangeInfo = Handler::getRangeInfo('versions');
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign_by_ref('versions', $rtDao->getVersions($journal->getJournalId(), $rangeInfo));
@@ -105,7 +105,7 @@ class RTVersionHandler extends RTAdminHandler {
 	}
 
 	function editVersion($args) {
-		RTAdminHandler::validate();
+		$this->validate();
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 
@@ -115,7 +115,7 @@ class RTVersionHandler extends RTAdminHandler {
 
 		if (isset($version)) {
 			import('rt.ojs.form.VersionForm');
-			RTAdminHandler::setupTemplate(true, $version);
+			$this->setupTemplate(true, $version);
 			// FIXME: Need construction by reference or validation always fails on PHP 4.x
 			$versionForm =& new VersionForm($versionId, $journal->getJournalId());
 			$versionForm->initData();
@@ -125,7 +125,7 @@ class RTVersionHandler extends RTAdminHandler {
 	}
 
 	function deleteVersion($args) {
-		RTAdminHandler::validate();
+		$this->validate();
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 
@@ -138,7 +138,7 @@ class RTVersionHandler extends RTAdminHandler {
 	}
 
 	function saveVersion($args) {
-		RTAdminHandler::validate();
+		$this->validate();
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 

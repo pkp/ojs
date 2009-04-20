@@ -18,17 +18,21 @@
 import('pages.copyeditor.SubmissionCopyeditHandler');
 
 class SubmissionCommentsHandler extends CopyeditorHandler {
+	/** comment associated with this request **/
+	var $comment;
 
 	/**
 	 * View layout comments.
 	 */
 	function viewLayoutComments($args) {
-		CopyeditorHandler::validate();
-		CopyeditorHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$articleId = $args[0];
 
-		list($journal, $submission) = SubmissionCopyeditHandler::validate($articleId);
+		$submissionCopyeditHandler =& new SubmissionCopyeditHandler();
+		$submissionCopyeditHandler->validate($articleId);
+		$submission =& $submissionCopyeditHandler->submission;
 		CopyeditorAction::viewLayoutComments($submission);
 
 	}
@@ -37,15 +41,17 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 	 * Post layout comment.
 	 */
 	function postLayoutComment() {
-		CopyeditorHandler::validate();
-		CopyeditorHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$articleId = Request::getUserVar('articleId');
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
-		list($journal, $submission) = SubmissionCopyeditHandler::validate($articleId);
+		$submissionCopyeditHandler =& new SubmissionCopyeditHandler();
+		$submissionCopyeditHandler->validate($articleId);
+		$submission =& $submissionCopyeditHandler->submission;
 		if (CopyeditorAction::postLayoutComment($submission, $emailComment)) {
 			CopyeditorAction::viewLayoutComments($submission);
 		}
@@ -56,12 +62,14 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 	 * View copyedit comments.
 	 */
 	function viewCopyeditComments($args) {
-		CopyeditorHandler::validate();
-		CopyeditorHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$articleId = $args[0];
 
-		list($journal, $submission) = SubmissionCopyeditHandler::validate($articleId);
+		$submissionCopyeditHandler =& new SubmissionCopyeditHandler();
+		$submissionCopyeditHandler->validate($articleId);
+		$submission =& $submissionCopyeditHandler->submission;
 		CopyeditorAction::viewCopyeditComments($submission);
 
 	}
@@ -70,15 +78,17 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 	 * Post copyedit comment.
 	 */
 	function postCopyeditComment() {
-		CopyeditorHandler::validate();
-		CopyeditorHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$articleId = Request::getUserVar('articleId');
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
-		list($journal, $submission) = SubmissionCopyeditHandler::validate($articleId);
+		$submissionCopyeditHandler =& new SubmissionCopyeditHandler();
+		$submissionCopyeditHandler->validate($articleId);
+		$submission =& $submissionCopyeditHandler->submission;
 		if (CopyeditorAction::postCopyeditComment($submission, $emailComment)) {
 			CopyeditorAction::viewCopyeditComments($submission);
 		}
@@ -89,14 +99,17 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 	 * Edit comment.
 	 */
 	function editComment($args) {
-		CopyeditorHandler::validate();
-		CopyeditorHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$articleId = $args[0];
 		$commentId = $args[1];
 
-		list($journal, $submission) = SubmissionCopyeditHandler::validate($articleId);
-		list($comment) = SubmissionCommentsHandler::validate($commentId);
+		$submissionCopyeditHandler =& new SubmissionCopyeditHandler();
+		$submissionCopyeditHandler->validate($articleId);
+		$submission =& $submissionCopyeditHandler->submission;
+		$this->validate($commentId);
+		$comment =& $this->comment;
 		CopyeditorAction::editComment($submission, $comment);
 
 	}
@@ -105,8 +118,8 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 	 * Save comment.
 	 */
 	function saveComment() {
-		CopyeditorHandler::validate();
-		CopyeditorHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$articleId = Request::getUserVar('articleId');
 		$commentId = Request::getUserVar('commentId');
@@ -114,8 +127,11 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
-		list($journal, $submission) = SubmissionCopyeditHandler::validate($articleId);
-		list($comment) = SubmissionCommentsHandler::validate($commentId);
+		$submissionCopyeditHandler =& new SubmissionCopyeditHandler();
+		$submissionCopyeditHandler->validate($articleId);
+		$submission =& $submissionCopyeditHandler->submission;
+		$this->validate($commentId);
+		$comment =& $this->comment;
 		CopyeditorAction::saveComment($submission, $comment, $emailComment);
 
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
@@ -135,14 +151,16 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 	 * Delete comment.
 	 */
 	function deleteComment($args) {
-		CopyeditorHandler::validate();
-		CopyeditorHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$articleId = $args[0];
 		$commentId = $args[1];
 
-		list($journal, $submission) = SubmissionCopyeditHandler::validate($articleId);
-		list($comment) = SubmissionCommentsHandler::validate($commentId);
+		$submissionCopyeditHandler =& new SubmissionCopyeditHandler();
+		$submissionCopyeditHandler->validate($articleId);
+		$this->validate($commentId);
+
 		CopyeditorAction::deleteComment($commentId);
 
 		// Redirect back to initial comments page
@@ -183,7 +201,8 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 			Request::redirect(null, Request::getRequestedPage());
 		}
 
-		return array($comment);
+		$this->comment =& $comment;
+		return true;
 	}
 }
 ?>

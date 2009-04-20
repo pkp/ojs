@@ -16,15 +16,25 @@
 
 
 class GroupHandler extends ManagerHandler {
+	/** group associated with the request **/
+	var $group;
 
+	/** groupMembership associated with the request **/
+	var $groupMembership;
+	
+	/** user associated with the request **/
+	var $user;
+	
 	/**
 	 * Display a list of groups for the current journal.
 	 */
 	function groups() {
-		list($journal) = GroupHandler::validate();
-		GroupHandler::setupTemplate();
+		$this->validate();
+		$this->setupTemplate();
+		
+		$journal =& Request::getJournal();
 
-		$rangeInfo =& PKPHandler::getRangeInfo('groups');
+		$rangeInfo =& Handler::getRangeInfo('groups');
 
 		$groupDao =& DAORegistry::getDAO('GroupDAO');
 		$groups =& $groupDao->getGroups(ASSOC_TYPE_JOURNAL, $journal->getJournalId(), null, $rangeInfo);
@@ -41,7 +51,9 @@ class GroupHandler extends ManagerHandler {
 	 */
 	function deleteGroup($args) {
 		$groupId = isset($args[0])?(int)$args[0]:0;
-		list($journal, $group) = GroupHandler::validate($groupId);
+		$this->validate($groupId);
+		
+		$group =& $this->group;
 
 		$groupDao =& DAORegistry::getDAO('GroupDAO');
 		$groupDao->deleteGroup($group);
@@ -55,7 +67,7 @@ class GroupHandler extends ManagerHandler {
 	 */
 	function moveGroup() {
 		$groupId = (int) Request::getUserVar('groupId');
-		list($journal, $group) = GroupHandler::validate($groupId);
+		list($journal, $group) = $this->validate($groupId);
 
 		$groupDao =& DAORegistry::getDAO('GroupDAO');
 		$group->setSequence($group->getSequence() + (Request::getUserVar('d') == 'u' ? -1.5 : 1.5));
@@ -71,7 +83,8 @@ class GroupHandler extends ManagerHandler {
 	 */
 	function editGroup($args = array()) {
 		$groupId = isset($args[0])?(int)$args[0]:null;
-		list($journal) = GroupHandler::validate($groupId);
+		$this->validate($groupId);
+		$journal =& Request::getJournal();
 
 		if ($groupId !== null) {
 			$groupDao =& DAORegistry::getDAO('GroupDAO');
@@ -81,7 +94,7 @@ class GroupHandler extends ManagerHandler {
 			}
 		} else $group = null;
 
-		GroupHandler::setupTemplate($group, true);
+		$this->setupTemplate($group, true);
 		import('manager.form.GroupForm');
 
 		$templateMgr = &TemplateManager::getManager();
@@ -106,7 +119,7 @@ class GroupHandler extends ManagerHandler {
 	 * Display form to create new group.
 	 */
 	function createGroup($args) {
-		GroupHandler::editGroup($args);
+		$this->editGroup($args);
 	}
 
 	/**
@@ -115,10 +128,11 @@ class GroupHandler extends ManagerHandler {
 	function updateGroup() {
 		$groupId = Request::getUserVar('groupId') === null? null : (int) Request::getUserVar('groupId');
 		if ($groupId === null) {
-			list($journal) = GroupHandler::validate();
+			$this->validate();
 			$group = null;
 		} else {
-			list($journal, $group) = GroupHandler::validate($groupId);
+			$this->validate($groupId);
+			$group =& $this->group;
 		}
 
 		import('manager.form.GroupForm');
@@ -131,7 +145,7 @@ class GroupHandler extends ManagerHandler {
 			$groupForm->execute();
 			Request::redirect(null, null, 'groups');
 		} else {
-			GroupHandler::setupTemplate($group);
+			$this->setupTemplate($group);
 
 			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'groups'), 'manager.groups'));
@@ -151,11 +165,12 @@ class GroupHandler extends ManagerHandler {
 	 */
 	function groupMembership($args) {
 		$groupId = isset($args[0])?(int)$args[0]:0;
-		list($journal, $group) = GroupHandler::validate($groupId);
+		$this->validate($groupId);
+		$group =& $this->group;
 
-		$rangeInfo =& PKPHandler::getRangeInfo('memberships');
+		$rangeInfo =& Handler::getRangeInfo('memberships');
 
-		GroupHandler::setupTemplate($group, true);
+		$this->setupTemplate($group, true);
 		$groupMembershipDao =& DAORegistry::getDAO('GroupMembershipDAO');
 		$memberships =& $groupMembershipDao->getMemberships($group->getGroupId(), $rangeInfo);
 		$templateMgr = &TemplateManager::getManager();
@@ -176,7 +191,9 @@ class GroupHandler extends ManagerHandler {
 		// If a user has been selected, add them to the group.
 		// Otherwise list users.
 		if ($userId !== null) {
-			list($journal, $group, $user) = GroupHandler::validate($groupId, $userId);
+			this->validate($groupId, $userId);
+			$group =& $this->group;
+			$user =& $this->user;
 			// A valid user has been chosen. Add them to
 			// the membership list and redirect.
 
@@ -193,8 +210,10 @@ class GroupHandler extends ManagerHandler {
 			}
 			Request::redirect(null, null, 'groupMembership', $group->getGroupId());
 		} else {
-			list($journal, $group) = GroupHandler::validate($groupId);
-			GroupHandler::setupTemplate($group, true);
+			$this->validate($groupId);
+			$group =& $this->group;
+			$this->setupTemplate($group, true);
+
 			$searchType = null;
 			$searchMatch = null;
 			$search = $searchQuery = Request::getUserVar('search');
@@ -240,7 +259,10 @@ class GroupHandler extends ManagerHandler {
 		$groupId = isset($args[0])?(int)$args[0]:0;
 		$userId = isset($args[1])?(int)$args[1]:0;
 
-		list($journal, $group, $user, $groupMembership) = GroupHandler::validate($groupId, $userId, true);
+		$this->validate($groupId, $userId, true);
+		$group =& $this->group;
+		$user =& $this->user;
+		$groupMembership =& $this->groupMembership;
 
 		$groupMembershipDao =& DAORegistry::getDAO('GroupMembershipDAO');
 		$groupMembershipDao->deleteMembershipById($group->getGroupId(), $user->getUserId());
@@ -255,7 +277,9 @@ class GroupHandler extends ManagerHandler {
 	function moveMembership() {
 		$groupId = (int) Request::getUserVar('groupId');
 		$userId = (int) Request::getUserVar('userId');
-		list($journal, $group, $user, $groupMembership) = GroupHandler::validate($groupId, $userId, true);
+		$this->validate($groupId, $userId, true);
+		$group =& $this->group;
+		$groupMembership =& $this->groupMembership;
 
 		$groupMembershipDao =& DAORegistry::getDAO('GroupMembershipDAO');
 		$groupMembership->setSequence($groupMembership->getSequence() + (Request::getUserVar('d') == 'u' ? -1.5 : 1.5));
@@ -266,7 +290,7 @@ class GroupHandler extends ManagerHandler {
 	}
 
 	function setBoardEnabled($args) {
-		GroupHandler::validate();
+		$this->validate();
 		$journal = &Request::getJournal();
 		$boardEnabled = Request::getUserVar('boardEnabled')==1?true:false;
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
@@ -300,7 +324,6 @@ class GroupHandler extends ManagerHandler {
 		parent::validate();
 
 		$journal =& Request::getJournal();
-		$returner = array(&$journal);
 
 		$passedValidation = true;
 
@@ -309,25 +332,25 @@ class GroupHandler extends ManagerHandler {
 			$group =& $groupDao->getGroup($groupId, ASSOC_TYPE_JOURNAL, $journal->getJournalId());
 
 			if (!$group) $passedValidation = false;
-			else $returner[] = &$group;
+			else $this->group =& $group;
 
 			if ($userId !== null) {
 				$userDao =& DAORegistry::getDAO('UserDAO');
 				$user =& $userDao->getUser($userId);
 
 				if (!$user) $passedValidation = false;
-				else $returner[] = &$user;
+				else $this->user =& $user;
 
 				if ($fetchMembership === true) {
 					$groupMembershipDao =& DAORegistry::getDAO('GroupMembershipDAO');
 					$groupMembership =& $groupMembershipDao->getMembership($groupId, $userId);
 					if (!$groupMembership) $validationPassed = false;
-					else $returner[] = &$groupMembership;
+					else $this->groupMembership =& $groupMembership;
 				}
 			}
 		}
 		if (!$passedValidation) Request::redirect(null, null, 'groups');
-		return $returner;
+		return true;
 	}
 }
 

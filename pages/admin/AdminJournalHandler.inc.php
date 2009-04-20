@@ -21,10 +21,10 @@ class AdminJournalHandler extends AdminHandler {
 	 * Display a list of the journals hosted on the site.
 	 */
 	function journals() {
-		parent::validate();
-		AdminJournalHandler::setupTemplate();
+		$this->validate();
+		$this->setupTemplate();
 
-		$rangeInfo = PKPHandler::getRangeInfo('journals');
+		$rangeInfo = Handler::getRangeInfo('journals');
 
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$journals = &$journalDao->getJournals($rangeInfo);
@@ -39,7 +39,7 @@ class AdminJournalHandler extends AdminHandler {
 	 * Display form to create a new journal.
 	 */
 	function createJournal() {
-		AdminJournalHandler::editJournal();
+		$this->editJournal();
 	}
 
 	/**
@@ -47,8 +47,8 @@ class AdminJournalHandler extends AdminHandler {
 	 * @param $args array optional, if set the first parameter is the ID of the journal to edit
 	 */
 	function editJournal($args = array()) {
-		parent::validate();
-		AdminJournalHandler::setupTemplate();
+		$this->validate();
+		$this->setupTemplate();
 
 		import('admin.form.JournalSiteSettingsForm');
 
@@ -66,7 +66,7 @@ class AdminJournalHandler extends AdminHandler {
 	 * Save changes to a journal's settings.
 	 */
 	function updateJournal() {
-		parent::validate();
+		$this->validate();
 
 		import('admin.form.JournalSiteSettingsForm');
 
@@ -81,7 +81,7 @@ class AdminJournalHandler extends AdminHandler {
 			Request::redirect(null, null, 'journals');
 
 		} else {
-			AdminJournalHandler::setupTemplate();
+			$this->setupTemplate();
 			$settingsForm->display();
 		}
 	}
@@ -91,7 +91,7 @@ class AdminJournalHandler extends AdminHandler {
 	 * @param $args array first parameter is the ID of the journal to delete
 	 */
 	function deleteJournal($args) {
-		parent::validate();
+		$this->validate();
 
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 
@@ -119,7 +119,7 @@ class AdminJournalHandler extends AdminHandler {
 	 * Change the sequence of a journal on the site index page.
 	 */
 	function moveJournal() {
-		parent::validate();
+		$this->validate();
 
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$journal = &$journalDao->getJournal(Request::getUserVar('journalId'));
@@ -137,8 +137,8 @@ class AdminJournalHandler extends AdminHandler {
 	 * Show form to import data from an OJS 1.x journal.
 	 */
 	function importOJS1() {
-		parent::validate();
-		AdminJournalHandler::setupTemplate();
+		$this->validate();
+		$this->setupTemplate();
 
 		import('admin.form.ImportOJS1Form');
 
@@ -152,8 +152,8 @@ class AdminJournalHandler extends AdminHandler {
 	 * Import data from an OJS 1.x journal.
 	 */
 	function doImportOJS1() {
-		parent::validate();
-		AdminJournalHandler::setupTemplate();
+		$this->validate();
+		$this->setupTemplate();
 
 		import('admin.form.ImportOJS1Form');
 

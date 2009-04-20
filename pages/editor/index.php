@@ -17,9 +17,35 @@
 
 // $Id$
 
-
-define('HANDLER_CLASS', 'EditorHandler');
-
-import('pages.editor.EditorHandler');
+switch ($op) {
+	//
+	// Issue
+	//
+	case 'futureIssues':
+	case 'backIssues':
+	case 'removeIssue':
+	case 'createIssue':
+	case 'saveIssue':
+	case 'issueData':
+	case 'editIssue':
+	case 'removeIssueCoverPage':
+	case 'removeStyleFile':
+	case 'issueToc':
+	case 'updateIssueToc':
+	case 'setCurrentIssue':
+	case 'moveIssue':
+	case 'resetIssueOrder':
+	case 'moveSectionToc':
+	case 'resetSectionOrder':
+	case 'moveArticleToc':
+	case 'publishIssue':
+	case 'notifyUsers':
+		define('HANDLER_CLASS', 'IssueManagementHandler');
+		import('pages.editor.IssueManagementHandler');
+		break;
+	default:
+		define('HANDLER_CLASS', 'EditorHandler');
+		import('pages.editor.EditorHandler');
+}
 
 ?>

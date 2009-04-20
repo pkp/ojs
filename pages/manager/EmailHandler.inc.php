@@ -21,10 +21,10 @@ class EmailHandler extends ManagerHandler {
 	 * Display a list of the emails within the current journal.
 	 */
 	function emails() {
-		parent::validate();
-		parent::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
-		$rangeInfo = PKPHandler::getRangeInfo('emails');
+		$rangeInfo = Handler::getRangeInfo('emails');
 
 		$journal =& Request::getJournal();
 		$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
@@ -49,8 +49,8 @@ class EmailHandler extends ManagerHandler {
 	 * @param $args array optional, if set the first parameter is the key of the email template to edit
 	 */
 	function editEmail($args = array()) {
-		parent::validate();
-		parent::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'emails'), 'manager.emails'));
@@ -69,7 +69,7 @@ class EmailHandler extends ManagerHandler {
 	 * Save changes to an email.
 	 */
 	function updateEmail() {
-		parent::validate();
+		$this->validate();
 
 		import('manager.form.EmailTemplateForm');
 
@@ -84,7 +84,7 @@ class EmailHandler extends ManagerHandler {
 			Request::redirect(null, null, 'emails');
 
 		} else {
-			parent::setupTemplate(true);
+			$this->setupTemplate(true);
 			$emailTemplateForm->display();
 		}
 	}
@@ -94,7 +94,7 @@ class EmailHandler extends ManagerHandler {
 	 * @param $args array first parameter is the key of the email to delete
 	 */
 	function deleteCustomEmail($args) {
-		parent::validate();
+		$this->validate();
 		$journal = &Request::getJournal();
 		$emailKey = array_shift($args);
 
@@ -111,7 +111,7 @@ class EmailHandler extends ManagerHandler {
 	 * @param $args array first parameter is the key of the email to reset
 	 */
 	function resetEmail($args) {
-		parent::validate();
+		$this->validate();
 
 		if (isset($args) && !empty($args)) {
 			$journal = &Request::getJournal();
@@ -127,7 +127,7 @@ class EmailHandler extends ManagerHandler {
 	 * resets all email templates associated with the journal.
 	 */
 	function resetAllEmails() {
-		parent::validate();
+		$this->validate();
 
 		$journal = &Request::getJournal();
 		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
@@ -141,7 +141,7 @@ class EmailHandler extends ManagerHandler {
 	 * @param $args array first parameter is the key of the email to disable
 	 */
 	function disableEmail($args) {
-		parent::validate();
+		$this->validate();
 
 		if (isset($args) && !empty($args)) {
 			$journal = &Request::getJournal();
@@ -174,7 +174,7 @@ class EmailHandler extends ManagerHandler {
 	 * @param $args array first parameter is the key of the email to enable
 	 */
 	function enableEmail($args) {
-		parent::validate();
+		$this->validate();
 
 		if (isset($args) && !empty($args)) {
 			$journal = &Request::getJournal();

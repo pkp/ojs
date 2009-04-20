@@ -16,21 +16,21 @@
 
 
 import('submission.reviewer.ReviewerAction');
-import('core.PKPHandler');
+import('handler.Handler');
 
-class ReviewerHandler extends PKPHandler {
+class ReviewerHandler extends Handler{
 
 	/**
 	 * Display reviewer index page.
 	 */
 	function index($args) {
-		ReviewerHandler::validate();
-		ReviewerHandler::setupTemplate();
+		$this->validate();
+		$this->setupTemplate();
 
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
-		$rangeInfo = PKPHandler::getRangeInfo('submissions');
+		$rangeInfo = Handler::getRangeInfo('submissions');
 
 		$page = isset($args[0]) ? $args[0] : '';
 		switch($page) {
@@ -65,12 +65,10 @@ class ReviewerHandler extends PKPHandler {
 	 * Note that subclasses using access keys should not call this method.
 	 */
 	function validate() {
+		$this->addCheck(new HandlerValidatorJournal(&$this));
+		$this->addCheck(new HandlerValidatorRoles(&$this, true, null, null, array(ROLE_ID_REVIEWER)));		
 		parent::validate();
-		$journal = &Request::getJournal();
-
-		if (!isset($journal) || !Validation::isReviewer($journal->getJournalId())) {
-			Validation::redirectLogin();
-		}
+		return true;
 	}
 
 	/**
@@ -137,97 +135,6 @@ class ReviewerHandler extends PKPHandler {
 			$pageHierarchy[] = array(Request::url(null, 'reviewer', 'submission', $reviewId), "#$articleId", true);
 		}
 		$templateMgr->assign('pageHierarchy', $pageHierarchy);
-	}
-
-	//
-	// Submission Tracking
-	//
-
-	function submission($args) {
-		import('pages.reviewer.SubmissionReviewHandler');
-		SubmissionReviewHandler::submission($args);
-	}
-
-	function confirmReview($args) {
-		import('pages.reviewer.SubmissionReviewHandler');
-		SubmissionReviewHandler::confirmReview($args);
-	}
-
-	function saveCompetingInterests() {
-		import('pages.reviewer.SubmissionReviewHandler');
-		SubmissionReviewHandler::saveCompetingInterests();
-	}
-
-	function recordRecommendation() {
-		import('pages.reviewer.SubmissionReviewHandler');
-		SubmissionReviewHandler::recordRecommendation();
-	}
-
-	function viewMetadata($args) {
-		import('pages.reviewer.SubmissionReviewHandler');
-		SubmissionReviewHandler::viewMetadata($args);
-	}
-
-	function uploadReviewerVersion() {
-		import('pages.reviewer.SubmissionReviewHandler');
-		SubmissionReviewHandler::uploadReviewerVersion();
-	}
-
-	function deleteReviewerVersion($args) {
-		import('pages.reviewer.SubmissionReviewHandler');
-		SubmissionReviewHandler::deleteReviewerVersion($args);
-	}
-
-	//
-	// Misc.
-	//
-
-	function downloadFile($args) {
-		import('pages.reviewer.SubmissionReviewHandler');
-		SubmissionReviewHandler::downloadFile($args);
-	}
-	
-	//
-	// Submission Review Form
-	//
-
-	function editReviewFormResponse($args) {
-		import('pages.reviewer.SubmissionReviewHandler');
-		SubmissionReviewHandler::editReviewFormResponse($args);
-	}
-
-	function saveReviewFormResponse($args) {
-		import('pages.reviewer.SubmissionReviewHandler');
-		SubmissionReviewHandler::saveReviewFormResponse($args);
-	}
-	
-	//
-	// Submission Comments
-	//
-
-	function viewPeerReviewComments($args) {
-		import('pages.reviewer.SubmissionCommentsHandler');
-		SubmissionCommentsHandler::viewPeerReviewComments($args);
-	}
-
-	function postPeerReviewComment() {
-		import('pages.reviewer.SubmissionCommentsHandler');
-		SubmissionCommentsHandler::postPeerReviewComment();
-	}
-
-	function editComment($args) {
-		import('pages.reviewer.SubmissionCommentsHandler');
-		SubmissionCommentsHandler::editComment($args);
-	}
-
-	function saveComment() {
-		import('pages.reviewer.SubmissionCommentsHandler');
-		SubmissionCommentsHandler::saveComment();
-	}
-
-	function deleteComment($args) {
-		import('pages.reviewer.SubmissionCommentsHandler');
-		SubmissionCommentsHandler::deleteComment($args);
 	}
 }
 

@@ -14,286 +14,74 @@
 
 // $Id$
 
+import('manager.PKPAnnouncementHandler');
 
-class AnnouncementHandler extends ManagerHandler {
-
-	function index() {
-		AnnouncementHandler::announcements();
-	}
-
+class AnnouncementHandler extends PKPAnnouncementHandler {
 	/**
 	 * Display a list of announcements for the current journal.
 	 */
 	function announcements() {
-		parent::validate();
-		AnnouncementHandler::setupTemplate();
-
-		$journal = &Request::getJournal();
-		$rangeInfo =& PKPHandler::getRangeInfo('announcements');
-		$announcementDao = &DAORegistry::getDAO('AnnouncementDAO');
-		$announcements = &$announcementDao->getAnnouncementsByJournalId($journal->getJournalId(), $rangeInfo);
-
-		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('announcements', $announcements);
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.announcements');
-		$templateMgr->display('manager/announcement/announcements.tpl');
+		parent::announcements();
 	}
-
-	/**
-	 * Delete an announcement.
-	 * @param $args array first parameter is the ID of the announcement to delete
-	 */
-	function deleteAnnouncement($args) {
-		parent::validate();
-
-		if (isset($args) && !empty($args)) {
-			$journal = &Request::getJournal();
-			$announcementId = (int) $args[0];
-
-			$announcementDao = &DAORegistry::getDAO('AnnouncementDAO');
-
-			// Ensure announcement is for this journal
-			if ($announcementDao->getAnnouncementJournalId($announcementId) == $journal->getJournalId()) {
-				$announcementDao->deleteAnnouncementById($announcementId);
-			}
-		}
-
-		Request::redirect(null, null, 'announcements');
-	}
-
-	/**
-	 * Display form to edit an announcement.
-	 * @param $args array optional, first parameter is the ID of the announcement to edit
-	 */
-	function editAnnouncement($args = array()) {
-		parent::validate();
-		AnnouncementHandler::setupTemplate();
-
-		$journal = &Request::getJournal();
-		$announcementId = !isset($args) || empty($args) ? null : (int) $args[0];
-		$announcementDao = &DAORegistry::getDAO('AnnouncementDAO');
-
-		// Ensure announcement is valid and for this journal
-		if (($announcementId != null && $announcementDao->getAnnouncementJournalId($announcementId) == $journal->getJournalId()) || ($announcementId == null)) {
-			import('manager.form.AnnouncementForm');
-
-			$templateMgr = &TemplateManager::getManager();
-			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'announcements'), 'manager.announcements'));
-
-			if ($announcementId == null) {
-				$templateMgr->assign('announcementTitle', 'manager.announcements.createTitle');
-			} else {
-				$templateMgr->assign('announcementTitle', 'manager.announcements.editTitle');	
-			}
-
-			// FIXME: Need construction by reference or validation always fails on PHP 4.x
-			$announcementForm =& new AnnouncementForm($announcementId);
-			if ($announcementForm->isLocaleResubmit()) {
-				$announcementForm->readInputData();
-			} else {
-				$announcementForm->initData();
-			}
-			$announcementForm->display();
-
-		} else {
-				Request::redirect(null, null, 'announcements');
-		}
-	}
-
-	/**
-	 * Display form to create new announcement.
-	 */
-	function createAnnouncement() {
-		AnnouncementHandler::editAnnouncement();
-	}
-
-	/**
-	 * Save changes to an announcement.
-	 */
-	function updateAnnouncement() {
-		parent::validate();
-
-		import('manager.form.AnnouncementForm');
-
-		$journal = &Request::getJournal();
-		$announcementId = Request::getUserVar('announcementId') == null ? null : (int) Request::getUserVar('announcementId');
-		$announcementDao = &DAORegistry::getDAO('AnnouncementDAO');
-
-		if (($announcementId != null && $announcementDao->getAnnouncementJournalId($announcementId) == $journal->getJournalId()) || $announcementId == null) {
-
-			// FIXME: Need construction by reference or validation always fails on PHP 4.x
-			$announcementForm =& new AnnouncementForm($announcementId);
-			$announcementForm->readInputData();
-
-			if ($announcementForm->validate()) {
-				$announcementForm->execute();
-
-				if (Request::getUserVar('createAnother')) {
-					Request::redirect(null, null, 'createAnnouncement');
-				} else {
-					Request::redirect(null, null, 'announcements');
-				}
-
-			} else {
-				AnnouncementHandler::setupTemplate();
-
-				$templateMgr = &TemplateManager::getManager();
-				$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'announcements'), 'manager.announcements'));
-
-				if ($announcementId == null) {
-					$templateMgr->assign('announcementTitle', 'manager.announcements.createTitle');
-				} else {
-					$templateMgr->assign('announcementTitle', 'manager.announcements.editTitle');	
-				}
-
-				$announcementForm->display();
-			}
-
-		} else {
-				Request::redirect(null, null, 'announcements');
-		}	
-	}	
 
 	/**
 	 * Display a list of announcement types for the current journal.
 	 */
 	function announcementTypes() {
-		parent::validate();
-		AnnouncementHandler::setupTemplate(true);
-
-		$journal = &Request::getJournal();
-		$rangeInfo =& PKPHandler::getRangeInfo('announcementTypes');
-		$announcementTypeDao = &DAORegistry::getDAO('AnnouncementTypeDAO');
-		$announcementTypes = &$announcementTypeDao->getAnnouncementTypesByJournalId($journal->getJournalId(), $rangeInfo);
-
-		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('announcementTypes', $announcementTypes);
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.announcements');
-		$templateMgr->display('manager/announcement/announcementTypes.tpl');
+		parent::announcementTypes();
 	}
+	
+	function &_getAnnouncements($rangeInfo = null) {
+		$journal =& Request::getJournal();
+		$announcementDao =& DAORegistry::getDAO('AnnouncementDAO');
+		$announcements =& $announcementDao->getAnnouncementsByAssocId(ASSOC_TYPE_JOURNAL, $journal->getJournalId(), $rangeInfo);
 
-	/**
-	 * Delete an announcement type.
-	 * @param $args array first parameter is the ID of the announcement type to delete
-	 */
-	function deleteAnnouncementType($args) {
-		parent::validate();
-
-		if (isset($args) && !empty($args)) {
-			$journal = &Request::getJournal();
-			$typeId = (int) $args[0];
-
-			$announcementTypeDao = &DAORegistry::getDAO('AnnouncementTypeDAO');
-
-			// Ensure announcement is for this journal
-			if ($announcementTypeDao->getAnnouncementTypeJournalId($typeId) == $journal->getJournalId()) {
-				$announcementTypeDao->deleteAnnouncementTypeById($typeId);
-			}
-		}
-
-		Request::redirect(null, null, 'announcementTypes');
+		return $announcements;
 	}
+	
+	function &_getAnnouncementTypes($rangeInfo = null) {
+		$journal =& Request::getJournal();
+		$announcementTypeDao =& DAORegistry::getDAO('AnnouncementTypeDAO');
+		$announcements =& $announcementTypeDao->getAnnouncementTypesByAssocId(ASSOC_TYPE_JOURNAL, $journal->getJournalId(), $rangeInfo);
 
-	/**
-	 * Display form to edit an announcement type.
-	 * @param $args array optional, first parameter is the ID of the announcement type to edit
-	 */
-	function editAnnouncementType($args = array()) {
-		parent::validate();
-		AnnouncementHandler::setupTemplate(true);
-
-		$journal = &Request::getJournal();
-		$typeId = !isset($args) || empty($args) ? null : (int) $args[0];
-		$announcementTypeDao = &DAORegistry::getDAO('AnnouncementTypeDAO');
-
-		// Ensure announcement type is valid and for this journal
-		if (($typeId != null && $announcementTypeDao->getAnnouncementTypeJournalId($typeId) == $journal->getJournalId()) || ($typeId == null)) {
-			import('manager.form.AnnouncementTypeForm');
-
-			$templateMgr = &TemplateManager::getManager();
-			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'announcementTypes'), 'manager.announcementTypes'));
-
-			if ($typeId == null) {
-				$templateMgr->assign('announcementTypeTitle', 'manager.announcementTypes.createTitle');
-			} else {
-				$templateMgr->assign('announcementTypeTitle', 'manager.announcementTypes.editTitle');	
-			}
-
-			// FIXME: Need construction by reference or validation always fails on PHP 4.x
-			$announcementTypeForm =& new AnnouncementTypeForm($typeId);
-			if ($announcementTypeForm->isLocaleResubmit()) {
-				$announcementTypeForm->readInputData();
-			} else {
-				$announcementTypeForm->initData();
-			}
-			$announcementTypeForm->display();
-
-		} else {
-			Request::redirect(null, null, 'announcementTypes');
-		}
-	}
-
-	/**
-	 * Display form to create new announcement type.
-	 */
-	function createAnnouncementType() {
-		AnnouncementHandler::editAnnouncementType();
-	}
-
-	/**
-	 * Save changes to an announcement type.
-	 */
-	function updateAnnouncementType() {
-		parent::validate();
-
-		import('manager.form.AnnouncementTypeForm');
-
-		$journal = &Request::getJournal();
-		$typeId = Request::getUserVar('typeId') == null ? null : (int) Request::getUserVar('typeId');
-		$announcementTypeDao = &DAORegistry::getDAO('AnnouncementTypeDAO');
-
-		if (($typeId != null && $announcementTypeDao->getAnnouncementTypeJournalId($typeId) == $journal->getJournalId()) || $typeId == null) {
-
-			// FIXME: Need construction by reference or validation always fails on PHP 4.x
-			$announcementTypeForm =& new AnnouncementTypeForm($typeId);
-			$announcementTypeForm->readInputData();
-
-			if ($announcementTypeForm->validate()) {
-				$announcementTypeForm->execute();
-
-				if (Request::getUserVar('createAnother')) {
-					Request::redirect(null, null, 'createAnnouncementType');
-				} else {
-					Request::redirect(null, null, 'announcementTypes');
-				}
-
-			} else {
-				AnnouncementHandler::setupTemplate(true);
-
-				$templateMgr = &TemplateManager::getManager();
-				$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'announcementTypes'), 'manager.announcementTypes'));
-
-				if ($typeId == null) {
-					$templateMgr->assign('announcementTypeTitle', 'manager.announcementTypes.createTitle');
-				} else {
-					$templateMgr->assign('announcementTypeTitle', 'manager.announcementTypes.editTitle');	
-				}
-
-				$announcementTypeForm->display();
-			}
-
-		} else {
-			Request::redirect(null, null, 'announcementTypes');
-		}	
+		return $announcements;
 	}	
 
-	function setupTemplate($subclass = false) {
-		parent::setupTemplate(true);
-		if ($subclass) {
-			$templateMgr = &TemplateManager::getManager();
-			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'announcements'), 'manager.announcements'));
-		}
-	}
+	/**
+	 * Checks the announcement to see if it belongs to this journal or scheduled journal
+	 * @param $announcementId int
+	 * return bool
+	 */	
+	function _announcementIsValid($announcementId) {
+		if ($announcementId == null) 
+			return true;
+
+		$announcementDao =& DAORegistry::getDAO('AnnouncementDAO');
+		$announcement =& $announcementDao->getAnnouncement($announcementId);
+		
+		$journal =& Request::getJournal();
+		if ( $announcement && $journal 
+			&& $announcement->getAssocType() == ASSOC_TYPE_JOURNAL 
+			&& $announcement->getAssocId() == $journal->getJournalId())
+				return true;
+			
+		return false;
+	}	
+
+	/**
+	 * Checks the announcement type to see if it belongs to this journal.  All announcement types are set at the journal level.
+	 * @param $typeId int
+	 * return bool
+	 */
+	function _announcementTypeIsValid($typeId) {
+		$journal =& Request::getJournal();
+		$announcementTypeDao =& DAORegistry::getDAO('AnnouncementTypeDAO');
+		return (($typeId != null && $announcementTypeDao->getAnnouncementTypeAssocId($typeId) == $journal->getJournalId()) || $typeId == null);
+	}	
 }
 
 ?>

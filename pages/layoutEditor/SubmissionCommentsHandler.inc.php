@@ -18,17 +18,21 @@
 import('pages.layoutEditor.SubmissionLayoutHandler');
 
 class SubmissionCommentsHandler extends LayoutEditorHandler {
-
+	/** comment associated with the request **/
+	var $comment;
+	
 	/**
 	 * View layout comments.
 	 */
 	function viewLayoutComments($args) {
-		LayoutEditorHandler::validate();
-		LayoutEditorHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$articleId = $args[0];
 
-		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId);
+		$submissionLayoutHandler =& new SubmissionLayoutHandler();
+		$submissionLayoutHandler->validate($articleId);
+		$submission =& $submissionLayoutHandler->submission;
 		LayoutEditorAction::viewLayoutComments($submission);
 
 	}
@@ -37,15 +41,17 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 	 * Post layout comment.
 	 */
 	function postLayoutComment() {
-		LayoutEditorHandler::validate();
-		LayoutEditorHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$articleId = Request::getUserVar('articleId');
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
-		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId);
+		$submissionLayoutHandler =& new SubmissionLayoutHandler();
+		$submissionLayoutHandler->validate($articleId);
+		$submission =& $submissionLayoutHandler->submission;
 		if (LayoutEditorAction::postLayoutComment($submission, $emailComment)) {
 			LayoutEditorAction::viewLayoutComments($submission);
 		}
@@ -56,12 +62,14 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 	 * View proofread comments.
 	 */
 	function viewProofreadComments($args) {
-		LayoutEditorHandler::validate();
-		LayoutEditorHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$articleId = $args[0];
 
-		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId);
+		$submissionLayoutHandler =& new SubmissionLayoutHandler();
+		$submissionLayoutHandler->validate($articleId);
+		$submission =& $submissionLayoutHandler->submission;
 		LayoutEditorAction::viewProofreadComments($submission);
 
 	}
@@ -70,15 +78,17 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 	 * Post proofread comment.
 	 */
 	function postProofreadComment() {
-		LayoutEditorHandler::validate();
-		LayoutEditorHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$articleId = Request::getUserVar('articleId');
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
-		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId);
+		$submissionLayoutHandler =& new SubmissionLayoutHandler();
+		$submissionLayoutHandler->validate($articleId);
+		$submission =& $submissionLayoutHandler->submission;
 		if (LayoutEditorAction::postProofreadComment($submission, $emailComment)) {
 			LayoutEditorAction::viewProofreadComments($submission);
 		}
@@ -89,14 +99,18 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 	 * Edit comment.
 	 */
 	function editComment($args) {
-		LayoutEditorHandler::validate();
-		LayoutEditorHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$articleId = $args[0];
 		$commentId = $args[1];
 
-		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId);
-		list($comment) = SubmissionCommentsHandler::validate($commentId);
+		$submissionLayoutHandler =& new SubmissionLayoutHandler();
+		$submissionLayoutHandler->validate($articleId);
+		$submission =& $submissionLayoutHandler->submission;
+	
+		$this->validate($commentId);
+		$comment =& $this->comment;
 		LayoutEditorAction::editComment($submission, $comment);
 
 	}
@@ -105,8 +119,8 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 	 * Save comment.
 	 */
 	function saveComment() {
-		LayoutEditorHandler::validate();
-		LayoutEditorHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$articleId = Request::getUserVar('articleId');
 		$commentId = Request::getUserVar('commentId');
@@ -114,8 +128,12 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
-		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId);
-		list($comment) = SubmissionCommentsHandler::validate($commentId);
+		$submissionLayoutHandler =& new SubmissionLayoutHandler();
+		$submissionLayoutHandler->validate($articleId);
+		$submission =& $submissionLayoutHandler->submission;
+	
+		$this->validate($commentId);
+		$comment =& $this->comment;
 		LayoutEditorAction::saveComment($submission, $comment, $emailComment);
 
 		// Redirect back to initial comments page
@@ -130,14 +148,18 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 	 * Delete comment.
 	 */
 	function deleteComment($args) {
-		LayoutEditorHandler::validate();
-		LayoutEditorHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$articleId = $args[0];
 		$commentId = $args[1];
 
-		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId);
-		list($comment) = SubmissionCommentsHandler::validate($commentId);
+		$submissionLayoutHandler =& new SubmissionLayoutHandler();
+		$submissionLayoutHandler->validate($articleId);
+		$submission =& $submissionLayoutHandler->submission;
+	
+		$this->validate($commentId);
+		$comment =& $this->comment;
 		LayoutEditorAction::deleteComment($commentId);
 
 		// Redirect back to initial comments page
@@ -175,7 +197,9 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 		if (!$isValid) {
 			Request::redirect(null, Request::getRequestedPage());
 		}
-		return array($comment);
+		
+		$this->comment =& $comment;
+		return true;
 	}
 }
 ?>

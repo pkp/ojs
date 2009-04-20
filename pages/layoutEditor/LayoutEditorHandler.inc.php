@@ -16,15 +16,15 @@
 
 
 import('submission.layoutEditor.LayoutEditorAction');
-import('core.PKPHandler');
+import('handler.Handler');
 
-class LayoutEditorHandler extends PKPHandler {
+class LayoutEditorHandler extends Handler{
 	/**
 	 * Display layout editor index page.
 	 */
 	function index() {
-		LayoutEditorHandler::validate();
-		LayoutEditorHandler::setupTemplate();
+		$this->validate();
+		$this->setupTemplate();
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', 'editorial.layoutEditorsRole');
@@ -35,8 +35,8 @@ class LayoutEditorHandler extends PKPHandler {
 	 * Display layout editor submissions page.
 	 */
 	function submissions($args) {
-		LayoutEditorHandler::validate();
-		LayoutEditorHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
@@ -63,7 +63,7 @@ class LayoutEditorHandler extends PKPHandler {
 		$toDate = Request::getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
 		if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
 
-		$rangeInfo = PKPHandler::getRangeInfo('submissions');
+		$rangeInfo = Handler::getRangeInfo('submissions');
 		$submissions = $layoutEditorSubmissionDao->getSubmissions($user->getUserId(), $journal->getJournalId(), $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $active, $rangeInfo);
 
 		$templateMgr = &TemplateManager::getManager();
@@ -105,12 +105,12 @@ class LayoutEditorHandler extends PKPHandler {
 	 * Display Future Isshes page.
 	 */
 	function futureIssues() {
-		parent::validate();
-		LayoutEditorHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$journal = &Request::getJournal();
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
-		$rangeInfo = PKPHandler::getRangeInfo('issues');
+		$rangeInfo = Handler::getRangeInfo('issues');
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign_by_ref('issues', $issueDao->getUnpublishedIssues($journal->getJournalId(), $rangeInfo));
 		$templateMgr->assign('helpTopicId', 'publishing.index');
@@ -121,13 +121,13 @@ class LayoutEditorHandler extends PKPHandler {
 	 * Displays the listings of back (published) issues
 	 */
 	function backIssues() {
-		parent::validate();
-		LayoutEditorHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$journal = &Request::getJournal();
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 
-		$rangeInfo = PKPHandler::getRangeInfo('issues');
+		$rangeInfo = Handler::getRangeInfo('issues');
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign_by_ref('issues', $issueDao->getPublishedIssues($journal->getJournalId(), $rangeInfo));
@@ -149,62 +149,15 @@ class LayoutEditorHandler extends PKPHandler {
 		$templateMgr->display('layoutEditor/backIssues.tpl');
 	}
 
-
-	function issueData($args) {
-		import('pages.editor.EditorHandler');
-		EditorHandler::issueData($args);
-	}
-
-	function issueToc($args) {
-		import('pages.editor.EditorHandler');
-		EditorHandler::issueToc($args);
-	}
-
-	function resetSectionOrder($args) {
-		import('pages.editor.EditorHandler');
-		EditorHandler::resetSectionOrder($args);
-	}
-
-	function updateIssueToc($args) {
-		import('pages.editor.EditorHandler');
-		EditorHandler::updateIssueToc($args);
-	}
-
-	function moveSectionToc($args) {
-		import('pages.editor.EditorHandler');
-		EditorHandler::moveSectionToc($args);
-	}
-
-	function moveArticleToc($args) {
-		import('pages.editor.EditorHandler');
-		EditorHandler::moveArticleToc($args);
-	}
-
-	function editIssue($args) {
-		import('pages.editor.EditorHandler');
-		EditorHandler::editIssue($args);
-	}
-
-	function removeIssueCoverPage($args) {
-		import('pages.editor.EditorHandler');
-		EditorHandler::removeIssueCoverPage($args);
-	}
-
-	function removeStyleFile($args) {
-		import('pages.editor.EditorHandler');
-		EditorHandler::removeStyleFile($args);
-	}
-
 	/**
 	 * Validate that user is a layout editor in the selected journal.
 	 * Redirects to user index page if not properly authenticated.
 	 */
 	function validate() {
+		$this->addCheck(new HandlerValidatorJournal(&$this));
+		$this->addCheck(new HandlerValidatorRoles(&$this, true, null, null, array(ROLE_ID_LAYOUT_EDITOR)));		
 		parent::validate();
-		$journal = &Request::getJournal();
-		if (!isset($journal) || !Validation::isLayoutEditor($journal->getJournalId())) {
-			Validation::redirectLogin();
-		}
+		return true;
 	}
 
 	/**
@@ -236,161 +189,6 @@ class LayoutEditorHandler extends PKPHandler {
 			Request::redirect(null, Request::getRequestedPage());
 		}
 	}
-
-	function viewMetadata($args) {
-		import('pages.layoutEditor.SubmissionLayoutHandler');
-		SubmissionLayoutHandler::viewMetadata($args);
-	}
-
-
-	//
-	// Submission Layout Editing
-	//
-
-	function submission($args) {
-		import('pages.layoutEditor.SubmissionLayoutHandler');
-		SubmissionLayoutHandler::submission($args);
-	}
-
-	function submissionEditing($args) {
-		import('pages.layoutEditor.SubmissionLayoutHandler');
-		SubmissionLayoutHandler::submission($args);
-	}
-
-	function completeAssignment($args) {
-		import('pages.layoutEditor.SubmissionLayoutHandler');
-		SubmissionLayoutHandler::completeAssignment($args);
-	}
-
-	function uploadLayoutFile() {
-		import('pages.layoutEditor.SubmissionLayoutHandler');
-		SubmissionLayoutHandler::uploadLayoutFile();
-	}
-
-	function editGalley($args) {
-		import('pages.layoutEditor.SubmissionLayoutHandler');
-		SubmissionLayoutHandler::editGalley($args);
-	}
-
-	function saveGalley($args) {
-		import('pages.layoutEditor.SubmissionLayoutHandler');
-		SubmissionLayoutHandler::saveGalley($args);
-	}
-
-	function deleteGalley($args) {
-		import('pages.layoutEditor.SubmissionLayoutHandler');
-		SubmissionLayoutHandler::deleteGalley($args);
-	}
-
-	function orderGalley() {
-		import('pages.layoutEditor.SubmissionLayoutHandler');
-		SubmissionLayoutHandler::orderGalley();
-	}
-
-	function proofGalley($args) {
-		import('pages.layoutEditor.SubmissionLayoutHandler');
-		SubmissionLayoutHandler::proofGalley($args);
-	}
-
-	function proofGalleyTop($args) {
-		import('pages.layoutEditor.SubmissionLayoutHandler');
-		SubmissionLayoutHandler::proofGalleyTop($args);
-	}
-
-	function proofGalleyFile($args) {
-		import('pages.layoutEditor.SubmissionLayoutHandler');
-		SubmissionLayoutHandler::proofGalleyFile($args);
-	}
-
-	function editSuppFile($args) {
-		import('pages.layoutEditor.SubmissionLayoutHandler');
-		SubmissionLayoutHandler::editSuppFile($args);
-	}
-
-	function saveSuppFile($args) {
-		import('pages.layoutEditor.SubmissionLayoutHandler');
-		SubmissionLayoutHandler::saveSuppFile($args);
-	}
-
-	function deleteSuppFile($args) {
-		import('pages.layoutEditor.SubmissionLayoutHandler');
-		SubmissionLayoutHandler::deleteSuppFile($args);
-	}
-
-	function orderSuppFile() {
-		import('pages.layoutEditor.SubmissionLayoutHandler');
-		SubmissionLayoutHandler::orderSuppFile();
-	}
-
-	function downloadFile($args) {
-		import('pages.layoutEditor.SubmissionLayoutHandler');
-		SubmissionLayoutHandler::downloadFile($args);
-	}
-
-	function viewFile($args) {
-		import('pages.layoutEditor.SubmissionLayoutHandler');
-		SubmissionLayoutHandler::viewFile($args);
-	}
-
-	function downloadLayoutTemplate($args) {
-		import('pages.layoutEditor.SubmissionLayoutHandler');
-		SubmissionLayoutHandler::downloadLayoutTemplate($args);
-	}
-
-	function deleteArticleImage($args) {
-		import('pages.layoutEditor.SubmissionLayoutHandler');
-		SubmissionLayoutHandler::deleteArticleImage($args);
-	}
-
-	//
-	// Proofreading Actions
-	//
-
-	function layoutEditorProofreadingComplete($args) {
-		import('pages.layoutEditor.SubmissionLayoutHandler');
-		SubmissionLayoutHandler::layoutEditorProofreadingComplete($args);
-	}
-
-
-	//
-	// Submission Comments
-	//
-
-	function viewLayoutComments($args) {
-		import('pages.layoutEditor.SubmissionCommentsHandler');
-		SubmissionCommentsHandler::viewLayoutComments($args);
-	}
-
-	function postLayoutComment() {
-		import('pages.layoutEditor.SubmissionCommentsHandler');
-		SubmissionCommentsHandler::postLayoutComment();
-	}
-
-	function viewProofreadComments($args) {
-		import('pages.layoutEditor.SubmissionCommentsHandler');
-		SubmissionCommentsHandler::viewProofreadComments($args);
-	}
-
-	function postProofreadComment() {
-		import('pages.layoutEditor.SubmissionCommentsHandler');
-		SubmissionCommentsHandler::postProofreadComment();
-	}
-
-	function editComment($args) {
-		import('pages.layoutEditor.SubmissionCommentsHandler');
-		SubmissionCommentsHandler::editComment($args);
-	}
-
-	function saveComment() {
-		import('pages.layoutEditor.SubmissionCommentsHandler');
-		SubmissionCommentsHandler::saveComment();
-	}
-
-	function deleteComment($args) {
-		import('pages.layoutEditor.SubmissionCommentsHandler');
-		SubmissionCommentsHandler::deleteComment($args);
-	}
-
 }
 
 ?>

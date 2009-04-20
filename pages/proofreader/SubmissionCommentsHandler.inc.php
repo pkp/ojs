@@ -18,34 +18,40 @@
 import('pages.proofreader.SubmissionProofreadHandler');
 
 class SubmissionCommentsHandler extends ProofreaderHandler {
+	/** comment associated with the request **/
+	var $comment;
 
 	/**
 	 * View proofread comments.
 	 */
 	function viewProofreadComments($args) {
-		ProofreaderHandler::validate();
-		ProofreaderHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$articleId = $args[0];
 
-		list($journal, $submission) = SubmissionProofreadHandler::validate($articleId);
+		$submissionProofreadHandler =& new SubmissionProofreadHandler();
+		$submissionProofreadHandler->validate($articleId);
+		$submission =& $submissionProofreadHandler->submission;
 		ProofreaderAction::viewProofreadComments($submission);
-
 	}
 
 	/**
 	 * Post proofread comment.
 	 */
 	function postProofreadComment() {
-		ProofreaderHandler::validate();
-		ProofreaderHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$articleId = Request::getUserVar('articleId');
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
-		list($journal, $submission) = SubmissionProofreadHandler::validate($articleId);
+		$submissionProofreadHandler =& new SubmissionProofreadHandler();
+		$submissionProofreadHandler->validate($articleId);
+		$submission =& $submissionProofreadHandler->submission;
+
 		if (ProofreaderAction::postProofreadComment($submission, $emailComment)) {
 			ProofreaderAction::viewProofreadComments($submission);
 		}
@@ -55,12 +61,14 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 	 * View layout comments.
 	 */
 	function viewLayoutComments($args) {
-		ProofreaderHandler::validate();
-		ProofreaderHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$articleId = $args[0];
 
-		list($journal, $submission) = SubmissionProofreadHandler::validate($articleId);
+		$submissionProofreadHandler =& new SubmissionProofreadHandler();
+		$submissionProofreadHandler->validate($articleId);
+		$submission =& $submissionProofreadHandler->submission;
 		ProofreaderAction::viewLayoutComments($submission);
 
 	}
@@ -69,15 +77,17 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 	 * Post layout comment.
 	 */
 	function postLayoutComment() {
-		ProofreaderHandler::validate();
-		ProofreaderHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$articleId = Request::getUserVar('articleId');
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
-		list($journal, $submission) = SubmissionProofreadHandler::validate($articleId);
+		$submissionProofreadHandler =& new SubmissionProofreadHandler();
+		$submissionProofreadHandler->validate($articleId);
+		$submission =& $submissionProofreadHandler->submission;
 		if (ProofreaderAction::postLayoutComment($submission, $emailComment)) {
 			ProofreaderAction::viewLayoutComments($submission);
 		}
@@ -88,13 +98,15 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 	 * Edit comment.
 	 */
 	function editComment($args) {
-		ProofreaderHandler::validate();
-		ProofreaderHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$articleId = $args[0];
 		$commentId = $args[1];
 
-		list($journal, $submission) = SubmissionProofreadHandler::validate($articleId);
+		$submissionProofreadHandler =& new SubmissionProofreadHandler();
+		$submissionProofreadHandler->validate($articleId);
+		$submission =& $submissionProofreadHandler->submission;
 		list($comment) = SubmissionCommentsHandler::validate($commentId);
 		ProofreaderAction::editComment($submission, $comment);
 
@@ -104,8 +116,8 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 	 * Save comment.
 	 */
 	function saveComment() {
-		ProofreaderHandler::validate();
-		ProofreaderHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$articleId = Request::getUserVar('articleId');
 		$commentId = Request::getUserVar('commentId');
@@ -113,8 +125,11 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
-		list($journal, $submission) = SubmissionProofreadHandler::validate($articleId);
-		list($comment) = SubmissionCommentsHandler::validate($commentId);
+		$submissionProofreadHandler =& new SubmissionProofreadHandler();
+		$submissionProofreadHandler->validate($articleId);
+		$submission =& $submissionProofreadHandler->submission;
+		$this->validate($commentId);
+		$comment =& $this->comment;
 		ProofreaderAction::saveComment($submission, $comment, $emailComment);
 
 		// Determine which page to redirect back to.
@@ -131,8 +146,8 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 	 * Delete comment.
 	 */
 	function deleteComment($args) {
-		ProofreaderHandler::validate();
-		ProofreaderHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$articleId = $args[0];
 		$commentId = $args[1];
@@ -140,8 +155,11 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		$comment = &$articleCommentDao->getArticleCommentById($commentId);
 
-		list($journal, $submission) = SubmissionProofreadHandler::validate($articleId);
-		list($comment) = SubmissionCommentsHandler::validate($commentId);
+		$submissionProofreadHandler =& new SubmissionProofreadHandler();
+		$submissionProofreadHandler->validate($articleId);
+		$submission =& $submissionProofreadHandler->submission;
+		$this->validate($commentId);
+		$comment =& $this->comment;
 		ProofreaderAction::deleteComment($commentId);
 
 		// Determine which page to redirect back to.
@@ -183,7 +201,8 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 			Request::redirect(null, Request::getRequestedPage());
 		}
 
-		return array(&$comment);
+		$this->comment =& $comment;
+		return true;
 	}
 }
 ?>

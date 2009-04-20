@@ -16,16 +16,16 @@
 
 
 import('submission.proofreader.ProofreaderAction');
-import('core.PKPHandler');
+import('handler.Handler');
 
-class ProofreaderHandler extends PKPHandler {
+class ProofreaderHandler extends Handler{
 
 	/**
 	 * Display proofreader index page.
 	 */
 	function index($args) {
-		ProofreaderHandler::validate();
-		ProofreaderHandler::setupTemplate();
+		$this->validate();
+		$this->setupTemplate();
 
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
@@ -42,7 +42,7 @@ class ProofreaderHandler extends PKPHandler {
 		$toDate = Request::getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
 		if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
 
-		$rangeInfo = PKPHandler::getRangeInfo('submissions');
+		$rangeInfo = Handler::getRangeInfo('submissions');
 
 		$page = isset($args[0]) ? $args[0] : '';
 		switch($page) {
@@ -96,11 +96,10 @@ class ProofreaderHandler extends PKPHandler {
 	 * Redirects to user index page if not properly authenticated.
 	 */
 	function validate() {
+		$this->addCheck(new HandlerValidatorJournal(&$this));
+		$this->addCheck(new HandlerValidatorRoles(&$this, true, null, null, array(ROLE_ID_PROOFREADER)));		
 		parent::validate();
-		$journal = &Request::getJournal();
-		if (!isset($journal) || !Validation::isProofreader($journal->getJournalId())) {
-			Validation::redirectLogin();
-		}
+		return true;
 	}
 
 	/**
@@ -131,94 +130,6 @@ class ProofreaderHandler extends PKPHandler {
 			Request::redirect(null, Request::getRequestedPage());
 		}
 	}
-
-	//
-	// Submission Proofreading
-	//
-
-	function submission($args) {
-		import('pages.proofreader.SubmissionProofreadHandler');
-		SubmissionProofreadHandler::submission($args);
-	}
-
-	function completeProofreader($args) {
-		import('pages.proofreader.SubmissionProofreadHandler');
-		SubmissionProofreadHandler::completeProofreader($args);
-	}
-
-	//
-	// Submission Comments
-	//
-
-	function viewProofreadComments($args) {
-		import('pages.proofreader.SubmissionCommentsHandler');
-		SubmissionCommentsHandler::viewProofreadComments($args);
-	}
-
-	function postProofreadComment() {
-		import('pages.proofreader.SubmissionCommentsHandler');
-		SubmissionCommentsHandler::postProofreadComment();
-	}
-
-	function viewLayoutComments($args) {
-		import('pages.proofreader.SubmissionCommentsHandler');
-		SubmissionCommentsHandler::viewLayoutComments($args);
-	}
-
-	function postLayoutComment() {
-		import('pages.proofreader.SubmissionCommentsHandler');
-		SubmissionCommentsHandler::postLayoutComment();
-	}
-
-	//
-	// Misc.
-	//
-
-	function downloadFile($args) {
-		import('pages.proofreader.SubmissionProofreadHandler');
-		SubmissionProofreadHandler::downloadFile($args);
-	}
-
-	function viewFile($args) {
-		import('pages.proofreader.SubmissionProofreadHandler');
-		SubmissionProofreadHandler::viewFile($args);
-	}
-
-	function proofGalley($args) {
-		import('pages.proofreader.SubmissionProofreadHandler');
-		SubmissionProofreadHandler::proofGalley($args);
-	}
-
-	function proofGalleyTop($args) {
-		import('pages.proofreader.SubmissionProofreadHandler');
-		SubmissionProofreadHandler::proofGalleyTop($args);
-	}
-
-	function proofGalleyFile($args) {
-		import('pages.proofreader.SubmissionProofreadHandler');
-		SubmissionProofreadHandler::proofGalleyFile($args);
-	}	
-
-	function viewMetadata($args) {
-		import('pages.proofreader.SubmissionProofreadHandler');
-		SubmissionProofreadHandler::viewMetadata($args);
-	}
-
-	function editComment($args) {
-		import('pages.proofreader.SubmissionCommentsHandler');
-		SubmissionCommentsHandler::editComment($args);
-	}
-
-	function deleteComment($args) {
-		import('pages.proofreader.SubmissionCommentsHandler');
-		SubmissionCommentsHandler::deleteComment($args);
-	}
-
-	function saveComment($args) {
-		import('pages.proofreader.SubmissionCommentsHandler');
-		SubmissionCommentsHandler::saveComment($args);
-	}
-
 }
 
 ?>

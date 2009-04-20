@@ -8,105 +8,42 @@
  *
  * @class AnnouncementTypeForm
  * @ingroup manager_form
- * @see AnnouncementForm
+ * @see AnnouncementType
  *
  * @brief Form for journal managers to create/edit announcement types.
  */
 
 // $Id$
 
+import('manager.form.PKPAnnouncementTypeForm');
 
-import('form.Form');
-
-class AnnouncementTypeForm extends Form {
-	/** @var typeId int the ID of the announcement type being edited */
-	var $typeId;
-
+class AnnouncementTypeForm extends PKPAnnouncementTypeForm {
 	/**
 	 * Constructor
 	 * @param typeId int leave as default for new announcement type
 	 */
 	function AnnouncementTypeForm($typeId = null) {
-		$this->typeId = isset($typeId) ? (int) $typeId : null;
-
-		parent::Form('manager/announcement/announcementTypeForm.tpl');
-
-		// Type name is provided
-		$this->addCheck(new FormValidatorLocale($this, 'name', 'required', 'manager.announcementTypes.form.typeNameRequired'));
-
-		$this->addCheck(new FormValidatorPost($this));
+		parent::PKPAnnouncementTypeForm($typeId);
 	}
-
-	/**
-	 * Get a list of localized field names for this form
-	 * @return array
-	 */
-	function getLocaleFieldNames() {
-		$announcementTypeDao =& DAORegistry::getDAO('AnnouncementTypeDAO');
-		return $announcementTypeDao->getLocaleFieldNames();
-	}
-
+	
 	/**
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('typeId', $this->typeId);
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.announcements');
 
 		parent::display();
 	}
 
 	/**
-	 * Initialize form data from current announcement type.
+	 * Helper function to assign the AssocType and the AssocId
+	 * @param Announcement the announcement to be modified
 	 */
-	function initData() {
-		if (isset($this->typeId)) {
-			$announcementTypeDao = &DAORegistry::getDAO('AnnouncementTypeDAO');
-			$announcementType = &$announcementTypeDao->getAnnouncementType($this->typeId);
-
-			if ($announcementType != null) {
-				$this->_data = array(
-					'name' => $announcementType->getName(null) // Localized
-				);
-
-			} else {
-				$this->typeId = null;
-			}
-		}
-	}
-
-	/**
-	 * Assign form data to user-submitted data.
-	 */
-	function readInputData() {
-		$this->readUserVars(array('name'));
-	}
-
-	/**
-	 * Save announcement type. 
-	 */
-	function execute() {
-		$announcementTypeDao = &DAORegistry::getDAO('AnnouncementTypeDAO');
-		$journal = &Request::getJournal();
-
-		if (isset($this->typeId)) {
-			$announcementType = &$announcementTypeDao->getAnnouncementType($this->typeId);
-		}
-
-		if (!isset($announcementType)) {
-			$announcementType = new AnnouncementType();
-		}
-
-		$announcementType->setJournalId($journal->getJournalId());
-		$announcementType->setName($this->getData('name'), null); // Localized
-
-		// Update or insert announcement type
-		if ($announcementType->getTypeId() != null) {
-			$announcementTypeDao->updateAnnouncementType($announcementType);
-		} else {
-			$announcementTypeDao->insertAnnouncementType($announcementType);
-		}
+	function _setAnnouncementTypeAssocId(&$announcementType) {
+		$journal =& Request::getJournal();
+		$announcementType->setAssocType(ASSOC_TYPE_JOURNAL);
+		$announcementType->setAssocId($journal->getJournalId());
 	}
 }
 

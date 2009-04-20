@@ -20,11 +20,11 @@ class SectionHandler extends ManagerHandler {
 	 * Display a list of the sections within the current journal.
 	 */
 	function sections() {
-		parent::validate();
-		SectionHandler::setupTemplate();
+		$this->validate();
+		$this->setupTemplate();
 
 		$journal = &Request::getJournal();
-		$rangeInfo =& PKPHandler::getRangeInfo('sections');
+		$rangeInfo =& Handler::getRangeInfo('sections');
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$sections = &$sectionDao->getJournalSections($journal->getJournalId(), $rangeInfo);
 
@@ -39,7 +39,7 @@ class SectionHandler extends ManagerHandler {
 	 * Display form to create a new section.
 	 */
 	function createSection() {
-		SectionHandler::editSection();
+		$this->editSection();
 	}
 
 	/**
@@ -47,8 +47,8 @@ class SectionHandler extends ManagerHandler {
 	 * @param $args array optional, if set the first parameter is the ID of the section to edit
 	 */
 	function editSection($args = array()) {
-		parent::validate();
-		SectionHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		import('manager.form.SectionForm');
 
@@ -66,7 +66,7 @@ class SectionHandler extends ManagerHandler {
 	 * Save changes to a section.
 	 */
 	function updateSection($args) {
-		parent::validate();
+		$this->validate();
 
 		import('manager.form.SectionForm');
 		// FIXME: Need construction by reference or validation always fails on PHP 4.x
@@ -92,7 +92,7 @@ class SectionHandler extends ManagerHandler {
 			Request::redirect(null, null, 'sections');
 
 		} else {
-			SectionHandler::setupTemplate(true);
+			$this->setupTemplate(true);
 			$sectionForm->display();
 		}
 	}
@@ -102,7 +102,7 @@ class SectionHandler extends ManagerHandler {
 	 * @param $args array first parameter is the ID of the section to delete
 	 */
 	function deleteSection($args) {
-		parent::validate();
+		$this->validate();
 
 		if (isset($args) && !empty($args)) {
 			$journal = &Request::getJournal();
@@ -118,7 +118,7 @@ class SectionHandler extends ManagerHandler {
 	 * Change the sequence of a section.
 	 */
 	function moveSection() {
-		parent::validate();
+		$this->validate();
 
 		$journal = &Request::getJournal();
 

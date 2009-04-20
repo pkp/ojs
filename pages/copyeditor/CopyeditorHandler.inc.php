@@ -16,16 +16,16 @@
 
 
 import ('submission.copyeditor.CopyeditorAction');
-import('core.PKPHandler');
+import('handler.Handler');
 
-class CopyeditorHandler extends PKPHandler {
+class CopyeditorHandler extends Handler{
 
 	/**
 	 * Display copyeditor index page.
 	 */
 	function index($args) {
-		CopyeditorHandler::validate();
-		CopyeditorHandler::setupTemplate();
+		$this->validate();
+		$this->setupTemplate();
 
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
@@ -42,7 +42,7 @@ class CopyeditorHandler extends PKPHandler {
 		$toDate = Request::getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
 		if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
 
-		$rangeInfo = PKPHandler::getRangeInfo('submissions');
+		$rangeInfo = Handler::getRangeInfo('submissions');
 
 		$page = isset($args[0]) ? $args[0] : '';
 		switch($page) {
@@ -96,11 +96,10 @@ class CopyeditorHandler extends PKPHandler {
 	 * Redirects to user index page if not properly authenticated.
 	 */
 	function validate() {
+		$this->addCheck(new HandlerValidatorJournal(&$this));
+		$this->addCheck(new HandlerValidatorRoles(&$this, true, null, null, array(ROLE_ID_COPYEDITOR)));		
 		parent::validate();
-		$journal = &Request::getJournal();
-		if (!isset($journal) || !Validation::isCopyeditor($journal->getJournalId())) {
-			Validation::redirectLogin();
-		}
+		return true;
 	}
 
 	/**
@@ -132,126 +131,6 @@ class CopyeditorHandler extends PKPHandler {
 			Request::redirect(null, Request::getRequestedPage());
 		}
 	}
-
-	//
-	// Assignment Tracking
-	//
-
-	function submission($args) {
-		import('pages.copyeditor.SubmissionCopyeditHandler');
-		SubmissionCopyeditHandler::submission($args);
-	}
-
-	function completeCopyedit($args) {
-		import('pages.copyeditor.SubmissionCopyeditHandler');
-		SubmissionCopyeditHandler::completeCopyedit($args);
-	}
-
-	function completeFinalCopyedit($args) {
-		import('pages.copyeditor.SubmissionCopyeditHandler');
-		SubmissionCopyeditHandler::completeFinalCopyedit($args);
-	}
-
-	function uploadCopyeditVersion() {
-		import('pages.copyeditor.SubmissionCopyeditHandler');
-		SubmissionCopyeditHandler::uploadCopyeditVersion();
-	}
-
-	//
-	// Misc.
-	//
-
-	function downloadFile($args) {
-		import('pages.copyeditor.SubmissionCopyeditHandler');
-		SubmissionCopyeditHandler::downloadFile($args);
-	}
-
-	function viewFile($args) {
-		import('pages.copyeditor.SubmissionCopyeditHandler');
-		SubmissionCopyeditHandler::viewFile($args);
-	}
-
-	//
-	// Submission Comments
-	//
-
-
-	function viewLayoutComments($args) {
-		import('pages.copyeditor.SubmissionCommentsHandler');
-		SubmissionCommentsHandler::viewLayoutComments($args);
-	}
-
-	function postLayoutComment() {
-		import('pages.copyeditor.SubmissionCommentsHandler');
-		SubmissionCommentsHandler::postLayoutComment();
-	}
-
-	function viewCopyeditComments($args) {
-		import('pages.copyeditor.SubmissionCommentsHandler');
-		SubmissionCommentsHandler::viewCopyeditComments($args);
-	}
-
-	function postCopyeditComment() {
-		import('pages.copyeditor.SubmissionCommentsHandler');
-		SubmissionCommentsHandler::postCopyeditComment();
-	}
-
-	function editComment($args) {
-		import('pages.copyeditor.SubmissionCommentsHandler');
-		SubmissionCommentsHandler::editComment($args);
-	}
-
-	function saveComment() {
-		import('pages.copyeditor.SubmissionCommentsHandler');
-		SubmissionCommentsHandler::saveComment();
-	}
-
-	function deleteComment($args) {
-		import('pages.copyeditor.SubmissionCommentsHandler');
-		SubmissionCommentsHandler::deleteComment($args);
-	}
-
-	//
-	// Proofreading Actions
-	//
-	function authorProofreadingComplete($args) {
-		import('pages.copyeditor.SubmissionCopyeditHandler');
-		SubmissionCopyeditHandler::authorProofreadingComplete($args);
-	}
-
-	function proofGalley($args) {
-		import('pages.copyeditor.SubmissionCopyeditHandler');
-		SubmissionCopyeditHandler::proofGalley($args);
-	}
-
-	function proofGalleyTop($args) {
-		import('pages.copyeditor.SubmissionCopyeditHandler');
-		SubmissionCopyeditHandler::proofGalleyTop($args);
-	}
-
-	function proofGalleyFile($args) {
-		import('pages.copyeditor.SubmissionCopyeditHandler');
-		SubmissionCopyeditHandler::proofGalleyFile($args);
-	}	
-
-	//
-	// Metadata Actions
-	//
-	function viewMetadata($args) {
-		import('pages.copyeditor.SubmissionCopyeditHandler');
-		SubmissionCopyeditHandler::viewMetadata($args);
-	}
-
-	function saveMetadata($args) {
-		import('pages.copyeditor.SubmissionCopyeditHandler');
-		SubmissionCopyeditHandler::saveMetadata($args);
-	}
-
-	function removeArticleCoverPage($args) {
-		import('pages.copyeditor.SubmissionCopyeditHandler');
-		SubmissionCopyeditHandler::removeCoverPage($args);
-	}
-
 }
 
 ?>

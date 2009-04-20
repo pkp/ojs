@@ -15,9 +15,9 @@
 // $Id$
 
 
-import('core.PKPHandler');
+import('handler.Handler');
 
-class CounterHandler extends PKPHandler {
+class CounterHandler extends Handler{
 	/**
 	 * Display the main log analyzer page.
 	 */

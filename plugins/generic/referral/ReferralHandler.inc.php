@@ -15,9 +15,9 @@
 // $Id$
 
 
-import('core.PKPHandler');
+import('handler.Handler');
 
-class ReferralHandler extends PKPHandler {
+class ReferralHandler extends Handler{
 	function setupTemplate() {
 		parent::setupTemplate();
 		$templateMgr =& TemplateManager::getManager();

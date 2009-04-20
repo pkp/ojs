@@ -18,9 +18,9 @@
 
 import('rt.ojs.RTDAO');
 import('rt.ojs.JournalRT');
-import('core.PKPHandler');
+import('handler.Handler');
 
-class ArticleHandler extends PKPHandler {
+class ArticleHandler extends Handler{
 
 	/**
 	 * View Article.

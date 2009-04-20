@@ -34,8 +34,8 @@ class EditorHandler extends SectionEditorHandler {
 	 */
 
 	function index($args) {
-		EditorHandler::validate();
-		EditorHandler::setupTemplate(EDITOR_SECTION_HOME);
+		$this->validate();
+		$this->setupTemplate(EDITOR_SECTION_HOME);
 
 		$templateMgr = &TemplateManager::getManager();
 		$journal = &Request::getJournal();
@@ -47,8 +47,8 @@ class EditorHandler extends SectionEditorHandler {
 
 		$sections = &$sectionDao->getSectionTitles($journal->getJournalId());
 		$templateMgr->assign('sectionOptions', array(0 => Locale::Translate('editor.allSections')) + $sections);
-		$templateMgr->assign('fieldOptions', EditorHandler::getSearchFieldOptions());
-		$templateMgr->assign('dateFieldOptions', EditorHandler::getDateFieldOptions());
+		$templateMgr->assign('fieldOptions', $this->getSearchFieldOptions());
+		$templateMgr->assign('dateFieldOptions', $this->getDateFieldOptions());
 
 		// Bring in the print_issue_id function (FIXME?)
 		import('issue.IssueAction');
@@ -57,7 +57,7 @@ class EditorHandler extends SectionEditorHandler {
 
 		// If a search was performed, get the necessary info.
 		if (array_shift($args) == 'search') {
-			$rangeInfo = PKPHandler::getRangeInfo('submissions');
+			$rangeInfo = Handler::getRangeInfo('submissions');
 
 			// Get the user's search conditions, if any
 			$searchField = Request::getUserVar('searchField');
@@ -92,7 +92,7 @@ class EditorHandler extends SectionEditorHandler {
 			$templateMgr->assign('section', Request::getUserVar('section'));
 
 			// Set search parameters
-			foreach (EditorHandler::getSearchFormDuplicateParameters() as $param)
+			foreach ($this->getSearchFormDuplicateParameters() as $param)
 				$templateMgr->assign($param, Request::getUserVar($param));
 
 			$templateMgr->assign('dateFrom', $fromDate);
@@ -110,8 +110,8 @@ class EditorHandler extends SectionEditorHandler {
 	 * Display editor submission queue pages.
 	 */
 	function submissions($args) {
-		EditorHandler::validate();
-		EditorHandler::setupTemplate(EDITOR_SECTION_SUBMISSIONS);
+		$this->validate();
+		$this->setupTemplate(EDITOR_SECTION_SUBMISSIONS);
 
 		$journal = &Request::getJournal();
 		$journalId = $journal->getJournalId();
@@ -143,7 +143,7 @@ class EditorHandler extends SectionEditorHandler {
 		$toDate = Request::getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
 		if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
 
-		$rangeInfo = PKPHandler::getRangeInfo('submissions');
+		$rangeInfo = Handler::getRangeInfo('submissions');
 
 		switch($page) {
 			case 'submissionsUnassigned':
@@ -215,13 +215,13 @@ class EditorHandler extends SectionEditorHandler {
 		$templateMgr->assign('filterSection', $filterSection);
 
 		// Set search parameters
-		foreach (EditorHandler::getSearchFormDuplicateParameters() as $param)
+		foreach ($this->getSearchFormDuplicateParameters() as $param)
 			$templateMgr->assign($param, Request::getUserVar($param));
 
 		$templateMgr->assign('dateFrom', $fromDate);
 		$templateMgr->assign('dateTo', $toDate);
-		$templateMgr->assign('fieldOptions', EditorHandler::getSearchFieldOptions());
-		$templateMgr->assign('dateFieldOptions', EditorHandler::getDateFieldOptions());
+		$templateMgr->assign('fieldOptions', $this->getSearchFieldOptions());
+		$templateMgr->assign('dateFieldOptions', $this->getDateFieldOptions());
 
 		import('issue.IssueAction');
 		$issueAction = new IssueAction();
@@ -232,7 +232,7 @@ class EditorHandler extends SectionEditorHandler {
 	}
 
 	function updateSubmissionArchive() {
-		EditorHandler::submissionArchive();
+		$this->submissionArchive();
 	}
 
 	/**
@@ -283,7 +283,7 @@ class EditorHandler extends SectionEditorHandler {
 	 * Set the canEdit / canReview flags for this submission's edit assignments.
 	 */
 	function setEditorFlags($args) {
-		EditorHandler::validate();
+		$this->validate();
 
 		$journal = &Request::getJournal();
 		$articleId = (int) Request::getUserVar('articleId');
@@ -315,7 +315,7 @@ class EditorHandler extends SectionEditorHandler {
 	 * Delete the specified edit assignment.
 	 */
 	function deleteEditAssignment($args) {
-		EditorHandler::validate();
+		$this->validate();
 
 		$journal = &Request::getJournal();
 		$editId = (int) (isset($args[0])?$args[0]:0);
@@ -340,7 +340,7 @@ class EditorHandler extends SectionEditorHandler {
 	 * Assigns the selected editor to the submission.
 	 */
 	function assignEditor($args) {
-		EditorHandler::validate();
+		$this->validate();
 
 		$journal = &Request::getJournal();
 		$articleId = Request::getUserVar('articleId');
@@ -356,7 +356,7 @@ class EditorHandler extends SectionEditorHandler {
 			// has been done, send the email and store the editor
 			// selection.
 
-			EditorHandler::setupTemplate(EDITOR_SECTION_SUBMISSIONS, $articleId, 'summary');
+			$this->setupTemplate(EDITOR_SECTION_SUBMISSIONS, $articleId, 'summary');
 
 			// FIXME: Prompt for due date.
 			if (EditorAction::assignEditor($articleId, $editorId, $isEditor, Request::getUserVar('send'))) {
@@ -364,7 +364,7 @@ class EditorHandler extends SectionEditorHandler {
 			}
 		} else {
 			// Allow the user to choose a section editor or editor.
-			EditorHandler::setupTemplate(EDITOR_SECTION_SUBMISSIONS, $articleId, 'summary');
+			$this->setupTemplate(EDITOR_SECTION_SUBMISSIONS, $articleId, 'summary');
 
 			$searchType = null;
 			$searchMatch = null;
@@ -380,7 +380,7 @@ class EditorHandler extends SectionEditorHandler {
 				$search = $searchInitial;
 			}
 
-			$rangeInfo =& PKPHandler::getRangeInfo('editors');
+			$rangeInfo =& Handler::getRangeInfo('editors');
 			$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
 
 			if (isset($args[0]) && $args[0] === 'editor') {
@@ -428,7 +428,7 @@ class EditorHandler extends SectionEditorHandler {
 	 */
 	function deleteSubmission($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		EditorHandler::validate($articleId);
+		$this->validate($articleId);
 		parent::setupTemplate(true);
 
 		$journal = &Request::getJournal();
@@ -456,10 +456,10 @@ class EditorHandler extends SectionEditorHandler {
 	 * Redirects to user index page if not properly authenticated.
 	 */
 	function validate() {
-		$journal = &Request::getJournal();
-		if (!isset($journal) || !Validation::isEditor($journal->getJournalId())) {
-			Validation::redirectLogin();
-		}
+		$this->addCheck(new HandlerValidatorJournal(&$this));
+		$this->addCheck(new HandlerValidatorRoles(&$this, true, null, null, array(ROLE_ID_EDITOR)));
+		
+		return parent::validate();
 	}
 
 	/**
@@ -487,107 +487,6 @@ class EditorHandler extends SectionEditorHandler {
 		}
 		$templateMgr->assign('pageHierarchy', $pageHierarchy);
 	}
-
-	//
-	// Issue
-	//
-	function futureIssues() {
-		import('pages.editor.IssueManagementHandler');
-		IssueManagementHandler::futureIssues();
-	}
-
-	function backIssues() {
-		import('pages.editor.IssueManagementHandler');
-		IssueManagementHandler::backIssues();
-	}
-
-	function removeIssue($args) {
-		import('pages.editor.IssueManagementHandler');
-		IssueManagementHandler::removeIssue($args);
-		Request::redirect(null, null, 'issueToc');
-	}
-
-	function createIssue() {
-		import('pages.editor.IssueManagementHandler');
-		IssueManagementHandler::createIssue();
-	}	
-
-	function saveIssue() {
-		import('pages.editor.IssueManagementHandler');
-		IssueManagementHandler::saveIssue();
-	}
-
-	function issueData($args) {
-		import('pages.editor.IssueManagementHandler');
-		IssueManagementHandler::issueData($args);
-	}	
-
-	function editIssue($args) {
-		import('pages.editor.IssueManagementHandler');
-		IssueManagementHandler::editIssue($args);
-	}	
-
-	function removeIssueCoverPage($args) {
-		import('pages.editor.IssueManagementHandler');
-		IssueManagementHandler::removeCoverPage($args);
-	}
-
-	function removeStyleFile($args) {
-		import('pages.editor.IssueManagementHandler');
-		IssueManagementHandler::removeStyleFile($args);
-	}	
-
-	function issueToc($args) {
-		import('pages.editor.IssueManagementHandler');
-		IssueManagementHandler::issueToc($args);
-	}
-
-	function updateIssueToc($args) {
-		import('pages.editor.IssueManagementHandler');
-		IssueManagementHandler::updateIssueToc($args);
-	}
-
-	function setCurrentIssue($args) {
-		import('pages.editor.IssueManagementHandler');
-		IssueManagementHandler::setCurrentIssue($args);
-	}
-
-	function moveIssue($args) {
-		import('pages.editor.IssueManagementHandler');
-		IssueManagementHandler::moveIssue($args);
-	}
-
-	function resetIssueOrder($args) {
-		import('pages.editor.IssueManagementHandler');
-		IssueManagementHandler::resetIssueOrder($args);
-	}
-
-	function moveSectionToc($args) {
-		import('pages.editor.IssueManagementHandler');
-		IssueManagementHandler::moveSectionToc($args);
-	}
-
-	function resetSectionOrder($args) {
-		import('pages.editor.IssueManagementHandler');
-		IssueManagementHandler::resetSectionOrder($args);
-	}
-
-
-	function moveArticleToc($args) {
-		import('pages.editor.IssueManagementHandler');
-		IssueManagementHandler::moveArticleToc($args);
-	}	
-
-	function publishIssue($args) {
-		import('pages.editor.IssueManagementHandler');
-		IssueManagementHandler::publishIssue($args);
-	}
-
-	function notifyUsers($args) {
-		import('pages.editor.IssueManagementHandler');
-		IssueManagementHandler::notifyUsers($args);
-	}
-
 }
 
 ?>

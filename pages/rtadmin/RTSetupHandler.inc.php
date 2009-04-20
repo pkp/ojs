@@ -20,14 +20,13 @@ import('rt.ojs.JournalRTAdmin');
 class RTSetupHandler extends RTAdminHandler {
 
 	function settings() {
-		RTAdminHandler::validate();
+		$this->validate();
 
 		$journal = Request::getJournal();
 
 		if ($journal) {
-			RTAdminHandler::setupTemplate(true);
+			$this->setupTemplate(true);
 			$templateMgr = &TemplateManager::getManager();
-			$templateMgr->assign_by_ref('journals', $journals);
 
 			$rtDao = &DAORegistry::getDAO('RTDAO');
 			$rt = $rtDao->getJournalRTByJournal($journal);
@@ -71,7 +70,7 @@ class RTSetupHandler extends RTAdminHandler {
 	}
 
 	function saveSettings() {
-		RTAdminHandler::validate();
+		$this->validate();
 
 		// Bring in the comments constants.
 		$commentDao = &DAORegistry::getDao('CommentDAO');

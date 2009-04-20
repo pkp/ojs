@@ -19,8 +19,8 @@ define('IMPORTEXPORT_PLUGIN_CATEGORY', 'importexport');
 
 class ImportExportHandler extends ManagerHandler {
 	function importexport($args) {
-		parent::validate();
-		parent::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		PluginRegistry::loadCategory(IMPORTEXPORT_PLUGIN_CATEGORY);
 		$templateMgr = &TemplateManager::getManager();

@@ -15,83 +15,33 @@
 // $Id$
 
 
-import('core.PKPHandler');
+import('announcement.PKPAnnouncementHandler');
 
-class AnnouncementHandler extends PKPHandler {
-
-	/**
-	 * Display announcement index page.
-	 */
-	function index() {
-		parent::validate();
-		AnnouncementHandler::setupTemplate();
-
-		$journal = &Request::getJournal();
-		$announcementsEnabled = $journal->getSetting('enableAnnouncements');
-
-		if ($announcementsEnabled) {
-			$announcementDao = &DAORegistry::getDAO('AnnouncementDAO');
-			$rangeInfo =& PKPHandler::getRangeInfo('announcements');
-			$announcements = &$announcementDao->getAnnouncementsNotExpiredByJournalId($journal->getJournalId(), $rangeInfo);
-			$announcementsIntroduction = $journal->getLocalizedSetting('announcementsIntroduction');
-
-			$templateMgr = &TemplateManager::getManager();
-			$templateMgr->assign('announcements', $announcements);
-			$templateMgr->assign('announcementsIntroduction', $announcementsIntroduction);
-			$templateMgr->display('announcement/index.tpl');
-		} else {
-			Request::redirect(null, 'index');
-		}
-
+class AnnouncementHandler extends PKPAnnouncementHandler {
+	function _getAnnouncementsEnabled() {
+		$journal =& Request::getJournal();
+		return $journal->getSetting('enableAnnouncements');
 	}
 
-	/**
-	 * View announcement details.
-	 * @param $args array optional, first parameter is the ID of the announcement to display 
-	 */
-	function view($args = array()) {
-		parent::validate();
-		AnnouncementHandler::setupTemplate();
-
-		$journal = &Request::getJournal();
-		$announcementsEnabled = $journal->getSetting('enableAnnouncements');
-		$announcementId = !isset($args) || empty($args) ? null : (int) $args[0];
-		$announcementDao = &DAORegistry::getDAO('AnnouncementDAO');
-
-		if ($announcementsEnabled && $announcementId != null && $announcementDao->getAnnouncementJournalId($announcementId) == $journal->getJournalId()) {
-			$announcement = &$announcementDao->getAnnouncement($announcementId);
-
-			if ($announcement->getDateExpire() == null || strtotime($announcement->getDateExpire()) > time()) {
-				$templateMgr = &TemplateManager::getManager();
-				$templateMgr->assign('announcement', $announcement);
-				if ($announcement->getTypeId() == null) {
-					$templateMgr->assign('announcementTitle', $announcement->getAnnouncementTitle());
-				} else {
-					$templateMgr->assign('announcementTitle', $announcement->getAnnouncementTypeName() . ": " . $announcement->getAnnouncementTitle());
-				}
-				$templateMgr->append('pageHierarchy', array(Request::url(null, 'announcement'), 'announcement.announcements'));
-				$templateMgr->display('announcement/view.tpl');
-			} else {
-				Request::redirect(null, null, 'announcement');
-			}
-		} else {
-				Request::redirect(null, null, 'announcement');
-		}
-	}
-
-	/**
-	 * Setup common template variables.
-	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
-	 */
-	function setupTemplate($subclass = false) {
-		parent::setupTemplate();
-		$templateMgr = &TemplateManager::getManager();
+	function &_getAnnouncements($rangeInfo = null) {
 		$journal =& Request::getJournal();
 
-		if (!$journal || !$journal->getSetting('restrictSiteAccess')) {
-			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
-		}
-		$templateMgr->assign('pageHierachy', array(array(Request::url(null, 'announcements'), 'announcement.announcements')));
+		$announcementDao =& DAORegistry::getDAO('AnnouncementDAO');
+		$announcements =& $announcementDao->getAnnouncementsNotExpiredByAssocId(ASSOC_TYPE_JOURNAL, $journal->getJournalId(), $rangeInfo);
+		$announcementsIntroduction = $journal->getLocalizedSetting('announcementsIntroduction');
+
+		return $announcements;
+	}
+	
+	function _getAnnouncementsIntroduction() {
+		$journal =& Request::getJournal();
+		return $journal->getLocalizedSetting('announcementsIntroduction');
+	}
+		
+	function _announcementIsValid($announcementId) {
+		$journal =& Request::getJournal();
+		$announcementDao =& DAORegistry::getDAO('AnnouncementDAO');		
+		return ($announcementId != null && $announcementDao->getAnnouncementAssocId($announcementId) == $journal->getJournalId());
 	}
 }
 

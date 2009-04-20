@@ -64,7 +64,7 @@ class ReferralPlugin extends GenericPlugin {
 			case 'common/footer.tpl':
 				$referralDao =& DAORegistry::getDAO('ReferralDAO');
 				$user =& Request::getUser();
-				$rangeInfo =& PKPHandler::getRangeInfo('referrals');
+				$rangeInfo =& Handler::getRangeInfo('referrals');
 				$referralFilter = (int) Request::getUserVar('referralFilter');
 				if ($referralFilter == 0) $referralFilter = null;
 

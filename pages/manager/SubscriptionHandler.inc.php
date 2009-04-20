@@ -21,11 +21,11 @@ class SubscriptionHandler extends ManagerHandler {
 	 * Display a list of subscriptions for the current journal.
 	 */
 	function subscriptions() {
-		parent::validate();
-		SubscriptionHandler::setupTemplate();
+		$this->validate();
+		$this->setupTemplate();
 
 		$journal = &Request::getJournal();
-		$rangeInfo =& PKPHandler::getRangeInfo('subscriptions');
+		$rangeInfo =& Handler::getRangeInfo('subscriptions');
 		$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
 
 		// Get the user's search conditions, if any
@@ -46,13 +46,13 @@ class SubscriptionHandler extends ManagerHandler {
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.subscriptions');
 
 		// Set search parameters
-		foreach (SubscriptionHandler::getSearchFormDuplicateParameters() as $param)
+		foreach ($this->getSearchFormDuplicateParameters() as $param)
 			$templateMgr->assign($param, Request::getUserVar($param));
 
 		$templateMgr->assign('dateFrom', $fromDate);
 		$templateMgr->assign('dateTo', $toDate);
-		$templateMgr->assign('fieldOptions', SubscriptionHandler::getSearchFieldOptions());
-		$templateMgr->assign('dateFieldOptions', SubscriptionHandler::getDateFieldOptions());
+		$templateMgr->assign('fieldOptions', $this->getSearchFieldOptions());
+		$templateMgr->assign('dateFieldOptions', $this->getDateFieldOptions());
 
 		$templateMgr->display('subscription/subscriptions.tpl');
 	}
@@ -101,7 +101,7 @@ class SubscriptionHandler extends ManagerHandler {
 	 * @param $args array first parameter is the ID of the subscription to delete
 	 */
 	function deleteSubscription($args) {
-		parent::validate();
+		$this->validate();
 
 		if (isset($args) && !empty($args)) {
 			$journal = &Request::getJournal();
@@ -123,8 +123,8 @@ class SubscriptionHandler extends ManagerHandler {
 	 * @param $args array optional, first parameter is the ID of the subscription to edit
 	 */
 	function editSubscription($args = array()) {
-		parent::validate();
-		SubscriptionHandler::setupTemplate();
+		$this->validate();
+		$this->setupTemplate();
 
 		$journal = &Request::getJournal();
 		$subscriptionId = !isset($args) || empty($args) ? null : (int) $args[0];
@@ -158,16 +158,16 @@ class SubscriptionHandler extends ManagerHandler {
 	 * Display form to create new subscription.
 	 */
 	function createSubscription() {
-		SubscriptionHandler::editSubscription();
+		$this->editSubscription();
 	}
 
 	/**
 	 * Display a list of users from which to choose a subscriber.
 	 */
 	function selectSubscriber() {
-		parent::validate();
+		$this->validate();
 		$templateMgr = &TemplateManager::getManager();
-		SubscriptionHandler::setupTemplate();
+		$this->setupTemplate();
 		$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'subscriptions'), 'manager.subscriptions'));
 
 		$userDao = &DAORegistry::getDAO('UserDAO');
@@ -186,7 +186,7 @@ class SubscriptionHandler extends ManagerHandler {
 			$search = $searchInitial;
 		}
 
-		$rangeInfo = PKPHandler::getRangeInfo('users');
+		$rangeInfo = Handler::getRangeInfo('users');
 
 		$users = &$userDao->getUsersByField($searchType, $searchMatch, $search, true, $rangeInfo);
 
@@ -214,7 +214,7 @@ class SubscriptionHandler extends ManagerHandler {
 	 * Save changes to a subscription.
 	 */
 	function updateSubscription() {
-		parent::validate();
+		$this->validate();
 
 		import('subscription.form.SubscriptionForm');
 
@@ -237,7 +237,7 @@ class SubscriptionHandler extends ManagerHandler {
 				}
 
 			} else {
-				SubscriptionHandler::setupTemplate();
+				$this->setupTemplate();
 
 				$templateMgr = &TemplateManager::getManager();
 				$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'subscriptions'), 'manager.subscriptions'));
@@ -260,11 +260,11 @@ class SubscriptionHandler extends ManagerHandler {
 	 * Display a list of subscription types for the current journal.
 	 */
 	function subscriptionTypes() {
-		parent::validate();
-		SubscriptionHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$journal = &Request::getJournal();
-		$rangeInfo =& PKPHandler::getRangeInfo('subscriptionTypes');
+		$rangeInfo =& Handler::getRangeInfo('subscriptionTypes');
 		$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionTypes = &$subscriptionTypeDao->getSubscriptionTypesByJournalId($journal->getJournalId(), $rangeInfo);
 
@@ -279,7 +279,7 @@ class SubscriptionHandler extends ManagerHandler {
 	 * Rearrange the order of subscription types.
 	 */
 	function moveSubscriptionType($args) {
-		parent::validate();
+		$this->validate();
 
 		$subscriptionTypeId = isset($args[0])?$args[0]:0;
 		$journal = &Request::getJournal();
@@ -302,7 +302,7 @@ class SubscriptionHandler extends ManagerHandler {
 	 * @param $args array first parameter is the ID of the subscription type to delete
 	 */
 	function deleteSubscriptionType($args) {
-		parent::validate();
+		$this->validate();
 
 		if (isset($args) && !empty($args)) {
 			$journal = &Request::getJournal();
@@ -324,8 +324,8 @@ class SubscriptionHandler extends ManagerHandler {
 	 * @param $args array optional, first parameter is the ID of the subscription type to edit
 	 */
 	function editSubscriptionType($args = array()) {
-		parent::validate();
-		SubscriptionHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		$journal = &Request::getJournal();
 		$subscriptionTypeId = !isset($args) || empty($args) ? null : (int) $args[0];
@@ -363,14 +363,14 @@ class SubscriptionHandler extends ManagerHandler {
 	 * Display form to create new subscription type.
 	 */
 	function createSubscriptionType() {
-		SubscriptionHandler::editSubscriptionType();
+		$this->editSubscriptionType();
 	}
 
 	/**
 	 * Save changes to a subscription type.
 	 */
 	function updateSubscriptionType() {
-		parent::validate();
+		$this->validate();
 
 		import('subscription.form.SubscriptionTypeForm');
 
@@ -388,7 +388,7 @@ class SubscriptionHandler extends ManagerHandler {
 				$subscriptionTypeForm->execute();
 
 				if (Request::getUserVar('createAnother')) {
-					SubscriptionHandler::setupTemplate(true);
+					$this->setupTemplate(true);
 
 					$templateMgr = &TemplateManager::getManager();
 					$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'subscriptionTypes'), 'manager.subscriptionTypes'));
@@ -405,7 +405,7 @@ class SubscriptionHandler extends ManagerHandler {
 				}
 
 			} else {
-				SubscriptionHandler::setupTemplate(true);
+				$this->setupTemplate(true);
 
 				$templateMgr = &TemplateManager::getManager();
 				$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'subscriptionTypes'), 'manager.subscriptionTypes'));
@@ -428,8 +428,8 @@ class SubscriptionHandler extends ManagerHandler {
 	 * Display subscription policies for the current journal.
 	 */
 	function subscriptionPolicies() {
-		parent::validate();
-		SubscriptionHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		import('subscription.form.SubscriptionPolicyForm');
 
@@ -454,7 +454,7 @@ class SubscriptionHandler extends ManagerHandler {
 	 * Save subscription policies for the current journal.
 	 */
 	function saveSubscriptionPolicies($args = array()) {
-		parent::validate();
+		$this->validate();
 
 		import('subscription.form.SubscriptionPolicyForm');
 
@@ -464,7 +464,7 @@ class SubscriptionHandler extends ManagerHandler {
 
 		if ($subscriptionPolicyForm->validate()) {
 			$subscriptionPolicyForm->execute();
-			SubscriptionHandler::setupTemplate(true);
+			$this->setupTemplate(true);
 
 			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign('helpTopicId', 'journal.managementPages.subscriptions');

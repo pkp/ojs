@@ -18,14 +18,14 @@
 ini_set('display_errors', E_ALL); // FIXME until I improve error handling
 
 require_once('TranslatorAction.inc.php');
-import('core.PKPHandler');
+import('handler.Handler');
 
-class TranslatorHandler extends PKPHandler {
+class TranslatorHandler extends Handler{
 	function index() {
 		list($plugin) = TranslatorHandler::validate();
 		TranslatorHandler::setupTemplate(false);
 
-		$rangeInfo = PKPHandler::getRangeInfo('locales');
+		$rangeInfo = Handler::getRangeInfo('locales');
 
 		$templateMgr =& TemplateManager::getManager();
 		import('core.ArrayItemIterator');
@@ -58,9 +58,9 @@ class TranslatorHandler extends PKPHandler {
 
 		$templateMgr =& TemplateManager::getManager();
 
-		$localeFilesRangeInfo = PKPHandler::getRangeInfo('localeFiles');
-		$miscFilesRangeInfo = PKPHandler::getRangeInfo('miscFiles');
-		$emailsRangeInfo = PKPHandler::getRangeInfo('emails');
+		$localeFilesRangeInfo = Handler::getRangeInfo('localeFiles');
+		$miscFilesRangeInfo = Handler::getRangeInfo('miscFiles');
+		$emailsRangeInfo = Handler::getRangeInfo('emails');
 
 		import('core.ArrayItemIterator');
 		$templateMgr->assign('localeFiles', new ArrayItemIterator($localeFiles, $localeFilesRangeInfo->getPage(), $localeFilesRangeInfo->getCount()));
@@ -221,7 +221,7 @@ class TranslatorHandler extends PKPHandler {
 
 
 		import('file.EditableLocaleFile');
-		$localeContentsRangeInfo = PKPHandler::getRangeInfo('localeContents');
+		$localeContentsRangeInfo = Handler::getRangeInfo('localeContents');
 		$localeContents = EditableLocaleFile::load($filename);
 
 		// Handle a search, if one was executed.

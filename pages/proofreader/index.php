@@ -17,9 +17,40 @@
 
 // $Id$
 
-
-define('HANDLER_CLASS', 'ProofreaderHandler');
-
-import('pages.proofreader.ProofreaderHandler');
+switch ($op) {
+	//
+	// Submission Proofreading
+	//
+	case 'submission':
+	case 'completeProofreader':
+	//
+	// Misc.
+	//
+	case 'downloadFile':
+	case 'viewFile':
+	case 'proofGalley':
+	case 'proofGalleyTop':
+	case 'proofGalleyFile':
+	case 'viewMetadata':
+		define('HANDLER_CLASS', 'SubmissionProofreadHandler');
+		import('pages.proofreader.SubmissionProofreadHandler');
+		break;
+	//
+	// Submission Comments
+	//
+	case 'viewProofreadComments':
+	case 'postProofreadComment':
+	case 'viewLayoutComments':
+	case 'postLayoutComment':
+	case 'editComment':
+	case 'deleteComment':
+	case 'saveComment':
+		define('HANDLER_CLASS', 'SubmissionCommentsHandler');
+		import('pages.proofreader.SubmissionCommentsHandler');
+		break;
+	default:	
+		define('HANDLER_CLASS', 'ProofreaderHandler');
+		import('pages.proofreader.ProofreaderHandler');
+}
 
 ?>

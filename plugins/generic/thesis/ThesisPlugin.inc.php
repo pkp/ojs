@@ -365,7 +365,7 @@ class ThesisPlugin extends GenericPlugin {
 						$searchMatch = Request::getUserVar('searchMatch');
 					}			
 
-					$rangeInfo =& PKPHandler::getRangeInfo('theses');
+					$rangeInfo =& Handler::getRangeInfo('theses');
 					$thesisDao = &DAORegistry::getDAO('ThesisDAO');
 					$theses = &$thesisDao->getThesesByJournalId($journal->getJournalId(), $searchField, $search, $searchMatch, $dateFrom, $dateTo, null, $rangeInfo);
 

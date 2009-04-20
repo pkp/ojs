@@ -17,9 +17,9 @@
 
 class EmailHandler extends UserHandler {
 	function email($args) {
-		parent::validate();
+		$this->validate();
 
-		parent::setupTemplate(true);
+		$this->setupTemplate(true);
 
 		$templateMgr = &TemplateManager::getManager();
 

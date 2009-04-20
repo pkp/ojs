@@ -75,7 +75,7 @@ class METSExportPlugin extends ImportExportPlugin {
 				// Display a list of issues for export
 				$this->setBreadcrumbs(array(), true);
 				$issueDao =& DAORegistry::getDAO('IssueDAO');
-				$issues =& $issueDao->getIssues($journal->getJournalId(), PKPHandler::getRangeInfo('issues'));
+				$issues =& $issueDao->getIssues($journal->getJournalId(), Handler::getRangeInfo('issues'));
 
 				$siteDao =& DAORegistry::getDAO('SiteDAO');
 				$site = $siteDao->getSite();

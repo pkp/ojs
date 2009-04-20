@@ -27,8 +27,11 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	 */
 	function submission($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
-		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId);
-		parent::setupTemplate(true, $articleId);
+		
+		$submissionLayoutHandler =& new SubmissionLayoutHandler();
+		$submissionLayoutHandler->validate($articleId);
+		$submission =& $submissionLayoutHandler->submission;
+		$this->setupTemplate(true, $articleId);
 
 		import('submission.proofreader.ProofreaderAction');
 		ProofreaderAction::layoutEditorProofreadingUnderway($submission);
@@ -66,8 +69,10 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 
 	function viewMetadata($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId);
-		parent::setupTemplate(true, $articleId, 'summary');
+		$submissionLayoutHandler =& new SubmissionLayoutHandler();
+		$submissionLayoutHandler->validate($articleId);
+		$submission =& $submissionLayoutHandler->submission;
+		$this->setupTemplate(true, $articleId, 'summary');
 
 		LayoutEditorAction::viewMetadata($submission, ROLE_ID_LAYOUT_EDITOR);
 	}
@@ -77,7 +82,9 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	 */
 	function completeAssignment($args) {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId, true);
+		$submissionLayoutHandler =& new SubmissionLayoutHandler();
+		$submissionLayoutHandler->validate($articleId);
+		$submission =& $submissionLayoutHandler->submission;
 
 		if (LayoutEditorAction::completeLayoutEditing($submission, Request::getUserVar('send'))) {
 			Request::redirect(null, null, 'submission', $articleId);
@@ -94,7 +101,9 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	 */
 	function uploadLayoutFile() {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId, true);
+		$submissionLayoutHandler =& new SubmissionLayoutHandler();
+		$submissionLayoutHandler->validate($articleId);
+		$submission =& $submissionLayoutHandler->submission;
 
 		switch (Request::getUserVar('layoutFileType')) {
 			case 'submission':
@@ -133,9 +142,11 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	function editGalley($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId);
+		$submissionLayoutHandler =& new SubmissionLayoutHandler();
+		$submissionLayoutHandler->validate($articleId);
+		$submission =& $submissionLayoutHandler->submission;
 
-		parent::setupTemplate(true, $articleId, 'editing');
+		$this->setupTemplate(true, $articleId, 'editing');
 
 		if (SubmissionLayoutHandler::layoutEditingEnabled($submission)) {
 			import('submission.form.ArticleGalleyForm');
@@ -173,7 +184,8 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	function saveGalley($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId, true);
+		$submissionLayoutHandler =& new SubmissionLayoutHandler();
+		$submissionLayoutHandler->validate($articleId);
 
 		import('submission.form.ArticleGalleyForm');
 
@@ -205,7 +217,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			}
 			Request::redirect(null, null, 'submission', $articleId);
 		} else {
-			parent::setupTemplate(true, $articleId, 'editing');
+			$this->setupTemplate(true, $articleId, 'editing');
 			$submitForm->display();
 		}
 	}
@@ -217,8 +229,10 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	function deleteGalley($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId, true);
-
+		$submissionLayoutHandler =& new SubmissionLayoutHandler();
+		$submissionLayoutHandler->validate($articleId);
+		$submission =& $submissionLayoutHandler->submission;
+		
 		LayoutEditorAction::deleteGalley($submission, $galleyId);
 
 		Request::redirect(null, null, 'submission', $articleId);
@@ -229,7 +243,9 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	 */
 	function orderGalley() {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId, true);
+		$submissionLayoutHandler =& new SubmissionLayoutHandler();
+		$submissionLayoutHandler->validate($articleId);
+		$submission =& $submissionLayoutHandler->submission;		
 
 		LayoutEditorAction::orderGalley($submission, Request::getUserVar('galleyId'), Request::getUserVar('d'));
 
@@ -243,7 +259,8 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	function proofGalley($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId);
+		$submissionLayoutHandler =& new SubmissionLayoutHandler();
+		$submissionLayoutHandler->validate($articleId);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
@@ -258,7 +275,8 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	function proofGalleyTop($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId);
+		$submissionLayoutHandler =& new SubmissionLayoutHandler();
+		$submissionLayoutHandler->validate($articleId);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
@@ -274,7 +292,8 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	function proofGalleyFile($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId);
+		$submissionLayoutHandler =& new SubmissionLayoutHandler();
+		$submissionLayoutHandler->validate($articleId);
 
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley = &$galleyDao->getGalley($galleyId, $articleId);
@@ -308,7 +327,9 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$fileId = isset($args[2]) ? (int) $args[2] : 0;
 		$revisionId = isset($args[3]) ? (int) $args[3] : 0;
-		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId);
+		$submissionLayoutHandler =& new SubmissionLayoutHandler();
+		$submissionLayoutHandler->validate($articleId);
+		$submission =& $submissionLayoutHandler->submission;		
 		LayoutEditorAction::deleteArticleImage($submission, $fileId, $revisionId);
 
 		Request::redirect(null, null, 'editGalley', array($articleId, $galleyId));
@@ -327,9 +348,11 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	function editSuppFile($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$suppFileId = isset($args[1]) ? (int) $args[1] : 0;
-		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId);
+		$submissionLayoutHandler =& new SubmissionLayoutHandler();
+		$submissionLayoutHandler->validate($articleId);
+		$submission =& $submissionLayoutHandler->submission;
 
-		parent::setupTemplate(true, $articleId, 'editing');
+		$this->setupTemplate(true, $articleId, 'editing');
 
 		if (SubmissionLayoutHandler::layoutEditingEnabled($submission)) {
 			import('submission.form.SuppFileForm');
@@ -367,7 +390,9 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	 */
 	function saveSuppFile($args) {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId);
+		$submissionLayoutHandler =& new SubmissionLayoutHandler();
+		$submissionLayoutHandler->validate($articleId);
+		$submission =& $submissionLayoutHandler->submission;
 
 		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
 
@@ -394,7 +419,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			Request::redirect(null, null, 'submission', $articleId);
 
 		} else {
-			parent::setupTemplate(true, $articleId, 'editing');
+			$this->setupTemplate(true, $articleId, 'editing');
 			$submitForm->display();
 		}
 	}
@@ -406,7 +431,9 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	function deleteSuppFile($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$suppFileId = isset($args[1]) ? (int) $args[1] : 0;
-		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId, true);
+		$submissionLayoutHandler =& new SubmissionLayoutHandler();
+		$submissionLayoutHandler->validate($articleId);
+		$submission =& $submissionLayoutHandler->submission;
 
 		LayoutEditorAction::deleteSuppFile($submission, $suppFileId);
 
@@ -418,7 +445,9 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	 */
 	function orderSuppFile() {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId, true);
+		$submissionLayoutHandler =& new SubmissionLayoutHandler();
+		$submissionLayoutHandler->validate($articleId);
+		$submission =& $submissionLayoutHandler->submission;
 
 		LayoutEditorAction::orderSuppFile($submission, Request::getUserVar('suppFileId'), Request::getUserVar('d'));
 
@@ -471,7 +500,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$articleId = Request::getUserVar('articleId');
 
 		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId);
-		parent::setupTemplate(true, $articleId);
+		$this->setupTemplate(true, $articleId);
 
 		$send = false;
 		if (isset($args[0])) {

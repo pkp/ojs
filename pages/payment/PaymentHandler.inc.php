@@ -15,9 +15,9 @@
 // $Id$
 
 
-import('core.PKPHandler');
+import('handler.Handler');
 
-class PaymentHandler extends PKPHandler {
+class PaymentHandler extends Handler{
 		 
 	/**
 	 * Display scheduled conference view page.

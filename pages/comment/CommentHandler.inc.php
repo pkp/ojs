@@ -18,15 +18,22 @@
 
 import('rt.ojs.RTDAO');
 import('rt.ojs.JournalRT');
-import('core.PKPHandler');
+import('handler.Handler');
 
-class CommentHandler extends PKPHandler {
+class CommentHandler extends Handler{
+	/** issue associated with this request **/
+	var $issue;
+	
+	/** article associated with this request **/
+	var $article;
+	
 	function view($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$commentId = isset($args[2]) ? (int) $args[2] : 0;
 
-		list($journal, $issue, $article) = CommentHandler::validate($articleId);
+		$this->validate($articleId);
+		$article =& $this->article;
 
 		$user = &Request::getUser();
 		$userId = isset($user)?$user->getUserId():null;
@@ -34,13 +41,15 @@ class CommentHandler extends PKPHandler {
 		$commentDao = &DAORegistry::getDAO('CommentDAO');
 		$comment = &$commentDao->getComment($commentId, $articleId, 2);
 
+		$journal =& Request::getJournal();
+		
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		$isManager = $roleDao->roleExists($journal->getJournalId(), $userId, ROLE_ID_JOURNAL_MANAGER);
 
 		if (!$comment) $comments = &$commentDao->getRootCommentsByArticleId($articleId, 1);
 		else $comments = &$comment->getChildren();
 
-		CommentHandler::setupTemplate($article, $galleyId, $comment);
+		$this->setupTemplate($article, $galleyId, $comment);
 
 		$templateMgr = &TemplateManager::getManager();
 		if (Request::getUserVar('refresh')) $templateMgr->setCacheability(CACHEABILITY_NO_CACHE);
@@ -62,7 +71,7 @@ class CommentHandler extends PKPHandler {
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$parentId = isset($args[2]) ? (int) $args[2] : 0;
 
-		list($journal, $issue, $article) = CommentHandler::validate($articleId);
+		$this->validate($articleId);
 
 		// Bring in comment constants
 		$commentDao = &DAORegistry::getDAO('CommentDAO');
@@ -113,7 +122,7 @@ class CommentHandler extends PKPHandler {
 			}
 		}
 
-		CommentHandler::setupTemplate($article, $galleyId, $parent);
+		$this->setupTemplate($article, $galleyId, $parent);
 		$commentForm->display();
 	}
 
@@ -125,8 +134,9 @@ class CommentHandler extends PKPHandler {
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$commentId = isset($args[2]) ? (int) $args[2] : 0;
 
-		list($journal, $issue, $article) = CommentHandler::validate($articleId);
-		$user = &Request::getUser();
+		$this->validate($articleId);
+		$journal =& Request::getJournal();
+		$user =& Request::getUser();
 		$userId = isset($user)?$user->getUserId():null;
 
 		$commentDao = &DAORegistry::getDAO('CommentDAO');
@@ -146,7 +156,6 @@ class CommentHandler extends PKPHandler {
 	 * Validation
 	 */
 	function validate($articleId) {
-
 		parent::validate();
 
 		$journal = &Request::getJournal();
@@ -181,7 +190,9 @@ class CommentHandler extends PKPHandler {
 			Request::redirect(null, 'index');
 		}
 
-		return array(&$journal, &$issue, &$article);
+		$this->issue =& $issue;
+		$this->article =& $article;
+		return true;
 	}
 
 	function setupTemplate($article, $galleyId, $comment = null) {

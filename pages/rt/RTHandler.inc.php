@@ -27,10 +27,13 @@ class RTHandler extends ArticleHandler {
 	 * Display an author biography
 	 */
 	function bio($args) {
-		parent::setupTemplate();
+		$this->setupTemplate();
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
+		$this->validate($articleId, $galleyId);
+		
+		$journal =& Request::getJournal();
+		$article =& $this->article;
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = &$rtDao->getJournalRTByJournal($journal);
@@ -50,11 +53,15 @@ class RTHandler extends ArticleHandler {
 	 * Display the article metadata
 	 */
 	function metadata($args) {
-		parent::setupTemplate();
+		$this->setupTemplate();
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
+		$this->validate($articleId, $galleyId);
 
+		$journal =& Request::getJournal();
+		$issue =& $this->issue;
+		$article =& $this->article;
+		
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = &$rtDao->getJournalRTByJournal($journal);
 
@@ -80,13 +87,15 @@ class RTHandler extends ArticleHandler {
 	 * Display an RT search context
 	 */
 	function context($args) {
-		parent::setupTemplate();
+		$this->setupTemplate();
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$contextId = Isset($args[2]) ? (int) $args[2] : 0;
 
-		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
-
+		$this->validate($articleId, $galleyId);
+		$journal =& Request::getJournal();
+		$article =& $this->article;
+		
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = &$rtDao->getJournalRTByJournal($journal);
 
@@ -167,13 +176,16 @@ class RTHandler extends ArticleHandler {
 	 * Display citation information
 	 */
 	function captureCite($args) {
-		parent::setupTemplate();
+		$this->setupTemplate();
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$citeType = isset($args[2]) ? $args[2] : null;
 
-		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
-
+		$this->validate($articleId, $galleyId);
+		$journal =& Request::getJournal();
+		$issue =& $this->issue;
+		$article =& $this->article;
+		
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = &$rtDao->getJournalRTByJournal($journal);
 
@@ -208,12 +220,16 @@ class RTHandler extends ArticleHandler {
 	 * Display a printer-friendly version of the article
 	 */
 	function printerFriendly($args) {
-		parent::setupTemplate();
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		RTHandler::setupTemplate();
-		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
+		
+		$this->validate($articleId, $galleyId);
+		$journal =& Request::getJournal();
+		$issue =& $this->issue;
+		$article =& $this->article;
 
+		$this->setupTemplate();
+				
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = &$rtDao->getJournalRTByJournal($journal);
 
@@ -252,12 +268,15 @@ class RTHandler extends ArticleHandler {
 	 * Display the "Email Colleague" form
 	 */
 	function emailColleague($args) {
-		parent::setupTemplate();
+		$this->setupTemplate();
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 
-		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
-
+		$this->validate($articleId, $galleyId);
+		$journal =& Request::getJournal();
+		$issue =& $this->issue;
+		$article =& $this->article;
+		
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = &$rtDao->getJournalRTByJournal($journal);
 		$user = &Request::getUser();
@@ -297,12 +316,14 @@ class RTHandler extends ArticleHandler {
 	 * Display the "email author" form
 	 */
 	function emailAuthor($args) {
-		parent::setupTemplate();
+		$this->setupTemplate();
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 
-		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
-
+		$this->validate($articleId, $galleyId);
+		$journal =& Request::getJournal();
+		$article =& $this->article;
+		
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = &$rtDao->getJournalRTByJournal($journal);
 		$user = &Request::getUser();
@@ -336,10 +357,13 @@ class RTHandler extends ArticleHandler {
 	 * Display a list of supplementary files
 	 */
 	function suppFiles($args) {
-		parent::setupTemplate();
+		$this->setupTemplate();
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
+
+		$this->validate($articleId, $galleyId);
+		$journal =& Request::getJournal();
+		$article =& $this->article;
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = &$rtDao->getJournalRTByJournal($journal);
@@ -361,11 +385,14 @@ class RTHandler extends ArticleHandler {
 	 * Display the metadata of a supplementary file
 	 */
 	function suppFileMetadata($args) {
-		parent::setupTemplate();
+		$this->setupTemplate();
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$suppFileId = isset($args[2]) ? (int) $args[2] : 0;
-		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
+
+		$this->validate($articleId, $galleyId);
+		$journal =& Request::getJournal();
+		$article =& $this->article;
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = &$rtDao->getJournalRTByJournal($journal);
@@ -391,11 +418,14 @@ class RTHandler extends ArticleHandler {
 	 * Display the "finding references" search engine list
 	 */
 	function findingReferences($args) {
-		parent::setupTemplate();
+		$this->setupTemplate();
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
 
+		$this->validate($articleId, $galleyId);
+		$journal =& Request::getJournal();
+		$article =& $this->article;
+		
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = &$rtDao->getJournalRTByJournal($journal);
 

@@ -16,23 +16,23 @@
 
 
 import ('issue.IssueAction');
-import('core.PKPHandler');
+import('handler.Handler');
 
-class IssueHandler extends PKPHandler {
+class IssueHandler extends Handler{
 
 	/**
 	 * Display about index page.
 	 */
 	function index($args) {
-		IssueHandler::current();
+		$this->current();
 	}
 
 	/**
 	 * Display current issue page.
 	 */
 	function current($args = null) {
-		parent::validate(true);
-		IssueHandler::setupTemplate();
+		$this->validate();
+		$this->setupTemplate();
 
 		$journal =& Request::getJournal();
 
@@ -135,8 +135,8 @@ class IssueHandler extends PKPHandler {
 	 * Display issue view page.
 	 */
 	function view($args) {
-		parent::validate(true);
-		IssueHandler::setupTemplate();
+		$this->validate();
+		$this->setupTemplate();
 
 		$issueId = isset($args[0]) ? $args[0] : 0;
 		$showToc = isset($args[1]) ? $args[1] : '';
@@ -154,7 +154,7 @@ class IssueHandler extends PKPHandler {
 		if (!$issue) Request::redirect(null, null, 'current');
 
 		$templateMgr = &TemplateManager::getManager();
-		IssueHandler::setupIssueTemplate($issue, ($showToc == 'showToc') ? true : false);
+		$this->setupIssueTemplate($issue, ($showToc == 'showToc') ? true : false);
 
 		// Display creative commons logo/licence if enabled
 		$templateMgr->assign('displayCreativeCommons', $journal->getSetting('includeCreativeCommons'));
@@ -264,12 +264,12 @@ class IssueHandler extends PKPHandler {
 	 * Display the issue archive listings
 	 */
 	function archive() {
-		parent::validate(true);
-		IssueHandler::setupTemplate();
+		$this->validate();
+		$this->setupTemplate();
 
 		$journal = &Request::getJournal();
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
-		$rangeInfo = PKPHandler::getRangeInfo('issues');
+		$rangeInfo = Handler::getRangeInfo('issues');
 
 		$publishedIssuesIterator = $issueDao->getPublishedIssues($journal->getJournalId(), $rangeInfo);
 
@@ -286,6 +286,14 @@ class IssueHandler extends PKPHandler {
 		$templateMgr->display('issue/archive.tpl');
 	}
 
+	/**
+	 * Validate that a joural is selected.
+	 */
+	function validate() {
+		$this->addCheck(new HandlerValidatorJournal(&$this));
+		parent::validate();
+	}
+		
 	function setupTemplate() {
 		parent::setupTemplate();
 		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_READER));

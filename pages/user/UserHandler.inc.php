@@ -15,22 +15,22 @@
 // $Id$
 
 
-import('core.PKPHandler');
+import('handler.Handler');
 
-class UserHandler extends PKPHandler {
+class UserHandler extends Handler{
 
 	/**
 	 * Display user index page.
 	 */
 	function index() {
-		UserHandler::validate();
+		$this->validate();
 
 		$sessionManager = &SessionManager::getManager();
 		$session = &$sessionManager->getUserSession();
 
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 
-		UserHandler::setupTemplate();
+		$this->setupTemplate();
 		$templateMgr = &TemplateManager::getManager();
 
 		$journal = &Request::getJournal();
@@ -55,13 +55,13 @@ class UserHandler extends PKPHandler {
 				$journalId = $journal->getJournalId();
 				
 				// Determine if journal setup is incomplete, to provide a message for JM
-				$setupIncomplete[$journalId] = UserHandler::checkCompleteSetup($journal);
+				$setupIncomplete[$journalId] = $this->checkCompleteSetup($journal);
 							
 				if ($journal->getEnabled()) {
 					$roles =& $roleDao->getRolesByUserId($userId, $journalId);
 					if (!empty($roles)) {
 						$userJournals[] =& $journal;
-						UserHandler::getRoleDataForJournal($userId, $journalId, $submissionsCount, $isValid);
+						$this->getRoleDataForJournal($userId, $journalId, $submissionsCount, $isValid);
 					}
 				}
 
@@ -75,11 +75,11 @@ class UserHandler extends PKPHandler {
 			$journalId = $journal->getJournalId();
 			
 			// Determine if journal setup is incomplete, to provide a message for JM
-			$setupIncomplete[$journalId] = UserHandler::checkCompleteSetup($journal);
+			$setupIncomplete[$journalId] = $this->checkCompleteSetup($journal);
 			
 			$userJournals = array($journal);
 			
-			UserHandler::getRoleDataForJournal($userId, $journalId, $submissionsCount, $isValid);
+			$this->getRoleDataForJournal($userId, $journalId, $submissionsCount, $isValid);
 			
 			import('payment.ojs.OJSPaymentManager');
 			$paymentManager =& OJSPaymentManager::getManager();
@@ -279,60 +279,6 @@ class UserHandler extends PKPHandler {
 		}
 	}
 
-
-	//
-	// Profiles
-	//
-
-	function profile() {
-		import('pages.user.ProfileHandler');
-		ProfileHandler::profile();
-	}
-
-	function saveProfile() {
-		import('pages.user.ProfileHandler');
-		ProfileHandler::saveProfile();
-	}
-
-	function changePassword() {
-		import('pages.user.ProfileHandler');
-		ProfileHandler::changePassword();
-	}
-
-	function savePassword() {
-		import('pages.user.ProfileHandler');
-		ProfileHandler::savePassword();
-	}
-
-
-	//
-	// Registration
-	//
-
-	function register() {
-		import('pages.user.RegistrationHandler');
-		RegistrationHandler::register();
-	}
-
-	function registerUser() {
-		import('pages.user.RegistrationHandler');
-		RegistrationHandler::registerUser();
-	}
-
-	function activateUser($args) {
-		import('pages.user.RegistrationHandler');
-		RegistrationHandler::activateUser($args);
-	}
-
-	//
-	// Email
-	//
-
-	function email($args) {
-		import('pages.user.EmailHandler');
-		EmailHandler::email($args);
-	}
-
 	//
 	// Captcha
 	//
@@ -357,7 +303,7 @@ class UserHandler extends PKPHandler {
 	 * if that user should be exposed for public view.
 	 */
 	function viewPublicProfile($args) {
-		UserHandler::validate(false);
+		$this->validate(false);
 		$templateMgr =& TemplateManager::getManager();
 		$userId = (int) array_shift($args);
 
@@ -386,8 +332,8 @@ class UserHandler extends PKPHandler {
 	//
 
 	function payRenewSubscription($args) {
-		UserHandler::validate();
-		UserHandler::setupTemplate(true);
+		$this->validate();
+		$this->setupTemplate(true);
 
 		import('payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
@@ -414,8 +360,8 @@ class UserHandler extends PKPHandler {
 	}
 
 	function payMembership($args) {
-		UserHandler::validate();
-		UserHandler::setupTemplate();
+		$this->validate();
+		$this->setupTemplate();
 
 		import('payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
