@@ -19,11 +19,27 @@ require_once('CustomLocalePlugin.inc.php');
 require_once('CustomLocaleAction.inc.php');
 import('handler.Handler');
 
-class CustomLocaleHandler extends Handler{
+class CustomLocaleHandler extends Handler {
+	/** the Custom Locale Plugin **/
+	var $plugin;
+	 
+	/**
+	 * Constructor
+	 **/
+	function CustomLocaleHandler() {
+		parent::Handler();
+
+		$this->addCheck(new HandlerValidatorJournal($this));
+		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_SITE_ADMIN, ROLE_ID_JOURNAL_MANAGER)));
+
+		$plugin = &PluginRegistry::getPlugin('generic', 'CustomLocalePlugin');
+		$this->plugin =& $plugin;		
+	}
 
 	function index() {
-		list($plugin) = CustomLocaleHandler::validate();
-		CustomLocaleHandler::setupTemplate($plugin, false);
+		$this->validate();
+		$plugin =& $this->plugin;
+		$this->setupTemplate($plugin, false);
 
 		$journal = Request::getJournal();
 		$rangeInfo = Handler::getRangeInfo('locales');
@@ -37,8 +53,9 @@ class CustomLocaleHandler extends Handler{
 	}
 
 	function edit($args) {
-		list($plugin) = CustomLocaleHandler::validate();
-		CustomLocaleHandler::setupTemplate($plugin, true);
+		$this->validate();
+		$plugin =& $this->plugin;
+		$this->setupTemplate($plugin, true);
 
 		$locale = array_shift($args);
 		$file = array_shift($args);
@@ -63,8 +80,9 @@ class CustomLocaleHandler extends Handler{
 	}
 
 	function editLocaleFile($args) {
-		list($plugin) = CustomLocaleHandler::validate();
-		CustomLocaleHandler::setupTemplate($plugin, true);
+		$this->validate();
+		$plugin =& $this->plugin;
+		$this->setupTemplate($plugin, true);
 
 		$locale = array_shift($args);
 		if (!Locale::isLocaleValid($locale)) {
@@ -125,8 +143,9 @@ class CustomLocaleHandler extends Handler{
 	}
 
 	function saveLocaleFile($args) {
-		list($plugin) = CustomLocaleHandler::validate();
-		CustomLocaleHandler::setupTemplate($plugin, true);
+		$this->validate();
+		$plugin =& $this->plugin;
+		$this->setupTemplate($plugin, true);
 
 		$locale = array_shift($args);
 		if (!Locale::isLocaleValid($locale)) {
@@ -167,7 +186,7 @@ class CustomLocaleHandler extends Handler{
 
 		while (!empty($changes)) {
 			$key = array_shift($changes);
-			$value = CustomLocaleHandler::correctCr(array_shift($changes));
+			$value = $this->correctCr(array_shift($changes));
 			if (!empty($value)) {
 				if (!$file->update($key, $value)) {
 					$file->insert($key, $value);
@@ -196,17 +215,6 @@ class CustomLocaleHandler extends Handler{
 		}
 		$templateMgr->assign('pageHierarchy', $pageHierarchy);
 		$templateMgr->assign('helpTopicId', 'plugins.generic.CustomLocalePlugin');
-	}
-
-	function validate() {
-		parent::validate(true);
-
-		if (!Validation::isJournalManager()) {
-			Validation::redirectLogin();
-		}
-
-		$plugin = &PluginRegistry::getPlugin('generic', 'CustomLocalePlugin');
-		return array(&$plugin);
 	}
 
 }

@@ -17,7 +17,14 @@
 
 import('handler.Handler');
 
-class ReferralHandler extends Handler{
+class ReferralHandler extends Handler {
+	/**
+	 * Constructor
+	 **/
+	function ReferralHandler() {
+		parent::Handler();
+	}
+	
 	function setupTemplate() {
 		parent::setupTemplate();
 		$templateMgr =& TemplateManager::getManager();
@@ -29,8 +36,8 @@ class ReferralHandler extends Handler{
 		$referralId = (int) array_shift($args);
 		if ($referralId === 0) $referralId = null;
 
-		list($plugin, $referral, $article) = ReferralHandler::validate($referralId);
-		ReferralHandler::setupTemplate();
+		list($plugin, $referral, $article) = $this->validate($referralId);
+		$this->setupTemplate();
 
 		$plugin->import('ReferralForm');
 		$templateMgr =& TemplateManager::getManager();
@@ -58,7 +65,7 @@ class ReferralHandler extends Handler{
 		$referralId = (int) Request::getUserVar('referralId');
 		if ($referralId === 0) $referralId = null;
 
-		list($plugin, $referral, $article) = ReferralHandler::validate($referralId);
+		list($plugin, $referral, $article) = $this->validate($referralId);
 		// If it's an insert, ensure that it's allowed for this article
 		if (!isset($referral)) {
 			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
@@ -68,7 +75,7 @@ class ReferralHandler extends Handler{
 				Request::redirect(null, 'author');
 			}
 		}
-		ReferralHandler::setupTemplate();
+		$this->setupTemplate();
 
 		$plugin->import('ReferralForm');
 
@@ -94,7 +101,7 @@ class ReferralHandler extends Handler{
 
 	function deleteReferral($args) {
 		$referralId = (int) array_shift($args);
-		list($plugin, $referral) = ReferralHandler::validate($referralId);
+		list($plugin, $referral) = $this->validate($referralId);
 
 		$referralDao =& DAORegistry::getDAO('ReferralDAO');
 		$referralDao->deleteReferral($referral);
@@ -103,6 +110,8 @@ class ReferralHandler extends Handler{
 	}
 
 	function validate($referralId = null) {
+		parent::validate();
+		
 		if ($referralId) {
 			$referralDao =& DAORegistry::getDAO('ReferralDAO');
 			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');

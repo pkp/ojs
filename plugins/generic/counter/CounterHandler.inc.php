@@ -17,7 +17,14 @@
 
 import('handler.Handler');
 
-class CounterHandler extends Handler{
+class CounterHandler extends Handler {
+	/**
+	 * Constructor
+	 **/
+	function CounterHandler() {
+		parent::Handler();
+	}
+	
 	/**
 	 * Display the main log analyzer page.
 	 */

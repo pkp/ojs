@@ -17,14 +17,20 @@
 
 import('handler.Handler');
 
-class ThesisHandler extends Handler{
+class ThesisHandler extends Handler {
+	/**
+	 * Constructor
+	 **/
+	function ThesisHandler() {
+		parent::Handler();
+	}
 
 	/**
 	 * Display thesis index page.
 	 */
 	function index() {
-		parent::validate();
-		ThesisHandler::setupTemplate();
+		$this->validate();
+		$this->setupTemplate();
 		$journal = &Request::getJournal();
 
 		if ($journal != null) {
@@ -84,8 +90,8 @@ class ThesisHandler extends Handler{
 	 * Display form to submit a thesis.
 	 */
 	function submit() {
-		parent::validate();
-		ThesisHandler::setupTemplate();
+		$this->validate();
+		$this->setupTemplate();
 		$journal = &Request::getJournal();
 
 		if ($journal != null) {
@@ -126,8 +132,8 @@ class ThesisHandler extends Handler{
 	 * @param $args array optional, first parameter is the ID of the thesis to display 
 	 */
 	function view($args = array()) {
-		parent::validate();
-		ThesisHandler::setupTemplate();
+		$this->validate();
+		$this->setupTemplate();
 		$journal = &Request::getJournal();
 
 		if ($journal != null) {
@@ -169,7 +175,7 @@ class ThesisHandler extends Handler{
 	 * Save submitted thesis.
 	 */
 	function save() {
-		parent::validate();
+		$this->validate();
 		$journal = &Request::getJournal();
 
 		if ($journal != null) {
@@ -198,7 +204,7 @@ class ThesisHandler extends Handler{
 				Request::redirect(null, 'thesis');
 
 			} else {
-				ThesisHandler::setupTemplate();
+				$this->setupTemplate();
 
 				$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 				$journalSettings = &$journalSettingsDao->getJournalSettings($journalId);
@@ -217,7 +223,7 @@ class ThesisHandler extends Handler{
 	 * Captcha support.
 	 */
 	function viewCaptcha($args) {
-		parent::validate();
+		$this->validate();
 		$captchaId = (int) array_shift($args);
 		import('captcha.CaptchaManager');
 		$captchaManager = new CaptchaManager();
