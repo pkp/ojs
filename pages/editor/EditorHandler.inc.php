@@ -33,6 +33,9 @@ class EditorHandler extends SectionEditorHandler {
 	 **/
 	function EditorHandler() {
 		parent::SectionEditorHandler();
+		
+		$this->addCheck(new HandlerValidatorJournal($this));
+		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_EDITOR)));		
 	}
 
 	/**
@@ -455,17 +458,6 @@ class EditorHandler extends SectionEditorHandler {
 		}
 
 		Request::redirect(null, null, 'submissions', 'submissionsArchives');
-	}
-
-	/**
-	 * Validate that user is an editor in the selected journal.
-	 * Redirects to user index page if not properly authenticated.
-	 */
-	function validate() {
-		$this->addCheck(new HandlerValidatorJournal($this));
-		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_EDITOR)));
-		
-		return parent::validate();
 	}
 
 	/**
