@@ -175,7 +175,7 @@ class SubscriptionDAO extends DAO {
 				(journal_id, user_id, type_id, date_start, date_end, membership, domain, ip_range)
 				VALUES
 				(?, ?, ?, %s, %s, ?, ?, ?)',
-				$this->dateToDB($subscription->getDateStart()), $this->dateToDB($subscription->getDateEnd())),
+				$this->dateToDB($subscription->getDateStart()), $this->datetimeToDB($subscription->getDateEnd())),
 			array(
 				$subscription->getJournalId(),
 				$subscription->getUserId(),
@@ -216,7 +216,7 @@ class SubscriptionDAO extends DAO {
 					domain = ?,
 					ip_range = ?
 				WHERE subscription_id = ?',
-				$this->dateToDB($subscription->getDateStart()), $this->dateToDB($subscription->getDateEnd())),
+				$this->dateToDB($subscription->getDateStart()), $this->datetimeToDB($subscription->getDateEnd())),
 			array(
 				$subscription->getJournalId(),
 				$subscription->getUserId(),

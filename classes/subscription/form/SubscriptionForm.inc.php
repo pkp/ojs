@@ -150,8 +150,8 @@ class SubscriptionForm extends Form {
 	 */
 	function readInputData() {
 		$this->readUserVars(array('userId', 'typeId', 'dateStartYear', 'dateStartMonth', 'dateStartDay', 'dateEndYear', 'dateEndMonth', 'dateEndDay', 'membership', 'domain', 'ipRange', 'notifyEmail'));
-		$this->_data['dateStart'] = $this->_data['dateStartYear'] . '-' . $this->_data['dateStartMonth'] . '-' . $this->_data['dateStartDay'];
-		$this->_data['dateEnd'] = $this->_data['dateEndYear'] . '-' . $this->_data['dateEndMonth'] . '-' . $this->_data['dateEndDay'];
+		$this->_data['dateStart'] = Request::getUserDateVar('dateStart');
+		$this->_data['dateEnd'] = Request::getUserDateVar('dateEnd');
 
 		// If subscription type requires it, membership is provided
 		$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
@@ -192,8 +192,8 @@ class SubscriptionForm extends Form {
 		$subscription->setJournalId($journal->getJournalId());
 		$subscription->setUserId($this->getData('userId'));
 		$subscription->setTypeId($this->getData('typeId'));
-		$subscription->setDateStart($this->getData('dateStartYear') . '-' . $this->getData('dateStartMonth'). '-' . $this->getData('dateStartDay'));
-		$subscription->setDateEnd($this->getData('dateEndYear') . '-' . $this->getData('dateEndMonth'). '-' . $this->getData('dateEndDay'));
+		$subscription->setDateStart($this->getData('dateStart'));
+		$subscription->setDateEnd($this->getData('dateEnd'));
 		$subscription->setMembership($this->getData('membership') ? $this->getData('membership') : null);
 		$subscription->setDomain($this->getData('domain') ? $this->getData('domain') : null);
 		$subscription->setIPRange($this->getData('ipRange') ? $this->getData('ipRange') : null);

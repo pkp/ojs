@@ -1815,7 +1815,7 @@
 		<field name="date_start" type="D">
 			<NOTNULL/>
 		</field>
-		<field name="date_end" type="D">
+		<field name="date_end" type="T">
 			<NOTNULL/>
 		</field>
 		<field name="membership" type="C2" size="40"/>
