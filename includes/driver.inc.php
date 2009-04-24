@@ -3,7 +3,7 @@
 /**
  * @defgroup index
  */
- 
+
 /**
  * @file driver.inc.php
  *
@@ -14,7 +14,7 @@
  *
  * @brief Core system initialization code.
  * This file is loaded before any others.
- * Any system-wide imports or initialization code should be placed here. 
+ * Any system-wide imports or initialization code should be placed here.
  */
 
 // $Id$
@@ -51,6 +51,9 @@ require('functions.inc.php');
 /**
  * System initialization (post-classloading).
  */
+
+import('core.PKPProfiler');
+$pkpProfiler = new PKPProfiler();
 
 import('core.OJSApplication');
 $ojsApplication = new OJSApplication();
