@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.jquery.name">jQuery Plugin</message>
+	<message key="plugins.generic.jquery.description"><![CDATA[This plugin enables javascript interaction and styling of OJS content using the <a href="http://www.jquery.com" target="_new">jQuery</a> framework.]]></message>
+	<message key="plugins.generic.jquery.descriptionDisabled"><![CDATA[This plugin enables javascript interaction and styling of OJS content using the <a href="http://www.jquery.com" target="_new">jQuery</a> framework. <strong>jQuery is not currently installed; please install it in {$jQueryPath}.</strong>]]></message>
+
+	<message key="plugins.generic.jquery.settings">Settings</message>
+</locale>

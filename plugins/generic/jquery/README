@@ -1,0 +1,18 @@
+================================
+=== OJS jQuery Plugin
+=== Author: Matthew Crider (mcrider @ sfu.ca)
+================================
+
+About
+-----
+This plugin loads the jQuery javascript framework into all OJS pages, and additionally loads any scripts located in the scripts/ subdirectory.
+
+To add jQuery code to OJS, place the javascript files in the 'scripts/' directory of this plugin, and ensure that it is loaded by adding the pages you wish you wish it to be loaded on to the switch statement in the 'getEnabledScripts()' function in jQueryPlugin.inc.php.
+
+License
+-------
+This plugin is licensed under the GNU General Public License v2. See the file COPYING for the complete terms of this license.
+
+System Requirements
+-------------------
+This plugin requires jQuery to be installed in the libs/ directory (which is installed in OJS as of version 2.3).
