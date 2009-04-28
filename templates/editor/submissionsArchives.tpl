@@ -27,8 +27,6 @@
 	
 	{iterate from=submissions item=submission}
 	{assign var="articleId" value=$submission->getArticleId()}
-	{assign var="layoutAssignment" value=$submission->getLayoutAssignment()}
-	{assign var="proofAssignment" value=$submission->getProofAssignment()}
 
 	<tr valign="top" {if $submission->getFastTracked()} class="fastTracked"{/if}>
 		<td>{$articleId|escape}</td>

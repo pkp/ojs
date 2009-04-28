@@ -32,6 +32,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 	 */
 	function submission($args) {
 		$articleId = isset($args[0]) ? (int)$args[0] : 0;
+		$journal =& Request::getJournal();
 
 		$this->validate($articleId);
 		$submission =& $this->submission;
@@ -42,7 +43,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		$authorDao = &DAORegistry::getDAO('AuthorDAO');
 		$authors = $authorDao->getAuthorsByArticle($articleId);
 
-		ProofreaderAction::proofreaderProofreadingUnderway($submission);
+		ProofreaderAction::proofreadingUnderway($submission, 'SIGNOFF_PROOFREADING_PROOFREADER');
 		$useLayoutEditors = $journal->getSetting('useLayoutEditors');
 
 		$templateMgr = &TemplateManager::getManager();
@@ -50,7 +51,6 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		$templateMgr->assign('useProofreaders', $useProofreaders);
 		$templateMgr->assign_by_ref('authors', $authors);
 		$templateMgr->assign_by_ref('submission', $submission);
-		$templateMgr->assign_by_ref('proofAssignment', $submission->getProofAssignment());
 		$templateMgr->assign('useLayoutEditors', $useLayoutEditors);
 		$templateMgr->assign('helpTopicId', 'editorial.proofreadersRole.proofreading');		
 
@@ -102,11 +102,12 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		$user = &Request::getUser();
 
 		$proofreaderDao = &DAORegistry::getDAO('ProofreaderSubmissionDAO');
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 		$submission = &$proofreaderDao->getSubmission($articleId, $journal->getJournalId());
 
 		if (isset($submission)) {
-			$proofAssignment = &$submission->getProofAssignment();
-			if ($proofAssignment->getProofreaderId() == $user->getUserId()) {
+			$proofSignoff = $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $articleId);
+			if ($proofSignoff->getUserId() == $user->getUserId()) {
 				$isValid = true;
 			}			
 		}

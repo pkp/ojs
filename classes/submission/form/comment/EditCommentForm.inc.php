@@ -117,6 +117,7 @@ class EditCommentForm extends Form {
 	 */
 	function emailHelper() {
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
 
@@ -142,28 +143,25 @@ class EditCommentForm extends Form {
 		}
 
 		// Get proofreader
-		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
-		$proofAssignment = &$proofAssignmentDao->getProofAssignmentByArticleId($this->article->getArticleId());
-		if ($proofAssignment != null && $proofAssignment->getProofreaderId() > 0) {
-			$proofreader = &$userDao->getUser($proofAssignment->getProofreaderId());
+		$proofSignoff = $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $this->article->getArticleId());
+		if ($proofSignoff != null && $proofSignoff->getUserId() > 0) {
+			$proofreader = &$userDao->getUser($proofSignoff->getUserId());
 		} else {
 			$proofreader = null;
 		}
 
 		// Get layout editor
-		$layoutAssignmentDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
-		$layoutAssignment = &$layoutAssignmentDao->getLayoutAssignmentByArticleId($this->article->getArticleId());
-		if ($layoutAssignment != null && $layoutAssignment->getEditorId() > 0) {
-			$layoutEditor = &$userDao->getUser($layoutAssignment->getEditorId());
+		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $this->article->getArticleId());
+		if ($layoutSignoff != null && $layoutSignoff->getUserId() > 0) {
+			$layoutEditor = &$userDao->getUser($layoutSignoff->getUserId());
 		} else {
 			$layoutEditor = null;
 		}
 
 		// Get copyeditor
-		$copyAssignmentDao = &DAORegistry::getDAO('CopyAssignmentDAO');
-		$copyAssignment = &$copyAssignmentDao->getCopyAssignmentByArticleId($this->article->getArticleId());
-		if ($copyAssignment != null && $copyAssignment->getCopyeditorId() > 0) {
-			$copyeditor = &$userDao->getUser($copyAssignment->getCopyeditorId());
+		$copySignoff = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $this->article->getArticleId());
+		if ($copySignoff != null && $copySignoff->getUserId() > 0) {
+			$copyeditor = &$userDao->getUser($copySignoff->getUserId());
 		} else {
 			$copyeditor = null;
 		}

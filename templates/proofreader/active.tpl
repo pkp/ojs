@@ -23,16 +23,17 @@
 
 {iterate from=submissions item=submission}
 	{assign var="articleId" value=$submission->getArticleId()}
-	{assign var="proofAssignment" value=$submission->getProofAssignment()}
+	{assign var="proofreaderSignoff" value=$submission->getSignoff('SIGNOFF_PROOFREADING_PROOFREADER')}
+	{assign var="authorSignoff" value=$submission->getSignoff('SIGNOFF_PROOFREADING_AUTHOR')}
 
 	<tr valign="top">
 		<td>{$articleId|escape}</td>
-		<td>{$proofAssignment->getDateProofreaderNotified()|date_format:$dateFormatTrunc}</td>
+		<td>{$proofreaderSignoff->getDateNotified()|date_format:$dateFormatTrunc}</td>
 		<td>{$submission->getSectionAbbrev()|escape}</td>
 		<td>{$submission->getAuthorString(true)|truncate:40:"..."|escape}</td>
 		<td><a href="{url op="submission" path=$articleId}" class="action">{$submission->getArticleTitle()|strip_unsafe_html|truncate:60:"..."}</a></td>
 		<td align="right">
-			{if not $proofAssignment->getDateAuthorCompleted()}
+			{if not $authorSignoff->getDateCompleted()}
 				{translate key="submissions.initialProof"}
 			{else}
 				{translate key="submissions.postAuthor"}

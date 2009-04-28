@@ -36,23 +36,6 @@ class LayoutEditorSubmission extends Article {
 	//
 
 	/**
-	 * Get the layout assignment for an article.
-	 * @return LayoutAssignment
-	 */
-	function &getLayoutAssignment() {
-		$layoutAssignment = &$this->getData('layoutAssignment');
-		return $layoutAssignment;
-	}
-
-	/**
-	 * Set the layout assignment for an article.
-	 * @param $layoutAssignment LayoutAssignment
-	 */
-	function setLayoutAssignment(&$layoutAssignment) {
-		return $this->setData('layoutAssignment', $layoutAssignment);
-	}
-
-	/**
 	 * Get the galleys for an article.
 	 * @return array ArticleGalley
 	 */
@@ -104,23 +87,6 @@ class LayoutEditorSubmission extends Article {
 	 */
 	function setEditAssignments($editAssignments) {
 		return $this->setData('editAssignments', $editAssignments);
-	}
-
-	/**
-	 * Get proof assignment.
-	 * @return proofAssignment object
-	 */
-	function &getProofAssignment() {
-		$proofAssignment = &$this->getData('proofAssignment');
-		return $proofAssignment;
-	}
-
-	/**
-	 * Set proof assignment.
-	 * @param $proofAssignment
-	 */
-	function setProofAssignment($proofAssignment) {
-		return $this->setData('proofAssignment', $proofAssignment);
 	}
 
 	//

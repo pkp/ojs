@@ -27,13 +27,12 @@ class SectionEditorSubmissionDAO extends DAO {
 	var $editAssignmentDao;
 	var $reviewAssignmentDao;
 	var $copyeditorSubmissionDao;
-	var $layoutAssignmentDao;
 	var $articleFileDao;
 	var $suppFileDao;
+	var $signoffDao;
 	var $galleyDao;
 	var $articleEmailLogDao;
 	var $articleCommentDao;
-	var $proofAssignmentDao;
 
 	/**
 	 * Constructor.
@@ -46,13 +45,12 @@ class SectionEditorSubmissionDAO extends DAO {
 		$this->editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
 		$this->reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$this->copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
-		$this->layoutAssignmentDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
 		$this->articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		$this->suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
+		$this->signoffDao = &DAORegistry::getDAO('SignoffDAO');
 		$this->galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		$this->articleEmailLogDao = &DAORegistry::getDAO('ArticleEmailLogDAO');
 		$this->articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-		$this->proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
 	}
 
 	/**
@@ -67,27 +65,9 @@ class SectionEditorSubmissionDAO extends DAO {
 			'SELECT	a.*,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev,
-				c.copyed_id,
-				c.copyeditor_id,
-				c.date_notified AS copyeditor_date_notified,
-				c.date_underway AS copyeditor_date_underway,
-				c.date_completed AS copyeditor_date_completed,
-				c.date_acknowledged AS copyeditor_date_acknowledged,
-				c.date_author_notified AS ce_date_author_notified,
-				c.date_author_underway AS ce_date_author_underway,
-				c.date_author_completed AS ce_date_author_completed,
-				c.date_author_acknowledged AS ce_date_author_acknowledged,
-				c.date_final_notified AS ce_date_final_notified,
-				c.date_final_underway AS ce_date_final_underway,
-				c.date_final_completed AS ce_date_final_completed,
-				c.date_final_acknowledged AS ce_date_final_acknowledged,
-				c.initial_revision AS copyeditor_initial_revision,
-				c.editor_author_revision AS ce_editor_author_revision,
-				c.final_revision AS copyeditor_final_revision,
 				r2.review_revision
 			FROM	articles a
 				LEFT JOIN sections s ON (s.section_id = a.section_id)
-				LEFT JOIN copyed_assignments c ON (a.article_id = c.article_id)
 				LEFT JOIN review_rounds r2 ON (a.article_id = r2.article_id AND a.current_round = r2.round)
 				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
@@ -150,24 +130,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		$sectionEditorSubmission->setReviewFile($this->articleFileDao->getArticleFile($row['review_file_id']));
 		$sectionEditorSubmission->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
 		$sectionEditorSubmission->setEditorFile($this->articleFileDao->getArticleFile($row['editor_file_id']));
-		$sectionEditorSubmission->setCopyeditFile($this->articleFileDao->getArticleFile($row['copyedit_file_id']));
 
-		// Initial Copyedit File
-		if ($row['copyeditor_initial_revision'] != null) {
-			$sectionEditorSubmission->setInitialCopyeditFile($this->articleFileDao->getArticleFile($row['copyedit_file_id'], $row['copyeditor_initial_revision']));
-		}
-
-		// Editor / Author Copyedit File
-		if ($row['ce_editor_author_revision'] != null) {
-			$sectionEditorSubmission->setEditorAuthorCopyeditFile($this->articleFileDao->getArticleFile($row['copyedit_file_id'], $row['ce_editor_author_revision']));
-		}
-
-		// Final Copyedit File
-		if ($row['copyeditor_final_revision'] != null) {
-			$sectionEditorSubmission->setFinalCopyeditFile($this->articleFileDao->getArticleFile($row['copyedit_file_id'], $row['copyeditor_final_revision']));
-		}
-
-		$sectionEditorSubmission->setCopyeditFileRevisions($this->articleFileDao->getArticleFileRevisionsInRange($row['copyedit_file_id']));
 
 		for ($i = 1; $i <= $row['current_round']; $i++) {
 			$sectionEditorSubmission->setEditorFileRevisions($this->articleFileDao->getArticleFileRevisions($row['editor_file_id'], $i), $i);
@@ -182,34 +145,10 @@ class SectionEditorSubmissionDAO extends DAO {
 			$sectionEditorSubmission->setReviewAssignments($this->reviewAssignmentDao->getReviewAssignmentsByArticleId($row['article_id'], $i), $i);
 		}
 
-		// Copyeditor Assignment
-		$sectionEditorSubmission->setCopyedId($row['copyed_id']);
-		$sectionEditorSubmission->setCopyeditorId($row['copyeditor_id']);
-		$sectionEditorSubmission->setCopyeditor($this->userDao->getUser($row['copyeditor_id']), true);
-		$sectionEditorSubmission->setCopyeditorDateNotified($this->datetimeFromDB($row['copyeditor_date_notified']));
-		$sectionEditorSubmission->setCopyeditorDateUnderway($this->datetimeFromDB($row['copyeditor_date_underway']));
-		$sectionEditorSubmission->setCopyeditorDateCompleted($this->datetimeFromDB($row['copyeditor_date_completed']));
-		$sectionEditorSubmission->setCopyeditorDateAcknowledged($this->datetimeFromDB($row['copyeditor_date_acknowledged']));
-		$sectionEditorSubmission->setCopyeditorDateAuthorNotified($this->datetimeFromDB($row['ce_date_author_notified']));
-		$sectionEditorSubmission->setCopyeditorDateAuthorUnderway($this->datetimeFromDB($row['ce_date_author_underway']));
-		$sectionEditorSubmission->setCopyeditorDateAuthorCompleted($this->datetimeFromDB($row['ce_date_author_completed']));
-		$sectionEditorSubmission->setCopyeditorDateAuthorAcknowledged($this->datetimeFromDB($row['ce_date_author_acknowledged']));
-		$sectionEditorSubmission->setCopyeditorDateFinalNotified($this->datetimeFromDB($row['ce_date_final_notified']));
-		$sectionEditorSubmission->setCopyeditorDateFinalUnderway($this->datetimeFromDB($row['ce_date_final_underway']));
-		$sectionEditorSubmission->setCopyeditorDateFinalCompleted($this->datetimeFromDB($row['ce_date_final_completed']));
-		$sectionEditorSubmission->setCopyeditorDateFinalAcknowledged($this->datetimeFromDB($row['ce_date_final_acknowledged']));
-		$sectionEditorSubmission->setCopyeditorInitialRevision($row['copyeditor_initial_revision']);
-		$sectionEditorSubmission->setCopyeditorEditorAuthorRevision($row['ce_editor_author_revision']);
-		$sectionEditorSubmission->setCopyeditorFinalRevision($row['copyeditor_final_revision']);
-
 		// Layout Editing
-		$sectionEditorSubmission->setLayoutAssignment($this->layoutAssignmentDao->getLayoutAssignmentByArticleId($row['article_id']));
-
 		$sectionEditorSubmission->setGalleys($this->galleyDao->getGalleysByArticle($row['article_id']));
 
 		// Proof Assignment
-		$sectionEditorSubmission->setProofAssignment($this->proofAssignmentDao->getProofAssignmentByArticleId($row['article_id']));
-
 		HookRegistry::call('SectionEditorSubmissionDAO::_returnSectionEditorSubmissionFromRow', array(&$sectionEditorSubmission, &$row));
 
 		return $sectionEditorSubmission;
@@ -268,7 +207,8 @@ class SectionEditorSubmissionDAO extends DAO {
 		}
 
 		// Update copyeditor assignment
-		if ($sectionEditorSubmission->getCopyedId()) {
+		$copyeditSignoff = $this->signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $sectionEditorSubmission->getArticleId());
+		if ($copyeditSignoff) {
 			$copyeditorSubmission = &$this->copyeditorSubmissionDao->getCopyeditorSubmission($sectionEditorSubmission->getArticleId());
 		} else {
 			$copyeditorSubmission = new CopyeditorSubmission();
@@ -276,30 +216,8 @@ class SectionEditorSubmissionDAO extends DAO {
 
 		// Only update the fields that an editor can modify.
 		$copyeditorSubmission->setArticleId($sectionEditorSubmission->getArticleId());
-		$copyeditorSubmission->setCopyeditorId($sectionEditorSubmission->getCopyeditorId());
-				$copyeditorSubmission->setDateUnderway($sectionEditorSubmission->getCopyeditorDateUnderway());
-		$copyeditorSubmission->setDateNotified($sectionEditorSubmission->getCopyeditorDateNotified());
-		$copyeditorSubmission->setDateCompleted($sectionEditorSubmission->getCopyeditorDateCompleted());
-		$copyeditorSubmission->setDateAcknowledged($sectionEditorSubmission->getCopyeditorDateAcknowledged());
-		$copyeditorSubmission->setDateAuthorUnderway($sectionEditorSubmission->getCopyeditorDateAuthorUnderway());
-		$copyeditorSubmission->setDateAuthorNotified($sectionEditorSubmission->getCopyeditorDateAuthorNotified());
-		$copyeditorSubmission->setDateAuthorCompleted($sectionEditorSubmission->getCopyeditorDateAuthorCompleted());
-		$copyeditorSubmission->setDateAuthorAcknowledged($sectionEditorSubmission->getCopyeditorDateAuthorAcknowledged());
-		$copyeditorSubmission->setDateFinalUnderway($sectionEditorSubmission->getCopyeditorDateFinalUnderway());
-		$copyeditorSubmission->setDateFinalNotified($sectionEditorSubmission->getCopyeditorDateFinalNotified());
-		$copyeditorSubmission->setDateFinalCompleted($sectionEditorSubmission->getCopyeditorDateFinalCompleted());
-		$copyeditorSubmission->setDateFinalAcknowledged($sectionEditorSubmission->getCopyeditorDateFinalAcknowledged());
-		$copyeditorSubmission->setInitialRevision($sectionEditorSubmission->getCopyeditorInitialRevision());
-		$copyeditorSubmission->setEditorAuthorRevision($sectionEditorSubmission->getCopyeditorEditorAuthorRevision());
-		$copyeditorSubmission->setFinalRevision($sectionEditorSubmission->getCopyeditorFinalRevision());
 		$copyeditorSubmission->setDateStatusModified($sectionEditorSubmission->getDateStatusModified());
 		$copyeditorSubmission->setLastModified($sectionEditorSubmission->getLastModified());
-
-		if ($copyeditorSubmission->getCopyedId() != null) {
-			$this->copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
-		} else {
-			$this->copyeditorSubmissionDao->insertCopyeditorSubmission($copyeditorSubmission);
-		}
 
 		// update review assignments
 		foreach ($sectionEditorSubmission->getReviewAssignments() as $roundReviewAssignments) {
@@ -318,16 +236,6 @@ class SectionEditorSubmissionDAO extends DAO {
 			$this->reviewAssignmentDao->deleteReviewAssignmentById($removedReviewAssignments[$i]);
 		}
 
-		// Update layout editing assignment
-		$layoutAssignment =& $sectionEditorSubmission->getLayoutAssignment();
-		if (isset($layoutAssignment)) {
-			if ($layoutAssignment->getLayoutId() > 0) {
-				$this->layoutAssignmentDao->updateLayoutAssignment($layoutAssignment);
-			} else {
-				$this->layoutAssignmentDao->insertLayoutAssignment($layoutAssignment);
-			}
-		}
-
 		// Update article
 		if ($sectionEditorSubmission->getArticleId()) {
 
@@ -339,7 +247,6 @@ class SectionEditorSubmissionDAO extends DAO {
 			$article->setReviewFileId($sectionEditorSubmission->getReviewFileId());
 			$article->setEditorFileId($sectionEditorSubmission->getEditorFileId());
 			$article->setStatus($sectionEditorSubmission->getStatus());
-			$article->setCopyeditFileId($sectionEditorSubmission->getCopyeditFileId());
 			$article->setDateStatusModified($sectionEditorSubmission->getDateStatusModified());
 			$article->setLastModified($sectionEditorSubmission->getLastModified());
 			$article->setCommentsStatus($sectionEditorSubmission->getCommentsStatus());
@@ -375,28 +282,10 @@ class SectionEditorSubmissionDAO extends DAO {
 			'SELECT	a.*,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev,
-				c.copyed_id,
-				c.copyeditor_id,
-				c.date_notified AS copyeditor_date_notified,
-				c.date_underway AS copyeditor_date_underway,
-				c.date_completed AS copyeditor_date_completed,
-				c.date_acknowledged AS copyeditor_date_acknowledged,
-				c.date_author_notified AS ce_date_author_notified,
-				c.date_author_underway AS ce_date_author_underway,
-				c.date_author_completed AS ce_date_author_completed,
-				c.date_author_acknowledged AS ce_date_author_acknowledged,
-				c.date_final_notified AS ce_date_final_notified,
-				c.date_final_underway AS ce_date_final_underway,
-				c.date_final_completed AS ce_date_final_completed,
-				c.date_final_acknowledged AS ce_date_final_acknowledged,
-				c.initial_revision AS copyeditor_initial_revision,
-				c.editor_author_revision AS ce_editor_author_revision,
-				c.final_revision AS copyeditor_final_revision,
 				r2.review_revision
 			FROM	articles a
 				LEFT JOIN edit_assignments e ON (e.article_id = a.article_id)
 				LEFT JOIN sections s ON (s.section_id = a.section_id)
-				LEFT JOIN copyed_assignments c ON (a.article_id = c.article_id)
 				LEFT JOIN review_rounds r2 ON (a.article_id = r2.article_id AND a.current_round = r2.round)
 				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
@@ -439,6 +328,12 @@ class SectionEditorSubmissionDAO extends DAO {
 		$locale = Locale::getLocale();
 
 		$params = array(
+			ASSOC_TYPE_ARTICLE,
+			'SIGNOFF_COPYEDITING_FINAL',
+			ASSOC_TYPE_ARTICLE,
+			'SIGNOFF_PROOFREADING_PROOFREADER',
+			ASSOC_TYPE_ARTICLE,
+			'SIGNOFF_LAYOUT',
 			'title', // Section title
 			$primaryLocale,
 			'title',
@@ -543,36 +438,18 @@ class SectionEditorSubmissionDAO extends DAO {
 				e.can_edit AS can_edit,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev,
-				c.copyed_id,
-				c.copyeditor_id,
-				c.date_notified AS copyeditor_date_notified,
-				c.date_underway AS copyeditor_date_underway,
-				c.date_completed AS copyeditor_date_completed,
-				c.date_acknowledged AS copyeditor_date_acknowledged,
-				c.date_author_notified AS ce_date_author_notified,
-				c.date_author_underway AS ce_date_author_underway,
-				c.date_author_completed AS ce_date_author_completed,
-				c.date_author_acknowledged AS ce_date_author_acknowledged,
-				c.date_final_notified AS ce_date_final_notified,
-				c.date_final_underway AS ce_date_final_underway,
-				c.date_final_completed AS ce_date_final_completed,
-				c.date_final_acknowledged AS ce_date_final_acknowledged,
-				c.initial_revision AS copyeditor_initial_revision,
-				c.editor_author_revision AS ce_editor_author_revision,
-				c.final_revision AS copyeditor_final_revision,
 				r2.review_revision
 			FROM
 				articles a
 				INNER JOIN article_authors aa ON (aa.article_id = a.article_id)
 				LEFT JOIN edit_assignments e ON (e.article_id = a.article_id)
 				LEFT JOIN users ed ON (e.editor_id = ed.user_id)
-				LEFT JOIN sections s ON (s.section_id = a.section_id)
-				LEFT JOIN copyed_assignments c ON (a.article_id = c.article_id)
-				LEFT JOIN users ce ON (c.copyeditor_id = ce.user_id)
-				LEFT JOIN proof_assignments p ON (p.article_id = a.article_id)
-				LEFT JOIN users pe ON (pe.user_id = p.proofreader_id)
+				LEFT JOIN signoffs scf ON (scf.section_id = a.section_id AND scf.assoc_type ? AND scf.symbolic = ?)
+				LEFT JOIN users ce ON (scf.user_id = ce.user_id)
+				LEFT JOIN signoffs spr ON (a.article_id = spr.assoc_id AND spr.assoc_type ? AND spr.symbolic = ?)
+				LEFT JOIN users pe ON (pe.user_id = spr.user_id)
 				LEFT JOIN review_rounds r2 ON (a.article_id = r2.article_id and a.current_round = r2.round)
-				LEFT JOIN layouted_assignments l ON (l.article_id = a.article_id) LEFT JOIN users le ON (le.user_id = l.editor_id)
+				LEFT JOIN signoffs sle ON (a.article_id = sle.assoc_id AND sle.assoc_type ? AND sle.symbolic = ?) LEFT JOIN users le ON (le.user_id = sle.user_id)
 				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
 				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
@@ -1015,7 +892,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	 */
 	function copyeditorExists($articleId, $copyeditorId) {
 		$result = &$this->retrieve(
-			'SELECT COUNT(*) FROM copyed_assignments WHERE article_id = ? AND copyeditor_id = ?', array($articleId, $copyeditorId)
+			'SELECT COUNT(*) FROM signoffs WHERE assoc_id = ? AND assoc_type = ? AND user_id = ? AND symbolic = ?', array($articleId, ASSOC_TYPE_ARTICLE, $copyeditorId, 'SIGNOFF_COPYEDITING_INITIAL')
 		);
 		return isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
 	}
@@ -1029,7 +906,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	function &getCopyeditorsNotAssignedToArticle($journalId, $articleId, $searchType = null, $search = null, $searchMatch = null) {
 		$users = array();
 
-		$paramArray = array('interests', $articleId, $journalId, RoleDAO::getRoleIdFromPath('copyeditor'));
+		$paramArray = array('interests', $articleId, ASSOC_TYPE_ARTICLE, 'SIGNOFF_COPYEDITING_INITIAL', $journalId, RoleDAO::getRoleIdFromPath('copyeditor'));
 		$searchSql = '';
 
 		$searchTypeMap = array(
@@ -1073,10 +950,10 @@ class SectionEditorSubmissionDAO extends DAO {
 			FROM	users u
 				LEFT JOIN user_settings s ON (u.user_id = s.user_id AND s.setting_name = ?)
 				LEFT JOIN roles r ON (r.user_id = u.user_id)
-				LEFT JOIN copyed_assignments a ON (a.copyeditor_id = u.user_id AND a.article_id = ?)
+				LEFT JOIN signoffs sci ON (sci.user_id = u.user_id AND sci.assoc_id = ? AND sci.assoc_type = ? AND sci.symbolic = ?)
 			WHERE	r.journal_id = ? AND
 				r.role_id = ? AND
-				a.article_id IS NULL
+				sci.assoc_id IS NULL
 				' . $searchSql . '
 			ORDER BY last_name, first_name',
 			$paramArray
@@ -1101,7 +978,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		$statistics = Array();
 
 		// Get counts of completed submissions
-		$result = &$this->retrieve('SELECT la.editor_id AS editor_id, COUNT(la.article_id) AS complete FROM layouted_assignments la, articles a INNER JOIN proof_assignments p ON (p.article_id = a.article_id) WHERE la.article_id = a.article_id AND (la.date_completed IS NOT NULL AND p.date_layouteditor_completed IS NOT NULL) AND la.date_notified IS NOT NULL AND a.journal_id = ? GROUP BY la.editor_id', $journalId);
+		$result = &$this->retrieve('SELECT sl.user_id AS editor_id, COUNT(sl.assoc_id) AS complete FROM signoffs sl, articles a INNER JOIN signoffs sp ON (sp.assoc_id = a.article_id) WHERE sl.assoc_id = a.article_id AND (sl.date_completed IS NOT NULL AND sp.date_completed IS NOT NULL) AND sl.date_notified IS NOT NULL AND a.journal_id = ? AND sl.symbolic = ? AND sp.symbolic = ? AND sl.assoc_type = ? AND sp.assoc_type = ? GROUP BY sl.user_id', array($journalId, 'SIGNOFF_LAYOUT', 'SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, ASSOC_TYPE_ARTICLE));
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			if (!isset($statistics[$row['editor_id']])) $statistics[$row['editor_id']] = array();
@@ -1113,7 +990,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		unset($result);
 
 		// Get counts of incomplete submissions
-		$result = &$this->retrieve('SELECT la.editor_id AS editor_id, COUNT(la.article_id) AS incomplete FROM layouted_assignments la, articles a INNER JOIN proof_assignments p ON (p.article_id = a.article_id) WHERE la.article_id = a.article_id AND (la.date_completed IS NULL OR p.date_layouteditor_completed IS NULL) AND la.date_notified IS NOT NULL AND a.journal_id = ? GROUP BY la.editor_id', $journalId);
+		$result = &$this->retrieve('SELECT sl.user_id AS editor_id, COUNT(sl.assoc_id) AS complete FROM signoffs sl, articles a INNER JOIN signoffs sp ON (sp.assoc_id = a.article_id) WHERE sl.assoc_id = a.article_id AND (sl.date_completed IS NULL AND sp.date_completed IS NULL) AND sl.date_notified IS NOT NULL AND a.journal_id = ? AND sl.symbolic = ? AND sp.symbolic = ? AND sl.assoc_type = ? AND sp.assoc_type = ? GROUP BY sl.user_id', array($journalId, 'SIGNOFF_LAYOUT', 'SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, ASSOC_TYPE_ARTICLE));
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			if (!isset($statistics[$row['editor_id']])) $statistics[$row['editor_id']] = array();
@@ -1125,7 +1002,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		unset($result);
 
 		// Get last assignment date
-		$result = &$this->retrieve('SELECT la.editor_id AS editor_id, MAX(la.date_notified) AS last_assigned FROM layouted_assignments la, articles a WHERE la.article_id=a.article_id AND a.journal_id=? GROUP BY la.editor_id', $journalId);
+		$result = &$this->retrieve('SELECT sl.user_id AS editor_id, MAX(sl.date_notified) AS last_assigned FROM signoffs sl, articles a WHERE sl.assoc_id=a.article_id AND a.journal_id=? AND sl.symbolic = ? AND sl.assoc_type = ? GROUP BY sl.user_id', array($journalId, 'SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE));
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			if (!isset($statistics[$row['editor_id']])) $statistics[$row['editor_id']] = array();
@@ -1205,7 +1082,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		$statistics = Array();
 
 		// Get counts of completed submissions
-		$result = &$this->retrieve('SELECT ca.copyeditor_id AS editor_id, COUNT(ca.article_id) AS complete FROM copyed_assignments ca, articles a WHERE ca.article_id = a.article_id AND ca.date_completed IS NOT NULL AND a.journal_id = ? GROUP BY ca.copyeditor_id', $journalId);
+		$result = &$this->retrieve('SELECT sc.user_id AS editor_id, COUNT(sc.assoc_id) AS complete FROM signoffs sc, articles a WHERE sc.assoc_id = a.article_id AND sc.date_completed IS NOT NULL AND a.journal_id = ? AND sc.symbolic = ? AND sc.assoc_type = ? GROUP BY sc.user_id', array($journalId, 'SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE));
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			if (!isset($statistics[$row['editor_id']])) $statistics[$row['editor_id']] = array();
@@ -1217,7 +1094,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		unset($result);
 
 		// Get counts of incomplete submissions
-		$result = &$this->retrieve('SELECT ca.copyeditor_id AS editor_id, COUNT(ca.article_id) AS incomplete FROM copyed_assignments ca, articles a WHERE ca.article_id = a.article_id AND ca.date_completed IS NULL AND a.journal_id = ? GROUP BY ca.copyeditor_id', $journalId);
+		$result = &$this->retrieve('SELECT sc.user_id AS editor_id, COUNT(sc.assoc_id) AS incomplete FROM signoffs sc, articles a WHERE sc.assoc_id = a.article_id AND sc.date_completed IS NULL AND a.journal_id = ? AND sc.symbolic = ? AND sc.assoc_type = ? GROUP BY sc.user_id', array($journalId, 'SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE));
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			if (!isset($statistics[$row['editor_id']])) $statistics[$row['editor_id']] = array();
@@ -1229,7 +1106,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		unset($result);
 
 		// Get last assignment date
-		$result = &$this->retrieve('SELECT ca.copyeditor_id AS editor_id, MAX(ca.date_notified) AS last_assigned FROM copyed_assignments ca, articles a WHERE ca.article_id = a.article_id AND a.journal_id = ? GROUP BY ca.copyeditor_id', $journalId);
+		$result = &$this->retrieve('SELECT sc.user_id AS editor_id, MAX(sc.date_notified) AS last_assigned FROM signoffs sc, articles a WHERE sc.assoc_id = a.article_id AND a.journal_id = ? AND sc.symbolic = ? AND sc.assoc_type = ? GROUP BY sc.user_id', array($journalId, 'SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE));
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			if (!isset($statistics[$row['editor_id']])) $statistics[$row['editor_id']] = array();
@@ -1251,11 +1128,11 @@ class SectionEditorSubmissionDAO extends DAO {
 		$statistics = Array();
 
 		// Get counts of completed submissions
-		$result = &$this->retrieve('SELECT pa.proofreader_id AS editor_id, COUNT(pa.article_id) AS complete FROM proof_assignments pa, articles a WHERE pa.article_id = a.article_id AND pa.date_proofreader_completed IS NOT NULL AND a.journal_id = ? GROUP BY pa.proofreader_id', $journalId);
+		$result = &$this->retrieve('SELECT sp.user_id AS editor_id, COUNT(sp.assoc_id) AS complete FROM signoffs sp, articles a WHERE sp.assoc_id = a.article_id AND sp.date_completed IS NOT NULL AND a.journal_id = ? AND sp.symbolic = ? AND sp.assoc_type = ? GROUP BY sp.user_id', array($journalId, 'SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE));
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			if (!isset($statistics[$row['editor_id']])) $statistics[$row['editor_id']] = array();
-			$statistics[$row['editor_id']]['complete'] = $row['complete'];
+			$statistics[$row['editor_id']]['complete'] = $row['complete'];	
 			$result->MoveNext();
 		}
 
@@ -1263,7 +1140,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		unset($result);
 
 		// Get counts of incomplete submissions
-		$result = &$this->retrieve('SELECT pa.proofreader_id AS editor_id, COUNT(pa.article_id) AS incomplete FROM proof_assignments pa, articles a WHERE pa.article_id = a.article_id AND pa.date_proofreader_completed IS NULL AND a.journal_id = ? GROUP BY pa.proofreader_id', $journalId);
+		$result = &$this->retrieve('SELECT sp.user_id AS editor_id, COUNT(sp.assoc_id) AS incomplete FROM signoffs sp, articles a WHERE sp.assoc_id = a.article_id AND sp.date_completed IS NULL AND a.journal_id = ? AND sp.symbolic = ? AND sp.assoc_type = ? GROUP BY sp.user_id', array($journalId, 'SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE));
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			if (!isset($statistics[$row['editor_id']])) $statistics[$row['editor_id']] = array();
@@ -1275,7 +1152,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		unset($result);
 
 		// Get last assignment date
-		$result = &$this->retrieve('SELECT pa.proofreader_id AS editor_id, MAX(pa.date_proofreader_notified) AS last_assigned FROM proof_assignments pa, articles a WHERE pa.article_id = a.article_id AND a.journal_id = ? GROUP BY pa.proofreader_id', $journalId);
+		$result = &$this->retrieve('SELECT sp.user_id AS editor_id, MAX(sp.assoc_id) AS last_assigned FROM signoffs sp, articles a WHERE sp.assoc_id = a.article_id AND a.journal_id = ? AND sp.symbolic = ? AND sp.assoc_type = ? GROUP BY sp.user_id', array($journalId, 'SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE));
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			if (!isset($statistics[$row['editor_id']])) $statistics[$row['editor_id']] = array();

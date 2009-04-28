@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
-{assign var=layoutAssignment value=$submission->getLayoutAssignment()}
-{assign var=layoutFile value=$layoutAssignment->getLayoutFile()}
+{assign var=layoutSignoff value=$submission->getSignoff('SIGNOFF_LAYOUT')}
+{assign var=layoutFile value=$submission->getFileBySignoffType('SIGNOFF_LAYOUT')}
+{assign var=layoutEditor value=$submission->getUserBySignoffType('SIGNOFF_LAYOUT')}
+
 <div id="layout">
 <h3>{translate key="submission.layout"}</h3>
 
@@ -17,7 +19,7 @@
 <table class="data" width="100%">
 	<tr>
 		<td width="20%" class="label">{translate key="user.role.layoutEditor"}</td>
-		{if $layoutAssignment->getEditorId()}<td width="20%" class="value">{$layoutAssignment->getEditorFullName()|escape}</td>{/if}
+		{if $layoutSignoff->getUserId()}<td width="20%" class="value">{$layoutEditor->getFullName()|escape}</td>{/if}
 		<td class="value"><a href="{url op="assignLayoutEditor" path=$submission->getArticleId()}" class="action">{translate key="submission.layout.assignLayoutEditor"}</a></td>
 	</tr>
 </table>
@@ -37,9 +39,9 @@
 		</td>
 		<td>
 			{if $useLayoutEditors}
-				{if $layoutAssignment->getEditorId() && $layoutFile}
+				{if $layoutSignoff->getUserId() && $layoutFile}
 					{url|assign:"url" op="notifyLayoutEditor" articleId=$submission->getArticleId()}
-					{if $layoutAssignment->getDateUnderway()}
+					{if $layoutSignoff->getDateUnderway()}
                                         	{translate|escape:"javascript"|assign:"confirmText" key="sectionEditor.layout.confirmRenotify"}
                                         	{icon name="mail" onclick="return confirm('$confirmText')" url=$url}
                                 	{else}
@@ -48,34 +50,34 @@
 				{else}
 					{icon name="mail" disabled="disable"}
 				{/if}
-				{$layoutAssignment->getDateNotified()|date_format:$dateFormatShort|default:""}
+				{$layoutSignoff->getDateNotified()|date_format:$dateFormatShort|default:""}
 			{else}
 				{translate key="common.notApplicableShort"}
 			{/if}
 		</td>
 		<td>
 			{if $useLayoutEditors}
-				{$layoutAssignment->getDateUnderway()|date_format:$dateFormatShort|default:"&mdash;"}
+				{$layoutSignoff->getDateUnderway()|date_format:$dateFormatShort|default:"&mdash;"}
 			{else}
 				{translate key="common.notApplicableShort"}
 			{/if}
 		</td>
 		<td>
 			{if $useLayoutEditors}
-				{$layoutAssignment->getDateCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
+				{$layoutSignoff->getDateCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
 			{else}
 				{translate key="common.notApplicableShort"}
 			{/if}
 		</td>
 		<td colspan="2">
 			{if $useLayoutEditors}
-				{if $layoutAssignment->getEditorId() &&  $layoutAssignment->getDateCompleted() && !$layoutAssignment->getDateAcknowledged()}
+				{if $layoutSignoff->getUserId() &&  $layoutSignoff->getDateCompleted() && !$layoutSignoff->getDateAcknowledged()}
 					{url|assign:"url" op="thankLayoutEditor" articleId=$submission->getArticleId()}
 					{icon name="mail" url=$url}
 				{else}
 					{icon name="mail" disabled="disable"}
 				{/if}
-				{$layoutAssignment->getDateAcknowledged()|date_format:$dateFormatShort|default:""}
+				{$layoutSignoff->getDateAcknowledged()|date_format:$dateFormatShort|default:""}
 			{else}
 				{translate key="common.notApplicableShort"}
 			{/if}

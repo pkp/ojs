@@ -35,7 +35,7 @@ class MetadataForm extends Form {
 	 */
 	function MetadataForm($article) {
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
-		$copyAssignmentDao = &DAORegistry::getDAO('CopyAssignmentDAO');
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 
 		$user = &Request::getUser();
 		$roleId = $roleDao->getRoleIdFromPath(Request::getRequestedPage());
@@ -48,10 +48,10 @@ class MetadataForm extends Form {
 			$this->isEditor = true;
 		}
 
+		$copyeditInitialSignoff = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $article->getArticleId());
 		// If the user is an author and the article hasn't passed the Copyediting stage, make the form editable.
 		if ($roleId == ROLE_ID_AUTHOR) {
-			$copyAssignment = $copyAssignmentDao->getCopyAssignmentByArticleId($article->getArticleId());
-			if ($article->getStatus() != STATUS_PUBLISHED && ($copyAssignment == null || $copyAssignment->getDateCompleted() == null)) {
+			if ($article->getStatus() != STATUS_PUBLISHED && ($copyeditInitialSignoff == null || $copyeditInitialSignoff->getDateCompleted() == null)) {
 				$this->canEdit = true;
 			}
 		}
@@ -59,9 +59,9 @@ class MetadataForm extends Form {
 		// Copy editors are also allowed to edit metadata, but only if they have
 		// a current assignment to the article.
 		if ($roleId != null && ($roleId == ROLE_ID_COPYEDITOR)) {
-			$copyAssignment = $copyAssignmentDao->getCopyAssignmentByArticleId($article->getArticleId());
-			if ($copyAssignment != null && $article->getStatus() != STATUS_PUBLISHED) {
-				if ($copyAssignment->getDateNotified() != null && $copyAssignment->getDateFinalCompleted() == null) {
+			$copyeditFinalSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $article->getArticleId());			
+			if ($copyeditFinalSignoff != null && $article->getStatus() != STATUS_PUBLISHED) {
+				if ($copyeditInitialSignoff->getDateNotified() != null && $copyeditFinalSignoff->getDateCompleted() == null) {
 					$this->canEdit = true;
 				}
 			}

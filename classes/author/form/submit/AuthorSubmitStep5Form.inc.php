@@ -128,8 +128,10 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 	 */
 	function execute() {
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 
 		$journal = Request::getJournal();
+		$user = Request::getUser();
 
 		// Update article		
 		$article = &$this->article;
@@ -149,24 +151,29 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		AuthorAction::designateReviewVersion($authorSubmission, true);
 		unset($authorSubmission);
 
-		// Create additional submission mangement records
-		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
-		$copyeditorSubmission = new CopyeditorSubmission();
-		$copyeditorSubmission->setArticleId($article->getArticleId());
-		$copyeditorSubmission->setCopyeditorId(0);
-		$copyeditorSubmissionDao->insertCopyeditorSubmission($copyeditorSubmission);
+		$copyeditInitialSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$copyeditAuthorSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$copyeditFinalSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$copyeditInitialSignoff->setUserId(0);
+		$copyeditAuthorSignoff->setUserId($user->getUserId());
+		$copyeditFinalSignoff->setUserId(0);
+		$signoffDao->updateObject($copyeditInitialSignoff);
+		$signoffDao->updateObject($copyeditAuthorSignoff);
+		$signoffDao->updateObject($copyeditFinalSignoff);
 
-		$layoutDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
-		$layoutAssignment = new LayoutAssignment();
-		$layoutAssignment->setArticleId($article->getArticleId());
-		$layoutAssignment->setEditorId(0);
-		$layoutDao->insertLayoutAssignment($layoutAssignment);
+		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$layoutSignoff->setUserId(0);
+		$signoffDao->updateObject($layoutSignoff);
 
-		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
-		$proofAssignment = new ProofAssignment();
-		$proofAssignment->setArticleId($article->getArticleId());
-		$proofAssignment->setProofreaderId(0);
-		$proofAssignmentDao->insertProofAssignment($proofAssignment);
+		$proofAuthorSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_AUTHOR', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$proofProofreaderSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$proofLayoutEditorSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$proofAuthorSignoff->setUserId($user->getUserId());
+		$proofProofreaderSignoff->setUserId(0);
+		$proofLayoutEditorSignoff->setUserId(0);
+		$signoffDao->updateObject($proofAuthorSignoff);
+		$signoffDao->updateObject($proofProofreaderSignoff);
+		$signoffDao->updateObject($proofLayoutEditorSignoff);
 
 		$sectionEditors = $this->assignEditors($article);
 

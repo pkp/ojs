@@ -784,24 +784,20 @@ class NativeImportDom {
 		$dependentItems[] = array('article', $article);
 
 		// Create submission mangement records
-		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
-		$copyeditorSubmission = new CopyeditorSubmission();
-		$copyeditorSubmission->setArticleId($article->getArticleId());
-		$copyeditorSubmission->setCopyeditorId(0);
-		$copyeditorSubmissionDao->insertCopyeditorSubmission($copyeditorSubmission);
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 
-		$layoutDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
-		$layoutAssignment = new LayoutAssignment();
-		$layoutAssignment->setArticleId($article->getArticleId());
-		$layoutAssignment->setEditorId(0);
-		$layoutAssignment->setDateAcknowledged(Core::getCurrentDate()); // Make sure that imported articles go directly into the Archive. FIXME?
-		$layoutDao->insertLayoutAssignment($layoutAssignment);
+		$copyeditSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$copyeditSignoff->setArticleId($article->getArticleId());
+		$signoffDao->updateObject($copyeditSignoff);
 
-		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
-		$proofAssignment = new ProofAssignment();
-		$proofAssignment->setArticleId($article->getArticleId());
-		$proofAssignment->setProofreaderId(0);
-		$proofAssignmentDao->insertProofAssignment($proofAssignment);
+		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$layoutSignoff->setUserId(0);
+		$layoutSignoff->setDateAcknowledged(Core::getCurrentDate()); // Make sure that imported articles go directly into the Archive. FIXME?
+		$signoffDao->updateObject($layoutSignoff);
+
+		$proofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$proofSignoff->setUserId(0);
+		$signoffDao->updateObject($proofSignoff);
 
 		// Log the import in the article event log.
 		import('article.log.ArticleLog');

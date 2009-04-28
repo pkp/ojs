@@ -37,10 +37,12 @@ class CopyeditorAction extends Action {
 	 */
 	function completeCopyedit($copyeditorSubmission, $send = false) {
 		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
 
-		if ($copyeditorSubmission->getDateCompleted() != null) {
+		$initialSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $copyeditorSubmission->getArticleId());
+		if ($initialSignoff->getDateCompleted() != null) {
 			return true;
 		}
 
@@ -59,9 +61,14 @@ class CopyeditorAction extends Action {
 				$email->send();
 			}
 
-			$copyeditorSubmission->setDateCompleted(Core::getCurrentDate());
-			$copyeditorSubmission->setDateAuthorNotified(Core::getCurrentDate());
-			$copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
+			$initialSignoff->setDateCompleted(Core::getCurrentDate());
+			
+			$authorSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $copyeditorSubmission->getArticleId());
+			$authorSignoff->setUserId($author->getUserId());
+			$authorSignoff->setDateNotified(Core::getCurrentDate());
+			$signoffDao->updateObject($initialSignoff);
+			$signoffDao->updateObject($authorSignoff);
+			
 
 			// Add log entry
 			import('article.log.ArticleLog');
@@ -96,10 +103,12 @@ class CopyeditorAction extends Action {
 	 */
 	function completeFinalCopyedit($copyeditorSubmission, $send = false) {
 		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
 
-		if ($copyeditorSubmission->getDateFinalCompleted() != null) {
+		$finalSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $copyeditorSubmission->getArticleId());
+		if ($finalSignoff->getDateCompleted() != null) {
 			return true;
 		}
 
@@ -116,20 +125,19 @@ class CopyeditorAction extends Action {
 				$email->send();
 			}
 
-			$copyeditorSubmission->setDateFinalCompleted(Core::getCurrentDate());
-			$copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
+			$finalSignoff->setDateCompleted(Core::getCurrentDate());
+			$signoffDao->updateObject($finalSignoff);
 
-			if ($copyEdFile =& $copyeditorSubmission->getFinalCopyeditFile()) {
+			if ($copyEdFile = $copyeditorSubmission->getFileBySignoffType('SIGNOFF_COPYEDITING_FINAL')) {
 				// Set initial layout version to final copyedit version
-				$layoutDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
-				$layoutAssignment = &$layoutDao->getLayoutAssignmentByArticleId($copyeditorSubmission->getArticleId());
+				$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $copyeditorSubmission->getArticleId());
 
-				if (isset($layoutAssignment) && !$layoutAssignment->getLayoutFileId()) {
+				if (!$layoutSignoff->getFileId()) {
 					import('file.ArticleFileManager');
 					$articleFileManager = new ArticleFileManager($copyeditorSubmission->getArticleId());
 					if ($layoutFileId = $articleFileManager->copyToLayoutFile($copyEdFile->getFileId(), $copyEdFile->getRevision())) {
-						$layoutAssignment->setLayoutFileId($layoutFileId);
-						$layoutDao->updateLayoutAssignment($layoutAssignment);
+						$layoutSignoff->setFileId($layoutFileId);
+						$signoffDao->updateObject($layoutSignoff);
 					}
 				}
 			}
@@ -173,20 +181,24 @@ class CopyeditorAction extends Action {
 	 */
 	function copyeditUnderway(&$copyeditorSubmission) {
 		if (!HookRegistry::call('CopyeditorAction::copyeditUnderway', array(&$copyeditorSubmission))) {
-			$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');		
+			$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');	
+			$signoffDao = &DAORegistry::getDAO('SignoffDAO');
+			
+			$initialSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $copyeditorSubmission->getArticleId());
+			$finalSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $copyeditorSubmission->getArticleId());
 
-			if ($copyeditorSubmission->getDateNotified() != null && $copyeditorSubmission->getDateUnderway() == null) {
-				$copyeditorSubmission->setDateUnderway(Core::getCurrentDate());
+			if ($initialSignoff->getDateNotified() != null && $initialSignoff->getDateUnderway() == null) {
+				$initialSignoff->setDateUnderway(Core::getCurrentDate());
+				$signoffDao->updateObject($initialSignoff);
 				$update = true;
 
-			} elseif ($copyeditorSubmission->getDateFinalNotified() != null && $copyeditorSubmission->getDateFinalUnderway() == null) {
-				$copyeditorSubmission->setDateFinalUnderway(Core::getCurrentDate());
+			} elseif ($finalSignoff->getDateNotified() != null && $finalSignoff->getDateUnderway() == null) {
+				$finalSignoff->setDateUnderway(Core::getCurrentDate());
+				$signoffDao->updateObject($finalSignoff);
 				$update = true;
 			}
 
 			if (isset($update)) {
-				$copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
-
 				// Add log entry
 				$user = &Request::getUser();
 				import('article.log.ArticleLog');
@@ -204,11 +216,18 @@ class CopyeditorAction extends Action {
 		import("file.ArticleFileManager");
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');		
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
+
+		if($copyeditStage == 'initial') {
+			$signoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $copyeditorSubmission->getArticleId());
+		} else if($copyeditStage == 'final') {
+			$signoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $copyeditorSubmission->getArticleId());
+		}
 
 		// Only allow an upload if they're in the initial or final copyediting
 		// stages.
-		if ($copyeditStage == 'initial' && ($copyeditorSubmission->getDateNotified() == null || $copyeditorSubmission->getDateCompleted() != null)) return;
-		else if ($copyeditStage == 'final' && ($copyeditorSubmission->getDateFinalNotified() == null || $copyeditorSubmission->getDateFinalCompleted() != null)) return;
+		if ($copyeditStage == 'initial' && ($signoff->getDateNotified() == null || $signoff->getDateCompleted() != null)) return;
+		else if ($copyeditStage == 'final' && ($signoff->getDateNotified() == null || $signoff->getDateCompleted() != null)) return;
 		else if ($copyeditStage != 'initial' && $copyeditStage != 'final') return;
 
 		$articleFileManager = new ArticleFileManager($copyeditorSubmission->getArticleId());
@@ -217,23 +236,17 @@ class CopyeditorAction extends Action {
 		$fileName = 'upload';
 		if ($articleFileManager->uploadedFileExists($fileName)) {
 			HookRegistry::call('CopyeditorAction::uploadCopyeditVersion', array(&$copyeditorSubmission));
-			if ($copyeditorSubmission->getCopyeditFileId() != null) {
-				$fileId = $articleFileManager->uploadCopyeditFile($fileName, $copyeditorSubmission->getCopyeditFileId());
+			if ($signoff->getFileId() != null) {
+				$fileId = $articleFileManager->uploadCopyeditFile($fileName, $copyeditorSubmission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL', true));
 			} else {
 				$fileId = $articleFileManager->uploadCopyeditFile($fileName);
 			}
 		}
 
 		if (isset($fileId) && $fileId != 0) {
-			$copyeditorSubmission->setCopyeditFileId($fileId);
-
-			if ($copyeditStage == 'initial') {
-				$copyeditorSubmission->setInitialRevision($articleFileDao->getRevisionNumber($fileId));
-			} elseif ($copyeditStage == 'final') {
-				$copyeditorSubmission->setFinalRevision($articleFileDao->getRevisionNumber($fileId));
-			}
-
-			$copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
+			$signoff->setFileId($fileId);
+			$signoff->setFileRevision($articleFileDao->getRevisionNumber($fileId));
+			$signoffDao->updateObject($signoff);
 
 			// Add log
 			import('article.log.ArticleLog');
@@ -250,6 +263,8 @@ class CopyeditorAction extends Action {
 
 			ArticleLog::logEventEntry($copyeditorSubmission->getArticleId(), $entry);
 		}
+		
+		
 	}
 
 	//
@@ -379,21 +394,25 @@ class CopyeditorAction extends Action {
 		// 3) The author copyedit revision, after the author copyedit has been completed
 		// 4) The final copyedit revision
 		// 5) Layout galleys
-		if ($submission->getCopyeditFileId() == $fileId) {
+		if ($submission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL', true) == $fileId) {
 			$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');		
 			$currentRevision = &$articleFileDao->getRevisionNumber($fileId);
 
 			if ($revision == null) {
 				$revision = $currentRevision;
 			}
-
+				
+			$initialSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $authorSubmission->getArticleId());
+			$authorSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $authorSubmission->getArticleId());
+			$finalSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $authorSubmission->getArticleId());
+				
 			if ($revision == 1) {
 				$canDownload = true;
-			} else if ($submission->getInitialRevision() == $revision) {
+			} else if ($initialSignoff->getFileRevision() == $revision) {
 				$canDownload = true;
-			} else if ($submission->getEditorAuthorRevision() == $revision && $submission->getDateAuthorCompleted() != null) {
+			} else if ($authorSignoff->getFileRevision() == $revision && $submission->getDateAuthorCompleted() != null) {
 				$canDownload = true;
-			} else if ($submission->getFinalRevision() == $revision) {
+			} else if ($finalSignoff->getFileRevision() == $revision) {
 				$canDownload = true;
 			}
 		}

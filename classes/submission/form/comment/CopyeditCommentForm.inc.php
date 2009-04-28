@@ -67,6 +67,7 @@ class CopyeditCommentForm extends CommentForm {
 	function email() {
 		$article = $this->article;
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
 
@@ -96,10 +97,9 @@ class CopyeditCommentForm extends CommentForm {
 		}
 
 		// Get copyeditor
-		$copyAssignmentDao = &DAORegistry::getDAO('CopyAssignmentDAO');
-		$copyAssignment = &$copyAssignmentDao->getCopyAssignmentByArticleId($article->getArticleId());
-		if ($copyAssignment != null && $copyAssignment->getCopyeditorId() > 0) {
-			$copyeditor = &$userDao->getUser($copyAssignment->getCopyeditorId());
+		$copySignoff = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		if ($copySignoff != null && $copySignoff->getUserId() > 0) {
+			$copyeditor = &$userDao->getUser($copySignoff->getUserId());
 		} else {
 			$copyeditor = null;
 		}

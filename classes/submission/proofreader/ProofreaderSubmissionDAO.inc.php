@@ -23,8 +23,6 @@ class ProofreaderSubmissionDAO extends DAO {
 	var $articleDao;
 	var $articleCommentDao;
 	var $editAssignmentDao;
-	var $proofAssignmentDao;
-	var $layoutAssignmentDao;
 	var $galleyDao;
 	var $suppFileDao;
 
@@ -36,9 +34,7 @@ class ProofreaderSubmissionDAO extends DAO {
 
 		$this->articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$this->articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-		$this->proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
 		$this->editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
-		$this->layoutAssignmentDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
 		$this->galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		$this->suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 	}
@@ -100,15 +96,12 @@ class ProofreaderSubmissionDAO extends DAO {
 		$submission = new ProofreaderSubmission();
 		$this->articleDao->_articleFromRow($submission, $row);
 		$submission->setMostRecentProofreadComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_PROOFREAD, $row['article_id']));
-		$submission->setProofAssignment($this->proofAssignmentDao->getProofAssignmentByArticleId($row['article_id']));
 
 		// Editor Assignment
 		$editAssignments =& $this->editAssignmentDao->getEditAssignmentsByArticleId($row['article_id']);
 		$submission->setEditAssignments($editAssignments->toArray());
 
 		// Layout reference information
-		$submission->setLayoutAssignment($this->layoutAssignmentDao->getLayoutAssignmentByArticleId($row['article_id']));
-
 		$submission->setGalleys($this->galleyDao->getGalleysByArticle($row['article_id']));
 
 		$submission->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
@@ -118,16 +111,6 @@ class ProofreaderSubmissionDAO extends DAO {
 		HookRegistry::call('ProofreaderSubmissionDAO::_returnProofreaderSubmissionFromRow', array(&$submission, &$row));
 
 		return $submission;
-	}
-
-	/**
-	 * Update an existing proofreader submission.
-	 * @param $submission ProofreaderSubmission
-	 */
-	function updateSubmission(&$submission) {
-		// Only update proofread-specific data
-		$proofreadAssignment =& $submission->getProofAssignment();
-		$this->proofAssignmentDao->updateProofAssignment($proofAssignment);
 	}
 
 	/**
@@ -157,6 +140,14 @@ class ProofreaderSubmissionDAO extends DAO {
 			'abbrev',
 			$locale,
 			'title',
+			ASSOC_TYPE_ARTICLE, 
+			'SIGNOFF_COPYEDITING_FINAL',
+			ASSOC_TYPE_ARTICLE, 
+			'SIGNOFF_LAYOUT',
+			ASSOC_TYPE_ARTICLE, 
+			'SIGNOFF_PROOFREADING_PROOFREADER',
+			ASSOC_TYPE_ARTICLE, 
+			'SIGNOFF_COPYEDITING_INITIAL',
 			$proofreaderId
 		);
 		if (isset($journalId)) $params[] = $journalId;
@@ -222,26 +213,26 @@ class ProofreaderSubmissionDAO extends DAO {
 				break;
 			case SUBMISSION_FIELD_DATE_COPYEDIT_COMPLETE:
 				if (!empty($dateFrom)) {
-					$searchSql .= ' AND c.date_final_completed >= ' . $this->datetimeToDB($dateFrom);
+					$searchSql .= ' AND scp.date_completed >= ' . $this->datetimeToDB($dateFrom);
 				}
 				if (!empty($dateTo)) {
-					$searchSql .= ' AND c.date_final_completed <= ' . $this->datetimeToDB($dateTo);
+					$searchSql .= ' AND scp.date_completed <= ' . $this->datetimeToDB($dateTo);
 				}
 				break;
 			case SUBMISSION_FIELD_DATE_LAYOUT_COMPLETE:
 				if (!empty($dateFrom)) {
-					$searchSql .= ' AND l.date_completed >= ' . $this->datetimeToDB($dateFrom);
+					$searchSql .= ' AND sle.date_completed >= ' . $this->datetimeToDB($dateFrom);
 				}
 				if (!empty($dateTo)) {
-					$searchSql .= ' AND l.date_completed <= ' . $this->datetimeToDB($dateTo);
+					$searchSql .= ' AND sle.date_completed <= ' . $this->datetimeToDB($dateTo);
 				}
 				break;
 			case SUBMISSION_FIELD_DATE_PROOFREADING_COMPLETE:
 				if (!empty($dateFrom)) {
-					$searchSql .= ' AND p.date_proofreader_completed >= ' . $this->datetimeToDB($dateFrom);
+					$searchSql .= ' AND spr.date_completed >= ' . $this->datetimeToDB($dateFrom);
 				}
 				if (!empty($dateTo)) {
-					$searchSql .= 'AND p.date_proofreader_completed <= ' . $this->datetimeToDB($dateTo);
+					$searchSql .= 'AND spr.date_completed <= ' . $this->datetimeToDB($dateTo);
 				}
 				break;
 		}
@@ -252,26 +243,27 @@ class ProofreaderSubmissionDAO extends DAO {
 			FROM
 				articles a
 				INNER JOIN article_authors aa ON (aa.article_id = a.article_id)
-				INNER JOIN proof_assignments p ON (p.article_id = a.article_id)
 				LEFT JOIN sections s ON s.section_id = a.section_id
-				LEFT JOIN copyed_assignments c ON (c.article_id = a.article_id)
 				LEFT JOIN edit_assignments e ON (e.article_id = a.article_id)
 				LEFT JOIN users ed ON (e.editor_id = ed.user_id)
-				LEFT JOIN layouted_assignments l ON (l.article_id = a.article_id)
 				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
 				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
 				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
 				LEFT JOIN article_settings atl ON (a.article_id = atl.article_id AND atl.setting_name = ?)
+				LEFT JOIN signoffs scpf ON (a.article_id = scpf.assoc_id AND scpf.assoc_type = ? AND scpf.symbolic = ?)
+				LEFT JOIN signoffs sle ON (a.article_id = sle.assoc_id AND sle.assoc_type = ? AND sle.symbolic = ?)
+				LEFT JOIN signoffs spr ON (a.article_id = spr.assoc_id AND spr.assoc_type = ? AND spr.symbolic = ?)
+				LEFT JOIN signoffs scpi ON (a.article_id = scpi.assoc_id AND scpi.assoc_type = ? AND scpi.symbolic = ?)
 			WHERE
-				p.proofreader_id = ? AND
+				spr.user_id = ? AND
 				' . (isset($journalId)?'a.journal_id = ? AND':'') . '
-				p.date_proofreader_notified IS NOT NULL';
+				spr.date_notified IS NOT NULL';
 
 		if ($active) {
-			$sql .= ' AND p.date_proofreader_completed IS NULL';
+			$sql .= ' AND spr.date_completed IS NULL';
 		} else {
-			$sql .= ' AND p.date_proofreader_completed IS NOT NULL';		
+			$sql .= ' AND spr.date_completed IS NOT NULL';		
 		}
 
 		$result = &$this->retrieveRange($sql . ' ' . $searchSql, $params, $rangeInfo);
@@ -290,12 +282,19 @@ class ProofreaderSubmissionDAO extends DAO {
 		$submissionsCount[0] = 0;
 		$submissionsCount[1] = 0;
 
-		$sql = 'SELECT p.date_proofreader_completed FROM articles a INNER JOIN proof_assignments p ON (p.article_id = a.article_id) LEFT JOIN sections s ON s.section_id = a.section_id WHERE p.proofreader_id = ? AND a.journal_id = ? AND p.date_proofreader_notified IS NOT NULL';
+		$sql = 'SELECT 
+					spp.date_completed 
+				FROM 
+					articles a 
+					LEFT JOIN signoffs spp ON (a.article_id = spp.assoc_id AND spp.assoc_type = ? AND spp.symbolic = ?)
+					LEFT JOIN sections s ON s.section_id = a.section_id 
+				WHERE 
+					spp.user_id = ? AND a.journal_id = ? AND spp.date_notified IS NOT NULL';
 
-		$result = &$this->retrieve($sql, array($proofreaderId, $journalId));
+		$result = &$this->retrieve($sql, array(ASSOC_TYPE_ARTICLE, 'SIGNOFF_PROOFREADING_PROOFREADER', $proofreaderId, $journalId));
 
 		while (!$result->EOF) {
-			if ($result->fields['date_proofreader_completed'] == null) {
+			if ($result->fields['date_completed'] == null) {
 				$submissionsCount[0] += 1;
 			} else {
 				$submissionsCount[1] += 1;

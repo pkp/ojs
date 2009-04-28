@@ -14,10 +14,6 @@
 {include file="common/header.tpl"}
 {/strip}
 
-{assign var=layoutAssignment value=$submission->getLayoutAssignment()}
-{assign var=proofAssignment value=$submission->getProofAssignment()}
-{assign var=layoutFile value=$layoutAssignment->getLayoutFile()}
-
 {include file="layoutEditor/submission/summary.tpl"}
 
 <div class="separator"></div>

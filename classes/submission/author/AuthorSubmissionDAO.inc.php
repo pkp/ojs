@@ -27,8 +27,6 @@ class AuthorSubmissionDAO extends DAO {
 	var $suppFileDao;
 	var $copyeditorSubmissionDao;
 	var $articleCommentDao;
-	var $layoutAssignmentDao;
-	var $proofAssignmentDao;
 	var $galleyDao;
 
 	/**
@@ -45,8 +43,6 @@ class AuthorSubmissionDAO extends DAO {
 		$this->suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 		$this->copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
 		$this->articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-		$this->layoutAssignmentDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
-		$this->proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
 		$this->galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 	}
 
@@ -61,13 +57,9 @@ class AuthorSubmissionDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT	a.*,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
-				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev,
-				c.copyed_id, c.copyeditor_id, c.date_notified AS copyeditor_date_notified, c.date_underway AS copyeditor_date_underway, c.date_completed AS copyeditor_date_completed, c.date_acknowledged AS copyeditor_date_acknowledged, c.date_author_notified AS ce_date_author_notified, c.date_author_underway AS ce_date_author_underway, c.date_author_completed AS ce_date_author_completed,
-				c.date_author_acknowledged AS ce_date_author_acknowledged, c.date_final_notified AS ce_date_final_notified, c.date_final_underway AS ce_date_final_underway, c.date_final_completed AS ce_date_final_completed, c.date_final_acknowledged AS ce_date_final_acknowledged, c.initial_revision AS copyeditor_initial_revision, c.editor_author_revision AS ce_editor_author_revision,
-				c.final_revision AS copyeditor_final_revision
+				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
 			FROM articles a
 				LEFT JOIN sections s ON (s.section_id = a.section_id)
-				LEFT JOIN copyed_assignments c on (a.article_id = c.article_id)
 				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
 				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
@@ -140,47 +132,6 @@ class AuthorSubmissionDAO extends DAO {
 		}
 		$authorSubmission->setGalleys($this->galleyDao->getGalleysByArticle($row['article_id']));
 
-		// Initial Copyedit File
-		if ($row['copyeditor_initial_revision'] != null) {
-			$authorSubmission->setInitialCopyeditFile($this->articleFileDao->getArticleFile($row['copyedit_file_id'], $row['copyeditor_initial_revision']));
-		}
-
-		// Editor / Author Copyedit File
-		if ($row['ce_editor_author_revision'] != null) {
-			$authorSubmission->setEditorAuthorCopyeditFile($this->articleFileDao->getArticleFile($row['copyedit_file_id'], $row['ce_editor_author_revision']));
-		}
-
-		// Final Copyedit File
-		if ($row['copyeditor_final_revision'] != null) {
-			$authorSubmission->setFinalCopyeditFile($this->articleFileDao->getArticleFile($row['copyedit_file_id'], $row['copyeditor_final_revision']));
-		}
-
-		// Copyeditor Assignment
-		$authorSubmission->setCopyedId($row['copyed_id']);
-		$authorSubmission->setCopyeditorId($row['copyeditor_id']);
-		$authorSubmission->setCopyeditor($this->userDao->getUser($row['copyeditor_id']), true);
-		$authorSubmission->setCopyeditorDateNotified($this->datetimeFromDB($row['copyeditor_date_notified']));
-		$authorSubmission->setCopyeditorDateUnderway($this->datetimeFromDB($row['copyeditor_date_underway']));
-		$authorSubmission->setCopyeditorDateCompleted($this->datetimeFromDB($row['copyeditor_date_completed']));
-		$authorSubmission->setCopyeditorDateAcknowledged($this->datetimeFromDB($row['copyeditor_date_acknowledged']));
-		$authorSubmission->setCopyeditorDateAuthorNotified($this->datetimeFromDB($row['ce_date_author_notified']));
-		$authorSubmission->setCopyeditorDateAuthorUnderway($this->datetimeFromDB($row['ce_date_author_underway']));
-		$authorSubmission->setCopyeditorDateAuthorCompleted($this->datetimeFromDB($row['ce_date_author_completed']));
-		$authorSubmission->setCopyeditorDateAuthorAcknowledged($this->datetimeFromDB($row['ce_date_author_acknowledged']));
-		$authorSubmission->setCopyeditorDateFinalNotified($this->datetimeFromDB($row['ce_date_final_notified']));
-		$authorSubmission->setCopyeditorDateFinalUnderway($this->datetimeFromDB($row['ce_date_final_underway']));
-		$authorSubmission->setCopyeditorDateFinalCompleted($this->datetimeFromDB($row['ce_date_final_completed']));
-		$authorSubmission->setCopyeditorDateFinalAcknowledged($this->datetimeFromDB($row['ce_date_final_acknowledged']));
-		$authorSubmission->setCopyeditorInitialRevision($row['copyeditor_initial_revision']);
-		$authorSubmission->setCopyeditorEditorAuthorRevision($row['ce_editor_author_revision']);
-		$authorSubmission->setCopyeditorFinalRevision($row['copyeditor_final_revision']);
-
-		// Layout Assignment
-		$authorSubmission->setLayoutAssignment($this->layoutAssignmentDao->getLayoutAssignmentByArticleId($row['article_id']));
-
-		// Proof Assignment
-		$authorSubmission->setProofAssignment($this->proofAssignmentDao->getProofAssignmentByArticleId($row['article_id']));
-
 		HookRegistry::call('AuthorSubmissionDAO::_returnAuthorSubmissionFromRow', array(&$authorSubmission, &$row));
 
 		return $authorSubmission;
@@ -208,21 +159,6 @@ class AuthorSubmissionDAO extends DAO {
 			$this->articleDao->updateArticle($article);
 		}
 
-
-		// Update copyeditor assignment
-		if ($authorSubmission->getCopyedId()) {
-			$copyeditorSubmission = &$this->copyeditorSubmissionDao->getCopyeditorSubmission($authorSubmission->getArticleId());
-
-			// Only update fields that an author can actually edit.
-			$copyeditorSubmission->setDateAuthorUnderway($authorSubmission->getCopyeditorDateAuthorUnderway());
-			$copyeditorSubmission->setDateAuthorCompleted($authorSubmission->getCopyeditorDateAuthorCompleted());
-			$copyeditorSubmission->setDateFinalNotified($authorSubmission->getCopyeditorDateFinalNotified());
-			$copyeditorSubmission->setEditorAuthorRevision($authorSubmission->getCopyeditorEditorAuthorRevision());
-			$copyeditorSubmission->setDateStatusModified($authorSubmission->getDateStatusModified());
-			$copyeditorSubmission->setLastModified($authorSubmission->getLastModified());
-
-			$this->copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
-		}
 	}
 
 	/**
@@ -236,13 +172,9 @@ class AuthorSubmissionDAO extends DAO {
 		$result = &$this->retrieveRange(
 			'SELECT	a.*,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
-				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev,
-				c.copyed_id, c.copyeditor_id, c.date_notified AS copyeditor_date_notified, c.date_underway AS copyeditor_date_underway, c.date_completed AS copyeditor_date_completed, c.date_acknowledged AS copyeditor_date_acknowledged, c.date_author_notified AS ce_date_author_notified, c.date_author_underway AS ce_date_author_underway, c.date_author_completed AS ce_date_author_completed,
-				c.date_author_acknowledged AS ce_date_author_acknowledged, c.date_final_notified AS ce_date_final_notified, c.date_final_underway AS ce_date_final_underway, c.date_final_completed AS ce_date_final_completed, c.date_final_acknowledged AS ce_date_final_acknowledged, c.initial_revision AS copyeditor_initial_revision, c.editor_author_revision AS ce_editor_author_revision,
-				c.final_revision AS copyeditor_final_revision
+				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
 			FROM articles a
 				LEFT JOIN sections s ON (s.section_id = a.section_id)
-				LEFT JOIN copyed_assignments c on (a.article_id = c.article_id)
 				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
 				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
@@ -317,7 +249,7 @@ class AuthorSubmissionDAO extends DAO {
 		$submissionsCount[0] = 0;
 		$submissionsCount[1] = 0;
 
-		$sql = 'SELECT count(*), status FROM articles a LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c on (a.article_id = c.article_id) WHERE a.journal_id = ? AND a.user_id = ? GROUP BY a.status';
+		$sql = 'SELECT count(*), status FROM articles a LEFT JOIN sections s ON (s.section_id = a.section_id) WHERE a.journal_id = ? AND a.user_id = ? GROUP BY a.status';
 
 		$result = &$this->retrieve($sql, array($journalId, $authorId));
 

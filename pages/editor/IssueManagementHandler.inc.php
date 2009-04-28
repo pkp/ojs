@@ -300,8 +300,8 @@ class IssueManagementHandler extends EditorHandler {
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticles = $publishedArticleDao->getPublishedArticles($issueId);
 
-		$layoutAssignmentDao =& DAORegistry::getDAO('LayoutAssignmentDAO');
-		$proofedArticleIds = $layoutAssignmentDao->getProofedArticlesByIssueId($issueId);
+		$layoutEditorSubmissionDao = &DAORegistry::getDAO('LayoutEditorSubmissionDAO');
+		$proofedArticleIds = $layoutEditorSubmissionDao->getProofedArticlesByIssueId($issueId);
 		$templateMgr->assign('proofedArticleIds', $proofedArticleIds);
 
 		$currSection = 0;

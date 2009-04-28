@@ -31,6 +31,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		$this->validate($articleId);
 		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId);		
+		$journal = &Request::getJournal();
 
 		CopyeditorAction::copyeditUnderway($submission);
 
@@ -39,11 +40,10 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		$templateMgr = &TemplateManager::getManager();
 
 		$templateMgr->assign_by_ref('submission', $submission);
-		$templateMgr->assign_by_ref('copyeditor', $submission->getCopyeditor());
-		$templateMgr->assign_by_ref('initialCopyeditFile', $submission->getInitialCopyeditFile());
-		$templateMgr->assign_by_ref('editorAuthorCopyeditFile', $submission->getEditorAuthorCopyeditFile());
-		$templateMgr->assign_by_ref('finalCopyeditFile', $submission->getFinalCopyeditFile());
-		$templateMgr->assign_by_ref('proofAssignment', $submission->getProofAssignment());
+		$templateMgr->assign_by_ref('copyeditor', $submission->getUserBySignoffType('SIGNOFF_COPYEDITING_INITIAL'));
+		$templateMgr->assign_by_ref('initialCopyeditFile', $submission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL'));
+		$templateMgr->assign_by_ref('editorAuthorCopyeditFile', $submission->getFileBySignoffType('SIGNOFF_COPYEDITING_AUTHOR'));
+		$templateMgr->assign_by_ref('finalCopyeditFile', $submission->getFileBySignoffType('SIGNOFF_COPYEDITING_FINAL'));
 		$templateMgr->assign('useLayoutEditors', $useLayoutEditors);
 		$templateMgr->assign('helpTopicId', 'editorial.copyeditorsRole.copyediting');
 		$templateMgr->display('copyeditor/submission.tpl');
@@ -143,7 +143,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		} else if ($copyeditorSubmission->getJournalId() != $journal->getJournalId()) {
 			$isValid = false;
 		} else {
-			if ($copyeditorSubmission->getCopyeditorId() != $user->getUserId()) {
+			if ($copyeditorSubmission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL') != $user->getUserId()) {
 				$isValid = false;
 			}
 		}

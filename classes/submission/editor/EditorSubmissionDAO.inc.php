@@ -212,6 +212,12 @@ class EditorSubmissionDAO extends DAO {
 		$primaryLocale = Locale::getPrimaryLocale();
 		$locale = Locale::getLocale();
 		$params = array(
+			ASSOC_TYPE_ARTICLE,
+			'SIGNOFF_COPYEDITING_FINAL',
+			ASSOC_TYPE_ARTICLE,
+			'SIGNOFF_PROOFREADING_PROOFREADER',
+			ASSOC_TYPE_ARTICLE,
+			'SIGNOFF_LAYOUT',
 			'title', // Section title
 			$primaryLocale,
 			'title',
@@ -271,26 +277,26 @@ class EditorSubmissionDAO extends DAO {
 				break;
 			case SUBMISSION_FIELD_DATE_COPYEDIT_COMPLETE:
 				if (!empty($dateFrom)) {
-					$searchSql .= ' AND c.date_final_completed >= ' . $this->datetimeToDB($dateFrom);
+					$searchSql .= ' AND sfc.date_completed >= ' . $this->datetimeToDB($dateFrom);
 				}
 				if (!empty($dateTo)) {
-					$searchSql .= ' AND c.date_final_completed <= ' . $this->datetimeToDB($dateTo);
+					$searchSql .= ' AND scf.date_completed <= ' . $this->datetimeToDB($dateTo);
 				}
 				break;
 			case SUBMISSION_FIELD_DATE_LAYOUT_COMPLETE:
 				if (!empty($dateFrom)) {
-					$searchSql .= ' AND l.date_completed >= ' . $this->datetimeToDB($dateFrom);
+					$searchSql .= ' AND sle.date_completed >= ' . $this->datetimeToDB($dateFrom);
 				}
 				if (!empty($dateTo)) {
-					$searchSql .= ' AND l.date_completed <= ' . $this->datetimeToDB($dateTo);
+					$searchSql .= ' AND sle.date_completed <= ' . $this->datetimeToDB($dateTo);
 				}
 				break;
 			case SUBMISSION_FIELD_DATE_PROOFREADING_COMPLETE:
 				if (!empty($dateFrom)) {
-					$searchSql .= ' AND p.date_proofreader_completed >= ' . $this->datetimeToDB($dateFrom);
+					$searchSql .= ' AND spr.date_completed >= ' . $this->datetimeToDB($dateFrom);
 				}
 				if (!empty($dateTo)) {
-					$searchSql .= ' AND p.date_proofreader_completed <= ' . $this->datetimeToDB($dateTo);
+					$searchSql .= ' AND spr.date_completed <= ' . $this->datetimeToDB($dateTo);
 				}
 				break;
 		}
@@ -305,12 +311,12 @@ class EditorSubmissionDAO extends DAO {
 				LEFT JOIN sections s ON (s.section_id = a.section_id)
 				LEFT JOIN edit_assignments e ON (e.article_id = a.article_id)
 				LEFT JOIN users ed ON (e.editor_id = ed.user_id)
-				LEFT JOIN copyed_assignments c ON (a.article_id = c.article_id)
-				LEFT JOIN users ce ON (c.copyeditor_id = ce.user_id)
-				LEFT JOIN proof_assignments p ON (p.article_id = a.article_id)
-				LEFT JOIN users pe ON (pe.user_id = p.proofreader_id)
-				LEFT JOIN layouted_assignments l ON (l.article_id = a.article_id)
-				LEFT JOIN users le ON (le.user_id = l.editor_id)
+				LEFT JOIN signoffs scf ON (a.article_id = scf.assoc_id AND scf.assoc_type = ? AND scf.symbolic = ?)
+				LEFT JOIN users ce ON (scf.user_id = ce.user_id)
+				LEFT JOIN signoffs spr ON (a.article_id = spr.assoc_id AND scf.assoc_type = ? AND spr.symbolic = ?)
+				LEFT JOIN users pe ON (pe.user_id = spr.user_id)
+				LEFT JOIN signoffs sle ON (a.article_id = sle.assoc_id AND scf.assoc_type = ? AND sle.symbolic = ?)
+				LEFT JOIN users le ON (le.user_id = sle.user_id)
 				LEFT JOIN review_assignments r ON (r.article_id = a.article_id)
 				LEFT JOIN users re ON (re.user_id = r.reviewer_id AND cancelled = 0)
 				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
@@ -365,18 +371,6 @@ class EditorSubmissionDAO extends DAO {
 		}
 		$params[] = $params[] = $params[] = $params[] = $params[] = $search;
 		return $searchSql;
-	}
-
-	/**
-	 * Helper function to retrieve copyed assignment
-	 * @param articleId int
-	 * @return result array
-	 */
-	function &getCopyedAssignment($articleId) {
-		$result = &$this->retrieve(
-				'SELECT * from copyed_assignments where article_id = ? ', $articleId
-		);
-		return $result;
 	}
 
 	/**
@@ -494,6 +488,7 @@ class EditorSubmissionDAO extends DAO {
 	 */
 	function &getEditorSubmissionsInEditing($journalId, $sectionId, $editorId, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null) {
 		$editorSubmissions = array();
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 
 		// FIXME Does not pass $rangeInfo else we only get partial results
 		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $editorId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, true);
@@ -501,21 +496,6 @@ class EditorSubmissionDAO extends DAO {
 		while (!$result->EOF) {
 			$editorSubmission = &$this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
 			$articleId = $editorSubmission->getArticleId();
-
-			// get copyedit final data
-			$copyedAssignment = $this->getCopyedAssignment($articleId);
-			$row = $copyedAssignment->GetRowAssoc(false);
-			$editorSubmission->setCopyeditorDateFinalCompleted($this->datetimeFromDB($row['date_final_completed']));
-
-			// get layout assignment data
-			$layoutAssignmentDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
-			$layoutAssignment =& $layoutAssignmentDao->getLayoutAssignmentByArticleId($articleId);
-			$editorSubmission->setLayoutAssignment($layoutAssignment);
-
-			// get proof assignment data
-			$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
-			$proofAssignment =& $proofAssignmentDao->getProofAssignmentByArticleId($articleId);
-			$editorSubmission->setProofAssignment($proofAssignment);
 
 			// check if submission is still in review
 			$inEditing = false;
@@ -565,23 +545,6 @@ class EditorSubmissionDAO extends DAO {
 		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $editorId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, false, $rangeInfo);
 		while (!$result->EOF) {
 			$editorSubmission = &$this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
-			$articleId = $editorSubmission->getArticleId();
-
-			// get copyedit final data
-			$copyedAssignment = $this->getCopyedAssignment($articleId);
-			$row = $copyedAssignment->GetRowAssoc(false);
-			$editorSubmission->setCopyeditorDateFinalCompleted($this->datetimeFromDB($row['date_final_completed']));
-
-			// get layout assignment data
-			$layoutAssignmentDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
-			$layoutAssignment =& $layoutAssignmentDao->getLayoutAssignmentByArticleId($articleId);
-			$editorSubmission->setLayoutAssignment($layoutAssignment);
-
-			// get proof assignment data
-			$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
-			$proofAssignment =& $proofAssignmentDao->getProofAssignmentByArticleId($articleId);
-			$editorSubmission->setProofAssignment($proofAssignment);
-
 			$editorSubmissions[] =& $editorSubmission;
 			unset($editorSubmission);
 			$result->MoveNext();

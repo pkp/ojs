@@ -22,15 +22,16 @@
 	<tr><td class="headseparator" colspan="6">&nbsp;</td></tr>
 
 {iterate from=submissions item=submission}
+	{assign var="copyeditingInitialSignoff" value=$submission->getSignoff('SIGNOFF_COPYEDITING_INITIAL')}
 	{assign var="articleId" value=$submission->getArticleId()}
 	<tr valign="top">
 		<td>{$articleId|escape}</td>
-		<td>{$submission->getDateNotified()|date_format:$dateFormatTrunc}</td>
+		<td>{$copyeditingInitialSignoff->getDateNotified()|date_format:$dateFormatTrunc}</td>
 		<td>{$submission->getSectionAbbrev()|escape}</td>
 		<td>{$submission->getAuthorString(true)|truncate:40:"..."|escape}</td>
 		<td><a href="{url op="submission" path=$articleId}" class="action">{$submission->getArticleTitle()|strip_unsafe_html|truncate:60:"..."}</a></td>
 		<td align="right">
-			{if not $submission->getDateCompleted()}
+			{if not $copyeditingInitialSignoff->getDateCompleted()}
 				{translate key="submissions.step1"}
 			{else}
 				{translate key="submissions.step3"}

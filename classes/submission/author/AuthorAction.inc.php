@@ -124,10 +124,12 @@ class AuthorAction extends Action {
 	 */
 	function completeAuthorCopyedit($authorSubmission, $send = false) {
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
 
-		if ($authorSubmission->getCopyeditorDateAuthorCompleted() != null) {
+		$authorSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $authorSubmission->getArticleId());
+		if ($authorSignoff->getDateCompleted() != null) {
 			return true;
 		}
 
@@ -137,7 +139,7 @@ class AuthorAction extends Action {
 
 		$editAssignments = $authorSubmission->getEditAssignments();
 
-		$copyeditor =& $authorSubmission->getCopyeditor();
+		$copyeditor = $authorSubmission->getUserBySignoffType('SIGNOFF_COPYEDITING_INITIAL');
 
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
 			HookRegistry::call('AuthorAction::completeAuthorCopyedit', array(&$authorSubmission, &$email));
@@ -146,9 +148,14 @@ class AuthorAction extends Action {
 				$email->send();
 			}
 
-			$authorSubmission->setCopyeditorDateAuthorCompleted(Core::getCurrentDate());
-			$authorSubmission->setCopyeditorDateFinalNotified(Core::getCurrentDate());
-			$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
+			$authorSignoff->setDateCompleted(Core::getCurrentDate());
+			
+			$finalSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $authorSubmission->getArticleId());
+			$finalSignoff->setUserId($copyeditor->getUserId());
+			$finalSignoff->setDateNotified(Core::getCurrentDate());
+			
+			$signoffDao->updateObject($authorSignoff);
+			$signoffDao->updateObject($finalSignoff);
 
 			// Add log entry
 			import('article.log.ArticleLog');
@@ -201,11 +208,13 @@ class AuthorAction extends Action {
 	 */
 	function copyeditUnderway($authorSubmission) {
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');		
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 
-		if ($authorSubmission->getCopyeditorDateAuthorNotified() != null && $authorSubmission->getCopyeditorDateAuthorUnderway() == null) {
+		$authorSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $authorSubmission->getArticleId());
+		if ($authorSignoff->getDateNotified() != null && $authorSignoff->getDateUnderway() == null) {
 			HookRegistry::call('AuthorAction::copyeditUnderway', array(&$authorSubmission));
-			$authorSubmission->setCopyeditorDateAuthorUnderway(Core::getCurrentDate());
-			$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
+			$authorSignoff->setDateUnderway(Core::getCurrentDate());
+			$signoffDao->updateObject($authorSignoff);
 		}
 	}	
 
@@ -219,28 +228,30 @@ class AuthorAction extends Action {
 		$articleFileManager = new ArticleFileManager($authorSubmission->getArticleId());
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 
 		// Authors cannot upload if the assignment is not active, i.e.
 		// they haven't been notified or the assignment is already complete.
-		if (!$authorSubmission->getCopyeditorDateAuthorNotified() || $authorSubmission->getCopyeditorDateAuthorCompleted()) return;
+		$authorSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $authorSubmission->getArticleId());		
+		if (!$authorSignoff->getDateNotified() || $authorSignoff->getDateCompleted()) return;
 
 		$fileName = 'upload';
 		if ($articleFileManager->uploadedFileExists($fileName)) {
 			HookRegistry::call('AuthorAction::uploadCopyeditVersion', array(&$authorSubmission, &$copyeditStage));
-			if ($authorSubmission->getCopyeditFileId() != null) {
-				$fileId = $articleFileManager->uploadCopyeditFile($fileName, $authorSubmission->getCopyeditFileId());
+			if ($authorSignoff->getFileId() != null) {
+				$fileId = $articleFileManager->uploadCopyeditFile($fileName, $authorSignoff->getFileId());
 			} else {
 				$fileId = $articleFileManager->uploadCopyeditFile($fileName);
 			}
 		}
 
-		$authorSubmission->setCopyeditFileId($fileId);
+		$authorSignoff->setFileId($fileId);
 
 		if ($copyeditStage == 'author') {
-			$authorSubmission->setCopyeditorEditorAuthorRevision($articleFileDao->getRevisionNumber($fileId));
+			$authorSignoff->setFileRevision($articleFileDao->getRevisionNumber($fileId));
 		}
 
-		$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
+		$signoffDao->updateObject($authorSignoff);
 	}
 
 	//
@@ -484,10 +495,11 @@ class AuthorAction extends Action {
 	 * TODO: Complete list of files author has access to
 	 */
 	function downloadAuthorFile($article, $fileId, $revision = null) {
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');		
 
 		$submission = &$authorSubmissionDao->getAuthorSubmission($article->getArticleId());
-		$layoutAssignment = &$submission->getLayoutAssignment();
+		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $authorSubmission->getArticleId());
 
 		$canDownload = false;
 
@@ -505,19 +517,21 @@ class AuthorAction extends Action {
 		// THIS LIST SHOULD NOW BE COMPLETE.
 		if ($submission->getSubmissionFileId() == $fileId) {
 			$canDownload = true;
-		} else if ($submission->getCopyeditFileId() == $fileId) {
+		} else if ($submission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL', true) == $fileId) {
 			if ($revision != null) {
-				$copyAssignmentDao = &DAORegistry::getDAO('CopyAssignmentDAO');
-				$copyAssignment = &$copyAssignmentDao->getCopyAssignmentByArticleId($article->getArticleId());
-				if ($copyAssignment && $copyAssignment->getInitialRevision()==$revision && $copyAssignment->getDateCompleted()!=null) $canDownload = true;
-				else if ($copyAssignment && $copyAssignment->getFinalRevision()==$revision && $copyAssignment->getDateFinalCompleted()!=null) $canDownload = true;
-				else if ($copyAssignment && $copyAssignment->getEditorAuthorRevision()==$revision) $canDownload = true; 
+				$initialSignoff = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $authorSubmission->getArticleId());
+				$authorSignoff = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $authorSubmission->getArticleId());
+				$finalSignoff = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $authorSubmission->getArticleId());
+
+				if ($initialSignoff && $initialSignoff->getFileRevision()==$revision && $initialSignoff->getDateCompleted()!=null) $canDownload = true;
+				else if ($finalSignoff && $finalSignoff->getFileRevision()==$revision && $finalSignoff->getDateCompleted()!=null) $canDownload = true;
+				else if ($authorSignoff && $authorSignoff->getFileRevision()==$revision) $canDownload = true; 
 			} else {
 				$canDownload = false;
 			}
 		} else if ($submission->getRevisedFileId() == $fileId) {
 			$canDownload = true;
-		} else if ($layoutAssignment->getLayoutFileId() == $fileId) {
+		} else if ($layoutSignoff->getFileId() == $fileId) {
 			$canDownload = true;
 		} else {
 			// Check reviewer files

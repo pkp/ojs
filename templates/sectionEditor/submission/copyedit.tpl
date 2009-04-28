@@ -15,7 +15,7 @@
 <table width="100%" class="data">
 	<tr>
 		<td width="20%" class="label">{translate key="user.role.copyeditor"}</td>
-		{if $submission->getCopyeditorId()}<td width="20%" class="value">{$copyeditor->getFullName()|escape}</td>{/if}
+		{if $submission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL')}<td width="20%" class="value">{$copyeditor->getFullName()|escape}</td>{/if}
 		<td class="value"><a href="{url op="selectCopyeditor" path=$submission->getArticleId()}" class="action">{translate key="editor.article.selectCopyeditor"}</a></td>
 	</tr>
 </table>
@@ -31,12 +31,13 @@
 	</tr>
 	<tr>
 		<td width="2%">1.</td>
+		{assign var="initialCopyeditSignoff" value=$submission->getSignoff('SIGNOFF_COPYEDITING_INITIAL')}
 		<td width="26%">{translate key="submission.copyedit.initialCopyedit"}</td>
 		<td>
 			{if $useCopyeditors}
-				{if $submission->getCopyeditorId() && $initialCopyeditFile}
+				{if $submission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL') && $initialCopyeditFile}
 					{url|assign:"url" op="notifyCopyeditor" articleId=$submission->getArticleId()}
-					{if $submission->getCopyeditorDateUnderway()}
+					{if $initialCopyeditSignoff->getDateUnderway()}
 						{translate|escape:"javascript"|assign:"confirmText" key="sectionEditor.copyedit.confirmRenotify"}
 						{icon name="mail" onclick="return confirm('$confirmText')" url=$url}
 					{else}
@@ -46,22 +47,22 @@
 					{icon name="mail" disabled="disable"}
 				{/if}
 			{else}
-				{if !$submission->getCopyeditorDateNotified() && $initialCopyeditFile}
+				{if !$initialCopyeditSignoff->getDateNotified() && $initialCopyeditFile}
 					<a href="{url op="initiateCopyedit" articleId=$submission->getArticleId()}" class="action">{translate key="common.initiate"}</a>
 				{/if}
 			{/if}
-			{$submission->getCopyeditorDateNotified()|date_format:$dateFormatShort|default:""}
+			{$initialCopyeditSignoff->getDateNotified()|date_format:$dateFormatShort|default:""}
 		</td>
 		<td>
 			{if $useCopyeditors}
-				{$submission->getCopyeditorDateUnderway()|date_format:$dateFormatShort|default:"&mdash;"}
+				{$initialCopyeditSignoff->getDateUnderway()|date_format:$dateFormatShort|default:"&mdash;"}
 			{else}
 				{translate key="common.notApplicableShort"}
 			{/if}
 		</td>
 		<td>
-			{if $submission->getCopyeditorDateCompleted()}
-				{$submission->getCopyeditorDateCompleted()|date_format:$dateFormatShort}
+			{if $initialCopyeditSignoff->getDateCompleted()}
+				{$initialCopyeditSignoff->getDateCompleted()|date_format:$dateFormatShort}
 			{elseif !$useCopyeditors}
 				<a href="{url op="completeCopyedit" articleId=$submission->getArticleId()}" class="action">{translate key="common.complete"}</a>
 			{else}
@@ -70,13 +71,13 @@
 		</td>
 		<td>
 			{if $useCopyeditors}
-				{if $submission->getCopyeditorId() &&  $submission->getCopyeditorDateNotified() && !$submission->getCopyeditorDateAcknowledged()}
+				{if $submission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL') &&  $initialCopyeditSignoff->getDateNotified() && !$initialCopyeditSignoff->getDateAcknowledged()}
 					{url|assign:"url" op="thankCopyeditor" articleId=$submission->getArticleId()}
 					{icon name="mail" url=$url}
 				{else}
 					{icon name="mail" disabled="disable"}
 				{/if}
-				{$submission->getCopyeditorDateAcknowledged()|date_format:$dateFormatShort|default:""}
+				{$initialCopyeditSignoff->getDateAcknowledged()|date_format:$dateFormatShort|default:""}
 			{else}
 				{translate key="common.notApplicableShort"}
 			{/if}
@@ -98,11 +99,12 @@
 	</tr>
 	<tr>
 		<td>2.</td>
+		{assign var="authorCopyeditSignoff" value=$submission->getSignoff('SIGNOFF_COPYEDITING_AUTHOR')}
 		<td>{translate key="submission.copyedit.editorAuthorReview"}</td>
 		<td>
-			{if ($submission->getCopyeditorId() || !$useCopyeditors) && $submission->getCopyeditorDateCompleted()}
+			{if ($submission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL') || !$useCopyeditors) && $initialCopyeditSignoff->getDateCompleted()}
 				{url|assign:"url" op="notifyAuthorCopyedit articleId=$submission->getArticleId()}
-				{if $submission->getCopyeditorDateAuthorUnderway()}
+				{if $authorCopyeditSignoff->getDateUnderway()}
 					{translate|escape:"javascript"|assign:"confirmText" key="sectionEditor.author.confirmRenotify"}
 					{icon name="mail" onclick="return confirm('$confirmText')" url=$url}
 				{else}
@@ -111,22 +113,22 @@
 			{else}
 				{icon name="mail" disabled="disable"}
 			{/if}
-			{$submission->getCopyeditorDateAuthorNotified()|date_format:$dateFormatShort|default:""}
+			{$authorCopyeditSignoff->getDateNotified()|date_format:$dateFormatShort|default:""}
 		</td>
 		<td>
-				{$submission->getCopyeditorDateAuthorUnderway()|date_format:$dateFormatShort|default:"&mdash;"}
+				{$authorCopyeditSignoff->getDateUnderway()|date_format:$dateFormatShort|default:"&mdash;"}
 		</td>
 		<td>
-				{$submission->getCopyeditorDateAuthorCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
+				{$authorCopyeditSignoff->getDateCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
 		</td>
 		<td>
-			{if ($submission->getCopyeditorId() || !$useCopyeditors) && $submission->getCopyeditorDateAuthorNotified() && !$submission->getCopyeditorDateAuthorAcknowledged()}
+			{if ($submission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL') || !$useCopyeditors) && $authorCopyeditSignoff->getDateNotified() && !$authorCopyeditSignoff->getDateAcknowledged()}
 				{url|assign:"url" op="thankAuthorCopyedit articleId=$submission->getArticleId()}
 				{icon name="mail" url=$url}
 			{else}
 				{icon name="mail" disabled="disable"}
 			{/if}
-			{$submission->getCopyeditorDateAuthorAcknowledged()|date_format:$dateFormatShort|default:""}
+			{$authorCopyeditSignoff->getDateAcknowledged()|date_format:$dateFormatShort|default:""}
 		</td>
 	</tr>
 	<tr>
@@ -143,12 +145,13 @@
 	</tr>
 	<tr>
 		<td>3.</td>
+		{assign var="finalCopyeditSignoff" value=$submission->getSignoff('SIGNOFF_COPYEDITING_FINAL')}
 		<td>{translate key="submission.copyedit.finalCopyedit"}</td>
 		<td>
 			{if $useCopyeditors}
-				{if $submission->getCopyeditorId() && $submission->getCopyeditorDateAuthorCompleted()}
+				{if $submission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL') && $authorCopyeditSignoff->getDateCompleted()}
 					{url|assign:"url" op="notifyFinalCopyedit articleId=$submission->getArticleId()}
-					{if $submission->getCopyeditorDateFinalUnderway()}
+					{if $finalCopyeditSignoff->getDateUnderway()}
 						{translate|escape:"javascript"|assign:"confirmText" key="sectionEditor.copyedit.confirmRenotify"}
 						{icon name="mail" onclick="return confirm('$confirmText')" url=$url}
 					{else}
@@ -158,18 +161,18 @@
 					{icon name="mail" disabled="disable"}
 				{/if}
 			{/if}
-			{$submission->getCopyeditorDateFinalNotified()|date_format:$dateFormatShort|default:""}
+			{$finalCopyeditSignoff->getDateNotified()|date_format:$dateFormatShort|default:""}
 		</td>
 		<td>
 			{if $useCopyeditors}
-				{$submission->getCopyeditorDateFinalUnderway()|date_format:$dateFormatShort|default:"&mdash;"}
+				{$finalCopyeditSignoff->getDateUnderway()|date_format:$dateFormatShort|default:"&mdash;"}
 			{else}
 				{translate key="common.notApplicableShort"}
 			{/if}
 		</td>
 		<td>
-			{if $submission->getCopyeditorDateFinalCompleted()}
-				{$submission->getCopyeditorDateFinalCompleted()|date_format:$dateFormatShort}
+			{if $finalCopyeditSignoff->getDateCompleted()}
+				{$finalCopyeditSignoff->getDateCompleted()|date_format:$dateFormatShort}
 			{elseif !$useCopyeditors}
 				<a href="{url op="completeFinalCopyedit" articleId=$submission->getArticleId()}" class="action">{translate key="common.complete"}</a>
 			{else}
@@ -178,13 +181,13 @@
 		</td>
 		<td>
 			{if $useCopyeditors}
-				{if $submission->getCopyeditorId() &&  $submission->getCopyeditorDateFinalNotified() && !$submission->getCopyeditorDateFinalAcknowledged()}
+				{if $submission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL') &&  $finalCopyeditSignoff->getDateNotified() && !$finalCopyeditSignoff->getDateAcknowledged()}
 					{url|assign:"url" op="thankFinalCopyedit articleId=$submission->getArticleId()}
 					{icon name="mail" url=$url}
 				{else}
 					{icon name="mail" disabled="disable"}
 				{/if}
-				{$submission->getCopyeditorDateFinalAcknowledged()|date_format:$dateFormatShort|default:""}
+				{$finalCopyeditSignoff->getDateAcknowledged()|date_format:$dateFormatShort|default:""}
 			{else}
 				{translate key="common.notApplicableShort"}
 			{/if}
@@ -204,11 +207,11 @@
 	</tr>
 </table>
 
-{if $submission->getCopyeditorDateAuthorCompleted()}
+{if $authorCopyeditSignoff->getDateCompleted()}
 {assign var="canUploadCopyedit" value="3"}
-{elseif $submission->getCopyeditorDateCompleted() && !$submission->getCopyeditorDateAuthorCompleted()}
+{elseif $initialCopyeditSignoff->getDateCompleted() && !$authorCopyeditSignoff->getDateCompleted()}
 {assign var="canUploadCopyedit" value="2"}
-{elseif !$submission->getCopyeditorDateCompleted()}
+{elseif !$initialCopyeditSignoff->getDateCompleted()}
 {assign var="canUploadCopyedit" value="1"}
 {/if}
 <form method="post" action="{url op="uploadCopyeditVersion"}"  enctype="multipart/form-data">

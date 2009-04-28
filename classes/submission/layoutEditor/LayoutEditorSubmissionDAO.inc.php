@@ -25,7 +25,6 @@ class LayoutEditorSubmissionDAO extends DAO {
 	var $galleyDao;
 	var $editAssignmentDao;
 	var $suppFileDao;
-	var $proofAssignmentDao;
 	var $articleCommentDao;
 
 	/**
@@ -35,11 +34,9 @@ class LayoutEditorSubmissionDAO extends DAO {
 		parent::DAO();
 
 		$this->articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$this->layoutDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
 		$this->galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		$this->editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
 		$this->suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
-		$this->proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
 		$this->articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 	}
 
@@ -98,7 +95,6 @@ class LayoutEditorSubmissionDAO extends DAO {
 	function &_returnSubmissionFromRow(&$row) {
 		$submission = new LayoutEditorSubmission();
 		$this->articleDao->_articleFromRow($submission, $row);
-		$submission->setLayoutAssignment($this->layoutDao->getLayoutAssignmentByArticleId($row['article_id']));
 
 		// Comments
 		$submission->setMostRecentLayoutComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_LAYOUT, $row['article_id']));
@@ -111,21 +107,9 @@ class LayoutEditorSubmissionDAO extends DAO {
 		$editAssignments =& $this->editAssignmentDao->getEditAssignmentsByArticleId($row['article_id']);
 		$submission->setEditAssignments($editAssignments->toArray());
 
-		$submission->setProofAssignment($this->proofAssignmentDao->getProofAssignmentByArticleId($row['article_id']));
-
 		HookRegistry::call('LayoutEditorSubmissionDAO::_returnLayoutEditorSubmissionFromRow', array(&$submission, &$row));
 
 		return $submission;
-	}
-
-	/**
-	 * Update an existing layout editor sbusmission.
-	 * @param $submission LayoutEditorSubmission
-	 */
-	function updateSubmission(&$submission) {
-		// Only update layout-specific data
-		$layoutAssignment =& $submission->getLayoutAssignment();
-		$this->layoutDao->updateLayoutAssignment($layoutAssignment);
 	}
 
 	/**
@@ -154,6 +138,14 @@ class LayoutEditorSubmissionDAO extends DAO {
 			'abbrev',
 			$locale,
 			'title',
+			ASSOC_TYPE_ARTICLE,
+			'SIGNOFF_COPYEDITING_FINAL',
+			ASSOC_TYPE_ARTICLE,
+			'SIGNOFF_LAYOUT',
+			ASSOC_TYPE_ARTICLE,
+			'SIGNOFF_PROOFREADING_LAYOUT',
+			ASSOC_TYPE_ARTICLE,
+			'SIGNOFF_COPYEDITING_INITIAL',
 			$editorId
 		);
 		if (isset($journalId)) $params[] = $journalId;
@@ -219,58 +211,58 @@ class LayoutEditorSubmissionDAO extends DAO {
 				break;
 			case SUBMISSION_FIELD_DATE_COPYEDIT_COMPLETE:
 				if (!empty($dateFrom)) {
-					$searchSql .= ' AND c.date_final_completed >= ' . $this->datetimeToDB($dateFrom);
+					$searchSql .= ' AND scp.date_completed >= ' . $this->datetimeToDB($dateFrom);
 				}
 				if (!empty($dateTo)) {
-					$searchSql .= ' AND c.date_final_completed <= ' . $this->datetimeToDB($dateTo);
+					$searchSql .= ' AND scp.date_completed <= ' . $this->datetimeToDB($dateTo);
 				}
 				break;
 			case SUBMISSION_FIELD_DATE_LAYOUT_COMPLETE:
 				if (!empty($dateFrom)) {
-					$searchSql .= ' AND l.date_completed >= ' . $this->datetimeToDB($dateFrom);
+					$searchSql .= ' AND sle.date_completed >= ' . $this->datetimeToDB($dateFrom);
 				}
 				if (!empty($dateTo)) {
-					$searchSql .= ' AND l.date_completed <= ' . $this->datetimeToDB($dateTo);
+					$searchSql .= ' AND sle.date_completed <= ' . $this->datetimeToDB($dateTo);
 				}
 				break;
 			case SUBMISSION_FIELD_DATE_PROOFREADING_COMPLETE:
 				if (!empty($dateFrom)) {
-					$searchSql .= ' AND p.date_proofreader_completed >= ' . $this->datetimeToDB($dateFrom);
+					$searchSql .= ' AND spr.date_completed >= ' . $this->datetimeToDB($dateFrom);
 				}
 				if (!empty($dateTo)) {
-					$searchSql .= 'AND p.date_proofreader_completed <= ' . $this->datetimeToDB($dateTo);
+					$searchSql .= 'AND spr.date_completed <= ' . $this->datetimeToDB($dateTo);
 				}
 				break;
 		}
 
 		$sql = 'SELECT DISTINCT
 				a.*,
-				l.*,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
 			FROM
 				articles a
 				INNER JOIN article_authors aa ON (aa.article_id = a.article_id)
-				INNER JOIN layouted_assignments l ON (l.article_id = a.article_id)
-				INNER JOIN proof_assignments p ON (p.article_id = a.article_id)
 				LEFT JOIN sections s ON s.section_id = a.section_id
 				LEFT JOIN edit_assignments e ON (e.article_id = a.article_id)
 				LEFT JOIN users ed ON (e.editor_id = ed.user_id)
-				LEFT JOIN copyed_assignments c ON (a.article_id = c.article_id)
 				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
 				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
 				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
 				LEFT JOIN article_settings atl ON (a.article_id = atl.article_id AND atl.setting_name = ?)
+				LEFT JOIN signoffs scpf ON (a.article_id = scpf.assoc_id AND scpf.assoc_type = ? AND scpf.symbolic = ?)
+				LEFT JOIN signoffs sle ON (a.article_id = sle.assoc_id AND sle.assoc_type = ? AND sle.symbolic = ?)
+				LEFT JOIN signoffs spr ON (a.article_id = spr.assoc_id AND spr.assoc_type = ? AND spr.symbolic = ?)
+				LEFT JOIN signoffs scpi ON (a.article_id = scpi.assoc_id AND scpi.assoc_type = ? AND scpi.symbolic = ?)
 			WHERE
-				l.editor_id = ? AND
+				sle.user_id = ? AND
 				' . (isset($journalId)?'a.journal_id = ? AND':'') . '
-				l.date_notified IS NOT NULL';
+				sle.date_notified IS NOT NULL';
 
 		if ($active) {
-			$sql .= ' AND (l.date_completed IS NULL OR p.date_layouteditor_completed IS NULL)'; 
+			$sql .= ' AND (sle.date_completed IS NULL OR spr.date_completed IS NULL)'; 
 		} else {
-			$sql .= ' AND (l.date_completed IS NOT NULL AND p.date_layouteditor_completed IS NOT NULL)';
+			$sql .= ' AND (sle.date_completed IS NOT NULL AND spr.date_completed IS NOT NULL)';
 		}
 
 		$result = &$this->retrieveRange(
@@ -293,19 +285,20 @@ class LayoutEditorSubmissionDAO extends DAO {
 		$submissionsCount[0] = 0;
 		$submissionsCount[1] = 0;
 
-		$sql = 'SELECT	l.date_completed,
-				p.date_layouteditor_completed
-			FROM	articles a
-				LEFT JOIN layouted_assignments l ON (l.article_id = a.article_id)
-				LEFT JOIN proof_assignments p ON (p.article_id = a.article_id)
-				LEFT JOIN sections s ON (s.section_id = a.section_id)
-			WHERE	l.editor_id = ? AND
-				a.journal_id = ? AND
-				l.date_notified IS NOT NULL';
+		$sql = 'SELECT	
+					sl.date_completed AS le_date_completed,
+					spl.date_completed AS pr_date_completed
+				FROM	
+					articles a
+					LEFT JOIN signoffs sl ON (a.article_id = sl.assoc_id AND sl.assoc_type = ? AND sl.symbolic = ?)
+					LEFT JOIN signoffs spl ON (a.article_id = spl.assoc_id AND spl.assoc_type = ? AND spl.symbolic = ?)
+					LEFT JOIN sections s ON (s.section_id = a.section_id)
+				WHERE	
+					sl.user_id = ? AND a.journal_id = ? AND sl.date_notified IS NOT NULL';
 
-		$result = &$this->retrieve($sql, array($editorId, $journalId));
+		$result = &$this->retrieve($sql, array(ASSOC_TYPE_ARTICLE, 'SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, 'SIGNOFF_PROOFREADING_LAYOUT', $editorId, $journalId));
 		while (!$result->EOF) {
-			if ($result->fields['date_completed'] == null || $result->fields['date_layouteditor_completed'] == null) {
+			if ($result->fields['le_date_completed'] == null || $result->fields['pr_date_completed'] == null) {
 				$submissionsCount[0] += 1;
 			} else {
 				$submissionsCount[1] += 1;
@@ -317,6 +310,26 @@ class LayoutEditorSubmissionDAO extends DAO {
 		unset($result);
 
 		return $submissionsCount;
+	}
+	
+	function getProofedArticlesByIssueId($issueId) {
+		$articleIds = array();
+
+		$result = &$this->retrieve(
+			'SELECT pa.article_id AS article_id FROM published_articles pa, signoffs s WHERE pa.article_id = s.assoc_id AND s.assoc_type = ? AND pa.issue_id = ? AND s.date_completed IS NOT NULL AND s.symbolic = ?',
+			array(ASSOC_TYPE_ARTICLE, $issueId, 'SIGNOFF_LAYOUT')
+		);
+
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$articleIds[] = $row['article_id'];
+			$result->MoveNext();
+		}
+
+		$result->Close();
+		unset($result);
+
+		return $articleIds;
 	}
 }
 

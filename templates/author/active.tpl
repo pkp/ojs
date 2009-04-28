@@ -44,10 +44,10 @@
 						{/if}
 					</a>
 				{elseif $status==STATUS_QUEUED_EDITING}
-					{assign var=proofAssignment value=$submission->getProofAssignment()}
+					{assign var="proofSignoff" value=$submission->getSignoff('SIGNOFF_PROOFREADING_AUTHOR')}
 					<a href="{url op="submissionEditing" path=$articleId}" class="action">
-						{if $submission->getCopyeditorDateAuthorNotified() && !$submission->getCopyeditorDateAuthorCompleted()}{translate key="author.submissions.queuedEditingCopyedit"}
-						{elseif $proofAssignment && $proofAssignment->getDateAuthorNotified() && !$proofAssignment->getDateAuthorCompleted()}{translate key="author.submissions.queuedEditingProofread"}
+						{if $proofSignoff->getDateNotified() && !$proofSignoff->getDateCompleted()}{translate key="author.submissions.queuedEditingCopyedit"}
+						{elseif $proofSignoff->getDateNotified() && !$proofSignoff->getDateCompleted()}{translate key="author.submissions.queuedEditingProofread"}
 						{else}{translate key="submissions.queuedEditing"}
 						{/if}
 					</a>

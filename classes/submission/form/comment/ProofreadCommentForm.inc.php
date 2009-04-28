@@ -63,6 +63,7 @@ class ProofreadCommentForm extends CommentForm {
 	 */
 	function email() {
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();	
 
@@ -93,19 +94,17 @@ class ProofreadCommentForm extends CommentForm {
 		}
 
 		// Get layout editor
-		$layoutAssignmentDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
-		$layoutAssignment = &$layoutAssignmentDao->getLayoutAssignmentByArticleId($this->article->getArticleId());
-		if ($layoutAssignment != null && $layoutAssignment->getEditorId() > 0) {
-			$layoutEditor = &$userDao->getUser($layoutAssignment->getEditorId());
+		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $this->article->getArticleId());
+		if ($layoutSignoff != null && $layoutSignoff->getUserId() > 0) {
+			$layoutEditor = &$userDao->getUser($layoutSignoff->getUserId());
 		} else {
 			$layoutEditor = null;
 		}
 
 		// Get proofreader
-		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
-		$proofAssignment = &$proofAssignmentDao->getProofAssignmentByArticleId($this->article->getArticleId());
-		if ($proofAssignment != null && $proofAssignment->getProofreaderId() > 0) {
-			$proofreader = &$userDao->getUser($proofAssignment->getProofreaderId());
+		$proofSignoff = $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $this->article->getArticleId());
+		if ($proofSignoff != null && $proofSignoff->getUserId() > 0) {
+			$proofreader = &$userDao->getUser($proofSignoff->getUserId());
 		} else {
 			$proofreader = null;
 		}

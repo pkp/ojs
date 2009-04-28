@@ -752,21 +752,24 @@ class SectionEditorAction extends Action {
 		$articleFileManager = new ArticleFileManager($sectionEditorSubmission->getArticleId());
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 		$user = &Request::getUser();
 
 		if (!HookRegistry::call('SectionEditorAction::setCopyeditFile', array(&$sectionEditorSubmission, &$fileId, &$revision))) {
 			// Copy the file from the editor decision file folder to the copyedit file folder
 			$newFileId = $articleFileManager->copyToCopyeditFile($fileId, $revision);
 
-			$sectionEditorSubmission->setCopyeditFileId($newFileId);
-			$sectionEditorSubmission->setCopyeditorInitialRevision(1);
+			$copyeditSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $sectionEditorSubmission->getArticleId());
 
-			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+			$copyeditSignoff->setFileId($newFileId);
+			$copyeditSignoff->setFileRevision(1);
+
+			$signoffDao->updateObject($copyeditSignoff);
 
 			// Add log
 			import('article.log.ArticleLog');
 			import('article.log.ArticleEventLogEntry');
-			ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_SET_FILE, ARTICLE_LOG_TYPE_COPYEDIT, $sectionEditorSubmission->getCopyeditFileId(), 'log.copyedit.copyeditFileSet');
+			ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_SET_FILE, ARTICLE_LOG_TYPE_COPYEDIT, $sectionEditorSubmission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL', true), 'log.copyedit.copyeditFileSet');
 		}
 	}
 
@@ -836,6 +839,7 @@ class SectionEditorAction extends Action {
 	 */
 	function selectCopyeditor($sectionEditorSubmission, $copyeditorId) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$user = &Request::getUser();
 
@@ -846,8 +850,9 @@ class SectionEditorAction extends Action {
 		// Only add the copyeditor if he has not already
 		// been assigned to review this article.
 		if (!$assigned && !HookRegistry::call('SectionEditorAction::selectCopyeditor', array(&$sectionEditorSubmission, &$copyeditorId))) {
-			$sectionEditorSubmission->setCopyeditorId($copyeditorId);
-			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+			$copyeditInitialSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $sectionEditorSubmission->getArticleId()); 
+			$copyeditInitialSignoff->setUserId($copyeditorId);
+			$signoffDao->updateObject($copyeditInitialSignoff);
 
 			$copyeditor = &$userDao->getUser($copyeditorId);
 
@@ -864,7 +869,7 @@ class SectionEditorAction extends Action {
 	 * @return boolean true iff ready for redirect
 	 */
 	function notifyCopyeditor($sectionEditorSubmission, $send = false) {
-		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
@@ -872,21 +877,22 @@ class SectionEditorAction extends Action {
 		import('mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($sectionEditorSubmission, 'COPYEDIT_REQUEST');
 
-		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
+		$copyeditor = $sectionEditorSubmission->getUserBySignoffType('SIGNOFF_COPYEDITING_INITIAL');
 		if (!isset($copyeditor)) return true;
-
-		if ($sectionEditorSubmission->getInitialCopyeditFile() && (!$email->isEnabled() || ($send && !$email->hasErrors()))) {
+		
+		if ($sectionEditorSubmission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL') && (!$email->isEnabled() || ($send && !$email->hasErrors()))) {
 			HookRegistry::call('SectionEditorAction::notifyCopyeditor', array(&$sectionEditorSubmission, &$copyeditor, &$email));
 			if ($email->isEnabled()) {
 				$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_COPYEDITOR, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
 				$email->send();
 			}
-
-			$sectionEditorSubmission->setCopyeditorDateNotified(Core::getCurrentDate());
-			$sectionEditorSubmission->setCopyeditorDateUnderway(null);
-			$sectionEditorSubmission->setCopyeditorDateCompleted(null);
-			$sectionEditorSubmission->setCopyeditorDateAcknowledged(null);
-			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+			
+			$copyeditInitialSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $sectionEditorSubmission->getArticleId());
+			$copyeditInitialSignoff->setDateNotified(Core::getCurrentDate());
+			$copyeditInitialSignoff->setDateUnderway(null);
+			$copyeditInitialSignoff->setDateCompleted(null);
+			$copyeditInitialSignoff->setDateAcknowledged(null);
+			$signoffDao->updateObject($copyeditInitialSignoff);
 		} else {
 			if (!Request::getUserVar('continued')) {
 				$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
@@ -911,11 +917,19 @@ class SectionEditorAction extends Action {
 	 */
 	function initiateCopyedit($sectionEditorSubmission) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$user =& Request::getUser();
 
 		// Only allow copyediting to be initiated if a copyedit file exists.
-		if ($sectionEditorSubmission->getInitialCopyeditFile() && !HookRegistry::call('SectionEditorAction::initiateCopyedit', array(&$sectionEditorSubmission))) {
-			$sectionEditorSubmission->setCopyeditorDateNotified(Core::getCurrentDate());
-			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+		if ($sectionEditorSubmission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL') && !HookRegistry::call('SectionEditorAction::initiateCopyedit', array(&$sectionEditorSubmission))) {
+			$signoffDao = &DAORegistry::getDAO('SignoffDAO');			
+			
+			$copyeditSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $sectionEditorSubmission->getArticleId());
+			if (!$copyeditSignoff->getUserId()) {
+				$copyeditSignoff->setUserId($user->getUserId());
+			}
+			$copyeditSignoff->setDateNotified(Core::getCurrentDate());
+			
+			$signoffDao->updateObject($copyeditSignoff);
 		}
 	}
 
@@ -925,7 +939,7 @@ class SectionEditorAction extends Action {
 	 * @return boolean true iff ready for redirect
 	 */
 	function thankCopyeditor($sectionEditorSubmission, $send = false) {
-		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
@@ -933,7 +947,7 @@ class SectionEditorAction extends Action {
 		import('mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($sectionEditorSubmission, 'COPYEDIT_ACK');
 
-		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
+		$copyeditor = $sectionEditorSubmission->getUserBySignoffType('SIGNOFF_COPYEDITING_INITIAL');
 		if (!isset($copyeditor)) return true;
 
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
@@ -943,8 +957,9 @@ class SectionEditorAction extends Action {
 				$email->send();
 			}
 
-			$sectionEditorSubmission->setCopyeditorDateAcknowledged(Core::getCurrentDate());
-			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+			$initialSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $sectionEditorSubmission->getArticleId());
+			$initialSignoff->setDateAcknowledged(Core::getCurrentDate());
+			$signoffDao->updateObject($initialSignoff);
 		} else {
 			if (!Request::getUserVar('continued')) {
 				$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
@@ -966,7 +981,7 @@ class SectionEditorAction extends Action {
 	 * @return true iff ready for redirect
 	 */
 	function notifyAuthorCopyedit($sectionEditorSubmission, $send = false) {
-		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
@@ -984,11 +999,13 @@ class SectionEditorAction extends Action {
 				$email->send();
 			}
 
-			$sectionEditorSubmission->setCopyeditorDateAuthorNotified(Core::getCurrentDate());
-			$sectionEditorSubmission->setCopyeditorDateAuthorUnderway(null);
-			$sectionEditorSubmission->setCopyeditorDateAuthorCompleted(null);
-			$sectionEditorSubmission->setCopyeditorDateAuthorAcknowledged(null);
-			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+			$authorSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $sectionEditorSubmission->getArticleId());
+			$authorSignoff->setUserId($author->getUserId());
+			$authorSignoff->setDateNotified(Core::getCurrentDate());
+			$authorSignoff->setDateUnderway(null);
+			$authorSignoff->setDateCompleted(null);
+			$authorSignoff->setDateAcknowledged(null);
+			$signoffDao->updateObject($authorSignoff);
 		} else {
 			if (!Request::getUserVar('continued')) {
 				$email->addRecipient($author->getEmail(), $author->getFullName());
@@ -1014,7 +1031,7 @@ class SectionEditorAction extends Action {
 	 * @return boolean true iff ready for redirect
 	 */
 	function thankAuthorCopyedit($sectionEditorSubmission, $send = false) {
-		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
@@ -1032,8 +1049,9 @@ class SectionEditorAction extends Action {
 				$email->send();
 			}
 
-			$sectionEditorSubmission->setCopyeditorDateAuthorAcknowledged(Core::getCurrentDate());
-			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+			$signoff = $signoffDao->build('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $sectionEditorSubmission->getArticleId());
+			$signoff->setDateAcknowledged(Core::getCurrentDate());
+			$signoffDao->updateObject($signoff);
 		} else {
 			if (!Request::getUserVar('continued')) {
 				$email->addRecipient($author->getEmail(), $author->getFullName());
@@ -1056,7 +1074,7 @@ class SectionEditorAction extends Action {
 	 * @return boolean true iff ready for redirect
 	 */
 	function notifyFinalCopyedit($sectionEditorSubmission, $send = false) {
-		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
@@ -1064,7 +1082,7 @@ class SectionEditorAction extends Action {
 		import('mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($sectionEditorSubmission, 'COPYEDIT_FINAL_REQUEST');
 
-		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
+		$copyeditor = $sectionEditorSubmission->getUserBySignoffType('SIGNOFF_COPYEDITING_INITIAL');
 		if (!isset($copyeditor)) return true;
 
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
@@ -1074,12 +1092,14 @@ class SectionEditorAction extends Action {
 				$email->send();
 			}
 
-			$sectionEditorSubmission->setCopyeditorDateFinalNotified(Core::getCurrentDate());
-			$sectionEditorSubmission->setCopyeditorDateFinalUnderway(null);
-			$sectionEditorSubmission->setCopyeditorDateFinalCompleted(null);
-			$sectionEditorSubmission->setCopyeditorDateFinalAcknowledged(null);
+			$signoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $sectionEditorSubmission->getArticleId());
+			$signoff->setUserId($copyeditor->getUserId());
+			$signoff->setDateNotified(Core::getCurrentDate());
+			$signoff->setDateUnderway(null);
+			$signoff->setDateCompleted(null);
+			$signoff->setDateAcknowledged(null);
 
-			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+			$signoffDao->updateObject($signoff);
 		} else {
 			if (!Request::getUserVar('continued')) {
 				$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
@@ -1104,7 +1124,7 @@ class SectionEditorAction extends Action {
 	 * @return boolean true iff ready for redirect
 	 */
 	function thankFinalCopyedit($sectionEditorSubmission, $send = false) {
-		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
@@ -1112,7 +1132,7 @@ class SectionEditorAction extends Action {
 		import('mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($sectionEditorSubmission, 'COPYEDIT_FINAL_ACK');
 
-		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
+		$copyeditor = $sectionEditorSubmission->getUserBySignoffType('SIGNOFF_COPYEDITING_INITIAL');
 		if (!isset($copyeditor)) return true;
 
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
@@ -1122,8 +1142,9 @@ class SectionEditorAction extends Action {
 				$email->send();
 			}
 
-			$sectionEditorSubmission->setCopyeditorDateFinalAcknowledged(Core::getCurrentDate());
-			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+			$signoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $sectionEditorSubmission->getArticleId());
+			$signoff->setDateAcknowledged(Core::getCurrentDate());
+			$signoffDao->updateObject($signoff);
 		} else {
 			if (!Request::getUserVar('continued')) {
 				$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
@@ -1206,37 +1227,44 @@ class SectionEditorAction extends Action {
 	 * @param $copyeditStage string
 	 */
 	function uploadCopyeditVersion($sectionEditorSubmission, $copyeditStage) {
+		$articleId = $sectionEditorSubmission->getArticleId();
 		import('file.ArticleFileManager');
-		$articleFileManager = new ArticleFileManager($sectionEditorSubmission->getArticleId());
+		$articleFileManager = new ArticleFileManager($articleId);
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 
 		// Perform validity checks.
-		if ($copyeditStage == 'final' && $sectionEditorSubmission->getCopyeditorDateAuthorCompleted() == null) return;
-		if ($copyeditStage == 'author' && $sectionEditorSubmission->getCopyeditorDateCompleted() == null) return;
+		$initialSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $articleId);
+		$authorSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $articleId);
+
+		if ($copyeditStage == 'final' && $authorSignoff->getDateCompleted() == null) return;
+		if ($copyeditStage == 'author' && $initialSignoff->getDateCompleted() == null) return;
 
 		$fileName = 'upload';
 		if ($articleFileManager->uploadedFileExists($fileName) && !HookRegistry::call('SectionEditorAction::uploadCopyeditVersion', array(&$sectionEditorSubmission))) {
-			if ($sectionEditorSubmission->getCopyeditFileId() != null) {
-				$copyeditFileId = $articleFileManager->uploadCopyeditFile($fileName, $sectionEditorSubmission->getCopyeditFileId());
+			if ($sectionEditorSubmission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL', true) != null) {
+				$copyeditFileId = $articleFileManager->uploadCopyeditFile($fileName, $sectionEditorSubmission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL', true));
 			} else {
 				$copyeditFileId = $articleFileManager->uploadCopyeditFile($fileName);
 			}
 		}
 
-
 		if (isset($copyeditFileId) && $copyeditFileId != 0) {
-			$sectionEditorSubmission->setCopyeditFileId($copyeditFileId);
-
 			if ($copyeditStage == 'initial') {
-				$sectionEditorSubmission->setCopyeditorInitialRevision($articleFileDao->getRevisionNumber($copyeditFileId));
+				$signoff =& $initialSignoff;
+				$signoff->setFileId($copyeditFileId);
+				$signoff->setFileRevision($articleFileDao->getRevisionNumber($copyeditFileId));
 			} elseif ($copyeditStage == 'author') {
-				$sectionEditorSubmission->setCopyeditorEditorAuthorRevision($articleFileDao->getRevisionNumber($copyeditFileId));
+				$signoff =& $authorSignoff;
+				$signoff->setFileId($copyeditFileId);
+				$signoff->setFileRevision($articleFileDao->getRevisionNumber($copyeditFileId));
 			} elseif ($copyeditStage == 'final') {
-				$sectionEditorSubmission->setCopyeditorFinalRevision($articleFileDao->getRevisionNumber($copyeditFileId));
+				$signoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $articleId);
+				$signoff->setFileId($copyeditFileId);
+				$signoff->setFileRevision($articleFileDao->getRevisionNumber($copyeditFileId));
 			}
 
-			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+			$signoffDao->updateObject($signoff);
 		}
 	}
 
@@ -1245,7 +1273,7 @@ class SectionEditorAction extends Action {
 	 * @param $sectionEditorSubmission object
 	 */
 	function completeCopyedit($sectionEditorSubmission) {
-		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
@@ -1255,8 +1283,9 @@ class SectionEditorAction extends Action {
 
 		if (HookRegistry::call('SectionEditorAction::completeCopyedit', array(&$sectionEditorSubmission))) return;
 
-		$sectionEditorSubmission->setCopyeditorDateCompleted(Core::getCurrentDate());
-		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+		$signoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $sectionEditorSubmission->getArticleId());
+		$signoff->setDateCompleted(Core::getCurrentDate());
+		$signoffDao->updateObject($signoff);
 		// Add log entry
 		import('article.log.ArticleLog');
 		import('article.log.ArticleEventLogEntry');
@@ -1268,7 +1297,7 @@ class SectionEditorAction extends Action {
 	 * @param $sectionEditorSubmission object
 	 */
 	function completeFinalCopyedit($sectionEditorSubmission) {
-		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
@@ -1278,20 +1307,20 @@ class SectionEditorAction extends Action {
 
 		if (HookRegistry::call('SectionEditorAction::completeFinalCopyedit', array(&$sectionEditorSubmission))) return;
 
-		$sectionEditorSubmission->setCopyeditorDateFinalCompleted(Core::getCurrentDate());
-		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+		$copyeditSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $sectionEditorSubmission->getArticleId());
+		$copyeditSignoff->setDateCompleted(Core::getCurrentDate());
+		$signoffDao->updateObject($copyeditSignoff);
 
-		if ($copyEdFile =& $sectionEditorSubmission->getFinalCopyeditFile()) {
+		if ($copyEdFile = $sectionEditorSubmission->getFileBySignoffType('SIGNOFF_COPYEDITING_FINAL')) {
 			// Set initial layout version to final copyedit version
-			$layoutDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
-			$layoutAssignment = &$layoutDao->getLayoutAssignmentByArticleId($sectionEditorSubmission->getArticleId());
+			$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $sectionEditorSubmission->getArticleId());
 
-			if (isset($layoutAssignment) && !$layoutAssignment->getLayoutFileId()) {
+			if (!$layoutSignoff->getFileId()) {
 				import('file.ArticleFileManager');
 				$articleFileManager = new ArticleFileManager($sectionEditorSubmission->getArticleId());
 				if ($layoutFileId = $articleFileManager->copyToLayoutFile($copyEdFile->getFileId(), $copyEdFile->getRevision())) {
-					$layoutAssignment->setLayoutFileId($layoutFileId);
-					$layoutDao->updateLayoutAssignment($layoutAssignment);
+					$layoutSignoff->setFileId($layoutFileId);
+					$signoffDao->updateObject($layoutSignoff);
 				}
 			}
 		}
@@ -1389,16 +1418,19 @@ class SectionEditorAction extends Action {
 	function uploadLayoutVersion($submission) {
 		import('file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($submission->getArticleId());
-		$submissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 
-		$layoutAssignment = &$submission->getLayoutAssignment();
+		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getArticleId());
 
 		$fileName = 'layoutFile';
 		if ($articleFileManager->uploadedFileExists($fileName) && !HookRegistry::call('SectionEditorAction::uploadLayoutVersion', array(&$submission, &$layoutAssignment))) {
-			$layoutFileId = $articleFileManager->uploadLayoutFile($fileName, $layoutAssignment->getLayoutFileId());
-
-			$layoutAssignment->setLayoutFileId($layoutFileId);
-			$submissionDao->updateSectionEditorSubmission($submission);
+			if ($layoutSignoff->getFileId() != null) {
+				$layoutFileId = $articleFileManager->uploadLayoutFile($fileName, $layoutSignoff->getFileId());
+			} else {
+				$layoutFileId = $articleFileManager->uploadLayoutFile($fileName);
+			}			
+			$layoutSignoff->setFileId($layoutFileId);
+			$signoffDao->updateObject($layoutSignoff);
 		}
 	}
 
@@ -1408,28 +1440,35 @@ class SectionEditorAction extends Action {
 	 * @param $editorId int user ID of the new layout editor
 	 */
 	function assignLayoutEditor($submission, $editorId) {
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
+		$userDao = &DAORegistry::getDAO('UserDAO');
 		if (HookRegistry::call('SectionEditorAction::assignLayoutEditor', array(&$submission, &$editorId))) return;
-
-		$layoutAssignment = &$submission->getLayoutAssignment();
 
 		import('article.log.ArticleLog');
 		import('article.log.ArticleEventLogEntry');
 
-		if ($layoutAssignment->getEditorId()) {
-			ArticleLog::logEvent($submission->getArticleId(), ARTICLE_LOG_LAYOUT_UNASSIGN, ARTICLE_LOG_TYPE_LAYOUT, $layoutAssignment->getLayoutId(), 'log.layout.layoutEditorUnassigned', array('editorName' => $layoutAssignment->getEditorFullName(), 'articleId' => $submission->getArticleId()));
+		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getArticleId());
+		$layoutProofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getArticleId());
+		if ($layoutSignoff->getUserId()) {
+			$layoutEditor =& $userDao->getUser($layoutSignoff->getUserId());
+			ArticleLog::logEvent($submission->getArticleId(), ARTICLE_LOG_LAYOUT_UNASSIGN, ARTICLE_LOG_TYPE_LAYOUT, $layoutSignoff->getId(), 'log.layout.layoutEditorUnassigned', array('editorName' => $layoutEditor->getFullName(), 'articleId' => $submission->getArticleId()));
 		}
+		
+		$layoutSignoff->setUserId($editorId);
+		$layoutSignoff->setDateNotified(null);
+		$layoutSignoff->setDateUnderway(null);
+		$layoutSignoff->setDateCompleted(null);
+		$layoutSignoff->setDateAcknowledged(null);
+		$layoutProofSignoff->setUserId($editorId);
+		$layoutProofSignoff->setDateNotified(null);
+		$layoutProofSignoff->setDateUnderway(null);
+		$layoutProofSignoff->setDateCompleted(null);
+		$layoutProofSignoff->setDateAcknowledged(null);
+		$signoffDao->updateObject($layoutSignoff);
+		$signoffDao->updateObject($layoutProofSignoff);
 
-		$layoutAssignment->setEditorId($editorId);
-		$layoutAssignment->setDateNotified(null);
-		$layoutAssignment->setDateUnderway(null);
-		$layoutAssignment->setDateCompleted(null);
-		$layoutAssignment->setDateAcknowledged(null);
-
-		$layoutDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
-		$layoutDao->updateLayoutAssignment($layoutAssignment);
-		$layoutAssignment =& $layoutDao->getLayoutAssignmentById($layoutAssignment->getLayoutId());
-
-		ArticleLog::logEvent($submission->getArticleId(), ARTICLE_LOG_LAYOUT_ASSIGN, ARTICLE_LOG_TYPE_LAYOUT, $layoutAssignment->getLayoutId(), 'log.layout.layoutEditorAssigned', array('editorName' => $layoutAssignment->getEditorFullName(), 'articleId' => $submission->getArticleId()));
+		$layoutEditor =& $userDao->getUser($layoutSignoff->getUserId());
+		ArticleLog::logEvent($submission->getArticleId(), ARTICLE_LOG_LAYOUT_ASSIGN, ARTICLE_LOG_TYPE_LAYOUT, $layoutSignoff->getId(), 'log.layout.layoutEditorAssigned', array('editorName' => $layoutEditor->getFullName(), 'articleId' => $submission->getArticleId()));
 	}
 
 	/**
@@ -1439,6 +1478,7 @@ class SectionEditorAction extends Action {
 	 * @return boolean true iff ready for redirect
 	 */
 	function notifyLayoutEditor($submission, $send = false) {
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 		$submissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
@@ -1446,23 +1486,22 @@ class SectionEditorAction extends Action {
 
 		import('mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($submission, 'LAYOUT_REQUEST');
-		$layoutAssignment = &$submission->getLayoutAssignment();
-		$layoutEditor = &$userDao->getUser($layoutAssignment->getEditorId());
+		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getArticleId());
+		$layoutEditor = &$userDao->getUser($layoutSignoff->getUserId());
 		if (!isset($layoutEditor)) return true;
 
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
-			HookRegistry::call('SectionEditorAction::notifyLayoutEditor', array(&$submission, &$layoutEditor, &$layoutAssignment, &$email));
+			HookRegistry::call('SectionEditorAction::notifyLayoutEditor', array(&$submission, &$layoutEditor, &$email));
 			if ($email->isEnabled()) {
-				$email->setAssoc(ARTICLE_EMAIL_LAYOUT_NOTIFY_EDITOR, ARTICLE_EMAIL_TYPE_LAYOUT, $layoutAssignment->getLayoutId());
+				$email->setAssoc(ARTICLE_EMAIL_LAYOUT_NOTIFY_EDITOR, ARTICLE_EMAIL_TYPE_LAYOUT, $layoutSignoff->getId());
 				$email->send();
 			}
 
-			$layoutAssignment->setDateNotified(Core::getCurrentDate());
-			$layoutAssignment->setDateUnderway(null);
-			$layoutAssignment->setDateCompleted(null);
-			$layoutAssignment->setDateAcknowledged(null);
-			$submissionDao->updateSectionEditorSubmission($submission);
-
+			$layoutSignoff->setDateNotified(Core::getCurrentDate());
+			$layoutSignoff->setDateUnderway(null);
+			$layoutSignoff->setDateCompleted(null);
+			$layoutSignoff->setDateAcknowledged(null);
+			$signoffDao->updateObject($layoutSignoff);
 		} else {
 			if (!Request::getUserVar('continued')) {
 				$email->addRecipient($layoutEditor->getEmail(), $layoutEditor->getFullName());
@@ -1487,6 +1526,7 @@ class SectionEditorAction extends Action {
 	 * @return boolean true iff ready for redirect
 	 */
 	function thankLayoutEditor($submission, $send = false) {
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 		$submissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
@@ -1495,19 +1535,19 @@ class SectionEditorAction extends Action {
 		import('mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($submission, 'LAYOUT_ACK');
 
-		$layoutAssignment = &$submission->getLayoutAssignment();
-		$layoutEditor = &$userDao->getUser($layoutAssignment->getEditorId());
+		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getArticleId());
+		$layoutEditor = &$userDao->getUser($layoutSignoff->getUserId());
 		if (!isset($layoutEditor)) return true;
 
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
-			HookRegistry::call('SectionEditorAction::thankLayoutEditor', array(&$submission, &$layoutEditor, &$layoutAssignment, &$email));
+			HookRegistry::call('SectionEditorAction::thankLayoutEditor', array(&$submission, &$layoutEditor, &$email));
 			if ($email->isEnabled()) {
-				$email->setAssoc(ARTICLE_EMAIL_LAYOUT_THANK_EDITOR, ARTICLE_EMAIL_TYPE_LAYOUT, $layoutAssignment->getLayoutId());
+				$email->setAssoc(ARTICLE_EMAIL_LAYOUT_THANK_EDITOR, ARTICLE_EMAIL_TYPE_LAYOUT, $layoutSignoff->getId());
 				$email->send();
 			}
 
-			$layoutAssignment->setDateAcknowledged(Core::getCurrentDate());
-			$submissionDao->updateSectionEditorSubmission($submission);
+			$layoutSignoff->setDateAcknowledged(Core::getCurrentDate());
+			$signoffDao->updateObject($layoutSignoff);
 
 		} else {
 			if (!Request::getUserVar('continued')) {
@@ -1863,7 +1903,7 @@ class SectionEditorAction extends Action {
 			isset($decisionTemplateMap[$decision])?$decisionTemplateMap[$decision]:null
 		);
 
-		$copyeditor =& $sectionEditorSubmission->getCopyeditor();
+		$copyeditor = $sectionEditorSubmission->getUserBySignoffType('SIGNOFF_COPYEDITING_INITIAL');
 
 		if ($send && !$email->hasErrors()) {
 			HookRegistry::call('SectionEditorAction::emailEditorDecisionComment', array(&$sectionEditorSubmission, &$send));

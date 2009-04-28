@@ -326,22 +326,6 @@ class Article extends Submission {
 	}
 
 	/**
-	 * Get copyedit file id.
-	 * @return int
-	 */
-	function getCopyeditFileId() {
-		return $this->getData('copyeditFileId');
-	}
-
-	/**
-	 * Set copyedit file id.
-	 * @param $copyeditFileId int
-	 */
-	function setCopyeditFileId($copyeditFileId) {
-		return $this->setData('copyeditFileId', $copyeditFileId);
-	}
-
-	/**
 	 * get expedited
 	 * @return boolean
 	 */
@@ -429,13 +413,14 @@ class Article extends Submission {
 	 * @param $authors boolean
 	 * @param $reviewers boolean
 	 * @param $editors boolean
-	 * @param $proofreaders boolean
-	 * @param $copyeditors boolean
-	 * @param $layoutEditors boolean
+	 * @param $proofreader boolean
+	 * @param $copyeditor boolean
+	 * @param $layoutEditor boolean
 	 * @return array User IDs
 	 */
-	function getAssociatedUserIds($authors = true, $reviewers = true, $editors = true, $proofreaders = true, $copyeditors = true, $layoutEditors = true) {
+	function getAssociatedUserIds($authors = true, $reviewers = true, $editors = true, $proofreader = true, $copyeditor = true, $layoutEditor = true) {
 		$articleId = $this->getArticleId();
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 		
 		$userIds = array();
 
@@ -456,28 +441,19 @@ class Article extends Submission {
 			}
 		}
 		
-		if($copyeditors) {
-			$copyAssignmentDao = &DAORegistry::getDAO('CopyAssignmentDAO');
-			$copyAssignment =& $copyAssignmentDao->getCopyAssignmentByArticleId($articleId);
-			if ($copyAssignment != null && $copyAssignment->getCopyeditorId() > 0) {
-				$userIds[] =array('id' =>  $copyAssignment->getCopyeditorId(), 'role' => 'copyeditor');
-			}
+		if($copyeditor) {
+			$copyedSignoff = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $articleId);
+			$userIds[] = array('id' => $copyedSignoff->getUserId(), 'role' => 'copyeditor');
 		}
 		
-		if($layoutEditors) {
-			$layoutAssignmentDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
-			$layoutEditorId = $layoutAssignmentDao->getLayoutEditorIdByArticleId($articleId);
-			if ($layoutEditorId != null && $layoutEditorId > 0) {
-				$userIds[] = array('id' => $layoutEditorId, 'role' => 'layoutEditor');
-			}
+		if($layoutEditor) {
+			$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
+			$userIds[] = array('id' => $layoutSignoff->getUserId(), 'role' => 'layoutEditor');
 		}	
 		
-		if($proofreaders) {
-			$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
-			$proofAssignment =& $proofAssignmentDao->getProofAssignmentByArticleId($articleId);
-			if ($proofAssignment != null && $proofAssignment->getProofreaderId() > 0) {
-				$userIds[] = array('id' => $proofAssignment->getProofreaderId(), 'role' => 'proofreader');
-			}
+		if($proofreader) {
+			$proofSignoff = $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $articleId);
+			$userIds[] = array('id' => $proofSignoff->getUserId(), 'role' => 'proofreader');
 		}
 		
 		if($reviewers) {
@@ -490,6 +466,65 @@ class Article extends Submission {
 		}
 				
 		return $userIds;
+	}
+
+	/**
+	 * Get the signoff for this article
+	 * @param $signoffType string
+	 * @return Signoff
+	 */
+	function getSignoff($signoffType) {
+		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		return $signoffDao->getBySymbolic($signoffType, ASSOC_TYPE_ARTICLE, $this->getArticleId());
+	}
+	
+	/**
+	 * Get the file for this article at a given signoff stage
+	 * @param $signoffType string
+	 * @param $idOnly boolean Return only file ID
+	 * @return ArticleFile
+	 */
+	function getFileBySignoffType($signoffType, $idOnly = false) {
+		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+
+		$signoff = $signoffDao->getBySymbolic($signoffType, ASSOC_TYPE_ARTICLE, $this->getArticleId());
+		if (!$signoff) return false;
+		
+		if ($idOnly) return $signoff->getFileId();
+		
+		$articleFile =& $articleFileDao->getArticleFile($signoff->getFileId(), $signoff->getFileRevision());
+		return $articleFile;
+	}
+	
+	/**
+	 * Get the user associated with a given signoff and this article
+	 * @param $signoffType string
+	 * @return User
+	 */
+	function getUserBySignoffType($signoffType) {
+		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$userDao =& DAORegistry::getDAO('UserDAO');
+
+		$signoff = $signoffDao->getBySymbolic($signoffType, ASSOC_TYPE_ARTICLE, $this->getArticleId());
+		if (!$signoff) return false;
+		
+		$user =& $userDao->getUser($signoff->getUserId());
+		return $user;
+	}
+	
+	/**
+	 * Get the user id associated with a given signoff and this article
+	 * @param $signoffType string
+	 * @return int
+	 */
+	function getUserIdBySignoffType($signoffType) {
+		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+
+		$signoff = $signoffDao->getBySymbolic($signoffType, ASSOC_TYPE_ARTICLE, $this->getArticleId());
+		if (!$signoff) return false;
+		
+		return $signoff->getUserId();
 	}
 }
 

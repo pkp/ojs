@@ -25,8 +25,9 @@
 
 {iterate from=submissions item=submission}
 
-	{assign var="layoutAssignment" value=$submission->getLayoutAssignment()}
-	{assign var="proofAssignment" value=$submission->getProofAssignment()}
+	{assign var="layoutEditorProofSignoff" value=$submission->getSignoff('SIGNOFF_PROOFREADING_LAYOUT')}
+	{assign var="layoutSignoff" value=$submission->getSignoff('SIGNOFF_LAYOUT')}
+	{assign var="copyeditorFinalSignoff" value=$submission->getSignoff('SIGNOFF_COPYEDITING_FINAL')}
 	{assign var="articleId" value=$submission->getArticleId()}
 	{assign var="highlightClass" value=$submission->getHighlightClass()}
 	<tr valign="top"{if $highlightClass} class="{$highlightClass|escape}"{/if}>
@@ -35,9 +36,9 @@
 		<td>{$submission->getSectionAbbrev()|escape}</td>
 		<td>{$submission->getAuthorString(true)|truncate:40:"..."|escape}</td>
 		<td><a href="{url op="submissionEditing" path=$articleId}" class="action">{$submission->getArticleTitle()|strip_unsafe_html|truncate:60:"..."}</a></td>
-		<td>{$submission->getCopyeditorDateFinalCompleted()|date_format:$dateFormatTrunc|default:"&mdash;"}</td>
-		<td>{$layoutAssignment->getDateCompleted()|date_format:$dateFormatTrunc|default:"&mdash;"}</td>
-		<td>{$proofAssignment->getDateLayoutEditorCompleted()|date_format:$dateFormatTrunc|default:"&mdash;"}</td>
+		<td>{$copyeditorFinalSignoff->getDateCompleted()|date_format:$dateFormatTrunc|default:"&mdash;"}</td>
+		<td>{$layoutSignoff->getDateCompleted()|date_format:$dateFormatTrunc|default:"&mdash;"}</td>
+		<td>{$layoutEditorProofSignoff->getDateCompleted()|date_format:$dateFormatTrunc|default:"&mdash;"}</td>
 	</tr>
 	<tr>
 		<td colspan="8" class="{if $submissions->eof()}end{/if}separator">&nbsp;</td>

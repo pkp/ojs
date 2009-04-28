@@ -312,20 +312,19 @@ class TrackSubmissionHandler extends AuthorHandler {
 
 		AuthorAction::copyeditUnderway($submission);
 		import('submission.proofreader.ProofreaderAction');
-		ProofreaderAction::authorProofreadingUnderway($submission);
+		ProofreaderAction::proofreadingUnderway($submission, 'SIGNOFF_PROOFREADING_AUTHOR');
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign_by_ref('submission', $submission);
-		$templateMgr->assign_by_ref('copyeditor', $submission->getCopyeditor());
+		$templateMgr->assign_by_ref('copyeditor', $submission->getUserBySignoffType('SIGNOFF_COPYEDITING_INITIAL'));
 		$templateMgr->assign_by_ref('submissionFile', $submission->getSubmissionFile());
-		$templateMgr->assign_by_ref('initialCopyeditFile', $submission->getInitialCopyeditFile());
-		$templateMgr->assign_by_ref('editorAuthorCopyeditFile', $submission->getEditorAuthorCopyeditFile());
-		$templateMgr->assign_by_ref('finalCopyeditFile', $submission->getFinalCopyeditFile());
+		$templateMgr->assign_by_ref('initialCopyeditFile', $submission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL'));
+		$templateMgr->assign_by_ref('editorAuthorCopyeditFile', $submission->getFileBySignoffType('SIGNOFF_COPYEDITING_AUTHOR'));
+		$templateMgr->assign_by_ref('finalCopyeditFile', $submission->getFileBySignoffType('SIGNOFF_COPYEDITING_FINAL'));
 		$templateMgr->assign_by_ref('suppFiles', $submission->getSuppFiles());
 		$templateMgr->assign('useCopyeditors', $journal->getSetting('useCopyeditors'));
 		$templateMgr->assign('useLayoutEditors', $journal->getSetting('useLayoutEditors'));
 		$templateMgr->assign('useProofreaders', $journal->getSetting('useProofreaders'));
-		$templateMgr->assign_by_ref('proofAssignment', $submission->getProofAssignment());
 		$templateMgr->assign('helpTopicId', 'editorial.authorsRole.editing');	
 		$templateMgr->display('author/submissionEditing.tpl');
 	}
@@ -361,9 +360,10 @@ class TrackSubmissionHandler extends AuthorHandler {
 
 		// If the copy editor has completed copyediting, disallow
 		// the author from changing the metadata.
-		if ($submission->getCopyeditorDateCompleted() != null || AuthorAction::saveMetadata($submission)) {
-			Request::redirect(null, null, 'submission', $articleId);
-		}
+		$initialSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $submission->getArticleId());
+		if ($initialSignoff->getDateCompleted() != null || AuthorAction::saveMetadata($submission)) {
+ 			Request::redirect(null, null, 'submission', $articleId);
+ 		}
 	}
 
 	/**

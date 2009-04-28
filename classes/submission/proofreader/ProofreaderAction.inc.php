@@ -18,7 +18,6 @@
 
 // $Id$
 
-
 import('submission.common.Action');
 
 class ProofreaderAction extends Action {
@@ -27,12 +26,12 @@ class ProofreaderAction extends Action {
 	 * Select a proofreader for submission
 	 */
 	function selectProofreader($userId, $article) {
-		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
-		$proofAssignment =& $proofAssignmentDao->getProofAssignmentByArticleId($article->getArticleId());
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
+		$proofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $article->getArticleId());
 
-		if (!HookRegistry::call('ProofreaderAction::selectProofreader', array(&$userId, &$article, &$proofAssignment))) {
-			$proofAssignment->setProofreaderId($userId);
-			$proofAssignmentDao->updateProofAssignment($proofAssignment);
+		if (!HookRegistry::call('ProofreaderAction::selectProofreader', array(&$userId, &$article))) {
+			$proofSignoff->setUserId($userId);
+			$signoffDao->updateObject($proofSignoff);
 
 			// Add log entry
 			$user = &Request::getUser();
@@ -53,17 +52,13 @@ class ProofreaderAction extends Action {
 	 * @return true iff ready for a redirect
 	 */
 	function proofreadEmail($articleId, $mailType, $actionPath = '') {
-		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
-
 		$ccs = array();
-
-		$proofAssignment =& $proofAssignmentDao->getProofAssignmentByArticleId($articleId);
-		$useProofreaders = $journal->getSetting('useProofreaders');
 
 		import('mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($sectionEditorSubmission, $mailType);
@@ -72,9 +67,12 @@ class ProofreaderAction extends Action {
 			case 'PROOFREAD_AUTHOR_REQUEST':
 				$eventType = ARTICLE_EMAIL_PROOFREAD_NOTIFY_AUTHOR;
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
-				$setDateField = 'setDateAuthorNotified';
-				$nullifyDateFields = array('setDateAuthorUnderway', 'setDateAuthorCompleted', 'setDateAuthorAcknowledged');
-				$receiver = &$userDao->getUser($sectionEditorSubmission->getUserId());
+				$signoffType = 'SIGNOFF_PROOFREADING_AUTHOR';
+				$setDateField = 'setDateNotified';
+				$nullifyDateFields = array('setDateUnderway', 'setDateCompleted', 'setDateAcknowledged');
+				$setUserId = $sectionEditorSubmission->getUserId();
+				$receiver = &$userDao->getUser($setUserId);
+				$setUserId = $receiver;
 				if (!isset($receiver)) return true;
 				$receiverName = $receiver->getFullName();
 				$receiverAddress = $receiver->getEmail();
@@ -91,7 +89,8 @@ class ProofreaderAction extends Action {
 			case 'PROOFREAD_AUTHOR_ACK':
 				$eventType = ARTICLE_EMAIL_PROOFREAD_THANK_AUTHOR;
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
-				$setDateField = 'setDateAuthorAcknowledged';
+				$signoffType = 'SIGNOFF_PROOFREADING_AUTHOR';
+				$setDateField = 'setDateAcknowledged';
 				$receiver = &$userDao->getUser($sectionEditorSubmission->getUserId());
 				if (!isset($receiver)) return true;
 				$receiverName = $receiver->getFullName();
@@ -106,16 +105,19 @@ class ProofreaderAction extends Action {
 			case 'PROOFREAD_AUTHOR_COMPLETE':
 				$eventType = ARTICLE_EMAIL_PROOFREAD_NOTIFY_AUTHOR_COMPLETE;
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
-				$setDateField = 'setDateAuthorCompleted';
-				$getDateField = 'getDateAuthorCompleted';
+				$signoffType = 'SIGNOFF_PROOFREADING_AUTHOR';
+				$setDateField = 'setDateCompleted';
+				$getDateField = 'getDateCompleted';
 
 				$editAssignments =& $sectionEditorSubmission->getEditAssignments();
+				$nextSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $articleId);
 
-				if ($proofAssignment->getProofreaderId() != 0) {
-					$setNextDateField = 'setDateProofreaderNotified';
+				if ($nextSignoff->getUserId() != 0) {
+					$setNextDateField = 'setDateNotified';
+					$proofreader = &$userDao->getUser($nextSignoff->getUserId());
 
-					$receiverName = $proofAssignment->getProofreaderFullName();
-					$receiverAddress = $proofAssignment->getProofreaderEmail();
+					$receiverName = $proofreader->getFullName();
+					$receiverAddress = $proofreader->getEmail();
 
 					$editorAdded = false;
 					foreach ($editAssignments as $editAssignment) {
@@ -154,13 +156,14 @@ class ProofreaderAction extends Action {
 			case 'PROOFREAD_REQUEST':
 				$eventType = ARTICLE_EMAIL_PROOFREAD_NOTIFY_PROOFREADER;
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
-				$setDateField = 'setDateProofreaderNotified';
-				$nullifyDateFields = array('setDateProofreaderUnderway', 'setDateProofreaderCompleted', 'setDateProofreaderAcknowledged');
-
-				$receiver = &$userDao->getUser($proofAssignment->getProofreaderId());
+				$signoffType = 'SIGNOFF_PROOFREADING_PROOFREADER';
+				$setDateField = 'setDateNotified';
+				$nullifyDateFields = array('setDateUnderway', 'setDateCompleted', 'setDateAcknowledged');
+				
+				$receiver = $sectionEditorSubmission->getUserBySignoffType($signoffType);
 				if (!isset($receiver)) return true;
-				$receiverName = $proofAssignment->getProofreaderFullName();
-				$receiverAddress = $proofAssignment->getProofreaderEmail();
+				$receiverName = $receiver->getFullName();
+				$receiverAddress = $receiver->getEmail();
 				$email->ccAssignedEditingSectionEditors($sectionEditorSubmission->getArticleId());
 
 				$addParamArray = array(
@@ -175,12 +178,13 @@ class ProofreaderAction extends Action {
 			case 'PROOFREAD_ACK':
 				$eventType = ARTICLE_EMAIL_PROOFREAD_THANK_PROOFREADER;
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
-				$setDateField = 'setDateProofreaderAcknowledged';
-
-				$receiver = &$userDao->getUser($proofAssignment->getProofreaderId());
+				$signoffType = 'SIGNOFF_PROOFREADING_PROOFREADER';
+				$setDateField = 'setDateAcknowledged';
+			
+				$receiver = $sectionEditorSubmission->getUserBySignoffType($signoffType);
 				if (!isset($receiver)) return true;
-				$receiverName = $proofAssignment->getProofreaderFullName();
-				$receiverAddress = $proofAssignment->getProofreaderEmail();
+				$receiverName = $receiver->getFullName();
+				$receiverAddress = $receiver->getEmail();
 				$email->ccAssignedEditingSectionEditors($sectionEditorSubmission->getArticleId());
 
 				$addParamArray = array(
@@ -192,13 +196,16 @@ class ProofreaderAction extends Action {
 			case 'PROOFREAD_COMPLETE':
 				$eventType = ARTICLE_EMAIL_PROOFREAD_NOTIFY_PROOFREADER_COMPLETE;
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
-				$setDateField = 'setDateProofreaderCompleted';
-				$getDateField = 'getDateProofreaderCompleted';
-				$setNextDateField = 'setDateLayoutEditorNotified';
-				$editAssignments =& $sectionEditorSubmission->getEditAssignments();
-				$layoutAssignment =& $sectionEditorSubmission->getLayoutAssignment();
+				$signoffType = 'SIGNOFF_PROOFREADING_PROOFREADER';
+				$setDateField = 'setDateCompleted';
+				$getDateField = 'getDateCompleted';
+				
+				$setNextDateField = 'setDateNotified';
+				$nextSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
 
-				$receiver = &$userDao->getUser($layoutAssignment->getEditorId());
+				$editAssignments =& $sectionEditorSubmission->getEditAssignments();
+
+				$receiver = $sectionEditorSubmission->getUserBySignoffType($signoffType);
 
 				$editorAdded = false;
 				foreach ($editAssignments as $editAssignment) {
@@ -227,11 +234,11 @@ class ProofreaderAction extends Action {
 			case 'PROOFREAD_LAYOUT_REQUEST':
 				$eventType = ARTICLE_EMAIL_PROOFREAD_NOTIFY_LAYOUTEDITOR;
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
-				$setDateField = 'setDateLayoutEditorNotified';
-				$nullifyDateFields = array('setDateLayoutEditorUnderway', 'setDateLayoutEditorCompleted', 'setDateLayoutEditorAcknowledged');
-				$layoutAssignment =& $sectionEditorSubmission->getLayoutAssignment();
+				$signoffType = 'SIGNOFF_PROOFREADING_LAYOUT';
+				$setDateField = 'setDateNotified';
+				$nullifyDateFields = array('setDateUnderway', 'setDateCompleted', 'setDateAcknowledged');
 
-				$receiver = &$userDao->getUser($layoutAssignment->getEditorId());
+				$receiver = $sectionEditorSubmission->getUserBySignoffType($signoffType);
 				if (!isset($receiver)) return true;
 				$receiverName = $receiver->getFullName();
 				$receiverAddress = $receiver->getEmail();
@@ -247,20 +254,23 @@ class ProofreaderAction extends Action {
 
 				if (!$actionPath) {
 					// Reset underway/complete/thank dates
-					$proofAssignment->setDateLayoutEditorUnderway(null);
-					$proofAssignment->setDateLayoutEditorCompleted(null);
-					$proofAssignment->setDateLayoutEditorAcknowledged(null);
+					$signoffReset = $signoffDao->build($signoffType, ASSOC_TYPE_ARTICLE, $articleId);
+					$signoffReset->setDateUnderway(null);
+					$signoffReset->setDateCompleted(null);
+					$signoffReset->setDateAcknowledged(null);
 				}
 				break;
 
 			case 'PROOFREAD_LAYOUT_ACK':
 				$eventType = ARTICLE_EMAIL_PROOFREAD_THANK_LAYOUTEDITOR;
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
-				$setDateField = 'setDateLayoutEditorAcknowledged';
-				$layoutAssignment =& $sectionEditorSubmission->getLayoutAssignment();
+				$signoffType = 'SIGNOFF_PROOFREADING_LAYOUT';
+				$setDateField = 'setDateAcknowledged';
 
-				$receiverName = $layoutAssignment->getEditorFullName();
-				$receiverAddress = $layoutAssignment->getEditorEmail();
+				$receiver = $sectionEditorSubmission->getUserBySignoffType($signoffType);
+				if (!isset($receiver)) return true;
+				$receiverName = $receiver->getFullName();
+				$receiverAddress = $receiver->getEmail();
 				$email->ccAssignedEditingSectionEditors($sectionEditorSubmission->getArticleId());
 
 				$addParamArray = array(
@@ -272,8 +282,9 @@ class ProofreaderAction extends Action {
 			case 'PROOFREAD_LAYOUT_COMPLETE':
 				$eventType = ARTICLE_EMAIL_PROOFREAD_NOTIFY_LAYOUTEDITOR_COMPLETE;
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
-				$setDateField = 'setDateLayoutEditorCompleted';
-				$getDateField = 'getDateLayoutEditorCompleted';
+				$signoffType = 'SIGNOFF_PROOFREADING_LAYOUT';
+				$setDateField = 'setDateCompleted';
+				$getDateField = 'getDateCompleted';
 
 				$editAssignments =& $sectionEditorSubmission->getEditAssignments();
 				$assignmentIndex = 0;
@@ -304,8 +315,10 @@ class ProofreaderAction extends Action {
 				return true;	
 		}
 
+		$signoff = $signoffDao->build($signoffType, ASSOC_TYPE_ARTICLE, $articleId);
+
 		if (isset($getDateField)) {
-			$date = $proofAssignment->$getDateField();		
+			$date = $signoff->$getDateField();		
 			if (isset($date)) {
 				Request::redirect(null, null, 'submission', $articleId);
 			}
@@ -328,77 +341,42 @@ class ProofreaderAction extends Action {
 			$email->displayEditForm($actionPath, array('articleId' => $articleId));
 			return false;
 		} else {
-			HookRegistry::call('ProofreaderAction::proofreadEmail', array(&$proofAssignment, &$email, $mailType));
+			HookRegistry::call('ProofreaderAction::proofreadEmail', array(&$email, $mailType));
 			if ($email->isEnabled()) {
 				$email->setAssoc($eventType, $assocType, $articleId);
 				$email->send();
 			}
 
-			$proofAssignment->$setDateField(Core::getCurrentDate());
+			$signoff->$setDateField(Core::getCurrentDate());
 			if (isset($setNextDateField)) {
-				$proofAssignment->$setNextDateField(Core::getCurrentDate());
+				$nextSignoff->$setNextDateField(Core::getCurrentDate());
 			}
 			if (isset($nullifyDateFields)) foreach ($nullifyDateFields as $fieldSetter) {
-				$proofAssignment->$fieldSetter(null);
+				$signoff->$fieldSetter(null);
 			}
-
-			$proofAssignmentDao->updateProofAssignment($proofAssignment);
+			
+			$signoffDao->updateObject($signoff);
+			if(isset($nextSignoff)) $signoffDao->updateObject($nextSignoff);
+		
 			return true;
 		}
+
 	}
 
 	/**
-	 * Set date for author proofreading underway
+	 * Set date for author/proofreader/LE proofreading underway
 	 * @param $articleId int
+	 * @param $signoffType int
 	 */
-	function authorProofreadingUnderway(&$submission) {
-		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
-		$proofAssignment =& $proofAssignmentDao->getProofAssignmentByArticleId($submission->getArticleId());
+	function proofreadingUnderway(&$submission, $signoffType) {
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
+		$signoff = $signoffDao->build($signoffType, ASSOC_TYPE_ARTICLE, $submission->getArticleId());
 
-		if (!$proofAssignment->getDateAuthorUnderway() && $proofAssignment->getDateAuthorNotified() && !HookRegistry::call('ProofreaderAction::authorProofreadingUnderway', array(&$submission, &$proofAssignment))) {
+		if (!$signoff->getDateUnderway() && $signoff->getDateNotified() && !HookRegistry::call('ProofreaderAction::proofreadingUnderway', array(&$submission, &$signoffType))) {
 			$dateUnderway = Core::getCurrentDate();
-			$proofAssignment->setDateAuthorUnderway($dateUnderway);
-			$authorProofAssignment = &$submission->getProofAssignment();
-			$authorProofAssignment->setDateAuthorUnderway($dateUnderway);
+			$signoff->setDateUnderway($dateUnderway);
+			$signoffDao->updateObject($signoff);
 		}
-
-		$proofAssignmentDao->updateProofAssignment($proofAssignment);
-	}
-
-	/**
-	 * Set date for proofreader proofreading underway
-	 * @param $articleId int
-	 */
-	function proofreaderProofreadingUnderway(&$submission) {
-		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
-		$proofAssignment =& $proofAssignmentDao->getProofAssignmentByArticleId($submission->getArticleId());
-
-		if (!$proofAssignment->getDateProofreaderUnderway() && $proofAssignment->getDateProofreaderNotified() && !HookRegistry::call('ProofreaderAction::proofreaderProofreadingUnderway', array(&$submission, &$proofAssignment))) {
-			$dateUnderway = Core::getCurrentDate();
-			$proofAssignment->setDateProofreaderUnderway($dateUnderway);
-			$proofreaderProofAssignment = &$submission->getProofAssignment();
-			$proofreaderProofAssignment->setDateProofreaderUnderway($dateUnderway);
-		}
-
-		$proofAssignmentDao->updateProofAssignment($proofAssignment);
-	}
-
-	/**
-	 * Set date for layout editor proofreading underway
-	 * @param $articleId int
-	 */
-	function layoutEditorProofreadingUnderway(&$submission) {
-		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
-		$proofAssignment =& $proofAssignmentDao->getProofAssignmentByArticleId($submission->getArticleId());
-
-		if (!$proofAssignment->getDateLayoutEditorUnderway() && $proofAssignment->getDateLayoutEditorNotified() && !HookRegistry::call('ProofreaderAction::layoutEditorProofreadingUnderway', array(&$submission, &$proofAssignment))) {
-			$dateUnderway = Core::getCurrentDate();
-			$proofAssignment->setDateLayoutEditorUnderway($dateUnderway);
-			$layoutEditorAssignment = &$submission->getProofAssignment();
-			$layoutEditorAssignment->setDateLayoutEditorUnderway($dateUnderway);
-		}
-
-		$proofAssignmentDao->updateProofAssignment($proofAssignment);
 	}
 
 	//

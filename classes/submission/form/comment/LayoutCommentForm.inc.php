@@ -74,12 +74,12 @@ class LayoutCommentForm extends CommentForm {
 
 		if ($this->roleId == ROLE_ID_EDITOR || $this->roleId == ROLE_ID_SECTION_EDITOR) {
 			// Then add layout editor
-			$layoutAssignmentDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
-			$layoutAssignment = &$layoutAssignmentDao->getLayoutAssignmentByArticleId($this->article->getArticleId());
+			$signoffDao = &DAORegistry::getDAO('SignoffDAO');
+			$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $article->getArticleId());
 
 			// Check to ensure that there is a layout editor assigned to this article.
-			if ($layoutAssignment != null && $layoutAssignment->getEditorId() > 0) {
-				$user = &$userDao->getUser($layoutAssignment->getEditorId());
+			if ($layoutSignoff != null && $layoutSignoff->getUserId() > 0) {
+				$user = &$userDao->getUser($layoutSignoff->getUserId());
 
 				if ($user) $recipients = array_merge($recipients, array($user->getEmail() => $user->getFullName()));
 			}

@@ -142,12 +142,12 @@ class LayoutEditorAction extends Action {
 	 * @param $send boolean
 	 */
 	function completeLayoutEditing($submission, $send = false) {
-		$submissionDao = &DAORegistry::getDAO('LayoutEditorSubmissionDAO');
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
 
-		$layoutAssignment = &$submission->getLayoutAssignment();
-		if ($layoutAssignment->getDateCompleted() != null) {
+		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getArticleId());
+		if ($layoutSignoff->getDateCompleted() != null) {
 			return true;
 		}
 
@@ -158,14 +158,14 @@ class LayoutEditorAction extends Action {
 		if (empty($editAssignments)) return;
 
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
-			HookRegistry::call('LayoutEditorAction::completeLayoutEditing', array(&$submission, &$layoutAssignment, &$editAssignments, &$email));
+			HookRegistry::call('LayoutEditorAction::completeLayoutEditing', array(&$submission, &$editAssignments, &$email));
 			if ($email->isEnabled()) {
-				$email->setAssoc(ARTICLE_EMAIL_LAYOUT_NOTIFY_COMPLETE, ARTICLE_EMAIL_TYPE_LAYOUT, $layoutAssignment->getLayoutId());
+				$email->setAssoc(ARTICLE_EMAIL_LAYOUT_NOTIFY_COMPLETE, ARTICLE_EMAIL_TYPE_LAYOUT, $layoutSignoff->getId());
 				$email->send();
 			}
 
-			$layoutAssignment->setDateCompleted(Core::getCurrentDate());
-			$submissionDao->updateSubmission($submission);
+			$layoutSignoff->setDateCompleted(Core::getCurrentDate());
+			$signoffDao->updateObject($layoutSignoff);
 
 			// Add log entry
 			$user = &Request::getUser();
@@ -206,16 +206,20 @@ class LayoutEditorAction extends Action {
 	function uploadLayoutVersion($submission) {
 		import('file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($submission->getArticleId());
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 		$layoutEditorSubmissionDao = &DAORegistry::getDAO('LayoutEditorSubmissionDAO');
 
-		$layoutDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
-		$layoutAssignment = &$layoutDao->getLayoutAssignmentByArticleId($submission->getArticleId());
+		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getArticleId());
 
 		$fileName = 'layoutFile';
-		if ($articleFileManager->uploadedFileExists($fileName) && !HookRegistry::call('LayoutEditorAction::uploadLayoutVersion', array(&$submission, &$layoutAssignment))) {
-			$layoutFileId = $articleFileManager->uploadLayoutFile($fileName, $layoutAssignment->getLayoutFileId());
-			$layoutAssignment->setLayoutFileId($layoutFileId);
-			$layoutDao->updateLayoutAssignment($layoutAssignment);
+		if ($articleFileManager->uploadedFileExists($fileName) && !HookRegistry::call('LayoutEditorAction::uploadLayoutVersion', array(&$submission))) {
+			if ($layoutSignoff->getFileId() != null) {
+				$layoutFileId = $articleFileManager->uploadLayoutFile($fileName, $layoutSignoff->getFileId());
+			} else {
+				$layoutFileId = $articleFileManager->uploadLayoutFile($fileName);
+			}
+			$layoutSignoff->setFileId($layoutFileId);
+			$signoffDao->updateObject($layoutSignoff);
 		}
 	}
 
@@ -340,18 +344,16 @@ class LayoutEditorAction extends Action {
 	function downloadFile($article, $fileId, $revision = null) {
 		$canDownload = false;
 
-		$layoutDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 		$suppDao = &DAORegistry::getDAO('SuppFileDAO');
 
-		$layoutAssignment = &$layoutDao->getLayoutAssignmentByArticleId($article->getArticleId());
+		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $this->article->getArticleId());
 
-		if ($layoutAssignment->getLayoutFileId() == $fileId) {
+		if ($layoutSignoff->getFileId() == $fileId) {
 			$canDownload = true;
-
 		} else if($galleyDao->galleyExistsByFileId($article->getArticleId(), $fileId)) {
 			$canDownload = true;
-
 		} else if($suppDao->suppFileExistsByFileId($article->getArticleId(), $fileId)) {
 			$canDownload = true;
 		}

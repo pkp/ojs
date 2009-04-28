@@ -36,23 +36,6 @@ class ProofreaderSubmission extends Article {
 	//
 
 	/**
-	 * Get layout assignment.
-	 * @return layoutAssignment object
-	 */
-	function &getLayoutAssignment() {
-		$layoutAssignment = &$this->getData('layoutAssignment');
-		return $layoutAssignment;
-	}
-
-	/**
-	 * Set layout assignment.
-	 * @param $layoutAssignment
-	 */
-	function setLayoutAssignment($layoutAssignment) {
-		return $this->setData('layoutAssignment', $layoutAssignment);
-	}
-
-	/**
 	 * Get most recent layout comment.
 	 * @return ArticleComment
 	 */
@@ -117,23 +100,6 @@ class ProofreaderSubmission extends Article {
 	 */
 	function setMostRecentProofreadComment($mostRecentProofreadComment) {
 		return $this->setData('mostRecentProofreadComment', $mostRecentProofreadComment);
-	}
-
-	/**
-	 * Get proof assignment.
-	 * @return proofAssignment object
-	 */
-	function &getProofAssignment() {
-		$proofAssignment = &$this->getData('proofAssignment');
-		return $proofAssignment;
-	}
-
-	/**
-	 * Set proof assignment.
-	 * @param $proofAssignment
-	 */
-	function setProofAssignment($proofAssignment) {
-		return $this->setData('proofAssignment', $proofAssignment);
 	}
 
 	/**

@@ -31,6 +31,7 @@ class EmailHandler extends UserHandler {
 
 		$templateMgr = &TemplateManager::getManager();
 
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 
 		$journal = &Request::getJournal();
@@ -103,17 +104,14 @@ class EmailHandler extends UserHandler {
 				if ($reviewAssignment->getReviewerId() === $user->getUserId()) $hasAccess = true;
 			}
 			// 4. User is copyeditor
-			$copyAssignmentDao =& DAORegistry::getDAO('CopyAssignmentDAO');
-			$copyAssignment =& $copyAssignmentDao->getCopyAssignmentByArticleId($articleId);
-			if ($copyAssignment && $copyAssignment->getCopyeditorId() === $user->getUserId()) $hasAccess = true;
+			$copyedSignoff =& $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $articleId);
+			if ($copyedSignoff && $copyedSignoff->getUserId() === $user->getUserId()) $hasAccess = true;
 			// 5. User is layout editor
-			$layoutAssignmentDao =& DAORegistry::getDAO('LayoutAssignmentDAO');
-			$layoutAssignment =& $layoutAssignmentDao->getLayoutAssignmentByArticleId($articleId);
-			if ($layoutAssignment && $layoutAssignment->getEditorId() === $user->getUserId()) $hasAccess = true;
+			$layoutSignoff =& $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
+			if ($layoutSignoff && $layoutSignoff->getUserId() === $user->getUserId()) $hasAccess = true;
 			// 6. User is proofreader
-			$proofAssignmentDao =& DAORegistry::getDAO('ProofAssignmentDAO');
-			$proofAssignment =& $proofAssignmentDao->getProofAssignmentByArticleId($articleId);
-			if ($proofAssignment && $proofAssignment->getProofreaderId() === $user->getUserId()) $hasAccess = true;
+			$proofSignoff =& $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $articleId);
+			if ($proofSignoff && $proofSignoff->getUserId() === $user->getUserId()) $hasAccess = true;
 
 			// Last, "deal-breakers" -- access is not allowed.
 			if (!$article || ($article && $article->getJournalId() !== $journal->getJournalId())) $hasAccess = false;

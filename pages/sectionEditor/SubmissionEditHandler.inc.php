@@ -187,7 +187,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$editAssignments =& $submission->getEditAssignments();
 		$allowRecommendation = $submission->getCurrentRound() == $round && $submission->getReviewFileId() != null && !empty($editAssignments);
 		$allowResubmit = $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT && $sectionEditorSubmissionDao->getMaxReviewRound($articleId) == $round ? true : false;
-		$allowCopyedit = $lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT && $submission->getCopyeditFileId() == null ? true : false;
+		$allowCopyedit = $lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT && $submission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL', true) == null ? true : false;
 
 		// Prepare an array to store the 'Notify Reviewer' email logs
 		$notifyReviewerLogs = array();
@@ -236,7 +236,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign_by_ref('submissionFile', $submission->getSubmissionFile());
 		$templateMgr->assign_by_ref('suppFiles', $submission->getSuppFiles());
 		$templateMgr->assign_by_ref('reviewFile', $submission->getReviewFile());
-		$templateMgr->assign_by_ref('copyeditFile', $submission->getCopyeditFile());
+		$templateMgr->assign_by_ref('copyeditFile', $submission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL'));
 		$templateMgr->assign_by_ref('revisedFile', $submission->getRevisedFile());
 		$templateMgr->assign_by_ref('editorFile', $submission->getEditorFile());
 		$templateMgr->assign('rateReviewerOnQuality', $journal->getSetting('rateReviewerOnQuality'));
@@ -286,12 +286,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign_by_ref('submissionFile', $submission->getSubmissionFile());
-		$templateMgr->assign_by_ref('copyeditFile', $submission->getCopyeditFile());
-		$templateMgr->assign_by_ref('initialCopyeditFile', $submission->getInitialCopyeditFile());
-		$templateMgr->assign_by_ref('editorAuthorCopyeditFile', $submission->getEditorAuthorCopyeditFile());
-		$templateMgr->assign_by_ref('finalCopyeditFile', $submission->getFinalCopyeditFile());
+		$templateMgr->assign_by_ref('copyeditFile', $submission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL'));
+		$templateMgr->assign_by_ref('initialCopyeditFile', $submission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL'));
+		$templateMgr->assign_by_ref('editorAuthorCopyeditFile', $submission->getFileBySignoffType('SIGNOFF_COPYEDITING_AUTHOR'));
+		$templateMgr->assign_by_ref('finalCopyeditFile', $submission->getFileBySignoffType('SIGNOFF_COPYEDITING_FINAL'));
 		$templateMgr->assign_by_ref('suppFiles', $submission->getSuppFiles());
-		$templateMgr->assign_by_ref('copyeditor', $submission->getCopyeditor());
+		$templateMgr->assign_by_ref('copyeditor', $submission->getUserBySignoffType('SIGNOFF_COPYEDITING_INITIAL'));
 
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$user =& Request::getUser();
@@ -306,8 +306,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('useCopyeditors', $useCopyeditors);
 		$templateMgr->assign('useLayoutEditors', $useLayoutEditors);
 		$templateMgr->assign('useProofreaders', $useProofreaders);
-		$templateMgr->assign_by_ref('proofAssignment', $submission->getProofAssignment());
-		$templateMgr->assign_by_ref('layoutAssignment', $submission->getLayoutAssignment());
 		$templateMgr->assign('submissionAccepted', $submissionAccepted);
 
 		// Set up required Payment Related Information
@@ -970,6 +968,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = Request::getUserVar('articleId');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		$submission =& $this->submission;
+		
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 
 		$redirectTarget = 'submissionReview';
 
@@ -988,6 +988,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 					// The conditions are met for being able
 					// to send a file to copyediting.
 					SectionEditorAction::setCopyeditFile($submission, $file[0], $file[1]);
+					
+					$signoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $submission->getArticleId());
+					$signoff->setFileId($file[0]);
+					$signoff->setFileRevision($file[1]);
+					$signoffDao->updateObject($signoff);
 				}
 				$redirectTarget = 'submissionEditing';
 			}
@@ -997,6 +1002,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$file = explode(',', Request::getUserVar('editorDecisionFile'));
 			if (isset($file[0]) && isset($file[1])) {
 				SectionEditorAction::resubmitFile($submission, $file[0], $file[1]);
+				
+				$signoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $submission->getArticleId());
+				$signoff->setFileId($file[0]);
+				$signoff->setFileRevision($file[1]);
+				$signoffDao->updateObject($signoff);
 			}
 		}
 
@@ -1048,7 +1058,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('searchInitial', Request::getUserVar('searchInitial'));
 
 			$templateMgr->assign_by_ref('users', $copyeditors);
-			$templateMgr->assign('currentUser', $submission->getCopyeditorId());
+			$templateMgr->assign('currentUser', $submission->getUserBySignoffType('SIGNOFF_COPYEDITING_INITIAL'));
 			$templateMgr->assign_by_ref('statistics', $copyeditorStatistics);
 			$templateMgr->assign('pageSubTitle', 'editor.article.selectCopyeditor');
 			$templateMgr->assign('pageTitle', 'user.role.copyeditors');
@@ -1454,9 +1464,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$submission =& $this->submission;
 
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 
 		if ($editorId && $roleDao->roleExists($journal->getJournalId(), $editorId, ROLE_ID_LAYOUT_EDITOR)) {
-			SectionEditorAction::assignLayoutEditor($submission, $editorId);
+			SectionEditorAction::assignLayoutEditor($submission, $editorId);			
 			Request::redirect(null, null, 'submissionEditing', $articleId);
 		} else {
 			$searchType = null;
@@ -1494,10 +1505,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign_by_ref('users', $layoutEditors);
 
-			$layoutAssignment = &$submission->getLayoutAssignment();
-			if ($layoutAssignment) {
-				$templateMgr->assign('currentUser', $layoutAssignment->getEditorId());
-			}
+			$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
+			if ($layoutSignoff) {
+				$templateMgr->assign('currentUser', $layoutSignoff->getUserId());
+ 			}
 
 			$templateMgr->assign('fieldOptions', Array(
 				USER_FIELD_FIRSTNAME => 'user.firstName',
@@ -1552,6 +1563,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$submission =& $this->submission;
 
 		import('submission.form.ArticleGalleyForm');
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
+ 		$galleyForm =& new ArticleGalleyForm($articleId);
+		$galleyId = $galleyForm->execute($fileName);
 
 		// FIXME: Need construction by reference or validation always fails on PHP 4.x
  		$galleyForm =& new ArticleGalleyForm($articleId);
@@ -2062,6 +2076,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$submission =& $this->submission;
 
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 
 		if ($userId && $articleId && $roleDao->roleExists($journal->getJournalId(), $userId, ROLE_ID_PROOFREADER)) {
 			import('submission.proofreader.ProofreaderAction');
@@ -2098,10 +2113,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 			$templateMgr->assign_by_ref('users', $proofreaders);
 
-			$proofAssignment = &$submission->getProofAssignment();
-			if ($proofAssignment) {
-				$templateMgr->assign('currentUser', $proofAssignment->getProofreaderId());
-			}
+			$proofSignoff = $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $articleId);
+			if ($proofSignoff) {
+				$templateMgr->assign('currentUser', $proofSignoff->getUserId());
+ 			}
 			$templateMgr->assign('statistics', $proofreaderStatistics);
 			$templateMgr->assign('fieldOptions', Array(
 				USER_FIELD_FIRSTNAME => 'user.firstName',
@@ -2154,12 +2169,16 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 */
 	function editorInitiateProofreader() {
 		$articleId = Request::getUserVar('articleId');
+		$user =& Request::getUser();
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 
-		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
-		$proofAssignment = &$proofAssignmentDao->getProofAssignmentByArticleId($articleId);
-		$proofAssignment->setDateProofreaderNotified(Core::getCurrentDate());
-		$proofAssignmentDao->updateProofAssignment($proofAssignment);
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
+		$signoff = $signoffDao->build('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $articleId);
+		if (!$signoff->getUserId()) {
+			$signoff->setUserId($user->getUserId());
+		}
+		$signoff->setDateNotified(Core::getCurrentDate());
+		$signoffDao->updateObject($signoff);
 
 		Request::redirect(null, null, 'submissionEditing', $articleId);
 	}
@@ -2172,10 +2191,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		$submission =& $this->submission;
 
-		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
-		$proofAssignment = &$proofAssignmentDao->getProofAssignmentByArticleId($articleId);
-		$proofAssignment->setDateProofreaderCompleted(Core::getCurrentDate());
-		$proofAssignmentDao->updateProofAssignment($proofAssignment);
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
+		$signoff = $signoffDao->build('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $articleId);
+		$signoff->setDateCompleted(Core::getCurrentDate());
+		$signoffDao->updateObject($signoff);
+ 
 
 		Request::redirect(null, null, 'submissionEditing', $articleId);
 	}
@@ -2215,12 +2235,19 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 */
 	function editorInitiateLayoutEditor() {
 		$articleId = Request::getUserVar('articleId');
+		$user =& Request::getUser();
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 
-		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
-		$proofAssignment = &$proofAssignmentDao->getProofAssignmentByArticleId($articleId);
-		$proofAssignment->setDateLayoutEditorNotified(Core::getCurrentDate());
-		$proofAssignmentDao->updateProofAssignment($proofAssignment);
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
+		$signoff = $signoffDao->build('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
+		if (!$signoff->getUserId()) {
+			$signoff->setUserId($user->getUserId());
+		}
+		$signoff->setDateNotified(Core::getCurrentDate());
+		$signoff->setDateUnderway(null);
+		$signoff->setDateCompleted(null);
+		$signoff->setDateAcknowledged(null);
+		$signoffDao->updateObject($signoff);
 
 		Request::redirect(null, null, 'submissionEditing', $articleId);
 	}
@@ -2232,10 +2259,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = Request::getUserVar('articleId');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 
-		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
-		$proofAssignment = &$proofAssignmentDao->getProofAssignmentByArticleId($articleId);
-		$proofAssignment->setDateLayoutEditorCompleted(Core::getCurrentDate());
-		$proofAssignmentDao->updateProofAssignment($proofAssignment);
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
+		$signoff = $signoffDao->build('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
+		$signoff->setDateCompleted(Core::getCurrentDate());
+		$signoffDao->updateObject($signoff);
 
 		Request::redirect(null, null, 'submissionEditing', $articleId);
 	}
@@ -2248,6 +2275,14 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$send = Request::getUserVar('send')?1:0;
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		$this->setupTemplate(true, $articleId, 'editing');
+		
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
+		$signoff = $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
+		$signoff->setDateNotified(Core::getCurrentDate());
+		$signoff->setDateUnderway(null);
+		$signoff->setDateCompleted(null);
+		$signoff->setDateAcknowledged(null);
+		$signoffDao->updateObject($signoff);
 
 		import('submission.proofreader.ProofreaderAction');
 		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUT_REQUEST', $send?'':Request::url(null, null, 'notifyLayoutEditorProofreader'))) {

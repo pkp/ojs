@@ -8,13 +8,17 @@
  *
  * $Id$
  *}
+{assign var=layoutEditor value=$submission->getUserBySignoffType('SIGNOFF_LAYOUT')}
+{assign var=layoutSignoff value=$submission->getSignoff('SIGNOFF_LAYOUT')}
+{assign var=layoutFile value=$submission->getFileBySignoffType('SIGNOFF_LAYOUT')}
+
 <div id="layout">
 <h3>{translate key="submission.layout"}</h3>
 
 <table class="data" width="100%">
 	<tr>
 		<td class="label" width="20%">{translate key="user.role.layoutEditor"}</td>
-		<td class="value" width="80%">{$layoutAssignment->getEditorFullName()}</td>
+		<td class="value" width="80%">{$layoutEditor->getFullName()}</td>
 	</tr>
 </table>
 
@@ -35,20 +39,20 @@
 			{/if}
 		</td>
 		<td>
-			{$layoutAssignment->getDateNotified()|date_format:$dateFormatShort|default:"&mdash;"}
+			{$layoutSignoff->getDateNotified()|date_format:$dateFormatShort|default:"&mdash;"}
 		</td>
 		<td>
-			{$layoutAssignment->getDateUnderway()|date_format:$dateFormatShort|default:"&mdash;"}
+			{$layoutSignoff->getDateUnderway()|date_format:$dateFormatShort|default:"&mdash;"}
 		</td>
 		<td>
-			{if !$layoutAssignment->getDateNotified() or $layoutAssignment->getDateCompleted()}
+			{if !$layoutSignoff->getDateNotified() or $layoutSignoff->getDateCompleted()}
 				{icon name="mail" disabled="disabled"}
 			{else}
 				{url|assign:"url" op="completeAssignment" articleId=$submission->getArticleId()}
 				{translate|assign:"confirmMessage" key="common.confirmComplete"}
 				{icon name="mail" onclick="return confirm('$confirmMessage')" url=$url}
 			{/if}
-						{$layoutAssignment->getDateCompleted()|date_format:$dateFormatShort|default:""}
+						{$layoutSignoff->getDateCompleted()|date_format:$dateFormatShort|default:""}
 		</td>
 		<td>&nbsp;</td>
 	</tr>

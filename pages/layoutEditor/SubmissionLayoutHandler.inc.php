@@ -40,23 +40,24 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	 */
 	function submission($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
+		$journal =& Request::getJournal();
 		
 		$submissionLayoutHandler =& new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 		$submission =& $submissionLayoutHandler->submission;
 		$this->setupTemplate(true, $articleId);
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 
 		import('submission.proofreader.ProofreaderAction');
-		ProofreaderAction::layoutEditorProofreadingUnderway($submission);
+		ProofreaderAction::proofreadingUnderway($submission, 'SIGNOFF_PROOFREADING_LAYOUT');
 
-		$layoutAssignment = &$submission->getLayoutAssignment();
+		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
 
-		if ($layoutAssignment->getDateNotified() != null && $layoutAssignment->getDateUnderway() == null)
+		if ($layoutSignoff->getDateNotified() != null && $layoutSignoff->getDateUnderway() == null)
 		{
 			// Set underway date
-			$layoutAssignment->setDateUnderway(Core::getCurrentDate());
-			$layoutDao = &DAORegistry::getDAO('LayoutEditorSubmissionDAO');
-			$layoutDao->updateSubmission($submission);
+			$layoutSignoff->setDateUnderway(Core::getCurrentDate());
+			$signoffDao->updateObject($layoutSignoff);
 		}
 
 		$disableEdit = !$this->layoutEditingEnabled($submission);
@@ -546,12 +547,13 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$user = &Request::getUser();
 
 		$layoutDao = &DAORegistry::getDAO('LayoutEditorSubmissionDAO');
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 		$submission = &$layoutDao->getSubmission($articleId, $journal->getJournalId());
 
 		if (isset($submission)) {
-			$layoutAssignment = &$submission->getLayoutAssignment();
-			if (!isset($layoutAssignment)) $isValid = false;
-			elseif ($layoutAssignment->getEditorId() == $user->getUserId()) {
+			$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
+			if (!isset($layoutSignoff)) $isValid = false;
+			elseif ($layoutSignoff->getUserId() == $user->getUserId()) {
 				if ($checkEdit) {
 					$isValid = $this->layoutEditingEnabled($submission);
 				} else {
@@ -577,13 +579,14 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	 * @return boolean true if layout editor can modify the submission
 	 */
 	function layoutEditingEnabled(&$submission) {
-		$layoutAssignment = &$submission->getLayoutAssignment();
-		$proofAssignment = &$submission->getProofAssignment();
-
-		return(($layoutAssignment->getDateNotified() != null
-			&& $layoutAssignment->getDateCompleted() == null)
-		|| ($proofAssignment->getDateLayoutEditorNotified() != null
-			&& $proofAssignment->getDateLayoutEditorCompleted() == null));
+		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
+		$layoutEditorProofreadSignoff = $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getArticleId());
+		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getArticleId());
+		
+		return(($layoutSignoff->getDateNotified() != null
+			&& $layoutSignoff->getDateCompleted() == null)
+		|| ($layoutEditorProofreadSignoff->getDateNotified() != null
+			&& $layoutEditorProofreadSignoff->getDateCompleted() == null));
 	}
 
 	function downloadLayoutTemplate($args) {

@@ -22,8 +22,6 @@
 	<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 
 {iterate from=submissions item=submission}
-	{assign var="layoutAssignment" value=$submission->getLayoutAssignment()}
-	{assign var="proofAssignment" value=$submission->getProofAssignment()}
 	{assign var="articleId" value=$submission->getArticleId()}
 	<tr valign="top">
 		<td>{$submission->getArticleId()}</td>

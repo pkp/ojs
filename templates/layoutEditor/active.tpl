@@ -23,16 +23,16 @@
 
 {iterate from=submissions item=submission}
 	{assign var="articleId" value=$submission->getArticleId()}
-	{assign var="layoutAssignment" value=$submission->getLayoutAssignment()}
+	{assign var="layoutSignoff" value=$submission->getSignoff('SIGNOFF_LAYOUT')}
 
 	<tr valign="top">
 		<td>{$articleId|escape}</td>
-		<td>{$layoutAssignment->getDateNotified()|date_format:$dateFormatTrunc}</td>
+		<td>{$layoutSignoff->getDateNotified()|date_format:$dateFormatTrunc}</td>
 		<td>{$submission->getSectionAbbrev()|escape}</td>
 		<td>{$submission->getAuthorString(true)|truncate:40:"..."|escape}</td>
 		<td><a href="{url op="submission" path=$articleId}" class="action">{$submission->getArticleTitle()|strip_unsafe_html|truncate:60:"..."}</a></td>
 		<td align="right">
-			{if not $layoutAssignment->getDateCompleted()}
+			{if not $layoutSignoff->getDateCompleted()}
 				{translate key="submissions.initial"}
 			{else}
 				{translate key="submissions.proofread"}

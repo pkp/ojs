@@ -8,6 +8,9 @@
  *
  * $Id$
  *}
+{assign var=proofSignoff value=$submission->getSignoff('SIGNOFF_PROOFREADING_PROOFREADER')}
+{assign var=proofreader value=$submission->getUserBySignoffType('SIGNOFF_PROOFREADING_PROOFREADER')}
+
 <div id="proofread">
 <h3>{translate key="submission.proofreading"}</h3>
 
@@ -15,7 +18,7 @@
 <table class="data" width="100%">
 	<tr>
 		<td width="20%" class="label">{translate key="user.role.proofreader"}</td>
-		{if $proofAssignment->getProofreaderId()}<td class="value" width="20%">{$proofAssignment->getProofreaderFullName()|escape}</td>{/if}
+		{if $proofSignoff->getUserId()}<td class="value" width="20%">{$proofreader->getFullName()|escape}</td>{/if}
 		<td class="value"><a href="{url op="selectProofreader" path=$submission->getArticleId()}" class="action">{translate key="editor.article.selectProofreader"}</a></td>
 	</tr>
 </table>
@@ -32,41 +35,43 @@
 	<tr>
 		<td width="2%">1.</td>
 		<td width="26%">{translate key="user.role.author"}</td>
+		{assign var="authorProofreadSignoff" value=$submission->getSignoff('SIGNOFF_PROOFREADING_AUTHOR')}
 		<td>
 			{url|assign:"url" op="notifyAuthorProofreader" articleId=$submission->getArticleId()}
-			{if $proofAssignment->getDateAuthorUnderway()}
+			{if $authorProofreadSignoff->getDateUnderway()}
 				{translate|escape:"javascript"|assign:"confirmText" key="sectionEditor.author.confirmRenotify"}
 				{icon name="mail" onclick="return confirm('$confirmText')" url=$url}
 			{else}
 				{icon name="mail" url=$url}
 			{/if}
 
-			{$proofAssignment->getDateAuthorNotified()|date_format:$dateFormatShort|default:""}
+			{$authorProofreadSignoff->getDateNotified()|date_format:$dateFormatShort|default:""}
 		</td>
 		<td>
-				{$proofAssignment->getDateAuthorUnderway()|date_format:$dateFormatShort|default:"&mdash;"}
+				{$authorProofreadSignoff->getDateUnderway()|date_format:$dateFormatShort|default:"&mdash;"}
 		</td>
 		<td>
-			{$proofAssignment->getDateAuthorCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
+			{$authorProofreadSignoff->getDateCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
 		</td>
 		<td>
-			{if $proofAssignment->getDateAuthorCompleted() && !$proofAssignment->getDateAuthorAcknowledged()}
+			{if $authorProofreadSignoff->getDateCompleted() && !$authorProofreadSignoff->getDateAcknowledged()}
 				{url|assign:"url" op="thankAuthorProofreader" articleId=$submission->getArticleId()}
 				{icon name="mail" url=$url}
 			{else}
 				{icon name="mail" disabled="disable"}
 			{/if}
-			{$proofAssignment->getDateAuthorAcknowledged()|date_format:$dateFormatShort|default:""}
+			{$authorProofreadSignoff->getDateAcknowledged()|date_format:$dateFormatShort|default:""}
 		</td>
 	</tr>
 	<tr>
 		<td>2.</td>
 		<td>{translate key="user.role.proofreader"}</td>
+		{assign var="proofreaderProofreadSignoff" value=$submission->getSignoff('SIGNOFF_PROOFREADING_PROOFREADER')}
 		<td>
 			{if $useProofreaders}
-				{if $proofAssignment->getProofreaderId() && $proofAssignment->getDateAuthorCompleted()}
+				{if $proofSignoff->getUserId() && $authorProofreadSignoff->getDateCompleted()}
 					{url|assign:"url" op="notifyProofreader" articleId=$submission->getArticleId()}
-					{if $proofAssignment->getDateProofreaderUnderway()}
+					{if $proofreaderProofreadSignoff->getDateUnderway()}
 						{translate|escape:"javascript"|assign:"confirmText" key="sectionEditor.proofreader.confirmRenotify"}
 						{icon name="mail" onclick="return confirm('$confirmText')" url=$url}
 					{else}
@@ -76,35 +81,35 @@
 					{icon name="mail" disabled="disable"}
 				{/if}
 			{else}
-				{if !$proofAssignment->getDateProofreaderNotified()}
+				{if !$proofreaderProofreadSignoff->getDateNotified()}
 					<a href="{url op="editorInitiateProofreader" articleId=$submission->getArticleId()}" class="action">{translate key="common.initiate"}</a>
 				{/if}
 			{/if}
-			{$proofAssignment->getDateProofreaderNotified()|date_format:$dateFormatShort|default:""}
+			{$proofreaderProofreadSignoff->getDateNotified()|date_format:$dateFormatShort|default:""}
 		</td>
 		<td>
 			{if $useProofreaders}
-					{$proofAssignment->getDateProofreaderUnderway()|date_format:$dateFormatShort|default:"&mdash;"}
+					{$proofreaderProofreadSignoff->getDateUnderway()|date_format:$dateFormatShort|default:"&mdash;"}
 			{else}
 				{translate key="common.notApplicableShort"}
 			{/if}
 		</td>
 		<td>
-			{if !$useProofreaders && !$proofAssignment->getDateProofreaderCompleted() && $proofAssignment->getDateProofreaderNotified()}
+			{if !$useProofreaders && !$proofreaderProofreadSignoff->getDateCompleted() && $proofreaderProofreadSignoff->getDateNotified()}
 				<a href="{url op="editorCompleteProofreader" articleId=$submission->getArticleId()}" class="action">{translate key="common.complete"}</a>
 			{else}
-				{$proofAssignment->getDateProofreaderCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
+				{$proofreaderProofreadSignoff->getDateCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
 			{/if}
 		</td>
 		<td>
 			{if $useProofreaders}
-				{if $proofAssignment->getDateProofreaderCompleted() && !$proofAssignment->getDateProofreaderAcknowledged()}
+				{if $proofreaderProofreadSignoff->getDateCompleted() && !$proofreaderProofreadSignoff->getDateAcknowledged()}
 					{url|assign:"url" op="thankProofreader" articleId=$submission->getArticleId()}
 					{icon name="mail" url=$url}
 				{else}
 					{icon name="mail" disabled="disable"}
 				{/if}
-				{$proofAssignment->getDateProofreaderAcknowledged()|date_format:$dateFormatShort|default:""}
+				{$proofreaderProofreadSignoff->getDateAcknowledged()|date_format:$dateFormatShort|default:""}
 			{else}
 				{translate key="common.notApplicableShort"}
 			{/if}
@@ -113,11 +118,13 @@
 	<tr>
 		<td>3.</td>
 		<td>{translate key="user.role.layoutEditor"}</td>
+		{assign var="layoutEditorProofreadSignoff" value=$submission->getSignoff('SIGNOFF_PROOFREADING_LAYOUT')}
+		{assign var="layoutSignoff" value=$submission->getSignoff('SIGNOFF_LAYOUT')}
 		<td>
 			{if $useLayoutEditors}
-				{if $layoutAssignment->getEditorId() && $proofAssignment->getDateProofreaderCompleted()}
+				{if $layoutSignoff->getUserId() && $proofreaderProofreadSignoff->getDateCompleted()}
 					{url|assign:"url" op="notifyLayoutEditorProofreader" articleId=$submission->getArticleId()}
-					{if $proofAssignment->getDateLayoutEditorUnderway()}
+					{if $layoutEditorProofreadSignoff->getDateUnderway()}
 						{translate|escape:"javascript"|assign:"confirmText" key="sectionEditor.layout.confirmRenotify"}
 						{icon name="mail" onclick="return confirm('$confirmText')" url=$url}
 					{else}
@@ -127,25 +134,25 @@
 					{icon name="mail" disabled="disable"}
 				{/if}
 			{else}
-				{if !$proofAssignment->getDateLayoutEditorNotified()}
+				{if !$layoutEditorProofreadSignoff->getDateNotified()}
 					<a href="{url op="editorInitiateLayoutEditor" articleId=$submission->getArticleId()}" class="action">{translate key="common.initiate"}</a>
 				{/if}
 			{/if}
-				{$proofAssignment->getDateLayoutEditorNotified()|date_format:$dateFormatShort|default:""}
+				{$layoutEditorProofreadSignoff->getDateNotified()|date_format:$dateFormatShort|default:""}
 		</td>
 		<td>
 			{if $useLayoutEditors}
-				{$proofAssignment->getDateLayoutEditorUnderway()|date_format:$dateFormatShort|default:"&mdash;"}
+				{$layoutEditorProofreadSignoff->getDateUnderway()|date_format:$dateFormatShort|default:"&mdash;"}
 			{else}
 				{translate key="common.notApplicableShort"}
 			{/if}
 		</td>
 		<td>
 			{if $useLayoutEditors}
-				{$proofAssignment->getDateLayoutEditorCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
-			{elseif $proofAssignment->getDateLayoutEditorCompleted()}
-				{$proofAssignment->getDateLayoutEditorCompleted()|date_format:$dateFormatShort}
-			{elseif $proofAssignment->getDateLayoutEditorNotified()}
+				{$layoutEditorProofreadSignoff->getDateCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
+			{elseif $layoutEditorProofreadSignoff->getDateCompleted()}
+				{$layoutEditorProofreadSignoff->getDateCompleted()|date_format:$dateFormatShort}
+			{elseif $layoutEditorProofreadSignoff->getDateNotified()}
 				<a href="{url op="editorCompleteLayoutEditor" articleId=$submission->getArticleId()}" class="action">{translate key="common.complete"}</a>
 			{else}
 				&mdash;
@@ -153,13 +160,13 @@
 		</td>
 		<td>
 			{if $useLayoutEditors}
-				{if $proofAssignment->getDateLayoutEditorCompleted() && !$proofAssignment->getDateLayoutEditorAcknowledged()}
+				{if $layoutEditorProofreadSignoff->getDateCompleted() && !$layoutEditorProofreadSignoff->getDateAcknowledged()}
 					{url|assign:"url" op="thankLayoutEditorProofreader" articleId=$submission->getArticleId()}
 					{icon name="mail" url=$url}
 				{else}
 					{icon name="mail" disabled="disable"}
 				{/if}
-				{$proofAssignment->getDateLayoutEditorAcknowledged()|date_format:$dateFormatShort|default:""}
+				{$layoutEditorProofreadSignoff->getDateAcknowledged()|date_format:$dateFormatShort|default:""}
 			{else}
 				{translate key="common.notApplicableShort"}
 			{/if}

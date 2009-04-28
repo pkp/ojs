@@ -8,8 +8,10 @@
  *
  * $Id$
  *}
-{assign var=layoutAssignment value=$submission->getLayoutAssignment()}
-{assign var=layoutFile value=$layoutAssignment->getLayoutFile()}
+{assign var=layoutSignoff value=$submission->getSignoff('SIGNOFF_LAYOUT')}
+{assign var=layoutFile value=$submission->getFileBySignoffType('SIGNOFF_LAYOUT')}
+{assign var=layoutEditor value=$submission->getUserBySignoffType('SIGNOFF_LAYOUT')}
+
 <div id="layout">
 <h3>{translate key="submission.layout"}</h3>
 
@@ -17,7 +19,7 @@
 <table width="100%" class="data">
 	<tr>
 		<td class="label" width="20%">{translate key="user.role.layoutEditor"}</td>
-		<td class="value" width="80%">{if $layoutAssignment->getEditorId()}{$layoutAssignment->getEditorFullName()|escape}{else}{translate key="common.none"}{/if}</td>
+		<td class="value" width="80%">{if $layoutSignoff->getUserId()}{$layoutEditor->getFullName()|escape}{else}{translate key="common.none"}{/if}</td>
 	</tr>
 </table>
 {/if}
@@ -40,13 +42,13 @@
 			{/if}
 		</td>
 		<td>
-			{$layoutAssignment->getDateNotified()|date_format:$dateFormatShort|default:"&mdash;"}
+			{$layoutSignoff->getDateNotified()|date_format:$dateFormatShort|default:"&mdash;"}
 		</td>
 		<td>
-			{$layoutAssignment->getDateUnderway()|date_format:$dateFormatShort|default:"&mdash;"}
+			{$layoutSignoff->getDateUnderway()|date_format:$dateFormatShort|default:"&mdash;"}
 		</td>
 		<td colspan="2">
-			{$layoutAssignment->getDateCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
+			{$layoutSignoff->getDateCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
 		</td>
 	</tr>
 	<tr>

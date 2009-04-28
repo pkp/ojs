@@ -8,6 +8,9 @@
  *
  * $Id$
  *}
+{assign var=proofSignoff value=$submission->getSignoff('SIGNOFF_PROOFREADING_PROOFREADER')}
+{assign var=proofreader value=$submission->getUserBySignoffType('SIGNOFF_PROOFREADING_PROOFREADER')}
+
 <div id="proofread">
 <h3>{translate key="submission.proofreading"}</h3>
 
@@ -15,12 +18,12 @@
 <table width="100%" class="data">
 	<tr>
 		<td class="label" width="20%">{translate key="user.role.proofreader"}</td>
-		<td class="value" width="80%">{if $proofAssignment->getProofreaderId()}{$proofAssignment->getProofreaderFullName()|escape}{else}{translate key="common.none"}{/if}</td>
+		<td class="value" width="80%">{if $proofSignoff->getUserId()}{$proofreader->getFullName()|escape}{else}{translate key="common.none"}{/if}</td>
 	</tr>
 </table>
 {/if}
 
-<a href="{url op="viewMetadata" path=$proofAssignment->getArticleId()}" class="action" target="_new">{translate key="submission.reviewMetadata"}</a>
+<a href="{url op="viewMetadata" path=$proofSignoff->getAssocId()}" class="action" target="_new">{translate key="submission.reviewMetadata"}</a>
 
 <table width="100%" class="info">
 	<tr>
@@ -32,32 +35,35 @@
 	<tr>
 		<td width="5%">1.</td>
 		<td width="35%">{translate key="user.role.author"}</td>
-		<td>{$proofAssignment->getDateAuthorNotified()|date_format:$dateFormatShort|default:"&mdash;"}</td>
-		<td>{$proofAssignment->getDateAuthorUnderway()|date_format:$dateFormatShort|default:"&mdash;"}</td>
+		{assign var="authorProofreadSignoff" value=$submission->getSignoff('SIGNOFF_PROOFREADING_AUTHOR')}
+		<td>{$authorProofreadSignoff->getDateNotified()|date_format:$dateFormatShort|default:"&mdash;"}</td>
+		<td>{$authorProofreadSignoff->getDateUnderway()|date_format:$dateFormatShort|default:"&mdash;"}</td>
 				<td>
-			{if not $proofAssignment->getDateAuthorNotified() or $proofAssignment->getDateAuthorCompleted()}
+			{if not $authorProofreadSignoff->getDateNotified() or $authorProofreadSignoff->getDateCompleted()}
 				{icon name="mail" disabled="disabled"}
 			{else}
 				{translate|assign:"confirmMessage" key="common.confirmComplete"}
 				{url|assign:"url" op="authorProofreadingComplete" articleId=$submission->getArticleId()}
 				{icon name="mail" onclick="return confirm('$confirmMessage')" url=$url}
 			{/if}
-			{$proofAssignment->getDateAuthorCompleted()|date_format:$dateFormatShort|default:""}
+			{$authorProofreadSignoff->getDateCompleted()|date_format:$dateFormatShort|default:""}
 		</td>
 	</tr>
 	<tr>
 		<td>2.</td>
 		<td>{translate key="user.role.proofreader"}</td>
-		<td>{$proofAssignment->getDateProofreaderNotified()|date_format:$dateFormatShort|default:"&mdash;"}</td>
-		<td>{$proofAssignment->getDateProofreaderUnderway()|date_format:$dateFormatShort|default:"&mdash;"}</td>
-		<td>{$proofAssignment->getDateProofreaderCompleted()|date_format:$dateFormatShort|default:"&mdash;"}</td>
+		{assign var="proofreaderProofreadSignoff" value=$submission->getSignoff('SIGNOFF_PROOFREADING_PROOFREADER')}
+		<td>{$proofreaderProofreadSignoff->getDateNotified()|date_format:$dateFormatShort|default:"&mdash;"}</td>
+		<td>{$proofreaderProofreadSignoff->getDateUnderway()|date_format:$dateFormatShort|default:"&mdash;"}</td>
+		<td>{$proofreaderProofreadSignoff->getDateCompleted()|date_format:$dateFormatShort|default:"&mdash;"}</td>
 	</tr>
 	<tr>
 		<td>3.</td>
 		<td>{translate key="user.role.layoutEditor"}</td>
-		<td>{$proofAssignment->getDateLayoutEditorNotified()|date_format:$dateFormatShort|default:"&mdash;"}</td>
-		<td>{$proofAssignment->getDateLayoutEditorUnderway()|date_format:$dateFormatShort|default:"&mdash;"}</td>
-		<td>{$proofAssignment->getDateLayoutEditorCompleted()|date_format:$dateFormatShort|default:"&mdash;"}</td>
+		{assign var="layoutEditorProofreadSignoff" value=$submission->getSignoff('SIGNOFF_PROOFREADING_LAYOUT')}
+		<td>{$layoutEditorProofreadSignoff->getDateNotified()|date_format:$dateFormatShort|default:"&mdash;"}</td>
+		<td>{$layoutEditorProofreadSignoff->getDateUnderway()|date_format:$dateFormatShort|default:"&mdash;"}</td>
+		<td>{$layoutEditorProofreadSignoff->getDateCompleted()|date_format:$dateFormatShort|default:"&mdash;"}</td>
 	</tr>
 	<tr>
 		<td colspan="5" class="separator">&nbsp;</td>

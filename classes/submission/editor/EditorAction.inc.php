@@ -118,7 +118,7 @@ class EditorAction extends SectionEditorAction {
 
 		// 2. Accept the submission and send to copyediting.
 		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($article->getArticleId());
-		if (!$sectionEditorSubmission->getCopyeditFile()) {
+		if (!$sectionEditorSubmission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL', true)) {
 			SectionEditorAction::recordDecision($sectionEditorSubmission, SUBMISSION_EDITOR_DECISION_ACCEPT);
 			$reviewFile = $sectionEditorSubmission->getReviewFile();
 			SectionEditorAction::setCopyeditFile($sectionEditorSubmission, $reviewFile->getFileId(), $reviewFile->getRevision());
@@ -130,7 +130,7 @@ class EditorAction extends SectionEditorAction {
 		if (empty($galleys)) {
 			// No galley present -- use copyediting file.
 			import('file.ArticleFileManager');
-			$copyeditFile =& $sectionEditorSubmission->getCopyeditFile();
+			$copyeditFile =& $sectionEditorSubmission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL');
 			$fileType = $copyeditFile->getFileType();
 			$articleFileManager = new ArticleFileManager($article->getArticleId());
 			$fileId = $articleFileManager->copyPublicFile($copyeditFile->getFilePath(), $fileType);

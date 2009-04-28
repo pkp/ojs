@@ -61,6 +61,7 @@ class SubmitHandler extends AuthorHandler {
 		$articleId = Request::getUserVar('articleId');
 
 		$this->validate($articleId, $step);
+		$this->setupTemplate(true);
 		$article =& $this->article;
 
 		$formClass = "AuthorSubmitStep{$step}Form";

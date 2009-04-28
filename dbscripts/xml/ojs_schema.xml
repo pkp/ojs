@@ -611,7 +611,6 @@
 		<field name="revised_file_id" type="I8"/>
 		<field name="review_file_id" type="I8"/>
 		<field name="editor_file_id" type="I8"/>
-		<field name="copyedit_file_id" type="I8"/>
 		<field name="pages" type="C2" size="255"/>
 		<field name="fast_tracked" type="I1">
 			<NOTNULL/>
@@ -1143,78 +1142,7 @@
 			<col>reviewer_id</col>
 		</index>
 	</table>
-	
-	<!--
-	  *
-	  * TABLE copyed_assignments
-	  *
-	  -->
-	<table name="copyed_assignments">
-		<field name="copyed_id" type="I8">
-			<KEY/>
-			<AUTOINCREMENT/>
-		</field>
-		<field name="article_id" type="I8">
-			<NOTNULL/>
-		</field>
-		<field name="copyeditor_id" type="I8">
-			<NOTNULL/>
-		</field>
-		<field name="date_notified" type="T"/>
-		<field name="date_underway" type="T"/>
-		<field name="date_completed" type="T"/>
-		<field name="date_acknowledged" type="T"/>
-		<field name="date_author_notified" type="T"/>
-		<field name="date_author_underway" type="T"/>
-		<field name="date_author_completed" type="T"/>
-		<field name="date_author_acknowledged" type="T"/>
-		<field name="date_final_notified" type="T"/>
-		<field name="date_final_underway" type="T"/>
-		<field name="date_final_completed" type="T"/>
-		<field name="date_final_acknowledged" type="T"/>
-		<field name="initial_revision" type="I8"/>
-		<field name="editor_author_revision" type="I8"/>
-		<field name="final_revision" type="I8"/>
-		<descr>Copyediting assignments.</descr>
-		<index name="copyed_assignments_article_id">
-			<col>article_id</col>
-		</index>
-		<index name="copyed_assignments_copyeditor_id">
-			<col>copyeditor_id</col>
-		</index>
-	</table>
-	
-	<!--
-	  *
-	  * TABLE layouted_assignments
-	  *
-	  -->
-	<table name="layouted_assignments">
-		<field name="layouted_id" type="I8">
-			<KEY />
-			<AUTOINCREMENT />
-		</field>
-		<field name="article_id" type="I8">
-			<NOTNULL/>
-		</field>
-		<field name="editor_id" type="I8">
-			<NOTNULL/>
-		</field>
-		<field name="date_notified" type="T"/>
-		<field name="date_underway" type="T"/>
-		<field name="date_completed" type="T"/>
-		<field name="date_acknowledged" type="T"/>
-		<field name="layout_file_id" type="I8"/>
-		<descr>Layout editing assignments.</descr>
-		<index name="layouted_assignments_article_id">
-			<col>article_id</col>
-			<UNIQUE/>
-		</index>
-		<index name="layouted_assignments_editor_id">
-			<col>editor_id</col>
-		</index>
-	</table>
-	
+
 	<!--
 	  *
 	  * TABLE article_galleys
@@ -1275,44 +1203,6 @@
 			<col>galley_id</col>
 			<col>file_id</col>
 			<UNIQUE/>
-		</index>
-	</table>
-	
-	<!--
-	  *
-	  * TABLE proof_assignments
-	  *
-	  -->
-	<table name="proof_assignments">
-		<field name="proof_id" type="I8">
-			<KEY />
-			<AUTOINCREMENT/>
-		</field>
-		<field name="article_id" type="I8">
-			<NOTNULL/>
-		</field>
-		<field name="proofreader_id" type="I8">
-			<NOTNULL/>
-		</field>
-		<field name="date_author_notified" type="T"/>
-		<field name="date_author_underway" type="T"/>
-		<field name="date_author_completed" type="T"/>
-		<field name="date_author_acknowledged" type="T"/>
-		<field name="date_proofreader_notified" type="T"/>
-		<field name="date_proofreader_underway" type="T"/>
-		<field name="date_proofreader_completed" type="T"/>
-		<field name="date_proofreader_acknowledged" type="T"/>
-		<field name="date_layouteditor_notified" type="T"/>
-		<field name="date_layouteditor_underway" type="T"/>
-		<field name="date_layouteditor_completed" type="T"/>
-		<field name="date_layouteditor_acknowledged" type="T"/>
-
-		<descr>Proofreading assignments.</descr>
-		<index name="proof_assignments_article_id">
-			<col>article_id</col>
-		</index>
-		<index name="proof_assignments_proofreader_id">
-			<col>proofreader_id</col>
 		</index>
 	</table>
 	
