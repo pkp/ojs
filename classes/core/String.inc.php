@@ -407,6 +407,27 @@ class String {
 	}
 
 	/**
+	 * Strip out device control codes in the ASCII range
+	 * (from phputf8 class, http://sourceforge.net/projects/phputf8)
+	 * @param $input string input string
+	 * @return string
+	 */
+	function utf8StripASCIICtrl($str) {
+    	ob_start();
+    	while ( preg_match(
+	        '/^([^\x00-\x08\x0B\x0C\x0E-\x1F\x7F]+)|([\x00-\x08\x0B\x0C\x0E-\x1F\x7F]+)/S',
+        	    $str, $matches) ) {
+    	    if ( !isset($matches[2]) ) {
+	            echo $matches[0];
+        	}
+    	    $str = substr($str, strlen($matches[0]));
+	    }
+	    $result = ob_get_contents();
+    	ob_end_clean();
+    	return $result;
+	}
+
+	/**
 	 * Returns the UTF-8 string corresponding to the unicode value
 	 * Does not require any multibyte PHP libraries
 	 * (from php.net, courtesy - romans@void.lv)
@@ -466,7 +487,7 @@ class String {
 	}
 
 	/**
-	 * Convert numeric HTML entities in a string to UTF-8 encoded characters 
+	 * Convert numeric HTML entities in a string to UTF-8 encoded characters
 	 * This is a native alternative to the buggy html_entity_decode() using UTF8
 	 * @param $str string input string
 	 * @return string

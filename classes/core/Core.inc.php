@@ -3,7 +3,7 @@
 /**
  * @defgroup core
  */
- 
+
 /**
  * @file classes/core/Core.inc.php
  *
@@ -55,7 +55,10 @@ class Core {
 			// convert UTF-8 entities back to UTF-8 characters
 			$trans =& new Transcoder('HTML-ENTITIES', 'UTF-8');
 			$var = $trans->trans($var);
-		}		
+
+			// strip any invalid UTF-8 sequences
+			$var = String::utf8StripASCIICtrl($var);
+		}
 
 		return trim($var);
 	}
