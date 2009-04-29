@@ -4,3 +4,5 @@ temp
 files
 .project
 .htaccess
+lib
+cache
