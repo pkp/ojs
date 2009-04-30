@@ -14,6 +14,7 @@
 
 // $Id$
 
+import('pages.manager.ManagerHandler');
 
 class SectionHandler extends ManagerHandler {
 	/**

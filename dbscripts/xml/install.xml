@@ -20,7 +20,8 @@
 	<schema file="lib/pkp/xml/schema/groups.xml" />
 	<schema file="lib/pkp/xml/schema/scheduledTasks.xml" />
 	<schema file="lib/pkp/xml/schema/temporaryFiles.xml" />
-	<schema file="lib/pkp/xml/schema/signoff.xml" />0
+	<schema file="lib/pkp/xml/schema/signoff.xml" />
+	<schema file="lib/pkp/xml/schema/announcements.xml" />
 
 	<!-- OJS schema -->
 	<schema file="dbscripts/xml/ojs_schema.xml" />
