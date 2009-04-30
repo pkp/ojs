@@ -25,7 +25,7 @@ class SubmitHandler extends AuthorHandler {
 	}
 	/** article associated with the request **/
 	var $article;
-	
+
 	/**
 	 * Display journal author article submission.
 	 * Displays author index page if a valid step is not specified.
@@ -71,7 +71,7 @@ class SubmitHandler extends AuthorHandler {
 		$submitForm =& new $formClass($article);
 		$submitForm->readInputData();
 
-		if (!HookRegistry::call('SubmitHandler::saveSubmit', array($step, &$journal, &$article, &$submitForm))) {
+		if (!HookRegistry::call('SubmitHandler::saveSubmit', array($step, &$article, &$submitForm))) {
 
 			// Check for any special cases before trying to save
 			switch ($step) {
@@ -298,7 +298,7 @@ class SubmitHandler extends AuthorHandler {
 		$articleId = (int) Request::getUserVar('articleId');
 		$this->validate($articleId);
 		$article =& $this->article;
-		
+
 		// The author must also be an editor to perform this task.
 		if (Validation::isEditor($journal->getJournalId()) && $article->getSubmissionFileId()) {
 			import('submission.editor.EditorAction');
@@ -334,7 +334,7 @@ class SubmitHandler extends AuthorHandler {
 				Request::redirect(null, null, 'submit');
 			}
 		}
-		
+
 		$this->article =& $article;
 		return true;
 	}

@@ -4,7 +4,7 @@
  * Copyright (c) 2003-2009 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Step 3 of author article submission.
+ * Step 2 of author article submission.
  *
  * $Id$
  *}
