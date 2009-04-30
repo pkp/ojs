@@ -84,10 +84,6 @@ class StatisticsHandler extends ManagerHandler {
 			$templateMgr->assign('subscriptionStatistics', $subscriptionStatistics);
 		}
 
-		$notificationStatusDao =& DAORegistry::getDAO('NotificationStatusDAO');
-		$notifiableUsers = $notificationStatusDao->getNotifiableUsersCount($journal->getJournalId());
-		$templateMgr->assign('notifiableUsers', $notifiableUsers);
-
 		$reportPlugins =& PluginRegistry::loadCategory('reports');
 		$templateMgr->assign_by_ref('reportPlugins', $reportPlugins);
 

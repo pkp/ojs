@@ -158,6 +158,9 @@ switch ($op) {
 	//
 	case 'plugins':
 	case 'plugin':
+		define('HANDLER_CLASS', 'PluginHandler');
+		import('pages.manager.PluginHandler');
+		break;
 	case 'pluginManagement':
 		define('HANDLER_CLASS', 'PluginManagementHandler');
 		import('pages.manager.PluginManagementHandler');
