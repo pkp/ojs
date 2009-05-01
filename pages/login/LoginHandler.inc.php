@@ -179,7 +179,7 @@ class LoginHandler extends Handler {
 
 			// Set the sender based on the current context
 			if ($journal && $journal->getSetting('supportEmail')) {
-				$email->setFrom($journal->getSetting('supportEmail'), $journal->getSetting('supportName'));
+				$mail->setFrom($journal->getSetting('supportEmail'), $journal->getSetting('supportName'));
 			} else {
 				$mail->setFrom($site->getSiteContactEmail(), $site->getSiteContactName());
 			}
@@ -251,7 +251,7 @@ class LoginHandler extends Handler {
 
 			// Set the sender based on the current context
 			if ($journal) {
-				$email->setFrom($journal->getSetting('supportEmail'), $journal->getSetting('supportName'));
+				$mail->setFrom($journal->getSetting('supportEmail'), $journal->getSetting('supportName'));
 			} else {
 				$mail->setFrom($site->getSiteContactEmail(), $site->getSiteContactName());
 			}
