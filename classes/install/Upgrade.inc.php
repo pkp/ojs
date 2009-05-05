@@ -332,9 +332,9 @@ class Upgrade extends Installer {
 			'description' => 'description',
 			'navItems' => 'navItems',
 			// Subscription policies
-			'subscriptionAdditionalInformation',
-			'delayedOpenAccessPolicy',
-			'authorSelfArchivePolicy'
+			'subscriptionAdditionalInformation' => 'subscriptionAdditionalInformation',
+			'delayedOpenAccessPolicy' => 'delayedOpenAccessPolicy',
+			'authorSelfArchivePolicy' => 'authorSelfArchivePolicy'
 		);
 
 		foreach ($settingNames as $oldName => $newName) {
