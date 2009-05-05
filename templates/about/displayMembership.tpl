@@ -13,7 +13,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<h4>{$group->getGroupTitle()}</h4>
+<h4>{$group->getLocalizedTitle()}</h4>
 {assign var=groupId value=$group->getGroupId()}
 
 {foreach from=$memberships item=member}

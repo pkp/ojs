@@ -313,7 +313,7 @@ class GroupHandler extends ManagerHandler {
 			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'groups'), 'manager.groups'));
 		}
 		if ($group) {
-			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'editGroup', $group->getGroupId()), $group->getGroupTitle(), true));
+			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'editGroup', $group->getGroupId()), $group->getLocalizedTitle(), true));
 		}
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.groups');
 	}

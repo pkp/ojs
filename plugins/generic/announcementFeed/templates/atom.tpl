@@ -37,14 +37,14 @@
 	<entry>
 		{* required elements *}
 		<id>{url page="announcement" op="view" path=$announcement->getAnnouncementId()}</id>
-		<title>{$announcement->getAnnouncementTitleFull()|strip|escape:"html"}</title>
+		<title>{$announcement->getLocalizedTitleFull()|strip|escape:"html"}</title>
 		<updated>{$announcement->getDatetimePosted()|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</updated>
 	  	<author>
 			<name>{$journal->getJournalTitle()|escape:"html"|strip}</name>
         </author>
 		<link rel="alternate" href="{url page="announcement" op="view" path=$announcement->getAnnouncementId()}" />
-        {if $announcement->getAnnouncementDescription()}
-		<summary type="html" xml:base="{url page="announcement" op="view" path=$announcement->getAnnouncementId()}">{$announcement->getAnnouncementDescription()|strip|escape:"html"}</summary>
+        {if $announcement->getLocalizedDescription()}
+		<summary type="html" xml:base="{url page="announcement" op="view" path=$announcement->getAnnouncementId()}">{$announcement->getLocalizedDescription()|strip|escape:"html"}</summary>
         {/if}
 
 		{* optional elements *}

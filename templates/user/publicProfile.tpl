@@ -42,16 +42,16 @@
 		</tr>
 	{/if}{* $user->getAffiliation() *}
 
-	{if $user->getUserBiography()}
+	{if $user->getLocalizedBiography()}
 		<tr valign="top">
 			<td class="label">
 				{translate key="user.biography"}
 			</td>
 			<td class="data">
-				{$user->getUserBiography()|strip_unsafe_html}
+				{$user->getLocalizedBiography()|strip_unsafe_html}
 			</td>
 		</tr>
-	{/if}{* $user->getUserBiography() *}
+	{/if}{* $user->getLocalizedBiography() *}
 </table>
 
 </div>{* id="mainContent" *}

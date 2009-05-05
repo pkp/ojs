@@ -33,9 +33,9 @@
 		{foreach from=$announcements item=announcement}
 			<item>
 				{* required elements *}
-				<title>{$announcement->getAnnouncementTitleFull()|strip|escape:"html"}</title>
+				<title>{$announcement->getLocalizedTitleFull()|strip|escape:"html"}</title>
 				<link>{url page="announcement" op="view" path=$announcement->getAnnouncementId()}</link>
-				<description>{$announcement->getAnnouncementDescription()|strip|escape:"html"}</description>
+				<description>{$announcement->getLocalizedDescription()|strip|escape:"html"}</description>
 
 				{* optional elements *}
 				<guid isPermaLink="true">{url page="announcement" op="view" path=$announcement->getAnnouncementId()}</guid>

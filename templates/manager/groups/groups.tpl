@@ -56,12 +56,12 @@
 			<td width="5%">&nbsp;</td>
 			<td>
 				{url|assign:"url" page="manager" op="email" toGroup=$group->getGroupId()}
-				{$group->getGroupTitle()|escape}&nbsp;{icon name="mail" url=$url}
+				{$group->getLocalizedTitle()|escape}&nbsp;{icon name="mail" url=$url}
 			</td>
 		{else}
 			<td colspan="2">
 				{url|assign:"url" page="manager" op="email" toGroup=$group->getGroupId()}
-				{$group->getGroupTitle()|escape}&nbsp;{icon name="mail" url=$url}
+				{$group->getLocalizedTitle()|escape}&nbsp;{icon name="mail" url=$url}
 			</td>
 		{/if}
 		<td>

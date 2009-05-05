@@ -14,7 +14,7 @@
 {/strip}
 
 {foreach from=$groups item=group}
-	<h4>{$group->getGroupTitle()}</h4>
+	<h4>{$group->getLocalizedTitle()}</h4>
 	{assign var=groupId value=$group->getGroupId()}
 	{assign var=members value=$teamInfo[$groupId]}
 

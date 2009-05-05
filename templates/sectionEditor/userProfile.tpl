@@ -51,7 +51,7 @@
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="user.signature"}:</td>
-	<td class="value">{$user->getUserSignature()|escape|nl2br}</td>
+	<td class="value">{$user->getLocalizedSignature()|escape|nl2br}</td>
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="user.email"}:</td>
@@ -76,7 +76,7 @@
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="user.interests"}:</td>
-	<td class="value">{$user->getUserInterests()|escape}</td>
+	<td class="value">{$user->getLocalizedInterests()|escape}</td>
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="common.mailingAddress"}:</td>
@@ -84,7 +84,7 @@
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="user.biography"}:</td>
-	<td class="value">{$user->getUserBiography()|strip_unsafe_html|nl2br}</td>
+	<td class="value">{$user->getLocalizedBiography()|strip_unsafe_html|nl2br}</td>
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="user.workingLanguages"}:</td>
