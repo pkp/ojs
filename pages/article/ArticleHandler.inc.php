@@ -336,7 +336,7 @@ class ArticleHandler extends Handler {
 		if (!$galley) Request::redirect(null, null, 'view', $articleId);
 
 		if (!$fileId) {
-			$galleyDao->incrementViews($galleyId);
+			$galleyDao->incrementViews($galley->getGalleyId());
 			$fileId = $galley->getFileId();
 		} else {
 			if (!$galley->isDependentFile($fileId)) {
@@ -364,7 +364,7 @@ class ArticleHandler extends Handler {
 		} else {
 			$galley =& $galleyDao->getGalley($galleyId, $article->getArticleId());
 		}
-		$galleyDao->incrementViews($galleyId);
+		if ($galley) $galleyDao->incrementViews($galley->getGalleyId());
 
 		if ($article && $galley && !HookRegistry::call('ArticleHandler::downloadFile', array(&$article, &$galley))) {
 			import('file.ArticleFileManager');
