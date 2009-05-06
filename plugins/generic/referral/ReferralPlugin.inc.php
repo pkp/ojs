@@ -179,6 +179,13 @@ class ReferralPlugin extends GenericPlugin {
 	}
 
 	/**
+	 * Get the filename of the ADODB schema for this plugin.
+	 */
+	function getInstallSchemaFile() {
+		return $this->getPluginPath() . '/' . 'schema.xml';
+	}
+
+	/**
 	 * Check whether or not this plugin is enabled
 	 * @return boolean
 	 */
