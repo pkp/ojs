@@ -103,7 +103,7 @@ class CounterHandler extends Handler {
 			if (!$journal) continue;
 			$entry = $counterReportDao->buildMonthlyLog($journalId, $year);
 			$cols = array(
-				$journal->getJournalTitle(),
+				$journal->getLocalizedTitle(),
 				$journal->getLocalizedSetting('publisherInstitution'),
 				'', // Platform
 				$journal->getSetting('printIssn'),

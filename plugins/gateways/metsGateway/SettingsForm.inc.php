@@ -48,7 +48,7 @@ class SettingsForm extends Form {
 		if ($plugin->getSetting($journalId, 'organization') == '') {
 			$siteDao = &DAORegistry::getDAO('SiteDAO');
 			$site = $siteDao->getSite();
-			$organization = $site->getSiteTitle();
+			$organization = $site->getLocalizedTitle();
 			$this->setData('organization', $organization);
 		} else {
 			$this->setData('organization', $plugin->getSetting($journalId, 'organization'));

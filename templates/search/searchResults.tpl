@@ -85,7 +85,7 @@ function ensureKeyword() {
 {assign var=journal value=$result.journal}
 {assign var=section value=$result.section}
 <tr valign="top">
-	{if !$currentJournal}<td><a href="{url journal=$journal->getPath()}">{$journal->getJournalTitle()|escape}</a></td>{/if}
+	{if !$currentJournal}<td><a href="{url journal=$journal->getPath()}">{$journal->getLocalizedTitle()|escape}</a></td>{/if}
 	<td><a href="{url journal=$journal->getPath() page="issue" op="view" path=$issue->getBestIssueId($journal)}">{$issue->getIssueIdentification()|escape}</a></td>
 	<td width="30%">{$article->getLocalizedTitle()|strip_unsafe_html}</td>
 	<td width="30%" align="right">

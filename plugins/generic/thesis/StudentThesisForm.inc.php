@@ -243,7 +243,7 @@ class StudentThesisForm extends Form {
 		}
 
 		if (empty($uploadCode) || ($uploadCode != $submittedUploadCode)) {
-			$journalName = $journal->getJournalTitle();
+			$journalName = $journal->getLocalizedTitle();
 			$thesisName = $thesisPlugin->getSetting($journalId, 'thesisName');
 			$thesisEmail = $thesisPlugin->getSetting($journalId, 'thesisEmail');
 			$thesisPhone = $thesisPlugin->getSetting($journalId, 'thesisPhone');

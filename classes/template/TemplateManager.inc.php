@@ -54,7 +54,7 @@ class TemplateManager extends PKPTemplateManager {
 			if (isset($journal)) {
 				
 				$this->assign_by_ref('currentJournal', $journal);
-				$journalTitle = $journal->getJournalTitle();
+				$journalTitle = $journal->getLocalizedTitle();
 				$this->assign('siteTitle', $journalTitle);
 				$this->assign('publicFilesDir', Request::getBaseUrl() . '/' . PublicFileManager::getJournalFilesPath($journal->getJournalId()));
 
@@ -66,8 +66,8 @@ class TemplateManager extends PKPTemplateManager {
 				$this->assign_by_ref('navMenuItems', $navMenuItems);
 
 				// Assign journal page header
-				$this->assign('displayPageHeaderTitle', $journal->getJournalPageHeaderTitle());
-				$this->assign('displayPageHeaderLogo', $journal->getJournalPageHeaderLogo());
+				$this->assign('displayPageHeaderTitle', $journal->getLocalizedPageHeaderTitle());
+				$this->assign('displayPageHeaderLogo', $journal->getLocalizedPageHeaderLogo());
 				$this->assign('alternatePageHeader', $journal->getLocalizedSetting('journalPageHeader'));
 				$this->assign('metaSearchDescription', $journal->getLocalizedSetting('searchDescription'));
 				$this->assign('metaSearchKeywords', $journal->getLocalizedSetting('searchKeywords'));
@@ -97,9 +97,9 @@ class TemplateManager extends PKPTemplateManager {
 				$this->assign('pageFooter', $journal->getLocalizedSetting('journalPageFooter'));	
 			} else {
 				// Add the site-wide logo, if set for this locale or the primary locale
-				$this->assign('displayPageHeaderTitle', $site->getSitePageHeaderTitle());
+				$this->assign('displayPageHeaderTitle', $site->getLocalizedPageHeaderTitle());
 
-				$this->assign('siteTitle', $site->getSiteTitle());
+				$this->assign('siteTitle', $site->getLocalizedTitle());
 			}
 
 			if (!$site->getRedirect()) {

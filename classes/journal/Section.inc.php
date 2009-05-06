@@ -29,16 +29,26 @@ class Section extends DataObject {
 	 * Get localized title of journal section.
 	 * @return string
 	 */
-	function getSectionTitle() {
+	function getLocalizedTitle() {
 		return $this->getLocalizedData('title');
+	}
+
+	function getSectionTitle() {
+		trigger_error('Deprecated function.');
+		return $this->getLocalizedTitle();
 	}
 
 	/**
 	 * Get localized abbreviation of journal section.
 	 * @return string
 	 */
-	function getSectionAbbrev() {
+	function getLocalizedAbbrev() {
 		return $this->getLocalizedData('abbrev');
+	}
+
+	function getTrackAbbrev() {
+		trigger_error('Deprecated function.');
+		return $this->getLocalizedAbbrev();
 	}
 
 	//
@@ -197,8 +207,13 @@ class Section extends DataObject {
 	 * Get localized string identifying type of items in this section.
 	 * @return string
 	 */
-	function getSectionIdentifyType() {
+	function getLocalizedIdentifyType() {
 		return $this->getLocalizedData('identifyType');
+	}
+
+	function getSectionIdentifyType() {
+		trigger_error('Deprecated function.');
+		return $this->getLocalizedIdentifyType();
 	}
 
 	/**
@@ -303,8 +318,13 @@ class Section extends DataObject {
 	 * Get localized section policy.
 	 * @return string
 	 */
-	function getSectionPolicy() {
+	function getLocalizedPolicy() {
 		return $this->getLocalizedData('policy');
+	}
+
+	function getSectionPolicy() {
+		trigger_error('Deprecated function.');
+		return $this->getLocalizedPolicy();
 	}
 
 	/**

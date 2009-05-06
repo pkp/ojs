@@ -13,7 +13,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<p>{translate key="author.submit.submissionComplete" journalTitle=$journal->getJournalTitle()}</p>
+<p>{translate key="author.submit.submissionComplete" journalTitle=$journal->getLocalizedTitle()}</p>
 
 {if $canExpedite}
 	{url|assign:"expediteUrl" op="expediteSubmission" articleId=$articleId}

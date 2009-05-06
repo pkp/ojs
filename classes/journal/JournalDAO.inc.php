@@ -216,7 +216,7 @@ class JournalDAO extends DAO {
 
 		$journalIterator =& $this->getJournals();
 		while ($journal =& $journalIterator->next()) {
-			$journals[$journal->getJournalId()] = $journal->getJournalTitle();
+			$journals[$journal->getJournalId()] = $journal->getLocalizedTitle();
 			unset($journal);
 		}
 		unset($journalIterator);
@@ -233,7 +233,7 @@ class JournalDAO extends DAO {
 
 		$journalIterator =& $this->getEnabledJournals();
 		while ($journal =& $journalIterator->next()) {
-			$journals[$journal->getJournalId()] = $journal->getJournalTitle();
+			$journals[$journal->getJournalId()] = $journal->getLocalizedTitle();
 			unset($journal);
 		}
 		unset($journalIterator);

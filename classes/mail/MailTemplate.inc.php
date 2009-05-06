@@ -91,7 +91,7 @@ class MailTemplate extends PKPMailTemplate {
 			$this->setFrom($user->getEmail(), $user->getFullName());
 		} elseif ($journal == null) {
 			$site = &Request::getSite();
-			$this->setFrom($site->getSiteContactEmail(), $site->getSiteContactName());
+			$this->setFrom($site->getLocalizedContactEmail(), $site->getLocalizedContactName());
 
 		} else {
 			$this->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
@@ -113,11 +113,11 @@ class MailTemplate extends PKPMailTemplate {
 		// Add commonly-used variables to the list
 		if (isset($this->journal)) {
 			// FIXME Include affiliation, title, etc. in signature?
-			$paramArray['journalName'] = $this->journal->getJournalTitle();
+			$paramArray['journalName'] = $this->journal->getLocalizedTitle();
 			$paramArray['principalContactSignature'] = $this->journal->getSetting('contactName');
 		} else {
 			$site =& Request::getSite();
-			$paramArray['principalContactSignature'] = $site->getSiteContactName();
+			$paramArray['principalContactSignature'] = $site->getLocalizedContactName();
 		}
 		if (!isset($paramArray['journalUrl'])) $paramArray['journalUrl'] = Request::url(Request::getRequestedJournalPath());
 

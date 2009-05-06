@@ -98,7 +98,7 @@ class CrossRefExportDom {
 
 
 		/* Full Title of Journal */
-		XMLCustomWriter::createChildWithText($doc, $journalMetadataNode, 'full_title', $journal->getJournalTitle());
+		XMLCustomWriter::createChildWithText($doc, $journalMetadataNode, 'full_title', $journal->getLocalizedTitle());
 
 		/* Abbreviated title - defaulting to initials if no abbreviation found */
 		if  ($journal->getLocalizedSetting('abbreviation') != '' ) {

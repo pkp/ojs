@@ -82,7 +82,7 @@ class Journal extends DataObject {
 	 * param $home boolean get homepage title
 	 * @return string
 	 */
-	function getJournalPageHeaderTitle($home = false) {
+	function getLocalizedPageHeaderTitle($home = false) {
 		$prefix = $home ? 'home' : 'page';
 		$typeArray = $this->getSetting($prefix . 'HeaderTitleType');
 		$imageArray = $this->getSetting($prefix . 'HeaderTitleImage');
@@ -100,18 +100,28 @@ class Journal extends DataObject {
 		return null;
 	}
 
+	function getJournalPageHeaderTitle($home = false) {
+		trigger_error('Deprecated function.');
+		return $this->getLocalizedPageHeaderTitle($home);
+	}
+
 	/**
 	 * Get "localized" journal page logo (if applicable).
 	 * param $home boolean get homepage logo
 	 * @return string
 	 */
-	function getJournalPageHeaderLogo($home = false) {
+	function getLocalizedPageHeaderLogo($home = false) {
 		$prefix = $home ? 'home' : 'page';
 		$logoArray = $this->getSetting($prefix . 'HeaderLogoImage');
 		foreach (array(Locale::getLocale(), Locale::getPrimaryLocale()) as $locale) {
 			if (isset($logoArray[$locale])) return $logoArray[$locale];
 		}
 		return null;
+	}
+
+	function getJournalPageHeaderLogo($home = false) {
+		trigger_error('Deprecated function.');
+		return $this->getLocalizedJournalPageHeaderLogo($home);
 	}
 
 	//
@@ -122,8 +132,13 @@ class Journal extends DataObject {
 	 * Get the localized title of the journal.
 	 * @return string
 	 */
-	function getJournalTitle() {
+	function getLocalizedTitle() {
 		return $this->getLocalizedSetting('title');
+	}
+
+	function getJournalTitle() {
+		trigger_error('Deprecated function.');
+		return $this->getLocalizedTitle();
 	}
 
 	/**
@@ -139,8 +154,13 @@ class Journal extends DataObject {
 	 * Get localized initials of journal
 	 * @return string
 	 */
-	function getJournalInitials() {
+	function getLocalizedInitials() {
 		return $this->getLocalizedSetting('initials');
+	}
+
+	function getJournalInitials() {
+		trigger_error('Deprecated function.');
+		return $this->getLocalizedInitials();
 	}
 
 	/**
@@ -196,10 +216,14 @@ class Journal extends DataObject {
 	 * Get the localized description of the journal.
 	 * @return string
 	 */
-	function getJournalDescription() {
+	function getLocalizedDescription() {
 		return $this->getDescription(Locale::getLocale());
 	}
 
+	function getJournalDescription() {
+		trigger_error('Deprecated function.');
+		return $this->getLocalizedDescription();
+	}
 	/**
 	 * Get description of journal.
 	 * @param $locale string

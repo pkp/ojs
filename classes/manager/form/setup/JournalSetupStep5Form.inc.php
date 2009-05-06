@@ -193,8 +193,8 @@ class JournalSetupStep5Form extends JournalSetupForm {
 			if ($returner) {
 				$templateMgr = &TemplateManager::getManager();
 				$templateMgr->assign(array(
-					'displayPageHeaderTitle' => $journal->getJournalPageHeaderTitle(),
-					'displayPageHeaderLogo' => $journal->getJournalPageHeaderLogo()
+					'displayPageHeaderTitle' => $journal->getLocalizedPageHeaderTitle(),
+					'displayPageHeaderLogo' => $journal->getLocalizedPageHeaderLogo()
 				));
 			}
 			return $returner;

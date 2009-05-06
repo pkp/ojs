@@ -12,7 +12,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	{* required elements *}
 	<id>{$journal->getUrl()}/issue/feed</id>
-	<title>{$journal->getJournalTitle()|escape:"html"|strip}</title>
+	<title>{$journal->getLocalizedTitle()|escape:"html"|strip}</title>
 	<updated>{$issue->getDatePublished()|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</updated>
 
 	{* recommended elements *}
@@ -34,8 +34,8 @@
 	{* <contributor/> *}
 
 	<generator uri="http://pkp.sfu.ca/ojs/" version="{$ojsVersion|escape}">Open Journal Systems</generator>
-	{if $journal->getJournalDescription()}
-		{assign var="description" value=$journal->getJournalDescription()}
+	{if $journal->getLocalizedDescription()}
+		{assign var="description" value=$journal->getLocalizedDescription()}
 	{elseif $journal->getLocalizedSetting('searchDescription')}
 		{assign var="description" value=$journal->getLocalizedSetting('searchDescription')}
 	{/if}

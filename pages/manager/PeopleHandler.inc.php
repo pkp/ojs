@@ -287,7 +287,7 @@ class PeopleHandler extends ManagerHandler {
 		}
 
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
-		$journalTitles = &$journalDao->getJournalTitles();
+		$journalTitles = &$journalDao->getLocalizedTitles();
 
 		$journal = &Request::getJournal();
 		unset($journalTitles[$journal->getJournalId()]);

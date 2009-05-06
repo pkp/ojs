@@ -254,7 +254,7 @@ class ArticleSearchIndex {
 			$journal = &$journals->next();
 			$numIndexed = 0;
 
-			if ($log) echo "Indexing \"", $journal->getJournalTitle(), "\" ... ";
+			if ($log) echo "Indexing \"", $journal->getLocalizedTitle(), "\" ... ";
 
 			$articles = &$articleDao->getArticlesByJournalId($journal->getJournalId());
 			while (!$articles->eof()) {

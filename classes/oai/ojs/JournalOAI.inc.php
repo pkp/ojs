@@ -112,12 +112,12 @@ class JournalOAI extends OAI {
 		$info = new OAIRepository();
 
 		if (isset($this->journal)) {
-			$info->repositoryName = $this->journal->getJournalTitle();
+			$info->repositoryName = $this->journal->getLocalizedTitle();
 			$info->adminEmail = $this->journal->getSetting('contactEmail');
 
 		} else {
-			$info->repositoryName = $this->site->getSiteTitle();
-			$info->adminEmail = $this->site->getSiteContactEmail();
+			$info->repositoryName = $this->site->getLocalizedTitle();
+			$info->adminEmail = $this->site->getLocalizedContactEmail();
 		}
 
 		$info->sampleIdentifier = $this->articleIdToIdentifier(1);

@@ -1937,7 +1937,7 @@ class SectionEditorAction extends Action {
 				$email->assignParams(array(
 					'editorialContactSignature' => $user->getContactSignature(),
 					'authorName' => $authorUser->getFullName(),
-					'journalTitle' => $journal->getJournalTitle()
+					'journalTitle' => $journal->getLocalizedTitle()
 				));
 				$email->addRecipient($authorEmail, $authorUser->getFullName());
 				if ($journal->getSetting('notifyAllAuthorsOnDecision')) foreach ($sectionEditorSubmission->getAuthors() as $author) {

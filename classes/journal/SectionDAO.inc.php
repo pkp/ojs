@@ -363,10 +363,10 @@ class SectionDAO extends DAO {
 		while (($section =& $sectionsIterator->next())) {
 			if ($submittableOnly) {
 				if (!$section->getEditorRestricted()) {
-					$sections[$section->getSectionId()] = $section->getSectionTitle();
+					$sections[$section->getSectionId()] = $section->getLocalizedTitle();
 				}
 			} else {
-				$sections[$section->getSectionId()] = $section->getSectionTitle();
+				$sections[$section->getSectionId()] = $section->getLocalizedTitle();
 			}
 			unset($section);
 		}

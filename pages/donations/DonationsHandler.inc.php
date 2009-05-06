@@ -54,7 +54,7 @@ class DonationsHandler extends Handler {
 		$templateMgr->assign(array(
 			'currentUrl' => Request::url(null, null, 'donations'),
 			'pageTitle' => 'donations.thankYou',
-			'journalName' => $journal->getJournalTitle(),
+			'journalName' => $journal->getLocalizedTitle(),
 			'message' => 'donations.thankYouMessage'
 		));
 		$templateMgr->display('common/message.tpl');

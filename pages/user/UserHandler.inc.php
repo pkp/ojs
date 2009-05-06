@@ -181,7 +181,7 @@ class UserHandler extends Handler {
 	 * @return boolean True iff setup is incomplete
 	 */
 	function checkCompleteSetup($journal) {
-		if($journal->getJournalInitials() == "" || $journal->getSetting('contactEmail') == "" || 
+		if($journal->getLocalizedInitials() == "" || $journal->getSetting('contactEmail') == "" || 
 		   $journal->getSetting('contactName') == "" || $journal->getLocalizedSetting('abbreviation') == "") {
 			return true;
 		} else return false;

@@ -12,10 +12,10 @@
 <rss version="2.0">
 	<channel>
 		{* required elements *}
-		<title>{$journal->getJournalTitle()|escape:"html"|strip}: {translate key="announcement.announcements"}</title>
+		<title>{$journal->getLocalizedTitle()|escape:"html"|strip}: {translate key="announcement.announcements"}</title>
 		<link>{$journal->getUrl()}</link>
-		{if $journal->getJournalDescription()}
-			{assign var="description" value=$journal->getJournalDescription()}
+		{if $journal->getLocalizedDescription()}
+			{assign var="description" value=$journal->getLocalizedDescription()}
 		{elseif $journal->getLocalizedSetting('searchDescription')}
 			{assign var="description" value=$journal->getLocalizedSetting('searchDescription')}
 		{/if}

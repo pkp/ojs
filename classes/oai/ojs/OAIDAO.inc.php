@@ -337,7 +337,7 @@ class OAIDAO extends DAO {
 
 		$record->identifier = $this->oai->articleIdToIdentifier($row['article_id']);
 		$record->datestamp = OAIUtils::UTCDate(strtotime($this->datetimeFromDB($row['date_published'])));
-		$record->sets = array($journal->getPath() . ':' . $section->getSectionAbbrev());
+		$record->sets = array($journal->getPath() . ':' . $section->getLocalizedAbbrev());
 
 		return $record;
 	}
@@ -355,7 +355,7 @@ class OAIDAO extends DAO {
 
 		$record->identifier = $this->oai->articleIdToIdentifier($row['article_id']);
 		$record->datestamp = OAIUtils::UTCDate(strtotime($this->datetimeFromDB($row['date_published'])));
-		$record->sets = array($journal->getPath() . ':' . $section->getSectionAbbrev());
+		$record->sets = array($journal->getPath() . ':' . $section->getLocalizedAbbrev());
 
 		return $record;
 	}
@@ -448,13 +448,13 @@ class OAIDAO extends DAO {
 		// FIXME Set descriptions
 		$sets = array();
 		foreach ($journals as $journal) {
-			$title = $journal->getJournalTitle();
+			$title = $journal->getLocalizedTitle();
 			$abbrev = $journal->getPath();
 			array_push($sets, new OAISet($abbrev, $title, ''));
 
 			$sections =& $this->sectionDao->getJournalSections($journal->getJournalId());
 			foreach ($sections->toArray() as $section) {
-				array_push($sets, new OAISet($abbrev . ':' . $section->getSectionAbbrev(), $section->getSectionTitle(), ''));
+				array_push($sets, new OAISet($abbrev . ':' . $section->getLocalizedAbbrev(), $section->getLocalizedTitle(), ''));
 			}
 		}
 

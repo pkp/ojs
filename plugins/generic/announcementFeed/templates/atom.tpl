@@ -12,7 +12,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	{* required elements *}
 	<id>{$selfUrl}</id>
-	<title>{$journal->getJournalTitle()|escape:"html"|strip}: {translate key="announcement.announcements"}</title>
+	<title>{$journal->getLocalizedTitle()|escape:"html"|strip}: {translate key="announcement.announcements"}</title>
 	<updated>{$dateUpdated|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</updated>
 
 	{* recommended elements *}
@@ -24,8 +24,8 @@
 	{* <category/> *}
 	{* <contributor/> *}
 	<generator uri="http://pkp.sfu.ca/ojs/" version="{$ojsVersion|escape}">Open Journal Systems</generator>
-	{if $journal->getJournalDescription()}
-		{assign var="description" value=$journal->getJournalDescription()}
+	{if $journal->getLocalizedDescription()}
+		{assign var="description" value=$journal->getLocalizedDescription()}
 	{elseif $journal->getLocalizedSetting('searchDescription')}
 		{assign var="description" value=$journal->getLocalizedSetting('searchDescription')}
 	{/if}
@@ -40,7 +40,7 @@
 		<title>{$announcement->getLocalizedTitleFull()|strip|escape:"html"}</title>
 		<updated>{$announcement->getDatetimePosted()|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</updated>
 	  	<author>
-			<name>{$journal->getJournalTitle()|escape:"html"|strip}</name>
+			<name>{$journal->getLocalizedTitle()|escape:"html"|strip}</name>
         </author>
 		<link rel="alternate" href="{url page="announcement" op="view" path=$announcement->getAnnouncementId()}" />
         {if $announcement->getLocalizedDescription()}

@@ -95,7 +95,7 @@ class Notification extends PKPNotification {
 		
 		$params = array(
 			'password' => $password,
-			'siteTitle' => $journal->getJournalTitle(),
+			'siteTitle' => $journal->getLocalizedTitle(),
 			'unsubscribeLink' => Request::url(null, 'notification', 'unsubscribeMailList')
 		);
 		
@@ -106,7 +106,7 @@ class Notification extends PKPNotification {
 		}
 		
 		$mail = new MailTemplate($template);
-		$mail->setFrom($site->getSiteContactEmail(), $site->getSiteContactName());
+		$mail->setFrom($site->getLocalizedContactEmail(), $site->getLocalizedContactName());
 		$mail->assignParams($params);
 		$mail->addRecipient($email);
 		$mail->send();

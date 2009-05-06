@@ -657,7 +657,7 @@ class NativeImportDom {
 			$titleExists = true;
 		}
 		if (!$titleExists || $article->getTitle($journalPrimaryLocale) == "") {
-			$errors[] = array('plugins.importexport.native.import.error.articleTitleMissing', array('issueTitle' => $issue->getIssueIdentification(), 'sectionTitle' => $section->getSectionTitle()));
+			$errors[] = array('plugins.importexport.native.import.error.articleTitleMissing', array('issueTitle' => $issue->getIssueIdentification(), 'sectionTitle' => $section->getLocalizedTitle()));
 			return false;
 		}	
 
@@ -943,14 +943,14 @@ class NativeImportDom {
 		
 		/* --- Galley Label --- */
 		if (!($node = $galleyNode->getChildByName('label'))) {
-			$errors[] = array('plugins.importexport.native.import.error.galleyLabelMissing', array('articleTitle' => $article->getLocalizedTitle(), 'sectionTitle' => $section->getSectionTitle(), 'issueTitle' => $issue->getIssueIdentification()));
+			$errors[] = array('plugins.importexport.native.import.error.galleyLabelMissing', array('articleTitle' => $article->getLocalizedTitle(), 'sectionTitle' => $section->getLocalizedTitle(), 'issueTitle' => $issue->getIssueIdentification()));
 			return false;
 		}
 		$galley->setLabel($node->getValue());
 
 		/* --- Galley File --- */
 		if (!($node = $galleyNode->getChildByName('file'))) {
-			$errors[] = array('plugins.importexport.native.import.error.galleyFileMissing', array('articleTitle' => $article->getLocalizedTitle(), 'sectionTitle' => $section->getSectionTitle(), 'issueTitle' => $issue->getIssueIdentification()));
+			$errors[] = array('plugins.importexport.native.import.error.galleyFileMissing', array('articleTitle' => $article->getLocalizedTitle(), 'sectionTitle' => $section->getLocalizedTitle(), 'issueTitle' => $issue->getIssueIdentification()));
 			return false;
 		}
 
@@ -980,7 +980,7 @@ class NativeImportDom {
 			}
 		}
 		if (!isset($fileId)) {
-			$errors[] = array('plugins.importexport.native.import.error.galleyFileMissing', array('articleTitle' => $article->getLocalizedTitle(), 'sectionTitle' => $section->getSectionTitle(), 'issueTitle' => $issue->getIssueIdentification()));
+			$errors[] = array('plugins.importexport.native.import.error.galleyFileMissing', array('articleTitle' => $article->getLocalizedTitle(), 'sectionTitle' => $section->getLocalizedTitle(), 'issueTitle' => $issue->getIssueIdentification()));
 			return false;
 		}
 		$galley->setFileId($fileId);
@@ -1160,7 +1160,7 @@ class NativeImportDom {
 		$suppFile->setPublicSuppFileId($suppNode->getAttribute('public_id'));
 
 		if (!($fileNode = $suppNode->getChildByName('file'))) {
-			$errors[] = array('plugins.importexport.native.import.error.suppFileMissing', array('articleTitle' => $article->getLocalizedTitle(), 'sectionTitle' => $section->getSectionTitle(), 'issueTitle' => $issue->getIssueIdentification()));
+			$errors[] = array('plugins.importexport.native.import.error.suppFileMissing', array('articleTitle' => $article->getLocalizedTitle(), 'sectionTitle' => $section->getLocalizedTitle(), 'issueTitle' => $issue->getIssueIdentification()));
 			return false;
 		}
 
@@ -1191,7 +1191,7 @@ class NativeImportDom {
 		}
 
 		if (!$fileId) {
-			$errors[] = array('plugins.importexport.native.import.error.suppFileMissing', array('articleTitle' => $article->getLocalizedTitle(), 'sectionTitle' => $section->getSectionTitle(), 'issueTitle' => $issue->getIssueIdentification()));
+			$errors[] = array('plugins.importexport.native.import.error.suppFileMissing', array('articleTitle' => $article->getLocalizedTitle(), 'sectionTitle' => $section->getLocalizedTitle(), 'issueTitle' => $issue->getIssueIdentification()));
 			return false;
 		}
 

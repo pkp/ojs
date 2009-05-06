@@ -30,8 +30,8 @@
 	</tr>
 {iterate from=sections item=section name=sections}
 	<tr valign="top">
-		<td>{$section->getSectionTitle()|escape}</td>
-		<td>{$section->getSectionAbbrev()|escape}</td>
+		<td>{$section->getLocalizedTitle()|escape}</td>
+		<td>{$section->getLocalizedAbbrev()|escape}</td>
 		<td align="right" class="nowrap">
 			<a href="{url op="editSection" path=$section->getSectionId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url op="deleteSection" path=$section->getSectionId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.sections.confirmDelete"}')" class="action">{translate key="common.delete"}</a>&nbsp;|&nbsp;<a href="{url op="moveSection" d=u sectionId=$section->getSectionId()}">&uarr;</a>&nbsp;<a href="{url op="moveSection" d=d sectionId=$section->getSectionId()}">&darr;</a>
 		</td>

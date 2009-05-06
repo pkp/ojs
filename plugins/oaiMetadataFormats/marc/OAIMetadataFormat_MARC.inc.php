@@ -46,7 +46,7 @@ class OAIMetadataFormat_MARC extends OAIMetadataFormat {
 		);
 		$subject = isset($subjects[$journal->getPrimaryLocale()])?$subjects[$journal->getPrimaryLocale()]:'';
 
-		$publisher = $journal->getJournalTitle(); // Default
+		$publisher = $journal->getLocalizedTitle(); // Default
 		$publisherInstitution = $journal->getSetting('publisherInstitution');
 		if (!empty($publisherInstitution)) {
 			$publisher = $publisherInstitution;
@@ -59,7 +59,7 @@ class OAIMetadataFormat_MARC extends OAIMetadataFormat {
 		}
 
 		// Sources contains journal title, issue ID, and pages
-		$source = $journal->getJournalTitle(null) . '; ' . $issue->getIssueIdentification();
+		$source = $journal->getLocalizedTitle() . '; ' . $issue->getIssueIdentification();
 		$pages = $article->getPages();
 
 		// Relation
@@ -89,7 +89,7 @@ class OAIMetadataFormat_MARC extends OAIMetadataFormat {
 			$this->formatElement('260', ' ', ' ', 'b', $publisher) .
 			$this->formatElement('720', ' ', ' ', 'a', strip_tags($article->getLocalizedSponsor())) .
 			$this->formatElement('260', ' ', ' ', 'c', $issue->getDatePublished()) .
-			$this->formatElement('655', ' ', '7', 'a', $section->getSectionIdentifyType()) .
+			$this->formatElement('655', ' ', '7', 'a', $section->getLocalizedIdentifyType()) .
 			$this->formatElement('856', ' ', ' ', 'q', $format) .
 			$this->formatElement('856', '4', '0', 'u', Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId()))) .
 			$this->formatElement('786', '0', ' ', 'n', $source) .

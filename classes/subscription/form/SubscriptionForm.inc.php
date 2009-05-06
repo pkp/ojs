@@ -211,7 +211,7 @@ class SubscriptionForm extends Form {
 			$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
 			$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 
-			$journalName = $journal->getJournalTitle();
+			$journalName = $journal->getLocalizedTitle();
 			$journalId = $journal->getJournalId();
 			$user = &$userDao->getUser($this->getData('userId'));
 			$subscriptionType = &$subscriptionTypeDao->getSubscriptionType($this->getData('typeId'));

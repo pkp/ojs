@@ -134,7 +134,7 @@ class MetsExportDom {
 		XMLCustomWriter::setAttribute($mods, 'xmlns:mods', 'http://www.loc.gov/mods/v3');
 		XMLCustomWriter::setAttribute($root, 'xsi:schemaLocation', str_replace(' http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-0.xsd', '', $root->getAttribute('xsi:schemaLocation')) . ' http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-0.xsd');
 		$titleInfo =& XMLCustomWriter::createElement($doc, 'mods:titleInfo');
-		XMLCustomWriter::createChildWithText($doc, $titleInfo, 'mods:title', $journal->getJournalTitle());
+		XMLCustomWriter::createChildWithText($doc, $titleInfo, 'mods:title', $journal->getLocalizedTitle());
 		XMLCustomWriter::appendChild($mods, $titleInfo);
 		XMLCustomWriter::createChildWithText($doc, $mods, 'mods:genre', 'journal');
 		XMLCustomWriter::appendChild($xmlData, $mods);
@@ -177,7 +177,7 @@ class MetsExportDom {
 		$modsRelatedItem =& XMLCustomWriter::createElement($doc, 'mods:relatedItem');
 		XMLCustomWriter::setAttribute($modsRelatedItem, 'type', 'host');
 		$modsTitleInfo =& XMLCustomWriter::createElement($doc, 'mods:titleInfo');
-		$modsIdentifier = XMLCustomWriter::createChildWithText($doc, $modsTitleInfo, 'mods:title', $journal->getJournalTitle());
+		$modsIdentifier = XMLCustomWriter::createChildWithText($doc, $modsTitleInfo, 'mods:title', $journal->getLocalizedTitle());
 		XMLCustomWriter::appendChild($modsRelatedItem, $modsTitleInfo);
 		$url = $base_url.'/index.php/'.$journal->getPath();
 		$modsIdentifier = XMLCustomWriter::createChildWithText($doc, $modsRelatedItem, 'mods:identifier', $url);
@@ -220,11 +220,11 @@ class MetsExportDom {
 		XMLCustomWriter::setAttribute($mods, 'xmlns:mods', 'http://www.loc.gov/mods/v3');
 		XMLCustomWriter::setAttribute($root, 'xsi:schemaLocation', str_replace(' http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-0.xsd', '', $root->getAttribute('xsi:schemaLocation')) . ' http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-0.xsd');
 		$titleInfo =& XMLCustomWriter::createElement($doc, 'mods:titleInfo');
-		XMLCustomWriter::createChildWithText($doc, $titleInfo, 'mods:title', $section->getSectionTitle());
+		XMLCustomWriter::createChildWithText($doc, $titleInfo, 'mods:title', $section->getLocalizedTitle());
 		XMLCustomWriter::appendChild($mods, $titleInfo);
-		if($section->getSectionAbbrev() != ''){
+		if($section->getLocalizedAbbrev() != ''){
 			$titleInfoAlt =& XMLCustomWriter::createElement($doc, 'mods:titleInfo');
-			XMLCustomWriter::createChildWithText($doc, $titleInfoAlt, 'mods:title', $section->getSectionAbbrev());
+			XMLCustomWriter::createChildWithText($doc, $titleInfoAlt, 'mods:title', $section->getLocalizedAbbrev());
 			XMLCustomWriter::setAttribute($titleInfoAlt, 'type', 'abbreviated');
 			XMLCustomWriter::appendChild($mods, $titleInfoAlt);
 		}
@@ -658,7 +658,7 @@ class MetsExportDom {
 		if($organization == ''){
 			$siteDao =& DAORegistry::getDAO('SiteDAO');
 			$site = $siteDao->getSite();
-			$organization = $site->getSiteTitle();
+			$organization = $site->getLocalizedTitle();
 		}
 		XMLCustomWriter::createChildWithText($doc, $agentNode, 'METS:name', $organization, false);
 		XMLCustomWriter::appendChild($root, $agentNode);

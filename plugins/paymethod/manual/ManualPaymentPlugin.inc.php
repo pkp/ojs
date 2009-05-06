@@ -99,7 +99,7 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 				$mail->setFrom($contactEmail, $contactName);
 				$mail->addRecipient($contactEmail, $contactName);
 				$mail->assignParams(array(
-					'journalName' => $journal->getJournalTitle(),
+					'journalName' => $journal->getLocalizedTitle(),
 					'userFullName' => $user?$user->getFullName():('(' . Locale::translate('common.none') . ')'),
 					'userName' => $user?$user->getUsername():('(' . Locale::translate('common.none') . ')'),
 					'itemName' => $queuedPayment->getName(),
