@@ -122,7 +122,7 @@ class CommentHandler extends Handler {
 				foreach ($notificationUsers as $user) {
 					$url = Request::url(null, null, 'view', array($articleId, $galleyId, $parentId));
 					Notification::createNotification($user['id'], "notification.type.userComment",
-						$article->getArticleTitle(), $url, 1, NOTIFICATION_TYPE_USER_COMMENT);
+						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_USER_COMMENT);
 				}
 				
 				Request::redirect(null, null, 'view', array($articleId, $galleyId, $parentId), array('refresh' => 1));
@@ -217,7 +217,7 @@ class CommentHandler extends Handler {
 				Request::url(null, 'article', 'view', array(
 					$article->getBestArticleId(Request::getJournal()), $galleyId
 				)),
-				String::stripUnsafeHtml($article->getArticleTitle()),
+				String::stripUnsafeHtml($article->getLocalizedTitle()),
 				true
 			)
 		);

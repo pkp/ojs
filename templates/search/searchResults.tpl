@@ -87,14 +87,14 @@ function ensureKeyword() {
 <tr valign="top">
 	{if !$currentJournal}<td><a href="{url journal=$journal->getPath()}">{$journal->getJournalTitle()|escape}</a></td>{/if}
 	<td><a href="{url journal=$journal->getPath() page="issue" op="view" path=$issue->getBestIssueId($journal)}">{$issue->getIssueIdentification()|escape}</a></td>
-	<td width="30%">{$article->getArticleTitle()|strip_unsafe_html}</td>
+	<td width="30%">{$article->getLocalizedTitle()|strip_unsafe_html}</td>
 	<td width="30%" align="right">
 		{if $publishedArticle->getAccessStatus() || $issueAvailable}
 			{assign var=hasAccess value=1}
 		{else}
 			{assign var=hasAccess value=0}
 		{/if}
-		{if $publishedArticle->getArticleAbstract() != ""}
+		{if $publishedArticle->getLocalizedAbstract() != ""}
 			{assign var=hasAbstract value=1}
 		{else}
 			{assign var=hasAbstract value=0}

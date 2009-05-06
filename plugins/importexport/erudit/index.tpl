@@ -37,7 +37,7 @@
 	{assign var=publishedArticle value=$articleData.publishedArticle}
 	<tr valign="top">
 		<td><a href="{url page="issue" op="issueToc" path=$issue->getIssueId()}" class="action">{$issue->getIssueIdentification()|escape}</a></td>
-		<td>{$article->getArticleTitle()|strip_unsafe_html}</td>
+		<td>{$article->getLocalizedTitle()|strip_unsafe_html}</td>
 		<td>{$article->getAuthorString()|escape}</td>
 		<td>
 			{assign var="hasPriorAction" value=0}

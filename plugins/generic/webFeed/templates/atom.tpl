@@ -51,7 +51,7 @@
 			<entry>
 				{* required elements *}
 				<id>{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}</id>
-				<title>{$article->getArticleTitle()|strip|escape:"html"}</title>
+				<title>{$article->getLocalizedTitle()|strip|escape:"html"}</title>
 				<updated>{$article->getLastModified()|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</updated>
 
 				{* recommended elements *}
@@ -67,8 +67,8 @@
 
 				<link rel="alternate" href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}" />
 
-				{if $article->getArticleAbstract()}
-					<summary type="html" xml:base="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}">{$article->getArticleAbstract()|strip|escape:"html"}</summary>
+				{if $article->getLocalizedAbstract()}
+					<summary type="html" xml:base="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}">{$article->getLocalizedAbstract()|strip|escape:"html"}</summary>
 				{/if}
 
 				{* optional elements *}

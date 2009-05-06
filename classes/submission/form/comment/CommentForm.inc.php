@@ -78,7 +78,7 @@ class CommentForm extends Form {
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $article->getArticleId());
-		$templateMgr->assign('commentTitle', strip_tags($article->getArticleTitle()));
+		$templateMgr->assign('commentTitle', strip_tags($article->getLocalizedTitle()));
 		$templateMgr->assign('userId', $this->user->getUserId());
 		$templateMgr->assign('articleComments', $articleComments);
 

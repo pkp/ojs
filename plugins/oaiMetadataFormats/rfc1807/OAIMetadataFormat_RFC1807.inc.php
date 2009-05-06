@@ -67,9 +67,9 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 
 		// Coverage
 		$coverage = array(
-			$article->getArticleCoverageGeo(),
-			$article->getArticleCoverageChron(),
-			$article->getArticleCoverageSample()
+			$article->getLocalizedCoverageGeo(),
+			$article->getLocalizedCoverageChron(),
+			$article->getLocalizedCoverageSample()
 		);
 
 		$url = Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId()));
@@ -83,7 +83,7 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 			$this->formatElement('entry', $record->datestamp) .
 			$this->formatElement('organization', $publisher) .
 			$this->formatElement('organization', $source) .
-			$this->formatElement('title', $article->getArticleTitle()) .
+			$this->formatElement('title', $article->getLocalizedTitle()) .
 			$this->formatElement('type', $section->getSectionIdentifyType()) .
 
 			$this->formatElement('type', $relation) .
@@ -93,9 +93,9 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 			$this->formatElement('other_access', "url:$url") .
 			$this->formatElement('keyword', $subject) .
 			$this->formatElement('period', $coverage) .
-			$this->formatElement('monitoring', $article->getArticleSponsor()) .
+			$this->formatElement('monitoring', $article->getLocalizedSponsor()) .
 			$this->formatElement('language', $article->getLanguage()) .
-			$this->formatElement('abstract', strip_tags($article->getArticleAbstract())) .
+			$this->formatElement('abstract', strip_tags($article->getLocalizedAbstract())) .
 			"</rfc1807>\n";
 
 		return $response;

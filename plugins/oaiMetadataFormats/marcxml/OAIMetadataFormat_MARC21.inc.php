@@ -70,9 +70,9 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat {
 
 		// Coverage
 		$coverage = array(
-			$article->getArticleCoverageGeo(),
-			$article->getArticleCoverageChron(),
-			$article->getArticleCoverageSample()
+			$article->getLocalizedCoverageGeo(),
+			$article->getLocalizedCoverageChron(),
+			$article->getLocalizedCoverageSample()
 		);
 
 		$response = "<record\n" .
@@ -86,9 +86,9 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat {
 			$this->formatElement('245', '0', '0', 'a', $article->getTitle($journal->getPrimaryLocale())) .
 			$this->formatElement('720', ' ', ' ', 'a', $creators) .
 			$this->formatElement('653', ' ', ' ', 'a', $subject) .
-			$this->formatElement('520', ' ', ' ', 'a', $article->getArticleAbstract()) .
+			$this->formatElement('520', ' ', ' ', 'a', $article->getLocalizedAbstract()) .
 			$this->formatElement('260', ' ', ' ', 'b', $publisher) .
-			$this->formatElement('720', ' ', ' ', 'a', strip_tags($article->getArticleSponsor(null))) .
+			$this->formatElement('720', ' ', ' ', 'a', strip_tags($article->getLocalizedSponsor())) .
 			$this->formatElement('260', ' ', ' ', 'c', $issue->getDatePublished()) .
 			$this->formatElement('655', ' ', '7', 'a', $section->getSectionIdentifyType()) .
 			$this->formatElement('856', ' ', ' ', 'q', $format) .

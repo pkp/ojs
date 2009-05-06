@@ -10,7 +10,7 @@
 
 --------
 {foreach from=$section.articles item=article}
-{$article->getArticleTitle()|strip_tags}{if $article->getPages()} ({$article->getPages()}){/if}
+{$article->getLocalizedTitle()|strip_tags}{if $article->getPages()} ({$article->getPages()}){/if}
 
 {foreach from=$article->getAuthors() item=author name=authorList}
 	{$author->getFullName()}{if !$smarty.foreach.authorList.last},{/if}{/foreach}

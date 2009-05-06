@@ -260,7 +260,7 @@ class MetsExportDom {
 		XMLCustomWriter::setAttribute($mods, 'xmlns:mods', 'http://www.loc.gov/mods/v3');
 		XMLCustomWriter::setAttribute($root, 'xsi:schemaLocation', str_replace(' http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-0.xsd', '', $root->getAttribute('xsi:schemaLocation')) . ' http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-0.xsd');
 		$titleInfo = &XMLCustomWriter::createElement($doc, 'mods:titleInfo');
-		XMLCustomWriter::createChildWithText($doc, $titleInfo, 'mods:title', $article->getArticleTitle());
+		XMLCustomWriter::createChildWithText($doc, $titleInfo, 'mods:title', $article->getLocalizedTitle());
 		XMLCustomWriter::appendChild($mods, $titleInfo);
 // TODO: localized metadata method calls
 /*
@@ -277,8 +277,8 @@ class MetsExportDom {
 			XMLCustomWriter::appendChild($mods, $titleInfoAlt2);
 		}
 */
-		if($article->getArticleAbstract() != '')
-			XMLCustomWriter::createChildWithText($doc, $mods, 'mods:abstract', $article->getArticleAbstract());
+		if($article->getLocalizedAbstract() != '')
+			XMLCustomWriter::createChildWithText($doc, $mods, 'mods:abstract', $article->getLocalizedAbstract());
 // TODO: localized metadata method calls
 /*
 		if($article->getAbstractAlt1() != '')
@@ -300,9 +300,9 @@ class MetsExportDom {
 			$sDate = XMLCustomWriter::createChildWithText($doc, $originInfo, 'mods:dateIssued', $timeIssued);
 			XMLCustomWriter::appendChild($mods, $originInfo);
 		}
-		if($article->getArticleDiscipline() != ''){
+		if($article->getLocalizedDiscipline() != ''){
 			$modsSubject = &XMLCustomWriter::createElement($doc, 'mods:subject');
-			$DisciplineArray = explode(";", $article->getArticleDiscipline());
+			$DisciplineArray = explode(";", $article->getLocalizedDiscipline());
 			$i = 0;
 			while ($i < sizeof($DisciplineArray)) {
 				XMLCustomWriter::createChildWithText($doc, $modsSubject, 'mods:topic', $DisciplineArray[$i] );
@@ -310,16 +310,16 @@ class MetsExportDom {
 			}
 			XMLCustomWriter::appendChild($mods, $modsSubject);
 		}
-		if($article->getArticleSubject() != ''){
+		if($article->getLocalizedSubject() != ''){
 			$modsSubject = &XMLCustomWriter::createElement($doc, 'mods:subject');
-			$modsTopic = XMLCustomWriter::createChildWithText($doc, $modsSubject, 'mods:topic', $article->getArticleSubject());
+			$modsTopic = XMLCustomWriter::createChildWithText($doc, $modsSubject, 'mods:topic', $article->getLocalizedSubject());
 			if($article->getSubjectClass() != '')
 				XMLCustomWriter::setAttribute($modsSubject, 'authority', $article->getSubjectClass());
 			XMLCustomWriter::appendChild($mods, $modsSubject);
 		}
-		if($article->getArticleCoverageGeo() != ''){
+		if($article->getLocalizedCoverageGeo() != ''){
 			$modsSubject = &XMLCustomWriter::createElement($doc, 'mods:subject');
-			$coverageArray = explode(";", $article->getArticleCoverageGeo());
+			$coverageArray = explode(";", $article->getLocalizedCoverageGeo());
 			$i = 0;
 			while ($i < sizeof($coverageArray)) {
 				XMLCustomWriter::createChildWithText($doc, $modsSubject, 'mods:geographic', $coverageArray[$i] );
@@ -327,9 +327,9 @@ class MetsExportDom {
 			}
 			XMLCustomWriter::appendChild($mods, $modsSubject);
 		}
-		if($article->getArticleCoverageChron() != ''){
+		if($article->getLocalizedCoverageChron() != ''){
 			$modsSubject = &XMLCustomWriter::createElement($doc, 'mods:subject');
-			$coverageArray = explode(";", $article->getArticleCoverageChron());
+			$coverageArray = explode(";", $article->getLocalizedCoverageChron());
 			$i = 0;
 			while ($i < sizeof($coverageArray)) {
 				XMLCustomWriter::createChildWithText($doc, $modsSubject, 'mods:temporal', $coverageArray[$i] );
@@ -337,15 +337,15 @@ class MetsExportDom {
 			}
 			XMLCustomWriter::appendChild($mods, $modsSubject);
 		}
-		if($article->getArticleType() != ''){
+		if($article->getLocalizedType() != ''){
 			$modsSubject = &XMLCustomWriter::createElement($doc, 'mods:subject');
-			XMLCustomWriter::createChildWithText($doc, $modsSubject, 'mods:genre', $article->getArticleType());
+			XMLCustomWriter::createChildWithText($doc, $modsSubject, 'mods:genre', $article->getLocalizedType());
 			XMLCustomWriter::appendChild($mods, $modsSubject);
 		}
-		if($article->getArticleSponsor() != ''){
+		if($article->getLocalizedSponsor() != ''){
 			$PresenterNode = &XMLCustomWriter::createElement($doc, 'mods:name');
 			XMLCustomWriter::setAttribute($PresenterNode, 'type', 'corporate');
-			$fNameNode =&XMLCustomWriter::createChildWithText($doc, $PresenterNode, 'mods:namePart', $article->getArticleSponsor());
+			$fNameNode =&XMLCustomWriter::createChildWithText($doc, $PresenterNode, 'mods:namePart', $article->getLocalizedSponsor());
 			$role = &XMLCustomWriter::createElement($doc, 'mods:role');
 			$roleTerm =&XMLCustomWriter::createChildWithText($doc, $role, 'mods:roleTerm', 'sponsor');
 			XMLCustomWriter::setAttribute($roleTerm, 'type', 'text');

@@ -64,7 +64,7 @@
 		<td>{$initialCopyeditSignoff->getDateNotified()|date_format:$dateFormatTrunc}</td>
 		<td>{$submission->getSectionAbbrev()|escape}</td>
 		<td>{$submission->getAuthorString(true)|truncate:40:"..."|escape}</td>
-		<td><a href="{url op="submission" path=$articleId}" class="action">{$submission->getArticleTitle()|strip_unsafe_html|truncate:60:"..."}</a></td>
+		<td><a href="{url op="submission" path=$articleId}" class="action">{$submission->getLocalizedTitle()|strip_unsafe_html|truncate:60:"..."}</a></td>
 		<td>{$finalCopyeditSignoff->getDateCompleted()|date_format:$dateFormatTrunc}</td>
 		<td align="right">
 			{assign var="status" value=$submission->getStatus()}

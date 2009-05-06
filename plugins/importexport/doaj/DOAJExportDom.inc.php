@@ -99,7 +99,7 @@ class DOAJExportDom {
 		/* --- Article's publication date, volume, issue, DOI --- */
 		XMLCustomWriter::createChildWithText($doc, $root, 'publisherRecordId',  $article->getPubId(), false);
 
-		XMLCustomWriter::createChildWithText($doc, $root, 'documentType',  $article->getArticleType(), false);
+		XMLCustomWriter::createChildWithText($doc, $root, 'documentType',  $article->getLocalizedType(), false);
 
 		/* --- Article title --- */
 		foreach ((array) $article->getTitle(null) as $locale => $title) {
@@ -148,7 +148,7 @@ class DOAJExportDom {
 		$keywords =& XMLCustomWriter::createElement($doc, 'keywords');
 		XMLCustomWriter::appendChild($root, $keywords);
 
-		$subjects = array_map('trim', explode(';', $article->getArticleSubject()));
+		$subjects = array_map('trim', explode(';', $article->getLocalizedSubject()));
 
 		foreach ($subjects as $keyword) {
 			XMLCustomWriter::createChildWithText($doc, $keywords, 'keyword', $keyword, false);

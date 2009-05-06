@@ -15,13 +15,13 @@
 	<tr>
 		<td width="20%" class="label">{translate key="article.authors"}</td>
 		<td width="80%">
-			{url|assign:"url" page="user" op="email" redirectUrl=$currentUrl to=$submission->getAuthorEmails() subject=$submission->getArticleTitle() articleId=$submission->getArticleId()}
+			{url|assign:"url" page="user" op="email" redirectUrl=$currentUrl to=$submission->getAuthorEmails() subject=$submission->getLocalizedTitle() articleId=$submission->getArticleId()}
 			{$submission->getAuthorString()|escape} {icon name="mail" url=$url}
 		</td>
 	</tr>
 	<tr>
 		<td class="label">{translate key="article.title"}</td>
-		<td>{$submission->getArticleTitle()|strip_unsafe_html}</td>
+		<td>{$submission->getLocalizedTitle()|strip_unsafe_html}</td>
 	</tr>
 	<tr>
 		<td class="label">{translate key="section.section"}</td>
@@ -33,7 +33,7 @@
 			{assign var=editAssignments value=$submission->getEditAssignments()}
 			{foreach from=$editAssignments item=editAssignment}
 				{assign var=emailString value="`$editAssignment->getEditorFullName()` <`$editAssignment->getEditorEmail()`>"}
-				{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl subject=$submission->getArticleTitle()|strip_tags articleId=$submission->getArticleId()}
+				{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl subject=$submission->getLocalizedTitle()|strip_tags articleId=$submission->getArticleId()}
 				{$editAssignment->getEditorFullName()|escape} {icon name="mail" url=$url}
 				{if !$editAssignment->getCanEdit() || !$editAssignment->getCanReview()}
 					{if $editAssignment->getCanEdit()}

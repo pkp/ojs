@@ -16,7 +16,7 @@
 	
 <table class="tocArticle" width="100%">
 <tr valign="top">
-	{if $article->getFileName($locale) && $article->getShowCoverPage($locale) && !$article->getHideCoverPageToc($locale)}
+	{if $article->getLocalizedFileName() && $article->getLocalizedShowCoverPage() && !$article->getHideCoverPageToc($locale)}
 	<td rowspan="2">
 		<div class="tocArticleCoverImage">
 		<a href="{url page="article" op="view" path=$articlePath}" class="file">
@@ -24,7 +24,7 @@
 	</td>
 	{/if}
 
-	{if $article->getArticleAbstract() == ""}
+	{if $article->getLocalizedAbstract() == ""}
 		{assign var=hasAbstract value=0}
 	{else}
 		{assign var=hasAbstract value=1}
@@ -37,7 +37,7 @@
 		{assign var=hasAccess value=0}
 	{/if}
 
-	<td class="tocTitle">{if !$hasAccess || $hasAbstract}<a href="{url page="article" op="view" path=$articlePath}">{$article->getArticleTitle()|strip_unsafe_html}</a>{else}{$article->getArticleTitle()|strip_unsafe_html}{/if}</td>
+	<td class="tocTitle">{if !$hasAccess || $hasAbstract}<a href="{url page="article" op="view" path=$articlePath}">{$article->getLocalizedTitle()|strip_unsafe_html}</a>{else}{$article->getLocalizedTitle()|strip_unsafe_html}{/if}</td>
 	<td class="tocGalleys">
 		{if $hasAccess || ($subscriptionRequired && $showGalleyLinks)}
 			{foreach from=$article->getLocalizedGalleys() item=galley name=galleyList}

@@ -13,7 +13,7 @@
 {include file="rt/header.tpl"}
 {/strip}
 
-<h3>{$article->getArticleTitle()|strip_unsafe_html}</h3>
+<h3>{$article->getLocalizedTitle()|strip_unsafe_html}</h3>
 
 <br />
 
@@ -30,7 +30,7 @@
 	<td>1.</td>
 	<td>{translate key="rt.metadata.dublinCore.title"}</td>
 	<td>{translate key="rt.metadata.pkp.title"}</td>
-	<td>{$article->getArticleTitle()|strip_unsafe_html}</td>
+	<td>{$article->getLocalizedTitle()|strip_unsafe_html}</td>
 </tr>
 {foreach from=$article->getAuthors() item=author}
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
@@ -48,22 +48,22 @@
 	<td>3.</td>
 	<td>{translate key="rt.metadata.dublinCore.subject"}</td>
 	<td>{translate key="rt.metadata.pkp.discipline"}</td>
-	<td>{$article->getArticleDiscipline()|escape}</td>
+	<td>{$article->getLocalizedDiscipline()|escape}</td>
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
 <tr valign="top">
 	<td>3.</td>
 	<td>{translate key="rt.metadata.dublinCore.subject"}</td>
 	<td>{translate key="rt.metadata.pkp.subject"}</td>
-	<td>{$article->getArticleSubject()|escape}</td>
+	<td>{$article->getLocalizedSubject()|escape}</td>
 </tr>
-{if $article->getArticleSubjectClass()}
+{if $article->getLocalizedSubjectClass()}
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
 <tr valign="top">
 	<td>3.</td>
 	<td>{translate key="rt.metadata.dublinCore.subject"}</td>
 	<td>{translate key="rt.metadata.pkp.subjectClass"}</td>
-	<td>{$article->getArticleSubjectClass()|escape}</td>
+	<td>{$article->getLocalizedSubjectClass()|escape}</td>
 </tr>
 {/if}
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
@@ -71,7 +71,7 @@
 	<td>4.</td>
 	<td>{translate key="rt.metadata.dublinCore.description"}</td>
 	<td>{translate key="rt.metadata.pkp.abstract"}</td>
-	<td>{if $article->getArticleAbstract()}{$article->getArticleAbstract()|strip_unsafe_html|nl2br}{/if}</td>
+	<td>{if $article->getLocalizedAbstract()}{$article->getLocalizedAbstract()|strip_unsafe_html|nl2br}{/if}</td>
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
 <tr valign="top">
@@ -107,7 +107,7 @@
 	<td>8.</td>
 	<td>{translate key="rt.metadata.dublinCore.type"}</td>
 	<td>{translate key="rt.metadata.pkp.type"}</td>
-	<td>{$article->getArticleType()|escape}</td>
+	<td>{$article->getLocalizedType()|escape}</td>
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
 <tr valign="top">
@@ -170,7 +170,7 @@
 	<td>{translate key="rt.metadata.dublinCore.coverage"}</td>
 	<td>{translate key="rt.metadata.pkp.coverage"}</td>
 	<td>
-		{if $article->getArticleCoverageGeo()}{$article->getArticleCoverageGeo()|escape}{assign var=notFirstItem value=1}{/if}{if $article->getArticleCoverageChron()}{if $notFirstItem}, <br/>{/if}{$article->getArticleCoverageChron()|escape}{assign var=notFirstItem value=1}{/if}{if $article->getArticleCoverageSample()}{if $notFirstItem}, <br/>{/if}{$article->getArticleCoverageSample()|escape}{assign var=notFirstItem value=1}{/if}
+		{if $article->getLocalizedCoverageGeo()}{$article->getLocalizedCoverageGeo()|escape}{assign var=notFirstItem value=1}{/if}{if $article->getLocalizedCoverageChron()}{if $notFirstItem}, <br/>{/if}{$article->getLocalizedCoverageChron()|escape}{assign var=notFirstItem value=1}{/if}{if $article->getLocalizedCoverageSample()}{if $notFirstItem}, <br/>{/if}{$article->getLocalizedCoverageSample()|escape}{assign var=notFirstItem value=1}{/if}
 	</td>
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>

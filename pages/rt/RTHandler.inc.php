@@ -151,10 +151,10 @@ class RTHandler extends ArticleHandler {
 				$searchValues[$param] = $article->getAuthorString();
 				break;
 			case 'coverageGeo':
-				$searchValues[$param] = $article->getArticleCoverageGeo();
+				$searchValues[$param] = $article->getLocalizedCoverageGeo();
 				break;
 			case 'title':
-				$searchValues[$param] = $article->getArticleTitle();
+				$searchValues[$param] = $article->getLocalizedTitle();
 				break;
 			default:
 				// UNKNOWN parameter! Remove it from the list.
@@ -172,8 +172,8 @@ class RTHandler extends ArticleHandler {
 		$templateMgr->assign('searchParams', $searchParams);
 		$templateMgr->assign('searchValues', $searchValues);
 		$templateMgr->assign('defineTerm', Request::getUserVar('defineTerm'));
-		$templateMgr->assign('keywords', explode(';', $article->getArticleSubject()));
-		$templateMgr->assign('coverageGeo', $article->getArticleCoverageGeo());
+		$templateMgr->assign('keywords', explode(';', $article->getLocalizedSubject()));
+		$templateMgr->assign('coverageGeo', $article->getLocalizedCoverageGeo());
 		$templateMgr->assign_by_ref('journalSettings', $journal->getSettings());
 		$templateMgr->display('rt/context.tpl');
 	}
@@ -304,9 +304,9 @@ class RTHandler extends ArticleHandler {
 				$primaryAuthor = $article->getAuthors();
 				$primaryAuthor = $primaryAuthor[0];
 
-				$email->setSubject('[' . $journal->getLocalizedSetting('initials') . '] ' . strip_tags($article->getArticleTitle()));
+				$email->setSubject('[' . $journal->getLocalizedSetting('initials') . '] ' . strip_tags($article->getLocalizedTitle()));
 				$email->assignParams(array(
-					'articleTitle' => strip_tags($article->getArticleTitle()),
+					'articleTitle' => strip_tags($article->getLocalizedTitle()),
 					'volume' => $issue?$issue->getVolume():null,
 					'number' => $issue?$issue->getNumber():null,
 					'year' => $issue?$issue->getYear():null,
@@ -353,7 +353,7 @@ class RTHandler extends ArticleHandler {
 			$templateMgr->display('rt/sent.tpl');
 		} else {
 			if (!Request::getUserVar('continued')) {
-				$email->setSubject('[' . $journal->getLocalizedSetting('initials') . '] ' . strip_tags($article->getArticleTitle()));
+				$email->setSubject('[' . $journal->getLocalizedSetting('initials') . '] ' . strip_tags($article->getLocalizedTitle()));
 			}
 			$email->displayEditForm(Request::url(null, null, 'emailAuthor', array($articleId, $galleyId)), null, 'rt/email.tpl', array('op' => 'emailAuthor'));
 		}

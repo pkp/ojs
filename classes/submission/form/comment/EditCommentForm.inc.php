@@ -298,7 +298,7 @@ class EditCommentForm extends Form {
 
 		foreach ($recipients as $emailAddress => $name) {
 			$email->addRecipient($emailAddress, $name);
-			$email->setSubject(strip_tags($this->article->getArticleTitle()));
+			$email->setSubject(strip_tags($this->article->getLocalizedTitle()));
 
 			$paramArray = array(
 				'name' => $name,

@@ -147,7 +147,7 @@ class CrossRefExportDom {
 
 		/* Titles */
 		$titlesNode = &XMLCustomWriter::createElement($doc, 'titles');
-		XMLCustomWriter::createChildWithText($doc, $titlesNode, 'title', $article->getArticleTitle());
+		XMLCustomWriter::createChildWithText($doc, $titlesNode, 'title', $article->getLocalizedTitle());
 		XMLCustomWriter::appendChild($journalArticleNode, $titlesNode);
 
 		$contributorsNode = &XMLCustomWriter::createElement($doc, 'contributors');

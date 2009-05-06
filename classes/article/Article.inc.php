@@ -65,21 +65,24 @@ class Article extends Submission {
 	}
 
 	/**
-	 * Get "localized" article title (if applicable).
+	 * Get "localized" article title (if applicable). DEPRECATED
+	 * in favour of getLocalizedTitle.
 	 * @return string
 	 */
 	function getArticleTitle() {
-		return $this->getLocalizedData('title');
+		trigger_error('Deprecated function');
+		return $this->getLocalizedTitle();
 	}
 
 	/**
-	 * Get "localized" article abstract (if applicable).
+	 * Get "localized" article abstract (if applicable). DEPRECATED
+	 * in favour of getLocalizedAbstract.
 	 * @return string
 	 */
 	function getArticleAbstract() {
-		return $this->getLocalizedData('abstract');
+		trigger_error('Deprecated function');
+		return $this->getLocalizedAbstract();
 	}
-
 
 	//
 	// Get/set methods
@@ -166,115 +169,144 @@ class Article extends Submission {
 	}
 
 	/**
-	 * Return the localized discipline
+	 * Return the localized discipline. DEPRECATED in favour of
+	 * getLocalizedDiscipline.
 	 * @return string
 	 */
 	function getArticleDiscipline() {
-		return $this->getLocalizedData('discipline');
+		trigger_error('Deprecated function');
+		return $this->getLocalizedDiscipline();
 	}
 
 	/**
-	 * Return the localized subject classification
+	 * Return the localized subject classification. DEPRECATED
+	 * in favour of getLocalizedSubjectClass.
 	 * @return string
 	 */
 	function getArticleSubjectClass() {
-		return $this->getLocalizedData('subjectClass');
+		trigger_error('Deprecated function');
+		return $this->getLocalizedSubjectClass();
 	}
 
 	/**
-	 * Return the localized subject
+	 * Return the localized subject. DEPRECATED in favour of
+	 * getLocalizedSubject.
 	 * @return string
 	 */
 	function getArticleSubject() {
-		return $this->getLocalizedData('subject');
+		trigger_error('Deprecated function.');
+		return $this->getLocalizedSubject();
 	}
 
 	/**
-	 * Return the localized geographical coverage
+	 * Return the localized geographical coverage. DEPRECATED
+	 * in favour of getLocalizedCoverageGeo.
 	 * @return string
 	 */
 	function getArticleCoverageGeo() {
-		return $this->getLocalizedData('coverageGeo');
+		trigger_error('Deprecated function.');
+		return $this->getLocalizedCoverageGeo();
 	}
 
 	/**
-	 * Return the localized chronological coverage
+	 * Return the localized chronological coverage. DEPRECATED
+	 * in favour of getLocalizedCoverageChron.
 	 * @return string
 	 */
 	function getArticleCoverageChron() {
-		return $this->getLocalizedData('coverageChron');
+		trigger_error('Deprecated function.');
+		return $this->getLocalizedCoverageChron();
 	}
 
 	/**
-	 * Return the localized sample coverage
+	 * Return the localized sample coverage. DEPRECATED in favour
+	 * of getLocalizedCoverageSample.
 	 * @return string
 	 */
 	function getArticleCoverageSample() {
-		return $this->getLocalizedData('coverageSample');
+		trigger_error('Deprecated function.');
+		return $this->getLocalizedCoverageSample();
 	}
 
 	/**
-	 * Return the localized type (method/approach)
+	 * Return the localized type (method/approach). DEPRECATED
+	 * in favour of getLocalizedType.
 	 * @return string
 	 */
 	function getArticleType() {
-		return $this->getLocalizedData('type');
+		trigger_error('Deprecated function.');
+		return $this->getLocalizedType();
 	}
 
 	/**
-	 * Return the localized sponsor
+	 * Return the localized sponsor. DEPRECATED in favour
+	 * of getLocalizedSponsor.
 	 * @return string
 	 */
 	function getArticleSponsor() {
-		return $this->getLocalizedData('sponsor');
+		trigger_error('Deprecated function.');
+		return $this->getLocalizedSponsor();
 	}
 
 	/**
-	 * Get the localized article cover filename
+	 * Get the localized article cover filename. DEPRECATED
+	 * in favour of getLocalizedFileName.
 	 * @return string
 	 */
 	function getArticleFileName() {
-		return $this->getLocalizedData('fileName');
+		trigger_error('Deprecated function.');
+		return $this->getLocalizedFileName('fileName');
 	}
 
 	/**
-	 * Get the localized article cover width
+	 * Get the localized article cover width. DEPRECATED
+	 * in favour of getLocalizedWidth.
 	 * @return string
 	 */
 	function getArticleWidth() {
-		return $this->getLocalizedData('width');
+		trigger_error('Deprecated function.');
+		return $this->getLocalizedWidth();
 	}
 
 	/**
-	 * Get the localized article cover height
+	 * Get the localized article cover height. DEPRECATED
+	 * in favour of getLocalizedHeight.
 	 * @return string
 	 */
 	function getArticleHeight() {
-		return $this->getLocalizedData('height');
+		trigger_error('Deprecated function.');
+		return $this->getLocalizedHeight();
 	}
 
 	/**
-	 * Get the localized article cover filename on the uploader's computer
+	 * Get the localized article cover filename on the uploader's computer.
+	 * DEPRECATED in favour of getLocalizedOriginalFileName.
 	 * @return string
 	 */
 	function getArticleOriginalFileName() {
+		trigger_error('Deprecated function.');
 		return $this->getLocalizedData('originalFileName');
 	}
 
 	/**
-	 * Get the localized article cover alternate text
+	 * Get the localized article cover alternate text. DEPRECATED
+	 * in favour of getLocalizedCoverPageAltText.
 	 * @return string
 	 */
 	function getArticleCoverPageAltText() {
-		return $this->getLocalizedData('coverPageAltText');
+		trigger_error('Deprecated function.');
+		return $this->getLocalizedCoverPageAltText();
 	}
 
 	/**
-	 * Get the localized article cover filename
+	 * Get the flag indicating whether or not to show
+	 * an article cover page. DEPRECATED in favour of
+	 * getLocalizedShowCoverPage.
 	 * @return string
 	 */
 	function getArticleShowCoverPage() {
-		return $this->getLocalizedData('showCoverPage');
+		trigger_error('Deprecated function.');
+		return $this->getLocalizedShowCoverPage();
 	}
 
 	/**

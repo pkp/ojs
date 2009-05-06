@@ -224,16 +224,16 @@ class ArticleHandler extends Handler {
 
 			// Article cover page.
 			$locale = Locale::getLocale();
-			if (isset($article) && $article->getFileName($locale) && $article->getShowCoverPage($locale) && !$article->getHideCoverPageAbstract($locale)) {
+			if (isset($article) && $article->getLocalizedFileName() && $article->getLocalizedShowCoverPage() && !$article->getLocalizedHideCoverPageAbstract($locale)) {
 				import('file.PublicFileManager');
 				$publicFileManager = new PublicFileManager();
 				$coverPagePath = Request::getBaseUrl() . '/';
 				$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
 				$templateMgr->assign('coverPagePath', $coverPagePath);
-				$templateMgr->assign('coverPageFileName', $article->getFileName($locale));
-				$templateMgr->assign('width', $article->getWidth($locale));
-				$templateMgr->assign('height', $article->getHeight($locale));
-				$templateMgr->assign('coverPageAltText', $article->getCoverPageAltText($locale));
+				$templateMgr->assign('coverPageFileName', $article->getLocalizedFileName());
+				$templateMgr->assign('width', $article->getLocalizedWidth());
+				$templateMgr->assign('height', $article->getLocalized());
+				$templateMgr->assign('coverPageAltText', $article->getLocalizedCoverPageAltText());
 			}
 
 			// Increment the published article's abstract views count

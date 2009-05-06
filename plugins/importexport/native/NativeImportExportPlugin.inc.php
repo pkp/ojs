@@ -414,7 +414,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 					if (!empty($articles)) echo Locale::translate('article.articles') . ":\n";
 					foreach ($articles as $article) {
-						echo "\t" . $article->getArticleTitle() . "\n";
+						echo "\t" . $article->getLocalizedTitle() . "\n";
 					}
 				} else {
 					echo Locale::translate('plugins.importexport.native.cliError') . "\n";

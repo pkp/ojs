@@ -37,7 +37,7 @@ function confirmSubmissionCheck() {
 <table width="100%" class="data">
 <tr valign="top">
 	<td width="20%" class="label">{translate key="article.title"}</td>
-	<td width="80%" class="value">{$submission->getArticleTitle()|strip_unsafe_html}</td>
+	<td width="80%" class="value">{$submission->getLocalizedTitle()|strip_unsafe_html}</td>
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="article.journalSection"}</td>
@@ -45,7 +45,7 @@ function confirmSubmissionCheck() {
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="article.abstract"}</td>
-	<td class="value">{$submission->getArticleAbstract()|strip_unsafe_html|nl2br}</td>
+	<td class="value">{$submission->getLocalizedAbstract()|strip_unsafe_html|nl2br}</td>
 </tr>
 {assign var=editAssignments value=$submission->getEditAssignments()}
 {foreach from=$editAssignments item=editAssignment}
@@ -56,7 +56,7 @@ function confirmSubmissionCheck() {
 			<td class="value">
 	{/if}
 			{assign var=emailString value="`$editAssignment->getEditorFullName()` <`$editAssignment->getEditorEmail()`>"}
-			{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl subject=$submission->getArticleTitle()|strip_tags articleId=$articleId}
+			{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl subject=$submission->getLocalizedTitle()|strip_tags articleId=$articleId}
 			{$editAssignment->getEditorFullName()|escape} {icon name="mail" url=$url}
 			{if !$editAssignment->getCanEdit() || !$editAssignment->getCanReview()}
 				{if $editAssignment->getCanEdit()}

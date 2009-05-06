@@ -70,12 +70,12 @@
 		<item rdf:about="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}">
 
 			{* required elements *}
-			<title>{$article->getArticleTitle()|strip|escape:"html"}</title>
+			<title>{$article->getLocalizedTitle()|strip|escape:"html"}</title>
 			<link>{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}</link>
 
 			{* optional elements *}
-			{if $article->getArticleAbstract()}
-				<description>{$article->getArticleAbstract()|strip|escape:"html"}</description>
+			{if $article->getLocalizedAbstract()}
+				<description>{$article->getLocalizedAbstract()|strip|escape:"html"}</description>
 			{/if}
 
 			{foreach from=$article->getAuthors() item=author name=authorList}

@@ -125,7 +125,7 @@ class CoinsPlugin extends GenericPlugin {
 				array('rft.genre', 'article'),
 				array('rft.title', $journal->getJournalTitle()),
 				array('rft.jtitle', $journal->getJournalTitle()),
-				array('rft.atitle', $article->getArticleTitle()),
+				array('rft.atitle', $article->getLocalizedTitle()),
 				array('rft.artnum', $article->getBestArticleId()),
 				array('rft.date', date('Y-m-d', strtotime($article->getDatePublished()))),
 				array('rft.stitle', $journal->getLocalizedSetting('abbreviation')),

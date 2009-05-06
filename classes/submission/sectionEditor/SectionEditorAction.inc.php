@@ -251,7 +251,7 @@ class SectionEditorAction extends Action {
 						'editorialContactSignature' => $user->getContactSignature(),
 						'reviewGuidelines' => $journal->getLocalizedSetting('reviewGuidelines'),
 						'submissionReviewUrl' => $submissionUrl,
-						'abstractTermIfEnabled' => ($sectionEditorSubmission->getArticleAbstract() == ''?'':Locale::translate('article.abstract')),
+						'abstractTermIfEnabled' => ($sectionEditorSubmission->getLocalizedAbstract() == ''?'':Locale::translate('article.abstract')),
 						'passwordResetUrl' => Request::url(null, 'login', 'resetPassword', $reviewer->getUsername(), array('confirm' => Validation::generatePasswordResetHash($reviewer->getUserId())))
 					);
 					$email->assignParams($paramArray);
@@ -1807,7 +1807,7 @@ class SectionEditorAction extends Action {
 			foreach ($notificationUsers as $user) {
 				$url = Request::url(null, $user['role'], 'submissionReview', $article->getArticleId(), null, 'peerReview');
 				Notification::createNotification($user['id'], "notification.type.reviewerComment",
-					$article->getArticleTitle(), $url, 1, NOTIFICATION_TYPE_REVIEWER_COMMENT);
+					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_REVIEWER_COMMENT);
 			}
 				
 			if ($emailComment) {
@@ -1859,7 +1859,7 @@ class SectionEditorAction extends Action {
 			foreach ($notificationUsers as $user) {
 				$url = Request::url(null, $user['role'], 'submissionReview', $article->getArticleId(), null, 'editorDecision');
 				Notification::createNotification($user['id'], "notification.type.editorDecisionComment",
-					$article->getArticleTitle(), $url, 1, NOTIFICATION_TYPE_EDITOR_DECISION_COMMENT);
+					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_EDITOR_DECISION_COMMENT);
 			}
 				
 			if ($emailComment) {
@@ -2111,7 +2111,7 @@ class SectionEditorAction extends Action {
 			foreach ($notificationUsers as $user) {
 				$url = Request::url(null, $user['role'], 'submissionEditing', $article->getArticleId(), null, 'copyedit');
 				Notification::createNotification($user['id'], "notification.type.copyeditComment",
-					$article->getArticleTitle(), $url, 1, NOTIFICATION_TYPE_COPYEDIT_COMMENT);
+					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_COPYEDIT_COMMENT);
 			}
 
 			if ($emailComment) {
@@ -2163,7 +2163,7 @@ class SectionEditorAction extends Action {
 			foreach ($notificationUsers as $user) {
 				$url = Request::url(null, $user['role'], 'submissionEditing', $article->getArticleId(), null, 'layout');
 				Notification::createNotification($user['id'], "notification.type.layoutComment",
-					$article->getArticleTitle(), $url, 1, NOTIFICATION_TYPE_LAYOUT_COMMENT);
+					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_LAYOUT_COMMENT);
 			}
 				
 			if ($emailComment) {
@@ -2215,7 +2215,7 @@ class SectionEditorAction extends Action {
 			foreach ($notificationUsers as $user) {
 				$url = Request::url(null, $user['role'], 'submissionEditing', $article->getArticleId(), null, 'proofread');
 				Notification::createNotification($user['id'], "notification.type.proofreadComment",
-					$article->getArticleTitle(), $url, 1, NOTIFICATION_TYPE_PROOFREAD_COMMENT);
+					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_PROOFREAD_COMMENT);
 			}	
 			
 			if ($emailComment) {

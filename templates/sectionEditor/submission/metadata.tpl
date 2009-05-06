@@ -24,7 +24,7 @@
 		<td width="20%" class="label">{translate key="user.name"}</td>
 		<td width="80%" class="value">
 			{assign var=emailString value="`$author->getFullName()` <`$author->getEmail()`>"}
-			{url|assign:"url" page="user" op="email" redirectUrl=$currentUrl to=$emailString|to_array subject=$submission->getArticleTitle|strip_tags articleId=$submission->getArticleId()}
+			{url|assign:"url" page="user" op="email" redirectUrl=$currentUrl to=$emailString|to_array subject=$submission->getLocalizedTitle|strip_tags articleId=$submission->getArticleId()}
 			{$author->getFullName()|escape} {icon name="mail" url=$url}
 		</td>
 	</tr>
@@ -71,7 +71,7 @@
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="article.title"}</td>
-		<td width="80%" class="value">{$submission->getArticleTitle()|strip_unsafe_html|default:"&mdash;"}</td>
+		<td width="80%" class="value">{$submission->getLocalizedTitle()|strip_unsafe_html|default:"&mdash;"}</td>
 	</tr>
 
 	<tr>
@@ -79,7 +79,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="article.abstract"}</td>
-		<td class="value">{$submission->getArticleAbstract()|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
+		<td class="value">{$submission->getLocalizedAbstract()|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
 	</tr>
 </table>
 
@@ -89,7 +89,7 @@
 	{if $journalSettings.metaDiscipline}
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="article.discipline"}</td>
-		<td width="80%" class="value">{$submission->getArticleDiscipline()|escape|default:"&mdash;"}</td>
+		<td width="80%" class="value">{$submission->getLocalizedDiscipline()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>
@@ -98,7 +98,7 @@
 	{if $journalSettings.metaSubjectClass}
 	<tr valign="top">
 		<td width="20%"  class="label">{translate key="article.subjectClassification"}</td>
-		<td width="80%" class="value">{$submission->getArticleSubjectClass()|escape|default:"&mdash;"}</td>
+		<td width="80%" class="value">{$submission->getLocalizedSubjectClass()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>
@@ -107,7 +107,7 @@
 	{if $journalSettings.metaSubject}
 	<tr valign="top">
 		<td width="20%"  class="label">{translate key="article.subject"}</td>
-		<td width="80%" class="value">{$submission->getArticleSubject()|escape|default:"&mdash;"}</td>
+		<td width="80%" class="value">{$submission->getLocalizedSubject()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>
@@ -116,21 +116,21 @@
 	{if $journalSettings.metaCoverage}
 	<tr valign="top">
 		<td width="20%"  class="label">{translate key="article.coverageGeo"}</td>
-		<td width="80%" class="value">{$submission->getArticleCoverageGeo()|escape|default:"&mdash;"}</td>
+		<td width="80%" class="value">{$submission->getLocalizedCoverageGeo()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="article.coverageChron"}</td>
-		<td class="value">{$submission->getArticleCoverageChron()|escape|default:"&mdash;"}</td>
+		<td class="value">{$submission->getLocalizedCoverageChron()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="article.coverageSample"}</td>
-		<td class="value">{$submission->getArticleCoverageSample()|escape|default:"&mdash;"}</td>
+		<td class="value">{$submission->getLocalizedCoverageSample()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>
@@ -139,7 +139,7 @@
 	{if $journalSettings.metaType}
 	<tr valign="top">
 		<td width="20%"  class="label">{translate key="article.type"}</td>
-		<td width="80%" class="value">{$submission->getArticleType()|escape|default:"&mdash;"}</td>
+		<td width="80%" class="value">{$submission->getLocalizedType()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>

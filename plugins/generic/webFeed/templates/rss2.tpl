@@ -54,9 +54,9 @@
 			{foreach from=$section.articles item=article}
 				<item>
 					{* required elements *}
-					<title>{$article->getArticleTitle()|strip|escape:"html"}</title>
+					<title>{$article->getLocalizedTitle()|strip|escape:"html"}</title>
 					<link>{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}</link>
-					<description>{$article->getArticleAbstract()|strip|escape:"html"}</description>
+					<description>{$article->getLocalizedAbstract()|strip|escape:"html"}</description>
 
 					{* optional elements *}
 					<author>{$article->getAuthorString()|escape:"html"}</author>

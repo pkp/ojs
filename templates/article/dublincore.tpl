@@ -75,9 +75,9 @@
 		{/if}
 	{/foreach}
 {/foreach}{/if}
-	<meta name="DC.Title" content="{$article->getArticleTitle()|strip_tags|escape}"/>
+	<meta name="DC.Title" content="{$article->getLocalizedTitle()|strip_tags|escape}"/>
 {foreach from=$article->getTitle(null) item=alternate key=metaLocale}
-	{if $alternate != $article->getArticleTitle()}
+	{if $alternate != $article->getLocalizedTitle()}
 		<meta name="DC.Title.Alternative" xml:lang="{$metaLocale|String_substr:0:2|escape}" content="{$alternate|strip_tags|escape}"/>
 	{/if}
 {/foreach}

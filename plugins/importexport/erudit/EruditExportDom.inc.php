@@ -114,7 +114,7 @@ class EruditExportDom {
 		$titleGroupNode = &XMLCustomWriter::createElement($doc, 'titlegr');
 		XMLCustomWriter::appendChild($frontMatterNode, $titleGroupNode);
 
-		XMLCustomWriter::createChildWithText($doc, $titleGroupNode, 'title', strip_tags($article->getArticleTitle()));
+		XMLCustomWriter::createChildWithText($doc, $titleGroupNode, 'title', strip_tags($article->getLocalizedTitle()));
 
 
 		/* --- authorgr --- */
@@ -154,7 +154,7 @@ class EruditExportDom {
 			unset($abstractNode);
 		}
 
-		if ($keywords = $article->getArticleSubject()) {
+		if ($keywords = $article->getLocalizedSubject()) {
 			$keywordGroupNode = &XMLCustomWriter::createElement($doc, 'keywordgr');
 			XMLCustomWriter::setAttribute ($keywordGroupNode, 'lang', ($language = $article->getLanguage())?$language:'en');
 			foreach (explode(';', $keywords) as $keyword) {

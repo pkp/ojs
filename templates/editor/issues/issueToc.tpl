@@ -86,7 +86,7 @@
 				{$author->getLastName()|escape}{if !$smarty.foreach.authorList.last},{/if}
 			{/foreach}
 		</td>
-		<td>{if !$isLayoutEditor}<a href="{url op="submission" path=$articleId}" class="action">{/if}{$article->getArticleTitle()|strip_unsafe_html|truncate:60:"..."}{if !$isLayoutEditor}</a>{/if}</td>
+		<td>{if !$isLayoutEditor}<a href="{url op="submission" path=$articleId}" class="action">{/if}{$article->getLocalizedTitle()|strip_unsafe_html|truncate:60:"..."}{if !$isLayoutEditor}</a>{/if}</td>
 		{if (($issueAccess == 2) && $enableSubscriptions)}
 		<td><select name="accessStatus[{$article->getPubId()}]" size="1" class="selectMenu">{html_options options=$accessOptions selected=$article->getAccessStatus()}</select></td>
 		{/if}

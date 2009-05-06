@@ -32,7 +32,7 @@ function invokeWLA() {
 {/literal}
 </script>
 
-<h3>{$article->getArticleTitle()|strip_unsafe_html}</h3>
+<h3>{$article->getLocalizedTitle()|strip_unsafe_html}</h3>
 
 <!-- Include the real forms for each of the search engines -->
 <form name="googleScholar" method="get" action="http://scholar.google.com/scholar">
@@ -58,7 +58,7 @@ function invokeWLA() {
 	</tr>
 	<tr valign="top">
 		<td class="label"><label for="title">{translate key="article.title"}</label></td>
-		<td class="value"><input type="text" id="title" name="title" size="40" maxlength="40" class="textField" value="{$article->getArticleTitle()|escape}" /></td>
+		<td class="value"><input type="text" id="title" name="title" size="40" maxlength="40" class="textField" value="{$article->getLocalizedTitle()|escape}" /></td>
 	</tr>
 </table>
 

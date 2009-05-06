@@ -307,7 +307,7 @@ class OJSCompletedPayment extends Payment {
 				$articleDAO = &DAORegistry::getDAO('ArticleDAO');
 				$article =& $articleDAO->getArticle($this->assocId, $this->journalId);
 				if ( !$article ) return Locale::translate('manager.payment.notFound');
-				return $article->getArticleTitle();
+				return $article->getLocalizedTitle();
 			case PAYMENT_TYPE_MEMBERSHIP:
 			case PAYMENT_TYPE_DONATION:
 				return false;

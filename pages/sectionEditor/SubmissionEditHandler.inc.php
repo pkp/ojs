@@ -1301,7 +1301,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			foreach ($notificationUsers as $user) {
 				$url = Request::url(null, $user['role'], 'submissionEditing', $article->getArticleId(), null, 'layout');
 				Notification::createNotification($user['id'], "notification.type.suppFileModified",
-					$article->getArticleTitle(), $url, 1, NOTIFICATION_TYPE_SUPP_FILE_MODIFIED);
+					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_SUPP_FILE_MODIFIED);
 			}
 			
 			Request::redirect(null, null, $this->getFrom(), $articleId);
@@ -1626,7 +1626,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			foreach ($notificationUsers as $user) {
 				$url = Request::url(null, $user['role'], 'submissionEditing', $article->getArticleId(), null, 'layout');
 				Notification::createNotification($user['id'], "notification.type.galleyModified",
-					$article->getArticleTitle(), $url, 1, NOTIFICATION_TYPE_GALLEY_MODIFIED);
+					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_GALLEY_MODIFIED);
 			}
 			
 			if (Request::getUserVar('uploadImage')) {

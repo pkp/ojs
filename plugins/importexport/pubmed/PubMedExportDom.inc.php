@@ -86,9 +86,9 @@ class PubMedExportDom {
 		// PubMed requires english titles for ArticleTitle
 		$language = $article->getLanguage();
 		if ($language == 'en' || $language == '' ) {
-			XMLCustomWriter::createChildWithText($doc, $root, 'ArticleTitle', $article->getArticleTitle());
+			XMLCustomWriter::createChildWithText($doc, $root, 'ArticleTitle', $article->getLocalizedTitle());
 		} else {
-			XMLCustomWriter::createChildWithText($doc, $root, 'VernacularTitle', $article->getArticleTitle());
+			XMLCustomWriter::createChildWithText($doc, $root, 'VernacularTitle', $article->getLocalizedTitle());
 		}
 
 		/* --- FirstPage / LastPage --- */
@@ -169,8 +169,8 @@ class PubMedExportDom {
 		}
 
 		/* --- Abstract --- */
-		if ($article->getArticleAbstract()) {
-			$abstractNode = XMLCustomWriter::createChildWithText($doc, $root, 'Abstract', strip_tags($article->getArticleAbstract()), false);
+		if ($article->getLocalizedAbstract()) {
+			$abstractNode = XMLCustomWriter::createChildWithText($doc, $root, 'Abstract', strip_tags($article->getLocalizedAbstract()), false);
 		}
 
 		return $root;

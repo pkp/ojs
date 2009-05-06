@@ -155,7 +155,7 @@ class Action {
 				foreach ($notificationUsers as $user) {
 					$url = Request::url(null, $user['role'], 'submission', $article->getArticleId(), null, 'metadata');
 					Notification::createNotification($user['id'], "notification.type.metadataModified",
-						$article->getArticleTitle(), $url, 1, NOTIFICATION_TYPE_METADATA_MODIFIED);
+						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_METADATA_MODIFIED);
 				}
 		
 				// Add log entry
@@ -271,7 +271,7 @@ class Action {
 				foreach ($notificationUsers as $user) {
 					$url = Request::url(null, $user['role'], 'submissionReview', $article->getArticleId(), null, 'editorDecision');
 					Notification::createNotification($user['id'], "notification.type.submissionComment",
-						$article->getArticleTitle(), $url, 1, NOTIFICATION_TYPE_SUBMISSION_COMMENT);
+						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_SUBMISSION_COMMENT);
 				}
 				
 				if ($emailComment) {

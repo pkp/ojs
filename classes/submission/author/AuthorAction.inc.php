@@ -294,7 +294,7 @@ class AuthorAction extends Action {
 				foreach ($notificationUsers as $user) {
 					$url = Request::url(null, $user['role'], 'submissionEditing', $article->getArticleId(), null, 'layout');
 					Notification::createNotification($user['id'], "notification.type.layoutComment",
-						$article->getArticleTitle(), $url, 1, NOTIFICATION_TYPE_LAYOUT_COMMENT);
+						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_LAYOUT_COMMENT);
 				}
 				
 				if ($emailComment) {
@@ -363,7 +363,7 @@ class AuthorAction extends Action {
 			return true;
 		} else {
 			if (!Request::getUserVar('continued')) {
-				$email->setSubject($authorSubmission->getArticleTitle());
+				$email->setSubject($authorSubmission->getLocalizedTitle());
 				if (!empty($editors)) {
 					foreach ($editors as $editor) {
 						$email->addRecipient($editor->getEmail(), $editor->getFullName());
@@ -415,7 +415,7 @@ class AuthorAction extends Action {
 				foreach ($notificationUsers as $user) {
 					$url = Request::url(null, $user['role'], 'submissionEditing', $article->getArticleId(), null, 'copyedit');
 					Notification::createNotification($user['id'], "notification.type.copyeditComment",
-						$article->getArticleTitle(), $url, 1, NOTIFICATION_TYPE_COPYEDIT_COMMENT);
+						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_COPYEDIT_COMMENT);
 				}
 				
 				if ($emailComment) {
@@ -467,7 +467,7 @@ class AuthorAction extends Action {
 				foreach ($notificationUsers as $user) {
 					$url = Request::url(null, $user['role'], 'submissionEditing', $article->getArticleId(), null, 'proofread');
 					Notification::createNotification($user['id'], "notification.type.proofreadComment",
-						$article->getArticleTitle(), $url, 1, NOTIFICATION_TYPE_PROOFREAD_COMMENT);
+						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_PROOFREAD_COMMENT);
 				}
 				
 				if ($emailComment) {

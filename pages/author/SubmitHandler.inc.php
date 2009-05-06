@@ -169,7 +169,7 @@ class SubmitHandler extends AuthorHandler {
 					foreach ($notificationUsers as $user) {
 						$url = Request::url(null, 'editor', 'submission', $articleId);
 						Notification::createNotification($user['id'], "notification.type.articleSubmitted",
-							$article->getArticleTitle(), $url, 1, NOTIFICATION_TYPE_ARTICLE_SUBMITTED);
+							$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_ARTICLE_SUBMITTED);
 					}
 
 					$journal = &Request::getJournal();

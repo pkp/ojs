@@ -28,7 +28,7 @@
 <h3>{translate key="article.articles"}</h3>
 <ul>
 	{foreach from=$articles item=article}
-		<li>{$article->getArticleTitle()|strip_unsafe_html}</li>
+		<li>{$article->getLocalizedTitle()|strip_unsafe_html}</li>
 	{/foreach}
 	</ul>
 {/if}

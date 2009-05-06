@@ -13,7 +13,7 @@ Content-Transfer-Encoding: quoted-printable
 {if $section.title}{$section.title}{/if}
 --------
 {foreach from=$section.articles item=article}
-{$article->getArticleTitle()|strip_tags}{if $article->getPages()} ({$article->getPages()}){/if}
+{$article->getLocalizedTitle()|strip_tags}{if $article->getPages()} ({$article->getPages()}){/if}
 
 {foreach from=$article->getAuthors() item=author name=authorList}
 	{$author->getFullName()}{if !$smarty.foreach.authorList.last},{/if}{/foreach}
@@ -50,9 +50,9 @@ Content-Transfer-Encoding: quoted-printable
 			{foreach from=$section.articles item=article}
 				<table width="100%">
 					<tr>
-						<td>{$article->getArticleTitle()|strip_unsafe_html}</td>
+						<td>{$article->getLocalizedTitle()|strip_unsafe_html}</td>
 						<td align="right">
-							<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}" class="file">{if $article->getArticleAbstract()}{translate key="article.abstract"}{else}{translate key="article.details"}{/if}</a>
+							<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}" class="file">{if $article->getLocalizedAbstract()}{translate key="article.abstract"}{else}{translate key="article.details"}{/if}</a>
 							{if (!$subscriptionRequired || $article->getAccessStatus() || $subscribedUser)}
 								{foreach from=$article->getGalleys() item=galley name=galleyList}
 									&nbsp;
