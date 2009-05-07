@@ -787,7 +787,6 @@ class NativeImportDom {
 		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
 
 		$copyeditSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $article->getArticleId());
-		$copyeditSignoff->setArticleId($article->getArticleId());
 		$signoffDao->updateObject($copyeditSignoff);
 
 		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $article->getArticleId());
