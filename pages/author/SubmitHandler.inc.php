@@ -297,6 +297,7 @@ class SubmitHandler extends AuthorHandler {
 	function expediteSubmission() {
 		$articleId = (int) Request::getUserVar('articleId');
 		$this->validate($articleId);
+		$journal =& Request::getJournal();
 		$article =& $this->article;
 
 		// The author must also be an editor to perform this task.
