@@ -202,7 +202,9 @@ class SubscriptionManagerHandler extends Handler {
 
 		$rangeInfo = Handler::getRangeInfo('users');
 
-		$users = &$userDao->getUsersByField($searchType, $searchMatch, $search, true, $rangeInfo);
+		$journal = &Request::getJournal();
+
+		$users = &$userDao->getJournalUsersByField($searchType, $searchMatch, $search, true, $journal->getJournalId(), $rangeInfo);
 
 		$templateMgr->assign('searchField', $searchType);
 		$templateMgr->assign('searchMatch', $searchMatch);
