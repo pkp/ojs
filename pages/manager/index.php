@@ -32,6 +32,7 @@ switch ($op) {
 	// People Management
 	//
 	case 'people':
+	case 'showNoRole':
 	case 'enrollSearch':
 	case 'enroll':
 	case 'unEnroll':
