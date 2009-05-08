@@ -217,6 +217,29 @@ class PeopleHandler extends ManagerHandler {
 	}
 
 	/**
+	 * Show users with no role.
+	 */
+	function showNoRole() {
+		$this->validate();
+
+		$userDao = &DAORegistry::getDAO('UserDAO');
+
+		$templateMgr = &TemplateManager::getManager();
+
+		parent::setupTemplate(true);
+
+		$rangeInfo = PKPHandler::getRangeInfo('users');
+
+		$users = &$userDao->getUsersWithNoRole(true, $rangeInfo);
+
+		$templateMgr->assign('omitSearch', true);
+		$templateMgr->assign_by_ref('users', $users);
+		$templateMgr->assign_by_ref('thisUser', Request::getUser());
+		$templateMgr->assign('helpTopicId', 'journal.users.index');
+		$templateMgr->display('manager/people/searchUsers.tpl');
+	}
+
+	/**
 	 * Enroll a user in a role.
 	 */
 	function enroll($args) {
