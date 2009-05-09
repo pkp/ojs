@@ -114,7 +114,7 @@ class NativeImportDom {
 			if ($locale == '') {
 				$locale = $journalPrimaryLocale;
 			} elseif (!in_array($locale, $journalSupportedLocales)) {
-				$errors[] = array('plugins.importexport.native.import.error.issueDescriptionLocaleUnsupported', array('issueTitle' => $issue->getIssueTitle(), 'locale' => $locale));
+				$errors[] = array('plugins.importexport.native.import.error.issueDescriptionLocaleUnsupported', array('issueTitle' => $issue->getLocalizedTitle(), 'locale' => $locale));
 				$hasErrors = true;	
 				continue;
 			}
@@ -170,7 +170,7 @@ class NativeImportDom {
 				$issue->setShowTitle(1);
 				break;
 			default:
-				$errors[] = array('plugins.importexport.native.import.error.unknownIdentificationType', array('identificationType' => $value, 'issueTitle' => $issue->getIssueTitle()));
+				$errors[] = array('plugins.importexport.native.import.error.unknownIdentificationType', array('identificationType' => $value, 'issueTitle' => $issue->getLocalizedTitle()));
 				$hasErrors = true;
 				break;
 		}

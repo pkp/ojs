@@ -61,8 +61,13 @@ class Issue extends DataObject {
 	 * Get the localized title
 	 * @return string
 	 */
-	function getIssueTitle() {
+	function getLocalizedTitle() {
 		return $this->getLocalizedData('title');
+	}
+
+	function getIssueTitle() {
+		trigger_error('Deprecated function.');
+		return $this->getLocalizedTitle();
 	}
 
 	/**
@@ -231,8 +236,13 @@ class Issue extends DataObject {
 	 * Get the localized description
 	 * @return string
 	 */
-	function getIssueDescription() {
+	function getLocalizedDescription() {
 		return $this->getLocalizedData('description');
+	}
+
+	function getIssueDescription() {
+		trigger_error('Deprecated function.');
+		return $this->getLocalizedDescription();
 	}
 
 	/**
@@ -340,12 +350,17 @@ class Issue extends DataObject {
 	 * Get the localized issue cover filename
 	 * @return string
 	 */
-	function getIssueFileName() {
+	function getLocalizedFileName() {
 		return $this->getLocalizedData('fileName');
 	}
 
+	function getIssueFileName() {
+		trigger_error('Deprecated function.');
+		return $this->getLocalizedFileName();
+	}
+
 	/**
-	 * get file name
+	 * Get issue cover image file name
 	 * @param $locale string
 	 * @return string
 	 */
@@ -366,8 +381,13 @@ class Issue extends DataObject {
 	 * Get the localized issue cover width
 	 * @return string
 	 */
-	function getIssueWidth() {
+	function getLocalizedWidth() {
 		return $this->getLocalizedData('width');
+	}
+
+	function getIssueWidth() {
+		trigger_error('Deprecated function.');
+		return $this->getLocalizedWidth();
 	}
 
 	/**
@@ -392,8 +412,13 @@ class Issue extends DataObject {
 	 * Get the localized issue cover height
 	 * @return string
 	 */
-	function getIssueHeight() {
+	function getLocalizedHeight() {
 		return $this->getLocalizedData('height');
+	}
+
+	function getIssueHeight() {
+		trigger_error('Deprecated function.');
+		return $this->getLocalizedHeight();
 	}
 
 	/**
@@ -418,12 +443,17 @@ class Issue extends DataObject {
 	 * Get the localized issue cover filename on the uploader's computer
 	 * @return string
 	 */
-	function getIssueOriginalFileName() {
+	function getLocalizedOriginalFileName() {
 		return $this->getLocalizedData('originalFileName');
 	}
 
+	function getIssueOriginalFileName() {
+		trigger_error('Deprecated function.');
+		return $this->getLocalizedOriginalFileName();
+	}
+
 	/**
-	 * get original file name
+	 * Get original issue cover image file name
 	 * @param $locale string
 	 * @return string
 	 */
@@ -444,12 +474,17 @@ class Issue extends DataObject {
 	 * Get the localized issue cover alternate text
 	 * @return string
 	 */
-	function getIssueCoverPageAltText() {
+	function getLocalizedCoverPageAltText() {
 		return $this->getLocalizedData('coverPageAltText');
 	}
 
+	function getIssueCoverPageAltText() {
+		trigger_error('Deprecated function.');
+		return $this->getLocalizedCoverPageAltText();
+	}
+
 	/**
-	 * get cover page alternate text
+	 * Get issue cover image alternate text
 	 * @param $locale string
 	 * @return string
 	 */
@@ -458,7 +493,7 @@ class Issue extends DataObject {
 	}
 
 	/**
-	 * set cover page alternate text
+	 * Set issue cover image alternate text
 	 * @param $coverPageAltText string
 	 * @param $locale string
 	 */
@@ -470,8 +505,13 @@ class Issue extends DataObject {
 	 * Get the localized issue cover description
 	 * @return string
 	 */
-	function getIssueCoverPageDescription() {
+	function getLocalizedCoverPageDescription() {
 		return $this->getLocalizedData('coverPageDescription');
+	}
+
+	function getIssueCoverPageDescription() {
+		trigger_error('Deprecated function.');
+		return $this->getLocalizedCoverPageDescription();
 	}
 
 	/**
@@ -493,15 +533,20 @@ class Issue extends DataObject {
 	}
 
 	/**
-	 * Get the localized issue cover filename
+	 * Get the localized issue cover enable/disable flag
 	 * @return string
 	 */
-	function getIssueShowCoverPage() {
+	function getLocalizedShowCoverPage() {
 		return $this->getLocalizedData('showCoverPage');
 	}
 
+	function getIssueShowCoverPage() {
+		trigger_error('Deprecated function.');
+		return $this->getLocalizedShowCoverPage();
+	}
+
 	/**
-	 * get show cover page
+	 * Get show issue cover image flag
 	 * @param $locale string
 	 * @return int
 	 */
@@ -510,7 +555,7 @@ class Issue extends DataObject {
 	}
 
 	/**
-	 * set show cover page
+	 * Set show issue cover image flag
 	 * @param $showCoverPage int
 	 * @param $locale string
 	 */

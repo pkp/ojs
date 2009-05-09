@@ -156,11 +156,11 @@ class MetsExportDom {
 		XMLCustomWriter::setAttribute($mods, 'xmlns:mods', 'http://www.loc.gov/mods/v3');
 		XMLCustomWriter::setAttribute($root, 'xsi:schemaLocation', str_replace(' http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-0.xsd', '', $root->getAttribute('xsi:schemaLocation')) . ' http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-0.xsd');
 		$titleInfo =& XMLCustomWriter::createElement($doc, 'mods:titleInfo');
-		XMLCustomWriter::createChildWithText($doc, $titleInfo, 'mods:title', $issue->getIssueTitle());
+		XMLCustomWriter::createChildWithText($doc, $titleInfo, 'mods:title', $issue->getLocalizedTitle());
 		XMLCustomWriter::appendChild($mods, $titleInfo);
 
-		if($issue->getIssueDescription() != ''){
-			$modsAbstract = XMLCustomWriter::createChildWithText($doc, $titleInfo, 'mods:abstract', $issue->getIssueDescription());
+		if($issue->getLocalizedDescription() != ''){
+			$modsAbstract = XMLCustomWriter::createChildWithText($doc, $titleInfo, 'mods:abstract', $issue->getLocalizedDescription());
 			XMLCustomWriter::appendChild($mods, $modsAbstract);
 		}
 
