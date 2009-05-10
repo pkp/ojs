@@ -24,7 +24,7 @@ class FormValidatorLocale extends FormValidator {
 	function isValid() {
 		$primaryLocale = Locale::getPrimaryLocale();
 		$value = $this->form->getData($this->field);
-		return $this->type == 'optional' || (is_array($value) && !empty($value[$primaryLocale]));
+		return $this->type == 'optional' || (is_array($value) && isset($value[$primaryLocale]) && $value[$primaryLocale] != '');
 	}
 
 	/**
