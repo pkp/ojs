@@ -708,7 +708,7 @@ class PublishedArticleDAO extends DAO {
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			$author = new Author();
-			$author->setAuthorId($row['author_id']);
+			$author->setId($row['author_id']);
 			$author->setArticleId($row['article_id']);
 			$author->setFirstName($row['first_name']);
 			$author->setMiddleName($row['middle_name']);

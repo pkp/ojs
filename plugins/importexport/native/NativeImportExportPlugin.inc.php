@@ -152,7 +152,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 						$issues = &$issueDao->getIssues($journal->getJournalId(), Handler::getRangeInfo('issues'));
 						$templateMgr->assign_by_ref('issues', $issues);
 						$templateMgr->assign('sectionOptions', array('0' => Locale::translate('author.submit.selectSection')) + $sectionDao->getSectionTitles($journal->getJournalId(), false));
-						$templateMgr->assign('temporaryFileId', $temporaryFile->getFileId());
+						$templateMgr->assign('temporaryFileId', $temporaryFile->getId());
 						return $templateMgr->display($this->getTemplatePath() . 'articleContext.tpl');
 					}
 				}

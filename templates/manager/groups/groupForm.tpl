@@ -16,8 +16,8 @@
 
 {if $group}
 	<ul class="menu">
-		<li class="current"><a href="{url op="editGroup" path=$group->getGroupId()}">{translate key="manager.groups.editTitle"}</a></li>
-		<li><a href="{url op="groupMembership" path=$group->getGroupId()}">{translate key="manager.groups.membership}</a></li>
+		<li class="current"><a href="{url op="editGroup" path=$group->getId()}">{translate key="manager.groups.editTitle"}</a></li>
+		<li><a href="{url op="groupMembership" path=$group->getId()}">{translate key="manager.groups.membership}</a></li>
 	</ul>
 {/if}
 
@@ -25,7 +25,7 @@
 
 <form name="groupForm" method="post" action="{url op="updateGroup"}">
 {if $group}
-	<input type="hidden" name="groupId" value="{$group->getGroupId()}"/>
+	<input type="hidden" name="groupId" value="{$group->getId()}"/>
 {/if}
 
 {include file="common/formErrors.tpl"}
@@ -34,7 +34,7 @@
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
 		<td width="80%" class="value">
-			{if $group}{url|assign:"groupFormUrl" op="editGroup" path=$group->getGroupId() escape=false}
+			{if $group}{url|assign:"groupFormUrl" op="editGroup" path=$group->getId() escape=false}
 			{else}{url|assign:"groupFormUrl" op="createGroup" escape=false}
 			{/if}
 			{form_language_chooser form="groupForm" url=$groupFormUrl}

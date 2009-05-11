@@ -460,7 +460,7 @@ class Article extends Submission {
 			$authorDao = &DAORegistry::getDAO('AuthorDAO');
 			$authors = $authorDao->getAuthorsByArticle($articleId);
 			foreach ($authors as $author) {
-				$userIds[] = array('id' => $author->getAuthorId(), 'role' => 'author');
+				$userIds[] = array('id' => $author->getId(), 'role' => 'author');
 			}
 		}
 		

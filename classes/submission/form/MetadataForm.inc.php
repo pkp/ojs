@@ -124,7 +124,7 @@ class MetadataForm extends Form {
 				array_push(
 					$this->_data['authors'],
 					array(
-						'authorId' => $authors[$i]->getAuthorId(),
+						'authorId' => $authors[$i]->getId(),
 						'firstName' => $authors[$i]->getFirstName(),
 						'middleName' => $authors[$i]->getMiddleName(),
 						'lastName' => $authors[$i]->getLastName(),

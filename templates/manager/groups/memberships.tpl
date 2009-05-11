@@ -15,8 +15,8 @@
 {/strip}
 
 <ul class="menu">
-	<li><a href="{url op="editGroup" path=$group->getGroupId()}">{translate key="manager.groups.editTitle"}</a></li>
-	<li class="current"><a href="{url op="groupMembership" path=$group->getGroupId()}">{translate key="manager.groups.membership}</a></li>
+	<li><a href="{url op="editGroup" path=$group->getId()}">{translate key="manager.groups.editTitle"}</a></li>
+	<li class="current"><a href="{url op="groupMembership" path=$group->getId()}">{translate key="manager.groups.membership}</a></li>
 </ul>
 
 <br/>
@@ -38,7 +38,7 @@
 	<tr valign="top">
 		<td>{$user->getFullName()|escape}</td>
 		<td>
-			<a href="{url op="deleteMembership" path=$membership->getGroupId()|to_array:$membership->getUserId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.groups.membership.confirmDelete"}')" class="action">{translate key="common.delete"}</a>&nbsp;|&nbsp;<a href="{url op="moveMembership" d=u groupId=$group->getGroupId() userId=$user->getUserId()}">&uarr;</a>&nbsp;<a href="{url op="moveMembership" d=d groupId=$group->getGroupId() userId=$user->getUserId()}">&darr;</a>
+			<a href="{url op="deleteMembership" path=$membership->getGroupId()|to_array:$membership->getUserId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.groups.membership.confirmDelete"}')" class="action">{translate key="common.delete"}</a>&nbsp;|&nbsp;<a href="{url op="moveMembership" d=u groupId=$group->getId() userId=$user->getUserId()}">&uarr;</a>&nbsp;<a href="{url op="moveMembership" d=d groupId=$group->getId() userId=$user->getUserId()}">&darr;</a>
 		</td>
 	</tr>
 	<tr>
@@ -60,6 +60,6 @@
 {/if}
 </table>
 
-<a href="{url op="addMembership" path=$group->getGroupId()}" class="action">{translate key="manager.groups.membership.addMember"}</a>
+<a href="{url op="addMembership" path=$group->getId()}" class="action">{translate key="manager.groups.membership.addMember"}</a>
 </div>
 {include file="common/footer.tpl"}

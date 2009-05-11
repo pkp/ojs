@@ -102,7 +102,7 @@ class RegistrationForm extends Form {
 			$captcha =& $captchaManager->createCaptcha();
 			if ($captcha) {
 				$templateMgr->assign('captchaEnabled', $this->captchaEnabled);
-				$this->setData('captchaId', $captcha->getCaptchaId());
+				$this->setData('captchaId', $captcha->getId());
 			}
 		}
 

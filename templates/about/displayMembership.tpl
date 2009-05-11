@@ -14,7 +14,7 @@
 {/strip}
 
 <h4>{$group->getLocalizedTitle()}</h4>
-{assign var=groupId value=$group->getGroupId()}
+{assign var=groupId value=$group->getId()}
 
 {foreach from=$memberships item=member}
 	{assign var=user value=$member->getUser()}

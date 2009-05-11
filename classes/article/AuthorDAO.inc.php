@@ -205,7 +205,7 @@ class AuthorDAO extends DAO {
 	 */
 	function updateLocaleFields(&$author) {
 		$this->updateDataObjectSettings('article_author_settings', $author, array(
-			'author_id' => $author->getAuthorId()
+			'author_id' => $author->getId()
 		));
 
 	}
@@ -217,7 +217,7 @@ class AuthorDAO extends DAO {
 	 */
 	function &_returnAuthorFromRow(&$row) {
 		$author = new Author();
-		$author->setAuthorId($row['author_id']);
+		$author->setId($row['author_id']);
 		$author->setArticleId($row['article_id']);
 		$author->setFirstName($row['first_name']);
 		$author->setMiddleName($row['middle_name']);
@@ -260,10 +260,10 @@ class AuthorDAO extends DAO {
 			)
 		);
 
-		$author->setAuthorId($this->getInsertAuthorId());
+		$author->setId($this->getInsertAuthorId());
 		$this->updateLocaleFields($author);
 
-		return $author->getAuthorId();
+		return $author->getId();
 	}
 
 	/**
@@ -294,7 +294,7 @@ class AuthorDAO extends DAO {
 				$author->getUrl(),
 				$author->getPrimaryContact(),
 				$author->getSequence(),
-				$author->getAuthorId()
+				$author->getId()
 			)
 		);
 		$this->updateLocaleFields($author);
@@ -306,7 +306,7 @@ class AuthorDAO extends DAO {
 	 * @param $author Author
 	 */
 	function deleteAuthor(&$author) {
-		return $this->deleteAuthorById($author->getAuthorId());
+		return $this->deleteAuthorById($author->getId());
 	}
 
 	/**

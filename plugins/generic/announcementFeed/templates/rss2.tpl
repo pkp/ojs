@@ -34,11 +34,11 @@
 			<item>
 				{* required elements *}
 				<title>{$announcement->getLocalizedTitleFull()|strip|escape:"html"}</title>
-				<link>{url page="announcement" op="view" path=$announcement->getAnnouncementId()}</link>
+				<link>{url page="announcement" op="view" path=$announcement->getId()}</link>
 				<description>{$announcement->getLocalizedDescription()|strip|escape:"html"}</description>
 
 				{* optional elements *}
-				<guid isPermaLink="true">{url page="announcement" op="view" path=$announcement->getAnnouncementId()}</guid>
+				<guid isPermaLink="true">{url page="announcement" op="view" path=$announcement->getId()}</guid>
 				<pubDate>{$announcement->getDatetimePosted()|date_format:"%a, %d %b %Y %T %z"}</pubDate>
 			</item>
 		{/foreach}

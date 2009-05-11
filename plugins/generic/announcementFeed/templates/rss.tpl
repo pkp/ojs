@@ -34,17 +34,17 @@
 		<items>
 			{foreach from=$announcements item=announcement}
 			<rdf:Seq>
-				<rdf:li rdf:resource="{url page="announcement" op="view" path=$announcement->getAnnouncementId()}"/>
+				<rdf:li rdf:resource="{url page="announcement" op="view" path=$announcement->getId()}"/>
 			</rdf:Seq>
 			{/foreach}
 		</items>
 	</channel>
 
 {foreach from=$announcements item=announcement}
-	<item rdf:about="{url page="announcement" op="view" path=$announcement->getAnnouncementId()}">
+	<item rdf:about="{url page="announcement" op="view" path=$announcement->getId()}">
 		{* required elements *}
 		<title>{$announcement->getLocalizedTitleFull()|strip|escape:"html"}</title>
-		<link>{url page="announcement" op="view" path=$announcement->getAnnouncementId()}</link>
+		<link>{url page="announcement" op="view" path=$announcement->getId()}</link>
 
 		{* optional elements *}
 		{if $announcement->getLocalizedDescription()}

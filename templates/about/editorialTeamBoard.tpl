@@ -15,7 +15,7 @@
 
 {foreach from=$groups item=group}
 	<h4>{$group->getLocalizedTitle()}</h4>
-	{assign var=groupId value=$group->getGroupId()}
+	{assign var=groupId value=$group->getId()}
 	{assign var=members value=$teamInfo[$groupId]}
 
 	<ol class="editorialTeam">

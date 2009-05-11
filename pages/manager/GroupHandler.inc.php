@@ -180,7 +180,7 @@ class GroupHandler extends ManagerHandler {
 
 		$this->setupTemplate($group, true);
 		$groupMembershipDao =& DAORegistry::getDAO('GroupMembershipDAO');
-		$memberships =& $groupMembershipDao->getMemberships($group->getGroupId(), $rangeInfo);
+		$memberships =& $groupMembershipDao->getMemberships($group->getId(), $rangeInfo);
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign_by_ref('memberships', $memberships);
 		$templateMgr->assign_by_ref('group', $group);
@@ -206,17 +206,17 @@ class GroupHandler extends ManagerHandler {
 			// the membership list and redirect.
 
 			// Avoid duplicating memberships.
-			$groupMembership =& $groupMembershipDao->getMembership($group->getGroupId(), $user->getUserId());
+			$groupMembership =& $groupMembershipDao->getMembership($group->getId(), $user->getUserId());
 
 			if (!$groupMembership) {
 				$groupMembership = new GroupMembership();
-				$groupMembership->setGroupId($group->getGroupId());
+				$groupMembership->setGroupId($group->getId());
 				$groupMembership->setUserId($user->getUserId());
 				// For now, all memberships are displayed in About
 				$groupMembership->setAboutDisplayed(true);
 				$groupMembershipDao->insertMembership($groupMembership);
 			}
-			Request::redirect(null, null, 'groupMembership', $group->getGroupId());
+			Request::redirect(null, null, 'groupMembership', $group->getId());
 		} else {
 			$this->validate($groupId);
 			$group =& $this->group;
@@ -273,10 +273,10 @@ class GroupHandler extends ManagerHandler {
 		$groupMembership =& $this->groupMembership;
 
 		$groupMembershipDao =& DAORegistry::getDAO('GroupMembershipDAO');
-		$groupMembershipDao->deleteMembershipById($group->getGroupId(), $user->getUserId());
-		$groupMembershipDao->resequenceMemberships($group->getGroupId());
+		$groupMembershipDao->deleteMembershipById($group->getId(), $user->getUserId());
+		$groupMembershipDao->resequenceMemberships($group->getId());
 
-		Request::redirect(null, null, 'groupMembership', $group->getGroupId());
+		Request::redirect(null, null, 'groupMembership', $group->getId());
 	}
 
 	/**
@@ -292,9 +292,9 @@ class GroupHandler extends ManagerHandler {
 		$groupMembershipDao =& DAORegistry::getDAO('GroupMembershipDAO');
 		$groupMembership->setSequence($groupMembership->getSequence() + (Request::getUserVar('d') == 'u' ? -1.5 : 1.5));
 		$groupMembershipDao->updateMembership($groupMembership);
-		$groupMembershipDao->resequenceMemberships($group->getGroupId());
+		$groupMembershipDao->resequenceMemberships($group->getId());
 
-		Request::redirect(null, null, 'groupMembership', $group->getGroupId());
+		Request::redirect(null, null, 'groupMembership', $group->getId());
 	}
 
 	function setBoardEnabled($args) {
@@ -313,7 +313,7 @@ class GroupHandler extends ManagerHandler {
 			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'groups'), 'manager.groups'));
 		}
 		if ($group) {
-			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'editGroup', $group->getGroupId()), $group->getLocalizedTitle(), true));
+			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'editGroup', $group->getId()), $group->getLocalizedTitle(), true));
 		}
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.groups');
 	}

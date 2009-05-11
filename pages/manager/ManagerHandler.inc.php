@@ -83,7 +83,7 @@ class ManagerHandler extends Handler {
 					$group =& $groupDao->getGroup($groupId);
 					if ($group && $group->getAssocId() == $journal->getJournalId() && $group->getAssocType() == ASSOC_TYPE_JOURNAL) {
 						$groupMembershipDao =& DAORegistry::getDAO('GroupMembershipDAO');
-						$memberships =& $groupMembershipDao->getMemberships($group->getGroupId());
+						$memberships =& $groupMembershipDao->getMemberships($group->getId());
 						$memberships =& $memberships->toArray();
 						foreach ($memberships as $membership) {
 							$user =& $membership->getUser();

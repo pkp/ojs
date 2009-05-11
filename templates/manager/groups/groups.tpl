@@ -55,17 +55,17 @@
 			{/if}
 			<td width="5%">&nbsp;</td>
 			<td>
-				{url|assign:"url" page="manager" op="email" toGroup=$group->getGroupId()}
+				{url|assign:"url" page="manager" op="email" toGroup=$group->getId()}
 				{$group->getLocalizedTitle()|escape}&nbsp;{icon name="mail" url=$url}
 			</td>
 		{else}
 			<td colspan="2">
-				{url|assign:"url" page="manager" op="email" toGroup=$group->getGroupId()}
+				{url|assign:"url" page="manager" op="email" toGroup=$group->getId()}
 				{$group->getLocalizedTitle()|escape}&nbsp;{icon name="mail" url=$url}
 			</td>
 		{/if}
 		<td>
-			<a href="{url op="editGroup" path=$group->getGroupId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url op="groupMembership" path=$group->getGroupId()}" class="action">{translate key="manager.groups.membership"}</a>&nbsp;|&nbsp;<a href="{url op="deleteGroup" path=$group->getGroupId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.groups.confirmDelete"}')" class="action">{translate key="common.delete"}</a>&nbsp;|&nbsp;<a href="{url op="moveGroup" d=u groupId=$group->getGroupId()}">&uarr;</a>&nbsp;<a href="{url op="moveGroup" d=d groupId=$group->getGroupId()}">&darr;</a>
+			<a href="{url op="editGroup" path=$group->getId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url op="groupMembership" path=$group->getId()}" class="action">{translate key="manager.groups.membership"}</a>&nbsp;|&nbsp;<a href="{url op="deleteGroup" path=$group->getId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.groups.confirmDelete"}')" class="action">{translate key="common.delete"}</a>&nbsp;|&nbsp;<a href="{url op="moveGroup" d=u groupId=$group->getId()}">&uarr;</a>&nbsp;<a href="{url op="moveGroup" d=d groupId=$group->getId()}">&darr;</a>
 		</td>
 	</tr>
 	<tr>
