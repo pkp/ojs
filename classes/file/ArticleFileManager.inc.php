@@ -114,7 +114,7 @@ class ArticleFileManager extends FileManager {
 	 */
 	function uploadLayoutFile($fileName, $fileId = null, $overwrite = true) {
 		return $this->handleUpload($fileName, ARTICLE_FILE_LAYOUT, $fileId, $overwrite);
-	}	
+	}
 
 	/**
 	 * Upload a supp file.
@@ -125,7 +125,7 @@ class ArticleFileManager extends FileManager {
 	 */
 	function uploadSuppFile($fileName, $fileId = null, $overwrite = true) {
 		return $this->handleUpload($fileName, ARTICLE_FILE_SUPP, $fileId, $overwrite);
-	}	
+	}
 
 	/**
 	 * Upload a public file.
@@ -136,7 +136,7 @@ class ArticleFileManager extends FileManager {
 	 */
 	function uploadPublicFile($fileName, $fileId = null, $overwrite = true) {
 		return $this->handleUpload($fileName, ARTICLE_FILE_PUBLIC, $fileId, $overwrite);
-	}	
+	}
 
 	/**
 	 * Upload a note file.
@@ -369,6 +369,8 @@ class ArticleFileManager extends FileManager {
 	 * @param $destFileId int (optional)
 	 */
 	function copyAndRenameFile($sourceFileId, $sourceRevision, $destType, $destFileId = null) {
+		if (HookRegistry::call('ArticleFileManager::copyAndRenameFile', array(&$sourceFileId, &$sourceRevision, &$destType, &$destFileId, &$result))) return $result;
+
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		$articleFile = new ArticleFile();
 
@@ -380,7 +382,7 @@ class ArticleFileManager extends FileManager {
 			$revision = $currentRevision + 1;
 		} else {
 			$revision = 1;
-		}	
+		}
 
 		$sourceArticleFile = $articleFileDao->getArticleFile($sourceFileId, $sourceRevision, $this->articleId);
 
@@ -470,7 +472,7 @@ class ArticleFileManager extends FileManager {
 	 * @param $originalName The name of the original file
 	 */
 	function generateFilename(&$articleFile, $type, $originalName) {
-		$extension = $this->parseFileExtension($originalName);			
+		$extension = $this->parseFileExtension($originalName);
 		$newFileName = $articleFile->getArticleId().'-'.$articleFile->getFileId().'-'.$articleFile->getRevision().'-'.$type.'.'.$extension;
 		$articleFile->setFileName($newFileName);
 		return $newFileName;
@@ -485,6 +487,8 @@ class ArticleFileManager extends FileManager {
 	 * @return int the file ID (false if upload failed)
 	 */
 	function handleUpload($fileName, $type, $fileId = null, $overwrite = false) {
+		if (HookRegistry::call('ArticleFileManager::handleUpload', array(&$fileName, &$type, &$fileId, &$overwrite, &$result))) return $result;
+
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 
 		$typePath = $this->typeToPath($type);
@@ -538,6 +542,8 @@ class ArticleFileManager extends FileManager {
 	 * @return int the file ID (false if upload failed)
 	 */
 	function handleWrite($fileName, &$contents, $mimeType, $type, $fileId = null, $overwrite = false) {
+		if (HookRegistry::call('ArticleFileManager::handleWrite', array(&$fileName, &$contents, &$mimeType, &$fileId, &$overwrite, &$result))) return $result;
+
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 
 		$typePath = $this->typeToPath($type);
@@ -590,6 +596,8 @@ class ArticleFileManager extends FileManager {
 	 * @return int the file ID (false if upload failed)
 	 */
 	function handleCopy($url, $mimeType, $type, $fileId = null, $overwrite = false) {
+		if (HookRegistry::call('ArticleFileManager::handleCopy', array(&$url, &$mimeType, &$type, &$fileId, &$overwrite, &$result))) return $result;
+
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 
 		$typePath = $this->typeToPath($type);
@@ -639,6 +647,8 @@ class ArticleFileManager extends FileManager {
 	 * @return int the file ID (false if upload failed)
 	 */
 	function temporaryFileToArticleFile(&$temporaryFile, $type, $assocId = null) {
+		if (HookRegistry::call('ArticleFileManager::temporaryFileToArticleFile', array(&$temporaryFile, &$type, &$assocId, &$result))) return $result;
+
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 
 		$typePath = $this->typeToPath($type);
