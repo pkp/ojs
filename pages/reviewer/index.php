@@ -40,7 +40,7 @@ switch ($op) {
 	case 'saveReviewFormResponse':
 		define('HANDLER_CLASS', 'SubmissionReviewHandler');
 		import('pages.reviewer.SubmissionReviewHandler');
-		SubmissionReviewHandler::saveReviewFormResponse($args);
+		break;
 	//
 	// Submission Comments
 	//
