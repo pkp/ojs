@@ -44,22 +44,6 @@ class PublishedArticle extends Article {
 	}
 
 	/**
-	 * Get ID of associated article.
-	 * @return int
-	 */
-	function getArticleId() {
-		return $this->getData('articleId');
-	}
-
-	/**
-	 * Set ID of associated article.
-	 * @param $articleId int
-	 */
-	function setArticleId($articleId) {
-		return $this->setData('articleId', $articleId);
-	}
-
-	/**
 	 * Get ID of the issue this article is in.
 	 * @return int
 	 */
