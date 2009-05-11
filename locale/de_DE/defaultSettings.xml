@@ -14,7 +14,7 @@
  
 <locale name="de_DE" full_name="German">
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">Der Beitrag ist bisher unveröffentlicht und wurde auch keiner Zeitschrift vorgelegt (andernfalls ist eine Erklärung in Kommentare für den Redakteur beigefügt).</message>
-	<message key="default.journalSettings.checklist.fileFormat">Die Datei liegt im Format Microsoft WORD, RTF, oder WordPerfect vor.</message>
+	<message key="default.journalSettings.checklist.fileFormat">Die Datei liegt im Format OpenOffice, Microsoft Word, RTF, oder WordPerfect vor.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Der Text liegt mit einfachem Zeilenabstand vor, Schriftgröße 12 Punkt, gegebenenfalls kursiv, nicht unterstrichen (mit Ausnahme der URL-Adressen); alle Illustrationen, Graphiken und Tabellen an geeigneten Stellen im Text, möglichst nicht am Ende.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Der Text hält sich an die stilistischen und bibliographischen Vorgagen in<a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Hinweise für die Verfasser</a> , die unter AD HOC der Zeitschrift zu finden sind.]]></message>
 	<message key="default.journalSettings.checklist.anonymous"><![CDATA[Falls der Beitrag für eine Rubrik mit kollegialer Begutachtung eingereicht, wurden die Hinweise <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">Anonyme Begutachtung</a>) beachtet.]]></message>

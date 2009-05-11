@@ -2308,7 +2308,7 @@ http://journals.mui.ac.ir/index.php/index/index
 	 * پیشفرض - تنظیمات پیشفرض برای آیتم های نصب
 	 * ا
 	-->  <message key="default.journalSettings.checklist.notPreviouslyPublished" >ساب میشن قبلا چاپ نشده و هم اکنون تحت بررسی برای چاپ نیست. درغیر این صورت توضیحی برای آن در قسمت نامه نویسنده ضمیمه است.</message>
-  <message key="default.journalSettings.checklist.fileFormat" >فایل ساب میشن به فرمات Microsoft Word, RTF, یا WordPerfect میباشد.</message>
+  <message key="default.journalSettings.checklist.fileFormat" >فایل ساب میشن به فرمات OpenOffice, Microsoft Word, RTF, یا WordPerfect میباشد.</message>
   <message key="default.journalSettings.checklist.addressesLinked" ><![CDATA[ختی المقدور لینک مراجع در متن ارائه شده است. و URLs آماده کلیک کردن است]]></message>
   <message key="default.journalSettings.checklist.submissionAppearance" >فاصله سطور در متن مقاله تک فاصله ای است ، فونت 12 در صورت لزوم از فونت ایتالیک بجای زیرخط دار استفاده شده است ، تمام تصاویر و نمودارها و جداول در خود متن در محل مناسب نه در انتها میباشد.</message>
   <message key="default.journalSettings.checklist.bibliographicRequirements" ><![CDATA[متن مقاله بر طبق اصول مقاله نویسی و مرجع نگاری  <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines"> راهنمای نویسندگان </a> میباشد که در قسمت در باره مجله یافت میشود.]]></message>
@@ -2819,7 +2819,7 @@ http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI
   <message key="debug.notes.localeListLoad" >لیست زبانهای بارگذاری شده {$localeList} از XML</message>
   <message key="debug.notes.missingLocaleKey" >کلید زبان مفقودی &quot;{$key}&quot;.</message>
   <message key="default.journalSettings.checklist.notPreviouslyPublished" >ساب میشن قبلا چاپ نشده و هم اکنون تحت بررسی برای چاپ نیست. درغیر این صورت توضیحی برای آن در قسمت نامه نویسنده ضمیمه است.</message>
-  <message key="default.journalSettings.checklist.fileFormat" >فایل ساب میشن به فرمات Microsoft Word, RTF, یا WordPerfect میباشد.</message>
+  <message key="default.journalSettings.checklist.fileFormat" >فایل ساب میشن به فرمات OpenOffice, Microsoft Word, RTF, یا WordPerfect میباشد.</message>
   <message key="default.journalSettings.checklist.addressesLinked" >ختی المقدور لینک مراجع در متن ارائه شده است. و URLs آماده کلیک کردن است</message>
   <message key="default.journalSettings.checklist.submissionAppearance" >فاصله سطور در متن مقاله تک فاصله ای است ، فونت 12 در صورت لزوم از فونت ایتالیک بجای زیرخط دار استفاده شده است ، تمام تصاویر و نمودارها و جداول در خود متن در محل مناسب نه در انتها میباشد.</message>
   <message key="default.journalSettings.checklist.bibliographicRequirements" ><![CDATA[متن مقاله بر طبق اصول مقاله نویسی و مرجع نگاری  <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines"> راهنمای نویسندگان </a> میباشد که در قسمت در باره مجله یافت میشود.]]></message>

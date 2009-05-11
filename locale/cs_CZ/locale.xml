@@ -2717,7 +2717,7 @@ Ověřování může selhat při vyhledávání URL, které vyžadují "posted f
 	 *
 	-->
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">Příspěvek nebyl doposud publikován, ani není předložen jinému časopisu k posouzení (nebo bylo v komentáři poskytnuto editorovi vysvětlení).</message>
-	<message key="default.journalSettings.checklist.fileFormat">Subor s příspěvkem je v dokumnetovém formátu Microsoft Word, RTF nebo WordPerfect.</message>
+	<message key="default.journalSettings.checklist.fileFormat">Subor s příspěvkem je v dokumnetovém formátu OpenOffice, Microsoft Word, RTF nebo WordPerfect.</message>
 	<message key="default.journalSettings.checklist.addressesLinked">Všude, kde to bylo možné, byly poskytnuty URL adresy k referencím.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Řádkování textu je jednoduché; je použita 12 bodová velikost písma; spíše než podtrhávání, je použita kurzíva (kromě URL adres); všechny ilustrace, obrázky a tabulky jsou umístěny v textu na požadovaném místě, spíše než na konci.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Text je v souladu se stylistickými a bibliografickými požadavky vymezenými v <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">pokynech autorům</a>, které lze nalézt v části O časopisu.]]></message>

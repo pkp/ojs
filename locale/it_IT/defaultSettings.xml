@@ -15,7 +15,7 @@
  
 <locale name="it_IT" full_name="Italian">
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">La submission non &#x00E8; stata precedentemente pubblicata, n&#x00E8; prima in un'altra rivista per considerazione (o una spiegazione &#x00E8; stata fornita nei commenti all'editor).</message>
-	<message key="default.journalSettings.checklist.fileFormat">Il file di submission &#x00E8; in un formato Microsoft Word, RTF, o WordPerfect.</message>
+	<message key="default.journalSettings.checklist.fileFormat">Il file di submission &#x00E8; in un formato OpenOffice, Microsoft Word, RTF, o WordPerfect.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Il testo ha singoli spazi; usa un font 12-point ; impiega italic, piuttosto che  sottolineare (eccetto con gli indirizzi URL); e tutte le illustrazioni, figure, e tabelle sono posizionate  all'interno del testo nei punti appropriati, piuttosto che alla fine.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Il testo aderisce alle richieste stilistiche e bibliografiche riassunte nelle <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">linee guida dell'autore</a>, che si trova nell'About the Journal.]]></message>
 	<message key="default.journalSettings.checklist.anonymous"><![CDATA[Se si sta facendo la submission a una sezione peer-reviewed della rivista, seguire le istruzioni su <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">Come assicurare una revisione cieca</a>.]]></message>

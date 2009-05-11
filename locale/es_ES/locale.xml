@@ -2424,7 +2424,7 @@ La validación puede fallar en URLs de búsque que necesitan el envío de formul
 	 *
 	-->
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">El envío no ha sido publicado previamente ni se ha enviado previamente a otra revista (o se ha proporcionado una explicación en Comentarios al / a la editor/a).</message>
-	<message key="default.journalSettings.checklist.fileFormat">El fichero enviado está en formato Microsoft Word, RTF, o WordPerfect.</message>
+	<message key="default.journalSettings.checklist.fileFormat">El fichero enviado está en formato OpenOffice, Microsoft Word, RTF, o WordPerfect.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">El texto tiene interlineado simple; el tamaño de fuente es 12 puntos; se usa cursiva en vez de subrayado (exceptuando las direcciones URL); y todas las ilustraciones, figuras y tablas están dentro del texto en el sitio que les corresponde y no al final del todo.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[El texto cumple con los requisitos bibliográficos y de estilo indicados en las <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Normas para autoras/es</a>, que se pueden encontrar en Acerca de la revista.]]></message>
 	<message key="default.journalSettings.checklist.anonymous"><![CDATA[Si esta enviando a una sección de la revista que se revisa por pares, tiene que asegurase que las instrucciones en <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">Asegurando de una revisión a ciegas</a>) han sido seguidas.]]></message>

@@ -2719,7 +2719,7 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	 *
 	-->
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">De inzending is nog niet eerder gepubliceerd, noch is het onder beoordeling bij een ander tijdschrift (tenzij een verklaring is gegeven bij Opmerkingen voor de redacteur).</message>
-	<message key="default.journalSettings.checklist.fileFormat">Het bestandsformaat van de inzending is Microsoft Word, RTF of Wordperfect.</message>
+	<message key="default.journalSettings.checklist.fileFormat">Het bestandsformaat van de inzending is OpenOffice, Microsoft Word, RTF of Wordperfect.</message>
 	<message key="default.journalSettings.checklist.addressesLinked">Waar mogelijk zijn URLs voor de referenties meegeleverd.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">De tekst is enkelvoudig gespatieerd, gebruikt een 12-punts lettertype, gebruikt schuingedrukt in plaats van onderstreept (behalve bij URL adressen) en alle illustraties, figuren en tabellen zijn in de tekst geplaatst en niet achteraan.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[De tekst voldoet aan de stilistische en bibliografische eisen zoals genoemd in de <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">Richtlijnen voor auteurs</a>, die te vinden zijn in Over dit Tijdschrift.]]></message>
