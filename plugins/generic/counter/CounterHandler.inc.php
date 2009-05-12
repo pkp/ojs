@@ -40,6 +40,88 @@ class CounterHandler extends Handler {
 		$templateManager->display($plugin->getTemplatePath() . 'index.tpl');
 	}
 
+	/**
+	* Internal function to collect structures for output
+	*/
+	function _arrangeEntry($entry, $months, $year) {
+		$entryArray=null;
+
+		$thisYear = date('Y');
+		$thisMonth = date('n');
+
+		for ($i = 0; $i <= 11; $i++) {
+			if ( ($i+1 > $thisMonth) && ($year == $thisYear) ) break;
+			$entryArray[$i]['start'] = date("Y-m-d", mktime(0, 0, 0, $i+1, 1, $year));
+			$entryArray[$i]['end']   = date("Y-m-t", mktime(0, 0, 0, $i+1, 1, $year));
+			$entryArray[$i]['count_total'] = $entry[$months[$i]];
+		}
+
+		$entryArray[$i]['start'] = date("Y-m-d", mktime(0, 0, 0, 1, 1, $year));
+		$entryArray[$i]['end']   = date("Y-m-t", mktime(0, 0, 0, 12, 1, $year));
+		$entryArray[$i]['count_total'] = $entry['count_ytd_total'];
+		$entryArray[$i]['count_html']  = $entry['count_ytd_html'];
+		$entryArray[$i]['count_pdf']   = $entry['count_ytd_pdf'];
+
+		return $entryArray;
+	}
+
+
+	/**
+	* Counter report in XML
+	*/
+	function reportXML() {
+		list($plugin) = CounterHandler::validate();
+		CounterHandler::setupTemplate(true);
+
+		$journal =& Request::getJournal();
+		$year = Request::getUserVar('year');
+		
+		if ($year < 2000) $year = 2000;
+
+		$counterReportDao =& DAORegistry::getDAO('CounterReportDAO');
+		$months = $counterReportDao->getMonthLabels();
+
+		$entry = $counterReportDao->buildMonthlyTotalLog($year);
+		$totalsArray = CounterHandler::_arrangeEntry($entry, $months, $year);
+
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journalIds = $counterReportDao->getJournalIds();
+
+		$i=0;
+
+		foreach ($journalIds as $journalId) {
+			$journal =& $journalDao->getJournal($journalId);
+			if (!$journal) continue;
+			$entry = $counterReportDao->buildMonthlyLog($journalId, $year);
+			$journalsArray[$i]['entries'] = CounterHandler::_arrangeEntry($entry, $months, $year);
+			$journalsArray[$i]['journalTitle'] = $journal->getLocalizedTitle();
+			$journalsArray[$i]['publisherInstitution'] = $journal->getSetting('publisherInstitution');
+			$journalsArray[$i]['printIssn'] = $journal->getSetting('printIssn');
+			$journalsArray[$i]['onlineIssn'] = $journal->getSetting('onlineIssn');
+			$i++;
+		}
+
+
+		$siteSettingsDao =& DAORegistry::getDAO('SiteSettingsDAO');
+		$siteTitle = $siteSettingsDao->getSetting('title',Locale::getLocale());
+
+		$base_url =& Config::getVar('general','base_url');
+
+		$templateManager =& TemplateManager::getManager();
+
+		$reqUser =& Request::getUser();
+		$templateManager->assign_by_ref('reqUser', $reqUser);
+
+		$templateManager->assign_by_ref('totalsArray', $totalsArray);
+		$templateManager->assign_by_ref('journalsArray', $journalsArray);
+
+		$templateManager->assign('siteTitle', $siteTitle);
+		$templateManager->assign('base_url', $base_url);
+
+		$templateManager->display($plugin->getTemplatePath() . 'reportxml.tpl', 'text/xml');
+	}
+
+
 	function report() {
 		list($plugin) = CounterHandler::validate();
 		CounterHandler::setupTemplate(true);
