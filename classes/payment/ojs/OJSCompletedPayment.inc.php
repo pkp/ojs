@@ -269,7 +269,7 @@ class OJSCompletedPayment extends Payment {
 		$userId = $this->userId;
 		if ( !$userId )
 			return false;
-		$userDAO = &DAORegistry::getDAO('UserDAO');
+		$userDAO =& DAORegistry::getDAO('UserDAO');
 		$user =& $userDAO->getUser($userId);
 		if ( !$user )
 			return false;
@@ -304,7 +304,7 @@ class OJSCompletedPayment extends Payment {
 			case PAYMENT_TYPE_PUBLICATION:
 			case PAYMENT_TYPE_PURCHASE_ARTICLE:
 				// all the article-related payments should output the article title
-				$articleDAO = &DAORegistry::getDAO('ArticleDAO');
+				$articleDAO =& DAORegistry::getDAO('ArticleDAO');
 				$article =& $articleDAO->getArticle($this->assocId, $this->journalId);
 				if ( !$article ) return Locale::translate('manager.payment.notFound');
 				return $article->getLocalizedTitle();

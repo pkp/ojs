@@ -42,11 +42,11 @@ class EmailTemplateForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 
-		$journal = &Request::getJournal();
-		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
-		$emailTemplate = &$emailTemplateDao->getBaseEmailTemplate($this->emailKey, $journal->getJournalId());
+		$journal =& Request::getJournal();
+		$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
+		$emailTemplate =& $emailTemplateDao->getBaseEmailTemplate($this->emailKey, $journal->getJournalId());
 		$templateMgr->assign('canDisable', $emailTemplate?$emailTemplate->getCanDisable():false);
 		$templateMgr->assign('supportedLocales', $journal->getSupportedLocaleNames());
 		$templateMgr->assign('helpTopicId','journal.managementPages.emails');
@@ -57,9 +57,9 @@ class EmailTemplateForm extends Form {
 	 * Initialize form data from current settings.
 	 */
 	function initData() {
-		$journal = &Request::getJournal();
-		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
-		$emailTemplate = &$emailTemplateDao->getLocaleEmailTemplate($this->emailKey, $journal->getJournalId());
+		$journal =& Request::getJournal();
+		$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
+		$emailTemplate =& $emailTemplateDao->getLocaleEmailTemplate($this->emailKey, $journal->getJournalId());
 		$thisLocale = Locale::getLocale();
 
 		if ($emailTemplate) {
@@ -98,10 +98,10 @@ class EmailTemplateForm extends Form {
 	 * Save email template.
 	 */
 	function execute() {
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 
-		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
-		$emailTemplate = &$emailTemplateDao->getLocaleEmailTemplate($this->emailKey, $journal->getJournalId());
+		$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
+		$emailTemplate =& $emailTemplateDao->getLocaleEmailTemplate($this->emailKey, $journal->getJournalId());
 
 		if (!$emailTemplate) {
 			$emailTemplate = new LocaleEmailTemplate();

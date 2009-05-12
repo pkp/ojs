@@ -40,7 +40,7 @@ class PayMethodSettingsForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('paymentMethodPlugins', $this->plugins);
 		parent::display();
 	}

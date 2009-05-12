@@ -38,8 +38,8 @@ class VersionForm extends Form {
 
 		$this->journalId = $journalId;
 
-		$rtDao = &DAORegistry::getDAO('RTDAO');
-		$this->version = &$rtDao->getVersion($versionId, $journalId);
+		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$this->version =& $rtDao->getVersion($versionId, $journalId);
 
 		if (isset($this->version)) {
 			$this->versionId = $versionId;
@@ -51,7 +51,7 @@ class VersionForm extends Form {
 	 */
 	function initData() {
 		if (isset($this->version)) {
-			$version = &$this->version;
+			$version =& $this->version;
 			$this->_data = array(
 				'key' => $version->getKey(),
 				'title' => $version->getTitle(),
@@ -67,8 +67,8 @@ class VersionForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$journal = &Request::getJournal();
-		$templateMgr = &TemplateManager::getManager();
+		$journal =& Request::getJournal();
+		$templateMgr =& TemplateManager::getManager();
 
 		if (isset($this->version)) {
 			$templateMgr->assign_by_ref('version', $this->version);
@@ -99,7 +99,7 @@ class VersionForm extends Form {
 	 * @return int the version ID
 	 */
 	function execute() {
-		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$rtDao =& DAORegistry::getDAO('RTDAO');
 
 		$version = $this->version;
 		if (!isset($version)) {

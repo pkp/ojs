@@ -138,7 +138,7 @@ class ImportOJS1 {
 		$this->options = $options;
 
 		// Force a new database connection
-		$dbconn = &DBConnection::getInstance();
+		$dbconn =& DBConnection::getInstance();
 		$dbconn->reconnect(true);
 
 		// Create a connection to the old database
@@ -150,7 +150,7 @@ class ImportOJS1 {
 		// Assumes no character set (not supported by OJS 1.x)
 		// Forces open a new connection
 		$this->importDBConn = new DBConnection($db_config['type'], $db_config['host'], $db_config['uname'], $db_config['password'], $db_config['name'], false, false, true, false, true);
-		$dbconn = &$this->importDBConn->getDBConn();
+		$dbconn =& $this->importDBConn->getDBConn();
 
 		if (!$this->importDBConn->isConnected()) {
 			$this->error('Database connection error: ' . $dbconn->errorMsg());
@@ -165,8 +165,8 @@ class ImportOJS1 {
 		}
 
 		// Determine if journal already exists
-		$journalDao = &DAORegistry::getDAO('JournalDAO');
-		$journal = &$journalDao->getJournalByPath($this->journalPath);
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journal =& $journalDao->getJournalByPath($this->journalPath);
 		$this->importJournal = ($journal == null);
 
 		// Import data
@@ -201,8 +201,8 @@ class ImportOJS1 {
 	 */
 	function loadJournalConfig() {
 		// Load journal config
-		$result = &$this->importDao->retrieve('SELECT * FROM tbljournalconfig');
-		$this->journalConfigInfo = &$result->fields;
+		$result =& $this->importDao->retrieve('SELECT * FROM tbljournalconfig');
+		$this->journalConfigInfo =& $result->fields;
 		$result->Close();
 
 		if (!isset($this->journalConfigInfo['chOJSVersion'])) {
@@ -214,8 +214,8 @@ class ImportOJS1 {
 		}
 
 		// Load journal settings
-		$result = &$this->importDao->retrieve('SELECT * FROM tbljournal');
-		$this->journalInfo = &$result->fields;
+		$result =& $this->importDao->retrieve('SELECT * FROM tbljournal');
+		$this->journalInfo =& $result->fields;
 		$result->Close();
 
 		return true;
@@ -238,7 +238,7 @@ class ImportOJS1 {
 		Locale::requireComponents(array(LOCALE_COMPONENT_OJS_DEFAULT_SETTINGS));
 
 		// Create journal
-		$journalDao = &DAORegistry::getDAO('JournalDAO');
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$journal = new Journal();
 		$journal->setPrimaryLocale(Locale::getLocale());
 		$journal->setPath($this->journalPath);
@@ -248,7 +248,7 @@ class ImportOJS1 {
 		$journalDao->resequenceJournals();
 
 		// Add journal manager role for site administrator(s)
-		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$admins = $roleDao->getUsersByRoleId(ROLE_ID_SITE_ADMIN);
 		foreach ($admins->toArray() as $admin) {
 			$role = new Role();
@@ -265,10 +265,10 @@ class ImportOJS1 {
 
 		// Publishers, sponsors, and contributors
 		$sponsors = array();
-		$result = &$this->importDao->retrieve('SELECT * FROM tblsponsors ORDER BY nSponsorID');
+		$result =& $this->importDao->retrieve('SELECT * FROM tblsponsors ORDER BY nSponsorID');
 		$publisherInstitution = $publisherUrl = null;
 		while (!$result->EOF) {
-			$row = &$result->fields;
+			$row =& $result->fields;
 			$sponsors[] = array('institution' => Core::cleanVar($row['chName']), 'url' => Core::cleanVar($row['chWebpage']));
 			if (empty($publisher)) {
 				$publisherInstitution = Core::cleanVar($row['chName']);
@@ -279,9 +279,9 @@ class ImportOJS1 {
 		$result->Close();
 
 		$contributors = array();
-		$result = &$this->importDao->retrieve('SELECT * FROM tblcontributors ORDER BY nContributorID');
+		$result =& $this->importDao->retrieve('SELECT * FROM tblcontributors ORDER BY nContributorID');
 		while (!$result->EOF) {
-			$row = &$result->fields;
+			$row =& $result->fields;
 			$contributors[] = array('name' => Core::cleanVar($row['chName']), 'url' => Core::cleanVar($row['chWebpage']));
 			$result->MoveNext();
 		}
@@ -289,9 +289,9 @@ class ImportOJS1 {
 
 		// Submission checklist
 		$submissionChecklist = array();
-		$result = &$this->importDao->retrieve('SELECT * FROM tblsubmissionchecklist ORDER BY nOrder');
+		$result =& $this->importDao->retrieve('SELECT * FROM tblsubmissionchecklist ORDER BY nOrder');
 		while (!$result->EOF) {
-			$row = &$result->fields;
+			$row =& $result->fields;
 			$submissionChecklist[] = array('order' => $row['nOrder'], 'content' => Core::cleanVar($row['chCheck']));
 			$result->MoveNext();
 		}
@@ -299,9 +299,9 @@ class ImportOJS1 {
 
 		// Additional about items
 		$customAboutItems = array();
-		$result = &$this->importDao->retrieve('SELECT * FROM tblaboutjournal ORDER BY nItemID');
+		$result =& $this->importDao->retrieve('SELECT * FROM tblaboutjournal ORDER BY nItemID');
 		while (!$result->EOF) {
-			$row = &$result->fields;
+			$row =& $result->fields;
 			$customAboutItems[] = array('title' => Core::cleanVar($row['chTitle']), 'content' => Core::cleanVar($row['chContent']));
 			$result->MoveNext();
 		}
@@ -468,7 +468,7 @@ class ImportOJS1 {
 			'numPageLinks' => array('int', 10),
 		);
 
-		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+		$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 
 		// Build a list of localized field names so that these are properly created.
 		// Note that this assumes that the current user's locale is the language of
@@ -506,22 +506,22 @@ class ImportOJS1 {
 			printf("Importing RT settings\n");
 		}
 
-		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$rtDao =& DAORegistry::getDAO('RTDAO');
 
 		$versionId = 0;
 
 		// Try to map to new version
-		$result = &$this->importDao->retrieve('SELECT chTitle FROM tblrstversions WHERE bDefault = 1');
+		$result =& $this->importDao->retrieve('SELECT chTitle FROM tblrstversions WHERE bDefault = 1');
 		if ($result->RecordCount() != 0) {
-			$result = &$rtDao->retrieve('SELECT version_id FROM rt_versions WHERE journal_id = ? AND title = ?', array($this->journalId, $result->fields[0]));
+			$result =& $rtDao->retrieve('SELECT version_id FROM rt_versions WHERE journal_id = ? AND title = ?', array($this->journalId, $result->fields[0]));
 			if ($result->RecordCount() != 0) {
 				$versionId = $result->fields[0];
 			}
 		}
 		$result->Close();
 
-		$result = &$this->importDao->retrieve('SELECT * FROM tblrst');
-		$row = &$result->fields;
+		$result =& $this->importDao->retrieve('SELECT * FROM tblrst');
+		$row =& $result->fields;
 
 		import('rt.ojs.JournalRT');
 		$rt = new JournalRT($this->journalId);
@@ -553,12 +553,12 @@ class ImportOJS1 {
 			printf("Importing users\n");
 		}
 
-		$userDao = &DAORegistry::getDAO('UserDAO');
-		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$userDao =& DAORegistry::getDAO('UserDAO');
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
 
-		$result = &$this->importDao->retrieve('SELECT *, DECODE(chPassword, ?) AS chPassword FROM tblusers ORDER BY nUserID', $this->journalConfigInfo['chPasswordSalt']);
+		$result =& $this->importDao->retrieve('SELECT *, DECODE(chPassword, ?) AS chPassword FROM tblusers ORDER BY nUserID', $this->journalConfigInfo['chPasswordSalt']);
 		while (!$result->EOF) {
-			$row = &$result->fields;
+			$row =& $result->fields;
 
 			$chFirstName = Core::cleanVar($row['chFirstName']);
 			$chMiddleInitial = Core::cleanVar($row['chMiddleInitial']);
@@ -568,14 +568,14 @@ class ImportOJS1 {
 			$interests = '';
 
 			if ($row['fkEditorID']) {
-				$tmpResult = &$this->importDao->retrieve('SELECT chInitials, nEditorRole FROM tbleditors WHERE nEditorID = ?', $row['fkEditorID']);
+				$tmpResult =& $this->importDao->retrieve('SELECT chInitials, nEditorRole FROM tbleditors WHERE nEditorID = ?', $row['fkEditorID']);
 				$initials = Core::cleanVar($tmpResult->fields[0]);
 				$editorRole = Core::cleanVar($tmpResult->fields[1]);
 				$tmpResult->Close();
 			}
 
 			if ($row['fkReviewerID']) {
-				$tmpResult = &$this->importDao->retrieve('SELECT chInterests FROM tblreviewers WHERE nReviewerID = ?', $row['fkReviewerID']);
+				$tmpResult =& $this->importDao->retrieve('SELECT chInterests FROM tblreviewers WHERE nReviewerID = ?', $row['fkReviewerID']);
 				$interests = Core::cleanVar($tmpResult->fields[0]);
 				$tmpResult->Close();
 			}
@@ -715,8 +715,8 @@ class ImportOJS1 {
 			printf("Importing subscriptions\n");
 		}
 
-		$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
-		$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
+		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionDao =& DAORegistry::getDAO('SubscriptionDAO');
 
 		$subscriptionTypeMap = array();
 
@@ -731,10 +731,10 @@ class ImportOJS1 {
 			2 => 'USD'	// USD
 		);
 
-		$result = &$this->importDao->retrieve('SELECT * FROM tblsubscriptiontype ORDER BY nOrder');
+		$result =& $this->importDao->retrieve('SELECT * FROM tblsubscriptiontype ORDER BY nOrder');
 		$count = 0;
 		while (!$result->EOF) {
-			$row = &$result->fields;
+			$row =& $result->fields;
 
 			$subscriptionType = new SubscriptionType();
 			$subscriptionType->setJournalId($this->journalId);
@@ -755,9 +755,9 @@ class ImportOJS1 {
 		}
 		$result->Close();
 
-		$result = &$this->importDao->retrieve('SELECT tblsubscribers.*, nUserID FROM tblsubscribers LEFT JOIN tblusers ON nSubscriberID = fkSubscriberID ORDER BY nSubscriberID');
+		$result =& $this->importDao->retrieve('SELECT tblsubscribers.*, nUserID FROM tblsubscribers LEFT JOIN tblusers ON nSubscriberID = fkSubscriberID ORDER BY nSubscriberID');
 		while (!$result->EOF) {
-			$row = &$result->fields;
+			$row =& $result->fields;
 
 			$subscription = new Subscription();
 			$subscription->setJournalId($this->journalId);
@@ -788,7 +788,7 @@ class ImportOJS1 {
 			printf("Importing issues\n");
 		}
 
-		$issueDao = &DAORegistry::getDAO('IssueDAO');
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
 
 		$this->showVolume = 1;
 		$this->showNumber = 1;
@@ -802,9 +802,9 @@ class ImportOJS1 {
 			$this->showNumber = 0;
 		}
 
-		$result = &$this->importDao->retrieve('SELECT * FROM tblissues ORDER BY bPublished DESC, bLive ASC, nYear ASC, nVolume ASC, nNumber ASC');
+		$result =& $this->importDao->retrieve('SELECT * FROM tblissues ORDER BY bPublished DESC, bLive ASC, nYear ASC, nVolume ASC, nNumber ASC');
 		while (!$result->EOF) {
-			$row = &$result->fields;
+			$row =& $result->fields;
 
 			$issue = new Issue();
 			$issue->setJournalId($this->journalId);
@@ -840,7 +840,7 @@ class ImportOJS1 {
 
 		if (!$this->showVolume && !$this->showNumber && $this->showYear) {		
 			// Insert issues for each year in "publish by year" mode
-			$result = &$this->importDao->retrieve('SELECT DISTINCT(DATE_FORMAT(dtDatePublished, \'%Y\')) AS year FROM tblarticles WHERE bPublished = 1 ORDER BY year');
+			$result =& $this->importDao->retrieve('SELECT DISTINCT(DATE_FORMAT(dtDatePublished, \'%Y\')) AS year FROM tblarticles WHERE bPublished = 1 ORDER BY year');
 			while (!$result->EOF) {
 				list($year) = $result->fields;
 
@@ -870,10 +870,10 @@ class ImportOJS1 {
 		}
 
 		// Import custom section ordering
-		$sectionDao = &DAORegistry::getDAO('SectionDAO');
-		$result = &$this->importDao->retrieve('SELECT * FROM tblissuestosections ORDER BY nSectionRank');
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$result =& $this->importDao->retrieve('SELECT * FROM tblissuestosections ORDER BY nSectionRank');
 		while (!$result->EOF) {
-			$row = &$result->fields;
+			$row =& $result->fields;
 
 			$sectionId = isset($this->sectionMap[$row['fkSectionID']])?$this->sectionMap[$row['fkSectionID']]:null;
 			$issueId = isset($this->issueMap[$row['fkIssueID']])?$this->issueMap[$row['fkIssueID']]:null;
@@ -894,13 +894,13 @@ class ImportOJS1 {
 			printf("Importing sections\n");
 		}
 
-		$sectionDao = &DAORegistry::getDAO('SectionDAO');
-		$sectionEditorDao = &DAORegistry::getDAO('SectionEditorsDAO');
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$sectionEditorDao =& DAORegistry::getDAO('SectionEditorsDAO');
 
-		$result = &$this->importDao->retrieve('SELECT * FROM tblsections ORDER BY nRank');
+		$result =& $this->importDao->retrieve('SELECT * FROM tblsections ORDER BY nRank');
 		$count = 0;
 		while (!$result->EOF) {
-			$row = &$result->fields;
+			$row =& $result->fields;
 
 			$section = new Section();
 			$section->setJournalId($this->journalId);
@@ -918,9 +918,9 @@ class ImportOJS1 {
 		$result->Close();
 
 		// Note: ignores board members (not supported in OJS 1.x)
-		$result = &$this->importDao->retrieve('SELECT nUserID, fkSectionID FROM tblusers, tbleditorsections WHERE tblusers.fkEditorID = tbleditorsections.fkEditorID AND fkSectionID IS NOT NULL AND fkSectionID != -1 ORDER BY nUserID');
+		$result =& $this->importDao->retrieve('SELECT nUserID, fkSectionID FROM tblusers, tbleditorsections WHERE tblusers.fkEditorID = tbleditorsections.fkEditorID AND fkSectionID IS NOT NULL AND fkSectionID != -1 ORDER BY nUserID');
 		while (!$result->EOF) {
-			$row = &$result->fields;
+			$row =& $result->fields;
 
 			if (isset($this->sectionMap[$row['fkSectionID']]) && isset($this->userMap[$row['nUserID']])) {
 				$sectionEditorDao->insertEditor($this->journalId, $this->sectionMap[$row['fkSectionID']], $this->userMap[$row['nUserID']], true, true);
@@ -939,14 +939,14 @@ class ImportOJS1 {
 			printf("Importing articles\n");
 		}
 
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-		$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
-		$copyAssignmentDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
-		$layoutAssignmentDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
-		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
-		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
+		$copyAssignmentDao =& DAORegistry::getDAO('CopyeditorSubmissionDAO');
+		$layoutAssignmentDao =& DAORegistry::getDAO('LayoutAssignmentDAO');
+		$proofAssignmentDao =& DAORegistry::getDAO('ProofAssignmentDAO');
+		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 
 		$articleUsers = array();
 
@@ -962,9 +962,9 @@ class ImportOJS1 {
 		);
 
 		// Import articles
-		$result = &$this->importDao->retrieve('SELECT tblarticles.*, editor.nUserID AS nEditorUserID FROM tblarticles LEFT JOIN tblusers AS editor ON (tblarticles.fkEditorId = editor.fkEditorID) ORDER by nArticleID');
+		$result =& $this->importDao->retrieve('SELECT tblarticles.*, editor.nUserID AS nEditorUserID FROM tblarticles LEFT JOIN tblusers AS editor ON (tblarticles.fkEditorId = editor.fkEditorID) ORDER by nArticleID');
 		while (!$result->EOF) {
-			$row = &$result->fields;
+			$row =& $result->fields;
 
 			$status = STATUS_QUEUED;
 			if ($row['nStatus'] !== null) {
@@ -1006,9 +1006,9 @@ class ImportOJS1 {
 			$article->setCurrentRound(1);
 
 			// Add article authors
-			$authorResult = &$this->importDao->retrieve('SELECT nUserID, tblmetaauthors.* FROM tblmetaauthors LEFT JOIN tblusers ON tblmetaauthors.fkAuthorID = tblusers.fkAuthorID WHERE fkArticleID = ? ORDER BY nRank', $row['nArticleID']);
+			$authorResult =& $this->importDao->retrieve('SELECT nUserID, tblmetaauthors.* FROM tblmetaauthors LEFT JOIN tblusers ON tblmetaauthors.fkAuthorID = tblusers.fkAuthorID WHERE fkArticleID = ? ORDER BY nRank', $row['nArticleID']);
 			while (!$authorResult->EOF) {
-				$authorRow = &$authorResult->fields;
+				$authorRow =& $authorResult->fields;
 
 				$author = new Author();
 				$author->setFirstName(Core::cleanVar($authorRow['chFirstName']));
@@ -1154,9 +1154,9 @@ class ImportOJS1 {
 				// Copyediting assignment
 				$copyAssignment = new CopyeditorSubmission();
 				$copyAssignment->setArticleId($articleId);
-				$copyResult = &$this->importDao->retrieve('SELECT tblcopyedit.*, nUserID FROM tblcopyedit, tblarticlesassigned, tblusers WHERE tblcopyedit.fkArticleID = tblarticlesassigned.fkArticleID AND tblusers.fkCopyEdID = tblarticlesassigned.fkCopyEdID AND bReplaced = 0 AND bDeclined = 0 AND tblcopyedit.fkArticleID = ?', $row['nArticleID']);
+				$copyResult =& $this->importDao->retrieve('SELECT tblcopyedit.*, nUserID FROM tblcopyedit, tblarticlesassigned, tblusers WHERE tblcopyedit.fkArticleID = tblarticlesassigned.fkArticleID AND tblusers.fkCopyEdID = tblarticlesassigned.fkCopyEdID AND bReplaced = 0 AND bDeclined = 0 AND tblcopyedit.fkArticleID = ?', $row['nArticleID']);
 				if ($copyResult->RecordCount() != 0) {
-					$copyRow = &$copyResult->fields;
+					$copyRow =& $copyResult->fields;
 
 					if ($copyRow['fkFileCopyEdID']) {
 						$fileId = $this->addArticleFile($articleId, $copyRow['fkFileCopyEdID'], ARTICLE_FILE_COPYEDIT);
@@ -1191,9 +1191,9 @@ class ImportOJS1 {
 				// Proofreading assignment
 				$proofAssignment = new ProofAssignment();
 				$proofAssignment->setArticleId($articleId);
-				$proofResult = &$this->importDao->retrieve('SELECT tblproofread.*, nUserID, dtDateSchedule FROM tblproofread, tblarticlesassigned, tblusers, tblarticles WHERE tblproofread.fkArticleID = tblarticles.nArticleID AND tblproofread.fkArticleID = tblarticlesassigned.fkArticleID AND tblusers.fkProofID = tblarticlesassigned.fkProofID AND bReplaced = 0 AND bDeclined = 0 AND tblproofread.fkArticleID = ?', $row['nArticleID']);
+				$proofResult =& $this->importDao->retrieve('SELECT tblproofread.*, nUserID, dtDateSchedule FROM tblproofread, tblarticlesassigned, tblusers, tblarticles WHERE tblproofread.fkArticleID = tblarticles.nArticleID AND tblproofread.fkArticleID = tblarticlesassigned.fkArticleID AND tblusers.fkProofID = tblarticlesassigned.fkProofID AND bReplaced = 0 AND bDeclined = 0 AND tblproofread.fkArticleID = ?', $row['nArticleID']);
 				if ($proofResult->RecordCount() != 0) {
-					$proofRow = &$proofResult->fields;
+					$proofRow =& $proofResult->fields;
 
 					if ($proofRow['fkFileProofID']) {
 						// Treat proofreader file as layout file
@@ -1230,9 +1230,9 @@ class ImportOJS1 {
 				$layoutAssignment->setDateAcknowledged($row['dtDateGalleysCompleted']);
 				$layoutAssignmentDao->insertLayoutAssignment($layoutAssignment);
 
-				$reviewResult = &$this->importDao->retrieve('SELECT tblreviews.*, tblarticlesassigned.*, nUserID FROM tblreviews, tblarticlesassigned, tblusers, tblarticles WHERE tblreviews.fkArticleID = tblarticles.nArticleID AND tblreviews.fkArticleID = tblarticlesassigned.fkArticleID AND tblusers.fkReviewerID = tblarticlesassigned.fkReviewerID AND tblreviews.fkReviewerID = tblarticlesassigned.fkReviewerID AND tblarticlesassigned.nOrder IS NOT NULL AND tblreviews.fkArticleID = ? ORDER BY nOrder', $row['nArticleID']);
+				$reviewResult =& $this->importDao->retrieve('SELECT tblreviews.*, tblarticlesassigned.*, nUserID FROM tblreviews, tblarticlesassigned, tblusers, tblarticles WHERE tblreviews.fkArticleID = tblarticles.nArticleID AND tblreviews.fkArticleID = tblarticlesassigned.fkArticleID AND tblusers.fkReviewerID = tblarticlesassigned.fkReviewerID AND tblreviews.fkReviewerID = tblarticlesassigned.fkReviewerID AND tblarticlesassigned.nOrder IS NOT NULL AND tblreviews.fkArticleID = ? ORDER BY nOrder', $row['nArticleID']);
 				while (!$reviewResult->EOF) {
-					$reviewRow = &$reviewResult->fields;
+					$reviewRow =& $reviewResult->fields;
 					$reviewerOrder = $reviewRow['nOrder'];
 
 					$reviewAssignment = new ReviewAssignment();
@@ -1282,11 +1282,11 @@ class ImportOJS1 {
 
 
 		// Supplementary files
-		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
+		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
 
-		$result = &$this->importDao->retrieve('SELECT * FROM tblsupplementaryfiles ORDER BY nSupFileID');
+		$result =& $this->importDao->retrieve('SELECT * FROM tblsupplementaryfiles ORDER BY nSupFileID');
 		while (!$result->EOF) {
-			$row = &$result->fields;
+			$row =& $result->fields;
 
 			$fileId = $this->addArticleFile($this->articleMap[$row['fkArticleID']], $row['fkFileID'], ARTICLE_FILE_SUPP);
 
@@ -1314,11 +1314,11 @@ class ImportOJS1 {
 
 
 		// Article (public) comments
-		$commentDao = &DAORegistry::getDAO('CommentDAO');
+		$commentDao =& DAORegistry::getDAO('CommentDAO');
 
-		$result = &$this->importDao->retrieve('SELECT * FROM tblcomments ORDER BY nCommentID');
+		$result =& $this->importDao->retrieve('SELECT * FROM tblcomments ORDER BY nCommentID');
 		while (!$result->EOF) {
-			$row = &$result->fields;
+			$row =& $result->fields;
 
 			if (!empty($row['chAffiliation'])) {
 				$row['chAuthor'] .= ', ' . Core::cleanVar($row['chAffiliation']);
@@ -1342,7 +1342,7 @@ class ImportOJS1 {
 
 
 		// Submission comments
-		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
+		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
 
 		$commentTypes = array(
 			'reviewer' => COMMENT_TYPE_PEER_REVIEW,
@@ -1350,9 +1350,9 @@ class ImportOJS1 {
 			'proof' => COMMENT_TYPE_PROOFREAD
 		);
 
-		$result = &$this->importDao->retrieve('SELECT * FROM tblsubmissioncomments ORDER BY nCommentID');
+		$result =& $this->importDao->retrieve('SELECT * FROM tblsubmissioncomments ORDER BY nCommentID');
 		while (!$result->EOF) {
-			$row = &$result->fields;
+			$row =& $result->fields;
 			$assocId = $this->articleMap[$row['fkArticleID']];
 
 			// Stupidly these strings are localized so this won't necessarily work if using non-English or modified localization
@@ -1476,18 +1476,18 @@ class ImportOJS1 {
 			return 0;
 		}
 
-		$result = &$this->importDao->retrieve('SELECT * FROM tblfiles WHERE nFileID = ?', $oldFileId);
+		$result =& $this->importDao->retrieve('SELECT * FROM tblfiles WHERE nFileID = ?', $oldFileId);
 
 		if ($result->RecordCount() == 0) {
 			$result->Close();
 			return 0;
 		}
 
-		$row = &$result->fields;
+		$row =& $result->fields;
 		$oldPath = Core::cleanVar($this->journalConfigInfo['chFilePath']) . Core::cleanVar($row['chFilePath']);
 
 		$fileManager = new ArticleFileManager($articleId);
-		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
 
 		$articleOldFileName = !empty($row['chOldFileName']) ? $row['chOldFileName'] : $row['chFileName'];
 
@@ -1540,8 +1540,8 @@ class ImportOJS1 {
 
 			if (!isset($fileManager)) {
 				$fileManager = new ArticleFileManager($galley->getArticleId());
-				$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-				$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+				$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+				$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
 			}
 
 			$fileType = ARTICLE_FILE_PUBLIC;

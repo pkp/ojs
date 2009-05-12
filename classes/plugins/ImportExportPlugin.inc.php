@@ -51,7 +51,7 @@ class ImportExportPlugin extends Plugin {
 	 * @param $subclass boolean
 	 */
 	function setBreadcrumbs($crumbs = array(), $isSubclass = false) {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$pageCrumbs = array(
 			array(
 				Request::url(null, 'user'),

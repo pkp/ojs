@@ -25,7 +25,7 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 	function AuthorSubmitStep3Form($article) {
 		parent::AuthorSubmitForm($article, 3);
 
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 
 		// Validation checks for this form
 		$this->addCheck(new FormValidatorCustom($this, 'authors', 'required', 'author.submit.form.authorRequired', create_function('$authors', 'return count($authors) > 0;')));
@@ -39,10 +39,10 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 	 * Initialize form data from current article.
 	 */
 	function initData() {
-		$sectionDao = &DAORegistry::getDAO('SectionDAO');
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 
 		if (isset($this->article)) {
-			$article = &$this->article;
+			$article =& $this->article;
 			$this->_data = array(
 				'authors' => array(),
 				'title' => $article->getTitle(null), // Localized
@@ -60,7 +60,7 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 				'citations' => $article->getCitations()
 			);
 
-			$authors = &$article->getAuthors();
+			$authors =& $article->getAuthors();
 			for ($i=0, $count=count($authors); $i < $count; $i++) {
 				array_push(
 					$this->_data['authors'],
@@ -110,8 +110,8 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 
 		// Load the section. This is used in the step 3 form to
 		// determine whether or not to display indexing options.
-		$sectionDao = &DAORegistry::getDAO('SectionDAO');
-		$this->_data['section'] = &$sectionDao->getSection($this->article->getSectionId());
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$this->_data['section'] =& $sectionDao->getSection($this->article->getSectionId());
 
 		if ($this->_data['section']->getAbstractsNotRequired() == 0) {
 			$this->addCheck(new FormValidatorLocale($this, 'abstract', 'required', 'author.submit.form.abstractRequired'));
@@ -145,11 +145,11 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 	 * @return int the article ID
 	 */
 	function execute() {
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$authorDao = &DAORegistry::getDAO('AuthorDAO');
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$authorDao =& DAORegistry::getDAO('AuthorDAO');
 
 		// Update article
-		$article = &$this->article;
+		$article =& $this->article;
 		$article->setTitle($this->getData('title'), null); // Localized
 		$article->setAbstract($this->getData('abstract'), null); // Localized
 		$article->setDiscipline($this->getData('discipline'), null); // Localized
@@ -172,7 +172,7 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 		for ($i=0, $count=count($authors); $i < $count; $i++) {
 			if ($authors[$i]['authorId'] > 0) {
 				// Update an existing author
-				$author = &$article->getAuthor($authors[$i]['authorId']);
+				$author =& $article->getAuthor($authors[$i]['authorId']);
 				$isExistingAuthor = true;
 
 			} else {

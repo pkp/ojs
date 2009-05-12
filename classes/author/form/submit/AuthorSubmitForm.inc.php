@@ -49,7 +49,7 @@ class AuthorSubmitForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', $this->articleId);
 		$templateMgr->assign('submitStep', $this->step);
 
@@ -69,8 +69,8 @@ class AuthorSubmitForm extends Form {
 		}
 		$templateMgr->assign('helpTopicId', $helpTopicId);
 
-		$journal = &Request::getJournal();
-		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+		$journal =& Request::getJournal();
+		$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 		$templateMgr->assign_by_ref('journalSettings', $settingsDao->getJournalSettings($journal->getJournalId()));
 
 		parent::display();

@@ -21,13 +21,13 @@ class OJSCompletedPaymentDAO extends DAO {
 	 * @return Subscription
 	 */
 	function &getCompletedPayment($completedPaymentId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT * FROM completed_payments WHERE completed_payment_id = ?', $completedPaymentId
 		);
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnPaymentFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnPaymentFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -133,7 +133,7 @@ class OJSCompletedPaymentDAO extends DAO {
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnPaymentFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnPaymentFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -183,7 +183,7 @@ class OJSCompletedPaymentDAO extends DAO {
 			
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnPaymentFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnPaymentFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -229,7 +229,7 @@ class OJSCompletedPaymentDAO extends DAO {
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnPaymentFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnPaymentFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -243,7 +243,7 @@ class OJSCompletedPaymentDAO extends DAO {
 	 * @return object DAOResultFactory containing matching Theses 
 	 */
 	function &getPaymentsByJournalId($journalId, $rangeInfo = null) {
-		$result = &$this->retrieveRange(
+		$result =& $this->retrieveRange(
 			'SELECT * FROM completed_payments WHERE journal_id = ? ORDER BY timestamp DESC', $journalId, $rangeInfo
 		);
 

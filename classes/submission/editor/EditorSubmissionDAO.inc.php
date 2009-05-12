@@ -30,10 +30,10 @@ class EditorSubmissionDAO extends DAO {
 	 */
 	function EditorSubmissionDAO() {
 		parent::DAO();
-		$this->articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$this->authorDao = &DAORegistry::getDAO('AuthorDAO');
-		$this->userDao = &DAORegistry::getDAO('UserDAO');
-		$this->editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
+		$this->articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$this->authorDao =& DAORegistry::getDAO('AuthorDAO');
+		$this->userDao =& DAORegistry::getDAO('UserDAO');
+		$this->editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
 	}
 
 	/**
@@ -44,7 +44,7 @@ class EditorSubmissionDAO extends DAO {
 	function &getEditorSubmission($articleId) {
 		$primaryLocale = Locale::getPrimaryLocale();
 		$locale = Locale::getLocale();
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT
 				a.*,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
@@ -71,7 +71,7 @@ class EditorSubmissionDAO extends DAO {
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -125,7 +125,7 @@ class EditorSubmissionDAO extends DAO {
 		$editorSubmission->setEditId($this->getInsertEditId());
 
 		// Insert review assignments.
-		$reviewAssignments = &$editorSubmission->getReviewAssignments();
+		$reviewAssignments =& $editorSubmission->getReviewAssignments();
 		for ($i=0, $count=count($reviewAssignments); $i < $count; $i++) {
 			$reviewAssignments[$i]->setArticleId($editorSubmission->getArticleId());
 			$this->reviewAssignmentDao->insertReviewAssignment($reviewAssignments[$i]);
@@ -188,7 +188,7 @@ class EditorSubmissionDAO extends DAO {
 				($sectionId?' AND a.section_id = ?':'') .
 			' ORDER BY article_id ASC';
 
-		$result = &$this->retrieveRange($sql, $params, $rangeInfo);
+		$result =& $this->retrieveRange($sql, $params, $rangeInfo);
 		$returner = new DAOResultFactory($result, $this, '_returnEditorSubmissionFromRow');
 		return $returner;
 	}
@@ -344,7 +344,7 @@ class EditorSubmissionDAO extends DAO {
 			$params[] = $editorId;
 		}
 
-		$result = &$this->retrieveRange(
+		$result =& $this->retrieveRange(
 			$sql . ' ' . $searchSql . ' ORDER BY a.article_id ASC',
 			count($params)===1?array_shift($params):$params,
 			$rangeInfo
@@ -394,7 +394,7 @@ class EditorSubmissionDAO extends DAO {
 		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $editorId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, true);
 
 		while (!$result->EOF) {
-			$editorSubmission = &$this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
+			$editorSubmission =& $this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
 
 			// used to check if editor exists for this submission
 			$editAssignments =& $editorSubmission->getEditAssignments();
@@ -433,9 +433,9 @@ class EditorSubmissionDAO extends DAO {
 		// FIXME Does not pass $rangeInfo else we only get partial results
 		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $editorId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, true);
 
-		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 		while (!$result->EOF) {
-			$editorSubmission = &$this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
+			$editorSubmission =& $this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
 			$articleId = $editorSubmission->getArticleId();
 			for ($i = 1; $i <= $editorSubmission->getCurrentRound(); $i++) {
 				$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentsByArticleId($articleId, $i);
@@ -488,13 +488,13 @@ class EditorSubmissionDAO extends DAO {
 	 */
 	function &getEditorSubmissionsInEditing($journalId, $sectionId, $editorId, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null) {
 		$editorSubmissions = array();
-		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
+		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 
 		// FIXME Does not pass $rangeInfo else we only get partial results
 		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $editorId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, true);
 
 		while (!$result->EOF) {
-			$editorSubmission = &$this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
+			$editorSubmission =& $this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
 			$articleId = $editorSubmission->getArticleId();
 
 			// check if submission is still in review
@@ -544,7 +544,7 @@ class EditorSubmissionDAO extends DAO {
 
 		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $editorId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, false, $rangeInfo);
 		while (!$result->EOF) {
-			$editorSubmission = &$this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
+			$editorSubmission =& $this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
 			$editorSubmissions[] =& $editorSubmission;
 			unset($editorSubmission);
 			$result->MoveNext();
@@ -577,7 +577,7 @@ class EditorSubmissionDAO extends DAO {
 		$result =& $this->getUnfilteredEditorSubmissions($journalId);
 
 		while (!$result->EOF) {
-			$editorSubmission = &$this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
+			$editorSubmission =& $this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
 
 			// check if submission is still in review
 			$inReview = true;
@@ -631,11 +631,11 @@ class EditorSubmissionDAO extends DAO {
 		$decisions = array();
 
 		if ($round == null) {
-			$result = &$this->retrieve(
+			$result =& $this->retrieve(
 				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE article_id = ? ORDER BY date_decided ASC', $articleId
 			);
 		} else {
-			$result = &$this->retrieve(
+			$result =& $this->retrieve(
 				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE article_id = ? AND round = ? ORDER BY date_decided ASC',
 				array($articleId, $round)
 			);
@@ -711,7 +711,7 @@ class EditorSubmissionDAO extends DAO {
 				break;
 		}
 
-		$result = &$this->retrieveRange(
+		$result =& $this->retrieveRange(
 			'SELECT DISTINCT
 				u.*
 			FROM	users u

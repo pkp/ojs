@@ -31,11 +31,11 @@ class SectionDAO extends DAO {
 			$sql .= ' AND journal_id = ?';
 			$params[] = $journalId;
 		}
-		$result = &$this->retrieve($sql, $params);
+		$result =& $this->retrieve($sql, $params);
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnSectionFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnSectionFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -58,11 +58,11 @@ class SectionDAO extends DAO {
 			$params[] = $locale;
 		}
 
-		$result = &$this->retrieve($sql, $params);
+		$result =& $this->retrieve($sql, $params);
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnSectionFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnSectionFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -84,11 +84,11 @@ class SectionDAO extends DAO {
 			$params[] = $locale;
 		}
 
-		$result = &$this->retrieve($sql, $params);
+		$result =& $this->retrieve($sql, $params);
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnSectionFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnSectionFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -113,11 +113,11 @@ class SectionDAO extends DAO {
 			$params[] = $locale;
 		}
 
-		$result = &$this->retrieve($sql, $params);
+		$result =& $this->retrieve($sql, $params);
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnSectionFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnSectionFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -252,16 +252,16 @@ class SectionDAO extends DAO {
 	 * @param $journalId int optional
 	 */
 	function deleteSectionById($sectionId, $journalId = null) {
-		$sectionEditorsDao = &DAORegistry::getDAO('SectionEditorsDAO');
+		$sectionEditorsDao =& DAORegistry::getDAO('SectionEditorsDAO');
 		$sectionEditorsDao->deleteEditorsBySectionId($sectionId, $journalId);
 
 		// Remove articles from this section
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$articleDao->removeArticlesFromSection($sectionId);
 
 		// Delete published article entries from this section -- they must
 		// be re-published.
-		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticleDao->deletePublishedArticlesBySectionId($sectionId);
 
 		if (isset($journalId) && !$this->sectionExists($sectionId, $journalId)) return false;
@@ -291,14 +291,14 @@ class SectionDAO extends DAO {
 	function &getEditorSections($journalId) {
 		$returner = array();
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT s.*, se.user_id AS editor_id FROM section_editors se, sections s WHERE se.section_id = s.section_id AND s.journal_id = se.journal_id AND s.journal_id = ?',
 			$journalId
 		);
 
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
-			$section = &$this->_returnSectionFromRow($row);
+			$section =& $this->_returnSectionFromRow($row);
 			if (!isset($returner[$row['editor_id']])) {
 				$returner[$row['editor_id']] = array($section);
 			} else {
@@ -321,14 +321,14 @@ class SectionDAO extends DAO {
 	function &getSectionsForIssue($issueId) {
 		$returner = array();
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT DISTINCT s.*, COALESCE(o.seq, s.seq) AS section_seq FROM sections s, published_articles pa, articles a LEFT JOIN custom_section_orders o ON (a.section_id = o.section_id AND o.issue_id = ?) WHERE s.section_id = a.section_id AND pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY section_seq',
 			array($issueId, $issueId)
 		);
 
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
-			$returner[] = &$this->_returnSectionFromRow($row);
+			$returner[] =& $this->_returnSectionFromRow($row);
 			$result->moveNext();
 		}
 
@@ -343,7 +343,7 @@ class SectionDAO extends DAO {
 	 * @return DAOResultFactory containing Sections ordered by sequence
 	 */
 	function &getJournalSections($journalId, $rangeInfo = null) {
-		$result = &$this->retrieveRange(
+		$result =& $this->retrieveRange(
 			'SELECT * FROM sections WHERE journal_id = ? ORDER BY seq',
 			$journalId, $rangeInfo
 		);
@@ -381,7 +381,7 @@ class SectionDAO extends DAO {
 	 * @return boolean
 	 */
 	function sectionExists($sectionId, $journalId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT COUNT(*) FROM sections WHERE section_id = ? AND journal_id = ?',
 			array($sectionId, $journalId)
 		);
@@ -398,7 +398,7 @@ class SectionDAO extends DAO {
 	 * @param $journalId int
 	 */
 	function resequenceSections($journalId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT section_id FROM sections WHERE journal_id = ? ORDER BY seq',
 			$journalId
 		);
@@ -443,7 +443,7 @@ class SectionDAO extends DAO {
 	 * @param $issueId int
 	 */
 	function resequenceCustomSectionOrders($issueId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT section_id FROM custom_section_orders WHERE issue_id = ? ORDER BY seq',
 			$issueId
 		);
@@ -468,7 +468,7 @@ class SectionDAO extends DAO {
 	 * @return boolean
 	 */
 	function customSectionOrderingExists($issueId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT COUNT(*) FROM custom_section_orders WHERE issue_id = ?',
 			$issueId
 		);
@@ -487,7 +487,7 @@ class SectionDAO extends DAO {
 	 * @return int
 	 */
 	function getCustomSectionOrder($issueId, $sectionId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT seq FROM custom_section_orders WHERE issue_id = ? AND section_id = ?',
 			array($issueId, $sectionId)
 		);
@@ -508,7 +508,7 @@ class SectionDAO extends DAO {
 	 * @param $issueId int
 	 */
 	function setDefaultCustomSectionOrders($issueId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT s.section_id FROM sections s, issues i WHERE i.journal_id = s.journal_id AND i.issue_id = ? ORDER BY seq',
 			$issueId
 		);

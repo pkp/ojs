@@ -70,12 +70,12 @@ class JournalSettingsDAO extends DAO {
 	function &getJournalSettings($journalId) {
 		$journalSettings = array();
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT setting_name, setting_value, setting_type, locale FROM journal_settings WHERE journal_id = ?', $journalId
 		);
 
 		while (!$result->EOF) {
-			$row = &$result->getRowAssoc(false);
+			$row =& $result->getRowAssoc(false);
 			$value = $this->convertFromDB($row['setting_value'], $row['setting_type']);
 			if ($row['locale'] == '') $journalSettings[$row['setting_name']] = $value;
 			else $journalSettings[$row['setting_name']][$row['locale']] = $value;
@@ -188,7 +188,7 @@ class JournalSettingsDAO extends DAO {
 		$value = array();
 		foreach ($node->getChildren() as $element) {
 			$key = $element->getAttribute('key');
-			$childArray = &$element->getChildByName('array');
+			$childArray =& $element->getChildByName('array');
 			if (isset($childArray)) {
 				$content = $this->_buildObject($childArray, $paramArray);
 			} else {
@@ -218,16 +218,16 @@ class JournalSettingsDAO extends DAO {
 		}
 
 		foreach ($tree->getChildren() as $setting) {
-			$nameNode = &$setting->getChildByName('name');
-			$valueNode = &$setting->getChildByName('value');
+			$nameNode =& $setting->getChildByName('name');
+			$valueNode =& $setting->getChildByName('value');
 
 			if (isset($nameNode) && isset($valueNode)) {
 				$type = $setting->getAttribute('type');
 				$isLocaleField = $setting->getAttribute('locale');
-				$name = &$nameNode->getValue();
+				$name =& $nameNode->getValue();
 
 				if ($type == 'object') {
-					$arrayNode = &$valueNode->getChildByName('array');
+					$arrayNode =& $valueNode->getChildByName('array');
 					$value = $this->_buildObject($arrayNode, $paramArray);
 				} else {
 					$value = $this->_performReplacement($valueNode->getValue(), $paramArray);
@@ -282,7 +282,7 @@ class JournalSettingsDAO extends DAO {
 		$value = array();
 		foreach ($node->getChildren() as $element) {
 			$key = $element->getAttribute('key');
-			$childArray = &$element->getChildByName('array');
+			$childArray =& $element->getChildByName('array');
 			if (isset($childArray)) {
 				$content = $this->_buildLocalizedObject($childArray, $paramArray, $locale);
 			} else {
@@ -313,19 +313,19 @@ class JournalSettingsDAO extends DAO {
 		}
 
 		foreach ($tree->getChildren() as $setting) {
-			$nameNode = &$setting->getChildByName('name');
-			$valueNode = &$setting->getChildByName('value');
+			$nameNode =& $setting->getChildByName('name');
+			$valueNode =& $setting->getChildByName('value');
 
 			if (isset($nameNode) && isset($valueNode)) {
 				$type = $setting->getAttribute('type');
 				$isLocaleField = $setting->getAttribute('locale');
-				$name = &$nameNode->getValue();
+				$name =& $nameNode->getValue();
 
 				//skip all settings that are not locale fields
 				if (!$isLocaleField) continue;
 
 				if ($type == 'object') {
-					$arrayNode = &$valueNode->getChildByName('array');
+					$arrayNode =& $valueNode->getChildByName('array');
 					$value = $this->_buildLocalizedObject($arrayNode, $paramArray, $locale);
 				} else {
 					$value = $this->_performLocalizedReplacement($valueNode->getValue(), $paramArray, $locale);

@@ -28,7 +28,7 @@ class ArticleGalleyDAO extends DAO {
 	 */
 	function ArticleGalleyDAO() {
 		parent::DAO();
-		$this->articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+		$this->articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
 	}
 
 	/**
@@ -40,7 +40,7 @@ class ArticleGalleyDAO extends DAO {
 	function &getGalley($galleyId, $articleId = null) {
 		$params = array($galleyId);
 		if ($articleId !== null) $params[] = (int) $articleId;
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT	g.*,
 				a.file_name, a.original_file_name, a.file_type, a.file_size, a.date_uploaded, a.date_modified
 			FROM	article_galleys g
@@ -52,7 +52,7 @@ class ArticleGalleyDAO extends DAO {
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnGalleyFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnGalleyFromRow($result->GetRowAssoc(false));
 		} else {
 			HookRegistry::call('ArticleGalleyDAO::getNewGalley', array(&$galleyId, &$articleId, &$returner));
 		}
@@ -71,7 +71,7 @@ class ArticleGalleyDAO extends DAO {
 	 * @return boolean
 	 */
 	function publicGalleyIdExists($publicGalleyId, $galleyId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT COUNT(*) FROM article_galleys WHERE public_galley_id = ? AND galley_id <> ?', array($publicGalleyId, $galleyId)
 		);
 		$returner = $result->fields[0] ? true : false;
@@ -89,7 +89,7 @@ class ArticleGalleyDAO extends DAO {
 	 * @return ArticleGalley
 	 */
 	function &getGalleyByPublicGalleyId($publicGalleyId, $articleId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT	g.*,
 				a.file_name, a.original_file_name, a.file_type, a.file_size, a.date_uploaded, a.date_modified
 			FROM	article_galleys g
@@ -101,7 +101,7 @@ class ArticleGalleyDAO extends DAO {
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnGalleyFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnGalleyFromRow($result->GetRowAssoc(false));
 		} else {
 			HookRegistry::call('ArticleGalleyDAO::getNewGalley', array(&$galleyId, &$articleId, &$returner));
 		}
@@ -120,7 +120,7 @@ class ArticleGalleyDAO extends DAO {
 	function &getGalleysByArticle($articleId) {
 		$galleys = array();
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT g.*,
 			a.file_name, a.original_file_name, a.file_type, a.file_size, a.date_uploaded, a.date_modified
 			FROM article_galleys g
@@ -130,7 +130,7 @@ class ArticleGalleyDAO extends DAO {
 		);
 
 		while (!$result->EOF) {
-			$galleys[] = &$this->_returnGalleyFromRow($result->GetRowAssoc(false));
+			$galleys[] =& $this->_returnGalleyFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
 
@@ -171,7 +171,7 @@ class ArticleGalleyDAO extends DAO {
 			}
 
 			// Retrieve images
-			$images = &$this->getGalleyImages($row['galley_id']);
+			$images =& $this->getGalleyImages($row['galley_id']);
 			$galley->setImageFiles($images);
 
 		} else {
@@ -293,7 +293,7 @@ class ArticleGalleyDAO extends DAO {
 	 * @param $articleId int
 	 */
 	function deleteGalleysByArticle($articleId) {
-		$galleys = &$this->getGalleysByArticle($articleId);
+		$galleys =& $this->getGalleysByArticle($articleId);
 		foreach ($galleys as $galley) {
 			$this->deleteGalleyById($galley->getGalleyId(), $articleId);
 		}
@@ -306,7 +306,7 @@ class ArticleGalleyDAO extends DAO {
 	 * @return boolean
 	 */
 	function galleyExistsByFileId($articleId, $fileId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT COUNT(*) FROM article_galleys
 			WHERE article_id = ? AND file_id = ?',
 			array($articleId, $fileId)
@@ -338,7 +338,7 @@ class ArticleGalleyDAO extends DAO {
 	 * @param $articleId int
 	 */
 	function resequenceGalleys($articleId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT galley_id FROM article_galleys WHERE article_id = ? ORDER BY seq',
 			$articleId
 		);
@@ -362,7 +362,7 @@ class ArticleGalleyDAO extends DAO {
 	 * @return int
 	 */
 	function getNextGalleySequence($articleId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT MAX(seq) + 1 FROM article_galleys WHERE article_id = ?',
 			$articleId
 		);
@@ -395,14 +395,14 @@ class ArticleGalleyDAO extends DAO {
 	function &getGalleyImages($galleyId) {
 		$images = array();
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT a.* FROM article_html_galley_images i, article_files a
 			WHERE i.file_id = a.file_id AND i.galley_id = ?',
 			$galleyId
 		);
 
 		while (!$result->EOF) {
-			$images[] = &$this->articleFileDao->_returnArticleFileFromRow($result->GetRowAssoc(false));
+			$images[] =& $this->articleFileDao->_returnArticleFileFromRow($result->GetRowAssoc(false));
 			$result->MoveNext();
 		}
 

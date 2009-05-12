@@ -27,7 +27,7 @@ class ArticleNoteDAO extends DAO {
 	function &getArticleNotes($articleId, $rangeInfo = NULL) {
 		$sql = 'SELECT n.*, a.file_name, a.original_file_name FROM article_notes n LEFT JOIN article_files a ON (n.file_id = a.file_id) WHERE a.article_id = ? OR (n.file_id = 0 AND n.article_id = ?) ORDER BY n.date_created DESC';
 
-		$result = &$this->retrieveRange($sql, array($articleId, $articleId), $rangeInfo);
+		$result =& $this->retrieveRange($sql, array($articleId, $articleId), $rangeInfo);
 
 		$returner = new DAOResultFactory($result, $this, '_returnArticleNoteFromRow');
 		return $returner;
@@ -41,7 +41,7 @@ class ArticleNoteDAO extends DAO {
 	function &getArticleNotesByUserId($userId, $rangeInfo = NULL) {
 		$sql = 'SELECT n.*, a.file_name, a.original_file_name FROM article_notes n LEFT JOIN article_files a ON (n.file_id = a.file_id) WHERE n.user_id = ? ORDER BY n.date_created DESC';
 
-		$result = &$this->retrieveRange($sql, $userId, $rangeInfo);
+		$result =& $this->retrieveRange($sql, $userId, $rangeInfo);
 
 		$returner = new DAOResultFactory($result, $this, '_returnArticleNoteFromRow');
 		return $returner;
@@ -53,10 +53,10 @@ class ArticleNoteDAO extends DAO {
 	 * @return ArticleNote object
 	 */
 	function getArticleNoteById($noteId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT n.*, a.file_name, a.original_file_name FROM article_notes n LEFT JOIN article_files a ON (n.file_id = a.file_id) WHERE n.note_id = ?', $noteId
 		);
-		$articleNote = &$this->_returnArticleNoteFromRow($result->GetRowAssoc(false));
+		$articleNote =& $this->_returnArticleNoteFromRow($result->GetRowAssoc(false));
 
 		$result->Close();
 		unset($result);
@@ -163,7 +163,7 @@ class ArticleNoteDAO extends DAO {
 	function getAllArticleNoteFileIds($articleId) {
 		$fileIds = array();
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT a.file_id FROM article_notes a WHERE article_id = ? AND file_id > ?', array($articleId, 0)
 		);
 
@@ -184,7 +184,7 @@ class ArticleNoteDAO extends DAO {
 	 * @param fileIds array
 	 */
 	function clearAllArticleNotes($articleId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'DELETE FROM article_notes WHERE article_id = ?', $articleId
 		);
 

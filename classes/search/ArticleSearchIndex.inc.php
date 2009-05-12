@@ -33,8 +33,8 @@ class ArticleSearchIndex {
 	 * @param $position int
 	 */
 	function indexObjectKeywords($objectId, $text, &$position) {
-		$searchDao = &DAORegistry::getDAO('ArticleSearchDAO');
-		$keywords = &ArticleSearchIndex::filterKeywords($text);
+		$searchDao =& DAORegistry::getDAO('ArticleSearchDAO');
+		$keywords =& ArticleSearchIndex::filterKeywords($text);
 		for ($i = 0, $count = count($keywords); $i < $count; $i++) {
 			if ($searchDao->insertObjectKeyword($objectId, $keywords[$i], $position) !== null) {
 				$position += 1;
@@ -50,7 +50,7 @@ class ArticleSearchIndex {
 	 * @param $assocId int optional
 	 */
 	function updateTextIndex($articleId, $type, $text, $assocId = null) {
-			$searchDao = &DAORegistry::getDAO('ArticleSearchDAO');
+			$searchDao =& DAORegistry::getDAO('ArticleSearchDAO');
 			$objectId = $searchDao->insertObject($articleId, $type, $assocId);
 			$position = 0;
 			ArticleSearchIndex::indexObjectKeywords($objectId, $text, $position);
@@ -65,15 +65,15 @@ class ArticleSearchIndex {
 	function updateFileIndex($articleId, $type, $fileId) {
 		import('file.ArticleFileManager');
 		$fileMgr = new ArticleFileManager($articleId);
-		$file = &$fileMgr->getFile($fileId);
+		$file =& $fileMgr->getFile($fileId);
 
 		if (isset($file)) {
-			$parser = &SearchFileParser::fromFile($file);
+			$parser =& SearchFileParser::fromFile($file);
 		}
 
 		if (isset($parser)) {
 			if ($parser->open()) {
-				$searchDao = &DAORegistry::getDAO('ArticleSearchDAO');
+				$searchDao =& DAORegistry::getDAO('ArticleSearchDAO');
 				$objectId = $searchDao->insertObject($articleId, $type, $fileId);
 
 				$position = 0;
@@ -92,7 +92,7 @@ class ArticleSearchIndex {
 	 * @param $assocId int optional
 	 */
 	function deleteTextIndex($articleId, $type = null, $assocId = null) {
-		$searchDao = &DAORegistry::getDAO('ArticleSearchDAO');
+		$searchDao =& DAORegistry::getDAO('ArticleSearchDAO');
 		return $searchDao->deleteArticleKeywords($articleId, $type, $assocId);
 	}
 
@@ -104,7 +104,7 @@ class ArticleSearchIndex {
 	 */
 	function &filterKeywords($text, $allowWildcards = false) {
 		$minLength = Config::getVar('search', 'min_word_length');
-		$stopwords = &ArticleSearchIndex::loadStopwords();
+		$stopwords =& ArticleSearchIndex::loadStopwords();
 
 		// Join multiple lines into a single string
 		if (is_array($text)) $text = join("\n", $text);
@@ -158,7 +158,7 @@ class ArticleSearchIndex {
 		$authorText = array();
 		$authors = $article->getAuthors();
 		for ($i=0, $count=count($authors); $i < $count; $i++) {
-			$author = &$authors[$i];
+			$author =& $authors[$i];
 			array_push($authorText, $author->getFirstName());
 			array_push($authorText, $author->getMiddleName());
 			array_push($authorText, $author->getLastName());
@@ -210,8 +210,8 @@ class ArticleSearchIndex {
 	 */
 	function indexArticleFiles(&$article) {
 		// Index supplementary files
-		$fileDao = &DAORegistry::getDAO('SuppFileDAO');
-		$files = &$fileDao->getSuppFilesByArticle($article->getArticleId());
+		$fileDao =& DAORegistry::getDAO('SuppFileDAO');
+		$files =& $fileDao->getSuppFilesByArticle($article->getArticleId());
 		foreach ($files as $file) {
 			if ($file->getFileId()) {
 				ArticleSearchIndex::updateFileIndex($article->getArticleId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $file->getFileId());
@@ -221,8 +221,8 @@ class ArticleSearchIndex {
 		unset($files);
 
 		// Index galley files
-		$fileDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-		$files = &$fileDao->getGalleysByArticle($article->getArticleId());
+		$fileDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$files =& $fileDao->getGalleysByArticle($article->getArticleId());
 		foreach ($files as $file) {
 			if ($file->getFileId()) {
 				ArticleSearchIndex::updateFileIndex($article->getArticleId(), ARTICLE_SEARCH_GALLEY_FILE, $file->getFileId());
@@ -236,7 +236,7 @@ class ArticleSearchIndex {
 	function rebuildIndex($log = false) {
 		// Clear index
 		if ($log) echo 'Clearing index ... ';
-		$searchDao = &DAORegistry::getDAO('ArticleSearchDAO');
+		$searchDao =& DAORegistry::getDAO('ArticleSearchDAO');
 		// FIXME Abstract into ArticleSearchDAO?
 		$searchDao->update('DELETE FROM article_search_object_keywords');
 		$searchDao->update('DELETE FROM article_search_objects');
@@ -246,19 +246,19 @@ class ArticleSearchIndex {
 		if ($log) echo "done\n";
 
 		// Build index
-		$journalDao = &DAORegistry::getDAO('JournalDAO');
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 
-		$journals = &$journalDao->getJournals();
+		$journals =& $journalDao->getJournals();
 		while (!$journals->eof()) {
-			$journal = &$journals->next();
+			$journal =& $journals->next();
 			$numIndexed = 0;
 
 			if ($log) echo "Indexing \"", $journal->getLocalizedTitle(), "\" ... ";
 
-			$articles = &$articleDao->getArticlesByJournalId($journal->getJournalId());
+			$articles =& $articleDao->getArticlesByJournalId($journal->getJournalId());
 			while (!$articles->eof()) {
-				$article = &$articles->next();
+				$article =& $articles->next();
 				if ($article->getDateSubmitted()) {
 					ArticleSearchIndex::indexArticleMetadata($article);
 					ArticleSearchIndex::indexArticleFiles($article);

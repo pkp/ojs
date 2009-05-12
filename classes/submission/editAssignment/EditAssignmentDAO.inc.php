@@ -25,14 +25,14 @@ class EditAssignmentDAO extends DAO {
 	 * @return EditAssignment
 	 */
 	function &getEditAssignment($editId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT e.*, u.first_name, u.last_name, u.email, u.initials, r.role_id AS editor_role_id FROM articles a LEFT JOIN edit_assignments e ON (a.article_id = e.article_id) LEFT JOIN users u ON (e.editor_id = u.user_id) LEFT JOIN roles r ON (r.user_id = e.editor_id AND r.role_id = ' . ROLE_ID_EDITOR . ' AND r.journal_id = a.journal_id) WHERE e.edit_id = ? AND a.article_id = e.article_id',
 			$editId
 			);
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnEditAssignmentFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnEditAssignmentFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -47,7 +47,7 @@ class EditAssignmentDAO extends DAO {
 	 * @return EditAssignment
 	 */
 	function &getEditAssignmentsByArticleId($articleId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT e.*, u.first_name, u.last_name, u.email, u.initials, r.role_id AS editor_role_id FROM articles a LEFT JOIN edit_assignments e ON (a.article_id = e.article_id) LEFT JOIN users u ON (e.editor_id = u.user_id) LEFT JOIN roles r ON (r.user_id = e.editor_id AND r.role_id = ' . ROLE_ID_EDITOR . ' AND r.journal_id = a.journal_id) WHERE e.article_id = ? AND a.article_id = e.article_id ORDER BY e.date_notified ASC',
 			$articleId
 			);
@@ -62,7 +62,7 @@ class EditAssignmentDAO extends DAO {
 	 * @return EditAssignment
 	 */
 	function &getEditorAssignmentsByArticleId($articleId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT e.*, u.first_name, u.last_name, u.email, u.initials, r.role_id AS editor_role_id FROM articles a, edit_assignments e, users u, roles r WHERE r.user_id = e.editor_id AND r.role_id = ' . ROLE_ID_EDITOR . ' AND e.article_id = ? AND r.journal_id = a.journal_id AND a.article_id = e.article_id AND e.editor_id = u.user_id ORDER BY e.date_notified ASC',
 			$articleId
 			);
@@ -78,7 +78,7 @@ class EditAssignmentDAO extends DAO {
 	 * @return EditAssignment
 	 */
 	function &getReviewingSectionEditorAssignmentsByArticleId($articleId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT e.*, u.first_name, u.last_name, u.email, u.initials, r.role_id AS editor_role_id FROM articles a LEFT JOIN edit_assignments e ON (a.article_id = e.article_id) LEFT JOIN users u ON (e.editor_id = u.user_id) LEFT JOIN roles r ON (r.user_id = e.editor_id AND r.role_id = ' . ROLE_ID_EDITOR . ' AND r.journal_id = a.journal_id) WHERE e.article_id = ? AND a.article_id = e.article_id AND r.role_id IS NULL AND e.can_review = 1 ORDER BY e.date_notified ASC',
 			$articleId
 		);
@@ -94,7 +94,7 @@ class EditAssignmentDAO extends DAO {
 	 * @return EditAssignment
 	 */
 	function &getEditingSectionEditorAssignmentsByArticleId($articleId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT e.*, u.first_name, u.last_name, u.email, u.initials, r.role_id AS editor_role_id FROM articles a LEFT JOIN edit_assignments e ON (a.article_id = e.article_id) LEFT JOIN users u ON (e.editor_id = u.user_id) LEFT JOIN roles r ON (r.user_id = e.editor_id AND r.role_id = ' . ROLE_ID_EDITOR . ' AND r.journal_id = a.journal_id) WHERE e.article_id = ? AND a.article_id = e.article_id AND r.role_id IS NULL AND e.can_edit = 1 ORDER BY e.date_notified ASC',
 			$articleId
 			);
@@ -109,7 +109,7 @@ class EditAssignmentDAO extends DAO {
 	 * @return EditAssignment
 	 */
 	function &getEditAssignmentsByUserId($userId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT e.*, u.first_name, u.last_name, u.email, u.initials, r.role_id AS editor_role_id FROM articles a LEFT JOIN edit_assignments e ON (a.article_id = e.article_id) LEFT JOIN users u ON (e.editor_id = u.user_id) LEFT JOIN roles r ON (r.user_id = e.editor_id AND r.role_id = ' . ROLE_ID_EDITOR . ' AND r.journal_id = a.journal_id) WHERE e.editor_id = ? AND a.article_id = e.article_id ORDER BY e.date_notified ASC',
 			$userId
 			);

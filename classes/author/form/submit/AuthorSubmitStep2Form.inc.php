@@ -33,7 +33,7 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 	 */
 	function initData() {
 		if (isset($this->article)) {
-			$article = &$this->article;
+			$article =& $this->article;
 			$this->_data = array(
 			);
 		}
@@ -53,10 +53,10 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 
 		// Get supplementary files for this article
-		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
 		if ($this->article->getSubmissionFileId() != null) {
 			$templateMgr->assign_by_ref('submissionFile', $articleFileDao->getArticleFile($this->article->getSubmissionFileId()));
 		}
@@ -72,7 +72,7 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 		import("file.ArticleFileManager");
 
 		$articleFileManager = new ArticleFileManager($this->articleId);
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 
 		if ($articleFileManager->uploadedFileExists($fileName)) {
 			// upload new submission file, overwriting previous if necessary
@@ -94,8 +94,8 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 	 */
 	function execute() {
 		// Update article
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$article = &$this->article;
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$article =& $this->article;
 
 		if ($article->getSubmissionProgress() <= $this->step) {
 			$article->stampStatusModified();

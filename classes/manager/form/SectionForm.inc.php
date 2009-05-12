@@ -100,7 +100,7 @@ class SectionForm extends Form {
 	 */
 	function display() {
 		$journal =& Request::getJournal();
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 
 		$templateMgr->assign('sectionId', $this->sectionId);
 		$templateMgr->assign('commentsEnabled', $journal->getSetting('enableComments'));
@@ -121,7 +121,7 @@ class SectionForm extends Form {
 	 * Initialize form data from current settings.
 	 */
 	function initData() {
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		$sectionEditorsDao =& DAORegistry::getDAO('SectionEditorsDAO');
 		if (isset($this->sectionId)) {
 			$sectionDao =& DAORegistry::getDAO('SectionDAO');
@@ -193,13 +193,13 @@ class SectionForm extends Form {
 	 * Save section.
 	 */
 	function execute() {
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		$journalId = $journal->getJournalId();
 
-		$sectionDao = &DAORegistry::getDAO('SectionDAO');
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 
 		if (isset($this->sectionId)) {
-			$section = &$sectionDao->getSection($this->sectionId, $journalId);
+			$section =& $sectionDao->getSection($this->sectionId, $journalId);
 		}
 
 		if (!isset($section)) {
@@ -237,7 +237,7 @@ class SectionForm extends Form {
 		$assignedEditorIds = Request::getUserVar('assignedEditorIds');
 		if (empty($assignedEditorIds)) $assignedEditorIds = array();
 		elseif (!is_array($assignedEditorIds)) $assignedEditorIds = array($assignedEditorIds);
-		$sectionEditorsDao = &DAORegistry::getDAO('SectionEditorsDAO');
+		$sectionEditorsDao =& DAORegistry::getDAO('SectionEditorsDAO');
 		$sectionEditorsDao->deleteEditorsBySectionId($sectionId, $journalId);
 		foreach ($this->sectionEditors as $key => $junk) {
 			$sectionEditor =& $this->sectionEditors[$key];

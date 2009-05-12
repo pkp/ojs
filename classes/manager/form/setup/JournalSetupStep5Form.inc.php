@@ -84,7 +84,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 	 * Display the form.
 	 */
 	function display() {
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 
 		$allThemes =& PluginRegistry::loadCategory('themes', true);
 		$journalThemes = array();
@@ -95,7 +95,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 		}
 
 		// Ensure upload file settings are reloaded when the form is displayed.
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign(array(
 			'homeHeaderTitleImage' => $journal->getSetting('homeHeaderTitleImage'),
 			'homeHeaderLogoImage'=> $journal->getSetting('homeHeaderLogoImage'),
@@ -141,8 +141,8 @@ class JournalSetupStep5Form extends JournalSetupForm {
 	 * @param $locale string
 	 */
 	function uploadImage($settingName, $locale) {
-		$journal = &Request::getJournal();
-		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+		$journal =& Request::getJournal();
+		$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 
 		import('file.PublicFileManager');
 		$fileManager = new PublicFileManager();
@@ -181,8 +181,8 @@ class JournalSetupStep5Form extends JournalSetupForm {
 	 * @param $locale string
 	 */
 	function deleteImage($settingName, $locale = null) {
-		$journal = &Request::getJournal();
-		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+		$journal =& Request::getJournal();
+		$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 		$setting = $settingsDao->getSetting($journal->getJournalId(), $settingName);
 
 		import('file.PublicFileManager');
@@ -191,7 +191,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 			$returner = $settingsDao->deleteSetting($journal->getJournalId(), $settingName, $locale);
 			// Ensure page header is refreshed
 			if ($returner) {
-				$templateMgr = &TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->assign(array(
 					'displayPageHeaderTitle' => $journal->getLocalizedPageHeaderTitle(),
 					'displayPageHeaderLogo' => $journal->getLocalizedPageHeaderLogo()
@@ -208,8 +208,8 @@ class JournalSetupStep5Form extends JournalSetupForm {
 	 * @param $settingName string setting key associated with the file
 	 */
 	function uploadStyleSheet($settingName) {
-		$journal = &Request::getJournal();
-		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+		$journal =& Request::getJournal();
+		$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 
 		import('file.PublicFileManager');
 		$fileManager = new PublicFileManager();
@@ -258,10 +258,10 @@ class JournalSetupStep5Form extends JournalSetupForm {
 		}
 
 		// Save alt text for images
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		$journalId = $journal->getJournalId();
 		$locale = $this->getFormLocale();
-		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+		$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 		$images = $this->images;
 
 		foreach($images as $settingName) {

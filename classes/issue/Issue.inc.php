@@ -740,7 +740,7 @@ class Issue extends DataObject {
 	function getBestIssueId($journal = null) {
 		// Retrieve the journal, if necessary.
 		if (!isset($journal)) {
-			$journalDao = &DAORegistry::getDAO('JournalDAO');
+			$journalDao =& DAORegistry::getDAO('JournalDAO');
 			$journal = $journalDao->getJournal($this->getJournalId());
 		}
 

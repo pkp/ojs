@@ -71,8 +71,8 @@ class PaymentSettingsForm extends Form {
 		$this->addCheck(new FormValidatorCustom($this, 'membershipFee', 'optional', 'manager.payment.form.numeric', create_function('$membershipFee', 'return is_numeric($membershipFee) && $membershipFee >= 0;')));
 	
 		// grab valid currencies and add Validator	
-		$currencyDao = &DAORegistry::getDAO('CurrencyDAO');
-		$currencies = &$currencyDao->getCurrencies();
+		$currencyDao =& DAORegistry::getDAO('CurrencyDAO');
+		$currencies =& $currencyDao->getCurrencies();
 		$this->validCurrencies = array();
 		while (list(, $currency) = each($currencies)) {
 			$this->validCurrencies[$currency->getCodeAlpha()] = $currency->getName() . ' (' . $currency->getCodeAlpha() . ')';
@@ -96,7 +96,7 @@ class PaymentSettingsForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('validCurrencies', $this->validCurrencies);
 		parent::display();
 	}
@@ -105,7 +105,7 @@ class PaymentSettingsForm extends Form {
 	 * Initialize form data from current group group.
 	 */
 	function initData() {
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		foreach ($this->settings as $settingName => $settingType) {
 			$this->_data[$settingName] = $journal->getSetting($settingName);
 		}			
@@ -122,8 +122,8 @@ class PaymentSettingsForm extends Form {
 	 * Save settings 
 	 */	 
 	function save() {
-		$journal = &Request::getJournal();
-		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+		$journal =& Request::getJournal();
+		$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 		
 		foreach ($this->_data as $name => $value) {
 			$isLocalized = in_array($name, $this->getLocaleFieldNames());			

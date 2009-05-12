@@ -29,7 +29,7 @@ class QueuedPaymentDAO extends DAO {
 	 * @return QueuedPayment
 	 */
 	function &getQueuedPayment($queuedPaymentId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT * FROM queued_payments WHERE queued_payment_id = ?',
 			$queuedPaymentId
 		);

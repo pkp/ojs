@@ -28,7 +28,7 @@ class GroupForm extends Form {
 	 * @param group Group object; null to create new
 	 */
 	function GroupForm($group = null) {
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 
 		parent::Form('manager/groups/groupForm.tpl');
 
@@ -53,7 +53,7 @@ class GroupForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('group', $this->group);
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.groups');
 		$templateMgr->assign('groupContextOptions', array(
@@ -90,8 +90,8 @@ class GroupForm extends Form {
 	 * Save group group. 
 	 */
 	function execute() {
-		$groupDao = &DAORegistry::getDAO('GroupDAO');
-		$journal = &Request::getJournal();
+		$groupDao =& DAORegistry::getDAO('GroupDAO');
+		$journal =& Request::getJournal();
 
 		if (!isset($this->group)) {
 			$this->group = new Group();

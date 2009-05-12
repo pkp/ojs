@@ -70,7 +70,7 @@ class Request extends PKPRequest {
 		if (!isset($journal)) {
 			$path = Request::getRequestedJournalPath();
 			if ($path != 'index') {
-				$journalDao = &DAORegistry::getDAO('JournalDAO');
+				$journalDao =& DAORegistry::getDAO('JournalDAO');
 				$journal = $journalDao->getJournalByPath(Request::getRequestedJournalPath());
 			}
 		}

@@ -40,12 +40,12 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 	 * Display the form.
 	 */
 	function display() {
-		$journal = &Request::getJournal();
-		$user = &Request::getUser();		
-		$templateMgr = &TemplateManager::getManager();
+		$journal =& Request::getJournal();
+		$user =& Request::getUser();		
+		$templateMgr =& TemplateManager::getManager();
 
 		// Get article file for this article
-		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
 		$articleFiles =& $articleFileDao->getArticleFilesByArticle($this->articleId);
 
 		$templateMgr->assign_by_ref('files', $articleFiles);
@@ -127,14 +127,14 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 	 * Save changes to article.
 	 */
 	function execute() {
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 
 		$journal = Request::getJournal();
 		$user = Request::getUser();
 
 		// Update article		
-		$article = &$this->article;
+		$article =& $this->article;
 
 		if ($this->getData('commentsToEditor') != '') {
 			$article->setCommentsToEditor($this->getData('commentsToEditor'));
@@ -177,7 +177,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 
 		$sectionEditors = $this->assignEditors($article);
 
-		$user = &Request::getUser();
+		$user =& Request::getUser();
 
 		// Update search index
 		import('search.ArticleSearchIndex');

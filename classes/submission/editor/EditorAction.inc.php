@@ -28,15 +28,15 @@ class EditorAction extends SectionEditorAction {
 	 * @return boolean true iff ready for redirect
 	 */
 	function assignEditor($articleId, $sectionEditorId, $isEditor = false, $send = false) {
-		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
-		$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
-		$userDao = &DAORegistry::getDAO('UserDAO');
+		$editorSubmissionDao =& DAORegistry::getDAO('EditorSubmissionDAO');
+		$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
+		$userDao =& DAORegistry::getDAO('UserDAO');
 
-		$user = &Request::getUser();
-		$journal = &Request::getJournal();
+		$user =& Request::getUser();
+		$journal =& Request::getJournal();
 
-		$editorSubmission = &$editorSubmissionDao->getEditorSubmission($articleId);
-		$sectionEditor = &$userDao->getUser($sectionEditorId);
+		$editorSubmission =& $editorSubmissionDao->getEditorSubmission($articleId);
+		$sectionEditor =& $userDao->getUser($sectionEditorId);
 		if (!isset($sectionEditor)) return true;
 
 		import('mail.ArticleMailTemplate');

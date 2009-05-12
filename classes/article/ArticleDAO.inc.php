@@ -26,7 +26,7 @@ class ArticleDAO extends DAO {
 	 */
 	function ArticleDAO() {
 		parent::DAO();
-		$this->authorDao = &DAORegistry::getDAO('AuthorDAO');
+		$this->authorDao =& DAORegistry::getDAO('AuthorDAO');
 	}
 
 	/**
@@ -85,11 +85,11 @@ class ArticleDAO extends DAO {
 			$params[] = $journalId;
 		}
 
-		$result = &$this->retrieve($sql, $params);
+		$result =& $this->retrieve($sql, $params);
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnArticleFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnArticleFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -185,7 +185,7 @@ class ArticleDAO extends DAO {
 		$this->updateLocaleFields($article);
 
 		// Insert authors for this article
-		$authors = &$article->getAuthors();
+		$authors =& $article->getAuthors();
 		for ($i=0, $count=count($authors); $i < $count; $i++) {
 			$authors[$i]->setArticleId($article->getArticleId());
 			$this->authorDao->insertAuthor($authors[$i]);
@@ -248,7 +248,7 @@ class ArticleDAO extends DAO {
 		$this->updateLocaleFields($article);
 
 		// update authors for this article
-		$authors = &$article->getAuthors();
+		$authors =& $article->getAuthors();
 		for ($i=0, $count=count($authors); $i < $count; $i++) {
 			if ($authors[$i]->getId() > 0) {
 				$this->authorDao->updateAuthor($authors[$i]);
@@ -282,27 +282,27 @@ class ArticleDAO extends DAO {
 	function deleteArticleById($articleId) {
 		$this->authorDao->deleteAuthorsByArticle($articleId);
 
-		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticleDao->deletePublishedArticleByArticleId($articleId);
 
-		$commentDao = &DAORegistry::getDAO('CommentDAO');
+		$commentDao =& DAORegistry::getDAO('CommentDAO');
 		$commentDao->deleteCommentsByArticle($articleId);
 
-		$articleNoteDao = &DAORegistry::getDAO('ArticleNoteDAO');
+		$articleNoteDao =& DAORegistry::getDAO('ArticleNoteDAO');
 		$articleNoteDao->clearAllArticleNotes($articleId);
 
-		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$sectionEditorSubmissionDao->deleteDecisionsByArticle($articleId);
 		$sectionEditorSubmissionDao->deleteReviewRoundsByArticle($articleId);
 
-		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewAssignmentDao->deleteReviewAssignmentsByArticle($articleId);
 
-		$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
+		$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
 		$editAssignmentDao->deleteEditAssignmentsByArticle($articleId);
 
 		// Delete copyedit, layout, and proofread signoffs
-		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
+		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 		$copyedInitialSignoffs = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $articleId);
 		$copyedAuthorSignoffs = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $articleId);
 		$copyedFinalSignoffs = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $articleId);
@@ -316,31 +316,31 @@ class ArticleDAO extends DAO {
 			$signoffDao->deleteObject($signoff);
 		}		
 
-		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
+		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
 		$articleCommentDao->deleteArticleComments($articleId);
 
-		$articleGalleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
+		$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 		$articleGalleyDao->deleteGalleysByArticle($articleId);
 
-		$articleSearchDao = &DAORegistry::getDAO('ArticleSearchDAO');
+		$articleSearchDao =& DAORegistry::getDAO('ArticleSearchDAO');
 		$articleSearchDao->deleteArticleKeywords($articleId);
 
-		$articleEventLogDao = &DAORegistry::getDAO('ArticleEventLogDAO');
+		$articleEventLogDao =& DAORegistry::getDAO('ArticleEventLogDAO');
 		$articleEventLogDao->deleteArticleLogEntries($articleId);
 
-		$articleEmailLogDao = &DAORegistry::getDAO('ArticleEmailLogDAO');
+		$articleEmailLogDao =& DAORegistry::getDAO('ArticleEmailLogDAO');
 		$articleEmailLogDao->deleteArticleLogEntries($articleId);
 
-		$articleEventLogDao = &DAORegistry::getDAO('ArticleEventLogDAO');
+		$articleEventLogDao =& DAORegistry::getDAO('ArticleEventLogDAO');
 		$articleEventLogDao->deleteArticleLogEntries($articleId);
 
-		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
+		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
 		$suppFileDao->deleteSuppFilesByArticle($articleId);
 
 		// Delete article files -- first from the filesystem, then from the database
 		import('file.ArticleFileManager');
-		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-		$articleFiles = &$articleFileDao->getArticleFilesByArticle($articleId);
+		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+		$articleFiles =& $articleFileDao->getArticleFilesByArticle($articleId);
 
 		$articleFileManager = new ArticleFileManager($articleId);
 		foreach ($articleFiles as $articleFile) {
@@ -364,7 +364,7 @@ class ArticleDAO extends DAO {
 		$locale = Locale::getLocale();
 		$articles = array();
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT	a.*,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
@@ -400,7 +400,7 @@ class ArticleDAO extends DAO {
 		$articles = $this->getArticlesByJournalId($journalId);
 
 		while (!$articles->eof()) {
-			$article = &$articles->next();
+			$article =& $articles->next();
 			$this->deleteArticleById($article->getArticleId());
 		}
 	}
@@ -428,7 +428,7 @@ class ArticleDAO extends DAO {
 		if ($journalId) $params[] = $journalId;
 		$articles = array();
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT	a.*,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
@@ -444,7 +444,7 @@ class ArticleDAO extends DAO {
 		);
 
 		while (!$result->EOF) {
-			$articles[] = &$this->_returnArticleFromRow($result->GetRowAssoc(false));
+			$articles[] =& $this->_returnArticleFromRow($result->GetRowAssoc(false));
 			$result->MoveNext();
 		}
 
@@ -460,7 +460,7 @@ class ArticleDAO extends DAO {
 	 * @return int
 	 */
 	function getArticleJournalId($articleId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT journal_id FROM articles WHERE article_id = ?', $articleId
 		);
 		$returner = isset($result->fields[0]) ? $result->fields[0] : false;
@@ -479,7 +479,7 @@ class ArticleDAO extends DAO {
 	 * @return int the submission progress
 	 */
 	function incompleteSubmissionExists($articleId, $userId, $journalId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT submission_progress FROM articles WHERE article_id = ? AND user_id = ? AND journal_id = ? AND date_submitted IS NULL',
 			array($articleId, $userId, $journalId)
 		);

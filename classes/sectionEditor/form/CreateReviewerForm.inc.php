@@ -33,7 +33,7 @@ class CreateReviewerForm extends Form {
 		parent::Form('sectionEditor/createReviewerForm.tpl');
 		$this->addCheck(new FormValidatorPost($this));
 
-		$site = &Request::getSite();
+		$site =& Request::getSite();
 		$this->articleId = $articleId;
 
 		// Validation checks for this form
@@ -63,11 +63,11 @@ class CreateReviewerForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr = &TemplateManager::getManager();
-		$site = &Request::getSite();
+		$templateMgr =& TemplateManager::getManager();
+		$site =& Request::getSite();
 		$templateMgr->assign('articleId', $this->articleId);
 
-		$site = &Request::getSite();
+		$site =& Request::getSite();
 		$templateMgr->assign('availableLocales', $site->getSupportedLocaleNames());
 
 		$countryDao =& DAORegistry::getDAO('CountryDAO');
@@ -117,7 +117,7 @@ class CreateReviewerForm extends Form {
 	 * @return userId int
 	 */
 	function execute() {
-		$userDao = &DAORegistry::getDAO('UserDAO');
+		$userDao =& DAORegistry::getDAO('UserDAO');
 		$user = new User();
 
 		$user->setSalutation($this->getData('salutation'));
@@ -137,11 +137,11 @@ class CreateReviewerForm extends Form {
 		$user->setInterests($this->getData('interests'), null); // Localized
 		$user->setMustChangePassword($this->getData('mustChangePassword') ? 1 : 0);
 
-		$authDao = &DAORegistry::getDAO('AuthSourceDAO');
+		$authDao =& DAORegistry::getDAO('AuthSourceDAO');
 		$auth =& $authDao->getDefaultPlugin();
 		$user->setAuthId($auth?$auth->getAuthId():0);
 
-		$site = &Request::getSite();
+		$site =& Request::getSite();
 		$availableLocales = $site->getSupportedLocales();
 
 		$locales = array();
@@ -169,8 +169,8 @@ class CreateReviewerForm extends Form {
 		$user->setDateRegistered(Core::getCurrentDate());
 		$userId = $userDao->insertUser($user);
 
-		$roleDao = &DAORegistry::getDAO('RoleDAO');
-		$journal = &Request::getJournal();
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$journal =& Request::getJournal();
 		$role = new Role();
 		$role->setJournalId($journal->getJournalId());
 		$role->setUserId($userId);

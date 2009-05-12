@@ -66,9 +66,9 @@ class SectionEditorsDAO extends DAO {
 	function &getEditorsBySectionId($journalId, $sectionId) {
 		$users = array();
 
-		$userDao = &DAORegistry::getDAO('UserDAO');
+		$userDao =& DAORegistry::getDAO('UserDAO');
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT u.*, e.can_review AS can_review, e.can_edit AS can_edit FROM users AS u, section_editors AS e WHERE u.user_id = e.user_id AND e.journal_id = ? AND e.section_id = ? ORDER BY last_name, first_name',
 			array($journalId, $sectionId)
 		);
@@ -98,9 +98,9 @@ class SectionEditorsDAO extends DAO {
 	function &getEditorsNotInSection($journalId, $sectionId) {
 		$users = array();
 
-		$userDao = &DAORegistry::getDAO('UserDAO');
+		$userDao =& DAORegistry::getDAO('UserDAO');
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT	u.*
 			FROM	users u
 				LEFT JOIN roles r ON (r.user_id = u.user_id)
@@ -113,7 +113,7 @@ class SectionEditorsDAO extends DAO {
 		);
 
 		while (!$result->EOF) {
-			$users[] = &$userDao->_returnUserFromRow($result->GetRowAssoc(false));
+			$users[] =& $userDao->_returnUserFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
 
@@ -172,7 +172,7 @@ class SectionEditorsDAO extends DAO {
 	 * @return boolean
 	 */
 	function editorExists($journalId, $sectionId, $userId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT COUNT(*) FROM section_editors WHERE journal_id = ? AND section_id = ? AND user_id = ?', array($journalId, $sectionId, $userId)
 		);
 		$returner = isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;

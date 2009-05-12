@@ -58,8 +58,8 @@ class ArticleFileManager extends FileManager {
 	 */
 	function ArticleFileManager($articleId) {
 		$this->articleId = $articleId;
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$this->article = &$articleDao->getArticle($articleId);
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$this->article =& $articleDao->getArticle($articleId);
 		$journalId = $this->article->getJournalId();
 		$this->filesDir = Config::getVar('files', 'files_dir') . '/journals/' . $journalId .
 		'/articles/' . $articleId . '/';
@@ -211,8 +211,8 @@ class ArticleFileManager extends FileManager {
 	 * @return ArticleFile
 	 */
 	function &getFile($fileId, $revision = null) {
-		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-		$articleFile = &$articleFileDao->getArticleFile($fileId, $revision, $this->articleId);
+		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+		$articleFile =& $articleFileDao->getArticleFile($fileId, $revision, $this->articleId);
 		return $articleFile;
 	}
 
@@ -222,7 +222,7 @@ class ArticleFileManager extends FileManager {
 	 * @return boolean
 	 */
 	function readFile($fileId, $revision = null, $output = false) {
-		$articleFile = &$this->getFile($fileId, $revision);
+		$articleFile =& $this->getFile($fileId, $revision);
 
 		if (isset($articleFile)) {
 			$fileType = $articleFile->getFileType();
@@ -243,11 +243,11 @@ class ArticleFileManager extends FileManager {
 	 * @return int number of files removed
 	 */
 	function deleteFile($fileId, $revision = null) {
-		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
 
 		$files = array();
 		if (isset($revision)) {
-			$file = &$articleFileDao->getArticleFile($fileId, $revision);
+			$file =& $articleFileDao->getArticleFile($fileId, $revision);
 			if (isset($file)) {
 				$files[] = $file;
 			}
@@ -280,7 +280,7 @@ class ArticleFileManager extends FileManager {
 	 * @return boolean
 	 */
 	function downloadFile($fileId, $revision = null, $inline = false) {
-		$articleFile = &$this->getFile($fileId, $revision);
+		$articleFile =& $this->getFile($fileId, $revision);
 		if (isset($articleFile)) {
 			$fileType = $articleFile->getFileType();
 			$filePath = $this->filesDir . $articleFile->getType() . '/' . $articleFile->getFileName();
@@ -371,7 +371,7 @@ class ArticleFileManager extends FileManager {
 	function copyAndRenameFile($sourceFileId, $sourceRevision, $destType, $destFileId = null) {
 		if (HookRegistry::call('ArticleFileManager::copyAndRenameFile', array(&$sourceFileId, &$sourceRevision, &$destType, &$destFileId, &$result))) return $result;
 
-		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
 		$articleFile = new ArticleFile();
 
 		$destTypePath = $this->typeToPath($destType);
@@ -433,7 +433,7 @@ class ArticleFileManager extends FileManager {
 	 * @return object articleFile
 	 */
 	function &generateDummyFile(&$article) {
-		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
 		$articleFile = new ArticleFile();
 		$articleFile->setArticleId($article->getArticleId());
 		$articleFile->setFileName('temp');
@@ -455,7 +455,7 @@ class ArticleFileManager extends FileManager {
 	 * PRIVATE routine to remove all prior revisions of a file.
 	 */
 	function removePriorRevisions($fileId, $revision) {
-		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
 		$revisions = $articleFileDao->getArticleFileRevisions($fileId);
 		foreach ($revisions as $revisionFile) {
 			if ($revisionFile->getRevision() != $revision) {
@@ -489,7 +489,7 @@ class ArticleFileManager extends FileManager {
 	function handleUpload($fileName, $type, $fileId = null, $overwrite = false) {
 		if (HookRegistry::call('ArticleFileManager::handleUpload', array(&$fileName, &$type, &$fileId, &$overwrite, &$result))) return $result;
 
-		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
 
 		$typePath = $this->typeToPath($type);
 		$dir = $this->filesDir . $typePath . '/';
@@ -497,7 +497,7 @@ class ArticleFileManager extends FileManager {
 		if (!$fileId) {
 			// Insert dummy file to generate file id FIXME?
 			$dummyFile = true;
-			$articleFile = &$this->generateDummyFile($this->article);
+			$articleFile =& $this->generateDummyFile($this->article);
 		} else {
 			$dummyFile = false;
 			$articleFile = new ArticleFile();
@@ -544,7 +544,7 @@ class ArticleFileManager extends FileManager {
 	function handleWrite($fileName, &$contents, $mimeType, $type, $fileId = null, $overwrite = false) {
 		if (HookRegistry::call('ArticleFileManager::handleWrite', array(&$fileName, &$contents, &$mimeType, &$fileId, &$overwrite, &$result))) return $result;
 
-		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
 
 		$typePath = $this->typeToPath($type);
 		$dir = $this->filesDir . $typePath . '/';
@@ -552,7 +552,7 @@ class ArticleFileManager extends FileManager {
 		if (!$fileId) {
 			// Insert dummy file to generate file id FIXME?
 			$dummyFile = true;
-			$articleFile = &$this->generateDummyFile($this->article);
+			$articleFile =& $this->generateDummyFile($this->article);
 		} else {
 			$dummyFile = false;
 			$articleFile = new ArticleFile();
@@ -598,7 +598,7 @@ class ArticleFileManager extends FileManager {
 	function handleCopy($url, $mimeType, $type, $fileId = null, $overwrite = false) {
 		if (HookRegistry::call('ArticleFileManager::handleCopy', array(&$url, &$mimeType, &$type, &$fileId, &$overwrite, &$result))) return $result;
 
-		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
 
 		$typePath = $this->typeToPath($type);
 		$dir = $this->filesDir . $typePath . '/';
@@ -606,7 +606,7 @@ class ArticleFileManager extends FileManager {
 		if (!$fileId) {
 			// Insert dummy file to generate file id FIXME?
 			$dummyFile = true;
-			$articleFile = &$this->generateDummyFile($this->article);
+			$articleFile =& $this->generateDummyFile($this->article);
 		} else {
 			$dummyFile = false;
 			$articleFile = new ArticleFile();
@@ -649,12 +649,12 @@ class ArticleFileManager extends FileManager {
 	function temporaryFileToArticleFile(&$temporaryFile, $type, $assocId = null) {
 		if (HookRegistry::call('ArticleFileManager::temporaryFileToArticleFile', array(&$temporaryFile, &$type, &$assocId, &$result))) return $result;
 
-		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
 
 		$typePath = $this->typeToPath($type);
 		$dir = $this->filesDir . $typePath . '/';
 
-		$articleFile = &$this->generateDummyFile($this->article);
+		$articleFile =& $this->generateDummyFile($this->article);
 		$articleFile->setFileType($temporaryFile->getFileType());
 		$articleFile->setOriginalFileName($temporaryFile->getOriginalFileName());
 		$articleFile->setType($typePath);

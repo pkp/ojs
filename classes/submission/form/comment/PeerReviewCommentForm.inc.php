@@ -38,11 +38,11 @@ class PeerReviewCommentForm extends CommentForm {
 	 * Display the form.
 	 */
 	function display() {
-		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
-		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($this->reviewId);
-		$reviewLetters = &$reviewAssignmentDao->getReviewIndexesForRound($this->article->getArticleId(), $this->article->getCurrentRound());
+		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+		$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentById($this->reviewId);
+		$reviewLetters =& $reviewAssignmentDao->getReviewIndexesForRound($this->article->getArticleId(), $this->article->getCurrentRound());
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('commentType', 'peerReview');
 		$templateMgr->assign('pageTitle', 'submission.comments.review');
 		$templateMgr->assign('commentAction', 'postPeerReviewComment');
@@ -81,7 +81,7 @@ class PeerReviewCommentForm extends CommentForm {
 	function execute() {
 		// Personalized execute() method since now there are possibly two comments contained within each form submission.
 
-		$commentDao = &DAORegistry::getDAO('ArticleCommentDAO');
+		$commentDao =& DAORegistry::getDAO('ArticleCommentDAO');
 		$this->insertedComments = array();
 
 		// Assign all common information	

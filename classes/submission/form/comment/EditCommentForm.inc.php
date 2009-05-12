@@ -44,14 +44,14 @@ class EditCommentForm extends Form {
 		$this->roleId = $comment->getRoleId();
 
 		$this->article = $article;
-		$this->user = &Request::getUser();
+		$this->user =& Request::getUser();
 	}
 
 	/**
 	 * Initialize form data from current comment.
 	 */
 	function initData() {
-		$comment = &$this->comment;
+		$comment =& $this->comment;
 		$this->_data = array(
 			'commentId' => $comment->getCommentId(),
 			'commentTitle' => $comment->getCommentTitle(),
@@ -72,7 +72,7 @@ class EditCommentForm extends Form {
 			$hiddenFormParams = array_merge ($hiddenFormParams, $additionalHiddenParams);
 		}
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 
 		$isPeerReviewComment = $this->comment->getCommentType() == COMMENT_TYPE_PEER_REVIEW;
 		$templateMgr->assign('isPeerReviewComment', $isPeerReviewComment); // FIXME
@@ -99,7 +99,7 @@ class EditCommentForm extends Form {
 	 * Update the comment.
 	 */
 	function execute() {
-		$commentDao = &DAORegistry::getDAO('ArticleCommentDAO');
+		$commentDao =& DAORegistry::getDAO('ArticleCommentDAO');
 
 		// Update comment		
 		$comment = $this->comment;
@@ -116,16 +116,16 @@ class EditCommentForm extends Form {
 	 * @return $recipients array of recipients (email address => name)
 	 */
 	function emailHelper() {
-		$roleDao = &DAORegistry::getDAO('RoleDAO');
-		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
-		$userDao = &DAORegistry::getDAO('UserDAO');
-		$journal = &Request::getJournal();
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$userDao =& DAORegistry::getDAO('UserDAO');
+		$journal =& Request::getJournal();
 
 		$recipients = array();
 
 		// Get editors for article
-		$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
-		$editAssignments = &$editAssignmentDao->getEditAssignmentsByArticleId($this->article->getArticleId());
+		$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
+		$editAssignments =& $editAssignmentDao->getEditAssignmentsByArticleId($this->article->getArticleId());
 		$editAssignments =& $editAssignments->toArray();
 		$editorAddresses = array();
 		foreach ($editAssignments as $editAssignment) {
@@ -135,9 +135,9 @@ class EditCommentForm extends Form {
 		// If no editors are currently assigned, send this message to
 		// all of the journal's editors.
 		if (empty($editorAddresses)) {
-			$editors = &$roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getJournalId());
+			$editors =& $roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getJournalId());
 			while (!$editors->eof()) {
-				$editor = &$editors->next();
+				$editor =& $editors->next();
 				$editorAddresses[$editor->getEmail()] = $editor->getFullName();
 			}
 		}
@@ -145,7 +145,7 @@ class EditCommentForm extends Form {
 		// Get proofreader
 		$proofSignoff = $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $this->article->getArticleId());
 		if ($proofSignoff != null && $proofSignoff->getUserId() > 0) {
-			$proofreader = &$userDao->getUser($proofSignoff->getUserId());
+			$proofreader =& $userDao->getUser($proofSignoff->getUserId());
 		} else {
 			$proofreader = null;
 		}
@@ -153,7 +153,7 @@ class EditCommentForm extends Form {
 		// Get layout editor
 		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $this->article->getArticleId());
 		if ($layoutSignoff != null && $layoutSignoff->getUserId() > 0) {
-			$layoutEditor = &$userDao->getUser($layoutSignoff->getUserId());
+			$layoutEditor =& $userDao->getUser($layoutSignoff->getUserId());
 		} else {
 			$layoutEditor = null;
 		}
@@ -161,22 +161,22 @@ class EditCommentForm extends Form {
 		// Get copyeditor
 		$copySignoff = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $this->article->getArticleId());
 		if ($copySignoff != null && $copySignoff->getUserId() > 0) {
-			$copyeditor = &$userDao->getUser($copySignoff->getUserId());
+			$copyeditor =& $userDao->getUser($copySignoff->getUserId());
 		} else {
 			$copyeditor = null;
 		}
 
 		// Get reviewer
-		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
-		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($this->comment->getAssocId());
+		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+		$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentById($this->comment->getAssocId());
 		if ($reviewAssignment != null && $reviewAssignment->getReviewerId() != null) {
-			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
+			$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId());
 		} else {
 			$reviewer = null;
 		}
 
 		// Get author
-		$author = &$userDao->getUser($this->article->getUserId());
+		$author =& $userDao->getUser($this->article->getUserId());
 
 		switch ($this->comment->getCommentType()) {
 		case COMMENT_TYPE_PEER_REVIEW:

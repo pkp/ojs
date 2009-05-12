@@ -53,7 +53,7 @@ class CommentForm extends Form {
 		$this->roleId = $roleId;
 		$this->assocId = $assocId == null ? $article->getArticleId() : $assocId;
 
-		$this->user = &Request::getUser();
+		$this->user =& Request::getUser();
 
 		if ($commentType != COMMENT_TYPE_PEER_REVIEW) $this->addCheck(new FormValidator($this, 'comments', 'required', 'editor.article.commentsRequired'));
 		$this->addCheck(new FormValidatorPost($this));
@@ -73,10 +73,10 @@ class CommentForm extends Form {
 	function display() {
 		$article = $this->article;
 
-		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-		$articleComments = &$articleCommentDao->getArticleComments($article->getArticleId(), $this->commentType, $this->assocId);
+		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
+		$articleComments =& $articleCommentDao->getArticleComments($article->getArticleId(), $this->commentType, $this->assocId);
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', $article->getArticleId());
 		$templateMgr->assign('commentTitle', strip_tags($article->getLocalizedTitle()));
 		$templateMgr->assign('userId', $this->user->getUserId());
@@ -102,7 +102,7 @@ class CommentForm extends Form {
 	 * Add the comment.
 	 */
 	function execute() {
-		$commentDao = &DAORegistry::getDAO('ArticleCommentDAO');
+		$commentDao =& DAORegistry::getDAO('ArticleCommentDAO');
 		$article = $this->article;
 
 		// Insert new comment		
@@ -126,8 +126,8 @@ class CommentForm extends Form {
 	 */
 	function email($recipients) {
 		$article = $this->article;
-		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-		$journal = &Request::getJournal();
+		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
+		$journal =& Request::getJournal();
 
 		import('mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($article, 'SUBMISSION_COMMENT');

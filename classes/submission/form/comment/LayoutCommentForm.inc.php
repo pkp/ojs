@@ -31,7 +31,7 @@ class LayoutCommentForm extends CommentForm {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('pageTitle', 'submission.comments.comments');
 		$templateMgr->assign('commentAction', 'postLayoutComment');
 		$templateMgr->assign('commentType', 'layout');
@@ -62,9 +62,9 @@ class LayoutCommentForm extends CommentForm {
 	 * Email the comment.
 	 */
 	function email() {
-		$roleDao = &DAORegistry::getDAO('RoleDAO');
-		$userDao = &DAORegistry::getDAO('UserDAO');
-		$journal = &Request::getJournal();
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$userDao =& DAORegistry::getDAO('UserDAO');
+		$journal =& Request::getJournal();
 
 		// Create list of recipients:
 
@@ -74,19 +74,19 @@ class LayoutCommentForm extends CommentForm {
 
 		if ($this->roleId == ROLE_ID_EDITOR || $this->roleId == ROLE_ID_SECTION_EDITOR) {
 			// Then add layout editor
-			$signoffDao = &DAORegistry::getDAO('SignoffDAO');
+			$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 			$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $article->getArticleId());
 
 			// Check to ensure that there is a layout editor assigned to this article.
 			if ($layoutSignoff != null && $layoutSignoff->getUserId() > 0) {
-				$user = &$userDao->getUser($layoutSignoff->getUserId());
+				$user =& $userDao->getUser($layoutSignoff->getUserId());
 
 				if ($user) $recipients = array_merge($recipients, array($user->getEmail() => $user->getFullName()));
 			}
 		} else {
 			// Then add editor
-			$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
-			$editAssignments = &$editAssignmentDao->getEditAssignmentsByArticleId($this->article->getArticleId());
+			$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
+			$editAssignments =& $editAssignmentDao->getEditAssignmentsByArticleId($this->article->getArticleId());
 			$editorAddresses = array();
 			while (!$editAssignments->eof()) {
 				$editAssignment =& $editAssignments->next();
@@ -97,9 +97,9 @@ class LayoutCommentForm extends CommentForm {
 			// If no editors are currently assigned to this article,
 			// send the email to all editors for the journal
 			if (empty($editorAddresses)) {
-				$editors = &$roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getJournalId());
+				$editors =& $roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getJournalId());
 				while (!$editors->eof()) {
-					$editor = &$editors->next();
+					$editor =& $editors->next();
 					$editorAddresses[$editor->getEmail()] = $editor->getFullName();
 				}
 			}

@@ -40,13 +40,13 @@ class ArticleFileDAO extends DAO {
 		}
 		if ($revision == null) {
 			if ($articleId != null) {
-				$result = &$this->retrieveLimit(
+				$result =& $this->retrieveLimit(
 					'SELECT a.* FROM article_files a WHERE file_id = ? AND article_id = ? ORDER BY revision DESC',
 					array($fileId, $articleId),
 					1
 				);
 			} else {
-				$result = &$this->retrieveLimit(
+				$result =& $this->retrieveLimit(
 					'SELECT a.* FROM article_files a WHERE file_id = ? ORDER BY revision DESC',
 					$fileId,
 					1
@@ -55,12 +55,12 @@ class ArticleFileDAO extends DAO {
 
 		} else {
 			if ($articleId != null) {
-				$result = &$this->retrieve(
+				$result =& $this->retrieve(
 					'SELECT a.* FROM article_files a WHERE file_id = ? AND revision = ? AND article_id = ?',
 					array($fileId, $revision, $articleId)
 				);
 			} else {
-				$result = &$this->retrieve(
+				$result =& $this->retrieve(
 					'SELECT a.* FROM article_files a WHERE file_id = ? AND revision = ?',
 					array($fileId, $revision)
 				);
@@ -69,7 +69,7 @@ class ArticleFileDAO extends DAO {
 
 		$returner = null;
 		if (isset($result) && $result->RecordCount() != 0) {
-			$returner = &$this->_returnArticleFileFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnArticleFileFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -92,19 +92,19 @@ class ArticleFileDAO extends DAO {
 
 		// FIXME If "round" is review-specific, it shouldn't be in this table
 		if ($round == null) {
-			$result = &$this->retrieve(
+			$result =& $this->retrieve(
 				'SELECT a.* FROM article_files a WHERE file_id = ? ORDER BY revision',
 				$fileId
 			);
 		} else {
-			$result = &$this->retrieve(
+			$result =& $this->retrieve(
 				'SELECT a.* FROM article_files a WHERE file_id = ? AND round = ? ORDER BY revision',
 				array($fileId, $round)
 			);
 		}
 
 		while (!$result->EOF) {
-			$articleFiles[] = &$this->_returnArticleFileFromRow($result->GetRowAssoc(false));
+			$articleFiles[] =& $this->_returnArticleFileFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
 
@@ -127,19 +127,19 @@ class ArticleFileDAO extends DAO {
 		$articleFiles = array();
 
 		if ($end == null) {
-			$result = &$this->retrieve(
+			$result =& $this->retrieve(
 				'SELECT a.* FROM article_files a WHERE file_id = ? AND revision >= ?',
 				array($fileId, $start)
 			);
 		} else {
-			$result = &$this->retrieve(
+			$result =& $this->retrieve(
 				'SELECT a.* FROM article_files a WHERE file_id = ? AND revision >= ? AND revision <= ?',
 				array($fileId, $start, $end)
 			);		
 		}
 
 		while (!$result->EOF) {
-			$articleFiles[] = &$this->_returnArticleFileFromRow($result->GetRowAssoc(false));
+			$articleFiles[] =& $this->_returnArticleFileFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
 
@@ -159,7 +159,7 @@ class ArticleFileDAO extends DAO {
 			$returner = null;
 			return $returner;
 		}
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT MAX(revision) AS max_revision FROM article_files a WHERE file_id = ?',
 			$fileId
 		);
@@ -185,13 +185,13 @@ class ArticleFileDAO extends DAO {
 	function &getArticleFilesByArticle($articleId) {
 		$articleFiles = array();
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT * FROM article_files WHERE article_id = ?',
 			$articleId
 		);
 
 		while (!$result->EOF) {
-			$articleFiles[] = &$this->_returnArticleFileFromRow($result->GetRowAssoc(false));
+			$articleFiles[] =& $this->_returnArticleFileFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
 
@@ -211,13 +211,13 @@ class ArticleFileDAO extends DAO {
 		import('file.ArticleFileManager');
 		$articleFiles = array();
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT * FROM article_files WHERE assoc_id = ? AND type = ?',
 			array($assocId, ArticleFileManager::typeToPath($type))
 		);
 
 		while (!$result->EOF) {
-			$articleFiles[] = &$this->_returnArticleFileFromRow($result->GetRowAssoc(false));
+			$articleFiles[] =& $this->_returnArticleFileFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
 

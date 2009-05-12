@@ -45,7 +45,7 @@ class AuthSourceSettingsForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('authId', $this->authId);
 		$templateMgr->assign('helpTopicId', 'site.siteManagement');
 
@@ -61,8 +61,8 @@ class AuthSourceSettingsForm extends Form {
 	 * Initialize form data from current settings.
 	 */
 	function initData() {
-		$authDao = &DAORegistry::getDAO('AuthSourceDAO');
-		$auth = &$authDao->getSource($this->authId);
+		$authDao =& DAORegistry::getDAO('AuthSourceDAO');
+		$auth =& $authDao->getSource($this->authId);
 
 		if ($auth != null) {
 			$this->_data = array(
@@ -70,7 +70,7 @@ class AuthSourceSettingsForm extends Form {
 				'title' => $auth->getTitle(),
 				'settings' => $auth->getSettings()
 			);
-			$this->plugin = &$auth->getPluginClass();
+			$this->plugin =& $auth->getPluginClass();
 		}
 	}
 
@@ -85,7 +85,7 @@ class AuthSourceSettingsForm extends Form {
 	 * Save journal settings.
 	 */
 	function execute() {
-		$authDao = &DAORegistry::getDAO('AuthSourceDAO');
+		$authDao =& DAORegistry::getDAO('AuthSourceDAO');
 
 		$auth = new AuthSource();
 		$auth->setAuthId($this->authId);

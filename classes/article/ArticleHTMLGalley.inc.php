@@ -47,7 +47,7 @@ class ArticleHTMLGalley extends ArticleGalley {
 		$journal =& Request::getJournal();
 
 		// Replace media file references
-		$images = &$this->getImageFiles();
+		$images =& $this->getImageFiles();
 
 		foreach ($images as $image) {
 			$imageUrl = Request::url(null, 'article', 'viewFile', array($this->getArticleId(), $this->getBestGalleyId($journal), $image->getFileId()));
@@ -177,7 +177,7 @@ class ArticleHTMLGalley extends ArticleGalley {
 				break;
 			case 'public':
 					array_shift($urlParts);
-					$journal = &Request::getJournal();
+					$journal =& Request::getJournal();
 					import ('file.PublicFileManager');
 					$publicFileManager = new PublicFileManager();
 					$url = Request::getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/' . implode('/', $urlParts) . ($anchor?'#' . $anchor:'');
@@ -224,7 +224,7 @@ class ArticleHTMLGalley extends ArticleGalley {
 	 * @return ArticleFile
 	 */
 	function &getStyleFile() {
-		$styleFile = &$this->getData('styleFile');
+		$styleFile =& $this->getData('styleFile');
 		return $styleFile;
 	}
 
@@ -241,7 +241,7 @@ class ArticleHTMLGalley extends ArticleGalley {
 	 * @return array
 	 */
 	function &getImageFiles() {
-		$images = &$this->getData('images');
+		$images =& $this->getData('images');
 		return $images;
 	}
 

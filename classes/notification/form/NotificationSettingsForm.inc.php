@@ -68,8 +68,8 @@ class NotificationSettingsForm extends PKPNotificationSettingsForm {
 	 * Display the form.
 	 */
 	function display() {
-		$journalDao = &DAORegistry::getDAO('JournalDAO');
-		$journals = &$journalDao->getJournalTitles();
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journals =& $journalDao->getJournalTitles();
 		
 		$canOnlyRead = true;
 		$canOnlyReview = false;
@@ -83,7 +83,7 @@ class NotificationSettingsForm extends PKPNotificationSettingsForm {
 			$canOnlyReview = false;
 		}
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('canOnlyRead', $canOnlyRead);
 		$templateMgr->assign('canOnlyReview', $canOnlyReview);
 		return parent::display();

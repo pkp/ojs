@@ -31,9 +31,9 @@ class SiteSettingsForm extends PKPSiteSettingsForm {
 	 * Display the form.
 	 */
 	function display() {
-		$journalDao = &DAORegistry::getDAO('JournalDAO');
-		$journals = &$journalDao->getJournalTitles();
-		$templateMgr = &TemplateManager::getManager();
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journals =& $journalDao->getJournalTitles();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('redirectOptions', $journals);
 		return parent::display();
 	}

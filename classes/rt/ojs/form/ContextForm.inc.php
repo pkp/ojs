@@ -35,8 +35,8 @@ class ContextForm extends Form {
 		parent::Form('rtadmin/context.tpl');
 		$this->addCheck(new FormValidatorPost($this));
 
-		$rtDao = &DAORegistry::getDAO('RTDAO');
-		$this->context = &$rtDao->getContext($contextId);
+		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$this->context =& $rtDao->getContext($contextId);
 
 		$this->versionId = $versionId;
 
@@ -50,7 +50,7 @@ class ContextForm extends Form {
 	 */
 	function initData() {
 		if (isset($this->context)) {
-			$context = &$this->context;
+			$context =& $this->context;
 			$this->_data = array(
 				'abbrev' => $context->getAbbrev(),
 				'title' => $context->getTitle(),
@@ -70,8 +70,8 @@ class ContextForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$journal = &Request::getJournal();
-		$templateMgr = &TemplateManager::getManager();
+		$journal =& Request::getJournal();
+		$templateMgr =& TemplateManager::getManager();
 
 		$templateMgr->assign('versionId', $this->versionId);
 
@@ -107,7 +107,7 @@ class ContextForm extends Form {
 	 * @return int the context ID
 	 */
 	function execute() {
-		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$rtDao =& DAORegistry::getDAO('RTDAO');
 
 		$context = $this->context;
 		if (!isset($context)) {

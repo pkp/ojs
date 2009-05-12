@@ -38,8 +38,8 @@ class SearchForm extends Form {
 		parent::Form('rtadmin/search.tpl');
 		$this->addCheck(new FormValidatorPost($this));
 
-		$rtDao = &DAORegistry::getDAO('RTDAO');
-		$this->search = &$rtDao->getSearch($searchId);
+		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$this->search =& $rtDao->getSearch($searchId);
 
 		$this->contextId = $contextId;
 		$this->versionId = $versionId;
@@ -54,7 +54,7 @@ class SearchForm extends Form {
 	 */
 	function initData() {
 		if (isset($this->search)) {
-			$search = &$this->search;
+			$search =& $this->search;
 			$this->_data = array(
 				'url' => $search->getUrl(),
 				'title' => $search->getTitle(),
@@ -72,8 +72,8 @@ class SearchForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$journal = &Request::getJournal();
-		$templateMgr = &TemplateManager::getManager();
+		$journal =& Request::getJournal();
+		$templateMgr =& TemplateManager::getManager();
 
 		$templateMgr->assign('contextId', $this->contextId);
 		$templateMgr->assign('versionId', $this->versionId);
@@ -109,7 +109,7 @@ class SearchForm extends Form {
 	 * @return int the search ID
 	 */
 	function execute() {
-		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$rtDao =& DAORegistry::getDAO('RTDAO');
 
 		$search = $this->search;
 		if (!isset($search)) {

@@ -86,8 +86,8 @@ function handleRequest() {
 
 	if (!defined('SESSION_DISABLE_INIT')) {
 		// Initialize session
-		$sessionManager = &SessionManager::getManager();
-		$session = &$sessionManager->getUserSession();
+		$sessionManager =& SessionManager::getManager();
+		$session =& $sessionManager->getUserSession();
 	}
 
 	$methods = array_map('strtolower', get_class_methods(HANDLER_CLASS));

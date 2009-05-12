@@ -452,12 +452,12 @@ class Article extends Submission {
 	 */
 	function getAssociatedUserIds($authors = true, $reviewers = true, $editors = true, $proofreader = true, $copyeditor = true, $layoutEditor = true) {
 		$articleId = $this->getArticleId();
-		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
+		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 		
 		$userIds = array();
 
 		if($authors) {
-			$authorDao = &DAORegistry::getDAO('AuthorDAO');
+			$authorDao =& DAORegistry::getDAO('AuthorDAO');
 			$authors = $authorDao->getAuthorsByArticle($articleId);
 			foreach ($authors as $author) {
 				$userIds[] = array('id' => $author->getId(), 'role' => 'author');

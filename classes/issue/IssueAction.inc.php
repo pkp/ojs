@@ -37,8 +37,8 @@ class IssueAction {
 	function smartyPrintIssueId($params, &$smarty) {
 		if (isset($params) && !empty($params)) {
 			if (isset($params['articleId'])) {
-				$issueDao = &DAORegistry::getDAO('IssueDAO');
-				$issue = &$issueDao->getIssueByArticleId($params['articleId']);
+				$issueDao =& DAORegistry::getDAO('IssueDAO');
+				$issue =& $issueDao->getIssueByArticleId($params['articleId']);
 				if ($issue != null) {
 					return $issue->getIssueIdentification();
 				}
@@ -55,7 +55,7 @@ class IssueAction {
 		$currentJournal =& Request::getJournal();
 		if (!$issue) return false;
 		if (!$currentJournal || $currentJournal->getJournalId() !== $issue->getJournalId()) {
-			$journalDao = &DAORegistry::getDAO('JournalDAO');
+			$journalDao =& DAORegistry::getDAO('JournalDAO');
 			$journal =& $journalDao->getJournal($issue->getJournalId());
 		} else {
 			$journal =& $currentJournal;
@@ -133,8 +133,8 @@ class IssueAction {
 						$result = $subscriptionDao->isValidSubscription(null, null, $user->getUserId(), $journal->getJournalId(), SUBSCRIPTION_DATE_END, $publishedArticle->getDatePublished());
 					}
 				} else if (isset($issueId)) {
-					$issueDao = &DAORegistry::getDAO('IssueDAO');
-					$issue = &$issueDao->getIssueById($issueId);
+					$issueDao =& DAORegistry::getDAO('IssueDAO');
+					$issue =& $issueDao->getIssueById($issueId);
 					if (isset($issue) && $issue->getPublished()) {
 						import('subscription.SubscriptionDAO');
 						$result = $subscriptionDao->isValidSubscription(null, null, $user->getUserId(), $journal->getJournalId(), SUBSCRIPTION_DATE_END, $issue->getDatePublished());
@@ -151,7 +151,7 @@ class IssueAction {
 	 * @return bool
 	 */
 	function subscribedDomain(&$journal, $issueId = null, $articleId = null) {
-		$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
+		$subscriptionDao =& DAORegistry::getDAO('SubscriptionDAO');
 		$result = false;
 		if (isset($journal)) {
 			$result = $subscriptionDao->isValidSubscription(Request::getRemoteDomain(), Request::getRemoteAddr(), null, $journal->getJournalId());
@@ -160,15 +160,15 @@ class IssueAction {
 			// that was valid during publication date of requested content
 			if (!$result && $journal->getSetting('subscriptionExpiryPartial')) {
 				if (isset($articleId)) {
-					$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-					$publishedArticle = &$publishedArticleDao->getPublishedArticleByArticleId($articleId); 
+					$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+					$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId); 
 					if (isset($publishedArticle)) {
 						import('subscription.SubscriptionDAO');
 						$result = $subscriptionDao->isValidSubscription(Request::getRemoteDomain(), Request::getRemoteAddr(), null, $journal->getJournalId(), SUBSCRIPTION_DATE_END, $publishedArticle->getDatePublished());
 					}
 				} else if (isset($issueId)) {
-					$issueDao = &DAORegistry::getDAO('IssueDAO');
-					$issue = &$issueDao->getIssueById($issueId);
+					$issueDao =& DAORegistry::getDAO('IssueDAO');
+					$issue =& $issueDao->getIssueById($issueId);
 					if (isset($issue) && $issue->getPublished()) {
 						import('subscription.SubscriptionDAO');
 						$result = $subscriptionDao->isValidSubscription(Request::getRemoteDomain(), Request::getRemoteAddr(), null, $journal->getJournalId(), SUBSCRIPTION_DATE_END, $issue->getDatePublished());
@@ -188,15 +188,15 @@ class IssueAction {
 	function getIssueOptions() {
 		$issueOptions = array();
 
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		$journalId = $journal->getJournalId();
 
-		$issueDao = &DAORegistry::getDAO('IssueDAO');
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
 
 		$issueOptions['-100'] =  '------    ' . Locale::translate('editor.issues.futureIssues') . '    ------';
 		$issueIterator = $issueDao->getUnpublishedIssues($journalId);
 		while (!$issueIterator->eof()) {
-			$issue = &$issueIterator->next();
+			$issue =& $issueIterator->next();
 			$issueOptions[$issue->getIssueId()] = $issue->getIssueIdentification();
 		}
 		$issueOptions['-101'] = '------    ' . Locale::translate('editor.issues.currentIssue') . '    ------';

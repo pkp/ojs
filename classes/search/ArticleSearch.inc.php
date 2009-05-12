@@ -114,7 +114,7 @@ class ArticleSearch {
 			if (!empty($keyword['-']))
 				$mergedKeywords['-'][] = array('type' => $type, '+' => array(), '' => $keyword['-'], '-' => array());
 		}
-		$mergedResults = &ArticleSearch::_getMergedKeywordResults($journal, $mergedKeywords, null, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours);
+		$mergedResults =& ArticleSearch::_getMergedKeywordResults($journal, $mergedKeywords, null, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours);
 
 		$resultCount = count($mergedResults);
 		return $mergedResults;
@@ -131,7 +131,7 @@ class ArticleSearch {
 		}
 
 		foreach ($keyword['+'] as $phrase) {
-			$results = &ArticleSearch::_getMergedPhraseResults($journal, $phrase, $type, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours);
+			$results =& ArticleSearch::_getMergedPhraseResults($journal, $phrase, $type, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours);
 			if ($mergedResults === null) {
 				$mergedResults = $results;
 			} else {
@@ -151,7 +151,7 @@ class ArticleSearch {
 
 		if (!empty($mergedResults) || empty($keyword['+'])) {
 			foreach ($keyword[''] as $phrase) {
-				$results = &ArticleSearch::_getMergedPhraseResults($journal, $phrase, $type, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours);
+				$results =& ArticleSearch::_getMergedPhraseResults($journal, $phrase, $type, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours);
 				foreach ($results as $articleId => $count) {
 					if (isset($mergedResults[$articleId])) {
 						$mergedResults[$articleId] += $count;
@@ -162,7 +162,7 @@ class ArticleSearch {
 			}
 
 			foreach ($keyword['-'] as $phrase) {
-				$results = &ArticleSearch::_getMergedPhraseResults($journal, $phrase, $type, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours);
+				$results =& ArticleSearch::_getMergedPhraseResults($journal, $phrase, $type, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours);
 				foreach ($results as $articleId => $count) {
 					if (isset($mergedResults[$articleId])) {
 						unset($mergedResults[$articleId]);
@@ -179,13 +179,13 @@ class ArticleSearch {
 	 */
 	function &_getMergedPhraseResults(&$journal, &$phrase, $type, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours) {
 		if (isset($phrase['+'])) {
-			$mergedResults = &ArticleSearch::_getMergedKeywordResults($journal, $phrase, $type, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours);
+			$mergedResults =& ArticleSearch::_getMergedKeywordResults($journal, $phrase, $type, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours);
 			return $mergedResults;
 		}
 
 		$mergedResults = array();
-		$articleSearchDao = &DAORegistry::getDAO('ArticleSearchDAO');
-		$results = &$articleSearchDao->getPhraseResults(
+		$articleSearchDao =& DAORegistry::getDAO('ArticleSearchDAO');
+		$results =& $articleSearchDao->getPhraseResults(
 			$journal,
 			$phrase,
 			$publishedFrom,
@@ -195,7 +195,7 @@ class ArticleSearch {
 			$resultCacheHours
 		);
 		while (!$results->eof()) {
-			$result = &$results->next();
+			$result =& $results->next();
 			$articleId = $result['article_id'];
 			if (!isset($mergedResults[$articleId])) {
 				$mergedResults[$articleId] = $result['count'];
@@ -228,11 +228,11 @@ class ArticleSearch {
 	 * results for the title index, and possibly elsewhere.
 	 */
 	function &formatResults(&$results) {
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-		$issueDao = &DAORegistry::getDAO('IssueDAO');
-		$journalDao = &DAORegistry::getDAO('JournalDAO');
-		$sectionDao = &DAORegistry::getDAO('SectionDAO');
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 
 		$publishedArticleCache = array();
 		$articleCache = array();
@@ -245,12 +245,12 @@ class ArticleSearch {
 		foreach ($results as $articleId) {
 			// Get the article, storing in cache if necessary.
 			if (!isset($articleCache[$articleId])) {
-				$publishedArticleCache[$articleId] = &$publishedArticleDao->getPublishedArticleByArticleId($articleId);
-				$articleCache[$articleId] = &$articleDao->getArticle($articleId);
+				$publishedArticleCache[$articleId] =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
+				$articleCache[$articleId] =& $articleDao->getArticle($articleId);
 			}
 			unset($article, $publishedArticle);
-			$article = &$articleCache[$articleId];
-			$publishedArticle = &$publishedArticleCache[$articleId];
+			$article =& $articleCache[$articleId];
+			$publishedArticle =& $publishedArticleCache[$articleId];
 
 			if ($publishedArticle && $article) {
 				$sectionId = $article->getSectionId();
@@ -268,8 +268,8 @@ class ArticleSearch {
 				$issueId = $publishedArticle->getIssueId();
 				if (!isset($issueCache[$issueId])) {
 					unset($issue);
-					$issue = &$issueDao->getIssueById($issueId);
-					$issueCache[$issueId] = &$issue;
+					$issue =& $issueDao->getIssueById($issueId);
+					$issueCache[$issueId] =& $issue;
 					import('issue.IssueAction');
 					$issueAvailabilityCache[$issueId] = !IssueAction::subscriptionRequired($issue) || IssueAction::subscribedUser($journalCache[$journalId], $issueId, $articleId) || IssueAction::subscribedDomain($journalCache[$journalId], $issueId, $articleId);
 				}
@@ -307,7 +307,7 @@ class ArticleSearch {
 		// = sum of all the occurences for all keywords associated with
 		// that article ID.
 		// resultCount contains the sum of result counts for all keywords.
-		$mergedResults = &ArticleSearch::_getMergedArray($journal, $keywords, $publishedFrom, $publishedTo, $resultCount);
+		$mergedResults =& ArticleSearch::_getMergedArray($journal, $keywords, $publishedFrom, $publishedTo, $resultCount);
 
 		// Convert mergedResults into an array (frequencyIndicator =>
 		// $articleId).
@@ -315,7 +315,7 @@ class ArticleSearch {
 		// where higher is better, indicating the quality of the match.
 		// It is generated here in such a manner that matches with
 		// identical frequency do not collide.
-		$results = &ArticleSearch::_getSparseArray($mergedResults, $resultCount);
+		$results =& ArticleSearch::_getSparseArray($mergedResults, $resultCount);
 
 		$totalResults = count($results);
 

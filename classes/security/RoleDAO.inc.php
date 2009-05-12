@@ -24,7 +24,7 @@ class RoleDAO extends DAO {
 	 */
 	function RoleDAO() {
 		parent::DAO();
-		$this->userDao = &DAORegistry::getDAO('UserDAO');
+		$this->userDao =& DAORegistry::getDAO('UserDAO');
 	}
 
 	/**
@@ -35,7 +35,7 @@ class RoleDAO extends DAO {
 	 * @return Role
 	 */
 	function &getRole($journalId, $userId, $roleId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT * FROM roles WHERE journal_id = ? AND user_id = ? AND role_id = ?',
 			array(
 				(int) $journalId,
@@ -46,7 +46,7 @@ class RoleDAO extends DAO {
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnRoleFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnRoleFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -113,13 +113,13 @@ class RoleDAO extends DAO {
 	function &getRolesByUserId($userId, $journalId = null) {
 		$roles = array();
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT * FROM roles WHERE user_id = ?' . (isset($journalId) ? ' AND journal_id = ?' : ''),
 			isset($journalId) ? array((int) $userId, (int) $journalId) : ((int) $userId)
 		);
 
 		while (!$result->EOF) {
-			$roles[] = &$this->_returnRoleFromRow($result->GetRowAssoc(false));
+			$roles[] =& $this->_returnRoleFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
 
@@ -189,7 +189,7 @@ class RoleDAO extends DAO {
 
 		$searchSql .= ' ORDER BY u.last_name, u.first_name'; // FIXME Add "sort field" parameter?
 
-		$result = &$this->retrieveRange(
+		$result =& $this->retrieveRange(
 			'SELECT DISTINCT u.* FROM users AS u LEFT JOIN user_settings s ON (u.user_id = s.user_id AND s.setting_name = ?), roles AS r WHERE u.user_id = r.user_id ' . (isset($roleId)?'AND r.role_id = ?':'') . (isset($journalId) ? ' AND r.journal_id = ?' : '') . ' ' . $searchSql,
 			$paramArray,
 			$dbResultRange
@@ -251,7 +251,7 @@ class RoleDAO extends DAO {
 
 		$searchSql .= ' ORDER BY u.last_name, u.first_name'; // FIXME Add "sort field" parameter?
 
-		$result = &$this->retrieveRange(
+		$result =& $this->retrieveRange(
 
 			'SELECT DISTINCT u.* FROM users AS u LEFT JOIN user_settings s ON (u.user_id = s.user_id AND s.setting_name = ?), roles AS r WHERE u.user_id = r.user_id AND r.journal_id = ? ' . $searchSql,
 			$paramArray,
@@ -268,9 +268,9 @@ class RoleDAO extends DAO {
 	 * @return int
 	 */
 	function getJournalUsersCount($journalId) {
-		$userDao = &DAORegistry::getDAO('UserDAO');
+		$userDao =& DAORegistry::getDAO('UserDAO');
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT COUNT(DISTINCT(user_id)) FROM roles WHERE journal_id = ?',
 			(int) $journalId
 		);
@@ -300,7 +300,7 @@ class RoleDAO extends DAO {
 			$conditions[] = 'role_id = ?';
 		}
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT * FROM roles' . (empty($conditions) ? '' : ' WHERE ' . join(' AND ', $conditions)),
 			$params
 		);
@@ -342,7 +342,7 @@ class RoleDAO extends DAO {
 	 * @return boolean
 	 */
 	function roleExists($journalId, $userId, $roleId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT COUNT(*) FROM roles WHERE journal_id = ? AND user_id = ? AND role_id = ?', array((int) $journalId, (int) $userId, (int) $roleId)
 		);
 		$returner = isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;

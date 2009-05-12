@@ -60,7 +60,7 @@ class JournalStatisticsDAO extends DAO {
 			$sectionSql .
 			' ORDER BY a.article_id, d.date_decided DESC';
 
-		$result = &$this->retrieve($sql, $params);
+		$result =& $this->retrieve($sql, $params);
 
 		$returner = array(
 			'numSubmissions' => 0,
@@ -155,7 +155,7 @@ class JournalStatisticsDAO extends DAO {
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 
 		// Get count of total users for this journal
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT COUNT(DISTINCT r.user_id) FROM roles r, users u WHERE r.user_id = u.user_id AND r.journal_id = ?' .
 			($dateStart !== null ? ' AND u.date_registered >= ' . $this->datetimeToDB($dateStart) : '') .
 			($dateEnd !== null ? ' AND u.date_registered <= ' . $this->datetimeToDB($dateEnd) : ''),
@@ -170,7 +170,7 @@ class JournalStatisticsDAO extends DAO {
 		unset($result);
 
 		// Get user counts for each role.
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT r.role_id, COUNT(r.user_id) AS role_count FROM roles r LEFT JOIN users u ON (r.user_id = u.user_id) WHERE r.journal_id = ?' .
 			($dateStart !== null ? ' AND u.date_registered >= ' . $this->datetimeToDB($dateStart) : '') .
 			($dateEnd !== null ? ' AND u.date_registered <= ' . $this->datetimeToDB($dateEnd) : '') .
@@ -198,7 +198,7 @@ class JournalStatisticsDAO extends DAO {
 	 * @return array
 	 */
 	function getSubscriptionStatistics($journalId, $dateStart = null, $dateEnd = null) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT	st.type_id,
 				sts.setting_value AS type_name,
 				count(s.subscription_id) AS type_count
@@ -239,7 +239,7 @@ class JournalStatisticsDAO extends DAO {
 	 * @return array
 	 */
 	function getIssueStatistics($journalId, $dateStart = null, $dateEnd = null) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT COUNT(*) AS count, published FROM issues WHERE journal_id = ?' .
 			($dateStart !== null ? ' AND date_published >= ' . $this->datetimeToDB($dateStart) : '') .
 			($dateEnd !== null ? ' AND date_published <= ' . $this->datetimeToDB($dateEnd) : '') .
@@ -311,7 +311,7 @@ class JournalStatisticsDAO extends DAO {
 			($dateStart !== null ? ' AND a.date_submitted >= ' . $this->datetimeToDB($dateStart) : '') .
 			($dateEnd !== null ? ' AND a.date_submitted <= ' . $this->datetimeToDB($dateEnd) : '') .
 			$sectionSql;
-		$result = &$this->retrieve($sql, $params);
+		$result =& $this->retrieve($sql, $params);
 
 		$returner = array(
 			'reviewsCount' => 0,

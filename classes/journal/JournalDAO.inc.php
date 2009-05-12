@@ -25,13 +25,13 @@ class JournalDAO extends DAO {
 	 * @return Journal
 	 */
 	function &getJournal($journalId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT * FROM journals WHERE journal_id = ?', $journalId
 		);
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnJournalFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnJournalFromRow($result->GetRowAssoc(false));
 		}
 		$result->Close();
 		unset($result);
@@ -45,12 +45,12 @@ class JournalDAO extends DAO {
 	 */
 	function &getJournalByPath($path) {
 		$returner = null;
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT * FROM journals WHERE path = ?', $path
 		);
 
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnJournalFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnJournalFromRow($result->GetRowAssoc(false));
 		}
 		$result->Close();
 		unset($result);
@@ -133,43 +133,43 @@ class JournalDAO extends DAO {
 	 * @param $journalId int
 	 */
 	function deleteJournalById($journalId) {
-		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 		$journalSettingsDao->deleteSettingsByJournal($journalId);
 
-		$sectionDao = &DAORegistry::getDAO('SectionDAO');
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$sectionDao->deleteSectionsByJournal($journalId);
 
-		$issueDao = &DAORegistry::getDAO('IssueDAO');
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		$issueDao->deleteIssuesByJournal($journalId);
 
-		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
+		$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
 		$emailTemplateDao->deleteEmailTemplatesByJournal($journalId);
 
-		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$rtDao =& DAORegistry::getDAO('RTDAO');
 		$rtDao->deleteVersionsByJournal($journalId);
 
-		$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
+		$subscriptionDao =& DAORegistry::getDAO('SubscriptionDAO');
 		$subscriptionDao->deleteSubscriptionsByJournal($journalId);
 
-		$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionTypeDao->deleteSubscriptionTypesByJournal($journalId);
 
-		$announcementDao = &DAORegistry::getDAO('AnnouncementDAO');
+		$announcementDao =& DAORegistry::getDAO('AnnouncementDAO');
 		$announcementDao->deleteAnnouncementsByAssocId(ASSOC_TYPE_JOURNAL, $journalId);
 
-		$announcementTypeDao = &DAORegistry::getDAO('AnnouncementTypeDAO');
+		$announcementTypeDao =& DAORegistry::getDAO('AnnouncementTypeDAO');
 		$announcementTypeDao->deleteAnnouncementTypesByAssocId(ASSOC_TYPE_JOURNAL, $journalId);
 
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$articleDao->deleteArticlesByJournalId($journalId);
 
-		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$roleDao->deleteRoleByJournalId($journalId);
 
-		$groupDao = &DAORegistry::getDAO('GroupDAO');
+		$groupDao =& DAORegistry::getDAO('GroupDAO');
 		$groupDao->deleteGroupsByAssocId(ASSOC_TYPE_JOURNAL, $journalId);
 
-		$pluginSettingsDao = &DAORegistry::getDAO('PluginSettingsDAO');
+		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO');
 		$pluginSettingsDao->deleteSettingsByJournalId($journalId);
 
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
@@ -185,7 +185,7 @@ class JournalDAO extends DAO {
 	 * @return DAOResultFactory containing matching journals
 	 */
 	function &getJournals($rangeInfo = null) {
-		$result = &$this->retrieveRange(
+		$result =& $this->retrieveRange(
 			'SELECT * FROM journals ORDER BY seq',
 			false, $rangeInfo
 		);
@@ -199,7 +199,7 @@ class JournalDAO extends DAO {
 	 * @return array Journals ordered by sequence
 	 */
 	function &getEnabledJournals() {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT * FROM journals WHERE enabled=1 ORDER BY seq'
 		);
 
@@ -247,7 +247,7 @@ class JournalDAO extends DAO {
 	 * @return boolean
 	 */
 	function journalExistsByPath($path) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT COUNT(*) FROM journals WHERE path = ?', $path
 		);
 		$returner = isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
@@ -262,7 +262,7 @@ class JournalDAO extends DAO {
 	 * Sequentially renumber journals in their sequence order.
 	 */
 	function resequenceJournals() {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT journal_id FROM journals ORDER BY seq'
 		);
 

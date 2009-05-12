@@ -159,7 +159,7 @@ class Action {
 				}
 		
 				// Add log entry
-				$user = &Request::getUser();
+				$user =& Request::getUser();
 				import('article.log.ArticleLog');
 				import('article.log.ArticleEventLogEntry');
 				ArticleLog::logEvent($article->getArticleId(), ARTICLE_LOG_METADATA_UPDATE, ARTICLE_LOG_TYPE_DEFAULT, 0, 'log.editor.metadataModified', Array('editorName' => $user->getFullName()));
@@ -198,8 +198,8 @@ class Action {
 	 * @param $type string the type of instructions (copy, layout, or proof).
 	 */
 	function instructions($type, $allowed = array('copy', 'layout', 'proof', 'referenceLinking')) {
-		$journal = &Request::getJournal();
-		$templateMgr = &TemplateManager::getManager();
+		$journal =& Request::getJournal();
+		$templateMgr =& TemplateManager::getManager();
 
 		if (!HookRegistry::call('Action::instructions', array(&$type, &$allowed))) {
 			if (!in_array($type, $allowed)) {
@@ -290,10 +290,10 @@ class Action {
 	 * @param $user object The user who owns the comment, or null to default to Request::getUser
 	 */
 	function deleteComment($commentId, $user = null) {
-		if ($user == null) $user = &Request::getUser();
+		if ($user == null) $user =& Request::getUser();
 
-		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-		$comment = &$articleCommentDao->getArticleCommentById($commentId);
+		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
+		$comment =& $articleCommentDao->getArticleCommentById($commentId);
 
 		if ($comment->getAuthorId() == $user->getUserId()) {
 			if (!HookRegistry::call('Action::deleteComment', array(&$comment))) {

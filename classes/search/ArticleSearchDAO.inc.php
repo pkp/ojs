@@ -27,7 +27,7 @@ class ArticleSearchDAO extends DAO {
 	function insertKeyword($keyword) {
 		static $articleSearchKeywordIds = array();
 		if (isset($articleSearchKeywordIds[$keyword])) return $articleSearchKeywordIds[$keyword];
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT keyword_id FROM article_search_keyword_list WHERE keyword_text = ?',
 			$keyword
 		);
@@ -103,7 +103,7 @@ class ArticleSearchDAO extends DAO {
 			$params[] = $journal->getJournalId();
 		}
 
-		$result = &$this->retrieveCached(
+		$result =& $this->retrieveCached(
 			'SELECT
 				o.article_id,
 				COUNT(*) AS count
@@ -146,7 +146,7 @@ class ArticleSearchDAO extends DAO {
 			$params[] = $assocId;
 		}
 
-		$result = &$this->retrieve($sql, $params);
+		$result =& $this->retrieve($sql, $params);
 		while (!$result->EOF) {
 			$objectId = $result->fields[0];
 			$this->update('DELETE FROM article_search_object_keywords WHERE object_id = ?', $objectId);
@@ -165,7 +165,7 @@ class ArticleSearchDAO extends DAO {
 	 * @return int the object ID
 	 */
 	function insertObject($articleId, $type, $assocId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT object_id FROM article_search_objects WHERE article_id = ? AND type = ? AND assoc_id = ?',
 			array($articleId, $type, $assocId)
 		);

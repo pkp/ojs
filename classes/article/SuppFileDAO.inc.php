@@ -29,14 +29,14 @@ class SuppFileDAO extends DAO {
 		$params = array($suppFileId);
 		if ($articleId) $params[] = $articleId;
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT s.*, a.file_name, a.original_file_name, a.file_type, a.file_size, a.date_uploaded, a.date_modified FROM article_supplementary_files s LEFT JOIN article_files a ON (s.file_id = a.file_id) WHERE s.supp_id = ?' . ($articleId?' AND s.article_id = ?':''),
 			$params
 		);
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnSuppFileFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnSuppFileFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -52,14 +52,14 @@ class SuppFileDAO extends DAO {
 	 * @return SuppFile
 	 */
 	function &getSuppFileByPublicSuppFileId($publicSuppId, $articleId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT s.*, a.file_name, a.original_file_name, a.file_type, a.file_size, a.date_uploaded, a.date_modified FROM article_supplementary_files s LEFT JOIN article_files a ON (s.file_id = a.file_id) WHERE s.public_supp_file_id = ? AND s.article_id = ?',
 			array($publicSuppId, $articleId)
 		);
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnSuppFileFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnSuppFileFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -76,13 +76,13 @@ class SuppFileDAO extends DAO {
 	function &getSuppFilesByArticle($articleId) {
 		$suppFiles = array();
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT s.*, a.file_name, a.original_file_name, a.file_type, a.file_size, a.date_uploaded, a.date_modified FROM article_supplementary_files s LEFT JOIN article_files a ON (s.file_id = a.file_id) WHERE s.article_id = ? ORDER BY s.seq',
 			$articleId
 		);
 
 		while (!$result->EOF) {
-			$suppFiles[] = &$this->_returnSuppFileFromRow($result->GetRowAssoc(false));
+			$suppFiles[] =& $this->_returnSuppFileFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
 
@@ -251,7 +251,7 @@ class SuppFileDAO extends DAO {
 	 * @return boolean
 	 */
 	function suppFileExistsByFileId($articleId, $fileId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT COUNT(*) FROM article_supplementary_files
 			WHERE article_id = ? AND file_id = ?',
 			array($articleId, $fileId)
@@ -270,7 +270,7 @@ class SuppFileDAO extends DAO {
 	 * @param $articleId int
 	 */
 	function resequenceSuppFiles($articleId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT supp_id FROM article_supplementary_files WHERE article_id = ? ORDER BY seq',
 			$articleId
 		);
@@ -294,7 +294,7 @@ class SuppFileDAO extends DAO {
 	 * @return int
 	 */
 	function getNextSuppFileSequence($articleId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT MAX(seq) + 1 FROM article_supplementary_files WHERE article_id = ?',
 			$articleId
 		);
@@ -322,8 +322,8 @@ class SuppFileDAO extends DAO {
 	 * @return SuppFile object
 	 */
 	function &getSuppFileByBestSuppFileId($articleId, $suppId) {
-		$suppFile = &$this->getSuppFileByPublicSuppFileId($suppId, $articleId);
-		if (!isset($suppFile)) $suppFile = &$this->getSuppFile((int) $suppId, $articleId);
+		$suppFile =& $this->getSuppFileByPublicSuppFileId($suppId, $articleId);
+		if (!isset($suppFile)) $suppFile =& $this->getSuppFile((int) $suppId, $articleId);
 		return $suppFile;
 	}
 
@@ -335,7 +335,7 @@ class SuppFileDAO extends DAO {
 	 * @return boolean
 	 */
 	function suppFileExistsByPublicId($publicSuppFileId, $suppId, $journalId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT COUNT(*) FROM article_supplementary_files f, articles a WHERE f.article_id = a.article_id AND f.public_supp_file_id = ? AND f.supp_id <> ? AND a.journal_id = ?', array($publicSuppFileId, $suppId, $journalId)
 		);
 		$returner = $result->fields[0] ? true : false;

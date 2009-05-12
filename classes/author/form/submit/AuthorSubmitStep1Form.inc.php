@@ -25,7 +25,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 	function AuthorSubmitStep1Form($article = null) {
 		parent::AuthorSubmitForm($article, 1);
 
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 
 		// Validation checks for this form
 		$this->addCheck(new FormValidator($this, 'sectionId', 'required', 'author.submit.form.sectionRequired'));
@@ -36,18 +36,18 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 	 * Display the form.
 	 */
 	function display() {
-		$journal = &Request::getJournal();
-		$user = &Request::getUser();
+		$journal =& Request::getJournal();
+		$user =& Request::getUser();
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 
 		// Get sections for this journal
-		$sectionDao = &DAORegistry::getDAO('SectionDAO');
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 
 		// If this user is a section editor or an editor, they are allowed
 		// to submit to sections flagged as "editor-only" for submissions.
 		// Otherwise, display only sections they are allowed to submit to.
-		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$isEditor = $roleDao->roleExists($journal->getJournalId(), $user->getUserId(), ROLE_ID_EDITOR) || $roleDao->roleExists($journal->getJournalId(), $user->getUserId(), ROLE_ID_SECTION_EDITOR);
 
 		// Set up required Payment Related Information
@@ -95,7 +95,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 	 * @return int the article ID
 	 */
 	function execute() {
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 
 		if (isset($this->article)) {
 			// Update existing article
@@ -109,8 +109,8 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 
 		} else {
 			// Insert new article
-			$journal = &Request::getJournal();
-			$user = &Request::getUser();
+			$journal =& Request::getJournal();
+			$user =& Request::getUser();
 
 			$this->article = new Article();
 			$this->article->setUserId($user->getUserId());
@@ -122,7 +122,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 			$this->article->setCommentsToEditor($this->getData('commentsToEditor'));
 
 			// Set user to initial author
-			$user = &Request::getUser();
+			$user =& Request::getUser();
 			$author = new Author();
 			$author->setFirstName($user->getFirstName());
 			$author->setMiddleName($user->getMiddleName());

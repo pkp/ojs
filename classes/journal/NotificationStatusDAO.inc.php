@@ -19,13 +19,13 @@ class NotificationStatusDAO extends DAO {
 	function &getJournalNotifications($userId) {
 		$returner = array();
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT j.journal_id AS journal_id, n.journal_id AS notification FROM journals j LEFT JOIN notification_status n ON j.journal_id = n.journal_id AND n.user_id = ? ORDER BY j.seq',
 			$userId
 		);
 
 		while (!$result->EOF) {
-			$row = &$result->GetRowAssoc(false);
+			$row =& $result->GetRowAssoc(false);
 			$returner[$row['journal_id']] = $row['notification'];
 			$result->moveNext();
 		}
@@ -76,9 +76,9 @@ class NotificationStatusDAO extends DAO {
 	 * @return DAOResultFactory matching Users
 	 */
 	function &getNotifiableUsersByJournalId($journalId) {
-		$userDao = &DAORegistry::getDAO('UserDAO');
+		$userDao =& DAORegistry::getDAO('UserDAO');
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT u.* FROM users u, notification_status n WHERE u.user_id = n.user_id AND n.journal_id = ?',
 			$journalId
 		);
@@ -93,9 +93,9 @@ class NotificationStatusDAO extends DAO {
 	 * @return int
 	 */
 	function getNotifiableUsersCount($journalId) {
-		$userDao = &DAORegistry::getDAO('UserDAO');
+		$userDao =& DAORegistry::getDAO('UserDAO');
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT count(*) FROM notification_status n WHERE n.journal_id = ?',
 			$journalId
 		);

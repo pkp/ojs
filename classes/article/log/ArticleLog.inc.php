@@ -27,7 +27,7 @@ class ArticleLog {
 	 * @param $entry ArticleEventLogEntry
 	 */
 	function logEventEntry($articleId, &$entry) {
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$journalId = $articleDao->getArticleJournalId($articleId);
 
 		if (!$journalId) {
@@ -35,7 +35,7 @@ class ArticleLog {
 			return false;
 		}
 
-		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+		$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 		if (!$settingsDao->getSetting($journalId, 'articleEventLog')) {
 			// Event logging is disabled
 			return false;
@@ -45,11 +45,11 @@ class ArticleLog {
 		$entry->setArticleId($articleId);
 
 		if ($entry->getUserId() == null) {
-			$user = &Request::getUser();
+			$user =& Request::getUser();
 			$entry->setUserId($user == null ? 0 : $user->getUserId());
 		}
 
-		$logDao = &DAORegistry::getDAO('ArticleEventLogDAO');
+		$logDao =& DAORegistry::getDAO('ArticleEventLogDAO');
 		return $logDao->insertLogEntry($entry);
 	}
 
@@ -96,8 +96,8 @@ class ArticleLog {
 	 * @return array ArticleEventLogEntry
 	 */
 	function &getEventLogEntries($articleId, $rangeInfo = null) {
-		$logDao = &DAORegistry::getDAO('ArticleEventLogDAO');
-		$returner = &$logDao->getArticleLogEntries($articleId, $rangeInfo);
+		$logDao =& DAORegistry::getDAO('ArticleEventLogDAO');
+		$returner =& $logDao->getArticleLogEntries($articleId, $rangeInfo);
 		return $returner;
 	}
 
@@ -107,7 +107,7 @@ class ArticleLog {
 	 * @param $entry ArticleEmailLogEntry
 	 */
 	function logEmailEntry($articleId, &$entry) {
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$journalId = $articleDao->getArticleJournalId($articleId);
 
 		if (!$journalId) {
@@ -115,7 +115,7 @@ class ArticleLog {
 			return false;
 		}
 
-		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+		$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 		if (!$settingsDao->getSetting($journalId, 'articleEmailLog')) {
 			// Email logging is disabled
 			return false;
@@ -125,11 +125,11 @@ class ArticleLog {
 		$entry->setArticleId($articleId);
 
 		if ($entry->getSenderId() == null) {
-			$user = &Request::getUser();
+			$user =& Request::getUser();
 			$entry->setSenderId($user == null ? 0 : $user->getUserId());
 		}
 
-		$logDao = &DAORegistry::getDAO('ArticleEmailLogDAO');
+		$logDao =& DAORegistry::getDAO('ArticleEmailLogDAO');
 		return $logDao->insertLogEntry($entry);
 	}
 
@@ -139,8 +139,8 @@ class ArticleLog {
 	 * @return array ArticleEmailLogEntry
 	 */
 	function &getEmailLogEntries($articleId, $rangeInfo = null) {
-		$logDao = &DAORegistry::getDAO('ArticleEmailLogDAO');
-		$result = &$logDao->getArticleLogEntries($articleId, $rangeInfo);
+		$logDao =& DAORegistry::getDAO('ArticleEmailLogDAO');
+		$result =& $logDao->getArticleLogEntries($articleId, $rangeInfo);
 		return $result;
 	}
 

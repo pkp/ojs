@@ -42,7 +42,7 @@ class JournalSetupForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('setupStep', $this->step);
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.setup');
 		$templateMgr->setCacheability(CACHEABILITY_MUST_REVALIDATE);
@@ -53,7 +53,7 @@ class JournalSetupForm extends Form {
 	 * Initialize data from current settings.
 	 */
 	function initData() {
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		$this->_data = $journal->getSettings();
 	}
 
@@ -68,8 +68,8 @@ class JournalSetupForm extends Form {
 	 * Save modified settings.
 	 */
 	function execute() {
-		$journal = &Request::getJournal();
-		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+		$journal =& Request::getJournal();
+		$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 
 		foreach ($this->_data as $name => $value) {
 			if (isset($this->settings[$name])) {

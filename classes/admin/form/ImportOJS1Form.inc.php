@@ -44,7 +44,7 @@ class ImportOJS1Form extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('importError', $this->importer->error());
 		parent::display();
 	}

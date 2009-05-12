@@ -53,7 +53,7 @@ class ArticleMailTemplate extends MailTemplate {
 	}
 
 	function assignParams($paramArray = array()) {
-		$article = &$this->article;
+		$article =& $this->article;
 		$journal = isset($this->journal)?$this->journal:Request::getJournal();
 
 		$paramArray['articleTitle'] = strip_tags($article->getLocalizedTitle());
@@ -125,7 +125,7 @@ class ArticleMailTemplate extends MailTemplate {
 		import('article.log.ArticleEmailLogEntry');
 		import('article.log.ArticleLog');
 		$entry = new ArticleEmailLogEntry();
-		$article = &$this->article;
+		$article =& $this->article;
 
 		// Log data
 		$entry->setEventType($this->eventType);

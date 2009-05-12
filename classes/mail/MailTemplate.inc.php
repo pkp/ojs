@@ -86,11 +86,11 @@ class MailTemplate extends PKPMailTemplate {
 		}
 
 		// Default "From" to user if available, otherwise site/journal principal contact
-		$user = &Request::getUser();
+		$user =& Request::getUser();
 		if ($user) {
 			$this->setFrom($user->getEmail(), $user->getFullName());
 		} elseif ($journal == null) {
-			$site = &Request::getSite();
+			$site =& Request::getSite();
 			$this->setFrom($site->getLocalizedContactEmail(), $site->getLocalizedContactName());
 
 		} else {

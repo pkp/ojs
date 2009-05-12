@@ -27,19 +27,19 @@ class ArticleEventLogDAO extends DAO {
 	 */
 	function &getLogEntry($logId, $articleId = null) {
 		if (isset($articleId)) {
-			$result = &$this->retrieve(
+			$result =& $this->retrieve(
 				'SELECT * FROM article_event_log WHERE log_id = ? AND article_id = ?',
 				array($logId, $articleId)
 			);
 		} else {
-			$result = &$this->retrieve(
+			$result =& $this->retrieve(
 				'SELECT * FROM article_event_log WHERE log_id = ?', $logId
 			);
 		}
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnLogEntryFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnLogEntryFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -54,7 +54,7 @@ class ArticleEventLogDAO extends DAO {
 	 * @return DAOResultFactory containing matching ArticleEventLogEntry ArticleEventLogEntry ordered by sequence
 	 */
 	function &getArticleLogEntries($articleId, $rangeInfo = null) {
-		$returner = &$this->getArticleLogEntriesByAssoc($articleId, null, null, $rangeInfo);
+		$returner =& $this->getArticleLogEntriesByAssoc($articleId, null, null, $rangeInfo);
 		return $returner;
 	}
 
@@ -76,7 +76,7 @@ class ArticleEventLogDAO extends DAO {
 			}
 		}
 
-		$result = &$this->retrieveRange(
+		$result =& $this->retrieveRange(
 			'SELECT * FROM article_event_log WHERE article_id = ?' . (isset($assocType) ? ' AND assoc_type = ?' . (isset($assocId) ? ' AND assoc_id = ?' : '') : '') . ' ORDER BY log_id DESC',
 			$params, $rangeInfo
 		);

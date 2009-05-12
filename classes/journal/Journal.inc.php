@@ -62,7 +62,7 @@ class Journal extends DataObject {
 
 		if (!isset($supportedLocales)) {
 			$supportedLocales = array();
-			$localeNames = &Locale::getAllLocales();
+			$localeNames =& Locale::getAllLocales();
 
 			$locales = $this->getSetting('supportedLocales');
 			if (!isset($locales) || !is_array($locales)) {
@@ -270,8 +270,8 @@ class Journal extends DataObject {
 	 * @return array
 	 */
 	function &getSettings() {
-		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
-		$settings = &$journalSettingsDao->getJournalSettings($this->getData('journalId'));
+		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		$settings =& $journalSettingsDao->getJournalSettings($this->getData('journalId'));
 		return $settings;
 	}
 
@@ -291,8 +291,8 @@ class Journal extends DataObject {
 	 * @return mixed
 	 */
 	function &getSetting($name, $locale = null) {
-		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
-		$setting = &$journalSettingsDao->getSetting($this->getData('journalId'), $name, $locale);
+		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		$setting =& $journalSettingsDao->getSetting($this->getData('journalId'), $name, $locale);
 		return $setting;
 	}
 

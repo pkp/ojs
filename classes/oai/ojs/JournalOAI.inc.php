@@ -45,10 +45,10 @@ class JournalOAI extends OAI {
 	function JournalOAI($config) {
 		parent::OAI($config);
 
-		$this->site = &Request::getSite();
-		$this->journal = &Request::getJournal();
+		$this->site =& Request::getSite();
+		$this->journal =& Request::getJournal();
 		$this->journalId = isset($this->journal) ? $this->journal->getJournalId() : null;
-		$this->dao = &DAORegistry::getDAO('OAIDAO');
+		$this->dao =& DAORegistry::getDAO('OAIDAO');
 		$this->dao->setOAI($this);
 	}
 
@@ -151,7 +151,7 @@ class JournalOAI extends OAI {
 	function &record($identifier) {
 		$articleId = $this->identifierToArticleId($identifier);
 		if ($articleId) {
-			$record = &$this->dao->getRecord($articleId, $this->journalId);
+			$record =& $this->dao->getRecord($articleId, $this->journalId);
 		}
 		if (!isset($record)) {
 			$record = false;
@@ -169,7 +169,7 @@ class JournalOAI extends OAI {
 		} else {
 			$journalId = $this->journalId;
 		}
-		$records = &$this->dao->getRecords($journalId, $sectionId, $from, $until, $offset, $limit, $total);
+		$records =& $this->dao->getRecords($journalId, $sectionId, $from, $until, $offset, $limit, $total);
 		return $records;
 	}
 
@@ -183,7 +183,7 @@ class JournalOAI extends OAI {
 		} else {
 			$journalId = $this->journalId;
 		}
-		$records = &$this->dao->getIdentifiers($journalId, $sectionId, $from, $until, $offset, $limit, $total);
+		$records =& $this->dao->getIdentifiers($journalId, $sectionId, $from, $until, $offset, $limit, $total);
 		return $records;
 	}
 
@@ -191,7 +191,7 @@ class JournalOAI extends OAI {
 	 * @see OAI#sets
 	 */
 	function &sets($offset, &$total) {
-		$sets = &$this->dao->getJournalSets($this->journalId, $offset, $total);
+		$sets =& $this->dao->getJournalSets($this->journalId, $offset, $total);
 		return $sets;
 	}
 

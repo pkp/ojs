@@ -60,8 +60,8 @@ class OJSPaymentManager extends PaymentManager {
 			case PAYMENT_TYPE_FASTTRACK:
 			case PAYMENT_TYPE_PUBLICATION:
 			case PAYMENT_TYPE_SUBMISSION:
-				$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
-				$authorSubmission = &$authorSubmissionDao->getAuthorSubmission($assocId);
+				$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
+				$authorSubmission =& $authorSubmissionDao->getAuthorSubmission($assocId);
 				if ($authorSubmission->getSubmissionProgress()!=0) {
 					$payment->setRequestUrl(Request::url(null, 'author', 'submit', $authorSubmission->getSubmissionProgress(), array('articleId' => $assocId)));
 				} else { 

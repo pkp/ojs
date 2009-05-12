@@ -86,7 +86,7 @@ class Upgrade extends Installer {
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 
 		// Bring in the comments constants.
-		$commentDao = &DAORegistry::getDao('CommentDAO');
+		$commentDao =& DAORegistry::getDao('CommentDAO');
 
 		$result =& $rtDao->retrieve('SELECT * FROM rt_settings');
 		while (!$result->EOF) {

@@ -34,16 +34,16 @@ class AuthorSubmissionDAO extends DAO {
 	 */
 	function AuthorSubmissionDAO() {
 		parent::DAO();
-		$this->articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$this->authorDao = &DAORegistry::getDAO('AuthorDAO');
-		$this->userDao = &DAORegistry::getDAO('UserDAO');
-		$this->reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
-		$this->editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
-		$this->articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-		$this->suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
-		$this->copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
-		$this->articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-		$this->galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
+		$this->articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$this->authorDao =& DAORegistry::getDAO('AuthorDAO');
+		$this->userDao =& DAORegistry::getDAO('UserDAO');
+		$this->reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+		$this->editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
+		$this->articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+		$this->suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+		$this->copyeditorSubmissionDao =& DAORegistry::getDAO('CopyeditorSubmissionDAO');
+		$this->articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
+		$this->galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 	}
 
 	/**
@@ -54,7 +54,7 @@ class AuthorSubmissionDAO extends DAO {
 	function &getAuthorSubmission($articleId) {
 		$primaryLocale = Locale::getPrimaryLocale();
 		$locale = Locale::getLocale();
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT	a.*,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
@@ -80,7 +80,7 @@ class AuthorSubmissionDAO extends DAO {
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnAuthorSubmissionFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnAuthorSubmissionFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -144,7 +144,7 @@ class AuthorSubmissionDAO extends DAO {
 	function updateAuthorSubmission(&$authorSubmission) {
 		// Update article
 		if ($authorSubmission->getArticleId()) {
-			$article = &$this->articleDao->getArticle($authorSubmission->getArticleId());
+			$article =& $this->articleDao->getArticle($authorSubmission->getArticleId());
 
 			// Only update fields that an author can actually edit.
 			$article->setRevisedFileId($authorSubmission->getRevisedFileId());
@@ -169,7 +169,7 @@ class AuthorSubmissionDAO extends DAO {
 	function &getAuthorSubmissions($authorId, $journalId, $active = true, $rangeInfo = null) {
 		$primaryLocale = Locale::getPrimaryLocale();
 		$locale = Locale::getLocale();
-		$result = &$this->retrieveRange(
+		$result =& $this->retrieveRange(
 			'SELECT	a.*,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
@@ -213,11 +213,11 @@ class AuthorSubmissionDAO extends DAO {
 		$decisions = array();
 
 		if ($round == null) {
-			$result = &$this->retrieve(
+			$result =& $this->retrieve(
 				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE article_id = ? ORDER BY date_decided ASC', $articleId
 			);
 		} else {
-			$result = &$this->retrieve(
+			$result =& $this->retrieve(
 				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE article_id = ? AND round = ? ORDER BY date_decided ASC',
 				array($articleId, $round)
 			);
@@ -251,7 +251,7 @@ class AuthorSubmissionDAO extends DAO {
 
 		$sql = 'SELECT count(*), status FROM articles a LEFT JOIN sections s ON (s.section_id = a.section_id) WHERE a.journal_id = ? AND a.user_id = ? GROUP BY a.status';
 
-		$result = &$this->retrieve($sql, array($journalId, $authorId));
+		$result =& $this->retrieve($sql, array($journalId, $authorId));
 
 		while (!$result->EOF) {
 			if ($result->fields['status'] != 1) {

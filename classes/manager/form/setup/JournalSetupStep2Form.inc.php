@@ -63,7 +63,7 @@ class JournalSetupStep2Form extends JournalSetupForm {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		if (Config::getVar('general', 'scheduled_tasks'))
 			$templateMgr->assign('scheduledTasksEnabled', true);
 

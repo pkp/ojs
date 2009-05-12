@@ -29,16 +29,16 @@ class ArticleCommentDAO extends DAO {
 		$articleComments = array();
 
 		if ($commentType == null) {
-			$result = &$this->retrieve(
+			$result =& $this->retrieve(
 				'SELECT a.* FROM article_comments a WHERE article_id = ? ORDER BY date_posted',	$articleId
 			);
 		} else {
 			if ($assocId == null) {
-				$result = &$this->retrieve(
+				$result =& $this->retrieve(
 					'SELECT a.* FROM article_comments a WHERE article_id = ? AND comment_type = ? ORDER BY date_posted',	array($articleId, $commentType)
 				);
 			} else {
-				$result = &$this->retrieve(
+				$result =& $this->retrieve(
 					'SELECT a.* FROM article_comments a WHERE article_id = ? AND comment_type = ? AND assoc_id = ? ORDER BY date_posted',
 					array($articleId, $commentType, $assocId)
 				);
@@ -46,7 +46,7 @@ class ArticleCommentDAO extends DAO {
 		}
 
 		while (!$result->EOF) {
-			$articleComments[] = &$this->_returnArticleCommentFromRow($result->GetRowAssoc(false));
+			$articleComments[] =& $this->_returnArticleCommentFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
 
@@ -64,12 +64,12 @@ class ArticleCommentDAO extends DAO {
 	function &getArticleCommentsByUserId($userId) {
 		$articleComments = array();
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT a.* FROM article_comments a WHERE author_id = ? ORDER BY date_posted',	$userId
 		);
 
 		while (!$result->EOF) {
-			$articleComments[] = &$this->_returnArticleCommentFromRow($result->GetRowAssoc(false));
+			$articleComments[] =& $this->_returnArticleCommentFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
 
@@ -87,20 +87,20 @@ class ArticleCommentDAO extends DAO {
 	 */
 	function getMostRecentArticleComment($articleId, $commentType = null, $assocId = null) {
 		if ($commentType == null) {
-			$result = &$this->retrieveLimit(
+			$result =& $this->retrieveLimit(
 				'SELECT a.* FROM article_comments a WHERE article_id = ? ORDER BY date_posted DESC',
 				$articleId,
 				1
 			);
 		} else {
 			if ($assocId == null) {
-				$result = &$this->retrieveLimit(
+				$result =& $this->retrieveLimit(
 					'SELECT a.* FROM article_comments a WHERE article_id = ? AND comment_type = ? ORDER BY date_posted DESC',
 					array($articleId, $commentType),
 					1
 				);
 			} else {
-				$result = &$this->retrieveLimit(
+				$result =& $this->retrieveLimit(
 					'SELECT a.* FROM article_comments a WHERE article_id = ? AND comment_type = ? AND assoc_id = ? ORDER BY date_posted DESC',
 					array($articleId, $commentType, $assocId),
 					1
@@ -110,7 +110,7 @@ class ArticleCommentDAO extends DAO {
 
 		$returner = null;
 		if (isset($result) && $result->RecordCount() != 0) {
-			$returner = &$this->_returnArticleCommentFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnArticleCommentFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -125,11 +125,11 @@ class ArticleCommentDAO extends DAO {
 	 * @return ArticleComment object
 	 */
 	function &getArticleCommentById($commentId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT a.* FROM article_comments a WHERE comment_id = ?', $commentId
 		);
 
-		$articleComment = &$this->_returnArticleCommentFromRow($result->GetRowAssoc(false));
+		$articleComment =& $this->_returnArticleCommentFromRow($result->GetRowAssoc(false));
 
 		$result->Close();
 		unset($result);

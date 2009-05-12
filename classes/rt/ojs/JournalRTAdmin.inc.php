@@ -32,7 +32,7 @@ class JournalRTAdmin extends RTAdmin {
 
 	function JournalRTAdmin($journalId) {
 		$this->journalId = $journalId;
-		$this->dao = &DAORegistry::getDAO('RTDAO');
+		$this->dao =& DAORegistry::getDAO('RTDAO');
 	}
 
 	function restoreVersions($deleteBeforeLoad = true) {
@@ -63,7 +63,7 @@ class JournalRTAdmin extends RTAdmin {
 		import ('rt.RTXMLParser');
 		$parser = new RTXMLParser();
 
-		$version = &$parser->parse($filename);
+		$version =& $parser->parse($filename);
 		$this->dao->insertVersion($this->journalId, $version);
 	}
 }

@@ -108,7 +108,7 @@ class InstallForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('localeOptions', $this->supportedLocales);
 		$templateMgr->assign('clientCharsetOptions', $this->supportedClientCharsets);
 		$templateMgr->assign('connectionCharsetOptions', $this->supportedConnectionCharsets);
@@ -189,7 +189,7 @@ class InstallForm extends Form {
 	 * Perform installation.
 	 */
 	function execute() {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$installer = new Install($this->_data);
 
 		if ($installer->execute()) {
@@ -241,7 +241,7 @@ class InstallForm extends Form {
 	 * @param $errorMsg string
 	 */
 	function installError($errorMsg) {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign(array('isInstallError' => true, 'errorMsg' => $errorMsg));
 		error_log($errorMsg);
 		$this->display();
@@ -252,7 +252,7 @@ class InstallForm extends Form {
 	 * @param $errorMsg string
 	 */
 	function dbInstallError($errorMsg) {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		if (empty($errorMsg)) $errorMsg = Locale::translate('common.error.databaseErrorUnknown');
 		$templateMgr->assign(array('isInstallError' => true, 'dbErrorMsg' => $errorMsg));
 		error_log($errorMsg);

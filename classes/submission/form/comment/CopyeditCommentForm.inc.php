@@ -34,7 +34,7 @@ class CopyeditCommentForm extends CommentForm {
 	function display() {
 		$article = $this->article;
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('pageTitle', 'submission.comments.copyeditComments');
 		$templateMgr->assign('commentAction', 'postCopyeditComment');
 		$templateMgr->assign('commentType', 'copyedit');
@@ -66,10 +66,10 @@ class CopyeditCommentForm extends CommentForm {
 	 */
 	function email() {
 		$article = $this->article;
-		$roleDao = &DAORegistry::getDAO('RoleDAO');
-		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
-		$userDao = &DAORegistry::getDAO('UserDAO');
-		$journal = &Request::getJournal();
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$userDao =& DAORegistry::getDAO('UserDAO');
+		$journal =& Request::getJournal();
 
 		// Create list of recipients:
 		$recipients = array();
@@ -78,8 +78,8 @@ class CopyeditCommentForm extends CommentForm {
 		// excluding whomever posted the comment.
 
 		// Get editors
-		$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
-		$editAssignments = &$editAssignmentDao->getEditAssignmentsByArticleId($article->getArticleId());
+		$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
+		$editAssignments =& $editAssignmentDao->getEditAssignmentsByArticleId($article->getArticleId());
 		$editAssignments =& $editAssignments->toArray();
 		$editorAddresses = array();
 		foreach ($editAssignments as $editAssignment) {
@@ -89,9 +89,9 @@ class CopyeditCommentForm extends CommentForm {
 		// If no editors are currently assigned, send this message to
 		// all of the journal's editors.
 		if (empty($editorAddresses)) {
-			$editors = &$roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getJournalId());
+			$editors =& $roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getJournalId());
 			while (!$editors->eof()) {
-				$editor = &$editors->next();
+				$editor =& $editors->next();
 				$editorAddresses[$editor->getEmail()] = $editor->getFullName();
 			}
 		}
@@ -99,13 +99,13 @@ class CopyeditCommentForm extends CommentForm {
 		// Get copyeditor
 		$copySignoff = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $article->getArticleId());
 		if ($copySignoff != null && $copySignoff->getUserId() > 0) {
-			$copyeditor = &$userDao->getUser($copySignoff->getUserId());
+			$copyeditor =& $userDao->getUser($copySignoff->getUserId());
 		} else {
 			$copyeditor = null;
 		}
 
 		// Get author
-		$author = &$userDao->getUser($article->getUserId());
+		$author =& $userDao->getUser($article->getUserId());
 
 		// Choose who receives this email
 		if ($this->roleId == ROLE_ID_EDITOR || $this->roleId == ROLE_ID_SECTION_EDITOR) {

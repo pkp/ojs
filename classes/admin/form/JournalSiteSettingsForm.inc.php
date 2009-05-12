@@ -44,7 +44,7 @@ class JournalSiteSettingsForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('journalId', $this->journalId);
 		$templateMgr->assign('helpTopicId', 'site.siteManagement');
 		parent::display();
@@ -55,8 +55,8 @@ class JournalSiteSettingsForm extends Form {
 	 */
 	function initData() {
 		if (isset($this->journalId)) {
-			$journalDao = &DAORegistry::getDAO('JournalDAO');
-			$journal = &$journalDao->getJournal($this->journalId);
+			$journalDao =& DAORegistry::getDAO('JournalDAO');
+			$journal =& $journalDao->getJournal($this->journalId);
 
 			if ($journal != null) {
 				$this->_data = array(
@@ -85,8 +85,8 @@ class JournalSiteSettingsForm extends Form {
 		$this->setData('enabled', (int)$this->getData('enabled'));
 
 		if (isset($this->journalId)) {
-			$journalDao = &DAORegistry::getDAO('JournalDAO');
-			$journal = &$journalDao->getJournal($this->journalId);
+			$journalDao =& DAORegistry::getDAO('JournalDAO');
+			$journal =& $journalDao->getJournal($this->journalId);
 			$this->setData('oldPath', $journal->getPath());
 		}
 	}
@@ -103,10 +103,10 @@ class JournalSiteSettingsForm extends Form {
 	 * Save journal settings.
 	 */
 	function execute() {
-		$journalDao = &DAORegistry::getDAO('JournalDAO');
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
 
 		if (isset($this->journalId)) {
-			$journal = &$journalDao->getJournal($this->journalId);
+			$journal =& $journalDao->getJournal($this->journalId);
 		}
 
 		if (!isset($journal)) {
@@ -131,15 +131,15 @@ class JournalSiteSettingsForm extends Form {
 			$journalDao->resequenceJournals();
 
 			// Make the site administrator the journal manager of newly created journals
-			$sessionManager = &SessionManager::getManager();
-			$userSession = &$sessionManager->getUserSession();
+			$sessionManager =& SessionManager::getManager();
+			$userSession =& $sessionManager->getUserSession();
 			if ($userSession->getUserId() != null && $userSession->getUserId() != 0 && !empty($journalId)) {
 				$role = new Role();
 				$role->setJournalId($journalId);
 				$role->setUserId($userSession->getUserId());
 				$role->setRoleId(ROLE_ID_JOURNAL_MANAGER);
 
-				$roleDao = &DAORegistry::getDAO('RoleDAO');
+				$roleDao =& DAORegistry::getDAO('RoleDAO');
 				$roleDao->insertRole($role);
 			}
 
@@ -151,7 +151,7 @@ class JournalSiteSettingsForm extends Form {
 			FileManager::mkdir(Config::getVar('files', 'public_files_dir') . '/journals/' . $journalId);
 
 			// Install default journal settings
-			$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+			$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 			$titles = $this->getData('title');
 			Locale::requireComponents(array(LOCALE_COMPONENT_OJS_DEFAULT_SETTINGS, LOCALE_COMPONENT_OJS_DEFAULT));
 			$journalSettingsDao->installSettings($journalId, 'registry/journalSettings.xml', array(
@@ -167,7 +167,7 @@ class JournalSiteSettingsForm extends Form {
 			$journalRtAdmin->restoreVersions(false);
 
 			// Create a default "Articles" section
-			$sectionDao = &DAORegistry::getDAO('SectionDAO');
+			$sectionDao =& DAORegistry::getDAO('SectionDAO');
 			$section = new Section();
 			$section->setJournalId($journal->getJournalId());
 			$section->setTitle(Locale::translate('section.default.title'), $journal->getPrimaryLocale());

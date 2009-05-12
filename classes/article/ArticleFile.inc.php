@@ -30,8 +30,8 @@ class ArticleFile extends DataObject {
 	 * @return string
 	 */
 	function getFilePath() {
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$article = &$articleDao->getArticle($this->getArticleId());
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$article =& $articleDao->getArticle($this->getArticleId());
 		$journalId = $article->getJournalId();
 
 		return Config::getVar('files', 'files_dir') . '/journals/' . $journalId .

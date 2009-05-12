@@ -33,15 +33,15 @@ class CopyeditorSubmissionDAO extends DAO {
 	 */
 	function CopyeditorSubmissionDAO() {
 		parent::DAO();
-		$this->articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$this->authorDao = &DAORegistry::getDAO('AuthorDAO');
-		$this->userDao = &DAORegistry::getDAO('UserDAO');
-		$this->editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
-		$this->articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$this->articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-		$this->articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-		$this->suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
-		$this->galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
+		$this->articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$this->authorDao =& DAORegistry::getDAO('AuthorDAO');
+		$this->userDao =& DAORegistry::getDAO('UserDAO');
+		$this->editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
+		$this->articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$this->articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+		$this->articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
+		$this->suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+		$this->galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 	}
 
 	/**
@@ -52,7 +52,7 @@ class CopyeditorSubmissionDAO extends DAO {
 	function &getCopyeditorSubmission($articleId) {
 		$primaryLocale = Locale::getPrimaryLocale();
 		$locale = Locale::getLocale();
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT	a.*,
 				e.editor_id,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
@@ -80,7 +80,7 @@ class CopyeditorSubmissionDAO extends DAO {
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnCopyeditorSubmissionFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnCopyeditorSubmissionFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -266,7 +266,7 @@ class CopyeditorSubmissionDAO extends DAO {
 				scpi.user_id = ? AND
 			(' . ($active?'':'NOT ') . ' ((scpi.date_notified IS NOT NULL AND scpi.date_completed IS NULL) OR (scpf.date_notified IS NOT NULL AND scpf.date_completed IS NULL))) ';
 
-		$result = &$this->retrieveRange(
+		$result =& $this->retrieveRange(
 			$sql . ' ' . $searchSql . ' ORDER BY a.article_id ASC',
 			count($params)==1?array_shift($params):$params,
 			$rangeInfo);
@@ -295,7 +295,7 @@ class CopyeditorSubmissionDAO extends DAO {
 				WHERE
 					a.journal_id = ? AND sci.user_id = ? AND sci.date_notified IS NOT NULL';
 					
-		$result = &$this->retrieve($sql, array(ASSOC_TYPE_ARTICLE, 'SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, 'SIGNOFF_COPYEDITING_INITIAL', $journalId, $copyeditorId));
+		$result =& $this->retrieve($sql, array(ASSOC_TYPE_ARTICLE, 'SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, 'SIGNOFF_COPYEDITING_INITIAL', $journalId, $copyeditorId));
 
 		while (!$result->EOF) {
 			if ($result->fields['date_completed'] == null) {
