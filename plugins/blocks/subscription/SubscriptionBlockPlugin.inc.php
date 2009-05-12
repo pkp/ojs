@@ -74,7 +74,7 @@ class SubscriptionBlockPlugin extends BlockPlugin {
 		$journalId = ($journal)?$journal->getJournalId():null;
 		if (!$journal) return '';
 
-		$user = &Request::getUser();
+		$user =& Request::getUser();
 		$userId = ($user)?$user->getUserId():null;
 		
 		$domain = Request::getRemoteDomain();
@@ -82,7 +82,7 @@ class SubscriptionBlockPlugin extends BlockPlugin {
 
 		// This replicates the order of SubscriptionDAO::isValidSubscription
 		// Checks for valid Subscription and assigns vars accordingly for display				
-		$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');	
+		$subscriptionDao =& DAORegistry::getDAO('SubscriptionDAO');	
 		$subscriptionId = false;
 		$userHasSubscription = false;
 		if ($userId != null) {

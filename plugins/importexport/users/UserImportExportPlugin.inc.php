@@ -50,7 +50,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
 	}
 
 	function display(&$args) {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		parent::display($args);
 
 		$templateMgr->assign('roleOptions', array(
@@ -67,9 +67,9 @@ class UserImportExportPlugin extends ImportExportPlugin {
 			'subscriptionManager' => 'user.role.subscriptionManager'
 		));
 
-		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
 
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		switch (array_shift($args)) {
 			case 'confirm':
 				$this->import('UserXMLParser');
@@ -82,7 +82,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
 				if (($userFile = FileManager::getUploadedFilePath('userFile')) !== false) {
 					// Import the uploaded file
 					$parser = new UserXMLParser($journal->getJournalId());
-					$users = &$parser->parseData($userFile);
+					$users =& $parser->parseData($userFile);
 
 					$i = 0;
 					$usersRoles = array();
@@ -168,9 +168,9 @@ class UserImportExportPlugin extends ImportExportPlugin {
 				break;
 			case 'exportAll':
 				$this->import('UserExportDom');
-				$users = &$roleDao->getUsersByJournalId($journal->getJournalId());
-				$users = &$users->toArray();
-				$doc = &UserExportDom::exportUsers($journal, $users);
+				$users =& $roleDao->getUsersByJournalId($journal->getJournalId());
+				$users =& $users->toArray();
+				$doc =& UserExportDom::exportUsers($journal, $users);
 				header("Content-Type: application/xml");
 				header("Cache-Control: private");
 				header("Content-Disposition: attachment; filename=\"users.xml\"");
@@ -182,14 +182,14 @@ class UserImportExportPlugin extends ImportExportPlugin {
 				$rolePaths = array();
 				foreach (Request::getUserVar('roles') as $rolePath) {
 					$roleId = $roleDao->getRoleIdFromPath($rolePath);
-					$thisRoleUsers = &$roleDao->getUsersByRoleId($roleId, $journal->getJournalId());
+					$thisRoleUsers =& $roleDao->getUsersByRoleId($roleId, $journal->getJournalId());
 					foreach ($thisRoleUsers->toArray() as $user) {
 						$users[$user->getUserId()] = $user;
 					}
 					$rolePaths[] = $rolePath;
 				}
 				$users = array_values($users);
-				$doc = &UserExportDom::exportUsers($journal, $users, $rolePaths);
+				$doc =& UserExportDom::exportUsers($journal, $users, $rolePaths);
 				header("Content-Type: application/xml");
 				header("Cache-Control: private");
 				header("Content-Disposition: attachment; filename=\"users.xml\"");
@@ -209,12 +209,12 @@ class UserImportExportPlugin extends ImportExportPlugin {
 		$command = array_shift($args);
 		$xmlFile = array_shift($args);
 		$journalPath = array_shift($args);
-		$flags = &$args;
+		$flags =& $args;
 
-		$journalDao = &DAORegistry::getDAO('JournalDAO');
-		$userDao = &DAORegistry::getDAO('UserDAO');
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$userDao =& DAORegistry::getDAO('UserDAO');
 
-		$journal = &$journalDao->getJournalByPath($journalPath);
+		$journal =& $journalDao->getJournalByPath($journalPath);
 
 		if (!$journal) {
 			if ($journalPath != '') {
@@ -235,7 +235,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
 
 				// Import the uploaded file
 				$parser = new UserXMLParser($journal->getJournalId());
-				$users = &$parser->parseData($xmlFile);
+				$users =& $parser->parseData($xmlFile);
 
 				if (!$parser->importUsers($sendNotify, $continueOnError)) {
 					// Failure.
@@ -256,17 +256,17 @@ class UserImportExportPlugin extends ImportExportPlugin {
 				break;
 			case 'export':
 				$this->import('UserExportDom');
-				$roleDao = &DAORegistry::getDAO('RoleDAO');
+				$roleDao =& DAORegistry::getDAO('RoleDAO');
 				$rolePaths = null;
 				if (empty($args)) {
-					$users = &$roleDao->getUsersByJournalId($journal->getJournalId());
-					$users = &$users->toArray();
+					$users =& $roleDao->getUsersByJournalId($journal->getJournalId());
+					$users =& $users->toArray();
 				} else {
 					$users = array();
 					$rolePaths = array();
 					foreach ($args as $rolePath) {
 						$roleId = $roleDao->getRoleIdFromPath($rolePath);
-						$thisRoleUsers = &$roleDao->getUsersByRoleId($roleId, $journal->getJournalId());
+						$thisRoleUsers =& $roleDao->getUsersByRoleId($roleId, $journal->getJournalId());
 						foreach ($thisRoleUsers->toArray() as $user) {
 							$users[$user->getUserId()] = $user;
 						}
@@ -274,7 +274,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
 					}
 					$users = array_values($users);
 				}
-				$doc = &UserExportDom::exportUsers($journal, $users, $rolePaths);
+				$doc =& UserExportDom::exportUsers($journal, $users, $rolePaths);
 				if (($h = fopen($xmlFile, 'wb'))===false) {
 					echo Locale::translate('plugins.importexport.users.export.errorsOccurred') . ":\n";
 					echo Locale::translate('plugins.importexport.users.export.couldNotWriteFile', array('fileName' => $xmlFile)) . "\n";

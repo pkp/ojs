@@ -88,11 +88,11 @@ class ShibAuthPlugin extends ImplicitAuthPlugin {
 			
 			// Get the user dao - so we can look up the user
 			
-			$userDao = &DAORegistry::getDAO('UserDAO');
+			$userDao =& DAORegistry::getDAO('UserDAO');
 	
 			// Get user by auth string
 			
-			$user = &$userDao->getUserByAuthStr($uid, true); 	
+			$user =& $userDao->getUserByAuthStr($uid, true); 	
 			
 			if (isset($user)) {
 				syslog(LOG_ERR, "Found user by uid: " . $uid . " Returning user.");
@@ -111,7 +111,7 @@ class ShibAuthPlugin extends ImplicitAuthPlugin {
 			// If we were not succsessful getting user by UIN - see if we can get the user by email.
 			// If we find a user with this email - but with an existing UID - then this is a problem
 				
-			$user = &$userDao->getUserByEmail($email);
+			$user =& $userDao->getUserByEmail($email);
 			
 			if (isset($user)) {
 							
@@ -185,7 +185,7 @@ class ShibAuthPlugin extends ImplicitAuthPlugin {
 
 		// Now go insert the user in the db
 		
-		$userDao = &DAORegistry::getDAO('UserDAO');
+		$userDao =& DAORegistry::getDAO('UserDAO');
 		
 		$userDao->insertUser($user); 
 	
@@ -197,8 +197,8 @@ class ShibAuthPlugin extends ImplicitAuthPlugin {
 
 		// Go put the user into the session and return it.
 		
-		$sessionManager = &SessionManager::getManager();
-		$session = &$sessionManager->getUserSession();
+		$sessionManager =& SessionManager::getManager();
+		$session =& $sessionManager->getUserSession();
 		$session->setSessionVar('username', $user->getUsername());
 
 		return $user;
@@ -216,7 +216,7 @@ class ShibAuthPlugin extends ImplicitAuthPlugin {
 				
 		$key = array_search($authStr, $adminlist);
 		
-		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
 					
 		// If they are in the list of users who should be admins
 		

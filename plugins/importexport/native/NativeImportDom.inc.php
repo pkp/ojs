@@ -72,7 +72,7 @@ class NativeImportDom {
 			// There were errors. Delete all the issues we've
 			// successfully created.
 			NativeImportDom::cleanupFailure ($dependentItems);
-			$issueDao = &DAORegistry::getDAO('IssueDAO');
+			$issueDao =& DAORegistry::getDAO('IssueDAO');
 			foreach ($issues as $issue) {
 				$issueDao->deleteIssue($issue);
 			}
@@ -86,7 +86,7 @@ class NativeImportDom {
 		$issue = null;
 		$hasErrors = false;
 
-		$issueDao = &DAORegistry::getDAO('IssueDAO');
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		$issue = new Issue();
 		$issue->setJournalId($journal->getJournalId());
 
@@ -383,7 +383,7 @@ class NativeImportDom {
 
 		if (($node = $coverNode->getChildByName('image'))) {
 			import('file.PublicFileManager');
-			$publicFileManager = &new PublicFileManager();
+			$publicFileManager =& new PublicFileManager();
 			$newName = 'cover_article_' . $article->getArticleId()."_{$locale}"  . '.';
 
 			if (($href = $node->getChildByName('href'))) {
@@ -453,7 +453,7 @@ class NativeImportDom {
 	}
 
 	function handleSectionNode(&$journal, &$sectionNode, &$issue, &$errors, &$user, $isCommandLine, &$dependentItems, $sectionIndex = null) {
-		$sectionDao = &DAORegistry::getDAO('SectionDAO');
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 
 		$errors = array();
 
@@ -632,8 +632,8 @@ class NativeImportDom {
 		$journalSupportedLocales = array_keys($journal->getSupportedLocaleNames()); // => journal locales must be set up before
 		$journalPrimaryLocale = $journal->getPrimaryLocale();
 
-		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 
 		$article = new Article();
 		$article->setJournalId($journal->getJournalId());
@@ -784,7 +784,7 @@ class NativeImportDom {
 		$dependentItems[] = array('article', $article);
 
 		// Create submission mangement records
-		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
+		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 
 		$copyeditSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $article->getArticleId());
 		$signoffDao->updateObject($copyeditSignoff);
@@ -842,7 +842,7 @@ class NativeImportDom {
 		$hasErrors = false;
 		$galleyCount = 0;
 		for ($index=0; $index < count($articleNode->children); $index++) {
-			$node = &$articleNode->children[$index];
+			$node =& $articleNode->children[$index];
 
 			if ($node->getName() == 'htmlgalley') $isHtml = true;
 			elseif ($node->getName() == 'galley') $isHtml = false;
@@ -922,7 +922,7 @@ class NativeImportDom {
 		$journalSupportedLocales = array_keys($journal->getSupportedLocaleNames()); // => journal locales must be set up before
 		$journalPrimaryLocale = $journal->getPrimaryLocale();
 
-		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
+		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 
 		if ($isHtml) $galley = new ArticleHtmlGalley();
 		else $galley = new ArticleGalley();
@@ -1000,7 +1000,7 @@ class NativeImportDom {
 	 * ridiculous.
 	 */
 	function handleHtmlGalleyNodes(&$galleyNode, &$articleFileManager, &$galley, &$errors, &$isCommandLine) {
-		$articleGalleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
+		$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 
 		foreach ($galleyNode->children as $node) {
 			$isStylesheet = ($node->getName() == 'stylesheet');
@@ -1051,7 +1051,7 @@ class NativeImportDom {
 		$journalSupportedLocales = array_keys($journal->getSupportedLocaleNames()); // => journal locales must be set up before
 		$journalPrimaryLocale = $journal->getPrimaryLocale();
 
-		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
+		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
 			
 		$suppFile = new SuppFile();
 		$suppFile->setArticleId($article->getArticleId());
@@ -1202,8 +1202,8 @@ class NativeImportDom {
 	}
 	
 	function cleanupFailure (&$dependentItems) {
-		$issueDao = &DAORegistry::getDAO('IssueDAO');
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 
 		foreach ($dependentItems as $dependentItem) {
 			$type = array_shift($dependentItem);

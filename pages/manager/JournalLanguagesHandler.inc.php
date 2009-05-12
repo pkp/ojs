@@ -55,7 +55,7 @@ class JournalLanguagesHandler extends ManagerHandler {
 		if ($settingsForm->validate()) {
 			$settingsForm->execute();
 
-			$templateMgr = &TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign(array(
 				'currentUrl' => Request::url(null, null, 'languages'),
 				'pageTitle' => 'common.languages',
@@ -80,8 +80,8 @@ class JournalLanguagesHandler extends ManagerHandler {
 		$this->validate();
 		$this->setupTemplate(true);
 					
-		$journal = &Request::getJournal();
-		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+		$journal =& Request::getJournal();
+		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 		$journalSettingsDao->reloadLocalizedDefaultSettings($journal->getJournalId(), 'registry/journalSettings.xml', array(
 				'indexUrl' => Request::getIndexUrl(),
 				'journalPath' => $journal->getData('path'),
@@ -90,7 +90,7 @@ class JournalLanguagesHandler extends ManagerHandler {
 			),
 			$locale);
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign(array(
 			'currentUrl' => Request::url(null, null, 'languages'),
 			'pageTitle' => 'common.languages',

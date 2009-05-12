@@ -63,7 +63,7 @@ class CustomThemePlugin extends ThemePlugin {
 	 * @param $subclass boolean
 	 */
 	function setBreadcrumbs($isSubclass = false) {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$pageCrumbs = array(
 			array(
 				Request::url(null, 'user'),

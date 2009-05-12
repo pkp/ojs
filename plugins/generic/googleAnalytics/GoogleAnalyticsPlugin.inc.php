@@ -95,7 +95,7 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 	 * @param $subclass boolean
 	 */
 	function setBreadcrumbs($isSubclass = false) {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$pageCrumbs = array(
 			array(
 				Request::url(null, 'user'),
@@ -141,7 +141,7 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 	 * Determine whether or not this plugin is enabled.
 	 */
 	function getEnabled() {
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		if (!$journal) return false;
 		return $this->getSetting($journal->getJournalId(), 'enabled');
 	}
@@ -150,7 +150,7 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 	 * Set the enabled/disabled state of this plugin
 	 */
 	function setEnabled($enabled) {
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		if ($journal) {
 			$this->updateSetting($journal->getJournalId(), 'enabled', $enabled ? true : false);
 			return true;
@@ -163,13 +163,13 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 	 */  
 	function insertFooter($hookName, $params) {
 		if ($this->getEnabled()) {
-			$smarty = &$params[1];
-			$output = &$params[2];
-			$templateMgr = &TemplateManager::getManager();
+			$smarty =& $params[1];
+			$output =& $params[2];
+			$templateMgr =& TemplateManager::getManager();
 			$currentJournal = $templateMgr->get_template_vars('currentJournal');
 
 			if (!empty($currentJournal)) {
-				$journal = &Request::getJournal();
+				$journal =& Request::getJournal();
 				$journalId = $journal->getJournalId();
 				$googleAnalyticsSiteId = $this->getSetting($journalId, 'googleAnalyticsSiteId');
 
@@ -195,9 +195,9 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
  	 * @return boolean
  	 */
 	function manage($verb, $args, &$message) {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		$returner = true;
 
 		switch ($verb) {

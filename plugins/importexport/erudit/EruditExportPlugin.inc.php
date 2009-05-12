@@ -50,29 +50,29 @@ class EruditExportPlugin extends ImportExportPlugin {
 	}
 
 	function display(&$args) {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		parent::display($args);
 
-		$issueDao = &DAORegistry::getDAO('IssueDAO');
-		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-		$articleGalleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		switch (array_shift($args)) {
 			case 'exportGalley':
 				$articleId = array_shift($args);
 				$galleyId = array_shift($args);
 
-				$article = &$publishedArticleDao->getPublishedArticleByArticleId($articleId);
-				$galley = &$articleGalleyDao->getGalley($galleyId, $articleId);
-				if ($article && $galley && ($issue = &$issueDao->getIssueById($article->getIssueId(), $journal->getJournalId()))) {
+				$article =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
+				$galley =& $articleGalleyDao->getGalley($galleyId, $articleId);
+				if ($article && $galley && ($issue =& $issueDao->getIssueById($article->getIssueId(), $journal->getJournalId()))) {
 					$this->exportArticle($journal, $issue, $article, $galley);
 					break;
 				}
 			default:
 				// Display a list of articles for export
 				$this->setBreadcrumbs();
-				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 				$rangeInfo = Handler::getRangeInfo('articles');
 				$articleIds = $publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal($journal->getJournalId(), false);
 				$totalArticles = count($articleIds);
@@ -87,8 +87,8 @@ class EruditExportPlugin extends ImportExportPlugin {
 
 	function exportArticle(&$journal, &$issue, &$article, &$galley, $outputFile = null) {
 		$this->import('EruditExportDom');
-		$doc = &XMLCustomWriter::createDocument('article', '-//ERUDIT//Erudit Article DTD 3.0.0//EN', 'http://www.erudit.org/dtd/article/3.0.0/en/eruditarticle.dtd');
-		$articleNode = &EruditExportDom::generateArticleDom($doc, $journal, $issue, $article, $galley);
+		$doc =& XMLCustomWriter::createDocument('article', '-//ERUDIT//Erudit Article DTD 3.0.0//EN', 'http://www.erudit.org/dtd/article/3.0.0/en/eruditarticle.dtd');
+		$articleNode =& EruditExportDom::generateArticleDom($doc, $journal, $issue, $article, $galley);
 		XMLCustomWriter::appendChild($doc, $articleNode);
 
 		if (!empty($outputFile)) {
@@ -114,13 +114,13 @@ class EruditExportPlugin extends ImportExportPlugin {
 		$articleId = array_shift($args);
 		$galleyLabel = array_shift($args);
 
-		$journalDao = &DAORegistry::getDAO('JournalDAO');
-		$issueDao = &DAORegistry::getDAO('IssueDAO');
-		$sectionDao = &DAORegistry::getDAO('SectionDAO');
-		$userDao = &DAORegistry::getDAO('UserDAO');
-		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$userDao =& DAORegistry::getDAO('UserDAO');
+		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 
-		$journal = &$journalDao->getJournalByPath($journalPath);
+		$journal =& $journalDao->getJournalByPath($journalPath);
 
 		if (!$journal) {
 			if ($journalPath != '') {
@@ -131,7 +131,7 @@ class EruditExportPlugin extends ImportExportPlugin {
 			return;
 		}
 
-		$publishedArticle = &$publishedArticleDao->getPublishedArticleByBestArticleId($journal->getJournalId(), $articleId);
+		$publishedArticle =& $publishedArticleDao->getPublishedArticleByBestArticleId($journal->getJournalId(), $articleId);
 		if ($publishedArticle == null) {
 			echo Locale::translate('plugins.importexport.erudit.cliError') . "\n";
 			echo Locale::translate('plugins.importexport.erudit.export.error.articleNotFound', array('articleId' => $articleId)) . "\n\n";
@@ -147,7 +147,7 @@ class EruditExportPlugin extends ImportExportPlugin {
 			echo Locale::translate('plugins.importexport.erudit.export.error.galleyNotFound', array('galleyLabel' => $galleyLabel)) . "\n\n";
 			return;
 		}
-		$issue = &$issueDao->getIssueById($publishedArticle->getIssueId());
+		$issue =& $issueDao->getIssueById($publishedArticle->getIssueId());
 		if (!$this->exportArticle($journal, $issue, $publishedArticle, $galley, $xmlFile)) {
 			echo Locale::translate('plugins.importexport.erudit.cliError') . "\n";
 			echo Locale::translate('plugins.importexport.erudit.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";

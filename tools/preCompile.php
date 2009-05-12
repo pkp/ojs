@@ -55,7 +55,7 @@ class preCompile extends CommandLineTool {
 	function compileTemplates() {
 		import('issue.IssueAction');
 		import('form.Form');
-		$this->templateMgr = &TemplateManager::getManager();
+		$this->templateMgr =& TemplateManager::getManager();
 
 		/* Register any additional functions used in OJS so that the
 		   templates compile properly.
@@ -83,7 +83,7 @@ class preCompile extends CommandLineTool {
 	}
 
 	function compileLocales() {
-		$locales = &Locale::getAllLocales();
+		$locales =& Locale::getAllLocales();
 		foreach ($locales as $key => $name) {
 			Locale::loadLocale($key);
 		}
@@ -95,8 +95,8 @@ class preCompile extends CommandLineTool {
 		import('help.HelpTopic');
 		import('help.HelpTopicDAO');
 		import('help.HelpTopicSection');
-		$this->helpTopicDao = &DAORegistry::getDAO('HelpTopicDAO');
-		$this->helpTocDao = &DAORegistry::getDAO('HelpTocDAO');
+		$this->helpTopicDao =& DAORegistry::getDAO('HelpTopicDAO');
+		$this->helpTocDao =& DAORegistry::getDAO('HelpTocDAO');
 		$this->_findFiles('help', '_compileHelp', create_function('$f', 'return preg_match(\'/[\d]+\.xml$/\', $f);'));
 	}
 

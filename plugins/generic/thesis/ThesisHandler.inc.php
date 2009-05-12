@@ -31,7 +31,7 @@ class ThesisHandler extends Handler {
 	function index() {
 		$this->validate();
 		$this->setupTemplate();
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 
 		if ($journal != null) {
 			$journalId = $journal->getJournalId();
@@ -39,7 +39,7 @@ class ThesisHandler extends Handler {
 			Request::redirect(null, 'index');
 		}
 
-		$thesisPlugin = &PluginRegistry::getPlugin('generic', 'ThesisPlugin');
+		$thesisPlugin =& PluginRegistry::getPlugin('generic', 'ThesisPlugin');
 
 		if ($thesisPlugin != null) {
 			$thesesEnabled = $thesisPlugin->getEnabled();
@@ -55,14 +55,14 @@ class ThesisHandler extends Handler {
 				$searchMatch = Request::getUserVar('searchMatch');
 			}			
 
-			$thesisDao = &DAORegistry::getDAO('ThesisDAO');
+			$thesisDao =& DAORegistry::getDAO('ThesisDAO');
 			$rangeInfo =& Handler::getRangeInfo('theses');
 			$resultOrder = $thesisPlugin->getSetting($journalId, 'thesisOrder');
 
-			$theses = &$thesisDao->getActiveThesesByJournalId($journalId, $searchField, $search, $searchMatch, null, null, $resultOrder, $rangeInfo);
+			$theses =& $thesisDao->getActiveThesesByJournalId($journalId, $searchField, $search, $searchMatch, null, null, $resultOrder, $rangeInfo);
 			$thesisIntroduction = $thesisPlugin->getSetting($journalId, 'thesisIntroduction');
 
-			$templateMgr = &TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign('theses', $theses);
 			$templateMgr->assign('thesisIntroduction', $thesisIntroduction);
 			$templateMgr->assign('searchField', $searchField);
@@ -92,7 +92,7 @@ class ThesisHandler extends Handler {
 	function submit() {
 		$this->validate();
 		$this->setupTemplate();
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 
 		if ($journal != null) {
 			$journalId = $journal->getJournalId();
@@ -100,7 +100,7 @@ class ThesisHandler extends Handler {
 			Request::redirect(null, 'index');
 		}
 
-		$thesisPlugin = &PluginRegistry::getPlugin('generic', 'ThesisPlugin');
+		$thesisPlugin =& PluginRegistry::getPlugin('generic', 'ThesisPlugin');
 
 		if ($thesisPlugin != null) {
 			$thesesEnabled = $thesisPlugin->getEnabled();
@@ -109,13 +109,13 @@ class ThesisHandler extends Handler {
 		if ($thesesEnabled) {
 			$thesisPlugin->import('StudentThesisForm');
 			$enableUploadCode = $thesisPlugin->getSetting($journalId, 'enableUploadCode');
-			$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
-			$journalSettings = &$journalSettingsDao->getJournalSettings($journalId);
+			$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+			$journalSettings =& $journalSettingsDao->getJournalSettings($journalId);
 
-			$templateMgr = &TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->append('pageHierarchy', array(Request::url(null, 'thesis'), 'plugins.generic.thesis.theses'));
 			$templateMgr->assign('journalSettings', $journalSettings);
-			$thesisDao = &DAORegistry::getDAO('ThesisDAO');
+			$thesisDao =& DAORegistry::getDAO('ThesisDAO');
 
 			// FIXME: Need construction by reference or validation always fails on PHP 4.x
 			$thesisForm =& new StudentThesisForm();
@@ -134,7 +134,7 @@ class ThesisHandler extends Handler {
 	function view($args = array()) {
 		$this->validate();
 		$this->setupTemplate();
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 
 		if ($journal != null) {
 			$journalId = $journal->getJournalId();
@@ -142,20 +142,20 @@ class ThesisHandler extends Handler {
 			Request::redirect(null, 'index');
 		}
 
-		$thesisPlugin = &PluginRegistry::getPlugin('generic', 'ThesisPlugin');
+		$thesisPlugin =& PluginRegistry::getPlugin('generic', 'ThesisPlugin');
 
 		if ($thesisPlugin != null) {
 			$thesesEnabled = $thesisPlugin->getEnabled();
 		}
 
 		$thesisId = !isset($args) || empty($args) ? null : (int) $args[0];
-		$thesisDao = &DAORegistry::getDAO('ThesisDAO');
+		$thesisDao =& DAORegistry::getDAO('ThesisDAO');
 
 		if ($thesesEnabled) {
 			if (($thesisId != null) && ($thesisDao->getThesisJournalId($thesisId) == $journalId) && $thesisDao->isThesisActive($thesisId)) {
-			$thesis = &$thesisDao->getThesis($thesisId);
+			$thesis =& $thesisDao->getThesis($thesisId);
 
-			$templateMgr = &TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign('journal', $journal);
 			$templateMgr->assign('thesis', $thesis);
 			$templateMgr->append('pageHierarchy', array(Request::url(null, 'thesis'), 'plugins.generic.thesis.theses'));
@@ -176,7 +176,7 @@ class ThesisHandler extends Handler {
 	 */
 	function save() {
 		$this->validate();
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 
 		if ($journal != null) {
 			$journalId = $journal->getJournalId();
@@ -184,14 +184,14 @@ class ThesisHandler extends Handler {
 			Request::redirect(null, 'index');
 		}
 
-		$thesisPlugin = &PluginRegistry::getPlugin('generic', 'ThesisPlugin');
+		$thesisPlugin =& PluginRegistry::getPlugin('generic', 'ThesisPlugin');
 
 		if ($thesisPlugin != null) {
 			$thesesEnabled = $thesisPlugin->getEnabled();
 		}
 
 		if ($thesesEnabled) {
-			$thesisDao = &DAORegistry::getDAO('ThesisDAO');
+			$thesisDao =& DAORegistry::getDAO('ThesisDAO');
 			$thesisPlugin->import('StudentThesisForm');
 
 			// FIXME: Need construction by reference or validation always fails on PHP 4.x
@@ -206,10 +206,10 @@ class ThesisHandler extends Handler {
 			} else {
 				$this->setupTemplate();
 
-				$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
-				$journalSettings = &$journalSettingsDao->getJournalSettings($journalId);
+				$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+				$journalSettings =& $journalSettingsDao->getJournalSettings($journalId);
 
-				$templateMgr = &TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->assign('journalSettings', $journalSettings);
 				$thesisForm->display();
 			}
@@ -245,7 +245,7 @@ class ThesisHandler extends Handler {
 	function setupTemplate($subclass = false) {
 		parent::setupTemplate();
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('pageHierachy', array(array(Request::url(null, 'theses'), 'plugins.generic.thesis.theses')));
 	}
 }

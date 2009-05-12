@@ -151,7 +151,7 @@ class ThesisFeedPlugin extends GenericPlugin {
 
 		switch ($verb) {
 			case 'settings':
-				$templateMgr = &TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 
 				$this->import('SettingsForm');

@@ -32,8 +32,8 @@ class StatisticsHandler extends ManagerHandler {
 		$this->validate();
 		$this->setupTemplate(true);
 
-		$journal = &Request::getJournal();
-		$templateMgr = &TemplateManager::getManager();
+		$journal =& Request::getJournal();
+		$templateMgr =& TemplateManager::getManager();
 
 		$statisticsYear = Request::getUserVar('statisticsYear');
 		if (empty($statisticsYear)) $statisticsYear = date('Y');
@@ -98,7 +98,7 @@ class StatisticsHandler extends ManagerHandler {
 
 		$this->validate();
 
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 
 		$sectionIds = Request::getUserVar('sectionIds');
 		if (!is_array($sectionIds)) {

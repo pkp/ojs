@@ -32,7 +32,7 @@ class PhpMyVisitesSettingsForm extends Form {
 	 */
 	function PhpMyVisitesSettingsForm(&$plugin, $journalId) {
 		$this->journalId = $journalId;
-		$this->plugin = &$plugin;
+		$this->plugin =& $plugin;
 
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
 
@@ -45,7 +45,7 @@ class PhpMyVisitesSettingsForm extends Form {
 	 */
 	function initData() {
 		$journalId = $this->journalId;
-		$plugin = &$this->plugin;
+		$plugin =& $this->plugin;
 
 		$this->_data = array(
 			'phpmvUrl' => $plugin->getSetting($journalId, 'phpmvUrl'),
@@ -64,7 +64,7 @@ class PhpMyVisitesSettingsForm extends Form {
 	 * Save settings. 
 	 */
 	function execute() {
-		$plugin = &$this->plugin;
+		$plugin =& $this->plugin;
 		$journalId = $this->journalId;
 
 		$plugin->updateSetting($journalId, 'phpmvUrl', rtrim($this->getData('phpmvUrl'), "/"), 'string');

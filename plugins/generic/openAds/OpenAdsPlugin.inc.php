@@ -226,8 +226,8 @@ class OpenAdsPlugin extends GenericPlugin {
  	 * @return boolean
  	 */
 	function manage($verb, $args, &$message) {
-		$templateMgr = &TemplateManager::getManager();
-		$journal = &Request::getJournal();
+		$templateMgr =& TemplateManager::getManager();
+		$journal =& Request::getJournal();
 		$returner = false;
 
 		switch ($verb) {

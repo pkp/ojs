@@ -29,7 +29,7 @@ class RTVersionHandler extends RTAdminHandler {
 	function createVersion($args) {
 		$this->validate();
 
-		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$rtDao =& DAORegistry::getDAO('RTDAO');
 
 		$journal = Request::getJournal();
 
@@ -50,14 +50,14 @@ class RTVersionHandler extends RTAdminHandler {
 	function exportVersion($args) {
 		$this->validate();
 
-		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$rtDao =& DAORegistry::getDAO('RTDAO');
 
 		$journal = Request::getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
-		$version = &$rtDao->getVersion($versionId, $journal->getJournalId());
+		$version =& $rtDao->getVersion($versionId, $journal->getJournalId());
 
 		if ($version) {
-			$templateMgr = &TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign_by_ref('version', $version);
 
 			$templateMgr->display('rtadmin/exportXml.tpl', 'application/xml');
@@ -67,7 +67,7 @@ class RTVersionHandler extends RTAdminHandler {
 
 	function importVersion() {
 		$this->validate();
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 
 		$fileField = 'versionFile';
 		if (isset($_FILES[$fileField]['tmp_name']) && is_uploaded_file($_FILES[$fileField]['tmp_name'])) {
@@ -80,14 +80,14 @@ class RTVersionHandler extends RTAdminHandler {
 	function restoreVersions() {
 		$this->validate();
 
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		$rtAdmin = new JournalRTAdmin($journal->getJournalId());
 		$rtAdmin->restoreVersions();
 
 		// If the journal RT was configured, change its state to
 		// "disabled" because the RT version it was configured for
 		// has now been deleted.
-		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$rtDao =& DAORegistry::getDAO('RTDAO');
 		$journalRt = $rtDao->getJournalRTByJournal($journal);
 		if ($journalRt) {
 			$journalRt->setVersion(null);
@@ -103,10 +103,10 @@ class RTVersionHandler extends RTAdminHandler {
 
 		$journal = Request::getJournal();
 
-		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$rtDao =& DAORegistry::getDAO('RTDAO');
 		$rangeInfo = Handler::getRangeInfo('versions');
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('versions', $rtDao->getVersions($journal->getJournalId(), $rangeInfo));
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.versions');
 		$templateMgr->display('rtadmin/versions.tpl');
@@ -115,11 +115,11 @@ class RTVersionHandler extends RTAdminHandler {
 	function editVersion($args) {
 		$this->validate();
 
-		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$rtDao =& DAORegistry::getDAO('RTDAO');
 
 		$journal = Request::getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
-		$version = &$rtDao->getVersion($versionId, $journal->getJournalId());
+		$version =& $rtDao->getVersion($versionId, $journal->getJournalId());
 
 		if (isset($version)) {
 			import('rt.ojs.form.VersionForm');
@@ -135,7 +135,7 @@ class RTVersionHandler extends RTAdminHandler {
 	function deleteVersion($args) {
 		$this->validate();
 
-		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$rtDao =& DAORegistry::getDAO('RTDAO');
 
 		$journal = Request::getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
@@ -148,11 +148,11 @@ class RTVersionHandler extends RTAdminHandler {
 	function saveVersion($args) {
 		$this->validate();
 
-		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$rtDao =& DAORegistry::getDAO('RTDAO');
 
 		$journal = Request::getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
-		$version = &$rtDao->getVersion($versionId, $journal->getJournalId());
+		$version =& $rtDao->getVersion($versionId, $journal->getJournalId());
 
 		if (isset($version)) {
 			import('rt.ojs.form.VersionForm');

@@ -34,7 +34,7 @@ class ThesisForm extends Form {
 	 * @param thesisId int leave as default for new thesis
 	 */
 	function ThesisForm($thesisId = null) {
-		$thesisPlugin = &PluginRegistry::getPlugin('generic', 'ThesisPlugin');
+		$thesisPlugin =& PluginRegistry::getPlugin('generic', 'ThesisPlugin');
 		$thesisPlugin->import('Thesis');
 
 		$this->validStatus = array (
@@ -49,7 +49,7 @@ class ThesisForm extends Form {
 
 		$this->thesisId = isset($thesisId) ? (int) $thesisId : null;
 
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		parent::Form($thesisPlugin->getTemplatePath() . 'thesisForm.tpl');
 
 
@@ -108,10 +108,10 @@ class ThesisForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$thesisPlugin = &PluginRegistry::getPlugin('generic', 'ThesisPlugin');
+		$thesisPlugin =& PluginRegistry::getPlugin('generic', 'ThesisPlugin');
 		$thesisPlugin->import('Thesis');
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('thesisId', $this->thesisId);
 		$templateMgr->assign('validStatus', $this->validStatus);
 		$templateMgr->assign('validDegrees', $this->validDegrees);
@@ -125,8 +125,8 @@ class ThesisForm extends Form {
 	 */
 	function initData() {
 		if (isset($this->thesisId)) {
-			$thesisDao = &DAORegistry::getDAO('ThesisDAO');
-			$thesis = &$thesisDao->getThesis($this->thesisId);
+			$thesisDao =& DAORegistry::getDAO('ThesisDAO');
+			$thesis =& $thesisDao->getThesis($this->thesisId);
 
 			if ($thesis != null) {
 				$this->_data = array(
@@ -183,15 +183,15 @@ class ThesisForm extends Form {
 	 * Save thesis. 
 	 */
 	function execute() {
-		$thesisPlugin = &PluginRegistry::getPlugin('generic', 'ThesisPlugin');
+		$thesisPlugin =& PluginRegistry::getPlugin('generic', 'ThesisPlugin');
 		$thesisPlugin->import('Thesis');
 
-		$thesisDao = &DAORegistry::getDAO('ThesisDAO');
-		$journal = &Request::getJournal();
+		$thesisDao =& DAORegistry::getDAO('ThesisDAO');
+		$journal =& Request::getJournal();
 		$journalId = $journal->getJournalId();
 
 		if (isset($this->thesisId)) {
-			$thesis = &$thesisDao->getThesis($this->thesisId);
+			$thesis =& $thesisDao->getThesis($this->thesisId);
 		}
 
 		if (!isset($thesis)) {

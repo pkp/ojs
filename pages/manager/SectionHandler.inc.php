@@ -30,12 +30,12 @@ class SectionHandler extends ManagerHandler {
 		$this->validate();
 		$this->setupTemplate();
 
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		$rangeInfo =& Handler::getRangeInfo('sections');
-		$sectionDao = &DAORegistry::getDAO('SectionDAO');
-		$sections = &$sectionDao->getJournalSections($journal->getJournalId(), $rangeInfo);
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$sections =& $sectionDao->getJournalSections($journal->getJournalId(), $rangeInfo);
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy', array(array(Request::url(null, 'manager'), 'manager.journalManagement')));
 		$templateMgr->assign_by_ref('sections', $sections);
 		$templateMgr->assign('helpTopicId','journal.managementPages.sections');
@@ -112,9 +112,9 @@ class SectionHandler extends ManagerHandler {
 		$this->validate();
 
 		if (isset($args) && !empty($args)) {
-			$journal = &Request::getJournal();
+			$journal =& Request::getJournal();
 
-			$sectionDao = &DAORegistry::getDAO('SectionDAO');
+			$sectionDao =& DAORegistry::getDAO('SectionDAO');
 			$sectionDao->deleteSectionById($args[0], $journal->getJournalId());
 		}
 
@@ -127,10 +127,10 @@ class SectionHandler extends ManagerHandler {
 	function moveSection() {
 		$this->validate();
 
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 
-		$sectionDao = &DAORegistry::getDAO('SectionDAO');
-		$section = &$sectionDao->getSection(Request::getUserVar('sectionId'), $journal->getJournalId());
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$section =& $sectionDao->getSection(Request::getUserVar('sectionId'), $journal->getJournalId());
 
 		if ($section != null) {
 			$section->setSequence($section->getSequence() + (Request::getUserVar('d') == 'u' ? -1.5 : 1.5));
@@ -145,9 +145,10 @@ class SectionHandler extends ManagerHandler {
 		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_PKP_READER));
 		parent::setupTemplate(true);
 		if ($subclass) {
-			$templateMgr = &TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'sections'), 'section.sections'));
 		}
 	}
 }
+
 ?>

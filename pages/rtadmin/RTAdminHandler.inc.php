@@ -38,7 +38,7 @@ class RTAdminHandler extends Handler {
 		$journal = Request::getJournal();
 		$user = Request::getUser();
 		if ($journal) {
-			$rtDao = &DAORegistry::getDAO('RTDAO');
+			$rtDao =& DAORegistry::getDAO('RTDAO');
 			$rt = $rtDao->getJournalRTByJournal($journal);
 			if (isset($rt)) {
 				$version = $rtDao->getVersion($rt->getVersion(), $journal->getJournalId());
@@ -47,7 +47,7 @@ class RTAdminHandler extends Handler {
 			// Display the administration menu for this journal.
 
 			$this->setupTemplate();
-			$templateMgr = &TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools');
 			$templateMgr->assign('versionTitle', isset($version)?$version->getTitle():null);
 			$templateMgr->assign('enabled', $rt->getEnabled());
@@ -55,13 +55,13 @@ class RTAdminHandler extends Handler {
 			$templateMgr->display('rtadmin/index.tpl');
 		} elseif ($user) {
 			// Display a list of journals.
-			$journalDao = &DAORegistry::getDAO('JournalDAO');
-			$roleDao = &DAORegistry::getDAO('RoleDAO');
+			$journalDao =& DAORegistry::getDAO('JournalDAO');
+			$roleDao =& DAORegistry::getDAO('RoleDAO');
 
 			$journals = array();
 
-			$allJournals = &$journalDao->getJournals();
-			$allJournals = &$allJournals->toArray();
+			$allJournals =& $journalDao->getJournals();
+			$allJournals =& $allJournals->toArray();
 
 			foreach ($allJournals as $journal) {
 				if ($roleDao->roleExists($journal->getJournalId(), $user->getUserId(), ROLE_ID_JOURNAL_MANAGER)) {
@@ -70,7 +70,7 @@ class RTAdminHandler extends Handler {
 			}
 
 			$this->setupTemplate();
-			$templateMgr = &TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign_by_ref('journals', $journals);
 			$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools');
 			$templateMgr->display('rtadmin/journals.tpl');
@@ -83,7 +83,7 @@ class RTAdminHandler extends Handler {
 	function validateUrls($args) {
 		$this->validate();
 
-		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$rtDao =& DAORegistry::getDAO('RTDAO');
 		$journal = Request::getJournal();
 
 		if (!$journal) {
@@ -107,7 +107,7 @@ class RTAdminHandler extends Handler {
 		}
 
 		$this->setupTemplate(true, $version);
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->register_modifier('validate_url', 'smarty_rtadmin_validate_url');
 		$templateMgr->assign_by_ref('versions', $versions);
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools');
@@ -124,7 +124,7 @@ class RTAdminHandler extends Handler {
 	function setupTemplate($subclass = false, $version = null, $context = null, $search = null) {
 		parent::setupTemplate();
 		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_OJS_MANAGER));
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 
 		$pageHierarchy = array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'manager'), 'manager.journalManagement'));
 

@@ -45,13 +45,13 @@ class ThesisDAO extends DAO {
 	 * @return Thesis
 	 */
 	function &getThesis($thesisId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT * FROM theses WHERE thesis_id = ?', $thesisId
 		);
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnThesisFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnThesisFromRow($result->GetRowAssoc(false));
 		}
 		$result->Close();
 		return $returner;
@@ -63,13 +63,13 @@ class ThesisDAO extends DAO {
 	 * @return Thesis
 	 */
 	function &getMostRecentActiveThesisByJournalId($journalId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT * FROM theses WHERE status = ? AND journal_id = ? ORDER BY date_submitted DESC, thesis_id DESC LIMIT 1', array(THESIS_STATUS_ACTIVE, $journalId)
 		);
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnThesisFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnThesisFromRow($result->GetRowAssoc(false));
 		}
 		$result->Close();
 		return $returner;
@@ -81,7 +81,7 @@ class ThesisDAO extends DAO {
 	 * @return int
 	 */
 	function getThesisJournalId($thesisId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT journal_id FROM theses WHERE thesis_id = ?', $thesisId
 		);
 
@@ -94,10 +94,10 @@ class ThesisDAO extends DAO {
 	 * @return boolean
 	 */
 	function isThesisActive($thesisId) {
-		$thesisPlugin = &PluginRegistry::getPlugin('generic', 'ThesisPlugin');
+		$thesisPlugin =& PluginRegistry::getPlugin('generic', 'ThesisPlugin');
 		$thesisPlugin->import('Thesis');
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT thesis_id FROM theses WHERE status = ? AND thesis_id = ?', array(THESIS_STATUS_ACTIVE, $thesisId)
 		);
 
@@ -110,7 +110,7 @@ class ThesisDAO extends DAO {
 	 * @return Thesis
 	 */
 	function &_returnThesisFromRow(&$row) {
-		$thesisPlugin = &PluginRegistry::getPlugin('generic', 'ThesisPlugin');
+		$thesisPlugin =& PluginRegistry::getPlugin('generic', 'ThesisPlugin');
 		$thesisPlugin->import('Thesis');
 
 		$thesis = new Thesis();
@@ -390,7 +390,7 @@ class ThesisDAO extends DAO {
 				$searchSql .= ' ORDER BY date_submitted DESC, thesis_id DESC';
 		}
 
-		$result = &$this->retrieveRange(
+		$result =& $this->retrieveRange(
 			'SELECT * FROM theses WHERE journal_id = ? ' . $searchSql,
 			$paramArray,
 			$rangeInfo
@@ -413,7 +413,7 @@ class ThesisDAO extends DAO {
 	 * @return object DAOResultFactory containing matching Theses 
 	 */
 	function &getActiveThesesByJournalId($journalId, $searchType = null, $search = null, $searchMatch = null, $dateFrom = null, $dateTo = null, $resultOrder = null, $rangeInfo = null) {
-		$thesisPlugin = &PluginRegistry::getPlugin('generic', 'ThesisPlugin');
+		$thesisPlugin =& PluginRegistry::getPlugin('generic', 'ThesisPlugin');
 		$thesisPlugin->import('Thesis');
 
 		$paramArray = array(THESIS_STATUS_ACTIVE, (int) $journalId);
@@ -492,7 +492,7 @@ class ThesisDAO extends DAO {
 				$searchSql .= ' ORDER BY date_submitted DESC, thesis_id DESC';
 		}
 
-		$result = &$this->retrieveRange(
+		$result =& $this->retrieveRange(
 			'SELECT * FROM theses WHERE status = ? AND journal_id = ? ' . $searchSql,
 			$paramArray,
 			$rangeInfo

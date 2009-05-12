@@ -48,12 +48,12 @@ class PubMedExportPlugin extends ImportExportPlugin {
 	}
 
 	function display(&$args) {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		parent::display($args);
 
-		$issueDao = &DAORegistry::getDAO('IssueDAO');
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
 
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 
 		switch (array_shift($args)) {
 			case 'exportIssues':
@@ -61,15 +61,15 @@ class PubMedExportPlugin extends ImportExportPlugin {
 				if (!isset($issueIds)) $issueIds = array();
 				$issues = array();
 				foreach ($issueIds as $issueId) {
-					$issue = &$issueDao->getIssueById($issueId);
+					$issue =& $issueDao->getIssueById($issueId);
 					if (!$issue) Request::redirect();
-					$issues[] = &$issue;
+					$issues[] =& $issue;
 				}
 				$this->exportIssues($journal, $issues);
 				break;
 			case 'exportIssue':
 				$issueId = array_shift($args);
-				$issue = &$issueDao->getIssueById($issueId);
+				$issue =& $issueDao->getIssueById($issueId);
 				if (!$issue) Request::redirect();
 				$issues = array($issue);
 				$this->exportIssues($journal, $issues);
@@ -82,14 +82,14 @@ class PubMedExportPlugin extends ImportExportPlugin {
 			case 'exportArticles':
 				$articleIds = Request::getUserVar('articleId');
 				if (!isset($articleIds)) $articleIds = array();
-				$results = &ArticleSearch::formatResults($articleIds);
+				$results =& ArticleSearch::formatResults($articleIds);
 				$this->exportArticles($results);
 				break;
 			case 'issues':
 				// Display a list of issues for export
 				$this->setBreadcrumbs(array(), true);
-				$issueDao = &DAORegistry::getDAO('IssueDAO');
-				$issues = &$issueDao->getIssues($journal->getJournalId(), Handler::getRangeInfo('issues'));
+				$issueDao =& DAORegistry::getDAO('IssueDAO');
+				$issues =& $issueDao->getIssues($journal->getJournalId(), Handler::getRangeInfo('issues'));
 
 				$templateMgr->assign_by_ref('issues', $issues);
 				$templateMgr->display($this->getTemplatePath() . 'issues.tpl');
@@ -97,7 +97,7 @@ class PubMedExportPlugin extends ImportExportPlugin {
 			case 'articles':
 				// Display a list of articles for export
 				$this->setBreadcrumbs(array(), true);
-				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 				$rangeInfo = Handler::getRangeInfo('articles');
 				$articleIds = $publishedArticleDao->getPublishedArticleIdsByJournal($journal->getJournalId(), false);
 				$totalArticles = count($articleIds);
@@ -115,16 +115,16 @@ class PubMedExportPlugin extends ImportExportPlugin {
 
 	function exportArticles(&$results, $outputFile = null) {
 		$this->import('PubMedExportDom');
-		$doc = &PubMedExportDom::generatePubMedDom();
-		$articleSetNode = &PubMedExportDom::generateArticleSetDom($doc);
+		$doc =& PubMedExportDom::generatePubMedDom();
+		$articleSetNode =& PubMedExportDom::generateArticleSetDom($doc);
 
 		foreach ($results as $result) {
-			$journal = &$result['journal'];
-			$issue = &$result['issue'];
-			$section = &$result['section'];
-			$article = &$result['publishedArticle'];
+			$journal =& $result['journal'];
+			$issue =& $result['issue'];
+			$section =& $result['section'];
+			$article =& $result['publishedArticle'];
 
-			$articleNode = &PubMedExportDom::generateArticleDom($doc, $journal, $issue, $section, $article);
+			$articleNode =& PubMedExportDom::generateArticleDom($doc, $journal, $issue, $section, $article);
 			XMLCustomWriter::appendChild($articleSetNode, $articleNode);
 		}
 
@@ -143,16 +143,16 @@ class PubMedExportPlugin extends ImportExportPlugin {
 
 	function exportIssues(&$journal, &$issues, $outputFile = null) {
 		$this->import('PubMedExportDom');
-		$doc = &PubMedExportDom::generatePubMedDom();
-		$articleSetNode = &PubMedExportDom::generateArticleSetDom($doc);
+		$doc =& PubMedExportDom::generatePubMedDom();
+		$articleSetNode =& PubMedExportDom::generateArticleSetDom($doc);
 
-		$sectionDao = &DAORegistry::getDAO('SectionDAO');
-		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 
 		foreach ($issues as $issue) {
 			foreach ($sectionDao->getSectionsForIssue($issue->getIssueId()) as $section) {
 				foreach ($publishedArticleDao->getPublishedArticlesBySectionId($section->getSectionId(), $issue->getIssueId()) as $article) {
-					$articleNode = &PubMedExportDom::generateArticleDom($doc, $journal, $issue, $section, $article);
+					$articleNode =& PubMedExportDom::generateArticleDom($doc, $journal, $issue, $section, $article);
 					XMLCustomWriter::appendChild($articleSetNode, $articleNode);
 				}
 			}
@@ -180,13 +180,13 @@ class PubMedExportPlugin extends ImportExportPlugin {
 		$xmlFile = array_shift($args);
 		$journalPath = array_shift($args);
 
-		$journalDao = &DAORegistry::getDAO('JournalDAO');
-		$issueDao = &DAORegistry::getDAO('IssueDAO');
-		$sectionDao = &DAORegistry::getDAO('SectionDAO');
-		$userDao = &DAORegistry::getDAO('UserDAO');
-		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$userDao =& DAORegistry::getDAO('UserDAO');
+		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 
-		$journal = &$journalDao->getJournalByPath($journalPath);
+		$journal =& $journalDao->getJournalByPath($journalPath);
 
 		if (!$journal) {
 			if ($journalPath != '') {
@@ -199,7 +199,7 @@ class PubMedExportPlugin extends ImportExportPlugin {
 
 		if ($xmlFile != '') switch (array_shift($args)) {
 			case 'articles':
-				$results = &ArticleSearch::formatResults($args);
+				$results =& ArticleSearch::formatResults($args);
 				if (!$this->exportArticles($results, $xmlFile)) {
 					echo Locale::translate('plugins.importexport.pubmed.cliError') . "\n";
 					echo Locale::translate('plugins.importexport.pubmed.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";
@@ -207,7 +207,7 @@ class PubMedExportPlugin extends ImportExportPlugin {
 				return;
 			case 'issue':
 				$issueId = array_shift($args);
-				$issue = &$issueDao->getIssueByBestIssueId($issueId, $journal->getJournalId());
+				$issue =& $issueDao->getIssueByBestIssueId($issueId, $journal->getJournalId());
 				if ($issue == null) {
 					echo Locale::translate('plugins.importexport.pubmed.cliError') . "\n";
 					echo Locale::translate('plugins.importexport.pubmed.export.error.issueNotFound', array('issueId' => $issueId)) . "\n\n";

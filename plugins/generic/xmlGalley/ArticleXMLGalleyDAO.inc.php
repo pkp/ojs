@@ -31,7 +31,7 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 
 		// get derived galley from DB
 		if (isset($articleId)) {
-			$result = &$this->retrieve(
+			$result =& $this->retrieve(
 				'SELECT x.*, x.galley_type AS file_type, 
 				g.file_id, g.html_galley, g.style_file_id, g.seq,
 				a.file_name, a.original_file_name, a.file_size, a.status, a.date_uploaded, a.date_modified
@@ -43,7 +43,7 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 			);
 
 		} else {
-			$result = &$this->retrieve(
+			$result =& $this->retrieve(
 				'SELECT x.*, x.galley_type AS file_type, 
 				g.file_id, g.html_galley, g.style_file_id, g.seq,
 				a.file_name, a.original_file_name, a.file_size, a.status, a.date_uploaded, a.date_modified
@@ -57,9 +57,9 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 
 		// transform row into an ArticleXMLGalley object
 		if ($result->RecordCount() != 0) {
-			$articleGalley = &$this->_returnGalleyFromRow($result->GetRowAssoc(false));
+			$articleGalley =& $this->_returnGalleyFromRow($result->GetRowAssoc(false));
 
-			$xmlGalleyPlugin = &PluginRegistry::getPlugin('generic', 'XMLGalleyPlugin');
+			$xmlGalleyPlugin =& PluginRegistry::getPlugin('generic', 'XMLGalleyPlugin');
 			$xmlGalley = $xmlGalleyPlugin->_returnXMLGalleyFromArticleGalley($articleGalley);
 			return $xmlGalley;
 		}
@@ -75,21 +75,21 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 		// we have to use this crazy loop because PHP4 can't access objects by reference in foreach()
 		reset($galleys);
 		while (list($key) = each($galleys)) {
-			$galley = & $galleys[$key];
+			$galley =&  $galleys[$key];
 
 			// if the galley is an XML galley, append XML-derived galleys
 			if ($galley->getFileType() == "text/xml") {
 
 				// get derived galleys from DB for this article
-				$result = &$this->retrieve(
+				$result =& $this->retrieve(
 					'SELECT xml_galley_id
 					FROM article_xml_galleys x
 					WHERE x.galley_id = ? AND x.article_id = ? ORDER BY xml_galley_id',
 					array($galley->getGalleyId(), $articleId)
 				);
 
-				$xmlGalleyPlugin = &PluginRegistry::getPlugin('generic', 'XMLGalleyPlugin');
-				$journal = &Request::getJournal();
+				$xmlGalleyPlugin =& PluginRegistry::getPlugin('generic', 'XMLGalleyPlugin');
+				$journal =& Request::getJournal();
 
 				while (!$result->EOF) {
 					$row = $result->GetRowAssoc(false);
@@ -139,8 +139,8 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 
 			// if we have enabled XML-PDF galley generation (plugin setting)
 			// and are using the built-in NLM stylesheet, append a PDF galley as well
-			$journal = &Request::getJournal();
-			$xmlGalleyPlugin = &PluginRegistry::getPlugin('generic', 'XMLGalleyPlugin');
+			$journal =& Request::getJournal();
+			$xmlGalleyPlugin =& PluginRegistry::getPlugin('generic', 'XMLGalleyPlugin');
 
 			if ($xmlGalleyPlugin->getSetting($journal->getJournalId(), 'nlmPDF') == 1 && 
 				$xmlGalleyPlugin->getSetting($journal->getJournalId(), 'XSLstylesheet') == 'NLM' ) {

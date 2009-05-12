@@ -50,7 +50,7 @@ class SetupHandler extends ManagerHandler {
 			$setupForm->display();
 
 		} else {
-			$templateMgr = &TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign('helpTopicId','journal.managementPages.setup');
 			$templateMgr->display('manager/setup/index.tpl');
 		}
@@ -330,7 +330,7 @@ class SetupHandler extends ManagerHandler {
 		if ($step >= 1 && $step <= 5) {
 			$this->setupTemplate(true);
 
-			$templateMgr = &TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign('setupStep', $step);
 			$templateMgr->assign('helpTopicId', 'journal.managementPages.setup');
 			$templateMgr->display('manager/setup/settingsSaved.tpl');

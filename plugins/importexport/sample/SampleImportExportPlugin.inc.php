@@ -64,11 +64,11 @@ class SampleImportExportPlugin extends ImportExportPlugin {
 				break;
 			default:
 				// Display a list of issues for export
-				$journal = &Request::getJournal();
-				$issueDao = &DAORegistry::getDAO('IssueDAO');
-				$issues = &$issueDao->getIssues($journal->getJournalId(), Handler::getRangeInfo('issues'));
+				$journal =& Request::getJournal();
+				$issueDao =& DAORegistry::getDAO('IssueDAO');
+				$issues =& $issueDao->getIssues($journal->getJournalId(), Handler::getRangeInfo('issues'));
 
-				$templateMgr = &TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->assign_by_ref('issues', $issues);
 				$templateMgr->display($this->getTemplatePath() . 'issues.tpl');
 		}

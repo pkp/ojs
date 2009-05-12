@@ -36,9 +36,9 @@ class ProofreaderHandler extends Handler {
 		$this->validate();
 		$this->setupTemplate();
 
-		$journal = &Request::getJournal();
-		$user = &Request::getUser();
-		$proofreaderSubmissionDao = &DAORegistry::getDAO('ProofreaderSubmissionDAO');
+		$journal =& Request::getJournal();
+		$user =& Request::getUser();
+		$proofreaderSubmissionDao =& DAORegistry::getDAO('ProofreaderSubmissionDAO');
 
 		// Get the user's search conditions, if any
 		$searchField = Request::getUserVar('searchField');
@@ -65,7 +65,7 @@ class ProofreaderHandler extends Handler {
 
 		$submissions = $proofreaderSubmissionDao->getSubmissions($user->getUserId(), $journal->getJournalId(), $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $active, $rangeInfo);
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('pageToDisplay', $page);
 		$templateMgr->assign_by_ref('submissions', $submissions);
 
@@ -107,7 +107,7 @@ class ProofreaderHandler extends Handler {
 	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null, $showSidebar = true) {
 		parent::setupTemplate();
 		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_OJS_EDITOR));
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$pageHierarchy = $subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'proofreader'), 'user.role.proofreader'))
 				: array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'proofreader'), 'user.role.proofreader'));
 

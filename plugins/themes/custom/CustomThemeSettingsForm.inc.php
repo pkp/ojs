@@ -32,7 +32,7 @@ class CustomThemeSettingsForm extends Form {
 	 */
 	function CustomThemeSettingsForm(&$plugin, $journalId) {
 		$this->journalId = $journalId;
-		$this->plugin = &$plugin;
+		$this->plugin =& $plugin;
 
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
 	}
@@ -55,7 +55,7 @@ class CustomThemeSettingsForm extends Form {
 	 */
 	function initData() {
 		$journalId = $this->journalId;
-		$plugin = &$this->plugin;
+		$plugin =& $this->plugin;
 
 		$this->_data = array(
 			'customThemeHeaderColour' => $plugin->getSetting($journalId, 'customThemeHeaderColour'),
@@ -76,7 +76,7 @@ class CustomThemeSettingsForm extends Form {
 	 * Save settings. 
 	 */
 	function execute() {
-		$plugin = &$this->plugin;
+		$plugin =& $this->plugin;
 		$journalId = $this->journalId;
 		$css = '';
 

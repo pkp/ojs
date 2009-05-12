@@ -45,9 +45,9 @@ class SectionEditorHandler extends Handler {
 		$this->validate();
 		$this->setupTemplate();
 
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		$journalId = $journal->getJournalId();
-		$user = &Request::getUser();
+		$user =& Request::getUser();
 
 		$rangeInfo = Handler::getRangeInfo('submissions');
 
@@ -62,11 +62,11 @@ class SectionEditorHandler extends Handler {
 		$toDate = Request::getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
 		if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
 
-		$sectionDao = &DAORegistry::getDAO('SectionDAO');
-		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
 
 		$page = isset($args[0]) ? $args[0] : '';
-		$sections = &$sectionDao->getSectionTitles($journal->getJournalId());
+		$sections =& $sectionDao->getSectionTitles($journal->getJournalId());
 
 		$filterSectionOptions = array(
 			FILTER_SECTION_ALL => Locale::Translate('editor.allSections')
@@ -98,7 +98,7 @@ class SectionEditorHandler extends Handler {
 			}	
 		}
 
-		$submissions = &$sectionEditorSubmissionDao->$functionName(
+		$submissions =& $sectionEditorSubmissionDao->$functionName(
 			$user->getUserId(),
 			$journal->getJournalId(),
 			$filterSection,
@@ -111,7 +111,7 @@ class SectionEditorHandler extends Handler {
 			$rangeInfo
 		);
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', $helpTopicId);
 		$templateMgr->assign('sectionOptions', $filterSectionOptions);
 		$templateMgr->assign_by_ref('submissions', $submissions);

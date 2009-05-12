@@ -31,7 +31,7 @@ class ThesisPlugin extends GenericPlugin {
 		if ($success && $this->getEnabled()) {
 			$this->import('ThesisDAO');
 			$thesisDao = new ThesisDAO();
-			$returner = &DAORegistry::registerDAO('ThesisDAO', $thesisDao);
+			$returner =& DAORegistry::registerDAO('ThesisDAO', $thesisDao);
 
 			// Handler for public thesis abstract pages
 			HookRegistry::register('LoadHandler', array($this, 'setupPublicHandler'));
@@ -106,7 +106,7 @@ class ThesisPlugin extends GenericPlugin {
 	 * @param $subclass boolean
 	 */
 	function setBreadcrumbs($isSubclass = false) {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$pageCrumbs = array(
 			array(
 				Request::url(null, 'user'),
@@ -157,24 +157,24 @@ class ThesisPlugin extends GenericPlugin {
 	 * Determine whether or not this plugin is enabled.
 	 */
 	function getEnabled() {
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		if (!$journal) return false;
 		return $this->getSetting($journal->getJournalId(), 'enabled');
 	}
 
 	function setupPublicHandler($hookName, $params) {
-		$page = &$params[0];
+		$page =& $params[0];
 		if ($page == 'thesis') {
 			define('HANDLER_CLASS', 'ThesisHandler');
-			$handlerFile = &$params[2];
+			$handlerFile =& $params[2];
 			$handlerFile = $this->getPluginPath() . '/' . 'ThesisHandler.inc.php';
 		}
 	}
 
 	function displayHeaderLink($hookName, $params) {
 		if ($this->getEnabled()) {
-			$smarty = &$params[1];
-			$output = &$params[2];
+			$smarty =& $params[1];
+			$output =& $params[2];
 			$output .= '<li><a href="' . TemplateManager::smartyUrl(array('page'=>'thesis'), $smarty) . '">' . TemplateManager::smartyTranslate(array('key'=>'plugins.generic.thesis.headerLink'), $smarty) . '</a></li>';
 		}
 		return false;
@@ -182,8 +182,8 @@ class ThesisPlugin extends GenericPlugin {
 
 	function displayManagerLink($hookName, $params) {
 		if ($this->getEnabled()) {
-			$smarty = &$params[1];
-			$output = &$params[2];
+			$smarty =& $params[1];
+			$output =& $params[2];
 			$output .= '<li>&#187; <a href="' . $this->smartyPluginUrl(array('op'=>'plugin', 'path'=>'theses'), $smarty) . '">' . TemplateManager::smartyTranslate(array('key'=>'plugins.generic.thesis.manager.theses'), $smarty) . '</a></li>';
 		}
 		return false;
@@ -191,8 +191,8 @@ class ThesisPlugin extends GenericPlugin {
 
 	function displaySearchLink($hookName, $params) {
 		if ($this->getEnabled()) {
-			$smarty = &$params[1];
-			$output = &$params[2];
+			$smarty =& $params[1];
+			$output =& $params[2];
 			$currentJournal = $smarty->get_template_vars('currentJournal');
 			if (!empty($currentJournal)) {
 				$output .= '<a href="' . TemplateManager::smartyUrl(array('page'=>'thesis'), $smarty) . '" class="action">' . TemplateManager::smartyTranslate(array('key'=>'plugins.generic.thesis.searchLink'), $smarty) . '</a><br /><br />';
@@ -205,7 +205,7 @@ class ThesisPlugin extends GenericPlugin {
 	 * Set the enabled/disabled state of this plugin
 	 */
 	function setEnabled($enabled) {
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		if ($journal) {
 			$this->updateSetting($journal->getJournalId(), 'enabled', $enabled ? true : false);
 			return true;
@@ -221,9 +221,9 @@ class ThesisPlugin extends GenericPlugin {
  	 * @return boolean
  	 */
 	function manage($verb, $args, &$message) {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		$returner = true;
 
 		switch ($verb) {
@@ -264,7 +264,7 @@ class ThesisPlugin extends GenericPlugin {
 				if ($this->getEnabled()) {
 					if (!empty($args)) {
 						$thesisId = (int) $args[0];	
-						$thesisDao = &DAORegistry::getDAO('ThesisDAO');
+						$thesisDao =& DAORegistry::getDAO('ThesisDAO');
 
 						// Ensure thesis is for this journal
 						if ($thesisDao->getThesisJournalId($thesisId) == $journal->getJournalId()) {
@@ -280,7 +280,7 @@ class ThesisPlugin extends GenericPlugin {
 			case 'edit':
 				if ($this->getEnabled()) {
 					$thesisId = !isset($args) || empty($args) ? null : (int) $args[0];
-					$thesisDao = &DAORegistry::getDAO('ThesisDAO');
+					$thesisDao =& DAORegistry::getDAO('ThesisDAO');
 
 					// Ensure thesis is valid and for this journal
 					if (($thesisId != null && $thesisDao->getThesisJournalId($thesisId) == $journal->getJournalId()) || ($thesisId == null)) {
@@ -292,8 +292,8 @@ class ThesisPlugin extends GenericPlugin {
 							$templateMgr->assign('thesisTitle', 'plugins.generic.thesis.manager.editTitle');	
 						}
 
-						$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
-						$journalSettings = &$journalSettingsDao->getJournalSettings($journal->getJournalId());
+						$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+						$journalSettings =& $journalSettingsDao->getJournalSettings($journal->getJournalId());
 
 						// FIXME: Need construction by reference or validation always fails on PHP 4.x
 						$thesisForm =& new ThesisForm($thesisId);
@@ -312,7 +312,7 @@ class ThesisPlugin extends GenericPlugin {
 				if ($this->getEnabled()) {
 					$this->import('ThesisForm');
 					$thesisId = Request::getUserVar('thesisId') == null ? null : (int) Request::getUserVar('thesisId');
-					$thesisDao = &DAORegistry::getDAO('ThesisDAO');
+					$thesisDao =& DAORegistry::getDAO('ThesisDAO');
 
 					if (($thesisId != null && $thesisDao->getThesisJournalId($thesisId) == $journal->getJournalId()) || $thesisId == null) {
 
@@ -335,8 +335,8 @@ class ThesisPlugin extends GenericPlugin {
 								$templateMgr->assign('thesisTitle', 'plugins.generic.thesis.manager.editTitle');	
 							}
 
-							$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
-							$journalSettings = &$journalSettingsDao->getJournalSettings($journal->getJournalId());
+							$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+							$journalSettings =& $journalSettingsDao->getJournalSettings($journal->getJournalId());
 
 							$this->setBreadCrumbs(true);
 							$templateMgr->assign('journalSettings', $journalSettings);
@@ -366,8 +366,8 @@ class ThesisPlugin extends GenericPlugin {
 					}			
 
 					$rangeInfo =& Handler::getRangeInfo('theses');
-					$thesisDao = &DAORegistry::getDAO('ThesisDAO');
-					$theses = &$thesisDao->getThesesByJournalId($journal->getJournalId(), $searchField, $search, $searchMatch, $dateFrom, $dateTo, null, $rangeInfo);
+					$thesisDao =& DAORegistry::getDAO('ThesisDAO');
+					$theses =& $thesisDao->getThesesByJournalId($journal->getJournalId(), $searchField, $search, $searchMatch, $dateFrom, $dateTo, null, $rangeInfo);
 
 					$templateMgr->assign('theses', $theses);
 					$this->setBreadCrumbs();

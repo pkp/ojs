@@ -31,15 +31,15 @@ class UserHandler extends Handler {
 	function index() {
 		$this->validate();
 
-		$sessionManager = &SessionManager::getManager();
-		$session = &$sessionManager->getUserSession();
+		$sessionManager =& SessionManager::getManager();
+		$session =& $sessionManager->getUserSession();
 
-		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
 
 		$this->setupTemplate();
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		$templateMgr->assign('helpTopicId', 'user.userHome');
 		
 		$user =& Request::getUser();
@@ -53,8 +53,8 @@ class UserHandler extends Handler {
 			unset($journal);
 
 			// Show roles for all journals
-			$journalDao = &DAORegistry::getDAO('JournalDAO');
-			$journals = &$journalDao->getJournals();
+			$journalDao =& DAORegistry::getDAO('JournalDAO');
+			$journals =& $journalDao->getJournals();
 
 			// Fetch the user's roles for each journal
 			while ($journal =& $journals->next()) {
@@ -132,7 +132,7 @@ class UserHandler extends Handler {
 	 */
 	function getRoleDataForJournal($userId, $journalId, &$submissionsCount, &$isValid) {
 		if (Validation::isJournalManager($journalId)) {
-			$journalDao = &DAORegistry::getDAO('JournalDAO');
+			$journalDao =& DAORegistry::getDAO('JournalDAO');
 			$isValid["JournalManager"][$journalId] = true;
 		}
 		if (Validation::isSubscriptionManager($journalId)) {
@@ -194,8 +194,8 @@ class UserHandler extends Handler {
 	function setLocale($args) {
 		$setLocale = isset($args[0]) ? $args[0] : null;
 
-		$site = &Request::getSite();
-		$journal = &Request::getJournal();
+		$site =& Request::getSite();
+		$journal =& Request::getJournal();
 		if ($journal != null) {
 			$journalSupportedLocales = $journal->getSetting('supportedLocales');
 			if (!is_array($journalSupportedLocales)) {
@@ -204,7 +204,7 @@ class UserHandler extends Handler {
 		}
 
 		if (Locale::isLocaleValid($setLocale) && (!isset($journalSupportedLocales) || in_array($setLocale, $journalSupportedLocales)) && in_array($setLocale, $site->getSupportedLocales())) {
-			$session = &Request::getSession();
+			$session =& Request::getSession();
 			$session->setSessionVar('currentLocale', $setLocale);
 		}
 
@@ -279,7 +279,7 @@ class UserHandler extends Handler {
 	function setupTemplate($subclass = false) {
 		parent::setupTemplate();
 		Locale::requireComponents(array(LOCALE_COMPONENT_OJS_AUTHOR, LOCALE_COMPONENT_OJS_EDITOR, LOCALE_COMPONENT_OJS_MANAGER));
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		if ($subclass) {
 			$templateMgr->assign('pageHierarchy', array(array(Request::url(null, 'user'), 'navigation.user')));
 		}
@@ -379,7 +379,6 @@ class UserHandler extends Handler {
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
 
 		$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
-
 	}
 }
 

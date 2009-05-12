@@ -33,9 +33,9 @@ class RTSetupHandler extends RTAdminHandler {
 
 		if ($journal) {
 			$this->setupTemplate(true);
-			$templateMgr = &TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager();
 
-			$rtDao = &DAORegistry::getDAO('RTDAO');
+			$rtDao =& DAORegistry::getDAO('RTDAO');
 			$rt = $rtDao->getJournalRTByJournal($journal);
 
 			$versionOptions = array();
@@ -59,7 +59,7 @@ class RTSetupHandler extends RTAdminHandler {
 			$templateMgr->assign('findingReferences', $rt->getFindingReferences());
 
 			// Bring in the comments constants.
-			$commentDao = &DAORegistry::getDao('CommentDAO');
+			$commentDao =& DAORegistry::getDao('CommentDAO');
 
 			$templateMgr->assign('commentsOptions', array(
 				'COMMENTS_DISABLED' => COMMENTS_DISABLED,
@@ -80,12 +80,12 @@ class RTSetupHandler extends RTAdminHandler {
 		$this->validate();
 
 		// Bring in the comments constants.
-		$commentDao = &DAORegistry::getDao('CommentDAO');
+		$commentDao =& DAORegistry::getDao('CommentDAO');
 
 		$journal = Request::getJournal();
 
 		if ($journal) {
-			$rtDao = &DAORegistry::getDAO('RTDAO');
+			$rtDao =& DAORegistry::getDAO('RTDAO');
 			$rt = $rtDao->getJournalRTByJournal($journal);
 
 			if (Request::getUserVar('version')=='') $rt->setVersion(null);

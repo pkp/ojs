@@ -33,9 +33,9 @@ class StudentThesisForm extends Form {
 	 * @param thesisId int leave as default for new thesis
 	 */
 	function StudentThesisForm($thesisId = null) {
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		$journalId = $journal->getJournalId();
-		$thesisPlugin = &PluginRegistry::getPlugin('generic', 'ThesisPlugin');
+		$thesisPlugin =& PluginRegistry::getPlugin('generic', 'ThesisPlugin');
 		$thesisPlugin->import('Thesis');
 
 		$this->validDegrees = array (
@@ -111,9 +111,9 @@ class StudentThesisForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$thesisPlugin = &PluginRegistry::getPlugin('generic', 'ThesisPlugin');
+		$thesisPlugin =& PluginRegistry::getPlugin('generic', 'ThesisPlugin');
 		$thesisPlugin->import('Thesis');
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 
 		if ($this->captchaEnabled) {
 			import('captcha.CaptchaManager');
@@ -194,11 +194,11 @@ class StudentThesisForm extends Form {
 	 * Save thesis. 
 	 */
 	function execute() {
-		$thesisPlugin = &PluginRegistry::getPlugin('generic', 'ThesisPlugin');
+		$thesisPlugin =& PluginRegistry::getPlugin('generic', 'ThesisPlugin');
 		$thesisPlugin->import('Thesis');
 
-		$thesisDao = &DAORegistry::getDAO('ThesisDAO');
-		$journal = &Request::getJournal();
+		$thesisDao =& DAORegistry::getDAO('ThesisDAO');
+		$journal =& Request::getJournal();
 		$journalId = $journal->getJournalId();
 
 		$thesis = new Thesis();

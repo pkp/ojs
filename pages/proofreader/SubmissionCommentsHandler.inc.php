@@ -159,8 +159,8 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 		$articleId = $args[0];
 		$commentId = $args[1];
 
-		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-		$comment = &$articleCommentDao->getArticleCommentById($commentId);
+		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
+		$comment =& $articleCommentDao->getArticleCommentById($commentId);
 
 		$submissionProofreadHandler =& new SubmissionProofreadHandler();
 		$submissionProofreadHandler->validate($articleId);
@@ -192,10 +192,10 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 
 		$isValid = true;
 
-		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-		$user = &Request::getUser();
+		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
+		$user =& Request::getUser();
 
-		$comment = &$articleCommentDao->getArticleCommentById($commentId);
+		$comment =& $articleCommentDao->getArticleCommentById($commentId);
 
 		if ($comment == null) {
 			$isValid = false;

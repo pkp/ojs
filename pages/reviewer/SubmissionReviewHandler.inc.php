@@ -35,14 +35,14 @@ class SubmissionReviewHandler extends ReviewerHandler {
 	 * @param $args array
 	 */
 	function submission($args) {
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		$reviewId = $args[0];
 
 		$this->validate($reviewId);
 		$user =& $this->user;
 		$submission =& $this->submission;
 
-		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewAssignment = $reviewAssignmentDao->getReviewAssignmentById($reviewId);
 
 		$reviewFormResponseDao =& DAORegistry::getDAO('ReviewFormResponseDAO');
@@ -55,7 +55,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 
 		$this->setupTemplate(true, $reviewAssignment->getArticleId(), $reviewId);
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 
 		$templateMgr->assign_by_ref('user', $user);
 		$templateMgr->assign_by_ref('submission', $submission);
@@ -84,7 +84,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 		$reviewId = Request::getUserVar('reviewId');
 		$declineReview = Request::getUserVar('declineReview');
 
-		$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
+		$reviewerSubmissionDao =& DAORegistry::getDAO('ReviewerSubmissionDAO');
 
 		$this->validate($reviewId);
 		$reviewerSubmission =& $this->submission;
@@ -250,14 +250,14 @@ class SubmissionReviewHandler extends ReviewerHandler {
 	 * Redirects to reviewer index page if validation fails.
 	 */
 	function validate($reviewId) {
-		$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
-		$journal = &Request::getJournal();
-		$user = &Request::getUser();
+		$reviewerSubmissionDao =& DAORegistry::getDAO('ReviewerSubmissionDAO');
+		$journal =& Request::getJournal();
+		$user =& Request::getUser();
 
 		$isValid = true;
 		$newKey = Request::getUserVar('key');
 
-		$reviewerSubmission = &$reviewerSubmissionDao->getReviewerSubmission($reviewId);
+		$reviewerSubmission =& $reviewerSubmissionDao->getReviewerSubmission($reviewId);
 
 		if (!$reviewerSubmission || $reviewerSubmission->getJournalId() != $journal->getJournalId()) {
 			$isValid = false;

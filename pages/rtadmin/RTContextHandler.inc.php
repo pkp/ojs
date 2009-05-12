@@ -31,9 +31,9 @@ class RTContextHandler extends RTAdminHandler {
 
 		$journal = Request::getJournal();
 
-		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$rtDao =& DAORegistry::getDAO('RTDAO');
 		$versionId = isset($args[0])?$args[0]:0;
-		$version = &$rtDao->getVersion($versionId, $journal->getJournalId());
+		$version =& $rtDao->getVersion($versionId, $journal->getJournalId());
 
 		import('rt.ojs.form.ContextForm');
 		// FIXME: Need construction by reference or validation always fails on PHP 4.x
@@ -54,16 +54,16 @@ class RTContextHandler extends RTAdminHandler {
 
 		$journal = Request::getJournal();
 
-		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$rtDao =& DAORegistry::getDAO('RTDAO');
 		$rangeInfo = Handler::getRangeInfo('contexts');
 
 		$versionId = isset($args[0])?$args[0]:0;
-		$version = &$rtDao->getVersion($versionId, $journal->getJournalId());
+		$version =& $rtDao->getVersion($versionId, $journal->getJournalId());
 
 		if ($version) {
 			$this->setupTemplate(true, $version);
 
-			$templateMgr = &TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager();
 
 			$templateMgr->assign_by_ref('version', $version);
 
@@ -79,13 +79,13 @@ class RTContextHandler extends RTAdminHandler {
 	function editContext($args) {
 		$this->validate();
 
-		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$rtDao =& DAORegistry::getDAO('RTDAO');
 
 		$journal = Request::getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
-		$version = &$rtDao->getVersion($versionId, $journal->getJournalId());
+		$version =& $rtDao->getVersion($versionId, $journal->getJournalId());
 		$contextId = isset($args[1])?$args[1]:0;
-		$context = &$rtDao->getContext($contextId);
+		$context =& $rtDao->getContext($contextId);
 
 		if (isset($version) && isset($context) && $context->getVersionId() == $version->getVersionId()) {
 			import('rt.ojs.form.ContextForm');
@@ -103,13 +103,13 @@ class RTContextHandler extends RTAdminHandler {
 	function deleteContext($args) {
 		$this->validate();
 
-		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$rtDao =& DAORegistry::getDAO('RTDAO');
 
 		$journal = Request::getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
-		$version = &$rtDao->getVersion($versionId, $journal->getJournalId());
+		$version =& $rtDao->getVersion($versionId, $journal->getJournalId());
 		$contextId = isset($args[1])?$args[1]:0;
-		$context = &$rtDao->getContext($contextId);
+		$context =& $rtDao->getContext($contextId);
 
 		if (isset($version) && isset($context) && $context->getVersionId() == $version->getVersionId()) {
 			$rtDao->deleteContext($contextId, $versionId);
@@ -121,13 +121,13 @@ class RTContextHandler extends RTAdminHandler {
 	function saveContext($args) {
 		$this->validate();
 
-		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$rtDao =& DAORegistry::getDAO('RTDAO');
 
 		$journal = Request::getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
-		$version = &$rtDao->getVersion($versionId, $journal->getJournalId());
+		$version =& $rtDao->getVersion($versionId, $journal->getJournalId());
 		$contextId = isset($args[1])?$args[1]:0;
-		$context = &$rtDao->getContext($contextId);
+		$context =& $rtDao->getContext($contextId);
 
 		if (isset($version) && isset($context) && $context->getVersionId() == $version->getVersionId()) {
 			import('rt.ojs.form.ContextForm');
@@ -143,13 +143,13 @@ class RTContextHandler extends RTAdminHandler {
 	function moveContext($args) {
 		$this->validate();
 
-		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$rtDao =& DAORegistry::getDAO('RTDAO');
 
 		$journal = Request::getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
-		$version = &$rtDao->getVersion($versionId, $journal->getJournalId());
+		$version =& $rtDao->getVersion($versionId, $journal->getJournalId());
 		$contextId = isset($args[1])?$args[1]:0;
-		$context = &$rtDao->getContext($contextId);
+		$context =& $rtDao->getContext($contextId);
 
 		if (isset($version) && isset($context) && $context->getVersionId() == $version->getVersionId()) {
 			$isDown = Request::getUserVar('dir')=='d';

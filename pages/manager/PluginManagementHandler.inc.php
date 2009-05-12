@@ -119,7 +119,7 @@ class PluginManagementHandler extends ManagerHandler {
 	 * $param function string type of operation to perform after upload ('upgrade' or 'install')
 	 */
 	function uploadPlugin($function) {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$this->setupTemplate(true);
 		
 		$templateMgr->assign('error', false);
@@ -130,7 +130,7 @@ class PluginManagementHandler extends ManagerHandler {
 		if (Request::getUserVar('uploadPlugin')) {
 			import('file.TemporaryFileManager');
 			$temporaryFileManager = new TemporaryFileManager();
-			$user = &Request::getUser();
+			$user =& Request::getUser();
 		
 			if ($temporaryFile = $temporaryFileManager->handleUpload('newPlugin', $user->getUserId())) {
 				// tar archive basename must equal plugin directory name, and plugin files must be in root directory
@@ -197,7 +197,7 @@ class PluginManagementHandler extends ManagerHandler {
 				$installer = new Install($params, $installFile, true);
 
 				if ($installer->execute()) {
-					$newVersion = &$installer->getNewVersion();
+					$newVersion =& $installer->getNewVersion();
 				} else {
 					// Roll back the copy
 					FileManager::rmtree($pluginDest);
@@ -354,7 +354,7 @@ class PluginManagementHandler extends ManagerHandler {
 	 * @param $subclass boolean
 	 */
 	function setBreadcrumbs($subclass = false) {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$pageCrumbs = array(
 			array(
 				Request::url(null, 'user'),

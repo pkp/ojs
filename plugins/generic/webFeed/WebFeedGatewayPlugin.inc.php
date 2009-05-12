@@ -121,17 +121,17 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 			$rangeInfo = new DBResultRange($recentItems, 1);
 			$publishedArticleObjects =& $publishedArticleDao->getPublishedArticlesByJournalId($journal->getJournalId(), $rangeInfo);
 			while ($publishedArticle =& $publishedArticleObjects->next()) {
-				$publishedArticles[]['articles'][] = &$publishedArticle;
+				$publishedArticles[]['articles'][] =& $publishedArticle;
 				unset($publishedArticle);
 			}
 		} else {
-			$publishedArticles = &$publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId());
+			$publishedArticles =& $publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId());
 		}
 
 		$versionDao =& DAORegistry::getDAO('VersionDAO');
 		$version =& $versionDao->getCurrentVersion();
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('ojsVersion', $version->getVersionString());
 		$templateMgr->assign_by_ref('publishedArticles', $publishedArticles);
 		$templateMgr->assign_by_ref('journal', $journal);

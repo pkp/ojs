@@ -93,7 +93,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 		$galley =& $args[1];
 		$fileId =& $args[2];
 
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 
 		if (get_class($galley) == 'ArticleXMLGalley' && $galley->isPdfGalley() && 
 			$this->getSetting($journal->getJournalId(), 'nlmPDF') == 1) {
@@ -162,7 +162,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 	 * Determine whether or not this plugin is enabled.
 	 */
 	function getEnabled() {
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		if (!$journal) return false;
 		return $this->getSetting($journal->getJournalId(), 'enabled');
 	}
@@ -171,7 +171,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 	 * Set the enabled/disabled state of this plugin
 	 */
 	function setEnabled($enabled) {
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		if ($journal) {
 			$this->updateSetting($journal->getJournalId(), 'enabled', $enabled ? true : false);
 
@@ -212,7 +212,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 	function manage($verb, $args, &$message) {
 		$journal =& Request::getJournal();
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 
 		$this->import('XMLGalleySettingsForm');

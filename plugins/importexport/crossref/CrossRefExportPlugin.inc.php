@@ -48,12 +48,12 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 	}
 
 	function display(&$args) {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		parent::display($args);
 
-		$issueDao = &DAORegistry::getDAO('IssueDAO');
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
 
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 
 		switch (array_shift($args)) {							
 			case 'exportIssues':
@@ -61,15 +61,15 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 				if (!isset($issueIds)) $issueIds = array();
 				$issues = array();
 				foreach ($issueIds as $issueId) {
-					$issue = &$issueDao->getIssueById($issueId);
+					$issue =& $issueDao->getIssueById($issueId);
 					if (!$issue) Request::redirect();
-					$issues[] = &$issue;
+					$issues[] =& $issue;
 				}
 				$this->exportIssues($journal, $issues);
 				break;
 			case 'exportIssue':
 				$issueId = array_shift($args);
-				$issue = &$issueDao->getIssueById($issueId);
+				$issue =& $issueDao->getIssueById($issueId);
 				if (!$issue) Request::redirect();
 				$issues = array($issue);
 				$this->exportIssues($journal, $issues);
@@ -82,13 +82,13 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 			case 'exportArticles':
 				$articleIds = Request::getUserVar('articleId');
 				if (!isset($articleIds)) $articleIds = array();
-				$results = &ArticleSearch::formatResults($articleIds);
+				$results =& ArticleSearch::formatResults($articleIds);
 				$this->exportArticles($journal, $results);
 				break;
 			case 'issues':
 				// Display a list of issues for export
 				$this->setBreadcrumbs(array(), true);
-				$issueDao = &DAORegistry::getDAO('IssueDAO');
+				$issueDao =& DAORegistry::getDAO('IssueDAO');
 				$issues =& $issueDao->getPublishedIssues($journal->getJournalId(), Handler::getRangeInfo('issues'));
 
 				$templateMgr->assign_by_ref('issues', $issues);
@@ -97,7 +97,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 			case 'articles':
 				// Display a list of articles for export
 				$this->setBreadcrumbs(array(), true);
-				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 				$rangeInfo = Handler::getRangeInfo('articles');
 				$articleIds = $publishedArticleDao->getPublishedArticleIdsByJournal($journal->getJournalId(), false);
 				$totalArticles = count($articleIds);
@@ -117,43 +117,43 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 	function exportArticles(&$journal, &$results, $outputFile = null) {
 		$this->import('CrossRefExportDom');
 
-		$doc = &CrossRefExportDom::generateCrossRefDom();
-		$doiBatchNode = &CrossRefExportDom::generateDoiBatchDom($doc);
+		$doc =& CrossRefExportDom::generateCrossRefDom();
+		$doiBatchNode =& CrossRefExportDom::generateDoiBatchDom($doc);
 
 		// Create Head Node and all parts inside it
-		$head = &CrossRefExportDom::generateHeadDom($doc, $journal);
+		$head =& CrossRefExportDom::generateHeadDom($doc, $journal);
 
 		// attach it to the root node
 		XMLCustomWriter::appendChild($doiBatchNode, $head);
 
 		// the body node contains everything
-		$bodyNode = &XMLCustomWriter::createElement($doc, 'body');
+		$bodyNode =& XMLCustomWriter::createElement($doc, 'body');
 		XMLCustomWriter::appendChild($doiBatchNode, $bodyNode);
 
 		// now cycle through everything we want to submit in this batch
 		foreach ($results as $result) {
-			$journal = &$result['journal'];
-			$issue = &$result['issue'];
-			$section = &$result['section'];
-			$article = &$result['publishedArticle'];
+			$journal =& $result['journal'];
+			$issue =& $result['issue'];
+			$section =& $result['section'];
+			$article =& $result['publishedArticle'];
 
 			// Create the metadata node
 			// this does not need to be repeated for every article
 			// but its allowed to be and its simpler to do so
-			$journalNode = &XMLCustomWriter::createElement($doc, 'journal');
-			$journalMetadataNode = &CrossRefExportDom::generateJournalMetadataDom($doc, $journal);
+			$journalNode =& XMLCustomWriter::createElement($doc, 'journal');
+			$journalMetadataNode =& CrossRefExportDom::generateJournalMetadataDom($doc, $journal);
 			XMLCustomWriter::appendChild($journalNode, $journalMetadataNode);
 
 			// Create the journal_issue node
-			$journalIssueNode = &CrossRefExportDom::generateJournalIssueDom($doc, $journal, $issue, $section, $article);
+			$journalIssueNode =& CrossRefExportDom::generateJournalIssueDom($doc, $journal, $issue, $section, $article);
 			XMLCustomWriter::appendChild($journalNode, $journalIssueNode);
 
 			// Create the article
-			$journalArticleNode = &CrossRefExportDom::generateJournalArticleDom($doc, $journal, $issue, $section, $article);
+			$journalArticleNode =& CrossRefExportDom::generateJournalArticleDom($doc, $journal, $issue, $section, $article);
 			XMLCustomWriter::appendChild($journalNode, $journalArticleNode);
 
 			// Create the DOI data
-			$DOIdataNode = &CrossRefExportDom::generateDOIdataDom($doc, $article->getDOI(), Request::url(null, 'article', 'view', $article->getArticleId()));
+			$DOIdataNode =& CrossRefExportDom::generateDOIdataDom($doc, $article->getDOI(), Request::url(null, 'article', 'view', $article->getArticleId()));
 			XMLCustomWriter::appendChild($journalArticleNode, $DOIdataNode);							
 			XMLCustomWriter::appendChild($bodyNode, $journalNode);
 		}
@@ -176,22 +176,22 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 	function exportIssues(&$journal, &$issues, $outputFile = null) {
 		$this->import('CrossRefExportDom');
 
-		$doc = &CrossRefExportDom::generateCrossRefDom();
-		$doiBatchNode = &CrossRefExportDom::generateDoiBatchDom($doc);
+		$doc =& CrossRefExportDom::generateCrossRefDom();
+		$doiBatchNode =& CrossRefExportDom::generateDoiBatchDom($doc);
 
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 
 		// Create Head Node and all parts inside it
-		$head = &CrossRefExportDom::generateHeadDom($doc, $journal);
+		$head =& CrossRefExportDom::generateHeadDom($doc, $journal);
 
 		// attach it to the root node
 		XMLCustomWriter::appendChild($doiBatchNode, $head);
 
-		$bodyNode = &XMLCustomWriter::createElement($doc, 'body');
+		$bodyNode =& XMLCustomWriter::createElement($doc, 'body');
 		XMLCustomWriter::appendChild($doiBatchNode, $bodyNode);
 
-		$sectionDao = &DAORegistry::getDAO('SectionDAO');
-		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 
 		foreach ($issues as $issue) {
 			foreach ($sectionDao->getSectionsForIssue($issue->getIssueId()) as $section) {
@@ -199,19 +199,19 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 					// Create the metadata node
 					// this does not need to be repeated for every article
 					// but its allowed to be and its simpler to do so					
-					$journalNode = &XMLCustomWriter::createElement($doc, 'journal');
-					$journalMetadataNode = &CrossRefExportDom::generateJournalMetadataDom($doc, $journal);
+					$journalNode =& XMLCustomWriter::createElement($doc, 'journal');
+					$journalMetadataNode =& CrossRefExportDom::generateJournalMetadataDom($doc, $journal);
 					XMLCustomWriter::appendChild($journalNode, $journalMetadataNode);
 
-					$journalIssueNode = &CrossRefExportDom::generateJournalIssueDom($doc, $journal, $issue, $section, $article);
+					$journalIssueNode =& CrossRefExportDom::generateJournalIssueDom($doc, $journal, $issue, $section, $article);
 					XMLCustomWriter::appendChild($journalNode, $journalIssueNode);
 
 					// Article node
-					$journalArticleNode = &CrossRefExportDom::generateJournalArticleDom($doc, $journal, $issue, $section, $article);
+					$journalArticleNode =& CrossRefExportDom::generateJournalArticleDom($doc, $journal, $issue, $section, $article);
 					XMLCustomWriter::appendChild($journalNode, $journalArticleNode);
 
 					// DOI data node
-					$DOIdataNode = &CrossRefExportDom::generateDOIdataDom($doc, $article->getDOI(), Request::url(null, 'article', 'view', $article->getArticleId()));
+					$DOIdataNode =& CrossRefExportDom::generateDOIdataDom($doc, $article->getDOI(), Request::url(null, 'article', 'view', $article->getArticleId()));
 					XMLCustomWriter::appendChild($journalArticleNode, $DOIdataNode);							
 					XMLCustomWriter::appendChild($bodyNode, $journalNode);
 
@@ -243,13 +243,13 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 		$xmlFile = array_shift($args);
 		$journalPath = array_shift($args);
 
-		$journalDao = &DAORegistry::getDAO('JournalDAO');
-		$issueDao = &DAORegistry::getDAO('IssueDAO');
-		$sectionDao = &DAORegistry::getDAO('SectionDAO');
-		$userDao = &DAORegistry::getDAO('UserDAO');
-		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$userDao =& DAORegistry::getDAO('UserDAO');
+		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 
-		$journal = &$journalDao->getJournalByPath($journalPath);
+		$journal =& $journalDao->getJournalByPath($journalPath);
 
 		if (!$journal) {
 			if ($journalPath != '') {
@@ -262,7 +262,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 
 		if ($xmlFile != '') switch (array_shift($args)) {
 			case 'articles':
-				$results = &ArticleSearch::formatResults($args);
+				$results =& ArticleSearch::formatResults($args);
 				if (!$this->exportArticles($journal, $results, $xmlFile)) {
 					echo Locale::translate('plugins.importexport.crossref.cliError') . "\n";
 					echo Locale::translate('plugins.importexport.crossref.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";
@@ -270,7 +270,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 				return;
 			case 'issue':
 				$issueId = array_shift($args);
-				$issue = &$issueDao->getIssueByBestIssueId($issueId, $journal->getJournalId());
+				$issue =& $issueDao->getIssueByBestIssueId($issueId, $journal->getJournalId());
 				if ($issue == null) {
 					echo Locale::translate('plugins.importexport.crossref.cliError') . "\n";
 					echo Locale::translate('plugins.importexport.crossref.export.error.issueNotFound', array('issueId' => $issueId)) . "\n\n";

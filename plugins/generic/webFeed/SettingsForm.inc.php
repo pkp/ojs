@@ -32,7 +32,7 @@ class SettingsForm extends Form {
 	 */
 	function SettingsForm(&$plugin, $journalId) {
 		$this->journalId = $journalId;
-		$this->plugin = &$plugin;
+		$this->plugin =& $plugin;
 
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
 		$this->addCheck(new FormValidatorPost($this));
@@ -43,7 +43,7 @@ class SettingsForm extends Form {
 	 */
 	function initData() {
 		$journalId = $this->journalId;
-		$plugin = &$this->plugin;
+		$plugin =& $this->plugin;
 
 		$this->setData('displayPage', $plugin->getSetting($journalId, 'displayPage'));
 		$this->setData('displayItems', $plugin->getSetting($journalId, 'displayItems'));
@@ -70,7 +70,7 @@ class SettingsForm extends Form {
 	 * Save settings. 
 	 */
 	function execute() {
-		$plugin = &$this->plugin;
+		$plugin =& $this->plugin;
 		$journalId = $this->journalId;
 
 		$plugin->updateSetting($journalId, 'displayPage', $this->getData('displayPage'));

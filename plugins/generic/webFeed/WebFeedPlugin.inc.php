@@ -109,7 +109,7 @@ class WebFeedPlugin extends GenericPlugin {
 			$currentJournal =& $templateManager->get_template_vars('currentJournal');
 			$requestedPage = Request::getRequestedPage();
 			if ($currentJournal) {
-				$issueDao = &DAORegistry::getDAO('IssueDAO');
+				$issueDao =& DAORegistry::getDAO('IssueDAO');
 				$currentIssue =& $issueDao->getCurrentIssue($currentJournal->getJournalId());
 				$displayPage = $this->getSetting($currentJournal->getJournalId(), 'displayPage');
 			} 
@@ -192,7 +192,7 @@ class WebFeedPlugin extends GenericPlugin {
 
 		switch ($verb) {
 			case 'settings':
-				$templateMgr = &TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 
 				$this->import('SettingsForm');

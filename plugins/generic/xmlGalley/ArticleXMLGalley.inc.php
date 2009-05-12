@@ -79,8 +79,8 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 	function _xsltCacheMiss(&$cache) {
 		static $contents;
 		if (!isset($contents)) {
-			$journal = &Request::getJournal();
-			$xmlGalleyPlugin = &PluginRegistry::getPlugin('generic', 'XMLGalleyPlugin');
+			$journal =& Request::getJournal();
+			$xmlGalleyPlugin =& PluginRegistry::getPlugin('generic', 'XMLGalleyPlugin');
 
 			$xsltRenderer = $xmlGalleyPlugin->getSetting($journal->getJournalId(), 'XSLTrenderer');
 
@@ -122,7 +122,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 	 * @return string
 	 */
 	function getHTMLContents() {
-		$xmlGalleyPlugin = &PluginRegistry::getPlugin('generic', 'XMLGalleyPlugin');
+		$xmlGalleyPlugin =& PluginRegistry::getPlugin('generic', 'XMLGalleyPlugin');
 
 		// if the XML Galley plugin is not installed or enabled,
 		// then pass through to ArticleHTMLGalley
@@ -137,7 +137,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 		if ($contents == "") return parent::getHTMLContents();
 
 		// Replace image references
-		$images = &$this->getImageFiles();
+		$images =& $this->getImageFiles();
 
 		$journal =& Request::getJournal();
 
@@ -160,12 +160,12 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 		);
 
 		// Replace supplementary file references
-		$this->suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
+		$this->suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
 		$suppFiles = $this->suppFileDao->getSuppFilesByArticle($this->getArticleId());
 
 		if ($suppFiles) {
 			foreach ($suppFiles as $supp) {
-				$journal = &Request::getJournal();
+				$journal =& Request::getJournal();
 				$suppUrl = Request::url(null, 'article', 'downloadSuppFile', array($this->getArticleId(), $supp->getBestSuppFileId($journal)));
 
 				$contents = preg_replace(
@@ -178,7 +178,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 
 		// if client encoding is set to iso-8859-1, transcode string to HTML entities
 		// since we transform all XML in utf8 and can't rely on built-in PHP functions
-		if (LOCALE_ENCODING == "iso-8859-1") $contents = &String::utf2html($contents);
+		if (LOCALE_ENCODING == "iso-8859-1") $contents =& String::utf2html($contents);
 
 		return $contents;
 	}
@@ -202,7 +202,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 			if ($contents == "") return false;		// if for some reason the XSLT failed, show original file
 
 			// Replace image references
-			$images = &$this->getImageFiles();
+			$images =& $this->getImageFiles();
 
 			if ($images !== null) {
 				// TODO: this should "smart replace" the file path ($this->getFilePath()) in the XSL-FO
@@ -216,11 +216,11 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 			}
 
 			// Replace supplementary file references
-			$this->suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
+			$this->suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
 			$suppFiles = $this->suppFileDao->getSuppFilesByArticle($this->getArticleId());
 
 			if ($suppFiles) {
-				$journal = &Request::getJournal();
+				$journal =& Request::getJournal();
 				foreach ($suppFiles as $supp) {
 					$suppUrl = Request::url(null, 'article', 'downloadSuppFile', array($this->getArticleId(), $supp->getBestSuppFileId($journal)));
 
@@ -240,8 +240,8 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 			$temporaryFileManager->writeFile($tempFoName, $contents);
 
 			// perform %fo and %pdf replacements for fully-qualified shell command
-			$journal = &Request::getJournal();
-			$xmlGalleyPlugin = &PluginRegistry::getPlugin('generic', 'XMLGalleyPlugin');
+			$journal =& Request::getJournal();
+			$xmlGalleyPlugin =& PluginRegistry::getPlugin('generic', 'XMLGalleyPlugin');
 
 			$fopCommand = str_replace(array('%fo', '%pdf'), 
 					array($tempFoName, $pdfFileName), 

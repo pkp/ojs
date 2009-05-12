@@ -30,12 +30,12 @@ class XMLGalleySettingsForm extends Form {
 	 * @param $journalId int
 	 */
 	function XMLGalleySettingsForm(&$plugin, $journalId) {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
 
 		$this->journalId = $journalId;
-		$this->plugin = &$plugin;
+		$this->plugin =& $plugin;
 
 		$this->addCheck(new FormValidatorPost($this));
 	}
@@ -47,7 +47,7 @@ class XMLGalleySettingsForm extends Form {
 		$journalId = $this->journalId;
 		$plugin =& $this->plugin;
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 
 		// set form variables for available XSLT renderers
 		$xsltPHP5 = ( version_compare(PHP_VERSION,'5','>=') && extension_loaded('xsl') && extension_loaded('dom') );
@@ -94,7 +94,7 @@ class XMLGalleySettingsForm extends Form {
 	 * Save settings.
 	 */
 	function execute() {
-		$plugin = &$this->plugin;
+		$plugin =& $this->plugin;
 		$journalId = $this->journalId;
 
 		// get existing settings to see if any are changing that will affect the cache

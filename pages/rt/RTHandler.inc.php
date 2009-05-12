@@ -41,14 +41,14 @@ class RTHandler extends ArticleHandler {
 		$journal =& Request::getJournal();
 		$article =& $this->article;
 
-		$rtDao = &DAORegistry::getDAO('RTDAO');
-		$journalRt = &$rtDao->getJournalRTByJournal($journal);
+		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$journalRt =& $rtDao->getJournalRTByJournal($journal);
 
 		if (!$journalRt || !$journalRt->getAuthorBio()) {
 			Request::redirect(null, Request::getRequestedPage());
 		}
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign_by_ref('article', $article);
 		$templateMgr->assign('galleyId', $galleyId);
@@ -68,17 +68,17 @@ class RTHandler extends ArticleHandler {
 		$issue =& $this->issue;
 		$article =& $this->article;
 		
-		$rtDao = &DAORegistry::getDAO('RTDAO');
-		$journalRt = &$rtDao->getJournalRTByJournal($journal);
+		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$journalRt =& $rtDao->getJournalRTByJournal($journal);
 
 		if (!$journalRt || !$journalRt->getViewMetadata()) {
 			Request::redirect(null, Request::getRequestedPage());
 		}
 
-		$sectionDao = &DAORegistry::getDAO('SectionDAO');
-		$section = &$sectionDao->getSection($article->getSectionId());
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$section =& $sectionDao->getSection($article->getSectionId());
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign_by_ref('journalRt', $journalRt);
@@ -102,11 +102,11 @@ class RTHandler extends ArticleHandler {
 		$journal =& Request::getJournal();
 		$article =& $this->article;
 		
-		$rtDao = &DAORegistry::getDAO('RTDAO');
-		$journalRt = &$rtDao->getJournalRTByJournal($journal);
+		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$journalRt =& $rtDao->getJournalRTByJournal($journal);
 
-		$context = &$rtDao->getContext($contextId);
-		if ($context) $version = &$rtDao->getVersion($context->getVersionId(), $journal->getJournalId());
+		$context =& $rtDao->getContext($contextId);
+		if ($context) $version =& $rtDao->getVersion($context->getVersionId(), $journal->getJournalId());
 
 		if (!$context || !$version || !$journalRt || $journalRt->getVersion()==null || $journalRt->getVersion() !=  $context->getVersionId()) {
 			Request::redirect(null, 'article', 'view', array($articleId, $galleyId));
@@ -162,7 +162,7 @@ class RTHandler extends ArticleHandler {
 				break;
 		}
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign_by_ref('article', $article);
@@ -192,14 +192,14 @@ class RTHandler extends ArticleHandler {
 		$issue =& $this->issue;
 		$article =& $this->article;
 		
-		$rtDao = &DAORegistry::getDAO('RTDAO');
-		$journalRt = &$rtDao->getJournalRTByJournal($journal);
+		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$journalRt =& $rtDao->getJournalRTByJournal($journal);
 
 		if (!$journalRt || !$journalRt->getCaptureCite()) {
 			Request::redirect(null, Request::getRequestedPage());
 		}
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign_by_ref('journalRt', $journalRt);
@@ -236,20 +236,20 @@ class RTHandler extends ArticleHandler {
 
 		$this->setupTemplate();
 				
-		$rtDao = &DAORegistry::getDAO('RTDAO');
-		$journalRt = &$rtDao->getJournalRTByJournal($journal);
+		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$journalRt =& $rtDao->getJournalRTByJournal($journal);
 
 		if (!$journalRt || !$journalRt->getPrinterFriendly()) {
 			Request::redirect(null, Request::getRequestedPage());
 		}
 
-		$articleGalleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-		$galley = &$articleGalleyDao->getGalley($galleyId, $article->getArticleId());
+		$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$galley =& $articleGalleyDao->getGalley($galleyId, $article->getArticleId());
 
-		$sectionDao = &DAORegistry::getDAO('SectionDAO');
-		$section = &$sectionDao->getSection($article->getSectionId());
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$section =& $sectionDao->getSection($article->getSectionId());
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('galley', $galley);
 		$templateMgr->assign_by_ref('article', $article);
 		$templateMgr->assign_by_ref('section', $section);
@@ -283,9 +283,9 @@ class RTHandler extends ArticleHandler {
 		$issue =& $this->issue;
 		$article =& $this->article;
 		
-		$rtDao = &DAORegistry::getDAO('RTDAO');
-		$journalRt = &$rtDao->getJournalRTByJournal($journal);
-		$user = &Request::getUser();
+		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$journalRt =& $rtDao->getJournalRTByJournal($journal);
+		$user =& Request::getUser();
 
 		if (!$journalRt || !$journalRt->getEmailOthers() || !$user) {
 			Request::redirect(null, Request::getRequestedPage());
@@ -297,7 +297,7 @@ class RTHandler extends ArticleHandler {
 		if (Request::getUserVar('send') && !$email->hasErrors()) {
 			$email->send();
 
-			$templateMgr = &TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->display('rt/sent.tpl');
 		} else {
 			if (!Request::getUserVar('continued')) {
@@ -330,9 +330,9 @@ class RTHandler extends ArticleHandler {
 		$journal =& Request::getJournal();
 		$article =& $this->article;
 		
-		$rtDao = &DAORegistry::getDAO('RTDAO');
-		$journalRt = &$rtDao->getJournalRTByJournal($journal);
-		$user = &Request::getUser();
+		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$journalRt =& $rtDao->getJournalRTByJournal($journal);
+		$user =& Request::getUser();
 
 		if (!$journalRt || !$journalRt->getEmailAuthor() || !$user) {
 			Request::redirect(null, Request::getRequestedPage());
@@ -343,13 +343,13 @@ class RTHandler extends ArticleHandler {
 		$email->setAddressFieldsEnabled(false);
 
 		if (Request::getUserVar('send') && !$email->hasErrors()) {
-			$authors = &$article->getAuthors();
-			$author = &$authors[0];
+			$authors =& $article->getAuthors();
+			$author =& $authors[0];
 			$email->addRecipient($author->getEmail(), $author->getFullName());
 
 			$email->send();
 
-			$templateMgr = &TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->display('rt/sent.tpl');
 		} else {
 			if (!Request::getUserVar('continued')) {
@@ -371,14 +371,14 @@ class RTHandler extends ArticleHandler {
 		$journal =& Request::getJournal();
 		$article =& $this->article;
 
-		$rtDao = &DAORegistry::getDAO('RTDAO');
-		$journalRt = &$rtDao->getJournalRTByJournal($journal);
+		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$journalRt =& $rtDao->getJournalRTByJournal($journal);
 
 		if (!$journalRt || !$journalRt->getSupplementaryFiles()) {
 			Request::redirect(null, Request::getRequestedPage());
 		}
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign_by_ref('journalRt', $journalRt);
@@ -400,17 +400,17 @@ class RTHandler extends ArticleHandler {
 		$journal =& Request::getJournal();
 		$article =& $this->article;
 
-		$rtDao = &DAORegistry::getDAO('RTDAO');
-		$journalRt = &$rtDao->getJournalRTByJournal($journal);
+		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$journalRt =& $rtDao->getJournalRTByJournal($journal);
 
-		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
+		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
 		$suppFile = $suppFileDao->getSuppFile($suppFileId, $article->getArticleId());
 
 		if (!$journalRt || !$journalRt->getSupplementaryFiles() || !$suppFile) {
 			Request::redirect(null, Request::getRequestedPage());
 		}
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign_by_ref('suppFile', $suppFile);
@@ -432,14 +432,14 @@ class RTHandler extends ArticleHandler {
 		$journal =& Request::getJournal();
 		$article =& $this->article;
 		
-		$rtDao = &DAORegistry::getDAO('RTDAO');
-		$journalRt = &$rtDao->getJournalRTByJournal($journal);
+		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$journalRt =& $rtDao->getJournalRTByJournal($journal);
 
 		if (!$journalRt || !$journalRt->getFindingReferences()) {
 			Request::redirect(null, Request::getRequestedPage());
 		}
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign_by_ref('journalRt', $journalRt);

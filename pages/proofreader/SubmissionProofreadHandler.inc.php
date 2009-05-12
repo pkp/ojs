@@ -40,13 +40,13 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 
 		$useProofreaders = $journal->getSetting('useProofreaders');
 
-		$authorDao = &DAORegistry::getDAO('AuthorDAO');
+		$authorDao =& DAORegistry::getDAO('AuthorDAO');
 		$authors = $authorDao->getAuthorsByArticle($articleId);
 
 		ProofreaderAction::proofreadingUnderway($submission, 'SIGNOFF_PROOFREADING_PROOFREADER');
 		$useLayoutEditors = $journal->getSetting('useLayoutEditors');
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 
 		$templateMgr->assign('useProofreaders', $useProofreaders);
 		$templateMgr->assign_by_ref('authors', $authors);
@@ -98,12 +98,12 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 
 		$isValid = false;
 
-		$journal = &Request::getJournal();
-		$user = &Request::getUser();
+		$journal =& Request::getJournal();
+		$user =& Request::getUser();
 
-		$proofreaderDao = &DAORegistry::getDAO('ProofreaderSubmissionDAO');
-		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
-		$submission = &$proofreaderDao->getSubmission($articleId, $journal->getJournalId());
+		$proofreaderDao =& DAORegistry::getDAO('ProofreaderSubmissionDAO');
+		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$submission =& $proofreaderDao->getSubmission($articleId, $journal->getJournalId());
 
 		if (isset($submission)) {
 			$proofSignoff = $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $articleId);
@@ -149,7 +149,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$this->validate($articleId);
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->display('submission/layout/proofGalley.tpl');
@@ -164,7 +164,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$this->validate($articleId);
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('backHandler', 'submission');
@@ -180,14 +180,14 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$this->validate($articleId);
 
-		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-		$galley = &$galleyDao->getGalley($galleyId, $articleId);
+		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$galley =& $galleyDao->getGalley($galleyId, $articleId);
 
 		import('file.ArticleFileManager'); // FIXME
 
 		if (isset($galley)) {
 			if ($galley->isHTMLGalley()) {
-				$templateMgr = &TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->assign_by_ref('galley', $galley);
 				if ($galley->isHTMLGalley() && $styleFile =& $galley->getStyleFile()) {
 					$templateMgr->addStyleSheet(Request::url(null, 'article', 'viewFile', array(

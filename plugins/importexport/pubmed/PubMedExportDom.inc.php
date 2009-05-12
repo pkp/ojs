@@ -33,13 +33,13 @@ class PubMedExportDom {
 
 	function &generatePubMedDom() {
 		// create the output XML document in DOM with a root node
-		$doc = &XMLCustomWriter::createDocument('ArticleSet', PUBMED_DTD_ID, PUBMED_DTD_URL);
+		$doc =& XMLCustomWriter::createDocument('ArticleSet', PUBMED_DTD_ID, PUBMED_DTD_URL);
 
 		return $doc;
 	}
 
 	function &generateArticleSetDom(&$doc) {
-		$root = &XMLCustomWriter::createElement($doc, 'ArticleSet');
+		$root =& XMLCustomWriter::createElement($doc, 'ArticleSet');
 		XMLCustomWriter::appendChild($doc, $root);
 
 		return $root;
@@ -48,13 +48,13 @@ class PubMedExportDom {
 	function &generateArticleDom(&$doc, &$journal, &$issue, &$section, &$article) {
 
 		// register the editor submission DAO for use later
-		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
+		$editorSubmissionDao =& DAORegistry::getDAO('EditorSubmissionDAO');
 
 		/* --- Article --- */
-		$root = &XMLCustomWriter::createElement($doc, 'Article');
+		$root =& XMLCustomWriter::createElement($doc, 'Article');
 
 		/* --- Journal --- */
-		$journalNode = &XMLCustomWriter::createElement($doc, 'Journal');
+		$journalNode =& XMLCustomWriter::createElement($doc, 'Journal');
 		XMLCustomWriter::appendChild($root, $journalNode);
 
 		$publisherInstitution = $journal->getSetting('publisherInstitution');
@@ -114,7 +114,7 @@ class PubMedExportDom {
 		XMLCustomWriter::createChildWithText($doc, $root, 'Language', strtoupper($article->getLanguage()), false);
 
 		/* --- AuthorList --- */
-		$authorListNode = &XMLCustomWriter::createElement($doc, 'AuthorList');
+		$authorListNode =& XMLCustomWriter::createElement($doc, 'AuthorList');
 		XMLCustomWriter::appendChild($root, $authorListNode);
 
 		foreach ($article->getAuthors() as $author) {
@@ -128,15 +128,15 @@ class PubMedExportDom {
 		// configuration in the plugin, or an update to the core code.
 		// this is also related to DOI-handling within OJS
 		if ($article->getPublicArticleId()) {
-			$articleIdListNode = &XMLCustomWriter::createElement($doc, 'ArticleIdList');
+			$articleIdListNode =& XMLCustomWriter::createElement($doc, 'ArticleIdList');
 			XMLCustomWriter::appendChild($root, $articleIdListNode);
 
-			$articleIdNode = &XMLCustomWriter::createChildWithText($doc, $articleIdListNode, 'ArticleId', $article->getPublicArticleId());
+			$articleIdNode =& XMLCustomWriter::createChildWithText($doc, $articleIdListNode, 'ArticleId', $article->getPublicArticleId());
 			XMLCustomWriter::setAttribute($articleIdNode, 'IdType', 'pii');
 		}
 
 		/* --- History --- */
-		$historyNode = &XMLCustomWriter::createElement($doc, 'History');
+		$historyNode =& XMLCustomWriter::createElement($doc, 'History');
 		XMLCustomWriter::appendChild($root, $historyNode);
 
 		// date manuscript received for review
@@ -159,8 +159,8 @@ class PubMedExportDom {
 		// check if there is a revised version; if so, generate a revised tag
 		$revisedFileID = $article->getRevisedFileId();
 		if (!empty($revisedFileID)) {
-			$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-			$articleFile = &$articleFileDao->getArticleFile($revisedFileID);
+			$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+			$articleFile =& $articleFileDao->getArticleFile($revisedFileID);
 
 			if ($articleFile) {
 				$revisedNode =& PubMedExportDom::generatePubDateDom($doc, $articleFile->getDateModified(), 'revised');
@@ -177,7 +177,7 @@ class PubMedExportDom {
 	}
 
 	function &generateAuthorDom(&$doc, &$author) {
-		$root = &XMLCustomWriter::createElement($doc, 'Author');
+		$root =& XMLCustomWriter::createElement($doc, 'Author');
 
 		XMLCustomWriter::createChildWithText($doc, $root, 'FirstName', ucfirst($author->getFirstName()));
 		XMLCustomWriter::createChildWithText($doc, $root, 'MiddleName', ucfirst($author->getMiddleName()), false);
@@ -191,7 +191,7 @@ class PubMedExportDom {
 	}
 
 	function &generatePubDateDom(&$doc, $pubdate, $pubstatus) {
-		$root = &XMLCustomWriter::createElement($doc, 'PubDate');
+		$root =& XMLCustomWriter::createElement($doc, 'PubDate');
 
 		XMLCustomWriter::setAttribute($root, 'PubStatus', $pubstatus);
 

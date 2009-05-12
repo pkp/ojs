@@ -31,9 +31,9 @@ class SubscriptionHandler extends ManagerHandler {
 		$this->validate();
 		$this->setupTemplate();
 
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		$rangeInfo =& Handler::getRangeInfo('subscriptions');
-		$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
+		$subscriptionDao =& DAORegistry::getDAO('SubscriptionDAO');
 
 		// Get the user's search conditions, if any
 		$searchField = Request::getUserVar('searchField');
@@ -46,9 +46,9 @@ class SubscriptionHandler extends ManagerHandler {
 		$toDate = Request::getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
 		if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
 
-		$subscriptions = &$subscriptionDao->getSubscriptionsByJournalId($journal->getJournalId(), $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $rangeInfo);
+		$subscriptions =& $subscriptionDao->getSubscriptionsByJournalId($journal->getJournalId(), $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $rangeInfo);
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('subscriptions', $subscriptions);
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.subscriptions');
 
@@ -111,10 +111,10 @@ class SubscriptionHandler extends ManagerHandler {
 		$this->validate();
 
 		if (isset($args) && !empty($args)) {
-			$journal = &Request::getJournal();
+			$journal =& Request::getJournal();
 			$subscriptionId = (int) $args[0];
 
-			$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
+			$subscriptionDao =& DAORegistry::getDAO('SubscriptionDAO');
 
 			// Ensure subscription is for this journal
 			if ($subscriptionDao->getSubscriptionJournalId($subscriptionId) == $journal->getJournalId()) {
@@ -133,16 +133,16 @@ class SubscriptionHandler extends ManagerHandler {
 		$this->validate();
 		$this->setupTemplate();
 
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		$subscriptionId = !isset($args) || empty($args) ? null : (int) $args[0];
 		$userId = Request::getUserVar('userId');
-		$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
+		$subscriptionDao =& DAORegistry::getDAO('SubscriptionDAO');
 
 		// Ensure subscription is valid and for this journal
 		if (($subscriptionId != null && $subscriptionDao->getSubscriptionJournalId($subscriptionId) == $journal->getJournalId()) || ($subscriptionId == null && $userId)) {
 			import('subscription.form.SubscriptionForm');
 
-			$templateMgr = &TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'subscriptions'), 'manager.subscriptions'));
 
 			if ($subscriptionId == null) {
@@ -173,11 +173,11 @@ class SubscriptionHandler extends ManagerHandler {
 	 */
 	function selectSubscriber() {
 		$this->validate();
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$this->setupTemplate();
 		$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'subscriptions'), 'manager.subscriptions'));
 
-		$userDao = &DAORegistry::getDAO('UserDAO');
+		$userDao =& DAORegistry::getDAO('UserDAO');
 
 		$searchType = null;
 		$searchMatch = null;
@@ -195,7 +195,7 @@ class SubscriptionHandler extends ManagerHandler {
 
 		$rangeInfo = Handler::getRangeInfo('users');
 
-		$users = &$userDao->getUsersByField($searchType, $searchMatch, $search, true, $rangeInfo);
+		$users =& $userDao->getUsersByField($searchType, $searchMatch, $search, true, $rangeInfo);
 
 		$templateMgr->assign('searchField', $searchType);
 		$templateMgr->assign('searchMatch', $searchMatch);
@@ -225,9 +225,9 @@ class SubscriptionHandler extends ManagerHandler {
 
 		import('subscription.form.SubscriptionForm');
 
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		$subscriptionId = Request::getUserVar('subscriptionId') == null ? null : (int) Request::getUserVar('subscriptionId');
-		$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
+		$subscriptionDao =& DAORegistry::getDAO('SubscriptionDAO');
 
 		if (($subscriptionId != null && $subscriptionDao->getSubscriptionJournalId($subscriptionId) == $journal->getJournalId()) || $subscriptionId == null) {
 
@@ -246,7 +246,7 @@ class SubscriptionHandler extends ManagerHandler {
 			} else {
 				$this->setupTemplate();
 
-				$templateMgr = &TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'subscriptions'), 'manager.subscriptions'));
 
 				if ($subscriptionId == null) {
@@ -270,12 +270,12 @@ class SubscriptionHandler extends ManagerHandler {
 		$this->validate();
 		$this->setupTemplate(true);
 
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		$rangeInfo =& Handler::getRangeInfo('subscriptionTypes');
-		$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
-		$subscriptionTypes = &$subscriptionTypeDao->getSubscriptionTypesByJournalId($journal->getJournalId(), $rangeInfo);
+		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypes =& $subscriptionTypeDao->getSubscriptionTypesByJournalId($journal->getJournalId(), $rangeInfo);
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('subscriptionTypes', $subscriptionTypes);
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.subscriptions');
 
@@ -289,10 +289,10 @@ class SubscriptionHandler extends ManagerHandler {
 		$this->validate();
 
 		$subscriptionTypeId = isset($args[0])?$args[0]:0;
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 
-		$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
-		$subscriptionType = &$subscriptionTypeDao->getSubscriptionType($subscriptionTypeId);
+		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscriptionTypeId);
 
 		if ($subscriptionType && $subscriptionType->getJournalId() == $journal->getJournalId()) {
 			$isDown = Request::getUserVar('dir')=='d';
@@ -312,10 +312,10 @@ class SubscriptionHandler extends ManagerHandler {
 		$this->validate();
 
 		if (isset($args) && !empty($args)) {
-			$journal = &Request::getJournal();
+			$journal =& Request::getJournal();
 			$subscriptionTypeId = (int) $args[0];
 
-			$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
+			$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
 
 			// Ensure subscription type is for this journal
 			if ($subscriptionTypeDao->getSubscriptionTypeJournalId($subscriptionTypeId) == $journal->getJournalId()) {
@@ -334,16 +334,16 @@ class SubscriptionHandler extends ManagerHandler {
 		$this->validate();
 		$this->setupTemplate(true);
 
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		$subscriptionTypeId = !isset($args) || empty($args) ? null : (int) $args[0];
-		$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
 
 		// Ensure subscription type is valid and for this journal
 		if (($subscriptionTypeId != null && $subscriptionTypeDao->getSubscriptionTypeJournalId($subscriptionTypeId) == $journal->getJournalId()) || $subscriptionTypeId == null) {
 
 			import('subscription.form.SubscriptionTypeForm');
 
-			$templateMgr = &TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'subscriptionTypes'), 'manager.subscriptionTypes'));
 
 			if ($subscriptionTypeId == null) {
@@ -381,9 +381,9 @@ class SubscriptionHandler extends ManagerHandler {
 
 		import('subscription.form.SubscriptionTypeForm');
 
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		$subscriptionTypeId = Request::getUserVar('typeId') == null ? null : (int) Request::getUserVar('typeId');
-		$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
 
 		if (($subscriptionTypeId != null && $subscriptionTypeDao->getSubscriptionTypeJournalId($subscriptionTypeId) == $journal->getJournalId()) || $subscriptionTypeId == null) {
 
@@ -397,7 +397,7 @@ class SubscriptionHandler extends ManagerHandler {
 				if (Request::getUserVar('createAnother')) {
 					$this->setupTemplate(true);
 
-					$templateMgr = &TemplateManager::getManager();
+					$templateMgr =& TemplateManager::getManager();
 					$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'subscriptionTypes'), 'manager.subscriptionTypes'));
 					$templateMgr->assign('subscriptionTypeTitle', 'manager.subscriptionTypes.createTitle');
 					$templateMgr->assign('subscriptionTypeCreated', '1');
@@ -414,7 +414,7 @@ class SubscriptionHandler extends ManagerHandler {
 			} else {
 				$this->setupTemplate(true);
 
-				$templateMgr = &TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'subscriptionTypes'), 'manager.subscriptionTypes'));
 
 				if ($subscriptionTypeId == null) {
@@ -440,7 +440,7 @@ class SubscriptionHandler extends ManagerHandler {
 
 		import('subscription.form.SubscriptionPolicyForm');
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.subscriptions');
 
 		if (Config::getVar('general', 'scheduled_tasks')) {
@@ -473,7 +473,7 @@ class SubscriptionHandler extends ManagerHandler {
 			$subscriptionPolicyForm->execute();
 			$this->setupTemplate(true);
 
-			$templateMgr = &TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign('helpTopicId', 'journal.managementPages.subscriptions');
 			$templateMgr->assign('subscriptionPoliciesSaved', '1');
 
@@ -483,7 +483,7 @@ class SubscriptionHandler extends ManagerHandler {
 
 			$subscriptionPolicyForm->display();
 		} else {
-			$templateMgr = &TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign('helpTopicId', 'journal.managementPages.subscriptions');
 
 			if (Config::getVar('general', 'scheduled_tasks')) {
@@ -497,11 +497,10 @@ class SubscriptionHandler extends ManagerHandler {
 	function setupTemplate($subclass = false) {
 		parent::setupTemplate(true);
 		if ($subclass) {
-			$templateMgr = &TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'subscriptions'), 'manager.subscriptions'));
 		}
 	}
-
 }
 
 ?>

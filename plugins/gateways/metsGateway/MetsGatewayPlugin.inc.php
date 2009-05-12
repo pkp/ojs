@@ -100,18 +100,18 @@ class METSGatewayPlugin extends GatewayPlugin {
 		}
 		else
 		{
-			$journal = &Request::getJournal();
-			$issueDao = &DAORegistry::getDAO('IssueDAO');
+			$journal =& Request::getJournal();
+			$issueDao =& DAORegistry::getDAO('IssueDAO');
 			$issueId = array_shift($args);
 			if (!$issueId)
 			{
-				$issuesResultSet = &$issueDao->getIssues($journal->getJournalId(), Handler::getRangeInfo('issues'));
+				$issuesResultSet =& $issueDao->getIssues($journal->getJournalId(), Handler::getRangeInfo('issues'));
 				$issues = array();
 
 				while (!$issuesResultSet->eof())
 				{
 					$issue = $issuesResultSet->next();
-					$issues[] = &$issue;
+					$issues[] =& $issue;
 				}
 				$this->exportIssues($journal, $issues);
 				return true;
@@ -119,12 +119,12 @@ class METSGatewayPlugin extends GatewayPlugin {
 			else if ($issueId == 'current')
 			{
 				$issues = array();
-				$issues[] = &$issueDao->getCurrentIssue($journal->getJournalId());
+				$issues[] =& $issueDao->getCurrentIssue($journal->getJournalId());
 			}
 			else
 			{
 				$issues = array();
-				$issues[] = &$issueDao->getIssueById($issueId);
+				$issues[] =& $issueDao->getIssueById($issueId);
 			}
 			$this->exportIssues($journal, $issues);
 			return true;
@@ -143,8 +143,8 @@ class METSGatewayPlugin extends GatewayPlugin {
 		$this->journalId = $journal->getJournalId();
 
 		$this->import('MetsExportDom');
-		$doc = &XMLCustomWriter::createDocument('', null);
-		$root = &XMLCustomWriter::createElement($doc, 'METS:mets');
+		$doc =& XMLCustomWriter::createDocument('', null);
+		$root =& XMLCustomWriter::createElement($doc, 'METS:mets');
 		XMLCustomWriter::setAttribute($root, 'xmlns:METS', 'http://www.loc.gov/METS/');
 		XMLCustomWriter::setAttribute($root, 'xmlns:xlink', 'http://www.w3.org/TR/xlink');
 		XMLCustomWriter::setAttribute($root, 'xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance');
@@ -152,20 +152,20 @@ class METSGatewayPlugin extends GatewayPlugin {
 		XMLCustomWriter::setAttribute($root, 'TYPE', 'journal');
 		XMLCustomWriter::setAttribute($root, 'OBJID', 'J-'.$journal->getJournalId());
 		XMLCustomWriter::setAttribute($root, 'xsi:schemaLocation', 'http://www.loc.gov/METS/ http://www.loc.gov/mets/mets.xsd');
-		$HeaderNode = &MetsExportDom::createmetsHdr($doc);
+		$HeaderNode =& MetsExportDom::createmetsHdr($doc);
 		XMLCustomWriter::appendChild($root, $HeaderNode);
 		MetsExportDom::generateJournalDmdSecDom($doc, $root, $journal);
-		$fileSec = &XMLCustomWriter::createElement($doc, 'METS:fileSec');
-		$fileGrpOriginal = &XMLCustomWriter::createElement($doc, 'METS:fileGrp');
+		$fileSec =& XMLCustomWriter::createElement($doc, 'METS:fileSec');
+		$fileGrpOriginal =& XMLCustomWriter::createElement($doc, 'METS:fileGrp');
 		XMLCustomWriter::setAttribute($fileGrpOriginal, 'USE', 'original');    
-		$fileGrpDerivative = &XMLCustomWriter::createElement($doc, 'METS:fileGrp');
+		$fileGrpDerivative =& XMLCustomWriter::createElement($doc, 'METS:fileGrp');
 		XMLCustomWriter::setAttribute($fileGrpDerivative, 'USE', 'derivative');    
 		foreach ($issues as $issue) {
 			MetsExportDom::generateIssueDmdSecDom($doc, $root, $issue, $journal);
 			MetsExportDom::generateIssueFileSecDom($doc, $fileGrpOriginal, $issue);
 			MetsExportDom::generateIssueHtmlGalleyFileSecDom($doc, $fileGrpDerivative, $issue);
 		}
-		$amdSec = &MetsExportDom::createmetsamdSec($doc, $root, $journal);
+		$amdSec =& MetsExportDom::createmetsamdSec($doc, $root, $journal);
 		XMLCustomWriter::appendChild($root, $amdSec);
 		XMLCustomWriter::appendChild($fileSec, $fileGrpOriginal);
 		XMLCustomWriter::appendChild($fileSec, $fileGrpDerivative);

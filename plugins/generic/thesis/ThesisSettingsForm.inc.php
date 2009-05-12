@@ -35,7 +35,7 @@ class ThesisSettingsForm extends Form {
 	 */
 	function ThesisSettingsForm(&$plugin, $journalId) {
 		$this->journalId = $journalId;
-		$this->plugin = &$plugin;
+		$this->plugin =& $plugin;
 
 		$this->validOrder = array (
 			THESIS_ORDER_SUBMISSION_DATE_ASC => Locale::translate('plugins.generic.thesis.settings.order.submissionDateAsc'),
@@ -62,7 +62,7 @@ class ThesisSettingsForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('validOrder', $this->validOrder);
 		parent::display();
 	}
@@ -72,7 +72,7 @@ class ThesisSettingsForm extends Form {
 	 */
 	function initData() {
 		$journalId = $this->journalId;
-		$plugin = &$this->plugin;
+		$plugin =& $this->plugin;
 
 		$this->_data = array(
 			'enableUploadCode' => $plugin->getSetting($journalId, 'enableUploadCode'),
@@ -103,7 +103,7 @@ class ThesisSettingsForm extends Form {
 	 * Save settings. 
 	 */
 	function execute() {
-		$plugin = &$this->plugin;
+		$plugin =& $this->plugin;
 		$journalId = $this->journalId;
 
 		$plugin->updateSetting($journalId, 'enableUploadCode', $this->getData('enableUploadCode'), 'bool');

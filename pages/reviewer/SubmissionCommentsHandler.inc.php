@@ -74,7 +74,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$commentId = $args[1];
 		$reviewId = Request::getUserVar('reviewId');
 
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$article = $articleDao->getArticle($articleId);
 
 		$submissionReviewHandler =& new SubmissionReviewHandler();
@@ -97,7 +97,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$commentId = Request::getUserVar('commentId');
 		$reviewId = Request::getUserVar('reviewId');
 
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$article = $articleDao->getArticle($articleId);
 
 		$submissionReviewHandler =& new SubmissionReviewHandler();
@@ -115,8 +115,8 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		ReviewerAction::saveComment($article, $comment, $emailComment);
 
 		// Refresh the comment
-		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-		$comment = &$articleCommentDao->getArticleCommentById($commentId);
+		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
+		$comment =& $articleCommentDao->getArticleCommentById($commentId);
 
 		// Redirect back to initial comments page
 		if ($comment->getCommentType() == COMMENT_TYPE_PEER_REVIEW) {
@@ -159,8 +159,8 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 	function validate($user, $commentId) {
 		$isValid = true;
 
-		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-		$comment = &$articleCommentDao->getArticleCommentById($commentId);
+		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
+		$comment =& $articleCommentDao->getArticleCommentById($commentId);
 
 		if ($comment == null) {
 			$isValid = false;
