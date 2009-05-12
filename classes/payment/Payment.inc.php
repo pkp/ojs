@@ -3,7 +3,7 @@
 /**
  * @defgroup payment
  */
- 
+
 /**
  * @file classes/payment/Payment.inc.php
  *
@@ -34,19 +34,19 @@ class Payment {
 		$this->userId = $userId;
 		$this->assocId = $assocId;
 	}
-	
+
 	/**
 	 * Get the row id of the payment.
 	 * @return int
-	 */	
+	 */
 	function getPaymentId() {
 		return $this->paymentId;
 	}
-	
+
 	/**
-	 * Set the id of payment 
+	 * Set the id of payment
 	 * @param $paymentId int
-	 */	
+	 */
 	function setPaymentId($paymentId) {
 		$this->paymentId = $paymentId;
 	}
@@ -54,7 +54,7 @@ class Payment {
 	function setAmount($amount) {
 		$this->amount = $amount;
 	}
-	
+
 	function getAmount() {
 		return $this->amount;
 	}

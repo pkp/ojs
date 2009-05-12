@@ -167,7 +167,7 @@ class AuthorSubmission extends Article {
 
 		// The submission is STATUS_QUEUED. Find out where it's queued.
 		$editAssignments = $this->getEditAssignments();
-		if (empty($editAssignments)) 
+		if (empty($editAssignments))
 			return (STATUS_QUEUED_UNASSIGNED);
 
 		$latestDecision = $this->getMostRecentDecision();

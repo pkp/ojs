@@ -7,7 +7,7 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AnnouncementType
- * @ingroup announcement 
+ * @ingroup announcement
  * @see AnnouncementTypeDAO, AnnouncementTypeForm
  *
  * @brief Basic class describing an announcement type.

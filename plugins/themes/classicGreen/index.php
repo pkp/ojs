@@ -3,7 +3,7 @@
 /**
  * @defgroup plugins_themes_classicGreen
  */
- 
+
 /**
  * @file plugins/themes/classicGreen/index.php
  *

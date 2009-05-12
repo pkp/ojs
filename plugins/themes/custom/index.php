@@ -3,7 +3,7 @@
 /**
  * @defgroup plugins_themes_custom
  */
- 
+
 /**
  * @file plugins/themes/custom/index.php
  *

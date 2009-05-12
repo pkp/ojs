@@ -78,7 +78,7 @@ class JournalDAO extends DAO {
 	/**
 	 * Insert a new journal.
 	 * @param $journal Journal
-	 */	
+	 */
 	function insertJournal(&$journal) {
 		$this->update(
 			'INSERT INTO journals

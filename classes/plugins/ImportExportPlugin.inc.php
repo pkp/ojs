@@ -88,7 +88,7 @@ class ImportExportPlugin extends Plugin {
 	 * Execute import/export tasks using the command-line interface.
 	 * @param $scriptName The name of the command-line script (displayed as usage info)
 	 * @param $args Parameters to the plugin
-	 */ 
+	 */
 	function executeCLI($scriptName, &$args) {
 		$this->usage();
 		// Implemented by subclasses

@@ -8,7 +8,7 @@
  *
  * @class Help
  * @ingroup help
- * 
+ *
  * @brief Provides methods for translating help topic keys to their respected topic
  * help ids.
  */

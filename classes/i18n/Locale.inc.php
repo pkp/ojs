@@ -49,7 +49,7 @@ class Locale extends PKPLocale {
 	/**
 	 * Return the key name of the user's currently selected locale (default
 	 * is "en_US" for U.S. English).
-	 * @return string 
+	 * @return string
 	 */
 	function getLocale() {
 		static $currentLocale;

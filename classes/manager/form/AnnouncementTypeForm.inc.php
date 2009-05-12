@@ -25,7 +25,7 @@ class AnnouncementTypeForm extends PKPAnnouncementTypeForm {
 	function AnnouncementTypeForm($typeId = null) {
 		parent::PKPAnnouncementTypeForm($typeId);
 	}
-	
+
 	/**
 	 * Display the form.
 	 */

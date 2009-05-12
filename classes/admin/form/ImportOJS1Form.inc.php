@@ -21,7 +21,7 @@ import('form.Form');
 
 class ImportOJS1Form extends Form {
 
-	/** 
+	/**
 	 * @var ImportOJS1
 	 */
 	var $importer;

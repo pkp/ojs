@@ -44,7 +44,7 @@ class OJSApplication extends PKPApplication {
 	function getContextDepth() {
 		return 1;
 	}
-		
+
 	function getContextList() {
 		return array('journal');
 	}

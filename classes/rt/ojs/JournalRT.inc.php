@@ -3,7 +3,6 @@
 /**
  * @defgroup rt_ojs
  */
- 
 
 /**
  * @file classes/rt/ojs/JournalRT.inc.php

@@ -151,21 +151,21 @@ class PluginSettingsDAO extends DAO {
 		if ( $journalId ) {
 			$cache =& $this->_getCache($journalId, $pluginName);
 			$cache->flush();
-	
+
 			return $this->update(
-				'DELETE FROM plugin_settings WHERE journal_id = ? AND plugin_name = ?', 
+				'DELETE FROM plugin_settings WHERE journal_id = ? AND plugin_name = ?',
 				array($journalId, $pluginName)
 			);
 		} else {
 			import('cache.CacheManager');
 			$cacheManager =& CacheManager::getManager();
-			// NB: this actually deletes all plugins' settings cache			
+			// NB: this actually deletes all plugins' settings cache
 			$cacheManager->flush('pluginSettings');
-			
+
 			return $this->update(
-				'DELETE FROM plugin_settings WHERE plugin_name = ?', 
+				'DELETE FROM plugin_settings WHERE plugin_name = ?',
 				array($pluginName)
-			);			
+			);
 		}
 	}
 

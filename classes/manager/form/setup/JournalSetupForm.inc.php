@@ -3,7 +3,7 @@
 /**
  * @defgroup manager_form_setup
  */
- 
+
 /**
  * @file classes/manager/form/setup/JournalSetupForm.inc.php
  *
@@ -60,7 +60,7 @@ class JournalSetupForm extends Form {
 	/**
 	 * Read user input.
 	 */
-	function readInputData() {		
+	function readInputData() {
 		$this->readUserVars(array_keys($this->settings));
 	}
 

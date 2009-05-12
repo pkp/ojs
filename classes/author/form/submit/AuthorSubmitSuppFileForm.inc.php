@@ -93,7 +93,7 @@ class AuthorSubmitSuppFileForm extends Form {
 		if (isset($this->suppFile)) {
 			$templateMgr->assign_by_ref('suppFile', $this->suppFile);
 		}
-		$templateMgr->assign('helpTopicId','submission.supplementaryFiles');		
+		$templateMgr->assign('helpTopicId','submission.supplementaryFiles');
 		parent::display();
 	}
 
@@ -159,7 +159,7 @@ class AuthorSubmitSuppFileForm extends Form {
 
 		$fileName = 'uploadSuppFile';
 
-		// edit an existing supp file, otherwise create new supp file entry	
+		// edit an existing supp file, otherwise create new supp file entry
 		if (isset($this->suppFile)) {
 			$suppFile =& $this->suppFile;
 
@@ -182,7 +182,7 @@ class AuthorSubmitSuppFileForm extends Form {
 				$fileId = 0;
 			}
 
-			// Insert new supplementary file		
+			// Insert new supplementary file
 			$suppFile = new SuppFile();
 			$suppFile->setArticleId($this->articleId);
 			$suppFile->setFileId($fileId);

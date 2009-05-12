@@ -156,7 +156,7 @@ class IssueDAO extends DAO {
 		unset($result);
 
 		return $issue;
-	}	
+	}
 
 	/**
 	 * update current issue
@@ -260,7 +260,7 @@ class IssueDAO extends DAO {
 			$this->resequenceCustomIssueOrders($issue->getJournalId());
 		}
 
-		return $issue->getIssueId();	
+		return $issue->getIssueId();
 	}
 
 	/**
@@ -281,7 +281,7 @@ class IssueDAO extends DAO {
 	 */
 	function issueExists($journalId, $volume, $number, $year, $issueId) {
 		$result =& $this->retrieve(
-			'SELECT i.* FROM issues i WHERE journal_id = ? AND volume = ? AND number = ? AND year = ? AND issue_id <> ?', 
+			'SELECT i.* FROM issues i WHERE journal_id = ? AND volume = ? AND number = ? AND year = ? AND issue_id <> ?',
 			array($journalId, $volume, $number, $year, $issueId)
 		);
 		$returner = $result->RecordCount() != 0 ? true : false;
@@ -352,7 +352,7 @@ class IssueDAO extends DAO {
 	function deleteIssue(&$issue) {
 		import('file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
-		
+
 		if (is_array($issue->getFileName(null))) foreach ($issue->getFileName(null) as $fileName) {
 			if ($fileName != '') {
 				$publicFileManager->removeJournalFile($issue->getJournalId(), $fileName);

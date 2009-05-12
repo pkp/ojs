@@ -10,7 +10,7 @@
  * @ingroup manager_form
  *
  * @brief Form for conference managers to modify Payment Plugin settings
- * 
+ *
  */
 
 import('form.Form');
@@ -44,7 +44,7 @@ class PayMethodSettingsForm extends Form {
 		$templateMgr->assign_by_ref('paymentMethodPlugins', $this->plugins);
 		parent::display();
 	}
-	
+
 	/**
 	 * Initialize form data from current group group.
 	 */
@@ -76,7 +76,7 @@ class PayMethodSettingsForm extends Form {
 			}
 		}
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
@@ -92,10 +92,10 @@ class PayMethodSettingsForm extends Form {
 		}
 
 	}
-	
+
 	/**
-	 * Save settings 
-	 */	 
+	 * Save settings
+	 */
 	function execute() {
 		$journal =& Request::getJournal();
 		// Save the general settings for the form

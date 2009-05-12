@@ -35,7 +35,7 @@ class TemporaryFileManager extends PKPTemporaryFileManager {
 	 */
 	function articleToTemporaryFile($articleFile, $userId) {
 		// Get the file extension, then rename the file.
-		$fileExtension = $this->parseFileExtension($articleFile->getFileName());			
+		$fileExtension = $this->parseFileExtension($articleFile->getFileName());
 
 		if (!$this->fileExists($this->filesDir, 'dir')) {
 			// Try to create destination directory

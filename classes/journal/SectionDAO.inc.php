@@ -174,7 +174,7 @@ class SectionDAO extends DAO {
 	/**
 	 * Insert a new section.
 	 * @param $section Section
-	 */	
+	 */
 	function insertSection(&$section) {
 		$this->update(
 			'INSERT INTO sections
@@ -284,7 +284,7 @@ class SectionDAO extends DAO {
 	}
 
 	/**
-	 * Retrieve an array associating all section editor IDs with 
+	 * Retrieve an array associating all section editor IDs with
 	 * arrays containing the sections they edit.
 	 * @return array editorId => array(sections they edit)
 	 */

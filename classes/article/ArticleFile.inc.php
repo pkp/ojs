@@ -119,7 +119,7 @@ class ArticleFile extends DataObject {
 	 */
 	function setRevision($revision) {
 		return $this->setData('revision', $revision);
-	}	
+	}
 
 	/**
 	 * Get ID of article.
@@ -142,7 +142,7 @@ class ArticleFile extends DataObject {
 	 * @param return string
 	 */
 	function getFileName() {
-		return $this->getData('fileName');	
+		return $this->getData('fileName');
 	}
 
 	/**
@@ -150,7 +150,7 @@ class ArticleFile extends DataObject {
 	 * @param $fileName string
 	 */
 	function setFileName($fileName) {
-		return $this->setData('fileName', $fileName);	
+		return $this->setData('fileName', $fileName);
 	}
 
 	/**
@@ -158,7 +158,7 @@ class ArticleFile extends DataObject {
 	 * @ return string
 	 */
 	function getFileType() {
-		return $this->getData('fileType');	
+		return $this->getData('fileType');
 	}
 
 	/**
@@ -166,7 +166,7 @@ class ArticleFile extends DataObject {
 	 * @param $fileType string
 	 */
 	function setFileType($fileType) {
-		return $this->setData('fileType', $fileType);	
+		return $this->setData('fileType', $fileType);
 	}
 
 	/**
@@ -174,7 +174,7 @@ class ArticleFile extends DataObject {
 	 * @param return string
 	 */
 	function getOriginalFileName() {
-		return $this->getData('originalFileName');	
+		return $this->getData('originalFileName');
 	}
 
 	/**
@@ -182,7 +182,7 @@ class ArticleFile extends DataObject {
 	 * @param $originalFileName string
 	 */
 	function setOriginalFileName($originalFileName) {
-		return $this->setData('originalFileName', $originalFileName);	
+		return $this->setData('originalFileName', $originalFileName);
 	}
 
 	/**
@@ -190,7 +190,7 @@ class ArticleFile extends DataObject {
 	 * @ return string
 	 */
 	function getType() {
-		return $this->getData('type');	
+		return $this->getData('type');
 	}
 
 	/**
@@ -198,7 +198,7 @@ class ArticleFile extends DataObject {
 	 * @param $type string
 	 */
 	function setType($type) {
-		return $this->setData('type', $type);	
+		return $this->setData('type', $type);
 	}
 
 	/**
@@ -207,7 +207,7 @@ class ArticleFile extends DataObject {
 	 */
 
 	function getDateUploaded() {
-		return $this->getData('dateUploaded');	
+		return $this->getData('dateUploaded');
 	}
 
 
@@ -226,7 +226,7 @@ class ArticleFile extends DataObject {
 	 */
 
 	function getDateModified() {
-		return $this->getData('dateModified');	
+		return $this->getData('dateModified');
 	}
 
 
@@ -245,7 +245,7 @@ class ArticleFile extends DataObject {
 	 */
 
 	function getFileSize() {
-		return $this->getData('fileSize');	
+		return $this->getData('fileSize');
 	}
 
 
@@ -273,7 +273,7 @@ class ArticleFile extends DataObject {
 	 */
 
 	function getRound() {
-		return $this->getData('round');	
+		return $this->getData('round');
 	}
 
 
@@ -292,7 +292,7 @@ class ArticleFile extends DataObject {
 	 */
 
 	function getViewable() {
-		return $this->getData('viewable');	
+		return $this->getData('viewable');
 	}
 
 

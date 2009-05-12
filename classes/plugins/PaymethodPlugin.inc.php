@@ -57,11 +57,11 @@ class PaymethodPlugin extends Plugin {
 
 	/**
 	 * Get the Template path for this plugin.
-	 */	
+	 */
 	function getTemplatePath() {
 		return parent::getTemplatePath() . 'templates' . DIRECTORY_SEPARATOR ;
 	}
-		
+
 	function displayPaymentForm($queuedPaymentId, $key, &$queuedPayment) {
 		die('ABSTRACT METHOD');
 	}

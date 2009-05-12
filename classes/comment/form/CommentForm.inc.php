@@ -3,7 +3,6 @@
 /**
  * @defgroup rt_ojs_form
  */
- 
 
 /**
  * @file classes/comment/form/CommentForm.inc.php

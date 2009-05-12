@@ -3,7 +3,7 @@
 /**
  * @defgroup article_log
  */
- 
+
 /**
  * @file classes/article/log/ArticleLog.inc.php
  *

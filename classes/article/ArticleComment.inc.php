@@ -120,7 +120,7 @@ class ArticleComment extends DataObject {
 	 */
 	function setAssocId($assocId) {
 		return $this->setData('assocId', $assocId);
-	}	
+	}
 
 	/**
 	 * get author id

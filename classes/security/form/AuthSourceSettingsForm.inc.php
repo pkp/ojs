@@ -3,7 +3,6 @@
 /**
  * @defgroup security_form
  */
- 
 
 /**
  * @file classes/security/form/AuthSourceSettingsForm.inc.php

@@ -23,25 +23,25 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 	 * Constructor.
 	 */
 	function AuthorSubmitStep5Form($article) {
-		parent::AuthorSubmitForm($article, 5);		
-				
-		$this->addCheck(new FormValidatorCustom($this, 'qualifyForWaiver', 'optional', 'author.submit.mustEnterWaiverReason', array(&$this, 'checkWaiverReason')));		
+		parent::AuthorSubmitForm($article, 5);
+
+		$this->addCheck(new FormValidatorCustom($this, 'qualifyForWaiver', 'optional', 'author.submit.mustEnterWaiverReason', array(&$this, 'checkWaiverReason')));
 	}
 
 	/**
 	 * Check that if the user choses a Waiver that they enter text in the comments to Editor
 	 */
-	function checkWaiverReason() { 
+	function checkWaiverReason() {
 		if ( Request::getUserVar('qualifyForWaiver') == false ) return true;
 		else return  (Request::getUserVar('commentsToEditor') != '');
 	}
-	
+
 	/**
 	 * Display the form.
 	 */
 	function display() {
 		$journal =& Request::getJournal();
-		$user =& Request::getUser();		
+		$user =& Request::getUser();
 		$templateMgr =& TemplateManager::getManager();
 
 		// Get article file for this article
@@ -58,20 +58,20 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 			$templateMgr->assign('authorFees', true);
 			$completedPaymentDAO =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
 			$articleId = $this->articleId;
-			
+
 			if ( $paymentManager->submissionEnabled() ) {
 				$templateMgr->assign_by_ref('submissionPayment', $completedPaymentDAO->getSubmissionCompletedPayment ( $journal->getJournalId(), $articleId ));
 				$templateMgr->assign('manualPayment', $journal->getSetting('paymentMethodPluginName') == 'ManualPayment');
 			}
-			
+
 			if ( $paymentManager->fastTrackEnabled()  ) {
 				$templateMgr->assign_by_ref('fastTrackPayment', $completedPaymentDAO->getFastTrackCompletedPayment ( $journal->getJournalId(), $articleId ));
-			}	   
+			}
 		}
-		
+
 		parent::display();
 	}
-	
+
 	/**
 	 * Initialize form data from current article.
 	 */
@@ -88,7 +88,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 	 */
 	function readInputData() {
 		$this->readUserVars(array('paymentSent', 'qualifyForWaiver', 'commentsToEditor'));
-	}	
+	}
 
 	/**
 	 * Validate the form
@@ -98,31 +98,31 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		$paymentManager =& OJSPaymentManager::getManager();
 		if ( $paymentManager->submissionEnabled() ) {
 			if ( !parent::validate() ) return false;
-	
+
 			$journal =& Request::getJournal();
 			$journalId = $journal->getJournalId();
-			$articleId = $this->articleId;							
+			$articleId = $this->articleId;
 			$user =& Request::getUser();
-			
+
 			$completedPaymentDAO =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
 			if ( $completedPaymentDAO->hasPaidSubmission ( $journalId, $articleId )  ) {
-				return parent::validate();		
-			} elseif ( Request::getUserVar('qualifyForWaiver') && Request::getUserVar('commentsToEditor') != '') {  
+				return parent::validate();
+			} elseif ( Request::getUserVar('qualifyForWaiver') && Request::getUserVar('commentsToEditor') != '') {
 				return parent::validate();
 			} elseif ( Request::getUserVar('paymentSent') ) {
 				return parent::validate();
-			} else {				
+			} else {
 				$queuedPayment =& $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_SUBMISSION, $user->getUserId(), $articleId, $journal->getSetting('submissionFee'));
 				$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
-		
+
 				$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
-				exit;	
+				exit;
 			}
 		} else {
 			return parent::validate();
-		}	
+		}
 	}
-	
+
 	/**
 	 * Save changes to article.
 	 */
@@ -133,7 +133,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		$journal = Request::getJournal();
 		$user = Request::getUser();
 
-		// Update article		
+		// Update article
 		$article =& $this->article;
 
 		if ($this->getData('commentsToEditor') != '') {

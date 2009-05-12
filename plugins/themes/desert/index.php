@@ -3,7 +3,7 @@
 /**
  * @defgroup plugins_themes_desert
  */
- 
+
 /**
  * @file plugins/themes/desert/index.php
  *

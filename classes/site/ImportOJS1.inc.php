@@ -838,7 +838,7 @@ class ImportOJS1 {
 		}
 		$result->Close();
 
-		if (!$this->showVolume && !$this->showNumber && $this->showYear) {		
+		if (!$this->showVolume && !$this->showNumber && $this->showYear) {
 			// Insert issues for each year in "publish by year" mode
 			$result =& $this->importDao->retrieve('SELECT DISTINCT(DATE_FORMAT(dtDatePublished, \'%Y\')) AS year FROM tblarticles WHERE bPublished = 1 ORDER BY year');
 			while (!$result->EOF) {
@@ -861,12 +861,12 @@ class ImportOJS1 {
 
 				$result->MoveNext();
 
-				$issue->setCurrent($result->EOF ? 1 : 0);	
+				$issue->setCurrent($result->EOF ? 1 : 0);
 				$issueId = $issueDao->insertIssue($issue);
 				$this->issueMap['YEAR' . $year] = $issueId;
 				$this->issueCount++;
 			}
-			$result->Close();			
+			$result->Close();
 		}
 
 		// Import custom section ordering

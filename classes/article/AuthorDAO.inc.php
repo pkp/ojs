@@ -91,7 +91,7 @@ class AuthorDAO extends DAO {
 				AND (aa.middle_name = ?' . (empty($middleName)?' OR aa.middle_name IS NULL':'') . ')
 				AND aa.last_name = ?
 				AND (aa.affiliation = ?' . (empty($affiliation)?' OR aa.affiliation IS NULL':'') . ')
-				AND (aa.country = ?' . (empty($country)?' OR aa.country IS NULL':'') . ') ' . 
+				AND (aa.country = ?' . (empty($country)?' OR aa.country IS NULL':'') . ') ' .
 				($journalId!==null?(' AND a.journal_id = ?'):''),
 			$params
 		);
@@ -239,7 +239,7 @@ class AuthorDAO extends DAO {
 	/**
 	 * Insert a new Author.
 	 * @param $author Author
-	 */	
+	 */
 	function insertAuthor(&$author) {
 		$this->update(
 			'INSERT INTO article_authors

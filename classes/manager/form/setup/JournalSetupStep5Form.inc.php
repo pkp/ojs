@@ -220,7 +220,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 			}
 
 			$uploadName = $settingName . '.css';
-			if($fileManager->uploadJournalFile($journal->getJournalId(), $settingName, $uploadName)) {			
+			if($fileManager->uploadJournalFile($journal->getJournalId(), $settingName, $uploadName)) {
 				$value = array(
 					'name' => $fileManager->getUploadedFileName($settingName),
 					'uploadName' => $uploadName,

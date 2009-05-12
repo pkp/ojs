@@ -3,7 +3,7 @@
 /**
  * @defgroup plugins_themes_lilac
  */
- 
+
 /**
  * @file plugins/themes/lilac/index.php
  *

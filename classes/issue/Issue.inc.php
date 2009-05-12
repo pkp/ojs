@@ -3,7 +3,7 @@
 /**
  * @defgroup issue
  */
- 
+
 /**
  * @file classes/issue/Issue.inc.php
  *
@@ -106,7 +106,7 @@ class Issue extends DataObject {
 
 	/**
 	 * get number
-	 * @return string 
+	 * @return string
 	 */
 	function getNumber() {
 		return $this->getData('number');
@@ -283,7 +283,7 @@ class Issue extends DataObject {
 	}
 
 	/**
-	 * get show issue volume 
+	 * get show issue volume
 	 * @return int
 	 */
 	function getShowVolume() {
@@ -291,7 +291,7 @@ class Issue extends DataObject {
 	}
 
 	/**
-	 * set show issue volume 
+	 * set show issue volume
 	 * @param $showVolume int
 	 */
 	function setShowVolume($showVolume) {
@@ -299,7 +299,7 @@ class Issue extends DataObject {
 	}
 
 	/**
-	 * get show issue number 
+	 * get show issue number
 	 * @return int
 	 */
 	function getShowNumber() {
@@ -307,7 +307,7 @@ class Issue extends DataObject {
 	}
 
 	/**
-	 * set show issue number 
+	 * set show issue number
 	 * @param $showNumber int
 	 */
 	function setShowNumber($showNumber) {
@@ -315,7 +315,7 @@ class Issue extends DataObject {
 	}
 
 	/**
-	 * get show issue year 
+	 * get show issue year
 	 * @return int
 	 */
 	function getShowYear() {
@@ -323,7 +323,7 @@ class Issue extends DataObject {
 	}
 
 	/**
-	 * set show issue year 
+	 * set show issue year
 	 * @param $showYear int
 	 */
 	function setShowYear($showYear) {
@@ -331,7 +331,7 @@ class Issue extends DataObject {
 	}
 
 	/**
-	 * get show issue title 
+	 * get show issue title
 	 * @return int
 	 */
 	function getShowTitle() {
@@ -339,7 +339,7 @@ class Issue extends DataObject {
 	}
 
 	/**
-	 * set show issue title 
+	 * set show issue title
 	 * @param $showTitle int
 	 */
 	function setShowTitle($showTitle) {

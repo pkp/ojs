@@ -52,27 +52,27 @@ class ArticleHTMLGalley extends ArticleGalley {
 		foreach ($images as $image) {
 			$imageUrl = Request::url(null, 'article', 'viewFile', array($this->getArticleId(), $this->getBestGalleyId($journal), $image->getFileId()));
 			$pattern = preg_quote(rawurlencode($image->getOriginalFileName()));
-			
+
 			$contents = preg_replace(
 				'/([Ss][Rr][Cc]|[Hh][Rr][Ee][Ff]|[Dd][Aa][Tt][Aa])\s*=\s*"([^"]*' . $pattern . ')"/',
 				'\1="' . $imageUrl . '"',
 				$contents
 			);
-			
+
 			// Replacement for Flowplayer
 			$contents = preg_replace(
-				'/[Uu][Rr][Ll]\s*\:\s*\'(' . $pattern . ')\'/', 
+				'/[Uu][Rr][Ll]\s*\:\s*\'(' . $pattern . ')\'/',
 				'url:\'' . $imageUrl . '\'',
 				$contents
 			);
-			
+
 			// Replacement for other players (ested with odeo; yahoo and google player won't work w/ OJS URLs, might work for others)
 			$contents = preg_replace(
-				'/[Uu][Rr][Ll]=([^"]*' . $pattern . ')/', 
+				'/[Uu][Rr][Ll]=([^"]*' . $pattern . ')/',
 				'url=' . $imageUrl ,
 				$contents
 			);
-			
+
 		}
 
 		// Perform replacement for ojs://... URLs

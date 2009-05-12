@@ -3,7 +3,7 @@
 /**
  * @defgroup plugins_themes_classicNavy
  */
- 
+
 /**
  * @file plugins/themes/classicNavy/index.php
  *

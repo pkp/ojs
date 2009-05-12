@@ -37,7 +37,7 @@ class UserManagementForm extends Form {
 			$this->addCheck(new FormValidator($this, 'username', 'required', 'user.profile.form.usernameRequired'));
 			$this->addCheck(new FormValidatorCustom($this, 'username', 'required', 'user.register.form.usernameExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByUsername'), array($this->userId, true), true));
 			$this->addCheck(new FormValidatorAlphaNum($this, 'username', 'required', 'user.register.form.usernameAlphaNumeric'));
-			
+
 			if (!Config::getVar('security', 'implicit_auth')) {
 				$this->addCheck(new FormValidator($this, 'password', 'required', 'user.profile.form.passwordRequired'));
 			    $this->addCheck(new FormValidatorLength($this, 'password', 'required', 'user.register.form.passwordLengthTooShort', '>=', $site->getMinPasswordLength()));
@@ -72,7 +72,7 @@ class UserManagementForm extends Form {
 		} else {
 			$helpTopicId = 'journal.users.createNewUser';
 		}
-	
+
 		$journal =& Request::getJournal();
 		$journalId = $journal == null ? 0 : $journal->getJournalId();
 		$rolePrefs = PeopleHandler::retrieveRoleAssignmentPreferences($journalId);
@@ -111,7 +111,7 @@ class UserManagementForm extends Form {
 
 		// Send implicitAuth setting down to template
 		$templateMgr->assign('implicitAuth', Config::getVar('security', 'implicit_auth'));
-		
+
 		$site =& Request::getSite();
 		$templateMgr->assign('availableLocales', $site->getSupportedLocaleNames());
 

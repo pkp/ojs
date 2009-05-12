@@ -3,7 +3,7 @@
 /**
  * @defgroup oai_ojs
  */
- 
+
 /**
  * @file classes/oai/ojs/JournalOAI.inc.php
  *
@@ -86,7 +86,7 @@ class JournalOAI extends OAI {
 	/**
 	 * Get the journal ID and section ID corresponding to a set specifier.
 	 * @return int
-	 */	
+	 */
 	function setSpecToSectionId($setSpec, $journalId = null) {
 		$tmpArray = split(':', $setSpec);
 		if (count($tmpArray) == 1) {
@@ -156,7 +156,7 @@ class JournalOAI extends OAI {
 		if (!isset($record)) {
 			$record = false;
 		}
-		return $record;		
+		return $record;
 	}
 
 	/**

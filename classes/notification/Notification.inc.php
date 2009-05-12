@@ -42,7 +42,7 @@ class Notification extends PKPNotification {
 	function Notification() {
 		parent::PKPNotification();
 	}
-	
+
 	/**
 	 * return the path to the icon for this type
 	 * @return string
@@ -56,7 +56,7 @@ class Notification extends PKPNotification {
 			case NOTIFICATION_TYPE_SUPP_FILE_MODIFIED:
 				return $baseUrl . 'page_attachment.gif';
 				break;
-			
+
 			case NOTIFICATION_TYPE_METADATA_MODIFIED:
 			case NOTIFICATION_TYPE_GALLEY_MODIFIED:
 				return $baseUrl . 'edit.gif';
@@ -81,7 +81,7 @@ class Notification extends PKPNotification {
 				return $baseUrl . 'page_alert.gif';
 		}
 	}
-	
+
 	/**
 	 * Static function to send an email to a mailing list user regarding signup or a lost password
 	 * @param $email string
@@ -92,26 +92,26 @@ class Notification extends PKPNotification {
 		import('mail.MailTemplate');
 		$journal = Request::getJournal();
 		$site = Request::getSite();
-		
+
 		$params = array(
 			'password' => $password,
 			'siteTitle' => $journal->getLocalizedTitle(),
 			'unsubscribeLink' => Request::url(null, 'notification', 'unsubscribeMailList')
 		);
-		
+
 		if ($template == 'NOTIFICATION_MAILLIST_WELCOME') {
 			$keyHash = md5($password);
 			$confirmLink = Request::url(null, 'notification', 'confirmMailListSubscription', array($keyHash, $email));
 			$params["confirmLink"] = $confirmLink;
 		}
-		
+
 		$mail = new MailTemplate($template);
 		$mail->setFrom($site->getLocalizedContactEmail(), $site->getLocalizedContactName());
 		$mail->assignParams($params);
 		$mail->addRecipient($email);
 		$mail->send();
 	}
-	
+
 	/**
 	 * Returns an array of information on the journal's subscription settings
 	 * @return array
@@ -120,11 +120,11 @@ class Notification extends PKPNotification {
 		$journal = Request::getJournal();
 		import('payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
-		
+
 		$settings = array('subscriptionsEnabled' => $paymentManager->acceptSubscriptionPayments(),
 				'allowRegReviewer' => $journal->getSetting('allowRegReviewer'),
 				'allowRegAuthor' => $journal->getSetting('allowRegAuthor'));
-		
+
 		return $settings;
 	}
  }

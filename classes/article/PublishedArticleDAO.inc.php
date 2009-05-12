@@ -756,7 +756,7 @@ class PublishedArticleDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Return years of oldest/youngest published article on site or within a journal
 	 * @param $journalId int

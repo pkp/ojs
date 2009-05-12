@@ -149,11 +149,11 @@ class AuthorAction extends Action {
 			}
 
 			$authorSignoff->setDateCompleted(Core::getCurrentDate());
-			
+
 			$finalSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $authorSubmission->getArticleId());
 			$finalSignoff->setUserId($copyeditor->getUserId());
 			$finalSignoff->setDateNotified(Core::getCurrentDate());
-			
+
 			$signoffDao->updateObject($authorSignoff);
 			$signoffDao->updateObject($finalSignoff);
 
@@ -207,7 +207,7 @@ class AuthorAction extends Action {
 	 * Set that the copyedit is underway.
 	 */
 	function copyeditUnderway($authorSubmission) {
-		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');		
+		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 
 		$authorSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $authorSubmission->getArticleId());
@@ -216,7 +216,7 @@ class AuthorAction extends Action {
 			$authorSignoff->setDateUnderway(Core::getCurrentDate());
 			$signoffDao->updateObject($authorSignoff);
 		}
-	}	
+	}
 
 	/**
 	 * Upload the revised version of a copyedit file.
@@ -232,7 +232,7 @@ class AuthorAction extends Action {
 
 		// Authors cannot upload if the assignment is not active, i.e.
 		// they haven't been notified or the assignment is already complete.
-		$authorSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $authorSubmission->getArticleId());		
+		$authorSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $authorSubmission->getArticleId());
 		if (!$authorSignoff->getDateNotified() || $authorSignoff->getDateCompleted()) return;
 
 		$fileName = 'upload';
@@ -296,7 +296,7 @@ class AuthorAction extends Action {
 					Notification::createNotification($user['id'], "notification.type.layoutComment",
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_LAYOUT_COMMENT);
 				}
-				
+
 				if ($emailComment) {
 					$commentForm->email();
 				}
@@ -417,7 +417,7 @@ class AuthorAction extends Action {
 					Notification::createNotification($user['id'], "notification.type.copyeditComment",
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_COPYEDIT_COMMENT);
 				}
-				
+
 				if ($emailComment) {
 					$commentForm->email();
 				}
@@ -469,7 +469,7 @@ class AuthorAction extends Action {
 					Notification::createNotification($user['id'], "notification.type.proofreadComment",
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_PROOFREAD_COMMENT);
 				}
-				
+
 				if ($emailComment) {
 					$commentForm->email();
 				}
@@ -496,7 +496,7 @@ class AuthorAction extends Action {
 	 */
 	function downloadAuthorFile($article, $fileId, $revision = null) {
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');		
+		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
 
 		$submission =& $authorSubmissionDao->getAuthorSubmission($article->getArticleId());
 		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $authorSubmission->getArticleId());
@@ -525,7 +525,7 @@ class AuthorAction extends Action {
 
 				if ($initialSignoff && $initialSignoff->getFileRevision()==$revision && $initialSignoff->getDateCompleted()!=null) $canDownload = true;
 				else if ($finalSignoff && $finalSignoff->getFileRevision()==$revision && $finalSignoff->getDateCompleted()!=null) $canDownload = true;
-				else if ($authorSignoff && $authorSignoff->getFileRevision()==$revision) $canDownload = true; 
+				else if ($authorSignoff && $authorSignoff->getFileRevision()==$revision) $canDownload = true;
 			} else {
 				$canDownload = false;
 			}

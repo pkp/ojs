@@ -3,13 +3,13 @@
 /**
  * @defgroup article
  */
- 
+
 /**
  * @file classes/article/Article.inc.php
  *
  * Copyright (c) 2003-2009 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
- * 
+ *
  * @class Article
  * @ingroup article
  * @see ArticleDAO
@@ -364,14 +364,14 @@ class Article extends Submission {
 	function getFastTracked() {
 		return $this->getData('fastTracked');
 	}
-	 
+
 	/**
 	 * set fastTracked
 	 * @param $fastTracked boolean
 	 */
 	function setFastTracked($fastTracked) {
 		return $this->setData('fastTracked',$fastTracked);
-	}	
+	}
 
 	/**
 	 * Return boolean indicating if author should be hidden in issue ToC.
@@ -408,7 +408,7 @@ class Article extends Submission {
 	 * Return boolean indicating if article RT comments should be enabled.
 	 * Checks both the section and article comments status. Article status
 	 * overrides section status.
-	 * @return int 
+	 * @return int
 	 */
 	function getEnableComments() {
 		switch ($this->getCommentsStatus()) {
@@ -439,7 +439,7 @@ class Article extends Submission {
 		);
 		return $commentsStatusOptions;
 	}
-	
+
 	/**
 	 * Get an array of user IDs associated with this article
 	 * @param $authors boolean
@@ -453,7 +453,7 @@ class Article extends Submission {
 	function getAssociatedUserIds($authors = true, $reviewers = true, $editors = true, $proofreader = true, $copyeditor = true, $layoutEditor = true) {
 		$articleId = $this->getArticleId();
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		
+
 		$userIds = array();
 
 		if($authors) {
@@ -463,7 +463,7 @@ class Article extends Submission {
 				$userIds[] = array('id' => $author->getId(), 'role' => 'author');
 			}
 		}
-		
+
 		if($editors) {
 			$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
 			$editAssignments =& $editAssignmentDao->getEditorAssignmentsByArticleId($articleId);
@@ -472,22 +472,22 @@ class Article extends Submission {
 				unset($editAssignment);
 			}
 		}
-		
+
 		if($copyeditor) {
 			$copyedSignoff = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $articleId);
 			$userIds[] = array('id' => $copyedSignoff->getUserId(), 'role' => 'copyeditor');
 		}
-		
+
 		if($layoutEditor) {
 			$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
 			$userIds[] = array('id' => $layoutSignoff->getUserId(), 'role' => 'layoutEditor');
-		}	
-		
+		}
+
 		if($proofreader) {
 			$proofSignoff = $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $articleId);
 			$userIds[] = array('id' => $proofSignoff->getUserId(), 'role' => 'proofreader');
 		}
-		
+
 		if($reviewers) {
 			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 			$reviewAssignments =& $reviewAssignmentDao->getReviewAssignmentsByArticleId($articleId);
@@ -496,7 +496,7 @@ class Article extends Submission {
 				unset($reviewAssignment);
 			}
 		}
-				
+
 		return $userIds;
 	}
 
@@ -509,7 +509,7 @@ class Article extends Submission {
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 		return $signoffDao->getBySymbolic($signoffType, ASSOC_TYPE_ARTICLE, $this->getArticleId());
 	}
-	
+
 	/**
 	 * Get the file for this article at a given signoff stage
 	 * @param $signoffType string
@@ -522,13 +522,13 @@ class Article extends Submission {
 
 		$signoff = $signoffDao->getBySymbolic($signoffType, ASSOC_TYPE_ARTICLE, $this->getArticleId());
 		if (!$signoff) return false;
-		
+
 		if ($idOnly) return $signoff->getFileId();
-		
+
 		$articleFile =& $articleFileDao->getArticleFile($signoff->getFileId(), $signoff->getFileRevision());
 		return $articleFile;
 	}
-	
+
 	/**
 	 * Get the user associated with a given signoff and this article
 	 * @param $signoffType string
@@ -540,11 +540,11 @@ class Article extends Submission {
 
 		$signoff = $signoffDao->getBySymbolic($signoffType, ASSOC_TYPE_ARTICLE, $this->getArticleId());
 		if (!$signoff) return false;
-		
+
 		$user =& $userDao->getUser($signoff->getUserId());
 		return $user;
 	}
-	
+
 	/**
 	 * Get the user id associated with a given signoff and this article
 	 * @param $signoffType string
@@ -555,7 +555,7 @@ class Article extends Submission {
 
 		$signoff = $signoffDao->getBySymbolic($signoffType, ASSOC_TYPE_ARTICLE, $this->getArticleId());
 		if (!$signoff) return false;
-		
+
 		return $signoff->getUserId();
 	}
 }

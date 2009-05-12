@@ -137,7 +137,7 @@ class EmailTemplateDAO extends DAO {
 			WHERE	d.email_key = ?',
 			array($primaryLocale, $locale, $journalId, $primaryLocale, $locale, $emailKey)
 		);
-		
+
 		$returner = null;
 		if ($result->RecordCount() != 0) {
 			$returner =& $this->_returnEmailTemplateFromRow($result->GetRowAssoc(false));
@@ -302,7 +302,7 @@ class EmailTemplateDAO extends DAO {
 	/**
 	 * Insert a new base email template.
 	 * @param $emailTemplate BaseEmailTemplate
-	 */	
+	 */
 	function insertBaseEmailTemplate(&$emailTemplate) {
 		return $this->update(
 			'INSERT INTO email_templates
@@ -338,7 +338,7 @@ class EmailTemplateDAO extends DAO {
 	/**
 	 * Insert a new localized email template.
 	 * @param $emailTemplate LocaleEmailTemplate
-	 */	
+	 */
 	function insertLocaleEmailTemplate(&$emailTemplate) {
 		$this->insertBaseEmailTemplate($emailTemplate);
 		return $this->updateLocaleEmailTemplateData($emailTemplate);

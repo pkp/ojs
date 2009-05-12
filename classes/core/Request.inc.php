@@ -35,7 +35,7 @@ class Request extends PKPRequest {
 
 	/**
 	 * Get the journal path requested in the URL ("index" for top-level site requests).
-	 * @return string 
+	 * @return string
 	 */
 	function getRequestedJournalPath() {
 		static $journal;
@@ -79,7 +79,7 @@ class Request extends PKPRequest {
 	}
 
 	/**
-	 * A Generic call to a context-defined path (e.g. a Journal or a Conference's path) 
+	 * A Generic call to a context-defined path (e.g. a Journal or a Conference's path)
 	 * @param $contextLevel int (optional) the number of levels of context to return in the path
 	 * @return array of String (each element the path to one context element)
 	 */
@@ -87,7 +87,7 @@ class Request extends PKPRequest {
 		//there is only one $contextLevel, so no need to check
 		return array(Request::getRequestedJournalPath());
 	}
-	
+
 	/**
 	 * A Generic call to a context defining object (e.g. a Journal, a Conference, or a SchedConf)
 	 * @return Journal
@@ -100,12 +100,12 @@ class Request extends PKPRequest {
 				$returner =& Request::getJournal();
 				break;
 		}
-		return $returner;	
-	}	
-	
+		return $returner;
+	}
+
 	/**
 	 * Get the object that represents the desired context (e.g. Conference or Journal)
-	 * @param $contextName String specifying the page context 
+	 * @param $contextName String specifying the page context
 	 * @return Journal
 	 */
 	function &getContextByName($contextName) {
@@ -128,12 +128,11 @@ class Request extends PKPRequest {
 	 * @param $anchor string Optional name of anchor to add to URL
 	 * @param $escape boolean Whether or not to escape ampersands for this URL; default false.
 	 */
-	function url($journalPath = null, $page = null, $op = null, $path = null, 
+	function url($journalPath = null, $page = null, $op = null, $path = null,
 			$params = null, $anchor = null, $escape = false) {
 		return parent::url(array($journalPath), $page, $op, $path, $params, $anchor, $escape);
 	}
-	
-		
+
 	/**
 	 * Redirect to user home page (or the role home page if the user has one role).
 	 */
@@ -142,7 +141,7 @@ class Request extends PKPRequest {
 		$user = Request::getUser();
 		$userId = $user->getUserId();
 
-		if ($journal =& Request::getJournal()) { 
+		if ($journal =& Request::getJournal()) {
 			// The user is in the journal context, see if they have one role only
 			$roles =& $roleDao->getRolesByUserId($userId, $journal->getJournalId());
 			if(count($roles) == 1) {
@@ -157,7 +156,7 @@ class Request extends PKPRequest {
 			$journalDao =& DAORegistry::getDAO('JournalDAO');
 			$journals =& $journalDao->getJournals();
 			$roles = $roleDao->getRolesByUserId($userId);
-			
+
 			if(count($roles) == 1) {
 				$role = array_shift($roles);
 				$journal = $journalDao->getJournal($role->getJournalId());

@@ -121,7 +121,7 @@ class CommentDAO extends DAO {
 		unset($result);
 
 		return $comment;
-	}	
+	}
 
 	/**
 	 * Creates and returns an article comment object from a row
@@ -194,7 +194,7 @@ class CommentDAO extends DAO {
 	 */
 	function getInsertCommentId() {
 		return $this->getInsertId('comments', 'comment_id');
-	}	
+	}
 
 	/**
 	 * Increase the current count of child comments for the specified comment.

@@ -87,7 +87,7 @@ class GroupForm extends Form {
 	}
 
 	/**
-	 * Save group group. 
+	 * Save group group.
 	 */
 	function execute() {
 		$groupDao =& DAORegistry::getDAO('GroupDAO');

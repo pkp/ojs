@@ -135,7 +135,7 @@ class ArticleFileDAO extends DAO {
 			$result =& $this->retrieve(
 				'SELECT a.* FROM article_files a WHERE file_id = ? AND revision >= ? AND revision <= ?',
 				array($fileId, $start, $end)
-			);		
+			);
 		}
 
 		while (!$result->EOF) {
@@ -257,7 +257,7 @@ class ArticleFileDAO extends DAO {
 	 * Insert a new ArticleFile.
 	 * @param $articleFile ArticleFile
 	 * @return int
-	 */	
+	 */
 	function insertArticleFile(&$articleFile) {
 		$fileId = $articleFile->getFileId();
 		$params = array(

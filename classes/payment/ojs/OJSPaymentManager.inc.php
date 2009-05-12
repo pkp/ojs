@@ -17,13 +17,13 @@
 import('payment.ojs.OJSQueuedPayment');
 import('payment.PaymentManager');
 
-define('PAYMENT_TYPE_MEMBERSHIP', 0x000000001 ); 
-define('PAYMENT_TYPE_SUBSCRIPTION', 0x000000002 );
-define('PAYMENT_TYPE_PURCHASE_ARTICLE', 0x000000003 ); 
-define('PAYMENT_TYPE_DONATION', 0x000000004 ); 
-define('PAYMENT_TYPE_SUBMISSION', 0x000000005 );
-define('PAYMENT_TYPE_FASTTRACK', 0x000000006 ); 
-define('PAYMENT_TYPE_PUBLICATION', 0x000000007 );
+define('PAYMENT_TYPE_MEMBERSHIP',	0x000000001 );
+define('PAYMENT_TYPE_SUBSCRIPTION',	0x000000002 );
+define('PAYMENT_TYPE_PURCHASE_ARTICLE',	0x000000003 );
+define('PAYMENT_TYPE_DONATION',		0x000000004 );
+define('PAYMENT_TYPE_SUBMISSION',	0x000000005 );
+define('PAYMENT_TYPE_FASTTRACK',	0x000000006 );
+define('PAYMENT_TYPE_PUBLICATION',	0x000000007 );
 
 class OJSPaymentManager extends PaymentManager {
 	function &getManager() {
@@ -33,7 +33,7 @@ class OJSPaymentManager extends PaymentManager {
 		}
 		return $manager;
 	}
-	
+
 	function isConfigured() {
 		$journal =& Request::getJournal();
 		return parent::isConfigured() && $journal->getSetting('journalPaymentsEnabled');
@@ -52,10 +52,10 @@ class OJSPaymentManager extends PaymentManager {
 				break;
 			case PAYMENT_TYPE_MEMBERSHIP:
 			case PAYMENT_TYPE_SUBSCRIPTION:
-				$payment->setRequestUrl(Request::url(null, 'user') );			
-				break;				
+				$payment->setRequestUrl(Request::url(null, 'user') );
+				break;
 			case PAYMENT_TYPE_DONATION:
-				$payment->setRequestUrl(Request::url(null, 'donations', 'thankYou') );		
+				$payment->setRequestUrl(Request::url(null, 'donations', 'thankYou') );
 				break;
 			case PAYMENT_TYPE_FASTTRACK:
 			case PAYMENT_TYPE_PUBLICATION:
@@ -64,18 +64,18 @@ class OJSPaymentManager extends PaymentManager {
 				$authorSubmission =& $authorSubmissionDao->getAuthorSubmission($assocId);
 				if ($authorSubmission->getSubmissionProgress()!=0) {
 					$payment->setRequestUrl(Request::url(null, 'author', 'submit', $authorSubmission->getSubmissionProgress(), array('articleId' => $assocId)));
-				} else { 
+				} else {
 					$payment->setRequestUrl(Request::url(null, 'author') );
-				}		
+				}
 				break;
 			default:
-				// something went wrong. crud.				
+				// something went wrong. crud.
 				break;
-		}	 	
+		}
 
 		return $payment;
 	}
-	
+
 	function &createCompletedPayment( $queuedPayment, $payMethod ) {
 		import('payment.ojs.OJSCompletedPayment');
 		$payment = new OJSCompletedPayment();
@@ -86,50 +86,50 @@ class OJSPaymentManager extends PaymentManager {
 		$payment->setUserId($queuedPayment->getUserId());
 		$payment->setAssocId($queuedPayment->getAssocId());
 		$payment->setPayMethodPluginName($payMethod);
-		
+
 		return $payment;
 	}
-	
+
 	function donationEnabled() {
 		$journal =& Request::getJournal();
-		return $this->isConfigured() && $journal->getSetting('donationFeeEnabled');	
+		return $this->isConfigured() && $journal->getSetting('donationFeeEnabled');
 	}
-	
+
 	function submissionEnabled() {
 		$journal =& Request::getJournal();
-		return $this->isConfigured() && $journal->getSetting('submissionFeeEnabled') && $journal->getSetting('submissionFee') > 0;	
+		return $this->isConfigured() && $journal->getSetting('submissionFeeEnabled') && $journal->getSetting('submissionFee') > 0;
 	}
-	
+
 	function fastTrackEnabled() {
 		$journal =& Request::getJournal();
 		return $this->isConfigured() && $journal->getSetting('fastTrackFeeEnabled') && $journal->getSetting('fastTrackFee') > 0;
 	}
-	
+
 	function publicationEnabled() {
 		$journal =& Request::getJournal();
 		return $this->isConfigured() && $journal->getSetting('publicationFeeEnabled') && $journal->getSetting('publicationFee') > 0;
-	}	
+	}
 
 	function membershipEnabled() {
 		$journal =& Request::getJournal();
-		return $this->isConfigured() && $journal->getSetting('membershipFeeEnabled') && $journal->getSetting('membershipFee') > 0;		
+		return $this->isConfigured() && $journal->getSetting('membershipFeeEnabled') && $journal->getSetting('membershipFee') > 0;
 	}
-	
+
 	function purchaseArticleEnabled() {
 		$journal =& Request::getJournal();
 		return $this->isConfigured() && $journal->getSetting('purchaseArticleFeeEnabled') && $journal->getSetting('purchaseArticleFee') > 0;
 	}
-	
+
 	function onlyPdfEnabled() {
 		$journal =& Request::getJournal();
-		return $this->isConfigured() && $journal->getSetting('restrictOnlyPdf');				
-	}	
-		
+		return $this->isConfigured() && $journal->getSetting('restrictOnlyPdf');
+	}
+
 	function acceptSubscriptionPayments() {
 		$journal =& Request::getJournal();
-		return $this->isConfigured() && $journal->getSetting('acceptSubscriptionPayments');	
+		return $this->isConfigured() && $journal->getSetting('acceptSubscriptionPayments');
 	}
-	
+
 	function &getPaymentPlugin() {
 		$journal =& Request::getJournal();
 		$paymentMethodPluginName = $journal->getSetting('paymentMethodPluginName');
@@ -161,12 +161,12 @@ class OJSPaymentManager extends PaymentManager {
 				}
 
 				$subscriptionDao->renewSubscription($subscription);
-				
+
 				$returner = true;
 				break;
 			case PAYMENT_TYPE_FASTTRACK:
 				$articleDAO =& DAORegistry::getDAO('ArticleDAO');
-				$article =& $articleDAO->getArticle($queuedPayment->getAssocId(), $queuedPayment->getJournalId());			
+				$article =& $articleDAO->getArticle($queuedPayment->getAssocId(), $queuedPayment->getJournalId());
 				$article->setFastTracked(true);
 				$articleDAO->updateArticle($article);
 				$returner = true;
@@ -180,14 +180,12 @@ class OJSPaymentManager extends PaymentManager {
 		$completedPaymentDao =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
 		$completedPayment =& $this->createCompletedPayment($queuedPayment, $payMethodPluginName);
 		$completedPaymentDao->insertCompletedPayment($completedPayment);
-	
+
 		$queuedPaymentDao =& DAORegistry::getDAO('QueuedPaymentDAO');
 		$queuedPaymentDao->deleteQueuedPayment($queuedPayment);
 
 		return $returner;
 	}
-	
-	
 }
 
 ?>

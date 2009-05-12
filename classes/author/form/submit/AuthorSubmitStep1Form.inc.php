@@ -57,16 +57,16 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 			$templateMgr->assign('authorFees', true);
 			$completedPaymentDAO =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
 			$articleId = $this->articleId;
-			
+
 			if ( $paymentManager->submissionEnabled() ) {
 				$templateMgr->assign_by_ref('submissionPayment', $completedPaymentDAO->getSubmissionCompletedPayment ( $journal->getJournalId(), $articleId ));
 			}
-			
+
 			if ( $paymentManager->fastTrackEnabled()  ) {
 				$templateMgr->assign_by_ref('fastTrackPayment', $completedPaymentDAO->getFastTrackCompletedPayment ( $journal->getJournalId(), $articleId ));
-			}	   
-		}		
-		
+			}
+		}
+
 		$templateMgr->assign('sectionOptions', array('0' => Locale::translate('author.submit.selectSection')) + $sectionDao->getSectionTitles($journal->getJournalId(), !$isEditor));
 		parent::display();
 	}

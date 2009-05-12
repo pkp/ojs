@@ -3,7 +3,7 @@
 /**
  * @defgroup plugins_themes_vanilla
  */
- 
+
 /**
  * @file plugins/themes/vanilla/index.php
  *

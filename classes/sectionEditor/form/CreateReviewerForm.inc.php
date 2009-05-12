@@ -3,7 +3,6 @@
 /**
  * @defgroup sectionEditor_form
  */
- 
 
 /**
  * @file classes/sectionEditor/form/CreateReviewerForm.inc.php

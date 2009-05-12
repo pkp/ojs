@@ -57,23 +57,23 @@ class NotificationSettingsForm extends PKPNotificationSettingsForm {
 				'emailNotificationProofreadComment',
 				'emailNotificationReviewerComment',
 				'emailNotificationReviewerFormComment',
-				'emailNotificationEditorDecisionComment', 
+				'emailNotificationEditorDecisionComment',
 				'emailNotificationPublishedIssue',
 				'emailNotificationUserComment',
 				'emailNotificationNewAnnouncement')
 		);
 	}
-	
+
 	/**
 	 * Display the form.
 	 */
 	function display() {
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$journals =& $journalDao->getJournalTitles();
-		
+
 		$canOnlyRead = true;
 		$canOnlyReview = false;
-		
+
 		if (Validation::isReviewer()) {
 			$canOnlyRead = false;
 			$canOnlyReview = true;
@@ -92,10 +92,10 @@ class NotificationSettingsForm extends PKPNotificationSettingsForm {
 	/**
 	 * Save site settings.
 	 */
-	function execute() {		
+	function execute() {
 		$user = Request::getUser();
 		$userId = $user->getUserId();
-		
+
 		// Notification settings
 		$settings = array();
 		if(!$this->getData('notificationArticleSubmitted')) $settings[] = NOTIFICATION_TYPE_ARTICLE_SUBMITTED;
@@ -108,11 +108,11 @@ class NotificationSettingsForm extends PKPNotificationSettingsForm {
 		if(!$this->getData('notificationProofreadComment')) $settings[] = NOTIFICATION_TYPE_PROOFREAD_COMMENT;
 		if(!$this->getData('notificationReviewerComment')) $settings[] = NOTIFICATION_TYPE_REVIEWER_COMMENT;
 		if(!$this->getData('notificationReviewerFormComment')) $settings[] = NOTIFICATION_TYPE_REVIEWER_FORM_COMMENT;
-		if(!$this->getData('notificationEditorDecisionComment')) $settings[] = NOTIFICATION_TYPE_EDITOR_DECISION_COMMENT; 
+		if(!$this->getData('notificationEditorDecisionComment')) $settings[] = NOTIFICATION_TYPE_EDITOR_DECISION_COMMENT;
 		if(!$this->getData('notificationPublishedIssue')) $settings[] = NOTIFICATION_TYPE_PUBLISHED_ISSUE;
 		if(!$this->getData('notificationUserComment')) $settings[] = NOTIFICATION_TYPE_USER_COMMENT;
 		if(!$this->getData('notificationNewAnnouncement')) $settings[] = NOTIFICATION_TYPE_NEW_ANNOUNCEMENT;
-		
+
 		// Email settings
 		$emailSettings = array();
 		if($this->getData('emailNotificationArticleSubmitted')) $emailSettings[] = NOTIFICATION_TYPE_ARTICLE_SUBMITTED;
@@ -125,15 +125,15 @@ class NotificationSettingsForm extends PKPNotificationSettingsForm {
 		if($this->getData('emailNotificationProofreadComment')) $emailSettings[] = NOTIFICATION_TYPE_PROOFREAD_COMMENT;
 		if($this->getData('emailNotificationReviewerComment')) $emailSettings[] = NOTIFICATION_TYPE_REVIEWER_COMMENT;
 		if($this->getData('emailNotificationReviewerFormComment')) $emailSettings[] = NOTIFICATION_TYPE_REVIEWER_FORM_COMMENT;
-		if($this->getData('emailNotificationEditorDecisionComment')) $emailSettings[] = NOTIFICATION_TYPE_EDITOR_DECISION_COMMENT; 
+		if($this->getData('emailNotificationEditorDecisionComment')) $emailSettings[] = NOTIFICATION_TYPE_EDITOR_DECISION_COMMENT;
 		if($this->getData('emailNotificationPublishedIssue')) $emailSettings[] = NOTIFICATION_TYPE_PUBLISHED_ISSUE;
 		if($this->getData('emailNotificationUserComment')) $emailSettings[] = NOTIFICATION_TYPE_USER_COMMENT;
 		if($this->getData('emailNotificationNewAnnouncement')) $emailSettings[] = NOTIFICATION_TYPE_NEW_ANNOUNCEMENT;
-		
+
 		$notificationSettingsDao =& DAORegistry::getDAO('NotificationSettingsDAO');
 		$notificationSettingsDao->updateNotificationSettings($settings, $userId);
 		$notificationSettingsDao->updateNotificationEmailSettings($emailSettings, $userId);
-		
+
 		return true;
 	}
 

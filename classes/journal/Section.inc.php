@@ -188,7 +188,7 @@ class Section extends DataObject {
 	}
 
 	/**
-	 * Get boolean indicating whether abstracts are required 
+	 * Get boolean indicating whether abstracts are required
 	 * @return boolean
 	 */
 	function getAbstractsNotRequired() {

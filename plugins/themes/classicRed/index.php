@@ -3,7 +3,7 @@
 /**
  * @defgroup plugins_themes_classicRed
  */
- 
+
 /**
  * @file plugins/themes/classicRed/index.php
  *

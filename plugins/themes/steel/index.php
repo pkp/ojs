@@ -3,7 +3,7 @@
 /**
  * @defgroup plugins_themes_steel
  */
- 
+
 /**
  * @file plugins/themes/steel/index.php
  *

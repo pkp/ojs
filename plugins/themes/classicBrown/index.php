@@ -3,7 +3,7 @@
 /**
  * @defgroup plugins_themes_classicBrown
  */
- 
+
 /**
  * @file plugins/themes/classicBrown/index.php
  *

@@ -3,7 +3,7 @@
 /**
  * @defgroup plugins_themes_redbar
  */
- 
+
 /**
  * @file plugins/themes/redbar/index.php
  *

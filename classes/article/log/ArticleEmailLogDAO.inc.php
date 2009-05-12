@@ -113,7 +113,7 @@ class ArticleEmailLogDAO extends DAO {
 	/**
 	 * Insert a new log entry.
 	 * @param $entry ArticleEmailLogEntry
-	 */	
+	 */
 	function insertLogEntry(&$entry) {
 		if ($entry->getDateSent() == null) {
 			$entry->setDateSent(Core::getCurrentDate());

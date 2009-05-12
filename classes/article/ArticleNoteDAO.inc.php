@@ -62,7 +62,7 @@ class ArticleNoteDAO extends DAO {
 		unset($result);
 
 		return $articleNote;
-	}	
+	}
 
 	/**
 	 * creates and returns an article note object from a row
@@ -119,7 +119,7 @@ class ArticleNoteDAO extends DAO {
 	 */
 	function getInsertArticleNoteId() {
 		return $this->getInsertId('article_notes', 'note_id');
-	}	
+	}
 
 	/**
 	 * removes an article note by id
@@ -177,7 +177,7 @@ class ArticleNoteDAO extends DAO {
 		unset($result);
 
 		return $fileIds;
-	}	
+	}
 
 	/**
 	 * clear all article notes

@@ -8,7 +8,7 @@
  *
  * @class OJSHelpMappingFile
  * @ingroup help
- * 
+ *
  * @brief Abstracts the built-in help mapping XML file.
  */
 

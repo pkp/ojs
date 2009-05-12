@@ -3,7 +3,7 @@
 /**
  * @defgroup plugins_themes_night
  */
- 
+
 /**
  * @file plugins/themes/night/index.php
  *

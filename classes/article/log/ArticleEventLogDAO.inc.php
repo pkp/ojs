@@ -111,7 +111,7 @@ class ArticleEventLogDAO extends DAO {
 	/**
 	 * Insert a new log entry.
 	 * @param $entry ArticleEventLogEntry
-	 */	
+	 */
 	function insertLogEntry(&$entry) {
 		if ($entry->getDateLogged() == null) {
 			$entry->setDateLogged(Core::getCurrentDate());

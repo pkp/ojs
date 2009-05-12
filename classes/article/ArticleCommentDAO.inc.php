@@ -42,7 +42,7 @@ class ArticleCommentDAO extends DAO {
 					'SELECT a.* FROM article_comments a WHERE article_id = ? AND comment_type = ? AND assoc_id = ? ORDER BY date_posted',
 					array($articleId, $commentType, $assocId)
 				);
-			}				
+			}
 		}
 
 		while (!$result->EOF) {
@@ -105,7 +105,7 @@ class ArticleCommentDAO extends DAO {
 					array($articleId, $commentType, $assocId),
 					1
 				);
-			}				
+			}
 		}
 
 		$returner = null;
@@ -135,7 +135,7 @@ class ArticleCommentDAO extends DAO {
 		unset($result);
 
 		return $articleComment;
-	}	
+	}
 
 	/**
 	 * Creates and returns an article comment object from a row
@@ -186,7 +186,7 @@ class ArticleCommentDAO extends DAO {
 		);
 
 		$articleComment->setCommentId($this->getInsertArticleCommentId());
-		return $articleComment->getCommentId();		
+		return $articleComment->getCommentId();
 	}
 
 	/**
@@ -195,7 +195,7 @@ class ArticleCommentDAO extends DAO {
 	 */
 	function getInsertArticleCommentId() {
 		return $this->getInsertId('article_comments', 'comment_id');
-	}	
+	}
 
 	/**
 	 * removes an article comment from article_comments table

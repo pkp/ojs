@@ -3,7 +3,7 @@
 /**
  * @defgroup plugins_themes_uncommon
  */
- 
+
 /**
  * @file plugins/themes/uncommon/index.php
  *

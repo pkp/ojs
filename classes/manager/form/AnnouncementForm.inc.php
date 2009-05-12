@@ -3,7 +3,7 @@
 /**
  * @defgroup manager_form
  */
- 
+
 /**
  * @file classes/manager/form/AnnouncementForm.inc.php
  *
@@ -29,7 +29,7 @@ class AnnouncementForm extends PKPAnnouncementForm {
 		parent::PKPAnnouncementForm($announcementId);
 		$journal =& Request::getJournal();
 
-		// If provided, announcement type is valid 
+		// If provided, announcement type is valid
 		$this->addCheck(new FormValidatorCustom($this, 'typeId', 'optional', 'manager.announcements.form.typeIdValid', create_function('$typeId, $journalId', '$announcementTypeDao =& DAORegistry::getDAO(\'AnnouncementTypeDAO\'); return $announcementTypeDao->announcementTypeExistsByTypeId($typeId, ASSOC_TYPE_JOURNAL, $journalId);'), array($journal->getJournalId())));
 	}
 
@@ -44,7 +44,7 @@ class AnnouncementForm extends PKPAnnouncementForm {
 
 	function _getAnnouncementTypesAssocId() {
 		$journal =& Request::getJournal();
-		return array(ASSOC_TYPE_JOURNAL, $journal->getJournalId()); 
+		return array(ASSOC_TYPE_JOURNAL, $journal->getJournalId());
 	}
 
 	/**
@@ -58,13 +58,13 @@ class AnnouncementForm extends PKPAnnouncementForm {
 	}
 
 	/**
-	 * Save announcement. 
+	 * Save announcement.
 	 */
 	function execute() {
 		parent::execute();
 		$journal =& Request::getJournal();
 		$journalId = $journal->getJournalId();
-		
+
 		// Send a notification to associated users
 		import('notification.Notification');
 		$roleDao =& DAORegistry::getDAO('RoleDAO');

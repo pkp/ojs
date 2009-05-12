@@ -3,7 +3,7 @@
 /**
  * @defgroup plugins_themes_classicBlue
  */
- 
+
 /**
  * @file plugins/themes/classicBlue/index.php
  *
