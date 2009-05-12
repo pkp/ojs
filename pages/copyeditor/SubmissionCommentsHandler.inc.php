@@ -140,8 +140,8 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 		$comment =& $this->comment;
 		CopyeditorAction::saveComment($submission, $comment, $emailComment);
 
-		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-		$comment = &$articleCommentDao->getArticleCommentById($commentId);
+		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
+		$comment =& $articleCommentDao->getArticleCommentById($commentId);
 
 		// Redirect back to initial comments page
 		if ($comment->getCommentType() == COMMENT_TYPE_COPYEDIT) {
@@ -191,10 +191,10 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 
 		$isValid = true;
 
-		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-		$user = &Request::getUser();
+		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
+		$user =& Request::getUser();
 
-		$comment = &$articleCommentDao->getArticleCommentById($commentId);
+		$comment =& $articleCommentDao->getArticleCommentById($commentId);
 
 		if ($comment == null) {
 			$isValid = false;

@@ -33,10 +33,10 @@ class AdminJournalHandler extends AdminHandler {
 
 		$rangeInfo = Handler::getRangeInfo('journals');
 
-		$journalDao = &DAORegistry::getDAO('JournalDAO');
-		$journals = &$journalDao->getJournals($rangeInfo);
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journals =& $journalDao->getJournals($rangeInfo);
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('journals', $journals);
 		$templateMgr->assign('helpTopicId', 'site.siteManagement');
 		$templateMgr->display('admin/journals.tpl');
@@ -100,7 +100,7 @@ class AdminJournalHandler extends AdminHandler {
 	function deleteJournal($args) {
 		$this->validate();
 
-		$journalDao = &DAORegistry::getDAO('JournalDAO');
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
 
 		if (isset($args) && !empty($args) && !empty($args[0])) {
 			$journalId = $args[0];
@@ -128,8 +128,8 @@ class AdminJournalHandler extends AdminHandler {
 	function moveJournal() {
 		$this->validate();
 
-		$journalDao = &DAORegistry::getDAO('JournalDAO');
-		$journal = &$journalDao->getJournal(Request::getUserVar('journalId'));
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journal =& $journalDao->getJournal(Request::getUserVar('journalId'));
 
 		if ($journal != null) {
 			$journal->setSequence($journal->getSequence() + (Request::getUserVar('d') == 'u' ? -1.5 : 1.5));

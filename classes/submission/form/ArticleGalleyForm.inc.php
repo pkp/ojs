@@ -43,8 +43,8 @@ class ArticleGalleyForm extends Form {
 		$this->articleId = $articleId;
 
 		if (isset($galleyId) && !empty($galleyId)) {
-			$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-			$this->galley = &$galleyDao->getGalley($galleyId, $articleId);
+			$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+			$this->galley =& $galleyDao->getGalley($galleyId, $articleId);
 			if (isset($this->galley)) {
 				$this->galleyId = $galleyId;
 			}
@@ -61,7 +61,7 @@ class ArticleGalleyForm extends Form {
 	 */
 	function display() {
 		$journal =& Request::getJournal();
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 
 		$templateMgr->assign('articleId', $this->articleId);
 		$templateMgr->assign('galleyId', $this->galleyId);
@@ -97,7 +97,7 @@ class ArticleGalleyForm extends Form {
 	 */
 	function initData() {
 		if (isset($this->galley)) {
-			$galley = &$this->galley;
+			$galley =& $this->galley;
 			$this->_data = array(
 				'label' => $galley->getLabel(),
 				'publicGalleyId' => $galley->getPublicGalleyId(),
@@ -131,13 +131,13 @@ class ArticleGalleyForm extends Form {
 	function execute($fileName = null) {
 		import('file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($this->articleId);
-		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
+		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 
 		$fileName = isset($fileName) ? $fileName : 'galleyFile';
 		$journal =& Request::getJournal();
 
 		if (isset($this->galley)) {
-			$galley = &$this->galley;
+			$galley =& $this->galley;
 
 			// Upload galley file
 			if ($articleFileManager->uploadedFileExists($fileName)) {
@@ -160,7 +160,7 @@ class ArticleGalleyForm extends Form {
 
 			} else if($this->getData('deleteStyleFile')) {
 				// Delete stylesheet file
-				$styleFile = &$galley->getStyleFile();
+				$styleFile =& $galley->getStyleFile();
 				if (isset($styleFile)) {
 					$articleFileManager->deleteFile($styleFile->getFileId());
 				}
@@ -252,7 +252,7 @@ class ArticleGalleyForm extends Form {
 	function uploadImage() {
 		import('file.ArticleFileManager');
 		$fileManager = new ArticleFileManager($this->articleId);
-		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
+		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 
 		$fileName = 'imageFile';
 
@@ -281,10 +281,10 @@ class ArticleGalleyForm extends Form {
 	function deleteImage($imageId) {
 		import('file.ArticleFileManager');
 		$fileManager = new ArticleFileManager($this->articleId);
-		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
+		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 
 		if (isset($this->galley)) {
-			$images = &$this->galley->getImageFiles();
+			$images =& $this->galley->getImageFiles();
 			if (isset($images)) {
 				for ($i=0, $count=count($images); $i < $count; $i++) {
 					if ($images[$i]->getFileId() == $imageId) {

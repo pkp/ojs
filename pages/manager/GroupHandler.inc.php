@@ -47,7 +47,7 @@ class GroupHandler extends ManagerHandler {
 		$groupDao =& DAORegistry::getDAO('GroupDAO');
 		$groups =& $groupDao->getGroups(ASSOC_TYPE_JOURNAL, $journal->getJournalId(), null, $rangeInfo);
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('groups', $groups);
 		$templateMgr->assign('boardEnabled', $journal->getSetting('boardEnabled'));
 		$templateMgr->display('manager/groups/groups.tpl');
@@ -105,7 +105,7 @@ class GroupHandler extends ManagerHandler {
 		$this->setupTemplate($group, true);
 		import('manager.form.GroupForm');
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 
 		$templateMgr->assign('pageTitle',
 			$group === null?
@@ -155,7 +155,7 @@ class GroupHandler extends ManagerHandler {
 		} else {
 			$this->setupTemplate($group);
 
-			$templateMgr = &TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'groups'), 'manager.groups'));
 
 			$templateMgr->assign('pageTitle',
@@ -181,7 +181,7 @@ class GroupHandler extends ManagerHandler {
 		$this->setupTemplate($group, true);
 		$groupMembershipDao =& DAORegistry::getDAO('GroupMembershipDAO');
 		$memberships =& $groupMembershipDao->getMemberships($group->getId(), $rangeInfo);
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('memberships', $memberships);
 		$templateMgr->assign_by_ref('group', $group);
 		$templateMgr->display('manager/groups/memberships.tpl');
@@ -239,7 +239,7 @@ class GroupHandler extends ManagerHandler {
 			$roleDao =& DAORegistry::getDAO('RoleDAO');
 			$users = $roleDao->getUsersByRoleId(null, $journal->getJournalId(), $searchType, $search, $searchMatch);
 
-			$templateMgr = &TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager();
 
 			$templateMgr->assign('searchField', $searchType);
 			$templateMgr->assign('searchMatch', $searchMatch);
@@ -299,7 +299,7 @@ class GroupHandler extends ManagerHandler {
 
 	function setBoardEnabled($args) {
 		$this->validate();
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		$boardEnabled = Request::getUserVar('boardEnabled')==1?true:false;
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 		$journalSettingsDao->updateSetting($journal->getJournalId(), 'boardEnabled', $boardEnabled);
@@ -308,7 +308,7 @@ class GroupHandler extends ManagerHandler {
 
 	function setupTemplate($group = null, $subclass = false) {
 		parent::setupTemplate(true);
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		if ($subclass) {
 			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'groups'), 'manager.groups'));
 		}

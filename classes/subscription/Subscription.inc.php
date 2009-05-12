@@ -90,7 +90,7 @@ class Subscription extends DataObject {
 	 * @return string 
 	 */
 	function getUserFullName() {
-		$userDao = &DAORegistry::getDAO('UserDAO');
+		$userDao =& DAORegistry::getDAO('UserDAO');
 		return $userDao->getUserFullName($this->getData('userId'));
 	}
 
@@ -115,7 +115,7 @@ class Subscription extends DataObject {
 	 * @return string
 	 */
 	function getSubscriptionTypeName() {
-		$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
 		return $subscriptionTypeDao->getSubscriptionTypeName($this->getData('typeId'));
 	}
 

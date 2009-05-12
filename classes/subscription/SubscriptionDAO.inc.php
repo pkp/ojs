@@ -35,13 +35,13 @@ class SubscriptionDAO extends DAO {
 	 * @return Subscription
 	 */
 	function &getSubscription($subscriptionId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT * FROM subscriptions WHERE subscription_id = ?', $subscriptionId
 		);
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnSubscriptionFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnSubscriptionFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -56,7 +56,7 @@ class SubscriptionDAO extends DAO {
 	 * @return int
 	 */
 	function getSubscriptionJournalId($subscriptionId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT journal_id FROM subscriptions WHERE subscription_id = ?', $subscriptionId
 		);
 
@@ -75,7 +75,7 @@ class SubscriptionDAO extends DAO {
 	 * @return int
 	 */
 	function getSubscriptionIdByUser($userId, $journalId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT subscription_id
 				FROM subscriptions
 				WHERE user_id = ?
@@ -101,7 +101,7 @@ class SubscriptionDAO extends DAO {
 	 * @return boolean
 	 */
 	function subscriptionExistsByUser($userId, $journalId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT COUNT(*)
 				FROM subscriptions
 				WHERE user_id = ?
@@ -276,7 +276,7 @@ class SubscriptionDAO extends DAO {
 	 * @return boolean
 	 */
 	function deleteSubscriptionsByJournal($journalId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT subscription_id
 			 FROM   subscriptions
 			 WHERE  journal_id = ?',
@@ -305,7 +305,7 @@ class SubscriptionDAO extends DAO {
 	 * @return boolean
 	 */
 	function deleteSubscriptionsByUserId($userId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT subscription_id
 			 FROM   subscriptions
 			 WHERE  user_id = ?',
@@ -334,7 +334,7 @@ class SubscriptionDAO extends DAO {
 	 * @return boolean
 	 */
 	function deleteSubscriptionByTypeId($subscriptionTypeId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT subscription_id
 			 FROM   subscriptions
 			 WHERE  type_id = ?',
@@ -362,7 +362,7 @@ class SubscriptionDAO extends DAO {
 	 * @return object DAOResultFactory containing Subscriptions
 	 */
 	function &getSubscriptions($rangeInfo = null) {
-		$result = &$this->retrieveRange(
+		$result =& $this->retrieveRange(
 			'SELECT s.* FROM subscriptions s, users u WHERE s.user_id = u.user_id ORDER BY u.last_name ASC, s.subscription_id', false, $rangeInfo
 		);
 
@@ -455,7 +455,7 @@ class SubscriptionDAO extends DAO {
 				WHERE s.user_id = u.user_id
 				AND journal_id = ?';
  
-		$result = &$this->retrieveRange(
+		$result =& $this->retrieveRange(
 			$sql . ' ' . $searchSql . ' ORDER BY u.last_name ASC, s.subscription_id',
 			count($params)===1?array_shift($params):$params,
 			$rangeInfo
@@ -475,7 +475,7 @@ class SubscriptionDAO extends DAO {
 	function &getSubscriptionsByDateEnd($dateEnd, $journalId, $rangeInfo = null) {
 		$dateEnd = explode('-', $dateEnd);
 
-		$result = &$this->retrieveRange(
+		$result =& $this->retrieveRange(
 			'SELECT	s.*
 			FROM	subscriptions s,
 				users u
@@ -657,7 +657,7 @@ class SubscriptionDAO extends DAO {
 				$sqlDate = sprintf('AND %s >= date_start AND %s <= date_end', $checkDate, $checkDate);
 		}
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			sprintf('SELECT subscription_id
 				FROM subscriptions, subscription_types
 				WHERE subscriptions.user_id = ?
@@ -710,7 +710,7 @@ class SubscriptionDAO extends DAO {
 				$sqlDate = sprintf('AND %s >= date_start AND %s <= date_end', $checkDate, $checkDate);
 		}
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			sprintf('SELECT subscription_id 
 				FROM subscriptions, subscription_types
 				WHERE POSITION(UPPER(LPAD(domain, LENGTH(domain)+1, \'.\')) IN UPPER(LPAD(?, LENGTH(?)+1, \'.\'))) != 0
@@ -771,7 +771,7 @@ class SubscriptionDAO extends DAO {
 				$sqlDate = sprintf('AND %s >= date_start AND %s <= date_end', $checkDate, $checkDate);
 		}
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			sprintf('SELECT subscription_ip.subscription_id
 				FROM subscription_ip, subscriptions, subscription_types
 				WHERE ((ip_end IS NOT NULL

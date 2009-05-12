@@ -204,8 +204,8 @@ class SubmissionCommentsHandler extends AuthorHandler {
 
 		AuthorAction::saveComment($authorSubmission, $comment, $emailComment);
 
-		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-		$comment = &$articleCommentDao->getArticleCommentById($commentId);
+		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
+		$comment =& $articleCommentDao->getArticleCommentById($commentId);
 
 		// Redirect back to initial comments page
 		if ($comment->getCommentType() == COMMENT_TYPE_EDITOR_DECISION) {
@@ -229,8 +229,8 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		$articleId = $args[0];
 		$commentId = $args[1];
 
-		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-		$comment = &$articleCommentDao->getArticleCommentById($commentId);
+		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
+		$comment =& $articleCommentDao->getArticleCommentById($commentId);
 
 		$trackSubmissionHandler =& new TrackSubmissionHandler();
 		$trackSubmissionHandler->validate($articleId);
@@ -264,10 +264,10 @@ class SubmissionCommentsHandler extends AuthorHandler {
 
 		$isValid = true;
 
-		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-		$user = &Request::getUser();
+		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
+		$user =& Request::getUser();
 
-		$comment = &$articleCommentDao->getArticleCommentById($commentId);
+		$comment =& $articleCommentDao->getArticleCommentById($commentId);
 
 		if ($comment == null) {
 			$isValid = false;

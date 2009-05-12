@@ -42,23 +42,23 @@ class CommentHandler extends Handler {
 		$this->validate($articleId);
 		$article =& $this->article;
 
-		$user = &Request::getUser();
+		$user =& Request::getUser();
 		$userId = isset($user)?$user->getUserId():null;
 
-		$commentDao = &DAORegistry::getDAO('CommentDAO');
-		$comment = &$commentDao->getComment($commentId, $articleId, 2);
+		$commentDao =& DAORegistry::getDAO('CommentDAO');
+		$comment =& $commentDao->getComment($commentId, $articleId, 2);
 
 		$journal =& Request::getJournal();
 		
-		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$isManager = $roleDao->roleExists($journal->getJournalId(), $userId, ROLE_ID_JOURNAL_MANAGER);
 
-		if (!$comment) $comments = &$commentDao->getRootCommentsByArticleId($articleId, 1);
-		else $comments = &$comment->getChildren();
+		if (!$comment) $comments =& $commentDao->getRootCommentsByArticleId($articleId, 1);
+		else $comments =& $comment->getChildren();
 
 		$this->setupTemplate($article, $galleyId, $comment);
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		if (Request::getUserVar('refresh')) $templateMgr->setCacheability(CACHEABILITY_NO_CACHE);
 		if ($comment) {
 			$templateMgr->assign_by_ref('comment', $comment);
@@ -81,7 +81,7 @@ class CommentHandler extends Handler {
 		$this->validate($articleId);
 
 		// Bring in comment constants
-		$commentDao = &DAORegistry::getDAO('CommentDAO');
+		$commentDao =& DAORegistry::getDAO('CommentDAO');
 
 		$enableComments = $journal->getSetting('enableComments');
 		switch ($enableComments) {
@@ -99,7 +99,7 @@ class CommentHandler extends Handler {
 				Validation::redirectLogin();
 		}
 
-		$parent = &$commentDao->getComment($parentId, $articleId);
+		$parent =& $commentDao->getComment($parentId, $articleId);
 		if (isset($parent) && $parent->getArticleId() != $articleId) {
 			Request::redirect(null, null, 'view', array($articleId, $galleyId));
 		}
@@ -146,14 +146,14 @@ class CommentHandler extends Handler {
 		$user =& Request::getUser();
 		$userId = isset($user)?$user->getUserId():null;
 
-		$commentDao = &DAORegistry::getDAO('CommentDAO');
+		$commentDao =& DAORegistry::getDAO('CommentDAO');
 
-		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		if (!$roleDao->roleExists($journal->getJournalId(), $userId, ROLE_ID_JOURNAL_MANAGER)) {
 			Request::redirect(null, 'index');
 		}
 
-		$comment = &$commentDao->getComment($commentId, $articleId, ARTICLE_COMMENT_RECURSE_ALL);
+		$comment =& $commentDao->getComment($commentId, $articleId, ARTICLE_COMMENT_RECURSE_ALL);
 		if ($comment)$commentDao->deleteComment($comment);
 
 		Request::redirect(null, null, 'view', array($articleId, $galleyId), array('refresh' => '1'));
@@ -165,15 +165,15 @@ class CommentHandler extends Handler {
 	function validate($articleId) {
 		parent::validate();
 
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		$journalId = $journal->getJournalId();
-		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 
-		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-		$article = &$publishedArticleDao->getPublishedArticleByArticleId($articleId);
+		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$article =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
 
 		// Bring in comment constants
-		$commentDao = &DAORegistry::getDAO('CommentDAO');
+		$commentDao =& DAORegistry::getDAO('CommentDAO');
 
 		$enableComments = $journal->getSetting('enableComments');
 
@@ -182,8 +182,8 @@ class CommentHandler extends Handler {
 		}
 
 		// Subscription Access
-		$issueDao = &DAORegistry::getDAO('IssueDAO');
-		$issue = &$issueDao->getIssueByArticleId($articleId);
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$issue =& $issueDao->getIssueByArticleId($articleId);
 
 		if (isset($issue) && isset($article)) {
 			import('issue.IssueAction');
@@ -205,7 +205,7 @@ class CommentHandler extends Handler {
 	function setupTemplate($article, $galleyId, $comment = null) {
 		parent::setupTemplate();
 		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_READER));
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$journal =& Request::getJournal();
 
 		if (!$journal || !$journal->getSetting('restrictSiteAccess')) {

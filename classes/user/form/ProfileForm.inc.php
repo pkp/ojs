@@ -31,7 +31,7 @@ class ProfileForm extends Form {
 		$user =& Request::getUser();
 		$this->user =& $user;
 
-		$site = &Request::getSite();
+		$site =& Request::getSite();
 
 		// Validation checks for this form
 		$this->addCheck(new FormValidator($this, 'firstName', 'required', 'user.profile.form.firstNameRequired'));
@@ -98,20 +98,20 @@ class ProfileForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$user = &Request::getUser();
+		$user =& Request::getUser();
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('username', $user->getUsername());
 
-		$site = &Request::getSite();
+		$site =& Request::getSite();
 		$templateMgr->assign('availableLocales', $site->getSupportedLocaleNames());
 
-		$roleDao = &DAORegistry::getDAO('RoleDAO');
-		$journalDao = &DAORegistry::getDAO('JournalDAO');
-		$userSettingsDao = &DAORegistry::getDAO('UserSettingsDAO');
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$userSettingsDao =& DAORegistry::getDAO('UserSettingsDAO');
 
-		$journals = &$journalDao->getEnabledJournals();
-		$journals = &$journals->toArray();
+		$journals =& $journalDao->getEnabledJournals();
+		$journals =& $journals->toArray();
 
 		foreach ($journals as $thisJournal) {
 			if ($thisJournal->getSetting('enableSubscriptions') == true && $thisJournal->getSetting('enableOpenAccessNotification') == true) {
@@ -121,8 +121,8 @@ class ProfileForm extends Form {
 			}
 		}
 
-		$journals = &$journalDao->getEnabledJournals();
-		$journals = &$journals->toArray();
+		$journals =& $journalDao->getEnabledJournals();
+		$journals =& $journals->toArray();
 
 		$countryDao =& DAORegistry::getDAO('CountryDAO');
 		$countries =& $countryDao->getCountries();
@@ -158,7 +158,7 @@ class ProfileForm extends Form {
 	 * Initialize form data from current settings.
 	 */
 	function initData() {
-		$user = &Request::getUser();
+		$user =& Request::getUser();
 
 		$this->_data = array(
 			'salutation' => $user->getSalutation(),
@@ -220,7 +220,7 @@ class ProfileForm extends Form {
 	 * Save profile settings.
 	 */
 	function execute() {
-		$user = &Request::getUser();
+		$user =& Request::getUser();
 
 		$user->setSalutation($this->getData('salutation'));
 		$user->setFirstName($this->getData('firstName'));
@@ -239,7 +239,7 @@ class ProfileForm extends Form {
 		$user->setBiography($this->getData('biography'), null); // Localized
 		$user->setInterests($this->getData('interests'), null); // Localized
 
-		$site = &Request::getSite();
+		$site =& Request::getSite();
 		$availableLocales = $site->getSupportedLocales();
 
 		$locales = array();
@@ -250,11 +250,11 @@ class ProfileForm extends Form {
 		}
 		$user->setLocales($locales);
 
-		$userDao = &DAORegistry::getDAO('UserDAO');
+		$userDao =& DAORegistry::getDAO('UserDAO');
 		$userDao->updateUser($user);
 
-		$roleDao = &DAORegistry::getDAO('RoleDAO');
-		$journalDao = &DAORegistry::getDAO('JournalDAO');
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
 
 		// Roles
 		$journal =& Request::getJournal();
@@ -287,9 +287,9 @@ class ProfileForm extends Form {
 
 		$openAccessNotify = Request::getUserVar('openAccessNotify');
 
-		$userSettingsDao = &DAORegistry::getDAO('UserSettingsDAO');
-		$journals = &$journalDao->getEnabledJournals();
-		$journals = &$journals->toArray();
+		$userSettingsDao =& DAORegistry::getDAO('UserSettingsDAO');
+		$journals =& $journalDao->getEnabledJournals();
+		$journals =& $journals->toArray();
 
 		foreach ($journals as $thisJournal) {
 			if (($thisJournal->getSetting('enableSubscriptions') == true) && ($thisJournal->getSetting('enableOpenAccessNotification') == true)) {
@@ -302,8 +302,8 @@ class ProfileForm extends Form {
 		}
 
 		if ($user->getAuthId()) {
-			$authDao = &DAORegistry::getDAO('AuthSourceDAO');
-			$auth = &$authDao->getPlugin($user->getAuthId());
+			$authDao =& DAORegistry::getDAO('AuthSourceDAO');
+			$auth =& $authDao->getPlugin($user->getAuthId());
 		}
 
 		if (isset($auth)) {

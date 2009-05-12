@@ -31,9 +31,9 @@ class AdminLanguagesHandler extends AdminHandler {
 		$this->validate();
 		$this->setupTemplate(true);
 
-		$site = &Request::getSite();
+		$site =& Request::getSite();
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('localeNames', Locale::getAllLocales());
 		$templateMgr->assign('primaryLocale', $site->getPrimaryLocale());
 		$templateMgr->assign('supportedLocales', $site->getSupportedLocales());
@@ -58,7 +58,7 @@ class AdminLanguagesHandler extends AdminHandler {
 		$this->validate();
 		$this->setupTemplate(true);
 
-		$site = &Request::getSite();
+		$site =& Request::getSite();
 
 		$primaryLocale = Request::getUserVar('primaryLocale');
 		$supportedLocales = Request::getUserVar('supportedLocales');
@@ -80,12 +80,12 @@ class AdminLanguagesHandler extends AdminHandler {
 		}
 		$site->setSupportedLocales($newSupportedLocales);
 
-		$siteDao = &DAORegistry::getDAO('SiteDAO');
+		$siteDao =& DAORegistry::getDAO('SiteDAO');
 		$siteDao->updateSite($site);
 
 		AdminLanguagesHandler::removeLocalesFromJournals();
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign(array(
 			'currentUrl' => Request::url(null, null, 'languages'),
 			'pageTitle' => 'common.languages',
@@ -102,7 +102,7 @@ class AdminLanguagesHandler extends AdminHandler {
 	function installLocale() {
 		$this->validate();
 
-		$site = &Request::getSite();
+		$site =& Request::getSite();
 		$installLocale = Request::getUserVar('installLocale');
 
 		if (isset($installLocale) && is_array($installLocale)) {
@@ -116,7 +116,7 @@ class AdminLanguagesHandler extends AdminHandler {
 			}
 
 			$site->setInstalledLocales($installedLocales);
-			$siteDao = &DAORegistry::getDAO('SiteDAO');
+			$siteDao =& DAORegistry::getDAO('SiteDAO');
 			$siteDao->updateSite($site);
 		}
 
@@ -129,7 +129,7 @@ class AdminLanguagesHandler extends AdminHandler {
 	function uninstallLocale() {
 		$this->validate();
 
-		$site = &Request::getSite();
+		$site =& Request::getSite();
 		$locale = Request::getUserVar('locale');
 
 		if (isset($locale) && !empty($locale) && $locale != $site->getPrimaryLocale()) {
@@ -141,7 +141,7 @@ class AdminLanguagesHandler extends AdminHandler {
 				$supportedLocales = $site->getSupportedLocales();
 				$supportedLocales = array_diff($supportedLocales, array($locale));
 				$site->setSupportedLocales($supportedLocales);
-				$siteDao = &DAORegistry::getDAO('SiteDAO');
+				$siteDao =& DAORegistry::getDAO('SiteDAO');
 				$siteDao->updateSite($site);
 
 				AdminLanguagesHandler::removeLocalesFromJournals();
@@ -158,7 +158,7 @@ class AdminLanguagesHandler extends AdminHandler {
 	function reloadLocale() {
 		$this->validate();
 
-		$site = &Request::getSite();
+		$site =& Request::getSite();
 		$locale = Request::getUserVar('locale');
 
 		if (in_array($locale, $site->getInstalledLocales())) {
@@ -172,13 +172,13 @@ class AdminLanguagesHandler extends AdminHandler {
 	 * Helper function to remove unsupported locales from journals.
 	 */
 	function removeLocalesFromJournals() {
-		$site = &Request::getSite();
+		$site =& Request::getSite();
 		$siteSupportedLocales = $site->getSupportedLocales();
 
-		$journalDao = &DAORegistry::getDAO('JournalDAO');
-		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
-		$journals = &$journalDao->getJournals();
-		$journals = &$journals->toArray();
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		$journals =& $journalDao->getJournals();
+		$journals =& $journals->toArray();
 		foreach ($journals as $journal) {
 			$primaryLocale = $journal->getPrimaryLocale();
 			$supportedLocales = $journal->getSetting('supportedLocales');

@@ -35,14 +35,14 @@ class AdminFunctionsHandler extends AdminHandler {
 		$this->validate();
 		$this->setupTemplate(true);
 
-		$configData = &Config::getData();
+		$configData =& Config::getData();
 
-		$dbconn = &DBConnection::getConn();
+		$dbconn =& DBConnection::getConn();
 		$dbServerInfo = $dbconn->ServerInfo();
 
-		$versionDao = &DAORegistry::getDAO('VersionDAO');
-		$currentVersion = &$versionDao->getCurrentVersion();
-		$versionHistory = &$versionDao->getVersionHistory();
+		$versionDao =& DAORegistry::getDAO('VersionDAO');
+		$currentVersion =& $versionDao->getCurrentVersion();
+		$versionHistory =& $versionDao->getVersionHistory();
 
 		$serverInfo = array(
 			'admin.server.platform' => Core::serverPHPOS(),
@@ -52,13 +52,13 @@ class AdminFunctionsHandler extends AdminHandler {
 			'admin.server.dbVersion' => (empty($dbServerInfo['description']) ? $dbServerInfo['version'] : $dbServerInfo['description'])
 		);
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('currentVersion', $currentVersion);
 		$templateMgr->assign_by_ref('versionHistory', $versionHistory);
 		$templateMgr->assign_by_ref('configData', $configData);
 		$templateMgr->assign_by_ref('serverInfo', $serverInfo);
 		if (Request::getUserVar('versionCheck')) {
-			$latestVersionInfo = &VersionCheck::getLatestVersion();
+			$latestVersionInfo =& VersionCheck::getLatestVersion();
 			$latestVersionInfo['patch'] = VersionCheck::getPatch($latestVersionInfo);
 			$templateMgr->assign_by_ref('latestVersionInfo', $latestVersionInfo);
 		}
@@ -73,12 +73,12 @@ class AdminFunctionsHandler extends AdminHandler {
 		$this->validate();
 		$this->setupTemplate(true);
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->append('pageHierarchy', array(Request::url(null, 'admin', 'systemInfo'), 'admin.systemInformation'));
 
-		$configData = &Config::getData();
+		$configData =& Config::getData();
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('configData', $configData);
 		$templateMgr->assign('helpTopicId', 'site.administrativeFunctions');
 		$templateMgr->display('admin/systemConfig.tpl');
@@ -91,7 +91,7 @@ class AdminFunctionsHandler extends AdminHandler {
 		$this->validate();
 		$this->setupTemplate(true);
 
-		$configData = &Config::getData();
+		$configData =& Config::getData();
 
 		// Update configuration based on user-supplied data
 		foreach ($configData as $sectionName => $sectionData) {
@@ -109,7 +109,7 @@ class AdminFunctionsHandler extends AdminHandler {
 			}
 		}
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 
 		// Update contents of configuration file
 		$configParser = new ConfigParser();
@@ -153,7 +153,7 @@ class AdminFunctionsHandler extends AdminHandler {
 	 */
 	function expireSessions() {
 		$this->validate();
-		$sessionDao = &DAORegistry::getDAO('SessionDAO');
+		$sessionDao =& DAORegistry::getDAO('SessionDAO');
 		$sessionDao->deleteAllSessions();
 		Request::redirect(null, 'admin');
 	}
@@ -163,7 +163,7 @@ class AdminFunctionsHandler extends AdminHandler {
 	 */
 	function clearTemplateCache() {
 		$this->validate();
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->clearTemplateCache();
 		Request::redirect(null, 'admin');
 	}

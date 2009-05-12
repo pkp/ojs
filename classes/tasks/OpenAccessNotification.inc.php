@@ -47,11 +47,11 @@ class OpenAccessNotification extends ScheduledTask {
 			);
 			$email->assignParams($paramArray);
 
-			$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-			$publishedArticles = &$publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId());
+			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+			$publishedArticles =& $publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId());
 			$mimeBoundary = '==boundary_' . md5(microtime());
 
-			$templateMgr = &TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign('body', $email->getBody($journal->getPrimaryLocale()));
 			$templateMgr->assign('templateSignature', $journal->getSetting('emailSignature'));
 			$templateMgr->assign('mimeBoundary', $mimeBoundary);
@@ -63,7 +63,7 @@ class OpenAccessNotification extends ScheduledTask {
 			$email->setBody($templateMgr->fetch('subscription/openAccessNotifyEmail.tpl'));
 
 			while (!$users->eof()) {
-				$user = &$users->next();
+				$user =& $users->next();
 				$email->addBcc($user->getEmail(), $user->getFullName());
 			}
 
@@ -81,19 +81,19 @@ class OpenAccessNotification extends ScheduledTask {
 			$curDay = $curDate['day'];
 
 			// Check if the current date corresponds to the open access date of any issues
-			$issueDao = &DAORegistry::getDAO('IssueDAO');
-			$issues = &$issueDao->getPublishedIssues($journal->getJournalId());
+			$issueDao =& DAORegistry::getDAO('IssueDAO');
+			$issues =& $issueDao->getPublishedIssues($journal->getJournalId());
 
 			while (!$issues->eof()) {
-				$issue = &$issues->next();
+				$issue =& $issues->next();
 
 				$accessStatus = $issue->getAccessStatus();
 				$openAccessDate = $issue->getOpenAccessDate();
 
 				if ($accessStatus == SUBSCRIPTION && !empty($openAccessDate) && strtotime($openAccessDate) == mktime(0,0,0,$curMonth, $curDay, $curYear)) {
 					// Notify all users who have open access notification set for this journal
-					$userSettingsDao = &DAORegistry::getDAO('UserSettingsDAO');
-					$users = &$userSettingsDao->getUsersBySetting('openAccessNotification', true, 'bool', $journal->getJournalId());
+					$userSettingsDao =& DAORegistry::getDAO('UserSettingsDAO');
+					$users =& $userSettingsDao->getUsersBySetting('openAccessNotification', true, 'bool', $journal->getJournalId());
 					$this->sendNotification($users, $journal, $issue);
 				}
 			}
@@ -102,8 +102,8 @@ class OpenAccessNotification extends ScheduledTask {
 
 	function execute() {
 
-		$journalDao = &DAORegistry::getDAO('JournalDAO');
-		$journals = &$journalDao->getEnabledJournals();
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journals =& $journalDao->getEnabledJournals();
 
 		$todayDate = array(
 						'year' => date('Y'),
@@ -112,7 +112,7 @@ class OpenAccessNotification extends ScheduledTask {
 					);
 
 		while (!$journals->eof()) {
-			$journal = &$journals->next();
+			$journal =& $journals->next();
 
 			// Send notifications based on current date			
 			$this->sendNotifications($journal, $todayDate);
@@ -135,10 +135,10 @@ class OpenAccessNotification extends ScheduledTask {
 				$curDate['year'] = $todayDate['year'];
 			}
 
-			$journals = &$journalDao->getEnabledJournals();
+			$journals =& $journalDao->getEnabledJournals();
 
 			while (!$journals->eof()) {
-				$journal = &$journals->next();
+				$journal =& $journals->next();
 
 				// Send reminders for simulated 31st day of short month		
 				$this->sendNotifications($journal, $curDate);
@@ -154,10 +154,10 @@ class OpenAccessNotification extends ScheduledTask {
 			$curDate['month'] = 2;
 			$curDate['year'] = $todayDate['year'];
 
-			$journals = &$journalDao->getEnabledJournals();
+			$journals =& $journalDao->getEnabledJournals();
 
 			while (!$journals->eof()) {
-				$journal = &$journals->next();
+				$journal =& $journals->next();
 
 				// Send reminders for simulated 30th day of February		
 				$this->sendNotifications($journal, $curDate);
@@ -169,10 +169,10 @@ class OpenAccessNotification extends ScheduledTask {
 
 				$curDate['day'] = 29;
 
-				$journals = &$journalDao->getEnabledJournals();
+				$journals =& $journalDao->getEnabledJournals();
 
 				while (!$journals->eof()) {
-					$journal = &$journals->next();
+					$journal =& $journals->next();
 
 					// Send reminders for simulated 29th day of February		
 					$this->sendNotifications($journal, $curDate);

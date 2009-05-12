@@ -34,10 +34,10 @@ class MetadataForm extends Form {
 	 * Constructor.
 	 */
 	function MetadataForm($article) {
-		$roleDao = &DAORegistry::getDAO('RoleDAO');
-		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 
-		$user = &Request::getUser();
+		$user =& Request::getUser();
 		$roleId = $roleDao->getRoleIdFromPath(Request::getRequestedPage());
 
 		// If the user is an editor of this article, make the entire form editable.
@@ -93,7 +93,7 @@ class MetadataForm extends Form {
 	 */
 	function initData() {
 		if (isset($this->article)) {
-			$article = &$this->article;
+			$article =& $this->article;
 			$this->_data = array(
 				'authors' => array(),
 				'title' => $article->getTitle(null), // Localized
@@ -119,7 +119,7 @@ class MetadataForm extends Form {
 				'hideAuthor' => $article->getHideAuthor()
 			);
 
-			$authors = &$article->getAuthors();
+			$authors =& $article->getAuthors();
 			for ($i=0, $count=count($authors); $i < $count; $i++) {
 				array_push(
 					$this->_data['authors'],
@@ -159,12 +159,12 @@ class MetadataForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$journal = &Request::getJournal();
-		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
-		$roleDao = &DAORegistry::getDAO('RoleDAO');
-		$sectionDao = &DAORegistry::getDAO('SectionDAO');
+		$journal =& Request::getJournal();
+		$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', isset($this->article)?$this->article->getArticleId():null);
 		$templateMgr->assign('journalSettings', $settingsDao->getJournalSettings($journal->getJournalId()));
 		$templateMgr->assign('rolePath', Request::getRequestedPage());
@@ -227,8 +227,8 @@ class MetadataForm extends Form {
 			)
 		);
 
-		$sectionDao = &DAORegistry::getDAO('SectionDAO');
-		$section = &$sectionDao->getSection($this->article->getSectionId());
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$section =& $sectionDao->getSection($this->article->getSectionId());
 		if (!$section->getAbstractsNotRequired()) {
 			$this->addCheck(new FormValidatorLocale($this, 'abstract', 'required', 'author.submit.form.abstractRequired'));
 		}
@@ -240,16 +240,16 @@ class MetadataForm extends Form {
 	 * @return int the article ID
 	 */
 	function execute() {
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$authorDao = &DAORegistry::getDAO('AuthorDAO');
-		$sectionDao = &DAORegistry::getDAO('SectionDAO');
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$authorDao =& DAORegistry::getDAO('AuthorDAO');
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 
 		// Update article
 
-		$article = &$this->article;
+		$article =& $this->article;
 		$article->setTitle($this->getData('title'), null); // Localized
 
-		$section = &$sectionDao->getSection($article->getSectionId());
+		$section =& $sectionDao->getSection($article->getSectionId());
 		$article->setAbstract($this->getData('abstract'), null); // Localized
 
 		import('file.PublicFileManager');
@@ -312,7 +312,7 @@ class MetadataForm extends Form {
 		for ($i=0, $count=count($authors); $i < $count; $i++) {
 			if ($authors[$i]['authorId'] > 0) {
 				// Update an existing author
-				$author = &$article->getAuthor($authors[$i]['authorId']);
+				$author =& $article->getAuthor($authors[$i]['authorId']);
 				$isExistingAuthor = true;
 
 			} else {

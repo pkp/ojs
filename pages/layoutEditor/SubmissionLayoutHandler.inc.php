@@ -46,7 +46,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$submissionLayoutHandler->validate($articleId);
 		$submission =& $submissionLayoutHandler->submission;
 		$this->setupTemplate(true, $articleId);
-		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
+		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 
 		import('submission.proofreader.ProofreaderAction');
 		ProofreaderAction::proofreadingUnderway($submission, 'SIGNOFF_PROOFREADING_LAYOUT');
@@ -62,7 +62,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 
 		$disableEdit = !$this->layoutEditingEnabled($submission);
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign('disableEdit', $disableEdit);
 		$templateMgr->assign('useProofreaders', $journal->getSetting('useProofreaders'));
@@ -177,14 +177,14 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 
 		} else {
 			// View galley only
-			$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-			$galley = &$galleyDao->getGalley($galleyId, $articleId);
+			$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+			$galley =& $galleyDao->getGalley($galleyId, $articleId);
 
 			if (!isset($galley)) {
 				Request::redirect(null, null, 'submission', $articleId);
 			}
 
-			$templateMgr = &TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign_by_ref('galley', $galley);
 			$templateMgr->display('submission/layout/galleyView.tpl');
@@ -276,7 +276,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$submissionLayoutHandler =& new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->display('submission/layout/proofGalley.tpl');
@@ -292,7 +292,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$submissionLayoutHandler =& new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('backHandler', 'submissionEditing');
@@ -309,14 +309,14 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$submissionLayoutHandler =& new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 
-		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-		$galley = &$galleyDao->getGalley($galleyId, $articleId);
+		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$galley =& $galleyDao->getGalley($galleyId, $articleId);
 
 		import('file.ArticleFileManager'); // FIXME
 
 		if (isset($galley)) {
 			if ($galley->isHTMLGalley()) {
-				$templateMgr = &TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->assign_by_ref('galley', $galley);
 				if ($galley->isHTMLGalley() && $styleFile =& $galley->getStyleFile()) {
 					$templateMgr->addStyleSheet(Request::url(null, 'article', 'viewFile', array(
@@ -384,14 +384,14 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 
 		} else {
 			// View supplementary file only
-			$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
-			$suppFile = &$suppFileDao->getSuppFile($suppFileId, $articleId);
+			$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+			$suppFile =& $suppFileDao->getSuppFile($suppFileId, $articleId);
 
 			if (!isset($suppFile)) {
 				Request::redirect(null, null, 'submission', $articleId);
 			}
 
-			$templateMgr = &TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign_by_ref('suppFile', $suppFile);
 			$templateMgr->display('submission/suppFile/suppFileView.tpl');	
@@ -543,12 +543,12 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 
 		$isValid = false;
 
-		$journal = &Request::getJournal();
-		$user = &Request::getUser();
+		$journal =& Request::getJournal();
+		$user =& Request::getUser();
 
-		$layoutDao = &DAORegistry::getDAO('LayoutEditorSubmissionDAO');
-		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
-		$submission = &$layoutDao->getSubmission($articleId, $journal->getJournalId());
+		$layoutDao =& DAORegistry::getDAO('LayoutEditorSubmissionDAO');
+		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$submission =& $layoutDao->getSubmission($articleId, $journal->getJournalId());
 
 		if (isset($submission)) {
 			$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
@@ -579,7 +579,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	 * @return boolean true if layout editor can modify the submission
 	 */
 	function layoutEditingEnabled(&$submission) {
-		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
+		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 		$layoutEditorProofreadSignoff = $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getArticleId());
 		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getArticleId());
 		

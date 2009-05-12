@@ -33,7 +33,7 @@ class PeopleHandler extends ManagerHandler {
 		$this->validate();
 		$this->setupTemplate(true);
 
-		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
 
 		if (Request::getUserVar('roleSymbolic')!=null) $roleSymbolic = Request::getUserVar('roleSymbolic');
 		else $roleSymbolic = isset($args[0])?$args[0]:'all';
@@ -50,8 +50,8 @@ class PeopleHandler extends ManagerHandler {
 			$roleName = 'manager.people.allUsers';
 		}
 
-		$journal = &Request::getJournal();
-		$templateMgr = &TemplateManager::getManager();
+		$journal =& Request::getJournal();
+		$templateMgr =& TemplateManager::getManager();
 
 		$searchType = null;
 		$searchMatch = null;
@@ -70,7 +70,7 @@ class PeopleHandler extends ManagerHandler {
 		$rangeInfo = Handler::getRangeInfo('users');
 
 		if ($roleId) {
-			$users = &$roleDao->getUsersByRoleId($roleId, $journal->getJournalId(), $searchType, $search, $searchMatch, $rangeInfo);
+			$users =& $roleDao->getUsersByRoleId($roleId, $journal->getJournalId(), $searchType, $search, $searchMatch, $rangeInfo);
 			$templateMgr->assign('roleId', $roleId);
 			switch($roleId) {
 				case ROLE_ID_JOURNAL_MANAGER:
@@ -108,7 +108,7 @@ class PeopleHandler extends ManagerHandler {
 					break;
 			}
 		} else {
-			$users = &$roleDao->getUsersByJournalId($journal->getJournalId(), $searchType, $search, $searchMatch, $rangeInfo);
+			$users =& $roleDao->getUsersByJournalId($journal->getJournalId(), $searchType, $search, $searchMatch, $rangeInfo);
 			$helpTopicId = 'journal.users.allUsers';
 		}
 
@@ -126,7 +126,7 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign_by_ref('roleSettings', $this->retrieveRoleAssignmentPreferences($journal->getJournalId()));
 
 		if ($roleId == ROLE_ID_REVIEWER) {
-			$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 			$templateMgr->assign('rateReviewerOnQuality', $journal->getSetting('rateReviewerOnQuality'));
 			$templateMgr->assign('qualityRatings', $journal->getSetting('rateReviewerOnQuality') ? $reviewAssignmentDao->getAverageQualityRatings($journal->getJournalId()) : null);
 		}
@@ -144,7 +144,7 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign('alphaList', explode(' ', Locale::translate('common.alphaList')));
 		$templateMgr->assign('roleSymbolic', $roleSymbolic);
 
-		$session = &Request::getSession();
+		$session =& Request::getSession();
 		$session->setSessionVar('enrolmentReferrer', Request::getRequestedArgs());
 
 		$templateMgr->display('manager/people/enrollment.tpl');
@@ -157,14 +157,14 @@ class PeopleHandler extends ManagerHandler {
 	function enrollSearch($args) {
 		$this->validate();
 
-		$roleDao = &DAORegistry::getDAO('RoleDAO');
-		$journalDao = &DAORegistry::getDAO('JournalDAO');
-		$userDao = &DAORegistry::getDAO('UserDAO');
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$userDao =& DAORegistry::getDAO('UserDAO');
 
 		$roleId = (int)(isset($args[0])?$args[0]:Request::getUserVar('roleId'));
-		$journal = &$journalDao->getJournalByPath(Request::getRequestedJournalPath());
+		$journal =& $journalDao->getJournalByPath(Request::getRequestedJournalPath());
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 
 		$this->setupTemplate(true);
 
@@ -184,7 +184,7 @@ class PeopleHandler extends ManagerHandler {
 
 		$rangeInfo = Handler::getRangeInfo('users');
 
-		$users = &$userDao->getUsersByField($searchType, $searchMatch, $search, true, $rangeInfo);
+		$users =& $userDao->getUsersByField($searchType, $searchMatch, $search, true, $rangeInfo);
 
 		$templateMgr->assign('searchField', $searchType);
 		$templateMgr->assign('searchMatch', $searchMatch);
@@ -208,7 +208,7 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign('alphaList', explode(' ', Locale::translate('common.alphaList')));
 		$templateMgr->assign('helpTopicId', 'journal.users.index');
 
-		$session = &Request::getSession();
+		$session =& Request::getSession();
 		$referrerUrl = $session->getSessionVar('enrolmentReferrer');
 			$templateMgr->assign('enrolmentReferrerUrl', isset($referrerUrl) ? Request::url(null,'manager','people',$referrerUrl) : Request::url(null,'manager'));
 			$session->unsetSessionVar('enrolmentReferrer');
@@ -222,15 +222,15 @@ class PeopleHandler extends ManagerHandler {
 	function showNoRole() {
 		$this->validate();
 
-		$userDao = &DAORegistry::getDAO('UserDAO');
+		$userDao =& DAORegistry::getDAO('UserDAO');
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 
 		parent::setupTemplate(true);
 
 		$rangeInfo = PKPHandler::getRangeInfo('users');
 
-		$users = &$userDao->getUsersWithNoRole(true, $rangeInfo);
+		$users =& $userDao->getUsersWithNoRole(true, $rangeInfo);
 
 		$templateMgr->assign('omitSearch', true);
 		$templateMgr->assign_by_ref('users', $users);
@@ -254,9 +254,9 @@ class PeopleHandler extends ManagerHandler {
 			$users = array(Request::getUserVar('userId'));
 		}
 
-		$journalDao = &DAORegistry::getDAO('JournalDAO');
-		$journal = &$journalDao->getJournalByPath(Request::getRequestedJournalPath());
-		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journal =& $journalDao->getJournalByPath(Request::getRequestedJournalPath());
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$rolePath = $roleDao->getRolePath($roleId);
 
 		if ($users != null && is_array($users) && $rolePath != '' && $rolePath != 'admin') {
@@ -282,10 +282,10 @@ class PeopleHandler extends ManagerHandler {
 		$roleId = isset($args[0])?$args[0]:0;
 		$this->validate();
 
-		$journalDao = &DAORegistry::getDAO('JournalDAO');
-		$journal = &$journalDao->getJournalByPath(Request::getRequestedJournalPath());
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journal =& $journalDao->getJournalByPath(Request::getRequestedJournalPath());
 
-		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		if ($roleId != $roleDao->getRoleIdFromPath('admin')) {
 			$roleDao->deleteRoleByUserId(Request::getUserVar('userId'), $journal->getJournalId(), $roleId);
 		}
@@ -300,7 +300,7 @@ class PeopleHandler extends ManagerHandler {
 		$this->validate();
 
 		$rolePath = isset($args[0]) ? $args[0] : '';
-		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$roleId = $roleDao->getRoleIdFromPath($rolePath);
 		if ($roleId) {
 			$roleName = $roleDao->getRoleName($roleId, true);
@@ -309,13 +309,13 @@ class PeopleHandler extends ManagerHandler {
 			$roleName = '';
 		}
 
-		$journalDao = &DAORegistry::getDAO('JournalDAO');
-		$journalTitles = &$journalDao->getLocalizedTitles();
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journalTitles =& $journalDao->getLocalizedTitles();
 
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		unset($journalTitles[$journal->getJournalId()]);
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('rolePath', $rolePath);
 		$templateMgr->assign('roleName', $roleName);
 		$templateMgr->assign('journalOptions', $journalTitles);
@@ -328,17 +328,17 @@ class PeopleHandler extends ManagerHandler {
 	function enrollSync($args) {
 		$this->validate();
 
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		$rolePath = Request::getUserVar('rolePath');
 		$syncJournal = Request::getUserVar('syncJournal');
 
-		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$roleId = $roleDao->getRoleIdFromPath($rolePath);
 
 		if ((!empty($roleId) || $rolePath == 'all') && !empty($syncJournal)) {
-			$roles = &$roleDao->getRolesByJournalId($syncJournal == 'all' ? null : $syncJournal, $roleId);
+			$roles =& $roleDao->getRolesByJournalId($syncJournal == 'all' ? null : $syncJournal, $roleId);
 			while (!$roles->eof()) {
-				$role = &$roles->next();
+				$role =& $roles->next();
 				$role->setJournalId($journal->getJournalId());
 				if ($role->getRolePath() != 'admin' && !$roleDao->roleExists($role->getJournalId(), $role->getUserId(), $role->getRoleId())) {
 					$roleDao->insertRole($role);
@@ -377,11 +377,11 @@ class PeopleHandler extends ManagerHandler {
 		$this->validate();
 		$this->setupTemplate(true);
 
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 
 		$userId = isset($args[0])?$args[0]:null;
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 
 		if ($userId !== null && !Validation::canAdminister($journal->getJournalId(), $userId)) {
 			// We don't have administrative rights
@@ -482,10 +482,10 @@ class PeopleHandler extends ManagerHandler {
 		$rangeInfo = Handler::getRangeInfo('users');
 
 		if ($roleId) {
-			$users = &$roleDao->getUsersByRoleId($roleId, $journalId, $searchType, $search, $searchMatch, $rangeInfo);
+			$users =& $roleDao->getUsersByRoleId($roleId, $journalId, $searchType, $search, $searchMatch, $rangeInfo);
 			$templateMgr->assign('roleId', $roleId);
 		} else {
-			$users = &$roleDao->getUsersByJournalId($journalId, $searchType, $search, $searchMatch, $rangeInfo);
+			$users =& $roleDao->getUsersByJournalId($journalId, $searchType, $search, $searchMatch, $rangeInfo);
 		}
 
 		$templateMgr->assign_by_ref('roleSettings', $this->retrieveRoleAssignmentPreferences($journal->getJournalId()));
@@ -503,7 +503,7 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign('searchInitial', Request::getUserVar('searchInitial'));
 
 		if ($roleId == ROLE_ID_REVIEWER) {
-			$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 			$templateMgr->assign('rateReviewerOnQuality', $journal->getSetting('rateReviewerOnQuality'));
 			$templateMgr->assign('qualityRatings', $journal->getSetting('rateReviewerOnQuality') ? $reviewAssignmentDao->getAverageQualityRatings($journalId) : null);
 		}
@@ -530,22 +530,22 @@ class PeopleHandler extends ManagerHandler {
 		$this->setupTemplate(true);
 
 		$userId = isset($args[0])?$args[0]:Request::getUserVar('userId');
-		$user = &Request::getUser();
-		$journal = &Request::getJournal();
+		$user =& Request::getUser();
+		$journal =& Request::getJournal();
 
 		if ($userId != null && $userId != $user->getUserId()) {
 			if (!Validation::canAdminister($journal->getJournalId(), $userId)) {
 				// We don't have administrative rights
 				// over this user. Display an error.
-				$templateMgr = &TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->assign('pageTitle', 'manager.people');
 				$templateMgr->assign('errorMsg', 'manager.people.noAdministrativeRights');
 				$templateMgr->assign('backLink', Request::url(null, null, 'people', 'all'));
 				$templateMgr->assign('backLinkLabel', 'manager.people.allUsers');
 				return $templateMgr->display('common/error.tpl');
 			}
-			$userDao = &DAORegistry::getDAO('UserDAO');
-			$user = &$userDao->getUser($userId);
+			$userDao =& DAORegistry::getDAO('UserDAO');
+			$user =& $userDao->getUser($userId);
 			if ($user) {
 				$user->setDisabled(1);
 				$user->setDisabledReason(Request::getUserVar('reason'));
@@ -565,11 +565,11 @@ class PeopleHandler extends ManagerHandler {
 		$this->setupTemplate(true);
 
 		$userId = isset($args[0])?$args[0]:null;
-		$user = &Request::getUser();
+		$user =& Request::getUser();
 
 		if ($userId != null && $userId != $user->getUserId()) {
-			$userDao = &DAORegistry::getDAO('UserDAO');
-			$user = &$userDao->getUser($userId, true);
+			$userDao =& DAORegistry::getDAO('UserDAO');
+			$user =& $userDao->getUser($userId, true);
 			if ($user) {
 				$user->setDisabled(0);
 			}
@@ -588,11 +588,11 @@ class PeopleHandler extends ManagerHandler {
 		$this->setupTemplate(true);
 
 		$userId = isset($args[0])?$args[0]:null;
-		$user = &Request::getUser();
-		$journal = &Request::getJournal();
+		$user =& Request::getUser();
+		$journal =& Request::getJournal();
 
 		if ($userId != null && $userId != $user->getUserId()) {
-			$roleDao = &DAORegistry::getDAO('RoleDAO');
+			$roleDao =& DAORegistry::getDAO('RoleDAO');
 			$roleDao->deleteRoleByUserId($userId, $journal->getJournalId());
 		}
 
@@ -605,13 +605,13 @@ class PeopleHandler extends ManagerHandler {
 	function updateUser() {
 		$this->validate();
 
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		$userId = Request::getUserVar('userId');
 
 		if (!empty($userId) && !Validation::canAdminister($journal->getJournalId(), $userId)) {
 			// We don't have administrative rights
 			// over this user. Display an error.
-			$templateMgr = &TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign('pageTitle', 'manager.people');
 			$templateMgr->assign('errorMsg', 'manager.people.noAdministrativeRights');
 			$templateMgr->assign('backLink', Request::url(null, null, 'people', 'all'));
@@ -629,7 +629,7 @@ class PeopleHandler extends ManagerHandler {
 			$userForm->execute();
 
 			if (Request::getUserVar('createAnother')) {
-				$templateMgr = &TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->assign('currentUrl', Request::url(null, null, 'people', 'all'));
 				$templateMgr->assign('userCreated', true);
 				// FIXME: Need construction by reference or validation always fails on PHP 4.x
@@ -656,11 +656,11 @@ class PeopleHandler extends ManagerHandler {
 		$this->validate();
 		$this->setupTemplate(true);
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('currentUrl', Request::url(null, null, 'people', 'all'));
 		$templateMgr->assign('helpTopicId', 'journal.users.index');
 
-		$userDao = &DAORegistry::getDAO('UserDAO');
+		$userDao =& DAORegistry::getDAO('UserDAO');
 		$userId = isset($args[0]) ? $args[0] : 0;
 		if (is_numeric($userId)) {
 			$userId = (int) $userId;
@@ -679,10 +679,10 @@ class PeopleHandler extends ManagerHandler {
 			$templateMgr->display('common/error.tpl');
 
 		} else {
-			$site = &Request::getSite();
-			$journal = &Request::getJournal();
-			$roleDao = &DAORegistry::getDAO('RoleDAO');
-			$roles = &$roleDao->getRolesByUserId($user->getUserId(), $journal->getJournalId());
+			$site =& Request::getSite();
+			$journal =& Request::getJournal();
+			$roleDao =& DAORegistry::getDAO('RoleDAO');
+			$roles =& $roleDao->getRolesByUserId($user->getUserId(), $journal->getJournalId());
 
 			$countryDao =& DAORegistry::getDAO('CountryDAO');
 			$country = null;
@@ -707,12 +707,12 @@ class PeopleHandler extends ManagerHandler {
 
 		if (isset($args[0]) && !empty($args[0])) {
 			$userId = (int)$args[0];
-			$journal = &Request::getJournal();
+			$journal =& Request::getJournal();
 
 			if (!Validation::canAdminister($journal->getJournalId(), $userId)) {
 				// We don't have administrative rights
 				// over this user. Display an error.
-				$templateMgr = &TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->assign('pageTitle', 'manager.people');
 				$templateMgr->assign('errorMsg', 'manager.people.noAdministrativeRights');
 				$templateMgr->assign('backLink', Request::url(null, null, 'people', 'all'));
@@ -720,9 +720,9 @@ class PeopleHandler extends ManagerHandler {
 				return $templateMgr->display('common/error.tpl');
 			}
 
-			$userDao = &DAORegistry::getDAO('UserDAO');
-			$newUser = &$userDao->getUser($userId);
-			$session = &Request::getSession();
+			$userDao =& DAORegistry::getDAO('UserDAO');
+			$newUser =& $userDao->getUser($userId);
+			$session =& Request::getSession();
 
 			// FIXME Support "stack" of signed-in-as user IDs?
 			if (isset($newUser) && $session->getUserId() != $newUser->getUserId()) {
@@ -742,14 +742,14 @@ class PeopleHandler extends ManagerHandler {
 	function signOutAsUser() {
 		Handler::validate();
 
-		$session = &Request::getSession();
+		$session =& Request::getSession();
 		$signedInAs = $session->getSessionVar('signedInAs');
 
 		if (isset($signedInAs) && !empty($signedInAs)) {
 			$signedInAs = (int)$signedInAs;
 
-			$userDao = &DAORegistry::getDAO('UserDAO');
-			$oldUser = &$userDao->getUser($signedInAs);
+			$userDao =& DAORegistry::getDAO('UserDAO');
+			$oldUser =& $userDao->getUser($signedInAs);
 
 			$session->unsetSessionVar('signedInAs');
 

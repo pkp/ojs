@@ -65,15 +65,15 @@ class IndexHandler extends Handler {
 				$enableAnnouncementsHomepage = $journal->getSetting('enableAnnouncementsHomepage');
 				if ($enableAnnouncementsHomepage) {
 					$numAnnouncementsHomepage = $journal->getSetting('numAnnouncementsHomepage');
-					$announcementDao = &DAORegistry::getDAO('AnnouncementDAO');
-					$announcements = &$announcementDao->getNumAnnouncementsNotExpiredByAssocId(ASSOC_TYPE_JOURNAL, $journal->getJournalId(), $numAnnouncementsHomepage);
+					$announcementDao =& DAORegistry::getDAO('AnnouncementDAO');
+					$announcements =& $announcementDao->getNumAnnouncementsNotExpiredByAssocId(ASSOC_TYPE_JOURNAL, $journal->getJournalId(), $numAnnouncementsHomepage);
 					$templateMgr->assign('announcements', $announcements);
 					$templateMgr->assign('enableAnnouncementsHomepage', $enableAnnouncementsHomepage);
 				}
 			} 
 			$templateMgr->display('index/journal.tpl');
 		} else {
-			$siteDao = &DAORegistry::getDAO('SiteDAO');
+			$siteDao =& DAORegistry::getDAO('SiteDAO');
 			$site =& $siteDao->getSite();
 
 			if ($site->getRedirect() && ($journal = $journalDao->getJournal($site->getJournalRedirect())) != null) {
@@ -82,7 +82,7 @@ class IndexHandler extends Handler {
 
 			$templateMgr->assign('intro', $site->getLocalizedIntro());
 			$templateMgr->assign('journalFilesPath', Request::getBaseUrl() . '/' . Config::getVar('files', 'public_files_dir') . '/journals/');
-			$journals = &$journalDao->getEnabledJournals();
+			$journals =& $journalDao->getEnabledJournals();
 			$templateMgr->assign_by_ref('journals', $journals);
 			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
 			$templateMgr->display('index/site.tpl');

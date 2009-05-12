@@ -187,11 +187,11 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 		parent::validate();
 
 		$isValid = true;
+ 
+		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
+		$user =& Request::getUser();
 
-		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-		$user = &Request::getUser();
-
-		$comment = &$articleCommentDao->getArticleCommentById($commentId);
+		$comment =& $articleCommentDao->getArticleCommentById($commentId);
 
 		if ($comment == null) {
 			$isValid = false;

@@ -157,7 +157,7 @@ class SubmitHandler extends AuthorHandler {
 					import('notification.Notification');
 					$articleDao =& DAORegistry::getDAO('ArticleDAO');
 					$article =& $articleDao->getArticle($articleId);
-					$roleDao = &DAORegistry::getDAO('RoleDAO');
+					$roleDao =& DAORegistry::getDAO('RoleDAO');
 					$notificationUsers = array();
 					$journalManagers = $roleDao->getUsersByRoleId(ROLE_ID_JOURNAL_MANAGER);
 					$allUsers = $journalManagers->toArray();
@@ -172,8 +172,8 @@ class SubmitHandler extends AuthorHandler {
 							$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_ARTICLE_SUBMITTED);
 					}
 
-					$journal = &Request::getJournal();
-					$templateMgr = &TemplateManager::getManager();
+					$journal =& Request::getJournal();
+					$templateMgr =& TemplateManager::getManager();
 					$templateMgr->assign_by_ref('journal', $journal);
 					// If this is an editor and there is a
 					// submission file, article can be expedited.
@@ -282,7 +282,7 @@ class SubmitHandler extends AuthorHandler {
 		$article =& $this->article;
 		$this->setupTemplate(true);
 
-		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
+		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
 		$suppFile = $suppFileDao->getSuppFile($suppFileId, $articleId);
 		$suppFileDao->deleteSuppFileById($suppFileId, $articleId);
 
@@ -318,9 +318,9 @@ class SubmitHandler extends AuthorHandler {
 	 */
 	function validate($articleId = null, $step = false, $reason = null) {
 		parent::validate($reason);
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$user = &Request::getUser();
-		$journal = &Request::getJournal();
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$user =& Request::getUser();
+		$journal =& Request::getJournal();
 
 		if ($step !== false && ($step < 1 || $step > 5 || (!isset($articleId) && $step != 1))) {
 			Request::redirect(null, null, 'submit', array(1));

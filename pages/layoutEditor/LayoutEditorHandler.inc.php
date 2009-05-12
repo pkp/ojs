@@ -35,7 +35,7 @@ class LayoutEditorHandler extends Handler {
 		$this->validate();
 		$this->setupTemplate();
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', 'editorial.layoutEditorsRole');
 		$templateMgr->display('layoutEditor/index.tpl');
 	}
@@ -47,9 +47,9 @@ class LayoutEditorHandler extends Handler {
 		$this->validate();
 		$this->setupTemplate(true);
 
-		$journal = &Request::getJournal();
-		$user = &Request::getUser();
-		$layoutEditorSubmissionDao = &DAORegistry::getDAO('LayoutEditorSubmissionDAO');
+		$journal =& Request::getJournal();
+		$user =& Request::getUser();
+		$layoutEditorSubmissionDao =& DAORegistry::getDAO('LayoutEditorSubmissionDAO');
 
 		$page = isset($args[0]) ? $args[0] : '';
 		switch($page) {
@@ -75,7 +75,7 @@ class LayoutEditorHandler extends Handler {
 		$rangeInfo = Handler::getRangeInfo('submissions');
 		$submissions = $layoutEditorSubmissionDao->getSubmissions($user->getUserId(), $journal->getJournalId(), $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $active, $rangeInfo);
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('pageToDisplay', $page);
 		$templateMgr->assign_by_ref('submissions', $submissions);
 
@@ -117,10 +117,10 @@ class LayoutEditorHandler extends Handler {
 		$this->validate();
 		$this->setupTemplate(true);
 
-		$journal = &Request::getJournal();
-		$issueDao = &DAORegistry::getDAO('IssueDAO');
+		$journal =& Request::getJournal();
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		$rangeInfo = Handler::getRangeInfo('issues');
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('issues', $issueDao->getUnpublishedIssues($journal->getJournalId(), $rangeInfo));
 		$templateMgr->assign('helpTopicId', 'publishing.index');
 		$templateMgr->display('layoutEditor/futureIssues.tpl');
@@ -133,12 +133,12 @@ class LayoutEditorHandler extends Handler {
 		$this->validate();
 		$this->setupTemplate(true);
 
-		$journal = &Request::getJournal();
-		$issueDao = &DAORegistry::getDAO('IssueDAO');
+		$journal =& Request::getJournal();
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
 
 		$rangeInfo = Handler::getRangeInfo('issues');
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('issues', $issueDao->getPublishedIssues($journal->getJournalId(), $rangeInfo));
 
 		$allIssuesIterator = $issueDao->getPublishedIssues($journal->getJournalId());

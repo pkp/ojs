@@ -29,10 +29,10 @@ class ReviewAssignmentDAO extends DAO {
 	 */
 	function ReviewAssignmentDAO() {
 		parent::DAO();
-		$this->userDao = &DAORegistry::getDAO('UserDAO');
-		$this->articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-		$this->suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
-		$this->articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
+		$this->userDao =& DAORegistry::getDAO('UserDAO');
+		$this->articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+		$this->suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+		$this->articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
 	}
 
 	/**
@@ -42,14 +42,14 @@ class ReviewAssignmentDAO extends DAO {
 	 * @return ReviewAssignment
 	 */
 	function &getReviewAssignment($articleId, $reviewerId, $round) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT r.*, r2.review_revision, a.review_file_id, u.first_name, u.last_name FROM review_assignments r LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round) LEFT JOIN articles a ON (r.article_id = a.article_id) WHERE r.article_id = ? AND r.reviewer_id = ? AND r.cancelled <> 1 AND r.round = ?',
 			array((int) $articleId, (int) $reviewerId, (int) $round)
 			);
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnReviewAssignmentFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnReviewAssignmentFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -64,14 +64,14 @@ class ReviewAssignmentDAO extends DAO {
 	 * @return ReviewAssignment
 	 */
 	function &getReviewAssignmentById($reviewId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT r.*, r2.review_revision, a.review_file_id, u.first_name, u.last_name FROM review_assignments r LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round) LEFT JOIN articles a ON (r.article_id = a.article_id) WHERE r.review_id = ?',
 			(int) $reviewId
 			);
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnReviewAssignmentFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnReviewAssignmentFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -89,7 +89,7 @@ class ReviewAssignmentDAO extends DAO {
 	function &getReviewIndexesForRound($articleId, $round) {
 		$returner = array();
 		$index = 0;
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT review_id FROM review_assignments WHERE article_id = ? and round = ? AND (cancelled = 0 OR cancelled IS NULL) ORDER BY review_id',
 			array((int) $articleId, (int) $round)
 			);
@@ -115,12 +115,12 @@ class ReviewAssignmentDAO extends DAO {
 	function &getIncompleteReviewAssignments() {
 		$reviewAssignments = array();
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT r.*, r2.review_revision, a.review_file_id, u.first_name, u.last_name FROM review_assignments r LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round) LEFT JOIN articles a ON (r.article_id = a.article_id) WHERE (r.cancelled IS NULL OR r.cancelled = 0) AND r.date_notified IS NOT NULL AND r.date_completed IS NULL AND r.declined <> 1 ORDER BY r.article_id'
 		);
 
 		while (!$result->EOF) {
-			$reviewAssignments[] = &$this->_returnReviewAssignmentFromRow($result->GetRowAssoc(false));
+			$reviewAssignments[] =& $this->_returnReviewAssignmentFromRow($result->GetRowAssoc(false));
 			$result->MoveNext();
 		}
 
@@ -139,19 +139,19 @@ class ReviewAssignmentDAO extends DAO {
 		$reviewAssignments = array();
 
 		if ($round == null) {
-			$result = &$this->retrieve(
+			$result =& $this->retrieve(
 				'SELECT r.*, r2.review_revision, a.review_file_id, u.first_name, u.last_name FROM review_assignments r LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round) LEFT JOIN articles a ON (r.article_id = a.article_id) WHERE r.article_id = ? ORDER BY round, review_id',
 				(int) $articleId
 			);
 		} else {
-			$result = &$this->retrieve(
+			$result =& $this->retrieve(
 				'SELECT r.*, r2.review_revision, a.review_file_id, u.first_name, u.last_name FROM review_assignments r LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round) LEFT JOIN articles a ON (r.article_id = a.article_id) WHERE r.article_id = ? AND r.round = ? ORDER BY review_id',
 				array((int) $articleId, (int) $round)
 			);
 		}
 
 		while (!$result->EOF) {
-			$reviewAssignments[] = &$this->_returnReviewAssignmentFromRow($result->GetRowAssoc(false));
+			$reviewAssignments[] =& $this->_returnReviewAssignmentFromRow($result->GetRowAssoc(false));
 			$result->MoveNext();
 		}
 
@@ -169,13 +169,13 @@ class ReviewAssignmentDAO extends DAO {
 	function &getReviewAssignmentsByUserId($userId) {
 		$reviewAssignments = array();
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT r.*, r2.review_revision, a.review_file_id, u.first_name, u.last_name FROM review_assignments r LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round) LEFT JOIN articles a ON (r.article_id = a.article_id) WHERE r.reviewer_id = ? ORDER BY round, review_id',
 			(int) $userId
 		);
 
 		while (!$result->EOF) {
-			$reviewAssignments[] = &$this->_returnReviewAssignmentFromRow($result->GetRowAssoc(false));
+			$reviewAssignments[] =& $this->_returnReviewAssignmentFromRow($result->GetRowAssoc(false));
 			$result->MoveNext();
 		}
 
@@ -193,7 +193,7 @@ class ReviewAssignmentDAO extends DAO {
 	function &getReviewAssignmentsByReviewFormId($reviewFormId) {
 		$reviewAssignments = array();
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT r.*, r2.review_revision, a.review_file_id, u.first_name, u.last_name FROM review_assignments r LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round) LEFT JOIN articles a ON (r.article_id = a.article_id) WHERE r.review_form_id = ? ORDER BY round, review_id',
 			(int) $reviewFormId
 		);
@@ -217,14 +217,14 @@ class ReviewAssignmentDAO extends DAO {
 	function &getReviewFilesByRound($articleId) {
 		$returner = array();
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT a.*, r.round as round from review_rounds r, article_files a, articles art where art.article_id=r.article_id and r.article_id=? and r.article_id=a.article_id and a.file_id=art.review_file_id and a.revision=r.review_revision and a.article_id=r.article_id', 
 			(int) $articleId
 		);
 
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
-			$returner[$row['round']] = &$this->articleFileDao->_returnArticleFileFromRow($row);
+			$returner[$row['round']] =& $this->articleFileDao->_returnArticleFileFromRow($row);
 			$result->MoveNext();
 		}
 
@@ -242,7 +242,7 @@ class ReviewAssignmentDAO extends DAO {
 	function &getAuthorViewableFilesByRound($articleId) {
 		$files = array();
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT	f.*, a.reviewer_id AS reviewer_id, a.review_id
 			FROM	review_assignments a,
 				article_files f
@@ -284,7 +284,7 @@ class ReviewAssignmentDAO extends DAO {
 	function &getLastModifiedByRound($articleId) {
 		$returner = array();
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT round, MAX(last_modified) as last_modified FROM review_assignments WHERE article_id=? GROUP BY round', 
 			(int) $articleId
 		);
@@ -310,7 +310,7 @@ class ReviewAssignmentDAO extends DAO {
 	function &getEarliestNotificationByRound($articleId) {
 		$returner = array();
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT round, MIN(date_notified) as earliest_date FROM review_assignments WHERE article_id=? GROUP BY round', 
 			(int) $articleId
 		);
@@ -335,13 +335,13 @@ class ReviewAssignmentDAO extends DAO {
 	function &getCancelsAndRegrets($articleId) {
 		$reviewAssignments = array();
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT r.*, r2.review_revision, a.review_file_id, u.first_name, u.last_name FROM review_assignments r LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round) LEFT JOIN articles a ON (r.article_id = a.article_id) WHERE r.article_id = ? AND (r.cancelled = 1 OR r.declined = 1) ORDER BY round, review_id',
 			(int) $articleId
 		);
 
 		while (!$result->EOF) {
-			$reviewAssignments[] = &$this->_returnReviewAssignmentFromRow($result->GetRowAssoc(false));
+			$reviewAssignments[] =& $this->_returnReviewAssignmentFromRow($result->GetRowAssoc(false));
 			$result->MoveNext();
 		}
 
@@ -532,7 +532,7 @@ class ReviewAssignmentDAO extends DAO {
 	 */
 	function getAverageQualityRatings($journalId) {
 		$averageQualityRatings = Array();
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT R.reviewer_id, AVG(R.quality) AS average, COUNT(R.quality) AS count FROM review_assignments R, articles A WHERE R.article_id = A.article_id AND A.journal_id = ? GROUP BY R.reviewer_id',
 			(int) $journalId
 			);
@@ -555,7 +555,7 @@ class ReviewAssignmentDAO extends DAO {
 	 */
 	function getCompletedReviewCounts($journalId) {
 		$returner = Array();
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT r.reviewer_id, COUNT(r.review_id) AS count FROM review_assignments r, articles a WHERE r.article_id = a.article_id AND a.journal_id = ? AND r.date_completed IS NOT NULL GROUP BY r.reviewer_id',
 			(int) $journalId
 			);

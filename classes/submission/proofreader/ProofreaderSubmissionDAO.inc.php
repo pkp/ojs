@@ -32,11 +32,11 @@ class ProofreaderSubmissionDAO extends DAO {
 	function ProofreaderSubmissionDAO() {
 		parent::DAO();
 
-		$this->articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$this->articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-		$this->editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
-		$this->galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-		$this->suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
+		$this->articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$this->articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
+		$this->editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
+		$this->galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$this->suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
 	}
 
 	/**
@@ -61,7 +61,7 @@ class ProofreaderSubmissionDAO extends DAO {
 		);
 		if ($journalId) $params[] = $journalId;
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT	a.*,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
@@ -78,7 +78,7 @@ class ProofreaderSubmissionDAO extends DAO {
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnSubmissionFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnSubmissionFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -266,7 +266,7 @@ class ProofreaderSubmissionDAO extends DAO {
 			$sql .= ' AND spr.date_completed IS NOT NULL';		
 		}
 
-		$result = &$this->retrieveRange($sql . ' ' . $searchSql, $params, $rangeInfo);
+		$result =& $this->retrieveRange($sql . ' ' . $searchSql, $params, $rangeInfo);
 
 		$returner = new DAOResultFactory ($result, $this, '_returnSubmissionFromRow');
 		return $returner;
@@ -291,7 +291,7 @@ class ProofreaderSubmissionDAO extends DAO {
 				WHERE 
 					spp.user_id = ? AND a.journal_id = ? AND spp.date_notified IS NOT NULL';
 
-		$result = &$this->retrieve($sql, array(ASSOC_TYPE_ARTICLE, 'SIGNOFF_PROOFREADING_PROOFREADER', $proofreaderId, $journalId));
+		$result =& $this->retrieve($sql, array(ASSOC_TYPE_ARTICLE, 'SIGNOFF_PROOFREADING_PROOFREADER', $proofreaderId, $journalId));
 
 		while (!$result->EOF) {
 			if ($result->fields['date_completed'] == null) {

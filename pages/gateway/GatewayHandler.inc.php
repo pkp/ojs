@@ -33,8 +33,8 @@ class GatewayHandler extends Handler {
 		$this->validate();
 		$this->setupTemplate();
 
-		$journal = &Request::getJournal();
-		$templateMgr = &TemplateManager::getManager();
+		$journal =& Request::getJournal();
+		$templateMgr =& TemplateManager::getManager();
 
 		if ($journal != null) {
 			if (!$journal->getSetting('enableLockss')) {
@@ -43,12 +43,12 @@ class GatewayHandler extends Handler {
 
 			$year = Request::getUserVar('year');
 
-			$issueDao = &DAORegistry::getDAO('IssueDAO');
+			$issueDao =& DAORegistry::getDAO('IssueDAO');
 
 			// FIXME Should probably go in IssueDAO or a subclass
 			if (isset($year)) {
 				$year = (int)$year;
-				$result = &$issueDao->retrieve(
+				$result =& $issueDao->retrieve(
 					'SELECT * FROM issues WHERE journal_id = ? AND year = ? AND published = 1 ORDER BY current DESC, year ASC, volume ASC, number ASC',
 					array($journal->getJournalId(), $year)
 				);
@@ -59,12 +59,12 @@ class GatewayHandler extends Handler {
 
 			if (!isset($year)) {
 				$showInfo = true;
-				$result = &$issueDao->retrieve(
+				$result =& $issueDao->retrieve(
 					'SELECT MAX(year) FROM issues WHERE journal_id = ? AND published = 1',
 					$journal->getJournalId()
 				);
 				list($year) = $result->fields;
-				$result = &$issueDao->retrieve(
+				$result =& $issueDao->retrieve(
 					'SELECT * FROM issues WHERE journal_id = ? AND year = ? AND published = 1 ORDER BY current DESC, year ASC, volume ASC, number ASC',
 					array($journal->getJournalId(), $year)
 				);
@@ -77,13 +77,13 @@ class GatewayHandler extends Handler {
 			$prevYear = null;
 			$nextYear = null;
 			if (isset($year)) {
-				$result = &$issueDao->retrieve(
+				$result =& $issueDao->retrieve(
 					'SELECT MAX(year) FROM issues WHERE journal_id = ? AND published = 1 AND year < ?',
 					array($journal->getJournalId(), $year)
 				);
 				list($prevYear) = $result->fields;
 
-				$result = &$issueDao->retrieve(
+				$result =& $issueDao->retrieve(
 					'SELECT MIN(year) FROM issues WHERE journal_id = ? AND published = 1 AND year > ?',
 					array($journal->getJournalId(), $year)
 				);
@@ -99,15 +99,15 @@ class GatewayHandler extends Handler {
 
 			$locales =& $journal->getSupportedLocaleNames();
 			if (!isset($locales) || empty($locales)) {
-				$localeNames = &Locale::getAllLocales();
+				$localeNames =& Locale::getAllLocales();
 				$primaryLocale = Locale::getPrimaryLocale();
 				$locales = array($primaryLocale => $localeNames[$primaryLocale]);
 			}
 			$templateMgr->assign_by_ref('locales', $locales);
 
 		} else {
-			$journalDao = &DAORegistry::getDAO('JournalDAO');
-			$journals = &$journalDao->getEnabledJournals();
+			$journalDao =& DAORegistry::getDAO('JournalDAO');
+			$journals =& $journalDao->getEnabledJournals();
 			$templateMgr->assign_by_ref('journals', $journals);
 		}
 

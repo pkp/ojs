@@ -33,11 +33,11 @@ class LayoutEditorSubmissionDAO extends DAO {
 	function LayoutEditorSubmissionDAO() {
 		parent::DAO();
 
-		$this->articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$this->galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-		$this->editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
-		$this->suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
-		$this->articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
+		$this->articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$this->galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$this->editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
+		$this->suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+		$this->articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
 	}
 
 	/**
@@ -60,7 +60,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 			$articleId
 		);
 		if ($journalId) $params[] = $journalId;
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT
 				a.*,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
@@ -78,7 +78,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnSubmissionFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnSubmissionFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -265,7 +265,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 			$sql .= ' AND (sle.date_completed IS NOT NULL AND spr.date_completed IS NOT NULL)';
 		}
 
-		$result = &$this->retrieveRange(
+		$result =& $this->retrieveRange(
 			$sql . ' ' . $searchSql . ' ORDER BY a.article_id ASC',
 			count($params)==1?array_shift($params):$params,
 			$rangeInfo
@@ -296,7 +296,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 				WHERE	
 					sl.user_id = ? AND a.journal_id = ? AND sl.date_notified IS NOT NULL';
 
-		$result = &$this->retrieve($sql, array(ASSOC_TYPE_ARTICLE, 'SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, 'SIGNOFF_PROOFREADING_LAYOUT', $editorId, $journalId));
+		$result =& $this->retrieve($sql, array(ASSOC_TYPE_ARTICLE, 'SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, 'SIGNOFF_PROOFREADING_LAYOUT', $editorId, $journalId));
 		while (!$result->EOF) {
 			if ($result->fields['le_date_completed'] == null || $result->fields['pr_date_completed'] == null) {
 				$submissionsCount[0] += 1;
@@ -315,7 +315,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 	function getProofedArticlesByIssueId($issueId) {
 		$articleIds = array();
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT pa.article_id AS article_id FROM published_articles pa, signoffs s WHERE pa.article_id = s.assoc_id AND s.assoc_type = ? AND pa.issue_id = ? AND s.date_completed IS NOT NULL AND s.symbolic = ?',
 			array(ASSOC_TYPE_ARTICLE, $issueId, 'SIGNOFF_LAYOUT')
 		);

@@ -167,7 +167,7 @@ class SectionEditorSubmission extends Article {
 	 * @return array
 	 */
 	function &getEditAssignments() {
-		$editAssignments = &$this->getData('editAssignments');
+		$editAssignments =& $this->getData('editAssignments');
 		return $editAssignments;
 	}
 
@@ -459,7 +459,7 @@ class SectionEditorSubmission extends Article {
 	 * @return array ArticleGalley
 	 */
 	function &getGalleys() {
-		$galleys = &$this->getData('galleys');
+		$galleys =& $this->getData('galleys');
 		return $galleys;
 	}
 
@@ -492,7 +492,7 @@ class SectionEditorSubmission extends Article {
 	 * @return string
 	 */
 	function getHighlightClass() {
-		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
+		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 		$highlightClass = 'highlight';
 		$overdueSeconds = 60 * 60 * 24 * 14; // Two weeks
 
@@ -624,7 +624,7 @@ class SectionEditorSubmission extends Article {
 			if ($dateLayoutCompleted && !$dateLayoutAcknowledged) return $highlightClass;
 
 			// PROOFREADING
-			$signoffDao = &DAORegistry::getDAO('SignoffDAO');
+			$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 
 			// First round of proofreading
 			$authorSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_AUTHOR', ASSOC_TYPE_ARTICLE, $this->getArticleId());

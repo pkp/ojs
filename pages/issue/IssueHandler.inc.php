@@ -81,8 +81,8 @@ class IssueHandler extends Handler {
 
 				$showToc = false;
 			} else {
-				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-				$publishedArticles = &$publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId(), true);
+				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+				$publishedArticles =& $publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId(), true);
 				$templateMgr->assign_by_ref('publishedArticles', $publishedArticles);
 				$showToc = true;
 			}
@@ -99,8 +99,8 @@ class IssueHandler extends Handler {
 			
 			if ($showToc && $subscriptionRequired && !$subscribedUser && !$subscribedDomain && $subscriptionExpiryPartial) {
 				$templateMgr->assign('subscriptionExpiryPartial', true);
-				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-				$publishedArticlesTemp = &$publishedArticleDao->getPublishedArticles($issue->getIssueId(), null, true);
+				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+				$publishedArticlesTemp =& $publishedArticleDao->getPublishedArticles($issue->getIssueId(), null, true);
 
 				$articleExpiryPartial = array();
 				foreach ($publishedArticlesTemp as $publishedArticle) {
@@ -149,19 +149,19 @@ class IssueHandler extends Handler {
 		$issueId = isset($args[0]) ? $args[0] : 0;
 		$showToc = isset($args[1]) ? $args[1] : '';
 
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 
-		$issueDao = &DAORegistry::getDAO('IssueDAO');
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
 
 		if ($journal->getSetting('enablePublicIssueId')) {
-			$issue = &$issueDao->getIssueByBestIssueId($issueId, $journal->getJournalId());
+			$issue =& $issueDao->getIssueByBestIssueId($issueId, $journal->getJournalId());
 		} else {
-			$issue = &$issueDao->getIssueById((int) $issueId);
+			$issue =& $issueDao->getIssueById((int) $issueId);
 		}
 
 		if (!$issue) Request::redirect(null, null, 'current');
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$this->setupIssueTemplate($issue, ($showToc == 'showToc') ? true : false);
 
 		// Display creative commons logo/licence if enabled
@@ -181,9 +181,9 @@ class IssueHandler extends Handler {
 	 * 	will be displayed.
 	 */
 	function setupIssueTemplate(&$issue, $showToc = false) {
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		$journalId = $journal->getJournalId();
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		if (isset($issue) && ($issue->getPublished() || Validation::isEditor($journalId) || Validation::isLayoutEditor($journalId) || Validation::isProofreader($journalId)) && $issue->getJournalId() == $journalId) {
 
 			$issueHeadingTitle = $issue->getIssueIdentification(false, true);
@@ -208,8 +208,8 @@ class IssueHandler extends Handler {
 
 				$showToc = false;
 			} else {
-				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-				$publishedArticles = &$publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId(), true);
+				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+				$publishedArticles =& $publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId(), true);
 
 				$publicFileManager = new PublicFileManager();
 				$templateMgr->assign('publishedArticles', $publishedArticles);
@@ -228,8 +228,8 @@ class IssueHandler extends Handler {
 			
 			if ($showToc && $subscriptionRequired && !$subscribedUser && !$subscribedDomain && $subscriptionExpiryPartial) {
 				$templateMgr->assign('subscriptionExpiryPartial', true);
-				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-				$publishedArticlesTemp = &$publishedArticleDao->getPublishedArticles($issue->getIssueId(), null, true);
+				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+				$publishedArticlesTemp =& $publishedArticleDao->getPublishedArticles($issue->getIssueId(), null, true);
 
 				$articleExpiryPartial = array();
 				foreach ($publishedArticlesTemp as $publishedArticle) {
@@ -275,8 +275,8 @@ class IssueHandler extends Handler {
 		$this->validate();
 		$this->setupTemplate();
 
-		$journal = &Request::getJournal();
-		$issueDao = &DAORegistry::getDAO('IssueDAO');
+		$journal =& Request::getJournal();
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		$rangeInfo = Handler::getRangeInfo('issues');
 
 		$publishedIssuesIterator = $issueDao->getPublishedIssues($journal->getJournalId(), $rangeInfo);
@@ -286,7 +286,7 @@ class IssueHandler extends Handler {
 		$coverPagePath = Request::getBaseUrl() . '/';
 		$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('coverPagePath', $coverPagePath);
 		$templateMgr->assign('locale', Locale::getLocale());
 		$templateMgr->assign_by_ref('issues', $publishedIssuesIterator);

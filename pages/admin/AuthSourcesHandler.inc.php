@@ -33,16 +33,16 @@ class AuthSourcesHandler extends AdminHandler {
 		$this->validate();
 		$this->setupTemplate(true);
 
-		$authDao = &DAORegistry::getDAO('AuthSourceDAO');
-		$sources = &$authDao->getSources();
+		$authDao =& DAORegistry::getDAO('AuthSourceDAO');
+		$sources =& $authDao->getSources();
 
-		$plugins = &PluginRegistry::loadCategory(AUTH_PLUGIN_CATEGORY);
+		$plugins =& PluginRegistry::loadCategory(AUTH_PLUGIN_CATEGORY);
 		$pluginOptions = array();
 		foreach ($plugins as $plugin) {
 			$pluginOptions[$plugin->getName()] = $plugin->getDisplayName();
 		}
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('sources', $sources);
 		$templateMgr->assign('pluginOptions', $pluginOptions);
 		$templateMgr->assign('helpTopicId', 'site.siteManagement');
@@ -55,7 +55,7 @@ class AuthSourcesHandler extends AdminHandler {
 	function updateAuthSources() {
 		$this->validate();
 
-		$authDao = &DAORegistry::getDAO('AuthSourceDAO');
+		$authDao =& DAORegistry::getDAO('AuthSourceDAO');
 		$authDao->setDefault((int) Request::getUserVar('defaultAuthId'));
 
 		Request::redirect(null, null, 'auth');
@@ -70,7 +70,7 @@ class AuthSourcesHandler extends AdminHandler {
 		$auth = new AuthSource();
 		$auth->setPlugin(Request::getUserVar('plugin'));
 
-		$authDao = &DAORegistry::getDAO('AuthSourceDAO');
+		$authDao =& DAORegistry::getDAO('AuthSourceDAO');
 		if ($authDao->insertSource($auth)) {
 			Request::redirect(null, null, 'editAuthSource', $auth->getAuthId());
 		} else {
@@ -113,11 +113,10 @@ class AuthSourcesHandler extends AdminHandler {
 		$this->validate();
 
 		$authId = (int)@$args[0];
-		$authDao = &DAORegistry::getDAO('AuthSourceDAO');
+		$authDao =& DAORegistry::getDAO('AuthSourceDAO');
 		$authDao->deleteSource($authId);
 		Request::redirect(null, null, 'auth');
 	}
-
 }
 
 ?>

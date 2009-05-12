@@ -33,7 +33,7 @@ class FilesHandler extends ManagerHandler {
 
 		import('file.FileManager');
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy', array(array(Request::url(null, 'manager'), 'manager.journalManagement')));
 
 		FilesHandler::parseDirArg($args, $currentDir, $parentDir);
@@ -148,7 +148,7 @@ class FilesHandler extends ManagerHandler {
 	}
 
 	function getRealFilesDir($currentDir) {
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		return Config::getVar('files', 'files_dir') . '/journals/' . $journal->getJournalId() .'/' . $currentDir;
 	}
 

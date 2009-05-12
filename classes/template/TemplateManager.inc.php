@@ -39,8 +39,8 @@ class TemplateManager extends PKPTemplateManager {
 			 * installer pages).
 			 */
 
-			$journal = &Request::getJournal();
-			$site = &Request::getSite();
+			$journal =& Request::getJournal();
+			$site =& Request::getSite();
 
 			$siteFilesDir = Request::getBaseUrl() . '/' . PublicFileManager::getSiteFilesPath();
 			$this->assign('sitePublicFilesDir', $siteFilesDir);
@@ -62,7 +62,7 @@ class TemplateManager extends PKPTemplateManager {
 				$this->assign('alternateLocales', $journal->getSetting('alternateLocales'));
 
 				// Assign additional navigation bar items
-				$navMenuItems = &$journal->getLocalizedSetting('navItems');
+				$navMenuItems =& $journal->getLocalizedSetting('navItems');
 				$this->assign_by_ref('navMenuItems', $navMenuItems);
 
 				// Assign journal page header

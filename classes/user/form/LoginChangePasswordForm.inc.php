@@ -24,7 +24,7 @@ class LoginChangePasswordForm extends Form {
 	 */
 	function LoginChangePasswordForm() {
 		parent::Form('user/loginChangePassword.tpl');
-		$site = &Request::getSite();
+		$site =& Request::getSite();
 
 		// Validation checks for this form
 		$this->addCheck(new FormValidatorCustom($this, 'oldPassword', 'required', 'user.profile.form.oldPasswordInvalid', create_function('$password,$form', 'return Validation::checkCredentials($form->getData(\'username\'),$password);'), array(&$this)));
@@ -38,8 +38,8 @@ class LoginChangePasswordForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr = &TemplateManager::getManager();
-		$site = &Request::getSite();
+		$templateMgr =& TemplateManager::getManager();
+		$site =& Request::getSite();
 		$templateMgr->assign('minPasswordLength', $site->getMinPasswordLength());
 		parent::display();
 	}
@@ -56,12 +56,12 @@ class LoginChangePasswordForm extends Form {
 	 * @return boolean success
 	 */
 	function execute() {
-		$userDao = &DAORegistry::getDAO('UserDAO');
-		$user = &$userDao->getUserByUsername($this->getData('username'), false);
+		$userDao =& DAORegistry::getDAO('UserDAO');
+		$user =& $userDao->getUserByUsername($this->getData('username'), false);
 		if ($user != null) {
 			if ($user->getAuthId()) {
-				$authDao = &DAORegistry::getDAO('AuthSourceDAO');
-				$auth = &$authDao->getPlugin($user->getAuthId());
+				$authDao =& DAORegistry::getDAO('AuthSourceDAO');
+				$auth =& $authDao->getPlugin($user->getAuthId());
 			}
 
 			if (isset($auth)) {

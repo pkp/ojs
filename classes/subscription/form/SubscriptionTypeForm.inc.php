@@ -39,15 +39,15 @@ class SubscriptionTypeForm extends Form {
 			SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE => Locale::translate('manager.subscriptionTypes.format.printOnline')
 		);
 
-		$currencyDao = &DAORegistry::getDAO('CurrencyDAO');
-		$currencies = &$currencyDao->getCurrencies();
+		$currencyDao =& DAORegistry::getDAO('CurrencyDAO');
+		$currencies =& $currencyDao->getCurrencies();
 		$this->validCurrencies = array();
 		while (list(, $currency) = each($currencies)) {
 			$this->validCurrencies[$currency->getCodeAlpha()] = $currency->getName() . ' (' . $currency->getCodeAlpha() . ')';
 		}
 
 		$this->typeId = isset($typeId) ? (int) $typeId : null;
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 
 		parent::Form('subscription/subscriptionTypeForm.tpl');
 
@@ -94,7 +94,7 @@ class SubscriptionTypeForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('typeId', $this->typeId);
 		$templateMgr->assign('validCurrencies', $this->validCurrencies);
 		$templateMgr->assign('validFormats', $this->validFormats);
@@ -108,8 +108,8 @@ class SubscriptionTypeForm extends Form {
 	 */
 	function initData() {
 		if (isset($this->typeId)) {
-			$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
-			$subscriptionType = &$subscriptionTypeDao->getSubscriptionType($this->typeId);
+			$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+			$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($this->typeId);
 
 			if ($subscriptionType != null) {
 				$this->_data = array(
@@ -141,11 +141,11 @@ class SubscriptionTypeForm extends Form {
 	 * Save subscription type. 
 	 */
 	function execute() {
-		$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
-		$journal = &Request::getJournal();
+		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$journal =& Request::getJournal();
 
 		if (isset($this->typeId)) {
-			$subscriptionType = &$subscriptionTypeDao->getSubscriptionType($this->typeId);
+			$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($this->typeId);
 		}
 
 		if (!isset($subscriptionType)) {

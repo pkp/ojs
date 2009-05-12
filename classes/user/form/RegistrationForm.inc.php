@@ -61,7 +61,7 @@ class RegistrationForm extends Form {
 				$this->addCheck(new FormValidatorCustom($this, 'username', 'required', 'user.login.loginError', create_function('$username,$form', 'return Validation::checkCredentials($form->getData(\'username\'), $form->getData(\'password\'));'), array(&$this)));
 			} else {
 				// New user -- check required profile fields
-				$site = &Request::getSite();
+				$site =& Request::getSite();
 	
 				$this->addCheck(new FormValidatorCustom($this, 'username', 'required', 'user.register.form.usernameExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByUsername'), array(), true));
 				$this->addCheck(new FormValidatorAlphaNum($this, 'username', 'required', 'user.register.form.usernameAlphaNumeric'));
@@ -76,8 +76,8 @@ class RegistrationForm extends Form {
 					$this->addCheck(new FormValidatorCaptcha($this, 'captcha', 'captchaId', 'common.captchaField.badCaptcha'));
 				}
 	
-				$authDao = &DAORegistry::getDAO('AuthSourceDAO');
-				$this->defaultAuth = &$authDao->getDefaultPlugin();
+				$authDao =& DAORegistry::getDAO('AuthSourceDAO');
+				$this->defaultAuth =& $authDao->getDefaultPlugin();
 				if (isset($this->defaultAuth)) {
 					$this->addCheck(new FormValidatorCustom($this, 'username', 'required', 'user.register.form.usernameExists', create_function('$username,$form,$auth', 'return (!$auth->userExists($username) || $auth->authenticate($username, $form->getData(\'password\')));'), array(&$this, $this->defaultAuth)));
 				}
@@ -91,10 +91,10 @@ class RegistrationForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr = &TemplateManager::getManager();
-		$site = &Request::getSite();
+		$templateMgr =& TemplateManager::getManager();
+		$site =& Request::getSite();
 		$templateMgr->assign('minPasswordLength', $site->getMinPasswordLength());
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 
 		if ($this->captchaEnabled) {
 			import('captcha.CaptchaManager');
@@ -118,7 +118,7 @@ class RegistrationForm extends Form {
 		$templateMgr->assign('allowRegReviewer', $journal->getSetting('allowRegReviewer')==1?1:0);
 		$templateMgr->assign('source', Request::getUserVar('source'));
 
-		$site = &Request::getSite();
+		$site =& Request::getSite();
 		$templateMgr->assign('availableLocales', $site->getSupportedLocaleNames());
 
 		$templateMgr->assign('helpTopicId', 'user.registerAndProfile');		
@@ -178,7 +178,7 @@ class RegistrationForm extends Form {
 		
 		if ($this->existingUser) { // If using implicit auth - we hardwire that we are working on an existing user
 			// Existing user in the system
-			$userDao = &DAORegistry::getDAO('UserDAO');
+			$userDao =& DAORegistry::getDAO('UserDAO');
 			
 			if ($this->implicitAuth) { // If we are using implicit auth - then use the session username variable - rather than data from the form
 				$sessionManager =& SessionManager::getManager();
@@ -186,7 +186,7 @@ class RegistrationForm extends Form {
 				
 				$user =& $userDao->getUserByUsername($session->getSessionVar('username'));
 			} else {
-				$user = &$userDao->getUserByUsername($this->getData('username'));
+				$user =& $userDao->getUserByUsername($this->getData('username'));
 			}
 			
 			if ($user == null) {
@@ -218,7 +218,7 @@ class RegistrationForm extends Form {
 			$user->setDateRegistered(Core::getCurrentDate());
 			$user->setCountry($this->getData('country'));
 
-			$site = &Request::getSite();
+			$site =& Request::getSite();
 			$availableLocales = $site->getSupportedLocales();
 
 			$locales = array();
@@ -244,26 +244,26 @@ class RegistrationForm extends Form {
 				$user->setDisabledReason(Locale::translate('user.login.accountNotValidated'));
 			}
 
-			$userDao = &DAORegistry::getDAO('UserDAO');
+			$userDao =& DAORegistry::getDAO('UserDAO');
 			$userDao->insertUser($user);
 			$userId = $user->getUserId();
 			if (!$userId) {
 				return false;
 			}
 
-			$sessionManager = &SessionManager::getManager();
-			$session = &$sessionManager->getUserSession();
+			$sessionManager =& SessionManager::getManager();
+			$session =& $sessionManager->getUserSession();
 			$session->setSessionVar('username', $user->getUsername());
 
 		}
 
-		$journal = &Request::getJournal();
-		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$journal =& Request::getJournal();
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
 
 		// Roles users are allowed to register themselves in
 		$allowedRoles = array('reader' => 'registerAsReader', 'author' => 'registerAsAuthor', 'reviewer' => 'registerAsReviewer');
 
-		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 		if (!$journalSettingsDao->getSetting($journal->getJournalId(), 'allowRegReader')) {
 			unset($allowedRoles['reader']);
 		}
@@ -321,7 +321,7 @@ class RegistrationForm extends Form {
 		}
 
 		if (isset($allowedRoles['reader']) && $this->getData('openAccessNotification')) {
-			$userSettingsDao = &DAORegistry::getDAO('UserSettingsDAO');
+			$userSettingsDao =& DAORegistry::getDAO('UserSettingsDAO');
 			$userSettingsDao->updateSetting($userId, 'openAccessNotification', true, 'bool', $journal->getJournalId());
 		}
 	}

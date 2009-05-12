@@ -31,13 +31,13 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		$this->validate($articleId);
 		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId);		
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 
 		CopyeditorAction::copyeditUnderway($submission);
 
 		$useLayoutEditors = $journal->getSetting('useLayoutEditors');
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 
 		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign_by_ref('copyeditor', $submission->getUserBySignoffType('SIGNOFF_COPYEDITING_INITIAL'));
@@ -130,13 +130,13 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 	function validate($articleId) {
 		parent::validate();
 
-		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
-		$journal = &Request::getJournal();
-		$user = &Request::getUser();
+		$copyeditorSubmissionDao =& DAORegistry::getDAO('CopyeditorSubmissionDAO');
+		$journal =& Request::getJournal();
+		$user =& Request::getUser();
 
 		$isValid = true;
 
-		$copyeditorSubmission = &$copyeditorSubmissionDao->getCopyeditorSubmission($articleId, $user->getUserId());
+		$copyeditorSubmission =& $copyeditorSubmissionDao->getCopyeditorSubmission($articleId, $user->getUserId());
 
 		if ($copyeditorSubmission == null) {
 			$isValid = false;
@@ -186,7 +186,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$this->validate($articleId);
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->display('submission/layout/proofGalley.tpl');
@@ -201,7 +201,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$this->validate($articleId);
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('backHandler', 'submission');
@@ -217,14 +217,14 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$this->validate($articleId);
 
-		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-		$galley = &$galleyDao->getGalley($galleyId, $articleId);
+		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$galley =& $galleyDao->getGalley($galleyId, $articleId);
 
 		import('file.ArticleFileManager'); // FIXME
 
 		if (isset($galley)) {
 			if ($galley->isHTMLGalley()) {
-				$templateMgr = &TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->assign_by_ref('galley', $galley);
 				if ($galley->isHTMLGalley() && $styleFile =& $galley->getStyleFile()) {
 					$templateMgr->addStyleSheet(Request::url(null, 'article', 'viewFile', array(
@@ -281,11 +281,11 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		$submission->setWidth('', $formLocale);
 		$submission->setHeight('', $formLocale);
 
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$articleDao->updateArticle($submission);
 
 		Request::redirect(null, null, 'viewMetadata', $articleId);
 	}
-
 }
+
 ?>

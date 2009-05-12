@@ -52,7 +52,7 @@ class ArticleHandler extends Handler {
 		$article =& $this->article;
 		$this->setupTemplate();
 
-		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$rtDao =& DAORegistry::getDAO('RTDAO');
 		$journalRt = $rtDao->getJournalRTByJournal($journal);
 
 		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
@@ -77,7 +77,7 @@ class ArticleHandler extends Handler {
 			return;
 		}
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign_by_ref('article', $article);
 		$templateMgr->assign('galleyId', $galleyId);
@@ -99,7 +99,7 @@ class ArticleHandler extends Handler {
 		$this->setupTemplate();
 
 		if (!$galley) {
-			$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
+			$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 			if ($journal->getSetting('enablePublicGalleyId')) {
 				$galley =& $galleyDao->getGalleyByBestGalleyId($galleyId, $article->getArticleId());
 			} else {
@@ -109,7 +109,7 @@ class ArticleHandler extends Handler {
 
 		if (!$galley) Request::redirect(null, null, 'view', $articleId);
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign_by_ref('galley', $galley);
@@ -132,7 +132,7 @@ class ArticleHandler extends Handler {
 		$this->setupTemplate();
 
 		if (!$galley) {
-			$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
+			$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 			if ($journal->getSetting('enablePublicGalleyId')) {
 				$galley =& $galleyDao->getGalleyByBestGalleyId($galleyId, $article->getArticleId());
 			} else {
@@ -142,7 +142,7 @@ class ArticleHandler extends Handler {
 
 		if (!$galley) Request::redirect(null, null, 'view', $articleId);
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign_by_ref('galley', $galley);
@@ -164,11 +164,11 @@ class ArticleHandler extends Handler {
 		$article =& $this->article;		
 		$this->setupTemplate();
 
-		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$rtDao =& DAORegistry::getDAO('RTDAO');
 		$journalRt = $rtDao->getJournalRTByJournal($journal);
 
-		$sectionDao = &DAORegistry::getDAO('SectionDAO');
-		$section = &$sectionDao->getSection($article->getSectionId());
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$section =& $sectionDao->getSection($article->getSectionId());
 
 		if ($journalRt->getVersion()!=null && $journalRt->getDefineTerms()) {
 			// Determine the "Define Terms" context ID.
@@ -181,11 +181,11 @@ class ArticleHandler extends Handler {
 			}
 		}
 
-		$commentDao = &DAORegistry::getDAO('CommentDAO');
+		$commentDao =& DAORegistry::getDAO('CommentDAO');
 		$enableComments = $journal->getSetting('enableComments');
 
 		if (($article->getEnableComments()) && ($enableComments == COMMENTS_AUTHENTICATED || $enableComments == COMMENTS_UNAUTHENTICATED || $enableComments == COMMENTS_ANONYMOUS)) {
-			$comments = &$commentDao->getRootCommentsByArticleId($article->getArticleId());
+			$comments =& $commentDao->getRootCommentsByArticleId($article->getArticleId());
 		}
 
 		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
@@ -195,7 +195,7 @@ class ArticleHandler extends Handler {
 			$galley =& $galleyDao->getGalley($galleyId, $article->getArticleId());
 		}
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 
 		if (!$galley) {
 			// Get the subscription status if displaying the abstract;
@@ -238,7 +238,7 @@ class ArticleHandler extends Handler {
 
 			// Increment the published article's abstract views count
 			if (!Request::isBot()) {
-				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 				$publishedArticleDao->incrementViewsByArticleId($article->getArticleId());
 			}
 		} else {
@@ -295,7 +295,7 @@ class ArticleHandler extends Handler {
 		$article =& $this->article;		
 		$this->setupTemplate();
 
-		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$rtDao =& DAORegistry::getDAO('RTDAO');
 		$journalRt = $rtDao->getJournalRTByJournal($journal);
 
 		// The RST needs to know whether this galley is HTML or not. Fetch the galley.
@@ -306,10 +306,10 @@ class ArticleHandler extends Handler {
 			$galley =& $galleyDao->getGalley($galleyId, $article->getArticleId());
 		}
 
-		$sectionDao = &DAORegistry::getDAO('SectionDAO');
-		$section = &$sectionDao->getSection($article->getSectionId());
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$section =& $sectionDao->getSection($article->getSectionId());
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('issue', $issue);
 		$templateMgr->assign_by_ref('article', $article);
 		$templateMgr->assign('articleId', $articleId);
@@ -328,7 +328,7 @@ class ArticleHandler extends Handler {
 		));
 
 		// Bring in comment constants.
-		$commentDao = &DAORegistry::getDAO('CommentDAO');
+		$commentDao =& DAORegistry::getDAO('CommentDAO');
 
 		$enableComments = $journal->getSetting('enableComments');
 		$templateMgr->assign('postingAllowed', (
@@ -367,7 +367,7 @@ class ArticleHandler extends Handler {
 		$issue =& $this->issue;
 		$article =& $this->article;		
 
-		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
+		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 		if ($journal->getSetting('enablePublicGalleyId')) {
 			$galley =& $galleyDao->getGalleyByBestGalleyId($galleyId, $article->getArticleId());
 		} else {
@@ -402,7 +402,7 @@ class ArticleHandler extends Handler {
 		$issue =& $this->issue;
 		$article =& $this->article;		
 
-		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
+		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 		if ($journal->getSetting('enablePublicGalleyId')) {
 			$galley =& $galleyDao->getGalleyByBestGalleyId($galleyId, $article->getArticleId());
 		} else {
@@ -425,11 +425,11 @@ class ArticleHandler extends Handler {
 		$issue =& $this->issue;
 		$article =& $this->article;		
 
-		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
+		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
 		if ($journal->getSetting('enablePublicSuppFileId')) {
-			$suppFile = &$suppFileDao->getSuppFileByBestSuppFileId($article->getArticleId(), $suppId);
+			$suppFile =& $suppFileDao->getSuppFileByBestSuppFileId($article->getArticleId(), $suppId);
 		} else {
-			$suppFile = &$suppFileDao->getSuppFile((int) $suppId, $article->getArticleId());
+			$suppFile =& $suppFileDao->getSuppFile((int) $suppId, $article->getArticleId());
 		}
 
 		if ($article && $suppFile) {
@@ -466,7 +466,7 @@ class ArticleHandler extends Handler {
 
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		if (isset($publishedArticle)) {
-			$issue = &$issueDao->getIssueByArticleId($publishedArticle->getArticleId(), $journalId);
+			$issue =& $issueDao->getIssueByArticleId($publishedArticle->getArticleId(), $journalId);
 		} else {
 			$articleDao =& DAORegistry::getDAO('ArticleDAO');
 			$article =& $articleDao->getArticle((int) $articleId, $journalId);

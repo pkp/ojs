@@ -40,7 +40,7 @@ class LayoutEditorSubmission extends Article {
 	 * @return array ArticleGalley
 	 */
 	function &getGalleys() {
-		$galleys = &$this->getData('galleys');
+		$galleys =& $this->getData('galleys');
 		return $galleys;
 	}
 
@@ -77,7 +77,7 @@ class LayoutEditorSubmission extends Article {
 	 * @return array
 	 */
 	function &getEditAssignments() {
-		$editAssignments = &$this->getData('editAssignments');
+		$editAssignments =& $this->getData('editAssignments');
 		return $editAssignments;
 	}
 

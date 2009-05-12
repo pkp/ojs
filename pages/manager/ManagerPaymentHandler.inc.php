@@ -32,9 +32,9 @@ class ManagerPaymentHandler extends ManagerHandler {
 		// FIXME: Need construction by reference or validation always fails on PHP 4.x
 		$form =& new PaymentSettingsForm();
 
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		$journalSettingsDAO =& DAORegistry::getDAO('JournalSettingsDAO');
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
 		$templateMgr->assign('enableSubscripitons', $journalSettingsDAO->getSetting($journal->getJournalId(), 'enableSubscriptions'));
 
@@ -57,9 +57,9 @@ class ManagerPaymentHandler extends ManagerHandler {
 		// FIXME: Need construction by reference or validation always fails on PHP 4.x
 		$settingsForm =& new PaymentSettingsForm();
 
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		$journalSettingsDAO =& DAORegistry::getDAO('JournalSettingsDAO');
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
 		$templateMgr->assign('enableSubscripitons', $journalSettingsDAO->getSetting($journal->getJournalId(), 'enableSubscriptions'));
 
@@ -70,7 +70,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 		if ($settingsForm->validate()) {
 			$settingsForm->save();
 
- 			$templateMgr = &TemplateManager::getManager();
+ 			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign(array(
 				'currentUrl' => Request::url(null, null, 'payments'),
 				'pageTitle' => 'manager.payment.feePaymentOptions',
@@ -90,11 +90,11 @@ class ManagerPaymentHandler extends ManagerHandler {
 	  */
 	 function viewPayments($args) {
 		$rangeInfo =& Handler::getRangeInfo('CompletedPayments');
-		$paymentDao = &DAORegistry::getDAO('OJSCompletedPaymentDAO');
+		$paymentDao =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
 		$journal =& Request::getJournal();
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
-		$payments = &$paymentDao->getPaymentsByJournalId($journal->getJournalId(), $rangeInfo);
+		$payments =& $paymentDao->getPaymentsByJournalId($journal->getJournalId(), $rangeInfo);
 
 		$templateMgr->assign_by_ref('payments', $payments);
 
@@ -106,9 +106,9 @@ class ManagerPaymentHandler extends ManagerHandler {
 	  * Display a single Completed payment 
 	  */
 	 function viewPayment($args) {
-		$paymentDao = &DAORegistry::getDAO('OJSCompletedPaymentDAO');
+		$paymentDao =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
 		$completedPaymentId = $args[0];
-		$payment = &$paymentDao->getCompletedPayment($completedPaymentId);
+		$payment =& $paymentDao->getCompletedPayment($completedPaymentId);
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
@@ -155,7 +155,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 		$settingsForm =& new PayMethodSettingsForm();
 		$settingsForm->readInputData();
 
- 		$templateMgr = &TemplateManager::getManager();
+ 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
 
 		if ($settingsForm->validate()) {

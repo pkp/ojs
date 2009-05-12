@@ -42,7 +42,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 			$articleFileManager = new ArticleFileManager($articleId);
 			$articleFileManager->deleteArticleTree();
 
-			$articleDao = &DAORegistry::getDAO('ArticleDAO');
+			$articleDao =& DAORegistry::getDAO('ArticleDAO');
 			$articleDao->deleteArticleById($args[0]);
 		}
 
@@ -72,32 +72,32 @@ class TrackSubmissionHandler extends AuthorHandler {
 	 * Display a summary of the status of an author's submission.
 	 */
 	function submission($args) {
-		$journal = &Request::getJournal();
-		$user = &Request::getUser();
+		$journal =& Request::getJournal();
+		$user =& Request::getUser();
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 
 		$this->validate($articleId);
 		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId);
 
-		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 		$journalSettings = $journalSettingsDao->getJournalSettings($journal->getJournalId());
 
 		// Setting the round.
 		$round = isset($args[1]) ? $args[1] : $submission->getCurrentRound();
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 
-		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle = &$publishedArticleDao->getPublishedArticleByArticleId($submission->getArticleId());
+		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($submission->getArticleId());
 		if ($publishedArticle) {
-			$issueDao = &DAORegistry::getDAO('IssueDAO');
-			$issue = &$issueDao->getIssueById($publishedArticle->getIssueId());
+			$issueDao =& DAORegistry::getDAO('IssueDAO');
+			$issue =& $issueDao->getIssueById($publishedArticle->getIssueId());
 			$templateMgr->assign_by_ref('issue', $issue);
 		}
 
-		$sectionDao = &DAORegistry::getDAO('SectionDAO');
-		$section = &$sectionDao->getSection($submission->getSectionId());
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$section =& $sectionDao->getSection($submission->getSectionId());
 		$templateMgr->assign_by_ref('section', $section);
 
 		$templateMgr->assign_by_ref('journalSettings', $journalSettings);
@@ -140,23 +140,23 @@ class TrackSubmissionHandler extends AuthorHandler {
 	 * Display specific details of an author's submission.
 	 */
 	function submissionReview($args) {
-		$user = &Request::getUser();
+		$user =& Request::getUser();
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 
 		$this->validate($articleId);
 		$authorSubmission =& $this->submission;
 		$this->setupTemplate(true, $articleId);
 
-		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewModifiedByRound = $reviewAssignmentDao->getLastModifiedByRound($articleId);
 		$reviewEarliestNotificationByRound = $reviewAssignmentDao->getEarliestNotificationByRound($articleId);
 		$reviewFilesByRound =& $reviewAssignmentDao->getReviewFilesByRound($articleId);
-		$authorViewableFilesByRound = &$reviewAssignmentDao->getAuthorViewableFilesByRound($articleId);
+		$authorViewableFilesByRound =& $reviewAssignmentDao->getAuthorViewableFilesByRound($articleId);
 
 		$editorDecisions = $authorSubmission->getDecisions($authorSubmission->getCurrentRound());
 		$lastDecision = count($editorDecisions) >= 1 ? $editorDecisions[count($editorDecisions) - 1] : null;
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 
 		$reviewAssignments =& $authorSubmission->getReviewAssignments();
 		$templateMgr->assign_by_ref('reviewAssignments', $reviewAssignments);
@@ -257,7 +257,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 
 		if ($authorSubmission->getStatus() != STATUS_PUBLISHED && $authorSubmission->getStatus() != STATUS_ARCHIVED) {
 			$suppFileId = Request::getUserVar('fileId');
-			$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
+			$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
 			$suppFile = $suppFileDao->getSuppFile($suppFileId, $articleId);
 
 			if (isset($suppFile) && $suppFile != null) {
@@ -302,8 +302,8 @@ class TrackSubmissionHandler extends AuthorHandler {
 	 * Display the status and other details of an author's submission.
 	 */
 	function submissionEditing($args) {
-		$journal = &Request::getJournal();
-		$user = &Request::getUser();
+		$journal =& Request::getJournal();
+		$user =& Request::getUser();
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 
 		$this->validate($articleId);
@@ -314,7 +314,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		import('submission.proofreader.ProofreaderAction');
 		ProofreaderAction::proofreadingUnderway($submission, 'SIGNOFF_PROOFREADING_AUTHOR');
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign_by_ref('copyeditor', $submission->getUserBySignoffType('SIGNOFF_COPYEDITING_INITIAL'));
 		$templateMgr->assign_by_ref('submissionFile', $submission->getSubmissionFile());
@@ -360,7 +360,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 
 		// If the copy editor has completed copyediting, disallow
 		// the author from changing the metadata.
-		$signoffDao = &DAORegistry::getDAO('SignoffDAO');
+		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 		$initialSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $submission->getArticleId());
 		if ($initialSignoff->getDateCompleted() != null || AuthorAction::saveMetadata($submission)) {
  			Request::redirect(null, null, 'submission', $articleId);
@@ -385,7 +385,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$submission->setWidth('', $formLocale);
 		$submission->setHeight('', $formLocale);
 
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$articleDao->updateArticle($submission);
 
 		Request::redirect(null, null, 'viewMetadata', $articleId);
@@ -459,14 +459,14 @@ class TrackSubmissionHandler extends AuthorHandler {
 	function validate($articleId) {
 		parent::validate();
 
-		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
-		$roleDao = &DAORegistry::getDAO('RoleDAO');
-		$journal = &Request::getJournal();
-		$user = &Request::getUser();
+		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$journal =& Request::getJournal();
+		$user =& Request::getUser();
 
 		$isValid = true;
 
-		$authorSubmission = &$authorSubmissionDao->getAuthorSubmission($articleId);
+		$authorSubmission =& $authorSubmissionDao->getAuthorSubmission($articleId);
 
 		if ($authorSubmission == null) {
 			$isValid = false;
@@ -517,7 +517,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$this->validate($articleId);
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->display('submission/layout/proofGalley.tpl');
@@ -532,7 +532,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$this->validate($articleId);
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('backHandler', 'submissionEditing');
@@ -548,14 +548,14 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$this->validate($articleId);
 
-		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-		$galley = &$galleyDao->getGalley($galleyId, $articleId);
+		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$galley =& $galleyDao->getGalley($galleyId, $articleId);
 
 		import('file.ArticleFileManager'); // FIXME
 
 		if (isset($galley)) {
 			if ($galley->isHTMLGalley()) {
-				$templateMgr = &TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->assign_by_ref('galley', $galley);
 				if ($galley->isHTMLGalley() && $styleFile =& $galley->getStyleFile()) {
 					$templateMgr->addStyleSheet(Request::url(null, 'article', 'viewFile', array(

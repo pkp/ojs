@@ -59,7 +59,7 @@ class EmailHandler extends ManagerHandler {
 		$this->validate();
 		$this->setupTemplate(true);
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'emails'), 'manager.emails'));
 
 		$emailKey = !isset($args) || empty($args) ? null : $args[0];
@@ -102,10 +102,10 @@ class EmailHandler extends ManagerHandler {
 	 */
 	function deleteCustomEmail($args) {
 		$this->validate();
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		$emailKey = array_shift($args);
 
-		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
+		$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
 		if ($emailTemplateDao->customTemplateExistsByKey($emailKey, $journal->getJournalId())) {
 			$emailTemplateDao->deleteEmailTemplateByKey($emailKey, $journal->getJournalId());
 		}
@@ -121,9 +121,9 @@ class EmailHandler extends ManagerHandler {
 		$this->validate();
 
 		if (isset($args) && !empty($args)) {
-			$journal = &Request::getJournal();
+			$journal =& Request::getJournal();
 
-			$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
+			$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
 			$emailTemplateDao->deleteEmailTemplateByKey($args[0], $journal->getJournalId());
 		}
 
@@ -136,8 +136,8 @@ class EmailHandler extends ManagerHandler {
 	function resetAllEmails() {
 		$this->validate();
 
-		$journal = &Request::getJournal();
-		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
+		$journal =& Request::getJournal();
+		$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
 		$emailTemplateDao->deleteEmailTemplatesByJournal($journal->getJournalId());
 
 		Request::redirect(null, null, 'emails');
@@ -151,9 +151,9 @@ class EmailHandler extends ManagerHandler {
 		$this->validate();
 
 		if (isset($args) && !empty($args)) {
-			$journal = &Request::getJournal();
+			$journal =& Request::getJournal();
 
-			$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
+			$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
 			$emailTemplate = $emailTemplateDao->getBaseEmailTemplate($args[0], $journal->getJournalId());
 
 			if (isset($emailTemplate)) {
@@ -184,9 +184,9 @@ class EmailHandler extends ManagerHandler {
 		$this->validate();
 
 		if (isset($args) && !empty($args)) {
-			$journal = &Request::getJournal();
+			$journal =& Request::getJournal();
 
-			$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
+			$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
 			$emailTemplate = $emailTemplateDao->getBaseEmailTemplate($args[0], $journal->getJournalId());
 
 			if (isset($emailTemplate)) {

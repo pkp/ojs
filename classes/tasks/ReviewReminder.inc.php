@@ -27,11 +27,11 @@ class ReviewReminder extends ScheduledTask {
 	}
 
 	function sendReminder ($reviewAssignment, $article, $journal) {
-		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
-		$userDao = &DAORegistry::getDAO('UserDAO');
+		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+		$userDao =& DAORegistry::getDAO('UserDAO');
 		$reviewId = $reviewAssignment->getReviewId();
 
-		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
+		$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId());
 		if (!isset($reviewer)) return false;
 
 		import('mail.ArticleMailTemplate');
@@ -82,19 +82,19 @@ class ReviewReminder extends ScheduledTask {
 		$article = null;
 		$journal = null;
 
-		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$journalDao = &DAORegistry::getDAO('JournalDAO');
+		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
 
-		$incompleteAssignments = &$reviewAssignmentDao->getIncompleteReviewAssignments();
+		$incompleteAssignments =& $reviewAssignmentDao->getIncompleteReviewAssignments();
 		foreach ($incompleteAssignments as $reviewAssignment) {
 			// Fetch the Article and the Journal if necessary.
 			if ($article == null || $article->getArticleId() != $reviewAssignment->getArticleId()) {
 				unset($article);
-				$article = &$articleDao->getArticle($reviewAssignment->getArticleId());
+				$article =& $articleDao->getArticle($reviewAssignment->getArticleId());
 				if ($journal == null || $journal->getJournalId() != $article->getJournalId()) {
 					unset($journal);
-					$journal = &$journalDao->getJournal($article->getJournalId());
+					$journal =& $journalDao->getJournal($article->getJournalId());
 
 					$inviteReminderEnabled = $journal->getSetting('remindForInvite');
 					$submitReminderEnabled = $journal->getSetting('remindForSubmit');

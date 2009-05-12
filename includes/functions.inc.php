@@ -47,11 +47,11 @@ function initSystem() {
 
 	if (Config::getVar('general', 'installed')) {
 		// Initialize database connection
-		$conn = &DBConnection::getInstance();
+		$conn =& DBConnection::getInstance();
 
 		if (!$conn->isConnected()) {
 			if (Config::getVar('database', 'debug')) {
-				$dbconn = &$conn->getDBConn();
+				$dbconn =& $conn->getDBConn();
 				fatalError('Database connection failed: ' . $dbconn->errorMsg());
 
 			} else {

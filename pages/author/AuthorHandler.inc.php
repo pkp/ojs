@@ -37,9 +37,9 @@ class AuthorHandler extends Handler {
 		
 		$journal =& Request::getJournal();
 
-		$user = &Request::getUser();
+		$user =& Request::getUser();
 		$rangeInfo =& Handler::getRangeInfo('submissions');
-		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
+		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
 
 		$page = isset($args[0]) ? $args[0] : '';
 		switch($page) {
@@ -53,7 +53,7 @@ class AuthorHandler extends Handler {
 
 		$submissions = $authorSubmissionDao->getAuthorSubmissions($user->getUserId(), $journal->getJournalId(), $active, $rangeInfo);
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('pageToDisplay', $page);
 		if (!$active) {
 			// Make view counts available if enabled.
@@ -97,7 +97,7 @@ class AuthorHandler extends Handler {
 	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null) {
 		parent::setupTemplate();
 		Locale::requireComponents(array(LOCALE_COMPONENT_OJS_AUTHOR, LOCALE_COMPONENT_PKP_SUBMISSION));
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 
 		$pageHierarchy = $subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'author'), 'user.role.author'), array(Request::url(null, 'author'), 'article.submissions'))
 			: array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'author'), 'user.role.author'));

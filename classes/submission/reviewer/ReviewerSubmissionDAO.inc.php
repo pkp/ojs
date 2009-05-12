@@ -33,14 +33,14 @@ class ReviewerSubmissionDAO extends DAO {
 	 */
 	function ReviewerSubmissionDAO() {
 		parent::DAO();
-		$this->articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$this->authorDao = &DAORegistry::getDAO('AuthorDAO');
-		$this->userDao = &DAORegistry::getDAO('UserDAO');
-		$this->reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
-		$this->editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
-		$this->articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-		$this->suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
-		$this->articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
+		$this->articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$this->authorDao =& DAORegistry::getDAO('AuthorDAO');
+		$this->userDao =& DAORegistry::getDAO('UserDAO');
+		$this->reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+		$this->editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
+		$this->articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+		$this->suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+		$this->articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
 	}
 
 	/**
@@ -52,7 +52,7 @@ class ReviewerSubmissionDAO extends DAO {
 	function &getReviewerSubmission($reviewId) {
 		$primaryLocale = Locale::getPrimaryLocale();
 		$locale = Locale::getLocale();
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT	a.*,
 				r.*,
 				r2.review_revision,
@@ -84,7 +84,7 @@ class ReviewerSubmissionDAO extends DAO {
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnReviewerSubmissionFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnReviewerSubmissionFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -226,7 +226,7 @@ class ReviewerSubmissionDAO extends DAO {
 			$sql .= ' AND (r.date_completed IS NOT NULL OR r.cancelled = 1 OR r.declined = 1)';
 		}
 
-		$result = &$this->retrieveRange(
+		$result =& $this->retrieveRange(
 			$sql,
 			array(
 				'title',
@@ -259,7 +259,7 @@ class ReviewerSubmissionDAO extends DAO {
 
 		$sql = 'SELECT r.date_completed, r.declined, r.cancelled FROM articles a LEFT JOIN review_assignments r ON (a.article_id = r.article_id) LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round)  WHERE a.journal_id = ? AND r.reviewer_id = ? AND r.date_notified IS NOT NULL';
 
-		$result = &$this->retrieve($sql, array($journalId, $reviewerId));
+		$result =& $this->retrieve($sql, array($journalId, $reviewerId));
 
 		while (!$result->EOF) {
 			if ($result->fields['date_completed'] == null && $result->fields['declined'] != 1 && $result->fields['cancelled'] != 1) {
@@ -285,11 +285,11 @@ class ReviewerSubmissionDAO extends DAO {
 		$decisions = array();
 
 		if ($round == null) {
-			$result = &$this->retrieve(
+			$result =& $this->retrieve(
 				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE article_id = ? ORDER BY date_decided ASC', $articleId
 			);
 		} else {
-			$result = &$this->retrieve(
+			$result =& $this->retrieve(
 				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE article_id = ? AND round = ? ORDER BY date_decided ASC',
 				array($articleId, $round)
 			);
