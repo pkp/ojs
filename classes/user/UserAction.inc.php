@@ -163,7 +163,6 @@ class UserAction {
 
 		return true;
 	}
-
 }
 
 ?>

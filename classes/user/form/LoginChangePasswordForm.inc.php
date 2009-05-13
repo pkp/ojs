@@ -72,14 +72,13 @@ class LoginChangePasswordForm extends Form {
 			}
 
 			$user->setMustChangePassword(0);
-			$userDao->updateUser($user);
+			$userDao->updateObject($user);
 			return true;
 
 		} else {
 			return false;
 		}
 	}
-
 }
 
 ?>

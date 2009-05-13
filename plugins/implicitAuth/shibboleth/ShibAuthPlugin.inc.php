@@ -121,7 +121,7 @@ class ShibAuthPlugin extends ImplicitAuthPlugin {
 				}
 				
 				$user->setAuthStr($uid);
-				$userDao->updateUser($user);
+				$userDao->updateObject($user);
 				
 				// Go see if this user should be made an admin
 				

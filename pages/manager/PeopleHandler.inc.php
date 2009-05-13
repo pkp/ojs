@@ -550,7 +550,7 @@ class PeopleHandler extends ManagerHandler {
 				$user->setDisabled(1);
 				$user->setDisabledReason(Request::getUserVar('reason'));
 			}
-			$userDao->updateUser($user);
+			$userDao->updateObject($user);
 		}
 
 		Request::redirect(null, null, 'people', 'all');
@@ -573,7 +573,7 @@ class PeopleHandler extends ManagerHandler {
 			if ($user) {
 				$user->setDisabled(0);
 			}
-			$userDao->updateUser($user);
+			$userDao->updateObject($user);
 		}
 
 		Request::redirect(null, null, 'people', 'all');

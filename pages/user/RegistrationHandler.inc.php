@@ -144,7 +144,7 @@ class RegistrationHandler extends UserHandler {
 			$user->setDisabled(false);
 			$user->setDisabledReason('');
 			$user->setDateValidated(Core::getCurrentDate());
-			$userDao->updateUser($user);
+			$userDao->updateObject($user);
 
 			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign('message', 'user.login.activated');

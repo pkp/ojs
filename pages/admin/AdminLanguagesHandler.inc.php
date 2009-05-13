@@ -81,7 +81,7 @@ class AdminLanguagesHandler extends AdminHandler {
 		$site->setSupportedLocales($newSupportedLocales);
 
 		$siteDao =& DAORegistry::getDAO('SiteDAO');
-		$siteDao->updateSite($site);
+		$siteDao->updateObject($site);
 
 		AdminLanguagesHandler::removeLocalesFromJournals();
 
@@ -117,7 +117,7 @@ class AdminLanguagesHandler extends AdminHandler {
 
 			$site->setInstalledLocales($installedLocales);
 			$siteDao =& DAORegistry::getDAO('SiteDAO');
-			$siteDao->updateSite($site);
+			$siteDao->updateObject($site);
 		}
 
 		Request::redirect(null, null, 'languages');
@@ -142,7 +142,7 @@ class AdminLanguagesHandler extends AdminHandler {
 				$supportedLocales = array_diff($supportedLocales, array($locale));
 				$site->setSupportedLocales($supportedLocales);
 				$siteDao =& DAORegistry::getDAO('SiteDAO');
-				$siteDao->updateSite($site);
+				$siteDao->updateObject($site);
 
 				AdminLanguagesHandler::removeLocalesFromJournals();
 				Locale::uninstallLocale($locale);

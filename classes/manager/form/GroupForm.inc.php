@@ -108,7 +108,7 @@ class GroupForm extends Form {
 
 		// Update or insert group group
 		if ($this->group->getId() != null) {
-			$groupDao->updateGroup($this->group);
+			$groupDao->updateObject($this->group);
 		} else {
 			$this->group->setSequence(REALLY_BIG_NUMBER);
 			$groupDao->insertGroup($this->group);

@@ -150,7 +150,7 @@ class EmailHandler extends UserHandler {
 			$redirectUrl = Request::getUserVar('redirectUrl');
 			if (empty($redirectUrl)) $redirectUrl = Request::url(null, 'user');
 			$user->setDateLastEmail(Core::getCurrentDate());
-			$userDao->updateUser($user);
+			$userDao->updateObject($user);
 			Request::redirectUrl($redirectUrl);
 		} else {
 			$email->displayEditForm(Request::url(null, null, 'email'), array('redirectUrl' => Request::getUserVar('redirectUrl'), 'articleId' => $articleId), null, array('disableSkipButton' => true, 'articleId' => $articleId));
