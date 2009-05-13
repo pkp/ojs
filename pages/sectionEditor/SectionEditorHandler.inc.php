@@ -99,7 +99,7 @@ class SectionEditorHandler extends Handler {
 		}
 
 		$submissions =& $sectionEditorSubmissionDao->$functionName(
-			$user->getUserId(),
+			$user->getId(),
 			$journal->getJournalId(),
 			$filterSection,
 			$searchField,

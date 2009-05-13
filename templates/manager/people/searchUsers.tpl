@@ -115,10 +115,10 @@ function toggleChecked() {
 </tr>
 <tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
 {iterate from=users item=user}
-{assign var="userid" value=$user->getUserId()}
+{assign var="userid" value=$user->getId()}
 {assign var="stats" value=$statistics[$userid]}
 <tr valign="top">
-	<td><input type="checkbox" name="users[]" value="{$user->getUserId()}" /></td>
+	<td><input type="checkbox" name="users[]" value="{$user->getId()}" /></td>
 	<td><a class="action" href="{url op="userProfile" path=$userid}">{$user->getUsername()}</a></td>
 	<td>{$user->getFullName(true)|escape}</td>
 	<td class="nowrap">
@@ -128,15 +128,15 @@ function toggleChecked() {
 	</td>
 	<td align="right" class="nowrap">
 		{if $roleId}
-		<a href="{url op="enroll" path=$roleId userId=$user->getUserId()}" class="action">{translate key="manager.people.enroll"}</a>
+		<a href="{url op="enroll" path=$roleId userId=$user->getId()}" class="action">{translate key="manager.people.enroll"}</a>
 		{else}
-		<a href="#" onclick="enrollUser({$user->getUserId()})" class="action">{translate key="manager.people.enroll"}</a>
+		<a href="#" onclick="enrollUser({$user->getId()})" class="action">{translate key="manager.people.enroll"}</a>
 		{/if}
-		{if $thisUser->getUserId() != $user->getUserId()}
+		{if $thisUser->getId() != $user->getId()}
 			{if $user->getDisabled()}
-				|&nbsp;<a href="{url op="enableUser" path=$user->getUserId()}" class="action">{translate key="manager.people.enable"}</a>
+				|&nbsp;<a href="{url op="enableUser" path=$user->getId()}" class="action">{translate key="manager.people.enable"}</a>
 			{else}
-				|&nbsp;<a href="javascript:confirmAndPrompt({$user->getUserId()})" class="action">{translate key="manager.people.disable"}</a>
+				|&nbsp;<a href="javascript:confirmAndPrompt({$user->getId()})" class="action">{translate key="manager.people.disable"}</a>
 			{/if}
 		{/if}
 	</td>

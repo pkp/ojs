@@ -253,7 +253,7 @@ class ImportOJS1 {
 		foreach ($admins->toArray() as $admin) {
 			$role = new Role();
 			$role->setJournalId($this->journalId);
-			$role->setUserId($admin->getUserId());
+			$role->setUserId($admin->getId());
 			$role->setRoleId(ROLE_ID_JOURNAL_MANAGER);
 			$roleDao->insertRole($role);
 		}
@@ -622,7 +622,7 @@ class ImportOJS1 {
 
 				$userDao->insertUser($user);
 			}
-			$userId = $user->getUserId();
+			$userId = $user->getId();
 
 			if ($row['fkEditorID']) {
 				$role = new Role();

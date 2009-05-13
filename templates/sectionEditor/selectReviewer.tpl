@@ -51,7 +51,7 @@
 </tr>
 <tr><td colspan="{$numCols|escape}" class="headseparator">&nbsp;</td></tr>
 {iterate from=reviewers item=reviewer}
-{assign var="userId" value=$reviewer->getUserId()}
+{assign var="userId" value=$reviewer->getId()}
 {assign var="qualityCount" value=$averageQualityRatings[$userId].count}
 {assign var="reviewerStats" value=$reviewerStatistics[$userId]}
 
@@ -84,7 +84,7 @@
 		{if $reviewer->review_id}
 			{translate key="common.alreadyAssigned"}
 		{else}
-		<a class="action" href="{url op="selectReviewer" path=$articleId|to_array:$reviewer->getUserId()}">{translate key="common.assign"}</a>
+		<a class="action" href="{url op="selectReviewer" path=$articleId|to_array:$reviewer->getId()}">{translate key="common.assign"}</a>
 		{/if}
 	</td>
 </tr>

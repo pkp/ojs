@@ -55,7 +55,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$journalSettings = $journalSettingsDao->getJournalSettings($journal->getJournalId());
 
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		$isEditor = $roleDao->roleExists($journal->getJournalId(), $user->getUserId(), ROLE_ID_EDITOR);
+		$isEditor = $roleDao->roleExists($journal->getJournalId(), $user->getId(), ROLE_ID_EDITOR);
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$section =& $sectionDao->getSection($submission->getSectionId());
@@ -71,7 +71,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign_by_ref('suppFiles', $submission->getSuppFiles());
 		$templateMgr->assign_by_ref('reviewFile', $submission->getReviewFile());
 		$templateMgr->assign_by_ref('journalSettings', $journalSettings);
-		$templateMgr->assign('userId', $user->getUserId());
+		$templateMgr->assign('userId', $user->getId());
 		$templateMgr->assign('isEditor', $isEditor);
 		$templateMgr->assign('enableComments', $enableComments);
 
@@ -295,7 +295,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$user =& Request::getUser();
-		$templateMgr->assign('isEditor', $roleDao->roleExists($journal->getJournalId(), $user->getUserId(), ROLE_ID_EDITOR));
+		$templateMgr->assign('isEditor', $roleDao->roleExists($journal->getJournalId(), $user->getId(), ROLE_ID_EDITOR));
 
 		import('issue.IssueAction');
 		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
@@ -2175,7 +2175,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 		$signoff = $signoffDao->build('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $articleId);
 		if (!$signoff->getUserId()) {
-			$signoff->setUserId($user->getUserId());
+			$signoff->setUserId($user->getId());
 		}
 		$signoff->setDateNotified(Core::getCurrentDate());
 		$signoffDao->updateObject($signoff);
@@ -2241,7 +2241,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 		$signoff = $signoffDao->build('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
 		if (!$signoff->getUserId()) {
-			$signoff->setUserId($user->getUserId());
+			$signoff->setUserId($user->getId());
 		}
 		$signoff->setDateNotified(Core::getCurrentDate());
 		$signoff->setDateUnderway(null);
@@ -2391,7 +2391,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$queuedPayment =& $paymentManager->createQueuedPayment(
 			$journal->getJournalId(),
 			PAYMENT_TYPE_SUBMISSION,
-			$markAsPaid ? $submission->getUserId() : $user->getUserId(),
+			$markAsPaid ? $submission->getUserId() : $user->getId(),
 			$articleId,
 			$markAsPaid ? $journal->getSetting('submissionFee') : 0,
 			$markAsPaid ? $journal->getSetting('currency') : ''
@@ -2418,7 +2418,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$queuedPayment =& $paymentManager->createQueuedPayment(
 			$journal->getJournalId(),
 			PAYMENT_TYPE_FASTTRACK,
-			$markAsPaid ? $submission->getUserId() : $user->getUserId(),
+			$markAsPaid ? $submission->getUserId() : $user->getId(),
 			$articleId,
 			$markAsPaid ? $journal->getSetting('fastTrackFee') : 0,
 			$markAsPaid ? $journal->getSetting('currency') : ''
@@ -2447,7 +2447,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$queuedPayment =& $paymentManager->createQueuedPayment(
 			$journal->getJournalId(),
 			PAYMENT_TYPE_PUBLICATION,
-			$markAsPaid ? $submission->getUserId() : $user->getUserId(),
+			$markAsPaid ? $submission->getUserId() : $user->getId(),
 			$articleId,
 			$markAsPaid ? $journal->getSetting('publicationFee') : 0,
 			$markAsPaid ? $journal->getSetting('currency') : ''
@@ -2508,7 +2508,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				$editAssignments =& $sectionEditorSubmission->getEditAssignments();
 				$wasFound = false;
 				foreach ($editAssignments as $editAssignment) {
-					if ($editAssignment->getEditorId() == $user->getUserId()) {
+					if ($editAssignment->getEditorId() == $user->getId()) {
 						$templateMgr->assign('canReview', $editAssignment->getCanReview());
 						$templateMgr->assign('canEdit', $editAssignment->getCanEdit());
 						switch ($access) {
@@ -2542,7 +2542,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
 		$editAssignments =& $sectionEditorSubmission->getEditAssignments();
 		foreach ($editAssignments as $editAssignment) {
-			if ($editAssignment->getEditorId() == $user->getUserId() && $editAssignment->getDateUnderway() === null) {
+			if ($editAssignment->getEditorId() == $user->getId() && $editAssignment->getDateUnderway() === null) {
 				$editAssignment->setDateUnderway(Core::getCurrentDate());
 				$editAssignmentDao->updateEditAssignment($editAssignment);
 			}

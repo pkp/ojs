@@ -107,7 +107,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 
 		if (isset($submission)) {
 			$proofSignoff = $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $articleId);
-			if ($proofSignoff->getUserId() == $user->getUserId()) {
+			if ($proofSignoff->getUserId() == $user->getId()) {
 				$isValid = true;
 			}			
 		}

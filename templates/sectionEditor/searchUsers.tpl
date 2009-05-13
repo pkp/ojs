@@ -41,14 +41,14 @@
 </tr>
 <tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
 {iterate from=users item=user}
-{assign var="userid" value=$user->getUserId()}
+{assign var="userid" value=$user->getId()}
 {assign var="stats" value=$statistics[$userid]}
 <tr valign="top">
-	<td><input type="checkbox" name="users[]" value="{$user->getUserId()}" /></td>
+	<td><input type="checkbox" name="users[]" value="{$user->getId()}" /></td>
 	<td><a class="action" href="{url op="userProfile" path=$userid}">{$user->getUsername()|escape}</a></td>
 	<td>{$user->getFullName(true)|escape}</td>
 	<td>{$user->getEmail(true)|escape}</td>
-	<td><a href="{url op="enroll" path=$articleId userId=$user->getUserId()}" class="action">{translate key="manager.people.enroll"}</a></td>
+	<td><a href="{url op="enroll" path=$articleId userId=$user->getId()}" class="action">{translate key="manager.people.enroll"}</a></td>
 </tr>
 <tr><td colspan="5" class="{if $users->eof()}end{/if}separator">&nbsp;</td></tr>
 {/iterate}

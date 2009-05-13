@@ -566,7 +566,7 @@ class IssueManagementHandler extends EditorHandler {
 		$allUsers = $roleDao->getUsersByJournalId($journalId);
 		while (!$allUsers->eof()) {
 			$user =& $allUsers->next();
-			$notificationUsers[] = array('id' => $user->getUserId());
+			$notificationUsers[] = array('id' => $user->getId());
 			unset($user);
 		}
 		$url = Request::url(null, 'issue', 'current');

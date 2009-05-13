@@ -79,7 +79,7 @@ class CommentForm extends Form {
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', $article->getArticleId());
 		$templateMgr->assign('commentTitle', strip_tags($article->getLocalizedTitle()));
-		$templateMgr->assign('userId', $this->user->getUserId());
+		$templateMgr->assign('userId', $this->user->getId());
 		$templateMgr->assign('articleComments', $articleComments);
 
 		parent::display();
@@ -111,7 +111,7 @@ class CommentForm extends Form {
 		$comment->setRoleId($this->roleId);
 		$comment->setArticleId($article->getArticleId());
 		$comment->setAssocId($this->assocId);
-		$comment->setAuthorId($this->user->getUserId());
+		$comment->setAuthorId($this->user->getId());
 		$comment->setCommentTitle($this->getData('commentTitle'));
 		$comment->setComments($this->getData('comments'));
 		$comment->setDatePosted(Core::getCurrentDate());

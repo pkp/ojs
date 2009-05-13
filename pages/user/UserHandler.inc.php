@@ -43,7 +43,7 @@ class UserHandler extends Handler {
 		$templateMgr->assign('helpTopicId', 'user.userHome');
 		
 		$user =& Request::getUser();
-		$userId = $user->getUserId();
+		$userId = $user->getId();
 		
 		$setupIncomplete = array();
 		$submissionsCount = array();
@@ -97,7 +97,7 @@ class UserHandler extends Handler {
 			if ( $subscriptionEnabled ) {
 				import('subscription.SubscriptionDAO');
 				$subscriptionDAO =& DAORegistry::getDAO('SubscriptionDAO');
-				$subscriptionId = $subscriptionDAO->getSubscriptionIdByUser($user->getUserId(), $journal->getJournalId());
+				$subscriptionId = $subscriptionDAO->getSubscriptionIdByUser($user->getId(), $journal->getJournalId());
 				$templateMgr->assign('userHasSubscription', $subscriptionId);
 				if ( $subscriptionId !== false ) {
 					$subscription =& $subscriptionDAO->getSubscription($subscriptionId);
@@ -248,7 +248,7 @@ class UserHandler extends Handler {
 			$role = new Role();
 			$role->setJournalId($journal->getJournalId());
 			$role->setRoleId($roleId);
-			$role->setUserId($user->getUserId());
+			$role->setUserId($user->getId());
 
 			$roleDao =& DAORegistry::getDAO('RoleDAO');
 			$roleDao->insertRole($role);
@@ -351,13 +351,13 @@ class UserHandler extends Handler {
 		$journal =& Request::getJournal();
 		if ($journal) {
 			$user =& Request::getUser();
-			$subscriptionId = $subscriptionDAO->getSubscriptionIdByUser($user->getUserId(), $journal->getJournalId());
+			$subscriptionId = $subscriptionDAO->getSubscriptionIdByUser($user->getId(), $journal->getJournalId());
 
 			$subscriptionDAO =& DAORegistry::getDAO('SubscriptionDAO');
 			$subscription =& $subscriptionDAO->getSubscription($subscriptionId);
 			$subscriptionType =& $subscriptionTypeDAO->getSubscriptionType($subscription->getTypeId());
 
-			$queuedPayment =& $paymentManager->createQueuedPayment($journal->getJournalId(), PAYMENT_TYPE_SUBSCRIPTION, $user->getUserId(), $subscriptionId, $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
+			$queuedPayment =& $paymentManager->createQueuedPayment($journal->getJournalId(), PAYMENT_TYPE_SUBSCRIPTION, $user->getId(), $subscriptionId, $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
 			$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
 
 			$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
@@ -375,7 +375,7 @@ class UserHandler extends Handler {
 		$journal =& Request::getJournal();
 		$user =& Request::getUser();
 
-		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getJournalId(), PAYMENT_TYPE_MEMBERSHIP, $user->getUserId(), null,  $journal->getSetting('membershipFee'));
+		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getJournalId(), PAYMENT_TYPE_MEMBERSHIP, $user->getId(), null,  $journal->getSetting('membershipFee'));
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
 
 		$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);

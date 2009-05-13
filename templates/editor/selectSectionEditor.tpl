@@ -41,7 +41,7 @@
 </tr>
 <tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
 {iterate from=editors item=editor}
-{assign var=editorId value=$editor->getUserId()}
+{assign var=editorId value=$editor->getId()}
 <tr valign="top">
 	<td><a class="action" href="{url op="userProfile" path=$editorId}">{$editor->getFullName()}</a></td>
 	<td>

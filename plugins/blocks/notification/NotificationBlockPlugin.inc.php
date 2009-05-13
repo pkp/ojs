@@ -89,7 +89,7 @@ class NotificationBlockPlugin extends BlockPlugin {
 		$journal =& Request::getJournal();
 		
 		if ($user && $journal) {
-			$userId = $user->getUserId();
+			$userId = $user->getId();
 			$notificationDao =& DAORegistry::getDAO('NotificationDAO');
 			$templateMgr->assign('unreadNotifications',  $notificationDao->getUnreadNotificationCount($userId));
 		}

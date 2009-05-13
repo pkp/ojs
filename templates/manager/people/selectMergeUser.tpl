@@ -91,7 +91,7 @@
 	{iterate from=users item=user}
 	{assign var=userExists value=1}
 	<tr valign="top">
-		<td><a class="action" href="{url op="userProfile" path=$user->getUserId()}">{$user->getUsername()|escape|wordwrap:15:" ":true}</a></td>
+		<td><a class="action" href="{url op="userProfile" path=$user->getId()}">{$user->getUsername()|escape|wordwrap:15:" ":true}</a></td>
 		<td>{$user->getFullName()|escape}</td>
 		<td class="nowrap">
 			{assign var=emailString value="`$user->getFullName()` <`$user->getEmail()`>"}
@@ -101,11 +101,11 @@
 		</td>
 		<td align="right">
 			{if $oldUserId != ''}
-				{if $oldUserId != $user->getUserId()}
-					<a href="#" onclick="confirmAction('{url oldUserId=$oldUserId newUserId=$user->getUserId()}', '{translate|escape:"jsparam" key="manager.people.mergeUsers.confirm" oldUsername=$oldUsername newUsername=$user->getUsername()}')" class="action">{translate key="manager.people.mergeUser"}</a>
+				{if $oldUserId != $user->getId()}
+					<a href="#" onclick="confirmAction('{url oldUserId=$oldUserId newUserId=$user->getId()}', '{translate|escape:"jsparam" key="manager.people.mergeUsers.confirm" oldUsername=$oldUsername newUsername=$user->getUsername()}')" class="action">{translate key="manager.people.mergeUser"}</a>
 				{/if}
-			{elseif $thisUser->getUserId() != $user->getUserId()}
-				<a href="{url oldUserId=$user->getUserId()}" class="action">{translate key="manager.people.mergeUser"}</a>
+			{elseif $thisUser->getId() != $user->getId()}
+				<a href="{url oldUserId=$user->getId()}" class="action">{translate key="manager.people.mergeUser"}</a>
 			{/if}
 		</td>
 	</tr>

@@ -65,8 +65,8 @@ class mergeUsers extends CommandLineTool {
 		$oldUser =& $userDao->getUserbyUsername($this->username2);
 		$newUser =& $userDao->getUserbyUsername($this->username1);
 
-		$oldUserId = isset($oldUser) ? $oldUser->getUserId() : null;
-		$newUserId = isset($newUser) ? $newUser->getUserId() : null;
+		$oldUserId = isset($oldUser) ? $oldUser->getId() : null;
+		$newUserId = isset($newUser) ? $newUser->getId() : null;
 
 		if (empty($oldUserId)) {
 			printf("Error: '%s' is not a valid username.\n",

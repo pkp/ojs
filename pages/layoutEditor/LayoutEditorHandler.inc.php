@@ -73,7 +73,7 @@ class LayoutEditorHandler extends Handler {
 		if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
 
 		$rangeInfo = Handler::getRangeInfo('submissions');
-		$submissions = $layoutEditorSubmissionDao->getSubmissions($user->getUserId(), $journal->getJournalId(), $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $active, $rangeInfo);
+		$submissions = $layoutEditorSubmissionDao->getSubmissions($user->getId(), $journal->getJournalId(), $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $active, $rangeInfo);
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('pageToDisplay', $page);

@@ -42,10 +42,10 @@ class EditorAction extends SectionEditorAction {
 		import('mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($editorSubmission, 'EDITOR_ASSIGN');
 
-		if ($user->getUserId() === $sectionEditorId || !$email->isEnabled() || ($send && !$email->hasErrors())) {
+		if ($user->getId() === $sectionEditorId || !$email->isEnabled() || ($send && !$email->hasErrors())) {
 			HookRegistry::call('EditorAction::assignEditor', array(&$editorSubmission, &$sectionEditor, &$isEditor, &$email));
-			if ($email->isEnabled() && $user->getUserId() !== $sectionEditorId) {
-				$email->setAssoc(ARTICLE_EMAIL_EDITOR_ASSIGN, ARTICLE_EMAIL_TYPE_EDITOR, $sectionEditor->getUserId());
+			if ($email->isEnabled() && $user->getId() !== $sectionEditorId) {
+				$email->setAssoc(ARTICLE_EMAIL_EDITOR_ASSIGN, ARTICLE_EMAIL_TYPE_EDITOR, $sectionEditor->getId());
 				$email->send();
 			}
 
@@ -107,13 +107,13 @@ class EditorAction extends SectionEditorAction {
 		// Add a long entry before doing anything.
 		import('article.log.ArticleLog');
 		import('article.log.ArticleEventLogEntry');
-		ArticleLog::logEvent($article->getArticleId(), ARTICLE_LOG_EDITOR_EXPEDITE, ARTICLE_LOG_TYPE_EDITOR, $user->getUserId(), 'log.editor.submissionExpedited', array('editorName' => $user->getFullName(), 'articleId' => $article->getArticleId()));
+		ArticleLog::logEvent($article->getArticleId(), ARTICLE_LOG_EDITOR_EXPEDITE, ARTICLE_LOG_TYPE_EDITOR, $user->getId(), 'log.editor.submissionExpedited', array('editorName' => $user->getFullName(), 'articleId' => $article->getArticleId()));
 
 		// 1. Ensure that an editor is assigned.
 		$editAssignments =& $sectionEditorSubmission->getEditAssignments();
 		if (empty($editAssignments)) {
 			// No editors are currently assigned; assign self.
-			EditorAction::assignEditor($article->getArticleId(), $user->getUserId(), true);
+			EditorAction::assignEditor($article->getArticleId(), $user->getId(), true);
 		}
 
 		// 2. Accept the submission and send to copyediting.

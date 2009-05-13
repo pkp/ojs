@@ -64,7 +64,7 @@ class CopyeditorAction extends Action {
 			$initialSignoff->setDateCompleted(Core::getCurrentDate());
 			
 			$authorSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $copyeditorSubmission->getArticleId());
-			$authorSignoff->setUserId($author->getUserId());
+			$authorSignoff->setUserId($author->getId());
 			$authorSignoff->setDateNotified(Core::getCurrentDate());
 			$signoffDao->updateObject($initialSignoff);
 			$signoffDao->updateObject($authorSignoff);
@@ -73,7 +73,7 @@ class CopyeditorAction extends Action {
 			// Add log entry
 			import('article.log.ArticleLog');
 			import('article.log.ArticleEventLogEntry');
-			ArticleLog::logEvent($copyeditorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_INITIAL, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.copyedit.initialEditComplete', Array('copyeditorName' => $user->getFullName(), 'articleId' => $copyeditorSubmission->getArticleId()));
+			ArticleLog::logEvent($copyeditorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_INITIAL, ARTICLE_LOG_TYPE_COPYEDIT, $user->getId(), 'log.copyedit.initialEditComplete', Array('copyeditorName' => $user->getFullName(), 'articleId' => $copyeditorSubmission->getArticleId()));
 
 			return true;
 
@@ -145,7 +145,7 @@ class CopyeditorAction extends Action {
 			// Add log entry
 			import('article.log.ArticleLog');
 			import('article.log.ArticleEventLogEntry');
-			ArticleLog::logEvent($copyeditorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_FINAL, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.copyedit.finalEditComplete', Array('copyeditorName' => $user->getFullName(), 'articleId' => $copyeditorSubmission->getArticleId()));
+			ArticleLog::logEvent($copyeditorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_FINAL, ARTICLE_LOG_TYPE_COPYEDIT, $user->getId(), 'log.copyedit.finalEditComplete', Array('copyeditorName' => $user->getFullName(), 'articleId' => $copyeditorSubmission->getArticleId()));
 
 			return true;
 
@@ -203,7 +203,7 @@ class CopyeditorAction extends Action {
 				$user =& Request::getUser();
 				import('article.log.ArticleLog');
 				import('article.log.ArticleEventLogEntry');
-				ArticleLog::logEvent($copyeditorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_INITIATE, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.copyedit.initiate', Array('copyeditorName' => $user->getFullName(), 'articleId' => $copyeditorSubmission->getArticleId()));
+				ArticleLog::logEvent($copyeditorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_INITIATE, ARTICLE_LOG_TYPE_COPYEDIT, $user->getId(), 'log.copyedit.initiate', Array('copyeditorName' => $user->getFullName(), 'articleId' => $copyeditorSubmission->getArticleId()));
 			}
 		}
 	}	
@@ -254,7 +254,7 @@ class CopyeditorAction extends Action {
 
 			$entry = new ArticleEventLogEntry();
 			$entry->setArticleId($copyeditorSubmission->getArticleId());
-			$entry->setUserId($user->getUserId());
+			$entry->setUserId($user->getId());
 			$entry->setDateLogged(Core::getCurrentDate());
 			$entry->setEventType(ARTICLE_LOG_COPYEDIT_COPYEDITOR_FILE);
 			$entry->setLogMessage('log.copyedit.copyeditorFile');

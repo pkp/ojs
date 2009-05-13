@@ -164,7 +164,7 @@ class SubmitHandler extends AuthorHandler {
 					$editors = $roleDao->getUsersByRoleId(ROLE_ID_EDITOR);
 					array_merge($allUsers, $editors->toArray());
 					foreach ($allUsers as $user) {
-						$notificationUsers[] = array('id' => $user->getUserId());
+						$notificationUsers[] = array('id' => $user->getId());
 					}
 					foreach ($notificationUsers as $user) {
 						$url = Request::url(null, 'editor', 'submission', $articleId);
@@ -331,7 +331,7 @@ class SubmitHandler extends AuthorHandler {
 		// Check that article exists for this journal and user and that submission is incomplete
 		if (isset($articleId)) {
 			$article =& $articleDao->getArticle((int) $articleId);
-			if (!$article || $article->getUserId() !== $user->getUserId() || $article->getJournalId() !== $journal->getJournalId() || ($step !== false && $step > $article->getSubmissionProgress())) {
+			if (!$article || $article->getUserId() !== $user->getId() || $article->getJournalId() !== $journal->getJournalId() || ($step !== false && $step > $article->getSubmissionProgress())) {
 				Request::redirect(null, null, 'submit');
 			}
 		}

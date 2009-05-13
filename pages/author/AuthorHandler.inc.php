@@ -51,7 +51,7 @@ class AuthorHandler extends Handler {
 				$active = true;
 		}
 
-		$submissions = $authorSubmissionDao->getAuthorSubmissions($user->getUserId(), $journal->getJournalId(), $active, $rangeInfo);
+		$submissions = $authorSubmissionDao->getAuthorSubmissions($user->getId(), $journal->getJournalId(), $active, $rangeInfo);
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('pageToDisplay', $page);

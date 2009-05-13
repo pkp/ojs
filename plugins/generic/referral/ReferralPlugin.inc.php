@@ -68,7 +68,7 @@ class ReferralPlugin extends GenericPlugin {
 				$referralFilter = (int) Request::getUserVar('referralFilter');
 				if ($referralFilter == 0) $referralFilter = null;
 
-				$referrals =& $referralDao->getReferralsByUserId($user->getUserId(), $referralFilter, $rangeInfo);
+				$referrals =& $referralDao->getReferralsByUserId($user->getId(), $referralFilter, $rangeInfo);
 			
 				$templateMgr->assign('referrals', $referrals);
 				$templateMgr->assign('referralFilter', $referralFilter);

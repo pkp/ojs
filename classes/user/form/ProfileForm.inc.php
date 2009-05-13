@@ -38,7 +38,7 @@ class ProfileForm extends Form {
 		$this->addCheck(new FormValidator($this, 'lastName', 'required', 'user.profile.form.lastNameRequired'));
 		$this->addCheck(new FormValidatorUrl($this, 'userUrl', 'optional', 'user.profile.form.urlInvalid'));
 		$this->addCheck(new FormValidatorEmail($this, 'email', 'required', 'user.profile.form.emailRequired'));
-		$this->addCheck(new FormValidatorCustom($this, 'email', 'required', 'user.register.form.emailExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByEmail'), array($user->getUserId(), true), true));
+		$this->addCheck(new FormValidatorCustom($this, 'email', 'required', 'user.register.form.emailExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByEmail'), array($user->getId(), true), true));
 		$this->addCheck(new FormValidatorPost($this));
 	}
 
@@ -69,7 +69,7 @@ class ProfileForm extends Form {
 		$extension = $fileManager->getImageExtension($type);
 		if (!$extension) return false;
 
-		$uploadName = 'profileImage-' . (int) $user->getUserId() . $extension;
+		$uploadName = 'profileImage-' . (int) $user->getId() . $extension;
 		if (!$fileManager->uploadSiteFile('profileImage', $uploadName)) return false;
 
 		$filePath = $fileManager->getSiteFilesPath();
@@ -135,7 +135,7 @@ class ProfileForm extends Form {
 		$journal =& Request::getJournal();
 		if ($journal) {
 			$roleDao =& DAORegistry::getDAO('RoleDAO');
-			$roles =& $roleDao->getRolesByUserId($user->getUserId(), $journal->getJournalId());
+			$roles =& $roleDao->getRolesByUserId($user->getId(), $journal->getJournalId());
 			$roleNames = array();
 			foreach ($roles as $role) $roleNames[$role->getRolePath()] = $role->getRoleName();
 			$templateMgr->assign('allowRegReviewer', $journal->getSetting('allowRegReviewer'));
@@ -260,7 +260,7 @@ class ProfileForm extends Form {
 		$journal =& Request::getJournal();
 		if ($journal) {
 			$role = new Role();
-			$role->setUserId($user->getUserId());
+			$role->setUserId($user->getId());
 			$role->setJournalId($journal->getJournalId());
 			if ($journal->getSetting('allowRegReviewer')) {
 				$role->setRoleId(ROLE_ID_REVIEWER);
@@ -296,7 +296,7 @@ class ProfileForm extends Form {
 				$currentlyReceives = $user->getSetting('openAccessNotification', $thisJournal->getJournalId());
 				$shouldReceive = !empty($openAccessNotify) && in_array($thisJournal->getJournalId(), $openAccessNotify);
 				if ($currentlyReceives != $shouldReceive) {
-					$userSettingsDao->updateSetting($user->getUserId(), 'openAccessNotification', $shouldReceive, 'bool', $thisJournal->getJournalId());
+					$userSettingsDao->updateSetting($user->getId(), 'openAccessNotification', $shouldReceive, 'bool', $thisJournal->getJournalId());
 				}
 			}
 		}

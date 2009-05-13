@@ -219,7 +219,7 @@ class UserXMLParser {
 				// Check if user already exists
 				$userExists = $userDao->getUserByUsername($user->getUsername(), true);
 				if ($userExists != null) {
-					$user->setUserId($userExists->getUserId());
+					$user->setId($userExists->getId());
 				}
 			} else {
 				$userExists = false;
@@ -248,7 +248,7 @@ class UserXMLParser {
 			// Enroll user in specified roles
 			// If the user is already enrolled in a role, that role is skipped
 			foreach ($user->getRoles() as $role) {
-				$role->setUserId($user->getUserId());
+				$role->setUserId($user->getId());
 				$role->setJournalId($this->journalId);
 				if (!$roleDao->roleExists($role->getJournalId(), $role->getUserId(), $role->getRoleId())) {
 					if (!$roleDao->insertRole($role)) {

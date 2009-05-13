@@ -124,7 +124,7 @@ function confirmAndPrompt(userId) {
 	{assign var=userExists value=1}
 	<tr valign="top">
 		<td><input type="checkbox" name="bcc[]" value="{$user->getEmail()|escape}"/></td>
-		<td><a class="action" href="{url op="userProfile" path=$user->getUserId()}">{$user->getUsername()|escape|wordwrap:15:" ":true}</a></td>
+		<td><a class="action" href="{url op="userProfile" path=$user->getId()}">{$user->getUsername()|escape|wordwrap:15:" ":true}</a></td>
 		<td>{$user->getFullName()|escape}</td>
 		<td class="nowrap">
 			{assign var=emailString value="`$user->getFullName()` <`$user->getEmail()`>"}
@@ -134,16 +134,16 @@ function confirmAndPrompt(userId) {
 		</td>
 		<td align="right">
 			{if $roleId}
-			<a href="{url op="unEnroll" path=$roleId userId=$user->getUserId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.people.confirmUnenroll"}')" class="action">{translate key="manager.people.unenroll"}</a>&nbsp;|
+			<a href="{url op="unEnroll" path=$roleId userId=$user->getId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.people.confirmUnenroll"}')" class="action">{translate key="manager.people.unenroll"}</a>&nbsp;|
 			{/if}
-			<a href="{url op="editUser" path=$user->getUserId()}" class="action">{translate key="common.edit"}</a>
-			{if $thisUser->getUserId() != $user->getUserId()}
-				|&nbsp;<a href="{url op="signInAsUser" path=$user->getUserId()}" class="action">{translate key="manager.people.signInAs"}</a>
-				{if !$roleId}|&nbsp;<a href="{url op="removeUser" path=$user->getUserId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.people.confirmRemove"}')" class="action">{translate key="manager.people.remove"}</a>{/if}
+			<a href="{url op="editUser" path=$user->getId()}" class="action">{translate key="common.edit"}</a>
+			{if $thisUser->getId() != $user->getId()}
+				|&nbsp;<a href="{url op="signInAsUser" path=$user->getId()}" class="action">{translate key="manager.people.signInAs"}</a>
+				{if !$roleId}|&nbsp;<a href="{url op="removeUser" path=$user->getId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.people.confirmRemove"}')" class="action">{translate key="manager.people.remove"}</a>{/if}
 				{if $user->getDisabled()}
-					|&nbsp;<a href="{url op="enableUser" path=$user->getUserId()}" class="action">{translate key="manager.people.enable"}</a>
+					|&nbsp;<a href="{url op="enableUser" path=$user->getId()}" class="action">{translate key="manager.people.enable"}</a>
 				{else}
-					|&nbsp;<a href="javascript:confirmAndPrompt({$user->getUserId()})" class="action">{translate key="manager.people.disable"}</a>
+					|&nbsp;<a href="javascript:confirmAndPrompt({$user->getId()})" class="action">{translate key="manager.people.disable"}</a>
 				{/if}
 			{/if}
 		</td>

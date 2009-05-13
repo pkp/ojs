@@ -637,7 +637,7 @@ class NativeImportDom {
 
 		$article = new Article();
 		$article->setJournalId($journal->getJournalId());
-		$article->setUserId($user->getUserId());
+		$article->setUserId($user->getId());
 		$article->setSectionId($section->getSectionId());
 		$article->setStatus(STATUS_PUBLISHED);
 		$article->setSubmissionProgress(0);

@@ -185,7 +185,7 @@ class EditorHandler extends SectionEditorHandler {
 		}
 
 		if ($filterEditor == FILTER_EDITOR_ME) {
-			$editorId = $user->getUserId();
+			$editorId = $user->getId();
 		} else {
 			$editorId = FILTER_EDITOR_ALL;
 		}

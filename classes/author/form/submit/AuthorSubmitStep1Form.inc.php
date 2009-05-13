@@ -48,7 +48,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 		// to submit to sections flagged as "editor-only" for submissions.
 		// Otherwise, display only sections they are allowed to submit to.
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		$isEditor = $roleDao->roleExists($journal->getJournalId(), $user->getUserId(), ROLE_ID_EDITOR) || $roleDao->roleExists($journal->getJournalId(), $user->getUserId(), ROLE_ID_SECTION_EDITOR);
+		$isEditor = $roleDao->roleExists($journal->getJournalId(), $user->getId(), ROLE_ID_EDITOR) || $roleDao->roleExists($journal->getJournalId(), $user->getId(), ROLE_ID_SECTION_EDITOR);
 
 		// Set up required Payment Related Information
 		import('payment.ojs.OJSPaymentManager');
@@ -113,7 +113,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 			$user =& Request::getUser();
 
 			$this->article = new Article();
-			$this->article->setUserId($user->getUserId());
+			$this->article->setUserId($user->getId());
 			$this->article->setJournalId($journal->getJournalId());
 			$this->article->setSectionId($this->getData('sectionId'));
 			$this->article->stampStatusModified();

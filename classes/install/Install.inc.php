@@ -105,7 +105,7 @@ class Install extends PKPInstall {
 			$roleDao =& DAORegistry::getDao('RoleDAO', $this->dbconn);
 			$role = new Role();
 			$role->setJournalId(0);
-			$role->setUserId($user->getUserId());
+			$role->setUserId($user->getId());
 			$role->setRoleId(ROLE_ID_SITE_ADMIN);
 			if (!$roleDao->insertRole($role)) {
 				$this->setError(INSTALLER_ERROR_DB, $this->dbconn->errorMsg());

@@ -36,11 +36,11 @@
 </tr>
 <tr><td colspan="2" class="headseparator">&nbsp;</td></tr>
 {iterate from=users item=user}
-{assign var="userid" value=$user->getUserId()}
+{assign var="userid" value=$user->getId()}
 <tr valign="top">
 	<td><a class="action" href="{url op="userProfile" path=$userid}">{$user->getFullName(true)|escape}</a></td>
 	<td>
-		<a href="{url op="addMembership" path=$group->getId()|to_array:$user->getUserId()}" class="action">{translate key="manager.groups.membership.addMember"}</a>
+		<a href="{url op="addMembership" path=$group->getId()|to_array:$user->getId()}" class="action">{translate key="manager.groups.membership.addMember"}</a>
 	</td>
 </tr>
 <tr><td colspan="2" class="{if $users->eof()}end{/if}separator">&nbsp;</td></tr>

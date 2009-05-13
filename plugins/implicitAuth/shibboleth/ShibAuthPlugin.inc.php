@@ -100,7 +100,7 @@ class ShibAuthPlugin extends ImplicitAuthPlugin {
 				
 				// Go see if this user should be an admin
 				
-				ShibAuthPlugin::implicitAuthAdmin($user->getUserId(), $user->getAuthStr());
+				ShibAuthPlugin::implicitAuthAdmin($user->getId(), $user->getAuthStr());
 				$retuser = $user;
 				
 				syslog(LOG_ERR, " In ShibAuthPlugin username: " . $retuser->getUsername());
@@ -125,7 +125,7 @@ class ShibAuthPlugin extends ImplicitAuthPlugin {
 				
 				// Go see if this user should be made an admin
 				
-				ShibAuthPlugin::implicitAuthAdmin($user->getUserId(), $user->getAuthStr());
+				ShibAuthPlugin::implicitAuthAdmin($user->getId(), $user->getAuthStr());
 				
 				$retuser = $user;
 				return true;
@@ -137,7 +137,7 @@ class ShibAuthPlugin extends ImplicitAuthPlugin {
 			
 			// Go see if this new user should be made an admin
 			
-			ShibAuthPlugin::implicitAuthAdmin($user->getUserId(), $user->getAuthStr());		
+			ShibAuthPlugin::implicitAuthAdmin($user->getId(), $user->getAuthStr());		
 			
 			$retuser = $user;
 			
@@ -189,7 +189,7 @@ class ShibAuthPlugin extends ImplicitAuthPlugin {
 		
 		$userDao->insertUser($user); 
 	
-		$userId = $user->getUserId();
+		$userId = $user->getId();
 		
 		if (!$userId) {
 			return false;

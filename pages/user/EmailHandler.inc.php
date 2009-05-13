@@ -57,7 +57,7 @@ class EmailHandler extends UserHandler {
 		);
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		if ($journal) {
-			$roles =& $roleDao->getRolesByUserId($user->getUserId(), $journal->getJournalId());
+			$roles =& $roleDao->getRolesByUserId($user->getId(), $journal->getJournalId());
 			foreach ($roles as $role) {
 				if (in_array($role->getRoleId(), $unlimitedEmailRoles)) $canSendUnlimitedEmails = true;
 			}
@@ -89,29 +89,29 @@ class EmailHandler extends UserHandler {
 
 			// First, conditions where access is OK.
 			// 1. User is submitter
-			if ($article && $article->getUserId() == $user->getUserId()) $hasAccess = true;
+			if ($article && $article->getUserId() == $user->getId()) $hasAccess = true;
 			// 2. User is section editor of article or full editor
 			$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
 			$editAssignments =& $editAssignmentDao->getEditAssignmentsByArticleId($articleId);
 			while ($editAssignment =& $editAssignments->next()) {
-				if ($editAssignment->getEditorId() === $user->getUserId()) $hasAccess = true;
+				if ($editAssignment->getEditorId() === $user->getId()) $hasAccess = true;
 			}
 			if (Validation::isEditor($journal->getJournalId())) $hasAccess = true;
 
 			// 3. User is reviewer
 			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 			foreach ($reviewAssignmentDao->getReviewAssignmentsByArticleId($articleId) as $reviewAssignment) {
-				if ($reviewAssignment->getReviewerId() === $user->getUserId()) $hasAccess = true;
+				if ($reviewAssignment->getReviewerId() === $user->getId()) $hasAccess = true;
 			}
 			// 4. User is copyeditor
 			$copyedSignoff =& $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $articleId);
-			if ($copyedSignoff && $copyedSignoff->getUserId() === $user->getUserId()) $hasAccess = true;
+			if ($copyedSignoff && $copyedSignoff->getUserId() === $user->getId()) $hasAccess = true;
 			// 5. User is layout editor
 			$layoutSignoff =& $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
-			if ($layoutSignoff && $layoutSignoff->getUserId() === $user->getUserId()) $hasAccess = true;
+			if ($layoutSignoff && $layoutSignoff->getUserId() === $user->getId()) $hasAccess = true;
 			// 6. User is proofreader
 			$proofSignoff =& $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $articleId);
-			if ($proofSignoff && $proofSignoff->getUserId() === $user->getUserId()) $hasAccess = true;
+			if ($proofSignoff && $proofSignoff->getUserId() === $user->getId()) $hasAccess = true;
 
 			// Last, "deal-breakers" -- access is not allowed.
 			if (!$article || ($article && $article->getJournalId() !== $journal->getJournalId())) $hasAccess = false;

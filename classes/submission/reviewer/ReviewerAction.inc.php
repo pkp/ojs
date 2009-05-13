@@ -73,7 +73,7 @@ class ReviewerAction extends Action {
 
 				$entry = new ArticleEventLogEntry();
 				$entry->setArticleId($reviewAssignment->getArticleId());
-				$entry->setUserId($reviewer->getUserId());
+				$entry->setUserId($reviewer->getId());
 				$entry->setDateLogged(Core::getCurrentDate());
 				$entry->setEventType($decline?ARTICLE_LOG_REVIEW_DECLINE:ARTICLE_LOG_REVIEW_ACCEPT);
 				$entry->setLogMessage($decline?'log.review.reviewDeclined':'log.review.reviewAccepted', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getArticleId(), 'round' => $reviewAssignment->getRound()));
@@ -157,7 +157,7 @@ class ReviewerAction extends Action {
 
 				$entry = new ArticleEventLogEntry();
 				$entry->setArticleId($reviewAssignment->getArticleId());
-				$entry->setUserId($reviewer->getUserId());
+				$entry->setUserId($reviewer->getId());
 				$entry->setDateLogged(Core::getCurrentDate());
 				$entry->setEventType(ARTICLE_LOG_REVIEW_RECOMMENDATION);
 				$entry->setLogMessage('log.review.reviewRecommendationSet', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getArticleId(), 'round' => $reviewAssignment->getRound()));
@@ -237,7 +237,7 @@ class ReviewerAction extends Action {
 
 			$entry = new ArticleEventLogEntry();
 			$entry->setArticleId($reviewAssignment->getArticleId());
-			$entry->setUserId($reviewer->getUserId());
+			$entry->setUserId($reviewer->getId());
 			$entry->setDateLogged(Core::getCurrentDate());
 			$entry->setEventType(ARTICLE_LOG_REVIEW_FILE);
 			$entry->setLogMessage('log.review.reviewerFile');

@@ -240,35 +240,35 @@ class AboutHandler extends Handler {
 		if ($journal->getSetting('boardEnabled') != true) {
 			$editors =& $roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getJournalId());
 			while ($potentialUser =& $editors->next()) {
-				if ($potentialUser->getUserId() == $userId)
+				if ($potentialUser->getId() == $userId)
 					$user =& $potentialUser;
 				unset($potentialUser);
 			}
 
 			$sectionEditors =& $roleDao->getUsersByRoleId(ROLE_ID_SECTION_EDITOR, $journal->getJournalId());
 			while ($potentialUser =& $sectionEditors->next()) {
-				if ($potentialUser->getUserId() == $userId)
+				if ($potentialUser->getId() == $userId)
 					$user =& $potentialUser;
 				unset($potentialUser);
 			}
 
 			$layoutEditors =& $roleDao->getUsersByRoleId(ROLE_ID_LAYOUT_EDITOR, $journal->getJournalId());
 			while ($potentialUser =& $layoutEditors->next()) {
-				if ($potentialUser->getUserId() == $userId)
+				if ($potentialUser->getId() == $userId)
 					$user = $potentialUser;
 				unset($potentialUser);
 			}
 
 			$copyEditors =& $roleDao->getUsersByRoleId(ROLE_ID_COPYEDITOR, $journal->getJournalId());
 			while ($potentialUser =& $copyEditors->next()) {
-				if ($potentialUser->getUserId() == $userId)
+				if ($potentialUser->getId() == $userId)
 					$user = $potentialUser;
 				unset($potentialUser);
 			}
 
 			$proofreaders =& $roleDao->getUsersByRoleId(ROLE_ID_PROOFREADER, $journal->getJournalId());
 			while ($potentialUser =& $proofreaders->next()) {
-				if ($potentialUser->getUserId() == $userId)
+				if ($potentialUser->getId() == $userId)
 					$user = $potentialUser;
 				unset($potentialUser);
 			}
@@ -284,7 +284,7 @@ class AboutHandler extends Handler {
 				while ($membership =& $allMemberships->next()) {
 					if (!$membership->getAboutDisplayed()) continue;
 					$potentialUser =& $membership->getUser();
-					if ($potentialUser->getUserId() == $userId)
+					if ($potentialUser->getId() == $userId)
 						$user = $potentialUser;
 					unset($membership);
 				}
@@ -462,7 +462,7 @@ class AboutHandler extends Handler {
 			$journals =& $journalDao->getEnabledJournals();
 			// Fetch the user's roles for each journal
 			foreach ($journals->toArray() as $journal) {
-				$roles =& $roleDao->getRolesByUserId($user->getUserId(), $journal->getJournalId());
+				$roles =& $roleDao->getRolesByUserId($user->getId(), $journal->getJournalId());
 				if (!empty($roles)) {
 					$rolesByJournal[$journal->getJournalId()] =& $roles;
 				}
@@ -475,7 +475,7 @@ class AboutHandler extends Handler {
 			$templateMgr->assign_by_ref('rolesByJournal', $rolesByJournal);
 		}
 		if ($user) {
-			$templateMgr->assign('isSiteAdmin', $roleDao->getRole(0, $user->getUserId(), ROLE_ID_SITE_ADMIN));
+			$templateMgr->assign('isSiteAdmin', $roleDao->getRole(0, $user->getId(), ROLE_ID_SITE_ADMIN));
 		}
 
 		$templateMgr->display('about/siteMap.tpl');

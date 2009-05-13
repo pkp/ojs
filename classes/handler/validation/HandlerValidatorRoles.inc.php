@@ -46,9 +46,9 @@ class HandlerValidatorRoles extends HandlerValidator {
 		$returner = true;
 		foreach ( $this->roles as $roleId ) {
 			if ( $roleId == ROLE_ID_SITE_ADMIN ) {
-				$exists = $roleDao->roleExists(0, $user->getUserId(), $roleId);
+				$exists = $roleDao->roleExists(0, $user->getId(), $roleId);
 			} else { 
-				$exists = $roleDao->roleExists($journalId, $user->getUserId(), $roleId);
+				$exists = $roleDao->roleExists($journalId, $user->getId(), $roleId);
 			}
 			if ( !$this->all && $exists) return true;
 			$returner = $returner && $exists;

@@ -136,14 +136,14 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 
 		$isValid = true;
 
-		$copyeditorSubmission =& $copyeditorSubmissionDao->getCopyeditorSubmission($articleId, $user->getUserId());
+		$copyeditorSubmission =& $copyeditorSubmissionDao->getCopyeditorSubmission($articleId, $user->getId());
 
 		if ($copyeditorSubmission == null) {
 			$isValid = false;
 		} else if ($copyeditorSubmission->getJournalId() != $journal->getJournalId()) {
 			$isValid = false;
 		} else {
-			if ($copyeditorSubmission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL') != $user->getUserId()) {
+			if ($copyeditorSubmission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL') != $user->getId()) {
 				$isValid = false;
 			}
 		}

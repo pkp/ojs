@@ -54,7 +54,7 @@ class ReviewReminder extends ScheduledTask {
 
 			// Key lifetime is the typical review period plus four weeks
 			$keyLifetime = ($journal->getSetting('numWeeksPerReview') + 4) * 7;
-			$urlParams['key'] = $accessKeyManager->createKey('ReviewerContext', $reviewer->getUserId(), $reviewId, $keyLifetime);
+			$urlParams['key'] = $accessKeyManager->createKey('ReviewerContext', $reviewer->getId(), $reviewId, $keyLifetime);
 		}
 		$submissionReviewUrl = Request::url($journal->getPath(), 'reviewer', 'submission', $reviewId, $urlParams);
 
@@ -65,7 +65,7 @@ class ReviewReminder extends ScheduledTask {
 			'reviewerPassword' => $reviewer->getPassword(),
 			'reviewDueDate' => strftime(Config::getVar('general', 'date_format_short'), strtotime($reviewAssignment->getDateDue())),
 			'editorialContactSignature' => $journal->getSetting('contactName') . "\n" . $journal->getLocalizedTitle(),
-			'passwordResetUrl' => Request::url($journal->getPath(), 'login', 'resetPassword', $reviewer->getUsername(), array('confirm' => Validation::generatePasswordResetHash($reviewer->getUserId()))),
+			'passwordResetUrl' => Request::url($journal->getPath(), 'login', 'resetPassword', $reviewer->getUsername(), array('confirm' => Validation::generatePasswordResetHash($reviewer->getId()))),
 			'submissionReviewUrl' => $submissionReviewUrl
 		);
 		$email->assignParams($paramArray);

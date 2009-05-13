@@ -132,7 +132,7 @@ class PluginManagementHandler extends ManagerHandler {
 			$temporaryFileManager = new TemporaryFileManager();
 			$user =& Request::getUser();
 		
-			if ($temporaryFile = $temporaryFileManager->handleUpload('newPlugin', $user->getUserId())) {
+			if ($temporaryFile = $temporaryFileManager->handleUpload('newPlugin', $user->getId())) {
 				// tar archive basename must equal plugin directory name, and plugin files must be in root directory
 				$pluginName = basename($temporaryFile->getOriginalFileName(), '.tar.gz');
 				$pluginDir = dirname($temporaryFile->getFilePath());

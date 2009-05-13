@@ -67,7 +67,7 @@ class ChangePasswordForm extends Form {
 
 		if (isset($auth)) {
 			$auth->doSetUserPassword($user->getUsername(), $this->getData('password'));
-			$user->setPassword(Validation::encryptCredentials($user->getUserId(), Validation::generatePassword())); // Used for PW reset hash only
+			$user->setPassword(Validation::encryptCredentials($user->getId(), Validation::generatePassword())); // Used for PW reset hash only
 		} else {
 			$user->setPassword(Validation::encryptCredentials($user->getUsername(), $this->getData('password')));
 		}

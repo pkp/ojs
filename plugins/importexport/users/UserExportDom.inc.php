@@ -74,7 +74,7 @@ class UserExportDom {
 				}
 			}
 			XMLCustomWriter::createChildWithText($doc, $userNode, 'locales', join(':', $user->getLocales()), false);
-			$roles =& $roleDao->getRolesByUserId($user->getUserId(), $journal->getJournalId());
+			$roles =& $roleDao->getRolesByUserId($user->getId(), $journal->getJournalId());
 			foreach ($roles as $role) {
 				$rolePath = $role->getRolePath();
 				if ($allowedRoles !== null && !in_array($rolePath, $allowedRoles)) {

@@ -295,7 +295,7 @@ class Action {
 		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
 		$comment =& $articleCommentDao->getArticleCommentById($commentId);
 
-		if ($comment->getAuthorId() == $user->getUserId()) {
+		if ($comment->getAuthorId() == $user->getId()) {
 			if (!HookRegistry::call('Action::deleteComment', array(&$comment))) {
 				$articleCommentDao->deleteArticleComment($comment);
 			}

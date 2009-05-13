@@ -455,7 +455,7 @@ class ArticleHandler extends Handler {
 		$journalId = $journal->getJournalId();
 		$article = $publishedArticle = $issue = null;
 		$user =& Request::getUser();
-		$userId = $user?$user->getUserId():0;
+		$userId = $user?$user->getId():0;
 
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		if ($journal->getSetting('enablePublicArticleId')) {
@@ -536,7 +536,7 @@ class ArticleHandler extends Handler {
 							$this->article =& $publishedArticle;
 							return true;
 						} else {
-							$queuedPayment =& $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_PURCHASE_ARTICLE, $user->getUserId(), $articleId, $journal->getSetting('purchaseArticleFee'));
+							$queuedPayment =& $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_PURCHASE_ARTICLE, $user->getId(), $articleId, $journal->getSetting('purchaseArticleFee'));
 							$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
 
 							$templateMgr =& TemplateManager::getManager();

@@ -75,7 +75,7 @@ class SubscriptionBlockPlugin extends BlockPlugin {
 		if (!$journal) return '';
 
 		$user =& Request::getUser();
-		$userId = ($user)?$user->getUserId():null;
+		$userId = ($user)?$user->getId():null;
 		
 		$domain = Request::getRemoteDomain();
 		$IP = Request::getRemoteAddr();

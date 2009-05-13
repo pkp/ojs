@@ -114,7 +114,7 @@ class AuthorAction extends Action {
 			$user =& Request::getUser();
 			import('article.log.ArticleLog');
 			import('article.log.ArticleEventLogEntry');
-			ArticleLog::logEvent($authorSubmission->getArticleId(), ARTICLE_LOG_AUTHOR_REVISION, ARTICLE_LOG_TYPE_AUTHOR, $user->getUserId(), 'log.author.documentRevised', array('authorName' => $user->getFullName(), 'fileId' => $fileId, 'articleId' => $authorSubmission->getArticleId()));
+			ArticleLog::logEvent($authorSubmission->getArticleId(), ARTICLE_LOG_AUTHOR_REVISION, ARTICLE_LOG_TYPE_AUTHOR, $user->getId(), 'log.author.documentRevised', array('authorName' => $user->getFullName(), 'fileId' => $fileId, 'articleId' => $authorSubmission->getArticleId()));
 		}
 	}
 
@@ -151,7 +151,7 @@ class AuthorAction extends Action {
 			$authorSignoff->setDateCompleted(Core::getCurrentDate());
 
 			$finalSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $authorSubmission->getArticleId());
-			$finalSignoff->setUserId($copyeditor->getUserId());
+			$finalSignoff->setUserId($copyeditor->getId());
 			$finalSignoff->setDateNotified(Core::getCurrentDate());
 
 			$signoffDao->updateObject($authorSignoff);
@@ -160,7 +160,7 @@ class AuthorAction extends Action {
 			// Add log entry
 			import('article.log.ArticleLog');
 			import('article.log.ArticleEventLogEntry');
-			ArticleLog::logEvent($authorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_REVISION, ARTICLE_LOG_TYPE_AUTHOR, $user->getUserId(), 'log.copyedit.authorFile');
+			ArticleLog::logEvent($authorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_REVISION, ARTICLE_LOG_TYPE_AUTHOR, $user->getId(), 'log.copyedit.authorFile');
 
 			return true;
 

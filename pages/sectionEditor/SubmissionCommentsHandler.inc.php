@@ -369,7 +369,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 
 		if (
 			$comment == null ||
-			$comment->getAuthorId() != $user->getUserId()
+			$comment->getAuthorId() != $user->getId()
 		) {
 			Request::redirect(null, Request::getRequestedPage());
 		}

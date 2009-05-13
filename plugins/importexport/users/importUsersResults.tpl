@@ -29,11 +29,11 @@
 	</tr>
 	{foreach name=importedUsers from=$importedUsers item=user}
 	<tr valign="top">
-		<td><a href="{url page="manager" op="userProfile" path=$user->getUserId()}">{$user->getUsername()|escape}</a></td>
+		<td><a href="{url page="manager" op="userProfile" path=$user->getId()}">{$user->getUsername()|escape}</a></td>
 		<td>{$user->getFullName()|escape}</td>
 		<td>{$user->getEmail()|escape}</td>
 		<td align="right" class="nowrap">
-			<a href="{url page="manager" op="editUser" path=$user->getUserId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url page="manager" op="signInAsUser" path=$user->getUserId()}" class="action">{translate key="manager.people.signInAs"}</a>
+			<a href="{url page="manager" op="editUser" path=$user->getId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url page="manager" op="signInAsUser" path=$user->getId()}" class="action">{translate key="manager.people.signInAs"}</a>
 		</td>
 	</tr>
 	<tr>

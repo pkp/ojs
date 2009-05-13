@@ -473,7 +473,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		} else if ($authorSubmission->getJournalId() != $journal->getJournalId()) {
 			$isValid = false;
 		} else {
-			if ($authorSubmission->getUserId() != $user->getUserId()) {
+			if ($authorSubmission->getUserId() != $user->getId()) {
 				$isValid = false;
 			}
 		}
@@ -606,7 +606,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$paymentManager =& OJSPaymentManager::getManager();
 		$user =& Request::getUser();
 
-		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getJournalId(), PAYMENT_TYPE_SUBMISSION, $user->getUserId(), $articleId, $journal->getSetting('submissionFee'));
+		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getJournalId(), PAYMENT_TYPE_SUBMISSION, $user->getId(), $articleId, $journal->getSetting('submissionFee'));
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
 	
 		$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
@@ -628,7 +628,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$paymentManager =& OJSPaymentManager::getManager();
 		$user =& Request::getUser();
 
-		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getJournalId(), PAYMENT_TYPE_FASTTRACK, $user->getUserId(), $articleId, $journal->getSetting('fastTrackFee'));
+		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getJournalId(), PAYMENT_TYPE_FASTTRACK, $user->getId(), $articleId, $journal->getSetting('fastTrackFee'));
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
 	
 		$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
@@ -650,7 +650,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$paymentManager =& OJSPaymentManager::getManager();
 		$user =& Request::getUser();
 
-		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getJournalId(), PAYMENT_TYPE_PUBLICATION, $user->getUserId(), $articleId, $journal->getSetting('publicationFee'));
+		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getJournalId(), PAYMENT_TYPE_PUBLICATION, $user->getId(), $articleId, $journal->getSetting('publicationFee'));
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
 	
 		$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);

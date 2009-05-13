@@ -68,7 +68,7 @@ class SectionForm extends Form {
 	 */
 	function includeSectionEditor($sectionEditorId) {
 		foreach ($this->sectionEditors as $key => $junk) {
-			if ($this->sectionEditors[$key]->getUserId() == $sectionEditorId) {
+			if ($this->sectionEditors[$key]->getId() == $sectionEditorId) {
 				$this->includeSectionEditor =& $this->sectionEditors[$key];
 			}
 		}
@@ -80,7 +80,7 @@ class SectionForm extends Form {
 	 */
 	function omitSectionEditor($sectionEditorId) {
 		foreach ($this->sectionEditors as $key => $junk) {
-			if ($this->sectionEditors[$key]->getUserId() == $sectionEditorId) {
+			if ($this->sectionEditors[$key]->getId() == $sectionEditorId) {
 				$this->omitSectionEditor =& $this->sectionEditors[$key];
 			}
 		}
@@ -168,10 +168,10 @@ class SectionForm extends Form {
 
 		foreach ($this->sectionEditors as $key => $junk) {
 			$sectionEditor =& $this->sectionEditors[$key]; // Ref
-			$userId = $sectionEditor->getUserId();
+			$userId = $sectionEditor->getId();
 
-			$isIncludeEditor = $this->includeSectionEditor && $this->includeSectionEditor->getUserId() == $userId;
-			$isOmitEditor = $this->omitSectionEditor && $this->omitSectionEditor->getUserId() == $userId;
+			$isIncludeEditor = $this->includeSectionEditor && $this->includeSectionEditor->getId() == $userId;
+			$isOmitEditor = $this->omitSectionEditor && $this->omitSectionEditor->getId() == $userId;
 			if ((in_array($userId, $assignedEditorIds) || $isIncludeEditor) && !$isOmitEditor) {
 				$assignedEditors[] = array(
 					'user' => &$sectionEditor,
@@ -241,7 +241,7 @@ class SectionForm extends Form {
 		$sectionEditorsDao->deleteEditorsBySectionId($sectionId, $journalId);
 		foreach ($this->sectionEditors as $key => $junk) {
 			$sectionEditor =& $this->sectionEditors[$key];
-			$userId = $sectionEditor->getUserId();
+			$userId = $sectionEditor->getId();
 			// We don't have to worry about omit- and include-
 			// section editors because this function is only called
 			// when the Save button is pressed and those are only

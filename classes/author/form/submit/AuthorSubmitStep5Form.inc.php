@@ -112,7 +112,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 			} elseif ( Request::getUserVar('paymentSent') ) {
 				return parent::validate();
 			} else {
-				$queuedPayment =& $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_SUBMISSION, $user->getUserId(), $articleId, $journal->getSetting('submissionFee'));
+				$queuedPayment =& $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_SUBMISSION, $user->getId(), $articleId, $journal->getSetting('submissionFee'));
 				$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
 
 				$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
@@ -155,7 +155,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		$copyeditAuthorSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $article->getArticleId());
 		$copyeditFinalSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $article->getArticleId());
 		$copyeditInitialSignoff->setUserId(0);
-		$copyeditAuthorSignoff->setUserId($user->getUserId());
+		$copyeditAuthorSignoff->setUserId($user->getId());
 		$copyeditFinalSignoff->setUserId(0);
 		$signoffDao->updateObject($copyeditInitialSignoff);
 		$signoffDao->updateObject($copyeditAuthorSignoff);
@@ -168,7 +168,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		$proofAuthorSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_AUTHOR', ASSOC_TYPE_ARTICLE, $article->getArticleId());
 		$proofProofreaderSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $article->getArticleId());
 		$proofLayoutEditorSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $article->getArticleId());
-		$proofAuthorSignoff->setUserId($user->getUserId());
+		$proofAuthorSignoff->setUserId($user->getId());
 		$proofProofreaderSignoff->setUserId(0);
 		$proofLayoutEditorSignoff->setUserId(0);
 		$signoffDao->updateObject($proofAuthorSignoff);
@@ -220,7 +220,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 
 		import('article.log.ArticleLog');
 		import('article.log.ArticleEventLogEntry');
-		ArticleLog::logEvent($this->articleId, ARTICLE_LOG_ARTICLE_SUBMIT, ARTICLE_LOG_TYPE_AUTHOR, $user->getUserId(), 'log.author.submitted', array('submissionId' => $article->getArticleId(), 'authorName' => $user->getFullName()));
+		ArticleLog::logEvent($this->articleId, ARTICLE_LOG_ARTICLE_SUBMIT, ARTICLE_LOG_TYPE_AUTHOR, $user->getId(), 'log.author.submitted', array('submissionId' => $article->getArticleId(), 'authorName' => $user->getFullName()));
 
 		return $this->articleId;
 	}

@@ -73,7 +73,7 @@ class ArticleMailTemplate extends MailTemplate {
 		if (parent::send(false)) {
 			if (!isset($this->skip) || !$this->skip) $this->log();
 			$user =& Request::getUser();
-			if ($this->attachmentsEnabled) $this->_clearAttachments($user->getUserId());
+			if ($this->attachmentsEnabled) $this->_clearAttachments($user->getId());
 			return true;
 
 		} else {

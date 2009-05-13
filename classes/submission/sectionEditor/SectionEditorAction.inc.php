@@ -56,7 +56,7 @@ class SectionEditorAction extends Action {
 		$user =& Request::getUser();
 		$editorDecision = array(
 			'editDecisionId' => null,
-			'editorId' => $user->getUserId(),
+			'editorId' => $user->getId(),
 			'decision' => $decision,
 			'dateDecided' => date(Core::getCurrentDate())
 		);
@@ -71,7 +71,7 @@ class SectionEditorAction extends Action {
 			// Add log
 			import('article.log.ArticleLog');
 			import('article.log.ArticleEventLogEntry');
-			ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_EDITOR_DECISION, ARTICLE_LOG_TYPE_EDITOR, $user->getUserId(), 'log.editor.decision', array('editorName' => $user->getFullName(), 'articleId' => $sectionEditorSubmission->getArticleId(), 'decision' => Locale::translate($decisions[$decision])));
+			ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_EDITOR_DECISION, ARTICLE_LOG_TYPE_EDITOR, $user->getId(), 'log.editor.decision', array('editorName' => $user->getFullName(), 'articleId' => $sectionEditorSubmission->getArticleId(), 'decision' => Locale::translate($decisions[$decision])));
 		}
 	}
 
@@ -209,7 +209,7 @@ class SectionEditorAction extends Action {
 						// Key lifetime is the typical review period plus four weeks
 						$keyLifetime = ($journal->getSetting('numWeeksPerReview') + 4) * 7;
 
-						$email->addPrivateParam('ACCESS_KEY', $accessKeyManager->createKey('ReviewerContext', $reviewer->getUserId(), $reviewId, $keyLifetime));
+						$email->addPrivateParam('ACCESS_KEY', $accessKeyManager->createKey('ReviewerContext', $reviewer->getId(), $reviewId, $keyLifetime));
 					}
 
 					if ($preventAddressChanges) {
@@ -252,7 +252,7 @@ class SectionEditorAction extends Action {
 						'reviewGuidelines' => $journal->getLocalizedSetting('reviewGuidelines'),
 						'submissionReviewUrl' => $submissionUrl,
 						'abstractTermIfEnabled' => ($sectionEditorSubmission->getLocalizedAbstract() == ''?'':Locale::translate('article.abstract')),
-						'passwordResetUrl' => Request::url(null, 'login', 'resetPassword', $reviewer->getUsername(), array('confirm' => Validation::generatePasswordResetHash($reviewer->getUserId())))
+						'passwordResetUrl' => Request::url(null, 'login', 'resetPassword', $reviewer->getUsername(), array('confirm' => Validation::generatePasswordResetHash($reviewer->getId())))
 					);
 					$email->assignParams($paramArray);
 					if ($isEmailBasedReview) {
@@ -262,7 +262,7 @@ class SectionEditorAction extends Action {
 						$temporaryFileManager = new TemporaryFileManager();
 						$reviewVersion =& $sectionEditorSubmission->getReviewFile();
 						if ($reviewVersion) {
-							$temporaryFile = $temporaryFileManager->articleToTemporaryFile($reviewVersion, $user->getUserId());
+							$temporaryFile = $temporaryFileManager->articleToTemporaryFile($reviewVersion, $user->getId());
 							$email->addPersistAttachment($temporaryFile);
 						}
 					}
@@ -378,7 +378,7 @@ class SectionEditorAction extends Action {
 
 				// Key lifetime is the typical review period plus four weeks
 				$keyLifetime = ($journal->getSetting('numWeeksPerReview') + 4) * 7;
-				$email->addPrivateParam('ACCESS_KEY', $accessKeyManager->createKey('ReviewerContext', $reviewer->getUserId(), $reviewId, $keyLifetime));
+				$email->addPrivateParam('ACCESS_KEY', $accessKeyManager->createKey('ReviewerContext', $reviewer->getId(), $reviewId, $keyLifetime));
 			}
 
 			if ($preventAddressChanges) {
@@ -411,7 +411,7 @@ class SectionEditorAction extends Action {
 					'reviewerPassword' => $reviewer->getPassword(),
 					'reviewDueDate' => strftime(Config::getVar('general', 'date_format_short'), strtotime($reviewAssignment->getDateDue())),
 					'editorialContactSignature' => $user->getContactSignature(),
-					'passwordResetUrl' => Request::url(null, 'login', 'resetPassword', $reviewer->getUsername(), array('confirm' => Validation::generatePasswordResetHash($reviewer->getUserId()))),
+					'passwordResetUrl' => Request::url(null, 'login', 'resetPassword', $reviewer->getUsername(), array('confirm' => Validation::generatePasswordResetHash($reviewer->getId()))),
 					'submissionReviewUrl' => $submissionUrl
 				);
 				$email->assignParams($paramArray);
@@ -420,7 +420,7 @@ class SectionEditorAction extends Action {
 			$email->displayEditForm(
 				Request::url(null, null, 'remindReviewer', 'send'),
 				array(
-					'reviewerId' => $reviewer->getUserId(),
+					'reviewerId' => $reviewer->getId(),
 					'articleId' => $sectionEditorSubmission->getArticleId(),
 					'reviewId' => $reviewId
 				)
@@ -615,7 +615,7 @@ class SectionEditorAction extends Action {
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
 			HookRegistry::call('SectionEditorAction::unsuitableSubmission', array(&$sectionEditorSubmission, &$author, &$email));
 			if ($email->isEnabled()) {
-				$email->setAssoc(ARTICLE_EMAIL_EDITOR_NOTIFY_AUTHOR_UNSUITABLE, ARTICLE_EMAIL_TYPE_EDITOR, $user->getUserId());
+				$email->setAssoc(ARTICLE_EMAIL_EDITOR_NOTIFY_AUTHOR_UNSUITABLE, ARTICLE_EMAIL_TYPE_EDITOR, $user->getId());
 				$email->send();
 			}
 			SectionEditorAction::archiveSubmission($sectionEditorSubmission);
@@ -828,7 +828,7 @@ class SectionEditorAction extends Action {
 			// Add log
 			import('article.log.ArticleLog');
 			import('article.log.ArticleEventLogEntry');
-			ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_REVIEW_RESUBMIT, ARTICLE_LOG_TYPE_EDITOR, $user->getUserId(), 'log.review.resubmit', array('articleId' => $sectionEditorSubmission->getArticleId()));
+			ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_REVIEW_RESUBMIT, ARTICLE_LOG_TYPE_EDITOR, $user->getId(), 'log.review.resubmit', array('articleId' => $sectionEditorSubmission->getArticleId()));
 		}
 	}
 
@@ -925,7 +925,7 @@ class SectionEditorAction extends Action {
 			
 			$copyeditSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $sectionEditorSubmission->getArticleId());
 			if (!$copyeditSignoff->getUserId()) {
-				$copyeditSignoff->setUserId($user->getUserId());
+				$copyeditSignoff->setUserId($user->getId());
 			}
 			$copyeditSignoff->setDateNotified(Core::getCurrentDate());
 			
@@ -1000,7 +1000,7 @@ class SectionEditorAction extends Action {
 			}
 
 			$authorSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $sectionEditorSubmission->getArticleId());
-			$authorSignoff->setUserId($author->getUserId());
+			$authorSignoff->setUserId($author->getId());
 			$authorSignoff->setDateNotified(Core::getCurrentDate());
 			$authorSignoff->setDateUnderway(null);
 			$authorSignoff->setDateCompleted(null);
@@ -1093,7 +1093,7 @@ class SectionEditorAction extends Action {
 			}
 
 			$signoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $sectionEditorSubmission->getArticleId());
-			$signoff->setUserId($copyeditor->getUserId());
+			$signoff->setUserId($copyeditor->getId());
 			$signoff->setDateNotified(Core::getCurrentDate());
 			$signoff->setDateUnderway(null);
 			$signoff->setDateCompleted(null);
@@ -1289,7 +1289,7 @@ class SectionEditorAction extends Action {
 		// Add log entry
 		import('article.log.ArticleLog');
 		import('article.log.ArticleEventLogEntry');
-		ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_INITIAL, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.copyedit.initialEditComplete', Array('copyeditorName' => $user->getFullName(), 'articleId' => $sectionEditorSubmission->getArticleId()));
+		ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_INITIAL, ARTICLE_LOG_TYPE_COPYEDIT, $user->getId(), 'log.copyedit.initialEditComplete', Array('copyeditorName' => $user->getFullName(), 'articleId' => $sectionEditorSubmission->getArticleId()));
 	}
 
 	/**
@@ -1327,7 +1327,7 @@ class SectionEditorAction extends Action {
 		// Add log entry
 		import('article.log.ArticleLog');
 		import('article.log.ArticleEventLogEntry');
-		ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_FINAL, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.copyedit.finalEditComplete', Array('copyeditorName' => $user->getFullName(), 'articleId' => $sectionEditorSubmission->getArticleId()));
+		ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_FINAL, ARTICLE_LOG_TYPE_COPYEDIT, $user->getId(), 'log.copyedit.finalEditComplete', Array('copyeditorName' => $user->getFullName(), 'articleId' => $sectionEditorSubmission->getArticleId()));
 	}
 
 	/**
@@ -1656,7 +1656,7 @@ class SectionEditorAction extends Action {
 
 		$articleNote = new ArticleNote();
 		$articleNote->setArticleId($articleId);
-		$articleNote->setUserId($user->getUserId());
+		$articleNote->setUserId($user->getId());
 		$articleNote->setDateCreated(Core::getCurrentDate());
 		$articleNote->setDateModified(Core::getCurrentDate());
 		$articleNote->setTitle(Request::getUserVar('title'));
@@ -1710,7 +1710,7 @@ class SectionEditorAction extends Action {
 		$articleNote = new ArticleNote();
 		$articleNote->setNoteId(Request::getUserVar('noteId'));
 		$articleNote->setArticleId($articleId);
-		$articleNote->setUserId($user->getUserId());
+		$articleNote->setUserId($user->getId());
 		$articleNote->setDateModified(Core::getCurrentDate());
 		$articleNote->setTitle(Request::getUserVar('title'));
 		$articleNote->setNote(Request::getUserVar('note'));
@@ -2258,7 +2258,7 @@ class SectionEditorAction extends Action {
 
 			$entry = new ArticleEventLogEntry();
 			$entry->setArticleId($reviewAssignment->getArticleId());
-			$entry->setUserId($user->getUserId());
+			$entry->setUserId($user->getId());
 			$entry->setDateLogged(Core::getCurrentDate());
 			$entry->setEventType(ARTICLE_LOG_REVIEW_CONFIRM_BY_PROXY);
 			$entry->setLogMessage($accept?'log.review.reviewAcceptedByProxy':'log.review.reviewDeclinedByProxy', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getArticleId(), 'round' => $reviewAssignment->getRound(), 'userName' => $user->getFullName()));
@@ -2316,7 +2316,7 @@ class SectionEditorAction extends Action {
 
 			$entry = new ArticleEventLogEntry();
 			$entry->setArticleId($reviewAssignment->getArticleId());
-			$entry->setUserId($user->getUserId());
+			$entry->setUserId($user->getId());
 			$entry->setDateLogged(Core::getCurrentDate());
 			$entry->setEventType(ARTICLE_LOG_REVIEW_FILE_BY_PROXY);
 			$entry->setLogMessage('log.review.reviewFileByProxy', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getArticleId(), 'round' => $reviewAssignment->getRound(), 'userName' => $user->getFullName()));

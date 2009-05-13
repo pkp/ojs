@@ -553,7 +553,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		if (isset($submission)) {
 			$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
 			if (!isset($layoutSignoff)) $isValid = false;
-			elseif ($layoutSignoff->getUserId() == $user->getUserId()) {
+			elseif ($layoutSignoff->getUserId() == $user->getId()) {
 				if ($checkEdit) {
 					$isValid = $this->layoutEditingEnabled($submission);
 				} else {

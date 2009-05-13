@@ -33,7 +33,7 @@
 	<td width="20%" class="label">{fieldLabel name="userId" required="true" key="manager.subscriptions.form.userId"}</td>
 	<td width="80%" class="value">
 		{$user->getFullName()|escape}&nbsp;&nbsp;<a href="{if $subscriptionId}{url op="selectSubscriber" subscriptionId=$subscriptionId}{else}{url op="selectSubscriber"}{/if}" class="action">{translate key="common.select"}</a>
-		<input type="hidden" name="userId" id="userId" value="{$user->getUserId()}"/>
+		<input type="hidden" name="userId" id="userId" value="{$user->getId()}"/>
 	</td>
 </tr>
 <tr valign="top">

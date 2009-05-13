@@ -139,7 +139,7 @@ class Request extends PKPRequest {
 	function redirectHome() {
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$user = Request::getUser();
-		$userId = $user->getUserId();
+		$userId = $user->getId();
 
 		if ($journal =& Request::getJournal()) {
 			// The user is in the journal context, see if they have one role only

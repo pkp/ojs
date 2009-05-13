@@ -278,11 +278,11 @@ class UserManagementForm extends Form {
 			$auth =& $authDao->getPlugin($user->getAuthId());
 		}
 
-		if ($user->getUserId() != null) {
+		if ($user->getId() != null) {
 			if ($this->getData('password') !== '') {
 				if (isset($auth)) {
 					$auth->doSetUserPassword($user->getUsername(), $this->getData('password'));
-					$user->setPassword(Validation::encryptCredentials($user->getUserId(), Validation::generatePassword())); // Used for PW reset hash only
+					$user->setPassword(Validation::encryptCredentials($user->getId(), Validation::generatePassword())); // Used for PW reset hash only
 				} else {
 					$user->setPassword(Validation::encryptCredentials($user->getUsername(), $this->getData('password')));
 				}
@@ -309,7 +309,7 @@ class UserManagementForm extends Form {
 				$user->setPassword($password);
 				// FIXME Check result and handle failures
 				$auth->doCreateUser($user);
-				$user->setAuthId($auth->authId);				$user->setPassword(Validation::encryptCredentials($user->getUserId(), Validation::generatePassword())); // Used for PW reset hash only
+				$user->setAuthId($auth->authId);				$user->setPassword(Validation::encryptCredentials($user->getId(), Validation::generatePassword())); // Used for PW reset hash only
 			} else {
 				$user->setPassword(Validation::encryptCredentials($this->getData('username'), $password));
 			}
