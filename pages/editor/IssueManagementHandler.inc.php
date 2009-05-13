@@ -65,6 +65,7 @@ class IssueManagementHandler extends EditorHandler {
 			unset($issue);
 		}
 		$templateMgr->assign('allIssues', $issueMap);
+		$templateMgr->assign('rangeInfo', $rangeInfo);
 
 		$currentIssue =& $issueDao->getCurrentIssue($journal->getJournalId());
 		$currentIssueId = $currentIssue?$currentIssue->getIssueId():null;

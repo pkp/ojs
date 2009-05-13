@@ -43,7 +43,16 @@
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
 
-	{assign var=pos value=1}
+	{* Calculate a good sequence number to assign, including page info *}
+	{if $rangeInfo}
+		{assign var=page value=$rangeInfo->getPage()-1}
+		{assign var=count value=$rangeInfo->getCount()}
+		{assign var=pos value=$page*$count}
+		{assign var=pos value=$pos+1}
+	{else}
+		{assign var=pos value=1}
+	{/if}
+
 	{iterate from=issues item=issue}
 	<tr valign="top">
 		<td><a href="{url op="issueToc" path=$issue->getIssueId()}" class="action">{$issue->getIssueIdentification()|escape}</a></td>
