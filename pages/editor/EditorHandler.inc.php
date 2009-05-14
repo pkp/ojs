@@ -73,29 +73,61 @@ class EditorHandler extends SectionEditorHandler {
 			$dateSearchField = Request::getUserVar('dateSearchField');
 			$searchMatch = Request::getUserVar('searchMatch');
 			$search = Request::getUserVar('search');
+		
+			$sort = Request::getUserVar('sort');
+			$sort = isset($sort) ? $sort : 'id';
+			$sortDirection = Request::getUserVar('sortDirection');
+			$sortDirection = isset($sortDirection) ? $sortDirection : 'ASC';
 
 			$fromDate = Request::getUserDateVar('dateFrom', 1, 1);
 			if ($fromDate !== null) $fromDate = date('Y-m-d H:i:s', $fromDate);
 			$toDate = Request::getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
 			if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
-			$rawSubmissions =& $editorSubmissionDao->getUnfilteredEditorSubmissions(
-				$journal->getJournalId(),
-				Request::getUserVar('section'),
-				0,
-				$searchField,
-				$searchMatch,
-				$search,
-				$dateSearchField,
-				$fromDate,
-				$toDate,
-				null,
-				$rangeInfo
-			);
-			
-			// EditorSubmissionDAO does not return edit assignments, so we need this.
-			$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
-			$submissions = new DAOResultFactory($rawSubmissions, $sectionEditorSubmissionDao, '_returnSectionEditorSubmissionFromRow');
 
+			if ($sort == 'status') {			
+				$rawSubmissions = &$editorSubmissionDao->getUnfilteredEditorSubmissions(
+					$journal->getJournalId(),
+					Request::getUserVar('section'),
+					0,
+					$searchField,
+					$searchMatch,
+					$search,
+					$dateSearchField,
+					$fromDate,
+					$toDate,
+					null,
+					null,
+					$editorSubmissionDao->getSortMapping($sort),
+					$sortDirection
+				);
+				$submissions = new DAOResultFactory($rawSubmissions, $editorSubmissionDao, '_returnEditorSubmissionFromRow');
+			
+				// Sort all submissions by status, which is too complex to do in the DB
+				$submissionsArray = $submissions->toArray();
+				$compare = create_function('$s1, $s2', 'return strcmp($s1->getSubmissionStatus(), $s2->getSubmissionStatus());');
+				usort ($submissionsArray, $compare);
+			
+				// Convert submission array back to an ItemIterator class
+				import('core.ArrayItemIterator');
+				$submissions =& ArrayItemIterator::fromRangeInfo($submissionsArray, $rangeInfo);
+			}  else {
+				$rawSubmissions = &$editorSubmissionDao->getUnfilteredEditorSubmissions(
+					$journal->getJournalId(),
+					Request::getUserVar('section'),
+					0,
+					$searchField,
+					$searchMatch,
+					$search,
+					$dateSearchField,
+					$fromDate,
+					$toDate,
+					null,
+					$rangeInfo,
+					$editorSubmissionDao->getSortMapping($sort),
+					$sortDirection
+				);
+				$submissions = new DAOResultFactory($rawSubmissions, $editorSubmissionDao, '_returnEditorSubmissionFromRow');
+			}
 
 			$templateMgr->assign_by_ref('submissions', $submissions);
 			$templateMgr->assign('section', Request::getUserVar('section'));
@@ -107,6 +139,8 @@ class EditorHandler extends SectionEditorHandler {
 			$templateMgr->assign('dateFrom', $fromDate);
 			$templateMgr->assign('dateTo', $toDate);
 			$templateMgr->assign('displayResults', true);
+			$templateMgr->assign('sort', $sort);
+			$templateMgr->assign('sortDirection', $sortDirection);
 		}
 
 		$submissionsCount =& $editorSubmissionDao->getEditorSubmissionsCount($journal->getJournalId());
@@ -131,6 +165,11 @@ class EditorHandler extends SectionEditorHandler {
 
 		$page = isset($args[0]) ? $args[0] : '';
 		$sections =& $sectionDao->getSectionTitles($journalId);
+		
+		$sort = Request::getUserVar('sort');
+		$sort = isset($sort) ? $sort : 'id';
+		$sortDirection = Request::getUserVar('sortDirection');
+		$sortDirection = isset($sortDirection) ? $sortDirection : 'ASC';
 
 		$filterEditorOptions = array(
 			FILTER_EDITOR_ALL => Locale::Translate('editor.allEditors'),
@@ -211,7 +250,10 @@ class EditorHandler extends SectionEditorHandler {
 			$dateSearchField,
 			$fromDate,
 			$toDate,
-			$rangeInfo);
+			$rangeInfo,
+			$editorSubmissionDao->getSortMapping($sort),
+			$sortDirection
+		);
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('pageToDisplay', $page);
@@ -237,6 +279,8 @@ class EditorHandler extends SectionEditorHandler {
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
 
 		$templateMgr->assign('helpTopicId', $helpTopicId);
+		$templateMgr->assign('sort', $sort);
+		$templateMgr->assign('sortDirection', $sortDirection);
 		$templateMgr->display('editor/submissions.tpl');
 	}
 

@@ -13,8 +13,22 @@
 {include file="common/header.tpl"}
 {/strip}
 
+<script type="text/javascript">
+{literal}
+<!--
+function sortSearch(heading, direction) {
+  document.submit.sort.value = heading;
+  document.submit.sortDirection.value = direction;
+  document.submit.submit() ;
+}
+// -->
+{/literal}
+</script> 
+
 <h3>{translate key="editor.article.selectReviewer"}</h3>
 <form name="submit" method="post" action="{url op="selectReviewer" path=$articleId}">
+	<input type="hidden" name="sort" value="id"/>
+	<input type="hidden" name="sortDirection" value="ASC"/>
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions selected=$searchField}
 	</select>
@@ -38,15 +52,15 @@
 {/if}
 <tr><td colspan="{$numCols|escape}" class="headseparator">&nbsp;</td></tr>
 <tr class="heading" valign="bottom">
-	<td width="20%">{translate key="user.name"}</td>
+	<td width="20%">{sort_search key="user.name" heading="reviewerName"}</td>
 	<td>{translate key="user.interests"}</td>
 	{if $rateReviewerOnQuality}
-		<td width="7%">{translate key="reviewer.averageQuality"}</td>
+		<td width="7%">{sort_search key="reviewer.averageQuality" heading="quality"}</td>
 	{/if}
-	<td width="7%">{translate key="reviewer.completedReviews"}</td>
-	<td width="7%">{translate key="editor.submissions.averageTime"}</td>
-	<td width="13%">{translate key="editor.submissions.lastAssigned"}</td>
-	<td width="5%">{translate key="common.active"}</td>
+	<td width="7%">{sort_search key="reviewer.completedReviews" heading="done"}</td>
+	<td width="7%">{sort_search key="editor.submissions.averageTime" heading="average"}</td>
+	<td width="13%">{sort_search key="editor.submissions.lastAssigned" heading="latest"}</td>
+	<td width="5%">{sort_search key="common.active" heading="active"}</td>
 	<td width="7%" class="heading">{translate key="common.action"}</td>
 </tr>
 <tr><td colspan="{$numCols|escape}" class="headseparator">&nbsp;</td></tr>

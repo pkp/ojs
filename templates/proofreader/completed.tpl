@@ -16,10 +16,24 @@
 {assign var="dateTo" value="--"}
 {/if}
 
+<script type="text/javascript">
+{literal}
+<!--
+function sortSearch(heading, direction) {
+  document.submit.sort.value = heading;
+  document.submit.sortDirection.value = direction;
+  document.submit.submit() ;
+}
+// -->
+{/literal}
+</script> 
+
 <form method="post" name="submit" action="{url op="index" path=$pageToDisplay}">
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions selected=$searchField}
 	</select>
+	<input type="hidden" name="sort" value="id"/>
+	<input type="hidden" name="sortDirection" value="ASC"/>
 	<select name="searchMatch" size="1" class="selectMenu">
 		<option value="contains"{if $searchMatch == 'contains'} selected="selected"{/if}>{translate key="form.contains"}</option>
 		<option value="is"{if $searchMatch == 'is'} selected="selected"{/if}>{translate key="form.is"}</option>
@@ -46,13 +60,13 @@
 <table width="100%" class="listing">
 	<tr><td colspan="7" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
-		<td width="5%">{translate key="common.id"}</td>
-		<td width="5%"><span class="disabled">MM-DD</span><br />{translate key="common.assign"}</td>
-		<td width="5%">{translate key="submissions.sec"}</td>
-		<td width="25%">{translate key="article.authors"}</td>
-		<td width="30%">{translate key="article.title"}</td>
-		<td width="5%">{translate key="submission.complete"}</td>
-		<td width="25%" align="right">{translate key="common.status"}</td>
+		<td width="5%">{sort_search key="common.id" heading="id"}</td>
+		<td width="5%"><span class="disabled">MM-DD</span><br />{sort_search key="common.assign" heading="assignDate"}</td>
+		<td width="5%">{sort_search key="submissions.sec" heading="section"}</td>
+		<td width="25%">{sort_search key="article.authors" heading="authors"}</td>
+		<td width="30%">{sort_search key="article.title" heading="title"}</td>
+		<td width="5%">{sort_search key="submission.complete" heading="dateCompleted"}</td>
+		<td width="25%" align="right">{sort_search key="common.status" heading="status"}</td>
 	</tr>
 	<tr><td colspan="7" class="headseparator">&nbsp;</td></tr>
 {iterate from=submissions item=submission}

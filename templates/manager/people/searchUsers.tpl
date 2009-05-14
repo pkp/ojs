@@ -108,9 +108,9 @@ function toggleChecked() {
 <tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
 <tr class="heading" valign="bottom">
 	<td width="5%">&nbsp;</td>
-	<td width="25%">{translate key="user.username"}</td>
-	<td width="30%">{translate key="user.name"}</td>
-	<td width="30%">{translate key="user.email"}</td>
+	<td width="25%">{sort_heading key="user.username" heading="username"}</td>
+	<td width="30%">{sort_heading key="user.name" heading="name"}</td>
+	<td width="10%">{sort_heading key="user.email" heading="email"}</td>
 	<td width="10%" align="right">{translate key="common.action"}</td>
 </tr>
 <tr><td colspan="5" class="headseparator">&nbsp;</td></tr>

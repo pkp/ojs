@@ -60,7 +60,12 @@ class CopyeditorHandler extends Handler {
 				$active = true;
 		}
 
-		$submissions = $copyeditorSubmissionDao->getCopyeditorSubmissionsByCopyeditorId($user->getId(), $journal->getJournalId(), $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $active, $rangeInfo);
+		$sort = Request::getUserVar('sort');
+		$sort = isset($sort) ? $sort : 'title';
+		$sortDirection = Request::getUserVar('sortDirection');
+		$sortDirection = isset($sortDirection) ? $sortDirection : 'ASC';
+
+		$submissions = $copyeditorSubmissionDao->getCopyeditorSubmissionsByCopyeditorId($user->getUserId(), $journal->getJournalId(), $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $active, $rangeInfo, $copyeditorSubmissionDao->getSortMapping($sort), $sortDirection);
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('pageToDisplay', $page);
@@ -94,6 +99,8 @@ class CopyeditorHandler extends Handler {
 		$issueAction = new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
 		$templateMgr->assign('helpTopicId', 'editorial.copyeditorsRole.submissions');
+		$templateMgr->assign('sort', $sort);
+		$templateMgr->assign('sortDirection', $sortDirection);
 		$templateMgr->display('copyeditor/index.tpl');
 	}
 

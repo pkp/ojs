@@ -396,6 +396,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		$journal =& Request::getJournal();
 		$submission =& $this->submission;
+		
+		$sort = Request::getUserVar('sort');
+		$sort = isset($sort) ? $sort : 'name';
+		$sortDirection = Request::getUserVar('sortDirection');
+		$sortDirection = isset($sortDirection) ? $sortDirection : 'ASC';
 
 		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
 
@@ -425,7 +430,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			}
 
 			$rangeInfo =& Handler::getRangeInfo('reviewers');
-			$reviewers = $sectionEditorSubmissionDao->getReviewersForArticle($journal->getJournalId(), $articleId, $submission->getCurrentRound(), $searchType, $search, $searchMatch, $rangeInfo);
+			$reviewers = $sectionEditorSubmissionDao->getReviewersForArticle($journal->getJournalId(), $articleId, $submission->getCurrentRound(), $searchType, $search, $searchMatch, $rangeInfo, $sectionEditorSubmissionDao->getSortMapping($sort));
 
 			$journal = Request::getJournal();
 			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
@@ -454,6 +459,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('helpTopicId', 'journal.roles.reviewer');
 			$templateMgr->assign('alphaList', explode(' ', Locale::translate('common.alphaList')));
 			$templateMgr->assign('reviewerDatabaseLinks', $journal->getSetting('reviewerDatabaseLinks'));
+			$templateMgr->assign('sort', $sort);
+			$templateMgr->assign('sortDirection', $sortDirection);
 			$templateMgr->display('sectionEditor/selectReviewer.tpl');
 		}
 	}

@@ -14,14 +14,14 @@
 		<td colspan="9" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
-		<td width="5%">{translate key="common.id"}</td>
-		<td width="5%"><span class="disabled">MM-DD</span><br />{translate key="submissions.submit"}</td>
-		<td width="5%">{translate key="submissions.sec"}</td>
-		<td width="15%">{translate key="article.authors"}</td>
-		<td width="25%">{translate key="article.title"}</td>
-		<td width="10%">{translate key="submission.copyedit"}</td>
-		<td width="10%">{translate key="submission.layout"}</td>
-		<td width="10%">{translate key="submissions.proof"}</td>
+		<td width="5%">{sort_search key="common.id" heading="id"}</td>
+		<td width="5%"><span class="disabled">MM-DD</span><br />{sort_heading key="submissions.submit" heading="submitDate"}</td>
+		<td width="5%">{sort_search key="submissions.sec" heading="section"}</td>
+		<td width="15%">{sort_search key="article.authors" heading="authors"}</td>
+		<td width="25%">{sort_search key="article.title" heading="title"}</td>
+		<td width="10%">{sort_search key="submission.copyedit" heading="subCopyedit"}</td>
+		<td width="10%">{sort_search key="submission.layout" heading="subLayout"}</td>
+		<td width="10%">{sort_search key="submissions.proof" heading="subProof"}</td>
 		<td width="5%">{translate key="article.sectionEditor"}</td>
 	</tr>
 	<tr>

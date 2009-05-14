@@ -112,9 +112,9 @@ function confirmAndPrompt(userId) {
 	</tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">&nbsp;</td>
-		<td width="12%">{translate key="user.username"}</td>
-		<td width="20%">{translate key="user.name"}</td>
-		<td width="23%">{translate key="user.email"}</td>
+		<td width="12%">{sort_heading key="user.username" heading="username"}</td>
+		<td width="20%">{sort_heading key="user.name" heading="name"}</td>
+		<td width="23%">{sort_heading key="user.email" heading="email"}</td>
 		<td width="40%" align="right">{translate key="common.action"}</td>
 	</tr>
 	<tr>

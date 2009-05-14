@@ -51,7 +51,26 @@ class AuthorHandler extends Handler {
 				$active = true;
 		}
 
-		$submissions = $authorSubmissionDao->getAuthorSubmissions($user->getId(), $journal->getJournalId(), $active, $rangeInfo);
+		$sort = Request::getUserVar('heading');
+		$sort = isset($sort) ? $sort : 'title';
+		$sortDirection = Request::getUserVar('sortDirection');
+		$sortDirection = isset($sortDirection) ? $sortDirection : 'ASC';
+
+		if ($sort == 'status') {
+			// FIXME Does not pass $rangeInfo else we only get partial results
+			$unsortedSubmissions = $authorSubmissionDao->getAuthorSubmissions($user->getUserId(), $journal->getJournalId(), $active, null, $authorSubmissionDao->getSortMapping($sort), $sortDirection);
+
+			// Sort all submissions by status, which is too complex to do in the DB
+			$submissionsArray = $unsortedSubmissions->toArray();
+			$compare = create_function('$s1, $s2', 'return strcmp($s1->getSubmissionStatus(), $s2->getSubmissionStatus());');
+			usort ($submissionsArray, $compare);
+			
+			// Convert submission array back to an ItemIterator class
+			import('core.ArrayItemIterator');
+			$submissions =& ArrayItemIterator::fromRangeInfo($submissionsArray, $rangeInfo);
+		} else {
+			$submissions = $authorSubmissionDao->getAuthorSubmissions($user->getUserId(), $journal->getJournalId(), $active, $rangeInfo, $authorSubmissionDao->getSortMapping($sort), $sortDirection);
+		}
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('pageToDisplay', $page);
@@ -78,6 +97,8 @@ class AuthorHandler extends Handler {
 		$issueAction = new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
 		$templateMgr->assign('helpTopicId', 'editorial.authorsRole.submissions');
+		$templateMgr->assign('sort', $sort);
+		$templateMgr->assign('sortDirection', $sortDirection);
 		$templateMgr->display('author/index.tpl');
 	}
 

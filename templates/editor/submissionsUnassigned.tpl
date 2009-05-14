@@ -14,11 +14,11 @@
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
-		<td width="5%">{translate key="common.id"}</td>
-		<td width="5%"><span class="disabled">MM-DD</span><br />{translate key="submissions.submit"}</td>
-		<td width="5%">{translate key="submissions.sec"}</td>
-		<td width="30%">{translate key="article.authors"}</td>
-		<td width="50%">{translate key="article.title"}</td>
+		<td width="5%">{sort_search key="common.id" heading="id"}</td>
+		<td width="5%"><span class="disabled">MM-DD</span><br />{sort_search key="submissions.submit" heading="submitDate"}</td>
+		<td width="5%">{sort_search key="submissions.sec" heading="section"}</td>
+		<td width="30%">{sort_search key="article.authors" heading="authors"}</td>
+		<td width="50%">{sort_search key="article.title" heading="title"}</td>
 	</tr>
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>

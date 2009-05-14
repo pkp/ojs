@@ -199,7 +199,7 @@ class GroupHandler extends ManagerHandler {
 		// If a user has been selected, add them to the group.
 		// Otherwise list users.
 		if ($userId !== null) {
-			this->validate($groupId, $userId);
+			$this->validate($groupId, $userId);
 			$group =& $this->group;
 			$user =& $this->user;
 			// A valid user has been chosen. Add them to

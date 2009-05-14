@@ -323,7 +323,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	/**
 	 * Retrieve unfiltered section editor submissions
 	 */
-	function &getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId = 0, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $status = true, $additionalWhereSql = '', $rangeInfo = null) {
+	function &getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId = 0, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $status = true, $additionalWhereSql = '', $rangeInfo = null, $sortBy = null, $sortDirection = 'ASC') {
 		$primaryLocale = Locale::getPrimaryLocale();
 		$locale = Locale::getLocale();
 
@@ -434,6 +434,11 @@ class SectionEditorSubmissionDAO extends DAO {
 
 		$sql = 'SELECT DISTINCT
 				a.*,
+				scf.date_completed as copyedit_completed,
+				spr.date_completed as proofread_completed,
+				sle.date_completed as layout_completed,
+				atl.setting_value AS submission_title,
+				aap.last_name AS author_name,
 				e.can_review AS can_review,
 				e.can_edit AS can_edit,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
@@ -442,6 +447,7 @@ class SectionEditorSubmissionDAO extends DAO {
 			FROM
 				articles a
 				INNER JOIN article_authors aa ON (aa.article_id = a.article_id)
+				LEFT JOIN article_authors aap ON (aap.article_id = a.article_id AND aap.primary_contact = 1)
 				LEFT JOIN edit_assignments e ON (e.article_id = a.article_id)
 				LEFT JOIN users ed ON (e.editor_id = ed.user_id)
 				LEFT JOIN sections s ON (s.section_id = a.section_id)
@@ -470,7 +476,7 @@ class SectionEditorSubmissionDAO extends DAO {
 			$searchSql .= ' AND a.section_id = ?';
 		}
 
-		$result =& $this->retrieveRange($sql . ' ' . $searchSql . ' ORDER BY article_id ASC',
+		$result = &$this->retrieveRange($sql . ' ' . $searchSql . ($sortBy?(' ORDER BY ' . $sortBy . ' ' . $sortDirection) : ''),
 			$params,
 			$rangeInfo
 		);	
@@ -491,11 +497,11 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * @param $rangeInfo object
 	 * @return array EditorSubmission
 	 */
-	function &getSectionEditorSubmissionsInReview($sectionEditorId, $journalId, $sectionId, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null) {
+	function &getSectionEditorSubmissionsInReview($sectionEditorId, $journalId, $sectionId, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null, $sortBy = null, $sortDirection = 'ASC') {
 		$submissions = array();
 
 		// FIXME Does not pass $rangeInfo else we only get partial results
-		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, true, 'e.can_review = 1');
+		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, true, 'e.can_review = 1', null, $sortBy, $sortDirection);
 
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
@@ -540,11 +546,11 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * @param $rangeInfo object
 	 * @return array EditorSubmission
 	 */
-	function &getSectionEditorSubmissionsInEditing($sectionEditorId, $journalId, $sectionId, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null) {
+	function &getSectionEditorSubmissionsInEditing($sectionEditorId, $journalId, $sectionId, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null, $sortBy = null, $sortDirection = 'ASC') {
 		$submissions = array();
 
 		// FIXME Does not pass $rangeInfo else we only get partial results
-		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, true, 'e.can_edit = 1');
+		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, true, 'e.can_edit = 1', null, $sortBy, $sortDirection);
 
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
@@ -587,10 +593,10 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * @param $rangeInfo object
 	 * @return array EditorSubmission
 	 */
-	function &getSectionEditorSubmissionsArchives($sectionEditorId, $journalId, $sectionId, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null) {
+	function &getSectionEditorSubmissionsArchives($sectionEditorId, $journalId, $sectionId, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null, $sortBy = null, $sortDirection = 'ASC') {
 		$submissions = array();
 
-		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, false, '', $rangeInfo);
+		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, false, '', $rangeInfo, $sortBy, $sortDirection);
 
 		while (!$result->EOF) {
 			$submission =& $this->_returnSectionEditorSubmissionFromRow($result->GetRowAssoc(false));
@@ -785,7 +791,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * @param $rangeInfo RangeInfo optional
 	 * @return DAOResultFactory containing matching Users
 	 */
-	function &getReviewersForArticle($journalId, $articleId, $round, $searchType = null, $search = null, $searchMatch = null, $rangeInfo = null) {
+	function &getReviewersForArticle($journalId, $articleId, $round, $searchType = null, $search = null, $searchMatch = null, $rangeInfo = null, $sortBy, $sortDirection) {
 		$paramArray = array('interests', $articleId, $round, $journalId, RoleDAO::getRoleIdFromPath('reviewer'));
 		$searchSql = '';
 
@@ -828,15 +834,20 @@ class SectionEditorSubmissionDAO extends DAO {
 		$result =& $this->retrieveRange(
 			'SELECT DISTINCT
 				u.*,
-				a.review_id
+				a.review_id,
+				(SELECT AVG(quality) FROM review_assignments ra WHERE (ra.reviewer_id = u.user_id)) AS average_quality,
+				(SELECT COUNT(review_id) FROM review_assignments ra WHERE (ra.reviewer_id = u.user_id AND date_completed IS NOT NULL)) AS completed,
+				(SELECT COUNT(review_id) FROM review_assignments ra WHERE (ra.reviewer_id = u.user_id AND date_completed IS NULL)) AS incomplete,
+				(SELECT MAX(date_notified) FROM review_assignments ra WHERE (ra.reviewer_id = u.user_id)) AS latest,
+				(SELECT AVG(review_time) FROM (SELECT (date_completed-date_notified) AS review_time FROM review_assignments ra WHERE date_completed IS NOT NULL AND ra.reviewer_id = u.user_id) AS sum_review_time) AS average
 			FROM	users u
 				LEFT JOIN user_settings s ON (u.user_id = s.user_id AND s.setting_name = ?)
 				LEFT JOIN roles r ON (r.user_id = u.user_id)
 				LEFT JOIN review_assignments a ON (a.reviewer_id = u.user_id AND a.cancelled = 0 AND a.article_id = ? AND a.round = ?)
 			WHERE	u.user_id = r.user_id AND
 				r.journal_id = ? AND
-				r.role_id = ? ' . $searchSql . '
-			ORDER BY last_name, first_name',
+				r.role_id = ? ' . $searchSql . 
+			($sortBy?(' ORDER BY ' . $sortBy . ' ' . $sortDirection) : ''),
 			$paramArray, $rangeInfo
 		);
 
@@ -1164,6 +1175,33 @@ class SectionEditorSubmissionDAO extends DAO {
 		unset($result);
 
 		return $statistics;
+	}
+	
+	/**
+	 * Map a column heading value to a database value for sorting
+	 * @param string
+	 * @return string
+	 */
+	function getSortMapping($heading) {
+		switch ($heading) {
+			case 'id': return 'a.article_id';
+			case 'submitDate': return 'a.date_submitted';
+			case 'section': return 'section_abbrev';
+			case 'authors': return 'author_name';
+			case 'title': return 'submission_title';
+			case 'active': return 'a.submission_progress';		
+			case 'subCopyedit': return 'copyedit_completed';
+			case 'subLayout': return 'layout_completed';
+			case 'subProof': return 'proofread_completed';
+			case 'reviewerName': return 'u.last_name';
+			case 'quality': return 'average_quality';
+			case 'done': return 'completed';
+			case 'latest': return 'latest';
+			case 'active': return 'active';
+			case 'average': return 'average';
+
+			default: return null;
+		}
 	}
 }
 

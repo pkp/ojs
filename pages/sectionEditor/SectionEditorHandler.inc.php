@@ -67,6 +67,11 @@ class SectionEditorHandler extends Handler {
 
 		$page = isset($args[0]) ? $args[0] : '';
 		$sections =& $sectionDao->getSectionTitles($journal->getJournalId());
+		
+		$sort = Request::getUserVar('sort');
+		$sort = isset($sort) ? $sort : 'id';
+		$sortDirection = Request::getUserVar('sortDirection');
+		$sortDirection = isset($sortDirection) ? $sortDirection : 'ASC';
 
 		$filterSectionOptions = array(
 			FILTER_SECTION_ALL => Locale::Translate('editor.allSections')
@@ -108,7 +113,8 @@ class SectionEditorHandler extends Handler {
 			$dateSearchField,
 			$fromDate,
 			$toDate,
-			$rangeInfo
+			$rangeInfo,
+			$sectionEditorSubmissionDao->getSortMapping($sort)
 		);
 
 		$templateMgr =& TemplateManager::getManager();
@@ -146,6 +152,8 @@ class SectionEditorHandler extends Handler {
 		import('issue.IssueAction');
 		$issueAction = new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
+		$templateMgr->assign('sort', $sort);
+		$templateMgr->assign('sortDirection', $sortDirection);
 
 		$templateMgr->display('sectionEditor/index.tpl');
 	}
@@ -156,7 +164,7 @@ class SectionEditorHandler extends Handler {
 	 */
 	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null, $showSidebar = true) {
 		parent::setupTemplate();
-		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_OJS_EDITOR));
+		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_OJS_EDITOR, LOCALE_COMPONENT_PKP_MANAGER));
 		$templateMgr =& TemplateManager::getManager();
 		$isEditor = Validation::isEditor();
 

@@ -14,12 +14,12 @@
 		<td colspan="6" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
-		<td width="5%">{translate key="common.id"}</td>
-		<td width="15%"><span class="disabled"></span><br />{translate key="submissions.submitted"}</td>
-		<td width="5%">{translate key="submissions.sec"}</td>
-		<td width="25%">{translate key="article.authors"}</td>
-		<td width="30%">{translate key="article.title"}</td>
-		<td width="20%" align="right">{translate key="common.status"}</td>
+		<td width="5%">{sort_search key="common.id" heading="id"}</td>
+		<td width="15%"><span class="disabled"></span><br />{sort_search key="submissions.submitted" heading="submitDate"}</td>
+		<td width="5%">{sort_search key="submissions.sec" heading="section"}</td>
+		<td width="25%">{sort_search key="article.authors" heading="authors"}</td>
+		<td width="30%">{sort_search key="article.title" heading="title"}</td>
+		<td width="20%" align="right">{sort_search key="common.status" heading="status"}</td>
 	</tr>
 	<tr>
 		<td colspan="6" class="headseparator">&nbsp;</td>

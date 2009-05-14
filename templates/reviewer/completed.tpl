@@ -12,12 +12,12 @@
 <table class="listing" width="100%">
 	<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
-		<td width="5%">{translate key="common.id"}</td>
-		<td width="10%"><span class="disabled">MM-DD</span><br />{translate key="common.assigned"}</td>
-		<td width="10%">{translate key="submissions.sec"}</td>
-		<td width="35%">{translate key="article.title"}</td>
-		<td width="20%">{translate key="submission.review"}</td>
-		<td width="20%">{translate key="submission.editorDecision"}</td>
+		<td width="5%">{sort_heading key="common.id" heading="id"}</td>
+		<td width="10%"><span class="disabled">MM-DD</span><br />{sort_heading key="common.assigned" heading="assignDate"}</td>
+		<td width="10%">{sort_heading key="submissions.sec" heading="section"}</td>
+		<td width="35%">{sort_heading key="article.title" heading="title"}</td>
+		<td width="20%">{sort_heading key="submission.review" heading="review"}</td>
+		<td width="20%">{sort_heading key="submission.editorDecision" heading="decision"}</td>
 	</tr>
 	<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 {iterate from=submissions item=submission}

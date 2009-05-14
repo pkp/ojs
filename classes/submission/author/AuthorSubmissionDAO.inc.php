@@ -166,22 +166,31 @@ class AuthorSubmissionDAO extends DAO {
 	 * @param $authorId int
 	 * @return DAOResultFactory continaing AuthorSubmissions
 	 */
-	function &getAuthorSubmissions($authorId, $journalId, $active = true, $rangeInfo = null) {
+	function &getAuthorSubmissions($authorId, $journalId, $active = true, $rangeInfo = null, $sortBy = null, $sortDirection = 'ASC') {
 		$primaryLocale = Locale::getPrimaryLocale();
 		$locale = Locale::getLocale();
 		$result =& $this->retrieveRange(
 			'SELECT	a.*,
+				atl.setting_value AS submission_title,
+				aa.last_name AS author_name,
+				(SELECT SUM(g.views) FROM article_galleys g WHERE (g.article_id = a.article_id AND g.locale = ?)) AS galley_views,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
 			FROM articles a
+				LEFT JOIN article_authors aa ON (aa.article_id = a.article_id AND aa.primary_contact = 1)
+				LEFT JOIN article_settings atl ON (atl.article_id = a.article_id AND atl.setting_name = ? AND atl.locale = ?)
 				LEFT JOIN sections s ON (s.section_id = a.section_id)
 				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
 				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
 				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
 			WHERE	a.user_id = ? AND a.journal_id = ? AND ' .
-			($active?('a.status = ' . STATUS_QUEUED):('(a.status <> ' . STATUS_QUEUED . ' AND a.submission_progress = 0)')),
+			($active?('a.status = ' . STATUS_QUEUED):('(a.status <> ' . STATUS_QUEUED . ' AND a.submission_progress = 0)')) . 
+			($sortBy?(' ORDER BY ' . $sortBy . ' ' . $sortDirection) : ''),
 			array(
+				$locale,
+				'title',
+				$locale,
 				'title',
 				$primaryLocale,
 				'title',
@@ -266,6 +275,24 @@ class AuthorSubmissionDAO extends DAO {
 		unset($result);
 
 		return $submissionsCount;
+	}
+	
+	/**
+	 * Map a column heading value to a database value for sorting
+	 * @param string
+	 * @return string
+	 */
+	function getSortMapping($heading) {
+		switch ($heading) {
+			case 'id': return 'a.article_id';
+			case 'submitDate': return 'a.date_submitted';
+			case 'section': return 'section_abbrev';
+			case 'authors': return 'author_name';
+			case 'title': return 'submission_title';
+			case 'active': return 'a.submission_progress';
+			case 'views': return 'galley_views';
+			default: return null;
+		}
 	}
 }
 

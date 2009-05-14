@@ -61,6 +61,11 @@ class LayoutEditorHandler extends Handler {
 				$active = true;
 		}
 
+		$sort = Request::getUserVar('sort');
+		$sort = isset($sort) ? $sort : 'title';
+		$sortDirection = Request::getUserVar('sortDirection');
+		$sortDirection = isset($sortDirection) ? $sortDirection : 'ASC';
+
 		// Get the user's search conditions, if any
 		$searchField = Request::getUserVar('searchField');
 		$dateSearchField = Request::getUserVar('dateSearchField');
@@ -73,7 +78,7 @@ class LayoutEditorHandler extends Handler {
 		if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
 
 		$rangeInfo = Handler::getRangeInfo('submissions');
-		$submissions = $layoutEditorSubmissionDao->getSubmissions($user->getId(), $journal->getJournalId(), $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $active, $rangeInfo);
+		$submissions = $layoutEditorSubmissionDao->getSubmissions($user->getUserId(), $journal->getJournalId(), $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $active, $rangeInfo, $layoutEditorSubmissionDao->getSortMapping($sort), $sortDirection);
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('pageToDisplay', $page);
@@ -107,6 +112,8 @@ class LayoutEditorHandler extends Handler {
 		$issueAction = new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
 		$templateMgr->assign('helpTopicId', 'editorial.layoutEditorsRole.submissions');
+		$templateMgr->assign('sort', $sort);
+		$templateMgr->assign('sortDirection', $sortDirection);
 		$templateMgr->display('layoutEditor/submissions.tpl');
 	}
 
@@ -137,6 +144,10 @@ class LayoutEditorHandler extends Handler {
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 
 		$rangeInfo = Handler::getRangeInfo('issues');
+		$sort = Request::getUserVar('heading');
+		$sort = isset($sort) ? $sort : 'title';
+		$sortDirection = Request::getUserVar('sortDirection');
+		$sortDirection = isset($sortDirection) ? $sortDirection : 'ASC';
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('issues', $issueDao->getPublishedIssues($journal->getJournalId(), $rangeInfo));
@@ -155,6 +166,8 @@ class LayoutEditorHandler extends Handler {
 
 		$templateMgr->assign('helpTopicId', 'publishing.index');
 		$templateMgr->assign('usesCustomOrdering', $issueDao->customIssueOrderingExists($journal->getJournalId()));
+		$templateMgr->assign('sort', $sort);
+		$templateMgr->assign('sortDirection', $sortDirection);
 		$templateMgr->display('layoutEditor/backIssues.tpl');
 	}
 

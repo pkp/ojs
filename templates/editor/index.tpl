@@ -36,8 +36,22 @@
 {assign var="dateTo" value="--"}
 {/if}
 
+<script type="text/javascript">
+{literal}
+<!--
+function sortSearch(heading, direction) {
+  document.submit.sort.value = heading;
+  document.submit.sortDirection.value = direction;
+  document.submit.submit() ;
+}
+// -->
+{/literal}
+</script> 
+
 <form method="post" name="submit" action="{url path="search"}">
 	{if $section}<input type="hidden" name="section" value="{$section|escape:"quotes"}"/>{/if}
+	<input type="hidden" name="sort" value="id"/>
+	<input type="hidden" name="sortDirection" value="ASC"/>
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions selected=$searchField}
 	</select>
@@ -71,12 +85,12 @@
 		<td colspan="6" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
-		<td width="5%">{translate key="common.id"}</td>
-		<td width="5%"><span class="disabled">MM-DD</span><br />{translate key="submissions.submit"}</td>
-		<td width="5%">{translate key="submissions.sec"}</td>
-		<td width="30%">{translate key="article.authors"}</td>
-		<td width="40%">{translate key="article.title"}</td>
-		<td width="15%">{translate key="common.status"}</td>
+		<td width="5%">{sort_search key="common.id" heading="id"}</td>
+		<td width="5%"><span class="disabled">MM-DD</span><br />{sort_search key="submissions.submit" heading="submitDate"}</td>
+		<td width="5%">{sort_search key="submissions.sec" heading="section"}</td>
+		<td width="30%">{sort_search key="article.authors" heading="authors"}</td>
+		<td width="40%">{sort_search key="article.title" heading="title"}</td>
+		<td width="15%" align="right">{sort_search key="common.status" heading="status"}</td>
 	</tr>
 	<tr>
 		<td colspan="6" class="headseparator">&nbsp;</td>
@@ -121,7 +135,7 @@
 {else}
 	<tr>
 		<td colspan="4" align="left">{page_info iterator=$submissions}</td>
-		<td align="right" colspan="2">{page_links anchor="submissions" name="submissions" iterator=$submissions searchField=$searchField searchMatch=$searchMatch search=$search dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateFromMonth=$dateFromMonth dateToDay=$dateToDay dateToYear=$dateToYear dateToMonth=$dateToMonth section=$section}</td>
+		<td align="right" colspan="2">{page_links anchor="submissions" name="submissions" iterator=$submissions searchField=$searchField searchMatch=$searchMatch search=$search dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateFromMonth=$dateFromMonth dateToDay=$dateToDay dateToYear=$dateToYear dateToMonth=$dateToMonth section=$section sort=$sort}</td>
 	</tr>
 {/if}
 </table>

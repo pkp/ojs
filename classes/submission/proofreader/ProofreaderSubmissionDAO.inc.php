@@ -126,7 +126,7 @@ class ProofreaderSubmissionDAO extends DAO {
 	 * @param $active boolean true to select active assignments, false to select completed assignments
 	 * @return array ProofreaderSubmission
 	 */
-	function &getSubmissions($proofreaderId, $journalId = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $active = true, $rangeInfo = null) {
+	function &getSubmissions($proofreaderId, $journalId = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $active = true, $rangeInfo = null, $sortBy = null, $sortDirection = 'ASC') {
 		$primaryLocale = Locale::getPrimaryLocale();
 		$locale = Locale::getLocale();
 
@@ -238,11 +238,16 @@ class ProofreaderSubmissionDAO extends DAO {
 		}
 		$sql = 'SELECT DISTINCT
 				a.*,
+				spr.date_notified AS date_assigned,
+				spr.date_completed AS date_completed,
+				atl.setting_value AS submission_title,
+				aap.last_name AS author_name,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
 			FROM
 				articles a
 				INNER JOIN article_authors aa ON (aa.article_id = a.article_id)
+				LEFT JOIN article_authors aap ON (aap.article_id = a.article_id AND aap.primary_contact = 1)
 				LEFT JOIN sections s ON s.section_id = a.section_id
 				LEFT JOIN edit_assignments e ON (e.article_id = a.article_id)
 				LEFT JOIN users ed ON (e.editor_id = ed.user_id)
@@ -266,7 +271,7 @@ class ProofreaderSubmissionDAO extends DAO {
 			$sql .= ' AND spr.date_completed IS NOT NULL';		
 		}
 
-		$result =& $this->retrieveRange($sql . ' ' . $searchSql, $params, $rangeInfo);
+		$result = &$this->retrieveRange($sql . ' ' . $searchSql . ($sortBy?(' ORDER BY ' . $sortBy . ' ' . $sortDirection) : ''), $params, $rangeInfo);
 
 		$returner = new DAOResultFactory ($result, $this, '_returnSubmissionFromRow');
 		return $returner;
@@ -303,6 +308,24 @@ class ProofreaderSubmissionDAO extends DAO {
 		}
 
 		return $submissionsCount;
+	}
+	
+	/**
+	 * Map a column heading value to a database value for sorting
+	 * @param string
+	 * @return string
+	 */
+	function getSortMapping($heading) {
+		switch ($heading) {
+			case 'id': return 'a.article_id';
+			case 'assignDate': return 'date_assigned';
+			case 'dateCompleted': return 'date_completed';
+			case 'section': return 'section_abbrev';
+			case 'authors': return 'author_name';
+			case 'title': return 'submission_title';
+			case 'status': return 'a.status';
+			default: return null;
+		}
 	}
 }
 

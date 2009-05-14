@@ -37,6 +37,11 @@ class PeopleHandler extends ManagerHandler {
 
 		if (Request::getUserVar('roleSymbolic')!=null) $roleSymbolic = Request::getUserVar('roleSymbolic');
 		else $roleSymbolic = isset($args[0])?$args[0]:'all';
+		
+		$sort = Request::getUserVar('heading');
+		$sort = isset($sort) ? $sort : 'name';
+		$sortDirection = Request::getUserVar('sortDirection');
+		$sortDirection = isset($sortDirection) ? $sortDirection : 'ASC';
 
 		if ($roleSymbolic != 'all' && String::regexp_match_get('/^(\w+)s$/', $roleSymbolic, $matches)) {
 			$roleId = $roleDao->getRoleIdFromPath($matches[1]);
@@ -70,7 +75,7 @@ class PeopleHandler extends ManagerHandler {
 		$rangeInfo = Handler::getRangeInfo('users');
 
 		if ($roleId) {
-			$users =& $roleDao->getUsersByRoleId($roleId, $journal->getJournalId(), $searchType, $search, $searchMatch, $rangeInfo);
+			$users =& $roleDao->getUsersByRoleId($roleId, $journal->getJournalId(), $searchType, $search, $searchMatch, $rangeInfo, $roleDao->getSortMapping($sort));
 			$templateMgr->assign('roleId', $roleId);
 			switch($roleId) {
 				case ROLE_ID_JOURNAL_MANAGER:
@@ -108,7 +113,7 @@ class PeopleHandler extends ManagerHandler {
 					break;
 			}
 		} else {
-			$users =& $roleDao->getUsersByJournalId($journal->getJournalId(), $searchType, $search, $searchMatch, $rangeInfo);
+			$users =& $roleDao->getUsersByJournalId($journal->getJournalId(), $searchType, $search, $searchMatch, $rangeInfo, $roleDao->getSortMapping($sort));
 			$helpTopicId = 'journal.users.allUsers';
 		}
 
@@ -143,6 +148,7 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign('rolePath', $roleDao->getRolePath($roleId));
 		$templateMgr->assign('alphaList', explode(' ', Locale::translate('common.alphaList')));
 		$templateMgr->assign('roleSymbolic', $roleSymbolic);
+		$templateMgr->assign('sort', $sort);
 
 		$session =& Request::getSession();
 		$session->setSessionVar('enrolmentReferrer', Request::getRequestedArgs());
@@ -163,6 +169,11 @@ class PeopleHandler extends ManagerHandler {
 
 		$roleId = (int)(isset($args[0])?$args[0]:Request::getUserVar('roleId'));
 		$journal =& $journalDao->getJournalByPath(Request::getRequestedJournalPath());
+		
+		$sort = Request::getUserVar('heading');
+		$sort = isset($sort) ? $sort : 'name';
+		$sortDirection = Request::getUserVar('sortDirection');
+		$sortDirection = isset($sortDirection) ? $sortDirection : 'ASC';
 
 		$templateMgr =& TemplateManager::getManager();
 
@@ -184,7 +195,7 @@ class PeopleHandler extends ManagerHandler {
 
 		$rangeInfo = Handler::getRangeInfo('users');
 
-		$users =& $userDao->getUsersByField($searchType, $searchMatch, $search, true, $rangeInfo);
+		$users =& $userDao->getUsersByField($searchType, $searchMatch, $search, true, $rangeInfo, $roleDao->getSortMapping($sort));
 
 		$templateMgr->assign('searchField', $searchType);
 		$templateMgr->assign('searchMatch', $searchMatch);
@@ -207,6 +218,7 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign_by_ref('thisUser', Request::getUser());
 		$templateMgr->assign('alphaList', explode(' ', Locale::translate('common.alphaList')));
 		$templateMgr->assign('helpTopicId', 'journal.users.index');
+		$templateMgr->assign('sort', $sort);
 
 		$session =& Request::getSession();
 		$referrerUrl = $session->getSessionVar('enrolmentReferrer');
@@ -298,6 +310,7 @@ class PeopleHandler extends ManagerHandler {
 	 */
 	function enrollSyncSelect($args) {
 		$this->validate();
+		$this->setupTemplate(true);
 
 		$rolePath = isset($args[0]) ? $args[0] : '';
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
@@ -464,6 +477,11 @@ class PeopleHandler extends ManagerHandler {
 			$roleId = 0;
 			$roleName = 'manager.people.allUsers';
 		}
+		
+		$sort = Request::getUserVar('heading');
+		$sort = isset($sort) ? $sort : 'name';
+		$sortDirection = Request::getUserVar('sortDirection');
+		$sortDirection = isset($sortDirection) ? $sortDirection : 'ASC';
 
 		$searchType = null;
 		$searchMatch = null;
@@ -482,10 +500,10 @@ class PeopleHandler extends ManagerHandler {
 		$rangeInfo = Handler::getRangeInfo('users');
 
 		if ($roleId) {
-			$users =& $roleDao->getUsersByRoleId($roleId, $journalId, $searchType, $search, $searchMatch, $rangeInfo);
+			$users =& $roleDao->getUsersByRoleId($roleId, $journalId, $searchType, $search, $searchMatch, $rangeInfo, $roleDao->getSortMapping($sort));
 			$templateMgr->assign('roleId', $roleId);
 		} else {
-			$users =& $roleDao->getUsersByJournalId($journalId, $searchType, $search, $searchMatch, $rangeInfo);
+			$users =& $roleDao->getUsersByJournalId($journalId, $searchType, $search, $searchMatch, $rangeInfo, $roleDao->getSortMapping($sort));
 		}
 
 		$templateMgr->assign_by_ref('roleSettings', $this->retrieveRoleAssignmentPreferences($journal->getJournalId()));
@@ -518,6 +536,8 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign('oldUserId', $oldUserId);
 		$templateMgr->assign('rolePath', $roleDao->getRolePath($roleId));
 		$templateMgr->assign('roleSymbolic', $roleSymbolic);
+		$templateMgr->assign('sort', $sort);
+		$templateMgr->assign('sortDirection', $sortDirection);
 		$templateMgr->display('manager/people/selectMergeUser.tpl');
 	}
 

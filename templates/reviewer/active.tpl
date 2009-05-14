@@ -12,12 +12,12 @@
 <table class="listing" width="100%">
 	<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
-		<td width="5%">{translate key="common.id"}</td>
-		<td width="5%"><span class="disabled">MM-DD</span><br />{translate key="common.assigned"}</td>
-		<td width="5%">{translate key="submissions.sec"}</td>
-		<td width="70%">{translate key="article.title"}</td>
-		<td width="5%">{translate key="submission.due"}</td>
-		<td width="10%">{translate key="submissions.reviewRound"}</td>
+		<td width="5%">{sort_heading key="common.id" heading='id'}</a></td>
+		<td width="5%"><span class="disabled">MM-DD</span><br />{sort_heading key="common.assigned" heading='assignDate'}</td>
+		<td width="5%">{sort_heading key="submissions.sec" heading='section'}</td>
+		<td width="70%">{sort_heading key="article.title" heading='title'}</td>
+		<td width="5%">{sort_heading key="submission.due" heading='dueDate'}</td>
+		<td width="10%">{sort_heading key="submissions.reviewRound" heading='round'}</td>
 	</tr>
 	<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 

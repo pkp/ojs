@@ -107,7 +107,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 		$editAssignments =& $this->editAssignmentDao->getEditAssignmentsByArticleId($row['article_id']);
 		$submission->setEditAssignments($editAssignments->toArray());
 
-		HookRegistry::call('LayoutEditorSubmissionDAO::_returnLayoutEditorSubmissionFromRow', array(&$submission, &$row));
+		HookRegistry::call('LayoutEditorSubmissionDAO::_returnLayoutEditorSubmissionFromRow', array(&$submission, &$row)); 
 
 		return $submission;
 	}
@@ -125,7 +125,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 	 * @param $active boolean true to select active assignments, false to select completed assignments
 	 * @return array LayoutEditorSubmission
 	 */
-	function &getSubmissions($editorId, $journalId = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $active = true, $rangeInfo = null) {
+	function &getSubmissions($editorId, $journalId = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $active = true, $rangeInfo = null, $sortBy = null, $sortDirection = 'ASC') {
 		$primaryLocale = Locale::getPrimaryLocale();
 		$locale = Locale::getLocale();
 		$params = array(
@@ -237,11 +237,16 @@ class LayoutEditorSubmissionDAO extends DAO {
 
 		$sql = 'SELECT DISTINCT
 				a.*,
+				sle.date_notified AS notified_date,
+				sle.date_completed AS completed_date,
+				aap.last_name AS author_name,
+				atl.setting_value AS submission_title,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
 			FROM
 				articles a
 				INNER JOIN article_authors aa ON (aa.article_id = a.article_id)
+				LEFT JOIN article_authors aap ON (aap.article_id = a.article_id AND aap.primary_contact = 1)
 				LEFT JOIN sections s ON s.section_id = a.section_id
 				LEFT JOIN edit_assignments e ON (e.article_id = a.article_id)
 				LEFT JOIN users ed ON (e.editor_id = ed.user_id)
@@ -266,7 +271,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 		}
 
 		$result =& $this->retrieveRange(
-			$sql . ' ' . $searchSql . ' ORDER BY a.article_id ASC',
+			$sql . ' ' . $searchSql . ($sortBy?(' ORDER BY ' . $sortBy . ' ' . $sortDirection) : ''),
 			count($params)==1?array_shift($params):$params,
 			$rangeInfo
 		);
@@ -330,6 +335,25 @@ class LayoutEditorSubmissionDAO extends DAO {
 		unset($result);
 
 		return $articleIds;
+	}
+	
+		
+	/**
+	 * Map a column heading value to a database value for sorting
+	 * @param string
+	 * @return string
+	 */
+	function getSortMapping($heading) {
+		switch ($heading) {
+	 		case 'id': return 'a.article_id';
+			case 'assignDate': return 'notified_date';
+			case 'section': return 'section_abbrev';
+			case 'authors': return 'author_name';
+			case 'title': return 'submission_title';
+			case 'dateCompleted': return 'completed_date';
+			case 'status': return 'a.status';			
+			default: return null;
+		}
 	}
 }
 
