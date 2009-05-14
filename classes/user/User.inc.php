@@ -31,7 +31,7 @@ class User extends PKPUser {
 	 */
 	function &getSettings($journalId = null) {
 		$userSettingsDao =& DAORegistry::getDAO('UserSettingsDAO');
-		$settings =& $userSettingsDao->getSettingsByJournal($this->getData('userId'), $journalId);
+		$settings =& $userSettingsDao->getSettingsByJournal($this->getId(), $journalId);
 		return $settings;
 	}
 
@@ -43,7 +43,7 @@ class User extends PKPUser {
 	 */
 	function &getSetting($name, $journalId = null) {
 		$userSettingsDao =& DAORegistry::getDAO('UserSettingsDAO');
-		$setting =& $userSettingsDao->getSetting($this->getData('userId'), $name, $journalId);
+		$setting =& $userSettingsDao->getSetting($this->getId(), $name, $journalId);
 		return $setting;
 	}
 
@@ -55,7 +55,7 @@ class User extends PKPUser {
 	 */
 	function updateSetting($name, $value, $type = null, $journalId = null) {
 		$userSettingsDao =& DAORegistry::getDAO('UserSettingsDAO');
-		return $userSettingsDao->updateSetting($this->getData('userId'), $name, $value, $type, $journalId);
+		return $userSettingsDao->updateSetting($this->getId(), $name, $value, $type, $journalId);
 	}
 }
 
