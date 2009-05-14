@@ -68,7 +68,7 @@ class ProofreaderHandler extends Handler {
 		$sortDirection = Request::getUserVar('sortDirection');
 		$sortDirection = isset($sortDirection) ? $sortDirection : 'ASC';
 
-		$submissions = $proofreaderSubmissionDao->getSubmissions($user->getUserId(), $journal->getJournalId(), $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $active, $rangeInfo, $proofreaderSubmissionDao->getSortMapping($sort), $sortDirection);
+		$submissions = $proofreaderSubmissionDao->getSubmissions($user->getId(), $journal->getJournalId(), $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $active, $rangeInfo, $proofreaderSubmissionDao->getSortMapping($sort), $sortDirection);
  
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('pageToDisplay', $page);

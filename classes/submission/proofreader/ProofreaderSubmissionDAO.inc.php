@@ -271,7 +271,7 @@ class ProofreaderSubmissionDAO extends DAO {
 			$sql .= ' AND spr.date_completed IS NOT NULL';		
 		}
 
-		$result = &$this->retrieveRange($sql . ' ' . $searchSql . ($sortBy?(' ORDER BY ' . $sortBy . ' ' . $sortDirection) : ''), $params, $rangeInfo);
+		$result =& $this->retrieveRange($sql . ' ' . $searchSql . ($sortBy?(' ORDER BY ' . $sortBy . ' ' . $sortDirection) : ''), $params, $rangeInfo);
 
 		$returner = new DAOResultFactory ($result, $this, '_returnSubmissionFromRow');
 		return $returner;

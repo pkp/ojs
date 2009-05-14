@@ -65,7 +65,7 @@ class CopyeditorHandler extends Handler {
 		$sortDirection = Request::getUserVar('sortDirection');
 		$sortDirection = isset($sortDirection) ? $sortDirection : 'ASC';
 
-		$submissions = $copyeditorSubmissionDao->getCopyeditorSubmissionsByCopyeditorId($user->getUserId(), $journal->getJournalId(), $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $active, $rangeInfo, $copyeditorSubmissionDao->getSortMapping($sort), $sortDirection);
+		$submissions = $copyeditorSubmissionDao->getCopyeditorSubmissionsByCopyeditorId($user->getId(), $journal->getJournalId(), $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $active, $rangeInfo, $copyeditorSubmissionDao->getSortMapping($sort), $sortDirection);
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('pageToDisplay', $page);
