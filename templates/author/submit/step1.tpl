@@ -22,31 +22,40 @@
 <div class="separator"></div>
 
 {if count($sectionOptions) <= 1}
-<p>{translate key="author.submit.notAccepting"}</p>
+	<p>{translate key="author.submit.notAccepting"}</p>
 {else}
+
+<form name="submit" method="post" action="{url op="saveSubmit" path=$submitStep}" onsubmit="return checkSubmissionChecklist()">
+
+{if count($sectionOptions) == 2}
+	{* If there's only one section, force it and skip the section parts
+	   of the interface. *}
+	{foreach from=$sectionOptions item=val key=key}
+		<input type="hidden" name="sectionId" value="{$key|escape}" />
+	{/foreach}
+{else}{* if count($sectionOptions) == 2 *}
 
 <h3>{translate key="author.submit.journalSection"}</h3>
 
 {url|assign:"url" page="about"}
 <p>{translate key="author.submit.journalSectionDescription" aboutUrl=$url}</p>
 
-<form name="submit" method="post" action="{url op="saveSubmit" path=$submitStep}" onsubmit="return checkSubmissionChecklist()">
-
 {if $articleId}
-<input type="hidden" name="articleId" value="{$articleId|escape}" />
+	<input type="hidden" name="articleId" value="{$articleId|escape}" />
 {/if}
 <input type="hidden" name="submissionChecklist" value="1" />
 {include file="common/formErrors.tpl"}
 
 <table class="data" width="100%">
-<tr valign="top">	
-	<td width="20%" class="label">{fieldLabel name="sectionId" required="true" key="section.section"}</td>
-	<td width="80%" class="value"><select name="sectionId" id="sectionId" size="1" class="selectMenu">{html_options options=$sectionOptions selected=$sectionId}</select></td>
-</tr>
-	
+	<tr valign="top">	
+		<td width="20%" class="label">{fieldLabel name="sectionId" required="true" key="section.section"}</td>
+		<td width="80%" class="value"><select name="sectionId" id="sectionId" size="1" class="selectMenu">{html_options options=$sectionOptions selected=$sectionId}</select></td>
+	</tr>
 </table>
 
 <div class="separator"></div>
+
+{/if}{* if count($sectionOptions) == 2 *}
 
 <script type="text/javascript">
 {literal}
@@ -97,7 +106,7 @@ function checkSubmissionChecklist() {
 	<div class="separator"></div>
 {/if}
 
-{/if}
+{/if}{* if count($sectionOptions) <= 1 *}
 
 {if $currentJournal->getLocalizedSetting('copyrightNotice') != ''}
 <h3>{translate key="about.copyrightNotice"}</h3>
