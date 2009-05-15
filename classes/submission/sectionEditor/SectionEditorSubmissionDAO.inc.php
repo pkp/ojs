@@ -839,7 +839,7 @@ class SectionEditorSubmissionDAO extends DAO {
 				(SELECT COUNT(review_id) FROM review_assignments ra WHERE (ra.reviewer_id = u.user_id AND date_completed IS NOT NULL)) AS completed,
 				(SELECT COUNT(review_id) FROM review_assignments ra WHERE (ra.reviewer_id = u.user_id AND date_completed IS NULL)) AS incomplete,
 				(SELECT MAX(date_notified) FROM review_assignments ra WHERE (ra.reviewer_id = u.user_id)) AS latest,
-				(SELECT AVG(review_time) FROM (SELECT (date_completed-date_notified) AS review_time FROM review_assignments ra WHERE date_completed IS NOT NULL AND ra.reviewer_id = u.user_id) AS sum_review_time) AS average
+				(SELECT AVG(date_completed-date_notified) FROM review_assignments ra WHERE (date_completed IS NOT NULL AND ra.reviewer_id = u.user_id)) AS average
 			FROM	users u
 				LEFT JOIN user_settings s ON (u.user_id = s.user_id AND s.setting_name = ?)
 				LEFT JOIN roles r ON (r.user_id = u.user_id)
