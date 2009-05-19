@@ -786,17 +786,34 @@ class NativeImportDom {
 		// Create submission mangement records
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 
-		$copyeditSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $article->getArticleId());
-		$signoffDao->updateObject($copyeditSignoff);
+		$initialCopyeditSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$initialCopyeditSignoff->setUserId(0);
+		$signoffDao->updateObject($initialCopyeditSignoff);
+		
+		$authorCopyeditSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$authorCopyeditSignoff->setUserId(0);
+		$signoffDao->updateObject($authorCopyeditSignoff);
+		
+		$finalCopyeditSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$finalCopyeditSignoff->setUserId(0);
+		$signoffDao->updateObject($finalCopyeditSignoff);
 
 		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $article->getArticleId());
 		$layoutSignoff->setUserId(0);
 		$layoutSignoff->setDateAcknowledged(Core::getCurrentDate()); // Make sure that imported articles go directly into the Archive. FIXME?
 		$signoffDao->updateObject($layoutSignoff);
 
-		$proofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $article->getArticleId());
-		$proofSignoff->setUserId(0);
-		$signoffDao->updateObject($proofSignoff);
+		$authorProofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_AUTHOR', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$authorProofSignoff->setUserId(0);
+		$signoffDao->updateObject($authorProofSignoff);
+		
+		$proofreaderProofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$proofreaderProofSignoff->setUserId(0);
+		$signoffDao->updateObject($proofreaderProofSignoff);
+		
+		$layoutProofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$layoutProofSignoff->setUserId(0);
+		$signoffDao->updateObject($layoutProofSignoff);
 
 		// Log the import in the article event log.
 		import('article.log.ArticleLog');
