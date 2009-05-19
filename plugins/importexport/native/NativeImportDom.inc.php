@@ -800,7 +800,6 @@ class NativeImportDom {
 
 		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $article->getArticleId());
 		$layoutSignoff->setUserId(0);
-		$layoutSignoff->setDateAcknowledged(Core::getCurrentDate()); // Make sure that imported articles go directly into the Archive. FIXME?
 		$signoffDao->updateObject($layoutSignoff);
 
 		$authorProofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_AUTHOR', ASSOC_TYPE_ARTICLE, $article->getArticleId());
