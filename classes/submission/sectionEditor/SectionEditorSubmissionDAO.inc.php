@@ -792,7 +792,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * @return DAOResultFactory containing matching Users
 	 */
 	function &getReviewersForArticle($journalId, $articleId, $round, $searchType = null, $search = null, $searchMatch = null, $rangeInfo = null, $sortBy = null, $sortDirection = 'ASC') {
-		$paramArray = array('interests', $articleId, $round, $journalId, RoleDAO::getRoleIdFromPath('reviewer'));
+		$paramArray = array($articleId, $round, 'interests', $journalId, RoleDAO::getRoleIdFromPath('reviewer'));
 		$searchSql = '';
 
 		$searchTypeMap = array(
@@ -833,20 +833,23 @@ class SectionEditorSubmissionDAO extends DAO {
 
 		$result =& $this->retrieveRange(
 			'SELECT DISTINCT
-				u.*,
-				a.review_id,
-				(SELECT AVG(quality) FROM review_assignments ra WHERE (ra.reviewer_id = u.user_id)) AS average_quality,
-				(SELECT COUNT(review_id) FROM review_assignments ra WHERE (ra.reviewer_id = u.user_id AND date_completed IS NOT NULL)) AS completed,
-				(SELECT COUNT(review_id) FROM review_assignments ra WHERE (ra.reviewer_id = u.user_id AND date_completed IS NULL)) AS incomplete,
-				(SELECT MAX(date_notified) FROM review_assignments ra WHERE (ra.reviewer_id = u.user_id)) AS latest,
-				(SELECT AVG(date_completed-date_notified) FROM review_assignments ra WHERE (date_completed IS NOT NULL AND ra.reviewer_id = u.user_id)) AS average
+				u.user_id,
+				ar.review_id,
+				AVG(a.quality) AS average_quality,
+				COUNT(ac.review_id) AS completed,
+				COUNT(ai.review_id) AS incomplete,
+				MAX(ac.date_notified) AS latest,
+				AVG(ac.date_completed-ac.date_notified) AS average
 			FROM	users u
+			LEFT JOIN review_assignments a ON (a.reviewer_id = u.user_id)
+				LEFT JOIN review_assignments ac ON (ac.reviewer_id = u.user_id AND ac.date_completed IS NOT NULL)
+				LEFT JOIN review_assignments ai ON (ai.reviewer_id = u.user_id AND ai.date_completed IS NULL)
+				LEFT JOIN review_assignments ar ON (ar.reviewer_id = u.user_id AND ar.cancelled = 0 AND ar.article_id = ? AND ar.round = ?)
 				LEFT JOIN user_settings s ON (u.user_id = s.user_id AND s.setting_name = ?)
 				LEFT JOIN roles r ON (r.user_id = u.user_id)
-				LEFT JOIN review_assignments a ON (a.reviewer_id = u.user_id AND a.cancelled = 0 AND a.article_id = ? AND a.round = ?)
 			WHERE	u.user_id = r.user_id AND
 				r.journal_id = ? AND
-				r.role_id = ? ' . $searchSql . 
+				r.role_id = ? ' . $searchSql . 'GROUP BY u.user_id, ar.review_id' .
 			($sortBy?(' ORDER BY ' . $sortBy . ' ' . $sortDirection) : ''),
 			$paramArray, $rangeInfo
 		);
@@ -856,7 +859,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	}
 
 	function &_returnReviewerUserFromRow(&$row) { // FIXME
-		$user =& $this->userDao->_returnUserFromRowWithData($row);
+		$user =& $this->userDao->getUser($row['user_id']);
 		$user->review_id = $row['review_id'];
 
 		HookRegistry::call('SectionEditorSubmissionDAO::_returnReviewerUserFromRow', array(&$user, &$row));

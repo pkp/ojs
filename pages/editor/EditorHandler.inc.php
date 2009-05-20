@@ -77,7 +77,7 @@ class EditorHandler extends SectionEditorHandler {
 			$sort = Request::getUserVar('sort');
 			$sort = isset($sort) ? $sort : 'id';
 			$sortDirection = Request::getUserVar('sortDirection');
-			$sortDirection = isset($sortDirection) ? $sortDirection : 'ASC';
+			$sortDirection = (isset($sortDirection) && ($sortDirection == 'ASC' || $sortDirection == 'DESC')) ? $sortDirection : 'ASC';
 
 			$fromDate = Request::getUserDateVar('dateFrom', 1, 1);
 			if ($fromDate !== null) $fromDate = date('Y-m-d H:i:s', $fromDate);
@@ -169,7 +169,7 @@ class EditorHandler extends SectionEditorHandler {
 		$sort = Request::getUserVar('sort');
 		$sort = isset($sort) ? $sort : 'id';
 		$sortDirection = Request::getUserVar('sortDirection');
-		$sortDirection = isset($sortDirection) ? $sortDirection : 'ASC';
+		$sortDirection = (isset($sortDirection) && ($sortDirection == 'ASC' || $sortDirection == 'DESC')) ? $sortDirection : 'ASC';
 
 		$filterEditorOptions = array(
 			FILTER_EDITOR_ALL => Locale::Translate('editor.allEditors'),

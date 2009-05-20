@@ -41,7 +41,7 @@ class PeopleHandler extends ManagerHandler {
 		$sort = Request::getUserVar('heading');
 		$sort = isset($sort) ? $sort : 'name';
 		$sortDirection = Request::getUserVar('sortDirection');
-		$sortDirection = isset($sortDirection) ? $sortDirection : 'ASC';
+		$sortDirection = (isset($sortDirection) && ($sortDirection == 'ASC' || $sortDirection == 'DESC')) ? $sortDirection : 'ASC';
 
 		if ($roleSymbolic != 'all' && String::regexp_match_get('/^(\w+)s$/', $roleSymbolic, $matches)) {
 			$roleId = $roleDao->getRoleIdFromPath($matches[1]);
@@ -173,7 +173,7 @@ class PeopleHandler extends ManagerHandler {
 		$sort = Request::getUserVar('heading');
 		$sort = isset($sort) ? $sort : 'name';
 		$sortDirection = Request::getUserVar('sortDirection');
-		$sortDirection = isset($sortDirection) ? $sortDirection : 'ASC';
+		$sortDirection = (isset($sortDirection) && ($sortDirection == 'ASC' || $sortDirection == 'DESC')) ? $sortDirection : 'ASC';
 
 		$templateMgr =& TemplateManager::getManager();
 
@@ -481,7 +481,7 @@ class PeopleHandler extends ManagerHandler {
 		$sort = Request::getUserVar('heading');
 		$sort = isset($sort) ? $sort : 'name';
 		$sortDirection = Request::getUserVar('sortDirection');
-		$sortDirection = isset($sortDirection) ? $sortDirection : 'ASC';
+		$sortDirection = (isset($sortDirection) && ($sortDirection == 'ASC' || $sortDirection == 'DESC')) ? $sortDirection : 'ASC';
 
 		$searchType = null;
 		$searchMatch = null;

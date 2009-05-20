@@ -64,7 +64,7 @@ class LayoutEditorHandler extends Handler {
 		$sort = Request::getUserVar('sort');
 		$sort = isset($sort) ? $sort : 'title';
 		$sortDirection = Request::getUserVar('sortDirection');
-		$sortDirection = isset($sortDirection) ? $sortDirection : 'ASC';
+		$sortDirection = (isset($sortDirection) && ($sortDirection == 'ASC' || $sortDirection == 'DESC')) ? $sortDirection : 'ASC';
 
 		// Get the user's search conditions, if any
 		$searchField = Request::getUserVar('searchField');
@@ -147,7 +147,7 @@ class LayoutEditorHandler extends Handler {
 		$sort = Request::getUserVar('heading');
 		$sort = isset($sort) ? $sort : 'title';
 		$sortDirection = Request::getUserVar('sortDirection');
-		$sortDirection = isset($sortDirection) ? $sortDirection : 'ASC';
+		$sortDirection = (isset($sortDirection) && ($sortDirection == 'ASC' || $sortDirection == 'DESC')) ? $sortDirection : 'ASC';
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('issues', $issueDao->getPublishedIssues($journal->getJournalId(), $rangeInfo));
