@@ -283,17 +283,27 @@ class SubscriptionTypeDAO extends DAO {
 	 * @return boolean
 	 */
 	function deleteSubscriptionTypeById($typeId) {
-		// Delete subscription type
-		$returner = $this->update('DELETE FROM subscription_types WHERE type_id = ?', $typeId);
+		// Delete all subscriptions corresponding to this subscription type
+		$institutional = $this->getSubscriptionTypeInstitutional($typeId);
 
-		// Delete all localization settings and subscriptions for this subscription type
+		if ($institutional) {
+			$subscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+		} else {
+			$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+		}
+		$returner = $subscriptionDao->deleteSubscriptionsByTypeId($typeId);
+
+		// Delete subscription type
+		if ($returner) {
+			$returner = $this->update('DELETE FROM subscription_types WHERE type_id = ?', $typeId);
+		}
+
+		// Delete all localization settings for this subscription type
 		if ($returner) {
 			$this->update('DELETE FROM subscription_type_settings WHERE type_id = ?', $typeId);
-			$subscriptionDao =& DAORegistry::getDAO('SubscriptionDAO');
-			return $subscriptionDao->deleteSubscriptionByTypeId($typeId);
-		} else {
-			return $returner;
 		}
+
+		return $returner;
 	}
 
 	/**
@@ -337,6 +347,29 @@ class SubscriptionTypeDAO extends DAO {
 			'SELECT * FROM subscription_types WHERE journal_id = ? ORDER BY seq',
 			$journalId, $rangeInfo
 		);
+
+		$returner = new DAOResultFactory($result, $this, '_returnSubscriptionTypeFromRow');
+		return $returner;
+	}
+
+	/**
+	 * Retrieve subscription types matching a particular journal ID and institutional flag.
+	 * @param $journalId int
+	 * @param $institutional bool
+	 * @return object DAOResultFactory containing matching SubscriptionTypes
+	 */
+	function &getSubscriptionTypesByInstitutional($journalId, $institutional = false, $rangeInfo = null) {
+		if ($institutional) {
+			$result = &$this->retrieveRange(
+				'SELECT * FROM subscription_types WHERE journal_id = ? AND institutional = 1 ORDER BY seq',
+				$journalId, $rangeInfo
+			);
+		} else {
+			$result = &$this->retrieveRange(
+				'SELECT * FROM subscription_types WHERE journal_id = ? AND institutional = 0 ORDER BY seq',
+				$journalId, $rangeInfo
+			);
+		}
 
 		$returner = new DAOResultFactory($result, $this, '_returnSubscriptionTypeFromRow');
 		return $returner;

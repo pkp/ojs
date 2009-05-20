@@ -28,10 +28,19 @@
 	<sql>
 		<query>UPDATE groups SET assoc_type = 256</query><!-- ASSOC_TYPE_JOURNAL -->
 	</sql>
+
 	<!-- Bug #3922# No need for the notification_status table (it is encapsulated by the notification table) -->
 	<sql>
 		<drop table="notification_status" />
 	</sql>
+
+	<!-- Bug #3916: Separate out individual and institutional subscriptions.
+	     Drop temp tables now that data has been migrated to new tables. -->
+	<sql>
+		<drop table="subscriptions_old" />
+		<drop table="subscription_ip_old" />
+	</sql>
+
 	<!-- Bug #4149: Migrate copyed_assignments, layouted_assignments, proof_assignments into signoffs table -->
 	<sql>
 		<query>INSERT INTO signoffs (symbolic, assoc_type, assoc_id, user_id, file_id, file_revision, date_notified, date_underway, date_completed, date_acknowledged) SELECT 'SIGNOFF_COPYEDITING_INITIAL', 257, c.article_id, c.copyeditor_id, a.copyedit_file_id, c.initial_revision, c.date_notified, c.date_underway, c.date_completed, c.date_acknowledged FROM copyed_assignments c, articles a where c.article_id = a.article_id</query><!-- 257 == ASSOC_TYPE_ARTICLE -->

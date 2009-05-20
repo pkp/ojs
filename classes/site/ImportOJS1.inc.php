@@ -22,7 +22,8 @@ import('user.User');
 import('journal.Journal');
 import('journal.Section');
 import('security.Role');
-import('subscription.Subscription');
+import('subscription.IndividualSubscription');
+import('subscription.InstitutionalSubscription');
 import('subscription.SubscriptionType');
 import('currency.Currency');
 import('article.Article');
@@ -716,7 +717,8 @@ class ImportOJS1 {
 		}
 
 		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
-		$subscriptionDao =& DAORegistry::getDAO('SubscriptionDAO');
+		$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+		$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 
 		$subscriptionTypeMap = array();
 
@@ -755,21 +757,31 @@ class ImportOJS1 {
 		}
 		$result->Close();
 
-		$result =& $this->importDao->retrieve('SELECT tblsubscribers.*, nUserID FROM tblsubscribers LEFT JOIN tblusers ON nSubscriberID = fkSubscriberID ORDER BY nSubscriberID');
+		$result =& $this->importDao->retrieve('SELECT tblsubscribers.*, bInstitutional, nUserID FROM tblsubscribers LEFT JOIN tblusers ON nSubscriberID = fkSubscriberID LEFT JOIN tblsubscriptiontype ON nSubscriptionTypeID = fkSubscriptionTypeID ORDER BY nSubscriberID');
 		while (!$result->EOF) {
 			$row =& $result->fields;
+			$institutional = $row['bInstitutional'];
 
-			$subscription = new Subscription();
+			if ($institutional) {
+				$subscription = new InstitutionalSubscription();
+			} else {
+				$subscription = new IndividualSubscription();
+			}
+
 			$subscription->setJournalId($this->journalId);
 			$subscription->setUserId(isset($this->userMap[$row['nUserID']]) ? $this->userMap[$row['nUserID']] : 0);
 			$subscription->setTypeId(isset($subscriptionTypeMap[$row['fkSubscriptionTypeID']]) ? $subscriptionTypeMap[$row['fkSubscriptionTypeID']] : 0);
 			$subscription->setDateStart($row['dtDateStart']);
 			$subscription->setDateEnd($row['dtDateEnd']);
 			$subscription->setMembership(Core::cleanVar($row['chMembership']));
-			$subscription->setDomain(Core::cleanVar($row['chDomain']));
-			$subscription->setIPRange(''); // No equivalent in OJS 1.x
 
-			$subscriptionDao->insertSubscription($subscription);
+			if ($institutional) {
+				$subscription->setInstitutionName(''); // No equivalent in OJS 1.x
+				$subscription->setDomain(Core::cleanVar($row['chDomain']));
+				$institutionalSubscriptionDao->insertSubscription($subscription);
+			} else {
+				$individualSubscriptionDao->insertSubscription($subscription);
+			}
 			$result->MoveNext();
 		}
 		$result->Close();

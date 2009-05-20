@@ -35,21 +35,22 @@
 	{/if}
 </p>
 
-<h3>{translate key="about.availableSubscriptionTypes"}</h3>
+{if !$individualSubscriptionTypes->wasEmpty()}
+<h3>{translate key="about.subscriptions.individual"}</h3>
 <table width="100%" class="listing">
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
-		<td width="40%">{translate key="manager.subscriptionTypes.name"}</td>
-		<td width="20%">{translate key="manager.subscriptionTypes.format"}</td>
-		<td width="25%">{translate key="manager.subscriptionTypes.duration"}</td>
-		<td width="15%">{translate key="manager.subscriptionTypes.cost"}</td>
+		<td width="40%">{translate key="about.subscriptionTypes.name"}</td>
+		<td width="20%">{translate key="about.subscriptionTypes.format"}</td>
+		<td width="25%">{translate key="about.subscriptionTypes.duration"}</td>
+		<td width="15%">{translate key="about.subscriptionTypes.cost"}</td>
 	</tr>
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
-{iterate from=subscriptionTypes item=subscriptionType}
+{iterate from=individualSubscriptionTypes item=subscriptionType}
 	{if !$subscriptionType->getDisablePublicDisplay()}
 		<tr valign="top">
 			<td>{$subscriptionType->getSubscriptionTypeName()|escape}<br />{$subscriptionType->getSubscriptionTypeDescription()|nl2br}</td>
@@ -57,9 +58,41 @@
 			<td>{$subscriptionType->getDurationYearsMonths()|escape}</td>
 			<td>{$subscriptionType->getCost()|string_format:"%.2f"}&nbsp;({$subscriptionType->getCurrencyStringShort()|escape})</td>
 		</tr>
-		<tr><td colspan="4" class="{if $subscriptionTypes->eof()}end{/if}separator">&nbsp;</td></tr>
+		<tr><td colspan="4" class="{if $individualSubscriptionTypes->eof()}end{/if}separator">&nbsp;</td></tr>
 	{/if}
 {/iterate}
 </table>
+
+<br />
+{/if}
+
+{if !$institutionalSubscriptionTypes->wasEmpty()}
+<h3>{translate key="about.subscriptions.institutional"}</h3>
+<table width="100%" class="listing">
+	<tr>
+		<td colspan="4" class="headseparator">&nbsp;</td>
+	</tr>
+	<tr class="heading" valign="bottom">
+		<td width="40%">{translate key="about.subscriptionTypes.name"}</td>
+		<td width="20%">{translate key="about.subscriptionTypes.format"}</td>
+		<td width="25%">{translate key="about.subscriptionTypes.duration"}</td>
+		<td width="15%">{translate key="about.subscriptionTypes.cost"}</td>
+	</tr>
+	<tr>
+		<td colspan="4" class="headseparator">&nbsp;</td>
+	</tr>
+{iterate from=institutionalSubscriptionTypes item=subscriptionType}
+	{if !$subscriptionType->getDisablePublicDisplay()}
+		<tr valign="top">
+			<td>{$subscriptionType->getSubscriptionTypeName()|escape}<br />{$subscriptionType->getSubscriptionTypeDescription()|nl2br}</td>
+			<td>{translate key=$subscriptionType->getFormatString()}</td>
+			<td>{$subscriptionType->getDurationYearsMonths()|escape}</td>
+			<td>{$subscriptionType->getCost()|string_format:"%.2f"}&nbsp;({$subscriptionType->getCurrencyStringShort()|escape})</td>
+		</tr>
+		<tr><td colspan="4" class="{if $institutionalSubscriptionTypes->eof()}end{/if}separator">&nbsp;</td></tr>
+	{/if}
+{/iterate}
+</table>
+{/if}
 
 {include file="common/footer.tpl"}

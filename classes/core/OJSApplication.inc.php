@@ -165,6 +165,8 @@ class OJSApplication extends PKPApplication {
 			'ScheduledTaskDAO' => 'scheduledTask.ScheduledTaskDAO',
 			'SectionEditorSubmissionDAO' => 'submission.sectionEditor.SectionEditorSubmissionDAO',
 			'SubscriptionDAO' => 'subscription.SubscriptionDAO',
+			'IndividualSubscriptionDAO' => 'subscription.IndividualSubscriptionDAO',
+			'InstitutionalSubscriptionDAO' => 'subscription.InstitutionalSubscriptionDAO',
 			'SubscriptionTypeDAO' => 'subscription.SubscriptionTypeDAO',
 			'UserDAO' => 'user.UserDAO',
 			'UserSettingsDAO' => 'user.UserSettingsDAO'

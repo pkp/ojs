@@ -78,25 +78,30 @@
 	<td class="label">{fieldLabel name="format" required="true" key="manager.subscriptionTypes.form.format"}</td>
 	<td><select id="format" name="format" class="selectMenu">{html_options options=$validFormats selected=$format}</select></td>
 </tr>
+{if !$typeId}
 <tr valign="top">
-	<td>&nbsp;</td>
+	<td class="label">{fieldLabel name="subscriptions" key="manager.subscriptionTypes.form.subscriptions"}</td>
 	<td class="value">
-		<input type="checkbox" name="institutional" id="institutional" value="1"{if $institutional} checked="checked"{/if} />
-		<label for="institutional">{translate key="manager.subscriptionTypes.form.institutional"}</label>
+		<input type="radio" name="institutional" id="institutional-0" value="0"{if !$institutional} checked="checked"{/if} />&nbsp;{translate key="manager.subscriptionTypes.form.individual"}
 	</td>
 </tr>
 <tr valign="top">
 	<td>&nbsp;</td>
 	<td class="value">
-		<input type="checkbox" name="membership" id="membership" value="1"{if $membership} checked="checked"{/if} />
-		<label for="membership">{translate key="manager.subscriptionTypes.form.membership"}</label>
+		<input type="radio" name="institutional" id="institutional-1" value="1"{if $institutional} checked="checked"{/if} />&nbsp;{translate key="manager.subscriptionTypes.form.institutional"}
+	</td>
+</tr>
+{/if}
+<tr valign="top">
+	<td class="label">{fieldLabel name="options" key="manager.subscriptionTypes.form.options"}</td>
+	<td class="value">
+		<input type="checkbox" name="membership" id="membership" value="1"{if $membership} checked="checked"{/if} />&nbsp;{translate key="manager.subscriptionTypes.form.membership"}
 	</td>
 </tr>
 <tr valign="top">
 	<td>&nbsp;</td>
 	<td class="value">
-		<input type="checkbox" name="disable_public_display" id="disable_public_display" value="1"{if $disable_public_display} checked="checked"{/if} />
-		<label for="disable_public_display">{translate key="manager.subscriptionTypes.form.public"}</label>
+		<input type="checkbox" name="disable_public_display" id="disable_public_display" value="1"{if $disable_public_display} checked="checked"{/if} />&nbsp;{translate key="manager.subscriptionTypes.form.public"}
 	</td>
 </tr>
 </table>

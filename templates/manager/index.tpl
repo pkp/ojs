@@ -30,7 +30,7 @@
 	<li>&#187; <a href="{url op="statistics"}">{translate key="manager.statistics"}</a></li>
 	<li>&#187; <a href="{url op="payments"}">{translate key="manager.payments"}</a></li>
 	{if $subscriptionsEnabled}
-		<li>&#187; <a href="{url op="subscriptions"}">{translate key="manager.subscriptions"}</a></li>
+		<li>&#187; <a href="{url op="subscriptionsSummary"}">{translate key="manager.subscriptions"}</a></li>
 	{/if}
 	<li>&#187; <a href="{url op="plugins"}">{translate key="manager.plugins"}</a></li>
 	<li>&#187; <a href="{url op="importexport"}">{translate key="manager.importExport"}</a></li>

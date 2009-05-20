@@ -152,16 +152,25 @@ class OJSPaymentManager extends PaymentManager {
 				break;
 			case PAYMENT_TYPE_SUBSCRIPTION:
 				$subscriptionId = $queuedPayment->getAssocId();
-				$subscriptionDao =& DAORegistry::getDAO('SubscriptionDAO');
-				$subscription =& $subscriptionDao->getSubscription($subscriptionId);
+				$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+				$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+				if ($institutionalSubscriptionDao->subscriptionExists($subscriptionId)) {
+					$subscription =& $institutionalSubscriptionDao->getSubscription($subscriptionId);
+					$institutional = true;
+				} else {
+					$subscription =& $individualSubscriptionDao->getSubscription($subscriptionId);
+					$institutional = false;
+				} 
 				if (!$subscription || $subscription->getUserId() != $queuedPayment->getUserId() || $subscription->getJournalId() != $queuedPayment->getJournalId()) {
 					// FIXME: Is this supposed to be here?
 					error_log(print_r($subscription, true));
 					return false;
 				}
-
-				$subscriptionDao->renewSubscription($subscription);
-
+				if ($institutional) {
+					$institutionalSubscriptionDao->renewSubscription($subscription);
+				} else {
+					$individualSubscriptionDao->renewSubscription($subscription);
+				}
 				$returner = true;
 				break;
 			case PAYMENT_TYPE_FASTTRACK:

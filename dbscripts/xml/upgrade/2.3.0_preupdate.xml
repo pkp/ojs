@@ -16,4 +16,11 @@
 	<sql>
 		<rename table="groups" column="journal_id" to="assoc_id" />
 	</sql>
+
+	<!-- Bug #3916: Separate out individual and institutional subscriptions.
+	     Create temp tables to enable data migration to new tables. -->
+	<sql>
+		<rename table="subscriptions" to="subscriptions_old" />
+		<rename table="subscription_ip" to="subscription_ip_old" />
+	</sql>
 </data>

@@ -20,11 +20,15 @@
 // $Id$
 
 
-define('SUBSCRIPTION_IP_RANGE_SEPERATOR', ';');
-define('SUBSCRIPTION_IP_RANGE_RANGE', '-');
-define('SUBSCRIPTION_IP_RANGE_WILDCARD', '*');
-define('SUBSCRIPTION_YEAR_OFFSET_PAST', '-10');
-define('SUBSCRIPTION_YEAR_OFFSET_FUTURE', '+10');
+define('SUBSCRIPTION_STATUS_ACTIVE', 					0x01);
+define('SUBSCRIPTION_STATUS_NEEDS_INFORMATION', 		0x02);
+define('SUBSCRIPTION_STATUS_NEEDS_APPROVAL', 			0x03);
+define('SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT', 	0x04);
+define('SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT',	0x05);
+define('SUBSCRIPTION_STATUS_OTHER', 					0x10);
+
+define('SUBSCRIPTION_YEAR_OFFSET_PAST',		'-10');
+define('SUBSCRIPTION_YEAR_OFFSET_FUTURE',	'+10');
 
 
 class Subscription extends DataObject {
@@ -120,6 +124,15 @@ class Subscription extends DataObject {
 	}
 
 	/**
+	 * Get the subscription type institutional flag for the subscription.
+	 * @return string
+	 */
+	function getSubscriptionTypeInstitutional() {
+		$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
+		return $subscriptionTypeDao->getSubscriptionTypeInstitutional($this->getData('typeId'));
+	}
+
+	/**
 	 * Get subscription start date.
 	 * @return date (YYYY-MM-DD)
 	 */
@@ -152,6 +165,45 @@ class Subscription extends DataObject {
 	}
 
 	/**
+	 * Get subscription status.
+	 * @return int
+	 */
+	function getStatus() {
+		return $this->getData('status');
+	}
+
+	/**
+	 * Set subscription status.
+	 * @param $status int
+	 */
+	function setStatus($status) {
+		return $this->setData('status', $status);
+	}
+
+	/**
+	 * Get subscription status string.
+	 * @return int
+	 */
+	function getStatusString() {
+		switch ($this->getData('status')) {
+			case SUBSCRIPTION_STATUS_ACTIVE:
+				return Locale::translate('subscriptions.status.active');
+			case SUBSCRIPTION_STATUS_NEEDS_INFORMATION:
+				return Locale::translate('subscriptions.status.needsInformation');
+			case SUBSCRIPTION_STATUS_NEEDS_APPROVAL:
+				return Locale::translate('subscriptions.status.needsApproval');
+			case SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT:
+				return Locale::translate('subscriptions.status.awaitingManualPayment');
+			case SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT:
+				return Locale::translate('subscriptions.status.awaitingOnlinePayment');
+			case SUBSCRIPTION_STATUS_OTHER:
+				return Locale::translate('subscriptions.status.other');
+			default:
+				return Locale::translate('subscriptions.status');
+		}
+	}
+
+	/**
 	 * Get subscription membership.
 	 * @return string
 	 */
@@ -168,51 +220,35 @@ class Subscription extends DataObject {
 	}
 
 	/**
-	 * Get subscription domain string.
+	 * Get subscription reference number.
 	 * @return string
 	 */
-	function getDomain() {
-		return $this->getData('domain');
+	function getReferenceNumber() {
+		return $this->getData('referenceNumber');
 	}
 
 	/**
-	 * Set subscription domain string.
-	 * @param $domain string
+	 * Set subscription reference number.
+	 * @param $referenceNumber string
 	 */
-	function setDomain($domain) {
-		return $this->setData('domain', $domain);
+	function setReferenceNumber($referenceNumber) {
+		return $this->setData('referenceNumber', $referenceNumber);
 	}
 
 	/**
-	 * Get subscription ip range string.
+	 * Get subscription notes.
 	 * @return string
 	 */
-	function getIPRange() {
-		return $this->getData('ipRange');
+	function getNotes() {
+		return $this->getData('notes');
 	}
 
 	/**
-	 * Set subscription ip range string.
-	 * @param $ipRange string
+	 * Set subscription notes.
+	 * @param $notes string
 	 */
-	function setIPRange($ipRange) {
-		return $this->setData('ipRange', $ipRange);
-	}
-
-	/**
-	 * Get subscription ip ranges.
-	 * @return array 
-	 */
-	function getIPRanges() {
-		return explode(SUBSCRIPTION_IP_RANGE_SEPERATOR, $this->getData('ipRange'));
-	}
-
-	/**
-	 * Set subscription ip ranges.
-	 * @param ipRanges array 
-	 */
-	function setIPRanges($ipRanges) {
-		return $this->setData(implode(SUBSCRIPTION_IP_RANGE_SEPERATOR, $ipRanges));
+	function setNotes($notes) {
+		return $this->setData('notes', $notes);
 	}
 
 }

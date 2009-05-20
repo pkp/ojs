@@ -82,21 +82,19 @@ class SubscriptionBlockPlugin extends BlockPlugin {
 
 		// This replicates the order of SubscriptionDAO::isValidSubscription
 		// Checks for valid Subscription and assigns vars accordingly for display				
-		$subscriptionDao =& DAORegistry::getDAO('SubscriptionDAO');	
 		$subscriptionId = false;
 		$userHasSubscription = false;
+
 		if ($userId != null) {
-			$subscriptionId = $subscriptionDao->isValidSubscriptionByUser($userId, $journalId);
+			$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');	
+			$subscriptionId = $subscriptionDao->isValidIndividualSubscription($userId, $journalId);
 			$userHasSubscription = true;
 		} 
 
-		if (!$userHasSubscription && $domain != null) {
-			$subscriptionId = $subscriptionDao->isValidSubscriptionByDomain($domain, $journalId);
+		if (!$userHasSubscription && ($domain != null || $IP != null)) {
+			$subscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');	
+			$subscriptionId = $subscriptionDao->isValidInstitutionalSubscription($domain, $IP, $journalId);
 		}	
-
-		if (!$userHasSubscription && $IP != null) {
-			$subscriptionId = $subscriptionDao->isValidSubscriptionByIP($IP, $journalId);
-		}
 
 		if ( $subscriptionId !== false ) {
 			$subscription =& $subscriptionDao->getSubscription($subscriptionId);

@@ -10,11 +10,7 @@
  *
  *}
 {strip}
-{if $subscriptionId}
-	{assign var="pageTitle" value="manager.subscriptions.selectSubscriber"}
-{else}
-	{assign var="pageTitle" value="manager.subscriptions.select"}
-{/if}
+{assign var="pageTitle" value=$pageTitle}
 {include file="common/header.tpl"}
 {/strip}
 
@@ -23,7 +19,7 @@
 {/if}
 
 <p>{translate key="manager.subscriptions.selectSubscriber.desc"}</p>
-<form method="post" name="submit" action="{if $subscriptionId}{url op="selectSubscriber" subscriptionId=$subscriptionId}{else}{url op="selectSubscriber" subscriptionId=$subscriptionId}{/if}">
+<form method="post" name="submit" action="{if $subscriptionId}{url op="selectSubscriber" path=$redirect subscriptionId=$subscriptionId}{else}{url op="selectSubscriber" path=$redirect}{/if}">
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions selected=$searchField}
 	</select>
@@ -35,7 +31,7 @@
 	<input type="text" size="15" name="search" class="textField" value="{$search|escape}" />&nbsp;<input type="submit" value="{translate key="common.search"}" class="button" />
 </form>
 
-<p>{foreach from=$alphaList item=letter}<a href="{if $subscriptionId}{url op="selectSubscriber" searchInitial=$letter subscriptionId=$subscriptionId}{else}{url op="selectSubscriber" searchInitial=$letter}{/if}">{if $letter == $searchInitial}<strong>{$letter|escape}</strong>{else}{$letter|escape}{/if}</a> {/foreach}<a href="{if $subscriptionId}{url op="selectSubscriber" subscriptionId=$subscriptionId}{else}{url op="selectSubscriber"}{/if}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
+<p>{foreach from=$alphaList item=letter}<a href="{if $subscriptionId}{url op="selectSubscriber" path=$redirect searchInitial=$letter subscriptionId=$subscriptionId}{else}{url op="selectSubscriber" path=$redirect searchInitial=$letter}{/if}">{if $letter == $searchInitial}<strong>{$letter|escape}</strong>{else}{$letter|escape}{/if}</a> {/foreach}<a href="{if $subscriptionId}{url op="selectSubscriber" path=$redirect subscriptionId=$subscriptionId}{else}{url op="selectSubscriber" path=$redirect}{/if}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
 
 	<div id="users">
 <table width="100%" class="listing">
@@ -58,7 +54,7 @@
 		{$user->getEmail()|truncate:20:"..."|escape}&nbsp;{icon name="mail" url=$url}
 	</td>
 	<td align="right" class="nowrap">
-		<a href="{if $subscriptionId}{url op="editSubscription" path=$subscriptionId userId=$user->getId()}{else}{url op="createSubscription" userId=$user->getId()}{/if}" class="action">{translate key="manager.subscriptions.subscribe"}</a>
+		<a href="{if $subscriptionId}{url op="editSubscription" path=$redirect|to_array:$subscriptionId userId=$user->getId()}{else}{url op="createSubscription" path=$redirect userId=$user->getId()}{/if}" class="action">{translate key="manager.subscriptions.select"}</a>
 	</td>
 </tr>
 <tr><td colspan="4" class="{if $users->eof()}end{/if}separator">&nbsp;</td></tr>
@@ -76,7 +72,7 @@
 {/if}
 </table>
 
-{url|assign:"selectSubscriberUrl" op="selectSubscriber"}
+{url|assign:"selectSubscriberUrl" op="selectSubscriber" path=$redirect}
 <a href="{url op="createUser" source=$selectSubscriberUrl}" class="action">{translate key="manager.people.createUser"}</a>
 	</div>
 {include file="common/footer.tpl"}

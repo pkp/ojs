@@ -409,22 +409,6 @@ class Upgrade extends Installer {
 	}
 
 	/**
-	 * For 2.2 upgrade: Add IP ranges for all journal subscriptions.
-	 * @return boolean
-	 */
-	function addSubscriptionIPRanges() {
-		$subscriptionDao =& DAORegistry::getDAO('SubscriptionDAO');
-		$subscriptions =& $subscriptionDao->getSubscriptions();
-
-		while ($subscription =& $subscriptions->next()) {
-			$subscriptionDao->insertSubscriptionIPRange($subscription->getSubscriptionId(), $subscription->getIPRange());
-			unset($subscription);
-		}
-
-		return true;
-	}
-
-	/**
 	 * For 2.2 upgrade: user_settings table has been renamed in order to
 	 * apply the schema changes for localization. Migrate the settings from
 	 * user_settings_old to user_settings now that the new schema has been
@@ -556,6 +540,94 @@ class Upgrade extends Installer {
 			$journalSettingsDao->update('UPDATE journal_settings SET setting_name = ? WHERE setting_name = ?', array($newName, $oldName));
 		}
 
+		return true;
+	}
+
+	/**
+	 * For 2.3 upgrade: Separate out individual and institutional subscriptions.
+	   Also pull apart single ip range string into multiple, shorter strings.  
+	 * @return boolean
+	 */
+	function separateSubscriptions() {
+		import('subscription.Subscription');
+		$subscriptionDao =& DAORegistry::getDAO('SubscriptionDAO');
+
+		// Retrieve all subscriptions from pre-2.3 subscriptions table
+		$result =& $subscriptionDao->retrieve('SELECT so.*, st.institutional FROM subscriptions_old so LEFT JOIN subscription_types st ON (so.type_id = st.type_id)');
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$subscriptionId = (int) $row['subscription_id'];
+
+			// Insert into new subscriptions table			
+			$subscriptionDao->update('INSERT INTO subscriptions (subscription_id, journal_id, user_id, type_id, date_start, date_end, status, membership, reference_number, notes) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)', array((int) $subscriptionId, (int) $row['journal_id'], (int) $row['user_id'], (int) $row['type_id'], $row['date_start'], $row['date_end'], 1, $row['membership'], '', ''));
+
+			// If institutional subscription, also add records to institutional_subscriptions
+			// and institutional_subscription_ip tables.
+			if ($row['institutional']) {
+				$subscriptionDao->update('INSERT INTO institutional_subscriptions (subscription_id, institution_name, mailing_address, domain) VALUES (?, ?, ?, ?, ?)', array((int) $subscriptionId, '', '', $row['domain']));
+				$ipRangeText = $row['ip_range'];
+
+				// Break apart pre-2.3 single ip range string which contained all ip ranges into
+				// multiple strings, each with exactly one ip range. See Bug #4117
+				$ipRanges = explode(';', $ipRangeText);
+
+				while (list(, $curIPString) = each($ipRanges)) {
+					$ipStart = null;
+					$ipEnd = null;
+
+					// Parse and check single IP string
+					if (strpos($curIPString, SUBSCRIPTION_IP_RANGE_RANGE) === false) {
+
+						// Check for wildcards in IP
+						if (strpos($curIPString, SUBSCRIPTION_IP_RANGE_WILDCARD) === false) {
+
+							// Get non-CIDR IP
+							if (strpos($curIPString, '/') === false) {
+								$ipStart = sprintf("%u", ip2long(trim($curIPString)));
+
+							// Convert CIDR IP to IP range
+							} else {
+								list($curIPString, $cidrBits) = explode('/', trim($curIPString));
+
+								if ($cidrBits == 0) {
+									$cidrMask = 0;
+								} else {
+									$cidrMask = (0xffffffff << (32 - $cidrBits));
+								}
+
+								$ipStart = sprintf('%u', ip2long($curIPString) & $cidrMask);
+
+								if ($cidrBits != 32) {
+									$ipEnd = sprintf('%u', ip2long($curIPString) | (~$cidrMask & 0xffffffff));
+								}
+							}
+
+						// Convert wildcard IP to IP range
+						} else {
+							$ipStart = sprintf('%u', ip2long(str_replace(SUBSCRIPTION_IP_RANGE_WILDCARD, '0', trim($curIPString))));
+							$ipEnd = sprintf('%u', ip2long(str_replace(SUBSCRIPTION_IP_RANGE_WILDCARD, '255', trim($curIPString)))); 
+						}
+
+					// Convert wildcard IP range to IP range
+					} else {
+						list($ipStart, $ipEnd) = explode(SUBSCRIPTION_IP_RANGE_RANGE, $curIPString);
+
+						// Replace wildcards in start and end of range
+						$ipStart = sprintf('%u', ip2long(str_replace(SUBSCRIPTION_IP_RANGE_WILDCARD, '0', trim($ipStart))));
+						$ipEnd = sprintf('%u', ip2long(str_replace(SUBSCRIPTION_IP_RANGE_WILDCARD, '255', trim($ipEnd))));
+					}
+				}
+
+				if ($ipStart != null) {
+					$subscriptionDao->update('INSERT INTO institutional_subscription_ip (subscription_id, ip_string, ip_start, ip_end) VALUES(?, ?, ?, ?)', array($subscriptionId, $curIPString, $ipStart, $ipEnd));	
+				}
+			}
+
+			$result->MoveNext();
+		}
+		$result->Close();
+		unset($result);
+		
 		return true;
 	}
 }

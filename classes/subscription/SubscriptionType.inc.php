@@ -156,7 +156,7 @@ class SubscriptionType extends DataObject {
 		if ($currency != null) {
 			return $currency->getName();
 		} else {
-			return 'manager.subscriptionTypes.currency';
+			return 'subscriptionTypes.currency';
 		}
 	}
 
@@ -171,7 +171,7 @@ class SubscriptionType extends DataObject {
 		if ($currency != null) {
 			return $currency->getCodeAlpha();
 		} else {
-			return 'manager.subscriptionTypes.currency';
+			return 'subscriptionTypes.currency';
 		}
 	}
 
@@ -201,17 +201,17 @@ class SubscriptionType extends DataObject {
 		$yearsMonths = '';
 
 		if ($years == 1) {
-			$yearsMonths = '1 ' . Locale::Translate('manager.subscriptionTypes.year');
+			$yearsMonths = '1 ' . Locale::translate('subscriptionTypes.year');
 		} elseif ($years > 1) {
-			$yearsMonths = $years . ' ' . Locale::Translate('manager.subscriptionTypes.years');
+			$yearsMonths = $years . ' ' . Locale::translate('subscriptionTypes.years');
 		}
 
 		if ($months == 1) {
 			$yearsMonths .= $yearsMonths == ''  ? '1 ' : ' 1 ';
-			$yearsMonths .= Locale::Translate('manager.subscriptionTypes.month'); 
+			$yearsMonths .= Locale::translate('subscriptionTypes.month'); 
 		} elseif ($months > 1){
 			$yearsMonths .= $yearsMonths == ''  ? $months . ' ' : ' ' . $months . ' ';
-			$yearsMonths .= Locale::Translate('manager.subscriptionTypes.months');
+			$yearsMonths .= Locale::translate('subscriptionTypes.months');
 		}
 
 		return $yearsMonths;
@@ -240,13 +240,13 @@ class SubscriptionType extends DataObject {
 	function getFormatString() {
 		switch ($this->getData('format')) {
 			case SUBSCRIPTION_TYPE_FORMAT_ONLINE:
-				return 'manager.subscriptionTypes.format.online';
+				return 'subscriptionTypes.format.online';
 			case SUBSCRIPTION_TYPE_FORMAT_PRINT:
-				return 'manager.subscriptionTypes.format.print';
+				return 'subscriptionTypes.format.print';
 			case SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE:
-				return 'manager.subscriptionTypes.format.printOnline';
+				return 'subscriptionTypes.format.printOnline';
 			default:
-				return 'manager.subscriptionTypes.format';
+				return 'subscriptionTypes.format';
 		}
 	}
 

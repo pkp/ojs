@@ -127,7 +127,6 @@
 		<code function="migratePublisher" />
 		<code function="installBlockPlugins" />
 		<code function="setGalleyLocales" />
-		<code function="addSubscriptionIPRanges" />
 		<note file="docs/release-notes/README-2.2.0" />
 	</upgrade>
 
@@ -155,6 +154,7 @@
 
 	<upgrade minversion="2.0.0.0" maxversion="2.2.3.0">
 		<data file="dbscripts/xml/upgrade/2.3.0_update.xml" />
+		<code function="separateSubscriptions" />
 		<note file="docs/release-notes/README-2.3.0" />
 	</upgrade>
 </install>

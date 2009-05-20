@@ -249,6 +249,26 @@
 	<message key="issue.abstract">Abstract</message>
 	<message key="issue.coverPage.altText">Cover Page</message>
 
+	<!-- Common Subscription Type Terms -->
+	<message key="subscriptionTypes.currency">Currency</message>
+	<message key="subscriptionTypes.year">year</message>
+	<message key="subscriptionTypes.years">years</message>
+	<message key="subscriptionTypes.month">month</message>
+	<message key="subscriptionTypes.months">months</message>
+	<message key="subscriptionTypes.format">Format</message>
+	<message key="subscriptionTypes.format.online">Online</message>
+	<message key="subscriptionTypes.format.print">Print</message>
+	<message key="subscriptionTypes.format.printOnline">Print and Online</message>
+
+	<!-- Common Subscription Terms -->
+	<message key="subscriptions.status">Status</message>
+	<message key="subscriptions.status.active">Active</message>
+	<message key="subscriptions.status.needsInformation">Needs Information</message>
+	<message key="subscriptions.status.needsApproval">Needs Approval</message>
+	<message key="subscriptions.status.awaitingManualPayment">Awaiting Manual Payment</message>
+	<message key="subscriptions.status.awaitingOnlinePayment">Awaiting Online Payment</message>
+	<message key="subscriptions.status.other">Other, See Notes</message>
+
 	<!--
 	 *
 	 * LOG - This section contains entries related to log entries.
@@ -350,6 +370,9 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 
 	<!-- Subscription Management -->
 	<message key="subscriptionManager.subscriptionManagement">Subscription Management</message>
+	<message key="subscriptionManager.individualSubscriptions">Individual Subscriptions</message>
+	<message key="subscriptionManager.institutionalSubscriptions">Institutional Subscriptions</message>
+	<message key="subscriptionManager.subscriptionTypes">Subscription Types</message>
 	
 	<!-- Journal Management -->
 
@@ -780,7 +803,13 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="about.authorSelfArchive">Author Self-Archiving</message>
 	<message key="about.archiving">Archiving</message>
 	<message key="about.subscriptions">Subscriptions</message>
+	<message key="about.subscriptions.individual">Individual Subscriptions</message>
+	<message key="about.subscriptions.institutional">Institutional Subscriptions</message>
 	<message key="about.subscriptionsContact">Subscriptions Contact</message>
+	<message key="about.subscriptionTypes.name">Name</message>
+	<message key="about.subscriptionTypes.format">Format</message>
+	<message key="about.subscriptionTypes.duration">Duration</message>
+	<message key="about.subscriptionTypes.cost">Cost</message>
 	<message key="about.availableSubscriptionTypes">Subscription Types</message>
 	<message key="about.memberships">Memberships</message>
 	<message key="about.journalSponsorship">Journal Sponsorship</message>

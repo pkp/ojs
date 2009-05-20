@@ -148,7 +148,9 @@ class JournalDAO extends DAO {
 		$rtDao =& DAORegistry::getDAO('RTDAO');
 		$rtDao->deleteVersionsByJournal($journalId);
 
-		$subscriptionDao =& DAORegistry::getDAO('SubscriptionDAO');
+		$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+		$subscriptionDao->deleteSubscriptionsByJournal($journalId);
+		$subscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 		$subscriptionDao->deleteSubscriptionsByJournal($journalId);
 
 		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');

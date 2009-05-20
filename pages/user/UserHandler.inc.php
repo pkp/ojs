@@ -95,8 +95,8 @@ class UserHandler extends Handler {
 			$templateMgr->assign('subscriptionEnabled', $subscriptionEnabled);
 
 			if ( $subscriptionEnabled ) {
-				import('subscription.SubscriptionDAO');
-				$subscriptionDAO =& DAORegistry::getDAO('SubscriptionDAO');
+				import('subscription.IndividualSubscriptionDAO');
+				$subscriptionDAO =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 				$subscriptionId = $subscriptionDAO->getSubscriptionIdByUser($user->getId(), $journal->getJournalId());
 				$templateMgr->assign('userHasSubscription', $subscriptionId);
 				if ( $subscriptionId !== false ) {
@@ -344,16 +344,14 @@ class UserHandler extends Handler {
 		import('payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
 
-		import('subscription.SubscriptionDAO');
-		$subscriptionDAO =& DAORegistry::getDAO('SubscriptionDAO');
+		import('subscription.IndividualSubscriptionDAO');
+		$subscriptionDAO =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 		$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
 
 		$journal =& Request::getJournal();
 		if ($journal) {
 			$user =& Request::getUser();
 			$subscriptionId = $subscriptionDAO->getSubscriptionIdByUser($user->getId(), $journal->getJournalId());
-
-			$subscriptionDAO =& DAORegistry::getDAO('SubscriptionDAO');
 			$subscription =& $subscriptionDAO->getSubscription($subscriptionId);
 			$subscriptionType =& $subscriptionTypeDAO->getSubscriptionType($subscription->getTypeId());
 

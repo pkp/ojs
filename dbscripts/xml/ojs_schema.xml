@@ -306,6 +306,7 @@
 			<UNIQUE />
 		</index>
 	</table>
+
 	<!--
 	  *
 	  * TABLE sections
@@ -1708,31 +1709,57 @@
 		<field name="date_end" type="T">
 			<NOTNULL/>
 		</field>
+		<field name="status" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="1"/>
+		</field>
 		<field name="membership" type="C2" size="40"/>
-		<field name="domain" type="C2" size="255"/>
-		<field name="ip_range" type="X"/>
+		<field name="reference_number" type="C2" size="40"/>
+		<field name="notes" type="X"/>
 		<descr>Journal subscriptions.</descr>
-		<index name="subscription_journal_id">
-			<col>journal_id</col>
-			<col>user_id</col>
-			<UNIQUE/>
+	</table>
+
+	<!--
+	 *
+	 * TABLE institutional_subscriptions
+	 *
+	 -->
+	<table name="institutional_subscriptions">
+		<field name="institutional_subscription_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+		<field name="subscription_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="institution_name" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="mailing_address" type="C2" size="255"/>
+		<field name="domain" type="C2" size="255"/>
+		<descr>Journal institutional subscriptions.</descr>
+		<index name="institutional_subscriptions_subscription_id">
+			<col>subscription_id</col>
 		</index>
-		<index name="subscription_domain">
+		<index name="institutional_subscriptions_domain">
 			<col>domain</col>
 		</index>
 	</table>
 
 	<!--
 	 *
-	 * TABLE subscription_ip
+	 * TABLE institutional_subscription_ip
 	 *
 	 -->
-	<table name="subscription_ip">
-		<field name="subscription_ip_id" type="I8">
+	<table name="institutional_subscription_ip">
+		<field name="institutional_subscription_ip_id" type="I8">
 			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="subscription_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="ip_string" type="C2" size="40">
 			<NOTNULL/>
 		</field>
 		<field name="ip_start" type="I8">
@@ -1740,14 +1767,14 @@
 		</field>
 		<field name="ip_end" type="I8">
 		</field>
-		<descr>Journal subscription IPs and IP ranges.</descr>
-		<index name="subscription_ip_subscription_id">
+		<descr>Journal institutional subscription IPs and IP ranges.</descr>
+		<index name="institutional_subscription_ip_subscription_id">
 			<col>subscription_id</col>
 		</index>
-		<index name="subscription_ip_start">
+		<index name="institutional_subscription_ip_start">
 			<col>ip_start</col>
 		</index>
-		<index name="subscription_ip_end">
+		<index name="institutional_subscription_ip_end">
 			<col>ip_end</col>
 		</index>
 	</table>

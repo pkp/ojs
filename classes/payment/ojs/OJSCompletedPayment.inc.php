@@ -96,10 +96,15 @@ class OJSCompletedPayment extends Payment {
 
 		switch ($this->type) {
 			case PAYMENT_TYPE_SUBSCRIPTION:
-				$subscriptionDAO =& DAORegistry::getDAO('SubscriptionDAO');
+				$institutionalSubscriptionDAO =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+				$individualSubscriptionDAO =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 				$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
 
-				$subscription =& $subscriptionDAO->getSubscription($this->assocId);
+				if ($institutionalSubscriptionDAO->subscriptionExists($this->assocId)) {
+					$subscription =& $institutionalSubscriptionDAO->getSubscription($this->assocId);
+				} else {
+					$subscription =& $individualSubscriptionDAO->getSubscription($this->assocId);
+				}
 				if ( !$subscription) return Locale::translate('payment.type.subscription');
 
 				$subscriptionType =& $subscriptionTypeDAO->getSubscriptionType($subscription->getTypeId());
@@ -156,10 +161,15 @@ class OJSCompletedPayment extends Payment {
 
 		switch ($this->type) {
 			case PAYMENT_TYPE_SUBSCRIPTION:
-				$subscriptionDAO =& DAORegistry::getDAO('SubscriptionDAO');
+				$institutionalSubscriptionDAO =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+				$individualSubscriptionDAO =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 				$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
 
-				$subscription =& $subscriptionDAO->getSubscription($this->assocId);
+				if ($institutionalSubscriptionDAO->subscriptionExists($this->assocId)) {
+					$subscription =& $institutionalSubscriptionDAO->getSubscription($this->assocId);
+				} else {
+					$subscription =& $individualSubscriptionDAO->getSubscription($this->assocId);
+				}
 				if ( !$subscription) return Locale::translate('payment.type.subscription');
 
 				$subscriptionType =& $subscriptionTypeDAO->getSubscriptionType($subscription->getTypeId());
@@ -278,10 +288,15 @@ class OJSCompletedPayment extends Payment {
 		if ( !$this->assocId ) return false;
 		switch ($this->type) {
 			case PAYMENT_TYPE_SUBSCRIPTION:
-				$subscriptionDAO =& DAORegistry::getDAO('SubscriptionDAO');
+				$institutionalSubscriptionDAO =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+				$individualSubscriptionDAO =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 				$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
 
-				$subscription =& $subscriptionDAO->getSubscription($this->assocId);
+				if ($institutionalSubscriptionDAO->subscriptionExists($this->assocId)) {
+					$subscription =& $institutionalSubscriptionDAO->getSubscription($this->assocId);
+				} else {
+					$subscription =& $individualSubscriptionDAO->getSubscription($this->assocId);
+				}
 				if ( !$subscription) return Locale::translate('manager.payment.notFound');
 
 				$subscriptionType =& $subscriptionTypeDAO->getSubscriptionType($subscription->getTypeId());

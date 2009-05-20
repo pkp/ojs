@@ -9,13 +9,19 @@
  * $Id$
  *}
 {strip}
-{assign var="pageTitle" value="manager.subscriptions"}
-{assign var="pageId" value="manager.subscriptions"}
+{if $institutional}
+	{assign var="pageTitle" value="manager.institutionalSubscriptions"}
+	{assign var="pageId" value="manager.institutionalSubscriptions"}
+{else}
+	{assign var="pageTitle" value="manager.individualSubscriptions"}
+	{assign var="pageId" value="manager.individualSubscriptions"}
+{/if}
 {include file="common/header.tpl"}
 {/strip}
 
 <ul class="menu">
-	<li class="current"><a href="{url op="subscriptions"}">{translate key="manager.subscriptions"}</a></li>
+	{if $institutional}<li>{else}<li class="current">{/if}<a href="{url op="subscriptions" path="individual"}">{translate key="manager.individualSubscriptions"}</a></li>
+	{if $institutional}<li class="current">{else}<li>{/if}<a href="{url op="subscriptions" path="institutional"}">{translate key="manager.institutionalSubscriptions"}</a></li>
 	<li><a href="{url op="subscriptionTypes"}">{translate key="manager.subscriptionTypes"}</a></li>
 	<li><a href="{url op="subscriptionPolicies"}">{translate key="manager.subscriptionPolicies"}</a></li>
 </ul>

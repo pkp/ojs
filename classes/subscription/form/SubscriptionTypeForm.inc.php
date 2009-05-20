@@ -34,9 +34,9 @@ class SubscriptionTypeForm extends Form {
 	function SubscriptionTypeForm($typeId = null) {
 
 		$this->validFormats = array (
-			SUBSCRIPTION_TYPE_FORMAT_ONLINE => Locale::translate('manager.subscriptionTypes.format.online'),
-			SUBSCRIPTION_TYPE_FORMAT_PRINT => Locale::translate('manager.subscriptionTypes.format.print'),
-			SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE => Locale::translate('manager.subscriptionTypes.format.printOnline')
+			SUBSCRIPTION_TYPE_FORMAT_ONLINE => Locale::translate('subscriptionTypes.format.online'),
+			SUBSCRIPTION_TYPE_FORMAT_PRINT => Locale::translate('subscriptionTypes.format.print'),
+			SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE => Locale::translate('subscriptionTypes.format.printOnline')
 		);
 
 		$currencyDao =& DAORegistry::getDAO('CurrencyDAO');
@@ -71,7 +71,7 @@ class SubscriptionTypeForm extends Form {
 		$this->addCheck(new FormValidatorInSet($this, 'format', 'required', 'manager.subscriptionTypes.form.formatValid', array_keys($this->validFormats)));
 
 		// Institutional flag is valid value
-		$this->addCheck(new FormValidatorInSet($this, 'institutional', 'optional', 'manager.subscriptionTypes.form.institutionalValid', array('1')));
+		$this->addCheck(new FormValidatorInSet($this, 'institutional', 'optional', 'manager.subscriptionTypes.form.institutionalValid', array('0', '1')));
 
 		// Membership flag is valid value
 		$this->addCheck(new FormValidatorInSet($this, 'membership', 'optional', 'manager.subscriptionTypes.form.membershipValid', array('1')));
@@ -146,10 +146,12 @@ class SubscriptionTypeForm extends Form {
 
 		if (isset($this->typeId)) {
 			$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($this->typeId);
+			$insert = false;
 		}
 
 		if (!isset($subscriptionType)) {
 			$subscriptionType = new SubscriptionType();
+			$insert = true;
 		}
 
 		$subscriptionType->setJournalId($journal->getJournalId());
@@ -159,7 +161,9 @@ class SubscriptionTypeForm extends Form {
 		$subscriptionType->setCurrencyCodeAlpha($this->getData('currency'));
 		$subscriptionType->setDuration((int)$this->getData('duration'));
 		$subscriptionType->setFormat($this->getData('format'));
-		$subscriptionType->setInstitutional($this->getData('institutional') == null ? 0 : $this->getData('institutional'));
+		if ($insert) {
+			$subscriptionType->setInstitutional($this->getData('institutional') == null ? 0 : $this->getData('institutional'));
+		}
 		$subscriptionType->setMembership($this->getData('membership') == null ? 0 : $this->getData('membership'));
 		$subscriptionType->setDisablePublicDisplay($this->getData('disable_public_display') == null ? 0 : $this->getData('disable_public_display'));
 
