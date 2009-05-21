@@ -81,6 +81,29 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	}
 
 	/**
+	 * Retrieve individual subscriptions by user ID.
+	 * @param $userId int
+	 * @return object DAOResultFactory containing IndividualSubscriptions
+	 */
+	function &getSubscriptionsByUser($userId, $rangeInfo = null) {
+		$result = &$this->retrieveRange(
+			'SELECT s.*
+			FROM
+			subscriptions s,
+			subscription_types st
+			WHERE s.type_id = st.type_id
+			AND st.institutional = 0
+			AND s.user_id = ?',
+			$userId,
+			$rangeInfo
+		);
+
+		$returner = new DAOResultFactory($result, $this, '_returnSubscriptionFromRow');
+
+		return $returner;
+	}
+
+	/**
 	 * Retrieve individual subscription ID by user ID.
 	 * @param $userId int
 	 * @param $journalId int
@@ -291,6 +314,43 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 			subscriptions s
 			WHERE s.user_id = ?',
 			$userId
+		);
+
+		$returner = true;
+		if ($result->RecordCount() != 0) {
+			while (!$result->EOF) {
+				$subscriptionId = $result->fields[0];
+				$returner = $this->deleteSubscriptionById($subscriptionId);
+				if (!$returner) { 
+					break;
+				}
+				$result->moveNext();
+			}
+		}
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
+	}
+
+	/**
+	 * Delete individual subscription by user ID and journal ID.
+	 * @param $userId int
+	 * @param $journalId int
+	 * @return boolean
+	 */
+	function deleteSubscriptionsByUserIdForJournal($userId, $journalId) {
+		$result = &$this->retrieve(
+			'SELECT s.subscription_id
+			FROM
+			subscriptions s
+			WHERE s.user_id = ?
+			AND s.journal_id = ?',
+			array (
+				$userId,
+				$journalId
+			)
 		);
 
 		$returner = true;

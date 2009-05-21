@@ -56,10 +56,35 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	/**
 	 * Retrieve institutional subscriptions by user ID.
 	 * @param $userId int
+	 * @return object DAOResultFactory containing matching InstitutionalSubscriptions
+	 */
+	function &getSubscriptionsByUser($userId, $rangeInfo = null) {
+		$result = &$this->retrieveRange(
+			'SELECT s.*, iss.*
+			FROM
+			subscriptions s,
+			subscription_types st,
+			institutional_subscriptions iss
+			WHERE s.type_id = st.type_id
+			AND st.institutional = 1
+			AND s.subscription_id = iss.subscription_id
+			AND s.user_id = ?',
+			$userId,
+			$rangeInfo
+		);
+
+		$returner = new DAOResultFactory($result, $this, '_returnSubscriptionFromRow');
+
+		return $returner;
+	}
+
+	/**
+	 * Retrieve institutional subscriptions by user ID and journal ID.
+	 * @param $userId int
 	 * @param $journalId int
 	 * @return object DAOResultFactory containing matching InstitutionalSubscriptions
 	 */
-	function &getSubscriptionsByUser($userId, $journalId, $rangeInfo = null) {
+	function &getSubscriptionsByUserForJournal($userId, $journalId, $rangeInfo = null) {
 		$result = &$this->retrieveRange(
 			'SELECT s.*, iss.*
 			FROM
@@ -365,6 +390,43 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 			subscriptions s
 			WHERE s.user_id = ?',
 			$userId
+		);
+
+		$returner = true;
+		if ($result->RecordCount() != 0) {
+			while (!$result->EOF) {
+				$subscriptionId = $result->fields[0];
+				$returner = $this->deleteSubscriptionById($subscriptionId);
+				if (!$returner) { 
+					break;
+				}
+				$result->moveNext();
+			}
+		}
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
+	}
+
+	/**
+	 * Delete institutional subscriptions by user ID and journal ID.
+	 * @param $userId int
+	 * @param $journalId int
+	 * @return boolean
+	 */
+	function deleteSubscriptionsByUserIdForJournal($userId, $journalId) {
+		$result = &$this->retrieve(
+			'SELECT s.subscription_id
+			FROM
+			subscriptions s
+			WHERE s.user_id = ?
+			AND s.journal_id = ?',
+			array (
+				$userId,
+				$journalId
+			)
 		);
 
 		$returner = true;

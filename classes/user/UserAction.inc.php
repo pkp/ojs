@@ -132,13 +132,47 @@ class UserAction {
 		$accessKeyDao =& DAORegistry::getDAO('AccessKeyDAO');
 		$accessKeyDao->transferAccessKeys($oldUserId, $newUserId);
 
+		// Transfer old user's individual subscriptions for each journal if new user
+		// does not have a valid individual subscription for a given journal.
+		$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+		$oldUserSubscriptions =& $individualSubscriptionDao->getSubscriptionsByUser($oldUserId);
+
+		while ($oldUserSubscription =& $oldUserSubscriptions->next()) {
+			$subscriptionJournalId = $oldUserSubscription->getJournalId();
+			$oldUserValidSubscription = $individualSubscriptionDao->isValidIndividualSubscription($oldUserId, $subscriptionJournalId);
+			if ($oldUserValidSubscription) {
+				// Check if new user has a valid subscription for current journal
+				$newUserSubscriptionId = $individualSubscriptionDao->getSubscriptionIdByUser($newUserId, $subscriptionJournalId);
+				if (empty($newUserSubscriptionId)) {
+					// New user does not have this subscription, transfer old user's
+					$oldUserSubscription->setUserId($newUserId);
+					$individualSubscriptionDao->updateSubscription($oldUserSubscription);
+				} elseif (!$individualSubscriptionDao->isValidIndividualSubscription($newUserId, $subscriptionJournalId)) {
+					// New user has a subscription but it's invalid. Delete it and
+					// transfer old user's valid one
+					$individualSubscriptionDao->deleteSubscriptionsByUserIdForJournal($newUserId, $subscriptionJournalId);
+					$oldUserSubscription->setUserId($newUserId);
+					$individualSubscriptionDao->updateSubscription($oldUserSubscription);
+				}
+			}
+		}
+
+		// Delete any remaining old user's subscriptions not transferred to new user
+		$individualSubscriptionDao->deleteSubscriptionsByUserId($oldUserId);
+
+		// Transfer all old user's institutional subscriptions for each journal to
+		// new user. New user now becomes the contact person for these.
+		$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+		$oldUserSubscriptions =& $institutionalSubscriptionDao->getSubscriptionsByUser($oldUserId);
+
+		while ($oldUserSubscription =& $oldUserSubscriptions->next()) {
+			$oldUserSubscription->setUserId($newUserId);
+			$institutionalSubscriptionDao->updateSubscription($oldUserSubscription);
+		}
+
 		// Delete the old user and associated info.
 		$sessionDao =& DAORegistry::getDAO('SessionDAO');
 		$sessionDao->deleteSessionsByUserId($oldUserId);
-		$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
-		$subscriptionDao->deleteSubscriptionsByUserId($oldUserId);
-		$subscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
-		$subscriptionDao->deleteSubscriptionsByUserId($oldUserId);
 		$temporaryFileDao =& DAORegistry::getDAO('TemporaryFileDAO');
 		$temporaryFileDao->deleteTemporaryFilesByUserId($oldUserId);
 		$userSettingsDao =& DAORegistry::getDAO('UserSettingsDAO');

@@ -27,16 +27,17 @@
 				<li>Article email and event log entries</li>
 				<li>Reviewer access keys</li>
 				<li>Roles</li>
+				<li>Subscriptions (please see below)</li>
 			</ul>
 		<p>The following items are <strong>not</strong> transferred:</p>
 			<ul>
 				<li>Sessions</li>
-				<li>Subscriptions</li>
 				<li>Notification status (i.e. whether the user has signed up to receive notifications about journal news)</li>
 				<li>Editorial team memberships</li>
 				<li>Section Editor status on sections</li>
 				<li>User profile information (e.g. first name, last name, etc.)</li>
 			</ul>
-		<p>This feature should be used with caution, as it is not reversible and involves the transfer of records from one user to another.</p>]]>
+		<p>This feature should be used with caution, as it is not reversible and involves the transfer of records from one user to another.</p>
+		<p>For subscriptions, the merge feature performs the following actions: For Individual Subscriptions, the second user's subscription is transferred to the first user only if is valid and if the first user does not already have a valid subscription for a given journal. For Institutional Subscriptions, all of the subscriptions for which the second user is identified as the contact person are transferred to the first user, who becomes the new contact person for the subscriptions.</p>]]>
 	</section>
 </topic>
