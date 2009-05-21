@@ -75,6 +75,7 @@ class UserManagementForm extends Form {
 
 		$journal =& Request::getJournal();
 		$journalId = $journal == null ? 0 : $journal->getJournalId();
+		import('pages.manager.PeopleHandler');
 		$rolePrefs = PeopleHandler::retrieveRoleAssignmentPreferences($journalId);
 		$activeRoles = array(
 				'' => 'manager.people.doNotEnroll',
