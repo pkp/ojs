@@ -326,6 +326,46 @@ class SubscriptionDAO extends DAO {
 	}
 
 	/**
+	 * Delete subscriptions by user ID and journal ID.
+	 * @param $userId int
+	 * @return boolean
+	 */
+	function deleteSubscriptionByUserIdForJournal($userId, $journalId) {
+		$result = &$this->retrieve(
+			'SELECT subscription_id
+			 FROM   subscriptions
+			 WHERE  user_id = ?
+			 AND	journal_id = ?',
+			 array (
+			 	$userId,
+				$journalId
+			 )	
+		);
+
+		if ($result->RecordCount() != 0) {
+			while (!$result->EOF) {
+				$subscriptionId = $result->fields[0];
+				$this->deleteSubscriptionIPRangeBySubscriptionId($subscriptionId);
+				$result->moveNext();
+			}
+		}
+
+		$result->Close();
+		unset($result);
+
+		return $this->update(
+			'DELETE
+			 FROM	subscriptions
+			 WHERE	user_id = ?
+			 AND	journal_id = ?',
+			 array (
+				$userId,
+				$journalId
+			 )
+		);
+	}
+
+	/**
 	 * Delete all subscriptions by subscription type ID.
 	 * @param $subscriptionTypeId int
 	 * @return boolean
@@ -364,6 +404,26 @@ class SubscriptionDAO extends DAO {
 		);
 
 		$returner = &new DAOResultFactory($result, $this, '_returnSubscriptionFromRow');
+
+		return $returner;
+	}
+
+	/**
+	 * Retrieve all subscriptions by user ID.
+	 * @param $userId int
+	 * @return object DAOResultFactory containing Subscriptions
+	 */
+	function &getSubscriptionsByUser($userId, $rangeInfo = null) {
+		$result = &$this->retrieveRange(
+			'SELECT s.*
+			FROM
+			subscriptions s
+			WHERE s.user_id = ?',
+			$userId,
+			$rangeInfo
+		);
+
+		$returner = new DAOResultFactory($result, $this, '_returnSubscriptionFromRow');
 
 		return $returner;
 	}

@@ -120,11 +120,38 @@ class UserAction {
 		$accessKeyDao =& DAORegistry::getDAO('AccessKeyDAO');
 		$accessKeyDao->transferAccessKeys($oldUserId, $newUserId);
 
+		// Transfer old user's valid subscriptions if new user does not
+		// have similar subscriptions of if they're invalid
+ 		$subscriptionDao =& DAORegistry::getDAO('SubscriptionDAO');
+		$oldUserSubscriptions =& $subscriptionDao->getSubscriptionsByUser($oldUserId);
+
+		while ($oldUserSubscription =& $oldUserSubscriptions->next()) {
+			$subscriptionJournalId = $oldUserSubscription->getJournalId();
+			$oldUserValidSubscription = $subscriptionDao->isValidSubscriptionByUser($oldUserId, $subscriptionJournalId);
+
+			if ($oldUserValidSubscription) {
+				// Check if new user has a valid subscription for journal
+				$newUserSubscriptionId = $subscriptionDao->getSubscriptionIdByUser($newUserId, $subscriptionJournalId);
+				if (empty($newUserSubscriptionId)) {
+					// New user does not have this subscription, transfer old user's
+					$oldUserSubscription->setUserId($newUserId);
+					$subscriptionDao->updateSubscription($oldUserSubscription);
+				} elseif (!$subscriptionDao->isValidSubscriptionByUser($newUserId, $subscriptionJournalId)) {
+					// New user has a subscription but it's invalid. Delete it and
+					// transfer old user's valid one
+					$subscriptionDao->deleteSubscriptionByUserIdForJournal($newUserId, $subscriptionJournalId);
+					$oldUserSubscription->setUserId($newUserId);
+					$subscriptionDao->updateSubscription($oldUserSubscription);
+				}
+			}
+		}	
+
+		// Delete any remaining oldUser subscriptions not transferred to new user 
+		$subscriptionDao->deleteSubscriptionsByUserId($oldUserId);
+
 		// Delete the old user and associated info.
 		$sessionDao =& DAORegistry::getDAO('SessionDAO');
 		$sessionDao->deleteSessionsByUserId($oldUserId);
-		$subscriptionDao =& DAORegistry::getDAO('SubscriptionDAO');
-		$subscriptionDao->deleteSubscriptionsByUserId($oldUserId);
 		$temporaryFileDao =& DAORegistry::getDAO('TemporaryFileDAO');
 		$temporaryFileDao->deleteTemporaryFilesByUserId($oldUserId);
 		$notificationStatusDao =& DAORegistry::getDAO('NotificationStatusDAO');
