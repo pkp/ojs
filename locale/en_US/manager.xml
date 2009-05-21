@@ -571,6 +571,7 @@
 	<message key="manager.subscriptions.form.dateEnd">End date</message>
 	<message key="manager.subscriptions.form.dateEndRequired">A subscription end date is required.</message>
 	<message key="manager.subscriptions.form.dateEndValid">Please select a valid subscription end date.</message>
+	<message key="manager.subscriptions.form.userProfileInstructions">Note: All changes below are to user's system-wide profile.</message>
 	<message key="manager.subscriptions.form.userId">User</message>
 	<message key="manager.subscriptions.form.userContact">Contact</message>
 	<message key="manager.subscriptions.form.userIdRequired">A user is required.</message>

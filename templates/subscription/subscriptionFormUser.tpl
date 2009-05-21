@@ -9,6 +9,10 @@
  * $Id$
  *}
 <tr valign="top">
+	<td>&nbsp;</td>
+	<td><span class="instruct">{translate key="manager.subscriptions.form.userProfileInstructions"}</span></td>
+</tr>
+<tr valign="top">
 	<td class="label">{fieldLabel name="userSalutation" key="user.salutation"}</td>
 	<td class="value"><input type="text" name="userSalutation" id="userSalutation" value="{$userSalutation|escape}" size="20" maxlength="40" class="textField" /></td>
 </tr>

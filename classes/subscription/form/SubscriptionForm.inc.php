@@ -130,6 +130,7 @@ class SubscriptionForm extends Form {
 		$templateMgr->assign('userGender', $user->getGender());
 		$templateMgr->assign('userAffiliation', $user->getAffiliation());
 		$templateMgr->assign('userUrl', $user->getUrl());
+		$templateMgr->assign('userFullName', $user->getFullName());
 		$templateMgr->assign('userEmail', $user->getEmail());
 		$templateMgr->assign('userPhone', $user->getPhone());
 		$templateMgr->assign('userFax', $user->getFax());

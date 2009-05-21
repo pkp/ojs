@@ -99,6 +99,15 @@ class Subscription extends DataObject {
 	}
 
 	/**
+	 * Get the user's email of the subscription.
+	 * @return string 
+	 */
+	function getUserEmail() {
+		$userDao =& DAORegistry::getDAO('UserDAO');
+		return $userDao->getUserEmail($this->getData('userId'));
+	}
+
+	/**
 	 * Get the subscription type ID of the subscription.
 	 * @return int
 	 */

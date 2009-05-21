@@ -244,8 +244,10 @@ class TinyMCEPlugin extends GenericPlugin {
 				break;
 			case 'subscriptionManager/editSubscription':
 			case 'subscriptionManager/createSubscription':
+			case 'subscriptionManager/updateSubscription':
 			case 'manager/editSubscription':
 			case 'manager/createSubscription':
+			case 'manager/updateSubscription':
 				$fields[] = 'notes';
 				break;
 			case 'manager/subscriptionPolicies':

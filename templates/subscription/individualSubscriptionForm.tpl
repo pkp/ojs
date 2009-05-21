@@ -12,8 +12,10 @@
 {assign var="pageCrumbTitle" value="$subscriptionTitle"}
 {if $subscriptionId}
 	{assign var="pageTitle" value="manager.subscriptions.edit"}
+	{url|assign:"currentUrl" op="editSubscription" path="individual"|to_array:$subscriptionId userId=$userId}
 {else}
 	{assign var="pageTitle" value="manager.subscriptions.create"}
+	{url|assign:"currentUrl" op="createSubscription" path="individual" userId=$userId}
 {/if}
 {assign var="pageId" value="manager.subscriptions.individualSubscriptionForm"}
 {include file="common/header.tpl"}
@@ -40,7 +42,9 @@
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="userId" required="true" key="manager.subscriptions.form.userId"}</td>
 	<td width="80%" class="value">
-		{$username|escape}&nbsp;&nbsp;<a href="{if $subscriptionId}{url op="selectSubscriber" path="individual" subscriptionId=$subscriptionId}{else}{url op="selectSubscriber" path="individual"}{/if}" class="action">{translate key="common.select"}</a>
+		{assign var=emailString value="$userFullName <$userEmail>"}
+		{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl}
+		{$username|escape}&nbsp;&nbsp;{icon name="mail" url=$url}&nbsp;&nbsp;<a href="{if $subscriptionId}{url op="selectSubscriber" path="individual" subscriptionId=$subscriptionId}{else}{url op="selectSubscriber" path="individual"}{/if}" class="action">{translate key="common.select"}</a>
 		<input type="hidden" name="userId" id="userId" value="{$userId}"/>
 	</td>
 </tr>

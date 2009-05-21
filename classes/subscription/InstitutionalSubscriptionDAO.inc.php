@@ -708,7 +708,8 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 			'SELECT ip_string
 			FROM
 			institutional_subscription_ip
-			WHERE subscription_id = ?',
+			WHERE subscription_id = ?
+			ORDER BY institutional_subscription_ip_id ASC',
 			$institutionalSubscription->getSubscriptionId()
 		);
 

@@ -81,7 +81,16 @@
 	</tr>
 {iterate from=subscriptions item=subscription}
 	<tr valign="top">
-		<td>{$subscription->getInstitutionName()|escape}</td>
+		<td>
+			{assign var=emailString value="`$subscription->getUserFullName()` <`$subscription->getUserEmail()`>"}
+			{if $institutional}
+				{url|assign:"redirectUrl" page="subscriptions" op="institutional" escape=false}
+			{else}
+				{url|assign:"redirectUrl" page="subscriptions" op="individual" escape=false}
+			{/if}
+			{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$redirectUrl}
+			{$subscription->getInstitutionName()|escape}&nbsp;{icon name="mail" url=$url}
+		</td>
 		<td>{$subscription->getSubscriptionTypeName()|escape}</td>
 		<td>{$subscription->getStatusString()|escape}</td>
 		<td>{$subscription->getDateStart()|date_format:$dateFormatShort}</td>
