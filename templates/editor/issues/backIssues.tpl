@@ -55,7 +55,7 @@
 
 	{iterate from=issues item=issue}
 	<tr valign="top">
-		<td><a href="{url op="issueToc" path=$issue->getIssueId()}" class="action">{$issue->getIssueIdentification()|escape}</a></td>
+		<td><a href="{url op="issueToc" path=$issue->getIssueId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>
 		<td>{$issue->getDatePublished()|date_format:"$dateFormatShort"}</td>
 		<td>{$issue->getNumArticles()}</td>
 		<td>{if $pos != 1}<a href="{url op="moveIssue" path=$issue->getIssueId() d=u newPos=$pos-1}" class="plain">&uarr;</a>{else}&uarr;{/if} {if $pos != $issues->getCount()}<a href="{url op="moveIssue" path=$issue->getIssueId() d=d newPos=$pos+1}" class="plain">&darr;</a>{else}&darr;{/if}</td>

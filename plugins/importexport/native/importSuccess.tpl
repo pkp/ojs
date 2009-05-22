@@ -19,7 +19,7 @@
 <h3>{translate key="issue.issues"}</h3>
 <ul>
 	{foreach from=$issues item=issue}
-		<li>{$issue->getIssueIdentification()|escape}</li>
+		<li>{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</li>
 	{/foreach}
 	</ul>
 {/if}

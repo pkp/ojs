@@ -35,7 +35,7 @@
 	</tr>
 	{iterate from=issues item=issue}
 	<tr valign="top">
-		<td><a href="{url op="issueToc" path=$issue->getIssueId()}" class="action">{$issue->getIssueIdentification()|escape}</a></td>
+		<td><a href="{url op="issueToc" path=$issue->getIssueId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>
 		<td>{$issue->getNumArticles()}</td>
 	</tr>
 	<tr>

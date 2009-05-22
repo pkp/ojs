@@ -142,7 +142,7 @@
 	<td>11.</td>
 	<td>{translate key="rt.metadata.dublinCore.source"}</td>
 	<td>{translate key="rt.metadata.pkp.source"}</td>
-	<td>{$currentJournal->getLocalizedTitle()|escape}{if $issue}; {$issue->getIssueIdentification()|escape}{/if}</td>
+	<td>{$currentJournal->getLocalizedTitle()|escape}{if $issue}; {$issue->getIssueIdentification()|strip_unsafe_html|nl2br}{/if}</td>
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
 <tr valign="top">
