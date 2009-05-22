@@ -1192,7 +1192,7 @@ class SectionEditorSubmissionDAO extends DAO {
 			case 'section': return 'section_abbrev';
 			case 'authors': return 'author_name';
 			case 'title': return 'submission_title';
-			case 'active': return 'a.submission_progress';		
+			case 'active': return 'incomplete';		
 			case 'subCopyedit': return 'copyedit_completed';
 			case 'subLayout': return 'layout_completed';
 			case 'subProof': return 'proofread_completed';
