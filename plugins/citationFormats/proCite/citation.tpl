@@ -19,7 +19,7 @@ AU  - {$author->getFullName(true)|escape}
 {/foreach}
 PY  - {$article->getDatePublished()|date_format:"%Y"}
 TI  - {$article->getArticleTitle()|strip_tags}
-JF  - {$journal->getJournalTitle()}{if $issue}; {$issue->getIssueIdentification()}{/if}
+JF  - {$journal->getJournalTitle()}{if $issue}; {$issue->getIssueIdentification()|strip_tags}{/if}
 
 Y2  - {$article->getDatePublished()|date_format:"%Y"}
 KW  - {$article->getArticleSubject()|escape}

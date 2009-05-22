@@ -9,8 +9,8 @@
  * $Id$
  *}
 {if not $noIssue}
-{assign var="pageTitleTranslated" value=$issue->getIssueIdentification()|escape}
-{assign var="pageCrumbTitleTranslated" value=$issue->getIssueIdentification(false,true)|escape}
+{assign var="pageTitleTranslated" value=$issue->getIssueIdentification()|strip_tags|escape}
+{assign var="pageCrumbTitleTranslated" value=$issue->getIssueIdentification(false,true)|strip_unsafe_html|nl2br}
 {else}
 {assign var="pageTitle" value="editor.issues.noLiveIssues"}
 {assign var="pageCrumbTitle" value="editor.issues.noLiveIssues"}

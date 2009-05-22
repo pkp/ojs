@@ -31,10 +31,10 @@
 	{if $issue->getFileName($locale) && $issue->getShowCoverPage($locale) && !$issue->getHideCoverPageArchives($locale)}
 		<div class="issueCoverImage"><a href="{url op="view" path=$issue->getBestIssueId($currentJournal)}"><img src="{$coverPagePath|escape}{$issue->getFileName($locale)|escape}"{if $issue->getCoverPageAltText($locale) != ''} alt="{$issue->getCoverPageAltText($locale)|escape}"{else} alt="{translate key="issue.coverPage.altText"}"{/if}/></a>
 		</div>
-		<h4><a href="{url op="view" path=$issue->getBestIssueId($currentJournal)}">{$issue->getIssueIdentification()|escape}</a></h4>
+		<h4><a href="{url op="view" path=$issue->getBestIssueId($currentJournal)}">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></h4>
 		<div class="issueCoverDescription">{$issue->getIssueCoverPageDescription()|strip_unsafe_html|nl2br}</div>
 	{else}
-		<h4><a href="{url op="view" path=$issue->getBestIssueId($currentJournal)}">{$issue->getIssueIdentification()|escape}</a></h4>
+		<h4><a href="{url op="view" path=$issue->getBestIssueId($currentJournal)}">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></h4>
 		<div class="issueDescription">{$issue->getIssueDescription()|strip_unsafe_html|nl2br}</div>
 	{/if}
 	</div>

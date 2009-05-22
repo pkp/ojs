@@ -38,7 +38,7 @@
 {assign var=journal value=$result.journal}
 <tr valign="top">
 	{if !$currentJournal}<td><a href="{url journal=$journal->getPath()}">{$journal->getJournalTitle()|escape}</a></td>{/if}
-	<td>{if $issue->getAccessStatus()}<a href="{url journal=$journal->getPath() page="issue" op="view" path=$issue->getBestIssueId($journal)}">{/if}{$issue->getIssueIdentification()|escape}{if $issue->getAccessStatus()}</a>{/if}</td>
+	<td>{if $issue->getAccessStatus()}<a href="{url journal=$journal->getPath() page="issue" op="view" path=$issue->getBestIssueId($journal)}">{/if}{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}{if $issue->getAccessStatus()}</a>{/if}</td>
 	<td width="35%">{$article->getArticleTitle()|strip_unsafe_html}</td>
 	<td width="25%" align="right">
 			<a href="{url journal=$journal->getPath() page="article" op="view" path=$publishedArticle->getBestArticleId($journal)}" class="file">{if $article->getArticleAbstract()}{translate key="article.abstract"}{else}{translate key="article.details"}{/if}</a>

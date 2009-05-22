@@ -41,7 +41,7 @@
 	<tr valign="top">
 		<td><input {if !$notFirst}checked {/if}name="issueId" type="radio" value="{$issue->getIssueId()}"/></td>
 		{assign var=notFirst value=1}
-		<td><a href="{url page="issue" op="issueToc" path=$issue->getIssueId()}" class="action">{$issue->getIssueIdentification()|escape}</a></td>
+		<td><a href="{url page="issue" op="issueToc" path=$issue->getIssueId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>
 		<td>{$issue->getDatePublished()|date_format:"$dateFormatShort"}</td>
 		<td>{$issue->getNumArticles()}</td>
 	</tr>

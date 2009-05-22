@@ -35,7 +35,7 @@
 	{assign var=issue value=$articleData.issue}
 	{assign var=publishedArticle value=$articleData.publishedArticle}
 	<tr valign="top">
-		<td><a href="{url page="issue" op="issueToc" path=$issue->getIssueId()}" class="action">{$issue->getIssueIdentification()|escape}</a></td>
+		<td><a href="{url page="issue" op="issueToc" path=$issue->getIssueId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>
 		<td>{$article->getArticleTitle()|strip_unsafe_html}</td>
 		<td>{$article->getAuthorString()|escape}</td>
 		<td>

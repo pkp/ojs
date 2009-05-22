@@ -8,8 +8,8 @@
  *
  * $Id$
  *}
-{assign var="pageTitleTranslated" value=$issue->getIssueIdentification()}
-{assign var="pageCrumbTitleTranslated" value=$issue->getIssueIdentification(false,true)}
+{assign var="pageTitleTranslated" value=$issue->getIssueIdentification()|strip_tags|escape}
+{assign var="pageCrumbTitleTranslated" value=$issue->getIssueIdentification(false,true)|strip_unsafe_html|nl2br}
 {include file="common/header.tpl"}
 
 {if !$isLayoutEditor}{* Layout Editors can also access this page. *}
