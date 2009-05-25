@@ -64,7 +64,9 @@ class AuthorHandler extends Handler {
 			$submissionsArray = $unsortedSubmissions->toArray();
 			$compare = create_function('$s1, $s2', 'return strcmp($s1->getSubmissionStatus(), $s2->getSubmissionStatus());');
 			usort ($submissionsArray, $compare);
-			
+			if($sortDirection == 'DESC') {
+				$submissionsArray = array_reverse($submissionsArray);
+			}
 			// Convert submission array back to an ItemIterator class
 			import('core.ArrayItemIterator');
 			$submissions =& ArrayItemIterator::fromRangeInfo($submissionsArray, $rangeInfo);
