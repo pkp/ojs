@@ -131,7 +131,7 @@ class CopyeditorSubmissionDAO extends DAO {
 	 * @param $dateTo int Search to timestamp
 	 * @return array CopyeditorSubmissions
 	 */
-	function &getCopyeditorSubmissionsByCopyeditorId($copyeditorId, $journalId = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $active = true, $rangeInfo = null, $sortBy = null, $sortDirection = 'ASC') {
+	function &getCopyeditorSubmissionsByCopyeditorId($copyeditorId, $journalId = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $active = true, $rangeInfo = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
 		$locale = Locale::getLocale();
 		$primaryLocale = Locale::getPrimaryLocale();
 		$params = array(
@@ -272,7 +272,7 @@ class CopyeditorSubmissionDAO extends DAO {
 			(' . ($active?'':'NOT ') . ' ((scpi.date_notified IS NOT NULL AND scpi.date_completed IS NULL) OR (scpf.date_notified IS NOT NULL AND scpf.date_completed IS NULL))) ';
 
 		$result =& $this->retrieveRange(
-			$sql . ' ' . $searchSql . ($sortBy?(' ORDER BY ' . $sortBy . ' ' . $sortDirection) : ''),
+			$sql . ' ' . $searchSql . ($sortBy?(' ORDER BY ' . $sortBy . ' ' . $this->getDirectionMapping($sortDirection)) : ''),
 			count($params)==1?array_shift($params):$params,
 			$rangeInfo);
 

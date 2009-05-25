@@ -198,7 +198,7 @@ class ReviewerSubmissionDAO extends DAO {
 	 * @param $rangeInfo object
 	 * @return array ReviewerSubmissions
 	 */
-	function &getReviewerSubmissionsByReviewerId($reviewerId, $journalId, $active = true, $rangeInfo = null, $sortBy = null, $sortDirection = 'ASC') {
+	function &getReviewerSubmissionsByReviewerId($reviewerId, $journalId, $active = true, $rangeInfo = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
 		$primaryLocale = Locale::getPrimaryLocale();
 		$locale = Locale::getLocale();
 		$sql = 'SELECT	a.*,
@@ -231,7 +231,7 @@ class ReviewerSubmissionDAO extends DAO {
 		}
 
 		if ($sortBy) {
-			$sql .=  ' ORDER BY ' . $sortBy . ' ' . $sortDirection;
+			$sql .=  ' ORDER BY ' . $sortBy . ' ' . $this->getDirectionMapping($sortDirection);
 		}
 
 		$result =& $this->retrieveRange(
