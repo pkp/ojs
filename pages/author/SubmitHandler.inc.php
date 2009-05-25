@@ -17,14 +17,15 @@
 import('pages.author.AuthorHandler');
 
 class SubmitHandler extends AuthorHandler {
+	/** article associated with the request **/
+	var $article;
+	
 	/**
 	 * Constructor
 	 **/
 	function SubmitHandler() {
 		parent::AuthorHandler();
 	}
-	/** article associated with the request **/
-	var $article;
 
 	/**
 	 * Display journal author article submission.
@@ -242,9 +243,6 @@ class SubmitHandler extends AuthorHandler {
 	 * @param $args array optional, if set the first parameter is the supplementary file to update
 	 */
 	function saveSubmitSuppFile($args) {
-		parent::validate();
-		parent::setupTemplate(true);
-
 		$articleId = Request::getUserVar('articleId');
 		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
 
@@ -271,9 +269,6 @@ class SubmitHandler extends AuthorHandler {
 	 */
 	function deleteSubmitSuppFile($args) {
 		import("file.ArticleFileManager");
-
-		parent::validate();
-		parent::setupTemplate(true);
 
 		$articleId = Request::getUserVar('articleId');
 		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
