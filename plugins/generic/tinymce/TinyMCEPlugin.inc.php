@@ -100,6 +100,17 @@ class TinyMCEPlugin extends GenericPlugin {
 				$fields[] = 'description';
 				$fields[] = 'coverPageDescription';
 				break;
+			case 'editor/viewEditorDecisionComments':
+			case 'editor/postEditorDecisionComment':
+			case 'editor/viewCopyeditComments':
+			case 'editor/postCopyeditComment':
+			case 'editor/viewLayoutComments':
+			case 'editor/postLayoutComment':
+			case 'editor/viewProofreadComments':
+			case 'editor/postProofreadComment':
+			case 'editor/editComment':
+				$fields[] = 'comments';
+				break;
 			case 'manager/createAnnouncement':
 			case 'manager/editAnnouncement':
 			case 'manager/updateAnnouncement':
@@ -184,6 +195,11 @@ class TinyMCEPlugin extends GenericPlugin {
 			case 'reviewer/submission':
 				$fields[] = 'competingInterests';
 				break;
+			case 'reviewer/viewPeerReviewComments':
+			case 'reviewer/postPeerReviewComment':
+				$fields[] = 'authorComments';
+				$fields[] = 'comments';
+				break;
 			case 'rtadmin/editContext':
 			case 'rtadmin/editSearch':
 			case 'rtadmin/editVersion':
@@ -233,6 +249,9 @@ class TinyMCEPlugin extends GenericPlugin {
 			case 'manager/createSubscriptionType':
 			case 'manager/updateSubscriptionType':
 				$fields[] = 'description';
+				break;
+			case 'comment/add':
+				$fields[] = 'commentBody';
 				break;
 		}
 		HookRegistry::call('TinyMCEPlugin::getEnableFields', array(&$this, &$fields));
