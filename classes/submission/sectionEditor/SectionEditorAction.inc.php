@@ -1885,7 +1885,7 @@ class SectionEditorAction extends Action {
 									foreach ($articleComments as $comment) {
 										// If the comment is viewable by the author, then add the comment.
 										if ($comment->getViewable()) {
-											$body .= String::html2utf(strip_tags($comment->getComments())) . "\n\n";
+											$body .= $comment->getComments() . "\n\n";
 										}
 									}
 								}
@@ -1954,7 +1954,7 @@ class SectionEditorAction extends Action {
 
 		$commentsText = "";
 		foreach ($comments as $comment) {
-			$commentsText .= String::html2utf(strip_tags($comment->getComments())) . "\n\n";
+			$commentsText .= $comment->getComments() . "\n\n";
 		}
 
 		$user = &Request::getUser();
