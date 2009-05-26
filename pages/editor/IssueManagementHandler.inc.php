@@ -295,7 +295,7 @@ class IssueManagementHandler extends EditorHandler {
 		$templateMgr->assign('issueId', $issueId);
 		$templateMgr->assign_by_ref('issue', $issue);
 		$templateMgr->assign('unpublished', !$issue->getPublished());
-		$templateMgr->assign('issueAccess',$issue->getAccessStatus());
+		$templateMgr->assign('issueAccess', $issue->getAccessStatus());
 
 		// get issue sections and articles
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
@@ -334,9 +334,10 @@ class IssueManagementHandler extends EditorHandler {
 		}
 		$templateMgr->assign_by_ref('sections', $sections);
 
-		$accessOptions[ISSUE_DEFAULT] = Locale::Translate('editor.issues.default');
-		$accessOptions[OPEN_ACCESS] = Locale::Translate('editor.issues.open');
-		$templateMgr->assign('accessOptions',$accessOptions);
+		$templateMgr->assign('accessOptions', array(
+			ARTICLE_ACCESS_ISSUE_DEFAULT => Locale::Translate('editor.issues.default'),
+			ARTICLE_ACCESS_OPEN => Locale::Translate('editor.issues.open')
+		));
 
 		import('issue.IssueAction');
 		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
@@ -553,7 +554,7 @@ class IssueManagementHandler extends EditorHandler {
 			$delayOpenAccessYear = $curYear + $delayYears + (int)floor(($curMonth+$delayMonths)/12);
  			$delayOpenAccessMonth = (int)fmod($curMonth+$delayMonths,12);
 
-			$issue->setAccessStatus(SUBSCRIPTION);
+			$issue->setAccessStatus(ISSUE_ACCESS_SUBSCRIPTION);
 			$issue->setOpenAccessDate(date('Y-m-d H:i:s',mktime(0,0,0,$delayOpenAccessMonth,$curDay,$delayOpenAccessYear)));
 		}
 

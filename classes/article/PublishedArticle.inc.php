@@ -18,6 +18,10 @@
 
 import('article.Article');
 
+// Access status
+define('ARTICLE_ACCESS_ISSUE_DEFAULT', 0);
+define('ARTICLE_ACCESS_OPEN', 1);
+
 class PublishedArticle extends Article {
 
 	/**
@@ -127,7 +131,7 @@ class PublishedArticle extends Article {
 	}
 
 	/**
-	 * get access status
+	 * get access status (ARTICLE_ACCESS_...)
 	 * @return int
 	 */
 	function getAccessStatus() {
@@ -135,7 +139,7 @@ class PublishedArticle extends Article {
 	}
 
 	/**
-	 * set access status
+	 * set access status (ARTICLE_ACCESS_...)
 	 * @param $accessStatus int
 	 */
 	function setAccessStatus($accessStatus) {

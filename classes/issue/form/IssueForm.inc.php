@@ -53,10 +53,10 @@ class IssueForm extends Form {
 		$templateMgr->assign('enableSubscriptions', $journal->getSetting('enableSubscriptions'));
 		$templateMgr->assign('enableDelayedOpenAccess', $journal->getSetting('enableDelayedOpenAccess'));
 
-		$accessOptions = array();
-		$accessOptions[OPEN_ACCESS] = Locale::Translate('editor.issues.openAccess');
-		$accessOptions[SUBSCRIPTION] = Locale::Translate('editor.issues.subscription');
-		$templateMgr->assign('accessOptions', $accessOptions);
+		$templateMgr->assign('accessOptions', array(
+			ISSUE_ACCESS_OPEN => Locale::Translate('editor.issues.openAccess'),
+			ISSUE_ACCESS_SUBSCRIPTION => Locale::Translate('editor.issues.subscription')
+		));
 
 		$templateMgr->assign('enablePublicIssueId', $journal->getSetting('enablePublicIssueId'));
 
@@ -104,16 +104,6 @@ class IssueForm extends Form {
 			$issuePublished = 0;
 		}
 
-		if (($subscription && !$delayedOpenAccess) || ($subscription && $delayedOpenAccess && $issuePublished)) {
-			$month = $this->getData('Date_Month');
-			$day = $this->getData('Date_Day');
-			$year = $this->getData('Date_Year');
-			if (!checkdate($month,$day,$year)) {
-				$this->addError('openAccessDate', Locale::translate('editor.issues.invalidAccessDate'));
-				$this->addErrorField('openAccessDate');
-			}
-		}
-
 		import('file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
 
@@ -148,9 +138,6 @@ class IssueForm extends Form {
 		}
 
 		if (isset($issue)) {
-			$openAccessDate = $issue->getOpenAccessDate();
-			if (isset($openAccessDate)) $openAccessDate = getdate(strtotime($openAccessDate));
-
 			$this->_data = array(
 				'title' => $issue->getTitle(null), // Localized
 				'volume' => $issue->getVolume(),
@@ -160,9 +147,7 @@ class IssueForm extends Form {
 				'description' => $issue->getDescription(null), // Localized
 				'publicIssueId' => $issue->getPublicIssueId(),
 				'accessStatus' => $issue->getAccessStatus(),
-				'Date_Month' => $openAccessDate['mon'],
-				'Date_Day' => $openAccessDate['mday'],
-				'Date_Year' => $openAccessDate['year'],
+				'openAccessDate' => $issue->getOpenAccessDate(),
 				'showVolume' => $issue->getShowVolume(),
 				'showNumber' => $issue->getShowNumber(),
 				'showYear' => $issue->getShowYear(),
@@ -273,9 +258,7 @@ class IssueForm extends Form {
 			'description',
 			'publicIssueId',
 			'accessStatus',
-			'Date_Month',
-			'Date_Day',
-			'Date_Year',
+			'enableOpenAccessDate',
 			'showVolume',
 			'showNumber',
 			'showYear',
@@ -292,7 +275,7 @@ class IssueForm extends Form {
 			'originalStyleFileName'
 		));
 
-		$this->readUserDateVars(array('datePublished'));
+		$this->readUserDateVars(array('datePublished', 'openAccessDate'));
 
 		$this->addCheck(new FormValidatorCustom($this, 'showVolume', 'required', 'editor.issues.issueIdentificationRequired', create_function('$showVolume, $showNumber, $showYear, $showTitle', 'return $showVolume || $showNumber || $showYear || $showTitle ? true : false;'), array($this->getData('showNumber'), $this->getData('showYear'), $this->getData('showTitle'))));
 
@@ -361,17 +344,9 @@ class IssueForm extends Form {
 		}
 		$issue->setHideCoverPageCover($hideCoverPageCover, null); // Localized
 
-		$month = $this->getData('Date_Month');
-		$day = $this->getData('Date_Day');
-		$year = $this->getData('Date_Year');
-
-		if ($this->getData('accessStatus')) {
-			$issue->setAccessStatus($this->getData('accessStatus'));
-			$issue->setOpenAccessDate(date('Y-m-d H:i:s',mktime(0,0,0,$month,$day,$year)));
-		} else {
-			$issue->setAccessStatus(1);
-			$issue->setOpenAccessDate(Core::getCurrentDate());
-		}
+		$issue->setAccessStatus($this->getData('accessStatus'));
+		if ($this->getData('enableOpenAccessDate')) $issue->setOpenAccessDate($this->getData('openAccessDate'));
+		else $issue->setOpenAccessDate(null);
 
 		// if issueId is supplied, then update issue otherwise insert a new one
 		if ($issueId) {

@@ -835,7 +835,7 @@ class ImportOJS1 {
 			} else {
 				$issue->setDatePublished(null);
 			}
-			$issue->setAccessStatus(OPEN_ACCESS);
+			$issue->setAccessStatus(ISSUE_ACCESS_OPEN);
 			$issue->setOpenAccessDate(isset($row['dtDateOpenAccess']) ? $row['dtDateOpenAccess'] : null);
 			$issue->setShowVolume($this->showVolume);
 			$issue->setShowNumber($this->showNumber);
@@ -864,7 +864,7 @@ class ImportOJS1 {
 				$issue->setYear($year);
 				$issue->setPublished(1);
 				$issue->setDatePublished($year . '-01-01');
-				$issue->setAccessStatus(OPEN_ACCESS);
+				$issue->setAccessStatus(ISSUE_ACCESS_OPEN);
 				$issue->setOpenAccessDate(null);
 				$issue->setShowVolume($this->showVolume);
 				$issue->setShowNumber($this->showNumber);
@@ -1066,7 +1066,7 @@ class ImportOJS1 {
 				$publishedArticle->setSeq((int)$row['nOrder']);
 				$publishedArticle->setViews($row['nHitCounter']);
 				$publishedArticle->setSectionId(isset($this->sectionMap[$row['fkSectionID']]) ? $this->sectionMap[$row['fkSectionID']] : 0);
-				$publishedArticle->setAccessStatus(isset($row['fkPublishStatusID']) && $row['fkPublishStatusID'] == 2 ? SUBSCRIPTION : OPEN_ACCESS);
+				$publishedArticle->setAccessStatus(isset($row['fkPublishStatusID']) && $row['fkPublishStatusID'] == 2 ? ARTICLE_ACCESS_ISSUE_DEFAULT : ARTICLE_ACCESS_OPEN);
 
 				$publishedArticleDao->insertPublishedArticle($publishedArticle);
 			}

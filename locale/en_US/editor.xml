@@ -58,7 +58,7 @@
 	<message key="editor.issues.description">Description</message>
 	<message key="editor.issues.accessStatus">Access status</message>
 	<message key="editor.issues.accessDate">Open access date</message>
-	<message key="editor.issues.invalidAccessDate">Access date is not valid.</message>
+	<message key="editor.issues.enableOpenAccessDate">Enable delayed open access</message>
 	<message key="editor.issues.issuePublicIdentificationExists">Public issue identification already exists.</message>
 	<message key="editor.issues.coverPage">Cover image</message>
 	<message key="editor.issues.coverPageInstructions">(Allowed formats: .gif, .jpg, or .png )</message>

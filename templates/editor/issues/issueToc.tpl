@@ -48,7 +48,7 @@
 <form method="post" action="{url op="updateIssueToc" path=$issueId}" onsubmit="return confirm('{translate|escape:"jsparam" key="editor.issues.saveChanges"}')">
 
 {assign var=numCols value=6}
-{if ($issueAccess == 2 && $enableSubscriptions)}{assign var=numCols value=$numCols+1}{/if}
+{if $issueAccess == $smarty.const.ISSUE_ACCESS_SUBSCRIPTION && $enableSubscriptions}{assign var=numCols value=$numCols+1}{/if}
 {if $enablePublicArticleId}{assign var=numCols value=$numCols+1}{/if}
 {if $enablePageNumber}{assign var=numCols value=$numCols+1}{/if}
 
@@ -63,7 +63,7 @@
 		<td width="10%" colspan="2">{translate key="editor.issues.order"}</td>
 		<td width="15%">{translate key="article.authors"}</td>
 		<td>{translate key="article.title"}</td>
-		{if ($issueAccess == 2 && $enableSubscriptions)}<td width="10%">{translate key="editor.issues.access"}</td>{/if}
+		{if $issueAccess == $smarty.const.ISSUE_ACCESS_SUBSCRIPTION && $enableSubscriptions}<td width="10%">{translate key="editor.issues.access"}</td>{/if}
 		{if $enablePublicArticleId}<td width="7%">{translate key="editor.issues.publicId"}</td>{/if}
 		{if $enablePageNumber}<td width="7%">{translate key="editor.issues.pages"}</td>{/if}
 		<td width="5%">{translate key="common.remove"}</td>
@@ -87,7 +87,7 @@
 			{/foreach}
 		</td>
 		<td>{if !$isLayoutEditor}<a href="{url op="submission" path=$articleId}" class="action">{/if}{$article->getLocalizedTitle()|strip_unsafe_html|truncate:60:"..."}{if !$isLayoutEditor}</a>{/if}</td>
-		{if (($issueAccess == 2) && $enableSubscriptions)}
+		{if $issueAccess == $smarty.const.ISSUE_ACCESS_SUBSCRIPTION && $enableSubscriptions}
 		<td><select name="accessStatus[{$article->getPubId()}]" size="1" class="selectMenu">{html_options options=$accessOptions selected=$article->getAccessStatus()}</select></td>
 		{/if}
 		{if $enablePublicArticleId}

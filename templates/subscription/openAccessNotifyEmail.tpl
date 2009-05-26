@@ -53,7 +53,7 @@ Content-Transfer-Encoding: quoted-printable
 						<td>{$article->getLocalizedTitle()|strip_unsafe_html}</td>
 						<td align="right">
 							<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}" class="file">{if $article->getLocalizedAbstract()}{translate key="article.abstract"}{else}{translate key="article.details"}{/if}</a>
-							{if (!$subscriptionRequired || $article->getAccessStatus() || $subscribedUser)}
+							{if (!$subscriptionRequired || $article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN || $subscribedUser)}
 								{foreach from=$article->getGalleys() item=galley name=galleyList}
 									&nbsp;
 									<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getBestGalleyId($currentJournal)}" class="file">{$galley->getGalleyLabel()|escape}</a>

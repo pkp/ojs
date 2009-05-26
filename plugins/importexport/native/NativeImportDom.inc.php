@@ -227,7 +227,7 @@ class NativeImportDom {
 		/* --- Access Status --- */
 		
 		$node = $issueNode->getChildByName('open_access');
-		$issue->setAccessStatus($node?OPEN_ACCESS:SUBSCRIPTION);
+		$issue->setAccessStatus($node?ISSUE_ACCESS_OPEN:ISSUE_ACCESS_SUBSCRIPTION);
 
 		if (($node = $issueNode->getChildByName('access_date'))) {
 			$accessDate = strtotime($node->getValue());
@@ -841,7 +841,7 @@ class NativeImportDom {
 			}
 		}
 		$node = $articleNode->getChildByName('open_access');
-		$publishedArticle->setAccessStatus($node?1:0);
+		$publishedArticle->setAccessStatus($node?ARTICLE_ACCESS_OPEN:ARTICLE_ACCESS_ISSUE_DEFAULT);
 		$publishedArticle->setSeq(REALLY_BIG_NUMBER);
 		$publishedArticle->setViews(0);
 		$publishedArticle->setPublicArticleId($articleNode->getAttribute('public_id'));

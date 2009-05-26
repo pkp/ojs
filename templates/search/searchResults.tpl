@@ -89,7 +89,7 @@ function ensureKeyword() {
 	<td><a href="{url journal=$journal->getPath() page="issue" op="view" path=$issue->getBestIssueId($journal)}">{$issue->getIssueIdentification()|escape}</a></td>
 	<td width="30%">{$article->getLocalizedTitle()|strip_unsafe_html}</td>
 	<td width="30%" align="right">
-		{if $publishedArticle->getAccessStatus() || $issueAvailable}
+		{if $publishedArticle->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN|| $issueAvailable}
 			{assign var=hasAccess value=1}
 		{else}
 			{assign var=hasAccess value=0}

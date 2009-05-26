@@ -22,22 +22,23 @@
 </div>
 {/if}
 
-{if not (empty($journalSettings.contactTitle) && empty($journalSettings.contactAffiliation) && empty($journalSettings.contactAffiliation) && empty($journalSettings.contactMailingAddress) && empty($journalSettings.contactPhone) && empty($journalSettings.contactFax) && empty($journalSettings.contactEmail))}
+{if not ($currentJournal->getLocalizedSetting('contactTitle') == '' && $currentJournal->getLocalizedSetting('contactAffiliation') == '' && $currentJournal->getLocalizedSetting('contactMailingAddress') == '' && empty($journalSettings.contactPhone) && empty($journalSettings.contactFax) && empty($journalSettings.contactEmail))}
 <div id="principalContact">
 <h3>{translate key="about.contact.principalContact"}</h3>
 <p>
 	{if !empty($journalSettings.contactName)}
 		<strong>{$journalSettings.contactName|escape}</strong><br />
 	{/if}
-	{if !empty($journalSettings.contactTitle)}
-		{$journalSettings.contactTitle|escape}<br />
-	{/if}
-	{if !empty($journalSettings.contactAffiliation)}
-		{$journalSettings.contactAffiliation|escape}<br />
-	{/if}
-	{if !empty($journalSettings.contactMailingAddress)}
-		{$journalSettings.contactMailingAddress|nl2br}<br />
-	{/if}
+
+	{assign var=s value=$currentJournal->getLocalizedSetting('contactTitle')}
+	{if $s}{$s|escape}<br />{/if}
+
+	{assign var=s value=$currentJournal->getLocalizedSetting('contactAffiliation')}
+	{if $s}{$s|escape}<br />{/if}
+
+	{assign var=s value=$currentJournal->getLocalizedSetting('contactMailingAddress')}
+	{if $s}{$s|nl2br}<br />{/if}
+
 	{if !empty($journalSettings.contactPhone)}
 		{translate key="about.contact.phone"}: {$journalSettings.contactPhone|escape}<br />
 	{/if}

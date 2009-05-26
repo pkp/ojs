@@ -62,7 +62,7 @@ class IssueAction {
 		}
 
 		$result = $journal->getSetting('enableSubscriptions') &&
-			$issue->getAccessStatus() != OPEN_ACCESS &&
+			$issue->getAccessStatus() != ISSUE_ACCESS_OPEN &&
 			$issue->getOpenAccessDate() &&
 			strtotime($issue->getOpenAccessDate()) > time();
 

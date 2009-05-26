@@ -492,6 +492,20 @@ class AboutHandler extends Handler {
 	}
 
 	/**
+	 * Display journal history.
+	 */
+	function history() {
+		$this->validate();
+		$this->setupTemplate(true);
+
+		$journal =& Request::getJournal();
+
+		$templateMgr =& TemplateManager::getManager();
+		$templateMgr->assign('history', $journal->getLocalizedSetting('history'));
+		$templateMgr->display('about/history.tpl');
+	}
+
+	/**
 	 * Display aboutThisPublishingSystem page.
 	 */
 	function aboutThisPublishingSystem() {

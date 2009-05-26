@@ -190,7 +190,7 @@ class CommentHandler extends Handler {
 			$subscriptionRequired = IssueAction::subscriptionRequired($issue);
 			$subscribedUser = IssueAction::subscribedUser($journal, $issue->getIssueId(), $articleId);
 
-			if (!(!$subscriptionRequired || $article->getAccessStatus() || $subscribedUser)) {
+			if (!(!$subscriptionRequired || $article->getAccessStatus() == ARTICLE_ACCESS_OPEN || $subscribedUser)) {
 				Request::redirect(null, 'index');
 			}
 		} else {

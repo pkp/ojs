@@ -52,6 +52,7 @@ class JournalSetupStep1Form extends JournalSetupForm {
 				'publisherNote' => 'string',
 				'contributorNote' => 'string',
 				'contributors' => 'object',
+				'history' => 'string',
 				'envelopeSender' => 'string',
 				'emailSignature' => 'string',
 				'searchDescription' => 'string',
@@ -75,7 +76,7 @@ class JournalSetupStep1Form extends JournalSetupForm {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('title', 'initials', 'abbreviation', 'sponsorNote', 'publisherNote', 'contributorNote', 'searchDescription', 'searchKeywords', 'customHeaders');
+		return array('title', 'initials', 'abbreviation', 'contactTitle', 'contactAffiliation', 'contactMailingAddress', 'sponsorNote', 'publisherNote', 'contributorNote', 'history', 'searchDescription', 'searchKeywords', 'customHeaders');
 	}
 
 	/**

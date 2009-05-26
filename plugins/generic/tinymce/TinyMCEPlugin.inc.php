@@ -150,6 +150,7 @@ class TinyMCEPlugin extends GenericPlugin {
 						$fields[] = 'publisherNote';
 						$fields[] = 'sponsorNote';
 						$fields[] = 'contributorNote';
+						$fields[] = 'history';
 						break;
 					case 2:
 						$fields[] = 'focusScopeDesc';

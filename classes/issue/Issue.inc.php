@@ -20,9 +20,8 @@
 // $Id$
 
 
-define('ISSUE_DEFAULT', 0);
-define('OPEN_ACCESS', 1);
-define('SUBSCRIPTION', 2);
+define('ISSUE_ACCESS_OPEN', 1);
+define('ISSUE_ACCESS_SUBSCRIPTION', 2);
 
 class Issue extends DataObject {
 	/**
@@ -201,7 +200,7 @@ class Issue extends DataObject {
 	}
 
 	/**
-	 * get access status
+	 * get access status (ISSUE_ACCESS_...)
 	 * @return int
 	 */
 	function getAccessStatus() {
@@ -209,7 +208,7 @@ class Issue extends DataObject {
 	}
 
 	/**
-	 * set access status
+	 * set access status (ISSUE_ACCESS_...)
 	 * @param $accessStatus int
 	 */
 	function setAccessStatus($accessStatus) {

@@ -352,6 +352,36 @@ class Upgrade extends Installer {
 	}
 
 	/**
+	 * For 2.3 upgrade: add locale data to existing journal settings that
+	 * were not previously localized.
+	 * @return boolean
+	 */
+	function localizeMoreJournalSettings() {
+		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+
+		$settingNames = array(
+			// Setup page 1
+			'contactTitle' => 'contactTitle',
+			'contactAffiliation' => 'contactAffiliation',
+			'contactMailingAddress' => 'contactMailingAddress'
+		);
+
+		foreach ($settingNames as $oldName => $newName) {
+			$result =& $journalDao->retrieve('SELECT j.journal_id, j.primary_locale FROM journals j, journal_settings js WHERE j.journal_id = js.journal_id AND js.setting_name = ? AND (js.locale IS NULL OR js.locale = ?)', array($oldName, ''));
+			while (!$result->EOF) {
+				$row = $result->GetRowAssoc(false);
+				$journalSettingsDao->update('UPDATE journal_settings SET locale = ?, setting_name = ? WHERE journal_id = ? AND setting_name = ? AND (locale IS NULL OR locale = ?)', array($row['primary_locale'], $newName, $row['journal_id'], $oldName, ''));
+				$result->MoveNext();
+			}
+			$result->Close();
+			unset($result);
+		}
+
+		return true;
+	}
+
+	/**
 	 * For 2.2 upgrade: Migrate the "publisher" setting from a serialized
 	 * array into three localized settings: publisherUrl, publisherNote,
 	 * and publisherInstitution.

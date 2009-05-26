@@ -205,6 +205,8 @@
 	<message key="manager.setup.contributors">Sources of Support</message>
 	<message key="manager.setup.contributorNoteDescription">This text will appear below the "Sources of Support" heading and above the list of names and urls for supporting organizartions under "Journal Sponsorship" on the "About" page.</message>
 	<message key="manager.setup.contributorsDescription">Additional agencies or organizations that provide financial or in-kind support for the journal will appear in About the Journal and may be accompanied by a note of acknowledgement.</message>
+	<message key="manager.setup.history">Journal History</message>
+	<message key="manager.setup.historyDescription">This text will appear in the "About" section of the journal website and can be used to describe changes in titles, editorial board, and other items of relevance to the journal's publication history.</message>
 	<message key="manager.setup.copyediting">Copyeditors</message>
 	<message key="manager.setup.copyeditInstructions">Copyedit Instructions</message>
 	<message key="manager.setup.copyeditInstructionsDescription">The Copyedit Instructions will be made available to Copyeditors, Authors, and Section Editors in the Submission Editing stage. Below is a default set of instructions in HTML, which can be modified or replaced by the Journal Manager at any point (in HTML or plain text).</message>

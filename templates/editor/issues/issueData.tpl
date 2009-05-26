@@ -121,11 +121,14 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="openAccessDate" key="editor.issues.accessDate"}</td>
-		{if ($Date_Year && $Date_Month && $Date_Day)} 
-			<td class="value">{html_select_date time="$Date_Year-$Date_Month-$Date_Day" end_year="+20" all_extra="class=\"selectMenu\""}</td>
-		{else}
-			<td class="value">{html_select_date end_year="+20" all_extra="class=\"selectMenu\""}</td>
-		{/if}
+		<td class="value">
+			<input type="checkbox" id="enableOpenAccessDate" name="enableOpenAccessDate" {if $openAccessDate}checked="checked" {/if}onchange="document.issue.openAccessDateMonth.disabled=this.checked?false:true;document.issue.openAccessDateDay.disabled=this.checked?false:true;document.issue.openAccessDateYear.disabled=this.checked?false:true;" />&nbsp;{fieldLabel name="enableOpenAccessDate" key="editor.issues.enableOpenAccessDate"}<br/>
+			{if $openAccessDate}
+				{html_select_date prefix=openAccessDate time=$openAccessDate end_year="+20" all_extra="class=\"selectMenu\""}
+			{else}
+				{html_select_date prefix=openAccessDate time=$openAccessDate end_year="+20" all_extra="class=\"selectMenu\" disabled=\"disabled\""}
+			{/if}
+		</td>
 	</tr>
 </table>
 </div>

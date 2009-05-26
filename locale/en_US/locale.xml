@@ -773,6 +773,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="about.statistics">Statistics</message>
 	<message key="about.journalContact">Journal Contact</message>
 	<message key="about.aboutTheJournal">About the Journal</message>
+	<message key="about.history">Journal History</message>
 	<message key="about.editorialTeam">Editorial Team</message>
 	<message key="about.editorialTeam.biography">Biography</message>
 	<message key="about.editorialPolicies">Editorial Policies</message>

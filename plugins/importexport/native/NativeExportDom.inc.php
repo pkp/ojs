@@ -72,8 +72,8 @@ class NativeExportDom {
 			// as necessary.
 
 			if ( // Issue flagged as open, or subscriptions disabled
-				$issue->getAccessStatus() == OPEN_ACCESS ||
-				(!$journal->getSetting('enableSubscriptions') && $issue->getAccessStatus() == ISSUE_DEFAULT)
+				$issue->getAccessStatus() == ISSUE_ACCESS_OPEN ||
+				!$journal->getSetting('enableSubscriptions')
 			) {
 				$accessNode =& XMLCustomWriter::createElement($doc, 'open_access');
 				XMLCustomWriter::appendChild($root, $accessNode);
@@ -257,7 +257,7 @@ class NativeExportDom {
 
 		XMLCustomWriter::createChildWithText($doc, $root, 'date_published', NativeExportDom::formatDate($article->getDatePublished()), false);
 
-		if ($article->getAccessStatus()) {
+		if ($article->getAccessStatus() == ARTICLE_ACCESS_OPEN) {
 			$accessNode =& XMLCustomWriter::createElement($doc, 'open_access');
 			XMLCustomWriter::appendChild($root, $accessNode);
 		}

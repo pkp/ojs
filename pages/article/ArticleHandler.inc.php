@@ -498,7 +498,7 @@ class ArticleHandler extends Handler {
 				// Subscription Access
 				$subscribedUser = IssueAction::subscribedUser($journal, $issue->getIssueId(), $articleId);
 
-				if (!(!$subscriptionRequired || $publishedArticle->getAccessStatus() || $subscribedUser)) {
+				if (!(!$subscriptionRequired || $publishedArticle->getAccessStatus() == ARTICLE_ACCESS_OPEN || $subscribedUser)) {
 					// if payment information is enabled,
 					import('payment.ojs.OJSPaymentManager');
 					$paymentManager =& OJSPaymentManager::getManager();
