@@ -232,7 +232,7 @@ function prepBlockFields() {
 </div>
 <div class="separator"></div>
 
-<div id="journalPageHeader">
+<div id="journalPageHeaderInfo">
 <h3>5.3 {translate key="manager.setup.journalPageHeader"}</h3>
 
 <p>{translate key="manager.setup.journalPageHeaderDescription"}</p>
@@ -304,7 +304,7 @@ function prepBlockFields() {
 </div>
 <div class="separator"></div>
 
-<div id="journalPageFooter">
+<div id="journalPageFooterInfo">
 <h3>5.4 {translate key="manager.setup.journalPageFooter"}</h3>
 
 <p>{translate key="manager.setup.journalPageFooterDescription"}</p>
