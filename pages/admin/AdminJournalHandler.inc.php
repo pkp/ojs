@@ -141,48 +141,6 @@ class AdminJournalHandler extends AdminHandler {
 	}
 
 	/**
-	 * Show form to import data from an OJS 1.x journal.
-	 */
-	function importOJS1() {
-		$this->validate();
-		$this->setupTemplate();
-
-		import('admin.form.ImportOJS1Form');
-
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$importForm =& new ImportOJS1Form();
-		$importForm->initData();
-		$importForm->display();
-	}
-
-	/**
-	 * Import data from an OJS 1.x journal.
-	 */
-	function doImportOJS1() {
-		$this->validate();
-		$this->setupTemplate();
-
-		import('admin.form.ImportOJS1Form');
-
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$importForm =& new ImportOJS1Form();
-		$importForm->readInputData();
-
-		if ($importForm->validate() && ($journalId = $importForm->execute()) !== false) {
-			$redirects = $importForm->getRedirects();
-			$conflicts = $importForm->getConflicts();
-
-			$templateMgr =& TemplateManager::getManager();
-			$templateMgr->assign('journalId', $journalId);
-			$templateMgr->assign('redirects', $redirects);
-			$templateMgr->assign('conflicts', $conflicts);
-			$templateMgr->display('admin/importComplete.tpl');
-		} else {
-			$importForm->display();
-		}
-	}
-
-	/**
 	 * Set up the template.
 	 */
 	function setupTemplate() {

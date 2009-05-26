@@ -36,8 +36,6 @@ switch ($op) {
 	case 'updateJournal':
 	case 'deleteJournal':
 	case 'moveJournal':
-	case 'importOJS1':
-	case 'doImportOJS1':
 		define('HANDLER_CLASS', 'AdminJournalHandler');
 		import('pages.admin.AdminJournalHandler');
 		break;

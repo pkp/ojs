@@ -55,6 +55,6 @@
 	{/if}
 </table>
 </div>
-<p><a href="{url op="createJournal"}" class="action">{translate key="admin.journals.create"}</a> | <a href="{url op="importOJS1"}" class="action">{translate key="admin.journals.importOJS1"}</a></p>
+<p><a href="{url op="createJournal"}" class="action">{translate key="admin.journals.create"}</a></p>
 
 {include file="common/footer.tpl"}
