@@ -16,7 +16,7 @@
 {/if}
 {include file="common/header.tpl"}
 {/strip}
-
+<div id="emailTemplateForm">
 <form method="post" action="{url op="updateEmail"}">
 <input type="hidden" name="emailId" value="{$emailId|escape}" />
 <input type="hidden" name="journalId" value="{$journalId|escape}" />
@@ -76,5 +76,5 @@
 
 <p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="emails" escape=false}'" /> <input type="reset" class="button" /></p>
 </form>
-
+</div>
 {include file="common/footer.tpl"}

@@ -13,10 +13,12 @@
 {include file="rt/header.tpl"}
 {/strip}
 
+<div id="suppFileView">
 <h3>{$article->getLocalizedTitle()|strip_unsafe_html}</h3>
 
 <br />
 
+<div id="supplementarFileData">
 <h3>{translate key="author.submit.supplementaryFileData"}</h3>
 
 <table width="100%" class="data">
@@ -61,11 +63,11 @@
 		<td class="value">{$suppFile->getLanguage()|escape|default:"&mdash;"}</td>
 	</tr>
 </table>
-
+</div>
 
 <div class="separator"></div>
 
-
+<div id="supplementaryFileUpload">
 <h3>{translate key="author.submit.supplementaryFileUpload"}</h3>
 
 <table width="100%" class="data">
@@ -93,5 +95,7 @@
 	</tr>
 {/if}
 </table>
+</div>
+</div>
 
 {include file="rt/footer.tpl"}

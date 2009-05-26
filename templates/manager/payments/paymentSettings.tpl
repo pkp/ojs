@@ -11,7 +11,7 @@
 {assign var="pageTitle" value="manager.payment.feePaymentOptions"}
 {include file="common/header.tpl"}
 {/strip}
-
+<div id="paymentSettings">
 <ul class="menu">
 	<li class="current"><a href="{url op="payments"}">{translate key="manager.payment.options"}</a></li>
 	<li><a href="{url op="payMethodSettings"}">{translate key="manager.payment.paymentMethods"}</a></li>
@@ -22,6 +22,7 @@
 
 <form name="paymentSettingsForm" method="post" action="{url op="savePaymentSettings"}">
 {if count($formLocales) > 1}
+<div id="locales">
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
@@ -32,9 +33,11 @@
 		</td>
 	</tr>
 </table>
+</div>
 {/if}
 
 {include file="common/formErrors.tpl"}
+<div id="generalOptions">
 <h3>{translate key="manager.payment.generalOptions"}</h3>
 <table width="100%" class="data">
 	<tr>
@@ -50,7 +53,8 @@
 		<td width="80%">{translate key="manager.payment.currencymessage"}</td>
 	</tr>	
 </table>
-
+</div>
+<div id="authorFees">
 <h3>{translate key="manager.payment.authorFees"}</h3>
 <p>{translate key="manager.payment.authorFeesDescription"}</p>
 <table width="100%" class="data">
@@ -107,6 +111,8 @@
 	<td class="value" width="80%"><textarea class="textArea" name="waiverPolicy[{$formLocale|escape}]" id="waiverPolicy" rows="2" cols="50">{$waiverPolicy[$formLocale]|escape}</textarea></td>
 </tr>
 </table>
+</div>
+<div id="readerFees">
 <h3>{translate key="manager.payment.readerFees"}</h3>
 
 <p>{translate key="manager.payment.readerFeesDescription"}</p>
@@ -137,7 +143,8 @@
 	<td class="label" width="80%">{fieldLabel name="restrictOnlyPdf" key="manager.payment.options.onlypdf"}</td>
 </tr>
 </table>
-
+</div>
+<div id="generalFees">
 <h3>{translate key="manager.payment.generalFees"}</h3>
 
 <p>{translate key="manager.payment.generalFeesDescription"}</p>
@@ -172,8 +179,8 @@
 	<td class="value" width="80%"><textarea class="textArea" name="donationFeeDescription[{$formLocale|escape}]" id="donationFeeDescription" rows="2" cols="50">{$donationFeeDescription[$formLocale]|escape}</textarea></td>
 </tr>
 </table>
-
+</div>
 <p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="manager"}'" /></p>
 </form>
-
+</div>
 {include file="common/footer.tpl"}

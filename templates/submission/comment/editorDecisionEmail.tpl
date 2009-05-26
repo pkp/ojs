@@ -24,7 +24,7 @@ function deleteAttachment(fileId) {
 // -->
 {/literal}
 </script>
-
+<div id="editorDecisionEmail">
 <form method="post" name="emailForm" action="{$formActionUrl}"{if $attachmentsEnabled} enctype="multipart/form-data"{/if}>
 <input type="hidden" name="continued" value="1"/>
 {if $hiddenFormParams}
@@ -174,5 +174,5 @@ function deleteAttachment(fileId) {
 
 <p><input name="send" type="submit" value="{translate key="email.send"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="history.go(-1)" />{if !$disableSkipButton} <input name="send[skip]" type="submit" value="{translate key="email.skip"}" class="button" />{/if}</p>
 </form>
-
+</div>
 {include file="common/footer.tpl"}

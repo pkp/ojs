@@ -27,7 +27,7 @@
 
 {include file="common/formErrors.tpl"}
 
-<table class="data" width="100%">
+<table id="general" class="data" width="100%">
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="status" required="true" key="plugins.generic.thesis.manager.form.status"}</td>
 	<td width="80%" class="value"><select name="status" id="status" class="selectMenu" />{html_options options=$validStatus selected=$status}</select></td>
@@ -80,7 +80,7 @@
 </table>
 
 <div class="separator"></div>
-
+<div id="author">
 <h3>{translate key="plugins.generic.thesis.manager.form.author"}</h3>
 
 <table class="data" width="100%">
@@ -131,9 +131,9 @@
 	<td class="value"><input type="text" name="supervisorEmail" value="{$supervisorEmail|escape}" size="40" id="supervisorEmail" maxlength="90" class="textField" /></td>
 </tr>
 </table>
-
+</div>
 <div class="separator"></div>
-
+<div id="indexing">
 <h3>{translate key="plugins.generic.thesis.manager.form.indexing"}</h3>
 <p>{translate key="plugins.generic.thesis.manager.form.indexingDescription"}</p>
 
@@ -244,7 +244,7 @@
 	</td>
 </tr>
 </table>
-
+</div>
 <p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> {if not $thesisId}<input type="submit" name="createAnother" value="{translate key="plugins.generic.thesis.manager.form.saveAndCreateAnother"}" class="button" /> {/if}<input type="button" value="{translate key="common.cancel"}" class="button" onclick="history.go(-1);" /></p>
 
 </form>

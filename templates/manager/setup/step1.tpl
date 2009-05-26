@@ -15,6 +15,7 @@
 {include file="common/formErrors.tpl"}
 
 {if count($formLocales) > 1}
+<div id="locales">
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
@@ -25,8 +26,9 @@
 		</td>
 	</tr>
 </table>
+</div>
 {/if}
-
+<div id="generalInformation">
 <h3>1.1 {translate key="manager.setup.generalInformation"}</h3>
 
 <table width="100%" class="data">
@@ -106,11 +108,11 @@
 		</td>
 	</tr>
 </table>
-
+</div>
 
 <div class="separator"></div>
 
-
+<div id="principalContact">
 <h3>1.2 {translate key="manager.setup.principalContact"}</h3>
 
 <p>{translate key="manager.setup.principalContactDescription"}</p>
@@ -145,11 +147,11 @@
 		<td width="80%" class="value"><textarea name="contactMailingAddress" id="contactMailingAddress" rows="3" cols="40" class="textArea">{$contactMailingAddress|escape}</textarea></td>
 	</tr>
 </table>
-
+</div>
 
 <div class="separator"></div>
 
-
+<div id="technicalSupportContact">
 <h3>1.3 {translate key="manager.setup.technicalSupportContact"}</h3>
 
 <p>{translate key="manager.setup.technicalSupportContactDescription"}</p>
@@ -168,9 +170,9 @@
 		<td width="80%" class="value"><input type="text" name="supportPhone" id="supportPhone" value="{$supportPhone|escape}" size="15" maxlength="24" class="textField" /></td>
 	</tr>
 </table>
-
+</div>
 <div class="separator"></div>
-
+<div id="setupEmails">
 <h3>1.4 {translate key="manager.setup.emails"}</h3>
 <table width="100%" class="data">
 	<tr valign="top"><td colspan="2">{translate key="manager.setup.emailSignatureDescription"}<br />&nbsp;</td></tr>
@@ -193,10 +195,10 @@
 		</td>
 	</tr>
 </table>
-
+</div>
 
 <div class="separator"></div>
-
+<div id="setupPublisher">
 <h3>1.5 {translate key="manager.setup.publisher"}</h3>
 
 <p>{translate key="manager.setup.publisherDescription"}</p>
@@ -219,9 +221,9 @@
 		<td width="80%" class="value"><input type="text" name="publisherUrl" id="publisherUrl" value="{$publisherUrl|escape}" size="40" maxlength="255" class="textField" /></td>
 	</tr>
 </table>
-
+</div>
 <div class="separator"></div>
-
+<div id="sponsors">
 <h3>1.6 {translate key="manager.setup.sponsors"}</h3>
 
 <p>{translate key="manager.setup.sponsorsDescription"}</p>
@@ -262,11 +264,11 @@
 </table>
 
 <p><input type="submit" name="addSponsor" value="{translate key="manager.setup.addSponsor"}" class="button" /></p>
-
+</div>
 
 <div class="separator"></div>
 
-
+<div id="contributors">
 <h3>1.7 {translate key="manager.setup.contributors"}</h3>
 
 <p>{translate key="manager.setup.contributorsDescription"}</p>
@@ -307,11 +309,11 @@
 </table>
 
 <p><input type="submit" name="addContributor" value="{translate key="manager.setup.addContributor"}" class="button" /></p>
-
+</div>
 
 <div class="separator"></div>
 
-
+<div id="searchEngineIndexing">
 <h3>1.8 {translate key="manager.setup.searchEngineIndexing"}</h3>
 
 <p>{translate key="manager.setup.searchEngineIndexingDescription"}</p>
@@ -334,7 +336,7 @@
 		</td>
 	</tr>
 </table>
-
+</div>
 
 <div class="separator"></div>
 

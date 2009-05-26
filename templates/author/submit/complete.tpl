@@ -13,6 +13,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
+<div id="submissionComplete">
 <p>{translate key="author.submit.submissionComplete" journalTitle=$journal->getLocalizedTitle()}</p>
 
 {if $canExpedite}
@@ -24,5 +25,6 @@
 {/if}
 
 <p>&#187; <a href="{url op="track"}">{translate key="author.track"}</a></p>
+</div>
 
 {include file="common/footer.tpl"}

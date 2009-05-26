@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="plugins.importexport.users.displayName"}
 {include file="common/header.tpl"}
 {/strip}
-
+<div id="importUsersConfirm">
 {translate key="plugins.importexport.users.import.confirmUsers"}:
 <form action="{plugin_url path="import"}" method="post">
 {if $sendNotify}
@@ -119,5 +119,5 @@
 {/if}
 
 <p>&#187; <a href="{url page="manager"}">{translate key="manager.journalManagement"}</a></p>
-
+</div>
 {include file="common/footer.tpl"}

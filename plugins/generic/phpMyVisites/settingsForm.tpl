@@ -12,8 +12,8 @@
 {assign var="pageTitle" value="plugins.generic.phpmv.manager.phpmvSettings"}
 {include file="common/header.tpl"}
 {/strip}
-
-{translate key="plugins.generic.phpmv.manager.settings.description"}
+<div id="phpMyVisitesSettings">
+<div id="description">{translate key="plugins.generic.phpmv.manager.settings.description"}</div>
 
 <div class="separator"></div>
 
@@ -45,5 +45,5 @@
 </form>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
-
+</div>
 {include file="common/footer.tpl"}

@@ -17,10 +17,10 @@
 
 <p>{translate key="rt.admin.settings.description"}</p>
 
-<input type="checkbox" {if $enabled}checked="checked" {/if}name="enabled" value="1" id="enabled"/>&nbsp;&nbsp;<label for="enabled">{translate key="rt.admin.settings.enableReadingTools"}</label><br/>
+<div id="enableRT"><input type="checkbox" {if $enabled}checked="checked" {/if}name="enabled" value="1" id="enabled"/>&nbsp;&nbsp;<label for="enabled">{translate key="rt.admin.settings.enableReadingTools"}</label></div><br/>
 
 <div class="separator"></div>
-
+<div id="rtAdminOptions">
 <h3>{translate key="rt.admin.options"}</h3>
 <table width="100%" class="data">
 	<tr valign="top">
@@ -78,9 +78,9 @@
 		</td>
 	</tr>
 </table>
-
+</div>
 <div class="separator">&nbsp;</div>
-
+<div id="rtAdminRelatedItems">
 <h3>{translate key="rt.admin.relatedItems"}</h3>
 
 <label for="version">{translate key="rt.admin.settings.relatedItems"}</label>&nbsp;&nbsp;<select name="version" id="version" class="selectMenu">
@@ -89,7 +89,7 @@
 </select><br/>
 {url|assign:"relatedItemsLink" op="versions"}
 {translate key="rt.admin.settings.relatedItemsLink" relatedItemsLink=$relatedItemsLink}<br/>
-
+</div>
 <p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="rtadmin" escape=false}'" /></p>
 
 </form>

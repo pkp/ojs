@@ -13,7 +13,7 @@
 {assign var="helpTopicId" value="site.siteManagement"}
 {include file="common/header.tpl"}
 {/strip}
-
+<div id="import">
 <form method="post" action="{url page="admin" op="doImportOJS1"}">
 
 {include file="common/formErrors.tpl"}
@@ -61,5 +61,5 @@
 </form>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
-
+</div>
 {include file="common/footer.tpl"}

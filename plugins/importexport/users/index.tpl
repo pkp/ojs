@@ -14,7 +14,7 @@
 {/strip}
 
 <br/>
-
+<div id="exportUsers">
 <h3>{translate key="plugins.importexport.users.export.exportUsers"}</h3>
 
 <ul class="plain">
@@ -33,7 +33,8 @@
 	</li>
 	<li>&#187; <a href="{plugin_url path="exportAll"}">{translate key="plugins.importexport.users.export.exportAllUsers"}</a></li>
 </ul>
-
+</div>
+<div id="importUsers">
 <h3>{translate key="plugins.importexport.users.import.importUsers"}</h3>
 
 <form action="{plugin_url path="confirm"}" method="post" enctype="multipart/form-data">
@@ -56,7 +57,7 @@
 		<td class="formField">&nbsp;</td>
 	</tr>
 </table>
-
+</div>
 <p><input type="submit" value="{translate key="common.upload"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="manager" path="importexport" escape=false}'" /></p>
 
 </form>

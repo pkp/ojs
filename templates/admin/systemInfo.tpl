@@ -12,8 +12,9 @@
 {assign var="pageTitle" value="admin.systemInformation"}
 {include file="common/header.tpl"}
 {/strip}
-
+<div id="systemVersion">
 <h3>{translate key="admin.systemVersion"}</h3>
+<div id="currentVersion">
 <h4>{translate key="admin.currentVersion"}</h4>
 <p>{$currentVersion->getVersionString()} ({$currentVersion->getDateInstalled()|date_format:$datetimeFormatLong})</p>
 
@@ -27,7 +28,8 @@
 {else}
 <p><a href="{url versionCheck=1}">{translate key="admin.version.checkForUpdates"}</a></p>
 {/if}
-
+</div>
+<div id="versionHistory">
 <h4>{translate key="admin.versionHistory"}</h4>
 <table class="listing" width="100%">
 	<tr>
@@ -58,7 +60,10 @@
 	</tr>
 {/foreach}
 </table>
+</div>
+</div>
 
+<div id="systemConfiguration">
 <h3>{translate key="admin.systemConfiguration"}</h3>
 <a class="action" href="{url op="editSystemConfig"}">{translate key="common.edit"}</a>
 <p>{translate key="admin.systemConfigurationDescription"}</p>
@@ -78,9 +83,9 @@
 {/if}{* !empty($sectionData) *}
 
 {/foreach}
-
+</div>
 <div class="separator"></div>
-
+<div id="serverInformation">
 <h3>{translate key="admin.serverInformation"}</h3>
 <p>{translate key="admin.serverInformationDescription"}</p>
 
@@ -94,5 +99,5 @@
 </table>
 
 <a href="{url op="phpInfo"}" target="_blank">{translate key="admin.phpInfo"}</a>
-
+</div>
 {include file="common/footer.tpl"}

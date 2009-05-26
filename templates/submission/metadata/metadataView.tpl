@@ -14,6 +14,7 @@
 {/strip}
 
 {if $canViewAuthors}
+<div id="authors">
 <h3>{translate key="article.authors"}</h3>
 	
 <table width="100%" class="data">
@@ -68,12 +69,12 @@
 	{/if}
 	{/foreach}
 </table>
-
+</div>
 
 <div class="separator"></div>
 {/if}
 
-
+<div id="titleAndAbstract">
 <h3>{translate key="submission.titleAndAbstract"}</h3>
 
 <table width="100%" class="data">
@@ -90,9 +91,9 @@
 		<td class="value">{$abstract[$formLocale]|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
 	</tr>
 </table>
-
+</div>
 <div class="separator"></div>
-
+<div id="cover">
 <h3>{translate key="editor.article.cover"}</h3>
 
 <table width="100%" class="data">
@@ -109,9 +110,9 @@
 		<td class="value">{$coverPageAltText[$formLocale]|escape}</td>
 	</tr>
 </table>
-
+</div>
 <div class="separator"></div>
-
+<div id="indexing">
 <h3>{translate key="submission.indexing"}</h3>
 	
 <table width="100%" class="data">
@@ -182,11 +183,11 @@
 		<td width="80%" class="value">{$language|escape|default:"&mdash;"}</td>
 	</tr>
 </table>
-
+</div>
 
 <div class="separator"></div>
 
-
+<div id="supportingAgencies">
 <h3>{translate key="submission.supportingAgencies"}</h3>
 	
 <table width="100%" class="data">
@@ -195,5 +196,6 @@
 		<td width="80%" class="value">{$sponsor[$formLocale]|escape|default:"&mdash;"}</td>
 	</tr>
 </table>
+</div>
 
 {include file="common/footer.tpl"}

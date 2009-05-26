@@ -13,6 +13,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
+<div id="subscriptionsContact">
 <h3>{translate key="about.subscriptionsContact"}</h3>
 <p>
 	{if !empty($subscriptionName)}
@@ -34,8 +35,10 @@
 		{$subscriptionAdditionalInformation|nl2br}<br />
 	{/if}
 </p>
+</div>
 
 {if !$individualSubscriptionTypes->wasEmpty()}
+<div id="availableSubscriptionTypes">
 <h3>{translate key="about.subscriptions.individual"}</h3>
 <table width="100%" class="listing">
 	<tr>
@@ -62,7 +65,7 @@
 	{/if}
 {/iterate}
 </table>
-
+</div>
 <br />
 {/if}
 

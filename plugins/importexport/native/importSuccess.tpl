@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="plugins.importexport.native.import.success"}
 {include file="common/header.tpl"}
 {/strip}
-
+<div id="importSuccess">
 <p>{translate key="plugins.importexport.native.import.success.description"}</p>
 
 {if $issues}
@@ -32,5 +32,5 @@
 	{/foreach}
 	</ul>
 {/if}
-
+</div>
 {include file="common/footer.tpl"}

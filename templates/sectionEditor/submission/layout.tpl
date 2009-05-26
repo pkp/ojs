@@ -16,6 +16,7 @@
 <h3>{translate key="submission.layout"}</h3>
 
 {if $useLayoutEditors}
+<div id="layoutEditors">
 <table class="data" width="100%">
 	<tr>
 		<td width="20%" class="label">{translate key="user.role.layoutEditor"}</td>
@@ -23,6 +24,7 @@
 		<td class="value"><a href="{url op="assignLayoutEditor" path=$submission->getArticleId()}" class="action">{translate key="submission.layout.assignLayoutEditor"}</a></td>
 	</tr>
 </table>
+</div>
 {/if}
 
 <table width="100%" class="info">
@@ -156,7 +158,7 @@
 	<input type="file" name="layoutFile" size="10" class="uploadField" />
 	<input type="submit" value="{translate key="common.upload"}" class="button" />
 </form>
-
+<div id="layoutComments">
 {translate key="submission.layout.layoutComments"}
 {if $submission->getMostRecentLayoutComment()}
 	{assign var="comment" value=$submission->getMostRecentLayoutComment()}
@@ -173,4 +175,5 @@
 &nbsp;&nbsp;
 <a href="javascript:openHelp('{url op="instructions" path="referenceLinking"}')" class="action">{translate key="submission.layout.referenceLinking"}</a>
 {/if}
+</div>
 </div>

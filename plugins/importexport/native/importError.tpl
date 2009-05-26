@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="plugins.importexport.native.import.error"}
 {include file="common/header.tpl"}
 {/strip}
-
+<div id="importError">
 <p>{translate key="plugins.importexport.native.import.error.description"}</p>
 {if $error}
 	<!-- A single error occurred. -->
@@ -25,5 +25,5 @@
 	{/foreach}
 	</ul>
 {/if}
-
+</div>
 {include file="common/footer.tpl"}

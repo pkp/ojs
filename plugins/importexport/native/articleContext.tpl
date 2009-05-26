@@ -14,7 +14,7 @@
 {/strip}
 
 <p>{translate key="plugins.importexport.native.import.articles.description"}</p>
-
+<div id="articleContext">
 <form action="{plugin_url path="import"}" method="post">
 <input type="hidden" name="temporaryFileId" value="{$temporaryFileId|escape}"/>
 
@@ -67,5 +67,6 @@
 </table>
 <p><input {if $issues->wasEmpty()}disabled="disabled" {/if}type="submit" value="{translate key="common.import"}" class="button defaultButton"/></p>
 </form>
+</div>
 </div>
 {include file="common/footer.tpl"}

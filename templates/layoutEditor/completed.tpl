@@ -28,6 +28,7 @@ function sortSearch(heading, direction) {
 {/literal}
 </script> 
 
+<div id="search">
 <form method="post" name="submit" action="{url op="submissions" path=$pageToDisplay}">
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions selected=$searchField}
@@ -55,6 +56,7 @@ function sortSearch(heading, direction) {
 	<input type="submit" value="{translate key="common.search"}" class="button" />
 </form>
 &nbsp;
+</div>
 
 <div id="submissions">
 <table width="100%" class="listing">

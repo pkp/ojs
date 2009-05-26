@@ -14,7 +14,7 @@
 {/strip}
 
 {url|assign:"directoryUrl" page="gateway" op="plugin" path="METSGatewayPlugin"}
-
+<div id="metsGatewaySettings">
 <h3>{translate key="plugins.gateways.metsGateway.settings"}</h3>
 
 <form method="post" action="{plugin_url path="settings"}">
@@ -53,5 +53,5 @@
 <input type="submit" name="save" class="button defaultButton" value="{translate key="common.save"}"/> 
 <input type="button" class="button" value="{translate key="common.cancel"}" onclick="document.location.href='{url|escape:"quotes" page="manager" op="plugins" escape="false"}'"/>
 </form>
-
+</div>
 {include file="common/footer.tpl"}

@@ -51,7 +51,7 @@
 		// -->
 		{/literal}
 	</script>
-
+<div id="subscriptionContact">
 <h3>{translate key="manager.subscriptionPolicies.subscriptionContact"}</h3>
 <p>{translate key="manager.subscriptionPolicies.subscriptionContactDescription"}</p>
 <table width="100%" class="data">
@@ -86,11 +86,11 @@
 		<td width="80%" class="value"><textarea name="subscriptionMailingAddress" id="subscriptionMailingAddress" rows="6" cols="40" class="textArea">{$subscriptionMailingAddress|escape}</textarea></td>
 	</tr>
 </table>
-
+</div>
 
 <div class="separator"></div>
 
-
+<div id="subscriptionAdditionalInformation">
 <h3>{translate key="manager.subscriptionPolicies.subscriptionAdditionalInformation"}</h3>
 <p>{translate key="manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"}</p>
 <p>
@@ -98,11 +98,11 @@
 	<br />
 	<span class="instruct">{translate key="manager.subscriptionPolicies.htmlInstructions"}</span>
 </p>
-
+</div>
 
 <div class="separator"></div>
 
-
+<div id="expiry">
 <h3>{translate key="manager.subscriptionPolicies.expiry"}</h3>
 <p>{translate key="manager.subscriptionPolicies.expiryDescription"}</p>
 
@@ -133,10 +133,10 @@
 		</td>
 	</tr>
 </table>
-
+</div>
 <div class="separator"></div>
 
-
+<div id="expiryReminders">
 <h3>{translate key="manager.subscriptionPolicies.expiryReminders"}</h3>
 <p>{translate key="manager.subscriptionPolicies.expiryRemindersDescription"}</p>
 
@@ -169,11 +169,11 @@
 	<br/>
 	{translate key="manager.subscriptionPolicies.expiryRemindersDisabled"}
 {/if}
-
+</div>
 
 <div class="separator"></div>
 
-
+<div id="openAccessOptions">
 <h3>{translate key="manager.subscriptionPolicies.openAccessOptions"}</h3>
 <p>{translate key="manager.subscriptionPolicies.openAccessOptionsDescription"}</p>
 
@@ -210,7 +210,7 @@
 	<br />
 	<span class="instruct">{translate key="manager.subscriptionPolicies.htmlInstructions"}</span>
 </p>
-
+</div>
 
 <div class="separator"></div>
 

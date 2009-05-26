@@ -14,6 +14,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
+<div id="notifyUsers">
 <form method="post" action="{$formActionUrl}">
 <input type="hidden" name="continued" value="1"/>
 {if $hiddenFormParams}
@@ -41,6 +42,7 @@
 	<br/>
 {/if}
 
+<div id="issue">
 <h3>{translate key="issue.issue"}</h3>
 <table class="data" width="100%">
 <tr valign="top">
@@ -57,10 +59,12 @@
 	</td>
 </tr>
 </table>
+</div>
 
 <br/>
 
-<table class="data" width="100%">
+
+<table id="email" class="data" width="100%">
 <tr valign="top">
 	<td class="label">{translate key="email.from"}</td>
 	<td class="value">{$from|escape}</td>
@@ -77,5 +81,5 @@
 
 <p><input name="send" type="submit" value="{translate key="email.send"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="history.go(-1)" /></p>
 </form>
-
+</div>
 {include file="common/footer.tpl"}

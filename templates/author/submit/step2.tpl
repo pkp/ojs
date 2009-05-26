@@ -15,7 +15,7 @@
 <input type="hidden" name="articleId" value="{$articleId|escape}" />
 {include file="common/formErrors.tpl"}
 
-{translate key="author.submit.uploadInstructions"}
+<div id="uploadInstructions">{translate key="author.submit.uploadInstructions"}</div>
 
 {if $journalSettings.supportPhone}
 	{assign var="howToKeyName" value="author.submit.howToSubmit"}
@@ -27,6 +27,7 @@
 
 <div class="separator"></div>
 
+<div id="submissionFile">
 <h3>{translate key="author.submit.submissionFile"}</h3>
 <table class="data" width="100%">
 {if $submissionFile}
@@ -52,9 +53,11 @@
 </tr>
 {/if}
 </table>
+</div>
 
 <div class="separator"></div>
 
+<div id="addSubmissionFile">
 <table class="data" width="100%">
 <tr>
 	<td width="30%" class="label">
@@ -70,6 +73,7 @@
 	</td>
 </tr>
 </table>
+</div>
 
 <div class="separator"></div>
 

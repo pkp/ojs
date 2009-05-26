@@ -13,7 +13,8 @@
 {include file="common/header.tpl"}
 {/strip}
 
-{translate key="plugins.theme.custom.description"}
+<div id="customThemeSettings">
+<div id="description">{translate key="plugins.theme.custom.description"}</div>
 
 <div class="separator"></div>
 
@@ -61,5 +62,5 @@
 </form>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
-
+</div>
 {include file="common/footer.tpl"}

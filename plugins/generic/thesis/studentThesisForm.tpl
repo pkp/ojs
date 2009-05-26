@@ -13,7 +13,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-{translate key="plugins.generic.thesis.form.introduction"}
+<div id="description">{translate key="plugins.generic.thesis.form.introduction"}</div>
 
 <br/>
 <br/>
@@ -21,7 +21,7 @@
 <form method="post" action="{url op="save"}">
 
 {include file="common/formErrors.tpl"}
-
+<div id="general">
 <table class="data" width="100%">
 {if $captchaEnabled}
 <tr valign="top">
@@ -92,9 +92,9 @@
 	</td>
 </tr>
 </table>
-
+</div>
 <div class="separator"></div>
-
+<div id="author">
 <h3>{translate key="plugins.generic.thesis.form.author"}</h3>
 
 <table class="data" width="100%">
@@ -145,9 +145,9 @@
 	<td class="value"><input type="text" name="supervisorEmail" value="{$supervisorEmail|escape}" size="40" id="supervisorEmail" maxlength="90" class="textField" /></td>
 </tr>
 </table>
-
+</div>
 <div class="separator"></div>
-
+<div id="indexing">
 <h3>{translate key="plugins.generic.thesis.form.indexing"}</h3>
 <p>{translate key="plugins.generic.thesis.form.indexingDescription"}</p>
 
@@ -259,7 +259,7 @@
 	</td>
 </tr>
 </table>
-
+</div>
 <p><input type="submit" value="{translate key="plugins.generic.thesis.submitButton"}" class="button defaultButton" /><input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="thesis" escape=false}'" /></p>
 
 </form>

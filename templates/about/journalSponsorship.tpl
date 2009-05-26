@@ -14,16 +14,18 @@
 {/strip}
 
 {if not(empty($publisherNote) && empty($publisherInstitution))}
+<div id="publisher">
 <h3>{translate key="common.publisher"}</h3>
 
 {if $publisherNote}<p>{$publisherNote|nl2br}</p>{/if}
 
 <p><a href="{$publisherUrl}">{$publisherInstitution|escape}</a></p>
-
+</div>
 <div class="separator"></div>
 {/if}
 
 {if not (empty($sponsorNote) && empty($sponsors))}
+<div id="sponsors">
 <h3>{translate key="about.sponsors"}</h3>
 
 {if $sponsorNote}<p>{$sponsorNote|nl2br}</p>{/if}
@@ -37,11 +39,12 @@
 	{/if}
 	{/foreach}
 </ul>
-
+</div>
 <div class="separator"></div>
 {/if}
 
 {if !empty($contributorNote) || (!empty($contributors) && !empty($contributors[0].name))}
+<div id="contributors">
 <h3>{translate key="about.contributors"}</h3>
 
 {if $contributorNote}<p>{$contributorNote|nl2br}</p>{/if}
@@ -57,6 +60,7 @@
 	{/if}
 	{/foreach}
 </ul>
+</div>
 {/if}
 
 {include file="common/footer.tpl"}

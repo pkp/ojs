@@ -13,7 +13,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-
+<div id="myJournals">
 {if !$currentJournal}<h3>{translate key="user.myJournals"}</h3>{/if}
 
 {if $isSiteAdmin && !$currentJournal}
@@ -23,6 +23,7 @@
 		{call_hook name="Templates::User::Index::Site"}
 {/if}
 {foreach from=$userJournals item=journal}
+	<div id="journal">
 	{assign var="hasRole" value=1}
 	{if !$currentJournal}<h4><a href="{url journal=$journal->getPath() page="user"}">{$journal->getLocalizedTitle()|escape}</a></h4>
 	{else}<h3>{$journal->getLocalizedTitle()|escape}</h3>{/if}
@@ -160,11 +161,14 @@
 			
 	</table>
 	{call_hook name="Templates::User::Index::Journal" journal=$journal}
+	</div>
 {/foreach}
-	
+</div>	
+
 
 {if !$hasRole}
 	{if $currentJournal}
+		<div id="noRolesForJournal">
 		<p>{translate key="user.noRoles.noRolesForJournal"}</p>
 		<ul class="plain">
 			<li>
@@ -186,16 +190,20 @@
 				{/if}{* $allowRegReviewer *}
 			</li>
 		</ul>
+		</div>
 	{else}{* $currentJournal *}
+		<div id="currentJournal">
 		<p>{translate key="user.noRoles.chooseJournal"}</p>
 		<ul class="plain">
 			{foreach from=$allJournals item=thisJournal}
 				<li>&#187; <a href="{url journal=$thisJournal->getPath() page="user" op="index"}">{$thisJournal->getLocalizedTitle()|escape}</a></li>
 			{/foreach}
 		</ul>
+		</div>
 	{/if}{* $currentJournal *}
 {/if}{* !$hasRole *}
 
+<div id="myAccount">
 <h3>{translate key="user.myAccount"}</h3>
 <ul class="plain">
 	{if $hasOtherJournals}
@@ -227,5 +235,6 @@
 	<li>&#187; <a href="{url page="login" op="signOut"}">{translate key="user.logOut"}</a></li>
 	{call_hook name="Templates::User::Index::MyAccount"}
 </ul>
+</div>
 
 {include file="common/footer.tpl"}

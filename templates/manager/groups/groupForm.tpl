@@ -13,7 +13,7 @@
 {assign var="pageCrumbTitle" value=$pageTitle}
 {include file="common/header.tpl"}
 {/strip}
-
+<div id="groupForm">
 {if $group}
 	<ul class="menu">
 		<li class="current"><a href="{url op="editGroup" path=$group->getId()}">{translate key="manager.groups.editTitle"}</a></li>
@@ -62,5 +62,5 @@
 </form>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
-
+</div>
 {include file="common/footer.tpl"}

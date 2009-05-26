@@ -25,6 +25,7 @@ function sortSearch(heading, direction) {
 {/literal}
 </script> 
 
+<div id="selectReviewer">
 <h3>{translate key="editor.article.selectReviewer"}</h3>
 <form name="submit" method="post" action="{url op="selectReviewer" path=$articleId}">
 	<input type="hidden" name="sort" value="id"/>
@@ -119,6 +120,7 @@ function sortSearch(heading, direction) {
 
 <h4>{translate key="common.notes"}</h4>
 <p>{translate key="editor.article.selectReviewerNotes"}</p>
+</div>
 </div>
 
 {include file="common/footer.tpl"}

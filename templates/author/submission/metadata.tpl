@@ -14,7 +14,7 @@
 {assign var="initialCopyeditSignoff" value=$submission->getSignoff('SIGNOFF_COPYEDITING_INITIAL')}
 {if !$initialCopyeditSignoff->getDateCompleted() && $submission->getStatus() != STATUS_PUBLISHED}<p><a href="{url op="viewMetadata" path=$submission->getArticleId()}" class="action">{translate key="submission.editMetadata"}</a></p>{/if}
 
-
+<div id="authors">
 <h4>{translate key="article.authors"}</h4>
 	
 <table width="100%" class="data">
@@ -50,11 +50,11 @@
 	{/if}
 	{/foreach}
 </table>
-
+</div>
 
 <br />
 
-
+<div id="titleAndAbstract">
 <h4>{translate key="submission.titleAndAbstract"}</h4>
 
 <table width="100%" class="data">
@@ -71,11 +71,11 @@
 		<td class="value">{$submission->getLocalizedAbstract()|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
 	</tr>
 </table>
-
+</div>
 
 <br />
 
-
+<div id="indexing">
 <h4>{translate key="submission.indexing"}</h4>
 	
 <table width="100%" class="data">
@@ -143,11 +143,11 @@
 		<td width="80%" class="value">{$submission->getLanguage()|escape|default:"&mdash;"}</td>
 	</tr>
 </table>
-
+</div>
 
 <br />
 
-
+<div id="supportingAgencies">
 <h4>{translate key="submission.supportingAgencies"}</h4>
 	
 <table width="100%" class="data">
@@ -156,4 +156,5 @@
 		<td width="80%" class="value">{$submission->getArticleSponsor()|escape|default:"&mdash;"}</td>
 	</tr>
 </table>
+</div>
 </div>

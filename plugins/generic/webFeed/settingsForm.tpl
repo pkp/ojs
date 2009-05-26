@@ -12,8 +12,8 @@
 {assign var="pageTitle" value="plugins.generic.webfeed.displayName"}
 {include file="common/header.tpl"}
 {/strip}
-
-{translate key="plugins.generic.webfeed.description"}
+<div id="webFeedSettings">
+<div id="description">{translate key="plugins.generic.webfeed.description"}</div>
 
 <div class="separator">&nbsp;</div>
 
@@ -57,5 +57,5 @@
 </form>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
-
+</div>
 {include file="common/footer.tpl"}

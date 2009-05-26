@@ -12,8 +12,8 @@
 {assign var="pageTitle" value="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings"}
 {include file="common/header.tpl"}
 {/strip}
-
-{translate key="plugins.generic.googleAnalytics.manager.settings.description"}
+<div id="googleAnalyticsSettings">
+<div id="description">{translate key="plugins.generic.googleAnalytics.manager.settings.description"}</div>
 
 <div class="separator"></div>
 
@@ -46,5 +46,5 @@
 </form>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
-
+</div>
 {include file="common/footer.tpl"}

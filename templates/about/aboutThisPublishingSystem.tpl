@@ -15,7 +15,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<p>
+<p id="aboutThisPublishingSystem">
 {if $currentJournal}
 	{translate key="about.aboutOJSJournal" ojsVersion=$ojsVersion}
 {else}

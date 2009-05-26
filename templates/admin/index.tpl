@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="admin.siteAdmin"}
 {include file="common/header.tpl"}
 {/strip}
-
+<div id="siteManagement">
 <h3>{translate key="admin.siteManagement"}</h3>
 
 <ul class="plain">
@@ -22,8 +22,8 @@
 	<li>&#187; <a href="{url op="auth"}">{translate key="admin.authSources"}</a></li>
 	{call_hook name="Templates::Admin::Index::SiteManagement"}
 </ul>
-
-
+</div>
+<div id="adminFunctions">
 <h3>{translate key="admin.adminFunctions"}</h3>
 
 <ul class="plain">
@@ -34,5 +34,5 @@
 	<li>&#187; <a href="{url op="mergeUsers"}">{translate key="admin.mergeUsers"}</a></li>
 	{call_hook name="Templates::Admin::Index::AdminFunctions"}
 </ul>
-
+</div>
 {include file="common/footer.tpl"}

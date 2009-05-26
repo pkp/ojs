@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="rt.admin.contexts.edit.editContext"}
 {include file="common/header.tpl"}
 {/strip}
-
+<div id="editContext">
 {if $contextId}
 	<ul class="menu">
 		<li class="current"><a href="{url op="editContext" path=$versionId|to_array:$contextId}" class="action">{translate key="rt.admin.contexts.metadata"}</a></li>
@@ -68,5 +68,5 @@
 <p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="contexts" path=$versionId escape=false}'" /></p>
 
 </form>
-
+</div>
 {include file="common/footer.tpl"}

@@ -12,15 +12,18 @@
 {assign var="pageTitle" value="about.journalContact"}
 {include file="common/header.tpl"}
 {/strip}
-
+<div id="contact">
 {if !empty($journalSettings.mailingAddress)}
+<div id="mailingAddress">
 <h3>{translate key="common.mailingAddress"}</h3>
 <p>
 	{$journalSettings.mailingAddress|nl2br}
 </p>
+</div>
 {/if}
 
 {if not (empty($journalSettings.contactTitle) && empty($journalSettings.contactAffiliation) && empty($journalSettings.contactAffiliation) && empty($journalSettings.contactMailingAddress) && empty($journalSettings.contactPhone) && empty($journalSettings.contactFax) && empty($journalSettings.contactEmail))}
+<div id="principalContact">
 <h3>{translate key="about.contact.principalContact"}</h3>
 <p>
 	{if !empty($journalSettings.contactName)}
@@ -45,9 +48,11 @@
 		{translate key="about.contact.email"}: {mailto address=$journalSettings.contactEmail|escape encode="hex"}<br />
 	{/if}
 </p>
+</div>
 {/if}
 
 {if not (empty($journalSettings.supportName) && empty($journalSettings.supportPhone) && empty($journalSettings.supportEmail))}
+<div id="supportContact">
 <h3>{translate key="about.contact.supportContact"}</h3>
 <p>
 	{if !empty($journalSettings.supportName)}
@@ -60,6 +65,7 @@
 		{translate key="about.contact.email"}: {mailto address=$journalSettings.supportEmail|escape encode="hex"}<br />
 	{/if}
 </p>
+</div>
 {/if}
-
+</div>
 {include file="common/footer.tpl"}

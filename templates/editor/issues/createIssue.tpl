@@ -31,7 +31,7 @@
 <form name="issue" method="post" action="{url op="saveIssue"}" enctype="multipart/form-data">
 
 <div class="separator"></div>
-
+<div id="identification">
 <h3>{translate key="editor.issues.identification"}</h3>
 
 <table width="100%" class="data">
@@ -79,6 +79,7 @@
 
 {if $enableSubscriptions && !$enableDelayedOpenAccess}
 <div class="separator"></div>
+<div id="access">
 <h3>{translate key="editor.issues.access"}</h3>
 <table width="100%" class="data">
 	<tr valign="top">
@@ -94,10 +95,11 @@
 		{/if}
 	</tr>
 </table>
+</div>
 {/if}
 
 <div class="separator"></div>
-
+<div id="cover">
 <h3>{translate key="editor.issues.cover"}</h3>
 <table width="100%" class="data">
 	<tr valign="top">
@@ -127,7 +129,7 @@
 		<td class="label" class="value"><input type="checkbox" name="hideCoverPageCover[{$formLocale|escape}]" id="hideCoverPageCover" value="1" {if $hideCoverPageCover[$formLocale]} checked="checked"{/if} /> <label for="hideCoverPageCover">{translate key="editor.issues.hideCoverPageCover"}</label></td>
 	</tr>
 </table>
-
+</div>
 <p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" onclick="document.location.href='{url op="index" escape=false}'" class="button" /></p>
 
 </form>

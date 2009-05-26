@@ -70,6 +70,7 @@
 {/literal}
 </script>
 
+<div id="context">
 <h3>{$article->getLocalizedTitle()|strip_unsafe_html}</h3>
 
 
@@ -150,5 +151,6 @@
 </table>
 
 <a href="http://pkp.sfu.ca/ojs/suggestRt" target="_new" class="action">{translate key="rt.search.suggest"}</a><br/>
+</div>
 
 {include file="rt/footer.tpl"}

@@ -35,6 +35,7 @@ function moveAuthor(dir, authorIndex) {
 {/literal}
 
 {if count($formLocales) > 1}
+<div id="locales">
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
@@ -56,8 +57,10 @@ function moveAuthor(dir, authorIndex) {
 		</td>
 	</tr>
 </table>
+</div>
 {/if}
 
+<div id="authors">
 <h3>{translate key="article.authors"}</h3>
 <input type="hidden" name="deletedAuthors" value="{$deletedAuthors|escape}" />
 <input type="hidden" name="moveAuthor" value="0" />
@@ -182,9 +185,10 @@ function moveAuthor(dir, authorIndex) {
 {/foreach}
 
 <p><input type="submit" class="button" name="addAuthor" value="{translate key="author.submit.addAuthor"}" /></p>
-
+</div>
 <div class="separator"></div>
 
+<div id="titleAndAbstract">
 <h3>{translate key="submission.titleAndAbstract"}</h3>
 
 <table width="100%" class="data">
@@ -199,10 +203,12 @@ function moveAuthor(dir, authorIndex) {
 	<td width="80%" class="value"><textarea name="abstract[{$formLocale|escape}]" id="abstract" class="textArea" rows="15" cols="60">{$abstract[$formLocale]|escape}</textarea></td>
 </tr>
 </table>
+</div>
 
 <div class="separator"></div>
 
 {if $section->getMetaIndexed()==1}
+<div id="indexing">
 	<h3>{translate key="submission.indexing"}</h3>
 	{if $journalSettings.metaDiscipline || $journalSettings.metaSubjectClass || $journalSettings.metaSubject || $journalSettings.metaCoverage || $journalSettings.metaType}<p>{translate key="author.submit.submissionIndexingDescription"}</p>{/if}
 	<table width="100%" class="data">
@@ -319,12 +325,12 @@ function moveAuthor(dir, authorIndex) {
 		<td><span class="instruct">{translate key="author.submit.languageInstructions"}</span></td>
 	</tr>
 	</table>
-
+</div>
 <div class="separator"></div>
 
 {/if}
 
-
+<div id="submissionSupportingAgencies">
 <h3>{translate key="author.submit.submissionSupportingAgencies"}</h3>
 <p>{translate key="author.submit.submissionSupportingAgenciesDescription"}</p>
 
@@ -334,10 +340,11 @@ function moveAuthor(dir, authorIndex) {
 	<td width="80%" class="value"><input type="text" class="textField" name="sponsor[{$formLocale|escape}]" id="sponsor" value="{$sponsor[$formLocale]|escape}" size="60" maxlength="255" /></td>
 </tr>
 </table>
-
+</div>
 <div class="separator"></div>
 
 {if $journalSettings.metaCitations}
+<div id="metaCitations">
 <h3>{translate key="submission.citations"}</h3>
 
 <p>{translate key="author.submit.submissionCitations"}</p>
@@ -350,6 +357,7 @@ function moveAuthor(dir, authorIndex) {
 </table>
 
 <div class="separator"></div>
+</div>
 {/if}
 
 <p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="confirmAction('{url page="author"}', '{translate|escape:"jsparam" key="author.submit.cancelSubmission"}')" /></p>

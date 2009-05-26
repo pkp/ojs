@@ -46,7 +46,7 @@ function ensureKeyword() {
 {if !$dateTo}
 {assign var="dateTo" value="--"}
 {/if}
-
+<div id="advancedSearch">
 <form method="post" name="search" action="{url op="advancedResults"}">
 
 <table class="data" width="100%">
@@ -127,7 +127,7 @@ function ensureKeyword() {
 // -->
 </script>
 </form>
-
+</div>
 {translate key="search.syntaxInstructions"}
 
 {include file="common/footer.tpl"}

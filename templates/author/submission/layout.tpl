@@ -16,12 +16,14 @@
 <h3>{translate key="submission.layout"}</h3>
 
 {if $useLayoutEditors}
+<div id="layoutEditors">
 <table width="100%" class="data">
 	<tr>
 		<td class="label" width="20%">{translate key="user.role.layoutEditor"}</td>
 		<td class="value" width="80%">{if $layoutSignoff->getUserId()}{$layoutEditor->getFullName()|escape}{else}{translate key="common.none"}{/if}</td>
 	</tr>
 </table>
+</div>
 {/if}
 
 <table width="100%" class="info">
@@ -95,6 +97,7 @@
 	</tr>
 </table>
 
+<div id="layoutComments">
 {translate key="submission.layout.layoutComments"}
 {if $submission->getMostRecentLayoutComment()}
 	{assign var="comment" value=$submission->getMostRecentLayoutComment()}
@@ -102,4 +105,5 @@
 {else}
 	<a href="javascript:openComments('{url op="viewLayoutComments" path=$submission->getArticleId()}');" class="icon">{icon name="comment"}</a>{translate key="common.noComments"}
 {/if}
+</div>
 </div>

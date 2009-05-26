@@ -67,11 +67,12 @@
 </form>
 
 {translate key="admin.auth.defaultSourceDescription"}
-
+<div id="createAuth">
 <h4>{translate key="admin.auth.create"}</h4>
 
 <form method="post" action="{url op="createAuthSource"}">
 	{translate key="common.plugin"}: <select name="plugin" size="1"><option value=""></option>{html_options options=$pluginOptions}</select> <input type="submit" value="{translate key="common.create"}" class="button" />
 </form>
+</div>
 </div>
 {include file="common/footer.tpl"}

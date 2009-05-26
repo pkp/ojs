@@ -9,7 +9,7 @@
  * $Id$
  *}
 <br />
-
+<div id="ldapSettings">
 <h3>{translate key="plugins.auth.ldap.settings"}</h3>
 
 <table class="data" width="100%">
@@ -116,3 +116,4 @@
 		</td>
 	</tr>
 </table>
+</div>

@@ -12,8 +12,8 @@
 {assign var="pageTitle" value="plugins.generic.openads"}
 {include file="common/header.tpl"}
 {/strip}
-
-{translate key="plugins.generic.openads.settings.description"}
+<div id="openAdsSettings">
+<div id="description">{translate key="plugins.generic.openads.settings.description"}</div>
 
 <div class="separator">&nbsp;</div>
 
@@ -68,5 +68,5 @@
 </form>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
-
+</div>
 {include file="common/footer.tpl"}

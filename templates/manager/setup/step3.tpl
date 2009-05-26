@@ -15,6 +15,7 @@
 {include file="common/formErrors.tpl"}
 
 {if count($formLocales) > 1}
+<div id="locale">
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
@@ -25,8 +26,10 @@
 		</td>
 	</tr>
 </table>
+</div>
 {/if}
 
+<div id="authorGuidelines">
 <h3>3.1 {translate key="manager.setup.authorGuidelines"}</h3>
 
 <p>{translate key="manager.setup.authorGuidelinesDescription"}</p>
@@ -46,7 +49,9 @@
 		</td>
 	</tr>
 </table>
+</div>
 
+<div id="submissionPreparationChecklist">
 <h4>{translate key="manager.setup.submissionPreparationChecklist"}</h4>
 
 <p>{translate key="manager.setup.submissionPreparationChecklistDescription"}</p>
@@ -73,10 +78,11 @@
 {/if}
 
 <p><input type="submit" name="addChecklist" value="{translate key="manager.setup.addChecklistItem"}" class="button" /></p>
-
+</div>
 
 <div class="separator"></div>
 
+<div id="authorCopyrightNotice">
 <h3>3.2 {translate key="manager.setup.authorCopyrightNotice"}</h3>
 
 {url|assign:"sampleCopyrightWordingUrl" page="information" op="sampleCopyrightWording"}
@@ -101,9 +107,10 @@
 		</td>
 	</tr>
 </table>
-
+<div>
 <div class="separator"></div>
 
+<div id="competingInterests">
 <h3>3.3 {translate key="manager.setup.competingInterests"}</h3>
 
 <p>{translate key="manager.setup.competingInterests.description"}</p>
@@ -129,9 +136,11 @@
 
 <h4>{translate key="manager.setup.competingInterests.guidelines"}</h4>
 <p><textarea name="competingInterestGuidelines[{$formLocale|escape}]" id="competingInterestGuidelines" rows="12" cols="60" class="textArea">{$competingInterestGuidelines[$formLocale]|escape}</textarea></p>
+</div>
 
 <div class="separator"></div>
 
+<div id="forAuthorsToIndexTheirWork">
 <h3>3.4 {translate key="manager.setup.forAuthorsToIndexTheirWork"}</h3>
 
 <p>{translate key="manager.setup.forAuthorsToIndexTheirWorkDescription"}</p>
@@ -275,20 +284,21 @@
 		</td>
 	</tr>
 </table>
-
+</div>
 
 <div class="separator"></div>
 
-
+<div id="registerJournalForIndexing">
 <h3>3.5 {translate key="manager.setup.registerJournalForIndexing"}</h3>
 
 {url|assign:"oaiSiteUrl" journal=$currentJournal->getPath()}
 {url|assign:"oaiUrl" page="oai"}
 <p>{translate key="manager.setup.registerJournalForIndexingDescription" siteUrl=$oaiSiteUrl oaiUrl=$oaiUrl}</p>
-
+</div>
 
 <div class="separator"></div>
 
+<div id="notifications">
 <h3>3.6 {translate key="manager.setup.notifications"}</h3>
 
 <p>{translate key="manager.setup.notifications.description"}</p>
@@ -310,6 +320,7 @@
 	</tr>
 	{/if}
 </table>
+</div>
 
 <div class="separator"></div>
 

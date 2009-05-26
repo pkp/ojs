@@ -11,7 +11,7 @@
 <div id="editorDecision">
 <h3>{translate key="submission.editorDecision"}</h3>
 
-<table width="100%" class="data">
+<table id="table1" width="100%" class="data">
 <tr valign="top">
 	<td class="label" width="20%">{translate key="editor.article.selectDecision"}</td>
 	<td width="80%" class="value">
@@ -80,7 +80,7 @@
 	{assign var="reviewVersionExists" value=1}
 {/if}
 
-<table class="data" width="100%">
+<table id="table2" class="data" width="100%">
 	{if $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT}
 		<tr>
 			<td width="20%">&nbsp;</td>

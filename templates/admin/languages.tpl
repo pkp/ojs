@@ -14,7 +14,7 @@
 {/strip}
 
 <form method="post" action="{url op="saveLanguageSettings"}">
-
+<div id="languageSettings">
 <h3>{translate key="admin.languages.languageSettings"}</h3>
 
 <table class="form">
@@ -45,7 +45,7 @@
 	</td>
 </tr>
 </table>
-
+</div>
 <p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="admin" escape=false}'" /></p>
 
 </form>
@@ -53,7 +53,7 @@
 <div class="separator"></div>
 
 <form method="post" action="{url op="installLocale"}">
-
+<div id="installLanguages">
 <h3>{translate key="admin.languages.installLanguages"}</h3>
 <h4>{translate key="admin.languages.installedLocales"}</h4>
 <table class="data" width="100%">
@@ -64,7 +64,8 @@
 </tr>
 {/foreach}
 </table>
-
+</div>
+<div id="installNewLocales">
 <h4>{translate key="admin.languages.installNewLocales"}</h4>
 <p>{translate key="admin.languages.installNewLocalesInstructions"}</p>
 {foreach from=$uninstalledLocales item=localeKey}
@@ -77,11 +78,11 @@
 {if not $noLocalesToInstall}
 <p><input type="submit" value="{translate key="admin.languages.installLocales"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="admin" escape=false}'" /></p>
 {/if}
-
+</div>
 </form>
 
 <div class="separator"></div>
-
+<div id="downloadLocales">
 <h3>{translate key="admin.languages.downloadLocales"}</h3>
 
 {if $downloadAvailable}
@@ -103,5 +104,5 @@
 {else}{* not $downloadAvailable *}
 	{translate key="admin.languages.downloadUnavailable"}
 {/if}{* $downloadAvailable *}
-
+</div>
 {include file="common/footer.tpl"}

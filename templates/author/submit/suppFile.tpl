@@ -18,6 +18,7 @@
 {include file="common/formErrors.tpl"}
 
 {if count($formLocales) > 1}
+<div id="locale">
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
@@ -28,8 +29,9 @@
 		</td>
 	</tr>
 </table>
+</div>
 {/if}
-
+<div id="supplementaryFileData">
 <h3>{translate key="author.submit.supplementaryFileData"}</h3>
 
 <p>{translate key="author.submit.supplementaryFileDataDescription"}</p>
@@ -93,12 +95,12 @@
 	<td><span class="instruct">{translate key="author.submit.languageInstructions"}</span></td>
 </tr>
 </table>
-
+</div>
 <div class="separator"></div>
-
+<div id="supplementaryFileUpload">
 <h3>{translate key="author.submit.supplementaryFileUpload"}</h3>
 
-<table class="data" width="100%">
+<table id="suppFile" class="data" width="100%">
 {if $suppFile && $suppFile->getFileId()}
 <tr valign="top">
 	<td width="20%" class="label">{translate key="common.fileName"}</td>
@@ -118,7 +120,7 @@
 </tr>
 </table>
 
-<table class="data" width="100%">
+<table id="showReviewers" class="data" width="100%">
 <tr valign="top">
 	<td>&nbsp;</td>
 	<td class="value"><input type="checkbox" name="showReviewers" id="showReviewers" value="1"{if $showReviewers==1} checked="checked"{/if} /> 
@@ -134,7 +136,7 @@
 
 <div class="separator"></div>
 
-<table class="data" width="100%">
+<table id="replaceFile" class="data" width="100%">
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="uploadSuppFile" key="common.replaceFile"}</td>
 	<td width="80%" class="value"><input type="file" name="uploadSuppFile" id="uploadSuppFile" class="uploadField" />&nbsp;&nbsp;{translate key="form.saveToUpload"}</td>
@@ -147,7 +149,7 @@
 </tr>
 {/if}
 </table>
-
+</div>
 <div class="separator"></div>
 
 <p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="submit" path="4" articleId=$articleId escape=false}'" /></p>

@@ -9,6 +9,7 @@
  * $Id$
  *}
 <div id="rounds">
+<div id="regretsAndCancels">
 <h3>{translate|escape key="sectionEditor.regrets.regretsAndCancels"}</h3>
 
 <table width="100%" class="listing">
@@ -51,13 +52,13 @@
 	</tr>
 {/foreach}
 </table>
-
+</div>
 {section name=round loop=$numRounds-1}
 {assign var=round value=$smarty.section.round.index}
 {assign var=roundPlusOne value=$round+1}
 {assign var=roundAssignments value=$reviewAssignments[$roundPlusOne]}
 {assign var=roundDecisions value=$editorDecisions[$roundPlusOne]}
-
+<div id="reviewRound">
 <h3>{translate key="sectionEditor.regrets.reviewRound" round=$roundPlusOne}</h3>
 
 <table width="100%" class="data">
@@ -73,7 +74,7 @@
 		</td>
 	</tr>
 </table>
-
+</div>
 {assign var="start" value="A"|ord}
 
 {foreach from=$roundAssignments item=reviewAssignment key=reviewKey}
@@ -81,6 +82,7 @@
 
 {if !$reviewAssignment->getCancelled()}
 <div class="separator"></div>
+<div id="reviewer">
 <h4>{translate key="user.role.reviewer"} {$reviewKey+$start|chr} {$reviewAssignment->getReviewerFullName()|escape}</h4>
 
 <table width="100%" class="listing">
@@ -182,9 +184,9 @@ name="viewable" value="1"{if $reviewerFile->getViewable()} checked="checked"{/if
 </table>
 {/if}
 {/foreach}
-
+</div>
 <div class="separator"></div>
-
+<div id="decisionRound">
 <h3>{translate key="sectionEditor.regrets.decisionRound" round=$roundPlusOne}</h3>
 
 {assign var=authorFiles value=$submission->getAuthorFileRevisions($roundPlusOne)}
@@ -245,7 +247,7 @@ name="viewable" value="1"{if $reviewerFile->getViewable()} checked="checked"{/if
 		</tr>
 	{/foreach}
 </table>
-
+</div>
 <div class="separator"></div>
 
 

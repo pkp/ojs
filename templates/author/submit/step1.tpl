@@ -20,7 +20,7 @@
 <p>{translate key=$howToKeyName supportName=$journalSettings.supportName supportEmail=$journalSettings.supportEmail supportPhone=$journalSettings.supportPhone}</p>
 
 <div class="separator"></div>
-
+<div id="section">
 {if count($sectionOptions) <= 1}
 	<p>{translate key="author.submit.notAccepting"}</p>
 {else}
@@ -44,6 +44,7 @@
 	<input type="hidden" name="articleId" value="{$articleId|escape}" />
 {/if}
 <input type="hidden" name="submissionChecklist" value="1" />
+</div>
 {include file="common/formErrors.tpl"}
 
 <table class="data" width="100%">
@@ -85,7 +86,7 @@ function checkSubmissionChecklist() {
 {/if}
 
 {if $currentJournal->getLocalizedSetting('submissionChecklist')}
-
+<div id="checklist">
 {foreach name=checklist from=$currentJournal->getLocalizedSetting('submissionChecklist') key=checklistId item=checklistItem}
 	{if $checklistItem.content}
 		{if !$notFirstChecklistItem}
@@ -100,7 +101,7 @@ function checkSubmissionChecklist() {
 		</tr>
 	{/if}
 {/foreach}
-
+</div>
 {if $notFirstChecklistItem}
 	</table>
 	<div class="separator"></div>
@@ -109,6 +110,7 @@ function checkSubmissionChecklist() {
 {/if}{* if count($sectionOptions) <= 1 *}
 
 {if $currentJournal->getLocalizedSetting('copyrightNotice') != ''}
+<div id="copyrightNotice">
 <h3>{translate key="about.copyrightNotice"}</h3>
 
 <p>{$currentJournal->getLocalizedSetting('copyrightNotice')|nl2br}</p>
@@ -121,16 +123,16 @@ function checkSubmissionChecklist() {
 	</tr>
 </table>
 {/if}
-
+</div>
 <div class="separator"></div>
 {/if}
-
+<div id="privacyStatement">
 <h3>{translate key="author.submit.privacyStatement"}</h3>
 <br />
 {$currentJournal->getLocalizedSetting('privacyStatement')|nl2br}
-
+</div>
 <div class="separator"></div>
-
+<div id="commentsForEditor">
 <h3>{translate key="author.submit.commentsForEditor"}</h3>
 <table width="100%" class="data">
 
@@ -140,7 +142,7 @@ function checkSubmissionChecklist() {
 </tr>
 
 </table>
-
+</div>
 <div class="separator"></div>
 
 <p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="{if $articleId}confirmAction('{url page="author"}', '{translate|escape:"jsparam" key="author.submit.cancelSubmission"}'){else}document.location.href='{url page="author" escape=false}'{/if}" /></p>

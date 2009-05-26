@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="manager.journalManagement"}
 {include file="common/header.tpl"}
 {/strip}
-
+<div id="managementPages">
 <h3>{translate key="manager.managementPages"}</h3>
 
 <ul class="plain">
@@ -36,8 +36,8 @@
 	<li>&#187; <a href="{url op="importexport"}">{translate key="manager.importExport"}</a></li>
 	{call_hook name="Templates::Manager::Index::ManagementPages"}
 </ul>
-
-
+</div>
+<div id="managerUsers">
 <h3>{translate key="manager.users"}</h3>
 
 <ul class="plain">
@@ -49,8 +49,8 @@
 	<li>&#187; <a href="{url op="mergeUsers"}">{translate key="manager.people.mergeUsers"}</a></li>
 	{call_hook name="Templates::Manager::Index::Users"}
 </ul>
-
-
+</div>
+<div id="managerRoles">
 <h3>{translate key="manager.roles"}</h3>
 
 <ul class="plain">
@@ -72,5 +72,5 @@
 	<li>&#187; <a href="{url op="people" path="subscriptionManagers"}">{translate key="user.role.subscriptionManagers"}</a></li>
 	{call_hook name="Templates::Manager::Index::Roles"}
 </ul>
-
+</div>
 {include file="common/footer.tpl"}

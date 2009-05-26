@@ -13,8 +13,8 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<h3>{$user->getFullName()|escape}</h3>
-
+<h3 id="userFullName">{$user->getFullName()|escape}</h3>
+<div id="profile">
 <h4>{translate key="user.profile"}</h4>
 
 <p><a href="{url op="editUser" path=$user->getId()}" class="action">{translate key="manager.people.editProfile"}</a></p>
@@ -114,9 +114,9 @@
 		<td class="value">{$user->getDateLastLogin()|date_format:$datetimeFormatLong}</td>
 	</tr>
 </table>
-
+</div>
 <div class="separator"></div>
-
+<div id="enrollment>">
 <h4>{translate key="manager.people.enrollment"}</h4>
 
 <ul>
@@ -124,5 +124,5 @@
 	<li>{translate key=$userRoles[role]->getRoleName()} <a href="{url op="unEnroll" path=$userRoles[role]->getRoleId() userId=$user->getId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.people.confirmUnenroll"}')" class="action">{translate key="manager.people.unenroll"}</a></li>
 {/section}
 </ul>
-
+</div>
 {include file="common/footer.tpl"}

@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="search.authorDetails"}
 {include file="common/header.tpl"}
 {/strip}
-
+<div id="authorDetails">
 <h3>{$lastName|escape}, {$firstName|escape}{if $middleName} {$middleName|escape}{/if}{if $affiliation}, {$affiliation|escape}{/if}{if $country}, {$country|escape}{/if}</h3>
 <ul>
 {foreach from=$publishedArticles item=article}
@@ -38,5 +38,5 @@
 	{/if}
 {/foreach}
 </ul>
-
+</div>
 {include file="common/footer.tpl"}

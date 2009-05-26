@@ -7,7 +7,7 @@
  * Display of author fees and payment information
  *
  *}
-
+<div id="authorFees">
 <h3>{translate key="manager.payment.authorFees"}</h3>
 <p>{translate key="about.authorFeesMessage"}</p>
 {if $currentJournal->getSetting('submissionFeeEnabled')}
@@ -37,3 +37,4 @@
 {if $currentJournal->getLocalizedSetting('waiverPolicy') != ''}
 	<p>{$currentJournal->getLocalizedSetting('waiverPolicy')}</p>
 {/if}
+</div>

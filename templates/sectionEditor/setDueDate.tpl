@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="submission.dueDate"}
 {include file="common/header.tpl"}
 {/strip}
-
+<div id="setDueDate">
 <h3>{translate key="editor.article.designateDueDate"}</h3>
 
 <p>{translate key="editor.article.designateDueDateDescription"}</p>
@@ -41,5 +41,5 @@
 	</table>
 <p><input type="submit" value="{translate key="common.continue"}" class="button defaultButton" /> <input type="button" class="button" onclick="history.go(-1)" value="{translate key="common.cancel"}" /></p>
 </form>
-
+</div>
 {include file="common/footer.tpl"}

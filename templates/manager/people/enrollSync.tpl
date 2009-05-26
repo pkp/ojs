@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="manager.people.enrollment"}
 {include file="common/header.tpl"}
 {/strip}
-
+<div id="syncUsers">
 <h3>{translate key="manager.people.syncUsers"}</h3>
 
 <p><span class="instruct">{translate key="manager.people.syncUserDescription"}</span></p>
@@ -59,5 +59,5 @@
 <p><input type="submit" value="{translate key="manager.people.enrollSync"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="history.go(-1)" /></p>
 
 </form>
-
+</div>
 {include file="common/footer.tpl"}

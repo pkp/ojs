@@ -23,9 +23,10 @@
 {else}
 	{assign var=postingAllowed value=0}
 {/if}
-
+<div id="comments">
 {if $comment}
 	{assign var=user value=$comment->getUser()}
+	<div id="comment">
 	<h3>{$comment->getTitle()|escape|default:"&nbsp;"}</h3>
 	<h4>
 		{if $user}
@@ -37,7 +38,7 @@
 		{/if}
 		({$comment->getDatePosted()|date_format:$dateFormatShort})
 	</h4>
-
+	</div>
 	<p>
 
 	{if $parent}
@@ -150,5 +151,5 @@
 {if $postingAllowed}
 	<p><a class="action" href="{url op="add" path=$articleId|to_array:$galleyId}" target="_parent">{translate key="rt.addComment"}</a></p>
 {/if}
-
+</div>
 {include file="common/footer.tpl"}

@@ -12,8 +12,8 @@
 {assign var="pageTitle" value="plugins.generic.announcementfeed.displayName"}
 {include file="common/header.tpl"}
 {/strip}
-
-{translate key="plugins.generic.announcementfeed.description"}
+<div id="announcementFeedSettings">
+<div id="description">{translate key="plugins.generic.announcementfeed.description"}</div>
 
 <div class="separator">&nbsp;</div>
 
@@ -63,5 +63,5 @@
 </form>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
-
+</div>
 {include file="common/footer.tpl"}

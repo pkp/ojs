@@ -106,11 +106,11 @@ function prepBlockFields() {
 	</tr>
 </table>
 {/if}
-
+<div id="journalHomepageHeader">
 <h3>5.1 {translate key="manager.setup.journalHomepageHeader"}</h3>
 
 <p>{translate key="manager.setup.journalHomepageHeaderDescription"}</p>
-
+<div id="journalTitle">
 <h4>{translate key="manager.setup.journalTitle"}</h4>
 
 <table width="100%" class="data">
@@ -140,7 +140,8 @@ function prepBlockFields() {
 	</tr>
 </table>
 {/if}
-
+</div>
+<div id="journalLogo">
 <h4>{translate key="manager.setup.journalLogo"}</h4>
 
 <table width="100%" class="data">
@@ -166,20 +167,22 @@ function prepBlockFields() {
 		</tr>
 </table>
 {/if}
-
+</div>
+</div>
 <div class="separator"></div>
 
-
+<div id="journalHomepageContent">
 <h3>5.2 {translate key="manager.setup.journalHomepageContent"}</h3>
 
 <p>{translate key="manager.setup.journalHomepageContentDescription"}</p>
-
+<div id="journalDescription">
 <h4>{translate key="manager.setup.journalDescription"}</h4>
 
 <p>{translate key="manager.setup.journalDescriptionDescription"}</p>
 
 <p><textarea id="description" name="description[{$formLocale|escape}]" rows="3" cols="60" class="textArea">{$description[$formLocale]|escape}</textarea></p>
-
+</div>
+<div id="homepageImage">
 <h4>{translate key="manager.setup.homepageImage"}</h4>
 
 <p>{translate key="manager.setup.homepageImageDescription"}</p>
@@ -207,7 +210,8 @@ function prepBlockFields() {
 		</tr>
 </table>
 {/if}
-
+</h4>
+<div id="currentIssue">
 <h4>{translate key="manager.setup.currentIssue"}</h4>
 
 <table width="100%" class="data">
@@ -216,22 +220,23 @@ function prepBlockFields() {
 		<td width="95%" class="value"><label for="displayCurrentIssue">{translate key="manager.setup.displayCurrentIssue"}</label></td>
 	</tr>
 </table>
-
+</div>
+<div id="additionalContent">
 
 <h4>{translate key="manager.setup.additionalContent"}</h4>
 
 <p>{translate key="manager.setup.additionalContentDescription"}</p>
 
 <p><textarea name="additionalHomeContent[{$formLocale|escape}]" id="additionalHomeContent" rows="12" cols="60" class="textArea">{$additionalHomeContent[$formLocale]|escape}</textarea></p>
-
-
+</div>
+</div>
 <div class="separator"></div>
 
-
+<div id="journalPageHeader">
 <h3>5.3 {translate key="manager.setup.journalPageHeader"}</h3>
 
 <p>{translate key="manager.setup.journalPageHeaderDescription"}</p>
-
+<div id="journalTitle">
 <h4>{translate key="manager.setup.journalTitle"}</h4>
 
 <table width="100%" class="data">
@@ -261,7 +266,8 @@ function prepBlockFields() {
 		</tr>
 </table>
 {/if}
-
+</div>
+<div id="journalLogo">
 <h4>{translate key="manager.setup.journalLogo"}</h4>
 
 <table width="100%" class="data">
@@ -287,27 +293,28 @@ function prepBlockFields() {
 		</tr>
 </table>
 {/if}
-
+</div>
+<div id="alternateHeader">
 <h4>{translate key="manager.setup.alternateHeader"}</h4>
 
 <p>{translate key="manager.setup.alternateHeaderDescription"}</p>
 
 <p><textarea name="journalPageHeader[{$formLocale|escape}]" id="journalPageHeader" rows="12" cols="60" class="textArea">{$journalPageHeader[$formLocale]|escape}</textarea></p>
-
-
+</div>
+</div>
 <div class="separator"></div>
 
-
+<div id="journalPageFooter">
 <h3>5.4 {translate key="manager.setup.journalPageFooter"}</h3>
 
 <p>{translate key="manager.setup.journalPageFooterDescription"}</p>
 
 <p><textarea name="journalPageFooter[{$formLocale|escape}]" id="journalPageFooter" rows="12" cols="60" class="textArea">{$journalPageFooter[$formLocale]|escape}</textarea></p>
-
+</div>
 
 <div class="separator"></div>
 
-
+<div id="navigationBar">
 <h3>5.5 {translate key="manager.setup.navigationBar"}</h3>
 
 <p>{translate key="manager.setup.itemsDescription"}</p>
@@ -372,11 +379,11 @@ function prepBlockFields() {
 </table>
 
 <p><input type="submit" name="addNavItem" value="{translate key="manager.setup.addNavItem"}" class="button" /></p>
-
+</div>
 
 <div class="separator"></div>
 
-
+<div id="journalLayout">
 <h3>5.6 {translate key="manager.setup.journalLayout"}</h3>
 
 <p>{translate key="manager.setup.journalLayoutDescription"}</p>
@@ -452,28 +459,29 @@ function prepBlockFields() {
 <input type="hidden" name="blockSelectLeft" value="" />
 <input type="hidden" name="blockSelectRight" value="" />
 <input type="hidden" name="blockUnselected" value="" />
-
+</div>
 <div class="separator"></div>
-
+<div id="setupInfo">
 <h3>5.7 {translate key="manager.setup.information"}</h3>
 
 <p>{translate key="manager.setup.information.description"}</p>
 
-<h4>{translate key="manager.setup.information.forReaders"}</h4>
+<div id="infoForReaders"><h4>{translate key="manager.setup.information.forReaders"}</h4>
 
-<p><textarea name="readerInformation[{$formLocale|escape}]" id="readerInformation" rows="12" cols="60" class="textArea">{$readerInformation[$formLocale]|escape}</textarea></p>
+<p><textarea name="readerInformation[{$formLocale|escape}]" id="readerInformation" rows="12" cols="60" class="textArea">{$readerInformation[$formLocale]|escape}</textarea></p></div>
 
-<h4>{translate key="manager.setup.information.forAuthors"}</h4>
+<div id="infoForAuth"><h4>{translate key="manager.setup.information.forAuthors"}</h4>
 
-<p><textarea name="authorInformation[{$formLocale|escape}]" id="authorInformation" rows="12" cols="60" class="textArea">{$authorInformation[$formLocale]|escape}</textarea></p>
+<p><textarea name="authorInformation[{$formLocale|escape}]" id="authorInformation" rows="12" cols="60" class="textArea">{$authorInformation[$formLocale]|escape}</textarea></p></div>
 
-<h4>{translate key="manager.setup.information.forLibrarians"}</h4>
+<div id="infoForLibs"><h4>{translate key="manager.setup.information.forLibrarians"}</h4>
 
-<p><textarea name="librarianInformation[{$formLocale|escape}]" id="librarianInformation" rows="12" cols="60" class="textArea">{$librarianInformation[$formLocale]|escape}</textarea></p>
-
+<p><textarea name="librarianInformation[{$formLocale|escape}]" id="librarianInformation" rows="12" cols="60" class="textArea">{$librarianInformation[$formLocale]|escape}</textarea></p></div>
+</div>
 
 <div class="separator"></div>
 
+<div id="lists">
 <h3>5.8 {translate key="manager.setup.lists"}</h3>
 <p>{translate key="manager.setup.listsDescription"}</p>
 <table width="100%" class="data">
@@ -486,6 +494,7 @@ function prepBlockFields() {
 		<td width="80%" class="value"><input type="text" size="3" name="numPageLinks" class="textField" value="{$numPageLinks|escape}" /></td>
 	</tr>
 </table>
+</div>
 
 <div class="separator"></div>
 

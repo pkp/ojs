@@ -22,7 +22,7 @@
 {if $isLocked || $editorPreview}
 	{assign var=disabled value=1}
 {/if}
-
+<div id="reviewFormResponse">
 <h3>{$reviewForm->getReviewFormTitle()}</h3>
 <p>{$reviewForm->getReviewFormDescription()}</p>
 
@@ -69,5 +69,5 @@
 	<p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 
 </form>
-
+</div>
 {include file="submission/comment/footer.tpl"}

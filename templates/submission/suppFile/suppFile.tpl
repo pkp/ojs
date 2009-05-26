@@ -24,6 +24,7 @@
 {include file="common/formErrors.tpl"}
 
 {if count($formLocales) > 1}
+<div id="locale">
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
@@ -36,8 +37,9 @@
 		</td>
 	</tr>
 </table>
-
+</div>
 {/if}
+<div id="supplementaryFileData">
 <h3>{translate key="author.submit.supplementaryFileData"}</h3>
 <p>{translate key="author.submit.supplementaryFileDataDescription"}</p>
 
@@ -105,12 +107,12 @@
 		</td>
 	</tr>
 </table>
-
+</div>
 <div class="separator"></div>
-
+<div id="supplementaryFileUpload">
 <h3>{translate key="author.submit.supplementaryFileUpload"}</h3>
 
-<table class="data">
+<table id="suppFile" class="data">
 {if $suppFile}
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="common.fileName"}</td>
@@ -145,7 +147,7 @@
 
 <br />
 
-<table width="100%" class="data">
+<table id="showReviewers" width="100%" class="data">
 	<tr valign="top">
 		<td class="label">
 			{if $suppFile}
@@ -166,7 +168,7 @@
 	</tr>
 	{/if}
 </table>
-
+</div>
 
 <div class="separator"></div>
 

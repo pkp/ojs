@@ -12,6 +12,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
+<div id="paymentForm">
 <table class="data" width="100%">
 	<tr>
 		<td class="label" width="20%">{translate key="plugins.paymethod.manual.purchase.title"}</td>
@@ -32,4 +33,5 @@
 <p>{$manualInstructions|nl2br}</p>
 
 <p><a href="{url page="payment" op="plugin" path="ManualPayment"|to_array:"notify":$queuedPaymentId|escape}" class="action">{translate key="plugins.paymethod.manual.sendNotificationOfPayment"}</a>
+</div>
 {include file="common/footer.tpl"}

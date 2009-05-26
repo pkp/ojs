@@ -11,7 +11,7 @@
 {strip}
 {include file="common/header.tpl"}
 {/strip}
-
+<div id="journals">
 {iterate from=journals item=journal}
 	{if !$notFirstJournal}
 		{translate key="user.register.selectJournal"}:
@@ -25,5 +25,5 @@
 {else}
 	</ul>
 {/if}
-
+</div>
 {include file="common/footer.tpl"}

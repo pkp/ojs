@@ -14,6 +14,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
+<div id="changePassword">
 <form method="post" action="{url op="savePassword"}">
 
 {include file="common/formErrors.tpl"}
@@ -41,5 +42,5 @@
 
 <p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="user" escape=false}'" /></p>
 </form>
-
+</div>
 {include file="common/footer.tpl"}

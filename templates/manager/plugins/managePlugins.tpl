@@ -15,6 +15,7 @@
 
 
 {if $path == 'install'}
+	<div id="install">
 	{if !$uploaded}
 		<p>{translate key="manager.plugins.installDescription"}</p>
 	{/if}
@@ -58,8 +59,9 @@
 		</table>
 		<p>
 	</form>
-
+	</div>
 {elseif $path == 'upgrade'}
+	<div id="upgrade">
 	{if !$uploaded}
 		<p>{translate key="manager.plugins.upgradeDescription"}</p>
 	{/if}
@@ -101,8 +103,9 @@
 		</table>
 		<p>
 	</form>
-	
+	</div>
 {elseif $path == 'delete'}
+	<div id="delete">
 	{if !$deleted}
 		<p>{translate key="manager.plugins.deleteDescription"}</p>
 	{/if}
@@ -127,7 +130,7 @@
 	{else}
 		<p>{translate key="manager.plugins.deleteSuccess"}</p>
 	{/if}
-
+	</div>
 {/if}
 
 {include file="common/footer.tpl"}

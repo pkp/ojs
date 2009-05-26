@@ -43,7 +43,7 @@
 <input type="hidden" name="originalStyleFileName" value="{$originalStyleFileName|escape}" />
 {/if}
 {include file="common/formErrors.tpl"}
-
+<div id="issueId">
 <h3>{translate key="editor.issues.identification"}</h3>
 <table width="100%" class="data">
 {if count($formLocales) > 1}
@@ -109,9 +109,10 @@
 		</td>
 	</tr>
 </table>
-
+</div>
 {if ($enableSubscriptions && !$enableDelayedOpenAccess) || ($enableSubscriptions && $enableDelayedOpenAccess && $issue->getPublished())}
 <div class="separator"></div>
+<div id="issueAccess">
 <h3>{translate key="editor.issues.access"}</h3>
 <table width="100%" class="data">
 	<tr valign="top">
@@ -127,10 +128,11 @@
 		{/if}
 	</tr>
 </table>
+</div>
 {/if}
 
 <div class="separator"></div>
-
+<div id="issueCover">
 <h3>{translate key="editor.issues.cover"}</h3>
 <table width="100%" class="data">
 	<tr valign="top">
@@ -165,7 +167,7 @@
 		<td class="label" class="value"><input type="checkbox" name="hideCoverPageCover[{$formLocale|escape}]" id="hideCoverPageCover" value="1" {if $hideCoverPageCover[$formLocale]} checked="checked"{/if} /> <label for="hideCoverPageCover">{translate key="editor.issues.hideCoverPageCover"}</label></td>
 	</tr>
 </table>
-
+</div>
 <p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" onclick="document.location.href='{url op="issueData" path=$issueId escape=false}'" class="button" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>

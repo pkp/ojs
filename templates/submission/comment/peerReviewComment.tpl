@@ -21,7 +21,7 @@ window.opener.location.reload();
 // -->
 {/literal}
 </script>
-
+<div id="articleComments">
 <table class="data" width="100%">
 {foreach from=$articleComments item=comment}
 <tr valign="top">
@@ -63,7 +63,7 @@ window.opener.location.reload();
 </tr>
 {/foreach}
 </table>
-
+</div>
 <br />
 <br />
 

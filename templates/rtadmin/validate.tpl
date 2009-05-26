@@ -16,6 +16,7 @@
 <p>{translate key="rt.admin.validateUrls.description"}</p>
 
 {iterate from=versions item=version}
+	<div id="version">
 	<h3>{$version->getTitle()|escape}</h3>
 	<ul>
 	{foreach from=$version->getContexts() item=context}
@@ -33,6 +34,7 @@
 		</li>
 	{/foreach}
 	</ul>
+	</div>
 {/iterate}
 <p>{translate key="rt.admin.validateUrls.complete"}</p>
 

@@ -21,9 +21,10 @@ window.opener.location.reload();
 // -->
 {/literal}
 </script>
-
+<div id="comments">
 <table class="data" width="100%">
 {foreach from=$articleComments item=comment}
+<div id="comment">
 <tr valign="top">
 	<td width="25%">
 		<div class="commentRole">{translate key=$comment->getRoleName()}</div>
@@ -41,13 +42,14 @@ window.opener.location.reload();
 		<div class="comments">{$comment->getComments()|strip_unsafe_html|nl2br}</div>
 	</td>
 </tr>
+</div>
 {foreachelse}
 <tr>
 	<td class="nodata">{translate key="submission.comments.noComments"}</td>
 </tr>
 {/foreach}
 </table>
-
+</div>
 <br />
 <br />
 

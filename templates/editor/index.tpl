@@ -13,7 +13,7 @@
 {assign var="pageCrumbTitle" value="user.role.editor"}
 {include file="common/header.tpl"}
 {/strip}
-
+<div id="articleSubmissions">
 <h3>{translate key="article.submissions"}</h3>
 
 <ul class="plain">
@@ -23,7 +23,7 @@
 	<li>&#187; <a href="{url op="submissions" path="submissionsArchives"}">{translate key="common.queue.short.submissionsArchives"}</a></li>
 	{call_hook name="Templates::Editor::Index::Submissions"}
 </ul>
-
+</div>
 <div class="separator">&nbsp;</div>
 
 &nbsp;<br />
@@ -145,7 +145,7 @@ function sortSearch(heading, direction) {
 <div class="separator">&nbsp;</div>
 
 {/if}{* displayResults *}
-
+<div id="issues">
 <h3>{translate key="editor.navigation.issues"}</h3>
 
 <ul class="plain">
@@ -155,5 +155,5 @@ function sortSearch(heading, direction) {
 	<li>&#187; <a href="{url op="backIssues"}">{translate key="editor.navigation.issueArchive"}</a></li>
 	{call_hook name="Templates::Editor::Index::Issues"}
 </ul>
-
+</div>
 {include file="common/footer.tpl"}

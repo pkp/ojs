@@ -56,7 +56,7 @@ function checkEditorAssignments() {
 {/literal}
 
 {include file="common/formErrors.tpl"}
-
+<div id="sectionForm">
 <table class="data" width="100%">
 {if count($formLocales) > 1}
 	<tr valign="top">
@@ -156,9 +156,9 @@ function checkEditorAssignments() {
 </tr>
 {/if}
 </table>
-
+</div>
 <div class="separator"></div>
-
+<div id="sectionEditors">
 <h3>{translate key="user.role.sectionEditors"}</h3>
 {url|assign:"sectionEditorsUrl" op="people" path="sectionEditors"|to_array}
 <p><span class="instruct">{translate key="manager.section.sectionEditorInstructions"}</span></p>
@@ -193,7 +193,8 @@ function checkEditorAssignments() {
 		<td colspan="3" class="endseparator">&nbsp;</td>
 	</tr>
 </table>
-
+</div>
+<div id="sectionsAssigned">
 <h4>{translate key="manager.sections.assigned"}</h4>
 
 <table width="100%" class="listing" id="assignedSectionEditors">
@@ -231,7 +232,7 @@ function checkEditorAssignments() {
 		<td colspan="5" class="endseparator">&nbsp;</td>
 	</tr>
 </table>
-
+</div>
 <p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="sections" escape=false}'" /></p>
 
 </form>

@@ -12,14 +12,14 @@
 {assign var="pageTitle" value="submission.galley"}
 {include file="common/header.tpl"}
 {/strip}
-
+<div id="galleyForm">
 <h3>{if $galleyId}{translate key="submission.layout.editGalley"}{else}{translate key="submission.layout.addGalley"}{/if}</h3>
 
 <br />
 
 <form method="post" action="{url op="saveGalley" path=$articleId|to_array:$galleyId}" enctype="multipart/form-data">
 {include file="common/formErrors.tpl"}
-
+<div id="galleyFileData">
 <p>{translate key="submission.layout.galleyFileData"}</p>
 <table class="data" width="100%">
 <tr valign="top">
@@ -76,9 +76,10 @@
 	</td>
 </tr>
 </table>
+</div>
 <br/>
 {if $galley->isHTMLGalley()}
-
+<div id="htmlGalley">
 <h3>{translate key="submission.layout.galleyHTMLData"}</h3>
 
 <h4>{translate key="submission.layout.galleyStylesheet"}</h4>
@@ -121,9 +122,9 @@
 	</td>
 </tr>
 </table>
-
+</div>
 <br />
-
+<div id="galleyImages">
 <h4>{translate key="submission.layout.galleyImages"}</h4>
 
 <table width="100%" class="listing">
@@ -159,7 +160,7 @@
 
 <input type="file" name="imageFile" id="imageFile" class="uploadField" />&nbsp;
 <input type="submit" name="uploadImage" class="button" value="{translate key="common.upload"}" />
-
+</div>
 {/if}
 
 <br />
@@ -169,5 +170,5 @@
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 
 </form>
-
+</div>
 {include file="common/footer.tpl"}

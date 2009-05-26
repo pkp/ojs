@@ -13,7 +13,7 @@
 <div id="statistics">
 <h3>{translate key="manager.statistics.statistics"}</h3>
 <p>{translate key="manager.statistics.statistics.description"}</p>
-
+<div id="selectSections">
 <p>{translate key="manager.statistics.statistics.selectSections"}</p>
 <form action="{url op="saveStatisticsSections"}" method="post">
 	<select name="sectionIds[]" class="selectMenu" multiple="multiple" size="5">
@@ -23,7 +23,7 @@
 	</select><br/>&nbsp;<br/>
 	<input type="submit" value="{translate key="common.record"}" class="button defaultButton"/>
 </form>
-
+</div>
 <br/>
 
 <form action="{url op="savePublicStatisticsList"}" method="post">

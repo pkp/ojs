@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="plugins.generic.thesis.manager.settings"}
 {include file="common/header.tpl"}
 {/strip}
-
+<div id="thesisSettings">
 <ul class="menu">
 	<li><a href="{plugin_url path="theses"}">{translate key="plugins.generic.thesis.manager.theses"}</a></li>
 	<li class="current"><a href="{plugin_url path="settings"}">{translate key="plugins.generic.thesis.manager.settings"}</a></li>
@@ -34,7 +34,7 @@
 
 <form method="post" action="{plugin_url path="settings"}">
 {include file="common/formErrors.tpl"}
-
+<div id="submissionSettings">
 <h4>{translate key="plugins.generic.thesis.settings.submissions"}</h4>
 	<script type="text/javascript">
 		{literal}
@@ -54,9 +54,9 @@
 	<td class="value">{fieldLabel name="uploadCode" key="plugins.generic.thesis.settings.uploadCode"} <input type="text" name="uploadCode" id="uploadCode"{if not $enableUploadCode} disabled="disabled"{/if} value="{$uploadCode|escape}" size="15" maxlength="24" class="textField" /></td>
 </tr>
 </table>
-
+</div>
 <div class="separator"></div>
-
+<div id="thesisPublishing">
 <h4>{translate key="plugins.generic.thesis.settings.publishing"}</h4>
 <br/>
 <table width="100%" class="data">
@@ -65,9 +65,9 @@
 	<td width="80%" class="value"><select name="thesisOrder" id="thesisOrder" class="selectMenu">{html_options options=$validOrder selected=$thesisOrder}</select></td>
 </tr>
 </table>
-
+</div>
 <div class="separator"></div>
-
+<div id="thesisContact">
 <h4>{translate key="plugins.generic.thesis.settings.thesisContact"}</h4>
 <br/>
 <table width="100%" class="data">
@@ -92,9 +92,9 @@
 		<td width="80%" class="value"><textarea name="thesisMailingAddress" id="thesisMailingAddress" rows="3" cols="40" class="textArea">{$thesisMailingAddress|escape}</textarea></td>
 	</tr>
 </table>
-
+</div>
 <div class="separator"></div>
-
+<div id="thesisIntroduction">
 <h4>{translate key="plugins.generic.thesis.settings.thesisIntroduction"}</h4>
 <p>{translate key="plugins.generic.thesis.settings.thesisIntroductionDescription"}</p>
 <table width="100%" class="data">
@@ -102,12 +102,12 @@
 		<td width="100%" class="value"><textarea name="thesisIntroduction" id="thesisIntroduction" rows="5" cols="60" class="textArea">{$thesisIntroduction|escape}</textarea></td>
 	</tr>
 </table>
-
+</div>
 <br/>
 
 <input type="submit" name="save" class="button defaultButton" value="{translate key="common.save"}"/><input type="button" class="button" value="{translate key="common.cancel"}" onclick="history.go(-1)"/>
 </form>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
-
+</div>
 {include file="common/footer.tpl"}

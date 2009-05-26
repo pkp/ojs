@@ -102,7 +102,7 @@
 
 <div id="peerReview">
 <table class="data" width="100%">
-	<tr valign="middle">
+	<tr id="reviewersHeader" valign="middle">
 		<td width="22%"><h3>{translate key="submission.peerReview"}</h3></td>
 		<td width="14%"><h4>{translate key="submission.round" round=$round}</h4></td>
 		<td width="64%" class="nowrap">
@@ -121,10 +121,10 @@
 	<div class="separator"></div>
 
 	<table class="data" width="100%">
-	<tr>
-		<td width="20%"><h4>{translate key="user.role.reviewer"} {$reviewIndex+$start|chr}</h4></td>
-		<td width="34%"><h4>{$reviewAssignment->getReviewerFullName()|escape}</h4></td>
-		<td width="46%">
+	<tr id="reviewer">
+		<td id="r1" width="20%"><h4>{translate key="user.role.reviewer"} {$reviewIndex+$start|chr}</h4></td>
+		<td id="r2" width="34%"><h4>{$reviewAssignment->getReviewerFullName()|escape}</h4></td>
+		<td id="r3" width="46%">
 				{if not $reviewAssignment->getDateNotified()}
 					<a href="{url op="clearReview" path=$submission->getArticleId()|to_array:$reviewAssignment->getReviewId()}" class="action">{translate key="editor.article.clearReview"}</a>
 				{elseif $reviewAssignment->getDeclined() or not $reviewAssignment->getDateCompleted()}

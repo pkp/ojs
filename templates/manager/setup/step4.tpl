@@ -15,6 +15,7 @@
 {include file="common/formErrors.tpl"}
 
 {if count($formLocales) > 1}
+<div id="locales">
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
@@ -25,10 +26,11 @@
 		</td>
 	</tr>
 </table>
+</div>
 {/if}
-
+<div id="securitySettings">
 <h3>4.1 {translate key="manager.setup.securitySettings"}</h3>
-
+<div id="onlineAccessManagement">
 <h4>{translate key="manager.setup.onlineAccessManagement"}</h4>
 	<script type="text/javascript">
 		{literal}
@@ -81,6 +83,7 @@
 
 
 <p>{translate key="manager.setup.securitySettingsDescription"}</p>
+</div>
 
 <script type="text/javascript">
 {literal}
@@ -99,7 +102,7 @@ function setRegAllowOpts(form) {
 // -->
 {/literal}
 </script>
-
+<div id="siteAccess">
 <h4>{translate key="manager.setup.siteAccess"}</h4>
 
 <table width="100%" class="data">
@@ -112,7 +115,8 @@ function setRegAllowOpts(form) {
 		<td width="95%" class="value"><label for="restrictArticleAccess">{translate key="manager.setup.restrictArticleAccess"}</label></td>
 	</tr>
 </table>
-
+</div>
+<div id="userRegistration">
 <h4>{translate key="manager.setup.userRegistration"}</h4>
 
 <table width="100%" class="data">
@@ -141,7 +145,8 @@ function setRegAllowOpts(form) {
 		<td width="95%" class="value"><label for="disableUserReg-1">{translate key="manager.setup.disableUserRegistration"}</label></td>
 	</tr>
 </table>
-
+</div>
+<div id="loggingAndAuditing">
 <h4>{translate key="manager.setup.loggingAndAuditing"}</h4>
 
 <table width="100%" class="data">
@@ -154,18 +159,20 @@ function setRegAllowOpts(form) {
 		<td width="95%" class="value"><label for="articleEmailLog">{translate key="manager.setup.submissionEmailLogging"}</label></td>
 	</tr>
 </table>
-
+</div>
+</div>
 
 <div class="separator"></div>
-
+<div id="publicationScheduling">
 <h3>4.2 {translate key="manager.setup.publicationScheduling"}</h3>
-
+<div id="publicationSchedule">
 <h4>{translate key="manager.setup.publicationSchedule"}</h4>
 
 <p>{translate key="manager.setup.publicationScheduleDescription"}</p>
 
 <p><textarea name="pubFreqPolicy[{$formLocale|escape}]" id="pubFreqPolicy" rows="12" cols="60" class="textArea">{$pubFreqPolicy[$formLocale]|escape}</textarea></p>
-
+</div>
+<div id="publicationFormat">
 <h4>{translate key="manager.setup.publicationFormat"}</h4>
 
 <p>{translate key="manager.setup.publicationFormatDescription"}</p>
@@ -190,7 +197,8 @@ function setRegAllowOpts(form) {
 		</td>
 	</tr>
 </table>
-
+</div>
+<div id="frequencyOfPublication">
 <h4>{translate key="manager.setup.frequencyOfPublication"}</h4>
 
 <p>{translate key="manager.setup.frequencyOfPublicationDescription"}</p>
@@ -219,13 +227,14 @@ function setRegAllowOpts(form) {
 </table>
 
 <p>{translate key="manager.setup.frequencyOfPublicationNote"}</p>
-
+</div>
+</div>
 
 <div class="separator"></div>
 
-
+<div id="publicIdentifier">
 <h3>4.3 {translate key="manager.setup.publicIdentifier"}</h3>
-
+<div id="uniqueIdentifier">
 <h4>{translate key="manager.setup.uniqueIdentifier"}</h4>
 
 <p>{translate key="manager.setup.uniqueIdentifierDescription"}</p>
@@ -248,9 +257,9 @@ function setRegAllowOpts(form) {
 		<td class="value"><label for="enablePublicSuppFileId">{translate key="manager.setup.enablePublicSuppFileId"}</label></td>
 	</tr>
 </table>
-
+</div>
 <br />
-
+<div id="pageNumberIdentifier">
 <h4>{translate key="manager.setup.pageNumberIdentifier"}</h4>
 
 <table width="100%" class="data">
@@ -259,10 +268,11 @@ function setRegAllowOpts(form) {
 		<td width="95%" class="value"><label for="enablePageNumber">{translate key="manager.setup.enablePageNumber"}</label></td>
 	</tr>
 </table>
-
+</div>
+</div>
 <div class="separator"></div>
 
-
+<div id="announcements">
 <h3>4.4 {translate key="manager.setup.announcements"}</h3>
 
 <p>{translate key="manager.setup.announcementsDescription"}</p>
@@ -292,17 +302,17 @@ function setRegAllowOpts(form) {
 	</select>
 	{translate key="manager.setup.enableAnnouncementsHomepage2"}
 </p>
-
+<div id="announcementsIntroduction">
 <h4>{translate key="manager.setup.announcementsIntroduction"}</h4>
 
 <p>{translate key="manager.setup.announcementsIntroductionDescription"}</p>
 
 <p><textarea name="announcementsIntroduction[{$formLocale|escape}]" id="announcementsIntroduction" rows="12" cols="60" class="textArea">{$announcementsIntroduction[$formLocale]|escape}</textarea></p>
-
+</div>
 
 <div class="separator"></div>
 
-
+<div id="copyediting">
 <h3>4.5 {translate key="manager.setup.copyediting"}</h3>
 
 <p>{translate key="manager.setup.selectOne"}:</p>
@@ -317,7 +327,8 @@ function setRegAllowOpts(form) {
 		<td width="95%" class="value"><label for="useCopyeditors-0">{translate key="manager.setup.noUseCopyeditors"}</label></td>
 	</tr>
 </table>
-
+</div>
+<div id="copyeditInstructions">
 <h4>{translate key="manager.setup.copyeditInstructions"}</h4>
 
 <p>{translate key="manager.setup.copyeditInstructionsDescription"}</p>
@@ -327,11 +338,11 @@ function setRegAllowOpts(form) {
 	<br />
 	<span class="instruct">{translate key="manager.setup.htmlSetupInstructions"}</span>
 </p>
-
+</div>
 
 <div class="separator"></div>
 
-
+<div id="layoutAndGalleys">
 <h3>4.6 {translate key="manager.setup.layoutAndGalleys"}</h3>
 
 <p>{translate key="manager.setup.selectOne"}:</p>
@@ -346,7 +357,7 @@ function setRegAllowOpts(form) {
 		<td width="95%" class="value"><label for="useLayoutEditors-0">{translate key="manager.setup.noUseLayoutEditors"}</label></td>
 	</tr>
 </table>
-
+<div id="layoutInstructions">
 <h4>{translate key="manager.setup.layoutInstructions"}</h4>
 
 <p>{translate key="manager.setup.layoutInstructionsDescription"}</p>
@@ -356,7 +367,8 @@ function setRegAllowOpts(form) {
 	<br />
 	<span class="instruct">{translate key="manager.setup.htmlSetupInstructions"}</span>
 </p>
-
+</div>
+<div id="layoutTemplates">
 <h4>{translate key="manager.setup.layoutTemplates"}</h4>
 
 <p>{translate key="manager.setup.layoutTemplatesDescription"}</p>
@@ -377,7 +389,8 @@ function setRegAllowOpts(form) {
 		<td width="80%" colspan="2" class="value"><input type="file" name="template-file" id="template-file" class="uploadField" /><input type="submit" name="addTemplate" value="{translate key="common.upload"}" class="button" /></td>
 	</tr>
 </table>
-
+</div>
+<div id="referenceLinking">
 <h4>{translate key="manager.setup.referenceLinking"}</h4>
 
 {translate key="manager.setup.referenceLinkingDescription"}
@@ -388,13 +401,15 @@ function setRegAllowOpts(form) {
 		<td width="95%" class="value"><label for="provideRefLinkInstructions">{translate key="manager.setup.provideRefLinkInstructions"}</label></td>
 	</tr>
 </table>
-
+</div>
+<div id="refLinkInstructions">
 <h4>{translate key="manager.setup.refLinkInstructions.description"}</h4>
 <textarea name="refLinkInstructions[{$formLocale|escape}]" id="refLinkInstructions" rows="12" cols="60" class="textArea">{$refLinkInstructions[$formLocale]|escape}</textarea>
-
+</div>
+</div>
 <div class="separator"></div>
 
-
+<div id="proofreading">
 <h3>4.7 {translate key="manager.setup.proofreading"}</h3>
 
 <p>{translate key="manager.setup.selectOne"}:</p>
@@ -409,7 +424,7 @@ function setRegAllowOpts(form) {
 		<td width="95%" class="value"><label for="useProofreaders-0">{translate key="manager.setup.noUseProofreaders"}</label></td>
 	</tr>
 </table>
-
+<div id="proofingInstructions">
 <h4>{translate key="manager.setup.proofingInstructions"}</h4>
 
 <p>{translate key="manager.setup.proofingInstructionsDescription"}</p>
@@ -419,7 +434,8 @@ function setRegAllowOpts(form) {
 	<br />
 	<span class="instruct">{translate key="manager.setup.htmlSetupInstructions"}</span>
 </p>
-
+</div>
+</div>
 
 <div class="separator"></div>
 

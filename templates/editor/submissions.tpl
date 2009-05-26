@@ -82,8 +82,10 @@ function sortSearch(heading, direction) {
 
 {if ($pageToDisplay == "submissionsInReview")}
 <br />
+<div id="notes">
 <h4>{translate key="common.notes"}</h4>
 <p>{translate key="editor.submissionReview.notes"}</p>
+</div>
 {/if}
 
 {include file="common/footer.tpl"}

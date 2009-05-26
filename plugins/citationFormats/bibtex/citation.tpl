@@ -9,7 +9,7 @@
  * $Id$
  *}
 <div class="separator"></div>
-
+<div id="citation">
 {literal}
 <pre style="font-size: 1.5em;">@article{{/literal}{$journal->getLocalizedInitials()|escape}{$articleId|escape}{literal},
 	author = {{/literal}{assign var=authors value=$article->getAuthors()}{foreach from=$authors item=author name=authors key=i}{assign var=firstName value=$author->getFirstName()}{assign var=authorCount value=$authors|@count}{$firstName|escape} {$author->getLastName()|escape}{if $i<$authorCount-1} and {/if}{/foreach}{literal}},
@@ -28,4 +28,4 @@
 }
 </pre>
 {/literal}
-
+</div>

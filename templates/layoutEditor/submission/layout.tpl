@@ -13,6 +13,7 @@
 {assign var=layoutFile value=$submission->getFileBySignoffType('SIGNOFF_LAYOUT')}
 
 <div id="layout">
+<div id="layoutEditors">
 <h3>{translate key="submission.layout"}</h3>
 
 <table class="data" width="100%">
@@ -21,6 +22,7 @@
 		<td class="value" width="80%">{$layoutEditor->getFullName()}</td>
 	</tr>
 </table>
+</div>
 
 <table width="100%" class="info">
 	<tr>
@@ -136,7 +138,7 @@
 	<input type="file" name="layoutFile" size="10" class="uploadField" />
 	<input type="submit" {if $disableEdit}disabled="disabled" {/if}value="{translate key="common.upload"}" class="button" />
 </form>
-
+<div id="layoutComments">
 {translate key="submission.layout.layoutComments"}
 {if $submission->getMostRecentLayoutComment()}
 	{assign var="comment" value=$submission->getMostRecentLayoutComment()}
@@ -156,4 +158,5 @@
 {foreach name=templates from=$templates key=templateId item=template}
 &nbsp;&nbsp;&nbsp;&nbsp;<a href="{url op="downloadLayoutTemplate" path=$templateId}" class="action">{$template.title|escape}</a>
 {/foreach}
+</div>
 </div>

@@ -21,7 +21,7 @@ window.opener.location.reload();
 // -->
 {/literal}
 </script>
-
+<div id="articleComments">
 <table class="data" width="100%">
 {foreach from=$articleComments item=comment}
 <tr valign="top">
@@ -47,11 +47,12 @@ window.opener.location.reload();
 </tr>
 {/foreach}
 </table>
-
+</div>
 <br />
 <br />
 
 {if not $isLocked}
+<div id="postComment">
 <form method="post" action="{url op=$commentAction}">
 {if $hiddenFormParams}
 	{foreach from=$hiddenFormParams item=hiddenFormParam key=key}
@@ -79,6 +80,7 @@ window.opener.location.reload();
 </div>
 
 </form>
+</div>
 {else}
 <input type="button" value="{translate key="common.close"}" class="button defaultButton" style="width: 5em" onclick="window.close()" />
 {/if}

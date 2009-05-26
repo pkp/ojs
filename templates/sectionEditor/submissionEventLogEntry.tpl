@@ -30,7 +30,7 @@
 {include file="sectionEditor/submission/summary.tpl"}
 
 <div class="separator"></div>
-
+<div id="submissionEventLog">
 <h3>{translate key="submission.history.submissionEventLog"}</h3>
 <table width="100%" class="data">
 	<tr valign="top">
@@ -69,7 +69,7 @@
 {if $isEditor}
 	<a href="{url op="clearSubmissionEventLog" path=$submission->getArticleId()|to_array:$logEntry->getLogId()}" onclick="return confirm('{translate|escape:"jsparam" key="submission.event.confirmDeleteLogEntry"}')" class="action">{translate key="submission.event.deleteLogEntry"}</a><br/>
 {/if}
-
+</div>
 <a class="action" href="{url op="submissionEventLog" path=$submission->getArticleId()}">{translate key="submission.event.backToEventLog"}</a>
 
 {include file="common/footer.tpl"}

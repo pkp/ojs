@@ -12,8 +12,8 @@
 {assign var="pageTitle" value="plugins.generic.thesisfeed.displayName"}
 {include file="common/header.tpl"}
 {/strip}
-
-{translate key="plugins.generic.thesisfeed.description"}
+<div id="thesisFeedSettings">
+<div id="description">{translate key="plugins.generic.thesisfeed.description"}</div>
 
 <div class="separator">&nbsp;</div>
 
@@ -63,5 +63,5 @@
 </form>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
-
+</div>
 {include file="common/footer.tpl"}

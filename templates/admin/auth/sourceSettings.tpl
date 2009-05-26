@@ -14,7 +14,7 @@
 {/strip}
 
 <br />
-
+<div id="sourceSettings">
 <form method="post" action="{url op="updateAuthSource" path=$authId}">
 
 <table class="data" width="100%">
@@ -58,5 +58,5 @@
 <p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="auth" escape=false}'" /></p>
 
 </form>
-
+</div>
 {include file="common/footer.tpl"}

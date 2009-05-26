@@ -7,7 +7,7 @@
  * Display of author fees and payment information
  *
  *}
-
+<div id="authorFees">
 <h3>{translate key="manager.payment.authorFees"}</h3>
 <table width="100%" class="data">
 {if $currentJournal->getSetting('submissionFeeEnabled')}
@@ -44,3 +44,4 @@
 	</tr>	
 {/if}
 </table>
+</div>

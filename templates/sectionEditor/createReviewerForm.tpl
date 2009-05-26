@@ -41,7 +41,7 @@
 // -->
 {/literal}
 </script>
-
+<div id="createReviewerForm">
 <table width="100%" class="data">
 {if count($formLocales) > 1}
 	<tr valign="top">
@@ -143,7 +143,7 @@
 <p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="selectReviewer" path=$articleId escape=false}'" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
-
+</div>
 </form>
 
 {include file="common/footer.tpl"}

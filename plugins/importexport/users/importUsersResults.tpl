@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="plugins.importexport.users.import.importUsers"}
 {include file="common/header.tpl"}
 {/strip}
-
+<div id="importUsersResults">
 {translate key="plugins.importexport.users.import.usersWereImported"}:
 <table width="100%" class="listing">
 	<tr>
@@ -61,5 +61,5 @@
 {/if}
 
 <p>&#187; <a href="{url page="manager"}">{translate key="manager.journalManagement"}</a></p>
-
+</div>
 {include file="common/footer.tpl"}

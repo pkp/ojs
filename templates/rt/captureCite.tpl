@@ -18,7 +18,7 @@
 {else}
 	{url|assign:"articleUrl" page="article" op="view" path=$articleId}
 {/if}
-
+<div id="captureCite">
 <h3>{$article->getLocalizedTitle()|strip_unsafe_html}</h3>
 
 <form action="#">
@@ -31,7 +31,7 @@
 </form>
 
 {call_hook name="Template::RT::CaptureCite"}
-
+</div>
 <div class="separator"></div>
 
 {include file="rt/footer.tpl"}

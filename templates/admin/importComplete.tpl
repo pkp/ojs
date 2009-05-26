@@ -11,7 +11,7 @@
 {strip}
 {include file="common/header.tpl"}
 {/strip}
-
+<div id="importComplete">
 <p>{translate key="admin.journals.importOJS1.success"}</p>
 
 {if !empty($redirects)}
@@ -41,5 +41,5 @@
 {/if}
 
 <p>&#187; <a href="{url op="editJournal" path=$journalId}">{translate key="admin.journals.importOJS1.editMigratedJournal"}</a></p>
-
+</div>
 {include file="common/footer.tpl"}

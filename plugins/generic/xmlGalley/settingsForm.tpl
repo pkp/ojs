@@ -13,7 +13,8 @@
 {include file="common/header.tpl"}
 {/strip}
 
-{translate key="plugins.generic.xmlGalley.settings.description"}
+<div id="xmlGalleySettings">
+<div id="description">{translate key="plugins.generic.xmlGalley.settings.description"}</div>
 
 <div class="separator">&nbsp;</div>
 
@@ -116,5 +117,5 @@
 </form>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
-
+</div>
 {include file="common/footer.tpl"}

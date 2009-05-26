@@ -10,6 +10,7 @@
  *}
 {if $comments}
 <div class="separator"></div>
+<div id="commentsOnArticle">
 <h4>{translate key="comments.commentsOnArticle"}</h4>
 
 <ul>
@@ -41,7 +42,7 @@
 <a href="{url page="comment" op="view" path=$article->getArticleId()|to_array:$galleyId}" class="action" target="_parent">{translate key="comments.viewAllComments"}</a>
 
 {assign var=needsSeparator value=1}
-
+</div>
 {/if}{* $comments *}
 
 {if $postingAllowed}

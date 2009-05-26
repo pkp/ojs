@@ -14,7 +14,7 @@
 {assign var="pageTitle" value="about.siteMap"}
 {include file="common/header.tpl"}
 {/strip}
-
+<div id="siteMap">
 <ul class="plain">
 <li>
 	<a href="{url journal="index" page="index" op="index"}">{translate key="navigation.home"}</a><br/>
@@ -83,5 +83,5 @@
 <li><a href="http://pkp.sfu.ca/ojs">{translate key="common.openJournalSystems"}</a></li>
 <li><a href="javascript:openHelp('{url journal="index" page="help"}')">{translate key="help.help"}</a></li>
 </ul>
-
+</div>
 {include file="common/footer.tpl"}

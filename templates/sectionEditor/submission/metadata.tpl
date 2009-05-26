@@ -16,6 +16,7 @@
 	</tr>
 </table>
 
+<div id="authors">
 <h4>{translate key="article.authors"}</h4>
 	
 <table width="100%" class="data">
@@ -65,7 +66,9 @@
 	{/if}
 	{/foreach}
 </table>
+</div>
 
+<div id="titleAndAbstract">
 <h4>{translate key="submission.titleAndAbstract"}</h4>
 
 <table width="100%" class="data">
@@ -82,7 +85,9 @@
 		<td class="value">{$submission->getLocalizedAbstract()|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
 	</tr>
 </table>
+</div>
 
+<div id="indexing">
 <h4>{translate key="submission.indexing"}</h4>
 	
 <table width="100%" class="data">
@@ -150,7 +155,9 @@
 		<td width="80%" class="value">{$submission->getLanguage()|escape|default:"&mdash;"}</td>
 	</tr>
 </table>
+</div>
 
+<div id="supportingAgencies">
 <h4>{translate key="submission.supportingAgencies"}</h4>
 	
 <table width="100%" class="data">
@@ -159,6 +166,7 @@
 		<td width="80%" class="value">{$submission->getLocalizedSponsor()|escape|default:"&mdash;"}</td>
 	</tr>
 </table>
+</div>
 
 {if $journalSettings.metaCitations}
 <table width="100%" class="data">

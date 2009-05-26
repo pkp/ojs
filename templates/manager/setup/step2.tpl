@@ -15,6 +15,7 @@
 {include file="common/formErrors.tpl"}
 
 {if count($formLocales) > 1}
+<div id="locales">
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
@@ -25,8 +26,9 @@
 		</td>
 	</tr>
 </table>
+</div>
 {/if}
-
+<div id="focusAndScopeDescription">
 <h3>2.1 {translate key="manager.setup.focusAndScopeOfJournal"}</h3>
 <p>{translate key="manager.setup.focusAndScopeDescription"}</p>
 <p>
@@ -34,19 +36,20 @@
 	<br />
 	<span class="instruct">{translate key="manager.setup.htmlSetupInstructions"}</span>
 </p>
-
+</div>
 
 <div class="separator"></div>
 
-
+<div id="peerReviewPolicy">
 <h3>2.2 {translate key="manager.setup.peerReviewPolicy"}</h3>
-
+<div id="peerReviewDescription">
 <p>{translate key="manager.setup.peerReviewDescription"}</p>
 
 <h4>{translate key="manager.setup.reviewPolicy"}</h4>
 
 <p><textarea name="reviewPolicy[{$formLocale|escape}]" id="reviewPolicy" rows="12" cols="60" class="textArea">{$reviewPolicy[$formLocale]|escape}</textarea></p>
-
+</div>
+<div id="reviewGuidelines">
 
 <h4>{translate key="manager.setup.reviewGuidelines"}</h4>
 
@@ -54,7 +57,8 @@
 <p>{translate key="manager.setup.reviewGuidelinesDescription" reviewFormsUrl=$reviewFormsUrl}</p>
 
 <p><textarea name="reviewGuidelines[{$formLocale|escape}]" id="reviewGuidelines" rows="12" cols="60" class="textArea">{$reviewGuidelines[$formLocale]|escape}</textarea></p>
-
+</div>
+<div id="reviewProcess">
 <h4>{translate key="manager.setup.reviewProcess"}</h4>
 
 <p>{translate key="manager.setup.reviewProcessDescription"}</p>
@@ -84,7 +88,8 @@
 		</td>
 	</tr>
 </table>
-
+</div>
+<div id="reviewOptions">
 <h4>{translate key="manager.setup.reviewOptions"}</h4>
 
 	<script type="text/javascript">
@@ -154,24 +159,25 @@
 	{get_help_id|assign:"blindReviewHelpId" key="editorial.sectionEditorsRole.review.blindPeerReview" url="true"}
 	<label for="showEnsuringLink">{translate key="manager.setup.reviewOptions.showEnsuringLink" blindReviewHelpId=$blindReviewHelpId}</label><br/>
 </p>
-
+</div>
+</div>
 <div class="separator"></div>
-
+<div id="privacyStatement">
 <h3>2.3 {translate key="manager.setup.privacyStatement"}</h3>
 
 <p><textarea name="privacyStatement[{$formLocale|escape}]" id="privacyStatement" rows="12" cols="60" class="textArea">{$privacyStatement[$formLocale]|escape}</textarea></p>
-
+</div>
 
 <div class="separator"></div>
 
-
+<div id="editorDecision">
 <h3>2.4 {translate key="manager.setup.editorDecision"}</h3>
 
 <p><input type="checkbox" name="notifyAllAuthorsOnDecision" id="notifyAllAuthorsOnDecision" value="1"{if $notifyAllAuthorsOnDecision} checked="checked"{/if} /> <label for="notifyAllAuthorsOnDecision">{translate key="manager.setup.notifyAllAuthorsOnDecision"}</label></p>
-
+</div>
 <div class="separator"></div>
 
-
+<div id="addItemtoAboutJournal">
 <h3>2.5 {translate key="manager.setup.addItemtoAboutJournal"}</h3>
 
 <table width="100%" class="data">
@@ -202,10 +208,10 @@
 </table>
 
 <p><input type="submit" name="addCustomAboutItem" value="{translate key="manager.setup.addAboutItem"}" class="button" /></p>
-
+</div>
 <div class="separator"></div>
 
-
+<div id="journalArchiving">
 <h3>2.6 {translate key="manager.setup.journalArchiving"}</h3>
 
 <p>{translate key="manager.setup.lockssDescription"}</p>
@@ -222,11 +228,11 @@
 	<br />
 	<span class="instruct">{translate key="manager.setup.lockssLicenses"}</span>
 </p>
-
+</div>
 
 <div class="separator"></div>
 
-
+<div id="reviewerDatabaseLink">
 <h3>2.7 {translate key="manager.setup.reviewerDatabaseLink"}</h3>
 
 <p>{translate key="manager.setup.reviewerDatabaseLink.desc"}</p>
@@ -259,7 +265,7 @@
 </table>
 
 <p><input type="submit" name="addReviewerDatabaseLink" value="{translate key="manager.setup.addReviewerDatabaseLink"}" class="button" /></p>
-
+</div>
 <div class="separator"></div>
 
 <p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="setup" escape=false}'" /></p>

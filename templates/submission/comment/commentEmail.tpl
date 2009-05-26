@@ -23,7 +23,7 @@ function deleteAttachment(fileId) {
 // -->
 {/literal}
 </script>
-
+<div id="commentEmail">
 <form method="post" name="emailForm" action="{$formActionUrl}"{if $attachmentsEnabled} enctype="multipart/form-data"{/if}>
 <input type="hidden" name="continued" value="1"/>
 {if $attachmentsEnabled}
@@ -157,5 +157,5 @@ function deleteAttachment(fileId) {
 
 <p><input name="send" type="submit" value="{translate key="email.send"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="history.go(-1)" /></p>
 </form>
-
+</div>
 {include file="submission/comment/footer.tpl"}

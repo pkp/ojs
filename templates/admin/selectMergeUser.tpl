@@ -12,9 +12,9 @@
 {assign var="pageTitle" value="admin.mergeUsers"}
 {include file="common/header.tpl"}
 {/strip}
-
+<div id="selectMergeUsers">
 <p>{if $oldUserId != ''}{translate key="admin.mergeUsers.into.description"}{else}{translate key="admin.mergeUsers.from.description"}{/if}</p>
-
+<div id="roles">
 <h3>{translate key=$roleName}</h3>
 <form method="post" action="{url path=$roleSymbolic oldUserId=$oldUserId}">
 	<select name="roleSymbolic" class="selectMenu">
@@ -61,7 +61,7 @@
 {else}
 <p><a href="{url path="all" oldUserId=$oldUserId}" class="action">{translate key="admin.mergeUsers.allUsers"}</a></p>
 {/if}
-
+</div>
 <div id="users">
 <table width="100%" class="listing">
 	<tr>
@@ -116,5 +116,5 @@
 {/if}
 </table>
 </div>
-
+</div>
 {include file="common/footer.tpl"}

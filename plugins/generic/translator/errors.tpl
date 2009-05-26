@@ -24,12 +24,14 @@
 <input type="hidden" name="redirectUrl" value="{url op="translate"}" />
 
 {if $error}
+	<div id="unwriteableFiles">
 	<span class="formError">{translate key="plugins.generic.translator.filesNotWriteable"}</span>
 	<ul class="formErrorList">
 		{foreach from=$unwriteableFiles item=unwriteableFile}
 			<li>{$unwriteableFile}</li>
 		{/foreach}
 	</ul>
+	</div>
 {/if}
 
 {foreach from=$errors key=type item=categoryErrors}

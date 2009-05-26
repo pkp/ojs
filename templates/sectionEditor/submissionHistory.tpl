@@ -62,7 +62,7 @@
 {include file="sectionEditor/submission/summary.tpl"}
 
 <div class="separator"></div>
-
+<div id="submissionEventLog">
 <h3>{translate key="submission.history.submissionEventLog"} - {translate key="submission.history.recentLogEntries"}</h3>
 <table width="100%" class="listing">
 	<tr><td class="headseparator" colspan="5">&nbsp;</td></tr>
@@ -106,10 +106,11 @@
 
 <a href="{url op="submissionEventLog" path=$submission->getArticleId()}" class="action">{translate key="submission.history.viewLog"}</a>{if $isEditor} |
 <a href="{url op="clearSubmissionEventLog" path=$submission->getArticleId()}" class="action" onclick="return confirm('{translate|escape:"jsparam" key="submission.event.confirmClearLog"}')">{translate key="submission.history.clearLog"}</a>{/if}
-
+</div>
 <br /><br />
 
 <div class="separator"></div>
+<div id="submissionEmailLog">
 <h3>{translate key="submission.history.submissionEmailLog"} - {translate key="submission.history.recentLogEntries"}</h3>
 
 <table width="100%" class="listing">
@@ -146,11 +147,11 @@
 
 <a class="action" href="{url op="submissionEmailLog" path=$submission->getArticleId()}">{translate key="submission.history.viewLog"}</a>{if $isEditor} |
 <a class="action" href="{url op="clearsubmissionEmailLog" path=$submission->getArticleId()}" onclick="return confirm('{translate|escape:"jsparam" key="submission.email.confirmClearLog"}')">{translate key="submission.history.clearLog"}</a>{/if}
-
+</div>
 <br /><br />
 
 <div class="separator"></div>
-
+<div id="submissionNotes">
 <h3>{translate key="submission.notes"}</h3>
 
 <table width="100%" class="listing">
@@ -192,5 +193,5 @@
 <a class="action" href="javascript:toggleNoteAll()"><div style="display:inline" id="expandNotes" name="expandNotes">{translate key="submission.notes.expandNotes"}</div><div style="display: none" id="collapseNotes" name="collapseNotes">{translate key="submission.notes.collapseNotes"}</div></a> |
 <a class="action" href="{url op="submissionNotes" path=$submission->getArticleId()|to_array:"add"}">{translate key="submission.notes.addNewNote"}</a> |
 <a class="action" href="{url op="clearAllSubmissionNotes" articleId=$submission->getArticleId()}" onclick="return confirm('{translate|escape:"jsparam" key="submission.notes.confirmDeleteAll"}')">{translate key="submission.notes.clearAllNotes"}</a>
-
+</div>
 {include file="common/footer.tpl"}

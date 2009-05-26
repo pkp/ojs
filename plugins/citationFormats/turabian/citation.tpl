@@ -10,6 +10,7 @@
  *}
 <div class="separator"></div>
 
+<div id="citation">
 {assign var=authors value=$article->getAuthors()}
 {assign var=authorCount value=$authors|@count}
 {foreach from=$authors item=author name=authors key=i}
@@ -18,4 +19,4 @@
 {/foreach}
 
 "{$article->getLocalizedTitle()|strip_unsafe_html}" <em>{$journal->getLocalizedTitle()|escape}</em> [{translate key="rt.captureCite.online"}], {translate key="issue.volume"} {if $issue}{$issue->getVolume()|escape} {translate key="issue.number"} {$issue->getNumber()|escape} {/if}({$article->getDatePublished()|date_format:'%e %B %Y'|trim})
-
+</div>
