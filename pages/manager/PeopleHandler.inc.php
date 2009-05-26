@@ -621,6 +621,7 @@ class PeopleHandler extends ManagerHandler {
 	 */
 	function updateUser() {
 		$this->validate();
+		$this->setupTemplate(true);
 
 		$journal =& Request::getJournal();
 		$userId = Request::getUserVar('userId');
