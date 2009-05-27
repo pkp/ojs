@@ -27,7 +27,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 		$journalSettingsDAO =& DAORegistry::getDAO('JournalSettingsDAO');
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
-		$templateMgr->assign('enableSubscripitons', $journalSettingsDAO->getSetting($journal->getJournalId(), 'enableSubscriptions'));
+		$templateMgr->assign('enableSubscriptions', $journalSettingsDAO->getSetting($journal->getJournalId(), 'enableSubscriptions'));
 
 		parent::setupTemplate(true);
 
@@ -51,7 +51,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 		$journalSettingsDAO =& DAORegistry::getDAO('JournalSettingsDAO');
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
-		$templateMgr->assign('enableSubscripitons', $journalSettingsDAO->getSetting($journal->getJournalId(), 'enableSubscriptions'));
+		$templateMgr->assign('enableSubscriptions', $journalSettingsDAO->getSetting($journal->getJournalId(), 'enableSubscriptions'));
 
 		parent::setupTemplate(true);
 		
