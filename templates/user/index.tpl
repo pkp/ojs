@@ -208,9 +208,7 @@
 <h3>{translate key="user.myAccount"}</h3>
 <ul class="plain">
 	{if $hasOtherJournals}
-		{if $showAllJournals}
-			<li>&#187; <a href="{url journal="index" page="user" op="register"}">{translate key="user.registerForOtherJournals"}</a></li>
-		{else}
+		{if !$showAllJournals}
 			<li>&#187; <a href="{url journal="index" page="user"}">{translate key="user.showAllJournals"}</a></li>
 		{/if}
 	{/if}
