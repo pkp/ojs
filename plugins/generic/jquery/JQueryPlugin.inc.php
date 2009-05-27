@@ -85,6 +85,10 @@ class JQueryPlugin extends GenericPlugin {
 			case 'manager/setup':
 				//$scripts[] = 'dragLists.js';
 				break;
+			case 'admin/journals':
+				$scripts[] = 'jquery.tablednd_0_5.js';
+				$scripts[] = 'tablednd.js';
+				break;
 
 		}
 		return $scripts;
@@ -157,7 +161,7 @@ class JQueryPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Check whether or not the TinyMCE library is installed
+	 * Check whether or not the JQuery library is installed
 	 * @return boolean
 	 */
 	function isJQueryInstalled() {
