@@ -49,7 +49,7 @@
 		<li><a href="{url page="about"}" target="_parent">{translate key="navigation.about"}</a></li>
 
 		{if $isUserLoggedIn}
-			<li><a href="{url page="user"}" target="_parent">{translate key="navigation.userHome"}</a></li>
+			<li><a href="{url journal="index" page="user"}" target="_parent">{translate key="navigation.userHome"}</a></li>
 		{else}
 			<li><a href="{url page="login"}" target="_parent">{translate key="navigation.login"}</a></li>
 			<li><a href="{url page="user" op="register"}" target="_parent">{translate key="navigation.register"}</a></li>

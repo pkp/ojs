@@ -18,6 +18,7 @@
 <ul class="plain">
 <li>
 	<a href="{url journal="index" page="index" op="index"}">{translate key="navigation.home"}</a><br/>
+	{if $isUserLoggedIn}<a href="{url journal="index" page="user"}">{translate key="navigation.userHome"}</a><br/>{/if}
 	<ul class="plain">
 	{if $journals|@count>1 && !$currentJournal}
 		{foreach from=$journals item=journal}
@@ -38,15 +39,11 @@
 				<li>
 					{if $isUserLoggedIn}
 						<ul class="plain">
-							<li><a href="{url journal=`$currentJournal->getPath()` page="user"}">{translate key="navigation.userHome"}</a><br/>
-								<ul class="plain">
-									{assign var=currentJournalId value=$currentJournal->getJournalId()}
-									{foreach from=$rolesByJournal[$currentJournalId] item=role}
-									{translate|assign:"roleName" key=$role->getRoleName()}
-										<li><a href="{url journal=`$currentJournal->getPath()` page=`$role->getRolePath()`}">{$roleName|escape}</a></li>
-									{/foreach}
-								</ul>
-							</li>
+							{assign var=currentJournalId value=$currentJournal->getJournalId()}
+							{foreach from=$rolesByJournal[$currentJournalId] item=role}
+								{translate|assign:"roleName" key=$role->getRoleName()}
+								<li><a href="{url journal=`$currentJournal->getPath()` page=`$role->getRolePath()`}">{$roleName|escape}</a></li>
+							{/foreach}
 						</ul>
 					{else}
 						<ul class="plain">
