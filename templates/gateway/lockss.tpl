@@ -118,7 +118,7 @@
 		
 	<br /><br />
 	
-	<a href="http://pkp.sfu.ca/"><img src="{$baseUrl}/templates/images/pkp.gif" style="border: 0;" alt="The Public Knowledge Project" /></a>
+	<a href="http://pkp.sfu.ca/"><img src="{$baseUrl}/lib/pkp/templates/images/pkp.gif" style="border: 0;" alt="The Public Knowledge Project" /></a>
 	<br />
 	Open Journal Systems was developed by the Public Knowledge Project.
 </div>
