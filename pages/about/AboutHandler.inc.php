@@ -323,8 +323,6 @@ class AboutHandler extends Handler {
 		$journal =& Request::getJournal();
 
 		$templateMgr =& TemplateManager::getManager();
-		$journalSettings =& $journalSettingsDao->getJournalSettings($journal->getJournalId());
-		$templateMgr->assign_by_ref('journalSettings', $journalSettings);
 		$sections =& $sectionDao->getJournalSections($journal->getJournalId());
 		$sections =& $sections->toArray();
 		$templateMgr->assign_by_ref('sections', $sections);
@@ -577,9 +575,7 @@ class AboutHandler extends Handler {
 		$userStatistics = $journalStatisticsDao->getUserStatistics($journal->getJournalId(), $fromDate, $toDate);
 		$templateMgr->assign('userStatistics', $userStatistics);
 
-		$enableSubscriptions = $journal->getSetting('enableSubscriptions');
-		if ($enableSubscriptions) {
-			$templateMgr->assign('enableSubscriptions', true);
+		if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION) {
 			$allSubscriptionStatistics = $journalStatisticsDao->getSubscriptionStatistics($journal->getJournalId(), null, $toDate);
 			$templateMgr->assign('allSubscriptionStatistics', $allSubscriptionStatistics);
 

@@ -74,9 +74,7 @@ class StatisticsHandler extends ManagerHandler {
 		$userStatistics = $journalStatisticsDao->getUserStatistics($journal->getJournalId(), $fromDate, $toDate);
 		$templateMgr->assign('userStatistics', $userStatistics);
 
-		$enableSubscriptions = $journal->getSetting('enableSubscriptions');
-		if ($enableSubscriptions) {
-			$templateMgr->assign('enableSubscriptions', true);
+		if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION) {
 			$allSubscriptionStatistics = $journalStatisticsDao->getSubscriptionStatistics($journal->getJournalId(), null, $toDate);
 			$templateMgr->assign('allSubscriptionStatistics', $allSubscriptionStatistics);
 

@@ -8,6 +8,7 @@
  *
  * $Id$
  *}
+{if !$currentJournal || $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
 <div class="block" id="sidebarNavigation">
 	<span class="blockTitle">{translate key="plugins.block.navigation.journalContent"}</span>
 	
@@ -42,3 +43,4 @@
 	</ul>
 	{/if}
 </div>
+{/if}

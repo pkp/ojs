@@ -57,4 +57,9 @@
 		<drop table="layouted_assignments" />
 		<drop table="proof_assignments" />
 	</sql>
+
+	<!-- Bug #1709: Upgrade enableSubscriptions setting to publishingMode -->
+	<sql>
+		<query>UPDATE journal_settings SET setting_name = 'publishingMode', setting_type = 'int' WHERE setting_name = 'enableSubscriptions'</query>
+	</sql>
 </data>

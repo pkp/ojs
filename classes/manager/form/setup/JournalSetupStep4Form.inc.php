@@ -49,7 +49,7 @@ class JournalSetupStep4Form extends JournalSetupForm {
 				'refLinkInstructions' => 'string',
 				'useProofreaders' => 'bool',
 				'proofInstructions' => 'string',
-				'enableSubscriptions' => 'bool',
+				'publishingMode' => 'int',
 				'showGalleyLinks' => 'bool',
 				'openAccessPolicy' => 'string',
 				'enableAnnouncements' => 'bool',

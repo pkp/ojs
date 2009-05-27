@@ -73,7 +73,7 @@
 		<td colspan="2" class="value">{translate key="manager.statistics.statistics.totalNewValue" numTotal=$allUserStatistics.reader|default:"0" numNew=$userStatistics.reader|default:"0"}</td>
 	</tr>{/if}
 
-	{if $enableSubscriptions && $statSubscriptions}
+	{if $currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION && $statSubscriptions}
 		<tr valign="top">
 			<td colspan="3" class="label">{translate key="manager.statistics.statistics.subscriptions"}</td>
 		</tr>

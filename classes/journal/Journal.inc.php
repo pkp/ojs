@@ -20,6 +20,10 @@
 // $Id$
 
 
+define('PUBLISHING_MODE_OPEN', 0);
+define('PUBLISHING_MODE_SUBSCRIPTION', 1);
+define('PUBLISHING_MODE_NONE', 2);
+
 class Journal extends DataObject {
 	/**
 	 * Constructor.

@@ -143,7 +143,7 @@
 	{assign var=notFirstJournal value=0}
 	{foreach from=$journals name=journalOpenAccessNotifications key=thisJournalId item=thisJournal}
 		{assign var=thisJournalId value=$thisJournal->getJournalId()}
-		{assign var=enableSubscriptions value=$thisJournal->getSetting('enableSubscriptions')}
+		{assign var=publishingMode value=$thisJournal->getSetting('publishingMode')}
 		{assign var=enableOpenAccessNotification value=$thisJournal->getSetting('enableOpenAccessNotification')}
 		{assign var=notificationEnabled value=$user->getSetting('openAccessNotification', $thisJournalId)}
 		{if !$notFirstJournal}
@@ -153,7 +153,7 @@
 				<td class="value">
 		{/if}
 
-		{if $enableSubscriptions && $enableOpenAccessNotification}
+		{if $publishingMode == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION && $enableOpenAccessNotification}
 			<input type="checkbox" name="openAccessNotify[]" {if $notificationEnabled}checked="checked" {/if}id="openAccessNotify-{$thisJournalId|escape}" value="{$thisJournalId|escape}" /> <label for="openAccessNotify-{$thisJournalId|escape}">{$thisJournal->getLocalizedTitle()|escape}</label><br/>
 		{/if}
 

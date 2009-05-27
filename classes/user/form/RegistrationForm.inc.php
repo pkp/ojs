@@ -111,11 +111,10 @@ class RegistrationForm extends Form {
 		$templateMgr->assign_by_ref('countries', $countries);
 
 		$templateMgr->assign('privacyStatement', $journal->getLocalizedSetting('privacyStatement'));
-		$templateMgr->assign('allowRegReader', $journal->getSetting('allowRegReader')==1?1:0);
-		$templateMgr->assign('enableSubscriptions', $journal->getSetting('enableSubscriptions')==1?1:0);
-		$templateMgr->assign('enableOpenAccessNotification', $journal->getSetting('enableOpenAccessNotification')==1?1:0);
-		$templateMgr->assign('allowRegAuthor', $journal->getSetting('allowRegAuthor')==1?1:0);
-		$templateMgr->assign('allowRegReviewer', $journal->getSetting('allowRegReviewer')==1?1:0);
+		$templateMgr->assign('allowRegReader', $journal->getSetting('allowRegReader'));
+		$templateMgr->assign('enableOpenAccessNotification', $journal->getSetting('enableOpenAccessNotification'));
+		$templateMgr->assign('allowRegAuthor', $journal->getSetting('allowRegAuthor'));
+		$templateMgr->assign('allowRegReviewer', $journal->getSetting('allowRegReviewer'));
 		$templateMgr->assign('source', Request::getUserVar('source'));
 
 		$site =& Request::getSite();

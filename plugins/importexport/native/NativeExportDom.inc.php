@@ -73,7 +73,7 @@ class NativeExportDom {
 
 			if ( // Issue flagged as open, or subscriptions disabled
 				$issue->getAccessStatus() == ISSUE_ACCESS_OPEN ||
-				!$journal->getSetting('enableSubscriptions')
+				$journal->getSetting('publishingMode') == PUBLISHING_MODE_OPEN
 			) {
 				$accessNode =& XMLCustomWriter::createElement($doc, 'open_access');
 				XMLCustomWriter::appendChild($root, $accessNode);

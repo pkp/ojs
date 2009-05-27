@@ -55,18 +55,20 @@
 						</ul>
 					{/if}
 				</li>
-				<li><a href="{url journal=`$currentJournal->getPath()` page="search"}">{translate key="navigation.search"}</a><br />
-					<ul class="plain">
-						<li><a href="{url journal=`$currentJournal->getPath()` page="search" op="authors"}">{translate key="navigation.browseByAuthor"}</a></li>
-						<li><a href="{url journal=`$currentJournal->getPath()` page="search" op="titles"}">{translate key="navigation.browseByTitle"}</a></li>
-					</ul>
-				</li>
-				<li>{translate key="issue.issues"}<br/>
-					<ul class="plain">
-						<li><a href="{url journal=`$currentJournal->getPath()` page="issue" op="current"}">{translate key="journal.currentIssue"}</a></li>
-						<li><a href="{url journal=`$currentJournal->getPath()` page="issue" op="archive"}">{translate key="navigation.archives"}</a></li>
-					</ul>
-				</li>
+				{if $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
+					<li><a href="{url journal=`$currentJournal->getPath()` page="search"}">{translate key="navigation.search"}</a><br />
+						<ul class="plain">
+							<li><a href="{url journal=`$currentJournal->getPath()` page="search" op="authors"}">{translate key="navigation.browseByAuthor"}</a></li>
+							<li><a href="{url journal=`$currentJournal->getPath()` page="search" op="titles"}">{translate key="navigation.browseByTitle"}</a></li>
+						</ul>
+					</li>
+					<li>{translate key="issue.issues"}<br/>
+						<ul class="plain">
+							<li><a href="{url journal=`$currentJournal->getPath()` page="issue" op="current"}">{translate key="journal.currentIssue"}</a></li>
+							<li><a href="{url journal=`$currentJournal->getPath()` page="issue" op="archive"}">{translate key="navigation.archives"}</a></li>
+						</ul>
+					</li>
+				{/if}{* $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE *}
 				{foreach from=$navMenuItems item=navItem}
 					{if $navItem.url != '' && $navItem.name != ''}<li><a href="{if $navItem.isAbsolute}{$navItem.url|escape}{else}{url page=""}{$navItem.url|escape}{/if}">{if $navItem.isLiteral}{$navItem.name|escape}{else}{translate key=$navItem.name|escape}{/if}</a></li>{/if}
 				{/foreach}

@@ -35,13 +35,19 @@
 	<script type="text/javascript">
 		{literal}
 		<!--
-			function toggleEnableSubscriptions(form) {
-				if (form.enableSubscriptions[0].checked) {
+			function togglePublishingMode(form) {
+				if (form.publishingMode[0].checked) {
+					// PUBLISHING_MODE_OPEN
 					form.openAccessPolicy.disabled = false;
 					form.showGalleyLinks.disabled = true;
-				} else {
+				} elseif (form.publishingMode[1].checked) {
+					// PUBLISHING_MODE_SUBSCRIPTION
 					form.openAccessPolicy.disabled = true;
 					form.showGalleyLinks.disabled = false;
+				} else {
+					// PUBLISHING_MODE_NONE
+					form.openAccessPolicy.disabled = true;
+					form.showGalleyLinks.disabled = true;
 				}
 			}
 		// -->
@@ -51,13 +57,13 @@
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="5%" class="label" align="right">
-			<input type="radio" name="enableSubscriptions" id="enableSubscriptions-0" value="0" onclick="toggleEnableSubscriptions(this.form)"{if not $enableSubscriptions} checked="checked"{/if} />
+			<input type="radio" name="publishingMode" id="publishingMode-0" value="{$smarty.const.PUBLISHING_MODE_OPEN}" onclick="togglePublishingMode(this.form)"{if $publishingMode == $smarty.const.PUBLISHING_MODE_OPEN} checked="checked"{/if} />
 		</td>
 		<td width="95%" class="value">
-			<label for="enableSubscriptions-0">{translate key="manager.setup.openAccess"}</label>
+			<label for="publishingMode-0">{translate key="manager.setup.openAccess"}</label>
 			<h4>{translate key="manager.setup.openAccessPolicy"}</h4>
 			<p><span class="instruct">{translate key="manager.setup.openAccessPolicyDescription"}</span></p>
-			<p><textarea name="openAccessPolicy[{$formLocale|escape}]" id="openAccessPolicy" rows="12" cols="60" class="textArea"{if $enableSubscriptions} disabled="disabled"{/if}>{$openAccessPolicy[$formLocale]|escape}</textarea></p>
+			<p><textarea name="openAccessPolicy[{$formLocale|escape}]" id="openAccessPolicy" rows="12" cols="60" class="textArea"{if $publishingMode != $smarty.const.PUBLISHING_MODE_OPEN} disabled="disabled"{/if}>{$openAccessPolicy[$formLocale]|escape}</textarea></p>
 		</td>
 	</tr>
 	<tr>
@@ -65,10 +71,10 @@
 	</tr>
 	<tr valign="top">
 		<td width="5%" class="label" align="right">
-			<input type="radio" name="enableSubscriptions" id="enableSubscriptions-1" value="1" onclick="toggleEnableSubscriptions(this.form)"{if $enableSubscriptions} checked="checked"{/if} />
+			<input type="radio" name="publishingMode" id="publishingMode-1" value="{$smarty.const.PUBLISHING_MODE_SUBSCRIPTION}" onclick="togglePublishingMode(this.form)"{if $publishingMode == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION} checked="checked"{/if} />
 		</td>
 		<td width="95%" class="value">
-			<label for="enableSubscriptions-1">{translate key="manager.setup.subscription"}</label>
+			<label for="publishingMode-1">{translate key="manager.setup.subscription"}</label>
 			<p><span class="instruct">{translate key="manager.setup.subscriptionDescription"}</span></p>
 			<table width="100%">
 				<tr>
@@ -78,7 +84,17 @@
 			</table>
 		</td>
 	</tr>
-
+	<tr>
+		<td colspan="2" class="separator">&nbsp;</td>
+	</tr>
+	<tr valign="top">
+		<td width="5%" class="label" align="right">
+			<input type="radio" name="publishingMode" id="publishingMode-2" value="{$smarty.const.PUBLISHING_MODE_NONE}" onclick="togglePublishingMode(this.form)"{if $publishingMode == $smarty.const.PUBLISHING_MODE_NONE} checked="checked"{/if} />
+		</td>
+		<td width="95%" class="value">
+			<label for="publishingMode-2">{translate key="manager.setup.noPublishing"}</label>
+		</td>
+	</tr>
 </table>
 
 

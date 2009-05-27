@@ -114,7 +114,7 @@ class ProfileForm extends Form {
 		$journals =& $journals->toArray();
 
 		foreach ($journals as $thisJournal) {
-			if ($thisJournal->getSetting('enableSubscriptions') == true && $thisJournal->getSetting('enableOpenAccessNotification') == true) {
+			if ($thisJournal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION && $thisJournal->getSetting('enableOpenAccessNotification')) {
 				$templateMgr->assign('displayOpenAccessNotification', true);
 				$templateMgr->assign_by_ref('user', $user);
 				break;
@@ -292,7 +292,7 @@ class ProfileForm extends Form {
 		$journals =& $journals->toArray();
 
 		foreach ($journals as $thisJournal) {
-			if (($thisJournal->getSetting('enableSubscriptions') == true) && ($thisJournal->getSetting('enableOpenAccessNotification') == true)) {
+			if ($thisJournal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION && $thisJournal->getSetting('enableOpenAccessNotification')) {
 				$currentlyReceives = $user->getSetting('openAccessNotification', $thisJournal->getJournalId());
 				$shouldReceive = !empty($openAccessNotify) && in_array($thisJournal->getJournalId(), $openAccessNotify);
 				if ($currentlyReceives != $shouldReceive) {

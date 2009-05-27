@@ -77,7 +77,7 @@
 	</tr>
 </table>
 
-{if $enableSubscriptions && !$enableDelayedOpenAccess}
+{if $currentJournal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION && !$enableDelayedOpenAccess}
 <div class="separator"></div>
 <div id="access">
 <h3>{translate key="editor.issues.access"}</h3>

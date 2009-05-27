@@ -50,7 +50,6 @@ class IssueForm extends Form {
 		$journal =& Request::getJournal();
 
 		// set up the accessibility options pulldown
-		$templateMgr->assign('enableSubscriptions', $journal->getSetting('enableSubscriptions'));
 		$templateMgr->assign('enableDelayedOpenAccess', $journal->getSetting('enableDelayedOpenAccess'));
 
 		$templateMgr->assign('accessOptions', array(
@@ -91,17 +90,6 @@ class IssueForm extends Form {
 		if ($publicIssueId && $issueDao->publicIssueIdExists($publicIssueId, $issueId, $journal->getJournalId())) {
 			$this->addError('publicIssueId', Locale::translate('editor.issues.issuePublicIdentificationExists'));
 			$this->addErrorField('publicIssueId');
-		}
-
-		// check if date open access date is correct if subscription is selected and enabled
-		// and delayed open access is not set
-		$subscription = $journal->getSetting('enableSubscriptions');
-		$delayedOpenAccess = $journal->getSetting('enableDelayedOpenAccess');
-		if (!empty($issueId)) {
-			$issue =& $issueDao->getIssueById($issueId);
-			$issuePublished = $issue->getPublished();
-		} else {
-			$issuePublished = 0;
 		}
 
 		import('file.PublicFileManager');
@@ -216,21 +204,22 @@ class IssueForm extends Form {
 				} else {
 					$year = $volume = $number = 0;
 				}
-
-
 			} else {
 				$volume = $journal->getSetting('initialVolume');
 				$number = $journal->getSetting('initialNumber');
 				$year = $journal->getSetting('initialYear');
 			}
 
-
-			if ($journal->getSetting('enableSubscriptions')) {
-				$accessStatus = SUBSCRIPTION;
-			} else {
-				$accessStatus = OPEN_ACCESS;
+			switch ($journal->getSetting('publishingMode')) {
+				case PUBLISHING_MODE_SUBSCRIPTION:
+				case PUBLISHING_MODE_NONE:
+					$accessStatus = ISSUE_ACCESS_SUBSCRIPTION;
+					break;
+				case PUBLISHING_MODE_OPEN:
+				default:
+					$accessStatus = ISSUE_ACCESS_OPEN;
+					break;
 			}
-
 
 			$this->_data = array(
 				'showVolume' => $showVolume,
@@ -242,7 +231,6 @@ class IssueForm extends Form {
 				'year' => $year,
 				'accessStatus' => $accessStatus
 			);
-
 		}
 	}
 

@@ -84,7 +84,7 @@
 		<td colspan="2" class="value">{translate key="manager.statistics.statistics.totalNewValue" numTotal=$allUserStatistics.reader|default:"0" numNew=$userStatistics.reader|default:"0"}</td>
 	</tr>
 
-	{if $enableSubscriptions}
+	{if $currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION}
 		<tr valign="top">
 			<td colspan="3" class="label"><input type="checkbox" id="statSubscriptions" name="statSubscriptions" {if $statSubscriptions}checked {/if}/><label for="statSubscriptions">{translate key="manager.statistics.statistics.subscriptions"}</label></td>
 		</tr>

@@ -26,6 +26,7 @@ class IssueHandler extends Handler {
 		parent::Handler();
 		
 		$this->addCheck(new HandlerValidatorJournal($this));
+		$this->addCheck(new HandlerValidatorCustom($this, false, null, null, create_function('$journal', 'return $journal->getSetting(\'publishingMode\') != PUBLISHING_MODE_NONE;'), array(Request::getJournal())));
 	}
 
 	/**

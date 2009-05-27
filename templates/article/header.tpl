@@ -55,12 +55,14 @@
 			<li><a href="{url page="user" op="register"}" target="_parent">{translate key="navigation.register"}</a></li>
 		{/if}{* $isUserLoggedIn *}
 
-		<li><a href="{url page="search"}" target="_parent">{translate key="navigation.search"}</a></li>
+		{if !$currentJournal || $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
+			<li><a href="{url page="search"}" target="_parent">{translate key="navigation.search"}</a></li>
+		{/if}
 
-		{if $currentJournal}
+		{if $currentJournal && $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
 			<li><a href="{url page="issue" op="current"}" target="_parent">{translate key="navigation.current"}</a></li>
 			<li><a href="{url page="issue" op="archive"}" target="_parent">{translate key="navigation.archives"}</a></li>
-		{/if}{* $currentJournal *}
+		{/if}
 
 		{if $enableAnnouncements}
 			<li><a href="{url page="announcement"}">{translate key="announcement.announcements"}</a></li>

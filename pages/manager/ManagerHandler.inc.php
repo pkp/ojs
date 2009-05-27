@@ -32,18 +32,11 @@ class ManagerHandler extends Handler {
 	function index() {
 		$this->validate();
 		$this->setupTemplate();
-		
 		$journal =& Request::getJournal();
-		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
- 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('roleSettings', $this->retrieveRoleAssignmentPreferences($journal->getJournalId()));
-		
-		$subscriptionsEnabled = $journalSettingsDao->getSetting($journal->getJournalId(), 'enableSubscriptions');
-		$templateMgr->assign('subscriptionsEnabled', $subscriptionsEnabled);
-		$announcementsEnabled = $journalSettingsDao->getSetting($journal->getJournalId(), 'enableAnnouncements'); 
-		$templateMgr->assign('announcementsEnabled', $announcementsEnabled);
-
+		$templateMgr->assign('subscriptionsEnabled', $journal->getSetting('subscriptionsEnabled'));
+		$templateMgr->assign('announcementsEnabled', $journal->getSetting('announcementsEnabled'));
 		$session =& Request::getSession();
 		$session->unsetSessionVar('enrolmentReferrer');
 

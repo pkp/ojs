@@ -18,10 +18,10 @@
 	<li>&#187; <a href="{url op="editorialPolicies" anchor="sectionPolicies"}">{translate key="about.sectionPolicies"}</a></li>
 	{if $currentJournal->getLocalizedSetting('reviewPolicy') != ''}<li>&#187; <a href="{url op="editorialPolicies" anchor="peerReviewProcess"}">{translate key="about.peerReviewProcess"}</a></li>{/if}
 	{if $currentJournal->getLocalizedSetting('pubFreqPolicy') != ''}<li>&#187; <a href="{url op="editorialPolicies" anchor="publicationFrequency"}">{translate key="about.publicationFrequency"}</a></li>{/if}
-	{if empty($journalSettings.enableSubscriptions) && $currentJournal->getLocalizedSetting('openAccessPolicy') != ''}<li>&#187; <a href="{url op="editorialPolicies" anchor="openAccessPolicy"}">{translate key="about.openAccessPolicy"}</a></li>{/if}
-	{if !empty($journalSettings.enableSubscriptions) && !empty($journalSettings.enableAuthorSelfArchive)}<li>&#187; <a href="{url op="editorialPolicies" anchor="authorSelfArchivePolicy"}">{translate key="about.authorSelfArchive"}</a></li>{/if}
-	{if !empty($journalSettings.enableSubscriptions) && !empty($journalSettings.enableDelayedOpenAccess)}<li>&#187; <a href="{url op="editorialPolicies" anchor="delayedOpenAccessPolicy"}">{translate key="about.delayedOpenAccess"}</a></li>{/if}
-	{if $journalSettings.enableLockss && $currentJournal->getLocalizedSetting('lockssLicense') != ''}<li>&#187; <a href="{url op="editorialPolicies" anchor="archiving"}">{translate key="about.archiving"}</a></li>{/if}
+	{if !$currentJournal->getSetting('enableSubscriptions') && $currentJournal->getLocalizedSetting('openAccessPolicy') != ''}<li>&#187; <a href="{url op="editorialPolicies" anchor="openAccessPolicy"}">{translate key="about.openAccessPolicy"}</a></li>{/if}
+	{if $currentJournal->getSetting('enableSubscriptions') && $currentJournal->getSetting('enableAuthorSelfArchive')}<li>&#187; <a href="{url op="editorialPolicies" anchor="authorSelfArchivePolicy"}">{translate key="about.authorSelfArchive"}</a></li>{/if}
+	{if $currentJournal->getSetting('enableSubscriptions') && $currentJournal->getSetting('enableDelayedOpenAccess')}<li>&#187; <a href="{url op="editorialPolicies" anchor="delayedOpenAccessPolicy"}">{translate key="about.delayedOpenAccess"}</a></li>{/if}
+	{if $currentJournal->getSetting('enableLockss') && $currentJournal->getLocalizedSetting('lockssLicense') != ''}<li>&#187; <a href="{url op="editorialPolicies" anchor="archiving"}">{translate key="about.archiving"}</a></li>{/if}
 	{foreach key=key from=$currentJournal->getLocalizedSetting('customAboutItems') item=customAboutItem}
 		{if !empty($customAboutItem.title)}
 			<li>&#187; <a href="{url op="editorialPolicies" anchor=custom`$key`}">{$customAboutItem.title|escape}</a></li>
@@ -86,7 +86,7 @@
 </div>
 {/if}
 
-{if empty($journalSettings.enableSubscriptions) && $currentJournal->getLocalizedSetting('openAccessPolicy') != ''} 
+{if !$currentJournal->getSetting('enableSubscriptions') && $currentJournal->getLocalizedSetting('openAccessPolicy') != ''} 
 <div id="openAccessPolicy"><h3>{translate key="about.openAccessPolicy"}</h3>
 <p>{$currentJournal->getLocalizedSetting('openAccessPolicy')|nl2br}</p>
 
@@ -94,7 +94,7 @@
 </div>
 {/if}
 
-{if !empty($journalSettings.enableSubscriptions) && !empty($journalSettings.enableAuthorSelfArchive)} 
+{if $currentJournal->getSetting('enableSubscriptions') && $currentJournal->getSetting('enableAuthorSelfArchive')} 
 <div id="authorSelfArchivePolicy"><h3>{translate key="about.authorSelfArchive"}</h3> 
 <p>{$currentJournal->getLocalizedSetting('authorSelfArchivePolicy')|nl2br}</p>
 
@@ -102,9 +102,9 @@
 </div>
 {/if}
 
-{if !empty($journalSettings.enableSubscriptions) && !empty($journalSettings.enableDelayedOpenAccess)}
+{if $currentJournal->getSetting('enableSubscriptions') && $currentJournal->getSetting('enableDelayedOpenAccess')}
 <div id="delayedOpenAccessPolicy"><h3>{translate key="about.delayedOpenAccess"}</h3> 
-<p>{translate key="about.delayedOpenAccessDescription1"} {$journalSettings.delayedOpenAccessDuration} {translate key="about.delayedOpenAccessDescription2"}</p>
+<p>{translate key="about.delayedOpenAccessDescription1"} {$currentJournal->getSetting('delayedOpenAccessDuration')} {translate key="about.delayedOpenAccessDescription2"}</p>
 {if $currentJournal->getLocalizedSetting('delayedOpenAccessPolicy') != ''}
 	<p>{$currentJournal->getLocalizedSetting('delayedOpenAccessPolicy')|nl2br}</p>
 {/if}
@@ -113,7 +113,7 @@
 </div>
 {/if}
 
-{if $journalSettings.enableLockss && $currentJournal->getLocalizedSetting('lockssLicense') != ''}
+{if $currentJournal->getSetting('enableLockss') && $currentJournal->getLocalizedSetting('lockssLicense') != ''}
 <div id="archiving"><h3>{translate key="about.archiving"}</h3>
 <p>{$currentJournal->getLocalizedSetting('lockssLicense')|nl2br}</p>
 

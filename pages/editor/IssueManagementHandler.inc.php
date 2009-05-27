@@ -286,8 +286,6 @@ class IssueManagementHandler extends EditorHandler {
 
 		$enablePublicArticleId = $journalSettingsDao->getSetting($journalId,'enablePublicArticleId');
 		$templateMgr->assign('enablePublicArticleId', $enablePublicArticleId);
-		$enableSubscriptions = $journalSettingsDao->getSetting($journalId,'enableSubscriptions');
-		$templateMgr->assign('enableSubscriptions', $enableSubscriptions);
 		$enablePageNumber = $journalSettingsDao->getSetting($journalId, 'enablePageNumber');
 		$templateMgr->assign('enablePageNumber', $enablePageNumber);
 		$templateMgr->assign('customSectionOrderingExists', $customSectionOrderingExists = $sectionDao->customSectionOrderingExists($issueId));
@@ -541,7 +539,7 @@ class IssueManagementHandler extends EditorHandler {
 
 		// If subscriptions with delayed open access are enabled then
 		// update open access date according to open access delay policy
-		if ($journal->getSetting('enableSubscriptions') && $journal->getSetting('enableDelayedOpenAccess')) {
+		if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION && $journal->getSetting('enableDelayedOpenAccess')) {
 
 			$delayDuration = $journal->getSetting('delayedOpenAccessDuration');
 			$delayYears = (int)floor($delayDuration/12);

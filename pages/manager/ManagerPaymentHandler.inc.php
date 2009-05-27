@@ -35,7 +35,6 @@ class ManagerPaymentHandler extends ManagerHandler {
 		$journal =& Request::getJournal();
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
-		$templateMgr->assign('enableSubscriptions', $journal->getSetting('enableSubscriptions'));
 
 		$this->setupTemplate(true);
 
@@ -59,7 +58,6 @@ class ManagerPaymentHandler extends ManagerHandler {
 		$journal =& Request::getJournal();
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
-		$templateMgr->assign('enableSubscriptions', $journal->getSetting('enableSubscriptions'));
 
 		$this->setupTemplate(true);
 		
