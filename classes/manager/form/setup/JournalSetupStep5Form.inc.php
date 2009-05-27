@@ -30,7 +30,8 @@ class JournalSetupStep5Form extends JournalSetupForm {
 			'homeHeaderLogoImage',
 			'homepageImage',
 			'pageHeaderTitleImage',
-			'pageHeaderLogoImage'
+			'pageHeaderLogoImage',
+			'journalFavicon'
 		);
 
 		$this->image_settings = array(
@@ -69,7 +70,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('homeHeaderTitleType', 'homeHeaderTitle', 'pageHeaderTitleType', 'pageHeaderTitle', 'readerInformation', 'authorInformation', 'librarianInformation', 'journalPageHeader', 'journalPageFooter', 'homepageImage', 'additionalHomeContent', 'description', 'navItems');
+		return array('homeHeaderTitleType', 'homeHeaderTitle', 'pageHeaderTitleType', 'pageHeaderTitle', 'readerInformation', 'authorInformation', 'librarianInformation', 'journalPageHeader', 'journalPageFooter', 'homepageImage', 'journalFavicon', 'additionalHomeContent', 'description', 'navItems');
 	}
 
 	/**
@@ -106,7 +107,8 @@ class JournalSetupStep5Form extends JournalSetupForm {
 			'readerInformation' => $journal->getSetting('readerInformation'),
 			'authorInformation' => $journal->getSetting('authorInformation'),
 			'librarianInformation' => $journal->getSetting('librarianInformation'),
-			'journalThemes' => $journalThemes
+			'journalThemes' => $journalThemes,
+			'journalFavicon' => $journal->getSetting('journalFavicon')
 		));
 
 		// Make lists of the sidebar blocks available.
@@ -143,6 +145,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 	function uploadImage($settingName, $locale) {
 		$journal =& Request::getJournal();
 		$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		$faviconTypes = array('.ico', '.png', '.gif');
 
 		import('file.PublicFileManager');
 		$fileManager = new PublicFileManager();
@@ -152,6 +155,10 @@ class JournalSetupStep5Form extends JournalSetupForm {
 			if (!$extension) {
 				return false;
 			}
+			if ($settingName == 'journalFavicon' && !in_array($extension, $faviconTypes)) {
+				return false;
+			}
+			
 			$uploadName = $settingName . '_' . $locale . $extension;
 			if ($fileManager->uploadJournalFile($journal->getJournalId(), $settingName, $uploadName)) {
 				// Get image dimensions

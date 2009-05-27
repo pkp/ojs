@@ -242,6 +242,17 @@ class SetupHandler extends ManagerHandler {
 						$editData = true;
 						$setupForm->deleteImage('homeHeaderLogoImage', $formLocale);
 
+					} else if (Request::getUserVar('uploadJournalFavicon')) {
+						if ($setupForm->uploadImage('journalFavicon', $formLocale)) {
+							$editData = true;
+						} else {
+							$setupForm->addError('journalFavicon', Locale::translate('manager.setup.journalFaviconInvalid'));
+						}
+
+					} else if (Request::getUserVar('deleteJournalFavicon')) {
+						$editData = true;
+						$setupForm->deleteImage('journalFavicon', $formLocale);
+
 					} else if (Request::getUserVar('uploadPageHeaderTitleImage')) {
 						if ($setupForm->uploadImage('pageHeaderTitleImage', $formLocale)) {
 							$editData = true;

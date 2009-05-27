@@ -127,6 +127,18 @@ class Journal extends DataObject {
 		trigger_error('Deprecated function.');
 		return $this->getLocalizedJournalPageHeaderLogo($home);
 	}
+	
+	/**
+	 * Get localized favicon
+	 * @return string
+	 */
+	function getLocalizedFavicon() {
+		$faviconArray = $this->getSetting('journalFavicon');
+		foreach (array(Locale::getLocale(), Locale::getPrimaryLocale()) as $locale) {
+			if (isset($faviconArray[$locale])) return $faviconArray[$locale];
+		}
+		return null;
+	}
 
 	//
 	// Get/set methods
