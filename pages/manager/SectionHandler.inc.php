@@ -144,8 +144,10 @@ class SectionHandler extends ManagerHandler {
 				$prevId = Request::getUserVar('prevId');
 				if ($prevId == null)
 					$prevSeq = 0;
-				else
-					$prevSeq = $sectionDao->getSection($prevId)->getSequence();
+				else {
+					$prevJournal = $sectionDao->getSection($prevId);
+					$prevSeq = $prevJournal->getSequence();
+				}
 
 				$section->setSequence($prevSeq + .5);
 			}

@@ -284,8 +284,10 @@ class ReviewFormHandler extends ManagerHandler {
 				$prevId = Request::getUserVar('prevId');
 				if ($prevId == null)
 					$prevSeq = 0;
-				else
-					$prevSeq = $reviewFormDao->getReviewForm($prevId)->getSequence();
+				else {
+					$prevJournal = $reviewFormDao->getReviewForm($prevId);
+					$prevSeq = $prevJournal->getSequence();
+				}
 
 				$reviewForm->setSequence($prevSeq + .5);
 			}

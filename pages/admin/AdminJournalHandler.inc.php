@@ -143,8 +143,10 @@ class AdminJournalHandler extends AdminHandler {
 				$prevId = Request::getUserVar('prevId');
 				if ($prevId == null)
 					$prevSeq = 0;
-				else
-					$prevSeq = $journalDao->getJournal($prevId)->getSequence();
+				else {
+					$prevJournal = $journalDao->getJournal($prevId);
+					$prevSeq = $prevJournal->getSequence();
+				}
 
 				$journal->setSequence($prevSeq + .5);
 			}
