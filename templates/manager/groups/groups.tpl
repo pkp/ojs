@@ -14,6 +14,12 @@
 {include file="common/header.tpl"}
 {/strip}
 
+<script>
+{literal}
+$(document).ready(function() { setupTableDND("#dragTable", "moveGroup"); });
+{/literal}
+</script>
+
 <br/>
 
 <form action="{url op="setBoardEnabled"}" method="post">
@@ -29,7 +35,7 @@
 
 <div id="groups">
 
-<table width="100%" class="listing">
+<table width="100%" class="listing" id="dragTable">
 	<tr>
 		<td colspan="3" class="headseparator">&nbsp;</td>
 	</tr>

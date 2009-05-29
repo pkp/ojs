@@ -85,6 +85,9 @@ class JQueryPlugin extends GenericPlugin {
 			case 'manager/setup':
 				//$scripts[] = 'dragLists.js';
 				break;
+			case 'manager/sections':
+			case 'manager/reviewForms':
+			case 'manager/groups':
 			case 'admin/journals':
 				$scripts[] = 'jquery.tablednd_0_5.js';
 				$scripts[] = 'tablednd.js';

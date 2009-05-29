@@ -130,15 +130,34 @@ class SectionHandler extends ManagerHandler {
 		$journal =& Request::getJournal();
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$section =& $sectionDao->getSection(Request::getUserVar('sectionId'), $journal->getJournalId());
+		$section =& $sectionDao->getSection(Request::getUserVar('id'), $journal->getJournalId());
 
 		if ($section != null) {
-			$section->setSequence($section->getSequence() + (Request::getUserVar('d') == 'u' ? -1.5 : 1.5));
+			$direction = Request::getUserVar('d');
+
+			if ($direction != null) {
+				// moving with up or down arrow
+				$section->setSequence($section->getSequence() + ($direction == 'u' ? -1.5 : 1.5));
+
+			} else {
+				// Dragging and dropping
+				$prevId = Request::getUserVar('prevId');
+				if ($prevId == null)
+					$prevSeq = 0;
+				else
+					$prevSeq = $sectionDao->getSection($prevId)->getSequence();
+
+				$section->setSequence($prevSeq + .5);
+			}
+
 			$sectionDao->updateSection($section);
 			$sectionDao->resequenceSections($journal->getJournalId());
 		}
 
-		Request::redirect(null, null, 'sections');
+		// Moving up or down with the arrows requires a page reload.
+		if ($direction != null) {
+			Request::redirect(null, null, 'sections');
+		}
 	}
 
 	function setupTemplate($subclass = false) {

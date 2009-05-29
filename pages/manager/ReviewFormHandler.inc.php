@@ -270,15 +270,34 @@ class ReviewFormHandler extends ManagerHandler {
 
 		$journal =& Request::getJournal();
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
-		$reviewForm =& $reviewFormDao->getReviewForm(Request::getUserVar('reviewFormId'), $journal->getJournalId());
+		$reviewForm =& $reviewFormDao->getReviewForm(Request::getUserVar('id'), $journal->getJournalId());
 
 		if (isset($reviewForm)) {
-			$reviewForm->setSequence($reviewForm->getSequence() + (Request::getUserVar('d') == 'u' ? -1.5 : 1.5));
+			$direction = Request::getUserVar('d');
+
+			if ($direction != null) {
+				// moving with up or down arrow
+				$reviewForm->setSequence($reviewForm->getSequence() + ($direction == 'u' ? -1.5 : 1.5));
+
+			} else {
+				// Dragging and dropping
+				$prevId = Request::getUserVar('prevId');
+				if ($prevId == null)
+					$prevSeq = 0;
+				else
+					$prevSeq = $reviewFormDao->getReviewForm($prevId)->getSequence();
+
+				$reviewForm->setSequence($prevSeq + .5);
+			}
+
 			$reviewFormDao->updateReviewForm($reviewForm);
 			$reviewFormDao->resequenceReviewForms($journal->getJournalId());
 		}
 
-		Request::redirect(null, null, 'reviewForms');
+		// Moving up or down with the arrows requires a page reload.
+		if ($direction != null) {
+			Request::redirect(null, null, 'reviewForms');
+		}
 	}
 
 	/**

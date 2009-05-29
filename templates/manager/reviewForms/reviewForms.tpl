@@ -12,10 +12,16 @@
 {include file="common/header.tpl"}
 {/strip}
 
+<script>
+{literal}
+$(document).ready(function() { setupTableDND("#dragTable", "moveReviewForm"); });
+{/literal}
+</script>
+
 <p>{translate key="manager.reviewForms.list.description"}</p>
 
 <div id="reviewForms">
-<table width="100%" class="listing">
+<table width="100%" class="listing" id="dragTable">
 	<tr>
 		<td class="headseparator" colspan="4">&nbsp;</td>
 	</tr>
@@ -34,10 +40,10 @@
 {else}
 	{assign var=canEdit value=0}
 {/if}
-	<tr valign="top">
-		<td>{$reviewForm->getReviewFormTitle()|escape}</td>
-		<td>{$reviewForm->getIncompleteCount()|escape}</td>
-		<td>{$reviewForm->getCompleteCount()|escape}</td>
+	<tr valign="top" id="{$reviewForm->getReviewFormId()}" class="data">
+		<td class="drag">{$reviewForm->getReviewFormTitle()|escape}</td>
+		<td class="drag">{$reviewForm->getIncompleteCount()|escape}</td>
+		<td class="drag">{$reviewForm->getCompleteCount()|escape}</td>
 		<td align="right" class="nowrap">
 			{if $canEdit}<a href="{url op="editReviewForm" path=$reviewForm->getReviewFormId()}" class="action">{translate key="common.edit"}</a>&nbsp;|{/if}
 			{strip}
@@ -54,10 +60,10 @@
 			<a href="{url op="moveReviewForm" d=u reviewFormId=$reviewForm->getReviewFormId()}" class="action">&uarr;</a>&nbsp;<a href="{url op="moveReviewForm" d=d reviewFormId=$reviewForm->getReviewFormId()}" class="action">&darr;</a>
 		</td>
 	</tr>
-	<tr>
-		<td colspan="4" class="{if $reviewForms->eof()}end{/if}separator">&nbsp;</td>
-	</tr>
 {/iterate}
+	<tr>
+		<td colspan="4" class="endseparator">&nbsp;</td>
+	</tr>
 
 {if $reviewForms->wasEmpty()}
 	<tr>

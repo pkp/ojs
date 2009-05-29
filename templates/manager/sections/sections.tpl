@@ -13,10 +13,16 @@
 {include file="common/header.tpl"}
 {/strip}
 
+<script>
+{literal}
+$(document).ready(function() { setupTableDND("#dragTable", "moveSection"); });
+{/literal}
+</script>
+
 <br/>
 
 <div id="sections">
-<table width="100%" class="listing">
+<table width="100%" class="listing" id="dragTable">
 	<tr>
 		<td class="headseparator" colspan="3">&nbsp;</td>
 	</tr>
@@ -29,17 +35,17 @@
 		<td class="headseparator" colspan="3">&nbsp;</td>
 	</tr>
 {iterate from=sections item=section name=sections}
-	<tr valign="top">
-		<td>{$section->getLocalizedTitle()|escape}</td>
-		<td>{$section->getLocalizedAbbrev()|escape}</td>
+	<tr valign="top" id="{$section->getSectionId()}" class="data">
+		<td class="drag">{$section->getLocalizedTitle()|escape}</td>
+		<td class="drag">{$section->getLocalizedAbbrev()|escape}</td>
 		<td align="right" class="nowrap">
 			<a href="{url op="editSection" path=$section->getSectionId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url op="deleteSection" path=$section->getSectionId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.sections.confirmDelete"}')" class="action">{translate key="common.delete"}</a>&nbsp;|&nbsp;<a href="{url op="moveSection" d=u sectionId=$section->getSectionId()}">&uarr;</a>&nbsp;<a href="{url op="moveSection" d=d sectionId=$section->getSectionId()}">&darr;</a>
 		</td>
 	</tr>
-	<tr>
-		<td colspan="3" class="{if $sections->eof()}end{/if}separator">&nbsp;</td>
-	</tr>
 {/iterate}
+	<tr>
+		<td colspan="3" class="endseparator">&nbsp;</td>
+	</tr>
 {if $sections->wasEmpty()}
 	<tr>
 		<td colspan="3" class="nodata">{translate key="manager.sections.noneCreated"}</td>
