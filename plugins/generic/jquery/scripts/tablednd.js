@@ -14,7 +14,7 @@
 /**
  * Setup a table for dragging and dropping rows.
  */
-function setupTableDND(tableID) {
+function setupTableDND(tableID, moveHandler) {
     $(tableID).tableDnD({
 	    // add this class to cells to make them handles for dragging the row
 	    dragHandle: "drag",
@@ -33,7 +33,7 @@ function setupTableDND(tableID) {
 		}
 		// update the sequence in the database
 		var req = makeAsyncRequest();
-		var url = 'moveJournal?journalId='+row.id;
+		var url = moveHandler + '?id=' + row.id;
 		if (prevRowId != null) url += '&prevId='+prevRowId;
 		sendAsyncRequest(req, url, null, 'GET');
 	    },

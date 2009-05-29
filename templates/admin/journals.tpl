@@ -14,7 +14,7 @@
 {/strip}
 <script>
 {literal}
-$(document).ready(function() { setupTableDND("#adminJournals"); });
+$(document).ready(function() { setupTableDND("#adminJournals", "moveJournal"); });
 {/literal}
 </script>
 

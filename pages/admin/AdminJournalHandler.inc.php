@@ -129,7 +129,7 @@ class AdminJournalHandler extends AdminHandler {
 		$this->validate();
 
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journal =& $journalDao->getJournal(Request::getUserVar('journalId'));
+		$journal =& $journalDao->getJournal(Request::getUserVar('id'));
 
 		if ($journal != null) {
 			$direction = Request::getUserVar('d');
