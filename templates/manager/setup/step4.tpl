@@ -26,33 +26,34 @@
 		</td>
 	</tr>
 </table>
-</div>
+</div><!-- locales -->
 {/if}
+
 <div id="securitySettings">
 <h3>4.1 {translate key="manager.setup.securitySettings"}</h3>
 <div id="onlineAccessManagement">
 <h4>{translate key="manager.setup.onlineAccessManagement"}</h4>
-	<script type="text/javascript">
-		{literal}
-		<!--
-			function togglePublishingMode(form) {
-				if (form.publishingMode[0].checked) {
-					// PUBLISHING_MODE_OPEN
-					form.openAccessPolicy.disabled = false;
-					form.showGalleyLinks.disabled = true;
-				} elseif (form.publishingMode[1].checked) {
-					// PUBLISHING_MODE_SUBSCRIPTION
-					form.openAccessPolicy.disabled = true;
-					form.showGalleyLinks.disabled = false;
-				} else {
-					// PUBLISHING_MODE_NONE
-					form.openAccessPolicy.disabled = true;
-					form.showGalleyLinks.disabled = true;
-				}
+<script type="text/javascript">
+	{literal}
+	<!--
+		function togglePublishingMode(form) {
+			if (form.publishingMode[0].checked) {
+				// PUBLISHING_MODE_OPEN
+				form.openAccessPolicy.disabled = false;
+				form.showGalleyLinks.disabled = true;
+			} elseif (form.publishingMode[1].checked) {
+				// PUBLISHING_MODE_SUBSCRIPTION
+				form.openAccessPolicy.disabled = true;
+				form.showGalleyLinks.disabled = false;
+			} else {
+				// PUBLISHING_MODE_NONE
+				form.openAccessPolicy.disabled = true;
+				form.showGalleyLinks.disabled = true;
 			}
-		// -->
-		{/literal}
-	</script>
+		}
+	// -->
+	{/literal}
+</script>
 
 <table width="100%" class="data">
 	<tr valign="top">
@@ -97,9 +98,8 @@
 	</tr>
 </table>
 
-
 <p>{translate key="manager.setup.securitySettingsDescription"}</p>
-</div>
+</div><!-- onlineAccessManagement -->
 
 <script type="text/javascript">
 {literal}
@@ -118,6 +118,7 @@ function setRegAllowOpts(form) {
 // -->
 {/literal}
 </script>
+
 <div id="siteAccess">
 <h4>{translate key="manager.setup.siteAccess"}</h4>
 
@@ -131,7 +132,8 @@ function setRegAllowOpts(form) {
 		<td width="95%" class="value"><label for="restrictArticleAccess">{translate key="manager.setup.restrictArticleAccess"}</label></td>
 	</tr>
 </table>
-</div>
+</div><!-- siteAccess -->
+
 <div id="userRegistration">
 <h4>{translate key="manager.setup.userRegistration"}</h4>
 
@@ -161,7 +163,8 @@ function setRegAllowOpts(form) {
 		<td width="95%" class="value"><label for="disableUserReg-1">{translate key="manager.setup.disableUserRegistration"}</label></td>
 	</tr>
 </table>
-</div>
+</div><!-- userRegistration -->
+
 <div id="loggingAndAuditing">
 <h4>{translate key="manager.setup.loggingAndAuditing"}</h4>
 
@@ -175,10 +178,11 @@ function setRegAllowOpts(form) {
 		<td width="95%" class="value"><label for="articleEmailLog">{translate key="manager.setup.submissionEmailLogging"}</label></td>
 	</tr>
 </table>
-</div>
-</div>
+</div><!-- loggingAndAuditing -->
+</div><!-- securitySettings -->
 
 <div class="separator"></div>
+
 <div id="publicationScheduling">
 <h3>4.2 {translate key="manager.setup.publicationScheduling"}</h3>
 <div id="publicationSchedule">
@@ -273,7 +277,7 @@ function setRegAllowOpts(form) {
 		<td class="value"><label for="enablePublicSuppFileId">{translate key="manager.setup.enablePublicSuppFileId"}</label></td>
 	</tr>
 </table>
-</div>
+</div><!-- uniqueIdentifier -->
 <br />
 <div id="pageNumberIdentifier">
 <h4>{translate key="manager.setup.pageNumberIdentifier"}</h4>
@@ -284,11 +288,11 @@ function setRegAllowOpts(form) {
 		<td width="95%" class="value"><label for="enablePageNumber">{translate key="manager.setup.enablePageNumber"}</label></td>
 	</tr>
 </table>
-</div>
-</div>
+</div><!-- pageNumberIdentifier -->
+</div><!-- publicIdentifier -->
 <div class="separator"></div>
 
-<div id="announcements">
+<div id="announcementsSection">
 <h3>4.4 {translate key="manager.setup.announcements"}</h3>
 
 <p>{translate key="manager.setup.announcementsDescription"}</p>
@@ -318,13 +322,14 @@ function setRegAllowOpts(form) {
 	</select>
 	{translate key="manager.setup.enableAnnouncementsHomepage2"}
 </p>
-<div id="announcementsIntroduction">
+<div id="announcementsIntroductionSection">
 <h4>{translate key="manager.setup.announcementsIntroduction"}</h4>
 
 <p>{translate key="manager.setup.announcementsIntroductionDescription"}</p>
 
 <p><textarea name="announcementsIntroduction[{$formLocale|escape}]" id="announcementsIntroduction" rows="12" cols="60" class="textArea">{$announcementsIntroduction[$formLocale]|escape}</textarea></p>
-</div>
+</div><!-- announcementsIntroductionSection -->
+</div><!-- announcementsSection -->
 
 <div class="separator"></div>
 
@@ -343,8 +348,9 @@ function setRegAllowOpts(form) {
 		<td width="95%" class="value"><label for="useCopyeditors-0">{translate key="manager.setup.noUseCopyeditors"}</label></td>
 	</tr>
 </table>
-</div>
-<div id="copyeditInstructions">
+</div><!-- copyediting -->
+
+<div id="copyeditInstructionsSection">
 <h4>{translate key="manager.setup.copyeditInstructions"}</h4>
 
 <p>{translate key="manager.setup.copyeditInstructionsDescription"}</p>
@@ -354,7 +360,7 @@ function setRegAllowOpts(form) {
 	<br />
 	<span class="instruct">{translate key="manager.setup.htmlSetupInstructions"}</span>
 </p>
-</div>
+</div><!-- copyeditInstructionsSection -->
 
 <div class="separator"></div>
 
@@ -373,7 +379,8 @@ function setRegAllowOpts(form) {
 		<td width="95%" class="value"><label for="useLayoutEditors-0">{translate key="manager.setup.noUseLayoutEditors"}</label></td>
 	</tr>
 </table>
-<div id="layoutInstructions">
+
+<div id="layoutInstructionsSection">
 <h4>{translate key="manager.setup.layoutInstructions"}</h4>
 
 <p>{translate key="manager.setup.layoutInstructionsDescription"}</p>
@@ -383,7 +390,8 @@ function setRegAllowOpts(form) {
 	<br />
 	<span class="instruct">{translate key="manager.setup.htmlSetupInstructions"}</span>
 </p>
-</div>
+</div><!-- layoutInstructionsSection -->
+
 <div id="layoutTemplates">
 <h4>{translate key="manager.setup.layoutTemplates"}</h4>
 
@@ -405,7 +413,8 @@ function setRegAllowOpts(form) {
 		<td width="80%" colspan="2" class="value"><input type="file" name="template-file" id="template-file" class="uploadField" /><input type="submit" name="addTemplate" value="{translate key="common.upload"}" class="button" /></td>
 	</tr>
 </table>
-</div>
+</div><!-- layoutTemplates -->
+
 <div id="referenceLinking">
 <h4>{translate key="manager.setup.referenceLinking"}</h4>
 
@@ -417,11 +426,12 @@ function setRegAllowOpts(form) {
 		<td width="95%" class="value"><label for="provideRefLinkInstructions">{translate key="manager.setup.provideRefLinkInstructions"}</label></td>
 	</tr>
 </table>
-</div>
-<div id="refLinkInstructions">
+</div><!-- referenceLinking -->
+
+<div id="refLinkInstructionsSection">
 <h4>{translate key="manager.setup.refLinkInstructions.description"}</h4>
 <textarea name="refLinkInstructions[{$formLocale|escape}]" id="refLinkInstructions" rows="12" cols="60" class="textArea">{$refLinkInstructions[$formLocale]|escape}</textarea>
-</div>
+</div><!-- refLinkInstructionsSection -->
 </div>
 <div class="separator"></div>
 

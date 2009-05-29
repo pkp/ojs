@@ -66,7 +66,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign_by_ref('section', $section);
-		$templateMgr->assign_by_ref('authors', $submission->getAuthors());
 		$templateMgr->assign_by_ref('submissionFile', $submission->getSubmissionFile());
 		$templateMgr->assign_by_ref('suppFiles', $submission->getSuppFiles());
 		$templateMgr->assign_by_ref('reviewFile', $submission->getReviewFile());
@@ -115,6 +114,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				$templateMgr->assign_by_ref('publicationPayment', $completedPaymentDAO->getPublicationCompletedPayment ( $journal->getJournalId(), $articleId ));
 			}				   
 		}		
+
+		$templateMgr->assign('canEditMetadata', true);
 
 		$templateMgr->display('sectionEditor/submission.tpl');
 	}

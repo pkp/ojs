@@ -210,9 +210,9 @@ function moveAuthor(dir, authorIndex) {
 {if $section->getMetaIndexed()==1}
 <div id="indexing">
 	<h3>{translate key="submission.indexing"}</h3>
-	{if $journalSettings.metaDiscipline || $journalSettings.metaSubjectClass || $journalSettings.metaSubject || $journalSettings.metaCoverage || $journalSettings.metaType}<p>{translate key="author.submit.submissionIndexingDescription"}</p>{/if}
+	{if $currentJournal->getSetting('metaDiscipline') || $currentJournal->getSetting('metaSubjectClass') || $currentJournal->getSetting('metaSubject') || $currentJournal->getSetting('metaCoverage') || $currentJournal->getSetting('metaType')}<p>{translate key="author.submit.submissionIndexingDescription"}</p>{/if}
 	<table width="100%" class="data">
-	{if $journalSettings.metaDiscipline}
+	{if $currentJournal->getSetting('metaDiscipline')}
 	<tr valign="top">
 		<td{if $currentJournal->getLocalizedSetting('metaDisciplineExamples') != ''} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="discipline" key="article.discipline"}</td>
 		<td width="80%" class="value"><input type="text" class="textField" name="discipline[{$formLocale|escape}]" id="discipline" value="{$discipline[$formLocale]|escape}" size="40" maxlength="255" /></td>
@@ -228,7 +228,7 @@ function moveAuthor(dir, authorIndex) {
 	</tr>
 	{/if}
 	
-	{if $journalSettings.metaSubjectClass}
+	{if $currentJournal->getSetting('metaSubjectClass')}
 	<tr valign="top">
 		<td rowspan="2" width="20%" class="label">{fieldLabel name="subjectClass" key="article.subjectClassification"}</td>
 		<td width="80%" class="value"><input type="text" class="textField" name="subjectClass[{$formLocale|escape}]" id="subjectClass" value="{$subjectClass[$formLocale]|escape}" size="40" maxlength="255" /></td>
@@ -242,7 +242,7 @@ function moveAuthor(dir, authorIndex) {
 	</tr>
 	{/if}
 	
-	{if $journalSettings.metaSubject}
+	{if $currentJournal->getSetting('metaSubject')}
 	<tr valign="top">
 		<td{if $currentJournal->getLocalizedSetting('metaSubjectExamples') != ''} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="subject" key="article.subject"}</td>
 		<td width="80%" class="value"><input type="text" class="textField" name="subject[{$formLocale|escape}]" id="subject" value="{$subject[$formLocale]|escape}" size="40" maxlength="255" /></td>
@@ -258,7 +258,7 @@ function moveAuthor(dir, authorIndex) {
 	</tr>
 	{/if}
 	
-	{if $journalSettings.metaCoverage}
+	{if $currentJournal->getSetting('metaCoverage')}
 	<tr valign="top">
 		<td{if $currentJournal->getLocalizedSetting('metaCoverageGeoExamples') != ''} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="coverageGeo" key="article.coverageGeo"}</td>
 		<td width="80%" class="value"><input type="text" class="textField" name="coverageGeo[{$formLocale|escape}]" id="coverageGeo" value="{$coverageGeo[$formLocale]|escape}" size="40" maxlength="255" /></td>
@@ -300,7 +300,7 @@ function moveAuthor(dir, authorIndex) {
 	</tr>
 	{/if}
 	
-	{if $journalSettings.metaType}
+	{if $currentJournal->getSetting('metaType')}
 	<tr valign="top">
 		<td width="20%" {if $currentJournal->getLocalizedSetting('metaTypeExamples') != ''}rowspan="2" {/if}class="label">{fieldLabel name="type" key="article.type"}</td>
 		<td width="80%" class="value"><input type="text" class="textField" name="type[{$formLocale|escape}]" id="type" value="{$type[$formLocale]|escape}" size="40" maxlength="255" /></td>
@@ -343,7 +343,7 @@ function moveAuthor(dir, authorIndex) {
 </div>
 <div class="separator"></div>
 
-{if $journalSettings.metaCitations}
+{if $currentJournal->getSetting('metaCitations')}
 <div id="metaCitations">
 <h3>{translate key="submission.citations"}</h3>
 

@@ -4,7 +4,7 @@
  * Copyright (c) 2003-2009 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * View (but not edit) metadata of an article.
+ * View (but not edit) metadata of an article. Used by MetadataForm.
  *
  * $Id$
  *}
@@ -18,16 +18,6 @@
 <h3>{translate key="article.authors"}</h3>
 	
 <table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
-		<td width="80%" class="value">
-			{url|assign:"formUrl" path=$articleId escape=false}
-			<form name="metadata" action="{$formUrl}" method="post">
-			{form_language_chooser form="metadata" url=$formUrl}
-			<span class="instruct">{translate key="form.formLanguage.description"}</span>
-			</form>
-		</td>
-	</tr>
 	{foreach name=authors from=$authors key=authorIndex item=author}
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="user.name"}</td>
@@ -116,7 +106,7 @@
 <h3>{translate key="submission.indexing"}</h3>
 	
 <table width="100%" class="data">
-	{if $journalSettings.metaDiscipline}
+	{if $currentJournal->getSetting('metaDiscipline')}
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="article.discipline"}</td>
 		<td width="80%" class="value">{$discipline[$formLocale]|escape|default:"&mdash;"}</td>
@@ -125,7 +115,7 @@
 		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	{/if}
-	{if $journalSettings.metaSubjectClass}
+	{if $currentJournal->getSetting('metaSubjectClass')}
 	<tr valign="top">
 		<td colspan="2" class="label"><a href="{$currentJournal->getLocalizedSetting('metaSubjectClassUrl')|escape}" target="_blank">{$currentJournal->getLocalizedSetting('metaSubjectClassTitle')|escape}</a></td>
 	</tr>
@@ -137,7 +127,7 @@
 		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	{/if}
-	{if $journalSettings.metaSubject}
+	{if $currentJournal->getSetting('metaSubject')}
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="article.subject"}</td>
 		<td width="80%" class="value">{$subject[$formLocale]|escape|default:"&mdash;"}</td>
@@ -146,7 +136,7 @@
 		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	{/if}
-	{if $journalSettings.metaCoverage}
+	{if $currentJournal->getSetting('metaCoverage')}
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="article.coverageGeo"}</td>
 		<td width="80%" class="value">{$coverageGeo[$formLocale]|escape|default:"&mdash;"}</td>
@@ -169,7 +159,7 @@
 		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	{/if}
-	{if $journalSettings.metaType}
+	{if $currentJournal->getSetting('metaType')}
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="article.type"}</td>
 		<td width="80%" class="value">{$type[$formLocale]|escape|default:"&mdash;"}</td>
