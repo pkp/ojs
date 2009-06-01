@@ -75,8 +75,9 @@ class GroupHandler extends ManagerHandler {
 	 */
 	function moveGroup() {
 		$groupId = (int) Request::getUserVar('groupId');
-		list($journal, $group) = $this->validate($groupId);
+		$this->validate($groupId);
 
+		$group =& $this->group;
 		$groupDao =& DAORegistry::getDAO('GroupDAO');
 		$group->setSequence($group->getSequence() + (Request::getUserVar('d') == 'u' ? -1.5 : 1.5));
 		$groupDao->updateObject($group);
