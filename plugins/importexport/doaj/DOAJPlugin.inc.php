@@ -135,7 +135,7 @@ class DOAJPlugin extends ImportExportPlugin {
 			$paramArray = array(
 				'username' => $user->getFirstName() . ' ' . $user->getLastName(),
 				'journalName' => $journal->getLocalizedTitle(),
-				'isOpenAccess' => $journal->getSetting('enableSubscriptions') == PUBLISHING_MODE_OPEN ? 'Yes' : 'No',
+				'isOpenAccess' => $journal->getSetting('publishingMode') == PUBLISHING_MODE_OPEN ? 'Yes' : 'No',
 				'altTitle' => $journal->getLocalizedSetting('abbreviation'),
 				'journalURL' => $journal->getUrl(),
 				'hasAuthorFee' => $journal->getSetting('submissionFee') > 0 ? 'Yes' : 'No',
