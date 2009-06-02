@@ -48,12 +48,12 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	}
 
 	/**
-	 * Retrieve individual subscription by user ID.
+	 * Retrieve individual subscription by user ID for journal.
 	 * @param $userId int
 	 * @param $journalId int
 	 * @return IndividualSubscriptions
 	 */
-	function &getSubscriptionByUser($userId, $journalId) {
+	function &getSubscriptionByUserForJournal($userId, $journalId) {
 		$result = &$this->retrieveRange(
 			'SELECT s.*
 			FROM
@@ -134,11 +134,11 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	}
 
 	/**
-	 * Return number of individual subscriptions with given status.
+	 * Return number of individual subscriptions with given status for journal.
 	 * @param status int 
 	 * @return int
 	 */
-	function getStatusCount($status) {
+	function getStatusCount($journalId, $status) {
 		$result = &$this->retrieve(
 			'SELECT COUNT(*)
 			FROM
@@ -146,8 +146,12 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 			subscription_types st
 			WHERE s.type_id = st.type_id
 			AND st.institutional = 0
+			AND s.journal_id = ?
 			AND s.status = ?',
-			$status
+			array (
+				$journalId,
+				$status
+			)
 		);
 
 		$returner = isset($result->fields[0]) ? $result->fields[0] : 0;
@@ -184,12 +188,42 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	}
 
 	/**
+	 * Check if an individual subscription exists for a given user.
+	 * @param $subscriptionId int
+	 * @param $userId int
+	 * @return boolean
+	 */
+	function subscriptionExistsByUser($subscriptionId, $userId) {
+		$result = &$this->retrieve(
+			'SELECT COUNT(*)
+			FROM
+			subscriptions s,
+			subscription_types st
+			WHERE s.type_id = st.type_id
+			AND st.institutional = 0
+			AND s.subscription_id = ?
+			AND s.user_id = ?',
+			array(
+				$subscriptionId,
+				$userId
+			)
+		);
+
+		$returner = isset($result->fields[0]) && $result->fields[0] != 0 ? true : false;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
+	}
+
+	/**
 	 * Check if an individual subscription exists for a given user and journal.
 	 * @param $userId int
 	 * @param $journalId int
 	 * @return boolean
 	 */
-	function subscriptionExistsByUser($userId, $journalId) {
+	function subscriptionExistsByUserForJournal($userId, $journalId) {
 		$result = &$this->retrieve(
 			'SELECT COUNT(*)
 			FROM

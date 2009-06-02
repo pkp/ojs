@@ -293,8 +293,10 @@ class SubscriptionForm extends Form {
 		import('mail.MailTemplate');
 		$mail = new MailTemplate($mailTemplateKey);
 		$mail->setFrom($subscriptionEmail, $subscriptionName);
-		$mail->assignParams($paramArray);
 		$mail->addRecipient($user->getEmail(), $user->getFullName());
+		$mail->setSubject($mail->getSubject($journal->getPrimaryLocale()));
+		$mail->setBody($mail->getBody($journal->getPrimaryLocale()));
+		$mail->assignParams($paramArray);
 
 		return $mail;
 	}

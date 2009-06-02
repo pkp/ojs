@@ -210,6 +210,7 @@
 	<message key="user.showAllJournals">Show My Journals</message>
 	<message key="user.registerForOtherJournals">Register for Other Journals</message>
 	<message key="user.myJournals">My Journals</message>
+	<message key="user.manageMySubscriptions">Manage My Subscriptions</message>
 	<message key="user.noRoles.chooseJournal">Your account is not currently associated with any journals. Please choose a journal:</message>
 	<message key="user.noRoles.noRolesForJournal">Your account does not currently have any roles for this journal. Please choose from the actions below:</message>
 	<message key="user.noRoles.submitArticle">Submit a Proposal</message>
@@ -261,6 +262,7 @@
 	<message key="subscriptionTypes.format.printOnline">Print and Online</message>
 
 	<!-- Common Subscription Terms -->
+	<message key="subscriptions.inactive">Inactive</message>
 	<message key="subscriptions.status">Status</message>
 	<message key="subscriptions.status.active">Active</message>
 	<message key="subscriptions.status.needsInformation">Needs Information</message>
@@ -268,6 +270,9 @@
 	<message key="subscriptions.status.awaitingManualPayment">Awaiting Manual Payment</message>
 	<message key="subscriptions.status.awaitingOnlinePayment">Awaiting Online Payment</message>
 	<message key="subscriptions.status.other">Other, See Notes</message>
+	<message key="subscriptions.individualDescription">Individual subscriptions require login to access subscription content.</message>
+	<message key="subscriptions.institutionalDescription">Institutional subscriptions do not require login. The user's domain and/or IP address is used to provide access to subscription content.</message>
+	<message key="subscriptions.institutionalOnlinePaymentDescription"><![CDATA[<strong>Note:</strong> Institutional subscriptions purchased online require approval of the domain and IP ranges before the subscription is activated.]]></message>
 
 	<!--
 	 *
@@ -723,6 +728,36 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="user.register.reviewerDescriptionNoInterests">Willing to conduct peer review of submissions to the journal.</message>
 	<message key="user.register.reviewerDescription">Willing to conduct peer review of submissions to the journal. Identify reviewing interests (substantive areas and research methods).</message>
 
+	<!-- Subscriptions -->
+	<message key="user.subscriptions.mySubscriptions">My Subscriptions</message>
+	<message key="user.subscriptions.individualSubscriptions">Individual Subscription</message>
+	<message key="user.subscriptions.institutionalSubscriptions">Institutional Subscriptions</message>
+	<message key="user.subscriptions.renew">Renew</message>
+	<message key="user.subscriptions.purchase">Purchase</message>
+	<message key="user.subscriptions.purchaseIndividualSubscription">Purchase Individual Subscription</message>
+	<message key="user.subscriptions.purchaseInstitutionalSubscription">Purchase Institutional Subscription</message>
+	<message key="user.subscriptions.expires">Expires</message>
+	<message key="user.subscriptions.expired">Expired</message>
+	<message key="user.subscriptions.viewSubscriptionTypes">View Available Subscription Types</message>
+	<message key="user.subscriptions.form.typeId">Subscription Type</message>
+	<message key="user.subscriptions.form.membership">Membership</message>
+	<message key="user.subscriptions.form.membershipRequired">The selected subscription type requires membership information.</message>
+	<message key="user.subscriptions.form.typeIdValid">Please select a valid subscription type.</message>
+	<message key="user.subscriptions.form.subscriptionExists">This user account already has an individual subscription.</message>
+	<message key="user.subscriptions.form.membershipInstructions">Membership information if required for the selected subscription type.</message>
+	<message key="user.subscriptions.form.institutionName">Institution name</message>
+	<message key="user.subscriptions.form.institutionNameRequired">An institution name is required.</message>
+	<message key="user.subscriptions.form.institutionMailingAddress">Mailing address</message>
+	<message key="user.subscriptions.form.domain">Domain</message>
+	<message key="user.subscriptions.form.domainInstructions"><![CDATA[If a domain is entered here, IP ranges are optional.<br />Valid values are domain names (e.g. lib.sfu.ca).]]></message>
+	<message key="user.subscriptions.form.domainIPRangeRequired">The selected subscription type requires a domain and/or an IP range for subscription authentication.</message>
+	<message key="user.subscriptions.form.domainValid">Please enter a valid domain.</message>
+	<message key="user.subscriptions.form.ipRange">IP ranges</message>
+	<message key="user.subscriptions.form.ipRangeItem"><![CDATA[&#8226;]]></message>
+	<message key="user.subscriptions.form.ipRangeInstructions"><![CDATA[If IP ranges are entered here, the domain is optional.<br />Valid values include an IP address (e.g. 142.58.103.1), IP range (e.g. 142.58.103.1 - 142.58.103.4), IP range with wildcard '*' (e.g. 142.58.*.*), and an IP range with CIDR (e.g. 142.58.100.0/24).]]></message>
+	<message key="user.subscriptions.form.ipRangeValid">Please enter a valid IP range.</message>
+	<message key="user.subscriptions.form.deleteIpRange">Delete</message>
+	<message key="user.subscriptions.form.addIpRange">Add</message>
 
 
 	<!-- Search -->
@@ -862,6 +897,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="payment.membership.renewMembership">Renew Individual Membership</message>	
 	<message key="payment.membership.ends">Ends</message>
 
+	<message key="payment.subscription.purchase">Purchase Subscription</message>
 	<message key="payment.subscription.renew">Renew Subscription</message>
 	<message key="payment.subscription.expires">Expires</message>	
 

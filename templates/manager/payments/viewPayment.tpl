@@ -65,9 +65,13 @@
 					-
 				{/if}
 		</tr>
-						
 		{if $payment->isSubscription()}
-		<tr><td colspan="2"><a class="action" href="{url page="subscriptionManager" op="editSubscription" path=$payment->getAssocId() }" >{translate key="manager.payment.editSubscription"}</a></td></tr>
+			{assign var=subscriptionId value=$payment->getAssocId()}
+			{if $individualSubscriptionDao->subscriptionExists($subscriptionId)}
+				<tr><td colspan="2"><a class="action" href="{url page="subscriptionManager" op="editSubscription" path="individual"|to_array:$subscriptionId}">{translate key="manager.payment.editSubscription"}</a></td></tr>
+			{elseif $institutionalSubscriptionDao->subscriptionExists($subscriptionId)}
+				<tr><td colspan="2"><a class="action" href="{url page="subscriptionManager" op="editSubscription" path="institutional"|to_array:$subscriptionId}">{translate key="manager.payment.editSubscription"}</a></td></tr>
+			{/if}
 		{/if}
 		<tr>
 			<td colspan="2" class="endseparator">&nbsp;</td>

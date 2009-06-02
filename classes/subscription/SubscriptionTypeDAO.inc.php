@@ -359,19 +359,52 @@ class SubscriptionTypeDAO extends DAO {
 	 * @return object DAOResultFactory containing matching SubscriptionTypes
 	 */
 	function &getSubscriptionTypesByInstitutional($journalId, $institutional = false, $rangeInfo = null) {
-		if ($institutional) {
-			$result = &$this->retrieveRange(
-				'SELECT * FROM subscription_types WHERE journal_id = ? AND institutional = 1 ORDER BY seq',
-				$journalId, $rangeInfo
+		if ($institutional) $institutional = 1; else $institutional = 0;
+
+		$result = &$this->retrieveRange(
+			'SELECT *
+			FROM
+			subscription_types
+			WHERE journal_id = ?
+			AND institutional = ?
+			ORDER BY seq',
+			array(
+				$journalId,
+				$institutional
+			),
+			$rangeInfo
 			);
-		} else {
-			$result = &$this->retrieveRange(
-				'SELECT * FROM subscription_types WHERE journal_id = ? AND institutional = 0 ORDER BY seq',
-				$journalId, $rangeInfo
-			);
-		}
 
 		$returner = new DAOResultFactory($result, $this, '_returnSubscriptionTypeFromRow');
+		return $returner;
+	}
+
+	/**
+	 * Check if at least one subscription type exists for a given journal by institutional flag.
+	 * @param $journalId int
+	 * @param $institutional bool
+	 * @return boolean
+	 */
+	function subscriptionTypesExistByInstitutional($journalId, $institutional = false) {
+		if ($institutional) $institutional = 1; else $institutional = 0;
+
+		$result = &$this->retrieve(
+			'SELECT COUNT(*)
+			FROM
+			subscription_types st
+			WHERE st.journal_id = ?
+			AND st.institutional = ?',
+			array(
+				$journalId,
+				$institutional
+			)
+		);
+
+		$returner = isset($result->fields[0]) && $result->fields[0] != 0 ? true : false;
+
+		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 

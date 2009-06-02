@@ -50,7 +50,7 @@
 	<message key="manager.payment.noPayments">No Payments</message>
 	<message key="manager.payment.notFound">Not Found</message>
 	<message key="manager.payment.options">Options</message>
-	<message key="manager.payment.options.acceptSubscriptionPayments">This will activate payments for Subscriptions, where types, cost, duration and subscribers are managed by the Subscription Manager.</message>
+	<message key="manager.payment.options.acceptSubscriptionPayments">This will activate payments for Subscriptions, where types, cost, duration and subscriptions are managed by the Journal (Subscription) Manager.</message>
 	<message key="manager.payment.options.donationFee">Donations to journal</message>
 	<message key="manager.payment.options.enablePayments">Click here to enable the Payments module.  You must configure payment settings by filling in the form below.  Note Users will be required to log in to make payments.</message>
 	<message key="manager.payment.options.fastTrackFee">Fast-Track Review</message>
@@ -541,6 +541,14 @@
 	<message key="manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid">Please select a valid value for the number of weeks before subscription expiry.</message>
 	<message key="manager.subscriptionPolicies.openAccessNotificationDescription">Registered readers will have the option of receiving the table of contents by email when an issue becomes open access.</message>
 	<message key="manager.subscriptionPolicies.openAccessNotificationDisabled"><![CDATA[<strong>Note:</strong> To activate this option, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></message>
+	<message key="manager.subscriptionPolicies.onlinePaymentNotifications">Online Payment Notifications</message>
+	<message key="manager.subscriptionPolicies.onlinePaymentNotificationsDescription">Automated email notifications (available for editing by Journal Managers in OJS's Prepared Emails) can be sent to the Subscription Manager upon the completion of subscription online payments.</message>
+	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual">Notify Subscription Manager by email upon online purchase of an Individual subscription.</message>
+	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional">Notify Subscription Manager by email upon online purchase of an Institutional subscription (recommended).</message>
+	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual">Notify Subscription Manager by email upon online renewal of an Individual subscription.</message>
+	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional">Notify Subscription Manager by email upon online renewal of an Institutional subscription.</message>
+	<message key="manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"><![CDATA[<strong>Note:</strong> Institutional subscriptions purchased online require approval of the provided domain and IP ranges and activation of the subscription by the Subscription Manager.]]></message>
+	<message key="manager.subscriptionPolicies.onlinePaymentDisabled"><![CDATA[<strong>Note:</strong> To enable these options, the Journal Manager must enable the online payments module, including online payments for subscriptions, under Reader Fees.]]></message>
 	<message key="manager.subscriptionPolicies.openAccessOptions">Open Access Options For Subscription Journals</message>
 	<message key="manager.subscriptionPolicies.openAccessOptionsDescription">Subscription journals can provide "delayed open access" to their published content, as well as permit "author self-archiving" (both of which increase readership and citation of content).</message>
 	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformation">Subscription Information</message>

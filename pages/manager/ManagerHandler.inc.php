@@ -35,8 +35,8 @@ class ManagerHandler extends Handler {
 		$journal =& Request::getJournal();
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('roleSettings', $this->retrieveRoleAssignmentPreferences($journal->getJournalId()));
-		$templateMgr->assign('subscriptionsEnabled', $journal->getSetting('subscriptionsEnabled'));
-		$templateMgr->assign('announcementsEnabled', $journal->getSetting('announcementsEnabled'));
+		$templateMgr->assign('subscriptionsEnabled', $journal->getSetting('enableSubscriptions'));
+		$templateMgr->assign('announcementsEnabled', $journal->getSetting('enableAnnouncements'));
 		$session =& Request::getSession();
 		$session->unsetSessionVar('enrolmentReferrer');
 

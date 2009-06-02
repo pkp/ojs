@@ -51,6 +51,7 @@
 		// -->
 		{/literal}
 	</script>
+
 <div id="subscriptionContact">
 <h3>{translate key="manager.subscriptionPolicies.subscriptionContact"}</h3>
 <p>{translate key="manager.subscriptionPolicies.subscriptionContactDescription"}</p>
@@ -90,7 +91,7 @@
 
 <div class="separator"></div>
 
-<div id="subscriptionAdditionalInformation">
+<div id="additionalInformation">
 <h3>{translate key="manager.subscriptionPolicies.subscriptionAdditionalInformation"}</h3>
 <p>{translate key="manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"}</p>
 <p>
@@ -134,12 +135,12 @@
 	</tr>
 </table>
 </div>
+
 <div class="separator"></div>
 
 <div id="expiryReminders">
 <h3>{translate key="manager.subscriptionPolicies.expiryReminders"}</h3>
 <p>{translate key="manager.subscriptionPolicies.expiryRemindersDescription"}</p>
-
 <p>
 	<input type="checkbox" name="enableSubscriptionExpiryReminderBeforeMonths" id="enableSubscriptionExpiryReminderBeforeMonths" value="1" onclick="toggleAllowSetBeforeMonthsReminder(this.form)"{if !$scheduledTasksEnabled} disabled="disabled" {elseif $enableSubscriptionExpiryReminderBeforeMonths} checked="checked"{/if} />&nbsp;
 	<label for="enableSubscriptionExpiryReminderBeforeMonths">{translate key="manager.subscriptionPolicies.expiryReminderBeforeMonths1"}</label>
@@ -168,6 +169,38 @@
 {if !$scheduledTasksEnabled}
 	<br/>
 	{translate key="manager.subscriptionPolicies.expiryRemindersDisabled"}
+{/if}
+</div>
+
+<div class="separator"></div>
+
+<div id="onlinePaymentNotifications">
+<h3>{translate key="manager.subscriptionPolicies.onlinePaymentNotifications"}</h3>
+<p>{translate key="manager.subscriptionPolicies.onlinePaymentNotificationsDescription"}</p>
+{if $journalPaymentsEnabled && $acceptSubscriptionPayments}
+{assign var=paymentsEnabled value=true}
+{/if}
+<p>
+	<input type="checkbox" name="enableSubscriptionOnlinePaymentNotificationPurchaseIndividual" id="enableSubscriptionOnlinePaymentNotificationPurchaseIndividual" value="1" {if !$paymentsEnabled} disabled="disabled" {elseif $enableSubscriptionOnlinePaymentNotificationPurchaseIndividual} checked="checked"{/if} />
+	<label for="enableSubscriptionOnlinePaymentNotificationPurchaseIndividual">{translate key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"}</label>
+</p>
+<p>
+	<input type="checkbox" name="enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional" id="enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional" value="1" {if !$paymentsEnabled} disabled="disabled" {elseif $enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional} checked="checked"{/if} />
+	<label for="enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional">{translate key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"}</label>
+</p>
+<p>
+	<input type="checkbox" name="enableSubscriptionOnlinePaymentNotificationRenewIndividual" id="enableSubscriptionOnlinePaymentNotificationRenewIndividual" value="1" {if !$paymentsEnabled} disabled="disabled" {elseif $enableSubscriptionOnlinePaymentNotificationRenewIndividual} checked="checked"{/if} />
+	<label for="enableSubscriptionOnlinePaymentNotificationRenewIndividual">{translate key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"}</label>
+</p>
+<p>
+	<input type="checkbox" name="enableSubscriptionOnlinePaymentNotificationRenewInstitutional" id="enableSubscriptionOnlinePaymentNotificationRenewInstitutional" value="1" {if !$paymentsEnabled} disabled="disabled" {elseif $enableSubscriptionOnlinePaymentNotificationRenewInstitutional} checked="checked"{/if} />
+	<label for="enableSubscriptionOnlinePaymentNotificationRenewInstitutional">{translate key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"}</label>
+</p>
+{translate key="manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"}
+<br />
+{if !$paymentsEnabled}
+	<br />
+	{translate key="manager.subscriptionPolicies.onlinePaymentDisabled"}
 {/if}
 </div>
 

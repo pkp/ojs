@@ -37,9 +37,11 @@
 </p>
 </div>
 
+<a name="subscriptionTypes" id="subscriptionTypes"></a>
 {if !$individualSubscriptionTypes->wasEmpty()}
 <div id="availableSubscriptionTypes">
 <h3>{translate key="about.subscriptions.individual"}</h3>
+<p>{translate key="subscriptions.individualDescription"}</p>
 <table width="100%" class="listing">
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
@@ -71,6 +73,7 @@
 
 {if !$institutionalSubscriptionTypes->wasEmpty()}
 <h3>{translate key="about.subscriptions.institutional"}</h3>
+<p>{translate key="subscriptions.institutionalDescription"}</p>
 <table width="100%" class="listing">
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>

@@ -17,13 +17,14 @@
 import('payment.ojs.OJSQueuedPayment');
 import('payment.PaymentManager');
 
-define('PAYMENT_TYPE_MEMBERSHIP',	0x000000001 );
-define('PAYMENT_TYPE_SUBSCRIPTION',	0x000000002 );
-define('PAYMENT_TYPE_PURCHASE_ARTICLE',	0x000000003 );
-define('PAYMENT_TYPE_DONATION',		0x000000004 );
-define('PAYMENT_TYPE_SUBMISSION',	0x000000005 );
-define('PAYMENT_TYPE_FASTTRACK',	0x000000006 );
-define('PAYMENT_TYPE_PUBLICATION',	0x000000007 );
+define('PAYMENT_TYPE_MEMBERSHIP',			0x000000001 );
+define('PAYMENT_TYPE_RENEW_SUBSCRIPTION',	0x000000002 );
+define('PAYMENT_TYPE_PURCHASE_ARTICLE',		0x000000003 );
+define('PAYMENT_TYPE_DONATION',				0x000000004 );
+define('PAYMENT_TYPE_SUBMISSION',			0x000000005 );
+define('PAYMENT_TYPE_FASTTRACK',			0x000000006 );
+define('PAYMENT_TYPE_PUBLICATION',			0x000000007 );
+define('PAYMENT_TYPE_PURCHASE_SUBSCRIPTION',0x000000008 );
 
 class OJSPaymentManager extends PaymentManager {
 	function &getManager() {
@@ -51,8 +52,11 @@ class OJSPaymentManager extends PaymentManager {
 				$payment->setRequestUrl(Request::url(null, 'article', 'view', $assocId ) );
 				break;
 			case PAYMENT_TYPE_MEMBERSHIP:
-			case PAYMENT_TYPE_SUBSCRIPTION:
 				$payment->setRequestUrl(Request::url(null, 'user') );
+				break;
+			case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
+			case PAYMENT_TYPE_RENEW_SUBSCRIPTION:
+				$payment->setRequestUrl(Request::url(null, 'user', 'subscriptions') );
 				break;
 			case PAYMENT_TYPE_DONATION:
 				$payment->setRequestUrl(Request::url(null, 'donations', 'thankYou') );
@@ -150,14 +154,58 @@ class OJSPaymentManager extends PaymentManager {
 				$userDao->renewMembership($user);
 				$returner = true;
 				break;
-			case PAYMENT_TYPE_SUBSCRIPTION:
+			case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
 				$subscriptionId = $queuedPayment->getAssocId();
-				$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+				$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 				$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 				if ($institutionalSubscriptionDao->subscriptionExists($subscriptionId)) {
 					$subscription =& $institutionalSubscriptionDao->getSubscription($subscriptionId);
 					$institutional = true;
 				} else {
+					$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+					$subscription =& $individualSubscriptionDao->getSubscription($subscriptionId);
+					$institutional = false;
+				} 
+				if (!$subscription || $subscription->getUserId() != $queuedPayment->getUserId() || $subscription->getJournalId() != $queuedPayment->getJournalId()) {
+					// FIXME: Is this supposed to be here?
+					error_log(print_r($subscription, true));
+					return false;
+				}
+				// Update subscription end date now that payment is completed
+				if ($institutional) {
+					// Still requires approval from JM/SM since includes domain and IP ranges
+					import('subscription.InstitutionalSubscription');
+					$subscription->setStatus(SUBSCRIPTION_STATUS_NEEDS_APPROVAL);
+					$institutionalSubscriptionDao->renewSubscription($subscription);
+
+					// Notify JM/SM of completed online purchase
+					$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+					if ($journalSettingsDao->getSetting($subscription->getJournalId(), 'enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional')) {
+						import('subscription.SubscriptionAction');
+						SubscriptionAction::sendOnlinePaymentNotificationEmail($subscription, 'SUBSCRIPTION_PURCHASE_INSTITUTIONAL');
+					}
+				} else {
+					import('subscription.IndividualSubscription');
+					$subscription->setStatus(SUBSCRIPTION_STATUS_ACTIVE);
+					$individualSubscriptionDao->renewSubscription($subscription);
+
+					// Notify JM/SM of completed online purchase
+					$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+					if ($journalSettingsDao->getSetting($subscription->getJournalId(), 'enableSubscriptionOnlinePaymentNotificationPurchaseIndividual')) {
+						import('subscription.SubscriptionAction');
+						SubscriptionAction::sendOnlinePaymentNotificationEmail($subscription, 'SUBSCRIPTION_PURCHASE_INDIVIDUAL');
+					}
+				}
+				$returner = true;
+				break;
+			case PAYMENT_TYPE_RENEW_SUBSCRIPTION:
+				$subscriptionId = $queuedPayment->getAssocId();
+				$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+				if ($institutionalSubscriptionDao->subscriptionExists($subscriptionId)) {
+					$subscription =& $institutionalSubscriptionDao->getSubscription($subscriptionId);
+					$institutional = true;
+				} else {
+					$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 					$subscription =& $individualSubscriptionDao->getSubscription($subscriptionId);
 					$institutional = false;
 				} 
@@ -168,8 +216,22 @@ class OJSPaymentManager extends PaymentManager {
 				}
 				if ($institutional) {
 					$institutionalSubscriptionDao->renewSubscription($subscription);
+
+					// Notify JM/SM of completed online purchase
+					$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+					if ($journalSettingsDao->getSetting($subscription->getJournalId(), 'enableSubscriptionOnlinePaymentNotificationRenewInstitutional')) {
+						import('subscription.SubscriptionAction');
+						SubscriptionAction::sendOnlinePaymentNotificationEmail($subscription, 'SUBSCRIPTION_RENEW_INSTITUTIONAL');
+					}
 				} else {
 					$individualSubscriptionDao->renewSubscription($subscription);
+
+					// Notify JM/SM of completed online purchase
+					$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+					if ($journalSettingsDao->getSetting($subscription->getJournalId(), 'enableSubscriptionOnlinePaymentNotificationRenewIndividual')) {
+						import('subscription.SubscriptionAction');
+						SubscriptionAction::sendOnlinePaymentNotificationEmail($subscription, 'SUBSCRIPTION_RENEW_INDIVIDUAL');
+					}
 				}
 				$returner = true;
 				break;

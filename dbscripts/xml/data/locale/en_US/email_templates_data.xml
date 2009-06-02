@@ -935,5 +935,105 @@ If you have any questions, please feel free to contact me.
 {$subscriptionContactSignature}</field>
 			<field name="description">This email notifies a subscriber that their subscription has expired. It provides the journal's URL along with instructions for access.</field>
 		</row>
+		<row>
+			<field name="email_key">SUBSCRIPTION_PURCHASE_INDIVIDUAL</field>
+			<field name="subject">Subscription Purchase: Individual</field>
+			<field name="body">An individual subscription has been purchased online for {$journalName} with the following details.
+
+Subscription Type:
+{$subscriptionType}
+
+User:
+{$userDetails}
+
+Membership Information (if provided):
+{$membership}
+
+To view or edit this subscription, please use the following URL.
+
+Subscription URL: {$subscriptionUrl}
+</field>
+			<field name="description">This email notifies the Subscription Manager that an individual subscription has been purchased online. It provides summary information about the subscription and a quick access link to the purchased subscription.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBSCRIPTION_PURCHASE_INSTITUTIONAL</field>
+			<field name="subject">Subscription Purchase: Institutional</field>
+			<field name="body">An institutional subscription has been purchased online for {$journalName} with the following details. To activate this subscription, please use the provided Subscription URL and set the subscription status to 'Active'.
+
+Subscription Type:
+{$subscriptionType}
+
+Institution:
+{$institutionName}
+{$institutionMailingAddress}
+
+Domain (if provided):
+{$domain}
+
+IP Ranges (if provided):
+{$ipRanges}
+
+Contact Person:
+{$userDetails}
+
+Membership Information (if provided):
+{$membership}
+
+To view or edit this subscription, please use the following URL.
+
+Subscription URL: {$subscriptionUrl}
+</field>
+			<field name="description">This email notifies the Subscription Manager that an institutional subscription has been purchased online. It provides summary information about the subscription and a quick access link to the purchased subscription.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBSCRIPTION_RENEW_INDIVIDUAL</field>
+			<field name="subject">Subscription Renewal: Individual</field>
+			<field name="body">An individual subscription has been renewed online for {$journalName} with the following details.
+
+Subscription Type:
+{$subscriptionType}
+
+User:
+{$userDetails}
+
+Membership Information (if provided):
+{$membership}
+
+To view or edit this subscription, please use the following URL.
+
+Subscription URL: {$subscriptionUrl}
+</field>
+			<field name="description">This email notifies the Subscription Manager that an individual subscription has been renewed online. It provides summary information about the subscription and a quick access link to the renewed subscription.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBSCRIPTION_RENEW_INSTITUTIONAL</field>
+			<field name="subject">Subscription Renewal: Institutional</field>
+			<field name="body">An institutional subscription has been renewed online for {$journalName} with the following details.
+
+Subscription Type:
+{$subscriptionType}
+
+Institution:
+{$institutionName}
+{$institutionMailingAddress}
+
+Domain (if provided):
+{$domain}
+
+IP Ranges (if provided):
+{$ipRanges}
+
+Contact Person:
+{$userDetails}
+
+Membership Information (if provided):
+{$membership}
+
+To view or edit this subscription, please use the following URL.
+
+Subscription URL: {$subscriptionUrl}
+</field>
+			<field name="description">This email notifies the Subscription Manager that an institutional subscription has been renewed online. It provides summary information about the subscription and a quick access link to the renewed subscription.</field>
+		</row>
 	</table>
 </data>

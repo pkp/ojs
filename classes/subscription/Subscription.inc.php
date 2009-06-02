@@ -27,6 +27,10 @@ define('SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT', 	0x04);
 define('SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT',	0x05);
 define('SUBSCRIPTION_STATUS_OTHER', 					0x10);
 
+define('SUBSCRIPTION_DATE_START',	0x01);
+define('SUBSCRIPTION_DATE_END',		0x02);
+define('SUBSCRIPTION_DATE_BOTH',	0x03);
+
 define('SUBSCRIPTION_YEAR_OFFSET_PAST',		'-10');
 define('SUBSCRIPTION_YEAR_OFFSET_FUTURE',	'+10');
 
@@ -130,6 +134,16 @@ class Subscription extends DataObject {
 	function getSubscriptionTypeName() {
 		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
 		return $subscriptionTypeDao->getSubscriptionTypeName($this->getData('typeId'));
+	}
+
+	/**
+	 * Get the subscription type name of the subscription.
+	 * @return string
+	 */
+	function getSubscriptionTypeSummaryString() {
+		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($this->getData('typeId'));
+		return $subscriptionType->getSummaryString();
 	}
 
 	/**
@@ -260,6 +274,23 @@ class Subscription extends DataObject {
 		return $this->setData('notes', $notes);
 	}
 
+	/**
+	 * Check whether subscription is expired
+	 */
+	function isExpired() {
+		if (strtotime($this->getData('dateEnd')) < time()) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	/**
+	 * Check whether subscription is valid
+	 */
+	function isValid($check = SUBSCRIPTION_DATE_BOTH, $checkDate = null) {
+		fatalError('Abstract method');
+	}
 }
 
 ?>

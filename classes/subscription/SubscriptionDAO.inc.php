@@ -19,10 +19,6 @@
 import('subscription.Subscription');
 import('subscription.SubscriptionType');
 
-define('SUBSCRIPTION_DATE_START',	0x01);
-define('SUBSCRIPTION_DATE_END',		0x02);
-define('SUBSCRIPTION_DATE_BOTH',	0x03);
-
 define('SUBSCRIPTION_USER',				0x01);
 define('SUBSCRIPTION_MEMBERSHIP',		0x02);
 define('SUBSCRIPTION_REFERENCE_NUMBER',	0x03);
@@ -93,12 +89,22 @@ class SubscriptionDAO extends DAO {
 	}
 
 	/**
-	 * Check if subscription exists given a user and journal.
+	 * Check if subscription exists given a user.
+	 * @param $subscriptionId int
 	 * @param $userId int
-	 * @param $journalId int
 	 * @return boolean
 	 */
-	function subscriptionExistsByUser($userId, $journalId) {
+	function subscriptionExistsByUser($subscriptionId, $userId) {
+		fatalError('Abstract method');
+	}
+
+	/**
+	 * Check if subscription exists given a user and journal.
+	 * @param $subscriptionId int
+	 * @param $userId int
+	 * @return boolean
+	 */
+	function subscriptionExistsByUserForJournal($userId, $journalId) {
 		fatalError('Abstract method');
 	}
 
@@ -419,7 +425,7 @@ class SubscriptionDAO extends DAO {
 		$time = time();
 		if ($dateEnd < $time ) $dateEnd = $time;
 
-		$subscription->setDateEnd($this->dateToDB(mktime(0, 0, 0, date("m", $dateEnd)+$duration, date("d", $dateEnd), date("Y", $dateEnd))));
+		$subscription->setDateEnd(mktime(23, 59, 59, date("m", $dateEnd)+$duration, date("d", $dateEnd), date("Y", $dateEnd)));
 		$this->updateSubscription($subscription);
 	}
 

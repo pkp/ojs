@@ -21,13 +21,19 @@
 
 import('subscription.Subscription');
 
-
 class IndividualSubscription extends Subscription {
 
 	function IndividualSubscription() {
 		parent::Subscription();
 	}
 
+	/**
+	 * Check whether subscription is valid
+	 */
+	function isValid($check = SUBSCRIPTION_DATE_BOTH, $checkDate = null) {
+		$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+		return $subscriptionDao->isValidIndividualSubscription($this->getData('userId'), $this->getData('journalId'), $check, $checkDate);	
+	}
 }
 
 ?>

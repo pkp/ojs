@@ -35,13 +35,31 @@
 	</tr>
 
 	{iterate from=payments item=payment}
+	{assign var=isSubscription value=$payment->isSubscription()}
+	{if $isSubscription}
+		{assign var=subscriptionId value=$payment->getAssocId()}
+		{if $individualSubscriptionDao->subscriptionExists($subscriptionId)}
+			{assign var=isIndividual value=true}
+		{elseif $institutionalSubscriptionDao->subscriptionExists($subscriptionId)}
+			{assign var=isInstitutional value=true}
+		{else}
+			{assign var=isIndividual value=false}
+			{assign var=isInstitutional value=false}
+		{/if}
+	{/if}
 	<tr valign="top">
 		<td>
 			<a class="action" href="{url op="userProfile" path=$payment->getUserId()}">{$payment->getUsername()|escape|wordwrap:15:" ":true}</a>
 		</td>
 		<td>
-			{if $payment->isSubscription()}
-				<a href="{url page="subscriptionManager" op="editSubscription" path=$payment->getAssocId() }" >{$payment->getName()|escape}</a>
+			{if $isSubscription}
+				{if $isIndividual}
+					<a href="{url page="subscriptionManager" op="editSubscription" path="individual"|to_array:$subscriptionId}">{$payment->getName()|escape}</a>
+				{elseif $isInstitutional}
+					<a href="{url page="subscriptionManager" op="editSubscription" path="institutional"|to_array:$subscriptionId}">{$payment->getName()|escape}</a>
+				{else}
+					{$payment->getName()|escape}
+				{/if}
 			{else}
 				{$payment->getName()|escape}
 			{/if}

@@ -92,11 +92,36 @@ class InstitutionalSubscription extends Subscription {
 	}
 
 	/**
+	 * Get institutionalSubscription ip ranges string.
+	 * @return string
+	 */
+	function getIPRangesString() {
+		$ipRanges = $this->getData('ipRanges');
+		$numRanges = count($ipRanges);
+		$ipRangesString = '';
+
+		for($i=0; $i<$numRanges; $i++) {
+			$ipRangesString .= $ipRanges[$i];
+			if ( $i+1 < $numRanges) $ipRangesString .= '\n';
+		}
+
+		return $ipRangesString;
+	}
+
+	/**
 	 * Set institutionalSubscription ip ranges.
 	 * @param ipRanges array 
 	 */
 	function setIPRanges($ipRanges) {
 		return $this->setData('ipRanges', $ipRanges);
+	}
+
+	/**
+	 * Check whether subscription is valid
+	 */
+	function isValid($domain, $IP, $check = SUBSCRIPTION_DATE_BOTH, $checkDate = null) {
+		$subscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+		return $subscriptionDao->isValidInstitutionalSubscription($domain, $IP, $this->getData('journalId'), $check, $checkDate);
 	}
 
 }

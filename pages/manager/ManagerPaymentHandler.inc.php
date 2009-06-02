@@ -90,7 +90,11 @@ class ManagerPaymentHandler extends ManagerHandler {
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
 		$payments =& $paymentDao->getPaymentsByJournalId($journal->getJournalId(), $rangeInfo);
+		$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+		$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 
+		$templateMgr->assign_by_ref('individualSubscriptionDao', $individualSubscriptionDao);
+		$templateMgr->assign_by_ref('institutionalSubscriptionDao', $institutionalSubscriptionDao);
 		$templateMgr->assign_by_ref('payments', $payments);
 
 		$this->setupTemplate(true);
@@ -107,6 +111,11 @@ class ManagerPaymentHandler extends ManagerHandler {
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
+		$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+		$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+
+		$templateMgr->assign_by_ref('individualSubscriptionDao', $individualSubscriptionDao);
+		$templateMgr->assign_by_ref('institutionalSubscriptionDao', $institutionalSubscriptionDao);
 		$templateMgr->assign_by_ref('payment', $payment);
 
 		$this->setupTemplate(true);

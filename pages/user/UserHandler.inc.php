@@ -87,23 +87,14 @@ class UserHandler extends Handler {
 			
 			$this->getRoleDataForJournal($userId, $journalId, $submissionsCount, $isValid);
 			
+			$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
+			$subscriptionsEnabled = $journal->getSetting('enableSubscriptions') && ($subscriptionTypeDAO->subscriptionTypesExistByInstitutional($journalId, false) || $subscriptionTypeDAO->subscriptionTypesExistByInstitutional($journalId, true)) ? true : false;
+			$templateMgr->assign('subscriptionsEnabled', $subscriptionsEnabled);
+
 			import('payment.ojs.OJSPaymentManager');
 			$paymentManager =& OJSPaymentManager::getManager();
 			$membershipEnabled = $paymentManager->membershipEnabled();
 			$templateMgr->assign('membershipEnabled', $membershipEnabled);
-			$subscriptionEnabled = $paymentManager->acceptSubscriptionPayments();
-			$templateMgr->assign('subscriptionEnabled', $subscriptionEnabled);
-
-			if ( $subscriptionEnabled ) {
-				import('subscription.IndividualSubscriptionDAO');
-				$subscriptionDAO =& DAORegistry::getDAO('IndividualSubscriptionDAO');
-				$subscriptionId = $subscriptionDAO->getSubscriptionIdByUser($user->getId(), $journal->getJournalId());
-				$templateMgr->assign('userHasSubscription', $subscriptionId);
-				if ( $subscriptionId !== false ) {
-					$subscription =& $subscriptionDAO->getSubscription($subscriptionId);
-					$templateMgr->assign('subscriptionEndDate', $subscription->getDateEnd());
-				}
-			}
 
 			if ( $membershipEnabled ) {
 				$templateMgr->assign('dateEndMembership', $user->getSetting('dateEndMembership', 0));
@@ -120,6 +111,67 @@ class UserHandler extends Handler {
 		$templateMgr->assign('setupIncomplete', $setupIncomplete); 
 		$templateMgr->assign('isSiteAdmin', $roleDao->getRole(0, $userId, ROLE_ID_SITE_ADMIN));
 		$templateMgr->display('user/index.tpl');
+	}
+
+	/**
+	 * Display subscriptions page 
+	 **/
+	function subscriptions() {
+		$this->validate();
+
+		$journal =& Request::getJournal();
+		if (!$journal) Request::redirect(null, 'user');
+		if (!$journal->getSetting('enableSubscriptions')) Request::redirect(null, 'user');
+		
+		$journalId = $journal->getJournalId();
+		$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$individualSubscriptionTypesExist = $subscriptionTypeDAO->subscriptionTypesExistByInstitutional($journalId, false);
+		$institutionalSubscriptionTypesExist = $subscriptionTypeDAO->subscriptionTypesExistByInstitutional($journalId, true);
+		if (!$individualSubscriptionTypesExist && !$institutionalSubscriptionTypesExist) Request::redirect(null, 'user');
+
+		$user =& Request::getUser();
+		$userId = $user->getId();
+
+		// Subscriptions contact and additional information
+		$subscriptionName = $journal->getSetting('subscriptionName');
+		$subscriptionEmail = $journal->getSetting('subscriptionEmail');
+		$subscriptionPhone = $journal->getSetting('subscriptionPhone');
+		$subscriptionFax = $journal->getSetting('subscriptionFax');
+		$subscriptionMailingAddress = $journal->getSetting('subscriptionMailingAddress');
+		$subscriptionAdditionalInformation = $journal->getLocalizedSetting('subscriptionAdditionalInformation');
+		// Get subscriptions and options for current journal
+		if ($individualSubscriptionTypesExist) {
+			$subscriptionDAO =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+			$userIndividualSubscription =& $subscriptionDAO->getSubscriptionByUserForJournal($userId, $journalId);
+		}
+
+		if ($institutionalSubscriptionTypesExist) {
+			$subscriptionDAO =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+			$userInstitutionalSubscriptions =& $subscriptionDAO->getSubscriptionsByUserForJournal($userId, $journalId);
+		}
+
+		import('payment.ojs.OJSPaymentManager');
+		$paymentManager =& OJSPaymentManager::getManager();
+		$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
+
+		$this->setupTemplate(true);
+		$templateMgr =& TemplateManager::getManager();
+
+		$templateMgr->assign('subscriptionName', $subscriptionName);
+		$templateMgr->assign('subscriptionEmail', $subscriptionEmail);
+		$templateMgr->assign('subscriptionPhone', $subscriptionPhone);
+		$templateMgr->assign('subscriptionFax', $subscriptionFax);
+		$templateMgr->assign('subscriptionMailingAddress', $subscriptionMailingAddress);
+		$templateMgr->assign('subscriptionAdditionalInformation', $subscriptionAdditionalInformation);
+		$templateMgr->assign('journalTitle', $journal->getLocalizedTitle());
+		$templateMgr->assign('journalPath', $journal->getPath());
+		$templateMgr->assign('acceptSubscriptionPayments', $acceptSubscriptionPayments);
+		$templateMgr->assign('individualSubscriptionTypesExist', $individualSubscriptionTypesExist);
+		$templateMgr->assign('institutionalSubscriptionTypesExist', $institutionalSubscriptionTypesExist);
+		$templateMgr->assign_by_ref('userIndividualSubscription', $userIndividualSubscription);
+		$templateMgr->assign_by_ref('userInstitutionalSubscriptions', $userInstitutionalSubscriptions);
+		$templateMgr->display('user/subscriptions.tpl');
+
 	}
 	
 	/**
@@ -336,31 +388,261 @@ class UserHandler extends Handler {
 	//
 	// Payments
 	//
-
-	function payRenewSubscription($args) {
+	function purchaseSubscription($args) {
 		$this->validate();
-		$this->setupTemplate(true);
+
+		if (empty($args)) Request::redirect(null, 'user'); 
+
+		$journal =& Request::getJournal();
+		if (!$journal) Request::redirect(null, 'user');
+		if (!$journal->getSetting('enableSubscriptions')) Request::redirect(null, 'user');
 
 		import('payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
+		$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
+		if (!$acceptSubscriptionPayments) Request::redirect(null, 'user');
 
-		import('subscription.IndividualSubscriptionDAO');
-		$subscriptionDAO =& DAORegistry::getDAO('IndividualSubscriptionDAO');
-		$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$this->setupTemplate(true);
+		$user =& Request::getUser();
+		$userId = $user->getId();
+		$journalId = $journal->getJournalId();
 
-		$journal =& Request::getJournal();
-		if ($journal) {
-			$user =& Request::getUser();
-			$subscriptionId = $subscriptionDAO->getSubscriptionIdByUser($user->getId(), $journal->getJournalId());
-			$subscription =& $subscriptionDAO->getSubscription($subscriptionId);
-			$subscriptionType =& $subscriptionTypeDAO->getSubscriptionType($subscription->getTypeId());
-
-			$queuedPayment =& $paymentManager->createQueuedPayment($journal->getJournalId(), PAYMENT_TYPE_SUBSCRIPTION, $user->getId(), $subscriptionId, $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
-			$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
-
-			$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
+		$institutional = array_shift($args);
+		if (!empty($args)) {
+			$subscriptionId = (int) array_shift($args);
 		}
 
+		if ($institutional == 'institutional') {
+			$institutional = true;
+			import('subscription.form.UserInstitutionalSubscriptionForm');
+			$subscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+		} else {
+			$institutional = false;
+			import('subscription.form.UserIndividualSubscriptionForm');
+			$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+		}
+
+		if (isset($subscriptionId)) {
+			// Ensure subscription to be updated is for this user
+			if (!$subscriptionDao->subscriptionExistsByUser($subscriptionId, $userId)) {
+				Request::redirect(null, 'user');
+			}	
+
+			// Ensure subscription can be updated
+			$subscription =& $subscriptionDao->getSubscription($subscriptionId);
+			$subscriptionStatus = $subscription->getStatus();
+			import('subscription.Subscription');
+			$validStatus = array(SUBSCRIPTION_STATUS_ACTIVE, SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT);
+
+			if (!in_array($subscriptionStatus, $validStatus)) Request::redirect(null, 'user'); 
+
+			if ($institutional) {
+				$subscriptionForm =& new UserInstitutionalSubscriptionForm($userId, $subscriptionId);
+			} else {
+				$subscriptionForm =& new UserIndividualSubscriptionForm($userId, $subscriptionId);
+			}
+
+		} else {
+			if ($institutional) {
+				$subscriptionForm =& new UserInstitutionalSubscriptionForm($userId);
+			} else {
+				// Ensure user does not already have an individual subscription
+				if ($subscriptionDao->subscriptionExistsByUserForJournal($userId, $journalId)) {
+					Request::redirect(null, 'user');
+				}	
+				$subscriptionForm =& new UserIndividualSubscriptionForm($userId);
+			}
+		}
+
+		$subscriptionForm->initData();
+		$subscriptionForm->display();
+	}
+
+	function payPurchaseSubscription($args) {
+		$this->validate();
+
+		if (empty($args)) Request::redirect(null, 'user'); 
+
+		$journal =& Request::getJournal();
+		if (!$journal) Request::redirect(null, 'user');
+		if (!$journal->getSetting('enableSubscriptions')) Request::redirect(null, 'user');
+
+		import('payment.ojs.OJSPaymentManager');
+		$paymentManager =& OJSPaymentManager::getManager();
+		$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
+		if (!$acceptSubscriptionPayments) Request::redirect(null, 'user');
+
+		$this->setupTemplate(true);
+		$user =& Request::getUser();
+		$userId = $user->getId();
+		$journalId = $journal->getJournalId();
+
+		$institutional = array_shift($args);
+		if (!empty($args)) {
+			$subscriptionId = (int) array_shift($args);
+		}
+
+		if ($institutional == 'institutional') {
+			$institutional = true;
+			import('subscription.form.UserInstitutionalSubscriptionForm');
+			$subscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+		} else {
+			$institutional = false;
+			import('subscription.form.UserIndividualSubscriptionForm');
+			$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+		}
+
+		if (isset($subscriptionId)) {
+			// Ensure subscription to be updated is for this user
+			if (!$subscriptionDao->subscriptionExistsByUser($subscriptionId, $userId)) {
+				Request::redirect(null, 'user');
+			}	
+
+			// Ensure subscription can be updated
+			$subscription =& $subscriptionDao->getSubscription($subscriptionId);
+			$subscriptionStatus = $subscription->getStatus();
+			import('subscription.Subscription');
+			$validStatus = array(SUBSCRIPTION_STATUS_ACTIVE, SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT);
+
+			if (!in_array($subscriptionStatus, $validStatus)) Request::redirect(null, 'user'); 
+
+			if ($institutional) {
+				$subscriptionForm =& new UserInstitutionalSubscriptionForm($userId, $subscriptionId);
+			} else {
+				$subscriptionForm =& new UserIndividualSubscriptionForm($userId, $subscriptionId);
+			}
+
+		} else {
+			if ($institutional) {
+				$subscriptionForm =& new UserInstitutionalSubscriptionForm($userId);
+			} else {
+				// Ensure user does not already have an individual subscription
+				if ($subscriptionDao->subscriptionExistsByUserForJournal($userId, $journalId)) {
+					Request::redirect(null, 'user');
+				}	
+				$subscriptionForm =& new UserIndividualSubscriptionForm($userId);
+			}
+		}
+
+		$subscriptionForm->readInputData();
+
+		// Check for any special cases before trying to save
+		if (Request::getUserVar('addIpRange')) {
+			$editData = true;
+			$ipRanges = $subscriptionForm->getData('ipRanges');
+			$ipRanges[] = '';
+			$subscriptionForm->setData('ipRanges', $ipRanges);
+
+		} else if (($delIpRange = Request::getUserVar('delIpRange')) && count($delIpRange) == 1) {
+			$editData = true;
+			list($delIpRange) = array_keys($delIpRange);
+			$delIpRange = (int) $delIpRange;
+			$ipRanges = $subscriptionForm->getData('ipRanges');
+			array_splice($ipRanges, $delIpRange, 1);
+			$subscriptionForm->setData('ipRanges', $ipRanges);
+		}
+
+		if (isset($editData)) {
+			$subscriptionForm->display();
+		} else {
+			if ($subscriptionForm->validate()) {
+				$subscriptionForm->execute();
+			} else {
+				$subscriptionForm->display();
+			}
+		}
+	}
+
+	function completePurchaseSubscription($args) {
+		$this->validate();
+
+		if (count($args) != 2) Request::redirect(null, 'user'); 
+
+		$journal =& Request::getJournal();
+		if (!$journal) Request::redirect(null, 'user');
+		if (!$journal->getSetting('enableSubscriptions')) Request::redirect(null, 'user');
+
+		import('payment.ojs.OJSPaymentManager');
+		$paymentManager =& OJSPaymentManager::getManager();
+		$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
+		if (!$acceptSubscriptionPayments) Request::redirect(null, 'user');
+
+		$this->setupTemplate(true);
+		$user =& Request::getUser();
+		$userId = $user->getId();
+		$journalId = $journal->getJournalId();
+
+		$institutional = array_shift($args);
+		$subscriptionId = (int) array_shift($args);
+
+		if ($institutional == 'institutional') {
+			$subscriptionDAO =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+		} else {
+			$subscriptionDAO =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+		}
+
+		if (!$subscriptionDAO->subscriptionExistsByUser($subscriptionId, $userId)) Request::redirect(null, 'user');
+
+		$subscription =& $subscriptionDAO->getSubscription($subscriptionId);
+		$subscriptionStatus = $subscription->getStatus();
+		import('subscription.Subscription');
+		$validStatus = array(SUBSCRIPTION_STATUS_ACTIVE, SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT);
+
+		if (!in_array($subscriptionStatus, $validStatus)) Request::redirect(null, 'user'); 
+
+		$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionType =& $subscriptionTypeDAO->getSubscriptionType($subscription->getTypeId());
+
+		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getJournalId(), PAYMENT_TYPE_PURCHASE_SUBSCRIPTION, $user->getId(), $subscriptionId, $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
+		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
+
+		$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
+	}
+
+	function payRenewSubscription($args) {
+		$this->validate();
+
+		if (count($args) != 2) Request::redirect(null, 'user'); 
+
+		$journal =& Request::getJournal();
+		if (!$journal) Request::redirect(null, 'user');
+		if (!$journal->getSetting('enableSubscriptions')) Request::redirect(null, 'user');
+
+		import('payment.ojs.OJSPaymentManager');
+		$paymentManager =& OJSPaymentManager::getManager();
+		$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
+		if (!$acceptSubscriptionPayments) Request::redirect(null, 'user');
+
+		$this->setupTemplate(true);
+		$user =& Request::getUser();
+		$userId = $user->getId();
+		$journalId = $journal->getJournalId();
+
+		$institutional = array_shift($args);
+		$subscriptionId = (int) array_shift($args);
+
+		if ($institutional == 'institutional') {
+			$subscriptionDAO =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+		} else {
+			$subscriptionDAO =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+		}
+
+		if (!$subscriptionDAO->subscriptionExistsByUser($subscriptionId, $userId)) Request::redirect(null, 'user');
+
+		$subscription =& $subscriptionDAO->getSubscription($subscriptionId);
+		$subscriptionStatus = $subscription->getStatus();
+		import('subscription.Subscription');
+		$validStatus = array(SUBSCRIPTION_STATUS_ACTIVE, SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT);
+
+		if (!in_array($subscriptionStatus, $validStatus)) Request::redirect(null, 'user'); 
+
+		$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionType =& $subscriptionTypeDAO->getSubscriptionType($subscription->getTypeId());
+
+		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getJournalId(), PAYMENT_TYPE_RENEW_SUBSCRIPTION, $user->getId(), $subscriptionId, $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
+		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
+
+		$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
 	}
 
 	function payMembership($args) {

@@ -212,16 +212,18 @@
 			<li>&#187; <a href="{url journal="index" page="user"}">{translate key="user.showAllJournals"}</a></li>
 		{/if}
 	{/if}
+	{if $currentJournal}
+		{if $subscriptionsEnabled}
+			<li>&#187; <a href="{url page="user" op="subscriptions"}">{translate key="user.manageMySubscriptions"}</a></li>
+		{/if}
+	{/if}
 	<li>&#187; <a href="{url page="user" op="profile"}">{translate key="user.editMyProfile"}</a></li>
 
 	{if !$implicitAuth}
 		<li>&#187; <a href="{url page="user" op="changePassword"}">{translate key="user.changeMyPassword"}</a></li>
 	{/if}
 
-	{if $userJournal}
-		{if $journalPaymentsEnabled && $subscriptionEnabled && $userHasSubscription}
-			<li>&#187; <a href="{url page="user" op="payRenewSubscription"}">{translate key="payment.subscription.renew"}</a> ({translate key="payment.subscription.expires"}: {$subscriptionEndDate|date_format:$dateFormatShort})</li>
-		{/if}
+	{if $currentJournal}
 		{if $journalPaymentsEnabled && $membershipEnabled}
 			{if $dateEndMembership}
 				<li>&#187; <a href="{url page="user" op="payMembership"}">{translate key="payment.membership.renewMembership"}</a> ({translate key="payment.membership.ends"}: {$dateEndMembership|date_format:$dateFormatShort})</li>

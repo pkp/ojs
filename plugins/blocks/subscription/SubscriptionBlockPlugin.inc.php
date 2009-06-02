@@ -74,48 +74,39 @@ class SubscriptionBlockPlugin extends BlockPlugin {
 		$journalId = ($journal)?$journal->getJournalId():null;
 		if (!$journal) return '';
 
+		if (!$journal->getSetting('enableSubscriptions')) return '';
+
 		$user =& Request::getUser();
 		$userId = ($user)?$user->getId():null;
-		
-		$domain = Request::getRemoteDomain();
-		$IP = Request::getRemoteAddr();
+		$templateMgr->assign('userLoggedIn', isset($userId) ? true : false);
 
-		// This replicates the order of SubscriptionDAO::isValidSubscription
-		// Checks for valid Subscription and assigns vars accordingly for display				
-		$subscriptionId = false;
-		$userHasSubscription = false;
-
-		if ($userId != null) {
+		if (isset($userId)) {
 			$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');	
-			$subscriptionId = $subscriptionDao->isValidIndividualSubscription($userId, $journalId);
-			$userHasSubscription = true;
+			$individualSubscription =& $subscriptionDao->getSubscriptionByUserForJournal($userId, $journalId);
+			$templateMgr->assign_by_ref('individualSubscription', $individualSubscription);
 		} 
 
-		if (!$userHasSubscription && ($domain != null || $IP != null)) {
+		// If no individual subscription or if not valid, check for institutional subscription
+		if (!isset($individualSubscription) || !$individualSubscription->isValid()) {
+			$IP = Request::getRemoteAddr();
+			$domain = Request::getRemoteDomain();
 			$subscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');	
 			$subscriptionId = $subscriptionDao->isValidInstitutionalSubscription($domain, $IP, $journalId);
+			if ($subscriptionId) {
+				$institutionalSubscription =& $subscriptionDao->getSubscription($subscriptionId);
+				$templateMgr->assign_by_ref('institutionalSubscription', $institutionalSubscription);
+				$templateMgr->assign('userIP', $IP);
+			}
 		}	
 
-		if ( $subscriptionId !== false ) {
-			$subscription =& $subscriptionDao->getSubscription($subscriptionId);
-			
-			$templateMgr->assign('userHasSubscription', $userHasSubscription);
-			if ($userHasSubscription) {
-				import('payment.ojs.OJSPaymentManager');
-				$paymentManager =& OJSPaymentManager::getManager();
-				$subscriptionEnabled = $paymentManager->acceptSubscriptionPayments();
-				$templateMgr->assign('subscriptionEnabled', $subscriptionEnabled);
-			}
-			
-			$templateMgr->assign('subscriptionMembership', $subscription->getMembership());
-			$templateMgr->assign('subscriptionDateEnd', $subscription->getDateEnd());  
-			$templateMgr->assign('subscriptionTypeName', $subscription->getSubscriptionTypeName());
-			$templateMgr->assign('userIP', $IP);
-			
-			return parent::getContents($templateMgr);	
+		if (isset($individualSubscription) || isset($institutionalSubscription)) {
+			import('payment.ojs.OJSPaymentManager');
+			$paymentManager =& OJSPaymentManager::getManager();
+			$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
+			$templateMgr->assign('acceptSubscriptionPayments', $acceptSubscriptionPayments);
 		}
 
-		return '';
+		return parent::getContents($templateMgr);
 	}
 }
 

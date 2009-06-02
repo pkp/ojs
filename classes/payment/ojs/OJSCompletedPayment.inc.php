@@ -95,21 +95,22 @@ class OJSCompletedPayment extends Payment {
 		$journal =& $journalDAO->getJournal($this->getJournalId());
 
 		switch ($this->type) {
-			case PAYMENT_TYPE_SUBSCRIPTION:
+			case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
+			case PAYMENT_TYPE_RENEW_SUBSCRIPTION:
 				$institutionalSubscriptionDAO =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
-				$individualSubscriptionDAO =& DAORegistry::getDAO('IndividualSubscriptionDAO');
-				$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
 
 				if ($institutionalSubscriptionDAO->subscriptionExists($this->assocId)) {
 					$subscription =& $institutionalSubscriptionDAO->getSubscription($this->assocId);
 				} else {
+					$individualSubscriptionDAO =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 					$subscription =& $individualSubscriptionDAO->getSubscription($this->assocId);
 				}
 				if ( !$subscription) return Locale::translate('payment.type.subscription');
 
+				$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
 				$subscriptionType =& $subscriptionTypeDAO->getSubscriptionType($subscription->getTypeId());
 
-				return Locale::translate('payment.type.subscription') . '(' . $subscriptionType->getSubscriptionTypeName() . ')';
+				return Locale::translate('payment.type.subscription') . ' (' . $subscriptionType->getSubscriptionTypeName() . ')';
 			case PAYMENT_TYPE_DONATION:
 				if ( $journal->getLocalizedSetting('donationFeeName') != '') {
 					return $journal->getLocalizedSetting('donationFeeName');
@@ -160,18 +161,19 @@ class OJSCompletedPayment extends Payment {
 		$journal =& $journalDAO->getJournal($this->getJournalId());
 
 		switch ($this->type) {
-			case PAYMENT_TYPE_SUBSCRIPTION:
+			case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
+			case PAYMENT_TYPE_RENEW_SUBSCRIPTION:
 				$institutionalSubscriptionDAO =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
-				$individualSubscriptionDAO =& DAORegistry::getDAO('IndividualSubscriptionDAO');
-				$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
 
 				if ($institutionalSubscriptionDAO->subscriptionExists($this->assocId)) {
 					$subscription =& $institutionalSubscriptionDAO->getSubscription($this->assocId);
 				} else {
+					$individualSubscriptionDAO =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 					$subscription =& $individualSubscriptionDAO->getSubscription($this->assocId);
 				}
 				if ( !$subscription) return Locale::translate('payment.type.subscription');
 
+				$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
 				$subscriptionType =& $subscriptionTypeDAO->getSubscriptionType($subscription->getTypeId());
 				return $subscriptionType->getSubscriptionTypeDescription();
 			case PAYMENT_TYPE_DONATION:
@@ -262,7 +264,7 @@ class OJSCompletedPayment extends Payment {
 	 * @return bool
 	 */
 	function isSubscription() {
-		return $this->type == PAYMENT_TYPE_SUBSCRIPTION;
+		return ($this->type == PAYMENT_TYPE_RENEW_SUBSCRIPTION || $this->type == PAYMENT_TYPE_PURCHASE_SUBSCRIPTION);
 	}
 
 	/**
@@ -287,18 +289,19 @@ class OJSCompletedPayment extends Payment {
 	function getAssocDescription() {
 		if ( !$this->assocId ) return false;
 		switch ($this->type) {
-			case PAYMENT_TYPE_SUBSCRIPTION:
+			case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
+			case PAYMENT_TYPE_RENEW_SUBSCRIPTION:
 				$institutionalSubscriptionDAO =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
-				$individualSubscriptionDAO =& DAORegistry::getDAO('IndividualSubscriptionDAO');
-				$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
 
 				if ($institutionalSubscriptionDAO->subscriptionExists($this->assocId)) {
 					$subscription =& $institutionalSubscriptionDAO->getSubscription($this->assocId);
 				} else {
+					$individualSubscriptionDAO =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 					$subscription =& $individualSubscriptionDAO->getSubscription($this->assocId);
 				}
 				if ( !$subscription) return Locale::translate('manager.payment.notFound');
 
+				$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
 				$subscriptionType =& $subscriptionTypeDAO->getSubscriptionType($subscription->getTypeId());
 
 				$membership = $subscription->getMembership();

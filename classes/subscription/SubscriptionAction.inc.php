@@ -20,13 +20,14 @@ class SubscriptionAction {
 	 */
 	function subscriptionsSummary() {
 		$journal =& Request::getJournal();
+		$journalId = $journal->getJournalId();
 
 		$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 		$statusOptions =& $individualSubscriptionDao->getStatusOptions();
 		$individualStatus = array();
 
 		foreach ($statusOptions as $status => $localeKey) {
-			$statusCount = $individualSubscriptionDao->getStatusCount($status);
+			$statusCount = $individualSubscriptionDao->getStatusCount($journalId, $status);
 			$individualStatus[] = array(
 										"status" => $status,
 										"count" => $statusCount,
@@ -39,7 +40,7 @@ class SubscriptionAction {
 		$institutionalStatus = array();
 
 		foreach ($statusOptions as $status => $localeKey) {
-			$statusCount = $institutionalSubscriptionDao->getStatusCount($status);
+			$statusCount = $institutionalSubscriptionDao->getStatusCount($journalId, $status);
 			$institutionalStatus[] = array(
 										"status" => $status,
 										"count" => $statusCount,
@@ -502,6 +503,10 @@ class SubscriptionAction {
 			$templateMgr->assign('scheduledTasksEnabled', true);
 		}
 
+		import('payment.ojs.OJSPaymentManager');
+		$paymentManager =& OJSPaymentManager::getManager();
+		$templateMgr->assign('acceptSubscriptionPayments', $paymentManager->acceptSubscriptionPayments());				
+
 		// FIXME: Need construction by reference or validation always fails on PHP 4.x
 		$subscriptionPolicyForm =& new SubscriptionPolicyForm();
 		if ($subscriptionPolicyForm->isLocaleResubmit()) {
@@ -522,28 +527,93 @@ class SubscriptionAction {
 		$subscriptionPolicyForm =& new SubscriptionPolicyForm();
 		$subscriptionPolicyForm->readInputData();
 
+		$templateMgr =& TemplateManager::getManager();
+		$templateMgr->assign('helpTopicId', 'journal.managementPages.subscriptions');
+
+		if (Config::getVar('general', 'scheduled_tasks')) {
+			$templateMgr->assign('scheduledTasksEnabled', true);
+		}
+
+		import('payment.ojs.OJSPaymentManager');
+		$paymentManager =& OJSPaymentManager::getManager();
+		$templateMgr->assign('acceptSubscriptionPayments', $paymentManager->acceptSubscriptionPayments());				
+
 		if ($subscriptionPolicyForm->validate()) {
 			$subscriptionPolicyForm->execute();
-
-			$templateMgr =& TemplateManager::getManager();
-			$templateMgr->assign('helpTopicId', 'journal.managementPages.subscriptions');
 			$templateMgr->assign('subscriptionPoliciesSaved', '1');
-
-			if (Config::getVar('general', 'scheduled_tasks')) {
-				$templateMgr->assign('scheduledTasksEnabled', true);
-			}
-
 			$subscriptionPolicyForm->display();
 		} else {
-			$templateMgr =& TemplateManager::getManager();
-			$templateMgr->assign('helpTopicId', 'journal.managementPages.subscriptions');
-
-			if (Config::getVar('general', 'scheduled_tasks')) {
-				$templateMgr->assign('scheduledTasksEnabled', true);
-			}
-
 			$subscriptionPolicyForm->display();
 		}
+	}
+
+	/**
+	 * Send notification email to Subscription Manager when online payment is completed.
+	 */
+	function sendOnlinePaymentNotificationEmail(&$subscription, $mailTemplateKey) {
+		$validKeys = array(
+			'SUBSCRIPTION_PURCHASE_INDIVIDUAL',
+			'SUBSCRIPTION_PURCHASE_INSTITUTIONAL',
+			'SUBSCRIPTION_RENEW_INDIVIDUAL',
+			'SUBSCRIPTION_RENEW_INSTITUTIONAL'
+		);
+
+		if (!in_array($mailTemplateKey, $validKeys)) return false;
+
+		$journal =& Request::getJournal();
+
+		$subscriptionContactName = $journal->getSetting('subscriptionName');
+		$subscriptionContactEmail = $journal->getSetting('subscriptionEmail');
+
+		if (empty($subscriptionContactEmail)) {
+			$subscriptionContactEmail = $journal->getSetting('contactEmail');
+			$subscriptionContactName = $journal->getSetting('contactName');
+		}
+
+		if (empty($subscriptionContactEmail)) return false;
+
+		$userDao =& DAORegistry::getDAO('UserDAO');
+		$user =& $userDao->getUser($subscription->getUserId());
+
+		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
+
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		if ($roleDao->getJournalUsersRoleCount($journal->getJournalId(), ROLE_ID_SUBSCRIPTION_MANAGER) > 0) {
+			$rolePath = $roleDao->getRolePath(ROLE_ID_SUBSCRIPTION_MANAGER);
+		} else {
+			$rolePath = $roleDao->getRolePath(ROLE_ID_JOURNAL_MANAGER);
+		}		
+
+		$paramArray = array(
+			'subscriptionType' => $subscriptionType->getSummaryString(),
+			'userDetails' => $user->getContactSignature(),
+			'membership' => $subscription->getMembership()
+		);
+
+		switch($mailTemplateKey) {
+			case 'SUBSCRIPTION_PURCHASE_INDIVIDUAL':
+			case 'SUBSCRIPTION_RENEW_INDIVIDUAL':
+				$paramArray['subscriptionUrl'] = Request::url($journal->getPath(), $rolePath, 'editSubscription', 'individual', array($subscription->getSubscriptionId()));
+				break;
+			case 'SUBSCRIPTION_PURCHASE_INSTITUTIONAL':
+			case 'SUBSCRIPTION_RENEW_INSTITUTIONAL':
+				$paramArray['subscriptionUrl'] = Request::url($journal->getPath(), $rolePath, 'editSubscription', 'institutional', array($subscription->getSubscriptionId()));
+				$paramArray['institutionName'] = $subscription->getInstitutionName();
+				$paramArray['institutionMailingAddress'] = $subscription->getInstitutionMailingAddress();
+				$paramArray['domain'] = $subscription->getDomain();
+				$paramArray['ipRanges'] = $subscription->getIPRangesString();
+				break;
+		}
+
+		import('mail.MailTemplate');
+		$mail = new MailTemplate($mailTemplateKey);
+		$mail->setFrom($subscriptionContactEmail, $subscriptionContactName);
+		$mail->addRecipient($subscriptionContactEmail, $subscriptionContactName);
+		$mail->setSubject($mail->getSubject($journal->getPrimaryLocale()));
+		$mail->setBody($mail->getBody($journal->getPrimaryLocale()));
+		$mail->assignParams($paramArray);
+		$mail->send();
 	}
 }
 

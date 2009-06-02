@@ -66,7 +66,7 @@
 		<td width="15%">&nbsp;</td>	
 		{/if}
 		<td width="5%" class="label">{fieldLabel name="ipRanges[$ipRangeIndex]" key="manager.subscriptions.form.ipRangeItem}</td>
-		<td width="80%" class="value"><input type="text" name="ipRanges[{$ipRangeIndex|escape}]" id="ipRanges-{$ipRangeIndex|escape}" value="{$ipRange|escape}" size="20" maxlength="40" class="textField" />
+		<td width="80%" class="value"><input type="text" name="ipRanges[{$ipRangeIndex|escape}]" id="ipRanges-{$ipRangeIndex|escape}" value="{$ipRange|escape}" size="30" maxlength="40" class="textField" />
 		{if $smarty.foreach.ipRanges.total > 1}
 		<input type="submit" name="delIpRange[{$ipRangeIndex|escape}]" value="{translate key="manager.subscriptions.form.deleteIpRange"}" class="button" /></td>
 		{else}
@@ -77,7 +77,7 @@
 	<tr valign="top">
 		<td width="15%" class="label">{fieldLabel name="ipRanges" key="manager.subscriptions.form.ipRange"}</td>
 		<td width="5%" class="label">{fieldLabel name="ipRanges[0]" key="manager.subscriptions.form.ipRangeItem}</td>
-		<td width="80%" class="value"><input type="text" name="ipRanges[0]" id="ipRanges-0" size="20" maxlength="40" class="textField" /></td>
+		<td width="80%" class="value"><input type="text" name="ipRanges[0]" id="ipRanges-0" size="30" maxlength="40" class="textField" /></td>
 	</tr>
 	{/foreach}
 	<tr valign="top">
