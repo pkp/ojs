@@ -74,7 +74,7 @@ class SubscriptionBlockPlugin extends BlockPlugin {
 		$journalId = ($journal)?$journal->getJournalId():null;
 		if (!$journal) return '';
 
-		if (!$journal->getSetting('enableSubscriptions')) return '';
+		if (!$journal->getSetting('publishingMode')) return '';
 
 		$user =& Request::getUser();
 		$userId = ($user)?$user->getId():null;

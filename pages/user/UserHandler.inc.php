@@ -88,7 +88,7 @@ class UserHandler extends Handler {
 			$this->getRoleDataForJournal($userId, $journalId, $submissionsCount, $isValid);
 			
 			$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
-			$subscriptionsEnabled = $journal->getSetting('enableSubscriptions') && ($subscriptionTypeDAO->subscriptionTypesExistByInstitutional($journalId, false) || $subscriptionTypeDAO->subscriptionTypesExistByInstitutional($journalId, true)) ? true : false;
+			$subscriptionsEnabled = $journal->getSetting('publishingMode') && ($subscriptionTypeDAO->subscriptionTypesExistByInstitutional($journalId, false) || $subscriptionTypeDAO->subscriptionTypesExistByInstitutional($journalId, true)) ? true : false;
 			$templateMgr->assign('subscriptionsEnabled', $subscriptionsEnabled);
 
 			import('payment.ojs.OJSPaymentManager');
@@ -121,7 +121,7 @@ class UserHandler extends Handler {
 
 		$journal =& Request::getJournal();
 		if (!$journal) Request::redirect(null, 'user');
-		if (!$journal->getSetting('enableSubscriptions')) Request::redirect(null, 'user');
+		if (!$journal->getSetting('publishingMode')) Request::redirect(null, 'user');
 		
 		$journalId = $journal->getJournalId();
 		$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
@@ -395,7 +395,7 @@ class UserHandler extends Handler {
 
 		$journal =& Request::getJournal();
 		if (!$journal) Request::redirect(null, 'user');
-		if (!$journal->getSetting('enableSubscriptions')) Request::redirect(null, 'user');
+		if (!$journal->getSetting('publishingMode')) Request::redirect(null, 'user');
 
 		import('payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
@@ -465,7 +465,7 @@ class UserHandler extends Handler {
 
 		$journal =& Request::getJournal();
 		if (!$journal) Request::redirect(null, 'user');
-		if (!$journal->getSetting('enableSubscriptions')) Request::redirect(null, 'user');
+		if (!$journal->getSetting('publishingMode')) Request::redirect(null, 'user');
 
 		import('payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
@@ -560,7 +560,7 @@ class UserHandler extends Handler {
 
 		$journal =& Request::getJournal();
 		if (!$journal) Request::redirect(null, 'user');
-		if (!$journal->getSetting('enableSubscriptions')) Request::redirect(null, 'user');
+		if (!$journal->getSetting('publishingMode')) Request::redirect(null, 'user');
 
 		import('payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
@@ -606,7 +606,7 @@ class UserHandler extends Handler {
 
 		$journal =& Request::getJournal();
 		if (!$journal) Request::redirect(null, 'user');
-		if (!$journal->getSetting('enableSubscriptions')) Request::redirect(null, 'user');
+		if (!$journal->getSetting('publishingMode')) Request::redirect(null, 'user');
 
 		import('payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
