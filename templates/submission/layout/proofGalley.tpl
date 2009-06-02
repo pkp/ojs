@@ -16,6 +16,8 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset|escape}" />
 	<title>{translate key=$pageTitle}</title>
+
+	<link rel="stylesheet" href="{$baseUrl}/lib/pkp/styles/common.css" type="text/css" />
 	<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />
 
 	{foreach from=$stylesheets item=cssUrl}
