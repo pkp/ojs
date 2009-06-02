@@ -100,8 +100,8 @@ function smarty_modifier_truncate($string, $length = 80, $etc = '...',
  */
 function remove_tags($string, &$tags, $reverse = false, $length) {
 	if($reverse) {
-		return remove_tags_aux_reverse($string, 0, &$tags, $length);
-	} else return remove_tags_aux($string, 0, &$tags, $length);
+		return remove_tags_aux_reverse($string, 0, $tags, $length);
+	} else return remove_tags_aux($string, 0, $tags, $length);
 }
 
 /**
