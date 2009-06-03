@@ -9,7 +9,7 @@
  * @class SubmissionCommentsHandler
  * @ingroup pages_layoutEditor
  *
- * @brief Handle requests for submission comments. 
+ * @brief Handle requests for submission comments.
  */
 
 // $Id$
@@ -26,7 +26,7 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 	}
 	/** comment associated with the request **/
 	var $comment;
-	
+
 	/**
 	 * View layout comments.
 	 */
@@ -114,7 +114,7 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 		$submissionLayoutHandler =& new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 		$submission =& $submissionLayoutHandler->submission;
-	
+
 		$this->validate($commentId);
 		$comment =& $this->comment;
 		LayoutEditorAction::editComment($submission, $comment);
@@ -137,7 +137,7 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 		$submissionLayoutHandler =& new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 		$submission =& $submissionLayoutHandler->submission;
-	
+
 		$this->validate($commentId);
 		$comment =& $this->comment;
 		LayoutEditorAction::saveComment($submission, $comment, $emailComment);
@@ -163,7 +163,7 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 		$submissionLayoutHandler =& new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 		$submission =& $submissionLayoutHandler->submission;
-	
+
 		$this->validate($commentId);
 		$comment =& $this->comment;
 		LayoutEditorAction::deleteComment($commentId);
@@ -187,7 +187,7 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 		parent::validate();
 
 		$isValid = true;
- 
+
 		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
 		$user =& Request::getUser();
 
@@ -203,9 +203,10 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 		if (!$isValid) {
 			Request::redirect(null, Request::getRequestedPage());
 		}
-		
+
 		$this->comment =& $comment;
 		return true;
 	}
 }
+
 ?>

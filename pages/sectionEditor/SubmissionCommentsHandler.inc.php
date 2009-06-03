@@ -9,7 +9,7 @@
  * @class SubmissionCommentsHandler
  * @ingroup pages_sectionEditor
  *
- * @brief Handle requests for submission comments. 
+ * @brief Handle requests for submission comments.
  */
 
 // $Id$
@@ -20,7 +20,7 @@ import('pages.sectionEditor.SubmissionEditHandler');
 class SubmissionCommentsHandler extends SectionEditorHandler {
 	/** comment associated with the request **/
 	var $comment;
-		
+
 	/**
 	 * Constructor
 	 **/
@@ -242,7 +242,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$submissionEditHandler->validate($articleId);
 		$submission =& $submissionEditHandler->submission;
 
-		$this->setupTemplate(true);		
+		$this->setupTemplate(true);
 		if (SectionEditorAction::emailEditorDecisionComment($submission, Request::getUserVar('send'))) {
 			if (Request::getUserVar('blindCcReviewers')) {
 				SubmissionCommentsHandler::blindCcReviewsToReviewers();
@@ -378,4 +378,5 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		return true;
 	}
 }
+
 ?>

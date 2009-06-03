@@ -9,7 +9,7 @@
  * @class SubmissionCommentsHandler
  * @ingroup pages_proofreader
  *
- * @brief Handle requests for submission comments. 
+ * @brief Handle requests for submission comments.
  */
 
 // $Id$
@@ -20,7 +20,7 @@ import('pages.proofreader.SubmissionProofreadHandler');
 class SubmissionCommentsHandler extends ProofreaderHandler {
 	/** comment associated with the request **/
 	var $comment;
-	
+
 	/**
 	 * Constructor
 	 **/
@@ -212,4 +212,5 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 		return true;
 	}
 }
+
 ?>

@@ -102,6 +102,14 @@ class TinyMCEPlugin extends GenericPlugin {
 				$fields[] = 'description';
 				$fields[] = 'coverPageDescription';
 				break;
+			case 'author/viewCopyeditComments':
+			case 'author/postCopyeditComment':
+			case 'author/viewLayoutComments':
+			case 'author/postLayoutComment':
+			case 'author/viewProofreadComments':
+			case 'author/postProofreadComment':
+			case 'author/editComment':
+			case 'author/saveComment':
 			case 'editor/viewEditorDecisionComments':
 			case 'editor/postEditorDecisionComment':
 			case 'editor/viewCopyeditComments':
@@ -111,6 +119,35 @@ class TinyMCEPlugin extends GenericPlugin {
 			case 'editor/viewProofreadComments':
 			case 'editor/postProofreadComment':
 			case 'editor/editComment':
+			case 'editor/saveComment':
+			case 'sectionEditor/viewEditorDecisionComments':
+			case 'sectionEditor/postEditorDecisionComment':
+			case 'sectionEditor/viewCopyeditComments':
+			case 'sectionEditor/postCopyeditComment':
+			case 'sectionEditor/viewLayoutComments':
+			case 'sectionEditor/postLayoutComment':
+			case 'sectionEditor/viewProofreadComments':
+			case 'sectionEditor/postProofreadComment':
+			case 'sectionEditor/editComment':
+			case 'sectionEditor/saveComment':
+			case 'copyeditor/viewCopyeditComments':
+			case 'copyeditor/postCopyeditComment':
+			case 'copyeditor/viewLayoutComments':
+			case 'copyeditor/postLayoutComment':
+			case 'copyeditor/editComment':
+			case 'copyeditor/saveComment':
+			case 'proofreader/viewLayoutComments':
+			case 'proofreader/postLayoutComment':
+			case 'proofreader/viewProofreadComments':
+			case 'proofreader/postProofreadComment':
+			case 'proofreader/editComment':
+			case 'proofreader/saveComment':
+			case 'layoutEditor/viewLayoutComments':
+			case 'layoutEditor/postLayoutComment':
+			case 'layoutEditor/viewProofreadComments':
+			case 'layoutEditor/postProofreadComment':
+			case 'layoutEditor/editComment':
+			case 'layoutEditor/saveComment':
 				$fields[] = 'comments';
 				break;
 			case 'manager/createAnnouncement':
@@ -195,11 +232,15 @@ class TinyMCEPlugin extends GenericPlugin {
 						break;
 				}
 				break;
-			case 'reviewer/submission':
-				$fields[] = 'competingInterests';
-				break;
+			case 'reviewer/submission': $fields[] = 'competingInterests'; break;
 			case 'reviewer/viewPeerReviewComments':
 			case 'reviewer/postPeerReviewComment':
+			case 'editor/viewPeerReviewComments':
+			case 'editor/postPeerReviewComment':
+			case 'sectionEditor/viewPeerReviewComments':
+			case 'sectionEditor/postPeerReviewComment':
+			case 'reviewer/editComment':
+			case 'reviewer/saveComment':
 				$fields[] = 'authorComments';
 				$fields[] = 'comments';
 				break;
@@ -263,9 +304,7 @@ class TinyMCEPlugin extends GenericPlugin {
 			case 'manager/updateSubscriptionType':
 				$fields[] = 'description';
 				break;
-			case 'comment/add':
-				$fields[] = 'commentBody';
-				break;
+			case 'comment/add': $fields[] = 'commentBody'; break;
 		}
 		HookRegistry::call('TinyMCEPlugin::getEnableFields', array(&$this, &$fields));
 		return $fields;

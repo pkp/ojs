@@ -9,7 +9,7 @@
  * @class SubmissionCommentsHandler
  * @ingroup pages_reviewer
  *
- * @brief Handle requests for submission comments. 
+ * @brief Handle requests for submission comments.
  */
 
 // $Id$
@@ -20,14 +20,14 @@ import('pages.reviewer.SubmissionReviewHandler');
 class SubmissionCommentsHandler extends ReviewerHandler {
 	/** comment associated with the request **/
 	var $comment;
-	
+
 	/**
 	 * Constructor
 	 **/
 	function SubmissionCommentsHandler() {
 		parent::ReviewerHandler();
 	}
-	
+
 	/**
 	 * View peer review comments.
 	 */
@@ -177,4 +177,5 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		return true;
 	}
 }
+
 ?>
