@@ -23,4 +23,9 @@
 		<rename table="subscriptions" to="subscriptions_old" />
 		<rename table="subscription_ip" to="subscription_ip_old" />
 	</sql>
+
+	<!-- Bug #3694: abstract user settings -->
+	<sql>
+		<rename table="user_settings" column="journal_id" to="assoc_id" />
+	</sql>
 </data>
