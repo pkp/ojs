@@ -29,7 +29,7 @@
 	<li>&#187; <a href="{url op="setup"}">{translate key="manager.setup"}</a></li>
 	<li>&#187; <a href="{url op="statistics"}">{translate key="manager.statistics"}</a></li>
 	<li>&#187; <a href="{url op="payments"}">{translate key="manager.payments"}</a></li>
-	{if $subscriptionsEnabled}
+	{if $publishingMode == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION}
 		<li>&#187; <a href="{url op="subscriptionsSummary"}">{translate key="manager.subscriptions"}</a></li>
 	{/if}
 	<li>&#187; <a href="{url op="plugins"}">{translate key="manager.plugins"}</a></li>
