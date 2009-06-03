@@ -20,6 +20,7 @@
 	<li><a href="{url op="subscriptions" path="institutional"}">{translate key="manager.institutionalSubscriptions"}</a></li>
 	<li><a href="{url op="subscriptionTypes"}">{translate key="manager.subscriptionTypes"}</a></li>
 	<li><a href="{url op="subscriptionPolicies"}">{translate key="manager.subscriptionPolicies"}</a></li>
+	<li><a href="{url op="payments"}">{translate key="manager.payments"}</a></li>
 </ul>
 
 <h3>{translate key="manager.individualSubscriptions"}</h3>

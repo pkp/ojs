@@ -1,17 +1,19 @@
 <?php
 
 /**
- * @file classes/manager/form/PaymentSettingsForm.inc.php
+ * @file classes/payments/ojs/form/PaymentSettingsForm.inc.php
  *
  * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PayMethodSettingsForm
- * @ingroup manager_form
+ * @ingroup payments 
  *
- * @brief Form for conference managers to modify Payment Plugin settings
+ * @brief Form for managers to modify Payment Plugin settings
  *
  */
+
+// $Id$
 
 import('form.Form');
 
@@ -26,7 +28,7 @@ class PayMethodSettingsForm extends Form {
 	 * Constructor
 	 */
 	function PayMethodSettingsForm() {
-		parent::Form('manager/payments/payMethodSettingsForm.tpl');
+		parent::Form('payments/payMethodSettingsForm.tpl');
 
 		// Load the plugins.
 		$this->plugins =& PluginRegistry::loadCategory('paymethod');

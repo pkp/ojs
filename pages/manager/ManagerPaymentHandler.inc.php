@@ -13,6 +13,8 @@
  *
  */
 
+// $Id$
+
 import('pages.manager.ManagerHandler');
 
 class ManagerPaymentHandler extends ManagerHandler {
@@ -28,22 +30,10 @@ class ManagerPaymentHandler extends ManagerHandler {
 	 */
 	 function payments($args) {
 		$this->validate();
-		import('manager.form.PaymentSettingsForm');
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$form =& new PaymentSettingsForm();
-
-		$journal =& Request::getJournal();
-		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
-
 		$this->setupTemplate(true);
 
-		if ($form->isLocaleResubmit()) {
-			$form->readInputData();
-		} else {
-			$form->initData();
-		}
-		$form->display();		
+		import('payment.ojs.OJSPaymentAction');
+		OJSPaymentAction::payments($args);
 	 }
 	 
 	 /**
@@ -51,21 +41,12 @@ class ManagerPaymentHandler extends ManagerHandler {
 	  */
 	 function savePaymentSettings($args) {
 		$this->validate();
-		import('manager.form.PaymentSettingsForm');
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$settingsForm =& new PaymentSettingsForm();
-
-		$journal =& Request::getJournal();
-		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
-
 		$this->setupTemplate(true);
-		
-		$settingsForm->readInputData();
 
-		if ($settingsForm->validate()) {
-			$settingsForm->save();
+		import('payment.ojs.OJSPaymentAction');
+		$success = OJSPaymentAction::savePaymentSettings($args);
 
+		if ($success) {
  			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign(array(
 				'currentUrl' => Request::url(null, null, 'payments'),
@@ -75,8 +56,6 @@ class ManagerPaymentHandler extends ManagerHandler {
 				'backLinkLabel' => 'manager.payment.feePaymentOptions'
 			));
 			$templateMgr->display('common/message.tpl');		
-		} else {
-			$settingsForm->display();
 		}
 	 }	 
 	 
@@ -84,42 +63,22 @@ class ManagerPaymentHandler extends ManagerHandler {
 	  * Display all payments previously made
 	  */
 	 function viewPayments($args) {
-		$rangeInfo =& Handler::getRangeInfo('CompletedPayments');
-		$paymentDao =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
-		$journal =& Request::getJournal();
-		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
-		$payments =& $paymentDao->getPaymentsByJournalId($journal->getJournalId(), $rangeInfo);
-		$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
-		$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
-
-		$templateMgr->assign_by_ref('individualSubscriptionDao', $individualSubscriptionDao);
-		$templateMgr->assign_by_ref('institutionalSubscriptionDao', $institutionalSubscriptionDao);
-		$templateMgr->assign_by_ref('payments', $payments);
-
+		$this->validate();
 		$this->setupTemplate(true);
-		$templateMgr->display('manager/payments/viewPayments.tpl');
+
+		import('payment.ojs.OJSPaymentAction');
+		OJSPaymentAction::viewPayments($args);
 	 }
 
 	 /** 
 	  * Display a single Completed payment 
 	  */
 	 function viewPayment($args) {
-		$paymentDao =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
-		$completedPaymentId = $args[0];
-		$payment =& $paymentDao->getCompletedPayment($completedPaymentId);
-
-		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
-		$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
-		$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
-
-		$templateMgr->assign_by_ref('individualSubscriptionDao', $individualSubscriptionDao);
-		$templateMgr->assign_by_ref('institutionalSubscriptionDao', $institutionalSubscriptionDao);
-		$templateMgr->assign_by_ref('payment', $payment);
-
+		$this->validate();
 		$this->setupTemplate(true);
-		$templateMgr->display('manager/payments/viewPayment.tpl');
+
+		import('payment.ojs.OJSPaymentAction');
+		OJSPaymentAction::viewPayment($args);
 	 }
 
 	/**
@@ -128,19 +87,9 @@ class ManagerPaymentHandler extends ManagerHandler {
 	function payMethodSettings() {
 		$this->validate();
 		$this->setupTemplate(true);
-		
-		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
 
-		$journal =& Request::getJournal();
-		if (!$journal) Request::redirect (null, null, 'index');
-
-		import('manager.form.PayMethodSettingsForm');
-		
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$settingsForm =& new PayMethodSettingsForm();
-		$settingsForm->initData();
-		$settingsForm->display();
+		import('payment.ojs.OJSPaymentAction');
+		OJSPaymentAction::payMethodSettings();
 	}
 	
 	/**
@@ -150,20 +99,11 @@ class ManagerPaymentHandler extends ManagerHandler {
 		$this->validate();
 		$this->setupTemplate(true);
 
-		$journal =& Request::getJournal();
-		if (!$journal) Request::redirect (null, null, 'index');
+		import('payment.ojs.OJSPaymentAction');
+		$success = OJSPaymentAction::savePayMethodSettings();
 
-		import('manager.form.PayMethodSettingsForm');
-
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$settingsForm =& new PayMethodSettingsForm();
-		$settingsForm->readInputData();
-
- 		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
-
-		if ($settingsForm->validate()) {
-			$settingsForm->execute();
+		if ($success) {
+ 			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign(array(
 				'currentUrl' => Request::url(null, null, 'payMethodSettings'),
 				'pageTitle' => 'manager.payment.paymentMethods',
@@ -172,8 +112,6 @@ class ManagerPaymentHandler extends ManagerHandler {
 				'backLinkLabel' => 'manager.payment.paymentMethods'
 			));
 			$templateMgr->display('common/message.tpl');		
-		} else {
-			$settingsForm->display();
 		}
 	}
 }

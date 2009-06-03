@@ -6,6 +6,7 @@
  *
  * Page to view one CompletedPayment in detail
  *
+ * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="common.payment"}
