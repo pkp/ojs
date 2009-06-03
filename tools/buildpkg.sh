@@ -16,7 +16,6 @@
 CVSROOT=:pserver:anonymous@lib-pkp.lib.sfu.ca:/cvs
 OJSMODULE=ojs2
 PKPMODULE=pkp
-PRECOMPILE=0
 
 if [ -z "$1" ]; then
 	echo "Usage: $0 <version> [<tag>] [<patch_dir>]";
@@ -63,12 +62,6 @@ cp config.TEMPLATE.inc.php config.inc.php
 find . -name .cvsignore -exec rm {} \;
 rm -r $EXCLUDE
 echo "Done"
-
-if [ ! -z "$PRECOMPILE" ]; then
-	echo -n "Precompiling templates and cache files ... "
-	php tools/preCompile.php
-	echo "Done"
-fi
 
 cd ..
 

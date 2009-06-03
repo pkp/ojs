@@ -94,8 +94,6 @@ class UserDAO extends PKPUserDAO {
 		$returner = new DAOResultFactory($result, $this, '_returnUserFromRowWithData');
 		return $returner;
 	}
-
-
 }
 
 ?>
