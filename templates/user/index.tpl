@@ -90,7 +90,7 @@
 				<td></td>
 				<td></td>
 				<td>{if $layoutEditorSubmissionsCount[0]}
-						<a href="{url journal=$journalPath page="layoutEditor" op="submissions"}">{$layoutEditorSubmissionsCount[0]}</a> {translate key="common.queue.short.submissionsInEditing"}
+						<a href="{url journal=$journalPath page="layoutEditor" op="submissions"}">{$layoutEditorSubmissionsCount[0]} {translate key="common.queue.short.submissionsInEditing"}</a>
 					{else}<span class="disabled">0 {translate key="common.queue.short.submissionsInEditing"}</span>{/if}
 				</td>
 				<td align="right"></td>
