@@ -1,14 +1,14 @@
 <?php
 /**
- * @file classes/handler/HandlerValidatorConference.inc.php
+ * @file classes/handler/HandlerValidatorJournal.inc.php
  *
  * Copyright (c) 2000-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class HandlerValidator
- * @ingroup security
+ * @class HandlerValidatorJournal
+ * @ingroup handler_validation
  *
- * @brief Class to represent a page validation check.
+ * @brief Class to validate if a Journal is present
  */
 
 import('handler.validation.HandlerValidator');
@@ -17,9 +17,10 @@ class HandlerValidatorJournal extends HandlerValidator {
 	/**
 	 * Constructor.
 	 * @param $handler Handler the associated form
+	 * @param $redirectToLogin bool Send to login screen on validation fail if true
 	 * @param $message string the error message for validation failures (i18n key)
+	 * @param $additionalArgs Array URL arguments to include in request
 	 */
-	 
 	function HandlerValidatorJournal(&$handler, $redirectToLogin = false, $message = null, $additionalArgs = array()) {
 		parent::HandlerValidator($handler, $redirectToLogin, $message, $additionalArgs);
 	}
@@ -30,7 +31,7 @@ class HandlerValidatorJournal extends HandlerValidator {
 	 * @return boolean
 	 */
 	function isValid() {
-		$journal =& Request::getJournal();
+		$journal =& Request::getJournal();		
 		return ($journal)?true:false;
 	}
 }

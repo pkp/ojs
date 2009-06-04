@@ -22,8 +22,10 @@ class CopyeditorHandler extends Handler {
 	/**
 	 * Constructor
 	 **/
-	function CopyeditorHandler() {
+	function CopyeditorHandler() {	
 		parent::Handler();
+		$this->addCheck(new HandlerValidatorJournal($this));
+		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_COPYEDITOR)));		
 	}
 
 	/**
@@ -101,17 +103,6 @@ class CopyeditorHandler extends Handler {
 		$templateMgr->assign('sort', $sort);
 		$templateMgr->assign('sortDirection', $sortDirection);
 		$templateMgr->display('copyeditor/index.tpl');
-	}
-
-	/**
-	 * Validate that user is a copyeditor in the selected journal.
-	 * Redirects to user index page if not properly authenticated.
-	 */
-	function validate() {
-		$this->addCheck(new HandlerValidatorJournal($this));
-		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_COPYEDITOR)));		
-		parent::validate();
-		return true;
 	}
 
 	/**

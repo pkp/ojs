@@ -1,14 +1,14 @@
 <?php
 /**
- * @file classes/handler/HandlerValidatorConference.inc.php
+ * @file classes/handler/HandlerValidatorRoles.inc.php
  *
  * Copyright (c) 2000-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class HandlerValidator
- * @ingroup security
+ * @class HandlerValidatorRoles
+ * @ingroup handler_validation
  *
- * @brief Class to represent a page validation check.
+ * @brief Class to validate if current user belongs to a set of roles
  */
 
 import('handler.validation.HandlerValidator');
@@ -21,6 +21,9 @@ class HandlerValidatorRoles extends HandlerValidator {
 	/**
 	 * Constructor.
 	 * @param $handler Handler the associated form
+	 * @param $redirectToLogin bool Send to login screen on validation fail if true
+	 * @param $message string the error message for validation failures (i18n key)
+	 * @param $additionalArgs Array URL arguments to include in request
 	 * @param $roles array of role id's 
 	 * @param $all bool flag for whether all roles must exist or just 1
 	 */	 

@@ -7,7 +7,7 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Handler
- * @ingroup core
+ * @ingroup handler
  *
  * @brief Base request handler application class
  */
@@ -16,6 +16,7 @@
 import('handler.PKPHandler');
 import('handler.validation.HandlerValidatorJournal');
 import('handler.validation.HandlerValidatorRoles');
+import('handler.validation.HandlerValidatorSubmissionComment');
 
 class Handler extends PKPHandler{
 	function Handler() {

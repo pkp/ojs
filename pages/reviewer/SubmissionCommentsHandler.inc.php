@@ -74,6 +74,12 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$commentId = $args[1];
 		$reviewId = Request::getUserVar('reviewId');
 
+		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
+		$this->validate();
+		$comment =& $this->comment;
+		
+		$this->setupTemplate(true);
+
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$article = $articleDao->getArticle($articleId);
 
@@ -81,11 +87,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$submissionReviewHandler->validate($reviewId);
 		$submission =& $submissionReviewHandler->submission;
 		$user =& $submissionReviewHandler->user;
-		$this->validate($commentId);
-		$comment =& $this->comment;
-
-		$this->setupTemplate(true);
-
+		
 		ReviewerAction::editComment($article, $comment, $reviewId);
 	}
 
@@ -97,6 +99,15 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$commentId = Request::getUserVar('commentId');
 		$reviewId = Request::getUserVar('reviewId');
 
+		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
+		$this->validate();
+		$comment =& $this->comment;
+		
+		$this->setupTemplate(true);
+		
+		// If the user pressed the "Save and email" button, then email the comment.
+		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;		
+
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$article = $articleDao->getArticle($articleId);
 
@@ -104,13 +115,6 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$submissionReviewHandler->validate($reviewId);
 		$submission =& $submissionReviewHandler->submission;
 		$user =& $submissionReviewHandler->user;
-		$this->validate($commentId);
-		$comment =& $this->comment;
-
-		// If the user pressed the "Save and email" button, then email the comment.
-		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
-
-		$this->setupTemplate(true);
 
 		ReviewerAction::saveComment($article, $comment, $emailComment);
 
@@ -132,14 +136,16 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$commentId = $args[1];
 		$reviewId = Request::getUserVar('reviewId');
 
+		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
+		$this->validate();
+		$comment =& $this->comment;
+		
+		$this->setupTemplate(true);
+		
 		$submissionReviewHandler =& new SubmissionReviewHandler();
 		$submissionReviewHandler->validate($reviewId);
 		$submission =& $submissionReviewHandler->submission;
 		$user =& $submissionReviewHandler->user;
-		$this->validate($commentId);
-		$comment =& $this->comment;
-
-		$this->setupTemplate(true);
 
 		ReviewerAction::deleteComment($commentId, $user);
 
@@ -147,34 +153,6 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		if ($comment->getCommentType() == COMMENT_TYPE_PEER_REVIEW) {
 			Request::redirect(null, null, 'viewPeerReviewComments', array($articleId, $comment->getAssocId()));
 		}
-	}
-
-	//
-	// Validation
-	//
-
-	/**
-	 * Validate that the user is the author of the comment.
-	 */
-	function validate($user, $commentId) {
-		$isValid = true;
-
-		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
-		$comment =& $articleCommentDao->getArticleCommentById($commentId);
-
-		if ($comment == null) {
-			$isValid = false;
-
-		} else if ($comment->getAuthorId() != $user->getId()) {
-			$isValid = false;
-		}
-
-		if (!$isValid) {
-			Request::redirect(null, Request::getRequestedPage());
-		}
-
-		$this->comment =& $comment;
-		return true;
 	}
 }
 

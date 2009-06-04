@@ -105,16 +105,18 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 	 * Edit comment.
 	 */
 	function editComment($args) {
-		$this->validate();
-		$this->setupTemplate(true);
-
 		$articleId = $args[0];
 		$commentId = $args[1];
+
+		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
+		$this->validate();
+		$comment =& $this->comment;
+		
+		$this->setupTemplate(true);
 
 		$submissionProofreadHandler =& new SubmissionProofreadHandler();
 		$submissionProofreadHandler->validate($articleId);
 		$submission =& $submissionProofreadHandler->submission;
-		list($comment) = SubmissionCommentsHandler::validate($commentId);
 		ProofreaderAction::editComment($submission, $comment);
 
 	}
@@ -123,11 +125,12 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 	 * Save comment.
 	 */
 	function saveComment() {
-		$this->validate();
-		$this->setupTemplate(true);
-
 		$articleId = Request::getUserVar('articleId');
 		$commentId = Request::getUserVar('commentId');
+
+		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
+		$this->validate();
+		$comment =& $this->comment;
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
@@ -135,8 +138,7 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 		$submissionProofreadHandler =& new SubmissionProofreadHandler();
 		$submissionProofreadHandler->validate($articleId);
 		$submission =& $submissionProofreadHandler->submission;
-		$this->validate($commentId);
-		$comment =& $this->comment;
+
 		ProofreaderAction::saveComment($submission, $comment, $emailComment);
 
 		// Determine which page to redirect back to.
@@ -153,20 +155,17 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 	 * Delete comment.
 	 */
 	function deleteComment($args) {
-		$this->validate();
-		$this->setupTemplate(true);
-
 		$articleId = $args[0];
 		$commentId = $args[1];
 
-		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
-		$comment =& $articleCommentDao->getArticleCommentById($commentId);
-
+		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));		
+		$this->validate();
+		$comment =& $this->comment;
+		
 		$submissionProofreadHandler =& new SubmissionProofreadHandler();
 		$submissionProofreadHandler->validate($articleId);
 		$submission =& $submissionProofreadHandler->submission;
-		$this->validate($commentId);
-		$comment =& $this->comment;
+
 		ProofreaderAction::deleteComment($commentId);
 
 		// Determine which page to redirect back to.
@@ -177,39 +176,6 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 
 		// Redirect back to initial comments page
 		Request::redirect(null, null, $commentPageMap[$comment->getCommentType()], $articleId);
-	}
-
-
-	//
-	// Validation
-	//
-
-	/**
-	 * Validate that the user is the author of the comment.
-	 */
-	function validate($commentId) {
-		parent::validate();
-
-		$isValid = true;
-
-		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
-		$user =& Request::getUser();
-
-		$comment =& $articleCommentDao->getArticleCommentById($commentId);
-
-		if ($comment == null) {
-			$isValid = false;
-
-		} else if ($comment->getAuthorId() != $user->getId()) {
-			$isValid = false;
-		}
-
-		if (!$isValid) {
-			Request::redirect(null, Request::getRequestedPage());
-		}
-
-		$this->comment =& $comment;
-		return true;
 	}
 }
 

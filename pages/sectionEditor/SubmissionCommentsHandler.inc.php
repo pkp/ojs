@@ -256,17 +256,18 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 	 * Edit comment.
 	 */
 	function editComment($args) {
-		$this->validate();
-		$this->setupTemplate(true);
-
 		$articleId = $args[0];
 		$commentId = $args[1];
 
+		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
+		$this->validate();
+		$comment =& $this->comment;
+		
+		$this->setupTemplate(true);
+		
 		$submissionEditHandler =& new SubmissionEditHandler();
 		$submissionEditHandler->validate($articleId);
 		$submission =& $submissionEditHandler->submission;
-		$this->validate($commentId);
-		$comment =& $this->comment;
 
 		if ($comment->getCommentType() == COMMENT_TYPE_EDITOR_DECISION) {
 			// Cannot edit an editor decision comment.
@@ -280,20 +281,21 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 	 * Save comment.
 	 */
 	function saveComment() {
-		$this->validate();
-		$this->setupTemplate(true);
-
 		$articleId = Request::getUserVar('articleId');
 		$commentId = Request::getUserVar('commentId');
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
+		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
+		$this->validate();
+		$comment =& $this->comment;
+		
+		$this->setupTemplate(true);
+
 		$submissionEditHandler =& new SubmissionEditHandler();
 		$submissionEditHandler->validate($articleId);
 		$submission =& $submissionEditHandler->submission;
-		$this->validate($commentId);
-		$comment =& $this->comment;
 
 		if ($comment->getCommentType() == COMMENT_TYPE_EDITOR_DECISION) {
 			// Cannot edit an editor decision comment.
@@ -324,17 +326,19 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 	 * Delete comment.
 	 */
 	function deleteComment($args) {
-		$this->validate();
-		$this->setupTemplate(true);
-
 		$articleId = $args[0];
 		$commentId = $args[1];
 
+		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
+		$this->validate();
+		$comment =& $this->comment;
+		
+		$this->setupTemplate(true);
+		
 		$submissionEditHandler =& new SubmissionEditHandler();
 		$submissionEditHandler->validate($articleId);
 		$submission =& $submissionEditHandler->submission;
-		$this->validate($commentId);
-		$comment =& $this->comment;
+
 		SectionEditorAction::deleteComment($commentId);
 
 		// Redirect back to initial comments page
@@ -350,32 +354,6 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 			Request::redirect(null, null, 'viewProofreadComments', $articleId);
 		}
 
-	}
-
-	//
-	// Validation
-	//
-
-	/**
-	 * Validate that the user is the author of the comment.
-	 */
-	function validate($commentId) {
-		parent::validate();
-
-		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
-		$user =& Request::getUser();
-
-		$comment =& $articleCommentDao->getArticleCommentById($commentId);
-
-		if (
-			$comment == null ||
-			$comment->getAuthorId() != $user->getId()
-		) {
-			Request::redirect(null, Request::getRequestedPage());
-		}
-
-		$this->comment =& $comment;
-		return true;
 	}
 }
 
