@@ -225,6 +225,10 @@ class SubmissionCommentsHandler extends AuthorHandler {
 
 		AuthorAction::saveComment($authorSubmission, $comment, $emailComment);
 
+		// refresh the comment
+		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
+		$comment =& $articleCommentDao->getArticleCommentById($commentId);
+
 		// Redirect back to initial comments page
 		if ($comment->getCommentType() == COMMENT_TYPE_EDITOR_DECISION) {
 			Request::redirect(null, null, 'viewEditorDecisionComments', $articleId);

@@ -144,6 +144,10 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 		$submission =& $submissionCopyeditHandler->submission;
 		CopyeditorAction::saveComment($submission, $comment, $emailComment);
 
+		// refresh the comment
+		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
+		$comment =& $articleCommentDao->getArticleCommentById($commentId);
+
 		// Redirect back to initial comments page
 		if ($comment->getCommentType() == COMMENT_TYPE_COPYEDIT) {
 			Request::redirect(null, null, 'viewCopyeditComments', $articleId);
