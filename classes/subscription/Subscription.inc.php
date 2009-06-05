@@ -156,6 +156,15 @@ class Subscription extends DataObject {
 	}
 
 	/**
+	 * Check whether the subscription type is non-expiring for the subscription.
+	 * @return string
+	 */
+	function isNonExpiring() {
+		$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
+		return $subscriptionTypeDao->getSubscriptionTypeNonExpiring($this->getData('typeId')) ? true : false;
+	}
+
+	/**
 	 * Get subscription start date.
 	 * @return date (YYYY-MM-DD)
 	 */

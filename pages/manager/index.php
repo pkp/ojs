@@ -142,6 +142,7 @@ switch ($op) {
 	case 'subscriptions':
 	case 'subscriptionsSummary':
 	case 'deleteSubscription':
+	case 'renewSubscription':
 	case 'createSubscription':
 	case 'editSubscription':
 	case 'updateSubscription':

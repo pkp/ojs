@@ -184,6 +184,27 @@ class SubscriptionAction {
 	}
 
 	/**
+	 * Renew a subscription.
+	 * @param $args array first parameter is the ID of the subscription to renew
+	 */
+	function renewSubscription($args, $institutional = false) {
+		$journal =& Request::getJournal();
+		$subscriptionId = empty($args[0]) ? null : (int) $args[0];
+
+		if ($institutional) {
+			$subscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+		} else {
+			$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+		}
+
+		// Ensure subscription is for this journal
+		if ($subscriptionDao->getSubscriptionJournalId($subscriptionId) == $journal->getJournalId()) {
+			$subscription =& $subscriptionDao->getSubscription($subscriptionId);
+			if ($subscription) $subscriptionDao->renewSubscription($subscription);
+		}
+	}
+
+	/**
 	 * Display form to edit a subscription.
 	 * @param $args array second parameter is the ID of the subscription to edit
 	 */

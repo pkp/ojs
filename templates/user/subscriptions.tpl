@@ -45,20 +45,29 @@
 			<td width="30%">&nbsp;</td>
 			<td width="25%">
 			{assign var="subscriptionStatus" value=$userIndividualSubscription->getStatus()}
+			{assign var="isNonExpiring" value=$userIndividualSubscription->isNonExpiring()}
 			{if $journalPaymentsEnabled && $acceptSubscriptionPayments && $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT}
 				<span class="disabled">{translate key="subscriptions.status.awaitingOnlinePayment"}</span>	
 			{elseif $subscriptionStatus != $smarty.const.SUBSCRIPTION_STATUS_ACTIVE}
 				<span class="disabled">{translate key="subscriptions.inactive"}</span>	
 			{else}
-				{assign var="isExpired" value=$userIndividualSubscription->isExpired()}
-				{if $isExpired}<span class="disabled">{translate key="user.subscriptions.expired"}: {$userIndividualSubscription->getDateEnd()|date_format:$dateFormatShort}</span>{else}{translate key="user.subscriptions.expires"}: {$userIndividualSubscription->getDateEnd()|date_format:$dateFormatShort}{/if}
+				{if $isNonExpiring}
+					{translate key="subscriptionTypes.nonExpiring"}
+				{else}
+					{assign var="isExpired" value=$userIndividualSubscription->isExpired()}
+					{if $isExpired}<span class="disabled">{translate key="user.subscriptions.expired"}: {$userIndividualSubscription->getDateEnd()|date_format:$dateFormatShort}</span>{else}{translate key="user.subscriptions.expires"}: {$userIndividualSubscription->getDateEnd()|date_format:$dateFormatShort}{/if}
+				{/if}
 			{/if}
 			</td>
 			<td width="15%" align="right">
 			{if $journalPaymentsEnabled && $acceptSubscriptionPayments}
 				{if $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT}
 					[<a href="{url op="completePurchaseSubscription" path="individual"|to_array:$userIndividualSubscription->getSubscriptionId()}">{translate key="user.subscriptions.purchase"}</a>]
-				{elseif $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_ACTIVE}[<a href="{url op="payRenewSubscription" path="individual"|to_array:$userIndividualSubscription->getSubscriptionId()}">{translate key="user.subscriptions.renew"}</a>][<a href="{url op="purchaseSubscription" path="individual"|to_array:$userIndividualSubscription->getSubscriptionId()}">{translate key="user.subscriptions.purchase"}</a>]
+				{elseif $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_ACTIVE}
+					{if !$isNonExpiring}
+						[<a href="{url op="payRenewSubscription" path="individual"|to_array:$userIndividualSubscription->getSubscriptionId()}">{translate key="user.subscriptions.renew"}</a>]
+					{/if}
+					[<a href="{url op="purchaseSubscription" path="individual"|to_array:$userIndividualSubscription->getSubscriptionId()}">{translate key="user.subscriptions.purchase"}</a>]
 				{/if}
 			{else}
 				&nbsp;
@@ -88,6 +97,7 @@
 			<td width="30%">{$userInstitutionalSubscription->getInstitutionName()|escape}</td>
 			<td width="25%">
 			{assign var="subscriptionStatus" value=$userInstitutionalSubscription->getStatus()}
+			{assign var="isNonExpiring" value=$userInstitutionalSubscription->isNonExpiring()}
 			{if $journalPaymentsEnabled && $acceptSubscriptionPayments && $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT}
 				<span class="disabled">{translate key="subscriptions.status.awaitingOnlinePayment"}</span>	
 			{elseif $journalPaymentsEnabled && $acceptSubscriptionPayments && $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_NEEDS_APPROVAL}
@@ -95,15 +105,23 @@
 			{elseif $subscriptionStatus != $smarty.const.SUBSCRIPTION_STATUS_ACTIVE}
 				<span class="disabled">{translate key="subscriptions.inactive"}</span>	
 			{else}	
-				{assign var="isExpired" value=$userInstitutionalSubscription->isExpired()}
-				{if $isExpired}<span class="disabled">{translate key="user.subscriptions.expired"}: {$userInstitutionalSubscription->getDateEnd()|date_format:$dateFormatShort}</span>{else}{translate key="user.subscriptions.expires"}: {$userInstitutionalSubscription->getDateEnd()|date_format:$dateFormatShort}{/if}
+				{if $isNonExpiring}
+					{translate key="subscriptionTypes.nonExpiring"}
+				{else}
+					{assign var="isExpired" value=$userInstitutionalSubscription->isExpired()}
+					{if $isExpired}<span class="disabled">{translate key="user.subscriptions.expired"}: {$userInstitutionalSubscription->getDateEnd()|date_format:$dateFormatShort}</span>{else}{translate key="user.subscriptions.expires"}: {$userInstitutionalSubscription->getDateEnd()|date_format:$dateFormatShort}{/if}
+				{/if}
 			{/if}
 			</td>
 			<td width="15%" align="right">
 			{if $journalPaymentsEnabled && $acceptSubscriptionPayments}
 				{if $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT}
 					[<a href="{url op="completePurchaseSubscription" path="institutional"|to_array:$userInstitutionalSubscription->getSubscriptionId()}">{translate key="user.subscriptions.purchase"}</a>]
-				{elseif $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_ACTIVE}[<a href="{url op="payRenewSubscription" path="institutional"|to_array:$userInstitutionalSubscription->getSubscriptionId()}">{translate key="user.subscriptions.renew"}</a>][<a href="{url op="purchaseSubscription" path="institutional"|to_array:$userInstitutionalSubscription->getSubscriptionId()}">{translate key="user.subscriptions.purchase"}</a>]
+				{elseif $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_ACTIVE}
+					{if !$isNonExpiring}
+						[<a href="{url op="payRenewSubscription" path="institutional"|to_array:$userInstitutionalSubscription->getSubscriptionId()}">{translate key="user.subscriptions.renew"}</a>]
+					{/if}
+					[<a href="{url op="purchaseSubscription" path="institutional"|to_array:$userInstitutionalSubscription->getSubscriptionId()}">{translate key="user.subscriptions.purchase"}</a>]
 				{/if}
 			{else}
 				&nbsp;

@@ -23,11 +23,11 @@
 	</select></td>
 </tr>
 <tr valign="top">
-	<td class="label">{fieldLabel name="dateStart" required="true" key="manager.subscriptions.form.dateStart"}</td>
+	<td class="label">{fieldLabel name="dateStart" key="manager.subscriptions.form.dateStart"}</td>
 	<td class="value" id="dateStart">{html_select_date prefix="dateStart" all_extra="class=\"selectMenu\"" start_year="$yearOffsetPast" end_year="$yearOffsetFuture" time="$dateStart"}</td>
 </tr>
 <tr valign="top">
-	<td class="label">{fieldLabel name="dateEnd" required="true" key="manager.subscriptions.form.dateEnd"}</td>
+	<td class="label">{fieldLabel name="dateEnd" key="manager.subscriptions.form.dateEnd"}</td>
 	<td class="value" id="dateEnd">
 		{html_select_date prefix="dateEnd" start_year="$yearOffsetPast" all_extra="class=\"selectMenu\"" end_year="$yearOffsetFuture" time="$dateEnd"}
 		<input type="hidden" name="dateEndHour" value="23" />

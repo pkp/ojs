@@ -256,6 +256,7 @@
 	<message key="subscriptionTypes.years">years</message>
 	<message key="subscriptionTypes.month">month</message>
 	<message key="subscriptionTypes.months">months</message>
+	<message key="subscriptionTypes.nonExpiring">Non-expiring</message>
 	<message key="subscriptionTypes.format">Format</message>
 	<message key="subscriptionTypes.format.online">Online</message>
 	<message key="subscriptionTypes.format.print">Print</message>

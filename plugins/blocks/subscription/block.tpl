@@ -22,8 +22,12 @@
 		{if $journalPaymentsEnabled && $acceptSubscriptionPayments && $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT}
 			<span class="disabled">{translate key="subscriptions.status.awaitingOnlinePayment"}</span><br />
 		{else}
-			{if $individualSubscription->isExpired()}<span class="disabled">{translate key="user.subscriptions.expired"}: {else}{translate key="plugins.block.subscription.expires"}: {/if}{$individualSubscription->getDateEnd()|date_format:$dateFormatShort}<br />
-		{/if}		
+			{if $individualSubscription->isNonExpiring()}
+				{translate key="subscriptionTypes.nonExpiring"}<br />
+			{else}
+				{if $individualSubscription->isExpired()}<span class="disabled">{translate key="user.subscriptions.expired"}: {else}{translate key="plugins.block.subscription.expires"}: {/if}{$individualSubscription->getDateEnd()|date_format:$dateFormatShort}<br />
+			{/if}
+		{/if}	
 	{elseif $institutionalSubscription}
 		{translate key="plugins.block.subscription.providedBy"}: <strong>{$institutionalSubscription->getInstitutionName()|escape}</strong><br />{translate key="plugins.block.subscription.comingFromIP"}: {$userIP|escape}<br />
 	{elseif $individualSubscription && !$individualSubscriptionValid}
@@ -34,7 +38,11 @@
 		{if $journalPaymentsEnabled && $acceptSubscriptionPayments && $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT}
 			<span class="disabled">{translate key="subscriptions.status.awaitingOnlinePayment"}</span><br />
 		{else}
-			{if $individualSubscription->isExpired()}<span class="disabled">{translate key="user.subscriptions.expired"}: {else}{translate key="plugins.block.subscription.expires"}: {/if}{$individualSubscription->getDateEnd()|date_format:$dateFormatShort}<br />
+			{if $individualSubscription->isNonExpiring()}
+				{translate key="subscriptionTypes.nonExpiring"}<br />
+			{else}
+				{if $individualSubscription->isExpired()}<span class="disabled">{translate key="user.subscriptions.expired"}: {else}{translate key="plugins.block.subscription.expires"}: {/if}{$individualSubscription->getDateEnd()|date_format:$dateFormatShort}<br />
+			{/if}
 		{/if}		
 	{elseif !$userLoggedIn}
 		{translate key="plugins.block.subscription.loginToVerifySubscription"}

@@ -176,7 +176,11 @@ class OJSPaymentManager extends PaymentManager {
 					// Still requires approval from JM/SM since includes domain and IP ranges
 					import('subscription.InstitutionalSubscription');
 					$subscription->setStatus(SUBSCRIPTION_STATUS_NEEDS_APPROVAL);
-					$institutionalSubscriptionDao->renewSubscription($subscription);
+					if ($subscription->isNonExpiring()) {
+						$institutionalSubscriptionDao->updateSubscription($subscription);
+					} else {
+						$institutionalSubscriptionDao->renewSubscription($subscription);
+					}
 
 					// Notify JM/SM of completed online purchase
 					$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
@@ -187,8 +191,11 @@ class OJSPaymentManager extends PaymentManager {
 				} else {
 					import('subscription.IndividualSubscription');
 					$subscription->setStatus(SUBSCRIPTION_STATUS_ACTIVE);
-					$individualSubscriptionDao->renewSubscription($subscription);
-
+					if ($subscription->isNonExpiring()) {
+						$individualSubscriptionDao->updateSubscription($subscription);
+					} else {
+						$individualSubscriptionDao->renewSubscription($subscription);
+					}
 					// Notify JM/SM of completed online purchase
 					$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 					if ($journalSettingsDao->getSetting($subscription->getJournalId(), 'enableSubscriptionOnlinePaymentNotificationPurchaseIndividual')) {

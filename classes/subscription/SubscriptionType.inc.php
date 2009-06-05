@@ -176,6 +176,22 @@ class SubscriptionType extends DataObject {
 	}
 
 	/**
+	 * Get subscription type nonExpiring.
+	 * @return int
+	 */
+	function getNonExpiring() {
+		return $this->getData('nonExpiring');
+	}
+
+	/**
+	 * Set subscription type nonExpiring.
+	 * @param $nonExpiring int
+	 */
+	function setNonExpiring($nonExpiring) {
+		return $this->setData('nonExpiring', $nonExpiring);
+	}
+
+	/**
 	 * Get subscription type duration.
 	 * @return int
 	 */
@@ -196,6 +212,10 @@ class SubscriptionType extends DataObject {
 	 * @return string
 	 */
 	function getDurationYearsMonths() {
+		if ($this->getData('nonExpiring')) {
+			return Locale::translate('subscriptionTypes.nonExpiring');
+		}
+
 		$years = (int)floor($this->getData('duration')/12);
 		$months = (int)fmod($this->getData('duration'), 12);
 		$yearsMonths = '';

@@ -156,6 +156,10 @@ class UserInstitutionalSubscriptionForm extends Form {
 	function execute() {
 		$journal =& Request::getJournal();
 		$journalId = $journal->getJournalId();
+		$typeId = $this->getData('typeId');
+		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$nonExpiring = $subscriptionTypeDao->getSubscriptionTypeNonExpiring($typeId);
+		$today = date('Y-m-d');
 		$insert = false;
 
 		if (!isset($this->subscription)) {
@@ -165,17 +169,17 @@ class UserInstitutionalSubscriptionForm extends Form {
 			$subscription->setUserId($this->userId);
 			$subscription->setReferenceNumber(null);
 			$subscription->setNotes(null);
-			$today = date('Y-m-d');
-			$subscription->setDateStart($today);
-			$subscription->setDateEnd($today);
+
 			$insert = true;
         } else {
 			$subscription =& $this->subscription;
 		}
 
 		$subscription->setStatus(SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT);
-		$subscription->setTypeId($this->getData('typeId'));
+		$subscription->setTypeId($typeId);
 		$subscription->setMembership($this->getData('membership') ? $this->getData('membership') : null);
+		$subscription->setDateStart($nonExpiring ? null : $today);
+		$subscription->setDateEnd($nonExpiring ? null : $today);
 		$subscription->setInstitutionName($this->getData('institutionName'));
 		$subscription->setInstitutionMailingAddress($this->getData('institutionMailingAddress'));
 		$subscription->setDomain($this->getData('domain'));

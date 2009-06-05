@@ -62,9 +62,8 @@ class SubscriptionTypeForm extends Form {
 		$this->addCheck(new FormValidator($this, 'currency', 'required', 'manager.subscriptionTypes.form.currencyRequired'));	
 		$this->addCheck(new FormValidatorInSet($this, 'currency', 'required', 'manager.subscriptionTypes.form.currencyValid', array_keys($this->validCurrencies)));
 
-		// Duration is provided and is numeric and positive
-		$this->addCheck(new FormValidator($this, 'duration', 'required', 'manager.subscriptionTypes.form.durationRequired'));	
-		$this->addCheck(new FormValidatorCustom($this, 'duration', 'required', 'manager.subscriptionTypes.form.durationNumeric', create_function('$duration', 'return (is_numeric($duration) && $duration >= 0);')));
+		// Non-expiring flag is valid value
+		$this->addCheck(new FormValidatorInSet($this, 'nonExpiring', 'optional', 'manager.subscriptionTypes.form.nonExpiringValid', array('0', '1')));
 
 		// Format is provided and is valid value
 		$this->addCheck(new FormValidator($this, 'format', 'required', 'manager.subscriptionTypes.form.formatRequired'));	
@@ -117,6 +116,7 @@ class SubscriptionTypeForm extends Form {
 					'description' => $subscriptionType->getDescription(null), // Localized
 					'cost' => $subscriptionType->getCost(),
 					'currency' => $subscriptionType->getCurrencyCodeAlpha(),
+					'nonExpiring' => $subscriptionType->getNonExpiring(),
 					'duration' => $subscriptionType->getDuration(),
 					'format' => $subscriptionType->getFormat(),
 					'institutional' => $subscriptionType->getInstitutional(),
@@ -134,7 +134,13 @@ class SubscriptionTypeForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('name', 'description', 'cost', 'currency', 'duration', 'format', 'institutional', 'membership', 'disable_public_display'));
+		$this->readUserVars(array('name', 'description', 'cost', 'currency', 'nonExpiring', 'duration', 'format', 'institutional', 'membership', 'disable_public_display'));
+
+		// If expiring subscription type, ensure duration is provided and valid
+		if ($this->getData('nonExpiring') === 0) {
+			$this->addCheck(new FormValidator($this, 'duration', 'required', 'manager.subscriptionTypes.form.durationRequired'));	
+			$this->addCheck(new FormValidatorCustom($this, 'duration', 'required', 'manager.subscriptionTypes.form.durationNumeric', create_function('$duration', 'return (is_numeric($duration) && $duration >= 0);')));
+		}
 	}
 
 	/**
@@ -146,12 +152,14 @@ class SubscriptionTypeForm extends Form {
 
 		if (isset($this->typeId)) {
 			$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($this->typeId);
-			$insert = false;
+			$nonExpiring = $subscriptionType->getNonExpiring();
 		}
 
 		if (!isset($subscriptionType)) {
 			$subscriptionType = new SubscriptionType();
-			$insert = true;
+			$nonExpiring = $this->getData('nonExpiring') == null ? 0 : $this->getData('nonExpiring');
+			$subscriptionType->setNonExpiring($nonExpiring);
+			$subscriptionType->setInstitutional($this->getData('institutional') == null ? 0 : $this->getData('institutional'));
 		}
 
 		$subscriptionType->setJournalId($journal->getJournalId());
@@ -159,11 +167,8 @@ class SubscriptionTypeForm extends Form {
 		$subscriptionType->setDescription($this->getData('description'), null); // Localized
 		$subscriptionType->setCost(round($this->getData('cost'), 2));
 		$subscriptionType->setCurrencyCodeAlpha($this->getData('currency'));
-		$subscriptionType->setDuration((int)$this->getData('duration'));
+		$subscriptionType->setDuration($nonExpiring ? null : (int)$this->getData('duration'));
 		$subscriptionType->setFormat($this->getData('format'));
-		if ($insert) {
-			$subscriptionType->setInstitutional($this->getData('institutional') == null ? 0 : $this->getData('institutional'));
-		}
 		$subscriptionType->setMembership($this->getData('membership') == null ? 0 : $this->getData('membership'));
 		$subscriptionType->setDisablePublicDisplay($this->getData('disable_public_display') == null ? 0 : $this->getData('disable_public_display'));
 

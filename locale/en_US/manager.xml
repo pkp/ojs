@@ -564,6 +564,7 @@
 	<message key="manager.subscriptions.summary">Subscriptions Summary</message>
 	<message key="manager.subscriptions.create">Create New Subscription</message>
 	<message key="manager.subscriptions.createTitle">Create</message>
+	<message key="manager.subscriptions.renew">Renew</message>
 	<message key="manager.subscriptions.dateEnd">End</message>
 	<message key="manager.subscriptions.dateEndSearch">End Date</message>
 	<message key="manager.subscriptions.dateStart">Start</message>
@@ -647,6 +648,10 @@
 	<message key="manager.subscriptionTypes.form.currencyRequired">A currency is required.</message>
 	<message key="manager.subscriptionTypes.form.currencyValid">Please select a valid currency.</message>
 	<message key="manager.subscriptionTypes.form.description">Description</message>
+	<message key="manager.subscriptionTypes.form.nonExpiring.expiresAfter">Expires after</message>
+	<message key="manager.subscriptionTypes.form.nonExpiring.months">months (e.g. 12)</message>
+	<message key="manager.subscriptionTypes.form.nonExpiring.neverExpires">Never expires</message>
+	<message key="manager.subscriptionTypes.form.nonExpiringValid">Please use the provided options.</message>
 	<message key="manager.subscriptionTypes.form.duration">Duration</message>
 	<message key="manager.subscriptionTypes.form.durationInstructions">The number of months the subscription lasts (e.g. 12).</message>
 	<message key="manager.subscriptionTypes.form.durationNumeric">The duration must be a positive, numeric value.</message>
@@ -657,7 +662,7 @@
 	<message key="manager.subscriptionTypes.form.subscriptions">Subscriptions</message>
 	<message key="manager.subscriptionTypes.form.individual">Individual (users are validated via login)</message>
 	<message key="manager.subscriptionTypes.form.institutional">Institutional (users are validated via domain or IP address)</message>
-	<message key="manager.subscriptionTypes.form.institutionalValid">Please use the checkbox provided.</message>
+	<message key="manager.subscriptionTypes.form.institutionalValid">Please use the provided options.</message>
 	<message key="manager.subscriptionTypes.form.membership"><![CDATA[Subscriptions require membership information<br />(e.g. of an association, organization, consortium, etc.)]]></message>
 	<message key="manager.subscriptionTypes.form.membershipValid">Please use the checkbox provided.</message>
 	<message key="manager.subscriptionTypes.form.options">Options</message>

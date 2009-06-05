@@ -117,6 +117,24 @@ class SubscriptionTypeDAO extends DAO {
 	}
 
 	/**
+	 * Retrieve nonExpiring flag by ID.
+	 * @param $typeId int
+	 * @return int
+	 */
+	function getSubscriptionTypeNonExpiring($typeId) {
+		$result =& $this->retrieve(
+			'SELECT non_expiring FROM subscription_types WHERE type_id = ?', $typeId
+		);
+
+		$returner = isset($result->fields[0]) ? $result->fields[0] : false;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
+	}
+
+	/**
 	 * Retrieve public display flag by ID.
 	 * @param $typeId int
 	 * @return int
@@ -170,6 +188,7 @@ class SubscriptionTypeDAO extends DAO {
 		$subscriptionType->setJournalId($row['journal_id']);
 		$subscriptionType->setCost($row['cost']);
 		$subscriptionType->setCurrencyCodeAlpha($row['currency_code_alpha']);
+		$subscriptionType->setNonExpiring($row['non_expiring']);
 		$subscriptionType->setDuration($row['duration']);
 		$subscriptionType->setFormat($row['format']);
 		$subscriptionType->setInstitutional($row['institutional']);
@@ -210,13 +229,14 @@ class SubscriptionTypeDAO extends DAO {
 	function insertSubscriptionType(&$subscriptionType) {
 		$this->update(
 			'INSERT INTO subscription_types
-				(journal_id, cost, currency_code_alpha, duration, format, institutional, membership, disable_public_display, seq)
+				(journal_id, cost, currency_code_alpha, non_expiring, duration, format, institutional, membership, disable_public_display, seq)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$subscriptionType->getJournalId(),
 				$subscriptionType->getCost(),
 				$subscriptionType->getCurrencyCodeAlpha(),
+				$subscriptionType->getNonExpiring(),
 				$subscriptionType->getDuration(),
 				$subscriptionType->getFormat(),
 				$subscriptionType->getInstitutional(),
@@ -243,6 +263,7 @@ class SubscriptionTypeDAO extends DAO {
 					journal_id = ?,
 					cost = ?,
 					currency_code_alpha = ?,
+					non_expiring = ?,
 					duration = ?,
 					format = ?,
 					institutional = ?,
@@ -254,6 +275,7 @@ class SubscriptionTypeDAO extends DAO {
 				$subscriptionType->getJournalId(),
 				$subscriptionType->getCost(),
 				$subscriptionType->getCurrencyCodeAlpha(),
+				$subscriptionType->getNonExpiring(),
 				$subscriptionType->getDuration(),
 				$subscriptionType->getFormat(),
 				$subscriptionType->getInstitutional(),

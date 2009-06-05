@@ -637,8 +637,11 @@ class UserHandler extends Handler {
 		if (!$subscriptionDAO->subscriptionExistsByUser($subscriptionId, $userId)) Request::redirect(null, 'user');
 
 		$subscription =& $subscriptionDAO->getSubscription($subscriptionId);
-		$subscriptionStatus = $subscription->getStatus();
+
+		if ($subscription->isNonExpiring()) Request::redirect(null, 'user'); 
+
 		import('subscription.Subscription');
+		$subscriptionStatus = $subscription->getStatus();
 		$validStatus = array(SUBSCRIPTION_STATUS_ACTIVE, SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT);
 
 		if (!in_array($subscriptionStatus, $validStatus)) Request::redirect(null, 'user'); 

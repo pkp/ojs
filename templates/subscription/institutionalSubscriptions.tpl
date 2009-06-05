@@ -81,22 +81,19 @@
 		<td colspan="6" class="headseparator">&nbsp;</td>
 	</tr>
 {iterate from=subscriptions item=subscription}
+	{assign var=isNonExpiring value=$subscription->isNonExpiring()}
 	<tr valign="top">
 		<td>
 			{assign var=emailString value="`$subscription->getUserFullName()` <`$subscription->getUserEmail()`>"}
-			{if $institutional}
-				{url|assign:"redirectUrl" page="subscriptions" op="institutional" escape=false}
-			{else}
-				{url|assign:"redirectUrl" page="subscriptions" op="individual" escape=false}
-			{/if}
+			{url|assign:"redirectUrl" page="subscriptions" op="institutional" escape=false}
 			{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$redirectUrl}
 			{$subscription->getInstitutionName()|escape}&nbsp;{icon name="mail" url=$url}
 		</td>
 		<td>{$subscription->getSubscriptionTypeName()|escape}</td>
 		<td>{$subscription->getStatusString()|escape}</td>
-		<td>{$subscription->getDateStart()|date_format:$dateFormatShort}</td>
-		<td>{$subscription->getDateEnd()|date_format:$dateFormatShort}</td>
-		<td><a href="{url op="editSubscription" path="institutional"|to_array:$subscription->getSubscriptionId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url op="deleteSubscription" path="institutional"|to_array:$subscription->getSubscriptionId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.subscriptions.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
+		<td>{if $isNonExpiring}&nbsp;{else}{if $subscription->isExpired()}<span class="disabled">{$subscription->getDateStart()|date_format:$dateFormatShort}</span>{else}{$subscription->getDateStart()|date_format:$dateFormatShort}{/if}{/if}</td>
+		<td>{if $isNonExpiring}{translate key="subscriptionTypes.nonExpiring"}{else}{if $subscription->isExpired()}<span class="disabled">{$subscription->getDateEnd()|date_format:$dateFormatShort}</span>{else}{$subscription->getDateEnd()|date_format:$dateFormatShort}{/if}{/if}</td>
+		<td><a href="{url op="editSubscription" path="institutional"|to_array:$subscription->getSubscriptionId()}" class="action">{translate key="common.edit"}</a>{if !$isNonExpiring}&nbsp;|&nbsp;<a href="{url op="renewSubscription" path="institutional"|to_array:$subscription->getSubscriptionId()}" class="action">{translate key="manager.subscriptions.renew"}</a>{/if}&nbsp;|&nbsp;<a href="{url op="deleteSubscription" path="institutional"|to_array:$subscription->getSubscriptionId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.subscriptions.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 	</tr>
 	<tr>
 		<td colspan="6" class="{if $subscriptions->eof()}end{/if}separator">&nbsp;</td>

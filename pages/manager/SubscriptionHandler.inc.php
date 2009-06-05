@@ -85,6 +85,33 @@ class SubscriptionHandler extends ManagerHandler {
 	}
 
 	/**
+	 * Renew a subscription.
+	 * @param $args array first parameter is the ID of the subscription to renew
+	 */
+	function renewSubscription($args) {
+		if (isset($args) && !empty($args)) {
+			if ($args[0] == 'individual') {
+				$institutional  = false;
+				$redirect = 'individual';
+			} else {
+				$institutional = true;
+				$redirect = 'institutional';
+			}
+		} else {
+			Request::redirect(null, 'manager');
+		}
+
+		$this->validate();
+		$this->setupTemplate();
+
+        array_shift($args);
+        import('subscription.SubscriptionAction');
+        SubscriptionAction::renewSubscription($args, $institutional);
+
+		Request::redirect(null, null, 'subscriptions', $redirect);
+	}
+
+	/**
 	 * Display form to edit a subscription.
 	 * @param $args array optional, first parameter is the ID of the subscription to edit
 	 */

@@ -513,6 +513,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 		if (empty($userId) || empty($journalId)) {
 			return false;
 		}
+		$returner = false;
 
 		$today = $this->dateToDB(Core::getCurrentDate()); 
 
@@ -524,36 +525,38 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 
 		switch($check) {
 			case SUBSCRIPTION_DATE_START:
-				$sqlDate = sprintf('AND %s >= s.date_start AND %s >= s.date_start', $checkDate, $today);
+				$dateSql = sprintf('%s >= s.date_start AND %s >= s.date_start', $checkDate, $today);
 				break;
 			case SUBSCRIPTION_DATE_END:
-				$sqlDate = sprintf('AND %s <= s.date_end AND %s >= s.date_start', $checkDate, $today);
+				$dateSql = sprintf('%s <= s.date_end AND %s >= s.date_start', $checkDate, $today);
 				break;
 			default:
-				$sqlDate = sprintf('AND %s >= s.date_start AND %s <= s.date_end', $checkDate, $checkDate);
+				$dateSql = sprintf('%s >= s.date_start AND %s <= s.date_end', $checkDate, $checkDate);
 		}
 
-		$result = &$this->retrieve(
-			sprintf('SELECT s.subscription_id
-				FROM
-				subscriptions s,
-				subscription_types st
-				WHERE s.user_id = ?
-				AND   s.journal_id = ? 
-				AND   s.status = ' . SUBSCRIPTION_STATUS_ACTIVE . ' '
-				. $sqlDate .
-				' AND s.type_id = st.type_id
-				AND st.institutional = 0
-				AND (st.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE .' OR st.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')'),
+		$nonExpiringSql = "AND ((st.non_expiring = 1) OR (st.non_expiring = 0 AND ($dateSql)))";
+
+		$result = &$this->retrieve('
+			SELECT s.subscription_id
+			FROM
+			subscriptions s,
+			subscription_types st
+			WHERE s.user_id = ?
+			AND s.journal_id = ? 
+			AND s.status = ' . SUBSCRIPTION_STATUS_ACTIVE . '
+			AND s.type_id = st.type_id
+			AND st.institutional = 0 '
+			. $nonExpiringSql .
+			' AND (st.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE . ' 
+				OR st.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')',
 			array(
 				$userId,
 				$journalId
-			));
+			)
+		);
 
 		if ($result->RecordCount() != 0) {
 			$returner = $result->fields[0];
-		} else {
-			$returner = false;
 		}
 
 		$result->Close();

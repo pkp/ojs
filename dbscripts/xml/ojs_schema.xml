@@ -1592,8 +1592,11 @@
 		<field name="currency_code_alpha" type="C2" size="3">
 			<NOTNULL/>
 		</field>
-		<field name="duration" type="I2">
+		<field name="non_expiring" type="I1">
 			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="duration" type="I2">
 		</field>
 		<field name="format" type="I2">
 			<NOTNULL/>
@@ -1667,10 +1670,8 @@
 			<NOTNULL/>
 		</field>
 		<field name="date_start" type="D">
-			<NOTNULL/>
 		</field>
 		<field name="date_end" type="T">
-			<NOTNULL/>
 		</field>
 		<field name="status" type="I1">
 			<NOTNULL/>

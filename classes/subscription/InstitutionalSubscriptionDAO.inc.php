@@ -635,6 +635,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 			return false;
 		}
 		$returner = false;
+
 		$today = $this->dateToDB(Core::getCurrentDate()); 
 
 		if ($checkDate == null) {
@@ -645,37 +646,92 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 
 		switch($check) {
 			case SUBSCRIPTION_DATE_START:
-				$sqlDate = sprintf('AND %s >= s.date_start AND %s >= s.date_start', $checkDate, $today);
+				$dateSql = sprintf('%s >= s.date_start AND %s >= s.date_start', $checkDate, $today);
 				break;
 			case SUBSCRIPTION_DATE_END:
-				$sqlDate = sprintf('AND %s <= s.date_end AND %s >= s.date_start', $checkDate, $today);
+				$dateSql = sprintf('%s <= s.date_end AND %s >= s.date_start', $checkDate, $today);
 				break;
 			default:
-				$sqlDate = sprintf('AND %s >= s.date_start AND %s <= s.date_end', $checkDate, $checkDate);
+				$dateSql = sprintf('%s >= s.date_start AND %s <= s.date_end', $checkDate, $checkDate);
 		}
 
-		// Check if valid domain match
+		$nonExpiringSql = "AND ((st.non_expiring = 1) OR (st.non_expiring = 0 AND ($dateSql)))";
+
+		// Check if domain match
 		if (!empty($domain)) {
-			$result = &$this->retrieve(
-				sprintf('SELECT iss.subscription_id 
-					FROM
-					institutional_subscriptions iss,
-					subscriptions s,
-					subscription_types st
-					WHERE POSITION(UPPER(LPAD(iss.domain, LENGTH(iss.domain)+1, \'.\')) IN UPPER(LPAD(?, LENGTH(?)+1, \'.\'))) != 0
-					AND iss.domain != \'\'
-					AND iss.subscription_id = s.subscription_id
-					AND s.journal_id = ?
-					AND s.status = ' . SUBSCRIPTION_STATUS_ACTIVE . ' '
-					. $sqlDate . 
-					' AND s.type_id = st.type_id
-					AND   st.institutional = 1
-					AND   (st.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE .' OR st.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')'),
+			$result = &$this->retrieve('
+				SELECT iss.subscription_id 
+				FROM
+				institutional_subscriptions iss,
+				subscriptions s,
+				subscription_types st
+				WHERE POSITION(UPPER(LPAD(iss.domain, LENGTH(iss.domain)+1, \'.\')) IN UPPER(LPAD(?, LENGTH(?)+1, \'.\'))) != 0
+				AND iss.domain != \'\'
+				AND iss.subscription_id = s.subscription_id
+				AND s.journal_id = ?
+				AND s.status = ' . SUBSCRIPTION_STATUS_ACTIVE . '
+				AND s.type_id = st.type_id
+				AND st.institutional = 1 '
+				. $nonExpiringSql .
+				' AND (st.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE . '
+					OR st.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')',
 				array(
 					$domain,
 					$domain,
 					$journalId
-				));
+				)
+			);
+
+			if ($result->RecordCount() != 0) {
+				$returner = $result->fields[0];
+			}
+
+			$result->Close();
+			unset($result);
+
+			if ($returner) {
+				return $returner;
+			}
+		}
+
+		// Check for IP match
+		if (!empty($IP)) {
+			$IP = sprintf('%u', ip2long($IP));
+
+			$result = &$this->retrieve('
+				SELECT isip.subscription_id
+				FROM
+				institutional_subscription_ip isip,
+				subscriptions s,
+				subscription_types st
+				WHERE ((isip.ip_end IS NOT NULL
+				AND ? >= isip.ip_start AND ? <= isip.ip_end
+				AND isip.subscription_id = s.subscription_id   
+				AND s.journal_id = ?
+				AND s.status = ' . SUBSCRIPTION_STATUS_ACTIVE . '
+				AND s.type_id = st.type_id
+				AND st.institutional = 1 '
+				. $nonExpiringSql .
+				' AND (st.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE . '
+					OR st.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . '))
+				OR  (isip.ip_end IS NULL
+				AND ? = isip.ip_start
+				AND isip.subscription_id = s.subscription_id   
+				AND s.journal_id = ?
+				AND s.status = ' . SUBSCRIPTION_STATUS_ACTIVE . '
+				AND s.type_id = st.type_id
+				AND st.institutional = 1 '
+				. $nonExpiringSql .
+				' AND (st.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE . '
+					OR st.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')))',
+				array (
+					$IP,
+					$IP,
+					$journalId,
+					$IP,
+					$journalId
+				)
+			);
 
 			if ($result->RecordCount() != 0) {
 				$returner = $result->fields[0];
@@ -684,51 +740,6 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 			$result->Close();
 			unset($result);
 		}
-
-		if ($returner || empty($IP)) {
-			return $returner;
-		}
-
-		// No valid domain match, check for IP match
-		$IP = sprintf('%u', ip2long($IP));
-		$result = &$this->retrieve(
-			sprintf('SELECT isip.subscription_id
-				FROM
-				institutional_subscription_ip isip,
-				subscriptions s,
-				subscription_types st
-				WHERE ((isip.ip_end IS NOT NULL
-				AND   ? >= isip.ip_start AND ? <= isip.ip_end
-				AND   isip.subscription_id = s.subscription_id   
-				AND   s.journal_id = ?
-				AND   s.status = ' . SUBSCRIPTION_STATUS_ACTIVE . ' '
-				. $sqlDate .
-				' AND s.type_id = st.type_id
-				AND   st.institutional = 1
-				AND   (st.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE .' OR st.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . '))
-				OR    (isip.ip_end IS NULL
-				AND   ? = isip.ip_start
-				AND   isip.subscription_id = s.subscription_id   
-				AND   s.journal_id = ?
-				AND   s.status = ' . SUBSCRIPTION_STATUS_ACTIVE . ' '
-				. $sqlDate .
-				' AND s.type_id = st.type_id
-				AND   st.institutional = 1
-				AND   (st.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE .' OR st.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')))'),
-			array (
-					$IP,
-					$IP,
-					$journalId,
-					$IP,
-					$journalId
-			));
-
-		if ($result->RecordCount() != 0) {
-			$returner = $result->fields[0];
-		}
-
-		$result->Close();
-		unset($result);
 
 		return $returner;
 	}

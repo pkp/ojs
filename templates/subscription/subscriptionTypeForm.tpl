@@ -67,6 +67,24 @@
 	<td><select name="currency" id="currency" class="selectMenu">{html_options options=$validCurrencies selected=$currency}</select></td>
 </tr>
 <tr valign="top">
+	<td class="label">{fieldLabel name="format" required="true" key="manager.subscriptionTypes.form.format"}</td>
+	<td><select id="format" name="format" class="selectMenu">{html_options options=$validFormats selected=$format}</select></td>
+</tr>
+{if !$typeId}
+<tr valign="top">
+	<td class="label">{fieldLabel name="duration" required="true" key="manager.subscriptionTypes.form.duration"}</td>
+	<td class="value">
+		<input type="radio" name="nonExpiring" id="nonExpiring-0" value="0"{if !$nonExpiring} checked="checked"{/if} />&nbsp;{translate key="manager.subscriptionTypes.form.nonExpiring.expiresAfter"} <input type="text" name="duration" value="{$duration|escape}" size="5" maxlength="10" id="duration" class="textField" /> {translate key="manager.subscriptionTypes.form.nonExpiring.months"}
+	</td>
+</tr>
+<tr valign="top">
+	<td>&nbsp;</td>
+	<td class="value">
+		<input type="radio" name="nonExpiring" id="nonExpiring-1" value="1"{if $nonExpiring} checked="checked"{/if} />&nbsp;{translate key="manager.subscriptionTypes.form.nonExpiring.neverExpires"}
+	</td>
+</tr>
+{elseif $typeId && !$nonExpiring}
+<tr valign="top">
 	<td class="label">{fieldLabel name="duration" required="true" key="manager.subscriptionTypes.form.duration"}</td>
 	<td class="value">
 		<input type="text" name="duration" value="{$duration|escape}" size="5" maxlength="10" id="duration" class="textField" />
@@ -74,10 +92,7 @@
 		<span class="instruct">{translate key="manager.subscriptionTypes.form.durationInstructions"}</span>
 	</td>
 </tr>
-<tr valign="top">
-	<td class="label">{fieldLabel name="format" required="true" key="manager.subscriptionTypes.form.format"}</td>
-	<td><select id="format" name="format" class="selectMenu">{html_options options=$validFormats selected=$format}</select></td>
-</tr>
+{/if}
 {if !$typeId}
 <tr valign="top">
 	<td class="label">{fieldLabel name="subscriptions" key="manager.subscriptionTypes.form.subscriptions"}</td>
