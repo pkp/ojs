@@ -91,9 +91,8 @@ class AuthSourceSettingsForm extends Form {
 		$auth->setTitle($this->getData('title'));
 		$auth->setSettings($this->getData('settings'));
 
-		$authDao->updateSource($auth);
+		$authDao->updateObject($auth);
 	}
-
 }
 
 ?>
