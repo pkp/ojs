@@ -19,6 +19,7 @@
 	<message key="admin.settings.noJournalRedirect">Do not redirect</message>
 	<message key="admin.languages.primaryLocaleInstructions">This will be the default language for the site and any hosted journals.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Select all locales to support on the site. The selected locales will be available for use by all journals hosted on the site, and also appear in a language select menu to appear on each site page (which can be overridden on journal-specific pages). If multiple locales are not selected, the language toggle menu will not appear and extended language settings will not be available to journals.</message>
+	<message key="admin.locale.maybeIncomplete">Marked locales may be incomplete.</message>
 	<message key="admin.languages.confirmUninstall">Are you sure you want to uninstall this locale? This may affect any hosted journals currently using the locale.</message>
 	<message key="admin.languages.installNewLocalesInstructions">Select any additional locales to install support for in this system. Locales must be installed before they can be used by hosted journals. See the OJS documentation for information on adding support for new languages.</message>
 	<message key="admin.languages.downloadLocales">Download Locales</message>

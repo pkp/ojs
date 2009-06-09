@@ -37,11 +37,21 @@
 		{foreach from=$installedLocales item=localeKey}
 		<tr valign="top">
 			<td width="5%"><input type="checkbox" name="supportedLocales[]" id="supportedLocales-{$localeKey|escape}" value="{$localeKey|escape}"{if in_array($localeKey, $supportedLocales)} checked="checked"{/if} /></td>
-			<td width="95%"><label for="supportedLocales-{$localeKey|escape}">{$localeNames.$localeKey|escape}</label></td>
+			<td width="95%">
+				<label for="supportedLocales-{$localeKey|escape}">{$localeNames.$localeKey|escape}</label>
+				{if !$localesComplete[$localeKey]}
+					<span class="formError">*</span>
+					{assign var=incompleteLocaleFound value=1}
+				{/if}
+			</td>
 		</tr>
 		{/foreach}
 		</table>
 		<span class="instruct">{translate key="admin.languages.supportedLocalesInstructions"}</span>
+		{if $incompleteLocaleFound}
+			<br/>
+			<span class="formError">*</span>&nbsp;{translate key="admin.locale.maybeIncomplete"}
+		{/if}{* $incompleteLocaleFound *}
 	</td>
 </tr>
 </table>
@@ -68,12 +78,22 @@
 <div id="installNewLocales">
 <h4>{translate key="admin.languages.installNewLocales"}</h4>
 <p>{translate key="admin.languages.installNewLocalesInstructions"}</p>
+{assign var=incompleteLocaleFound value=0}
 {foreach from=$uninstalledLocales item=localeKey}
-<input type="checkbox" name="installLocale[]" id="installLocale-{$localeKey|escape}" value="{$localeKey|escape}" /> <label for="installLocale-{$localeKey|escape}">{$localeNames.$localeKey|escape} ({$localeKey|escape})</label><br />
+<input type="checkbox" name="installLocale[]" id="installLocale-{$localeKey|escape}" value="{$localeKey|escape}" /> <label for="installLocale-{$localeKey|escape}">{$localeNames.$localeKey|escape} ({$localeKey|escape})</label>
+{if !$localesComplete[$localeKey]}
+	<span class="formError">*</span>
+	{assign var=incompleteLocaleFound value=1}
+{/if}
+<br />
 {foreachelse}
 {assign var="noLocalesToInstall" value="1"}
 <span class="nodata">{translate key="admin.languages.noLocalesAvailable"}</span>
 {/foreach}
+{if $incompleteLocaleFound}
+	<br />
+	<span class="formError">*</span>&nbsp;{translate key="admin.locale.maybeIncomplete"}
+{/if}{* $incompleteLocaleFound *}
 
 {if not $noLocalesToInstall}
 <p><input type="submit" value="{translate key="admin.languages.installLocales"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="admin" escape=false}'" /></p>

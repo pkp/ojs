@@ -37,6 +37,12 @@ class AdminLanguagesHandler extends AdminHandler {
 		$templateMgr->assign('localeNames', Locale::getAllLocales());
 		$templateMgr->assign('primaryLocale', $site->getPrimaryLocale());
 		$templateMgr->assign('supportedLocales', $site->getSupportedLocales());
+		$localesComplete = array();
+		foreach (Locale::getAllLocales() as $key => $name) {
+			$localesComplete[$key] = Locale::isLocaleComplete($key);
+		}
+		$templateMgr->assign('localesComplete', $localesComplete);
+
 		$templateMgr->assign('installedLocales', $site->getInstalledLocales());
 		$templateMgr->assign('uninstalledLocales', array_diff(array_keys(Locale::getAllLocales()), $site->getInstalledLocales()));
 		$templateMgr->assign('helpTopicId', 'site.siteManagement');

@@ -31,6 +31,9 @@ class InstallForm extends Form {
 	/** @var array locales supported by this system */
 	var $supportedLocales;
 
+	/** @var array locale completeness booleans */
+	var $localesComplete;
+
 	/** @var array client character sets supported by this system */
 	var $supportedClientCharsets;
 
@@ -51,6 +54,10 @@ class InstallForm extends Form {
 
 		// FIXME Move the below options to an external configuration file?
 		$this->supportedLocales = Locale::getAllLocales();
+		$this->localesComplete = array();
+		foreach ($this->supportedLocales as $key => $name) {
+			$this->localesComplete[$key] = Locale::isLocaleComplete($key);
+		}
 
 		$this->supportedClientCharsets = array (
 			'utf-8' => 'Unicode (UTF-8)',
@@ -110,6 +117,7 @@ class InstallForm extends Form {
 	function display() {
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('localeOptions', $this->supportedLocales);
+		$templateMgr->assign('localesComplete', $this->localesComplete);
 		$templateMgr->assign('clientCharsetOptions', $this->supportedClientCharsets);
 		$templateMgr->assign('connectionCharsetOptions', $this->supportedConnectionCharsets);
 		$templateMgr->assign('databaseCharsetOptions', $this->supportedDatabaseCharsets);
