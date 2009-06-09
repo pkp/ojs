@@ -69,6 +69,13 @@ as a download. Windows users may need to work around a patch bug by converting
 the line-endings in the patch file from UNIX to DOS; to do this, open the patch
 file in Notepad and save it again.
 
+Patch upgrades will NOT include any binary files that were introduced in the
+new version, i.e. any GIF images that are needed in the new version but were
+not included in the old version. To find a list of binaries that should be
+manually added after applying the patch, search the patch file for lines like:
+"Binary files (filename here) differ" (not including the quotes). These files
+can be found in the distribution archive.
+
 
 2. CVS
 
