@@ -343,6 +343,9 @@ class SectionEditorSubmissionDAO extends DAO {
 			'abbrev',
 			$locale,
 			'title', // Article title
+			$locale,
+			'title', // Article title
+			$primaryLocale,
 			$journalId,
 			$sectionEditorId
 		);
@@ -437,7 +440,7 @@ class SectionEditorSubmissionDAO extends DAO {
 				scf.date_completed as copyedit_completed,
 				spr.date_completed as proofread_completed,
 				sle.date_completed as layout_completed,
-				atl.setting_value AS submission_title,
+				COALESCE(atl.setting_value, atpl.setting_value) AS submission_title,
 				aap.last_name AS author_name,
 				e.can_review AS can_review,
 				e.can_edit AS can_edit,
@@ -461,7 +464,8 @@ class SectionEditorSubmissionDAO extends DAO {
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
 				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
 				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
-				LEFT JOIN article_settings atl ON (a.article_id = atl.article_id AND atl.setting_name = ?)
+				LEFT JOIN article_settings atpl ON (atpl.article_id = a.article_id AND atpl.setting_name = ? AND atpl.locale = ?)
+				LEFT JOIN article_settings atl ON (a.article_id = atl.article_id AND atl.setting_name = ? AND atl.locale = ?)
 			WHERE	a.journal_id = ?
 				AND e.editor_id = ?
 				AND a.submission_progress = 0' . (!empty($additionalWhereSql)?" AND ($additionalWhereSql)":"");
@@ -476,7 +480,7 @@ class SectionEditorSubmissionDAO extends DAO {
 			$searchSql .= ' AND a.section_id = ?';
 		}
 
-		$result =& $this->retrieveRange($sql . ' ' . $searchSql . ($sortBy?(' ORDER BY ' . $sortBy . ' ' . $this->getDirectionMapping($sortDirection)) : ''),
+		$result =& $this->retrieveRange($sql . ' ' . $searchSql . ($sortBy?(' ORDER BY ' . $this->getSortMapping($sortBy) . ' ' . $this->getDirectionMapping($sortDirection)) : ''),
 			$params,
 			$rangeInfo
 		);	
@@ -850,7 +854,7 @@ class SectionEditorSubmissionDAO extends DAO {
 			WHERE	u.user_id = r.user_id AND
 				r.journal_id = ? AND
 				r.role_id = ? ' . $searchSql . 'GROUP BY u.user_id, ar.review_id' .
-			($sortBy?(' ORDER BY ' . $sortBy . ' ' . $this->getDirectionMapping($sortDirection)) : ''),
+			($sortBy?(' ORDER BY ' . $this->getSortMapping($sortBy) . ' ' . $this->getDirectionMapping($sortDirection)) : ''),
 			$paramArray, $rangeInfo
 		);
 

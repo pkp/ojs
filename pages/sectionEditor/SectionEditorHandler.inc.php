@@ -113,7 +113,8 @@ class SectionEditorHandler extends Handler {
 			$fromDate,
 			$toDate,
 			$rangeInfo,
-			$sectionEditorSubmissionDao->getSortMapping($sort)
+			$sort,
+			$sortDirection
 		);
 
 		$templateMgr =& TemplateManager::getManager();

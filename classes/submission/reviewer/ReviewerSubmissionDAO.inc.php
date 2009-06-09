@@ -206,11 +206,12 @@ class ReviewerSubmissionDAO extends DAO {
 				r2.review_revision,
 				u.first_name, u.last_name,
 				d.decision AS editor_decision,
-				atl.setting_value AS submission_title,
+				COALESCE(atl.setting_value, atpl.setting_value) AS submission_title,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
 			FROM	articles a
 				LEFT JOIN review_assignments r ON (a.article_id = r.article_id)
+				LEFT JOIN article_settings atpl ON (atpl.article_id = a.article_id AND atpl.setting_name = ? AND atpl.locale = ?)
 				LEFT JOIN article_settings atl ON (atl.article_id = a.article_id AND atl.setting_name = ? AND atl.locale = ?)
 				LEFT JOIN edit_decisions d ON (d.article_id = a.article_id)
 				LEFT JOIN sections s ON (s.section_id = a.section_id)
@@ -231,14 +232,16 @@ class ReviewerSubmissionDAO extends DAO {
 		}
 
 		if ($sortBy) {
-			$sql .=  ' ORDER BY ' . $sortBy . ' ' . $this->getDirectionMapping($sortDirection);
+			$sql .=  ' ORDER BY ' . $this->getSortMapping($sortBy) . ' ' . $this->getDirectionMapping($sortDirection);
 		}
 
 		$result =& $this->retrieveRange(
 			$sql,
 			array(
-				$locale,
 				'title',
+				$primaryLocale,
+				'title',
+				$locale,
 				'title',
 				$primaryLocale,
 				'title',

@@ -187,7 +187,7 @@ class RoleDAO extends DAO {
 				break;
 		}
 
-		$searchSql .= ($sortBy?(' ORDER BY ' . $sortBy . ' ' . $this->getDirectionMapping($sortDirection)) : '');
+		$searchSql .= ($sortBy?(' ORDER BY ' . $this->getSortMapping($sortBy) . ' ' . $this->getDirectionMapping($sortDirection)) : '');
 
 		$result =& $this->retrieveRange(
 			'SELECT DISTINCT u.* FROM users AS u LEFT JOIN user_settings s ON (u.user_id = s.user_id AND s.setting_name = ?), roles AS r WHERE u.user_id = r.user_id ' . (isset($roleId)?'AND r.role_id = ?':'') . (isset($journalId) ? ' AND r.journal_id = ?' : '') . ' ' . $searchSql,
@@ -249,7 +249,7 @@ class RoleDAO extends DAO {
 				break;
 		}
 
-		$searchSql .= ($sortBy?(' ORDER BY ' . $sortBy . ' ' . $this->getDirectionMapping($sortDirection)) : '');
+		$searchSql .= ($sortBy?(' ORDER BY ' . $this->getSortMapping($sortBy) . ' ' . $this->getDirectionMapping($sortDirection)) : '');
 
 		$result =& $this->retrieveRange(
 

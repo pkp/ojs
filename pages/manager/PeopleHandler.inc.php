@@ -74,7 +74,7 @@ class PeopleHandler extends ManagerHandler {
 		$rangeInfo = Handler::getRangeInfo('users');
 
 		if ($roleId) {
-			$users =& $roleDao->getUsersByRoleId($roleId, $journal->getJournalId(), $searchType, $search, $searchMatch, $rangeInfo, $roleDao->getSortMapping($sort));
+			$users =& $roleDao->getUsersByRoleId($roleId, $journal->getJournalId(), $searchType, $search, $searchMatch, $rangeInfo, $sort);
 			$templateMgr->assign('roleId', $roleId);
 			switch($roleId) {
 				case ROLE_ID_JOURNAL_MANAGER:
@@ -112,7 +112,7 @@ class PeopleHandler extends ManagerHandler {
 					break;
 			}
 		} else {
-			$users =& $roleDao->getUsersByJournalId($journal->getJournalId(), $searchType, $search, $searchMatch, $rangeInfo, $roleDao->getSortMapping($sort));
+			$users =& $roleDao->getUsersByJournalId($journal->getJournalId(), $searchType, $search, $searchMatch, $rangeInfo, $sort);
 			$helpTopicId = 'journal.users.allUsers';
 		}
 
@@ -193,7 +193,7 @@ class PeopleHandler extends ManagerHandler {
 
 		$rangeInfo = Handler::getRangeInfo('users');
 
-		$users =& $userDao->getUsersByField($searchType, $searchMatch, $search, true, $rangeInfo, $roleDao->getSortMapping($sort));
+		$users =& $userDao->getUsersByField($searchType, $searchMatch, $search, true, $rangeInfo, $sort);
 
 		$templateMgr->assign('searchField', $searchType);
 		$templateMgr->assign('searchMatch', $searchMatch);
@@ -497,10 +497,10 @@ class PeopleHandler extends ManagerHandler {
 		$rangeInfo = Handler::getRangeInfo('users');
 
 		if ($roleId) {
-			$users =& $roleDao->getUsersByRoleId($roleId, $journalId, $searchType, $search, $searchMatch, $rangeInfo, $roleDao->getSortMapping($sort));
+			$users =& $roleDao->getUsersByRoleId($roleId, $journalId, $searchType, $search, $searchMatch, $rangeInfo, $sort);
 			$templateMgr->assign('roleId', $roleId);
 		} else {
-			$users =& $roleDao->getUsersByJournalId($journalId, $searchType, $search, $searchMatch, $rangeInfo, $roleDao->getSortMapping($sort));
+			$users =& $roleDao->getUsersByJournalId($journalId, $searchType, $search, $searchMatch, $rangeInfo, $sort);
 		}
 
 		$templateMgr->assign_by_ref('roleSettings', $this->retrieveRoleAssignmentPreferences($journal->getJournalId()));

@@ -306,7 +306,7 @@ class EditorSubmissionDAO extends DAO {
 				scf.date_completed as copyedit_completed,
 				spr.date_completed as proofread_completed,
 				sle.date_completed as layout_completed,
-				atl.setting_value AS submission_title,
+				COALESCE(atl.setting_value, atpl.setting_value) AS submission_title,
 				aap.last_name AS author_name,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
@@ -351,7 +351,7 @@ class EditorSubmissionDAO extends DAO {
 		}
 
 		$result =& $this->retrieveRange(
-			$sql . ' ' . $searchSql . ($sortBy?(' ORDER BY ' . $sortBy . ' ' . $this->getDirectionMapping($sortDirection)) : ''),
+			$sql . ' ' . $searchSql . ($sortBy?(' ORDER BY ' . $this->getSortMapping($sortBy) . ' ' . $this->getDirectionMapping($sortDirection)) : ''),
 			count($params)===1?array_shift($params):$params,
 			$rangeInfo
 		);

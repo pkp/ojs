@@ -433,7 +433,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			}
 
 			$rangeInfo =& Handler::getRangeInfo('reviewers');
-			$reviewers = $sectionEditorSubmissionDao->getReviewersForArticle($journal->getJournalId(), $articleId, $submission->getCurrentRound(), $searchType, $search, $searchMatch, $rangeInfo, $sectionEditorSubmissionDao->getSortMapping($sort), $sortDirection);
+			$reviewers = $sectionEditorSubmissionDao->getReviewersForArticle($journal->getJournalId(), $articleId, $submission->getCurrentRound(), $searchType, $search, $searchMatch, $rangeInfo, $sort, $sortDirection);
 
 			$journal = Request::getJournal();
 			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');

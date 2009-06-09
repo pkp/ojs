@@ -97,7 +97,7 @@ class EditorHandler extends SectionEditorHandler {
 					$toDate,
 					null,
 					null,
-					$editorSubmissionDao->getSortMapping($sort),
+					$sort,
 					$sortDirection
 				);
 				$submissions = new DAOResultFactory($rawSubmissions, $editorSubmissionDao, '_returnEditorSubmissionFromRow');
@@ -125,7 +125,7 @@ class EditorHandler extends SectionEditorHandler {
 					$toDate,
 					null,
 					$rangeInfo,
-					$editorSubmissionDao->getSortMapping($sort),
+					$sort,
 					$sortDirection
 				);
 				$submissions = new DAOResultFactory($rawSubmissions, $editorSubmissionDao, '_returnEditorSubmissionFromRow');
@@ -253,7 +253,7 @@ class EditorHandler extends SectionEditorHandler {
 			$fromDate,
 			$toDate,
 			$rangeInfo,
-			$editorSubmissionDao->getSortMapping($sort),
+			$sort,
 			$sortDirection
 		);
 

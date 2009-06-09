@@ -55,7 +55,7 @@ class ReviewerHandler extends Handler {
 		$sort = isset($sort) ? $sort : 'title';
 		$sortDirection = Request::getUserVar('sortDirection');
 
-		$submissions = $reviewerSubmissionDao->getReviewerSubmissionsByReviewerId($user->getId(), $journal->getJournalId(), $active, $rangeInfo, $reviewerSubmissionDao->getSortMapping($sort));
+		$submissions = $reviewerSubmissionDao->getReviewerSubmissionsByReviewerId($user->getId(), $journal->getJournalId(), $active, $rangeInfo, $sort);
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('reviewerRecommendationOptions', ReviewAssignment::getReviewerRecommendationOptions());
