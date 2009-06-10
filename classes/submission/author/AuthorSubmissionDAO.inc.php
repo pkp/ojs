@@ -287,6 +287,7 @@ class AuthorSubmissionDAO extends DAO {
 	 */
 	function getSortMapping($heading) {
 		switch ($heading) {
+			case 'status': return 'a.status';
 			case 'id': return 'a.article_id';
 			case 'submitDate': return 'a.date_submitted';
 			case 'section': return 'section_abbrev';
