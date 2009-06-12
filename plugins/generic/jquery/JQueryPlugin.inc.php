@@ -59,6 +59,14 @@ class JQueryPlugin extends GenericPlugin {
 	}
 	
 	/**
+	 * Get the URL for the jQuery script
+	 * @return string
+	 */
+	function getScriptPath() {
+		return Request::getBaseUrl() . DIRECTORY_SEPARATOR . JQUERY_JS_PATH;
+	}
+	
+	/**
 	 * Given a $page and $op, return a list of scripts that should be loaded
 	 * @param $page string The requested page
 	 * @param $op string The requested operation
