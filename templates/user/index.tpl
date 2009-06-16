@@ -148,7 +148,7 @@
 						<a href="{url journal=$journalPath page="reviewer"}">{$reviewerSubmissionsCount[0]} {translate key="common.queue.short.active"}</a>
 					{else}<span class="disabled">0 {translate key="common.queue.short.active"}</span>{/if}
 				</td>
-				</td align="right"></td>
+				<td align="right"></td>
 			</tr>
 		{/if}
 		{* Add a row to the bottom of each table to ensure all have same width*}
