@@ -29,7 +29,7 @@
 </div>
 {/if}
 
-<div id="authorGuidelines">
+<div id="authorGuidelinesInfo">
 <h3>3.1 {translate key="manager.setup.authorGuidelines"}</h3>
 
 <p>{translate key="manager.setup.authorGuidelinesDescription"}</p>

@@ -49,7 +49,7 @@
 
 <p><textarea name="reviewPolicy[{$formLocale|escape}]" id="reviewPolicy" rows="12" cols="60" class="textArea">{$reviewPolicy[$formLocale]|escape}</textarea></p>
 </div>
-<div id="reviewGuidelines">
+<div id="reviewGuidelinesInfo">
 
 <h4>{translate key="manager.setup.reviewGuidelines"}</h4>
 
@@ -162,7 +162,7 @@
 </div>
 </div>
 <div class="separator"></div>
-<div id="privacyStatement">
+<div id="privacyStatementInfo">
 <h3>2.3 {translate key="manager.setup.privacyStatement"}</h3>
 
 <p><textarea name="privacyStatement[{$formLocale|escape}]" id="privacyStatement" rows="12" cols="60" class="textArea">{$privacyStatement[$formLocale]|escape}</textarea></p>
