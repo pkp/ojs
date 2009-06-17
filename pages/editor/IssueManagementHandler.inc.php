@@ -507,7 +507,7 @@ class IssueManagementHandler extends EditorHandler {
 	}
 
 	/**
-	 * publish issue
+	 * Publish issue
 	 */
 	function publishIssue($args) {
 		$issueId = isset($args[0]) ? (int) $args[0] : 0;
@@ -579,6 +579,27 @@ class IssueManagementHandler extends EditorHandler {
 				null, $url, 1, NOTIFICATION_TYPE_PUBLISHED_ISSUE));
 				
 		Request::redirect(null, null, 'issueToc', $issue->getIssueId());
+	}
+
+	/**
+	 * Unpublish a previously-published issue
+	 */
+	function unpublishIssue($args) {
+		$issueId = isset($args[0]) ? (int) $args[0] : 0;
+		$this->validate($issueId);
+		$issue =& $this->issue; 
+
+		$journal =& Request::getJournal();
+		$journalId = $journal->getJournalId();
+
+		$issue->setCurrent(0);
+		$issue->setPublished(0);
+		$issue->setDatePublished(null);
+
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$issueDao->updateIssue($issue);
+
+		Request::redirect(null, null, 'futureIssues');
 	}
 
 	/**

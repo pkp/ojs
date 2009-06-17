@@ -115,7 +115,14 @@
 <div class="separator"></div>
 {/foreach}
 
-<input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> {if $unpublished && !$isLayoutEditor}<input type="button" value="{translate key="editor.issues.publishIssue"}" onclick="confirmAction('{url op="publishIssue" path=$issueId}', '{translate|escape:"jsparam" key="editor.issues.confirmPublish"}')" class="button" />{/if}
+<input type="submit" value="{translate key="common.save"}" class="button defaultButton" />
+{if $unpublished && !$isLayoutEditor}
+	{* Unpublished; give the option to publish it. *}
+	<input type="button" value="{translate key="editor.issues.publishIssue"}" onclick="confirmAction('{url op="publishIssue" path=$issueId}', '{translate|escape:"jsparam" key="editor.issues.confirmPublish"}')" class="button" />
+{elseif !$isLayoutEditor}
+	{* Published; give the option to unpublish it. *}
+	<input type="button" value="{translate key="editor.issues.unpublishIssue"}" onclick="confirmAction('{url op="unpublishIssue" path=$issueId}', '{translate|escape:"jsparam" key="editor.issues.confirmUnpublish"}')" class="button" />
+{/if}
 
 </form>
 
