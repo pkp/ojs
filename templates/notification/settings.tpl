@@ -21,7 +21,7 @@
 <h4>{translate key="notification.type.submissions"}</h4>
 
 <ul>
-	<li>{translate key="notification.type.articleSubmitted" param=$titleVar}</li>
+	<li>{translate key="notification.type.articleSubmitted" param=$titleVar}
 	<ul class="plain">
 		<li><span>
 				<input type="checkbox" name="notificationArticleSubmitted"{if !$smarty.const.NOTIFICATION_TYPE_ARTICLE_SUBMITTED|in_array:$notificationSettings} checked="checked"{/if} />
@@ -32,10 +32,11 @@
 				{translate key="notification.email"}
 			</span></li>
 	</ul>
+	</li>
 </ul>
 			
 <ul>
-	<li>{translate key="notification.type.metadataModified" param=$titleVar}</li>
+	<li>{translate key="notification.type.metadataModified" param=$titleVar}
 	<ul class="plain">
 		<li><span>
 				<input type="checkbox" name="notificationMetadataModified"{if !$smarty.const.NOTIFICATION_TYPE_METADATA_MODIFIED|in_array:$notificationSettings} checked="checked"{/if} />
@@ -46,10 +47,11 @@
 				{translate key="notification.email"}
 			</span></li>
 	</ul>
+	</li>
 </ul>	
 
 <ul>
-	<li>{translate key="notification.type.suppFileModified" param=$titleVar}</li>
+	<li>{translate key="notification.type.suppFileModified" param=$titleVar}
 	<ul class="plain">
 		<li><span>
 				<input type="checkbox" name="notificationSuppFileModified"{if !$smarty.const.NOTIFICATION_TYPE_SUPP_FILE_MODIFIED|in_array:$notificationSettings} checked="checked"{/if} />
@@ -60,6 +62,7 @@
 				{translate key="notification.email"}
 			</span></li>
 	</ul>
+	</li>
 </ul>
 
 <br />
@@ -70,7 +73,7 @@
 
 
 <ul>
-	<li>{translate key="notification.type.reviewerComment" param=$titleVar}</li>
+	<li>{translate key="notification.type.reviewerComment" param=$titleVar}
 	<ul class="plain">
 		<li><span>
 				<input type="checkbox" name="notificationReviewerComment"{if !$smarty.const.NOTIFICATION_TYPE_REVIEWER_COMMENT|in_array:$notificationSettings} checked="checked"{/if} />
@@ -81,10 +84,11 @@
 				{translate key="notification.email"}
 			</span></li>
 	</ul>
+	</li>
 </ul>
 
 <ul>
-	<li>{translate key="notification.type.reviewerFormComment" param=$titleVar}</li>
+	<li>{translate key="notification.type.reviewerFormComment" param=$titleVar}
 	<ul class="plain">
 		<li><span>
 				<input type="checkbox" name="notificationReviewerFormComment"{if !$smarty.const.NOTIFICATION_TYPE_REVIEWER_FORM_COMMENT|in_array:$notificationSettings} checked="checked"{/if} />
@@ -95,10 +99,11 @@
 				{translate key="notification.email"}
 			</span></li>
 	</ul>
+	</li>
 </ul>
 
 <ul>
-	<li>{translate key="notification.type.editorDecisionComment" param=$titleVar}</li>
+	<li>{translate key="notification.type.editorDecisionComment" param=$titleVar}
 	<ul class="plain">
 		<li><span>
 				<input type="checkbox" name="notificationEditorDecisionComment"{if !$smarty.const.NOTIFICATION_TYPE_EDITOR_DECISION_COMMENT|in_array:$notificationSettings} checked="checked"{/if} />
@@ -109,6 +114,7 @@
 				{translate key="notification.email"}
 			</span></li>
 	</ul>
+	</li>
 </ul>
 	
 <br />
@@ -118,7 +124,7 @@
 <h4>{translate key="notification.type.editing"}</h4>
 
 <ul>
-	<li>{translate key="notification.type.galleyModified" param=$titleVar}</li>
+	<li>{translate key="notification.type.galleyModified" param=$titleVar}
 	<ul class="plain">
 		<li><span>
 				<input type="checkbox" name="notificationGalleyModified"{if !$smarty.const.NOTIFICATION_TYPE_GALLEY_MODIFIED|in_array:$notificationSettings} checked="checked"{/if} />
@@ -129,10 +135,11 @@
 				{translate key="notification.email"}
 			</span></li>
 	</ul>
+	</li>
 </ul>
 
 <ul>
-	<li>{translate key="notification.type.submissionComment" param=$titleVar}</li>
+	<li>{translate key="notification.type.submissionComment" param=$titleVar}
 	<ul class="plain">
 		<li><span>
 				<input type="checkbox" name="notificationSubmissionComment"{if !$smarty.const.NOTIFICATION_TYPE_SUBMISSION_COMMENT|in_array:$notificationSettings} checked="checked"{/if} />
@@ -143,10 +150,11 @@
 				{translate key="notification.email"}
 			</span></li>
 	</ul>
+	</li>
 </ul>
 
 <ul>
-	<li>{translate key="notification.type.layoutComment" param=$titleVar}</li>
+	<li>{translate key="notification.type.layoutComment" param=$titleVar}
 	<ul class="plain">
 		<li><span>
 				<input type="checkbox" name="notificationLayoutComment"{if !$smarty.const.NOTIFICATION_TYPE_LAYOUT_COMMENT|in_array:$notificationSettings} checked="checked"{/if} />
@@ -157,10 +165,11 @@
 				{translate key="notification.email"}
 			</span></li>
 	</ul>
+	</li>
 </ul>
 
 <ul>
-	<li>{translate key="notification.type.copyeditComment" param=$titleVar}</li>
+	<li>{translate key="notification.type.copyeditComment" param=$titleVar}
 	<ul class="plain">
 		<li><span>
 				<input type="checkbox" name="notificationCopyeditComment"{if !$smarty.const.NOTIFICATION_TYPE_COPYEDIT_COMMENT|in_array:$notificationSettings} checked="checked"{/if} />
@@ -171,10 +180,11 @@
 				{translate key="notification.email"}
 			</span></li>
 	</ul>
+	</li>
 </ul>
 
 <ul>
-	<li>{translate key="notification.type.proofreadComment" param=$titleVar}</li>
+	<li>{translate key="notification.type.proofreadComment" param=$titleVar}
 	<ul class="plain">
 		<li><span>
 				<input type="checkbox" name="notificationProofreadComment"{if !$smarty.const.NOTIFICATION_TYPE_PROOFREAD_COMMENT|in_array:$notificationSettings} checked="checked"{/if} />
@@ -185,6 +195,7 @@
 				{translate key="notification.email"}
 			</span></li>
 	</ul>
+	</li>
 </ul>
 
 <br />
@@ -194,7 +205,7 @@
 <h4>{translate key="notification.type.site"}</h4>
 
 <ul>
-	<li>{translate key="notification.type.userComment" param=$titleVar}</li>
+	<li>{translate key="notification.type.userComment" param=$titleVar}
 	<ul class="plain">
 		<li><span>
 				<input type="checkbox" name="notificationUserComment"{if !$smarty.const.NOTIFICATION_TYPE_USER_COMMENT|in_array:$notificationSettings} checked="checked"{/if} />
@@ -205,10 +216,11 @@
 				{translate key="notification.email"}
 			</span></li>
 	</ul>
+	</li>
 </ul>
 
 <ul>
-	<li>{translate key="notification.type.issuePublished" param=$userVar}</li>
+	<li>{translate key="notification.type.issuePublished" param=$userVar}
 	<ul class="plain">
 		<li><span>
 				<input type="checkbox" name="notificationPublishedIssue"{if !$smarty.const.NOTIFICATION_TYPE_PUBLISHED_ISSUE|in_array:$notificationSettings} checked="checked"{/if} />
@@ -219,10 +231,11 @@
 				{translate key="notification.email"}
 			</span></li>
 	</ul>
+	</li>
 </ul>
 
 <ul>
-	<li>{translate key="notification.type.newAnnouncement"}</li>
+	<li>{translate key="notification.type.newAnnouncement"}
 	<ul class="plain">
 		<li><span>
 				<input type="checkbox" name="notificationNewAnnouncement"{if !$smarty.const.NOTIFICATION_TYPE_NEW_ANNOUNCEMENT|in_array:$notificationSettings} checked="checked"{/if} />
@@ -233,6 +246,7 @@
 				{translate key="notification.email"}
 			</span></li>
 	</ul>
+	</li>
 </ul>
 
 <br />

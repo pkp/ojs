@@ -170,10 +170,10 @@ function confirmAndPrompt(userId) {
 {if $userExists}
 	<p><input type="submit" value="{translate key="email.compose"}" class="button defaultButton"/>&nbsp;<input type="button" value="{translate key="common.selectAll"}" class="button" onclick="toggleChecked()" />  <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="manager" escape=false}'" /></p>
 {/if}
+</div>
 </form>
 
 <a href="{url op="enrollSearch" path=$roleId}" class="action">{translate key="manager.people.enrollExistingUser"}</a> |
 {url|assign:"enrollmentUrl" path=$roleSymbolic searchField=$searchField searchMatch=$searchMatch search=$search dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateFromMonth=$dateFromMonth dateToDay=$dateToDay dateToYear=$dateToYear dateToMonth=$dateToMonth searchInitial=$searchInitial}
 <a href="{if $roleId}{url op="createUser" roleId=$roleId source=$enrollmentUrl}{else}{url op="createUser" source=$enrollmentUrl}{/if}" class="action">{translate key="manager.people.createUser"}</a> | <a href="{url op="enrollSyncSelect" path=$rolePath}" class="action">{translate key="manager.people.enrollSync"}</a>
-</div>
 {include file="common/footer.tpl"}

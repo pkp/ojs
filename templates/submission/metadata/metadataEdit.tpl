@@ -238,7 +238,7 @@ function moveAuthor(dir, authorIndex) {
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">&nbsp;</td>
-		<td class="label" class="value"><input type="checkbox" name="hideCoverPageAbstract[{$formLocale|escape}]" id="hideCoverPageAbstract" value="1" {if $hideCoverPageAbstract[$formLocale]} checked="checked"{/if} /> <label for="hideCoverPageAbstract">{translate key="editor.article.hideCoverPageAbstract"}</label></td>
+		<td class="value"><input type="checkbox" name="hideCoverPageAbstract[{$formLocale|escape}]" id="hideCoverPageAbstract" value="1" {if $hideCoverPageAbstract[$formLocale]} checked="checked"{/if} /> <label for="hideCoverPageAbstract">{translate key="editor.article.hideCoverPageAbstract"}</label></td>
 	</tr>
 </table>
 </div>

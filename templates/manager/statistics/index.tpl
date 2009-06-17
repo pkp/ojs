@@ -21,7 +21,7 @@
 
 <br/>
 
-<div id="statistics">
+<div id="reports">
 <h3>{translate key="manager.statistics.reports"}</h3>
 <p>{translate key="manager.statistics.reports.description"}</p>
 

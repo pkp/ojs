@@ -63,7 +63,7 @@ function SubmitIfAnyIsChecked() {
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="30%" class="label" align="right">{translate key="plugins.importexport.METSExport.settings.FLocat"}</td>
-		<td width="70%" class="value"><input type="radio" name="contentWrapper" id="contentWrapper" value="FLocat" checked /></td>
+		<td width="70%" class="value"><input type="radio" name="contentWrapper" id="contentWrapper" value="FLocat" checked="checked" /></td>
 	</tr>
 	<tr valign="top">
 		<td width="30%" class="label" align="right">{translate key="plugins.importexport.METSExport.settings.FContent"}</td>

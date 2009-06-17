@@ -107,7 +107,7 @@
 		</td>
 	</tr>
 </table>
-<div>
+</div>
 <div class="separator"></div>
 
 <div id="competingInterests">

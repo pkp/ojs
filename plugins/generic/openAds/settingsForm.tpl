@@ -29,12 +29,12 @@
 			<select name="headerAdId" class="selectMenu" id="headerAdId">
 				<option value="0">{translate key="common.disabled"}</option>
 				{foreach from=$ads item=ad}
-					<option {if $headerAdId == $ad->getAdId()}selected {/if}value="{$ad->getAdId()|escape}">{$ad->getName()|escape}</option>
+					<option {if $headerAdId == $ad->getAdId()}selected="selected" {/if}value="{$ad->getAdId()|escape}">{$ad->getName()|escape}</option>
 				{/foreach}
 			</select>&nbsp;&nbsp;
 			<select name="headerAdOrientation" class="selectMenu" id="headerAdOrientation">
 				{foreach from=$orientationOptions key=orientationOption item=orientationOptionKey}
-					<option {if $headerAdOrientation == $orientationOption}selected {/if}value="{$orientationOption|escape}">{translate key=$orientationOptionKey}</option>
+					<option {if $headerAdOrientation == $orientationOption}selected="selected" {/if}value="{$orientationOption|escape}">{translate key=$orientationOptionKey}</option>
 				{/foreach}
 			</select>
 		</td>
@@ -45,7 +45,7 @@
 			<select name="contentAdId" class="selectMenu" id="contentAdId">
 				<option value="0">{translate key="common.disabled"}</option>
 				{foreach from=$ads item=ad}
-					<option {if $contentAdId == $ad->getAdId()}selected {/if}value="{$ad->getAdId()|escape}">{$ad->getName()|escape}</option>
+					<option {if $contentAdId == $ad->getAdId()}selected="selected" {/if}value="{$ad->getAdId()|escape}">{$ad->getName()|escape}</option>
 				{/foreach}
 			</select>
 		</td>
@@ -56,7 +56,7 @@
 			<select name="sidebarAdId" class="selectMenu" id="sidebarAdId">
 				<option value="0">{translate key="common.disabled"}</option>
 				{foreach from=$ads item=ad}
-					<option {if $sidebarAdId == $ad->getAdId()}selected {/if}value="{$ad->getAdId()|escape}">{$ad->getName()|escape}</option>
+					<option {if $sidebarAdId == $ad->getAdId()}selected="selected" {/if}value="{$ad->getAdId()|escape}">{$ad->getName()|escape}</option>
 				{/foreach}
 			</select>
 		</td>

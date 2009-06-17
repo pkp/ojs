@@ -13,7 +13,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<script>
+<script type="text/javascript">
 {literal}
 $(document).ready(function() { setupTableDND("#dragTable", "moveSection"); });
 {/literal}
@@ -35,7 +35,7 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveSection"); });
 		<td class="headseparator" colspan="3">&nbsp;</td>
 	</tr>
 {iterate from=sections item=section name=sections}
-	<tr valign="top" id="{$section->getSectionId()}" class="data">
+	<tr valign="top" id="section-{$section->getSectionId()}" class="data">
 		<td class="drag">{$section->getLocalizedTitle()|escape}</td>
 		<td class="drag">{$section->getLocalizedAbbrev()|escape}</td>
 		<td align="right" class="nowrap">

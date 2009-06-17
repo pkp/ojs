@@ -12,7 +12,7 @@
 <table class="listing" width="100%">
 	<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
-		<td width="5%">{sort_heading key="common.id" heading='id'}</a></td>
+		<td width="5%">{sort_heading key="common.id" heading='id'}</td>
 		<td width="5%"><span class="disabled">MM-DD</span><br />{sort_heading key="common.assigned" heading='assignDate'}</td>
 		<td width="5%">{sort_heading key="submissions.sec" heading='section'}</td>
 		<td width="70%">{sort_heading key="article.title" heading='title'}</td>

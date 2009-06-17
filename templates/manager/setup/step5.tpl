@@ -110,7 +110,7 @@ function prepBlockFields() {
 <h3>5.1 {translate key="manager.setup.journalHomepageHeader"}</h3>
 
 <p>{translate key="manager.setup.journalHomepageHeaderDescription"}</p>
-<div id="journalTitle">
+<div id="journalTitleAndLogo">
 <h4>{translate key="manager.setup.journalTitle"}</h4>
 
 <table width="100%" class="data">
@@ -141,7 +141,7 @@ function prepBlockFields() {
 </table>
 {/if}
 </div>
-<div id="journalLogo">
+<div id="journalLogoImage">
 <h4>{translate key="manager.setup.journalLogo"}</h4>
 
 <table width="100%" class="data">
@@ -175,6 +175,8 @@ function prepBlockFields() {
 <h3>5.2 {translate key="manager.setup.journalHomepageContent"}</h3>
 
 <p>{translate key="manager.setup.journalHomepageContentDescription"}</p>
+</div>
+
 <div id="journalDescription">
 <h4>{translate key="manager.setup.journalDescription"}</h4>
 
@@ -210,7 +212,7 @@ function prepBlockFields() {
 		</tr>
 </table>
 {/if}
-</h4>
+
 <div id="currentIssue">
 <h4>{translate key="manager.setup.currentIssue"}</h4>
 
@@ -236,7 +238,7 @@ function prepBlockFields() {
 <h3>5.3 {translate key="manager.setup.journalPageHeader"}</h3>
 
 <p>{translate key="manager.setup.journalPageHeaderDescription"}</p>
-<div id="journalTitle">
+<div id="pageHeaderTitle">
 <h4>{translate key="manager.setup.journalTitle"}</h4>
 
 <table width="100%" class="data">
@@ -310,7 +312,7 @@ function prepBlockFields() {
 {if $journalFavicon[$formLocale]}
 {translate key="common.fileName"}: {$journalFavicon[$formLocale].name|escape} {$journalFavicon[$formLocale].dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deleteJournalFavicon" value="{translate key="common.delete"}" class="button" />
 <br />
-<img src="{$publicFilesDir}/{$journalFavicon[$formLocale].uploadName|escape:"url"}" width="16px" height="16px" style="border: 0;" />
+<img src="{$publicFilesDir}/{$journalFavicon[$formLocale].uploadName|escape:"url"}" width="16px" height="16px" style="border: 0;" alt="favicon" />
 {/if}
 </div>
 
@@ -438,6 +440,8 @@ function prepBlockFields() {
 			<select name="blockSelectLeftWidget" multiple="multiple" size="10" class="selectMenu" style="width: 130px; height:200px">
 				{foreach from=$leftBlockPlugins item=block}
 					<option value="{$block->getName()|escape}">{$block->getDisplayName()|escape}</option>
+				{foreachelse}
+					<option value=""></option>
 				{/foreach}
 			</select><br/>
 			<input class="button defaultButton" style="width: 130px;" type="button" value="&darr;" onclick="moveDown(this.form.elements['blockSelectLeftWidget']);" />
@@ -451,6 +455,8 @@ function prepBlockFields() {
 			<select name="blockUnselectedWidget" multiple="multiple" size="10" class="selectMenu" style="width: 120px; height:180px;" >
 				{foreach from=$disabledBlockPlugins item=block}
 					<option value="{$block->getName()|escape}">{$block->getDisplayName()|escape}</option>
+				{foreachelse}
+					<option value=""></option>
 				{/foreach}
 			</select>
 		</td> 
@@ -464,6 +470,8 @@ function prepBlockFields() {
 			<select name="blockSelectRightWidget" multiple="multiple" size="10" class="selectMenu" style="width: 130px; height:200px" >
 				{foreach from=$rightBlockPlugins item=block}
 					<option value="{$block->getName()|escape}">{$block->getDisplayName()|escape}</option>
+				{foreachelse}
+					<option value=""></option>
 				{/foreach}
 			</select><br/>
 			<input class="button defaultButton" style="width: 130px;" type="button" value="&darr;" onclick="moveDown(this.form.elements['blockSelectRightWidget']);" />

@@ -69,7 +69,7 @@
 			<table width="100%" class="data">
 				<tr>
 				<td width="5%" class="label" align="right" valign="top">
-					<input type="radio" name="doiSuffix" id="doiSuffix-pattern" value="pattern" {if $doiSuffix eq "pattern"}checked{/if} />
+					<input type="radio" name="doiSuffix" id="doiSuffix-pattern" value="pattern" {if $doiSuffix eq "pattern"}checked="checked"{/if} />
 				</td>
 				<td width="95%" class="value">
 					{fieldLabel name="doiSuffixPattern" key="manager.setup.doiSuffixPattern"}			
@@ -81,7 +81,7 @@
 				</tr>
 				<tr>
 				<td width="5%" class="label" align="right" valign="top">
-					<input type="radio" name="doiSuffix" id="doiSuffix-default" value="default" {if ($doiSuffix neq "pattern" && $doiSuffix neq "customIdentifier")}checked{/if} />
+					<input type="radio" name="doiSuffix" id="doiSuffix-default" value="default" {if ($doiSuffix neq "pattern" && $doiSuffix neq "customIdentifier")}checked="checked"{/if} />
 				</td>
 				<td width="95%" class="value">
 					{fieldLabel name="doiSuffix" key="manager.setup.doiSuffixDefault"}			
@@ -89,7 +89,7 @@
 				</tr>
 				<tr>
 				<td width="5%" class="label" align="right" valign="top">
-					<input type="radio" name="doiSuffix" id="doiSuffix-customIdentifier" value="customIdentifier" {if $doiSuffix eq "customIdentifier"}checked{/if} />
+					<input type="radio" name="doiSuffix" id="doiSuffix-customIdentifier" value="customIdentifier" {if $doiSuffix eq "customIdentifier"}checked="checked"{/if} />
 				</td>
 				<td width="95%" class="value">
 					{fieldLabel name="doiSuffix" key="manager.setup.doiSuffixCustomIdentifier"}			

@@ -84,7 +84,7 @@ function sortSearch(heading, direction) {
 <br />
 <div id="notes">
 <h4>{translate key="common.notes"}</h4>
-<p>{translate key="editor.submissionReview.notes"}</p>
+{translate key="editor.submissionReview.notes"}
 </div>
 {/if}
 

@@ -67,5 +67,6 @@
 	{if $publicStatisticsEnabled}<li>&#187; <a href="{url op="statistics"}">{translate key="about.statistics"}</a></li>{/if}
 	{call_hook name="Templates::About::Index::Other"}
 </ul>
+</div>
 
 {include file="common/footer.tpl"}

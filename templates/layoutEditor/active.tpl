@@ -50,7 +50,6 @@
 	<tr>
 		<td colspan="7" class="endseparator">&nbsp;</td>
 	</tr>
-	</table>
 {else}
 	<tr>
 		<td colspan="4" align="left">{page_info iterator=$submissions}</td>
