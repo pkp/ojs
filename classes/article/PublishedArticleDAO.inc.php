@@ -442,8 +442,8 @@ class PublishedArticleDAO extends DAO {
 	 */
 	function &getPublishedArticleIdsAlphabetizedByJournal($journalId = null, $useCache = true) {
 		$params = array(
-			'title', Locale::getLocale(),
-			'title', Locale::getPrimaryLocale()
+			'cleanTitle', Locale::getLocale(),
+			'cleanTitle', Locale::getPrimaryLocale()
 		);
 		if (isset($journalId)) $params[] = $journalId;
 

@@ -190,9 +190,9 @@ class AuthorSubmissionDAO extends DAO {
 			($sortBy?(' ORDER BY ' . $this->getSortMapping($sortBy) . ' ' . $this->getDirectionMapping($sortDirection)) : ''),
 			array(
 				$locale,
-				'title',
+				'cleanTitle',
 				$primaryLocale,
-				'title',
+				'cleanTitle',
 				$locale,
 				'title',
 				$primaryLocale,

@@ -226,9 +226,9 @@ class EditorSubmissionDAO extends DAO {
 			$primaryLocale,
 			'abbrev',
 			$locale,
-			'title', // Article title
+			'cleanTitle', // Article title
 			$primaryLocale,
-			'title',
+			'cleanTitle',
 			$locale,
 			$journalId
 		);

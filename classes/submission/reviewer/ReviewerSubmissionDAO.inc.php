@@ -238,9 +238,9 @@ class ReviewerSubmissionDAO extends DAO {
 		$result =& $this->retrieveRange(
 			$sql,
 			array(
-				'title',
+				'cleanTitle',
 				$primaryLocale,
-				'title',
+				'cleanTitle',
 				$locale,
 				'title',
 				$primaryLocale,

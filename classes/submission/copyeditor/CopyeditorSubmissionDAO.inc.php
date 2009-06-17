@@ -143,9 +143,9 @@ class CopyeditorSubmissionDAO extends DAO {
 			$primaryLocale,
 			'abbrev',
 			$locale,
-			'title', // Article title
+			'cleanTitle', // Article title
 			$primaryLocale,
-			'title', // Article title
+			'cleanTitle', // Article title
 			$locale,
 			ASSOC_TYPE_ARTICLE,
 			'SIGNOFF_COPYEDITING_FINAL',
