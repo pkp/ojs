@@ -19,7 +19,7 @@
 	</setting>
 	<setting type="int">
 		<name>seq</name>
-		<value>0</value>
+		<value>3</value>
 	</setting>
 	<setting type="int">
 		<name>context</name>
