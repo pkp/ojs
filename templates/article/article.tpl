@@ -48,8 +48,8 @@
 		<div id="articleCoverImage"><img src="{$coverPagePath|escape}{$coverPageFileName|escape}"{if $coverPageAltText != ''} alt="{$coverPageAltText|escape}"{else} alt="{translate key="article.coverPage.altText"}"{/if}{if $width} width="{$width|escape}"{/if}{if $height} height="{$height|escape}"{/if}/>
 		</div>
 	{/if}
-	<div id="articleTitle"><<h3>{$article->getLocalizedTitle()|strip_unsafe_html}</h3></div>
-	<div id="authorString"><<em>{$article->getAuthorString()|escape}</em></div></div>
+	<div id="articleTitle"><h3>{$article->getLocalizedTitle()|strip_unsafe_html}</h3></div>
+	<div id="authorString"><em>{$article->getAuthorString()|escape}</em></div>
 	<br />
 	{if $article->getLocalizedAbstract()}
 		<div id="articleAbstract">

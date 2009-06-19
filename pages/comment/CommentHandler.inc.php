@@ -77,6 +77,10 @@ class CommentHandler extends Handler {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$parentId = isset($args[2]) ? (int) $args[2] : 0;
+		$journal =& Request::getJournal();
+
+		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
 
 		$this->validate($articleId);
 
@@ -129,7 +133,7 @@ class CommentHandler extends Handler {
 			}
 		}
 
-		$this->setupTemplate($article, $galleyId, $parent);
+		$this->setupTemplate($publishedArticle, $galleyId, $parent);
 		$commentForm->display();
 	}
 
