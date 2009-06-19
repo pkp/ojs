@@ -2005,6 +2005,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$this->validate($articleId);
 		$this->setupTemplate(true, $articleId, 'history');
+		$submission =& $this->submission;
 
 		$rangeInfo =& Handler::getRangeInfo('submissionNotes');
 		$articleNoteDao =& DAORegistry::getDAO('ArticleNoteDAO');
