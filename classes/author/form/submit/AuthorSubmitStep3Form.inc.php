@@ -136,6 +136,10 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 		$countryDao =& DAORegistry::getDAO('CountryDAO');
 		$countries =& $countryDao->getCountries();
 		$templateMgr->assign_by_ref('countries', $countries);
+		
+		if (Request::getUserVar('addAuthor') || Request::getUserVar('delAuthor')  || Request::getUserVar('moveAuthor')) {	
+			$templateMgr->assign('scrollToAuthor', true);
+		}
 
 		parent::display();
 	}

@@ -366,4 +366,13 @@ function moveAuthor(dir, authorIndex) {
 
 </form>
 
+{if $scrollToAuthor}
+	{literal}
+	<script type="text/javascript">
+		var authors = document.getElementById('authors');
+		authors.scrollIntoView(false);
+	</script>
+	{/literal}
+{/if}
+
 {include file="common/footer.tpl"}
