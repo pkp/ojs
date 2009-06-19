@@ -735,6 +735,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="user.subscriptions.institutionalSubscriptions">Institutional Subscriptions</message>
 	<message key="user.subscriptions.renew">Renew</message>
 	<message key="user.subscriptions.purchase">Purchase</message>
+	<message key="user.subscriptions.purchaseNewSubscription">Purchase New Subscription</message>
 	<message key="user.subscriptions.purchaseIndividualSubscription">Purchase Individual Subscription</message>
 	<message key="user.subscriptions.purchaseInstitutionalSubscription">Purchase Institutional Subscription</message>
 	<message key="user.subscriptions.expires">Expires</message>
