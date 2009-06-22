@@ -55,7 +55,22 @@ class ReviewerHandler extends Handler {
 		$sort = isset($sort) ? $sort : 'title';
 		$sortDirection = Request::getUserVar('sortDirection');
 
-		$submissions = $reviewerSubmissionDao->getReviewerSubmissionsByReviewerId($user->getId(), $journal->getJournalId(), $active, $rangeInfo, $sort);
+		if ($sort == 'decision') {			
+			$submissions = $reviewerSubmissionDao->getReviewerSubmissionsByReviewerId($user->getId(), $journal->getJournalId(), $active, $rangeInfo);
+		
+			// Sort all submissions by status, which is too complex to do in the DB
+			$submissionsArray = $submissions->toArray();
+			$compare = create_function('$s1, $s2', 'return strcmp($s1->getMostRecentDecision(), $s2->getMostRecentDecision());');
+			usort ($submissionsArray, $compare);
+			if($sortDirection == SORT_DIRECTION_DESC) {
+				$submissionsArray = array_reverse($submissionsArray);
+			}
+			// Convert submission array back to an ItemIterator class
+			import('core.ArrayItemIterator');
+			$submissions =& ArrayItemIterator::fromRangeInfo($submissionsArray, $rangeInfo);
+		}  else {
+			$submissions = $reviewerSubmissionDao->getReviewerSubmissionsByReviewerId($user->getId(), $journal->getJournalId(), $active, $rangeInfo, $sort, $sortDirection);
+		}
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('reviewerRecommendationOptions', ReviewAssignment::getReviewerRecommendationOptions());
@@ -129,7 +144,7 @@ class ReviewerHandler extends Handler {
 	 */
 	function setupTemplate($subclass = false, $articleId = 0, $reviewId = 0) {
 		parent::setupTemplate();
-		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_SUBMISSION));
+		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_OJS_EDITOR));
 		$templateMgr =& TemplateManager::getManager();
 		$pageHierarchy = $subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'reviewer'), 'user.role.reviewer'))
 				: array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'reviewer'), 'user.role.reviewer'));

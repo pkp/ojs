@@ -54,7 +54,7 @@ class AuthorHandler extends Handler {
 		$sort = Request::getUserVar('heading');
 		$sort = isset($sort) ? $sort : 'title';
 		$sortDirection = Request::getUserVar('sortDirection');
-		$sortDirection = (isset($sortDirection) && ($sortDirection == 'ASC' || $sortDirection == 'DESC')) ? $sortDirection : 'ASC';
+		$sortDirection = (isset($sortDirection) && ($sortDirection == SORT_DIRECTION_ASC || $sortDirection == SORT_DIRECTION_DESC)) ? $sortDirection : SORT_DIRECTION_ASC;
 
 		if ($sort == 'status') {
 			// FIXME Does not pass $rangeInfo else we only get partial results
@@ -64,7 +64,7 @@ class AuthorHandler extends Handler {
 			$submissionsArray = $unsortedSubmissions->toArray();
 			$compare = create_function('$s1, $s2', 'return strcmp($s1->getSubmissionStatus(), $s2->getSubmissionStatus());');
 			usort ($submissionsArray, $compare);
-			if($sortDirection == 'DESC') {
+			if($sortDirection == SORT_DIRECTION_DESC) {
 				$submissionsArray = array_reverse($submissionsArray);
 			}
 			// Convert submission array back to an ItemIterator class

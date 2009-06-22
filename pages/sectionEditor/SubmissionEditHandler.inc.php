@@ -403,7 +403,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$sort = Request::getUserVar('sort');
 		$sort = isset($sort) ? $sort : 'name';
 		$sortDirection = Request::getUserVar('sortDirection');
-		$sortDirection = (isset($sortDirection) && ($sortDirection == 'ASC' || $sortDirection == 'DESC')) ? $sortDirection : 'ASC';
+		$sortDirection = (isset($sortDirection) && ($sortDirection == SORT_DIRECTION_ASC || $sortDirection == SORT_DIRECTION_DESC)) ? $sortDirection : SORT_DIRECTION_ASC;
 
 		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
 

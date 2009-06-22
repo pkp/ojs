@@ -838,6 +838,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		$result =& $this->retrieveRange(
 			'SELECT DISTINCT
 				u.user_id,
+				u.last_name,
 				ar.review_id,
 				AVG(a.quality) AS average_quality,
 				COUNT(ac.review_id) AS completed,
@@ -853,7 +854,7 @@ class SectionEditorSubmissionDAO extends DAO {
 				LEFT JOIN roles r ON (r.user_id = u.user_id)
 			WHERE	u.user_id = r.user_id AND
 				r.journal_id = ? AND
-				r.role_id = ? ' . $searchSql . 'GROUP BY u.user_id, ar.review_id' .
+				r.role_id = ? ' . $searchSql . 'GROUP BY u.user_id, u.last_name, ar.review_id' .
 			($sortBy?(' ORDER BY ' . $this->getSortMapping($sortBy) . ' ' . $this->getDirectionMapping($sortDirection)) : ''),
 			$paramArray, $rangeInfo
 		);
@@ -1206,7 +1207,7 @@ class SectionEditorSubmissionDAO extends DAO {
 			case 'latest': return 'latest';
 			case 'active': return 'active';
 			case 'average': return 'average';
-
+			case 'name': return 'u.last_name';
 			default: return null;
 		}
 	}

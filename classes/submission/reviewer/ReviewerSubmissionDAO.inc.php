@@ -205,7 +205,6 @@ class ReviewerSubmissionDAO extends DAO {
 				r.*,
 				r2.review_revision,
 				u.first_name, u.last_name,
-				d.decision AS editor_decision,
 				COALESCE(atl.setting_value, atpl.setting_value) AS submission_title,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
@@ -213,7 +212,6 @@ class ReviewerSubmissionDAO extends DAO {
 				LEFT JOIN review_assignments r ON (a.article_id = r.article_id)
 				LEFT JOIN article_settings atpl ON (atpl.article_id = a.article_id AND atpl.setting_name = ? AND atpl.locale = ?)
 				LEFT JOIN article_settings atl ON (atl.article_id = a.article_id AND atl.setting_name = ? AND atl.locale = ?)
-				LEFT JOIN edit_decisions d ON (d.article_id = a.article_id)
 				LEFT JOIN sections s ON (s.section_id = a.section_id)
 				LEFT JOIN users u ON (r.reviewer_id = u.user_id)
 				LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round)
@@ -338,7 +336,6 @@ class ReviewerSubmissionDAO extends DAO {
 			case 'title': return 'submission_title';
 			case 'round': return 'r.round';
 			case 'review': return 'r.recommendation';
-			case 'decision': return 'editor_decision';
 			default: return null;
 		}
 	}

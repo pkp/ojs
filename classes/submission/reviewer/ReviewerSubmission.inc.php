@@ -160,6 +160,20 @@ class ReviewerSubmission extends Article {
 	}
 
 	/**
+	 * Get the most recent decision.
+	 * @return int SUBMISSION_EDITOR_DECISION_...
+	 */
+	function getMostRecentDecision() {
+		$decisions = $this->getDecisions();
+		$decision = array_pop($decisions);
+		if (!empty($decision)) {
+			$latestDecision = array_pop($decision);
+			if (isset($latestDecision['decision'])) return $latestDecision['decision'];
+		}
+		return null;
+	}
+	
+	/**
 	 * Get reviewer recommendation.
 	 * @return string
 	 */
