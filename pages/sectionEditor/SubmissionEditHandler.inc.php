@@ -401,7 +401,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$submission =& $this->submission;
 		
 		$sort = Request::getUserVar('sort');
-		$sort = isset($sort) ? $sort : 'name';
+		$sort = isset($sort) ? $sort : 'reviewerName';
 		$sortDirection = Request::getUserVar('sortDirection');
 		$sortDirection = (isset($sortDirection) && ($sortDirection == SORT_DIRECTION_ASC || $sortDirection == SORT_DIRECTION_DESC)) ? $sortDirection : SORT_DIRECTION_ASC;
 
