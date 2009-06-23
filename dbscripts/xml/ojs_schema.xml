@@ -320,6 +320,7 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
+		<field name="abstract_word_count" type="I8" />
 		<descr>Journal sections.</descr>
 		<index name="sections_journal_id">
 			<col>journal_id</col>

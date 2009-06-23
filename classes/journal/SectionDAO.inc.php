@@ -145,6 +145,7 @@ class SectionDAO extends DAO {
 		$section->setHideAuthor($row['hide_author']);
 		$section->setHideAbout($row['hide_about']);
 		$section->setDisableComments($row['disable_comments']);
+		$section->setAbstractWordCount($row['abstract_word_count']);
 
 		$this->getDataObjectSettings('section_settings', 'section_id', $row['section_id'], $section);
 
@@ -178,9 +179,9 @@ class SectionDAO extends DAO {
 	function insertSection(&$section) {
 		$this->update(
 			'INSERT INTO sections
-				(journal_id, review_form_id, seq, meta_indexed, meta_reviewed, abstracts_not_required, editor_restricted, hide_title, hide_author, hide_about, disable_comments)
+				(journal_id, review_form_id, seq, meta_indexed, meta_reviewed, abstracts_not_required, editor_restricted, hide_title, hide_author, hide_about, disable_comments, abstract_word_count)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$section->getJournalId(),
 				$section->getReviewFormId(),
@@ -192,7 +193,8 @@ class SectionDAO extends DAO {
 				$section->getHideTitle() ? 1 : 0,
 				$section->getHideAuthor() ? 1 : 0,
 				$section->getHideAbout() ? 1 : 0,
-				$section->getDisableComments() ? 1 : 0
+				$section->getDisableComments() ? 1 : 0,
+				$section->getAbstractWordCount()
 			)
 		);
 
@@ -218,7 +220,8 @@ class SectionDAO extends DAO {
 					hide_title = ?,
 					hide_author = ?,
 					hide_about = ?,
-					disable_comments = ?
+					disable_comments = ?,
+					abstract_word_count = ?
 				WHERE section_id = ?',
 			array(
 				$section->getReviewFormId(),
@@ -231,6 +234,7 @@ class SectionDAO extends DAO {
 				$section->getHideAuthor(),
 				$section->getHideAbout(),
 				$section->getDisableComments(),
+				$section->getAbstractWordCount(),
 				$section->getSectionId()
 			)
 		);

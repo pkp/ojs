@@ -138,6 +138,22 @@ class Section extends DataObject {
 	function setAbbrev($abbrev, $locale) {
 		return $this->setData('abbrev', $abbrev, $locale);
 	}
+	
+	/**
+	 * Get abstract word count limit.
+	 * @return int
+	 */
+	function getAbstractWordCount() {
+		return $this->getData('wordCount');
+	}
+
+	/**
+	 * Set abstract word count limit.
+	 * @param $wordCount int
+	 */
+	function setAbstractWordCount($wordCount) {
+		return $this->setData('wordCount', $wordCount);
+	}
 
 	/**
 	 * Get sequence of section.

@@ -126,6 +126,12 @@ function checkEditorAssignments() {
 	</td>
 </tr>
 <tr valign="top">
+	<td class="label">{fieldLabel key="manager.sections.wordCount"}</td>
+	<td class="value">
+		{fieldLabel name="wordCount" key="manager.sections.wordCountInstructions"}&nbsp;&nbsp;<input type="text" name="wordCount" id="abbrev" value="{$wordCount}" size="10" maxlength="20" class="textField" />
+	</td>
+</tr>
+<tr valign="top">
 	<td class="label">{fieldLabel name="hideTitle" key="issue.toc"}</td>
 	<td class="value">
 		<input type="checkbox" name="hideTitle" id="hideTitle" value="1" {if $hideTitle}checked="checked"{/if} />

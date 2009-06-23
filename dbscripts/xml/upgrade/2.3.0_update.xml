@@ -67,4 +67,11 @@
 	<sql>
 		<query>UPDATE journal_settings SET setting_name = 'publishingMode', setting_type = 'int' WHERE setting_name = 'enableSubscriptions'</query>
 	</sql>
+	
+	<!-- Bug #4441: Add word limit option for abstracts -->
+	<sql>
+		<query>
+			ALTER TABLE tracks ADD COLUMN abstract_word_count BIGINT
+		</query>
+	</sql>
 </data>
