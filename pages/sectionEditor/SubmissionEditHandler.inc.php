@@ -245,15 +245,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('rateReviewerOnQuality', $journal->getSetting('rateReviewerOnQuality'));
 		$templateMgr->assign('showPeerReviewOptions', $showPeerReviewOptions);
 		$templateMgr->assign_by_ref('sections', $sections->toArray());
-		$templateMgr->assign('editorDecisionOptions',
-			array(
-				'' => 'common.chooseOne',
-				SUBMISSION_EDITOR_DECISION_ACCEPT => 'editor.article.decision.accept',
-				SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS => 'editor.article.decision.pendingRevisions',
-				SUBMISSION_EDITOR_DECISION_RESUBMIT => 'editor.article.decision.resubmit',
-				SUBMISSION_EDITOR_DECISION_DECLINE => 'editor.article.decision.decline'
-			)
-		);
+		$templateMgr->assign('editorDecisionOptions',SectionEditorSubmission::getEditorDecisionOptions());
 		$templateMgr->assign_by_ref('lastDecision', $lastDecision);
 
 		import('submission.reviewAssignment.ReviewAssignment');
