@@ -138,7 +138,7 @@ function confirmAndPrompt(userId) {
 			{/if}
 			<a href="{url op="editUser" path=$user->getId()}" class="action">{translate key="common.edit"}</a>
 			{if $thisUser->getId() != $user->getId()}
-				|&nbsp;<a href="{url op="signInAsUser" path=$user->getId()}" class="action">{translate key="manager.people.signInAs"}</a>
+				|&nbsp;<a href="{url page="login" op="signInAsUser" path=$user->getId()}" class="action">{translate key="manager.people.signInAs"}</a>
 				{if !$roleId}|&nbsp;<a href="{url op="removeUser" path=$user->getId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.people.confirmRemove"}')" class="action">{translate key="manager.people.remove"}</a>{/if}
 				{if $user->getDisabled()}
 					|&nbsp;<a href="{url op="enableUser" path=$user->getId()}" class="action">{translate key="manager.people.enable"}</a>

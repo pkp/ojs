@@ -47,8 +47,6 @@ switch ($op) {
 	case 'editUser':
 	case 'updateUser':
 	case 'userProfile':
-	case 'signInAsUser':
-	case 'signOutAsUser':
 		define('HANDLER_CLASS', 'PeopleHandler');
 		import('pages.manager.PeopleHandler');
 		break;

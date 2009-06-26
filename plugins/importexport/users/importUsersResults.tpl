@@ -33,7 +33,7 @@
 		<td>{$user->getFullName()|escape}</td>
 		<td>{$user->getEmail()|escape}</td>
 		<td align="right" class="nowrap">
-			<a href="{url page="manager" op="editUser" path=$user->getId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url page="manager" op="signInAsUser" path=$user->getId()}" class="action">{translate key="manager.people.signInAs"}</a>
+			<a href="{url page="manager" op="editUser" path=$user->getId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url page="login" op="signInAsUser" path=$user->getId()}" class="action">{translate key="manager.people.signInAs"}</a>
 		</td>
 	</tr>
 	<tr>

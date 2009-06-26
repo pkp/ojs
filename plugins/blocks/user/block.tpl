@@ -23,7 +23,7 @@
 			<li><a href="{url page="user" op="profile"}">{translate key="plugins.block.user.myProfile"}</a></li>
 			<li><a href="{url page="login" op="signOut"}">{translate key="plugins.block.user.logout"}</a></li>
 			{if $userSession->getSessionVar('signedInAs')}
-				<li><a href="{url page="manager" op="signOutAsUser"}">{translate key="plugins.block.user.signOutAsUser"}</a></li>
+				<li><a href="{url page="login" op="signOutAsUser"}">{translate key="plugins.block.user.signOutAsUser"}</a></li>
 			{/if}
 		</ul>
 	{else}
