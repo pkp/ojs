@@ -109,6 +109,7 @@ class ProfileForm extends Form {
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$userSettingsDao =& DAORegistry::getDAO('UserSettingsDAO');
+		$userDao =& DAORegistry::getDAO('UserDAO');
 
 		$journals =& $journalDao->getEnabledJournals();
 		$journals =& $journals->toArray();
@@ -120,6 +121,8 @@ class ProfileForm extends Form {
 				break;
 			}
 		}
+		
+		$templateMgr->assign('genderOptions', $userDao->getGenderOptions());
 
 		$journals =& $journalDao->getEnabledJournals();
 		$journals =& $journals->toArray();

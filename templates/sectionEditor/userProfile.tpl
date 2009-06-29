@@ -41,6 +41,7 @@
 	<td class="value">
 		{if $user->getGender() == "M"}{translate key="user.masculine"}
 		{elseif $user->getGender() == "F"}{translate key="user.feminine"}
+		{elseif $user->getGender() == "O"}{translate key="user.other"}
 		{else}&mdash;
 		{/if}
 	</td>

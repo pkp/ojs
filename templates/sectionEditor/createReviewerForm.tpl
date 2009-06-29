@@ -76,10 +76,8 @@
 	<tr valign="top">
 		<td class="label">{fieldLabel name="gender" key="user.gender"}</td>
 		<td class="value">
-			<select name="gender" id="gender" class="selectMenu">
-				<option value=""></option>
-				<option value="M" {if $gender == 'M'} selected="selected"{/if}/>{translate key="user.masculine"}</option>
-				<option value="F" {if $gender == 'F'} selected="selected"{/if}/>{translate key="user.feminine"}</option>
+			<select name="gender" id="gender" size="1" class="selectMenu">
+				{html_options_translate options=$genderOptions selected=$gender}
 			</select>
 		</td>
 	</tr>

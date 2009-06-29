@@ -59,13 +59,15 @@ class UserManagementForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
+		$userDao =& DAORegistry::getDAO('UserDAO');
 		$templateMgr =& TemplateManager::getManager();
 		$site =& Request::getSite();
+		
+		$templateMgr->assign('genderOptions', $userDao->getGenderOptions());
 		$templateMgr->assign('minPasswordLength', $site->getMinPasswordLength());
 		$templateMgr->assign('source', Request::getUserVar('source'));
 		$templateMgr->assign('userId', $this->userId);
 		if (isset($this->userId)) {
-			$userDao =& DAORegistry::getDAO('UserDAO');
 			$user =& $userDao->getUser($this->userId);
 			$templateMgr->assign('username', $user->getUsername());
 			$helpTopicId = 'journal.users.index';
