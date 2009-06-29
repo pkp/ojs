@@ -34,7 +34,13 @@
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel suppressId="true" name="userGender" key="user.gender"}</td>
-	<td class="value"><input type="radio" name="userGender" id="userGender-m" value="M" {if $userGender == 'M'} checked="checked"{/if}/><label for="userGender-m">{translate key="user.masculine"}</label> &nbsp;&nbsp;&nbsp; <input type="radio" name="userGender" id="userGender-f" value="F" {if $userGender == 'F'} checked="checked"{/if}/><label for="userGender-f">{translate key="user.feminine"}</label></td>
+	<td class="value">
+		<select name="gender" id="gender" class="selectMenu">
+			<option value=""></option>
+			<option value="M" {if $gender == 'M'} selected="selected"{/if}/>{translate key="user.masculine"}</option>
+			<option value="F" {if $gender == 'F'} selected="selected"{/if}/>{translate key="user.feminine"}</option>
+		</select>
+	</td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="userAffiliation" key="user.affiliation"}</td>
