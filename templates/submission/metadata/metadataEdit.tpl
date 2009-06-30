@@ -123,7 +123,7 @@ function moveAuthor(dir, authorIndex) {
 	</tr>
 	{if $smarty.foreach.authors.total > 1}
 	<tr valign="top">
-		<td class="label">Reorder author's name</td>
+		<td class="label">{translate key="author.submit.reorder"}</td>
 		<td class="value"><a href="javascript:moveAuthor('u', '{$authorIndex|escape}')" class="action plain">&uarr;</a> <a href="javascript:moveAuthor('d', '{$authorIndex|escape}')" class="action plain">&darr;</a></td>
 	</tr>
 	<tr valign="top">
