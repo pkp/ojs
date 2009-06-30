@@ -23,7 +23,7 @@
 		{/if}
 	{/foreach}
 		<li>&nbsp;</li>
-		<li><b><a href="{url op="pluginManagement" path=install}">{translate key="manager.plugins.install"}</a></b></li>
+		<li><b><a href="{url op="managePlugins" path=install}">{translate key="manager.plugins.install"}</a></b></li>
 	</ul>
 {else}
 	{foreach from=$plugins item=plugin}
@@ -63,8 +63,8 @@
 			{/foreach}
 		{/if}
 		{assign var=pluginInstallName value=$plugin->getPluginPath()|basename}
-		<a class="action" href="{url op="pluginManagement" path="upgrade"|to_array:$pluginInstallName}">{translate key="manager.plugins.upgrade"}</a>&nbsp;
-		<a class="action" href="{url op="pluginManagement" path="delete"|to_array:$pluginInstallName}">{translate key="manager.plugins.delete"}</a>&nbsp;
+		<a class="action" href="{url op="managePlugins" path="upgrade"|to_array:$pluginInstallName}">{translate key="manager.plugins.upgrade"}</a>&nbsp;
+		<a class="action" href="{url op="managePlugins" path="delete"|to_array:$pluginInstallName}">{translate key="manager.plugins.delete"}</a>&nbsp;
 		</p></li>
 	{/foreach}
 	</ul>
