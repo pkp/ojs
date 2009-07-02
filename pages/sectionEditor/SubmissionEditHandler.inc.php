@@ -825,6 +825,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function viewMetadata($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$this->validate($articleId);
+		Locale::requireComponents(array(LOCALE_COMPONENT_OJS_AUTHOR));
 		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId, 'summary');
 
@@ -834,6 +835,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function saveMetadata() {
 		$articleId = Request::getUserVar('articleId');
 		$this->validate($articleId);
+		Locale::requireComponents(array(LOCALE_COMPONENT_OJS_AUTHOR));
 		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId, 'summary');
 
