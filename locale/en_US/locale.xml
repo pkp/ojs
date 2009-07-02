@@ -714,6 +714,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="user.profile.form.profileImageInvalid">Invalid profile image format or image too big. Accepted formats are .gif, .jpg, or .png, and the image must not exceed 150x150 pixels.</message>
 	
 	<!-- Registration -->
+	<message key="user.register.completeForm">Fill in this form to register with this journal.</message>
 	<message key="user.register.repeatPassword">Repeat password</message>
 	<message key="user.register.selectJournal">Select a journal to register with</message>
 	<message key="user.register.noJournals">There are no journals you may register with on this site.</message>
@@ -1077,6 +1078,9 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	
 	
 	<!-- Notification Types -->
+	<message key="notification.mailListDescription">Enter your email address to receive immediate notifications of important new content added to the journal.</message>
+	<message key="notification.notificationsPublicDescription">This page shows important updates associated with this journal such as new issues or announcements.  You may subscribe to these notifications through RSS feeds (by clicking on the images to the right), or <![CDATA[  <a href="{$emailUrl}">through email.</a>]]></message>
+
 	<message key="notification.type.articleSubmitted">A new article, "{$param}", has been submitted.</message>
 	<message key="notification.type.copyeditComment">A copyeditor has left a comment on "{$param}".</message>
 	<message key="notification.type.editing">Editing Events</message>
