@@ -68,9 +68,6 @@ class NotificationSettingsForm extends PKPNotificationSettingsForm {
 	 * Display the form.
 	 */
 	function display() {
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journals =& $journalDao->getJournalTitles();
-
 		$canOnlyRead = true;
 		$canOnlyReview = false;
 
@@ -78,7 +75,7 @@ class NotificationSettingsForm extends PKPNotificationSettingsForm {
 			$canOnlyRead = false;
 			$canOnlyReview = true;
 		}
-		if (Validation::isSiteAdmin() || Validation::isConferenceManager() || Validation::isDirector() || Validation::isTrackDirector()) {
+		if (Validation::isSiteAdmin() || Validation::isJournalManager() || Validation::isEditor() || Validation::isSectionEditor()) {
 			$canOnlyRead = false;
 			$canOnlyReview = false;
 		}
