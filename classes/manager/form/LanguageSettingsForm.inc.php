@@ -32,7 +32,8 @@ class LanguageSettingsForm extends Form {
 		parent::Form('manager/languageSettings.tpl');
 
 		$this->settings = array(
-			'supportedLocales' => 'object'
+			'supportedLocales' => 'object',
+			'supportedFormLocales' => 'object'
 		);
 
 		$site =& Request::getSite();
@@ -68,8 +69,10 @@ class LanguageSettingsForm extends Form {
 
 		$this->setData('primaryLocale', $journal->getPrimaryLocale());
 
-		if ($this->getData('supportedLocales') == null || !is_array($this->getData('supportedLocales'))) {
-			$this->setData('supportedLocales', array());
+		foreach (array('supportedFormLocales', 'supportedLocales') as $name) {
+			if ($this->getData($name) == null || !is_array($this->getData($name))) {
+				$this->setData($name, array());
+			}
 		}
 	}
 
@@ -81,8 +84,10 @@ class LanguageSettingsForm extends Form {
 		$vars[] = 'primaryLocale';
 		$this->readUserVars($vars);
 
-		if ($this->getData('supportedLocales') == null || !is_array($this->getData('supportedLocales'))) {
-			$this->setData('supportedLocales', array());
+		foreach (array('supportedFormLocales', 'supportedLocales') as $name) {
+			if ($this->getData($name) == null || !is_array($this->getData($name))) {
+				$this->setData($name, array());
+			}
 		}
 	}
 
@@ -94,19 +99,27 @@ class LanguageSettingsForm extends Form {
 		$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 
 		// Verify additional locales
-		$supportedLocales = array();
-		foreach ($this->getData('supportedLocales') as $locale) {
-			if (Locale::isLocaleValid($locale) && in_array($locale, $this->availableLocales)) {
-				array_push($supportedLocales, $locale);
+		foreach (array('supportedLocales', 'supportedFormLocales') as $name) {
+			$$name = array();
+			foreach ($this->getData($name) as $locale) {
+				if (Locale::isLocaleValid($locale) && in_array($locale, $this->availableLocales)) {
+					array_push($$name, $locale);
+				}
 			}
 		}
 
 		$primaryLocale = $this->getData('primaryLocale');
 
-		if ($primaryLocale != null && !empty($primaryLocale) && !in_array($primaryLocale, $supportedLocales)) {
-			array_push($supportedLocales, $primaryLocale);
+		// Make sure at least the primary locale is chosen as available
+		if ($primaryLocale != null && !empty($primaryLocale)) {
+			foreach (array('supportedLocales', 'supportedFormLocales') as $name) {
+				if (!in_array($primaryLocale, $$name)) {
+					array_push($$name, $primaryLocale);
+				}
+			}
 		}
 		$this->setData('supportedLocales', $supportedLocales);
+		$this->setData('supportedFormLocales', $supportedFormLocales);
 
 		foreach ($this->_data as $name => $value) {
 			if (!in_array($name, array_keys($this->settings))) continue;
@@ -122,7 +135,6 @@ class LanguageSettingsForm extends Form {
 		$journal->setPrimaryLocale($this->getData('primaryLocale'));
 		$journalDao->updateJournal($journal);
 	}
-
 }
 
 ?>

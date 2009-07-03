@@ -82,6 +82,31 @@ class Journal extends DataObject {
 	}
 
 	/**
+	 * Return associative array of all locales supported by forms on the site.
+	 * These locales are used to provide a language toggle on the main site pages.
+	 * @return array
+	 */
+	function &getSupportedFormLocaleNames() {
+		$supportedLocales =& $this->getData('supportedFormLocales');
+
+		if (!isset($supportedLocales)) {
+			$supportedLocales = array();
+			$localeNames =& Locale::getAllLocales();
+
+			$locales = $this->getSetting('supportedFormLocales');
+			if (!isset($locales) || !is_array($locales)) {
+				$locales = array();
+			}
+
+			foreach ($locales as $localeKey) {
+				$supportedLocales[$localeKey] = $localeNames[$localeKey];
+			}
+		}
+
+		return $supportedLocales;
+	}
+
+	/**
 	 * Get "localized" journal page title (if applicable).
 	 * param $home boolean get homepage title
 	 * @return string

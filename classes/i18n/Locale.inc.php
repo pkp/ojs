@@ -28,7 +28,7 @@ define('LOCALE_COMPONENT_OJS_DEFAULT_SETTINGS',	0x00000107);
 
 class Locale extends PKPLocale {
 	/**
-	 * Get all supported locales for the current context.
+	 * Get all supported UI locales for the current context.
 	 * @return array
 	 */
 	function getSupportedLocales() {
@@ -44,6 +44,25 @@ class Locale extends PKPLocale {
 			}
 		}
 		return $supportedLocales;
+	}
+
+	/**
+	 * Get all supported form locales for the current context.
+	 * @return array
+	 */
+	function getSupportedFormLocales() {
+		static $supportedFormLocales;
+		if (!isset($supportedFormLocales)) {
+			if (defined('SESSION_DISABLE_INIT') || !Config::getVar('general', 'installed')) {
+				$supportedFormLocales = Locale::getAllLocales();
+			} elseif (($journal =& Request::getJournal())) {
+				$supportedFormLocales = $journal->getSupportedFormLocaleNames();
+			} else {
+				$site =& Request::getSite();
+				$supportedFormLocales = $site->getSupportedLocaleNames();
+			}
+		}
+		return $supportedFormLocales;
 	}
 
 	/**
