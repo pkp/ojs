@@ -10,7 +10,8 @@
  *}
 {strip}
 {assign var="pageTitle" value="user.profile.editProfile"}
-{url|assign:"url" op="profile"}{include file="common/header.tpl"}
+{url|assign:"url" op="profile"}
+{include file="common/header.tpl"}
 {/strip}
 
 <form name="profile" method="post" action="{url op="saveProfile"}" enctype="multipart/form-data">
@@ -24,6 +25,7 @@
 		<td width="80%" class="value">
 			{url|assign:"userProfileUrl" page="user" op="profile" escape=false}
 			{form_language_chooser form="profile" url=$userProfileUrl}
+			<span class="instruct">{translate key="form.formLanguage.description"}</span>
 		</td>
 	</tr>
 {/if}
@@ -52,7 +54,7 @@
 	<td class="value"><input type="text" name="initials" id="initials" value="{$initials|escape}" size="5" maxlength="5" class="textField" />&nbsp;&nbsp;{translate key="user.initialsExample"}</td>
 </tr>
 <tr valign="top">
-	<td class="label">{fieldLabel suppressId="true" name="gender" key="user.gender"}</td>
+	<td class="label">{fieldLabel name="gender" key="user.gender"}</td>
 	<td class="value">
 		<select name="gender" id="gender" size="1" class="selectMenu">
 			{html_options_translate options=$genderOptions selected=$gender}
