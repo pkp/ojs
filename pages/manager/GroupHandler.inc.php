@@ -238,6 +238,7 @@ class GroupHandler extends ManagerHandler {
 			}
 
 			$roleDao =& DAORegistry::getDAO('RoleDAO');
+			$journal =& Request::getJournal();
 			$users = $roleDao->getUsersByRoleId(null, $journal->getJournalId(), $searchType, $search, $searchMatch);
 
 			$templateMgr =& TemplateManager::getManager();
