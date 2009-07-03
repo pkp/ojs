@@ -15,37 +15,9 @@
 // $Id$
 
 
-import('file.FileManager');
+import('file.PKPPublicFileManager');
 
-class PublicFileManager extends FileManager {
-
-	/**
-	 * Get the path to the site public files directory.
-	 * @return string
-	 */
-	function getSiteFilesPath() {
-		return Config::getVar('files', 'public_files_dir') . '/site';
-	}
-
-	/**
-	 * Upload a file to the site's public directory.
-	 * @param $fileName string the name of the file in the upload form
-	 * @param $destFileName string the destination file name
-	 * @return boolean
-	 */
- 	function uploadSiteFile($fileName, $destFileName) {
- 		return $this->uploadFile($fileName, $this->getSiteFilesPath() . '/' . $destFileName);
- 	}
-
- 	/**
-	 * Delete a file from the site's public directory.
- 	 * @param $fileName string the target file name
-	 * @return boolean
- 	 */
- 	function removeSiteFile($fileName) {
- 		return $this->deleteFile($this->getSiteFilesPath() . '/' . $fileName);
- 	}
-
+class PublicFileManager extends PKPPublicFileManager {
 	/**
 	 * Get the path to a journal's public files directory.
 	 * @param $journalId int
