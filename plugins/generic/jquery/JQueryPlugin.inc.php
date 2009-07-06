@@ -121,7 +121,7 @@ class JQueryPlugin extends GenericPlugin {
 		$baseUrl = $templateManager->get_template_vars('baseUrl');
 		
 		$jQueryScript = 
-		'	<script language="javascript" type="text/javascript" src="' . $baseUrl . DIRECTORY_SEPARATOR . JQUERY_JS_PATH . '"></script>'
+		'	<script language="javascript" type="text/javascript" src="' . $this->getScriptPath() . '"></script>'
 		. "\n" . JQueryPlugin::addScripts($baseUrl, $scripts);
 
 		$templateManager->assign('additionalHeadData', $additionalHeadData."\n".$jQueryScript);
