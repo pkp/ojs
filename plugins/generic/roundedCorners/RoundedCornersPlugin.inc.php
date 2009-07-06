@@ -91,12 +91,23 @@ class RoundedCornersPlugin extends GenericPlugin {
 
 	/**
 	 * Perform management functions
+ 	 * @param $verb string
+ 	 * @param $args array
+	 * @param $message string Location for the plugin to put a result msg
 	 */
-	function manage($verb, $args) {
+	function manage($verb, $args, &$message) {
 		$returner = false;
 
-		$enabled = ( $verb == 'enable' );
-		$this->setEnabled($enabled);
+		switch ($verb) {
+			case 'enable':
+				$this->setEnabled(true);
+				$message = Locale::translate('plugins.generic.roundedcorners.enabled');
+				break;
+			case 'disable':
+				$this->setEnabled(false);
+				$message = Locale::translate('plugins.generic.roundedcorners.disabled');
+				break;
+		}
 		return $returner;		
 	}
 

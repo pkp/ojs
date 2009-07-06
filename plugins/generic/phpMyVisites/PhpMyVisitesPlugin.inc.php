@@ -200,16 +200,17 @@ class PhpMyVisitesPlugin extends GenericPlugin {
 		switch ($verb) {
 			case 'enable':
 				$this->setEnabled(true);
-				$message = Locale::translate('plugins.generic.phpMyVisites.enabled');
+				$message = Locale::translate('plugins.generic.phpmv.enabled');
 				$returner = false;
 				break;
 			case 'disable':
 				$this->setEnabled(false);
-				$message = Locale::translate('plugins.generic.phpMyVisites.enabled');
+				$message = Locale::translate('plugins.generic.phpmv.disabled');
 				$returner = false;
 				break;
 			case 'settings':
 				if ($this->getEnabled()) {
+					Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON,  LOCALE_COMPONENT_PKP_MANAGER));
 					$this->import('PhpMyVisitesSettingsForm');
 					// FIXME: Need construction by reference or validation always fails on PHP 4.x
 					$form =& new PhpMyVisitesSettingsForm($this, $journal->getJournalId());

@@ -151,6 +151,7 @@ class ThesisFeedPlugin extends GenericPlugin {
 
 		switch ($verb) {
 			case 'settings':
+				Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON,  LOCALE_COMPONENT_PKP_MANAGER));
 				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 
@@ -173,12 +174,12 @@ class ThesisFeedPlugin extends GenericPlugin {
 				break;
 			case 'enable':
 				$this->updateSetting($journal->getJournalId(), 'enabled', true);
-				$message = Locale::translate('plugins.generic.thesisFeed.enabled');
+				$message = Locale::translate('plugins.generic.thesisfeed.enabled');
 				$returner = false;
 				break;
 			case 'disable':
 				$this->updateSetting($journal->getJournalId(), 'enabled', false);
-				$message = Locale::translate('plugins.generic.thesisFeed.disabled');
+				$message = Locale::translate('plugins.generic.thesisfeed.disabled');
 				$returner = false;
 				break;	
 		}

@@ -162,6 +162,9 @@ class CounterPlugin extends GenericPlugin {
 				'counter',
 				Locale::translate('plugins.generic.counter')
 			);
+			$this->import('CounterReportDAO');
+			$counterReportDao = new CounterReportDAO();
+			DAORegistry::registerDAO('CounterReportDAO', $counterReportDao);
 			$counterReportDao =& DAORegistry::getDAO('CounterReportDAO');
 			if (file_exists($counterReportDao->getOldLogFilename())) {
 				$verbs[] = array(

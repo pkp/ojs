@@ -208,15 +208,17 @@ class JQueryPlugin extends GenericPlugin {
 	 * @param $args array
 	 * @return boolean
 	 */
-	function manage($verb, $args) {
+	function manage($verb, $args, &$message) {
 		$journal =& Request::getJournal();
 		$journalId = $journal?$journal->getJournalId():0;
 		switch ($verb) {
 			case 'enable':
 				$this->updateSetting($journalId, 'enabled', true);
+				$message = Locale::translate('plugins.generic.jquery.enabled');
 				break;
 			case 'disable':
 				$this->updateSetting($journalId, 'enabled', false);
+				$message = Locale::translate('plugins.generic.jquery.disabled');
 				break;
 		}
 		return false;

@@ -16,6 +16,7 @@
 	<message key="plugins.generic.jquery.name">jQuery Plugin</message>
 	<message key="plugins.generic.jquery.description"><![CDATA[This plugin enables javascript interaction and styling of OJS content using the <a href="http://www.jquery.com" target="_new">jQuery</a> framework.]]></message>
 	<message key="plugins.generic.jquery.descriptionDisabled"><![CDATA[This plugin enables javascript interaction and styling of OJS content using the <a href="http://www.jquery.com" target="_new">jQuery</a> framework. <strong>jQuery is not currently installed; please install it in {$jQueryPath}.</strong>]]></message>
-
+	<message key="plugins.generic.jquery.disabled">The jQuery Plugin has been disabled.</message>
+	<message key="plugins.generic.jquery.enabled">The jQuery Plugin has been enabled.</message>
 	<message key="plugins.generic.jquery.settings">Settings</message>
 </locale>
