@@ -42,6 +42,18 @@ class RTDAO extends DAO {
 		$rt->setEmailAuthor($journal->getSetting('rtEmailAuthor')?true:false);
 		$rt->setEmailOthers($journal->getSetting('rtEmailOthers')?true:false);
 		$rt->setFindingReferences($journal->getSetting('rtFindingReferences')?true:false);
+
+		$rt->setSharingEnabled($journal->getSetting("rtSharingEnabled") ? $journal->getSetting("rtSharingEnabled") : "");
+		$rt->setSharingUserName($journal->getSetting("rtSharingUserName") ? $journal->getSetting("rtSharingUserName") : "");
+		$rt->setSharingButtonStyle($journal->getSetting("rtSharingButtonStyle") ? $journal->getSetting("rtSharingButtonStyle") : "");
+		$rt->setSharingDropDownMenu($journal->getSetting("rtSharingDropDownMenu") ? $journal->getSetting("rtSharingDropDownMenu") : "");
+		$rt->setSharingBrand($journal->getSetting("rtSharingBrand") ? $journal->getSetting("rtSharingBrand") : "");
+		$rt->setSharingDropDown($journal->getSetting("rtSharingDropDown") ? $journal->getSetting("rtSharingDropDown") : "");
+		$rt->setSharingLanguage($journal->getSetting("rtSharingLanguage") ? $journal->getSetting("rtSharingLanguage") : "");
+		$rt->setSharingLogo($journal->getSetting("rtSharingLogo") ? $journal->getSetting("rtSharingLogo") : "");
+		$rt->setSharingLogoBackground($journal->getSetting("rtSharingLogoBackground") ? $journal->getSetting("rtSharingLogoBackground") : "");
+		$rt->setSharingLogoColor($journal->getSetting("rtSharingLogoColor") ? $journal->getSetting("rtSharingLogoColor") : "");
+
 		return $rt;
 	}
 
@@ -61,6 +73,18 @@ class RTDAO extends DAO {
 		$journal->updateSetting('rtEmailAuthor', $rt->getEmailAuthor(), 'bool');
 		$journal->updateSetting('rtEmailOthers', $rt->getEmailOthers(), 'bool');
 		$journal->updateSetting('rtFindingReferences', $rt->getFindingReferences());
+
+		$journal->updateSetting("rtSharingEnabled", $rt->getSharingEnabled());
+		$journal->updateSetting("rtSharingUserName", $rt->getSharingUserName());
+		$journal->updateSetting("rtSharingButtonStyle", $rt->getSharingButtonStyle());
+		$journal->updateSetting("rtSharingDropDownMenu", $rt->getSharingDropDownMenu());
+		$journal->updateSetting("rtSharingBrand", $rt->getSharingBrand());
+		$journal->updateSetting("rtSharingDropDown", $rt->getSharingDropDown());
+		$journal->updateSetting("rtSharingLanguage", $rt->getSharingLanguage());
+		$journal->updateSetting("rtSharingLogo", $rt->getSharingLogo());
+		$journal->updateSetting("rtSharingLogoBackground", $rt->getSharingLogoBackground());
+		$journal->updateSetting("rtSharingLogoColor", $rt->getSharingLogoColor());
+
 		return true;
 	}
 

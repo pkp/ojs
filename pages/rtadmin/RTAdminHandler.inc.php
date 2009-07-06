@@ -17,6 +17,7 @@
 
 import('rt.ojs.JournalRTAdmin');
 import('handler.Handler');
+import('rtadmin.RTSharingHandler');
 
 class RTAdminHandler extends Handler {
 	/**
@@ -79,6 +80,16 @@ class RTAdminHandler extends Handler {
 			Validation::redirectLogin();
 		}
 	}
+
+	function configureSharing() {
+		import('pages.rtadmin.RTSharingHandler');
+		RTSharingHandler::settings();
+	}
+
+	function saveConfigureSharing() {
+		import('pages.rtadmin.RTSharingHandler');
+		RTSharingHandler::saveSettings();
+	}	
 
 	function validateUrls($args) {
 		$this->validate();

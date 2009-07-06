@@ -8,6 +8,35 @@
  *
  * $Id$
  *}
+
+<!-- start AddThis -->
+{if $sharingEnabled}
+{if isset($sharingDropDownMenu)}
+
+{if isset($sharingUserName)}
+<script type="text/javascript">var addthis_pub = '{$sharingUserName}';</script>
+{/if}{* sharingUserName *}
+
+<div class="addthis_container">
+<a href="http://www.addthis.com/bookmark.php" 
+	onmouseover="return addthis_open(this, '', '{$sharingArticleURL}', '{$sharingArticleTitle}')" 
+	onmouseout="addthis_close()" onclick="return addthis_sendto()">
+		<img src="{$sharingButtonUrl}" width="{$sharingButtonWidth}" height="{$sharingButtonHeight}" border="0" alt="Bookmark and Share" style="border:0;padding:0" />
+	</a>
+	<script type="text/javascript" src="http://s7.addthis.com/js/200/addthis_widget.js"></script>
+</div>
+{else}{* sharingUserName *}
+<a href="http://www.addthis.com/bookmark.php" 
+   onclick="window.open('http://www.addthis.com/bookmark.php?pub={$sharingUserName}&amp;url={$sharingRequestURL}&amp;title={$sharingArticleTitle}', 'addthis', 
+	                    'scrollbars=yes,menubar=no,width=620,height=520,resizable=yes,toolbar=no,location=no,status=no'); 
+			return false;" 
+	title="Bookmark using any bookmark manager!" target="_blank">
+	<img src="{$sharingButtonUrl}" width="{$sharingButtonWidth}" height="{$sharingButtonHeight}" border="0" alt="Bookmark and Share" style="border:0;padding:0" />
+</a>
+{/if}{* sharingDropdown *}
+{/if}{* sharingEnabled *}
+<!-- end AddThis -->
+
 {if $currentJournal && $currentJournal->getSetting('includeCreativeCommons')}
 	<br /><br />
 	<a rel="license" target="_new" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>

@@ -1,0 +1,125 @@
+<?php
+
+/**
+ * @defgroup rt_ojs
+ */
+
+/**
+ * @file classes/rt/ojs/SharingRT.inc.php
+ *
+ * Copyright (c) 2003-2009 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @class SharingRT
+ * @ingroup rt_ojs
+ *
+ * @brief OJS-specific AddThis end-user interface.
+ */
+
+// $Id$
+
+import('i18n.Locale');
+
+class SharingRT {
+	static $languages = array (
+		'zh' => 'Chinese',
+		'da' => 'Danish',
+		'nl' => 'Dutch',
+		'en' => 'English',
+		'fi' => 'Finnish',
+		'fr' => 'French',
+		'de' => 'German',
+		'he' => 'Hebrew',
+		'it' => 'Italian',
+		'ja' => 'Japanese',
+		'ko' => 'Korean',
+		'no' => 'Norwegian',
+		'pl' => 'Polish',
+		'pt' => 'Portugese',
+		'ru' => 'Russian',
+		'es' => 'Spanish',
+		'sv' => 'Swedish'
+	);
+
+	static $btnStyles = array (
+		'share' => array (
+			'img' => 'lg-share-%lang%.gif',
+			'w' => 125,
+			'h' => 16
+		),
+		'bookmark' => array (
+			'img' => 'lg-bookmark-en.gif',
+			'w' => 125,
+			'h' => 16
+		),
+		'addthis' => array (
+			'img' => 'lg-addthis-en.gif',
+			'w' => 125,
+			'h' => 16
+		),
+		'share-small' => array (
+			'img' => 'sm-share-%lang%.gif',
+			'w' => 83,
+			'h' => 16
+		),
+		'bookmark-small' => array (
+			'img' => 'sm-bookmark-en.gif',
+			'w' => 83,
+			'h' => 16
+		),
+		'plus' => array (
+			'img' => 'sm-plus.gif',
+			'w' => 16,
+			'h' => 16
+		)
+		/* Add your own style here, like this:
+		 , 'custom' => array('img'=>'http://example.com/button.gif', 'w'=>16, 'h'=>16) */
+	);
+
+	/**
+	 * Generate the information for the HTML tag for the sharing button
+	 * @return array(url, width, height)
+	 */
+	function sharingButtonImage($journalRt) {
+		$btnStyle = $journalRt->getSharingButtonStyle();
+		if ($journalRt->getSharingLanguage() != 'en') {
+			if ($btnStyle == 'bookmark' || $btnStyle == 'adthis' || $btnStyle == 'bookmark-sm') {
+				$btnStyle = 'share';
+			}
+		}
+		if (!isset (self :: $btnStyles[$btnStyle])) {
+			$btnStyle = 'share';
+		}
+		$btnRecord = self :: $btnStyles[$btnStyle];
+		$btnUrl = (strpos(trim($btnRecord['img']), 'http://') !== 0 ? "http://s7.addthis.com/static/btn/" : "") . $btnRecord['img'];
+		$btnUrl = str_replace('%lang%', SharingRT :: sharingLocale($journalRt->getSharingLanguage()), $btnUrl);
+		$btnWidth = $btnRecord['w'];
+		$btnHeight = $btnRecord['h'];
+		$btnHeight = Locale :: getLocale();
+		return array (
+			$btnUrl,
+			$btnWidth,
+			$btnHeight
+		);
+	}
+
+	/**
+	 * determine the correct language for the sharing button. Attempt to use the user's local
+	 * setting if it is one that AddThis supports. If not, use the language the administrator
+	 * has chosen.
+	 *
+	 * @return string
+	 * @param $default string
+	 */
+	function sharingLocale($default) {
+		//getLocal() returns a string like 'en_US'
+		$locale = Locale :: getLocale();
+		$lang = substr($locale, 0, 2);
+		if (isset (self :: $languages[$lang])) {
+			return $lang;
+		}
+		return $default;
+	}
+}
+
+?>

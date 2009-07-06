@@ -19,6 +19,7 @@
 import('rt.ojs.RTDAO');
 import('rt.ojs.JournalRT');
 import('handler.Handler');
+import('rt.ojs.SharingRT');
 
 class ArticleHandler extends Handler {
 	/** journal associated with the request **/
@@ -280,6 +281,29 @@ class ArticleHandler extends Handler {
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('defineTermsContextId', isset($defineTermsContextId)?$defineTermsContextId:null);
 		$templateMgr->assign('comments', isset($comments)?$comments:null);
+		
+		$templateMgr->assign('sharingEnabled', $journalRt->getSharingEnabled());
+		
+		if($journalRt->getSharingEnabled()) {
+			$templateMgr->assign('sharingRequestURL', Request::getRequestURL());
+			$templateMgr->assign('sharingArticleTitle', $article->getArticleTitle());
+			$templateMgr->assign_by_ref('sharingUserName', $journalRt->getSharingUserName());
+			$templateMgr->assign_by_ref('sharingButtonStyle', $journalRt->getSharingButtonStyle());
+			$templateMgr->assign_by_ref('sharingDropDownMenu', $journalRt->getSharingDropDownMenu());
+			$templateMgr->assign_by_ref('sharingBrand', $journalRt->getSharingBrand());
+			$templateMgr->assign_by_ref('sharingDropDown', $journalRt->getSharingDropDown());
+			$templateMgr->assign_by_ref('sharingLanguage', $journalRt->getSharingLanguage());
+			$templateMgr->assign_by_ref('sharingLogo', $journalRt->getSharingLogo());
+			$templateMgr->assign_by_ref('sharingLogoBackground', $journalRt->getSharingLogoBackground());
+			$templateMgr->assign_by_ref('sharingLogoColor', $journalRt->getSharingLogoColor());
+			list($btnUrl, $btnWidth, $btnHeight) = SharingRT::sharingButtonImage($journalRt);
+			$templateMgr->assign('sharingButtonUrl', $btnUrl);
+			$templateMgr->assign('sharingButtonWidth', $btnWidth);
+			$templateMgr->assign('sharingButtonHeight', $btnHeight);
+		}
+		$templateMgr->display('article/article.tpl');
+		
+		
 		$templateMgr->display('article/article.tpl');
 	}
 
