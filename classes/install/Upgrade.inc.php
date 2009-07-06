@@ -681,6 +681,38 @@ class Upgrade extends Installer {
 		
 		return true;
 	}
+
+	/**
+	 * For 2.3 upgrade: Move image alts for Journal Setup Step 5 from within the image
+	 * settings into their own settings. (Improves usability of page 5 setup form and
+	 * simplifies the code considerably.)
+	 * @return boolean
+	 */
+	function cleanImageAlts() {
+		$imageSettings = array(
+			'homeHeaderTitleImage' => 'homeHeaderTitleImageAltText',
+			'homeHeaderLogoImage' => 'homeHeaderLogoImageAltText',
+			'homepageImage' => 'homepageImageAltText',
+			'pageHeaderTitleImage' => 'pageHeaderTitleImageAltText',
+			'pageHeaderLogoImage' => 'pageHeaderLogoImageAltText'
+		);
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journals =& $journalDao->getJournals();
+		while ($journal =& $journals->next()) {
+			foreach ($imageSettings as $imageSettingName => $newSettingName) {
+				$imageSetting = $journal->getSetting($imageSettingName);
+				$newSetting = array();
+				if ($imageSetting) foreach ($imageSetting as $locale => $setting) {
+					if (isset($setting['altText'])) $newSetting[$locale] = $setting['altText'];
+				}
+				if (!empty($newSetting)) {
+					$journal->updateSetting($newSettingName, $newSetting, 'string', true);
+				}
+			}
+			unset($journal);
+		}
+		return true;
+	}
 }
 
 ?>

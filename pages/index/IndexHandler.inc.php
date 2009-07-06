@@ -44,8 +44,11 @@ class IndexHandler extends Handler {
 			// Assign header and content for home page
 			$templateMgr->assign('displayPageHeaderTitle', $journal->getLocalizedPageHeaderTitle(true));
 			$templateMgr->assign('displayPageHeaderLogo', $journal->getLocalizedPageHeaderLogo(true));
+			$templateMgr->assign('displayPageHeaderTitleAltText', $journal->getLocalizedSetting('homeHeaderTitleImageAltText'));
+			$templateMgr->assign('displayPageHeaderLogoAltText', $journal->getLocalizedSetting('homeHeaderLogoImageAltText'));
 			$templateMgr->assign('additionalHomeContent', $journal->getLocalizedSetting('additionalHomeContent'));
 			$templateMgr->assign('homepageImage', $journal->getLocalizedSetting('homepageImage'));
+			$templateMgr->assign('homepageImageAltText', $journal->getLocalizedSetting('homepageImageAltText'));
 			$templateMgr->assign('journalDescription', $journal->getLocalizedSetting('description'));
 
 			$displayCurrentIssue = $journal->getSetting('displayCurrentIssue');

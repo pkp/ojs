@@ -18,30 +18,10 @@
 import("manager.form.setup.JournalSetupForm");
 
 class JournalSetupStep5Form extends JournalSetupForm {
-	var $images;
-	var $image_settings;
-
 	/**
 	 * Constructor.
 	 */
 	function JournalSetupStep5Form() {
-		$this->images = array(
-			'homeHeaderTitleImage',
-			'homeHeaderLogoImage',
-			'homepageImage',
-			'pageHeaderTitleImage',
-			'pageHeaderLogoImage',
-			'journalFavicon'
-		);
-
-		$this->image_settings = array(
-			'homeHeaderTitleImage' => 'homeHeaderTitleImageAltText',
-			'homeHeaderLogoImage' => 'homeHeaderLogoImageAltText',
-			'homepageImage' => 'homepageImageAltText',
-			'pageHeaderTitleImage' => 'pageHeaderTitleImageAltText',
-			'pageHeaderLogoImage' => 'pageHeaderLogoImageAltText'
-		);
-
 		parent::JournalSetupForm(
 			5,
 			array(
@@ -60,7 +40,12 @@ class JournalSetupStep5Form extends JournalSetupForm {
 				'navItems' => 'object',
 				'itemsPerPage' => 'int',
 				'numPageLinks' => 'int',
-				'journalTheme' => 'string'
+				'journalTheme' => 'string',
+				'homeHeaderTitleImageAltText' => 'string',
+				'homeHeaderLogoImageAltText' => 'string',
+				'homepageImageAltText' => 'string',
+				'pageHeaderTitleImageAltText' => 'string',
+				'pageHeaderLogoImageAltText' => 'string'
 			)
 		);
 	}
@@ -70,15 +55,8 @@ class JournalSetupStep5Form extends JournalSetupForm {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('homeHeaderTitleType', 'homeHeaderTitle', 'pageHeaderTitleType', 'pageHeaderTitle', 'readerInformation', 'authorInformation', 'librarianInformation', 'journalPageHeader', 'journalPageFooter', 'homepageImage', 'journalFavicon', 'additionalHomeContent', 'description', 'navItems');
-	}
+		return array('homeHeaderTitleType', 'homeHeaderTitle', 'pageHeaderTitleType', 'pageHeaderTitle', 'readerInformation', 'authorInformation', 'librarianInformation', 'journalPageHeader', 'journalPageFooter', 'homepageImage', 'journalFavicon', 'additionalHomeContent', 'description', 'navItems', 'homeHeaderTitleImageAltText', 'homeHeaderLogoImageAltText', 'homepageImageAltText', 'pageHeaderTitleImageAltText', 'pageHeaderLogoImageAltText');
 
-	/**
-	 * Assign form data to user-submitted data.
-	 */
-	function readInputData() {
-		$this->readUserVars(array_values($this->image_settings));
-		parent::readInputData();
 	}
 
 	/**
@@ -95,8 +73,8 @@ class JournalSetupStep5Form extends JournalSetupForm {
 			unset($plugin);
 		}
 
-		// Ensure upload file settings are reloaded when the form is displayed.
 		$templateMgr =& TemplateManager::getManager();
+
 		$templateMgr->assign(array(
 			'homeHeaderTitleImage' => $journal->getSetting('homeHeaderTitleImage'),
 			'homeHeaderLogoImage'=> $journal->getSetting('homeHeaderLogoImage'),
@@ -264,23 +242,6 @@ class JournalSetupStep5Form extends JournalSetupForm {
 			unset($plugin);
 		}
 
-		// Save alt text for images
-		$journal =& Request::getJournal();
-		$journalId = $journal->getJournalId();
-		$locale = $this->getFormLocale();
-		$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-		$images = $this->images;
-
-		foreach($images as $settingName) {
-			$value = $journal->getSetting($settingName);
-			if (!empty($value)) {
-				$imageAltText = $this->getData($this->image_settings[$settingName]);
-				$value[$locale]['altText'] = $imageAltText[$locale];
-				$settingsDao->updateSetting($journalId, $settingName, $value, 'object', true);
-			}
-		}
-
-		// Save remaining settings
 		return parent::execute();
 	}
 }

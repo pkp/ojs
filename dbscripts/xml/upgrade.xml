@@ -156,6 +156,7 @@
 		<data file="dbscripts/xml/upgrade/2.3.0_update.xml" />
 		<code function="localizeMoreJournalSettings" />
 		<code function="separateSubscriptions" />
+		<code function="cleanImageAlts" />
 		<code function="cleanTitles" />
 		<note file="docs/release-notes/README-2.3.0" />
 	</upgrade>
