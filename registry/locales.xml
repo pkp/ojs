@@ -18,6 +18,7 @@
 
 <locales>
 	<locale key="cs_CZ" name="Czech"/>
+  <locale key="da_DK" name="Danish"/>
 	<locale key="de_DE" name="Deutsch (Deutschland)"/>
 	<locale key="en_US" name="English"/>
 	<locale key="el_GR" name="Greek"/>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for this citation plugin in Danish.
+  *
+  * Translated by Niels Erik Frederiksen, nef@statsbiblioteket.dk
+  *
+  * $Id$
+  -->
+ 
+<locale name="da_DK" full_name="Danish">
+	<message key="plugins.citationFormats.apa.displayName">APA citeringsformat plugin</message>
+	<message key="plugins.citationFormats.apa.citationFormatName">APA</message>
+	<message key="plugins.citationFormats.apa.description">Dette plugin implementerter APA citeringsformate.</message>
+	<message key="plugins.citationFormats.apa.retrieved"><![CDATA[Hentet {$retrievedDate}, fra <a href="{$url}" target="_new">{$url}</a>]]></message>
+</locale>

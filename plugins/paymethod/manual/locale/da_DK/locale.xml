@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the Danish locale.
+  *
+  * Translated by Niels Erik Frederiksen, nef@statsbiblioteket.dk
+  *
+ -->
+ 
+<locale name="da_DK" full_name="Danish">
+	<message key="plugins.paymethod.manual.displayName">Manual betaling af gebyr</message>
+	<message key="plugins.paymethod.manual.description">Manageren registerer manuelt modtagelse af brugerens betaling (i ekstern software).</message>
+	<message key="plugins.paymethod.manual">Manuel betaling af gebyr</message>
+	<message key="plugins.paymethod.manual.settings">Manuel betaling indstillinger</message>
+	<message key="plugins.paymethod.manual.settings.instructions">Instruktioner</message>
+	<message key="plugins.paymethod.manual.settings.manualInstructions">Instruktioner til betaling af gebyr for brugerer, som vælger manuel betaling</message>
+	
+	<message key="plugins.paymethod.manual.purchase.title">Titel</message>
+	<message key="plugins.paymethod.manual.purchase.fee">Gebyr</message>	
+</locale>
