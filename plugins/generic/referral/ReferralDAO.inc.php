@@ -50,7 +50,7 @@ class ReferralDAO extends DAO {
 	 */
 	function &_returnReferralFromRow(&$row) {
 		$referral = new Referral();
-		$referral->setReferralId($row['referral_id']);
+		$referral->setId($row['referral_id']);
 		$referral->setArticleId($row['article_id']);
 		$referral->setStatus($row['status']);
 		$referral->setUrl($row['url']);
@@ -106,7 +106,7 @@ class ReferralDAO extends DAO {
 	 */
 	function updateLocaleFields(&$referral) {
 		$this->updateDataObjectSettings('referral_settings', $referral, array(
-			'referral_id' => $referral->getReferralId()
+			'referral_id' => $referral->getId()
 		));
 	}
 
@@ -131,9 +131,9 @@ class ReferralDAO extends DAO {
 				(int) $referral->getLinkCount()
 			)
 		);
-		$referral->setReferralId($this->getInsertReferralId());
+		$referral->setId($this->getInsertObjectId());
 		$this->updateLocaleFields($referral);
-		return $referral->getReferralId();
+		return $referral->getId();
 	}
 
 	/**
@@ -157,7 +157,7 @@ class ReferralDAO extends DAO {
 				(int) $referral->getArticleId(),
 				$referral->getUrl(),
 				(int) $referral->getLinkCount(),
-				(int) $referral->getReferralId()
+				(int) $referral->getId()
 			)
 		);
 		$this->updateLocaleFields($referral);
@@ -171,7 +171,7 @@ class ReferralDAO extends DAO {
 	 * @return boolean
 	 */
 	function deleteReferral($referral) {
-		return $this->deleteReferralById($referral->getTypeId());
+		return $this->deleteReferralById($referral->getId());
 	}
 
 	/**
@@ -180,8 +180,8 @@ class ReferralDAO extends DAO {
 	 * @return boolean
 	 */
 	function deleteReferralById($referralId) {
-		$this->update('DELETE FROM referral_settings WHERE referral_id = ?', $referralId);
-		return $this->update('DELETE FROM referrals WHERE referral_id = ?', $referralId);
+		$this->update('DELETE FROM referral_settings WHERE referral_id = ?', (int) $referralId);
+		return $this->update('DELETE FROM referrals WHERE referral_id = ?', (int) $referralId);
 	}
 
 	/**
@@ -233,7 +233,7 @@ class ReferralDAO extends DAO {
 	 * Get the ID of the last inserted referral.
 	 * @return int
 	 */
-	function getInsertReferralId() {
+	function getInsertObjectId() {
 		return $this->getInsertId('referrals', 'referral_id');
 	}
 }

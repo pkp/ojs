@@ -26,22 +26,6 @@ class Referral extends DataObject {
 	//
 
 	/**
-	 * Get the ID of the referral.
-	 * @return int
-	 */
-	function getReferralId() {
-		return $this->getData('referralId');
-	}
-
-	/**
-	 * Set the ID of the referral.
-	 * @param $referralId int
-	 */
-	function setReferralId($referralId) {
-		return $this->setData('referralId', $referralId);
-	}
-
-	/**
 	 * Get the article ID of the referral.
 	 * @return int
 	 */

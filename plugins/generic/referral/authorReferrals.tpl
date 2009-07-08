@@ -40,7 +40,7 @@
 		<td>{$referral->getReferralName()|truncate:50|escape}</td>
 		<td>{translate key=$referral->getStatusKey()}</td>
 		<td align="right">
-			<a class="action" href="{url page="referral" op="editReferral" path=$referral->getReferralId()}">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a class="action" onclick="return confirm('{translate|escape:"jsparam" key="plugins.generic.referral.confirmDelete"}')" href="{url page="referral" op="deleteReferral" path=$referral->getReferralId()}">{translate key="common.delete"}</a>
+			<a class="action" href="{url page="referral" op="editReferral" path=$referral->getId()}">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a class="action" onclick="return confirm('{translate|escape:"jsparam" key="plugins.generic.referral.confirmDelete"}')" href="{url page="referral" op="deleteReferral" path=$referral->getId()}">{translate key="common.delete"}</a>
 		</td>
 	</tr>
 	<tr valign="top">

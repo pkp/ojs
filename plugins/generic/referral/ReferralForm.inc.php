@@ -113,7 +113,7 @@ class ReferralForm extends Form {
 		$referral->setStatus($this->getData('status'));
 
 		// Update or insert referral
-		if ($referral->getReferralId() != null) {
+		if ($referral->getId() != null) {
 			$referralDao->updateReferral($referral);
 		} else {
 			$referralDao->insertReferral($referral);

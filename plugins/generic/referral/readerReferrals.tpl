@@ -15,7 +15,7 @@
 
 <ul class="plain">
 	{iterate from=referrals item=referral}
-		<li>&#187; <a href="{$referral->getUrl()|escape}">{$referral->getReferralName()|escape}</a></li>
+		<li>&#187; <a href="{$referral->getUrl()|escape}" target="_parent">{$referral->getReferralName()|escape}</a></li>
 	{/iterate}
 	{if $referrals->wasEmpty()}
 		<li>{translate key="plugins.generic.referral.all.empty"}</li>
