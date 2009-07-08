@@ -302,9 +302,6 @@ class ArticleHandler extends Handler {
 			$templateMgr->assign('sharingButtonHeight', $btnHeight);
 		}
 		$templateMgr->display('article/article.tpl');
-		
-		
-		$templateMgr->display('article/article.tpl');
 	}
 
 	/**
