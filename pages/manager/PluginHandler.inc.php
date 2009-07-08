@@ -77,6 +77,7 @@ class PluginHandler extends ManagerHandler {
 		$verb = array_shift($args);
 
 		$this->validate();
+		$this->setupTemplate(true);
 
 		$plugins =& PluginRegistry::loadCategory($category);
 		$message = null;
