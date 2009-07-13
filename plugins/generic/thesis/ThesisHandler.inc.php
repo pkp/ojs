@@ -50,7 +50,7 @@ class ThesisHandler extends Handler {
 			$searchMatch = null;
 			$search = Request::getUserVar('search');
 
-			if (isset($search)) {
+			if (!empty($search)) {
 				$searchField = Request::getUserVar('searchField');
 				$searchMatch = Request::getUserVar('searchMatch');
 			}			
