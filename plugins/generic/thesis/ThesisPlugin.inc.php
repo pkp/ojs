@@ -351,7 +351,7 @@ class ThesisPlugin extends GenericPlugin {
 					$dateTo = Request::getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
 					if ($dateTo !== null) $dateTo = date('Y-m-d H:i:s', $dateTo);
 
-					if (isset($search)) {
+					if (!empty($search)) {
 						$searchField = Request::getUserVar('searchField');
 						$searchMatch = Request::getUserVar('searchMatch');
 					}			

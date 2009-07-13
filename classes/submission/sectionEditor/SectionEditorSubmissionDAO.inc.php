@@ -901,7 +901,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		$paramArray = array('interests', $articleId, $round, $journalId, RoleDAO::getRoleIdFromPath('reviewer'));
 		$searchSql = '';
 
-		if (isset($search)) switch ($searchType) {
+		if (!empty($search)) switch ($searchType) {
 			case USER_FIELD_USERID:
 				$searchSql = 'AND user_id=?';
 				$paramArray[] = $search;
@@ -1018,7 +1018,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		$paramArray = array('interests', $articleId, $journalId, RoleDAO::getRoleIdFromPath('copyeditor'));
 		$searchSql = '';
 
-		if (isset($search)) switch ($searchType) {
+		if (!empty($search)) switch ($searchType) {
 			case USER_FIELD_USERID:
 				$searchSql = 'AND user_id=?';
 				$paramArray[] = $search;

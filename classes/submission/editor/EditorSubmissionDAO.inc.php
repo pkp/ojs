@@ -712,7 +712,7 @@ class EditorSubmissionDAO extends DAO {
 		$paramArray = array('interests', $articleId, $journalId, $roleId);
 		$searchSql = '';
 
-		if (isset($search)) switch ($searchType) {
+		if (!empty($search)) switch ($searchType) {
 			case USER_FIELD_USERID:
 				$searchSql = 'AND user_id=?';
 				$paramArray[] = $search;

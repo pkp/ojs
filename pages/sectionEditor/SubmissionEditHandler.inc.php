@@ -386,11 +386,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$searchMatch = null;
 			$search = $searchQuery = Request::getUserVar('search');
 			$searchInitial = Request::getUserVar('searchInitial');
-			if (isset($search)) {
+			if (!empty($search)) {
 				$searchType = Request::getUserVar('searchField');
 				$searchMatch = Request::getUserVar('searchMatch');
 
-			} else if (isset($searchInitial)) {
+			} elseif (!empty($searchInitial)) {
 				$searchInitial = String::strtoupper($searchInitial);
 				$searchType = USER_FIELD_INITIAL;
 				$search = $searchInitial;
@@ -495,11 +495,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$searchMatch = null;
 		$search = $searchQuery = Request::getUserVar('search');
 		$searchInitial = Request::getUserVar('searchInitial');
-		if (isset($search)) {
+		if (!empty($search)) {
 			$searchType = Request::getUserVar('searchField');
 			$searchMatch = Request::getUserVar('searchMatch');
 
-		} else if (isset($searchInitial)) {
+		} elseif (!empty($searchInitial)) {
 			$searchInitial = String::strtoupper($searchInitial);
 			$searchType = USER_FIELD_INITIAL;
 			$search = $searchInitial;
@@ -973,11 +973,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$searchMatch = null;
 			$search = $searchQuery = Request::getUserVar('search');
 			$searchInitial = Request::getUserVar('searchInitial');
-			if (isset($search)) {
+			if (!empty($search)) {
 				$searchType = Request::getUserVar('searchField');
 				$searchMatch = Request::getUserVar('searchMatch');
 
-			} else if (isset($searchInitial)) {
+			} elseif (!empty($searchInitial)) {
 				$searchInitial = String::strtoupper($searchInitial);
 				$searchType = USER_FIELD_INITIAL;
 				$search = $searchInitial;
@@ -1368,11 +1368,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$searchMatch = null;
 			$search = $searchQuery = Request::getUserVar('search');
 			$searchInitial = Request::getUserVar('searchInitial');
-			if (isset($search)) {
+			if (!empty($search)) {
 				$searchType = Request::getUserVar('searchField');
 				$searchMatch = Request::getUserVar('searchMatch');
 
-			} else if (isset($searchInitial)) {
+			} elseif (!empty($searchInitial)) {
 				$searchInitial = String::strtoupper($searchInitial);
 				$searchType = USER_FIELD_INITIAL;
 				$search = $searchInitial;
@@ -1945,11 +1945,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$searchMatch = null;
 			$search = $searchQuery = Request::getUserVar('search');
 			$searchInitial = Request::getUserVar('searchInitial');
-			if (isset($search)) {
+			if (!empty($search)) {
 				$searchType = Request::getUserVar('searchField');
 				$searchMatch = Request::getUserVar('searchMatch');
 
-			} else if (isset($searchInitial)) {
+			} elseif (!empty($searchInitial)) {
 				$searchInitial = String::strtoupper($searchInitial);
 				$searchType = USER_FIELD_INITIAL;
 				$search = $searchInitial;
