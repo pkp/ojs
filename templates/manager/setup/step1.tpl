@@ -61,45 +61,45 @@
 		<td width="80%" class="value"><input type="text" name="doiPrefix" value="{$doiPrefix|escape}" size="8" maxlength="8" id="doiPrefix" class="textField" />
 		<br />
 		<span class="instruct">{translate key="manager.setup.doiPrefixDescription"}</span>
-		</td>		
-	</tr>	
+		</td>
+	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="doiSuffix" key="manager.setup.doiSuffix"}</td>
 		<td width="80%" class="value">
 			<table width="100%" class="data">
 				<tr>
 				<td width="5%" class="label" align="right" valign="top">
-					<input type="radio" name="doiSuffix" id="doiSuffix-pattern" value="pattern" {if $doiSuffix eq "pattern"}checked="checked"{/if} />
+					<input type="radio" name="doiSuffix" id="doiSuffix" value="pattern" {if $doiSuffix eq "pattern"}checked{/if} />
 				</td>
 				<td width="95%" class="value">
-					{fieldLabel name="doiSuffixPattern" key="manager.setup.doiSuffixPattern"}			
+					{fieldLabel name="doiSuffix" key="manager.setup.doiSuffixPattern"}
 					<br />
 					<input type="text" name="doiSuffixPattern" value="{$doiSuffixPattern|escape}" size="15" maxlength="15" id="doiSuffixPattern" class="textField" />
 					<br />
-					<span class="instruct">{translate key="manager.setup.doiSuffixPattern.example"}</span>										
+					<span class="instruct">{fieldLabel name="doiSuffixPattern" key="manager.setup.doiSuffixPattern.example"}</span>
 				</td>
 				</tr>
 				<tr>
 				<td width="5%" class="label" align="right" valign="top">
-					<input type="radio" name="doiSuffix" id="doiSuffix-default" value="default" {if ($doiSuffix neq "pattern" && $doiSuffix neq "customIdentifier")}checked="checked"{/if} />
+					<input type="radio" name="doiSuffix" id="doiSuffixDefault" value="default" {if ($doiSuffix neq "pattern" && $doiSuffix neq "customIdentifier")}checked{/if} />
 				</td>
 				<td width="95%" class="value">
-					{fieldLabel name="doiSuffix" key="manager.setup.doiSuffixDefault"}			
+					{fieldLabel name="doiSuffixDefault" key="manager.setup.doiSuffixDefault"}
 				</td>
 				</tr>
 				<tr>
 				<td width="5%" class="label" align="right" valign="top">
-					<input type="radio" name="doiSuffix" id="doiSuffix-customIdentifier" value="customIdentifier" {if $doiSuffix eq "customIdentifier"}checked="checked"{/if} />
+					<input type="radio" name="doiSuffix" id="doiSuffixCustomIdentifier" value="customIdentifier" {if $doiSuffix eq "customIdentifier"}checked{/if} />
 				</td>
 				<td width="95%" class="value">
-					{fieldLabel name="doiSuffix" key="manager.setup.doiSuffixCustomIdentifier"}			
-				</td>	
-				</tr>			
+					{fieldLabel name="doiSuffixCustomIdentifier" key="manager.setup.doiSuffixCustomIdentifier"}
+				</td>
+				</tr>
 			</table>
 			<span class="instruct">{translate key="manager.setup.doiSuffixDescription"}</span>
 		</td>
 	</tr>
-	<tr valign="top">	
+	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="mailingAddress" key="common.mailingAddress"}</td>
 		<td width="80%" class="value">
 			<textarea name="mailingAddress" id="mailingAddress" rows="3" cols="40" class="textArea">{$mailingAddress|escape}</textarea>
@@ -125,7 +125,7 @@
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="contactTitle" key="user.title"}</td>
 		<td width="80%" class="value"><input type="text" name="contactTitle[{$formLocale|escape}]" id="contactTitle" value="{$contactTitle[$formLocale]|escape}" size="30" maxlength="90" class="textField" /></td>
-	</tr>	
+	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="contactAffiliation" key="user.affiliation"}</td>
 		<td width="80%" class="value"><input type="text" name="contactAffiliation[{$formLocale|escape}]" id="contactAffiliation" value="{$contactAffiliation[$formLocale]|escape}" size="30" maxlength="90" class="textField" /></td>
