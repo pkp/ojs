@@ -186,7 +186,7 @@ class OJSPaymentManager extends PaymentManager {
 					$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 					if ($journalSettingsDao->getSetting($subscription->getJournalId(), 'enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional')) {
 						import('subscription.SubscriptionAction');
-						SubscriptionAction::sendOnlinePaymentNotificationEmail($subscription, 'SUBSCRIPTION_PURCHASE_INSTITUTIONAL');
+						SubscriptionAction::sendOnlinePaymentNotificationEmail($subscription, 'SUBSCRIPTION_PURCHASE_INSTL');
 					}
 				} else {
 					import('subscription.IndividualSubscription');
@@ -200,7 +200,7 @@ class OJSPaymentManager extends PaymentManager {
 					$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 					if ($journalSettingsDao->getSetting($subscription->getJournalId(), 'enableSubscriptionOnlinePaymentNotificationPurchaseIndividual')) {
 						import('subscription.SubscriptionAction');
-						SubscriptionAction::sendOnlinePaymentNotificationEmail($subscription, 'SUBSCRIPTION_PURCHASE_INDIVIDUAL');
+						SubscriptionAction::sendOnlinePaymentNotificationEmail($subscription, 'SUBSCRIPTION_PURCHASE_INDL');
 					}
 				}
 				$returner = true;
@@ -228,7 +228,7 @@ class OJSPaymentManager extends PaymentManager {
 					$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 					if ($journalSettingsDao->getSetting($subscription->getJournalId(), 'enableSubscriptionOnlinePaymentNotificationRenewInstitutional')) {
 						import('subscription.SubscriptionAction');
-						SubscriptionAction::sendOnlinePaymentNotificationEmail($subscription, 'SUBSCRIPTION_RENEW_INSTITUTIONAL');
+						SubscriptionAction::sendOnlinePaymentNotificationEmail($subscription, 'SUBSCRIPTION_RENEW_INSTL');
 					}
 				} else {
 					$individualSubscriptionDao->renewSubscription($subscription);
@@ -237,7 +237,7 @@ class OJSPaymentManager extends PaymentManager {
 					$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 					if ($journalSettingsDao->getSetting($subscription->getJournalId(), 'enableSubscriptionOnlinePaymentNotificationRenewIndividual')) {
 						import('subscription.SubscriptionAction');
-						SubscriptionAction::sendOnlinePaymentNotificationEmail($subscription, 'SUBSCRIPTION_RENEW_INDIVIDUAL');
+						SubscriptionAction::sendOnlinePaymentNotificationEmail($subscription, 'SUBSCRIPTION_RENEW_INDL');
 					}
 				}
 				$returner = true;

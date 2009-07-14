@@ -573,10 +573,10 @@ class SubscriptionAction {
 	 */
 	function sendOnlinePaymentNotificationEmail(&$subscription, $mailTemplateKey) {
 		$validKeys = array(
-			'SUBSCRIPTION_PURCHASE_INDIVIDUAL',
-			'SUBSCRIPTION_PURCHASE_INSTITUTIONAL',
-			'SUBSCRIPTION_RENEW_INDIVIDUAL',
-			'SUBSCRIPTION_RENEW_INSTITUTIONAL'
+			'SUBSCRIPTION_PURCHASE_INDL',
+			'SUBSCRIPTION_PURCHASE_INSTL',
+			'SUBSCRIPTION_RENEW_INDL',
+			'SUBSCRIPTION_RENEW_INSTL'
 		);
 
 		if (!in_array($mailTemplateKey, $validKeys)) return false;
@@ -613,12 +613,12 @@ class SubscriptionAction {
 		);
 
 		switch($mailTemplateKey) {
-			case 'SUBSCRIPTION_PURCHASE_INDIVIDUAL':
-			case 'SUBSCRIPTION_RENEW_INDIVIDUAL':
+			case 'SUBSCRIPTION_PURCHASE_INDL':
+			case 'SUBSCRIPTION_RENEW_INDL':
 				$paramArray['subscriptionUrl'] = Request::url($journal->getPath(), $rolePath, 'editSubscription', 'individual', array($subscription->getSubscriptionId()));
 				break;
-			case 'SUBSCRIPTION_PURCHASE_INSTITUTIONAL':
-			case 'SUBSCRIPTION_RENEW_INSTITUTIONAL':
+			case 'SUBSCRIPTION_PURCHASE_INSTL':
+			case 'SUBSCRIPTION_RENEW_INSTL':
 				$paramArray['subscriptionUrl'] = Request::url($journal->getPath(), $rolePath, 'editSubscription', 'institutional', array($subscription->getSubscriptionId()));
 				$paramArray['institutionName'] = $subscription->getInstitutionName();
 				$paramArray['institutionMailingAddress'] = $subscription->getInstitutionMailingAddress();
