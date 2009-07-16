@@ -63,8 +63,10 @@
 			{/foreach}
 		{/if}
 		{assign var=pluginInstallName value=$plugin->getPluginPath()|basename}
-		<a class="action" href="{url op="managePlugins" path="upgrade"|to_array:$pluginInstallName}">{translate key="manager.plugins.upgrade"}</a>&nbsp;
-		<a class="action" href="{url op="managePlugins" path="delete"|to_array:$pluginInstallName}">{translate key="manager.plugins.delete"}</a>&nbsp;
+		{if $plugin->getCurrentVersion()}
+			<a class="action" href="{url op="managePlugins" path="upgrade"|to_array:$pluginInstallName}">{translate key="manager.plugins.upgrade"}</a>&nbsp;
+			<a class="action" href="{url op="managePlugins" path="delete"|to_array:$pluginInstallName}">{translate key="manager.plugins.delete"}</a>&nbsp;
+		{/if}
 		</p></li>
 	{/foreach}
 	</ul>

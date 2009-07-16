@@ -713,6 +713,30 @@ class Upgrade extends Installer {
 		}
 		return true;
 	}
+	
+	/**
+	 * For 2.3 upgrade:  Add initial plugin data to versions table
+	 * @return boolean
+	 */
+	function addPluginVersions() {
+		$versionDao =& DAORegistry::getDAO('VersionDAO'); 
+		import('site.VersionCheck');
+		$categories = PluginRegistry::getCategories();
+		foreach ($categories as $category) {
+			PluginRegistry::loadCategory($category, true);
+			$plugins = PluginRegistry::getPlugins($category);
+			foreach ($plugins as $plugin) {
+				$versionFile = $plugin->getPluginPath() . '/version.xml';
+				
+				if (FileManager::fileExists($versionFile)) {
+					$versionInfo =& VersionCheck::parseVersionXML($versionFile);
+					$pluginVersion = $versionInfo['version'];		
+					$pluginVersion->setCurrent(1);
+					$versionDao->insertVersion($pluginVersion);
+				} 
+			}
+		}
+	}
 }
 
 ?>

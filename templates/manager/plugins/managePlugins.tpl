@@ -122,7 +122,13 @@
 			{if $error}
 				<span class="formError">{translate key="form.errorsOccurred"}:</span>
 				<ul class="formErrorList">
-					<li>{$message}</li>
+					<li>
+					{if is_array($message)}
+						{translate key=$message[0]} {$message[1]}
+					{else}
+						{translate key=$message}
+					{/if}
+					</li>
 				</ul>
 			{/if}
 			<input type="submit" name="save" class="button defaultButton" value="{translate key="common.delete"}"/> <input type="button" class="button" value="{translate key="common.cancel"}" onclick="history.go(-1)"/>

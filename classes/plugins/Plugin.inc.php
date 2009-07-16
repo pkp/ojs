@@ -117,6 +117,22 @@ class Plugin extends PKPPlugin {
 
 		return false;
 	}
+	
+	/**
+	 * Get the current version of this plugin
+	 * @return object Version
+	 */
+	function getCurrentVersion() {
+		$versionDao =& DAORegistry::getDAO('VersionDAO'); 
+		$product = basename($this->getPluginPath());
+		$installedPlugin = $versionDao->getCurrentVersion($product);
+		
+		if ($installedPlugin) {
+			return $installedPlugin;
+		} else {
+			return false;
+		}
+	}
 }
 
 ?>

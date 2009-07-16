@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  * version.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Plugin version information.
+  *
+  * $Id$
+  -->
+<!DOCTYPE version [
+	<!ELEMENT version (application, type, release, tag, date)>
+	<!ELEMENT application (#PCDATA)>
+	<!ELEMENT type (#PCDATA)>
+	<!ELEMENT release (#PCDATA)>
+	<!ELEMENT tag (#PCDATA)>
+	<!ELEMENT date (#PCDATA)>
+]>
+<version>
+	<application>tinymce</application>
+	<type>plugins.generic</type>
+	<release>1.0.0.0</release>
+	<tag>tinymce-1_0_0-0</tag>
+	<date>2009-07-13</date>
+</version>
