@@ -81,7 +81,8 @@ function handleRequest() {
 	// opportunity to load required resources and set HANDLER_CLASS.
 	if (!HookRegistry::call('LoadHandler', array(&$page, &$op, &$sourceFile))) {
 		if (file_exists($sourceFile) || file_exists('lib/pkp/'.$sourceFile)) require($sourceFile);
-		else require('pages/index/index.php');
+		elseif (empty($page)) require('pages/index/index.php');
+		else PKPRequest::handle404();
 	}
 
 	if (!defined('SESSION_DISABLE_INIT')) {
@@ -94,18 +95,16 @@ function handleRequest() {
 
 	if (in_array(strtolower($op), $methods)) {
 		// Call a specific operation
-		//call_user_func(array(HANDLER_CLASS, $op), Request::getRequestedArgs());
 		$HandlerClass = HANDLER_CLASS;
 		$handler = new $HandlerClass;
 		$handler->$op(Request::getRequestedArgs());
 
-	} else {
+	} elseif (empty($op)) {
 		// Call the selected handler's index operation
-		//call_user_func(array(HANDLER_CLASS, 'index'), Request::getRequestedArgs());
 		$HandlerClass = HANDLER_CLASS;
 		$handler = new $HandlerClass;
 		$handler->index(Request::getRequestedArgs());
-	}
+	} else PKPRequest::handle404();
 }
 
 // Initialize system and handle the current request
