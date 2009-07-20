@@ -176,6 +176,8 @@
 	<message key="submission.scheduledIn">Scheduled for publication in {$issueName}.</message>
 	<message key="submission.scheduledIn.tba">(TBA)</message>
 	
+	<message key="submission.citations">References</message>
+	
 	<message key="submissions.sec">Sec</message>
 	<message key="submissions.step1">Step 1</message>
 	<message key="submissions.step3">Step 3</message>
@@ -454,6 +456,8 @@ Note that if your site administrator has already registered this site with the P
 <br /><br />
 <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Click here</a> and enter <span class="highlight">{$siteUrl}</span> under <strong>Site URL</strong>, and <span class="highlight">{$oaiUrl}</span> under <strong>Base URL for OAI Archive</strong>.]]></message>
 
+	<message key="manager.setup.citations">Allow authors to separately provide a formatted list of references (citations) as part of their submission.</message>
+
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Steps: Submission Queue &gt; Submission Review &gt; Submission Editing &gt; Table of Contents.<br /><br />
 Select a model for handling these aspects of the editorial process. (To designate a Managing Editor and Section Editors, go to Editors in Journal Management.)]]></message>
@@ -640,6 +644,8 @@ Active is how many reviews are currently being considered or underway.]]></messa
 <li>Once the submission is uploaded, click Save and Continue at the bottom of this page.</li>
 </ol>]]></message>
 	
+	<message key="author.submit.submissionCitations">Provide a formatted list of references for works cited in this submission.</message>
+
 	<!-- Article Submission Step 4 -->
 	
 	<!-- Article Submission Step 4a: Supplementary Files -->
