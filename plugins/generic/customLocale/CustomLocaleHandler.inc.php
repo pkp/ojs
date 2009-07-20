@@ -20,9 +20,6 @@ require_once('CustomLocaleAction.inc.php');
 import('handler.Handler');
 
 class CustomLocaleHandler extends Handler {
-	/** the Custom Locale Plugin **/
-	var $plugin;
-	 
 	/**
 	 * Constructor
 	 **/
@@ -31,15 +28,12 @@ class CustomLocaleHandler extends Handler {
 
 		$this->addCheck(new HandlerValidatorJournal($this));
 		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_SITE_ADMIN, ROLE_ID_JOURNAL_MANAGER)));
-
-		$plugin =& PluginRegistry::getPlugin('generic', 'CustomLocalePlugin');
-		$this->plugin =& $plugin;		
 	}
 
 	function index() {
-		$this->validate();
-		$plugin =& $this->plugin;
-		$this->setupTemplate($plugin, false);
+		CustomLocaleHandler::validate();
+		$plugin =& PluginRegistry::getPlugin('generic', 'CustomLocalePlugin');
+		CustomLocaleHandler::setupTemplate($plugin, false);
 
 		$journal = Request::getJournal();
 		$rangeInfo = Handler::getRangeInfo('locales');
@@ -53,9 +47,9 @@ class CustomLocaleHandler extends Handler {
 	}
 
 	function edit($args) {
-		$this->validate();
-		$plugin =& $this->plugin;
-		$this->setupTemplate($plugin, true);
+		CustomLocaleHandler::validate();
+		$plugin =& PluginRegistry::getPlugin('generic', 'CustomLocalePlugin');
+		CustomLocaleHandler::setupTemplate($plugin, true);
 
 		$locale = array_shift($args);
 		$file = array_shift($args);
@@ -80,9 +74,9 @@ class CustomLocaleHandler extends Handler {
 	}
 
 	function editLocaleFile($args) {
-		$this->validate();
-		$plugin =& $this->plugin;
-		$this->setupTemplate($plugin, true);
+		CustomLocaleHandler::validate();
+		$plugin =& PluginRegistry::getPlugin('generic', 'CustomLocalePlugin');
+		CustomLocaleHandler::setupTemplate($plugin, true);
 
 		$locale = array_shift($args);
 		if (!Locale::isLocaleValid($locale)) {
@@ -143,9 +137,9 @@ class CustomLocaleHandler extends Handler {
 	}
 
 	function saveLocaleFile($args) {
-		$this->validate();
-		$plugin =& $this->plugin;
-		$this->setupTemplate($plugin, true);
+		CustomLocaleHandler::validate();
+		$plugin =& PluginRegistry::getPlugin('generic', 'CustomLocalePlugin');
+		CustomLocaleHandler::setupTemplate($plugin, true);
 
 		$locale = array_shift($args);
 		if (!Locale::isLocaleValid($locale)) {
@@ -207,7 +201,7 @@ class CustomLocaleHandler extends Handler {
 	function setupTemplate(&$plugin, $subclass = true) {
 		parent::setupTemplate();
 		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->register_function('plugin_url', array(&$plugin, 'smartyPluginUrl'));
+		$templateMgr->register_function('plugin_url', array($plugin, 'smartyPluginUrl'));
 		$pageHierarchy = array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'manager'), 'user.role.manager'));
 		if ($subclass) {
 			$path = array($plugin->getCategory(), $plugin->getName(), 'index');
