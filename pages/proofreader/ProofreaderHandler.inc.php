@@ -130,6 +130,7 @@ class ProofreaderHandler extends Handler {
 	 * @param $args (type)
 	 */
 	function instructions($args) {
+		$this->setupTemplate();
 		if (!isset($args[0]) || !ProofreaderAction::instructions($args[0], array('proof'))) {
 			Request::redirect(null, Request::getRequestedPage());
 		}

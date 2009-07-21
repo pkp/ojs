@@ -129,6 +129,7 @@ class CopyeditorHandler extends Handler {
 	 * @param $args (type)
 	 */
 	function instructions($args) {
+		$this->setupTemplate();
 		import('submission.proofreader.ProofreaderAction');
 		if (!isset($args[0]) || !ProofreaderAction::instructions($args[0], array('copy'))) {
 			Request::redirect(null, Request::getRequestedPage());

@@ -194,7 +194,7 @@ class Action {
 	}
 
 	/**
-	 *
+	 * Display submission management instructions.
 	 * @param $type string the type of instructions (copy, layout, or proof).
 	 */
 	function instructions($type, $allowed = array('copy', 'layout', 'proof', 'referenceLinking')) {

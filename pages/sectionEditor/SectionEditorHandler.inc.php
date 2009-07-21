@@ -186,6 +186,17 @@ class SectionEditorHandler extends Handler {
 		$templateMgr->assign('pageHierarchy', $pageHierarchy);
 	}
 
+	/**
+	 * Display submission management instructions.
+	 * @param $args (type)
+	 */
+	function instructions($args) {
+		$this->setupTemplate();
+		import('submission.proofreader.ProofreaderAction');
+		if (!isset($args[0]) || !ProofreaderAction::instructions($args[0], array('copy', 'proof'))) {
+			Request::redirect(null, null, 'index');
+		}
+	}
 }
 
 ?>
