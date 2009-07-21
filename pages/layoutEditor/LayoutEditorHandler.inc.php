@@ -143,7 +143,7 @@ class LayoutEditorHandler extends Handler {
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 
 		$rangeInfo = Handler::getRangeInfo('issues');
-		$sort = Request::getUserVar('heading');
+		$sort = Request::getUserVar('sort');
 		$sort = isset($sort) ? $sort : 'title';
 		$sortDirection = Request::getUserVar('sortDirection');
 

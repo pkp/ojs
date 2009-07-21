@@ -12,13 +12,13 @@
 <table class="listing" width="100%">
 	<tr><td class="headseparator" colspan="{if $statViews}7{else}6{/if}">&nbsp;</td></tr>
 	<tr valign="bottom" class="heading">
-		<td width="5%">{sort_heading key="common.id" heading="id"}</td>
-		<td width="5%"><span class="disabled">MM-DD</span><br />{sort_heading key="submissions.submit" heading="submitDate"}</td>
-		<td width="5%">{sort_heading key="submissions.sec" heading="section"}</td>
-		<td width="23%">{sort_heading key="article.authors" heading="authors"}</td>
-		<td width="32%">{sort_heading key="article.title" heading="title"}</td>
-		{if $statViews}<td width="5%">{sort_heading key="submission.views" heading="views"}</td>{/if}
-		<td width="25%" align="right">{sort_heading key="common.status" heading="status"}</td>
+		<td width="5%">{sort_heading key="common.id" sort="id"}</td>
+		<td width="5%"><span class="disabled">MM-DD</span><br />{sort_heading key="submissions.submit" sort="submitDate"}</td>
+		<td width="5%">{sort_heading key="submissions.sec" sort="section"}</td>
+		<td width="23%">{sort_heading key="article.authors" sort="authors"}</td>
+		<td width="32%">{sort_heading key="article.title" sort="title"}</td>
+		{if $statViews}<td width="5%">{sort_heading key="submission.views" sort="views"}</td>{/if}
+		<td width="25%" align="right">{sort_heading key="common.status" sort="status"}</td>
 	</tr>
 	<tr><td class="headseparator" colspan="{if $statViews}7{else}6{/if}">&nbsp;</td></tr>
 {iterate from=submissions item=submission}

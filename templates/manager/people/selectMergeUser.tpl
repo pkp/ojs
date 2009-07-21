@@ -80,9 +80,9 @@
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
-		<td width="29%">{sort_heading key="user.username" heading="username"}</td>
-		<td width="29%">{sort_heading key="user.name" heading="name"}</td>
-		<td width="29%">{sort_heading key="user.email" heading="email"}</td>
+		<td width="29%">{sort_heading key="user.username" sort="username"}</td>
+		<td width="29%">{sort_heading key="user.name" sort="name"}</td>
+		<td width="29%">{sort_heading key="user.email" sort="email"}</td>
 		<td width="13%" align="right">{translate key="common.action"}</td>
 	</tr>
 	<tr>

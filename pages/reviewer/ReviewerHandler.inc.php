@@ -51,7 +51,7 @@ class ReviewerHandler extends Handler {
 				$active = true;
 		}
 
-		$sort = Request::getUserVar('heading');
+		$sort = Request::getUserVar('sort');
 		$sort = isset($sort) ? $sort : 'title';
 		$sortDirection = Request::getUserVar('sortDirection');
 

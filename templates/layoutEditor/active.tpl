@@ -12,12 +12,12 @@
 <table class="listing" width="100%">
 	<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
-		<td width="5%">{sort_heading key="common.id" heading="id"}</td>
-		<td width="5%"><span class="disabled">MM-DD</span><br />{sort_heading key="common.assigned" heading="assignDate"}</td>
-		<td width="5%">{sort_heading key="submissions.sec" heading="section"}</td>
-		<td width="30%">{sort_heading key="article.authors" heading="authors"}</td>
-		<td width="40%">{sort_heading key="article.title" heading="title"}</td>
-		<td width="15%" align="right">{sort_heading key="common.status" heading="status"}</td>
+		<td width="5%">{sort_heading key="common.id" sort="id"}</td>
+		<td width="5%"><span class="disabled">MM-DD</span><br />{sort_heading key="common.assigned" sort="assignDate"}</td>
+		<td width="5%">{sort_heading key="submissions.sec" sort="section"}</td>
+		<td width="30%">{sort_heading key="article.authors" sort="authors"}</td>
+		<td width="40%">{sort_heading key="article.title" sort="title"}</td>
+		<td width="15%" align="right">{sort_heading key="common.status" sort="status"}</td>
 	</tr>
 	<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 

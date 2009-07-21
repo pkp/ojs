@@ -51,7 +51,7 @@ class AuthorHandler extends Handler {
 				$active = true;
 		}
 
-		$sort = Request::getUserVar('heading');
+		$sort = Request::getUserVar('sort');
 		$sort = isset($sort) ? $sort : 'title';
 		$sortDirection = Request::getUserVar('sortDirection');
 		$sortDirection = (isset($sortDirection) && ($sortDirection == SORT_DIRECTION_ASC || $sortDirection == SORT_DIRECTION_DESC)) ? $sortDirection : SORT_DIRECTION_ASC;

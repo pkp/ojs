@@ -38,7 +38,7 @@ class PeopleHandler extends ManagerHandler {
 		if (Request::getUserVar('roleSymbolic')!=null) $roleSymbolic = Request::getUserVar('roleSymbolic');
 		else $roleSymbolic = isset($args[0])?$args[0]:'all';
 		
-		$sort = Request::getUserVar('heading');
+		$sort = Request::getUserVar('sort');
 		$sort = isset($sort) ? $sort : 'name';
 		$sortDirection = Request::getUserVar('sortDirection');
 
@@ -169,7 +169,7 @@ class PeopleHandler extends ManagerHandler {
 		$roleId = (int)(isset($args[0])?$args[0]:Request::getUserVar('roleId'));
 		$journal =& $journalDao->getJournalByPath(Request::getRequestedJournalPath());
 		
-		$sort = Request::getUserVar('heading');
+		$sort = Request::getUserVar('sort');
 		$sort = isset($sort) ? $sort : 'name';
 		$sortDirection = Request::getUserVar('sortDirection');
 
@@ -476,7 +476,7 @@ class PeopleHandler extends ManagerHandler {
 			$roleName = 'manager.people.allUsers';
 		}
 		
-		$sort = Request::getUserVar('heading');
+		$sort = Request::getUserVar('sort');
 		$sort = isset($sort) ? $sort : 'name';
 		$sortDirection = Request::getUserVar('sortDirection');
 

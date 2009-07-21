@@ -53,15 +53,15 @@ function sortSearch(heading, direction) {
 {/if}
 <tr><td colspan="{$numCols|escape}" class="headseparator">&nbsp;</td></tr>
 <tr class="heading" valign="bottom">
-	<td width="20%">{sort_search key="user.name" heading="reviewerName"}</td>
+	<td width="20%">{sort_search key="user.name" sort="reviewerName"}</td>
 	<td>{translate key="user.interests"}</td>
 	{if $rateReviewerOnQuality}
-		<td width="7%">{sort_search key="reviewer.averageQuality" heading="quality"}</td>
+		<td width="7%">{sort_search key="reviewer.averageQuality" sort="quality"}</td>
 	{/if}
-	<td width="7%">{sort_search key="reviewer.completedReviews" heading="done"}</td>
-	<td width="7%">{sort_search key="editor.submissions.averageTime" heading="average"}</td>
-	<td width="13%">{sort_search key="editor.submissions.lastAssigned" heading="latest"}</td>
-	<td width="5%">{sort_search key="common.active" heading="active"}</td>
+	<td width="7%">{sort_search key="reviewer.completedReviews" sort="done"}</td>
+	<td width="7%">{sort_search key="editor.submissions.averageTime" sort="average"}</td>
+	<td width="13%">{sort_search key="editor.submissions.lastAssigned" sort="latest"}</td>
+	<td width="5%">{sort_search key="common.active" sort="active"}</td>
 	<td width="7%" class="heading">{translate key="common.action"}</td>
 </tr>
 <tr><td colspan="{$numCols|escape}" class="headseparator">&nbsp;</td></tr>
