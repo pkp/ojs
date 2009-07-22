@@ -1,0 +1,35 @@
+================================
+=== OJS Custom Block Manager Plugin
+=== Version: 1.0
+=== Author: Juan Pablo Alperin <pkp@alperin.ca>
+================================
+
+About
+-----
+This plugin is intended to enable users to create customizable HTML blocks for the sidebars.  The plugin works in conjunction with Step 5 of the Journal Setup.
+
+License
+-------
+This plugin is licensed under the GNU General Public License v2. See the file COPYING for the complete terms of this license.
+
+System Requirements
+-------------------
+Same requirements as the OJS 2.2 core.
+
+Installation
+------------
+To install the plugin:
+ - copy the plugin tar.gz file to your OJS/plugins/generic directory
+ - to unzip the plugin inside the plugins/generic directory:
+    $ tar xvzf customBlockManager-1.0.tar.gz 
+ - enable the plugin by going to:  Home > User > Journal Management > Plugin Management > Generic Plugins and selecting "ENABLE" under "Custom Block Manager Plugin"
+
+Configuration
+------------
+The Plugin management interface can be found at Home -> User -> Journal Management > Plugin Management > Generic Plugins.  Once the plugin is enabled, blocks can be added and deleted through this interface.  Blocks which are created through this interface will subsequently appear as their own Block Plugin (found under Plugin Management > Block Plugins) and their content can be edited by clicking on the "EDIT" link underneath the name.
+NOTE: The plugin will NOT appear in the sidebar until a sidebar location has bee chosen through Journal Manager -> Setup -> 5. The Look (Specifically, under Journal Layout, step 5.6).
+
+
+Contact/Support
+---------------
+Please post support requests, bugfixes, or comments at the appropriate topic in the Plugin Gallery: http://pkp.sfu.ca/support/forum/viewforum.php?f=28
