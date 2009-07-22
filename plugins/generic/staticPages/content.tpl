@@ -10,6 +10,6 @@
 {assign var="pageTitleTranslated" value=$title}
 {include file="common/header.tpl"}
 
-{$content|strip_unsafe_html}
+{$content}
 
 {include file="common/footer.tpl"}
