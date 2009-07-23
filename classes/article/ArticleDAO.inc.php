@@ -313,7 +313,7 @@ class ArticleDAO extends DAO {
 		$signoffs = array($copyedInitialSignoffs, $copyedAuthorSignoffs, $copyedFinalSignoffs, $layoutSignoffs, 
 						$proofreadAuthorSignoffs, $proofreadProofreaderSignoffs, $proofreadLayoutSignoffs);
 		foreach ($signoffs as $signoff) {
-			$signoffDao->deleteObject($signoff);
+			if ( $signoff ) $signoffDao->deleteObject($signoff);
 		}		
 
 		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
