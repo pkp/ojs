@@ -75,7 +75,7 @@ class LayoutCommentForm extends CommentForm {
 		if ($this->roleId == ROLE_ID_EDITOR || $this->roleId == ROLE_ID_SECTION_EDITOR) {
 			// Then add layout editor
 			$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-			$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+			$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $this->article->getArticleId());
 
 			// Check to ensure that there is a layout editor assigned to this article.
 			if ($layoutSignoff != null && $layoutSignoff->getUserId() > 0) {
