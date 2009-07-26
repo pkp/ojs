@@ -74,7 +74,6 @@ class JQueryPlugin extends GenericPlugin {
 	 */
 	function getEnabledScripts($page, $op) {
 		$scripts = array();
-		
 		switch ("$page/$op") {
 			case 'editor/submissions':
 				$scripts[] = 'submissionSearch.js';
@@ -93,10 +92,15 @@ class JQueryPlugin extends GenericPlugin {
 			case 'manager/setup':
 				//$scripts[] = 'dragLists.js';
 				break;
-			case 'manager/sections':
-			case 'manager/reviewForms':
-			case 'manager/groups':
 			case 'admin/journals':
+			case 'manager/groupMembership':
+			case 'manager/groups':
+			case 'manager/reviewFormElements':
+			case 'manager/reviewForms':
+			case 'manager/sections':
+			case 'rtadmin/contexts':
+			case 'rtadmin/searches':
+			case 'subscriptionManager/subscriptionTypes':
 				$scripts[] = 'jquery.tablednd_0_5.js';
 				$scripts[] = 'tablednd.js';
 				break;

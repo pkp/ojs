@@ -33,14 +33,19 @@ function setupTableDND(tableID, moveHandler) {
 		}
 		// update the sequence in the database
 		var req = makeAsyncRequest();
-		var url = moveHandler + '?id=' + row.id;
-		if (prevRowId != null) url += '&prevId='+prevRowId;
+
+		// id's are "context-##", remove the "context-"
+		var url = moveHandler + '?id=' + row.id.split(/-/)[1];
+		if (prevRowId != null) url += '&prevId=' + prevRowId.split(/-/)[1];
 		sendAsyncRequest(req, url, null, 'GET');
 	    },
 
  	    onAllowDrop: function(dragRow, dropRow) {
-		// allow dropping only onto other data rows
-		return dropRow.className == "data";
+		// allow dropping only onto other data rows with the same "context-"
+		if (dropRow.className == "data")
+		    return true;//dragRow[0].id.split(/-/)[0] == dropRow.id.split(/-/)[0];
+		else
+		    return false;
 	    }
 	});
 }

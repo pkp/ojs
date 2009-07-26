@@ -48,30 +48,31 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveGroup"); });
 	</tr>
 {assign var="isFirstEditorialTeamEntry" value=1}
 {iterate from=groups item=group}
-	<tr valign="top">
 		{if $group->getContext() == GROUP_CONTEXT_EDITORIAL_TEAM}
 			{if $isFirstEditorialTeamEntry}
 				{assign var="isFirstEditorialTeamEntry" value=0}
-					<td colspan="3">{translate key="manager.groups.context.editorialTeam.short"}</td>
+    		  <tr valign="top">
+ 						<td colspan="3">{translate key="manager.groups.context.editorialTeam.short"}</td>
 					</tr>
 					<tr>
 						<td colspan="3" class="separator">&nbsp;</td>
 					</tr>
-					<tr valign="top">
 			{/if}
-			<td width="5%">&nbsp;</td>
-			<td>
+	    <tr valign="top" id=editorialteam-{$group->getId()} class="data">
+			<td class="drag" width="5%">&nbsp;</td>
+			<td class="drag">
 				{url|assign:"url" page="manager" op="email" toGroup=$group->getId()}
 				{$group->getLocalizedTitle()|escape}&nbsp;{icon name="mail" url=$url}
 			</td>
 		{else}
-			<td colspan="2">
+		  <tr valign="top" id="other-{$group->getId()}" class="data">
+			<td class="drag" colspan="2">
 				{url|assign:"url" page="manager" op="email" toGroup=$group->getId()}
 				{$group->getLocalizedTitle()|escape}&nbsp;{icon name="mail" url=$url}
 			</td>
 		{/if}
 		<td>
-			<a href="{url op="editGroup" path=$group->getId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url op="groupMembership" path=$group->getId()}" class="action">{translate key="manager.groups.membership"}</a>&nbsp;|&nbsp;<a href="{url op="deleteGroup" path=$group->getId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.groups.confirmDelete"}')" class="action">{translate key="common.delete"}</a>&nbsp;|&nbsp;<a href="{url op="moveGroup" d=u groupId=$group->getId()}">&uarr;</a>&nbsp;<a href="{url op="moveGroup" d=d groupId=$group->getId()}">&darr;</a>
+			<a href="{url op="editGroup" path=$group->getId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url op="groupMembership" path=$group->getId()}" class="action">{translate key="manager.groups.membership"}</a>&nbsp;|&nbsp;<a href="{url op="deleteGroup" path=$group->getId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.groups.confirmDelete"}')" class="action">{translate key="common.delete"}</a>&nbsp;|&nbsp;<a href="{url op="moveGroup" d=u id=$group->getId()}">&uarr;</a>&nbsp;<a href="{url op="moveGroup" d=d id=$group->getId()}">&darr;</a>
 		</td>
 	</tr>
 	<tr>

@@ -11,6 +11,15 @@
 {assign var="pageTitle" value="manager.reviewFormElements"}
 {include file="common/header.tpl"}
 {/strip}
+<script type="text/javascript">
+{literal}
+$(document).ready(function() { setupTableDND("#reviewFormElementsTable",
+{/literal}
+"{url op=moveReviewFormElement}"
+{literal}
+); });
+{/literal}
+</script>
 
 <script type="text/javascript">
 {literal}
@@ -37,7 +46,7 @@ function toggleChecked() {
 
 <div id="reviewFormElements">
 <form name="reviewFormElements" action="{url op="copyReviewFormElement"}" method="post">
-<table width="100%" class="listing">
+<table width="100%" class="listing" id="reviewFormElementsTable">
 	<tr>
 		<td class="headseparator" colspan="3">&nbsp;</td>
 	</tr>
@@ -51,16 +60,16 @@ function toggleChecked() {
 	</tr>
 {iterate from=reviewFormElements item=reviewFormElement name=reviewFormElements}
 {assign var=reviewFormElementExists value=1}
-	<tr valign="top">
+	<tr valign="top" id="formelt-{$reviewFormElement->getReviewFormElementId()}" class="data">
 		<td><input type="checkbox" name="copy[]" value="{$reviewFormElement->getReviewFormElementId()|escape}"/></td>
-		<td>{$reviewFormElement->getReviewFormElementQuestion()|strip_unsafe_html|truncate:200:"..."|escape}</td>
+		<td class="drag">{$reviewFormElement->getReviewFormElementQuestion()|strip_unsafe_html|truncate:200:"..."|escape}</td>
 		<td class="nowrap">
-			<a href="{url op="editReviewFormElement" path=$reviewFormElement->getReviewFormId()|to_array:$reviewFormElement->getReviewFormElementId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url op="deleteReviewFormElement" path=$reviewFormElement->getReviewFormId()|to_array:$reviewFormElement->getReviewFormElementId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.reviewFormElements.confirmDelete"}')" class="action">{translate key="common.delete"}</a>&nbsp;|&nbsp;<a href="{url op="moveReviewFormElement" d=u reviewFormElementId=$reviewFormElement->getReviewFormElementId()}" class="action">&uarr;</a>&nbsp;<a href="{url op="moveReviewFormElement" d=d reviewFormElementId=$reviewFormElement->getReviewFormElementId()}" class="action">&darr;</a>
+			<a href="{url op="editReviewFormElement" path=$reviewFormElement->getReviewFormId()|to_array:$reviewFormElement->getReviewFormElementId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url op="deleteReviewFormElement" path=$reviewFormElement->getReviewFormId()|to_array:$reviewFormElement->getReviewFormElementId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.reviewFormElements.confirmDelete"}')" class="action">{translate key="common.delete"}</a>&nbsp;|&nbsp;<a href="{url op="moveReviewFormElement" d=u id=$reviewFormElement->getReviewFormElementId()}" class="action">&uarr;</a>&nbsp;<a href="{url op="moveReviewFormElement" d=d reviewFormElementId=$reviewFormElement->getReviewFormElementId()}" class="action">&darr;</a>
 		</td>
 	</tr>
-	<tr>
-		<td colspan="3" class="{if $reviewFormElements->eof()}end{/if}separator">&nbsp;</td>
-	</tr>
+  {if $reviewFormElements->eof()}
+    <tr><td class="endseparator" colspan="3"></td></tr>
+  {/if}
 {/iterate}
 
 {if $reviewFormElements->wasEmpty()}

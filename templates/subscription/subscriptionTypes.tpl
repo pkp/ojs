@@ -13,6 +13,11 @@
 {assign var="pageId" value="manager.subscriptionTypes"}
 {include file="common/header.tpl"}
 {/strip}
+<script type="text/javascript">
+{literal}
+$(document).ready(function() { setupTableDND("#subscriptionTypesTable", "moveSubscriptionType"); });
+{/literal}
+</script>
 
 <ul class="menu">
 	<li><a href="{url op="subscriptionsSummary"}">{translate key="manager.subscriptions.summary"}</a></li>
@@ -26,7 +31,7 @@
 <br />
 
 <div id="subscriptionTypes">
-<table width="100%" class="listing">
+<table width="100%" class="listing" id="subscriptionTypesTable">
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
@@ -41,14 +46,16 @@
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
 {iterate from=subscriptionTypes item=subscriptionType}
-	<tr valign="top">
-		<td>{$subscriptionType->getSubscriptionTypeName()|escape}</td>
-		<td>{if $subscriptionType->getInstitutional()}{translate key="manager.subscriptionTypes.institutional"}{else}{translate key="manager.subscriptionTypes.individual"}{/if}</td>
+	<tr valign="top" id="subtype-{$subscriptionType->getTypeId()}" class="data">
+		<td class="drag">{$subscriptionType->getSubscriptionTypeName()|escape}</td>
+		<td class="drag">{if $subscriptionType->getInstitutional()}{translate key="manager.subscriptionTypes.institutional"}{else}{translate key="manager.subscriptionTypes.individual"}{/if}</td>
 		<td>{$subscriptionType->getDurationYearsMonths()|escape}</td>
 		<td>{$subscriptionType->getCost()|string_format:"%.2f"}&nbsp;({$subscriptionType->getCurrencyStringShort()})</td>
-		<td><a href="{url op="moveSubscriptionType" path=$subscriptionType->getTypeId() dir=u}" class="action">&uarr;</a>&nbsp;<a href="{url op="moveSubscriptionType" path=$subscriptionType->getTypeId() dir=d}" class="action">&darr;</a>&nbsp;|&nbsp;<a href="{url op="editSubscriptionType" path=$subscriptionType->getTypeId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url op="deleteSubscriptionType" path=$subscriptionType->getTypeId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.subscriptionTypes.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
+		<td><a href="{url op="moveSubscriptionType" id=$subscriptionType->getTypeId() dir=u}" class="action">&uarr;</a>&nbsp;<a href="{url op="moveSubscriptionType" id=$subscriptionType->getTypeId() dir=d}" class="action">&darr;</a>&nbsp;|&nbsp;<a href="{url op="editSubscriptionType" path=$subscriptionType->getTypeId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url op="deleteSubscriptionType" path=$subscriptionType->getTypeId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.subscriptionTypes.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 	</tr>
-	<tr><td colspan="5" class="{if $subscriptionTypes->eof()}end{/if}separator">&nbsp;</td></tr>
+  {if $subscriptionTypes->eof()}
+  <tr><td colspan="5" class="endseparator">&nbsp;</td></tr>
+  {/if}
 {/iterate}
 {if $subscriptionTypes->wasEmpty()}
 	<tr>

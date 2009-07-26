@@ -402,15 +402,33 @@ class SubscriptionAction {
 	 * Rearrange the order of subscription types.
 	 */
 	function moveSubscriptionType($args) {
-		$subscriptionTypeId = isset($args[0])?$args[0]:0;
+		$subscriptionTypeId = Request::getUserVar('id');
 		$journal =& Request::getJournal();
 
 		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscriptionTypeId);
 
 		if ($subscriptionType && $subscriptionType->getJournalId() == $journal->getJournalId()) {
-			$isDown = Request::getUserVar('dir')=='d';
-			$subscriptionType->setSequence($subscriptionType->getSequence()+($isDown?1.5:-1.5));
+			$direction = Request::getUserVar('dir');
+
+			if ($direction != null) {
+				// moving with up or down arrow
+				$isDown = ($direction=='d');
+
+				$subscriptionType->setSequence($subscriptionType->getSequence()+($isDown?1.5:-1.5));
+			} else {
+				// Dragging and dropping onto another journal
+				$prevId = Request::getUserVar('prevId');
+				if ($prevId == null)
+					$prevSeq = 0;
+				else {
+					$prevSubscriptionType = $subscriptionTypeDao->getSubscriptionType($prevId);
+					$prevSeq = $prevSubscriptionType->getSequence();
+				}
+				
+				$subscriptionType->setSequence($prevSeq + .5);
+			}
+
 			$subscriptionTypeDao->updateSubscriptionType($subscriptionType);
 			$subscriptionTypeDao->resequenceSubscriptionTypes($subscriptionType->getJournalId());
 		}

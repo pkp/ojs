@@ -12,6 +12,15 @@
 {assign var="pageTitle" value="rt.searches"}
 {include file="common/header.tpl"}
 {/strip}
+<script type="text/javascript">
+{literal}
+$(document).ready(function() { setupTableDND("#dragTable", 
+{/literal}
+"{url op=moveSearch path=$version->getVersionId()|to_array:$context->getContextId()}"
+{literal}
+); });
+{/literal}
+</script>
 
 <ul class="menu">
 	<li><a href="{url op="editContext" path=$version->getVersionId()|to_array:$context->getContextId()}" class="action">{translate key="rt.admin.contexts.metadata"}</a></li>
@@ -22,7 +31,7 @@
 
 <div id="searches">
 
-<table class="listing" width="100%">
+<table class="listing" width="100%" id="dragTable">
 	<tr><td class="headseparator" colspan="3">&nbsp;</td></tr>
 	<tr valign="top">
 		<td class="heading" width="50%">{translate key="rt.search.title"}</td>
@@ -31,12 +40,14 @@
 	</tr>
 	<tr><td class="headseparator" colspan="3">&nbsp;</td></tr>
 	{iterate from=searches item=search}
-		<tr valign="top">
-			<td>{$search->getTitle()|escape}</td>
-			<td>{$search->getUrl()|truncate:30|escape}</td>
-			<td align="right"><a href="{url op="moveSearch" path=$version->getVersionId()|to_array:$context->getContextId():$search->getSearchId() dir=u}" class="action">&uarr;</a>&nbsp;<a href="{url op="moveSearch" path=$version->getVersionId()|to_array:$context->getContextId():$search->getSearchId() dir=d}" class="action">&darr;</a>&nbsp;|&nbsp;<a href="{url op="editSearch" path=$version->getVersionId()|to_array:$context->getContextId():$search->getSearchId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url op="deleteSearch" path=$version->getVersionId()|to_array:$context->getContextId():$search->getSearchId()}" onclick="return confirm('{translate|escape:"jsparam" key="rt.admin.searches.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
+		<tr valign="top" class="data" id=search-{$search->getSearchId()}>
+			<td class="drag">{$search->getTitle()|escape}</td>
+			<td class="drag">{$search->getUrl()|truncate:30|escape}</td>
+			<td align="right"><a href="{url op="moveSearch" path=$version->getVersionId()|to_array:$context->getContextId() id=$search->getSearchId() dir=u}" class="action">&uarr;</a>&nbsp;<a href="{url op="moveSearch" path=$version->getVersionId()|to_array:$context->getContextId() id=$search->getSearchId() dir=d}" class="action">&darr;</a>&nbsp;|&nbsp;<a href="{url op="editSearch" path=$version->getVersionId()|to_array:$context->getContextId():$search->getSearchId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url op="deleteSearch" path=$version->getVersionId()|to_array:$context->getContextId():$search->getSearchId()}" onclick="return confirm('{translate|escape:"jsparam" key="rt.admin.searches.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 		</tr>
-		<tr><td class="{if $searches->eof()}end{/if}separator" colspan="3"></td></tr>
+		{if $searches->eof()}
+		<tr><td class="endseparator" colspan="3"></td></tr>
+		{/if}
 	{/iterate}
 	{if $searches->wasEmpty()}
 		<tr valign="top">

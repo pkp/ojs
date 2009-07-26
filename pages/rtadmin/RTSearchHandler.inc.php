@@ -162,17 +162,37 @@ class RTSearchHandler extends RTAdminHandler {
 		$version =& $rtDao->getVersion($versionId, $journal->getJournalId());
 		$contextId = isset($args[1])?$args[1]:0;
 		$context =& $rtDao->getContext($contextId);
-		$searchId = isset($args[2])?$args[2]:0;
+		$searchId = Request::getUserVar('id');
 		$search =& $rtDao->getSearch($searchId);
 
 		if (isset($version) && isset($context) && isset($search) && $context->getVersionId() == $version->getVersionId() && $search->getContextId() == $context->getContextId()) {
-			$isDown = Request::getUserVar('dir')=='d';
-			$search->setOrder($search->getOrder()+($isDown?1.5:-1.5));
+			$direction = Request::getUserVar('dir');
+			if ($direction != null) {
+				// moving with up or down arrow
+				$isDown = $direction =='d';
+				$search->setOrder($search->getOrder()+($isDown?1.5:-1.5));
+			} else {
+				// drag and drop
+				$prevId = Request::getUserVar('prevId');
+				if ($prevId == null)
+					$prevSeq = 0;
+				else {
+					$prevSearch = $rtDao->getSearch($prevId);
+					$prevSeq = $prevSearch->getOrder();
+				}
+
+				$search->setOrder($prevSeq + .5);
+			}
 			$rtDao->updateSearch($search);
 			$rtDao->resequenceSearches($context->getContextId());
 		}
 
-		Request::redirect(null, null, 'searches', array($versionId, $contextId));
+		// Moving up or down with the arrows requires a page reload.
+		// In the case of a drag and drop move, the display has been
+		// updated on the client side, so no reload is necessary.
+		if ($direction != null) {
+			Request::redirect(null, null, 'searches', array($versionId, $contextId));
+		}
 	}
 }
 

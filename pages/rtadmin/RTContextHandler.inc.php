@@ -148,17 +148,37 @@ class RTContextHandler extends RTAdminHandler {
 		$journal = Request::getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
 		$version =& $rtDao->getVersion($versionId, $journal->getJournalId());
-		$contextId = isset($args[1])?$args[1]:0;
+		$contextId = Request::getUserVar('id');
 		$context =& $rtDao->getContext($contextId);
 
 		if (isset($version) && isset($context) && $context->getVersionId() == $version->getVersionId()) {
-			$isDown = Request::getUserVar('dir')=='d';
-			$context->setOrder($context->getOrder()+($isDown?1.5:-1.5));
+			$direction = Request::getUserVar('dir');
+			if ($direction != null) {
+				// moving with up or down arrow
+				$isDown = $direction =='d';
+				$context->setOrder($context->getOrder()+($isDown?1.5:-1.5));
+			} else {
+				// drag and drop
+				$prevId = Request::getUserVar('prevId');
+				if ($prevId == null)
+					$prevSeq = 0;
+				else {
+					$prevContext =& $rtDao->getContext($prevId);
+					$prevSeq = $prevContext->getOrder();
+				}
+
+				$context->setOrder($prevSeq + .5);
+			}
 			$rtDao->updateContext($context);
 			$rtDao->resequenceContexts($version->getVersionId());
 		}
 
-		Request::redirect(null, null, 'contexts', $versionId);
+		// Moving up or down with the arrows requires a page reload.
+		// In the case of a drag and drop move, the display has been
+		// updated on the client side, so no reload is necessary.
+		if ($direction != null) {
+			Request::redirect(null, null, 'contexts', $versionId);
+		}
 	}
 }
 
