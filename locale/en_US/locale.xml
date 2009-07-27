@@ -450,12 +450,9 @@ Authors who publish with this journal agree to the following terms:
 </ol>]]></message>
 	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Journal will use a subject classification system available on the web.<br />
 Title of classification system]]></message>
-	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[To have the contents of this journal indexed within a globally distributed system of research databases, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">register</a> your journal's URL with the Public Knowledge Project metadata <a href="http://pkp.sfu.ca/harvester/" target="_blank">harvester</a>. This tool collects the metadata from each indexed item in this journal, enabling accurate and collective searching among the research sites that adhere to the <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
+	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[To have the contents of this journal indexed within a globally distributed system of research databases, please read <a href="http://www.oaister.org/dataproviders.html" target="_blank">the steps to becoming a data contributor</a> and register your journal with the official <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Open Archives registry</a>.  To register, you will need the base URL for your repository: <span class="highlight">{$oaiUrl}</span>.  Afterwards, you can register your journal at the <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a> and <a href="http://www.oaister.org/" target="_blank">OAIster</a>.
 <br /><br />
-Note that if your site administrator has already registered this site with the PKP Harvester, your journal will be indexed automatically and you do not need to register your journal.
-<br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Click here</a> and enter <span class="highlight">{$siteUrl}</span> under <strong>Site URL</strong>, and <span class="highlight">{$oaiUrl}</span> under <strong>Base URL for OAI Archive</strong>.]]></message>
-
+Note that if your site administrator has already registered this site with these services, your journal will be indexed automatically and you do not need to register your journal.]]></message>
 	<message key="manager.setup.citations">Allow authors to separately provide a formatted list of references (citations) as part of their submission.</message>
 
 	<!-- Setup Step 4 -->

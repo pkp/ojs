@@ -291,9 +291,8 @@
 <div id="registerJournalForIndexing">
 <h3>3.5 {translate key="manager.setup.registerJournalForIndexing"}</h3>
 
-{url|assign:"oaiSiteUrl" journal=$currentJournal->getPath()}
 {url|assign:"oaiUrl" page="oai"}
-<p>{translate key="manager.setup.registerJournalForIndexingDescription" siteUrl=$oaiSiteUrl oaiUrl=$oaiUrl}</p>
+<p>{translate key="manager.setup.registerJournalForIndexingDescription" oaiUrl=$oaiUrl}</p>
 </div>
 
 <div class="separator"></div>
