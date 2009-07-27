@@ -84,6 +84,9 @@
 		<data file="dbscripts/xml/upgrade/2.2.1_preupdate.xml" />
 	</upgrade>
 
+	<!-- Create signoffs table before migration occurs -->
+	<schema file="lib/pkp/xml/schema/signoff.xml" />
+	
 	<upgrade minversion="2.0.0.0" maxversion="2.2.3.0">
 		<!-- 2.x to 2.3 -->
 		<data file="dbscripts/xml/upgrade/2.3.0_preupdate.xml" />
@@ -94,7 +97,6 @@
 	<schema file="lib/pkp/xml/schema/groups.xml" />
 	<schema file="lib/pkp/xml/schema/scheduledTasks.xml" />
 	<schema file="lib/pkp/xml/schema/temporaryFiles.xml" />
-	<schema file="lib/pkp/xml/schema/signoff.xml" />
 
 	<!-- OJS schema -->
 	<schema file="dbscripts/xml/ojs_schema.xml" />
@@ -153,9 +155,9 @@
 	</upgrade>
 
 	<upgrade minversion="2.0.0.0" maxversion="2.2.3.0">
+		<code function="separateSubscriptions" />
 		<data file="dbscripts/xml/upgrade/2.3.0_update.xml" />
 		<code function="localizeMoreJournalSettings" />
-		<code function="separateSubscriptions" />
 		<code function="cleanImageAlts" />
 		<code function="cleanTitles" />
 		<code function="addPluginVersions" />

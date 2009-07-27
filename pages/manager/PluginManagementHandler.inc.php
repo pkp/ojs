@@ -186,7 +186,7 @@ class PluginManagementHandler extends ManagerHandler {
 		$category = $this->getPluginCategory($plugin);
  
 		$versionDao =& DAORegistry::getDAO('VersionDAO'); 
-		$installedPlugin = $versionDao->getCurrentVersion($pluginName);
+		$installedPlugin = $versionDao->getCurrentVersion($pluginName, false, true);
 		
 		if(!$installedPlugin) {
 			$pluginDest = Core::getBaseDir() . DIRECTORY_SEPARATOR . 'plugins' . DIRECTORY_SEPARATOR . $category . DIRECTORY_SEPARATOR . $pluginName;
@@ -257,7 +257,7 @@ class PluginManagementHandler extends ManagerHandler {
 		$pluginType = explode(".", $pluginVersion->getProductType());
 		
 		$versionDao =& DAORegistry::getDAO('VersionDAO');
-		$installedPlugin = $versionDao->getCurrentVersion($pluginName);
+		$installedPlugin = $versionDao->getCurrentVersion($pluginName, false, true);
 		if(!$installedPlugin) {
 			$templateMgr->assign('message', 'manager.plugins.pleaseInstall');
 			return false;
@@ -316,7 +316,7 @@ class PluginManagementHandler extends ManagerHandler {
 		$templateMgr->assign('pageHierarchy', $this->setBreadcrumbs(true));
 
 		$versionDao =& DAORegistry::getDAO('VersionDAO'); 
-		$installedPlugin = $versionDao->getCurrentVersion($plugin);
+		$installedPlugin = $versionDao->getCurrentVersion($plugin, false, true);
 		$category = $this->getPluginCategory($plugin);
 
 		if ($installedPlugin) {
@@ -353,7 +353,7 @@ class PluginManagementHandler extends ManagerHandler {
 	 */
 	function checkIfNewer($pluginName, $newVersion) {
 		$versionDao =& DAORegistry::getDAO('VersionDAO');
-		$installedPlugin = $versionDao->getCurrentVersion($pluginName);
+		$installedPlugin = $versionDao->getCurrentVersion($pluginName, false, true);
 
 		if (!$installedPlugin) return false;
 		if ($installedPlugin->compare($newVersion) > 0) return true;
@@ -406,8 +406,7 @@ class PluginManagementHandler extends ManagerHandler {
 	 */
 	function getPluginCategory($plugin) {
 		$versionDao =& DAORegistry::getDAO('VersionDAO'); 
-		$installedPlugin = $versionDao->getCurrentVersion($plugin);
-		
+		$installedPlugin = $versionDao->getCurrentVersion($plugin, false, true);
 		$pluginType = explode(".", $installedPlugin->getProductType());
 		
 		return $pluginType[1];
