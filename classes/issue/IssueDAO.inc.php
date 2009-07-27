@@ -235,18 +235,18 @@ class IssueDAO extends DAO {
 				(?, ?, ?, ?, ?, ?, %s, %s, ?, %s, ?, ?, ?, ?, ?, ?, ?)',
 				$this->datetimeToDB($issue->getDatePublished()), $this->datetimeToDB($issue->getDateNotified()), $this->datetimeToDB($issue->getOpenAccessDate())),
 			array(
-				$issue->getJournalId(),
+				(int) $issue->getJournalId(),
 				$issue->getVolume(),
 				$issue->getNumber(),
 				$issue->getYear(),
 				$issue->getPublished(),
 				$issue->getCurrent(),
-				$issue->getAccessStatus(),
+				(int) $issue->getAccessStatus(),
 				$issue->getPublicIssueId(),
-				$issue->getShowVolume(),
-				$issue->getShowNumber(),
-				$issue->getShowYear(),
-				$issue->getShowTitle(),
+				(int) $issue->getShowVolume(),
+				(int) $issue->getShowNumber(),
+				(int) $issue->getShowYear(),
+				(int) $issue->getShowTitle(),
 				$issue->getStyleFileName(),
 				$issue->getOriginalStyleFileName()
 			)
@@ -320,21 +320,21 @@ class IssueDAO extends DAO {
 				WHERE issue_id = ?',
 			$this->datetimeToDB($issue->getDatePublished()), $this->datetimeToDB($issue->getDateNotified()), $this->datetimeToDB($issue->getOpenAccessDate())),
 			array(
-				$issue->getJournalId(),
+				(int) $issue->getJournalId(),
 				$issue->getVolume(),
 				$issue->getNumber(),
 				$issue->getYear(),
-				$issue->getPublished(),
-				$issue->getCurrent(),
+				(int) $issue->getPublished(),
+				(int) $issue->getCurrent(),
 				$issue->getPublicIssueId(),
-				$issue->getAccessStatus(),
-				$issue->getShowVolume(),
-				$issue->getShowNumber(),
-				$issue->getShowYear(),
-				$issue->getShowTitle(),
+				(int) $issue->getAccessStatus(),
+				(int) $issue->getShowVolume(),
+				(int) $issue->getShowNumber(),
+				(int) $issue->getShowYear(),
+				(int) $issue->getShowTitle(),
 				$issue->getStyleFileName(),
 				$issue->getOriginalStyleFileName(),
-				$issue->getIssueId()
+				(int) $issue->getIssueId()
 			)
 		);
 
