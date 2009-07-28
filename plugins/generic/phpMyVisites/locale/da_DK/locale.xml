@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * phpMyVisites plugin localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+
+	<!-- phpMyVisites -->
+	<message key="plugins.generic.phpmv.displayName">phpMyVisites Plugin</message>
+	<message key="plugins.generic.phpmv.description"><![CDATA[Integrer OJS med phpMyVisites, en gratis og open source web site trafik-analyse applikation. Kræver at phpMyVisites er installeret. Se <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">phpMyVisites site</a> for mere information.]]></message>
+
+	<!-- phpMyVisites Settings Management -->
+	<message key="plugins.generic.phpmv.manager.settings">Indstillinger</message>
+	<message key="plugins.generic.phpmv.manager.phpmvSettings">phpMyVisites indstillinger</message>
+	<message key="plugins.generic.phpmv.manager.settings.description"><![CDATA[<p>Med dette plugin aktiveret kan phpMyVisites bruges til at samle og analysere brugen af web sitet og trafikken på dette tidsskrift. Vær opmærksom på, at dette plugin kræver, at phpMyVisites er installeret. Se <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">phpMyVisites site</a> for mere information.</p>]]></message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvUrl">phpMyVisites Url</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvUrlInstructions">Den fulde url til din phpMyVisites installation (dvs. http://minserver.net/phpmv).</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvUrlRequired">Indtast en gyldig url. Begynd med http://.</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteId">Site profil-nummer</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdInstructions"><![CDATA[Klik på Administration->Modificer site i phpMyVisites. Site profil-nummeret vises ved siden af dit site profil-navn.]]></message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdRequired">Indtast et gyldigt site profil-nummer.</message>
+
+</locale>
