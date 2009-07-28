@@ -895,17 +895,17 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   <message key="manager.setup.loggingAndAuditing">ログ出力と監査</message>
   <message key="manager.setup.journalArchiving">雑誌のアーカイビング</message>
   <message key="manager.setup.lockssDescription">
-    <![CDATA[オープン･ジャーナル･システムは、雑誌の安全で永続的なアーカイブを保証する<a href="http://lockss.stanford.edu/" target="_blank">LOCKSS</a>（Lots of Copies Keep Stuff Safe）システムをサポートしています。LOCKSSはスタンフォード大学図書館で開発されたオープンソースのソフトウェアです。あらかじめ選択･登録したWeb雑誌で新たに公開されたコンテンツを定期的にチェックしてアーカイブすることにより、雑誌の保存を可能にします。各アーカイブは常に他の図書館のキャッシュと比較され、コンテンツの破損や不足が見つかった場合は、他のキャッシュや雑誌を使ってそれを修復します。<br /><br />
+    <![CDATA[オープン･ジャーナル･システムは、雑誌の安全で永続的なアーカイブを保証する<a href="http://lockss.org/" target="_blank">LOCKSS</a>（Lots of Copies Keep Stuff Safe）システムをサポートしています。LOCKSSはスタンフォード大学図書館で開発されたオープンソースのソフトウェアです。あらかじめ選択･登録したWeb雑誌で新たに公開されたコンテンツを定期的にチェックしてアーカイブすることにより、雑誌の保存を可能にします。各アーカイブは常に他の図書館のキャッシュと比較され、コンテンツの破損や不足が見つかった場合は、他のキャッシュや雑誌を使ってそれを修復します。<br /><br />
 オープン･ジャーナル･システムにおけるLOCKSSサポートの設定は、出版が完全に軌道に乗るまでは行う必要がありませんが、設定は次の2段階で行います。]]>
   </message>
   <message key="manager.setup.lockssRegister">
-    <![CDATA[雑誌を登録･キャッシュする図書館を6館から10館見つけます。例えば、編集者や雑誌委員会委員が勤務する機関や既にLOCKSSに参加している機関に問い合わせてください。<a href="http://lockss.stanford.edu/about/users.htm" target="_blank">参加図書館はここ</a>を参照してください。あらかじめ用意されている(1) <a href="{$lockssExistingArchiveUrl}" target="_blank">LOCKSS参加図書館向け</a>、または、(2) <a href="{$lockssNewArchiveUrl}" target="_blank">LOCKSS未参加図書館向け</a>の招待状を使用してください。]]>
+    <![CDATA[雑誌を登録･キャッシュする図書館を6館から10館見つけます。例えば、編集者や雑誌委員会委員が勤務する機関や既にLOCKSSに参加している機関に問い合わせてください。<a href="http://lockss.org/lockss/Libraries" target="_blank">参加図書館はここ</a>を参照してください。あらかじめ用意されている(1) <a href="{$lockssExistingArchiveUrl}" target="_blank">LOCKSS参加図書館向け</a>、または、(2) <a href="{$lockssNewArchiveUrl}" target="_blank">LOCKSS未参加図書館向け</a>の招待状を使用してください。]]>
   </message>
   <message key="manager.setup.lockssEnable">
     <![CDATA[LOCKSSを有効にする。LOCKSSの<a href="{$lockssUrl}" target="_blank">出版者マニュフェスト</a>ページを通じてLOCKSSを有効にし、参加図書館にある雑誌コンテンツを保管・配布します。LOCKSSライセンスはアーカイブの「この雑誌について」ページに表示されます。]]>
   </message>
   <message key="manager.setup.lockssLicenses">
-    <![CDATA[<a href="http://lockss.stanford.edu/publishers/publishers.htm" target="_blank">LOCKSSライセンスのその他のバージョンはここ</a>を参照してください。]]>
+    <![CDATA[<a href="http://lockss.org/lockss/Publishers_and_Titles" target="_blank">LOCKSSライセンスのその他のバージョンはここ</a>を参照してください。]]>
   </message>
   <!-- Setup Step 3 -->
   <message key="manager.setup.guidingSubmissions">ステップ 3. 投稿の手引き</message>
@@ -2486,7 +2486,7 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
     <![CDATA[研究図書館員の方には、この雑誌を電子ジャーナルリストに追加することをお薦めします。また、所属の教官が編集委員をしている雑誌を運用する図書館が使用するシステムとして、この雑誌が使用しているオープンソースの出版システムがふさわしいことも注目に値するでしょう（<a href="http://pkp.sfu.ca/ojs">オープン･ジャーナル･システム</a>のホームページをご参照ください）。]]>
   </message>
   <message key="default.journalSettings.lockssLicense">
-    <![CDATA[この雑誌は、参加図書館による分散型アーカイブシステムを構築するLOCKSSシステムを使用しています。このシステムの参加図書館が保存および障害復旧の目的でこの雑誌の恒久的アーカイブを作成することを許可します。<a href="http://lockss.stanford.edu/">さらなる情報</a>はここを参照してください。]]>
+    <![CDATA[この雑誌は、参加図書館による分散型アーカイブシステムを構築するLOCKSSシステムを使用しています。このシステムの参加図書館が保存および障害復旧の目的でこの雑誌の恒久的アーカイブを作成することを許可します。<a href="http://lockss.org/">さらなる情報</a>はここを参照してください。]]>
   </message>
 	<message key="common.add">追加</message>
 	<message key="common.discipline">分野</message>
