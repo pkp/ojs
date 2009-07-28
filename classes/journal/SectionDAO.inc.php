@@ -194,7 +194,7 @@ class SectionDAO extends DAO {
 				$section->getHideAuthor() ? 1 : 0,
 				$section->getHideAbout() ? 1 : 0,
 				$section->getDisableComments() ? 1 : 0,
-				$section->getAbstractWordCount()
+				(int) $section->getAbstractWordCount()
 			)
 		);
 
