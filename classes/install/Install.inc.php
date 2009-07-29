@@ -69,6 +69,13 @@ class Install extends PKPInstall {
 			$this->executeSQL(sprintf('INSERT INTO users (username, first_name, last_name, password, email, date_registered, date_last_login) VALUES (\'%s\', \'%s\', \'%s\', \'%s\', \'%s\', \'%s\', \'%s\')', $this->getParam('adminUsername'), $this->getParam('adminUsername'), $this->getParam('adminUsername'), Validation::encryptCredentials($this->getParam('adminUsername'), $this->getParam('adminPassword'), $this->getParam('encryption')), $this->getParam('adminEmail'), Core::getCurrentDate(), Core::getCurrentDate()));
 			$this->executeSQL(sprintf('INSERT INTO roles (journal_id, user_id, role_id) VALUES (%d, (SELECT user_id FROM users WHERE username = \'%s\'), %d)', 0, $this->getParam('adminUsername'), ROLE_ID_SITE_ADMIN));
 
+			// Install email template list and data for each locale
+			$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
+			$this->executeSQL($emailTemplateDao->installEmailTemplates($emailTemplateDao->getMainEmailTemplatesFilename(), true));
+			foreach ($this->installedLocales as $locale) {
+				$this->executeSQL($emailTemplateDao->installEmailTemplateData($emailTemplateDao->getMainEmailTemplateDataFilename($locale), true));
+			}
+
 		} else {
 			// Add initial site data
 			$locale = $this->getParam('locale');
@@ -111,7 +118,14 @@ class Install extends PKPInstall {
 				$this->setError(INSTALLER_ERROR_DB, $this->dbconn->errorMsg());
 				return false;
 			}
-			
+
+			// Install email template list and data for each locale
+			$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
+			$emailTemplateDao->installEmailTemplates($emailTemplateDao->getMainEmailTemplatesFilename());
+			foreach ($this->installedLocales as $locale) {
+				$emailTemplateDao->installEmailTemplateData($emailTemplateDao->getMainEmailTemplateDataFilename($locale));
+			}
+
 			// Add initial plugin data to versions table
 			$versionDao =& DAORegistry::getDAO('VersionDAO'); 
 			import('site.VersionCheck');
@@ -130,7 +144,6 @@ class Install extends PKPInstall {
 					} 
 				}
 			}
-			
 		}
 
 		return true;

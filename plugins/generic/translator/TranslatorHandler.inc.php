@@ -107,8 +107,8 @@ class TranslatorHandler extends Handler {
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('locale', $locale);
-		$templateMgr->assign('errors', Locale::testLocale($locale, MASTER_LOCALE));
-		$templateMgr->assign('emailErrors', Locale::testEmails($locale, MASTER_LOCALE));
+		$templateMgr->assign('errors', TranslatorAction::testLocale($locale, MASTER_LOCALE));
+		$templateMgr->assign('emailErrors', TranslatorAction::testEmails($locale, MASTER_LOCALE));
 		$templateMgr->assign('localeFiles', TranslatorAction::getLocaleFiles($locale));
 		if(!empty($unwriteableFiles)) {
 			$templateMgr->assign('error', true);
@@ -442,15 +442,43 @@ class TranslatorHandler extends Handler {
 		$emails = TranslatorAction::getEmailTemplates($locale);
 		$referenceEmails = TranslatorAction::getEmailTemplates(MASTER_LOCALE);
 		$emailKey = array_shift($args);
+		$targetFilename = str_replace(MASTER_LOCALE, $locale, $referenceEmails[$emailKey]['templateDataFile']); // FIXME: Ugly.
 
-		if (!in_array($emailKey, array_keys($referenceEmails)) && !in_array($emailKey, array_keys($emails))) Request::redirect(null, null, 'index');
+		if (!in_array($emailKey, array_keys($emails))) {
+			// If it's not a reference or translation email, bail.
+			if (!in_array($emailKey, array_keys($referenceEmails))) Request::redirect(null, null, 'index');
+
+			// If it's a reference email but not a translated one,
+			// create a blank file. FIXME: This is ugly.
+			if (!file_exists($targetFilename)) {
+				$dir = dirname($targetFilename);
+				if (!file_exists($dir)) mkdir($dir);
+				file_put_contents($targetFilename, '<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * emailTemplateData.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  *
+  * $Id$
+  -->
+<email_texts locale="' . $locale . '">
+</email_texts>');
+			}
+		}
 
 		import('file.EditableEmailFile');
-		$file = new EditableEmailFile($locale, Locale::getEmailTemplateFilename($locale));
+		$file = new EditableEmailFile($locale, $targetFilename);
 
 		$subject = $this->correctCr(Request::getUserVar('subject'));
 		$body = $this->correctCr(Request::getUserVar('body'));
 		$description = $this->correctCr(Request::getUserVar('description'));
+
+		if (!$file->exists()) {
+		}
 
 		if (!$file->update($emailKey, $subject, $body, $description))
 			$file->insert($emailKey, $subject, $body, $description);
@@ -464,4 +492,5 @@ class TranslatorHandler extends Handler {
 		return str_replace("\r\n", "\n", $value);
 	}
 }
+
 ?>

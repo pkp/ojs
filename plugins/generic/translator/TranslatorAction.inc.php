@@ -27,7 +27,10 @@ class TranslatorAction {
 		$command = TAR_COMMAND;
 		$localeFilesList = TranslatorAction::getLocaleFiles($locale);
 		$localeFilesList = array_merge($localeFilesList, TranslatorAction::getMiscLocaleFiles($locale));
-		$localeFilesList[] = Locale::getEmailTemplateFilename($locale);
+		$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
+		$localeFilesList[] = $emailTemplateDao->getMainEmailTemplateDataFilename($locale);
+		foreach (array_values(TranslatorAction::getEmailFileMap($locale)) as $emailFile) {
+		}
 
 		// Include locale files (main file and plugin files)
 		foreach ($localeFilesList as $file) {
@@ -63,18 +66,41 @@ class TranslatorAction {
 		);
 	}
 
+	function getEmailFileMap($locale) {
+		$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
+		$files = array($emailTemplateDao->getMainEmailTemplatesFilename() => $emailTemplateDao->getMainEmailTemplateDataFilename($locale));
+		$categories = PluginRegistry::getCategories();
+		foreach ($categories as $category) {
+			$plugins =& PluginRegistry::loadCategory($category, true);
+			foreach (array_keys($plugins) as $name) {
+				$plugin =& $plugins[$name];
+				$templatesFile = $plugin->getInstallEmailTemplatesFile();
+				if ($templatesFile) {
+					$files[$templatesFile] = str_replace('{$installedLocale}', $locale, $plugin->getInstallEmailTemplateDataFile());
+				}
+				unset($plugin);
+			}
+			unset($plugins);
+		}
+		return $files;
+	}
+
 	function getEmailTemplates($locale) {
-		$xmlParser = new XMLParser();
-		$emails = $xmlParser->parse(Locale::getEmailTemplateFilename($locale));
-		$emailsTable =& $emails->getChildByName('table');
-
+		$files = TranslatorAction::getEmailFileMap($locale);
 		$returner = array();
-
-		for ($emailIndex = 0; ($email =& $emailsTable->getChildByName('row', $emailIndex)) !== null; $emailIndex++) {
-			$fields = Locale::extractFields($email);
-			$returner[$fields['email_key']]['subject'] = $fields['subject'];
-			$returner[$fields['email_key']]['body'] = $fields['body'];
-			$returner[$fields['email_key']]['description'] = isset($fields['description'])?$fields['description']:'';
+		foreach ($files as $templateFile => $templateDataFile) {
+			$xmlParser = new XMLParser();
+			$data =& $xmlParser->parse($templateDataFile, array('email'));
+			if ($data) foreach ($data->getChildren() as $emailNode) {
+				$returner[$emailNode->getAttribute('key')] = array(
+					'subject' => $emailNode->getChildValue('subject'),
+					'body' => $emailNode->getChildValue('body'),
+					'description' => $emailNode->getChildValue('description'),
+					'templateFile' => $templateFile,
+					'templateDataFile' => $templateDataFile
+				);
+			}
+			unset($xmlParser, $data);
 		}
 		return $returner;
 	}
@@ -82,7 +108,8 @@ class TranslatorAction {
 	function isLocaleFile($locale, $filename) {
 		if (in_array($filename, TranslatorAction::getLocaleFiles($locale))) return true;
 		if (in_array($filename, TranslatorAction::getMiscLocaleFiles($locale))) return true;
-		if ($filename == Locale::getEmailTemplateFilename($locale)) return true;
+		$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
+		if ($filename == $emailTemplateDao->getMainEmailTemplateDataFilename($locale)) return true;
 		return false;
 	}
 
@@ -90,5 +117,109 @@ class TranslatorAction {
 		// FIXME: This is ugly.
 		return str_replace($locale, MASTER_LOCALE, $filename);
 	}
+
+	/**
+	 * Test all locale files for the supplied locale against the supplied
+	 * reference locale, returning an array of errors.
+	 * @param $locale string Name of locale to test
+	 * @param $referenceLocale string Name of locale to test against
+	 * @return array
+	 */
+	function testLocale($locale, $referenceLocale) {
+		$localeFileNames = Locale::getFilenameComponentMap($locale);
+
+		$errors = array();
+		foreach ($localeFileNames as $localeFileName) {
+			$referenceLocaleFileName = str_replace($locale, $referenceLocale, $localeFileName);
+			$localeFile = new LocaleFile($locale, $localeFileName);
+			$referenceLocaleFile = new LocaleFile($referenceLocale, $referenceLocaleFileName);
+			$errors = array_merge_recursive($errors, $localeFile->testLocale($referenceLocaleFile));
+			unset($localeFile);
+			unset($referenceLocaleFile);
+		}
+
+		$plugins =& PluginRegistry::loadAllPlugins();
+		foreach (array_keys($plugins) as $key) {
+			$plugin =& $plugins[$key];
+			$referenceLocaleFilename = $plugin->getLocaleFilename($referenceLocale);
+			if ($referenceLocaleFilename) {
+				$localeFile = new LocaleFile($locale, $plugin->getLocaleFilename($locale));
+				$referenceLocaleFile = new LocaleFile($referenceLocale, $referenceLocaleFilename);
+				$errors = array_merge_recursive($errors, $localeFile->testLocale($referenceLocaleFile));
+				unset($localeFile);
+				unset($referenceLocaleFile);
+			}
+			unset($plugin);
+		}
+		return $errors;
+	}
+
+	/**
+	 * Test the emails in the supplied locale against those in the supplied
+	 * reference locale.
+	 * @param $locale string
+	 * @param $referenceLocale string
+	 * @return array List of errors
+	 */
+	function testEmails($locale, $referenceLocale) {
+		$errors = array(
+		);
+
+		$emails = TranslatorAction::getEmailTemplates($locale);
+		$referenceEmails = TranslatorAction::getEmailTemplates($referenceLocale);
+
+		// Pass 1: For all translated emails, check that they match
+		// against reference translations.
+		foreach ($emails as $emailKey => $email) {
+			// Check if a matching reference email was found.
+			if (!isset($referenceEmails[$emailKey])) {
+				$errors[EMAIL_ERROR_EXTRA_EMAIL][] = array(
+					'key' => $emailKey
+				);
+				continue;
+			}
+
+			// We've successfully found a matching reference email.
+			// Compare it against the translation.
+			$bodyParams = Locale::getParameterNames($email['body']);
+			$referenceBodyParams = Locale::getParameterNames($referencEmails[$emailKey]['body']);
+			$diff = array_diff($bodyParams, $referenceBodyParams);
+			if (!empty($diff)) {
+				$errors[EMAIL_ERROR_DIFFERING_PARAMS][] = array(
+					'key' => $emailKey,
+					'mismatch' => $diff
+				);
+			}
+
+			$subjectParams = Locale::getParameterNames($email['subject']);
+			$referenceSubjectParams = Locale::getParameterNames($referenceEmails[$emailKey]['subject']);
+
+			$diff = array_diff($subjectParams, $referenceSubjectParams);
+			if (!empty($diff)) {
+				$errors[EMAIL_ERROR_DIFFERING_PARAMS][] = array(
+					'key' => $emailKey,
+					'mismatch' => $diff
+				);
+			}
+
+			$matchedReferenceEmails[] = $emailKey;
+
+			unset($email);
+			unset($referenceEmail);
+		}
+
+		// Pass 2: Make sure that there are no missing translations.
+		foreach ($referenceEmails as $emailKey => $email) {
+			// Extract the fields from the email to be tested.
+			if (!isset($emails[$emailKey])) {
+				$errors[EMAIL_ERROR_MISSING_EMAIL][] = array(
+					'key' => $emailKey
+				);
+			}
+		}
+
+		return $errors;
+	}
 }
+
 ?>

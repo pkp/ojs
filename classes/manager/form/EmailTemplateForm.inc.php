@@ -117,7 +117,8 @@ class EmailTemplateForm extends Form {
 
 		}
 
-		$emailTemplate->setJournalId($journal->getJournalId());
+		$emailTemplate->setAssocType(ASSOC_TYPE_JOURNAL);
+		$emailTemplate->setAssocId($journal->getJournalId());
 
 		$supportedLocales = $journal->getSupportedLocaleNames();
 		if (!empty($supportedLocales)) {

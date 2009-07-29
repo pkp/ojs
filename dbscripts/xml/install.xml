@@ -27,8 +27,6 @@
 	<schema file="dbscripts/xml/ojs_schema.xml" />
 
 	<!-- Other install tasks -->
-	<data file="dbscripts/xml/data/email_templates.xml"/>
-	<data file="dbscripts/xml/data/locale/{$installedLocale}/email_templates_data.xml"/>
 	<code function="createData"/>
 	<code function="createConfig"/>
 </install>

@@ -17,6 +17,12 @@
 		<rename table="groups" column="journal_id" to="assoc_id" />
 	</sql>
 
+	<!-- Bug #4153: abstract email templates -->
+	<sql>
+		<rename table="email_templates" column="journal_id" to="assoc_id" />
+		<rename table="email_templates_data" column="journal_id" to="assoc_id" />
+	</sql>
+
 	<!-- Bug #3916: Separate out individual and institutional subscriptions.
 	     Create temp tables to enable data migration to new tables. -->
 	<sql>

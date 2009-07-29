@@ -29,6 +29,12 @@
 		<query>UPDATE groups SET assoc_type = 256</query><!-- ASSOC_TYPE_JOURNAL -->
 	</sql>
 
+	<!-- Bug #4153: abstract email templates -->
+	<sql>
+		<query>UPDATE email_templates SET assoc_type = 256</query><!-- ASSOC_TYPE_JOURNAL -->
+		<query>UPDATE email_templates_data SET assoc_type = 256</query><!-- ASSOC_TYPE_JOURNAL -->
+	</sql>
+
 	<!-- Bug #3694: abstract user settings -->
 	<sql>
 		<query>UPDATE user_settings SET assoc_type = 256</query><!-- ASSOC_TYPE_JOURNAL -->
