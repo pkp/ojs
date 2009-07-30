@@ -34,7 +34,7 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 			$result =& $this->retrieve(
 				'SELECT x.*, x.galley_type AS file_type, 
 				g.file_id, g.html_galley, g.style_file_id, g.seq,
-				a.file_name, a.original_file_name, a.file_size, a.status, a.date_uploaded, a.date_modified
+				a.file_name, a.original_file_name, a.file_type, a.file_size, a.date_uploaded, a.date_modified
 				FROM article_xml_galleys x
 				LEFT JOIN article_galleys g ON (x.galley_id = g.galley_id)
 				LEFT JOIN article_files a ON (g.file_id = a.file_id)
@@ -46,7 +46,7 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 			$result =& $this->retrieve(
 				'SELECT x.*, x.galley_type AS file_type, 
 				g.file_id, g.html_galley, g.style_file_id, g.seq,
-				a.file_name, a.original_file_name, a.file_size, a.status, a.date_uploaded, a.date_modified
+				a.file_name, a.original_file_name, a.file_type, a.file_size, a.date_uploaded, a.date_modified
 				FROM article_xml_galleys x
 				LEFT JOIN article_galleys g ON (x.galley_id = g.galley_id)
 				LEFT JOIN article_files a ON (g.file_id = a.file_id)
