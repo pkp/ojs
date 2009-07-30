@@ -73,11 +73,12 @@ class ThesisPlugin extends GenericPlugin {
 		return $this->getPluginPath() . '/' . 'schema.xml';
 	}
 
-	/**
-	 * Get the filename of the install data for this plugin.
-	 */
-	function getInstallDataFile() {
-		return $this->getPluginPath() . '/' . 'data.xml';
+	function getInstallEmailTemplatesFile() {
+		return ($this->getPluginPath() . DIRECTORY_SEPARATOR . 'emailTemplates.xml');
+	}
+
+	function getInstallEmailTemplateDataFile() {
+		return ($this->getPluginPath() . '/locale/{$installedLocale}/emailTemplates.xml');
 	}
 
 	/**

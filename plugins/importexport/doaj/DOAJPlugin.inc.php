@@ -59,14 +59,13 @@ class DOAJPlugin extends ImportExportPlugin {
 		return Locale::translate('plugins.importexport.doaj.description');
 	}
 
-	/**
-	 * Get the filename for the data file to be installed with this plugin
-	 * @return string
-	 */
-	function getInstallDataFile() {
-		return $this->getPluginPath() . '/' . 'data.xml';
+	function getInstallEmailTemplatesFile() {
+		return ($this->getPluginPath() . DIRECTORY_SEPARATOR . 'emailTemplates.xml');
 	}
 
+	function getInstallEmailTemplateDataFile() {
+		return ($this->getPluginPath() . '/locale/{$installedLocale}/emailTemplates.xml');
+	}
 	/**
 	 * Display the plugin
 	 * @param $args array

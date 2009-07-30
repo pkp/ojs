@@ -477,9 +477,6 @@ class TranslatorHandler extends Handler {
 		$body = $this->correctCr(Request::getUserVar('body'));
 		$description = $this->correctCr(Request::getUserVar('description'));
 
-		if (!$file->exists()) {
-		}
-
 		if (!$file->update($emailKey, $subject, $body, $description))
 			$file->insert($emailKey, $subject, $body, $description);
 
