@@ -1571,10 +1571,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
  		$galleyForm =& new ArticleGalleyForm($articleId);
 		$galleyId = $galleyForm->execute($fileName);
 
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
- 		$galleyForm =& new ArticleGalleyForm($articleId);
-		$galleyId = $galleyForm->execute($fileName);
-
 		Request::redirect(null, null, 'editGalley', array($articleId, $galleyId));
 	}
 
