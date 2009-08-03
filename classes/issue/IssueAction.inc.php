@@ -63,8 +63,8 @@ class IssueAction {
 
 		$result = $journal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION &&
 			$issue->getAccessStatus() != ISSUE_ACCESS_OPEN &&
-			$issue->getOpenAccessDate() &&
-			strtotime($issue->getOpenAccessDate()) > time();
+			(is_null($issue->getOpenAccessDate()) ||
+			strtotime($issue->getOpenAccessDate()) > time());
 
 		HookRegistry::call('IssueAction::subscriptionRequired', array(&$journal, &$issue, &$result));
 		return $result;
