@@ -74,7 +74,7 @@ class SitemapHandler extends Handler {
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 		
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		$journalId = $journal->getJournalId();
 		
 		$doc =& XMLCustomWriter::createDocument('', null);
@@ -98,7 +98,7 @@ class SitemapHandler extends Handler {
 		XMLCustomWriter::appendChild($root, SitemapHandler::createUrlTree($doc, Request::url($journal->getPath(), 'issue', 'current')));
 		XMLCustomWriter::appendChild($root, SitemapHandler::createUrlTree($doc, Request::url($journal->getPath(), 'issue', 'archive')));
 		$publishedIssues =& $issueDao->getPublishedIssues($journalId);
-		while ($issue = &$publishedIssues->next()) {
+		while ($issue =& $publishedIssues->next()) {
 			XMLCustomWriter::appendChild($root, SitemapHandler::createUrlTree($doc, Request::url($journal->getPath(), 'issue', 'view', $issue->getIssueId())));
 			// Articles for issue
 			$articles = $publishedArticleDao->getPublishedArticles($issue->getIssueId());

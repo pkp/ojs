@@ -49,7 +49,7 @@ class StaticPagesSettingsForm extends Form {
 
 		$staticPagesDAO =& DAORegistry::getDAO('StaticPagesDAO');
 
-		$rangeInfo = &Handler::getRangeInfo('staticPages');		
+		$rangeInfo =& Handler::getRangeInfo('staticPages');		
 		$staticPages = $staticPagesDAO->getStaticPagesByJournalId($journalId);
 		$this->setData('staticPages', $staticPages);	
 	}

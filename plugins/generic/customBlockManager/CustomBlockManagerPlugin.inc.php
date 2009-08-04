@@ -84,7 +84,7 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 	 * Determine whether or not this plugin is enabled.
 	 */
 	function getEnabled() {
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		if (!$journal) return false;
 		return $this->getSetting($journal->getJournalId(), 'enabled');
 	}
@@ -93,7 +93,7 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 	 * Set the enabled/disabled state of this plugin
 	 */
 	function setEnabled($enabled) {
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		if ($journal) {
 			$this->updateSetting($journal->getJournalId(), 'enabled', $enabled ? true : false);
 			return true;
@@ -130,7 +130,7 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 	function manage($verb, $args) {
 		$returner = true;
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 
 		$pageCrumbs = array(

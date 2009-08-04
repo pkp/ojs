@@ -383,7 +383,7 @@ class SubscriptionTypeDAO extends DAO {
 	function &getSubscriptionTypesByInstitutional($journalId, $institutional = false, $rangeInfo = null) {
 		if ($institutional) $institutional = 1; else $institutional = 0;
 
-		$result = &$this->retrieveRange(
+		$result =& $this->retrieveRange(
 			'SELECT *
 			FROM
 			subscription_types
@@ -410,7 +410,7 @@ class SubscriptionTypeDAO extends DAO {
 	function subscriptionTypesExistByInstitutional($journalId, $institutional = false) {
 		if ($institutional) $institutional = 1; else $institutional = 0;
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT COUNT(*)
 			FROM
 			subscription_types st

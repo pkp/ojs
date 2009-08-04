@@ -23,12 +23,12 @@ class StaticPagesHandler extends Handler {
 	function view ($args) {
 		if (count($args) > 0 ) {
 			Locale::requireComponents(array(LOCALE_COMPONENT_PKP_COMMON, LOCALE_COMPONENT_APPLICATION_COMMON));			
-			$journal = &Request::getJournal();
+			$journal =& Request::getJournal();
 			$journalId = $journal->getJournalId();
 			$path = $args[0];
 
-			$staticPagesPlugin = &PluginRegistry::getPlugin('generic', 'StaticPagesPlugin');
-			$templateMgr = &TemplateManager::getManager();
+			$staticPagesPlugin =& PluginRegistry::getPlugin('generic', 'StaticPagesPlugin');
+			$templateMgr =& TemplateManager::getManager();
 
 			$staticPagesDAO =& DAORegistry::getDAO('StaticPagesDAO');
 			$staticPage = $staticPagesDAO->getStaticPageByPath($journalId, $path);

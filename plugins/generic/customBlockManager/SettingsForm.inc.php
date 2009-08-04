@@ -43,7 +43,7 @@ class SettingsForm extends Form {
 		$journalId = $this->journalId;
 		$plugin =& $this->plugin;
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 
 		$blocks = $plugin->getSetting($journalId, 'blocks');
 		

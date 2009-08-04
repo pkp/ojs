@@ -29,7 +29,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * @return InstitutionalSubscription
 	 */
 	function &getSubscription($subscriptionId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT s.*, iss.*
 			FROM
 			subscriptions s,
@@ -44,7 +44,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnSubscriptionFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnSubscriptionFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -59,7 +59,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * @return object DAOResultFactory containing matching InstitutionalSubscriptions
 	 */
 	function &getSubscriptionsByUser($userId, $rangeInfo = null) {
-		$result = &$this->retrieveRange(
+		$result =& $this->retrieveRange(
 			'SELECT s.*, iss.*
 			FROM
 			subscriptions s,
@@ -85,7 +85,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * @return object DAOResultFactory containing matching InstitutionalSubscriptions
 	 */
 	function &getSubscriptionsByUserForJournal($userId, $journalId, $rangeInfo = null) {
-		$result = &$this->retrieveRange(
+		$result =& $this->retrieveRange(
 			'SELECT s.*, iss.*
 			FROM
 			subscriptions s,
@@ -128,7 +128,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 				: ' AND LOWER(iss.institution_name) LIKE LOWER(?)'
 				. ' AND s.journal_id = ?';
 
-		$result = &$this->retrieveRange(
+		$result =& $this->retrieveRange(
 			$sql,
 			array(
 				$institutionName,
@@ -148,7 +148,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * @return int
 	 */
 	function getStatusCount($journalId, $status) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT COUNT(*)
 			FROM
 			subscriptions s,
@@ -177,7 +177,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * @return boolean
 	 */
 	function subscriptionExists($subscriptionId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT COUNT(*)
 			FROM
 			subscriptions s,
@@ -203,7 +203,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * @return boolean
 	 */
 	function subscriptionExistsByUser($subscriptionId, $userId){ 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT COUNT(*)
 			FROM
 			subscriptions s,
@@ -233,7 +233,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * @return boolean
 	 */
 	function subscriptionExistsByUserForJournal($userId, $journalId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT COUNT(*)
 			FROM
 			subscriptions s,
@@ -275,7 +275,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 				: ' AND LOWER(iss.institution_name) LIKE LOWER(?)'
 				. ' AND s.journal_id = ?';
 
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			$sql,
 			array(
 				$institutionName,
@@ -386,7 +386,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * @return boolean
 	 */
 	function deleteSubscriptionsByJournal($journalId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT s.subscription_id
 			FROM
 			subscriptions s
@@ -418,7 +418,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * @return boolean
 	 */
 	function deleteSubscriptionsByUserId($userId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT s.subscription_id
 			FROM
 			subscriptions s
@@ -451,7 +451,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * @return boolean
 	 */
 	function deleteSubscriptionsByUserIdForJournal($userId, $journalId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT s.subscription_id
 			FROM
 			subscriptions s
@@ -487,7 +487,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * @return boolean
 	 */
 	function deleteSubscriptionsByTypeId($subscriptionTypeId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT s.subscription_id
 			FROM
 			subscriptions s
@@ -518,7 +518,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * @return object DAOResultFactory containing InstitutionalSubscriptions
 	 */
 	function &getSubscriptions($rangeInfo = null) {
-		$result = &$this->retrieveRange(
+		$result =& $this->retrieveRange(
 			'SELECT s.*, iss.*
 			FROM
 			subscriptions s,
@@ -610,7 +610,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 				AND s.subscription_id = isip.subscription_id
 				AND s.journal_id = ?';
 
-		$result = &$this->retrieveRange(
+		$result =& $this->retrieveRange(
 			$sql . ' ' . $searchSql . ' ORDER BY iss.institution_name ASC, s.subscription_id',
 			count($params)===1?array_shift($params):$params,
 			$rangeInfo
@@ -659,7 +659,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 
 		// Check if domain match
 		if (!empty($domain)) {
-			$result = &$this->retrieve('
+			$result =& $this->retrieve('
 				SELECT iss.subscription_id 
 				FROM
 				institutional_subscriptions iss,
@@ -698,7 +698,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 		if (!empty($IP)) {
 			$IP = sprintf('%u', ip2long($IP));
 
-			$result = &$this->retrieve('
+			$result =& $this->retrieve('
 				SELECT isip.subscription_id
 				FROM
 				institutional_subscription_ip isip,
@@ -753,7 +753,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	function &getSubscriptionsByDateEnd($dateEnd, $journalId, $rangeInfo = null) {
 		$dateEnd = explode('-', $dateEnd);
 
-		$result = &$this->retrieveRange(
+		$result =& $this->retrieveRange(
 			'SELECT s.*, iss.*
 			FROM
 			subscriptions s,
@@ -811,7 +811,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 		$institutionalSubscription->setInstitutionMailingAddress($row['mailing_address']);
 		$institutionalSubscription->setDomain($row['domain']);
 
-		$ipResult = &$this->retrieve(
+		$ipResult =& $this->retrieve(
 			'SELECT ip_string
 			FROM
 			institutional_subscription_ip

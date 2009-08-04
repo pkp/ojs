@@ -52,7 +52,7 @@ class StaticPagesEditForm extends Form {
 	 * @param $staticPageId int
 	 */
 	function checkForDuplicatePath($path, $journalId, $staticPageId) {
-		$staticPageDAO = &DAORegistry::getDAO('StaticPagesDAO');
+		$staticPageDAO =& DAORegistry::getDAO('StaticPagesDAO');
 
 		return !$staticPageDAO->duplicatePathExists($path, $journalId, $staticPageId);		
 	}
@@ -68,8 +68,8 @@ class StaticPagesEditForm extends Form {
 		$this->addTinyMCE();
 
 		if (isset($this->staticPageId)) {
-			$staticPageDAO = &DAORegistry::getDAO('StaticPagesDAO');
-			$staticPage = &$staticPageDAO->getStaticPage($this->staticPageId);
+			$staticPageDAO =& DAORegistry::getDAO('StaticPagesDAO');
+			$staticPage =& $staticPageDAO->getStaticPage($this->staticPageId);
 
 			if ($staticPage != null) {  
 				$this->_data = array(
@@ -87,7 +87,7 @@ class StaticPagesEditForm extends Form {
 	function addTinyMCE() {
 		$journalId = $this->journalId;
 		$plugin =& $this->plugin;
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 
 		// Enable TinyMCE with specific params
 		$additionalHeadData = $templateMgr->get_template_vars('additionalHeadData');
@@ -137,13 +137,13 @@ class StaticPagesEditForm extends Form {
 		$journalId = $this->journalId;
 
 		$plugin->import('StaticPage');	
-		$staticPagesDAO = &DAORegistry::getDAO('StaticPagesDAO');
+		$staticPagesDAO =& DAORegistry::getDAO('StaticPagesDAO');
 		if (isset($this->staticPageId)) {
-			$staticPage = &$staticPagesDAO->getStaticPage($this->staticPageId);
+			$staticPage =& $staticPagesDAO->getStaticPage($this->staticPageId);
 		}
 
 		if (!isset($staticPage)) {
-			$staticPage = &new StaticPage();
+			$staticPage = new StaticPage();
 		}
 		
 		$staticPage->setJournalId($journalId);
@@ -160,7 +160,7 @@ class StaticPagesEditForm extends Form {
 	}
 
 	function display() {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		
 		parent::display();
 	}

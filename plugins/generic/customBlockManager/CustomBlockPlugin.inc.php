@@ -83,7 +83,7 @@ class CustomBlockPlugin extends BlockPlugin {
 	function manage($verb, $args) {
 		$returner = true;
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 
 		$pageCrumbs = array(

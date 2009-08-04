@@ -25,7 +25,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @return IndividualSubscription
 	 */
 	function &getSubscription($subscriptionId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT s.*
 			FROM
 			subscriptions s,
@@ -38,7 +38,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnSubscriptionFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnSubscriptionFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -54,7 +54,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @return IndividualSubscriptions
 	 */
 	function &getSubscriptionByUserForJournal($userId, $journalId) {
-		$result = &$this->retrieveRange(
+		$result =& $this->retrieveRange(
 			'SELECT s.*
 			FROM
 			subscriptions s,
@@ -71,7 +71,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnSubscriptionFromRow($result->GetRowAssoc(false));
+			$returner =& $this->_returnSubscriptionFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -86,7 +86,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @return object DAOResultFactory containing IndividualSubscriptions
 	 */
 	function &getSubscriptionsByUser($userId, $rangeInfo = null) {
-		$result = &$this->retrieveRange(
+		$result =& $this->retrieveRange(
 			'SELECT s.*
 			FROM
 			subscriptions s,
@@ -110,7 +110,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @return int
 	 */
 	function getSubscriptionIdByUser($userId, $journalId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT s.subscription_id
 			FROM
 			subscriptions s,
@@ -139,7 +139,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @return int
 	 */
 	function getStatusCount($journalId, $status) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT COUNT(*)
 			FROM
 			subscriptions s,
@@ -168,7 +168,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @return boolean
 	 */
 	function subscriptionExists($subscriptionId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT COUNT(*)
 			FROM
 			subscriptions s,
@@ -194,7 +194,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @return boolean
 	 */
 	function subscriptionExistsByUser($subscriptionId, $userId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT COUNT(*)
 			FROM
 			subscriptions s,
@@ -224,7 +224,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @return boolean
 	 */
 	function subscriptionExistsByUserForJournal($userId, $journalId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT COUNT(*)
 			FROM
 			subscriptions s,
@@ -310,7 +310,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @return boolean
 	 */
 	function deleteSubscriptionsByJournal($journalId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT s.subscription_id
 			FROM
 			subscriptions s
@@ -342,7 +342,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @return boolean
 	 */
 	function deleteSubscriptionsByUserId($userId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT s.subscription_id
 			FROM
 			subscriptions s
@@ -375,7 +375,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @return boolean
 	 */
 	function deleteSubscriptionsByUserIdForJournal($userId, $journalId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT s.subscription_id
 			FROM
 			subscriptions s
@@ -411,7 +411,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @return boolean
 	 */
 	function deleteSubscriptionsByTypeId($subscriptionTypeId) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieve(
 			'SELECT s.subscription_id
 			FROM
 			subscriptions s
@@ -442,7 +442,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @return object DAOResultFactory containing IndividualSubscriptions
 	 */
 	function &getSubscriptions($rangeInfo = null) {
-		$result = &$this->retrieveRange(
+		$result =& $this->retrieveRange(
 			'SELECT s.*
 			FROM
 			subscriptions s,
@@ -490,7 +490,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 				AND s.user_id = u.user_id
 				AND s.journal_id = ?';
  
-		$result = &$this->retrieveRange(
+		$result =& $this->retrieveRange(
 			$sql . ' ' . $searchSql . ' ORDER BY u.last_name ASC, s.subscription_id',
 			count($params)===1?array_shift($params):$params,
 			$rangeInfo
@@ -536,7 +536,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 
 		$nonExpiringSql = "AND ((st.non_expiring = 1) OR (st.non_expiring = 0 AND ($dateSql)))";
 
-		$result = &$this->retrieve('
+		$result =& $this->retrieve('
 			SELECT s.subscription_id
 			FROM
 			subscriptions s,
@@ -574,7 +574,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	function &getSubscriptionsByDateEnd($dateEnd, $journalId, $rangeInfo = null) {
 		$dateEnd = explode('-', $dateEnd);
 
-		$result = &$this->retrieveRange(
+		$result =& $this->retrieveRange(
 			'SELECT	s.*
 			FROM
 			subscriptions s,

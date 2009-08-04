@@ -47,7 +47,7 @@ class PayPalPlugin extends PaymethodPlugin {
 	 */
 	function register($category, $path) {
 		if (parent::register($category, $path)) {
-			if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return null;
+			if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return true;
 			$this->addLocaleData();
 			$this->import('PayPalDAO');
 			$payPalDao = new PayPalDAO();

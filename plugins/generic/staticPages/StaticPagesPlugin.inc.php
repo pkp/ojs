@@ -33,7 +33,7 @@ class StaticPagesPlugin extends GenericPlugin {
 	}
 
 	function isTinyMCEInstalled() {
-		$tinyMCEPlugin = &PluginRegistry::getPlugin('generic', 'TinyMCEPlugin');
+		$tinyMCEPlugin =& PluginRegistry::getPlugin('generic', 'TinyMCEPlugin');
 
 		if ( $tinyMCEPlugin ) 
 			return $tinyMCEPlugin->getEnabled();
@@ -52,8 +52,8 @@ class StaticPagesPlugin extends GenericPlugin {
 			$this->addLocaleData();
 			if ($this->getEnabled()) {
 				$this->import('StaticPagesDAO');
-				$staticPagesDAO = &new StaticPagesDAO();
-				$returner = &DAORegistry::registerDAO('StaticPagesDAO', $staticPagesDAO);
+				$staticPagesDAO =& new StaticPagesDAO();
+				$returner =& DAORegistry::registerDAO('StaticPagesDAO', $staticPagesDAO);
 				
 				HookRegistry::register('LoadHandler', array(&$this, 'callbackHandleContent'));
 			}
@@ -66,7 +66,7 @@ class StaticPagesPlugin extends GenericPlugin {
 	 * Declare the handler function to process the actual page PATH
 	 */
 	function callbackHandleContent($hookName, $args) {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 
 		$page =& $args[0];
 		$op =& $args[1];
@@ -83,7 +83,7 @@ class StaticPagesPlugin extends GenericPlugin {
 	 * Determine whether or not this plugin is enabled.
 	 */
 	function getEnabled() {
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		if (!$journal) return false;
 		return $this->getSetting($journal->getJournalId(), 'enabled');
 	}
@@ -92,7 +92,7 @@ class StaticPagesPlugin extends GenericPlugin {
 	 * Set the enabled/disabled state of this plugin
 	 */
 	function setEnabled($enabled) {
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		if ($journal) {
 			$this->updateSetting($journal->getJournalId(), 'enabled', $enabled ? true : false);
 
@@ -132,7 +132,7 @@ class StaticPagesPlugin extends GenericPlugin {
 	function manage($verb, $args) {
 		$returner = true;
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 		$templateMgr->assign('pagesPath', Request::url(null, 'pages', 'view'));
 

@@ -151,7 +151,7 @@ class Subscription extends DataObject {
 	 * @return string
 	 */
 	function getSubscriptionTypeInstitutional() {
-		$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
 		return $subscriptionTypeDao->getSubscriptionTypeInstitutional($this->getData('typeId'));
 	}
 
@@ -160,7 +160,7 @@ class Subscription extends DataObject {
 	 * @return string
 	 */
 	function isNonExpiring() {
-		$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
 		return $subscriptionTypeDao->getSubscriptionTypeNonExpiring($this->getData('typeId')) ? true : false;
 	}
 

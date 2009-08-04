@@ -57,7 +57,7 @@ class UserInstitutionalSubscriptionForm extends Form {
 		$this->subscriptionTypes =& $subscriptionTypeDao->getSubscriptionTypesByInstitutional($journalId, true);
 
 		// Ensure subscription type is valid
-		$this->addCheck(new FormValidatorCustom($this, 'typeId', 'required', 'user.subscriptions.form.typeIdValid', create_function('$typeId, $journalId', '$subscriptionTypeDao = &DAORegistry::getDAO(\'SubscriptionTypeDAO\'); return ($subscriptionTypeDao->subscriptionTypeExistsByTypeId($typeId, $journalId) && $subscriptionTypeDao->getSubscriptionTypeInstitutional($typeId) == 1);'), array($journal->getJournalId())));
+		$this->addCheck(new FormValidatorCustom($this, 'typeId', 'required', 'user.subscriptions.form.typeIdValid', create_function('$typeId, $journalId', '$subscriptionTypeDao =& DAORegistry::getDAO(\'SubscriptionTypeDAO\'); return ($subscriptionTypeDao->subscriptionTypeExistsByTypeId($typeId, $journalId) && $subscriptionTypeDao->getSubscriptionTypeInstitutional($typeId) == 1);'), array($journal->getJournalId())));
 
 
 		// Ensure institution name is provided
