@@ -153,7 +153,7 @@ class JournalSiteSettingsForm extends Form {
 			// Install default journal settings
 			$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 			$titles = $this->getData('title');
-			Locale::requireComponents(array(LOCALE_COMPONENT_OJS_DEFAULT_SETTINGS, LOCALE_COMPONENT_OJS_DEFAULT));
+			Locale::requireComponents(array(LOCALE_COMPONENT_OJS_DEFAULT_SETTINGS, LOCALE_COMPONENT_APPLICATION_COMMON, LOCALE_COMPONENT_OJS_DEFAULT));
 			$journalSettingsDao->installSettings($journalId, 'registry/journalSettings.xml', array(
 				'indexUrl' => Request::getIndexUrl(),
 				'journalPath' => $this->getData('path'),

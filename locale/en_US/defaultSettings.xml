@@ -13,6 +13,11 @@
   -->
  
 <locale name="en_US" full_name="U.S. English">
+	<!-- Section default -->
+	<message key="section.default.title">Articles</message>
+	<message key="section.default.abbrev">ART</message>
+	<message key="section.default.policy"></message>
+
 	<!--
 	 *
 	 * DEFAULT - Default settings for setup items.
