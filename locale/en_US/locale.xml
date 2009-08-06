@@ -1035,8 +1035,8 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="rt.admin.relatedItems">Related Item Tools</message>
 
 	<message key="rt.admin.settings.addComment">Add comment (enables readers to post comments, with Journal Manager able to delete).</message>
-	<message key="rt.admin.settings.addComment.authenticated">Users must be registered and log into to post, with anonymity not permitted.</message>
-	<message key="rt.admin.settings.addComment.anonymous">Users must be registered and log into to post, with anonymity permitted.</message>
+	<message key="rt.admin.settings.addComment.authenticated">Users must be registered and logged in to post, with anonymity not permitted.</message>
+	<message key="rt.admin.settings.addComment.anonymous">Users must be registered and logged in to post, with anonymity permitted.</message>
 	<message key="rt.admin.settings.addComment.unauthenticated">Users do not need to be registered to post, with anonymity permitted.</message>
 
 
