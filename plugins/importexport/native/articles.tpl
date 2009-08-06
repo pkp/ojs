@@ -18,11 +18,9 @@
 {literal}
 <!--
 function toggleChecked() {
-	var elements = document.articles.elements;
+	var elements = document.getElementsByName("articleId[]");
 	for (var i=0; i < elements.length; i++) {
-		if (elements[i].name = 'articleId[]') {
 			elements[i].checked = !elements[i].checked;
-		}
 	}
 }
 // -->
