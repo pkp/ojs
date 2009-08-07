@@ -24,7 +24,6 @@ define('LOCALE_COMPONENT_OJS_EDITOR',		0x00000103);
 define('LOCALE_COMPONENT_OJS_MANAGER',		0x00000104);
 define('LOCALE_COMPONENT_OJS_ADMIN',		0x00000105);
 define('LOCALE_COMPONENT_OJS_DEFAULT',		0x00000106);
-define('LOCALE_COMPONENT_OJS_DEFAULT_SETTINGS',	0x00000107);
 
 class Locale extends PKPLocale {
 	/**
@@ -180,7 +179,6 @@ class Locale extends PKPLocale {
 		$componentMap[LOCALE_COMPONENT_OJS_MANAGER] = $baseDir . 'manager.xml';
 		$componentMap[LOCALE_COMPONENT_OJS_ADMIN] = $baseDir . 'admin.xml';
 		$componentMap[LOCALE_COMPONENT_OJS_DEFAULT] = $baseDir . 'default.xml';
-		$componentMap[LOCALE_COMPONENT_OJS_DEFAULT_SETTINGS] = $baseDir . 'defaultSettings.xml';
 		return $componentMap;
 	}
 }

@@ -258,7 +258,7 @@ class JournalSettingsDAO extends DAO {
 	function _performLocalizedReplacement($rawInput, $paramArray = array(), $locale = null) {
 		preg_match('{{translate key="([^"]+)"}}', $rawInput, $matches);
 		if ( isset($matches[1]) ) {
-			Locale::requireComponents(array(LOCALE_COMPONENT_OJS_DEFAULT_SETTINGS, LOCALE_COMPONENT_OJS_MANAGER), $locale);
+			Locale::requireComponents(array(LOCALE_COMPONENT_OJS_DEFAULT, LOCALE_COMPONENT_OJS_MANAGER), $locale);
 			return Locale::translate($matches[1], $paramArray, $locale);
 		}
 

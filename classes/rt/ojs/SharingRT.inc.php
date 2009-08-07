@@ -21,60 +21,64 @@
 import('i18n.Locale');
 
 class SharingRT {
-	static $languages = array (
-		'zh' => 'Chinese',
-		'da' => 'Danish',
-		'nl' => 'Dutch',
-		'en' => 'English',
-		'fi' => 'Finnish',
-		'fr' => 'French',
-		'de' => 'German',
-		'he' => 'Hebrew',
-		'it' => 'Italian',
-		'ja' => 'Japanese',
-		'ko' => 'Korean',
-		'no' => 'Norwegian',
-		'pl' => 'Polish',
-		'pt' => 'Portugese',
-		'ru' => 'Russian',
-		'es' => 'Spanish',
-		'sv' => 'Swedish'
-	);
+	function getLanguages() {
+		return array (
+			'zh' => 'Chinese',
+			'da' => 'Danish',
+			'nl' => 'Dutch',
+			'en' => 'English',
+			'fi' => 'Finnish',
+			'fr' => 'French',
+			'de' => 'German',
+			'he' => 'Hebrew',
+			'it' => 'Italian',
+			'ja' => 'Japanese',
+			'ko' => 'Korean',
+			'no' => 'Norwegian',
+			'pl' => 'Polish',
+			'pt' => 'Portugese',
+			'ru' => 'Russian',
+			'es' => 'Spanish',
+			'sv' => 'Swedish'
+		);
+	}
 
-	static $btnStyles = array (
-		'share' => array (
-			'img' => 'lg-share-%lang%.gif',
-			'w' => 125,
-			'h' => 16
-		),
-		'bookmark' => array (
+	function getBtnStyles() {
+		return array(
+			'share' => array (
+				'img' => 'lg-share-%lang%.gif',
+				'w' => 125,
+				'h' => 16
+			),
+			'bookmark' => array (
 			'img' => 'lg-bookmark-en.gif',
-			'w' => 125,
-			'h' => 16
-		),
-		'addthis' => array (
-			'img' => 'lg-addthis-en.gif',
-			'w' => 125,
-			'h' => 16
-		),
-		'share-small' => array (
-			'img' => 'sm-share-%lang%.gif',
-			'w' => 83,
-			'h' => 16
-		),
-		'bookmark-small' => array (
-			'img' => 'sm-bookmark-en.gif',
-			'w' => 83,
-			'h' => 16
-		),
-		'plus' => array (
-			'img' => 'sm-plus.gif',
-			'w' => 16,
-			'h' => 16
-		)
-		/* Add your own style here, like this:
-		 , 'custom' => array('img'=>'http://example.com/button.gif', 'w'=>16, 'h'=>16) */
-	);
+				'w' => 125,
+				'h' => 16
+			),
+			'addthis' => array (
+				'img' => 'lg-addthis-en.gif',
+				'w' => 125,
+				'h' => 16
+			),
+			'share-small' => array (
+				'img' => 'sm-share-%lang%.gif',
+				'w' => 83,
+				'h' => 16
+			),
+			'bookmark-small' => array (
+				'img' => 'sm-bookmark-en.gif',
+				'w' => 83,
+				'h' => 16
+			),
+			'plus' => array (
+				'img' => 'sm-plus.gif',
+				'w' => 16,
+				'h' => 16
+			)
+			/* Add your own style here, like this:
+			 , 'custom' => array('img'=>'http://example.com/button.gif', 'w'=>16, 'h'=>16) */
+		);
+	}
 
 	/**
 	 * Generate the information for the HTML tag for the sharing button
@@ -87,10 +91,11 @@ class SharingRT {
 				$btnStyle = 'share';
 			}
 		}
-		if (!isset (self :: $btnStyles[$btnStyle])) {
+		$btnStyles = SharingRT::getBtnStyles();
+		if (!isset ($btnStyles[$btnStyle])) {
 			$btnStyle = 'share';
 		}
-		$btnRecord = self :: $btnStyles[$btnStyle];
+		$btnRecord = $btnStyles[$btnStyle];
 		$btnUrl = (strpos(trim($btnRecord['img']), 'http://') !== 0 ? "http://s7.addthis.com/static/btn/" : "") . $btnRecord['img'];
 		$btnUrl = str_replace('%lang%', SharingRT :: sharingLocale($journalRt->getSharingLanguage()), $btnUrl);
 		$btnWidth = $btnRecord['w'];
@@ -115,7 +120,8 @@ class SharingRT {
 		//getLocal() returns a string like 'en_US'
 		$locale = Locale :: getLocale();
 		$lang = substr($locale, 0, 2);
-		if (isset (self :: $languages[$lang])) {
+		$languages = SharingRT::getLanguages();
+		if (isset ($languages[$lang])) {
 			return $lang;
 		}
 		return $default;

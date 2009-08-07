@@ -33,12 +33,12 @@ class RTSharingHandler {
 			$templateMgr->assign('sharingEnabled', $rt->getSharingEnabled());
 			$templateMgr->assign('sharingUserName', $rt->getSharingUserName());
 			$templateMgr->assign('sharingButtonStyle', $rt->getSharingButtonStyle());
-			$templateMgr->assign_by_ref('sharingButtonStyleOptions', array_keys(SharingRT::$btnStyles));
+			$templateMgr->assign('sharingButtonStyleOptions', array_keys(SharingRT::getBtnStyles()));
 			$templateMgr->assign('sharingDropDownMenu', $rt->getSharingDropDownMenu());
 			$templateMgr->assign('sharingBrand', $rt->getSharingBrand());
 			$templateMgr->assign('sharingDropDown', $rt->getSharingDropDown());
 			$templateMgr->assign('sharingLanguage', $rt->getSharingLanguage());
-			$templateMgr->assign_by_ref('sharingLanguageOptions', SharingRT::$languages);
+			$templateMgr->assign('sharingLanguageOptions', SharingRT::getLanguages());
 			$templateMgr->assign('sharingLogo', $rt->getSharingLogo());
 			$templateMgr->assign('sharingLogoBackground', $rt->getSharingLogoBackground());
 			$templateMgr->assign('sharingLogoColor', $rt->getSharingLogoColor());
