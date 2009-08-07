@@ -39,14 +39,6 @@ class UpgradeForm extends Form {
 	}
 
 	/**
-	 * Assign form data to user-submitted data.
-	 */
-	function readInputData() {
-		$this->readUserVars(array(
-			));
-	}
-
-	/**
 	 * Perform installation.
 	 */
 	function execute() {
