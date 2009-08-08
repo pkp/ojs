@@ -130,7 +130,7 @@ class SectionHandler extends ManagerHandler {
 		$journal =& Request::getJournal();
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$section =& $sectionDao->getSection(Request::getUserVar('sectionId'), $journal->getJournalId());
+		$section =& $sectionDao->getSection(Request::getUserVar('id'), $journal->getJournalId());
 
 		if ($section != null) {
 			$direction = Request::getUserVar('d');
