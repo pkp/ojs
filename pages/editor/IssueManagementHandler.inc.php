@@ -83,6 +83,7 @@ class IssueManagementHandler extends EditorHandler {
 		$issueId = isset($args[0]) ? (int) $args[0] : 0;
 		$this->validate($issueId);
 		$issue =& $this->issue; 
+		$isBackIssue = $issue->getPublished() > 0 ? true: false;
 
 		// remove all published articles and return original articles to editing queue
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
@@ -106,7 +107,12 @@ class IssueManagementHandler extends EditorHandler {
 				$issueDao->updateIssue($issue);
 			}
 		}
-		Request::redirect(null, null, 'backIssues');
+
+		if ($isBackIssue) {
+			Request::redirect(null, null, 'backIssues');
+		} else {
+			Request::redirect(null, null, 'futureIssues');
+		}
 	}
 
 	/**
@@ -148,7 +154,7 @@ class IssueManagementHandler extends EditorHandler {
 
 		if ($issueForm->validate()) {
 			$issueForm->execute();
-			$this->backIssues();
+			$this->futureIssues();
 		} else {
 			$templateMgr =& TemplateManager::getManager();
 			import('issue.IssueAction');
