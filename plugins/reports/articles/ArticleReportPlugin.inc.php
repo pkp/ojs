@@ -70,6 +70,8 @@ class ArticleReportPlugin extends ReportPlugin {
 			}
 		}
 
+		Locale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR));
+
 		import('classes.article.Article');
 		$decisionMessages = array(
 			SUBMISSION_EDITOR_DECISION_ACCEPT => Locale::translate('editor.article.decision.accept'),
