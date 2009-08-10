@@ -105,18 +105,26 @@ class ArticleReportDAO extends DAO {
 					aa.affiliation AS affiliation,
 					aa.country AS country,
 					aa.url AS url,
-					aas.setting_value AS biography
+					COALESCE(aasl.setting_value, aas.setting_value) AS biography
 				FROM article_authors aa
 					LEFT JOIN articles a ON aa.article_id=a.article_id
-					LEFT JOIN article_author_settings aas ON aa.author_id=aas.author_id
+					LEFT JOIN article_author_settings aas ON (aa.author_id=aas.author_id AND aas.setting_name = ? AND aas.locale = ?)
+					LEFT JOIN article_author_settings aasl ON (aa.author_id=aasl.author_id AND aasl.setting_name = ? AND aasl.locale = ?)
 				WHERE
 					a.journal_id = ? AND
-					aa.article_id = ? AND
-					aas.setting_name = \'biography\'',
-				array($journalId, $article->getArticleId())
+					aa.article_id = ?',
+				array(
+					'biography',
+					$primaryLocale,
+					'biography',
+					$locale,
+					$journalId,
+					$article->getArticleId()
+				)
 			);
 			$authorIterator = new DBRowIterator($result);
-			$authorsReturner[] = $authorIterator;
+			$authorsReturner[$article->getArticleId()] =& $authorIterator;
+			unset($authorIterator);
 			$index++;
 			unset($article);
 		}

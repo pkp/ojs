@@ -64,7 +64,7 @@ class ArticleReportPlugin extends ReportPlugin {
 		$maxAuthors = $this->getMaxAuthorCount($authorsIterator);
 
 		$decisions = array();
-		foreach ($decisionsIteratorsArray as $decisionsIterator){
+		foreach ($decisionsIteratorsArray as $decisionsIterator) {
 			while ($row =& $decisionsIterator->next()) {
 				$decisions[$row['article_id']] = $row['decision'];
 			}
@@ -113,29 +113,30 @@ class ArticleReportPlugin extends ReportPlugin {
 
 		$authorIndex = 0;
 		while ($row =& $articlesIterator->next()) {
-			$authors = $this->mergeAuthors($authorsIterator[$authorIndex]->toArray());
+			$authors = $this->mergeAuthors($authorsIterator[$row['article_id']]->toArray());
 
-			foreach ($columns as $index => $junk) switch ($index) {
-				case 'editor_decision':
+			foreach ($columns as $index => $junk) {
+				if ($index == 'editor_decision') {
 					if (isset($decisions[$row['article_id']])) {
 						$columns[$index] = $decisionMessages[$decisions[$row['article_id']]];
 					} else {
 						$columns[$index] = $decisionMessages[null];
 					}
-					break;
-				case 'status':
+				} elseif ($index == 'status') {
 					$columns[$index] = Locale::translate($statusMap[$row[$index]]);
-					break;
-				case 'abstract':
+				} elseif ($index == 'abstract') {
 					$columns[$index] = strip_tags($row[$index]);
-					break;
-				default:
+				} elseif (strstr($index, 'biography') !== false) {
+					// "Convert" HTML to text for export
+					$bio = strip_tags($authors[$index]);
+					$columns[$index] = $bio;
+				} else {
 					if (isset($row[$index])) {
 						$columns[$index] = $row[$index];
 					} else if (isset($authors[$index])) {
 						$columns[$index] = $authors[$index];
 					} else $columns[$index] = '';
-					break;
+				}
 			}
 			String::fputcsv($fp, $columns);
 			unset($row);
