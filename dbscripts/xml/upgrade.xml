@@ -91,7 +91,12 @@
 		<!-- 2.x to 2.3 -->
 		<data file="dbscripts/xml/upgrade/2.3.0_preupdate.xml" />
 	</upgrade>
-
+	
+	<upgrade minversion="2.2.0.0" maxversion="2.2.3.0">
+		<!-- 2.2.x to 2.3 -->
+		<data file="dbscripts/xml/upgrade/2.3.0_subscription_ip.xml" />
+	</upgrade>
+	
 	<!-- PKP schema components -->
 	<schema file="lib/pkp/xml/schema/common.xml" />
 	<schema file="lib/pkp/xml/schema/groups.xml" />
@@ -162,5 +167,10 @@
 		<code function="cleanTitles" />
 		<code function="addPluginVersions" />
 		<note file="docs/release-notes/README-2.3.0" />
+	</upgrade>
+	
+	<upgrade minversion="2.2.0.0" maxversion="2.2.3.0">
+		<!-- 2.2.x to 2.3 -->
+		<data file="dbscripts/xml/upgrade/2.3.0_subscription_ip2.xml" />
 	</upgrade>
 </install>

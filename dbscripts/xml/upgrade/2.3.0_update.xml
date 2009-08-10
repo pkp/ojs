@@ -49,7 +49,6 @@
 	     Drop temp tables now that data has been migrated to new tables. -->
 	<sql>
 		<drop table="subscriptions_old" />
-		<drop table="subscription_ip_old" />
 	</sql>
 
 	<!-- Bug #1709: Upgrade enableSubscriptions setting to publishingMode -->
