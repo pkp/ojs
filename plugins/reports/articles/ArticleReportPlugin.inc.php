@@ -125,11 +125,10 @@ class ArticleReportPlugin extends ReportPlugin {
 				} elseif ($index == 'status') {
 					$columns[$index] = Locale::translate($statusMap[$row[$index]]);
 				} elseif ($index == 'abstract') {
-					$columns[$index] = strip_tags($row[$index]);
+					$columns[$index] = html_entity_decode(strip_tags($row[$index]));
 				} elseif (strstr($index, 'biography') !== false) {
 					// "Convert" HTML to text for export
-					$bio = strip_tags($authors[$index]);
-					$columns[$index] = $bio;
+					$columns[$index] = html_entity_decode(strip_tags($authors[$index]));
 				} else {
 					if (isset($row[$index])) {
 						$columns[$index] = $row[$index];
