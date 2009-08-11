@@ -79,7 +79,7 @@ class CommentForm extends Form {
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', $article->getArticleId());
 		$templateMgr->assign('commentTitle', strip_tags($article->getLocalizedTitle()));
-		$templateMgr->assign('userId', $this->user->getId());
+		$templateMgr->assign('userId', $this->user['id']);
 		$templateMgr->assign('articleComments', $articleComments);
 
 		parent::display();
