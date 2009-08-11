@@ -733,7 +733,18 @@ class Upgrade extends Installer {
 					$pluginVersion = $versionInfo['version'];		
 					$pluginVersion->setCurrent(1);
 					$versionDao->insertVersion($pluginVersion);
-				} 
+				}  else {
+					$pluginVersion = new Version();
+					$pluginVersion->setMajor(1);
+					$pluginVersion->setMinor(0);
+					$pluginVersion->setRevision(0);
+					$pluginVersion->setBuild(0);
+					$pluginVersion->setDateInstalled(Core::getCurrentDate());
+					$pluginVersion->setCurrent(1);
+					$pluginVersion->setProductType('plugins.' . $category);
+					$pluginVersion->setProduct(basename($plugin->getPluginPath()));
+					$versionDao->insertVersion($pluginVersion);
+				}
 			}
 		}
 		
