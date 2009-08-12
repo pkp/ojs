@@ -17,7 +17,7 @@
 	<message key="plugins.generic.announcementfeed.description">Questo plugin produce feed RSS/Atom per la diffusione web per gli annunci della rivista.</message>
 
 	<message key="plugins.generic.announcementfeed.settings">Impostazioni</message>
-	<message key="plugins.generic.announcementfeed.settings.all">Mostra i link ai feeMostra i link ai feed RSS in tutte le pagine della rivista.si.</message>
+	<message key="plugins.generic.announcementfeed.settings.all">File delle localizzazioni</message>
 	<message key="plugins.generic.announcementfeed.settings.homepage">Mostra i link ai feed RSS solo nella homepage e nella pagina degli annunci</message>
 	<message key="plugins.generic.announcementfeed.settings.announcement">Mostra i link ai feed RSS solo nella pagina degli annunci.</message>
 	<message key="plugins.generic.announcementfeed.settings.recentAnnouncements1">Limita i feed RSS ai</message>

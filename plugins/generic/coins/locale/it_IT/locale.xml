@@ -14,5 +14,5 @@
  
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.coins.displayName">Plugin COinS</message>
-	<message key="plugins.generic.coins.description">Il plugin COinS aggiunge un descrittore OpenURL allle pagine dell'articolo (abstract e HTML) che può essere usato ad esempio per l'estrazione degli strumenti per le citazioni.</message>
+	<message key="plugins.generic.coins.description">Il plugin COinS aggiunge un descrittore OpenURL allle pagine dell'articolo (abstract e HTML) che può essere usato ad esempio per l'estrazione delle citazioni attraverso software per la gestione delle bibliografie.</message>
 </locale>

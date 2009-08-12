@@ -24,9 +24,9 @@
 	<message key="plugins.generic.openads.error.missingParameter">Almeno uno dei parametri di configurazione di OpenAds richiesti non può essere letto dal file di configurazione. I parametri necessari sono dbhost, dbuser, dbpassword, dbname, url_prefix, and table_prefix.</message>
 	<message key="plugins.generic.openads.error.dbConnectionError">Impossibile connettersi alla bancadati OpenAds.</message>
 
-	<message key="plugins.generic.openads.headerAd">Annuncio d'intestazione</message>
-	<message key="plugins.generic.openads.contentAd">Annuncio di contenuto</message>
-	<message key="plugins.generic.openads.sidebarAd">Annuncio del menu laterale</message>
+	<message key="plugins.generic.openads.headerAd">Intestazione dell'Ad</message>
+	<message key="plugins.generic.openads.contentAd">Contenuto dell'Ad</message>
+	<message key="plugins.generic.openads.sidebarAd">Menu laterale dell'Ad</message>
 
 	<message key="plugins.generic.openads.orientation.left">Sinistra</message>
 	<message key="plugins.generic.openads.orientation.centre">Centro</message>
