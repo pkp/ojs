@@ -88,6 +88,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 			case 'issues':
 				// Display a list of issues for export
 				$this->setBreadcrumbs(array(), true);
+				Locale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR));
 				$issueDao =& DAORegistry::getDAO('IssueDAO');
 				$issues =& $issueDao->getPublishedIssues($journal->getJournalId(), Handler::getRangeInfo('issues'));
 

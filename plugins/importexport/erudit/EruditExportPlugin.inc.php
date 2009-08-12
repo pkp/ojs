@@ -72,6 +72,7 @@ class EruditExportPlugin extends ImportExportPlugin {
 			default:
 				// Display a list of articles for export
 				$this->setBreadcrumbs();
+				Locale::requireComponents(array(LOCALE_COMPONENT_PKP_SUBMISSION));
 				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 				$rangeInfo = Handler::getRangeInfo('articles');
 				$articleIds = $publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal($journal->getJournalId(), false);
