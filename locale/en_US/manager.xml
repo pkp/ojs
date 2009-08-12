@@ -619,6 +619,7 @@
 	<message key="manager.subscriptions.form.saveAndCreateAnother">Save and Create Another</message>
 	<message key="manager.subscriptions.form.subscriptionContactRequired">In order to send the user a notification email, the subscription contact name and email address must be specified in the journal Setup.</message>
 	<message key="manager.subscriptions.form.subscriptionExists">This user already has a subscription for this journal.</message>
+	<message key="manager.subscriptions.form.typeRequired">A subscription type must be created before new subscriptions can be made.</message>
 	<message key="manager.subscriptions.ipRange">IP Range</message>
 	<message key="manager.subscriptions.membership">Membership</message>
 	<message key="manager.subscriptions.referenceNumber">Reference Number</message>

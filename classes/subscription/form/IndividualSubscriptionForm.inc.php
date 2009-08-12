@@ -46,6 +46,12 @@ class IndividualSubscriptionForm extends SubscriptionForm {
 		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
 		$this->subscriptionTypes =& $subscriptionTypeDao->getSubscriptionTypesByInstitutional($journalId, false);
 
+		$subscriptionTypeCount = $this->subscriptionTypes->getCount();
+		if ($subscriptionTypeCount == 0) {
+			$this->addError('typeId', Locale::translate('manager.subscriptions.form.typeRequired'));
+			$this->addErrorField('typeId');
+		}
+
 		// Ensure subscription type is valid
 		$this->addCheck(new FormValidatorCustom($this, 'typeId', 'required', 'manager.subscriptions.form.typeIdValid', create_function('$typeId, $journalId', '$subscriptionTypeDao =& DAORegistry::getDAO(\'SubscriptionTypeDAO\'); return ($subscriptionTypeDao->subscriptionTypeExistsByTypeId($typeId, $journalId) && $subscriptionTypeDao->getSubscriptionTypeInstitutional($typeId) == 0);'), array($journal->getJournalId())));
 
