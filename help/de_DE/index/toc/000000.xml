@@ -13,9 +13,9 @@
   * $Id$
   -->
 
-<toc id="index/toc/000000" locale="de_DE" title="OJS Help" parent_topic="index/topic/000000">
+<toc id="index/toc/000000" locale="de_DE" title="OJS-Hilfe" parent_topic="index/topic/000000">
 	<topic id="intro/topic/000000" title="Einführung in OJS" />
-	<topic id="site/topic/000000" title="Webseiten-Administration" />
+	<topic id="site/topic/000000" title="Website-Administration" />
 	<topic id="journal/topic/000000" title="Zeitschriften-Management" />
 	<topic id="submission/topic/000000" title="Beitragseinreichung und Begutachtung" />
 	<topic id="editorial/topic/000000" title="Redaktionelle Arbeiten" />

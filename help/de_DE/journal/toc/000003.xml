@@ -4,13 +4,13 @@
 <!--
   * 000003.xml
   *
-  * Copyright (c) 2003-2009 John Willinsky
+  * Copyright (c) 2003-2007 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * table of contents for Journal Management - Roles. 
   *
   * $Id$
-  -->
+-->
 
 <toc id="journal/toc/000003" locale="en_US" title="Roles" parent_topic="journal/topic/000003">
 	<topic id="journal/topic/000015" title="Journal Manager" />

@@ -5,15 +5,16 @@
   * 000012.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Copyeditor's Role Index 
-  *
+  * Die Rolle der Lektor/innen: Index
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * 
   * $Id$
-  -->
+-->
 
-<topic id="editorial/topic/000012" locale="en_US" title="Copyeditor's Role" toc="editorial/toc/000000" subtoc="editorial/toc/000012" key="editorial.copyeditorsRole">
+<topic id="editorial/topic/000012" locale="de_DE" title="Die Rolle der Lektor/innen" toc="editorial/toc/000000" subtoc="editorial/toc/000012" key="editorial.copyeditorsRole">
 	<section>
-		<![CDATA[<p>The Copyeditor receives an email request from the Section Editor to copyedit a submission, which will then appear in the Copyeditor's Submissions queue. A Copyeditor who is unable to do the copyediting simply responds by email to the Section Editor.</p>]]>	
+		<![CDATA[<p>Die ausgewählte Lektorin bzw. der ausgewählte Lektor erhält eine E-Mailanfrage zum Lektorat eines Beitrags von den Rubrikredakteur/innen, die online in deren oder dessen Warteschlange zum Lektorat erscheint. Wenn sie nicht lektorieren können, können sie einfach per Mail an die Rubrikredakteur/innen antworten.</p>]]>	
 	</section>
 </topic>

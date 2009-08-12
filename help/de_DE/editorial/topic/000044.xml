@@ -5,19 +5,20 @@
   * 000044.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Ensuring a blind peer review
-  *
+  * Anonyme Begutachtung sicherstellen
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * 
   * $Id$
-  -->
+-->
 
-<topic id="editorial/topic/000044" locale="en_US" title="Ensuring a Blind Peer Review" toc="editorial/toc/000001" key="editorial.sectionEditorsRole.review.blindPeerReview">
+<topic id="editorial/topic/000044" locale="de_DE" title="Anonyme Begutachtung sicherstellen" toc="editorial/toc/000001" key="editorial.sectionEditorsRole.review.blindPeerReview">
 	<section>
-		<![CDATA[<p>To ensure the integrity of the blind peer-review for submission to this journal, every effort should be made to prevent the identities of the authors and reviewers from being known to each other. This involves the authors, editors, and reviewers (who upload documents as part of their review) checking to see if the following steps have been taken with regard to the text and the file properties:
-<ol><li>The authors of the document have deleted their names from the text, with "Author" and year used in the references and footnotes, instead of the authors' name, article title, etc.</li>
-<li>With Microsoft Office documents, author identification should also be removed from the properties for the file (see under File in Word), by clicking on the following, beginning with File on the main menu of the Microsoft application: File &gt; Save As &gt; Tools (or Options with a Mac) &gt; Security &gt; Remove personal information from file properties on save &gt; Save.</li>
-<li>With PDFs, the authors' names should also be removed from Document Properties found under File on Adobe Acrobat's main menu.</li>
+		<![CDATA[<p>Um die anonyme Begutachtung für Beitragseinreichungen in dieser Zeitschrift sicherzustellen, sollte jede nur mögliche Anstrengung unternommen werden, um zu verhindern, das Autor/innen und Gutachter/innen sich wechselseitig identifizieren können. Hierzu sind Autor/innen, Redakteur/innen und Gutachter/innen (die die Dateien als Schritt in der Begutachtung hochladen) aufgerufen zu prüfen, dass mit Blick auf den Text und die Dateieigenschaften die folgenden Schritte vollzogen wurden:
+<ol><li>Die Autor/innen haben ihre Namen aus dem Text gelöscht und den Vermerk "Autor/in" und Jahr in Literaturangaben und Fußnoten platziert statt Name, Titel usw.</li>
+<li>In Microsoft-Office-Dokumenten sollte die Autor/innenidentifikation in den Dateieigenschaften entfernt werden (siehe dort). </li>
+<li>Auch in PDF-Dateien sollten die Autor/innennamen aus den Dokumenteneigenschaften entfernt werden, die unter "Datei" im Hauptmenü von Adobe Acrobat zu finden sind.</li>
 </ol></p>]]>
 	</section>
 </topic>

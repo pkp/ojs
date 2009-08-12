@@ -5,16 +5,16 @@
   * 000034.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Announcements 
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Mitteilungen. 
   *
   * $Id$
   -->
 
-<topic id="journal/topic/000034" locale="en_US" title="Announcements" toc="journal/toc/000001" key="journal.managementPages.announcements">
+<topic id="journal/topic/000034" locale="de_DE" title="Mitteilungen" toc="journal/toc/000001" key="journal.managementPages.announcements">
 	<section>
-		<![CDATA[<p>OJS enables Journal Managers to post announcements that are then available to readers who visit the site. Posted announcements appear on the Announcements page and, optionally, on the journal's homepage.</p><p><i>Deploying the announcement module</i>. The Journal Manager must indicate in Journal Setup Step 4.4 that the journal will be publishing announcements. In addition, the Journal Manager must indicate whether or not announcements should be displayed on the journal's homepage. An introductory text may also be provided that will appear at the top of the Announcements page.</p><p><i>Creating Announcements</i>. The Journal Manager creates an announcement by selecting the announcement type (if any), indicating a title for the announcement, and providing both a short description and a full description of the announcement. The short description text is displayed to readers as a summary of the announcement, whereas the full description text is displayed when readers select to read the full announcement details. An optional expiry date may also be specified. Announcements that include an expiry date will no longer be displayed to readers once the expiry date has passed.</p>]]>
+		<![CDATA[<p>OJS ermöglicht Zeitschriftenverwalter/innen, Mitteilungen einzustellen, die dann für Lesende verfügbar sind, die die Zeitschrift besuchen. Sie erscheinen unter "Mitteilungen" und optional auf der Startseite der Zeitschrift.</p><p><i>Nutzen des Mitteilungs-Moduls</i>. Zeitschriftenverwalter/innen müssen in 4.4 des Setup angeben, dass für die Zeitschrift Mitteilungen veröffentlicht werden sollen. Zusätzlich muss angegeben, ob die Mitteilungen auch auf der Startseite erscheinen sollen. Es kann ein Einführungstext eingegeben werden, der dann am Anfang der Mitteilungsseite steht. </p><p><i>Mitteilungen erstellen</i>. Zeitschriftenverwalter/innen erstellen eine Mitteilung, indem sie zunächst, wenn gewünscht, den Typ der Mitteilung festlegen, dann einen Titel, eine kurze Beschreibung und den eigentlichen Mitteilungstext eingeben. Die Kurzzusammenfassung ist für Lesende unmittelbar sichtbar, die ausführlichere Beschreibung wird durch Anklicken geöffnet. Zusätzlich kann optional für eine Mitteilung ein Enddatum eingegeben werden, sodass diese nach Ablauf des Datums nicht mehr angezeigt wird. </p>]]>
 	</section>
-
 </topic>

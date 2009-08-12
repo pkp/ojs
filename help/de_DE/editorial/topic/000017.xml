@@ -5,15 +5,16 @@
   * 000017.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Editor's Role Submissions - In Editing 
-  *
+  * Die Rolle der Redakteur/innen - Beitragseinreichungen - In redaktioneller Bearbeitung
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * 
   * $Id$
-  -->
+-->
 
-<topic id="editorial/topic/000017" locale="en_US" title="In Editing" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.inEditing">
+<topic id="editorial/topic/000017" locale="de_DE" title="In redaktioneller Bearbeitung" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.inEditing">
 	<section>
-		<![CDATA[<p>Submissions in this queue are going through copyediting, layout and proofreading. When a Section Editor or an Editor clicks on a submission title on the In Editing Queue, they are taken to the submission's Editing page.</p>]]>	
+		<![CDATA[<p>Beiträge in dieser Liste durchlaufen Lektorat, Layout und Korrekturlektorat. Wenn (Rubrik-) Redakteur/innen den Titel eines Beitrags in der Liste redaktionell zu bearbeitender Beiträge anklicken, gelangen sie zu einer Seite mit Informationen zu dessen redaktioneller Bearbeitung.</p>]]>	
 	</section>
 </topic>

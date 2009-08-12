@@ -5,15 +5,16 @@
   * 000016.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Roles - Editor 
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Rollen - Redakteur/in. 
   *
   * $Id$
   -->
 
-<topic id="journal/topic/000016" locale="en_US" title="Editor" toc="journal/toc/000003" key="journal.roles.editor">
+<topic id="journal/topic/000016" locale="de_DE" title="Redakteur/in" toc="journal/toc/000003" key="journal.roles.editor">
 	<section>
-		<![CDATA[<p>The Editor oversees the entire editorial and publishing process. The Editor, working with the Journal Manager, typically establishes the policies and procedures for the journal, which are entered in {help_topic key="journal.managementPages.setup" text="Setup"}. In the Editorial Process, the Editor assigns submissions to the Section Editors to see through Submission Review and Submission Editing. The Editor keeps an eye on the submission's progress and assists with any difficulties. Once review is completed, the Editor typically sees the submission through the {help_topic key="editorial.sectionEditorsRole.editing" text="Editing"} process (including copyediting, layout, and proofreading) although in some journals this remains the responsibility of the Section Editor in charge of the submission's {help_topic key="editorial.sectionEditorsRole.review" text="Review"} process. The Editor also schedules submissions for publication, arranges the Table of Contents and publishes the issue as part of the {help_topic key="publishing.index" text="Publishing Process"}. The Editor can restore archived submissions to the active In Review or In Editing lists as outlined in {help_topic key="editorial.editorsRole.submissions.archives" text="Archives"}.</p>]]>	
+		<![CDATA[<p>Redakteur/innen koordinieren den gesamten Redaktions- und Publikationsprozess. Unterstützt von der Zeitschriftenverwalterin/dem Zeitschriftenverwalter legen sie Arbeitsablauf und die Richtlinien der Zeitschrift fest, die in {help_topic key="journal.managementPages.setup" text="Setup"} eingegeben werden. Sie weisen Rubrikredakteur/innen neu eingereichte Beiträge zu, die diese im Prozess der Begutachtung und der redaktionellen Bearbeitung dann betreuen. Sie beobachten den Verlauf der Beitragsbearbeitung und helfen im Falle von Problemen. Wenn der Prozess der Begutachtung beendet ist, kontrollieren die Redakteur/innen den weiteren Fortgang im Prozess der {help_topic key="editorial.sectionEditorsRole.editing" text="redaktionellen Bearbeitung"} (Lektorat, Layout und Korrekturlektorat), wobei dies in einigen Zeitschriften in der Verantwortung derjenigen Rubrikredakteur/innen verbleibt, die bereits für die Koordination des {help_topic key="editorial.sectionEditorsRole.review" text="Begutachtungs"}-Prozesses zuständig waren. Redakteur/innen weisen auch Beiträge zur Veröffentlichung zu, arrangieren die Inhaltsverzeichnisse und veröffentlichen Zeitschriftenausgaben als Teil des {help_topic key="publishing.index" text="Publikationsprozesses"}. Sie können archivierte Beiträge wieder für die Liste zu begutachtender oder redaktionell zu bearbeitender Beiträge aktivieren, wie in {help_topic key="editorial.editorsRole.submissions.archives" text="Archive"} zusammengefasst.</p>]]>	
 	</section>
 </topic>

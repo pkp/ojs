@@ -5,15 +5,16 @@
   * 000041.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Layout Editor's Role - Proofreading
-  *
+  * Die Rolle der Layouter/innen - Korrekturlektorat
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * 
   * $Id$
-  -->
+-->
 
-<topic id="editorial/topic/000041" locale="en_US" title="Proofreading" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.proofreading">
+<topic id="editorial/topic/000041" locale="de_DE" title="Korrekturlektorat" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.proofreading">
 	<section>
-		<![CDATA[<p>The Author and Proofreader will proof the files in their various formats for typographical and formatting errors. They will record the corrections needed in the Corrections text-box, following the Proofreading Instructions. Once the Proofreader emails the Layout Editor that the proofing is complete, the Layout Editor returns to the Proof Formats in Layout and makes the necessary changes, deleting the files that are corrected and uploading the corrected versions. On completing this task, the Layout Editor may wish to add comments to the Corrections text-box (e.g. explaining a change), before clicking on the email icon under Complete which will lead to an email for notifying the Section Editor that the submission is ready to be scheduled for publication.</p>]]>	
+		<![CDATA[<p>Die Autor/innen und Korrekturlektor/innen prüfen die Dateien in den verschiedenen Formaten auf typografische und Formatierungsfehler. Erforderliche Korrekturen werden in dem hierfür vorgesehenen Korrekturfeld dokumentiert, wobei die Richtlinien zum Korrekturlektorat befolgt werden sollten. Sobald die Korrekturlektor/innen die zuständigen Layouter/innen über das Ende des Korrekturlektorats informiert haben, sichten diese die Fahnen, machen erforderliche Änderungen, löschen frühere Fassungen und laden die korrekten Versionen hoch. Danach können sie in das Korrekturfeld Kommentare eingeben (z.B. um Änderungen zu erklären) und schließlich das Mail-Symbol unter "Abgeschlossen" anklicken, um die zuständigen Rubrikredakteur/innen zu informieren, dass der Beitrag publikationsfertig ist.</p>]]>	
 	</section>
 </topic>

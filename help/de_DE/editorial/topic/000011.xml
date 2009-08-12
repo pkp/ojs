@@ -5,15 +5,17 @@
   * 000011.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Author's Role Editing Index 
-  *
+  * Die Rolle der Autor/innen - Redaktionelle Arbeiten: Index
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * 
   * $Id$
-  -->
+-->
 
-<topic id="editorial/topic/000011" locale="en_US" title="Editing" toc="editorial/toc/000009" subtoc="editorial/toc/000011" key="editorial.authorsRole.editing">
+
+<topic id="editorial/topic/000011" locale="de_DE" title="Redaktionelle Arbeiten" toc="editorial/toc/000009" subtoc="editorial/toc/000011" key="editorial.authorsRole.editing">
 	<section>
-		<![CDATA[<p>The Author contributes to both the Copyediting and Proofreading of the submission in the Editing stage, as the submission is prepared for electronic and/or print publication.</p>]]>	
+		<![CDATA[<p>Die Autor/innen sind am Lektorat und Korrekturlektorat in der Phase der redaktionellen Überarbeitung, d.h. wenn ein Beitrag für die elektronische oder Print-Veröffentlichung vorbereitet wird, beteiligt.</p>]]>	
 	</section>
 </topic>

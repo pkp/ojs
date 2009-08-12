@@ -5,20 +5,21 @@
   * 000002.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * table of contents for Editorial Process - Editor's Role - Submissions
+  * Inhaltsverzeichnis für den redaktionellen Prozess - Die Rolle der Redakteur/innen - Beitragseinreichungen. 
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).*
   *
   * $Id$
   -->
 
-<toc id="editorial/toc/000002" locale="en_US" title="Submissions" parent_topic="editorial/topic/000002">
-	<topic id="editorial/topic/000015" title="Unassigned" />
-	<topic id="editorial/topic/000016" title="In Review" />
-	<topic id="editorial/topic/000017" title="In Editing" />
-	<topic id="editorial/topic/000018" title="Archives" />
+<toc id="editorial/toc/000002" locale="de_DE" title="Beitragseinreichungen" parent_topic="editorial/topic/000002">
+	<topic id="editorial/topic/000015" title="Nicht zugewiesen" />
+	<topic id="editorial/topic/000016" title="In Begutachtung" />
+	<topic id="editorial/topic/000017" title="In redaktioneller Bearbeitung" />
+	<topic id="editorial/topic/000018" title="Archive" />
 
-	<breadcrumb url="editorial/topic/000000" title="Editorial Process" />
-	<breadcrumb url="editorial/topic/000001" title="Editor's Role" />
-	<breadcrumb url="editorial/topic/000002" title="Submissions" />
+	<breadcrumb url="editorial/topic/000000" title="Der redaktionelle Prozess" />
+	<breadcrumb url="editorial/topic/000001" title="Die Rolle der Redakteur/innen" />
+	<breadcrumb url="editorial/topic/000002" title="Beitragseinreichungen" />
 </toc>

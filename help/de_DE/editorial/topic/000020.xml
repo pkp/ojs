@@ -5,15 +5,16 @@
   * 000020.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Editor's Role Submission Summary - Submission Metadata
-  *
+  * Die Rolle der Redakteur/innen - Zusammenfassung zur Einreichung - Metadaten zum Beitrag
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * 
   * $Id$
-  -->
+-->
 
-<topic id="editorial/topic/000020" locale="en_US" title="Submission Metadata" toc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary.submissionMetadata">
+<topic id="editorial/topic/000020" locale="de_DE" title="Metadaten zum Beitrag" toc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary.submissionMetadata">
 	<section>
-		<![CDATA[<p>The metadata which will be used to index the submission on publication has been entered by the Author, and can be edited by the Section Editor, as well as the Author and Copyeditor during the Editorial Process.</p>]]>	
+		<![CDATA[<p>Die Metadaten, die zum Indizieren des Beitrags nach Publikation verwandt werden, werden durch die Autor/innen eingegeben und können durch die zugewiesene Rubrikredakteurin bzw. den zugewiesenen Rubrikredakteur, durch die Autor/innen und durch die Lektor/innen  im Verlauf des redaktionellen Prozesses bearbeitet werden.</p>]]>	
 	</section>
 </topic>

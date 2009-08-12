@@ -5,33 +5,34 @@
   * 000002.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Site Administration - Site Management 
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Serververwaltung - Serververwaltung. 
   *
   * $Id$
   -->
 
-<topic id="site/topic/000002" locale="en_US" title="Site Management" toc="site/toc/000000" key="site.siteManagement">
+<topic id="site/topic/000002" locale="de_DE" title="Serververwaltung" toc="site/toc/000000" key="site.siteManagement">
 	<section>
-		<![CDATA[<p>OJS is designed to be a multi-journal system, and the Site Administrator is responsible for configuring site-level settings and creating new journals to be hosted within a single site. Journal sites are entirely independent, with the exception of user accounts; while a user may participate in any combination of roles and journals, the same email address and username will refer to the same user regardless of journal.</p>]]>
+		<![CDATA[<p>Mittels OJS können mehrere Zeitschriften betrieben werden, und die Serververwalterin/der Serververwalter ist zuständig für die Konfiguration serverseitiger Settings und für das Erstellen neuer Zeitschriften, die auf dem Server gehostet werden sollen. Die Sites der einzelnen Zeitschriften sind mit Ausnahme der Nutzer/innenkonten vollständig unabhängig voneinander. Nutzer/innen können in unterschiedlichen Rollen und Zeitschriften beteiligt sein, E-Mailadresse und Benutzer/innennamen beziehen sich immer auf eine Nutzerin/einen Nutzer, unabhängig von der Zeitschrift.</p>]]>
 	</section>
 	
-	<section title="Site Settings">
-		<![CDATA[<p>Basic information is entered by the Site Administrator that is applicable to all journals hosted by the site, including the site title and description, and contact information.</p>
-		<p><em>Journal Redirect.</em> This setting can be used to ensure that all requests are redirected to a particular journal web site. Typically this setting is used when a site is hosting a single journal.</p>]]>
+	<section title="Server-Settings">
+		<![CDATA[<p>Allgemeine Informationen, die für alle Zeitschriften auf einem Server relevant sind, werden von der Serververwalterin/dem Serververwalter eingegeben, incl. des Site-Namens, einer Beschreibung und von Kontaktinformationen.</p>
+		<p><em>Zeitschriften-Redirect</em>Dieses Setting kann genutzt werden, um sicherzustellen, dass alle Zugriffe an eine spezifische Zeitschriften-Site weitergeleitet werden. Normalerweise wird diese Einstellung verwandt, wenn ein Server nur eine Zeitschrift hostet. </p>]]>
 	</section>
 	
-	<section title="Hosted Journals">
-		<![CDATA[<p>As OJS allows any number of individual and distinct journal web sites to be generated, new journals can be created and managed at any time. Each journal that is created can be accessed through a unique URL based on a path name entered by the Site Administrator. Journals that are currently in the process of being set up and configured can be hidden from the main site until such time that they are ready to go live.</p>]]>
+	<section title="Zeitschriften, die gehostet werden">
+		<![CDATA[<p>Da es mit OJS möglich ist, eine beliebige Zahl individueller und voneinander unabhängiger Zeitschriften zu generieren, können neue Zeitschriften jederzeit erstellt und verwaltet werden. Auf jede so erstellte Zeitschrift kann mit einer eigenen URL, deren Pfadname von den Serververwalter/innen eingegeben werden muss, zugegriffen werden. Zeitschriften, die gerade erstellt werden, können auf der Hauptsite solange nicht angezeigt werden, bis ihr Setup abgeschlossen ist.</p>]]>
 	</section>
 	
-	<section title="Languages">
-		<![CDATA[<p>OJS is designed to be a multilingual system, allowing journals supporting a wide variety of languages to be hosted under a single site. The Site Administrator can specify the default language of the site and install additional locales as they become available to make other languages available for use by journals.</p>
-		<p>Additional language packages will typically be available for download from the Open Journal Systems <a href="http://pkp.sfu.ca/" target="_blank">web site</a> as user-contributed translations are received. These packages can be installed into an existing OJS system to make them available to journals.</p>]]>
+	<section title="Sprachen">
+		<![CDATA[<p>OJS ist ein multilinguales Sprachen, sodass Zeitschriften, die auf einem Server gehostet werden, unterschiedliche Sprachversionen verwenden können. Die Serververwalter/innen können die Standardsprache für einen Server einstellen und zusätzliche Regionaleinstellungen, wenn  verfügbar, installieren, damit die Zeitschriften unterschiedliche Spracheinstellungen nutzen können.</p>
+		<p>Zusätzliche Sprachversionen stehen normalerweise zum Download auf der Open Journal Systems-<a href="http://pkp.sfu.ca/" target="_blank">Website</a> zur Verfügung, sobald sie von Nutzer/innen bereitgestellt werden. Solche Versionen können in ein bereits laufendes OJS-System installiert werden, damit die Zeitschriften auf einem Server sie nutzen können.</p>]]>
 	</section>
 	
-	<section title="Authentication Sources">
-		<![CDATA[<p>By default, OJS authenticates users against its internal database. It is possible, however, to use other methods of authentication, such as LDAP. Additional authentication sources are implemented as OJS plugins; refer to the documentation shipped with each plugin for details.</p>]]>
+	<section title="Authentifizierungsquellen">
+		<![CDATA[<p>Als Standardeinstellung authentifiziert OJS Nutzer/innen mittels einer internen Datenbank. Es sind jedoch auch andere Authentifizierungsmethoden wie z.B. LDAP möglich. Zusätzliche Authentifizierungsquellen sind als OJS-Plug-Ins verfügbar; siehe hierzu die Dokumentation der einzelnen Plug-Ins für ausführlichere Informationen.</p>]]>
 	</section>
 </topic>

@@ -5,15 +5,16 @@
   * 000014.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Proofreader's Role Index 
-  *
+  * Die Rolle der Korrekturlektor/innen: Index
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * 
   * $Id$
-  -->
+-->
 
-<topic id="editorial/topic/000014" locale="en_US" title="Proofreader's Role" toc="editorial/toc/000000" subtoc="editorial/toc/000014" key="editorial.proofreadersRole">
+<topic id="editorial/topic/000014" locale="de_DE" title="Die Rolle der Korrekturlektor/innen" toc="editorial/toc/000000" subtoc="editorial/toc/000014" key="editorial.proofreadersRole">
 	<section>
-		<![CDATA[<p>The Proofreader will receive an email from the Section Editor requesting that the Proofreader complete a round, or rounds, of proofreading. It is then the Proofreader's duty to accept or deny the responsibility; if accepted, the Proofreader can then log in and begin the proofreading process from their User Home.</p>]]>	
+		<![CDATA[<p> Die ausgewählte Korrekturlektorin bzw. der ausgewählte Korrekturlektor erhält eine E-Mailanfrage der Rubrikenredakteur/innen für eine (oder mehrere) Korrekturschlaufen. Die Korrekturlektor/innen müssen dann ihre Zuständigkeit bestätigen oder zurückweisen; im Fall der Bestätigung kann sie oder er sich einloggen und mit dem Korrekturprozess von der persönlichen Startseite aus beginnen.</p>]]>	
 	</section>
 </topic>

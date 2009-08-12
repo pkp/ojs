@@ -77,7 +77,7 @@
 	<country name="Kroatien" code="HR"/>
 	<country name="Kuba" code="CU"/>
 	<country name="Zypern" code="CY"/>
-	<country name="Tchechische Republik" code="CZ"/>
+	<country name="Tschechische Republik" code="CZ"/>
 	<country name="Dänemark" code="DK"/>
 	<country name="Dschibuti" code="DJ"/>
 	<country name="Dominika" code="DM"/>
@@ -245,7 +245,7 @@
 	<country name="Uganda" code="UG"/>
 	<country name="Ukraine" code="UA"/>
 	<country name="Vereinigte Arabische Emirate" code="AE"/>
-	<country name="Vereinigtes Königreich" code="GB"/>
+	<country name="Großbritannien" code="GB"/>
 	<country name="Vereinigte Staaten" code="US"/>
 	<country name="Vereinigte Staaten kleinere äussere Inseln" code="UM"/>
 	<country name="Uruguay" code="UY"/>

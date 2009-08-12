@@ -5,18 +5,19 @@
   * 000003.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * table of contents for Editorial Process - Editor's Role - Submission Summary
+  * Inhaltsverzeichnis für den redaktionellen Prozess - Die Rolle der Redakteur/innen - Zusammenfassung zur Einreichung. 
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
   *
   * $Id$
   -->
 
-<toc id="editorial/toc/000003" locale="en_US" title="Submission Summary" parent_topic="editorial/topic/000003">
-	<topic id="editorial/topic/000019" title="Submission Management" />
-	<topic id="editorial/topic/000020" title="Submission Metadata" />
+<toc id="editorial/toc/000003" locale="de_DE" title="Zusammenfassung zur Einreichung" parent_topic="editorial/topic/000003">
+	<topic id="editorial/topic/000019" title="Beitragsbearbeitung" />
+	<topic id="editorial/topic/000020" title="Metadaten des Beitrags" />
 
-	<breadcrumb url="editorial/topic/000000" title="Editorial Process" />
-	<breadcrumb url="editorial/topic/000001" title="Editor's Role" />
-	<breadcrumb url="editorial/topic/000003" title="Submission Summary" />
+	<breadcrumb url="editorial/topic/000000" title="Der redaktionelle Prozess" />
+	<breadcrumb url="editorial/topic/000001" title="Die Rolle der Redakteur/innen" />
+	<breadcrumb url="editorial/topic/000003" title="Zusammenfassung zur Einreichung" />
 </toc>

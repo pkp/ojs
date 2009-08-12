@@ -5,15 +5,16 @@
   * 000009.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Management Pages - Reading Tools
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Verwaltungsseiten - Lesewerkzeuge. 
   *
   * $Id$
   -->
 
-<topic id="journal/topic/000009" locale="en_US" title="Reading Tools" toc="journal/toc/000001" subtoc="journal/toc/000005" key="journal.managementPages.readingTools">
+<topic id="journal/topic/000009" locale="de_DE" title="Lesewerkzeuge" toc="journal/toc/000001" subtoc="journal/toc/000005" key="journal.managementPages.readingTools">
 	<section>
-		<![CDATA[<p>The Journal Manager is able to select a set of Reading Tools that will appear in a frame to the right of all items in sections of the journal that are indexed (e.g., Articles and not Conference Announcements). The Reading Tools are designed to assist experienced and novice readers by providing a rich context of related materials from a wide variety of largely open access sources. The tools use an author's keywords to automatically search a relevant open access database for related materials which are presented to the reader in another window. Readers have a choice of tools, and within each tool a choice of databases, along with access to information about the database.</p><p>In Reading Tool Options, the Journal Manager can select general Journal Item Tools, such as "About the Author", "How to Cite Item" and "Print Item", and can also select between a number of Related Item Tools (e.g., Humanities, Education, Physics, etc.), which will provide discipline- or area-specific resources. The Journal Manager is able to edit or delete existing Related Item Tools and add new ones as well. Also see {help_topic key="user.readingTools" text="Reading Tools"} under Journal Web Site.</p>]]>
+		<![CDATA[<p>Zeitschriftenverwalter/innen können ein Set an Lesewerkzeugen auswählen, die in einem Rahmen rechts von denjenigen Beiträgen erscheinen, die indiziert worden sind (also z.B. Artikel und nicht Tagungsankündigungen). Die Lesewerkzeuge sollen erfahrene Leser/innen und Noviz/innen unterstützen, indem sie einen reichhaltigen Kontext verwandter Materialien aus unterschiedlichen, zumeist Open-Access-Quellen anbieten. So können bspw. die von den jeweiligen Autor/innen angegebenen Schlagworte genutzt werden, um mittels eines neu geöffneten Browserfensters relevante Open-Access-Datenbanken auf ähnliches Material zu durchsuchen. Leser/innen haben verschiedene Werkzeuge zur Auswahl und für jedes Werkzeug unterschiedliche Datenbanken, zusammen mit Informationen über die jeweilige Datenbank.</p><p>Über "Lesewerkzeug-Optionen" können Zeitschriftenverwalter/innen spezifische "Zeitschriftenwerkzeuge" auswählen, z.B. "Über die Autorin/den Autor", "Zitation", "Beitrag drucken", und sie können auch einige "Werkzeuge für Verwandte Beiträge" (z.B. Geisteswissenschaften, Erziehungswissenschaft, Physik) auswählen, die den Zugang zu disziplin- oder bereichsspezifischen Ressourcen erlauben. Zeitschriftenverwalter/innen können bereits verfügbare "Werkzeuge für Verwandte Beiträge" löschen und neue ergänzen. Siehe hierzu auch {help_topic key="user.readingTools" text="Lesewerkzeuge"} auf der Webseite der Zeitschrift.</p>]]>
 	</section>
 </topic>

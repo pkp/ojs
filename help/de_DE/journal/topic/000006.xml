@@ -5,19 +5,20 @@
   * 000006.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Management Pages - Prepared Emails 
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Verwaltungsseiten - E-Mail-Vorlagen. 
   *
   * $Id$
   -->
 
-<topic id="journal/topic/000006" locale="en_US" title="Prepared Emails" toc="journal/toc/000001" key="journal.managementPages.emails">
+<topic id="journal/topic/000006" locale="de_DE" title="E-Mail-Vorlagen" toc="journal/toc/000001" key="journal.managementPages.emails">
 	<section>
-		<![CDATA[<p>The journal uses a variety of prepared emails to direct the Editorial and Publishing Processes. The emails are all addressed to the appropriate recipient(s) in advance (for example, the Section Editor notifies the Copyeditor that copyediting for a submission is ready to begin). The Journal Manager can edit default versions of these emails (available under Prepared Emails on the Journal Administration page). As well, the emails can be edited by the user before they are sent. The system automatically inserts relevant and specific information into the email prior to presenting it to the user to send (for example, the title and abstract of the submission in question or the date which a review is due). The email also provides the addressee with instructions to find their way to the appropriate web page, so that they can undertake the task requested of them.</p>]]>	
+		<![CDATA[<p>Die Zeitschrift nutzt eine Vielzahl an E-Mail-Vorlagen für die Organisation des Redaktions- und Veröffentlichungsprozesses. Die Mails sind an die im Zeitschriftenprozess jeweils beteiligten Rezipient/innen adressiert (z.B. informiert die Rubrikredakteurin/der Rubrikredakteur die Lektorin/den Lektor, dass das Lektorat für einen Beitrag beginnen kann). Die Zeitschriftenverwalterin/der Zeitschriftenverwalter kann die Standardversionen dieser Mails bearbeiten (unter E-Mail-Vorlagen auf der Zeitschriftenverwaltungsseite). Ebenso können die Mails von den jeweiligen Nutzer/innen vor Versenden bearbeitet werden. Bevor eine Mail der jeweiligen Nutzerin/dem jeweiligen Nutzer angezeigt wird, fügt das System automatisch bestimmte relevante Informationen hinzu (z.B. Titel und Abstract eines Beitrags oder Zeitpunkt der Fälligkeit eines Gutachtens). Außerdem werden Informationen hinzugefügt, die den jeweiligen Adressat/innen der Mail helfen, die richtige Webseite zu finden, um dann die erforderlichen Arbeiten zu tätigen.</p>]]>	
 	</section>
 	
-	<section title="Sending Emails">
-		<![CDATA[<p>OJS uses email to coordinate the functioning of the editorial and publishing process. All of the prepared emails have default versions, which come up each time the relevant email icon is clicked. The default emails can edited by the Journal Manager at any point. As well, an email can be edited by the sender prior to mailing it. When an email icon is clicked, it will have the intended recipient automatically filled in, along with all of the pertinent information needed for the editorial or publishing function. The sender can add comments or further direction, as needed. The sender can alter the recipient's email address and additional recipients, except in those cases that involve the sending of passwords (for security reasons). Note that correcting a recipient's address does not alter the email address listed on their Profile page in this system. Correcting the recipient's email address on a permanent basis for this system requires notifying the Journal Manager, who has the authority to make such changes to users' profiles.</p>]]>
+	<section title="E-Mails verschicken">
+		<![CDATA[<p>In OJS werden Mails zur Koordination des Redaktions- und Veröffentlichungsprozesses genutzt. Für alle E-Mail-Vorlagen gibt es Standardtexte, die immer dann erscheinen, wenn das jeweils relevante Mail-Symbol angeklickt wird. Die Standardmails können von den Zeitschriftenverwalter/innen jederzeit bearbeitet werden, ebenso von den Sender/innen bevor die Mail verschickt wird. Wird eine Mail-Symbol angeklickt, ist die jeweils intendierte Rezipientin/der jeweils intendierte Rezipient bereits automatisch eingefügt, zusammen mit allen weiteren Informationen, die in dem konkreten Abschnitt des Arbeitens erforderlich sind. Sender/innen können nun, wenn erforderlich, Kommentare oder zusätzliche Empfänger/innen ergänzen. Sie können die Mailadresse des Hauptkontakts ändern oder die anderer Empfänger/innen außer (aus Sicherheitsgründen) in den Fällen, in denen ein Passwort verschickt werden soll. Dabei sollte beachtet werden, dass das Ändern einer Adresse in einer Mail nicht das Ändern dieser Adresse im Profil der jeweiligen Nutzerin/des jeweiligen Nutzers zur Folge hat. Eine solche Änderung muss, wenn  gewünscht, an die Zeitschriftenverwalter/innen weitergegeben werden, die autorisiert sind, solche Änderungen auch in individuellen Nutzer/innenprofilen vorzunehmen.</p>]]>
 	</section>
 </topic>

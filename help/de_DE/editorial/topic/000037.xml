@@ -5,15 +5,16 @@
   * 000037.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Copyeditor's Role - Submissions
-  *
+  * Die Rolle der Lektor/innen - Einreichungen
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * 
   * $Id$
-  -->
+-->
 
-<topic id="editorial/topic/000037" locale="en_US" title="Submissions" toc="editorial/toc/000012" key="editorial.copyeditorsRole.submissions">
+<topic id="editorial/topic/000037" locale="de_DE" title="Einreichungen" toc="editorial/toc/000012" key="editorial.copyeditorsRole.submissions">
 	<section>
-		<![CDATA[<p>Once the Copyeditor logs in, clicking on the Copyeditor link in the User Home page leads to the Submissions queue. This queue lists those works which they have been asked to copyedit. Access is also provided to those submissions which they have completed in the past, via the Archive link.</p><p>To access the Copyediting page for a particular submission, the Copyeditor clicks on the work's title appearing in the Active Submission list.</p>]]>	
+		<![CDATA[<p>Wenn die Lektorin/der Lektor sich einloggt, gelangt sie/er über das Anklicken von "Lektor/in" auf der persönlichen Startseite zur Liste aktueller Beiträge, d.h. derjenigen Beiträge, deren Lektorat ihr/ihm zugewiesen wurden bzw. die in Arbeit sind. Auch früher lektorierte Beiträge können über den "Archiv"-Link eingesehen werden.</p><p>Um die Lektoratsseite für einen bestimmten Beitrag aufzurufen, muss dessen Titel in der Liste aktueller Beiträge angeklickt werden.</p>]]>	
 	</section>
 </topic>

@@ -5,18 +5,19 @@
   * 000011.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * table of contents for Editorial Process - Author's Role - Editing
+  * Inhaltsverzeichnis für den redaktionellen Prozess - Die Rolle der Autor/innen - Redaktionelle Bearbeitung. 
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
   *
-  * $Id$
+  *$Id$
   -->
 
-<toc id="editorial/toc/000011" locale="en_US" title="Editing" parent_topic="editorial/topic/000011">
-	<topic id="editorial/topic/000035" title="Copyediting" />
-	<topic id="editorial/topic/000036" title="Proofreading" />
+<toc id="editorial/toc/000011" locale="de_DE" title="Redaktionelle Bearbeitung" parent_topic="editorial/topic/000011">
+	<topic id="editorial/topic/000035" title="Lektorat" />
+	<topic id="editorial/topic/000036" title="Korrekturlektorat" />
 
-	<breadcrumb url="editorial/topic/000000" title="Editorial Process" />
-	<breadcrumb url="editorial/topic/000009" title="Author's Role" />
-	<breadcrumb url="editorial/topic/000011" title="Editing" />
+	<breadcrumb url="editorial/topic/000000" title="Der redaktionelle Prozess" />
+	<breadcrumb url="editorial/topic/000009" title="Die Rolle der Autor/innen" />
+	<breadcrumb url="editorial/topic/000011" title="Redaktionelle Bearbeitung" />
 </toc>

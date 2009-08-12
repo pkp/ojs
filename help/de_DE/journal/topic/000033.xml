@@ -5,39 +5,40 @@
   * 000033.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Management Pages - Merge Users
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Verwaltungsseiten - Benutzer/innen zusammenführen. 
   *
   * $Id$
   -->
 
-<topic id="journal/topic/000033" locale="en_US" title="Merge Users" toc="journal/toc/000002" key="journal.managementPages.mergeUsers">
+<topic id="journal/topic/000033" locale="de_DE" title="Benutzer/innen zusammenführen" toc="journal/toc/000002" key="journal.managementPages.mergeUsers">
 	<section>
-		<![CDATA[<p>The Merge Users feature, available from Journal Management under the Users heading, allows the Journal Manager to merge two user accounts into a single account, transferring edit assignments, submissions, and numerous other records from one account to the other and effectively deleting the first.</p>
-		<p>The following items are transferred:
+		<![CDATA[<p>Die "Benutzer/innen zusammenführen"-Funktionalität, verfügbar in "Zeitschriftenverwaltung",  erlaubt Zeitschriftenverwalter/innen, zwei Nutzer/innenkonten in ein Konto zusammenzuführen, wobei  Zuweisungen, Beiträge und viele andere Daten von einem Konto in ein anderes überführt werden und das erste Konto gelöscht wird.</p>
+		<p>Die folgenden Items werden transferiert:
 			<ul>
-				<li>Article authorship</li>
-				<li>Public comments on articles</li>
-				<li>Article notes</li>
-				<li>Editor assignments and decisions</li>
-				<li>Review assignments</li>
-				<li>Layout editor assignments</li>
-				<li>Proofreader assignments</li>
-				<li>Article email and event log entries</li>
-				<li>Reviewer access keys</li>
-				<li>Roles</li>
+				<li>Artikel-Autor/innenschaft</li>
+				<li>Öffentliche Kommentare zu Artikeln</li>
+				<li>Artikelanmerkungen</li>
+				<li> Zuweisungen und Entscheidungen als Redakteur/in</li>
+				<li> Zuweisungen als Gutachter/in</li>
+				<li>Zuweisungen als Layouter/in</li>
+				<li> Zuweisungen als Lektor/in</li>
+				<li>Mail und Ereignisdokumentationen</li>
+				<li>Gutachter/innen-Zugangsschlüssel</li>
+				<li>Rollen</li>
 			</ul>
-		The following items are <strong>not</strong> transferred:
+		Die folgenden Items werden <strong>nicht</strong> transferiert:
 			<ul>
-				<li>Sessions</li>
-				<li>Subscriptions</li>
-				<li>Notification status (i.e. whether the user has signed up to receive notifications about journal news)</li>
-				<li>Editorial team memberships</li>
-				<li>Section Editor status on sections</li>
-				<li>User profile information (e.g. first name, last name, etc.)</li>
+				<li>Sitzungen</li>
+				<li>Abonnements</li>
+				<li>Benachrichtigungsstatus (d.h. ob eine Nutzerin/ein Nutzer sich registriert hat, um über Zeitschriften-News informiert zu werden)</li>
+				<li>Redaktionsmitgliedschaft </li>
+				<li>Status als Rubrikredakteur/in</li>
+				<li>Nutzer/innenprofil-Information (z.B. Vorname, Nachname usw.) </li>
 			</ul>
 		</p>
-		<p>This feature should be used with caution, as it is not reversible and involves the transfer of records from one user to another.</p>]]>
+		<p>Diese Funktionalität sollte sehr vorsichtig verwandt werden, da der vollzogene Transfer von Datensätzen nicht reversibel ist.</p>]]>
 	</section>
 </topic>

@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic SYSTEM "../../../topic.dtd">
 
-<!--
-  * locale.xml
+ <!--
+  * 000004.xml
   *
-  * C* Copyright (c) 2003-2009 John Willinsky
+  * Copyright (c) 2003-2009 John Willinsky
   * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Regionalisierungszeichenketten für die de_DE (Deutsche) Regionaleinstellung.
+  * Die Rolle der Rubrikenredakteur/innen: Index. 
   * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * 
+  * $Id$
   
   -->
 
-<topic id="editorial/topic/000004" locale="de_DE" title="Die Rolle der Rubrikenherausgeber/innen" toc="editorial/toc/000000" subtoc="editorial/toc/000004" key="editorial.sectionEditorsRole">
+<topic id="editorial/topic/000004" locale="de_DE" title="Die Rolle der Rubrikenredakteur/innen" toc="editorial/toc/000000" subtoc="editorial/toc/000004" key="editorial.sectionEditorsRole">
 	<section>
-		<![CDATA[<p>Rubrikenherausgeber/innen sind zumeist für die Organisation der Begutachtung und der redaktionellen Weiterbearbeitung im Falle akzeptierter Beiträge zuständig. Abhängig von den Richtlinien einer Zeitschrift können Herausgeber/innen Rubrikenherausgeber/innen jedoch nur um die Organisation des Begutachtungsprozesses bitten und selbst die weitere Organisation des redaktionellen Prozesses nach positiver Begutachtung wahrnehmen: Sie entscheiden, ob sie auch in dieser Phase Unterstützung durch die Rubrikenherausgeber/innen erbitten.</p>]]>	
+		<![CDATA[<p>Die Rubrikredakteur/innen sind zumeist für die Organisation der Begutachtung und der redaktionellen Weiterbearbeitung im Falle akzeptierter Beiträge zuständig. Abhängig von den Richtlinien einer Zeitschrift können die Redakteur/innen die Rubrikredakteur/innen jedoch nur um die Organisation des Begutachtungsprozesses bitten und selbst (in der Rolle von Rubrikredakteur/innen) die weitere Organisation des redaktionellen Prozesses nach positiver Begutachtung wahrnehmen. Die Redakteur/innen weisen den Rubrikredakteur/innen die einzelnen Einreichungen und deren Bearbeitung im Redaktionsprozess zu.</p>]]>	
 	</section>
 </topic>

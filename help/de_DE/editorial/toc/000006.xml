@@ -5,19 +5,20 @@
   * 000006.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * table of contents for Editorial Process - Section Editor's Role - Review
+  * Inhaltsverzeichnis für den redaktionellen Prozess - Die Rolle der Rubrikenredakteur/innen. 
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).*
   *
   * $Id$
   -->
 
-<toc id="editorial/toc/000006" locale="en_US" title="Review" parent_topic="editorial/topic/000006">
-	<topic id="editorial/topic/000024" title="Review Version" />
+<toc id="editorial/toc/000006" locale="de_DE" title="Begutachtung" parent_topic="editorial/topic/000006">
+	<topic id="editorial/topic/000024" title="Begutachtungsfassung" />
 	<topic id="editorial/topic/000025" title="Peer Review" />
-	<topic id="editorial/topic/000026" title="Editor Decision" />
+	<topic id="editorial/topic/000026" title="Entscheidung der Redakteurin/des Redakteurs" />
 
-	<breadcrumb url="editorial/topic/000000" title="Editorial Process" />
-	<breadcrumb url="editorial/topic/000004" title="Section Editor's Role" />
+	<breadcrumb url="editorial/topic/000000" title="Der redaktionelle Prozess" />
+	<breadcrumb url="editorial/topic/000004" title="Die Rolle der Rubrikenredakteur/innen" />
 	<breadcrumb url="editorial/topic/000006" title="Review" />
 </toc>

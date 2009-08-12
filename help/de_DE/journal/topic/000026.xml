@@ -5,15 +5,16 @@
   * 000026.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Management Pages - Reading Tools - Settings
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Verwaltungsseiten - Lesewerkzeuge - Einstellungen. 
   *
   * $Id$
   -->
 
-<topic id="journal/topic/000026" locale="en_US" title="Reading Tool Options" toc="journal/toc/000005" key="journal.managementPages.readingTools.settings">
+<topic id="journal/topic/000026" locale="de_DE" title="Optionen für Lesewerkzeuge" toc="journal/toc/000005" key="journal.managementPages.readingTools.settings">
 	<section>
-		<![CDATA[<p>The Journal Manager can select one or all of the generic optional links to appear as part of the set of tools, to appear in a frame to the right of all items in sections of the journal that are indexed (e.g., Articles and not Conference Announcements). The Journal Manager can also select a discipline- or area-based set of Reading Tools, shown as Related Items to be displayed. The Journal Manager can examine, edit, delete or add to the tools in each Related Items set by going to Related Item Sets, under Reading Tools.</p><p>The same set of Reading Tools appears with every item in the indexed sections of the journal. However, the Reading Tools use the indexing terms provided by the author to ensure that the materials found in the databases provided is relevant. The Journal Manager can change the selected Reading Tools at any point.</p>]]>
+		<![CDATA[<p>Zeitschriftenverwalter/innen können einen oder mehrere der generischen, optionalen Links auswählen, die dann als Werkzeuge im rechten Rahmen aller Beiträge in indizierten Rubriken erscheinen (also z.B. für Artikel, aber nicht für Tagungsankündigungen). Sie können auch ein disziplin- oder bereichsspezifisches Set an Lesewerkzeugen auswählen, die dann als "Verwandte Beiträge" angezeigt werden. Zeitschriftenverwalter/innen können in "Verwandte Beiträge" unter "Lesewerkzeuge" Elemente prüfen, bearbeiten, löschen oder hinzufügen.</p><p>Die ausgewählten Lesewerkzeuge werden für jeden in indizierten Rubriken veröffentlichten Beitrag angezeigt. Für die Lesewerkzeuge werden die Indizierungsangaben der Autor/innen zu den jeweiligen Beiträgen genutzt, um sicherzustellen, dass in Datenbanken relevantes Material auffindbar ist. Zeitschriftenverwalter/innen können die ausgewählten Lesewerkzeuge zu jeder Zeit ändern.</p>]]>
 	</section>
 </topic>

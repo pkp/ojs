@@ -5,15 +5,16 @@
   * 000004.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Author Submission Process - Supplementary Files 
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Autor/innen - Beitragseinreichung - Zusatzdateien. 
   *
   * $Id$
   -->
 
-<topic id="submission/topic/000004" locale="en_US" title="Supplementary Files" toc="submission/toc/000000" key="submission.supplementaryFiles">
+<topic id="submission/topic/000004" locale="de_DE" title="Zusatzdateien" toc="submission/toc/000000" key="submission.supplementaryFiles">
 	<section>
-		<![CDATA[<p>The Author is able to upload the Supplementary Files in Step 4 of the Submission Process. The Supplementary Files are intended to include research data sets, research instruments, source texts or other materials that might otherwise form an appendix to the submission but warrant being treated as separate documents as they may have value on their own merits. In addition, the Author will index Supplementary Files independently of the submission thus enabling the Files to be part of a larger index and to be found by those looking for these particular type of items.</p><p><i>Supplementary File formats</i>. Supplementary Files are also uploaded in their original file format &mdash; and on which there are no restrictions &mdash; and remain in that format, as opposed to the rest of the submission which must be in a standard manuscript format and will be transposed into a standard publication format. This means that data sets that are available in spread-sheets or flash demonstrations can be uploaded and preserved in that format; this may pose challenges for readers. Authors need to take this into account perhaps by providing, in the description of the Supplementary File, where freely downloadable software is available to open and view the Supplementary File can be found.</p>]]>	
+		<![CDATA[<p>Autor/innen können im 4. Schritt des Einreichungsprozesses Zusatzdateien hochladen. Hierzu können Forschungsdaten, Forschungsinstrumente, Quellentexte oder andere Materialien gehören, die sonst als Appendix zugefügt würden, hier aber als eigenes Dokument behandelt werden, da sie einen eigenen Wert haben können. Zusätzlich können Autor/innen Zusatzdateien unabhängig vom eigentlichen Beitrag indizieren, sodass sie leichter von denen gefunden werden können, die nach dieser spezifischen Dokumentsorte suchen.</p><p><i>Formate von Zusatzdateien</i>. Zusatzdateien werden im Originaldateiformat hochgeladen &mdash; es gibt hier keine Restriktionen &mdash; und verbleiben in diesem Format, anders als der eigentliche Beitrag, der in einem standardisierten Format sein muss und in ein eigenes Publikationsformat umgewandelt wird. Dies bedeutet, dass auch Tabellenkalkulationen oder Flash-Demonstrationen hochgeladen und in diesem Format präsentiert werden können; was möglicherweise einige Herausforderungen für Lesende bedeutet. Autor/innen sollten dies im Auge haben und mit der Beschreibung der Zusatzdateien angeben, wo frei zugängliche Software zum Öffnen und Ansehen der Zusatzdateien heruntergeladen werden kann.</p>]]>	
 	</section>
 </topic>

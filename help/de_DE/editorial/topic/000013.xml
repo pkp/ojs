@@ -5,15 +5,16 @@
   * 000013.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Layout Editor's Role Index 
-  *
+  * Die Rolle der Layouter/innen: Index
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * 
   * $Id$
-  -->
+-->
 
-<topic id="editorial/topic/000013" locale="en_US" title="Layout Editor's Role" toc="editorial/toc/000000" subtoc="editorial/toc/000013" key="editorial.layoutEditorsRole">
+<topic id="editorial/topic/000013" locale="de_DE" title="Die Rolle der Layouter/innen" toc="editorial/toc/000000" subtoc="editorial/toc/000013" key="editorial.layoutEditorsRole">
 	<section>
-		<![CDATA[<p>The Layout Editor receives an email request from the Copyeditor or the Section Editor requesting the layout of a submission that has completed the copyedit stage. A Layout Editor who is unable to do the Layout simply responds by email to the Section Editor.</p>]]>	
+		<![CDATA[<p>Die ausgewählte Layouterin bzw. der ausgewählte Layouter erhält von den Lektor/innen oder Rubrikenredakteur/innen eine E-Mailanfrage zum Layout eines Beitrags, wenn dieser die Lektoratsphase passiert hat. Wenn sie dies nicht wahrnehmen können, können sie einfach per Mail an die Rubrikenredakteur/innen antworten.</p>]]>	
 	</section>
 </topic>

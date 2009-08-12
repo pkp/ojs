@@ -5,15 +5,16 @@
   * 000011.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Users - All Users 
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Benutzer/innen - Alle eingetragenen Benutzer/innen. 
   *
   * $Id$
   -->
 
-<topic id="journal/topic/000011" locale="en_US" title="Users Enrolled in This Journal" toc="journal/toc/000002" key="journal.users.allUsers">
+<topic id="journal/topic/000011" locale="de_DE" title="In der Zeitschrift eingetragene Benutzer/innen" toc="journal/toc/000002" key="journal.users.allUsers">
 	<section>
-		<![CDATA[<p>This list includes everyone who is registered with this journal in some capacity. The Journal Manager has the ability to sign in as any registered user. This can be extremely helpful when trying to provide the user with assistance at a distance, because it allows the Journal Manager to gain a more precise sense of what may be going wrong.</p><p>From here, the Journal Manager can also enroll existing users from the OJS site as a whole, can create new users, and can sync enrollment between journals.</p>]]>	
+		<![CDATA[<p>Diese Liste enthält alle Benutzer/innen, die für diese Zeitschrift in irgendeiner Funktion eingetragen sind. Zeitschriftenverwalter/innen können sich als jede beliebige Nutzerin/jeder beliebige Nutzer einloggen. Dies kann außerordentlich hilfreich sein, um entfernte Nutzer/innen unterstützen zu können, da es den Zeitschriftenverwalter/innen erlaubt, etwaige Fehler nachzuvollziehen. </p><p>Von hier aus können Zeitschriftenverwalter/innen auch auf dem Server verfügbare Nutzer/innen einschreiben, neue Nutzer/innen registrieren und die Registrierung zwischen mehreren Zeitschriften synchronisieren. </p>]]>	
 	</section>
 </topic>

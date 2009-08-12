@@ -8,13 +8,13 @@
   * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   
   * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
-  * Nutzer/innen-Schaltfläche - Über uns
+  * Nutzer/innen-Schaltfläche - Über uns. 
   *
   * $Id$
   -->
 
-<topic id="user/topic/000002" locale="de_DE" title="About" toc="user/toc/000000" key="user.about">
+<topic id="user/topic/000002" locale="de_DE" title="Über uns" toc="user/toc/000000" key="user.about">
 	<section>
-		<![CDATA[<p>In "Über uns" stellt die Zeitschrift sich selbst, ihre Richtlinien, Arbeitsabläufe und anderes relevantes Material vor mit dem Ziel, den Publikationsprozess so transparent wie möglich zu machen. Dies wird üblicherweise als "Titelei" bezeichnet. Autor/innen erhalten Informationen über Konzept und Reichweite der Zeitschrift, über den Begutachtungsprozess, darüber wie Beiträge gestaltet und formatiert werden müssen und über den Prozess der Beitragseinreichung selbst.</p>]]>	
+		<![CDATA[<p>In "Über uns" stellt die Zeitschrift sich selbst, ihre Richtlinien, Arbeitsabläufe und anderes relevantes Material vor mit dem Ziel, den Publikationsprozess so transparent wie möglich zu machen. Dies wird üblicherweise als "Titelei" bezeichnet. Autor/innen erhalten Informationen über Konzept und Reichweite der Zeitschrift, über den Begutachtungsprozess, darüber, wie Beiträge gestaltet und formatiert werden müssen und über den Prozess der Beitragseinreichung.</p>]]>	
 	</section>
 </topic>

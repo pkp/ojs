@@ -5,15 +5,16 @@
   * 000000.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Site Administration Main 
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Serververwaltung Hauptseite. 
   *
   * $Id$
   -->
 
-<topic id="site/topic/000000" locale="en_US" title="Site Administration" toc="index/toc/000000" subtoc="site/toc/000000" key="site.index">
+<topic id="site/topic/000000" locale="de_DE" title="Serververwaltung" toc="index/toc/000000" subtoc="site/toc/000000" key="site.index">
 	<section>
-		<![CDATA[<p>This journal management and publishing system is designed to be installed and administered on a local web server. Once installed, the Site Administrator can use it to create as many individual journals as are required, and oversee the administration of each journal site that is created.</p>]]>	
+		<![CDATA[<p>Dieses Zeitschriftenverwaltungs- und Publikationssystem kann auf einem lokalen Server installiert und verwaltet werden. Einmal installiert, kann die Serververwaltung beliebig viele individuelle Zeitschriften erstellen und die Verwaltung jeder einzelnen Zeitschrift auf dem Server koordinieren.</p>]]>	
 	</section>
 </topic>

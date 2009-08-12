@@ -5,15 +5,16 @@
   * 000015.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Editor's Role Submissions - Unassigned 
-  *
+  * Die Rolle der Redakteur/innen - Beitragseinreichungen - Nicht zugewiesen
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * 
   * $Id$
-  -->
+-->
 
-<topic id="editorial/topic/000015" locale="en_US" title="Unassigned" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.unassigned">
+<topic id="editorial/topic/000015" locale="de_DE" title="Nicht zugewiesen" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.unassigned">
 	<section>
-		<![CDATA[<p>Each submission to the journal enters the process in the Editors' Unassigned queue. To assign a submission in this list to a Section Editor, the Editor clicks on the submission's title. This takes the Editor to the appropriate Submission page where the Section Editor is assigned. When a submission is assigned to a Section Editor, it moves from the Unassigned Queue to In Review Queue.</p>]]>	
+		<![CDATA[<p>Jeder in einer Zeitschrift eingereichte Beitrag gelangt zunächst bei den Redakteur/innen in eine Warteschlange noch nicht zugewiesener Beiträge. Um einen Beitrag einer Rubrikenredakteurin bzw. einem Rubrikenredakteur zuzuweisen, muss zunächst der Titel des eingereichten Beitrags angeklickt werden. Auf diese Weise wird eine Seite geöffnet, über die Rubrikenredakteur/innen ausgewählt werden können. Sobald dies getan ist, wird der Beitrag von der Liste der nicht zugewiesenen Beiträge in die der Beiträge in Begutachtung verschoben.</p>]]>	
 	</section>
 </topic>

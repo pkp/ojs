@@ -5,15 +5,16 @@
   * 000017.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Roles - Section Editor 
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Rollen - Rubrikredakteur/in. 
   *
   * $Id$
   -->
 
-<topic id="journal/topic/000017" locale="en_US" title="Section Editor" toc="journal/toc/000003" key="journal.roles.sectionEditor">
+<topic id="journal/topic/000017" locale="de_DE" title="Rubrikredakteur/in" toc="journal/toc/000003" key="journal.roles.sectionEditor">
 	<section>
-		<![CDATA[<p>The Section Editor manages the Review and Editing of submissions to which they have been assigned. In some cases, a Section Editor who is assigned to see submissions through the {help_topic key="editorial.sectionEditorsRole.review" text="Review"} Process will also be responsible for seeing the submissions that are accepted through the {help_topic key="editorial.sectionEditorsRole.editing" text="Editing"} process (that is, through copyediting, layout, and proofreading). Often, however, Section Editors only work with the Review process, and an Editor, acting in the role of Section Editor, sees the submissions through the Editing process. The journal will have a policy on how the tasks are divided.</p>]]>	
+		<![CDATA[<p>Rubrikredakteur/innen organisieren die Begutachtung und redaktionelle Bearbeitung derjenigen Beiträge, die ihnen zugewiesen werden. In einigen Fällen ist die Rubrikredakteurin/der Rubrikredakteur, die/der bereits für den Prozess der {help_topic key="editorial.sectionEditorsRole.review" text="Begutachtung"} eines Beitrags zuständig war, im Falle der Annahme zur Veröffentlichung auch für die Organisation der weiteren {help_topic key="editorial.sectionEditorsRole.editing" text="redaktionellen Bearbeitung"} (Lektorat, Layout und Korrekturlektorat) verantwortlich. Oft ist es jedoch so, dass Rubrikredakteur/innen nur an der Organisation der Begutachtung beteiligt sind, und eine Redakteurin bzw. ein Redakteur begleitet den für die Veröffentlichung akzeptierten Beitrag (in der Rolle der Rubrikredakteurin/des Rubrikredakteurs) durch den Prozess der redaktionellen Bearbeitung. Zeitschriften haben üblicherweise Richtlinien, die die Arbeitsteilung für die Zeitschrift spezifizieren.</p>]]>	
 	</section>
 </topic>

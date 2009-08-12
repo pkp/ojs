@@ -5,19 +5,20 @@
   * 000005.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * table of contents for Journal Management - Management Pages - Reading Tools.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Inhaltsverzeichnis für die Zeitschriftenverwaltung - Verwaltungsseiten - Lesewerkzeuge. 
   *
   * $Id$
-  -->
+-->
 
-<toc id="journal/toc/000005" locale="en_US" title="Reading Tools" parent_topic="journal/topic/000009">
-	<topic id="journal/topic/000026" title="Reading Tool Options" />
-	<topic id="journal/topic/000027" title="Related Item Sets" />
-	<topic id="journal/topic/000028" title="Contexts" />
+<toc id="journal/toc/000005" locale="de_DE" title="Lesewerkzeuge" parent_topic="journal/topic/000009">
+	<topic id="journal/topic/000026" title="Lesewerkzeug-Optionen" />
+	<topic id="journal/topic/000027" title="Verwandte Beiträge" />
+	<topic id="journal/topic/000028" title="Kontexte" />
 
-	<breadcrumb url="journal/topic/000000" title="Journal Management" />
-	<breadcrumb url="journal/topic/000001" title="Management Pages" />
-	<breadcrumb url="journal/topic/000009" title="Reading Tools" />
+	<breadcrumb url="journal/topic/000000" title="Zeitschriftenverwaltung" />
+	<breadcrumb url="journal/topic/000001" title="Verwaltungsseiten" />
+	<breadcrumb url="journal/topic/000009" title="Lesewerkzeuge" />
 </toc>

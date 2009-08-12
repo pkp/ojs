@@ -5,15 +5,16 @@
   * 000013.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Users - Import Users
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Benutzer/innen - Benutzer/innen importieren. 
   *
   * $Id$
   -->
 
-<topic id="journal/topic/000013" locale="en_US" title="Import Users" toc="journal/toc/000002" key="journal.users.importUsers">
+<topic id="journal/topic/000013" locale="de_DE" title="Benutzer/innen importieren" toc="journal/toc/000002" key="journal.users.importUsers">
 	<section>
-		<![CDATA[<p>OJS provides a simple facility for importing user data from an XML-based format, which can be easily generated from other databases of user information. Consult the documentation included with OJS for more information about the XML format and XML DTD for user data.</p>]]>	
+		<![CDATA[<p>OJS sieht eine einfache Möglichkeit vor, Nutzer/innendaten in einem XML-basierten Format zu importieren, das aus anderen Datenbanken mit Nutzer/inneninformationen generiert werden kann. Siehe hierzu die Dokumentation in OJS für weitere Information über das XML-Format und über XML DTD für Nutzer/innendaten.</p>]]>	
 	</section>
 </topic>

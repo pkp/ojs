@@ -5,15 +5,16 @@
   * 000033.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Author's Role Review Index - Peer Review
-  *
+  * Die Rolle der Autor/innen - Begutachtung: Index - Begutachtung
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * 
   * $Id$
-  -->
+-->
 
-<topic id="editorial/topic/000033" locale="en_US" title="Peer Review" toc="editorial/toc/000010" key="editorial.authorsRole.review.peerReview">
+<topic id="editorial/topic/000033" locale="de_DE" title="Begutachtung" toc="editorial/toc/000010" key="editorial.authorsRole.review.peerReview">
 	<section>
-		<![CDATA[<p>Several dates are recorded on this page, including the date of the editor's request to Reviewers, dates when Reviews are underway, and dates Reviews are completed by each Reviewer. The Author can consult the Review Policy in {help_topic key="user.about" text="About the Journal"} to learn more about how submissions are reviewed by the journal. Reviewers are able to upload files for the Author to consult, including annotated versions of the submission. (To consult uploaded files, the Author clicks on the file name linked beside Uploaded File, and opens the file or saves the file to the computer and then opens it.)</p>]]>	
+		<![CDATA[<p>Auf dieser Seite werden unterschiedliche Informationen dokumentiert, so das Datum der Anfrage der Redakteur/innen an die Gutachter/innen, Informationen, ab wann die Reviews in Arbeit sind und wann sie durch die einzelnen Gutachter/innen abgeschlossen wurden. Autor/innen können die Begutachtungsrichtlinien einsehen in {help_topic key="user.about" text="Über Uns"}, um mehr über den Begutachtungsprozess der Zeitschrift zu erfahren. Gutachter/innen können Dateien zur Ansicht durch die Autor/innen hochladen, incl. kommentierter Fassungen des eingereichten Beitrags. (Um die hochgeladenen Dateien ansehen zu können, muss die Autorin/der Autor auf den Dateinamen neben der hochgeladenen Datei klicken und diese unmittelbar öffnen oder auf den eigenen Computer speichern und dort öffnen.)</p>]]>	
 	</section>
 </topic>

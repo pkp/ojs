@@ -5,15 +5,16 @@
   * 000000.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Journal Management Main 
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Zeitschriftenverwaltung. 
   *
   * $Id$
   -->
 
-<topic id="journal/topic/000000" locale="en_US" title="Journal Management" toc="index/toc/000000" subtoc="journal/toc/000000" key="journal.index">
+<topic id="journal/topic/000000" locale="de_DE" title="Zeitschriftenverwaltung" toc="index/toc/000000" subtoc="journal/toc/000000" key="journal.index">
 	<section>
-		<![CDATA[<p>The Journal Manager sees to all aspects of Journal Management, in consultation with the Editors, including setting up and configuring the journal system, enrolling users in the various roles needed to run the journal, setting up the various Sections of the journal, and many other managerial tasks.</p>]]>	
+		<![CDATA[<p>Die Zeitschriftenverwalter/innen haben, in Absprache mit den Redakteur/innen, Zugang zu allen Aspekten der Zeitschriftenverwaltung, incl. der Installation und Konfiguration des Systems, des Einschreibens von Nutzer/innen für die verschiedenen, für die Verwaltung der Zeitschrift erforderlichen Rollen, des Erstellens der für eine Zeitschrift vorgesehen Rubriken und für viele andere Aufgaben.</p>]]>	
 	</section>
 </topic>

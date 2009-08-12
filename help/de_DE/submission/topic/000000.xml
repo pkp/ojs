@@ -5,15 +5,16 @@
   * 000000.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Author Submission Process Index 
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Autor/innen - Beitragseinreichung: Index. 
   *
   * $Id$
   -->
 
-<topic id="submission/topic/000000" locale="en_US" title="Submission Process" toc="index/toc/000000" subtoc="submission/toc/000000" key="submission.index">
+<topic id="submission/topic/000000" locale="de_DE" title="Beitragseinreichung" toc="index/toc/000000" subtoc="submission/toc/000000" key="submission.index">
 	<section>
-		<![CDATA[<p>The journal provides Authors with the ability to upload their submission directly to the journal  website. Depending on the options chosen by the Journal Manager for this journal (Setup Step 4.1), Authors may have the option, on registering as an Author, of also registering as a Reviewer (to be called upon to undertake peer reviews of other submissions) and/or a Reader (to be notified of the Table of Contents new issue of the journal). On completing the registration process, the Author is taken directly to User Home, which lists the various roles the user has with this journal (e.g., Author, Reviewer, etc.). Clicking on the role of Author will take users to their submissions page, where a list of current and past submissions are listed, and where a new submission to the journal can be initiated. The submission process for Authors is broken down into five steps, with guidance provided at each step. Authors do not need to complete the five steps in one session, but can return to what will be listed as on the submissions table as "{translate key="submissions.incomplete"}".</p>]]>	
+		<![CDATA[<p>Die Zeitschrift erlaubt Autor/innen, ihre Beiträge unmittelbar über die Zeitschriftenwebseite einzureichen. Abhängig von den Optionen, die die Zeitschriftenverwalter/innen für die Zeitschrift gewählt haben (Setup 4.1), kann eine Autorin/ein Autor sich bei der Registrierung auch als Gutachter/in (auf die/den bei der Begutachtung anderer Beiträge zurückgegriffen kann) und/oder als Leser/in anmelden (die/der über neue Ausgaben durch Zusendung des Inhaltsverzeichnisses informiert wird). Nach Abschluss der Registrierung wird die persönliche Startseite der Autorin/des Autors automatisch geöffnet, auf der die verschiedenen Rollen, die diese Person in der Zeitschrift wahrnimmt, aufgelistet sind (z.B. Autor/in, Gutachter/in usw.). Nach Klicken von Autor/in wird die Beitragsseite geöffnet, auf der aktuelle und rückliegende Beiträge der Autorin/des Autors aufgelistet sind, und von der aus der Prozess der Einreichung eines neuen Beitrags gestartet werden kann. Die Beitragseinreichung verläuft in fünf Schritten, mit verfügbaren Nutzer/innenhinweisen für jeden Schritt. Es ist nicht erforderlich, alle fünf Schritte in einer Sitzung abzuschließen, sondern es kann später zu den Einträgen zurückkehrt werden, die in der Liste der Beiträge als "{translate key="submissions.incomplete"}" geführt werden.</p>]]>	
 	</section>
 </topic>

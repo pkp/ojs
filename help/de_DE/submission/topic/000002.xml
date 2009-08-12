@@ -5,15 +5,16 @@
   * 000002.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Author Submission Process - Submission Requirements 
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Autor/innen - Beitragseinreichung - Voraussetzungen für die Beitragseinreichung. 
   *
   * $Id$
   -->
 
-<topic id="submission/topic/000002" locale="en_US" title="Submission Requirements" toc="submission/toc/000000" key="submission.submissionRequirements">
+<topic id="submission/topic/000002" locale="de_DE" title="Voraussetzungen für die Beitragseinreichung" toc="submission/toc/000000" key="submission.submissionRequirements">
 	<section>
-		<![CDATA[<p>In order to ensure that submissions to the journal have been properly prepared and are in a suitable format for processing, the Journal Manager and Editor have developed a set of Submission Requirements with which the Author must indicate compliance before being allowed to proceed to Step Two of the Author Submission process. If the Author is unable to comply with one of the Requirements for some reason, the Author can check the Requirement and provided an explanation in the Comments to the Editor.</p>]]>	
+		<![CDATA[<p>Um sicherzustellen, dass Beitragseinreichungen angemessen vorbereitet wurden und den Erfordernissen der Zeitschrift entsprechen, haben Zeitschriftenverwalter/innen und Redakteur/innen ein Set an Anforderungen bereitgestellt, deren Einhaltung die Autorin/der Autor bestätigen muss, bevor zu Schritt 2 der Einreichung übergegangen werden kann. Wenn Autor/innen nicht in der Lage sind, allen Anforderungen nachzukommen, können sie eine entsprechende Begründung in "Kommentare für die Redakteur/in" eingeben.</p>]]>	
 	</section>
 </topic>

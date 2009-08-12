@@ -5,15 +5,16 @@
   * 000032.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Author's Role Index - Submissions
-  *
+  * Die Rolle der Autor/innen - Beitragseinreichung
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * 
   * $Id$
-  -->
+-->
 
-<topic id="editorial/topic/000032" locale="en_US" title="Submissions" toc="editorial/toc/000009" key="editorial.authorsRole.submissions">
+<topic id="editorial/topic/000032" locale="de_DE" title="Beitragseinreichung" toc="editorial/toc/000009" key="editorial.authorsRole.submissions">
 	<section>
-		<![CDATA[<p>On logging in to the journal and selecting the role of Author on the User Home page, the Author is led to the Active Submissions queue. This page lists the submissions currently in the editorial process. The Author also has access to past submissions that have been made to the journal under the Archive link, and can submit a new article for consideration by clicking the appropriate link under Start a New Submission.</p><p>If the journal is accepting online payments, the Author may be able to make submission-specific payments from this page. If required by the journal, links to pay submission fees, to fast-track submissions, and to pay publication fees will appear on this page, on a per-article basis, under Status. Clicking on these links will take the Author to either a Manual Fee Payment page, or a PayPal payment page, where the required transaction can be completed. More information on the payment process can be found {help_topic key="journal.managementPages.payments" text="here"}.</p><p>More information on the Submission process can be found {help_topic key="submission.index" text="here"}.</p>]]>	
+		<![CDATA[<p>Wenn nach dem Einloggen auf der persönlichen Startseite die Rolle als "Autor/in" angeklickt wird, gelangt die Autorin/der Autor zur Seite ihrer oder seiner aktuellen Beitragseinreichungen. Auf dieser Seite finden sich nur die Beiträge, die derzeit in redaktioneller Bearbeitung sind. Es können aber auch frühere Beiträge unter "Archive" eingesehen werden, und es kann ein neuer Beitrag eingereicht werden durch Anklicken des entsprechenden Links am Ende der Seite "Aktuelle Beiträge".</p><p>Wenn die Zeitschrift Online-Zahlungen vorsieht, kann die Autorin/der Autor von hier aus auch Beitragsspezifische Zahlungen vornehmen. Je nach Zeitschrift werden  Links für die Bezahlung von Einreichungsgebühren, für beschleunigte Einreichungen und für die Zahlung von Publikationskosten auf Artikelbasis unter "Status" angezeigt. Werden diese angeklickt, wird die Autorin/der Autor entweder zu einer Seite für manuelle Zahlungen oder zu PayPal weitergeleitet, von wo aus die Zahlungen dann getätigt werden können. Weitere Informationen zum Zahlungsprozess finden sich {help_topic key="journal.managementPages.payments" text="hier"}.</p><p> Weitere Informationen zur Beitragseinreichung finden sich {help_topic key="submission.index" text="hier"}.</p>]]>	
 	</section>
 </topic>

@@ -5,21 +5,22 @@
   * 000000.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * table of contents for Editorial Process. 
+  * Inhaltsverzeichnis für den redaktionellen Prozess. 
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).*
   *
   * $Id$
   -->
 
-<toc id="editorial/toc/000000" locale="en_US" title="Editorial Process" parent_topic="editorial/topic/000000">
-	<topic id="editorial/topic/000001" title="Editor's Role" />
-	<topic id="editorial/topic/000004" title="Section Editor's Role" />
-	<topic id="editorial/topic/000008" title="Reviewer's Role" />
-	<topic id="editorial/topic/000009" title="Author's Role" />
-	<topic id="editorial/topic/000012" title="Copyeditor's Role" />
-	<topic id="editorial/topic/000013" title="Layout Editor's Role" />
-	<topic id="editorial/topic/000014" title="Proofreader's Role" />
+<toc id="editorial/toc/000000" locale="de_DE" title="Der redaktionelle Prozess" parent_topic="editorial/topic/000000">
+	<topic id="editorial/topic/000001" title="Die Rolle der Redakteur/innen" />
+	<topic id="editorial/topic/000004" title="Die Rolle der Rubrikredakteur/innen" />
+	<topic id="editorial/topic/000008" title="Die Rolle der Gutachter/innen" />
+	<topic id="editorial/topic/000009" title="Die Rolle der Autor/innen" />
+	<topic id="editorial/topic/000012" title="Die Rolle der Lektor/innen" />
+	<topic id="editorial/topic/000013" title="Die Rolle der Layouter/innen" />
+	<topic id="editorial/topic/000014" title="Die Rolle der Korrekturlektor/innen" />
 
-	<breadcrumb url="editorial/topic/000000" title="Editorial Process" />
+	<breadcrumb url="editorial/topic/000000" title="Der redaktionelle Prozess" />
 </toc>

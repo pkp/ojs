@@ -5,15 +5,16 @@
   * 000004.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Publishing Process - Publish
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Publikationsprozess - Veröffentlichen. 
   *
   * $Id$
   -->
 
-<topic id="publishing/topic/000004" locale="en_US" title="Publish" toc="publishing/toc/000000" key="publishing.publish">
+<topic id="publishing/topic/000004" locale="de_DE" title="Veröffentlichen" toc="publishing/toc/000000" key="publishing.publish">
 	<section>
-		<![CDATA[<p>When it is time to publish an issue, the Editor clicks "{translate key="editor.issues.publishIssue"}" on the Live Issue page for the issue to be published, that is, the page with the issue's Table of Contents. Publishing an issue causes its Table of Contents to appear when {translate key="navigation.current"} is clicked by readers, and its cover, if there is one, to be appear on the journal's homepage. The issue that was previously {translate key="navigation.current"} goes to the {translate key="navigation.archives"}. If there is no cover, the Table of Contents will appear on the homepage, unless the homepage is occupied by an image or text that has been loaded in Setup by the Journal Manager to appear there. Publishing an issue also sends out an email notification to all registered Readers that includes the issue's Table of Contents and a link back to the journal's web site.</p>]]>	
+		<![CDATA[<p>Zum Publikationszeitpunkt klickt die Redakteurin/der Redakteur "{translate key="editor.issues.publishIssue"}" auf der entsprechende Seite der künftigen Ausgabe, um die Ausgabe zu veröffentlichen. Ist die Ausgabe veröffentlicht, erscheint deren Inhaltsverzeichnis, wenn Lesende {translate key="navigation.current"} anklicken, außerdem das Titelbild, wenn vorhanden, auf der Startseite der Zeitschrift. Die Ausgabe, die zuvor unter {translate key="navigation.current"} zu finden war, wird nun in {translate key="navigation.archives"} verschoben. Wenn kein Titelbild der neuen Ausgabe existiert, erscheint auf der Zeitschriftenstartseite das Inhaltsverzeichnis, es sei denn, von den Zeitschriftenverwalter/innen wurde im Setup ein Bild oder Text hierfür platziert. Mit Publikation geht eine Mail-Benachrichtigung an alle registrierten Leser/innen, die das Inhaltsverzeichnis und einen Link zur Zeitschrift enthält.</p>]]>	
 	</section>
 </topic>

@@ -5,15 +5,16 @@
   * 000023.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Roles - Reader 
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Rollen - Leser/in. 
   *
   * $Id$
   -->
 
-<topic id="journal/topic/000023" locale="en_US" title="Reader" toc="journal/toc/000003" key="journal.roles.reader">
+<topic id="journal/topic/000023" locale="de_DE" title="Leser/in" toc="journal/toc/000003" key="journal.roles.reader">
 	<section>
-		<![CDATA[<p>Readers include both subscribers for journals for which access is subscription-based, and readers who choose to register for open access journals (whether immediately open access or open after a period of time after initial publication of journal content). Registered Readers receive a notification email with the publication of each issue, which includes the Table of Contents for that particular issue. On registering themselves with the journal, Authors are given the option of enrolling as Readers as well.</p><p>More information on Registering for a journal can be found {help_topic key="user.registerAndProfile" text="here"}.</p> ]]>	
+		<![CDATA[<p>Leser/innen können sich sowohl für Subskriptionspflichtige Zeitschriften als auch für Open-Access-Zeitschriften registrieren (wobei der Zugang in letzerem Fall entweder unmittelbar frei sein oder erst nach Ablauf einer bestimmten Zeit nach Veröffentlichung einer Ausgabe freigeschaltet werden kann). Registrierte Leser/innen erhalten eine Informationsmail mit dem Inhaltsverzeichnis, nachdem eine Ausgabe veröffentlicht wurde. Wenn Autor/innen sich für eine Zeitschrift registrieren, können sie sich auch als Leser/innen anmelden.</p><p> Weitere Informationen zum Registrieren für eine Zeitschrift finden sich {help_topic key="user.registerAndProfile" text="hier"}.</p> ]]>	
 	</section>
 </topic>

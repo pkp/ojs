@@ -5,15 +5,16 @@
   * 000022.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Section Editor's Role Index - In Editing
-  *
+  * Die Rolle der Rubrikredakteur/innen: Index - In redaktioneller Bearbeitung
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * 
   * $Id$
-  -->
+-->
 
-<topic id="editorial/topic/000022" locale="en_US" title="In Editing" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.inEditing">
+<topic id="editorial/topic/000022" locale="de_DE" title="In redaktioneller Bearbeitung" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.inEditing">
 	<section>
-		<![CDATA[<p>Submissions in the In Editing queue are going through copyediting, layout and proofreading processes. When a Section Editor or an Editor clicks on a submission title in the In Editing queue, they are taken to the submission's Editing page. When a submission has gone through the editing stage and is scheduled to be placed in an issue, it is removed from this list and enters the Archive.</p><p>For further information on the Editing process, see {help_topic key="editorial.sectionEditorsRole.editing" text="In Editing"}.</p>]]>	
+		<![CDATA[<p>Beiträge in der Liste der redaktionell zu bearbeitenden Einreichungen durchlaufen Lektorat, Layout und Korrekturlektorat. Wenn (Rubrik-) Redakteur/innen den Titel eines Beitrags in dieser Liste anklicken, kommen sie zu dessen Redaktionsseite. Wenn die redaktionellen Prozesse durchlaufen sind und der Beitrag zur Veröffentlichung einer Ausgabe der Zeitschrift zugewiesen wurde, wird er von der Liste entfernt und ins Archiv verschoben.</p><p>Für weitere Informationen zum Prozess der redaktionellen Bearbeitung siehe {help_topic key="editorial.sectionEditorsRole.editing" text="In redaktioneller Bearbeitung"}.</p>]]>	
 	</section>
 </topic>

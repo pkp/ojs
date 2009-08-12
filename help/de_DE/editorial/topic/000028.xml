@@ -5,15 +5,16 @@
   * 000028.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Section Editor's Role Index - Editing - Layout
-  *
+  * Die Rolle der Rubrikredakteur/innen: Index - Redaktionelle Bearbeitung - Layout
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * 
   * $Id$
-  -->
+-->
 
-<topic id="editorial/topic/000028" locale="en_US" title="Layout" toc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing.layout">
+<topic id="editorial/topic/000028" locale="de_DE" title="Layout" toc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing.layout">
 	<section>
-		<![CDATA[<p>Once the Copyeditor completes the "clean" copy in Step 3 of Copyediting, that version of the submission goes to the Layout stage. The Section Editor, on receiving notification of the completion of the copyediting, needs to then select a Layout Editor, if that has not already been done, and request that the Layout Editor begin work, by using the email icon under Request Layout. The Layout Editor will prepare galleys for the submission in each of the journal's publishing formats (e.g., HTML, PDF, PS, etc.). The Supplementary Files, which remain in the original file format in which they were submitted, will be reviewed by the Layout Editor and Proofreader to ensure that basic formatting is in place, and that the files conform as well as possible to journal standards. When the Layout Editor has completed the initial production of the galleys, which are the files that will be published online, the Layout Editor will email the Section Editor.</p><p>Note that the Editor can schedule a submission for publication at any point in the editing process; this information will be made available to Layout Editors and Proofreaders and will give them the ability to preview the issue before publication.</p>]]>	
+		<![CDATA[<p>Sobald die Lektor/innen eine "saubere" Beitragsfassung im 3. Schritt des Lektorats erstellt haben, wird diese in die Layout-Phase übernommen. Die Rubrikredakteur/innen, die eine Nachricht über den Abschluss der Lektoratsarbeiten erhalten, müssen dann, sofern noch nicht erfolgt,  eine Layouterin/einen Layouter auswählen und mittels des Mail-Symbols unter "Anfrage" um Beginn des Layout-Prozesses für diesen Beitrag bitten.  Die Layouter/innen erstellen dann die Fahnen in den für die Zeitschrift vorgesehenen Formaten (z.B. HTML, PDF, PS usw.). Die Zusatzdateien, die in dem originären Dateiformat verbleiben, in dem sie geschickt wurden, müssen von den Layouter/innen und Korrekturlektor/innen geprüft werden um sicherzustellen, dass die Formate korrekt sind und die Dateien so weit möglich den Zeitschriftenstandards folgen. Wenn die Fahnen fertiggestellt sind, informiert die Layouterin/der Layouter die zuständigen Rubrikredakteur/innen per Mail.</p><p>Es ist zu beachten, dass die Redakteur/innen zu jedem Zeitpunkt der redaktionellen Bearbeitung einen Beitrag zur Publikation zuweisen können; dies wird Layouter/innen und Korrekturlektor/innen mitgeteilt, sodass diese eine Ausgabe vor der Publikation in einer Vorschau prüfen können.</p>]]>	
 	</section>
 </topic>

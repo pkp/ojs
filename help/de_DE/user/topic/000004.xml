@@ -5,15 +5,16 @@
   * 000004.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * User Interface - Current and Archives
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Nutzer/innen-Schaltfläche - Aktuelle Ausgabe &amp; Archiv. 
   *
   * $Id$
   -->
 
-<topic id="user/topic/000004" locale="en_US" title="Current and Archives" toc="user/toc/000000" key="user.currentAndArchives">
+<topic id="user/topic/000004" locale="de_DE" title="Aktuelle Ausgabe &amp; Archiv" toc="user/toc/000000" key="user.currentAndArchives">
 	<section>
-		<![CDATA[<p>The issues of the journal are made available as a current issue or edition, and a set of archives of previous issues. The Journal Manager is able to bring into this journal  website earlier issues of the journal that were published prior to the use of this system so that they form part of the Archives that are made available to readers on the journal's  website.</p>]]>	
+		<![CDATA[<p>Die Ausgaben einer Zeitschrift sind als aktuelle Ausgabe oder als Sammelausgabe für ein Jahr verfügbar sowie in einem Archiv mit früher veröffentlichten Ausgaben. Zeitschriftenverwalter/innen können Ausgaben, die vor Nutzung dieses Systems veröffentlicht wurden, importieren, sodass sie unter "Archiv" für Lesende der Zeitschrift verfügbar sind.</p>]]>	
 	</section>
 </topic>

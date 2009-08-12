@@ -5,15 +5,16 @@
   * 000039.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Layout Editor's Role - Submissions
-  *
+  * Die Rolle der Layouter/innen - Beitragseinreichung
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * 
   * $Id$
-  -->
+-->
 
-<topic id="editorial/topic/000039" locale="en_US" title="Submissions" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.submissions">
+<topic id="editorial/topic/000039" locale="de_DE" title="Beitragseinreichung" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.submissions">
 	<section>
-		<![CDATA[<p>On Logging in, the Layout Editor will have access to their User Home Page. This page includes a link to the Layout Editor's Active Submissions page, as well as one to previously completed submissions via an Archives link, and a link to view the Table of Contents for upcoming issues, if available.</p><p><i>Active Submissions</i><br />Clicking on the Active link from the User Home page will take the Layout Editor to the Active Submissions page. This queue lists those works for which they have been asked to do the layout. The layout process can be initiated by clicking on a listed submission title.</p><p><i>Archive</i><br />Clicking on the Archive link from the User Home page will take the Layout Editor to the Archive page. This queue lists those works that have completed the layout process and have been published.</p><p><i>Issues</i><br />Clicking on the Future Issues link from the User Home Page will take the Layout Editor to a list of future issues that have not yet been published. This allows the Layout Editor to proof an issue as a whole.</p>]]>	
+		<![CDATA[<p>Nach dem Einloggen haben Layouter/innen Zugang zu ihrer persönlichen Startseite,  über die ein Link zu aktuellen Beiträgen führt, einer zu bereits archivierten Beiträgen und ein weiterer zu den Inhaltsverzeichnissen geplanter Zeitschriftenausgaben, sofern verfügbar.</p><p><i>Aktuelle Beiträge</i><br />Durch Klicken von "Aktuell" wird die Liste derzeit durch die Layouterin/den Layouter zu bearbeitender Beiträge geöffnet, d.h. derjenigen Beiträge, für deren Layout sie/er angefragt wurde. Der Layout-Prozess kann durch Anklicken des Dateinamens in der Liste eröffnet werden.</p><p><i>Archiv</i><br />Wird "Archiv" angeklickt, so wird die Liste der archivierten Beiträge geöffnet. Sie enthält Beiträge, für die das Layout abgeschlossen wurde und die bereits veröffentlicht sind. </p><p><i>Ausgaben</i><br />Wird "Zukünftige Ausgaben" auf der persönlichen Startseite angeklickt, dann wird die Liste derjenigen Ausgaben geöffnet, die noch nicht veröffentlicht wurden. Layouter/innen können so komplette Zeitschriftenausgaben prüfen.</p>]]>
 	</section>
 </topic>

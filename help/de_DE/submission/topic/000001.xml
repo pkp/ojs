@@ -5,15 +5,16 @@
   * 000001.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Author Submission Process - Author Guidelines 
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Autor/innen - Beitragseinreichung - Richtlinien für Autor/innen
   *
   * $Id$
   -->
 
-<topic id="submission/topic/000001" locale="en_US" title="Author Guidelines" toc="submission/toc/000000" key="submission.authorGuidelines">
+<topic id="submission/topic/000001" locale="de_DE" title="Richtlinien für Autor/innen" toc="submission/toc/000000" key="submission.authorGuidelines">
 	<section>
-		<![CDATA[<p>The journal provides a set of Author Guidelines in About the Journal that cover the bibliographic and other formatting standards employed by the journal. For aspects not covered in the examples provided by the Guidelines, Authors may also wish to browse through published articles in the journal to see how the journal handles other sorts of material.</p>]]>	
+		<![CDATA[<p>In "Über uns" finden sich die Richtlinien für Autor/innen, die über bibliografische und Formatierungsstandards der Zeitschrift informieren. Für Aspekte, die dort nicht durch Beispiele illustriert sind, können Autor/innen auch bereits veröffentlichte Artikel ansehen, um zu erkennen, wie andere Texte in der Zeitschrift gehandhabt wurden.</p>]]>	
 	</section>
 </topic>

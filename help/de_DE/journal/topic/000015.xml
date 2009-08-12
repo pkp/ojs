@@ -5,15 +5,16 @@
   * 000015.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Roles - Journal Manager 
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Rollen - Zeitschriftenverwalter/in. 
   *
   * $Id$
   -->
 
-<topic id="journal/topic/000015" locale="en_US" title="Journal Manager" toc="journal/toc/000003" key="journal.roles.journalManager">
+<topic id="journal/topic/000015" locale="de_DE" title="Zeitschriftenverwalter/in" toc="journal/toc/000003" key="journal.roles.journalManager">
 	<section>
-		<![CDATA[<p>The Journal Manager is responsible for managing the publishing system. This does not involve any advanced technical skills, but entails filling out templates and uploading files. The Journal Manager does the {help_topic key="journal.managementPages.setup" text="Setup"} for the journal, and enrolls the Editors, Section Editors, Copyeditors, Layout Editors, Proofreaders, and Reviewers. Alternately, names and emails of Reviewers, if they already exist in another database, can be imported into the system, through the Import People function under {help_topic key="journal.managementPages.importExport" text="Import/Export Data"}. The Journal Manager also has access to the journal's other management systems, and can create new Sections for the journal, edit the default set of Emails the system uses, manage the {help_topic key="journal.managementPages.readingTools" text="Reading Tools"} that are available with this journal, and see to the {help_topic key="journal.managementPages.statsAndReports" text="Journal Statistics"} the system can generate.</p><p>Note that although the Journal Manager role is ostensibly a per-journal role, journal managers should generally be considered system-wide trusted users, as they have the ability to assume the identities of other users who may be enrolled in other journals.</p>]]>
+		<![CDATA[<p>Die Zeitschriftenverwalterin/der Zeitschriftenverwalter ist für die Verwaltung des Publikationssystems zuständig. Dies erfordert keine fortgeschrittenen technischen Fertigkeiten, sondern es ist nur erforderlich, dass Vorlagen ausgefüllt und Dateien hochgeladen werden. Die Zeitschriftenverwalterin/der Zeitschriftenverwalter erledigt das {help_topic key="journal.managementPages.setup" text="Setup"} für die Zeitschrift und schreibt Redakteur/innen, Rubrikredakteur/innen, Lektor/innen, Layouter/innen, Korrekturlektor/innen und Gutachter/innen ein. Alternativ können Namen und Mailadressen von Gutachter/innen, wenn sie bereits in einer anderen Datenbank erfasst sind, in das System importiert werden mittels der Benutzer/innen-Import und -Export-Funktion unter {help_topic key="journal.managementPages.importExport" text="Daten importieren/exportieren"}. Die Zeitschriftenverwalter/innen haben auch Zugang zu weiteren Mitteln der Zeitschriftenverwaltung, sie können neue Rubriken anlegen, die Standard-Mailvorlagen der Zeitschrift editieren, die {help_topic key="journal.managementPages.readingTools" text="Lesewerkzeuge"} und die {help_topic key="journal.managementPages.statsAndReports" text="Zeitschriftenstatistiken"}, die das System generiert, verwalten.</p><p>Es sollte beachtet werden, dass Zeitschriftenverwalter/innen, obwohl ihre Rolle sich auf eine Zeitschrift bezieht, über diese Zeitschrift hinaus und mit Blick auf den gesamten Server vertrauenswürdig sein müssen, da sie die Identität von Nutzer/innen annehmen können, die auch in anderen Zeitschriften eingeschrieben sein können.</p>]]>
 	</section>
 </topic>

@@ -5,18 +5,19 @@
   * 000010.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * table of contents for Editorial Process - Author's Role - Review
+  * Inhaltsverzeichnis für den redaktionellen Prozess - Die Rolle der Autor/innen - Begutachtung. 
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
   *
-  * $Id$
+  *$Id$
   -->
 
-<toc id="editorial/toc/000010" locale="en_US" title="Review" parent_topic="editorial/topic/000010">
+<toc id="editorial/toc/000010" locale="de_DE" title="Begutachtung" parent_topic="editorial/topic/000010">
 	<topic id="editorial/topic/000033" title="Peer Review" />
-	<topic id="editorial/topic/000034" title="Editor Decision" />
+	<topic id="editorial/topic/000034" title="Entscheidung der Redakteurin/des Redakteurs" />
 
-	<breadcrumb url="editorial/topic/000000" title="Editorial Process" />
-	<breadcrumb url="editorial/topic/000009" title="Author's Role" />
-	<breadcrumb url="editorial/topic/000010" title="Review" />
+	<breadcrumb url="editorial/topic/000000" title="Der redaktionelle Prozess" />
+	<breadcrumb url="editorial/topic/000009" title="Die Rolle der Autor/innen" />
+	<breadcrumb url="editorial/topic/000010" title="Begutachtung" />
 </toc>

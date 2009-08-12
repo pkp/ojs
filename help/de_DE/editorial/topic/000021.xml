@@ -5,15 +5,16 @@
   * 000021.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Section Editor's Role Index - In Review
-  *
+  * Die Rolle der Rubrikredakteur/innen: Index - In Begutachtung
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * 
   * $Id$
-  -->
+-->
 
-<topic id="editorial/topic/000021" locale="en_US" title="In Review" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.inReview">
+<topic id="editorial/topic/000021" locale="de_DE" title="In Begutachtung" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.inReview">
 	<section>
-		<![CDATA[<p>Submissions that are listed In Review are subject to a review process that leads to a decision by the Section Editor to accept or decline the submission. The extent of the review process, including which journal sections have a peer review conducted on the submissions and how many reviewers are used, is spelled out in the journal's Review Policy prepared by the Editors and Journal Manager. When a Section Editor or an Editor clicks on a submission title in the In Review Queue, they are taken to the submission's Review page, where the peer review is conducted and editorial decision reached for the item. If the Section Editor accepts a submission for publication, it then moves to the In Editing queue. If the submission is declined, it is moved to the Archives.</p><p>For further information on the Review process, see {help_topic key="editorial.sectionEditorsRole.review" text="In Review"}.</p>]]>	
+		<![CDATA[<p>Beiträge unter "In Begutachtung" befinden sich im Review-Prozess, an dessen Ende eine Entscheidung der zuständigen Rubrikredakteurin bzw. des zuständigen Rubrikredakteurs über Annahme oder Ablehnung des Beitrags steht. Die konkrete Gestaltung des Begutachtungsprozesses incl. der Frage, für welche Rubriken Peer Review vorgesehen ist und wie viele Personen jeweils für die Begutachtung eines Beitrags zugezogen werden, kann den Zeitschriftenrichtlinien entnommen werden, die von den Redakteur/innen und der Zeitschriftenverwalterin/dem Zeitschriftenverwalter im Vorfeld verfügbar gemacht werden. Wenn (Rubrik-) Redakteur/innen den Titel eines Beitrags im Begutachtungsbereich anklicken, kommen sie zu dessen Begutachtungsseite, über die das Peer Review organisiert wird und redaktionelle Entscheidungen getroffen werden können. Wenn die zuständige Rubrikredakteurin bzw. der zuständige Rubrikredakteur einen Beitrag dort akzeptiert, wird er in die Liste der redaktionell zu bearbeitenden Beiträge verschoben. Wird der Beitrag zurückgewiesen, wird er ins Archiv verschoben.</p><p>Für weitere Informationen zum Begutachtungsprozess siehe {help_topic key="editorial.sectionEditorsRole.review" text=" In Begutachtung "}.</p>]]>	
 	</section>
 </topic>

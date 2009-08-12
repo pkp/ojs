@@ -5,15 +5,17 @@
   * 000001.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Management Pages Index 
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Verwaltungsseiten: Index. 
   *
   * $Id$
   -->
 
-<topic id="journal/topic/000001" locale="en_US" title="Management Pages" toc="journal/toc/000000" subtoc="journal/toc/000001" key="journal.managementPages.index">
+
+<topic id="journal/topic/000001" locale="de_DE" title="Verwaltungsseiten" toc="journal/toc/000000" subtoc="journal/toc/000001" key="journal.managementPages.index">
 	<section>
-		<![CDATA[<p>The Journal Manager configures and customizes the system to suit the journal through a series of Management Pages. The process begins with the five steps of the Setup, but also includes the Sections which are to be published, the tone and wording of the journal's standard emails, the languages available to the journal, the statistics it publishes, and the tools it makes available to readers.</p>]]>	
+		<![CDATA[<p> Die Zeitschriftenverwalter/innen konfigurieren das System und passen es für die konkrete Zeitschrift mittels einer Reihe von Verwaltungsseiten an. Dies beginnt mit den fünf Setup-Schritten, beinhaltet aber auch z.B. das Erstellen der für die Zeitschrift vorgesehenen Rubriken, Ton und Wortlaut der Standardmails der Zeitschrift, die Sprachen, die für die Zeitschrift verfügbar sein, Statistiken, die veröffentlicht werden oder "Werkzeuge", die den Leser/innen zur Verfügung gestellt werden sollen.</p>]]>	
 	</section>
 </topic>

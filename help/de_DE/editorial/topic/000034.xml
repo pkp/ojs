@@ -5,15 +5,16 @@
   * 000034.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Author's Role Review Index - Peer Review
-  *
+  * Die Rolle der Autor/innen - Begutachtung: Index - Peer Review
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * 
   * $Id$
-  -->
+-->
 
-<topic id="editorial/topic/000034" locale="en_US" title="Editor Decision" toc="editorial/toc/000010" key="editorial.authorsRole.review.editorDecision">
+<topic id="editorial/topic/000034" locale="de_DE" title="Editor Decision" toc="editorial/toc/000010" key="editorial.authorsRole.review.editorDecision">
 	<section>
-		<![CDATA[<p>Once the review process is complete, the Section Editor commits a decision and notifies the Author via email. The decision is also recorded in the Editor/Author Correspondence on the Author's Review page. If the Section Editor requests revisions before arriving at a final decision, the Author is able to upload a revised version of the submission on this page, as well as revised or additional Supplementary Files (reflecting data sets, research instruments, source documents, etc.). The Section Editor is also able to upload and present versions of the submission or other documents for the Author to consult. (To consult uploaded files, the Author clicks on the file name, and opens the file or saves the file to the computer and then opens it.)</p><p> If a submission is accepted, it will then proceed to the {help_topic key="editorial.editorsRole.submissions.inEditing" text="Editing"} stage of the editorial process.</p><p><i>Resubmit for Review</i>. If the Section Editor's decision is that the submission should be revised and then resubmitted for peer review, the Author should first indicate their willingness to undertake the revisions, using the Editor/Author Correspondence. Then, when the revisions have been completed, the Author uploads the version for a second round of reviews. The Section Editor will submit it to the same Reviewers or to one or more new Reviewers, and notify the Author when a decision has been reached in a similar manner to the initial review.</p>]]>	
+		<![CDATA[<p>Wenn der Begutachtungsprozess beendet ist, entscheiden die zuständigen Rubrikredakteur/innen über den Status des Beitrags und informieren die Autor/innen via E-Mail. Die Entscheidung wird auch auf der Begutachtungsseite der Autor/innen in dem "Protokoll der E-Mail-Korrespondenz zwischen Redakteur/in und Autor/in" festgehalten. Wenn zusätzliche Überarbeitungen vor einer finalen Entscheidungen angefordert werden, kann die Autorin/der Autor eine revidierte Version auf dieser Seite hochladen, ebenso überarbeitete Zusatzdateien (zu Datensets, Forschungsinstrumenten, Quellentexten usw.). Umgekehrt können auch die Rubrikredakteur/innen Dateien hochladen und den Autor/innen Versionen des Beitrags oder andere Dokumente zugänglich machen. (Um hochgeladene Dateien zu sehen, muss die Autorin/der Autor den Dateinamen anklicken und die Datei direkt öffnen oder auf den eigenen Computer sichern und dort öffnen.)</p><p>Wurde ein Beitrag zur Veröffentlichung akzeptiert, wird er zur {help_topic key="editorial.editorsRole.submissions.inEditing" text="redaktionellen Bearbeitung"} weitergeleitet.</p><p><i>Wiedereinreichung zur Begutachtung</i>. Wenn die zuständigen Rubrikredakteur/innen entscheiden, dass ein Beitrag überarbeitet und dann wieder zur Begutachtung eingereicht werden muss, sollten die Autor/innen über den Bereich der "E-Mail-Korrespondenz zwischen Redakteur/in und Autor/in" zunächst informieren, ob sie zu einer Überarbeitung bereit sind. Nach Überarbeitung kann der Beitrag dann für eine zweite Runde der Begutachtung hochgeladen werden. Die zuständigen Rubrikredakteur/innen geben ihn an die früheren Gutachter/innen oder an neue Gutachter/innen weiter und informieren die Autor/innen in vergleichbarer Weise wie in der 1. Begutachtungsrunde, wenn eine Entscheidung über die Veröffentlichung getroffen wurde.</p>]]>	
 	</section>
 </topic>

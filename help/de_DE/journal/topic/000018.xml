@@ -5,15 +5,16 @@
   * 000018.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Roles - Layout Editor 
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Rollen - Layout/in. 
   *
   * $Id$
   -->
 
-<topic id="journal/topic/000018" locale="en_US" title="Layout Editor" toc="journal/toc/000003" key="journal.roles.layoutEditor">
+<topic id="journal/topic/000018" locale="de_DE" title="Layout/in" toc="journal/toc/000003" key="journal.roles.layoutEditor">
 	<section>
-		<![CDATA[<p>The  Layout Editor transforms the copyedited versions of the submission into galleys in HTML, PDF, PS, etc., files which the journal has elected to use for electronic publication. This system does not provide software for converting word processing documents to galley formats, so the Layout Editor should have access to and be able to use third-party software packages for creating galleys (with Adobe Acrobat for PDFs, for example; or Dreamweaver for HTML), which present the articles on the screen with a well-formatted and readable layout, in the manner of scholarly journals, and with an eye to this new publishing medium (by consulting the layout used by other publishers of online journals, such as Highwire Press, for example, in the life sciences or Project Muse in the humanities).</p><p>More information can be found {help_topic key="editorial.layoutEditorsRole" text="here"}.</p>]]>	
+		<![CDATA[<p>Layouter/innen wandeln die lektorierte Beitragsfassung in HTML-, PDF-, PS- oder andere Fahnen um, je nachdem, welchen Dateityp eine Zeitschrift für die Veröffentlichung von Beiträgen vorsieht. OJS bietet keine Software, die z.B. Worddokumente in diese Fahnenformate transformiert , insoweit sollten Layouter/innen zu solchen Programmen Zugriff haben und mit ihnen vertraut sein (z.B. mit Adobe Acrobat für PDF-Dateien oder mit Dreamweaver für HTML-Dateien), die helfen, Artikel gut formatiert und lesbar als Teil wissenschaftlicher Fachzeitschriften auf dem Bildschirm darzustellen; und sie sollten das neue Publikationsmedium im Blick haben (indem sie Layouts anderer Online-Zeitschriften ansehen wie z.B. die von Highwire Press für die Lebenswissenschaften oder die des Project Muse für die Geisteswissenschaften).</p><p>Weitere Informationen finden sich {help_topic key="editorial.layoutEditorsRole" text="hier"}.</p>]]>	
 	</section>
 </topic>

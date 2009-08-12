@@ -5,28 +5,29 @@
   * 000001.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * table of contents for Journal Management - Management Pages. 
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Inhaltsverzeichnis für die Zeitschriftenverwaltung - Verwaltungsseiten. 
   *
   * $Id$
   -->
 
-<toc id="journal/toc/000001" locale="en_US" title="Management Pages" parent_topic="journal/topic/000001">
-	<topic id="journal/topic/000034" title="Announcements" />
-	<topic id="journal/topic/000010" title="Files Browser" />
-	<topic id="journal/topic/000005" title="Journal Sections" />
-	<topic id="journal/topic/000007" title="Languages" />
-	<topic id="journal/topic/000029" title="Masthead" />
-	<topic id="journal/topic/000035" title="Payments" />
-	<topic id="journal/topic/000006" title="Prepared Emails" />
-	<topic id="journal/topic/000009" title="Reading Tools" />
+<toc id="journal/toc/000001" locale="de_DE" title="Verwaltungsseiten" parent_topic="journal/topic/000001">
+	<topic id="journal/topic/000034" title="Mitteilungen" />
+	<topic id="journal/topic/000010" title="Dateinavigator" />
+	<topic id="journal/topic/000005" title="Rubriken der Zeitschrift" />
+	<topic id="journal/topic/000007" title="Sprachen" />
+	<topic id="journal/topic/000029" title="Impressum" />
+	<topic id="journal/topic/000035" title="Zahlungen" />
+	<topic id="journal/topic/000006" title="E-Mail-Vorlagen" />
+	<topic id="journal/topic/000009" title="Lesewerkzeuge" />
 	<topic id="journal/topic/000004" title="Setup" />
-	<topic id="journal/topic/000008" title="Stats &amp; Reports" />
-	<topic id="journal/topic/000025" title="Subscriptions" />
-	<topic id="journal/topic/000030" title="System Plugins" />
-	<topic id="journal/topic/000031" title="Import/Export Data" />
+	<topic id="journal/topic/000008" title="Statistiken &amp; Berichte" />
+	<topic id="journal/topic/000025" title="Subskriptionen" />
+	<topic id="journal/topic/000030" title="Plug-Ins" />
+	<topic id="journal/topic/000031" title="Daten importieren/exportieren" />
 
-	<breadcrumb url="journal/topic/000000" title="Journal Management" />
-	<breadcrumb url="journal/topic/000001" title="Management Pages" />
+	<breadcrumb url="journal/topic/000000" title="Zeitschriftenverwaltung" />
+	<breadcrumb url="journal/topic/000001" title="Verwaltungsseiten" />
 </toc>

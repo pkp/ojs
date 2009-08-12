@@ -5,15 +5,16 @@
   * 000030.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Reviewer's Role Index - Submissions 
-  *
+  * Die Rolle der Gutachter/innen - Beitragseinreichung
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * 
   * $Id$
-  -->
+-->
 
-<topic id="editorial/topic/000030" locale="en_US" title="Submissions" toc="editorial/toc/000008" key="editorial.reviewersRole.submissions">
+<topic id="editorial/topic/000030" locale="de_DE" title="Beitragseinreichung" toc="editorial/toc/000008" key="editorial.reviewersRole.submissions">
 	<section>
-		<![CDATA[<p>On logging in to the journal, the Reviewer arrives at the User Home page. By clicking on the role of Reviewer (as a Reviewer may be enrolled under other roles, such as an Author), the Reviewer is led to the Submissions page. This page lists the submissions which the Reviewer has been invited to review or is currently in the process of reviewing. The Submissions queue also notes what round the review is, as some reviews may have entered a second round of reviewing, following the Section Editor's decision that the submission must be "resubmitted for review." This page also provides access to past reviews which the Reviewer has completed for the journal.</p>]]>	
+		<![CDATA[<p>Nach Einloggen der Gutachterin/des Gutachters in die Zeitschrift erscheint deren persönliche Startseite. Wenn hier "Gutachter/in" angeklickt wird (Gutachter/innen können zusätzlich mit anderen Rollen, z.B. als Autor/in, registriert sein), wird die Beitragsseite aufgerufen. Hier sind die Beiträge aufgelistet, zu deren Begutachtung die Gutachterin/der Gutachter eingeladen wurde oder die sich aktuell im Begutachtungsprozess befinden. Es wird ebenfalls gezeigt, um welche Begutachtungsrunde eines Beitrags es sich handelt, da in einigen Fällen mehrere Begutachtungsschlaufen erforderlich sind, wenn die Rubrikredakteur/innen für "Wiedereinreichung zur Begutachtung" entschieden haben. Zusätzlich sind hier frühere Gutachten der Gutachterin/des Gutachters für die Zeitschrift zugänglich.</p>]]>	
 	</section>
 </topic>

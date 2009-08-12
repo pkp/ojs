@@ -2,18 +2,20 @@
 <!DOCTYPE topic SYSTEM "../../../topic.dtd">
 
 <!--
-  * locale.xml
+  * 000003.xml
   *
-  * C* Copyright (c) 2003-2009 John Willinsky
+  * Copyright (c) 2003-2009 John Willinsky
   * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Regionalisierungszeichenketten für die de_DE (Deutsche) Regionaleinstellung.
+  * Die Rolle der Redakteur/innen - Zusammenfassung Beitragseinreichung: Index. 
   * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * 
+  * $Id$
   
   -->
 
 <topic id="editorial/topic/000003" locale="de_DE" title="Zusammenfassung Beitragseinreichung" toc="editorial/toc/000001" subtoc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary">
 	<section>
-		<![CDATA[<p>Für jeden eingereichten Beitrag existiert eine Zusammenfassungsseite, über die die Herausgeber/innen die Beitragseinreichung und ihr zugehörige Metadaten und Indizierungsinformationen steuern können.</p>]]>	
+		<![CDATA[<p>Für jeden eingereichten Beitrag existiert eine Zusammenfassungsseite, über die die Redakteur/innen die Beitragseinreichung und ihr zugehörige Metadaten und Indizierungsinformationen steuern können.</p>]]>	
 	</section>
 </topic>

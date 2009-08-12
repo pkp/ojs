@@ -5,15 +5,16 @@
   * 000029.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Section Editor's Role Index - Editing - Proofreading
-  *
+  * Die Rolle der Rubrikredakteur/innen: Index - Redaktionelle Bearbeitung - Korrekturlektorat
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * 
   * $Id$
-  -->
+-->
 
-<topic id="editorial/topic/000029" locale="en_US" title="Proofreading" toc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing.proofreading">
+<topic id="editorial/topic/000029" locale="de_DE" title="Korrekturlektorat" toc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing.proofreading">
 	<section>
-		<![CDATA[<p>The Section Editor, on being notified by the Layout Editor on completion of the galleys, selects the Proofreader, if that has not already been done. The Section Editor then sends the Request email to the Author to begin the Proofreading process. The Author, upon completing a review of the galleys and Supplementary Files, if any, sends a completion email to the Proofreader, with a CC. to the Section Editor. Any typos or formatting errors are noted by the Author and Proofreader in the Corrections text-box in Proofreading because the Authors and Proofreaders cannot mark up the galleys. The Proofreader, on completing the review of the galleys and Supplementary Files, if any, notifies the Layout Editor, with a cc to the Section Editor, and the Layout Editor proceeds to correct the galleys and Supplementary Files, if any. Finally, The Layout Editor notifies the Section Editor that the submission is ready to be scheduled for publication. At that point, the Section Editor may again wish to review the files, and if satisfied, schedule the submission for publication by choosing an issue under Scheduling, and pressing "{translate key="common.record"}". The submission then enters the {help_topic key="publishing.index" text="Publishing Process"}.</p><p>Note that the Editor can schedule a submission for publication at any point in the editing process; this information will be made available to Layout Editors and Proofreaders and will give them the ability to preview the issue before publication.</p>]]>
+		<![CDATA[<p> Die Rubrikredakteur/innen müssen, nachdem sie eine Nachricht über die Fertigstellung der Fahnen von den Layouter/innen erhalten haben, sofern noch nicht erfolgt  eine Korrekturlektorin/einen Korrekturlektor auswählen. Danach schicken sie eine Anfrage-Mail an die Autor/innen mit der Bitte, die Fahnen zu prüfen. Diese schicken nach Prüfung der Fahnen und, sofern vorhanden, der Zusatzdateien eine Mail (mit Kopie an die zuständigen Rubrikredakteur/innen) an die Korrekturlektor/innen. Tipp- und Formatfehler werden von den Autor/innen und Korrekturlektor/innen in ein Korrekturfeld im Bereich Korrekturlektorat eingegeben, da beide die Fahnen nicht verändern können. Die Korrekturlektor/innen senden nach Beenden der Prüfung der Fahnen und, wenn vorhanden, der Zusatzdateien eine Mail (mit Kopie an die zuständigen Rubrikredakteur/innen) an die Layouter/innen, und diese korrigieren die Fahnen und ggf. Zusatzdateien. Danach benachrichtigt die Layouter/innen die zuständigen Rubrikredakteur/innen, dass der Beitrag zur Publikation freigegeben werden kann. Die Rubrikredakteurin/der Rubrikredakteur kann, wenn gewünscht, die Dateien nochmals prüfen und danach für die Publikation zuweisen durch Auswahl der entsprechenden Zeitschriftenausgabe im Feld "Zeitliche Planung"  und Anklicken von "{translate key="common.record"}". Der Beitrag kommt auf diesen Weg in den {help_topic key="publishing.index" text="Publikationsprozess"}.</p><p>Es ist zu beachten, dass die Redakteur/innen zu jedem Zeitpunkt der redaktionellen Bearbeitung einen Beitrag zur Publikation zuweisen können; dies wird Layouter/innen und Korrekturlektor/innen mitgeteilt, sodass diese eine Ausgabe vor der Publikation in einer Vorschau prüfen können.</p>]]>
 	</section>
 </topic>

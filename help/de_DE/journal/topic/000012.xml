@@ -5,17 +5,18 @@
   * 000012.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Users - Create New User 
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Benutzer/innen - Neue/n Benutzer/in erstellen. 
   *
   * $Id$
   -->
 
-<topic id="journal/topic/000012" locale="en_US" title="Create New User" toc="journal/toc/000002" key="journal.users.createNewUser">
+<topic id="journal/topic/000012" locale="de_DE" title="Neue/n Benutzer/in erstellen" toc="journal/toc/000002" key="journal.users.createNewUser">
 	<section>
-		<![CDATA[<p>The Journal Manager can use the Create New User link to register someone and assign them a role, from Journal Manager to Reader. The user can, on logging in to the journal, complete and change the profile information entered by the Journal Manager.</p><p><i>Changing a password</i>. Users can change their passwords once they have logged into the journal. The Journal Manager cannot access a password once it has been assigned. However, the system will generate a new password and email it to users who click on the "{translate key="user.login.forgotPassword"}" link under the login box.</p><p><i>Enroll Existing User</i><br />
-The Journal Manager can assign an existing user to one or more new roles.</p><p><i>Sync Users</i><br />
-Enrollment synchronization will enroll all users enrolled in the specified role in the specified journal into the same role in this journal. This function allows a common set of users (e.g., Reviewers) to be synchronized between journals.</p>]]>
+		<![CDATA[<p>Zeitschriftenverwalter/innen können den Link "Neue/n Benutzer/in erstellen" verwenden, um Personen einzuschreiben und ihnen Rollen zuzuweisen, von Zeitschriftenverwalter/in bis hin zu Leser/in. Diese Nutzer/innen können sich dann in die Zeitschrift einloggen und die von den Zeitschriftenverwalter/innen eingegebenen Profilinformationen vervollständigen und ändern.</p><p><i>Passwort ändern</i>. Nutzer/innen können ihr Passwort  ändern, sobald sie eingeloggt sind. Für Zeitschriftenverwalter/innen sind Nutzer/innen-Passworte, nachdem sie einmal vergeben wurden, nicht mehr veränderbar. Allerdings wird ein neues Passwort generiert und per Mail an die Nutzerin/der Nutzer geschickt, wenn diese den "{translate key="user.login.forgotPassword"}"-Link unter dem Login-Feld anklicken.</p><p><i>Bereits existierende/n Benutzer/in eintragen </i><br />
+Zeitschriftenverwalter/innen können existierenden Nutzer/innen eine oder mehrere neue Rollen zuweisen.</p><p><i> Nutzer/innen synchronisieren</i><br />
+Die "Synchronisiere Einträge"-Funktion erlaubt, dass alle Nutzer/innen, die mit einer spezifischen Rolle in einer bestimmten Zeitschrift eingeschrieben sind, mit genau dieser Rolle für eine weitere Zeitschrift  registriert werden. Auf diese Weise kann eine gesamte Nutzer/innengruppe (z.B. Gutachter/innen) zwischen Zeitschriften synchronisiert werden.</p>]]>
 	</section>
 </topic>

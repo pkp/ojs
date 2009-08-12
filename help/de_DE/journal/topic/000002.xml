@@ -5,15 +5,16 @@
   * 000002.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Users Index 
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Benutzer/innen: Index. 
   *
   * $Id$
   -->
 
-<topic id="journal/topic/000002" locale="en_US" title="Users" toc="journal/toc/000000" subtoc="journal/toc/000002" key="journal.users.index">
+<topic id="journal/topic/000002" locale="de_DE" title="Benutzer/innen" toc="journal/toc/000000" subtoc="journal/toc/000002" key="journal.users.index">
 	<section>
-		<![CDATA[<p>It is the Journal Manager's responsibility to manage users in OJS. This includes creating users, disabling accounts, managing roles, etc. The Journal Manager can browse and add to existing enrollments, modify profiles, merge accounts, and contact groups of users.</p>]]>	
+		<![CDATA[<p> Die Zeitschriftenverwalter/innen verwalten auch die verschiedenen Nutzer/innen(-gruppen) der Zeitschrift. Hierzu gehört das Erstellen und Entfernen von Nutzer/innenkonten, die Verwaltung von Rollen usw. Zeitschriftenverwalter/innen können die Liste verfügbarer Konten durchblättern und sie ergänzen, sie können Nutzer/innenprofile ändern, Nutzer/innenkonten zusammenführen oder Gruppen von Nutzer/innen direkt adressieren.</p>]]>	
 	</section>
 </topic>

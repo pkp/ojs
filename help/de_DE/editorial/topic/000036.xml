@@ -5,15 +5,16 @@
   * 000036.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Author's Role Editing - Proofreading
-  *
+  * Die Rolle der Autor/innen - Redaktionelle Überarbeitung - Korrekturlektorat
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * 
   * $Id$
-  -->
+-->
 
-<topic id="editorial/topic/000036" locale="en_US" title="Proofreading" toc="editorial/toc/000011" key="editorial.authorsRole.editing.proofreading">
+<topic id="editorial/topic/000036" locale="de_DE" title="Korrekturlektorat" toc="editorial/toc/000011" key="editorial.authorsRole.editing.proofreading">
 	<section>
-		<![CDATA[<p>The Author proofreads the galleys for the submission, which are the versions in HTML, PDF and/or Postscript that will appear in the online edition of the journal. To view these files, the Author clicks on each of the Proof Formats (and not the file names) to see the submission in each of the formats in which it will be published. In the Proofreading stage, only typographical and formatting corrections are made, and can only be made by the Layout Editor.</p> <p>Obviously, if more than one file format is used, the Author only checks one for spelling errors but all of them for possible formatting problems. The Author should follow the Proofreading Instructions when recording the corrections in the Corrections text-box. The Author should also review any Supplementary Files that are to accompany the published submission. These files are presented in their original format, and thus can be modified and uploaded again, as well as having their titles altered using the Edit function. Any changes made to these files should be noted in the Corrections text-box.</p>]]>	
+		<![CDATA[<p>Die Autorin/der Autor prüft die Fahnen für den Beitrag, die in den Formaten HTML, PDF und/oder Postscript für die Veröffentlichung in der Zeitschrift vorgesehen sind. Um diese anzusehen, müssen die jeweiligen Fahnen-Formate angeklickt werden (und nicht die Dateinamen). In der Phase des Korrekturlektorats können nur noch typografische und Formatfehler korrigiert werden, und zwar ausschließlich von den Layouter/innen.</p> <p>Selbstverständlich sollte, wenn mehr als ein Format genutzt wird, nur eine Datei für verbliebene Rechtschreibefehler durchgelesen werden, aber alle sollten auf mögliche Formatierungsfehler hin geprüft werden. Beim Festhalten der erforderlichen Korrekturen im Korrektur-Textfeld sollten die Autor/innen den Hinweisen zum Korrekturlektorat folgen. Sie sollten auch alle Zusatzdateien prüfen, die zur Veröffentlichung vorgesehen sind. Diese Dateien werden im Originalformat bereitgestellt und können insoweit geändert und erneut hochgeladen werden; ebenso können ihre Namen mittels der Bearbeiten-Funktion verändert werden. Alle Änderungen an diesen Dateien sollten im Korrektur-Textfeld festgehalten werden.</p>]]>	
 	</section>
 </topic>

@@ -5,15 +5,16 @@
   * 000030.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Management Pages - System Plugins
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Verwaltungsseiten - Plug-Ins. 
   *
   * $Id$
   -->
 
-<topic id="journal/topic/000030" locale="en_US" title="System Plugins" toc="journal/toc/000001" key="journal.managementPages.plugins">
+<topic id="journal/topic/000030" locale="de_DE" title="Plug-Ins" toc="journal/toc/000001" key="journal.managementPages.plugins">
 	<section>
-		<![CDATA[<p>The System Plugins page allows the Journal Manager to view a list of plugins installed in OJS and perform any management tasks made available by each plugin. For more information, refer to the documentation included with each plugin, found within OJS' plugin directory (/path/to/install/plugins).</p>]]>
+		<![CDATA[<p>Über die Plug-Ins-Seite haben Zeitschriftenverwalter/innen Zugang zu einer Liste mit Plug-Ins, die in OJS installiert sind, und sie können alle Verwaltungsaufgaben durchführen, die mittels der Plug-Ins verfügbar sind. Siehe für weitere Informationen die Dokumentation der einzelnen Plug-Ins im OJS-Plug-Ins-Verzeichnis (/path/to/install/plugins).</p>]]>
 	</section>
 </topic>

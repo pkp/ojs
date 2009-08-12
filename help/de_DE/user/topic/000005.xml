@@ -5,15 +5,16 @@
   * 000005.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * User Interface - Search and Browse
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Nutzer/innen-Schaltfläche - Suche &amp; Browsen. 
   *
   * $Id$
   -->
 
-<topic id="user/topic/000005" locale="en_US" title="Search and Browse" toc="user/toc/000000" key="user.searchAndBrowse">
+<topic id="user/topic/000005" locale="de_DE" title="Search and Browse" toc="user/toc/000000" key="user.searchAndBrowse">
 	<section>
-		<![CDATA[<p>The journal's contents can be searched by author, title, abstract, and index terms. The full text of the contents can be searched both in HTML and PDF file formats. Alternatively, using the Browse link in the right-hand margin of the page, readers can browse the contents of the journal by issue, author, and title. Other journals published through this installation of Open Journal Systems may also be browsed.</p>]]>
+		<![CDATA[<p>Inhalte der Zeitschrift können nach Autor/in, Titel, Abstract und indizierten Begriffen durchsucht werden. Die Volltexte sind im HTML- und PDF-Format durchsuchbar. Alternativ können Lesende den "Durchsuchen"-Link in der rechten Navigationsleiste verwenden, um Inhalte nach Ausgabe, Autor/in und Titel durchzublättern. Ggf. können andere Zeitschriften, die die gleiche OJS-Installation auf dem Server nutzen, mit durchblättert werden.</p>]]>
 	</section>
 </topic>

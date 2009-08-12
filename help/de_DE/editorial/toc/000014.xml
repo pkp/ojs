@@ -5,17 +5,18 @@
   * 000014.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * table of contents for Editorial Process - Proofreader's Role
+  * Inhaltsverzeichnis für den redaktionellen Prozess - Die Rolle der Korrekturlektor/innen. 
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).*
   *
   * $Id$
   -->
 
-<toc id="editorial/toc/000014" locale="en_US" title="Proofreader's Role" parent_topic="editorial/topic/000014">
-	<topic id="editorial/topic/000042" title="Submissions" />
-	<topic id="editorial/topic/000043" title="Proofreading" />
+<toc id="editorial/toc/000014" locale="de_DE" title="Die Rolle der Korrekturlektor/innen" parent_topic="editorial/topic/000014">
+	<topic id="editorial/topic/000042" title="Beitragseinreichungen" />
+	<topic id="editorial/topic/000043" title="Korrekturlektorat" />
 
-	<breadcrumb url="editorial/topic/000000" title="Editorial Process" />
-	<breadcrumb url="editorial/topic/000014" title="Proofreader's Role" />
+	<breadcrumb url="editorial/topic/000000" title="Der redaktionelle Prozess" />
+	<breadcrumb url="editorial/topic/000014" title="Die Rolle der Korrekturlektor/innen" />
 </toc>

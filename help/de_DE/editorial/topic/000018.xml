@@ -5,15 +5,16 @@
   * 000018.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Editor's Role Submissions - Archives 
-  *
+  * Die Rolle der Redakteur/innen - Beitragseinreichungen - Archive
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * 
   * $Id$
-  -->
+-->
 
-<topic id="editorial/topic/000018" locale="en_US" title="Archives" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.archives">
+<topic id="editorial/topic/000018" locale="de_DE" title="Archive" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.archives">
 	<section>
-		<![CDATA[<p>Submissions in this queue have been through the editorial process, whether they have been declined, scheduled to be published, or are published. This queue provides Editors and the assigned Section Editor complete access to the submission's editorial history (Summary, Submission, Review, Editing, and History).</p><p><i>To Restore an Archived Item to the Active List</i>. The Editor should go to the Archives on the Editor Home page and find the submission. Clicking on the submission's title will lead to the Summary, Review, Editing and History pages for the submission, and on the Summary page there is a link, "Restore to Active List," that will move the submission into the In Review or In Editing list, depending on what stage the submission was at when it was archived.</p>]]>	
+		<![CDATA[<p>Beiträge im Bereich "Archive" haben den redaktionellen Prozess durchlaufen und sind entweder abgelehnt, für die Veröffentlichung zugewiesen oder bereits veröffentlicht worden. Über diesen Bereich haben Redakteur/innen und die zugewiesenen Rubrikredakteur/innen vollständigen Zugang zur redaktionellen Geschichte der Beiträge (Zusammenfassung, Einreichung, Begutachtung und Verlauf).</p><p><i>Aktivieren eines archivierten Beitrags</i>. Hierfür müssen Redakteur/innen in den Bereich "Archive" des Redakteur/innenzugangs gehen. Durch Klicken des Beitragstitels gelangen sie zu dessen Zusammenfassungs-, Einreichungs-, Begutachtungs- und Verlaufsseite, und wenn auf der Zusammenfassungsseite " Wieder in die Liste der zu bearbeitenden Beiträge aufnehmen" angeklickt wird, wird der Beitrag, je nach Stand bei der Archivierung, in die Liste der zu begutachtenden oder der redaktionell zu bearbeitenden Beiträge verschoben.</p>]]>	
 	</section>
 </topic>

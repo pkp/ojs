@@ -5,15 +5,16 @@
   * 000010.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Management Pages - Files Browser
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Verwaltungsseiten - Dateinavigator. 
   *
   * $Id$
   -->
 
-<topic id="journal/topic/000010" locale="en_US" title="Files Browser" toc="journal/toc/000001" key="journal.managementPages.fileBrowser">
+<topic id="journal/topic/000010" locale="de_DE" title="Dateinavigator" toc="journal/toc/000001" key="journal.managementPages.fileBrowser">
 	<section>
-		<![CDATA[<p>The Files Browser allows Journal Managers to peruse and manage the hierarchy of files uploaded for the journal (including all files uploaded through submission management). Files can be viewed, deleted, and moved as if interacting with a local file system.</p><p>Note that this is intended as an administrative facility only and will generally not be needed in the day-to-day management of the journal. Submission information is maintained as a combination of files and database records; deleting submission files with the Files Browser will not delete the associated database records.</p>]]>
+		<![CDATA[<p>Der Dateinavigator erlaubt Zeitschriftenverwalter/innen, die Hierarchie von für die Zeitschrift hochgeladenen Dateien zu prüfen und zu organisieren (incl. aller Dateien, die im Verlauf der Bearbeitung einer Beitragseinreichung hochgeladen werden). Dateien können angesehen, gelöscht oder verschoben werden, vergleichbar der Arbeit mit einem lokalen Dateisystem.</p><p>Es ist zu beachten, das dies nur für administrative Zwecke vorgesehen ist und normalerweise im Alltagsgeschäft der Zeitschrift nicht benötigt wird. Informationen über Beiträge werden als Kombination aus Dateien und Datenbanksätzen vorgehalten; werden Beitragsdateien mittels des Dateinavigators gelöscht, dann werden die assoziierten Datensätze nicht automatisch mit entfernt.</p>]]>
 	</section>
 </topic>

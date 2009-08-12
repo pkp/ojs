@@ -2,18 +2,19 @@
 <!DOCTYPE topic SYSTEM "../../../topic.dtd">
 
 <!--
-  * 000015.xml
+  * 000032.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Roles - Subscription Manager 
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Rollen - Abonnementverwalter/in. 
   *
   * $Id$
   -->
 
-<topic id="journal/topic/000032" locale="en_US" title="Subscription Manager" toc="journal/toc/000003" key="journal.roles.subscriptionManager">
+<topic id="journal/topic/000032" locale="de_DE" title="Abonnementverwalter/in" toc="journal/toc/000003" key="journal.roles.subscriptionManager">
 	<section>
-		<![CDATA[<p>The Subscription Manager manages the journal's Subscriptions and Subscription Types.</p><p>More information on managing subscriptions can be found {help_topic key="journal.managementPages.subscriptions" text="here"}.</p>]]>
+		<![CDATA[<p>Abonnementverwalter/innen verwalten Zeitschriftenabonnements und Abonnementarten.</p><p>Weitere Informationen zum Verwalten von Abonnements finden sich {help_topic key="journal.managementPages.subscriptions" text="hier"}.</p>]]>
 	</section>
 </topic>

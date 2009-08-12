@@ -5,20 +5,21 @@
   * 000008.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Management Pages - Stats & Reports
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Verwaltungsseiten - Statistiken &amp; Berichte. 
   *
   * $Id$
   -->
 
-<topic id="journal/topic/000008" locale="en_US" title="Stats &amp; Reports" toc="journal/toc/000001" key="journal.managementPages.statsAndReports">
+<topic id="journal/topic/000008" locale="de_DE" title="Statistiken &amp; Berichte" toc="journal/toc/000001" key="journal.managementPages.statsAndReports">
 	<section>
-		<![CDATA[<p>Statics &amp; Reports provides the Journal Manager with the ability to extract information about the history of the journal's usage in two forms. First, under Statistics, year-by-year statistics are available for at-a-glance data on submissions, editorial practices, and users. Second, the Journal Manager can generate one of several types of reports on a specific range of dates.</p><p>There are four types of reports available:<ul>
-			<li><strong>Journal Report</strong>: Reports on all journal submissions in the given period.</li>
-			<li><strong>Editor Report</strong>: Reports on submissions, grouped by Editor.</li>
-			<li><strong>Review Report</strong>: Reports on submissions, grouped by Reviewer.</li>
-			<li><strong>Section Report</strong>: Reports on submissions, grouped by Section.</li>
-		</ul>These reports are generated in Comma-Separated Values (CSV) format and should be opened using a spreadsheet application.]]>
+		<![CDATA[<p>Statistiken &amp; Berichte erlauben den Zeitschriftenverwalter/innen, Information über die Zeitschriftennutzung im Zeitverlauf auf zwei Arten zu extrahieren. Zum einen sind unter "Statistiken" Überblicke über Jahresstatistiken zu Beitragseinreichungen, über die redaktionelle Arbeit und über Nutzer/innen verfügbar. Zum anderen können Zeitschriftenverwalter/innen unterschiedliche Berichtstypen für spezifische Zeitintervalle generieren.</p><p>Vier arten von Berichten sind verfügbar:<ul>
+			<li><strong>Zeitschriften-Bericht</strong>: Berichte über alle Beiträge in einem bestimmten Zeitintervall.</li>
+			<li><strong>Redakteur/innen-Bericht</strong>: Bericht über Beiträge, geordnet nach Redakteur/innen.</li>
+			<li><strong>Gutachter/innen-Bericht </strong>: Bericht über Beiträge, geordnet nach Gutachter/innen.</li>
+			<li><strong>Rubriken-Bericht</strong>: Bericht über Beiträge, geordnet nach Rubriken.</li>
+		</ul>Die Reporte werden im "Comma-Separated Values" (CSV)-Format generiert und sollten mit einer Anwendung für Tabellenkalkulationen geöffnet werden.]]>
 	</section>
 </topic>

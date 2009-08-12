@@ -5,17 +5,18 @@
   * 000000.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * table of contents for Author Submission Process. 
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Inhaltsverzeichnis - Autor/innen - Beitragseinreichung. 
   *
   * $Id$
   -->
 
-<toc id="submission/toc/000000" locale="en_US" title="Submission Process" parent_topic="submission/topic/000000">
-	<topic id="submission/topic/000001" title="Author Guidelines" />
-	<topic id="submission/topic/000002" title="Submission Requirements" />
-	<topic id="submission/topic/000003" title="Indexing and Metadata" />
-	<topic id="submission/topic/000004" title="Supplementary Files" />
-	<breadcrumb url="submission/topic/000000" title="Submission Process" />
+<toc id="submission/toc/000000" locale="de_DE" title="Beitragseinreichung" parent_topic="submission/topic/000000">
+	<topic id="submission/topic/000001" title="Richtlinien für Autor/innen" />
+	<topic id="submission/topic/000002" title="Voraussetzungen für die Beitragseinreichung" />
+	<topic id="submission/topic/000003" title="Indizierung und Metadaten" />
+	<topic id="submission/topic/000004" title="Zuatzdateien" />
+	<breadcrumb url="submission/topic/000000" title="Beitragseinreichung" />
 </toc>

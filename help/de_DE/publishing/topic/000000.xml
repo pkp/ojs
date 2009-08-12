@@ -5,15 +5,16 @@
   * 000000.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Publishing Process Index 
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Publikationsprozess: Index. 
   *
   * $Id$
   -->
 
-<topic id="publishing/topic/000000" locale="en_US" title="Publishing Process" toc="index/toc/000000" subtoc="publishing/toc/000000" key="publishing.index">
+<topic id="publishing/topic/000000" locale="de_DE" title="Publikationsprozess" toc="index/toc/000000" subtoc="publishing/toc/000000" key="publishing.index">
 	<section>
-		<![CDATA[<p>The Editor sees through the publishing process by creating issues and/or volumes for the journal, scheduling submissions to those issues, organizing their Table of Contents, and then finally publishing the issue. The journal can be published in a number of formats. The typical pattern is to gather submissions into an issue which is published quarterly (or monthly or twice a year). However, some electronic journals prefer to publish submissions as soon as they are ready, as part of an annual volume, which begins with the first submission of the year and closes at the end of year, when another volume begins. For the purposes of this Help text, the term issue is used, although an issue consists of a Table of Contents that may be identified by (a) issue, volume, year; (b) volume, year; (c) year; or (d) title. How issues are to be identified is part of the Setup for the journal which the Journal Manager will have configured.</p>]]>	
+		<![CDATA[<p>Redakteur/innen koordinieren den Publikationsprozess, indem sie Ausgaben erstellen, Beiträge für die Ausgaben zuweisen, das Inhaltsverzeichnis organisieren und schließlich die Ausgabe veröffentlichen. Zeitschriften können in unterschiedlichen Formaten publiziert werden.  Normalerweise ist es üblich, Beiträge in einer Ausgabe zusammenzufassen und vierteljährlich (oder monatlich oder zweimal jährlich) zu veröffentlichen. Einige Zeitschriften sehen jedoch vor, dass Artikel sofort veröffentlicht werden, wenn sie publikationsfertig sind. Sie sind dann Teil eines Jahrgangs, der mit dem ersten, in dem jeweiligen Jahr veröffentlichten Beitrag beginnt und mit dem letzten Beitrag des Jahres endet, wonach ein neuer Jahrgang startet. Für diesen Hilfe-Text wird der Begriff "Ausgabe" verwendet, obwohl eine Ausgabe aus einem Inhaltsverzeichnis besteht, dass strukturierbar ist nach (a) Ausgabe/Heft, Jahrgang, Jahr; (b) Jahrgang, Jahr; (c) Jahr oder (d) Titel. Wie Ausgaben strukturiert werden, wird im Setup der Zeitschrift durch die Zeitschriftenverwalter/innen konfiguriert.</p>]]>	
 	</section>
 </topic>

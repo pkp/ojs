@@ -5,15 +5,16 @@
   * 000002.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Publishing Process - Schedule Submissions
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Publikationsprozess - Beiträge zuweisen. 
   *
   * $Id$
   -->
 
-<topic id="publishing/topic/000002" locale="en_US" title="Schedule Submissions" toc="publishing/toc/000000" key="publishing.scheduleSubmissions">
+<topic id="publishing/topic/000002" locale="de_DE" title="Beiträge zuweisen" toc="publishing/toc/000000" key="publishing.scheduleSubmissions">
 	<section>
-		<![CDATA[<p>At any point in the Editing process, the Section Editor can schedule a submission for publication in a particular issue. Typically, the Editor will place the submission into the first available issue, but it may happen that an issue is "full" prior to its publication, or that an Editor wishes to place a submission in a later issue to ensure a range of topics in each issue or, on the other hand, to cluster a series of submissions on a single topic.</p><p><i>Continuous publishing of submissions</i>. If submissions are being published continuously, as soon as they are ready, then the Editor schedules the submission in what is, in effect, the Current issue, and it will be published immediately. At the end of a Volume year, the next submission will be scheduled to appear in the new Volume, for which the Table of Contents will be published or made Current with this initial submission.</p><p>Once a submission has been scheduled in a particular issue, the issue's name and a link to its table of contents will be presented to Layout Editors and Proofreaders.</p>]]>
+		<![CDATA[<p>Rubrikredakteur/innen können einen Beitrag zu jedem beliebigen Zeitpunkt der redaktionellen Bearbeitung zur Publikation in einer bestimmten Ausgabe zuweisen. Normalerweise werden die Redakteur/innen den Beitrag in der dann folgenden Ausgabe platzieren, aber es kann sein, dass eine Ausgabe bereits vor Veröffentlichung "voll" ist oder dass die Redakteur/innen einen Beitrag mit Blick auf die gewünschte Breite der Themen bzw. um mehrere Beiträge zu einem Thema zusammenzufassen erst einer späteren Ausgabe zuweisen.</p><p><i>Kontinuierliche Beitragspublikation</i>. Sollen Beiträge kontinuierlich, d.h. sobald sie publikationsfertig sind, veröffentlicht werden, dann weisen die Redakteur/innen den Beitrag zu (faktisch handelt es sich um die aktuelle Ausgabe) und er wird direkt veröffentlicht. Der erste Beitrag für das Folgejahr wird dann dem nächsten Jahrgang zugewiesen, dessen Inhaltsverzeichnis mit dieser ersten Publikation des Folgejahres verfügbar wird.</p><p>Sobald der Beitrag einer bestimmten Ausgabe zugewiesen wurde, werden Name der Ausgabe und Inhaltsverzeichnis an die Layouter/innen und Korrekturlektor/innen gemailt.</p>]]>
 	</section>
 </topic>

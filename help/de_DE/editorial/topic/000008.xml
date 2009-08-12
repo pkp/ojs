@@ -5,15 +5,16 @@
   * 000008.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Reviewer's Role Index 
-  *
+  * Die Rolle der Gutachter/innen: Index
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * 
   * $Id$
-  -->
+-->
 
-<topic id="editorial/topic/000008" locale="en_US" title="Reviewer's Role" toc="editorial/toc/000000" subtoc="editorial/toc/000008" key="editorial.reviewersRole">
+<topic id="editorial/topic/000008" locale="de_DE" title="Die Rolle der Gutachter/innen" toc="editorial/toc/000000" subtoc="editorial/toc/000008" key="editorial.reviewersRole">
 	<section>
-		<![CDATA[<p>The Reviewer is invited by email to review a submission, which includes its title and abstract, as well as the journal's URL and a username and password for the Reviewer to use to enter the journal. The journal has the option of using a reviewer option that sends the submission as an email attachment to the Reviewer along with an invitation to review. In this case, the Reviewer then responds by email. What is described here is the principal method for reviewing (and ensuring complete records of the process), which involves the Reviewer conducting the Review on the journal's web site.</p>]]>	
+		<![CDATA[<p> Gutachter/innen werden mit einer E-Mail zur Begutachtung eines Beitrags eingeladen, die Titel und Abstract, die URL der Zeitschrift sowie einen Benutzer/innennamen und ein Passwort enthält, damit sie Zugang zu diesem Bereich der Zeitschrift erhalten. Die Zeitschrift hat zusätzlich die Option, eine Begutachtungsvariante zu nutzen,  bei der der eingereichte Beitrag als Attachment zusammen mit der Einladungsmail an die Gutachter/innen geschickt wird. Diese reagieren dann per E-Mail. Was hier beschrieben wird, ist jedoch die grundlegende Variante der Begutachtung (und der Sicherstellung einer vollständigen Prozessdokumentation), bei der die Begutachtenden in den Workflow mittels der Zeitschriften-Webseite einbezogen werden.</p>]]>	
 	</section>
 </topic>

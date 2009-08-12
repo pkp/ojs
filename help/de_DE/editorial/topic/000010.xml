@@ -5,15 +5,16 @@
   * 000010.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Author's Role Review Index 
-  *
+  * Die Rolle der Autor/innen - Begutachung: Index
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * 
   * $Id$
-  -->
+-->
 
-<topic id="editorial/topic/000010" locale="en_US" title="Review" toc="editorial/toc/000009" subtoc="editorial/toc/000010" key="editorial.authorsRole.review">
+<topic id="editorial/topic/000010" locale="de_DE" title="Begutachung" toc="editorial/toc/000009" subtoc="editorial/toc/000010" key="editorial.authorsRole.review">
 	<section>
-		<![CDATA[<p>The Author is able observe the progress of the submission through the Review process, as well as upload revised versions, as required by the Section Editor overseeing the Review process.</p>]]>	
+		<![CDATA[<p>Autor/innen können den Fortgang der Begutachtung online nachvollziehen und, wenn von den Rubrikredakteur/innen erbeten, revidierte Fassungen hochladen.</p>]]>	
 	</section>
 </topic>

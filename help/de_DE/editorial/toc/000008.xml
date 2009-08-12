@@ -5,17 +5,18 @@
   * 000008.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * table of contents for Editorial Process - Reviewer's Role
+  * Inhaltsverzeichnis für den redaktionellen Prozess - Die Rolle der Gutachter/innen. 
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
   *
-  * $Id$
+  *$Id$
   -->
 
-<toc id="editorial/toc/000008" locale="en_US" title="Reviewer's Role" parent_topic="editorial/topic/000008">
-	<topic id="editorial/topic/000030" title="Submissions" />
-	<topic id="editorial/topic/000031" title="Review" />
+<toc id="editorial/toc/000008" locale="de_DE" title="Die Rolle der Gutachter/innen" parent_topic="editorial/topic/000008">
+	<topic id="editorial/topic/000030" title="Beitragseinreichungen" />
+	<topic id="editorial/topic/000031" title="Begutachtung" />
 
-	<breadcrumb url="editorial/topic/000000" title="Editorial Process" />
-	<breadcrumb url="editorial/topic/000008" title="Reviewer's Role" />
+	<breadcrumb url="editorial/topic/000000" title="Der redaktionelle Prozess" />
+	<breadcrumb url="editorial/topic/000008" title="Die Rolle der Gutachter/innen" />
 </toc>

@@ -5,29 +5,24 @@
   * 000007.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * User Interface - User Home
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * Nutzer/innen-Schaltfläche - Persönliche Startseite. 
   *
   * $Id$
   -->
 
-<topic id="user/topic/000007" locale="en_US" title="User Home" toc="user/toc/000000" key="user.userHome">
+<topic id="user/topic/000007" locale="de_DE" title="Persönliche Startseite" toc="user/toc/000000" key="user.userHome">
 	<section>
-		<![CDATA[<p>Once a user has logged in, a User Home link appears in the top navigation bar. Clicking this link will display different information depending on whether the user is browsing a specific journal or the site as a whole.</p>]]>	
+		<![CDATA[<p>Sobald eine Nutzerin/ein Nutzer eingeloggt ist, erscheint ein Link zur persönlichen Startseite in der Hauptnavigationsleiste. Wird dieser Link angeklickt, werden unterschiedliche Information angezeigt, je nachdem, ob die Nutzerin/der Nutzer sich auf der Startseite einer Zeitschrift oder auf der Serverstartseite bewegt.</p>]]>	
 	</section>
 
-<section title="Main Site-Level User Home Information">
-		<![CDATA[<p>If the user is logged in and is browsing the main site, the following information is displayed:</p>
+	<section title="Informationen in der persönlichen Startseite: Serverebene">
+		<![CDATA[<p>Wenn eine Nutzerin/ein Nutzer eingeloggt ist und sich auf der Ebene des Servers bewegt, werden die folgenden Informationen angezeigt:</p><p><i>Meine Zeitschriften</i>. Die Nutzerin/der Nutzer findet eine Liste aller Zeitschriften, für die sie/er registriert ist, zusammen mit Links für die jeweils verfügbaren Rollen (Autor/in, Redakteur/in usw.) auf der Ebene der Einzelzeitschriften. Für Serververwalter/innen finden sich auf dieser Seite auch Links zu den Serververwaltungsseiten.</p><p><i>Mein Konto</i>. Hier finden sich Links, die Änderungen des Kontos betreffen, incl. der Möglichkeit, sich für andere Zeitschriften zu registrieren; außerdem kann das eigene Profil bearbeitet und das Passwort geändert werden, oder die Nutzerin/der Nutzer kann sich ausloggen. </p>]]>
+	</section>
 
-<p><i>My Journals</i>. The user will find a list of all journals for which they have registered, along with links to all available roles (Author, Editor, etc.) on a per-journal basis. If the user is also the Site Administrator, there will also be links to site-wide administration pages.</p><p><i>My Account</i>. The user will find links to perform account modifications, including registering with other journals; editing the user's profile; changing the user's password; and logging out.</p>]]>
-
-</section>
-
-<section title="Journal-Level User Home Information">
-		<![CDATA[<p>If the user is logged in and is browsing a specific journal, only information particular to that journal is displayed. Additionally, under <i>My Account</i> the link to register with other journals is replaced with a link to "Show My Journals" (taking the user back to the Main Site User Home page).]]>
-
-</section>
-
+	<section title="Informationen in der persönlichen Startseite: Zeitschriftenebene">
+		<![CDATA[<p>Wenn Nutzer/innen auf der Ebene einer Zeitschrift eingeloggt sind, werden nur Informationen zu dieser Zeitschrift angezeigt. Zusätzlich steht (im Falle mehrerer Zeitschriften auf einem Server) unter <i>Mein Konto</i> statt des Links, der erlaubt, sich für andere Zeitschriften zu registrieren, der Link "Meine Zeitschriften zeigen" (der zurück auf die Serverebene führt).]]>
+	</section>
 </topic>
-

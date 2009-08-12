@@ -5,15 +5,16 @@
   * 000042.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Proofreader's Role - Submissions
-  *
+  * Die Rolle der Korrekturlektor/innen - Beitragseinreichungen
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * 
   * $Id$
-  -->
+-->
 
-<topic id="editorial/topic/000042" locale="en_US" title="Submissions" toc="editorial/toc/000014" key="editorial.proofreadersRole.submissions">
+<topic id="editorial/topic/000042" locale="de_DE" title="Beitragseinreichungen" toc="editorial/toc/000014" key="editorial.proofreadersRole.submissions">
 	<section>
-		<![CDATA[<p>Once the Proofreader logs in, clicking on the Proofreader link on the User Home page leads to the Submissions queue. This queue lists works for which they have been asked to proofread. Access is also provided to submissions they have completed in the past by clicking the Archive link. To access the article's proofreading page, the Proofreader must click on the article title.</p>]]>	
+		<![CDATA[<p>Wenn Korrekturlektor/innen sich einloggen und den Link "Korrekturlektor/in" auf ihrer persönlichen Startseite anklicken, erhalten sie Zugang zur Seite der aktuellen Beiträge, d.h. zu denjenigen Beiträgen, für die ihr Korrekturlektorat angefragt wurde. Zugang zu fertigen Beiträgen ist über den Link "Archiv" möglich. Um den Beitrag zu öffnen, für die das Korrekturlektorat erforderlich ist, muss dessen Dateiname in der Liste der aktuellen Beiträge angeklickt werden. </p>]]>	
 	</section>
 </topic>

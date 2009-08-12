@@ -5,15 +5,16 @@
   * 000016.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * Editor's Role Submissions - In Review 
-  *
+  * Die Rolle der Redakteur/innen - Beitragseinreichungen - In Begutachtung
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * 
   * $Id$
-  -->
+-->
 
-<topic id="editorial/topic/000016" locale="en_US" title="In Review" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.inReview">
+<topic id="editorial/topic/000016" locale="de_DE" title="In Begutachtung" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.inReview">
 	<section>
-		<![CDATA[<p>Submissions in this queue are subject to review and a decision by the Section Editor to accept or decline the submission. The extent of the review process is spelled out in the journal's Review Policy (e.g., Is every Section of the journal subject to Peer Review? How many peer Reviewers per submission?). When a Section Editor or an Editor clicks on a submission title in the In Review Queue, they are taken to the submission's Review page. If the Section Editor accepts a submission, it moves to the In Editing queue; if declined, it moves to the Archives.</p>]]>	
+		<![CDATA[<p>Beiträge in dieser Liste befinden sich im Begutachtungsprozess bis zu der abschließenden Entscheidung der Rubrikredakteurin bzw. des Rubrikredakteurs, einen Beitrag für die Veröffentlichung zu akzeptieren oder abzulehnen. Die genaue Gestaltung des Begutachtungsprozesses ist abhängig von den jeweiligen Zeitschriftenrichtlinien (ob z.B. Peer Review für jede Rubrik vorgesehen ist, wie viele Personen für die Begutachtung eines Beitrags hinzugezogen werden usw.). Wenn (Rubrik-) Redakteur/innen den Titel eines Beitrags in der "In Begutachtung"-Liste anklicken, gelangen sie zu einer Seite mit Begutachtungsinformationen zu diesem Beitrag. Wenn sie den Beitrag für die Veröffentlichung akzeptieren, wird er in die Liste der redaktionell zu bearbeitenden Beiträge verschoben; im Falle einer Ablehnung wird er archiviert. </p>]]>	
 	</section>
 </topic>

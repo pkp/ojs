@@ -5,18 +5,19 @@
   * 000004.xml
   *
   * Copyright (c) 2003-2009 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
   *
-  * table of contents for Editorial Process - Section Editor's Role
+  * Inhaltsverzeichnis für den redaktionellen Prozess - Die Rolle der Rubrikenredakteur/innen. 
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
   *
-  * $Id$
+  *$Id$
   -->
 
-<toc id="editorial/toc/000004" locale="en_US" title="Section Editor's Role" parent_topic="editorial/topic/000004">
-	<topic id="editorial/topic/000005" title="Submissions" />
-	<topic id="editorial/topic/000006" title="Review" />
-	<topic id="editorial/topic/000007" title="Editing" />
+<toc id="editorial/toc/000004" locale="de_DE" title="Die Rolle der Rubrikenredakteur/innen" parent_topic="editorial/topic/000004">
+	<topic id="editorial/topic/000005" title="Beitragseinreichungen" />
+	<topic id="editorial/topic/000006" title="Begutachtung" />
+	<topic id="editorial/topic/000007" title="Redaktion" />
 
-	<breadcrumb url="editorial/topic/000000" title="Editorial Process" />
-	<breadcrumb url="editorial/topic/000004" title="Section Editor's Role" />
+	<breadcrumb url="editorial/topic/000000" title="Der redaktionelle Prozess" />
+	<breadcrumb url="editorial/topic/000004" title="Die Rolle der Rubrikenredakteur/innen" />
 </toc>
