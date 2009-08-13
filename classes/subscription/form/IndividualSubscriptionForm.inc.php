@@ -30,8 +30,8 @@ class IndividualSubscriptionForm extends SubscriptionForm {
 		parent::Form('subscription/individualSubscriptionForm.tpl');
 		parent::SubscriptionForm($subscriptionId, $userId);
 
-        $subscriptionId = isset($subscriptionId) ? (int) $subscriptionId : null;
-        $userId = isset($userId) ? (int) $userId : null;
+		$subscriptionId = isset($subscriptionId) ? (int) $subscriptionId : null;
+		$userId = isset($userId) ? (int) $userId : null;
 
 		$journal =& Request::getJournal();
 		$journalId = $journal->getJournalId();
@@ -63,16 +63,23 @@ class IndividualSubscriptionForm extends SubscriptionForm {
 		}
 	}
 
+	function display() {
+		$templateMgr =& TemplateManager::getManager();
+		$userDao =& DAORegistry::getDAO('UserDAO');
+		$templateMgr->assign('genderOptions', $userDao->getGenderOptions());
+		return parent::display();
+	}
+
 	/**
 	 * Save individual subscription. 
 	 */
 	function execute() {
 		$insert = false;
-        if (!isset($this->subscription)) {
+		if (!isset($this->subscription)) {
 			import('subscription.IndividualSubscription');
-            $this->subscription = new IndividualSubscription();
+			$this->subscription = new IndividualSubscription();
 			$insert = true;
-        }
+		}
 
 		parent::execute();
 		$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
