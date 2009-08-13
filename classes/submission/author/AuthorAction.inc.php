@@ -78,7 +78,7 @@ class AuthorAction extends Action {
 			foreach ($authorRevisions as $round) {
 				foreach ($round as $revision) {
 					if ($revision->getFileId() == $articleFile->getFileId() &&
-					    $revision->getRevision() == $articleFile->getRevision()) {
+						$revision->getRevision() == $articleFile->getRevision()) {
 						$articleFileManager->deleteFile($articleFile->getFileId(), $articleFile->getRevision());
 					}
 				}

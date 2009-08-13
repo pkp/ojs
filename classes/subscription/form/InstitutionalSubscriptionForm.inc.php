@@ -29,8 +29,8 @@ class InstitutionalSubscriptionForm extends SubscriptionForm {
 		parent::Form('subscription/institutionalSubscriptionForm.tpl');
 		parent::SubscriptionForm($subscriptionId, $userId);
 
-        $subscriptionId = isset($subscriptionId) ? (int) $subscriptionId : null;
-        $userId = isset($userId) ? (int) $userId : null;
+		$subscriptionId = isset($subscriptionId) ? (int) $subscriptionId : null;
+		$userId = isset($userId) ? (int) $userId : null;
 
 		$journal =& Request::getJournal();
 		$journalId = $journal->getJournalId();
@@ -128,11 +128,11 @@ class InstitutionalSubscriptionForm extends SubscriptionForm {
 	 */
 	function execute() {
 		$insert = false;
-        if (!isset($this->subscription)) {
+		if (!isset($this->subscription)) {
 			import('subscription.InstitutionalSubscription');
-            $this->subscription = new InstitutionalSubscription();
+			$this->subscription = new InstitutionalSubscription();
 			$insert = true;
-        }
+		}
 
 		parent::execute();
 

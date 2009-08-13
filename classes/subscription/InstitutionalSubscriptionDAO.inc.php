@@ -824,7 +824,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 		while (!$ipResult->EOF) {
 			$ipRow =& $ipResult->GetRowAssoc(false);
 			$ipRanges[] = $ipRow['ip_string'];
-            $ipResult->moveNext();
+			$ipResult->moveNext();
 		}
 		$institutionalSubscription->setIPRanges($ipRanges);
 		$ipResult->Close();

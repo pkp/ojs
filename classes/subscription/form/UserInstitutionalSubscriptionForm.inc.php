@@ -39,7 +39,7 @@ class UserInstitutionalSubscriptionForm extends Form {
 	function UserInstitutionalSubscriptionForm($userId = null, $subscriptionId = null) {
 		parent::Form('subscription/userInstitutionalSubscriptionForm.tpl');
 
-        $this->userId = isset($userId) ? (int) $userId : null;
+		$this->userId = isset($userId) ? (int) $userId : null;
 		$this->subscription = null;
 		$subscriptionId = isset($subscriptionId) ? (int) $subscriptionId : null;
 
@@ -164,14 +164,14 @@ class UserInstitutionalSubscriptionForm extends Form {
 
 		if (!isset($this->subscription)) {
 			import('subscription.InstitutionalSubscription');
-            $subscription = new InstitutionalSubscription();
+			$subscription = new InstitutionalSubscription();
 			$subscription->setJournalId($journalId);
 			$subscription->setUserId($this->userId);
 			$subscription->setReferenceNumber(null);
 			$subscription->setNotes(null);
 
 			$insert = true;
-        } else {
+		} else {
 			$subscription =& $this->subscription;
 		}
 
