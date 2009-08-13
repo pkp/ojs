@@ -70,6 +70,7 @@ class OAIMetadataFormat_DC extends OAIMetadataFormat {
 
 		$response = '';
 		foreach ($value as $key => $v) {
+			$key = str_replace('_', '-', $key);
 			if (!$multilingual) $response .= "\t<dc:$name>" . $this->oai->prepOutput($v) . "</dc:$name>\n";
 			else {
 				if (is_array($v)) {
