@@ -110,13 +110,13 @@
 <tr valign="top">
 	<td class="label">{fieldLabel name="options" key="manager.subscriptionTypes.form.options"}</td>
 	<td class="value">
-		<input type="checkbox" name="membership" id="membership" value="1"{if $membership} checked="checked"{/if} />&nbsp;{translate key="manager.subscriptionTypes.form.membership"}
+		<input type="checkbox" name="membership" id="membership" value="1"{if $membership} checked="checked"{/if} />&nbsp;{fieldLabel name="membership" key="manager.subscriptionTypes.form.membership"}
 	</td>
 </tr>
 <tr valign="top">
 	<td>&nbsp;</td>
 	<td class="value">
-		<input type="checkbox" name="disable_public_display" id="disable_public_display" value="1"{if $disable_public_display} checked="checked"{/if} />&nbsp;{translate key="manager.subscriptionTypes.form.public"}
+		<input type="checkbox" name="disable_public_display" id="disable_public_display" value="1"{if $disable_public_display} checked="checked"{/if} />&nbsp;{fieldLabel name="disable_public_display" key="manager.subscriptionTypes.form.public"}
 	</td>
 </tr>
 </table>
