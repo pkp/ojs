@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ca_ES (català) locale.
+  *
+  -->
+ 
+<locale name="ca_ES" full_name="Català">
+	<message key="plugins.block.subscription.displayName">Bloc de subscripció</message>
+	<message key="plugins.block.subscription.description">Aquest connector proporciona informació sobre la subscripció a la barra lateral.</message>
+	<message key="plugins.block.subscription.blockTitle">Subscripció</message>
+	<message key="plugins.block.subscription.expires">Venç</message>
+	<message key="plugins.block.subscription.providedBy">Accés proporcionat per:</message>
+	<message key="plugins.block.subscription.providedByInstitution">Accés proporcionat per la vostra institució</message>
+	<message key="plugins.block.subscription.comingFromIP">Prové de la IP:</message>
+</locale>
