@@ -344,6 +344,7 @@ class SubscriptionManagerHandler extends Handler {
 	 */
 	function updateUser() {
 		$this->validate();
+		$this->setupTemplate(true);
 
 		$journal =& Request::getJournal();
 
@@ -371,7 +372,6 @@ class SubscriptionManagerHandler extends Handler {
 			}
 
 		} else {
-			$this->setupTemplate(true);
 			$userForm->display();
 		}
 	}
@@ -467,12 +467,24 @@ class SubscriptionManagerHandler extends Handler {
 	}
 
 	/**
+	 * Get a suggested username, making sure it's not
+	 * already used by the system. (Poor-man's AJAX.)
+	 */
+	function suggestUsername() {
+		$this->validate();
+		$suggestion = Validation::suggestUsername(
+			Request::getUserVar('firstName'),
+			Request::getUserVar('lastName')
+		);
+		echo $suggestion;
+	}
+	
+	/**
 	 * Setup common template variables.
 	 */
 	function setupTemplate($subclass = false, $institutional = false) {
 		parent::setupTemplate(true);
-		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_MANAGER));
-		Locale::requireComponents(array(LOCALE_COMPONENT_OJS_MANAGER));
+		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_MANAGER, LOCALE_COMPONENT_OJS_MANAGER));
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy', array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'subscriptionManager'), 'subscriptionManager.subscriptionManagement')));
 		if ($subclass) {
