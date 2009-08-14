@@ -13,8 +13,8 @@
   -->
  
 <locale name="it_IT" full_name="Italiano">
-	<message key="plugins.block.fontSize.displayName">Modulo della dimensione del carattere</message>
-	<message key="plugins.block.fontSize.description">Questo plugin inserisce nel menu laterale un misuratore per la dimensione del carattere.</message>
+	<message key="plugins.block.fontSize.displayName">Blocco della dimensione del carattere</message>
+	<message key="plugins.block.fontSize.description">Modulo della dimensione del carattere</message>
 	<message key="plugins.block.fontSize.title">Dimensione del carattere</message>
 	<message key="plugins.block.fontSize.small">Piccolo</message>
 	<message key="plugins.block.fontSize.medium">Medio</message>
