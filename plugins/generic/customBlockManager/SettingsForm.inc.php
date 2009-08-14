@@ -46,7 +46,7 @@ class SettingsForm extends Form {
 		$templateMgr =& TemplateManager::getManager();
 
 		$blocks = $plugin->getSetting($journalId, 'blocks');
-		
+
 		if ( !is_array($blocks) ) {
 			$this->setData('blocks', array());
 		} else {
@@ -75,7 +75,7 @@ class SettingsForm extends Form {
 
 		$pluginSettingsDAO =& DAORegistry::getDAO('PluginSettingsDAO');
 
-		$deletedBlocks = explode(':',$this->getData('deletedBlocks'));		
+		$deletedBlocks = explode(':',$this->getData('deletedBlocks'));
 		foreach ($deletedBlocks as $deletedBlock) {
 			$pluginSettingsDAO->deleteSetting($journalId, $deletedBlock.'CustomBlockPlugin', 'enabled');
 			$pluginSettingsDAO->deleteSetting($journalId, $deletedBlock.'CustomBlockPlugin', 'seq');
@@ -86,19 +86,18 @@ class SettingsForm extends Form {
 		//sort the blocks in alphabetical order
 		$blocks = $this->getData('blocks');
 		ksort($blocks);
-		
+
 		//remove any blank entries that made it into the array
-	    foreach ($blocks as $key => $value) { 
-	      if (is_null($value) || trim($value)=="") { 
-	        unset($blocks[$key]); 
-	      } 
-	    } 	
+		foreach ($blocks as $key => $value) {
+			if (is_null($value) || trim($value)=="") {
+				unset($blocks[$key]);
+			}
+		}
 
 		// Update blocks
 		$plugin->updateSetting($journalId, 'blocks', $blocks);
 		$this->setData('blocks',$blocks);
 	}
-
 }
 
 ?>

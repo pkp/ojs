@@ -292,16 +292,16 @@ class SearchHandler extends Handler {
 		$templateMgr->assign('type', Request::getUserVar('type'));
 		$templateMgr->assign('coverage', Request::getUserVar('coverage'));
 		$fromMonth = Request::getUserVar('dateFromMonth');
-                $fromDay = Request::getUserVar('dateFromDay');
-                $fromYear = Request::getUserVar('dateFromYear');
+		$fromDay = Request::getUserVar('dateFromDay');
+		$fromYear = Request::getUserVar('dateFromYear');
 		$templateMgr->assign('dateFromMonth', $fromMonth);
 		$templateMgr->assign('dateFromDay', $fromDay);
 		$templateMgr->assign('dateFromYear', $fromYear);
 		if (!empty($fromYear)) $templateMgr->assign('dateFrom', date('Y-m-d H:i:s',mktime(0,0,0,$fromMonth==null?12:$fromMonth,$fromDay==null?31:$fromDay,$fromYear)));
 
 		$toMonth = Request::getUserVar('dateToMonth');
-                $toDay = Request::getUserVar('dateToDay');
-                $toYear = Request::getUserVar('dateToYear');
+		$toDay = Request::getUserVar('dateToDay');
+		$toYear = Request::getUserVar('dateToYear');
 		$templateMgr->assign('dateToMonth', $toMonth);
 		$templateMgr->assign('dateToDay', $toDay);
 		$templateMgr->assign('dateToYear', $toYear);

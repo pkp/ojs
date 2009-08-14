@@ -157,9 +157,9 @@ class METSGatewayPlugin extends GatewayPlugin {
 		MetsExportDom::generateJournalDmdSecDom($doc, $root, $journal);
 		$fileSec =& XMLCustomWriter::createElement($doc, 'METS:fileSec');
 		$fileGrpOriginal =& XMLCustomWriter::createElement($doc, 'METS:fileGrp');
-		XMLCustomWriter::setAttribute($fileGrpOriginal, 'USE', 'original');    
+		XMLCustomWriter::setAttribute($fileGrpOriginal, 'USE', 'original');
 		$fileGrpDerivative =& XMLCustomWriter::createElement($doc, 'METS:fileGrp');
-		XMLCustomWriter::setAttribute($fileGrpDerivative, 'USE', 'derivative');    
+		XMLCustomWriter::setAttribute($fileGrpDerivative, 'USE', 'derivative');
 		foreach ($issues as $issue) {
 			MetsExportDom::generateIssueDmdSecDom($doc, $root, $issue, $journal);
 			MetsExportDom::generateIssueFileSecDom($doc, $fileGrpOriginal, $issue);
