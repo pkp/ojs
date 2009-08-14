@@ -32,6 +32,7 @@
 	<locale key="no_NO" name="Norwegian"/>
 	<locale key="pt_BR" name="Português (Brasil)"/>
 	<locale key="ru_RU" complete="false" name="Russian"/>
+        <locale key="sv_SV" name="Swedish"/>
 	<locale key="tr_TR" name="Türkiye Türkçesi"/>
 	<locale key="vi_VN" name="Tiếng Việt"/>
 	<locale key="zh_TW" name="繁體中文"/>
