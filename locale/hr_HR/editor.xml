@@ -192,4 +192,5 @@
 	<message key="editor.article.uploaded">Priložena</message>
 	<message key="editor.article.removeCoverPage">Želite li ukloniti sliku naslovne stranice?</message>
 	<message key="editor.article.remove">Ukloni</message>
+	<message key="editor.article.confirmChangeReviewForm">Promjena recenzijskog obrasca će izbrisati sve odgovore...</message>
 </locale>

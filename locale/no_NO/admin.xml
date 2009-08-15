@@ -52,4 +52,22 @@
 	<message key="admin.journals.transcode">Transcode artikkelens metadata fra ISO8859-1</message>
 	<message key="admin.journals.form.importPathRequired">Import filsti er påkrevet.</message>
 	<message key="admin.journals.importErrors">Importeringen var ikke vellykket</message>
+	<message key="admin.languages.downloadLocales">Last ned oversatte lokalfiler</message>
+	<message key="admin.languages.downloadFailed">Noe gikk galt med nedlastingen av oversatte lokalfiler. Se feilmeldingen(e) nedenfor.</message>
+	<message key="admin.languages.localeInstalled">Den oversatte lokalfilen "{$locale}" ble installert.</message>
+	<message key="admin.languages.download">Last ned oversatte lokalfiler</message>
+	<message key="admin.languages.download.cannotOpen">Språkdeskriptoren fra PKP-nettstedet lar seg ikke åpne.</message>
+	<message key="admin.languages.download.cannotModifyRegistry">Kan ikke legge til de oversatte lokalfilene i registerfilen for lokalfiler, som vanligvis heter "registry/locales.xml".</message>
+	<message key="admin.journals.importOJS1.success">Importen av tidsskriftet var vellykket.</message>
+	<message key="admin.journals.importOJS1.redirect.desc">To redirect OJS 1 URLs to OJS 2 URLs, create the following PHP files using the file contents below. The corresponding files can then be placed in the OJS 1 filesystem path, or, for single journal installations, in the OJS 2 filesystem path.</message>
+	<message key="admin.journals.importOJS1.redirect.ojs1root">Place in the old OJS 1 filesystem path (i.e., /var/www/ojs1).</message>
+	<message key="admin.journals.importOJS1.redirect.ojs1orojs2root">Place in the old OJS 1 filesystem path (i.e., /var/www/ojs1), or, for single journal installations, in the new OJS 2 filesystem path (i.e., /var/www/ojs2).</message>
+	<message key="admin.journals.redirect">Generate code to map OJS 1 URLs to OJS 2 URLs</message>
+	<message key="admin.mergeUsers">Slå sammen brukere</message>
+	<message key="admin.mergeUsers.mergeUser">Slå sammen bruker</message>
+	<message key="admin.mergeUsers.into.description">Velg en bruker som du vil overføre den forrige brukerens oppgaver til: forfatterskap, redaktøroppgaver m.m.</message>
+	<message key="admin.mergeUsers.from.description">Velg en bruker du vil slå sammen med en annen brukerkonto (for eks. når noen har to brukerkontoer). Den brukeren du velger først slettes, og elementer og oppgaver føres over til den andre brukeren.</message>
+	<message key="admin.mergeUsers.allUsers">Alle vervete brukere</message>
+	<message key="admin.mergeUsers.confirm">Er du sikker på at du vil slå sammen brukerkontoen med navnet "{$oldUsername}" med kontoen med brukernavnet "{$newUsername}"?  Etterpå finnes ikke brukerkontoen med navnet "{$oldUsername}" lenger. Denne handlingen kan ikke omgjøres.</message>
+	<message key="admin.mergerUsers.noneEnrolled">Ingen vervete brukere</message>
 </locale>

@@ -12,13 +12,7 @@
   * $Id$
   -->
 <locale full_name="Farsi" name="fa_IR" >
-	<message key="default.journalSettings.checklist.notPreviouslyPublished" >ساب میشن قبلا چاپ نشده و هم اکنون تحت بررسی برای چاپ نیست. درغیر این صورت توضیحی برای آن در قسمت نامه نویسنده ضمیمه است.</message>
 	<message key="default.journalSettings.checklist.fileFormat" >فایل ساب میشن به فرمات OpenOffice, Microsoft Word, RTF, یا WordPerfect میباشد.</message>
-	<message key="default.journalSettings.checklist.addressesLinked" ><![CDATA[ختی المقدور لینک مراجع در متن ارائه شده است. و URLs آماده کلیک کردن است]]></message>
-	<message key="default.journalSettings.checklist.submissionAppearance" >فاصله سطور در متن مقاله تک فاصله ای است ، فونت 12 در صورت لزوم از فونت ایتالیک بجای زیرخط دار استفاده شده است ، تمام تصاویر و نمودارها و جداول در خود متن در محل مناسب نه در انتها میباشد.</message>
-	<message key="default.journalSettings.checklist.bibliographicRequirements" ><![CDATA[متن مقاله بر طبق اصول مقاله نویسی و مرجع نگاری  <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines"> راهنمای نویسندگان </a> میباشد که در قسمت در باره مجله یافت میشود.]]></message>
-	<message key="default.journalSettings.checklist.anonymous" ><![CDATA[در صورتی که مقاله قرار باشد کارشناسی شود ، ساب میشن از نظر  <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">رعایت کارشناسی محرمانه </a>) دستورالعمل های لازم رعایت شده است.]]></message>
-	<message key="default.journalSettings.privacyStatement" >نام ها و ایمیل های وارد شده در این سایت مجله فقط به منظور بیان شده بکار میرود و در دسترس هیچ شخص یا سازمان دیگری قرار نخواهد گرفت.</message>
 	<message key="default.journalSettings.openAccessPolicy" >این مجله دستیابی فوری به محتوی خود بصورت آزاد دارا میباشد به این امید که پژوهشی که بصورت عمومی در دسترس باشد موجب تبادل بیشتر دانش در مقیاس جهانی میشود</message>
 	<message key="default.journalSettings.authorSelfArchivePolicy" >نویسندگان مجازند و توصیه میشود که مقالات این مجله را  در سایت های شخصی یا سازمانی به نمایش بگذارند.البته به شرط ذکر جزئیات کامل مرجع آن</message>
 	<message key="default.journalSettings.copyeditInstructions" ><![CDATA[مرحله ویراستاری به منظور بهبود گرامر ، جمله نگاری ، وفرمات مقاله و روانی آن میباشد. این آخرین فرصت برای نویسنده نیز هست تا تغییرات حجیم در مقاله خود بدهد ، چرا که در مراحل بعدی فقط اجازه اصلاحات املائی و فرمات داده میشود. 
@@ -157,7 +151,6 @@ http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI
 	<message key="default.journalSettings.donationFeeDescription" >با نهایت سپاس هر گونه مبلغ اهدائی به این مجله را می پذیریم و آنرا در جهت بهبود کیفیت مجله بکار میبریم</message>
 	<message key="common.openJournalSystems" >سیستم ژورنالهای آزاد</message>
 	<message key="default.journalSettings.checklist.notPreviouslyPublished" >ساب میشن قبلا چاپ نشده و هم اکنون تحت بررسی برای چاپ نیست. درغیر این صورت توضیحی برای آن در قسمت نامه نویسنده ضمیمه است.</message>
-	<message key="default.journalSettings.checklist.fileFormat" >فایل ساب میشن به فرمات OpenOffice, Microsoft Word, RTF, یا WordPerfect میباشد.</message>
 	<message key="default.journalSettings.checklist.addressesLinked" >ختی المقدور لینک مراجع در متن ارائه شده است. و URLs آماده کلیک کردن است</message>
 	<message key="default.journalSettings.checklist.submissionAppearance" >فاصله سطور در متن مقاله تک فاصله ای است ، فونت 12 در صورت لزوم از فونت ایتالیک بجای زیرخط دار استفاده شده است ، تمام تصاویر و نمودارها و جداول در خود متن در محل مناسب نه در انتها میباشد.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements" ><![CDATA[متن مقاله بر طبق اصول مقاله نویسی و مرجع نگاری  <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines"> راهنمای نویسندگان </a> میباشد که در قسمت در باره مجله یافت میشود.]]></message>

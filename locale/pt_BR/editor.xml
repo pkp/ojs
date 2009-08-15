@@ -200,4 +200,5 @@
 	<message key="editor.article.uploaded">Enviado</message>
 	<message key="editor.article.removeCoverPage">Excluir imagem de capa?</message>
 	<message key="editor.article.remove">Excluir</message>
+	<message key="editor.article.confirmChangeReviewForm">Alterações no formulário de avaliação removerá as respostas...</message>
 </locale>

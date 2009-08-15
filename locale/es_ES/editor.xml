@@ -199,4 +199,5 @@
 	<message key="editor.article.uploaded">Fichero enviado</message>
 	<message key="editor.article.removeCoverPage">Remover imagen de portada?</message>
 	<message key="editor.article.remove">Remover</message>
+	<message key="editor.article.confirmChangeReviewForm">Cambiar el formulario de revisión removerá las respuestas...</message>
 </locale>

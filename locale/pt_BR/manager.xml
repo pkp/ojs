@@ -601,4 +601,7 @@
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Tipo de Assinatura incluída com sucesso.</message>
 	<message key="manager.subscriptionTypes.year">ano</message>
 	<message key="manager.subscriptionTypes.years">anos</message>
+	<message key="manager.reviewFormElement.changeType">Alterando o tipo de campo do formluário</message>
+	<message key="manager.reviewFormElements.confirmDelete">Confimar exclusão de campo do formulário de avaliação publicado</message>
+	<message key="manager.reviewForms.confirmDeleteUnpublished">Confirmar exclusão de formulário de avaliação não publicado</message>
 </locale>

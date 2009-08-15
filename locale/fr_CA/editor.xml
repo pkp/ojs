@@ -200,4 +200,5 @@
 	<message key="editor.article.uploaded">Téléchargé</message>
 	<message key="editor.article.removeCoverPage">Supprimer l'image de la page couverture?</message>
 	<message key="editor.article.remove">Supprimer</message>
+	<message key="editor.article.confirmChangeReviewForm">Changer le formulaire d'évaluation supprimera les réponses...</message>
 </locale>

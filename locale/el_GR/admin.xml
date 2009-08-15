@@ -65,4 +65,9 @@
 	<message key="admin.mergeUsers.allUsers">Όλοι οι εγγεγραμμένοι Χρήστες</message>
 	<message key="admin.mergeUsers.confirm">Είστε σίγουρος ότι επιθυμείτε να συγχωνεύσετε τον λογαριασμό με όνομα χρήστη  "{$oldUsername}" στον λογαριασμό με όνομα χρήστη "{$newUsername}"? Ο λογαριασμός  "{$oldUsername}" θα διαγραφεί. Αυτή η ενέργεια δεν είναι αναστρέψιμη.</message>
 	<message key="admin.mergerUsers.noneEnrolled">Κανένας εγγεγραμμένος χρήστης.</message>
+	<message key="admin.journals.importOJS1.success">Η εισαγωγή του περιοδικού ολοκληρώθηκε με επιτυχία.</message>
+	<message key="admin.journals.importOJS1.redirect.desc">Για την ανακατεύθυνση OJS 1 URLs σε OJS 2 URLs, δημιουργήστε τα ακόλουθα αρχεία PHP χρησιμοποιώντας τα παρακάτω αρχεία. Τα αντίστοιχα αρχεία μπορούν έπειτα να εισαχθούν στην διαδρομή του συστήματος αρχείων του OJS 1 ή, για εγκαταστάσεις ενός περιοδικού, στην διαδρομή του συστήματος αρχείων του OJS 2.</message>
+	<message key="admin.journals.importOJS1.redirect.ojs1root">Εισάγετε  στην διαδρομή του συστήματος αρχείων του OJS 1 (π.χ., /var/www/ojs1).</message>
+	<message key="admin.journals.importOJS1.redirect.ojs1orojs2root">Εισάγετε στην διαδρομή του συστήματος αρχείων του OJS 1 (π.χ. /var/www/ojs1) ή, για εγκαταστάσεις ενός περιοδικού, στην διαδρομή του συστήματος αρχείων του OJS 2 (π.χ., /var/www/ojs2).</message>
+	<message key="admin.journals.redirect">Δημιουργία κώδικα για την αντιστοίχηση OJS 1 URLs σε OJS 2 URLs</message>
 </locale>

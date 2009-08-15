@@ -64,4 +64,9 @@
 	<message key="admin.mergeUsers.allUsers">全登録ユーザ</message>
 	<message key="admin.mergeUsers.confirm">ユーザ名 "{$oldUsername}”のアカウントをユーザ名 "{$newUsername}" のアカウントにマージしてもよいですか。今後、ユーザ名 "{$oldUsername}" のアカウントは利用できなくなります。この処理は元に戻すことができません。</message>
 	<message key="admin.mergerUsers.noneEnrolled">登録されたユーザはいません。</message>
+	<message key="admin.journals.importOJS1.success">雑誌のインポートが正常に終了しました。</message>
+	<message key="admin.journals.importOJS1.redirect.desc">OJS1のURLからOJS2のURLへリダイレクトさせるには、以下の内容のPHPファイルを作成してください。該当するファイルはOJS1のファイルシステムパスに置くか、（雑誌を1誌のみ公開している場合は）OJS２ファイルシステムパスにおいてください。</message>
+	<message key="admin.journals.importOJS1.redirect.ojs1root">旧OJS１ファイルシステムパス（すなわち、/var/www/ojs1）に置いてください。</message>
+	<message key="admin.journals.importOJS1.redirect.ojs1orojs2root">旧OJS１ファイルシステムパス（すなわち、/var/www/ojs1）、または、雑誌を1誌のみ公開している場合は新OJS2ファイルシステムパス（すなわち、/var/www/ojs2）に置いてください。</message>
+	<message key="admin.journals.redirect">OJS1 URLからOJS2 URLへマッピングするコードを生成</message>
 </locale>

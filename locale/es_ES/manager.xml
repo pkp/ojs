@@ -600,4 +600,7 @@
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Tipo de suscripción creado.</message>
 	<message key="manager.subscriptionTypes.year">año</message>
 	<message key="manager.subscriptionTypes.years">años</message>
+	<message key="manager.reviewFormElement.changeType">Cambiando el tipo de elemento del formulario...</message>
+	<message key="manager.reviewFormElements.confirmDelete">Confirma borrado de un elemento de formulario publicado...</message>
+	<message key="manager.reviewForms.confirmDeleteUnpublished">Confirmar borrado del formulario de revisión no publicado...</message>
 </locale>

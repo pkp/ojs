@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * /home/asmecher/cvs/ojs2-devel/locale/nl_NL/admin.xml
+  *
+  * Copyright (c) 2000-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the nl_NL (Nederlands) locale.
+  *
+  * $Id$
+  -->
+
+<locale name="nl_NL" full_name = "Nederlands">
+	<message key="admin.hostedJournals">Tijdschriften</message>
+	<message key="admin.settings.journalRedirect">Doorsturen naar tijdschrift</message>
+	<message key="admin.settings.journalRedirectInstructions">Bezoekers van de hoofdsite worden doorgestuurd naar dit tijdschrift. Dit kan handig zijn als de site maar één tijdschrift bevat.</message>
+	<message key="admin.settings.noJournalRedirect">Niet doorsturen</message>
+	<message key="admin.languages.primaryLocaleInstructions">Dit wordt de standaard taalkeuze voor de site en de tijdschriften daarin.</message>
+	<message key="admin.languages.supportedLocalesInstructions">Selecteer de talen die de site moet ondersteunen. De geselecteerde talen zijn beschikbaar voor alle tijdschriften in de site en zullen ook verschijnen in een taalkeuzemenu  op alle pagina's van de site (dat kan overruled worden voor specifieke tijdschriften). Als er slechts één taal geselecteerd wordt zal er geen taalkeuzemenu getoond worden en zijn er geen taalinstellingen bij de tijdschriften.</message>
+	<message key="admin.languages.confirmUninstall">Weet u zeker dat u deze taal wilt de-installeren? Dit beïnvloedt de tijdschriften in de site die deze taal gebruiken.</message>
+	<message key="admin.languages.installNewLocalesInstructions">Selecteer aanvullende talen voor gebruik in dit systeem. De talen moeten geïnstalleerd worden voor ze door te tijdschriften gebruikt kunnen worden. Zie de OJS documentatie voor informatie over het toevoegen van ondersteuning voor nieuwe talen.</message>
+	<message key="admin.languages.downloadLocales">Taalbestanden ophalen</message>
+	<message key="admin.languages.downloadFailed">Het ophalen van de taalbestanden is mislukt. De foutmelding hieronder beschrijft het probleem.</message>
+	<message key="admin.languages.localeInstalled">De taal "{$locale}" is geïnstalleerd.</message>
+	<message key="admin.languages.download">Taalbestanden binnenhalen</message>
+	<message key="admin.languages.download.cannotOpen">De taalbeschrijving kan niet geopend worden op de PKP website.</message>
+	<message key="admin.languages.download.cannotModifyRegistry">De taal kan niet toegevoegd worden aan het taalregister-bestand (doorgaans registry/locales.xml)".</message>
+	<message key="admin.auth.ojs">OJS gebruikersdatabank</message>
+	<message key="admin.auth.enableSyncProfiles">Schakel synchronisatie van gebruikersprofielen in (indien ondersteund door deze authenticatie plug-in). Gebruikersinformatie wordt automatisch bijgewerkt uit het externe systeem als de gebruiker inlogt. Wijzigingen in de gebruikersgegevens (waaronder het wachtwoord) in OJS worden automatisch aangepast in het externe systeem. Als deze optie uitgeschakeld is, blijft de gebruikersinformatie in OJS gescheiden van die in het externe systeem.</message>
+	<message key="admin.auth.enableSyncPasswords">Sta wachtwoordmodificatie toe (indien ondersteund door deze authenticatie plug-in). Het inschakelen van deze optie geeft gebruikers de mogelijkheid hun OJS wachtwoord te veranderen en gebruik te maken van de "vergeten wachtwoord" voorziening om een vergeten wachtwoord opnieuw in te stellen. Als deze optie uitgeschakeld is, is de voorziening niet beschikbaar voor de gebruikers van dit authenticatiesysteem.</message>
+	<message key="admin.auth.enableCreateUsers">Sta het aanmaken van gebruikers toe (indien ondersteund door deze authenticatie plug-in). Gebruikers die in OJS aangemaakt worden, worden automatisch toegevoegd in het externe systeem als ze daar nog niet bestaan. Als dit het standaard authenticatiesysteem is worden de accounts die in OJS aangemaakt worden door gebruikersregistratie ook aan het externe systeem toegevoegd.</message>
+	<message key="admin.systemVersion">OJS versie</message>
+	<message key="admin.systemConfiguration">OJS configuratie</message>
+	<message key="admin.systemConfigurationDescription"><![CDATA[OJS instellingen uit <tt>config.inc.php</tt>.]]></message>
+	<message key="admin.journals.journalSettings">Instellingen tijdschrift</message>
+	<message key="admin.journals.noneCreated">Er zijn geen tijdschriften aangemaakt.</message>
+	<message key="admin.journals.confirmDelete">Weet u zeker dat u dit tijdschrift en de inhoud daarvan wilt verwijderen?</message>
+	<message key="admin.journals.create">Creëer tijdschrift</message>
+	<message key="admin.journals.createInstructions">U wordt automatisch ingesteld als tijdschriftbeheerder. Log in als beheerder als het tijdschrift is aangemaakt om verder te gaan met het inrichten en om gebruikers toe te voegen.</message>
+	<message key="admin.journals.urlWillBe">De URL van dit tijdschrift wordt {$sampleUrl}</message>
+	<message key="admin.journals.form.titleRequired">Een titel is verplicht.</message>
+	<message key="admin.journals.form.pathRequired">Een pad is verplicht.</message>
+	<message key="admin.journals.form.pathAlphaNumeric">Het pad mag alleen alfanumerieke tekens, liggende streepjes en koppeltekens bevatten en moet beginnen en eindigen met een alfanuermiek teken.</message>
+	<message key="admin.journals.form.pathExists">Het opgegeven pad is al in gebruik voor een ander tijdschrift.</message>
+	<message key="admin.journals.enableJournalInstructions">Toon dit tijdschrift op de site</message>
+	<message key="admin.journals.journalDescription">Beschrijving tijdschrift</message>
+	<message key="admin.journals.importOJS1">Importeer uit OJS 1</message>
+	<message key="admin.journals.importOJS1.success">Import van het tijdschrift is met succes afgerond.</message>
+	<message key="admin.journals.importOJS1.editMigratedJournal">Bewerk gemigreerd tijdschrift</message>
+	<message key="admin.journals.importOJS1.redirect.desc">Om OJS 1 URL's naar OJS 2 URL's om te leiden, moeten de volgende PHP bestanden aangemaakt worden  met de inhoud als hieronder. De bestanden kunnen dan geplaatst worden in het OJS 1 pad op het bestandssysteem, of, bij installaties met één tijdschrift, in het OJS 2 pad in het bestandssysteem</message>
+	<message key="admin.journals.importOJS1.redirect.ojs1root">Plaats in het oude OJS 1 bestandssysteem-pad (bv. /var/www/ojs1).</message>
+	<message key="admin.journals.importOJS1.redirect.ojs1orojs2root">Plaats in het oude OJS 1 bestandssysteem-pad (bv. /var/www/ojs1), of, bij installaties met één tijdschrift, in het nieuwe OJS 2 bestandssysteem-pad (bv. /var/www/ojs2).</message>
+	<message key="admin.journals.importOJS1.conflict.desc">Sommige gebruikersaccounts bevatten conflicterende informatie. OJS 1.x staat toe dat meerdere gebruikersaccounts hetzelfde e-mailadres gebruiken. OJS 2.x staat dat niet toe. In de lijst hieronder heeft het tweede account een tijdelijk e-mailadres gekregen. Dat moet met de hand gecorrigeerd worden door een ander e-mailadres toe te kennen of door de gebruikersaccounts samen te voegen.</message>
+	<message key="admin.journals.importOJS1.conflict">{$firstUsername} ({$firstName}) en {$secondUsername} ({$secondName})</message>
+	<message key="admin.journals.importOJS1Instructions">Raadpleeg het UPGRADE document at met OJS is meegestuurd voor gedetailleerde informatie over het migreren van gegevens van OJS 1 naar OJS 2.</message>
+	<message key="admin.journal.pathImportInstructions">Bestaand tijdschrift-pad of te creëren pad (bijvoorbeeld "ojs").</message>
+	<message key="admin.journal.importPath">OJS 1 pad</message>
+	<message key="admin.journal.importPathInstructions">Volledig bestandssysteem-pad naar de OJS 1 installatie (bijvoorbeeld "/var/www/ojs").</message>
+	<message key="admin.journals.importSubscriptions">Importeer abonnees</message>
+	<message key="admin.journals.transcode">Vertaal artikel-metadata van ISO8859-1</message>
+	<message key="admin.journals.redirect">Genereer code om OJS 1 URL's om te leiden naar OJS 2 URL's</message>
+	<message key="admin.journals.form.importPathRequired">Het import-pad is verplicht.</message>
+	<message key="admin.journals.importErrors">Importeren is niet gelukt</message>
+	<message key="admin.mergeUsers">Gebruikers samenvoegen</message>
+	<message key="admin.mergeUsers.mergeUser">Voeg gebruiker samen</message>
+	<message key="admin.mergeUsers.into.description">Kies de gebruiker aan wie de auteursgegevens, redactietaken enz. van de vorige gebruiker toegekend moeten worden.</message>
+	<message key="admin.mergeUsers.from.description">Kies de gebruiker wiens gevens overgeheveld moeten worden naar een ander gebruikersaccount (bijvoorbeeld wanneer iemand twee gebruikersaccounts heeft). Het geselceteerde account zal verwijderd worden en alle inzendingen, taken enzovoorts worden overgedragen naar het tweede account.</message>
+	<message key="admin.mergeUsers.allUsers">Alle ingeschreven gebruikers</message>
+	<message key="admin.mergeUsers.confirm">Weet u zeker dat u het account met gebruikersnaam "{$oldUsername}" wilt samenvoegen met gebruikersnaam "{$newUsername}"? Het account met gebruikersnaam "{$oldUsername}" bestaat dan niet meer. Deze actie kan niet ongedaan gemaakt worden.</message>
+	<message key="admin.mergerUsers.noneEnrolled">Geen gebruikers.</message>
+</locale>

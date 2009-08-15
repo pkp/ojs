@@ -203,4 +203,5 @@
 	<message key="editor.article.uploaded">Uploaded</message>
 	<message key="editor.article.removeCoverPage">Remove cover image?</message>
 	<message key="editor.article.remove">Remove</message>
+	<message key="editor.issues.invalidAccessDate">Access date is not valid.</message>
 </locale>

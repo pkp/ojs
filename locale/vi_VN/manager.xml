@@ -600,4 +600,11 @@
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Hình thức đặt tạp chí đã khởi tạo thành công.</message>
 	<message key="manager.subscriptionTypes.year">năm</message>
 	<message key="manager.subscriptionTypes.years">năm</message>
+	<message key="manager.reviewFormElement.changeType">Thay đổi kiểu mục</message>
+	<message key="manager.reviewFormElements.confirmDelete">Khẳng định việc xóa một mục đã tạo.</message>
+	<message key="manager.reviewFormElements.viewable">(Tác giả) có thể xem</message>
+	<message key="manager.reviewForms.confirmDeletePublished">Khẳng định việc xóa một mẫu phiếu phản biện đã công bố.</message>
+	<message key="manager.reviewForms.confirmDeleteUnpublished">Khẳng định việc xóa một mẫu phiếu phản biện chưa công bố.</message>
+	<message key="manager.reviewForms.noneUsed">Chưa có mẫu phiếu phản biện nào được sử dụng.</message>
+	<message key="manager.reviewForms.reviewFormData">Thông tin về Mẫu phiếu Phản biện</message>
 </locale>

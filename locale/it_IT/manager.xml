@@ -599,4 +599,7 @@
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Tipo di abbonamento creato con successo.</message>
 	<message key="manager.subscriptionTypes.year">Anno</message>
 	<message key="manager.subscriptionTypes.years">Anni</message>
+	<message key="manager.reviewFormElement.changeType">Cambia il tipo</message>
+	<message key="manager.reviewFormElements.confirmDelete">Conferma la cancellazione di un documento pubblicato</message>
+	<message key="manager.reviewForms.confirmDeleteUnpublished">Conferma la cancellazione di un modulo di revisione non pubblicato ...</message>
 </locale>

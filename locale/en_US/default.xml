@@ -155,7 +155,6 @@ The paragraph that begins "This last topic..." is not indented.</pre>]]></messag
 	<!-- Default settings for payment items. -->
 	<message key="default.journalSettings.submissionFee">Article Submission</message>
 	<message key="default.journalSettings.submissionFeeDescription">Authors are required to pay an Article Submission Fee as part of the submission process to contribute to review costs.</message>
-	<message key="default.journalSettings.submissionFeeDescription">Authors are required to pay an Article Submission Fee as part of the submission process to contribute to review costs.</message>
 	<message key="default.journalSettings.fastTrackFee">Fast-Track Review</message>
 	<message key="default.journalSettings.fastTrackFeeDescription">With the payment of this fee, the review, editorial decision, and author notification on this manuscript is guaranteed to take place within 4 weeks.</message>
 	<message key="default.journalSettings.publicationFee">Article Publication</message>

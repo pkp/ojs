@@ -200,4 +200,5 @@
 	<message key="editor.article.uploaded">Caricato</message>
 	<message key="editor.article.removeCoverPage">Rimuovi l'immagine di copertina?</message>
 	<message key="editor.article.remove">Rimuovi</message>
+	<message key="editor.article.confirmChangeReviewForm">Modifcare il modulo di revisione rimuoverà le risposte</message>
 </locale>

@@ -200,4 +200,5 @@
 	<message key="editor.article.uploaded">Tải lên</message>
 	<message key="editor.article.removeCoverPage">Loại bỏ ảnh bìa?</message>
 	<message key="editor.article.remove">Loại bỏ</message>
+	<message key="editor.article.confirmChangeReviewForm">Thay mẫu phiếu phản biện sẽ xóa đi các phản hồi</message>
 </locale>

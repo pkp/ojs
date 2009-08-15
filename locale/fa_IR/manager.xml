@@ -600,4 +600,11 @@
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">نوع اشتراک با موفقیت ایجاد شد.</message>
 	<message key="manager.subscriptionTypes.year">سال</message>
 	<message key="manager.subscriptionTypes.years">سالها</message>
+	<message key="manager.reviewFormElement.changeType">تغییر نوع آیتم فرم</message>
+	<message key="manager.reviewFormElements.confirmDelete">لطفا خذف آیتم فرم منتشر شده را تایید نمائید</message>
+	<message key="manager.reviewFormElements.viewable">قابل مشاهده توسط نویسندگان</message>
+	<message key="manager.reviewForms.confirmDeletePublished">لطفا خذف فرم منتشر شده را تایید نمائید</message>
+	<message key="manager.reviewForms.confirmDeleteUnpublished">لطفا خذف فرم منتشر نشده را تایید نمائید</message>
+	<message key="manager.reviewForms.noneUsed">هیچ فزم کارشناسی مورد استفاده قرار نگرفته است</message>
+	<message key="manager.reviewForms.reviewFormData">داده های فرم کارشناسی</message>
 </locale>

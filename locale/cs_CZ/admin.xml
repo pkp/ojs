@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * /home/asmecher/cvs/ojs2-devel/locale/cs_CZ/admin.xml
+  *
+  * Copyright (c) 2000-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the cs_CZ (Czech) locale.
+  *
+  * $Id$
+  -->
+
+<locale name="cs_CZ" full_name = "Czech">
+	<message key="admin.hostedJournals">Hostované časopisy</message>
+	<message key="admin.settings.journalRedirect">Přesměrování časopisu</message>
+	<message key="admin.settings.journalRedirectInstructions">Požadavky na hlavní stránku budou přeměrovány na tento časopis. To může být užitečné například pokud stránka hostuje pouze jeden časopis.</message>
+	<message key="admin.settings.noJournalRedirect">Nepřesměrovávat</message>
+	<message key="admin.languages.primaryLocaleInstructions">Toto bude výchozí jazyk pro stránku a všechny hostované časopisy.</message>
+	<message key="admin.languages.supportedLocalesInstructions">Vyberte všechny lokalizace, které mají být podporovány na této stránce. Vybrané lokalizace budou dostupné pro použití ve všech časopisech hostovaných na této stránce a objeví se také v menu pro výběr jazyka na všech stránkách (toto nastavení může být přepsáno na stránkách specifických stránkách daného časopisu). Pokud není vybráno více lokalizací, menu pro výběr jazyka se na stránkách neobjeví a rozšířené jazykové nastavení nebude pro časopisy dostupné.</message>
+	<message key="admin.languages.confirmUninstall">Jste si jistý, že chcete odinstalovat tuto lokalizaci? Může to ovlivnit všechny časopisy zde hostované, které aktuálně lokalizaci používají.</message>
+	<message key="admin.languages.installNewLocalesInstructions">Vyberte další lokalizace, pro které má být do systému nainstalována podpora. Aby mohly být lokalizace využity hostovanými časopisy, musí být nejprve nainstalovány. Pro informace o přidání nových jazyků viz dokumentaci k OJS.</message>
+	<message key="admin.languages.downloadLocales">Stáhnout lokalizace</message>
+	<message key="admin.languages.downloadFailed">Stahování lokalizace selhalo. Níže uvedené chybové hlášení popisuje selhání.</message>
+	<message key="admin.languages.localeInstalled">Tato "{$locale}" lokalizace byla nainstalována. </message>
+	<message key="admin.languages.download">Stáhnout lokalizaci</message>
+	<message key="admin.languages.download.cannotOpen">Nelze otevřít popisovač jazyka z webové stránky PKP.</message>
+	<message key="admin.languages.download.cannotModifyRegistry">Nelze přidat novou lokalizaci do registračního souboru lokalizací - typicky "registry/locales.xml".</message>
+	<message key="admin.auth.ojs">Databáze OJS uživatelů</message>
+	<message key="admin.auth.enableSyncProfiles">Umožnit synchronizaci uživatelských profilů (pokud je podporována tímto ověřovacím plug-inem). Informace v profilu uživatele budou automaticky aktualizovány ze vzdáleného zdroje, jakmile se uživatel přihlásí a změní se jeho profil (včetně změn hesla) v rámci OJS. Pokud není tato možnost povolena, informace v OJS profilu budou uchovávány odděleně od informací vzdáleného zdroje.</message>
+	<message key="admin.auth.enableSyncPasswords">Umožnit změnu hesla uživatele (pokud je podporována tímto ověřovacím plug-inem). Povolení této možnosti umožní uživatelům změnit své heslo v rámci OJS a využít funkci "ztracené heslo" pro obnovení zapomenutého hesla. Tyto funkce nebudou dostupné uživatelům s tímto zdrojem ověření pokud není povolena tato možnost.</message>
+	<message key="admin.auth.enableCreateUsers">Umožnit vytvoření uživatele (pokud je podporováno tímto ověřovacím plug-inem). Uživatelé vytvoření v rámci OJS tímto zdrojem ověření budou, pokud již neexistují, automaticky přidáni do vzdáleného zdroje ověření. Navíc, pokud je tento zdroj výchozím zdrojem ověření, OJS účty vytvořené v průběhu registrace uživatele budou přidány do vzdáleného zdroje ověření.</message>
+	<message key="admin.systemVersion">Verze OJS</message>
+	<message key="admin.systemConfiguration">Konfigurace OJS</message>
+	<message key="admin.systemConfigurationDescription"><![CDATA[Nastavení konfigurace OJS z <tt>config.inc.php</tt>.]]></message>
+	<message key="admin.journals.journalSettings">Nastavení časopisu</message>
+	<message key="admin.journals.noneCreated">Žádné časopisy nebyly vytvořeny.</message>
+	<message key="admin.journals.confirmDelete">Jste si jistý, že chcete trvale odstranit tento časopis a veškerý jeho obsah?</message>
+	<message key="admin.journals.create">Vytvořit časopis</message>
+	<message key="admin.journals.createInstructions">Budete automaticky zaregistrován jako manažer tohoto časopisu. Poté, co vytvoříte nový časopis, vstupte do něj jako manažer a pokračujte v jeho nastavení a zápisu uživatelů.</message>
+	<message key="admin.journals.urlWillBe">URL časopisu bude {$sampleUrl}</message>
+	<message key="admin.journals.form.titleRequired">Je vyžadován název.</message>
+	<message key="admin.journals.form.pathRequired">Je vyžadována cesta.</message>
+	<message key="admin.journals.form.pathAlphaNumeric">Cesta může obsahovat pouze alfanumerické znaky, podtržítka a pomlčky a musí začínat a končit alfanumerickým znakem.</message>
+	<message key="admin.journals.form.pathExists">Zvolená cesta již je využívána jiným časopisem.</message>
+	<message key="admin.journals.enableJournalInstructions">Povolte pro tento časopis, aby byl na této stránce veřejně zobrazen</message>
+	<message key="admin.journals.journalDescription">Popis časopisu</message>
+	<message key="admin.journals.importOJS1">Import z OJS 1</message>
+	<message key="admin.journals.importOJS1.success">Import časopisu byl úspěšně dokončen.</message>
+	<message key="admin.journals.importOJS1.editMigratedJournal">Upravit přestěhovaný časopis</message>
+	<message key="admin.journals.importOJS1.redirect.desc">Pro přesměrování URL adres OJS 1 na URL adresy OJS 2 vytvořte následující PHP soubory s níže uvedeným obsahem. Odpovídající soubory pak mohou být umístěny do systému souborů OJS 1 nebo, pokud je instalován pouze jeden časopis, do systému souborů OJS 2.</message>
+	<message key="admin.journals.importOJS1.redirect.ojs1root">Umístit do staré cesty systému souborů OJS 1 (např.: /var/www/ojs1).</message>
+	<message key="admin.journals.importOJS1.redirect.ojs1orojs2root">Umístit do staré cesty systému souborů OJS 1 (např.: /var/www/ojs1) nebo, pokud je instalován pouze jeden časopis, do nové cesty systému souborů OJS 2 (např.: /var/www/ojs2).</message>
+	<message key="admin.journals.importOJS1.conflict.desc">Některé uživatelské účty obsahují zorporné informace. OJS 1.x umožňuje více uživatelským účtům sdílet stejnou e-mailovou adresu, zatímco OJS 2.x toto neumožňuje. V níže uvedeném seznamu k sobě měl druhý účet přiřazen dočasný e-mailový účet. Tyto účty by měly být ručně opraveny buďto přiřazením jiného e-mailového účtu nebo sloučením účtů.</message>
+	<message key="admin.journals.importOJS1.conflict">{$firstUsername} ({$firstName}) a {$secondUsername} ({$secondName})</message>
+	<message key="admin.journals.importOJS1Instructions">Detailní informace o přestěhování dat z OJS 1 do OJS 2 si nastudujte v dokumentu UPGRADE distribuovaném spolu s OJS.</message>
+	<message key="admin.journal.pathImportInstructions">Existující cesta časopisu nebo cesta, která má být vytvořena (např. "ojs").</message>
+	<message key="admin.journal.importPath">Cesta k OJS 1</message>
+	<message key="admin.journal.importPathInstructions">Kompletní cesta systémem souborů k instalaci OJS 1 (např. "/var/www/ojs").</message>
+	<message key="admin.journals.importSubscriptions">Importovat předpaltné</message>
+	<message key="admin.journals.transcode">Překódovat metadata článků z ISO8859-1</message>
+	<message key="admin.journals.redirect">Generovat kód pro přesměrování adres URL OJS 1 na adresy URL OJS 2</message>
+	<message key="admin.journals.form.importPathRequired">Je vyžadována cesta importu.</message>
+	<message key="admin.journals.importErrors">Úspěšné dokončení importu selhalo</message>
+	<message key="admin.mergeUsers">Sloučit uživatele</message>
+	<message key="admin.mergeUsers.mergeUser">Sloučit uživatele</message>
+	<message key="admin.mergeUsers.into.description">Vyberte uživatele, kterému mají být přiřazena autorství, přidělené úlohy atd. předchozího uživatele.</message>
+	<message key="admin.mergeUsers.from.description">Vyberte uživatele, který má být sloučen s jiným uživatelským účtem (např., pokud má někdo dva uživatelské účty). Prvně zvolený účet bude vymazán a jeho příspěvky, úlohy atd. budou přiřazeny ke druhému účtu.</message>
+	<message key="admin.mergeUsers.allUsers">Všichni zaregistrovaní uživatelé</message>
+	<message key="admin.mergeUsers.confirm">Jste si jistý, že chcete sloučit účet s uživatelským jménem "{$oldUsername}" do účtu s uživatelským jménem "{$newUsername}"? Účet s uživatelským jménem "{$oldUsername}" poté přestane existovat. Tato akce je nevratná.</message>
+	<message key="admin.mergerUsers.noneEnrolled">Žádní zapsaní uživatelé.</message>
+</locale>

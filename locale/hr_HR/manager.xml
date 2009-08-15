@@ -586,4 +586,7 @@
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Tip pretplate je uspješno kreiran.</message>
 	<message key="manager.subscriptionTypes.year">godina</message>
 	<message key="manager.subscriptionTypes.years">godine</message>
+	<message key="manager.reviewFormElement.changeType">Promjena tipa stavke...</message>
+	<message key="manager.reviewFormElements.confirmDelete">Potvrdite brisanje stavke objavljenog obrasca...</message>
+	<message key="manager.reviewForms.confirmDeleteUnpublished">Potvrdite brisanje neobjavljenog recenzijskog obrasca...</message>
 </locale>
