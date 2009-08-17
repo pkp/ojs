@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the vi_VN (Tiếng Việt) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="vi_VN" full_name="Tiếng Việt">
 	<message key="plugins.block.donation.displayName">Tài trợ</message>
 	<message key="plugins.block.donation.description">Công cụ này tạo ra một liên kết ở cột bên để nhận tài trợ.</message>
 </locale>

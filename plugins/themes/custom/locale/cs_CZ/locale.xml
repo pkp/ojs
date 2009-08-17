@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the cs_CZ (Czech) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="cs_CZ" full_name="Czech">
 	<message key="plugins.theme.custom.name">Plugin pro přizpůsobení tématu</message>
 	<message key="plugins.theme.custom.description">Tento plugin zavádí přizpůsobitelné téma vzhledu.</message>
 	<message key="plugins.theme.custom.notWritable">UPOZORNĚNÍ: Soubor stylesheetu tohoto pluginu, "{$stylesheetFileLocation}", není momentálně zapisovatelný. Než budete moci tento plugin použít, musíte tento soubor nastavit jako zapisovatelný.</message>

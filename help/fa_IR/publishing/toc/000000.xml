@@ -9,10 +9,11 @@
   * table of contents for Publishing Process. 
   *
   * $Id$
-  --><toc title="فرایند انتشار" parent_topic="publishing/topic/000000" locale="fa_IR" id="publishing/toc/000000" >
-  <topic title="ایجاد شماره" id="publishing/topic/000001" />
-  <topic title="برنامه ریزی مقالات " id="publishing/topic/000002" />
-  <topic title="فهرست مطالب" id="publishing/topic/000003" />
-  <topic title="انتشار" id="publishing/topic/000004" />
-  <breadcrumb title="فرایند انتشار" url="publishing/topic/000000" />
+  -->
+<toc title="فرایند انتشار" parent_topic="publishing/topic/000000" locale="fa_IR" id="publishing/toc/000000" >
+	<topic title="ایجاد شماره" id="publishing/topic/000001" />
+	<topic title="برنامه ریزی مقالات " id="publishing/topic/000002" />
+	<topic title="فهرست مطالب" id="publishing/topic/000003" />
+	<topic title="انتشار" id="publishing/topic/000004" />
+	<breadcrumb title="فرایند انتشار" url="publishing/topic/000000" />
 </toc>

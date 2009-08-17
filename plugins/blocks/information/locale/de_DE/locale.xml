@@ -10,6 +10,7 @@
   * Regionalisierungszeichenketten für die de_DE (Deutsche) Regionaleinstellung.
   *
   * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  * $Id$
   -->
  
 <locale name="de_DE" full_name="German">

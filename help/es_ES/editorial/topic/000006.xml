@@ -14,7 +14,7 @@
   * $Id$
   -->
 
-<topic id="editorial/topic/000006" locale="en_US" title="Revisión" toc="editorial/toc/000004" subtoc="editorial/toc/000006" key="editorial.sectionEditorsRole.review">
+<topic id="editorial/topic/000006" locale="es_ES" title="Revisión" toc="editorial/toc/000004" subtoc="editorial/toc/000006" key="editorial.sectionEditorsRole.review">
 	<section>
 		<![CDATA[<p>La página de revisión del artículo enlista todos los elementos necesarios para que el Editor de la Sección pueda organizar y completar el proceso de revisión. El editor de la sección asigna una versión de revisión del artículo, asigna uno o más revisores al artículo e ingresa una decisión editorial. Dependiendo de la decisión editorial, el artículo será movido de la fila de revisión a la fila de edición o a los archivos, o será reenviado a la revisión.</p><p>Para información más detallada sobre la selección de una versión de revisión vea {help_topic key="editorial.sectionEditorsRole.review.reviewVersion" text="Review Version"}.</p><p>Para información más detallada sobre el proceso de revisión hecho por expertos vea {help_topic key="editorial.sectionEditorsRole.review.peerReview" text="Peer Review"}.</p><p>Para información más detallada sobre la entrega de una decisión del editor vea {help_topic key="editorial.sectionEditorsRole.review.editorDecision" text="Editor Decision"}.</p>]]>
 </section>

@@ -6,10 +6,11 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Reading Tools version: Astrophysics (en_US)
+  * Reading Tools version: Astrophysics (fa_IR)
   *
   * $Id$
-  --><version locale="fa_IR" id="Astrophysics" >
+  -->
+<version locale="fa_IR" id="Astrophysics" >
   <version_title>فیزیک نجومی</version_title>
   <version_description>ابزار خواندن می تواند برای خوانندگان این مطالعه در زمینه منابع موجود راهنمایی وسیعی ارائه دهد که این راهنمایی می تواند تفسیر، قرار گرفتن و ارزیابی کردن در زمینه آن مطالعه را فراهم آورد.</version_description>
   <context>

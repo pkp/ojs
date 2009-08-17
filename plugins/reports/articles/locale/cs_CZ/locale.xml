@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the cs_CZ (Czech) locale.
   *
   * $Id$
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="cs_CZ" full_name="Czech">
 	<message key="plugins.reports.articles.displayName">Report článků</message>
 	<message key="plugins.reports.articles.description">Tento plugin zavádí CSV report obsahující seznam článků a informací o nich.</message>
 	<message key="plugins.reports.articles.nodecision">Žádné rozhodnutí</message>

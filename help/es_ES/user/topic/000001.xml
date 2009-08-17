@@ -14,7 +14,7 @@
   * $Id$
   -->
 
-<topic id="user/topic/000001" locale="en_US" title="Página de Inicio" toc="user/toc/000000" key="user.home">
+<topic id="user/topic/000001" locale="es_ES" title="Página de Inicio" toc="user/toc/000000" key="user.home">
 	<section>
 		<![CDATA[<p>Existen dos páginas de inicio "Principales": una para Open Journal System, o Página Principal del Sitio; y una Página Principal a nivel de la revista. Ambas páginas principales contienen casi la misma información, pero difieren en ciertas cosas.</p>]]>	
 	</section>

@@ -12,7 +12,7 @@
   * $Id$
   -->
 
-<topic id="journal/topic/000030" locale="en_US" title="System Plugins" toc="journal/toc/000001" key="journal.managementPages.plugins">
+<topic id="journal/topic/000030" locale="it_IT" title="System Plugins" toc="journal/toc/000001" key="journal.managementPages.plugins">
 	<section>
 		<![CDATA[<p>La pagina Plugin di sistema permette al Journal Manager di vedere una lista di plugin installati OJS e permette di eseguire ogni azione prevista dai plugin. Per maggiorni informazioni, si veda la documentazione di ciascun plugin.</p>]]>
 	</section>

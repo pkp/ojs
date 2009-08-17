@@ -14,7 +14,7 @@
   * $Id$
   -->
 
-<toc id="submission/toc/000000" locale="en_US" title="Proceso de Envíos" parent_topic="submission/topic/000000">
+<toc id="submission/toc/000000" locale="es_ES" title="Proceso de Envíos" parent_topic="submission/topic/000000">
 	<topic id="submission/topic/000001" title="Guías del Autor" />
 	<topic id="submission/topic/000002" title="Requerimientos de los Envíos" />
 	<topic id="submission/topic/000003" title="Indexación y Metadatos" />

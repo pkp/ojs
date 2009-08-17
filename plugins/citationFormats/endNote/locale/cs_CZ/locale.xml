@@ -14,7 +14,7 @@
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="cs_CZ" full_name="Czech">
 	<message key="plugins.citationFormats.endNote.displayName">Plugin pro citační formát EndNote</message>
 	<message key="plugins.citationFormats.endNote.citationFormatName"><![CDATA[EndNote - EndNote formát (Macintosh & Windows)]]></message>
 	<message key="plugins.citationFormats.endNote.description">Tento plugin zavádí citační formát EndNote.</message>

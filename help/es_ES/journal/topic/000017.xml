@@ -14,7 +14,7 @@
   * $Id$
   -->
 
-<topic id="journal/topic/000017" locale="en_US" title="Editor de la Sección" toc="journal/toc/000003" key="journal.roles.sectionEditor">
+<topic id="journal/topic/000017" locale="es_ES" title="Editor de la Sección" toc="journal/toc/000003" key="journal.roles.sectionEditor">
 	<section>
 		<![CDATA[<p>El aeditor de la Sección administra la revisión y la edición de las entregas a los que ha sido asignado. En algunos casos, un editor de la sección que está asignado para supervisar entregas durante el{help_topic key="editorial.sectionEditorsRole.review" text="Review"} proceso, también será responsable de la supervisión de la entrega para que sea aceptado durante el {help_topic key="editorial.sectionEditorsRole.editing" text="Editing"} proceso (es decir, durante la correción de textos, la diagramación, y la correción de pruebas). Sin embargo, los editores de la sección, normalmente, sólo trabaja en el proceso de Revisión, y un editor que toma el rol de editor de la sección supervisa las entregas durante el proceso de edición. La revista tendrá una política que aclara como serán divididas las tareas.</p>]]>	
 	</section>

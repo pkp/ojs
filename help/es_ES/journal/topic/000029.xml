@@ -14,7 +14,7 @@
   * $Id$
   -->
 
-<topic id="journal/topic/000029" locale="en_US" title="Encabezado" toc="journal/toc/000001" key="journal.managementPages.groups">
+<topic id="journal/topic/000029" locale="es_ES" title="Encabezado" toc="journal/toc/000001" key="journal.managementPages.groups">
 	<section>
 		<![CDATA[<p>Existen dos métodos que son utilizados por el Administrador de la Revista para definir el Encabezado de la Revista, que aparecen en la página del Equipo Editorial en Sobre la Revista: usando roles editoriales asignados, y creando títulos de equipos editoriales personalizados.</p>]]>
 	</section>

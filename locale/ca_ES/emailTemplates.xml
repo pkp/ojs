@@ -10,7 +10,7 @@
   *
   * $Id$
   -->
-<email_texts locale="en_US">
+<email_texts locale="ca_ES">
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>Confirmació per a la reinicialització de la contrasenya</subject>
 		<body>Hem rebut una sol·licitud per a reinicialitzar la vostra contrasenya per al lloc web {$siteTitle}.

@@ -9,10 +9,11 @@
   * table of contents for Editorial Process - Author's Role - Review
   *
   * $Id$
-  --><toc title="کارشناسی" parent_topic="editorial/topic/000010" locale="fa_IR" id="editorial/toc/000010" >
-  <topic title="کارشناسی" id="editorial/topic/000033" />
-  <topic title="تصمیم سردبیر" id="editorial/topic/000034" />
-  <breadcrumb title="روند دبیری" url="editorial/topic/000000" />
-  <breadcrumb title="نقش نویسنده" url="editorial/topic/000009" />
-  <breadcrumb title="کارشناسی" url="editorial/topic/000010" />
+  -->
+<toc title="کارشناسی" parent_topic="editorial/topic/000010" locale="fa_IR" id="editorial/toc/000010" >
+	<topic title="کارشناسی" id="editorial/topic/000033" />
+	<topic title="تصمیم سردبیر" id="editorial/topic/000034" />
+	<breadcrumb title="روند دبیری" url="editorial/topic/000000" />
+	<breadcrumb title="نقش نویسنده" url="editorial/topic/000009" />
+	<breadcrumb title="کارشناسی" url="editorial/topic/000010" />
 </toc>

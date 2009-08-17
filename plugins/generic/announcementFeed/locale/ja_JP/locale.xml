@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the ja_JP (日本語) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ja_JP" full_name="日本語">
 	<message key="plugins.generic.announcementfeed.displayName">雑誌のお知らせフィードプラグイン</message>
 	<message key="plugins.generic.announcementfeed.description">この雑誌のお知らせを通知するRSS/Atom配信フィードを作成します。</message>
 

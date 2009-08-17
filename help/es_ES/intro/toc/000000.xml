@@ -14,7 +14,7 @@
   * $Id$
   -->
 
-<toc id="intro/toc/000000" locale="en_US" title="Introducción a OJS" parent_topic="intro/topic/000000">
+<toc id="intro/toc/000000" locale="es_ES" title="Introducción a OJS" parent_topic="intro/topic/000000">
 	<topic id="intro/topic/000001" title="FAQ" />
 	<breadcrumb url="intro/topic/000000" title="Introducción a OJS" />
 </toc>

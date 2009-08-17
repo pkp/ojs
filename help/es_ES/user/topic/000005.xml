@@ -14,7 +14,7 @@
   * $Id$
   -->
 
-<topic id="user/topic/000005" locale="en_US" title="Buscar y Explorar" toc="user/toc/000000" key="user.searchAndBrowse">
+<topic id="user/topic/000005" locale="es_ES" title="Buscar y Explorar" toc="user/toc/000000" key="user.searchAndBrowse">
 	<section>
 		<![CDATA[<p>El contenido de la revista puede ser buscado por autor, título, resumen y términos de indexación. El contenido del texto completo puede ser buscado tanto en los formatos de HTML  como en los de PDF. Alternativamente, al usar el enlace de Explorar en el margen a mano derecha de la página, los lectores pueden explorar los contenidos de la revista por número, autor y título. También se pueden explorar otras revistas publicadas a través de la instalación de Open Journal System.</p>]]>
 	</section>

@@ -14,7 +14,7 @@
   * $Id$
   -->
 
-<topic id="journal/topic/000006" locale="en_US" title="Correos preparados" toc="journal/toc/000001" key="journal.managementPages.emails">
+<topic id="journal/topic/000006" locale="es_ES" title="Correos preparados" toc="journal/toc/000001" key="journal.managementPages.emails">
 	<section>
 		<![CDATA[<p>La revista utiliza una variedad de correos electrónicos preparados para dirigir los procesos de editorial y publicación. Todos los correos están dirigidos a los recipiente(s) adecuado(s) de antemano (por ejemplo, el editor de la sección notifica al editor de correción de textos que que la correción de textos de una entrega puede comenzar). El adiminitrador de la revista puede editar versiones defectuosas de estos correos(disponibles bajo correos electrónicos en la página de administración de la revista). De igual manera, los correos pueden editarse por el usuario antes de ser enviados. Automaticamente, el sistema inserta cualquier información relevante y especifica dentro de la prioridad del correo antes de presentárlo al usuario para enviar (por ejemplo, el título y el resúmen del envío en cuestión o la fecha de entrega de la revisión). El correo también le informa al recipiente sobre las instrucciones para encontrar la página Web pertinente, para que pueda hacer la tarea que se le solicita realizar.</p>]]>	
 	</section>

@@ -12,7 +12,7 @@
   * $Id$
   -->
 
-<toc id="journal/toc/000001" locale="en_US" title="Management Pages" parent_topic="journal/topic/000001">
+<toc id="journal/toc/000001" locale="de_DE" title="Management Pages" parent_topic="journal/topic/000001">
 	<topic id="journal/topic/000034" title="Announcements" />
 	<topic id="journal/topic/000010" title="Files Browser" />
 	<topic id="journal/topic/000005" title="Journal Sections" />

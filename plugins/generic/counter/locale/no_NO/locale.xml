@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the no_NO (Norwegian) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="no_NO" full_name="Norwegian">
 	<message key="plugins.generic.counter.description"><![CDATA[COUNTER-plugin'en gjør det mulig å registrere og <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a>-rapportere trafikken på siden.]]></message>
 	<message key="plugins.generic.counter">COUNTER: statistikk</message>
 

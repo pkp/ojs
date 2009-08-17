@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE schema SYSTEM "../../../dbscripts/xml/dtd/xmlschema.dtd">
+<!DOCTYPE schema SYSTEM "../../../lib/pkp/dtd/xmlSchema.dtd">
 
 <!--
   * schema.xml
@@ -9,6 +9,7 @@
   *
   * StaticPages plugin schema in XML.
   *
+  * $Id$
   -->
 
 <schema version="0.2">

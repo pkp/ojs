@@ -9,9 +9,10 @@
   * table of contents for Editorial Process - Copyeditor's Role
   *
   * $Id$
-  --><toc title="نقش ویراستار ادبی" parent_topic="editorial/topic/000012" locale="fa_IR" id="editorial/toc/000012" >
-  <topic title="ساب میشن ها" id="editorial/topic/000037" />
-  <topic title="ویراستاری ادبی" id="editorial/topic/000038" />
-  <breadcrumb title="روند دبیری" url="editorial/topic/000000" />
-  <breadcrumb title="نقش ویراستار ادبی" url="editorial/topic/000012" />
+  -->
+<toc title="نقش ویراستار ادبی" parent_topic="editorial/topic/000012" locale="fa_IR" id="editorial/toc/000012" >
+	<topic title="ساب میشن ها" id="editorial/topic/000037" />
+	<topic title="ویراستاری ادبی" id="editorial/topic/000038" />
+	<breadcrumb title="روند دبیری" url="editorial/topic/000000" />
+	<breadcrumb title="نقش ویراستار ادبی" url="editorial/topic/000012" />
 </toc>

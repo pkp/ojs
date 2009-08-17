@@ -12,7 +12,7 @@
   * $Id$
   -->
 
-<topic id="site/topic/000003" locale="en_US" title="Administrative Functions" toc="site/toc/000000" key="site.administrativeFunctions">
+<topic id="site/topic/000003" locale="de_DE" title="Administrative Functions" toc="site/toc/000000" key="site.administrativeFunctions">
 	<section>
 		<![CDATA[<p>Several administrative functions are available in the site administration area. These functions should generally be used with caution, as improper use could lead to unexpected results.</p>]]>
 	</section>

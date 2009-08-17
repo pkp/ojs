@@ -14,7 +14,7 @@
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="cs_CZ" full_name="Czech">
 	<message key="plugins.citationFormats.bibtex.displayName">Plugin pro citační formát BibTeX</message>
 	<message key="plugins.citationFormats.bibtex.citationFormatName">BibTeX</message>
 	<message key="plugins.citationFormats.bibtex.description">Tento plugin zavádí citační formát BibTeX.</message>

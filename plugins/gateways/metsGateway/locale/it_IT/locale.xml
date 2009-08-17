@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the it_IT (Italiano) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="it_IT" full_name="Italiano">
 	<message key="plugins.gateways.metsGateway.displayName">Plugin di Gateway METS</message>
 	<message key="plugins.gateways.metsGateway.settings">Impostazioni</message>
 	<message key="plugins.gateways.metsGateway.description"><![CDATA[Questo plugin fornisce righe di dati XML data in formato METS per una rivista specifica. <strong>NOTA: E’ inteso di essere utilizzato dal Web Services e abilitare questo plugin ha implica una questione di sicurezza visto che fornisce accesso non alla rivista in formato XML (il contenuto  è codificato in base64).</strong>]]></message>

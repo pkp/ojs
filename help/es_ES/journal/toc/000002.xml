@@ -14,7 +14,7 @@
   * $Id$
   -->
 
-<toc id="journal/toc/000002" locale="en_US" title="Usuarios" parent_topic="journal/topic/000002">
+<toc id="journal/toc/000002" locale="es_ES" title="Usuarios" parent_topic="journal/topic/000002">
 	<topic id="journal/topic/000011" title="Registro de Usuarios en esta Revista" />
 	<topic id="journal/topic/000012" title="Crear un nuevo Usuario" />
 	<topic id="journal/topic/000033" title="Fusión de Usuarios" />

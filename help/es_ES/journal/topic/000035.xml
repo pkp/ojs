@@ -14,7 +14,7 @@
   * $Id$
   -->
 
-<topic id="journal/topic/000035" locale="en_US" title="Pagos" toc="journal/toc/000001" key="journal.managementPages.payments">
+<topic id="journal/topic/000035" locale="es_ES" title="Pagos" toc="journal/toc/000001" key="journal.managementPages.payments">
 	<section>
 		<![CDATA[<p>Desde la página de administración, El administrador de la revista puede habilitar el Módulo de Pago de Tarifas para aceptar pagos, ya sea por medio de PayPal o por medio de un proceso manual, para las tarifas del autor o para el acceso a artículos. El Módulo de Pago de Tarifas mantiene un seguimiento de los usuarios pagaderos, y también muestra la información de las tarifas en la página de Sobre la Revista. Además, si el Módulo de Pago de Tarifas está habilitado es posible para los usuarios renovar sus suscripciones y membresías desde su Página Principal de Usuario.</p><p>El módulo de pagos de tarifas esta dividido en tres sub-secciones diferentes: Opciones de pagos de tarifas, métodos de pago de tarifas y registros.</p>]]>
 </section>

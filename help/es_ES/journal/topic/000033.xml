@@ -14,7 +14,7 @@
   * $Id$
   -->
 
-<topic id="journal/topic/000033" locale="en_US" title="Fusionar Usuarios" toc="journal/toc/000002" key="journal.managementPages.mergeUsers">
+<topic id="journal/topic/000033" locale="es_ES" title="Fusionar Usuarios" toc="journal/toc/000002" key="journal.managementPages.mergeUsers">
 	<section>
 		<![CDATA[<p>La característica de fusionar usuarios, disponible en la administración de la revista, bajo el encabezao Usuarios, le permite al administrador de la revista fusionar dos cuentas de usuarios en una sola, transfiriendo las asignaciones de edición, entregas, y otros varios registros de una cuenta a la otra, eliminando efectivamente la primera.</p>
 		<p>Los siguientes artículos son transferidos:

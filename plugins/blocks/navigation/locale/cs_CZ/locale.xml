@@ -14,7 +14,7 @@
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="cs_CZ" full_name="Czech">
 	<message key="plugins.block.navigation.displayName">Navigační blok</message>
 	<message key="plugins.block.navigation.description">Tento plugin poskytne v postranním panelu navigační odkazy.</message>
 	<message key="plugins.block.navigation.journalContent">Obsah časopisu</message>

@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the vi_VN (Tiếng Việt) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="vi_VN" full_name="Tiếng Việt">
 	<message key="plugins.block.navigation.displayName">Khối điều khiển</message>
 	<message key="plugins.block.navigation.description">Công cụ này tạo ra các liên kết điều khiển ở cột bên.</message>
 	<message key="plugins.block.navigation.journalContent">Nội dung Tạp chí</message>

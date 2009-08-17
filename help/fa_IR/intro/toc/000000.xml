@@ -9,7 +9,8 @@
   * Table of contents for Introduction to OJS. 
   *
   * $Id$
-  --><toc title="آشنایی با OJS" parent_topic="intro/topic/000000" locale="fa_IR" id="intro/toc/000000" >
-  <topic title="سوالات رایج" id="intro/topic/000001" />
-  <breadcrumb title="آشنایی با OJS" url="intro/topic/000000" />
+  -->
+<toc title="آشنایی با OJS" parent_topic="intro/topic/000000" locale="fa_IR" id="intro/toc/000000" >
+	<topic title="سوالات رایج" id="intro/topic/000001" />
+	<breadcrumb title="آشنایی با OJS" url="intro/topic/000000" />
 </toc>

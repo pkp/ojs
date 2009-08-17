@@ -14,7 +14,7 @@
   * $Id$
   -->
 
-<toc id="site/toc/000000" locale="en_US" title="Administración del Sitio" parent_topic="site/topic/000000">
+<toc id="site/toc/000000" locale="es_ES" title="Administración del Sitio" parent_topic="site/topic/000000">
 	<topic id="site/topic/000001" title="Instalación" />
 	<topic id="site/topic/000002" title="Administración del Sitio Web" />
 	<topic id="site/topic/000003" title="Funciones Administractivas" />

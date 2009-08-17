@@ -13,7 +13,7 @@
   * $Id$
   -->
 
-<topic id="user/topic/000001" locale="en_US" title="Home" toc="user/toc/000000" key="user.home">
+<topic id="user/topic/000001" locale="de_DE" title="Home" toc="user/toc/000000" key="user.home">
 	<section>
 		<![CDATA[<p>Es gibt zwei "Homepage"-Varianten: eine für die gesamte installierte OJS-Umgebung, die Webseiten-Homepage, und eine Homepage auf der Ebene einer einzelnen Zeitschrift. Beide enthalten weitgehend gleiche Informationen, unterscheiden sich aber in spezifischen Aspekten.</p>]]>	
 	</section>

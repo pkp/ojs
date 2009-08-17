@@ -9,8 +9,9 @@
   * Management Pages - Sections 
   *
   * $Id$
-  --><topic title="بخشهای ژورنال" toc="journal/toc/000001" key="journal.managementPages.sections" locale="fa_IR" id="journal/topic/000005" >
-  <section><![CDATA[<p>
+  -->
+<topic title="بخشهای ژورنال" toc="journal/toc/000001" key="journal.managementPages.sections" locale="fa_IR" id="journal/topic/000005" >
+	<section><![CDATA[<p>
 مدیر ژورنال در قسمت مدیریت ژورنال میتواند بخشهای مختلف مجله را تعریف کند. یک ژورنال معمولا قسمتهایی به نامهای قسمت کتب برسی مقالات ٫ تحقیقات ٫ قسمت سردبیری و غیره دارد 
 </p><p>
 اگر قرار باشد برای هر بخش مجله یک سردبیر اختصاص داده شود مدیر ژورنال میتواند آنها را تائین نماید و  

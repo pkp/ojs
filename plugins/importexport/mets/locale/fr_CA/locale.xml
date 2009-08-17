@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the fr_CA (Français (Canada)) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="fr_CA" full_name="Français (Canada)">
 	<message key="plugins.importexport.METSExport.displayName">Plugiciel d'exportation METS XML</message>
 	<message key="plugins.importexport.METSExport.description">Exporte les revues en METS XML</message>
 	<message key="plugins.importexport.METSExport.settings">Paramètres</message>

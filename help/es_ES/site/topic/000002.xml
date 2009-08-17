@@ -14,7 +14,7 @@
   * $Id$
   -->
 
-<topic id="site/topic/000002" locale="en_US" title="Administración del Sitio Web" toc="site/toc/000000" key="site.siteManagement">
+<topic id="site/topic/000002" locale="es_ES" title="Administración del Sitio Web" toc="site/toc/000000" key="site.siteManagement">
 	<section>
 		<![CDATA[<p>OJS está diseñado para ser un sistema de revistas múltiples, el Administrador del Sitio es responsable de realizar la configuración de los distintos niveles de la revista y de crear nuevas revistas que sean almacenadas en un solo sitio Web.. Los sitios de la revista son totalmente independientes, con excepción de las cuentas de usuarios; mientras que un usuario puede participar en cualquier combinación de roles y revistas, la misma dirección de correo electrónico y nombre de usuario se referirán al mismo usuario sin tener en cuenta la revista.</p>]]>
 	</section>

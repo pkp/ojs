@@ -9,8 +9,9 @@
   * Users - Create New User 
   *
   * $Id$
-  --><topic title="ایجادکاربر جدید" toc="journal/toc/000002" key="journal.users.createNewUser" locale="fa_IR" id="journal/topic/000012" >
-  <section><![CDATA[<p>
+  -->
+<topic title="ایجادکاربر جدید" toc="journal/toc/000002" key="journal.users.createNewUser" locale="fa_IR" id="journal/topic/000012" >
+	<section><![CDATA[<p>
 مدیر مجله میتواند یک لینک با عنوان ایجاد کاربر جدید در وب سایت مجله ایجاد کرده و از آن برای ثبت نام برای ثبت نام کاربران و دادن سمت به آنها استفاده کند کاربر با لاگین شدن به وب سایت میتواند اطلاعات درخواست شده در توسط مدیر مجله را ارائه کرده و در سایت به فعالیت بپردازد  
 </p><p><i>
 تغییر دادن پسورد

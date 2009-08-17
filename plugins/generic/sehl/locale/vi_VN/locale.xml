@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the vi_VN (Tiếng Việt) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="vi_VN" full_name="Tiếng Việt">
 	<message key="plugins.generic.sehl.name">Công cụ SEHL</message>
 	<message key="plugins.generic.sehl.description">Công cụ này áp dụng Search Engine HighLighting (SEHL) nhờ đó mỗi khi một công cụ tìm kiếm xác định được một bài viết dưới dạng HTML, các từ được tìm kiếm có trong bài sẽ được bôi màu.</message>
 </locale>

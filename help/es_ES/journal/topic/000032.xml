@@ -14,7 +14,7 @@
   * $Id$
   -->
 
-<topic id="journal/topic/000032" locale="en_US" title="Administrador de Suscripciones" toc="journal/toc/000003" key="journal.roles.subscriptionManager">
+<topic id="journal/topic/000032" locale="es_ES" title="Administrador de Suscripciones" toc="journal/toc/000003" key="journal.roles.subscriptionManager">
 	<section>
 		<![CDATA[<p>El administrador de Suscripciones administra las suscripciones de la revista y los tipos de suscripciones.</p><p>Puede encontrar más información sobre la administración de las suscripciones en  {help_topic key="journal.managementPages.subscriptions" text="here"}.</p>]]>
 	</section>

@@ -6,11 +6,11 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Reading Tools version: Cognitive Science (en_US)
+  * Reading Tools version: Cognitive Science (fa_IR)
   *
   * $Id$
   -->
-<version id="علوم شناختی" locale="انگلیسی-آمریکایی">
+<version id="Cognitive_Science" locale="fa_IR">
 	<version_title>علوم شناختی</version_title>
 	<version_description>ابزار خواندن به خوانندگان اکمک می کند  تا از دامنه ی وسیعی از منابع موجود که امکان تفسیر ، قرار گرفتن و ارزیابی  را فراهم می کند ، استفاده کنند</version_description>
 	<context>

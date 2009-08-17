@@ -14,7 +14,7 @@
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="cs_CZ" full_name="Czech">
 	<message key="plugins.generic.translator.name">Překladový Plugin</message>
 	<message key="plugins.generic.translator.description">Tento plugin umožňuje přes web spravovat soubory překladu.</message>
 	<message key="plugins.generic.translator.longdescription">Tato část umožňuje správcovi stránek vytvářet, upravovat a kontrolovat překlady OJS. Změny jsou aplikovány na všechny stránky a neměly by být použity pro přizpůsobení jednoho OJS časopisu. Pokud upravíte nebo vytvoříte překlad, zvažte prosím jeho zaslání do Public Knowledge Project pro možnost distribuce s budoucím vydáním.</message>

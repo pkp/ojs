@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the vi_VN (Tiếng Việt) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="vi_VN" full_name="Tiếng Việt">
 	<message key="plugins.theme.custom.name">Công cụ Tùy biến giao diện</message>
 	<message key="plugins.theme.custom.description">Công cụ này tạo ra một giao diện tùy biến.</message>
 	<message key="plugins.theme.custom.notWritable">LƯU Ý: File định dạng kiểu trang của công cụ này, "{$stylesheetFileLocation}", hiện không ghi lại được. File này phải ghi được trước khi công cụ được kích hoạt.</message>

@@ -9,9 +9,10 @@
   * table of contents for Site Administration. 
   *
   * $Id$
-  --><toc title="مدیریت سایت " parent_topic="site/topic/000000" locale="fa_IR" id="site/toc/000000" >
-  <topic title="نصب" id="site/topic/000001" />
-  <topic title="مدیریت سایت" id="site/topic/000002" />
-  <topic title="عملکردهای مدیریتی" id="site/topic/000003" />
-  <breadcrumb title="مدیریت سایت" url="site/topic/000000" />
+  -->
+<toc title="مدیریت سایت " parent_topic="site/topic/000000" locale="fa_IR" id="site/toc/000000" >
+	<topic title="نصب" id="site/topic/000001" />
+	<topic title="مدیریت سایت" id="site/topic/000002" />
+	<topic title="عملکردهای مدیریتی" id="site/topic/000003" />
+	<breadcrumb title="مدیریت سایت" url="site/topic/000000" />
 </toc>

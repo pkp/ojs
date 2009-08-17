@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
   *
   * $Id$
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.importexport.doaj.displayName">DOAJ-Export-Plug-In</message>
 	<message key="plugins.importexport.doaj.description">Zeitschrift für DOAJ exportieren und Zeitschrifteninformationen an die/den DOAJ-Vertreter/in per E-Mail schicken</message>
 

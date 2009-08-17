@@ -14,7 +14,7 @@
   * $Id$
   -->
 
-<toc id="editorial/toc/000003" locale="en_US" title="Resumen de Envios" parent_topic="editorial/topic/000003">
+<toc id="editorial/toc/000003" locale="es_ES" title="Resumen de Envios" parent_topic="editorial/topic/000003">
 	<topic id="editorial/topic/000019" title="Administración de Envios" />
 	<topic id="editorial/topic/000020" title="Los Metadatos de Envios" />
 

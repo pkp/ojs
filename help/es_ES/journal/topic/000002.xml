@@ -14,7 +14,7 @@
   * $Id$
   -->
 
-<topic id="journal/topic/000002" locale="en_US" title="Usuarios" toc="journal/toc/000000" subtoc="journal/toc/000002" key="journal.users.index">
+<topic id="journal/topic/000002" locale="es_ES" title="Usuarios" toc="journal/toc/000000" subtoc="journal/toc/000002" key="journal.users.index">
 	<section>
 		<![CDATA[<p>Es responsabilidad del Administrador de la Revista gestionar los usuarios en OJS. Esto incluye la creación de usuarios, la desactivación de cuentas,la gestión de funciones, etc. El Administrador de la Revista puede explorar y agregar registros existentes,modificar perfiles, unir cuentas, y contactar grupos de usuarios.</p>]]>	
 	</section>

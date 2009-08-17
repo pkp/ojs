@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the el_GR (Greek) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="el_GR" full_name="Greek">
 	<message key="plugins.generic.thesisfeed.displayName">Plugin ροής Περιλήψεων Διατριβών</message>
 	<message key="plugins.generic.thesisfeed.description">Το plugin αυτό παράγει RSS/Atom web syndication feeds (ροές)  για περιλήψεις διατριβών.</message>
 

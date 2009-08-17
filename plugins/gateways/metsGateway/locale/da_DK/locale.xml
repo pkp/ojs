@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
   * locale.xml
@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2005 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the da_DK (Dutch) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="da_DK" full_name="Dutch">
 	<message key="plugins.gateways.metsGateway.displayName">METS Gateway Plugin</message>
 	<message key="plugins.gateways.metsGateway.settings">Indstillinger</message>
 	<message key="plugins.gateways.metsGateway.description"><![CDATA[Dette plugin genererer rå XML data i METS format for et givet tidsskrift. <strong>NOTE: Dette er til brug for Web Services og aktivering plugin medfører et sikkerhedsproblem ved at det giver uhindret adgang til tidsskriftet i XML form (indhold er base64 encoded).</strong>]]></message>

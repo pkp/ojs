@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the cs_CZ (Czech) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="cs_CZ" full_name="Czech">
 	<message key="plugins.gateways.metsGateway.displayName">Plugin METS Gateway</message>
 	<message key="plugins.gateways.metsGateway.settings">Nastavení</message>
 	<message key="plugins.gateways.metsGateway.description"><![CDATA[Tento plugin poskytuje surová XML data ve formátu METS pro daný časopis. <strong>UPOZORNĚNÍ: Toto je určeno pro použití webovým službám a povolení tohoto pluginu představuje bezpečnostní problém v tom, že poskytuje neomezený přístup k časopisu v XML formátu (obsah je k´dován v base64).</strong>]]></message>

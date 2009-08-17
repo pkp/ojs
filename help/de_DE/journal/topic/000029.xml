@@ -12,7 +12,7 @@
   * $Id$
   -->
 
-<topic id="journal/topic/000029" locale="en_US" title="Masthead" toc="journal/toc/000001" key="journal.managementPages.groups">
+<topic id="journal/topic/000029" locale="de_DE" title="Masthead" toc="journal/toc/000001" key="journal.managementPages.groups">
 	<section>
 		<![CDATA[<p>There are two methods the Journal Manager can use to define the Masthead for the journal, which appears in the Editorial Team page under About the Journal: using assigned editorial roles, and creating custom editorial team titles.</p>]]>
 	</section>

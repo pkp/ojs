@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the vi_VN (Tiếng Việt) locale.
   *
   * $Id$
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="vi_VN" full_name="Tiếng Việt">
 	<message key="plugins.reports.articles.displayName">Báo cáo về bài viết</message>
 	<message key="plugins.reports.articles.description">Công cụ này tạo ra một báo cáo dưới định dạng CSV bao gồm danh mục của các bài viết và thông tin về bài viết.</message>
 	<message key="plugins.reports.articles.nodecision">Chưa ra Quyết định</message>

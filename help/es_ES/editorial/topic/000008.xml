@@ -14,7 +14,7 @@
   * $Id$
   -->
 
-<topic id="editorial/topic/000008" locale="en_US" title="Rol del Revisor" toc="editorial/toc/000000" subtoc="editorial/toc/000008" key="editorial.reviewersRole">
+<topic id="editorial/topic/000008" locale="es_ES" title="Rol del Revisor" toc="editorial/toc/000000" subtoc="editorial/toc/000008" key="editorial.reviewersRole">
 	<section>
 		<![CDATA[<p>Al revisor se le invita por medio de un correo a revisar un envío, que incluye el título y el resumen, y también el URL de la revista, el nombre de usuario y la contraseña para que el revisor lo utilice para ingresar a la revista. La revista tiene una opción para usar la opción de Revisor que envía un correo con el envío adjunto al revisor, junto con la invitación a revisar el anvío. En este caso, el Revisor responde por medio de correos electrónicos. Lo descrito aquí es el método principal de revisión (que asegura registros completos del proceso) y que involucra al Revisor que conduce la Revisión en la página Web de la revista.</p>]]>	
 	</section>

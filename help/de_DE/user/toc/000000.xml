@@ -13,7 +13,7 @@
   * $Id$
   -->
 
-<toc id="user/toc/000000" locale="en_US" title="Zeitschriften-Webseite" parent_topic="user/topic/000000">
+<toc id="user/toc/000000" locale="de_DE" title="Zeitschriften-Webseite" parent_topic="user/topic/000000">
 	<topic id="user/topic/000001" title="Home" />
 	<topic id="user/topic/000002" title="Über uns" />
 	<topic id="user/topic/000007" title="Persönliche Startseite" />

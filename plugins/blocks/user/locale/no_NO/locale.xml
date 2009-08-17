@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the no_NO (Norwegian) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="no_NO" full_name="Norwegian">
 	<message key="plugins.block.user.displayName">Brukerblokk</message>
 	<message key="plugins.block.user.description">Denne plugin'en oppretter brukerens kontoverktøy i sidespalten (f.eks. logg inn, logg ut, min profil m.m.).</message>
 	<message key="plugins.block.user.loggedInAs">Du er logget inn som ...</message>

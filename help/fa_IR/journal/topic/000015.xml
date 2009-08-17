@@ -9,8 +9,9 @@
   * Roles - Journal Manager 
   *
   * $Id$
-  --><topic title="مدیرمجله" toc="journal/toc/000003" key="journal.roles.journalManager" locale="fr_IR" id="journal/topic/000015" >
-  <section><![CDATA[<p>
+  -->
+<topic title="مدیرمجله" toc="journal/toc/000003" key="journal.roles.journalManager" locale="fr_IR" id="journal/topic/000015" >
+	<section><![CDATA[<p>
 	مدیر مجله مسئول اداره سیستم انتشار است . این امر مستلزم هیچگونه مهارت فنی خاصی نمی باشد ولی مدیر مجله باید یکسری مدارک اداری را پیدا کرده و فایل ها را روی وب سایت مجله بارگذاری کند .مدیر مجله
 {help_topic key="journal.managementPages.setup" text="Setup"}
 را برای مجله انجام داده و سردبیران ٫ سردبیران بخش ها ٫ ویراستاران ٫ غلط گیران و بررسی کنندگان را ثبت نام و به سمت هایشان منصوب می کند . البته باید توجه داشت که نام و سایر مشخصات کاربران را از طریق بانک های اطلاعاتی دیگر نیز می توان وارد سیستم OJS کرد که این کار از طریق قسمت وارد کردن کاربران که در پاپین

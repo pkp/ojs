@@ -14,7 +14,7 @@
   * $Id$
   -->
 
-<topic id="TranslatorPlugin/topic/000000" locale="en_US" title="Übersetzungs-Plug-In" toc="index/toc/000000" key="TranslatorPlugin.index">
+<topic id="TranslatorPlugin/topic/000000" locale="de_DE" title="Übersetzungs-Plug-In" toc="index/toc/000000" key="TranslatorPlugin.index">
 	<section>
 		<![CDATA[<p>Von OJS 2.2 aufwärts ist ein Übersetzungs-Plug-In verfügbar, das die Überarbeitung unvollständiger Übersetzungen erheblich erleichtert. Sie können auch eine komplett neue Übersetzung starten, obwohl dies ein wenig mehr an zusätzlicher Anfangsarbeit bedarf (siehe unten).</p><p> Besuchen Sie bitte <a href="http://pkp.sfu.ca/ojs-languages">OJS languages</a>, um zu erfahren, welche Übersetzungen derzeit für OJS verfügbar bzw. in Vorbereitung sind. Kontaktieren Sie im Falle bereits geplanter Übersetzungen bitte die dort benannten Übersetzer/innen, um sich über den Stand der Arbeit zu informieren und ggf. Unterstützung bei der Übersetzungsarbeit zu koordinieren.</p><p>Registrieren Sie sich bitte als Zeitschriftenverwaltung , um das Plug-In zu aktivieren. Gehen sie dann zu Ihrer Zeitschriftenverwalter/in-Startseite und dort zu Plug-Ins; Sie finden das Übersetzungs-Plug-In bei den generischen Plug-Ins. Klicken Sie "Einschalten" für das Plug-In an. Um auf das Plug-In zugreifen zu können, müssen Sie wieder zur Plug-In-Seite zurück und dort zum Übersetzungs-Plug-In und können dann den nun verfügbaren 'Übersetzen'-Link anklicken.</p><p>Sie sehen nun eine Liste verfügbarer (bereits installierter) Regionaleinstellungen und können zwischen drei Aktionen wählen: 'Prüfen', 'Bearbeiten' und 'Exportieren'.</p>]]>
 	</section>

@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the el_GR (Greek) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="el_GR" full_name="Greek">
 	<message key="plugins.importexport.METSExport.displayName">METS XML Export Plugin</message>
 	<message key="plugins.importexport.METSExport.description">Εξαγωγή περιοδικών σε METS XML</message>
 	<message key="plugins.importexport.METSExport.settings">Ρυθμίσεις</message>

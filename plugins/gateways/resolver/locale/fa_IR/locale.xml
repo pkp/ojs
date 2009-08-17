@@ -6,12 +6,13 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the fa_IR (Persian) locale.
   *
   * $Id$
-  --><locale full_name="Farsi" name="fa_IR" >
-  <message key="plugins.gateways.resolver.displayName" >پلاگین تحلیل آدرس</message>
-  <message key="plugins.gateways.resolver.description" >این پلاگین بر اساس اطلاعات مرجع نویسی شماره های مجله و مقالات را تحلیل میکند.</message>
-  <message key="plugins.gateways.resolver.errors.errorMessage" >تحلیل آیتم مورد نظر بر مبنای اطلاعات مرجع نویسی داده شده ممکن نیست. لطفا اطمینان حاصل کنید که اطلاعات مرجع نویسی داده شده مفصل بوده و به یک مورد مشخص در این سایت او جی اس اشاره میکند.</message>
-  <message key="plugins.gateways.resolver.exportHoldings" >نگاهداری داده های استخراجی</message>
+  -->
+<locale full_name="Farsi" name="fa_IR" >
+	<message key="plugins.gateways.resolver.displayName" >پلاگین تحلیل آدرس</message>
+	<message key="plugins.gateways.resolver.description" >این پلاگین بر اساس اطلاعات مرجع نویسی شماره های مجله و مقالات را تحلیل میکند.</message>
+	<message key="plugins.gateways.resolver.errors.errorMessage" >تحلیل آیتم مورد نظر بر مبنای اطلاعات مرجع نویسی داده شده ممکن نیست. لطفا اطمینان حاصل کنید که اطلاعات مرجع نویسی داده شده مفصل بوده و به یک مورد مشخص در این سایت او جی اس اشاره میکند.</message>
+	<message key="plugins.gateways.resolver.exportHoldings" >نگاهداری داده های استخراجی</message>
 </locale>

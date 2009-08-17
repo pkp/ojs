@@ -6,10 +6,11 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Reading Tools version: Humanities (en_US)
+  * Reading Tools version: Humanities (fa_IR)
   *
   * $Id$
-  --><version locale="fa_IR" id="فعالیت های بشر دوستانه" >
+  -->
+<version locale="fa_IR" id="Humanities" >
   <version_title>Humanities</version_title>
   <version_description>ابزارهای خواندن به خوانندگان این تحقیق امکان می دهند که با طیف وسیعی از منابع مرتبط ارتباط برقرار کنند . این منابع خود زمینه هایی را برای تفسیر و بسظ و ارزیابی تحقیق فراهم می کنند .</version_description>
   <context>

@@ -14,7 +14,7 @@
   * $Id$
   -->
 
-<topic id="journal/topic/000020" locale="en_US" title="Corrector de Pruebas" toc="journal/toc/000003" key="journal.roles.proofreader">
+<topic id="journal/topic/000020" locale="es_ES" title="Corrector de Pruebas" toc="journal/toc/000003" key="journal.roles.proofreader">
 	<section>
 		<![CDATA[<p>El corrector de pruebas lee detenidamente las galeras en los diferentes formatos en que se publica la revista (al igual que el autor). El corrector de pruebas (y el autor) registran cualquier error tipográfico o de formato para que se puedan arreglar por el editor de diagramación. En algunas revistas, el editor o el editor de la sección también se desempeña como Corrector de Pruebas.</p><p>Puede encontrar más información en{help_topic key="editorial.proofreadersRole" text="here"}.</p>]]>	
 	</section>

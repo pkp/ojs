@@ -9,8 +9,9 @@
   * Site Administration Main 
   *
   * $Id$
-  --><topic title="مدیریت سایت " toc="index/toc/000000" subtoc="site/toc/000000" key="site.index" locale="fa_IR" id="site/topic/000000" >
-  <section><![CDATA[<p>
+  -->
+<topic title="مدیریت سایت " toc="index/toc/000000" subtoc="site/toc/000000" key="site.index" locale="fa_IR" id="site/topic/000000" >
+	<section><![CDATA[<p>
 این سیستم مدیریت وانتشار مجله به گونه ای طراحی شده است که بر روی یک وب سرور محلی نصب واجراء شود. پس از نصب مدیر سایت از این برنامه برای ایجاد هر تعداد مجله استفاده کرده و انتشار مجله را بر روی این وب سرور مدیریت میکند  
 </p>]]></section>
 </topic>

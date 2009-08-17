@@ -14,7 +14,7 @@
   * $Id$
   -->
 
-<topic id="site/topic/000000" locale="en_US" title="Administración del Sitio" toc="index/toc/000000" subtoc="site/toc/000000" key="site.index">
+<topic id="site/topic/000000" locale="es_ES" title="Administración del Sitio" toc="index/toc/000000" subtoc="site/toc/000000" key="site.index">
 	<section>
 		<![CDATA[<p>Este sistema de administración y de publicación está diseñado para ser instalado y administrado en un servidor de Web local. Una vez instalado, el Administrador del sitio puede usarlo para crear cuantas revistas individuales considere necesarias, también puede supervisar la administración de cada sitio de revista que sea creado.</p>]]>	
 	</section>

@@ -12,7 +12,7 @@
   * $Id$
   -->
 
-<toc id="journal/toc/000003" locale="en_US" title="Görevler" parent_topic="journal/topic/000003">
+<toc id="journal/toc/000003" locale="tr_TR" title="Görevler" parent_topic="journal/topic/000003">
 	<topic id="journal/topic/000015" title="Dergi Yöneticisi" />
 	<topic id="journal/topic/000016" title="Editör" />
 	<topic id="journal/topic/000017" title="Bölüm Editörü" />

@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the vi_VN (Tiếng Việt) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="vi_VN" full_name="Tiếng Việt">
 	<message key="plugins.generic.thesisfeed.displayName">Công cụ cập nhật tự động tóm tắt luận văn</message>
 	<message key="plugins.generic.thesisfeed.description">Công cụ này tạo ra các kênh tự động qua web RSS/Atom cho tóm tắt luận văn.</message>
 

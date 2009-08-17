@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
   * locale.xml
@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2008 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the da_DK (Dutch) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="da_DK" full_name="Dutch">
 	<message key="plugins.block.user.displayName">Brugerfunktion</message>
 	<message key="plugins.block.user.description">Dette plugin indsætter funktioner vedrørende brugerregistrering i sidekolonnen (f.eks. login, logout, profil link osv.).</message>
 	<message key="plugins.block.user.loggedInAs">Du er logget in som...</message>

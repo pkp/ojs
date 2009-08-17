@@ -9,8 +9,9 @@
   * Announcements 
   *
   * $Id$
-  --><topic title="اطلاعیه ها " toc="journal/toc/000001" key="journal.managementPages.announcements" locale="fa_IR" id="journal/topic/000034" >
-  <section><![CDATA[<p>
+  -->
+<topic title="اطلاعیه ها " toc="journal/toc/000001" key="journal.managementPages.announcements" locale="fa_IR" id="journal/topic/000034" >
+	<section><![CDATA[<p>
 برنامه OJSبه مدیر مجله امکا ن میدهد اطلاعیه هایی را ایجاد کند که در زمان مقرر برای بازدید کنندگان از وب سایت نمایش داده شوند این اطلاعیه ها در صفحه اطلاعیه ها در وب سایت مجله نمایش داده میشوندوصفحه اطلاعیه ها میتواند در صورت تمایل کاربر بجای صفحه اصلی سایت در ابتدای هر بازدید نمایش داده شود 
 </p><p><i>
 برپایی قسمت اطلاعیه ها

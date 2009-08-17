@@ -6,10 +6,11 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Reading Tools version: Environment (en_US)
+  * Reading Tools version: Environment (fa_IR)
   *
   * $Id$
-  --><version locale="fr_IR" id="Environment" >
+  -->
+<version locale="fr_IR" id="Environment" >
   <version_title>محیط زیست</version_title>
   <version_description>ابزارهای خواندن به خوانندگان این تحقیق کمک می کنند تا با طیف وسیعی ازمنابع مربوطه ارتباط برقرار کنند که می توانند بستری رابرای تفسیر. درک وارزیایی تحقیق فراهم کنند</version_description>
   <context>

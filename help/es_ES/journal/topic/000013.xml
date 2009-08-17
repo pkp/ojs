@@ -14,7 +14,7 @@
   * $Id$
   -->
 
-<topic id="journal/topic/000013" locale="en_US" title="Importar Usuarios" toc="journal/toc/000002" key="journal.users.importUsers">
+<topic id="journal/topic/000013" locale="es_ES" title="Importar Usuarios" toc="journal/toc/000002" key="journal.users.importUsers">
 	<section>
 		<![CDATA[<p>OJS proporciona un servicio simple para importar datos de usuarios desde un formato basado en XML, que puede ser generado fácilmente desde otra base de datos de información de usuarios. Consulte la documentación incluida con OJS, para mayor información sobre formatos XML y XML DTD para datos de usuarios.</p>]]>	
 	</section>

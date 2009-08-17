@@ -14,7 +14,7 @@
   * $Id$
   -->
 
-<topic id="editorial/topic/000003" locale="en_US" title="Resumen de Envíos" toc="editorial/toc/000001" subtoc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary">
+<topic id="editorial/topic/000003" locale="es_ES" title="Resumen de Envíos" toc="editorial/toc/000001" subtoc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary">
 	<section>
 		<![CDATA[<p>El editor utiliza la página del resumen de cada envío para gestionar los archivos del anvío y los metadatos asociados a este o la información de indexar.</p>]]>	
 	</section>

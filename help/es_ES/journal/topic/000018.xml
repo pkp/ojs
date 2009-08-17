@@ -14,7 +14,7 @@
   * $Id$
   -->
 
-<topic id="journal/topic/000018" locale="en_US" title="Editor de Diagramación" toc="journal/toc/000003" key="journal.roles.layoutEditor">
+<topic id="journal/topic/000018" locale="es_ES" title="Editor de Diagramación" toc="journal/toc/000003" key="journal.roles.layoutEditor">
 	<section>
 		<![CDATA[<p>El editor de diagramación tranforma las versiones corregidas de la entrega en galeras de archivos en HTML, PDF, PS, etc., que fueron elegidas por la revista para ser usadas en la publicación electrónica. Este sistema no proporciona software para convertir documentos de procesador de palabras a formatos de galera, así que el editor de diagramación debe tener acceso y ser capaz de utilizar otros paquetes de software para crear galeras(como Adobe Acrobat para PDF, por ejemplo; o Dreamweaver para HTML), que presentan los artículos en la pantalla con una diagramación bien formateada y leíble, de igual manera que las revistas especializadas, y orientadas a este nuevo medio de publicación (consultando con la diagramación utilizada por otras publicaciones de resvistas en línea, como el Highwire Press, por ejemplo, en ciencias o el Project Muse en humanidades).</p><p>Puede encontra más información en {help_topic key="editorial.layoutEditorsRole" text="here"}.</p>]]>	
 	</section>

@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the el_GR (Greek) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="el_GR" full_name="Greek">
 	<message key="plugins.gateways.metsGateway.displayName">METS Gateway Plugin</message>
 	<message key="plugins.gateways.metsGateway.settings">Ρυθμίσεις</message>
 	<message key="plugins.gateways.metsGateway.description"><![CDATA[Το plugin αυτό παρέχει πρωτογενή XML δεδομένα σε METS format για ένα συγκεκριμένο περιοδικό. <strong>ΣΗΜΕΙΩΣΗ: Το plugin αυτό προορίζεται για χρήση από υπηρεσίες Web. Ενεργοποιώντας το plugin αυτό δημιουργείται θέμα ασφάλειας καθώς παρέχεται απεριόριστη πρόσβαση στο περιοδικό σε XML μορφή (το περιεχόμενο είναι σε κωδικοποίηση base64).</strong>]]></message>

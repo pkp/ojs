@@ -6,12 +6,13 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for this citation plugin in en_US.
+  * Localization strings for this citation plugin in fa_IR.
   *
   * $Id$
-  --><locale full_name="Farsi" name="fa_IR" >
-  <message key="plugins.citationFormats.apa.displayName" >پلاگین الگوی مرجع نویسی آ پی آ</message>
-  <message key="plugins.citationFormats.apa.citationFormatName" >آ پی آ</message>
-  <message key="plugins.citationFormats.apa.description" >این پلاگین الگوی مرجع نویسی آ پی آ  را اعمال میکند.</message>
-  <message key="plugins.citationFormats.apa.retrieved" ><![CDATA[در تاریخ {$retrievedDate}, از <a href="{$url}" target="_new">{$url}</a> استخراج شد.]]></message>
+  -->
+<locale full_name="Farsi" name="fa_IR" >
+	<message key="plugins.citationFormats.apa.displayName" >پلاگین الگوی مرجع نویسی آ پی آ</message>
+	<message key="plugins.citationFormats.apa.citationFormatName" >آ پی آ</message>
+	<message key="plugins.citationFormats.apa.description" >این پلاگین الگوی مرجع نویسی آ پی آ  را اعمال میکند.</message>
+	<message key="plugins.citationFormats.apa.retrieved" ><![CDATA[در تاریخ {$retrievedDate}, از <a href="{$url}" target="_new">{$url}</a> استخراج شد.]]></message>
 </locale>

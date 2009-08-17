@@ -12,7 +12,7 @@
   * $Id$
   -->
 
-<topic id="journal/topic/000025" locale="en_US" title="Suscripciones" toc="journal/toc/000001" key="journal.managementPages.subscriptions">
+<topic id="journal/topic/000025" locale="es_ES" title="Suscripciones" toc="journal/toc/000001" key="journal.managementPages.subscriptions">
 	<section>
 		<![CDATA[<p>OJS soporta revistas por suscripción ya que proporciona un componente de administración de suscripciones y su protección de contraseña correspondiente para el contenido en línea de la revista. Las suscripciones pueden administrarse por usuarios individuales, organizaciones o instituciones. Una revista por suscripción también puede ofrecer acceso libre a sus números previso por medio de un formulario de postergación de acceso libre. En la administración del número, el editor autoriza el libre acceso para los lectores del contenido de un número o artículos individuales desde cero a 24 meses después de su publicación inicial y la disponibilidad de esta para los suscriptores.</p></p><p> Los administradores, Editores, Editores de la Sección, Editores de diagramación, Editores de Correción de Textos y Correctores de Pruebas de la revista pueden acceder a ella como si estuvieran suscritos.</p><p><i>Desplegando el módulo de Suscripción</i>. El administrador de la revista debe indicar en la configuración, 4.1 Acceso y Seguridad, propiedades, la revista estará utilizando este sistema para administrar sus suscripciones y que alguien, registrado como administrador de la revista o administardor de suscripciones, fue designado para administrar esta característica.</p>]]>	
 	</section>

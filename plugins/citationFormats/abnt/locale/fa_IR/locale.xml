@@ -6,14 +6,15 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for this citation plugin in en_US.
+  * Localization strings for this citation plugin in fa_IR.
   *
   * $Id$
-  --><locale full_name="Farsi" name="fa_IR" >
-  <message key="plugins.citationFormats.abnt.displayName" >پلاگین الگوی مرجع نویسی آ بی ان تی</message>
-  <message key="plugins.citationFormats.abnt.citationFormatName" >آ بی ان تی</message>
-  <message key="plugins.citationFormats.abnt.description" >این پلاگین الگوی مرجع نویسی آ بی ان تی را اعمال میکند.</message>
-  <message key="plugins.citationFormat.abnt.location" >آمریکای شمالی</message>
+  -->
+<locale full_name="Farsi" name="fa_IR" >
+	<message key="plugins.citationFormats.abnt.displayName" >پلاگین الگوی مرجع نویسی آ بی ان تی</message>
+	<message key="plugins.citationFormats.abnt.citationFormatName" >آ بی ان تی</message>
+	<message key="plugins.citationFormats.abnt.description" >این پلاگین الگوی مرجع نویسی آ بی ان تی را اعمال میکند.</message>
+	<message key="plugins.citationFormat.abnt.location" >آمریکای شمالی</message>
 	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[قابل دسترسی در:
 <a href="{$url}" target="_new">{$url}</a>.
 تاریخ دسترسی:

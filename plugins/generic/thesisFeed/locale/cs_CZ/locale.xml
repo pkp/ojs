@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the cs_CZ (Czech) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="cs_CZ" full_name="Czech">
 	<message key="plugins.generic.thesisfeed.displayName">Plugin - feed abstraktů závěrečných prací</message>
 	<message key="plugins.generic.thesisfeed.description">Tento plugin vytváří RSS/Atom web syndication feedy pro abstrakta závěrečných prací.</message>
 

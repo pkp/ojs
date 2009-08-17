@@ -9,10 +9,11 @@
   * table of contents for Editorial Process - Author's Role
   *
   * $Id$
-  --><toc title="نقش نویسنده" parent_topic="editorial/topic/000009" locale="fa_IR" id="editorial/toc/000009" >
-  <topic title="ساب میشن ها" id="editorial/topic/000032" />
-  <topic title="کارشناسی" id="editorial/topic/000010" />
-  <topic title="سردبیری" id="editorial/topic/000011" />
-  <breadcrumb title="روند دبیری" url="editorial/topic/000000" />
-  <breadcrumb title="نقش نویسنده" url="editorial/topic/000009" />
+  -->
+<toc title="نقش نویسنده" parent_topic="editorial/topic/000009" locale="fa_IR" id="editorial/toc/000009" >
+	<topic title="ساب میشن ها" id="editorial/topic/000032" />
+	<topic title="کارشناسی" id="editorial/topic/000010" />
+	<topic title="سردبیری" id="editorial/topic/000011" />
+	<breadcrumb title="روند دبیری" url="editorial/topic/000000" />
+	<breadcrumb title="نقش نویسنده" url="editorial/topic/000009" />
 </toc>

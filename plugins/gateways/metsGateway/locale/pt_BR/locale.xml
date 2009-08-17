@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the pt_BR (Português (Brasil)) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.gateways.metsGateway.displayName">Plugin de Saída METS</message>
 	<message key="plugins.gateways.metsGateway.settings">Configurações</message>
 	<message key="plugins.gateways.metsGateway.description"><![CDATA[Este plugin oferecer dados em XML puro no formato METS para a revista definida. <strong>NOTA: Seu uso é voltado para Web Services e habilitar este plugin representa um risco por permitir acesso irrestrito à revista através do XML (codificado em base64).</strong>]]></message>

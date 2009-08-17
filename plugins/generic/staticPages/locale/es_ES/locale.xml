@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
   * locale.xml
@@ -9,9 +9,10 @@
   *
   * Localization strings for the es_ES (Spain Spanish) locale.
   *
+  * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.generic.staticPages.displayName">Plugin para Páginas estáticas</message>
 	<message key="plugins.generic.staticPages.description">Este plugin permite el manejo de contenido estático.</message>
 	<message key="plugins.generic.staticPages.pageTitle">Título</message>

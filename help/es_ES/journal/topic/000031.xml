@@ -14,7 +14,7 @@
   * $Id$
   -->
 
-<topic id="journal/topic/000031" locale="en_US" title="Importar/Exportar Datos" toc="journal/toc/000001" key="journal.managementPages.importExport">
+<topic id="journal/topic/000031" locale="es_ES" title="Importar/Exportar Datos" toc="journal/toc/000001" key="journal.managementPages.importExport">
 	<section>
 		<![CDATA[<p>La característica de Importar/Exportar Datos, disponible en la administración de la revista, le permite al administrador de la revista ingresar y extraer datos desde OJS.</p><p> importar/exportar datos se implementó utilizando plugins, cada formato o tipo de datos está provisto por un plugin diferente. Para mayor información, diríjase a la documentación de cada plugin, que puede encontrarse en el directorio de plugin de OJS.</p><p>Con OJS se envian cinco plugins de Importar/Exportar , y están ilustrados a continuación.</p><p>La función importar/exportar también está disponible como una herramienta de comandos; para mayor información vea tools/importExport.php </p>]]>
 	</section>

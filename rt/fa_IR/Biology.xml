@@ -6,10 +6,11 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Reading Tools version: Biology (en_US)
+  * Reading Tools version: Biology (fa_IR)
   *
   * $Id$
-  --><version locale="fa_IR" id="Biology" >
+  -->
+<version locale="fa_IR" id="Biology" >
   <version_title>بیولوژی
 </version_title>
   <version_description>ابزارهای خواندن به خوانندگان این تحقیق کمک می کنند تا با طیف وسیعی ازمنابع مربوطه ارتباط برقرار کنند که می توانند بستری رابرای تفسیر. درک وارزیایی تحقیق فراهم کنند</version_description>

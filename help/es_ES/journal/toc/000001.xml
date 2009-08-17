@@ -14,7 +14,7 @@
   * $Id$
   -->
 
-<toc id="journal/toc/000001" locale="en_US" title="Páginas de Administración" parent_topic="journal/topic/000001">
+<toc id="journal/toc/000001" locale="es_ES" title="Páginas de Administración" parent_topic="journal/topic/000001">
 	<topic id="journal/topic/000034" title="Anuncios" />
 	<topic id="journal/topic/000010" title="Explorador de Archivos" />
 	<topic id="journal/topic/000005" title="Secciones de la Revista" />

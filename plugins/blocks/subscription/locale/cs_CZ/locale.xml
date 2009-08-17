@@ -11,9 +11,10 @@
   *
   * Translated by František Chmelik, frantisek.chmelik 'at' upol.cz
   *
+  * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="cs_CZ" full_name="Czech">
 	<message key="plugins.block.subscription.displayName">Blok předplatného</message>
 	<message key="plugins.block.subscription.description">Tento plugin přidá do postranního panelu blok s informací o předplatném.</message>
 	<message key="plugins.block.subscription.blockTitle">Předplatné</message>

@@ -9,17 +9,18 @@
   * Site Administration - Installation 
   *
   * $Id$
-  --><topic title="نصب " toc="site/toc/000000" key="site.installation" locale="fa_IR" id="site/topic/000001" >
-  <section><![CDATA[<p>
+  -->
+<topic title="نصب " toc="site/toc/000000" key="site.installation" locale="fa_IR" id="site/topic/000001" >
+	<section><![CDATA[<p>
 برنامه OJSیک برنامه اپن سورس است که آن را میتوان به طوررایگان دانلود کرده و بر روی هر کامپیوتر خانگی یا سرور نصب کرد . 
 </p>]]></section>
-  <section title="مالکیت معنوی" ><![CDATA[<p>
+	<section title="مالکیت معنوی" ><![CDATA[<p>
 برنامه OJSبر طبق توافقنامه کاربری زیل قابل استفاده است
 <a href="http://www.gnu.org/copyleft/gpl.html" target="_blank">
 </a>
 یک نسخه از توافقنامه کاربری برای استفاده از این برنامه به صورت نسخه اصلی یا اصلاح شده همراه با فایل نصب برنامه قابل دانلود است . 
 </p>]]></section>
-  <section title="حداقل سیستم مورد نیاز" ><![CDATA[<p>
+	<section title="حداقل سیستم مورد نیاز" ><![CDATA[<p>
 یک سرور که حد اقل دارای مشخصات ذیل باشد برای نصب و اجراء برنامه توصیه میشود
 </p>
 		<ul>
@@ -37,10 +38,10 @@
  گزارش کاربران درباره کیفیت کارکرد برنامه موجب مزید امتنان است 
 </p>
 		]]></section>
-  <section title="دانلود" ><![CDATA[<p>
+	<section title="دانلود" ><![CDATA[<p>
 برنامه OJSرا میتوان از وب سایت پروژه توسعه اطلاعات عمومی به آدرس 
 <a href="http://pkp.sfu.ca/ojs/" target="_blank">دانلود کرد</a>.</p>]]></section>
-  <section title="نصب " ><![CDATA[<p>
+	<section title="نصب " ><![CDATA[<p>
 برنامه OJSدارای یک دستورالعمل برپایه وب است که مدیر سیستم را در تمام مراحل نصب راهنمایی میکند .همچنین نصب آن از طریق تایپ کردن خطوط فرمان نیز انکتن پذیر است 
 </p>
 		<ol>

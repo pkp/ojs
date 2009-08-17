@@ -14,7 +14,7 @@
   * $Id$
   -->
 
-<topic id="journal/topic/000030" locale="en_US" title="Plugins del Sistema" toc="journal/toc/000001" key="journal.managementPages.plugins">
+<topic id="journal/topic/000030" locale="es_ES" title="Plugins del Sistema" toc="journal/toc/000001" key="journal.managementPages.plugins">
 	<section>
 		<![CDATA[<p>La página del plugins del sistema le permite al administrador de la revista ver la lista de plugins instalados en OJS y realizar cualquier tarea administrativa disponible por cada plugin. Para mayor información, diríjase a la documentación incluida con cada plugin, que se encuentra dentro del directorio de plugin de OJS (/path/to/install/plugins).</p>]]>
 	</section>

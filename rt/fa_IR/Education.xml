@@ -6,11 +6,11 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Reading Tools version: Education (en_US)
+  * Reading Tools version: Education (fa_IR)
   *
   * $Id$
   -->
-<version id="آموزش" locale="en_US">
+<version id="Education" locale="fa_IR">
 	<version_title>آموزش</version_title>
 	<version_description>ابزار خواندن می تواند برای خوانندگان این مطالعه در زمینه منابع موجود راهنمایی وسیعی ارائه دهد که این راهنمایی می تواند تفسیر، قرار گرفتن و ارزیابی کردن در زمینه آن مطالعه را فراهم آورد.</version_description>
 	<context>

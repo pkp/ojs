@@ -6,11 +6,11 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Reading Tools version: Music (en_US)
+  * Reading Tools version: Music (fa_IR)
   *
   * $Id$
   -->
-<version id="موسیقی" locale="en_US">
+<version id="Music" locale="fa_IR">
 	<version_title>موسیقی</version_title>
 	<version_description>ابزار خواندن به خوانندگان کمک می کند  تا از دامنه ی وسیعی از منابع موجود که امکان تفسیر ، قرار گرفتن و ارزیابی را فراهم می کند، استفاده کنند</version_description>
 	<context>

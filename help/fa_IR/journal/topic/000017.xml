@@ -9,8 +9,9 @@
   * Roles - Section Editor 
   *
   * $Id$
-  --><topic title="سردبیر بخش" toc="journal/toc/000003" key="journal.roles.sectionEditor" locale="fr_IR" id="journal/topic/000017" >
-  <section><![CDATA[<p>
+  -->
+<topic title="سردبیر بخش" toc="journal/toc/000003" key="journal.roles.sectionEditor" locale="fr_IR" id="journal/topic/000017" >
+	<section><![CDATA[<p>
 مدیر بخش فرآیند ویرایش و بررسی مطالب دریافتی را در قسمت خود بر عهده دارد . در برخی از موارد سردبیر بخش علاوه بر وظایف خاص خودش موظف است تا از طریق
 {help_topic key="editorial.sectionEditorsRole.review" text="Review"} 
 سایر مطالبی را هم که درحال بررسی توسط سایر کاربران (مانند ویراستار ٫ غلط گیر و ...) است از طریق

@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the vi_VN (Tiếng Việt) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="vi_VN" full_name="Tiếng Việt">
 	<message key="plugins.gateways.metsGateway.displayName">Công cụ cổng METS</message>
 	<message key="plugins.gateways.metsGateway.settings">Tham số thiết lập</message>
 	<message key="plugins.gateways.metsGateway.description"><![CDATA[Công cụ này cung cấp dữ liệu XML thô ở định dạng METS dành cho một tạp chí cụ thể. <strong>LƯU Ý: Chức năng này dành để sử dụng cho các Dịch vụ Web (Web Services) và việc kích hoạt công cụ này sẽ kéo theo vấn đề về an ninh vì nó cho phép truy cập không hạn chế vào tạp chí dưới định dạng XML (nội dung được mã kiểu base64).</strong>]]></message>

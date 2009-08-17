@@ -6,12 +6,13 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for this citation plugin in en_US.
+  * Localization strings for this citation plugin in fa_IR.
   *
   * $Id$
-  --><locale full_name="Farsi" name="fa_IR" >
-  <message key="plugins.citationFormats.refWorks.displayName" >پلاگین الگوی مرجع نویسی رف ورک</message>
-  <message key="plugins.citationFormats.refWorks.citationFormatName" >رف ورک</message>
-  <message key="plugins.citationFormats.refWorks.description" >این پلاگین الگوی مرجع نویسی رف ورک را اعمال میکند.</message>
-  <message key="plugins.citationFormats.refWorks.export" >انتقال به رف ورک</message>
+  -->
+<locale full_name="Farsi" name="fa_IR" >
+	<message key="plugins.citationFormats.refWorks.displayName" >پلاگین الگوی مرجع نویسی رف ورک</message>
+	<message key="plugins.citationFormats.refWorks.citationFormatName" >رف ورک</message>
+	<message key="plugins.citationFormats.refWorks.description" >این پلاگین الگوی مرجع نویسی رف ورک را اعمال میکند.</message>
+	<message key="plugins.citationFormats.refWorks.export" >انتقال به رف ورک</message>
 </locale>

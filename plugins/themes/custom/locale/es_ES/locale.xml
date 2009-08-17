@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the es_ES (Español (España)) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.theme.custom.name">Plugin de Aspecto Personalizado</message>
 	<message key="plugins.theme.custom.description">Este plugin hace posible la personalización del aspecto.</message>
 	<message key="plugins.theme.custom.notWritable">NOTA: El fichero de hoja de estilos de este plugin, "{$stylesheetFileLocation}", no es escribible actualmente. Este fichero debe ser escribible antes de que el plugin pueda ser utilizado.</message>

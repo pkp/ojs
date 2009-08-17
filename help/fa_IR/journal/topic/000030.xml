@@ -9,8 +9,9 @@
   * Management Pages - System Plugins
   *
   * $Id$
-  --><topic title="پلاگینهای سیستم" toc="journal/toc/000001" key="journal.managementPages.plugins" locale="fa_IR" id="journal/topic/000030" >
-  <section><![CDATA[<p>
+  -->
+<topic title="پلاگینهای سیستم" toc="journal/toc/000001" key="journal.managementPages.plugins" locale="fa_IR" id="journal/topic/000030" >
+	<section><![CDATA[<p>
 صفحه پلاگینها در برنامه به مدیر مجله امکان میدهد لیستی از پلاگینهای نصب شده بر روی برنامهOJSرا مشاهده کرده و هر نوع عملیات دلخواهی را روی آنها انجام دهد.برای اطلاعات بیشتر به فایلهای متنی همراه هر پلاگین که در شاخه پلاگینهای برنامه OJSبه آدرس
  (/path/to/install/plugins)
 موجود است مراجعه کنید
