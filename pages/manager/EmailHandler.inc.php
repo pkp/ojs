@@ -160,8 +160,9 @@ class EmailHandler extends ManagerHandler {
 				if ($emailTemplate->getCanDisable()) {
 					$emailTemplate->setEnabled(0);
 
-					if ($emailTemplate->getJournalId() == null) {
-						$emailTemplate->setJournalId($journal->getJournalId());
+					if ($emailTemplate->getAssocId() == null) {
+						$emailTemplate->setAssocId($journal->getJournalId());
+						$emailTemplate->setAssocType(ASSOC_TYPE_JOURNAL);
 					}
 
 					if ($emailTemplate->getEmailId() != null) {
