@@ -60,6 +60,7 @@ class RegistrationHandler extends UserHandler {
 	 */
 	function registerUser() {
 		$this->validate();
+		$this->setupTemplate(true);
 		import('user.form.RegistrationForm');
 
 		// FIXME: Need construction by reference or validation always fails on PHP 4.x
@@ -98,7 +99,6 @@ class RegistrationHandler extends UserHandler {
 			else Request::redirect(null, 'login');
 
 		} else {
-			$this->setupTemplate(true);
 			$regForm->display();
 		}
 	}
