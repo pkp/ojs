@@ -48,11 +48,12 @@ class ArticleHandler extends Handler {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 
+		$this->setupTemplate();
 		$this->validate($articleId, $galleyId);
+
 		$journal =& $this->journal;
 		$issue =& $this->issue;
 		$article =& $this->article;
-		$this->setupTemplate();
 
 		$rtDao =& DAORegistry::getDAO('RTDAO');
 		$journalRt = $rtDao->getJournalRTByJournal($journal);

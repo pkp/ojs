@@ -92,7 +92,7 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 		switch ( $op ) {
 			case 'notify':	
 				import('mail.MailTemplate');
-				
+				Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
 				$contactName = $journal->getSetting('contactName');
 				$contactEmail = $journal->getSetting('contactEmail');
 				$mail = new MailTemplate('MANUAL_PAYMENT_NOTIFICATION');
