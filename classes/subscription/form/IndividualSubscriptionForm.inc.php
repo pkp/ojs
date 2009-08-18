@@ -63,13 +63,6 @@ class IndividualSubscriptionForm extends SubscriptionForm {
 		}
 	}
 
-	function display() {
-		$templateMgr =& TemplateManager::getManager();
-		$userDao =& DAORegistry::getDAO('UserDAO');
-		$templateMgr->assign('genderOptions', $userDao->getGenderOptions());
-		return parent::display();
-	}
-
 	/**
 	 * Save individual subscription. 
 	 */

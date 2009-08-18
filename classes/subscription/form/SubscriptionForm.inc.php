@@ -115,6 +115,7 @@ class SubscriptionForm extends Form {
 		$templateMgr->assign('userFax', $user->getFax());
 		$templateMgr->assign('userMailingAddress', $user->getMailingAddress());
 		$templateMgr->assign('userCountry', $user->getCountry());
+		$templateMgr->assign('genderOptions', $userDao->getGenderOptions());	
 
 		$templateMgr->assign_by_ref('validStatus', $this->validStatus);
 		$templateMgr->assign_by_ref('subscriptionTypes', $this->subscriptionTypes);

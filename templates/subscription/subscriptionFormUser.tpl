@@ -35,8 +35,8 @@
 <tr valign="top">
 	<td class="label">{fieldLabel suppressId="true" name="userGender" key="user.gender"}</td>
 	<td class="value">
-		<select name="gender" id="gender" size="1" class="selectMenu">
-			{html_options_translate options=$genderOptions selected=$searchField}
+		<select name="userGender" id="userGender" size="1" class="selectMenu">
+			{html_options_translate options=$genderOptions selected=$userGender}
 		</select>
 	</td>
 </tr>
