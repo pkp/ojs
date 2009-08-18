@@ -21,7 +21,7 @@
 <br/>
 
 <form action="{url op="saveLocaleChanges" path=$locale}" method="post">
-<input type="hidden" name="redirectUrl" value="{url op="translate"}" />
+<input type="hidden" name="redirectUrl" value="{url page="translate"}" />
 
 {if $error}
 	<div id="unwriteableFiles">
