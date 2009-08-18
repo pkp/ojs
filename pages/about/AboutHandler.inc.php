@@ -52,6 +52,11 @@ class AboutHandler extends Handler {
 					break;
 				} 
 			}
+			
+			// Hide membership if the payment method is not configured
+			import('payment.ojs.OJSPaymentManager');
+			$paymentManager =& OJSPaymentManager::getManager();
+			$templateMgr->assign('paymentConfigured', $paymentManager->isConfigured());
 
 			$groupDao =& DAORegistry::getDAO('GroupDAO');
 			$groups =& $groupDao->getGroups(ASSOC_TYPE_JOURNAL, $journal->getJournalId(), GROUP_CONTEXT_PEOPLE);
