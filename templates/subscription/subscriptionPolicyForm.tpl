@@ -216,7 +216,7 @@
 	<input type="checkbox" name="enableDelayedOpenAccess" id="enableDelayedOpenAccess" value="1" onclick="toggleAllowSetDelayedOpenAccessDuration(this.form)" {if $enableDelayedOpenAccess} checked="checked"{/if} />&nbsp;
 	{fieldLabel name="enableDelayedOpenAccess" key="manager.subscriptionPolicies.delayedOpenAccessDescription1"}
 	<select name="delayedOpenAccessDuration" id="delayedOpenAccessDuration" class="selectMenu" {if not $enableDelayedOpenAccess} disabled="disabled"{/if}>{html_options options=$validDuration selected=$delayedOpenAccessDuration}</select>
-	{fieldLabel name=delayedOpenAccessDuration" key="manager.subscriptionPolicies.delayedOpenAccessDescription2"}
+	{fieldLabel name="delayedOpenAccessDuration" key="manager.subscriptionPolicies.delayedOpenAccessDescription2"}
 
 	<p>
 	<input type="checkbox" name="enableOpenAccessNotification" id="enableOpenAccessNotification" value="1"{if !$scheduledTasksEnabled} disabled="disabled" {elseif $enableOpenAccessNotification} checked="checked"{/if} />&nbsp;
