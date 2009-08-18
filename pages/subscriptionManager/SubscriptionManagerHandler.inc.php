@@ -368,7 +368,12 @@ class SubscriptionManagerHandler extends Handler {
 				$userForm->display();
 
 			} else {
-				Request::redirect(null, null, 'selectSubscriber');
+				$source = Request::getUserVar('source');
+				if (isset($source) && !empty($source)) {
+					Request::redirectUrl($source);
+				} else {
+					Request::redirect(null, null, 'selectSubscriber');
+				}
 			}
 
 		} else {

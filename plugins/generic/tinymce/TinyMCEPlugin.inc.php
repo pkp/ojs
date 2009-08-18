@@ -158,6 +158,8 @@ class TinyMCEPlugin extends GenericPlugin {
 				break;
 			case 'user/profile':
 			case 'user/register':
+			case 'subscriptionManager/createUser':
+			case 'subscriptionManager/updateUser':
 			case 'manager/createUser':
 			case 'manager/updateUser':
 				$fields[] = 'mailingAddress';
