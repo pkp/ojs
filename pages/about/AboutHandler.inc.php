@@ -364,8 +364,8 @@ class AboutHandler extends Handler {
 		$subscriptionFax =& $journalSettingsDao->getSetting($journalId, 'subscriptionFax');
 		$subscriptionMailingAddress =& $journalSettingsDao->getSetting($journalId, 'subscriptionMailingAddress');
 		$subscriptionAdditionalInformation =& $journal->getLocalizedSetting('subscriptionAdditionalInformation');
-		$individualSubscriptionTypes =& $subscriptionTypeDao->getSubscriptionTypesByInstitutional($journalId, false);
-		$institutionalSubscriptionTypes =& $subscriptionTypeDao->getSubscriptionTypesByInstitutional($journalId, true);
+		$individualSubscriptionTypes =& $subscriptionTypeDao->getSubscriptionTypesByInstitutional($journalId, false, false);
+		$institutionalSubscriptionTypes =& $subscriptionTypeDao->getSubscriptionTypesByInstitutional($journalId, true, false);
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('subscriptionName', $subscriptionName);

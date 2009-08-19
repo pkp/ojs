@@ -378,18 +378,28 @@ class SubscriptionTypeDAO extends DAO {
 	 * Retrieve subscription types matching a particular journal ID and institutional flag.
 	 * @param $journalId int
 	 * @param $institutional bool
+	 * @param $disablePublicDisplay bool
 	 * @return object DAOResultFactory containing matching SubscriptionTypes
 	 */
-	function &getSubscriptionTypesByInstitutional($journalId, $institutional = false, $rangeInfo = null) {
+	function &getSubscriptionTypesByInstitutional($journalId, $institutional = false, $disablePublicDisplay = null, $rangeInfo = null) {
 		if ($institutional) $institutional = 1; else $institutional = 0;
+
+		if ($disablePublicDisplay === null) {
+			$disablePublicDisplaySql = '';
+		} elseif ($disablePublicDisplay) {
+			$disablePublicDisplaySql = 'AND disable_public_display = 1';
+		} else {
+			$disablePublicDisplaySql = 'AND disable_public_display = 0';
+		}
 
 		$result =& $this->retrieveRange(
 			'SELECT *
 			FROM
 			subscription_types
 			WHERE journal_id = ?
-			AND institutional = ?
-			ORDER BY seq',
+			AND institutional = ? '
+			. $disablePublicDisplaySql .
+			' ORDER BY seq',
 			array(
 				$journalId,
 				$institutional

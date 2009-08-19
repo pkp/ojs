@@ -29,7 +29,7 @@
 	<td width="20%" class="label">{fieldLabel name="typeId" required="true" key="user.subscriptions.form.typeId"}</td>
 	<td width="80%" class="value"><select name="typeId" id="typeId" class="selectMenu">
 		{iterate from=subscriptionTypes item=subscriptionType}
-		<option value="{$subscriptionType->getTypeId()}"{if $typeId == $subscriptionType->getTypeId()} selected="selected"{/if}>{$subscriptionType->getSummaryString()|escape}</option>
+			<option value="{$subscriptionType->getTypeId()}"{if $typeId == $subscriptionType->getTypeId()} selected="selected"{/if}>{$subscriptionType->getSummaryString()|escape}</option>
 		{/iterate}
 	</select></td>
 </tr>

@@ -56,7 +56,6 @@
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
 {iterate from=individualSubscriptionTypes item=subscriptionType}
-	{if !$subscriptionType->getDisablePublicDisplay()}
 		<tr valign="top">
 			<td>{$subscriptionType->getSubscriptionTypeName()|escape}<br />{$subscriptionType->getSubscriptionTypeDescription()|nl2br}</td>
 			<td>{translate key=$subscriptionType->getFormatString()}</td>
@@ -64,7 +63,6 @@
 			<td>{$subscriptionType->getCost()|string_format:"%.2f"}&nbsp;({$subscriptionType->getCurrencyStringShort()|escape})</td>
 		</tr>
 		<tr><td colspan="4" class="{if $individualSubscriptionTypes->eof()}end{/if}separator">&nbsp;</td></tr>
-	{/if}
 {/iterate}
 </table>
 </div>
@@ -88,7 +86,6 @@
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
 {iterate from=institutionalSubscriptionTypes item=subscriptionType}
-	{if !$subscriptionType->getDisablePublicDisplay()}
 		<tr valign="top">
 			<td>{$subscriptionType->getSubscriptionTypeName()|escape}<br />{$subscriptionType->getSubscriptionTypeDescription()|nl2br}</td>
 			<td>{translate key=$subscriptionType->getFormatString()}</td>
@@ -96,7 +93,6 @@
 			<td>{$subscriptionType->getCost()|string_format:"%.2f"}&nbsp;({$subscriptionType->getCurrencyStringShort()|escape})</td>
 		</tr>
 		<tr><td colspan="4" class="{if $institutionalSubscriptionTypes->eof()}end{/if}separator">&nbsp;</td></tr>
-	{/if}
 {/iterate}
 </table>
 {/if}
