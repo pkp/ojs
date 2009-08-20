@@ -130,7 +130,7 @@ class ArticleReportPlugin extends ReportPlugin {
 					$columns[$index] = html_entity_decode(strip_tags($row[$index]));
 				} elseif (strstr($index, 'biography') !== false) {
 					// "Convert" HTML to text for export
-					$columns[$index] = html_entity_decode(strip_tags($authors[$index]));
+					$columns[$index] = isset($authors[$index])?html_entity_decode(strip_tags($authors[$index])):'';
 				} else {
 					if (isset($row[$index])) {
 						$columns[$index] = $row[$index];
