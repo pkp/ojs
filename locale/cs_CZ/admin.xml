@@ -46,18 +46,7 @@
 	<message key="admin.journals.form.pathExists">Zvolená cesta již je využívána jiným časopisem.</message>
 	<message key="admin.journals.enableJournalInstructions">Povolte pro tento časopis, aby byl na této stránce veřejně zobrazen</message>
 	<message key="admin.journals.journalDescription">Popis časopisu</message>
-	<message key="admin.journals.importOJS1">Import z OJS 1</message>
-	<message key="admin.journals.importOJS1.success">Import časopisu byl úspěšně dokončen.</message>
-	<message key="admin.journals.importOJS1.editMigratedJournal">Upravit přestěhovaný časopis</message>
-	<message key="admin.journals.importOJS1.redirect.desc">Pro přesměrování URL adres OJS 1 na URL adresy OJS 2 vytvořte následující PHP soubory s níže uvedeným obsahem. Odpovídající soubory pak mohou být umístěny do systému souborů OJS 1 nebo, pokud je instalován pouze jeden časopis, do systému souborů OJS 2.</message>
-	<message key="admin.journals.importOJS1.redirect.ojs1root">Umístit do staré cesty systému souborů OJS 1 (např.: /var/www/ojs1).</message>
-	<message key="admin.journals.importOJS1.redirect.ojs1orojs2root">Umístit do staré cesty systému souborů OJS 1 (např.: /var/www/ojs1) nebo, pokud je instalován pouze jeden časopis, do nové cesty systému souborů OJS 2 (např.: /var/www/ojs2).</message>
-	<message key="admin.journals.importOJS1.conflict.desc">Některé uživatelské účty obsahují zorporné informace. OJS 1.x umožňuje více uživatelským účtům sdílet stejnou e-mailovou adresu, zatímco OJS 2.x toto neumožňuje. V níže uvedeném seznamu k sobě měl druhý účet přiřazen dočasný e-mailový účet. Tyto účty by měly být ručně opraveny buďto přiřazením jiného e-mailového účtu nebo sloučením účtů.</message>
-	<message key="admin.journals.importOJS1.conflict">{$firstUsername} ({$firstName}) a {$secondUsername} ({$secondName})</message>
-	<message key="admin.journals.importOJS1Instructions">Detailní informace o přestěhování dat z OJS 1 do OJS 2 si nastudujte v dokumentu UPGRADE distribuovaném spolu s OJS.</message>
 	<message key="admin.journal.pathImportInstructions">Existující cesta časopisu nebo cesta, která má být vytvořena (např. "ojs").</message>
-	<message key="admin.journal.importPath">Cesta k OJS 1</message>
-	<message key="admin.journal.importPathInstructions">Kompletní cesta systémem souborů k instalaci OJS 1 (např. "/var/www/ojs").</message>
 	<message key="admin.journals.importSubscriptions">Importovat předpaltné</message>
 	<message key="admin.journals.transcode">Překódovat metadata článků z ISO8859-1</message>
 	<message key="admin.journals.redirect">Generovat kód pro přesměrování adres URL OJS 1 na adresy URL OJS 2</message>
@@ -70,4 +59,5 @@
 	<message key="admin.mergeUsers.allUsers">Všichni zaregistrovaní uživatelé</message>
 	<message key="admin.mergeUsers.confirm">Jste si jistý, že chcete sloučit účet s uživatelským jménem "{$oldUsername}" do účtu s uživatelským jménem "{$newUsername}"? Účet s uživatelským jménem "{$oldUsername}" poté přestane existovat. Tato akce je nevratná.</message>
 	<message key="admin.mergerUsers.noneEnrolled">Žádní zapsaní uživatelé.</message>
+	<message key="admin.locale.maybeIncomplete">Označené soubory lokalizace mohou být nekompletní.</message>
 </locale>

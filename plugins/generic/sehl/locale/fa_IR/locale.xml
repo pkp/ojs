@@ -13,4 +13,6 @@
 <locale full_name="Farsi" name="fa_IR" >
 	<message key="plugins.generic.sehl.name" >پلاگین SEHL</message>
 	<message key="plugins.generic.sehl.description" >این پلاگین موتور پررنگ سازی متن جستجو (SEHL) را فعال میکند. بکمک آن وقتی که یک موتور جستجو یک فایل HTML را می یابد در داخل آن کلیدواژه های مورد جستجو را پررنگ می سازد.</message>
+	<message key="plugins.generic.sehl.enabled">پلاگین سهل فعال شده است</message>
+	<message key="plugins.generic.sehl.disabled">پلاگین سهل غیر فعال شده است</message>
 </locale>

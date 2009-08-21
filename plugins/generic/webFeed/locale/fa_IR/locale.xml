@@ -23,4 +23,6 @@
 	<message key="plugins.generic.webfeed.atom.altText">لوگوی اتم</message>
 	<message key="plugins.generic.webfeed.rss1.altText">لوگوی RSS1</message>
 	<message key="plugins.generic.webfeed.rss2.altText">لوگوی RSS2</message>
+	<message key="plugins.generic.webfeed.enabled">پلاگین فید وب فعال شده است</message>
+	<message key="plugins.generic.webfeed.disabled">پلاگین فید وب غیر فعال شده است</message>
 </locale>

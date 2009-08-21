@@ -29,7 +29,6 @@
 	<message key="editor.submissionReview.confirmDecision">آیا از تصمیم گرفته شده مطمئن هستید؟</message>
 	<message key="editor.submissionReview.emailWillArchive">با توجه به اینکه بر روی لینک &quot;بایگانی کردن&quot; کلیک کرده اید چنانچه در صفحه بعد (ارسال ایمیل) دکمه ارسال یا انجام بدون ارسال را بزنید در هر حال مقاله بایگانی خواهد شد' مگر اینکه دکمه کنسل را بزنید.</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">قبل از اینکه بتوانید این ساب میشن را برای ویراستاری ارسال کنید میبایست مطمئن شوید که آخرین نسخه اصلاح شده موجود است و نویسندگان از تصمیم سردبیر با استفاده از لینک &quot;خبر به نویسنده&quot; مطلع شده اند.</message>
-	<message key="editor.submissionReview.notes">منظور از مهلت تعداد هفته های باقیمانده تا تاریخ مهلت کارشناسی است. اگر منفی بود منظورتعداد هفته های سپری شده از مهلت کارشناسی است. از زمانی که کارشناس قبول کند که کارشناسی را انجام دهد شروع میشود.</message>
 	<message key="editor.notifyUsers">اطلاع به کاربران</message>
 	<message key="editor.notifyUsers.inProgress">خبر به نویسنده ...</message>
 	<message key="editor.usersNotified">کاربران باخبر شدند</message>
@@ -115,7 +114,6 @@
 	<message key="editor.article.enterReviewerRecommendation">وارد کردن توصیه کارشناسی</message>
 	<message key="editor.article.recommendation">توصیه</message>
 	<message key="editor.article.selectReviewer">انتخاب کارشناس</message>
-	<message key="editor.article.selectReviewerNotes"><![CDATA[نامها لینک هائی هستند برای پرونده کارشناس.<br/>امتیاز برمبنای 5 است که امتیاز 5 عالی میباشد.<br/> منظور از هفته میانگبن مدت زمان کامل کردن کارشناسی است.<br/>منضور از آخرین ، تاریخ آخرین کارشناسی است که کارشناس مورد نظر تقبل کرده است انجام دهد.<br/> منضور از جاری تعداد کارشناسی هائیست که در حال انجام آن است ویا از وی دعوت شده است.]]></message>
 	<message key="editor.article.replaceReviewer">جایگزینی کارشناس</message>
 	<message key="editor.article.editorToEnter">در این محل توصیه و نظرات  کارشناسی خود را وارد کنید.</message>
 	<message key="editor.article.uploadReviewForReviewer">آپلود کارشناسی</message>
@@ -199,4 +197,10 @@
 	<message key="editor.article.removeCoverPage">حذف تصویر جلد</message>
 	<message key="editor.article.remove">حذف</message>
 	<message key="editor.article.confirmChangeReviewForm">تغییر فرم کارشناسی موجب از بین رفتن پاسخ های وارد شده میشود</message>
+	<message key="editor.issues.enableOpenAccessDate">فعال سازی دستیابی تاخیری</message>
+	<message key="editor.issues.resetIssueOrder"><![CDATA[در این مجله ترتیب بخشها قابل تغییر در هر شماره مجله میباشد.
+<a href="{$url}" class="action">برگرداندن به حالت اولیه</a>]]></message>
+	<message key="editor.issues.unpublishIssue">لغو چاپ شماره مجله</message>
+	<message key="editor.issues.confirmUnpublish">آیا مطمئن هستید که میخواهید چاپ شماره مجله را لغو کنید؟</message>
+	<message key="editor.article.archiveSubmission">رد وبایگانی کردن ساب میشن</message>
 </locale>

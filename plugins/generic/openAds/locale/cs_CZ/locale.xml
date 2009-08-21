@@ -30,4 +30,6 @@
 	<message key="plugins.generic.openads.orientation.left">Doleva</message>
 	<message key="plugins.generic.openads.orientation.centre">Na střed</message>
 	<message key="plugins.generic.openads.orientation.right">Doprava</message>
+	<message key="plugins.generic.openads.enabled">Byl povolen plugin OpenAds.</message>
+	<message key="plugins.generic.openads.disabled">Byl zakázán plugin OpenAds.</message>
 </locale>

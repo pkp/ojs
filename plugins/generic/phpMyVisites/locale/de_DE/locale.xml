@@ -29,4 +29,6 @@
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdInstructions">Wählen Sie in phpMyVisites die Administration->Modify-Webseite. Die Profil-ID wird unmittelbar neben Ihrem Profilnamen angezeigt.</message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdRequired">Bitte geben Sie die Profil-ID ein.</message>
 
+	<message key="plugins.generic.phpmv.enabled">Das phpMyVisites-Plug-In wurde aktiviert.</message>
+	<message key="plugins.generic.phpmv.disabled">Das phpMyVisites-Plug-In wurde ausgeschaltet.</message>
 </locale>

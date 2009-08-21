@@ -13,4 +13,6 @@
 <locale name="fa_IR" full_name="Persian">
 	<message key="plugins.generic.coins.displayName">پلاگین COinS</message>
 	<message key="plugins.generic.coins.description">پلاگین COinS   توصیف کننده یک OpenURL به صفحات مقاله در چکیده و اج تی ام ال اضافه میکند که مثلا میتواند برای اساخراج در ابزارهای مرجع نویسی بکار رود</message>
+	<message key="plugins.generic.coins.enabled">پلاگین COinS فعال شده است</message>
+	<message key="plugins.generic.coins.disabled">پلاگین COinS غیر فعال شده است</message>
 </locale>

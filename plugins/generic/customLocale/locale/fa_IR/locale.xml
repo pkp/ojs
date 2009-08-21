@@ -30,4 +30,6 @@
 	<message key="plugins.generic.customLocale.file.edit">ویرایش {$filename}</message>
 	<message key="plugins.generic.customLocale.file.reference">متن پیشفرض</message>
 	<message key="plugins.generic.customLocale.file.custom">متن دلخواه</message>
+	<message key="plugins.generic.customLocale.enabled">پلاگین زبان بومی شده فعال شده است</message>
+	<message key="plugins.generic.customLocale.disabled">پلاگین زبان بومی شده غیر فعال شده است</message>
 </locale>

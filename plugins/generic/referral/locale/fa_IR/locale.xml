@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fa_IR locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="fa_IR" full_name="Persian">
+	<message key="plugins.generic.referral.name">پلاگین ارجاع</message>
+	<message key="plugins.generic.referral.description">پلاگین ارجاع برای ردگیری ارجاعات به مقالات میباشد. وقتی که یک خواننده از طریق لینکی از خارج به یک مقاله میرسند، این پلاگین نویسنده را قادر میسازد تا لیستی قابل انتشاری از این ارجاعات را داشته باشد و مرتبا آنها را بروز رسانی کند.</message>
+	<message key="plugins.generic.referral.enabled">پلاگین ارجاع فعال شده است.</message>
+	<message key="plugins.generic.referral.disabled">پلاگین ارجاع غیر فعال است.</message>
+	
+	<message key="plugins.generic.referral.editReferral">ویرایش ارجاع</message>
+	<message key="plugins.generic.referral.createReferral">ایجاد ارجاع</message>
+	<message key="plugins.generic.referral.referrals">ارجاعات</message>
+	<message key="plugins.generic.referral.count">کذرها</message>
+	<message key="plugins.generic.referral.dateAdded">تاریخ ایجاد</message>
+	<message key="plugins.generic.referral.all">همه</message>
+	<message key="plugins.generic.referral.all.empty">در حال حاضر ارجاعی نیست.</message>
+	<message key="plugins.generic.referral.status.new">جدید</message>
+	<message key="plugins.generic.referral.status.new.empty">ارجاع جدیدی وجود ندارد.</message>
+	<message key="plugins.generic.referral.status.accept">انتشار یافته</message>
+	<message key="plugins.generic.referral.status.accept.empty">در حال حاضر ارجاع منتشر شده ای نیست.</message>
+	<message key="plugins.generic.referral.status.decline">چشم پوشی شده</message>
+	<message key="plugins.generic.referral.status.decline.empty">در حال حاضر ارجاع چشم پوشی شده ای نیست.</message>
+	<message key="plugins.generic.referral.confirmDelete">آیا مطمئن هستید که میخواهید این ارجاع را حذف کنید؟</message>
+	<message key="plugins.generic.referral.nameRequired">نام ارجاع لازم است.</message>
+	<message key="plugins.generic.referral.urlRequired">آدرس ارجاع لازم است.</message>
+</locale>

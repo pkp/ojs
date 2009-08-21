@@ -22,4 +22,6 @@
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteId" >شماره پروفایل سایت</message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdInstructions" >در داخل phpMyVisites بر روی اداره -> تغییر سایت کلیک کنید. شماره پروفایل سایت را در کنار نام پروفایل سایت خود می بینید.</message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdRequired" >لطفا شماره پروفایل سایت را وارد کنید.</message>
+	<message key="plugins.generic.phpmv.enabled">پلاگین پی اج پی مای یزیتور فعال شده است</message>
+	<message key="plugins.generic.phpmv.disabled">پلاگین پی اج پی مای یزیتور غیر فعال شده است</message>
 </locale>

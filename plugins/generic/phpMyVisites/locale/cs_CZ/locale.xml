@@ -29,4 +29,6 @@
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdInstructions"><![CDATA[V rámci phpMyVisites klikněte na Administration->Modify site. Číslo profilu stránek je zobrazeno vedle jména vašeho profilu stránek.]]></message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdRequired">Prosím vložte číslo profilu stránek.</message>
 
+	<message key="plugins.generic.phpmv.enabled">Byl povolen plugin phpMyVisites.</message>
+	<message key="plugins.generic.phpmv.disabled">Byl zakázán plugin phpMyVisites.</message>
 </locale>

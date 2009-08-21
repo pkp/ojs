@@ -167,7 +167,6 @@
 	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[این متن کپی رایت در قسمت در باره مجله  و در هر متاداده چاپ شده ظاهر می شود . نویسندگان ممکن است کپی رایت را برای خود نگه داشته و به مجله حق اول بودن در چاپ مقاله را بدهند. همچنین نویسنده ممکن است تمام حق کپی رایت را به مجله بدهند وبدین وسیله فقط حق استفاده غیر تجاری از مقاله مانند حق قرار دادن آن بر روی یک بایگانی عمومی برای آنها میماند. برای اطلاع بیشتر به <a href="http://www.creativecommons.org" target="_blank">Creative Commons</a> مراجعه کنید.]]></message>
 	<message key="manager.setup.authorGuidelines">راهنمای نویسندگان</message>
 	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[در اینجا برای نویشنگان توضیح دهید که استانداردهای رفرانس نویسی و فرمات مجله شما چگونه است مثلا <i>راهنای انتشاراتی انجمن روانشناسی آمریکا</i>، چاپ پنجم، 2001. آوردن مثالهائی برای انواع رایج رفرانس نویسی مجللات و کتابها نیز مفید است. همچنین انواع قابل قبول فایل های الحاقی که نویسنگان میتوانند آپلود کنند و همچنین نوع فایل اصلی ساب میشن میبایست ذکر شود.]]></message>
-	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[مراحل: نوبت ساب میشن &gt; کارشناسی ساب میشن &gt; ویرایش ساب میشن &gt; فهرست مطالب.<br /><br />یک مدل برای اداره این امورات دبیری مجله انتخاب کنید. برای انتصاب یک دبیر اداره کننده ویک دبیر قسمت در قسمت اداره مجله به قسمت دبیران مراجعه کنید.]]></message>
 	<message key="manager.setup.competingInterests">تضاد منافع</message>
 	<message key="manager.setup.competingInterests.guidelines">دستورالعمل اعلام تضاد منافع</message>
 	<message key="manager.setup.competingInterests.requireAuthors">لازم است که نویسنده ارسال کننده مقاله بیانیه تضاد منافع در رابطه با مقاله خود را اعلام کند.</message>
@@ -230,7 +229,7 @@
 	<message key="manager.setup.focusAndScopeOfJournal">فوکوس و حیطه مجله</message>
 	<message key="manager.setup.focusScope">فوکوس و حیطه</message>
 	<message key="manager.setup.focusScopeDescription"><![CDATA[<b>مثال داده HTML</b>]]></message>
-	<message key="manager.setup.forAuthorsToIndexTheirWork">نویسندگان میتوانند در این قسمت فعالیت های پژوهشی خود را اندکس کنند</message>
+	<message key="manager.setup.forAuthorsToIndexTheirWork">برای اندکس کارهای نویسنده</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJS بر مبنای  پروتوکل <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> برای استخراج متاداه عمل می کند. این پروتوکل اتاندارد در حال تدوین برای دسترسی کاملا اندکس شده به منابع پژوهشی الکترونیکی در یک مقیاس جهانی میباشد. برای وارد کردن این اطلاعات فرم مشابهی در دسترس نویسندگان قرار میگیرد تا متاداده ساب میشن خود را وارد کنند. مدیر مجله می تواند قسمت هائی که برای اندکس کردن می خواهد انتخاب کند و مثالهائی نیز برای نویسنگان فراهم نماید تا به آنها در جهت اندکس کردن فعالیت های خود کمک کند.]]></message>
 	<message key="manager.setup.form.contactEmailRequired">ایمیل تماس اصلی لازم است</message>
 	<message key="manager.setup.form.contactNameRequired">آدرس تماس اصلی لازم است</message>
@@ -347,7 +346,7 @@
 	<message key="manager.setup.publicationFormat">فرمات</message>
 	<message key="manager.setup.publicationFormatDescription">فرمات پیش فرض شماره گذاری مجله و دوره های آن. البته برای شماره های خاصی از مجله به دلخواه می توان این فرمات را نادیده کرفت</message>
 	<message key="manager.setup.publicationFormatNumber">تعداد</message>
-	<message key="manager.setup.publicationFormatTitle">عنوان شماره مجله دلخواه</message>
+	<message key="manager.setup.publicationFormatTitle">عنوان</message>
 	<message key="manager.setup.publicationFormatVolume">دوره و سال</message>
 	<message key="manager.setup.publicationFormatYear">سال</message>
 	<message key="manager.setup.publicationSchedule">ترتیب چاپ</message>
@@ -359,7 +358,6 @@
 	<message key="manager.setup.referenceLinking">لینک به مراجع</message>
 	<message key="manager.setup.refLinkInstructions.description">دستورالعمل لینک مراجع برای صفحه آرا</message>
 	<message key="manager.setup.registerJournalForIndexing">ثبت نام مجله برای اندکس شدن و استخراج شدن متاداده</message>
-	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[چنانچه مایل باشید محتوای این مجله در یک سیستم گسترده از بانکهای اطلاعاتی پژوهشی اندکس شود ، آدرس مجله خود را در <a href="http://pkp.sfu.ca/harvester/" target="_blank">سیستم استخراج کننده </a>متاداده پروژه عمومی دانش <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">ثبت کنید.</a>  این سیستم ، متاداده هر کدام از مقالات این مجله را جمع آوری میکند و امکان جستجوی دقیق و جامع را در سایتهای پژوهشی که تابع <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">پروتکل استخراج متاداده پیشگام بایگانی آزاد</a> هستند را فراهم میکند.<br />لازم به ذکر است چنانچه مدیر سایت نسبت به ثبت کل سایت در استخراج کننده pkp اقدام کرده است نیازی برای انجام مجدد آن از سوی شما نیست. <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">اینجا را کلیک کرده</a> و در قسمت <b>Site URL</b><br /> <span class="highlight">{$siteUrl}</span><br /> و در قسمت <b>Base URL for OAI Archive</b><br /> <span class="highlight">{$oaiUrl}</span><br /> را وارد کنید .توجه داشته باشید که سیستم پیشگام بایگانی آزاد OAI را میتوان از طریق نگارش فایل تنظیمات سیستم OJS از کار انداخت. در نسخه های آینده OJS امکان فعال یا غیر فعال ساختن این سیستم برای هرکدام از مجلات بطور مستقل وجود خواهد داشت.]]></message>
 	<message key="manager.setup.restrictArticleAccess">برای دیدن متن کامل مقالات باید ثبت نام کرد</message>
 	<message key="manager.setup.restrictSiteAccess">برای دیدن سایت باید ثبت نام کرد</message>
 	<message key="manager.setup.reviewerDatabaseLink">بانک اطلاعاتی کارشناسان</message>
@@ -389,7 +387,6 @@
 	<message key="manager.setup.reviewProcess">روند کارشناسی</message>
 	<message key="manager.setup.reviewProcessDescription"><![CDATA[OJS از دو مدل برای اداره کارشناسی تبعیت میکند: روش استاندارد کارشناسی که مورد توصیه است موجب میشود که کارشناس مراحل مختلف را به تربتیب انجام دهد و بدین ترتیب تاریخچه کاملی از کارشناسی در سیستم ذخیره می شود. همچنین امکان فعال سازی ارساب اتوماتیک ایمیل یادآور را فراهم میسازد. بعلاوه گزینه های استاندارد کارشناسی مانند قبول ، رد و غیره را در معرض انتخاب کارشناس میگذارد.<br /><br />یکی از گزینه های زیر را انتخاب کنید:]]></message>
 	<message key="manager.setup.reviewProcessEmail">روند کارشناسی بر مبنای ایمیل</message>
-	<message key="manager.setup.reviewProcessEmailDescription">دبیر تقاضای کارشناسی را به کارشناس فرستاده و همچنین فایل ساب میشن را نیز به ایمیل ضمیمه میکند. کارشناس موافقت یا مخالفت خود برای انجام کارشناسی را با ایمیل اعلام میکند. همچنین حاصل کارشناسی را با ایمیل ارسال میکند. دبیر خودش اقدام به وارد کردن جواب کارشناس به سایت میکند.</message>
 	<message key="manager.setup.reviewProcessStandard">روند کارشناسی استاندارد</message>
 	<message key="manager.setup.reviewProcessStandardDescription">در این روش دبیر عنوان و چکیده مقاله را به کارشناس انتخاب شده ایمیل میکنند و از وی جهت انجام کارشناسی دعوت به عمل می آورند. از کارشناس میخواهند که وارد سایت مجله شده و کارشناسی را کامل کند. کارشناس میبایست وارد سایت مجله شود و در آنجا موافقت خود را برای انجام کارشناسی اعلام کند وسپس فایل مقاله را دانلود کرده و پس از تکمیل کارشناسی نتیجه را وارد سایت کرده و یک گزینه کارشناسی را انتخاب کند و در نهایت تمام کار خود را ساب میت کند.</message>
 	<message key="manager.setup.searchEngineIndexing">اندکس در موتور جستجو</message>
@@ -407,7 +404,6 @@
 	<message key="manager.setup.sponsorsDescription">نام این سازمانها مانند انجمنهای علمی ، گروههای آموزشی و غیره در صفحه در باره مجله خواهد آمد</message>
 	<message key="manager.setup.stepsToJournalSite">مراحل پنج گانه نصب مجله</message>
 	<message key="manager.setup.subjectClassification">طبقه بندی موضوعی</message>
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[مجله از یک سیستم طبقه بندی موجود بر روی وب استفاده میکند.<br />عنوان سیستم طبقه بندی]]></message>
 	<message key="manager.setup.subjectClassificationExamples">مانند طبقه بندی موضوعی ریاضیات; طبقه بندی کتابخانه کنگره</message>
 	<message key="manager.setup.subjectExamples">مانند: فتوسنتز; سیاه چاله; مسئله نقشه چهاررنگ; تئوری بایز</message>
 	<message key="manager.setup.subjectKeywordTopic">کلید واژه ها</message>
@@ -546,10 +542,8 @@
 	<message key="manager.subscriptions.ipRange">محدوده IP</message>
 	<message key="manager.subscriptions.membership">عضویت</message>
 	<message key="manager.subscriptions.noneCreated">هیچ اشتراکی ایجاد نشده است</message>
-	<message key="manager.subscriptions.select">اعطای نقش به عنوان مشترک</message>
-	<message key="manager.subscriptions.selectSubscriber">انتخاب مشترک</message>
+	<message key="manager.subscriptions.select">انتخاب</message>
 	<message key="manager.subscriptions.selectSubscriber.desc">مجوزهای دستیابی اشتراک بصورت خودکار در دسترس مدیر مجله ، سردبیر و دبیران ، ویراستاران ،  صفحه آرا و چک کننده نهائی قرار میکیرد.</message>
-	<message key="manager.subscriptions.subscribe">اعطای نقش</message>
 	<message key="manager.subscriptions.subscriptionCreatedSuccessfully">اشتراک با موفقیت ایجاد شد.</message>
 	<message key="manager.subscriptions.subscriptionType">نوع اشتراک</message>
 	<message key="manager.subscriptions.user">کاربر</message>
@@ -558,14 +552,9 @@
 	<message key="manager.subscriptionTypes.cost">قیمت</message>
 	<message key="manager.subscriptionTypes.create">ایجاد نوع جدید اشتراک</message>
 	<message key="manager.subscriptionTypes.createTitle">ایجاد</message>
-	<message key="manager.subscriptionTypes.currency">نوع ارز</message>
 	<message key="manager.subscriptionTypes.duration">مدت</message>
 	<message key="manager.subscriptionTypes.edit">ویرایش نوع اشتراک</message>
 	<message key="manager.subscriptionTypes.editTitle">ویرایش</message>
-	<message key="manager.subscriptionTypes.format">فرمات</message>
-	<message key="manager.subscriptionTypes.format.online">آن لاین</message>
-	<message key="manager.subscriptionTypes.format.print">پرینت</message>
-	<message key="manager.subscriptionTypes.format.printOnline">پرینت و آن لاین</message>
 	<message key="manager.subscriptionTypes.form.cost">قیمت</message>
 	<message key="manager.subscriptionTypes.form.costInstructions">لطفا یک مقدار عددی وارد کنید. هیچ گونه متن دیگر مانند &quot;$&quot; وارد نکنید.</message>
 	<message key="manager.subscriptionTypes.form.costNumeric">عدد قیمت میبایست عدد مثبت باشد.</message>
@@ -591,18 +580,111 @@
 	<message key="manager.subscriptionTypes.form.typeName">نام</message>
 	<message key="manager.subscriptionTypes.form.typeNameExists">این نام نوع اشتراک در حال حاضر وجود دارد.</message>
 	<message key="manager.subscriptionTypes.form.typeNameRequired">نامی برای نوع اشتراک لازم است</message>
-	<message key="manager.subscriptionTypes.month">ماه</message>
-	<message key="manager.subscriptionTypes.months">ماهها</message>
 	<message key="manager.subscriptionTypes.name">نوع اشتراک</message>
 	<message key="manager.subscriptionTypes.noneCreated">هیچ نوع اشتراک ایجاد نشده است.</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">نوع اشتراک با موفقیت ایجاد شد.</message>
-	<message key="manager.subscriptionTypes.year">سال</message>
-	<message key="manager.subscriptionTypes.years">سالها</message>
 	<message key="manager.reviewFormElement.changeType">تغییر نوع آیتم فرم</message>
 	<message key="manager.reviewFormElements.confirmDelete">لطفا خذف آیتم فرم منتشر شده را تایید نمائید</message>
-	<message key="manager.reviewFormElements.viewable">قابل مشاهده توسط نویسندگان</message>
-	<message key="manager.reviewForms.confirmDeletePublished">لطفا خذف فرم منتشر شده را تایید نمائید</message>
 	<message key="manager.reviewForms.confirmDeleteUnpublished">لطفا خذف فرم منتشر نشده را تایید نمائید</message>
-	<message key="manager.reviewForms.noneUsed">هیچ فزم کارشناسی مورد استفاده قرار نگرفته است</message>
-	<message key="manager.reviewForms.reviewFormData">داده های فرم کارشناسی</message>
+	<message key="manager.language.ui">UI</message>
+	<message key="manager.language.forms">فرم ها</message>
+	<message key="manager.people.showNoRole">کاربران فاقد رل را نشان بده</message>
+	<message key="manager.plugins.install">نصب یک پلاگین جدید</message>
+	<message key="manager.plugins.installDescription">با این فرم میتوانید یک پلاگین جدید را آپلود و نصب کنید. ابتدا مطمئن شوید که نوع فشرده سازی آن بصورت فایل .tar.gz میباشد.</message>
+	<message key="manager.plugins.upgrade">بروز رسانی پلاگین</message>
+	<message key="manager.plugins.upgradeDescription">با این فرم میتوانید یک پلاگین را بروزرسانی کنید.  ابتدا مطمئن شوید که نوع فشرده سازی آن بصورت فایل .tar.gz میباشد.</message>
+	<message key="manager.plugins.delete">حذف پلاگین</message>
+	<message key="manager.plugins.deleteDescription">با کلیک بر روی حذف، پلاگین از روی سرور حذف خواهد شد.</message>
+	<message key="manager.plugins.deleteSuccess">پلاگین با موفقیت حذف شد</message>
+	<message key="manager.plugins.uploadPluginDir">انتخاب فایل پلاگین</message>
+	<message key="manager.plugins.deleteConfirm">آیا مطمئن هستید که میخواهید این پلاگین را از روی سیستم حذف کنید؟</message>
+	<message key="manager.plugins.uploadError">بروز خطا هنگام آپلود فایل</message>
+	<message key="manager.plugins.fileSelectError">لطفا ابتدا یک فایل را انتخاب کنید</message>
+	<message key="manager.plugins.versionFileNotFound">فایل Version.xml در پوشه پلاگین یافت نشد.</message>
+	<message key="manager.plugins.copyError">کپی پلاگین با موفقیت صورت نگرفت</message>
+	<message key="manager.plugins.pleaseUpgrade">پلاگین مورد نظر از قبل وجود دارد ولی از مورد نصب شده جدیدتر است. لطفا بجای این کار بروزرسانی کنید</message>
+	<message key="manager.plugins.installedVersionOlder">پلاگین مورد نظر از قبل وجود دارد ولی از مورد نصب شده قدیمیتر و یا همزمان با آن است.</message>
+	<message key="manager.plugins.installedVersionNewer">پلاگین مورد نظر از قبل وجود دارد ولی از مورد نصب شده جدیدتر و یا همزمان با آن میباشد</message>
+	<message key="manager.plugins.pleaseInstall">پلاگین مورد نظر وجود ندارد. لطفا بجای این کار آنرا نصب کنید.</message>
+	<message key="manager.plugins.deleteError">حذف پلاگین از سیستم فایل ممکن نیست</message>
+	<message key="manager.plugins.doesNotExist">پلاگین موجود نیست</message>
+	<message key="manager.plugins.installSuccessful">نسخه نصب شده با موفقیت</message>
+	<message key="manager.plugins.upgradeSuccessful">با موفقیا بروزرسانی شد به نسخه</message>
+	<message key="manager.plugins.installFailed">نصب شکست خورد</message>
+	<message key="manager.plugins.upgradeFailed">بروزرسانی شکست خورد</message>
+	<message key="manager.sections.wordCount">شمارش لغت</message>
+	<message key="manager.sections.wordCountInstructions">حداکثر تعداد کلمات برای این نوع مقاله صفر تا بدون سقف</message>
+	<message key="manager.setup.competingInterests.description"><![CDATA[در مجلات بیومدیکال معمولا نویسنده و کارشناس در صورت داشتن تضاد منافع خاصی از لحاظ پژوهش خود میبایست آنرا اعلام کنند برای اطلاعات بیشتر به <a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">سیاست PLoS</a> مراجعه کنید.]]></message>
+	<message key="manager.setup.contributorNoteDescription">این متن در محلی پائین تر از عنوان منابع حمایت و بالاتر از لیست نامها و آدرسهای سازمانهای حامی تحت عنوان اسپانسر مجله ظاهر میشود.</message>
+	<message key="manager.setup.history">تاریخچه مجله</message>
+	<message key="manager.setup.historyDescription">این متن در قسمت درباره مجله ظاهر میشود و از آن میتوان برای توصیف تغییرات در عنوان، شورای سردبیری و دیگر موارد تغییر مربوط به تاریخچه انتشاراتی مجله استفاده کرد.</message>
+	<message key="manager.setup.doiPrefixDescription"><![CDATA[دی او آی یا شماره شی منحصربه فرد توسط 
+<a href="http://www.crossref.org" target="_new">CrossRef</a>
+انتساب داده میشود و دارای فرمات
+10.xxxx
+میباشد. مانند 
+10.1234]]></message>
+	<message key="manager.setup.doiSuffix">پسوند دی او آی</message>
+	<message key="manager.setup.doiSuffixDefault">استفاده از الگوی پیش فرض یعنی</message>
+	<message key="manager.setup.doiSuffixPattern">ازالگوی زیر برای تولید پسوند دی او آی استفاده کن. %j یعنی اختصار مجله، %v یعنی شماره دوره، %i یعنی شماره مجله، %a یعنی آی دی مقاله او ج اس و %p یعنی شماره صفحه</message>
+	<message key="manager.setup.doiSuffixPattern.example">به انوان مثال vol%viss%ipp%p یک دی او آی مانند 10.1234/vol3iss2pp230 ممکن است تولید کند.</message>
+	<message key="manager.setup.doiSuffixDescription">پسوند دی او آی به هر شکلی میتواند درآید، ولی میبایست برای هر آیتم منتشر شده منحصر به فرد باشد.</message>
+	<message key="manager.setup.doiSuffixCustomIdentifier">بکاربردن پسوند دی او آی به عنوان شناسه دلخواه. ابتدا باید در مرحله ۴ فعال شده باشد.</message>
+	<message key="manager.setup.form.doiPrefixPattern">الکوی دی او آی میبایست بصورت 10.xxxx باشد.</message>
+	<message key="manager.setup.issnDescription"><![CDATA[شابن یا شماره استاندارد بین المللی نشریه یه عدد هشت رقمی است که مشخصه انتشارات ادواری میباشد . شامل ادواری های الکترونیکی نیز میشود. اداره آن توسط شبکه کسترده ای از مراکز ملی است که توسط یک مرکز بین المللی در پاریس هماهنگ میگردند. پشتیبان آن یونسکو و دولت فرانسه است. شابن را میتوان از 
+<a href="http://www.issn.org" target="_new">وب سایت شابن</a>
+بدست آورد.]]></message>
+	<message key="manager.setup.journalFavicon">فاویکون مجله</message>
+	<message key="manager.setup.journalFaviconDescription">افزودن فاویکون برای این مجله تا در خط آدرس مرورگر هنگام بازدید از سایت ظاهر شود.</message>
+	<message key="manager.setup.journalFaviconInvalid">فرمات فاویکون بکار رفته نا معتبر است. فرماتهای مورد قبول عبارتند از .ico, .png, and .gif.</message>
+	<message key="manager.setup.publisherNoteDescription">این متن در پائین قسمت عنوان ناشر و بالاتر از نام و آدرس ناشر تحت عنوان اسپانسر مجله ظاهر میشود.</message>
+	<message key="manager.setup.sponsorNoteDescription">این متن پائین تر از عنوان اسپانسرها و بالاتر از نام و آدرسهای اسپانسر ها تحت عنوان اسپانسر مجله ظاهر میشود.</message>
+	<message key="manager.setup.noPublishing">از او ج اس برای انتشار آن لاین محتوای مجله استفاده نخواهد شد.</message>
+	<message key="manager.subscriptionPolicies.onlinePaymentNotifications">اطلاع رسانی پرداخت آن لاین</message>
+	<message key="manager.subscriptionPolicies.onlinePaymentNotificationsDescription">ایمیل اطلاع رسانی خودکار را میتوان متعاقب تکمیل آن لاین فرم پراخت هزینه اشتراک به مدیر اشتراک فرستاد. متن این ایمیل قابل ویرایش از طریق لینک ویرایش ایمیل های از قبل آماده شده توسط مدیر مجله میباشد.</message>
+	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual">متعاقب خرید آن لاین اشتراک شخصی، با ایمیل به مدیر اشتراک اطلاع بده.</message>
+	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional">متعاقب خرید آن لاین اشتراک سازمانی، با ایمیل به مدیر اشتراک اطلاع بده. (توصیه میشود)</message>
+	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual">متعاقب تمدید آن لاین اشتراک شخصی، با ایمیل به مدیر اشتراک اطلاع بده</message>
+	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional">متعاقب تمدید آن لاین اشتراک سازمانی، با ایمیل به مدیر اشتراک اطلاع بده</message>
+	<message key="manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"><![CDATA[<strong>یاداشت:</strong> 
+خرید اشتراک سازمانی آن لاین نیاز به تایید دامنه و بازه IP مشخص شده دارد و ابتدا اشتراک میبایست توسط مدیر مجله فعال شود.]]></message>
+	<message key="manager.subscriptionPolicies.onlinePaymentDisabled"><![CDATA[<strong>یاداشت:</strong> 
+برای فال ساختن این گزینه ها، ابتدا مدیر مجله باید ماژول پرداخت آن لاین و پرداخت آن لاین اشتراک را فعال کند. این دو تحت قسمت نرخ های خوانندگان وجود دارند.]]></message>
+	<message key="manager.individualSubscriptions">اشتراک های شخصی</message>
+	<message key="manager.institutionalSubscriptions">اشتراک های سازمانی</message>
+	<message key="manager.subscriptions.summary">خالصه اشتراک ها</message>
+	<message key="manager.subscriptions.renew">تمدید</message>
+	<message key="manager.subscriptions.withStatus">دارای وضعیت</message>
+	<message key="manager.subscriptions.allStatus">همه</message>
+	<message key="manager.subscriptions.form.status">وضعیت</message>
+	<message key="manager.subscriptions.form.statusRequired">وضعیت اشتراک لازم است</message>
+	<message key="manager.subscriptions.form.statusValid">لطفا نوع معتبری از وضعیت اشتراک را انتخاب کنید.</message>
+	<message key="manager.subscriptions.form.userProfileInstructions">یادداشت: تمام تغییرات زیر در پروفایل کاربر در تمامی سایت منعکس میشود.</message>
+	<message key="manager.subscriptions.form.userContact">تماس</message>
+	<message key="manager.subscriptions.form.userCountryValid">لطفا یک کشور معتبر انتخاب کنید.</message>
+	<message key="manager.subscriptions.form.referenceNumber">شماره مرجع</message>
+	<message key="manager.subscriptions.form.notes">یادداشت ها</message>
+	<message key="manager.subscriptions.form.institutionName">نام سازمان</message>
+	<message key="manager.subscriptions.form.institutionNameRequired">نام سازمان لازم است</message>
+	<message key="manager.subscriptions.form.institutionMailingAddress">آدرس پستی</message>
+	<message key="manager.subscriptions.form.ipRangeItem"><![CDATA[&#8226;]]></message>
+	<message key="manager.subscriptions.form.deleteIpRange">حذف</message>
+	<message key="manager.subscriptions.form.addIpRange">اضافه</message>
+	<message key="manager.subscriptions.form.typeRequired">قبل از اینکه بتوان یک اشتراک جدید ایجاد کرد باید یک نوع اشتراک تعریف کرد.</message>
+	<message key="manager.subscriptions.referenceNumber">شماره مرجع</message>
+	<message key="manager.subscriptions.notes">یادداشت ها</message>
+	<message key="manager.subscriptions.selectContact">انتخاب تماس اشتراک</message>
+	<message key="manager.subscriptions.selectUser">انتخاب کاربر</message>
+	<message key="manager.subscriptions.contact">نام تماس</message>
+	<message key="manager.subscriptions.institutionName">نام سازمان</message>
+	<message key="manager.subscriptionTypes.subscriptions">اشتراک ها</message>
+	<message key="manager.subscriptionTypes.individual">شخصی</message>
+	<message key="manager.subscriptionTypes.institutional">سازمانی</message>
+	<message key="manager.subscriptionTypes.form.nonExpiring.expiresAfter">انقضا بعد از</message>
+	<message key="manager.subscriptionTypes.form.nonExpiring.months">ماه مثلا ۱۲</message>
+	<message key="manager.subscriptionTypes.form.nonExpiring.neverExpires">بدون انقضا</message>
+	<message key="manager.subscriptionTypes.form.nonExpiringValid">لطفا از گزینه ها موجود استفاده کنید.</message>
+	<message key="manager.subscriptionTypes.form.subscriptions">اشتراک ها</message>
+	<message key="manager.subscriptionTypes.form.individual">شخصی. تایید هویت از طریق ورود به سیستم</message>
+	<message key="manager.subscriptionTypes.form.options">گزینه ها</message>
 </locale>

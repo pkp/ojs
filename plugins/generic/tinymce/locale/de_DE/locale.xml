@@ -19,4 +19,6 @@
 	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Dieses Plug-In aktiviert eine WSYWIG-Eingabe für OJS-Textfelder mittels des <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>-Editors. <strong>TinyMCE ist derzeit noch nicht installiert; bitte installieren Sie in {$tinyMcePath}.</strong>]]></message>
 
 	<message key="plugins.generic.tinymce.settings">Einstellungen</message>
+	<message key="plugins.generic.tinymce.enabled">Das TinyMCE-Plug-In wurde aktiviert.</message>
+	<message key="plugins.generic.tinymce.disabled">Das TinyMCE-Plug-In wurde ausgeschaltet.</message>
 </locale>

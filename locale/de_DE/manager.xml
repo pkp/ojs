@@ -156,7 +156,7 @@
 	<message key="manager.setup.editorialProcess3">Der Redakteur ist zuständig für die Warteliste, für die Redaktion der Beiträge, für den Veröffentlichungsplan, für das Inhaltsverzeichnis, die Rubrikredakteure sind mit der Begutachtung befasst.</message>
 	<message key="manager.setup.editorialReviewBoard">Redaktions- und Begutachtungskommitee </message>
 	<message key="manager.setup.editorialReviewBoardDescription">Zeitschriften haben Redaktionskommitees, die die redaktionellen Richtlinien festlegen, bei der Einstellung von Redakteuren mitbestimmen und durch das Ansehen, das die Mitglieder des Kommitees geniessen, zum Status der Zeitschrift im Fachgebiet beitragen. Gutachterkommitees spielen eine ähnliche Rolle und lenken zusätzlich das kollegiale Begutachtungsverfahren. Guatachtergremien haben keinen Zugang zur Leitung der Zeitschrift, dort wird nur die Liste der in Frage kommenden Gutachter geführt.</message>
-	<message key="manager.setup.emailBounceAddress">Rücksendeadresse des Einsenders</message>
+	<message key="manager.setup.emailBounceAddress">Rücksendeadresse</message>
 	<message key="manager.setup.emailBounceAddressDescription">Email, die nicht zugestellt werden kann geht mit einer Fehlermeldung an diese Adresse.</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Achtung:</strong> Der Websiteverwalter muss in der OJS Konfigurationsdatei die Option <tt>allow_envelope_sender</tt> einschalten. Weitere Servereinstellungen können erforderlich sein (und sind nicht unbedingt auf allen Servern verfügbar). S. Dokumentation des OJS.]]></message>
 	<message key="manager.setup.emails">Email Kennzeichnung </message>
@@ -181,7 +181,7 @@
 	<message key="manager.setup.form.journalInitialsRequired">Das Kürzel für die Zeitschrift ist erforderlich.</message>
 	<message key="manager.setup.form.journalTitleRequired">Der Titel der Zeitschrift ist erforderlich.</message>
 	<message key="manager.setup.form.numReviewersPerSubmission">Die Zahl der Gutachter pro Beitrag wird gefordert.</message>
-	<message key="manager.setup.form.supportEmailRequired">Die Emailadresse für die technische Unterstützung ist erforderlich.</message>
+	<message key="manager.setup.form.supportEmailRequired">Die E-Mail-Adresse für die technische Unterstützung ist erforderlich.</message>
 	<message key="manager.setup.form.supportNameRequired">Der Name des Kontaktes für die technische Unterstützung ist erforderlich</message>
 	<message key="manager.setup.frequencyOfPublication">Beginn und Frequenz </message>
 	<message key="manager.setup.frequencyOfPublicationDescription">Legen Sie Startnummer und Jahr für die erste Veröffentlichung fest, und geben Sie die geplante Frequenz der Zeitschrift an.</message>
@@ -190,7 +190,7 @@
 	<message key="manager.setup.gettingDownTheDetails">Schritt 1. Einzelheiten festlegen</message>
 	<message key="manager.setup.guidelines">Anweisungen</message>
 	<message key="manager.setup.guidingSubmissions">Schritt 3. Anleitung</message>
-	<message key="manager.setup.homepageImage">Graphik/Bild der Eingangsseite</message>
+	<message key="manager.setup.homepageImage">Grafik/Bild der Eingangsseite</message>
 	<message key="manager.setup.homepageImageDescription">Bereichern Sie die Seite mit einer Graphikdatei.</message>
 	<message key="manager.setup.htmlSetupInstructions"><![CDATA[Wenn HTML in den Textfeldern der Konfiguration verwendet wird (Punktzahl der Schrift, Fettsatz, Farbe etc.) beachten, dass Zeilenwechsel automatisch als <tt>&lt;br&gt;</tt> eingetragen werden.]]></message>
 	<message key="manager.setup.information">Information</message>
@@ -264,7 +264,7 @@
 	<message key="manager.setup.pageNumberIdentifier">Option Seitenzahl </message>
 	<message key="manager.setup.peerReviewDescription">Die Richtlinien der Begutachtung durch Kollegen für Leser und Verfasser erklären, auch die typische Anzahl von Gutachtern für einen Beitrag, die vorgegebenen Kriterien nach denen die Gutachter urteilen sollen, der typische Zeitaufwand für ein Gutachten und die Richtlinien, nach denen die Gutachter ausgesucht werden. Erscheint unter AD HOC.</message>
 	<message key="manager.setup.peerReviewPolicy">Kollegiale Begutachtung</message>
-	<message key="manager.setup.peerReviewPolicy2">Sinn- und Verfahren der kollegialen Begutachtung</message>
+	<message key="manager.setup.peerReviewPolicy2">Sinn und Verfahren der kollegialen Begutachtung</message>
 	<message key="manager.setup.policies">Richtlinien</message>
 	<message key="manager.setup.policies.description">Orientierung, Kollegiale Begutachtung, Rubriken, Schutz persönlicher Daten, Zugang, Sicherheit, andere, ähnliche Themen.</message>
 	<message key="manager.setup.principalContact">Hauptkontakt</message>
@@ -366,7 +366,7 @@
 	<message key="manager.statistics.statistics.registeredUsers">Eingeschriebene Benutzer:</message>
 	<message key="manager.statistics.statistics.reviewerCount">Zuweisungen:</message>
 	<message key="manager.statistics.statistics.reviewers">Bearbeiter:</message>
-	<message key="manager.statistics.statistics.reviewerScore">Punktzahl des Gutachters:</message>
+	<message key="manager.statistics.statistics.reviewerScore">Punktzahl des Gutachters/der Gutachterin</message>
 	<message key="manager.statistics.statistics.reviewsPerReviewer">Bearbeitungen:</message>
 	<message key="manager.statistics.statistics.selectSections">Rubriken auswählen für die Gutachtenstatistik der Zeitschrift.</message>
 	<message key="manager.statistics.statistics.subscriptions">Abonnements:</message>
@@ -442,7 +442,7 @@
 	<message key="manager.subscriptions.form.userIdValid">Wählen Sie einen gültigen Benutzer.</message>
 	<message key="manager.subscriptions.ipRange">IP Bereich</message>
 	<message key="manager.subscriptions.noneCreated">Es wurde kein Abonnement erstellt.</message>
-	<message key="manager.subscriptions.select">Abonnent einschreiben</message>
+	<message key="manager.subscriptions.select">Abonnent auswählen</message>
 	<message key="manager.subscriptions.selectSubscriber">Abonnent auswählen</message>
 	<message key="manager.subscriptions.selectSubscriber.desc">Wählen Sie den Benutzer, den sie als Abonnenten der Zeitschrift registrieren wollen. Beachten Sie, dass Herausgeber, Redakteure, Lektoren, Layoutredakteure und Korrektoren jederzeit die Zeitschrift durchsehen können, als seien sie abonniert.</message>
 	<message key="manager.subscriptions.subscribe">Abonnieren</message>
@@ -531,7 +531,7 @@
 	<message key="manager.people.allEnrolledUsers">Bei dieser Zeitschrift registrierte Benutzer/innen</message>
 	<message key="manager.people.allSiteUsers">Benutzer/innen der Website für diese Zeitschrift registrieren</message>
 	<message key="manager.people.allUsers">Alle eingetragenen Benutzer/innen</message>
-	<message key="manager.people.enrollExistingUser">Eine/n bereits existierende/n Benutzer/in eintragen.</message>
+	<message key="manager.people.enrollExistingUser">Eine/n bereits existierende/n Benutzer/in eintragen</message>
 	<message key="manager.people.roleEnrollment">{$role} eintragen</message>
 	<message key="manager.reviewFormElement.changeType">Ändern des Typs des Formularelements...</message>
 	<message key="manager.reviewFormElements.confirmDelete">Bestätigen Sie das Löschen eines veröffentlichten Formularelements</message>

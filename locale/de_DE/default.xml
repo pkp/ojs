@@ -93,4 +93,41 @@ After you are finished with your revisions, rename the file from AuthorNameQA.do
 	<message key="default.journalSettings.forAuthors"><![CDATA[Haben Sie Interesse, zu dieser Zeitschrift beizutragen? Wir möchten Sie auf <a href="{$indexUrl}/{$journalPath}/about">Zur Zeitschrift </a> verweisen, was Richtlinien und Orientierung unserer Zeitschrift angeht. Und auch auf  <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Hinweise für Verfasser</a>. Verfasser müssen <a href="{$indexUrl}/{$journalPath}/user/register">sich einschreiben</a> bevor sie einen Beitrag zur Zeitschrift liefern können. Falls sie bereits eingeschrieben sind, einfach <a href="{$indexUrl}/index/login">Sitzung öffnen</a> und das Procedere mit den fünf Schritten beginnen.]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Wir fordern die Bibliotheken auf, diese Zeitschrift in die Liste ihrer elektronischen Zeitschriften aufzunehmen. Auch mag Beachtung verdienen, dass das offene System dieser Zeitschrift Bibliotheken die Möglichkeit gibt, Zeitschriften von Universitätsmitgliedern zu beherbergen. Mehr dazu und zur Verwendung von Open Journal Systems zur Verwaltung und Veröffentlichung Zeitschriften mit kollegialer Begutachtung s. <a href="http://pkp.sfu.ca">Public Knowledge Project</a>.]]></message>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Die Zeitschrift verwendet LOCKSS zur Verbreitung in den Archiven der im System teilnehmenden Bibliotheken und ermöglicht diesen Bibliotheken permanente Archivierung zwecks Erhaltung und Wiederherstellung. <a href="http://lockss.org/">Mehr...</a>]]></message>
+	<message key="default.journalSettings.submissionFee">Beitragseinreichung</message>
+	<message key="default.journalSettings.submissionFeeDescription">Autor/innen müssen sich an den Begutachtungskosten beteiligen und hierfür eine Beitragseinreichungsgebühr entrichten.</message>
+	<message key="default.journalSettings.fastTrackFee">Beschleunigte Begutachtung</message>
+	<message key="default.journalSettings.fastTrackFeeDescription">Bei Zahlung dieser Gebühr wird garantiert, dass Begutachtung, redaktionelle Entscheidung und Benachrichtigung der Autor/innen innerhalb von vier Wochen erfolgen.</message>
+	<message key="default.journalSettings.publicationFeeDescription">Wenn dieser Beitrag zur Veröffentlichung akzeptiert wird, werden Sie um Zahlung einer Publikationsgebühr gebeten, um die Publikationskosten decken zu können.</message>
+	<message key="default.journalSettings.purchaseArticleFee">Artikel kaufen</message>
+	<message key="default.journalSettings.purchaseArticleFeeDescription">Mit Zahlung der Gebühr können diesen Artikel ansehen, herunterladen und drucken.</message>
+	<message key="default.journalSettings.membershipFee">Mitgliedschaft in der Fachvereinigung</message>
+	<message key="default.journalSettings.membershipFeeDescription">Mit Zahlung der Gebühr werden Sie für ein Jahr Mitglied dieser Fachvereinigung und haben freien Zugang zur Zeitschrift.</message>
+	<message key="default.journalSettings.donationFee">Schenkungen an die Zeitschrift</message>
+	<message key="default.journalSettings.donationFeeDescription">Schenkungen jeder Höhe an diese Zeitschrift werden gerne angenommen. Sie helfen den Redakteur/innen, für die Leser/innen eine hochwertige Zeitschrift auch weiter vorzuhalten.</message>
+	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>Das Korrekturlektorat zielt auf Beseitgung aller Fehler in den Korrekturfahnen, sowohl grammatische als auch Formatierungsfehler. In dieser Phase können keine substanziellen Änderungen durchgeführt werden, ohne dass dies mit den Rubrikredakteur/innen abgesprochen wurde. Klicken Sie unter "Layout" auf "Korrekturfahnen ansehen", um Zugang zu HTML-, PDF- und anderen verfügbaren Formaten zu erhalten, die für die Publikation dieses Beitrags verwandt wurden.</p>
+<h4>Orthografie- und Grammatikfehler</h4>
+
+<p>Kopieren Sie das problematische Wort oder die Wortgruppe und geben Sie diese ins Korrekturfeld für das Korrekturlektorat ein mit entsprechenden "ÄNDERN ZU"-Hinweisen für die Redakteur/innen wie z.B.:</p>
+
+<pre>1. ÄNDERE ...
+dann die anderen
+ZU...
+als die anderen</pre>
+<br />
+<pre>2. ÄNDERE...
+Malinowsky
+ZU...
+Malinowski</pre>
+<br />
+
+<h4>Formatierungsfehler</h4>
+
+<p>Beschreiben Sie in dem Korrekturfeld für das Korrekturlektorat Ort und Art des Problems nach dem Hinweis "FORMATIERUNG", z.B.</p>
+<br />
+<pre>3. FORMATIERUNG
+In Tabelle 3 sind die Zahlen in der 3. Spalte nicht in einer Linie.</pre>
+<br />
+<pre>4. FORMATIERUNG
+Der Absatz, der mit "Dieser letzter Gegenstand..." beginnt, ist nicht eingerückt.</pre>]]></message>
+	<message key="default.journalSettings.publicationFee">Beitragsveröffentlichung</message>
 </locale>

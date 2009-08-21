@@ -75,4 +75,8 @@
 	<message key="plugins.generic.translator.deleteEmail">Smazat tento email</message>
 	<message key="plugins.generic.translator.saveBeforeContinuing">Ujistěte se, že jste uložili všechny změny provedené na této stránce, než budete pokračovat. Jinak budou ztraceny. Chcete pokračovat? Pokud ano všechny neuložené změny budou ztraceny.</message>
 	<message key="plugins.generic.translator.localeKey.description">Vložte celý klíč, který má být vyhledán.</message>
+	<message key="plugins.generic.translator.enabled">Byl povolen plugin Překladač.</message>
+	<message key="plugins.generic.translator.disabled">Byl zakázán plugin Překladač.</message>
+	<message key="plugins.generic.translator.fileNotWriteable">Tento soubor lokalizace není na serveru zapisovatelný. Žádné změny, které uděláte, nebudou uloženy.</message>
+	<message key="plugins.generic.translator.filesNotWriteable">Tyto soubory lokalizace nejsou na serveru zapisovatelné. Žádné změny, které v nich uděláte, nebudou uloženy.</message>
 </locale>

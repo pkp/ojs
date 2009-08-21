@@ -16,6 +16,7 @@
 	<message key="plugins.block.subscription.blockTitle">اشتراک</message>
 	<message key="plugins.block.subscription.expires">انقضا</message>
 	<message key="plugins.block.subscription.providedBy">ایجاد دسترسی توسط:</message>
-	<message key="plugins.block.subscription.providedByInstitution">دسترسی توسط مؤسسه شما فراهم شده است.</message>
-	<message key="plugins.block.subscription.comingFromIP">مربوط است به IP:</message>
+	<message key="plugins.block.subscription.comingFromIP">از</message>
+	<message key="plugins.block.subscription.about">اشتراک ها</message>
+	<message key="plugins.block.subscription.loginToVerifySubscription">برای تایید اشتراک به سیستم وارد شوید</message>
 </locale>

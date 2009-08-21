@@ -114,4 +114,15 @@
 	<message key="author.article.copyeditedFile">Redigovaný soubor</message>
 	<message key="author.article.authorRevisedFile">Soubor od autora</message>
 	<message key="author.submit.authorSubmitLoginMessage">Pro přispívání do tohoto časopisu je vyžadován uživatelský účet. To umožní našim editorům sledovat Vaše příspěvky a kontaktovat Vás v případě, že se změní stav Vašeho příspěvku nebo pokud od Vás budou vyžadovány další informace.</message>
+	<message key="author.submissions.queuedReviewSubsequent">V recenzním kole {$round}</message>
+	<message key="author.submit.step2">Krok 2. Nahrání příspěvku</message>
+	<message key="author.submit.step3">Krok 3. Vložení metadat příspěvku</message>
+	<message key="author.submit.upload">2. Nahrát příspěvek</message>
+	<message key="author.submit.metadata">3. Vložit metadata</message>
+	<message key="author.submit.mustEnterWaiverReason">Pokud žádáte o prominutí platby, musíte do přílušného místa uvést důvod.</message>
+	<message key="author.submissions.queuedReviewRevisions">V recenzním řízení: Vyžaduje přepracování</message>
+	<message key="author.submissions.queuedEditingCopyedit">Redakční úravy: Vyžádáno redigování</message>
+	<message key="author.submissions.queuedEditingProofread">Redakční úpravy: Vyžádána korektura</message>
+	<message key="author.submit.reorder">Přeuspořádat jméno autora</message>
+	<message key="author.submit.form.wordCountAlert">Překročil jste maximální limit slov pro abstrakta v této sekci.</message>
 </locale>

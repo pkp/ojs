@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fa_IR (Persian) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="fa_IR" full_name="Persian">
+	<message key="plugins.block.keywordCloud.displayName">بلوک ابر کلیدواژه</message>
+	<message key="plugins.block.keywordCloud.description">این پلاگین تگ ابری کلیدواژههای مقاله را ایجاد میکند</message>
+	<message key="plugins.block.keywordCloud.title">کلید واژه ها</message>
+</locale>

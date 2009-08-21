@@ -16,7 +16,7 @@
 	<message key="editor.article.reviewForms">Gutachtenformulare</message>
 	<message key="editor.article.selectReviewForm">Gutachtenformular auswählen</message>
 	<message key="editor.article.clearReviewForm">Einträge löschen</message>
-	<message key="editor.home">Startseite des Redakteurs</message>
+	<message key="editor.home">Startseite des Redakteurs/der Redakteurin</message>
 	<message key="editor.submissionsAndPublishing">Beiträge und Veröffentlichung</message>
 	<message key="editor.submissionQueue">Warteliste der Beiträge</message>
 	<message key="editor.submissionArchive">Beitragsarchiv</message>
@@ -50,7 +50,7 @@
 	<message key="editor.issues.accessDate">Datum für freien Zugang</message>
 	<message key="editor.issues.invalidAccessDate">Zugangsdatum ungültig.</message>
 	<message key="editor.issues.issuePublicIdentificationExists">Die öffentliche Kennung existiert bereits.</message>
-	<message key="editor.issues.coverPage">Graphik der Umschlagseite</message>
+	<message key="editor.issues.coverPage">Grafik der Umschlagseite</message>
 	<message key="editor.issues.coverPageInstructions">(Gültige Formate : .gif, .jpg, ou .png )</message>
 	<message key="editor.issues.uploaded">Hochgeladen</message>
 	<message key="editor.issues.remove">Entfernen</message>
@@ -78,7 +78,7 @@
 	<message key="editor.issues.preview">(Voransicht)</message>
 	<message key="editor.issues.confirmPublish">Sind Sie sicher, dass Sie die neue Nummer veröffentlichen wollen?</message>
 	<message key="editor.issues.publicArticleIdExists">Die öffentliche Kennung konnte nicht gespeichert werden für Beitrag:</message>
-	<message key="editor.issues.noLiveIssues">Keine zur Veröffentlichung anstehende Ausgaben</message>
+	<message key="editor.issues.noLiveIssues">Keine zur Veröffentlichung anstehenden Ausgaben</message>
 	<message key="editor.issues.open">Offen</message>
 	<message key="editor.issues.pages">Seiten</message>
 	<message key="editor.navigation.issues">Ausgaben</message>
@@ -110,10 +110,10 @@
 	<message key="editor.article.decision">Beurteilung</message>
 	<message key="editor.article.noEditorSelected">Kein Redakteur ausgewählt.</message>
 	<message key="editor.article.recordDecision">Beurteilung speichern</message>
-	<message key="editor.article.cannotRecord">Die Beiträge müssen einem Redakteur zugewiesen werden, bevor eine Beurteilung gespeichert werden kann. Standardmässig wird die Gutachterversion zur Redakteursversion.</message>
+	<message key="editor.article.cannotRecord">Die Beiträge müssen einem Redakteur/einer Redakteurin zugewiesen werden, bevor ein Gutachten gespeichert werden kann. Standardmässig wird die Gutachter/innenversion zur Redakteur/innenversion.</message>
 	<message key="editor.article.reviewersSeeAuthorsVersion">Gutachter denen Verfasserversion zugeht</message>
 	<message key="editor.article.designateDueDate">Abgabetermin vorgeben</message>
-	<message key="editor.article.designateDueDateDescription">Geben Sie ein anderes Datum oder eine Zeitdauer in Wochen ein, falls Sie den Standardtermin für den Gutachter ändern wollen.</message>
+	<message key="editor.article.designateDueDateDescription">Geben Sie ein anderes Datum oder eine Zeitdauer in Wochen ein, falls Sie den Standardtermin für die Begutachtung ändern wollen.</message>
 	<message key="editor.article.todaysDate">Heutiges Datum</message>
 	<message key="editor.article.requestedByDate">Datum der Anforderung</message>
 	<message key="editor.article.dueDateFormat">Format : JJJJ-MM-TT</message>
@@ -153,7 +153,7 @@
 	<message key="editor.article.replaceProofreader">Korrekturleser ersetzen</message>
 	<message key="editor.article.authorComments">Verfasserkommentare</message>
 	<message key="editor.article.proofreaderComments">Kommentare des Korrekturlesers</message>
-	<message key="editor.article.layoutEditorFinal">Endgültige Version des Layoutredakteurs.</message>
+	<message key="editor.article.layoutEditorFinal">Endgültige Version des Layoutredakteurs/der Layoutredakteurin</message>
 	<message key="editor.article.noDate">(Datum)</message>
 	<message key="editor.submissions.showBy">Vorzeigen</message>
 	<message key="editor.submissions.submitMMDD">Eingereicht MM TT</message>

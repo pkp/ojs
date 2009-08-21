@@ -200,4 +200,8 @@
 	<message key="editor.article.uploaded">Nahráno</message>
 	<message key="editor.article.removeCoverPage">Odstranit titulní obrázek?</message>
 	<message key="editor.article.remove">Odstranit</message>
+	<message key="editor.issues.enableOpenAccessDate">Povolit zpožděný otevřený přístup</message>
+	<message key="editor.issues.unpublishIssue">Zrušit vydání čísla</message>
+	<message key="editor.issues.confirmUnpublish">Jste si jistý, že chcete zrušit vydání tohoto vydaného čísla?</message>
+	<message key="editor.article.archiveSubmission">Odmítnout a archivovat příspěvek</message>
 </locale>

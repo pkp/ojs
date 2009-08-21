@@ -596,6 +596,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
         <message key="reviewer.article.reviewSchedule">Review Schedule</message>
         <message key="reviewer.article.reviewSteps">Review Steps</message>
         <message key="reviewer.article.reviewerGuidelines">Reviewer Guidelines</message>
+	<message key="reviewer.article.reviewGuidelinesDescription"><![CDATA[The Review Guidelines will provide reviewers with criteria for judging a submission's suitability for publication in the journal, and can include any special instructions for preparing an effective and helpful review. In conducting the review, reviewers are presented with with two open text boxes, the first "for author and editor," and the second "for editor." Alternatively, the Journal Manager can create a peer review form under Review Forms. In all cases, editors will have the option of including the reviews in corresponding with the author.]]></message>
         <message key="reviewer.article.notifyEditorA">Notify the submission's editor</message>
         <message key="reviewer.article.notifyEditorB">as to whether you will undertake the review.</message>
         <message key="reviewer.article.consultGuidelines">If you are going to do the review, consult Reviewer Guidelines below.</message>

@@ -27,4 +27,6 @@
 	<message key="plugins.generic.thesisfeed.atom.altText">Atom-Logo</message>
 	<message key="plugins.generic.thesisfeed.rss1.altText">RSS1-Logo</message>
 	<message key="plugins.generic.thesisfeed.rss2.altText">RSS2-Logo</message>
+	<message key="plugins.generic.thesisfeed.enabled">Das Plug-In für Dissertationen-Abstracts wurde aktiviert.</message>
+	<message key="plugins.generic.thesisfeed.disabled">Das Plug-In für Dissertationen-Abstracts wurde ausgeschaltet.</message>
 </locale>

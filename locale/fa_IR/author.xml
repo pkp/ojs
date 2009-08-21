@@ -37,7 +37,8 @@
 	<message key="author.submissions.confirmDelete">آیا میخواهید این ساب میشن ناکامل را حذف کنید؟</message>
 	<message key="author.submissions.viewStatus">مشاهده وضعبت</message>
 	<message key="author.submissions.noSubmissions">لیست ساب میشن خالی است</message>
-	<message key="author.submit.howToSubmit"><![CDATA[نویسندگان مقالات خود را طی پنج مرحله از طریق این وب سایت به این مجله ارسال می کنند. در این پنج مرحله فایل مقاله و دیگر اطلاعات ساب میشن را ارسال می کنند. همچنین فایل های الحاقی مانند داده های پژوهش ، و ابزارهای بکار رفته نیز قابل آپلود است. در صورت بروز هر گونه مشکل در این روند با <a href="mailto:{$supportEmail}">{$supportName}</a> تماس بگیرید ویا به شماره  {$supportPhone} تلفن بزنید.]]></message>
+	<message key="author.submit.howToSubmit">در صورت اشکال با 
+{$supportName} تماس بگیرید. شماره تماس ({$supportPhone}</message>
 	<message key="author.submit.journalSection">نوع مقاله</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[نوع مقاله را انتخاب کنید. باری اطلاعات بیشتر به انواع مقالات و سیاست گذاری در <a href="{$aboutUrl}">درباره </a> مجله مراجعه کنید.]]></message>
 	<message key="author.submit.selectSection">لطفا نوع مقاله را انتخاب کنید.</message>
@@ -47,14 +48,14 @@
 	<message key="author.submit.copyrightNoticeAgree">نویسنگان این مقاله موافقت خودشان را با این بیانیه کپی رایت اعلام می گنند. این بیانیه در صورت چاپ شدن این مقاله در این مجله قابل اعمال است. در قسمت پائین این صفحه نقطه نظرات دلخواه خود را به اطلاع سردبیر برسانید</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">قبل از ادامه ، می بایست با بیانیه کپی رایت موافقت کنید.</message>
 	<message key="author.submit.commentsForEditor">اعلام نقطه نظراتتان به سردبیر</message>
-	<message key="author.submit.comments">نقطه نظر خود را در این قسمت وارد کنید. این قسمت اختیاری است.</message>
+	<message key="author.submit.comments">متن نامه. اختیاری</message>
 	<message key="author.submit.form.sectionRequired">لطفا نوع مقاله خود را انتخاب کنید</message>
 	<message key="author.submit.privacyStatement">بیانیه محرمانگی اطلاعات مجله</message>
 	<message key="author.submit.reorderInstructions">با استفاده از فلش ها ترتیب نام نویسندگان را تغییر دهید.</message>
 	<message key="author.submit.selectPrincipalContact">آدرس مرجع مکاتبات</message>
 	<message key="author.submit.addAuthor">افزودن نویسنده</message>
 	<message key="author.submit.deleteAuthor">حذف نویسنده</message>
-	<message key="author.submit.submissionIndexingDescription">واژه هائی انتخاب کنید که به بهترین وجه نشان دهنده محتوای ساب میشن برای گروه اندکسی مورد نظر هستند. لطفا به مثالهای هر گروه توجه کنید. در صورتی که در هر قسمت بیش از یک کلیدواژه وارد میکنید آنها را با سمی کولون از هم جدا کنید.</message>
+	<message key="author.submit.submissionIndexingDescription">واژه هائی برای اندکس مقاله، فاصله لغات سمی کولون بگذارید. مانند واژه۱;واژه۲;واژه۲</message>
 	<message key="author.submit.submissionSupportingAgencies">آژانس های حمایت کننده</message>
 	<message key="author.submit.submissionSupportingAgenciesDescription">نام آژانس هائی که حمایت مادی و غیر مادی از این اثر نموده اند را در این قسمت وارد کنید.</message>
 	<message key="author.submit.agencies">آژانسها</message>
@@ -113,4 +114,14 @@
 	<message key="author.article.copyeditedFile">فایل ویرایش شده</message>
 	<message key="author.article.authorRevisedFile">فایل نویسنده</message>
 	<message key="author.submit.authorSubmitLoginMessage">برای ارسال مقاله داشتن حساب کاربری الزامی است. بدین وسیله دبیران ما میتوانند ساب میشن شما را پیگیری کرده و با شما تماس بگیرند.</message>
+	<message key="author.competingInterests"><![CDATA[تضاد&nbsp;منافع <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">سیاست&nbsp;ت م</a>]]></message>
+	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">اینجا را کلیک کنید</a> تا به اولیم مرحله از مراحل پنج گانه ساب میشن بروید.]]></message>
+	<message key="author.submit.mustEnterWaiverReason">اگر میخواهید تقاضای تخفیف بکنید، میبایست در محلی که مشخض شده است دلیل خود را ذکر نمائید.</message>
+	<message key="author.submissions.queuedReviewSubsequent">در دور کارشناسی {$round}</message>
+	<message key="author.submissions.queuedReviewRevisions">در حال کارشناسی: نیاز به اصلاحات</message>
+	<message key="author.submissions.queuedEditingCopyedit">در حال ویرایش: ویرایش تقاضا شده است</message>
+	<message key="author.submissions.queuedEditingProofread">در حال ویرایش: تقاضای بازبینی شده است:</message>
+	<message key="author.submit.howToSubmitNoPhone"><![CDATA[اگر مشکلی داشتید جهت کمک با <a href="mailto:{$supportEmail}">{$supportName}</a> تماس بگیرید.]]></message>
+	<message key="author.submit.reorder">تغییر ترتیب نویسنده</message>
+	<message key="author.submit.form.wordCountAlert">تعداد کلمات چکیده از سقف مجاز برای این نوع مقاله تجاوز کرده است.</message>
 </locale>

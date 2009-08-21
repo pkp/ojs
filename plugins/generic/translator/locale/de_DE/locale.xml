@@ -74,4 +74,8 @@
 	<message key="plugins.generic.translator.deleteEmail">Diese Mail löschen</message>
 	<message key="plugins.generic.translator.saveBeforeContinuing">Stellen Sie bitte sicher, dass Sie alle Änderungen gesichert haben, bevor Sie fortfahren, oder diese sind verloren. Wollen Sie fortfahren? Wenn Sie dies tun, sind nicht-gesicherte Änderungen verloren.</message>
 	<message key="plugins.generic.translator.localeKey.description">Geben Sie einen kompletten locale-Schlüssel an, nach dem gesucht werden soll.</message>
+	<message key="plugins.generic.translator.enabled">Das Übersetzungs-Plug-In wurde aktiviert.</message>
+	<message key="plugins.generic.translator.disabled">Das Übersetzungs-Plug-In wurde ausgeschaltet.</message>
+	<message key="plugins.generic.translator.fileNotWriteable">Diese Lokaleinstellungsdateien können durch den Server nicht geschrieben werden. Änderungen in ihnen werden nicht gesichert.</message>
+	<message key="plugins.generic.translator.filesNotWriteable">Diese Lokaleinstellungsdateien können durch den Server nicht geschrieben werden. Änderungen in ihnen werden nicht gesichert.</message>
 </locale>

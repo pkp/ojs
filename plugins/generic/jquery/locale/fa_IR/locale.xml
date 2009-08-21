@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fa_IR locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="fa_IR" full_name="Persian">
+	<message key="plugins.generic.jquery.name">پلاگین ج کوئری</message>
+	<message key="plugins.generic.jquery.description"><![CDATA[با این پلاگین میتوان تعامل با جاواسکریپت وسبک دهی به محتوی او ج اس را بکمک فریم ورک
+<a href="http://www.jquery.com" target="_new">ج کوئیری</a> انجام داد.]]></message>
+	<message key="plugins.generic.jquery.descriptionDisabled"><![CDATA[با این پلاگین میتوان تعامل با جاواسکریپت وسبک دهی به محتوی او ج اس را بکمک فریم ورک
+<a href="http://www.jquery.com" target="_new">ج کوئیری</a> انجام داد.
+<strong>ج کوئری در حال حاضر نصب نیست: لطفا آنرا در مسیر {$jQueryPath} نصب کنید.</strong>]]></message>
+	<message key="plugins.generic.jquery.disabled">پلاگین ج کوئری غیر فعال است.</message>
+	<message key="plugins.generic.jquery.enabled">پلاگین ج کوئری فعال است.</message>
+	<message key="plugins.generic.jquery.settings">تنظیمات</message>
+</locale>

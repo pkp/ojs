@@ -33,4 +33,6 @@
 	<message key="plugins.generic.customLocale.file.reference">Standardtext</message>
 	<message key="plugins.generic.customLocale.file.custom">Angepasster Text</message>
 	<message key="plugins.generic.customLocale.localeKey.description">Geben Sie einen kompletten locale-Schlüssel an, nach dem gesucht werden soll.</message>
+	<message key="plugins.generic.customLocale.enabled">Das Plug-In für die Regionalanpassung wurde aktiviert.</message>
+	<message key="plugins.generic.customLocale.disabled">Das Plug-In für die Regionalanpassung wurde ausgeschaltet.</message>
 </locale>

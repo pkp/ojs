@@ -88,10 +88,6 @@
 	<message key="section.title">Název sekce</message>
 	<message key="section.abbreviation">Zkratka</message>
 	<message key="section.abbreviation.example">(Například články=ČL)</message>
-	<message key="section.default.title">Články</message>
-	<message key="section.default.abbrev">ČL</message>
-	<message key="section.default.policy"></message>
-
 	<!-- Common Article Terms -->
 	<message key="article.articles">Články</message>
 	<message key="article.submissionId">ID příspěvku</message>
@@ -588,7 +584,6 @@ Aktivní udává kolik recenzí je právě zvažováno nebo zpracováváno.]]></
 	
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Komentář korektora</message>
-	<message key="submission.archiveSubmission">Archivovat příspěvek</message>
 	<message key="submission.proofread.corrections">Korekční opravy</message>
 	<message key="submission.proofread.instructions">Instrukce pro korektury</message>
 
@@ -832,8 +827,6 @@ Váš server aktuálně podporuje mbstring: <strong>{$supportsMBString}</strong>
 	<message key="installer.additionalLocalesInstructions">Zvolte jakékoliv doplňkové jazyky, které mají být podorovány v tomto systému. Tyto jazyky budou dostupné pro použití v časopisech hostovaných na této stránce. Doplňkové jazyky mohou být také kdykoliv nainstalovány přes webové administrační rozhraní.</message>
 	<message key="installer.filesDirInstructions"><![CDATA[Zadejte celou cestu k existujícímu adresáři, ve kterém se mají uchovávat nahrané soubory. Tento adresář by neměl být přímo dostupný z webu. <strong>Prosím, před zahájením instalace se ujistěte, že tento adresář existuje a je zapsatelný.</strong> Ve Windows by měla cesta obsahovat dopředná lomítka, např.: "C:/myjournal/files".]]></message>
 	<message key="installer.databaseSettingsInstructions">OJS vyžaduje přístup k SQL databázy, aby mohl uchovávat svoje data. Vit systémové požadavky výše pro seznam podporovaných databází. Do políček níže uveďte nastavení, které má být použito pro připojení do databáze.</message>
-	<message key="installer.installOJS">Instalovat Open Journal Systems</message>
-	<message key="installer.upgradeOJS">Upgradovat Open Journal Systems</message>
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Varování:</b> Pokud instalace selhala v průběhu instalace databáze, budete možná muset odstranit Vaši OJS databázy nebo databázové tabulky před tím, než se pokusíte databázy přeinstalovat.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>DŮLEŽITÉ!</h4>
 <p>Instalace nemohla automaticky přepsat konfigurační soubor. Než se pokusíte používat systém, otevřete prosím <tt>config.inc.php</tt> ve vhodném textovém editoru a nahraďte jeho obsah obsahem níže uvedeného textového pole.</p>]]></message>
@@ -962,146 +955,9 @@ Ověřování může selhat při vyhledávání URL, které vyžadují "posted f
 	 * DEFAULT - Default settings for setup items.
 	 *
 	-->
-	<message key="default.journalSettings.checklist.notPreviouslyPublished">Příspěvek nebyl doposud publikován, ani není předložen jinému časopisu k posouzení (nebo bylo v komentáři poskytnuto editorovi vysvětlení).</message>
-	<message key="default.journalSettings.checklist.fileFormat">Subor s příspěvkem je v dokumnetovém formátu OpenOffice, Microsoft Word, RTF nebo WordPerfect.</message>
-	<message key="default.journalSettings.checklist.addressesLinked">Všude, kde to bylo možné, byly poskytnuty URL adresy k referencím.</message>
-	<message key="default.journalSettings.checklist.submissionAppearance">Řádkování textu je jednoduché; je použita 12 bodová velikost písma; spíše než podtrhávání, je použita kurzíva (kromě URL adres); všechny ilustrace, obrázky a tabulky jsou umístěny v textu na požadovaném místě, spíše než na konci.</message>
-	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Text je v souladu se stylistickými a bibliografickými požadavky vymezenými v <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">pokynech autorům</a>, které lze nalézt v části O časopisu.]]></message>
-	<message key="default.journalSettings.checklist.anonymous"><![CDATA[Pokud je příspěvek zasílán do recenzované sekce časopisu, byly dodrženy instrukce pro <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">zajištění anonymní recenze</a>).]]></message>
-	<message key="default.journalSettings.privacyStatement">Jména a emailové sdresy vložené na stránkách tohoto časopisu budou použity výhradně pro stanovené potřeby tohoto časopisu a nebudou zpřístupněny k jinému využití ani žádné třetí straně.</message>
-	<message key="default.journalSettings.openAccessPolicy">Tento časopis poskytuje okamžitý otevřený přístup ke svému obsahu na principu, podle kterého volné zpřístupnění výsledků výzkumu podporuje větší celosvětovou výměnu poznatků.</message>
-	<message key="default.journalSettings.authorSelfArchivePolicy">Tento časopis dovoluje a doporučuje autorům zavěsit příspěvky do časopisu na osobních webových stránkách nebo v instituciálních archivech, a to jak před jejich publikováním, tak po něm. Přitom je potřeba uvést bibliografické údaje, které, pokud je to možné, dokládají publikování příspěvku v tomto časopisu.</message>
-	<message key="default.journalSettings.copyeditInstructions"><![CDATA[Etapa redigování příspěvku je zaměřena na zkvalitnění toku textu, jeho srozumitelnosti, gramatiky, stylizace a formátování. Představuje pro autora poslední šanci, kdy může udělat v textu nějakou podstatnou změnu, protože další etapa je již omezena pouze na opravy překlepů a formátování.
-
-Soubor pro redigování je ve formátu Word nebo .rtf, a proto může být snadno upravován jako textový dokument. Uvedený soubor instrukcí nabízí dva přístupy k redigování. Jeden je založen na nástroji Revize v programu Microsoft Word a vyžaduje, aby redaktor, editor i autor měli k dispozici tento program. Druhý systém, který nezávisí na softwaru, byl s dovolením vypůjčen od Harvard Educational Review. Editor může pozměnit tyto instrukce, aby lépe vyhovovaly požadavkům tohoto časopisu.
-
-<h4>Systémy pro redigování</h4>
-
-<b>1. Revize programu Microsoft Word</b>
-
-Nástroj Revize (nachází se v menu pod položkou nástroje) umožňuje redaktorovi vkládat (vložený text se zobrazí barevně) a mazat (smazaný text bude zobrazen barevně a přeškrtnutý nebo na okraji a označen jako odstraněný) text. Redaktor může vznést dotazy na autora (Dotaz na autora) i na editora (Dotaz na editora) tím, že tyto dotazy vloží do hranatých závorek. Potom redaktor nahraje redigovanou verzi příspěvku a uvědomí editora. Editor překontroluje text a uvědomí autora.
-
-Editor a autor by měli ponechat ty změny, se kterými jsou spokojeni. Pokud je třeba udělat další změny, editor a autor mohou pozměnit původně vložený nebo smazaný text, stejně tak lze vložit nebo smazat nové časti na jiném místě v textu. Autoři a editoři by se měli vyjádřit ke každému dotazu, který na ně byl vznesen a svou odpověď vložit do hranatých závorek.
-
-Poté, co byl text zkontrolován editorem a autorem, redaktor naposledy projde text a přijme změny, aby ho připravil pro další etapy zpracování (typografické úpravy a korektury).
-
-
-<b>2. Harvard Educational Review </b>
-
-<b>Instrukce pro elektronické redigování příspěvku</b>
-
-Postupujte prosím podle následujícího protokolu pro elektronické redigování Vašeho příspěvku:
-
-<b>Reakce na doporučené změny</b>
-&nbsp; U každé doporučené změny, kterou jste přijali, změňte text z tučného na normální
-&nbsp; U každé doporučené změny, kterou nepřijmete, vložte opět původní text a zvýrazněte ho <b>tučně</b>
-
-<b>Doplňování a mazání</b>
-&nbsp; Označte doplněné části <b>tučným</b> zvýrazněním nového textu
-&nbsp; Nahraďte smazané části: <b>[smazaný text]</b>
-&nbsp; Pokud smažete jednu nebo více vět, uveďte to prosím v poznámce, např. <b>[smazány 2 věty]</b>
-
-<b>Odpovídání na dotazy na autora (DA)</b>
-&nbsp; Ponechte všechny DA beze změny a tučně zvýrazněné v textu. Nemažte je.
-&nbsp; Pro odpověď přidejte za DA komentář. Komentáře by měly být vymezeny použitím:
-<b>[Komentář:</b>]
-&nbsp; např.: <b>[Komentář: Rozšířena diskuze k metodice, jak bylo doporučeno]</b>
-
-<b>Vytváření komentářů</b>
-&nbsp; Použijte komentář pro vysvětlení změn uspořádání nebo pro významnější opravy
-&nbsp; např.: <b>[Komentář: Přesunul jsem výše uvedený odstavec ze str. 5 na str. 7]</b>
-&nbsp; Poznámka: Pokud se odkazujete na čísla stránek, použijte prosím čísla stránek z tištěné kopie příspěvku, která Vám byla zaslána. Je to důležité, protože čísla stránek se mohou změnit, pokud je prováděno elektronické redigování dokumentu.
-
-<h4>Ukázka elektronického redigování</h4>
-
-<b>Původní soubor příspěvku</b>
-
-Dříve, než dramaticky odstoupíte od struktury a uspořádání vašeho původního rukopisu, překontrolujte ho s jeho koeditory. Poté, co budete hotovi s úpravami, přejmenujte soubor z JmenoAutoraDA.doc na JmenoAutoraDAR.doc (např.: z NovakDA.doc na NovakDAR.doc). Vytiskněte kopii příspěvku a pošlete ji poštou spolu s disketou obsahující kompletně opravený a přejmenovaný soubor dokumentu.
-
-
-<b>Příspěvek zaslaný zpět autorovi spolu s dotazy a návrhy</b>
-
-Dříve, než dramaticky odstoupíte od struktury a uspořádání <b>[smazána 2 slova]</b> rukopisu, <b>který vám vracíme</b>, překontrolujte ho s <b>[smazána 2 slova]</b><b>editory, kteří ho mají na starosti</b>. Poté, co budete hotovi s úpravami, přejmenujte soubor z JmenoAutoraDA.doc na JmenoAutoraDAR.doc (např.: z NovakDA.doc na NovakDAR.doc). Vytiskněte kopii příspěvku a pošlete ji poštou spolu s disketou obsahující kompletně opravený a přejmenovaný soubor dokumentu. <b>[DA: V odstavci by bylo vhodné zdůraznit důležitost pečlivého dodržení instrukcí pro elektronické redigování. Jinak může dojít k výraznému zpomalení edičního procesu]</b>
-
-<b>Opravený příspěvek zaslaný zpět redakci</b>
-
-Dříve, než dramaticky odstoupíte od struktury a uspořádání rukopisu, který vám vracíme, překontrolujte ho s editory, kteří ho mají na starosti. <b>Pochopte prosím, že pokud nedodržíte následující instrukce, publikování Vašeho příspěvku může být značně zpomaleno.</b>
-
-Poté, co budete hotovi s úpravami, přejmenujte soubor z JmenoAutoraDA.doc na JmenoAutoraDAR.doc (např.: z NovakDA.doc na NovakDAR.doc). Vytiskněte kopii příspěvku a pošlete ji poštou spolu s disketou obsahující <b>[smazáno slovo]</b> opravený a přejmenovaný soubor dokumentu. <b>[DA: V odstavci by bylo vhodné zdůraznit důležitost pečlivého dodržení instrukcí pro elektronické redigování. Jinak může dojít k výraznému zpomalení edičního procesu] [Komentář: S ohledem na Vaše doporučení jsem přidal větu.]</b>
-
-<b>Poznámky:</b>
-&bull; Odebrání tučného zvýraznění textu poukazuje na přijetí doporučené změny v první větě
-&bull; Přidána věta v reakci na DA. Tučný text poukazuje na přidání nového textu
-&bull; [smazáno slovo] poukazuje na smazání slova "kompletně"
-&bull; Komentář obsahuje odpověď na DA od redaktora.]]></message>
-
-	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Přidání odkazů na reference v průběhu provádění typografických úprav</h4>
-	<p>Když převádíte příspěvek do HTML nebo PDF, ujistěte se, že všechny hyperlinky v příspěvku jsou aktivní.</p>
-	<h4>A. Pokud autor uvede u reference URL odkaz </h4>
-	<ol>
-	<li>Dokud je ještě příspěvek v textovém editoru (např.: Word), vložte frázi ZOBRAZIT POLOŽKU za každou referenci obsahující URL adresu.</li>
-	<li>Převeďte tuto frázi na hyperlink tím, že ji označíte a použijete nástroj Wordu pro vkládání odkazů. Využijte přitom URL adresu, kterou poskytl autor.</li>
-	</ol>
-	<h4>B. Umožněte čtenářům vyhledat referenci pomocí Google Scholar</h4>
-	<ol>
-	<li>Dokud je ještě příspěvek v textovém editoru (např.: Word), zkopírujte název práce uvedené v referenčním seznamu (pokud se zdá být název příliš krátký nebo obecný – např.: „Mír“ – pak zkopírejte autora a název).</li>
-	<li>Vložte název reference mezi dvojici %22 a vepište + mezi jednotlivá slova: http://scholar.google.com/scholar?q=%22VLOŽTE+NÁZEV+SEM%22&hl=en&lr=&btnG=Search</li>
-	<li>Přidejte frázi GS SEARCH na konec každé citace v referenčním seznamu příspěvku.</li>
-	<li>Převeďte tuto frázi na hyperlink tím, že ji označíte a použijete nástroj Wordu pro vkládání odkazů. Využijte přitom odpovídající URL adresu, kterou jste si připravili v kroku č. 2.</li>
-	</ol>
-	<h4>C. Umožněte čtenářům vyhledat referenci pomocí DOI</h4>
-	<ol>
-	<li>Dokud je ještě příspěvek v textovém editoru, nakopírujte dávku referencí do CrossRef Text Query http://www.crossref.org/freeTextQuery/</li>
-	<li>Vložte každý DOI, který Query poskytne do následující URL adresy (mezi = a &): http://www.cmaj.ca/cgi/external_ref?access_num=VLOŽTE DOI SEM&link_type=DOI</li>
-	<li>Přidejte frázi CrossRef na konec každé citace v referenčním seznamu příspěvku.</li>
-	<li> Převeďte tuto frázi na hyperlink tím, že ji označíte a použijete nástroj Wordu pro vkládání odkazů. Využijte přitom odpovídající URL adresu, kterou jste si připravili v kroku č. 2.</li>
-	</ol>]]></message>
-
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>Etapa provádění korektur je určena pro zachycení jakýchkoliv pravopisných, gramatických a formálních chyb. Podstatnější změny již v této etapě není možné bez předchozí konzultace s editorem provádět. V typografických úpravách, klikněte na ZOBRAZIT PRO KOREKCI, aby jste mohli prohlížet HTML, PDF a jiné dostupné formáty souborů použité pro publikování dané položky.</p>
-<h4>Pro chyby v pravopisu a gramatice</h4>
-
-<p>Zkopírujte problémové slovo nebo skupinu slov a vložte je následujícím způsobem do pole pro korekční opravy s uvedením instrukce pro editora “ZMĚNIT-NA“…</p>
-
-<pre>1. ZMĚNIT...
-níž jež ostatní
-NA...
-níž než ostatní</pre>
-<br />
-<pre>2. ZMĚNIT...
-Malinowsky
-NA...
-Malinowski</pre>
-<br />
-
-<h4>Pro chyby ve formátování</h4>
-
-<p>Popište následujícím způsobem místo výskytu a povahu problému v poli pro korekční opravy. Korekci uveďte frází "FORMÁTOVÁNÍ"...</p>
-<br />
-<pre>3. FORMÁTOVÁNÍ
-Čísla v Tabulce 3 nejsou ve třetím sloupci zarovnána.</pre>
-<br />
-<pre>4. FORMÁTOVÁNÍ
-Odstavec, který začíná "Toto poslední téma..." nebyl zamýšlený.</pre>]]></message>
-	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________
-{$journalName}
-{$indexUrl}/{$journalPath}
-]]></message>
-	<message key="default.journalSettings.forReaders"><![CDATA[Pobízíme čtenáře, aby se zapsali do služby pro oznamování nově vydaných čísel tohoto časopisu. Použijte odkaz <a href="{$indexUrl}/{$journalPath}/user/register">Registrovat</a> v horní části domácí stránky časopisu. Díky této registraci bude čtenář dostávat emailem obsah každého nově vydaného čísla. Seznam čtenářů rovněž umožňuje časopisu doložit určitou úroveň podpory nebo čtenosti časopisu. Viz <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Prohlášení o soukromí</a> tohoto časopisu, které ujišťuje čtenáře, že jejich jméno a emailová adresa nebudou použity pro jiné účely.]]></message>
-	<message key="default.journalSettings.forAuthors"><![CDATA[Máte zájem publikovat v tomto časopisu? Doporučujeme pročtení stránky <a href="{$indexUrl}/{$journalPath}/about">O časopisu</a>, kde jsou uvedeny pravidla časopisu pro jednotlivé sekce, stejně jako <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Pokyny autorům</a>. Než mohou autoři odeslat příspěvek, musí se do časopisu <a href="{$indexUrl}/{$journalPath}/user/register">zaregistrovat</a> nebo pokud již registrovaní jsou, mohou se jednoduše <a href="{$indexUrl}/index/login">přihlásit</a> a zahájit pětistupňový proces.]]></message>
-	<message key="default.journalSettings.forLibrarians"><![CDATA[Pobízíme knihovníky, aby uváděli tento časopis ve svém seznamu volně dostupných elektronických publikací. Také může být vhodné poznamenat, že open source redakční software, který tento časopis využívá, je vhodný pro použití s časopisy, v jejichž redakcích mohou členové fakult dané univerzity pracovat (viz <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
-	<message key="default.journalSettings.lockssLicense"><![CDATA[Tento časopis využívá systém LOCKSS pro vytvoření distribuovaného archivačního systému mezi zúčastněnými knihovnami a dovoluje těmto knihovnám vytvářet trvalé archivy časopisu pro účely jeho uchování a obnovení. <a href="http://lockss.org/">Více...</a>]]></message>
-	
 	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.submissionFeeDescription">Je vyžadováno, aby autoři během procesu odesílání příspěvku zaplatili Poplatek za zpracování článku a příspěli tím k uhrazení nákladů na recenzní řízení.</message>
-	<message key="default.journalSettings.fastTrackFeeDescription">Po zaplacení tohoto poplatku je garantováno zpracování recenze, rozhodnutí editora a uvědomění autora příspěvku do 4 týdnů.</message>
-	<message key="default.journalSettings.publicationFeeDescription">Pokud bude tento příspěvek přijat k publikování, budete požádán o zaplacení Poplatku za publikování článku k pokrytí nákladů na jeho vydání.</message>
-	<message key="default.journalSettings.waiverPolicy">Pokud nemáte prostředky pro zaplacení těchto poplatků, budete mít příležitost požádat o jejich prominutí. Nechceme, aby poplatky znemožnili publikování hodnotných prací.</message>
-	<message key="default.journalSettings.membershipFeeDescription">Zaplacení tohoto poplatku vás přihlásí jako člena této asociace na jeden rok a poskytne vám volný přístup k tomuto časopisu.</message>
-	<message key="default.journalSettings.donationFeeDescription">Časopis s vděčností přijímá dary jakýchkoliv částek. Pro editory budou prostředkem k udržení vysoké kvality časopisu pro čtenáře.</message>
-	<message key="user.profile.form.profileImageInvalid">Neplatný obrázek profilu nebo příliš velký obrázek. Podporované formáty jsou .gif, .jpg nebo .png a obrázek nesmí překročit velikost 150x150 pixelů.</message>
 	<message key="about.aboutThisPublishingSystem.altText">OJS ediční a vydavatelský proces</message>
 	<message key="help.searchReturnResults">Zpět k výsledkům vyhledávání</message>
-	<message key="default.journalSettings.purchaseArticleFeeDescription">Zaplacení tohoto poplatku Vám umožní prohlédnutí, stažení a tisk tohoto článku.</message>
 	<message key="submission.reviewForm">Formulář posudku</message>
 	<message key="submission.reviewFormResponse">Odpovědi na formulář posudku</message>
 	<message key="reviewer.article.enterReviewForm">Pro vyplnění formuláře posudku klikněte na ikonu.</message>
@@ -1131,29 +987,99 @@ Odstavec, který začíná "Toto poslední téma..." nebyl zamýšlený.</pre>]]
 	<message key="submission.layout.publicGalleyId">Identifikátor veřejné sazebnice</message>
 	<message key="submission.layout.galleyPublicIdentificationExists">Identifikace veřejné sazebnice již existuje.</message>
 	<message key="payment.type.purchaseArticle">Zaplatit poplatek za článek</message>
-	<message key="common.ccLicense"><![CDATA[<br /><br />
-<a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new"><img alt="Licence Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />
-Tato práce je licencována pod <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new">Creative Commons Attribution 3.0 licencí</a>.]]></message>
 	<message key="journal.issn">ISSN</message>
-	<message key="manager.setup.doiSuffix">DOI přípona</message>
-	<message key="manager.setup.doiSuffixDefault">Použít výchozí vzorec (%j.v%vi%i.%a).</message>
-	<message key="manager.setup.doiSuffixPattern">Pro generování DOI přípon použít níže vložený vzorec. Použít %j pro iniciály časopisu, %v pro číslo ročníku, %i pro číslo čísla, %a pro ID článku v OJS a %p pro číslo stránky.</message>
-	<message key="manager.setup.doiSuffixPattern.example">Například vol%viss%ipp%p by vytvořilo DOI jako 10.1234/vol3iss2pp230</message>
-	<message key="manager.setup.doiSuffixDescription">DOI přípona může mít libovolnou formu, ale musí být pro každou publikovanou položku jedinečná.</message>
-	<message key="manager.setup.doiSuffixCustomIdentifier">Použít "Uživatelský identifikátor" jako DOI příponu u publikovaných položek (musí být povoleno v Kroku 4).</message>
-	<message key="manager.setup.publisherNoteDescription">Tento text se zobrazí pod titulkem "Vydavatel" a nad jménem/url vydavatele pod "Sponzorování časopisu" na stránce "O časopisu".</message>
-	<message key="manager.setup.sponsorNoteDescription">Tento text se zobrazí pod titulkem "Sponzoři" a nad seznamem jmen a url adres sponzorů pod "Sponzorování časopisu" na stránce "O časopisu".</message>
-	<message key="manager.setup.contributorNoteDescription">Tento text se zobrazí pod titulkem "Zdroje podpory" a nad seznamem jmen a url adres podporujících organizací pod "Sponzorování časopisu" na stránce "O časopisu".</message>
-	<message key="manager.setup.form.doiPrefixPattern">DOI vzorec musí být ve formátu 10.xxxx.</message>
-	<message key="author.submit.mustEnterWaiverReason">Pokud žádáte o prominutí platby, musíte do patřičné kolonky uvést důvod.</message>
-	<message key="author.submissions.queuedReviewSubsequent">V recenzním kole {$round}</message>
-	<message key="author.submissions.queuedReviewRevisions">V recenzi: Vyžadováno přepracování</message>
-	<message key="author.submissions.queuedEditingCopyedit">Editování: Vyžádáno redigování</message>
-	<message key="author.submissions.queuedEditingProofread">Editování: Vyžádána korektura</message>
-	<message key="common.ccLicense.rt"><![CDATA[<div class="rtBlock">
-		<br />
-		<a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new"><img alt="Licence Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
-		<br />
-		Tato práce je licencována pod <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new">Creative Commons Attribution 3.0 licencí</a>.
-	</div>]]></message>
+	<message key="article.article">Článek</message>
+	<message key="article.citations">Reference</message>
+	<message key="submission.citations">Reference</message>
+	<message key="subscriptionTypes.currency">Měna</message>
+	<message key="subscriptionTypes.year">rok</message>
+	<message key="subscriptionTypes.years">roků</message>
+	<message key="subscriptionTypes.month">měsíc</message>
+	<message key="subscriptionTypes.months">měsíců</message>
+	<message key="subscriptionTypes.nonExpiring">Nevyprší</message>
+	<message key="subscriptionTypes.format">Formát</message>
+	<message key="subscriptionTypes.format.online">Online</message>
+	<message key="subscriptionTypes.format.print">Tištěný</message>
+	<message key="subscriptionTypes.format.printOnline">Tištěný a online</message>
+	<message key="subscriptions.inactive">Neaktivní</message>
+	<message key="subscriptions.status">Stav</message>
+	<message key="subscriptions.status.active">Aktivní</message>
+	<message key="subscriptions.status.needsInformation">Vyžaduje informace</message>
+	<message key="subscriptions.status.needsApproval">Vyžaduje schválení</message>
+	<message key="subscriptions.status.awaitingManualPayment">Čekání na ručně provedenou platbu</message>
+	<message key="subscriptions.status.awaitingOnlinePayment">Čekání na online platbu</message>
+	<message key="subscriptions.status.other">Jiné, viz poznámky</message>
+	<message key="subscriptionManager.individualSubscriptions">Individuální předplatné</message>
+	<message key="subscriptionManager.institutionalSubscriptions">Institucionální předplatné</message>
+	<message key="subscriptionManager.subscriptionTypes">Typy předplatného</message>
+	<message key="user.subscriptions.form.deleteIpRange">Smazat</message>
+	<message key="user.subscriptions.form.addIpRange">Přidat</message>
+	<message key="about.subscriptionTypes.format">Formát</message>
+	<message key="about.subscriptionTypes.duration">Trvání</message>
+	<message key="installer.installApplication">Instalovat Open Journal Systems</message>
+	<message key="installer.upgradeApplication">Upgradovat Open Journal Systems</message>
+	<message key="user.manageMySubscriptions">Spravovat moje předplatné</message>
+	<message key="subscriptions.individualDescription">Individuální předplatné vyžaduje pro přístup k obsahu předplatného přihlášení.</message>
+	<message key="subscriptions.institutionalDescription">Institucionální předplatné nevyžaduje přihlášení. Pro udělení přístupu k předplacenému obsahu je použita doména uživatele a/nebo IP adresa.</message>
+	<message key="subscriptions.institutionalOnlinePaymentDescription"><![CDATA[<strong>Poznámka:</strong> Institucionální předplatné pořízené online vyžaduje schválení domény a IP adresy před tím, než je předplatné aktivováno.]]></message>
+	<message key="plugins.categories.oaiMetadataFormats">Plugin formátu OAI metadat</message>
+	<message key="plugins.categories.oaiMetadataFormats.description">Tyto formátové pluginy vydávají matadata v OAI komunikaci.</message>
+	<message key="manager.setup.reviewProcessEmailDescription">Editoři posílají recenzentům požadavky na recenze s příspěvkem v příloze emailu. Recenzenti posílají editorům jejich souhlas (nebo odmítnutí) se zpracováním recenze a stejně tak posudek a doporučení. Editoři vkládají souhlas (nebo odmítnutí) a stejně tak posudek a doporučení na stránkách pro recenzování příspěvku, aby zaznamenali recenzní řízení.</message>
+	<message key="manager.setup.citations">Povolit autorům samostatně poskytnout formátovaný seznam referencí (citací) jako součást jejich příspěvku.</message>
+	<message key="reviewer.article.reviewGuidelinesDescription">Pokyny pro zpracování recenze poskytnou recenzentům kritéria pro posouzení vhodnosti příspěvku k publikování v časopisu a muhou zahrnovat jakékoliv specifické instrukce pro přípravu efektivního a užitečného (nápomocného) posudku. Při zpracování recenze mají recenzenti k dispozici dvě otevřená textová pole - provní "pro autora a editora" a druhé "pro editora." Alternativně může manažer časopisu pod "Forluláři posudků" vytvořit formulář posudku. V každem případě budou mít editoři možnost vložit posudky do korespondece s autorem.</message>
+	<message key="author.submit.submissionCitations">Uveďte formátovaný seznam referencí pro práce citované v tomto příspěvku.</message>
+	<message key="user.subscriptions.mySubscriptions">Moje předplatné</message>
+	<message key="user.subscriptions.individualSubscriptions">Individuální předplatné</message>
+	<message key="user.subscriptions.institutionalSubscriptions">Institucionální předplatné</message>
+	<message key="user.subscriptions.renew">Obnovit</message>
+	<message key="user.subscriptions.purchase">Koupit</message>
+	<message key="user.subscriptions.purchaseNewSubscription">Koupit nové předplatné</message>
+	<message key="user.subscriptions.purchaseIndividualSubscription">Koupit individuální předplatné</message>
+	<message key="user.subscriptions.purchaseInstitutionalSubscription">Koupit institucionální předplatné</message>
+	<message key="user.subscriptions.expires">Vyprší</message>
+	<message key="user.subscriptions.expired">Vypršené</message>
+	<message key="user.subscriptions.viewSubscriptionTypes">Zobrazit dostupné typy předplatného</message>
+	<message key="user.subscriptions.form.typeId">Typ předplatného</message>
+	<message key="user.subscriptions.form.membership">Členství</message>
+	<message key="user.subscriptions.form.membershipRequired">Zvolený typ předplatného vyžaduje informace o členství.</message>
+	<message key="user.subscriptions.form.typeIdValid">Zvolte prosím platný typ předplatného.</message>
+	<message key="user.subscriptions.form.subscriptionExists">Tento uživatelský účet již má individuální předplatné.</message>
+	<message key="user.subscriptions.form.membershipInstructions">Informace o členství pokud jsou požadovány pro zvolený typ předplatného.</message>
+	<message key="user.subscriptions.form.institutionName">Název instituce</message>
+	<message key="user.subscriptions.form.institutionNameRequired">Je vyžadován název instituce.</message>
+	<message key="user.subscriptions.form.institutionMailingAddress">Poštovní adresa</message>
+	<message key="user.subscriptions.form.domain">Doména</message>
+	<message key="user.subscriptions.form.ipRange">Rozsah IP</message>
+	<message key="user.subscriptions.form.ipRangeItem"><![CDATA[&#8226;]]></message>
+	<message key="user.subscriptions.form.ipRangeValid">Vložte prosím platný rozsah IP.</message>
+	<message key="about.history">Historie časopisu</message>
+	<message key="about.subscriptions.individual">Individuální předplatné</message>
+	<message key="about.subscriptions.institutional">Institucionální předplatné</message>
+	<message key="about.subscriptionTypes.name">Jméno</message>
+	<message key="about.subscriptionTypes.cost">Cena</message>
+	<message key="payment.subscription.purchase">Koupit předplatné</message>
+	<message key="notification.type.editing">Události editování</message>
+	<message key="notification.type.issuePublished">Bylo vydáno číslo.</message>
+	<message key="notification.type.newAnnouncement">Bylo vytvořeno nové oznámení.</message>
+	<message key="notification.type.reviewing">Události recenzí</message>
+	<message key="notification.type.site">Události na stránkách</message>
+	<message key="notification.type.submissions">Události příspěvku</message>
+	<message key="user.subscriptions.form.domainInstructions"><![CDATA[Pokud je zde vložena doména, je rozsah IP volitelný.<br />Platné hodnoty jsou doménová jména (např.: lib.sfu.ca).]]></message>
+	<message key="user.subscriptions.form.domainIPRangeRequired">Zvolený typ předplatného vyžaduje doméno a/nebo IP rozsah pro ověření předplatného.</message>
+	<message key="user.subscriptions.form.domainValid">Vložte prosím platnou doménu.</message>
+	<message key="user.subscriptions.form.ipRangeInstructions"><![CDATA[Pokud je zde vložen rozsah IP, je doména volitelná.<br />Platné hodnoty zahrnují IP adresu (např.: 142.58.103.1), IP rozsah (např.: 142.58.103.1 - 142.58.103.4), IP rozsah se zástupným symbolem '*' (např.: 142.58.*.*), a IP rozsah s CIDR (např.: 142.58.100.0/24).]]></message>
+	<message key="notification.mailListDescription">Pro příjem okamžitých oznámení o přidání důležitého nového obsahu do časopisu vložte vaši emailovou adresu.</message>
+	<message key="notification.notificationsPublicDescription"><![CDATA[Tato stránka zobrazuje důležité aktuality související s tímto časopisem - například vydání nového čísla nebo oznámení. Můžete se přihlásit k odběru těchto oznámení prostřednictvím RSS čtečky (kliknutím na obrázek napravo) nebo <a href="{$emailUrl}">prostřednictvím emailu.</a>]]></message>
+	<message key="notification.type.articleSubmitted">Byl odeslán nový článek "{$param}".</message>
+	<message key="notification.type.copyeditComment">Redaktor zanechal komentář u "{$param}".</message>
+	<message key="notification.type.editorDecisionComment">Byl zanechán komentář k rozhodnutí editora pro "{$param}".</message>
+	<message key="notification.type.galleyModified">Byla změněna sazebnice pro "{$param}".</message>
+	<message key="notification.type.layoutComment">Byl zanechán komentář ke grafickému formátu pro "{$param}".</message>
+	<message key="notification.type.metadataModified">Byla modifikována metadata pro "{$param}".</message>
+	<message key="notification.type.proofreadComment">Korektor zanechal komentář pro "{$param}".</message>
+	<message key="notification.type.reviewerComment">Recenzent zanechal komentář pro "{$param}".</message>
+	<message key="notification.type.reviewerFormComment">Byl odeslán recenzní posudek pro "{$param}".</message>
+	<message key="notification.type.submissionComment">Editora zanechal komentář pro "{$param}".</message>
+	<message key="notification.type.suppFileModified">Byl změněn doplňkový soubor(y) u "{$param}".</message>
+	<message key="notification.type.userComment">Čtenář zanechal komentář k "{$param}".</message>
 </locale>

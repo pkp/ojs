@@ -27,4 +27,6 @@
 	<message key="plugins.generic.announcementfeed.atom.altText">Atom-Logo</message>
 	<message key="plugins.generic.announcementfeed.rss1.altText">RSS1-Logo</message>
 	<message key="plugins.generic.announcementfeed.rss2.altText">RSS2-Logo</message>
+	<message key="plugins.generic.announcementfeed.enabled">Das Plug-In für das Mitteilungs-Feed wurde aktiviert.</message>
+	<message key="plugins.generic.announcementfeed.disabled">Das Plug-In für das Mitteilungs-Feed wurde ausgeschaltet.</message>
 </locale>

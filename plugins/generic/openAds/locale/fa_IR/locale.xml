@@ -25,4 +25,6 @@
 	<message key="plugins.generic.openads.orientation.left" >چپ</message>
 	<message key="plugins.generic.openads.orientation.centre" >مرکز</message>
 	<message key="plugins.generic.openads.orientation.right" >راست</message>
+	<message key="plugins.generic.openads.enabled">پلاگین تبلیغ باز فعال شده است</message>
+	<message key="plugins.generic.openads.disabled">پلاگین تبلیغ باز غیر فعال شده است</message>
 </locale>

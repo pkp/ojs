@@ -734,4 +734,178 @@ jhvdo hkrqh: {$expiryDate}
 {$principalContactSignature}</body>
 		<description>This email requests the keeper of a LOCKSS archive to consider including this journal in their archive. It provides the URL to the journal's LOCKSS Publisher Manifest.</description>
 	</email_text>
+	<email_text key="NOTIFICATION">
+		<subject>فرم اطلاع رسانی جدید {$siteTitle}</subject>
+		<body>شما یک فرم اطلاع رسانی جدید از {$siteTitle} دارید
+
+لینک: {$url}
+
+{$principalContactSignature}</body>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST">
+		<subject>فرم اطلاع رسانی جدید {$siteTitle}</subject>
+		<body>یک فرم اطلاع رسانی جدید از {$siteTitle} دارید
+--
+{$notificationContents}
+
+لینک: {$url}
+--
+
+اگر دیگر مایل نیستید این ایمیل های اطلاع رسانی را دریافت کنید، لطفا به آدرس {$unsubscribeLink} رفته و آدرس ایمیل . رمز خود را وارد کنید.
+
+
+{$principalContactSignature}</body>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
+		<subject>به لیست ایمیلی {$siteTitle} خوش آمدید</subject>
+		<body>شما جهت دریافت اطلاع رسانی از {$siteTitle} ثبت نام کرده اید.
+
+لطفا بر روی این لینک کلیک کنید تا تقاضای خود را تایید کرده آدرس ایمیل خود را به لیست اضافه کنید:
+{$confirmLink}
+
+چنانچه دی\ر مایل به دریافت ایمیل اطلاع رسانی نیستید، لطفا به آدرس {$unsubscribeLink} رفته و ایمیل و رمز خود را وارد کنید.
+
+ :رمز عبور شما برای غیر فعال کردن ایمیل اطلاع رسانی{$password}
+
+{$principalContactSignature}</body>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST_PASSWORD">
+		<subject>اطلاعات لیست ایمیلی اطلاع رسانی شما برای {$siteTitle}</subject>
+		<body>رمز عبور جدید شما برای غیر فعال سازی ایمیل اطلاع رسانی: {$password}
+
+در صورتی که دیگر مایل نیستید ایمیل اطلاع رسانی دریافت کنید، لطفا به {$unsubscribeLink} رفته و ایمیل و رمز عبور را وارد کنید.
+
+{$principalContactSignature}</body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_ACCEPT">
+		<subject>تصمیم دبیر</subject>
+		<body>{$authorName}:
+
+عنوان مجله: {$journalTitle}
+عنوان مقاله: "{$articleTitle}"
+
+هم اکنون موفق شدیم در مورد ساب میشن فوق مربوط به شما تصمیم گیری کنیم
+
+تصمیم ما به قرار زیر است:
+
+{$editorialContactSignature}</body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_REVISIONS">
+		<subject>تصمیم دبیر</subject>
+		<body>{$authorName}:
+
+در مورد مقاله شما با عنوان "{$articleTitle}" برای {$journalTitle} تصمیم گیری شد.
+
+تصمیم گرفته شده به قرار زیر است:
+
+{$editorialContactSignature}</body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_RESUBMIT">
+		<subject>تصمیم دبیر</subject>
+		<body>{$authorName}:
+
+مقاله ارسالی شما با عنوان "{$articleTitle}" برای {$journalTitle} مورد بررسی و تصمیم گیری قرار گرفت
+
+تصمیم اتخاذ شده به قرار زیر است:
+
+{$editorialContactSignature}</body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_DECLINE">
+		<subject>تصمیم دبیر</subject>
+		<body>{$authorName}:
+
+مقاله شما با عنوان "{$articleTitle}" برای {$journalTitle} مورد بررسی و تصمیم گیری واقع شد.
+
+تصمیم اتخاد شده بدین شرح است:
+
+{$editorialContactSignature}</body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
+		<subject>خرید اشتراک شخصی</subject>
+		<body>An individual subscription has been purchased online for {$journalName} with the following details.
+
+Subscription Type:
+{$subscriptionType}
+
+کاربر:
+{$userDetails}
+
+اطلاعات عضویت در صورت موجود بودن:
+{$membership}
+
+برای دیدن یا ویرایش این اشتراک لطفا به آدرس زیر بروید.
+
+Subscription URL: {$subscriptionUrl}</body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
+		<subject>خرید اشتراک سازمانی</subject>
+		<body>An institutional subscription has been purchased online for {$journalName} with the following details. To activate this subscription, please use the provided Subscription URL and set the subscription status to 'Active'.
+
+Subscription Type:
+{$subscriptionType}
+
+Institution:
+{$institutionName}
+{$institutionMailingAddress}
+
+Domain (if provided):
+{$domain}
+
+IP Ranges (if provided):
+{$ipRanges}
+
+مسئول تماس:
+{$userDetails}
+
+اطلاعات عضویت در صورت وجود:
+{$membership}
+
+برای مشاهده یا ویرایش این اشتراک به آدرس زیر بروید.
+
+آدرس اشتراک: {$subscriptionUrl}</body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INDL">
+		<subject>تمدید اشتراک شخصی</subject>
+		<body>An individual subscription has been renewed online for {$journalName} with the following details.
+
+Subscription Type:
+{$subscriptionType}
+
+کاربر:
+{$userDetails}
+
+اطلاعات عضویت در صورت وجود:
+{$membership}
+
+برای مشاهده یا ویرایش این اشتراک به آدرس زیر بروید.
+
+آدرس اشتراک: {$subscriptionUrl}</body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INSTL">
+		<subject>تمدید اشتراک سازمانی</subject>
+		<body>یک اشتراک سازمانی بصورت آن لاین برای {$journalName} با اطلاعات زیر تمدید شد.
+
+نوع اشتراک:
+{$subscriptionType}
+
+مؤسسه:
+{$institutionName}
+{$institutionMailingAddress}
+
+دامنه در صورت وجود:
+{$domain}
+
+بازه IP در صورت وجود:
+{$ipRanges}
+
+مسؤل تماس:
+{$userDetails}
+
+اطلاعات عضویت در صورت وجود:
+{$membership}
+
+برای مشاهده و ویرایش این اشتراک، لطفا به آدرس زیر بروید.
+
+آدرس اشتراک: {$subscriptionUrl}</body>
+	</email_text>
 </email_texts>

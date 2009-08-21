@@ -32,4 +32,6 @@
 	<message key="plugins.generic.customLocale.file.edit">Editování {$filename}</message>
 	<message key="plugins.generic.customLocale.file.reference">Výchozí text</message>
 	<message key="plugins.generic.customLocale.file.custom">Přizpůsobený text</message>
+	<message key="plugins.generic.customLocale.enabled">Byl povolen plugin Přizpůsobení souborů lokalizace.</message>
+	<message key="plugins.generic.customLocale.disabled">Byl zakázán plugin Přizpůsobení souborů lokalizace.</message>
 </locale>

@@ -18,4 +18,6 @@
 	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Tento plugin umožňuje WYSIWYG editování textových polí OJS s využitím <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> editor obsahu. <strong>TinyMCE není aktuálně nainstalován; prosím nainstalujte ho do {$tinyMcePath}.</strong>]]></message>
 
 	<message key="plugins.generic.tinymce.settings">Nastavení</message>
+	<message key="plugins.generic.tinymce.enabled">Byl povolen plugin TinyMCE.</message>
+	<message key="plugins.generic.tinymce.disabled">Byl zakázán plugin TinyMCE.</message>
 </locale>

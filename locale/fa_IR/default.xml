@@ -156,4 +156,12 @@ http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI
 	<message key="default.journalSettings.checklist.anonymous" ><![CDATA[در صورتی که مقاله قرار باشد کارشناسی شود ، ساب میشن از نظر  <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">رعایت کارشناسی محرمانه </a>) دستورالعمل های لازم رعایت شده است.]]></message>
 	<message key="default.journalSettings.privacyStatement" >نام ها و ایمیل های وارد شده در این سایت مجله فقط به منظور بیان شده بکار میرود و در دسترس هیچ شخص یا سازمان دیگری قرار نخواهد گرفت.</message>
 	<message key="default.journalSettings.purchaseArticleFeeDescription" >با پرداخت این وجه میتوانیذ ببینید و دانلود یا چاپ کنید</message>
+	<message key="section.default.title">مقالات</message>
+	<message key="section.default.abbrev">م ق</message>
+	<message key="default.journalSettings.submissionFee">ساب میشن مقاله</message>
+	<message key="default.journalSettings.fastTrackFee">کارشناسی سریع</message>
+	<message key="default.journalSettings.publicationFee">انتشار مقاله</message>
+	<message key="default.journalSettings.purchaseArticleFee">خرید مقاله</message>
+	<message key="default.journalSettings.membershipFee">عضویت انجمن</message>
+	<message key="default.journalSettings.donationFee">اهدا به مجله</message>
 </locale>

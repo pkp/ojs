@@ -19,5 +19,7 @@
 	<message key="plugins.block.subscription.expires">Läuft ab</message>
 	<message key="plugins.block.subscription.providedBy">Zugriff bereitgestellt durch: </message>
 	<message key="plugins.block.subscription.providedByInstitution">Zugriff bereitgestellt durch Ihre Institution</message>
-	<message key="plugins.block.subscription.comingFromIP">Sie kommen von IP: </message>
+	<message key="plugins.block.subscription.comingFromIP">Sie kommen von IP:</message>
+	<message key="plugins.block.subscription.about">Abonnements</message>
+	<message key="plugins.block.subscription.loginToVerifySubscription">Loggen Sie sich ein, um das Abonnement zu verifizieren</message>
 </locale>

@@ -64,7 +64,7 @@
 	<message key="admin.journals.form.importPathRequired">Ein Importpfad muss angegeben werden.</message>
 	<message key="admin.journals.importErrors">Der Import ist fehlgeschlagen. </message>
 	<message key="admin.mergeUsers">Benutzerkonsolidierung</message>
-	<message key="admin.mergeUsers.mergeUser">konsolidiere Benutzer</message>
+	<message key="admin.mergeUsers.mergeUser">konsolidierte Benutzer/innen</message>
 	<message key="admin.mergeUsers.into.description">Einen Adressaten für die Daten, Autorenschaften, Redaktionszuschreibungen etc. des vorherigen Benutzers auswählen</message>
 	<message key="admin.mergeUsers.from.description">Benutzer wählen, dessen Daten in ein anderes Benutzerkonto überführt werden sollen (wenn jemand zum Beispiel zwei Benutzerkonten hat). Das gewählte Konto wird gelöscht und die Daten dem zweiten Konto zugeordnet.</message>
 	<message key="admin.mergeUsers.allUsers">Alle eingeschriebenen Benutzer</message>

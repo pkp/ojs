@@ -16,4 +16,6 @@
 <locale name="de_DE" full_name="German">
 	<message key="plugins.generic.coins.displayName">COinS-Plug-In</message>
 	<message key="plugins.generic.coins.description">Das COinS-Plug-In fügt einen OpenURL-Descriptor zu Artikelseiten (Abstract und HTML) hinzu, der beispielsweise für die Extraktion der Zitationswerkzeuge genutzt werden kann.</message>
+	<message key="plugins.generic.coins.enabled">Das COinS-Plug-In wurde aktiviert.</message>
+	<message key="plugins.generic.coins.disabled">Das COinS-Plug-In wurde ausgeschaltet.</message>
 </locale>

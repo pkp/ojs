@@ -193,7 +193,7 @@
 	<message key="plugins.generic.thesis.form.studentLastName">Nachname der Dissertantin/des Dissertanten</message>
 	<message key="plugins.generic.thesis.form.studentLastNameRequired">Der Nachname ist erforderlich.</message>
 	<message key="plugins.generic.thesis.form.studentMiddleName">Mittelname der Dissertantin/des Dissertanten</message>
-	<message key="plugins.generic.thesis.form.studentEmail">E-Mailadresse der Dissertantin/des Dissertanten</message>
+	<message key="plugins.generic.thesis.form.studentEmail">E-Mail-Adresse der Dissertantin/des Dissertanten</message>
 	<message key="plugins.generic.thesis.form.studentEmailValid">Eine gültige Mailadresse ist erforderlich.</message>
 	<message key="plugins.generic.thesis.form.studentEmailPublish">Die Mailadresse veröffentlichen</message>
 	<message key="plugins.generic.thesis.form.studentEmailPublishInstructions">Nach Prüfung wird die Mailadresse der Dissertantin/des Dissertanten mit dem Abstract der Dissertation veröffentlicht.</message>
@@ -204,4 +204,6 @@
 	<message key="plugins.generic.thesis.form.supervisorMiddleName">Mittelname des Betreuers/der Betreuerin</message>
 	<message key="plugins.generic.thesis.form.supervisorEmail">E-Mail des Betreuers/der Betreuerin</message>
 	<message key="plugins.generic.thesis.form.supervisorEmailValid">Gültige Mailadresse erforderlich.</message>
+	<message key="plugins.generic.thesis.enabled">Das Plug-In für Dissertationen wurde aktiviert.</message>
+	<message key="plugins.generic.thesis.disabled">Das Plug-In für Dissertationen wurde ausgeschaltet.</message>
 </locale>

@@ -43,5 +43,7 @@
 	<message key="plugins.generic.xmlGalley.settings.customXSLRequired">Přizpůsobený soubor XSL stylesheet musí být specifikován.</message>
 	<message key="plugins.generic.xmlGalley.settings.customXSLInvalid">Nahraný soubor XSL nebyl platný. Zkontrolujte prosím soubor a zkuste to znovu.</message>
 
+	<message key="plugins.generic.xmlGalley.enabled">Byl povolen plugin XML Galley.</message>
+	<message key="plugins.generic.xmlGalley.disabled">Byl zakázán plugin XML Galley.</message>
 </locale>
 

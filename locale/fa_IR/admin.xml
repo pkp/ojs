@@ -44,18 +44,7 @@
 	<message key="admin.journals.form.pathExists">مسیر انتخاب شده قبلا توسط یک مجله دیگر انتخاب شده است</message>
 	<message key="admin.journals.enableJournalInstructions">این مجله را فعال کنید تا به صورت عمومی روی سایت نمایش داده شود</message>
 	<message key="admin.journals.journalDescription">توصیف مجله</message>
-	<message key="admin.journals.importOJS1">انتقال از او ج اس ۱</message>
-	<message key="admin.journals.importOJS1.success">وارد کردن مجله با موفقیت تمام شد</message>
-	<message key="admin.journals.importOJS1.editMigratedJournal">مجله منتقل شده را ویرایش کن</message>
-	<message key="admin.journals.importOJS1.redirect.desc">برای تغییر مسیر آدرس او ج اس ۱ به آدرس او ج اس ۲ فایلهای پی اج پی با محتوای زیر را ایجاد کرده و در پوشه های مربوطه در او ج اس ۱ قرار دهید. در صورتی که اوج اس ۲ شما تک مجله ای است میتوانید این فایها را در پوشه های مربوطه در اوج اس ۲ بگذارید.</message>
-	<message key="admin.journals.importOJS1.redirect.ojs1root">در پوشه او ج اس ۱ قرار دهید</message>
-	<message key="admin.journals.importOJS1.redirect.ojs1orojs2root">در پوشه های مربوطه در او ج اس ۱ قرار دهید. در صورتی که اوج اس ۲ شما تک مجله ای است میتوانید این فایها را در پوشه های مربوطه در اوج اس ۲ بگذارید.</message>
-	<message key="admin.journals.importOJS1.conflict.desc">پرونده بعضی کاربران اطلاعات ضد ونقیضی دارد. در OJS 1.x  چند کاربر میتوانند ایمیل یکسانی داشته باشند ، ولی OJS 2.x این اجازه را نمیدهد. در لیست زیر ، برای کاربر دوم یک ایمیل موقت در نظر گرفته شده است که باید به جای آن ایمیل واقعی کاربر درج شود. برای این کار می توان یک ایمیل متفاوت با دیگر کاربران منظور کرد و یا دو کاربر را در هک ادغام کرد.</message>
-	<message key="admin.journals.importOJS1.conflict">{$firstUsername} ({$firstName}) و {$secondUsername} ({$secondName})</message>
-	<message key="admin.journals.importOJS1Instructions">برای اطلاعات بیشتر در مورد مهاجرت دادها از OJS 1 به 2 اطلاعات مندرج در فایل UPGRADE در شاخه doc مراجعه کنید.</message>
 	<message key="admin.journal.pathImportInstructions">مسیر موجود یا مسیری که باید ایجاد شود. مثال: ojs</message>
-	<message key="admin.journal.importPath">OJS 1 مسیر</message>
-	<message key="admin.journal.importPathInstructions">مسیر کامل سیستم فایل موضعی به سوی محلی که OJS 1 نصب شده است. مانند: &quot;/var/www/ojs&quot;.</message>
 	<message key="admin.journals.importSubscriptions">وارد کردن اشتراک ها</message>
 	<message key="admin.journals.transcode">انتقال کد دادههای مقاله از ISO8859-1</message>
 	<message key="admin.journals.redirect">تولید کد لازم برای تطبیق آدرس او ج اس ۱ به ۲</message>
@@ -67,5 +56,6 @@
 	<message key="admin.mergeUsers.from.description">کاربری را برای ادغام با حساب کاربر دیگر انتخاب کنید (مثال وقتی که شخصی دو حساب کاربری دارد ) حسابی که در ابتدا انتخاب شده پاک می شود و سابمیشن ها , انتسابها و غیره مربوط به آن به حساب دوم نسبت داده می شود</message>
 	<message key="admin.mergeUsers.allUsers">تمام کاربران نام نویسی شده</message>
 	<message key="admin.mergeUsers.confirm">آیا مطمئن هستید که می خواهید حساب با نام کاربری &quot;{$oldUsername}&quot; را با حساب با نام کاربری&quot;{$newUsername}&quot; ادغام کنید؟ حساب با نام کاربری&quot;{$oldUsername}&quot; دیگر وجود نخواهد داشت . این عملیات قابل بازگشت نیست</message>
-	<message key="admin.mergerUsers.noneEnrolled">هیچ کاربر نام نویسی شده ای وجود ندارد</message>
+	<message key="admin.mergerUsers.noneEnrolled">فاقد کاربر داری نقش</message>
+	<message key="admin.locale.maybeIncomplete">زبانهای مشخص شده ممکن است ناکامل باشند.</message>
 </locale>

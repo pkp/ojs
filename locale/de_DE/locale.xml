@@ -152,7 +152,7 @@
 	<message key="submissions.sec">Rub.</message>
 	<message key="submissions.step1">1. Schritt</message>
 	<message key="submissions.step3">3. Schritt</message>
-	<message key="submissions.queuedReview">Zur Begutachtung anstehend</message>
+	<message key="submissions.queuedReview">In Begutachtung</message>
 	<message key="submissions.scheduled">Geplant</message>
 	<message key="submissions.published">Veröffentlicht</message>
 	<message key="submissions.initial">Erster</message>
@@ -530,7 +530,7 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 	<message key="user.profile.form.profileImageInvalid">Ungültiges Bildformat oder zu großes Bild. Gültige Formate sind .gif, .jpg oder .png, und das Bild darf nicht größer sein als 150x150 Pixel.</message>
 	<!-- Registrierung -->
 	<message key="user.register.repeatPassword">Passwort wiederholen</message>
-	<message key="user.register.selectJournal">Wählen Sie die Zeitschrift aus, für die Sie sich registrieren wollen.</message>
+	<message key="user.register.selectJournal">Wählen Sie die Zeitschrift aus, für die Sie sich registrieren wollen</message>
 	<message key="user.register.noJournals">Auf dieser Seite gibt es keine Zeitschriften, bei denen Sie sich eintragen könnten.</message>
 	<message key="user.register.privacyStatement">Schutz persönlicher Daten</message>
 	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Hier klicken</a>, wenn Sie bereits für diese oder eine andere Zeitschrift auf dieser Seite registriert sind.]]></message>
@@ -892,4 +892,29 @@ Der Absatz, der mit "Dieses Thema schließlich ..." beginnt, ist nicht eingerüc
 	<message key="manager.setup.doiSuffixPattern">Das unten angegebene Muster verwenden, um DOI-Suffixe zu erzeugen. Benutzen Sie %j für die Zeitschriften-Initiale, %v für die Bandnummer, %i für die Ausgabennummer, %a für die OJS-Artikel-ID und %p für die Seitenzahl.</message>
 	<message key="manager.setup.contributorNoteDescription">Dieser Text wird unterhalb der "Weitere Unterstützung"-Überschrift und oberhalb der Liste der Namen und URLs weiterer unterstützender Organisationen im Abschnitt "Unterstützung" der "Über uns"-Seite erscheinen.</message>
 	<message key="author.submit.mustEnterWaiverReason">Wenn Sie einen Gebührenverzicht beantragen, müssen Sie einen Grund im vorgesehenen Platz angeben.</message>
+	<message key="article.article">Beitrag</message>
+	<message key="subscriptionTypes.year">Jahr</message>
+	<message key="subscriptionTypes.years">Jahre</message>
+	<message key="subscriptionTypes.month">Monat</message>
+	<message key="subscriptionTypes.months">Monate</message>
+	<message key="subscriptions.status">Status</message>
+	<message key="subscriptions.status.needsInformation">Information erforderlich</message>
+	<message key="user.manageMySubscriptions">Meine Abonnements verwalten</message>
+	<message key="subscriptionTypes.format">Format</message>
+	<message key="subscriptionTypes.format.online">Online</message>
+	<message key="subscriptionTypes.format.print">Print</message>
+	<message key="subscriptionTypes.format.printOnline">Print und Online</message>
+	<message key="subscriptions.inactive">Nicht aktiv</message>
+	<message key="subscriptions.status.active">Aktiv</message>
+	<message key="subscriptions.status.needsApproval">Genehmigung erforderlich</message>
+	<message key="subscriptions.status.awaitingManualPayment">Manuelle Zahlung abwarten</message>
+	<message key="subscriptions.status.awaitingOnlinePayment">Online-Zahlung abwarten</message>
+	<message key="subscriptions.individualDescription">Im Falle individueller Abonnements ist es erforderlich, sich einzuloggen, um auf Inhalte zuzugreifen.</message>
+	<message key="subscriptions.institutionalDescription">Für institutionelle Abonnements ist kein Login erforderlich. Die Domäne und/oder IP-Adresse werden genutzt, um auf Inhalte zuzugreifen.</message>
+	<message key="subscriptionManager.individualSubscriptions">individueller Abonnements</message>
+	<message key="subscriptionManager.institutionalSubscriptions">Institutionelle Abonnements</message>
+	<message key="subscriptionManager.subscriptionTypes">Abonnement-Arten</message>
+	<message key="plugins.categories.oaiMetadataFormats">Plug-In für OAI-Metadaten-Format</message>
+	<message key="manager.setup.citations">Zulassen, dass Autor/innen separat eine formatierte Literaturliste als Teil ihrer  Einreichung bereitstellen.</message>
+	<message key="manager.people.confirmDisable">Diese Nutzerin/diesen Nutzer sperren?</message>
 </locale>
