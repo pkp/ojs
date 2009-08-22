@@ -176,7 +176,7 @@ class ThesisPlugin extends GenericPlugin {
 		if ($this->getEnabled()) {
 			$smarty =& $params[1];
 			$output =& $params[2];
-			$output .= '<li><a href="' . TemplateManager::smartyUrl(array('page'=>'thesis'), $smarty) . '">' . TemplateManager::smartyTranslate(array('key'=>'plugins.generic.thesis.headerLink'), $smarty) . '</a></li>';
+			$output .= '<li><a href="' . TemplateManager::smartyUrl(array('page'=>'thesis'), $smarty) . '" target="_parent">' . TemplateManager::smartyTranslate(array('key'=>'plugins.generic.thesis.headerLink'), $smarty) . '</a></li>';
 		}
 		return false;
 	}
