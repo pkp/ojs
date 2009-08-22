@@ -579,7 +579,7 @@ class Upgrade extends Installer {
 	 * @return boolean
 	 */
 	function separateSubscriptions() {
-		import('subscription.Subscription');
+		import('subscription.InstitutionalSubscription');
 		$subscriptionDao =& DAORegistry::getDAO('SubscriptionDAO');
 
 		// Retrieve all subscriptions from pre-2.3 subscriptions table
@@ -587,14 +587,16 @@ class Upgrade extends Installer {
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			$subscriptionId = (int) $row['subscription_id'];
+			$membership = $row['membership'] ? $row['membership'] : '';
 
 			// Insert into new subscriptions table			
-			$subscriptionDao->update('INSERT INTO subscriptions (subscription_id, journal_id, user_id, type_id, date_start, date_end, status, membership, reference_number, notes) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)', array((int) $subscriptionId, (int) $row['journal_id'], (int) $row['user_id'], (int) $row['type_id'], $row['date_start'], $row['date_end'], 1, $row['membership'], '', ''));
+			$subscriptionDao->update('INSERT INTO subscriptions (subscription_id, journal_id, user_id, type_id, date_start, date_end, status, membership, reference_number, notes) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', array($subscriptionId, (int) $row['journal_id'], (int) $row['user_id'], (int) $row['type_id'], $row['date_start'], $row['date_end'], 1, $membership, '', ''));
 
 			// If institutional subscription, also add records to institutional_subscriptions
 			// and institutional_subscription_ip tables.
+			// Since institution name did not exist pre-2.3, use membership string as default for institution name
 			if ($row['institutional']) {
-				$subscriptionDao->update('INSERT INTO institutional_subscriptions (subscription_id, institution_name, mailing_address, domain) VALUES (?, ?, ?, ?, ?)', array((int) $subscriptionId, '', '', $row['domain']));
+				$subscriptionDao->update('INSERT INTO institutional_subscriptions (subscription_id, institution_name, mailing_address, domain) VALUES (?, ?, ?, ?)', array($subscriptionId, $membership, '', $row['domain']));
 				$ipRangeText = $row['ip_range'];
 
 				// Break apart pre-2.3 single ip range string which contained all ip ranges into
@@ -646,15 +648,16 @@ class Upgrade extends Installer {
 						$ipStart = sprintf('%u', ip2long(str_replace(SUBSCRIPTION_IP_RANGE_WILDCARD, '0', trim($ipStart))));
 						$ipEnd = sprintf('%u', ip2long(str_replace(SUBSCRIPTION_IP_RANGE_WILDCARD, '255', trim($ipEnd))));
 					}
-				}
 
-				if ($ipStart != null) {
-					$subscriptionDao->update('INSERT INTO institutional_subscription_ip (subscription_id, ip_string, ip_start, ip_end) VALUES(?, ?, ?, ?)', array($subscriptionId, $curIPString, $ipStart, $ipEnd));	
+					if ($ipStart != null) {
+						$subscriptionDao->update('INSERT INTO institutional_subscription_ip (subscription_id, ip_string, ip_start, ip_end) VALUES(?, ?, ?, ?)', array($subscriptionId, $curIPString, $ipStart, $ipEnd));	
+					}
 				}
 			}
 
 			$result->MoveNext();
 		}
+
 		$result->Close();
 		unset($result);
 		
