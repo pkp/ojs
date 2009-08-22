@@ -441,6 +441,24 @@ class SectionDAO extends DAO {
 			'DELETE FROM custom_section_orders WHERE issue_id = ?', $issueId
 		);
 	}
+	
+	/**
+	 * Delete a section from the custom section order table.
+	 * @param $issueId int
+	 * @param $sectionId int	 
+	 */
+	function deleteCustomSection($issueId, $sectionId) {
+		$sequence = $this->getCustomSectionOrder($issueId, $sectionId);
+		
+		$this->update(
+			'DELETE FROM custom_section_orders WHERE issue_id = ? AND section_id = ?', array($issueId, $sectionId)
+		);
+		
+		// Reduce the section order of every successive section by one		
+		$this->update(
+			'UPDATE custom_section_orders SET seq = seq - 1 WHERE issue_id = ? AND seq > ?', array($issueId, $sequence)
+		);
+	}
 
 	/**
 	 * Sequentially renumber custom section orderings in their sequence order.

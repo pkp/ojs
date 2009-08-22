@@ -367,6 +367,7 @@ class IssueManagementHandler extends EditorHandler {
 
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 
 		$articles = $publishedArticleDao->getPublishedArticles($issueId);
 
@@ -389,6 +390,14 @@ class IssueManagementHandler extends EditorHandler {
 			} else {
 				$article->setStatus(STATUS_QUEUED);
 				$article->stampStatusModified();
+				
+				// If the article is the only one in the section, delete the section from custom issue ordering				
+				$sectionId = $article->getSectionId();
+				$publishedArticleArray =& $publishedArticleDao->getPublishedArticlesBySectionId($sectionId, $issueId);
+				if (sizeof($publishedArticleArray) == 1) {
+					$sectionDao->deleteCustomSection($issueId, $sectionId);
+				}
+				
 				$publishedArticleDao->deletePublishedArticleById($pubId);
 				$publishedArticleDao->resequencePublishedArticles($article->getSectionId(), $issueId);
 			}
