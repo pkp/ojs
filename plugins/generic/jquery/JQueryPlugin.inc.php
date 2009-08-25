@@ -98,6 +98,7 @@ class JQueryPlugin extends GenericPlugin {
 			case 'manager/reviewFormElements':
 			case 'manager/reviewForms':
 			case 'manager/sections':
+			case 'manager/subscriptionTypes':
 			case 'rtadmin/contexts':
 			case 'rtadmin/searches':
 			case 'subscriptionManager/subscriptionTypes':
