@@ -10,7 +10,7 @@
   *
   * $Id$
   -->
-<version locale="en_US" id="Business" >
+<version locale="fa_IR" id="Business" >
   <version_title>تجارت</version_title>
   <version_description>ابزار خواندن می تواند برای خوانندگان این مطالعه در زمینه منابع موجود راهنمایی وسیعی ارائه دهد که این راهنمایی می تواند تفسیر، قرار گرفتن و ارزیابی کردن در زمینه آن مطالعه را فراهم آورد.</version_description>
   <context>

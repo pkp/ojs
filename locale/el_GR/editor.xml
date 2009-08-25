@@ -94,7 +94,7 @@
 	<message key="editor.article.designateReviewVersion">Καθορισμός του αρχείου προέλευσης ως Έκδοση Αξιολόγησης</message>
 	<message key="editor.article.uploadReviewVersion">Φορτώστε αναθεωρημένη μια έκδοση της αξιολόγησης</message>
 	<message key="editor.article.showSuppFile">Παρουσίαση αρχείου σε αξιολογητές</message>
-	<message key="editor.article.layoutAndProof">Σελιδοποίηση &amp; Τυπογραφικό δοκίμιο</message>
+	<message key="editor.article.layoutAndProof"><![CDATA[Σελιδοποίηση & Τυπογραφικό δοκίμιο]]></message>
 	<message key="editor.article.clear">Καθαρισμός</message>
 	<message key="editor.article.clearReviewer">Καθαρισμός αξιολογητή</message>
 	<message key="editor.article.changeSection">Αλλαγή ενότητας</message>
@@ -157,7 +157,7 @@
 	<message key="editor.article.sendToCopyedit">Αποστολή αρχείου για επιμέλεια κειμένου</message>
 	<message key="editor.article.sendFileToCopyedit">Επιλογή αρχείου για επιμέλεια κειμένου</message>
 	<message key="editor.article.selectProofreader">Ανάθεση Επιμελητή κειμένων</message>
-	<message key="editor.article.replaceProofreader">Αντικατάσταση Επιμελητή τυπογραφικών δοκιμίων </message>
+	<message key="editor.article.replaceProofreader">Αντικατάσταση Επιμελητή τυπογραφικών δοκιμίων</message>
 	<message key="editor.article.authorComments">Σχόλια συγγραφέα</message>
 	<message key="editor.article.proofreaderComments">Σχόλια Επιμελητή τυπογραφικών δοκιμίων</message>
 	<message key="editor.article.layoutEditorFinal">Τελικός επιμελητής Σελιδοποίησης</message>
@@ -200,4 +200,8 @@
 	<message key="editor.article.uploaded">Ανέβασμα</message>
 	<message key="editor.article.removeCoverPage">Μετακίνηση εικόνας εξωφύλλου?</message>
 	<message key="editor.article.remove">Μετακίνηση</message>
+	<message key="editor.issues.enableOpenAccessDate">Ενεργοποίηση καθυστερημένης ανοικτής πρόσβασης</message>
+	<message key="editor.issues.unpublishIssue">Μη Δημοσιευμένο Τεύχος</message>
+	<message key="editor.issues.confirmUnpublish">Είστε σίγουροι ότι θέλετε να αποσύρετε αυτό το δημοσιευμένο τεύχος;</message>
+	<message key="editor.article.archiveSubmission">Απόρριψη και Αρχειοθέτηση Υποβολής</message>
 </locale>

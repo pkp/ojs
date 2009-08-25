@@ -720,4 +720,175 @@ Pokud máte nějaké otázky, neváhejte mě prosím kontaktovat.
 {$subscriptionContactSignature}</body>
 		<description>Tento email informuje předplatitele, že jeho předplatné vypršelo. Obsahuje URL časopisu a instrukce pro přístup.</description>
 	</email_text>
+	<email_text key="NOTIFICATION">
+		<subject>Nové oznámení od {$siteTitle}</subject>
+		<body>Máte nové oznámení od {$siteTitle}:
+
+{$notificationContents}
+
+Odkaz: {$url}
+
+{$principalContactSignature}</body>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST">
+		<subject>Nové oznámení od {$siteTitle}</subject>
+		<body>Máte nové oznámení od {$siteTitle}:
+--
+{$notificationContents}
+
+Odkaz: {$url}
+--
+
+Pokud chcete ukončit odebírání těchto informačních emalů, přejděte prosím na {$unsubscribeLink} a vložte vaši emailovou adresu a heslo.
+
+{$principalContactSignature}</body>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
+		<subject>Vítejte na rezesílacím seznamu {$siteTitle}!</subject>
+		<body>Přihlásil jste se k odběru oznámení z {$siteTitle}.
+			
+Pro potvrzení Vaší žádosti a přidání Vaší emailové adresy do rozesílacího seznamu klikněte prosím na tento odkaz: {$confirmLink}
+
+Pokud si přejete ukončit odebírání informačních emailů, přejděte prosím na {$unsubscribeLink} a vložte Vaši emailovou adresu a heslo.
+
+Vaše heslo pro zakázání informačních emailů je: {$password}
+
+{$principalContactSignature}</body>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST_PASSWORD">
+		<subject>Informace k Vašemu emailovému upozorňování pro {$siteTitle}</subject>
+		<body>Vaše nové heslo pro zakázání informačních emailů je: {$password}
+
+Pokud si přejete ukončit odebírání informačních emailů, přejděte prosím na {$unsubscribeLink} a zadejte svou emailovou adresu a heslo.
+
+{$principalContactSignature}</body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_ACCEPT">
+		<subject>Rozhodnutí editora</subject>
+		<body>{$authorName}:
+
+Učinili jsme rozhodnutí ohledně Vašeho příspěvku do {$journalTitle}, "{$articleTitle}".
+
+Naše rozhodnutí je:
+
+{$editorialContactSignature}</body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_REVISIONS">
+		<subject>Rozhodnutí editora</subject>
+		<body>{$authorName}:
+
+Učinili jsme rozhodnutí ohledně Vašeho příspěvku do {$journalTitle}, "{$articleTitle}".
+
+Naše rozhodnutí je:
+
+{$editorialContactSignature}</body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_RESUBMIT">
+		<subject>Rozhodnutí editora</subject>
+		<body>{$authorName}:
+
+Učinili jsme rozhodnutí ohledně Vašeho příspěvku do {$journalTitle}, "{$articleTitle}".
+
+Naše rozhodnutí je:
+
+{$editorialContactSignature}</body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_DECLINE">
+		<subject>Rozhodnutí editora</subject>
+		<body>{$authorName}:
+
+Učinili jsme rozhodnutí ohledně Vašeho příspěvku do {$journalTitle}, "{$articleTitle}".
+
+Naše rozhodnutí je:
+
+{$editorialContactSignature}</body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
+		<subject>Zakoupení předplatného: Individuální</subject>
+		<body>Bylo online zakoupeno individuální předplatné pro {$journalName} s následujícími detaily.
+
+Typ předplatného:
+{$subscriptionType}
+
+Uživatel:
+{$userDetails}
+
+Informace o členství (pokud byla uvedena):
+{$membership}
+
+Pro zobrazení nebo editaci tohoto předplatného použijte prosím následující URL odkaz.
+
+URL předplatného: {$subscriptionUrl}</body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
+		<subject>Zakoupení předplatného: Institucionální</subject>
+		<body>Bylo online zakoupeno institucionální předplatné pro {$journalName} s následujícími detaily. Pro aktivaci tohoto předplatného použijte prosím uvedený URL odkaz a nastavte stav předplatného na 'Aktivní'..
+
+Typ předplatného:
+{$subscriptionType}
+
+Instituce:
+{$institutionName}
+{$institutionMailingAddress}
+
+Doména (pokud byla uvedena):
+{$domain}
+
+IP rozsah (pokud byl uveden):
+{$ipRanges}
+
+Kontaktní osoba:
+{$userDetails}
+
+Informace o členství (pokud byly uvedeny):
+{$membership}
+
+Pro zobrazení nebo editaci tohoto předplatného použijte prosím následující URL.
+
+URL předplatného: {$subscriptionUrl}</body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INDL">
+		<subject>Obnovení předplatného: Individuální</subject>
+		<body>Bylo online obnoveno individuální předplatné pro {$journalName} s následujícími detaily.
+
+Typ předplatného:
+{$subscriptionType}
+
+Uživatel:
+{$userDetails}
+
+Informace o členství (pokud byly uvedeny):
+{$membership}
+
+Pro zobrazení nebo editaci tohoto předplatného použijte prosím následující URL.
+
+URL předplatného: {$subscriptionUrl}</body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INSTL">
+		<subject>Obnovení předplatného: Institucionální</subject>
+		<body>Bylo online obnoveno institucionální předplatné pro {$journalName} s následujícími detaily.
+
+Typ předplatného:
+{$subscriptionType}
+
+Instituce:
+{$institutionName}
+{$institutionMailingAddress}
+
+Doména (pokud byla uvedena):
+{$domain}
+
+IP rozsah (pokud byl uveden):
+{$ipRanges}
+
+Kontaktní osoba:
+{$userDetails}
+
+Informace o členství (pokud byla uvedena):
+{$membership}
+
+Pro zobrazení nebo editaci tohoto předplatného použijte prosím následující URL.
+
+URL předplatného: {$subscriptionUrl}</body>
+	</email_text>
 </email_texts>

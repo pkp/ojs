@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the cs_CZ locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="cs_CZ" full_name="Czech">
+	<message key="plugins.block.keywordCloud.displayName">Panel Oblak z klíčových slov</message>
+	<message key="plugins.block.keywordCloud.description">Tento plugin poskytuje oblak štítků z klíčových slov článků.</message>
+	<message key="plugins.block.keywordCloud.title">Klíčová slova</message>
+</locale>

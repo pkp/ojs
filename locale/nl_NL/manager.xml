@@ -395,7 +395,6 @@
 	<message key="manager.setup.reviewProcess">Reviewproces</message>
 	<message key="manager.setup.reviewProcessDescription"><![CDATA[OJS kent twee modellen voor het beheer van het reviewproces. Het standaard reviewproces wordt aanbevolen omdat het de reviewers stap voor stap door het proces leidt, wat een complete review-historie voor iedere inzending oplevert. Het maakt gebruik van automatische herinneringen en standaard aanbevelingen voor inzendingen (Accepteer; Accepteer met revisies; Inzenden voor review; Elders inzenden; Weiger; Zie opmerkingen).<br /><br />Kies een van de volgende:]]></message>
 	<message key="manager.setup.reviewProcessEmail">E-mail bijlage reviewproces</message>
-	<message key="manager.setup.reviewProcessEmailDescription">Redacteuren sturen reviewers het verzoek voor een review met de inzending als bijlage bij de e-mail. De reviewers e-mailen de redacteuren hun goedkeuring (of afwijzing) en de review en aanbeveling. Redacteuren voeren de goedkeuring (of afwijzing) en de review en aanbeveling in op de review-pagina van de inzending, teneinde het reviewproces vast te leggen.</message>
 	<message key="manager.setup.reviewProcessStandard">Standaard reviewproces</message>
 	<message key="manager.setup.reviewProcessStandardDescription">Redacteuren e-mailen geselecteerde reviewers de titel en samenvatting van een inzending met een uitnodiging om in te loggen op de website van het tijdschrift om de review te voltooien. Reviewers gaan naar de website van het tijdschrift om om de review  te accepteren, de inzendingen op te halen, hun commentaren in te zenden en een aanbeveling te kiezen.</message>
 	<message key="manager.setup.searchEngineIndexing">Zoek-indexering</message>
@@ -552,9 +551,7 @@
 	<message key="manager.subscriptions.membership">Lidmaatschap</message>
 	<message key="manager.subscriptions.noneCreated">Geen abonnementen</message>
 	<message key="manager.subscriptions.select">Abonnee inschrijven</message>
-	<message key="manager.subscriptions.selectSubscriber">Abonnee kiezen</message>
 	<message key="manager.subscriptions.selectSubscriber.desc">Toegang als abonnee wordt automatisch toegekend aan de tijdschriftbeheerders, redacteuren, sectieredacteuren, opmaakredacteuren, tekstredacteuren en proeflezers van het tijdschrift</message>
-	<message key="manager.subscriptions.subscribe">Inschrijven</message>
 	<message key="manager.subscriptions.subscriptionCreatedSuccessfully">Abonnement met success aangemaakt.</message>
 	<message key="manager.subscriptions.subscriptionType">Abonnementsvorm</message>
 	<message key="manager.subscriptions.user">Gebruiker</message>
@@ -563,14 +560,9 @@
 	<message key="manager.subscriptionTypes.cost">Prijs</message>
 	<message key="manager.subscriptionTypes.create">Maak nieuwe abonnementsvorm aan</message>
 	<message key="manager.subscriptionTypes.createTitle">Maak aan</message>
-	<message key="manager.subscriptionTypes.currency">Valuta</message>
 	<message key="manager.subscriptionTypes.duration">Duur</message>
 	<message key="manager.subscriptionTypes.edit">Bewerk abonnementsvorm</message>
 	<message key="manager.subscriptionTypes.editTitle">Bewerk</message>
-	<message key="manager.subscriptionTypes.format">Formaat</message>
-	<message key="manager.subscriptionTypes.format.online">Online</message>
-	<message key="manager.subscriptionTypes.format.print">Papier</message>
-	<message key="manager.subscriptionTypes.format.printOnline">Papier en online</message>
 	<message key="manager.subscriptionTypes.form.cost">Prijs</message>
 	<message key="manager.subscriptionTypes.form.costInstructions">Geef een getal (bv. 40 of 40,00) zonder symbool (bv. $).</message>
 	<message key="manager.subscriptionTypes.form.costNumeric">De prijs moet een positief getal zijn.</message>
@@ -596,11 +588,7 @@
 	<message key="manager.subscriptionTypes.form.typeName">Naam</message>
 	<message key="manager.subscriptionTypes.form.typeNameExists">Er bestaat al een abonnementsvorm met deze naam.</message>
 	<message key="manager.subscriptionTypes.form.typeNameRequired">De abonnementsvorm moet een naam krijgen.</message>
-	<message key="manager.subscriptionTypes.month">maand</message>
-	<message key="manager.subscriptionTypes.months">maanden</message>
 	<message key="manager.subscriptionTypes.name">Abonnementsvorm</message>
 	<message key="manager.subscriptionTypes.noneCreated">Er zijn geen abonnementsvormen aangemaakt.</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Abonnementsvorm met succes aangemaakt.</message>
-	<message key="manager.subscriptionTypes.year">jaar</message>
-	<message key="manager.subscriptionTypes.years">jaren</message>
 </locale>

@@ -130,4 +130,7 @@ In Tabelle 3 sind die Zahlen in der 3. Spalte nicht in einer Linie.</pre>
 <pre>4. FORMATIERUNG
 Der Absatz, der mit "Dieser letzter Gegenstand..." beginnt, ist nicht eingerückt.</pre>]]></message>
 	<message key="default.journalSettings.publicationFee">Beitragsveröffentlichung</message>
+	<message key="section.default.title">Neiträge</message>
+	<message key="default.journalSettings.checklist.addressesLinked">Sofern vorhanden, wurden URLs den Literaturhinweisen beigefügt.</message>
+	<message key="default.journalSettings.waiverPolicy">Wenn Ihnen eine Förderung zur Zahlung der Gebühren nicht zur Verfügung steht, können diese erlassen werden. Wir wollen nicht, dass wichtige Arbeiten infolge der Gebühren nicht veröffentlicht werden können.</message>
 </locale>

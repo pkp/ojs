@@ -201,4 +201,8 @@
 	<message key="editor.article.uploaded">Hochgeladen</message>
 	<message key="editor.article.removeCoverPage">Titelbild entfernen?</message>
 	<message key="editor.article.remove">Entfernen</message>
+	<message key="editor.issues.enableOpenAccessDate">Verzögerten freien Zugang aktivieren</message>
+	<message key="editor.issues.unpublishIssue">Ausgabe zurückziehen</message>
+	<message key="editor.issues.confirmUnpublish">Sind sie sicher, dass Sie diese bereits veröffentlichte Ausgabe zurückziehen wollen?</message>
+	<message key="editor.article.archiveSubmission">Beitrag zurückweisen und archivieren</message>
 </locale>

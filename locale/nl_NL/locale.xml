@@ -88,10 +88,6 @@
 	<message key="section.title">Sectietitel</message>
 	<message key="section.abbreviation">Afkorting</message>
 	<message key="section.abbreviation.example">(Bijvoorbeeld: Artikelen=ART)</message>
-	<message key="section.default.title">Artikelen</message>
-	<message key="section.default.abbrev">ART</message>
-	<message key="section.default.policy"></message>
-
 	<!-- Common Article Terms -->
 	<message key="article.articles">Artikelen</message>
 	<message key="article.submissionId">Inzending ID</message>
@@ -588,7 +584,6 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Proeflees-commentaren</message>
-	<message key="submission.archiveSubmission">Archiveer inzending</message>
 	<message key="submission.proofread.corrections">Proeflezen correcties</message>
 	<message key="submission.proofread.instructions">Proeflees-instructies</message>
 
@@ -830,8 +825,6 @@ Uw server ondersteunt momenteel mbstring: <strong>{$supportsMBString}</strong>]]
 	<message key="installer.additionalLocalesInstructions">Selecteer de additionele talen voor gebruik in dit systeem. Deze talen kunnen gebruikt worden door de tijdschriften in deze site. Additionele talen kunnen op ieder gewenst moment  geïnstalleerd worden bij sitebeheer.</message>
 	<message key="installer.filesDirInstructions"><![CDATA[Geef het volledige pad naar een bestaande map waar geladen bestanden bewaard moeten worden. Deze map moet niet direct vanaf het web benaderbaar zijn. <strong>Verzeker u ervan dat de map bestaat en erin geschreven mag worden.</strong> Gebruik voor Windows pad-namen voorwaartse schuine strepen, bv. "C:/myjournal/files".]]></message>
 	<message key="installer.databaseSettingsInstructions">OJS gebruikt een SQL database voor het opslaan van gegevens. Zie de systeemvereisten hierboven voor de lijst van ondersteunde databases. Geef in de velden hieronder de instellingen om de connectie met de database te maken.</message>
-	<message key="installer.installOJS">Installeer Open Journal Systems</message>
-	<message key="installer.upgradeOJS">Opwaarderen Open Journal Systems</message>
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Waarschuwing:</b> Als de installatie tijdens de database-installatie misloop moet u de OJS database of de database-tabellen verwijderen voor u de installatie opnieuw probeert te doen.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>Belangrijk!</h4>
 <p>Het installatieprogramma kon het configuratiebestand niet overschrijven. Open alvorens het systeem te gebruiken <tt>config.inc.php</tt> in een geschikte teksteditor en vervang de inhoud ervan door de inhoud van het tekstveld hieronder.</p>]]></message>
@@ -960,147 +953,12 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	 * DEFAULT - Default settings for setup items.
 	 *
 	-->
-	<message key="default.journalSettings.checklist.notPreviouslyPublished">De inzending is nog niet eerder gepubliceerd, noch is het onder beoordeling bij een ander tijdschrift (tenzij een verklaring is gegeven bij Opmerkingen voor de redacteur).</message>
-	<message key="default.journalSettings.checklist.fileFormat">Het bestandsformaat van de inzending is OpenOffice, Microsoft Word, RTF of Wordperfect.</message>
-	<message key="default.journalSettings.checklist.addressesLinked">Waar mogelijk zijn URLs voor de referenties meegeleverd.</message>
-	<message key="default.journalSettings.checklist.submissionAppearance">De tekst is enkelvoudig gespatieerd, gebruikt een 12-punts lettertype, gebruikt schuingedrukt in plaats van onderstreept (behalve bij URL adressen) en alle illustraties, figuren en tabellen zijn in de tekst geplaatst en niet achteraan.</message>
-	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[De tekst voldoet aan de stilistische en bibliografische eisen zoals genoemd in de <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">Richtlijnen voor auteurs</a>, die te vinden zijn in Over dit Tijdschrift.]]></message>
-	<message key="default.journalSettings.checklist.anonymous"><![CDATA[Als u inzendt voor een peer-reviewde sectie van het tijdschrift, zijn de instructies in <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">Een blinde review verzekeren</a>) gevolgd.]]></message>
-	<message key="default.journalSettings.privacyStatement">De namen en e-mailadressen opgegeven aan dit tijdschrift worden uitsluitend gebruikt voor de gestelde doelen van het tijdschrift en worden niet voor enig ander doel of aan enige andere partij ter beschikking gesteld.</message>
-	<message key="default.journalSettings.openAccessPolicy">Dit tijdschrift biedt onmiddellijke open acces tot de inhoud op grond van het principe dat het vrij toegankelijk maken van onderzoek een grotere wereldwijde uitwisseling van kennis stimuleert.</message>
-	<message key="default.journalSettings.authorSelfArchivePolicy">Dit tijdschrift staat auteurs toe en moedigt ze aan om de items die ze bij dit tijdschrift inzenden op persoonlijke webpagina's en in institutionele repositories plaatsen, zowel voor als na publicatie, indien mogelijk onder verwijzing naar dit tijdschrift.</message>
-	<message key="default.journalSettings.copyeditInstructions"><![CDATA[Het tekstredactie stadium is bedoeld om de loop, helderheid, grammatica en opmaak van het artikel te verbeteren. Het is de laatste gelegenheid voor de auteur om significante veranderingen in de tekst aan te brengen, aangezien het volgende stadium alleen bedoeld is voor taalfouten en opmaakcorrecties.
-
-Het te redigeren bestand is in Word of .rtf formaat en kan daardoor eenvoudig als tekstverwerkingsdocument bewerkt worden. De set instructies die hier getoond wordt stelt twee benaderingen voor tekstredactie voor. Het ene is gebaseerd op de voorziening voor het bijhouden van wijzigingen van Microsoft Word en vereist dat terkstredacteur, redacteur en auteur toegang hebben tot dit programma. Het andere systeem, dat niet afhankelijk is van software, is met toestemming geleend van het Harvard Educational Review. De redacteur kan de kan deze instructies aanpassen dus suggesties voor het verbeteren van het proces van dit tijdschrift zijn mogelijk. 
-
-<h4>Tekstredactiesystemen</h4>
-
-<b>1. Track Changes in Microsoft Word's</b>
-
-Bij Tools in de menubalk, geeft Track Changes de tekstredacteur de mogelijkheid om tekst toe te voegen (tekst wordt gekleurd) en te verwijderen (tekst wordt doorgestreept en gekleurd, of in de marge getoond als verwijderd). De tekstredacteur kan vragen voor zowel de auteur (Auteursvragen) als de redacteur (Redacteursvragen) opnemen door de vragen tussen rechte haken op te nemen. De geredigeerde versie wordt dan geladen en de redacteur gewaarschuwd. De redacteur beoordeelt de tekst en bericht de auteur 
-
-De redacteur en auteur laten de veranderingen waarmee ze het eens zijn ongemoeid. Als meer aanpassingen nodig zijn kunnen de redacteur en de auteur de toegevoegde of verwijderde tekst veranderen en verdere toevoegingen of verwijderingen doen. Auteurs en redacteuren dienen te reageren op de aan hen gerichte vragen en hun reacties tussen de rechte haken te plaatsen. 
-
-Nadat de tekst is gereviewd door redacteur en auteur doet de tekstredacteur een laatste slag over de tekst en accepteert de wijzigingen ter voorbereiding op opmaak en proeflezen. 
-
-<b>2. Harvard Educational Review </b>
-
-<b>Instructies voor elektronische revisie van het manuscript</b>
-
-Volg het volgende protocol voor het doen van elektronische revisies op uw manuscript:
-
-<b>Reageren op voorgestelde veranderingen</b>
-  Als u een voorgestelde verandering accepteert, verandert u de vetgedrukte tekst in normale tekst
-  Als u een voorgestelde suggestie niet accepteert, zet zet u  de originele tekst <b>vetgedrukt</b> terug
-
-<b>Toevoegingen en verwijderen</b>
-  Markeer toevoegingen door de nieuwe tekst <b>vetgedrukt</b> te maken
-  Vervang verwijderde secties door: <b>[verwijderde tekst]</b>
-  Als u een of meer zinnen verwijdert, geeft dat dan aan met een aantekening, bv. <b>[2 zinnen verwijderd]</b>
-
-<b>Reageren op vragen aan de auteur(QA's)</b>
-  Hou alle QA's intact and vetgedrukt in de tekst. Verwijder ze niet.
-  Reageer op een QA, door er een opmerking achter te zetten. Opmerkingen moeten aangegeven worden met:
-<b>[Commentaar:</b>]
-  bv. <b>[Commentaar: Discussie over de methodologie uitgebreid zoals voorgesteld]</b>
-
-<b>Opmerkingen</b>
-  Gebruik opmerkingen om organisatorische veranderingen of grote revisies uit te leggen
-  bv.  <b>[Commentaar: De paragraaf verplaatst van p. 5 naar p. 7]</b>
-  Noot: Gebruik bij het refereren aan paginanummers de paginanummers van de afgedrukte kopie van het manuscript dat u gekregen heeft. Dit is belangrijk omdat paginanummers kunnen veranderen bij het reviseren van het document.
-
-<h4>Een voorbeeld van een elektronische revisie</h4>
-
-<b>Het originele "manuscript" bestand</b>
-
-Alvorens dramatisch af te wijken van de structuur en organisatie van uw originele manuscript, raden wij u aan om de meewerkenden aan uw stuk te raadplegen. Als de revisies gereed zijn verandert u de naam van het document van AuteursNaamQA.doc in AuteursnaamQAR.doc (bv. van LeeQA.doc in LeeQAR.doc). Druk een kopie af en stuur die met een floppy waarop het gereviseerde en hernoemde bestand staat.
-
-
-<b>Manuscript met vragen en suggsties zoals teruggestuurd naaar de auteur</b>
-
-Alvorens dramatisch af te wijken van de structuur en organisatie van uw originele <b>manuscript dat we naar u terugsturen</b>, raden wij u aan om de <b>redacteuren die eraan meewerken</b> te raadplegen. Als de revisies gereed zijn verandert u de naam van het document van AuteursNaamQA.doc in AuteursnaamQAR.doc (bv. van LeeQA.doc in LeeQAR.doc). Druk een kopie af en stuur die met een floppy waarop het totaal gereviseerde en hernoemde bestand staat.<b>[QA: In deze paragaaf kan het helpen om het belang van het nauwkeurig volgen van de instructies te benadrukken. Anders kan het redactieproces aanmerkelijk vertraagd worden]</b>
-
-<b>Gereviseerd manuscript aan haar teruggestuurd</b>
-
-Alvorens dramatisch af te wijken van de structuur en organisatie van uw originele manuscript dat we naar u terugsturen, raden wij u aan om de redacteuren die eraan meewerken te raadplegen. <b>De publicatie van uw manuscript kan significant vertraagd worden als u de instructies niet volgt.</b>
-
-Als de revisies gereed zijn verandert u de naam van het document van AuteursNaamQA.doc in AuteursnaamQAR.doc (bv. van LeeQA.doc in LeeQAR.doc). Druk een kopie af en stuur die met een floppy waarop het <b>[verwijderd woord]</b> gereviseerde en hernoemde bestand staat.<b>[QA: In deze paragaaf kan het helpen om het belang van het nauwkeurig volgen van de instructies te benadrukken. Anders kan het redactieproces aanmerkelijk vertraagd worden] [Commentaar: ik heb een zin toegevoegd als reactie op uw suggestie]</b>
-
-<b>Noten:</b>
-• Niet langer vetgedrukte tekst indiceert acceptatie van de voorgestelde veranderingen van de eerste zin
-• Zin toegevoegd als reactie op de QA. Vetgedrukte tekst indiceert nieuwe toevoeging
-• [verwijderd woord] geeft de verwijdering van "totaal"
-• Commentaar bevat een reactie op de QA van de redacteur]]></message>
-
-	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Om links naar referenties toe te voegen aan het opmaakproces</h4>
-	<p>Bij het omzetten van een inzending naar HTML of PDF, verzeker u ervan dat alle hyperlinks in de inzending werken.</p>
-	<h4>A. Als de auteur een link bij de referentie levert</h4>
-	<ol>
-	<li>Voeg, als de inzending nog in het tekstverwerkingsformaat is (bv. Word), de tekst BEKIJK ITEM toe aan het eind van de referentie met een URL.</li>
-	<li>Maak van die tekst een hyperlink door het te selecteren en de bij 2 voorbereide URL toe te voegen met het Hyperlink Toevoegen gereedschap van Word.</li>
-	</ol>
-	<h4>B. Lezers in staat stellen om Google Scholar te doorzoeken voor referenties</h4>
-	<ol>
-	<li>Kopieer, als de inzending nog in het tekstverwerkingsformaat is (bv. Word), de titel van het in de referentielijst gerefereerde werk (als die te algemeen lijkt, bv. "Vrede", kopieer dan auteur en titel).</li>
-	<li>Plak de titel van de referentie tussen de %22's, met een + tussen ieder woord: http://scholar.google.com/scholar?q=%22PLAK+TITEL+HIER%22&hl=en&lr=&btnG=Search</li>
-	<li>Voeg de tekst GS SEARCH toe aan het einde van ieder citaat in de referentielijst van de inzending.</li>
-	<li>Verander die tekst in een hyperlink met het Hyperlink Toevoegen gereedschap van Word en de bij 2 voorbereide URL.</li>
-	</ol>
-	<h4>C. Lezers in staat stellen een referentie te zoeken met een DOI</h4>
-	<ol>
-	<li>Kopieer, als de inzending nog in Woord staat, een set referenties in CrossRef Text Query http://www.crossref.org/freeTextQuery/</li>
-	<li>Plak iedere DOI die door de Query geleverd wordt in de volgende URL (tussen = en &): http://www.cmaj.ca/cgi/external_ref?access_num=PLAK DOI#HERE&link_type=DOI</li>
-	<li>Voeg de tekst CrossRef toe aan het eind van iedere citaties in de referentielijst van de inzending.</li>
-	<li>Verander die tekst in een hyperlink met het Hyperlink Toevoegen gereedschap van Word en de bij 2 voorbereide URL.</li>
-	</ol>]]></message>
-
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>Proeflezen is bedoeld om spel-, type- en grammaticafouten in de proefdruk op te sporen. Meer substantiële veranderingen zijn niet mogelijk in dit stadium, tenzij besproken met de sectieredacteur. Klik in Opmaak op BEKIJK PROEF om de HTML, PDF en andere beschikbare bestandsformaten van de publicatie van dit item te bekijken.</p>
-<h4>Voor spel- en grammaticafouten</h4>
-
-<p>Kopieer het verkeerde woord of groep van woorden en plak ze in het proefleescorrecties veld met "verander in" instructies voor de redacteur als volgt...</p>
-
-<pre>1. VERANDER...
-dan de andere
-IN...
-dan de anderen</pre>
-<br />
-<pre>2. VERANDER...
-Malinowsky
-IN...
-Malinowski</pre>
-<br />
-
-<h4>Voor opmaakfouten</h4>
-
-<p>Beschrijf de plaats en aard van het probleem in het proefleescorrecties veld na het intypen van de titel "OPMAAK" als volgt...</p>
-<br />
-<pre>3. OPMAAK
-De getallen in de derde kolom van Tabel 3 zijn niet uitgelijnd.</pre>
-<br />
-<pre>4. OPMAAK
-De paragraaf die begint met  "Dit laatste onderwerp..." is niet ingesprongen.</pre>]]></message>
-	<message key="default.journalSettings.emailSignature">________________________________________________________________________
-{$journalName}
-{$indexUrl}/{$journalPath}</message>
-	<message key="default.journalSettings.forReaders"><![CDATA[We moedigen lezers aan zich in te schrijven voor de publicatie-notificatiedienst van dit tijdschrift. Gebruik de <a href="{$indexUrl}/{$journalPath}/user/register">Registreer</a> link bovenaan de home-pagina van het tijdschrift. Na registratie krijgt iedere lezer de inhoudsopgave per e-mail toegestuurd als er een nieuw nummer verschijnt. Dit geeft het tijdschrift ook de mogelijkheid om claims te doen over het aantal lezers. Zie het <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Privacy Statement</a> van het tijdschrift om u ervan te verzekeren dat naam en e-mailadres van lezer niet voor andere doeleinden gebruikt zullen worden.]]></message>
-	<message key="default.journalSettings.forAuthors"><![CDATA[Interesse in inzenden bij dit tijdschrift? We raden u aan om de <a href="{$indexUrl}/{$journalPath}/about">Over dit tijdschrift</a> pagina te bekijken voor het sectiebeleid evenals de <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Auteursrichtlijnen<a>. Auteurs moeten zich <a href="{$indexUrl}/{$journalPath}/user/register">registreren</a> bij het tijdschrift voor ze kunnen inzenden. Als ze al geregistreerd zijn kunne ze <a href="{$indexUrl}/index/login">inloggen</a> en het proces van 5 stappen beginnen.]]></message>
-	<message key="default.journalSettings.forLibrarians"><![CDATA[We moedigen bibliothecarissen aan om dit tijdschrift op te nemen in hun collectie elektronische  tijdschriften. Eveneens kan opgemerkt worden dat dat het open source publicatiesysteem van dit tijdschrift geschikt is om door bibliotheken gebruikt te worden voor tijdschriften waar hun faculteitsleden de redactie voeren. (see <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
-	<message key="default.journalSettings.lockssLicense"><![CDATA[Dit tijdschrift gebruikt het LOCKSS systeem om een gedistribueerd archief te maken tussen de deelnemende bibliotheken waarmee deze bibliotheken een permanent archief van het tijdschrift maken ten behoeve van bescherming en herstel. <a href="http://lockss.org/">More...</a>]]></message>
-	
 	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.submissionFeeDescription">Auteurs zijn verplicht om inzendingskosten te betalen als onderdeel van het inzendingsproces. Dit als bijdrage in de kosten van de review.</message>
-	<message key="default.journalSettings.fastTrackFeeDescription">Door het betalen van dit bedrag krijgt u de garantie dat de review, beslissing van de redactie en het berichten aan de auteur over dit manuscript bunnen 4 weken plaats zal vinden</message>
-	<message key="default.journalSettings.publicationFeeDescription">Als dit artikel geaccepteerd wordt voor publicatie zal u gevraagd worden een artikel-publicatie bijdrage te betalen om de publicatiekosten te dekken.</message>
-	<message key="default.journalSettings.waiverPolicy">Als niet beschikt over de middelen om deze kosten te betalen, krijgt u de mogelijkheid om ze kwijtgescholden te krijgen. We willen niet dat de kosten publicatie van het werk verhinderen.</message>
-	<message key="default.journalSettings.membershipFeeDescription">De betaling maakt u lid van deze vereniging voor de duur van een jaar. U krijg onbeperkt toegang tot het tijdschrift.</message>
-	<message key="default.journalSettings.donationFeeDescription">Donaties van iedere omvang worden in dank aanvaard. Ze helpen de redacteuren een tijdschrift van de hoogst mogelijke kwaliteit te bieden aan de lezers.</message>
-	<message key="default.journalSettings.purchaseArticleFeeDescription">Na betaling kunt u dit artikel bekijken, downloaden en afdrukken.</message>
 	<message key="about.aboutThisPublishingSystem.altText">OJS Redactie- en publicatieproces</message>
 	<message key="help.searchReturnResults">Terug naar zoekresultaten</message>
 	<message key="payment.type.purchaseArticle">Prijs van dit artikel</message>
 	<message key="submission.layout.publicGalleyId">Publieke proefdruk identiicatie</message>
 	<message key="submission.layout.galleyPublicIdentificationExists">Publieke proefdruk identificatie bestaat al.</message>
-	<message key="user.profile.form.profileImageInvalid">Onbruikbaar afbeeldingsformaat of te grote afbeelding. Bruikbare formaten zijn .gf, .jpg en .png. De afbeelding mag niet groter zijn dan 150x150 pixels.</message>
 	<message key="submission.reviewForm">Reviewformulier</message>
 	<message key="submission.reviewFormResponse">Reactie reviewformulier</message>
 	<message key="reviewer.article.enterReviewForm">Klik op het ikoon om het reviewformulier in te vullen</message>
@@ -1127,30 +985,65 @@ De paragraaf die begint met  "Dit laatste onderwerp..." is niet ingesprongen.</p
 	<message key="issue.coverPage.altText">Omslag</message>
 	<message key="plugins.categories.implicitAuth">Impliciete authenticatie plugins</message>
 	<message key="plugins.categories.implicitAuth.description">Impliciete authenticatie plugins implementeren de ondersteuning voor authenticatie van gebruikers op basis van http headers.</message>
-	<message key="common.ccLicense"><![CDATA[<br /><br />
-	<a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
-	<br />
-	Dit werk valt onder een <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new">Creative Commons Attribution 3.0 Licentie</a>.]]></message>
-	<message key="common.ccLicense.rt"><![CDATA[<div class="rtBlock">
-		<br />
-		<a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
-		<br />
-		Dit werk valt onder een <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new">Creative Commons Attribution 3.0 Licentie</a>.
-	</div>]]></message>
 	<message key="journal.issn">ISSN</message>
-	<message key="manager.setup.doiSuffix">DOI achtervoegsel</message>
-	<message key="manager.setup.doiSuffixDefault">Gebruik standaard patroon (%j.v%vi%i.%a).</message>
-	<message key="manager.setup.doiSuffixPattern">Gebruik het patroon hieronder voor het genereren van DOI achtervoegsels.  Gebruik %j voor de initialen van het tijdschrift, %v voor het volume , %i voor het nummer, %a voor het OJS artikel-ID, en %p voor het paginanummer.</message>
-	<message key="manager.setup.doiSuffixPattern.example">Voorbeeld: vol%viss%ipp%p kan leiden tot een DOI als 10.1234/vol3iss2pp230</message>
-	<message key="manager.setup.doiSuffixDescription">Een DOI achtervoegsel kan iedere vorm hebben, maar moet uniek zijn voor ieder gepubliceerd item.</message>
-	<message key="manager.setup.form.doiPrefixPattern">Het DOI patroon moet de vorm hebben van 10.xxxx.</message>
-	<message key="manager.setup.doiSuffixCustomIdentifier">Gebruik de "Eigen identificatie" als DOI achtervoegsel voor gepubliceerde items (moet ingeschakeld worden in stap 4)</message>
-	<message key="manager.setup.publisherNoteDescription">Deze tekst wordt getoond onder de "Uitgever" kop en boven de uitgeversnaam/url bij "Tijdschriftsponsor" op de "Over" pagina</message>
-	<message key="manager.setup.sponsorNoteDescription">Deze tekst wordt getoond onder "Sponsors"-kop en boven de lijst met sponsornamen en -urls bij "Tijdschriftsponsors" op de "Over" pagina.</message>
-	<message key="manager.setup.contributorNoteDescription">Deze tekst wordt getoond onder de "Ondersteuners"-kop en en boven de lijst met namen en urls van ondersteunende organisaties onder "Tijdschriftsponsors" op de "Over" pagina.</message>
-	<message key="author.submit.mustEnterWaiverReason">Als u om een vrijwaring vraagt, moet u een reden opgeven in de daartoe bestemde ruimte</message>
-	<message key="author.submissions.queuedReviewSubsequent">In reviewronde {$round}</message>
-	<message key="author.submissions.queuedReviewRevisions">In review: Revisies nodig</message>
-	<message key="author.submissions.queuedEditingCopyedit">Onder redactie: Tekstredactie gevraagd</message>
-	<message key="author.submissions.queuedEditingProofread">Onder redactie: Proeflezen gevraagd</message>
+	<message key="article.article">Artikel</message>
+	<message key="article.citations">Referenties</message>
+	<message key="submission.citations">Referenties</message>
+	<message key="user.manageMySubscriptions">Mijn abonnementen beheren</message>
+	<message key="subscriptionTypes.currency">Valuta</message>
+	<message key="subscriptionTypes.year">jaar</message>
+	<message key="subscriptionTypes.years">jaren</message>
+	<message key="subscriptionTypes.month">maand</message>
+	<message key="subscriptionTypes.months">maanden</message>
+	<message key="subscriptionTypes.format">Formaat</message>
+	<message key="subscriptionTypes.format.online">Online</message>
+	<message key="subscriptionTypes.format.print">Gedrukt</message>
+	<message key="subscriptionTypes.format.printOnline">Gedrukt en online</message>
+	<message key="subscriptionTypes.nonExpiring">Niet-verlopend</message>
+	<message key="subscriptions.inactive">Inactief</message>
+	<message key="subscriptions.status">Status</message>
+	<message key="subscriptions.status.active">Actief</message>
+	<message key="subscriptions.status.needsInformation">Informatie nodig</message>
+	<message key="subscriptions.status.needsApproval">Goedkeuring nodig</message>
+	<message key="subscriptions.status.awaitingManualPayment">Wacht op handmatige betaling</message>
+	<message key="subscriptions.status.awaitingOnlinePayment">Wacht op online betaling</message>
+	<message key="subscriptions.status.other">Anders, zie opmerkingen</message>
+	<message key="subscriptionManager.individualSubscriptions">Individuele abonnementen</message>
+	<message key="subscriptionManager.institutionalSubscriptions">Institutionele abonnementen</message>
+	<message key="subscriptionManager.subscriptionTypes">Abonnementsoorten</message>
+	<message key="plugins.categories.oaiMetadataFormats">OAI Metadata formaat plugins</message>
+	<message key="subscriptions.individualDescription">Bij idividuele abonnementen is een inlog vereistom teogang te krijgen tot de inhoud.</message>
+	<message key="subscriptions.institutionalDescription">Voor institutionele abonnementen is geen login nodig.Toegang tot de inhour wordt geregeld aan de hand van het domein en/of het IP-adres van de gebruiker.</message>
+	<message key="manager.setup.citations">Sta auteurs toe om afzonderlijk een geformatteerde lijst met referenties (citaties) mee te leveren als onderdeel van hun inzending.</message>
+	<message key="user.subscriptions.mySubscriptions">Mijn abonnementen</message>
+	<message key="user.subscriptions.individualSubscriptions">Individueel abonnement</message>
+	<message key="user.subscriptions.institutionalSubscriptions">Institutionele abonnementen</message>
+	<message key="user.subscriptions.renew">Vernieuwen</message>
+	<message key="user.subscriptions.purchase">Koop</message>
+	<message key="user.subscriptions.purchaseNewSubscription">Koop nieuw abonnement</message>
+	<message key="user.subscriptions.purchaseIndividualSubscription">Koop individueel abonnement</message>
+	<message key="user.subscriptions.purchaseInstitutionalSubscription">Koop institutioneel abonnement</message>
+	<message key="user.subscriptions.expires">Verloopt</message>
+	<message key="user.subscriptions.expired">Verlopen</message>
+	<message key="user.subscriptions.viewSubscriptionTypes">Bekijk beschikbare abonnementsoorten</message>
+	<message key="user.subscriptions.form.typeId">Abonnementsoort</message>
+	<message key="user.subscriptions.form.membership">Lidmaatschap</message>
+	<message key="user.subscriptions.form.typeIdValid">Kies een geldige abonnementsoort</message>
+	<message key="user.subscriptions.form.institutionName">Naam van het instituut</message>
+	<message key="user.subscriptions.form.institutionNameRequired">De naam van het instituut is verplicht</message>
+	<message key="user.subscriptions.form.institutionMailingAddress">Postadres</message>
+	<message key="user.subscriptions.form.domain">Domein</message>
+	<message key="user.subscriptions.form.domainInstructions"><![CDATA[Als hier een domeinnaam wordt opgegeven, zijn IP-reeksen optioneel.<br />Geldige waarden zijn domeinnamen (bv. lib.sfu.ca).]]></message>
+	<message key="user.subscriptions.form.domainValid">Geef een geldige domeinnaam</message>
+	<message key="user.subscriptions.form.ipRange">IP reeksen</message>
+	<message key="user.subscriptions.form.ipRangeItem"><![CDATA[&#8226;]]></message>
+	<message key="user.subscriptions.form.deleteIpRange">Verwijder</message>
+	<message key="user.subscriptions.form.addIpRange">Voeg toe</message>
+	<message key="about.subscriptionTypes.name">Naam</message>
+	<message key="about.subscriptionTypes.format">Formaat</message>
+	<message key="about.subscriptionTypes.duration">Duur</message>
+	<message key="about.subscriptionTypes.cost">Kosten</message>
+	<message key="payment.subscription.purchase">Koop abonnement</message>
+	<message key="installer.installApplication">Installeer Open Journal Systems</message>
+	<message key="installer.upgradeApplication">Upgrade Open Journal Systems</message>
 </locale>

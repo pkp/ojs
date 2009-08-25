@@ -70,4 +70,5 @@
 	<message key="admin.mergeUsers.allUsers">Alle eingeschriebenen Benutzer</message>
 	<message key="admin.mergeUsers.confirm">Sind Sie sicher, dass Sie das Konto mit dem Benutzernamen "{$oldUsername}" in das Konto mit dem Namen "{$newUsername}" überführen wollen? Das Konto mit dem Namen "{$oldUsername}" existiert dann nicht mehr. Der Vorgang ist nicht rückgängig zu machen.</message>
 	<message key="admin.mergerUsers.noneEnrolled">Keine eingeschriebenen Benutzer</message>
+	<message key="admin.locale.maybeIncomplete">Gekennzeichnete Lokaleinstellungen können unvollständig sein.</message>
 </locale>

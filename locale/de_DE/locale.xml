@@ -917,4 +917,76 @@ Der Absatz, der mit "Dieses Thema schließlich ..." beginnt, ist nicht eingerüc
 	<message key="plugins.categories.oaiMetadataFormats">Plug-In für OAI-Metadaten-Format</message>
 	<message key="manager.setup.citations">Zulassen, dass Autor/innen separat eine formatierte Literaturliste als Teil ihrer  Einreichung bereitstellen.</message>
 	<message key="manager.people.confirmDisable">Diese Nutzerin/diesen Nutzer sperren?</message>
+	<message key="plugins.categories.oaiMetadataFormats.description">Diese Format-Plug-Ins beziehen sich auf Metadaten für die OAI-Kommunikation</message>
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Die Zeitschrift verwendet ein online verfügbares Klassifikationssystem.<br />
+Titel des Klassifikationssystems]]></message>
+	<message key="editor.submissionReview.notes"><![CDATA[<ol>
+	<li>Hervorgehobene Einträge verweisen darauf, dass eine Aktion seitens der Redakteur/innen erforderlich ist.</li>
+	<li>"Fällig" erscheint, wenn ein Gutachter/eine Gutachterin den Begutachtungsauftrag akzeptiert hat; es wird die Zahl der Wochen bis zum Abgabezeitpunkt des Reviews angezeigt oder (-) Wochen, wenn das Gutachten überfällig ist.</li>
+</ol>]]></message>
+	<message key="reviewer.article.reviewGuidelinesDescription">Die Begutachtungsrichtlinien geben den Gutachter/innen Kriterien an die Hand, mit deren Hilfe sie bewerten können, ob eine Einreichung für die Veröffentlichung in der Zeitschrift geeignet ist; sie können auch zusätzliche Instruktionen enthalten, die für eine effektive und hilfreiche Begutachtung nützlich sind. Für die Einreichung des Gutachtens stehen den Gutachter/innen zwei offene Textfelder zur Verfügung, eines "für die Autor/innen und die Redakteur/innen", ein zweites "für die Redakteur/innen". Alternativ können Zeitschriftenverwalter/innen ein Formular für die Begutachtung erstellen. Redakteur/innen haben immer die Option, in ihrer Kommunikation mit den Autor/innen Gutachten hinzuzufügen.</message>
+	<message key="reviewer.article.selectRecommendation">Wählen Sie eine Empfehlung aus und reichen Sie Ihr Gutachten ein, um den Begutachtungsprozess abzuschließen. Sie müssen das Gutachten direkt eingeben oder eine Datei hochladen, bevor Sie eine Empfehlung auswählen können.</message>
+	<message key="author.submit.submissionCitations">Stellen Sie bitte ein formatiertes Literaturverzeichnis für die Arbeiten zur Verfügung, die Sie in Ihrem Beitrag zitiert haben.</message>
+	<message key="user.subscriptions.mySubscriptions">Meine Abonnements</message>
+	<message key="user.subscriptions.individualSubscriptions">Individuelles Abonnement</message>
+	<message key="user.subscriptions.institutionalSubscriptions">Institutionelles Abonnement</message>
+	<message key="user.subscriptions.purchase">Kaufen</message>
+	<message key="user.subscriptions.purchaseNewSubscription">Ein neues Abonnement kaufen</message>
+	<message key="user.subscriptions.purchaseIndividualSubscription">Ein individuelles Abonnement kaufen</message>
+	<message key="user.subscriptions.purchaseInstitutionalSubscription">Ein institutionelles Abonnement kaufen</message>
+	<message key="user.subscriptions.viewSubscriptionTypes">Verfügbare Abonnement-Arten ansehen</message>
+	<message key="user.subscriptions.form.typeId">Abonnement-Art</message>
+	<message key="user.subscriptions.form.membership">Mitgliedschaft</message>
+	<message key="user.subscriptions.form.membershipRequired">Für die ausgewählte Abonnement-Art sind Mitgliedschaftsinformationen erforderlich.</message>
+	<message key="user.subscriptions.form.typeIdValid">Wählen Sie bitte eine gültige Abonnement-Art aus.</message>
+	<message key="user.subscriptions.form.subscriptionExists">Für dieses Nutzer/innen-Konto existiert bereits ein individuelles Abonnement.</message>
+	<message key="user.subscriptions.form.membershipInstructions">Für die ausgewählte Abonnement-Art sind Mitgliedschaftsinformationen erforderlich.</message>
+	<message key="user.subscriptions.form.institutionName">Name der Einrichtung</message>
+	<message key="user.subscriptions.form.institutionNameRequired">Ein Einrichtungsname ist erforderlich.</message>
+	<message key="article.citations">Literaturhinweise</message>
+	<message key="submission.citations">Literaturhinweise</message>
+	<message key="user.subscriptions.form.deleteIpRange">Löschen</message>
+	<message key="user.subscriptions.form.addIpRange">Hinzufügen</message>
+	<message key="about.subscriptions.individual">Individuelle Abonnements</message>
+	<message key="about.subscriptions.institutional">Institutionelle Abonnements</message>
+	<message key="about.subscriptionTypes.name">Name</message>
+	<message key="about.subscriptionTypes.format">Format</message>
+	<message key="about.subscriptionTypes.duration">Dauer</message>
+	<message key="about.subscriptionTypes.cost">Kosten</message>
+	<message key="payment.subscription.purchase">Abonnent kaufen</message>
+	<message key="installer.installApplication">Open Journal Systems installieren</message>
+	<message key="notification.mailListDescription">Geben Sie Ihre E-Mail-Adresse ein, wenn Sie über neue Inhalte in dieser Zeitschrift informiert werden wollen</message>
+	<message key="notification.notificationsPublicDescription"><![CDATA[Auf dieser Seite finden Sie Updates wie neue Ausgaben oder Ankündigungen. Sie können diese Benachrichtigungen als RSS-Feed abonnieren (indem Sie auf die Abbildungen rechts klicken) oder   <a href="{$emailUrl}">via E-Mail.</a>]]></message>
+	<message key="notification.type.articleSubmitted">Ein neuer Beitrag, "{$param}", wurde eingereicht.</message>
+	<message key="notification.type.copyeditComment">Ein Lektor/eine Lektorin hat einen Kommentar zu "{$param}" hinterlassen.</message>
+	<message key="notification.type.editorDecisionComment">Ein Kommentar zur Entscheidung des Redakteur/der Redaktuerin über "{$param}" wurde hinterlassen.</message>
+	<message key="notification.type.galleyModified">Für "{$param}" wurde eine Korrekturfahne geändert.</message>
+	<message key="notification.type.issuePublished">Eine Ausgabe wurde veröffentlicht.</message>
+	<message key="notification.type.layoutComment">Zum Layout von "{$param}'s" wurde ein Kommentar hinterlassen.</message>
+	<message key="notification.type.metadataModified">Die Metdadaten von "{$param}'s" wurden verändert.</message>
+	<message key="notification.type.newAnnouncement">Eine neue Ankündigung wurde erstellt.</message>
+	<message key="notification.type.proofreadComment">Ein/e Korrekturlektor/in hat einen Kommentar zu "{$param}" hinterlassen.</message>
+	<message key="notification.type.reviewerComment">Ein/e Gutachter/in hat "{$param} kommentiert.</message>
+	<message key="notification.type.reviewerFormComment">Für "{$param}" wurde ein Begutachtungsformular eingereicht.</message>
+	<message key="notification.type.submissionComment">Ein/e Redakteur/in hat "{$param}" kommentiert.</message>
+	<message key="notification.type.suppFileModified">Die Zusatzdatei(en) zu "{$param}" wurden verändert.</message>
+	<message key="notification.type.userComment">Ein/e Leser/in hat "{$param}" kommentiert.</message>
+	<message key="installer.upgradeApplication">Upgrade Open Journal Systems</message>
+	<message key="subscriptionTypes.currency">Währung</message>
+	<message key="subscriptionTypes.nonExpiring">Nicht endend</message>
+	<message key="subscriptions.status.other">Andere, siehe Hinweis</message>
+	<message key="subscriptions.institutionalOnlinePaymentDescription"><![CDATA[<strong>Hinweis:</strong> Für online erworbene institutionelle Abonnements ist die Bewilligung der Domain und des IP-Bereiches erforderlich, bevor das Abonnement aktiviert wird.]]></message>
+	<message key="manager.setup.reviewProcessEmailDescription">Redakteur/innen senden den Gutachter/innen die Bitte um Begutachtung, indem sie den eingereichten Beitrag an die E-Mail anhängen. Gutachter/innen mailen den Redakteur/innen ihr Einverständnis (oder einen abschlägigen Bescheid), außerdem das Gutachten und ihre Empfehlung. Redakteur/innen können das Einverständnis der Gutachter/innen (oder deren abschlägigen Bescheid) sowie das Gutachten und die Empfehlung auf der "In Begutachtung"-Seite des Beitrags einsehen, um den Begutachtungsprozess zu verfolgen.</message>
+	<message key="user.subscriptions.renew">Verlängern</message>
+	<message key="user.subscriptions.expires">Endet</message>
+	<message key="user.subscriptions.expired">Beendet</message>
+	<message key="user.subscriptions.form.institutionMailingAddress">Adresse</message>
+	<message key="user.subscriptions.form.domain">Domain</message>
+	<message key="user.subscriptions.form.domainInstructions"><![CDATA[Wenn hier eine Domain eingegeben wird, ist die Eingabe von IP-Bereichen optional.<br />Gültige Werte sind Domain-Namen (z.B. lib.sfu.ca).]]></message>
+	<message key="user.subscriptions.form.domainIPRangeRequired">Für die gewählte Abonnement-Art ist eine Domain und/oder ein IP-Bereich zur Authentifizierung des Abonnements erforderlich.</message>
+	<message key="user.subscriptions.form.domainValid">Bitte geben Sie eine gültige Domain ein.</message>
+	<message key="user.subscriptions.form.ipRange">IP-Bereiche</message>
+	<message key="user.subscriptions.form.ipRangeInstructions"><![CDATA[Wenn hier IP-Bereiche eingegeben werden, ist die Eingabe einer Domain optional.<br />Gültige Werte können eine IP-Adresse (z.B. 142.58.103.1), ein IP-Bereich (z.B. 142.58.103.1 - 142.58.103.4), ein IP-Bereich mit einem Stellvertretersymbol '*' (z.B. 142.58.*.*) und ein IP-Bereich mit CIDR (z.B. 142.58.100.0/24) sein.]]></message>
+	<message key="user.subscriptions.form.ipRangeValid">Geben Sie bitte einen gültigen IP-Bereich ein.</message>
+	<message key="about.history">Zeitschriften-Geschichte</message>
 </locale>

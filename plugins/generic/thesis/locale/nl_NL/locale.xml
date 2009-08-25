@@ -205,4 +205,6 @@
 	<message key="plugins.generic.thesis.form.supervisorMiddleName">Tweede voornaam begeleider</message>
 	<message key="plugins.generic.thesis.form.supervisorEmail">Begeleider e-mail</message>
 	<message key="plugins.generic.thesis.form.supervisorEmailValid">Voor de begeleider is een geldig e-mail adres verplicht.</message>
+	<message key="plugins.generic.thesis.enabled">De Thesis plugin is ingeschakeld.</message>
+	<message key="plugins.generic.thesis.disabled">De Thesis Plugin is uitgeschakeld.</message>
 </locale>

@@ -18,21 +18,6 @@
 	<message key="plugins.generic.counter.description"><![CDATA[De COUNTER plugin verzorgt het registreren en <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a>-conform rapporteren van activiteit op de site.]]></message>
 	<message key="plugins.generic.counter">COUNTER statistieken</message>
 
-	<message key="plugins.generic.counter.clearLog">Wis log</message>
-	<message key="plugins.generic.counter.confirmClear">Weet u zeker dat u de log wil wissen? Deze actie kan niet ongedaan gemaakt worden.</message>
-	<message key="plugins.generic.counter.browseLog">Bekijk log</message>
-	<message key="plugins.generic.counter.browseLog.logBrowser">Log bekijken</message>
-
-	<message key="plugins.generic.counter.entry.timestamp">Tijdstempel</message>
-	<message key="plugins.generic.counter.entry.site">Site</message>
-	<message key="plugins.generic.counter.entry.journal">Tijdschrift</message>
-	<message key="plugins.generic.counter.entry.user">Gebruiker</message>
-	<message key="plugins.generic.counter.sessionNumber">Sessie #{$sessionNumber}</message>
-	<message key="plugins.generic.counter.entry.type">Type</message>
-	<message key="plugins.generic.counter.entry.type.article">Artikel</message>
-	<message key="plugins.generic.counter.entry.type.search">Zoek</message>
-	<message key="plugins.generic.counter.entry.value">Waarde</message>
-
 	<message key="plugins.generic.counter.1a.title">Tijdschrift rapport 1 (R2): Full-Text artikelen opgevraagd per maand en tijdschrift</message>
 	<message key="plugins.generic.counter.1a.title1">Tijdschriftrapport 1 (R2)</message>
 	<message key="plugins.generic.counter.1a.title2">Aantal succesvol opgevraagde fulltext artikelen per maand en tijdschrift (jaar {$year})</message>
