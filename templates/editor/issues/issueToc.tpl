@@ -40,6 +40,7 @@
 	<li class="current"><a href="{url op="issueToc" path=$issueId}">{translate key="issue.toc"}</a></li>
 	<li><a href="{url op="issueData" path=$issueId}">{translate key="editor.issues.issueData"}</a></li>
 	{if $unpublished}<li><a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">{translate key="editor.issues.previewIssue"}</a></li>{/if}
+	{call_hook name="Templates::Editor::Issues::IssueToc::IssuePages"}
 </ul>
 
 <h3>{translate key="issue.toc"}</h3>
