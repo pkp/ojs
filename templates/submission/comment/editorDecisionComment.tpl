@@ -21,7 +21,7 @@ window.opener.location.reload();
 // -->
 {/literal}
 </script>
-<div id="comments">
+<div id="existingComments">
 <table class="data" width="100%">
 {foreach from=$articleComments item=comment}
 <div id="comment">
