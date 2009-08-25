@@ -107,6 +107,14 @@ class CounterPlugin extends GenericPlugin {
 
 		if (!$journal) return false;
 
+		/* NOTE: Project COUNTER has a list of robots on their site
+		   unfortunately not in a very accessible format:
+		   http://www.projectcounter.org/r3/r3_K.doc
+		*/
+		if (Request::isBot()) return false;
+
+		// TODO: consider the effect of LOCKSS on COUNTER recording
+
 		switch ($template) {
 			case 'article/article.tpl':
 			case 'article/interstitial.tpl':
@@ -118,6 +126,13 @@ class CounterPlugin extends GenericPlugin {
 				// If no galley exists, this is an abstract
 				// view -- don't include it. (FIXME?)
 				if (!$galley) return false;
+
+				$lastRequestGap = time() - $session->getSessionVar('lastRequest');
+				// if last request was less than 10 seconds ago then return without recording this view
+				if ( $lastRequestGap < 10 ) return false;
+				// if last request was less than 30 seconds ago AND is PDF then return without recording this view
+				if ( $galley->isPdfGalley() && ($lastRequestGap < 30) ) return false;
+				$session->setSessionVar('lastRequest', time());
 
 				$counterReportDao =& DAORegistry::getDAO('CounterReportDAO');
 				$counterReportDao->incrementCount($article->getJournalId(), (int) strftime('%Y'), ((int) strftime('%m')) - 1, $galley->isPdfGalley(), $galley->isHTMLGalley());
