@@ -96,7 +96,7 @@ class ReviewerAction extends Action {
 						else $editorialContact = array_shift($assignedEditors);
 						$editorialContactName = $editorialContact->getEditorFullName();
 					}
-
+					$email->promoteCcsIfNoRecipients();
 					$email->assignParams(array(
 						'editorialContactName' => $editorialContactName,
 						'reviewerName' => $reviewer->getFullName(),
