@@ -295,7 +295,7 @@ class ReviewerAction extends Action {
 	 */
 	function postPeerReviewComment(&$user, &$article, $reviewId, $emailComment) {
 		if (!HookRegistry::call('ReviewerAction::postPeerReviewComment', array(&$user, &$article, &$reviewId, &$emailComment))) {
-			import("submission.form.comment.PeerReviewCommentForm");
+			import('submission.form.comment.PeerReviewCommentForm');
 
 			// FIXME: Need construction by reference or validation always fails on PHP 4.x
 			$commentForm =& new PeerReviewCommentForm($article, $reviewId, ROLE_ID_REVIEWER);
@@ -308,9 +308,9 @@ class ReviewerAction extends Action {
 				// Send a notification to associated users
 				import('notification.Notification');
 				$notificationUsers = $article->getAssociatedUserIds();
-				foreach ($notificationUsers as $user) {
-					$url = Request::url(null, $user['role'], 'submissionReview', $article->getArticleId(), null, 'peerReview');
-					Notification::createNotification($user['id'], "notification.type.reviewerComment",
+				foreach ($notificationUsers as $userRole) {
+					$url = Request::url(null, $userRole['role'], 'submissionReview', $article->getArticleId(), null, 'peerReview');
+					Notification::createNotification($userRole['id'], "notification.type.reviewerComment",
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_REVIEWER_COMMENT);
 				}
 				
