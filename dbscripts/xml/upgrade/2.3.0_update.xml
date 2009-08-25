@@ -24,6 +24,11 @@
 		<query>INSERT INTO email_templates_default_data (locale, email_key, subject, body, description) VALUES ('en_US', 'EDITOR_DECISION_DECLINE', 'Editor Decision', '{$authorName}:\n\nWe have reached a decision regarding your submission to {$journalTitle}, \"{$articleTitle}\".\n\nOur decision is to:\n\n{$editorialContactSignature}\n', 'This email from the Editor or Section Editor to an Author notifies them of a final decision regarding their submission.')</query>
 	</sql>
 
+	<!-- Bug #4664: abstract abstractions -->
+	<sql>
+		<query>UPDATE announcements SET assoc_type = 256</query><!-- ASSOC_TYPE_JOURNAL -->
+	</sql>
+
 	<!-- Bug #3941: abstract groups -->
 	<sql>
 		<query>UPDATE groups SET assoc_type = 256</query><!-- ASSOC_TYPE_JOURNAL -->
