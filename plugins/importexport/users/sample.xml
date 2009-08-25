@@ -41,7 +41,7 @@
 		<biography locale="de_DE">My biograhy (German) - TestUser2.</biography>
 		<biography locale="en_US">My biograhy (English) - TestUser2.</biography>
 		<biography locale="es_ES">My biograhy (Spanish) - TestUser2.</biography>
-		<userLocales>de_DE:en_US</userLocales>
+		<locales>de_DE:en_US</locales>
 		<role type="author"/>
         </user>
 </users>
