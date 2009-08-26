@@ -369,7 +369,9 @@ class Installer {
 				$this->log(sprintf('schema: %s', $action['file']));
 
 				require_once('adodb/adodb-xmlschema.inc.php');
-				$schemaXMLParser = &new adoSchema($this->dbconn, $this->dbconn->charSet);
+				$schemaXMLParser = &new adoSchema($this->dbconn);
+				$dict =& $schemaXMLParser->dict;
+				$dict->SetCharSet($this->dbconn->charSet);
 				$sql = $schemaXMLParser->parseSchema($fileName);
 				$schemaXMLParser->destroy();
 

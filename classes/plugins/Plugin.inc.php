@@ -252,7 +252,9 @@ class Plugin {
 		$installer =& $args[0];
 		$result =& $args[1];
 
-		$schemaXMLParser = &new adoSchema($installer->dbconn, $installer->dbconn->charSet);
+		$schemaXMLParser = &new adoSchema($installer->dbconn);
+		$dict =& $schemaXMLParser->dict;
+		$dict->SetCharSet($installer->dbconn->charSet);
 		$sql = $schemaXMLParser->parseSchema($this->getInstallSchemaFile());
 		if ($sql) {
 			$result = $installer->executeSQL($sql);

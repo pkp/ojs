@@ -115,7 +115,9 @@ class dbXMLtoSQL extends CommandLineTool {
 			$dbconn = &DBConnection::getConn();
 		}
 
-		$schema = &new adoSchema($dbconn, Config::getVar('i18n', 'database_charset'));
+		$schema = &new adoSchema($dbconn);
+		$dict =& $schema->dict;
+		$dict->SetCharSet(Config::getVar('i18n', 'database_charset'));
 
 		if ($this->type == 'schema') {
 			// Parse XML schema files
