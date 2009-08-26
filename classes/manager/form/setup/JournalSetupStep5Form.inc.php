@@ -136,7 +136,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 			if ($settingName == 'journalFavicon' && !in_array($extension, $faviconTypes)) {
 				return false;
 			}
-			
+
 			$uploadName = $settingName . '_' . $locale . $extension;
 			if ($fileManager->uploadJournalFile($journal->getJournalId(), $settingName, $uploadName)) {
 				// Get image dimensions
@@ -144,6 +144,8 @@ class JournalSetupStep5Form extends JournalSetupForm {
 				list($width, $height) = getimagesize($filePath . '/' . $uploadName);
 
 				$value = $journal->getSetting($settingName);
+				$newImage = empty($value[$locale]);
+
 				$value[$locale] = array(
 					'name' => $fileManager->getUploadedFileName($settingName, $locale),
 					'uploadName' => $uploadName,
@@ -152,7 +154,15 @@ class JournalSetupStep5Form extends JournalSetupForm {
 					'dateUploaded' => Core::getCurrentDate()
 				);
 
-				$settingsDao->updateSetting($journal->getJournalId(), $settingName, $value, 'object', true);
+				$journal->updateSetting($settingName, $value, 'object', true);
+
+				if ($newImage) {
+					$altText = $journal->getSetting($settingName.'AltText');
+					if (!empty($altText[$locale])) { 
+						$this->setData($settingName.'AltText', $altText);
+					}
+				}
+
 				return true;
 			}
 		}
