@@ -3,3 +3,4 @@ build
 temp
 files
 .project
+.buildpath
