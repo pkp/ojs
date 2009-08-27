@@ -24,6 +24,13 @@ class VersionDAO extends DAO {
 	 * @return Version
 	 */
 	function &getCurrentVersion() {
+		// Find out whether the database has already been
+		// installed. If not return version "0.0.0.0".
+		if (!$this->hasTable('versions')) {
+			$returner = &Version::fromString('');
+			return $returner;
+		}
+
 		$result = &$this->retrieve(
 			'SELECT * FROM versions WHERE current = 1'
 		);

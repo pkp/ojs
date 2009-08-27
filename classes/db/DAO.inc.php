@@ -397,6 +397,16 @@ class DAO {
 		$result->Close();
 		unset($result);
 	}
+	
+        /**
+         * Find out whether a table exists in the database.
+         * @param $tableName string
+         * @return boolean
+         */
+	function hasTable($tableName) {
+		$result = $this->_dataSource->MetaTables(false, false, $tableName);
+		return count($result)>0;
+	}
 }
 
 ?>

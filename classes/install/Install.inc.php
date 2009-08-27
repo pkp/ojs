@@ -54,8 +54,6 @@ class Install extends Installer {
 	 * @return boolean
 	 */
 	function preInstall() {
- 		$this->currentVersion = Version::fromString('');
-
  		$this->locale = $this->getParam('locale');
 		$this->installedLocales = $this->getParam('additionalLocales');
 		if (!isset($this->installedLocales) || !is_array($this->installedLocales)) {

@@ -140,10 +140,13 @@ class Installer {
 			}
 		}
 
-		if (!isset($this->currentVersion)) {
-			// Retrieve the currently installed version
-			$versionDao = &DAORegistry::getDAO('VersionDAO');
-			$this->currentVersion = &$versionDao->getCurrentVersion();
+		// Retrieve the currently installed version
+		$versionDao = &DAORegistry::getDAO('VersionDAO');
+		$this->currentVersion = &$versionDao->getCurrentVersion();
+
+		if (!$this->isUpgrade() && ($this->currentVersion->compare('0.0.0.0') != 0)) {
+		  // The database is already installed, we won't install it again
+		  $this->params['manualInstall'] = 1;
 		}
 
 		if (!isset($this->locale)) {
@@ -242,7 +245,7 @@ class Installer {
 			$this->newVersion->setCurrent(1);
 		} else {
 			$this->newVersion = $this->currentVersion;
-		}	
+		}
 
 		// Parse descriptor
 		$this->parseInstallNodes($installTree);
@@ -369,9 +372,7 @@ class Installer {
 				$this->log(sprintf('schema: %s', $action['file']));
 
 				require_once('adodb/adodb-xmlschema.inc.php');
-				$schemaXMLParser = &new adoSchema($this->dbconn);
-				$dict =& $schemaXMLParser->dict;
-				$dict->SetCharSet($this->dbconn->charSet);
+				$schemaXMLParser = &new adoSchema($this->dbconn, $this->dbconn->charSet);
 				$sql = $schemaXMLParser->parseSchema($fileName);
 				$schemaXMLParser->destroy();
 
