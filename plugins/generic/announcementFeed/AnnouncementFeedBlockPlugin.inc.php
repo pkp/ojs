@@ -19,6 +19,13 @@ import('plugins.BlockPlugin');
 
 class AnnouncementFeedBlockPlugin extends BlockPlugin {
 	/**
+	 * Hide this plugin from the management interface (it's subsidiary)
+	 */
+	function getHideManagement() {
+		return true;
+	}
+
+	/**
 	 * Get the name of this plugin. The name must be unique within
 	 * its category.
 	 * @return String name of plugin

@@ -19,6 +19,13 @@ import('classes.plugins.BlockPlugin');
 
 class OpenAdsBlockPlugin extends BlockPlugin {
 	/**
+	 * Hide this plugin from the management interface (it's subsidiary)
+	 */
+	function getHideManagement() {
+		return true;
+	}
+
+	/**
 	 * Get the symbolic name of this plugin
 	 * @return string
 	 */
