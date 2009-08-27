@@ -460,7 +460,8 @@ class Article extends Submission {
 			$authorDao =& DAORegistry::getDAO('AuthorDAO');
 			$authors = $authorDao->getAuthorsByArticle($articleId);
 			foreach ($authors as $author) {
-				$userIds[] = array('id' => $author->getId(), 'role' => 'author');
+				$userId = $author->getId();
+				if ($userId) $userIds[] = array('id' => $userId, 'role' => 'author');
 			}
 		}
 
@@ -468,31 +469,36 @@ class Article extends Submission {
 			$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
 			$editAssignments =& $editAssignmentDao->getEditorAssignmentsByArticleId($articleId);
 			while ($editAssignment =& $editAssignments->next()) {
-				$userIds[] = array('id' => $editAssignment->getEditorId(), 'role' => 'editor');
+				$userId = $editAssignment->getEditorId();
+				if ($userId) $userIds[] = array('id' => $userId, 'role' => 'editor');
 				unset($editAssignment);
 			}
 		}
 
 		if($copyeditor) {
 			$copyedSignoff = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $articleId);
-			$userIds[] = array('id' => $copyedSignoff->getUserId(), 'role' => 'copyeditor');
+			$userId = $copyedSignoff->getUserId();
+			if ($userId) $userIds[] = array('id' => $userId, 'role' => 'copyeditor');
 		}
 
 		if($layoutEditor) {
 			$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
-			$userIds[] = array('id' => $layoutSignoff->getUserId(), 'role' => 'layoutEditor');
+			$userId = $layoutSignoff->getUserId();
+			if ($userId) $userIds[] = array('id' => $userId, 'role' => 'layoutEditor');
 		}
 
 		if($proofreader) {
 			$proofSignoff = $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $articleId);
-			$userIds[] = array('id' => $proofSignoff->getUserId(), 'role' => 'proofreader');
+			$userId = $proofSignoff->getUserId();
+			if ($userId) $userIds[] = array('id' => $userId, 'role' => 'proofreader');
 		}
 
 		if($reviewers) {
 			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 			$reviewAssignments =& $reviewAssignmentDao->getReviewAssignmentsByArticleId($articleId);
 			foreach ($reviewAssignments as $reviewAssignment) {
-				$userIds[] = array('id' => $reviewAssignment->getReviewerId(), 'role' => 'reviewer');
+				$userId = $reviewAssignment->getReviewerId();
+				if ($userId) $userIds[] = array('id' => $userId, 'role' => 'reviewer');
 				unset($reviewAssignment);
 			}
 		}
