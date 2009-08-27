@@ -457,12 +457,8 @@ class Article extends Submission {
 		$userIds = array();
 
 		if($authors) {
-			$authorDao =& DAORegistry::getDAO('AuthorDAO');
-			$authors = $authorDao->getAuthorsByArticle($articleId);
-			foreach ($authors as $author) {
-				$userId = $author->getId();
-				if ($userId) $userIds[] = array('id' => $userId, 'role' => 'author');
-			}
+			$userId = $this->getUserId();
+			if ($userId) $userIds[] = array('id' => $userId, 'role' => 'author');
 		}
 
 		if($editors) {
