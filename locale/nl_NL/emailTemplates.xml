@@ -720,4 +720,175 @@ Aarzel niet om contact met mij op te nemen als u vragen heeft.
 {$subscriptionContactSignature}</body>
 		<description>Deze e-mail herinnert een abonnee eraan dat zijn abonnement verlopen is. De URL van het tijdschrift en instructies voor toegang worden meegeleverd.</description>
 	</email_text>
+	<email_text key="NOTIFICATION">
+		<subject>Nieuw bericht van {$siteTitle}</subject>
+		<body>U heeft een nieuw bericht van {$siteTitle}:
+
+{$notificationContents}
+
+Link: {$url}
+
+{$principalContactSignature}</body>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST">
+		<subject>Nieuw bericht van {$siteTitle}</subject>
+		<body>U heeft een nieuw bericht van {$siteTitle}:
+--
+{$notificationContents}
+
+Link: {$url}
+--
+
+Als u deze berichten niet meer wilt ontvangen, ga dan naar {$unsubscribeLink} en voer uw e-mail adres en wachtwoord in.
+
+{$principalContactSignature}</body>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
+		<subject>Welkom bij de {$siteTitle} maillijst!</subject>
+		<body>U heeft zich geregistreerd om berichten te ontvangen van {$siteTitle}.
+			
+Klik op deze link om uw verzoek te bevestigen en uw e-mail adres toe te voegen aan de lijst: {$confirmLink}
+
+Als u de berichten van deze lijst niet langer wilt ontvangen, ga dan naar {$unsubscribeLink} en voer uw e-mail adres en wachtwoord in.
+
+Uw wachtwoord voor het stopzetten van berichten is: {$password}
+
+{$principalContactSignature}</body>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST_PASSWORD">
+		<subject>Uw notificatie-maillijst informatie voor {$siteTitle}</subject>
+		<body>Uw nieuwe wachtwoord voor het uitschakelen van notificatie e-mails is: {$password}
+
+Als u de notificatie e-mails niet meer wilt ontvangen ga dan naaar {$unsubscribeLink} en voer uw e-mail adres en wachtwoord in.
+
+{$principalContactSignature}</body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_ACCEPT">
+		<subject>Redacteursbeslissing</subject>
+		<body>{$authorName}:
+
+We hebben een beslissing genomen over uw inzending voor {$journalTitle}, "{$articleTitle}".
+
+Onze beslissing is:
+
+{$editorialContactSignature}</body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_REVISIONS">
+		<subject>Redacteursbeslissing</subject>
+		<body>{$authorName}:
+
+We hebben een beslissing genomen over uw inzending voor {$journalTitle}, "{$articleTitle}".
+
+Onze beslissing is:
+
+{$editorialContactSignature}</body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_RESUBMIT">
+		<subject>Redacteursbeslissing</subject>
+		<body>{$authorName}:
+
+We hebben een beslissing genomen over uw inzending voorv{$journalTitle}, "{$articleTitle}".
+
+Onze beslissing is:
+
+{$editorialContactSignature}</body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_DECLINE">
+		<subject>Redacteursbeslissing</subject>
+		<body>{$authorName}:
+
+We hebben een beslissing genomen over uw inzending voor {$journalTitle}, "{$articleTitle}".
+
+Onze beslissing is:
+
+{$editorialContactSignature}</body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
+		<subject>Aankoop abonnement: individueel</subject>
+		<body>Een individueel abonnement met de volgende details is online aangeschaft voor {$journalName}.
+
+Abonnementsoort:
+{$subscriptionType}
+
+Gebruiker:
+{$userDetails}
+
+Lidmaatschapsinformatie (indien opgegeven):
+{$membership}
+
+Gebruik de volgende URL om dit abonnement te bekijken of te wijzigen.
+
+Abonnement URL: {$subscriptionUrl}</body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
+		<subject>Aankoop abonnement: institutioneel</subject>
+		<body>Er is online een institutioneel abonnement gekocht voor {$journalName} met de volgende details. Gebruik de abonnement-url om dit abonnement te activeren. Zet de status van het abonnement op 'Actief'.
+
+Abonnementsoort:
+{$subscriptionType}
+
+Instituut:
+{$institutionName}
+{$institutionMailingAddress}
+
+Domein (indien opgegeven):
+{$domain}
+
+IP reeksen (indien opgegeven):
+{$ipRanges}
+
+Contactpersoon:
+{$userDetails}
+
+Lidmaatschapsinformatie (indien opgegeven):
+{$membership}
+
+Gebruik de volgende URL om het abonnement te bekijken of te bewerken.
+
+Abonnement URL: {$subscriptionUrl}</body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INDL">
+		<subject>Verlenging abonnement: individueel</subject>
+		<body>Een individueel abonnement is met de volgende details online verlengd voor {$journalName}.
+
+Abonnementsoort:
+{$subscriptionType}
+
+Gebruiker:
+{$userDetails}
+
+Lidmaatschapsinformatie (indien opgegeven):
+{$membership}
+
+Gebruik de volgende URL om het abonnement te bekijken of bewerken.
+
+Abonnement URL: {$subscriptionUrl}</body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INSTL">
+		<subject>Verlenging abonnement: institutioneel</subject>
+		<body>Een institutioneell abonnement voor {$journalName} is met de volgende gegevens online verlengd.
+
+Abonnementsoort:
+{$subscriptionType}
+
+Instituut:
+{$institutionName}
+{$institutionMailingAddress}
+
+Domein (indien opgegeven):
+{$domain}
+
+IP reeksen (indien opgegeven):
+{$ipRanges}
+
+Contactpersoon:
+{$userDetails}
+
+Lidmaatschapsinformatie (indien opgegeven):
+{$membership}
+
+Gebruik de volgende URL om dit abonnement te bekijken of bewerken.
+
+Abonnement URL: {$subscriptionUrl}</body>
+	</email_text>
 </email_texts>

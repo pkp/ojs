@@ -114,4 +114,15 @@
 	<message key="author.article.copyeditedFile">Bestand na tekstredactie</message>
 	<message key="author.article.authorRevisedFile">Auteursbestand</message>
 	<message key="author.submit.authorSubmitLoginMessage">U heeft een account nodig om in te kunnen zenden bij dit tijdschrift. Dit geeft onze redacteuren de mogelijkheid om uw inzendingen te volgen en contact met u op te nemen als de status van uw inzending verandert of als er additionele informatie van u nodig is.</message>
+	<message key="author.submit.step2">Stap 2. De inzending laden</message>
+	<message key="author.submit.step3">Stap 3. De metadata van de inzending invoeren</message>
+	<message key="author.submit.upload">2. Inzending laden</message>
+	<message key="author.submit.metadata">3. Metadata invoeren</message>
+	<message key="author.submissions.queuedReviewSubsequent">In review ronde {$round}</message>
+	<message key="author.submissions.queuedReviewRevisions">In review: revisies gevraagd</message>
+	<message key="author.submit.mustEnterWaiverReason">Als u om kwijtschelding vraagt, moet u een reden opgeven.</message>
+	<message key="author.submit.reorder">Volgorde auteursnaam veranderen</message>
+	<message key="author.submit.form.wordCountAlert">U heeft het maximaal aantal woorden voor een samenvatting in deze sectie overschreden.</message>
+	<message key="author.submissions.queuedEditingCopyedit">Onder redactie: tekstredactie gevraagd</message>
+	<message key="author.submissions.queuedEditingProofread">Onder redactie: proeflezen gevraagd</message>
 </locale>

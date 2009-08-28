@@ -211,4 +211,6 @@
 	<message key="plugins.generic.thesis.form.supervisorEmail">Email Επιβλέπωντος</message>
 	<message key="plugins.generic.thesis.form.supervisorEmailValid">Ένα έγκυρο Email Επιβλέπωντος απαιτείται.</message>
 
+	<message key="plugins.generic.thesis.enabled">Το Thesis Plugin έχει ενεργοποιηθεί.</message>
+	<message key="plugins.generic.thesis.disabled">Το Thesis Plugin έχει απενεργοποιηθεί.</message>
 </locale>

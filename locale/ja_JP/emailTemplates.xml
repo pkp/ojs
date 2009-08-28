@@ -769,4 +769,27 @@ Y
 {$principalContactSignature}</body>
 		<description>このメールは新規に登録された査読者に送付され、ユーザ名とパスワードが通知されます。</description>
 	</email_text>
+	<email_text key="NOTIFICATION">
+		<subject>{$siteTitle} からの新しいお知らせ</subject>
+		<body>{$siteTitle} からの新しいお知らせです。
+
+{$notificationContents}
+
+Link: {$url}
+
+{$principalContactSignature}</body>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST">
+		<subject>{$siteTitle} からの新しいお知らせ</subject>
+		<body>{$siteTitle} からの新しいお知らせです。
+--
+{$notificationContents}
+
+Link: {$url}
+--
+
+通知メールの配信を停止したい場合は， {$unsubscribeLink} でメールアドレスとパスワードを入力してください。
+
+{$principalContactSignature}</body>
+	</email_text>
 </email_texts>

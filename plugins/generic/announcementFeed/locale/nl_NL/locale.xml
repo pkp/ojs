@@ -28,4 +28,6 @@
 	<message key="plugins.generic.announcementfeed.atom.altText">Atom logo</message>
 	<message key="plugins.generic.announcementfeed.rss1.altText">RSS1 logo</message>
 	<message key="plugins.generic.announcementfeed.rss2.altText">RSS2 logo</message>
+	<message key="plugins.generic.announcementfeed.enabled">De announcement feed plugin is ingeschakeld.</message>
+	<message key="plugins.generic.announcementfeed.disabled">De announcement feed plugin is uitgeschakeld.</message>
 </locale>

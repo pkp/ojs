@@ -25,5 +25,7 @@
 	<message key="plugins.generic.webfeed.atom.altText">Atomロゴ</message>
 	<message key="plugins.generic.webfeed.rss1.altText">RSS1ロゴ</message>
 	<message key="plugins.generic.webfeed.rss2.altText">RSS2ロゴ</message>
+	<message key="plugins.generic.webfeed.enabled">Webフィードプラグインは有効です。</message>
+	<message key="plugins.generic.webfeed.disabled">Webフィードプラグインは無効です。</message>
 </locale>
 

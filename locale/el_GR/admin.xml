@@ -46,14 +46,7 @@
 	<message key="admin.journals.form.pathExists">Η διαδρομή που  συμπληρώσατε χρησιμοποιείται ήδη από ένα  άλλο περιοδικό.</message>
 	<message key="admin.journals.enableJournalInstructions">Ενεργοποιήστε  την επιλογή αυτό το περιοδικό να εμφανίζεται  δημόσια στην συλλογή</message>
 	<message key="admin.journals.journalDescription">Περιγραφή  Περιοδικού</message>
-	<message key="admin.journals.importOJS1">Εισαγωγή από OJS 1</message>
-	<message key="admin.journals.importOJS1.editMigratedJournal">Επεξεργασία  Εισαχθέντος Περιοδικού</message>
-	<message key="admin.journals.importOJS1.conflict.desc">Μερικοί  λογαριασμοί χρηστών περιέχουν  αντικρουόμενες πληροφορίες. Το OJS 1.x επιτρέπει  σε πολλαπλούς λογαριασμούς χρηστών να  μοιράζονται την ίδια διεύθυνση ηλεκτρονικού  ταχυδρομείου (email), ενώ η έκδοση OJS 2.x όχι. Στην  παρακάτω λίστα, στον δεύτερο λογαριασμό έχει  συμπληρωθεί ένας προσωρινός λογαριασμός email.  Αυτά θα πρέπει να διορθωθούν μη αυτόματα,  είτε συμπληρώνοντας ένα διαφορετικό email, είτε  συγχωνεύοντας λογαριασμούς χρηστών.</message>
-	<message key="admin.journals.importOJS1.conflict">{$firstUsername} ({$firstName})  και {$secondUsername} ({$secondName})</message>
-	<message key="admin.journals.importOJS1Instructions">Συμβουλευτείτε  το ΑΝΑΒΑΘΜΙΣΜΕΝΟ έγγραφο που διανέμεται με  το OJS για αναλυτικές πληροφορίες στην  μεταφορά δεδομένων από την έκδοση OJS 1 στην OJS  2.</message>
 	<message key="admin.journal.pathImportInstructions">Υπάρχουσα  διαδρομή περιοδικού (journal path) ή διαδρομή για  δημιουργία (π.χ., "ojs").</message>
-	<message key="admin.journal.importPath">Διαδρομή OJS 1 </message>
-	<message key="admin.journal.importPathInstructions">Ολοκληρωμένη  διαδρομή τοπικού συστήματος αρχείων στην  εγκατάσταση του OJS 1 (π.χ., "/var/www/ojs").</message>
 	<message key="admin.journals.importSubscriptions">Εισαγωγή  συνδρομών</message>
 	<message key="admin.journals.transcode">Μετατροπή  μεταδεδομένων άρθρων από ISO8859-1</message>
 	<message key="admin.journals.form.importPathRequired">Η συμπλήρωση  του πεδίου της διαδρομής της εισαγωγής είναι  υποχρεωτικό.</message>
@@ -65,9 +58,6 @@
 	<message key="admin.mergeUsers.allUsers">Όλοι οι εγγεγραμμένοι Χρήστες</message>
 	<message key="admin.mergeUsers.confirm">Είστε σίγουρος ότι επιθυμείτε να συγχωνεύσετε τον λογαριασμό με όνομα χρήστη  "{$oldUsername}" στον λογαριασμό με όνομα χρήστη "{$newUsername}"? Ο λογαριασμός  "{$oldUsername}" θα διαγραφεί. Αυτή η ενέργεια δεν είναι αναστρέψιμη.</message>
 	<message key="admin.mergerUsers.noneEnrolled">Κανένας εγγεγραμμένος χρήστης.</message>
-	<message key="admin.journals.importOJS1.success">Η εισαγωγή του περιοδικού ολοκληρώθηκε με επιτυχία.</message>
-	<message key="admin.journals.importOJS1.redirect.desc">Για την ανακατεύθυνση OJS 1 URLs σε OJS 2 URLs, δημιουργήστε τα ακόλουθα αρχεία PHP χρησιμοποιώντας τα παρακάτω αρχεία. Τα αντίστοιχα αρχεία μπορούν έπειτα να εισαχθούν στην διαδρομή του συστήματος αρχείων του OJS 1 ή, για εγκαταστάσεις ενός περιοδικού, στην διαδρομή του συστήματος αρχείων του OJS 2.</message>
-	<message key="admin.journals.importOJS1.redirect.ojs1root">Εισάγετε  στην διαδρομή του συστήματος αρχείων του OJS 1 (π.χ., /var/www/ojs1).</message>
-	<message key="admin.journals.importOJS1.redirect.ojs1orojs2root">Εισάγετε στην διαδρομή του συστήματος αρχείων του OJS 1 (π.χ. /var/www/ojs1) ή, για εγκαταστάσεις ενός περιοδικού, στην διαδρομή του συστήματος αρχείων του OJS 2 (π.χ., /var/www/ojs2).</message>
 	<message key="admin.journals.redirect">Δημιουργία κώδικα για την αντιστοίχηση OJS 1 URLs σε OJS 2 URLs</message>
+	<message key="admin.locale.maybeIncomplete">Οι επιλεγμένες τοπικές ρυθμίσεις μπορεί να μην είναι ολοκλήρωμένες</message>
 </locale>

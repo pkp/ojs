@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the el_GR locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="el_GR" full_name="Greek">
+	<message key="plugins.generic.jquery.name">jQuery Plugin</message>
+	<message key="plugins.generic.jquery.description"><![CDATA[Αυτό το plugin ενεργοποιεί την javascript επεξεργασία του περιεχομένου του OJS με τη χρήση του <a href="http://www.jquery.com" target="_new">jQuery</a> .]]></message>
+	<message key="plugins.generic.jquery.descriptionDisabled"><![CDATA[Αυτό το plugin ενεργοποιεί την javascript επεξεργασία του περιεχομένου του OJS με τη χρήση του <a href="http://www.jquery.com" target="_new">jQuery</a>. <strong>Το jQuery δεν είναι προς το παρόν εγκατεστημένο. Σας παρακαλούμε εγκαταστήστε το στο {$jQueryPath}.</strong>]]></message>
+	<message key="plugins.generic.jquery.disabled">Το jQuery Plugin έχει απενεργοποιηθεί.</message>
+	<message key="plugins.generic.jquery.enabled">Το jQuery Plugin έχει ενεργοποιηθεί.</message>
+	<message key="plugins.generic.jquery.settings">Ρυθμίσεις</message>
+</locale>

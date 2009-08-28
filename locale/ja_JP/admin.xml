@@ -69,4 +69,5 @@
 	<message key="admin.journals.importOJS1.redirect.ojs1root">旧OJS１ファイルシステムパス（すなわち、/var/www/ojs1）に置いてください。</message>
 	<message key="admin.journals.importOJS1.redirect.ojs1orojs2root">旧OJS１ファイルシステムパス（すなわち、/var/www/ojs1）、または、雑誌を1誌のみ公開している場合は新OJS2ファイルシステムパス（すなわち、/var/www/ojs2）に置いてください。</message>
 	<message key="admin.journals.redirect">OJS1 URLからOJS2 URLへマッピングするコードを生成</message>
+	<message key="admin.locale.maybeIncomplete">マークのあるロケールは完全ではありません。</message>
 </locale>

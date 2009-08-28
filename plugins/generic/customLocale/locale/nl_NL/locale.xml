@@ -34,4 +34,6 @@
 	<message key="plugins.generic.customLocale.file.reference">Standaard tekst</message>
 	<message key="plugins.generic.customLocale.file.custom">Aangepaste tekst</message>
 	<message key="plugins.generic.customLocale.localeKey.description">Geef een complete taalcode om naar te zoeken.</message>
+	<message key="plugins.generic.customLocale.enabled">De custom locale plugin is ingeschakeld.</message>
+	<message key="plugins.generic.customLocale.disabled">De custom locale plugin is uitgeschakeld.</message>
 </locale>

@@ -32,4 +32,6 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Nieuwe tracking code (ga.js)</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Kies de te gebruiken tracking code</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Oude tracking code (urchin.js)</message>
+	<message key="plugins.generic.googleAnalytics.enabled">De Google Analytics plugin is ingeschakeld.</message>
+	<message key="plugins.generic.googleAnalytics.disabled">De Google Analytics plugin is uitgeschakeld.</message>
 </locale>

@@ -25,4 +25,6 @@
 	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Το plugin αυτό ενεργοποιεί την WYSIWYG επεξεργασία των πεδίων κειμένου του OJS με την χρήση του  επεξεργαστή περιεχομένου <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>. <strong>Το TinyMCE δεν έχει εγκατασταθεί. Παρακαλούμε εγκαταστήστε το στο {$tinyMcePath}.</strong>]]></message>
 
 	<message key="plugins.generic.tinymce.settings">Ρυθμίσεις</message>
+	<message key="plugins.generic.tinymce.enabled">Το TinyMCE Plugin έχει ενεργοποιηθεί.</message>
+	<message key="plugins.generic.tinymce.disabled">Το TinyMCE Plugin έχει απενεργοποιηθεί.</message>
 </locale>

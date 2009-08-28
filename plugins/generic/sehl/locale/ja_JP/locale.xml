@@ -15,4 +15,6 @@
 <locale name="ja_JP" full_name="日本語">
 	<message key="plugins.generic.sehl.name">SEHLプラグイン</message>
 	<message key="plugins.generic.sehl.description">サーチエンジンハイライト機能（SEHL）を実装します。有効にすると、検索したキーワードが検索結果画面でハイライト表示されます。</message>
+	<message key="plugins.generic.sehl.enabled">SEHL プラグインは有効です。</message>
+	<message key="plugins.generic.sehl.disabled">SEHL プラグインは無効です。</message>
 </locale>

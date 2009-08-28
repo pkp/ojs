@@ -114,4 +114,12 @@
 	<message key="author.article.copyeditedFile">原稿整理済みファイル</message>
 	<message key="author.article.authorRevisedFile">著者ファイル</message>
 	<message key="author.submit.authorSubmitLoginMessage">この雑誌に投稿するにはユーザアカウントが必要です。アカウントは編集者が投稿物を追跡したり、投稿物の状態が変更された場合やあなたに関する追加情報が必要になった場合に、あなたに連絡を取ることをできるようにします。</message>
+	<message key="author.submit.mustEnterWaiverReason">免除を申請する場合は，所定の欄に理由を入力してください。</message>
+	<message key="author.submissions.queuedReviewSubsequent">査読ラウンド {$round}</message>
+	<message key="author.submissions.queuedReviewRevisions">査読中: 要改訂</message>
+	<message key="author.submissions.queuedEditingCopyedit">編集中: 原稿整理依頼済</message>
+	<message key="author.submissions.queuedEditingProofread">編集中: 校正依頼済</message>
+	<message key="author.submit.howToSubmit"><![CDATA[問題が発生した場合は，<a href="mailto:{$supportEmail}">{$supportName}</a> までご連絡ください。 ({$supportPhone})]]></message>
+	<message key="author.submit.journalSectionDescription">この投稿物に適切なセクションを選択してください。(セクションについては「このサイト/雑誌について」の「セクションポリシー」を参照してください。)</message>
+	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">追加コード</a>.]]></message>
 </locale>

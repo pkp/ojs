@@ -43,5 +43,7 @@
 	<message key="plugins.generic.xmlGalley.settings.customXSLRequired">カスタムXSLスタイルシートファイルを指定する必要があります。</message>
 	<message key="plugins.generic.xmlGalley.settings.customXSLInvalid">アップロードされたXSLファイルは不正です。ファイルをチェックして、再度アップロードしてください。</message>
 
+	<message key="plugins.generic.xmlGalley.enabled">XMLゲラプラグインは有効です。</message>
+	<message key="plugins.generic.xmlGalley.disabled">XMLゲラプラグインは無効です。</message>
 </locale>
 

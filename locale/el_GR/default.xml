@@ -97,7 +97,16 @@
 	<message key="default.journalSettings.fastTrackFeeDescription">Με την εισφορά αυτή εξασφαλίζεται ότι η αξιολόγηση και η τελική ενημέρωση του συγγραφέα από τον Επιμελητή για τα αποτελέσματα της αξιολόγησης θα ολοκληρωθούν μέσα σε 4 εβδομάδες.</message>
 	<message key="default.journalSettings.publicationFeeDescription">Αν το άρθρο αυτό εγκριθεί για δημοσίευση, θα ερωτηθείτε για να πληρώσετε μια Εισφορά Δημοσίευσης του Άρθρου ώστε να καλυφθεί ένα μέρος των εξόδων δημοσίευσης.</message>
 	<message key="default.journalSettings.waiverPolicy">Αν δεν διαθέτετε τους πόρους για να καλύψετε τις σχετικές εισφορές, θα έχετε μια δυνατότητα παράβλεψης των εισφορών. Δεν επιθυμούμε τέτοιου είδους θέματα να εμποδίσουν την δημοσίευση μιας χρήσιμης εργασίας..</message>
-	<message key="default.journalSettings.payPerViewFeeDescription">Η πληρωμή αυτής της εισφοράς θα σας επιτρέψει να δείτε, να "κατεβάσετε" και να τυπώσετε αυτό το άρθρο.</message>
 	<message key="default.journalSettings.membershipFeeDescription">Με την πληρωμή αυτής της εισφοράς θα γίνεται μέλος του οργανισμού μας για ένα χρόνο και θα έχετε δικαίωμα ελεύθερης πρόσβασης στα περιεχόμενα αυτού του περιοδικού.</message>
 	<message key="default.journalSettings.donationFeeDescription">Καλωσορίζουμε με ιδιαίτερη ευχαρίστηση κάθε είδους δωρεές οι οποίες βοηθούν την Συντακτική Ομάδα του Περιοδικού να εκδίδει και να παρέχει στους αναγνώστες ένα ποιοτικό και έγκυρο περιοδικό.</message>
+	<message key="section.default.title">Άρθρα</message>
+	<message key="section.default.abbrev">ΑΡΤ</message>
+	<message key="default.journalSettings.submissionFee">Υποβολή Άρθρου</message>
+	<message key="default.journalSettings.fastTrackFee">Αναφορά Γρήγορης Επισκόπησης</message>
+	<message key="default.journalSettings.publicationFee">Δημοσίευση Άρθρου</message>
+	<message key="default.journalSettings.purchaseArticleFee">Αγορά Άθρου</message>
+	<message key="default.journalSettings.purchaseArticleFeeDescription">Η πληρωμή αυτής της εισφοράς θα σας δώσει τη δυνατότητα να δείτε, κατεβάσετε και εκτυπώσετε αυτό το άρθρο.</message>
+	<message key="default.journalSettings.membershipFee">Συνεργαζόμενο Μέλος</message>
+	<message key="default.journalSettings.donationFee">Δωρεές στο περιοδικό</message>
+	<message key="section.default.policy">-</message>
 </locale>

@@ -357,42 +357,27 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   <message key="manager.setup.publicationScheduleDescription">
     <![CDATA[雑誌アイテムは、ある巻号の一部として目次と共にまとめて出版することができます。また、準備ができたアイテムを「最新号」の目次に追加することにより直ちに出版することもできます。この雑誌がどちらの方式を採用するか、また、予定する出版頻度を読書に示してください（これは、「この雑誌について」に表示されます）。]]>
   </message>
-  <message key="manager.setup.basicEditorialStepsDescription">
-    <![CDATA[ステップ: 受付 &gt; 査読 &gt; 編集 &gt; 目次。<br /><br />
-これらの編集ステップを担当するモデルを選択してください。（編集長およびセクションエディタを任命するには、雑誌管理ページの編集者機能を使用してください。）]]>
-  </message>
+  <message key="manager.setup.basicEditorialStepsDescription"><![CDATA[ステップ: 受付 &gt; 査読 &gt; 編集 &gt; 目次。<br /><br />
+これらの編集ステップを担当するモデルを選択してください。（編集長およびセクションエディタを任命するには、雑誌管理ページの編集者機能を使用してください。）]]></message>
   <!-- Setup Step 5 -->
   <!-- Languages -->
-  <message key="manager.languages.languageInstructions">
-    <![CDATA[OJSはサポートしている任意の言語で利用者にサービスを提供することができます。また、OJSは多言語システムとして運用することができます。ユーザはページごとに言語を切り替えることができ、一部の要素については複数の言語でデータを入力することができます。<br /><br/>OJSがサポートしている言語が以下に表示されていない場合は、サイト管理用のインターフェースを使って言語をインストールするようサイト管理者に依頼してください。サポート言語を追加する方法については、システムに添付されているOJS文書をご覧ください。]]>
-  </message>
+  <message key="manager.languages.languageInstructions"><![CDATA[OJSはサポートしている任意の言語で利用者にサービスを提供することができます。また、OJSは多言語システムとして運用することができます。ユーザはページごとに言語を切り替えることができ、一部の要素については複数の言語でデータを入力することができます。<br /><br/>OJSがサポートしている言語が以下に表示されていない場合は、サイト管理用のインターフェースを使って言語をインストールするようサイト管理者に依頼してください。サポート言語を追加する方法については、システムに添付されているOJS文書をご覧ください。]]></message>
   <!-- Section Management -->
   <!-- Import/Export -->
   <!-- Groups / Editorial Team -->
-  <message key="manager.groups.enableBoard.description">
-    <![CDATA[「この雑誌について」の「<a href="{$aboutEditorialTeamUrl}">編集委員会</a>」欄に表示する担当一覧を]]>
-  </message>
+  <message key="manager.groups.enableBoard.description"><![CDATA[「この雑誌について」の「<a href="{$aboutEditorialTeamUrl}">編集委員会</a>」欄に表示する担当一覧を]]></message>
   <!-- People Management -->
-  <message key="manager.people.noAdministrativeRights">
-    <![CDATA[申し訳ありませんが、あなたはこのユーザに関する管理権限がありません。その理由は、以下のいずれかです。
+  <message key="manager.people.noAdministrativeRights"><![CDATA[申し訳ありませんが、あなたはこのユーザに関する管理権限がありません。その理由は、以下のいずれかです。
 		<ul>
 			<li>このユーザはサイト管理である。</li>
 			<li>このユーザはあなたが管理していない雑誌に登録されている。</li>
 		</ul>
-	この処理は、サイト管理者が行う必要があります。
-	]]>
-  </message>
+	この処理は、サイト管理者が行う必要があります。]]></message>
   <!-- Email Management -->
   <!-- Subscription Policy Management -->
-  <message key="manager.subscriptionPolicies.htmlInstructions">
-    <![CDATA[この欄ではHTMLを使用できます（フォントサイズや色など）。また、「改行」は<br>として扱われます。ブラウザーFirefoxではHTMLエディターが使用できます。]]>
-  </message>
-  <message key="manager.subscriptionPolicies.openAccessNotificationDisabled">
-    <![CDATA[<strong>注:</strong> このオプションを有効にするには、サイト管理者がOJS設定ファイルにおいて <tt>scheduled_tasks</tt> を有効にする必要があります。また、OJS説明書で示したように（この機能はすべてのサーバで利用できるわけではありませんので）この機能を使用するために、さらにサーバの設定を行う必要があるかもしれません。]]>
-  </message>
-  <message key="manager.subscriptionPolicies.expiryRemindersDisabled">
-    <![CDATA[<strong>Note:</strong> このオプションを有効にするには、サイト管理者がOJS設定ファイルにおいて <tt>scheduled_tasks</tt> を有効にする必要があります。また、OJS説明書で示したように（この機能はすべてのサーバで利用できるわけではありませんので）この機能を使用するために、さらにサーバの設定を行う必要があるかもしれません。]]>
-  </message>
+  <message key="manager.subscriptionPolicies.htmlInstructions"><![CDATA[この欄ではHTMLを使用できます（フォントサイズや色など）。また、「改行」は<br>として扱われます。ブラウザーFirefoxではHTMLエディターが使用できます。]]></message>
+  <message key="manager.subscriptionPolicies.openAccessNotificationDisabled"><![CDATA[<strong>注:</strong> このオプションを有効にするには、サイト管理者がOJS設定ファイルにおいて <tt>scheduled_tasks</tt> を有効にする必要があります。また、OJS説明書で示したように（この機能はすべてのサーバで利用できるわけではありませんので）この機能を使用するために、さらにサーバの設定を行う必要があるかもしれません。]]></message>
+  <message key="manager.subscriptionPolicies.expiryRemindersDisabled"><![CDATA[<strong>Note:</strong> このオプションを有効にするには、サイト管理者がOJS設定ファイルにおいて <tt>scheduled_tasks</tt> を有効にする必要があります。また、OJS説明書で示したように（この機能はすべてのサーバで利用できるわけではありませんので）この機能を使用するために、さらにサーバの設定を行う必要があるかもしれません。]]></message>
   <!-- Subscription Type Management -->
   <!-- Subscription Management -->
   <!-- Announcement Type Management -->
@@ -401,19 +386,15 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   <!-- Editor Index Page -->
   <!-- Back Issues -->
   <!-- Create Issue / Issue Data -->
-  <message key="editor.issues.resetSectionOrder">
-    <![CDATA[この号はセクションの表示順が変更されています。<a href="{$url}" class="action">デフォルトに戻す</a>]]>
-  </message>
+  <message key="editor.issues.resetSectionOrder"><![CDATA[この号はセクションの表示順が変更されています。<a href="{$url}" class="action">デフォルトに戻す</a>]]></message>
   <!-- Live Issues -->
   <!-- Navigation sidebar menu -->
   <!-- Used by editor in submission review / editing -->
-  <message key="editor.article.selectReviewerNotes">
-    <![CDATA[名前のリンクは査読者のプロフィールを表示します。<br/>
+  <message key="editor.article.selectReviewerNotes"><![CDATA[名前のリンクは査読者のプロフィールを表示します。<br/>
 評価は5段階です（5が最高）。<br/>
 週数は査読にかかる平均時間（週）です。<br/>
 最新受諾日は最も最近査読を受諾した日です。<br/>
-アクティブは、現在依頼中または作業中の査読文献の数です。]]>
-  </message>
+アクティブは、現在依頼中または作業中の査読文献の数です。]]></message>
   <!-- Section Editor -->
   <message key="sectionEditor.activeEditorialAssignments">編集担当の任命</message>
   <message key="sectionEditor.completedEditorialAssignments">完了した編集担当の任命</message>
@@ -626,9 +607,7 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   </message>
   <!-- Interstitial page for non-PDF non-HTML galleys -->
   <message key="article.nonpdf.title">論文のダウンロード</message>
-  <message key="article.nonpdf.note">
-    <![CDATA[選択したファイルは自動的にダウンロードが開始するはずです。開始しない場合は、下のリンクをクリックしてください。このファイルを見るには特別なビューアーやプラグインが必要な場合がありますので注意してください。<br /><br />ファイルが自動的にダウンロードされない場合は、<a href="{$url}">ここをクリック</a>してください。]]>
-  </message>
+  <message key="article.nonpdf.note"><![CDATA[選択したファイルは自動的にダウンロードが開始するはずです。開始しない場合は、下のリンクをクリックしてください。このファイルを見るには特別なビューアーやプラグインが必要な場合がありますので注意してください。<br /><br />ファイルが自動的にダウンロードされない場合は、<a href="{$url}">ここをクリック</a>してください。]]></message>
   <!-- Site index -->
   <message key="site.journalsHosted">このサイトで提供している雑誌</message>
   <message key="site.journalView">雑誌の閲覧</message>
@@ -1146,4 +1125,73 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	<message key="author.submissions.queuedEditingCopyedit">編集作業待ち : 原稿整理が必要</message>
 	<message key="author.submissions.queuedEditingProofread">編集作業待ち : 校正が必要</message>
 	<message key="author.submit.mustEnterWaiverReason">免除を申請する場合は，空欄に理由を記入してください。</message>
+	<message key="plugins.categories.oaiMetadataFormats">OAIメタデータフォーマットプラグイン</message>
+	<message key="subscriptionTypes.format.online">オンライン</message>
+	<message key="subscriptionTypes.format.print">冊子</message>
+	<message key="subscriptionTypes.format.printOnline">冊子とオンライン</message>
+	<message key="notification.type.editing">編集イベント</message>
+	<message key="notification.type.galleyModified">"{$param}".</message>
+	<message key="notification.type.submissions">投稿イベント</message>
+	<message key="notification.type.suppFileModified">"{$param}" の補足ファイルが修正された</message>
+	<message key="notification.type.userComment">読者が "{$param}" にコメントした。</message>
+	<message key="subscriptions.individualDescription">個人購読では購読コンテンツにアクセスするためにはログインが必要です。</message>
+	<message key="subscriptions.institutionalDescription">機関購読ではログインは必要ありません。ユーザのドメインもしくはIPアドレス(またはその両方)によって購読コンテンツへのアクセスが提供されます。</message>
+	<message key="subscriptionManager.individualSubscriptions">個人購読</message>
+	<message key="subscriptionManager.institutionalSubscriptions">機関購読</message>
+	<message key="subscriptionManager.subscriptionTypes">購読種別</message>
+	<message key="user.subscriptions.individualSubscriptions">個人購読</message>
+	<message key="user.subscriptions.institutionalSubscriptions">機関購読者</message>
+	<message key="user.subscriptions.renew">更新</message>
+	<message key="user.subscriptions.purchase">購読</message>
+	<message key="user.subscriptions.purchaseNewSubscription">新規に購読する</message>
+	<message key="user.subscriptions.purchaseIndividualSubscription">個人購読で購入する</message>
+	<message key="user.subscriptions.purchaseInstitutionalSubscription">機関購読で購入する</message>
+	<message key="user.subscriptions.form.institutionName">機関名</message>
+	<message key="user.subscriptions.form.institutionNameRequired">機関名が必要です。</message>
+	<message key="user.subscriptions.form.institutionMailingAddress">メールアドレス</message>
+	<message key="user.subscriptions.form.domain">ドメイン</message>
+	<message key="user.subscriptions.form.ipRange">IPアドレス範囲</message>
+	<message key="user.subscriptions.form.ipRangeItem"><![CDATA[&#8226;]]></message>
+	<message key="user.subscriptions.form.ipRangeValid">有効なIPアドレス範囲</message>
+	<message key="user.subscriptions.form.deleteIpRange">削除</message>
+	<message key="user.subscriptions.form.addIpRange">追加</message>
+	<message key="notification.type.issuePublished">新しい巻号が出版された時</message>
+	<message key="notification.type.layoutComment">"{$param}" のレイアウトについてコメントがあった時</message>
+	<message key="notification.type.metadataModified">"{$param}" のメタデータが修正された時</message>
+	<message key="notification.type.newAnnouncement">新しいお知らせが作成された時</message>
+	<message key="notification.type.reviewerComment">査読者が "{$param}" にコメントした時</message>
+	<message key="notification.type.reviewerFormComment">"{$param}" についての査読が査読フォームから送信された時</message>
+	<message key="notification.type.reviewing">査読イベント</message>
+	<message key="notification.type.site">サイトイベント</message>
+	<message key="notification.type.submissionComment">編集者が "{$param}" にコメントした時</message>
+	<message key="subscriptionTypes.year">年</message>
+	<message key="subscriptions.status">状態</message>
+	<message key="subscriptions.status.awaitingOnlinePayment">オンライン支払待ち</message>
+	<message key="subscriptions.status.other">その他，メモ</message>
+	<message key="user.subscriptions.viewSubscriptionTypes">利用可能な購読種別を見る</message>
+	<message key="user.subscriptions.form.typeId">購読種別</message>
+	<message key="user.subscriptions.form.subscriptionExists">このユーザアカウントはすでに個人購読中です。</message>
+	<message key="notification.mailListDescription">雑誌に追加された新しい重要なコンテンツについての通知をすぐに受け取るためにメールアドレスを入力してください。</message>
+	<message key="notification.notificationsPublicDescription"><![CDATA[このページでは新しい巻号の発行やお知らせのようなこの雑誌に関係する重要なおしらせを表示します。これらの通知は RSSフィード(右側の画像をクリックする)か，<a href="{$emailUrl}">メール</a>で受け取ることができます。]]></message>
+	<message key="notification.type.articleSubmitted">新しい論文, "{$param}", が投稿された時</message>
+	<message key="installer.installApplication">Open Journal Systems をインストールする</message>
+	<message key="installer.upgradeApplication">Open Journal Systems をアップグレードする</message>
+	<message key="article.article">論文</message>
+	<message key="article.citations">参考文献</message>
+	<message key="submission.citations">参考文献</message>
+	<message key="user.manageMySubscriptions">購読管理</message>
+	<message key="subscriptionTypes.currency">通貨</message>
+	<message key="subscriptionTypes.years">年</message>
+	<message key="subscriptionTypes.month">月</message>
+	<message key="about.subscriptions.individual">個人購読者</message>
+	<message key="about.subscriptions.institutional">機関購読者</message>
+	<message key="about.subscriptionTypes.name">名前</message>
+	<message key="user.subscriptions.form.membership">会員情報</message>
+	<message key="user.subscriptions.form.membershipRequired">選択された購読種別は会員情報が必要です。</message>
+	<message key="user.subscriptions.form.typeIdValid">有効な購読種別を選択してください。</message>
+	<message key="user.subscriptions.form.domainIPRangeRequired">選択された購読種別は購読の認証のためのドメイン名とIPアドレス(の両方もしくは片方)が必要です。</message>
+	<message key="user.subscriptions.form.domainValid">有効なドメイン名を入力してください。</message>
+	<message key="notification.type.copyeditComment">コピーエディタが "{$param}" にコメントした時</message>
+	<message key="notification.type.editorDecisionComment">"{$param}" の編集者の判断についてコメントがあった時</message>
+	<message key="notification.type.proofreadComment">"{$param}" について校正者のコメントがあった時</message>
 </locale>

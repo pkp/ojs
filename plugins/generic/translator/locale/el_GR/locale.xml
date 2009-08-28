@@ -80,4 +80,8 @@
 	<message key="plugins.generic.translator.deleteEmail">Διαγράψτε αυτό το email</message>
 	<message key="plugins.generic.translator.saveBeforeContinuing">Σιγουρευτείε ότι αποθηκεύεται κάθε αλλαγή σε αυτή τη σελίδα πριν συνεχίσετε γιατί αλλιώς θα χαθούν. Επιθυμείτε να συνεχίσετε; Αν ναι, όλες οι αλλαγές που δεν έχουν αποθηκευτεί θα χαθούν.</message>
 	<message key="plugins.generic.translator.localeKey.description">Εισάγετε ένα κλειδί τοπικής ρύθμισης για αναζήτηση.</message>
+	<message key="plugins.generic.translator.enabled">Το Plugin Μετάφρασης έχει ενεργοποιηθεί.</message>
+	<message key="plugins.generic.translator.disabled">Το Plugin Μετάφρασης έχει απενεργοποιηθεί.</message>
+	<message key="plugins.generic.translator.fileNotWriteable">Αυτό το αρχείο τοπικών ρυθμίσεων δεν είναι εγράψιμο από τον εξυπηρετητή. Οι αλλαγές που θα κάνετε δεν θα αποθηκευτούν.</message>
+	<message key="plugins.generic.translator.filesNotWriteable">Αυτά τα αρχεία τοπικών ρυθμίσεων δεν είναι εγράψιμα από τον εξυπηρετητή. Οι αλλαγές που θα κάνετε δεν θα αποθηκευτούν.</message>
 </locale>

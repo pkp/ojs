@@ -203,4 +203,6 @@
 	<message key="plugins.generic.thesis.form.uploadCodeInstructions">部局担当者のみ使用可能。</message>
 	<message key="plugins.generic.thesis.form.studentEmailPublish">学生のメールアドレスを公開</message>
 	<message key="plugins.generic.thesis.form.studentEmailPublishInstructions">チェックすると、論文要旨のページに学生のメールアドレスが表示されます。</message>
+	<message key="plugins.generic.thesis.enabled">学位論文要旨プラグインは有効です。</message>
+	<message key="plugins.generic.thesis.disabled">学位論文要旨プラグインは無効です。</message>
 </locale>

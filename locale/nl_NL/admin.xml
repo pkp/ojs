@@ -59,4 +59,5 @@
 	<message key="admin.mergeUsers.allUsers">Alle ingeschreven gebruikers</message>
 	<message key="admin.mergeUsers.confirm">Weet u zeker dat u het account met gebruikersnaam "{$oldUsername}" wilt samenvoegen met gebruikersnaam "{$newUsername}"? Het account met gebruikersnaam "{$oldUsername}" bestaat dan niet meer. Deze actie kan niet ongedaan gemaakt worden.</message>
 	<message key="admin.mergerUsers.noneEnrolled">Geen gebruikers.</message>
+	<message key="admin.locale.maybeIncomplete">De gemarkeerde talen kunnen incompleet zijn.</message>
 </locale>

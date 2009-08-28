@@ -37,4 +37,6 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Επιλέξτε ένα tracking code για χρήση.</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Legacy tracking code (urchin.js)</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Νέο tracking code (urchin.js)</message>
+	<message key="plugins.generic.googleAnalytics.enabled">Το Google Analytics  Plugin έχει ενεργοποιηθεί.</message>
+	<message key="plugins.generic.googleAnalytics.disabled">Το Google Analytics  Plugin έχει απενεργοποιηθεί.</message>
 </locale>

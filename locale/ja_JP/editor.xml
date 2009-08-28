@@ -200,4 +200,5 @@
 	<message key="editor.article.uploaded">アップロード</message>
 	<message key="editor.article.removeCoverPage">表紙画像を削除しても良いですか?</message>
 	<message key="editor.article.remove">削除</message>
+	<message key="editor.issues.enableOpenAccessDate">遅延オープンアクセス (一定期間後にオープンアクセスになる) を有効にする</message>
 </locale>

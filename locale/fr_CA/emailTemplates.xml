@@ -710,4 +710,177 @@ Merci,
 {$principalContactSignature}</body>
 		<description>Ce courriel est envoyé à un réviseur nouvellement inscrit, afin de l'accueillir dans le système et lui offrir un exemplaire de son nom et mot de passe d'utilisateur.</description>
 	</email_text>
+	<email_text key="NOTIFICATION">
+		<subject>Nouvel avis de {$siteTitle}</subject>
+		<body>Vous avez un nouvel avis de {$siteTitle}:
+
+{$notificationContents}
+
+Lien: {$url}
+
+{$principalContactSignature}</body>
+		<description>Ce courriel est envoyé aux utilisateurs inscrits qui ont choisi de recevoir par courriel ce type d'avis.</description>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST">
+		<subject>Nouvel avis de {$siteTitle}</subject>
+		<body>Vous avez un avis de {$siteTitle}:
+--
+{$notificationContents}
+
+Lien: {$url}
+--
+
+Si vous souhaitez ne plus recevoir d'avis par courriel, veuillez aller à {$unsubscribeLink} et saisir votre adresse de courriel et mot de passe.
+
+{$principalContactSignature}</body>
+		<description>Ce courriel est envoyé aux utilisateurs non inscrits sur la liste de diffusion d'avis.</description>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
+		<subject>Bienvenue à la liste de diffusion de {$siteTitle}!</subject>
+		<body>Vous vous êtes inscrits pour recevoir des avis de {$siteTitle}.
+			
+Veuillez cliquer sur ce lien pour confirmer votre demande et ajouter votre adresse de courriel à la liste de diffusion : {$confirmLink}
+
+Si vous souhaitez  arrêter l'envoi d'avis par courriels, veuillez aller à {$unsubscribeLink} et saisir votre adresse de courriel et votre mot de passe.
+
+Votre mot de passe pour désactiver les courriels d'avis est : {$password}
+
+{$principalContactSignature}</body>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST_PASSWORD">
+		<subject>Votre information de liste de diffusion d'avis pour {$siteTitle}</subject>
+		<body>Votre nouveau mot de passe pour désactiver les avis par courriel est : {$password}
+
+Si vous souhaitez ne plus recevoir d'avis par courriel, veuillez aller à {$unsubscribeLink} et saisir votre adresse de courriel et votre mot de passe.
+
+{$principalContactSignature}</body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_ACCEPT">
+		<subject>Décision du rédacteur</subject>
+		<body>{$authorName}:
+
+Nous avons pris une décision concernant votre soumission à {$journalTitle}, "{$articleTitle}".
+
+Notre décision est de :
+
+{$editorialContactSignature}</body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_REVISIONS">
+		<subject>Décision du rédacteur</subject>
+		<body>{$authorName}:
+
+Nous avons pris une décision concernant votre soumission à {$journalTitle}, "{$articleTitle}".
+
+Notre décision est de :
+
+{$editorialContactSignature}</body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_RESUBMIT">
+		<subject>Décision du rédacteur</subject>
+		<body>{$authorName}:
+
+Nous avons pris une décision concernant votre soumission à {$journalTitle}, "{$articleTitle}".
+
+Notre décision est de :
+
+{$editorialContactSignature}</body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_DECLINE">
+		<subject>Décision du rédacteur</subject>
+		<body>{$authorName}:
+
+Nous avons pris une décision concernant votre soumission à {$journalTitle}, "{$articleTitle}".
+
+Notre décision est de :
+
+{$editorialContactSignature}</body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
+		<subject>Souscription à un abonnement: Individuel</subject>
+		<body>Souscription en ligne à un abonnement individuel pour {$journalName} avec les détails suivants :
+
+Type d'abonnement :
+{$subscriptionType}
+
+Utilisateur :
+{$userDetails}
+
+Information d'adhésion (si fournie):
+{$membership}
+
+Pour afficher ou modifier cet abonnement, veuillez utiliser l'URL suivante.
+
+URL d'abonnement: {$subscriptionUrl}</body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
+		<subject>Souscription à un abonnement: Institutionnel</subject>
+		<body>Souscription en ligne à un abonnement institutionnel pour {$journalName} avec les informations suivantes. Pour activer cet abonnement, veuillez utiliser l'URL d'abonnement fourni et fixer le statut de l'abonnement à 'Actif'.
+
+Type d'abonnement:
+{$subscriptionType}
+
+Institution:
+{$institutionName}
+{$institutionMailingAddress}
+
+Domaine (si fourni):
+{$domain}
+
+Intervalle d'adresses IP (si fourni):
+{$ipRanges}
+
+Personne contact:
+{$userDetails}
+
+Information d'adhésion (si fourni):
+{$membership}
+
+Pour afficher ou modifier cet abonnement, veuillez utiliser l'URL suivant :
+
+URL de l'abonnement : {$subscriptionUrl}</body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INDL">
+		<subject>Renouvellement d'abonnement : Individuel</subject>
+		<body>Un abonnement individuel a été renouvelé en ligne pour {$journalName} avec les informations suivantes.
+
+Type d'abonnement :
+{$subscriptionType}
+
+Utilisateur :
+{$userDetails}
+
+Information d'adhésion (si fourni):
+{$membership}
+
+Pour afficher ou modifier cet abonnement, veuillez utiliser l'URL suivant.
+
+URL de l'abonnement : {$subscriptionUrl}</body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INSTL">
+		<subject>Renouvellement d'abonnement : Institutionnel</subject>
+		<body>Un abonnement institutionnel a été renouvelé en ligne pour {$journalName} avec les informations suivantes.
+
+Type d'abonnement:
+{$subscriptionType}
+
+Institution:
+{$institutionName}
+{$institutionMailingAddress}
+
+Domaine (si fourni):
+{$domain}
+
+Intervalle d'adresses IP (si fourni):
+{$ipRanges}
+
+Personne contact:
+{$userDetails}
+
+Information d'adhésion (si fourni):
+{$membership}
+
+Pour afficher ou modifier cet abonnement, veuillez utiliser l'URL suivant.
+
+URL de l'abonnement : {$subscriptionUrl}</body>
+	</email_text>
 </email_texts>

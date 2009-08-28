@@ -720,4 +720,173 @@ URL Υποβολής: {$submissionUrl}
 {$subscriptionContactSignature}</body>
 		<description>Το συγκεκριμένο μήνυμα ηλεκτρονικού ταχυδρομείου ειδοποιεί τους συνδρομητές σχετικά με τη λήξη της συνδρομής. Παρέχει το URL του περιοδικού μαζί με οδηγίες για πρόσβαση.</description>
 	</email_text>
+	<email_text key="NOTIFICATION">
+		<subject>Νέα ειδοποίηση από {$siteTitle}</subject>
+		<body>'Εχετε μια νέα ειδοποίηση από {$siteTitle}:
+
+{$notificationContents}
+
+Σύνδεσμος: {$url}
+
+{$principalContactSignature}</body>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST">
+		<subject>Νέα ειδοποίηση από {$siteTitle}</subject>
+		<body>Έχετε μια νέα ειδοποίηση από {$siteTitle}:
+--
+{$notificationContents}
+
+Σύνδεσμος: {$url}
+--
+
+Αν δεν επιθυμείτε να λαμβάνετε email με ειδοποιήσεις. σας παρακαλούμε πηγαίνετε στο {$unsubscribeLink} και εισάγετα το email σας και τον κωδικό πρόσβασής σας.
+
+{$principalContactSignature}</body>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
+		<subject>Καλώς ορίσατε mailing list του  {$siteTitle}!</subject>
+		<body>Έχετε εγγραφεί στην λίστα για να λαμβάνεται ενημέρωτικά μηνύματα από το  {$siteTitle}.
+			
+Σας παρακαλούμε επιλέξτε τον σύνδεσμο αυτό για να επιβεβαιώσετε την εγγραφή σας και να προσθέσετε το email σας στην λίστα: {$confirmLink}
+
+Αν δεν επιθυμείτε να λαμβάνετε σχετικά μηνύματα, σας παρακαλούμε πηγαίνεται στον σύνδεσμο {$unsubscribeLink} και εισάγετε το email σας και τον κωδικό σας.
+
+Ο κωδικός σας για την απενεργοποίηση των μηνυμάτων ειδοποιήσεων είναι: {$password}
+
+{$principalContactSignature}</body>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST_PASSWORD">
+		<subject>Οι λεπτομέρειες του λογαριασμού σας στην ενημερωτική mailing του {$siteTitle}</subject>
+		<body>Ο νέος σας κωδικός για την απενεργοποίηση των ενημερωτικών μηνυμάτων είναι: {$password}
+
+Αν δεν επιθυμείτε να λαμβάνετε σχετικά μηνύματα, σας παρακαλούμε πηγαίνεται στον σύνδεσμο {$unsubscribeLink} και εισάγετε το email σας και τον κωδικό σας.
+
+{$principalContactSignature}</body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_ACCEPT">
+		<subject>Απόφαση Επιμελητή</subject>
+		<body>{$authorName}:
+
+Σχετικά με την υποβολή σας στο περιοδικό  {$journalTitle}, με τίτλο "{$articleTitle}" θα θέλαμε να σας ενημερώσουμε :
+
+
+
+{$editorialContactSignature}</body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_REVISIONS">
+		<subject>Απόφαση Επιμελητή</subject>
+		<body>{$authorName}:
+
+Σχετικά με την υποβολή σας στο περιοδικό {$journalTitle}, με τίτλο "{$articleTitle}" θα θέλαμε να σας ενημερώσουμε:
+
+
+
+{$editorialContactSignature}</body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_RESUBMIT">
+		<subject>Απόφαση Επιμελητή</subject>
+		<body>{$authorName}:
+
+Σχετικά με την υποβολή σας στο περιοδικό {$journalTitle}, με τίτλο "{$articleTitle}" θα θέλαμε να σας ενημερώσουμε:
+
+
+
+{$editorialContactSignature}</body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_DECLINE">
+		<subject>Απόφαση Επιμελητή</subject>
+		<body>{$authorName}:
+
+Σχετικά με την υποβολή σας στο περιοδικό {$journalTitle}, με τίτλο "{$articleTitle}" θα θέλαμε να σας ενημερώσουμε:
+
+
+{$editorialContactSignature}</body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
+		<subject>Αγορά Συνδρομής: Ατομική</subject>
+		<body>Μια ατομική συνδρομή στο περιοδικό {$journalName} αγοράστηκε online με τις παρακάτω λεπτομέρειες
+
+Τύπος Συνδρομής:
+{$subscriptionType}
+
+Χρήστης:
+{$userDetails}
+
+Πληροφορίες Μέλους (αν παρέχονται):
+{$membership}
+
+Για να δείτε ή να επεξεργαστείτε αυτή τη συνδρομή, παρακαλούμε ακολουθήστε το παρακάτω URL.
+URL Συνδρομής: {$subscriptionUrl}</body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
+		<subject>Αγορά Συνδρομής: Ιδρυματική</subject>
+		<body>Μια ιδρυματική συνδρομή στο περιοδικό {$journalName} αγοράστηκε online με τις παρακάτω λεπτομέρειες. Για να ενεργοποιήσετε τη συνδρομή, χρησιμοποιήστε το σχετικό URL της συνδρομής και θέστε την κατάσταση συνδρομής σε "Ενεργή".
+
+Τύπος Συνδρομής:
+{$subscriptionType}
+
+Ίδρυμα:
+{$institutionName}
+{$institutionMailingAddress}
+
+Περιοχή δικτύου (αν έχει καθοριστεί):
+{$domain}
+
+Περιοχή/ές IP διευθύνσεων (αν έχουν καθοριστεί):
+{$ipRanges}
+
+Υπεύθυνος Επικοινωνίας:
+{$userDetails}
+
+Πληροφορίες Μέλους (αν παρέχονται):
+{$membership}
+
+Για την προβολή η επεξεργασία της συνδρομής ακολουθήστε τον παρακάτω σύνδεσμο.
+
+URL συνδρομής: {$subscriptionUrl}</body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INDL">
+		<subject>Ανανέωση Συνδρομής: Ατομική</subject>
+		<body>Μια ατομική συνδρομή στο περιοδικό {$journalName} ανανεώθηκε online με τις παρακάτω λεπτομέρειες
+
+Τύπος Συνδρομής:
+{$subscriptionType}
+
+Χρήστης:
+{$userDetails}
+
+Πληροφορίες Μέλους (αν παρέχονται):
+{$membership}
+
+Για να δείτε ή να επεξεργαστείτε αυτή τη συνδρομή, παρακαλούμε ακολουθήστε το παρακάτω URL.
+
+URL Συνδρομής: {$subscriptionUrl}</body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INSTL">
+		<subject>Ανανέωση Συνδρομής: Ιδρυματική</subject>
+		<body>Μια ιδρυματική συνδρομή στο περιοδικό {$journalName} ανανεώθηκε online με τις παρακάτω λεπτομέρειες. 
+
+Τύπος Συνδρομής:
+{$subscriptionType}
+
+Ίδρυμα:
+{$institutionName}
+{$institutionMailingAddress}
+
+Περιοχή δικτύου (αν έχει καθοριστεί):
+{$domain}
+
+Περιοχή/ές IP διευθύνσεων (αν έχουν καθοριστεί):
+{$ipRanges}
+
+Υπεύθυνος Επικοινωνίας:
+{$userDetails}
+
+Πληροφορίες Μέλους (αν παρέχονται):
+{$membership}
+
+Για την προβολή η επεξεργασία της συνδρομής ακολουθήστε τον παρακάτω σύνδεσμο.
+
+URL συνδρομής: {$subscriptionUrl}</body>
+	</email_text>
 </email_texts>

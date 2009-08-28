@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * emailTemplateData.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  *
+  * $Id$
+  -->
+<email_texts locale="el_GR">
+	<email_text key="MANUAL_PAYMENT_NOTIFICATION">
+		<subject>Ειδοποίηση μη αυτόματης πληρωμής</subject>
+		<body>Μια μη αυτόματη διαδικασία πληρωμής για το περιοδικό {$journalName} από τον χρήση {$userFullName} (username "{$userName}") πρέπει να προωθηθεί.
+
+Η πληρωμή γίνεται για  "{$itemName}".
+Το κόστος είναι {$itemCost} ({$itemCurrencyCode}).
+
+Το μήνυμα αυτό δημιουργείται αυτόματα από το Plugin Μη αυτόματης πληρωμής του Open Journal Systems.</body>
+	</email_text>
+</email_texts>

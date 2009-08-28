@@ -37,4 +37,6 @@
 	<message key="plugins.generic.openads.orientation.left">Αριστερά</message>
 	<message key="plugins.generic.openads.orientation.centre">Κέντρο</message>
 	<message key="plugins.generic.openads.orientation.right">Δεξιά</message>
+	<message key="plugins.generic.openads.enabled">Το Google Analytics  Plugin έχει ενεργοποιηθεί.</message>
+	<message key="plugins.generic.openads.disabled">Το OpenAds Plugin έχει απενεργοποιηθεί.</message>
 </locale>

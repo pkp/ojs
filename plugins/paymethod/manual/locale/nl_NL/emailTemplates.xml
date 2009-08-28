@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * emailTemplateData.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  *
+  * $Id$
+  -->
+<email_texts locale="nl_NL">
+	<email_text key="MANUAL_PAYMENT_NOTIFICATION">
+		<subject>Bericht van handmatige betaling</subject>
+		<body>Er moet een handmatige betaling verwerkt worden voor tijdschrift {$journalName} en gebruiker {$userFullName} (gebruikersnaam "{$userName}").
+
+Er wordt betaald voor "{$itemName}".
+De prijs is {$itemCost} ({$itemCurrencyCode}).
+
+Deze e-mail is gegenereerd door de Handmatige betalingen plugin van Open Journal Systems.</body>
+	</email_text>
+</email_texts>

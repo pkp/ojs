@@ -200,4 +200,8 @@
 	<message key="editor.article.uploaded">Geladen</message>
 	<message key="editor.article.removeCoverPage">Verwijder omslagafbeelding?</message>
 	<message key="editor.article.remove">Verwijder</message>
+	<message key="editor.issues.enableOpenAccessDate">Vertraagde open access inschakelen</message>
+	<message key="editor.issues.unpublishIssue">Publicatie nummer terugdraaien</message>
+	<message key="editor.issues.confirmUnpublish">Weet u zeker dat u de publicatie van dit nummer terug wilt draaien?</message>
+	<message key="editor.article.archiveSubmission">Verwerp en archiveer inzending</message>
 </locale>

@@ -30,4 +30,6 @@
 	<message key="plugins.generic.openads.orientation.left">左</message>
 	<message key="plugins.generic.openads.orientation.centre">中央</message>
 	<message key="plugins.generic.openads.orientation.right">右</message>
+	<message key="plugins.generic.openads.enabled">OpenAds プラグインは有効です。</message>
+	<message key="plugins.generic.openads.disabled">OpenAds プラグインは無効です。</message>
 </locale>
