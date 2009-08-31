@@ -13,7 +13,6 @@
   -->
 
 <locale name="ja_JP" full_name = "日本語">
-	<message key="manager.people.confirmDisable">このユーザを利用不可にしますか。この処理により、このユーザはシステムにログインできなくなります。オプションとして、アカウントを停止する理由をユーザに知らせることができます。</message>
 	<message key="manager.emails.confirmResetAll">この雑誌のメールテンプレートをリセットしてもよいですか。実行すると、カスタマイズしたメールが失われることになります。</message>
 	<message key="manager.files.note">注: ファイルブラウザは、雑誌に関係するファイルやディレクトリを直接、閲覧・操作するための新機能です。</message>
 	<message key="manager.groups">編集委員会</message>
@@ -95,12 +94,12 @@
 	<message key="manager.sections.hideTocTitle">このセクションのタイトルは目次から除外する。</message>
 	<message key="manager.sections.identifyType">メタデータの作成において、このセクションのすべてのアイテムを以下のように識別する。</message>
 	<message key="manager.sections.identifyTypeExamples">（例えば、「査読論文」「非査読論文」、「招待論文」など）</message>
-	<message key="manager.sections.indexed">インデックス化済</message>
+	<message key="manager.sections.indexed">目次に掲載(インデックス作成)</message>
 	<message key="manager.sections.noneCreated">セクションは作成されていません。</message>
 	<message key="manager.sections.open">投稿を受付</message>
 	<message key="manager.sections.policy">セクションの方針</message>
 	<message key="manager.sections.readingTools">読書ツール</message>
-	<message key="manager.sections.reviewed">査読済</message>
+	<message key="manager.sections.reviewed">査読あり</message>
 	<message key="manager.sections.submissionIndexing">雑誌のインデックスに含めない</message>
 	<message key="manager.sections.submissionReview">査読を行わない</message>
 	<message key="manager.section.submissionsToThisSection">このセクションに投稿される物は</message>
@@ -206,7 +205,7 @@
 	<message key="manager.setup.homepageImageDescription">ページの中央に画像または図形を追加する。</message>
 	<message key="manager.setup.includeCreativeCommons">オープンアクセスを提供する（エンバーゴ付きを含む）雑誌については、適当な時点で発表される全ての作品にクリエイティブ･コモンズライセンスを与えてください。</message>
 	<message key="manager.setup.information">ご案内</message>
-	<message key="manager.setup.information.description">図書館員、潜在的著者および読者向けの雑誌に関する簡潔な説明で、サイドバーの&quot;ご案内&quot;欄に表示されます。</message>
+	<message key="manager.setup.information.description">図書館員、潜在的著者および読者向けの雑誌に関する簡潔な説明で、サイドバーの"ご案内"欄に表示されます。</message>
 	<message key="manager.setup.information.forAuthors">著者向け</message>
 	<message key="manager.setup.information.forLibrarians">図書館員向け</message>
 	<message key="manager.setup.information.forReaders">読者向け</message>
@@ -320,7 +319,7 @@
 	<message key="manager.setup.reviewOptions.numWeeksPerReview">査読に許される標準的な時間</message>
 	<message key="manager.setup.reviewOptions.onQuality">査読後、編集者が査読者を5段階評価する。</message>
 	<message key="manager.setup.reviewOptions.remindForInvite1">査読者が、査読依頼後</message>
-	<message key="manager.setup.reviewOptions.remindForInvite2">日過ぎても返事をしなかった場合。</message>
+	<message key="manager.setup.reviewOptions.remindForInvite2">日経過後。</message>
 	<message key="manager.setup.reviewOptions.remindForSubmit1">査読者が、査読期限日を</message>
 	<message key="manager.setup.reviewOptions.remindForSubmit2">日過ぎてもコメントを投稿しなかった場合。</message>
 	<message key="manager.setup.reviewOptions.restrictReviewerFileAccess">査読者は、査読に合意しないと投稿ファイルにアクセスできない。</message>
@@ -333,7 +332,6 @@
 	<message key="manager.setup.reviewPolicy">査読ポリシー</message>
 	<message key="manager.setup.reviewProcess">査読プロセス</message>
 	<message key="manager.setup.reviewProcessEmail">メール添付による査読プロセス</message>
-	<message key="manager.setup.reviewProcessEmailDescription">編集者は、投稿物をメールに添付し、査読者に査読を依頼する。査読者は、査読の受諾（または謝絶）を編集者にンメールで知らせ、査読コメントと答申もメールで通知する。編集者は、査読プロセスを記録するために、投稿物の査読ページで査読者の受諾（または謝絶）および査読コメントと答申を入力する。</message>
 	<message key="manager.setup.reviewProcessStandard">標準的査読プロセス</message>
 	<message key="manager.setup.reviewProcessStandardDescription">編集者は、選ばれた査読者に投稿物のタイトルと要旨をつけて、雑誌のWebサイトにログインして査読を行うよう依頼のメールを送付する。査読者は、雑誌のWebサイトにログインし、査読を行うことを受諾し、投稿物をダウンロードし、コメントを投稿し、答申を選択する。</message>
 	<message key="manager.setup.searchEngineIndexing">サーチエンジンのためのインデックス</message>
@@ -475,9 +473,7 @@
 	<message key="manager.subscriptions.ipRange">IPアドレス</message>
 	<message key="manager.subscriptions.noneCreated">購読者は作成されていません。</message>
 	<message key="manager.subscriptions.select">購読者の登録</message>
-	<message key="manager.subscriptions.selectSubscriber">購読者の選択</message>
 	<message key="manager.subscriptions.selectSubscriber.desc">雑誌の雑誌管理者、編集者、セクション編集者、レイアウトエディタ、コピーエディタ、校正者には、自動的に購読アクセス権が与えられます。</message>
-	<message key="manager.subscriptions.subscribe">登録</message>
 	<message key="manager.subscriptions.subscriptionCreatedSuccessfully">購読者が作成されました。</message>
 	<message key="manager.subscriptions.subscriptionType">購読種別</message>
 	<message key="manager.subscriptions.user">ユーザ</message>
@@ -486,16 +482,11 @@
 	<message key="manager.subscriptionTypes.cost">購読料</message>
 	<message key="manager.subscriptionTypes.create">新規購読種別の作成</message>
 	<message key="manager.subscriptionTypes.createTitle">作成</message>
-	<message key="manager.subscriptionTypes.currency">通貨</message>
 	<message key="manager.subscriptionTypes.duration">購読期間</message>
 	<message key="manager.subscriptionTypes.edit">購読種別の編集</message>
 	<message key="manager.subscriptionTypes.editTitle">編集</message>
-	<message key="manager.subscriptionTypes.format">フォーマット</message>
-	<message key="manager.subscriptionTypes.format.online">オンライン版</message>
-	<message key="manager.subscriptionTypes.format.print">印刷版</message>
-	<message key="manager.subscriptionTypes.format.printOnline">印刷版とオンライン版</message>
 	<message key="manager.subscriptionTypes.form.cost">購読料</message>
-	<message key="manager.subscriptionTypes.form.costInstructions">数値（例えば、40または40.00）を入力してください。文字（例えば、&quot;円&quot;）は入力しないでください。</message>
+	<message key="manager.subscriptionTypes.form.costInstructions">数値（例えば、40または40.00）を入力してください。文字（例えば、"円"）は入力しないでください。</message>
 	<message key="manager.subscriptionTypes.form.costNumeric">購読料は正の数値でなければなりません。</message>
 	<message key="manager.subscriptionTypes.form.costRequired">購読料は必須です。</message>
 	<message key="manager.subscriptionTypes.form.currency">通貨</message>
@@ -519,13 +510,9 @@
 	<message key="manager.subscriptionTypes.form.typeName">名称</message>
 	<message key="manager.subscriptionTypes.form.typeNameExists">購読種別のこの名称は既に使用されています。</message>
 	<message key="manager.subscriptionTypes.form.typeNameRequired">購読種別の名称は必須です。</message>
-	<message key="manager.subscriptionTypes.month">月</message>
-	<message key="manager.subscriptionTypes.months">月</message>
 	<message key="manager.subscriptionTypes.name">購読種別</message>
 	<message key="manager.subscriptionTypes.noneCreated">購読種別は作成されていません。</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">購読種別が作成されました。</message>
-	<message key="manager.subscriptionTypes.year">年</message>
-	<message key="manager.subscriptionTypes.years">年</message>
 	<message key="manager.language.confirmDefaultSettingsOverwrite">設定済みのこの言語用の雑誌設定を置き換えます。よろしいですか？</message>
 	<message key="manager.language.reloadLocalizedDefaultSettings">この言語のデフォルト設定をリロードする</message>
 	<message key="manager.payment.options.purchaseArticleFee">論文購入料</message>
@@ -661,4 +648,36 @@
 	<message key="manager.plugins.upgradeSuccessful">正常にアップグレードされたバージョン</message>
 	<message key="manager.sections.wordCountInstructions">このセクションのアブストラクトの文字数を制限する (0 を設定すると無制限):</message>
 	<message key="manager.setup.sponsorNoteDescription">この文章は，「この雑誌について」ページの「雑誌スポンサー」の下にある「スポンサー」ヘッダーとスポンサーリスト・URLの間に表示されます。</message>
+	<message key="manager.subscriptions.form.statusRequired">購読状態が必要です。</message>
+	<message key="manager.subscriptions.form.userProfileInstructions">備考: 下記の変更はユーザのシステム全体のプロフィールに反映されます。</message>
+	<message key="manager.setup.history">雑誌の履歴</message>
+	<message key="manager.setup.historyDescription">この文章は雑誌ページの「この雑誌について」に表示され，タイトル，編集委員会，その他の事項など雑誌の出版履歴に関する変更を記述しておくために使用することができます。</message>
+	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[ここで入力された著作権表示は「この雑誌について」および出版される各アイテムのメタデータに表示されます。著者との著作権契約の内容は各雑誌が決定することですが、パブリック･ナレッジ･プロジェクトでは、<a href="http://creativecommons.org" target="_new" class="action">クリエイティブ･コモンズ</a>ライセンスの使用を推奨しています。そのため、(a) オープンアクセスを提供する、(b) エンバーゴ付きオープンアクセスを提供する、(c) オープンアクセスを提供しない、雑誌が以下の入力欄にコピー&ペースできる<a href="{$sampleCopyrightWordingUrl}" target="_new" class="action">著作権表示案</a>を提供しています。]]></message>
+	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[雑誌に投稿するアイテムに関して著者が従うべき書誌･書式標準（例: <em>Publication Manual of the American Psychological Association</em>, 5th edition, 2001）を設定してください。投稿に使用すべき雑誌および図書の一般的な引用書式例の提供も役に立つでしょう。さらに、読者による研究の再現を容易にするために、著者にアップロードを推奨する投稿物以外の適当な補足ファイル（データセットや研究機器など）の種類を指定してください。]]></message>
+	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJSは、<a href="http://www.openarchives.org/" target="_blank">オープン･アーカイブズ・イニシアティブ</a>のメタデータハーベスティングプロトコル（OAI-PMH）に準拠しています。このプロトコルは、世界規模の電子的研究情報資源へのインデックス化アクセスを提供する標準です。著者は以下に示すテンプレートを使って、投稿物に関するメタデータを提供することになります。雑誌管理者は、インデックス化するカテゴリを選択し、付与すべきインデックスの例や複数の検索語の入力法（例: インデックス1;インデックス2のようにセミコロンで区切る）を著者に示すべきです。記入例は「例:」や「例えば」を使って示すべきです。]]></message>
+	<message key="manager.setup.publicationScheduleDescription">雑誌アイテムは、ある巻号の一部として目次と共にまとめて出版することができます。また、準備ができたアイテムを「最新号」の目次に追加することにより直ちに出版することもできます。この雑誌がどちらの方式を採用するか、また、予定する出版頻度を読書に示してください（これは、「この雑誌について」に表示されます）。</message>
+	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[<strong>注意:</strong> このオプションを有効にするには，サイト管理者がOJS設定ファイルで <tt>scheduled_tasks</tt> オプションを有効にしなければなりません。また，システム説明書で示したように（この機能はすべてのサーバで利用できるわけではありませんので）この機能を使用するために，これとは別にサーバの設定を行う必要があるかもしれません。]]></message>
+	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>注意:</strong> 査読を依頼するメールに投稿物の審査ページに直接リンクする特別なURLを含めます（その他のページへのアクセスはログインが必要です）。なお、このオプションを使用する場合は、セキュリティ上の理由により、編集者は査読依頼メールを送る際にメールアドレスを変更したり、CCやBCCを追加したりすることができません。]]></message>
+	<message key="manager.setup.reviewProcessDescription"><![CDATA[OJSは、審査プロセスを管理する以下の2つのモデルをサポートしていますが、標準的審査プロセスの使用を推奨します。このプロセスは、査読者に処理を段階的に進めさせ、各投稿物について完全な審査履歴を残し、自動督促通知や投稿物に対する標準的な審査結果（採用、改訂の上採用、再投稿で審査、別の雑誌に投稿、不採用、コメント参照）を利用することができるからです。<br /><br />次の選択肢から1つを選択してください：]]></message>
+	<message key="manager.setup.noPublishing">OJSを雑誌のコンテンツをオンラインで公開するために使用しない。</message>
+	<message key="manager.groups.enableBoard.description"><![CDATA[「この雑誌について」の「<a href="{$aboutEditorialTeamUrl}">編集委員会</a>」欄に表示する担当一覧:]]></message>
+	<message key="manager.setup.contributorNoteDescription">この文章は，「この雑誌について」ページの「雑誌スポンサー」の下にある「支援者」ヘッダーと支援組織名・URLリストの間に表示されます。</message>
+	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>注意:</strong> このオプションを有効にするには，サイト管理者がOJS設定ファイルでallow_envelope_senderオプションを有効にしている必要があります。また，システム説明書で示したように（この機能はすべてのサーバで利用できるわけではありませんので）この機能を使用するために，これとは別にサーバの設定を行う必要があるかもしれません。]]></message>
+	<message key="manager.setup.focusScopeDescription"><![CDATA[<strong>HTML 記述例</strong>]]></message>
+	<message key="manager.setup.notifications.submissionAckDisabled"><![CDATA[<strong>注意:</strong> 投稿のお礼メールは現在無効です。これを使用するためには<a class="action" href="{$preparedEmailsUrl}">メールテンプレート</a>のSUBMISSION_ACK メールを有効にしてください。]]></message>
+	<message key="manager.setup.sectionsDescription"><![CDATA[雑誌のセクション (例: Articles, Book Reviews など)の作成および修正は，「雑誌セクション」で行うことができます。<br /><br />雑誌へ投稿する著者が指定できます...]]></message>
+	<message key="manager.subscriptions.contact">連絡担当者</message>
+	<message key="manager.subscriptionTypes.individual">個人</message>
+	<message key="manager.subscriptionTypes.institutional">機関</message>
+	<message key="manager.subscriptionTypes.form.nonExpiring.expiresAfter">期間あり</message>
+	<message key="manager.subscriptionTypes.form.nonExpiring.neverExpires">期間なし</message>
+	<message key="manager.subscriptionTypes.form.nonExpiringValid">オプションを選択してください。</message>
+	<message key="manager.subscriptionTypes.form.individual">個人 (ユーザはログイン認証)</message>
+	<message key="manager.subscriptionPolicies.expiryRemindersDisabled"><![CDATA[<strong>注意:</strong> このオプションを有効にするには，サイト管理者がOJS設定ファイルで <tt>scheduled_tasks</tt> オプションを有効にしている必要があります。また，システム説明書で示したように（この機能はすべてのサーバで利用できるわけではありませんので）この機能を使用するために，これとは別にサーバの設定を行う必要があるかもしれません。]]></message>
+	<message key="manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"><![CDATA[<strong>注意:</strong> 機関のオンライン購読では提供されたドメイン名とIPアドレスの承認と購読管理者の購読のアクティベーションが必要です。]]></message>
+	<message key="manager.subscriptions.withStatus">状態</message>
+	<message key="manager.subscriptions.form.userContact">連絡担当者</message>
+	<message key="manager.subscriptions.form.referenceNumber">整理番号</message>
+	<message key="manager.subscriptions.referenceNumber">整理番号</message>
+	<message key="manager.subscriptions.selectContact">購読連絡担当者の選択</message>
 </locale>

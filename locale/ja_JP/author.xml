@@ -122,4 +122,7 @@
 	<message key="author.submit.howToSubmit"><![CDATA[問題が発生した場合は，<a href="mailto:{$supportEmail}">{$supportName}</a> までご連絡ください。 ({$supportPhone})]]></message>
 	<message key="author.submit.journalSectionDescription">この投稿物に適切なセクションを選択してください。(セクションについては「このサイト/雑誌について」の「セクションポリシー」を参照してください。)</message>
 	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">追加コード</a>.]]></message>
+	<message key="author.submit.form.wordCountAlert">このセクションにおけるアブストラクトの最大文字数を超過しています。</message>
+	<message key="author.submit.reorder">著者名の並べ替え</message>
+	<message key="author.submit.expedite"><![CDATA[もしこの投稿が査読，編集，レイアウト作業なしで公開可能なフォーマットである場合は，<a href="{$expediteUrl}" class="action">ここをクリックすることで</a> 編集作業の最終段階に直接配置することができます。(注意: 雑誌編集者だけがこのオプションを選択する権限があります。)]]></message>
 </locale>

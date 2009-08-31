@@ -76,4 +76,6 @@
 	<message key="plugins.generic.translator.localeKey.description">検索するロケールキーを入力してください。</message>
 	<message key="plugins.generic.translator.enabled">翻訳プラグインは有効です。</message>
 	<message key="plugins.generic.translator.disabled">翻訳プラグインは無効です。</message>
+	<message key="plugins.generic.translator.fileNotWriteable">このロケールファイルにはサーバによる書込みができません。修正内容は保存されません。</message>
+	<message key="plugins.generic.translator.filesNotWriteable">このロケールファイルにはサーバによる書込みができません。修正内容は保存されません。</message>
 </locale>

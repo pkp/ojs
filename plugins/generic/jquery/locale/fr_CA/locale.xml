@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fr_CA locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="fr_CA" full_name="Français (Canada)">
+	<message key="plugins.generic.jquery.name">Plugiciel jQuery</message>
+	<message key="plugins.generic.jquery.description"><![CDATA[Ce plugiciel active l'interaction et la mise en forme javascript du contenu OJS en utilisant le framework <a href="http://www.jquery.com" target="_new">jQuery</a>.]]></message>
+	<message key="plugins.generic.jquery.descriptionDisabled"><![CDATA[Ce plugiciel active l'interaction et la mise en forme javascript du contenu OJS en utilisant le framework <a href="http://www.jquery.com" target="_new">jQuery</a>. <strong>jQuery n'est pas installé présentement; veuillez l'installer dans {$jQueryPath}.</strong>]]></message>
+	<message key="plugins.generic.jquery.disabled">Le plugiciel jQuery Plugin a été désactivé.</message>
+	<message key="plugins.generic.jquery.enabled">Le plugiciel jQuery a été activé.</message>
+	<message key="plugins.generic.jquery.settings">Paramètres</message>
+</locale>

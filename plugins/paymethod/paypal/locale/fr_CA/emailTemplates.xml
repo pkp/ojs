@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * emailTemplateData.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  *
+  * $Id$
+  -->
+<email_texts locale="fr_CA">
+	<email_text key="PAYPAL_INVESTIGATE_PAYMENT">
+		<subject>Activité inhabituelle de PayPal</subject>
+		<body>L'Open Journal Systems a remarqué une activité inhabituelle concernant le service de paiement PayPal pour la revue {$journalName}. Cette activité pourrait nécessiter une attention particulière ou une intervention manuelle.
+                       
+Ce courriel a été généré par le plugiciel PayPal du Open Journal Systems.
+
+Information complète de la demande :
+{$postInfo}
+
+Information supplémentaire (si fournie) :
+{$additionalInfo}
+
+Variables serveur :
+{$serverVars}</body>
+	</email_text>
+</email_texts>

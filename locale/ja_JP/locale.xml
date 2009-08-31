@@ -72,10 +72,6 @@
   <message key="section.title">セクション名</message>
   <message key="section.abbreviation">セクション名略称</message>
   <message key="section.abbreviation.example">（例、Articles=ART）</message>
-  <message key="section.default.title">原著論文</message>
-  <message key="section.default.abbrev">ART</message>
-  <message key="section.default.policy">
-  </message>
   <!-- Common Article Terms -->
   <message key="article.articles">論文</message>
   <message key="article.submissionId">投稿物ID</message>
@@ -231,8 +227,6 @@
   <!-- Reader Comments -->
   <message key="comments.commentsOnArticle">この論文に対するコメント</message>
   <message key="comments.authenticated">{$userName}</message>
-  <message key="comments.inResponseTo"><![CDATA[<a href="]]>{$url}<![CDATA[">]]>{$title}<![CDATA[</a>への返答]]>
-  </message>
   <!-- Site Administration -->
   <message key="admin.settings.oaiRegistrationDescription">
     <![CDATA[このサイトで提供するすべての雑誌のコンテンツを世界中に存在する研究情報データベースで検索できるようにするために、このサイトのURLをPublic Knowledge Projectメタデータ<a href="http://pkp.sfu.ca/harvester/" target="_blank">ハーベスタ</a>に<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">登録</a>してください。ハーベスタは、このサイトの雑誌に登録された各アイテムからメタデータを収集し、<a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">OAI-PMH</a>に準拠する他の研究情報サイトの情報と共に、正確で包括的な検索を可能にします。
@@ -249,29 +243,14 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 </ul>]]>
   </message>
   <!-- System Information -->
-  <message key="admin.systemConfigurationDescription">
-    <![CDATA[<tt>config.inc.php</tt>に設定されている設定値。]]>
-  </message>
-  <message key="admin.serverInformationDescription">
-    <![CDATA[基本となるOSとサーバソフトウェアのバージョン。このサーバの詳細なPHP環境設定を見るには、<span class="highlight">PHP環境設定情報</span>をクリックしてください。]]>
-  </message>
   <message key="admin.editSystemConfigInstructions">
     <![CDATA[システム設定（<tt>config.inc.php</tt>ファイル）を変更する場合は、このフォームを使用してください。新しい設定値を保存する場合は「設定を保存」、変更した設定値を表示するだけで設定ファイルを更新しない場合は「設定を表示」ボタンをクリックしてください。
 <br /><br />
 <span class="formError">警告: この設定を変更するとこのサイトを不安定な状態にする恐れがあります（この場合、直接設定ファイルを修正する必要があります）。自分が行うことを正確に理解していない限り、この設定を変更しないことを強く推奨します。</span>]]>
   </message>
-  <message key="admin.systemConfigFileReadError">
-    <![CDATA[設定ファイル（<tt>config.inc.php</tt>）が存在しない、読み込めない、または、不正です。]]>
-  </message>
   <message key="admin.overwriteConfigFileInstructions">
     <![CDATA[<h4>注意</div>
 <p>設定ファイルを更新できませんでした。設定の変更を適用するためには、<tt>config.inc.php</tt>をエディタで開いて、以下の内容に置き換える必要があります。</p>]]>
-  </message>
-  <message key="admin.displayConfigFileInstructions">
-    <![CDATA[更新した設定の内容を以下に示します。設定の変更を適用するためには、<tt>config.inc.php</tt>をエディタで開いて、以下の内容に置き換える必要があります。]]>
-  </message>
-  <message key="admin.configFileUpdatedInstructions">
-    <![CDATA[設定ファイルを更新しました。もし、このサイトが正常に機能しなくなった場合は、設定ファイル（<tt>config.inc.php</tt>）を直接修正する必要があります。]]>
   </message>
   <!-- Subscription Management -->
   <message key="subscriptionManager.subscriptionManagement">購読管理</message>
@@ -286,58 +265,13 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 
   <!-- Files Browser -->
   <!-- Journal Setup -->
-  <message key="manager.setup.focusScopeDescription">
-    <![CDATA[<strong>HTMLデータ例</strong>]]>
-  </message>
   <!-- Setup Step 1 -->
-  <message key="manager.setup.issnDescription">
-    <![CDATA[ISSN（国際標準逐次刊行物番号）は逐次刊行物（電子版を含む）を識別する8桁の数字です。ISSNは、本部を置くユネスコとフランス政府による支援を受けた国際センターの調整の元、各国の国内センターの世界的なネットワークにより管理されています。ISSN番号は、<a href="http://www.issn.org" target="_new">ISSN Webサイト</a>で入手することができます。ISSNの入手は、雑誌運営のいつの時点で行っても構いません。]]>
-  </message>
-  <message key="manager.setup.doiPrefixDescription">
-    <![CDATA[DOI（デジタルオブジェクト識別子）プリフィックスは、<a href="http://www.crossref.org" target="_new">CrossRef</a>により付与され、10.xxxx（例: 10.1234）という形をしています。]]>
-  </message>
   <!-- Setup Step 2 -->
-  <message key="manager.setup.htmlSetupInstructions">
-    <![CDATA[この入力欄ではHTMLを使用できます（フォントサイズや色など）。また、「改行」は<tt>&lt;br&gt;</tt>として扱われます。ブラウザーFirefoxではHTMLエディターが利用できます。]]>
-  </message>
-  <message key="manager.setup.reviewOptions.automatedRemindersDisabled">
-    <![CDATA[<strong>注:</strong> このオプションを使用するには、OJS設定ファイルの<tt>scheduled_tasks</tt>オプションを有効にする必要があります。また、システム説明書で示したように（この機能はすべてのサーバで利用できるわけではありませんので）この機能を使用するために、これとは別にサーバの設定を行う必要があるかもしれません。]]>
-  </message>
-  <message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description">
-    <![CDATA[<strong>注:</strong>査読を依頼するメールに投稿物の審査ページに直接リンクする特別なURLを含めます（その他のページへのアクセスはログインが必要です）。なお、このオプションを使用する場合は、セキュリティ上の理由により、編集者は査読依頼メールを送る際にメールアドレスを変更したり、CCやBCCを追加したりすることができません。]]>
-  </message>
-  <message key="manager.setup.reviewProcessDescription">
-    <![CDATA[OJSは、審査プロセスを管理する以下の2つのモデルをサポートしていますが、標準的審査プロセスの使用を推奨します。このプロセスは、査読者に処理を段階的に進めさせ、各投稿物について完全な審査履歴を残し、自動督促通知や投稿物に対する標準的な審査結果（採用、改訂の上採用、再投稿で審査、別の雑誌に投稿、不採用、コメント参照）を利用することができるからです。<br /><br />次の選択肢から1つを選択してください。]]>
-  </message>
-  <message key="manager.setup.sectionsDescription">
-    <![CDATA[この雑誌のセクション（例えば、論文、書評など）を作成または変更する場合は、セクション管理ページを使用してください。<br /><br />この雑誌にアイテムを投稿しようとしている著者が指定します。]]>
-  </message>
-  <message key="manager.setup.emailBounceAddressDisabled">
-    <![CDATA[<strong>注:</strong> このオプションを有効にするには、サイト管理者がOJS設定ファイルで<tt>allow_envelope_sender</tt>オプションを有効にしている必要があります。また、システム説明書で示したように（この機能はすべてのサーバで利用できるわけではありませんので）この機能を使用するために、これとは別にサーバの設定を行う必要があるかもしれません。]]>
-  </message>
   <message key="manager.setup.lockssDescription">
     <![CDATA[オープン･ジャーナル･システムは、雑誌の安全で永続的なアーカイブを保証する<a href="http://lockss.org/" target="_blank">LOCKSS</a>（Lots of Copies Keep Stuff Safe）システムをサポートしています。LOCKSSはスタンフォード大学図書館で開発されたオープンソースのソフトウェアです。あらかじめ選択･登録したWeb雑誌で新たに公開されたコンテンツを定期的にチェックしてアーカイブすることにより、雑誌の保存を可能にします。各アーカイブは常に他の図書館のキャッシュと比較され、コンテンツの破損や不足が見つかった場合は、他のキャッシュや雑誌を使ってそれを修復します。<br /><br />
 オープン･ジャーナル･システムにおけるLOCKSSサポートの設定は、出版が完全に軌道に乗るまでは行う必要がありませんが、設定は次の2段階で行います。]]>
   </message>
-  <message key="manager.setup.lockssRegister">
-    <![CDATA[雑誌を登録･キャッシュする図書館を6館から10館見つけます。例えば、編集者や雑誌委員会委員が勤務する機関や既にLOCKSSに参加している機関に問い合わせてください。<a href="http://lockss.org/lockss/Libraries" target="_blank">参加図書館はここ</a>を参照してください。あらかじめ用意されている(1) <a href="{$lockssExistingArchiveUrl}" target="_blank">LOCKSS参加図書館向け</a>、または、(2) <a href="{$lockssNewArchiveUrl}" target="_blank">LOCKSS未参加図書館向け</a>の招待状を使用してください。]]>
-  </message>
-  <message key="manager.setup.lockssEnable">
-    <![CDATA[LOCKSSを有効にする。LOCKSSの<a href="{$lockssUrl}" target="_blank">出版者マニュフェスト</a>ページを通じてLOCKSSを有効にし、参加図書館にある雑誌コンテンツを保管・配布します。LOCKSSライセンスはアーカイブの「この雑誌について」ページに表示されます。]]>
-  </message>
-  <message key="manager.setup.lockssLicenses">
-    <![CDATA[<a href="http://lockss.org/lockss/Publishers_and_Titles" target="_blank">LOCKSSライセンスのその他のバージョンはここ</a>を参照してください。]]>
-  </message>
   <!-- Setup Step 3 -->
-  <message key="manager.setup.authorGuidelinesDescription">
-    <![CDATA[雑誌に投稿するアイテムに関して著者が従うべき書誌･書式標準（例えば、<em>米国心理学会出版マニュアル</em>、第5版、2001年）を設定してください。投稿に使用すべき雑誌および図書の一般的な引用書式例の提供も役に立つでしょう。さらに、読者による研究の再現を容易にするために、著者にアップロードを推奨する投稿物以外の適当な補足ファイル（データセットや研究機器など）の種類を指定してください。]]>
-  </message>
-  <message key="manager.setup.authorCopyrightNoticeDescription">
-    <![CDATA[ここで入力された著作権表示は「この雑誌について」および出版される各アイテムのメタデータに表示されます。著者との著作権契約の内容は各雑誌が決定することですが、パブリック･ナレッジ･プロジェクトでは、<a href="http://www.creativecommons.org" target="_blank">クリエイティブ･コモンズ</a>ライセンスのの使用を推奨しています。そのため、(a) オープンアクセスを提供する、(b) エンバーゴ付きオープンアクセスを提供する、(c) オープンアクセスを提供しない、雑誌が以下の入力欄にコピー&amp;ペースできる<a href="{$sampleCopyrightWordingUrl}" target="_new" class="action">著作権表示案</a>を提供しています。 ]]>
-  </message>
-  <message key="manager.setup.forAuthorsToIndexTheirWorkDescription">
-    <![CDATA[OJSは、<a href="http://www.openarchives.org/" target="_blank">オープン･アーカイブズ・イニシアティブ</a>のメタデータハーベスティングプロトコル（OAI-PMH）に準拠しています。このプロトコルは、世界規模の電子的研究情報資源へのインデックス化アクセスを提供する標準です。著者は以下に示すテンプレートを使って、投稿物に関するメタデータを提供することになります。雑誌管理者は、インデックス化するカテゴリを選択し、付与すべきインデックスの例や複数の検索語の入力法（例: インデックス1;インデックス2のようにセミコロンで区切る）を著者に示すべきです。記入例は「例:」や「例えば」を使って示すべきです。]]>
-  </message>
   <message key="manager.setup.subjectClassificationDescription">
     <![CDATA[[雑誌はWeb上で利用可能な主題分類システムを使用します。<br />
 分類システムの名称]]>
@@ -350,22 +284,14 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">ここをクリック</a>して<strong>Site URL</strong>欄に<span class="highlight">{$siteUrl}</span>を、<strong>Base URL for OAI Archive</strong>欄に<span class="highlight">{$oaiUrl}</span>を入力してください。
 ]]>
   </message>
-  <message key="manager.setup.notifications.submissionAckDisabled">
-    <![CDATA[<strong>注:</strong> 投稿受領確認メール機能は現在無効になっています。この機能を使用するには、<a class="action" href="{$preparedEmailsUrl}">メールテンプレート</a>のページでSUBMISSION_ACKメールを有効にしてください。]]>
-  </message>
   <!-- Setup Step 4 -->
-  <message key="manager.setup.publicationScheduleDescription">
-    <![CDATA[雑誌アイテムは、ある巻号の一部として目次と共にまとめて出版することができます。また、準備ができたアイテムを「最新号」の目次に追加することにより直ちに出版することもできます。この雑誌がどちらの方式を採用するか、また、予定する出版頻度を読書に示してください（これは、「この雑誌について」に表示されます）。]]>
-  </message>
   <message key="manager.setup.basicEditorialStepsDescription"><![CDATA[ステップ: 受付 &gt; 査読 &gt; 編集 &gt; 目次。<br /><br />
 これらの編集ステップを担当するモデルを選択してください。（編集長およびセクションエディタを任命するには、雑誌管理ページの編集者機能を使用してください。）]]></message>
   <!-- Setup Step 5 -->
   <!-- Languages -->
-  <message key="manager.languages.languageInstructions"><![CDATA[OJSはサポートしている任意の言語で利用者にサービスを提供することができます。また、OJSは多言語システムとして運用することができます。ユーザはページごとに言語を切り替えることができ、一部の要素については複数の言語でデータを入力することができます。<br /><br/>OJSがサポートしている言語が以下に表示されていない場合は、サイト管理用のインターフェースを使って言語をインストールするようサイト管理者に依頼してください。サポート言語を追加する方法については、システムに添付されているOJS文書をご覧ください。]]></message>
   <!-- Section Management -->
   <!-- Import/Export -->
   <!-- Groups / Editorial Team -->
-  <message key="manager.groups.enableBoard.description"><![CDATA[「この雑誌について」の「<a href="{$aboutEditorialTeamUrl}">編集委員会</a>」欄に表示する担当一覧を]]></message>
   <!-- People Management -->
   <message key="manager.people.noAdministrativeRights"><![CDATA[申し訳ありませんが、あなたはこのユーザに関する管理権限がありません。その理由は、以下のいずれかです。
 		<ul>
@@ -375,9 +301,6 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	この処理は、サイト管理者が行う必要があります。]]></message>
   <!-- Email Management -->
   <!-- Subscription Policy Management -->
-  <message key="manager.subscriptionPolicies.htmlInstructions"><![CDATA[この欄ではHTMLを使用できます（フォントサイズや色など）。また、「改行」は<br>として扱われます。ブラウザーFirefoxではHTMLエディターが使用できます。]]></message>
-  <message key="manager.subscriptionPolicies.openAccessNotificationDisabled"><![CDATA[<strong>注:</strong> このオプションを有効にするには、サイト管理者がOJS設定ファイルにおいて <tt>scheduled_tasks</tt> を有効にする必要があります。また、OJS説明書で示したように（この機能はすべてのサーバで利用できるわけではありませんので）この機能を使用するために、さらにサーバの設定を行う必要があるかもしれません。]]></message>
-  <message key="manager.subscriptionPolicies.expiryRemindersDisabled"><![CDATA[<strong>Note:</strong> このオプションを有効にするには、サイト管理者がOJS設定ファイルにおいて <tt>scheduled_tasks</tt> を有効にする必要があります。また、OJS説明書で示したように（この機能はすべてのサーバで利用できるわけではありませんので）この機能を使用するために、さらにサーバの設定を行う必要があるかもしれません。]]></message>
   <!-- Subscription Type Management -->
   <!-- Subscription Management -->
   <!-- Announcement Type Management -->
@@ -386,7 +309,6 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   <!-- Editor Index Page -->
   <!-- Back Issues -->
   <!-- Create Issue / Issue Data -->
-  <message key="editor.issues.resetSectionOrder"><![CDATA[この号はセクションの表示順が変更されています。<a href="{$url}" class="action">デフォルトに戻す</a>]]></message>
   <!-- Live Issues -->
   <!-- Navigation sidebar menu -->
   <!-- Used by editor in submission review / editing -->
@@ -476,20 +398,9 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   <message key="proofreader.noProofreadingAssignments">校正者は任命されていません。</message>
   <!-- Author -->
   <!-- Article Submission Step 1 -->
-  <message key="author.submit.howToSubmit">
-    <![CDATA[著者は、このWebサイトにおいて、5つの段階を経る間に原稿と関連情報をアップロードすることにより、この雑誌にアイテムを投稿します。（オプションとして、研究データや装置などの補足ファイルをアップロードすることもできます）。投稿中にご不明な点がございましたら、担当者までメール（<a href="mailto:{$supportEmail}">{$supportName}</a>）か電話（{$supportPhone}）でご連絡ください。]]>
-  </message>
-  <message key="author.submit.journalSectionDescription">
-    <![CDATA[この投稿物にふさわしいセクションを選択してください。（詳しくは<a href="{$aboutUrl}">「この雑誌について」</a>のセクションとポリシー欄を参照してください。）]]>
-  </message>
   <!-- Article Submission Step 2 -->
-  <message key="author.submit.languageInstructions">
-    <![CDATA[日本語=ja; 英語=en; フランス語=fr、<a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">その他のコード</a>。]]>
-  </message>
   <!-- Article Submission Step 3 -->
-  <message key="author.submit.uploadInstructions">
-    <![CDATA[
-<p>この雑誌へ原稿をアップロードするには以下の手順に従ってください。</p>
+  <message key="author.submit.uploadInstructions"><![CDATA[<p>この雑誌へ原稿をアップロードするには以下の手順に従ってください。</p>
 
 <ol>
 <li>このページの[参照…]ボタンをクリックし、ファイル選択画面を表示させてください。</li>
@@ -501,9 +412,6 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   <!-- Article Submission Step 4 -->
   <!-- Article Submission Step 4a: Supplementary Files -->
   <!-- Article Submission Step 5 -->
-  <message key="author.submit.expedite">
-    <![CDATA[この投稿物が、さらなる査読、編集、レイアウト作業をすることなく出版できるフォーマットである場合、<a href="{$expediteUrl}" class="action">ここをクリック</a>することにより、直接、編集処理の最終段階におくことができます。（注: このオプションを使用できるのは、この雑誌の編集者が自分の論文を投稿する場合だけです。）]]>
-  </message>
   <!-- Used in submission review / editing -->
   <message key="submission.review.mustUploadFileForReview">査読版がないと、依頼メールは送信できません。</message>
   <!-- Submission Tracking - Copyedit Specific -->
@@ -525,7 +433,6 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   <message key="submission.layout.instructions">レイアウトの手引き</message>
   <!-- Submission Tracking - Proofread Specific -->
   <message key="submission.proofreadingComments">校正者のコメント</message>
-  <message key="submission.archiveSubmission">アーカイブされた投稿物</message>
   <message key="submission.proofread.corrections">校正作業による修正報告</message>
   <message key="submission.proofread.instructions">校正の手引き</message>
   <!-- Submission History -->
@@ -541,10 +448,8 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   <!-- Submission Comments -->
   <message key="submission.comments.editorAuthorCorrespondence">編集者と著者の通信</message>
   <message key="submission.comments.copyeditComments">コピーエディタのコメント</message>
-  <message key="submission.comments.viewableDescription">
-    <![CDATA[これらのコメントを著者に示すこともできます。<br />
-（保存後、さらにコメントを追加することができます。）]]>
-  </message>
+  <message key="submission.comments.viewableDescription"><![CDATA[これらのコメントを著者に示すこともできます。<br />
+（保存後、さらにコメントを追加することができます。）]]></message>
   <message key="submission.comments.canShareWithAuthor">著者と編集者に</message>
   <message key="submission.comments.cannotShareWithAuthor">編集者に</message>
   <message key="submission.comments.blindCcReviewers">送信後、査読者に送信する編集可能なBCCコピーを提示してください。</message>
@@ -554,24 +459,15 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   <message key="submission.comments.saveAndEmailEditor">保存して編集者にメール</message>
   <!-- Login -->
   <message key="user.login.registerNewAccount">登録はこちらから。</message>
-  <message key="user.login.resetPasswordInstructions">
-    <![CDATA[セキュリティ上の理由により、本システムでは現行のパスワードをお知らせするのではなく、リセットするためのパスワードをお送りしています。<br /><br />パスワードをリセットするには、以下の記入欄にメールアドレスを入力してください。入力されたメールアドレスに確認メールを送信します。]]>
-  </message>
-  <message key="user.login.changePasswordInstructions">
-    <![CDATA[このサイトにログインする前に、新しいパスワードを指定する必要があります。<br /><br />パスワードを変更するには、以下の記入欄にユーザ名、現行のパスワード、新しいパスワードを入力してください。]]>
-  </message>
+  <message key="user.login.resetPasswordInstructions"><![CDATA[セキュリティ上の理由により、本システムでは現行のパスワードをお知らせするのではなく、リセットするためのパスワードをお送りしています。<br /><br />パスワードをリセットするには、以下の記入欄にメールアドレスを入力してください。入力されたメールアドレスに確認メールを送信します。]]></message>
   <!-- Profile -->
   <!-- Registration -->
   <message key="user.register.repeatPassword">もう一度パスワードを入力してください</message>
   <message key="user.register.selectJournal">登録する雑誌を選択してください</message>
   <message key="user.register.noJournals">登録できる雑誌はありません。</message>
   <message key="user.register.privacyStatement">個人情報の扱いについて</message>
-  <message key="user.register.alreadyRegisteredOtherJournal">
-    <![CDATA[既にこの雑誌またはこのサイトの別の雑誌に登録している場合は、<a href="{$registerUrl}">ここをクリック</a>してください。]]>
-  </message>
-  <message key="user.register.notAlreadyRegisteredOtherJournal">
-    <![CDATA[まだこのサイトの雑誌に登録して<strong>いない</strong>場合は、<a href="{$registerUrl}">ここをクリック</a>してください。]]>
-  </message>
+  <message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[既にこの雑誌またはこのサイトの別の雑誌に登録している場合は、<a href="{$registerUrl}">ここをクリック</a>してください。]]></message>
+  <message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[まだこのサイトの雑誌に登録して<strong>いない</strong>場合は、<a href="{$registerUrl}">ここをクリック</a>してください。]]></message>
   <message key="user.register.loginToRegister">この雑誌に登録するには、ユーザ名とパスワードを入力してください。</message>
   <message key="user.register.registrationDisabled">この雑誌は、現在、ユーザ登録を受付けていません。</message>
   <message key="user.register.form.passwordLengthTooShort">指定したパスワードは短すぎます。</message>
@@ -588,8 +484,7 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   <message key="search.allJournals">全雑誌</message>
   <message key="search.authorIndex">著者インデックスをブラウズ</message>
   <message key="search.authorDetails">著者情報</message>
-  <message key="search.syntaxInstructions">
-    <![CDATA[検索のヒント: <ul>
+  <message key="search.syntaxInstructions"><![CDATA[検索のヒント: <ul>
 <li>検査語は大文字・小文字を区別しません。</li>
 <li>一般的な語は無視されます</li>
 <li>デフォルトでは、検索語に指定した<em>すべての</em>語を含む論文だけがヒットします（すなわち、暗黙に<em>AND</em>検索が行われます）</li>
@@ -598,13 +493,10 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 <li>フレーズ検索を行う場合は、引用符で囲んでください。例: <em>"open access publishing"</em></li>
 <li>ある語を除外する場合は、<strong>-</strong> または <em>NOT</em> を前に付けてください。例: <em>online -politics</em> または <em>online NOT politics</em></li>
 <li>任意の文字列にマッチさせるためのワイルドカードには <strong>*</strong> を使用してください。例えば、 <em>soci* morality</em> は、"sociological" または "societal" を持つ文書にヒットします。</li>
-</ul>]]>
-  </message>
+</ul>]]></message>
   <!-- Interstitial page for PDFs -->
   <message key="article.pdf.title">PDF</message>
-  <message key="article.pdf.note">
-    <![CDATA[使用しているWebブラウザにPDFリーダープラグイン（例えば、<a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>の最新版）をインストールしていれば、選択したPDFファイルがここにロードされるはずです。PDFファイルをダウンロードすることもできます。ダウンロードしたファイルもPDFリーダーを使って開くことができます。 PDFファイルの印刷、保存、作成などについてさらに詳しく知りたい場合は、Highwire Pressが提供している<a href="http://highwire.stanford.edu/help/pdf-faq.dtl">PDFに関するよくある質問</a>が参考になります。<br /><br />ファイルが自動的にダウンロードされない場合は、<a href="{$url}">ここをクリック</a>してください。]]>
-  </message>
+  <message key="article.pdf.note"><![CDATA[使用しているWebブラウザにPDFリーダープラグイン（例えば、<a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>の最新版）をインストールしていれば、選択したPDFファイルがここにロードされるはずです。PDFファイルをダウンロードすることもできます。ダウンロードしたファイルもPDFリーダーを使って開くことができます。 PDFファイルの印刷、保存、作成などについてさらに詳しく知りたい場合は、Highwire Pressが提供している<a href="http://highwire.stanford.edu/help/pdf-faq.dtl">PDFに関するよくある質問</a>が参考になります。<br /><br />ファイルが自動的にダウンロードされない場合は、<a href="{$url}">ここをクリック</a>してください。]]></message>
   <!-- Interstitial page for non-PDF non-HTML galleys -->
   <message key="article.nonpdf.title">論文のダウンロード</message>
   <message key="article.nonpdf.note"><![CDATA[選択したファイルは自動的にダウンロードが開始するはずです。開始しない場合は、下のリンクをクリックしてください。このファイルを見るには特別なビューアーやプラグインが必要な場合がありますので注意してください。<br /><br />ファイルが自動的にダウンロードされない場合は、<a href="{$url}">ここをクリック</a>してください。]]></message>
@@ -657,12 +549,8 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   <message key="about.availableSubscriptionTypes">購読種別</message>
   <message key="about.journalSponsorship">雑誌スポンサー</message>
   <message key="about.aboutThisPublishingSystem">この出版システムについて</message>
-  <message key="about.aboutOJSJournal">
-    <![CDATA[この雑誌は、オープン･ジャーナル･システム {$ojsVersion} を使用しています。OJSは、<a href="http://pkp.sfu.ca/">Public Knowledge Project</a>により開発・サポートされ、GNU一般公衆利用許諾契約書の下に自由に配布されているオープンソースの雑誌管理・出版ソフトウェアです。]]>
-  </message>
-  <message key="about.aboutOJSSite">
-    <![CDATA[このサイトは、オープン･ジャーナル･システム {$ojsVersion} を使用しています。OJSは、<a href="http://pkp.sfu.ca/">Public Knowledge Project</a>により開発・サポートされ、GNU一般公衆利用許諾契約書の下に自由に配布されているオープンソースの雑誌管理・出版ソフトウェアです。]]>
-  </message>
+  <message key="about.aboutOJSJournal"><![CDATA[この雑誌は、オープン･ジャーナル･システム {$ojsVersion} を使用しています。OJSは、<a href="http://pkp.sfu.ca/">Public Knowledge Project</a>により開発・サポートされ、GNU一般公衆利用許諾契約書の下に自由に配布されているオープンソースの雑誌管理・出版ソフトウェアです。]]></message>
+  <message key="about.aboutOJSSite"><![CDATA[このサイトは、オープン･ジャーナル･システム {$ojsVersion} を使用しています。OJSは、<a href="http://pkp.sfu.ca/">Public Knowledge Project</a>により開発・サポートされ、GNU一般公衆利用許諾契約書の下に自由に配布されているオープンソースの雑誌管理・出版ソフトウェアです。]]></message>
   <!-- Announcement -->
   <!-- Help -->
   <message key="help.ojsHelp">オープン･ジャーナル･システムのヘルプ</message>
@@ -670,8 +558,7 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   <!-- Installer -->
   <message key="installer.ojsInstallation">OJSのインストール</message>
   <message key="installer.ojsUpgrade">OJSのバージョンアップ</message>
-  <message key="installer.installationInstructions">
-    <![CDATA[<h4>OJS バージョン {$version}</h4>
+  <message key="installer.installationInstructions"><![CDATA[<h4>OJS バージョン {$version}</h4>
 
 <p>Public Knowledgeプロジェクトの<strong>オープン･ジャーナル･システム</strong>をダウンロードしていただきありがとうございました。処理を進める前に、このソフトウェアに添付されている<a href="{$baseUrl}/docs/README">README</a>ファイルをお読みください。Public Knowledgeプロジェクトと本ソフトウェアプロジェクトに関してより詳しく知りたい方は、<a href="http://pkp.sfu.ca/" target="_blank">PKPのWebサイト</a>にアクセスしてください。オープン･ジャーナル･システムに関するバグ報告や技術的サポートに関する質問がある場合は、<a href="http://pkp.sfu.ca/support/forum">サポートフォーラム</a>、または、PKPのオンライン<a href="http://pkp.sfu.ca/bugzilla/" target="_blank">バグ報告システム</a>をご覧ください。連絡はサポートフォーラムでしていただくことを希望いたしますが、直接、<a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>にメールしてくださっても構いません。</p>
 
@@ -712,66 +599,29 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 
 <h4>マニュアルインストール</h4>
 
-<p>データベースのインストールをマニュアルで実行するには<strong>マニュアルインストール</strong>を選択してください。OJSデータベーススキーマおよび初期データを作成するために必要なSQL文が表示されます。 このオプションは、インストール、特にサポートしていないプラットフォームへのインストール時の問題をデバックする際に役に立ちます。このインストール法では、指定したデータベース設定が設定ファイルに書かれますが、データベースやテーブルは作成されないことに注意してください。</p>]]>
-  </message>
-  <message key="installer.upgradeInstructions">
-    <![CDATA[<h4>OJS バージョン {$version}</h4>
+<p>データベースのインストールをマニュアルで実行するには<strong>マニュアルインストール</strong>を選択してください。OJSデータベーススキーマおよび初期データを作成するために必要なSQL文が表示されます。 このオプションは、インストール、特にサポートしていないプラットフォームへのインストール時の問題をデバックする際に役に立ちます。このインストール法では、指定したデータベース設定が設定ファイルに書かれますが、データベースやテーブルは作成されないことに注意してください。</p>]]></message>
+  <message key="installer.upgradeInstructions"><![CDATA[<h4>OJS バージョン {$version}</h4>
 	
 <p>Public Knowledgeプロジェクトの<strong>オープン･ジャーナル･システム</strong>をダウンロードしていただきありがとうございました。処理を進める前に、このソフトウェアに添付されている<a href="{$baseUrl}/docs/README">README</a>ファイルと<a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a>ファイルをお読みください。Public Knowledgeプロジェクトと本ソフトウェアプロジェクトに関してより詳しく知りたい方は、<a href="http://pkp.sfu.ca/" target="_blank">PKPのWebサイト</a>にアクセスしてください。オープン･ジャーナル･システムに関するバグ報告や技術的サポートに関する質問がある場合は、<a href="http://pkp.sfu.ca/support/forum">サポートフォーラム</a>、または、PKPのオンライン<a href="http://pkp.sfu.ca/bugzilla/" target="_blank">バグ報告システム</a>をご覧ください。連絡はサポートフォーラムでしていただくことを希望いたしますが、直接、<a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>にメールしてくださっても構いません。</p>
 <p>処理を行う前に、データベース、ファイルディレクトリ、OJSインストールディレクトリのバックアップを行うことを<strong>強く推奨します</strong>。</p>
-<p>システムを<a href="http://www.php.net/features.safe-mode" target="_blank">PHPセーフモード</a>で運用している場合は、"php.ini"設定ファイルの"max_execution_time"ディレクティブに最大値が設定されていることを確認してください。この制限値、またはその他の時間制限（例えば、Apacheの"Timeout"ディレクティブ）に達すると、バージョンアップ処理は中断され、手作業による処理が必要になります。</p>]]>
-  </message>
-  <message key="installer.localeSettingsInstructions">
-    <![CDATA[Unicode（UTF-8）を完全にサポートするために、すべての文字セット設定でUTF-8を選択してください。これをサポートするには、現在のところ、MySQL 4.1.1以降、または、PostgreSQL 7.1以降のデータベースサーバを必要とすることに注意してください。また、Unicodeを完全にサポートするには、<a href="http://www.php.net/mbstring" target="_blank">mbstring</a>ライブラリのサポートを選択してコンパイルしたPHP 4.3.0以降を必要とすることにも注意してください（最近のほとんどのPHPのインストールではデフォルトで有効になっています）。サーバがこれらの要件を満たしていないと、拡張文字セットの使用時に問題が生じるかもしれません。
+<p>システムを<a href="http://www.php.net/features.safe-mode" target="_blank">PHPセーフモード</a>で運用している場合は、"php.ini"設定ファイルの"max_execution_time"ディレクティブに最大値が設定されていることを確認してください。この制限値、またはその他の時間制限（例えば、Apacheの"Timeout"ディレクティブ）に達すると、バージョンアップ処理は中断され、手作業による処理が必要になります。</p>]]></message>
+  <message key="installer.localeSettingsInstructions"><![CDATA[Unicode（UTF-8）を完全にサポートするために、すべての文字セット設定でUTF-8を選択してください。これをサポートするには、現在のところ、MySQL 4.1.1以降、または、PostgreSQL 7.1以降のデータベースサーバを必要とすることに注意してください。また、Unicodeを完全にサポートするには、<a href="http://www.php.net/mbstring" target="_blank">mbstring</a>ライブラリのサポートを選択してコンパイルしたPHP 4.3.0以降を必要とすることにも注意してください（最近のほとんどのPHPのインストールではデフォルトで有効になっています）。サーバがこれらの要件を満たしていないと、拡張文字セットの使用時に問題が生じるかもしれません。
 <br /><br />
-サーバは現在、mbstringをサポートしている: <strong>{$supportsMBString}</strong>]]>
-  </message>
+サーバは現在、mbstringをサポートしている: <strong>{$supportsMBString}</strong>]]></message>
   <message key="installer.localeInstructions">このシステムで使用する第一言語。ここに表示されていない言語のサポートに興味がある場合は、OJS文書をご覧ください。</message>
   <message key="installer.additionalLocalesInstructions">このシステムでサポートする追加言語を選択してください。選択した言語はこのサイトで提供する全ての雑誌で利用可能となります。言語は、サイト管理インターフェースを使っていつでも追加インストールすることができます。</message>
-  <message key="installer.filesDirInstructions">
-    <![CDATA[アップロードされたファイルを保存する既存のディレクトリをフルパスで入力してください。このディレクトリはWebから直接アクセスできないディレクトリにするべきです。<strong>インストールする前に、このディレクトリが存在し、書き込み可であることを確認してください。</strong>Windowsのパス名の区切りにはスラッシュを使用する必要があります（例: "C:/myjournal/files"）。]]>
-  </message>
-  <message key="installer.databaseDriverInstructions">
-    <![CDATA[<strong>カッコ内に表示されているデータベースドライバは、必要なPHP拡張モジュールがロードされていないので、これを選択するとインストールは失敗すると思われます。</strong><br />サポートされていないデータベースドライバが表示されているのは単に学術目的であり、作動するわけではありません。]]>
-  </message>
-  <message key="installer.oaiRepositoryIdInstructions">
-    <![CDATA[<a href="http://www.openarchives.org/" target="_blank">オープン・アーカイブズ・イニシアティブ</a>のメタデータハーベスティングプロトコルを使ってこのサイトから提供するメタデータレコードを識別するために使用するユニークな識別子。]]>
-  </message>
-  <message key="installer.installOJS">オープン･ジャーナル･システムのインストール</message>
-  <message key="installer.upgradeOJS">オープン･ジャーナル･システムのバージョンアップ</message>
-  <message key="installer.installFileError">
-    <![CDATA[インストールファイル <tt>dbscripts/xml/install.xml</tt> が存在しない、または、読めません。]]>
-  </message>
-  <message key="installer.installParseDBFileError">
-    <![CDATA[データベースインストールファイル <tt>{$file}</tt> のパースエラー。]]>
-  </message>
-  <message key="installer.configFileError">
-    <![CDATA[設定ファイル <tt>config.inc.php</tt> が存在しない、または、読めません。]]>
-  </message>
-  <message key="installer.reinstallAfterDatabaseError">
-    <![CDATA[<strong>警告:</strong> データベースのインストール途中でインストールが失敗した場合、データベースの再インストールを行う前に、OJSデータベース、または、テーブルを削除する必要があるかもしれません。]]>
-  </message>
-  <message key="installer.overwriteConfigFileInstructions">
-    <![CDATA[<h4>重要!</h4>
-<p>設定ファイルを上書きする保存することができませんでした。システムを使用する前に、適当なエディターで <tt>config.inc.php</tt> ファイルを開いて、その内容を以下のテキストフィールドの内容に置き換えてください。</p>]]>
-  </message>
-  <message key="installer.manualSQLInstructions">
-    <![CDATA[<h4>マニュアルインストール</h4>
-<p>OJSデータベーススキーマと初期データを作成するためのSQL文を以下に表示しました。これらのSQL文をマニュアルで実行しないとシステムは利用できないことに注意してください。また、<tt>config.inc.php</tt> 設定ファイルについてもマニュアルで設定する必要があります。</p>]]>
-  </message>
-  <message key="installer.installationComplete">
-    <![CDATA[<p>OJSのインストールが終了しました。</p>
+  <message key="installer.filesDirInstructions"><![CDATA[アップロードされたファイルを保存する既存のディレクトリをフルパスで入力してください。このディレクトリはWebから直接アクセスできないディレクトリにするべきです。<strong>インストールする前に、このディレクトリが存在し、書き込み可であることを確認してください。</strong>Windowsのパス名の区切りにはスラッシュを使用する必要があります（例: "C:/myjournal/files"）。]]></message>
+  <message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>警告:</strong> データベースのインストール途中でインストールが失敗した場合、データベースの再インストールを行う前に、OJSデータベース、または、テーブルを削除する必要があるかもしれません。]]></message>
+  <message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>重要!</h4>
+<p>設定ファイルを上書きする保存することができませんでした。システムを使用する前に、適当なエディターで <tt>config.inc.php</tt> ファイルを開いて、その内容を以下のテキストフィールドの内容に置き換えてください。</p>]]></message>
+  <message key="installer.manualSQLInstructions"><![CDATA[<h4>マニュアルインストール</h4>
+<p>OJSデータベーススキーマと初期データを作成するためのSQL文を以下に表示しました。これらのSQL文をマニュアルで実行しないとシステムは利用できないことに注意してください。また、<tt>config.inc.php</tt> 設定ファイルについてもマニュアルで設定する必要があります。</p>]]></message>
+  <message key="installer.installationComplete"><![CDATA[<p>OJSのインストールが終了しました。</p>
 <p>このシステムの利用を開始するには、前画面でユーザ名とパスワードを入力して<a href="{$loginUrl}">ログイン</a>してください。</p>
-<p>お知らせや更新案内を受け取りたい場合は、<a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>で<strong>登録してください</strong>。ご質問やご意見がございましたら、<a href="http://pkp.sfu.ca/support/forum" target="_new">サポートフォーラム</a>にご参加ください。</p>]]>
-  </message>
-  <message key="installer.upgradeComplete">
-    <![CDATA[<p>OJS バージョン {$version} へのバージョンアップが終了しました。</p>
+<p>お知らせや更新案内を受け取りたい場合は、<a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>で<strong>登録してください</strong>。ご質問やご意見がございましたら、<a href="http://pkp.sfu.ca/support/forum" target="_new">サポートフォーラム</a>にご参加ください。</p>]]></message>
+  <message key="installer.upgradeComplete"><![CDATA[<p>OJS バージョン {$version} へのバージョンアップが終了しました。</p>
 <p> config.inc.php 設定ファイルの"installed"項目を<em>On</em>に戻すことを忘れないでください。</p>
-<p>もしまだ登録されていなくて、お知らせや更新案内を受け取りたい場合は、<a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>で<strong>登録してください</strong>。ご質問やご意見がございましたら、<a href="http://pkp.sfu.ca/support/forum" target="_new">サポートフォーラム</a>にご参加ください。</p>]]>
-  </message>
-  <message key="installer.checkNo">
-    <![CDATA[<span class="formError">いいえ</span>]]>
-  </message>
+<p>もしまだ登録されていなくて、お知らせや更新案内を受け取りたい場合は、<a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>で<strong>登録してください</strong>。ご質問やご意見がございましたら、<a href="http://pkp.sfu.ca/support/forum" target="_new">サポートフォーラム</a>にご参加ください。</p>]]></message>
   <!-- Article Logs -->
   <message key="log.author.submitted">{$authorName}が新規投稿ID {$submissionId} を行った。</message>
   <message key="log.author.documentRevised">{$authorName}が論文 {$articleId} を改訂した。新しいファイルIDは {$fileId} である。</message>
@@ -816,31 +666,21 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   <message key="rt.admin.settings.description">読書ツールは、インデックス化を指定した雑誌セクションに含まれている出版アイテムの横に別フレームで表示されます。読書ツールは、出版アイテムに関連する以下に示した任意のツールと、各学問分野別に用意した関連アイテムへのアクセス提供ツールから成ります。</message>
   <message key="rt.admin.settings.enableReadingTools">読書ツールを有効にする。</message>
   <message key="rt.admin.settings.relatedItems">分野</message>
-  <message key="rt.admin.settings.relatedItemsLink">
-    <![CDATA[各分野の関連アイテムを閲覧、追加、修正、削除する場合は、<a href="{$relatedItemsLink}" class="action">関連アイテムセット</a>を参照してください。]]>
-  </message>
+  <message key="rt.admin.settings.relatedItemsLink"><![CDATA[各分野の関連アイテムを閲覧、追加、修正、削除する場合は、<a href="{$relatedItemsLink}" class="action">関連アイテムセット</a>を参照してください。]]></message>
   <message key="rt.admin.options">雑誌アイテムツール</message>
   <message key="rt.admin.relatedItems">関連アイテムツール</message>
   <!-- RT Versions -->
   <!-- RT Contexts -->
-  <message key="rt.admin.contexts.options.defineTerms">
-    <![CDATA[ユーザが指定した語をデフォルトの検索語として使用する。または、選択されなかった場合は、空欄として残す（例えば、"語の定義"コンテキストのために）。単語のダブルクリックによりこのコンテキストを開くようにするためには、<a href="{$settingsUrl}">RSTの設定</a>で"語の定義"オプションを有効にしておく必要があります。]]>
-  </message>
   <!-- RT Searches -->
-  <message key="rt.admin.validateUrls.description">
-    <![CDATA[検索サイトとして不正だと思われるURLを以下に表示します。<br/>
+  <message key="rt.admin.validateUrls.description"><![CDATA[検索サイトとして不正だと思われるURLを以下に表示します。<br/>
 このテストは100%正確なものではないので、不正であるとしたURLについてもご自分で確認してください。<br/>
-データを実際に入力する必要がある検索サイトのURLでは検証が失敗している可能性があります。]]>
-  </message>
+データを実際に入力する必要がある検索サイトのURLでは検証が失敗している可能性があります。]]></message>
   <!-- RT Entities -->
   <message key="rt.metadata.dublinCore.primaryAuthor">作成者</message>
   <message key="rt.metadata.pkp.primaryAuthor">著者の氏名、所属、国</message>
   <message key="rt.metadata.pkp.peerReviewed">査読論文</message>
   <message key="rt.beNotifiedWhen">通知...</message>
   <message key="rt.thisJournal">雑誌の検索</message>
-  <message key="rt.email.needLogin">
-    <![CDATA[* <a target="_parent" href="{$loginUrl}">登録</a>が必要です。]]>
-  </message>
   <message key="rt.context.authorTermsDescription">アイテムに複数の著者がいる場合、すべての著者の論文を検索する場合は、すべての著者をチェックしたままにします。特定の著者の論文を検索する場合は、その著者以外のチェックをはずしてください。検索するサイトの詳細を知りたい場合は、[このサイト/雑誌について]リンクをクリックしてください。検索対象のサイトはその妥当性を考慮し、さらに、コンテンツのすべて（または一部）がオープンアクセス（フリーアクセス）のものを選択しています。</message>
   <!--
 	 *
@@ -854,102 +694,6 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	 * DEFAULT - Default settings for setup items.
 	 *
 	-->
-  <message key="default.journalSettings.checklist.notPreviouslyPublished">投稿物はこれまでに出版されておらず、また、別の雑誌に投稿されてもいない（または、編集者へのコメント欄で事情を説明している）。</message>
-  <message key="default.journalSettings.checklist.fileFormat">投稿ファイルは、Microsoft Word、RTF、またはWordPerfect文書ファイルフォーマットのいずれかである。 </message>
-  <message key="default.journalSettings.checklist.addressesLinked">可能な場合、参考文献のURLが提供されている。</message>
-  <message key="default.journalSettings.checklist.submissionAppearance">テキストはシングルスペースで書かれており、12ポイントのフォントサイズを使用しており、下線ではなくイタリック体を使用しており（URLアドレスを除く）、すべてのイラスト、図、表は最後にまとめて示すのではなく、テキスト中の適当な場所に埋め込まれている。</message>
-  <message key="default.journalSettings.checklist.bibliographicRequirements">
-    <![CDATA[テキストは、「この雑誌について」ページにある<a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">執筆要項</a>で示された書式要件および書誌記述要件を満たしている。]]>
-  </message>
-  <message key="default.journalSettings.checklist.anonymous">
-    <![CDATA[査読を行う雑誌セクションに投稿する場合、<a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">ブラインド審査を保証する</a>ための指示に従っている。]]>
-  </message>
-  <message key="default.journalSettings.privacyStatement">本雑誌サイトに入力された名前およびメールアドレスは、本雑誌で述べた目的にのみ使用し、他の目的で使用したり、他のいかなる団体にも公開することはありません。</message>
-  <message key="default.journalSettings.openAccessPolicy">本雑誌は、知の全世界的な流通を支援するために研究成果を自由に利用できるようにするという原則に基づいて、そのコンテンツを直ちにオープンアクセスで提供します。</message>
-  <message key="default.journalSettings.authorSelfArchivePolicy">著者には、（出版に関する書誌的情報を提供する限り）本雑誌に投稿したアイテムを個人または機関のWebサイトに出版に先立って、あるいは出版後に掲載することを許可し、奨励します。</message>
-  <message key="default.journalSettings.copyeditInstructions">
-    <![CDATA[原稿整理段階では、論文の流れ、明快さ、文法、語法、書式を改善することを目的とします。また、この段階は、著者がテキストの大幅な変更を行うことができる最後の機会を意味します。次の段階での修正は文字や書式の修正に限られるからです。
-<br/><br/>
-原稿整理に使用されるファイルは、Wordまたは.rtfフォーマットですので、ワープロ文書として容易に編集することができます。ここで示す一連の指示では、原稿整理を行う上で2つの方法を提案しています。1つは、Microsoft Wordの「変更履歴の記録」機能を使用するもので、コピーエディタ、編集者、著者の3者がこのソフトウェアを利用できる必要があります。2つ目の方法は、ソフトウェアとは無関係であり、「Harvard Education Review」から許可を得て借用した方法です。雑誌編集者はこれらの指示を変更することができますので、この雑誌にあわせた処理の改善提案を行うことができます。 
-
-<h4>原稿整理方法</h4>
-
-<strong>1. Microsoft Wordの「変更履歴の記録」機能を使用する方法</strong>
-
-ツールメニューの下にある「変更履歴の記録」機能を使用すると、コピーエディタはテキストの挿入（該当テキストは色付きで表示）、削除（該当テキストは色付の抹消線で削除、または削除テキストとして余白部に表示）することができます。また、コピーエディタは、質問を角カッコで挟むことにより、著者（著者質問）にも編集者（編集者質問）にも質問を投げることができます。作業が終了したら、コピーエディタ版をアップロードして、編集者に通知します。編集者はテキストを確認して、著者に通知します。
-
-編集者と著者は、変更に納得した場合は変更をそのままにしておきます。さらなる変更が必要な場合、編集者と著者は、最初に行われたテキストの挿入や削除を変更することも、新たに別の場所にテキストを挿入･削除することもできます。角カッコの中に置かれた各々に対する質問がある場合、著者と編集者はこれに答えます。
-
-編集者と著者によるテキストの点検が終了したら、コピーエディタは、次のレイアウトとゲラ作成ステップに渡すために変更を適用した最終版を作成します。
-
-
-<strong>2. Harvard Educational Reviewの方法</strong>
-
-<strong>原稿の電子的改訂を行う方法</strong>
-
-原稿の電子的改訂を行うために、以下の手順に従ってください。
-
-<strong>提案された変更に応じる</strong>
-&nbsp; 提案された変更を受け入れる場合は、テキストの太字指定を外します
-&nbsp; 提案された変更を受け入れない場合は、オリジナルテキストを再入力して、<strong>太字</strong>指定をします。
-
-<strong>追加と削除を行う</strong>
-&nbsp; 新たなテキストを<strong>太字にする</strong>ことにより追加を示します
-&nbsp; 削除する部分を次のように置換します: <strong>[削除テキスト]</strong>
-&nbsp; 1つ以上のセンテンスを削除する場合は、注記で示してください。例: <strong>[2センテンスを削除]</strong>
-
-<strong>著者への質問（QA）に回答する</strong>
-&nbsp; テキスト中で太字で示されているすべてのQAはそのままにしておく。削除しない。
-&nbsp; QAに答えるには、直後にコメントを追加する。コメントには次の区切り文字を使用する。:
-<strong>[Comment:]</strong>
-&nbsp; 例: <strong>[Comment: ご指摘の通り、方法に関する考察を拡張しました]</strong>
-
-<strong>コメントを付ける</strong>
-&nbsp; 構成上の変更、または大規模な改訂を説明するためにコメントを使用する。
-&nbsp; 例: <strong>[Comment: 上記パラグラフを5ページから7ページへ移動した]</strong>
-&nbsp; 注: ページに言及する場合は、あなたに送付した原稿の印刷版のページを使用してください。これは重要です。文書が電子的に改訂されるとページが変わる可能性があるからです。
-
-<h4>電子的改訂の実例</h4>
-
-<strong>オリジナル「原稿」ファイル</strong>
-
-オリジナル原稿の構造や構成の劇的な変更を行う前に、原稿の共同作業者に連絡してください。改訂が終了したら、ファイル名を"著者名QA.doc"から"著者名QAR.doc"に変更します（例えば、"LeeQA.doc"から"LeeQAR.doc"へ変更）。原稿を印刷して、全面的に改訂してファイル名を変更したワープロファイルを含むフロッピーディスクと共に郵送してください。
-
-
-<strong>質問と提案が付されて著者に返された原稿</strong>
-
-<strong>我々があなたに返した原稿</strong>の構造や構成の劇的な変更を行う前に、原稿を<strong>担当している編集者</strong>に連絡してください。改訂が終了したら、ファイル名を"著者名QA.doc"から"著者名QAR.doc"に変更します（例えば、"LeeQA.doc"から"LeeQAR.doc"へ変更）。原稿を印刷して、全面的に改訂してファイル名を変更したワープロファイルを含むフロッピーディスクと共に郵送してください。<strong>[QA: このパラグラフでは、電子的改訂を行う際の指示に注意深く従うことの重要性を強調してもよいでしょう。そうでないと、編集処理が大幅に遅れる可能性があるからです。]</strong>
-
-<strong>改訂した原稿をHER誌に返送する</strong>
-
-我々があなたに返した原稿の構造や構成の劇的な変更を行う前に、原稿を担当している編集者に連絡してください。<strong>以下の指示に従わなかった場合、原稿の出版が大幅に遅れる可能性があることをご理解ください。</strong>
-
-改訂が終了したら、ファイル名を"著者名QA.doc"から"著者名QAR.doc"に変更します（例えば、"LeeQA.doc"から"LeeQAR.doc"へ変更）。原稿を印刷して、<strong>[単語を削除]</strong>改訂してファイル名を変更したワープロファイルを含むフロッピーディスクと共に郵送してください。<strong>[QA: このパラグラフでは、電子的改訂を行う際の指示に注意深く従うことの重要性を強調してもよいでしょう。そうでないと、編集処理が大幅に遅れる可能性があるからです。] [Comment: 提案に従って、センテンスを追加しました。]</strong>
-
-<strong>注:</strong>
-&bull; 太字を解除したテキストにより最初のセンテンスに対する変更の提案を受け入れたことを示しています
-&bull; QAに応えてセンテンスが追加されました。太字のテキストは新しいテキストが追加されたことを示しています
-&bull; [単語を削除] は単語「全面的に」を削除したことを示しています
-&bull; コメントは編集者のQAに対する回答を含んでいます]]>
-  </message>
-  <message key="default.journalSettings.emailSignature">
-    <![CDATA[________________________________________________________________________
-{$journalName}
-{$indexUrl}/{$journalPath}
-]]>
-  </message>
-  <message key="default.journalSettings.forReaders">
-    <![CDATA[読者の方には、この雑誌の出版通知サービスへの登録をお薦めします。雑誌ホームページの上部にある<a href="{$indexUrl}/{$journalPath}/user/register">登録</a>リンクをクリックして登録してください。このサービスは、登録した雑誌に新しい号が出版されるたびに、目次情報をメールでお知らせするものです。登録者リストはこの雑誌の支持率や読者数を主張する際に使用します。登録読者の名前とメールアドレスは、その他の目的では使用いたしません。この雑誌の<a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">プライバシー情報の扱いについて</a>をご参照ください。]]>
-  </message>
-  <message key="default.journalSettings.forAuthors">
-    <![CDATA[この雑誌に論文を投稿することに興味はありませんか。この雑誌のセクションポリシーを示す<a href="{$indexUrl}/{$journalPath}/about">この雑誌について</a>や<a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">執筆要項</a>をご覧になることをお薦めします。論文を投稿していただくには、あらかじめこの雑誌に<a href="{$indexUrl}/{$journalPath}/user/register">登録</a>していただく必要があります。登録済みの方は<a href="{$indexUrl}/index/login">ログイン</a>して、5ステップの投稿処理を開始することができます。]]>
-  </message>
-  <message key="default.journalSettings.forLibrarians">
-    <![CDATA[研究図書館員の方には、この雑誌を電子ジャーナルリストに追加することをお薦めします。また、所属の教官が編集委員をしている雑誌を運用する図書館が使用するシステムとして、この雑誌が使用しているオープンソースの出版システムがふさわしいことも注目に値するでしょう（<a href="http://pkp.sfu.ca/ojs">オープン･ジャーナル･システム</a>のホームページをご参照ください）。]]>
-  </message>
-  <message key="default.journalSettings.lockssLicense">
-    <![CDATA[この雑誌は、参加図書館による分散型アーカイブシステムを構築するLOCKSSシステムを使用しています。このシステムの参加図書館が保存および障害復旧の目的でこの雑誌の恒久的アーカイブを作成することを許可します。<a href="http://lockss.org/">さらなる情報</a>はここを参照してください。]]>
-  </message>
 	<message key="common.confirmComplete">このタスクを完了にしてもいいですか。後で修正することができなくなります。</message>
 	<message key="common.payment">支払い</message>
 	<message key="common.payments">支払い</message>
@@ -1039,35 +783,6 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	<message key="rt.metadata.pkp.doi">DOI</message>
 	<message key="debug.notes.currencyListLoad">XMLから通貨リスト"{$filename}" をロードしました。</message>
 	<message key="debug.notes.helpMappingLoad">{$id}を捜すためにXMLヘルプマッピングファイル{$filename} を再ロードしました。</message>
-	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>レイアウトプロセスに参照リンキングを追加する方法</h4>
-	<p>投稿物をHTMLやPDFに変換する際、投稿物にある全てのハイパーリンクが接続可能であることを確認してください。</p>
-	<h4>A. 著者が参考文献にリンクをつける場合</h4>
-	<ol>
-	<li>投稿物がまだワープロ形式（Wordなど）の間に、URLを持つ参考文献の最後に「VIEW ITEM」という語句を追加する。</li>
-	<li>この語句をハイライト表示して、Wordのハイパーリンク挿入ツールと参考文献のURLを使ってハイパーリンクに変換する。</li>
-	</ol>
-	<h4>B. 読者が参考文献をGoogle Scholarで検索できるようにする</h4>
-	<ol>
-	<li>投稿物がまだワープロ形式（Wordなど）の間に、参考文献リストの文献のタイトルをコピーする（余りにもありふれたタイトルの場合（「平和」など）は、著者とタイトルをコピーする）。</li>
-	<li>参考文献のタイトルを以下の2つの%22の間にペーストして、各単語の間に+を挿入する:http://scholar.google.com/scholar?q=%22ここに+タイトルを+挿入%22&hl=en&lr=&btnG=Search</li>
-	<li>投稿物の参考文献リストの各文献の最後に「GS SEARCH」という語句を追加する。</li>
-	<li>この語句をハイライト表示して、Wordのハイパーリンク挿入ツールと項番2で用意したURLを使ってハイパーリンクに変換する。</li>
-	</ol>
-	<h4>C. 読者が参考文献をDOIで検索できるようにする</h4>
-	<ol>
-	<li>投稿物がまだWord形式の間に、参考文献をまとめてhttp://www.crossref.org/freeTextQuery/にある "CrossRef Text Query" にコピーする。</li>
-	<li>検索結果に含まれているDOIを各々以下のURL（の=と&の間）にペーストする: http://www.cmaj.ca/cgi/external_ref?access_num=ここにDOIをペースト&link_type=DOI</li>
-	<li>投稿物の参考文献リストの各文献の最後に「CrossRef」という語句を追加する。</li>
-	<li>この語句をハイライト表示して、Wordのハイパーリンク挿入ツールと項番2で用意したURLを使ってハイパーリンクに変換する。</li>
-	</ol>]]></message>
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>校正の段階では、ゲラに見られるスペルや文法、フォーマッティングの間違いを修正することを目的としています。これより大きな変更は、セクションエディタと協議しない限りこの段階では行うことができません。レイアウト画面で、[校正版の閲覧]をクリックすると、このアイテムを出版する際に使用されるHTMLやPDF、その他利用可能な形式のファイルを閲覧することができます。</p>
-<h4>スペルミスや文法エラーについて</h4>]]></message>
-	<message key="default.journalSettings.submissionFeeDescription">著者は投稿プロセスで審査経費を賄うための論文投稿料を支払う必要があります。</message>
-	<message key="default.journalSettings.fastTrackFeeDescription">この料金を支払うと、この投稿に対する審査、編集判断、著者への連絡が４週間以内に行われることが保証されます。</message>
-	<message key="default.journalSettings.publicationFeeDescription">この論文が出版対象として採用されると、出版経費を賄うための論文出版料を支払うよう依頼されます。</message>
-	<message key="default.journalSettings.waiverPolicy">このような料金を支払う資金がない場合も、各種料金が免除される可能性があります。私たちは、価値ある作品の出版を妨げる課金は望んでいません。</message>
-	<message key="default.journalSettings.membershipFeeDescription">この料金を支払うと、あなたはこの協会の会員として１年間登録され、この雑誌に自由にアクセスすることができます。</message>
-	<message key="default.journalSettings.donationFeeDescription">この雑誌への寄付はどんな額であれありがたく頂戴し、編集者が最高の品質の雑誌を読者に提供し続けるために使用させていただきます。</message>
 	<message key="submission.reviewForm">査読フォーム</message>
 	<message key="submission.reviewFormResponse">査読フォームレスポンス</message>
 	<message key="reviewer.article.enterReviewForm">アイコンをクリックして、査読フォームに記入してください。</message>
@@ -1094,37 +809,10 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	<message key="issue.coverPage.altText">表紙ージ</message>
 	<message key="submission.layout.publicGalleyId">公開ゲラ識別子</message>
 	<message key="submission.layout.galleyPublicIdentificationExists">公開ゲラ識別子は既に存在します。</message>
-	<message key="user.profile.form.profileImageInvalid">プロフィール画像のフォーマットが正しくないか、サイズが大きすぎます。使用可能なフォーマットは、.gif, .jpg, .pngです。画像サイズは、150x150ピクセル以内です。</message>
 	<message key="about.aboutThisPublishingSystem.altText">OJS編集･出版プロセス</message>
 	<message key="help.searchReturnResults">検索結果に戻る</message>
 	<message key="payment.type.purchaseArticle">論文購入料金</message>
-	<message key="default.journalSettings.purchaseArticleFeeDescription">この料金を支払うと、この論文の閲覧、ダウンロード、印刷が可能になります。</message>
 	<message key="journal.issn">ISSN</message>
-	<message key="manager.setup.doiSuffix">DOIサフィックス</message>
-	<message key="common.ccLicense"><![CDATA[<br /><br />
-	<a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
-	<br />
-	この資料のライセンスは <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new">Creative Commons Attribution 3.0 License</a> です。]]></message>
-	<message key="common.ccLicense.rt"><![CDATA[<div class="rtBlock">
-		<br />
-		<a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
-		<br />
-		この資料のライセンスは <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new">Creative Commons Attribution 3.0 License</a> です。
-	</div>]]></message>
-	<message key="manager.setup.doiSuffixDefault">デフォルトパターンを使用する (%j.v%vi%i.%a)。</message>
-	<message key="manager.setup.doiSuffixPattern">下記に入力されたパターンを使用してDOIサフィックスを生成します。%j は雑誌の略称，%v は巻，%i は号，%a はOJSの論文ID，%p はページ数を意味します。</message>
-	<message key="manager.setup.doiSuffixPattern.example">例えば，vol%viss%ipp%p は 10.1234/vol3iss2pp230 というDOIを生成します。</message>
-	<message key="manager.setup.doiSuffixDescription">DOIサフィックスはどのような形式でも構いませんが，出版アイテムごとにユニークなものでなければなりません。</message>
-	<message key="manager.setup.doiSuffixCustomIdentifier">出版アイテムに対してDOIサフィックスのような「カスタム識別子」を使用することができます（Step 4で有効にする必要があります）。</message>
-	<message key="manager.setup.form.doiPrefixPattern">DOIは 10.xxxx という形式でなければなりません。</message>
-	<message key="manager.setup.publisherNoteDescription">この文章は「このサイトについて」内の「雑誌スポンサー」ページにある「出版者」と出版者名・URLとの間に表示されます。</message>
-	<message key="manager.setup.sponsorNoteDescription">この文章は「このサイトについて」内の「雑誌スポンサー」ページにある「スポンサー」とスポンサー名・URLとの間に表示されます。</message>
-	<message key="manager.setup.contributorNoteDescription">この文章は「このサイトについて」内の「雑誌スポンサー」ページにある「支援者」と支援者名・URLとの間に表示されます。</message>
-	<message key="author.submissions.queuedReviewSubsequent">査読 ラウンド {$round}</message>
-	<message key="author.submissions.queuedReviewRevisions">査読作業待ち : 改訂が必要</message>
-	<message key="author.submissions.queuedEditingCopyedit">編集作業待ち : 原稿整理が必要</message>
-	<message key="author.submissions.queuedEditingProofread">編集作業待ち : 校正が必要</message>
-	<message key="author.submit.mustEnterWaiverReason">免除を申請する場合は，空欄に理由を記入してください。</message>
 	<message key="plugins.categories.oaiMetadataFormats">OAIメタデータフォーマットプラグイン</message>
 	<message key="subscriptionTypes.format.online">オンライン</message>
 	<message key="subscriptionTypes.format.print">冊子</message>
@@ -1194,4 +882,36 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	<message key="notification.type.copyeditComment">コピーエディタが "{$param}" にコメントした時</message>
 	<message key="notification.type.editorDecisionComment">"{$param}" の編集者の判断についてコメントがあった時</message>
 	<message key="notification.type.proofreadComment">"{$param}" について校正者のコメントがあった時</message>
+	<message key="subscriptions.status.awaitingManualPayment">手作業による支払い待ち</message>
+	<message key="about.subscriptionTypes.format">フォーマット</message>
+	<message key="about.subscriptionTypes.duration">期間</message>
+	<message key="manager.setup.citations">著者それぞれに投稿プロセスの一部として参考文献（引用）についての整形されたリストを提出可能にする。</message>
+	<message key="author.submit.submissionCitations">この投稿で引用している文献について整形した参考文献リストを提供してください。</message>
+	<message key="about.history">雑誌の履歴</message>
+	<message key="manager.people.confirmDisable">このユーザを無効にしますか？この処理によってユーザはシステムにログインできなくなります。
+
+アカウントを無効にする理由をユーザに対して連絡したほうがよいかもしれません。</message>
+	<message key="user.subscriptions.mySubscriptions">マイ・購読情報</message>
+	<message key="manager.setup.reviewProcessEmailDescription">編集者は、投稿物をメールに添付して査読者に査読を依頼する。査読者は、査読の受諾（または謝絶）、査読コメントと審査結果をメールで編集者に通知する。編集者は、審査プロセスを記録するために、投稿物の審査ページで査読者の受諾（または謝絶）、査読コメントと審査結果を入力する。</message>
+	<message key="subscriptionTypes.months">ヶ月</message>
+	<message key="subscriptionTypes.nonExpiring">期間なし</message>
+	<message key="subscriptionTypes.format">フォーマット</message>
+	<message key="subscriptions.inactive">無効</message>
+	<message key="subscriptions.status.active">有効</message>
+	<message key="subscriptions.status.needsApproval">承認が必要</message>
+	<message key="user.subscriptions.expires">購読中</message>
+	<message key="user.subscriptions.expired">購読期間終了</message>
+	<message key="about.subscriptionTypes.cost">購読料</message>
+	<message key="subscriptions.status.needsInformation">情報の入力待ち</message>
+	<message key="editor.submissionReview.notes"><![CDATA[<ol>
+	<li>ハイライトされたアイテムは編集者によるアクションが必要です。</li>
+	<li>"期限"は査読者が査読依頼を引き受けた際に入力されます。査読者の査読期限日または(-) 週数で表示されます。</li>
+</ol>]]></message>
+	<message key="subscriptions.institutionalOnlinePaymentDescription"><![CDATA[<strong>注意:</strong> 機関のオンライン購読では購読のアクティベーションの前に提供されたドメイン名とIPアドレスの承認が必要です。]]></message>
+	<message key="plugins.categories.oaiMetadataFormats.description">これらのフォーマットプラグインはOAI通信でメタデータを送信します。</message>
+	<message key="user.subscriptions.form.membershipInstructions">選択した購読種別で必要な場合は会員情報</message>
+	<message key="user.subscriptions.form.domainInstructions"><![CDATA[ここでドメイン名を入力された場合は，IPアドレスの入力はオプションです。<br />有効なドメイン名 (例: lib.sfu.ca)]]></message>
+	<message key="user.subscriptions.form.ipRangeInstructions"><![CDATA[ここでIPアドレスを入力された場合は，ドメイン名の入力はオプションです。<br />有効なIPアドレス値は次のようなものです。IPアドレス (例: 142.58.103.1), IPアドレス範囲 (例: 142.58.103.1 - 142.58.103.4), ワイルドカード '*' を使用したIPアドレス範囲 (例: 142.58.*.*), CIDR IPアドレス範囲 (例: 142.58.100.0/24)]]></message>
+	<message key="payment.subscription.purchase">購読手続</message>
+	<message key="reviewer.article.reviewGuidelinesDescription">査読の手引きは、投稿物がこの雑誌で発表することがふさわしいかどうかを判断するための基準や，効果的で参考になる査読をするための特別な指示を査読者に提供します。査読をすすめるにあたり査読者には，2つの入力欄（「著者と編集者用」と「編集者用」）が提供されます。また雑誌管理者は査読フォームを使用してピアレビューフォームを作成することもできます。いずれの場合も，編集者は著者への通知に査読結果を含めるか否かを選択することができます。</message>
 </locale>

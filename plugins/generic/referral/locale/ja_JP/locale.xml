@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ja_JP locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="ja_JP" full_name="日本語">
+	<message key="plugins.generic.referral.name">紹介プラグイン</message>
+	<message key="plugins.generic.referral.description">紹介プラグインでは論文に対して発生する refback URL (例: 読者が論文の外部リンクをたどった場合)を追跡し，著者が論文に対する refback 自動的にアップデートされるリストを保持もしくは公開することができます。</message>
+	<message key="plugins.generic.referral.enabled">紹介プラグインは有効です。</message>
+	<message key="plugins.generic.referral.disabled">紹介プラグインは無効です。</message>
+	
+	<message key="plugins.generic.referral.editReferral">Refback を編集</message>
+	<message key="plugins.generic.referral.createReferral">Refback を作成</message>
+	<message key="plugins.generic.referral.referrals">Refbacks</message>
+	<message key="plugins.generic.referral.count">ヒット</message>
+	<message key="plugins.generic.referral.dateAdded">追加日</message>
+	<message key="plugins.generic.referral.all">すべて</message>
+	<message key="plugins.generic.referral.all.empty">現在 refback はありません。</message>
+	<message key="plugins.generic.referral.status.new">新規</message>
+	<message key="plugins.generic.referral.status.new.empty">現在，新しい refback はありません。</message>
+	<message key="plugins.generic.referral.status.accept">公開</message>
+	<message key="plugins.generic.referral.status.accept.empty">現在，公開されている refback はありません。</message>
+	<message key="plugins.generic.referral.status.decline">却下</message>
+	<message key="plugins.generic.referral.status.decline.empty">現在，却下されている refback はありません。</message>
+	<message key="plugins.generic.referral.confirmDelete">あなたは本当にこの refback を削除したいですか？</message>
+	<message key="plugins.generic.referral.nameRequired">refback 名が必要です。</message>
+	<message key="plugins.generic.referral.urlRequired">refback URL が必要です。</message>
+</locale>

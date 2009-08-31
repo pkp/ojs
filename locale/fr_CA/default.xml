@@ -98,8 +98,6 @@ Après que vos révisions sont terminées, changer le nom du fichier AuthorNameQ
 	<message key="default.journalSettings.waiverPolicy">Si vous n'êtes pas en mesure de payer de tels frais, vous aurez l'occasion de supprimer les frais. Nous ne voulons pas que les frais empêchent la publication d'ouvrages méritants.</message>
 	<message key="default.journalSettings.membershipFeeDescription">Le paiement des frais vous inscrira à titre de membre de cette association pendant un an et vous accordera un accès gratuit à ce journal.</message>
 	<message key="default.journalSettings.donationFeeDescription">Les dons à cette revue, quels que soient le montant, sont les bienvenus et permettent aux éditeurs de continuer à offrir une revue de la plus haute qualité à ses lecteurs.</message>
-	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Déclarer si vous avez un conflit d'intérêts  concernant cette recherche (voir <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Politique</a>).]]></message>
-	<message key="debug.notes.helpMappingLoad">Fichier de mappage d'aide XML {$filename} retéléchargé à la recherche de {$id}.</message>
 	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Pour ajouter un lien aux références du processus de mise en page</h4>
 	<p>Quand vous convertissez une soumission en format HTML ou PDF, assurez-vous que tous les hyperliens dans les soumissions son actifs.</p>
 	<h4>A. Quand l'auteur fournit un lien avec la référence</h4>

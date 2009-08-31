@@ -45,14 +45,7 @@
 	<message key="admin.journals.form.pathExists">指定したパス名は、他の雑誌で既に使用されています。</message>
 	<message key="admin.journals.enableJournalInstructions">この雑誌をこのサイトで公開する。</message>
 	<message key="admin.journals.journalDescription">雑誌の説明</message>
-	<message key="admin.journals.importOJS1">OJS 1からインポート</message>
-	<message key="admin.journals.importOJS1.editMigratedJournal">移行した雑誌の編集</message>
-	<message key="admin.journals.importOJS1.conflict.desc">ユーザアカウント情報が一部矛盾しています。OJS第1版ではメールアドレスを複数のユーザアカウントで共有することができましたが、OJS第2版ではそれを認めていません。以下のリストでは、2番目のアカウントに一時的なメールアカウントを与えてあります。これらのアカウントは、(1) 別のメールアカウントを設定する、(2) アカウントを一本化する、のいずれかの方法で修正する必要があります。</message>
-	<message key="admin.journals.importOJS1.conflict">{$firstUsername} ({$firstName}) および {$secondUsername} ({$secondName})</message>
-	<message key="admin.journals.importOJS1Instructions">OJS第1版から第2版へのデータ移行の詳細については、システムに添付されている文書「バージョンアップについて」をご覧ください。</message>
 	<message key="admin.journal.pathImportInstructions">既存のパス名、または作成するパス名（例: &quot;ojs&quot;）</message>
-	<message key="admin.journal.importPath">OJS 1のパス名</message>
-	<message key="admin.journal.importPathInstructions">OJS 1で使用していた雑誌のファイルシステム上のフルパス名を入力してください。（例: &quot;/var/www/ojs&quot;）</message>
 	<message key="admin.journals.importSubscriptions">購読者のインポート</message>
 	<message key="admin.journals.transcode">論文メタデータの文字コードの変換（ISO8859-1から）</message>
 	<message key="admin.journals.form.importPathRequired">インポートパス名は必須です。</message>
@@ -64,10 +57,7 @@
 	<message key="admin.mergeUsers.allUsers">全登録ユーザ</message>
 	<message key="admin.mergeUsers.confirm">ユーザ名 "{$oldUsername}”のアカウントをユーザ名 "{$newUsername}" のアカウントにマージしてもよいですか。今後、ユーザ名 "{$oldUsername}" のアカウントは利用できなくなります。この処理は元に戻すことができません。</message>
 	<message key="admin.mergerUsers.noneEnrolled">登録されたユーザはいません。</message>
-	<message key="admin.journals.importOJS1.success">雑誌のインポートが正常に終了しました。</message>
-	<message key="admin.journals.importOJS1.redirect.desc">OJS1のURLからOJS2のURLへリダイレクトさせるには、以下の内容のPHPファイルを作成してください。該当するファイルはOJS1のファイルシステムパスに置くか、（雑誌を1誌のみ公開している場合は）OJS２ファイルシステムパスにおいてください。</message>
-	<message key="admin.journals.importOJS1.redirect.ojs1root">旧OJS１ファイルシステムパス（すなわち、/var/www/ojs1）に置いてください。</message>
-	<message key="admin.journals.importOJS1.redirect.ojs1orojs2root">旧OJS１ファイルシステムパス（すなわち、/var/www/ojs1）、または、雑誌を1誌のみ公開している場合は新OJS2ファイルシステムパス（すなわち、/var/www/ojs2）に置いてください。</message>
 	<message key="admin.journals.redirect">OJS1 URLからOJS2 URLへマッピングするコードを生成</message>
 	<message key="admin.locale.maybeIncomplete">マークのあるロケールは完全ではありません。</message>
+	<message key="admin.systemConfigurationDescription">config.inc.phpに設定されている設定値。</message>
 </locale>

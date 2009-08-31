@@ -792,4 +792,166 @@ Link: {$url}
 
 {$principalContactSignature}</body>
 	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
+		<subject>{$siteTitle} メーリングリストへようこそ！</subject>
+		<body>あなたは {$siteTitle} からのお知らせを受け取ることに同意しました。
+
+メーリングリストにあなたのメールアドレスを追加するために下記の確認リンクをクリックしてください。
+{$confirmLink}
+
+もし通知メールの受信を停止したい場合は，下記のページでメールドレスとパスワードを入力してください。
+{$unsubscribeLink}
+
+あなたの通知メールを無効にするためのパスワードは下記のとおりです。
+{$password}
+
+
+{$principalContactSignature}</body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_REVISIONS">
+		<subject>編集者の判断</subject>
+		<body>{$authorName}:
+
+私たちはあなたが {$journalTitle}, に投稿された "{$articleTitle}"  
+について結論に達しました。
+
+結果:
+
+{$editorialContactSignature}</body>
+		<description></description>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST_PASSWORD">
+		<subject>あなたの {$siteTitle} についての通知メーリングリスト情報</subject>
+		<body>あなたの通知メール停止のための新しいパスワードは
+{$password}
+です。
+
+もし通知メールの受信を停止したい場合は，下記のページであなたのメールアドレスとパスワードを入力してください。
+{$unsubscribeLink} 
+
+{$principalContactSignature}</body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_RESUBMIT">
+		<subject>編集者の判断</subject>
+		<body>{$authorName}:
+
+私たちは下記のあなたの投稿について結論に達しました。 {$journalTitle}, "{$articleTitle}".
+
+結果は:
+
+{$editorialContactSignature}</body>
+		<description></description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_ACCEPT">
+		<subject>編集者の判断</subject>
+		<body>{$authorName}:
+
+私たちはあなたの下記の投稿について結論に達しました。
+{$journalTitle}, "{$articleTitle}".
+
+結果は:
+
+{$editorialContactSignature}</body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_DECLINE">
+		<subject>編集者の判断</subject>
+		<body>{$authorName}:
+
+私たちはあなたの下記の投稿について結論に達しました。{$journalTitle}, "{$articleTitle}".
+
+結果は:
+
+{$editorialContactSignature}</body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
+		<subject>購読申込: 個人</subject>
+		<body>オンラインで {$journalName}  に対する個人購読が申し込まれました。詳細は下記の通りです。
+
+購読種別:
+{$subscriptionType}
+
+ユーザ:
+{$userDetails}
+
+会員情報 (ある場合):
+{$membership}
+
+この購読を閲覧あるいは編集するには，下記のURLにアクセスしてください。
+
+購読URL: {$subscriptionUrl}</body>
+		<description>このメールは個人購読がオンラインで申し込まれた場合に購読管理者に通知されます。メールには購読情報の概要と購読内容へのクイックリンクが含まれています。</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
+		<subject>購読申込: 機関</subject>
+		<body>オンラインで {$journalName} に対する機関購読申し込みがされました。詳細は下記の通りです。この購読を有効にするためには，下記の購読リンクから購読状態を「有効」に設定してください。
+
+購読種別:
+{$subscriptionType}
+
+機関名:
+{$institutionName}
+{$institutionMailingAddress}
+
+ドメイン名 (ある場合):
+{$domain}
+
+IPアドレス範囲 (ある場合):
+{$ipRanges}
+
+連絡担当者:
+{$userDetails}
+
+会員情報 (ある場合):
+{$membership}
+
+この購読を閲覧および編集するためには，下記のURLにアクセスしてください。
+
+購読URL: {$subscriptionUrl}</body>
+		<description>このメールは機関購読がオンラインで申し込まれた場合に購読管理者に通知されます。メールには購読情報の概要と購読内容へのクイックリンクが含まれています。</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INDL">
+		<subject>購読更新: 個人</subject>
+		<body>オンラインで {$journalName} に対する個人購読の更新申込がされました。詳細は下記の通りです。
+
+購読種別:
+{$subscriptionType}
+
+ユーザ:
+{$userDetails}
+
+会員情報 (ある場合):
+{$membership}
+
+この購読を閲覧および編集するためには，下記のURLにアクセスしてください。
+
+購読URL: {$subscriptionUrl}</body>
+		<description>このメールは個人購読の更新がオンラインで申し込まれた場合に購読管理者に通知されます。メールには購読情報の概要と購読内容へのクイックリンクが含まれています。</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INSTL">
+		<subject>購読更新: 機関</subject>
+		<body>オンラインで {$journalName} に対する機関購読の更新申込がおこなわれました。詳細は下記の通りです。
+
+購読種別:
+{$subscriptionType}
+
+機関名:
+{$institutionName}
+{$institutionMailingAddress}
+
+ドメイン名 (ある場合):
+{$domain}
+
+IPアドレス範囲 (ある場合):
+{$ipRanges}
+
+連絡担当者:
+{$userDetails}
+
+会員情報 (ある場合):
+{$membership}
+
+この購読を閲覧および編集するためには，下記のURLにアクセスしてください。
+
+購読URL: {$subscriptionUrl}</body>
+	</email_text>
 </email_texts>

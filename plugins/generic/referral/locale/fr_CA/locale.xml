@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fr_CA locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="fr_CA" full_name="Français (Canada)">
+	<message key="plugins.generic.referral.name">Plugiciel de référence</message>
+	<message key="plugins.generic.referral.description">Le plugiciel de référence retrace les URL entrants de renvoi aux articles (c.-à-d. quand un lecteur suit un lien externe vers un article), permettant à des auteurs de maintenir et, potentiellement, de publier une liste mise à jour automatiquement de références à un article.</message>
+	<message key="plugins.generic.referral.enabled">The Referral Plugin has been enabled.</message>
+	<message key="plugins.generic.referral.disabled">Le plugiciel de référence a été désactivé.</message>
+	
+	<message key="plugins.generic.referral.editReferral">Modifier un renvoi</message>
+	<message key="plugins.generic.referral.createReferral">Créer un renvoi</message>
+	<message key="plugins.generic.referral.referrals">Renvois</message>
+	<message key="plugins.generic.referral.count">Requêtes</message>
+	<message key="plugins.generic.referral.dateAdded">Date d'ajout</message>
+	<message key="plugins.generic.referral.all">Tous</message>
+	<message key="plugins.generic.referral.all.empty">Il n'y a présentement aucun renvoi.</message>
+	<message key="plugins.generic.referral.status.new">Nouveau</message>
+	<message key="plugins.generic.referral.status.new.empty">Il n'y a présentement aucun nouveau renvoi.</message>
+	<message key="plugins.generic.referral.status.accept">Publié</message>
+	<message key="plugins.generic.referral.status.accept.empty">Il n'y a présentement aucun renvoi publié.</message>
+	<message key="plugins.generic.referral.status.decline">Ignoré</message>
+	<message key="plugins.generic.referral.status.decline.empty">Il n'y a présentement aucun renvoi ignoré.</message>
+	<message key="plugins.generic.referral.confirmDelete">Êtes-vous certain de vouloir supprimer ce renvoi?</message>
+	<message key="plugins.generic.referral.nameRequired">Le nom de renvoi est obligatoire.</message>
+	<message key="plugins.generic.referral.urlRequired">L'URL du renvoi est obligatoire.</message>
+</locale>

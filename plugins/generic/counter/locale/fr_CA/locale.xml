@@ -16,21 +16,6 @@
 	<message key="plugins.generic.counter.description"><![CDATA[Le plugiciel COUNTER permet l'enregistrement et la production de compte-rendus conformes à <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a> des activités du site.]]></message>
 	<message key="plugins.generic.counter">Statistiques COUNTER</message>
 
-	<message key="plugins.generic.counter.clearLog">Supprimer le registre</message>
-	<message key="plugins.generic.counter.confirmClear">Êtes-vous certain de vouloir supprimer ce registre? Cette action est irréversible.</message>
-	<message key="plugins.generic.counter.browseLog">Parcourir le registre</message>
-	<message key="plugins.generic.counter.browseLog.logBrowser">Navigateur du registre</message>
-
-	<message key="plugins.generic.counter.entry.timestamp">Estampille</message>
-	<message key="plugins.generic.counter.entry.site">Site</message>
-	<message key="plugins.generic.counter.entry.journal">Revue</message>
-	<message key="plugins.generic.counter.entry.user">Utilisateur</message>
-	<message key="plugins.generic.counter.sessionNumber">No de session {$sessionNumber}</message>
-	<message key="plugins.generic.counter.entry.type">Type</message>
-	<message key="plugins.generic.counter.entry.type.article">Article</message>
-	<message key="plugins.generic.counter.entry.type.search">Recherche</message>
-	<message key="plugins.generic.counter.entry.value">Valeur</message>
-
 	<message key="plugins.generic.counter.1a.title">Rapport de revue 1 (R2) : Demandes de texte complet par mois et par revue</message>
 	<message key="plugins.generic.counter.1a.title1">Rapport de revue 1 (R2)</message>
 	<message key="plugins.generic.counter.1a.title2">Nombre de demandes de texte complet acceptées, par mois et par revue (Année {$year})</message>

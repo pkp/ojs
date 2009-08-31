@@ -136,7 +136,16 @@
 	<message key="default.journalSettings.fastTrackFeeDescription">この料金を支払うことにより、この文献に関する審査、編集判断、著者への連絡が４週間以内に行われることが保証されます。</message>
 	<message key="default.journalSettings.publicationFeeDescription">この論文の出版がアクセプトされると、出版経費をカバーするための論文出版料金を支払うよう依頼されます。</message>
 	<message key="default.journalSettings.waiverPolicy">そのような料金を支払うための資金を持っていない場合は、各料金を免除する機会を持つことになります。私たちは、価値ある作品の出版を妨げる課金は望んでいません。</message>
-	<message key="default.journalSettings.payPerViewFeeDescription">この料金を支払うと、この論文の閲覧、ダウンロード、プリントアウトが可能になります。</message>
 	<message key="default.journalSettings.membershipFeeDescription">この料金を支払うと、あなたはこの協会の会員として１年間登録され、この雑誌に自由にアクセスすることができます。</message>
 	<message key="default.journalSettings.donationFeeDescription">寄付はどんな額であれありがたく頂戴し、編集者が最高の品質の雑誌を読者に提供し続けるために利用します。</message>
+	<message key="default.journalSettings.membershipFee">団体会員</message>
+	<message key="default.journalSettings.donationFee">雑誌への寄附</message>
+	<message key="default.journalSettings.purchaseArticleFeeDescription">購読料の支払い後，この論文の閲覧，ダウンロード，印刷が可能になります。</message>
+	<message key="default.journalSettings.submissionFee">論文の投稿</message>
+	<message key="default.journalSettings.fastTrackFee">迅速審査</message>
+	<message key="default.journalSettings.publicationFee">論文の出版</message>
+	<message key="default.journalSettings.purchaseArticleFee">論文購入料</message>
+	<message key="section.default.title">論文</message>
+	<message key="section.default.abbrev">ART</message>
+	<message key="section.default.policy">　</message>
 </locale>

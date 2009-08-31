@@ -26,7 +26,6 @@
 	<message key="editor.submissionReview.confirmDecision">この判断を記録してもよいですか。</message>
 	<message key="editor.submissionReview.emailWillArchive">この投稿物は、著者に通知メールが送信された、またはメール送信をスキップボタンが押された後、保存されます。</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">この投稿物をコピーエディタに送信する前に、改訂版が利用可能になっていること、および、上にある「著者に通知」リンクを使って著者に判断が通知されていることを確認してください。</message>
-	<message key="editor.submissionReview.notes">期限日は査読期限日までの時間を週数で示しています。マイナスの場合は、期限日を過ぎていることを表します。査読期限日は、査読者が査読依頼を受諾した際にお知らせしています。</message>
 	<message key="editor.notifyUsers">ユーザへの通知</message>
 	<message key="editor.notifyUsers.inProgress">ユーザに通知しています</message>
 	<message key="editor.usersNotified">通知されたユーザ</message>
@@ -201,4 +200,8 @@
 	<message key="editor.article.removeCoverPage">表紙画像を削除しても良いですか?</message>
 	<message key="editor.article.remove">削除</message>
 	<message key="editor.issues.enableOpenAccessDate">遅延オープンアクセス (一定期間後にオープンアクセスになる) を有効にする</message>
+	<message key="editor.issues.resetSectionOrder"><![CDATA[この巻号はカスタムセクション順序が使用されています。<a href="{$url}" class="action">デフォルト状態に戻す</a>]]></message>
+	<message key="editor.issues.unpublishIssue">未公開巻号</message>
+	<message key="editor.issues.confirmUnpublish">公開されているこの巻号を未公開にしますか？</message>
+	<message key="editor.article.archiveSubmission">投稿を謝絶してアーカイブにうつす</message>
 </locale>

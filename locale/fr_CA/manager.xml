@@ -13,7 +13,6 @@
   -->
 
 <locale name="fr_CA" full_name = "Français (Canada)">
-	<message key="manager.people.confirmDisable">Désactiver cet usager? Cette action empêchera l'usager d'entrer dans le système.</message>
 	<message key="manager.emails.confirmResetAll">Êtes-vous certain de vouloir restaurer toutes les grilles des courriels dans cette revue? Vous allez perdre toutes les personnalisations que vous avez effectuées.</message>
 	<message key="manager.files.note">Note: L'explorateur de fichiers est une fonction avancée qui permet aux fichiers et aux répertoires associés à une revue d'être vus et manipulés directement.</message>
 	<message key="manager.groups">Équipe éditoriale</message>
@@ -170,7 +169,6 @@
 	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[L'Avis de droits d'auteur ci-dessous apparaîtra dans la section Au sujet de la revue, et dans toutes les métadonnées des articles publiés. Bien que la revue soit responsable de définir les termes d'une entente avec les auteurs concernant les droits d'auteur, le Public Knowledge Project recommande l'utilisation de la licence <a href="http://creativecommons.org" target="_new" class="action">Creative Commons</a>. À cette fin, il offre <a href="{$sampleCopyrightWordingUrl}" target="_new" class="action">un exemple de libellé d’Avis de droits d’auteur </a> pouvant être copié et collé dans l'espace ci-dessous pour les revues offrant (a) le libre-accès, (b) le libre-accès à retardement, ou (c) n'offrant pas le libre-accès.]]></message>
 	<message key="manager.setup.authorGuidelines">Directives aux auteurs</message>
 	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Identifier pour les auteurs les normes bibliographiques et de formatage utilisées pour les articles soumis à la revue (par ex., <em>Publication Manual of the American Psychological Association</em>, 5e à d., 2001). Il est souvent utile de donner des exemples des formats usuels de citation pour les revues et les livres qui seront utilisés dans la soumission. Identifier aussi les types de fichiers supplémentaires appropriés (par ex., attribution des noms pour un ensemble de données, instruments de recherche, etc.) que les auteurs devraient être incités à télécharger, en plus de leur soumission, afin d'accroître l'engagement des lecteurs envers leur travail.]]></message>
-	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Étapes : File d'attente des soumissions &gt; Évaluation des soumissions &gt; Révision des soumissions &gt; Sommaire.<br /><br /> Choisir un modèle pour gérer ces aspects du processus éditorial. (Pour désigner un Rédacteur en chef et des Chefs de rubrique, voir Rédacteurs dans Gestion de la revue.)]]></message>
 	<message key="manager.setup.competingInterests">Conflits d'intérêts</message>
 	<message key="manager.setup.competingInterests.description"><![CDATA[Les revues biomédicales exigent habituellement que les auteurs et les réviseurs déclarent s'ils ont des conflits d'intérêts concernant leur recherche (Voir <a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">PLoS Policy</a>).]]></message>
 	<message key="manager.setup.competingInterests.guidelines">Directives pour déposer une déclaration de conflits d'intérêts</message>
@@ -394,7 +392,6 @@
 	<message key="manager.setup.reviewProcess">Processus d'évaluation</message>
 	<message key="manager.setup.reviewProcessDescription"><![CDATA[OJS supporte deux modèles pour la gestion du processus d'évaluation. Le processus d'évaluation standard est recommandé parce qu'il accompagne les évaluateurs durant tout le processus, fait en sorte d'obtenir un historique complet de l'évaluation de chaque soumission, et profite des avis de rappel automatiques et des recommandations standard pour les soumissions (Accepter; Accepter avec révisions; Soumettre pour évaluation; Soumettre ailleurs; Refuser; Voir commentaires).<br /><br />Sélectionner un des suivants :]]></message>
 	<message key="manager.setup.reviewProcessEmail">Processus d'évaluation de pièces jointes à un courriel</message>
-	<message key="manager.setup.reviewProcessEmailDescription">Le rédacteur envoie à l'évaluateur une demande d'évaluation par courriel avec la soumission en pièce jointe. L'évaluateur envoit par courriel son consentement (ou son refus), ainsi que son évaluation et sa recommandation. Le rédacteur inscrit le consentement (ou le refus), ainsi que la critique et la recommandation, dans la page d'évaluation pour cette soumission, pour tenir compte du processus d'évaluation.</message>
 	<message key="manager.setup.reviewProcessStandard">Processus d'évaluation standard</message>
 	<message key="manager.setup.reviewProcessStandardDescription">Les rédacteurs enverront aux évaluateurs sélectionnés un courriel avec le titre et le résumé de la soumission, ainsi qu'une invitation à visiter le site Web de la revue pour compléter l'évaluation. Les évaluateurs visitent le site Web de la revue pour consentir à effectuer l'évaluation, pour télécharger les soumissions, soumettre leurs commentaires, et sélectionner une recommandation.</message>
 	<message key="manager.setup.searchEngineIndexing">Indexation par les moteurs de recherche</message>
@@ -411,7 +408,6 @@
 	<message key="manager.setup.sponsorsDescription">Les noms des institutions (par ex., associations de chercheurs, départements universitaires, coopératives, etc.) soutenant la revue figureront dans « À propos de la revue » et pourront être accompagnés d'une attestation.</message>
 	<message key="manager.setup.stepsToJournalSite">Cinq étapes pour créer le site Web d'une revue</message>
 	<message key="manager.setup.subjectClassification">Classement par sujet</message>
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[La revue utilise un système de classification par sujet disponible sur le Web.<br />Titre du système de classification]]></message>
 	<message key="manager.setup.subjectClassificationExamples">(Par ex., Mathématiques - Classification par sujet; Classification de la Library of Congress)</message>
 	<message key="manager.setup.subjectExamples">(Par ex., Photosynthèse; Trous noirs; Cartes en quadrichromie; Théorème de Bayes)</message>
 	<message key="manager.setup.subjectKeywordTopic">Mots-clés</message>
@@ -550,9 +546,7 @@
 	<message key="manager.subscriptions.membership">Adhésion</message>
 	<message key="manager.subscriptions.noneCreated">Aucun abonnement n'a été créé.</message>
 	<message key="manager.subscriptions.select">Enrôler l'abonné</message>
-	<message key="manager.subscriptions.selectSubscriber">Sélectionner un abonné</message>
 	<message key="manager.subscriptions.selectSubscriber.desc">Les privilèges d'accès des abonnés sont automatiquement accordés aux éditeurs, rédacteurs, chefs de rubrique, responsables de mise en page, réviseurs et correcteurs d'épreuves de la revue.</message>
-	<message key="manager.subscriptions.subscribe">Enrôler</message>
 	<message key="manager.subscriptions.subscriptionCreatedSuccessfully">Création de l'abonnement réussie.</message>
 	<message key="manager.subscriptions.subscriptionType">Type d'abonnement</message>
 	<message key="manager.subscriptions.user">Usager</message>
@@ -561,14 +555,9 @@
 	<message key="manager.subscriptionTypes.cost">Coût</message>
 	<message key="manager.subscriptionTypes.create">Créer un nouveau type d'abonnement</message>
 	<message key="manager.subscriptionTypes.createTitle">Créer</message>
-	<message key="manager.subscriptionTypes.currency">Devise</message>
 	<message key="manager.subscriptionTypes.duration">Durée</message>
 	<message key="manager.subscriptionTypes.edit">Modifier le type d'abonnement</message>
 	<message key="manager.subscriptionTypes.editTitle">Modifier</message>
-	<message key="manager.subscriptionTypes.format">Format</message>
-	<message key="manager.subscriptionTypes.format.online">En ligne</message>
-	<message key="manager.subscriptionTypes.format.print">Format imprimé</message>
-	<message key="manager.subscriptionTypes.format.printOnline">Imprimé et en ligne</message>
 	<message key="manager.subscriptionTypes.form.cost">Coût</message>
 	<message key="manager.subscriptionTypes.form.costInstructions">Entrer une valeur numérique (par ex., 40 ou 40,00). Ne pas inclure aucun autre texte comme " $ ".</message>
 	<message key="manager.subscriptionTypes.form.costNumeric">Le coût doit être une valeur numérique positive.</message>
@@ -594,13 +583,9 @@
 	<message key="manager.subscriptionTypes.form.typeName">Nom</message>
 	<message key="manager.subscriptionTypes.form.typeNameExists">Un type d'abonnement avec ce nom existe déjà.</message>
 	<message key="manager.subscriptionTypes.form.typeNameRequired">Un nom de type d'abonnement est obligatoire.</message>
-	<message key="manager.subscriptionTypes.month">mois</message>
-	<message key="manager.subscriptionTypes.months">mois</message>
 	<message key="manager.subscriptionTypes.name">Type d'abonnement</message>
 	<message key="manager.subscriptionTypes.noneCreated">Aucun type d'abonnement n'a été créé.</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Création du type d'abonnement réussie.</message>
-	<message key="manager.subscriptionTypes.year">année</message>
-	<message key="manager.subscriptionTypes.years">années</message>
 	<message key="manager.reviewFormElement.changeType">Changer le type d'élément du formulaire...</message>
 	<message key="manager.reviewFormElements.confirmDelete">Confirmer la suppression d'un élément de formulaire publié...</message>
 	<message key="manager.reviewForms.confirmDeleteUnpublished">Confirmer la suppression d'un formulaire d'évaluation non publié...</message>

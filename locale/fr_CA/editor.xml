@@ -31,7 +31,6 @@
 	<message key="editor.submissionReview.confirmDecision">Êtes-vous certain de vouloir enregistrer cette décision?</message>
 	<message key="editor.submissionReview.emailWillArchive">Cette soumission sera archivée après l'envoi du courriel Notification à l'auteur, ou à l'appui de la touche Sauter le courriel.</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Before you can send this submission to copyediting, you must ensure that a revision is available and that the author has been notified of the decision using the Notify Author link above.</message>
-	<message key="editor.submissionReview.notes">La date due indique le nombre de semaines restant avant que la révision soit due ou (-) le nombre de semaines qu'elle est passé due. Ce champ est rempli quand un évaluateur a accepté la demande de faire la révision.</message>
 	<message key="editor.notifyUsers">Informer les usagers</message>
 	<message key="editor.notifyUsers.inProgress">Notification aux utilisateurs...</message>
 	<message key="editor.usersNotified">Usagers informés</message>

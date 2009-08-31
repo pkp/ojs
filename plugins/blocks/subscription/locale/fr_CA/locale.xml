@@ -18,6 +18,5 @@
 	<message key="plugins.block.subscription.blockTitle">Abonnement</message>
 	<message key="plugins.block.subscription.expires">Échéance</message>
 	<message key="plugins.block.subscription.providedBy">Accès fournit par :</message>
-	<message key="plugins.block.subscription.providedByInstitution">Accès fournit par votre institution</message>
 	<message key="plugins.block.subscription.comingFromIP">Adresse IP de provenance :</message>
 </locale>
