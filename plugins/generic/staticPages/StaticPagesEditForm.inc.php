@@ -109,7 +109,7 @@ class StaticPagesEditForm extends Form {
 			theme_advanced_toolbar_location : "top",
 			theme_advanced_toolbar_align : "left",
 			theme_advanced_statusbar_location : "bottom",
-			relative_url : false, 		
+			relative_urls : false, 		
 			document_base_url : "'. Request::getBaseUrl() .'/'.$publicFileManager->getJournalFilesPath($journalId) .'/", 
 			theme : "advanced",
 			theme_advanced_layout_manager : "SimpleLayout",
