@@ -28,7 +28,7 @@ switch ($op) {
 	case 'moveSectionToc':
 	case 'moveArticleToc':
 	case 'editIssue':
-	case 'removeIssueCoverPage':
+	case 'removeCoverPage':
 	case 'removeStyleFile':
 		define('HANDLER_CLASS', 'EditorHandler');
 		import('pages.editor.EditorHandler');

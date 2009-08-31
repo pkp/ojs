@@ -160,7 +160,7 @@ class ThesisPlugin extends GenericPlugin {
 	function getEnabled() {
 		$journal =& Request::getJournal();
 		if (!$journal) return false;
-		return $this->getSetting($journal->getJournalId(), 'enabled');
+		return $this->getSetting($journal->getId(), 'enabled');
 	}
 
 	function setupPublicHandler($hookName, $params) {
@@ -208,7 +208,7 @@ class ThesisPlugin extends GenericPlugin {
 	function setEnabled($enabled) {
 		$journal =& Request::getJournal();
 		if ($journal) {
-			$this->updateSetting($journal->getJournalId(), 'enabled', $enabled ? true : false);
+			$this->updateSetting($journal->getId(), 'enabled', $enabled ? true : false);
 			return true;
 		}
 		return false;
@@ -243,7 +243,7 @@ class ThesisPlugin extends GenericPlugin {
 				if ($this->getEnabled()) {
 					$this->import('ThesisSettingsForm');
 					// FIXME: Need construction by reference or validation always fails on PHP 4.x
-					$form =& new ThesisSettingsForm($this, $journal->getJournalId());
+					$form =& new ThesisSettingsForm($this, $journal->getId());
 					if (Request::getUserVar('save')) {
 						$form->readInputData();
 						if ($form->validate()) {
@@ -269,7 +269,7 @@ class ThesisPlugin extends GenericPlugin {
 						$thesisDao =& DAORegistry::getDAO('ThesisDAO');
 
 						// Ensure thesis is for this journal
-						if ($thesisDao->getThesisJournalId($thesisId) == $journal->getJournalId()) {
+						if ($thesisDao->getThesisJournalId($thesisId) == $journal->getId()) {
 							$thesisDao->deleteThesisById($thesisId);
 						}
 					}
@@ -285,7 +285,7 @@ class ThesisPlugin extends GenericPlugin {
 					$thesisDao =& DAORegistry::getDAO('ThesisDAO');
 
 					// Ensure thesis is valid and for this journal
-					if (($thesisId != null && $thesisDao->getThesisJournalId($thesisId) == $journal->getJournalId()) || ($thesisId == null)) {
+					if (($thesisId != null && $thesisDao->getThesisJournalId($thesisId) == $journal->getId()) || ($thesisId == null)) {
 						$this->import('ThesisForm');
 
 						if ($thesisId == null) {
@@ -295,7 +295,7 @@ class ThesisPlugin extends GenericPlugin {
 						}
 
 						$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-						$journalSettings =& $journalSettingsDao->getJournalSettings($journal->getJournalId());
+						$journalSettings =& $journalSettingsDao->getJournalSettings($journal->getId());
 
 						// FIXME: Need construction by reference or validation always fails on PHP 4.x
 						$thesisForm =& new ThesisForm($thesisId);
@@ -316,7 +316,7 @@ class ThesisPlugin extends GenericPlugin {
 					$thesisId = Request::getUserVar('thesisId') == null ? null : (int) Request::getUserVar('thesisId');
 					$thesisDao =& DAORegistry::getDAO('ThesisDAO');
 
-					if (($thesisId != null && $thesisDao->getThesisJournalId($thesisId) == $journal->getJournalId()) || $thesisId == null) {
+					if (($thesisId != null && $thesisDao->getThesisJournalId($thesisId) == $journal->getId()) || $thesisId == null) {
 
 						// FIXME: Need construction by reference or validation always fails on PHP 4.x
 						$thesisForm =& new ThesisForm($thesisId);
@@ -338,7 +338,7 @@ class ThesisPlugin extends GenericPlugin {
 							}
 
 							$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-							$journalSettings =& $journalSettingsDao->getJournalSettings($journal->getJournalId());
+							$journalSettings =& $journalSettingsDao->getJournalSettings($journal->getId());
 
 							$this->setBreadCrumbs(true);
 							$templateMgr->assign('journalSettings', $journalSettings);
@@ -369,7 +369,7 @@ class ThesisPlugin extends GenericPlugin {
 
 					$rangeInfo =& Handler::getRangeInfo('theses');
 					$thesisDao =& DAORegistry::getDAO('ThesisDAO');
-					$theses =& $thesisDao->getThesesByJournalId($journal->getJournalId(), $searchField, $search, $searchMatch, $dateFrom, $dateTo, null, $rangeInfo);
+					$theses =& $thesisDao->getThesesByJournalId($journal->getId(), $searchField, $search, $searchMatch, $dateFrom, $dateTo, null, $rangeInfo);
 
 					$templateMgr->assign('theses', $theses);
 					$this->setBreadCrumbs();
