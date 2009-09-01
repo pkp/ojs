@@ -79,7 +79,7 @@ class IndexHandler extends Handler {
 			$siteDao =& DAORegistry::getDAO('SiteDAO');
 			$site =& $siteDao->getSite();
 
-			if ($site->getRedirect() && ($journal = $journalDao->getJournal($site->getJournalRedirect())) != null) {
+			if ($site->getRedirect() && ($journal = $journalDao->getJournal($site->getRedirect())) != null) {
 				Request::redirect($journal->getPath());
 			}
 
