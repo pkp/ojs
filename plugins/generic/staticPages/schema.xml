@@ -13,7 +13,6 @@
   -->
 
 <schema version="0.2">
-
 	<!--
 	 *
 	 * TABLE static_pages
@@ -32,7 +31,7 @@
 		</field>
 		<descr>Static Pages</descr>
 	</table>
-	
+
 	<!--
 	  *
 	  * TABLE static_page_settings
@@ -49,7 +48,7 @@
 		<field name="setting_name" type="C2" size="255">
 			<NOTNULL/>
 		</field>
-		<field name="setting_value" type="X"/>
+		<field name="setting_value" type="XL"/>
 		<field name="setting_type" type="C2" size="6">
 			<NOTNULL/>
 			<descr>(bool|int|float|string|object)</descr>
@@ -64,6 +63,5 @@
 			<col>setting_name</col>
 			<UNIQUE />
 		</index>
-	</table>	
-
+	</table>
 </schema>
