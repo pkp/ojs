@@ -67,12 +67,9 @@ class CounterHandler extends Handler {
 
 
 	/**
-	* Counter report in XML
+	* Internal function to assign information for the Counter part of a report
 	*/
-	function reportXML() {
-		list($plugin) = CounterHandler::validate();
-		CounterHandler::setupTemplate(true);
-
+	function _assignTemplateCounterXML($templateManager) {
 		$journal =& Request::getJournal();
 		$year = Request::getUserVar('year');
 		
@@ -101,13 +98,10 @@ class CounterHandler extends Handler {
 			$i++;
 		}
 
-
 		$siteSettingsDao =& DAORegistry::getDAO('SiteSettingsDAO');
 		$siteTitle = $siteSettingsDao->getSetting('title',Locale::getLocale());
 
 		$base_url =& Config::getVar('general','base_url');
-
-		$templateManager =& TemplateManager::getManager();
 
 		$reqUser =& Request::getUser();
 		$templateManager->assign_by_ref('reqUser', $reqUser);
@@ -117,8 +111,127 @@ class CounterHandler extends Handler {
 
 		$templateManager->assign('siteTitle', $siteTitle);
 		$templateManager->assign('base_url', $base_url);
+	}
+
+
+	/**
+	* Counter report in XML
+	*/
+	function reportXML() {
+		list($plugin) = CounterHandler::validate();
+		CounterHandler::setupTemplate(true);
+
+		$templateManager =& TemplateManager::getManager();
+
+		CounterHandler::_assignTemplateCounterXML($templateManager);
 
 		$templateManager->display($plugin->getTemplatePath() . 'reportxml.tpl', 'text/xml');
+	}
+
+
+	/**
+	* SUSHI report
+	*/
+	function sushiXML() {
+		list($plugin) = CounterHandler::validate();
+		CounterHandler::setupTemplate(true);
+
+		$templateManager =& TemplateManager::getManager();
+
+		CounterHandler::_assignTemplateCounterXML($templateManager);
+
+/*
+		$SOAPRequest = '<soapenv:Envelope
+						  xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+						  xmlns:coun="http://www.niso.org/schemas/sushi/counter"
+						  xmlns:sus="http://www.niso.org/schemas/sushi">
+						<soapenv:Header/>
+						<soapenv:Body>
+						  <coun:ReportRequest Created="?" ID="?">
+							<sus:Requestor>
+							  <sus:ID>reqIDdata99</sus:ID>
+							  <sus:Name>reqNamedata99</sus:Name>
+							  <sus:Email>recEmaildata99</sus:Email>
+							</sus:Requestor>
+							<sus:CustomerReference>
+							  <sus:ID>test/prime</sus:ID>
+							</sus:CustomerReference>
+							<sus:ReportDefinition Name="JR1" Release="3">
+							  <sus:Filters>
+								 <sus:UsageDateRange>
+									<sus:Begin>2009-01-01</sus:Begin>
+									<sus:End>2009-06-01</sus:End>
+								 </sus:UsageDateRange>
+							  </sus:Filters>
+							</sus:ReportDefinition>
+						  </coun:ReportRequest>
+						</soapenv:Body>
+						</soapenv:Envelope>';
+*/
+
+		$SOAPRequest = file_get_contents('php://input');
+		print $SOAPRequest;
+
+		// crude handling of namespaces in the input
+		// FIXME: only the last prefix in the input will be used for each namespace
+		$soapEnvPrefix='';
+		$sushiPrefix='';
+		$counterPrefix='';
+
+		$re = '/xmlns:([^=]+)="([^"]+)"/';
+		preg_match_all($re, $SOAPRequest, $mat, PREG_SET_ORDER);
+
+		foreach ($mat as $xmlns) {
+			$modURI = $xmlns[2];
+			if ((strrpos($modURI, '/')+1) == strlen($modURI)) $modURI = substr($modURI, 0, -1);
+			switch ($modURI) {
+				case 'http://schemas.xmlsoap.org/soap/envelope':
+					$soapEnvPrefix = $xmlns[1];
+					break;
+				case 'http://www.niso.org/schemas/sushi':
+					$sushiPrefix = $xmlns[1];
+					break;
+				case 'http://www.niso.org/schemas/sushi/counter':
+					$counterPrefix = $xmlns[1];
+					break;
+			}			
+		}
+		
+		if (strlen($soapEnvPrefix)>0) $soapEnvPrefix .= ':';
+		if (strlen($sushiPrefix)>0)   $sushiPrefix .= ':';
+		if (strlen($counterPrefix)>0) $counterPrefix .= ':';
+
+		$parser = new XMLParser();
+		$tree = $parser->parseText($SOAPRequest);
+		$parser->destroy(); // is this necessary?
+
+		$reportRequestNode = $tree->getChildByName($soapEnvPrefix.'Body')->getChildByName($counterPrefix.'ReportRequest');
+
+		$requestorID = $reportRequestNode->getChildByName($sushiPrefix.'Requestor')->getChildByName($sushiPrefix.'ID')->getValue();
+		$requestorName = $reportRequestNode->getChildByName($sushiPrefix.'Requestor')->getChildByName($sushiPrefix.'Name')->getValue();
+		$requestorEmail = $reportRequestNode->getChildByName($sushiPrefix.'Requestor')->getChildByName($sushiPrefix.'Email')->getValue();
+
+		$customerReferenceID = $reportRequestNode->getChildByName($sushiPrefix.'CustomerReference')->getChildByName($sushiPrefix.'ID')->getValue();
+
+		$reportName = $reportRequestNode->getChildByName($sushiPrefix.'ReportDefinition')->getAttribute('Name');
+		$reportRelease = $reportRequestNode->getChildByName($sushiPrefix.'ReportDefinition')->getAttribute('Release');
+
+		$usageDateRange = $reportRequestNode->getChildByName($sushiPrefix.'ReportDefinition')->getChildByName($sushiPrefix.'Filters')->getChildByName($sushiPrefix.'UsageDateRange');
+		$usageDateBegin = $usageDateRange->getChildByName($sushiPrefix.'Begin')->getValue();
+		$usageDateEnd = $usageDateRange->getChildByName($sushiPrefix.'End')->getValue();
+
+		$templateManager->assign('requestorID', $requestorID);
+		$templateManager->assign('requestorName', $requestorName);
+		$templateManager->assign('requestorEmail', $requestorEmail);
+		$templateManager->assign('customerReferenceID', $customerReferenceID);
+		$templateManager->assign('reportName', $reportName);
+		$templateManager->assign('reportRelease', $reportRelease);
+		$templateManager->assign('usageDateBegin', $usageDateBegin);
+		$templateManager->assign('usageDateEnd', $usageDateEnd);
+		
+		$templateManager->assign('templatePath', $plugin->getTemplatePath());
+
+		$templateManager->display($plugin->getTemplatePath() . 'sushixml.tpl', 'text/plain');
 	}
 
 
