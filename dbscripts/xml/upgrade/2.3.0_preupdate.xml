@@ -13,11 +13,6 @@
   -->
 
 <data>
-	<!-- Bug #3694: abstract user settings -->
-	<sql>
-		<rename table="user_settings" column="journal_id" to="assoc_id" />
-	</sql>
-
 	<!-- Bug #3941: abstract groups -->
 	<sql>
 		<rename table="groups" column="journal_id" to="assoc_id" />
