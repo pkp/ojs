@@ -14,12 +14,11 @@
   xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
   xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
   xmlns:xsd="http://www.w3.org/1999/XMLSchema">
-
   <SOAP-ENV:Body>
   <ReportResponse
     ID="ID0"
     xsi:schemaLocation="http://www.niso.org/schemas/sushi/counter http://www.niso.org/schemas/sushi/counter_sushi3_0.xsd"
-    Created="2009-08-04T20:47:28Z"
+    Created="{$smarty.now|date_format:"%Y-%m-%dT%H:%M:%SZ"}"
     xmlns="http://www.niso.org/schemas/sushi/counter"
     xmlns:s="http://www.niso.org/schemas/sushi"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">

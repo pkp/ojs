@@ -170,7 +170,6 @@ class CounterHandler extends Handler {
 */
 
 		$SOAPRequest = file_get_contents('php://input');
-		print $SOAPRequest;
 
 		// crude handling of namespaces in the input
 		// FIXME: only the last prefix in the input will be used for each namespace
