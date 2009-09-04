@@ -315,26 +315,6 @@ Srdačno,
 {$editorialContactSignature}</body>
 		<description>Ovim obrascem e-pošte urednik rubrike podsjeća recenzenta da rok za izradu recenzije istekao. Obrazac se koristi ukoliko je recenzentu je omogućen pristup jednim klikom.</description>
 	</email_text>
-	<email_text key="EDITOR_REVIEW">
-		<subject>Ishod recenzije članka</subject>
-		<body>Poštovana/i {$authorName},
-
-upravo smo završili recenzijski postupak vašeg rada "{$articleTitle}" te donijeli sljedeću odluku:
-
-{$comments}.
-
-Opširnije komentare urednika i recenzenata možete pročitati ukoliko se prijavite kao autor na mrežne stranice časopisa:
-
-
-URL priloga: {$submissionUrl}
-Korisničko ime: {$authorUsername}
-
-U slučaju da imate bilo kakvih pitanja, molimo vas da nam se obratite.
-
-Srdačno,
-{$editorialContactSignature}</body>
-		<description>Ovim obrascem e-pošte urednik rubrike obavještava autora prijave da je donesena odluka u pogledu recenzije članka.</description>
-	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Zamolba za lekturu</subject>
 		<body>Poštovana/i {$copyeditorName},

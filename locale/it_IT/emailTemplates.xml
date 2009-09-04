@@ -343,25 +343,6 @@ Ti chiedo la cortesia di di confermare la volontà di portare a termine l'incari
 {$editorialContactSignature}</body>
 		<description>Questa email viene mandata automaticamente quando una data di revisionee scade (vedi opzioni del revisore nel Journal Setup, passo 2) e l'accesso one-click del revisore è attivato. I compiti programmati devono essere abilitati e configurati (vedi il file di configurazione del sito).</description>
 	</email_text>
-	<email_text key="EDITOR_REVIEW">
-		<subject>Revisione editoriale completata</subject>
-		<body>{$authorName}:
-
-Abbiamo completato la revisione della submission "{$articleTitle}." 
-La nostra decisione è di...
-
-{$comments}.
-
-Ulteriori commenti su questo scritto, editoriali e peer review, si possono trovare facendo  login nel sito web della rivista:
-
-Submission URL: {$submissionUrl}
-Username: {$authorUsername}
-
-Per qualsiasi domanda, si prega di contattarmi.
-
-{$editorialContactSignature}</body>
-		<description>Questa email viene inviata dal section editor all'autore di una submission per fargli sapere che è stata presa una decisione riguardo la submission.</description>
-	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Assegnazione di copyediting</subject>
 		<body>{$copyeditorName}:

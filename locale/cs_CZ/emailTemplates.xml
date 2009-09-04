@@ -337,24 +337,6 @@ Potvrďte prosím, zda můžete dokončit tento nezbytný úkol pro náš časop
 {$editorialContactSignature}</body>
 		<description> Tento email je automaticky poslán, když recenzentovi vyprší stanovený termín pro zpracování recenze (viz Možnosti recenze v Nastavení časopisu, Krok 2) a je povolen přístup recenzenta na jedno kliknutí. Musí být povoleny a nakonfigurovány naplánované úlohy (viz konfigurační soubor stránky).</description>
 	</email_text>
-	<email_text key="EDITOR_REVIEW">
-		<subject>Rozhodnutí editora o článku</subject>
-		<body>{$authorName}:
-
-Právě jsme dokončili recenzní řízení Vašeho příspěvku "{$articleTitle}." Naše rozhodnutí je...
-
-{$comments}.
-
-Další komentáře k příspěvku založené na redakčním posouzení a recenzním řízení naleznete po přihlášení na stránky časopisu:
-
-URL příspěvku: {$submissionUrl}
-Uživatelské jméno: {$authorUsername}
-
-V případě, že budete mít jakékoliv otázky, mě prosím kontaktujte.
-
-{$editorialContactSignature}</body>
-		<description>Tento email posílá editor sekce autorovi, aby mu oznámil, že bylo dosaženo rozhodnutí o jeho příspěvku.</description>
-	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Žádost o redigování příspěvku</subject>
 		<body>{$copyeditorName}:

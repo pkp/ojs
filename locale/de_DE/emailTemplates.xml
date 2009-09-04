@@ -310,24 +310,6 @@ Bestätigen Sie bitte, dass Sie nach wie vor bereit sind, sich die für unsere Z
 {$editorialContactSignature}</body>
 		<description>Diese Email wird automatisch versandt, wenn eine Begutachtung fällig wird (s. Begutachtungsoptionen unter Einrichtung der Zeitschrift, Schritt 2) und der Auf Klick Zugang aktiviert ist. Terminierte Arbeitsgänge müssen aktiviert und konfiguriert sein (s. Einrichtungsdatei der Webseite).</description>
 	</email_text>
-	<email_text key="EDITOR_REVIEW">
-		<subject>Begutachtung des Beitrags durch den Redakteur</subject>
-		<body>{$authorName}:
-
-Wir haben die Begutachtung Ihres Beitrags "{$articleTitle}" jetzt abgeschlossen. Wir haben uns entschieden ...
-
-{$comments}.
-
-Alles weitere zur Begutachtung durch Kollegen und Redaktion findet sich auf der Webseite der Zeitschrift:
-
-URL des Beitrags: {$submissionUrl}
-Benutzername: {$authorUsername}
-
-Wenn Sie noch Fragen haben, setzen Sie sich bitte mit mir in Verbindung.
-
-{$editorialContactSignature}</body>
-		<description>Diese Email geht vom Rubrikredakteur an Verfasser. Es wird mitgeteilt, wie über den Beitrag entschieden wurde.</description>
-	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Anfrage zum Korrekturlektorat</subject>
 		<body>{$copyeditorName}:

@@ -346,24 +346,6 @@ Us agrairem que ens confirmeu la vostra disponibilitat per a completar aquesta c
 {$editorialContactSignature}</body>
 		<description>Aquest missatge de correu electrònic s'envia automàticament quan se supera la data de venciment per a una revisió (vegeu les opcions de revisió del pas 2 de la configuració de la revista) i s'ha habilitat l'accés per a revisors en un clic. Les tasques planificades han d'estar habilitades i configurades (vegeu el fitxer de configuració del lloc).</description>
 	</email_text>
-	<email_text key="EDITOR_REVIEW">
-		<subject>Revisió editorial de l'article</subject>
-		<body>Benvolgut/uda {$authorName},
-
-Ja hem completat la revisió de la vostra tramesa "{$articleTitle}". Hem pres la decisió següent:
-
-{$comments}.
-
-Si inicieu la sessió al lloc web de la revista podreu consultar comentaris addicionals sobre l'article, basats en la revisió editorial i la revisió d'experts:
-
-URL de la tramesa: {$submissionUrl}
-Nom d'usuari: {$authorUsername}
-
-Si teniu qualsevol consulta, no dubteu a fer-me-la arribar.
-
-{$editorialContactSignature}</body>
-		<description>Aquest missatge de correu electrònic té un editor de secció com a remitent i s'envia a l'autor d'una tramesa per a notificar-li que ja s'ha pres una decisió sobre la seva obra.</description>
-	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Sol·licitud de correcció</subject>
 		<body>Benvolgut/uda {$copyeditorName},

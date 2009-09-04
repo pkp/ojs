@@ -337,24 +337,6 @@ Wilt u uw beschikbaarheid voor het voltooien van deze voor het werk van het tijd
 {$editorialContactSignature}</body>
 		<description>Deze e-mail wordt automatisch verzonden als de einddatum van een review verloopt (zie review opties onder Tijdschrift inrichten, stap 2) en een-klik toegang voor de reviewer is ingeschakeld. Scheduled tasks moeten ingeschakeld en geconfigureerd zijn (zie het configuratiebestand van de site)</description>
 	</email_text>
-	<email_text key="EDITOR_REVIEW">
-		<subject>Redactiereview van het artikel</subject>
-		<body>{$authorName}:
-
-De review van uw inzending "{$articleTitle}" is voltooid. Onze beslissing is om ...
-
-{$comments}.
-
-Meer opmerkingen bij uw paper, gebaseerd op redactionele en peer reviews kunt u vinden door in te loggen op de website van het tijdschrift:
-
-URL inzending: {$submissionUrl}
-Gebruikersnaam: {$authorUsername}
-
-Neemt u bij vragen alstublieft contact met me op.
-
-{$editorialContactSignature}</body>
-		<description>Deze e-mail wordt door een sectieredacteur naar de auteur van een inzending gestuurd om die te berichten dat er een beslissing is genomen met betrekking tot een inzending.</description>
-	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Tekstredactie verzoek</subject>
 		<body>{$copyeditorName}:

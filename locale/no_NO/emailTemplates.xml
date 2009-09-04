@@ -310,24 +310,6 @@ Vennligst bekreft om du fortsatt regner med å fullføre dette vurderingsoppdrag
 {$editorialContactSignature}</body>
 		<description>Denne e-posten sendes automatisk til Fagkonsulenten når tidsfristen for en fagfellevurdering utløper og etklikks fagkonsulenttilgang er slått på (se Fagvurdering-valgmuligheter under Tidsskriftoppsett, Trinn 2). Scheduled tasks må være slått på og konfigurert (kontakt nettstedsadministrator, og se konfigurasjonsfilen for nettstedet).</description>
 	</email_text>
-	<email_text key="EDITOR_REVIEW">
-		<subject>Redaksjonell vurdering av ditt innsendte manuskript</subject>
-		<body>{$authorName}:
-
-Vi har nå fullført den faglige og redaksjonelle vurderingen av manuskriptet "{$articleTitle}". Vår beslutning er som følger...
-
-{$comments}.
-
-Ved å logge inn på tidsskriftets nettsted, kan du finne de øvrige kommentarene fra faglige og redaksjonelle vurderere:
-
-Manuskriptets URL: {$submissionUrl}
-Brukernavn: {$authorUsername}
-
-Hvis du har ytterligere spørsmål, kan du gjerne kontakte meg.
-
-{$editorialContactSignature}</body>
-		<description>Denne e-posten sendes av en Seksjonsredaktør til Forfatteren for å varsle om at det innsendte manuskriptet er vurdert, og for å kunngjøre den redaksjonelle beslutningen.</description>
-	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Forespørsel om manusredigering</subject>
 		<body>{$copyeditorName}:

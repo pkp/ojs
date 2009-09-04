@@ -343,24 +343,6 @@ Vänligen bekräfta snarast om du har möjlighet att genomföra sakkunnigbedömn
 {$editorialContactSignature}</body>
 		<description>Det här meddelandet skickas automatiskt när sista datum för sakkunnigbedömning har passerats (se Valmöjligheter för bedömning under Tidskriftsinställningar, Steg 2) och när tillgång för one-click bedömning är avaktiverad. Planerade aktiviteter måste aktiveras och konfigureras (se konfigurationsfil eller kontakta sidadministratör för information).</description>
 	</email_text>
-	<email_text key="EDITOR_REVIEW">
-		<subject>Redaktionell bedömning av ditt manuskript</subject>
-		<body>{$authorName}:
-
-Vi har nu avslutat sakkunnigbedömning av ditt manuskript "{$articleTitle}." Värt beslut följer:
-
-{$comments}.
-
-Ytterligare kommentarer av Redaktion och Sakkunnigbedömare hitatr du om du loggar in på tidskriftens hemsida:
-
-Manuskriptets URL: {$submissionUrl}
-Användarnamn: {$authorUsername}
-
-Vänligen kontakta mig om du har några frågor.
-
-{$editorialContactSignature}</body>
-		<description>Det här meddelandet skickas från Sektionsredaktör till författaren av ett manuskript och innehåller beslut om publicering samt kommentarer av Sakkunnigbedömare.</description>
-	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Begäran om Manusredigering</subject>
 		<body>{$copyeditorName}:

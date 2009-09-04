@@ -325,23 +325,6 @@ Vi beder dig bekræfte, at du er i stand til at fuldføre dette vigtige bidrag t
 {$editorialContactSignature}</body>
 		<description>Denne e-mail sendes automatisk, når en bedømmers forfaldsdato overskrides (se Bedømmelsesindstillinger under Konfiguration af tidsskrift, trin 2), og når adgang for bedømmere ved hjælp af ét klik er aktiveret. Planlagte opgaver skal aktiveres og konfigureres (se webstedets konfigurationsfil).</description>
 	</email_text>
-	<email_text key="EDITOR_REVIEW">
-		<subject>Redaktionel bedømmelse af artikel</subject>
-		<body>{$authorName}:
-
-Vi har nu fuldført bedømmelsen af dit manuskript "{$articleTitle}". Vores beslutning er...
-
-{$comments}.
-
-Du kan finde flere oplysninger om manuskriptet, der er baseret på den redaktionelle bedømmelse og peer review, ved at logge på tidsskriftets websted:
-
-Manuskriptets URL-adresse: {$submissionUrl} Brugernavn: {$authorUsername}
-
-Hvis du har spørgsmål, er du velkommen til at kontakte mig.
-
-{$editorialContactSignature}</body>
-		<description>Denne e-mail sendes af en sektionsredaktør til forfatteren af et manuskript for at underrette vedkommende om, at der er truffet en beslutning med hensyn til manuskriptet.</description>
-	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Forespørgsel om manuskriptredigering</subject>
 		<body>{$copyeditorName}:

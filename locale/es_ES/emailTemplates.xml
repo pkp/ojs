@@ -390,24 +390,6 @@ Le rogamos nos confirme su disponibilidad para completar esta contribución vita
 {$editorialContactSignature}</body>
 		<description>This email is automatically sent when a reviewer's due date elapses (see Review Options under Journal Setup, Step 2) and one-click reviewer access is enabled. Scheduled tasks must be enabled and configured (see the site configuration file).</description>
 	</email_text>
-	<email_text key="EDITOR_REVIEW">
-		<subject>Revisión editorial de artículo</subject>
-		<body>{$authorName}:
-
-Acabamos de finalizar la revisión de su envío "{$articleTitle}." Nuestra decisión es ...
-
-{$comments}.
-
-Si se identifica en la revista podrá consultar comentarios adicionales sobre el artículo, basados en la revisión editorial y por pares:
-
-URL del envío: {$submissionUrl}
-Nombre de usuaria/o: {$authorUsername}
-
-Si tiene cualquier pregunta, no dude en contactar con nosotros/as.
-
-{$editorialContactSignature}</body>
-		<description>Este correo es enviado por un/a Editor/a de Sección al / a la autor/a de un envío para notificarle que se ha registrado una decisión con respecto a su envío.</description>
-	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Petición de corrección</subject>
 		<body>{$copyeditorName}:

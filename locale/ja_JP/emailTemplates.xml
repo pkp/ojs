@@ -344,27 +344,6 @@
 {$editorialContactSignature}</body>
 		<description>このメールは、査読者の査読期限日が過ぎ（雑誌設定ステップ2の査読オプションを参照）、ワンクリック査読者アクセスが有効な場合に、自動的に送信されるものです。定期タスク機能が有効かつ設定されている必要があります（サイト設定ファイルを参照）。</description>
 	</email_text>
-	<email_text key="EDITOR_REVIEW">
-		<subject>論文の審査結果</subject>
-		<body>{$authorName} 殿:
-
-ご投稿いただきありがとうございました。
-
-貴殿の投稿物「{$articleTitle}」の審査が終了しました。審査結果は、次のとおりです。
-{$comments}。
-
-編集者や査読者の意見に基づく論文に対するさらなるコメントは、雑誌のWebサイトにログインすることにより見ることができます。
-
-投稿物のURL: {$submissionUrl}
-ユーザ名: {$authorUsername}
-
-何かご不明な点がございましたら、ご連絡ください。
-
-よろしくお願いいたします。
-
-{$editorialContactSignature}</body>
-		<description>このメールは、セクションエディタから投稿物の著者に投稿物に関する採否の判断が下されたことを通知するものです。</description>
-	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>原稿整理のお願い</subject>
 		<body>{$copyeditorName} 殿:

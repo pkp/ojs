@@ -432,24 +432,6 @@ Our decision is to:
 </body>
 		<description>This email from the Editor or Section Editor to an Author notifies them of a final decision regarding their submission.</description>
 	</email_text>
-	<email_text key="EDITOR_REVIEW">
-		<subject>Editorial Review of Article</subject>
-		<body>{$authorName}:
-
-We have now completed the review of your submission "{$articleTitle}." Our decision is to...
-
-{$comments}.
-
-Additional comments on the paper, based on the editorial and peer review, are found by logging in to the journal web site:
-
-Submission URL: {$submissionUrl}
-Username: {$authorUsername}
-
-If you have any questions, please contact me.
-
-{$editorialContactSignature}</body>
-		<description>This email is sent by a Section Editor to a submission's Author to notify them that a decision has been reached in regard to a submission.</description>
-	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Copyediting Request</subject>
 		<body>{$copyeditorName}:

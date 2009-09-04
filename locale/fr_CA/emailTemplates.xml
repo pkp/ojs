@@ -352,24 +352,6 @@ S.V.P. veuillez nous confirmer votre disponibilité à compléter cette contribu
 {$editorialContactSignature}</body>
 		<description>Ce courriel est envoyé automatiquement quand la date d'entrée de l'évaluation est échue. (Voir options d'évaluations à l'étape 2 de la mise en marche (Setup) de la revue, et que l'accès en un cliquement à un évaluateur est actif. Les tâches prévues doivent être activées et configurées. (Voir le fichier de configuration du site.)</description>
 	</email_text>
-	<email_text key="EDITOR_REVIEW">
-		<subject>Évaluation de la soumission par le rédacteur</subject>
-		<body>{$authorName},
-
-Nous avons évalué votre manuscrit intitulé « {$articleTitle} » et nous avons décidé de...
-
-{$comments}.
-
-Vous trouverez des commentaires additionnels, basés sur l'évaluation par des pairs et le rédacteur, sur le site Web de notre revue.
-
-URL de la soumission : {$submissionUrl}
-Nom d'utilisateur : {$authorUsername}
-
-Si vous avez des questions, veuillez communiquer avec moi.
-
-{$editorialContactSignature}</body>
-		<description>Ce courriel est envoyé par le chef de rubrique à l'auteur  pour l'aviser qu'une décision a été rendue sur son texte.</description>
-	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Demande de révision d'une soumission</subject>
 		<body>{$copyeditorName},

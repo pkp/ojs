@@ -303,24 +303,6 @@ Xin quý vị vui lòng khẳng định khả năng đóng góp hết sức quan
 {$editorialContactSignature}</body>
 		<description>Email này được tự động gửi khi thời hạn cho một người phản biện đã qua (xem Các lựa chọn phản biện ở Bước 2, Phần Thiết lập Tạp chí) và truy cập bằng một nhấp chuột dành cho người phản biện có hiệu lực. Các tác vụ đặt sẵn phải được kích hoạt và đặt cấu hình (xem file cấu hình của website).</description>
 	</email_text>
-	<email_text key="EDITOR_REVIEW">
-		<subject>Phản biện của BTV đối với bài viết</subject>
-		<body>{$authorName}:
-
-Chúng tôi đã hoàn thành việc phản biện bài nộp "{$articleTitle}." Quyết định của chúng tôi là ...
-
-{$comments}.
-
-Những lời bình luận khác về tác phẩm, dựa trên phản biện chuyên gia và của BTV, có thể tìm thấy khi đăng nhập website của tạp chí:
-
-Đường dẫn của bài nộp: {$submissionUrl}
-Bí danh: {$authorUsername}
-
-Nếu quý vị có bất kỳ câu hỏi nào, vui lòng liên hệ với tôi.
-
-{$editorialContactSignature}</body>
-		<description>Email này được BTV chuyên mục gửi cho Tác giả của bài nộp để thông báo quyết định liên quan tới bài nộp.</description>
-	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Đề nghị biên tập bản thảo</subject>
 		<body>{$copyeditorName}:

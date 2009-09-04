@@ -354,24 +354,6 @@ Derginin kalitesini arttıracak bu önemli katkıyı yapabileceğinizi lütfen o
 {$editorialContactSignature}</body>
 		<description>Gözden geçirme işlemi için verilen süre geçtiğinde ve hakemler için tek tıklama özelliği açıldığında bu elektronik posta otomatik olarak gönderilir(Derginin Kurulum Bölümü altındaki Gözden Geçirme seçeneklerine bakınız, Adım 2). Zamanlanmış görevler aktif hale getirilmeli ve düzenlenmelidir(alan düzenleme dosyasına bakınız).</description>
 	</email_text>
-	<email_text key="EDITOR_REVIEW">
-		<subject>Çalışmanızın değerlendirilmesi</subject>
-		<body>Sayın {$authorName},
-
-Dergimizde yayınlanmak üzere gönderdiğiniz "{$articleTitle}" başlıklı çalışmanız ile ilgili kararımız aşağıda sunulmuştur.
-
-{$comments}.
-
-Yazınız hakkında editöryal süreç ve hakem değerlendirmeleri sonucundaki ek yorumları dergimiz istesini ziyaret ederek öğrenebilirsiniz.
-
-Başvuru ulaşım adresi: {$submissionUrl}
-Kullanıcı adı: {$authorUsername}
-
-Lütfen soru ve sorunlarınız için benimle ilişkiye geçiniz.
-
-{$editorialContactSignature}</body>
-		<description>Yayın konusunda bir karar oluşunca editörün yazara bildirmesi için kullanılan e-posta.</description>
-	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Sayfa düzeni için rica</subject>
 		<body>Sayın {$copyeditorName},

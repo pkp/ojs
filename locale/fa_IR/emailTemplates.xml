@@ -315,21 +315,6 @@ Thank you,
 {$editorialContactSignature}</body>
 		<description>This email is automatically sent when a reviewer's due date elapses (see Review Options under Journal Setup, Step 2) and one-click reviewer access is enabled. Scheduled tasks must be enabled and configured (see the site configuration file).</description>
 	</email_text>
-	<email_text key="EDITOR_REVIEW">
-		<subject>بررسی ویرایش مقاله</subject>
-		<body>{$authorName}:
-
-درحال حاضر بررسی مقاله شما باعنوان "{$articleTitle}" به پایان رسیده است. تصمیم بر 
-{$comments}
-گرفته شده است. با وارد شدن به وب سایت مجله از طریق پیوندهای زیر، می توانید نظرات کارشناسان و روند مراحل ویرایشی، را ملاحظه کنید.
-
-آدرس مقاله: {$submissionUrl}
-نام کاربری: {$authorUsername}
-
-لطفا چنانچه سوالی دارید با من تماس بگیرید
-{$editorialContactSignature}</body>
-		<description>This email is sent by a Section Editor to a submission's Author to notify them that a decision has been reached in regard to a submission.</description>
-	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>درخواست انجام امور ویراستاری</subject>
 		<body>{$copyeditorName}:
