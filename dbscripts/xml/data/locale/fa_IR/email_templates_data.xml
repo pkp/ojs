@@ -366,22 +366,6 @@ Thank you,
 		  *
 		  -->
 		<row>
-			<field name="email_key" >EDITOR_REVIEW</field>
-			<field name="subject" >بررسی ویرایش مقاله</field>
-			<field name="body" >{$authorName}:
-
-درحال حاضر بررسی مقاله شما باعنوان &quot;{$articleTitle}&quot; به پایان رسیده است. تصمیم بر 
-{$comments}
-گرفته شده است. با وارد شدن به وب سایت مجله از طریق پیوندهای زیر، می توانید نظرات کارشناسان و روند مراحل ویرایشی، را ملاحظه کنید.
-
-آدرس مقاله: {$submissionUrl}
-نام کاربری: {$authorUsername}
-
-لطفا چنانچه سوالی دارید با من تماس بگیرید
-{$editorialContactSignature}</field>
-			<field name="description" >This email is sent by a Section Editor to a submission's Author to notify them that a decision has been reached in regard to a submission.</field>
-		</row>
-		<row>
 			<field name="email_key" >COPYEDIT_REQUEST</field>
 			<field name="subject" >درخواست انجام امور ویراستاری</field>
 			<field name="body" >{$copyeditorName}:

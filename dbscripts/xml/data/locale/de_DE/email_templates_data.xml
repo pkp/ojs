@@ -372,25 +372,6 @@ Bestätigen Sie bitte, dass Sie nach wie vor bereit sind, sich die für unsere Z
 		  *
 		  -->
 		<row>
-			<field name="email_key">EDITOR_REVIEW</field>
-			<field name="subject">Begutachtung des Beitrags durch den Redakteur</field>
-			<field name="body">{$authorName}:
-
-Wir haben die Begutachtung Ihres Beitrags "{$articleTitle}" jetzt abgeschlossen. Wir haben uns entschieden ...
-
-{$comments}.
-
-Alles weitere zur Begutachtung durch Kollegen und Redaktion findet sich auf der Webseite der Zeitschrift:
-
-URL des Beitrags: {$submissionUrl}
-Benutzername: {$authorUsername}
-
-Wenn Sie noch Fragen haben, setzen Sie sich bitte mit mir in Verbindung.
-
-{$editorialContactSignature}</field>
-			<field name="description">Diese Email geht vom Rubrikredakteur an Verfasser. Es wird mitgeteilt, wie über den Beitrag entschieden wurde.</field>
-		</row>
-		<row>
 			<field name="email_key">COPYEDIT_REQUEST</field>
 			<field name="subject">Anfrage zum Korrekturlektorat</field>
 			<field name="body">{$copyeditorName}:

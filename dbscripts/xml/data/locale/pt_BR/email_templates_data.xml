@@ -477,27 +477,6 @@ Aguardando seu contato,
 		  *
 		  -->
 		<row>
-			<field name="email_key">EDITOR_REVIEW</field>
-			<field name="subject">Avaliação Editorial de Submissão</field>
-			<field name="body">{$authorName},
-
-Informamos a conclusão da avalição do manuscrito "{$articleTitle}." 
-
-Nossa decisão é a seguinte:
-
-{$comments}.
-
-Comentários adicionais sobre o manuscrito, baseados na avaliação editorial e pelos pares, estão disponíveis acessando o sistema:
-
-URL da Submisão: {$submissionUrl}
-Login: {$authorUsername}
-
-Em caso de dúvidas, envie suas questões para este email.
-
-{$editorialContactSignature}</field>
-			<field name="description">Mensagem enviada pelo Editor de Seção ao Autor de uma submissão, avisando da conclusão do processo de avaliação.</field>
-		</row>
-		<row>
 			<field name="email_key">COPYEDIT_REQUEST</field>
 			<field name="subject">Solicitação de Edição de Texto</field>
 			<field name="body">{$copyeditorName},

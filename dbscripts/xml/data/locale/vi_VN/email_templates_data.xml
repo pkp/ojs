@@ -365,25 +365,6 @@ Xin quý vị vui lòng khẳng định khả năng đóng góp hết sức quan
 		  *
 		  -->
 		<row>
-			<field name="email_key">EDITOR_REVIEW</field>
-			<field name="subject">Phản biện của BTV đối với bài viết</field>
-			<field name="body">{$authorName}:
-
-Chúng tôi đã hoàn thành việc phản biện bài nộp "{$articleTitle}." Quyết định của chúng tôi là ...
-
-{$comments}.
-
-Những lời bình luận khác về tác phẩm, dựa trên phản biện chuyên gia và của BTV, có thể tìm thấy khi đăng nhập website của tạp chí:
-
-Đường dẫn của bài nộp: {$submissionUrl}
-Bí danh: {$authorUsername}
-
-Nếu quý vị có bất kỳ câu hỏi nào, vui lòng liên hệ với tôi.
-
-{$editorialContactSignature}</field>
-			<field name="description">Email này được BTV chuyên mục gửi cho Tác giả của bài nộp để thông báo quyết định liên quan tới bài nộp.</field>
-		</row>
-		<row>
 			<field name="email_key">COPYEDIT_REQUEST</field>
 			<field name="subject">Đề nghị biên tập bản thảo</field>
 			<field name="body">{$copyeditorName}:

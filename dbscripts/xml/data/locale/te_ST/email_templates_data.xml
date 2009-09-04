@@ -136,26 +136,6 @@ Thank you for completing the review of the article "{$articleTitle}." We appreci
 {$editorialContactSignature}</field>
 		</row>
 		<row>
-			<field name="email_key">EDITOR_REVIEW</field>
-			<field name="subject">Editorial Review of Article</field>
-			<field name="body">{$authorName}:
-			
-We have now completed the review of your article "{$articleTitle}." Our decision is to...
-
-{$comments}.
-
-Additional comments on the paper, based on the editorial and peer review, are found by logging in at the following Webpage:
-
-{$journalName} URL: {$journalUrl}
-Username: {$authorUsername}
-Password: {$authorPassword}
-
-
-If you have any questions, please contact me.
-
-{$editorialContactSignature}</field>
-		</row>
-		<row>
 			<field name="email_key">EDITOR_REVIEW_RESP</field>
 			<field name="subject">Editorial Review Response</field>
 			<field name="body">{$editorialContactName}:

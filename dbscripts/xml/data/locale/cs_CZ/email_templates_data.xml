@@ -403,25 +403,6 @@ Potvrďte prosím, zda můžete dokončit tento nezbytný úkol pro náš časop
 		  *
 		  -->
 		<row>
-			<field name="email_key">EDITOR_REVIEW</field>
-			<field name="subject">Rozhodnutí editora o článku</field>
-			<field name="body">{$authorName}:
-
-Právě jsme dokončili recenzní řízení Vašeho příspěvku "{$articleTitle}." Naše rozhodnutí je...
-
-{$comments}.
-
-Další komentáře k příspěvku založené na redakčním posouzení a recenzním řízení naleznete po přihlášení na stránky časopisu:
-
-URL příspěvku: {$submissionUrl}
-Uživatelské jméno: {$authorUsername}
-
-V případě, že budete mít jakékoliv otázky, mě prosím kontaktujte.
-
-{$editorialContactSignature}</field>
-			<field name="description">Tento email posílá editor sekce autorovi, aby mu oznámil, že bylo dosaženo rozhodnutí o jeho příspěvku.</field>
-		</row>
-		<row>
 			<field name="email_key">COPYEDIT_REQUEST</field>
 			<field name="subject">Žádost o redigování příspěvku</field>
 			<field name="body">{$copyeditorName}:

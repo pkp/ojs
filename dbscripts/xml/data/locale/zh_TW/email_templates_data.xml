@@ -385,25 +385,6 @@
 		  *
 		  -->
 		<row>
-			<field name="email_key">EDITOR_REVIEW</field>
-			<field name="subject">文章的編輯審查</field>
-			<field name="body">{$authorName}先生/女士您好：
-
-We have now completed the review of your submission 我們現在已經完成您投稿稿件〈{$articleTitle}〉的審查工作。 我們的決定是...
-
-{$comments}.
-
-您可以在登入本期刊網站，看到編輯與同儕審查對本文的審查意見書：
-
-稿件網址：{$submissionUrl}
-使用者名稱：{$authorUsername}
-
-如果您有任何問題，請與我們聯絡。
-
-{$editorialContactSignature}</field>
-			<field name="description">這封電子郵件是由一位區段編輯寄給稿件的作者，通知他們關於稿件的編輯決定已經出爐。</field>
-		</row>
-		<row>
 			<field name="email_key">COPYEDIT_REQUEST</field>
 			<field name="subject">Copyediting Request</field>
 			<field name="body">{$copyeditorName}您好：

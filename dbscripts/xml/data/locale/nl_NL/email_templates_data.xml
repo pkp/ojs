@@ -403,25 +403,6 @@ Wilt u uw beschikbaarheid voor het voltooien van deze voor het werk van het tijd
 		  *
 		  -->
 		<row>
-			<field name="email_key">EDITOR_REVIEW</field>
-			<field name="subject">Redactiereview van het artikel</field>
-			<field name="body">{$authorName}:
-
-De review van uw inzending "{$articleTitle}" is voltooid. Onze beslissing is om ...
-
-{$comments}.
-
-Meer opmerkingen bij uw paper, gebaseerd op redactionele en peer reviews kunt u vinden door in te loggen op de website van het tijdschrift:
-
-URL inzending: {$submissionUrl}
-Gebruikersnaam: {$authorUsername}
-
-Neemt u bij vragen alstublieft contact met me op.
-
-{$editorialContactSignature}</field>
-			<field name="description">Deze e-mail wordt door een sectieredacteur naar de auteur van een inzending gestuurd om die te berichten dat er een beslissing is genomen met betrekking tot een inzending.</field>
-		</row>
-		<row>
 			<field name="email_key">COPYEDIT_REQUEST</field>
 			<field name="subject">Tekstredactie verzoek</field>
 			<field name="body">{$copyeditorName}:

@@ -378,27 +378,6 @@ Srdačno,
 		  *
 		  -->
 		<row>
-			<field name="email_key">EDITOR_REVIEW</field>
-			<field name="subject">Ishod recenzije članka</field>
-			<field name="body">Poštovana/i {$authorName},
-
-upravo smo završili recenzijski postupak vašeg rada "{$articleTitle}" te donijeli sljedeću odluku:
-
-{$comments}.
-
-Opširnije komentare urednika i recenzenata možete pročitati ukoliko se prijavite kao autor na mrežne stranice časopisa:
-
-
-URL priloga: {$submissionUrl}
-Korisničko ime: {$authorUsername}
-
-U slučaju da imate bilo kakvih pitanja, molimo vas da nam se obratite.
-
-Srdačno,
-{$editorialContactSignature}</field>
-			<field name="description">Ovim obrascem e-pošte urednik rubrike obavještava autora prijave da je donesena odluka u pogledu recenzije članka.</field>
-		</row>
-		<row>
 			<field name="email_key">COPYEDIT_REQUEST</field>
 			<field name="subject">Zamolba za lekturu</field>
 			<field name="body">Poštovana/i {$copyeditorName},

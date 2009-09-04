@@ -372,25 +372,6 @@ Vennligst bekreft om du fortsatt regner med å fullføre dette vurderingsoppdrag
 		  *
 		  -->
 		<row>
-			<field name="email_key">EDITOR_REVIEW</field>
-			<field name="subject">Redaksjonell vurdering av ditt innsendte manuskript</field>
-			<field name="body">{$authorName}:
-
-Vi har nå fullført den faglige og redaksjonelle vurderingen av manuskriptet "{$articleTitle}". Vår beslutning er som følger...
-
-{$comments}.
-
-Ved å logge inn på tidsskriftets nettsted, kan du finne de øvrige kommentarene fra faglige og redaksjonelle vurderere:
-
-Manuskriptets URL: {$submissionUrl}
-Brukernavn: {$authorUsername}
-
-Hvis du har ytterligere spørsmål, kan du gjerne kontakte meg.
-
-{$editorialContactSignature}</field>
-			<field name="description">Denne e-posten sendes av en Seksjonsredaktør til Forfatteren for å varsle om at det innsendte manuskriptet er vurdert, og for å kunngjøre den redaksjonelle beslutningen.</field>
-		</row>
-		<row>
 			<field name="email_key">COPYEDIT_REQUEST</field>
 			<field name="subject">Forespørsel om manusredigering</field>
 			<field name="body">{$copyeditorName}:

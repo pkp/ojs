@@ -409,25 +409,6 @@ Vänligen bekräfta snarast om du har möjlighet att genomföra sakkunnigbedömn
 		  *
 		  -->
 		<row>
-			<field name="email_key">EDITOR_REVIEW</field>
-			<field name="subject">Redaktionell bedömning av ditt manuskript</field>
-			<field name="body">{$authorName}:
-
-Vi har nu avslutat sakkunnigbedömning av ditt manuskript "{$articleTitle}." Värt beslut följer:
-
-{$comments}.
-
-Ytterligare kommentarer av Redaktion och Sakkunnigbedömare hitatr du om du loggar in på tidskriftens hemsida:
-
-Manuskriptets URL: {$submissionUrl}
-Användarnamn: {$authorUsername}
-
-Vänligen kontakta mig om du har några frågor.
-
-{$editorialContactSignature}</field>
-			<field name="description">Det här meddelandet skickas från Sektionsredaktör till författaren av ett manuskript och innehåller beslut om publicering samt kommentarer av Sakkunnigbedömare.</field>
-		</row>
-		<row>
 			<field name="email_key">COPYEDIT_REQUEST</field>
 			<field name="subject">Begäran om Manusredigering</field>
 			<field name="body">{$copyeditorName}:

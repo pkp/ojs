@@ -408,25 +408,6 @@ Us agrairem que ens confirmeu la vostra disponibilitat per a completar aquesta c
 		  *
 		  -->
 		<row>
-			<field name="email_key">EDITOR_REVIEW</field>
-			<field name="subject">Revisió editorial de l'article</field>
-			<field name="body">Benvolgut/uda {$authorName},
-
-Ja hem completat la revisió de la vostra tramesa "{$articleTitle}". Hem pres la decisió següent:
-
-{$comments}.
-
-Si inicieu la sessió al lloc web de la revista podreu consultar comentaris addicionals sobre l'article, basats en la revisió editorial i la revisió d'experts:
-
-URL de la tramesa: {$submissionUrl}
-Nom d'usuari: {$authorUsername}
-
-Si teniu qualsevol consulta, no dubteu a fer-me-la arribar.
-
-{$editorialContactSignature}</field>
-			<field name="description">Aquest missatge de correu electrònic té un editor de secció com a remitent i s'envia a l'autor d'una tramesa per a notificar-li que ja s'ha pres una decisió sobre la seva obra.</field>
-		</row>
-		<row>
 			<field name="email_key">COPYEDIT_REQUEST</field>
 			<field name="subject">Sol·licitud de correcció</field>
 			<field name="body">Benvolgut/uda {$copyeditorName},

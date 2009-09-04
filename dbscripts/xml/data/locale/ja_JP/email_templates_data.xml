@@ -406,28 +406,6 @@
 		  *
 		  -->
 		<row>
-			<field name="email_key">EDITOR_REVIEW</field>
-			<field name="subject">論文の審査結果</field>
-			<field name="body">{$authorName} 殿:
-
-ご投稿いただきありがとうございました。
-
-貴殿の投稿物「{$articleTitle}」の審査が終了しました。審査結果は、次のとおりです。
-{$comments}。
-
-編集者や査読者の意見に基づく論文に対するさらなるコメントは、雑誌のWebサイトにログインすることにより見ることができます。
-
-投稿物のURL: {$submissionUrl}
-ユーザ名: {$authorUsername}
-
-何かご不明な点がございましたら、ご連絡ください。
-
-よろしくお願いいたします。
-
-{$editorialContactSignature}</field>
-			<field name="description">このメールは、セクションエディタから投稿物の著者に投稿物に関する採否の判断が下されたことを通知するものです。</field>
-		</row>
-		<row>
 			<field name="email_key">COPYEDIT_REQUEST</field>
 			<field name="subject">原稿整理のお願い</field>
 			<field name="body">{$copyeditorName} 殿:

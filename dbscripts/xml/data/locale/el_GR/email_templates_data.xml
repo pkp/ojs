@@ -408,25 +408,6 @@ URL Υποβολής: {$submissionReviewUrl}
                   *
                   -->
                 <row>
-                        <field name="email_key">EDITOR_REVIEW</field>
-                        <field name="subject">Αξιολόγηση άρθρου </field>
-                        <field name="body">{$authorName}:
-
-Η αξιολόγηση της υποβολής σας "{$articleTitle}" ολοκληρώθηκε. Η απόφαση της συντακτικής ομάδας του περιοδικού είναι...
-
-{$comments}.
-
-Μπορείτε να βρείτε πρόσθετα σχόλια σχετικά με το έγγραφο, με βάση την αξιολόγηση, εάν συνδεθείτε στον ιστότοπο του περιοδικού :
-
-URL Υποβολής: {$submissionUrl}
-Όνομα χρήστη: {$authorUsername}
-
-Για οποιαδήποτε περαιτέρω πληροφορία ή διευκρίνηση παρακαλούμε επικοινωνήστε μαζί μας.
-
-{$editorialContactSignature}</field>
-                        <field name="description"> Το συγκεκριμένο μήνυμα ηλεκτρονικού ταχυδρομείου αποστέλλεται από τον Επιμελητή ενότητας στον συγγραφέα της υποβολής για να τον ενημερώσει σχετικά με τη λήψη απόφασης για την υποβολή του.</field>
-                </row>
-                <row>
                         <field name="email_key">COPYEDIT_REQUEST</field>
                         <field name="subject">Αίτημα επιμέλειας κειμένων</field>
                         <field name="body">{$copyeditorName}:

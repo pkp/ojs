@@ -460,25 +460,6 @@ Le rogamos nos confirme su disponibilidad para completar esta contribución vita
 		  *
 		  -->
 		<row>
-			<field name="email_key">EDITOR_REVIEW</field>
-			<field name="subject">Revisión editorial de artículo</field>
-			<field name="body">{$authorName}:
-
-Acabamos de finalizar la revisión de su envío "{$articleTitle}." Nuestra decisión es ...
-
-{$comments}.
-
-Si se identifica en la revista podrá consultar comentarios adicionales sobre el artículo, basados en la revisión editorial y por pares:
-
-URL del envío: {$submissionUrl}
-Nombre de usuaria/o: {$authorUsername}
-
-Si tiene cualquier pregunta, no dude en contactar con nosotros/as.
-
-{$editorialContactSignature}</field>
-			<field name="description">Este correo es enviado por un/a Editor/a de Sección al / a la autor/a de un envío para notificarle que se ha registrado una decisión con respecto a su envío.</field>
-		</row>
-		<row>
 			<field name="email_key">COPYEDIT_REQUEST</field>
 			<field name="subject">Petición de corrección</field>
 			<field name="body">{$copyeditorName}:

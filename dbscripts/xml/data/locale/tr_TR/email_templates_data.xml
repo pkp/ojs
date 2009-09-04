@@ -419,25 +419,6 @@ Derginin kalitesini arttıracak bu önemli katkıyı yapabileceğinizi lütfen o
 		  *
 		  -->
 		<row>
-			<field name="email_key">EDITOR_REVIEW</field>
-			<field name="subject">Çalışmanızın değerlendirilmesi</field>
-			<field name="body">Sayın {$authorName},
-
-Dergimizde yayınlanmak üzere gönderdiğiniz "{$articleTitle}" başlıklı çalışmanız ile ilgili kararımız aşağıda sunulmuştur.
-
-{$comments}.
-
-Yazınız hakkında editöryal süreç ve hakem değerlendirmeleri sonucundaki ek yorumları dergimiz istesini ziyaret ederek öğrenebilirsiniz.
-
-Başvuru ulaşım adresi: {$submissionUrl}
-Kullanıcı adı: {$authorUsername}
-
-Lütfen soru ve sorunlarınız için benimle ilişkiye geçiniz.
-
-{$editorialContactSignature}</field>
-			<field name="description">Yayın konusunda bir karar oluşunca editörün yazara bildirmesi için kullanılan e-posta.</field>
-		</row>
-		<row>
 			<field name="email_key">COPYEDIT_REQUEST</field>
 			<field name="subject">Sayfa düzeni için rica</field>
 			<field name="body">Sayın {$copyeditorName},

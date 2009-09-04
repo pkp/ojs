@@ -339,25 +339,6 @@ Please confirm your ability to complete this vital contribution to the work of t
 		  *
 		  -->
 		<row>
-			<field name="email_key">EDITOR_REVIEW</field>
-			<field name="subject">Editorial Review of Article</field>
-			<field name="body">{$authorName}:
-
-We have now completed the review of your submission "{$articleTitle}." Our decision is to...
-
-{$comments}.
-
-Additional comments on the paper, based on the editorial and peer review, are found by logging in to the journal web site:
-
-Submission URL: {$submissionUrl}
-Username: {$authorUsername}
-
-If you have any questions, please contact me.
-
-{$editorialContactSignature}</field>
-			<field name="description">This email is sent by a Section Editor to a submission's Author to notify them that a decision has been reached in regard to a submission.</field>
-		</row>
-		<row>
 			<field name="email_key">COPYEDIT_REQUEST</field>
 			<field name="subject">Copyediting Request</field>
 			<field name="body">{$copyeditorName}:

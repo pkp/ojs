@@ -391,24 +391,6 @@ Vi beder dig bekræfte, at du er i stand til at fuldføre dette vigtige bidrag t
 		  *
 		  -->
 		<row>
-			<field name="email_key">EDITOR_REVIEW</field>
-			<field name="subject">Redaktionel bedømmelse af artikel</field>
-			<field name="body">{$authorName}:
-
-Vi har nu fuldført bedømmelsen af dit manuskript &quot;{$articleTitle}&quot;. Vores beslutning er...
-
-{$comments}.
-
-Du kan finde flere oplysninger om manuskriptet, der er baseret på den redaktionelle bedømmelse og peer review, ved at logge på tidsskriftets websted:
-
-Manuskriptets URL-adresse: {$submissionUrl} Brugernavn: {$authorUsername}
-
-Hvis du har spørgsmål, er du velkommen til at kontakte mig.
-
-{$editorialContactSignature}</field>
-			<field name="description">Denne e-mail sendes af en sektionsredaktør til forfatteren af et manuskript for at underrette vedkommende om, at der er truffet en beslutning med hensyn til manuskriptet.</field>
-		</row>
-		<row>
 			<field name="email_key">COPYEDIT_REQUEST</field>
 			<field name="subject">Forespørgsel om manuskriptredigering</field>
 			<field name="body">{$copyeditorName}:
