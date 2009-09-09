@@ -70,8 +70,9 @@
 	</upgrade>
 
 	<upgrade minversion="2.1.1.0" maxversion="2.1.1.0">
-		<!-- Rename the user_settings table so it can be migrated. -->
+		<!-- Migrate the user_settings table. -->
 		<data file="dbscripts/xml/upgrade/2.2.0_usersettings.xml" />
+		<code function="migrateUserSettings" />
 	</upgrade>
 
 	<upgrade minversion="2.2.0.0" maxversion="2.2.0.0">
@@ -120,11 +121,6 @@
 		<!-- 2.1.0-1 (or below) to 2.1.1 -->
 		<code function="designateReviewVersions" />
 		<code function="migrateRtSettings" />
-	</upgrade>
-
-	<upgrade minversion="2.1.1.0" maxversion="2.1.1.0">
-		<!-- Migrate the user_settings table. -->
-		<code function="migrateUserSettings" />
 	</upgrade>
 
 	<!-- Complete the 2.2 upgrade -->
