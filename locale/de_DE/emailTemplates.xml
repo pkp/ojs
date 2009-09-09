@@ -6,647 +6,909 @@
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localized email templates XML file.
+  * Localized email templates XML file. / marco.tullney@fu-berlin.de
   *
   * $Id$
   -->
 <email_texts locale="de_DE">
+	<email_text key="NOTIFICATION">
+		<subject>Neue Benachrichtigung von {$siteTitle}</subject>
+		<body>Sie haben eine neue Benachrichtigung von {$siteTitle}:
+
+{$notificationContents}
+
+Link: {$url}
+
+{$principalContactSignature}</body>
+		<description>Diese E-Mail wird an angemeldete Benutzer/innen geschickt, die sich für diese Art der Benachrichtigung angemeldet haben.</description>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST">
+		<subject>Neue Benachrichtigung von {$siteTitle}</subject>
+		<body>Sie haben eine neue Benachrichtigung von {$siteTitle}:
+--
+{$notificationContents}
+
+Link: {$url}
+--
+
+Wenn Sie keine Benachrichtigungs-E-Mails mehr erhalten möchten, gehen Sie bitte zu {$unsubscribeLink} und geben Sie Ihre E-Mail-Adresse und Passwort ein.
+
+{$principalContactSignature}</body>
+		<description>Diese E-Mail wird an nicht registrierte Benutzer/innen auf der Benachrichtigungs-Mailingliste gesendet.</description>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
+		<subject>Willkommen zu der  {$siteTitle}-Mailingliste!</subject>
+		<body>Sie haben Sich angemeldet, Benachrichtigungen von {$siteTitle} zu erhalten.
+			
+Bitte klicken Sie auf diesen Link, um Ihre Anfrage zu bestätigen und Ihre E-Mail-Adresse zur Mailingliste hinzuzufügen: {$confirmLink}
+
+Wenn Sie keine Benachrichtigungs-E-Mails mehr erhalten möchten, gehen Sie bitte zu {$unsubscribeLink} und geben Sie Ihre E-Mail-Adresse und Passwort ein.
+
+Ihr Passwort zum Abbestellen der Mailingliste ist: {$password}
+
+{$principalContactSignature}</body>
+		<description>Diese E-Mail wird an Benutzer/innen gesendet, die gerade die Benachrichtigungs-Mailingliste abonniert haben.</description>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST_PASSWORD">
+		<subject>Informationen zur Benachrichtigungs-Mailingliste von {$siteTitle}</subject>
+		<body>Ihr neues Passwort zum Abbestellen der Mailingliste ist: {$password}
+
+Wenn Sie keine Benachrichtigungs-E-Mails mehr erhalten möchten, gehen Sie bitte zu {$unsubscribeLink} und geben Sie Ihre E-Mail-Adresse und Passwort ein.
+
+{$principalContactSignature}</body>
+		<description>Diese E-Mail wird an nicht registrierte Benutzer/innen der Benachrichtigungs-Mailingliste gesendet, die angegeben haben, dass sie ihr Passwort vergessen haben oder sich nicht einloggen können. Sie liefert eine URL, der die Benutzer/innen folgen können, um ihr Passwort zurückzusetzen.</description>
+	</email_text>
 	<email_text key="PASSWORD_RESET_CONFIRM">
-		<subject>Passwort Reset Bestätigung</subject>
+		<subject>Reset-Bestätigung für Ihr Passwort</subject>
 		<body>Wir wurden aufgefordert, Ihr Passwort für die Webseite {$siteTitle} neu zu setzen.
 
-Falls die Aufforderung nicht von Ihnen stammt, ignorieren Sie bitte diese Email und Ihr Passwort bleibt unverändert. Falls Sie Ihr Passwort neu setzen möchten, auf nachfolgende URL klicken.
+Falls die Aufforderung nicht von Ihnen stammt, ignorieren Sie bitte diese E-Mail, und Ihr Passwort bleibt unverändert. Falls Sie Ihr Passwort neu setzen möchten, klicken Sie bitte auf die folgende URL:
 
 Mein Passwort neu setzen: {$url}
 
 {$principalContactSignature}</body>
-		<description>Diese Email geht an registrierte Benutzer, wenn sie angeben, dass sie ihr Passwort vergessen haben oder sich nicht einloggen konnten. Sie gibt eine URL an, über die das Passwort neu gesetzt werden kann.</description>
+		<description>Diese E-Mail wird an registrierte Benutzer/innen der Benachrichtigungs-Mailingliste gesendet, die angegeben haben, dass sie ihr Passwort vergessen haben oder sich nicht einloggen können. Sie liefert eine URL, der die Benutzer/innen folgen können, um ihr Passwort zurückzusetzen.</description>
 	</email_text>
 	<email_text key="PASSWORD_RESET">
-		<subject>Passwort neu setzen</subject>
-		<body>Ihr Passwort wurde als Benutzer der Webseite {$siteTitle} wurde neu gesetzt. Bitte notieren Sie Benutzernamen und Passwort, beide werden für alle Arbeiten mit dieser Zeitschrift gebraucht.
+		<subject>Passwort neu gesetzt</subject>
+		<body>Ihr Benutzer/innen-Passwort für die Webseite {$siteTitle} wurde neu gesetzt. Bitte notieren Sie Benutzer/innennamen und Passwort, beides wird für alle Arbeiten mit dieser Zeitschrift gebraucht.
 
-Ihr Benutzername: {$username}
+Ihr Benutzer/innenname: {$username}
 Ihr neues Passwort: {$password}
 
 {$principalContactSignature}</body>
-		<description>Diese Email geht an einen registrierten Benutzer, wenn sie/er ihr Passwort nach den Angaben in der PASSWORT_RESET_BESTÄTIGUNG - Email neu gesetzt haben.</description>
+		<description>Diese E-Mail wird an registrierte Benutzer/innen gesendet, nachdem sie ihr Passwort erfolgreich nach dem in der PASSWORD_RESET_CONFIRM-E-Mail beschriebenen Verfahren zurückgesetzt haben.</description>
 	</email_text>
 	<email_text key="USER_REGISTER">
-		<subject>Neue/r Benutzer/in</subject>
-		<body>Besten Dank für die Registierung als neue/r Benutzer/in von {$journalName}. Notieren Sie Bitte Benutzernamen und Passwort, beide werden für alle Arbeiten mit dieser Zeitschrift gebraucht.
+		<subject>Registrierung bei der Zeitschrift</subject>
+		<body>{$userFullName},
 
-Benutzername: {$username}
-Passwort: {$password}
-
-Besten Dank,
-{$principalContactSignature}</body>
-		<description>Diese Email geht an neue Benutzer/Innen zur Begrüssung und bestätigt ihnen schriftlich Benutzernamen und Passwort.</description>
-	</email_text>
-	<email_text key="PUBLISH_NOTIFY">
-		<subject>Neue Ausgabe erschienen</subject>
-		<body>Leser:
-
-{$journalName} hat soeben die neueste Ausgabe unter {$journalUrl} veröffentlich. Sie sind eingeladen, sich das Inhaltsverzeichnis hier durchzusehen und gegebenenfalls für die Sie interessierenden Artikel oder sonstigen Beiträge unserer Webseite aufzusuchen.
-
-Besten Dank für Ihr anhaltendes Interesse an unserer Arbeit,
-{$editorialContactSignature}</body>
-		<description>Diese Email geht an Leser über die Webadresse "Benutzer benachrichtigen" auf der Webseite des Herausgebers. Sie informiert Leser über die Neuerscheinung und lädt sie ein, die Zeitschrift über die angegebene URL anzusehen..</description>
-	</email_text>
-	<email_text key="LOCKSS_EXISTING_ARCHIVE">
-		<subject>Archivierungsersuchen für {$journalName}</subject>
-		<body>Sehr geehrte/r Frau/Herr [Bibliotheksleiter/in]
-
-{$journalName} &lt;{$journalUrl}&gt;, ist eine Zeitschrift, an der ein Mitglied Ihrer Universität, [Name], als [Mitarbeiterfunktion] mitarbeitet. Die Zeitschrift sucht mit Ihrer und anderen Universitätsbibliotheken ein mit LOCKSS (Lots of Copies Keep Stuff Safe) kompatibles Archiv aufzubauen.
-
-[Kurze Beschreibung der Zeitschrift]
-
-Die Webadresse der LOCKSS-Erklärung des Herausgebers für unsere Zeitschrift ist: {$journalUrl}/gateway/lockss
-
-Wir gehen von der Annahme aus, dass Sie bereits an LOCKSS beteiligt sind. Falls weitere Metadaten zur Aufnahme unserer Zeitschrift in Ihre Version von LOCKSS gebraucht werden, stellen wir Sie ihnen gern zur Verfügung.
-
-Besten Dank,
-{$principalContactSignature}</body>
-		<description>Mit dieser Email wird die Verwaltung eines LOCKSS-Archivs ersucht, die Zeitschrift in das Archiv aufzunehmen. Die Webadresse der LOCKSS-Erklärung des Herausgebers wird übermittelt.</description>
-	</email_text>
-	<email_text key="LOCKSS_NEW_ARCHIVE">
-		<subject>Archivierungsersuchen für {$journalName}</subject>
-		<body>Sehr geehrte/r Frau/Herr [Bibliotheksleiter/in]
-
-{$journalName} &lt;{$journalUrl}&gt;, ist eine Zeitschrift, an der ein Mitglied Ihrer Universität, [Name], als [Mitarbeiterfunktion] mitarbeitet. Die Zeitschrift sucht mit Ihrer und anderen Universitätsbibliotheken ein mit LOCKSS (Lots of Copies Keep Stuff Safe) kompatibles Archiv aufzubauen.
-
-[Kurze Beschreibung der Zeitschrift]
-
-Das LOCKSS-Programm &lt;http://lockss.org/&gt;, eine internationale Initiative von Bibliothekaren und Herausgebern, ist ein beispielhaft funktionierendes, verteiltes Erhaltungs- und Archivierungssystem. Nähere Einzelheiten weiter unten. Die auf jedem gewöhnlichen Rechner laufende Software ist kostenlos; das System lässt sich leicht ins Internet stellen; es braucht wenig Wartung.
-
-Falls Sie sich an der Archivierung unserer Zeitschrift beteiligen möchten, laden wir Sie ein, Mitglied der LOCKSS-Community zu werden und mitzuhelfen, weltweit Texte aus Ihrer und anderen Universitäten zu sammeln und zu erhalten. Gegebenenfalls sollte sich jemand aus Ihrer Verwaltung auf der Webseite von LOCKSS über die Funktionsweise des Systems informieren. Ich hoffe auf Ihre Unterstützung bei der Archivierung dieser Zeitschrift und erwarte Ihre Antwort zur konkreten Vorgehensweise.
-
-Vielen Dank,
-{$principalContactSignature}</body>
-		<description>Diese Email ermutigt den Empfänger, Mitglied der LOCKSS-Initiative zu werden und die Zeitschrift ins Archiv aufzunehmen. Sie informiert über das LOCKSS-Programm und über Wege zu einer Mitgliedschaft. </description>
-	</email_text>
-	<email_text key="SUBMISSION_ACK">
-		<subject>Eingangsbestätigung</subject>
-		<body>{$authorName}:
-
-Besten Dank für Ihr Manuskript "{$articleTitle}" zur Veröffentlichung in {$journalName}. Das Verwaltungssystem unserer Webzeitschrift erlaubt Ihnen jederzeit den Lauf Ihres Beitrags im Redaktionsprozess zu beobachten. Sie loggen sich dazu einfach auf unserer Webseite ein:
-
-URL des Manuskripts: {$submissionUrl}
-Benutzername: {$authorUsername}
-
-Für weitere Fragen stehe ich Ihnen gerne zur Verfügung. Danke, dass Sie unsere Zeitschrift zur Veröffentlichung Ihrer Arbeit in Betracht gezogen haben.
-
-{$editorialContactSignature}</body>
-		<description>Diese Email wird, falls aktiviert, automatisch an eine/n Verfasser/in geschickt, wenn sie oder er die Eingabeprozedur für ein Manuskript beendet haben. Sie weist auf die kontinuierliche Statusinformation im Netz hin und dankt der/dem Verfasser/in für die Einreichung.</description>
-	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Nicht geeigneter Beitrag</subject>
-		<body>{$authorName}:
-
-Eine erste Lektüre von "{$articleTitle}" ergab, dass der Beitrag den Möglichkeiten und der Orientierung von {$journalName} nicht entspricht. Ich weise Sie auf die Beschreibung der Zeitschrift unter AD HOC hin und auf den Inhalt der laufenden Nummer. Vielleicht findet sich eine Ihrem Beitrag besser entsprechende Zeitschrift.
-
-{$editorialContactSignature}</body>
-	</email_text>
-	<email_text key="SUBMISSION_COMMENT">
-		<subject>Kommentar zum eingegebenen Beitrag</subject>
-		<body>{$name}:
-
-{$commentName} hat den Beitrag "{$articleTitle}" in {$journalName} kommentiert:
-
-{$comments}</body>
-		<description>Diese Email weist die am Redaktionsprozess eines Beitrags Beteiligten auf einen abgeschickten Kommentar hin.</description>
-	</email_text>
-	<email_text key="SUBMISSION_DECISION_REVIEWERS">
-		<subject>Begutachtung von "{$articleTitle}"</subject>
-		<body>Bezugnehmend auf Ihre Gutachtertätigkeit für den Beitrag "{$articleTitle}," zu {$journalName}, sende ich Ihnen die Gutachten und die Redaktionsentscheidung, die der/dem Verfasser/in zugegangen sind. Ich darf Ihnen noch einmal für Ihre wertvolle Mitarbeit danken.
- 
-{$editorialContactSignature}
-
-{$comments}</body>
-		<description>Diese Email gibt den Gutachtern Nachricht, dass die Begutachtung abgeschlossen wurde. Informationen zum Beitrag und das Endergebnis werden mitgeteilt, dem Gutachter wird für seine Mitarbeit gedankt.</description>
-	</email_text>
-	<email_text key="EDITOR_ASSIGN">
-		<subject>Zuweisung an einen Redakteur</subject>
-		<body>{$editorialContactName}:
-
-Der Beitrag "{$articleTitle}" zu {$journalName} wird Ihnen, als dem Rubrikredakteur, zur Redaktion zugewiesen.  
-
-URL des Beitrags: {$submissionUrl}
-Benutzername: {$editorUsername}
-
-Besten Dank,
-{$editorialContactSignature}</body>
-		<description>Diese Email gibt einem Rubrikredakteur Nachricht, dass ihm die Redaktion eines Beitrags übertragen wurde. Er wird über den Beitrag informiert und über den Zugang zur Webseite der Zeitschrift.</description>
-	</email_text>
-	<email_text key="REVIEW_REQUEST">
-		<subject>Ersuchen zur Begutachtung</subject>
-		<body>{$reviewerName}:
-
-In meinen Augen wären Sie ein ausgezeichneter Gutachter für das Manuskript "{$articleTitle}," das zur Publikation in {$journalName} ansteht. Weiter unten die Kurzfassung des Beitrags. Ich kann nur hoffen, dass Sie sich der Mühe unterziehen. Sie wären uns eine große Hilfe.
-
-Loggen Sie sich bitte bis zum {$weekLaterDate} auf der Webseite unserer Zeitschrift ein, um uns Ihre Zu- oder Absage mitzuteilen. Sie finden dort den Beitrag und können gegebenenfalls auch Ihr Gutachtung und Ihre Empfehlung dort abgeben. Die Webseite ist {$journalUrl}
-
-Das Gutachten wäre fällig am {$reviewDueDate}.
-
-Falls Sie nicht über Benutzernamen und Passwort verfügen, können sie über folgenden Link Ihr Passwort neu setzen (Benutzernamen und Passwort gehen Ihnen umgehend per Email zu). {$passwordResetUrl}
-
-URL des Beitrags: {$submissionReviewUrl}
-
-Mit der Bitte um freundliche Aufnahme dieses Ersuchens,
-
-{$editorialContactSignature}
-
-
-
-"{$articleTitle}"
-
-{$abstractTermIfEnabled}
-{$articleAbstract}</body>
-		<description>Diese Email des Rubrikredakteurs an einen Gutachter fordert diesen auf, einen Beitrag zu begutachten oder die Begutachtung abzulehnen. Es werden Titel und Kurzfassung des Beitrags, sowie das Fälligkeitsdatum und der Internetzugang zum vollen Text mitgeteilt. Vorlage, wenn bei der Einrichtung der Zeitschrift in Schritt 2 das Standard-Gutachterverfahren gewählt wurde. (Andernfalls s. REVIEW_REQUEST_ATTACHED.)</description>
-	</email_text>
-	<email_text key="REVIEW_REQUEST_ONECLICK">
-		<subject>Ersuchen zur Begutachtung</subject>
-		<body>{$reviewerName}:
-
-Sie wären in meinen Augen ein ausgezeichenter Gutachter für das Manuskript "{$articleTitle}," das zur Publikation in {$journalName} ansteht. Weiter unten die Kurzfassung des Beitrags. Ich kann nur hoffen, dass Sie sich der Mühe unterziehen. Sie wären uns eine große Hilfe.
-
-Loggen Sie sich bitte bis zum {$weekLaterDate} auf der Webseite unserer Zeitschrift ein, um uns Ihre Zu- oder Absage mitzuteilen. Sie finden dort den Beitrag und können gegebenenfalls auch Ihr Gutachtung und Ihre Empfehlung dort abgeben.
-
-Das Gutachten wäre fällig am {$reviewDueDate}.
-
-URL des Beitrags: {$submissionReviewUrl}
-
-Mit der Bitte um freundliche Aufnahme dieses Ersuchens,
-
-{$editorialContactSignature}
-
-
-
-"{$articleTitle}"
-
-{$abstractTermIfEnabled}
-{$articleAbstract}</body>
-		<description>Diese Email des Rubrikredakteurs an einen Gutachter fordert diesen auf, einen Beitrag zu begutachten oder die Begutachtung abzulehnen. Es werden Titel und Abstrakt des Beitrags, sowie das Fälligkeitsdatum und der Onlinezugang zum vollen Text mitgeteilt. Vorlage, wenn bei der Einrichtung der Zeitschrift in Schritt 2 das Standard-Gutachterverfahren gewählt wurde und Einklick aktiviert ist.</description>
-	</email_text>
-	<email_text key="REVIEW_REQUEST_ATTACHED">
-		<subject>Ersuchen zur Begutachtung</subject>
-		<body>{$reviewerName}:
-
-Sie wären in meinen Augen ein ausgezeichneter Gutachter für das Manuskript "{$articleTitle}," und ich bitte Sie hiermit, sich der Mühe zu unterziehen. Sie wären eine große Hilfe für uns. Die Richtlinien der Zeitschrift finden Sie im Anhang, ebenso den Beitrag, um den es geht. Ihr Gutachten und Ihre Empfehlung sollten gegebenenfalls bis zum {$reviewDueDate} per Email bei mir eingehen.
-
-Bitte teilen Sie mir per Email-Antwort bis zum {$weekLaterDate} mit, ob Sie das Gutachten übernehmen können.
-
-Besten Dank für die freundliche Aufnahme dieses Ersuchens,
-
-{$editorialContactSignature}
-
-
-Richtlinien für Gutachter
-
-{$reviewGuidelines}
-</body>
-		<description>Diese Email des Rubrikredakteurs an einen Gutachter fordert diesen auf, einen Beitrag zu begutachten oder die Begutachtung abzulehnen. Im Anhang der Beitrag. Vorlage, wenn bei der Einrichtung der Zeitschrift in Schritt 2 das Email-Anhang-Begutachtungsverfahren gewählt wurde. (Andernfalls s. REVIEW_REQUEST.)</description>
-	</email_text>
-	<email_text key="REVIEW_CANCEL">
-		<subject>Rücknahme eines Gutachterersuchens</subject>
-		<body>{$reviewerName}:
-
-Wir haben entschieden, das Ersuchen um ein Gutachten für den Beitrag "{$articleTitle}," zu {$journalName} zurückzuziehen. Verzeihen Sie bitte Ihnen dadurch entstehende Unannehmlichkeiten. Wir hoffen, dass wir weiterhin auf Ihre Hilfe als Gutachter für die Zeitschrift zählen können.
-
-Falls Sie Fragen haben, zögern Sie bitte nicht.
-
-{$editorialContactSignature}</body>
-		<description>Diese Email des Rubrikredakteurs an einen Gutachter, der bereits die Begutachtung übernommen hat, teilt diesem mit, dass das Begutachtungsverfahren annulliert wurde.</description>
-	</email_text>
-	<email_text key="REVIEW_CONFIRM">
-		<subject>Einwilligung in die Begutachtung</subject>
-		<body>{$editorialContactName}:
-
-Ich bin willens und in der Lage, den Beitrag "{$articleTitle}," zu {$journalName} zu begutachten. Besten Dank für Ihr Vertrauen; ich werde das Gutachten spätestens bis zum {$reviewDueDate} abgeben, wenn möglich auch früher.
-
-{$reviewerName}</body>
-		<description>Diese Email geht von einem Guachter an den Rubrikredakteur als Antwort auf ein Gutachterersuchen. Diesem wird die Einwilligung mitgeteilt und die Bereitschaft, das Gutachten bis zu Fälligkeitsdatum abzugeben.</description>
-	</email_text>
-	<email_text key="REVIEW_DECLINE">
-		<subject>Nicht in der Lage zu begutachten</subject>
-		<body>{$editorialContactName}:
-
-Leider kann ich gegenwärtig die Begutachtung des Beitrags "{$articleTitle}," zu {$journalName} nicht übernehmen. Ich danke für Ihr Vertrauen. Bei anderer Gelegenheit können Sie gerne wieder anfragen.
-
-{$reviewerName}</body>
-		<description>Diese Email geht von einem Gutachter an den Rubrikredakteur als ablehnende Antwort auf dessen Ersuchen um ein Gutachten. </description>
-	</email_text>
-	<email_text key="REVIEW_COMPLETE">
-		<subject>Gutachten für einen Beitrag fertiggestellt</subject>
-		<body>{$editorialContactName}:
-
-Ich habe mein Gutachten des Beitrags "{$articleTitle}" zu {$journalName} fertiggestellt und meine Empfehlung  "{$recommendation}" gegeben:
-
-{$reviewerName}</body>
-		<description>Diese Email geht von einem Gutachter an den Rubrikredakteur. Es wird mitgeteilt, dass das Gutachten fertiggestellt und Kommentare und Empfehlungen auf der Webseite der Zeitschrift abgelegt wurden.</description>
-	</email_text>
-	<email_text key="REVIEW_ACK">
-		<subject>Eingangsbestätigung für ein Gutachten</subject>
-		<body>{$reviewerName}:
-
-Vielen Dank für Ihr Gutachten zum Beitrag "{$articleTitle}," für {$journalName}. Wir wissen Ihr Bemühen um die Qualität der von uns veröffentlichten Arbeiten sehr zu schätzen.
-
-{$editorialContactSignature}</body>
-		<description>Diese Email geht von eine Rubrikredakteur an einen Gutachter, bestätigt den Eingang des Gutachtens und dankt ihm für die Mühe.</description>
-	</email_text>
-	<email_text key="REVIEW_REMIND">
-		<subject>Erinnerung an fälliges Gutachten</subject>
-		<body>{$reviewerName}:
-
-Hiermit eine freundliche Erinnerung an ihre Zusage, den Beitrag "{$articleTitle}," zu {$journalName} zu begutachten. Wir hatten gehofft, das Gutachten zum {$reviewDueDate} zu erhalten. Wir würden uns freuen, wenn es uns baldmöglichst zur Verfügung stünde.
-
-Falls Ihnen Benutzernamen und Passwort fehlen, können sie über folgenden Link Ihr Passwort neu setzen (Benutzernamen und Passwort gehen Ihnen umgehend per Email zu). {$passwordResetUrl}
-
-URL des Beitrags: {$submissionReviewUrl}
-
-Bestätigen Sie uns bitte, dass Sie nach wie vor bereit sind, sich die für unsere Zeitschrift unverzichtbare Mühe zu machen. In Erwartung Ihrer Antwort,
-
-{$editorialContactSignature}</body>
-		<description>Diese Email geht von einem Rubrikredakteur an den Gutachter. Sie erinnert an die Fälligkeit eines Gutachtens. </description>
-	</email_text>
-	<email_text key="REVIEW_REMIND_ONECLICK">
-		<subject>Erinnerung an Fälligkeit eines Gutachtens</subject>
-		<body>{$reviewerName}:
-
-Hiermit eine freundliche Erinnerung an ihre Zusage, den Beitrag "{$articleTitle}," zu {$journalName} zu begutachten. Wir hatten gehofft, das Gutachten zum {$reviewDueDate} zu erhalten. Wir würden uns freuen, wenn es uns baldmöglichst zur Verfügung stünde.
-
-URL des Beitrags: {$submissionReviewUrl}
-
-Bestätigen Sie uns bitte, dass Sie nach wie vor bereit sind, sich die für unsere Zeitschrift unverzichtbare Mühe zu machen. In Erwartung Ihrer Antwort,
-
-{$editorialContactSignature}</body>
-		<description>Diese Email geht von einem Rubrikredakteur an den Gutachter. Sie erinnert an die Fälligkeit eines Gutachtens.</description>
-	</email_text>
-	<email_text key="REVIEW_REMIND_AUTO">
-		<subject>Automatische Erinnerung an Fälligkeit eines Gutachtens</subject>
-		<body>{$reviewerName}:
-
-Hiermit eine freundliche Erinnerung an ihre Zusage, den Beitrag "{$articleTitle}," zu {$journalName} zu begutachten. Wir hatten gehofft, das Gutachten zum {$reviewDueDate} zu erhalten. Diese Email wurde automatisch erstellt und nach Überschreitung des Termins versandt. Wir würden uns freuen, wenn das Gutachten uns baldmöglichst zur Verfügung stünde.
-
-Falls Ihnen Benutzernamen und Passwort fehlen, können sie über folgenden Link Ihr Passwort neu setzen (Benutzernamen und Passwort gehen Ihnen umgehend per Email zu). {$passwordResetUrl}
-
-URL des Beitrags: {$submissionReviewUrl}
-
-Bestätigen Sie bitte, dass Sie nach wie vor bereit sind, sich die für unsere Zeitschrift unverzichtbare Mühe zu machen. In Erwartung Ihrer Antwort,
-
-{$editorialContactSignature}</body>
-		<description>Diese Email wird automatisch versandt, wenn eine Begutachtung fällig wird (s. Begutachtungsoptionen unter Einrichtung der Zeitschrift, Schritt 2) und der Auf Klick Zugang deaktiviert ist. Terminierte Arbeitsgänge müssen aktiviert und konfiguriert sein (s. Einrichtungsdatei der Webseite).</description>
-	</email_text>
-	<email_text key="REVIEW_REMIND_AUTO_ONECLICK">
-		<subject>Automatische Erinnerung an Begutachtung</subject>
-		<body>{$reviewerName}:
-
-Hiermit eine freundliche Erinnerung an ihre Zusage, den Beitrag "{$articleTitle}," zu {$journalName} zu begutachten. Wir hatten gehofft, das Gutachten zum {$reviewDueDate} zu erhalten. Diese Email wurde automatisch erstellt und nach Überschreitung des Termins versandt. Wir würden uns freuen, wenn das Gutachten uns baldmöglichst zur Verfügung stünde.
-
-URL des Beitrags: {$submissionReviewUrl}
-
-Bestätigen Sie bitte, dass Sie nach wie vor bereit sind, sich die für unsere Zeitschrift unverzichtbare Mühe zu machen. In Erwartung Ihrer Antwort,
-
-{$editorialContactSignature}</body>
-		<description>Diese Email wird automatisch versandt, wenn eine Begutachtung fällig wird (s. Begutachtungsoptionen unter Einrichtung der Zeitschrift, Schritt 2) und der Auf Klick Zugang aktiviert ist. Terminierte Arbeitsgänge müssen aktiviert und konfiguriert sein (s. Einrichtungsdatei der Webseite).</description>
-	</email_text>
-	<email_text key="COPYEDIT_REQUEST">
-		<subject>Anfrage zum Korrekturlektorat</subject>
-		<body>{$copyeditorName}:
-
-Ich bitte Sie, das Manuskript "{$articleTitle}," für {$journalName} zu lektorieren. Der Beitrag und Hinweise zum Lektorat finden sich auf der Webseite der Zeitschrift.
-
-URL des Beitrags: {$submissionCopyeditingUrl}
-Benutzername: {$copyeditorUsername}
-
-Falls Sie sich derzeit nicht in der Lage sehen oder noch Fragen haben, setzten Sie sich bitte mit mir in Verbindung. Ich danke Ihnen für Ihre geschätzte Mitarbeit an der Zeitschrift. 
-
-{$editorialContactSignature}</body>
-		<description>Diese Email geht von einem Rubrikredakteur an den Lektor eines Beitrags mit der Bitte um das Lektorat. Sie informiert über den Beitrag und den Zugang.</description>
-	</email_text>
-	<email_text key="COPYEDIT_COMPLETE">
-		<subject>Lektorat beendet</subject>
-		<body>{$editorialContactName}:
-
-Ich habe jetzt das Manuskript"{$articleTitle}," für {$journalName} im ersten Durchgang lektoriert. Verfasser und Redakteur können sich zu den Änderungen und Fragen äussern. 
-
-Besten Dank,
-{$copyeditorName}</body>
-	</email_text>
-	<email_text key="COPYEDIT_ACK">
-		<subject>Eingansbestätigung für Korrekturen</subject>
-		<body>{$copyeditorName}:
-
-Besten Dank für das Lektorat des Manuskripts "{$articleTitle}," für {$journalName}. Ihre Mitarbeit ist von grossem Wert für die Zeitschrift.
-
-{$editorialContactSignature}</body>
-		<description>Diese Email geht vom Rubrikredakteur an den Lektor eines Beitrags, bestätigt den Eingang der Korrekturen und bringt den Dank für die Mitarbeit zum Ausdruck.</description>
-	</email_text>
-	<email_text key="COPYEDIT_AUTHOR_REQUEST">
-		<subject>Lektüreersuchen an Verfasser</subject>
-		<body>{$authorName}:
-
-Wir haben Ihren Beitrag "{$articleTitle}," für {$journalName} lektoriert. Loggen Sie sich bitte mit untenstehender Adresse auf der Webseite der Zeitschrift ein. Prüfen Sie die Änderungsvorschläge und beantworten Sie Fragen an Sie. Laden Sie die lektorierte Datei herunter und mit Ihren Änderungen in Schritt 2 wieder hoch. Schicken Sie anschliessend dem Redakteur die ABSCHLUSS-Email.
-
-Dies ist die letzte Gelegenheit für Sie, grössere Änderungen anzubringen. Sie werden dann noch gebeten, die Fahnen zu korrigieren. Da können Sie jedoch nur noch kleinere typographische und Layoutkorrekturen vornehmen.
-
-URL des Beitrags: {$submissionCopyeditingUrl}
-Benutzername: {$authorUsername}
- 
-Falls Sie zur Zeit nicht in der Lage sein sollten, unserer Aufforderung nachzukommen oder noch Fragen haben, nehmen Sie bitte Verbindung mit mir auf. Besten Dank für Ihre Mitarbeit.
-
-{$editorialContactSignature}</body>
-		<description>Diese Email geht vom Rubrikredakteur an Verfasser von Beiträgen. Sie werden aufgefordert die lektorierte Version zu prüfen und zu korrigieren. Der Zugang zum Manuskript wird angegeben und es wird erinnert, dass dies die letzte Gelegenheit ist, grössere Änderungen vorzunehmen.</description>
-	</email_text>
-	<email_text key="COPYEDIT_AUTHOR_COMPLETE">
-		<subject>Korrektur durch Verfasser abgeschlossen</subject>
-		<body>{$editorialContactName}:
-
-Ich habe die Durchsicht des Manuskripts "{$articleTitle}," für {$journalName} abgeschlossen. Es steht damit für die letzte Korrekturrunde und die Vorbereitung des Layouts zur Verfügung.
-
-Mit bestem Dank für Ihre Bemühungen um meine Arbeit,
-{$authorName}</body>
-		<description>Diese Email geht vom Verfasser an den Rubrikredakteur. Der Verfasser teilt mit, dass er abschliessend korrekturgelesen hat.</description>
-	</email_text>
-	<email_text key="COPYEDIT_AUTHOR_ACK">
-		<subject>Eingangsbestätigung für Korrektur</subject>
-		<body>{$authorName}:
-
-Besten Dank für Ihre Korrekturversion des Manuskripts "{$articleTitle}," für {$journalName}. Wir freuen uns auf die baldige Veröffentlichung der Arbeit.
-
-{$editorialContactSignature}</body>
-		<description>Diese Email geht vom Rubrikredakteur zum Verfasser, bestätigt den Eingang der Autorenkorrekturen und dankt für den Beitrag.</description>
-	</email_text>
-	<email_text key="COPYEDIT_FINAL_REQUEST">
-		<subject>Aufforderung zur letzten Prüfung</subject>
-		<body>{$copyeditorName}:
-
-Verfasser und Redaktion haben die Prüfung und Korrektur  des Manuskripts "{$articleTitle}," für {$journalName} abgeschlossen. Die endgültige "Reinschrift" steht dann für die Layoutgestaltung zur Verfügung.
-
-URL des Beitrags: {$submissionCopyeditingUrl}
-Benutzername: {$copyeditorUsername}
-
-Besten Dank im Namen der Zeitschrift,
-
-{$editorialContactSignature}</body>
-		<description>Diese Email geht vom Rubrikredakteur zum Lektor und fordert diesen zu einer endgültigen Durchsicht des Beitrags auf, bevor er zur Layoutgestaltung geht.</description>
-	</email_text>
-	<email_text key="COPYEDIT_FINAL_COMPLETE">
-		<subject>Letzte Durchsicht abgeschlossen</subject>
-		<body>{$editorialContactName}:
-
-Ich habe eine korrigierte Reinschrift des Manuskripts "{$articleTitle}," für {$journalName} fertiggestellt. Sie steht für Layoutgestaltung und Vorbereitung der Fahnen zur Verfügung.
-
-{$copyeditorName}</body>
-		<description>Diese Email geht vom Lektor zum Rubrikredakteur. Es wird mitgeteilt, dass der Korrekturvorgang abgeschlossen ist und die Layoutgestaltung beginnen kann.</description>
-	</email_text>
-	<email_text key="COPYEDIT_FINAL_ACK">
-		<subject>Eingangsbestätigung für endgültige Korrektur</subject>
-		<body>{$copyeditorName}:
-
-Besten Dank für die abschliessende Behandlung des Manuskripts "{$articleTitle}," für {$journalName}. Die "Reinschrift" für den Layout ist im Redaktionsprozess von besonderer Wichtigkeit.
-
-{$editorialContactSignature}</body>
-		<description>Diese Email geht vom Rubrikredakteur zum Lektor, bestätigt den Empfang der endgültigen Korrektur und dankt für die Mitarbeit.</description>
-	</email_text>
-	<email_text key="LAYOUT_REQUEST">
-		<subject>Fahnenanforderung</subject>
-		<body>{$layoutEditorName}:
-
-Ich bitte Sie um die Gestaltung der Fahnen für das Manuskript "{$articleTitle}," für {$journalName}.
-
-URL des Beitrags: {$submissionLayoutUrl}
-Benutzername: {$layoutEditorUsername}
-
-Falls Sie zur Zeit nicht in der Lage sein sollten oder Fragen haben, setzen Sie sich bitte mit mir in Verbindung. Besten Dank für Ihre Mitarbeit.
-
-{$editorialContactSignature}</body>
-		<description>Diese Email geht vom Rubrikredakteur zum Layoutredakteur, teilt mit, dass ihm die Layoutredaktion eines Beitrags zugewiesen wurde, informiert über den Beitrag und den Zugang zu demselben.</description>
-	</email_text>
-	<email_text key="LAYOUT_COMPLETE">
-		<subject>Fahnen fertigestellt</subject>
-		<body>{$editorialContactName}:
-
-Die Fahnen für das Manuskript "{$articleTitle}," für {$journalName} sind fertig und stehen zur Korrektur bereit. 
-
-Falls Sie Fragen haben, setzen Sie sich bitte mit mir in Verbindung.
-
-{$layoutEditorName}</body>
-		<description>Diese Email geht vom Layoutredakteur zum Rubrikredakteur und teilt ihm mit, dass der Layout fertiggestellt wurde.</description>
-	</email_text>
-	<email_text key="LAYOUT_ACK">
-		<subject>Eingangsbestätigung für den Layout</subject>
-		<body>{$layoutEditorName}:
-
-Besten Dank für die Fahnen des Manuskripts "{$articleTitle}," für {$journalName}. Ein wertvoller Beitrag auf dem Weg zur Veröffentlichung.
-
-{$editorialContactSignature}</body>
-		<description>Diese Email geht vom Rubrikredakteur zum Layoutredakteur, bestätigt den Empfang der Fahnen und dankt für die Mitarbeit.</description>
-	</email_text>
-	<email_text key="PROOFREAD_AUTHOR_REQUEST">
-		<subject>Aufforderung zum Korrekturlesen (Verfasser)</subject>
-		<body>{$authorName}:
-
-Wir bitten Sie, die Fahnenkorrektur von "{$articleTitle}," für {$journalName} vorzunehmen. Sie finden die Fahnen, wenn Sie sich unter der untenstehenden Adresse auf der Webseite der Zeitschrift einloggen. Verwenden Sie die KORREKTUR-Adresse nur um typographische und Layoutfehler in der ansonsten zur Veröffentlichung fertigen Version zu korrigieren. Tragen Sie, den Korrekturanweisungen folgend, diese Fehler in das Korrekturfeld ein.
-
-URL des Beitrags: {$submissionUrl}
-Benutzername: {$authorUsername}
-
-Falls Sie dieser Aufforderung zur Zeit nicht folgen können oder Fragen haben, setzten Sie sich bitte mit mir in Verbindung. Besten Dank für Ihren Beitrag zur Zeitschrift.
-
-{$editorialContactSignature}</body>
-		<description>Diese Email geht vom Rubrikredakteur an Verfasser, teilt mit, dass die Fahnen zur Korrektur bereit liegen und gibt den Zugang an.</description>
-	</email_text>
-	<email_text key="PROOFREAD_AUTHOR_COMPLETE">
-		<subject>Korrekturen fertiggestellt (Verfasser)</subject>
-		<body>{$editorialContactName}:
-
-Ich habe die Fahnenkorrekturen meines Manuskripts "{$articleTitle}," für {$journalName} fertiggestellt. Die Fahnen liegen für Endkorrekturen durch Lektor und Layoutredakteur bereit.
-
-{$authorName}</body>
-		<description>Diese Email geht vom Verfasser an Lektor und Redakteur. Es wird mitgeteilt, dass der Verfasser die Korrektur abgeschlossen hat, und Einzelheiten im Kommentar zum Beitrag zu finden sind.</description>
-	</email_text>
-	<email_text key="PROOFREAD_AUTHOR_ACK">
-		<subject>Eingangsbestätigung für Korrekturen (Verfasser)</subject>
-		<body>{$authorName}:
-
-Besten Dank für die Fahnenkorrekturen Ihres Manuskripts "{$articleTitle}," für {$journalName}. Wir sehen damit der alsbaldigen Veröffenlichung entgegen.
-
-Wenn Sie sich für unseren Benachrichtigungsdienst einschreiben, erhalten Sie gleich bei Erscheinen eine Email mit dem Inhaltsverzeichnis der neuen Nummer. Fall Sie Fragen haben, setzten Sie sich bitte mit mir in Verbindung.
-
-{$editorialContactSignature}</body>
-		<description>Diese Email geht vom Rubrikredakteur zum Verfasser, bestätigt den Empfang der Fahnenkorrekturen und dankt für den Beitrag.</description>
-	</email_text>
-	<email_text key="PROOFREAD_REQUEST">
-		<subject>Aufforderung zum Korrekturlesen</subject>
-		<body>{$proofreaderName}:
-
-Ich bitte Sie um Korrektur der Fahnen von  "{$articleTitle}," für {$journalName}. 
-
-URL des Beitrags: {$submissionUrl}
-Benutzername: {$proofreaderUsername}
-
-Falls Sie zur Zeit dieser Aufforderung nicht Folge leisten können oder Fragen haben, wenden Sie sich bitte an mich. Besten Dank für Ihre Mitarbeit.
-
-{$editorialContactSignature}</body>
-		<description>Diese Email geht vom Rubrikredakteur zum Lektor und fordert diesen zum Korrekturlesen der Fahnen auf. Der Zugang zum Beitrag wird angegeben.</description>
-	</email_text>
-	<email_text key="PROOFREAD_COMPLETE">
-		<subject>Korrekturlesen beendet</subject>
-		<body>{$editorialContactName}:
-
-Ich habe die Fahnenkorrekturen für das Manuskript "{$articleTitle}," für {$journalName} beendet. Die Fahnen liegen für Endkorrekturen durch den Layoutredakteur bereit.
-
-{$proofreaderName}</body>
-		<description>Diese Email geht vom Lektor zum Rubrikredakteur. Es wird mitgeteilt, dass der Lektor den Korrekturprozess abgeschlossen hat.</description>
-	</email_text>
-	<email_text key="PROOFREAD_ACK">
-		<subject>Eingangsbestätigung für Fahnenkorrekturen</subject>
-		<body>{$proofreaderName}:
-
-Besten Dank für die Fahnenkorrekturen des Manuskripts "{$articleTitle}," für {$journalName}. Ein wertvoller Beitrag zur Qualität der Zeitschrift.
-
-{$editorialContactSignature}</body>
-		<description>Diese Email geht vom Rubrikredakteur an den Lektor, bestätigt den Empfang der Endkorrekturen und dankt für die Mitarbeit.</description>
-	</email_text>
-	<email_text key="PROOFREAD_LAYOUT_REQUEST">
-		<subject>Aufforderung zum Korrekturlesen (Layoutredakteur)</subject>
-		<body>{$layoutEditorName}:
-
-Wir bitten Sie, die Endkorrekturen an den Fahnen für das Manuskript "{$articleTitle}," für {$journalName} vorzunehmen.
-
-URL des Beitrags: {$submissionUrl}
-Benutzername: {$layoutEditorUsername}
-
-Falls Sie gegenwärtig nicht in der Lage sein sollten, die Korrekturen vorzunehmen oder Fragen haben, setzen Sie sich bitte mit mir in Verbindung. Danke für Ihre Mitarbeit.
-
-{$editorialContactSignature}</body>
-		<description>Diese Email geht vom Rubrikredakteur zum Layoutredakteur, teilt mit, dass die Fahnen zur Endkorrektur bereit liegen und gibt den Zugang an.</description>
-	</email_text>
-	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
-		<subject>Korrekturlesen abgeschlossen (Layoutredakteur)</subject>
-		<body>{$editorialContactName}:
-
-Die Endkorrekturen der Fahnen von "{$articleTitle}," für {$journalName} wurden den Korrekturangaben entsprechend durchgeführt. Der Beitrag liegt damit bereit zur Veröffentlichung.
-
-{$layoutEditorName}</body>
-		<description>Diese Email geht vom Layoutredakteur zum Rubrikredakteur, teilt mit, dass die Endkorrektur abgeschlossen ist, und der Beitrag zur Veröffentlichung bereit liegt.</description>
-	</email_text>
-	<email_text key="PROOFREAD_LAYOUT_ACK">
-		<subject>Eingangsbestätigung für Endkorrektur (Layoutredakteur)</subject>
-		<body>{$layoutEditorName}:
-
-Besten Dank für die abschliessende Korrektur der Fahnen von Manuskript "{$articleTitle}," für {$journalName}. Ein wertvoller Beitrag zur Arbeit dieser Zeitschrift.
-
-{$editorialContactSignature}</body>
-		<description>Diese Email geht vom Rubrikredakteur zum Layoutredakteur, bestätigt den Empfang der Endkorrekturen und bringt den Dank für die Mitarbeit zum Ausdruck.</description>
-	</email_text>
-	<email_text key="EMAIL_LINK">
-		<subject>Möglicherweise interessierender Beitrag</subject>
-		<body> Ich möchte Sie auf den Beitrag "{$articleTitle}" von {$authorName}, veröffentlicht in Band {$volume}, Nr. {$number} ({$year}) von {$journalName}, adressse "{$articleUrl}" hinweisen. Ich denke, er könnte für Sie von Interesse sein.</body>
-		<description>Diese Emailvorlage gibt einem registrierten Leser die Möglichkeit, jemanden auf einen Beitrag hinzuweisen, der ihn interessieren könnte. Sie steht unter Leserwerkzeug zur Verfügung und muss vom Zeitschriftverwalter auf der Leserwerkzeug-Verwaltungsseite aktiviert werden.</description>
-	</email_text>
-	<email_text key="SUBSCRIPTION_NOTIFY">
-		<subject>Bestätigung der Registrierung</subject>
-		<body>{$subscriberName}:
-
-Sie wurden als Abonnent in unserem Internet-Zeitschriftenverwaltungssystem registriert für {$journalName}, und zwar in der folgenden Kategorie:
-
-{$subscriptionType}
-
-Der Zugang zu Inhalten, die nur den Abonnenten zur Verfügung stehen, erhalten Sie, wenn Sie sich einfach mit Ihrem Benutzernamen "{$username}" in das System einloggen.
-
-Einmal eingeloggt, können Sie jederzeit die Einzelheiten Ihres Benutzerprofils und Ihr Passwort ändern.
-
-Beachten Sie bitte, dass Sie sich nicht einzuloggen brauchen, wenn Ihre Institution abonniert ist. Das System gestattet Ihnen dann automatisch den Zugang zu den Inhalten für Abonnenten.
-
-Falls Sie Fragen haben, zögern Sie bitte nicht, sich an mich zu wenden.
-
-{$subscriptionContactSignature}</body>
-		<description>Diese Email benachrichtigt Leser, dass der Verwalter ein Abonnement für sie eingerichtet hat. Die Webadresse der Zeitschrift wird mitgeteilt und es werden Hinweise für den Zugang gegeben.</description>
-	</email_text>
-	<email_text key="OPEN_ACCESS_NOTIFY">
-		<subject>Ausgabe jetzt im Open Access</subject>
-		<body>Leser:
-
-{$journalName} hat soeben die folgende Ausgabe im OPEN ACCESS Format zugänglich gemacht. Sie sind eingeladen, sich hier das Inhaltsverzeichnis anzusehen und sich dann auf unserer Webseite ({$journalUrl}) die Sie interessierenden Beiträge anzusehen.
-
-Wir danken für das nachhaltige Interesse an unserer Arbeit,
-{$editorialContactSignature}</body>
-		<description>Diese Email geht an registrierte Leser, die benachrichtigt werden wollen, wenn eine Ausgabe offen zugänglich wird.</description>
-	</email_text>
-	<email_text key="SUBSCRIPTION_BEFORE_EXPIRY">
-		<subject>Benachrichtigung über auslaufendes Abonnement</subject>
-		<body>{$subscriberName}:
-
-Ihr Abonnement für {$journalName} läuft demnächst aus.
-
-{$subscriptionType}
-Auslaufdatum: {$expiryDate}
-
-Falls Sie auch weiterhin den Zugang zu dieser Zeitschrift behalten möchten, gehen Sie bitte zur Webseite der Zeitschrift und erneuern Sie Ihr Abonnement. Sie können Sich mit Ihrem Benutzernamen "{$username}" einloggen.
-
-Falls Sie Fragen haben, zögern Sie bitte nicht, sich an mich zu wenden.
-
-{$subscriptionContactSignature}</body>
-		<description>Diese Email benachrichtigt einen Abonnenten, dass sein Abonnement bald ausläuft. Die Webadresse der Zeitschrift wird angegeben, und Zugangshinweise werden erteilt. </description>
-	</email_text>
-	<email_text key="SUBSCRIPTION_AFTER_EXPIRY">
-		<subject>Benachrichtigung über beendetes Abonnement</subject>
-		<body>{$subscriberName}:
-
-Ihr Abonnement für {$journalName} ist ausgelaufen.
-
-{$subscriptionType}
-Auslaufdatum: {$expiryDate}
-
-Falls Sie Ihr Abonnement erneuern möchten, gehen Sie bitte zur Webseite der Zeitschrift. Sie können sich mit Ihrem Benutzernamen "{$username}" in das System einloggen.
-
-Falls Sie Fragen haben, zögern Sie bitte nicht, wenden Sie sich an mich.
-
-{$subscriptionContactSignature}</body>
-		<description>Diese Email benachrichtigt einen Abonnenten, dass sein Abonnement beendet ist. Die Webadresse der Zeitschrift  wird mitgeteilt und der Zugang angegeben.</description>
-	</email_text>
-	<email_text key="SUBSCRIPTION_AFTER_EXPIRY_LAST">
-		<subject>Abonnement beendet - letzte Benachrichtigung</subject>
-		<body>{$subscriberName}:
-
-Ihr Abonnement für {$journalName} ist beendet.
-Bitte beachten Sie, dass dies die letzte Ihnen per Email zugehende Benachrichtung ist.
-
-{$subscriptionType}
-Auslaufdatum: {$expiryDate}
-
-Falls Sie Ihr Abonnement zu erneuern wünschen, gehen Sie bitte zur Webseite der Zeitschrift. Sie können sich dort mit Ihrem Benutzernamen "{$username}" in das System einloggen.
-
-Falls Sie Fragen haben, zögern Sie bitte nicht, sich an mich zu wenden.
-
-{$subscriptionContactSignature}</body>
-		<description>Diese Email ist die letzte Benachrichtigung eines Abonnenten, dass sein Abonnement ausgelaufen ist. Die Webadresse der Zeitschrift wird mitgeteilt und der Zugang angegeben.</description>
-	</email_text>
-	<email_text key="USER_VALIDATE">
-		<subject>Bestätigen Sie Ihr Konto</subject>
-		<body>{$userFullName}
-
-Sie haben ein Konto bei {$journalName} angelegt, aber bevor Sie mit der Benutzung beginnen können, müssen Sie Ihr E-Mail-Konto bestätigen. Dazu folgen Sie einfach dem unten stehenden Link:
-
-{$activateUrl}
-
-Danke,
-{$principalContactSignature}</body>
-		<description>Diese E-Mail wird an neu registrierte Benutzer/innen geschickt, um sie beim System zu begrüßen und um ihnen einen Beleg über ihren Benutzer/innen-Name und ihr Passwort zukommen zu lassen.</description>
-	</email_text>
-	<email_text key="REVIEWER_REGISTER">
-		<subject>Registrierung als Gutachter/in bei {$journalName}</subject>
-		<body>Angesichts Ihrer Erfahrung haben wir uns die Freiheit genommen, Ihren Namen in der Gutachter/innen-Datenbank von {$journalName} zu registrieren. Dies bedingt keinerlei Verpflichtung von Ihrer Seite, erlaubt uns aber, Ihnen einen Vorschlag für ein mögliches Gutachten zu machen. Wenn Sie eingeladen werden zu begutachten, werden Sie Gelegenheit haben, den Titel und das Abstract des fraglichen Artikels zu sehenn, und Sie werden jederzeit in der Lage sein, die Einladung zu akzeptieren oder abzulehnen. Außerdem können Sie zu jedem Zeitpunkt ihren Namen von der Gutachter/innenliste entfernen lassen.
-
-Wir lassen Ihnen einen Benutzer/innennamen und ein Passwort zukommen, das in allen Interaktionen mit der Zeitschrift über deren Website benutzt wird. Zum Beispiel möchten Sie vielleicht Ihr Profil inklusive Ihrer Begutachtungsinteressen aktualisieren
+Sie sind nun als neue/r Benutzer/in von {$journalName} registriert. Wir haben Ihren Benutzer/innennamen und Ihr Passwort in dieser Mail aufgeführt, beides wird für alle Arbeiten mit dieser Zeitschrift gebraucht. Sie können sich zu jedem Zeitpunkt als Benutzer/in der Zeitschrift austragen lassen, indem Sie mich kontaktieren.
 
 Benutzer/innenname: {$username}
 Passwort: {$password}
 
-Danke,
+Vielen Dank,
 {$principalContactSignature}</body>
-		<description>Diese E-Mail wird an eine/n neu registrierte Gutachter/in gesendet, um sie/ihn beim System zu begrüßen und mit einem Beleg über ihren/seinen Benutzer/innennamen und ihr/sein Passwort zur versorgen.</description>
+		<description>Diese E-Mail wird an neu registrierte Benutzer/innen gesendet, um sie beim System willkommen zu heißen und ihnen Benutzer/innennamen und Passwort zu bestätigen.</description>
+	</email_text>
+	<email_text key="USER_VALIDATE">
+		<subject>Bestätigung Ihres Benutzer/innenkontos</subject>
+		<body>{$userFullName},
+
+Sie haben ein Benutzer/innenkonto bei {$journalName} angelegt, aber bevor Sie es benutzen können, müssen Sie Ihre E-Mail-Adresse bestätigen. Dazu folgen Sie bitte einfach dem folgenden Link:
+
+{$activateUrl}
+
+Vielen Dank,
+{$principalContactSignature}</body>
+		<description>Diese E-Mail wird an neu registrierte Benutzer/innen gesendet, um sie aufzufordern, die angegebene E-Mail-Adresse zu verifizieren. </description>
+	</email_text>
+	<email_text key="REVIEWER_REGISTER">
+		<subject>Registrierung als Gutachter/in bei {$journalName}</subject>
+		<body>Angesichts Ihrer Erfahrung haben wir uns erlaubt, Ihren Namen der Gutachter/innendatenbank von {$journalName} hinzuzufügen. Dies verpflichtet Sie in keiner Weise, ermöglicht uns aber, Sie um mögliche Gutachten für eine Einreichung zu bitten. Wenn Sie zu einem Gutachten eingeladen werden, werden Sie Titel und Abstract des Beitrags sehen können und werden stets selber entscheiden können, ob Sie der Einladung folgen oder nicht. Sie können zu jedem Zeitpunkt Ihren Namen von der Gutachter/innenliste entfernen lassen.
+
+Wir senden Ihnen einen Benutzer/innennamen und ein Passwort, die sie in allen Schritten der Zusammenarbeit mit der Zeitschrift über deren Website benötigen. Vielleicht möchten Sie z.B. Ihr Profil inkl. Ihrer Begutachtungsinteressen aktualisieren.
+
+Username: {$username}
+Password: {$password}
+
+Vielen Dank,
+{$principalContactSignature}</body>
+		<description>Diese E-Mail wird an neu registrierte Gutachter/innen gesendet, um sie beim System willkommen zu heißen und ihnen Benutzer/innennamen und Passwort zu bestätigen.</description>
+	</email_text>
+	<email_text key="PUBLISH_NOTIFY">
+		<subject>Neue Ausgabe erschienen</subject>
+		<body>Liebe Leserinnen und Leser,
+
+{$journalName} hat soeben die neueste Ausgabe unter {$journalUrl} veröffentlicht. Wir laden Sie ein, hier das Inhaltsverzeichnis zu lesen und sich dann auf unserer Webseite die Sie interessierenden Beiträge anzusehen.
+
+Danke für das andauernde Interesse an unserer Arbeit,
+{$editorialContactSignature}</body>
+		<description>Diese E-Mail wird an registrierte Benutzer/innen mittels des "Benutzer/innen benachrichtigen"-Links auf der persönlichen Startseite einer Redakteurin/eines Redakteurs gesendet. Sie benachrichtigt Benutzer/innen über eine neue Ausgabe und lädt sie ein, die Zeitschrift unter einer angegebenen URL aufzusuchen.</description>
+	</email_text>
+	<email_text key="LOCKSS_EXISTING_ARCHIVE">
+		<subject>Archiving Request for {$journalName}</subject>
+		<body>Sehr geehrte/r [Bibliotheksleiter/in],
+
+{$journalName} &lt;{$journalUrl}&gt; ist eine Zeitschrift, an der ein Mitglied Ihrer Universität, [Name], als [Mitarbeiterfunktion] mitarbeitet. Die Zeitschrift beabsichtigt, mit Ihrer und anderen Universitätsbibliotheken ein mit LOCKSS (Lots of Copies Keep Stuff Safe) kompatibles Archiv aufzubauen.
+
+[Kurze Beschreibung der Zeitschrift]
+
+Die Webadresse der LOCKSS-Erklärung für unsere Zeitschrift ist: {$journalUrl}/gateway/lockss
+
+Wir gehen von der Annahme aus, dass Sie bereits an LOCKSS beteiligt sind. Falls weitere Metadaten zur Aufnahme unserer Zeitschrift in Ihre Version von LOCKSS gebraucht werden, stellen wir sie Ihnen gern zur Verfügung.
+
+Vielen Dank, 
+{$principalContactSignature}</body>
+		<description>Diese E-Mail bittet die/den Verwalter/in eines LOCKSS-Archivs zu überlegen, diese Zeitschrift in ihr/sein Archiv aufzunehmen. Sie liefert die URL zur LOCKSS-Erklärung der Herausgeber/innen der Zeitschrift.</description>
+	</email_text>
+	<email_text key="LOCKSS_NEW_ARCHIVE">
+		<subject>Bitte um Archivierung von {$journalName}</subject>
+		<body>Sehr geehrte/r [Bibliotheksleiter/in],
+
+{$journalName} &lt;{$journalUrl}&gt; ist eine Zeitschrift, an der ein Mitglied Ihrer Universität, [Name], als [Mitarbeiterfunktion] mitarbeitet. Die Zeitschrift beabsichtigt, mit Ihrer und anderen Universitätsbibliotheken ein mit LOCKSS (Lots of Copies Keep Stuff Safe) kompatibles Archiv aufzubauen.
+
+[Kurze Beschreibung der Zeitschrift]
+
+Das LOCKSS-Programm &lt;http://lockss.stanford.edu/&gt;, eine internationale Initiative von Bibliotheken und Verlagen, ist ein funktionierendes verteiltes System zur Erhaltung und zur Archivierung; nähere Einzelheiten finden Sie weiter unten. Die auf jedem gewöhnlichen Rechner laufende Software ist frei; das System lässt sich leicht online bringen; es braucht wenig Wartung.
+
+Falls Sie sich an der Archivierung unserer Zeitschrift beteiligen möchten, laden wir Sie ein, Mitglied der LOCKSS-Community zu werden und mitzuhelfen, Texte aus Ihrer Einrichtung und von Wissenschaftler/innen aus der ganzen Welt zu sammeln und zu erhalten. Dazu sollte sich jemand aus Ihrer Einrichtung auf der Webseite von LOCKSS darüber informieren, wie dieses System funktioniert. Wir freuen uns darauf, von Ihnen zu hören, um die Möglichkeit Ihre Unterstützung bei der Archivierung dieser Zeitschrift und erwarten gern Ihre Antwort zur konkreten Vorgehensweise.
+
+Vielen Dank,
+{$principalContactSignature}</body>
+		<description>Diese E-Mail ermuntert die Empfängerin/den Empfänger, an der LOCKSS-Initiative teilzunehmen und diese Zeitschrift in das Archiv aufzunehmen. Sie liefert Informationen über die LOCKSS-Initiative und über Wege, daran teilzunehmen.</description>
+	</email_text>
+	<email_text key="SUBMISSION_ACK">
+		<subject>Eingangsbestätigung</subject>
+		<body>{$authorName}, 
+
+vielen Dank für die Einreichung Ihres Manuskript "{$articleTitle}" zur Veröffentlichung in {$journalName}. Das Verwaltungssystem unserer Webzeitschrift erlaubt Ihnen, jederzeit den Lauf Ihres Beitrags im Redaktionsprozess zu beobachten. Sie loggen sich dazu einfach auf unserer Webseite ein:
+
+URL des Manuskripts: {$submissionUrl}
+Benutzer/innenname: {$authorUsername}
+
+Für weitere Fragen stehen wir Ihnen gern zur Verfügung. Danke für Ihr Interesse an einer Veröffentlichung in unserer Zeitschrift.
+
+{$editorialContactSignature}</body>
+		<description>Diese E-Mail wird, sofern aktiviert, automatisch an eine Autorin/einen Autor gesendet, wenn sie oder er den Einreichungsprozess eines Manuskripts für die Zeitschrift abgeschlossen hat. Sie liefert Informationen über das Verfolgen der Einreichung durch den Prozess hindurch und dankt der Autorin/dem Autor für die Einreichung.</description>
+	</email_text>
+	<email_text key="SUBMISSION_UNSUITABLE">
+		<subject>Ungeeigneter Beitrag</subject>
+		<body>{$authorName},
+
+eine erste Lektüre von "{$articleTitle}" ergab, dass Ihr Beitrag den Anforderungen und der Orientierung von {$journalName} nicht entspricht. Ich schlage Ihnen vor, dass Sie sich die Beschreibung dieser Zeitschrift unter "Über uns" und die aktuellen Inhalte anseehen, um mehr über die Arbeiten zu erfahren, die wir veröffentlichen. Sie könnten außerdem überlegen, diesen Beitrag bei einer anderen, besser passenden Zeitschrift einzureichen. 
+
+{$editorialContactSignature}</body>
+	</email_text>
+	<email_text key="SUBMISSION_COMMENT">
+		<subject>Kommentar zu Einreichung</subject>
+		<body>{$name},
+
+{$commentName} hat einen Kommentar zur Einreichung "{$articleTitle}" in {$journalName} hinzugefügt:
+
+{$comments}</body>
+		<description>Diese E-Mail benachrichtigt die Personen, die mit dem Redaktionsprozess zu einer Einreichung zu tun haben, darüber, dass ein neuer Kommentar abgegeben worden ist.</description>
+	</email_text>
+	<email_text key="SUBMISSION_DECISION_REVIEWERS">
+		<subject>Entscheidung zu "{$articleTitle}</subject>
+		<body>Als Gutachter/in zur Einreichung "{$articleTitle}" für {$journalName} sende ich Ihnen die Gutachten und die redaktionelle Entscheidung, die an die Autorin/den Autor des Textes geschickt worden sind. Vielen Dank nochmals für den wichtigen Beitrag, den Sie zu diesem Prozess geleistet haben.
+ 
+{$editorialContactSignature}
+
+{$comments}</body>
+		<description>Diese E-Mail benachrichtigt die Gutachter/innen einer Einreichung, dass der Begutachtungsprozess abgeschlossen worden ist. Sie enthält Informationen über den Artikel und die getroffene Entscheidung und dankt den Gutachter/innen für ihre Mitwirkung.</description>
+	</email_text>
+	<email_text key="EDITOR_ASSIGN">
+		<subject>Zuweisung an Rubrikredakteur/in</subject>
+		<body>{$editorialContactName},
+
+der Beitrag "{$articleTitle}" für {$journalName} wird Ihnen zur Durchführung des redaktionellen Prozesses in Ihrer Rolle als Rubrikredakteur/in zugewiesen.
+
+URL des Beitrags: {$submissionUrl}
+Benutzer/innenname: {$editorUsername}
+
+Vielen Dank,
+{$editorialContactSignature}</body>
+		<description>Diese E-Mail benachrichtigt eine/n Rubrikredakteur/in, dass die Redakteurin/der Redakteur ihr/ihm die Aufgabe übertragen hat, eine Einreichung durch den Redaktionsprozess hindurch zu betreuen. Sie liefert Informationen zu der Einreichung und darüber, wie auf die Zeitschriftenseite zugegriffen werden kann.</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST">
+		<subject>Bitte um ein Gutachten</subject>
+		<body>{$reviewerName},
+
+aufgrund Ihrer Forschungsschwerpunkte wären Sie ein/e ausgezeichnete/r Gutachter/in für das Manuskript "{$articleTitle}", das zur Publikation in {$journalName} eingereicht worden ist. Weiter unten finden Sie eine Kurzfassung des Beitrags. Ich hoffe sehr, dass Sie sich bereitfinden können, uns mit Ihrer Stellungnahme zu unterstützen. Sie wären uns eine große Hilfe.
+
+Loggen Sie sich bitte bis zum {$weekLaterDate} auf der Webseite unserer Zeitschrift ein, um uns Ihre Zu- oder Absage mitzuteilen. Sie finden dort den Beitrag und können gegebenenfalls auch Ihr Gutachten und Ihre Empfehlung dort abgeben. Die Webseite ist {$journalUrl}
+
+Das Gutachten wäre fällig am {$reviewDueDate}.
+
+Falls Sie nicht über Benutzer/innennamen und Passwort verfügen, können Sie über folgenden Link Ihr Passwort neu setzen (Benutzer/innennamen und Passwort gehen Ihnen umgehend per E-Mail zu). {$passwordResetUrl}
+
+URL des Beitrags: {$submissionReviewUrl}
+
+In der Hoffnung auf eine positive Antwort,
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>Diese E-Mail von der/dem Rubrikredakteur/in an eine/n Gutachter/in bittet darum, dass diese/r die Aufgabe, eine Einreichung zu begutachten, übernimmt oder ablehnt. Sie liefert Informationen über die Einreichung wie Titel und Abstract, ein Fälligkeitsdatum für das Gutachten und darüber, wie auf die Einreichung zugegriffen werden kann. Diese Nachricht wird benutzt, wenn in Schritt 2 des Zeitschriftensetups das Standardbegutachtungsverfahren ausgewählt worden ist. (Ansonsten siehe REVIEW_REQUEST_ATTACHED.)</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_ONECLICK">
+		<subject>Bitte um ein Gutachten</subject>
+		<body>{$reviewerName},
+
+aufgrund Ihrer Forschungsschwerpunkte wären Sie ein/e ausgezeichnete/r Gutachter/in für das Manuskript "{$articleTitle}", das zur Publikation in {$journalName} eingereicht worden ist. Weiter unten finden Sie eine Kurzfassung des Beitrags. Ich hoffe sehr, dass Sie sich bereitfinden können, uns mit Ihrer Stellungnahme zu unterstützen. Sie wären uns eine große Hilfe.
+
+Loggen Sie sich bitte bis zum {$weekLaterDate} auf der Webseite unserer Zeitschrift ein, um uns Ihre Zu- oder Absage mitzuteilen. Sie finden dort den Beitrag und können gegebenenfalls auch Ihr Gutachten und Ihre Empfehlung dort abgeben.
+
+Das Gutachten wäre fällig am {$reviewDueDate}.
+
+URL des Beitrags: {$submissionReviewUrl}
+
+In der Hoffnung auf eine positive Antwort,
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>Diese E-Mail von der/dem Rubrikredakteur/in an eine/n Gutachter/in bittet darum, dass diese/r die Aufgabe, eine Einreichung zu begutachten, übernimmt oder ablehnt. Sie liefert Informationen über die Einreichung wie Titel und Abstract, ein Fälligkeitsdatum für das Gutachten und darüber, wie auf die Einreichung zugegriffen werden kann. Diese Nachricht wird benutzt, wenn in Schritt 2 des Zeitschriftensetups das Standardbegutachtungsverfahren ausgewählt worden ist und wenn der One-Click-Zugang für Gutachter/innen aktiviert ist.</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_ATTACHED">
+		<subject>Bitte um ein Gutachten</subject>
+		<body>{$reviewerName},
+
+aufgrund Ihrer Forschungsschwerpunkte wären Sie ein/e ausgezeichnete/r Gutachter/in für das Manuskript "{$articleTitle}", das zur Publikation in {$journalName} eingereicht worden ist. Ich hoffe sehr, dass Sie sich bereitfinden können, uns mit Ihrer Stellungnahme zu unterstützen. Sie wären uns eine große Hilfe. Die Richtlinien für die Begutachtung sind angefügt, ebenso der Beitrag, um den es geht. Ihr Gutachten und Ihre Empfehlung sollten gegebenenfalls bis zum {$reviewDueDate} per E-Mail bei uns eingehen.
+
+Bitte benachrichtigen Sie uns bis zum {$weekLaterDate} per E-Mail, ob Sie das Gutachten übernehmen können.
+
+In der Hoffnung auf eine positive Antwort,
+
+{$editorialContactSignature}
+
+
+Richtlinien für Gutachter/innen
+
+{$reviewGuidelines}
+</body>
+		<description>Diese E-Mail wird von der/dem Rubrikredakteur/in an eine/n Gutachter/in gesendet, um darum zu bitten, dass sie/er die Aufgabe, eine Einreichung zu begutachten, übernimmt oder ablehnt. Sie enthält die Einreichung als E-Mail-Anhang. Diese Nachricht wird benutzt, wenn in Schritt 2 des Zeitschriftensetups das Begutachtungsverfahren über E-Mail-Anhänge ausgewählt worden ist. (Ansonsten siehe REVIEW_REQUEST.)</description>
+	</email_text>
+	<email_text key="REVIEW_CANCEL">
+		<subject>Rücknahme einer Bitte um ein Gutachten</subject>
+		<body>{$reviewerName},
+
+wir haben uns entschieden, unsere Anfrage nach einem Gutachten für den Beitrag "{$articleTitle}" für {$journalName} zurückzuziehen. Verzeihen Sie bitte die Ihnen dadurch evtl. entstandenen Unannehmlichkeiten. Wir hoffen, dass wir weiterhin auf Ihre Hilfe als Gutachter/in für die Zeitschrift zählen können.
+
+Falls Sie Fragen haben, können Sie sich gerne an mich wenden.
+
+{$editorialContactSignature}</body>
+		<description>Diese E-Mail wird von der/dem Rubrikredakteur/in an eine/n Gutachter/in gesendet, die an einem Gutachten arbeiten, um sie darüber zu informieren, dass das Gutachten abgesagt worden ist.</description>
+	</email_text>
+	<email_text key="REVIEW_CONFIRM">
+		<subject>Einwilligung in die Begutachtung</subject>
+		<body>{$editorialContactName},
+
+ich bin in der Lage und auch gern bereit, den Beitrag "{$articleTitle}" für {$journalName} zu begutachten. Vielen Dank für Ihr Vertrauen; ich werde das Gutachten spätestens bis zum {$reviewDueDate} einreichen, wenn möglich auch früher.
+
+{$reviewerName}</body>
+		<description>Diese E-Mail wird von einer Gutachterin/einem Gutachter an die/den Rubrikredakteur/in als Antwort auf eine Begutachtungsanfrage gesendet, um die/den Rubrikredakteur/in darüber zu informieren, dass die Begutachtung übernommen wird und bis zu dem angegebenen Datum abgeschlossen sein wird.</description>
+	</email_text>
+	<email_text key="REVIEW_DECLINE">
+		<subject>Ablehnung der Bitte um ein Gutachten</subject>
+		<body>{$editorialContactName},
+
+leider kann ich gegenwärtig die Begutachtung des Beitrags "{$articleTitle}" für {$journalName} nicht übernehmen. Ich danke für Ihr Vertrauen. Bei anderer Gelegenheit können Sie sich gerne wieder an mich wenden.
+
+{$reviewerName}</body>
+		<description>Diese E-Mail wird von einer Gutachterin/einem Gutachter an die/den Rubrikredakteur/in als Antwort auf eine Begutachtungsanfrage gesendet, um darüber zu informieren, dass die Anfrage abgelehnt wird.</description>
+	</email_text>
+	<email_text key="REVIEW_COMPLETE">
+		<subject>Gutachten für einen Beitrag fertiggestellt</subject>
+		<body>{$editorialContactName},
+
+ich habe mein Gutachten zu dem Beitrag "{$articleTitle}" für {$journalName} fertiggestellt und meine Empfehlung "{$recommendation}" abgegeben.
+
+{$reviewerName}</body>
+		<description>Diese E-Mail wird von einer Gutachterin/einem Gutachter an die/den Rubrikredakteur/in gesendet, um darüber zu informieren, dass ein Gutachten fertiggestellt worden ist un dass die Kommentare und Korrekturen auf der Website der Zeitschrift notiert worden sind.</description>
+	</email_text>
+	<email_text key="REVIEW_ACK">
+		<subject>Eingangsbestätigung für ein Gutachten</subject>
+		<body>{$reviewerName},
+
+vielen Dank für Ihr Gutachten zum Beitrag "{$articleTitle}" für {$journalName}. Ihre Stellungnahme ist eine wichtige Unterstützung für unsere Bemühungen um die Qualität der von uns veröffentlichten Arbeiten.
+
+{$editorialContactSignature}</body>
+		<description>Diese E-Mail wird von eine/r Rubrikredakteur/in gesendet, um den Empfang eines abgeschlossenen Gutachtens zu bestätigen und um der Gutachterin/dem Gutachter für die Mitwirkung zu danken.</description>
+	</email_text>
+	<email_text key="REVIEW_REMIND">
+		<subject>Erinnerung an fälliges Gutachten</subject>
+		<body>{$reviewerName},
+
+wir möchten Sie freundlich an Ihre Zusage erinnern, den Beitrag "{$articleTitle}" für {$journalName} zu begutachten. Wir hatten gehofft, das Gutachten bis zum {$reviewDueDate} zu erhalten. Wir würden uns freuen, wenn es uns baldmöglichst zur Verfügung stünde.
+
+Falls Ihnen Benutzer/innenname und Passwort fehlen, können Sie über folgenden Link Ihr Passwort neu setzen (Benutzer/innenname und Passwort gehen Ihnen umgehend per E-Mail zu). {$passwordResetUrl} 
+
+URL des Beitrags: {$submissionReviewUrl}
+
+Könnten Sie uns bitte bestätigen, dass Sie nach wie vor bereit sind, unsere Zeitschrift gutachterlich zu unterstützen? Wir würden uns freuen, bald von Ihnen zu hören.
+
+{$editorialContactSignature}</body>
+		<description>Diese E-Mail wird von einer Rubrikredakteurin/einem Rubrikredakteur gesendet, um eine/n Gutachter/in daran zu erinnern, dass ihr/sein Gutachten fällig ist.</description>
+	</email_text>
+	<email_text key="REVIEW_REMIND_ONECLICK">
+		<subject>Erinnerung an die Fälligkeit eines Gutachtens</subject>
+		<body>{$reviewerName},
+
+hiermit möchten wir Sie freundlich an Ihre Zusage erinnern, den Beitrag "{$articleTitle}" für {$journalName} zu begutachten. Wir hatten gehofft, das Gutachten zum {$reviewDueDate} zu erhalten. Diese E-Mail wurde automatisch erstellt und nach Überschreitung des Termins versandt. Wir würden uns freuen, wenn uns das Gutachten baldmöglichst zur Verfügung stünde.
+
+URL des Beitrags: {$submissionReviewUrl}
+
+Könnten Sie uns bitte bestätigen, dass Sie nach wie vor bereit sind, unsere Zeitschrift gutachterlich zu unterstützen? Wir würden uns freuen, bald von Ihnen zu hören.
+
+{$editorialContactSignature}</body>
+		<description>Diese E-Mail wird von einer Rubrikredakteurin/einem Rubrikredakteur gesendet, um eine/n Gutachter/in daran zu erinnern, dass ihr/sein Gutachten fällig ist.</description>
+	</email_text>
+	<email_text key="REVIEW_REMIND_AUTO">
+		<subject>Automatische Erinnerung an die Fälligkeit eines Gutachtens</subject>
+		<body>{$reviewerName},
+
+hiermit möchten wir Sie freundlich an Ihre Zusage erinnern, den Beitrag "{$articleTitle}" für {$journalName} zu begutachten. Wir hatten gehofft, das Gutachten zum {$reviewDueDate} zu erhalten. Diese E-Mail wurde automatisch erstellt und nach Überschreitung des Termins versandt. Wir würden uns freuen, wenn uns das Gutachten baldmöglichst zur Verfügung stünde.
+
+Falls Ihnen Benutzer/innennamen und Passwort fehlen, können Sie über folgenden Link Ihr Passwort neu setzen (Benutzer/innenname und Passwort gehen Ihnen umgehend per E-Mail zu). {$passwordResetUrl} 
+
+URL des Beitrags: {$submissionReviewUrl}
+
+Könnten Sie uns bitte bestätigen, dass Sie nach wie vor bereit sind, unsere Zeitschrift gutachterlich zu unterstützen? Wir würden uns freuen, bald von Ihnen zu hören.
+
+{$editorialContactSignature}</body>
+		<description>Diese E-Mail wird automatisch verschickt, wenn das Fälligkeitsdatum für eine/n Gutachter/in verstrichen ist (vgl. die Begutachtungseinstellungen in Schritt 2 des Zeitschriftensetups) und wenn der One-Click-Zugang für Gutachter/innen deaktiviert ist. Planmäßige Aufgaben (scheduled tasks) müssen aktiviert und konfiguriert sein (vgl. die Konfigurationsdatei der Website).</description>
+	</email_text>
+	<email_text key="REVIEW_REMIND_AUTO_ONECLICK">
+		<subject>Automatische Erinnerung an Begutachtung</subject>
+		<body>{$reviewerName},
+
+hiermit möchten wir Sie freundlich an Ihre Zusage erinnern, den Beitrag "{$articleTitle}" für {$journalName} zu begutachten. Wir hatten gehofft, das Gutachten zum {$reviewDueDate} zu erhalten. Diese E-Mail wurde automatisch erstellt und nach Überschreitung des Termins versandt. Wir würden uns freuen, wenn uns das Gutachten baldmöglichst zur Verfügung stünde.
+
+URL des Beitrags: {$submissionReviewUrl}
+
+Könnten Sie uns bitte bestätigen, dass Sie nach wie vor bereit sind, unsere Zeitschrift mit Ihrer wertvollen gutachterlichen Arbeit zu unterstützen? Wir würden uns freuen, bald von Ihnen zu hören. 
+
+{$editorialContactSignature}</body>
+		<description>Diese E-Mail wird automatisch verschickt, wenn das Fälligkeitsdatum für eine/n Gutachter/in verstrichen ist (vgl. die Begutachtungseinstellungen in Schritt 2 des Zeitschriftensetups) und wenn der One-Click-Zugang für Gutachter/innen aktiviert ist. Planmäßige Aufgaben (scheduled tasks) müssen aktiviert und konfiguriert sein (vgl. die Konfigurationsdatei der Website).</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_ACCEPT">
+		<subject>Entscheidung der Redaktion</subject>
+		<body>{$authorName},
+
+wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$journalTitle}: "{$articleTitle}" gekommen.
+
+Unsere Entscheidung lautet:
+
+{$editorialContactSignature}
+</body>
+		<description>Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung zu ihrer/seiner Einreichung.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_REVISIONS">
+		<subject>Entscheidung der Redaktion</subject>
+		<body>{$authorName},
+
+wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$journalTitle}: "{$articleTitle}" gekommen.
+
+Unsere Entscheidung lautet:
+
+{$editorialContactSignature}
+</body>
+		<description>Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung zu ihrer/seiner Einreichung.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_RESUBMIT">
+		<subject>Entscheidung der Redaktion</subject>
+		<body>{$authorName},
+
+wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$journalTitle}: "{$articleTitle}" gekommen.
+
+Unsere Entscheidung lautet:
+
+{$editorialContactSignature}
+</body>
+		<description>Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung zu ihrer/seiner Einreichung.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_DECLINE">
+		<subject>Entscheidung der Redaktion</subject>
+		<body>{$authorName},
+
+wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$journalTitle}: "{$articleTitle}" gekommen.
+
+Unsere Entscheidung lautet:
+
+{$editorialContactSignature}
+</body>
+		<description>Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung zu ihrer/seiner Einreichung.</description>
+	</email_text>
+	<email_text key="EDITOR_REVIEW">
+		<subject>Redaktionelle Begutachtung Ihres Beitrags</subject>
+		<body>{$authorName},
+
+wir haben die Begutachtung Ihres Beitrags "{$articleTitle}" jetzt abgeschlossen. Wir haben uns entschieden... 
+
+{$comments}.
+
+Weitere Bemerkungen zu Ihrem Manuskript aus den redaktionellen bzw. den Peer-Review-Gutachten erhalten Sie, wenn Sie sich bei der Zeitschrift einloggen.
+
+URL des Beitrags: {$submissionUrl}
+Benutzer/innenname: {$authorUsername}
+
+Wenn Sie noch Fragen haben, können Sie sich gerne an mich wenden.
+
+{$editorialContactSignature}</body>
+		<description>Diese E-Mail wird von der/dem Rubrikredakteur/in an die Autorin/den Autor einer Einreichung gesendet, um sie/ihn darüber zu informieren, dass eine Entscheidung in Bezug auf ihre/seine Einreichung getroffen worden ist.</description>
+	</email_text>
+	<email_text key="COPYEDIT_REQUEST">
+		<subject>Bitte um ein Lektorat</subject>
+		<body>{$copyeditorName},
+
+ich bitte Sie, das Manuskript "{$articleTitle}" für {$journalName} zu lektorieren. Bitte gehen Sie dabei folgendermaßen vor:
+1. Klicken Sie auf die unten stehende URL des Beitrags.
+2. Loggen Sie sich bei der Zeitschrift ein und klicken Sie auf den Dateinamen in Schritt 1.
+3. Beachten Sie die Hinweise zum Lektorat auf der Webseite.
+4. Öffnen Sie die heruntergeladene Datei und lektorieren Sie den Text; fügen Sie, falls nötig, Fragen an die Autorin/den Autor hinzu.
+5. Sichern Sie die lektorierte Version und laden Sie sie zu Schritt 1 des Lektorats hoch.
+6. Schicken Sie die ABGESCHLOSSEN-E-Mail an die Redaktion.
+
+URL {$journalName}: {$journalUrl}
+URL des Beitrags: {$submissionCopyeditingUrl}
+Benutzer/innenname: {$copyeditorUsername}
+
+{$editorialContactSignature}</body>
+		<description>Diese E-Mail wird von der/dem Rubrikredakteur/in an die/den Lektor einer Einreichung gesendet, um diese/n zu bitten, mit dem Lektorat zu beginnen. Sie liefert Informationen über die Einreichung und darüber, wie auf sie zuzugreifen ist.</description>
+	</email_text>
+	<email_text key="COPYEDIT_COMPLETE">
+		<subject>Lektorat beendet</subject>
+		<body>{$editorialContactName},
+
+wir haben den ersten Lektoratsdurchgang für das Manuskript "{$articleTitle}" für {$journalName} abgeschlossen. Um die vorgeschlagenen Änderungen zu verfolgen und die eingefügten Fragen an die Autorin/den Autor zu beantworten, gehen Sie bitte folgendermaßen vor:
+
+1. Loggen Sie sich bitte bei der Zeitschrift mit Ihrem Benutzer/innennamen und Ihrem Passwort ein (verwenden Sie "Passwort vergessen", falls nötig).
+2. Klicken Sie auf die Datei bei 1: Erstes Lektorat und öffnen Sie die lektorierte Version.
+3. Überprüfen Sie die lektorierte Version und nehmen Sie ggf. Änderungen vor. Verwenden Sie dabei bitte das Word-Korrekturprogramm. Beantworten Sie auch die eingefügten Fragen zum Text.
+4. Sichern Sie die Datei und laden Sie sie zu Schritt 2: Lektorat durch Autor/in hoch.
+5. Klicken Sie auf das E-Mail-Symbol und senden Sie die ABGESCHLOSSEN-Nachricht an die Redakteurin/den Redakteur.
+
+Dies ist die letzte Gelegenheit für Sie, noch größere Änderungen vorzunehmen. Sie werden später noch gebeten, die Fahnen zu korrigieren, dann können jedoch nur noch kleinere Typographie- und Layoutfehler korrigiert werden.
+
+URL des Beitrags: {$submissionEditingUrl}
+Benutzer/innenname: {$authorUsername}
+
+Falls Sie zur Zeit nicht in der Lage sein sollten, unserer Aufforderung nachzukommen oder noch Fragen haben, 
+geben Sie mir bitte Bescheid. Vielen Dank für Ihren Beitrag zu dieser Zeitschrift.
+ 
+{$copyeditorName}</body>
+	</email_text>
+	<email_text key="COPYEDIT_ACK">
+		<subject>Eingangsbestätigung für lektorierte Fassung</subject>
+		<body>{$copyeditorName}, 
+
+vielen Dank für das Lektorat des Manuskripts "{$articleTitle}". Ihre Mitarbeit unterstützt uns bei den Bemühungen, die Qualität der Beiträge in {$journalName} zu sichern.
+
+{$editorialContactSignature}</body>
+		<description>Diese E-Mail wird von der Rubrikredakteurin/dem Rubrikredakteur an die Lektorin/den Lektor eines Beitrags, um den erfolgreichen Abschluss des Lektoratsprozesses zu bestätigen und um ihr/ihm für die Unterstützung zu danken.</description>
+	</email_text>
+	<email_text key="COPYEDIT_AUTHOR_REQUEST">
+		<subject>Bitte um Durchsicht der lektorierten Fassung</subject>
+		<body>{$authorName},	
+
+Ihre Einreichung "{$articleTitle}" für {$journalName} hat den ersten Lektoratsschritt passiert, und Sie können ihn jetzt durchsehen. Gehen Sie bitte folgendermaßen vor:
+
+1. Klicken Sie auf die unten stehende URL Ihres Beitrags.
+2. Loggen Sie sich bitte mit Ihrem Benutzer/innennamen bei der Zeitschrift ein und klicken Sie auf den Dateinamen, der bei Schritt 1 erscheint. 3. Öffnen Sie die heruntergeladene Version Ihres Beitrags.
+4. Überprüfen Sie den Text einschließlich der Änderungsvorschläge in Ihrem Manuskript und beantworten Sie die ggf. dort gestellte Fragen.
+5. Sie können weitere eigene Verbesserungen in Ihrem Text vornehmen.
+6. Laden Sie die fertige Korrekturversion in Schritt 2 wieder hoch.
+7. Klicken Sie auf METADATEN ÜBERPRÜFEN, um die Angaben für die Indizierung Ihres Beitrags auf Vollständigkeit und Richtigkeit zu überprüfen.
+8. Benachrichtigen Sie die Redaktion mit der ABGESCHLOSSEN-E-Mail.
+
+URL des Beitrags: {$submissionCopyeditingUrl}
+Benutzer/innename: {$authorUsername}
+
+Dies ist die letzte Gelegenheit für Sie, noch größere Änderungen vorzunehmen. Sie werden danach noch gebeten, die Fahnen zu korrigieren. Dann können Sie jedoch nur noch kleinere Typographie- und Layoutfehler korrigieren.
+
+Falls Sie zur Zeit nicht in der Lage sein sollten, unserer Aufforderung nachzukommen oder noch Fragen haben, benachrichtigen Sie mich bitte. Vielen Dank für Ihren Beitrag zu dieser Zeitschrift. 
+
+{$editorialContactSignature}</body>
+		<description>Diese E-Mail wird von der/dem Rubrikredakteur/in an die Autorin/den Autor einer Einreichung gesendet, um diese/n darum zu bitten, die Arbeit der Lektorin/des Lektors korrekturzulesen. Sie liefert Informationen über den Zugang zu dem Manuskript und weist darauf hin, dass dies die letzte Gelegenheit für die Autorin/den Autor ist, nennenswerte Änderungen vorzunehmen.</description>
+	</email_text>
+	<email_text key="COPYEDIT_AUTHOR_COMPLETE">
+		<subject>Lektorat durch Autor/in abgeschlossen</subject>
+		<body>{$editorialContactName},
+
+ich habe nun die lektorierte Fassung meines Manuskripts "{$articleTitle}" für {$journalName} korrigiert. Es steht damit für die abschließende Durchsicht und die Vorbereitung des Layouts für die Veröffentlichung in {$journalName} zur Verfügung.
+
+Mit bestem Dank für Ihre Bemühungen um meinen Beitrag, 
+{$authorName}</body>
+		<description>This email is sent by the Author to the Section Editor to notify them that the Author's copyediting process has been completed.</description>
+	</email_text>
+	<email_text key="COPYEDIT_AUTHOR_ACK">
+		<subject>Eingangsbestätigung für die durchgesehene Korrekturversion</subject>
+		<body>{$authorName},
+
+vielen Dank für die Durchsicht der Korrekturversion Ihres Manuskripts "{$articleTitle}" für {$journalName}. Wir freuen uns auf die Veröffentlichung dieses Beitrags.
+
+{$editorialContactSignature}</body>
+		<description>Diese E-Mail wird von der/dem Rubrikredakteur/in an die  Autorin/den Autor einer Einreichung gesendet, um ihr/ihm zu bestätigen, dass das Korrekturlektorat durch die/den Autor/in abgeschlossen ist und um ihr/ihm für die Mitwirkung zu danken.</description>
+	</email_text>
+	<email_text key="COPYEDIT_FINAL_REQUEST">
+		<subject>Bitte um letzte Durchsicht</subject>
+		<body>{$copyeditorName},
+
+Autor/in und Redaktion haben die Prüfung und Korrektur des Manuskripts "{$articleTitle}" für {$journalName} abgeschlossen. Eine endgültige Fassung, die dann für das Layout zur Verfügung steht, muss jetzt erstellt werden. Bitte gehen Sie dabei folgendermaßen vor:
+1. Klicken Sie auf die unten stehende URL des Beitrags.
+2. Loggen Sie sich bei der Zeitschrift ein und klicken Sie auf den Dateinamen in Schritt 2.
+3. Öffnen Sie die heruntergeladene Datei und fügen Sie alle Korrekturen und Fragen an die Autorin/den Autor ein.
+4. Sichern Sie die Datei und laden Sie sie zu Schritt 3 des Lektorats hoch.
+5. Klicken Sie auf METADATEN ÜBERPRÜFEN und überprüfen Sie die Informationen für die Indizierung. Vergessen Sie ggf. nicht, Ihre Änderungen zu sichern.
+6. Schicken Sie die ABGESCHLOSSEN-E-Mail an die Redaktion.
+
+URL {$journalName}: {$journalUrl}
+URL des Beitrags: {$submissionCopyeditingUrl}
+Benutzer/innenname: {$copyeditorUsername}
+
+{$editorialContactSignature}</body>
+		<description>Diese E-Mail wird von der/dem Rubrikredakteur/in an die/den Lektor/in gesendet, um darum zu bitten, dass sie/er einen letzten Durchgang des Lektorats einer Einreichung durchführt, bevor diese in den Layoutprozess gegeben wird.</description>
+	</email_text>
+	<email_text key="COPYEDIT_FINAL_COMPLETE">
+		<subject>Letzte Durchsicht abgeschlossen</subject>
+		<body>{$editorialContactName},
+
+ich habe eine korrigierte letzte Fassung des Manuskripts "{$articleTitle}" für {$journalName} fertiggestellt. Sie steht nun zum Layout und zur Vorbereitung der Fahnen bereit.
+
+{$copyeditorName}</body>
+		<description>Diese E-Mail von der/dem Lektor/in an die/den Rubrikredakteur/in informiert diese/n darüber, dass der letzte Lektoratdurchgang abgeschlossen worden ist und dass der Layoutprozess nun beginnen kann.</description>
+	</email_text>
+	<email_text key="COPYEDIT_FINAL_ACK">
+		<subject>Eingangsbestätigung für abschließende Korrektur</subject>
+		<body>{$copyeditorName},
+
+vielen Dank für die abschließende Bearbeitung des Manuskripts "{$articleTitle}" für {$journalName}. Mit der Erstellung dieser letzten Fassung als Vorbereitung für das Layout haben Sie uns im Redaktionsprozess sehr geholfen.
+
+{$editorialContactSignature}</body>
+		<description>Diese E-Mail von der/dem Rubrikredakteur/in an die/den Lektor/in bestätigt den Abschluss des letzten Lektoratdurchgangs und dankt ihr/ihm für die Mitwirkung.</description>
+	</email_text>
+	<email_text key="LAYOUT_REQUEST">
+		<subject>Bitte um Layout</subject>
+		<body>{$layoutEditorName},
+
+ich bitte Sie um das Layout der Fahnen für das Manuskript "{$articleTitle}" für {$journalName}. Bitte gehen Sie folgendermaßen vor:
+
+1. Klicken Sie auf die unten stehende URL des Beitrags.
+2. Loggen Sie sich bei der Zeitschrift ein und verwenden Sie die Datei der Layout-Fassung, um die Fahne entsprechend den Vorgaben der Zeitschrift zu erstellen.
+3. Schicken Sie die ABGESCHLOSSEN-E-Mail an die Redaktion.
+
+URL {$journalName}: {$journalUrl}
+URL des Beitrags: {$submissionLayoutUrl}
+Benutzer/innenname: {$layoutEditorUsername}
+
+Falls Sie zur Zeit nicht in der Lage sein sollten, die Arbeit zu übernehmen, oder Fragen haben, geben Sie mir bitte Bescheid. Vielen Dank für Ihre Unterstützung dieser Zeitschrift.
+
+{$editorialContactSignature}</body>
+		<description>Diese E-Mail von der/dem Rubrikredakteur/in an die/den Layouter/in benachrichtigt diese/n, dass ihr/ihm die Aufgabe zugewiesen wird, einen Beitrag zu layouten. Sie liefert Informationen über den Beitrag und darüber, wie auf ihn zugegriffen werden kann.</description>
+	</email_text>
+	<email_text key="LAYOUT_COMPLETE">
+		<subject>Fahnen fertigestellt</subject>
+		<body>{$editorialContactName},
+
+die Fahnen für das Manuskript "{$articleTitle}" für {$journalName} sind fertig und stehen zum Korrekturlektorat bereit.
+
+Falls Sie Fragen haben, können Sie sich gerne an mich wenden.
+
+{$layoutEditorName}</body>
+		<description>Diese E-Mail von der/dem Layouter/in an die/den Rubrikredakteur/in benachrichtigt diese/n, dass der Layoutprozess abgeschlossen worden ist.</description>
+	</email_text>
+	<email_text key="LAYOUT_ACK">
+		<subject>Eingangsbestätigung für die Fahnen</subject>
+		<body>{$layoutEditorName},
+
+vielen Dank für die Fahnen des Manuskripts "{$articleTitle}" für {$journalName}. Dies ist ein wichtiger Beitrag zum Veröffentlichungsprozess.
+
+{$editorialContactSignature}</body>
+		<description>Diese E-Mail von der/dem Rubrikredakteur/in an die/den Layouter/in bestätigt den Abschluss des Layoutprozesses und dankt ihr/ihm für die Mitwirkung.</description>
+	</email_text>
+	<email_text key="PROOFREAD_AUTHOR_REQUEST">
+		<subject>Bitte um Fahnenkorrektur an Autor/in</subject>
+		<body>{$authorName},
+
+wir bitten Sie, die Fahnenkorrektur von "{$articleTitle}" für {$journalName} vorzunehmen. Bitte gehen Sie folgendermaßen vor:
+1. Klicken Sie auf die unten stehende URL der Zeitschrift.
+2. Loggen Sie sich bei der Zeitschrift ein und öffnen Sie die KORREKTURHINWEISE.
+3. Klicken Sie auf KORREKTURFAHNE ANSEHEN und überprüfen Sie die Typographie und die Formatierungen.
+4. Geben Sie typographische Korrekturen und Formatänderungen ein.
+5. Speichern Sie die Datei ab und schicken Sie sie per E-Mail an die Layoutredaktion und das Korrekturlektorat.
+6. Senden Sie die ABGESCHLOSSEN-E-Mail an die Redaktion.
+
+URL des Beitrags: {$submissionUrl}
+Benutzer/innenname: {$authorUsername}
+
+{$editorialContactSignature}</body>
+		<description>Diese E-Mail von der/dem Rubrikredakteur/in an die/den Autor/in benachrichtigt diese/n, dass die Fahnen eines Artikels zum Korrekturlektorat bereit stehen. Sie liefert Informationen über den Beitrag und darüber, wie auf ihn zugegriffen werden kann.</description>
+	</email_text>
+	<email_text key="PROOFREAD_AUTHOR_COMPLETE">
+		<subject>Korrekturen abgeschlossen (Autor/in)</subject>
+		<body>{$editorialContactName},
+
+ich habe die Fahnenkorrekturen meines Manuskripts "{$articleTitle}" für {$journalName} abgeschlossen. Die Fahnen können nun von Lektor/in und Layouter/in fertiggestellt werden.
+
+{$authorName}</body>
+		<description>Diese E-Mail von der/dem Autor/in an Korrekturlektor/in und Redakteur/in benachrichtigt diese, dass der Korrekturlektoratdurchgang der Autorin/des Autors abgeschlossen ist und dann Details in den Kommentaren zum Artikel zu finden sind.</description>
+	</email_text>
+	<email_text key="PROOFREAD_AUTHOR_ACK">
+		<subject>Eingangsbestätigung für die Korrekturfassung an Verfasser/in</subject>
+		<body>{$authorName},
+
+vielen Dank für die Fahnenkorrektur Ihres Manuskripts "{$articleTitle}". Wir freuen uns auf die baldige Veröffentlichung Ihres Beitrags in {$journalName}.
+
+Wenn Sie sich für unseren Benachrichtigungsdienst einschreiben, erhalten Sie gleich bei Erscheinen eine E-Mail mit dem Inhaltsverzeichnis der neuen Nummer. Falls Sie Fragen haben, benachrichtigen Sie uns bitte. 
+
+{$editorialContactSignature}</body>
+		<description>Diese E-Mail von der/dem Rubrikredakteur/in an die/den Autor/in bestätigt den Abschluss des ersten Korrekturlektoratdurchgangs und dankt ihr/ihm für die Mitwirkung.</description>
+	</email_text>
+	<email_text key="PROOFREAD_REQUEST">
+		<subject>Korrekturlektorat-Anfrage</subject>
+		<body>{$proofreaderName},
+
+der Beitrag "{$articleTitle}" für {$journalName} muss nun gemäß der folgenden Schritte durchgesehen werden.
+1. Klicken Sie unten auf die URL des Beitrags.
+2. Loggen Sie sich bei der Zeitschrift ein und lesen Sie die Korrekturhinweise.
+3. Klicken Sie auf KORREKTURFAHNE LESEN und überprüfen Sie die Fahnen in den jeweiligen Formaten.
+4. Geben Sie typographische Korrekturen und Formatänderungen ein.
+5. Speichern Sie die Korrekturen und senden sie per E-Mail an die Layouterin/den Layouter.
+6. Senden Sie die ABGESCHLOSSEN-E-Mail an die Redakteurin/den Redakteur.
+
+Manuskript-URL: {$submissionUrl}
+Benutzer/innenname: {$proofreaderUsername}
+
+Falls Sie zur Zeit nicht in der Lage sein sollten, unserer Aufforderung nachzukommen, oder noch Fragen haben, geben Sie mir bitte Bescheid. Vielen Dank für Ihren Beitrag zu dieser Zeitschrift.
+
+{$editorialContactSignature}</body>
+		<description>Diese E-Mail von der/dem Rubrikredakteur/in an die/den Korrekturlektor/in bittet darum, dass diese/r die Fahnen eines Artikels korrekturliest. Sie liefert Informationen über den Artikel und darüber, wie auf ihn zugegriffen werden kann.</description>
+	</email_text>
+	<email_text key="PROOFREAD_COMPLETE">
+		<subject>Lektorat beendet</subject>
+		<body>{$editorialContactName},
+
+ich habe das Lektorat für das Manuskript "{$articleTitle}" für {$journalName} beendet. Die Fahnen sind für die Endkorrekturen durch die Layoutredakteurin/den Layoutredakteur fertiggestellt. 
+
+{$proofreaderName}</body>
+		<description>Diese E-Mail von der/dem Korrekturlektor/in an die/den Rubrikredakteur/in benachrichtigt diese/n, dass die/der Korrekturlektor/in das Korrekturlektorat beendet hat.</description>
+	</email_text>
+	<email_text key="PROOFREAD_ACK">
+		<subject>Eingangsbestätigung für die Endkorrekturen</subject>
+		<body>{$proofreaderName},
+
+vielen Dank für die Endkorrektur der Fahnen des Manuskripts "{$articleTitle}". Sie haben uns bei den Korrekturarbeiten an {$journalName} sehr geholfen.
+
+{$editorialContactSignature}</body>
+		<description>Diese E-Mail von der/dem Rubrikredakteur/in an die/den Korrekturlektor/in bestätigt den Abschluss des Korrekturlektorat-Prozesses durch die/den Korrekturlektor/in und dankt ihr/ihm für die Unterstützung.</description>
+	</email_text>
+	<email_text key="PROOFREAD_LAYOUT_REQUEST">
+		<subject>Korrekturlektorat-Anfrage (Layouter/in)</subject>
+		<body>{$layoutEditorName},
+
+der Beitrag "{$articleTitle}" für {$journalName} ist von Autor/in und Korrekturlektor/in durchgesehen worden, und alle Korrekturen sollten nun den folgenden Schritten gemäß durchgeführt werden.
+1. Klicken Sie auf die URL des Beitrags unten.
+2. Loggen Sie sich bei der Zeitschrift ein und lesen Sie die Korrekturen, um die korrigierten Fahnen zu erzeugen.
+3. Laden Sie die überarbeiteten Fahnen hoch.
+4. Senden Sie die ABGESCHLOSSEN-E-Mail in Schritt 3 des Korrekturlektorats an die Redakteurin/den Redakteur.
+
+URL {$journalName}: {$journalUrl}
+URL des Beitrags: {$submissionUrl}
+Benutzer/innenname: {$layoutEditorUsername}
+
+Wenn Sie diese Aufgabe zur Zeit nicht erledigen können oder wenn Sie irgendwelche Fragen haben, kontaktieren Sie mich bitte. Danke für Ihren Beitrag zu dieser Zeitschrift.
+
+{$editorialContactSignature}</body>
+		<description>Diese E-Mail von der/dem Rubrikredakteur/in an die/den Layouter/in informiert diese/n, dass die Fahnen eines Artikels zum letzten Korrekturlektorat bereit stehen. Sie liefert Informationen über den Artikel und darüber, wie auf ihn zugegriffen werden kann.</description>
+	</email_text>
+	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
+		<subject>Eingangsbestätigung Korrekturlektorat (Korrekturlektor/in)</subject>
+		<body>{$editorialContactName},
+
+nach dem Korrekturlektorat sind nun die Fahnen für das Manuskript "{$articleTitle}" für {$journalName} korrigiert worden. Der Beitrag liegt damit bereit zur Veröffentlichung.
+
+{$layoutEditorName}</body>
+		<description>Diese E-Mail von der/dem Layouter/in an die/den Rubrikredakteur/in informiert diese/n darüber, dass der letzte Schritt des Korrekturlektorats abgeschlossen worden ist und der Artikel nun zur Veröffentlichung bereit steht.</description>
+	</email_text>
+	<email_text key="PROOFREAD_LAYOUT_ACK">
+		<subject>Eingangsbestätigung Korrekturlektorat (Layouter/in)</subject>
+		<body>{$layoutEditorName},
+
+vielen Dank für den Abschluss der Änderungen aus dem Korrekturlektorat in den Fahnen zum Manuskript "{$articleTitle}" für {$journalName}. Dies stellt einen wichtigen Beitrag zur Arbeit dieser Zeitschrift dar.
+
+{$editorialContactSignature}</body>
+		<description>Diese E-Mail wird von der/dem Rubrikredakteur/in an die/den Layouter/in gesendet, um den Abschluss des letzten Schritts des Korrekturlektorats zu bestätigen und um ihr/ihm für die Mitwirkung zu danken.</description>
+	</email_text>
+	<email_text key="EMAIL_LINK">
+		<subject>Möglicherweise interessierender Artikel</subject>
+		<body>Ich dachte, Sie würden sich vielleicht für den Beitrag "{$articleTitle}" von {$authorName}, veröffentlicht in Band {$volume}, Nummer {$number} ({$year}) von {$journalName} unter "{$articleUrl}", interessieren.</body>
+		<description>Diese E-Mail-Vorlage gibt einer registrierten Leserin/einem registrierten Leser die Möglichkeit, Informationen über einen Artikel an jemanden zu senden, die/der sich eventuell dafür interessiert. Sie ist über die Lesewerkzeuge erreichbar und muss von der/dem Zeitschriftenverwalter/in in den Einstellungen der Lesewerkzeuge aktiviert werden.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_NOTIFY">
+		<subject>Abonnementbestätigung</subject>
+		<body>{$subscriberName},
+
+Sie wurden als Abonnent/in in unserem Zeitschriftenverwaltungssystem für {$journalName} registriert, und zwar in der folgenden Kategorie:
+
+{$subscriptionType}
+
+Um auf Inhalte, die nur Abonnent/innen zur Verfügung stehen, zuzugreifen, loggen Sie sich einfach mit Ihrem Benutzer/innennamen "{$username}" in das System ein.
+
+Einmal eingeloggt, können Sie jederzeit die Einzelheiten Ihres Benutzer/innenprofils und Ihr Passwort ändern.
+
+Beachten Sie bitte, dass Sie sich nicht einloggen müssen, wenn Sie ein institutionelles Abonnement haben. Das System gestattet Ihnen dann automatisch den Zugang zu den Inhalten für Abonnent/innen. 
+
+Falls Sie Fragen haben, können Sie sich gerne an mich wenden.
+
+{$subscriptionContactSignature}</body>
+		<description>Diese E-Mail benachrichtigt eine/n registrierte/n Leser/in, dass die/der Abonnementverwalter/in für sie/ihn ein Abonnement angelegt hat. Sie liefert die URL der Zeitschrift und Zugriffsinformationen.</description>
+	</email_text>
+	<email_text key="OPEN_ACCESS_NOTIFY">
+		<subject>Ausgabe jetzt im Open Access</subject>
+		<body>Liebe Leser/innen,
+
+{$journalName} hat soeben die nächste Ausgabe frei zugänglich gemacht. Wir laden Sie ein, sich hier das Inhaltsverzeichnis und auf unserer Webseite ({$journalUrl}) die Sie interessierenden Beiträge anzusehen.
+
+Wir danken für Ihr Interesse an unserer Arbeit,
+{$editorialContactSignature}
+{$editorialContactSignature}</body>
+		<description>Diese E-Mail wird an registrierte Leser/innen gesendet, die darum gebeten haben, informiert zu werden, wenn eine Ausgabe frei verfügbar wird.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_BEFORE_EXPIRY">
+		<subject>Benachrichtigung über ablaufendes Abonnement</subject>
+		<body>{$subscriberName},
+
+Ihr Abonnement für {$journalName} läuft demnächst aus.
+
+{$subscriptionType}
+Expiry date: {$expiryDate}
+
+Um den künftigen Zugang zu dieser Zeitschrift zu gewährleisten, gehen Sie bitte zur Website der Zeitschrift und erneuern Sie Ihr Abonnement. Sie können sich mit Ihrem Benutzer/innennamen "{$username}" in das System einloggen.
+
+Falls Sie Fragen haben, können Sie sich gerne an mich wenden.
+
+{$subscriptionContactSignature}</body>
+		<description>Diese E-Mail informiert eine/n Abonnentin/Abonnenten, dass ihr/sein Abonnement demnächst abläuft. Sie liefert die URL der Zeitschrift und Zugriffsinformationen.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_AFTER_EXPIRY">
+		<subject>Abonnement abgelaufen</subject>
+		<body>{$subscriberName},
+
+Ihr Abonnement für {$journalName} ist ausgelaufen.
+
+{$subscriptionType}
+Ablaufdatum: {$expiryDate}
+
+Falls Sie Ihr Abonnement erneuern möchten, gehen Sie bitte zur Website der Zeitschrift. Sie können sich mit Ihrem Benutzer/innennamen "{$username}" in das System einloggen.
+
+Falls Sie Fragen haben, können Sie sich gerne an mich wenden.
+
+{$subscriptionContactSignature}</body>
+		<description>Diese E-Mail informiert eine/n Abonnentin/Abonnenten, dass ihr/sein Abonnement abgelaufen ist. Sie liefert die URL der Zeitschrift und Zugriffsinformationen.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_AFTER_EXPIRY_LAST">
+		<subject>Abonnement abgelaufen – letzte Benachrichtigung</subject>
+		<body>{$subscriberName},
+
+Ihr Abonnement für {$journalName} ist abgelaufen. Bitte beachten Sie, dass dies die letzte Benachrichtung ist, die wir Ihnen senden.
+
+{$subscriptionType}
+Ablaufdatum: {$expiryDate}
+
+Falls Sie Ihr Abonnement erneuern möchten, gehen Sie bitte zur Website der Zeitschrift. Sie können sich mit Ihrem Benutzer/innennamen "{$username}" in das System einloggen.
+
+Falls Sie Fragen haben, können Sie sich gerne an mich wenden.
+
+{$subscriptionContactSignature}</body>
+		<description>Diese E-Mail informiert eine/n Abonnentin/Abonnenten, dass ihr/sein Abonnement abgelaufen ist. Sie liefert die URL der Zeitschrift und Zugriffsinformationen.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
+		<subject>Abschluss eines Abonnements: Individuell</subject>
+		<body>Ein individuelles Abonnement ist online für {$journalName} mit den folgenden Details abgeschlossen worden.
+
+Art des Abonnements:
+{$subscriptionType}
+
+Benutzer/in:
+{$userDetails}
+
+Informationen zur Mitgliedschaft (sofern angegeben):
+{$membership}
+
+Um sich dieses Abonnement anzusehen oder es zu ändern, benutzen Sie bitte die folgende URL.
+
+Abonnement-URL: {$subscriptionUrl}
+</body>
+		<description>Diese E-Mail benachrichtigt die/den Abonnementverwalter/in, dass ein individuelles Abonnement online erworben worden ist. Sie liefert Informationen über das Abonnement und einen Link zum schnellen Zugriff auf das abgeschlossene Abonnement.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
+		<subject>Abschluss eines Abonnements: Institutionell</subject>
+		<body>Ein institutionelles Abonnement ist online für {$journalName} mit den folgenden Details abgeschlossen worden. Um dieses Abonnement zu aktivieren, benutzen Sie bitte den angegebenen Abonnement-URL und setzen Sie den Abonnementstatus auf 'Aktiv'.
+
+Art des Abonnements:
+{$subscriptionType}
+
+Institution:
+{$institutionName}
+{$institutionMailingAddress}
+
+Domain (sofern angegeben):
+{$domain}
+
+IP-Bereich (sofern angeben):
+{$ipRanges}
+
+Kontaktperson:
+{$userDetails}
+
+Informationen zur Mitgliedschaft (sofern angegeben):
+{$membership}
+
+Um sich dieses Abonnement anzusehen oder es zu ändern, benutzen Sie bitte die folgende URL.
+
+Abonnement-URL: {$subscriptionUrl}
+</body>
+		<description>Diese E-Mail benachrichtigt die/den Abonnementverwalter/in, dass ein institutionelles Abonnement online erworben worden ist. Sie liefert Informationen über das Abonnement und einen Link zum schnellen Zugriff auf das abgeschlossene Abonnement.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INDL">
+		<subject>Erneuerung eines Abonnements: Individuell</subject>
+		<body>Ein individuelles Abonnement ist online für {$journalName} mit den folgenden Details erneuert worden.
+
+Art des Abonnements:
+{$subscriptionType}
+
+Benutzer/in:
+{$userDetails}
+
+Informationen zur Mitgliedschaft (sofern angegeben):
+{$membership}
+
+Um sich dieses Abonnement anzusehen oder es zu ändern, benutzen Sie bitte die folgende URL.
+
+Abonnement-URL: {$subscriptionUrl}
+</body>
+		<description>Diese E-Mail benachrichtigt die/den Abonnementverwalter/in, dass ein individuelles Abonement online erneuert worden ist. Sie liefert Informationen über das Abonnement und einen Link zum schnellen Zugriff auf das erneuerte Abonnement.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INSTL">
+		<subject>Erneuerung eines Abonnements: Institutionell</subject>
+		<body>Ein institutionelles Abonnement ist online für {$journalName} mit den folgenden Details erneuert worden.
+
+Art des Abonnements:
+{$subscriptionType}
+
+Institution:
+{$institutionName}
+{$institutionMailingAddress}
+
+Domain (sofern angegeben):
+{$domain}
+
+IP-Bereich (sofern angeben):
+{$ipRanges}
+
+Kontaktperson:
+{$userDetails}
+
+Informationen zur Mitgliedschaft (sofern angegeben):
+{$membership}
+
+Um sich dieses Abonnement anzusehen oder es zu ändern, benutzen Sie bitte die folgende URL.
+
+Abonnement-URL: {$subscriptionUrl}
+</body>
+		<description>Diese E-Mail benachrichtigt die/den Abonnementverwalter/in, dass ein institutionelles Abonement online erneuert worden ist. Sie liefert Informationen über das Abonnement und einen Link zum schnellen Zugriff auf das erneuerte Abonnement.</description>
 	</email_text>
 </email_texts>
