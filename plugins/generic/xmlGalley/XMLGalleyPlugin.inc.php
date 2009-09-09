@@ -68,7 +68,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 	 * Return XML-derived galley by ID from article_xml_galleys
 	 * (which does not exist in article_galleys)
 	 */
-	function getXMLGalley($hookName, &$args) {
+	function getXMLGalley($hookName, $args) {
 		if (!$this->getEnabled()) return false;
 		$galleyId =& $args[0];
 		$articleId =& $args[1];

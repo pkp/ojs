@@ -166,11 +166,12 @@ class BlockPlugin extends Plugin {
 		return $templateMgr->fetch($this->getTemplatePath() . $blockTemplateFilename);
 	}
 
-	function callback($hookName, &$args) {
+	function callback($hookName, $args) {
 		$params =& $args[0];
 		$smarty =& $args[1];
 		$output =& $args[2];
 		$output .= $this->getContents($smarty);
+		return false;
 	}
 }
 

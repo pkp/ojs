@@ -13,13 +13,10 @@
 {assign var="pageId" value="manager.groups"}
 {include file="common/header.tpl"}
 {/strip}
+
 <script type="text/javascript">
 {literal}
-$(document).ready(function() { setupTableDND("#dragTable", 
-{/literal}
-"{url op=moveMembership path=$group->getId()}"
-{literal}
-); });
+$(document).ready(function() { setupTableDND("#dragTable", {/literal}"{url op=moveMembership path=$group->getId()}"{literal}); });
 {/literal}
 </script>
 
