@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="eu_ES" full_name="Euskara">
+	<message key="plugins.importexport.sample.displayName">Inportatzeko/esportatzeko adibidearen plugina</message>
+	<message key="plugins.importexport.sample.description">Plugin honek inplementazio-adibide bat ematen du, inportatzeko/esportatzeko pluginak garatzean erabiltzeko. Berez ez da oso baliagarria bera bakarrik erabiltzeko.</message>
+
+	<message key="plugins.importexport.sample.selectIssue.short">Hautatu zenbakia</message>
+	<message key="plugins.importexport.sample.selectIssue.long">Hautatu esportatzeko zenbakia.</message>
+</locale>
+

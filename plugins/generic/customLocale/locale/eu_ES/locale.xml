@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="eu_ES" full_name="Euskara">
+	<message key="plugins.generic.customLocale.name">Hizkuntza-paketea pertsonalizatzeko plugina</message>
+	<message key="plugins.generic.customLocale.description">Plugin honekin OJSn erabiltzen den erabiltzaile-interfazearen testu lehenetsia pertsonalizatzen da.</message>
+
+	<message key="plugins.generic.customLocale.longDescription">Orri honetan azaltzen dira aldizkarian instalatuta dauden locale hizkuntza-pakete guztiak.</message>
+	<message key="plugins.generic.customLocale.localeDescription">Orri honetan zerrendatzen dira hautatutako localean erabilgarri dauden fitxategi guztiak.</message>
+	<message key="plugins.generic.customLocale.fileDescription">Sartu testua testu-eremu pertsonalizatu egokian. OJSren testu lehenetsia erabiltzea nahi baduzu, utzi eremua hutsik.</message>
+	<message key="plugins.generic.customLocale.localeName">Localearen izena</message>
+	<message key="plugins.generic.customLocale.localeKey">Gakoa</message>
+	<message key="plugins.generic.customLocale.localeKey.description">Idatzi bilatu nahi duzun localearen gako osoa.</message>
+	<message key="plugins.generic.customLocale.localeKeyValue">Balioa</message>
+	<message key="plugins.generic.customLocale.customize">Pertsonalizatu</message>
+	<message key="plugins.generic.customLocale.availableLocales">Locale erabilgarriak</message>
+
+	<message key="plugins.generic.customLocale.locale">{$locale} localea</message>
+	<message key="plugins.generic.customLocale.localeFiles">Locale-fitxategiak</message>
+	<message key="plugins.generic.customLocale.file.filename">Fitxategi-izena</message>
+	<message key="plugins.generic.customLocale.file.edit">{$filename} edizioa</message>
+	<message key="plugins.generic.customLocale.file.reference">Testu lehenetsia</message>
+	<message key="plugins.generic.customLocale.file.custom">Testu pertsonalizatua</message>
+</locale>
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="eu_ES" full_name="Euskara">
+	<message key="plugins.generic.webfeed.displayName">Web elikatzeko iturriaren plugina</message>
+	<message key="plugins.generic.webfeed.description">Plugin honek RSS/Atom web sindikazioko iturria sortzen du uneko zenbakirako.</message>
+
+	<message key="plugins.generic.webfeed.settings">Ezarpenak</message>
+	<message key="plugins.generic.webfeed.settings.issue">Zenbakiaren orrialdeetan bakarrik bistaratu estekak.</message>
+	<message key="plugins.generic.webfeed.settings.homepage">Hasierak orrian eta zenbakiaren orrialdeetan bakarrik bistaratu estekak.</message>
+	<message key="plugins.generic.webfeed.settings.all">Aldizkariko orri guztietan bistaratu estekak.</message>
+
+	<message key="plugins.generic.webfeed.settings.currentIssue">Bistaratu uneko zenbaki argitaratuko elementuak.</message>
+	<message key="plugins.generic.webfeed.settings.recentArticles">azkenak.</message>
+	<message key="plugins.generic.webfeed.settings.recentItemsRequired">Idatzi osoko zenbaki positibo bat elementu argitaratuen kopurua zehazteko.</message>
+	<message key="plugins.generic.webfeed.atom.altText">Atom logoa</message>
+	<message key="plugins.generic.webfeed.rss1.altText">RSS1 logoa</message>
+	<message key="plugins.generic.webfeed.rss2.altText">RSS2 logoa</message>
+</locale>
+
