@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+
+<locale name="eu_ES" full_name="Euskara">
+	<message key="plugins.importexport.doaj.displayName">DOAJ esportatzeko plugina</message>
+	<message key="plugins.importexport.doaj.description">Aldizkaria esportatu DOAJerako eta DOAJen ordezkariei aldizkariari buruzko informazioa bidali posta elektronikoz.</message>
+
+	
+	<message key="plugins.importexport.doaj.export">Esportatu aldizkariaren datuak DOAJerako</message>
+	<message key="plugins.importexport.doaj.export.journal">Esportatu aldizkaria</message>
+	<message key="plugins.importexport.doaj.export.email">Bidali mezua DOAJen ordezkariari</message>
+	<message key="plugins.importexport.doaj.export.journalInfo">Esportatu artikuluen informazioa XMLn DOAJen artxibatzeko</message>
+	<message key="plugins.importexport.doaj.export.emailInfo">DOAJen zuen aldizkaria har dezaten, bidal ezazu mesedez erdi-beteta datorren inprimaki hau DOAJera, eta saia zaitez falta diren datuak ahalik eta ondoen betetzen.</message>
+
+</locale>
+

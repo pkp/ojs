@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="eu_ES" full_name="Euskara">
+	<message key="plugins.gateways.resolver.displayName">Ebazle-plugina</message>
+	<message key="plugins.gateways.resolver.description">Aipamen-informazioan oinarrituta, zenbakiak edo artikuluak ebazten ditu plugin honek.</message>
+	<message key="plugins.gateways.resolver.errors.errorMessage">Ezin izan da entitate bakarra ebatzi, zehaztutako aipamen-informazioarekin. Egiaztatu aipamen-informazioa ulergarria dela eta OJSren banaketa honetako entitate bati dagokiola.</message>
+	<message key="plugins.gateways.resolver.exportHoldings">Esportatu zerrendak</message>
+</locale>
+

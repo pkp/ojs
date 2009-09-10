@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="eu_ES" full_name="Euskara">
+	<message key="plugins.importexport.crossref.displayName">Crossref XML esportatzeko plugina</message>
+	<message key="plugins.importexport.crossref.description">Artikuluen metadatuak esportatu CrossRef XML formatuan.</message>
+	
+	<message key="plugins.importexport.crossref.export">Esportatu datuak</message>
+	<message key="plugins.importexport.crossref.export.issues">Esportatu zenbakiak</message>
+	<message key="plugins.importexport.crossref.export.selectIssue">Hautatu esportatzeko zenbakia.</message>
+	<message key="plugins.importexport.crossref.export.articles">Esportatu artikuluak</message>
+	<message key="plugins.importexport.crossref.export.selectArticle">Hautatu esportatzeko artikuluak.</message>
+	
+	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Usage: 
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
+]]></message>
+	<message key="plugins.importexport.crossref.cliError">ERROREA:</message>
+
+	<message key="plugins.importexport.crossref.export.error.issueNotFound">Ez dago "{$issueId}" IDarekin bat datorren zenbakirik.</message>
+	<message key="plugins.importexport.crossref.export.error.articleNotFound">Ez dago "{$articleId}" IDarekin bat datorren artikulurik.</message>
+
+	<message key="plugins.importexport.crossref.errors.noDOIprefix">Aldizkariaren konfigurazioan baliozko DOI aurrizki bat zehaztu behar da plugin hau erabili ahal izateko.</message>
+</locale>
+
