@@ -42,7 +42,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="user.affiliation"}</td>
-		<td class="value">{$user->getAffiliation()|escape|default:"&mdash;"}</td>
+		<td class="value">{$user->getAffiliation()|escape|nl2br|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="user.signature"}</td>

@@ -128,7 +128,7 @@
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="contactAffiliation" key="user.affiliation"}</td>
-		<td width="80%" class="value"><input type="text" name="contactAffiliation[{$formLocale|escape}]" id="contactAffiliation" value="{$contactAffiliation[$formLocale]|escape}" size="30" maxlength="90" class="textField" /></td>
+		<td width="80%" class="value"><textarea name="contactAffiliation[{$formLocale|escape}]" id="contactAffiliation" rows="5" cols="40" class="textArea">{$contactAffiliation[$formLocale]|escape}</textarea></td>
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="contactEmail" key="user.email" required="true"}</td>

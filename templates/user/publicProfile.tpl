@@ -37,7 +37,7 @@
 				{translate key="user.affiliation"}
 			</td>
 			<td class="data" width="80%">
-				{$user->getAffiliation()|escape}
+				{$user->getAffiliation()|escape|nl2br}
 			</td>
 		</tr>
 	{/if}{* $user->getAffiliation() *}

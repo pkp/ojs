@@ -42,7 +42,7 @@
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="userAffiliation" key="user.affiliation"}</td>
-	<td class="value"><input type="text" name="userAffiliation" id="userAffiliation" value="{$userAffiliation|escape}" size="30" maxlength="255" class="textField" /></td>
+	<td class="value"><textarea name="userAffiliation" id="userAffiliation" rows="5" cols="40" class="textArea">{$userAffiliation|escape}</textarea></td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="userUrl" key="user.url"}</td>
