@@ -17,14 +17,6 @@ import('pages.login.PKPLoginHandler');
 
 class LoginHandler extends PKPLoginHandler {
 	/**
-	 * Constructor
-	 **/
-	function LoginHandler() {
-		parent::PKPLoginHandler();
-	}
-
-
-	/**
 	 * Sign in as another user. 
 	 * @param $args array ($userId)
 	 */
