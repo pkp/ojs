@@ -85,7 +85,7 @@ class AboutHandler extends Handler {
 		$templateMgr =& TemplateManager::getManager();
 		$journal =& Request::getJournal();
 		
-		Locale::requireComponents(array(LOCALE_COMPONENT_OJS_MANAGER));
+		Locale::requireComponents(array(LOCALE_COMPONENT_OJS_MANAGER, LOCALE_COMPONENT_PKP_MANAGER));
 
 		if (!$journal || !$journal->getSetting('restrictSiteAccess')) {
 			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
