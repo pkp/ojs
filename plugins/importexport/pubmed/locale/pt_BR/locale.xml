@@ -16,16 +16,15 @@
 	<message key="plugins.importexport.pubmed.displayName">Plugin Exportador PubMed XML</message>
 	<message key="plugins.importexport.pubmed.description">Exporta metadados de artigos no formato PubMed XML para indexação na MEDLINE.</message>
 	
-	<message key="plugins.importexport.pubmed.export">Exportar Dados</message>
-	<message key="plugins.importexport.pubmed.export.issues">Exportar Edições</message>
-	<message key="plugins.importexport.pubmed.export.selectIssue">Escolher uma Edição para exportar.</message>
-	<message key="plugins.importexport.pubmed.export.articles">Exportar Artigos</message>
-	<message key="plugins.importexport.pubmed.export.selectArticle">Selecionar Artigos para exportar.</message>
+	<message key="plugins.importexport.pubmed.export">Exportar dados</message>
+	<message key="plugins.importexport.pubmed.export.issues">Exportar edições</message>
+	<message key="plugins.importexport.pubmed.export.selectIssue">Escolher uma edição para exportar.</message>
+	<message key="plugins.importexport.pubmed.export.articles">Exportar artigos</message>
+	<message key="plugins.importexport.pubmed.export.selectArticle">Selecionar artigos para exportar.</message>
 	
-	<message key="plugins.importexport.pubmed.cliUsage"><![CDATA[Modo de Usar: 
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] artigos [articleId1] [articleId2] ...
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] edição [issueId]
-]]></message>
+	<message key="plugins.importexport.pubmed.cliUsage">Modo de Usar: 
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]</message>
 	<message key="plugins.importexport.pubmed.cliError">ERRO:</message>
 
 	<message key="plugins.importexport.pubmed.export.error.issueNotFound">Nenhuma edição encontrada com o ID "{$issueId}".</message>

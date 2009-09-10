@@ -15,11 +15,11 @@
 <locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.theme.custom.name">Plugin de Tema Customizado</message>
 	<message key="plugins.theme.custom.description">Este plugin implementa um tema customizado.</message>
-	<message key="plugins.theme.custom.notWritable">NOTA: A folha de estilos deste plugin, "{$stylesheetFileLocation}", não possui permissão de escrita. Este arquivo deve possuir permissão de escrita para poder utilizar o plugin.</message>
+	<message key="plugins.theme.custom.notWritable">NOTA: A folha de estilos deste plugin, "{$stylesheetFileLocation}", não possui permissão de escrita. Este arquivo deve possuir permissão de escrita antes de fazer uso do plugin.</message>
 	<message key="plugins.theme.custom.settings">Configurações</message>
 	<message key="plugins.theme.custom.pickColour">Escolha a cor</message>
 	<message key="plugins.theme.custom.header">Cabeçalho</message>
 	<message key="plugins.theme.custom.link">Link</message>
-	<message key="plugins.theme.custom.background">Fundo traseiro</message>
-	<message key="plugins.theme.custom.foreground">Fundo dianteiro</message>
+	<message key="plugins.theme.custom.background">Cor de segundo plano</message>
+	<message key="plugins.theme.custom.foreground">Cor de primeiro plano</message>
 </locale>

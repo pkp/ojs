@@ -19,4 +19,6 @@
 	<message key="plugins.block.subscription.expires">Échéance</message>
 	<message key="plugins.block.subscription.providedBy">Accès fournit par :</message>
 	<message key="plugins.block.subscription.comingFromIP">Adresse IP de provenance :</message>
+	<message key="plugins.block.subscription.about">Abonnements</message>
+	<message key="plugins.block.subscription.loginToVerifySubscription">Ouvrir une session pour vérifier l'abonnement</message>
 </locale>

@@ -200,4 +200,8 @@
 	<message key="editor.article.removeCoverPage">Supprimer l'image de la page couverture?</message>
 	<message key="editor.article.remove">Supprimer</message>
 	<message key="editor.article.confirmChangeReviewForm">Changer le formulaire d'évaluation supprimera les réponses...</message>
+	<message key="editor.issues.enableOpenAccessDate">Activer l'accès libre différé</message>
+	<message key="editor.issues.unpublishIssue">Numéro non publié</message>
+	<message key="editor.issues.confirmUnpublish">Êtes-vous certain que vous souhaitez retirer ce numéro publié?</message>
+	<message key="editor.article.archiveSubmission">Rejeter et archiver la soumission</message>
 </locale>

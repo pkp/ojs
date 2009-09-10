@@ -14,7 +14,7 @@
 
 <locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.importexport.doaj.displayName">Plugin de Exportação DOAJ</message>
-	<message key="plugins.importexport.doaj.description">Exportar revista para DOAJ e notificar enviar via e-mail dados da revista ao representante do DOAJ</message>
+	<message key="plugins.importexport.doaj.description">Exportar revista para DOAJ e notificar via e-mail dados da revista ao representante do DOAJ</message>
 
 	
 	<message key="plugins.importexport.doaj.export">Exportar dados da revista para DOAJ</message>

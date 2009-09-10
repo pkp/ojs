@@ -145,4 +145,13 @@ Les chiffres dans le tableau 3 ne sont pas alignés dans la troisième colonne.<
 <pre>4. FORMATAGE
 Le paragraphe qui commence « Ce dernier sujet... » est à effacer. </pre>]]></message>
 	<message key="default.journalSettings.purchaseArticleFeeDescription">Le paiement de ces frais vous permettra d'afficher, de télécharger sur votre poste, et d'imprimer cet article.</message>
+	<message key="section.default.title">Articles</message>
+	<message key="section.default.abbrev">ART</message>
+	<message key="default.journalSettings.submissionFee">Soumission d'article</message>
+	<message key="default.journalSettings.fastTrackFee">Évaluation prioritaire</message>
+	<message key="default.journalSettings.publicationFee">Publication d'article</message>
+	<message key="default.journalSettings.purchaseArticleFee">Acheter un article</message>
+	<message key="default.journalSettings.membershipFee">Adhésion d'association</message>
+	<message key="default.journalSettings.donationFee">Dons à la revue</message>
+	<message key="section.default.policy"><![CDATA[&#x0020;]]></message>
 </locale>

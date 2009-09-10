@@ -19,7 +19,7 @@
 	<message key="plugins.generic.customLocale.longDescription">Esta página lista todos os idiomas atualmente instalados na revista.</message>
 	<message key="plugins.generic.customLocale.localeDescription">Esta página lista todos os arquivos disponíveis para o idioma selecionado.</message>
 	<message key="plugins.generic.customLocale.fileDescription">Informe o texto no campo correspondente. Deixe o campo em branco para utilizar a tradução original.</message>
-	<message key="plugins.generic.customLocale.localeName">Nome da Tradução</message>
+	<message key="plugins.generic.customLocale.localeName">Título para a tradução</message>
 	<message key="plugins.generic.customLocale.localeKey">Chave</message>
 	<message key="plugins.generic.customLocale.localeKeyValue">Valor</message>
 	<message key="plugins.generic.customLocale.customize">Customizar</message>
@@ -32,4 +32,6 @@
 	<message key="plugins.generic.customLocale.file.reference">Texto original</message>
 	<message key="plugins.generic.customLocale.file.custom">Texto customizado</message>
 	<message key="plugins.generic.customLocale.localeKey.description">Digite uma chave de tradução completa para pesquisar.</message>
+	<message key="plugins.generic.customLocale.enabled">O Plugin de Customização de Idioma foi habilitado.</message>
+	<message key="plugins.generic.customLocale.disabled">O Plugin de Customização de Idioma foi desabilitado.</message>
 </locale>

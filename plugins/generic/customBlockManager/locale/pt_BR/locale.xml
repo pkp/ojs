@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the pt_BR locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="pt_BR" full_name="Português (Brasil)">
+	<message key="plugins.generic.customBlockManager.displayName">Adminsitração de Blocos Personalizados</message>
+	<message key="plugin.generic.customBlockManager.introduction"><![CDATA[Use este plugin para incluir ou excluir plugins de bloco personalizados.  Em seguida, edite o conteúdo através da página <a href="{$systemPluginsUrl}">Plugins do Sistema</a> (na seção Plugins de Bloco).  Para incluir seu plugin no local desejado na barra lateral, acesse <a href="{$setupStep56}">Passo 5.6</a>]]></message>
+	<message key="plugins.generic.customBlockManager.settings">Configurações</message>
+	<message key="plugins.generic.customBlockManager.blockName">Nome do bloco</message>	
+	<message key="plugins.generic.customBlockManager.action">Ação</message>	
+	<message key="plugins.generic.customBlockManager.delete">Excluir</message>	
+	<message key="plugins.generic.customBlockManager.addBlock">Incluir bloco</message>	
+
+	<message key="plugins.generic.customBlock.content">Conteúdo</message>
+	<message key="plugins.generic.customBlock.saved">O conteúdo do bloco foi salvo com sucesso.</message>
+	<message key="plugins.generic.customBlock.nameSuffix">(Plugin de Bloco Personalizado)</message>
+	<message key="plugins.generic.customBlock.description">Bloco produzido pelo usuário.</message>
+	<message key="plugins.generic.customBlock.editContent">Editar o conteúdo da barra lateral</message>
+	<message key="plugins.generic.customBlock.contentRequired">Algum conteúdo é obrigatório. Caso deseje excluir este bloco, acesse o Gerente de Blocos Personalizados ou desabilitando o bloco no Passo 5 de configuração da revista.</message>
+	<message key="plugins.generic.customBlock.edit">Editar</message>
+</locale>

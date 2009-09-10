@@ -13,6 +13,6 @@
   -->
  
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
-	<message key="plugins.block.help.displayName">Hilfe Block</message>
-	<message key="plugins.block.help.description">Hilfe-Link Plugin für die Seitenleiste</message>
+	<message key="plugins.block.help.displayName">Hilfe-Block</message>
+	<message key="plugins.block.help.description">Dieses Plug-In stellt einen Hilfe-Link in der Sidebar bereit.</message>
 </locale>

@@ -15,4 +15,6 @@
 <locale name="fr_CA" full_name="Français (Canada)">
 	<message key="plugins.generic.sehl.name">Plugiciel SEHL</message>
 	<message key="plugins.generic.sehl.description">Ce plugiciel implante la mise en surbrillance des résultats de recherche afin de pouvoir mettre en surbrillance les mots-clés recherchés et repérés par un moteur de recherche dans un article HTML.</message>
+	<message key="plugins.generic.sehl.enabled">Le plugiciel SEHL a été activé.</message>
+	<message key="plugins.generic.sehl.disabled">Le plugiciel SEHL a été désactivé.</message>
 </locale>

@@ -126,4 +126,37 @@ Der Absatz, der mit "Dieses Thema schließlich ..." beginnt, ist nicht eingerüc
 	<message key="section.default.title">Artikel</message>
 	<message key="default.journalSettings.checklist.addressesLinked">Soweit möglich, wurden den Literaturangaben URLs beigefügt.</message>
 	<message key="default.journalSettings.waiverPolicy">Sollten Ihnen die nötigen Mittel für die Bezahlung solcher Gebühren nicht zur Verfügung stehen, haben Sie die Möglichkeit, jede dieser Gebühren erlassen zu bekommen. Wir wollen vermeiden, dass Gebühren der Veröffentlichung wertvoller Beiträge im Weg stehen.</message>
+	<message key="section.default.abbrev">ART</message>
+	<message key="default.journalSettings.submissionFee">Beitragseinreichung</message>
+	<message key="default.journalSettings.fastTrackFee">Beschleunigte Begutachtung</message>
+	<message key="default.journalSettings.donationFee">Spenden an die Zeitschrift</message>
+	<message key="default.journalSettings.publicationFee">Veröffentlichung des Beitrags</message>
+	<message key="default.journalSettings.purchaseArticleFee">Artikel erwerben</message>
+	<message key="default.journalSettings.membershipFee">Mitgliedschaft</message>
+	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Aktive Literaturverweise zum Layoutprozess hinzufügen</h4>
+
+<p>Wenn ein Beitrag in HTML oder PDF konvertiert wird, sollen alle Hyperlinks im Beitrag aktiv sein.</p>
+
+<h4>A. Autor/in liefert einen Link zum Literaturverweis</h4>
+
+<ol>
+<li>Während der Beitrag noch im Textverarbeitungsformat ist (z.B. Word), fügen Sie die Worte ANZEIGEN am Ende des Literaturverweises ein.</li>
+<li>Verwandeln Sie diese Worte in einen Hyperlink, indem Sie mit den Mitteln des Textverarbeitungsprogramms die übermittelte URL hinzufügen.</li>
+</ol>
+
+<h4>B. Leser/innen ermöglichen, nach Verweisen in Google Scholar zu suchen</h4>
+<ol>
+<li>Während der Beitrag noch im Textverarbeitungsformat ist (z.B. Word), kopieren Sie den Titel des zitierten Werkes (wenn der Titel zu unspezifisch ist – z.B. "Frieden" –, nehmen Sie Autor/in und Titel).</li>
+<li>Fügen Sie den Titel zwischen den %22 ein und fügen Sie ein + zwischen jedem Wort ein: http://scholar.google.com/scholar?q=%22TITEL+HIER+EINFÜGEN%22</li>
+<li>Fügen Sie die Worte GOOGLE SCHOLAR SUCHE am Ende des Literaturverweises ein.</li>
+<li>Verwandeln Sie diese Worte in einen Hyperlink, indem Sie mit den Mitteln des Textverarbeitungsprogramms die in Schritt 2 gebildete URL hinzufügen.</li>
+</ol>
+
+<h4>C. Leser/innen ermöglichen, nach Verweisen mit einem DOI zu suchen</h4>
+<ol>
+<li>Während der Beitrag noch im Textverarbeitungsformat ist (z.B. Word), kopieren Sie den Verweis in die CrossRef Abfrage: http://www.crossref.org/freeTextQuery/</li>
+<li>Fügen Sie den DOI, den die Abfrage liefert, in die folgende URL ein (zwischen = und &): http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI</li>
+<li>Fügen Sie das Wort CrossRef am Ende des Literaturverweises ein.</li>
+<li>Verwandeln Sie diese Worte in einen Hyperlink, indem Sie mit den Mitteln des Textverarbeitungsprogramms die in Schritt 2 gebildete URL hinzufügen.</li>
+</ol>]]></message>
 </locale>

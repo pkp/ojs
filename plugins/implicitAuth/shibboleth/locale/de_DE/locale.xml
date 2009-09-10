@@ -14,6 +14,6 @@
   -->
  
 <locale name="de_DE" full_name="German">
-	<message key="plugins.implicitAuth.shibboleth.displayName">ShibAuthPlugin</message>
-	<message key="plugins.implicitAuth.shibboleth.description">Das ShibAuthPlugin betrifft die gesamte Website und wird in der OJS-Konfigurationsdatei aktiviert.</message>
+	<message key="plugins.implicitAuth.shibboleth.displayName">ShibAuth-Plug-In</message>
+	<message key="plugins.implicitAuth.shibboleth.description">Das ShibAuth-Plug-In betrifft die gesamte Website und wird in der OJS-Konfigurationsdatei aktiviert.</message>
 </locale>

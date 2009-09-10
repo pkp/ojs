@@ -15,7 +15,7 @@
 <locale name="fr_CA" full_name="Français (Canada)">
 	<message key="plugins.generic.referral.name">Plugiciel de référence</message>
 	<message key="plugins.generic.referral.description">Le plugiciel de référence retrace les URL entrants de renvoi aux articles (c.-à-d. quand un lecteur suit un lien externe vers un article), permettant à des auteurs de maintenir et, potentiellement, de publier une liste mise à jour automatiquement de références à un article.</message>
-	<message key="plugins.generic.referral.enabled">The Referral Plugin has been enabled.</message>
+	<message key="plugins.generic.referral.enabled">Le plugiciel de référence a été activé.</message>
 	<message key="plugins.generic.referral.disabled">Le plugiciel de référence a été désactivé.</message>
 	
 	<message key="plugins.generic.referral.editReferral">Modifier un renvoi</message>

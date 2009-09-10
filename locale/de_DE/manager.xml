@@ -13,7 +13,6 @@
   -->
 
 <locale name="de_DE" full_name = "Deutsch (Deutschland)">
-	<message key="manager.people.confirmDisable">Benutzer deaktivieren? Der Benutzer kann sich nicht mehr im System einloggen. Optional können Sie dem Benutzer die Sperrung seines Kontos begründen.</message>
 	<message key="manager.emails.confirmResetAll">Sind Sie sicher, dass Sie alle E-Mail-Vorlagen dieser Zeitschrift zurücksetzen wollen? Sie verlieren damit alle speziellen Einstellungen, die Sie vorgenommen haben.</message>
 	<message key="manager.files.note">Anmerkung: Der Dateinavigator ermöglicht die unmittelbare Betrachtung und Bearbeitung der mit einer Zeitschrift verbundenen Dateien und Verzeichnisse.</message>
 	<message key="manager.groups">Impressum</message>
@@ -308,7 +307,6 @@
 	<message key="manager.setup.reviewProcess">Begutachtungsverfahren</message>
 	<message key="manager.setup.reviewProcessDescription"><![CDATA[OJS unterstützt zwei Modelle für die Verwaltung des Begutachtungsverfahrens. Es empfiehlt sich, das Standardbegutachtungsverfahren zu wählen, weil es die Gutachter/innen Schritt für Schritt durch das Verfahren führt und somit einen vollständigen Begutachtungsverlauf für jeden Beitrag garantiert. Außerdem enthält es eine automatische Erinnerungsfunktion sowie Standardempfehlungen zu den Beiträgen (Annahme; Annahme mit Änderungen; zur Begutachtung einreichen; Anderswo einreichen; Ablehnen; siehe Kommentare).<br /><br /> Wählen Sie unter den folgenden:]]></message>
 	<message key="manager.setup.reviewProcessEmail">Begutachtungsverfahren über E-Mail-Anhänge</message>
-	<message key="manager.setup.reviewProcessEmailDescription">Der Redakteur schickt dem Gutachter die Aufforderung und im Anhang den Beitrag. Stimmen die Gutachter zu, schicken sie zunächst die Zustimmung, später ihr Gutachten und ihre Empfehlung an den Redakteur. Die Redakteure kopieren den Namen des Guachters auf die Gutachterseite und geben des Gutachters Empfehlung ein, damit das System den Begutachtungsvorgang korrekt protokolliert.</message>
 	<message key="manager.setup.reviewProcessStandard">Standardbegutachtungsverfahren</message>
 	<message key="manager.setup.reviewProcessStandardDescription">Redakteur/innen schicken ausgewählten Gutachter/innen den Titel und Abstract des Beitrags und laden sie dazu ein, sich für die Begutachtung auf der Website der Zeitschrift einzuloggen. Über die Website erklären die Gutacher/innen ihr Einverständnis zur Übernahme der Begutachtung, laden die Beiträge herunter, reichen ihre Kommentare ein und entscheiden sich für eine Empfehlung.</message>
 	<message key="manager.setup.searchEngineIndexing">Für Suchmaschinen indizieren</message>
@@ -321,7 +319,6 @@
 	<message key="manager.setup.sponsorsDescription">Die Namen derjenigen Organisationen (z.B. wissenschaftliche Vereinigungen, Fakultäten, Arbeitszusammenhänge usw.), die die Zeitschrift finanziell unterstützen, erscheinen unter "Über uns". Eine Danksagung kann beigefügt werden.</message>
 	<message key="manager.setup.stepsToJournalSite">Fünf Schritte zu einer Zeitschrift</message>
 	<message key="manager.setup.subjectClassification">Schlagwortsystematik</message>
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Die Zeitschrift verwendet eine im Internet zugängliche Klassifikation nach Themen.	<br /> Titel der Klassifikation]]></message>
 	<message key="manager.setup.subjectClassificationExamples">(z.B. Mathematics Subject Classification; Library of Congress Classification)</message>
 	<message key="manager.setup.subjectExamples">(z.B. Photosynthese; Schwarze Löcher; Vierfarbenproblem; Bayes' Theorie)</message>
 	<message key="manager.setup.subjectKeywordTopic">Schlagworte</message>
@@ -443,9 +440,7 @@
 	<message key="manager.subscriptions.ipRange">IP-Bereich</message>
 	<message key="manager.subscriptions.noneCreated">Es wurde kein Abonnement erstellt.</message>
 	<message key="manager.subscriptions.select">Abonnent/in eintragenen</message>
-	<message key="manager.subscriptions.selectSubscriber">Abonnent/in auswählen</message>
 	<message key="manager.subscriptions.selectSubscriber.desc">Die Zeitschriftenverwalter/innen, Redakteur/innen, Rubrikredakteur/innen, Layouter/innen, Lektor/innen und Korrekturlektor/innen haben automatisch die Zugangsprivilegien von Abonnent/innen.</message>
-	<message key="manager.subscriptions.subscribe">Eintragen</message>
 	<message key="manager.subscriptions.subscriptionCreatedSuccessfully">Abonnement erfolgreich erstellt.</message>
 	<message key="manager.subscriptions.subscriptionType">Abonnementtyp</message>
 	<message key="manager.subscriptions.user">Benutzer/in</message>
@@ -454,14 +449,9 @@
 	<message key="manager.subscriptionTypes.cost">Kosten</message>
 	<message key="manager.subscriptionTypes.create">Einen neuen Abonnementtyp erstellen</message>
 	<message key="manager.subscriptionTypes.createTitle">Erstellen</message>
-	<message key="manager.subscriptionTypes.currency">Währung</message>
 	<message key="manager.subscriptionTypes.duration">Dauer</message>
 	<message key="manager.subscriptionTypes.edit">Den Abonnementtyp bearbeiten</message>
 	<message key="manager.subscriptionTypes.editTitle">Bearbeiten</message>
-	<message key="manager.subscriptionTypes.format">Format</message>
-	<message key="manager.subscriptionTypes.format.online">Internetfassung</message>
-	<message key="manager.subscriptionTypes.format.print">Druckformat</message>
-	<message key="manager.subscriptionTypes.format.printOnline">Im Druckformat und in der Internetfassung</message>
 	<message key="manager.subscriptionTypes.form.cost">Kosten</message>
 	<message key="manager.subscriptionTypes.form.costInstructions">Geben Sie bitte nur einen numerischen Wert (z.B. 40 oder 40,00) und keinen zusätzlichen Text (z.B. "EUR") ein.</message>
 	<message key="manager.subscriptionTypes.form.costNumeric">Die Kostenangabe muss ein positiver numerischer Wert sein.</message>
@@ -486,13 +476,9 @@
 	<message key="manager.subscriptionTypes.form.typeName">Name des Abonnementtyps</message>
 	<message key="manager.subscriptionTypes.form.typeNameExists">Es besteht bereits ein Abonnementtyp dieses Namens.</message>
 	<message key="manager.subscriptionTypes.form.typeNameRequired">Der Abonnementtyp muss einen Namen haben.</message>
-	<message key="manager.subscriptionTypes.month">Monat</message>
-	<message key="manager.subscriptionTypes.months">Monate</message>
 	<message key="manager.subscriptionTypes.name">Abonnementtyp</message>
 	<message key="manager.subscriptionTypes.noneCreated">Es wurden keine neuen Abonnementtypen erstellt.</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Abonnementtyp erfolgreich erstellt.</message>
-	<message key="manager.subscriptionTypes.year">Jahr</message>
-	<message key="manager.subscriptionTypes.years">Jahre</message>
 	<message key="manager.groups.context.editorialTeam">Lassen Sie die Funktionen unter "Redaktion" in der Rubrik "Über uns" "Personen" (z.B. Redakteur/in) erscheinen.</message>
 	<message key="manager.groups.context.editorialTeam.short">Redaktion</message>
 	<message key="manager.groups.context.people">Lassen Sie die Funktionen als eigenständige Kategorien unter der Rubrik "Personen" (z.B. Redaktion) erscheinen.</message>
@@ -688,4 +674,10 @@
 	<message key="manager.subscriptions.withStatus">Mit Status</message>
 	<message key="manager.subscriptions.form.userProfileInstructions">Hinweis: Alle unten stehenden Veränderungen betreffen Nutzer/innenprofil systemweit.</message>
 	<message key="manager.subscriptions.form.institutionMailingAddress">Adresse</message>
+	<message key="manager.language.ui">UI</message>
+	<message key="manager.setup.doiSuffixCustomIdentifier">Die eindeutige Kennung für Elemente als DOI-Suffix benutzen (muss in Schritt 4 zugelassen werden).</message>
+	<message key="manager.subscriptions.form.ipRangeItem"><![CDATA[&#8226;]]></message>
+	<message key="manager.subscriptions.form.referenceNumber">Referenznummer</message>
+	<message key="manager.subscriptions.referenceNumber">Referenznummer</message>
+	<message key="manager.subscriptionTypes.form.individual">Individuell (Benutzer/innen erhalten ihren Zugang durch Einloggen)</message>
 </locale>

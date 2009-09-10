@@ -14,7 +14,7 @@
   -->
   
 <locale name="de_DE" full_name="German">
-	<message key="plugins.generic.xmlGalley.displayName">XML-Korrekturfassungen-PlugIn</message>
+	<message key="plugins.generic.xmlGalley.displayName">XML-Korrekturfassungen-Plug-In</message>
 	<message key="plugins.generic.xmlGalley.description">Dieses Plug-In erzeugt XHTML-Korrekturfassungen für XML-Artikel mittels XSLT.</message>
 
 	<message key="plugins.generic.xmlGalley.manager.settings">Einstellungen</message>
@@ -38,7 +38,7 @@
 
 	<message key="plugins.generic.xmlGalley.settings.xslFOP">Aktivierung der Erzeugung von PDF-Korrekturfassungen mittels XSL-FO (z.B. FOP)</message>
 	<message key="plugins.generic.xmlGalley.settings.xslFOPDescription"><![CDATA[Bitte den vollständigen Pfad des FO-Prozessors eingeben, mit allen erforderlichen Parametern. Bitte nutzen Sie %fo, um den Ort der XSL-FO-Datei zu ersetzen, und %pdf, um den Ort der PDF-Datei zu ersetzen; eg: <br/><pre>/usr/sbin/fop -fo %fo -pdf %pdf</pre>]]></message>
-	<message key="plugins.generic.xmlGalley.settings.xslFOPRequired">>Ein externer FO-Befehlzeilen-Prozessor muss spezifiziert werden.</message>
+	<message key="plugins.generic.xmlGalley.settings.xslFOPRequired"><![CDATA[>Ein externer FO-Befehlzeilen-Prozessor muss spezifiziert werden.]]></message>
 
 	<message key="plugins.generic.xmlGalley.settings.customXSL">XSL-Stylesheet anpassen</message>
 	<message key="plugins.generic.xmlGalley.settings.customXSLRequired">Eine XSL-Stylesheet-Datei muss spezifiziert werden.</message>

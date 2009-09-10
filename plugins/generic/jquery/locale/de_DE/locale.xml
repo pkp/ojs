@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the de_DE locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
+	<message key="plugins.generic.jquery.name">jQuery-Plug-In</message>
+	<message key="plugins.generic.jquery.description"><![CDATA[Dieses Plug-In stellt die Benutzung von Javascript und das Gestalten von OJS-INhalten mittels des <a href="http://www.jquery.com" target="_new">jQuery</a>-Framworks bereit.]]></message>
+	<message key="plugins.generic.jquery.descriptionDisabled"><![CDATA[Dieses Plug-In stellt die Benutzung von Javascript und das Gestalten von OJS-INhalten mittels des <a href="http://www.jquery.com" target="_new">jQuery</a>-Framworks bereit. <strong>jQuery ist momentan nicht installiert; bitte installieren Sie es in {$jQueryPath}.</strong>]]></message>
+	<message key="plugins.generic.jquery.disabled">Das jQuery-Plug-In wurde deaktiviert.</message>
+	<message key="plugins.generic.jquery.enabled">Das jQuery-Plug-In wurde aktiviert.</message>
+	<message key="plugins.generic.jquery.settings">Einstellungen</message>
+</locale>

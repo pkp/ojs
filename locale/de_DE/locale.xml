@@ -88,8 +88,6 @@
 	<message key="section.title">Titel der Rubrik</message>
 	<message key="section.abbreviation">Abkürzung</message>
 	<message key="section.abbreviation.example">(Zum Beispiel, Artikel=ART)</message>
-	<message key="section.default.title">Artikel</message>
-	<message key="section.default.abbrev">ART</message>
 	<message key="section.default.policy"/>
 	<!-- Allgemeine Begriffe: Artikel -->
 	<message key="article.articles">Artikel</message>
@@ -497,7 +495,6 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br/>
 	<message key="submission.layout.referenceLinking">Verlinkung von Literaturververweisen</message>
 	<!-- Beitragslauf - Korrekturlektorat -->
 	<message key="submission.proofreadingComments">Korrekturlektorat - Kommentare</message>
-	<message key="submission.archiveSubmission">Beitrag archivieren</message>
 	<message key="submission.proofread.corrections">Korrekturlektorat - Korrekturen</message>
 	<message key="submission.proofread.instructions">Korrekturlektorat - Richtlinien</message>
 	<!-- Verlaufsprotokoll -->
@@ -527,7 +524,6 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br/>
 	<message key="user.login.resetPasswordInstructions"><![CDATA[Aus Sicherheitsgründen schickt das System den registrierten Benutzer/innen ein neues Passwort statt des aktuellen Passworts per E-Mail. <br /><br />
 Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. Eine Bestätigung geht an diese E-Mail-Adresse.]]></message>
 	<!-- Profile -->
-	<message key="user.profile.form.profileImageInvalid">Ungültiges Bildformat oder zu großes Bild. Gültige Formate sind .gif, .jpg oder .png, und das Bild darf nicht größer sein als 150x150 Pixel.</message>
 	<!-- Registrierung -->
 	<message key="user.register.repeatPassword">Passwort wiederholen</message>
 	<message key="user.register.selectJournal">Wählen Sie die Zeitschrift aus, für die Sie sich registrieren wollen</message>
@@ -716,8 +712,6 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 	<message key="installer.additionalLocalesInstructions">Wählen Sie alle weiteren Regionaleinstellungen, die das System unterstützen soll. Diese Regionaleinstellungen stehen allen Zeitschriften der Website zur Verfügung. Weitere Regionaleinstellungen können jederzeit über die Website-Administration eingerichtet werden.</message>
 	<message key="installer.filesDirInstructions"><![CDATA[Bitte geben Sie den vollständigen Pfad zu einem existierenden Verzeichnis an, in dem hochgeladene Dateien gespeichert werden sollen. Dieses Verzeichnis sollte nicht direkt aus dem WWW lesbar sein. <strong>Bitte stellen Sie sicher, dass dieses Verzeichnis existiert und beschreibbar ist, bevor Sie mit der Installation fortfahren.</strong> Pfadangaben auf Windows-Rechnern sollten normale Schrägstriche enthalten, z.B. "C:/myjournal/files".]]></message>
 	<message key="installer.databaseSettingsInstructions">OJS benötigt eine SQL-Datenbank zur Speicherung der Daten. Eine Liste der unterstützten Datenbanken können Sie der oben stehenden Liste der Systemanforderungen entnehmen. Bitte geben Sie in den folgenden Feldern die Einstellungen zur Verbindung zur Datenbank ein.</message>
-	<message key="installer.installOJS">Installiere Open Journal Systems</message>
-	<message key="installer.upgradeOJS">Aktualisiere Open Journal Systems</message>
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Warnung:</strong> Wenn die Datenbank-Installation fehlschlägt, müssen Sie eventuell die OJS-Datenbank bzw. die Datenbank-Tabellen von Hand löschen, bevor Sie eine erneute Installation der Datenbank probieren können.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>WICHTIG!</h4>
 <p>Die Installationsprozedur konnte die Konfigurationsdatei nicht automatisch überschreiben. Bevor Sie versuchen, das System zu benutzen, öffnen Sie bitte <tt>config.inc.php</tt> in einem geeigneten Text-Editor und ersetzen Sie den Dateiinhalt durch den Inhalt des folgenden Textfeldes.</p>]]></message>
@@ -810,88 +804,9 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 	 * STANDARD - Enthält Standardeinstellungen für die Konfiguration.
 	 *
 	-->
-	<message key="default.journalSettings.checklist.addressesLinked">Soweit möglich, wurden den Literaturangaben URLs beigefügt.</message>
-	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Verlinkungen von Verweisen im Layout-Prozess hinzufügen</h4>
-	<p>Wenn Sie einen Beitrag in eine HTML- oder PDF-Datei umwandeln, versichern Sie sich, dass alle Hyperlinks im Beitrag funktionieren.</p>
-	<h4>A. Wenn die Autorin/der Autor zum Literaturnachweis einen Link bereitstellt</h4>
-	<ol>
-	<li>während der Beitrag noch in einem Textverarbeitungsformat vorliegt (z.B. Word), fügen Sie die Wortfolge ANZEIGEN an das Ende des Literaturnachweises mit der URL an</li>
-	<li>machen Sie aus dieser Wortfolge einen Hyperlink, indem Sie sie markieren und die "Hyperlink einfügen"-Funktion von Word benutzen und die in vorhandene URL eintragen.</li>
-	</ol>
-	<h4>B. Leser/innen ermöglichen, bei Google Scholar nach Literaturverweisen zu suchen</h4>
-	<ol>
-	<li>während der Beitrag noch in einem Textverarbeitungsformat vorliegt (z.B. Word), kopieren Sie die Titel der im Literaturverzeichnis nachgewiesenen Literatur (sollte es sich um einen Titel handeln, der zu wenig spezifisch erscheint, z.B. "Frieden", dann kopieren Sie Autor/innen-Namen und Titel).</li>
-	<li>Fügen Sie den Titel des Literaturnachweises zwischen die "%22" im folgenden Link ein, wobei Sie ein "+" zwischen jedes Wort setzen: http://scholar.google.com/scholar?q=%22TITEL+HIER+EINGEBEN%22&hl=de&lr=&btnG=Search</li>
-	<li>Fügen Sie die Wortfolge GS SUCHE an das Ende jedes Nachweises im Literaturverzeichnis des Beitrags an. </li>
-	<li>Machen Sie aus dieser Wortfolge einen Hyperlink, indem Sie sie markieren und die "Hyperlink einfügen"-Funktion von Word benutzen und die in #2 vorbereitete URL eintragen.</li>
-	</ol>
-	<h4>C. Leser/innen ermöglichen mit einem DOI (Digital Object Identifier) nach Literaturverweisen zu suchen</h4>
-	<ol>
-	<li>Während der Beitrag noch in einem Textverarbeitungsformat vorliegt (z.B. Word), kopieren Sie eine Anzahl Literaturnachweise nach CrossRef Text Query http://www.crossref.org/freeTextQuery/</li>
-	<li>Fügen Sie jeden DOI, den die Suche ergibt, in die folgende URL (zwischen = und &) ein: http://www.cmaj.ca/cgi/external_ref?access_num=DOI HIER#EINFÜGEN&link_type=DOI</li>
-	<li>Fügen Sie die Wortfolge CrossRef an das Ende jedes Nachweises im Literaturverzeichnis des Beitrags an.</li>
-	<li>Machen Sie aus dieser Wortfolge einen Hyperlink, indem Sie sie markieren und die "Hyperlink einfügen"-Funktion von Word benutzen und die in #2 vorbereitete URL eintragen.</li>
-	</ol>]]></message>
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>Die Korrekturlektur-Phase dient dazu, alle Rechtschreib-, Grammatik- und Formatfehler in der Fahne ausfindig zu machen. In dieser Phase können keine tiefgreifenderen Veränderungen vorgenommen werden, außer es ist mit der/dem Rubrikredakteur/in abgesprochen. Klicken Sie unter "Layout" "Fahne anzeigen" an, um die HTML-, PDF- oder anderen Dateiformate anzusehen, in denen der Beitrag veröffentlicht wird.</p>
-<h4>Bei Rechtschreib-und Grammatikfehlern</h4>
-
-<p>Kopieren Sie das fragliche Wort oder die Wortfolge und geben Sie sie in das Feld für Korrekturlektorat-Korrekturen zusammen mit "ÄNDERE IN"-Anweisungen für die Redakteurin/den Redakteur wie folgt ein...</p>
-
-<pre>1. ÄNDERE...
-wie die anderen
-IN...
-als die anderen</pre>
-<br />
-<pre>2. ÄNDERE...
-Malinowsky
-IN...
-Malinowski</pre>
-<br />
-
-<h4>Für Formatfehler</h4>
-
-<p>Geben Sie "FORMAT" in das Feld für Korrekturlektorat-Korrekturen ein, gefolgt von einer Beschreibung von Stelle und die Art des Problems.</p>
-<br />
-<pre>3. FORMAT
-Die Zahlen in Tabelle 3 sind in der dritten Spalte nicht rechtsbündig.</pre>
-<br />
-<pre>4. FORMAT
-Der Absatz, der mit "Dieses Thema schließlich ..." beginnt, ist nicht eingerückt.</pre>]]></message>
 	<!-- Standardeinstellungen für Zahlungen -->
-	<message key="default.journalSettings.submissionFeeDescription">Autor/innen müssen als Teil des Einreichungsprozesses eine Einreichungsgebühr bezahlen, um sich an den Begutachtungskosten zu beteiligen.</message>
-	<message key="default.journalSettings.fastTrackFeeDescription">Wenn Sie diese Gebühr zahlen, garantieren wir Ihnen, dass die Begutachtung, die Redaktionsentscheidung und die Benachrichtigung der Autorin/des Autors bezüglich dieses Manuskripts innerhalb der nächsten vier Wochen stattfinden wird.</message>
-	<message key="default.journalSettings.publicationFeeDescription">Sollte dieser Beitrag zur Veröffentlichung kommen, ist eine Veröffentlichungsgebühr zu zahlen, um die Kosten der Veröffentlichung zu decken.</message>
-	<message key="default.journalSettings.waiverPolicy">Sollten Ihnen die nötigen Mittel für die Bezahlung solcher Gebühren nicht zur Verfügung stehen, haben Sie die Möglichkeit, jede dieser Gebühren erlassen zu bekommen. Wir wollen vermeiden, dass Gebühren der Veröffentlichung wertvoller Beiträge im Weg stehen.</message>
-	<message key="default.journalSettings.purchaseArticleFeeDescription">Die Zahlung dieser Gebühr ermöglicht Ihnen, diesen Artikel anzuzeigen, herunterzuladen und auszudrucken.</message>
-	<message key="default.journalSettings.membershipFeeDescription">Durch Zahlung dieser Gebühr werden Sie für ein Jahr Mitglied. Während dieser Zeit haben Sie kostenlosen Zugang zu dieser Zeitschrift.</message>
-	<message key="default.journalSettings.donationFeeDescription">Spenden jeglicher Höhe an diese Zeitschrift werden dankend angenommen. Sie ermöglichen es den Redakteur/innen, weiterhin eine  Zeitschrift von höchster Qualität für ihre Leser/innen bereitzustellen.</message>
 	<!-- FQS -->
-	<message key="common.ccLicense"><![CDATA[<br /><br />
-	<a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new"><img alt="Creative-Commons-Lizenz" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
-	<br />
-	Dieses Werk steht unter einer <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new">Creative Commons Attribution 3.0 License</a>.]]></message>
-	<message key="common.ccLicense.rt"><![CDATA[<div class="rtBlock">
-		<br />
-		<a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new"><img alt="Creative-Commons-Lizenz" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
-		<br />
-		Dieses Werk steht unter einer <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new">Creative Commons Attribution 3.0 License</a>.
-	</div>]]></message>
 	<message key="journal.issn">ISSN</message>
-	<message key="manager.setup.doiSuffix">DOI-Suffix</message>
-	<message key="manager.setup.sponsorNoteDescription">Dieser Text wird unterhalb der "Finanzielle Unterstützung"-Überschrift und oberhalb der Liste der Unterstützer/innen und URLs im Abschnitt "Unterstützung" der "Über uns"-Seite erscheinen.</message>
-	<message key="manager.setup.form.doiPrefixPattern">Das DOI-Muster muss in der Form 10.xxxx angegeben werden.</message>
-	<message key="manager.setup.doiSuffixPattern.example">Zum Beispiel könnte vol%viss%ipp%p einen DOI wie 10.1234/vol3iss2pp230 erzeugen.</message>
-	<message key="manager.setup.doiSuffixDescription">Ein DOI-Suffix kann jede Form annehmen, muss aber einzigartig für jedes publizierte Werk sein.</message>
-	<message key="manager.setup.doiSuffixCustomIdentifier">Die  "Angepasste Kennzeichnung" als DOI-Suffix für publizierte Werke benutzen (muss in Schritt 4 aktiviert werden).</message>
-	<message key="manager.setup.publisherNoteDescription">Dieser Text wird unterhalb der "Verlag, Organisation"-Überschrift und oberhalb von Namen/URL des Verlags/der Organisation im Abschnitt "Unterstützung" der "Über uns"-Seite erscheinen.</message>
-	<message key="author.submissions.queuedReviewSubsequent">In Begutachtungsrunde {$round}</message>
-	<message key="author.submissions.queuedReviewRevisions">In Begutachtung: Überarbeitungen erforderlich</message>
-	<message key="author.submissions.queuedEditingCopyedit">In redaktioneller Bearbeitung: Redigieren erbeten</message>
-	<message key="author.submissions.queuedEditingProofread">In redaktioneller Bearbeitung: Korrekturlektorat</message>
-	<message key="manager.setup.doiSuffixDefault">Das Standardmuster (%j.v%vi%i.%a) verwenden.</message>
-	<message key="manager.setup.doiSuffixPattern">Das unten angegebene Muster verwenden, um DOI-Suffixe zu erzeugen. Benutzen Sie %j für die Zeitschriften-Initiale, %v für die Bandnummer, %i für die Ausgabennummer, %a für die OJS-Artikel-ID und %p für die Seitenzahl.</message>
-	<message key="manager.setup.contributorNoteDescription">Dieser Text wird unterhalb der "Weitere Unterstützung"-Überschrift und oberhalb der Liste der Namen und URLs weiterer unterstützender Organisationen im Abschnitt "Unterstützung" der "Über uns"-Seite erscheinen.</message>
-	<message key="author.submit.mustEnterWaiverReason">Wenn Sie einen Gebührenverzicht beantragen, müssen Sie einen Grund im vorgesehenen Platz angeben.</message>
 	<message key="article.article">Beitrag</message>
 	<message key="subscriptionTypes.year">Jahr</message>
 	<message key="subscriptionTypes.years">Jahre</message>
@@ -989,4 +904,9 @@ Titel des Klassifikationssystems]]></message>
 	<message key="user.subscriptions.form.ipRangeInstructions"><![CDATA[Wenn hier IP-Bereiche eingegeben werden, ist die Eingabe einer Domain optional.<br />Gültige Werte können eine IP-Adresse (z.B. 142.58.103.1), ein IP-Bereich (z.B. 142.58.103.1 - 142.58.103.4), ein IP-Bereich mit einem Stellvertretersymbol '*' (z.B. 142.58.*.*) und ein IP-Bereich mit CIDR (z.B. 142.58.100.0/24) sein.]]></message>
 	<message key="user.subscriptions.form.ipRangeValid">Geben Sie bitte einen gültigen IP-Bereich ein.</message>
 	<message key="about.history">Zeitschriften-Geschichte</message>
+	<message key="user.subscriptions.form.ipRangeItem"><![CDATA[&#8226;]]></message>
+	<message key="notification.type.editing">Redaktionelle Ereignisse</message>
+	<message key="notification.type.reviewing">Begutachtungsereignisse</message>
+	<message key="notification.type.site">Site-Ereignisse</message>
+	<message key="notification.type.submissions">Einreichungsereignisse</message>
 </locale>

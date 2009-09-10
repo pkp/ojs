@@ -59,4 +59,5 @@
 	<message key="admin.mergeUsers.allUsers">Tous les utilisateurs inscrits</message>
 	<message key="admin.mergeUsers.confirm">Êtes-vous certain de vouloir fusionner le compte portant le nom d'utilisateur "{$oldUsername}" avec le compte portant le nom d'utilisateur "{$newUsername}"? Le compte portant le nom d'utilisateur "{$oldUsername}" sera supprimé. Cette action n'est pas réversible.</message>
 	<message key="admin.mergerUsers.noneEnrolled">Aucun utilisateur inscrit.</message>
+	<message key="admin.locale.maybeIncomplete">Les langues sélectionnées peuvent être incomplètes.</message>
 </locale>

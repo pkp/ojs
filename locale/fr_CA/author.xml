@@ -118,4 +118,11 @@
 	<message key="author.article.copyeditedFile">Fichier révisé</message>
 	<message key="author.article.authorRevisedFile">Fichier de l'auteur</message>
 	<message key="author.submit.authorSubmitLoginMessage">A user account is required to submit to this journal. This allows our editors to track your submissions and contact you when the status of your submission changes, or if additional information is required from you.</message>
+	<message key="author.submit.mustEnterWaiverReason">Si vous effectuez une demande de dérogation, vous devez inscrire une justification dans l'espace prévu à cet effet.</message>
+	<message key="author.submissions.queuedReviewSubsequent">Cycle d'évaluation {$round}</message>
+	<message key="author.submissions.queuedReviewRevisions">En évaluation : Révisisons requises</message>
+	<message key="author.submissions.queuedEditingCopyedit">En révision : Correction de texte requise</message>
+	<message key="author.submissions.queuedEditingProofread">En révision : Correction d'épreuves requise</message>
+	<message key="author.submit.reorder">Réordonner le nom de l'auteur</message>
+	<message key="author.submit.form.wordCountAlert">Vous avez dépassé la limite maximum de mots fixée pour les résumés, dans cette section</message>
 </locale>

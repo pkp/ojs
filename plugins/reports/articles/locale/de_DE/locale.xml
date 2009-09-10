@@ -14,7 +14,7 @@
   -->
 
 <locale name="de_DE" full_name="German">
-	<message key="plugins.reports.articles.displayName">Artikel-Statistiken</message>
+	<message key="plugins.reports.articles.displayName">Artikel-Bericht</message>
 	<message key="plugins.reports.articles.description">Dieses Plug-In implementiert einen CSV-Bericht mit einer Auflistung der Artikel und zugehörigen Informationen.</message>
 	<message key="plugins.reports.articles.nodecision">Keine Entscheidung</message>
 </locale>

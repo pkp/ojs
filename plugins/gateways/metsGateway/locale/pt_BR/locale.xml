@@ -15,7 +15,7 @@
 <locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.gateways.metsGateway.displayName">Plugin de Saída METS</message>
 	<message key="plugins.gateways.metsGateway.settings">Configurações</message>
-	<message key="plugins.gateways.metsGateway.description"><![CDATA[Este plugin oferecer dados em XML puro no formato METS para a revista definida. <strong>NOTA: Seu uso é voltado para Web Services e habilitar este plugin representa um risco por permitir acesso irrestrito à revista através do XML (codificado em base64).</strong>]]></message>
+	<message key="plugins.gateways.metsGateway.description"><![CDATA[Este plugin oferece dados em XML puro no formato METS para a revista definida. <strong>NOTA: Seu uso é voltado para Web Services e habilitar este plugin representa um risco por permitir acesso irrestrito à revista através do XML (codificado em base64).</strong>]]></message>
 	<message key="plugins.gateways.metsGateway.errors.errorMessage">Impossível exportar dados da revista. O Plugin de Saída METS precisa estar habilitado e o id da revista a ser exportado deve ser informado na URL.</message>
 	<message key="plugins.gateways.metsGateway.settings.FContent">Utilizar codificação de base64 para o wrapper do conteúdo</message>
 	<message key="plugins.gateways.metsGateway.settings.FLocat">Utilizar a URL do bitsream para o wrapper do conteúdo</message>

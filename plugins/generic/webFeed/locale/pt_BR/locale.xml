@@ -13,17 +13,19 @@
   -->
  
 <locale name="pt_BR" full_name="Português do Brasil">
-	<message key="plugins.generic.webfeed.displayName">Plugin Canal Público de Divulgação RSS</message>
-	<message key="plugins.generic.webfeed.description">Este plugin produz divulgação RSS/Atom para a edição atual.</message>
+	<message key="plugins.generic.webfeed.displayName">Plugin Canal de Divulgação RSS</message>
+	<message key="plugins.generic.webfeed.description">Este plugin produz canais de divulgação RSS/Atom para a edição atual.</message>
 	<message key="plugins.generic.webfeed.settings">Configurações</message>
 	<message key="plugins.generic.webfeed.settings.issue">Exibir canais somente nas páginas da edição.</message>
 	<message key="plugins.generic.webfeed.settings.all">Exibir canais em todas as páginas da revista.</message>
 	<message key="plugins.generic.webfeed.settings.currentIssue">Exibir itens da edição atual.</message>
 	<message key="plugins.generic.webfeed.settings.recentArticles">itens mais recentes.</message>
 	<message key="plugins.generic.webfeed.settings.recentItemsRequired">Informe um inteiro positivo para o número de itens mais recentes.</message>
-	<message key="plugins.generic.webfeed.settings.homepage">Exibir links de feeds da Web na página inicial e página das edições apenas</message>
+	<message key="plugins.generic.webfeed.settings.homepage">Exibir links de canais nas páginas inicial e das edições apenas</message>
 	<message key="plugins.generic.webfeed.atom.altText">Logo Atom</message>
 	<message key="plugins.generic.webfeed.rss1.altText">Logo RSS1</message>
 	<message key="plugins.generic.webfeed.rss2.altText">Logo RSS2</message>
+	<message key="plugins.generic.webfeed.enabled">O Plugin Canal Web foi habilitado.</message>
+	<message key="plugins.generic.webfeed.disabled">O Plugin Canal Web foi desabilitado.</message>
 </locale>
 

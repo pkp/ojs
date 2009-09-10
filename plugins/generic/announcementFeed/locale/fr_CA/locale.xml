@@ -26,4 +26,6 @@
 	<message key="plugins.generic.announcementfeed.atom.altText">Logo Atom</message>
 	<message key="plugins.generic.announcementfeed.rss1.altText">Logo RSS1</message>
 	<message key="plugins.generic.announcementfeed.rss2.altText">Logo RSS2</message>
+	<message key="plugins.generic.announcementfeed.disabled">Le plugiciel de flux d'annonces a été désactivé.</message>
+	<message key="plugins.generic.announcementfeed.enabled">Le plugiciel de flux d'annonces a été activé.</message>
 </locale>

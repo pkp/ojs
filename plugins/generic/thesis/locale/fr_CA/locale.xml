@@ -203,4 +203,6 @@
 	<message key="plugins.generic.thesis.supervisorFullName">{$firstName} {$middleName}{$space}{$lastName}</message>
 	<message key="plugins.generic.thesis.form.studentBioInstructions"><![CDATA[Insérez des lignes en blanc pour séparer les paragraphes. Placez le texte entre <strong></strong>, <em></em>, et <u></u> les balises en gras, italiques et en surligné respectivement (p. ex. : ce <em>motd</em> sera en italiques.)]]></message>
 	<message key="plugins.generic.thesis.form.languageInstructions"><![CDATA[Anglais=en; français=fr; espagnol=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">Codes additionnels</a>.]]></message>
+	<message key="plugins.generic.thesis.enabled">Le plugiciel de résumé de thèse a été activé.</message>
+	<message key="plugins.generic.thesis.disabled">Le plugiciel de résumé de thèse a été désactivé.</message>
 </locale>

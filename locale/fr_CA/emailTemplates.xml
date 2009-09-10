@@ -384,65 +384,79 @@ Merci,
 Nous vous remercions d'avoir révisé le manuscrit intitulé « {$articleTitle} » pour {$journalName}. Votre collaboration contribue grandement à la qualité de la revue.
 
 {$editorialContactSignature}</body>
-		<description>Ce courriel est envoyté par le chef de rubrique au réviseur pour accuser réception que ce dernier a bien fait le travail et pour le remercier de sa contribution.</description>
+		<description>Ce courriel est envoyé par le chef de rubrique au réviseur de la soumission pour accuser réception de la révision complétée et pour le remercier de sa contribution.</description>
 	</email_text>
 	<email_text key="COPYEDIT_AUTHOR_REQUEST">
 		<subject>Demande de révision finale</subject>
-		<body>{$authorName},
+		<body><![CDATA[{$authorName},
 
-Nous avons maintenant terminé la révision initiale de votre manuscrit intitulé « {$articleTitle} » pour {$journalName}. Veuillez accéder au site Web de la revue et répondre aux questions des évaluateurs. L'adresse ci-dessous vous mènera au résumé de votre soumission. Cliquez sur le lien Édition situé en haut de la page.
+Nous avons maintenant terminé la révision initiale de votre manuscrit intitulé «&#x00A0;{$articleTitle}&#x00A0;{» pour {$journalName}. Veuillez accéder au site Web de la revue et répondre aux questions des évaluateurs, en suivant les étapes suivantes.
 
-Il s'agit de votre dernière chance d'apporter des modifications importantes au texte. À l'étape de la correction d'épreuves, vous ne pourrez changer que les erreurs typographiques et les problèmes de mise en page.
+1. Cliquer sur l'URL de la soumission ci-dessous.
+2. Se connecter au site Web de la revue et cliquer sur le fichier qui apparaît à l'Étape 1.
+3. Ouvrir la soumission téléchargée.
+4. Évaluer le texte, incluant les propositions de révision et les requêtes de l'auteur.
+5. Effectuer toutes les modifications nécessaires qui pourrait améliorer le texte. 
+6. Lorsque tout est complété, téléchargé le fichier à l'Étape 2.
+7. Cliquer sur MÉTADONNÉES pour vérifier l'information d'indexation afin de vous assurer que tout êtes exact et complet.
+8. Envoyer le courriel TERMINÉ au rédacteur et au réviseur.
 
-URL du manuscrit : {$submissionCopyeditingUrl}
-Nom d'utilisateur : {$authorUsername}
+URL de la soumission : {$submissionCopyeditingUrl}
+Nom d'utilisateur : {$authorUsername}
  
+Il s'agit de votre dernière chance d'apporter des modifications importantes à votre soumission. À l'étape de la correction d'épreuves, vous ne pourrez changer que les erreurs typographiques et les problèmes de mise en page.
+
 Si vous ne pouvez pas effectuer ce travail pour le moment ou si vous avez des questions, veuillez communiquer avec nous. Nous vous remercions de votre collaboration.
 
-{$editorialContactSignature}</body>
-		<description>Ce courriel est envoyé par le chef de rubrique à l'auteur pour lui demander de faire la correction des épreuves du travail fait par le réviseur. Il donne accès à l'information pour le manuscrit et le met en garde que c'est la dernière chance pour l'auteur d'apporter des modifications importantes à son travail.</description>
+{$editorialContactSignature}]]></body>
+		<description>Ce courriel est envoyé par le chef de rubrique à l'auteur de la soumission pour lui demander de faire la correction d'épreuves du travail fait par le réviseur. Il fournit l'information d'accès au manuscrit et l'informe que c'est la dernière chance pour l'auteur d'apporter des modifications importantes à son travail.</description>
 	</email_text>
 	<email_text key="COPYEDIT_AUTHOR_COMPLETE">
 		<subject>Révision finale terminée</subject>
 		<body>{$editorialContactName},
 
-J'ai passé en revue la version révisée du manuscrit intitulé « {$articleTitle} » pour {$journalName}, qui est maintenant prêt pour la dernière série de révisions et la mise en page.
+J'ai passé en revue la révision du manuscrit intitulé « {$articleTitle} » pour {$journalName}, et il est maintenant prêt pour le dernier cycle de révisions et la mise en page.
 
-Je vous remercie de votre contribution.
+Je vous remercie de votre contribution à mon travail,
 {$authorName}</body>
-		<description>Ce courriel est envoyé par l'auteur au chef de rubrique pour aviser ce dernier que le processus de la lecture des épreuves par l'auteur a été complété.</description>
+		<description>Ce courriel est envoyé par l'Auteur au Chef de rubrique pour aviser ce dernier qu'il a complété le processus de correction d'épreuves.</description>
 	</email_text>
 	<email_text key="COPYEDIT_AUTHOR_ACK">
-		<subject>Accusé de réception de la révision finale</subject>
+		<subject>Accusé de réception de la revue de la révision finale</subject>
 		<body>{$authorName},
 
 Nous vous remercions d'avoir bien voulu relire la version révisée de votre manuscrit intitulé « {$articleTitle} » pour {$journalName}. Nous sommes heureux de pouvoir publier vos travaux dans notre revue.
 
 {$editorialContactSignature}</body>
-		<description>Ce courriel est envoyé par le chef de rubrique à l'auteur de la soumission pour lui confirmer qu'il a bien complété la révision, et pour le remercier de sa contribution.</description>
+		<description>Ce courriel est envoyé par le Chef de rubrique à l'Auteur de la soumission pour lui confirmer qu'il a bien complété la revue de la révision, et pour le remercier de sa contribution.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
-		<subject>Demande de révision finale</subject>
-		<body>{$copyeditorName},
+		<subject>Revue finale de la révision</subject>
+		<body><![CDATA[{$copyeditorName}:
 
-L'auteur et le rédacteur ont passé en revue les révisions du manuscrit intitulé « {$articleTitle} » pour {$journalName}. La version définitive est maintenant prête pour la mise en page.
+L'auteur et le rédacteur ont complété la revue de la révision de «&#x00A0;{$articleTitle}&#x00A0;» pour {$journalName}. La version finale est maintenant prête pour la mise en page, qui sera effectuée en passant par les étapes suivantes.
+1. Cliquer sur l'URL de la soumission ci-dessous.
+2. Se connecter à la revue et cliquer sur le fichier qui apparaît à l'Étape 2.
+3. Ouvrir le fichier téléchargé et incorporer toutes les révisions et les réponses aux requêtes.
+4. Enregistrer le fichier nettoyé, et télécharger à l'Étape 3 pour révision.
+5. Cliquer sur MÉTADONNÉES pour vérifier l'information d'indexation (en enregistrant toutes les corrections).
+6. Envoyer le courriel TERMINÉ au rédacteur.
 
-URL du manuscrit : {$submissionCopyeditingUrl}
-Nom d'utilisateur : {$copyeditorUsername}
+URL de {$journalName} : {$journalUrl}
+URL de la soumission : {$submissionCopyeditingUrl}
+Nom d'utilisateur : {$copyeditorUsername}
 
-Nous vous remercions de votre collaboration.
-
-{$editorialContactSignature}</body>
-		<description>Ce courriel venant du chef de rubrique au réviseur lui demande de faire une révision finale de la soumission avant que celle-ci passe au processus de la mise en page.</description>
+{$editorialContactSignature}]]></body>
+		<description>Ce courriel venant du Chef de rubrique au Réviseur lui demande de faire une révision finale de la soumission avant que celle-ci passe au processus de la mise en page.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_COMPLETE">
-		<subject>Révision de la version définitive terminée</subject>
-		<body>{$editorialContactName},
+		<subject>Revue de la version finale terminée</subject>
+		<body><![CDATA[{$editorialContactName},
 
-J'ai terminé la préparation de la version révisée définitive du manuscrit intitulé « {$articleTitle} » pour {$journalName}. Il est prêt pour la mise en page et la préparation des épreuves.
+J'ai terminé la préparation de la version révisée finale du manuscrit intitulé «&#x00A0;{$articleTitle}&#x00A0;» pour {$journalName}. Il est prêt pour la mise en page et la préparation des épreuves.
 
-{$copyeditorName}</body>
-		<description>Ce courriel venant du réviseur et adressé au chef de rubrique avise ce dernier que la dernière ronde de révisions a été complétée et que le processus de la mise en page peut débuter.</description>
+{$copyeditorName}]]></body>
+		<description>Ce courriel du Réviseur et adressé au Chef de rubrique avise ce dernier que le dernier cycle de révision a été complété et que le processus de mise en page peut débuter.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>Accusé de réception de la révision finale</subject>
@@ -451,143 +465,161 @@ J'ai terminé la préparation de la version révisée définitive du manuscrit i
 Nous vous remercions d'avoir effectué la révision du manuscrit intitulé « {$articleTitle} » pour {$journalName}. La préparation de la version définitive avant la mise en page est une étape importante du processus de publication.
 
 {$editorialContactSignature}</body>
-		<description>Ce courriel venant du chef de rubrique au réviseur, accuse réception que la dernière ronde de révisions est maintenant complétée et le remercie pour sa contribution.</description>
+		<description>Ce courriel du Chef de rubrique au Réviseur, signale la complétion de la dernière ronde de révision et le remercie pour sa contribution.</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
-		<subject>Demande pour la mise en page</subject>
-		<body>{$layoutEditorName},
+		<subject>Demande de mise en page des épreuves</subject>
+		<body><![CDATA[{$layoutEditorName}:
 
-J'aimerais que vous prépariez les épreuves du manuscrit intitulé « {$articleTitle} » pour {$journalName}.
+J'aimerais que vous prépariez les épreuves du manuscrit intitulé «&#x00A0;{$articleTitle}&#x00A0;» pour {$journalName} à l'aide des étapes suivantes.
+1. Cliquer sur l'URL de la soumission ci-dessous.
+2. Se connecter au site Web de la revue et utiliser la version de mise en page du fichier pour créer les épreuves en fonction des normes de la revue.
+3. Envoyer le courriel TERMINÉ au rédacteur.
 
-URL du manuscrit : {$submissionLayoutUrl}
-Nom d'utilisateur : {$layoutEditorUsername}
+URL de {$journalName} : {$journalUrl}
+URL du manuscrit : {$submissionLayoutUrl}
+Nom d'utilisateur : {$layoutEditorUsername}
 
 Si vous ne pouvez pas effectuer ce travail pour le moment ou si vous avez des questions, veuillez communiquer avec moi. Je vous remercie de votre collaboration.
 
-{$editorialContactSignature}</body>
-		<description>Ce courriel envoyé par le chef de rubrique à le responsable de la mise en page, avise ce dernier qu'il a été assigné à la tâche de faire la mise en page de la soumission. Il contient des informations sur la soumission et comment y accéder.</description>
+{$editorialContactSignature}]]></body>
+		<description>Ce courriel envoyé par le Chef de rubrique au Responsable de la mise en page, avise ce dernier qu'il a été assigné à la tâche de faire la mise en page de la soumission. Il fournit de l'information sur la soumission et comment y accéder.</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
-		<subject>Mise en page terminée</subject>
-		<body>{$editorialContactName},
+		<subject>Mise en page des épreuves terminée</subject>
+		<body><![CDATA[{$editorialContactName}:
 
-Les épreuves du manuscrit intitulé « {$articleTitle} » pour {$journalName} sont maintenant prêtes pour leur relecture. 
+Les épreuves du manuscrit intitulé «&#x00A0;{$articleTitle}&#x00A0;» pour {$journalName} sont maintenant prêtes pour la révision. 
 
 Si vous avez des questions, n'hésitez pas à communiquer avec moi.
 
-{$layoutEditorName}</body>
-		<description>Ce courriel de le responsable de la mise en page au chef de rubrique l'avise que le processus de la mise en page est terminé.</description>
+{$layoutEditorName}]]></body>
+		<description>Ce courriel du Responsable de la mise en page au Chef de rubrique l'avise que le processus de la mise en page est terminé.</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
-		<subject>Accusé de réception pour la mise en page</subject>
-		<body>{$layoutEditorName}:
+		<subject>Accusé de réception de la mise en page</subject>
+		<body><![CDATA[{$layoutEditorName}:
 
-Nous vous remercions d'avoir accepté de préparer la mise en page pour le manuscrit intitulé « {$articleTitle} » pour {$journalName}. Il s'agit d'une contribution importante à notre processus de publication.
+Nous vous remercions d'avoir accepté de préparer les épreuves pour le manuscrit intitulé «&#x00A0;{$articleTitle}&#x00A0;» pour {$journalName}. Il s'agit d'une contribution importante au processus de publication.
 
-{$editorialContactSignature}</body>
-		<description>Ce courriel venant du chef de rubrique à le responsable de la mise en page reconnaît que le processus de la mise en page a été complété et remercie le responsable de la mise en page de sa contribution.</description>
+{$editorialContactSignature}]]></body>
+		<description>Ce courriel du Chef de rubrique au Responsable de la mise en page reconnaît que le processus de la mise en page a été complété et remercie le responsable de la mise en page de sa contribution.</description>
 	</email_text>
 	<email_text key="PROOFREAD_AUTHOR_REQUEST">
-		<subject>Demande pour une correction d'épreuves (auteur)</subject>
-		<body>{$authorName}:
+		<subject>Demande de correction d'épreuves (Auteur)</subject>
+		<body><![CDATA[{$authorName}:
 
-Nous aimerions que vous procédiez à la correction d'épreuves du manuscrit intitulé « {$articleTitle} » {$journalName}. Veuillez ne corriger que les erreurs typographiques et les problèmes de mise en page. Vous trouverez sur les site des directives pour la correction des épreuves.
+Nous aimerions que vous procédiez à la correction d'épreuves du manuscrit intitulé «&#x00A0;{$articleTitle}&#x00A0;» dans {$journalName}.
+1. Cliquer sur l'URL de la soumission ci-dessous.
+2. Se connecter au site Web de la revue et afficher les INSTRUCTIONS POUR LA CORRECTION D'ÉPREUVES
+3. Cliquer sur AFFICHER LES ÉPREUVES dans la Mise en page et corriger les épreuves dans le (ou les) format(s) utilisé(s).
+4. Saisir les corrections (typographiques et de mise en page) dans les Corrections d'épreuves.
+5. Enregistrer et envoyer par courriel les corrections au Responsable de la mise en page et au Correcteur d'épreuves.
+6. Envoyer le courriel TERMINÉ au rédacteur.
 
-URL du manuscrit : {$submissionUrl}
-Nom d'utilisateur : {$authorUsername}
+URL du manuscrit : {$submissionUrl}
+Nom d'utilisateur : {$authorUsername}
 
-Si vous ne pouvez pas effectuer ce travail pour le moment ou si vous avez des questions, veuillez communiquer avec nous. Nous vous remercions de votre collaboration.
-
-{$editorialContactSignature}</body>
-		<description>Ce courriel du chef de rubrique à l'auteur avise ce dernier que les épreuves de la soumission sont prêtes pour la correction d'épreuves. Il fournit des information sur la soumission et comment y accéder.</description>
+{$editorialContactSignature}]]></body>
+		<description>Ce courriel du Chef de rubrique à l'Auteur avise ce dernier que les épreuves de la soumission sont prêtes pour la correction d'épreuves. Il fournit de l'information sur la soumission et comment y accéder.</description>
 	</email_text>
 	<email_text key="PROOFREAD_AUTHOR_COMPLETE">
-		<subject>Correction d'épreuves terminée (auteur)</subject>
-		<body>{$editorialContactName},
+		<subject>Correction d'épreuves terminée (Auteur)</subject>
+		<body><![CDATA[{$editorialContactName},
 
-J'ai terminé la correction d'épreuves du manuscrit intitulé « {$articleTitle} » pour {$journalName}. Les épreuves peuvent maintenant être relues par le correcteur d'épreuves et le responsable de la mise en page.
+J'ai terminé la correction d'épreuves du manuscrit intitulé «&#x00A0;{$articleTitle}&#x00A0;» pour {$journalName}. Les épreuves peuvent maintenant être relues par le correcteur d'épreuves et le responsable de la mise en page.
 
-{$authorName}</body>
-		<description>Ce courriel de l'auteur au correcteur d'épreuves et à l'éditeur les avise que la ronde de correction d'épreuves a été complétée et que les détails peuvent être vus dans les commentaires de l'article en question.</description>
+{$authorName}]]></body>
+		<description>Ce courriel de l'Auteur au Correcteur d'épreuves et au Rédacteur les avise que le cycle de correction d'épreuves est terminé et que les détails peuvent être consultés dans les commentaires de l'article.</description>
 	</email_text>
 	<email_text key="PROOFREAD_AUTHOR_ACK">
-		<subject>Accusé de réception pour la correction d'épreuves (auteur)</subject>
-		<body>{$authorName},
+		<subject>Accusé de réception de la correction d'épreuves (Auteur)</subject>
+		<body><![CDATA[{$authorName}:
 
-Nous vous remercions d'avoir accepté de corriger les épreuves de votre manuscrit intitulé « {$articleTitle} » pour {$journalName}. Nous sommes heureux de publier vos travaux dans notre revue.
+Nous vous remercions d'avoir accepté de corriger les épreuves de votre manuscrit intitulé «&#x00A0;{$articleTitle}&#x00A0;» pour {$journalName}. Nous sommes heureux de publier vos travaux dans notre revue.
 
-Si vous êtes inscrit à notre service de notification, vous recevrez par courriel la table des matières de la revue dès que votre article sera publié. Si vous avez des questions, n'hésitez pas à communiquer avec nous.
+Si vous êtes inscrit à notre service d'avis, vous recevrez par courriel la table des matières dès que votre article sera publié. Si vous avez des questions, n'hésitez pas à communiquer avec nous.
 
-{$editorialContactSignature}</body>
-		<description>Ce courriel du chef de rubrique à l'auteur reconnaît que le processus de la correction d'épreuves initiale est terminé et le remercie de sa contribution.</description>
+{$editorialContactSignature}]]></body>
+		<description>Ce courriel du Chef de rubrique à l'Auteur reconnaît que le processus de correction d'épreuves initiale est terminé et le remercie de sa contribution.</description>
 	</email_text>
 	<email_text key="PROOFREAD_REQUEST">
-		<subject>Demande pour la correction d'épreuves</subject>
-		<body>{$proofreaderName},
+		<subject>Demande de correction d'épreuves</subject>
+		<body><![CDATA[{$authorName}:
 
-Pourriez-vous effectuer la correction d'épreuves du manuscrit intitulé « {$articleTitle} » pour {$journalName}?
+Nous aimerions que vous procédiez à la correction d'épreuves du manuscrit intitulé «&#x00A0;{$articleTitle}&#x00A0;» dans {$journalName}.
+1. Cliquer sur l'URL de la soumission ci-dessous.
+2. Se connecter au site Web de la revue et afficher les INSTRUCTIONS POUR LA CORRECTION D'ÉPREUVES
+3. Cliquer sur AFFICHER LES ÉPREUVES dans la Mise en page et corriger les épreuves dans le (ou les) format(s) utilisé(s).
+4. Saisir les corrections (typographiques et de mise en page) dans les Corrections d'épreuves.
+5. Enregistrer et envoyer par courriel les corrections au Responsable de la mise en page et au Correcteur d'épreuves.
+6. Envoyer le courriel TERMINÉ au rédacteur.
 
-URL du manuscrit : {$submissionUrl}
-Nom d'utilisateur : {$layoutEditorUsername}
+URL du manuscrit : {$submissionUrl}
+Nom d'utilisateur : {$authorUsername}
 
-Si vous ne pouvez pas effectuer ce travail pour le moment ou si vous avez des questions, veuillez communiquer avec nous. Nous vous remercions de votre collaboration.
-
-{$editorialContactSignature}</body>
-		<description>Ce courriel du chef de rubrique au lecteur d'épreuves demande que ce dernier fasse la lecture des épreuves de l'article. Il fournit de l'information sur l'article, et comment procéder pour y accéder.</description>
+{$editorialContactSignature}]]></body>
+		<description>Ce courriel du Chef de rubrique au Correcteur d'épreuves demande que ce dernier fasse la correction des épreuves de l'article. Il fournit de l'information sur l'article, et comment y accéder.</description>
 	</email_text>
 	<email_text key="PROOFREAD_COMPLETE">
 		<subject>Correction d'épreuves terminée</subject>
-		<body>{$editorialContactName},
+		<body><![CDATA[{$editorialContactName}:
 
-J'ai terminé la correction d'épreuves du manuscrit intitulé « {$articleTitle} » pour {$journalName}. Les corrections peuvent maintenant être insérées dans le texte par le responsable de la mise en page.
+J'ai terminé la correction d'épreuves du manuscrit intitulé «&#x00A0;{$articleTitle}&#x00A0;» pour {$journalName}. Les corrections peuvent maintenant être insérées dans le texte par le Responsable de la mise en page.
 
-{$proofreaderName}</body>
-		<description>Ce courriel du lecteur d'épreuves au chef de rubrique avise ce dernier que le lecteur d'épreuves a fini le processus de la correction des épreuves.</description>
+{$proofreaderName}]]></body>
+		<description>Ce courriel du Correcteur d'épreuves au Chef de rubrique avise ce dernier que le Correcteur d'épreuves a fini le processus de correction d'épreuves.</description>
 	</email_text>
 	<email_text key="PROOFREAD_ACK">
-		<subject>Accusé  de réception pour la correction d'épreuves</subject>
-		<body>{$proofreaderName},
+		<subject>Accusé de réception de la correction d'épreuves</subject>
+		<body><![CDATA[{$proofreaderName},
 
-Nous vous remercions d'avoir accepté de corriger les épreuves du manuscrit intitulé « {$articleTitle} » pour {$journalName}. Votre collaboration contribue grandement à la qualité de la revue.
+Nous vous remercions d'avoir accepté de corriger les épreuves du manuscrit intitulé «&#x00A0;{$articleTitle}&#x00A0;» pour {$journalName}. Votre collaboration contribue grandement à la qualité de la revue.
 
-{$editorialContactSignature}</body>
-		<description>Ce courriel venant du chef de rubrique au lecteur d'épreuves confirme à ce dernier que le processus de la lecture d'épreuves a été complété et le remercie de sa contribution.</description>
+{$editorialContactSignature}]]></body>
+		<description>Ce courriel du Chef de rubrique au Correcteur d'épreuves confirme à ce dernier que le processus de la lecture d'épreuves a été complété et le remercie de sa contribution.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
-		<subject>Demande de révision (responsable de la mise en page)</subject>
-		<body>{$layoutEditorName},
+		<subject>Demande de correction d'épreuves (Responsable de la mise en page)</subject>
+		<body><![CDATA[{$layoutEditorName},
 
-Nous aimerions que vous insériez les modifications nécessaires à la suite de la correction d'épreuves du manuscrit intitulé « {$articleTitle} » pour {$journalName}.
+Nous aimerions que vous insériez les modifications nécessaires à la suite de la correction d'épreuves du manuscrit intitulé «&#x00A0;{$articleTitle}&#x00A0;» pour {$journalName} à l'aide des étapes suivantes.
+1. Cliquer sur l'URL de la soumission ci-dessous.
+2. Se connecter au site Web de la revue et consulter les corrections à apporter pour créer les épreuves corrigées.
+3.Télécharger les épreuves corrigées.
+4. Envoyer le courriel TERMINÉ de l'Étape 3 de Correction d'épreuves au rédacteur.
 
-URL du manuscrit : {$submissionUrl}
-Nom d'utilisateur : {$layoutEditorUsername}
+URL de {$journalName} : {$journalUrl}
+URL du manuscrit : {$submissionUrl}
+Nom d'utilisateur : {$layoutEditorUsername}
 
 Si vous ne pouvez pas effectuer ce travail pour le moment ou si vous avez des questions, veuillez communiquer avec moi. Je vous remercie de votre collaboration.
 
-{$editorialContactSignature}</body>
-		<description>Ce courriel venant du chef de rubrique à le responsable de la mise en page avise ce dernier que les épreuves sont prêtes pour une évaluation finale. Il contient des informations sur l'article et comment y accéder.</description>
+{$editorialContactSignature}]]></body>
+		<description>Ce courriel venant du Chef de rubrique au Responsable de la mise en page avise ce dernier que les épreuves sont prêtes pour une évaluation finale. Il contient de l'information sur l'article et comment y accéder.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
-		<subject>Correction d'épreuves terminée (responsable de la mise en page)</subject>
-		<body>{$editorialContactName},
+		<subject>Correction d'épreuves terminée (Responsable de la mise en page)</subject>
+		<body><![CDATA[{$editorialContactName},
 
-Les corrections ont été insérées dans le manuscrit intitulé « {$articleTitle} » pour {$journalName}. Ce document est prêt pour sa publication.
+Les corrections d'épreuves ont été effectuées dans le manuscrit intitulé «&#x00A0;{$articleTitle}&#x00A0;» pour {$journalName}. Ce document est prêt à être publié.
 
-{$layoutEditorName}</body>
-		<description>Ce courriel  de le responsable de la mise en page au chef de rubrique avise ce dernier que l'étape finale de correction d'épreuves a été finalisé et que l'article est maintenant prêt à être publié.</description>
+{$layoutEditorName}]]></body>
+		<description>Ce courriel  du Responsable de la mise en page au Chef de rubrique avise ce dernier que l'étape finale de correction d'épreuves est terminé et que l'article est maintenant prêt à être publié.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
-		<subject>Accusé de réception de la correction d'épreuves (responsable de la mise en page)</subject>
-		<body>{$layoutEditorName},
+		<subject>Accusé de réception de la correction d'épreuves (Responsable de la mise en page)</subject>
+		<body><![CDATA[{$layoutEditorName}:
 
-Nous vous remercions d'avoir corrigé les épreuves du manuscrit intitulé « {$articleTitle} » pour {$journalName}. Votre contribution est importante pour la revue.
-{$editorialContactSignature}</body>
-		<description>Ce courriel du chef de rubrique à le responsable de la mise en page reconnaît l'achèvement par ce dernier de l'étape finale de la correction d'épreuves et le remercie de sa contribution.</description>
+Nous vous remercions d'avoir corrigé les épreuves du manuscrit intitulé «&#x00A0;{$articleTitle}&#x00A0;» pour {$journalName}. Votre contribution est importante pour la revue.
+
+{$editorialContactSignature}]]></body>
+		<description>Ce courriel du Chef de rubrique au Responsable de la mise en page reconnaît l'achèvement par ce dernier de l'étape finale de la correction d'épreuves et le remercie de sa contribution.</description>
 	</email_text>
 	<email_text key="EMAIL_LINK">
-		<subject>Lien par courriel</subject>
-		<body>Je pense que l'article suivant pourrait vous intéresser : « {$articleTitle} » par {$authorName}, publié dans le volume {$volume}, numéro {$number} de ({$year}) de la revue {$journalName}. Vous le trouverez à l'adresse suivante : {$articleUrl}.</body>
-		<description>Ce courriel type donne à un lecteur inscrit l'occasion d'envoyer de l'information à quelqu'un qui peut être intéressé de voir un article en particulier. Il est disponible via « Outils de lecture » et doit être activé par le directeur de la revue à la page « Gestion des outils de lecture ».</description>
+		<subject>Article potentiellement intéressant</subject>
+		<body><![CDATA[Je pense que l'article suivant pourrait vous intéresser&#x00A0;: «&#x00A0;{$articleTitle}&#x00A0;» par {$authorName}, publié dans le volume {$volume}, numéro {$number} de ({$year}) de la revue {$journalName}. Vous le trouverez à l'adresse suivante&#x00A0;: {$articleUrl}.]]></body>
+		<description>Ce courriel type donne à un lecteur inscrit l'occasion d'envoyer de l'information à quelqu'un qui peut être intéressé par un article en particulier. Il est disponible via Outils de lecture et doit être activé par le Directeur de la revue à la page Gestion des outils de lecture.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
 		<subject>Avis d'abonnement</subject>
@@ -670,27 +702,26 @@ Si vous avez des questions, ne pas hésiter à communiquer avec moi.
 		<subject>Valider votre compte</subject>
 		<body>{$userFullName}
 
-Vous avez créé un compte avec {$journalName}, mais avant de pouvoir commencer à l'utiliser, vous devez valider votre compte de courriel. Pour le faire, suivez simplement le lien ci-dessous :
-
+Vous avez créé un compte avec {$journalName}, mais avant de pouvoir commencer à l'utiliser, vous devez valider votre compte de courriel. Pour ce faire, suivre simplement le lien ci-dessous :
 
 {$activateUrl}
 
 Merci,
 {$principalContactSignature}</body>
-		<description>Ce courriel est envoyé à un utilisateur nouvellement inscrit, afin de l'accueillir dans le système et lui offrir un exemplaire de son nom et mot de passe d'utilisateur.</description>
+		<description>Ce courriel est envoyé à un utilisateur nouvellement inscrit, afin de l'accueillir dans le système et lui offrir un enregistrement de son nom d'utilisateur et de son mot de passe.</description>
 	</email_text>
 	<email_text key="REVIEWER_REGISTER">
-		<subject>Inscription en tant que réviseur de {$journalName}</subject>
-		<body>En considération de vos compétences d'expert, nous avons pris l'initiative d'inscrire votre nom dans la base de donnée des réviseurs de {$journalName}. Cela ne vous engage d'aucune façon, mais nous permet simplement de solliciter vos services pour la révision possible de soumissions. Si vous êtes invité à procéder à une révision, vous recevrez le titre et le résumé de la thèse en question, et serez toujours libre d'accepter ou de refuser une telle invitation. À tout moment, il vous est également possible de demander à ce que votre nom soit retiré de la liste des réviseurs.
+		<subject>Inscription en tant qu'évaluateur de {$journalName}</subject>
+		<body>Compte tenu de votre expertise, nous avons pris l'initiative d'inscrire votre nom dans la base de données des évaluateurs de {$journalName}. Cela ne vous engage d'aucune façon, mais nous permet simplement de solliciter vos services pour l'évaluation d'une soumission. Si vous êtes invité à effectuer une évaluation, vous recevrez le titre et le résumé de l'article en question, et serez toujours libre d'accepter ou de refuser une telle invitation. À tout moment, il vous est également possible de demander à ce que votre nom soit retiré de la liste des évaluateurs.
 
-Nous vous acheminons un nom et un mot de passe d'utilisateur, car tous deux sont requis dans vos échanges avec la revue, par l'intermédiaire de ce site Web. Vous pourriez souhaiter, par exemple, effectuer la mise à jour de votre profil, y compris vos intérêts en matière d'évaluation.
+Nous vous acheminons un nom d'utilisateur et un mot de passe, car tous deux sont requis pour tout échange avec la revue, par l'intermédiaire de ce site Web. Vous pouvez, par exemple, si vous le souhaitez, effectuer la mise à jour de votre profil, y compris vos intérêts en matière d'évaluation.
 
 Nom d'utilisateur : {$username}
 Mot de passe : {$password}
 
 Merci,
 {$principalContactSignature}</body>
-		<description>Ce courriel est envoyé à un réviseur nouvellement inscrit, afin de l'accueillir dans le système et lui offrir un exemplaire de son nom et mot de passe d'utilisateur.</description>
+		<description>Ce courriel est envoyé à un évaluateur nouvellement inscrit, afin de l'accueillir dans le système et lui offrir un enregistrement de son nom d'utilisateur et mot de passe.</description>
 	</email_text>
 	<email_text key="NOTIFICATION">
 		<subject>Nouvel avis de {$siteTitle}</subject>

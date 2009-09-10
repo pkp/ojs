@@ -569,11 +569,11 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 <li>Les termes de recherche sont insensibles à la casse</li>
 <li>Les noms communs sont ignorés</li>
 <li>Par défaut, seulement les articles contenant <em>tous</em> les termes de recherche sont retournés (c.-à-d. <em>ET</em> est implicite)</li>
-<li>Combiner plusieurs mots avec <em>OU</em> pour trouver l'un ou l'autre terme, c.-à-d. <em>éducation OR recherche</em></li>
-<li>Utiliser des parenthèses pour faire une recherche plus complexe i.e. <em>archive ((revue OU conférence) SAUF thèses)</em></li>
-<li>Rechercher une phrase exacte en la mettant entre guillemets, c.-à-d. <em>"Publication à libre accès"</em></li>
-<li>Exclure un mot en le préfixant avec <strong>-</strong> ou <em>SAUF</em>, c.-à-d. <em>en ligne -politiques</em> ou <em>en ligne NON politiques</em></li>
-<li>Utiliser <strong>*</strong> comme caractère de remplacement dans un terme pour y faire correspondre toute séquence de caractères, c.-à-d. <em>soci* moralité</em> feront apparaître les documents contenant « sociologique » ou « socialisme »</li>
+<li>Combiner plusieurs mots avec <em>OU</em> pour trouver l'un ou l'autre terme, c.-à-d. <em>éducation OU recherche</em></li>
+<li>Utiliser des parenthèses pour faire une recherche plus complexe, c.-à-d. <em>archive ((revue OU conférence) SAUF thèses)</em></li>
+<li>Rechercher une phrase exacte en la mettant entre guillemets, c.-à-d. <em>"Publication en accès libre"</em></li>
+<li>Exclure un mot en le préfixant avec <strong>-</strong> ou <em>SAUF</em>, c.-à-d. <em>en ligne -politiques</em> ou <em>en ligne SAUF politiques</em></li>
+<li>Utiliser <strong>*</strong> comme troncature dans un terme pour y faire correspondre toute séquence de caractères, c.-à-d. <em>soci* moralité</em> feront apparaître les documents contenant «&#x00A0;sociologique&#x00A0;» ou «&#x00A0;socialisme&#x00A0;»</li>
 </ul>]]></message>
 
 	<!-- Interstitial page for PDFs -->
@@ -915,4 +915,112 @@ le droit de première publication de l’œuvre [SPÉCIFIER LA PÉRIODE DE TEMPS
 	<message key="about.aboutThisPublishingSystem.altText">Processus éditorial et d'édition d'OJS</message>
 	<message key="payment.type.purchaseArticle">Frais d'achat de l'article</message>
 	<message key="journal.issn">ISSN</message>
+	<message key="article.article">Article</message>
+	<message key="article.citations">Références</message>
+	<message key="submission.citations">Références</message>
+	<message key="user.manageMySubscriptions">Gérer Mes abonnements</message>
+	<message key="subscriptionTypes.currency">Devise</message>
+	<message key="subscriptionTypes.year">année</message>
+	<message key="subscriptionTypes.years">années</message>
+	<message key="subscriptionTypes.months">mois</message>
+	<message key="subscriptionTypes.format">Format</message>
+	<message key="subscriptionTypes.month">mois</message>
+	<message key="subscriptionTypes.nonExpiring">Sans échéance</message>
+	<message key="subscriptionTypes.format.online">Numérique</message>
+	<message key="subscriptionTypes.format.print">Imprimé</message>
+	<message key="subscriptionTypes.format.printOnline">Imprimé et numérique</message>
+	<message key="subscriptions.inactive">Inactif</message>
+	<message key="subscriptions.status">Statut</message>
+	<message key="subscriptions.status.active">Actif</message>
+	<message key="subscriptions.status.needsInformation">En attente d'information</message>
+	<message key="subscriptions.status.needsApproval">En attente d'approbation</message>
+	<message key="subscriptions.status.awaitingManualPayment">En attente de paiement manuel</message>
+	<message key="subscriptions.status.awaitingOnlinePayment">En attente de paiment en ligne</message>
+	<message key="subscriptions.status.other">Autre, Voir Notes</message>
+	<message key="subscriptions.individualDescription">Les abonnements individuels demandent l'ouverture d'une session pour avoir accès au contenu auquel on est abonné.</message>
+	<message key="subscriptions.institutionalDescription">Les abonnements institutionnels ne demandent pas d'ouverture de session. Le domaine et/ou l'adresse IP de l'utilisateur est utilisé afin de fournir l'accès au contenu auquel on est abonné.</message>
+	<message key="subscriptions.institutionalOnlinePaymentDescription"><![CDATA[<strong>Note :</strong> Les abonnements institutionnels souscrits en ligne demandent une approbation du domaine et des intervalles d'adresses IP avant que l'abonnement soit activé.]]></message>
+	<message key="subscriptionManager.individualSubscriptions">Abonnements individuels</message>
+	<message key="subscriptionManager.institutionalSubscriptions">Abonnements institutionnels</message>
+	<message key="subscriptionManager.subscriptionTypes">Types d'abonnement</message>
+	<message key="plugins.categories.oaiMetadataFormats">Plugiciels du format de métadonnées OAI</message>
+	<message key="plugins.categories.oaiMetadataFormats.description">Ces plugiciels de format émettent les métadonnées en communications OAI.</message>
+	<message key="manager.setup.reviewProcessEmailDescription">Les rédacteurs envoient aux évaluateurs la demande d'évaluation avec la soumission jointe au courriel. Les évaluateurs envoient par courriel leur acceptation (ou refus), ainsi que l'évaluation et la recommandation. Les rédacteurs inscrivent l'acceptation (ou refus) des évaluateurs, ainsi que l'évaluation et la recommandation sur la page d'évaluation de la soumission, afin de consigner le processus d'évaluation.</message>
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[La revue utilisera un système de classification sujet disponible sur le Web.<br />
+Titre du système de classification]]></message>
+	<message key="manager.setup.citations">Permet aux auteurs de fournir séparément une liste structurée de références (citations) comme partie intégrante de leur soumission.</message>
+	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Étapes : Soumission en attente &gt; Soumission en évaluation &gt; Soumission en révision &gt; Table des matières.<br /><br />]]></message>
+	<message key="manager.people.confirmDisable">Désactiver cet utilisateur? Ceci empêchera l'utilisateur de se connecter au système. Vous pouvez optionnellement fournir à l'utilisateur une raison expliquant la désactivation de son compte.</message>
+	<message key="editor.submissionReview.notes"><![CDATA[<ol>
+	<li>Les éléments surlignés indiquent qu'une action du rédacteur est nécessaire.</li>
+	<li>"Échéance" est rempli quand un évaluateur accepte une demande d'évaluation; ça affiche le nombre de semaines qu'il reste jusqu'à la date d'échéance de l'évaluation ou (-) de semaines de retard.</li>
+</ol>]]></message>
+	<message key="reviewer.article.reviewGuidelinesDescription">Les directives d'évaluation fourniront aux évaluateurs des critères pour juger de la pertinence d'une soumission pour fins de publication dans la revue, et peuvent inclure toutes instructions spéciales nécessaires à la préparation d'une évaluation efficace et utile. En effectuant l'évaluation, les évaluateurs se font présenter deux boîtes de texte, la première "pour l'auteur et le rédacteur" et la deuxième "pour le rédacteur." Alternativement, le responsable de la revue peut créer un formulaire d'évaluation par les pairs sous Formulaires d'évaluation. Dans tous les cas, les rédacteurs auront l'option d'inclure les évaluations dans leur correspondance avec l'auteur.</message>
+	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Déclarer si vous êtes en conflit d'intérêts en ce qui concerne cette recherche (voir <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Politique</a>).]]></message>
+	<message key="reviewer.article.selectRecommendation">Choisir une recommandation et soumettre l'évaluation pour compléter le processus. Vous devez écrire une évaluation ou télécharger un fichier avant de choisir une recommandation.</message>
+	<message key="author.submit.submissionCitations">Fournir une liste structurée de références pour les travaux cités dans cette soumission.</message>
+	<message key="user.subscriptions.mySubscriptions">Mes abonnements</message>
+	<message key="user.subscriptions.individualSubscriptions">Abonnement individuel</message>
+	<message key="user.subscriptions.institutionalSubscriptions">Abonnements institutionnels</message>
+	<message key="user.subscriptions.renew">Renouveler</message>
+	<message key="user.subscriptions.purchase">Souscrire</message>
+	<message key="user.subscriptions.purchaseNewSubscription">Souscrire à un nouvel abonnement</message>
+	<message key="user.subscriptions.purchaseIndividualSubscription">Souscrire à un abonnement individuel</message>
+	<message key="user.subscriptions.purchaseInstitutionalSubscription">Souscrire à un abonnement institutionnel</message>
+	<message key="user.subscriptions.expires">Expire</message>
+	<message key="user.subscriptions.expired">Expiré</message>
+	<message key="user.subscriptions.viewSubscriptionTypes">Afficher les types d'abonnement disponibles</message>
+	<message key="user.subscriptions.form.typeId">Type d'abonnement</message>
+	<message key="user.subscriptions.form.membership">Adhésion</message>
+	<message key="user.subscriptions.form.membershipRequired">Le type d'abonnement sélectionné nécessite des informations d'adhésion.</message>
+	<message key="user.subscriptions.form.typeIdValid">Veuillez sélectionner un type d'abonnement valide.</message>
+	<message key="user.subscriptions.form.subscriptionExists">Ce compte utilisateur a déjà un abonnement individuel.</message>
+	<message key="user.subscriptions.form.membershipInstructions">Information d'adhésion, si obligatoire pour le type d'abonnement sélectionné.</message>
+	<message key="user.subscriptions.form.institutionName">Nom de l'institution</message>
+	<message key="user.subscriptions.form.institutionNameRequired">Le nom de l'institution est obligatoire.</message>
+	<message key="user.subscriptions.form.institutionMailingAddress">Adresse de courriel</message>
+	<message key="user.subscriptions.form.domain">Domaine</message>
+	<message key="user.subscriptions.form.domainInstructions">Si un domaine est saisi ici, les intervalles d'adresses IP sont facultatifs.</message>
+	<message key="user.subscriptions.form.domainIPRangeRequired">Le type d'abonnement sélectionné nécessite un domaine et/ou un intervalle d'adresses IP pour l'authentification d'abonnement.</message>
+	<message key="user.subscriptions.form.domainValid">Veuillez saisir un domaine valide.</message>
+	<message key="user.subscriptions.form.ipRange">Intervalles d'adresses IP</message>
+	<message key="user.subscriptions.form.ipRangeItem"><![CDATA[&#8226;]]></message>
+	<message key="user.subscriptions.form.ipRangeInstructions"><![CDATA[Si des intervalles d'adresses IP sont saisis ici, le domaine est facultatif.<br />Les valeurs valides incluent une adresse IP (par ex. 142.58.103.1), un intervalle d'adresses IP (par ex. 142.58.103.1 - 142.58.103.4), un intervalle d'adresses IP avec troncature '*' (par ex. 142.58.*.*), et un intervalle d'adresses IP avec CIDR (par ex. 142.58.100.0 /24).]]></message>
+	<message key="user.subscriptions.form.ipRangeValid">Veuillez saisir un intervalle d'adresses IP valide.</message>
+	<message key="user.subscriptions.form.deleteIpRange">Supprimer</message>
+	<message key="user.subscriptions.form.addIpRange">Ajouter</message>
+	<message key="about.history">Historique de la revue</message>
+	<message key="about.subscriptions.individual">Abonnements individuels</message>
+	<message key="about.subscriptions.institutional">Abonnements institutionnels</message>
+	<message key="about.subscriptionTypes.name">Nom</message>
+	<message key="about.subscriptionTypes.format">Format</message>
+	<message key="about.subscriptionTypes.duration">Durée</message>
+	<message key="about.subscriptionTypes.cost">Coût</message>
+	<message key="payment.subscription.purchase">Souscrire à un abonnement</message>
+	<message key="installer.installApplication">Installer Open Journal Systems</message>
+	<message key="installer.upgradeApplication">Mettre à jour Open Journal Systems</message>
+	<message key="rt.admin.validateUrls.description"><![CDATA[Des URLs de sites de recherche possiblement invalides sont affichés ci-dessous.<br/>
+Vous devriez vérifier manuellement tous les URLs indentifiés comme invalides, car ce test n'est pas fiable à 100%.<br/>
+La validation peut échouer sur les URL de recherche qui nécessitent des formulaires de données enregistrés.]]></message>
+	<message key="notification.mailListDescription">Saisir votre adresse de courriel pour être avisé immédiatement de tout nouveau contenu important ajouté à la revue.</message>
+	<message key="notification.notificationsPublicDescription"><![CDATA[Cette page montre les mises à jour importantes associées avec cette revue tel que les nouvelles parutions et les annonces. Vous pouvez vous abonner à ces avis par l'intermédiaire des flux RSS (en cliquant sur les images à droite), ou <a href="{$emailUrl}">par courriel.</a>]]></message>
+	<message key="notification.type.articleSubmitted">Un nouvel article, "{$param}", a été soumis.</message>
+	<message key="notification.type.copyeditComment">Un réviseur a laissé un commentaire sur "{$param}".</message>
+	<message key="notification.type.editing">Événements de révision</message>
+	<message key="notification.type.editorDecisionComment">Un commentaire a été laissé concernant la décision du rédacteur pour "{$param}".</message>
+	<message key="notification.type.galleyModified">Un épreuve a été modifié pour "{$param}".</message>
+	<message key="notification.type.issuePublished">Un numéro a été publié.</message>
+	<message key="notification.type.layoutComment">Un commentaire a été laissé à propos de la mise en page de "{$param}".</message>
+	<message key="notification.type.metadataModified">Les métadonnées de "{$param}" ont été modifiées.</message>
+	<message key="notification.type.newAnnouncement">Un nouvelle annonce a été créée.</message>
+	<message key="notification.type.proofreadComment">Un commentaire a été laissé par un correcteur d'épreuves sur "{$param}".</message>
+	<message key="notification.type.reviewerComment">Un évaluateur a écrit un commentaire sur "{$param}".</message>
+	<message key="notification.type.reviewerFormComment">Une évaluation de formulaire d'évaluation a été soumise pour "{$param}".</message>
+	<message key="notification.type.reviewing">Événements d'évaluation</message>
+	<message key="notification.type.site">Événements du site</message>
+	<message key="notification.type.submissionComment">Un rédacteur a fait un commentaire sur "{$param}".</message>
+	<message key="notification.type.submissions">Événements de soumission</message>
+	<message key="notification.type.suppFileModified">Le (ou les) fichier(s) supplémentaire(s) de "{$param}" a (ont) été modifié(s).</message>
+	<message key="notification.type.userComment">Un lecteur a fait un commentaire sur "{$param}"</message>
+	<message key="debug.notes.helpMappingLoad">Fichier de mappage d'aide XML {$filename} rechargé à la recherche de {$id}.</message>
 </locale>

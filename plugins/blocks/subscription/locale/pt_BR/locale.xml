@@ -13,11 +13,12 @@
   -->
  
 <locale name="pt_BR" full_name="Português (Brasil)">
-	<message key="plugins.block.subscription.displayName">Bloco de Assinatura</message>
+	<message key="plugins.block.subscription.displayName">Plugin Bloco de Assinatura</message>
 	<message key="plugins.block.subscription.description">Este plugin oferece informações sobre a assinatura nas barras laterais.</message>
 	<message key="plugins.block.subscription.blockTitle">Assinatura</message>
 	<message key="plugins.block.subscription.expires">Expiração</message>
 	<message key="plugins.block.subscription.providedBy">Acesso fornecido por:</message>
-	<message key="plugins.block.subscription.providedByInstitution">Acesso fornecido pela instituição</message>
 	<message key="plugins.block.subscription.comingFromIP">IP de proveniência:</message>
+	<message key="plugins.block.subscription.about">Assinaturas</message>
+	<message key="plugins.block.subscription.loginToVerifySubscription">Acesse o sistema para verificar sua assinatura</message>
 </locale>
