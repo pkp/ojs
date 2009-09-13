@@ -35,6 +35,7 @@ if (!defined('DIRECTORY_SEPARATOR')) {
 	define('DIRECTORY_SEPARATOR', strtolower(substr(PHP_OS, 0, 3)) == 'win' ? '\\' : '/');
 }
 define('BASE_SYS_DIR', dirname(dirname(__FILE__)));
+chdir(BASE_SYS_DIR);
 ini_set('include_path', '.'
 	. ENV_SEPARATOR . BASE_SYS_DIR . '/includes'
 	. ENV_SEPARATOR . BASE_SYS_DIR . '/classes'
