@@ -29,6 +29,14 @@ class AdodbPostgres7CompatDict extends ADODB2_postgres {
 		return call_user_func_array(array($this->delegate, "_${name}Delegate"), $arguments);
 	}
 
+	function RenameColumnSQL($tabname, $oldcolumn, $newcolumn, $flds = '') {
+		return $this->delegate->_RenameColumnSQLDelegate($tabname, $oldcolumn, $newcolumn, $flds);
+	}
+
+	function _RenameColumnSQLUnpatched($tabname, $oldcolumn, $newcolumn, $flds = '') {
+		return parent::RenameColumnSQL($tabname, $oldcolumn, $newcolumn, $flds);
+	}
+
 	/*
 	 * CreateDatabase with character set support
 	 *

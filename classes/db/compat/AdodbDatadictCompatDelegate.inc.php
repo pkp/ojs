@@ -24,6 +24,13 @@ class AdodbDatadictCompatDelegate {
 		$this->adodbDict = &$adodbDict;
 	}
 
+	function _RenameColumnSQLDelegate($tabname, $oldcolumn, $newcolumn, $flds = '') {
+		if ($flds) {
+			return $this->adodbDict->_RenameColumnSQLUnpatched($tabname, $oldcolumn, $newcolumn, $flds);
+		} else {
+			return array(sprintf($this->adodbDict->renameColumn, $this->adodbDict->TableName($tabname), $this->adodbDict->NameQuote($oldcolumn), $this->adodbDict->NameQuote($newcolumn), ''));
+		}
+	}
 
 	/**
 	 * Functions managing the database character encoding

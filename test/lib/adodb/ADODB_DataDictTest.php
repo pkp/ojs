@@ -18,9 +18,7 @@ class ADODB_DataDictTest extends OjsTestCase {
 	 * @covers AdodbDatadictCompatDelegate::_SetCharSetDelegate
 	 */
 	public function testSetAndGetCharsetOnMySQL() {
-		$this->setTestConfiguration(self::CONFIG_MYSQL);
-		$adoConn = &DBConnection::getConn();
-		$dataDict = &$adoConn->NewDataDictionary();
+		$dataDict = &$this->getDataDict(self::CONFIG_MYSQL);
 
 		$dataDict->SetCharSet('ascii');
 		self::assertEquals('ascii', $dataDict->GetCharSet());
@@ -35,9 +33,7 @@ class ADODB_DataDictTest extends OjsTestCase {
 	 * @covers AdodbMysqlCompatDict::CreateDatabase
 	 */
 	public function testCreateDatabaseOnMySQL() {
-		$this->setTestConfiguration(self::CONFIG_MYSQL);
-		$adoConn = &DBConnection::getConn();
-		$dataDict = &$adoConn->NewDataDictionary();
+		$dataDict = &$this->getDataDict(self::CONFIG_MYSQL);
 
 		// Test without a character set
 		$sql = $dataDict->CreateDatabase('test_database');
@@ -53,9 +49,7 @@ class ADODB_DataDictTest extends OjsTestCase {
 	 * @covers AdodbMysqlCompatDict::_TableSQL
 	 */
 	public function test_TableSQLOnMySQL() {
-		$this->setTestConfiguration(self::CONFIG_MYSQL);
-		$adoConn = &DBConnection::getConn();
-		$dataDict = &$adoConn->NewDataDictionary();
+		$dataDict = &$this->getDataDict(self::CONFIG_MYSQL);
 
 		// Test data
 		$lines = array(
@@ -85,13 +79,36 @@ class ADODB_DataDictTest extends OjsTestCase {
 	}
 
 	/**
+	 * @covers AdodbMysqlCompatDict::_RenameColumnSQLUnpatched
+	 * @covers AdodbMysqlCompatDict::RenameColumnSQL
+	 * @covers AdodbDatadictCompatDelegate::_RenameColumnSQLDelegate
+	 * @covers ADODB_DataDict::RenameColumnSQL
+	 */
+	public function testRenameColumnSQLOnMySQL() {
+		$dataDict = &$this->getDataDict(self::CONFIG_MYSQL);
+
+		// Try with an empty fields variable
+		$sql = $dataDict->RenameColumnSQL('test_table', 'old_colname', 'new_colname', '');
+		self::assertEquals(array('ALTER TABLE test_table CHANGE COLUMN old_colname new_colname '), $sql);
+
+		// Try with fields variable set
+		$flds = array(
+			'OLD_COLNAME' => array(
+				'NAME' => 'new_colname',
+				'TYPE' => 'C2',
+				'SIZE' => '6'
+			)
+		);
+		$sql = $dataDict->RenameColumnSQL('test_table', 'old_colname', 'new_colname', $flds);
+		self::assertEquals(array('ALTER TABLE test_table CHANGE COLUMN old_colname new_colname VARCHAR(6)'), $sql);
+	}
+
+	/**
 	 * @covers AdodbPostgres7CompatDict::CreateDatabase
 	 * @covers AdodbPostgres7CompatDict::__call
 	 */
 	public function testCreateDatabaseOnPostgres() {
-		$this->setTestConfiguration(self::CONFIG_PGSQL);
-		$adoConn = &DBConnection::getConn();
-		$dataDict = &$adoConn->NewDataDictionary();
+		$dataDict = &$this->getDataDict(self::CONFIG_PGSQL);
 
 		// Test without a character set
 		$sql = $dataDict->CreateDatabase('test_database');
@@ -101,6 +118,38 @@ class ADODB_DataDictTest extends OjsTestCase {
 		$dataDict->SetCharSet('UTF8');
 		$sql = $dataDict->CreateDatabase('test_database');
 		self::assertEquals(array('CREATE DATABASE test_database WITH ENCODING \'UTF8\' TEMPLATE template0'), $sql);
+	}
+
+	/**
+	 * @covers AdodbPostgres7CompatDict::_RenameColumnSQLUnpatched
+	 * @covers AdodbPostgres7CompatDict::RenameColumnSQL
+	 * @covers AdodbDatadictCompatDelegate::_RenameColumnSQLDelegate
+	 * @covers ADODB_DataDict::RenameColumnSQL
+	 */
+	public function testRenameColumnSQLOnPostgres() {
+		$dataDict = &$this->getDataDict(self::CONFIG_PGSQL);
+
+		// Try with an empty fields variable
+		$sql = $dataDict->RenameColumnSQL('test_table', 'old_colname', 'new_colname', '');
+		self::assertEquals(array('ALTER TABLE test_table RENAME COLUMN old_colname TO new_colname'), $sql);
+
+		// Try with fields variable set
+		$flds = array(
+			'OLD_COLNAME' => array(
+				'NAME' => 'new_colname',
+				'TYPE' => 'C2',
+				'SIZE' => '6'
+			)
+		);
+		$sql = $dataDict->RenameColumnSQL('test_table', 'old_colname', 'new_colname', $flds);
+		self::assertEquals(array('ALTER TABLE test_table RENAME COLUMN old_colname TO new_colname'), $sql);
+	}
+
+	private function &getDataDict($configFile) {
+		$this->setTestConfiguration($configFile);
+		$adoConn = &DBConnection::getConn();
+		$dataDict = &$adoConn->NewDataDictionary();
+		return $dataDict;
 	}
 }
 ?>
