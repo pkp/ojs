@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "dtd/xmlschema.dtd">
+
+<!--
+  * ADOConnectionTest.tearDown.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * OJS database test schema.
+  *
+  * $Id$
+  -->
+
+<schema version="0.2">
+	<table name="test_table">
+		<DROP/>
+	</table>
+</schema>

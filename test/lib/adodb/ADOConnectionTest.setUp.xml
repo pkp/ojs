@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "dtd/xmlschema.dtd">
+
+<!--
+  * ADOConnectionTest.setUp.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * OJS database test schema.
+  *
+  * $Id$
+  -->
+
+<schema version="0.2">
+	<table name="test_table">
+		<field name="test_table_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="some_foreign_key_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="some_float" type="F" />
+		<field name="some_flag" type="I1" />
+		<field name="some_string" type="C2" size="6">
+			<NOTNULL />
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="some_text" type="X"/>
+		<descr>table description</descr>
+		<index name="some_index">
+			<col>some_foreign_key_id</col>
+		</index>
+	</table>
+</schema>
