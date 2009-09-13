@@ -232,6 +232,48 @@ class ADODB_DataDictTest extends OjsTestCase {
 		$dataDict->ExecuteSQLArray(array('DROP TABLE test_table'));
 	}
 
+	/**
+	 * @covers AdodbPostgres7CompatDict::_CreateTableSQLUnpatched
+	 * @covers AdodbPostgres7CompatDict::CreateTableSQL
+	 * @covers AdodbPostgres7CompatDict::makeObjectName
+	 * @covers ADODB2_postgres::CreateTableSQL
+	 */
+	public function testCreateTableSqlOnPostgres() {
+		$dataDict = &$this->getDataDict(self::CONFIG_PGSQL);
+
+		// Test data
+		$flds = array(
+			'COLNAME' => array(
+				'NAME' => 'a_very_long_colname',
+				'TYPE' => 'I8',
+				'AUTOINCREMENT' => ''
+			)
+		);
+
+		// Test with Postgres >=7.3
+		$sql = $dataDict->CreateTableSQL('test_table', $flds);
+		$expectedResult = array(
+			0 => "CREATE TABLE test_table (\n" .
+			     "a_very_long_colname      SERIAL\n" .
+			     ")"
+		);
+		self::assertEquals($expectedResult, $sql);
+
+		// Test with (faked) Postgres <7.3
+		$dataDict->serverInfo['version'] = '6.4';
+		// We use long table and column names to
+		// test name truncation in makeObjectName().
+		$sql = $dataDict->CreateTableSQL('a_very_long_table_name', $flds);
+		$expectedResult = array(
+			0 => "CREATE SEQUENCE a_very_long_t_a_very_long_c_seq",
+			1 => "CREATE TABLE a_very_long_table_name (\n" .
+			     "a_very_long_colname      INTEGER\n" .
+			     ")",
+			2 => "ALTER TABLE a_very_long_table_name ALTER COLUMN a_very_long_colname SET DEFAULT nextval('a_very_long_t_a_very_long_c_seq')"
+		);
+		self::assertEquals($expectedResult, $sql);
+	}
+
 	private function &getDataDict($configFile) {
 		$this->setTestConfiguration($configFile);
 		$adoConn = &DBConnection::getConn();
