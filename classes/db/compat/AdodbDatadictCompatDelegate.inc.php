@@ -32,6 +32,22 @@ class AdodbDatadictCompatDelegate {
 		}
 	}
 
+	function _ChangeTableSQLDelegate($tablename, $flds, $tableoptions = false) {
+		// Test wether we alter an existing table in a database that
+		// does not support the ALTER COLUMN statement:
+		//  * We check if the table exists by calling MetaColumns()
+		//  * We check if the database supports ALTER COLUMN by checking
+		//    for one exemplary field whether AlterColumnSQL() returns a result.
+		if (!empty($flds) && is_array($cols = $this->adodbDict->MetaColumns($tablename))
+		        && !sizeof($alter = $this->adodbDict->AlterColumnSQL($tablename, array_slice($flds, 0, 1, true)))) {
+			// Database does not support ALTER COLUMN so AlterColumnSQL() will implicitly
+			// recreate the entire table.
+			return $this->adodbDict->AlterColumnSQL($tablename, false, $flds, $tableoptions);
+		} else {
+			return $this->adodbDict->_ChangeTableSQLUnpatched($tablename, $flds, $tableoptions);
+		}
+	}
+
 	/**
 	 * Functions managing the database character encoding
 	 */

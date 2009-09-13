@@ -104,6 +104,44 @@ class ADODB_DataDictTest extends OjsTestCase {
 	}
 
 	/**
+	 * @covers AdodbMysqlCompatDict::_ChangeTableSQLUnpatched
+	 * @covers AdodbMysqlCompatDict::ChangeTableSQL
+	 * @covers AdodbDatadictCompatDelegate::_ChangeTableSQLDelegate
+	 * @covers ADODB_DataDict::ChangeTableSQL
+	 */
+	public function testChangeTableSqlOnMySQL() {
+		$dataDict = &$this->getDataDict(self::CONFIG_MYSQL);
+
+		// Make sure that we have a defined start state
+		// in case an earlier test failed in the middle
+		$dataDict->ExecuteSQLArray(array('DROP TABLE IF EXISTS test_table'));
+
+		// Test data
+		$flds = array(
+			'OLD_COLNAME' => array(
+				'NAME' => 'new_colname',
+				'TYPE' => 'C2',
+				'SIZE' => '6'
+			)
+		);
+		$sql = $dataDict->ChangeTableSql('test_table', $flds);
+		$expectedResult = array(
+			"CREATE TABLE test_table (\n" .
+			"new_colname              VARCHAR(6)\n" .
+			")"
+		);
+		self::assertEquals($expectedResult, $sql);
+
+		// Create the test table and try again
+		$dataDict->ExecuteSQLArray($sql);
+		$sql = $dataDict->ChangeTableSql('test_table', $flds);
+		self::assertEquals(array('ALTER TABLE test_table MODIFY COLUMN new_colname VARCHAR(6)'), $sql);
+
+		// Drop the test table
+		$dataDict->ExecuteSQLArray(array('DROP TABLE test_table'));
+	}
+
+	/**
 	 * @covers AdodbPostgres7CompatDict::CreateDatabase
 	 * @covers AdodbPostgres7CompatDict::__call
 	 */
@@ -143,6 +181,55 @@ class ADODB_DataDictTest extends OjsTestCase {
 		);
 		$sql = $dataDict->RenameColumnSQL('test_table', 'old_colname', 'new_colname', $flds);
 		self::assertEquals(array('ALTER TABLE test_table RENAME COLUMN old_colname TO new_colname'), $sql);
+	}
+
+	/**
+	 * @covers AdodbPostgres7CompatDict::_ChangeTableSQLUnpatched
+	 * @covers AdodbPostgres7CompatDict::ChangeTableSQL
+	 * @covers AdodbDatadictCompatDelegate::_ChangeTableSQLDelegate
+	 * @covers ADODB_DataDict::ChangeTableSQL
+	 */
+	public function testChangeTableSqlOnPostgres() {
+		$dataDict = &$this->getDataDict(self::CONFIG_PGSQL);
+
+		// Make sure that we have a defined start state
+		// in case an earlier test failed in the middle
+		$dataDict->ExecuteSQLArray(array('DROP TABLE IF EXISTS test_table'));
+
+		// Test data
+		$flds = array(
+			'OLD_COLNAME' => array(
+				'NAME' => 'new_colname',
+				'TYPE' => 'C2',
+				'SIZE' => '6'
+			)
+		);
+		$sql = $dataDict->ChangeTableSql('test_table', $flds);
+		$expectedResult = array(
+			0 => "CREATE TABLE test_table (\n" .
+			     "new_colname              VARCHAR(6)\n" .
+			     ")"
+		);
+		self::assertEquals($expectedResult, $sql);
+
+		// Create the test table and try again
+		$dataDict->ExecuteSQLArray($sql);
+		$sql = $dataDict->ChangeTableSql('test_table', $flds);
+		$expectedResult = array(
+			"BEGIN",
+			"SELECT * INTO TEMPORARY TABLE test_table_tmp FROM test_table",
+			"DROP TABLE test_table CASCADE",
+			"CREATE TABLE test_table (\n" .
+			"new_colname              VARCHAR(6)\n" .
+			")",
+			"INSERT INTO test_table () SELECT  FROM test_table_tmp",
+			"DROP TABLE test_table_tmp",
+			"COMMIT"
+    	);
+		self::assertEquals($expectedResult, $sql);
+
+		// Drop the test table
+		$dataDict->ExecuteSQLArray(array('DROP TABLE test_table'));
 	}
 
 	private function &getDataDict($configFile) {

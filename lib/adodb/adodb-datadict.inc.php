@@ -730,8 +730,6 @@ class ADODB_DataDict {
 			return $this->CreateTableSQL($tablename, $flds, $tableoptions);
 		}
 		
-		$tableflds = $flds;
-		
 /* #2343: Null / Not Null column flag changes not respected by this code.
 		if (is_array($flds)) {
 		// Cycle through the update fields, comparing
@@ -763,11 +761,9 @@ class ADODB_DataDict {
 	
 		// already exists, alter table instead
 		list($lines,$pkey) = $this->_GenFields($flds);
+		$alter = 'ALTER TABLE ' . $this->TableName($tablename);
 		$sql = array();
-		$addSql = array();
-		$recreate = false;
 
-		// FIXME 2005-08-01 KJ - Warning, horrible kludge ahead for DBMSs that can't alter column types
 		foreach ( $lines as $id => $v ) {
 			if ( isset($cols[$id]) && is_object($cols[$id]) ) {
 			
@@ -779,23 +775,10 @@ class ADODB_DataDict {
 				if ($flds && in_array(strtoupper(substr($flds[0][1],0,4)),$this->invalidResizeTypes4)) continue;
 */
 	 		
-	 			$alter = $this->AlterColumnSQL($tablename, array($id => $tableflds[$id]));
-	 			if (empty($alter)) {
-	 				$recreate = true;
-	 			} else {
-	 				$sql[] = $alter;
-	 			}
+				$sql[] = $alter . $this->alterCol . ' ' . $v;
 			} else {
-				$add = $this->AddColumnSQL($tablename, array($id => $tableflds[$id]));;
-				unset($tableflds[$id]);
-				$sql[] = $add;
-				$addSql[] = $add;
+				$sql[] = $alter . $this->addCol . ' ' . $v;
 			}
-		}
-		
-		if ($recreate) {
-			$sql = $this->AlterColumnSQL($tablename, false, $tableflds, $tableoptions);
-			$sql[] = $addSql;
 		}
 		
 		return $sql;

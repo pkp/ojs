@@ -37,6 +37,14 @@ class AdodbPostgres7CompatDict extends ADODB2_postgres {
 		return parent::RenameColumnSQL($tabname, $oldcolumn, $newcolumn, $flds);
 	}
 
+	function ChangeTableSQL($tablename, $flds, $tableoptions = false) {
+		return $this->delegate->_ChangeTableSQLDelegate($tablename, $flds, $tableoptions);
+	}
+
+	function _ChangeTableSQLUnpatched($tablename, $flds, $tableoptions = false) {
+		return parent::ChangeTableSQL($tablename, $flds, $tableoptions);
+	}
+
 	/*
 	 * CreateDatabase with character set support
 	 *
