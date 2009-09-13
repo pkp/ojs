@@ -112,7 +112,29 @@ class DBConnection {
 	function initConn() {
 		require_once('adodb/adodb.inc.php');
 
-		$this->dbconn = &ADONewConnection($this->driver);
+		switch ($this->driver) {
+			case 'postgres':
+			case 'postgres8':
+			case 'pgsql':
+				$compatDriver =  'AdodbPostgres7Compat';
+				break;
+
+			default:
+				$compatDriver = 'Adodb' . ucfirst($this->driver) . 'Compat';
+		}
+
+		// Make sure that the compatibility driver is loaded (if it exists).
+		$compatDriverFile = BASE_SYS_DIR . '/classes/db/compat/' . $compatDriver . '.inc.php' ;
+		if (file_exists($compatDriverFile)) {
+			// We cannot call ADONewConnection to instantiate our compatibility
+			// driver, so emulate the essential parts.
+			if (!defined('ADODB_ASSOC_CASE')) define('ADODB_ASSOC_CASE',2);
+			require_once($compatDriverFile);
+			$this->dbconn = &new $compatDriver();
+		} else {
+			// No compatibility driver present so load the stock ADOdb driver.
+			$this->dbconn = &ADONewConnection($this->driver);
+		}
 
 		if ($this->connectOnInit) {
 			return $this->connect();
