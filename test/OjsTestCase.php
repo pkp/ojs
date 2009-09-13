@@ -52,8 +52,8 @@ abstract class OjsTestCase extends OjsBaseTestCase {
 	private function installTestSchema($testPhase) {
 		if (is_readable($this->getTestSchemaFile($testPhase))) {
 			if (is_null($this->_testSchema)) {
-				require_once('adodb/adodb-xmlschema.inc.php');
-				$this->_testSchema = &new adoSchema(
+				import('classes.db.compat.AdodbXmlschemaCompat');
+				$this->_testSchema = &new AdodbXmlschemaCompat(
     				DBConnection::getConn(),
     				Config::getVar('i18n', 'database_charset')
     			);

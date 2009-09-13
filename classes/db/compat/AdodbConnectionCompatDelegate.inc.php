@@ -28,5 +28,20 @@ class AdodbConnectionCompatDelegate {
 		$this->numQueries++;
 		return $this->adodbConnection->_ExecuteUnpatched($sql, $inputarr);
 	}
+
+	function &_NewDataDictionaryDelegate($driver) {
+		import('db.compat.' . $driver);
+
+		$dict = new $driver();
+
+		$dict->dataProvider = $this->adodbConnection->dataProvider;
+		$dict->connection = &$this->adodbConnection;
+		$dict->upperName = strtoupper($driver);
+		$dict->quote = $this->adodbConnection->nameQuote;
+		if (!empty($this->adodbConnection->_connectionID))
+			$dict->serverInfo = $this->adodbConnection->ServerInfo();
+
+		return $dict;
+	}
 }
 ?>

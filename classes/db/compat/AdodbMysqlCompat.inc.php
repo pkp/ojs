@@ -40,5 +40,33 @@ class AdodbMysqlCompat extends ADODB_mysql {
 	function &_ExecuteUnpatched($sql, $inputarr = false) {
 		return parent::Execute($sql, $inputarr);
 	}
+
+	function &NewDataDictionary() {
+		return $this->delegate->_NewDataDictionaryDelegate('AdodbMysqlCompatDict');
+	}
+
+	/*
+	 * Functions for managing client encoding
+	 */
+	function GetCharSet() {
+		$result = $this->Query("SHOW VARIABLES LIKE 'character_set_client'");
+		if ($result) {
+			$result = &$result->GetAssoc(false, true);
+			$this->charSet = $result['character_set_client'];
+		} else {
+			$this->charSet = false;
+		}
+
+		return $this->charSet;
+	}
+
+	function SetCharSet($charset_name) {
+		if ($this->Execute('SET NAMES ?', array($charset_name))) {
+			$this->charSet = $charset_name;
+			return true;
+		} else {
+			return false;
+		}
+	}
 }
 ?>

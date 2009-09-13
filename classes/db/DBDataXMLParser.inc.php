@@ -107,7 +107,7 @@ class DBDataXMLParser {
 						// FIXME This code
 						if ($query->getName() == 'drop') {
 							if (!isset($dbdict)) {
-								$dbdict = @NewDataDictionary($this->dbconn);
+								$dbdict = @$this->dbconn->NewDataDictionary();
 							}
 							$table = $query->getAttribute('table');
 							$column = $query->getAttribute('column');
@@ -120,7 +120,7 @@ class DBDataXMLParser {
 
 						} else if ($query->getName() == 'rename') {
 							if (!isset($dbdict)) {
-								$dbdict = @NewDataDictionary($this->dbconn);
+								$dbdict = @$this->dbconn->NewDataDictionary();
 							}
 							$table = $query->getAttribute('table');
 							$column = $query->getAttribute('column');
