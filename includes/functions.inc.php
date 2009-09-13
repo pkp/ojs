@@ -145,6 +145,12 @@ function fatalError($reason) {
 	}
 
 	error_log("OJS: $reason");
+
+	if (defined('DONT_DIE_ON_ERROR') && DONT_DIE_ON_ERROR == true) {
+		trigger_error($reason);
+		return;
+	}
+
 	die(1);
 }
 

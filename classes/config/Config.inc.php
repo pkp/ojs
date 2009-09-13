@@ -19,12 +19,14 @@
 // $Id$
 
 
-/** The path to the configuration file */
+/** The path to the default configuration file */
 define('CONFIG_FILE', Core::getBaseDir() . DIRECTORY_SEPARATOR . 'config.inc.php');
 
 import('config.ConfigParser');
 
 class Config {
+	static $_configData = null;
+	static $_configFile = CONFIG_FILE;
 
 	/**
 	 * Retrieve a specified configuration variable.
@@ -42,14 +44,12 @@ class Config {
 	 * @return array the configuration data
 	 */
 	function &getData() {
-		static $configData;
-
-		if (!isset($configData)) {
+		if (is_null(self::$_configData)) {
 			// Load configuration data only once per request
-			$configData = Config::reloadData();
+			self::$_configData = Config::reloadData();
 		}
 
-		return $configData;
+		return self::$_configData;
 	}
 
 	/**
@@ -58,11 +58,20 @@ class Config {
 	 * @return array the configuration data
 	 */
 	function &reloadData() {
-		if (($configData = &ConfigParser::readConfig(CONFIG_FILE)) === false) {
-			fatalError(sprintf('Cannot read configuration file %s', CONFIG_FILE));
+		if (($configData = &ConfigParser::readConfig(Config::getConfigFileName())) === false) {
+			fatalError(sprintf('Cannot read configuration file %s', Config::getConfigFileName()));
 		}
 
 		return $configData;
+	}
+
+	/**
+	 * Set the path to the configuration file.
+	 * @param $configFile string
+	 */
+	function setConfigFileName($configFile) {
+		self::$_configFile = $configFile;
+		self::$_configData = null;
 	}
 
 	/**
@@ -70,7 +79,7 @@ class Config {
 	 * @return string
 	 */
 	function getConfigFileName() {
-		return CONFIG_FILE;
+		return self::$_configFile;
 	}
 
 }

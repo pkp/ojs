@@ -1,0 +1,26 @@
+<project name="PKP" default="integrate">
+ <target name="test-clean">
+  <delete dir="test/report-coverage"/>
+  <delete dir="test/report-results"/>
+ </target>
+
+ <target name="test-prepare">
+  <mkdir dir="test/report-coverage"/>
+  <mkdir dir="test/report-results"/>
+ </target>
+
+ <target name="test" depends="test-clean,test-prepare">
+  <exec
+   command="phpunit.bat --verbose --log-xml test/report-results/testsuites.xml --coverage-html test/report-coverage test"
+   passthru="true"
+   checkreturn="true"
+  />
+
+  <phpunitreport
+   infile="test/report-results/testsuites.xml"
+   todir="test/report-results"
+  />
+ </target>
+
+ <target name="integrate" depends="test"/>
+</project>
