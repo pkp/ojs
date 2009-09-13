@@ -100,6 +100,40 @@ class ADOConnectionTest extends OjsTestCase {
 		self::assertFalse($adoConn->GetCharSet());
 	}
 
+	/**
+	 * @covers AdodbPostgres7Compat::_query
+	 * @covers AdodbPostgres7Compat::__queryUnpatched
+	 */
+	public function testQueryOnPostgres() {
+		// Make sure that the AdodbPostgres7Compat class
+		// definition is present before stubbing it.
+		import('classes.db.compat.AdodbPostgres7Compat');
+
+		// Get a mock object based on AdodbPostgres7Compat that
+		// allows us to observe calls to __queryUnpatched().
+		$adoConnMock = &$this->getMock('AdodbPostgres7Compat', array('__queryUnpatched'));
+
+		// Set up the mock object to expect transformed
+		// double value parameters being passed to the
+		// underlying ADODB_postgres7 object (by way of
+		// AdodbPostgres7Compat's __queryUnpatched() method.
+		$adoConnMock->expects($this->once())
+		            ->method('__queryUnpatched')
+		            ->with($this->equalTo('some sql'), $this->equalTo(array('5.5', 'some string')));
+
+		// Make sure that we have locale settings that
+		// really cause the issue to occur.
+		$oldlocale = setlocale(LC_NUMERIC, '0');
+		setlocale(LC_NUMERIC, 'German_Germany.1252', 'de_DE.iso-8859-1');
+
+		$adoConnMock->_query('some sql', array(5.5, 'some string'));
+
+		// Return to the previous locale settings and make
+		// sure that this really works.
+		setlocale(LC_NUMERIC, $oldlocale);
+		assert('$oldlocale == setlocale(LC_NUMERIC, "0")');
+	}
+
 	private function internalTestCountQueriesWhileExecute() {
 		// Get database connection
 		$ojsConn = &DBConnection::getInstance();

@@ -41,6 +41,27 @@ class AdodbPostgres7Compat extends ADODB_postgres7 {
 		return parent::Execute($sql, $inputarr);
 	}
 
+	function _query($sql, $inputarr) {
+		// pg_query_params may incorrectly format
+		// doubles using localized number formats, i.e.
+		// , instead of . for floats, violating the
+		// SQL standard. Format it locally.
+		if (is_array($inputarr)) {
+			$localedata = localeconv();
+			foreach($inputarr as &$v) {
+				if (gettype($v) == 'double') {
+					$v = (string) $v;
+					$v = str_replace(array($localedata['thousands_sep'], $localedata['decimal_point']), array('', '.'), $v);
+				}
+			}
+		}
+		return $this->__queryUnpatched($sql, $inputarr);
+	}
+
+	function __queryUnpatched($sql, $inputarr) {
+		return parent::_query($sql, $inputarr);
+	}
+
 	function &NewDataDictionary() {
 		return $this->delegate->_NewDataDictionaryDelegate('AdodbPostgres7CompatDict');
 	}
