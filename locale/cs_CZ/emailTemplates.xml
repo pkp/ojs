@@ -590,7 +590,7 @@ U příspěvku "{$articleTitle}" pro {$journalName} byly provedeny korektury aut
 1. klikněte níže na URL příspěvku.
 2. Přihlaste se do časopisu a podle Korekčních úprav vytvořte opravené sazebnice.
 3. Nahrajte opravené sazebnice.
-3. Pošlete editorovi email DOKONČENO v Korekturách v Kroku 3.
+4. Pošlete editorovi email DOKONČENO v Korekturách v Kroku 3.
 
 {$journalName} URL: {$journalUrl}
 URL příspěvku: {$submissionUrl}

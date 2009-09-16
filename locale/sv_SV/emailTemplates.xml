@@ -597,7 +597,7 @@ Manuskriptet "{$articleTitle}" till {$journalName} har korrekturlästs av Förfa
 1. Klicka på Manuskriptets URL nedan.
 2. Logga in på tidskriften och och se Instruktioner för korrekturläsning för att skapa uppdaterade versioner.
 3. Ladda upp den korrigerade och uppdaterade versionen.
-3. Skicka COMPLETE mailet under Korrekturläsning Steg 3 till Redaktör.
+4. Skicka COMPLETE mailet under Korrekturläsning Steg 3 till Redaktör.
 
 {$journalName} URL: {$journalUrl}
 Manuskriptets URL: {$submissionUrl}

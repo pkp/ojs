@@ -524,7 +524,7 @@ Tak, fordi du har læst korrektur på satsskibene for manuskriptet "{$articleTit
 		<subject>Forespørgsel om korrekturlæsning (layoutredaktør)</subject>
 		<body>{$layoutEditorName}:
 
-Manuskriptet "{$articleTitle}" til {$journalName} er blevet korrekturlæst af forfatteren og korrekturlæseren, og der skal nu foretages eventuelle rettelser ved at følge disse trin. 1. Klik på manuskriptets URL-adresse nedenfor. 2. Log på tidsskriftet, og få vist Korrekturrettelser for at oprette korrigerede satsskibe. 3. Overfør de rettede satsskibe. 3. Send e-mailen under UDFØR i trin 3 under Korrekturlæsning til redaktøren.
+Manuskriptet "{$articleTitle}" til {$journalName} er blevet korrekturlæst af forfatteren og korrekturlæseren, og der skal nu foretages eventuelle rettelser ved at følge disse trin. 1. Klik på manuskriptets URL-adresse nedenfor. 2. Log på tidsskriftet, og få vist Korrekturrettelser for at oprette korrigerede satsskibe. 3. Overfør de rettede satsskibe. 4. Send e-mailen under UDFØR i trin 3 under Korrekturlæsning til redaktøren.
 
 {$journalName} URL-adresse: {$journalUrl} Manuskriptets URL-adresse: {$submissionUrl} Brugernavn: {$layoutEditorUsername}
 

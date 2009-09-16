@@ -75,7 +75,8 @@ What DOAJ won't include:
 	- Journals that have an embargo period. 
 
 Thank you very much! 
-Sincerely,</body>
+Sincerely,
+{$editorialContactSignature}</body>
 		<description>This email template is used to send an email to the contact at the DOAJ, to include the journal in their archives.</description>
 	</email_text>
 </email_texts>

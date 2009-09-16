@@ -613,7 +613,7 @@ L'autor i el corrector de proves ja han fet la correcció de proves de la trames
 1. Feu clic a l'URL de la tramesa que trobareu més avall en aquest missatge.
 2. Inicieu la sessió a la revista i consulteu les instruccions per a crear unes galerades corregides.
 3. Pengeu les galerades revisades.
-3. Envieu el missatge de correu electrònic COMPLET del pas 3 de la correcció de proves a l'editor.
+4. Envieu el missatge de correu electrònic COMPLET del pas 3 de la correcció de proves a l'editor.
 
 URL de {$journalName}: {$journalUrl}
 URL de la tramesa: {$submissionUrl}

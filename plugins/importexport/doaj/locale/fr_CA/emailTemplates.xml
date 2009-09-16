@@ -75,7 +75,8 @@ Ce que le DOAJ n'incluera pas :
 	- Les revues qui ont une période d'embargo. 
 
 Merci beaucoup! 
-Sincèrement,</body>
+Sincèrement,
+{$editorialContactSignature}</body>
 		<description>Ce modèle de courriel est utilisé pour envoyer un courriel à la personne contact du DOAJ, pour l'inclusion de la revue dans leurs archives.</description>
 	</email_text>
 </email_texts>

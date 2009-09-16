@@ -685,7 +685,7 @@ The submission "{$articleTitle}" to {$journalName} has been proofread by the aut
 1. Click on the Submission URL below.
 2. Log into the journal consult Proofreading Corrections to create corrected galleys.
 3. Upload the revised galleys.
-3. Send the COMPLETE email in Proofreading Step 3 to the editor.
+4. Send the COMPLETE email in Proofreading Step 3 to the editor.
 
 {$journalName} URL: {$journalUrl}
 Subnmission URL: {$submissionUrl}
