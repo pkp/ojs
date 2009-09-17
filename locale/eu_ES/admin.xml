@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * ojs2-devel//locale/eu_ES/admin.xml
+  *
+  * Copyright (c) 2000-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the eu_ES (Basque (Euskara)) locale.
+  *
+  * $Id$
+  -->
+
+<locale name="eu_ES" full_name = "Basque (Euskara)">
+	<message key="admin.hostedJournals">Aldizkari ostatatuak</message>
+	<message key="admin.settings.journalRedirect">Aldizkarira birbideratu</message>
+	<message key="admin.settings.journalRedirectInstructions">Gune nagusira egindako eskaerak aldizkari honetara birbideratuko dira. Praktikoa da guneak aldizkari bakarra ostatatzen badu, esate baterako.</message>
+	<message key="admin.settings.noJournalRedirect">Ez birbideratu</message>
+	<message key="admin.languages.primaryLocaleInstructions">Hau izango da gunearen eta bertan ostatatutako aldizkarien hizkuntza lehenetsia.</message>
+	<message key="admin.languages.supportedLocalesInstructions">Hautatu gunean onartu nahi dituzun hizkuntza-pakete guztiak. Hautatutako hizkuntza-paketeak erabilgarri egongo dira gunean ostatatutako aldizkari guztietan erabiltzeko eta guneko orri guztietan azalduko dira, hizkuntza aukeratzeko menuan (nahi izanez gero, orri batzuetatik ken daiteke). Hizkuntza bakarra hautatzen bada, hizkuntza aldatzeko menua ez da azalduko eta hizkuntza-ezarpen hedatuak ere ez dira erabilgarri egongo aldizkarietan.</message>
+	<message key="admin.languages.confirmUninstall">Ziur zaude hizkuntza hau desinstalatu nahi duzula? Eragina izango du hizkuntza hau erabiltzen duten aldizkari ostatatu guztietan.</message>
+	<message key="admin.languages.downloadLocales">Deskargatu hizkuntzak</message>
+	<message key="admin.languages.downloadFailed">Hizkuntza deskargatzeak huts egin du. Beheko errore-mezuan azaltzen da hutsegitea.</message>
+	<message key="admin.languages.localeInstalled">"{$locale}" hizkuntza instalatu da. </message>
+	<message key="admin.languages.download">Deskargatu hizkuntza-paketea</message>
+	<message key="admin.languages.download.cannotOpen">Ezin da ireki PKP webguneko hizkuntza-deskriptorea.</message>
+	<message key="admin.languages.download.cannotModifyRegistry">Ezin da hizkuntza-pakete berria gehitu localeen erregistro-fitxategian (normalean "registry/locales.xml".</message>
+	<message key="admin.auth.ojs">OJS erabiltzaileen datu-basea</message>
+	<message key="admin.auth.enableSyncProfiles">Gaitu erabiltzaile-profilen sinkronizazioa (autentifikazioko plugin honek onartzen badu). Erabiltzaile-profilen informazioa automatikoki eguneratuko da urruneko iturburutik erabiltzaileak saioa hasten duenean, eta OJSn egiten diren profil-aldaketak (pasahitz-aldaketak barne) automatikoki eguneratuko dira urruneko iturburuan. Aukera hau ez bada gaitzen, OJS profil-informazioa eta urruneko iturburuko profil-informazioa aparte bereizita mantenduko dira.</message>
+	<message key="admin.auth.enableSyncPasswords">Gaitu erabiltzailearen pasahitza aldatzea (autentifikazioko plugin honek onartzen badu). Aukera hau gaitzen bada, erabiltzaileek OJS barruan aldatu ahal izango dute pasahitza eta OJSren "galdutako pasahitza" eginbidea erabili ahal izango dute pasahitza ahazten zaienean. Aukera hau ez bada gaitzen, funtzio horiek ez dira erabilgarri egongo autentifikazio-iturburu hau daukaten erabiltzaileentzat.</message>
+	<message key="admin.auth.enableCreateUsers">Gaitu erabiltzaileak sortzea (autentifikazioko plugin honek onartzen badu). OJSn autentifikazio-iturburu honekin sortzen diren erabiltzaileak automatikoki gehituko dira urruneko autentifikazio-iturburuan, dagoeneko sortuta ez badaude. Gainera, iturburu hori autentifikazio-iturburu lehenetsia baldin bada, erabiltzaile-erregistratzearen bidez sortutako OJS kontuak ere gehituko dira urruneko autentifikazio-iturburuan.</message>
+	<message key="admin.systemVersion">OJS bertsioa</message>
+	<message key="admin.systemConfiguration">OJS konfigurazioa</message>
+	<message key="admin.systemConfigurationDescription"><![CDATA[<tt>config.inc.php</tt> OJS konfigurazio-ezarpenak.]]></message>
+	<message key="admin.journals.journalSettings">Aldizkariaren ezarpenak</message>
+	<message key="admin.journals.noneCreated">Ez da aldizkaririk sortu.</message>
+	<message key="admin.journals.confirmDelete">Ziur zaude betiko ezabatu nahi dituzula aldizkari hau eta bere eduki osoa?</message>
+	<message key="admin.journals.create">Sortu aldizkaria</message>
+	<message key="admin.journals.urlWillBe">Aldizkariaren URLa {$sampleUrl} izango da.</message>
+	<message key="admin.journals.form.titleRequired">Titulu bat eman behar da.</message>
+	<message key="admin.journals.form.pathRequired">Bidea zehaztu behar da.</message>
+	<message key="admin.journals.form.pathAlphaNumeric">Bide-izenean alfazenbakizko karaktereak, azpimarra eta marratxoak bakarrik onartzen dira, eta lehen karakterea eta azkena alfazenbakizkoak izan behar dira.</message>
+	<message key="admin.journals.form.pathExists">Hautatutako bidea beste aldizkari batek erabiltzen du.</message>
+	<message key="admin.journals.enableJournalInstructions">Gaitu aldizkari hau publikoki agertzeko gunean.</message>
+	<message key="admin.journals.journalDescription">Aldizkariaren azalpena</message>
+	<message key="admin.journals.importOJS1">Inportatu OJS 1etik</message>
+	<message key="admin.journals.importOJS1.success">Aldizkaria ondo inportatu da.</message>
+	<message key="admin.journals.importOJS1.editMigratedJournal">Editatu migratutako aldizkaria</message>
+	<message key="admin.journals.importOJS1.redirect.desc">OJS 1eko URLak OJS 2ko URLetara birbideratzeko, sortu ondorengo PHP fitxategiak beheko edukiarekin. Fitxategi horiek OJS 1 fitxategi-sistemaren kokalekuan jarri ahal izango dira edo, aldizkari bakarreko instalazioa bada, OJS 2 fitxategi-sistemaren kokalekuan..</message>
+	<message key="admin.journals.importOJS1.redirect.ojs1root">Jarri OJS 1 fitxategi-sistema zaharraren kokalekuan (h.d., /var/www/ojs1).</message>
+	<message key="admin.journals.importOJS1.redirect.ojs1orojs2root">Jarri OJS 1 fitxategi-sistema zaharraren kokalekuan (h.d., /var/www/ojs1), edo, aldizkari bakarreko instalazioa bada, OJS 2 fitxategi-sistema berriaren kokalekuan (h.d., /var/www/ojs2).</message>
+	<message key="admin.journals.importOJS1.conflict.desc">Erabiltzaile-kontu batzuen datuek gatazka sortzen dute. OJS 1.x bertsioak onartzen du hainbat erabiltzailek helbide elektroniko bera izatea, baina OJS 2.x bertsioak ez. Beheko zerrendan, bigarren kontuari behin-behineko helbide elektroniko bat esleitu zaio. Eskuz zuzendu daiteke, beste helbide elektroniko bat esleituz edo posta-kontuak batuz.</message>
+	<message key="admin.journals.importOJS1.conflict">{$firstUsername} ({$firstName}) eta {$secondUsername} ({$secondName})</message>
+	<message key="admin.journals.importOJS1Instructions">Datuak OJS 1etik OJS 2ra migratzeko informazio xehea ikusteko, kontsultatu OJSrekin banatzen den UPGRADE dokumentua.</message>
+	<message key="admin.journal.pathImportInstructions">Lehendik dagoen aldizkariaren kokalekua edo berria (adib., "ojs")</message>
+	<message key="admin.journal.importPath">OJS 1 bidea</message>
+	<message key="admin.journal.importPathInstructions">Osatu OJS 1 instalazioaren fitxategi-sistema lokalaren bidea (adib., "/var/www/ojs")</message>
+	<message key="admin.journals.importSubscriptions">Inportatu harpidetzak</message>
+	<message key="admin.journals.transcode">Bihurtu artikuluen metadatuak ISO8859-1etik.</message>
+	<message key="admin.journals.redirect">Sortu kodea OJS1 URLak OJS 2 URLetara mapatzeko</message>
+	<message key="admin.journals.form.importPathRequired">Inportatzeko bidea zehaztu behar da.</message>
+	<message key="admin.journals.importErrors">Inportazioak huts egin du.</message>
+	<message key="admin.mergeUsers">Batu erabiltzaileak</message>
+	<message key="admin.mergeUsers.mergeUser">Batu erabiltzailea</message>
+	<message key="admin.mergeUsers.into.description">Hautatu erabiltzaile bat lehengo erabiltzailearen egiletasuna, edizio-esleipenak, etab. egozteko.</message>
+	<message key="admin.mergeUsers.from.description">Hautatu erabiltzaile bat beste erabiltzaile-kontu batekin batzeko (adib., bi kontu dituen erabiltzaile bat denean). Lehenengo hautatutako kontua ezabatu egingo da, eta dituen bidalketak, esleipenak, etab. bigarren kontuari egotziko zaizkio.</message>
+	<message key="admin.mergeUsers.allUsers">Inskribatutako erabiltzaile guztiak</message>
+	<message key="admin.mergeUsers.confirm">Ziur zaude "{$oldUsername}" erabiltzaile-izena duen kontua ezabatu eta "{$newUsername}" erabiltzaile-izena duen kontuarekin batu nahi duzula? "{$oldUsername}" kontua galdu egingo da. Ekintza hau ezingo da desegin.</message>
+	<message key="admin.mergerUsers.noneEnrolled">Inskribatutako erabiltzailerik ez.</message>
+</locale>
