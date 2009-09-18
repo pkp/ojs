@@ -63,12 +63,10 @@ class UserHandler extends Handler {
 				// Determine if journal setup is incomplete, to provide a message for JM
 				$setupIncomplete[$journalId] = $this->checkCompleteSetup($journal);
 							
-				if ($journal->getEnabled()) {
-					$roles =& $roleDao->getRolesByUserId($userId, $journalId);
-					if (!empty($roles)) {
-						$userJournals[] =& $journal;
-						$this->getRoleDataForJournal($userId, $journalId, $submissionsCount, $isValid);
-					}
+				$roles =& $roleDao->getRolesByUserId($userId, $journalId);
+				if (!empty($roles)) {
+					$userJournals[] =& $journal;
+					$this->getRoleDataForJournal($userId, $journalId, $submissionsCount, $isValid);
 				}
 
 				unset($journal);
