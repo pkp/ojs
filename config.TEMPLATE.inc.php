@@ -298,9 +298,6 @@ require_validation = Off
 ; Maximum number of days before an unvalidated account expires and is deleted
 validation_timeout = 14
 
-; Display an error message when an email is not successfully sent
-display_errors = On
-
 
 ;;;;;;;;;;;;;;;;;;;
 ; Search Settings ;
@@ -413,4 +410,7 @@ show_stats =  Off
 ; Note that this may expose private information and should be disabled
 ; for any production system.
 show_stacktrace = Off
+
+; Display an error message when something goes wrong.
+display_errors = Off
 
