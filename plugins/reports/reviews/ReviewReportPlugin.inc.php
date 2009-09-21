@@ -57,6 +57,7 @@ class ReviewReportPlugin extends ReportPlugin {
 
 		header('content-type: text/comma-separated-values');
 		header('content-disposition: attachment; filename=report.csv');
+		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_SUBMISSION));
 
 		$reviewReportDao =& DAORegistry::getDAO('ReviewReportDAO');
 		list($commentsIterator, $reviewsIterator) = $reviewReportDao->getReviewReport($journal->getJournalId());
