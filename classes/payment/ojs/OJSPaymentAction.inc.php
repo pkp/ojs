@@ -20,8 +20,7 @@ class OJSPaymentAction {
 	 */
 	 function payments($args) {
 		import('payment.ojs.form.PaymentSettingsForm');
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$form =& new PaymentSettingsForm();
+		$form = new PaymentSettingsForm();
 
 		$journal =& Request::getJournal();
 		$templateMgr =& TemplateManager::getManager();
@@ -40,8 +39,7 @@ class OJSPaymentAction {
 	  */
 	 function savePaymentSettings($args) {
 		import('payment.ojs.form.PaymentSettingsForm');
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$settingsForm =& new PaymentSettingsForm();
+		$settingsForm = new PaymentSettingsForm();
 
 		$journal =& Request::getJournal();
 		$templateMgr =& TemplateManager::getManager();
@@ -108,8 +106,7 @@ class OJSPaymentAction {
 		$journal =& Request::getJournal();
 		import('payment.ojs.form.PayMethodSettingsForm');
 		
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$settingsForm =& new PayMethodSettingsForm();
+		$settingsForm = new PayMethodSettingsForm();
 		$settingsForm->initData();
 		$settingsForm->display();
 	}
@@ -121,8 +118,7 @@ class OJSPaymentAction {
 		$journal =& Request::getJournal();
 		import('payment.ojs.form.PayMethodSettingsForm');
 
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$settingsForm =& new PayMethodSettingsForm();
+		$settingsForm = new PayMethodSettingsForm();
 		$settingsForm->readInputData();
 
  		$templateMgr =& TemplateManager::getManager();

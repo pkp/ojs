@@ -127,8 +127,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			case 'galley':
 				import('submission.form.ArticleGalleyForm');
 
-				// FIXME: Need construction by reference or validation always fails on PHP 4.x
-				$galleyForm =& new ArticleGalleyForm($articleId);
+				$galleyForm = new ArticleGalleyForm($articleId);
 				$galleyId = $galleyForm->execute('layoutFile');
 
 				Request::redirect(null, null, 'editGalley', array($articleId, $galleyId));
@@ -136,8 +135,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			case 'supp':
 				import('submission.form.SuppFileForm');
 
-				// FIXME: Need construction by reference or validation always fails on PHP 4.x
-				$suppFileForm =& new SuppFileForm($submission);
+				$suppFileForm = new SuppFileForm($submission);
 				$suppFileForm->setData('title', Locale::translate('common.untitled'));
 				$suppFileId = $suppFileForm->execute('layoutFile');
 
@@ -165,8 +163,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		if ($this->layoutEditingEnabled($submission)) {
 			import('submission.form.ArticleGalleyForm');
 
-			// FIXME: Need construction by reference or validation always fails on PHP 4.x
-			$submitForm =& new ArticleGalleyForm($articleId, $galleyId);
+			$submitForm = new ArticleGalleyForm($articleId, $galleyId);
 
 			if ($submitForm->isLocaleResubmit()) {
 				$submitForm->readInputData();
@@ -203,8 +200,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 
 		import('submission.form.ArticleGalleyForm');
 
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$submitForm =& new ArticleGalleyForm($articleId, $galleyId);
+		$submitForm = new ArticleGalleyForm($articleId, $galleyId);
 		$submitForm->readInputData();
 
 		if ($submitForm->validate()) {
@@ -371,8 +367,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		if ($this->layoutEditingEnabled($submission)) {
 			import('submission.form.SuppFileForm');
 
-			// FIXME: Need construction by reference or validation always fails on PHP 4.x
-			$submitForm =& new SuppFileForm($submission, $suppFileId);
+			$submitForm = new SuppFileForm($submission, $suppFileId);
 
 			if ($submitForm->isLocaleResubmit()) {
 				$submitForm->readInputData();
@@ -412,8 +407,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 
 		import('submission.form.SuppFileForm');
 
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$submitForm =& new SuppFileForm($submission, $suppFileId);
+		$submitForm = new SuppFileForm($submission, $suppFileId);
 		$submitForm->readInputData();
 
 		if ($submitForm->validate()) {

@@ -57,8 +57,7 @@ class QuickSubmitPlugin extends ImportExportPlugin {
 			$this->saveSubmit($args);
 		} else {
 			$this->import('QuickSubmitForm');
-			// FIXME: Need construction by reference or validation always fails on PHP 4.x
-			$form =& new QuickSubmitForm($this);
+			$form = new QuickSubmitForm($this);
 			if ($form->isLocaleResubmit()) {
 				$form->readInputData();
 			} else {
@@ -76,8 +75,7 @@ class QuickSubmitPlugin extends ImportExportPlugin {
 		$templateMgr =& TemplateManager::getManager();
 
 		$this->import('QuickSubmitForm');
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$form =& new QuickSubmitForm($this);
+		$form = new QuickSubmitForm($this);
 		$form->readInputData();
 		$formLocale = $form->getFormLocale();
 

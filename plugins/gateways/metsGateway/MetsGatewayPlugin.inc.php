@@ -65,8 +65,7 @@ class METSGatewayPlugin extends GatewayPlugin {
 			case 'settings':
 				$journal =& Request::getJournal();
 				$this->import('SettingsForm');
-				// FIXME: Need construction by reference or validation always fails on PHP 4.x
-				$form =& new SettingsForm($this, $journal->getJournalId());
+				$form = new SettingsForm($this, $journal->getJournalId());
 				if (Request::getUserVar('save')) {
 					$form->readInputData();
 					if ($form->validate()) {

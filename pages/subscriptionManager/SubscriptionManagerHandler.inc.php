@@ -329,8 +329,7 @@ class SubscriptionManagerHandler extends Handler {
 		import('manager.form.UserManagementForm');
 
 		$templateMgr->assign('currentUrl', Request::url(null, null, 'createUser'));
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$userForm =& new UserManagementForm();
+		$userForm = new UserManagementForm();
 		if ($userForm->isLocaleResubmit()) {
 			$userForm->readInputData();
 		} else {
@@ -350,8 +349,7 @@ class SubscriptionManagerHandler extends Handler {
 
 		import('manager.form.UserManagementForm');
 
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$userForm =& new UserManagementForm();
+		$userForm = new UserManagementForm();
 		$userForm->readInputData();
 
 		if ($userForm->validate()) {
@@ -362,8 +360,7 @@ class SubscriptionManagerHandler extends Handler {
 				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->assign('currentUrl', Request::url(null, null, 'index'));
 				$templateMgr->assign('userCreated', true);
-				// FIXME: Need construction by reference or validation always fails on PHP 4.x
-				$userForm =& new UserManagementForm();
+				$userForm = new UserManagementForm();
 				$userForm->initData();
 				$userForm->display();
 

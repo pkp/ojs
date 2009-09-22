@@ -96,8 +96,7 @@ class ReviewFormForm extends Form {
 		}
 
 		if (!isset($reviewForm)) {
-			// FIXME: Need construction by reference or validation always fails on PHP 4.x
-			$reviewForm =& new ReviewForm();
+			$reviewForm = new ReviewForm();
 			$reviewForm->setJournalId($journalId);
 			$reviewForm->setActive(0);
 			$reviewForm->setSequence(REALLY_BIG_NUMBER);

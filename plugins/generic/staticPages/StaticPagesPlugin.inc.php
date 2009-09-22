@@ -152,8 +152,7 @@ class StaticPagesPlugin extends GenericPlugin {
 				$journal =& Request::getJournal();
 
 				$this->import('StaticPagesSettingsForm');
-				// FIXME: Need construction by reference or validation always fails on PHP 4.x
-				$form =& new StaticPagesSettingsForm($this, $journal->getJournalId());
+				$form = new StaticPagesSettingsForm($this, $journal->getJournalId());
 				
 				$templateMgr->assign('pageHierarchy', $pageCrumbs);
 				$form->initData();
@@ -166,8 +165,7 @@ class StaticPagesPlugin extends GenericPlugin {
 				$this->import('StaticPagesEditForm');
 
 				$staticPageId = isset($args[0])?(int)$args[0]:null;
-				// FIXME: Need construction by reference or validation always fails on PHP 4.x
-				$form =& new StaticPagesEditForm($this, $journal->getJournalId(), $staticPageId);
+				$form = new StaticPagesEditForm($this, $journal->getJournalId(), $staticPageId);
 
 				if ($form->isLocaleResubmit()) {					
 					$form->readInputData();
@@ -191,8 +189,7 @@ class StaticPagesPlugin extends GenericPlugin {
 				$this->import('StaticPagesEditForm');
 
 				$staticPageId = isset($args[0])?(int)$args[0]:null;
-				// FIXME: Need construction by reference or validation always fails on PHP 4.x
-				$form =& new StaticPagesEditForm($this, $journal->getJournalId(), $staticPageId);
+				$form = new StaticPagesEditForm($this, $journal->getJournalId(), $staticPageId);
 							
 				if (Request::getUserVar('edit')) {					
 					$form->readInputData();

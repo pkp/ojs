@@ -117,8 +117,7 @@ class ThesisHandler extends Handler {
 			$templateMgr->assign('journalSettings', $journalSettings);
 			$thesisDao =& DAORegistry::getDAO('ThesisDAO');
 
-			// FIXME: Need construction by reference or validation always fails on PHP 4.x
-			$thesisForm =& new StudentThesisForm();
+			$thesisForm = new StudentThesisForm();
 			$thesisForm->initData();
 			$thesisForm->display();
 
@@ -194,8 +193,7 @@ class ThesisHandler extends Handler {
 			$thesisDao =& DAORegistry::getDAO('ThesisDAO');
 			$thesisPlugin->import('StudentThesisForm');
 
-			// FIXME: Need construction by reference or validation always fails on PHP 4.x
-			$thesisForm =& new StudentThesisForm();
+			$thesisForm = new StudentThesisForm();
 			$thesisForm->readInputData();
 
 			if ($thesisForm->validate()) {

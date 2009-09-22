@@ -212,8 +212,7 @@ class PhpMyVisitesPlugin extends GenericPlugin {
 				if ($this->getEnabled()) {
 					Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON,  LOCALE_COMPONENT_PKP_MANAGER));
 					$this->import('PhpMyVisitesSettingsForm');
-					// FIXME: Need construction by reference or validation always fails on PHP 4.x
-					$form =& new PhpMyVisitesSettingsForm($this, $journal->getJournalId());
+					$form = new PhpMyVisitesSettingsForm($this, $journal->getJournalId());
 					if (Request::getUserVar('save')) {
 						$form->readInputData();
 						if ($form->validate()) {

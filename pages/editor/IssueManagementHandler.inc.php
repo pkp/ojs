@@ -129,8 +129,7 @@ class IssueManagementHandler extends EditorHandler {
 		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 		$templateMgr->assign('helpTopicId', 'publishing.createIssue');
 
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$issueForm =& new IssueForm('editor/issues/createIssue.tpl');
+		$issueForm = new IssueForm('editor/issues/createIssue.tpl');
 
 		if ($issueForm->isLocaleResubmit()) {
 			$issueForm->readInputData();
@@ -148,8 +147,7 @@ class IssueManagementHandler extends EditorHandler {
 		$this->setupTemplate(EDITOR_SECTION_ISSUES);
 
 		import('issue.form.IssueForm');
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$issueForm =& new IssueForm('editor/issues/createIssue.tpl');
+		$issueForm = new IssueForm('editor/issues/createIssue.tpl');
 		$issueForm->readInputData();
 
 		if ($issueForm->validate()) {
@@ -178,8 +176,7 @@ class IssueManagementHandler extends EditorHandler {
 		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 
 		import('issue.form.IssueForm');
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$issueForm =& new IssueForm('editor/issues/issueData.tpl');
+		$issueForm = new IssueForm('editor/issues/issueData.tpl');
 
 		if ($issueForm->isLocaleResubmit()) {
 			$issueForm->readInputData();
@@ -213,8 +210,7 @@ class IssueManagementHandler extends EditorHandler {
 		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 
 		import('issue.form.IssueForm');
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$issueForm =& new IssueForm('editor/issues/issueData.tpl');
+		$issueForm = new IssueForm('editor/issues/issueData.tpl');
 		$issueForm->readInputData();
 
 		if ($issueForm->validate($issueId)) {

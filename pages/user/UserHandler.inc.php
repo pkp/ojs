@@ -438,23 +438,21 @@ class UserHandler extends Handler {
 
 			if (!in_array($subscriptionStatus, $validStatus)) Request::redirect(null, 'user'); 
 
-			// FIXME: Need construction by reference or validation always fails on PHP 4.x
 			if ($institutional) {
-				$subscriptionForm =& new UserInstitutionalSubscriptionForm($userId, $subscriptionId);
+				$subscriptionForm = new UserInstitutionalSubscriptionForm($userId, $subscriptionId);
 			} else {
-				$subscriptionForm =& new UserIndividualSubscriptionForm($userId, $subscriptionId);
+				$subscriptionForm = new UserIndividualSubscriptionForm($userId, $subscriptionId);
 			}
 
 		} else {
-			// FIXME: Need construction by reference or validation always fails on PHP 4.x
 			if ($institutional) {
-				$subscriptionForm =& new UserInstitutionalSubscriptionForm($userId);
+				$subscriptionForm = new UserInstitutionalSubscriptionForm($userId);
 			} else {
 				// Ensure user does not already have an individual subscription
 				if ($subscriptionDao->subscriptionExistsByUserForJournal($userId, $journalId)) {
 					Request::redirect(null, 'user');
 				}	
-				$subscriptionForm =& new UserIndividualSubscriptionForm($userId);
+				$subscriptionForm = new UserIndividualSubscriptionForm($userId);
 			}
 		}
 
@@ -511,23 +509,21 @@ class UserHandler extends Handler {
 
 			if (!in_array($subscriptionStatus, $validStatus)) Request::redirect(null, 'user'); 
 
-			// FIXME: Need construction by reference or validation always fails on PHP 4.x
 			if ($institutional) {
-				$subscriptionForm =& new UserInstitutionalSubscriptionForm($userId, $subscriptionId);
+				$subscriptionForm = new UserInstitutionalSubscriptionForm($userId, $subscriptionId);
 			} else {
-				$subscriptionForm =& new UserIndividualSubscriptionForm($userId, $subscriptionId);
+				$subscriptionForm = new UserIndividualSubscriptionForm($userId, $subscriptionId);
 			}
 
 		} else {
-			// FIXME: Need construction by reference or validation always fails on PHP 4.x
 			if ($institutional) {
-				$subscriptionForm =& new UserInstitutionalSubscriptionForm($userId);
+				$subscriptionForm = new UserInstitutionalSubscriptionForm($userId);
 			} else {
 				// Ensure user does not already have an individual subscription
 				if ($subscriptionDao->subscriptionExistsByUserForJournal($userId, $journalId)) {
 					Request::redirect(null, 'user');
 				}	
-				$subscriptionForm =& new UserIndividualSubscriptionForm($userId);
+				$subscriptionForm = new UserIndividualSubscriptionForm($userId);
 			}
 		}
 

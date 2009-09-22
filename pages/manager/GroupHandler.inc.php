@@ -139,8 +139,7 @@ class GroupHandler extends ManagerHandler {
 				'manager.groups.editTitle'
 		);
 
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$groupForm =& new GroupForm($group);
+		$groupForm = new GroupForm($group);
 		if ($groupForm->isLocaleResubmit()) {
 			$groupForm->readInputData();
 		} else {
@@ -171,8 +170,7 @@ class GroupHandler extends ManagerHandler {
 
 		import('manager.form.GroupForm');
 
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$groupForm =& new GroupForm($group);
+		$groupForm = new GroupForm($group);
 		$groupForm->readInputData();
 
 		if ($groupForm->validate()) {

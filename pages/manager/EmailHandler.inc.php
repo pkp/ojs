@@ -66,8 +66,7 @@ class EmailHandler extends ManagerHandler {
 
 		import('manager.form.EmailTemplateForm');
 
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$emailTemplateForm =& new EmailTemplateForm($emailKey);
+		$emailTemplateForm = new EmailTemplateForm($emailKey);
 		$emailTemplateForm->initData();
 		$emailTemplateForm->display();
 	}
@@ -82,8 +81,7 @@ class EmailHandler extends ManagerHandler {
 
 		$emailKey = Request::getUserVar('emailKey');
 
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$emailTemplateForm =& new EmailTemplateForm($emailKey);
+		$emailTemplateForm = new EmailTemplateForm($emailKey);
 		$emailTemplateForm->readInputData();
 
 		if ($emailTemplateForm->validate()) {

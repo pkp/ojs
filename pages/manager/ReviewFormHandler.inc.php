@@ -75,8 +75,7 @@ class ReviewFormHandler extends ManagerHandler {
 			}
 
 			import('manager.form.ReviewFormForm');
-			// FIXME: Need construction by reference or validation always fails on PHP 4.x
-			$reviewFormForm =& new ReviewFormForm($reviewFormId);
+			$reviewFormForm = new ReviewFormForm($reviewFormId);
 
 			if ($reviewFormForm->isLocaleResubmit()) {
 				$reviewFormForm->readInputData();
@@ -104,8 +103,7 @@ class ReviewFormHandler extends ManagerHandler {
 		$this->setupTemplate(true, $reviewForm);
 
 		import('manager.form.ReviewFormForm');
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$reviewFormForm =& new ReviewFormForm($reviewFormId);
+		$reviewFormForm = new ReviewFormForm($reviewFormId);
 		$reviewFormForm->readInputData();
 
 		if ($reviewFormForm->validate()) {
@@ -372,8 +370,7 @@ class ReviewFormHandler extends ManagerHandler {
 		}
 
 		import('manager.form.ReviewFormElementForm');
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$reviewFormElementForm =& new ReviewFormElementForm($reviewFormId, $reviewFormElementId);
+		$reviewFormElementForm = new ReviewFormElementForm($reviewFormId, $reviewFormElementId);
 		if ($reviewFormElementForm->isLocaleResubmit()) {
 			$reviewFormElementForm->readInputData();
 		} else {
@@ -401,8 +398,7 @@ class ReviewFormHandler extends ManagerHandler {
 		}
 
 		import('manager.form.ReviewFormElementForm');
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$reviewFormElementForm =& new ReviewFormElementForm($reviewFormId, $reviewFormElementId);
+		$reviewFormElementForm = new ReviewFormElementForm($reviewFormId, $reviewFormElementId);
 		$reviewFormElementForm->readInputData();
 		$formLocale = $reviewFormElementForm->getFormLocale();
 

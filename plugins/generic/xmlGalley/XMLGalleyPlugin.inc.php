@@ -216,8 +216,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 
 		$this->import('XMLGalleySettingsForm');
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$form =& new XMLGalleySettingsForm($this, $journal->getJournalId());
+		$form = new XMLGalleySettingsForm($this, $journal->getJournalId());
 
 		switch ($verb) {
 			case 'test':

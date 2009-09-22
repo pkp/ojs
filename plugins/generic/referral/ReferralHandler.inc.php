@@ -48,8 +48,7 @@ class ReferralHandler extends Handler {
 			$templateMgr->assign('referralTitle', 'plugins.generic.referral.editReferral');	
 		}
 
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$referralForm =& new ReferralForm($plugin, $article, $referralId);
+		$referralForm = new ReferralForm($plugin, $article, $referralId);
 		if ($referralForm->isLocaleResubmit()) {
 			$referralForm->readInputData();
 		} else {
@@ -79,8 +78,7 @@ class ReferralHandler extends Handler {
 
 		$plugin->import('ReferralForm');
 
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$referralForm =& new ReferralForm($plugin, $article, $referralId);
+		$referralForm = new ReferralForm($plugin, $article, $referralId);
 		$referralForm->readInputData();
 
 		if ($referralForm->validate()) {

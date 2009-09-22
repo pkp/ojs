@@ -43,8 +43,7 @@ class SubmitHandler extends AuthorHandler {
 		$formClass = "AuthorSubmitStep{$step}Form";
 		import("author.form.submit.$formClass");
 
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$submitForm =& new $formClass($article);
+		$submitForm = new $formClass($article);
 		if ($submitForm->isLocaleResubmit()) {
 			$submitForm->readInputData();
 		} else {
@@ -68,8 +67,7 @@ class SubmitHandler extends AuthorHandler {
 		$formClass = "AuthorSubmitStep{$step}Form";
 		import("author.form.submit.$formClass");
 
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$submitForm =& new $formClass($article);
+		$submitForm = new $formClass($article);
 		$submitForm->readInputData();
 
 		if (!HookRegistry::call('SubmitHandler::saveSubmit', array($step, &$article, &$submitForm))) {
@@ -206,8 +204,7 @@ class SubmitHandler extends AuthorHandler {
 		$this->setupTemplate(true);
 
 		import("author.form.submit.AuthorSubmitSuppFileForm");
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$submitForm =& new AuthorSubmitSuppFileForm($article);
+		$submitForm = new AuthorSubmitSuppFileForm($article);
 		$submitForm->setData('title', Locale::translate('common.untitled'));
 		$suppFileId = $submitForm->execute();
 
@@ -227,8 +224,7 @@ class SubmitHandler extends AuthorHandler {
 		$this->setupTemplate(true);
 
 		import("author.form.submit.AuthorSubmitSuppFileForm");
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$submitForm =& new AuthorSubmitSuppFileForm($article, $suppFileId);
+		$submitForm = new AuthorSubmitSuppFileForm($article, $suppFileId);
 
 		if ($submitForm->isLocaleResubmit()) {
 			$submitForm->readInputData();
@@ -251,8 +247,7 @@ class SubmitHandler extends AuthorHandler {
 		$this->setupTemplate(true);
 
 		import("author.form.submit.AuthorSubmitSuppFileForm");
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$submitForm =& new AuthorSubmitSuppFileForm($article, $suppFileId);
+		$submitForm = new AuthorSubmitSuppFileForm($article, $suppFileId);
 		$submitForm->readInputData();
 
 		if ($submitForm->validate()) {

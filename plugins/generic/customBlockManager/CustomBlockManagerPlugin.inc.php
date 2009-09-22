@@ -162,8 +162,7 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 				$templateMgr->assign('pageHierarchy', $pageCrumbs);
 
 				$this->import('SettingsForm');
-				// FIXME: Need construction by reference or validation always fails on PHP 4.x
-				$form =& new SettingsForm($this, $journal->getJournalId());
+				$form = new SettingsForm($this, $journal->getJournalId());
 				$form->readInputData();
 				
 				if (Request::getUserVar('addBlock')) {

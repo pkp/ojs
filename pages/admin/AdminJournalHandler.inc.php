@@ -59,8 +59,7 @@ class AdminJournalHandler extends AdminHandler {
 
 		import('admin.form.JournalSiteSettingsForm');
 
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$settingsForm =& new JournalSiteSettingsForm(!isset($args) || empty($args) ? null : $args[0]);
+		$settingsForm = new JournalSiteSettingsForm(!isset($args) || empty($args) ? null : $args[0]);
 		if ($settingsForm->isLocaleResubmit()) {
 			$settingsForm->readInputData();
 		} else {
@@ -77,8 +76,7 @@ class AdminJournalHandler extends AdminHandler {
 
 		import('admin.form.JournalSiteSettingsForm');
 
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$settingsForm =& new JournalSiteSettingsForm(Request::getUserVar('journalId'));
+		$settingsForm = new JournalSiteSettingsForm(Request::getUserVar('journalId'));
 		$settingsForm->readInputData();
 
 		if ($settingsForm->validate()) {

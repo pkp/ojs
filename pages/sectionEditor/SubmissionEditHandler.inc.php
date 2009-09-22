@@ -469,8 +469,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$submission =& $this->submission;
 
 		import('sectionEditor.form.CreateReviewerForm');
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$createReviewerForm =& new CreateReviewerForm($articleId);
+		$createReviewerForm = new CreateReviewerForm($articleId);
 		$this->setupTemplate(true, $articleId);
 
 		if (isset($args[1]) && $args[1] === 'create') {
@@ -1222,8 +1221,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		import('submission.form.SuppFileForm');
 
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$submitForm =& new SuppFileForm($submission);
+		$submitForm = new SuppFileForm($submission);
 
 		if ($submitForm->isLocaleResubmit()) {
 			$submitForm->readInputData();
@@ -1246,8 +1244,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		import('submission.form.SuppFileForm');
 
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$submitForm =& new SuppFileForm($submission, $suppFileId);
+		$submitForm = new SuppFileForm($submission, $suppFileId);
 
 		if ($submitForm->isLocaleResubmit()) {
 			$submitForm->readInputData();
@@ -1290,8 +1287,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		import('submission.form.SuppFileForm');
 
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$submitForm =& new SuppFileForm($submission, $suppFileId);
+		$submitForm = new SuppFileForm($submission, $suppFileId);
 		$submitForm->readInputData();
 
 		if ($submitForm->validate()) {
@@ -1567,8 +1563,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$submission =& $this->submission;
 
 		import('submission.form.ArticleGalleyForm');
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
- 		$galleyForm =& new ArticleGalleyForm($articleId);
+ 		$galleyForm = new ArticleGalleyForm($articleId);
 		$galleyId = $galleyForm->execute($fileName);
 
 		Request::redirect(null, null, 'editGalley', array($articleId, $galleyId));
@@ -1588,8 +1583,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		import('submission.form.ArticleGalleyForm');
 
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$submitForm =& new ArticleGalleyForm($articleId, $galleyId);
+		$submitForm = new ArticleGalleyForm($articleId, $galleyId);
 
 		if ($submitForm->isLocaleResubmit()) {
 			$submitForm->readInputData();
@@ -1611,8 +1605,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		import('submission.form.ArticleGalleyForm');
 
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$submitForm =& new ArticleGalleyForm($articleId, $galleyId);
+		$submitForm = new ArticleGalleyForm($articleId, $galleyId);
 
 		$submitForm->readInputData();
 		if ($submitForm->validate()) {
@@ -1750,8 +1743,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		import('submission.form.SuppFileForm');
 
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$suppFileForm =& new SuppFileForm($submission);
+		$suppFileForm = new SuppFileForm($submission);
 		$suppFileForm->setData('title', Locale::translate('common.untitled'));
 		$suppFileId = $suppFileForm->execute($fileName);
 

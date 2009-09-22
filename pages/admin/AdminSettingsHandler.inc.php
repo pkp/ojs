@@ -33,8 +33,7 @@ class AdminSettingsHandler extends AdminHandler {
 
 		import('admin.form.SiteSettingsForm');
 
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$settingsForm =& new SiteSettingsForm();
+		$settingsForm = new SiteSettingsForm();
 		if ($settingsForm->isLocaleResubmit()) {
 			$settingsForm->readInputData();
 		} else {
@@ -53,8 +52,7 @@ class AdminSettingsHandler extends AdminHandler {
 
 		import('admin.form.SiteSettingsForm');
 
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$settingsForm =& new SiteSettingsForm();
+		$settingsForm = new SiteSettingsForm();
 		$settingsForm->readInputData();
 
 		if (Request::getUserVar('uploadSiteStyleSheet')) {

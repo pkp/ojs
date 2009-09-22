@@ -231,13 +231,12 @@ class SubscriptionAction {
 				$templateMgr->assign('subscriptionTitle', 'manager.subscriptions.editTitle');	
 			}
 
-			// FIXME: Need construction by reference or validation always fails on PHP 4.x
 			if ($institutional) {
 				import('subscription.form.InstitutionalSubscriptionForm');
-				$subscriptionForm =& new InstitutionalSubscriptionForm($subscriptionId, $userId);
+				$subscriptionForm = new InstitutionalSubscriptionForm($subscriptionId, $userId);
 			} else {
 				import('subscription.form.IndividualSubscriptionForm');
-				$subscriptionForm =& new IndividualSubscriptionForm($subscriptionId, $userId);
+				$subscriptionForm = new IndividualSubscriptionForm($subscriptionId, $userId);
 			}
 			$subscriptionForm->initData();
 			$subscriptionForm->display();
@@ -326,13 +325,12 @@ class SubscriptionAction {
 
 		if (($subscriptionId != null && $subscriptionDao->getSubscriptionJournalId($subscriptionId) == $journal->getJournalId()) || $subscriptionId == null) {
 
-			// FIXME: Need construction by reference or validation always fails on PHP 4.x
 			if ($institutional) {
 				import('subscription.form.InstitutionalSubscriptionForm');
-				$subscriptionForm =& new InstitutionalSubscriptionForm($subscriptionId);
+				$subscriptionForm = new InstitutionalSubscriptionForm($subscriptionId);
 			} else {
 				import('subscription.form.IndividualSubscriptionForm');
-				$subscriptionForm =& new IndividualSubscriptionForm($subscriptionId);
+				$subscriptionForm = new IndividualSubscriptionForm($subscriptionId);
 			}
 			$subscriptionForm->readInputData();
 
@@ -474,8 +472,7 @@ class SubscriptionAction {
 				$templateMgr->assign('subscriptionTypeTitle', 'manager.subscriptionTypes.editTitle');	
 			}
 
-			// FIXME: Need construction by reference or validation always fails on PHP 4.x
-			$subscriptionTypeForm =& new SubscriptionTypeForm($subscriptionTypeId);
+			$subscriptionTypeForm = new SubscriptionTypeForm($subscriptionTypeId);
 			if ($subscriptionTypeForm->isLocaleResubmit()) {
 				$subscriptionTypeForm->readInputData();
 			} else {
@@ -507,8 +504,7 @@ class SubscriptionAction {
 
 		if (($subscriptionTypeId != null && $subscriptionTypeDao->getSubscriptionTypeJournalId($subscriptionTypeId) == $journal->getJournalId()) || $subscriptionTypeId == null) {
 
-			// FIXME: Need construction by reference or validation always fails on PHP 4.x
-			$subscriptionTypeForm =& new SubscriptionTypeForm($subscriptionTypeId);
+			$subscriptionTypeForm = new SubscriptionTypeForm($subscriptionTypeId);
 			$subscriptionTypeForm->readInputData();
 
 			if ($subscriptionTypeForm->validate()) {
@@ -546,8 +542,7 @@ class SubscriptionAction {
 		$paymentManager =& OJSPaymentManager::getManager();
 		$templateMgr->assign('acceptSubscriptionPayments', $paymentManager->acceptSubscriptionPayments());				
 
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$subscriptionPolicyForm =& new SubscriptionPolicyForm();
+		$subscriptionPolicyForm = new SubscriptionPolicyForm();
 		if ($subscriptionPolicyForm->isLocaleResubmit()) {
 			$subscriptionPolicyForm->readInputData();
 		} else {
@@ -562,8 +557,7 @@ class SubscriptionAction {
 	function saveSubscriptionPolicies($args = array()) {
 		import('subscription.form.SubscriptionPolicyForm');
 
-		// FIXME: Need construction by reference or validation always fails on PHP 4.x
-		$subscriptionPolicyForm =& new SubscriptionPolicyForm();
+		$subscriptionPolicyForm = new SubscriptionPolicyForm();
 		$subscriptionPolicyForm->readInputData();
 
 		$templateMgr =& TemplateManager::getManager();
