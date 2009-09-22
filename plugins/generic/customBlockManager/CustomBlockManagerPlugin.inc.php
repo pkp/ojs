@@ -61,7 +61,7 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 				if ( !is_array($blocks) ) break;
 				$i= 0;
 				foreach ( $blocks as $block ) {
-					$blockPlugin =& new CustomBlockPlugin($block);
+					$blockPlugin = new CustomBlockPlugin($block);
 					
 					//default the block to being enabled
 					if ( $blockPlugin->getEnabled() !== false) {
@@ -162,6 +162,7 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 				$templateMgr->assign('pageHierarchy', $pageCrumbs);
 
 				$this->import('SettingsForm');
+				// FIXME: Need construction by reference or validation always fails on PHP 4.x
 				$form =& new SettingsForm($this, $journal->getJournalId());
 				$form->readInputData();
 				

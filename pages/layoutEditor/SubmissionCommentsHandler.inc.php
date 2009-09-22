@@ -37,7 +37,7 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 
 		$articleId = $args[0];
 
-		$submissionLayoutHandler =& new SubmissionLayoutHandler();
+		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 		$submission =& $submissionLayoutHandler->submission;
 		LayoutEditorAction::viewLayoutComments($submission);
@@ -56,7 +56,7 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
-		$submissionLayoutHandler =& new SubmissionLayoutHandler();
+		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 		$submission =& $submissionLayoutHandler->submission;
 		if (LayoutEditorAction::postLayoutComment($submission, $emailComment)) {
@@ -74,7 +74,7 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 
 		$articleId = $args[0];
 
-		$submissionLayoutHandler =& new SubmissionLayoutHandler();
+		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 		$submission =& $submissionLayoutHandler->submission;
 		LayoutEditorAction::viewProofreadComments($submission);
@@ -93,7 +93,7 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
-		$submissionLayoutHandler =& new SubmissionLayoutHandler();
+		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 		$submission =& $submissionLayoutHandler->submission;
 		if (LayoutEditorAction::postProofreadComment($submission, $emailComment)) {
@@ -115,7 +115,7 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 		
 		$this->setupTemplate(true);
 
-		$submissionLayoutHandler =& new SubmissionLayoutHandler();
+		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 		$submission =& $submissionLayoutHandler->submission;
 
@@ -139,7 +139,7 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
-		$submissionLayoutHandler =& new SubmissionLayoutHandler();
+		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 		$submission =& $submissionLayoutHandler->submission;
 
@@ -166,7 +166,7 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 		
 		$this->setupTemplate(true);
 
-		$submissionLayoutHandler =& new SubmissionLayoutHandler();
+		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 		$submission =& $submissionLayoutHandler->submission;
 

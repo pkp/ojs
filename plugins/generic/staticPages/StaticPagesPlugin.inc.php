@@ -52,7 +52,7 @@ class StaticPagesPlugin extends GenericPlugin {
 			$this->addLocaleData();
 			if ($this->getEnabled()) {
 				$this->import('StaticPagesDAO');
-				$staticPagesDAO =& new StaticPagesDAO();
+				$staticPagesDAO = new StaticPagesDAO();
 				$returner =& DAORegistry::registerDAO('StaticPagesDAO', $staticPagesDAO);
 				
 				HookRegistry::register('LoadHandler', array(&$this, 'callbackHandleContent'));
@@ -152,6 +152,7 @@ class StaticPagesPlugin extends GenericPlugin {
 				$journal =& Request::getJournal();
 
 				$this->import('StaticPagesSettingsForm');
+				// FIXME: Need construction by reference or validation always fails on PHP 4.x
 				$form =& new StaticPagesSettingsForm($this, $journal->getJournalId());
 				
 				$templateMgr->assign('pageHierarchy', $pageCrumbs);
@@ -165,6 +166,7 @@ class StaticPagesPlugin extends GenericPlugin {
 				$this->import('StaticPagesEditForm');
 
 				$staticPageId = isset($args[0])?(int)$args[0]:null;
+				// FIXME: Need construction by reference or validation always fails on PHP 4.x
 				$form =& new StaticPagesEditForm($this, $journal->getJournalId(), $staticPageId);
 
 				if ($form->isLocaleResubmit()) {					
@@ -189,6 +191,7 @@ class StaticPagesPlugin extends GenericPlugin {
 				$this->import('StaticPagesEditForm');
 
 				$staticPageId = isset($args[0])?(int)$args[0]:null;
+				// FIXME: Need construction by reference or validation always fails on PHP 4.x
 				$form =& new StaticPagesEditForm($this, $journal->getJournalId(), $staticPageId);
 							
 				if (Request::getUserVar('edit')) {					

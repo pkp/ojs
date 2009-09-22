@@ -259,6 +259,7 @@ class Action {
 		if (!HookRegistry::call('Action::saveComment', array(&$article, &$comment, &$emailComment))) {
 			import("submission.form.comment.EditCommentForm");
 
+			// FIXME: Need construction by reference or validation always fails on PHP 4.x
 			$commentForm =& new EditCommentForm($article, $comment);
 			$commentForm->readInputData();
 

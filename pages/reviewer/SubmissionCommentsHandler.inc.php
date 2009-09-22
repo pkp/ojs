@@ -35,7 +35,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$articleId = $args[0];
 		$reviewId = $args[1];
 
-		$submissionReviewHandler =& new SubmissionReviewHandler();
+		$submissionReviewHandler = new SubmissionReviewHandler();
 		$submissionReviewHandler->validate($reviewId);
 		$submission =& $submissionReviewHandler->submission;
 		$user =& $submissionReviewHandler->user;
@@ -55,7 +55,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
-		$submissionReviewHandler =& new SubmissionReviewHandler();
+		$submissionReviewHandler = new SubmissionReviewHandler();
 		$submissionReviewHandler->validate($reviewId);
 		$submission =& $submissionReviewHandler->submission;
 		$user =& $submissionReviewHandler->user;
@@ -83,7 +83,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$article = $articleDao->getArticle($articleId);
 
-		$submissionReviewHandler =& new SubmissionReviewHandler();
+		$submissionReviewHandler = new SubmissionReviewHandler();
 		$submissionReviewHandler->validate($reviewId);
 		$submission =& $submissionReviewHandler->submission;
 		$user =& $submissionReviewHandler->user;
@@ -111,7 +111,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$article = $articleDao->getArticle($articleId);
 
-		$submissionReviewHandler =& new SubmissionReviewHandler();
+		$submissionReviewHandler = new SubmissionReviewHandler();
 		$submissionReviewHandler->validate($reviewId);
 		$submission =& $submissionReviewHandler->submission;
 		$user =& $submissionReviewHandler->user;
@@ -142,7 +142,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		
 		$this->setupTemplate(true);
 		
-		$submissionReviewHandler =& new SubmissionReviewHandler();
+		$submissionReviewHandler = new SubmissionReviewHandler();
 		$submissionReviewHandler->validate($reviewId);
 		$submission =& $submissionReviewHandler->submission;
 		$user =& $submissionReviewHandler->user;

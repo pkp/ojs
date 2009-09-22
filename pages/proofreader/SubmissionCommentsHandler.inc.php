@@ -37,7 +37,7 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 
 		$articleId = $args[0];
 
-		$submissionProofreadHandler =& new SubmissionProofreadHandler();
+		$submissionProofreadHandler = new SubmissionProofreadHandler();
 		$submissionProofreadHandler->validate($articleId);
 		$submission =& $submissionProofreadHandler->submission;
 		ProofreaderAction::viewProofreadComments($submission);
@@ -55,7 +55,7 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
-		$submissionProofreadHandler =& new SubmissionProofreadHandler();
+		$submissionProofreadHandler = new SubmissionProofreadHandler();
 		$submissionProofreadHandler->validate($articleId);
 		$submission =& $submissionProofreadHandler->submission;
 
@@ -73,7 +73,7 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 
 		$articleId = $args[0];
 
-		$submissionProofreadHandler =& new SubmissionProofreadHandler();
+		$submissionProofreadHandler = new SubmissionProofreadHandler();
 		$submissionProofreadHandler->validate($articleId);
 		$submission =& $submissionProofreadHandler->submission;
 		ProofreaderAction::viewLayoutComments($submission);
@@ -92,7 +92,7 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
-		$submissionProofreadHandler =& new SubmissionProofreadHandler();
+		$submissionProofreadHandler = new SubmissionProofreadHandler();
 		$submissionProofreadHandler->validate($articleId);
 		$submission =& $submissionProofreadHandler->submission;
 		if (ProofreaderAction::postLayoutComment($submission, $emailComment)) {
@@ -114,7 +114,7 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 		
 		$this->setupTemplate(true);
 
-		$submissionProofreadHandler =& new SubmissionProofreadHandler();
+		$submissionProofreadHandler = new SubmissionProofreadHandler();
 		$submissionProofreadHandler->validate($articleId);
 		$submission =& $submissionProofreadHandler->submission;
 		ProofreaderAction::editComment($submission, $comment);
@@ -135,7 +135,7 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
-		$submissionProofreadHandler =& new SubmissionProofreadHandler();
+		$submissionProofreadHandler = new SubmissionProofreadHandler();
 		$submissionProofreadHandler->validate($articleId);
 		$submission =& $submissionProofreadHandler->submission;
 
@@ -162,7 +162,7 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 		$this->validate();
 		$comment =& $this->comment;
 		
-		$submissionProofreadHandler =& new SubmissionProofreadHandler();
+		$submissionProofreadHandler = new SubmissionProofreadHandler();
 		$submissionProofreadHandler->validate($articleId);
 		$submission =& $submissionProofreadHandler->submission;
 

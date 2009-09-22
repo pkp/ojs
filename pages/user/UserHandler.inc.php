@@ -438,6 +438,7 @@ class UserHandler extends Handler {
 
 			if (!in_array($subscriptionStatus, $validStatus)) Request::redirect(null, 'user'); 
 
+			// FIXME: Need construction by reference or validation always fails on PHP 4.x
 			if ($institutional) {
 				$subscriptionForm =& new UserInstitutionalSubscriptionForm($userId, $subscriptionId);
 			} else {
@@ -445,6 +446,7 @@ class UserHandler extends Handler {
 			}
 
 		} else {
+			// FIXME: Need construction by reference or validation always fails on PHP 4.x
 			if ($institutional) {
 				$subscriptionForm =& new UserInstitutionalSubscriptionForm($userId);
 			} else {
@@ -509,6 +511,7 @@ class UserHandler extends Handler {
 
 			if (!in_array($subscriptionStatus, $validStatus)) Request::redirect(null, 'user'); 
 
+			// FIXME: Need construction by reference or validation always fails on PHP 4.x
 			if ($institutional) {
 				$subscriptionForm =& new UserInstitutionalSubscriptionForm($userId, $subscriptionId);
 			} else {
@@ -516,6 +519,7 @@ class UserHandler extends Handler {
 			}
 
 		} else {
+			// FIXME: Need construction by reference or validation always fails on PHP 4.x
 			if ($institutional) {
 				$subscriptionForm =& new UserInstitutionalSubscriptionForm($userId);
 			} else {

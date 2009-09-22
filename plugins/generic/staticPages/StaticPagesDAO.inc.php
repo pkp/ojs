@@ -33,7 +33,7 @@ class StaticPagesDAO extends DAO {
 			'SELECT * FROM static_pages WHERE journal_id = ?', $journalId, $rangeInfo
 		);
 		
-		$returner =& new DAOResultFactory($result, $this, '_returnStaticPageFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnStaticPageFromRow');
 		return $returner;
 	}
 	

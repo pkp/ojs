@@ -33,6 +33,7 @@ class ArticleReportDAO extends DAO {
 				COALESCE(asl1.setting_value, aspl1.setting_value) AS title,
 				COALESCE(asl2.setting_value, aspl2.setting_value) AS abstract,
 				COALESCE(sl.setting_value, spl.setting_value) AS section_title,
+				a.status AS status,
 				a.language AS language
 			FROM
 				articles a

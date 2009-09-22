@@ -37,7 +37,7 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 
 		$articleId = $args[0];
 
-		$submissionCopyeditHandler =& new SubmissionCopyeditHandler();
+		$submissionCopyeditHandler = new SubmissionCopyeditHandler();
 		$submissionCopyeditHandler->validate($articleId);
 		$submission =& $submissionCopyeditHandler->submission;
 		CopyeditorAction::viewLayoutComments($submission);
@@ -56,7 +56,7 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
-		$submissionCopyeditHandler =& new SubmissionCopyeditHandler();
+		$submissionCopyeditHandler = new SubmissionCopyeditHandler();
 		$submissionCopyeditHandler->validate($articleId);
 		$submission =& $submissionCopyeditHandler->submission;
 		if (CopyeditorAction::postLayoutComment($submission, $emailComment)) {
@@ -74,7 +74,7 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 
 		$articleId = $args[0];
 
-		$submissionCopyeditHandler =& new SubmissionCopyeditHandler();
+		$submissionCopyeditHandler = new SubmissionCopyeditHandler();
 		$submissionCopyeditHandler->validate($articleId);
 		$submission =& $submissionCopyeditHandler->submission;
 		CopyeditorAction::viewCopyeditComments($submission);
@@ -93,7 +93,7 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
-		$submissionCopyeditHandler =& new SubmissionCopyeditHandler();
+		$submissionCopyeditHandler = new SubmissionCopyeditHandler();
 		$submissionCopyeditHandler->validate($articleId);
 		$submission =& $submissionCopyeditHandler->submission;
 		if (CopyeditorAction::postCopyeditComment($submission, $emailComment)) {
@@ -115,7 +115,7 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 
 		$this->setupTemplate(true);
 
-		$submissionCopyeditHandler =& new SubmissionCopyeditHandler();
+		$submissionCopyeditHandler = new SubmissionCopyeditHandler();
 		$submissionCopyeditHandler->validate($articleId);
 		$submission =& $submissionCopyeditHandler->submission;
 
@@ -139,7 +139,7 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
-		$submissionCopyeditHandler =& new SubmissionCopyeditHandler();
+		$submissionCopyeditHandler = new SubmissionCopyeditHandler();
 		$submissionCopyeditHandler->validate($articleId);
 		$submission =& $submissionCopyeditHandler->submission;
 		CopyeditorAction::saveComment($submission, $comment, $emailComment);
@@ -165,7 +165,7 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 		$articleId = $args[0];
 		$commentId = $args[1];
 
-		$submissionCopyeditHandler =& new SubmissionCopyeditHandler();
+		$submissionCopyeditHandler = new SubmissionCopyeditHandler();
 		$submissionCopyeditHandler->validate($articleId);
 		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
 		$this->validate();

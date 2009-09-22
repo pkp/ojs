@@ -38,7 +38,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$articleId = $args[0];
 		$reviewId = $args[1];
 
-		$submissionEditHandler =& new SubmissionEditHandler();
+		$submissionEditHandler = new SubmissionEditHandler();
 		$submissionEditHandler->validate($articleId);
 		$submission =& $submissionEditHandler->submission;
 
@@ -58,7 +58,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
-		$submissionEditHandler =& new SubmissionEditHandler();
+		$submissionEditHandler = new SubmissionEditHandler();
 		$submissionEditHandler->validate($articleId);
 		$submission =& $submissionEditHandler->submission;
 		if (SectionEditorAction::postPeerReviewComment($submission, $reviewId, $emailComment)) {
@@ -76,7 +76,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 
 		$articleId = $args[0];
 
-		$submissionEditHandler =& new SubmissionEditHandler();
+		$submissionEditHandler = new SubmissionEditHandler();
 		$submissionEditHandler->validate($articleId);
 		$submission =& $submissionEditHandler->submission;
 		SectionEditorAction::viewEditorDecisionComments($submission);
@@ -95,7 +95,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
-		$submissionEditHandler =& new SubmissionEditHandler();
+		$submissionEditHandler = new SubmissionEditHandler();
 		$submissionEditHandler->validate($articleId);
 		$submission =& $submissionEditHandler->submission;
 		if (SectionEditorAction::postEditorDecisionComment($submission, $emailComment)) {
@@ -109,7 +109,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 	 */
 	function blindCcReviewsToReviewers($args = array()) {
 		$articleId = Request::getUserVar('articleId');
-		$submissionEditHandler =& new SubmissionEditHandler();
+		$submissionEditHandler = new SubmissionEditHandler();
 		$submissionEditHandler->validate($articleId);
 		$submission =& $submissionEditHandler->submission;
 
@@ -131,7 +131,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 
 		$articleId = $args[0];
 
-		$submissionEditHandler =& new SubmissionEditHandler();
+		$submissionEditHandler = new SubmissionEditHandler();
 		$submissionEditHandler->validate($articleId);
 		$submission =& $submissionEditHandler->submission;
 		SectionEditorAction::viewCopyeditComments($submission);
@@ -150,7 +150,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
-		$submissionEditHandler =& new SubmissionEditHandler();
+		$submissionEditHandler = new SubmissionEditHandler();
 		$submissionEditHandler->validate($articleId);
 		$submission =& $submissionEditHandler->submission;
 		if (SectionEditorAction::postCopyeditComment($submission, $emailComment)) {
@@ -168,7 +168,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 
 		$articleId = $args[0];
 
-		$submissionEditHandler =& new SubmissionEditHandler();
+		$submissionEditHandler = new SubmissionEditHandler();
 		$submissionEditHandler->validate($articleId);
 		$submission =& $submissionEditHandler->submission;
 		SectionEditorAction::viewLayoutComments($submission);
@@ -187,7 +187,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
-		$submissionEditHandler =& new SubmissionEditHandler();
+		$submissionEditHandler = new SubmissionEditHandler();
 		$submissionEditHandler->validate($articleId);
 		$submission =& $submissionEditHandler->submission;
 		if (SectionEditorAction::postLayoutComment($submission, $emailComment)) {
@@ -205,7 +205,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 
 		$articleId = $args[0];
 
-		$submissionEditHandler =& new SubmissionEditHandler();
+		$submissionEditHandler = new SubmissionEditHandler();
 		$submissionEditHandler->validate($articleId);
 		$submission =& $submissionEditHandler->submission;
 		SectionEditorAction::viewProofreadComments($submission);
@@ -224,7 +224,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
-		$submissionEditHandler =& new SubmissionEditHandler();
+		$submissionEditHandler = new SubmissionEditHandler();
 		$submissionEditHandler->validate($articleId);
 		$submission =& $submissionEditHandler->submission;
 		if (SectionEditorAction::postProofreadComment($submission, $emailComment)) {
@@ -238,7 +238,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 	 */
 	function emailEditorDecisionComment() {
 		$articleId = (int) Request::getUserVar('articleId');
-		$submissionEditHandler =& new SubmissionEditHandler();
+		$submissionEditHandler = new SubmissionEditHandler();
 		$submissionEditHandler->validate($articleId);
 		$submission =& $submissionEditHandler->submission;
 
@@ -265,7 +265,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		
 		$this->setupTemplate(true);
 		
-		$submissionEditHandler =& new SubmissionEditHandler();
+		$submissionEditHandler = new SubmissionEditHandler();
 		$submissionEditHandler->validate($articleId);
 		$submission =& $submissionEditHandler->submission;
 
@@ -293,7 +293,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		
 		$this->setupTemplate(true);
 
-		$submissionEditHandler =& new SubmissionEditHandler();
+		$submissionEditHandler = new SubmissionEditHandler();
 		$submissionEditHandler->validate($articleId);
 		$submission =& $submissionEditHandler->submission;
 
@@ -335,7 +335,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		
 		$this->setupTemplate(true);
 		
-		$submissionEditHandler =& new SubmissionEditHandler();
+		$submissionEditHandler = new SubmissionEditHandler();
 		$submissionEditHandler->validate($articleId);
 		$submission =& $submissionEditHandler->submission;
 

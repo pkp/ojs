@@ -100,6 +100,7 @@ class CustomBlockPlugin extends BlockPlugin {
 		$journal =& Request::getJournal();
 
 		$this->import('CustomBlockEditForm');
+		// FIXME: Need construction by reference or validation always fails on PHP 4.x
 		$form =& new CustomBlockEditForm($this, $journal->getJournalId());
 		
 		switch ($verb) {

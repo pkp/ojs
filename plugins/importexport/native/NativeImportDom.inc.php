@@ -383,7 +383,7 @@ class NativeImportDom {
 
 		if (($node = $coverNode->getChildByName('image'))) {
 			import('file.PublicFileManager');
-			$publicFileManager =& new PublicFileManager();
+			$publicFileManager = new PublicFileManager();
 			$newName = 'cover_article_' . $article->getArticleId()."_{$locale}"  . '.';
 
 			if (($href = $node->getChildByName('href'))) {

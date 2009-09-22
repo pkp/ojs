@@ -240,7 +240,7 @@ class NativeExportDom {
 					$imageNode =& XMLCustomWriter::createElement($doc, 'image');
 					XMLCustomWriter::appendChild($coverNode, $imageNode);
 					import('file.PublicFileManager');
-					$publicFileManager =& new PublicFileManager();
+					$publicFileManager = new PublicFileManager();
 					$coverPagePath = $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
 					$coverPagePath .= $coverFile;
 					$embedNode =& XMLCustomWriter::createChildWithText($doc, $imageNode, 'embed', base64_encode($publicFileManager->readFile($coverPagePath)));

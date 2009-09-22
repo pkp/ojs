@@ -37,7 +37,7 @@ class SubmissionCommentsHandler extends AuthorHandler {
 
 		$articleId = $args[0];
 
-		$trackSubmissionHandler =& new TrackSubmissionHandler();
+		$trackSubmissionHandler = new TrackSubmissionHandler();
 		$trackSubmissionHandler->validate($articleId);
 		$authorSubmission =& $trackSubmissionHandler->submission;
 
@@ -53,7 +53,7 @@ class SubmissionCommentsHandler extends AuthorHandler {
 
 		$articleId = $args[0];
 
-		$trackSubmissionHandler =& new TrackSubmissionHandler();
+		$trackSubmissionHandler = new TrackSubmissionHandler();
 		$trackSubmissionHandler->validate($articleId);
 		$authorSubmission =& $trackSubmissionHandler->submission;
 
@@ -73,7 +73,7 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
-		$trackSubmissionHandler =& new TrackSubmissionHandler();
+		$trackSubmissionHandler = new TrackSubmissionHandler();
 		$trackSubmissionHandler->validate($articleId);
 		$authorSubmission =& $trackSubmissionHandler->submission;
 
@@ -92,7 +92,7 @@ class SubmissionCommentsHandler extends AuthorHandler {
 
 		$articleId = $args[0];
 
-		$trackSubmissionHandler =& new TrackSubmissionHandler();
+		$trackSubmissionHandler = new TrackSubmissionHandler();
 		$trackSubmissionHandler->validate($articleId);
 		$authorSubmission =& $trackSubmissionHandler->submission;
 		AuthorAction::viewProofreadComments($authorSubmission);
@@ -110,7 +110,7 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
-		$trackSubmissionHandler =& new TrackSubmissionHandler();
+		$trackSubmissionHandler = new TrackSubmissionHandler();
 		$trackSubmissionHandler->validate($articleId);
 		$authorSubmission =& $trackSubmissionHandler->submission;
 
@@ -128,7 +128,7 @@ class SubmissionCommentsHandler extends AuthorHandler {
 
 		$articleId = $args[0];
 
-		$trackSubmissionHandler =& new TrackSubmissionHandler();
+		$trackSubmissionHandler = new TrackSubmissionHandler();
 		$trackSubmissionHandler->validate($articleId);
 		$authorSubmission =& $trackSubmissionHandler->submission;
 		AuthorAction::viewLayoutComments($authorSubmission);
@@ -147,7 +147,7 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
-		$trackSubmissionHandler =& new TrackSubmissionHandler();
+		$trackSubmissionHandler = new TrackSubmissionHandler();
 		$trackSubmissionHandler->validate($articleId);
 		$authorSubmission =& $trackSubmissionHandler->submission;
 		if (AuthorAction::postLayoutComment($authorSubmission, $emailComment)) {
@@ -163,7 +163,7 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		$this->setupTemplate(true);
 				
 		$articleId = (int) Request::getUserVar('articleId');
-		$trackSubmissionHandler =& new TrackSubmissionHandler();
+		$trackSubmissionHandler = new TrackSubmissionHandler();
 		$trackSubmissionHandler->validate($articleId);
 		$authorSubmission =& $trackSubmissionHandler->submission;
 
@@ -185,7 +185,7 @@ class SubmissionCommentsHandler extends AuthorHandler {
 
 		$this->setupTemplate(true);
 		
-		$trackSubmissionHandler =& new TrackSubmissionHandler();
+		$trackSubmissionHandler = new TrackSubmissionHandler();
 		$trackSubmissionHandler->validate($articleId);
 		$authorSubmission =& $trackSubmissionHandler->submission;
 		
@@ -214,7 +214,7 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
-		$trackSubmissionHandler =& new TrackSubmissionHandler();
+		$trackSubmissionHandler = new TrackSubmissionHandler();
 		$trackSubmissionHandler->validate($articleId);
 		$authorSubmission =& $trackSubmissionHandler->submission;
 
@@ -254,7 +254,7 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		
 		$this->setupTemplate(true);
 
-		$trackSubmissionHandler =& new TrackSubmissionHandler();
+		$trackSubmissionHandler = new TrackSubmissionHandler();
 		$trackSubmissionHandler->validate($articleId);
 		$authorSubmission =& $trackSubmissionHandler->submission;
 		AuthorAction::deleteComment($commentId);
