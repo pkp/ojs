@@ -72,14 +72,18 @@
 	<upgrade minversion="2.1.1.0" maxversion="2.1.1.0">
 		<!-- Migrate the user_settings table. -->
 		<data file="dbscripts/xml/upgrade/2.2.0_usersettings.xml" />
-		<code function="migrateUserSettings" />
 	</upgrade>
 
 	<upgrade minversion="2.2.0.0" maxversion="2.2.0.0">
 		<!-- 2.2 to 2.2.1; prior versions will have this table renamed already -->
-		<data file="upgrade/2.2.1_usersettings.xml" />
+		<data file="dbscripts/xml/upgrade/2.2.1_usersettings.xml" />
 	</upgrade>
 
+	<upgrade minversion="2.2.0.0" maxversion="2.2.2.0">
+		<!-- #4756# Rename journal_id to assoc_id in user_settings -->
+		<data file="dbscripts/xml/upgrade/2.3.0_usersettings.xml" />
+	</upgrade>
+	
 	<upgrade minversion="2.0.0.0" maxversion="2.2.0.0">
 		<!-- 2.x to 2.2.1 -->
 		<data file="dbscripts/xml/upgrade/2.2.1_preupdate.xml" />
@@ -135,6 +139,7 @@
 	</upgrade>
 
 	<upgrade minversion="2.1.1.0" maxversion="2.1.1.0">
+		<code function="migrateUserSettings" />
 		<!-- Delete the user_settings_old table now that it has been migrated. -->
 		<data file="dbscripts/xml/upgrade/2.2.0_usersettings2.xml" />
 	</upgrade>
