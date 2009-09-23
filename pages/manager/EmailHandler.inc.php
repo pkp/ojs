@@ -76,6 +76,7 @@ class EmailHandler extends ManagerHandler {
 	 */
 	function updateEmail() {
 		$this->validate();
+		$this->setupTemplate(true);
 
 		import('manager.form.EmailTemplateForm');
 
@@ -89,7 +90,6 @@ class EmailHandler extends ManagerHandler {
 			Request::redirect(null, null, 'emails');
 
 		} else {
-			$this->setupTemplate(true);
 			$emailTemplateForm->display();
 		}
 	}
