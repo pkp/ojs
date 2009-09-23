@@ -38,7 +38,7 @@ class CrossRefExportDom {
 
 	function &generateCrossRefDom() {
 		// create the output XML document in DOM with a root node
-		$doc =& XMLCustomWriter::createDocument('', '', '');
+		$doc =& XMLCustomWriter::createDocument();
 
 		return $doc;
 	}

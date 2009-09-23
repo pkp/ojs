@@ -97,9 +97,11 @@ class DOAJPlugin extends ImportExportPlugin {
 	 */
 	function exportJournal(&$journal, $outputFile = null) {
 		$this->import('DOAJExportDom');
-		$doc =& XMLCustomWriter::createDocument('journal', DOAJ_XSD_URL);
+		$doc =& XMLCustomWriter::createDocument();
 		
 		$journalNode =& DOAJExportDom::generateJournalDom($doc, $journal);
+		$journalNode->setAttribute('xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance');
+		$journalNode->setAttribute('xsi:noNamespaceSchemaLocation', DOAJ_XSD_URL);
 		XMLCustomWriter::appendChild($doc, $journalNode);
 
 		if (!empty($outputFile)) {

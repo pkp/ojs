@@ -93,7 +93,7 @@ class METSExportPlugin extends ImportExportPlugin {
 
 	function exportIssues(&$journal, &$issues){
 		$this->import('MetsExportDom');
-		$doc =& XMLCustomWriter::createDocument('', null);
+		$doc =& XMLCustomWriter::createDocument();
 		$root =& XMLCustomWriter::createElement($doc, 'METS:mets');
 		XMLCustomWriter::setAttribute($root, 'xmlns:METS', 'http://www.loc.gov/METS/');
 		XMLCustomWriter::setAttribute($root, 'xmlns:xlink', 'http://www.w3.org/TR/xlink');

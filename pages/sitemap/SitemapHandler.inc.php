@@ -48,7 +48,7 @@ class SitemapHandler extends Handler {
 	function createSitemapIndex() {
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		
-		$doc =& XMLCustomWriter::createDocument('', null);
+		$doc =& XMLCustomWriter::createDocument();
 		$root =& XMLCustomWriter::createElement($doc, 'sitemapindex');
 		XMLCustomWriter::setAttribute($root, 'xmlns', SITEMAP_XSD_URL);
 
@@ -77,7 +77,7 @@ class SitemapHandler extends Handler {
 		$journal =& Request::getJournal();
 		$journalId = $journal->getJournalId();
 		
-		$doc =& XMLCustomWriter::createDocument('', null);
+		$doc =& XMLCustomWriter::createDocument();
 		$root =& XMLCustomWriter::createElement($doc, 'urlset');
 		XMLCustomWriter::setAttribute($root, 'xmlns', SITEMAP_XSD_URL);
 		
