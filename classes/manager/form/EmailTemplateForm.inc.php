@@ -23,13 +23,17 @@ class EmailTemplateForm extends Form {
 	/** The key of the email template being edited */
 	var $emailKey;
 
+	/** The conference of the email template being edited */
+	var $journal;
+
 	/**
 	 * Constructor.
 	 * @param $emailKey string
 	 */
-	function EmailTemplateForm($emailKey) {
+	function EmailTemplateForm($emailKey, &$journal) {
 		parent::Form('manager/emails/emailTemplateForm.tpl');
 
+		$this->journal = $journal;
 		$this->emailKey = $emailKey;
 
 		// Validation checks for this form
