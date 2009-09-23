@@ -24,7 +24,7 @@ class XMLCustomWriter {
 	 * definition; $dtd should contain the ID, and $url should contain the
 	 * URL. Otherwise, $dtd should be the DTD name.
 	 */
-	function &createDocument($type, $dtd, $url = null) {
+	function &createDocument($type = null, $dtd = null, $url = null) {
 		$version = '1.0';
 		if (class_exists('DOMImplementation')) {
 			// Use the new (PHP 5.x) DOM
@@ -42,9 +42,9 @@ class XMLCustomWriter {
 			// Use the XMLNode class
 			$doc = &new XMLNode();
 			$doc->setAttribute('version', $version);
-			$doc->setAttribute('type', $type);
-			$doc->setAttribute('dtd', $dtd);
-			$doc->setAttribute('url', $url);
+			if ($type !== null) $doc->setAttribute('type', $type);
+			if ($dtd !== null) $doc->setAttribute('dtd', $dtd);
+			if ($url !== null) $doc->setAttribute('url', $url);
 		}
 		return $doc;
 	}
