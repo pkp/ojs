@@ -13,11 +13,12 @@
  *
  */
 
+//$Id$
+
 import('payment.QueuedPayment');
 
 class OJSQueuedPayment extends QueuedPayment {
 	var $journalId;
-	var $paperId;
 	var $type;
 	var $requestUrl;
 
@@ -46,7 +47,7 @@ class OJSQueuedPayment extends QueuedPayment {
 	}
 
 	/**
-	 * Returns the description of the QueuedPayment.
+	 * Returns the name of the QueuedPayment.
 	 * Pulled from Journal Settings if present, or from locale file otherwise.
 	 * For subscriptions, pulls subscription type name.
 	 * @return string

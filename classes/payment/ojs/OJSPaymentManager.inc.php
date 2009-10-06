@@ -6,7 +6,7 @@
  * Copyright (c) 2003-2009 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class	OJSPaymentManager
+ * @class OJSPaymentManager
  * @ingroup payment
  * @see OJSQueuedPayment
  *
@@ -14,17 +14,19 @@
  *
  */
 
+//$Id$
+
 import('payment.ojs.OJSQueuedPayment');
 import('payment.PaymentManager');
 
-define('PAYMENT_TYPE_MEMBERSHIP',			0x000000001 );
+define('PAYMENT_TYPE_MEMBERSHIP',		0x000000001 );
 define('PAYMENT_TYPE_RENEW_SUBSCRIPTION',	0x000000002 );
 define('PAYMENT_TYPE_PURCHASE_ARTICLE',		0x000000003 );
-define('PAYMENT_TYPE_DONATION',				0x000000004 );
-define('PAYMENT_TYPE_SUBMISSION',			0x000000005 );
-define('PAYMENT_TYPE_FASTTRACK',			0x000000006 );
-define('PAYMENT_TYPE_PUBLICATION',			0x000000007 );
-define('PAYMENT_TYPE_PURCHASE_SUBSCRIPTION',0x000000008 );
+define('PAYMENT_TYPE_DONATION',			0x000000004 );
+define('PAYMENT_TYPE_SUBMISSION',		0x000000005 );
+define('PAYMENT_TYPE_FASTTRACK',		0x000000006 );
+define('PAYMENT_TYPE_PUBLICATION',		0x000000007 );
+define('PAYMENT_TYPE_PURCHASE_SUBSCRIPTION',	0x000000008 );
 
 class OJSPaymentManager extends PaymentManager {
 	function &getManager() {
@@ -165,7 +167,7 @@ class OJSPaymentManager extends PaymentManager {
 					$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 					$subscription =& $individualSubscriptionDao->getSubscription($subscriptionId);
 					$institutional = false;
-				} 
+				}
 				if (!$subscription || $subscription->getUserId() != $queuedPayment->getUserId() || $subscription->getJournalId() != $queuedPayment->getJournalId()) {
 					// FIXME: Is this supposed to be here?
 					error_log(print_r($subscription, true));
@@ -215,7 +217,7 @@ class OJSPaymentManager extends PaymentManager {
 					$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 					$subscription =& $individualSubscriptionDao->getSubscription($subscriptionId);
 					$institutional = false;
-				} 
+				}
 				if (!$subscription || $subscription->getUserId() != $queuedPayment->getUserId() || $subscription->getJournalId() != $queuedPayment->getJournalId()) {
 					// FIXME: Is this supposed to be here?
 					error_log(print_r($subscription, true));

@@ -129,7 +129,11 @@ class IssueManagementHandler extends EditorHandler {
 		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 		$templateMgr->assign('helpTopicId', 'publishing.createIssue');
 
-		$issueForm = new IssueForm('editor/issues/createIssue.tpl');
+		if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
+			$issueForm = new IssueForm('editor/issues/createIssue.tpl');
+		} else {
+			$issueForm =& new IssueForm('editor/issues/createIssue.tpl');
+		}
 
 		if ($issueForm->isLocaleResubmit()) {
 			$issueForm->readInputData();
@@ -147,7 +151,12 @@ class IssueManagementHandler extends EditorHandler {
 		$this->setupTemplate(EDITOR_SECTION_ISSUES);
 
 		import('issue.form.IssueForm');
-		$issueForm = new IssueForm('editor/issues/createIssue.tpl');
+		if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
+			$issueForm = new IssueForm('editor/issues/createIssue.tpl');
+		} else {
+			$issueForm =& new IssueForm('editor/issues/createIssue.tpl');
+		}
+
 		$issueForm->readInputData();
 
 		if ($issueForm->validate()) {
@@ -176,7 +185,12 @@ class IssueManagementHandler extends EditorHandler {
 		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 
 		import('issue.form.IssueForm');
-		$issueForm = new IssueForm('editor/issues/issueData.tpl');
+
+		if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
+			$issueForm = new IssueForm('editor/issues/issueData.tpl');
+		} else {
+			$issueForm =& new IssueForm('editor/issues/issueData.tpl');
+		}
 
 		if ($issueForm->isLocaleResubmit()) {
 			$issueForm->readInputData();
@@ -210,7 +224,11 @@ class IssueManagementHandler extends EditorHandler {
 		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 
 		import('issue.form.IssueForm');
-		$issueForm = new IssueForm('editor/issues/issueData.tpl');
+		if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
+			$issueForm = new IssueForm('editor/issues/issueData.tpl');
+		} else {
+			$issueForm =& new IssueForm('editor/issues/issueData.tpl');
+		}
 		$issueForm->readInputData();
 
 		if ($issueForm->validate($issueId)) {

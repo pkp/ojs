@@ -57,7 +57,11 @@ class QuickSubmitPlugin extends ImportExportPlugin {
 			$this->saveSubmit($args);
 		} else {
 			$this->import('QuickSubmitForm');
-			$form = new QuickSubmitForm($this);
+			if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
+				$form = new QuickSubmitForm($this);
+			} else {
+				$form =& new QuickSubmitForm($this);
+			}
 			if ($form->isLocaleResubmit()) {
 				$form->readInputData();
 			} else {
@@ -75,7 +79,11 @@ class QuickSubmitPlugin extends ImportExportPlugin {
 		$templateMgr =& TemplateManager::getManager();
 
 		$this->import('QuickSubmitForm');
-		$form = new QuickSubmitForm($this);
+		if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
+			$form = new QuickSubmitForm($this);
+		} else {
+			$form =& new QuickSubmitForm($this);
+		}
 		$form->readInputData();
 		$formLocale = $form->getFormLocale();
 

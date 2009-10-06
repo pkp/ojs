@@ -11,7 +11,7 @@
   *
   * $Id$
  -->
- 
+
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.paymethod.manual.displayName">Manual Fee Payment</message>
 	<message key="plugins.paymethod.manual.description">The manager will manually record receipt of a user's payment (outside of this software).</message>
@@ -19,11 +19,11 @@
 	<message key="plugins.paymethod.manual.settings">Manual Payment Settings</message>
 	<message key="plugins.paymethod.manual.settings.instructions">Instructions</message>
 	<message key="plugins.paymethod.manual.settings.manualInstructions">Fee Payment Instructions for users selecting manual fee payment</message>
-	
+
 	<message key="plugins.paymethod.manual.sendNotificationOfPayment">Send notification of payment</message>
 	<message key="plugins.paymethod.manual.paymentNotification">Payment Notification</message>
 	<message key="plugins.paymethod.manual.notificationSent">Payment notification sent</message>
-	
+
 	<message key="plugins.paymethod.manual.purchase.title">Title</message>
-	<message key="plugins.paymethod.manual.purchase.fee">Fee</message>	
+	<message key="plugins.paymethod.manual.purchase.fee">Fee</message>
 </locale>

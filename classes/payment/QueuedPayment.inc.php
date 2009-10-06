@@ -16,8 +16,7 @@
 
 import('payment.Payment');
 
-class QueuedPayment extends Payment{
-
+class QueuedPayment extends Payment {
 	function QueuedPayment($amount, $currencyCode, $userId = null, $assocId = null) {
 		parent::Payment($amount, $currencyCode, $userId, $assocId);
 	}

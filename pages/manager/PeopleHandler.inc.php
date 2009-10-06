@@ -409,7 +409,12 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign_by_ref('roleSettings', $this->retrieveRoleAssignmentPreferences($journal->getJournalId()));
 
 		$templateMgr->assign('currentUrl', Request::url(null, null, 'people', 'all'));
-		$userForm = new UserManagementForm($userId);
+		if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
+			$userForm = new UserManagementForm($userId);
+		} else {
+			$userForm =& new UserManagementForm($userId);
+		}
+
 		if ($userForm->isLocaleResubmit()) {
 			$userForm->readInputData();
 		} else {
@@ -638,7 +643,12 @@ class PeopleHandler extends ManagerHandler {
 
 		import('manager.form.UserManagementForm');
 
-		$userForm = new UserManagementForm($userId);
+		if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
+			$userForm = new UserManagementForm($userId);
+		} else {
+			$userForm =& new UserManagementForm($userId);
+		}
+
 		$userForm->readInputData();
 
 		if ($userForm->validate()) {
@@ -648,7 +658,12 @@ class PeopleHandler extends ManagerHandler {
 				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->assign('currentUrl', Request::url(null, null, 'people', 'all'));
 				$templateMgr->assign('userCreated', true);
-				$userForm = new UserManagementForm();
+				unset($userForm);
+				if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
+					$userForm = new UserManagementForm();
+				} else {
+					$userForm =& new UserManagementForm();
+				}
 				$userForm->initData();
 				$userForm->display();
 

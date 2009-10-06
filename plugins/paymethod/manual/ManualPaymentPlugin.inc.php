@@ -1,17 +1,19 @@
 <?php
 
 /**
- * @file ManualPaymentPlugin.inc.php
+ * @file plugins/paymethod/manual/ManualPaymentPlugin.inc.php
  *
  * Copyright (c) 2003-2009 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ManualPaymentPlugin
- * @ingroup plugins
+ * @ingroup plugins_paymethod_manual
  *
  * @brief Manual payment plugin class
  *
  */
+
+//$Id$
 
 import('classes.plugins.PaymethodPlugin');
 
@@ -20,17 +22,17 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 	function getName() {
 		return 'ManualPayment';
 	}
-	
+
 	function getDisplayName() {
 		return Locale::translate('plugins.paymethod.manual.displayName');
 	}
 
 	function getDescription() {
 		return Locale::translate('plugins.paymethod.manual.description');
-	}   
+	}
 
 	function register($category, $path) {
-		if (parent::register($category, $path)) {			
+		if (parent::register($category, $path)) {
 			$this->addLocaleData();
 			return true;
 		}
@@ -55,7 +57,6 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 	}
 
 	function displayPaymentForm($queuedPaymentId, &$queuedPayment) {
-
 		if (!$this->isConfigured()) return false;
 		$journal =& Request::getJournal();
 		$templateMgr =& TemplateManager::getManager();
@@ -65,14 +66,14 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 		$templateMgr->assign('itemDescription', $queuedPayment->getDescription());
 		if ($queuedPayment->getAmount() > 0) {
 			$templateMgr->assign('itemAmount', $queuedPayment->getAmount());
-			$templateMgr->assign('itemCurrencyCode', $queuedPayment->getCurrencyCode()); 
+			$templateMgr->assign('itemCurrencyCode', $queuedPayment->getCurrencyCode());
 		}
 		$templateMgr->assign('manualInstructions', $this->getSetting($journal->getJournalId(), 'manualInstructions'));
 		$templateMgr->assign('queuedPaymentId', $queuedPaymentId);
-		
+
 		$templateMgr->display($this->getTemplatePath() . 'paymentForm.tpl');
 	}
-	
+
 	/**
 	 * Handle incoming requests/notifications
 	 */
@@ -80,7 +81,7 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 		$journal =& Request::getJournal();
 		$templateMgr =& TemplateManager::getManager();
 		$user =& Request::getUser();
-		$op = array_shift($args);
+		$op = isset($args[0])?$args[0]:null;
 		$queuedPaymentId = (int) array_shift($args);
 
 		import('payment.ojs.OJSPaymentManager');
@@ -88,9 +89,9 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 		$queuedPayment =& $ojsPaymentManager->getQueuedPayment($queuedPaymentId);
 		// if the queued payment doesn't exist, redirect away from payments
 		if ( !$queuedPayment ) Request::redirect(null, null, 'index');
-		
+
 		switch ( $op ) {
-			case 'notify':	
+			case 'notify':
 				import('mail.MailTemplate');
 				Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
 				$contactName = $journal->getSetting('contactName');
@@ -107,7 +108,7 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 					'itemCurrencyCode' => $queuedPayment->getCurrencyCode()
 				));
 				$mail->send();
-				
+
 				$templateMgr->assign(array(
 					'currentUrl' => Request::url(null, null, 'payment', 'plugin', array('notify', $queuedPaymentId)),
 					'pageTitle' => 'plugins.paymethod.manual.paymentNotification',
@@ -117,10 +118,10 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 				));
 				$templateMgr->display('common/message.tpl');
 				exit();
-				break;	
+				break;
 		}
 		parent::handle($args); // Don't know what to do with it
-	}		
+	}
 
 	function getInstallEmailTemplatesFile() {
 		return ($this->getPluginPath() . DIRECTORY_SEPARATOR . 'emailTemplates.xml');
