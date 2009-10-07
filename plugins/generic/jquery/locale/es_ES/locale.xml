@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the es_ES locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.generic.jquery.name">Plugin jQuery</message>
+	<message key="plugins.generic.jquery.description"><![CDATA[Este plugin habilita la interacción javascript y el estilado del contenido de OJS usando el framework <a href="http://www.jquery.com" target="_new">jQuery</a> .]]></message>
+	<message key="plugins.generic.jquery.descriptionDisabled"><![CDATA[Este plugin habilita la interacción javascript y el estilado del contenido de OJS usando el framework <a href="http://www.jquery.com" target="_new">jQuery</a> .<strong>jQuery no está actualmente instalado; instálalo en {$jQueryPath}.</strong>]]></message>
+	<message key="plugins.generic.jquery.disabled">El plugin jQuery ha sido deshabilitado.</message>
+	<message key="plugins.generic.jquery.enabled">El plugin jQuery ha sido habilitado.</message>
+	<message key="plugins.generic.jquery.settings">Configuración</message>
+</locale>

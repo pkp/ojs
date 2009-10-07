@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the es_ES locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.generic.referral.name">Referral Plugin</message>
+	<message key="plugins.generic.referral.description"></message>
+	<message key="plugins.generic.referral.enabled">El plugin Referral ha sido habilitado.</message>
+	<message key="plugins.generic.referral.disabled">El plugin Referral ha sido deshabilitado.</message>
+	
+	<message key="plugins.generic.referral.editReferral">Editar Refback</message>
+	<message key="plugins.generic.referral.createReferral">Crear Refback</message>
+	<message key="plugins.generic.referral.referrals">Refbacks</message>
+	<message key="plugins.generic.referral.count">Hits</message>
+	<message key="plugins.generic.referral.dateAdded">Fecha Añadida</message>
+	<message key="plugins.generic.referral.all">Todos</message>
+	<message key="plugins.generic.referral.all.empty">No hay Refbacks actualmente.</message>
+	<message key="plugins.generic.referral.status.new">Nuevo</message>
+	<message key="plugins.generic.referral.status.new.empty">No hay nuevos Refbacks actualmente.</message>
+	<message key="plugins.generic.referral.status.accept">Publicado</message>
+	<message key="plugins.generic.referral.status.accept.empty">No hay Refbacks publicados actualmente.</message>
+	<message key="plugins.generic.referral.status.decline">Ignorado</message>
+	<message key="plugins.generic.referral.status.decline.empty">No hay Refbacks Ignorados actualmente.</message>
+	<message key="plugins.generic.referral.confirmDelete">¿Está seguro de borrar este refback?</message>
+	<message key="plugins.generic.referral.nameRequired">Se requiere un nombre de Refback</message>
+	<message key="plugins.generic.referral.urlRequired">Se requiere una URL de Refback</message>
+</locale>
