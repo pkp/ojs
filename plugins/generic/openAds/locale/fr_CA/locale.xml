@@ -23,7 +23,7 @@
 	<message key="plugins.generic.openads.error.missingParameter">Au moins un des paramètres de configuration OpenAds requis n'a pu être lu à partir du fichier de configuration. Les paramètres requis sont dbhost, dbuser, dbpassword, dbname, url_prefix, et table_prefix.</message>
 	<message key="plugins.generic.openads.error.dbConnectionError">Impossible de se brancher à la base de données OpenAds.</message>
 
-	<message key="plugins.generic.openads.headerAd">Entête publicitaire</message>
+	<message key="plugins.generic.openads.headerAd">En-tête publicitaire</message>
 	<message key="plugins.generic.openads.contentAd">Contenu publicitaire</message>
 	<message key="plugins.generic.openads.sidebarAd">Encadré latéral publicitaire</message>
 

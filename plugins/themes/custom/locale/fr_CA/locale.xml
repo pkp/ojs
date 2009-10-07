@@ -18,7 +18,7 @@
 	<message key="plugins.theme.custom.notWritable">NOTE : le fichier de feuille de style de ce plugiciel, "{$stylesheetFileLocation}", n'est pas disponible en écriture présentement. Ce fichier doit être disponible en écriture avant que le plugiciel puisse être utilisé.</message>
 	<message key="plugins.theme.custom.settings">Paramètres</message>
 	<message key="plugins.theme.custom.pickColour">Choisir une couleur</message>
-	<message key="plugins.theme.custom.header">Entête</message>
+	<message key="plugins.theme.custom.header">En-tête</message>
 	<message key="plugins.theme.custom.link">Lien</message>
 	<message key="plugins.theme.custom.background">Arrière-plan</message>
 	<message key="plugins.theme.custom.foreground">Avant-plan</message>

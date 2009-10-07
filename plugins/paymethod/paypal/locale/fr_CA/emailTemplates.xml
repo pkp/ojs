@@ -13,7 +13,7 @@
 <email_texts locale="fr_CA">
 	<email_text key="PAYPAL_INVESTIGATE_PAYMENT">
 		<subject>Activité inhabituelle de PayPal</subject>
-		<body>L'Open Journal Systems a remarqué une activité inhabituelle concernant le service de paiement PayPal pour la revue {$journalName}. Cette activité pourrait nécessiter une attention particulière ou une intervention manuelle.
+		<body>L'Open Journal Systems a remarqué une activité inhabituelle concernant la prise en charge du paiement PayPal pour la revue {$journalName}. Cette activité pourrait nécessiter une attention particulière ou une intervention manuelle.
                        
 Ce courriel a été généré par le plugiciel PayPal du Open Journal Systems.
 
@@ -24,6 +24,8 @@ Information supplémentaire (si fournie) :
 {$additionalInfo}
 
 Variables serveur :
-{$serverVars}</body>
+{$serverVars}
+</body>
+		<description>Ce modèle de courriel est utilisé pour aviser un contact principal d'une revue qu'une activité inhabituelle ou requérant une intervention manuelle a été remarquée par le plugiciel PayPal.</description>
 	</email_text>
 </email_texts>

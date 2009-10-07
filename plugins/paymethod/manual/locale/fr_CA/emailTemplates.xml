@@ -15,9 +15,10 @@
 		<subject>Avis de paiement manuel</subject>
 		<body>Un paiement manuel doit être traité pour la revue {$journalName} et l'utilisateur {$userFullName} (nom d'utilisateur "{$userName}").
 
-Le produit facturé est "{$itemName}".
+L'élément facturé est "{$itemName}".
 Le coût est de {$itemCost} ({$itemCurrencyCode}).
 
 Ce courriel a été généré par le plugiciel de paiement manuel du Open Journal Systems.</body>
+		<description>Ce modèle de courriel est utilisé pour aviser un directeur de revue que le paiement manuel a été demandé.</description>
 	</email_text>
 </email_texts>

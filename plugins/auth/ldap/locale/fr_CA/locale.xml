@@ -14,8 +14,7 @@
  
 <locale name="fr_CA" full_name="Français (Canada)">
 	<message key="plugins.auth.ldap.displayName">Protocole LDAP</message>
-	<message key="plugins.auth.ldap.description">Ce plugiciel permet l'authentification et la synchronisation de comptes d'utilisateurs au moyen d'
-une source de données LDAP externe.</message>
+	<message key="plugins.auth.ldap.description">Ce plugiciel permet l'authentification et la synchronisation de comptes d'utilisateurs au moyen d'une source de données LDAP externe.</message>
 	
 	<message key="plugins.auth.ldap.settings">Paramètres LDAP</message>
 	<message key="plugins.auth.ldap.settings.hostname">Nom d'hôte du serveur</message>
@@ -31,7 +30,7 @@ une source de données LDAP externe.</message>
 	<message key="plugins.auth.ldap.settings.pwhash">Chiffrement du mot de passe</message>
 	<message key="plugins.auth.ldap.settings.pwhash.description"><![CDATA[Format de hachage pour les mots de passe mémorisés dans le serveur. SSHA est recommandé (requiert PHP >= 4.3.0).]]></message>
 	<message key="plugins.auth.ldap.settings.saslopt">Paramètres SASL (facultatifs)</message>
-	<message key="plugins.auth.ldap.settings.sasl"><![CDATA[Utilisez SASL plutôt qu'une simple authentification (requiert PHP >= 5)]]></message>
+	<message key="plugins.auth.ldap.settings.sasl"><![CDATA[Utiliser SASL plutôt qu'une simple authentification (requiert PHP >= 5)]]></message>
 	<message key="plugins.auth.ldap.settings.saslmech">Mécanisme SASL</message>
 	<message key="plugins.auth.ldap.settings.saslmech.description">Par ex. : "DIGEST-MD5"</message>
 	<message key="plugins.auth.ldap.settings.saslrealm">Domaine</message>

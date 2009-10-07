@@ -21,7 +21,7 @@
 	<message key="plugins.paymethod.paypal.settings.paypalurl.description"><![CDATA[Voici l’adresse URL pour accéder au service Avis de paiement instantané (IPN) PayPal. Pour les tests, utiliser <u>https://www.sandbox.paypal.com/cgi-bin/webscr</u>; pour les systèmes de production, utiliser <u>https://www.paypal.com/cgi-bin/webscr</u>.]]></message>
 	<message key="plugins.paymethod.paypal.settings.selleraccount">Compte du vendeur</message>
 	<message key="plugins.paymethod.paypal.settings.selleraccount.description">Voici le nom d’utilisateur du compte PayPal à utiliser dans le compte du vendeur, généralement une adresse courriel. Veuillez vous assurer d’activer l’Avis de paiement instantané (IPN) apparaissant dans votre profil du compte du vendeur.</message>
-	<message key="plugins.paymethod.paypal.settings.curlNotInstalled">Avertissement : L’outil d’appui CURL pour PHP n’est pas installé. La bibliothèque CURL doit être installée pour que le système de paiement PayPal puisse fonctionner.</message>
+	<message key="plugins.paymethod.paypal.settings.curlNotInstalled">Avertissement : LA prise en charge de CURL pour PHP n’est pas installée. La bibliothèque CURL doit être installée pour que le système de paiement PayPal puisse fonctionner.</message>
 	<message key="plugins.paymethod.paypal.settings">Paramètres PayPal</message>
 
 	<!-- PayPal -->
