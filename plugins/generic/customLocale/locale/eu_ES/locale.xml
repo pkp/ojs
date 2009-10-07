@@ -32,5 +32,7 @@
 	<message key="plugins.generic.customLocale.file.edit">{$filename} edizioa</message>
 	<message key="plugins.generic.customLocale.file.reference">Testu lehenetsia</message>
 	<message key="plugins.generic.customLocale.file.custom">Testu pertsonalizatua</message>
+	<message key="plugins.generic.customLocale.enabled">Hizkuntza-paketea pertsonalizatzeko plugina gaitu da.</message>
+	<message key="plugins.generic.customLocale.disabled">Hizkuntza-paketea pertsonalizatzeko plugina desgaitu da.</message>
 </locale>
 

@@ -18,5 +18,7 @@
 	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Plugin honek WYSIWYG edizioa gaitzen du, OJS testu-areetan <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> editorearekin erabiltzeko . <strong>TinyMCE ez dago instalatuta; instala ezazu {$tinyMcePath} direktorioan.</strong>]]></message>
 
 	<message key="plugins.generic.tinymce.settings">Ezarpenak</message>
+	<message key="plugins.generic.tinymce.enabled">TinyMCE plugina gaitu da.</message>
+	<message key="plugins.generic.tinymce.disabled">TinyMCE plugina desgaitu da.</message>
 </locale>
 

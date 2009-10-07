@@ -43,6 +43,8 @@
 	<message key="plugins.generic.xmlGalley.settings.customXSLRequired">XSL estilo-orri pertsonalizatu bat zehaztu behar da.</message>
 	<message key="plugins.generic.xmlGalley.settings.customXSLInvalid">Kargatu den XSL fitxategia ez da baliozkoa. Begiratu fitxategia egokia den eta saiatu berriro.</message>
 
+	<message key="plugins.generic.xmlGalley.enabled">XML galeraden plugina gaitu da.</message>
+	<message key="plugins.generic.xmlGalley.disabled">XML galeraden plugina desgaitu da.</message>
 </locale>
 
 

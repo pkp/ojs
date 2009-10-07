@@ -28,4 +28,6 @@
 	<message key="plugins.generic.counter.1a.ytdHtml">HTML</message>
 	<message key="plugins.generic.counter.1a.ytdPdf">PDF</message>
 	<message key="plugins.generic.counter.1a.totalForAllJournals">Aldizkari guztien totala</message>
+	<message key="plugins.generic.counter.enabled">COUNTER plugina gaitu da.</message>
+	<message key="plugins.generic.counter.disabled">COUNTER plugina desgaitu da.</message>
 </locale>

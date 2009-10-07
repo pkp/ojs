@@ -29,5 +29,7 @@
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdInstructions">phpMyVisites-en, hautatu Administration->Modify site. Gunearen profil-zenbakia gunearen profil-izenaren ondoan bistaratzen da.</message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdRequired">Sartu gunearen profil-zenbakia.</message>
 
+	<message key="plugins.generic.phpmv.enabled">phpMyVisites plugina gaitu da.</message>
+	<message key="plugins.generic.phpmv.disabled">phpMyVisites plugina desgaitu da.</message>
 </locale>
 

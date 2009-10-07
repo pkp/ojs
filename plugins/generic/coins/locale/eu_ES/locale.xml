@@ -15,5 +15,7 @@
 <locale name="eu_ES" full_name="Euskara">
 	<message key="plugins.generic.coins.displayName">COinS plugina</message>
 	<message key="plugins.generic.coins.description">COinS pluginak OpenURL deskriptore bat gehitzen die artikuluen orrialdeei (laburpena eta HTML) gero aipamen-tresnetarako erauzteko eta horrelakoetarako erabili ahal izateko.</message>
+	<message key="plugins.generic.coins.enabled">COinS plugina gaitu da.</message>
+	<message key="plugins.generic.coins.disabled">COinS plugina desgaitu da.</message>
 </locale>
 
