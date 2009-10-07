@@ -20,13 +20,6 @@
 			<article>
 				<title locale="en_US">Jane Doe's Article Title</title>
 				<abstract locale="en_US">Jane Doe's Article Abstract...</abstract>
-				<date_published>2004-10-05</date_published>
-				<author primary_contact="true">
-					<firstname>Jane</firstname>
-					<lastname>Doe</lastname>
-					<email>JaneDoe@sample.test</email>
-					<biography locale="en_US">Jane Doe's  Bio statement...</biography>
-				</author>
 				<indexing>
 					<discipline locale="en_US">Education; Literature Education</discipline>
 					<subject locale="en_US">Young adult literature; Holocaust</subject>
@@ -36,6 +29,13 @@
 						<sample locale="en_US">Adolescent readers</sample>
 					</coverage>
 				</indexing>
+				<author primary_contact="true">
+					<firstname>Jane</firstname>
+					<lastname>Doe</lastname>
+					<email>JaneDoe@sample.test</email>
+					<biography locale="en_US">Jane Doe's  Bio statement...</biography>
+				</author>
+				<date_published>2004-10-05</date_published>
 				<htmlgalley locale="en_US">
 					<label>HTML</label>
 					<file>
