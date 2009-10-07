@@ -70,4 +70,5 @@
 	<message key="admin.mergeUsers.allUsers">Todos los usuarios asociados</message>
 	<message key="admin.mergeUsers.confirm">¿Confirma que desea combinar la cuenta de usuario "{$oldUsername}" en la cuenta de usuario "{$newUsername}"? La cuenta de usurio "{$oldUsername}" desaparecerá. Esta acción no es reversible.</message>
 	<message key="admin.mergerUsers.noneEnrolled">Ningún usuario asociado</message>
+	<message key="admin.locale.maybeIncomplete">Las traducciones marcadas pueden estar incompletas.</message>
 </locale>

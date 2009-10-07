@@ -653,4 +653,188 @@ contraseña: {$password}
 Muchas gracias por su atención y por su colaboración en {$journalName}</body>
 		<description>Este email se envía a los nuevos revisores para darles la bienvenida al sistema y proporcionarles sus datos de acceso.</description>
 	</email_text>
+	<email_text key="NOTIFICATION">
+		<subject>Nueva notificación desde {$siteTitle}</subject>
+		<body>Tiene una nueva notificación desde {$siteTitle}:
+
+{$notificationContents}
+
+Enlace: {$url}
+
+{$principalContactSignature}</body>
+		<description>El email es enviado a usuarios registrados que han seleccionado recibir notificaciones.</description>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST">
+		<subject>Nueva notificación desde {$siteTitle}</subject>
+		<body>Tiene una nueva notificación desde {$siteTitle}:
+--
+{$notificationContents}
+
+Link: {$url}
+--
+
+Si no desea recibir los correos de notificaciones, vaya a {$unsubscribeLink} e introduzca su dirección de correo y su contraseña en nuestra plataforma.
+
+{$principalContactSignature}</body>
+		<description>Este email es enviado a usuarios sin registrar en las listas de notificaciones.</description>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
+		<subject>Bienvenido a la lista de correo de {$siteTitle} !</subject>
+		<body>Has escogido recibir notificaciones desde {$siteTitle}.
+
+Haga clic en este enlace para confirmar tu petición y añadir tu email a la lista de notificaciones:
+ {$confirmLink}
+
+Si no desea recibir emails de notificaciones, ve a {$unsubscribeLink} e introduzca su dirección de email y su contraseña.
+
+Su contraseña para deshabilitar las notificaciones por email es: {$password}
+
+{$principalContactSignature}</body>
+		<description>Este correo es enviado a usuarios sin registrar los cuales acaban de registrarse en la lista de notificaciones.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INSTL">
+		<subject>Renovación de Suscripción: Institucional</subject>
+		<body>An institutional subscription has been renewed online for {$journalName} with the following details.
+
+Subscription Type:
+{$subscriptionType}
+
+Institution:
+{$institutionName}
+{$institutionMailingAddress}
+
+Domain (if provided):
+{$domain}
+
+IP Ranges (if provided):
+{$ipRanges}
+
+Persona de Contacto:
+{$userDetails}
+
+Información de membresía (si proporcionada):
+{$membership}
+
+Para ver o editar esta suscripción, por favor use la siguiente url:
+
+URL para gestionar la Suscripción: {$subscriptionUrl}</body>
+		<description>Este correo notifica al Gestor de Suscripciones de que una Suscripción Institucional ha sido renovada online. Provee de información resumida de la suscripción y de un enlace deacceso rápido a la suscripción renovada.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INDL">
+		<subject>Renovación de suscrpción: Individual</subject>
+		<body>Una Suscripción Individual ha sido renovada online para {$journalName} con los siguientes detalles.
+
+Tipo de Subscripción:
+{$subscriptionType}
+
+Usuario:
+{$userDetails}
+
+Información de Membresía (si proporcionada):
+{$membership}
+
+Para ver o editar esta suscripción use la siguiente URL:
+
+URL para gestionar la subscripción: {$subscriptionUrl}</body>
+		<description>Este email notifica al Gestor de Suscripciones de que una suscripción Individual se ha renovado online. Provee de información resumida sobre la suscripción y de un enlace de acceso rápido a la suscripción renovada.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_ACCEPT">
+		<subject>Decisión del Editor</subject>
+		<body>{$authorName}:
+
+Hemos tomado una decisión sobre su presentación a {$journalTitle}, "{$articleTitle}".
+
+Nuestra decisión es:
+
+{$editorialContactSignature}</body>
+		<description>Este email del Editor o Editor de Sección  a un Autor notifica de la decisión final sobre su envío.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_RESUBMIT">
+		<subject>Decisión del Editor</subject>
+		<body>{$authorName}:
+
+Hemos tomado una decisión sobre su presentación a {$journalTitle}, "{$articleTitle}".
+
+Nuestra decisión es:
+
+{$editorialContactSignature}</body>
+		<description>Este email del Editor o Editor de Sección a un Autor le notifica de que se ha tomado una decisión definitiva sobre su presentación.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_DECLINE">
+		<subject>Decisión del Editor</subject>
+		<body>{$authorName}:
+
+Hemos tomado una decisión sobre su presentación a {$journalTitle}, "{$articleTitle}".
+
+Nuestra decisión es:
+
+{$editorialContactSignature}</body>
+		<description>Este email del Editor o Editor de Sección a un Autor les notifica sobre una decisión definitiva sobre su presentación.</description>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST_PASSWORD">
+		<subject>Tu lista de correo de notificaciones de {$siteTitle}</subject>
+		<body>Tu nueva contraseña para deshabilitar los emails de notificación es: {$password}
+
+Si deseas dejar de recibir emails de notificación, ve a {$unsubscribeLink} e introduce tu dirección de email y la citada contraseña.
+
+{$principalContactSignature}</body>
+		<description>Este email se envía a usuarios sin registrar cuando indican que han olvidado la contraseña o son incapaces de entrar. Proporciona una URL que pueden seguir para resetear su contraseña.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_REVISIONS">
+		<subject>Decisión del Editor</subject>
+		<body>{$authorName}:
+
+Hemos tomado una decisión sobre su presentación en {$journalTitle}, "{$articleTitle}".
+
+Nuestra decisión es:
+
+{$editorialContactSignature}</body>
+		<description>Este email del Editor o Editor de Sección a un Autor, les notifica de una decisión definitiva sobre su presentación.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
+		<subject>Compra de Suscripción: Individual</subject>
+		<body>An individual subscription has been purchased online for {$journalName} with the following details.
+
+Subscription Type:
+{$subscriptionType}
+
+Usuario:
+{$userDetails}
+
+Información de Membresía (si proporcionada):
+{$membership}
+
+Para ver o editar esta suscripción, use la siguiente URL.
+
+URL de la suscripción: {$subscriptionUrl}</body>
+		<description>Este correo notifica al Gestor de Suscripciones que una suscripción individual ha sido comprada online. Proporciona de un resumen de la información sobre la suscripción y un acceso rápido al enlace de la suscripción comprada.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
+		<subject>Compra de Suscripción: Institucional</subject>
+		<body>Una Suscripción Institucional ha sido comprada online en {$journalName} con los siguientes detalles. Para activar la suscripción, use el enlace proporcionado y pon el status de la suscripción como 'Activo'.
+
+Tipo de Suscripción:
+{$subscriptionType}
+
+Institución:
+{$institutionName}
+{$institutionMailingAddress}
+
+Dominio (si se proporciona):
+{$domain}
+
+Rangos de IP (si se proporcionan):
+{$ipRanges}
+
+Persona de contacto:
+{$userDetails}
+
+Información de Membresía (si proporcionada):
+{$membership}
+
+Para ver o editar esta suscripción, use el siguiente enlace.
+
+Enlace de la suscripción: {$subscriptionUrl}</body>
+		<description>Este correo notifica al Gestor de Suscripciones de que una suscripción institucional ha sido comprada online. Proporciona información resumida sobre la suscripción y un enlace rápido a la suscripción comprada.</description>
+	</email_text>
 </email_texts>

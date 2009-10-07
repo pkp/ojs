@@ -118,4 +118,11 @@
 	<message key="author.article.copyeditedFile">Fichero corregido</message>
 	<message key="author.article.authorRevisedFile">Fichero de autor/a</message>
 	<message key="author.submit.authorSubmitLoginMessage">Es necesaria una cuenta de usuario/a para realizar envíos. Esto permitirá a los/as editores/as asociar el envío a su cuenta y contactar con usted cuando proceda.</message>
+	<message key="author.submissions.queuedReviewRevisions">En Revisión: Se Requieren Revisiones</message>
+	<message key="author.submit.mustEnterWaiverReason">Si usted está solicitando una dispensa, tiene que introducir una razón en el espacio proporcionado.</message>
+	<message key="author.submissions.queuedReviewSubsequent">En Revisión, Ronda {$round}</message>
+	<message key="author.submissions.queuedEditingCopyedit">En Edición: Corrección de estilo requerida</message>
+	<message key="author.submissions.queuedEditingProofread">En edición: Revisión requerida</message>
+	<message key="author.submit.reorder">Reclasificar nombre del autor</message>
+	<message key="author.submit.form.wordCountAlert">Ha excedido el número máximo de palabras para el resúmen.</message>
 </locale>

@@ -153,4 +153,12 @@ El tercer párrafo no está justificado.</pre>]]></message>
 	<message key="default.journalSettings.membershipFeeDescription">El pago de esta tarifa supone la inclusión como miembro de esta asociación por el plazo de un año y le permitirá el acceso al contenido de la revista.</message>
 	<message key="default.journalSettings.donationFeeDescription">Las donaciones a la revista son bienvenidas y se utilizarán para el sostenimiento económico de las actividades propias del proceso de publicación.</message>
 	<message key="default.journalSettings.purchaseArticleFeeDescription">El pago de esta suma le permitirá ver, descargar, e imprimir este artículo</message>
+	<message key="section.default.title">Artículos</message>
+	<message key="default.journalSettings.submissionFee">Envío de Artículos</message>
+	<message key="section.default.abbrev">ART</message>
+	<message key="default.journalSettings.publicationFee">Publicación de Artículos</message>
+	<message key="default.journalSettings.purchaseArticleFee">Compra el Artículo</message>
+	<message key="default.journalSettings.membershipFee">Membresía en Asociación</message>
+	<message key="default.journalSettings.donationFee">Donaciones a la revista</message>
+	<message key="default.journalSettings.fastTrackFee">Fast-Track Review</message>
 </locale>

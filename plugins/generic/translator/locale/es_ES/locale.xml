@@ -73,4 +73,8 @@
 	<message key="plugins.generic.translator.deleteEmail">Borrar este email</message>
 	<message key="plugins.generic.translator.saveBeforeContinuing">Asegúrese de grabar los cambios hechos en esta página antes de continuar, o se perderán. ¿Desea continuar? (los cambios no grabados se perderán).</message>
 	<message key="plugins.generic.translator.localeKey.description">Inserte una clave completa de sitio (locale) para buscar.</message>
+	<message key="plugins.generic.translator.enabled">El plugin Traductor ha sido habilitado.</message>
+	<message key="plugins.generic.translator.disabled">El plugin Traductor ha sido deshabilitado.</message>
+	<message key="plugins.generic.translator.fileNotWriteable">Este fichero de traducciones no es escribible por el servidor. Los cambios no serán guardados.</message>
+	<message key="plugins.generic.translator.filesNotWriteable">Estos ficheros de traducciones no son escribibles por el servidor. Los cambios no serán guardados.</message>
 </locale>

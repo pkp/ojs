@@ -43,5 +43,7 @@
 	<message key="plugins.generic.xmlGalley.settings.customXSLRequired">Debe especificarse una hoja de estilo XSL propia.</message>
 	<message key="plugins.generic.xmlGalley.settings.customXSLInvalid">El fichero XLS enviado no es válido. Por favor, revise el fichero y pruebe otra vez.</message>
 
+	<message key="plugins.generic.xmlGalley.enabled">El plugin XML Gallery ha sido habilitado.</message>
+	<message key="plugins.generic.xmlGalley.disabled">El plugin XML Gallery ha sido deshabilitado.</message>
 </locale>
 

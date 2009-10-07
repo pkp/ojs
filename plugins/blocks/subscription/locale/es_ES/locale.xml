@@ -20,4 +20,6 @@
 	<message key="plugins.block.subscription.providedBy">Acceso provisto por:</message>
 	<message key="plugins.block.subscription.providedByInstitution">Acceso provisto por su institución</message>
 	<message key="plugins.block.subscription.comingFromIP">Desde la dirección IP:</message>
+	<message key="plugins.block.subscription.about">Suscripciones</message>
+	<message key="plugins.block.subscription.loginToVerifySubscription">Entre en la revista para verificar la suscripción</message>
 </locale>
