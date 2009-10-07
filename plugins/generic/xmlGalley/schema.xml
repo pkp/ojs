@@ -16,7 +16,7 @@
 
 	<!--
 	 *
-	 * TABLE article_xml_galleys 
+	 * TABLE article_xml_galleys
 	 *
 	 -->
 	<table name="article_xml_galleys">
@@ -38,6 +38,7 @@
 		</field>
 		<field name="views" type="I4">
 			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
 		</field>
 		<descr>XML-Derived galleys.</descr>
 	</table>
