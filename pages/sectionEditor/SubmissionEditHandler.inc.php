@@ -1298,9 +1298,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$articleDao =& DAORegistry::getDAO('ArticleDAO'); 
 			$article =& $articleDao->getArticle($articleId);
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
-			foreach ($notificationUsers as $user) {
-				$url = Request::url(null, $user['role'], 'submissionEditing', $article->getArticleId(), null, 'layout');
-				Notification::createNotification($user['id'], "notification.type.suppFileModified",
+			foreach ($notificationUsers as $userRole) {
+				$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getArticleId(), null, 'layout');
+				Notification::createNotification($userRole['id'], "notification.type.suppFileModified",
 					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_SUPP_FILE_MODIFIED);
 			}
 			
@@ -1616,9 +1616,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$articleDao =& DAORegistry::getDAO('ArticleDAO'); 
 			$article =& $articleDao->getArticle($articleId);
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
-			foreach ($notificationUsers as $user) {
-				$url = Request::url(null, $user['role'], 'submissionEditing', $article->getArticleId(), null, 'layout');
-				Notification::createNotification($user['id'], "notification.type.galleyModified",
+			foreach ($notificationUsers as $userRole) {
+				$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getArticleId(), null, 'layout');
+				Notification::createNotification($userRole['id'], "notification.type.galleyModified",
 					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_GALLEY_MODIFIED);
 			}
 			

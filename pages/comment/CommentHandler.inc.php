@@ -122,9 +122,9 @@ class CommentHandler extends Handler {
 				$articleDAO =& DAORegistry::getDAO('ArticleDAO');
 				$article =& $articleDAO->getArticle($articleId);
 				$notificationUsers = $article->getAssociatedUserIds();
-				foreach ($notificationUsers as $user) {
+				foreach ($notificationUsers as $userRole) {
 					$url = Request::url(null, null, 'view', array($articleId, $galleyId, $parentId));
-					Notification::createNotification($user['id'], "notification.type.userComment",
+					Notification::createNotification($userRole['id'], "notification.type.userComment",
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_USER_COMMENT);
 				}
 				

@@ -150,9 +150,9 @@ class Action {
 				// Send a notification to associated users
 				import('notification.Notification');
 				$notificationUsers = $article->getAssociatedUserIds();
-				foreach ($notificationUsers as $user) {
-					$url = Request::url(null, $user['role'], 'submission', $article->getArticleId(), null, 'metadata');
-					Notification::createNotification($user['id'], "notification.type.metadataModified",
+				foreach ($notificationUsers as $userRole) {
+					$url = Request::url(null, $userRole['role'], 'submission', $article->getArticleId(), null, 'metadata');
+					Notification::createNotification($userRole['id'], "notification.type.metadataModified",
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_METADATA_MODIFIED);
 				}
 
@@ -265,9 +265,9 @@ class Action {
 				// Send a notification to associated users
 				import('notification.Notification');
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
-				foreach ($notificationUsers as $user) {
-					$url = Request::url(null, $user['role'], 'submissionReview', $article->getArticleId(), null, 'editorDecision');
-					Notification::createNotification($user['id'], "notification.type.submissionComment",
+				foreach ($notificationUsers as $userRole) {
+					$url = Request::url(null, $userRole['role'], 'submissionReview', $article->getArticleId(), null, 'editorDecision');
+					Notification::createNotification($userRole['id'], "notification.type.submissionComment",
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_SUBMISSION_COMMENT);
 				}
 

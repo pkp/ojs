@@ -302,9 +302,9 @@ class CopyeditorAction extends Action {
 				// Send a notification to associated users
 				import('notification.Notification');
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
-				foreach ($notificationUsers as $user) {
-					$url = Request::url(null, $user['role'], 'submissionEditing', $article->getArticleId(), null, 'layout');
-					Notification::createNotification($user['id'], "notification.type.layoutComment",
+				foreach ($notificationUsers as $userRole) {
+					$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getArticleId(), null, 'layout');
+					Notification::createNotification($userRole['id'], "notification.type.layoutComment",
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_LAYOUT_COMMENT);
 				}
 				
@@ -351,9 +351,9 @@ class CopyeditorAction extends Action {
 				// Send a notification to associated users
 				import('notification.Notification');
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
-				foreach ($notificationUsers as $user) {
-					$url = Request::url(null, $user['role'], 'submissionEditing', $article->getArticleId(), null, 'coypedit');
-					Notification::createNotification($user['id'], "notification.type.copyeditComment",
+				foreach ($notificationUsers as $userRole) {
+					$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getArticleId(), null, 'coypedit');
+					Notification::createNotification($userRole['id'], "notification.type.copyeditComment",
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_COPYEDIT_COMMENT);
 				}
 				

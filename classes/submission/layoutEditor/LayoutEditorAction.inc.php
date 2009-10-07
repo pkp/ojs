@@ -258,9 +258,9 @@ class LayoutEditorAction extends Action {
 				// Send a notification to associated users
 				import('notification.Notification');
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
-				foreach ($notificationUsers as $user) {
-					$url = Request::url(null, $user['role'], 'submissionEditing', $article->getArticleId(), null, 'layout');
-					Notification::createNotification($user['id'], "notification.type.layoutComment",
+				foreach ($notificationUsers as $userRole) {
+					$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getArticleId(), null, 'layout');
+					Notification::createNotification($userRole['id'], "notification.type.layoutComment",
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_LAYOUT_COMMENT);
 				}
 				
@@ -307,9 +307,9 @@ class LayoutEditorAction extends Action {
 				// Send a notification to associated users
 				import('notification.Notification');
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
-				foreach ($notificationUsers as $user) {
-					$url = Request::url(null, $user['role'], 'submissionEditing', $article->getArticleId(), null, 'proofread');
-					Notification::createNotification($user['id'], "notification.type.proofreadComment",
+				foreach ($notificationUsers as $userRole) {
+					$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getArticleId(), null, 'proofread');
+					Notification::createNotification($userRole['id'], "notification.type.proofreadComment",
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_PROOFREAD_COMMENT);
 				}
 				

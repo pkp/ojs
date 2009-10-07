@@ -76,8 +76,8 @@ class AnnouncementForm extends PKPAnnouncementForm {
 			unset($user);
 		}
 		$url = Request::url(null, 'announcement', 'view', array(1));
-		foreach ($notificationUsers as $user) {
-			Notification::createNotification($user['id'], "notification.type.newAnnouncement",
+		foreach ($notificationUsers as $userRole) {
+			Notification::createNotification($userRole['id'], "notification.type.newAnnouncement",
 				null, $url, 1, NOTIFICATION_TYPE_NEW_ANNOUNCEMENT);
 		}
 		$notificationDao =& DAORegistry::getDAO('NotificationDAO');

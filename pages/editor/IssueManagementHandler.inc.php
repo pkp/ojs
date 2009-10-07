@@ -599,8 +599,8 @@ class IssueManagementHandler extends EditorHandler {
 			unset($user);
 		}
 		$url = Request::url(null, 'issue', 'current');
-		foreach ($notificationUsers as $user) {
-			Notification::createNotification($user['id'], "notification.type.issuePublished",
+		foreach ($notificationUsers as $userRole) {
+			Notification::createNotification($userRole['id'], "notification.type.issuePublished",
 				null, $url, 1, NOTIFICATION_TYPE_PUBLISHED_ISSUE);
 		}
 		$notificationDao =& DAORegistry::getDAO('NotificationDAO');

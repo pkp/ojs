@@ -361,9 +361,9 @@ class ReviewerAction extends Action {
 				$articleDao =& DAORegistry::getDAO('ArticleDAO'); 
 				$article =& $articleDao->getArticle($articleId);
 				$notificationUsers = $article->getAssociatedUserIds();
-				foreach ($notificationUsers as $user) {
-					$url = Request::url(null, $user['role'], 'submissionReview', $article->getArticleId(), null, 'peerReview');
-					Notification::createNotification($user['id'], "notification.type.reviewerFormComment",
+				foreach ($notificationUsers as $userRole) {
+					$url = Request::url(null, $userRole['role'], 'submissionReview', $article->getArticleId(), null, 'peerReview');
+					Notification::createNotification($userRole['id'], "notification.type.reviewerFormComment",
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_REVIEWER_FORM_COMMENT);
 				}
 				

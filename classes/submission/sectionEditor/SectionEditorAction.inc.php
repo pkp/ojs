@@ -1802,9 +1802,9 @@ class SectionEditorAction extends Action {
 			// Send a notification to associated users
 			import('notification.Notification');
 			$notificationUsers = $article->getAssociatedUserIds();
-			foreach ($notificationUsers as $user) {
-				$url = Request::url(null, $user['role'], 'submissionReview', $article->getArticleId(), null, 'peerReview');
-				Notification::createNotification($user['id'], "notification.type.reviewerComment",
+			foreach ($notificationUsers as $userRole) {
+				$url = Request::url(null, $userRole['role'], 'submissionReview', $article->getArticleId(), null, 'peerReview');
+				Notification::createNotification($userRole['id'], "notification.type.reviewerComment",
 					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_REVIEWER_COMMENT);
 			}
 				
@@ -1852,9 +1852,9 @@ class SectionEditorAction extends Action {
 			// Send a notification to associated users
 			import('notification.Notification');
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
-			foreach ($notificationUsers as $user) {
-				$url = Request::url(null, $user['role'], 'submissionReview', $article->getArticleId(), null, 'editorDecision');
-				Notification::createNotification($user['id'], "notification.type.editorDecisionComment",
+			foreach ($notificationUsers as $userRole) {
+				$url = Request::url(null, $userRole['role'], 'submissionReview', $article->getArticleId(), null, 'editorDecision');
+				Notification::createNotification($userRole['id'], "notification.type.editorDecisionComment",
 					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_EDITOR_DECISION_COMMENT);
 			}
 				
@@ -2102,9 +2102,9 @@ class SectionEditorAction extends Action {
 			// Send a notification to associated users
 			import('notification.Notification');
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
-			foreach ($notificationUsers as $user) {
-				$url = Request::url(null, $user['role'], 'submissionEditing', $article->getArticleId(), null, 'copyedit');
-				Notification::createNotification($user['id'], "notification.type.copyeditComment",
+			foreach ($notificationUsers as $userRole) {
+				$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getArticleId(), null, 'copyedit');
+				Notification::createNotification($userRole['id'], "notification.type.copyeditComment",
 					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_COPYEDIT_COMMENT);
 			}
 
@@ -2152,9 +2152,9 @@ class SectionEditorAction extends Action {
 			// Send a notification to associated users
 			import('notification.Notification');
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
-			foreach ($notificationUsers as $user) {
-				$url = Request::url(null, $user['role'], 'submissionEditing', $article->getArticleId(), null, 'layout');
-				Notification::createNotification($user['id'], "notification.type.layoutComment",
+			foreach ($notificationUsers as $userRole) {
+				$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getArticleId(), null, 'layout');
+				Notification::createNotification($userRole['id'], "notification.type.layoutComment",
 					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_LAYOUT_COMMENT);
 			}
 				
@@ -2202,9 +2202,9 @@ class SectionEditorAction extends Action {
 			// Send a notification to associated users
 			import('notification.Notification');
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
-			foreach ($notificationUsers as $user) {
-				$url = Request::url(null, $user['role'], 'submissionEditing', $article->getArticleId(), null, 'proofread');
-				Notification::createNotification($user['id'], "notification.type.proofreadComment",
+			foreach ($notificationUsers as $userRole) {
+				$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getArticleId(), null, 'proofread');
+				Notification::createNotification($userRole['id'], "notification.type.proofreadComment",
 					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_PROOFREAD_COMMENT);
 			}	
 			
