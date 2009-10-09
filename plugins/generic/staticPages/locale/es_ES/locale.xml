@@ -29,7 +29,7 @@
 
 	<message key="plugins.generic.staticPages.settingInstructions">El formulario a continuación le muestra todas las páginas estáticas que se han creado. Usted puede editar o borrar las páginas usando los enlaces del lado derecho.</message>
 	<message key="plugins.generic.staticPages.editInstructions">Use el formulario a continuación para añadir/editar una página de contenido.</message>
-	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[Se puede acceder a las Páginas en: {$pagesPath}/%PATH%, en donde %PATH% es un valor que usted debe configurar. <strong>Nota:</strong> No pueden haber dos páginas distintas con la misma ruta.]]></message>
+	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[Se puede acceder a las Páginas en: {$pagesPath}, en donde %PATH% es un valor que usted debe configurar. <strong>Nota:</strong> No pueden haber dos páginas distintas con la misma ruta.]]></message>
 	<message key="plugins.generic.staticPages.duplicatePath">Esta ruta ya existe para otra página estática.</message>
 	
 	<message key="plugins.generic.staticPages.pageSaved">Página grabada con Éxito.</message>

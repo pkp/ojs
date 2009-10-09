@@ -40,21 +40,21 @@ class StaticPagesEditForm extends Form {
 		$this->plugin =& $plugin;
 		$this->staticPageId = isset($staticPageId)? (int) $staticPageId: null;
 
-		$this->addCheck(new FormValidatorCustom($this, 'path', 'required', 'plugins.generic.staticPages.duplicatePath', array(&$this, 'checkForDuplicatePath'), array($journalId, $staticPageId)));
+		$this->addCheck(new FormValidatorCustom($this, 'pagePath', 'required', 'plugins.generic.staticPages.duplicatePath', array(&$this, 'checkForDuplicatePath'), array($journalId, $staticPageId)));
 		$this->addCheck(new FormValidatorPost($this));
 
 	}
 
 	/**
 	 * Custom Form Validator for PATH to ensure no duplicate PATHs are created
-	 * @param $path String the PATH being checked
+	 * @param $pagePath String the PATH being checked
 	 * @param $journalId int 
 	 * @param $staticPageId int
 	 */
-	function checkForDuplicatePath($path, $journalId, $staticPageId) {
+	function checkForDuplicatePath($pagePath, $journalId, $staticPageId) {
 		$staticPageDAO =& DAORegistry::getDAO('StaticPagesDAO');
 
-		return !$staticPageDAO->duplicatePathExists($path, $journalId, $staticPageId);		
+		return !$staticPageDAO->duplicatePathExists($pagePath, $journalId, $staticPageId);		
 	}
 
 	/**
@@ -74,7 +74,7 @@ class StaticPagesEditForm extends Form {
 			if ($staticPage != null) {  
 				$this->_data = array(
 					'staticPageId' => $staticPage->getStaticPageId(),
- 					'path' => $staticPage->getPath(),
+ 					'pagePath' => $staticPage->getPath(),
 					'title' => $staticPage->getTitle(null),
 					'content' => $staticPage->getContent(null)
 				);				
@@ -126,7 +126,7 @@ class StaticPagesEditForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('staticPageId', 'path', 'title', 'content'));
+		$this->readUserVars(array('staticPageId', 'pagePath', 'title', 'content'));
 	}
 
 	/**
@@ -147,7 +147,7 @@ class StaticPagesEditForm extends Form {
 		}
 		
 		$staticPage->setJournalId($journalId);
-		$staticPage->setPath($this->getData('path'));
+		$staticPage->setPath($this->getData('pagePath'));
 
 		$staticPage->setTitle($this->getData('title'), null); 		// Localized
 		$staticPage->setContent($this->getData('content'), null); 	// Localized

@@ -134,7 +134,7 @@ class StaticPagesPlugin extends GenericPlugin {
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
-		$templateMgr->assign('pagesPath', Request::url(null, 'pages', 'view'));
+		$templateMgr->assign('pagesPath', Request::url(null, 'pages', 'view', 'REPLACEME'));
 
 		$pageCrumbs = array(
 			array(
@@ -183,7 +183,7 @@ class StaticPagesPlugin extends GenericPlugin {
 				$form->display();
 				$returner = true;
 				break;
-			case 'save': 
+			case 'save':
 				$journal =& Request::getJournal();
 
 				$this->import('StaticPagesEditForm');

@@ -1,5 +1,5 @@
 {**
- * settingsForm.tpl
+ * plugins/generic/staticPages/settingsForm.tpl
  *
  * Copyright (c) 2003-2009 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -12,7 +12,7 @@
 
 {translate key="plugins.generic.staticPages.settingInstructions"}
 <br />
-{translate key="plugins.generic.staticPages.viewInstructions" pagesPath=$pagesPath}
+{translate key="plugins.generic.staticPages.viewInstructions" pagesPath=$pagesPath|replace:"REPLACEME":"%PATH%"}
 
 <br />
 <br />

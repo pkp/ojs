@@ -29,7 +29,7 @@
 
 	<message key="plugins.generic.staticPages.settingInstructions">Das unten stehende Formular zeigt Ihnen alle statischen Seiten, die Sie angelegt haben. Sie können die Seiten mittels der Links auf der rechten Seite bearbeiten oder löschen.</message>
 	<message key="plugins.generic.staticPages.editInstructions">Benutzen Sie das unten stehende Formular, um Seiteninhalte hinzuzufügen/zu bearbeiten.</message>
-	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[Seiten können dann erreicht werden unter: {$pagesPath}/%PATH%, wobei %PATH% ein von Ihnen gewählter Wert ist. <strong>Hinweis:</strong> Keine zwei Seiten können den selben Pfad haben.]]></message>
+	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[Seiten können dann erreicht werden unter: {$pagesPath}, wobei %PATH% ein von Ihnen gewählter Wert ist. <strong>Hinweis:</strong> Keine zwei Seiten können den selben Pfad haben.]]></message>
 	<message key="plugins.generic.staticPages.duplicatePath">Dieser Pfad wird bereits für eine andere statische Seite verwendet.</message>
 	
 	<message key="plugins.generic.staticPages.pageSaved">Seite erfolgreich gespeichert.</message>

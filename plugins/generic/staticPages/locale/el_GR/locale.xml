@@ -29,7 +29,7 @@
 
 	<message key="plugins.generic.staticPages.settingInstructions">Η παρακάτω φόρμα παρουσίαζει όλες τις στατικές σελίδες που έχετε δημιουργήσει. Μπορείτε να επεξεργαστείτε ή διαγράψετε τις σελίδες χρησιμοποιώντας τους συνδέσμους στην δεξιά πλευρά.</message>
 	<message key="plugins.generic.staticPages.editInstructions">Χρησιμοποιήστε την παρακάτω φόρμα για την προσθήκη/επεξεργασία του περιεχομένου μιας στατικής σελίδας.</message>
-	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[Οι σελίδες εμφανίζονται στην διεύθυνση: {$pagesPath}/%PATH%, όπου %PATH% είναι η η τιμή που επιλέγετε. <strong>Σημείωση:</strong> Δύο σελίδες δεν μπορούν να έχουν την ίδια διαδρομή (path).]]></message>
+	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[Οι σελίδες εμφανίζονται στην διεύθυνση: {$pagesPath}, όπου %PATH% είναι η η τιμή που επιλέγετε. <strong>Σημείωση:</strong> Δύο σελίδες δεν μπορούν να έχουν την ίδια διαδρομή (path).]]></message>
 	<message key="plugins.generic.staticPages.duplicatePath">Αυτή η διαδρομή (path) χρησιμοποιείται ήδη από άλλη στατική σελίδα.</message>
 	
 	<message key="plugins.generic.staticPages.pageSaved">Η σελίδα αποθηκεύτηκε με επιτυχία.</message>

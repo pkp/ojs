@@ -1,11 +1,12 @@
 {**
- * settingsForm.tpl
+ * plugins/generic/staticPages/editStaticPageForm.tpl
  *
  * Copyright (c) 2003-2009 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Form for editing a Static Page
  *
+ * $Id$
  *}
 {if $staticPageId}
 	{assign var="pageTitle" value="plugins.generic.staticPages.editStaticPage"} 
@@ -41,8 +42,8 @@
 	</tr>
 {/if}
 	<tr>
-		<td width="20%" class="label">{fieldLabel required="true" name="path" key="plugins.generic.staticPages.path"}</td>
-		<td width="80%" class="value" ><input type="text" name="path" value="{$path|escape}" size="40" id="path" maxlength="50" class="textField" /></td>
+		<td width="20%" class="label">{fieldLabel required="true" name="pagePath" key="plugins.generic.staticPages.path"}</td>
+		<td width="80%" class="value" ><input type="text" name="pagePath" value="{$pagePath|escape}" size="40" id="path" maxlength="50" class="textField" /></td>
 	</tr>
 	<tr>
 		<td width="20%" class="label">{fieldLabel required="true" name="title" key="plugins.generic.staticPages.pageTitle"}</td>

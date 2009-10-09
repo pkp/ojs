@@ -29,7 +29,7 @@
 
 	<message key="plugins.generic.staticPages.settingInstructions">در فرم زیر تمام صفحات استاتیک ایجاد شده را میبینید. با استفاده از لینک های سمت راست میتوانید صفحات را ویرایش یا حذف کنید.</message>
 	<message key="plugins.generic.staticPages.editInstructions">با استفاده از فرم زیر میتوانید محتوای صفحه را اضافه یا ویرایش کنید</message>
-	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[آدرس صفحه ایجاد شده: {$pagesPath}/%PATH%, 
+	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[آدرس صفحه ایجاد شده: {$pagesPath}, 
 که در آن %PATH% مقداری است که شما باید انتخاب کنید.
 <strong>یاداشت:</strong> مسیر صفحات باید با هم فرق کند.]]></message>
 	<message key="plugins.generic.staticPages.duplicatePath">مسیر مشخص شده هم اکنون وجود دارد.</message>

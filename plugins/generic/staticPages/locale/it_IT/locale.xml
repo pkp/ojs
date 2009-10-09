@@ -29,7 +29,7 @@
 
 	<message key="plugins.generic.staticPages.settingInstructions">Qui di seguito l'elenco delle pagine statiche create. Puoi modificare o cancellare le pagine utilizzando i links sulla destra.</message>
 	<message key="plugins.generic.staticPages.editInstructions">Utilizza il form seguente per aggiungere/editare contenuti.</message>
-	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[Le pagine possono essere raggiunte come: {$pagesPath}/%PATH%, dove %PATH% &egrave; il valore scelto. <strong>Nota:</strong> Due pagine non possono avere lo stesso path.]]></message>
+	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[Le pagine possono essere raggiunte come: {$pagesPath}, dove %PATH% &egrave; il valore scelto. <strong>Nota:</strong> Due pagine non possono avere lo stesso path.]]></message>
 	<message key="plugins.generic.staticPages.duplicatePath">Questo path esiste gi&#224; per una diversa pagina statica.</message>
 	
 	<message key="plugins.generic.staticPages.pageSaved">Pagina salvata con successo.</message>

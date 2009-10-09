@@ -29,7 +29,7 @@
 
 	<message key="plugins.generic.staticPages.settingInstructions">Formulář níže ukazuje všechny statické stránky, které jste vytvořil. Tyto stránky můžete editovat nebo smazat použitím odkazů na pravé straně.</message>
 	<message key="plugins.generic.staticPages.editInstructions">Pro přidání/editaci obsahu použijte níže dostupný formulář.</message>
-	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[Stránky pak budou přístupné na: {$pagesPath}/%PATH%, kde %PATH% je hodnota, kterou zvolíte. <strong>Poznámka:</strong> Žádné dvě stránky nemůžou mít stejnou cestu.]]></message>
+	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[Stránky pak budou přístupné na: {$pagesPath}, kde %PATH% je hodnota, kterou zvolíte. <strong>Poznámka:</strong> Žádné dvě stránky nemůžou mít stejnou cestu.]]></message>
 	<message key="plugins.generic.staticPages.duplicatePath">Tato cesta již existuje pro jinou statickou stránku.</message>
 	
 	<message key="plugins.generic.staticPages.pageSaved">Stránka úspěšně uložena.</message>

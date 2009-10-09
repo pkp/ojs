@@ -29,7 +29,7 @@
 
 	<message key="plugins.generic.staticPages.settingInstructions">The form below shows you all the static pages you have created.  You can edit or delete the pages using the links on the right-hand side.</message>
 	<message key="plugins.generic.staticPages.editInstructions">Use the form below to add/edit page content.</message>
-	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[Pages can then be accessed at: {$pagesPath}/%PATH%, where %PATH% is a value you choose. <strong>Note:</strong> No two pages can have the same path.]]></message>
+	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[Pages can then be accessed at: {$pagesPath}, where %PATH% is a value you choose. <strong>Note:</strong> No two pages can have the same path.]]></message>
 	<message key="plugins.generic.staticPages.duplicatePath">This path already exists for another static page.</message>
 	
 	<message key="plugins.generic.staticPages.pageSaved">Page successfully saved.</message>
