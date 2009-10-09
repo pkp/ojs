@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * @file index.php
@@ -12,8 +12,8 @@
  *
  */
 
-require_once('StaticPagesPlugin.inc.php'); 
+require_once('StaticPagesPlugin.inc.php');
 
-return new StaticPagesPlugin(); 
+return new StaticPagesPlugin();
 
-?> 
+?>

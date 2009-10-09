@@ -10,7 +10,7 @@
  * @class StaticPagesSettingsForm
  *
  * Form for journal managers to modify Static Page content and title
- * 
+ *
  */
 
 import('form.Form');
@@ -49,9 +49,9 @@ class StaticPagesSettingsForm extends Form {
 
 		$staticPagesDAO =& DAORegistry::getDAO('StaticPagesDAO');
 
-		$rangeInfo =& Handler::getRangeInfo('staticPages');		
+		$rangeInfo =& Handler::getRangeInfo('staticPages');
 		$staticPages = $staticPagesDAO->getStaticPagesByJournalId($journalId);
-		$this->setData('staticPages', $staticPages);	
+		$this->setData('staticPages', $staticPages);
 	}
 
 	/**
@@ -66,7 +66,7 @@ class StaticPagesSettingsForm extends Form {
 	 */
 	function execute() {
 		$plugin =& $this->plugin;
-		$journalId = $this->journalId;		
+		$journalId = $this->journalId;
 	}
 
 }

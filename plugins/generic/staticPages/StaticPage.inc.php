@@ -8,7 +8,7 @@
  *
  * @package plugins.generic.staticPages
  * @class StaticPage
- * 
+ *
  */
 
 class StaticPage extends DataObject {
@@ -17,13 +17,13 @@ class StaticPage extends DataObject {
 	//
 
 	/**
-	 * Get journal id 
+	 * Get journal id
 	 * @return string
 	 */
 	function getJournalId(){
 		return $this->getData('journalId');
 	}
-	
+
 	/**
 	 * Set journal Id
 	 * @param $journalId int
@@ -31,19 +31,19 @@ class StaticPage extends DataObject {
 	function setJournalId($journalId) {
 		return $this->setData('journalId', $journalId);
 	}
-	
+
 
 	/**
-	 * Set page title 
+	 * Set page title
 	 * @param string string
 	 * @param locale
 	 */
 	function setTitle($title, $locale) {
 		return $this->setData('title', $title, $locale);
-	}	
-		
+	}
+
 	/**
-	 * Get page title 
+	 * Get page title
 	 * @param locale
 	 * @return string
 	 */
@@ -52,13 +52,13 @@ class StaticPage extends DataObject {
 	}
 
 	/**
-	 * Get Localized page title 
+	 * Get Localized page title
 	 * @return string
 	 */
 	function getStaticPageTitle() {
 		return $this->getLocalizedData('title');
-	}	
-		
+	}
+
 	/**
 	 * Set page content
 	 * @param $content string
@@ -67,7 +67,7 @@ class StaticPage extends DataObject {
 	function setContent($content, $locale) {
 		return $this->setData('content', $content, $locale);
 	}
-	
+
 	/**
 	 * Get content
 	 * @param locale
@@ -76,15 +76,15 @@ class StaticPage extends DataObject {
 	function getContent($locale) {
 		return $this->getData('content', $locale);
 	}
-	
+
 	/**
 	 * Get "localized" content
 	 * @return string
 	 */
 	function getStaticPageContent() {
 		return $this->getLocalizedData('content');
-	}	
-	
+	}
+
 	/**
 	 * Get page path string
 	 * @return string
@@ -92,7 +92,7 @@ class StaticPage extends DataObject {
 	function getPath() {
 		return $this->getData('path');
 	}
-	 
+
 	 /**
 	  * Set page path string
 	  * @param $path string
@@ -100,7 +100,7 @@ class StaticPage extends DataObject {
 	function setPath($path) {
 		return $this->setData('path', $path);
 	}
-	
+
 	/**
 	 * Get ID of page.
 	 * @return int
@@ -108,7 +108,7 @@ class StaticPage extends DataObject {
 	function getStaticPageId() {
 		return $this->getData('staticPageId');
 	}
-	
+
 	/**
 	 * Set ID of page.
 	 * @param $staticPageId int

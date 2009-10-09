@@ -10,7 +10,7 @@
  * @class StaticPagesSettingsForm
  *
  * Form for journal managers to view and modify static pages
- * 
+ *
  */
 
 import('form.Form');
@@ -21,7 +21,7 @@ class StaticPagesEditForm extends Form {
 
 	/** @var $plugin object */
 	var $plugin;
-	
+
 	/** @var $staticPageId **/
 	var $staticPageId;
 
@@ -48,13 +48,13 @@ class StaticPagesEditForm extends Form {
 	/**
 	 * Custom Form Validator for PATH to ensure no duplicate PATHs are created
 	 * @param $pagePath String the PATH being checked
-	 * @param $journalId int 
+	 * @param $journalId int
 	 * @param $staticPageId int
 	 */
 	function checkForDuplicatePath($pagePath, $journalId, $staticPageId) {
 		$staticPageDAO =& DAORegistry::getDAO('StaticPagesDAO');
 
-		return !$staticPageDAO->duplicatePathExists($pagePath, $journalId, $staticPageId);		
+		return !$staticPageDAO->duplicatePathExists($pagePath, $journalId, $staticPageId);
 	}
 
 	/**
@@ -64,20 +64,20 @@ class StaticPagesEditForm extends Form {
 		$journalId = $this->journalId;
 		$plugin =& $this->plugin;
 
-		// add the tiny MCE script 
+		// add the tiny MCE script
 		$this->addTinyMCE();
 
 		if (isset($this->staticPageId)) {
 			$staticPageDAO =& DAORegistry::getDAO('StaticPagesDAO');
 			$staticPage =& $staticPageDAO->getStaticPage($this->staticPageId);
 
-			if ($staticPage != null) {  
+			if ($staticPage != null) {
 				$this->_data = array(
 					'staticPageId' => $staticPage->getStaticPageId(),
  					'pagePath' => $staticPage->getPath(),
 					'title' => $staticPage->getTitle(null),
 					'content' => $staticPage->getContent(null)
-				);				
+				);
 			} else {
 				$this->staticPageId = null;
 			}
@@ -109,8 +109,8 @@ class StaticPagesEditForm extends Form {
 			theme_advanced_toolbar_location : "top",
 			theme_advanced_toolbar_align : "left",
 			theme_advanced_statusbar_location : "bottom",
-			relative_urls : false, 		
-			document_base_url : "'. Request::getBaseUrl() .'/'.$publicFileManager->getJournalFilesPath($journalId) .'/", 
+			relative_urls : false,
+			document_base_url : "'. Request::getBaseUrl() .'/'.$publicFileManager->getJournalFilesPath($journalId) .'/",
 			theme : "advanced",
 			theme_advanced_layout_manager : "SimpleLayout",
 			extended_valid_elements : "span[*], div[*]",
@@ -131,12 +131,12 @@ class StaticPagesEditForm extends Form {
 
 	/**
 	 * Save page into DB
-	 */	 
+	 */
 	function save() {
 		$plugin =& $this->plugin;
 		$journalId = $this->journalId;
 
-		$plugin->import('StaticPage');	
+		$plugin->import('StaticPage');
 		$staticPagesDAO =& DAORegistry::getDAO('StaticPagesDAO');
 		if (isset($this->staticPageId)) {
 			$staticPage =& $staticPagesDAO->getStaticPage($this->staticPageId);
@@ -145,13 +145,13 @@ class StaticPagesEditForm extends Form {
 		if (!isset($staticPage)) {
 			$staticPage = new StaticPage();
 		}
-		
+
 		$staticPage->setJournalId($journalId);
 		$staticPage->setPath($this->getData('pagePath'));
 
 		$staticPage->setTitle($this->getData('title'), null); 		// Localized
 		$staticPage->setContent($this->getData('content'), null); 	// Localized
-		
+
 		if (isset($this->staticPageId)) {
 			$staticPagesDAO->updateStaticPage($staticPage);
 		} else {
@@ -161,7 +161,7 @@ class StaticPagesEditForm extends Form {
 
 	function display() {
 		$templateMgr =& TemplateManager::getManager();
-		
+
 		parent::display();
 	}
 

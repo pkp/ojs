@@ -19,10 +19,10 @@ class StaticPagesHandler extends Handler {
 	function index( $args ) {
 		Request::redirect(null, null, 'view', Request::getRequestedOp());
 	}
-	
+
 	function view ($args) {
 		if (count($args) > 0 ) {
-			Locale::requireComponents(array(LOCALE_COMPONENT_PKP_COMMON, LOCALE_COMPONENT_APPLICATION_COMMON));			
+			Locale::requireComponents(array(LOCALE_COMPONENT_PKP_COMMON, LOCALE_COMPONENT_APPLICATION_COMMON));
 			$journal =& Request::getJournal();
 			$journalId = $journal->getJournalId();
 			$path = $args[0];
@@ -36,7 +36,7 @@ class StaticPagesHandler extends Handler {
 			if ( !$staticPage ) {
 				Request::redirect(null, 'index');
 			}
-			
+
 			// and assign the template vars needed
 			$templateMgr->assign('title', $staticPage->getStaticPageTitle());
 			$templateMgr->assign('content',  $staticPage->getStaticPageContent());

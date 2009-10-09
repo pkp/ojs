@@ -9,7 +9,7 @@
  * $Id$
  *}
 {if $staticPageId}
-	{assign var="pageTitle" value="plugins.generic.staticPages.editStaticPage"} 
+	{assign var="pageTitle" value="plugins.generic.staticPages.editStaticPage"}
 {else}
 	{assign var="pageTitle" value="plugins.generic.staticPages.addStaticPage"}
 {/if}
@@ -47,7 +47,7 @@
 	</tr>
 	<tr>
 		<td width="20%" class="label">{fieldLabel required="true" name="title" key="plugins.generic.staticPages.pageTitle"}</td>
-		<td width="80%" class="value" ><input type="text" name="title[{$formLocale|escape}]" value="{$title[$formLocale]|escape}" size="40" id="title" maxlength="50" class="textField" /></td>	
+		<td width="80%" class="value" ><input type="text" name="title[{$formLocale|escape}]" value="{$title[$formLocale]|escape}" size="40" id="title" maxlength="50" class="textField" /></td>
 	</tr>
 	<tr>
 		<td width="20%" class="label" valign="top">{fieldLabel required="true" name="content" key="plugins.generic.staticPages.content"}</td>
