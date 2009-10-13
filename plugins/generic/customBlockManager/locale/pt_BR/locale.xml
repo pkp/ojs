@@ -28,4 +28,5 @@
 	<message key="plugins.generic.customBlock.editContent">Editar o conteúdo da barra lateral</message>
 	<message key="plugins.generic.customBlock.contentRequired">Algum conteúdo é obrigatório. Caso deseje excluir este bloco, acesse o Gerente de Blocos Personalizados ou desabilitando o bloco no Passo 5 de configuração da revista.</message>
 	<message key="plugins.generic.customBlock.edit">Editar</message>
+	<message key="plugins.generic.customBlockManager.description">Este plugin oferece controle aos blocos personalizados das barras laterais. Você pode editar os blocos nas configurações de cada plugin que você criar aqui.</message>
 </locale>
