@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE version SYSTEM "../../../lib/pkp/dtd/pluginVersion.dtd">
+
+<!--
+  * version.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Plugin version information.
+  *
+  * $Id$
+  -->
+<version>
+	<application>externalFeed</application>
+	<type>plugins.generic</type>
+	<release>1.0.0.0</release>
+	<date>2009-10-01</date>
+</version>
