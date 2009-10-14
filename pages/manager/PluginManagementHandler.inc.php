@@ -183,7 +183,8 @@ class PluginManagementHandler extends ManagerHandler {
 		
 		$pluginVersion = $versionInfo['version'];
 		$pluginName = $pluginVersion->getProduct();
-		$category = $this->getPluginCategory($plugin);
+		$pluginType = explode(".", $versionInfo['type']);
+		$category = $pluginType[1];
  
 		$versionDao =& DAORegistry::getDAO('VersionDAO'); 
 		$installedPlugin = $versionDao->getCurrentVersion($pluginName, false, true);
