@@ -85,7 +85,7 @@
 	<tr valign="top">
 		<td>
 			{assign var=emailString value="`$subscription->getUserFullName()` <`$subscription->getUserEmail()`>"}
-			{url|assign:"redirectUrl" page="subscriptions" op="institutional" escape=false}
+			{url|assign:"redirectUrl" op="subscriptions" path="institutional" escape=false}
 			{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$redirectUrl}
 			{$subscription->getInstitutionName()|escape}&nbsp;{icon name="mail" url=$url}
 		</td>
