@@ -501,6 +501,7 @@ class ArticleHandler extends Handler {
 			$this->journal =& $journal;
 			$this->issue =& $issue;
 			$this->article =& $publishedArticle?$publishedArticle:$article;
+			return true;
 		}
 
 		// Make sure the reader has rights to view the article/issue.
