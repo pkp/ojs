@@ -25,6 +25,8 @@ class NativeExportDom {
 		XMLCustomWriter::setAttribute($root, 'current', $issue->getCurrent()?'true':'false');
 		XMLCustomWriter::setAttribute($root, 'public_id', $issue->getPublicIssueId(), false);
 
+		XMLCustomWriter::createChildWithText($doc, $root, 'id', $issue->getIssueId());
+
 		if (is_array($issue->getTitle(null))) foreach ($issue->getTitle(null) as $locale => $title) {
 			$titleNode =& XMLCustomWriter::createChildWithText($doc, $root, 'title', $title, false);
 			if ($titleNode) XMLCustomWriter::setAttribute($titleNode, 'locale', $locale);

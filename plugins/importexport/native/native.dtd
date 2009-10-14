@@ -19,6 +19,9 @@
   *
   * Conventions:
   *  - Dates should be specified as YYYY-MM-DD
+  *
+  * Notes:
+  *  - article and issue id's are exported, but will be ignored on import
   -->
 
 <!-- Top-level collection containers for batch importing -->
@@ -38,6 +41,8 @@
 		mime_type CDATA #REQUIRED>
 
 <!ENTITY % externalformat "href | embed">
+
+<!ELEMENT id (#PCDATA)>
 
 <!ELEMENT title (#PCDATA)>
 	<!ATTLIST title
@@ -64,7 +69,7 @@
 <!ELEMENT image (%externalformat;)>
 
 <!-- Issue-related elements -->
-<!ELEMENT issue (title*, description*, volume?, number?, year?, cover*, date_published?, (access_date | open_access)?, section+)>
+<!ELEMENT issue (id?, title*, description*, volume?, number?, year?, cover*, date_published?, (access_date | open_access)?, section+)>
 	<!ATTLIST issue
 		identification (title|num_vol_year|vol_year|year) "title"
 		published (true|false) "false"
@@ -106,7 +111,7 @@
   *  - Locale attribute value must correspond to the journal's
   *    additional locales, if enabled, otherwise an error will be displayed.
   -->
-<!ELEMENT article (title+, abstract*, indexing?, sponsor*, author*, pages?, date_published, open_access?, (galley?, htmlgalley?)+, supplemental_file*)>
+<!ELEMENT article (id?, title+, abstract*, indexing?, sponsor*, author*, pages?, date_published, open_access?, (galley?, htmlgalley?)+, supplemental_file*)>
 	<!ATTLIST article
 		public_id CDATA #IMPLIED
 		language CDATA "en">
