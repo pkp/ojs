@@ -1892,11 +1892,12 @@ class SectionEditorAction extends Action {
 
 		$decisions = $sectionEditorSubmission->getDecisions();
 		$decisions = array_pop($decisions); // Rounds
-		$decision = (int) array_pop($decisions);
+		$decision = array_pop($decisions);
+		$decisionConst = $decision?$decision['decision']:null;
 
 		$email = new ArticleMailTemplate(
 			$sectionEditorSubmission,
-			isset($decisionTemplateMap[$decision])?$decisionTemplateMap[$decision]:null
+			isset($decisionTemplateMap[$decisionConst])?$decisionTemplateMap[$decisionConst]:null
 		);
 
 		$copyeditor = $sectionEditorSubmission->getUserBySignoffType('SIGNOFF_COPYEDITING_INITIAL');
@@ -1905,7 +1906,7 @@ class SectionEditorAction extends Action {
 			HookRegistry::call('SectionEditorAction::emailEditorDecisionComment', array(&$sectionEditorSubmission, &$send));
 			$email->send();
 
-			if ($decision && $decision['decision'] == SUBMISSION_EDITOR_DECISION_DECLINE) {
+			if ($decisionConst == SUBMISSION_EDITOR_DECISION_DECLINE) {
 				// If the most recent decision was a decline,
 				// sending this email archives the submission.
 				$sectionEditorSubmission->setStatus(STATUS_ARCHIVED);
