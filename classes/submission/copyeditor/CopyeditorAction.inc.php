@@ -379,7 +379,7 @@ class CopyeditorAction extends Action {
 	 * @param $fileId int
 	 * @param $revision int
 	 */
-	function downloadCopyeditorFile($submission, $fileId, $revision = null) {
+	function downloadCopyeditorFile($copyeditorSubmission, $fileId, $revision = null) {
 		$copyeditorSubmissionDao =& DAORegistry::getDAO('CopyeditorSubmissionDAO');		
 
 		$canDownload = false;
@@ -390,23 +390,24 @@ class CopyeditorAction extends Action {
 		// 3) The author copyedit revision, after the author copyedit has been completed
 		// 4) The final copyedit revision
 		// 5) Layout galleys
-		if ($submission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL', true) == $fileId) {
+		if ($copyeditorSubmission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL', true) == $fileId) {
 			$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');		
+			$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 			$currentRevision =& $articleFileDao->getRevisionNumber($fileId);
 
 			if ($revision == null) {
 				$revision = $currentRevision;
 			}
 				
-			$initialSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $authorSubmission->getArticleId());
-			$authorSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $authorSubmission->getArticleId());
-			$finalSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $authorSubmission->getArticleId());
+			$initialSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $copyeditorSubmission->getArticleId());
+			$authorSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $copyeditorSubmission->getArticleId());
+			$finalSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $copyeditorSubmission->getArticleId());
 				
 			if ($revision == 1) {
 				$canDownload = true;
 			} else if ($initialSignoff->getFileRevision() == $revision) {
 				$canDownload = true;
-			} else if ($authorSignoff->getFileRevision() == $revision && $submission->getDateAuthorCompleted() != null) {
+			} else if ($authorSignoff->getFileRevision() == $revision && $copyeditorSubmission->getDateAuthorCompleted() != null) {
 				$canDownload = true;
 			} else if ($finalSignoff->getFileRevision() == $revision) {
 				$canDownload = true;
@@ -414,13 +415,13 @@ class CopyeditorAction extends Action {
 		}
 		else {
 			// Check galley files
-			foreach ($submission->getGalleys() as $galleyFile) {
+			foreach ($copyeditorSubmission->getGalleys() as $galleyFile) {
 				if ($galleyFile->getFileId() == $fileId) {
 					$canDownload = true;
 				}
 			}
 			// Check supp files
-			foreach ($submission->getSuppFiles() as $suppFile) {
+			foreach ($copyeditorSubmission->getSuppFiles() as $suppFile) {
 				if ($suppFile->getFileId() == $fileId) {
 					$canDownload = true;
 				}
@@ -428,9 +429,9 @@ class CopyeditorAction extends Action {
 		}
 
 		$result = false;
-		if (!HookRegistry::call('CopyeditorAction::downloadCopyeditorFile', array(&$submission, &$fileId, &$revision, &$result))) {
+		if (!HookRegistry::call('CopyeditorAction::downloadCopyeditorFile', array(&$copyeditorSubmission, &$fileId, &$revision, &$result))) {
 			if ($canDownload) {
-				return Action::downloadFile($submission->getArticleId(), $fileId, $revision);
+				return Action::downloadFile($copyeditorSubmission->getArticleId(), $fileId, $revision);
 			} else {
 				return false;
 			}
