@@ -301,6 +301,7 @@ class PublishedArticleDAO extends DAO {
 		$publishedArticle->setPubId($row['pub_id']);
 		$publishedArticle->setArticleId($row['article_id']);
 		$publishedArticle->setIssueId($row['issue_id']);
+		$publishedArticle->setPublicArticleId($row['public_article_id']);
 		$publishedArticle->setDatePublished($this->datetimeFromDB($row['date_published']));
 		$publishedArticle->setSeq($row['seq']);
 		$publishedArticle->setViews($row['views']);
