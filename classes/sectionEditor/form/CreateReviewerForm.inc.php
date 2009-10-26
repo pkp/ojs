@@ -68,6 +68,8 @@ class CreateReviewerForm extends Form {
 
 		$site =& Request::getSite();
 		$templateMgr->assign('availableLocales', $site->getSupportedLocaleNames());
+		$userDao =& DAORegistry::getDAO('UserDAO');
+		$templateMgr->assign('genderOptions', $userDao->getGenderOptions());
 
 		$countryDao =& DAORegistry::getDAO('CountryDAO');
 		$countries =& $countryDao->getCountries();
