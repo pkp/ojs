@@ -101,7 +101,7 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 				// if we have a journal selected, append feed meta-links into the header
 				$additionalHeadData = $templateManager->get_template_vars('additionalHeadData');
 
-				$feedUrl1 = '<link rel="alternate" type="application/atom+xml" href="'.$currentJournal->getUrl().'/gateway/plugin/AnnouncementFeedGatewayPlugin/atom" />';
+				$feedUrl1 = '<link rel="alternate" type="application/atom+xml" href="' . Request::url(null, 'gateway', 'plugin', array('AnnouncementFeedGatewayPlugin', 'atom')) . '" />';
 				$feedUrl2 = '<link rel="alternate" type="application/rdf+xml" href="'.$currentJournal->getUrl().'/gateway/plugin/AnnouncementFeedGatewayPlugin/rss" />';
 				$feedUrl3 = '<link rel="alternate" type="application/rss+xml" href="'.$currentJournal->getUrl().'/gateway/plugin/AnnouncementFeedGatewayPlugin/rss2" />';
 
@@ -158,6 +158,7 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 					$form->readInputData();
 					if ($form->validate()) {
 						$form->execute();
+						$returner = false;
 					} else {
 						$form->display();
 					}

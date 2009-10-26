@@ -124,9 +124,9 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 		if ($limitRecentItems && $recentItems > 0) {
 			import('db.DBResultRange');
 			$rangeInfo = new DBResultRange($recentItems, 1);
-			$announcements =& $announcementDao->getAnnouncementsNotExpiredByJournalId($journalId, $rangeInfo);
+			$announcements =& $announcementDao->getAnnouncementsNotExpiredByAssocId(ASSOC_TYPE_JOURNAL, $journalId, $rangeInfo);
 		} else {
-			$announcements =& $announcementDao->getAnnouncementsNotExpiredByJournalId($journalId);
+			$announcements =& $announcementDao->getAnnouncementsNotExpiredByAssocId(ASSOC_TYPE_JOURNAL, $journalId);
 		}
 
 		// Get date of most recent announcement
@@ -139,7 +139,7 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 				$dateUpdated = $lastDateUpdated;
 			}
 		} else {
-			$mostRecentAnnouncement =& $announcementDao->getMostRecentAnnouncementByJournalId($journalId);
+			$mostRecentAnnouncement =& $announcementDao->getMostRecentAnnouncementByAssocId(ASSOC_TYPE_JOURNAL, $journalId);
 			$dateUpdated = $mostRecentAnnouncement->getDatetimePosted();
 			if (empty($lastDateUpdated) || (strtotime($dateUpdated) > strtotime($lastDateUpdated))) { 
 				$announcementFeedPlugin->updateSetting($journal->getJournalId(), 'dateUpdated', $dateUpdated, 'string');			
