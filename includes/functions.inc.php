@@ -20,8 +20,10 @@
  * Simply includes the associated PHP file (using require_once so multiple calls to include the same file have no effect).
  * @param $class string the complete name of the class to be imported (e.g. "core.Core")
  */
-function import($class) {
-	require_once(str_replace('.', '/', $class) . '.inc.php');
+if (!function_exists('import')) {
+	function import($class) {
+		require_once(str_replace('.', '/', $class) . '.inc.php');
+	}
 }
 
 /**
@@ -145,6 +147,13 @@ function fatalError($reason) {
 	}
 
 	error_log("OJS: $reason");
+
+	if (defined('DONT_DIE_ON_ERROR') && DONT_DIE_ON_ERROR == true) {
+		// trigger an error to be catched outside the application
+		trigger_error($reason);
+		return;
+	}
+
 	die();
 }
 
