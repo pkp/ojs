@@ -15,9 +15,8 @@
 
 {if $isSiteAdmin}
 	{assign var="hasRole" value=1}
-	<h4><a href="{url page="user"}">{$siteTitle|escape}</a></h4>
-		&#187; <a href="{url journal="index" page=$isSiteAdmin->getRolePath()}">{translate key=$isSiteAdmin->getRoleName()}</a>
-		{call_hook name="Templates::User::Index::Site"}
+	&#187; <a href="{url journal="index" page=$isSiteAdmin->getRolePath()}">{translate key=$isSiteAdmin->getRoleName()}</a>
+	{call_hook name="Templates::User::Index::Site"}
 {/if}
 
 <div id="myJournals">
