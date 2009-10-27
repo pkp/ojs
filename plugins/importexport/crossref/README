@@ -1,8 +1,8 @@
 ================================
 === OJS CrossRef Export Plugin
-=== Version: 1.0
+=== Version: 1.1
 === Release date: June 8, 2006
-=== Author: Juan Pablo Alperin < juan@geeky.net >
+=== Author: Juan Pablo Alperin <juan@geeky.net>
 ================================
 
 About
@@ -18,7 +18,7 @@ complete terms of this license.
 
 System Requirements
 -------------------
-Same requirements as the OJS 2.1.x core.
+Same requirements as the OJS 2.x core.
 
 Installation
 ------------
@@ -48,4 +48,5 @@ Email: <juan@geeky.net>
 
 Version History
 ---------------
-1.0    - initial release
+1.0	- Initial Release
+1.1	- Updated to support CrossRef 4.3.0 schema (by Alec Smecher)

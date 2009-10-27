@@ -26,5 +26,4 @@
 	{translate key="manager.setup.doiPrefixDescription"}
 {/if}
 
-
 {include file="common/footer.tpl"}

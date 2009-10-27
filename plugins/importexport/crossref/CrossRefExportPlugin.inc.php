@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file CrossRefExportPlugin.inc.php
+ * @file plugins/importexport/crossref/CrossRefExportPlugin.inc.php
  *
  * Copyright (c) 2003-2009 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.

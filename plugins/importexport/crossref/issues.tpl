@@ -77,4 +77,5 @@ function toggleChecked() {
 <p><input type="submit" value="{translate key="common.export"}" class="button defaultButton"/>&nbsp;<input type="button" value="{translate key="common.selectAll"}" class="button" onclick="toggleChecked()" /></p>
 </form>
 </div>
+
 {include file="common/footer.tpl"}
