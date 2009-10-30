@@ -92,12 +92,12 @@
 	<!-- Create signoffs table before migration occurs -->
 	<schema file="lib/pkp/xml/schema/signoff.xml" />
 	
-	<upgrade minversion="2.0.0.0" maxversion="2.2.3.0">
+	<upgrade minversion="2.0.0.0" maxversion="2.2.9.0">
 		<!-- 2.x to 2.3 -->
 		<data file="dbscripts/xml/upgrade/2.3.0_preupdate.xml" />
 	</upgrade>
 	
-	<upgrade minversion="2.2.0.0" maxversion="2.2.3.0">
+	<upgrade minversion="2.2.0.0" maxversion="2.2.9.0">
 		<!-- 2.2.x to 2.3 -->
 		<data file="dbscripts/xml/upgrade/2.3.0_subscription_ip.xml" />
 	</upgrade>
@@ -161,18 +161,14 @@
 		<note file="docs/release-notes/README-2.2.3" />
 	</upgrade>
 
-	<upgrade minversion="2.0.0.0" maxversion="2.2.3.0">
+	<upgrade minversion="2.0.0.0" maxversion="2.2.9.0">
 		<code function="separateSubscriptions" />
 		<data file="dbscripts/xml/upgrade/2.3.0_update.xml" />
+		<data file="dbscripts/xml/upgrade/2.3.0_subscription_ip2.xml" />
 		<code function="localizeMoreJournalSettings" />
 		<code function="cleanImageAlts" />
 		<code function="cleanTitles" />
 		<code function="addPluginVersions" />
 		<note file="docs/release-notes/README-2.3.0" />
-	</upgrade>
-	
-	<upgrade minversion="2.2.0.0" maxversion="2.2.3.0">
-		<!-- 2.2.x to 2.3 -->
-		<data file="dbscripts/xml/upgrade/2.3.0_subscription_ip2.xml" />
 	</upgrade>
 </install>
