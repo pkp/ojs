@@ -491,7 +491,7 @@ class AuthorAction extends Action {
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
 
-		$submission =& $authorSubmissionDao->getAuthorSubmission($article->getArticleId());
+		$authorSubmission =& $authorSubmissionDao->getAuthorSubmission($article->getArticleId());
 		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $authorSubmission->getArticleId());
 
 		$canDownload = false;
@@ -508,9 +508,9 @@ class AuthorAction extends Action {
 		// 8) All review versions of the file
 		// 9) Current editor versions of the file
 		// THIS LIST SHOULD NOW BE COMPLETE.
-		if ($submission->getSubmissionFileId() == $fileId) {
+		if ($authorSubmission->getSubmissionFileId() == $fileId) {
 			$canDownload = true;
-		} else if ($submission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL', true) == $fileId) {
+		} else if ($authorSubmission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL', true) == $fileId) {
 			if ($revision != null) {
 				$initialSignoff = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $authorSubmission->getArticleId());
 				$authorSignoff = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $authorSubmission->getArticleId());
@@ -522,13 +522,13 @@ class AuthorAction extends Action {
 			} else {
 				$canDownload = false;
 			}
-		} else if ($submission->getRevisedFileId() == $fileId) {
+		} else if ($authorSubmission->getRevisedFileId() == $fileId) {
 			$canDownload = true;
 		} else if ($layoutSignoff->getFileId() == $fileId) {
 			$canDownload = true;
 		} else {
 			// Check reviewer files
-			foreach ($submission->getReviewAssignments() as $roundReviewAssignments) {
+			foreach ($authorSubmission->getReviewAssignments() as $roundReviewAssignments) {
 				foreach ($roundReviewAssignments as $reviewAssignment) {
 					if ($reviewAssignment->getReviewerFileId() == $fileId) {
 						$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
@@ -543,14 +543,14 @@ class AuthorAction extends Action {
 			}
 
 			// Check supplementary files
-			foreach ($submission->getSuppFiles() as $suppFile) {
+			foreach ($authorSubmission->getSuppFiles() as $suppFile) {
 				if ($suppFile->getFileId() == $fileId) {
 					$canDownload = true;
 				}
 			}
 
 			// Check galley files
-			foreach ($submission->getGalleys() as $galleyFile) {
+			foreach ($authorSubmission->getGalleys() as $galleyFile) {
 				if ($galleyFile->getFileId() == $fileId) {
 					$canDownload = true;
 				}
@@ -565,7 +565,7 @@ class AuthorAction extends Action {
 			}
 
 			// Check editor version
-			$editorFiles = $submission->getEditorFileRevisions($article->getCurrentRound());
+			$editorFiles = $authorSubmission->getEditorFileRevisions($article->getCurrentRound());
 			if (is_array($editorFiles)) foreach ($editorFiles as $editorFile) {
 				if ($editorFile->getFileId() == $fileId) {
 					$canDownload = true;

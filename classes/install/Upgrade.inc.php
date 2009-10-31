@@ -736,7 +736,7 @@ class Upgrade extends Installer {
 					$pluginVersion = $versionInfo['version'];		
 					$pluginVersion->setCurrent(1);
 					$versionDao->insertVersion($pluginVersion);
-				}  else {
+				} else {
 					$pluginVersion = new Version();
 					$pluginVersion->setMajor(1);
 					$pluginVersion->setMinor(0);

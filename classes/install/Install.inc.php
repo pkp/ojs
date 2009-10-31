@@ -71,9 +71,13 @@ class Install extends PKPInstall {
 
 			// Install email template list and data for each locale
 			$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
-			$this->executeSQL($emailTemplateDao->installEmailTemplates($emailTemplateDao->getMainEmailTemplatesFilename(), true));
+			foreach ($emailTemplateDao->installEmailTemplates($emailTemplateDao->getMainEmailTemplatesFilename(), true) as $sql) {
+				$this->executeSQL($sql);
+			}
 			foreach ($this->installedLocales as $locale) {
-				$this->executeSQL($emailTemplateDao->installEmailTemplateData($emailTemplateDao->getMainEmailTemplateDataFilename($locale), true));
+				foreach ($emailTemplateDao->installEmailTemplateData($emailTemplateDao->getMainEmailTemplateDataFilename($locale), true) as $sql) {
+					$this->executeSQL($sql);
+				}
 			}
 
 		} else {
