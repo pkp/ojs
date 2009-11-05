@@ -60,4 +60,9 @@
 	<sql>
 		<query>UPDATE journal_settings SET setting_name = 'publishingMode', setting_type = 'int' WHERE setting_name = 'enableSubscriptions'</query>
 	</sql>
+	
+	<!-- Bug #4812: Add product name/type to pre-2.3.0 OJS versions so they appear in history -->
+	<sql>
+		<query>UPDATE versions SET product_type = 'core', product = 'ojs2' WHERE product_type IS NULL AND product IS NULL</query>
+	</sql>
 </data>
