@@ -46,6 +46,10 @@ class TranslatorHandler extends Handler {
 		$templateMgr->assign('locales', new ArrayItemIterator(Locale::getAllLocales(), $rangeInfo->getPage(), $rangeInfo->getCount()));
 		$templateMgr->assign('masterLocale', MASTER_LOCALE);
 
+		// Test whether the tar binary is available for the export to work
+		$tarBinary = Config::getVar('cli', 'tar');
+		$templateMgr->assign('tarAvailable', !empty($tarBinary) && file_exists($tarBinary));
+
 		$templateMgr->display($plugin->getTemplatePath() . 'index.tpl');
 	}
 
@@ -102,7 +106,7 @@ class TranslatorHandler extends Handler {
 		foreach ($localeFiles as $localeFile) {
 			$filename = Core::getBaseDir() . DIRECTORY_SEPARATOR . $localeFile;
 			if (file_exists($filename) && !is_writeable($filename)) {
-				$unwriteableFiles[] = $localeFile; 
+				$unwriteableFiles[] = $localeFile;
 			}
 		}
 
@@ -236,7 +240,7 @@ class TranslatorHandler extends Handler {
 		}
 
 		$templateMgr =& TemplateManager::getManager();
-		if(!is_writeable(Core::getBaseDir() . DIRECTORY_SEPARATOR . $filename)) { 
+		if(!is_writeable(Core::getBaseDir() . DIRECTORY_SEPARATOR . $filename)) {
 			$templateMgr->assign('error', true);
 		}
 

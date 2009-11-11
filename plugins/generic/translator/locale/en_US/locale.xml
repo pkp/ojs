@@ -20,6 +20,8 @@
 	<message key="plugins.generic.translator.enabled">The Translator Plugin has been enabled.</message>
 	<message key="plugins.generic.translator.disabled">The Translator Plugin has been disabled.</message>
 	
+	<message key="plugins.generic.translator.tarMissing">The export function of this plugin has been deactivated because the configured tar binary cannot be found on this system. Please make sure that you have the tar program installed and then configure the path to the tar binary in config.inc.php's [cli] section!</message>
+	
 	<message key="plugins.generic.translator.localeName">Locale Name</message>
 	<message key="plugins.generic.translator.localeKey">Key</message>
 	<message key="plugins.generic.translator.localeKey.description">Enter an entire locale key to search for.</message>
