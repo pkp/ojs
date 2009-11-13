@@ -17,7 +17,7 @@
 
 {translate key="plugins.generic.staticPages.editInstructions"}
 <br />
-{translate key="plugins.generic.staticPages.viewInstructions" pagesPath=$pagesPath}
+{translate key="plugins.generic.staticPages.viewInstructions" pagesPath=$pagesPath|replace:"REPLACEME":"%PATH%"}
 <br />
 <br />
 
