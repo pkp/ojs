@@ -93,6 +93,7 @@ class JQueryPlugin extends GenericPlugin {
 				//$scripts[] = 'dragLists.js';
 				break;
 			case 'admin/journals':
+			case 'editor/backIssues':
 			case 'manager/groupMembership':
 			case 'manager/groups':
 			case 'manager/reviewFormElements':

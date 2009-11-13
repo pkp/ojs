@@ -10,9 +10,16 @@
  *}
 {strip}
 {assign var="pageTitle" value="editor.issues.backIssues"}
+{assign var="page" value=$rangeInfo->getPage()}
 {url|assign:"currentUrl" page="editor" op="backIssues"}
 {include file="common/header.tpl"}
 {/strip}
+
+<script type="text/javascript">
+{literal}
+$(document).ready(function() { setupTableDND("#dragTable", "moveIssue"); });
+{/literal}
+</script>
 
 <ul class="menu">
         <li><a href="{url op="createIssue"}">{translate key="editor.navigation.createIssue"}</a></li>
@@ -28,7 +35,7 @@
 {/if}
 
 <div id="issues">
-<table width="100%" class="listing">
+<table width="100%" class="listing" id="dragTable">
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
@@ -43,29 +50,18 @@
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
 
-	{* Calculate a good sequence number to assign, including page info *}
-	{if $rangeInfo}
-		{assign var=page value=$rangeInfo->getPage()-1}
-		{assign var=count value=$rangeInfo->getCount()}
-		{assign var=pos value=$page*$count}
-		{assign var=pos value=$pos+1}
-	{else}
-		{assign var=pos value=1}
-	{/if}
-
 	{iterate from=issues item=issue}
-	<tr valign="top">
-		<td><a href="{url op="issueToc" path=$issue->getIssueId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>
-		<td>{$issue->getDatePublished()|date_format:"$dateFormatShort"}</td>
-		<td>{$issue->getNumArticles()}</td>
-		<td>{if $pos != 1}<a href="{url op="moveIssue" path=$issue->getIssueId() d=u newPos=$pos-1}" class="plain">&uarr;</a>{else}&uarr;{/if} {if $pos != $issues->getCount()}<a href="{url op="moveIssue" path=$issue->getIssueId() d=d newPos=$pos+1}" class="plain">&darr;</a>{else}&darr;{/if}</td>
-		<td align="right"><a href="{url op="removeIssue" path=$issue->getIssueId()}" onclick="return confirm('{translate|escape:"jsparam" key="editor.issues.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
+	<tr valign="top" class="data" id="issue-{$issue->getIssueId()}">
+		<td class="drag"><a href="{url op="issueToc" path=$issue->getIssueId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>
+		<td class="drag">{$issue->getDatePublished()|date_format:"$dateFormatShort"}</td>
+		<td class="drag">{$issue->getNumArticles()}</td>
+		<td><a href="{url op="moveIssue" d=u id=$issue->getIssueId() issuesPage=$page }">&uarr;</a>	<a href="{url op="moveIssue" d=d id=$issue->getIssueId() issuesPage=$page }">&darr;</a></td>
+		<td align="right"><a href="{url op="removeIssue" path=$issue->getIssueId() issuesPage=$page }" onclick="return confirm('{translate|escape:"jsparam" key="editor.issues.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 	</tr>
-	<tr>
-		<td colspan="5" class="{if $issues->eof()}end{/if}separator">&nbsp;</td>
-	</tr>
-	{assign var=pos value=$pos+1}
 {/iterate}
+	<tr>
+		<td colspan="5" class="endseparator">&nbsp;</td>
+	</tr>
 {if $issues->wasEmpty()}
 	<tr>
 		<td colspan="5" class="nodata">{translate key="issue.noIssues"}</td>

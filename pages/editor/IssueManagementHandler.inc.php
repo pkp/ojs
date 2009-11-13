@@ -444,21 +444,40 @@ class IssueManagementHandler extends EditorHandler {
 	 * Change the sequence of an issue.
 	 */
 	function moveIssue($args) {
-		$issueId = isset($args[0]) ? $args[0] : 0;
+		$issueId = Request::getUserVar('id');
 		$this->validate($issueId);
+		$prevId = Request::getUserVar('prevId');
+		$nextId = Request::getUserVar('nextId');
 		$issue =& $this->issue; 
 		$journal =& Request::getJournal();
+		$journalId = $journal->getJournalId();
 
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 
 		// If custom issue ordering isn't yet in place, bring it in.
-		if (!$issueDao->customIssueOrderingExists($journal->getJournalId())) {
-			$issueDao->setDefaultCustomIssueOrders($journal->getJournalId());
+		if (!$issueDao->customIssueOrderingExists($journalId)) {
+			$issueDao->setDefaultCustomIssueOrders($journalId);
 		}
 
-		$issueDao->moveCustomIssueOrder($journal->getJournalId(), $issue->getIssueId(), Request::getUserVar('newPos'), Request::getUserVar('d') == 'u');
+		$direction = Request::getUserVar('d');
+		if ($direction) {
+			// Moved using up or down arrow
+			$newPos = $issueDao->getCustomIssueOrder($journalId, $issueId) + ($direction == 'u' ? -1.5 : +1.5);
+		} else {
+			// Drag and Drop
+			if ($nextId)
+				// we are dropping before the next row
+				$newPos = $issueDao->getCustomIssueOrder($journalId, $nextId) - 0.5;
+			else
+				// we are dropping after the previous row
+				$newPos = $issueDao->getCustomIssueOrder($journalId, $prevId) + 0.5;
+		}
+		$issueDao->moveCustomIssueOrder($journal->getJournalId(), $issueId, $newPos);
 
-		Request::redirect(null, null, 'backIssues');
+		if ($direction) {
+			// Only redirect the nonajax call
+			Request::redirect(null, null, 'backIssues', null, array("issuesPage" => Request::getUserVar('issuesPage')));
+		}
 	}
 
 	/**

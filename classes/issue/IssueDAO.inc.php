@@ -633,18 +633,17 @@ class IssueDAO extends DAO {
 	 * @param $journalId int
 	 * @param $issueId int
 	 * @param $newPos int The new position (0-based) of this section
-	 * @param $up boolean Whether we're moving the section up or down
 	 */
-	function moveCustomIssueOrder($journalId, $issueId, $newPos, $up) {
+	function moveCustomIssueOrder($journalId, $issueId, $newPos) {
 		$result =& $this->retrieve('SELECT issue_id FROM custom_issue_orders WHERE journal_id=? AND issue_id=?', array($journalId, $issueId));
 		if (!$result->EOF) {
 			$this->update(
-				'UPDATE custom_issue_orders SET seq = ? ' . ($up?'-':'+') . ' 0.5 WHERE journal_id = ? AND issue_id = ?',
+				'UPDATE custom_issue_orders SET seq = ? WHERE journal_id = ? AND issue_id = ?',
 				array($newPos, $journalId, $issueId)
 			);
 		} else {
 			// This entry is missing. Create it.
-			$this->insertCustomIssueOrder($journalId, $issueId, $newPos + ($up?-0.5:0.5));
+			$this->insertCustomIssueOrder($journalId, $issueId, $newPos);
 		}
 		$result->Close();
 		unset($result);
