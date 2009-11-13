@@ -31,7 +31,7 @@ function togglePossibleResponses(newValue, multipleResponsesElementTypesString) 
 </script>
 
 <br/>
-<form name="reviewFormElementForm" method="post" action="{url op="updateReviewFormElement"}">
+<form name="reviewFormElementForm" method="post" action="{url op="updateReviewFormElement" anchor="possibleResponses"}">
 	<input type="hidden" name="reviewFormId" value="{$reviewFormId}"/>
 	<input type="hidden" name="reviewFormElementId" value="{$reviewFormElementId}"/>
 
@@ -70,6 +70,7 @@ function togglePossibleResponses(newValue, multipleResponsesElementTypesString) 
 <tr valign="top">
 	<td class="label">&nbsp;</td>
 	<td class="value">
+		<a name="possibleResponses"></a>
 		{foreach name=responses from=$possibleResponses[$formLocale] key=responseId item=responseItem}
 			{if !$notFirstResponseItem}
 				{assign var=notFirstResponseItem value=1}
