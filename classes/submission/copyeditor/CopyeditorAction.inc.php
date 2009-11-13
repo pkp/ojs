@@ -400,18 +400,24 @@ class CopyeditorAction extends Action {
 			}
 				
 			$initialSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $copyeditorSubmission->getArticleId());
-			$authorSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $copyeditorSubmission->getArticleId());
+			$authorSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $copyeditorSubmission->getArticleId());
 			$finalSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $copyeditorSubmission->getArticleId());
-				
+
 			if ($revision == 1) {
 				$canDownload = true;
 			} else if ($initialSignoff->getFileRevision() == $revision) {
 				$canDownload = true;
-			} else if ($authorSignoff->getFileRevision() == $revision && $copyeditorSubmission->getDateAuthorCompleted() != null) {
-				$canDownload = true;
 			} else if ($finalSignoff->getFileRevision() == $revision) {
 				$canDownload = true;
 			}
+		} else if ($copyeditorSubmission->getFileBySignoffType('SIGNOFF_COPYEDITING_AUTHOR', true) == $fileId) {
+			$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+			$authorSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $copyeditorSubmission->getArticleId());
+		 	if($authorSignoff->getDateCompleted() != null) {
+				$canDownload = true;
+			}
+		} else if ($copyeditorSubmission->getFileBySignoffType('SIGNOFF_COPYEDITING_FINAL', true) == $fileId) {
+			$canDownload = true;
 		}
 		else {
 			// Check galley files

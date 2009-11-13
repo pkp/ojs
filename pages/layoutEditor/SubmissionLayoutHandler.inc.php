@@ -96,6 +96,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	 */
 	function completeAssignment($args) {
 		$articleId = Request::getUserVar('articleId');
+		$this->setupTemplate(true, $articleId, 'editing');
 		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 		$submission =& $submissionLayoutHandler->submission;
@@ -476,7 +477,10 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$fileId = isset($args[1]) ? $args[1] : 0;
 		$revision = isset($args[2]) ? $args[2] : null;
 
-		list($journal, $submission) = $this->validate($articleId);
+		if($this->validate($articleId)) {
+			$journal = $this->journal;
+			$submission = $this->submission;
+		}
 		if (!LayoutEditorAction::downloadFile($submission, $fileId, $revision)) {
 			Request::redirect(null, null, 'submission', $articleId);
 		}
@@ -491,7 +495,10 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$fileId = isset($args[1]) ? $args[1] : 0;
 		$revision = isset($args[2]) ? $args[2] : null;
 
-		list($journal, $submission) = $this->validate($articleId);
+		if($this->validate($articleId)) {
+			$journal = $this->journal;
+			$submission = $this->submission;
+		}
 		if (!LayoutEditorAction::viewFile($articleId, $fileId, $revision)) {
 			Request::redirect(null, null, 'submission', $articleId);
 		}

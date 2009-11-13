@@ -344,8 +344,7 @@ class LayoutEditorAction extends Action {
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 		$suppDao =& DAORegistry::getDAO('SuppFileDAO');
 
-		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $this->article->getArticleId());
-
+		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $article->getArticleId());
 		if ($layoutSignoff->getFileId() == $fileId) {
 			$canDownload = true;
 		} else if($galleyDao->galleyExistsByFileId($article->getArticleId(), $fileId)) {

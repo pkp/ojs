@@ -513,7 +513,7 @@ class AuthorAction extends Action {
 		} else if ($authorSubmission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL', true) == $fileId) {
 			if ($revision != null) {
 				$initialSignoff = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $authorSubmission->getArticleId());
-				$authorSignoff = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $authorSubmission->getArticleId());
+				$authorSignoff = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $authorSubmission->getArticleId());
 				$finalSignoff = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $authorSubmission->getArticleId());
 
 				if ($initialSignoff && $initialSignoff->getFileRevision()==$revision && $initialSignoff->getDateCompleted()!=null) $canDownload = true;
@@ -522,6 +522,8 @@ class AuthorAction extends Action {
 			} else {
 				$canDownload = false;
 			}
+		} else if ($authorSubmission->getFileBySignoffType('SIGNOFF_COPYEDITING_AUTHOR', true) == $fileId){
+			$canDownload = true;
 		} else if ($authorSubmission->getRevisedFileId() == $fileId) {
 			$canDownload = true;
 		} else if ($layoutSignoff->getFileId() == $fileId) {
