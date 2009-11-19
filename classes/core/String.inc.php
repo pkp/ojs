@@ -12,7 +12,7 @@
  * @brief String manipulation wrapper class.
  */
 
-// $Id$
+// $Id: String.inc.php,v 1.30.2.5 2009/11/19 10:43:55 asmecher Exp $
 
 
 class String {
@@ -173,7 +173,7 @@ class String {
 	function encode_mime_header($string) {
 		if (defined('ENABLE_MBSTRING')) {
 			return mb_encode_mimeheader($string, ini_get('mbstring.internal_encoding'), 'B', MAIL_EOL);
-		}  else {
+		} else {
 			return $string;
 		}
 	}
@@ -363,7 +363,7 @@ class String {
 	 * @return boolean
 	 */
 	function isUTF8 ($str) {
-		// From the phputf8 project:  http://phputf8.sourceforge.net/
+		// From the phputf8 project: http://phputf8.sourceforge.net/
 		if ( strlen($str) == 0 ) return true;
 		return (preg_match('/^.{1}/us',$str,$ar) == 1);
 	}
@@ -375,7 +375,7 @@ class String {
 	 * @return string
 	 */
 	function utf8Clean($str) {
-		// From the phputf8 project:  http://phputf8.sourceforge.net/
+		// From the phputf8 project: http://phputf8.sourceforge.net/
 		$UTF8_BAD =
 		'([\x00-\x7F]'.				# ASCII (including control chars)
 		'|[\xC2-\xDF][\x80-\xBF]'.		# non-overlong 2-byte
@@ -406,18 +406,19 @@ class String {
 	 * @return string
 	 */
 	function utf8StripASCIICtrl($str) {
-    	ob_start();
-    	while ( preg_match(
-	        '/^([^\x00-\x08\x0B\x0C\x0E-\x1F\x7F]+)|([\x00-\x08\x0B\x0C\x0E-\x1F\x7F]+)/S',
-        	    $str, $matches) ) {
-    	    if ( !isset($matches[2]) ) {
-	            echo $matches[0];
-        	}
-    	    $str = substr($str, strlen($matches[0]));
-	    }
-	    $result = ob_get_contents();
-    	ob_end_clean();
-    	return $result;
+		ob_start();
+		while (preg_match(
+			'/^([^\x00-\x08\x0B\x0C\x0E-\x1F\x7F]+)|([\x00-\x08\x0B\x0C\x0E-\x1F\x7F]+)/S',
+			$str, $matches
+		)) {
+			if (!isset($matches[2])) {
+				echo $matches[0];
+			}
+			$str = substr($str, strlen($matches[0]));
+		}
+		$result = ob_get_contents();
+		ob_end_clean();
+		return $result;
 	}
 
 	/**
@@ -444,7 +445,7 @@ class String {
 	function utf2html ($str) {
 		$ret = "";
 		$max = strlen($str);
-		$last = 0;  // keeps the index of the last regular character
+		$last = 0; // keeps the index of the last regular character
 
 		for ($i=0; $i<$max; $i++) {
 			$c = $str{$i};
@@ -600,7 +601,7 @@ class String {
 	 * @return string
 	 */
 	function cp1252ToEntities ($str) {
-		// define the conversion table;  from: http://www.noqta.it/tc.html
+		// define the conversion table; from: http://www.noqta.it/tc.html
 		$cp1252 = array(
 			"&#128;" => "",		"&#129;" => "",
 			"&#130;" => "&lsquor;",	"&#131;" => "&fnof;",
