@@ -5,6 +5,7 @@ application/smil
 application/xhtml+xml
 image/gif
 image/jpeg
+image/pjpeg
 image/png
 image/svg+xml
 image/tiff
