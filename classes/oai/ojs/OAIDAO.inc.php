@@ -13,7 +13,7 @@
  * @brief DAO operations for the OJS OAI interface.
  */
 
-// $Id$
+// $Id: OAIDAO.inc.php,v 1.43 2009/11/19 14:51:38 asmecher Exp $
 
 
 import('oai.OAI');
@@ -450,11 +450,11 @@ class OAIDAO extends DAO {
 		foreach ($journals as $journal) {
 			$title = $journal->getLocalizedTitle();
 			$abbrev = $journal->getPath();
-			array_push($sets, new OAISet($abbrev, $title, ''));
+			array_push($sets, new OAISet(urlencode($abbrev), $title, ''));
 
 			$sections =& $this->sectionDao->getJournalSections($journal->getJournalId());
 			foreach ($sections->toArray() as $section) {
-				array_push($sets, new OAISet($abbrev . ':' . $section->getLocalizedAbbrev(), $section->getLocalizedTitle(), ''));
+				array_push($sets, new OAISet(urlencode($abbrev) . ':' . urlencode($section->getLocalizedAbbrev()), $section->getLocalizedTitle(), ''));
 			}
 		}
 

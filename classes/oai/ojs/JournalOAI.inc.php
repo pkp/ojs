@@ -19,7 +19,7 @@
  * (based on where the request is directed).
  */
 
-// $Id$
+// $Id: JournalOAI.inc.php,v 1.20 2009/11/19 14:51:38 asmecher Exp $
 
 
 import('oai.OAI');
@@ -91,9 +91,12 @@ class JournalOAI extends OAI {
 		$tmpArray = split(':', $setSpec);
 		if (count($tmpArray) == 1) {
 			list($journalSpec) = $tmpArray;
+			$journalSpec = urldecode($journalSpec);
 			$sectionSpec = null;
 		} else if (count($tmpArray) == 2) {
 			list($journalSpec, $sectionSpec) = $tmpArray;
+			$journalSpec = urldecode($journalSpec);
+			$sectionSpec = urldecode($sectionSpec);
 		} else {
 			return array(0, 0);
 		}
