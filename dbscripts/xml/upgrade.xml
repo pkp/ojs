@@ -8,10 +8,10 @@
   *
   * Upgrade descriptor file.
   *
-  * $Id$
+  * $Id: upgrade.xml,v 1.39.2.6 2009/11/19 11:52:38 asmecher Exp $
   -->
 
-<install version="2.2.3.0">
+<install version="2.2.4.0">
 	<upgrade minversion="2.0.0.0" maxversion="2.2.0.0">
 		<!-- Correct null public issue IDs; this caused problems with
 		     2.x -> 2.2.0 upgrades using public issue IDs.-->
@@ -143,5 +143,9 @@
 	<upgrade minversion="2.0.0.0" maxversion="2.2.2.0">
 		<data file="upgrade/2.2.3_update.xml" />
 		<note file="release-notes/README-2.2.3" />
+	</upgrade>
+
+	<upgrade minversion="2.0.0.0" maxversion="2.2.4.0">
+		<note file="release-notes/README-2.2.4" />
 	</upgrade>
 </install>

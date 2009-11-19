@@ -8,10 +8,10 @@
   *
   * Installation descriptor file.
   *
-  * $Id$
+  * $Id: install.xml,v 1.18.2.3 2009/11/19 11:52:38 asmecher Exp $
   -->
 
-<install version="2.2.3.0">
+<install version="2.2.4.0">
 	<code function="createDirectories"/>
 	<code function="createDatabase"/>
 	<schema file="ojs_schema.xml"/>
