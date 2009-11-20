@@ -12,7 +12,7 @@
  * @brief Handle requests related to submission layout editing. 
  */
 
-// $Id$
+// $Id: SubmissionLayoutHandler.inc.php,v 1.57 2009/11/20 00:30:06 mcrider Exp $
 
 import('pages.layoutEditor.LayoutEditorHandler');
 
@@ -478,8 +478,8 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$revision = isset($args[2]) ? $args[2] : null;
 
 		if($this->validate($articleId)) {
-			$journal = $this->journal;
-			$submission = $this->submission;
+			$journal =& $this->journal;
+			$submission =& $this->submission;
 		}
 		if (!LayoutEditorAction::downloadFile($submission, $fileId, $revision)) {
 			Request::redirect(null, null, 'submission', $articleId);
@@ -496,8 +496,8 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$revision = isset($args[2]) ? $args[2] : null;
 
 		if($this->validate($articleId)) {
-			$journal = $this->journal;
-			$submission = $this->submission;
+			$journal =& $this->journal;
+			$submission =& $this->submission;
 		}
 		if (!LayoutEditorAction::viewFile($articleId, $fileId, $revision)) {
 			Request::redirect(null, null, 'submission', $articleId);
