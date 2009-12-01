@@ -73,6 +73,7 @@ class SectionHandler extends ManagerHandler {
 	 */
 	function updateSection($args) {
 		$this->validate();
+		$this->setupTemplate(true);
 
 		import('manager.form.SectionForm');
 		$sectionForm = new SectionForm(!isset($args) || empty($args) ? null : ((int) $args[0]));
@@ -95,9 +96,7 @@ class SectionHandler extends ManagerHandler {
 		if ($canExecute && $sectionForm->validate()) {
 			$sectionForm->execute();
 			Request::redirect(null, null, 'sections');
-
 		} else {
-			$this->setupTemplate(true);
 			$sectionForm->display();
 		}
 	}
