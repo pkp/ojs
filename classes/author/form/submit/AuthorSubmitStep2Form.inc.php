@@ -196,6 +196,7 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 					$article->addAuthor($author);
 				}
 			}
+			unset($author);
 		}
 
 		// Remove deleted authors
