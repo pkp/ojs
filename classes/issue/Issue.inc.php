@@ -65,7 +65,7 @@ class Issue extends DataObject {
 	}
 
 	function getIssueTitle() {
-		trigger_error('Deprecated function.');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedTitle();
 	}
 
@@ -240,7 +240,7 @@ class Issue extends DataObject {
 	}
 
 	function getIssueDescription() {
-		trigger_error('Deprecated function.');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedDescription();
 	}
 
@@ -354,7 +354,7 @@ class Issue extends DataObject {
 	}
 
 	function getIssueFileName() {
-		trigger_error('Deprecated function.');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedFileName();
 	}
 
@@ -385,7 +385,7 @@ class Issue extends DataObject {
 	}
 
 	function getIssueWidth() {
-		trigger_error('Deprecated function.');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedWidth();
 	}
 
@@ -416,7 +416,7 @@ class Issue extends DataObject {
 	}
 
 	function getIssueHeight() {
-		trigger_error('Deprecated function.');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedHeight();
 	}
 
@@ -447,7 +447,7 @@ class Issue extends DataObject {
 	}
 
 	function getIssueOriginalFileName() {
-		trigger_error('Deprecated function.');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedOriginalFileName();
 	}
 
@@ -478,7 +478,7 @@ class Issue extends DataObject {
 	}
 
 	function getIssueCoverPageAltText() {
-		trigger_error('Deprecated function.');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedCoverPageAltText();
 	}
 
@@ -509,7 +509,7 @@ class Issue extends DataObject {
 	}
 
 	function getIssueCoverPageDescription() {
-		trigger_error('Deprecated function.');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedCoverPageDescription();
 	}
 
@@ -540,7 +540,7 @@ class Issue extends DataObject {
 	}
 
 	function getIssueShowCoverPage() {
-		trigger_error('Deprecated function.');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedShowCoverPage();
 	}
 

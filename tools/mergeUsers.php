@@ -15,8 +15,7 @@
 // $Id$
 
 
-define('INDEX_FILE_LOCATION', dirname(dirname(__FILE__)) . '/index.php');
-require(dirname(dirname(__FILE__)) . '/lib/pkp/classes/cliTool/CliTool.inc.php');
+require(dirname(__FILE__) . '/bootstrap.inc.php');
 
 class mergeUsers extends CommandLineTool {
 
@@ -77,7 +76,7 @@ class mergeUsers extends CommandLineTool {
 		if (empty($newUserId)) {
 			printf("Error: '%s' is not a valid username.\n",
 				$this->username1);
-			exit;	
+			exit;
 		}
 
 		// Both user IDs are valid. Merge the accounts.

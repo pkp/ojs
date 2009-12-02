@@ -34,7 +34,7 @@ class Section extends DataObject {
 	}
 
 	function getSectionTitle() {
-		trigger_error('Deprecated function.');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedTitle();
 	}
 
@@ -47,7 +47,7 @@ class Section extends DataObject {
 	}
 
 	function getTrackAbbrev() {
-		trigger_error('Deprecated function.');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedAbbrev();
 	}
 
@@ -228,7 +228,7 @@ class Section extends DataObject {
 	}
 
 	function getSectionIdentifyType() {
-		trigger_error('Deprecated function.');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedIdentifyType();
 	}
 
@@ -339,7 +339,7 @@ class Section extends DataObject {
 	}
 
 	function getSectionPolicy() {
-		trigger_error('Deprecated function.');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedPolicy();
 	}
 

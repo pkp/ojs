@@ -70,7 +70,7 @@ class Article extends Submission {
 	 * @return string
 	 */
 	function getArticleTitle() {
-		trigger_error('Deprecated function');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedTitle();
 	}
 
@@ -80,7 +80,7 @@ class Article extends Submission {
 	 * @return string
 	 */
 	function getArticleAbstract() {
-		trigger_error('Deprecated function');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedAbstract();
 	}
 
@@ -174,7 +174,7 @@ class Article extends Submission {
 	 * @return string
 	 */
 	function getArticleDiscipline() {
-		trigger_error('Deprecated function');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedDiscipline();
 	}
 
@@ -184,7 +184,7 @@ class Article extends Submission {
 	 * @return string
 	 */
 	function getArticleSubjectClass() {
-		trigger_error('Deprecated function');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedSubjectClass();
 	}
 
@@ -194,7 +194,7 @@ class Article extends Submission {
 	 * @return string
 	 */
 	function getArticleSubject() {
-		trigger_error('Deprecated function.');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedSubject();
 	}
 
@@ -204,7 +204,7 @@ class Article extends Submission {
 	 * @return string
 	 */
 	function getArticleCoverageGeo() {
-		trigger_error('Deprecated function.');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedCoverageGeo();
 	}
 
@@ -214,7 +214,7 @@ class Article extends Submission {
 	 * @return string
 	 */
 	function getArticleCoverageChron() {
-		trigger_error('Deprecated function.');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedCoverageChron();
 	}
 
@@ -224,7 +224,7 @@ class Article extends Submission {
 	 * @return string
 	 */
 	function getArticleCoverageSample() {
-		trigger_error('Deprecated function.');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedCoverageSample();
 	}
 
@@ -234,7 +234,7 @@ class Article extends Submission {
 	 * @return string
 	 */
 	function getArticleType() {
-		trigger_error('Deprecated function.');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedType();
 	}
 
@@ -244,7 +244,7 @@ class Article extends Submission {
 	 * @return string
 	 */
 	function getArticleSponsor() {
-		trigger_error('Deprecated function.');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedSponsor();
 	}
 
@@ -254,7 +254,7 @@ class Article extends Submission {
 	 * @return string
 	 */
 	function getArticleFileName() {
-		trigger_error('Deprecated function.');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedFileName('fileName');
 	}
 
@@ -264,7 +264,7 @@ class Article extends Submission {
 	 * @return string
 	 */
 	function getArticleWidth() {
-		trigger_error('Deprecated function.');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedWidth();
 	}
 
@@ -274,7 +274,7 @@ class Article extends Submission {
 	 * @return string
 	 */
 	function getArticleHeight() {
-		trigger_error('Deprecated function.');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedHeight();
 	}
 
@@ -284,7 +284,7 @@ class Article extends Submission {
 	 * @return string
 	 */
 	function getArticleOriginalFileName() {
-		trigger_error('Deprecated function.');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedData('originalFileName');
 	}
 
@@ -294,7 +294,7 @@ class Article extends Submission {
 	 * @return string
 	 */
 	function getArticleCoverPageAltText() {
-		trigger_error('Deprecated function.');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedCoverPageAltText();
 	}
 
@@ -305,7 +305,7 @@ class Article extends Submission {
 	 * @return string
 	 */
 	function getArticleShowCoverPage() {
-		trigger_error('Deprecated function.');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedShowCoverPage();
 	}
 

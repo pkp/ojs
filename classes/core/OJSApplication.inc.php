@@ -29,9 +29,19 @@ class OJSApplication extends PKPApplication {
 
 	function initialize(&$application) {
 		PKPApplication::initialize($application);
-
 		import('i18n.Locale');
-		import('core.Request');
+	}
+
+	/**
+	 * Get the dispatcher implementation singleton
+	 * @return Dispatcher
+	 */
+	function &getDispatcher() {
+		$dispatcher =& parent::getDispatcher();
+
+		// Inject application-specific configuration
+		$dispatcher->addRouterName('core.OJSPageRouter', 'page');
+		return $dispatcher;
 	}
 
 	/**
@@ -71,49 +81,6 @@ class OJSApplication extends PKPApplication {
 	 */
 	function getVersionDescriptorUrl() {
 		return('http://pkp.sfu.ca/ojs/xml/ojs-version.xml');
-	}
-
-	/**
-	 * Determine whether or not the request is cacheable.
-	 * @return boolean
-	 */
-	function isCacheable() {
-		if (defined('SESSION_DISABLE_INIT')) return false;
-		if (!Config::getVar('general', 'installed')) return false;
-		if (!empty($_POST) || Validation::isLoggedIn()) return false;
-		if (!PKPRequest::isPathInfoEnabled()) {
-			$ok = array('journal', 'page', 'op', 'path');
-			if (!empty($_GET) && count(array_diff(array_keys($_GET), $ok)) != 0) {
-				return false;
-			}
-		} else {
-			if (!empty($_GET)) return false;
-		}
-
-		if (in_array(PKPRequest::getRequestedPage(), array(
-			'about', 'announcement', 'help', 'index', 'information', 'rt', 'issue', ''
-		))) return true;
-
-		return false;
-	}
-
-	/**
-	 * Get the filename to use for cached content for the current request.
-	 * @return string
-	 */
-	function getCacheFilename() {
-		static $cacheFilename;
-		if (!isset($cacheFilename)) {
-			if (PKPRequest::isPathInfoEnabled()) {
-				$id = isset($_SERVER['PATH_INFO'])?$_SERVER['PATH_INFO']:'index';
-				$id .= '-' . Locale::getLocale();
-			} else {
-				$id = Request::getUserVar('journal') . '-' . Request::getUserVar('page') . '-' . Request::getUserVar('op') . '-' . Request::getUserVar('path') . '-' . Locale::getLocale();
-			}
-			$path = dirname(dirname(dirname(__FILE__)));
-			$cacheFilename = $path . '/cache/wc-' . md5($id) . '.html';
-		}
-		return $cacheFilename;
 	}
 
 	/**
