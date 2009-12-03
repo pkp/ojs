@@ -407,6 +407,26 @@ Ti chiedo la cortesia di di confermare la volont&#x00E0; di portare a termine l'
 		  *
 		  -->
 		<row>
+			<field name="email_key">EDITOR_REVIEW</field>
+			<field name="subject">Revisione editoriale completata</field>
+			<field name="body">{$authorName}:
+
+Abbiamo completato la revisione della submission "{$articleTitle}." 
+La nostra decisione &#x00E8; di...
+
+{$comments}.
+
+Ulteriori commenti su questo scritto, editoriali e peer review, si possono trovare facendo  login nel sito web della rivista:
+
+Submission URL: {$submissionUrl}
+Username: {$authorUsername}
+
+Per qualsiasi domanda, si prega di contattarmi.
+
+{$editorialContactSignature}</field>
+			<field name="description">Questa email viene inviata dal section editor all'autore di una submission per fargli sapere che &#x00E8; stata presa una decisione riguardo la submission.</field>
+		</row>
+		<row>
 			<field name="email_key">COPYEDIT_REQUEST</field>
 			<field name="subject">Assegnazione di copyediting</field>
 			<field name="body">{$copyeditorName}:

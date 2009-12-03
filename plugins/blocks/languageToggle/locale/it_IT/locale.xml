@@ -11,8 +11,8 @@
   *
   * $Id$
   -->
- 
+
 <locale name="it_IT" full_name="Italiano">
-	<message key="plugins.block.languageToggle.displayName">Modulo del menu per scegliere la lingua</message>
-	<message key="plugins.block.languageToggle.description">Questo plugin inserisce nel menu laterale un menu a tendina per scegliere la lingua.</message>
+	<message key="plugins.block.languageToggle.displayName">Scelta della lingua</message>
+	<message key="plugins.block.languageToggle.description">Questo plugin inserisce nel menu laterale un elenco a tendina per scegliere la lingua dell'interfaccia.</message>
 </locale>

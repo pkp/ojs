@@ -11,9 +11,9 @@
   *
   * $Id$
   -->
- 
+
 <locale name="it_IT" full_name="Italiano">
-	<message key="plugins.block.navigation.displayName">Modulo di navigazione</message>
+	<message key="plugins.block.navigation.displayName">Navigazione</message>
 	<message key="plugins.block.navigation.description">Questo plugin inserisce link di navigazione al menu laterale.</message>
 	<message key="plugins.block.navigation.journalContent">Contenuti della rivista</message>
 </locale>

@@ -11,9 +11,9 @@
   *
   * $Id$
   -->
- 
+
 <locale name="it_IT" full_name="Italiano">
-	<message key="plugins.block.information.displayName">Modulo di informazioni</message>
-	<message key="plugins.block.information.description">Questo plugin inserisce nel menu laterale il link alle informazioni.</message>
+	<message key="plugins.block.information.displayName">Informazioni</message>
+	<message key="plugins.block.information.description">Questo plugin inserisce nel menu laterale il link ad alcune informazioni.</message>
 	<message key="plugins.block.information.link">Informazioni</message>
 </locale>
