@@ -68,11 +68,13 @@ class Payment {
 	}
 
 	function getName() {
-		fatalError('ABSTRACT METHOD');
+		// must be implemented by sub-classes
+		assert(false);
 	}
 
 	function getDescription() {
-		fatalError('ABSTRACT METHOD');
+		// must be implemented by sub-classes
+		assert(false);
 	}
 
 	function setUserId($userId) {

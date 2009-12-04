@@ -32,7 +32,8 @@ class SubscriptionDAO extends DAO {
 	 * @return Subscription
 	 */
 	function &getSubscription($subscriptionId) {
-		fatalError('Abstract method');
+		// must be implemented by sub-classes
+		assert(false);
 	}
 
 	/**
@@ -76,7 +77,8 @@ class SubscriptionDAO extends DAO {
 	 * @return int
 	 */
 	function getStatusCount($status) {
-		fatalError('Abstract method');
+		// must be implemented by sub-classes
+		assert(false);
 	}
 
 	/**
@@ -85,7 +87,8 @@ class SubscriptionDAO extends DAO {
 	 * @return boolean
 	 */
 	function subscriptionExists($subscriptionId) {
-		fatalError('Abstract method');
+		// must be implemented by sub-classes
+		assert(false);
 	}
 
 	/**
@@ -95,7 +98,8 @@ class SubscriptionDAO extends DAO {
 	 * @return boolean
 	 */
 	function subscriptionExistsByUser($subscriptionId, $userId) {
-		fatalError('Abstract method');
+		// must be implemented by sub-classes
+		assert(false);
 	}
 
 	/**
@@ -105,7 +109,8 @@ class SubscriptionDAO extends DAO {
 	 * @return boolean
 	 */
 	function subscriptionExistsByUserForJournal($userId, $journalId) {
-		fatalError('Abstract method');
+		// must be implemented by sub-classes
+		assert(false);
 	}
 
 	/**
@@ -114,7 +119,8 @@ class SubscriptionDAO extends DAO {
 	 * @return int 
 	 */
 	function insertSubscription(&$subscription) {
-		fatalError('Abstract method');
+		// must be implemented by sub-classes
+		assert(false);
 	}
 
 	/**
@@ -131,7 +137,8 @@ class SubscriptionDAO extends DAO {
 	 * @return boolean
 	 */
 	function updateSubscription(&$subscription) {
-		fatalError('Abstract method');
+		// must be implemented by sub-classes
+		assert(false);
 	}
 
 	/**
@@ -140,7 +147,8 @@ class SubscriptionDAO extends DAO {
 	 * @return boolean
 	 */
 	function deleteSubscriptionById($subscriptionId) {
-		fatalError('Abstract method');
+		// must be implemented by sub-classes
+		assert(false);
 	}
 
 	/**
@@ -149,7 +157,8 @@ class SubscriptionDAO extends DAO {
 	 * @return boolean
 	 */
 	function deleteSubscriptionsByJournal($journalId) {
-		fatalError('Abstract method');
+		// must be implemented by sub-classes
+		assert(false);
 	}
 
 	/**
@@ -158,7 +167,8 @@ class SubscriptionDAO extends DAO {
 	 * @return boolean
 	 */
 	function deleteSubscriptionsByUserId($userId) {
-		fatalError('Abstract method');
+		// must be implemented by sub-classes
+		assert(false);
 	}
 
 	/**
@@ -167,7 +177,8 @@ class SubscriptionDAO extends DAO {
 	 * @return boolean
 	 */
 	function deleteSubscriptionsByTypeId($subscriptionTypeId) {
-		fatalError('Abstract method');
+		// must be implemented by sub-classes
+		assert(false);
 	}
 
 	/**
@@ -175,7 +186,8 @@ class SubscriptionDAO extends DAO {
 	 * @return object DAOResultFactory containing Subscriptions
 	 */
 	function &getSubscriptions($rangeInfo = null) {
-		fatalError('Abstract method');
+		// must be implemented by sub-classes
+		assert(false);
 	}
 
 	/**
@@ -191,7 +203,8 @@ class SubscriptionDAO extends DAO {
 	 * @return object DAOResultFactory containing matching Subscriptions
 	 */
 	function &getSubscriptionsByJournalId($journalId, $status = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null) {
-		fatalError('Abstract method');
+		// must be implemented by sub-classes
+		assert(false);
 	}
 
 	/**
@@ -201,7 +214,8 @@ class SubscriptionDAO extends DAO {
 	 * @return object DAOResultFactory containing matching Subscriptions
 	 */
 	function &getSubscriptionsByDateEnd($dateEnd, $journalId, $rangeInfo = null) {
-		fatalError('Abstract method');
+		// must be implemented by sub-classes
+		assert(false);
 	}
 
 	/**
@@ -211,7 +225,8 @@ class SubscriptionDAO extends DAO {
 	 * @return boolean
 	 */	
 	function renewSubscription(&$subscription) {
-		fatalError('Abstract method');
+		// must be implemented by sub-classes
+		assert(false);
 	}
 
 	/**
@@ -318,7 +333,8 @@ class SubscriptionDAO extends DAO {
 	 * @return Subscription
 	 */
 	function createObject() {
-		fatalError('Abstract method');
+		// must be implemented by sub-classes
+		assert(false);
 	}
 
 	/**

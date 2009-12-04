@@ -298,7 +298,8 @@ class Subscription extends DataObject {
 	 * Check whether subscription is valid
 	 */
 	function isValid($check = SUBSCRIPTION_DATE_BOTH, $checkDate = null) {
-		fatalError('Abstract method');
+		// must be implemented by sub-classes
+		assert(false);
 	}
 }
 

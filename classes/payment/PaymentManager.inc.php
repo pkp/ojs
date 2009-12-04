@@ -19,7 +19,8 @@ class PaymentManager {
 	 * Get the payment manager.
 	 */
 	function &getManager() {
-		die('ABSTRACT METHOD');
+		// must be implemented by sub-classes
+		assert(false);
 	}
 
 	/**
@@ -84,7 +85,8 @@ class PaymentManager {
 	 * Abstract method for fulfilling a queued payment
 	 */
 	function fulfillQueuedPayment(&$queuedPayment) {
-		fatalError('ABSTRACT CLASS');
+		// must be implemented by sub-classes
+		assert(false);
 	}
 }
 

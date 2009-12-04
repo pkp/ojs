@@ -58,7 +58,8 @@ class BlockPlugin extends Plugin {
 	 * @return array
 	 */
 	function getSupportedContexts() {
-		fatalError('ABSTRACT METHOD');
+		// must be implemented by sub-classes
+		assert(false);
 	}
 
 	/**
