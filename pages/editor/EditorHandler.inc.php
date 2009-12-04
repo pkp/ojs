@@ -440,9 +440,11 @@ class EditorHandler extends SectionEditorHandler {
 
 			if (isset($args[0]) && $args[0] === 'editor') {
 				$roleName = 'user.role.editor';
+				$rolePath = 'editor';
 				$editors =& $editorSubmissionDao->getUsersNotAssignedToArticle($journal->getJournalId(), $articleId, RoleDAO::getRoleIdFromPath('editor'), $searchType, $search, $searchMatch, $rangeInfo);
 			} else {
 				$roleName = 'user.role.sectionEditor';
+				$rolePath = 'sectionEditor';
 				$editors =& $editorSubmissionDao->getUsersNotAssignedToArticle($journal->getJournalId(), $articleId, RoleDAO::getRoleIdFromPath('sectionEditor'), $searchType, $search, $searchMatch, $rangeInfo);
 			}
 
@@ -450,6 +452,7 @@ class EditorHandler extends SectionEditorHandler {
 
 			$templateMgr->assign_by_ref('editors', $editors);
 			$templateMgr->assign('roleName', $roleName);
+			$templateMgr->assign('rolePath', $rolePath);
 			$templateMgr->assign('articleId', $articleId);
 
 			$sectionDao =& DAORegistry::getDAO('SectionDAO');

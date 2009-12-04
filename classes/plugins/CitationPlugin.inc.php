@@ -41,8 +41,8 @@ class CitationPlugin extends Plugin {
 	 * Get the citation format name for this plugin.
 	 */
 	function getCitationFormatName() {
-		// Subclasses must override.
-		fatalError('ABSTRACT METHOD');
+		// must be implemented by sub-classes
+		assert(false);
 	}
 
 	/**

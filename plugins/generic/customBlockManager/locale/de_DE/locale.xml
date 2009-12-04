@@ -28,4 +28,5 @@
 	<message key="plugins.generic.customBlock.editContent">Bearbeitung des Inhalts der Sidebar</message>
 	<message key="plugins.generic.customBlock.contentRequired">Irgendein Inhalt wird benötigt. Wenn Sie diesen Block löschen möchten, können Sie dies mittels des Block-Verwaltungs-Plug-Ins tun oder durch abwählen dieses Blocks in Schritt 5 des Zeitschriftensetups.</message>
 	<message key="plugins.generic.customBlock.edit">Bearbeiten</message>
+	<message key="plugins.generic.customBlockManager.description">Dieses Plug-In lässt Sie eigene Sidebar-Blöcke verwalten. Sie können die Blöcke in den Einstellungen jedes Plug-Ins, das Sie hier anlegen, verwalten.</message>
 </locale>

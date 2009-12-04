@@ -13,7 +13,7 @@
 ; OJS Configuration settings.
 ; Rename config.TEMPLATE.inc.php to config.inc.php to use.
 ;
-; $Id: config.TEMPLATE.inc.php,v 1.66 2009/11/19 14:51:38 asmecher Exp $
+; $Id$
 ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -348,9 +348,6 @@ oai = On
 ; OAI Repository identifier
 repository_id = ojs.pkp.sfu.ca
 
-; Maximum number of records per request to serve via OAI
-oai_max_records = 100
-
 
 ;;;;;;;;;;;;;;;;;;;;;;
 ; Interface Settings ;
@@ -434,3 +431,5 @@ show_stacktrace = Off
 ; Display an error message when something goes wrong.
 display_errors = Off
 
+; Display deprecation warnings
+deprecation_warnings = Off

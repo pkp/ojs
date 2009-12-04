@@ -15,27 +15,26 @@
 // $Id$
 
 
-define('INDEX_FILE_LOCATION', dirname(dirname(__FILE__)) . '/index.php');
-require(dirname(dirname(__FILE__)) . '/lib/pkp/classes/cliTool/CliTool.inc.php');
+require(dirname(__FILE__) . '/bootstrap.inc.php');
 
 import('file.ArticleFileManager');
 
 class SubmissionDeletionTool extends CommandLineTool {
-	
+
 	var $articleIds;
-	
+
 	/**
 	 * Constructor.
 	 * @param $argv array command-line arguments
 	 */
 	function SubmissionDeletionTool($argv = array()) {
 		parent::CommandLineTool($argv);
-		
+
 		if (!sizeof($this->argv)) {
 			$this->usage();
 			exit(1);
 		}
-		
+
 		$this->parameters = $this->argv;
 	}
 
@@ -55,7 +54,7 @@ class SubmissionDeletionTool extends CommandLineTool {
 
 		foreach($this->parameters as $articleId) {
 			$article =& $articleDao->getArticle($articleId);
-			
+
 			if(isset($article)) {
 				// remove files first, to prevent orphans
 				$articleFileManager = new ArticleFileManager($articleId);
@@ -70,7 +69,7 @@ class SubmissionDeletionTool extends CommandLineTool {
 						$articleFileManager->deleteArticleTree();
 					}
 				}
-				
+
 				$articleDao->deleteArticleById($articleId);
 				continue;
 			}

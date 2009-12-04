@@ -393,6 +393,9 @@ class ReviewFormHandler extends ManagerHandler {
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
 		$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
 
+		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, $journal->getJournalId());
+		$this->setupTemplate(true, $reviewForm);
+
 		if (!$reviewFormDao->unusedReviewFormExists($reviewFormId, $journal->getJournalId()) || ($reviewFormElementId != null && !$reviewFormElementDao->reviewFormElementExists($reviewFormElementId, $reviewFormId))) {
 			Request::redirect(null, null, 'reviewFormElements', array($reviewFormId));
 		}
@@ -438,10 +441,6 @@ class ReviewFormHandler extends ManagerHandler {
 			Request::redirect(null, null, 'reviewFormElements', array($reviewFormId));
 		} else {
 			$journal =& Request::getJournal();
-			$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
-			$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, $journal->getJournalId());
-
-			$this->setupTemplate(true, $reviewForm);
 			$templateMgr =& TemplateManager::getManager();
 			if ($reviewFormElementId == null) {
 				$templateMgr->assign('pageTitle', 'manager.reviewFormElements.create');

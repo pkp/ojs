@@ -180,7 +180,7 @@ class CustomLocaleHandler extends Handler {
 
 		while (!empty($changes)) {
 			$key = array_shift($changes);
-			$value = $this->correctCr(array_shift($changes));
+			$value = CustomLocaleHandler::correctCr(array_shift($changes));
 			if (!empty($value)) {
 				if (!$file->update($key, $value)) {
 					$file->insert($key, $value);

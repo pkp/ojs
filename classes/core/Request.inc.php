@@ -30,30 +30,23 @@ class Request extends PKPRequest {
 	 * @param $anchor string Name of desired anchor on the target page
 	 */
 	function redirect($journalPath = null, $page = null, $op = null, $path = null, $params = null, $anchor = null) {
-		Request::redirectUrl(Request::url($journalPath, $page, $op, $path, $params, $anchor));
+		$_this =& PKPRequest::_checkThis();
+		$_this->redirectUrl($_this->url($journalPath, $page, $op, $path, $params, $anchor));
 	}
 
 	/**
-	 * Get the journal path requested in the URL ("index" for top-level site requests).
-	 * @return string
+	 * Deprecated
+	 * @see PKPPageRouter::getRequestedContextPath()
 	 */
 	function getRequestedJournalPath() {
 		static $journal;
+		$_this =& PKPRequest::_checkThis();
 
 		if (!isset($journal)) {
-			if (Request::isPathInfoEnabled()) {
-				$journal = '';
-				if (isset($_SERVER['PATH_INFO'])) {
-					$vars = explode('/', $_SERVER['PATH_INFO']);
-					if (count($vars) >= 2) {
-						$journal = Core::cleanFileVar($vars[1]);
-					}
-				}
-			} else {
-				$journal = Request::getUserVar('journal');
-			}
+			$journalArray = $_this->_delegateToRouter('getRequestedContextPath', 1);
+			$journal = $journalArray[0];
 
-			$journal = empty($journal) ? 'index' : $journal;
+			// call legacy hook
 			HookRegistry::call('Request::getRequestedJournalPath', array(&$journal));
 		}
 
@@ -61,111 +54,59 @@ class Request extends PKPRequest {
 	}
 
 	/**
-	 * Get the journal associated with the current request.
-	 * @return Journal
+	 * Deprecated
+	 * @see PKPPageRouter::getContext()
 	 */
 	function &getJournal() {
-		static $journal;
-
-		if (!isset($journal)) {
-			$path = Request::getRequestedJournalPath();
-			if ($path != 'index') {
-				$journalDao =& DAORegistry::getDAO('JournalDAO');
-				$journal = $journalDao->getJournalByPath(Request::getRequestedJournalPath());
-			}
-		}
-
-		return $journal;
+		$_this =& PKPRequest::_checkThis();
+		return $_this->_delegateToRouter('getContext', 1);
 	}
 
 	/**
-	 * A Generic call to a context-defined path (e.g. a Journal or a Conference's path)
-	 * @param $contextLevel int (optional) the number of levels of context to return in the path
-	 * @return array of String (each element the path to one context element)
+	 * Deprecated
+	 * @see PKPPageRouter::getRequestedContextPath()
 	 */
 	function getRequestedContextPath($contextLevel = null) {
-		//there is only one $contextLevel, so no need to check
-		return array(Request::getRequestedJournalPath());
+		$_this =& PKPRequest::_checkThis();
+		return $_this->_delegateToRouter('getRequestedContextPath', $contextLevel);
 	}
 
 	/**
-	 * A Generic call to a context defining object (e.g. a Journal, a Conference, or a SchedConf)
-	 * @return Journal
-	 * @param $level int (optional) the desired context level
+	 * Deprecated
+	 * @see PKPPageRouter::getContext()
 	 */
 	function &getContext($level = 1) {
-		$returner = false;
-		switch ($level) {
-			case 1:
-				$returner =& Request::getJournal();
-				break;
-		}
-		return $returner;
+		$_this =& PKPRequest::_checkThis();
+		return $_this->_delegateToRouter('getContext', $level);
 	}
 
 	/**
-	 * Get the object that represents the desired context (e.g. Conference or Journal)
-	 * @param $contextName String specifying the page context
-	 * @return Journal
+	 * Deprecated
+	 * @see PKPPageRouter::getContextByName()
 	 */
 	function &getContextByName($contextName) {
-		$returner = false;
-		switch ($contextName) {
-			case 'journal':
-				$returner =& Request::getJournal();
-				break;
-		}
-		return $returner;
+		$_this =& PKPRequest::_checkThis();
+		return $_this->_delegateToRouter('getContextByName', $contextName);
 	}
 
 	/**
-	 * Build a URL into OJS.
-	 * @param $journalPath string Optional path for journal to use
-	 * @param $page string Optional name of page to invoke
-	 * @param $op string Optional name of operation to invoke
-	 * @param $path mixed Optional string or array of args to pass to handler
-	 * @param $params array Optional set of name => value pairs to pass as user parameters
-	 * @param $anchor string Optional name of anchor to add to URL
-	 * @param $escape boolean Whether or not to escape ampersands for this URL; default false.
+	 * Deprecated
+	 * @see PKPPageRouter::url()
 	 */
 	function url($journalPath = null, $page = null, $op = null, $path = null,
 			$params = null, $anchor = null, $escape = false) {
-		return parent::url(array($journalPath), $page, $op, $path, $params, $anchor, $escape);
+		$_this =& PKPRequest::_checkThis();
+		return $_this->_delegateToRouter('url', $journalPath, $page, $op, $path,
+			$params, $anchor, $escape);
 	}
 
 	/**
-	 * Redirect to user home page (or the role home page if the user has one role).
+	 * Deprecated
+	 * @see OJSPageRouter::redirectHome()
 	 */
 	function redirectHome() {
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		$user = Request::getUser();
-		$userId = $user->getId();
-
-		if ($journal =& Request::getJournal()) {
-			// The user is in the journal context, see if they have one role only
-			$roles =& $roleDao->getRolesByUserId($userId, $journal->getJournalId());
-			if(count($roles) == 1) {
-				$role = array_shift($roles);
-				if ($role->getRoleId() == ROLE_ID_READER) Request::redirect(null, 'index');
-				Request::redirect(null, $role->getRolePath());
-			} else {
-				Request::redirect(null, 'user');
-			}
-		} else {
-			// The user is at the site context, check to see if they are
-			// only registered in one place w/ one role
-			$journalDao =& DAORegistry::getDAO('JournalDAO');
-			$journals =& $journalDao->getJournals();
-			$roles = $roleDao->getRolesByUserId($userId);
-
-			if(count($roles) == 1) {
-				$role = array_shift($roles);
-				$journal = $journalDao->getJournal($role->getJournalId());
-				if (!isset($journal)) Request::redirect('index', 'user');;
-				if ($role->getRoleId() == ROLE_ID_READER) Request::redirect(null, 'index');
-				Request::redirect($journal->getPath(), $role->getRolePath());
-			} else Request::redirect('index', 'user');
-		}
+		$_this =& PKPRequest::_checkThis();
+		return $_this->_delegateToRouter('redirectHome');
 	}
 }
 

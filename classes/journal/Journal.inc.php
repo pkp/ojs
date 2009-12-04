@@ -130,7 +130,7 @@ class Journal extends DataObject {
 	}
 
 	function getJournalPageHeaderTitle($home = false) {
-		trigger_error('Deprecated function.');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedPageHeaderTitle($home);
 	}
 
@@ -149,7 +149,7 @@ class Journal extends DataObject {
 	}
 
 	function getJournalPageHeaderLogo($home = false) {
-		trigger_error('Deprecated function.');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedJournalPageHeaderLogo($home);
 	}
 	
@@ -178,7 +178,7 @@ class Journal extends DataObject {
 	}
 
 	function getJournalTitle() {
-		trigger_error('Deprecated function.');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedTitle();
 	}
 
@@ -200,7 +200,7 @@ class Journal extends DataObject {
 	}
 
 	function getJournalInitials() {
-		trigger_error('Deprecated function.');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedInitials();
 	}
 
@@ -262,7 +262,7 @@ class Journal extends DataObject {
 	}
 
 	function getJournalDescription() {
-		trigger_error('Deprecated function.');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedDescription();
 	}
 	/**

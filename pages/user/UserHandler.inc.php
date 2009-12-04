@@ -61,7 +61,7 @@ class UserHandler extends Handler {
 				$journalId = $journal->getJournalId();
 				
 				// Determine if journal setup is incomplete, to provide a message for JM
-				$setupIncomplete[$journalId] = $this->checkCompleteSetup($journal);
+				$setupIncomplete[$journalId] = $this->checkIncompleteSetup($journal);
 							
 				$roles =& $roleDao->getRolesByUserId($userId, $journalId);
 				if (!empty($roles)) {
@@ -79,7 +79,7 @@ class UserHandler extends Handler {
 			$journalId = $journal->getJournalId();
 			
 			// Determine if journal setup is incomplete, to provide a message for JM
-			$setupIncomplete[$journalId] = $this->checkCompleteSetup($journal);
+			$setupIncomplete[$journalId] = $this->checkIncompleteSetup($journal);
 			
 			$userJournals = array($journal);
 			
@@ -233,7 +233,7 @@ class UserHandler extends Handler {
 	 * @param $journal Object 
 	 * @return boolean True iff setup is incomplete
 	 */
-	function checkCompleteSetup($journal) {
+	function checkIncompleteSetup($journal) {
 		if($journal->getLocalizedInitials() == "" || $journal->getSetting('contactEmail') == "" || 
 		   $journal->getSetting('contactName') == "" || $journal->getLocalizedSetting('abbreviation') == "") {
 			return true;
