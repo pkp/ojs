@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000008.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Statistics 
+
+  * $Id$
+  -->
+
+<topic id="journal/topic/000008" locale="pt_PT" title="Estatísticas &amp; Relatórios" toc="journal/toc/000001" key="journal.managementPages.statistics">
+	<section>
+		<![CDATA[
+		<p>O Editor-Gestor tem permissão para consultar uma série de estatísticas que são geralmente consultados para monitorar o seu progresso e padrão (por exemplo, taxa de rejeição, tempo para publicação, etc.). O Editor-Gestor tem a opção de fazer algumas ou todas estas estatísticas disponiveis aos leitores. (As estatísticas serão apresentadas sob o título Estatísticas em Sobre a Revista). Em certa ocasião, o Autor será questionado para disponibilizar estas informações quando se aplicar para promoção, e isso ajuda a informar contribuidores potenciais de como está o desempenho da revista, o que dá uma imágem mais segura.</p>
+		]]>	
+		<![CDATA[<p>Estatísticas &amp; Relatórios oferece ao Editor-Gestor extrair informações sobre o histórico de uso do sistema de duas formas. Primeiro, em Estatíscas, é possível visualizar rapidamente dados estatísticos anuais sobre submissões, práticas editoriais e utilizadores. Segundo, o Editor-Gestor pode gerar alguns relatórios, especificando períodos específicos para análise.</p><p>Quatro tipos de relatórios estão disponíveis:<ul>
+			<li><strong>Relatório Geral</strong>: Relatórios sobre todas as submissões a uma revista num dado período.</li>
+			<li><strong>Relatório do Editor</strong>: Relatórios sobre as submissões, agrupadas por Editor.</li>
+			<li><strong>Relatório de Revisão</strong>: Relatórios sobre as submissões, agrupadas por Revisor.</li>
+			<li><strong>Relatório de Secção</strong>: Relatórios sobre as submissões, agrupadas por Secção.</li>
+		</ul>Estes relatórios são gerados com valores separados por vírgula (formato CSV) e deve ser utilizado software de planilha eletrónica para visualizá-los correctamente.]]>
+	</section>
+</topic>

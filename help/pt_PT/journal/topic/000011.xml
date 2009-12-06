@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000011.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users - All Users 
+
+  * $Id$
+  -->
+
+<topic id="journal/topic/000011" locale="pt_PT" title="Todos os Utilizadores" toc="journal/toc/000002" key="journal.users.allUsers">
+	<section>
+		<![CDATA[<p>Esta lista inclui todo utilizador registado no sistema de alguma forma. O Editor-Gestor tem a permissão de assumir o papel de qualquer utilizador, o que pode ser extremamente útil quando ao prestar assistência ao utilizador à distância, pois permite ao Editor-Gestor ter uma perspectiva mais precisa do problema relatado.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000006.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Review 
+
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000006" locale="pt_PT" title="Revisão" toc="editorial/toc/000004" subtoc="editorial/toc/000006" key="editorial.sectionEditorsRole.review">
+	<section>
+		<![CDATA[<p>O Editor de Secção conduz a revisão por pares da submissão, embora algumas Secções possam não usar revisão por pares (por exemplo, Revisão de Livros), e o Editor de Secção entra com uma decisão editorial para a submissão na página de Revisão.</p>]]>	
+	</section>
+</topic>

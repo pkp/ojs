@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000007.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Languages 
+
+  * $Id$
+  -->
+
+<topic id="journal/topic/000007" locale="pt_PT" title="Idiomas" toc="journal/toc/000001" key="journal.managementPages.languages">
+	<section>
+		<![CDATA[
+		<p>O sistema pode administrar revistas em vários idiomas, bem como revistas em outros idiomas para além do Inglês. Os idiomas que foram disponibilizados no sistema pelo Administrador do Sistema estão listadas sob Idiomas na página de Administração da Revista, e podem ser seleccionados para uso em cada revista, de forma independente.</p>
+		]]>	
+	</section>
+</topic>

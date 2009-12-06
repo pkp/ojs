@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000026.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Reading Tools - Settings
+
+  * $Id$
+  -->
+
+<topic id="journal/topic/000026" locale="pt_PT" title="Configurações" toc="journal/toc/000005" key="journal.managementPages.readingTools.settings">
+	<section>
+		<![CDATA[<p>O Editor-Gestor pode definir um conjunto baseado em área do conhecimento ou disciplina dentre as Ferramentas de Leitura, disponíveis ao leitor numa coluna ao lado de todos os itens de Secções indexadas (por exemplo, Artigos e não em Notícias de Eventos). O Editor-Gestor pode examinar, editar, eliminar ou incluir itens e conjuntos, acedendo a Versões, sob Ferramentas de Leitura. O Editor-Gestor também pode seleccionar um ou mais dos links genéricos opcionais como parte do conjunto de ferramentas. O Mesmo conjunto de Ferramentas de Leitura é utilizado com todos os itens de secções indexadas. Entretanto, as Ferramentas de Leitura fazem uso dos termos de indexação alimentados pelo autor para garantir que o material encontrado na base de dados disponível seja relevante. O Editor-Gestor pode alterar a Ferramenta de Leitura seleccionada a qualquer momento.</p>]]>
+	</section>
+</topic>

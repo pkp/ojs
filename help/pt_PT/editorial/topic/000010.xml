@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000010.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Review Index 
+
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000010" locale="pt_PT" title="Revisão" toc="editorial/toc/000009" subtoc="editorial/toc/000010" key="editorial.authorsRole.review">
+	<section>
+		<![CDATA[<p>O Autor esta apto a observar o progresso da submissão pelo processo de Revisão, assim como enviar versões revisadas, conforme requisitadas pelo Editor de Secção supervisionando o processo de Revisão.</p>]]>	
+	</section>
+</topic>

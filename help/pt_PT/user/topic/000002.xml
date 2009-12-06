@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - About
+
+  * $Id$
+  -->
+
+<topic id="user/topic/000002" locale="pt_PT" title="Sobre" toc="user/toc/000000" key="user.about">
+	<section>
+		<![CDATA[<p>Em Sobre a Revista, a revista apresenta as suas Políticas, procedimentos e outros materiais relevantes, com a intenção de tornar o trabalho da revsita tão transparente quanto possível. Este é o material que tipicamente é referenciado como material preliminar em revistas. É onde potencialmente os autores desta revista podem aprender sobre o Âmbito da revista, a sua Política de Revisão por Pares, e como formatar e preparar submissões, assim como submeter um artigo à revista.</p>]]>	
+	</section>
+</topic>

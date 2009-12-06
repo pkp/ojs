@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Journal Management - Management Pages - Reading Tools.
+
+  * $Id$
+  -->
+
+<toc id="journal/toc/000005" locale="pt_PT" title="Ferramentas de Leitura" parent_topic="journal/topic/000009">
+	<topic id="journal/topic/000026" title="Configurações" />
+	<topic id="journal/topic/000027" title="Versões" />
+	<topic id="journal/topic/000028" title="Contextos" />
+
+	<breadcrumb url="journal/topic/000000" title="Administração da Revista" />
+	<breadcrumb url="journal/topic/000001" title="Páginas de Administração" />
+	<breadcrumb url="journal/topic/000009" title="Ferramentas de Leitura" />
+</toc>

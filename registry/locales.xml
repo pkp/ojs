@@ -33,6 +33,7 @@
 	<locale key="nl_NL" name="Nederlands"/>
 	<locale key="no_NO" name="Norwegian"/>
 	<locale key="pt_BR" name="Português (Brasil)"/>
+        <locale key="pt_PT" name="Português"/>
 	<locale key="ru_RU" complete="false" name="Russian"/>
         <locale key="sv_SV" name="Swedish"/>
 	<locale key="tr_TR" name="Türkiye Türkçesi"/>

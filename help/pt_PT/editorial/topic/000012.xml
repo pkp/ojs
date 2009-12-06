@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000012.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Copyeditor's Role Index 
+
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000012" locale="pt_PT" title="Papel do Editor de Texto" toc="editorial/toc/000000" subtoc="editorial/toc/000012" key="editorial.copyeditorsRole">
+	<section>
+		<![CDATA[<p>O Editor de Texto recebe o pedido de Edição de Texto da submissão via e-mail, encaminhada pelo Editor de Secção, disponível para acesso na Fila de Submissões do Editor de Texto. Caso não esteja disponível para realizar a tarefa, o Editor de Texto simplesmente responde via e-mail ao Editor de Secção.</p>]]>	
+	</section>
+</topic>

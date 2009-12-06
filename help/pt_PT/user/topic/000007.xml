@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000007.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - User Home
+
+  * $Id$
+  -->
+
+<topic id="user/topic/000007" locale="pt_PT" title="Página do Utilizador" toc="user/toc/000000" key="user.userHome">
+	<section>
+		<![CDATA[<p>A Página do Utilizador aparece na barra de navegação da página, assim que o utilizador se ligou ao sistema. Lista todas as funções em que o utilizador está actualmente envolvido (por exemplo, Revisor, Autor, Leitor, etc.). Ela também inclui a Conta do Utilizador, que inclui links para outras revistas em que o utilizador está inscrito em uma ou mais funções. Minha Conta também proporciona acesso ao Perfil do Utilizadores onde informações biográficas e de contacto podem ser editadas. O utilizador também pode criar uma nova senha de acesso como parte do administração da sua conta na Página do Utilizador.</p>]]>	
+	</section>
+</topic>

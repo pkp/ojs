@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Journal Management - Management Pages. 
+
+  * $Id$
+  -->
+
+<toc id="journal/toc/000001" locale="pt_PT" title="Páginas de Administração" parent_topic="journal/topic/000001">
+	<topic id="journal/topic/000010" title="Navegador de Ficheiros" />
+	<topic id="journal/topic/000005" title="Secções" />
+	<topic id="journal/topic/000007" title="Idiomas" />
+	<topic id="journal/topic/000029" title="Equipa Editorial" />
+	<topic id="journal/topic/000006" title="E-mails" />
+	<topic id="journal/topic/000009" title="Ferramentas de Leitura" />
+	<topic id="journal/topic/000004" title="Configuração" />
+	<topic id="journal/topic/000008" title="Estatísticas &amp; Relatórios" />
+	<topic id="journal/topic/000025" title="Subscrições" />
+	<topic id="journal/topic/000034" title="Notícias" />
+	<topic id="journal/topic/000030" title="Plugins do Sistema" />
+	<topic id="journal/topic/000031" title="Importar/Exportar Dados" />
+
+	<breadcrumb url="journal/topic/000000" title="Administração das Revistas" />
+	<breadcrumb url="journal/topic/000001" title="Páginas de Administração" />
+</toc>

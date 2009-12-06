@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000022.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Author 
+
+  * $Id$
+  -->
+
+<topic id="journal/topic/000022" locale="pt_PT" title="Autores" toc="journal/toc/000003" key="journal.roles.author">
+	<section>
+		<![CDATA[<p>É permitido a Autores se registar e submeter itens à revista directamente pelo sistema Web da revista, seguindo a filosofia do auto-arquivamento dos Arquivos Abertos. O Autor envia o documento e alimenta os metadados, ou informações de indexação, sobre o item (Os metadados aumentam a capacidade de recuperação do documento em sistema de pesquisa on-line e na revista). O Autor pode enviar documentos suplementares, no formato de conjuntos de dados, instrumentos de pesquisa, ou registos textuais que enriquecem a submissão, e contribuem para formas mais transparentes e robustas de pesquisa e conhecimento. O Autor acompanha o andamento da submissão dentro do processo editorial da reivsta &mdash; bem como pode participar da Edição de Texto e Leitura de Provas das submissões aprovadas para publicação &mdash; acessando o sistema da revista, com o nome de utilizador e senha criados.</p>]]>
+	</section>
+</topic>

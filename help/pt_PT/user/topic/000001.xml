@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Home
+
+  * $Id$
+  -->
+
+<topic id="user/topic/000001" locale="pt_PT" title="Página Inicial" toc="user/toc/000000" key="user.home">
+	<section>
+		<![CDATA[<p>A Página Inicial da revista, na barra de navegação no topo da página da revista, pode ser usada pelo Editor-Gestor para exibir o Sumário da Edição corrente da revista ou a capa desta Edição. Esta pode trazer também informações sobre a revista ou notícias de eventos relacionados com revista que vão acontecer e talvez os seus patrocinadores. Os Leitores precisam apenas clicar em Actual na barra de navegação no topo da página inicial da revista e todas as outras páginas para ser direccionadas para Sumário na Edição cAtual da revista.</p>]]>
+	</section>
+</topic>
