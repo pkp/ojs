@@ -13,7 +13,7 @@
 <email_texts locale="pt_BR">
 	<email_text key="MANUAL_PAYMENT_NOTIFICATION">
 		<subject>Notificação de pagamento manual</subject>
-		<body>É necessário realizar o processamento de um pagamento manual de assinatura da revista {$journalName} do usuário {$userFullName} (username "{$userName}").
+		<body>É necessário realizar o processamento de um pagamento manual de assinatura da revista {$journalName} do usuário {$userFullName} (login "{$userName}").
 
 O item adquirido é "{$itemName}".
 O custo é {$itemCost} ({$itemCurrencyCode}).
