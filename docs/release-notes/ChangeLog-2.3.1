@@ -1,0 +1,754 @@
+2009-12-08 14:47  asmecher
+
+	* dbscripts/xml/upgrade.xml, dbscripts/xml/version.xml,
+	  docs/README, docs/dev/RELEASE, docs/release-notes/README-2.3.1:
+	  #4931# Final commits
+
+2009-12-08 13:20  asmecher
+
+	* templates/article/header.tpl: Spacing change
+
+2009-12-07 20:31  jmacgreg
+
+	* plugins/paymethod/manual/locale/pt_BR/emailTemplates.xml: #4902#
+	  misc pt_BR fixes
+
+2009-12-07 20:31  jmacgreg
+
+	* locale/pt_BR/default.xml: #4902# misc. pt_BR fixes
+
+2009-12-07 20:16  jmacgreg
+
+	* locale/it_IT/admin.xml, locale/it_IT/author.xml,
+	  locale/it_IT/editor.xml, locale/it_IT/emailTemplates.xml,
+	  locale/it_IT/locale.xml, locale/it_IT/manager.xml,
+	  plugins/auth/ldap/locale/it_IT/locale.xml: #4908# update it_IT
+	  locale
+
+2009-12-07 14:56  asmecher
+
+	* locale/de_DE/locale.xml: #4922# Removed blank key
+
+2009-12-07 11:48  asmecher
+
+	* pages/manager/PeopleHandler.inc.php: #4892# Fixed redirect after
+	  unenroll
+
+2009-12-06 14:17  jmacgreg
+
+	* plugins/: auth/ldap/locale/ru_RU/locale.xml,
+	  generic/tinymce/locale/ru_RU/locale.xml,
+	  importexport/erudit/locale/ru_RU/locale.xml,
+	  importexport/native/locale/ru_RU/locale.xml,
+	  importexport/users/locale/ru_RU/locale.xml: #4913# add ru_RU
+	  locale
+
+2009-12-06 14:15  jmacgreg
+
+	* locale/ru_RU/: admin.xml, author.xml, default.xml, editor.xml,
+	  emailTemplates.xml, locale.xml, manager.xml: #4914# add ru_RU
+	  locale
+
+2009-12-06 13:26  jmacgreg
+
+	* registry/locales.xml: #4923# add pt_PT (Português)
+
+2009-12-06 12:28  jmacgreg
+
+	* help/ca_ES/editorial/toc/000000.xml,
+	  help/ca_ES/editorial/toc/000001.xml,
+	  help/ca_ES/editorial/toc/000002.xml,
+	  help/ca_ES/editorial/toc/000003.xml,
+	  help/ca_ES/editorial/toc/000004.xml,
+	  help/ca_ES/editorial/toc/000005.xml,
+	  help/ca_ES/editorial/toc/000006.xml,
+	  help/ca_ES/editorial/toc/000007.xml,
+	  help/ca_ES/editorial/toc/000008.xml,
+	  help/ca_ES/editorial/toc/000009.xml,
+	  help/ca_ES/editorial/toc/000010.xml,
+	  help/ca_ES/editorial/toc/000011.xml,
+	  help/ca_ES/editorial/toc/000012.xml,
+	  help/ca_ES/editorial/toc/000013.xml,
+	  help/ca_ES/editorial/toc/000014.xml,
+	  help/ca_ES/editorial/topic/000000.xml,
+	  help/ca_ES/editorial/topic/000001.xml,
+	  help/ca_ES/editorial/topic/000002.xml,
+	  help/ca_ES/editorial/topic/000003.xml,
+	  help/ca_ES/editorial/topic/000004.xml,
+	  help/ca_ES/editorial/topic/000005.xml,
+	  help/ca_ES/editorial/topic/000006.xml,
+	  help/ca_ES/editorial/topic/000007.xml,
+	  help/ca_ES/editorial/topic/000008.xml,
+	  help/ca_ES/editorial/topic/000009.xml,
+	  help/ca_ES/editorial/topic/000010.xml,
+	  help/ca_ES/editorial/topic/000011.xml,
+	  help/ca_ES/editorial/topic/000012.xml,
+	  help/ca_ES/editorial/topic/000013.xml,
+	  help/ca_ES/editorial/topic/000014.xml,
+	  help/ca_ES/editorial/topic/000015.xml,
+	  help/ca_ES/editorial/topic/000016.xml,
+	  help/ca_ES/editorial/topic/000017.xml,
+	  help/ca_ES/editorial/topic/000018.xml,
+	  help/ca_ES/editorial/topic/000019.xml,
+	  help/ca_ES/editorial/topic/000020.xml,
+	  help/ca_ES/editorial/topic/000021.xml,
+	  help/ca_ES/editorial/topic/000022.xml,
+	  help/ca_ES/editorial/topic/000023.xml,
+	  help/ca_ES/editorial/topic/000024.xml,
+	  help/ca_ES/editorial/topic/000025.xml,
+	  help/ca_ES/editorial/topic/000026.xml,
+	  help/ca_ES/editorial/topic/000027.xml,
+	  help/ca_ES/editorial/topic/000028.xml,
+	  help/ca_ES/editorial/topic/000029.xml,
+	  help/ca_ES/editorial/topic/000030.xml,
+	  help/ca_ES/editorial/topic/000031.xml,
+	  help/ca_ES/editorial/topic/000032.xml,
+	  help/ca_ES/editorial/topic/000033.xml,
+	  help/ca_ES/editorial/topic/000034.xml,
+	  help/ca_ES/editorial/topic/000035.xml,
+	  help/ca_ES/editorial/topic/000036.xml,
+	  help/ca_ES/editorial/topic/000037.xml,
+	  help/ca_ES/editorial/topic/000038.xml,
+	  help/ca_ES/editorial/topic/000039.xml,
+	  help/ca_ES/editorial/topic/000040.xml,
+	  help/ca_ES/editorial/topic/000041.xml,
+	  help/ca_ES/editorial/topic/000042.xml,
+	  help/ca_ES/editorial/topic/000043.xml,
+	  help/ca_ES/editorial/topic/000044.xml,
+	  help/ca_ES/index/toc/000000.xml,
+	  help/ca_ES/index/topic/000000.xml,
+	  help/ca_ES/intro/toc/000000.xml,
+	  help/ca_ES/intro/topic/000000.xml,
+	  help/ca_ES/intro/topic/000001.xml,
+	  help/ca_ES/journal/toc/000000.xml,
+	  help/ca_ES/journal/toc/000001.xml,
+	  help/ca_ES/journal/toc/000002.xml,
+	  help/ca_ES/journal/toc/000003.xml,
+	  help/ca_ES/journal/toc/000005.xml,
+	  help/ca_ES/journal/topic/000000.xml,
+	  help/ca_ES/journal/topic/000001.xml,
+	  help/ca_ES/journal/topic/000002.xml,
+	  help/ca_ES/journal/topic/000003.xml,
+	  help/ca_ES/journal/topic/000004.xml,
+	  help/ca_ES/journal/topic/000005.xml,
+	  help/ca_ES/journal/topic/000006.xml,
+	  help/ca_ES/journal/topic/000007.xml,
+	  help/ca_ES/journal/topic/000008.xml,
+	  help/ca_ES/journal/topic/000009.xml,
+	  help/ca_ES/journal/topic/000010.xml,
+	  help/ca_ES/journal/topic/000011.xml,
+	  help/ca_ES/journal/topic/000012.xml,
+	  help/ca_ES/journal/topic/000013.xml,
+	  help/ca_ES/journal/topic/000014.xml,
+	  help/ca_ES/journal/topic/000015.xml,
+	  help/ca_ES/journal/topic/000016.xml,
+	  help/ca_ES/journal/topic/000017.xml,
+	  help/ca_ES/journal/topic/000018.xml,
+	  help/ca_ES/journal/topic/000019.xml,
+	  help/ca_ES/journal/topic/000020.xml,
+	  help/ca_ES/journal/topic/000021.xml,
+	  help/ca_ES/journal/topic/000022.xml,
+	  help/ca_ES/journal/topic/000023.xml,
+	  help/ca_ES/journal/topic/000025.xml,
+	  help/ca_ES/journal/topic/000026.xml,
+	  help/ca_ES/journal/topic/000027.xml,
+	  help/ca_ES/journal/topic/000028.xml,
+	  help/ca_ES/journal/topic/000029.xml,
+	  help/ca_ES/journal/topic/000030.xml,
+	  help/ca_ES/journal/topic/000031.xml,
+	  help/ca_ES/journal/topic/000032.xml,
+	  help/ca_ES/journal/topic/000033.xml,
+	  help/ca_ES/journal/topic/000034.xml,
+	  help/ca_ES/journal/topic/000035.xml,
+	  help/ca_ES/journal/topic/000036.xml,
+	  help/ca_ES/publishing/toc/000000.xml,
+	  help/ca_ES/publishing/topic/000000.xml,
+	  help/ca_ES/publishing/topic/000001.xml,
+	  help/ca_ES/publishing/topic/000002.xml,
+	  help/ca_ES/publishing/topic/000003.xml,
+	  help/ca_ES/publishing/topic/000004.xml,
+	  help/ca_ES/site/toc/000000.xml, help/ca_ES/site/topic/000000.xml,
+	  help/ca_ES/site/topic/000001.xml,
+	  help/ca_ES/site/topic/000002.xml,
+	  help/ca_ES/site/topic/000003.xml,
+	  help/ca_ES/submission/toc/000000.xml,
+	  help/ca_ES/submission/topic/000000.xml,
+	  help/ca_ES/submission/topic/000001.xml,
+	  help/ca_ES/submission/topic/000002.xml,
+	  help/ca_ES/submission/topic/000003.xml,
+	  help/ca_ES/submission/topic/000004.xml,
+	  help/ca_ES/user/toc/000000.xml, help/ca_ES/user/topic/000000.xml,
+	  help/ca_ES/user/topic/000001.xml,
+	  help/ca_ES/user/topic/000002.xml,
+	  help/ca_ES/user/topic/000003.xml,
+	  help/ca_ES/user/topic/000004.xml,
+	  help/ca_ES/user/topic/000005.xml,
+	  help/ca_ES/user/topic/000006.xml,
+	  help/ca_ES/user/topic/000007.xml,
+	  plugins/generic/translator/help/eu_ES/TranslatorPlugin/toc/000000.xml,
+	  plugins/generic/translator/help/eu_ES/TranslatorPlugin/topic/000000.xml,
+	  rt/ca_ES/Generic.xml, rt/ca_ES/Social_Sciences.xml: #4928# minor
+	  DTD fixes
+
+2009-12-04 14:38  asmecher
+
+	* pages/editor/EditorHandler.inc.php,
+	  templates/editor/selectSectionEditor.tpl: #4799# Fixed redirect
+
+2009-12-04 14:02  asmecher
+
+	* pages/manager/PeopleHandler.inc.php: #4863# Fixed mistaken func
+	  name change
+
+2009-12-04 12:20  asmecher
+
+	* classes/: payment/Payment.inc.php,
+	  payment/PaymentManager.inc.php, plugins/BlockPlugin.inc.php,
+	  plugins/CitationPlugin.inc.php,
+	  subscription/Subscription.inc.php,
+	  subscription/SubscriptionDAO.inc.php: #4925# Consistency of
+	  abstract class fails
+
+2009-12-03 15:11  jmacgreg
+
+	* dbscripts/xml/data/locale/it_IT/email_templates_data.xml,
+	  locale/it_IT/locale.xml,
+	  plugins/auth/ldap/locale/it_IT/locale.xml,
+	  plugins/blocks/developedBy/locale/it_IT/locale.xml,
+	  plugins/blocks/donation/locale/it_IT/locale.xml,
+	  plugins/blocks/fontSize/locale/it_IT/locale.xml,
+	  plugins/blocks/help/locale/it_IT/locale.xml,
+	  plugins/blocks/information/locale/it_IT/locale.xml,
+	  plugins/blocks/languageToggle/locale/it_IT/locale.xml,
+	  plugins/blocks/navigation/locale/it_IT/locale.xml,
+	  plugins/blocks/role/locale/it_IT/locale.xml,
+	  plugins/blocks/subscription/locale/it_IT/locale.xml,
+	  plugins/blocks/user/locale/it_IT/locale.xml,
+	  plugins/generic/announcementFeed/locale/it_IT/locale.xml,
+	  plugins/generic/coins/locale/it_IT/locale.xml,
+	  plugins/generic/counter/locale/it_IT/locale.xml,
+	  plugins/generic/customLocale/locale/it_IT/locale.xml,
+	  plugins/generic/openAds/locale/it_IT/locale.xml,
+	  plugins/generic/staticPages/locale/it_IT/locale.xml,
+	  plugins/generic/thesis/locale/it_IT/locale.xml,
+	  plugins/generic/thesisFeed/locale/it_IT/locale.xml,
+	  plugins/importexport/erudit/locale/it_IT/locale.xml: #4908#
+	  updates to it_IT locale
+
+2009-12-03 11:50  jmacgreg
+
+	* rt/ca_ES/: Generic.xml, Social_Sciences.xml: #4720# add ca_ES
+	  help and rt translations
+
+2009-12-03 11:47  jmacgreg
+
+	* plugins/generic/translator/help/eu_ES/TranslatorPlugin/:
+	  toc/000000.xml, topic/000000.xml: #4720# add ca_ES help and rt
+	  translations
+
+2009-12-03 11:41  jmacgreg
+
+	* help/ca_ES/: editorial/toc/000000.xml, editorial/toc/000001.xml,
+	  editorial/toc/000002.xml, editorial/toc/000003.xml,
+	  editorial/toc/000004.xml, editorial/toc/000005.xml,
+	  editorial/toc/000006.xml, editorial/toc/000007.xml,
+	  editorial/toc/000008.xml, editorial/toc/000009.xml,
+	  editorial/toc/000010.xml, editorial/toc/000011.xml,
+	  editorial/toc/000012.xml, editorial/toc/000013.xml,
+	  editorial/toc/000014.xml, editorial/topic/000000.xml,
+	  editorial/topic/000001.xml, editorial/topic/000002.xml,
+	  editorial/topic/000003.xml, editorial/topic/000004.xml,
+	  editorial/topic/000005.xml, editorial/topic/000006.xml,
+	  editorial/topic/000007.xml, editorial/topic/000008.xml,
+	  editorial/topic/000009.xml, editorial/topic/000010.xml,
+	  editorial/topic/000011.xml, editorial/topic/000012.xml,
+	  editorial/topic/000013.xml, editorial/topic/000014.xml,
+	  editorial/topic/000015.xml, editorial/topic/000016.xml,
+	  editorial/topic/000017.xml, editorial/topic/000018.xml,
+	  editorial/topic/000019.xml, editorial/topic/000020.xml,
+	  editorial/topic/000021.xml, editorial/topic/000022.xml,
+	  editorial/topic/000023.xml, editorial/topic/000024.xml,
+	  editorial/topic/000025.xml, editorial/topic/000026.xml,
+	  editorial/topic/000027.xml, editorial/topic/000028.xml,
+	  editorial/topic/000029.xml, editorial/topic/000030.xml,
+	  editorial/topic/000031.xml, editorial/topic/000032.xml,
+	  editorial/topic/000033.xml, editorial/topic/000034.xml,
+	  editorial/topic/000035.xml, editorial/topic/000036.xml,
+	  editorial/topic/000037.xml, editorial/topic/000038.xml,
+	  editorial/topic/000039.xml, editorial/topic/000040.xml,
+	  editorial/topic/000041.xml, editorial/topic/000042.xml,
+	  editorial/topic/000043.xml, editorial/topic/000044.xml,
+	  index/toc/000000.xml, index/topic/000000.xml,
+	  intro/toc/000000.xml, intro/topic/000000.xml,
+	  intro/topic/000001.xml, journal/toc/000000.xml,
+	  journal/toc/000001.xml, journal/toc/000002.xml,
+	  journal/toc/000003.xml, journal/toc/000005.xml,
+	  journal/topic/000000.xml, journal/topic/000001.xml,
+	  journal/topic/000002.xml, journal/topic/000003.xml,
+	  journal/topic/000004.xml, journal/topic/000005.xml,
+	  journal/topic/000006.xml, journal/topic/000007.xml,
+	  journal/topic/000008.xml, journal/topic/000009.xml,
+	  journal/topic/000010.xml, journal/topic/000011.xml,
+	  journal/topic/000012.xml, journal/topic/000013.xml,
+	  journal/topic/000014.xml, journal/topic/000015.xml,
+	  journal/topic/000016.xml, journal/topic/000017.xml,
+	  journal/topic/000018.xml, journal/topic/000019.xml,
+	  journal/topic/000020.xml, journal/topic/000021.xml,
+	  journal/topic/000022.xml, journal/topic/000023.xml,
+	  journal/topic/000025.xml, journal/topic/000026.xml,
+	  journal/topic/000027.xml, journal/topic/000028.xml,
+	  journal/topic/000029.xml, journal/topic/000030.xml,
+	  journal/topic/000031.xml, journal/topic/000032.xml,
+	  journal/topic/000033.xml, journal/topic/000034.xml,
+	  journal/topic/000035.xml, journal/topic/000036.xml,
+	  publishing/toc/000000.xml, publishing/topic/000000.xml,
+	  publishing/topic/000001.xml, publishing/topic/000002.xml,
+	  publishing/topic/000003.xml, publishing/topic/000004.xml,
+	  site/toc/000000.xml, site/topic/000000.xml,
+	  site/topic/000001.xml, site/topic/000002.xml,
+	  site/topic/000003.xml, submission/toc/000000.xml,
+	  submission/topic/000000.xml, submission/topic/000001.xml,
+	  submission/topic/000002.xml, submission/topic/000003.xml,
+	  submission/topic/000004.xml, user/toc/000000.xml,
+	  user/topic/000000.xml, user/topic/000001.xml,
+	  user/topic/000002.xml, user/topic/000003.xml,
+	  user/topic/000004.xml, user/topic/000005.xml,
+	  user/topic/000006.xml, user/topic/000007.xml: #4720# add ca_ES
+	  help and rt translations
+
+2009-12-03 11:36  jmacgreg
+
+	*
+	  plugins/generic/translator/help/eu_ES/TranslatorPlugin/toc/000000.xml,
+	  plugins/generic/translator/help/eu_ES/TranslatorPlugin/topic/000000.xml,
+	  rt/ca_ES/Generic.xml, rt/ca_ES/Social_Sciences.xml: #4720# add
+	  ca_ES help and rt translations
+
+2009-12-03 11:33  jmacgreg
+
+	* help/ca_ES/: editorial/toc/000000.xml, editorial/toc/000001.xml,
+	  editorial/toc/000002.xml, editorial/toc/000003.xml,
+	  editorial/toc/000004.xml, editorial/toc/000005.xml,
+	  editorial/toc/000006.xml, editorial/toc/000007.xml,
+	  editorial/toc/000008.xml, editorial/toc/000009.xml,
+	  editorial/toc/000010.xml, editorial/toc/000011.xml,
+	  editorial/toc/000012.xml, editorial/toc/000013.xml,
+	  editorial/toc/000014.xml, editorial/topic/000000.xml,
+	  editorial/topic/000001.xml, editorial/topic/000002.xml,
+	  editorial/topic/000003.xml, editorial/topic/000004.xml,
+	  editorial/topic/000005.xml, editorial/topic/000006.xml,
+	  editorial/topic/000007.xml, editorial/topic/000008.xml,
+	  editorial/topic/000009.xml, editorial/topic/000010.xml,
+	  editorial/topic/000011.xml, editorial/topic/000012.xml,
+	  editorial/topic/000013.xml, editorial/topic/000014.xml,
+	  editorial/topic/000015.xml, editorial/topic/000016.xml,
+	  editorial/topic/000017.xml, editorial/topic/000018.xml,
+	  editorial/topic/000019.xml, editorial/topic/000020.xml,
+	  editorial/topic/000021.xml, editorial/topic/000022.xml,
+	  editorial/topic/000023.xml, editorial/topic/000024.xml,
+	  editorial/topic/000025.xml, editorial/topic/000026.xml,
+	  editorial/topic/000027.xml, editorial/topic/000028.xml,
+	  editorial/topic/000029.xml, editorial/topic/000030.xml,
+	  editorial/topic/000031.xml, editorial/topic/000032.xml,
+	  editorial/topic/000033.xml, editorial/topic/000034.xml,
+	  editorial/topic/000035.xml, editorial/topic/000036.xml,
+	  editorial/topic/000037.xml, editorial/topic/000038.xml,
+	  editorial/topic/000039.xml, editorial/topic/000040.xml,
+	  editorial/topic/000041.xml, editorial/topic/000042.xml,
+	  editorial/topic/000043.xml, editorial/topic/000044.xml,
+	  index/toc/000000.xml, index/topic/000000.xml,
+	  intro/toc/000000.xml, intro/topic/000000.xml,
+	  intro/topic/000001.xml, journal/toc/000000.xml,
+	  journal/toc/000001.xml, journal/toc/000002.xml,
+	  journal/toc/000003.xml, journal/toc/000005.xml,
+	  journal/topic/000000.xml, journal/topic/000001.xml,
+	  journal/topic/000002.xml, journal/topic/000003.xml,
+	  journal/topic/000004.xml, journal/topic/000005.xml,
+	  journal/topic/000006.xml, journal/topic/000007.xml,
+	  journal/topic/000008.xml, journal/topic/000009.xml,
+	  journal/topic/000010.xml, journal/topic/000011.xml,
+	  journal/topic/000012.xml, journal/topic/000013.xml,
+	  journal/topic/000014.xml, journal/topic/000015.xml,
+	  journal/topic/000016.xml, journal/topic/000017.xml,
+	  journal/topic/000018.xml, journal/topic/000019.xml,
+	  journal/topic/000020.xml, journal/topic/000021.xml,
+	  journal/topic/000022.xml, journal/topic/000023.xml,
+	  journal/topic/000025.xml, journal/topic/000026.xml,
+	  journal/topic/000027.xml, journal/topic/000028.xml,
+	  journal/topic/000029.xml, journal/topic/000030.xml,
+	  journal/topic/000031.xml, journal/topic/000032.xml,
+	  journal/topic/000033.xml, journal/topic/000034.xml,
+	  journal/topic/000035.xml, journal/topic/000036.xml,
+	  publishing/toc/000000.xml, publishing/topic/000000.xml,
+	  publishing/topic/000001.xml, publishing/topic/000002.xml,
+	  publishing/topic/000003.xml, publishing/topic/000004.xml,
+	  site/toc/000000.xml, site/topic/000000.xml,
+	  site/topic/000001.xml, site/topic/000002.xml,
+	  site/topic/000003.xml, submission/toc/000000.xml,
+	  submission/topic/000000.xml, submission/topic/000001.xml,
+	  submission/topic/000002.xml, submission/topic/000003.xml,
+	  submission/topic/000004.xml, user/toc/000000.xml,
+	  user/topic/000000.xml, user/topic/000001.xml,
+	  user/topic/000002.xml, user/topic/000003.xml,
+	  user/topic/000004.xml, user/topic/000005.xml,
+	  user/topic/000006.xml, user/topic/000007.xml: #4720# add ca_ES
+	  help and rt translation
+
+2009-12-02 22:37  jmacgreg
+
+	* plugins/: generic/customBlockManager/locale/de_DE/locale.xml,
+	  generic/thesis/locale/de_DE/emailTemplates.xml,
+	  importexport/doaj/locale/de_DE/emailTemplates.xml,
+	  paymethod/manual/locale/de_DE/emailTemplates.xml,
+	  paymethod/paypal/locale/de_DE/emailTemplates.xml: #4920# minor
+	  de_DE updates
+
+2009-12-02 14:24  jerico.dev
+
+	* tools/bootstrap.inc.php: #4919# cannot install applications -
+	  patched further occurrences of __FILE__ in lib/pkp
+
+2009-12-01 22:38  jerico.dev
+
+	* .gitignore, config.TEMPLATE.inc.php, index.php,
+	  classes/article/Article.inc.php,
+	  classes/core/OJSApplication.inc.php,
+	  classes/core/OJSPageRouter.inc.php, classes/core/Request.inc.php,
+	  classes/issue/Issue.inc.php, classes/journal/Journal.inc.php,
+	  classes/journal/Section.inc.php, tools/bootstrap.inc.php,
+	  tools/dbXMLtoSQL.php, tools/deleteSubmissions.php,
+	  tools/genTestLocale.php, tools/importExport.php,
+	  tools/install.php, tools/mergeUsers.php, tools/poToCountries.php,
+	  tools/poToCurrencies.php, tools/rebuildSearchIndex.php,
+	  tools/runScheduledTasks.php, tools/upgrade.php: #4870# new
+	  router/dispatcher architecture, config parameter to switch off
+	  deprecation warnings
+
+2009-12-01 10:54  asmecher
+
+	* pages/user/UserHandler.inc.php: #4842# Fixed misleading function
+	  name
+
+2009-12-01 09:07  asmecher
+
+	* pages/manager/: ReviewFormHandler.inc.php,
+	  SectionHandler.inc.php: #4855# Fixed locale loading before form
+	  error translation
+
+2009-11-30 16:06  asmecher
+
+	* classes/author/form/submit/: AuthorSubmitStep2Form.inc.php,
+	  AuthorSubmitStep3Form.inc.php: #4856# Fixed reference glitch
+
+2009-11-30 09:29  asmecher
+
+	* plugins/importexport/native/articles.tpl: #4912# Fixed function
+	  call typo
+
+2009-11-28 16:22  michael
+
+	* pages/subscriptionManager/SubscriptionManagerHandler.inc.php:
+	  #4896# User name auto generate returning XML instead of user name
+	  suggestion
+
+2009-11-28 14:47  michael
+
+	* plugins/generic/customLocale/CustomLocaleHandler.inc.php: #4882#
+	  Error saving in the customLocalePlugin
+
+2009-11-19 16:47  mcrider
+
+	* templates/manager/people/userProfileForm.tpl: #4881# User
+	  affiliation doesn't appear in JM's profile editing form
+
+2009-11-19 16:30  mcrider
+
+	* pages/layoutEditor/SubmissionLayoutHandler.inc.php: #4871#
+	  Ensured journal and submission are passed by reference
+
+2009-11-19 06:51  asmecher
+
+	* config.TEMPLATE.inc.php,
+	  classes/article/ArticleGalleyDAO.inc.php,
+	  classes/oai/ojs/JournalOAI.inc.php,
+	  classes/oai/ojs/OAIDAO.inc.php,
+	  plugins/oaiMetadataFormats/nlm/OAIMetadataFormatPlugin_NLM.inc.php,
+	  plugins/oaiMetadataFormats/nlm/OAIMetadataFormat_NLM.inc.php,
+	  plugins/oaiMetadataFormats/nlm/index.php,
+	  plugins/oaiMetadataFormats/nlm/version.xml,
+	  plugins/oaiMetadataFormats/nlm/locale/en_US/locale.xml: #4212#
+	  Add OAI NLM support
+
+2009-11-19 05:42  asmecher
+
+	* registry/inlineTypes.txt: #4886# Added image/pjpeg to inlineable
+
+2009-11-19 03:52  asmecher
+
+	* dbscripts/xml/install.xml, dbscripts/xml/upgrade.xml,
+	  dbscripts/xml/version.xml,
+	  dbscripts/xml/data/locale/te_ST/email_templates_data.xml,
+	  docs/ChangeLog, docs/RELEASE, docs/release-notes/ChangeLog-2.2.4,
+	  docs/release-notes/README-2.2.4: #4885# Final commits for 2.2.4
+
+2009-11-19 02:43  asmecher
+
+	* classes/core/String.inc.php: Spacing changes
+
+2009-11-13 14:30  mcrider
+
+	* classes/submission/author/AuthorAction.inc.php,
+	  classes/submission/copyeditor/CopyeditorAction.inc.php,
+	  classes/submission/layoutEditor/LayoutEditorAction.inc.php,
+	  pages/layoutEditor/SubmissionLayoutHandler.inc.php: #4871# Fixed
+	  issues downloading certain editing submissions
+
+2009-11-13 13:54  rcy
+
+	* pages/editor/IssueManagementHandler.inc.php,
+	  plugins/generic/jquery/JQueryPlugin.inc.php,
+	  plugins/generic/jquery/scripts/tablednd.js,
+	  templates/editor/issues/backIssues.tpl,
+	  classes/issue/IssueDAO.inc.php: #4838# Allow journal issues to be
+	  sortable by drag 'n' drop
+
+2009-11-13 10:54  asmecher
+
+	* plugins/generic/staticPages/editStaticPageForm.tpl: #4708#
+	  Additional fix for path_info disabled
+
+2009-11-13 10:46  asmecher
+
+	* pages/copyeditor/SubmissionCopyeditHandler.inc.php: #4875# Fixed
+	  missing locale load
+
+2009-11-13 10:18  asmecher
+
+	* templates/manager/reviewForms/reviewFormElementForm.tpl: #4872#
+	  Fixed jump-to for adding elements
+
+2009-11-10 20:20  jerico.dev
+
+	* config.TEMPLATE.inc.php,
+	  plugins/generic/translator/TranslatorAction.inc.php,
+	  plugins/generic/translator/TranslatorHandler.inc.php,
+	  plugins/generic/translator/index.tpl,
+	  plugins/generic/translator/locale/en_US/locale.xml: #4847# Add
+	  tar configuration parameter to config.inc.php
+
+2009-11-04 17:15  mcrider
+
+	* dbscripts/xml/upgrade/2.3.0_update.xml: #4812# Version history is
+	  wrong after upgrade
+
+2009-11-03 12:31  michael
+
+	* .cvsignore: Add Eclipse settings files
+
+2009-10-30 17:14  asmecher
+
+	* classes/install/Install.inc.php, classes/install/Upgrade.inc.php,
+	  classes/submission/author/AuthorAction.inc.php,
+	  dbscripts/xml/install.xml, dbscripts/xml/upgrade.xml,
+	  dbscripts/xml/version.xml: #4854# Install/upgrade issues #4851#
+	  Author download issues
+
+2009-10-30 16:08  asmecher
+
+	* pages/admin/AdminSettingsHandler.inc.php: #4476# Fixed site admin
+	  images upload
+
+2009-10-30 09:58  asmecher
+
+	* dbscripts/xml/upgrade.xml: #4852# Fixed upgrade script
+
+2009-10-27 15:38  asmecher
+
+	* plugins/importexport/crossref/: CrossRefExportDom.inc.php,
+	  README: #4803# Updated schema support
+
+2009-10-27 15:33  asmecher
+
+	* plugins/importexport/crossref/: CrossRefExportDom.inc.php,
+	  CrossRefExportPlugin.inc.php, README, index.tpl, issues.tpl,
+	  version.xml: #4803# Updated CrossRef support
+
+2009-10-27 14:58  jerico.dev
+
+	* includes/functions.inc.php: #4815# Port PHPUnit testing framework
+	  from 2.2.3 to 2.3 WAL (basic framework for database tests and
+	  context-free unit tests)
+
+2009-10-27 12:10  asmecher
+
+	* templates/user/index.tpl: #2280# Remove superfluous heading
+
+2009-10-26 14:52  asmecher
+
+	* classes/sectionEditor/form/CreateReviewerForm.inc.php: #4783#
+	  Fixed missing gender options
+
+2009-10-26 09:41  asmecher
+
+	* plugins/generic/:
+	  announcementFeed/AnnouncementFeedGatewayPlugin.inc.php,
+	  announcementFeed/AnnouncementFeedPlugin.inc.php,
+	  announcementFeed/templates/atom.tpl,
+	  thesisFeed/templates/atom.tpl: #4835# Fixed feed bugs
+
+2009-10-23 09:48  asmecher
+
+	* classes/article/PublishedArticleDAO.inc.php: #4779# Fixed public
+	  article ID glitch
+
+2009-10-23 09:48  asmecher
+
+	* classes/article/PublishedArticleDAO.inc.php: #4779# Fixed public
+	  article glitch
+
+2009-10-19 07:46  asmecher
+
+	* dbscripts/xml/upgrade/2.3.0_preupdate.xml: #4828# Fixed upgrade
+
+2009-10-18 11:06  asmecher
+
+	* plugins/generic/tinymce/TinyMCEPlugin.inc.php: #4829# Fixed
+	  profile save TinyMCE enable glitch
+
+2009-10-18 10:22  asmecher
+
+	* tools/test/: build.xml, testing.TEMPLATE.properties,
+	  lib/commons-codec-1.3.jar, lib/commons-collections-3.2.jar,
+	  lib/commons-httpclient-3.0.1.jar, lib/commons-io-1.3.jar,
+	  lib/commons-lang-2.2.jar, lib/commons-logging-1.1.jar,
+	  lib/htmlunit-1.11.jar, lib/httpunit.jar, lib/jaxen-1.1.jar,
+	  lib/js-1.6R5.jar, lib/junit-3.8.2.jar,
+	  lib/jwebunit-core-1.4.1.jar,
+	  lib/jwebunit-htmlunit-plugin-1.4.1.jar, lib/nekohtml-0.9.5.jar,
+	  lib/regexp-1.3.jar, lib/servlet-api-2.4.jar,
+	  lib/xercesImpl-2.6.2.jar, lib/xml-apis-1.3.02.jar,
+	  src/org/pkp/ojs/AllTests.java,
+	  src/org/pkp/ojs/BaseUrlExists.java,
+	  src/org/pkp/ojs/CleanupTests.java,
+	  src/org/pkp/ojs/CreateTestJournal.java,
+	  src/org/pkp/ojs/DoInstall.java,
+	  src/org/pkp/ojs/FreshInstallTests.java,
+	  src/org/pkp/ojs/OJSTestCase.java: #1881# Removed JUnit testing.
+
+2009-10-17 11:32  rcy
+
+	* plugins/generic/customBlockManager/locale/en_US/locale.xml:
+	  #4831# Small typo fix
+
+2009-10-16 18:05  asmecher
+
+	* classes/submission/copyeditor/CopyeditorAction.inc.php: #4827#
+	  Fixed copyeditor download error
+
+2009-10-16 17:59  asmecher
+
+	* dbscripts/xml/upgrade/2.3.0_preupdate.xml: #4828# Fixed upgrade
+	  bug
+
+2009-10-14 17:35  asmecher
+
+	* classes/submission/sectionEditor/SectionEditorAction.inc.php:
+	  #4819# Fixed decision check
+
+2009-10-14 15:16  asmecher
+
+	* templates/subscription/: individualSubscriptions.tpl,
+	  institutionalSubscriptions.tpl: #4824# Fixed email redirect
+
+2009-10-14 15:03  mcrider
+
+	* pages/manager/PluginManagementHandler.inc.php: #4810# Plugin
+	  Installation Fails
+
+2009-10-14 13:48  rcy
+
+	* plugins/importexport/native/: NativeExportDom.inc.php,
+	  native.dtd: #4200# Include article and issue id when exporting
+
+2009-10-14 08:58  asmecher
+
+	* pages/article/ArticleHandler.inc.php: #4821# Fixed validation bug
+
+2009-10-13 21:06  michael
+
+	* plugins/generic/externalFeed/: ExternalFeed.inc.php,
+	  ExternalFeedBlockPlugin.inc.php, ExternalFeedDAO.inc.php,
+	  ExternalFeedForm.inc.php, ExternalFeedPlugin.inc.php,
+	  ExternalFeedSettingsForm.inc.php, block.tpl, externalFeed.css,
+	  externalFeedForm.tpl, externalFeeds.tpl, index.php, schema.xml,
+	  settingsForm.tpl, version.xml, locale/en_US/locale.xml,
+	  simplepie/SimplePie.inc.php: #4820# Add external RSS feed plugin
+
+2009-10-13 20:46  michael
+
+	* plugins/generic/externalFeed/: ExternalFeed.inc.php,
+	  ExternalFeedBlockPlugin.inc.php, ExternalFeedDAO.inc.php,
+	  ExternalFeedForm.inc.php, ExternalFeedPlugin.inc.php,
+	  ExternalFeedSettingsForm.inc.php, block.tpl, externalFeed.css,
+	  externalFeedForm.tpl, externalFeeds.tpl, index.php, schema.xml,
+	  settingsForm.tpl, version.xml, locale/en_US/locale.xml,
+	  simplepie/SimplePie.inc.php: #4820# Add external RSS feed plugin
+
+2009-10-13 14:34  jerico.dev
+
+	* plugins/generic/customBlockManager/locale/pt_BR/locale.xml:
+	  #4804# Missing pt_BR translations
+
+2009-10-13 10:32  jerico.dev
+
+	* .cvsignore: #4358# Resolve incompatibilities with upstream
+	  Smarty: add folders required for patch management via quilt to
+	  .cvsignore
+
+2009-10-13 10:28  jerico.dev
+
+	* test/OjsBaseTestCase.php, test/OjsTestCase.php,
+	  test/OjsWebTest.php, test/config.mysql.inc.php,
+	  test/config.pgsql.inc.php, test/phpunit.php,
+	  test/classes/config/ConfigTest.php,
+	  test/classes/db/DBConnectionTest.php,
+	  test/lib/adodb/ADOConnectionTest.php,
+	  test/lib/adodb/ADOConnectionTest.setUp.xml,
+	  test/lib/adodb/ADOConnectionTest.tearDown.xml,
+	  test/lib/adodb/ADODB_DataDictTest.php,
+	  test/lib/adodb/adoSchemaTest.php,
+	  test/lib/adodb/datadict/ADODB2_postgresTest.php,
+	  tests/OjsBaseTestCase.php, tests/OjsTestCase.php,
+	  tests/OjsWebTest.php, tests/config.mysql.inc.php,
+	  tests/config.pgsql.inc.php, tests/phpunit.php,
+	  tests/lib/adodb/ADOConnectionTest.php,
+	  tests/lib/adodb/ADOConnectionTest.setUp.xml,
+	  tests/lib/adodb/ADOConnectionTest.tearDown.xml,
+	  tests/lib/adodb/ADODB_DataDictTest.php,
+	  tests/lib/adodb/adoSchemaTest.php,
+	  tests/lib/adodb/datadict/ADODB2_postgresTest.php,
+	  tests/classes/config/ConfigTest.php,
+	  tests/classes/db/DBConnectionTest.php: #4815# Port PHPUnit
+	  testing framework from 2.2.3 to 2.3 WAL: preparations in debian
+	  branch
+
+2009-10-09 10:18  asmecher
+
+	* plugins/generic/staticPages/: README, StaticPage.inc.php,
+	  StaticPagesDAO.inc.php, StaticPagesEditForm.inc.php,
+	  StaticPagesHandler.inc.php, StaticPagesPlugin.inc.php,
+	  StaticPagesSettingsForm.inc.php, editStaticPageForm.tpl,
+	  index.php: #4806# Spacing
+
+2009-10-09 10:07  asmecher
+
+	* plugins/generic/staticPages/: StaticPagesEditForm.inc.php,
+	  StaticPagesPlugin.inc.php, content.tpl, editStaticPageForm.tpl,
+	  settingsForm.tpl, locale/cs_CZ/locale.xml,
+	  locale/de_DE/locale.xml, locale/el_GR/locale.xml,
+	  locale/en_US/locale.xml, locale/es_ES/locale.xml,
+	  locale/fa_IR/locale.xml, locale/fr_CA/locale.xml,
+	  locale/it_IT/locale.xml, locale/ja_JP/locale.xml,
+	  locale/pt_BR/locale.xml: #4708# Fixed Static Pages / path_info
+	  disable glitches
+
