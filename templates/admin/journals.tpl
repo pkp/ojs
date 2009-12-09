@@ -51,6 +51,9 @@ $(document).ready(function() { setupTableDND("#adminJournals", "moveJournal"); }
 	</tr>
 	{else}
 		<tr>
+			<td colspan="4" class="endseparator">&nbsp;</td>
+		</tr>
+		<tr>
 			<td colspan="2" align="left">{page_info iterator=$journals}</td>
 			<td colspan="2" align="right">{page_links anchor="journals" name="journals" iterator=$journals}</td>
 		</tr>
