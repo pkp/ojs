@@ -40,7 +40,7 @@ class OJSApplication extends PKPApplication {
 		$dispatcher =& parent::getDispatcher();
 
 		// Inject application-specific configuration
-		$dispatcher->addRouterName('core.OJSPageRouter', 'page');
+		$dispatcher->addRouterName('core.OJSPageRouter', ROUTE_PAGE);
 		return $dispatcher;
 	}
 
