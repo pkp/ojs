@@ -48,7 +48,8 @@ switch ($op) {
 		define('HANDLER_CLASS', 'SubmissionCommentsHandler');
 		import('pages.proofreader.SubmissionCommentsHandler');
 		break;
-	default:	
+	case 'index':
+	case 'instructions':
 		define('HANDLER_CLASS', 'ProofreaderHandler');
 		import('pages.proofreader.ProofreaderHandler');
 }

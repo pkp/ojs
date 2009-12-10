@@ -18,8 +18,11 @@
 // $Id$
 
 
-define('HANDLER_CLASS', 'PaymentHandler');
-
-import('pages.payment.PaymentHandler');
+switch ($op) {
+	case 'plugin':
+		define('HANDLER_CLASS', 'PaymentHandler');
+		import('pages.payment.PaymentHandler');
+		break;
+}
 
 ?>

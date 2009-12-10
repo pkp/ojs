@@ -18,8 +18,17 @@
 // $Id$
 
 
-define('HANDLER_CLASS', 'SearchHandler');
-
-import('pages.search.SearchHandler');
+switch ($op) {
+	case 'index':
+	case 'search':
+	case 'advanced':
+	case 'authors':
+	case 'titles':
+	case 'results':
+	case 'advancedResults':
+		define('HANDLER_CLASS', 'SearchHandler');
+		import('pages.search.SearchHandler');
+		break;
+}
 
 ?>

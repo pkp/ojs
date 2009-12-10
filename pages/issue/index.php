@@ -18,8 +18,13 @@
 // $Id$
 
 
-define('HANDLER_CLASS', 'IssueHandler');
-
-import('pages.issue.IssueHandler');
+switch ($op) {
+	case 'index':
+	case 'current':
+	case 'view':
+	case 'archive':
+		define('HANDLER_CLASS', 'IssueHandler');
+		import('pages.issue.IssueHandler');
+}
 
 ?>

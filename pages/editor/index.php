@@ -189,7 +189,12 @@ switch ($op) {
 		define('HANDLER_CLASS', 'IssueManagementHandler');
 		import('pages.editor.IssueManagementHandler');
 		break;
-	default:
+	case 'index':
+	case 'submissions':
+	case 'setEditorFlags':
+	case 'deleteEditAssignment':
+	case 'assignEditor':
+	case 'deleteSubmission':
 		define('HANDLER_CLASS', 'EditorHandler');
 		import('pages.editor.EditorHandler');
 }

@@ -17,6 +17,7 @@
 
 // $Id$
 
+
 switch ($op) {
 	//
 	// Setup
@@ -224,7 +225,8 @@ switch ($op) {
 		define('HANDLER_CLASS', 'AnnouncementHandler');
 		import('pages.manager.AnnouncementHandler');
 		break;
-	default:	
+	case 'index':
+	case 'email':
 		define('HANDLER_CLASS', 'ManagerHandler');
 		import('pages.manager.ManagerHandler');
 }

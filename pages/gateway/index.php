@@ -18,8 +18,13 @@
 // $Id$
 
 
-define('HANDLER_CLASS', 'GatewayHandler');
-
-import('pages.gateway.GatewayHandler');
+switch ($op) {
+	case 'index':
+	case 'lockss':
+	case 'plugin':
+		define('HANDLER_CLASS', 'GatewayHandler');
+		import('pages.gateway.GatewayHandler');
+		break;
+}
 
 ?>

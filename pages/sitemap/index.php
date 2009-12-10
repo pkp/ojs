@@ -18,8 +18,11 @@
 // $Id$
 
 
-define('HANDLER_CLASS', 'SitemapHandler');
-
-import('pages.sitemap.SitemapHandler');
+switch ($op) {
+	case 'index':
+		define('HANDLER_CLASS', 'SitemapHandler');
+		import('pages.sitemap.SitemapHandler');
+		break;
+}
 
 ?>

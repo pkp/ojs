@@ -17,9 +17,24 @@
 
 // $Id$
 
-
-define('HANDLER_CLASS', 'AboutHandler');
-
-import('pages.about.AboutHandler');
+switch($op) {
+	case 'index':
+	case 'contact':
+	case 'editorialTeam':
+	case 'displayMembership':
+	case 'editorialTeamBio':
+	case 'editorialPolicies':
+	case 'subscriptions':
+	case 'memberships':
+	case 'submissions':
+	case 'journalSponsorship':
+	case 'siteMap':
+	case 'history':
+	case 'aboutThisPublishingSystem':
+	case 'statistics':
+		define('HANDLER_CLASS', 'AboutHandler');
+		import('pages.about.AboutHandler');
+		break;
+}
 
 ?>

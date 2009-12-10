@@ -286,10 +286,6 @@ class EditorHandler extends SectionEditorHandler {
 		$templateMgr->display('editor/submissions.tpl');
 	}
 
-	function updateSubmissionArchive() {
-		$this->submissionArchive();
-	}
-
 	/**
 	 * Get the list of parameter names that should be duplicated when
 	 * displaying the search form (i.e. made available to the template
