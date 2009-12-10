@@ -20,6 +20,10 @@ define('BLOCK_CONTEXT_RIGHT_SIDEBAR', 		0x00000002);
 define('BLOCK_CONTEXT_HOMEPAGE',		0x00000003);
 
 class BlockPlugin extends Plugin {
+	function BlockPlugin() {
+		parent::Plugin();
+	}
+
 	function register($category, $path) {
 		$success = parent::register($category, $path);
 		if ($success && $this->getEnabled()) {

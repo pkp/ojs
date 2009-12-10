@@ -16,6 +16,10 @@
 
 
 class CitationPlugin extends Plugin {
+	function CitationPlugin() {
+		parent::Plugin();
+	}
+
 	/**
 	 * Get the name of this plugin. The name must be unique within
 	 * its category.
