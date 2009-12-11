@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.gateways.resolver.displayName">Модуль Идентификации</message>
+	<message key="plugins.gateways.resolver.description">Этот модуль идентифицирует выпуски и статьи на основании информации в ссылках.</message>
+	<message key="plugins.gateways.resolver.errors.errorMessage">Указанной в ссылке информации недостаточно для получения уникального ответа. Пожалуйста убедитесь, что ссылка полна и относится к статье, опубликованной на данном сервере.</message>
+	<message key="plugins.gateways.resolver.exportHoldings">Export Holdings</message>
+</locale>

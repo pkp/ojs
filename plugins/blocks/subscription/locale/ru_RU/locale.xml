@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.block.subscription.displayName">Блок подписки</message>
+	<message key="plugins.block.subscription.description">Показывает информацию о подписке на боковой панели.</message>
+	<message key="plugins.block.subscription.blockTitle">Подписка</message>
+	<message key="plugins.block.subscription.expires">Дата окончания</message>
+	<message key="plugins.block.subscription.providedBy">Доступ предоставлен</message>
+	<message key="plugins.block.subscription.comingFromIP">От</message>
+	<message key="plugins.block.subscription.about">Подписки</message>
+	<message key="plugins.block.subscription.loginToVerifySubscription">Войдите, чтобы подтвердить подписку</message>
+</locale>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+ -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.paymethod.manual.displayName">Явные платежи</message>
+	<message key="plugins.paymethod.manual.description">Менеджер вручную внесет получение платежа от пользователя (вне контроля программы).</message>
+	<message key="plugins.paymethod.manual">Явный Платеж</message>
+	<message key="plugins.paymethod.manual.settings">Настройки Явных Платежей</message>
+	<message key="plugins.paymethod.manual.settings.instructions">Инструкции</message>
+	<message key="plugins.paymethod.manual.settings.manualInstructions">Инструкции для пользователей, которые хотели бы заплатить явно</message>
+	
+	<message key="plugins.paymethod.manual.sendNotificationOfPayment">Отправить уведомление о платеже</message>
+	<message key="plugins.paymethod.manual.paymentNotification">Уведомление о платеже</message>
+	<message key="plugins.paymethod.manual.notificationSent">Уведомление о платеже отправлено</message>
+	
+	<message key="plugins.paymethod.manual.purchase.title">Название</message>
+	<message key="plugins.paymethod.manual.purchase.fee">Сумма</message>	
+</locale>
