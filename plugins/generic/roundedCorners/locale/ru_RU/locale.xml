@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.roundedcorners.displayName">Скругленные углы</message>
+	<message key="plugins.generic.roundedcorners.description">Этот модуль устанавливает фон на каждом блоке боковых панелей и скругляет его углы. Цвета можно изменить путем редактирования стилевого CSS файла, поставляемого с модулем.</message>
+	<message key="plugins.generic.roundedcorners.enabled">Модуль скругления углов включен.</message>
+	<message key="plugins.generic.roundedcorners.disabled">Модуль скругления углов выключен.</message>
+</locale>

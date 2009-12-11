@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.customLocale.name">Модуль Подстройки Языка</message>
+	<message key="plugins.generic.customLocale.description">Этот модуль позволяет изменять текст пользовательского интерфейса, используемый OJS по умолчанию.</message>
+	<message key="plugins.generic.customLocale.enabled">Модуль подстройки языка включен.</message>
+	<message key="plugins.generic.customLocale.disabled">Модуль подстройки языка выключен.</message>
+
+	<message key="plugins.generic.customLocale.longDescription">На этой странице показаны все языки, используемые журналом.</message>
+	<message key="plugins.generic.customLocale.localeDescription">Здесь приведены все файлы, которые определяют интерфейс на выбранном языке.</message>
+	<message key="plugins.generic.customLocale.fileDescription">Введите текст в соответствующее поле с заголовком "свой текст". Оставьте это поле пустым, чтобы использовать стандартный перевод.</message>
+	<message key="plugins.generic.customLocale.localeName">Имя языка</message>
+	<message key="plugins.generic.customLocale.localeKey">Ключ</message>
+	<message key="plugins.generic.customLocale.localeKey.description">Введите полный ключ языка, который Вы ищете.</message>
+	<message key="plugins.generic.customLocale.localeKeyValue">Значение</message>
+	<message key="plugins.generic.customLocale.customize">Изменить</message>
+	<message key="plugins.generic.customLocale.availableLocales">Доступные языки</message>
+
+	<message key="plugins.generic.customLocale.locale">Язык {$locale}</message>
+	<message key="plugins.generic.customLocale.localeFiles">Файлы сообщений</message>
+	<message key="plugins.generic.customLocale.file.filename">Имя файла</message>
+	<message key="plugins.generic.customLocale.file.edit">Редактируется {$filename}</message>
+	<message key="plugins.generic.customLocale.file.reference">Стандартный текст</message>
+	<message key="plugins.generic.customLocale.file.custom">Свой текст</message>
+</locale>

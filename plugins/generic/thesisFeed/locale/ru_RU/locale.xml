@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.thesisfeed.displayName">Модуль тезисов диссертаций</message>
+	<message key="plugins.generic.thesisfeed.description">Модуль производит новостную ленту в формате RSS/Atom, содержащую тезисы диссертаций.</message>
+	<message key="plugins.generic.thesisfeed.enabled">Модуль тезисов диссертаций включен.</message>
+	<message key="plugins.generic.thesisfeed.disabled">Модуль тезисов диссертаций выключен.</message>
+
+	<message key="plugins.generic.thesisfeed.settings">Настройки</message>
+	<message key="plugins.generic.thesisfeed.settings.all">Поместить ссылки на ленту на всех страницах журнала.</message>
+	<message key="plugins.generic.thesisfeed.settings.homepage">Поместить ссылки на ленту на домашней странице и на странице тезисов диссертаций.</message>
+	<message key="plugins.generic.thesisfeed.settings.thesis">Поместить ссылки на ленту только на странице тезисов диссертаций.</message>
+	<message key="plugins.generic.thesisfeed.settings.recentThesis1">Ограничить ленту</message>
+	<message key="plugins.generic.thesisfeed.settings.recentThesis2">наиболее свежими тезисами.</message>
+	<message key="plugins.generic.thesisfeed.settings.recentItemsRequired">Пожалуйста введите положительное целое число.</message>
+	<message key="plugins.generic.thesisfeed.atom.altText">Логитип Atom</message>
+	<message key="plugins.generic.thesisfeed.rss1.altText">Логотип RSS1</message>
+	<message key="plugins.generic.thesisfeed.rss2.altText">Логотип RSS2</message>
+</locale>
