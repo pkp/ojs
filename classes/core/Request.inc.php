@@ -43,10 +43,7 @@ class Request extends PKPRequest {
 		$_this =& PKPRequest::_checkThis();
 
 		if (!isset($journal)) {
-			$journalArray = $_this->_delegateToRouter('getRequestedContextPath', 1);
-			$journal = $journalArray[0];
-
-			// call legacy hook
+			$journal = $_this->_delegateToRouter('getRequestedContextPath', 1);
 			HookRegistry::call('Request::getRequestedJournalPath', array(&$journal));
 		}
 
@@ -68,7 +65,14 @@ class Request extends PKPRequest {
 	 */
 	function getRequestedContextPath($contextLevel = null) {
 		$_this =& PKPRequest::_checkThis();
-		return $_this->_delegateToRouter('getRequestedContextPath', $contextLevel);
+
+		// Emulate the old behavior of getRequestedContextPath for
+		// backwards compatibility.
+		if (is_null($contextLevel)) {
+			return $_this->_delegateToRouter('getRequestedContextPaths');
+		} else {
+			return array($_this->_delegateToRouter('getRequestedContextPath', $contextLevel));
+		}
 	}
 
 	/**

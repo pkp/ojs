@@ -38,11 +38,11 @@ class IndexHandler extends Handler {
 		$router =& $request->getRouter();
 		$templateMgr =& TemplateManager::getManager();
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journalPath = $router->getRequestedContextPath($request, CONTEXT_JOURNAL, false);
+		$journalPath = $router->getRequestedContextPath($request);
 		$templateMgr->assign('helpTopicId', 'user.home');
 
 		if ($journalPath != 'index' && $journalDao->journalExistsByPath($journalPath)) {
-			$journal =& $router->getContext($request, CONTEXT_JOURNAL);
+			$journal =& $router->getContext($request);
 
 			// Assign header and content for home page
 			$templateMgr->assign('displayPageHeaderTitle', $journal->getLocalizedPageHeaderTitle(true));
