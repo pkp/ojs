@@ -101,7 +101,9 @@ class TemplateManager extends PKPTemplateManager {
 				$this->assign('pageFooter', $journal->getLocalizedSetting('journalPageFooter'));	
 			} else {
 				// Add the site-wide logo, if set for this locale or the primary locale
-				$this->assign('displayPageHeaderTitle', $site->getLocalizedPageHeaderTitle());
+				$displayPageHeaderTitle = $site->getLocalizedPageHeaderTitle();
+				$this->assign('displayPageHeaderTitle', $displayPageHeaderTitle);
+				if (isset($displayPageHeaderTitle['altText'])) $this->assign('displayPageHeaderTitleAltText', $displayPageHeaderTitle['altText']);
 
 				$this->assign('siteTitle', $site->getLocalizedTitle());
 			}
