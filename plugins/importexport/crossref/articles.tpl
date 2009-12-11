@@ -20,7 +20,7 @@
 function toggleChecked() {
 	var elements = document.articles.elements;
 	for (var i=0; i < elements.length; i++) {
-		if (elements[i].name = 'articleId[]') {
+		if (elements[i].name == 'articleId[]') {
 			elements[i].checked = !elements[i].checked;
 		}
 	}
