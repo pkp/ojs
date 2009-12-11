@@ -62,29 +62,28 @@ function SubmitIfAnyIsChecked() {
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="30%" class="label" align="right">{translate key="plugins.importexport.METSExport.settings.FLocat"}</td>
-		<td width="70%" class="value"><input type="radio" name="contentWrapper" id="contentWrapper" value="FLocat" checked="checked" /></td>
+		<td width="60%" class="label" align="right">{translate key="plugins.importexport.METSExport.settings.FLocat"}</td>
+		<td width="40%" class="value"><input type="radio" name="contentWrapper" id="contentWrapper" value="FLocat" checked="checked" /></td>
 	</tr>
 	<tr valign="top">
-		<td width="30%" class="label" align="right">{translate key="plugins.importexport.METSExport.settings.FContent"}</td>
-		<td width="70%" class="value"><input type="radio" name="contentWrapper" id="contentWrapper" value="FContent" /></td>
+		<td class="label" align="right">{translate key="plugins.importexport.METSExport.settings.FContent"}</td>
+		<td class="value"><input type="radio" name="contentWrapper" id="contentWrapper" value="FContent" /></td>
 	</tr>
 	<tr>
 		<td colspan="2"><div class="separator">&nbsp;</div></td>
 	</tr>
 	<tr valign="top">
-		<td width="30%" class="label" align="right">{translate key="plugins.importexport.METSExport.settings.organization"}</td>
-		<td width="70%" class="value">
-		<input type="text" name="organization" id="organization" value="{$organization|escape}" size="50" maxlength="50" class="textField" /></td>
+		<td class="label" align="right">{translate key="plugins.importexport.METSExport.settings.organization"}</td>
+		<td class="value"><input type="text" name="organization" id="organization" value="{$organization|escape}" size="20" maxlength="50" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td width="30%" class="label" align="right">{translate key="plugins.importexport.METSExport.settings.preservationLevel"}</td>
-		<td width="70%" class="value">
+		<td class="label" align="right">{translate key="plugins.importexport.METSExport.settings.preservationLevel"}</td>
+		<td class="value">
 		<input type="text" name="preservationLevel" id="preservationLevel" value="1" size="2" maxlength="1" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td width="30%" class="label" align="right">{translate key="plugins.importexport.METSExport.settings.exportSuppFiles"}</td>
-		<td width="70%" class="value"><input type="checkbox" name="exportSuppFiles" id="exportSuppFiles" value="on" /></td>
+		<td class="label" align="right">{translate key="plugins.importexport.METSExport.settings.exportSuppFiles"}</td>
+		<td class="value"><input type="checkbox" name="exportSuppFiles" id="exportSuppFiles" value="on" /></td>
 	</tr>
 </table>
 
@@ -133,7 +132,7 @@ function SubmitIfAnyIsChecked() {
 	{/if}
 </table>
 
-<p><input type="button" value="{translate key="common.export"}" class="button defaultButton" onclick="SubmitIfAnyIsChecked();return false;"/>&nbsp;<input type="button" ID="selButton" value="Select All" class="button" onclick="javascript:selectAll();" /></p>
+<p><input type="button" value="{translate key="common.export"}" class="button defaultButton" onclick="SubmitIfAnyIsChecked();return false;"/>&nbsp;<input type="button" id="selButton" value="Select All" class="button" onclick="javascript:selectAll();" /></p>
 </form>
 
 {include file="common/footer.tpl"}
