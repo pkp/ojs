@@ -25,6 +25,7 @@ switch ($op) {
 	case 'archive':
 		define('HANDLER_CLASS', 'IssueHandler');
 		import('pages.issue.IssueHandler');
+		break;
 }
 
 ?>
