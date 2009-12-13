@@ -61,7 +61,6 @@ class LoginHandler extends PKPLoginHandler {
 	 * Restore original user account after signing in as a user.
 	 */
 	function signOutAsUser() {
-		$this->addCheck(new HandlerValidatorJournal($this));
 		$this->validate();
 
 		$session =& Request::getSession();
