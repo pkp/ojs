@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * External feed plugin localization strings for the pt_BR (Português do Brasil) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="pt_BR" full_name="Português do Brasil">
+
+	<!-- External Feed -->
+	<message key="plugins.generic.externalFeed.displayName">Feeds externos</message>
+	<message key="plugins.generic.externalFeed.block.displayName">Bloco de feeds externos</message>
+	<message key="plugins.generic.externalFeed.description">Publicar conteúdo de um canal Atom/RSS de canais externos, como WordPress, Drupal ou uma instalação OCS.</message>
+	<message key="plugins.generic.externalFeed.noneExist">Nenhum feed externo</message>
+	<message key="plugins.generic.externalFeed.title">Título</message>
+	<message key="plugins.generic.externalFeed.enabled">O plugin está habilitado.</message>
+	<message key="plugins.generic.externalFeed.disabled">O plugin está desabilitado.</message>
+	<message key="plugins.generic.externalFeed.posted">Postado</message>
+	<message key="plugins.generic.externalFeed.more">Mais...</message>
+
+	<!-- External Feed Management -->
+	<message key="plugins.generic.externalFeed.manager.feeds">Feeds externos</message>
+	<message key="plugins.generic.externalFeed.manager.settings">Configurações</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockInstructions"><![CDATA[Para exibir conteúdo de um canal em blocos da barra lateral, acesse o <a href="{$setupStep56}" target="_blank">Passo 5.6 da Configuração</a>]]></message>
+	<message key="plugins.generic.externalFeed.manager.title">Título</message>
+	<message key="plugins.generic.externalFeed.manager.displayHomepage">Exibição na página inicial</message>
+	<message key="plugins.generic.externalFeed.manager.displayHomepage.altText">Exibição na página inicial</message>
+	<message key="plugins.generic.externalFeed.manager.noDisplayHomepage.altText">Não exibir na página inicial</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlock">Display de bloco</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockAll">Todas as páginas</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockAll.altText">Em todas as páginas</message>
+	<message key="plugins.generic.externalFeed.manager.noDisplayBlockAll.altText">Em algumas páginas</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockHomepage">Página inicial</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockHomepage.altText">Apenas na página inicial</message>
+	<message key="plugins.generic.externalFeed.manager.noDisplayBlockHomepage.altText">Ocultar na página inicial</message>
+	<message key="plugins.generic.externalFeed.manager.noneCreated">Nenhum Feed externo</message>
+	<message key="plugins.generic.externalFeed.manager.create">Criar novo Feed externo</message>
+	<message key="plugins.generic.externalFeed.manager.edit">Editar canal externo</message>
+	<message key="plugins.generic.externalFeed.manager.confirmDelete">Deseja realmente excluir permanentemente este canal?</message>
+
+	<!-- External Feed Settings -->
+	<message key="plugins.generic.externalFeed.settings">Configurações</message>
+	<message key="plugins.generic.externalFeed.settings.description">Personalizar a exibição de itens do canal externo.</message>
+	<message key="plugins.generic.externalFeed.settings.styleSheet">Exibição</message>
+	<message key="plugins.generic.externalFeed.settings.defaultStyleSheet">Folha de estilos do canal externo</message>
+	<message key="plugins.generic.externalFeed.settings.stylesheetDescription">Uma folha de estilos pode ser usada para substituir a que vem por padrão com este plugin. A folha de estilos pode ser visualizada aqui</message>
+	<message key="plugins.generic.externalFeed.settings.useStyleSheet">Folha de estilos personalizada</message>
+
+
+	<!-- External Feed Form-->
+	<message key="plugins.generic.externalFeed.form.title">Título</message>
+	<message key="plugins.generic.externalFeed.form.titleDescription">Título para a página inicial e/ou bloco de exibição</message>
+	<message key="plugins.generic.externalFeed.form.titleRequired">Informe um título para este canal</message>
+	<message key="plugins.generic.externalFeed.form.feedUrl">URL</message>
+	<message key="plugins.generic.externalFeed.form.feedUrlValid">Informe uma URL válida (inclua o protoclo http://)</message>
+	<message key="plugins.generic.externalFeed.form.feedUrlDescription">A URL do canal externo Atom/RSS (ex.: http://pkp.sfu.ca/blog/feed)</message>
+	<message key="plugins.generic.externalFeed.form.display">Exibir</message>
+	<message key="plugins.generic.externalFeed.form.displayHomepage">Exibição na página inicial</message>
+	<message key="plugins.generic.externalFeed.form.displayBlockNone">Não exibir no bloco</message>
+	<message key="plugins.generic.externalFeed.form.displayBlockHomepage">Exibir no bloco apenas na página inicial</message>
+	<message key="plugins.generic.externalFeed.form.displayBlockAll">Exibir em bloco em todas as páginas</message>
+	<message key="plugins.generic.externalFeed.form.recentItems1">Limitado a</message>
+	<message key="plugins.generic.externalFeed.form.recentItems2">itens do canal</message>
+	<message key="plugins.generic.externalFeed.form.saveAndCreateAnother">Salvar e criar outro</message>
+
+</locale>
