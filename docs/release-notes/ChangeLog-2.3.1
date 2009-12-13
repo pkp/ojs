@@ -1,3 +1,208 @@
+2009-12-12 21:14  asmecher
+
+	* registry/locales.xml: #4931# ru_RU finished
+
+2009-12-12 21:07  asmecher
+
+	* pages/login/LoginHandler.inc.php: #4955# Fixed extra check
+
+2009-12-12 01:42  jerico.dev
+
+	* config.TEMPLATE.inc.php: #4957# Accidentally reverted OAI change
+	  in config.TEMPLATE.inc.php
+
+2009-12-12 01:30  jerico.dev
+
+	* classes/template/TemplateManager.inc.php: #4934# Convert legacy
+	  Request calls to new router architecture - template manager
+
+2009-12-11 16:27  asmecher
+
+	* pages/issue/index.php: #4942# Minor tune-up
+
+2009-12-11 16:25  asmecher
+
+	* plugins/generic/externalFeed/ExternalFeedPlugin.inc.php: #4956#
+	  Fixed instantiation by reference
+
+2009-12-11 15:31  asmecher
+
+	* classes/template/TemplateManager.inc.php: #4947# Fixed alt text
+	  bug
+
+2009-12-11 15:01  jmacgreg
+
+	* plugins/: generic/counter/locale/ru_RU/locale.xml,
+	  generic/customBlockManager/locale/ru_RU/locale.xml,
+	  generic/customLocale/locale/ru_RU/locale.xml,
+	  generic/googleAnalytics/locale/ru_RU/locale.xml,
+	  generic/jquery/locale/ru_RU/locale.xml,
+	  generic/openAds/locale/ru_RU/locale.xml,
+	  generic/phpMyVisites/locale/ru_RU/locale.xml,
+	  generic/referral/locale/ru_RU/locale.xml,
+	  generic/roundedCorners/locale/ru_RU/locale.xml,
+	  generic/sehl/locale/ru_RU/locale.xml,
+	  generic/thesis/locale/ru_RU/locale.xml,
+	  generic/thesisFeed/locale/ru_RU/locale.xml,
+	  importexport/crossref/locale/ru_RU/locale.xml,
+	  importexport/doaj/locale/ru_RU/emailTemplates.xml,
+	  importexport/doaj/locale/ru_RU/locale.xml,
+	  generic/thesis/locale/ru_RU/emailTemplates.xml: #4914# add ru_RU
+	  plugin locales
+
+2009-12-11 14:55  jmacgreg
+
+	* plugins/generic/coins/locale/ru_RU/locale.xml: #4914# add ru_RU
+	  plugin locales
+
+2009-12-11 14:48  jmacgreg
+
+	* plugins/generic/announcementFeed/locale/ru_RU/locale.xml: #4914#
+	  add ru_RU plugin locales
+
+2009-12-11 14:21  jerico.dev
+
+	* classes/core/Request.inc.php, pages/index/IndexHandler.inc.php:
+	  #4934# Convert legacy Request calls to new router architecture -
+	  simplify request path access
+
+2009-12-11 14:18  jmacgreg
+
+	* plugins/: blocks/developedBy/locale/ru_RU/locale.xml,
+	  blocks/donation/locale/ru_RU/locale.xml,
+	  blocks/fontSize/locale/ru_RU/locale.xml,
+	  blocks/help/locale/ru_RU/locale.xml,
+	  blocks/information/locale/ru_RU/locale.xml,
+	  blocks/keywordCloud/locale/ru_RU/locale.xml,
+	  blocks/languageToggle/locale/ru_RU/locale.xml,
+	  blocks/navigation/locale/ru_RU/locale.xml,
+	  blocks/notification/locale/ru_RU/locale.xml,
+	  blocks/role/locale/ru_RU/locale.xml,
+	  blocks/subscription/locale/ru_RU/locale.xml,
+	  blocks/user/locale/ru_RU/locale.xml,
+	  citationFormats/abnt/locale/ru_RU/locale.xml,
+	  citationFormats/apa/locale/ru_RU/locale.xml,
+	  citationFormats/bibtex/locale/ru_RU/locale.xml,
+	  citationFormats/cbe/locale/ru_RU/locale.xml,
+	  citationFormats/endNote/locale/ru_RU/locale.xml,
+	  citationFormats/mla/locale/ru_RU/locale.xml,
+	  citationFormats/proCite/locale/ru_RU/locale.xml,
+	  citationFormats/refMan/locale/ru_RU/locale.xml,
+	  citationFormats/refWorks/locale/ru_RU/locale.xml,
+	  citationFormats/turabian/locale/ru_RU/locale.xml,
+	  gateways/metsGateway/locale/ru_RU/locale.xml,
+	  gateways/resolver/locale/ru_RU/locale.xml,
+	  generic/translator/locale/ru_RU/locale.xml,
+	  generic/webFeed/locale/ru_RU/locale.xml,
+	  generic/xmlGalley/locale/ru_RU/locale.xml,
+	  implicitAuth/shibboleth/locale/ru_RU/locale.xml,
+	  importexport/mets/locale/ru_RU/locale.xml,
+	  importexport/pubmed/locale/ru_RU/locale.xml,
+	  importexport/quickSubmit/locale/ru_RU/locale.xml,
+	  paymethod/manual/locale/ru_RU/emailTemplates.xml,
+	  paymethod/manual/locale/ru_RU/locale.xml,
+	  paymethod/paypal/locale/ru_RU/emailTemplates.xml,
+	  paymethod/paypal/locale/ru_RU/locale.xml,
+	  reports/articles/locale/ru_RU/locale.xml,
+	  reports/reviews/locale/ru_RU/locale.xml,
+	  themes/custom/locale/ru_RU/locale.xml: #4914# add ru_RU plugin
+	  locale files
+
+2009-12-11 13:03  asmecher
+
+	* plugins/importexport/mets/: MetsExportPlugin.inc.php, issues.tpl:
+	  #4949# METS plugin tune-ups
+
+2009-12-11 12:47  asmecher
+
+	* plugins/importexport/: crossref/articles.tpl,
+	  crossref/issues.tpl, pubmed/articles.tpl, pubmed/issues.tpl:
+	  #4948# Fixed JS glitch
+
+2009-12-10 14:23  jerico.dev
+
+	* pages/index/IndexHandler.inc.php: #4934# Convert legacy Request
+	  calls to new router architecture - sample refactoring for a page
+
+2009-12-10 14:20  jerico.dev
+
+	* classes/core/OJSApplication.inc.php: #4870# Create dispatcher
+	  class to replace handle_request() in index.php - add context
+	  constants
+
+2009-12-10 13:39  jerico.dev
+
+	* classes/core/OJSApplication.inc.php: #4933# Use defined constants
+	  instead of the "page" and "component" strings for the
+	  $dispatcher->url(...) function
+
+2009-12-10 13:27  jerico.dev
+
+	* tools/bootstrap.inc.php: #4939# Unable to run command-line tools
+	  - improved patch so that it works for all apps
+
+2009-12-10 11:08  mcrider
+
+	* includes/driver.inc.php: #4940# Fixed iBrowser issue with PQP
+
+2009-12-09 17:58  asmecher
+
+	* classes/handler/Handler.inc.php: Spacing changes
+
+2009-12-09 17:40  asmecher
+
+	* classes/plugins/: AuthPlugin.inc.php, BlockPlugin.inc.php,
+	  CitationPlugin.inc.php, GatewayPlugin.inc.php,
+	  GenericPlugin.inc.php, ImplicitAuthPlugin.inc.php,
+	  ImportExportPlugin.inc.php, OAIMetadataFormatPlugin.inc.php,
+	  PaymethodPlugin.inc.php, ReportPlugin.inc.php,
+	  ThemePlugin.inc.php: #4943# Fixed missing constructors
+
+2009-12-09 16:57  asmecher
+
+	* pages/: about/index.php, admin/index.php, announcement/index.php,
+	  article/index.php, author/index.php, comment/index.php,
+	  copyeditor/index.php, donations/index.php,
+	  editor/EditorHandler.inc.php, editor/index.php,
+	  gateway/index.php, index/index.php, information/index.php,
+	  issue/index.php, layoutEditor/index.php, login/index.php,
+	  manager/index.php, oai/index.php, payment/index.php,
+	  proofreader/index.php, reviewer/index.php, rt/index.php,
+	  rtadmin/index.php, search/index.php, sectionEditor/index.php,
+	  sitemap/index.php, subscriptionManager/index.php, user/index.php:
+	  #4942# Changed index.php wrappers to whitelists
+
+2009-12-09 14:41  jerico.dev
+
+	* tools/bootstrap.inc.php: #4939# Unable to run command-line tools
+
+2009-12-09 12:19  asmecher
+
+	* dbscripts/xml/version.xml: #4938# Moved version.xml DTD to
+	  external file
+
+2009-12-09 12:00  asmecher
+
+	* registry/locales.xml: #4931# Updated completed / incomplete
+	  locales list
+
+2009-12-08 16:56  asmecher
+
+	* templates/admin/journals.tpl: #4932# Fixed double line
+
+2009-12-08 16:52  asmecher
+
+	* docs/release-notes/README-2.3.1, templates/admin/journals.tpl:
+	  #4932# Fixed double endseparator
+
+2009-12-08 15:43  asmecher
+
+	* registry/locales.xml: #4931# Tabs rather than spaces
+
+2009-12-08 14:54  asmecher
+
+	* docs/release-notes/ChangeLog-2.3.1: #4931# Final commits
+
 2009-12-08 14:47  asmecher
 
 	* dbscripts/xml/upgrade.xml, dbscripts/xml/version.xml,
@@ -49,9 +254,203 @@
 	  emailTemplates.xml, locale.xml, manager.xml: #4914# add ru_RU
 	  locale
 
+2009-12-06 13:31  jmacgreg
+
+	* locale/pt_PT/: edprocess.png, edprocesslarge.jpg,
+	  edprocesslarge.png: #4923# add pt_PT (Português)
+
 2009-12-06 13:26  jmacgreg
 
-	* registry/locales.xml: #4923# add pt_PT (Português)
+	* help/pt_PT/editorial/toc/000000.xml,
+	  help/pt_PT/editorial/toc/000001.xml,
+	  help/pt_PT/editorial/toc/000002.xml,
+	  help/pt_PT/editorial/toc/000003.xml,
+	  help/pt_PT/editorial/toc/000004.xml,
+	  help/pt_PT/editorial/toc/000005.xml,
+	  help/pt_PT/editorial/toc/000006.xml,
+	  help/pt_PT/editorial/toc/000007.xml,
+	  help/pt_PT/editorial/toc/000008.xml,
+	  help/pt_PT/editorial/toc/000009.xml,
+	  help/pt_PT/editorial/toc/000010.xml,
+	  help/pt_PT/editorial/toc/000011.xml,
+	  help/pt_PT/editorial/toc/000012.xml,
+	  help/pt_PT/editorial/toc/000013.xml,
+	  help/pt_PT/editorial/toc/000014.xml,
+	  help/pt_PT/editorial/topic/000000.xml,
+	  help/pt_PT/editorial/topic/000001.xml,
+	  help/pt_PT/editorial/topic/000002.xml,
+	  help/pt_PT/editorial/topic/000003.xml,
+	  help/pt_PT/editorial/topic/000004.xml,
+	  help/pt_PT/editorial/topic/000005.xml,
+	  help/pt_PT/editorial/topic/000006.xml,
+	  help/pt_PT/editorial/topic/000007.xml,
+	  help/pt_PT/editorial/topic/000008.xml,
+	  help/pt_PT/editorial/topic/000009.xml,
+	  help/pt_PT/editorial/topic/000010.xml,
+	  help/pt_PT/editorial/topic/000011.xml,
+	  help/pt_PT/editorial/topic/000012.xml,
+	  help/pt_PT/editorial/topic/000013.xml,
+	  help/pt_PT/editorial/topic/000014.xml,
+	  help/pt_PT/editorial/topic/000015.xml,
+	  help/pt_PT/editorial/topic/000016.xml,
+	  help/pt_PT/editorial/topic/000017.xml,
+	  help/pt_PT/editorial/topic/000018.xml,
+	  help/pt_PT/editorial/topic/000019.xml,
+	  help/pt_PT/editorial/topic/000020.xml,
+	  help/pt_PT/editorial/topic/000021.xml,
+	  help/pt_PT/editorial/topic/000022.xml,
+	  help/pt_PT/editorial/topic/000023.xml,
+	  help/pt_PT/editorial/topic/000024.xml,
+	  help/pt_PT/editorial/topic/000025.xml,
+	  help/pt_PT/editorial/topic/000026.xml,
+	  help/pt_PT/editorial/topic/000027.xml,
+	  help/pt_PT/editorial/topic/000028.xml,
+	  help/pt_PT/editorial/topic/000029.xml,
+	  help/pt_PT/editorial/topic/000030.xml,
+	  help/pt_PT/editorial/topic/000031.xml,
+	  help/pt_PT/editorial/topic/000032.xml,
+	  help/pt_PT/editorial/topic/000033.xml,
+	  help/pt_PT/editorial/topic/000034.xml,
+	  help/pt_PT/editorial/topic/000035.xml,
+	  help/pt_PT/editorial/topic/000036.xml,
+	  help/pt_PT/editorial/topic/000037.xml,
+	  help/pt_PT/editorial/topic/000038.xml,
+	  help/pt_PT/editorial/topic/000039.xml,
+	  help/pt_PT/editorial/topic/000040.xml,
+	  help/pt_PT/editorial/topic/000041.xml,
+	  help/pt_PT/editorial/topic/000042.xml,
+	  help/pt_PT/editorial/topic/000043.xml,
+	  help/pt_PT/editorial/topic/000044.xml,
+	  help/pt_PT/index/toc/000000.xml,
+	  help/pt_PT/index/topic/000000.xml,
+	  help/pt_PT/intro/toc/000000.xml,
+	  help/pt_PT/intro/topic/000000.xml,
+	  help/pt_PT/intro/topic/000001.xml,
+	  help/pt_PT/journal/toc/000000.xml,
+	  help/pt_PT/journal/toc/000001.xml,
+	  help/pt_PT/journal/toc/000002.xml,
+	  help/pt_PT/journal/toc/000003.xml,
+	  help/pt_PT/journal/toc/000005.xml,
+	  help/pt_PT/journal/topic/000000.xml,
+	  help/pt_PT/journal/topic/000001.xml,
+	  help/pt_PT/journal/topic/000002.xml,
+	  help/pt_PT/journal/topic/000003.xml,
+	  help/pt_PT/journal/topic/000004.xml,
+	  help/pt_PT/journal/topic/000005.xml,
+	  help/pt_PT/journal/topic/000006.xml,
+	  help/pt_PT/journal/topic/000007.xml,
+	  help/pt_PT/journal/topic/000008.xml,
+	  help/pt_PT/journal/topic/000009.xml,
+	  help/pt_PT/journal/topic/000010.xml,
+	  help/pt_PT/journal/topic/000011.xml,
+	  help/pt_PT/journal/topic/000012.xml,
+	  help/pt_PT/journal/topic/000013.xml,
+	  help/pt_PT/journal/topic/000014.xml,
+	  help/pt_PT/journal/topic/000015.xml,
+	  help/pt_PT/journal/topic/000016.xml,
+	  help/pt_PT/journal/topic/000017.xml,
+	  help/pt_PT/journal/topic/000018.xml,
+	  help/pt_PT/journal/topic/000019.xml,
+	  help/pt_PT/journal/topic/000020.xml,
+	  help/pt_PT/journal/topic/000021.xml,
+	  help/pt_PT/journal/topic/000022.xml,
+	  help/pt_PT/journal/topic/000023.xml,
+	  help/pt_PT/journal/topic/000025.xml,
+	  help/pt_PT/journal/topic/000026.xml,
+	  help/pt_PT/journal/topic/000027.xml,
+	  help/pt_PT/journal/topic/000028.xml,
+	  help/pt_PT/journal/topic/000029.xml,
+	  help/pt_PT/publishing/toc/000000.xml,
+	  help/pt_PT/publishing/topic/000000.xml,
+	  help/pt_PT/publishing/topic/000001.xml,
+	  help/pt_PT/publishing/topic/000002.xml,
+	  help/pt_PT/publishing/topic/000003.xml,
+	  help/pt_PT/publishing/topic/000004.xml,
+	  help/pt_PT/site/toc/000000.xml, help/pt_PT/site/topic/000000.xml,
+	  help/pt_PT/site/topic/000001.xml,
+	  help/pt_PT/site/topic/000002.xml,
+	  help/pt_PT/site/topic/000003.xml,
+	  help/pt_PT/submission/toc/000000.xml,
+	  help/pt_PT/submission/topic/000000.xml,
+	  help/pt_PT/submission/topic/000001.xml,
+	  help/pt_PT/submission/topic/000002.xml,
+	  help/pt_PT/submission/topic/000003.xml,
+	  help/pt_PT/submission/topic/000004.xml,
+	  help/pt_PT/user/toc/000000.xml, help/pt_PT/user/topic/000000.xml,
+	  help/pt_PT/user/topic/000001.xml,
+	  help/pt_PT/user/topic/000002.xml,
+	  help/pt_PT/user/topic/000003.xml,
+	  help/pt_PT/user/topic/000004.xml,
+	  help/pt_PT/user/topic/000005.xml,
+	  help/pt_PT/user/topic/000006.xml,
+	  help/pt_PT/user/topic/000007.xml, locale/pt_PT/admin.xml,
+	  locale/pt_PT/author.xml, locale/pt_PT/currencies.xml,
+	  locale/pt_PT/default.xml, locale/pt_PT/editor.xml,
+	  locale/pt_PT/emailTemplates.xml, locale/pt_PT/locale.xml,
+	  locale/pt_PT/manager.xml,
+	  plugins/auth/ldap/locale/pt_PT/locale.xml,
+	  plugins/blocks/developedBy/locale/pt_PT/locale.xml,
+	  plugins/blocks/donation/locale/pt_PT/locale.xml,
+	  plugins/blocks/fontSize/locale/pt_PT/locale.xml,
+	  plugins/blocks/help/locale/pt_PT/locale.xml,
+	  plugins/blocks/information/locale/pt_PT/locale.xml,
+	  plugins/blocks/keywordCloud/locale/pt_PT/locale.xml,
+	  plugins/blocks/languageToggle/locale/pt_PT/locale.xml,
+	  plugins/blocks/navigation/locale/pt_PT/locale.xml,
+	  plugins/blocks/notification/locale/pt_PT/locale.xml,
+	  plugins/blocks/role/locale/pt_PT/locale.xml,
+	  plugins/blocks/subscription/locale/pt_PT/locale.xml,
+	  plugins/blocks/user/locale/pt_PT/locale.xml,
+	  plugins/citationFormats/abnt/locale/pt_PT/locale.xml,
+	  plugins/citationFormats/apa/locale/pt_PT/locale.xml,
+	  plugins/citationFormats/bibtex/locale/pt_PT/locale.xml,
+	  plugins/citationFormats/cbe/locale/pt_PT/locale.xml,
+	  plugins/citationFormats/endNote/locale/pt_PT/locale.xml,
+	  plugins/citationFormats/mla/locale/pt_PT/locale.xml,
+	  plugins/citationFormats/proCite/locale/pt_PT/locale.xml,
+	  plugins/citationFormats/refMan/locale/pt_PT/locale.xml,
+	  plugins/citationFormats/refWorks/locale/pt_PT/locale.xml,
+	  plugins/citationFormats/turabian/locale/pt_PT/locale.xml,
+	  plugins/gateways/metsGateway/locale/pt_PT/locale.xml,
+	  plugins/gateways/resolver/locale/pt_PT/locale.xml,
+	  plugins/generic/announcementFeed/locale/pt_PT/locale.xml,
+	  plugins/generic/coins/locale/pt_PT/locale.xml,
+	  plugins/generic/counter/locale/pt_PT/locale.xml,
+	  plugins/generic/customBlockManager/locale/pt_PT/locale.xml,
+	  plugins/generic/customLocale/locale/pt_PT/locale.xml,
+	  plugins/generic/googleAnalytics/locale/pt_PT/locale.xml,
+	  plugins/generic/jquery/locale/pt_PT/locale.xml,
+	  plugins/generic/openAds/locale/pt_PT/locale.xml,
+	  plugins/generic/phpMyVisites/locale/pt_PT/locale.xml,
+	  plugins/generic/referral/locale/pt_PT/locale.xml,
+	  plugins/generic/roundedCorners/locale/pt_PT/locale.xml,
+	  plugins/generic/sehl/locale/pt_PT/locale.xml,
+	  plugins/generic/staticPages/locale/pt_PT/locale.xml,
+	  plugins/generic/thesis/locale/pt_PT/emailTemplates.xml,
+	  plugins/generic/thesis/locale/pt_PT/locale.xml,
+	  plugins/generic/thesisFeed/locale/pt_PT/locale.xml,
+	  plugins/generic/tinymce/locale/pt_PT/locale.xml,
+	  plugins/generic/translator/locale/pt_PT/locale.xml,
+	  plugins/generic/webFeed/locale/pt_PT/locale.xml,
+	  plugins/generic/xmlGalley/locale/pt_PT/locale.xml,
+	  plugins/implicitAuth/shibboleth/locale/pt_PT/locale.xml,
+	  plugins/importexport/crossref/locale/pt_PT/locale.xml,
+	  plugins/importexport/doaj/locale/pt_PT/emailTemplates.xml,
+	  plugins/importexport/doaj/locale/pt_PT/locale.xml,
+	  plugins/importexport/erudit/locale/pt_PT/locale.xml,
+	  plugins/importexport/mets/locale/pt_PT/locale.xml,
+	  plugins/importexport/native/locale/pt_PT/locale.xml,
+	  plugins/importexport/pubmed/locale/pt_PT/locale.xml,
+	  plugins/importexport/quickSubmit/locale/pt_PT/locale.xml,
+	  plugins/importexport/sample/locale/pt_PT/locale.xml,
+	  plugins/importexport/users/locale/pt_PT/locale.xml,
+	  plugins/paymethod/manual/locale/pt_PT/emailTemplates.xml,
+	  plugins/paymethod/manual/locale/pt_PT/locale.xml,
+	  plugins/paymethod/paypal/locale/pt_PT/emailTemplates.xml,
+	  plugins/paymethod/paypal/locale/pt_PT/locale.xml,
+	  plugins/reports/articles/locale/pt_PT/locale.xml,
+	  plugins/reports/reviews/locale/pt_PT/locale.xml,
+	  registry/locales.xml: #4923# add pt_PT (Português)
 
 2009-12-06 12:28  jmacgreg
 
