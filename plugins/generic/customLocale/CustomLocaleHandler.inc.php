@@ -31,9 +31,9 @@ class CustomLocaleHandler extends Handler {
 	}
 
 	function index() {
-		CustomLocaleHandler::validate();
+		$this->validate();
 		$plugin =& PluginRegistry::getPlugin('generic', 'CustomLocalePlugin');
-		CustomLocaleHandler::setupTemplate($plugin, false);
+		$this->setupTemplate($plugin, false);
 
 		$journal = Request::getJournal();
 		$rangeInfo = Handler::getRangeInfo('locales');
@@ -47,9 +47,9 @@ class CustomLocaleHandler extends Handler {
 	}
 
 	function edit($args) {
-		CustomLocaleHandler::validate();
+		$this->validate();
 		$plugin =& PluginRegistry::getPlugin('generic', 'CustomLocalePlugin');
-		CustomLocaleHandler::setupTemplate($plugin, true);
+		$this->setupTemplate($plugin, true);
 
 		$locale = array_shift($args);
 		$file = array_shift($args);
@@ -74,9 +74,9 @@ class CustomLocaleHandler extends Handler {
 	}
 
 	function editLocaleFile($args) {
-		CustomLocaleHandler::validate();
+		$this->validate();
 		$plugin =& PluginRegistry::getPlugin('generic', 'CustomLocalePlugin');
-		CustomLocaleHandler::setupTemplate($plugin, true);
+		$this->setupTemplate($plugin, true);
 
 		$locale = array_shift($args);
 		if (!Locale::isLocaleValid($locale)) {
@@ -137,9 +137,9 @@ class CustomLocaleHandler extends Handler {
 	}
 
 	function saveLocaleFile($args) {
-		CustomLocaleHandler::validate();
+		$this->validate();
 		$plugin =& PluginRegistry::getPlugin('generic', 'CustomLocalePlugin');
-		CustomLocaleHandler::setupTemplate($plugin, true);
+		$this->setupTemplate($plugin, true);
 
 		$locale = array_shift($args);
 		if (!Locale::isLocaleValid($locale)) {
@@ -180,7 +180,7 @@ class CustomLocaleHandler extends Handler {
 
 		while (!empty($changes)) {
 			$key = array_shift($changes);
-			$value = CustomLocaleHandler::correctCr(array_shift($changes));
+			$value = $this->correctCr(array_shift($changes));
 			if (!empty($value)) {
 				if (!$file->update($key, $value)) {
 					$file->insert($key, $value);

@@ -156,22 +156,40 @@ class CustomLocalePlugin extends GenericPlugin {
 				$returner = false;
 				break;
 			case 'index':
-				if ($this->getEnabled()) CustomLocaleHandler::index();
+				if ($this->getEnabled()) {
+					$customLocaleHandler = new CustomLocaleHandler();
+					$customLocaleHandler->index();
+				}
 				break;
 			case 'edit':
-				if ($this->getEnabled()) CustomLocaleHandler::edit($args);
+				if ($this->getEnabled()) {
+					$customLocaleHandler = new CustomLocaleHandler();
+					$customLocaleHandler->edit($args);
+				}
 				break;
 			case 'saveLocaleChanges':
-				if ($this->getEnabled()) CustomLocaleHandler::saveLocaleChanges($args);
+				if ($this->getEnabled()) {
+					$customLocaleHandler = new CustomLocaleHandler();
+					$customLocaleHandler->saveLocaleChanges($args);
+				}
 				break;
 			case 'editLocaleFile':
-				if ($this->getEnabled()) CustomLocaleHandler::editLocaleFile($args);
+				if ($this->getEnabled()) {
+					$customLocaleHandler = new CustomLocaleHandler();
+					$customLocaleHandler->editLocaleFile($args);
+				}
 				break;
 			case 'saveLocaleFile':
-				if ($this->getEnabled()) CustomLocaleHandler::saveLocaleFile($args);
+				if ($this->getEnabled()) {
+					$customLocaleHandler = new CustomLocaleHandler();
+					$customLocaleHandler->saveLocaleFile($args);
+				}
 				break;
 			default:
-				if ($this->getEnabled()) CustomLocaleHandler::index();
+				if ($this->getEnabled()) {
+					$customLocaleHandler = new CustomLocaleHandler();
+					$customLocaleHandler->index();
+				}
 				
 		}
 		return $returner;

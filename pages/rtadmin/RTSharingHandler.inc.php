@@ -21,10 +21,10 @@ import('rt.ojs.SharingRT');
 
 class RTSharingHandler {
 	function settings() {
-		RTAdminHandler::validate();
+		$this->validate();
 		$journal = Request::getJournal();
 		if ($journal) {
-			RTAdminHandler::setupTemplate(true);
+			$this->setupTemplate(true);
 			$templateMgr =& TemplateManager::getManager();
 
 			$rtDao =& DAORegistry::getDAO('RTDAO');
@@ -51,7 +51,7 @@ class RTSharingHandler {
 	}
 
 	function saveSettings() {
-		RTAdminHandler::validate();
+		$this->validate();
 
 		$journal = Request::getJournal();
 
