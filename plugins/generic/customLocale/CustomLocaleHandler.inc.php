@@ -20,6 +20,9 @@ require_once('CustomLocaleAction.inc.php');
 import('handler.Handler');
 
 class CustomLocaleHandler extends Handler {
+	/** Plugin associated with the request */
+	var $plugin;
+	
 	/**
 	 * Constructor
 	 **/
@@ -28,6 +31,9 @@ class CustomLocaleHandler extends Handler {
 
 		$this->addCheck(new HandlerValidatorJournal($this));
 		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_SITE_ADMIN, ROLE_ID_JOURNAL_MANAGER)));
+
+		$plugin =& PluginRegistry::getPlugin('generic', 'CustomLocalePlugin');
+		$this->plugin =& $plugin;		
 	}
 
 	function index() {
