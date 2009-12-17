@@ -84,7 +84,7 @@ class ArticleGalleyForm extends Form {
 		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 
 		$publicGalleyId = $this->getData('publicGalleyId');
-		if ($publicGalleyId && $galleyDao->publicGalleyIdExists($publicGalleyId, $this->galleyId)) {
+		if ($publicGalleyId && $galleyDao->publicGalleyIdExists($publicGalleyId, $this->galleyId, $this->articleId)) {
 			$this->addError('publicGalleyId', Locale::translate('submission.layout.galleyPublicIdentificationExists'));
 			$this->addErrorField('publicIssueId');
 		}
