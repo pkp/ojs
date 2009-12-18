@@ -27,7 +27,7 @@ class TemplateManager extends PKPTemplateManager {
 	 * Initialize template engine and assign basic template variables.
 	 * @param $request PKPRequest FIXME: is optional for backwards compatibility only - make mandatory
 	 */
-	function TemplateManager(&$request = null) {
+	function TemplateManager($request = null) {
 		// FIXME: for backwards compatibility only - remove
 		if (!isset($request)) {
 			if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function call.');
