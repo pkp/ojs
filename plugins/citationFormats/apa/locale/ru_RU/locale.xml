@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for this citation plugin in en_US.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.citationFormats.apa.displayName">Модуль формата ссылок APA</message>
+	<message key="plugins.citationFormats.apa.citationFormatName">APA</message>
+	<message key="plugins.citationFormats.apa.description">Этот модул реализует формат ссылок APA.</message>
+	<message key="plugins.citationFormats.apa.retrieved"><![CDATA[Получено {$retrievedDate}, из <a href="{$url}" target="_new">{$url}</a>]]></message>
+</locale>

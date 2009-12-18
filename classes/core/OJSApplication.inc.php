@@ -22,6 +22,8 @@ import('core.PKPApplication');
 define('ASSOC_TYPE_JOURNAL',	0x0000100);
 define('ASSOC_TYPE_ARTICLE',	0x0000101);
 
+define('CONTEXT_JOURNAL', 1);
+
 class OJSApplication extends PKPApplication {
 	function OJSApplication() {
 		parent::PKPApplication();
@@ -40,7 +42,7 @@ class OJSApplication extends PKPApplication {
 		$dispatcher =& parent::getDispatcher();
 
 		// Inject application-specific configuration
-		$dispatcher->addRouterName('core.OJSPageRouter', 'page');
+		$dispatcher->addRouterName('core.OJSPageRouter', ROUTE_PAGE);
 		return $dispatcher;
 	}
 

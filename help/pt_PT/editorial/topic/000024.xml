@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000024.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Review - Review Version 
+
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000024" locale="pt_PT" title="Versão para Revisão" toc="editorial/toc/000006" key="editorial.sectionEditorsRole.review.reviewVersion">
+	<section>
+		<![CDATA[<p><p>O primeiro passo do Editor de Secção é verificar se o documento original serve como Versão da Revisão ou se uma versão actualizada tem de ser enviada ao sistema. Para ver o Documento Original, basta clicar no nome do ficheiro.</p><p><em>Assegurando a Revisão Cega por Pares</em>. Veja informações para {help_topic key="editorial.sectionEditorsRole.review.blindPeerReview" text="Assegurando a Revisão Cega por Pares"}. O Editor de Secção deverá consultar também a página da Submissão, verificando se há Documentos Suplementares para partilhar com os Revisores. Caso o autor autorize a partilha, os mesmos estarão marcados; cabe ao Editor de Secção desmarcá-los caso possam comprometer o processo de revisão ou não possam ser partilhados com os Revisores.</p>
+		<p><em>Definindo a Versão da Revisão da submissão</em>. O Editor de Secção define a Versão da Revisão disponível para os Revisores (a) escolhendo o Documento Original, caso seja adequada, ou (b) enviando ao sistema uma versão actualizada. O Editor de Secção pode decidir corrigir pequenos detalhes do original através de um editor de texto de sua preferência, guardando o ficheiro no seu computador (em local seguro e pré-definido para este processo) e enviando o ficheiro, clicando nos botões disponíveis em Versão da Revisão.</p><p><em>Submissões em não-conformidade</em>. Caso o Autor não consiga submeter um documento dentro das Directrizes para Submissão da revista, incluindo verificar que esteja apta a passar por um processo de Revisão Cega por Pares, o Editor pode notificar o Autor que o trabalho necessita ser submetido novamente. O Autor então estará habilitado a enviar uma versão actualizada via e-mail ao Editor que poderá substituir a versão no sistema. O Editor de Secção também pode decidir arquivar a submissão por não estar em conformidade total com o conteúdo e âmbito da revista, notificando o autor do facto. Na página da Submissão, clicando em "Arquivar a Submissão", envia o documento para o Arquivo.</p>]]>	
+	</section>
+</topic>

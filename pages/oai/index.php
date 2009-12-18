@@ -18,8 +18,11 @@
 // $Id$
 
 
-define('HANDLER_CLASS', 'OAIHandler');
-
-import('pages.oai.OAIHandler');
+switch ($op) {
+	case 'index':
+		define('HANDLER_CLASS', 'OAIHandler');
+		import('pages.oai.OAIHandler');
+		break;
+}
 
 ?>

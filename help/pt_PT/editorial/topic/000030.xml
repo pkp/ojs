@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000030.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reviewer's Role Index - Submissions 
+
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000030" locale="pt_PT" title="Submissões" toc="editorial/toc/000008" key="editorial.reviewersRole.submissions">
+	<section>
+		<![CDATA[<p>Ao aceder ao sistema, o Revisor é direcionado à Página do Utilizador. Clicando na função de Revisor (já que um Revisor pode acumular funções editoriais, como Autor), o Revisor acede à página de Submissões. Esta página lista as submissões que lhe foram designadas ou estão em processo de Revisão. A fila de Submissões também indica em qual ronda de Revisão se encontra a submissão, já que alguns Revisores podem assumir revisões em rondas seguintes, seguindo a Decisão Editorial de que a submissão deve ser "Submetida novamente para revisão". Esta página também fornece acesso ao histórico pessoal de Revisões na revista. </p>]]>	
+	</section>
+</topic>

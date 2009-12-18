@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process - Table of Contents
+
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000003" locale="pt_PT" title="Sumário" toc="publishing/toc/000000" key="publishing.tableOfContents">
+	<section>
+		<![CDATA[<p>Assim que a submissão é agendada, esta aparecerá no Sumário desta Edição sob a sua Secção. Se não houver submissões numa Secção, esta Secção não vai aparecer no Sumário. O Editor pode reordenar as Secções e submissões podem ser reordenadas numa Secção.]]>
+	</section>
+</topic>

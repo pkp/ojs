@@ -163,9 +163,11 @@ switch ($op) {
 		define('HANDLER_CLASS', 'SubmissionCommentsHandler');
 		import('pages.sectionEditor.SubmissionCommentsHandler');
 		break;
-	default:	
+	case 'index':
+	case 'instructions':
 		define('HANDLER_CLASS', 'SectionEditorHandler');
 		import('pages.sectionEditor.SectionEditorHandler');
+		break;
 }
 
 ?>

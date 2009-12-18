@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the pt_PT (Português) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="pt_PT" full_name="Português">
+	<message key="plugins.generic.sehl.name">Plugin SEHL</message>
+	<message key="plugins.generic.sehl.description">Este plugin implementa Destaque para Termos Pesquisados (Search Engine HighLighting - SEHL) para marcar o texto pesquisado em documentos publicados em HTML.</message>
+	<message key="plugins.generic.sehl.enabled">O Plugin SEHL foi activado.</message>
+	<message key="plugins.generic.sehl.disabled">O Plugin SEHL foi desactivado.</message>
+</locale>

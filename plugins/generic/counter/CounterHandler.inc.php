@@ -18,6 +18,9 @@
 import('handler.Handler');
 
 class CounterHandler extends Handler {
+	/** Plugin associated with this request **/
+	var $plugin;
+	
 	/**
 	 * Constructor
 	 **/
@@ -29,8 +32,9 @@ class CounterHandler extends Handler {
 	 * Display the main log analyzer page.
 	 */
 	function index() {
-		list($plugin) = CounterHandler::validate();
-		CounterHandler::setupTemplate();
+		$this->validate();
+		$this->setupTemplate();
+		$plugin =& $this->plugin;
 
 		$counterReportDao =& DAORegistry::getDAO('CounterReportDAO');
 		$years = $counterReportDao->getYears();
@@ -79,7 +83,7 @@ class CounterHandler extends Handler {
 		$months = $counterReportDao->getMonthLabels();
 
 		$entry = $counterReportDao->buildMonthlyTotalLog($year);
-		$totalsArray = CounterHandler::_arrangeEntry($entry, $months, $year);
+		$totalsArray = $this->_arrangeEntry($entry, $months, $year);
 
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$journalIds = $counterReportDao->getJournalIds();
@@ -90,7 +94,7 @@ class CounterHandler extends Handler {
 			$journal =& $journalDao->getJournal($journalId);
 			if (!$journal) continue;
 			$entry = $counterReportDao->buildMonthlyLog($journalId, $year);
-			$journalsArray[$i]['entries'] = CounterHandler::_arrangeEntry($entry, $months, $year);
+			$journalsArray[$i]['entries'] = $this->_arrangeEntry($entry, $months, $year);
 			$journalsArray[$i]['journalTitle'] = $journal->getLocalizedTitle();
 			$journalsArray[$i]['publisherInstitution'] = $journal->getSetting('publisherInstitution');
 			$journalsArray[$i]['printIssn'] = $journal->getSetting('printIssn');
@@ -118,12 +122,13 @@ class CounterHandler extends Handler {
 	* Counter report in XML
 	*/
 	function reportXML() {
-		list($plugin) = CounterHandler::validate();
-		CounterHandler::setupTemplate(true);
+		$this->validate();
+		$plugin =& $this->plugin;
+		$this->setupTemplate(true);
 
 		$templateManager =& TemplateManager::getManager();
 
-		CounterHandler::_assignTemplateCounterXML($templateManager);
+		$this->_assignTemplateCounterXML($templateManager);
 
 		$templateManager->display($plugin->getTemplatePath() . 'reportxml.tpl', 'text/xml');
 	}
@@ -133,12 +138,13 @@ class CounterHandler extends Handler {
 	* SUSHI report
 	*/
 	function sushiXML() {
-		list($plugin) = CounterHandler::validate();
-		CounterHandler::setupTemplate(true);
+		$this->validate();
+		$plugin =& $this->plugin;
+		$this->setupTemplate(true);
 
 		$templateManager =& TemplateManager::getManager();
 
-		CounterHandler::_assignTemplateCounterXML($templateManager);
+		$this->_assignTemplateCounterXML($templateManager);
 
 /*
 		$SOAPRequest = '<soapenv:Envelope
@@ -235,8 +241,9 @@ class CounterHandler extends Handler {
 
 
 	function report() {
-		list($plugin) = CounterHandler::validate();
-		CounterHandler::setupTemplate(true);
+		$this->validate();
+		$plugin =& $this->plugin;
+		$this->setupTemplate(true);
 
 		$journal =& Request::getJournal();
 		$year = Request::getUserVar('year');
@@ -331,7 +338,8 @@ class CounterHandler extends Handler {
 		}
 
 		$plugin =& Registry::get('plugin');
-		return array(&$plugin);
+		$this->plugin =& $plugin;
+		return true;
 	}
 
 	/**

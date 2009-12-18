@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000035.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Editing - Copyediting 
+
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000035" locale="pt_PT" title="Edição de Texto" toc="editorial/toc/000011" key="editorial.authorsRole.editing.copyediting">
+	<section>
+		<![CDATA[<p>O Editor de Texto edita o texto da submissão, trabalhando directamente no arquivo eletrónico da submissão (transferindo do sistema e salvando no seu computador, numa pasta específica para fácil controlo e acesso), com sugestões para melhorar a fluência da leitura e compreensão do texto, e com alterações necessárias para garantir a conformidade da submissão com as normas da revista. O Editor de Texto envia a sua versão para o sistema e comunica via e-mail o Autor e o Editor de Secção, indicando que a sua versão está disponível. O Autor pode aceder a esta versão no Passo 2 da Edição de Texto clicando no nome do ficheiro (para consultar ficheiros enviados, o Autor clica no nome, e escolhe abrir &mdash; guardando o documento numa pasta temporária do seu computador &mdash; ou guardar &mdash; escolhendo onde deverá ser guardado o documento).</p>
+		<p><em>Revisão do Texto pelo Autor</em>. O Autor reve todas as sugestões de alteração, transferindo para o seu computador o documento disponibilizado pelo Editor de Texto, podendo incluir novas sugestões ou alterações na submissão, seguindo as instruções de Edição de Texto definidas pela revista (esta é a última oportunidade de realizar alterações substanciais, pois durante a Leitura de Provas somente erros tipográficos e de formatação deverão ser corrigidos). O Autor deve também responder às Questões para o Autor (por exemplo, faltando numeração de imagens, etc.) do Editor de Texto. Ao concluir, o Autor guarda o ficheiro e então envia a versão actualizada no Passo 2 da Edição de Texto, disponibilizando-o para o Editor de Texto.</p>
+		<p><em>Rever Metadados</em>. O Autor deve também rever os Metadados da submissão procurando por erros ou omissões. O metadado é fundamental para indexar a submissão numa publicação, auxiliando na sua recuperação mais rápida, dependendo de como é indexado, pelos leitores, aumentando o acesso e possível impacto da pesquisa. Finalmente, o Autor clica no ícone do e-mail sob "Completo" para notificar o Editor de Texto e Editor de Secção que concluiu a sua tarefa.<p>
+		]]>	
+	</section>
+</topic>
+

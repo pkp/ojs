@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the pt_PT locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="pt_PT" full_name="Português">
+	<message key="plugins.generic.referral.name">Plugin de Apontamentos a Artigos</message>
+	<message key="plugins.generic.referral.description">O Plugin de Apontamentos a Artigos mantém controle de URLs que apontam a artigos (quando um leitor clica num link para um artigo noutro site, por exemplo), permitindo aos autores manter e possivelmente publicar um lista actualizada automaticamente de apontamentos a um artigo.</message>
+	<message key="plugins.generic.referral.enabled">Plugin de Apontamentos a Artigos foi activado.</message>
+	<message key="plugins.generic.referral.disabled">Plugin de Apontamentos a Artigos foi desactivado.</message>
+	
+	<message key="plugins.generic.referral.editReferral">Editar apontamento</message>
+	<message key="plugins.generic.referral.createReferral">Criar apontamento</message>
+	<message key="plugins.generic.referral.referrals">Apontamentos</message>
+	<message key="plugins.generic.referral.count">Hits</message>
+	<message key="plugins.generic.referral.dateAdded">Data de inclusão</message>
+	<message key="plugins.generic.referral.all">Todos</message>
+	<message key="plugins.generic.referral.all.empty">Não há apontamentos.</message>
+	<message key="plugins.generic.referral.status.new">Novo</message>
+	<message key="plugins.generic.referral.status.new.empty">Não há nenhum apontamento novo.</message>
+	<message key="plugins.generic.referral.status.accept">Publicado</message>
+	<message key="plugins.generic.referral.status.accept.empty">Não há nenhum apontamento publicado.</message>
+	<message key="plugins.generic.referral.status.decline">Ignorado</message>
+	<message key="plugins.generic.referral.status.decline.empty">Não há nenhum apontamento ignorado.</message>
+	<message key="plugins.generic.referral.confirmDelete">Deseja realmente excluir este apontamento?</message>
+	<message key="plugins.generic.referral.nameRequired">Um nome para o apontamento é obrigatório.</message>
+	<message key="plugins.generic.referral.urlRequired">A URL do apontamento é obrigatória.</message>
+</locale>

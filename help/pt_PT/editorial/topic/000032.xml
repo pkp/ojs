@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000032.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Index - Submissions
+
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000032" locale="pt_PT" title="Submissões" toc="editorial/toc/000009" key="editorial.authorsRole.submissions">
+	<section>
+		<![CDATA[<p>Ao aceder ao sistem e seleccionando a Função de Autor (um Autor pode também ter outras Funções, tais como Revisor) na Página do Utilizador, o Autor é direccionado à fila de Submissões. O Autor também pode aceder ao histórico das suas submissões.</p>]]>	
+	</section>
+</topic>

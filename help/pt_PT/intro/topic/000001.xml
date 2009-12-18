@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Frequently Asked Questions 
+
+  * $Id$
+  -->
+
+<topic id="intro/topic/000001" locale="pt_PT" title="Questões Frequentemente Perguntadas (FAQ)" toc="intro/toc/000000" key="intro.faq">
+	<section>
+		<![CDATA[
+<ol>
+	<li><a href="#section1">Como criar uma revista no sistema?</a></li>
+	<li><a href="#section2">Onde eu posso encontrar suporte técnico, informar bugs, e sugerir melhorias no sistema?</a></li>
+	<li><a href="#section3">Como traduzir o sistema para outros idiomas?</a></li>
+	<li><a href="#section4">Por que aparece a mensagem "Esta revista não aceita submissões neste momento"?</a></li>
+	<li><a href="#section5">Como disponibilizar acesso a manuscritos que estão no estágio "em revisão" ou em "pré-impressão" antes de serem publicados pela revista?</a></li>
+	<li><a href="#section6">Como informar o público que a revista está disponível na Web?</a></li>
+	<li><a href="#section7">Como apresentar um histórico do Expediente da revista?</a></li>
+	<li><a href="#section8">Como registar leitores como revisores da revista?</a></li>
+	<li><a href="#section9">Como encontrar mais revisores para uma submissão além da lista actual de revisores disponíveis?</a></li>
+	<li><a href="#section10">Quais os diferentes formatos e políticas que uma revista pode adopo tar para publicar seu conteúdo como de Acesso Livre, tornando-o gratuito aos leitores?</a></li>
+</ol>
+		]]>	
+	</section>
+	<section title="1. Como criar revista no sistema?">
+		<![CDATA[
+<ol type="a">
+	<li><a href="http://pkp.sfu.ca/ojs/ojs_download" target="_blank">Transfira</a> o sistema e instale o programa, seguindo as suas instruções de instalação, num servidor que atenda aos requisitos de software.</li>
+	<li>Use o nome de utilizador e a senha de Administrador fornecidos durante a instalação para aceder ao sistema.</li>
+	<li>Crie uma nova revista em Revistas Hospedadas. </li>
+	<li>O Administrador do Sistema será automaticamente registado como Editor-Gestor da nova revista, mas podem ser criados outros utilizadores com Função de Editor-Gestor, se necessário.</li>
+	<li>O Editor-Gestor entra em Configuração e preenche os cinco passos (não necessariamente todos de uma vez), cujo resultado será um portal pronto para receber submissões, gerir o processo editorial e publicar a revista on-line.</li>
+	<li>Consulte <a href="http://pkp.sfu.ca/ojs/OJSinanHour.pdf" target="_blank">OJS numa Hora</a> para mais informações sobre como utilizar o sistema.</li>
+</ol>
+		]]>
+	</section>
+	<section title="2. Onde eu posso encontrar suporte técnico, informar bugs e sugerir melhorias no sistema?">
+		<![CDATA[
+<p>O Public Knowledge Project opera um <a href="http://pkp.sfu.ca/support/forum/" target="_blank">Forum de Suporte</a> onde pode-se pesquisar por muitas respostas e colocar novas perguntas. Por exemplo, mensagens de erro podem ser pesquisadas, levando a soluções propostas para os assuntos mais comuns. Caso não encontre o que precisa, o utilizador pode perguntar para <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>. Informação sobre Bugs devem ser submetidos para o <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">Bugzilla</a> do PKP.</p>
+		]]>
+	</section>
+	<section title="3. Como traduzir o sistema para outros idiomas?">
+		<![CDATA[
+<p>Instruções para tradução estão disponíveis no ficheiro docs/README que está incluído com o código fonte do sistema. Informações adicionais sobre tradução podem ser encontradas no <a href="http://pkp.sfu.ca/support/forum/" target="_blank">Fórum de Suporte do PKP</a>.</p>
+		]]>
+	</section>
+	<section title='4. Por que aparece a mensagem "Esta revista não aceita submissões neste momento"?'>
+		<![CDATA[
+<p>Caso o Editor-Gestor ainda não tenha criado nenhuma secção para a revista (por exemplo, Artigos, Livros, Revisões, etc.), os autores verão esta mensagem durante o processo de submissão. Também, caso o Editor-Gestor tenha activado a opção "Restrita a Editores e Editores de Secção", para todas as secções criadas, somente os Editores e Editores de Secção poderão submeter à revista.</p>
+		]]>
+	</section>
+	<section title='5. Como disponibilizar acesso a manuscritos que estão no estágio "em revisão" ou em "pré-impressão" antes de serem publicados pela revista?'>
+		<![CDATA[
+			<p>O sistema oferece a Editores duas opções para "acesso a pré-impressos (pré-prints)". Pode ser criada uma secção na edição actual, na qual são inseridos aprovados para uma futura edição ainda por definir e publicar. O artigo pré-impresso é incluído no Sumário da edição actual. Quando a próxima edição estiver pronta para publicação, basta remover os artigos da edição actual e agendá-los na próxima edição. Outra opção, mais restrita, é o Editor pode fazer uso da URL criada em "Leitura de Provas" na Edição da submissão, possibilitando o acesso da "pré-visualização" do artigo (para utilizadores privilegiados) antes de ser publicado numa edição da revista. Enquanto isso, o PKP avalia o interesse nesta funcionalidade para considerar a criação de uma opção formal para tal funcionallidade.</p>]]>
+	</section>
+	<section title="6. Como informar o público que a revista está disponível na Web?">
+		<![CDATA[
+<p>A sua revista deverá ser indexada pelo Google e outros grandes sistemas de busca sem muito esforço, porém é importante tomar algumas atitudes pró-activas. Certifique-se de registar a revista no Colectador de Metadados PKP Harvester em Configuração Passo 3, o que leverá  sua revista a ser indexada noutros motores de busca da Open Archives Initiative, incluindo o <a href="http://pkp.sfu.ca/harvester/" target="_blank">PKP Harvester</a> e o <a href="http://oaister.umdl.umich.edu/o/oaister/" target="_blank">OAIster</a>. Se a sua revista publica em Acesso Livre, entre em contcato com a biblioteca da sua instituição para saber como listar a sua revista entre as revistas eletrónicas e como entrar em contacto com uma série de listas de bibliotecas com ferramentas de pesquisa on-line. Verifique a possibilidade de usar listas de discussão ou portais na web de grupos relevantes para anunciar uma "chamada para submissão de artigos" ou o lançamento da revista. Finalmente, em Configurações de Segurança/Accesso sob Configuração (2.5), o Editor-Gestor deve permitir o registo de Leitores para que estes recebam a notificação de nova edição publicada, entre outras informações relevantes.</p>
+		]]>
+	</section>
+	<section title="7. Como apresentar um histórico do Expediente da revista?">
+		<![CDATA[
+<p>O Editor-Gestor pode criar uma página de "Histórico do Expediente" como um novo item em Sobre a Revista (item 2.6 na Configuração). Em tal página você pode fornecer o nome, título editorial e tempo de serviço dos membros da equipa editorial.</p>
+		]]>
+	</section>
+	<section title="8. Como registar leitores como revisores da revista?">
+		<![CDATA[
+<p>Em Configurações de Segurança/Accesso (2.5), sob Configuração, o Editor-Gestor pode activar o registo de Revisores, Autores e Leitores. Os Revisores posteriormente aparecerão entre aqueles que o Editor de Secção pode escolher e designar para rever uma submissão. Em Configuração 5.7, o Editor-Gestor pode informar em "Aos Leitores" sobre o interesse da revista em ter leitores actuando como Revisores da Revista. Da mesma forma, a revista pode encorajar o registo de Leitores com o propósito de realizar mala directa ou para identificar o número de leitores existentes.</p>
+		]]>
+	</section>
+	<section title="9. Como encontrar mais revisores para uma submissão além da lista actual de revisores disponíveis?">
+		<![CDATA[
+<p>Existem várias técnicas possíveis. Uma vez identificado um Revisor potencial, o seu e-mail e afiliação podem ser encontrados usando ferramentas de busca com o nome da pessoa.</p>
+<ol type="a">
+	<li>Use a bibliografia do artigo a ser revisto para identificar pessoas apropriadasos  e depois use os seus nomes completos no Google para encontrar as suas instituições e depois o seu endereço de e-mail.</li>
+	<li>Use pesquisas Booleanas no Google baseadas em palavras-chave sobre o autor (por exemplo, pós-colonialismo + literatura + "África do Sul") para identificar materiais on-line relacionados e pessoas trabalhando na mesma área.</li>
+	<li>Baseado em como o autor identificou o assunto do artigo (veja Metadados no resumo da submissão), envie perguntas a colegas sobre o nome de um possível revisor com o conhecimento desejado da área identificada.</li>
+	<li>Visite outras revistas on-line da área para identificar autores que podem actuar como revisores para um artigo específico submetido à sua revista.</li>
+</ol>
+		]]>
+	</section>
+	<section title="10. Quais os diferentes formatos e políticas que uma revista pode adoptar para publicar o seu conteúdo como de Acesso Livre, tornando-o gratuito aos leitores?">
+		<![CDATA[
+<p>Você pode consultar <a href="http://www.jpgmon-line.com/article.asp?issn=0022-3859;year=2003;volume=49;issue=3;spage=263;epage=267;aulast=Willinsky;type=0" target="_blank">"As Nove Camadas de Publicações Científicas de Acesso Livre"</a> de John Willinsky na Revista de Pós-graduação em Medicina. Também, a Fundação Soros preparou um a <a href="http://www.soros.org/openaccess/scholarly_guide.shtml" target="_blank">Guia para Publicações de Acesso Livre e Sociedades do Conhecimento</a> que é "um guia destinado a ajudar sociedades do conhecimento &mdash; e editores de menor porte &mdash; a avaliarem as opções disponíveis para o futuro das políticas de publicação de revistas". <a href="http://www.arl.org/sparc/" target="_blank">SPARC</a>, a Coalizão de Publicação do Conhecimento e Recursos Académicos, também dispõe de muita inforação relacionada a publicações de Acesso Livre.</p>
+		]]>
+	</section>
+</topic>

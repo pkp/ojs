@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000018.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submissions - Archives 
+
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000018" locale="pt_PT" title="Arquivos" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.archives">
+	<section>
+		<![CDATA[
+		<p>Submissões nesta fila encontram-se no processo editorial, quando estas foram recusadas, agendadas para publicação ou publicadas. Esta fila oferece aos Editores e aos Editores de Secção designados, acesso completo ao histórico editorial das submissões (Resumo, Submissão, Revisão, Edição e Histórico da Submissão.</p>
+		<p><em>Para Restaurar um Item Arquivado para Lista Activa</em>. O Editor deve entrar em Arquivos, na página do Editor e localizar a submissão. Clicando no título da submissão poderá aceder às páginas de Resumo, Revisão, Edição e Histórico da submissão. Na página de Resumo está o link "Restaurar para Lista Activa", que moverá a submissão para a fila Em Revisão ou Em Edição, dependendo de qual estágio a submissão estava quando foi Arquivada.</p>
+		]]>	
+	</section>
+</topic>

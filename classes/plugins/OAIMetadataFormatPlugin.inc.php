@@ -19,6 +19,10 @@ import('plugins.Plugin');
 import('oai.OAIStruct');
 
 class OAIMetadataFormatPlugin extends Plugin {
+	function OAIMetadataFormatPlugin() {
+		parent::Plugin();
+	}
+
 	/**
 	 * Called as a plugin is registered to the registry
 	 * @param $category String Name of category plugin was registered to

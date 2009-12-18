@@ -32,7 +32,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 		if ($success && $this->getEnabled()) {
 			$this->import('ExternalFeedDAO');
 
-			$externalFeedDao =& new ExternalFeedDAO();
+			$externalFeedDao = new ExternalFeedDAO();
 			$returner =& DAORegistry::registerDAO('ExternalFeedDAO', $externalFeedDao);
 
 			$templateMgr =& TemplateManager::getManager();
@@ -94,7 +94,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 			return $this->getDefaultStyleSheetFile();
 		} else {
 			import('file.PublicFileManager');
-			$fileManager =& new PublicFileManager();
+			$fileManager = new PublicFileManager();
 			return $fileManager->getJournalFilesPath($journalId) . '/' . $styleSheet['uploadName'];
 		}
 	}
@@ -158,7 +158,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 		switch ($category) {
 			case 'blocks':
 				$this->import('ExternalFeedBlockPlugin');
-				$blockPlugin =& new ExternalFeedBlockPlugin();
+				$blockPlugin = new ExternalFeedBlockPlugin();
 				$plugins[$blockPlugin->getSeq()][$blockPlugin->getPluginPath()] =& $blockPlugin;
 				break;
 		}
@@ -223,7 +223,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 
 				while ($currentFeed =& $feeds->next()) {		
 					if (!$currentFeed->getDisplayHomepage()) continue;
-					$feed =& new SimplePie();
+					$feed = new SimplePie();
 					$feed->set_feed_url($currentFeed->getUrl());
 					$feed->enable_order_by_date(false);
 					$feed->set_cache_location(CacheManager::getFileCachePath());
@@ -397,7 +397,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 						$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 						$journalSettings =& $journalSettingsDao->getJournalSettings($journalId);
 
-						$externalFeedForm =& new ExternalFeedForm($this, $externalFeedId);
+						$externalFeedForm = new ExternalFeedForm($this, $externalFeedId);
 						if ($externalFeedForm->isLocaleResubmit()) {
 							$externalFeedForm->readInputData();
 						} else {
@@ -421,7 +421,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 					if (($externalFeedId != null && $externalFeedDao->getExternalFeedJournalId($externalFeedId) == $journalId) || $externalFeedId == null) {
 
 						$this->import('ExternalFeedForm');
-						$externalFeedForm =& new ExternalFeedForm($this, $externalFeedId);
+						$externalFeedForm = new ExternalFeedForm($this, $externalFeedId);
 						$externalFeedForm->readInputData();
 
 						if ($externalFeedForm->validate()) {
@@ -456,7 +456,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 			case 'settings':
 				if ($this->getEnabled()) {
 					$this->import('ExternalFeedSettingsForm');
-					$form =& new ExternalFeedSettingsForm($this, $journal->getJournalId());
+					$form = new ExternalFeedSettingsForm($this, $journal->getJournalId());
 					if (Request::getUserVar('save')) {
 						Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'feeds'));
 					} elseif (Request::getUserVar('uploadStyleSheet')) {

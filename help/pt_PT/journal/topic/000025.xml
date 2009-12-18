@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000025.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Subscriptions 
+
+  * $Id$
+  -->
+
+<topic id="journal/topic/000025" locale="pt_PT" title="Subscrições" toc="journal/toc/000001" key="journal.managementPages.subscriptions">
+	<section>
+		<![CDATA[<p>O sistema permite o uso de subscrições de revistas, fornecendo um componente de gestão de subscrições e uma senha de segurança correspondente para o conteúdo on-line da revista. As subscrições podem ser para indivíduos, organizações ou instituições. Uma subscrição de revista pode oferecer acesso a edições anteriores através da publicação de Acesso Livre adiado. Em Administração de Edições, o Editor define para os leitores o acesso livre ao conteúdo de uma edição ou artigos de zero a 24 meses após sua publicação inicial e disponibilidade aos assinantes.</p><p>Os Editores-Gestores, Editores, Editores de Secção, Editores de Layout, Editores de Texto e Leitores de Prova sempre têm acesso livre à revista como se fossem subscritores.</p><p><em>Activando o Módulo de Subscrições</em>. O Editor-GeStor deve indicar em Configuração, 4.3 Administração de Subscrições, que a revista utilizará este sistema para gerir as suas subscrições e que uma pessoa, designado como Editor-GeStor ou Gestor de Subscrições, assumirá a responsabilidade de gerir a ferramenta.</p>]]>
+	</section>
+	
+	<section title="Tipos de Subscrições">
+		<![CDATA[<p><em>Configuração dos Tipos de Subscrições</em>. O primeiro passo na configuração do gestão de subscrições é designar os Tipos de Subscrições que a revista oferece. As revistas oferecem, geralmente, tipos de subscrições individuais e institucionais. Algumas revistas podem oferecer subscrições especiais para membros de uma organização ou estudantes. O sistema permite gerir subscrições impressas e/ou subscrições on-line. Mais de um tipo de subscrição pode ser criada para cobrir períodos maiores (12 meses, 36 meses).</p><p><em>Opções para Tipos de Subscrições</em>. Para subscrições "institucionais", use a opção "Assinantes serão validados através do domínio ou autenticação de IP", já que todos os membros de uma instituição acessam a revista a partir de um domínio comum ou endereço de IP, permitindo o acesso sem senha. Da mesma forma, a opção "Subscritores deverão ser membros de uma associação, organização ou entidade de classe" deve ser usada para subscrições deste tipo, seja gratuita ou com algum desconto para os seus membros. Use a opção "Tipo de subscrição NÃO será exibido em Subscrições, em Sobre a Revista" para fazer o tipo de subscrição e a sua taxa serem exibidas ou não sob Subscrições em Sobre a Revista. Enquanto a maioria das subscrições são geralmente exibidas em Sobre, algum tipo criado para contas internas, assinatura da equipa, e/ou para propósito de gestão, por exemplo, podem não precisar ser publicadas em Sobre.</p>]]>
+	</section>
+	
+
+	<section title="Subscrições">
+		<![CDATA[<p><em>Criar Subscrições</em>. Para subscritores individuais, o Gestor de Subscrições deve registar o assinante como um Leitor, caso não esteja ainda registado, e então definir o tipo e datas para assinatura, na página Criar Subscrições. O assinante receberá um e-mail com o login, ao guardar o formulário, que permitirá acesso a todo o conteúdo publicado pela revista enquanto o utilizador não for removido da lista de Subscrições pelo Gestor de Subscrições.</p><p><em>Subscrições Institucionais e Organizacionais</em>. Para subscrições institucionais, a pessoa para contacto na instituição deve ser registada como Leitor, e depois escolhida pelo Gestor de Subscrições na página Criar Subscrições. Essa pessoa deverá fornecer o domínio e/ou endereço de IP da instituição, utilizados para validar a conta, eliminando a necessidade dos membros da instituição possuirem registos individuais para aceder ao conteúdo assinado. Organizações com listas de membros podem ter as suas listas importadas para o sistema, através da função Importar Utilizadores em Administração da Revista.</p>]]>
+	</section>
+
+</topic>

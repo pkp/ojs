@@ -25,9 +25,21 @@ class TemplateManager extends PKPTemplateManager {
 	/**
 	 * Constructor.
 	 * Initialize template engine and assign basic template variables.
+	 * @param $request PKPRequest FIXME: is optional for backwards compatibility only - make mandatory
 	 */
-	function TemplateManager() {
-		parent::PKPTemplateManager();
+	function TemplateManager($request = null) {
+		// FIXME: for backwards compatibility only - remove
+		if (!isset($request)) {
+			if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function call.');
+			$request =& Registry::get('request');
+		}
+		assert(is_a($request, 'PKPRequest'));
+
+		parent::PKPTemplateManager($request);
+
+		// Retrieve the router
+		$router =& $request->getRouter();
+		assert(is_a($router, 'PKPRouter'));
 
 		// Are we using implicit authentication?
 		$this->assign('implicitAuth', Config::getVar('security', 'implicit_auth'));
@@ -39,24 +51,24 @@ class TemplateManager extends PKPTemplateManager {
 			 * installer pages).
 			 */
 
-			$journal =& Request::getJournal();
-			$site =& Request::getSite();
+			$journal =& $router->getContext($request);
+			$site =& $request->getSite();
 
-			$siteFilesDir = Request::getBaseUrl() . '/' . PublicFileManager::getSiteFilesPath();
+			$siteFilesDir = $request->getBaseUrl() . '/' . PublicFileManager::getSiteFilesPath();
 			$this->assign('sitePublicFilesDir', $siteFilesDir);
 			$this->assign('publicFilesDir', $siteFilesDir); // May be overridden by journal
 
 			$siteStyleFilename = PublicFileManager::getSiteFilesPath() . '/' . $site->getSiteStyleFilename();
-			if (file_exists($siteStyleFilename)) $this->addStyleSheet(Request::getBaseUrl() . '/' . $siteStyleFilename);
+			if (file_exists($siteStyleFilename)) $this->addStyleSheet($request->getBaseUrl() . '/' . $siteStyleFilename);
 
 			$this->assign('homeContext', array());
 
 			if (isset($journal)) {
-				
+
 				$this->assign_by_ref('currentJournal', $journal);
 				$journalTitle = $journal->getLocalizedTitle();
 				$this->assign('siteTitle', $journalTitle);
-				$this->assign('publicFilesDir', Request::getBaseUrl() . '/' . PublicFileManager::getJournalFilesPath($journal->getJournalId()));
+				$this->assign('publicFilesDir', $request->getBaseUrl() . '/' . PublicFileManager::getJournalFilesPath($journal->getJournalId()));
 
 				$this->assign('primaryLocale', $journal->getPrimaryLocale());
 				$this->assign('alternateLocales', $journal->getSetting('alternateLocales'));
@@ -71,7 +83,7 @@ class TemplateManager extends PKPTemplateManager {
 				$this->assign('displayPageHeaderTitleAltText', $journal->getLocalizedSetting('pageHeaderTitleImageAltText'));
 				$this->assign('displayPageHeaderLogoAltText', $journal->getLocalizedSetting('pageHeaderLogoImageAltText'));
 				$this->assign('displayFavicon', $journal->getLocalizedFavicon());
-				$this->assign('faviconDir', Request::getBaseUrl() . '/' . PublicFileManager::getJournalFilesPath($journal->getJournalId()));
+				$this->assign('faviconDir', $request->getBaseUrl() . '/' . PublicFileManager::getJournalFilesPath($journal->getJournalId()));
 				$this->assign('alternatePageHeader', $journal->getLocalizedSetting('journalPageHeader'));
 				$this->assign('metaSearchDescription', $journal->getLocalizedSetting('searchDescription'));
 				$this->assign('metaSearchKeywords', $journal->getLocalizedSetting('searchKeywords'));
@@ -91,17 +103,19 @@ class TemplateManager extends PKPTemplateManager {
 				// Assign stylesheets and footer
 				$journalStyleSheet = $journal->getSetting('journalStyleSheet');
 				if ($journalStyleSheet) {
-					$this->addStyleSheet(Request::getBaseUrl() . '/' . PublicFileManager::getJournalFilesPath($journal->getJournalId()) . '/' . $journalStyleSheet['uploadName']);
+					$this->addStyleSheet($request->getBaseUrl() . '/' . PublicFileManager::getJournalFilesPath($journal->getJournalId()) . '/' . $journalStyleSheet['uploadName']);
 				}
-				
+
 				import('payment.ojs.OJSPaymentManager');
 				$paymentManager =& OJSPaymentManager::getManager();
-				$this->assign('journalPaymentsEnabled', $paymentManager->isConfigured());				
+				$this->assign('journalPaymentsEnabled', $paymentManager->isConfigured());
 
-				$this->assign('pageFooter', $journal->getLocalizedSetting('journalPageFooter'));	
+				$this->assign('pageFooter', $journal->getLocalizedSetting('journalPageFooter'));
 			} else {
 				// Add the site-wide logo, if set for this locale or the primary locale
-				$this->assign('displayPageHeaderTitle', $site->getLocalizedPageHeaderTitle());
+				$displayPageHeaderTitle = $site->getLocalizedPageHeaderTitle();
+				$this->assign('displayPageHeaderTitle', $displayPageHeaderTitle);
+				if (isset($displayPageHeaderTitle['altText'])) $this->assign('displayPageHeaderTitleAltText', $displayPageHeaderTitle['altText']);
 
 				$this->assign('siteTitle', $site->getLocalizedTitle());
 			}
@@ -176,12 +190,12 @@ class TemplateManager extends PKPTemplateManager {
 					$context[$contextName] = $params[$contextName];
 					unset($params[$contextName]);
 				} else {
-					$context[$contextName] = null;				
+					$context[$contextName] = null;
 				}
 			}
 			$params['context'] = $context;
 		}
-		
+
 		return parent::smartyUrl($params, $smarty);
 	}
 

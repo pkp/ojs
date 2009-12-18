@@ -65,9 +65,13 @@ switch ($op) {
 		define('HANDLER_CLASS', 'RTSearchHandler');		
 		import('pages.rtadmin.RTSearchHandler');
 		break;
-	default:	
+	case 'index':
+	case 'configureSharing':
+	case 'saveConfigureSharing':
+	case 'validateUrls':
 		define('HANDLER_CLASS', 'RTAdminHandler');
 		import('pages.rtadmin.RTAdminHandler');
+		break;
 }
 
 ?>

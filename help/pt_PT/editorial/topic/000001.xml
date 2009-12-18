@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Index 
+
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000001" locale="pt_PT" title="Papel do Editor" toc="editorial/toc/000000" subtoc="editorial/toc/000001" key="editorial.editorsRole">
+	<section>
+		<![CDATA[<p>O Editor supervisiona o processo editorial, começando com a designação do Editor de Secção para uma submissão. O Editor freqüentemente desempenha várias funções, dependendo da política da revista, de Editor de Secção vendo submissões aceitas através do estágio de Edição do processo editorial.</p>]]>	
+	</section>
+</topic>

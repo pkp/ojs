@@ -17,9 +17,18 @@
 
 // $Id$
 
-
-define('HANDLER_CLASS', 'ArticleHandler');
-
-import('pages.article.ArticleHandler');
+switch ($op) {
+	case 'view':
+	case 'viewPDFInterstitial':
+	case 'viewDownloadInterstitial':
+	case 'viewArticle':
+	case 'viewRST':
+	case 'viewFile':
+	case 'download':
+	case 'downloadSuppFile':
+		define('HANDLER_CLASS', 'ArticleHandler');
+		import('pages.article.ArticleHandler');
+		break;
+}
 
 ?>

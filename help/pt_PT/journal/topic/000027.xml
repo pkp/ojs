@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000027.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Reading Tools - Versions
+
+  * $Id$
+  -->
+
+<topic id="journal/topic/000027" locale="pt_PT" title="Versões" toc="journal/toc/000005" key="journal.managementPages.readingTools.versions">
+	<section>
+		<![CDATA[
+		<p>O Editor-Gestor pode editar, incluir e verificar qualquer conjunto de disciplinas ou áreas do conhecimento de Ferramentas de Leitura. Essas Ferramentas usam uma base de dados que foi seleccionada por causa de sua relevância e acessibilidade por todos os leitores. Por causa da mudança nas ferramentas e URL das bases de dados, o Editor-Gestor deve ter permissão para alterar ou até mesmo eliminar algumas listas. As ferramentas são agrupadas em categorias (por exemplo, Estudos Relacionados, Dissertações, etc.), com um número de bases de dados em cada.</p><p><em>Validar Ferramentas de Leitura</em>. Esta opção verificará a validade da URL informada para a base de dados de pesquisa de itens relevantes (usando os termos de indexação do autor). Se o URL for inválida o Editor-Gestor pode corrigir esta configuração procurando o novo URL, procurando suporte técnico em fóruns de discussão, ou removendo a base de dados do conjunto de Ferramentas de Leitura. Como esta opção é executada em todas as bases de dados, o processo leva algum tempo para ser concluído e concluirá com indicação para cada base de dados atestando a sua validade ou a fonte do problema.</p><p><em>Metadados para cada Ferramenta de Leitura</em>. Os metadados para cada conjunto de ferramentas provêem o título da ferramenta e uma breve descrição, permitindo que o Editor-Gestor modifique a organização das ferramentas ou criar novos conjuntos.</p><p><em>Contextos para o Conjunto</em>. Cada conjunto de ferramentas consiste de vários agrupamentos, ou contextos, de bases de dados (por exemplo, Estudos Relacionados, Fóruns On-line, etc.), cada contexto consistindo de um número de bases de dados relevantes. Estas bases de dados podem ser incluídas, editadas ou removidas. O grupo pode também ser reordenado.</p><p><em>Exportar os Dados</em>. Se o Editor-Gestor desenvolver Ferramentas de Leitura adicionais, estas podem ser exportadas e encaminhadas ao Public Knowlege Project para uso noutras revista de áreas do conhecimento relacionadas.</p>
+		]]>
+	</section>
+</topic>

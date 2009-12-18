@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000015.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Journal Manager 
+
+  * $Id$
+  -->
+
+<topic id="journal/topic/000015" locale="pt_PT" title="Editor-Gestor" toc="journal/toc/000003" key="journal.roles.journalManager">
+	<section>
+		<![CDATA[<p>O Editor-Gestor é responsável por gerir o processo de publicação. Isso não exige nenhuma habilidade especial, porém exige saber trabalhar com sistema Web com formulários e trabalhar com transferência de ficheiros via Web. O Editor-Gestor realiza a {help_topic key="journal.managementPages.setup" text="Configuração"} da revista, regista Editores, Editores de Sceção, Editores de Texto, Editores de Layout, Leitores de Prova, e Revisores. Opcionalmente, o nome e e-mail de Revisores podem ser importados para o sistema caso existam nalguma base de dados, através da função Importar Registos em {help_topic key="journal.users.index" text="Pessoas"}. O Editor-Gestor da revista também tem acesso aos outros sistemas de administração da revista, pode criar novas secções, editar o conjunto de e-mails padrão do sistema, administrar as {help_topic key="journal.managementPages.readingTools" text="Ferramentas de Leitura"} disponíveis, e aceder as {help_topic key="journal.managementPages.statistics" text="Estatísticas da Revista"} que o sistema pode gerar.</p>
+		<p>Embora a função de Editor-Gestor seja supostamente uma função individual por revista, Editores-Gestores deveriam ser considerados utilizadores de confiança com acesso geral dentro do sistema, já que podem assumir as identidades de outros utilizadores registados noutras revistas do sistema.</p>]]>	
+	</section>
+</topic>

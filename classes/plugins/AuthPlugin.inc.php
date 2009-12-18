@@ -33,6 +33,7 @@ class AuthPlugin extends Plugin {
 	 * @param $settings array
 	 */
 	function AuthPlugin($settings = array(), $authId = null) {
+		parent::Plugin();
 		$this->settings = $settings;
 		$this->authId = $authId;
 	}

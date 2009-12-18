@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000023.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Reader 
+
+  * $Id$
+  -->
+
+<topic id="journal/topic/000023" locale="pt_PT" title="Leitor" toc="journal/toc/000003" key="journal.roles.reader">
+	<section>
+		<![CDATA[<p>Leitores incluem os subscritores das revistas cujo acesso é permitido apenas a utilizadores registados e leitores que escolheram criar um registo nas revistas de acesso livre. Leitores registados recebem uma notificação da publicação de cada edição da revista que inclui a Sumário da revista. Autores ao se registarem na revista podem escolher se desejam ser registados como Leitores também.</p>]]>	
+	</section>
+</topic>

@@ -17,6 +17,7 @@
 
 // $Id$
 
+
 switch ($op) {
 	//
 	// issue 
@@ -76,9 +77,14 @@ switch ($op) {
 		define('HANDLER_CLASS', 'SubmissionCommentsHandler');
 		import('pages.layoutEditor.SubmissionCommentsHandler');
 		break;
-	default:
+	case 'index':
+	case 'submissions':
+	case 'futureIssues':
+	case 'backIssues':
+	case 'instructions':
 		define('HANDLER_CLASS', 'LayoutEditorHandler');
 		import('pages.layoutEditor.LayoutEditorHandler');
+		break;
 }
 
 ?>

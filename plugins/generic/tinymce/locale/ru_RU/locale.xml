@@ -14,4 +14,10 @@
  
 <locale name="ru_RU" full_name="Russian">
 	<!-- FIXME: We need a Russian translation. -->
+	<message key="plugins.generic.tinymce.name">Модуль TinyMCE</message>
+	<message key="plugins.generic.tinymce.description"><![CDATA[Модуль позволяет визуальное (WYSIWYG) редактирование текстовых полей в OJS с использованием редактора <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>.]]></message>
+	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Модуль позволяет визуальное (WYSIWYG) редактирование текстовых полей в OJS с использованием редактора <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>.<strong>редактор TinyMCE сейчас не уствновлен; пожалуйста установите его в {$tinyMcePath}.</strong>]]></message>
+	<message key="plugins.generic.tinymce.enabled">Модуль TinyMCE включен.</message>
+	<message key="plugins.generic.tinymce.disabled">Модуль TinyMCE выключен.</message>
+	<message key="plugins.generic.tinymce.settings">Настройки</message>
 </locale>

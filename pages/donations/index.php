@@ -16,8 +16,15 @@
  *
  */
 
-define('HANDLER_CLASS', 'DonationsHandler');
+// $Id$
 
-import('pages.donations.DonationsHandler');
+
+switch ($op) {
+	case 'index':
+	case 'thankYou':
+		define('HANDLER_CLASS', 'DonationsHandler');
+		import('pages.donations.DonationsHandler');
+		break;
+}
 
 ?>

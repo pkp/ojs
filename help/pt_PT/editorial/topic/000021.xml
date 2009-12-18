@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000021.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - In Review
+
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000021" locale="pt_PT" title="Em Revisão" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.inReview">
+	<section>
+		<![CDATA[<p>Submissões que estão listadas Em Revisão estão sujeitas ao processo de revisão que leva a uma decisão pelo Editor de Secção de aceitar ou recusar a submissão. A continuação do processo de revisão, incluindo qual secção da revista é conduzida por uma revisão por pares das submissões e quantos revisores são usados, é estabelecido em Políticas de Revisão da revista pelo Editor e Editor-Gestor. Quando um Editor de Secção ou Editor clica no título de uma submissão na fila Em Revisão, são levados à página de Revisão da submissão, onde a revisão por pares é conduzida e são enriquecidas as decisões editoriais sobre o artigo. Se o Editor de Secção aceita uma submissão para publicação, então esta é movida para a fila Em Edição. Se a submissão e recusada, esta é movida para Arquivos.</p>]]>
+	</section>
+</topic>

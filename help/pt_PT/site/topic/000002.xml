@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Site Administration - Site Management 
+
+  * $Id$
+  -->
+
+<topic id="site/topic/000002" locale="pt_PT" title="Administração do Portal" toc="site/toc/000000" key="site.siteManagement">
+	<section>
+		<![CDATA[<p>O sistema foi desenvolvido para administrar várias revistas, sendo o Administrador do Sistema o responsável pelas configurações ao nível do portal e criação de novas revistas a serem hospedados no sistema. Cada revista é independente, com a excepção dos registos de utilizadores: enquanto um utilizador pode assumir várias funções em várias revistas, o utilizador utilizará o mesmo endereço de e-mail e login independente da revista.</p>]]>	
+	</section>
+	
+	<section title="Configurações do Portal">
+		<![CDATA[<p>Informações básicas são registadas pelo Administrador do Sistema, aplicáveis a todas as revistas hospedadas no portal, incluindo o Título e a Descrição do portal, além das informações para contacto.</p>
+		<p><em>Redireccionamento da Revista.</em> Esta opção pode ser usada para garantir o redireccionamento do portal para uma revista específica. Tipicamente esta opção é utilizada para hospedar uma única revista no sistema.</p>]]>
+	</section>
+	
+	<section title="Revistas Hospedadas">
+		<![CDATA[<p>Como o sistema permite gerar qualquer número individual e distinto de revistas, novas revistas podem ser criadas a qualquer tempo. Cada revista criada pode ser acedida por um URL única baseada no caminho definido pelo Administrador do Sistema. Revistas em processo de configuração podem permanecer indisponíveis ao público até estarem prontas para lançamento.</p>]]>
+	</section>
+	
+	<section title="Idiomas">
+		<![CDATA[<p>O sistema foi desenvolvido como um sistema multilingue, permitindo que revistas que trabalhem com conteúdo multilingue sejam hospedadas num único sistema. O Administrador do Sistema pode especificar o idioma padrão para o sistema e instalar novas traduções para uso nas revistas.</p>
+		<p>Pacotes adicionais de idiomas estarão normalmente disponíveis no <a href="http://pkp.sfu.ca/" target="_blank">portal web</a> do sistema assim que as contribuições da comunidade forem recebidas. Estes pacotes podem ser instalados num sistema existente para disponibilização às revistas.</p>]]>
+	</section>
+	
+	<section title="Fontes de Autenticação">
+		<![CDATA[<p>O sistema normalmente autentica utilizadores através da sua base de dados interna. No entanto, é possível utilizar outros métodos de autenticação, como LDAP. Outras fontes são implementadas na forma de plugins; veja a documentação disponível com o sistema e cada plugin para mais detalhes.</p>]]>
+	</section>
+</topic>

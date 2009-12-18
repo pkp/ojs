@@ -2,9 +2,9 @@
 <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * ojs2-devel/locale/it_IT/admin.xml
+  * ../ojs2-devel//locale/it_IT/admin.xml
   *
-  * Copyright (c) 2003-2009 John Willinsky
+  * Copyright (c) 2000-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the it_IT (Italiano) locale.
@@ -17,9 +17,9 @@
 	<message key="admin.settings.journalRedirect">Redirect del Journal</message>
 	<message key="admin.settings.journalRedirectInstructions">Le richieste al sito principale verranno indirizzate a questa rivista. Questo pu&#x00F2; essere utile, ad esempio, se il sito ospita solo una rivista.</message>
 	<message key="admin.settings.noJournalRedirect">Nessun redirect</message>
-	<message key="admin.languages.primaryLocaleInstructions">Questa sar&#x00E0; la lingua di default per il sito ed le riviste ospitate.</message>
-	<message key="admin.languages.supportedLocalesInstructions">Seleziona tutte le lingue aggiuntive che saranno supportate dal sito. Le lingue scelte potranno essere selezionate da tutte le riviste ospitate tramite un menu presente in tutte le pagine del sito (in ogni caso il layout potr&#x00E0; sempre essere modificato personalizzando le pagine della singola rivista). Se non vengono impostate pi&#x00F9; lingue, il menu di selezione sar&#x00E0; presente e non saranno disponibili le impostazioni estese per le lingue.</message>
-	<message key="admin.languages.confirmUninstall">Sei sicuro di voler disinstallare questa lingua aggiuntiva? Questo potr&#x00E0; avere effetti sulle riviste da cui &#x00E8; attualmente utilizzata.</message>
+	<message key="admin.languages.primaryLocaleInstructions">Lingua di default</message>
+	<message key="admin.languages.supportedLocalesInstructions">Seleziona tutte le lingue aggiuntive che saranno supportate dal sito. Le lingue scelte potranno essere selezionate da tutte le riviste ospitate tramite un menu presente in tutte le pagine del sito (in ogni caso il layout potrà sempre essere modificato personalizzando le pagine della singola rivista). Se non vengono impostate più lingue, il menu di selezione sarà presente e non saranno disponibili le impostazioni estese per le lingue.</message>
+	<message key="admin.languages.confirmUninstall">Sei sicuro di voler disinstallare questa lingua aggiuntiva? Questo potrà avere effetti sulle riviste da cui è attualmente utilizzata.</message>
 	<message key="admin.languages.installNewLocalesInstructions">Seleziona le lingue aggiuntive che devono essere installate nel sistema. Per potere essere utilizzate dalle riviste le lingue aggiuntive devono essere prima installate. Per maggiori informazioni sul supporto per le lingue aggiuntive consultare la documentazione di OJS.</message>
 	<message key="admin.languages.downloadLocales">Scarica le lingue</message>
 	<message key="admin.languages.downloadFailed">Lo scarico della lingua è fallito. Il(I) messaggio(i) di errore qui sotto descrive l'insuccesso.</message>
@@ -27,10 +27,10 @@
 	<message key="admin.languages.download">Scarica la lingua</message>
 	<message key="admin.languages.download.cannotOpen">Non è possibile aprire il descrittore della lingua del sito web del PKP.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Non è possibile aggiungere la nuova lingua al file di registro della lingua, solitamente "registry/locales.xml".</message>
-	<message key="admin.auth.ojs">User del database di OJS </message>
-	<message key="admin.auth.enableSyncProfiles">Abilita la sincronizzazione del profilo dell'utente (se supportato da questo plug-in di autenticazione). Le informazione sul profilo dell'utente saranno automaticamente aggiornate in remoto quando un utente accede, e i cambiamenti del profilo (inclusi cambi di password) fatti all'interno di OJS saranno automaticamente aggiornati in remoto. Se questa opzione &#x00E8; disabilitata le informazioni del profilo OJS  saranno mantenute separate dalle informazioni del profilo in remoto.</message>
-	<message key="admin.auth.enableSyncPasswords">Abilita la modifica della password dell'utente (se supportato da questo plug-in di autenticazione). L'abilitazione di questa opzione permette agli utenti di modificare la password all'interno di OJS and e di usare il comando OJS "password smarrita"  per resettare una password dimenticata. Queste funzioni non saranno disponibili all'utente con questa fonte di autenticazione se questa opzione &#x00E8; disabilitata .</message>
-	<message key="admin.auth.enableCreateUsers">Abilita la creazione di un utente (se supportato da questo plug-in di autenticazione). Gli utenti creati all'interno di OJS con questa fonte di autenticazione  saranno automaticamente aggiunti alla fonte di autenticazione in remoto se ancora non esiste. Inoltre, se questa fonte &#x00E8; la fonte di autenticazione di default, gli account di OJS creati  tramite la registrazione dello user  saranno aggiunti alla fonte di autenticazione in remoto.</message>
+	<message key="admin.auth.ojs">Utente del database di OJS</message>
+	<message key="admin.auth.enableSyncProfiles">Abilita la sincronizzazione del profilo dell'utente (se supportato da questo plug-in di autenticazione). Le informazione sul profilo dell'utente saranno automaticamente aggiornate in remoto quando un utente accede, e i cambiamenti del profilo (inclusi cambi di password) fatti all'interno di OJS saranno automaticamente aggiornati in remoto. Se questa opzione è disabilitata le informazioni del profilo OJS  saranno mantenute separate dalle informazioni del profilo in remoto.</message>
+	<message key="admin.auth.enableSyncPasswords">Abilita la modifica della password dell'utente (se supportato da questo plug-in di autenticazione). L'abilitazione di questa opzione permette agli utenti di modificare la password all'interno di OJS and e di usare il comando OJS "password smarrita"  per resettare una password dimenticata. Queste funzioni non saranno disponibili all'utente con questa fonte di autenticazione se questa opzione è disabilitata .</message>
+	<message key="admin.auth.enableCreateUsers">Abilita la creazione di un utente (se supportato da questo plug-in di autenticazione). Gli utenti creati all'interno di OJS con questa fonte di autenticazione  saranno automaticamente aggiunti alla fonte di autenticazione in remoto se ancora non esiste. Inoltre, se questa fonte è la fonte di autenticazione di default, gli account di OJS creati  tramite la registrazione dello user  saranno aggiunti alla fonte di autenticazione in remoto.</message>
 	<message key="admin.systemVersion">Versione di OJS</message>
 	<message key="admin.systemConfiguration">Configurazione di OJS</message>
 	<message key="admin.systemConfigurationDescription"><![CDATA[Impostazioni di configurazione di OJS prese da <tt>config.inc.php</tt>.]]></message>
@@ -56,9 +56,9 @@
 	<message key="admin.journals.importOJS1.conflict">{$firstUsername} ({$firstName}) e {$secondUsername} ({$secondName})</message>
 	<message key="admin.journals.importOJS1Instructions">Consulta la documentazione sull'UPGRADE distribuita con OJS per informazioni dettagliate sulla migrazione dei dati da OJS 1 a OJS 2.</message>
 	<message key="admin.journal.pathImportInstructions">Path di una rivista esistente o path da creare (e.g., "ojs").</message>
-	<message key="admin.journal.importPath">OJS 1 path</message>
+	<message key="admin.journal.importPath">Path di OJS 1</message>
 	<message key="admin.journal.importPathInstructions">Completa il path del filesystem locale  per l'installazione di OJS 1  (e.g., "/var/www/ojs").</message>
-	<message key="admin.journals.importSubscriptions">Importa sottoscrizioni</message>
+	<message key="admin.journals.importSubscriptions">Importa abbonamenti</message>
 	<message key="admin.journals.transcode">Converti i metadata dell'articolo da ISO8859-1</message>
 	<message key="admin.journals.redirect">Genera il codice per mappare le URL di OJS1 verso quelle di OJS2</message>
 	<message key="admin.journals.form.importPathRequired">&#x00C8; richiesto il path dell'importazione.</message>

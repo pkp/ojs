@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Register and Profile
+
+  * $Id$
+  -->
+
+<topic id="user/topic/000003" locale="pt_PT" title="Registo e Perfil" toc="user/toc/000000" key="user.registerAndProfile">
+	<section>
+		<![CDATA[<p>A Revista usa um sistema de Registo para todos os utilizadores envolvidos no Processo Editorial e de Publicação. A Política de Privacidade da revista abrange todos os utilizadores registados. Cada utilizador registado tem um Perfil, que pode ser editado ou preencido após o utilizador ter ligado ao portal da revista. O link para o Perfil é encontrado na margem direita da página, por baixo de Utilizador e na Página do Utilizador.</p>
+		<p>Para todos os utilizadores, existe uma opção de actualização via e-mail, que resulta em ser notificado via e-mail de cada Sumário de nova Edição. Para revistas funcionado com mais de um idioma, Revisores podem indicar nps seus perfis os idiomas em que se sentem confortaveis para rever submissões.</p>]]>
+	</section>
+</topic>

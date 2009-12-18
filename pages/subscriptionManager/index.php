@@ -18,8 +18,32 @@
 // $Id$
 
 
-define('HANDLER_CLASS', 'SubscriptionManagerHandler');
-
-import('pages.subscriptionManager.SubscriptionManagerHandler');
+switch ($op) {
+	case 'index':
+	case 'subscriptionsSummary':
+	case 'subscriptions':
+	case 'deleteSubscription':
+	case 'renewSubscription':
+	case 'editSubscription':
+	case 'createSubscription':
+	case 'selectSubscriber':
+	case 'updateSubscription':
+	case 'subscriptionTypes':
+	case 'moveSubscriptionType':
+	case 'deleteSubscriptionType':
+	case 'editSubscriptionType':
+	case 'createSubscriptionType':
+	case 'updateSubscriptionType':
+	case 'subscriptionPolicies':
+	case 'saveSubscriptionPolicies':
+	case 'createUser':
+	case 'updateUser':
+	case 'payMethodSettings':
+	case 'savePayMethodSettings':
+	case 'suggestUsername':
+		define('HANDLER_CLASS', 'SubscriptionManagerHandler');
+		import('pages.subscriptionManager.SubscriptionManagerHandler');
+		break;
+}
 
 ?>

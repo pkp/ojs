@@ -82,9 +82,11 @@ switch ($op) {
 		define('HANDLER_CLASS', 'AdminFunctionsHandler');
 		import('pages.admin.AdminFunctionsHandler');
 		break;
-	default:	
+	// Main administration page
+	case 'index':
 		define('HANDLER_CLASS', 'AdminHandler');
 		import('pages.admin.AdminHandler');
+		break;
 }
 
 ?>

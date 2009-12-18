@@ -28,18 +28,21 @@ class IndexHandler extends Handler {
 	/**
 	 * If no journal is selected, display list of journals.
 	 * Otherwise, display the index page for the selected journal.
+	 * @param $args array
+	 * @param $request Request
 	 */
-	function index($args) {
+	function index($args, &$request) {
 		$this->validate();
 		$this->setupTemplate();
 
+		$router =& $request->getRouter();
 		$templateMgr =& TemplateManager::getManager();
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journalPath = Request::getRequestedJournalPath();
+		$journalPath = $router->getRequestedContextPath($request);
 		$templateMgr->assign('helpTopicId', 'user.home');
 
 		if ($journalPath != 'index' && $journalDao->journalExistsByPath($journalPath)) {
-			$journal =& Request::getJournal();
+			$journal =& $router->getContext($request);
 
 			// Assign header and content for home page
 			$templateMgr->assign('displayPageHeaderTitle', $journal->getLocalizedPageHeaderTitle(true));
@@ -73,18 +76,18 @@ class IndexHandler extends Handler {
 					$templateMgr->assign('announcements', $announcements);
 					$templateMgr->assign('enableAnnouncementsHomepage', $enableAnnouncementsHomepage);
 				}
-			} 
+			}
 			$templateMgr->display('index/journal.tpl');
 		} else {
 			$siteDao =& DAORegistry::getDAO('SiteDAO');
 			$site =& $siteDao->getSite();
 
 			if ($site->getRedirect() && ($journal = $journalDao->getJournal($site->getRedirect())) != null) {
-				Request::redirect($journal->getPath());
+				$request->redirect($journal->getPath());
 			}
 
 			$templateMgr->assign('intro', $site->getLocalizedIntro());
-			$templateMgr->assign('journalFilesPath', Request::getBaseUrl() . '/' . Config::getVar('files', 'public_files_dir') . '/journals/');
+			$templateMgr->assign('journalFilesPath', $request->getBaseUrl() . '/' . Config::getVar('files', 'public_files_dir') . '/journals/');
 			$journals =& $journalDao->getEnabledJournals();
 			$templateMgr->assign_by_ref('journals', $journals);
 			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);

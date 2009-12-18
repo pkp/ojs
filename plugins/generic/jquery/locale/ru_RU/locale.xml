@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.jquery.name">Модуль jQuery</message>
+	<message key="plugins.generic.jquery.description"><![CDATA[Этот модуль включает взаимодействие с javascript и изменение стиля сайта OJS при помощи библиотеки <a href="http://www.jquery.com" target="_new">jQuery</a>.]]></message>
+	<message key="plugins.generic.jquery.descriptionDisabled"><![CDATA[Этот модуль включает взаимодействие с javascript и изменение стиля сайта OJS при помощи библиотеки <a href="http://www.jquery.com" target="_new">jQuery</a>.  <strong>Библиотека jQuery сейчас не установлена; пожалуйста установите ее в {$jQueryPath}.</strong>]]></message>
+	<message key="plugins.generic.jquery.disabled">Модуль jQuery выключен.</message>
+	<message key="plugins.generic.jquery.enabled">Модуль jQuery включен.</message>
+	<message key="plugins.generic.jquery.settings">Настройки</message>
+</locale>

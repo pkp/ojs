@@ -16,6 +16,10 @@
 
 
 class ReportPlugin extends Plugin {
+	function ReportPlugin() {
+		parent::Plugin();
+	}
+
 	/**
 	 * Get the name of this plugin. The name must be unique within
 	 * its category.

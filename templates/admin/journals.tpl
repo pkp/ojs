@@ -42,9 +42,6 @@ $(document).ready(function() { setupTableDND("#adminJournals", "moveJournal"); }
 		<td align="right"><a href="{url op="editJournal" path=$journal->getJournalId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a class="action" href="{url op="deleteJournal" path=$journal->getJournalId()}" onclick="return confirm('{translate|escape:"jsparam" key="admin.journals.confirmDelete"}')">{translate key="common.delete"}</a></td>
 	</tr>
 	{/iterate}
-	<tr>
-		<td colspan="4" class="endseparator">&nbsp;</td>
-	</tr>
 	{if $journals->wasEmpty()}
 	<tr>
 		<td colspan="4" class="nodata">{translate key="admin.journals.noneCreated"}</td>
@@ -53,6 +50,9 @@ $(document).ready(function() { setupTableDND("#adminJournals", "moveJournal"); }
 		<td colspan="4" class="endseparator">&nbsp;</td>
 	</tr>
 	{else}
+		<tr>
+			<td colspan="4" class="endseparator">&nbsp;</td>
+		</tr>
 		<tr>
 			<td colspan="2" align="left">{page_info iterator=$journals}</td>
 			<td colspan="2" align="right">{page_links anchor="journals" name="journals" iterator=$journals}</td>

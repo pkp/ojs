@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000010.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Author's Role - Review
+
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000010" locale="pt_PT" title="Revisão" parent_topic="editorial/topic/000010">
+	<topic id="editorial/topic/000033" title="Revisão por Pares" />
+	<topic id="editorial/topic/000034" title="Decisão Editorial" />
+
+	<breadcrumb url="editorial/topic/000000" title="Processo Editorial" />
+	<breadcrumb url="editorial/topic/000009" title="Papel do Autor" />
+	<breadcrumb url="editorial/topic/000010" title="Revisão" />
+</toc>

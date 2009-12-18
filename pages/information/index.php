@@ -18,8 +18,16 @@
 // $Id$
 
 
-define('HANDLER_CLASS', 'InformationHandler');
-
-import('pages.information.InformationHandler');
+switch ($op) {
+	case 'index':
+	case 'readers':
+	case 'authors':
+	case 'librarians':
+	case 'competingInterestGuidelines':
+	case 'sampleCopyrightWording':
+		define('HANDLER_CLASS', 'InformationHandler');
+		import('pages.information.InformationHandler');
+		break;
+}
 
 ?>

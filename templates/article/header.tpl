@@ -17,7 +17,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset|escape}" />
 	<meta name="description" content="{$article->getLocalizedTitle()|escape}" />
 	{if $article->getLocalizedSubject()}
-	<meta name="keywords" content="{$article->getLocalizedSubject()|escape}" />
+		<meta name="keywords" content="{$article->getLocalizedSubject()|escape}" />
 	{/if}
 
 	{include file="article/dublincore.tpl"}

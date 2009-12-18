@@ -515,4 +515,313 @@ Thank you for completing the proofreading corrections for the galleys associated
 		<body>Thought you might be interested in seeing "{$articleTitle}" by {$authorName} published in Vol {$volume}, No {$number} ({$year}) of {$journalName} at "{$articleUrl}".</body>
 		<description>This email template provides a registered reader with the opportunity to send information about an article to somebody who may be interested. It is available via the Reading Tools and must be enabled by the Journal Manager in the Reading Tools Administration page.</description>
 	</email_text>
+	<email_text key="NOTIFICATION">
+		<subject>извещение сайта {$siteTitle}</subject>
+		<body>У Вас новое извещение на сайте {$siteTitle}:
+
+{$notificationContents}
+
+Ссылка: {$url}
+
+{$principalContactSignature}</body>
+		<description></description>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST">
+		<subject>извещение сайта {$siteTitle}</subject>
+		<body>У Вас новое извещение на сайте  {$siteTitle}:
+--
+{$notificationContents}
+
+Ссылка: {$url}
+--
+
+Если хотите прекратить получение извещений, пожалуйста перейдите по ссылке  {$unsubscribeLink} и введите свой почтовый адрес и пароль.
+
+{$principalContactSignature}</body>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
+		<subject>Добро пожаловать в список рассылки {$siteTitle} !</subject>
+		<body>Вы подписались на получение извещений с сайта {$siteTitle}.
+
+Пожалуйста нажмите на ссылку для подтверждения своего запроса и добавления Вашего почтового адреса в список рассылки: {$confirmLink}
+
+Если не хотите получать извещения, пожалуйста нажмите на ссылку {$unsubscribeLink}  и введите свой почтовый адрес и пароль.
+
+Пароль для отключения извещений: {$password}
+
+{$principalContactSignature}</body>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST_PASSWORD">
+		<subject>Информация о списке рассылки извещений {$siteTitle}</subject>
+		<body>Ваш новый пароль для отключения извещений: {$password}
+
+Если хотите прекратить их получение, пройдите по ссылке {$unsubscribeLink}, а там введите свой почтовый адрес и этот пароль.
+
+{$principalContactSignature}</body>
+	</email_text>
+	<email_text key="USER_VALIDATE">
+		<subject>Подтвердите свой электронный адрес</subject>
+		<body>{$userFullName}
+
+Вы зарегистрировались в журнале {$journalName}, но перед тем как начать пользоваться своей учетной записью, нужно подтвердить правильность Вашего электронного адреса. Чтобы это сделать просто пройдите по ссылке:
+
+{$activateUrl}
+
+Спасибо !
+
+{$principalContactSignature}</body>
+	</email_text>
+	<email_text key="REVIEWER_REGISTER">
+		<subject>Регистрация в качестве рецензента журнала {$journalName}</subject>
+		<body>Принимая во внимание Ваш высокий научный уровень и опыт, мы зарегистрировали Вас в базе данных потенциальных рецензентов журнала {$journalName}. Это ни в коем случае не налагает на Вас никаких обязательств, но лишь помогает нам связываться с Вами при подаче нам рукописей, рецензетом которых Вы могли бы стать. Получив приглашение к рецензированию Вы увидите название и тезисы рукописи и возможность принять или отклонить приглашение. В любой момент, если захотите, Ваше имя будет убрано из списка потенциальных рецензентов.
+
+Мы даем Вам имя пользователя и пароль, необходимые для любого взаимодействия с нашим журналом через его сайт. Например, Вы можете уточнить свои данные и темы рукописей, которые Вы могли бы рассмотреть.
+
+Логин: {$username}
+Пароль: {$password}
+
+Спасибо !
+
+{$principalContactSignature}</body>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_ONECLICK">
+		<subject>Запрос на рецензию</subject>
+		<body>{$reviewerName}:
+
+Я уверен, Вы могли бы стать очень хорошим рецензентом для рукописи, "{$articleTitle}," (ее резюме Вы найдете ниже) присланной для публикации в журнале {$journalName}. Надеюсь, на Вашу помощь в столь важной для нас задаче.
+
+Пожалуйста войдите на сайт нашего журнала до {$weekLaterDate}, чтобы согласиться (или отклонить) это предложение, либо чтобы получить доступ к полному тексту рукописи и передать Вашу рецензию и рекомендации.
+
+Если Вы согласны, рецензию требуется отправить до {$reviewDueDate}.
+
+Ссылка на рукопись: {$submissionReviewUrl}
+
+Спасибо за Ваше рассмотрение !
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+	</email_text>
+	<email_text key="REVIEW_REMIND_ONECLICK">
+		<subject>Напоминание о запросе на рецензию</subject>
+		<body>{$reviewerName}:
+
+Просим прощение за напоминание о нашем запросе на рецензию рукописи "{$articleTitle}," для журнала {$journalName}. Мы надеялись получить рецензию до {$reviewDueDate}, и были бы очень благодарны получить ее как только Вы ее сможете приготовить.
+
+Ссылка на рукопись: {$submissionReviewUrl}
+
+Пожалуйста подтвердите возможность закончить эту важную для журнала задачу.
+
+Надеюсь на Ваш ответ.
+
+{$editorialContactSignature}</body>
+	</email_text>
+	<email_text key="REVIEW_REMIND_AUTO_ONECLICK">
+		<subject>автоматическоне напоминание о рецензии</subject>
+		<body>{$reviewerName}:
+
+Просим прощение за напоминание о нашем запросе на рецензию рукописи "{$articleTitle}," для журнала {$journalName}. Мы надеялись получить рецензию до {$reviewDueDate} и это письмо было сгенерировано нашей системой автоматически по прошествии этой даты. Несмотря на это, мы были бы очень благодарны получить рецензию как только Вы ее сможете приготовить.
+
+Ссылка на рукопись: {$submissionReviewUrl}
+
+Пожалуйста подтвердите возможность закончить эту важную для журнала задачу.
+
+Надеюсь на Ваш ответ.
+
+{$editorialContactSignature}</body>
+		<description>Это письмо высылается автоматически если рецензент не высылает рецензию вовремя (см. опции рецензирования в настройках журнала, Шаг 2) и включен прямой доступ рецензентов к рукописям. Для работы в конфигурационном файле должны быть включены периодические задачи.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_ACCEPT">
+		<subject>Редакционное решение</subject>
+		<body>{$authorName}:
+
+Мы приняли решение относительно Вашей рукописи "{$articleTitle}", отправленной для публикации в наш журнал {$journalTitle}.
+
+Наше решение:
+
+{$editorialContactSignature}</body>
+		<description>Это письмо высылается редактором или редактором секции, чтобы уведомить автора об окончательном решении относительно его рукописи.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_REVISIONS">
+		<subject>Редакционное решение</subject>
+		<body>{$authorName}:
+
+Мы приняли решение относительно Вашей рукописи "{$articleTitle}", отправленной для публикации в наш журнал {$journalTitle}.
+
+Наше решение:
+
+{$editorialContactSignature}</body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_RESUBMIT">
+		<subject>Редакционное решение</subject>
+		<body>{$authorName}:
+
+Мы приняли решение относительно Вашей рукописи "{$articleTitle}", отправленной для публикации в наш журнал {$journalTitle}.
+
+Наше решение:
+
+{$editorialContactSignature}</body>
+		<description>Это письмо высылается редактором или редактором секции, чтобы уведомить автора об окончательном решении относительно его рукописи.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_DECLINE">
+		<subject>Редакционное решение</subject>
+		<body>{$authorName}:
+
+Мы приняли решение относительно Вашей рукописи "{$articleTitle}", отправленной для публикации в наш журнал {$journalTitle}.
+
+Наше решение:
+
+{$editorialContactSignature}</body>
+	</email_text>
+	<email_text key="OPEN_ACCESS_NOTIFY">
+		<subject>выпуск в открытом доступе</subject>
+		<body>Читатели:
+
+{$journalName} открывает свободный доступ к следующему выпуску. Мы приглашаем Вас ознакомиться с его оглавлением здесь и посетить наш сайт ({$journalUrl}) для получения доступа к полному тексту статей.
+
+Спасибо за интерес !
+
+{$editorialContactSignature}</body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_BEFORE_EXPIRY">
+		<subject>уведомление об окончании срока подписки</subject>
+		<body>{$subscriberName}:
+
+Ваша подписка на {$journalName} истекает.
+
+{$subscriptionType}
+Дата окончания: {$expiryDate}
+
+Для обеспечения непрерывности Вашего доступа к журналу, пожалуйста посетите наш сайт и продлите подписку. Вы сможете войти под своим именем как "{$username}".
+
+Свяжитесь со мной, если у Вас есть вопросы.
+
+{$subscriptionContactSignature}</body>
+		<description>Уведомляет подписчика, что его подписка скоро закончится.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_AFTER_EXPIRY">
+		<subject>уведомление об окончании срока подписки</subject>
+		<body>{$subscriberName}:
+
+Срок Вашей подписки на журнал {$journalName} истек.
+
+{$subscriptionType}
+Дата окончания: {$expiryDate}
+
+Для продления пожалуйста посетите наш сайт. Вы сможете войти под своим именем как "{$username}".
+
+Свяжитесь со мной, если у Вас есть вопросы.
+
+{$subscriptionContactSignature}</body>
+		<description>Уведомляет подписчика, что срок его подписки истек.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_AFTER_EXPIRY_LAST">
+		<subject>срок подписки истек -- последнее напоминание</subject>
+		<body>{$subscriberName}:
+
+Срок Вашей подписки на журнал {$journalName} истек.
+Заметьте, это последнее напоминание.
+
+{$subscriptionType}
+Дата окончания: {$expiryDate}
+
+Для продления пожалуйста посетите наш сайт. Вы сможете войти под своим именем как "{$username}".
+
+Свяжитесь со мной, если у Вас есть вопросы.
+
+{$subscriptionContactSignature}</body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
+		<subject>подписка: индивидуальная</subject>
+		<body>В журнале {$journalName} приобретена индивидуальная подписка со следующими деталями.
+
+Тип подписки:
+{$subscriptionType}
+
+Пользователь:
+{$userDetails}
+
+Информация о членстве (если указана):
+{$membership}
+
+Для просмотра или изменения этой подписки используйте следующую ссылку.
+
+Ссылка на подписку: {$subscriptionUrl}</body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
+		<subject>подписка: институциональная</subject>
+		<body>В журнале {$journalName} приобретена институциональнаяподписка со следующими деталями. Для ее активации посетите приведенную в конце ссылку и установите там "статус подписки" -- "активный".
+
+Тип подписки:
+{$subscriptionType}
+
+Организация:
+{$institutionName}
+{$institutionMailingAddress}
+
+Доменное имя (если указано):
+{$domain}
+
+IP адреса (если указаны):
+{$ipRanges}
+
+Контакт:
+{$userDetails}
+
+Информация о членстве (если указана):
+{$membership}
+
+Для просмотра или изменения этой подписки используйте следующую ссылку.
+
+Ссылка на подписку: {$subscriptionUrl}</body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INDL">
+		<subject>продление подписки: индивидуальная</subject>
+		<body>В журнале {$journalName} продлена индивидуальная подписка со следующими деталями.
+
+Тип подписки:
+{$subscriptionType}
+
+Пользователь:
+{$userDetails}
+
+Информация о членстве (если указана):
+{$membership}
+
+Для просмотра или изменения этой подписки используйте следующую ссылку.
+
+Ссылка на подписку: {$subscriptionUrl}</body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INSTL">
+		<subject>продление подписки: институциональная</subject>
+		<body>В журнале {$journalName} продлена институциональнаяподписка со следующими деталями.
+
+Тип подписки:
+{$subscriptionType}
+
+Организация:
+{$institutionName}
+{$institutionMailingAddress}
+
+Доменное имя (если указано):
+{$domain}
+
+IP адреса (если указаны):
+{$ipRanges}
+
+Контакт:
+{$userDetails}
+
+Информация о членстве (если указана):
+{$membership}
+
+Для просмотра или изменения этой подписки используйте следующую ссылку.
+
+Ссылка на подписку: {$subscriptionUrl}</body>
+	</email_text>
 </email_texts>

@@ -34,7 +34,7 @@
 
 	<!-- Common Messages -->
 
-	<message key="common.openJournalSystems">Славистические Журналы</message>
+	<message key="common.openJournalSystems">Open Journal Systems</message>
 
 
 
@@ -85,15 +85,13 @@
 
 	
 	<!-- Article Queues -->
-	<message key="common.queue.long.submissionsUnassigned">Статья ждет распределения</message>
-	<message key="common.queue.short.submissionsUnassigned">Новые поступления</message>
+	<message key="common.queue.long.submissionsUnassigned">Не назначена</message>
+	<message key="common.queue.short.submissionsUnassigned">Новых</message>
 	<message key="common.queue.long.submissionsInEditing">Статья редактируется</message>
 	<message key="common.queue.short.submissionsInEditing">В редакции</message>
 	<message key="common.queue.long.submissionsInReview">Статья рецензируется</message>
 
-	<message key="common.queue.short.submissionsInReview">У рецензента</message>
-	<message key="common.queue.long.submissionsInScheduling">График публикаций</message>
-	<message key="common.queue.short.submissionsInScheduling">Опубликовать</message>
+	<message key="common.queue.short.submissionsInReview">На рецензии</message>
 	<message key="common.queue.long.submissionsArchives">Архивы</message>
 	<message key="common.queue.short.submissionsArchives">Архивы</message>
 	<message key="common.queue.long.active">Активные статьи</message>
@@ -116,11 +114,6 @@
 	<message key="section.title">Название раздела</message>
 	<message key="section.abbreviation">Сокращение</message>
 	<message key="section.abbreviation.example">(напр. Articles=ART)</message>
-	<message key="section.default.title">Статьи</message>
-	<message key="section.default.abbrev">ART</message>
-
-	<message key="section.default.policy"></message>
-
 	<!-- Common Article Terms -->
 	<message key="article.articles">Статьи</message>
 	<message key="article.submissionId">ID статьи</message>
@@ -166,7 +159,6 @@
 
 	<message key="submission.round">Раунд&amp;nbsp;{$round}</message>
 	<message key="submission.editorReview">Отзыв редактора</message>
-	<message key="submission.editorAuthorComments">Редактор-Автор</message>
 	<message key="submission.reviewersVersion">Аннот. версия рецензии</message>
 	<message key="submission.postReviewVersion">Послеред. версия файла</message>
 	<message key="submission.editorVersion">Ред. версия</message>
@@ -178,8 +170,6 @@
 	<message key="submission.proofreading">Корректировка</message>
 
 
-	<message key="submission.schedule">Запланировать</message>
-	
 	<message key="submissions.sec">Sec</message>
 
 	<message key="submissions.step1">Шаг 1</message>
@@ -234,7 +224,7 @@
 	<message key="user.role.editor">Редактор</message>
 	<message key="user.role.sectionEditor">Редактор раздела</message>
 	<message key="user.role.layoutEditor">Худ. редактор</message>
-	<message key="user.role.copyeditor">Техн. редактор</message>
+	<message key="user.role.copyeditor">Лит. редактор</message>
 
 	<message key="user.role.proofreader">Корректор</message>
 	<message key="user.role.author">Автор</message>
@@ -243,7 +233,7 @@
 
 	<message key="user.role.sectionEditors">Редакторы разделов</message>
 	<message key="user.role.layoutEditors">Худ. редакторы</message>
-	<message key="user.role.copyeditors">Техн. редакторы</message>
+	<message key="user.role.copyeditors">Лит. редакторы</message>
 	<message key="user.role.proofreaders">Корректоры</message>
 	<message key="user.role.authors">Авторы</message>
 
@@ -376,9 +366,6 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	
 	<!-- Journal Management -->
 
-	<message key="manager.guidelines">Авторам</message>
-
-
 	<!-- Files Browser -->
 
 
@@ -389,31 +376,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	
 	<!-- Setup Step 1 -->
 
-	<message key="manager.setup.issn">ISSN</message>
-
-
-
-
-
-
 	<!-- Setup Step 2 -->
-
-
-
-
-        <message key="manager.setup.reviewOptions.noteOnEmailWording">The wording of the reminders can be edited in Emails, Journal Management.</message>
-
-
-
-
-
-
-
-	<message key="manager.setup.openAccessPolicy2">Политика свободного доступа</message>
-
-
-
-
 
 
 
@@ -448,12 +411,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 
 
 
-	<message key="manager.setup.subscriptionContactDescription">Если Подписка активирована, данное лицо будет числиться на страницах О нас как ответственное за подписки.</message>
-	<message key="manager.setup.subscriptionAdditionalInformation">Дополнительная информация</message>
-	<message key="manager.setup.subscriptionAdditionalInformationDescription">Любая дополн. информация будет доступна на страницах О нас, в разделе Подписка, вместе с механизмом платежей.</message>
-
-	<message key="manager.setup.enableSubscriptions">Активировать подписку для этого журнала.</message>
-
 	<!-- Setup Step 5 -->
 
 
@@ -473,8 +430,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 
 
 
-
-	<message key="manager.sections.abstractsDisabled">Статьи в этом разделе не будут иметь аннотаций.</message>
 
 	<!-- Import/Export -->
 	<!-- People Management -->
@@ -524,18 +479,7 @@ You may optionally provide the user with a reason for disabling their account.</
 	<!-- Editor -->
 
 
-	<message key="editor.submissionQueue.noSubmissions">Нет статей в этом списке.</message>
-	<message key="editor.submissionQueue.saveChanges">Сохранить изменения?</message>
-
-
 	<!-- Scheduling Queue -->
-
-	<message key="editor.schedulingQueue">План публикаций</message>
-	<message key="editor.schedulingQueue.noSubmissions">Нет статей в списке.</message>
-	<message key="editor.schedulingQueue.saveChanges">Сохранить изменения в списке? Отмеченные для удаления статьи вернутся в список присланных статей.</message>
-	<message key="editor.schedulingQueue.schedule">Планировать</message>
-	<message key="editor.schedulingQueue.unscheduled">Не планировать</message>
-	<message key="editor.schedulingQueue.newIssue">Новый выпуск</message>
 
 	<!-- Editor Index Page -->
 
@@ -558,8 +502,6 @@ You may optionally provide the user with a reason for disabling their account.</
 	<!-- Used by editor in submission review / editing -->
 
 
-	<message key="editor.article.initiateAllReviews">Активировать все рецензии</message>
-
 	<message key="editor.article.selectReviewerNotes"><![CDATA[Name links to reviewer's profile.<br/>
 Высшая оценка 5 (Отлично).<br/>
 Сколько дней нужно рецензентам для завершения работы.<br />
@@ -570,19 +512,6 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 
 
 
-	<message key="editor.article.quality">Оценка</message>
-	<message key="editor.article.editorAuthorComments">Комментарии Редактора/Автора</message>
-
-
-
-
-
-	<message key="editor.article.placeSubmissionInSchedulingQueue">Послать статью в печать</message>
-	<message key="editor.article.scheduleSubmission">Отправить</message>
-
-
-
-	
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Редакторские назначения</message>
 
@@ -603,8 +532,6 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="sectionEditor.regrets.regretsAndCancels">Сожаления рецензента &amp; Отмены</message>
 	<message key="sectionEditor.regrets.regret">Сожаление</message>
 	<message key="sectionEditor.regrets.result">Результат</message>
-
-	<message key="sectionEditor.review.addReviewer">Добавить рецензента</message>
 
 	<!-- Layout Editor -->
 	<message key="layoutEditor.activeEditorialAssignments">Действующие редакторские назначения</message>
@@ -655,7 +582,6 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 
 	<message key="reviewer.article.decision.seeComments">See Comments</message>
 	<message key="reviewer.article.schedule">Schedule</message>
-        <message key="reviewer.article.noteOnUploads">Remove all reviewer identification from uploaded files, by checking the document's Properties (under File in Word and Acrobat).</message>
         <message key="reviewer.article.submissionToBeReviewed">Submission To Be Reviewed</message>
         <message key="reviewer.article.reviewSchedule">Review Schedule</message>
         <message key="reviewer.article.reviewSteps">Review Steps</message>
@@ -683,13 +609,6 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="proofreader.noProofreadingAssignments">Нет корректорских назначений</message>
 
 	<!-- Author -->
-	<message key="author.submit.startHere">Начать процесс отправки новой статьи.</message>
-
-
-
-
-
-
 	<!-- Article Submission Step 1 -->
 	
 
@@ -757,8 +676,6 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Комментарии по правке</message>
-	<message key="submission.queueForScheduling">В очередь на публикацию</message>
-	<message key="submission.archiveSubmission">Архив присланных статей</message>
 	<message key="submission.proofread.corrections">Правки</message>
 
 	<message key="submission.proofread.instructions">Указания корректорам</message>
@@ -806,8 +723,6 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<!-- Profile -->
 
 
-	<message key="user.profile.form.notifications">Подписки</message>
-	
 	<!-- Registration -->
 
 	<message key="user.register.repeatPassword">Повторить пароль</message>
@@ -829,8 +744,6 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<!-- Search -->
 	<message key="search.browseAuthorIndex">Список авторов</message>
 	<message key="search.searchFor">Поиск статей</message>
-	<message key="search.inField">В</message>
-
 	<message key="search.author">Авторы</message>
 	<message key="search.withinJournal">В журнале</message>
 
@@ -919,7 +832,7 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	
 	<!-- Help -->
 
-	<message key="help.ojsHelp">Славистика - помощь</message>
+	<message key="help.ojsHelp">OJS - помощь</message>
 	<message key="help.ojsHelpAbbrev">OJS Help</message>	
 
 
@@ -983,11 +896,6 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 
 
 	<message key="installer.filesDirInstructions"><![CDATA[Enter full pathname to an existing directory where uploaded files are to be kept. This directory should not be directly web-accessible. <strong>Please ensure that this directory exists and is writable prior to installation.</strong> Windows path names should use forward slashes, e.g. "C:/myjournal/files".]]></message>
-
-
-
-	<message key="installer.installOJS">Install Slavica Journals</message>
-	<message key="installer.upgradeOJS">Upgrade Slavica Journals</message>
 
 
 
@@ -1057,15 +965,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<!-- RT Settings -->
 	<message key="rt.admin.settings">Настройки</message>
 
-	<message key="rt.admin.rtDisabled">Не работает</message>
-	<message key="rt.admin.rtEnable">Ввести настройки, чтобы задействовать Инструменты или изменить версию.</message>
-
-	<message key="rt.admin.versionDescription">Please select the version of the Reading Tools that best matches the requirements of this journal.</message>
-
 	<message key="rt.admin.options">Опции</message>
-
-	<message key="rt.admin.settings.disable">Исключить инструменты</message>
-
 
 	<!-- RT Versions -->
 
@@ -1089,12 +989,6 @@ Validation may fail on search URLs that require posted form data.]]></message>
 
 
 
-	<message key="rt.aboutAuthor">Об авторах</message>
-
-	<message key="rt.captureCitation">Цитатник</message>
-
-
-	<message key="rt.articleMetadata">Метаданные статьи</message>
 	<message key="rt.metadata.dublinCore.primaryAuthor">Создатель</message>
 
 
@@ -1133,85 +1027,257 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	 * DEFAULT - Default settings for setup items.
 	 *
 	-->
-	<message key="default.journalSettings.checklist.notPreviouslyPublished">Эта статья не была раньше опубликована, а также не предоставлена другому журналу для рассмотрения и публикации. Если подобное имеет место, то случай должен быть объяснен в примечаниях к отправленной статье (Шаг 5).</message>
-	<message key="default.journalSettings.checklist.fileFormat">Отправляемый материал набран в текстовом редакторе Microsoft Word, формат DOC или RTF; страницы без пагинации, без переносов, без колонтитулов, без абзацного отступа (абзацный отступ не задан при помощи табуляции), выравнивание по ширине; все иллюстрации, схемы, фигуры и таблицы расположены в тексте в соответствующем месте, а не в конце статьи.</message>
-	<message key="default.journalSettings.checklist.submissionAppearance">Шрифт Times New Roman, 12 pt; все остальные использованные шрифты должны быть архивированы и отправлены в дополнительном файле в качестве приложения; межстрочный интервал - 1; используется курсив вместо подчеркивания (с исключением подчеркнутых URL адресов).</message>
-	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Текст обработан в соответствии с требованиями, предъявляемыми к авторам. С конкретными требованиями можно ознакомиться на странице <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Редакционные требования</a>, которая находится в разделе О нас.]]></message>
-	<message key="default.journalSettings.checklist.anonymous">Если отправленный текст представляет собой теоретическую статью, он будет рецензирован анонимно (peer-review). С этой целью имена авторов будут удалены. Если автор ссылается на свои работы, то в ссылках и библиографии его имя должно быть замено на Автор (напр. Автор 1996: 156). Имя автора не должно присутствовать и в свойствах (Properties) документа.</message>
+	<message key="submission.reviewForm">Форма Рецензента</message>
+	<message key="reviewer.article.enterReviewForm">Нажмите, чтобы заполнить форму рецензента</message>
+	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Пожалуйста заполните необходимые поля.</message>
+	<message key="common.confirmComplete">Вы уверены, что хотите завершить эту задачу ? Впоследствии она будет закрыта для изменений.</message>
+	<message key="common.payment">Платеж</message>
+	<message key="common.payments">Платежи</message>
+	<message key="common.pageHeader.altText">Заголовок Страницы</message>
+	<message key="common.homePageHeader.altText">Заголовок Домашней Страницы</message>
+	<message key="common.journalHomepageImage.altText">Картинка на домашней странице Журнала</message>
+	<message key="article.article">Статья</message>
+	<message key="article.citations">Литература</message>
+	<message key="article.coverPage.altText">Изображение на обложке</message>
+	<message key="article.accessLogoOpen.altText">Доступ Открыт</message>
+	<message key="article.accessLogoRestricted.altText">Доступ Закрыт</message>
+	<message key="article.comments.sectionDefault">По умолчанию</message>
+	<message key="article.comments.disable">Выключить</message>
+	<message key="article.comments.enable">Включить</message>
+	<message key="article.fontSize">Размер шрифта</message>
+	<message key="article.fontSize.small.altText">Мелкий</message>
+	<message key="article.fontSize.medium.altText">Средний</message>
+	<message key="article.fontSize.large.altText">Крупный</message>
+	<message key="submission.sent">Отправлено</message>
+	<message key="submission.notifyAuthor">Уведомить Автора</message>
+	<message key="submission.notifyEditor">Уведомить Редактора</message>
+	<message key="submission.scheduling">Назначение</message>
+	<message key="submission.scheduledIn">Назначено к публикации в {$issueName}.</message>
+	<message key="submission.scheduledIn.tba">в процессе</message>
+	<message key="submission.citations">Литература</message>
+	<message key="journal.issn">ISSN</message>
+	<message key="user.manageMySubscriptions">Изменить параметры подписки</message>
+	<message key="user.noRoles.chooseJournal">Ваша учетная запись сейчас не ассоциирована ни с одним журналом. Пожалуйста выберите журнал:</message>
+	<message key="user.noRoles.noRolesForJournal">Ваша роль в этом журнале не определена. Пожалуйста выберите из предложенных вариантов дальнейших действий:</message>
+	<message key="user.noRoles.submitArticle">Отправить Предложение</message>
+	<message key="user.noRoles.submitArticleRegClosed">Отправить Статью: Регистрация авторов сейчас отключена.</message>
+	<message key="user.noRoles.regReviewer">Зарегистрироваться в качестве Рецензента</message>
+	<message key="user.noRoles.regReviewerClosed">Зарегистрироваться в качестве Рецензента: регистрация рецензентов сейчас отключена.</message>
+	<message key="user.role.subscriptionManager">Менеджер Подписки</message>
+	<message key="user.role.subscriptionManagers">Менеджеры Подписки</message>
+	<message key="issue.coverPage.altText">Титульный Лист</message>
+	<message key="subscriptionTypes.currency">Валюта</message>
+	<message key="subscriptionTypes.year">год</message>
+	<message key="subscriptionTypes.years">годы</message>
+	<message key="subscriptionTypes.month">месяц</message>
+	<message key="subscriptionTypes.months">месяцы</message>
+	<message key="subscriptionTypes.nonExpiring">навсегда</message>
+	<message key="subscriptionTypes.format">Формат</message>
+	<message key="subscriptionTypes.format.online">Электронная</message>
+	<message key="subscriptionTypes.format.print">Печатная</message>
+	<message key="subscriptionTypes.format.printOnline">Печатная и Электронная</message>
+	<message key="subscriptions.inactive">Неактивна</message>
+	<message key="subscriptions.status">Сострояние</message>
+	<message key="subscriptions.status.active">Активна</message>
+	<message key="subscriptions.status.needsInformation">Требуется Информация</message>
+	<message key="subscriptions.status.needsApproval">Требуется Подтверждение</message>
+	<message key="subscriptions.status.awaitingManualPayment">Ожидание Платежа</message>
+	<message key="subscriptions.status.awaitingOnlinePayment">Ожидание Электронного Платежа</message>
+	<message key="subscriptions.status.other">Другое, см. примечания</message>
+	<message key="subscriptions.individualDescription">Идивидуальным подписчикам для доступа к содержимому необходимы логин и пароль.</message>
+	<message key="subscriptions.institutionalDescription">Институциональные подписчики не требуют логина. Для их индентификации используется доменное имя и/или IP адрес.</message>
+	<message key="subscriptions.institutionalOnlinePaymentDescription"><![CDATA[<strong>Примечание:</strong> Институциональный доступ, приобретенный онлайн, требует подтверждения домена и диапазона IP адресов в редакции перед тем как подписка будет активирована.]]></message>
+	<message key="reader.subscribersOnly">Только для подписчиков</message>
+	<message key="reader.subscriptionRequiredLoginText">Для доступа нужна подписка. Войдите в систему для подтверждения ее наличия.</message>
+	<message key="reader.openAccess">Открытый Доступ</message>
+	<message key="reader.subscriptionAccess">Только для Подписчиков</message>
+	<message key="reader.subscriptionOrFeeAccess">Доступ Платный или Только для Подписчиков</message>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Загрузка дополнительных языков с сервера Public Knowledge Project сейчас невозможна, поскольку:</p>
+	<ul>
+		<li>Ваш сервер не имеет или не позволяет выполнить программу GNU "tar"</li>
+		<li>у OJS нет возможности изменить список поддерживаемых языков, обычно "registry/locales.xml".</li>
+	</ul>
+<p>Языки можно установить вручную с <a href="http://pkp.sfu.ca">сайта PKP</a>.</p>]]></message>
+	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Указание основного хранилища регистрационных записей, отличного от OJS имеет следующий эффект:</p>
+<ul>
+	<li>Если пользователь пытается зарегистрироватьса на сайте с новым именем, которое уже занято в хранилище (но не в базе данных OJS), регистрация разрешается только в том случае, если указанный пользователем пароль соответствует записи в хранилище.</li>
+</ul>]]></message>
+	<message key="subscriptionManager.subscriptionManagement">Управление подпиской</message>
+	<message key="subscriptionManager.individualSubscriptions">Индивидуальные подписчики</message>
+	<message key="subscriptionManager.subscriptionTypes">Типы подписки</message>
+	<message key="plugins.categories.auth.description">Авторизационные модули позволяют делегировать задачу авторизации пользователей другим системам (напр. LDAP).</message>
+	<message key="plugins.categories.citationFormats.description">Модули форматов ссылок позволяют использовать различные форматы представления ссылок.</message>
+	<message key="plugins.categories.generic.description">Системные модули служат для расширения возможностей OJS, не попадающего под другие перечисленные категории.</message>
+	<message key="plugins.categories.implicitAuth">Неявные модули авторизации</message>
+	<message key="plugins.categories.implicitAuth.description">Неявные модули авторизации реализуют поддержку авторизации пользователей на основе заголовков протокола http.</message>
+	<message key="plugins.categories.oaiMetadataFormats">Модули Форматов Метаданных OAI</message>
+	<message key="plugins.categories.oaiMetadataFormats.description">Эти модули представляют метеданные при связи с другими архивами.</message>
+	<message key="manager.setup.reviewProcessEmailDescription">Редакторы высылают Рецензентам запрос на рецензию по E-mail с копией статьи в приложении. Рецензенты отвечают согласием (или с сожалением отказываются) и своей рецензией с рекоммендацией. Редакторы вводят эти согласие (или отказ),  рецензию и рекоммендацию на странице "Рецензия" рассматриваемой статьи, создавая протокол процесса рецензирования.</message>
+	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Предлагаемые уведомления об авторских правах в стиле Creative Commons</h3>
+<h4>1. Предлагаемая политика для журналов, распространяющих статьи в Открытом Доступе</h4>
+Авторы, публикующие в данном журнале, соглашаются со следующим:
+<ol type="a">
+	<li>Авторы сохраняют за собой авторские права на работу и предоставляют журналу право первой публикации работы на условиях лицензии <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a>, которая позволяет другим распространять данную работу с обязательным сохранением ссылок на авторов оригинальной работы и оригинальную публикацию в этом журнале.</li>
+	<li>Авторы сохраняют право заключать отдельные контрактные договоронности, касающиеся не-эксклюзивного распространения версии работы в опубликованном здесь виде (например, размещение ее в институтском хранилище, публикацию в книге), со ссылкой на ее оригинальную публикацию в этом журнале.</li>
+	<li>Авторы имеют право размещать их работу в сети Интернет (например в институтском хранилище или персональном сайте) до и во время процесса рассмотрения ее данным журналом, так как это может привести к продуктивному обсуждению и большему количеству ссылок на данную работу (См. <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
+</ol>
 
-	<message key="default.journalSettings.privacyStatement">Имена и адреса, указанные Вами при регистрации на этом сайте, будут использованы исключительно для технических целей: контакта с Вами или с рецензентами (редакторами) в процессе подготовки Вашей статьи к публикации. Они ни в коем случае не будут предоставляться другим лицам и организациям.</message>
-	<message key="default.journalSettings.copyeditInstructions"><![CDATA[The copyediting stage is intended to improve the flow, clarity, grammar, wording, and formatting of the article. It represents the last chance for the author to make any substantial changes to the text, as the next stage is restricted to typos and formatting corrections. 
+<h4>Предлагаемая политика для журналов, размещающих статьи в Отсроченном Открытом Доступе</h4>
+Авторы, публикующие статьи в данном журнале, соглашаются на следующее:
+<ol type="a">
+	<li>Авторы сохраняют за собой автороские права и предоставляют журналу право первой публикации работы, которая по истечении [УКАЖИТЕ ПЕРИОД ВРЕМЕНИ] после публикации автоматически лицензируется на условиях <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> , которая позволяет другим распространять данную работу с обязательным сохранением ссылок на авторов оригинальной работы и оригинальную публикацию в этом журнале.</li>
+	<li>Авторы имеют право размещать их работу в сети Интернет (например в институтском хранилище или персональном сайте) до и во время процесса рассмотрения ее данным журналом, так как это может привести к продуктивному обсуждению и большему количеству ссылок на данную работу (См. <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
+</ol>]]></message>
+	<message key="manager.setup.citations">Дать авторам возможность предоставлять специально оформленный список использованной литературы (ссылок) как часть рукописи.</message>
+	<message key="submission.editorAuthorRecord">Запись переписки Редактор/Автор</message>
+	<message key="subscriptionManager.institutionalSubscriptions">Институциональные подписки</message>
+	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>Чтобы помочь читалелям легко находить в сети использованную автором литературу, есть следующие возможности:</p>
 
-The file to be copyedited is in Word or .rtf format and therefore can be easily edited as a word processing document. This set of  instructions displayed here proposes two approaches to copyediting. The one is based on Microsoft Word's Track Changes feature and requires that the copyeditor, editor and author have access to this program. A second system, that is software independent, has been borrowed, with permission, from the Harvard Educational Review. The journal editor is in a position to modify these instructions, so suggestions can be made to improve the process for this journal. 
-
-<h4>Copyediting Systems</h4>
-
-<strong>1. Microsoft Word's Track Changes</strong>
-
-Under Tools in the menu bar, the feature Track Changes enables the copyeditor to make insertions (text appears in color) and deletions (text appears crossed out in color or in the margins as deleted). The copyeditor can post queries to both the author (Author Queries) and to the editor (Editor Queries) by inserting these queries in square brackets. The copyedited version is then uploaded and the editor is notified. The editor then reviews the text and notifies the author. 
-
-The editor and author should leave those changes with which they are satisfied. If further changes are necessary, the editor and author can make changes to the initial insertions or deletions, as well as make new insertions or deletions elsewhere in the text. Authors and editors should respond to each of the queries addressed to them, with responses placed inside the square brackets. 
-
-After the text has been reviewed by editor and author, the copyeditor will make a final pass over the text accepting the changes in preparation for the layout and galley stage. 
-
-
-<strong>2. Harvard Educational Review </strong>
-
-<strong>Instructions for Making Electronic Revisions to the Manuscript</strong>
-
-Please follow the following protocol for making electronic revisions to your manuscript:
-
-<strong>Responding to suggested changes</strong>
-&nbsp; For each of the suggested changes that you accept, unbold the text
-&nbsp; For each of the suggested changes that you do not accept, re-enter the original text and <strong>bold</strong> it
-
-<strong>Making additions and deletions</strong>
-&nbsp; Indicate additions by <strong>bolding</strong> the new text
-&nbsp; Replace deleted sections with: <strong>[deleted text]</strong>
-&nbsp; If you delete a sentence or more, please indicate with a note, e.g., <strong>[deleted 2 sentences]</strong>
-
-<strong>Responding to Queries to the Author (QAs)</strong>
-&nbsp; Keep all QAs intact and bolded within the text. Do not delete them
-&nbsp; To reply to a QA, add a comment after it. Comments should be delimited using:
-<strong>[Comment:</strong>]
-&nbsp; e.g., <strong>[Comment: Expanded discussion of methodology as you suggested]</strong>
-
-<strong>Making comments</strong>
-&nbsp; Use comments to explain organizational changes or major revisions
-&nbsp; e.g., <strong>[Comment: Moved the above paragraph from p. 5 to p. 7]</strong>
-&nbsp; Note: When referring to page numbers, please use the page numbers from the printed copy of the manuscript that was sent to you. This is important since page numbers may change as a document is revised electronically.
-
-<h4>An Illustration of an Electronic Revision</h4>
-
-<strong>The original "manuscript" file</strong>
-
-Before making dramatic departures from the structure and organization of your original manuscript, please check in with the co-chairs of your piece. After you are finished with your revisions, rename the file from AuthorNameQA.doc to AuthorNameQAR.doc (e.g., from LeeQA.doc to LeeQAR.doc). Print out a hardcopy of your manuscript and mail it with a floppy disk containing the completely revised and renamed word processing file.
-
-
-<strong>Manuscript returned to the author with queries and suggestions</strong>
-
-Before making dramatic departures from the structure and organization of <strong>the manuscript that we are returning to you</strong>, please check in with the <strong>editors who are co-chairing</strong> your piece. After you are finished with your revisions, rename the file from AuthorNameQA.doc to AuthorNameQAR.doc (e.g., from LeeQA.doc to LeeQAR.doc). Print out a hardcopy of your manuscript and mail it with a floppy disk containing the completely revised and renamed word processing file. <strong>[QA: In this paragraph, it might help to stress the importance of following carefully the instructions for making electronic revisions. Otherwise the editing process may be slowed considerably]</strong>
-
-<strong>Revised manuscript sent back to HER</strong>
-
-Before making dramatic departures from the structure and organization of the manuscript that we are returning to you, please check in with the editors who are co-chairing your piece. <strong>Please understand that failure to follow the following instructions may significantly delay the publication of your manuscript.</strong>
-
-After you are finished with your revisions, rename the file from AuthorNameQA.doc to AuthorNameQAR.doc (e.g., from LeeQA.doc to LeeQAR.doc). Print out a hardcopy of your manuscript and mail it with a floppy disk containing the <strong>[deleted word]</strong> revised and renamed word processing file. <strong>[QA: In this paragraph, it might help to stress the importance of following carefully the instructions for making electronic revisions. Otherwise the editing process may be slowed considerably] [Comment: I added a sentence in response to your suggestion.]</strong>
-
-<strong>Notes:</strong>
-&bull; Unbolded text indicates acceptance of the suggested changes to the first sentence
-&bull; Sentence added in response to QA. Bold text indicates addition of new text
-&bull; [deleted word] indicates deletion of "completely"
-&bull; Comment contains a reply to the editors' QA]]></message>
-
-	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________
-{$journalName}
-{$indexUrl}/{$journalPath}
-]]></message>
-	<message key="default.journalSettings.forReaders"><![CDATA[Мы приглашаем наших читателей подписаться на рассылки с последними новостями. Для этого нужно <a href="{$indexUrl}/{$journalPath}/user/register">зарегистрироваться</a>. Регистрация позволить Вам выбрать роль автора, а также подписаться на журнальные рассылки с содержанием последнего выпуска журнала. Таким образом издатели журнала получат обратную информацию о читательском интересе. Посмотрите также страницу <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Конфиденциальность</a>.]]></message>
-	<message key="default.journalSettings.forAuthors"><![CDATA[Вы хотите отправить Ваши материалы для публикации в этом журнале? Просмотрите, пожалуйста, раздел <a href="{$indexUrl}/{$journalPath}/about">О нас</a>, где Вы сможете ознакомиться с редакционной политикой и<a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">требованиями к авторам</a>. Будущим авторам нужно <a href="{$indexUrl}/{$journalPath}/user/register">зарегистрироваться</a> в роли Автора, <a href="{$indexUrl}/index/login">войти</a> в свой акаунт и <a href="{$indexUrl}/author/submit">заполнить</a> форму отправки статей.]]></message>
-	<message key="default.journalSettings.forLibrarians"><![CDATA[Мы надеемся, что сотрудники библиотек впишут этот журнал в их список электронных журналов. Данная издательская система создана для того, чтобы дать возможность академическим и научным библиотекам организовать собственные электронные журналы для преподователей и научных работников. Больше об этих возможностей, см. сайт разработчиков <a href="http://pkp.sfu.ca">Public Knowledge Project</a>.]]></message>
-
-	<message key="default.journalSettings.lockssLicense"><![CDATA[Этот журнал использует систему LOCKSS для создания общих архивов участвующих библиотек и издателей с тем, чтобы повысить надежность и доступность публикаций. Больше об этом, см. <a href="http://lockss.org/">здесь</a>.]]></message>
-
+<ol>
+	<li><strong>добавить пункт меню</strong><p>Главный редактор может добавить утилиту "Найти ссылки" к меню инструментов читателя, сопровождающему опубликованные статьи, что позволяет читателю осуществить поиск ссылок по названию в специально отобранных базах данных научных работ .</p></li>
+	<li><strong>Вставить ссылки</strong><p>Разметчик (Layout Editor) может добавить ссылки в статью, позволяющими находить использованную литературу онлайн, руководствуясь следующим алгоритмом (его можно отредактировать).</p></li>
+</ol>]]></message>
+	<message key="editor.submissionReview.notes"><![CDATA[<ol>
+	<li>Подсветка элементов означает, что от редактора требуются некоторые действия.</li>
+	<li>Поле "срок" заполняется когда рецензент принимает запрос о рецензировании; оно показывает количество недель до истечения срока, отведенного на рецензирования, или (со знаком минус) недель, на которые рецензия просрочена.</li>
+</ol>]]></message>
+	<message key="sectionEditor.review.enrollReviewer">Назначить Пользователя Рецензентом</message>
+	<message key="sectionEditor.review.createReviewer">Создать нового Рецензента.</message>
+	<message key="submission.layout.imageInvalid">Неверный формат изображения. Принимаются .gif, .jpg, и .png.</message>
+	<message key="reviewer.article.restrictedFileAccess">Рукопись будет доступна когда (и если) потенциальный рецензент согласится на рецензирование.</message>
+	<message key="reviewer.article.reviewGuidelinesDescription">Руководство Рецензента должно содержать критерии для принятия решения о соответствии рукописи стандартам данного журнала, они могут включать и дополнительные советы для эффективной и полезной для автора рецензии. Рецензентам предлагается заполнить два текстовых поля: "для автора и редактора" и "для редактора". Главный Редактор может создать форму для рецензий на соответствующей страничке. Во всех случаях, редакторы будут иметь возможность использования рецензий в переписке с автором.</message>
+	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Задекларируйте, пожалуйста, наличие/отсутствие конфликта интересов в отношении рассматриваемой работі (см. <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Конфликт&nbsp;Интересов</a>).]]></message>
+	<message key="reviewer.competingInterests">Конфликт Интересов</message>
+	<message key="reviewer.article.ensuringBlindReview">Обеспечение Рецензирования Вслепую</message>
+	<message key="author.submit.submissionCitations">Дайте форматированный список ссылок на работы, использованные в данной рукописи.</message>
+	<message key="submission.layout.noLayoutFile">Отсутствует (Используйте в запросе Корректуру в качестве Гранок)</message>
+	<message key="submission.layout.publicGalleyId">Идентификатор Гранок</message>
+	<message key="submission.layout.galleyPublicIdentificationExists">Идентификатор гранок уже существует.</message>
+	<message key="submission.layout.referenceLinking">Привязка ссылок</message>
+	<message key="submission.comments.blindCcReviewers">После отправки, отправьте по BCC редактируемую копию рецензентам.</message>
+	<message key="user.register.noJournals">На сайте нет журналов в которых Вы могли бы зарегистрироваться.</message>
+	<message key="user.register.openAccessNotificationDescription">Уведомление по электронной почте, когда выпуск журнала выкладывается в открытый доступ.</message>
+	<message key="user.register.reviewerDescriptionNoInterests">Согласен учавствовать в рецензировании рукописей, отправленных в этот журнал.</message>
+	<message key="user.subscriptions.mySubscriptions">Мои Подписки</message>
+	<message key="user.subscriptions.individualSubscriptions">Индивидуальная Подписка</message>
+	<message key="user.subscriptions.institutionalSubscriptions">Институциональные Подписки</message>
+	<message key="user.subscriptions.renew">Продлить</message>
+	<message key="user.subscriptions.purchase">Приобрести</message>
+	<message key="user.subscriptions.purchaseNewSubscription">Приобрести Новую Подписку</message>
+	<message key="user.subscriptions.purchaseIndividualSubscription">Приобрести Индивидуальную Подписку</message>
+	<message key="user.subscriptions.purchaseInstitutionalSubscription">Преобрести Институциональную Подписку</message>
+	<message key="user.subscriptions.expires">Заканчивается</message>
+	<message key="user.subscriptions.expired">Закончена</message>
+	<message key="user.subscriptions.viewSubscriptionTypes">Смотреть доступные типы подписки</message>
+	<message key="user.subscriptions.form.typeId">Тип подписки</message>
+	<message key="user.subscriptions.form.membership">Членство</message>
+	<message key="user.subscriptions.form.membershipRequired">Выбранный тип подписки требует информацию о членстве.</message>
+	<message key="user.subscriptions.form.typeIdValid">Пожалуйста выберите правильный тип подписки.</message>
+	<message key="user.subscriptions.form.subscriptionExists">Этот пользователь уже имеет индивидуальную подписку.</message>
+	<message key="user.subscriptions.form.membershipInstructions">Для данного типа подписки требуется информация о членстве.</message>
+	<message key="user.subscriptions.form.institutionName">Название Организации</message>
+	<message key="user.subscriptions.form.institutionNameRequired">Требуется название организации.</message>
+	<message key="user.subscriptions.form.institutionMailingAddress">Почтовый адрес</message>
+	<message key="user.subscriptions.form.domain">Домен</message>
+	<message key="user.subscriptions.form.domainInstructions"><![CDATA[Если введен домен, диапазоны IP адресов вводить необязательно. <br />Введите доменное имя (например lib.sfu.ca).]]></message>
+	<message key="user.subscriptions.form.domainIPRangeRequired">Выбранный тип подписки требует домена и/или диапазона IP адресов для авторизации.</message>
+	<message key="user.subscriptions.form.domainValid">Пожалуйста введите верное доменное имя.</message>
+	<message key="user.subscriptions.form.ipRange">IP адреса</message>
+	<message key="user.subscriptions.form.ipRangeItem"><![CDATA[&#8226;]]></message>
+	<message key="user.subscriptions.form.ipRangeInstructions"><![CDATA[Если Вы вводите диапазоны IP адресов, указание домена необязательно.<br />Можно вводить IP адреса (напр. 142.58.103.1), дипазоны IP адресов (напр 142.58.103.1 - 142.58.103.4), маски IP адресов (напр. 142.58.*.*), и маски IP адресов переменной длины в формате бесклассовой адресации (напр. 142.58.100.0/24).]]></message>
+	<message key="user.subscriptions.form.ipRangeValid">Пожалуйста введите правильный диапазон IP адресов.</message>
+	<message key="user.subscriptions.form.deleteIpRange">Удалить</message>
+	<message key="user.subscriptions.form.addIpRange">Добавить</message>
+	<message key="about.statistics">Статистика</message>
+	<message key="about.history">История Журнала</message>
+	<message key="about.editorialTeam.biography">Биография</message>
+	<message key="about.submissionPreparationChecklist.description">Как часть процесса передачи статьи на рассмотрение, авторам прийдется согласиться со всеми следующими пунктами. Рукопись может быть возвращена авторам, если она им не соответствует.</message>
+	<message key="about.authorFees">Плата за публикацию</message>
+	<message key="about.authorFeesMessage">Плата за публикацию представляет собой следующее.</message>
+	<message key="about.delayedOpenAccess">Отложенный Открытый Доступ</message>
+	<message key="about.delayedOpenAccessDescription1">Содержанию этого журнала будет в открытом доступе через</message>
+	<message key="about.delayedOpenAccessDescription2">месяцев после публикации номера.</message>
+	<message key="about.authorSelfArchive">Само-архивирование автором</message>
+	<message key="about.subscriptions.individual">Индивидуальные Подписки</message>
+	<message key="about.subscriptions.institutional">Институциональные Подписки</message>
+	<message key="about.subscriptionTypes.name">Имя</message>
+	<message key="about.subscriptionTypes.format">Формат</message>
+	<message key="about.subscriptionTypes.duration">Продолжительность</message>
+	<message key="about.subscriptionTypes.cost">Цена</message>
+	<message key="about.memberships">Членства</message>
+	<message key="about.aboutThisPublishingSystem.altText">Редакционный процесс</message>
+	<message key="help.searchReturnResults">Вернуться к результатам поиска</message>
+	<message key="donations.thankYou">Спасибо</message>
+	<message key="donations.thankYouMessage">Огромное спасибо за Ваш вклад.</message>
+	<message key="payment.loginRequired">Для осуществления платежа необходимо войти в систему.</message>
+	<message key="payment.loginRequired.forArticle">Для доступа к статье требуется подписка или приобретенный доступ к этой статье. Чтобы подтвердить подписку и доступ, либо приобрести статью, пожалуйста войдите в систему.</message>
+	<message key="payment.loginRequired.forDonation">Для внесения пожертвования необходимо войти в систему.</message>
+	<message key="payment.paid">Оплачено</message>
+	<message key="payment.payNow">Оплатить</message>
+	<message key="payment.waive">Уклониться</message>
+	<message key="payment.alreadyPaid">Уже оплачено</message>
+	<message key="payment.alreadyPaidMessage">Выберите если Вы уже отправили свой платеж в журнал для завершения процесса подачи статьи. Рукопись не будет рассматриваться до прихода платежа. Нажмите ОПЛАТИТЬ СЕЙЧАС для получения инструкций по оплате.</message>
+	<message key="payment.paymentReceived">Платеж получен</message>
+	<message key="payment.paymentSent">Платеж уже отправлен</message>
+	<message key="payment.type.submission">Плата за подачу</message>
+	<message key="payment.type.publication">Плата за публикацию</message>
+	<message key="payment.type.fastTrack">Плата за рецензирование вне очереди</message>
+	<message key="payment.type.membership">Плата за индивидуальное членство</message>
+	<message key="payment.type.purchaseArticle">Плата за покупку статьи</message>
+	<message key="payment.type.subscription">Плата за подписку</message>
+	<message key="payment.type.donation">Пожертвования</message>
+	<message key="payment.donation.makeDonation">Сделать пожертвование</message>
+	<message key="payment.submission.paySubmission">Оплатить подачу статьи</message>
+	<message key="payment.fastTrack.payFastTrack">Оплатить рецензию вне очереди</message>
+	<message key="payment.fastTrack.inFastTrack">вне очереди</message>
+	<message key="payment.publication.payPublication">Оплатить публикацию</message>
+	<message key="payment.publication.publicationPaid">Публикация оплачена</message>
+	<message key="payment.membership.buyMembership">Приобрести индивидуальное членство</message>
+	<message key="payment.membership.renewMembership">Продолжить индивидуальное членство</message>
+	<message key="payment.membership.ends">Заканчивается</message>
+	<message key="payment.subscription.purchase">Приобрести подписку</message>
+	<message key="payment.subscription.renew">Продолжить подписку</message>
+	<message key="payment.subscription.expires">Истекает</message>
+	<message key="installer.databaseSettingsInstructions">OJS хранит свои данные в базе данных, поддерживающей язык SQL. В списке выше указаны поддерживаемые базы данных. В следующих полях укажите установки, которые будут использованы для соединения с базой.</message>
+	<message key="installer.installApplication">Установить Open Journal Systems</message>
+	<message key="installer.upgradeApplication">Обновить Open Journal Systems</message>
+	<message key="log.review.reviewRecommendationSetByProxy">Рекомендация для {$round} раунда рецензирования рукописи {$articleId} была введена редактором, {$editorName}, от имени рецензента, {$reviewerName}.</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName} отказался от рецензирования {$articleId} на {$round}-м раунде от имени {$reviewerName}.</message>
+	<message key="log.review.reviewFileByProxy">Редактор, {$userName}, ввел файл рецензии для {$round}-го раунда рецензирования рукописи {$articleId} от имени рецензента, {$reviewerName}.</message>
+	<message key="log.editor.decision">Решение ({$decision}) для статьи {$articleId} было введено {$editorName}.</message>
+	<message key="log.editor.submissionExpedited">{$editorName} ускорил процесс редактирования статьи {$articleId}.</message>
+	<message key="rt.admin.settings.description">Инструменты читателя появляются в рамке рядом с опубликованными статьями в индексируемых разделах журнала. Они состоят из нижеперечисленного набора инструментов, а также инструментов, осуществляющих поиск по подобию, организованных в соответствии с разделом науки и дисциплиной.</message>
+	<message key="rt.admin.settings.enableReadingTools">Включить инструменты читателя для некоторых разделов журнала.</message>
+	<message key="rt.admin.settings.relatedItems">Раздел науки</message>
+	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Смотрите <a href="{$relatedItemsLink}" class="action">Наборы Близких Статей</a> для просмотра, изменения, дополнения и удаления близких статей для каждой области.]]></message>
+	<message key="rt.admin.relatedItems">Близкие Статьи</message>
+	<message key="rt.admin.settings.addComment">Добавить комментарий (позволяет читателям оставлять комментарии, с возможностью для редакции их удалить).</message>
+	<message key="rt.admin.settings.addComment.authenticated">Пользователи должны войти в систему перед тем как комментировать, анонимность не допускается.</message>
+	<message key="rt.admin.settings.addComment.anonymous">Пользователи должны войти в систему перед тем как комментировать, анонимность допускается.</message>
+	<message key="rt.admin.settings.addComment.unauthenticated">Пользователи не обязаны входить в систему перед тем как комментировать, анонимность допускается.</message>
+	<message key="rt.metadata.pkp.doi">Цифровой Идентификатор Обьекта</message>
+	<message key="notification.mailListDescription">Введите свой электронный адрес, чтобы получать уведомления о новостях журнала.</message>
+	<message key="notification.notificationsPublicDescription"><![CDATA[На этой странице показан список новостей этого журнала, таких как выход новых номеров и обьявления. Вы можете получать эти новости в формате RSS (нажав на иконки справа), или <a href="{$emailUrl}">по электронной почте.</a>]]></message>
+	<message key="notification.type.articleSubmitted">Представлена новая статья, "{$param}".</message>
+	<message key="notification.type.copyeditComment">Редактор оставил комментарий о "{$param}".</message>
+	<message key="notification.type.editing">Процесс редактирования</message>
+	<message key="notification.type.editorDecisionComment">Добавлено решение редактора о публикации "{$param}".</message>
+	<message key="notification.type.galleyModified">Изменены гранки статьи "{$param}".</message>
+	<message key="notification.type.issuePublished">Опубликован новый выпуск.</message>
+	<message key="notification.type.layoutComment">Добавлен комментарий о верстке "{$param}".</message>
+	<message key="notification.type.metadataModified">Изменены метаданные "{$param}".</message>
+	<message key="notification.type.newAnnouncement">Создано новое обьявление.</message>
+	<message key="notification.type.proofreadComment">Добавлен комментарий корректора о "{$param}".</message>
+	<message key="notification.type.reviewerComment">Добавлен комментарий рецензента о "{$param}".</message>
+	<message key="notification.type.reviewerFormComment">Введена форма рецензента для "{$param}".</message>
+	<message key="notification.type.reviewing">Процесс рецензирования</message>
+	<message key="notification.type.site">События сайта</message>
+	<message key="notification.type.submissionComment">Редактор сделал комментарий о "{$param}".</message>
+	<message key="notification.type.submissions">Процесс отправки</message>
+	<message key="notification.type.suppFileModified">Изменились дополнительные файлы "{$param}".</message>
+	<message key="notification.type.userComment">Читатель добавил комментарий о "{$param}"</message>
+	<message key="debug.notes.currencyListLoad">Загружен список валют "{$filename}" в XML</message>
+	<message key="debug.notes.helpMappingLoad">Перезагружен XML файл подсказки {$filename} в поиске {$id}.</message>
+	<message key="submission.reviewFormResponse">Заполненная Форма Рецензента</message>
+	<message key="navigation.competingInterestGuidelines">Описание Конфликта Интересов</message>
 </locale>

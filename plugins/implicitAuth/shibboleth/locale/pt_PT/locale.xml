@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the pt_PT (Português) locale.
+  *
+  * Contributed by Dan Galewsky, University of Texas
+  *
+  * $Id$
+  -->
+ 
+<locale name="pt_PT" full_name="Português">
+	<message key="plugins.implicitAuth.shibboleth.displayName">Plugin de Autenticação Shiboleth</message>
+	<message key="plugins.implicitAuth.shibboleth.description">Este é um plugin de alcance geral, habilitado no ficheiro de configuração do sistema.</message>
+</locale>

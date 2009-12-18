@@ -17,25 +17,26 @@
 <!DOCTYPE locales SYSTEM "../lib/pkp/dtd/locales.dtd">
 
 <locales>
-	<locale key="ca_ES" name="Catalan"/>
-	<locale key="cs_CZ" name="Czech"/>
-	<locale key="da_DK" name="Danish"/>
+	<locale key="ca_ES" complete="false" name="Catalan"/>
+	<locale key="cs_CZ" complete="false" name="Czech"/>
+	<locale key="da_DK" complete="false" name="Danish"/>
 	<locale key="de_DE" name="Deutsch (Deutschland)"/>
 	<locale key="en_US" name="English"/>
 	<locale key="el_GR" name="Greek"/>
 	<locale key="es_ES" name="Español (España)"/>
-	<locale key="eu_ES" name="Basque (Euskara)"/>
+	<locale key="eu_ES" complete="false" name="Basque (Euskara)"/>
 	<locale key="fa_IR" name="Persian"/>
 	<locale key="fr_CA" name="Français (Canada)"/>
-	<locale key="hr_HR" name="Hrvatski"/>
-	<locale key="it_IT" name="Italiano"/>
-	<locale key="ja_JP" name="日本語"/>
+	<locale key="hr_HR" complete="false" name="Hrvatski"/>
+	<locale key="it_IT" complete="false" name="Italiano"/>
+	<locale key="ja_JP" complete="false" name="日本語"/>
 	<locale key="nl_NL" name="Nederlands"/>
-	<locale key="no_NO" name="Norwegian"/>
+	<locale key="no_NO" complete="false" name="Norwegian"/>
 	<locale key="pt_BR" name="Português (Brasil)"/>
-	<locale key="ru_RU" complete="false" name="Russian"/>
-        <locale key="sv_SV" name="Swedish"/>
-	<locale key="tr_TR" name="Türkiye Türkçesi"/>
-	<locale key="vi_VN" name="Tiếng Việt"/>
-	<locale key="zh_TW" name="繁體中文"/>
+	<locale key="pt_PT" name="Português"/>
+	<locale key="ru_RU" name="Russian"/>
+	<locale key="sv_SV" complete="false" name="Swedish"/>
+	<locale key="tr_TR" complete="false" name="Türkiye Türkçesi"/>
+	<locale key="vi_VN" complete="false" name="Tiếng Việt"/>
+	<locale key="zh_TW" complete="false" name="繁體中文"/>
 </locales>

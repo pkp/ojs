@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000029.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Groups
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000029" locale="pt_PT" title="Equipa Editorial" toc="journal/toc/000001" key="journal.managementPages.groups">
+	<section>
+		<![CDATA[<p>O sistema possui dois métodos para o Editor-Gestor criar a sua Equipa Editorial, exibida na página Equipa Editorial em Sobre a Revista: utilizando funções editoriais pré-definidas ou criando títulos personalizados para as funções editoriais da equipa.</p>]]>
+	</section>
+	<section title="Utilizando Funções Editoriais pré-definidas para montar a equipe">
+		<![CDATA[<p>Ao seleccionar esta opção, a informação em Sobre a Revista da Equipa Editorial será gerada automaticamente pelo sistema, utilizando as funções pré-definidas nas páginas de Funções do Editor-Gestor. Utilizadores registados como Editores, Editores de Secção, Editores de Texto e Leitores de Prova serão listados.</p>]]>
+	</section>
+	<section title="Criando títulos personalizados para as Funções Editoriais da equipe">
+		<![CDATA[<p>Caso o Editor-Gestor deseje maior controlo sobre a informação da Equipa Editorial, apresentada em Sobre a Revista, pode-se activar a opção na página Equipa Editorial em Administração da Revista. Ao activar opção, os vários títulos criados na página Equipa Editorial serão usados para gerar o conteúdo publicado em Sobre a Revista.</p>]]>
+	</section>
+</topic>

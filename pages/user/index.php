@@ -45,9 +45,20 @@ switch ($op) {
 		define('HANDLER_CLASS', 'EmailHandler');
 		import('pages.user.EmailHandler');
 		break;
-	default:	
+	case 'index':
+	case 'subscriptions':
+	case 'setLocale':
+	case 'become':
+	case 'viewCaptcha':
+	case 'viewPublicProfile':
+	case 'purchaseSubscription':
+	case 'payPurchaseSubscription':
+	case 'completePurchaseSubscription':
+	case 'payRenewSubscription':
+	case 'payMembership':
 		define('HANDLER_CLASS', 'UserHandler');
 		import('pages.user.UserHandler');
+		break;
 }
 
 ?>

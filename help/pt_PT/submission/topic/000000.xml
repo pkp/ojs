@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author Submission Process Index 
+
+  * $Id$
+  -->
+
+<topic id="submission/topic/000000" locale="pt_PT" title="Processo de Submissão" toc="index/toc/000000" subtoc="submission/toc/000000" key="submission.index">
+	<section>
+		<![CDATA[<p>A revista oferece aos Autores a possibilidade de enviar as suas submissões directamente ao sistema da revista. Dependendo das opções definidas pelo Editor-Gestor da revista (Passo 2.6), os Autores podem, ao registar-se como autor, estar habilitados a registar-se também como Revisores (para ser convidado a rever submissões) e/ou Leitor (para receber via e-mail o Sumário das novas Edições da revista). Ao concluir o processo de registo, o Autor entra para na Página do Utilizador, que lista as várias Funções que o utilizador pode assumir na revista (por exemplo, Autor, Revisor, etc.). Clicando na função de Autor, o utilizador entra na área de submissões, onde aparece a lista de submissões activas e arquivadas, e onde uma nova submissão pode ser iniciada. O processo de submissão possui 5 passos separados, com instruções disponíveis em cada passo. Os Autores não precisam concluir os 5 passos de uma vez, podendo retomar de onde pararam acedendo às submissões listadas como "Incompletas", na lista se submissões activas.</p>]]>
+	</section>
+</topic>

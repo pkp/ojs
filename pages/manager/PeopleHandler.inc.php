@@ -300,7 +300,7 @@ class PeopleHandler extends ManagerHandler {
 			$roleDao->deleteRoleByUserId(Request::getUserVar('userId'), $journal->getJournalId(), $roleId);
 		}
 
-		Request::redirect(null, null, 'people');
+		Request::redirect(null, null, 'people', $roleDao->getRolePath($roleId) . 's');
 	}
 
 	/**

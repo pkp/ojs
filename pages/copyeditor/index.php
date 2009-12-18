@@ -60,7 +60,8 @@ switch ($op) {
 		define('HANDLER_CLASS', 'SubmissionCommentsHandler');
 		import('pages.copyeditor.SubmissionCommentsHandler');
 		break;
-	default:	
+	case 'index':
+	case 'instructions':
 		define('HANDLER_CLASS', 'CopyeditorHandler');
 		import('pages.copyeditor.CopyeditorHandler');
 }

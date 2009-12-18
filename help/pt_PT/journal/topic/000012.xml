@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000012.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users - Create New User 
+
+  * $Id$
+  -->
+
+<topic id="journal/topic/000012" locale="pt_PT" title="Adicionar Novo Utilizador" toc="journal/toc/000002" key="journal.users.createNewUser">
+	<section>
+		<![CDATA[<p>O Editor-Gestor pode usar o link Adicionar Novo Utilizador para registar alguém e atribuir-lhe uma função, de Editor-Gestor a Leitor. O utilizador pode, ao logar na revista, completar e mudar as informações do seu perfil registadas pelo Editor-Gestor.</p><p><em>Alteração da Senha</em>. Os Utilizadores podem mudar as suas senhas assim que tenham se ligado à revista. O Editor-Gestor não pode aceder à senha do utilizador. Entretanto, o sistema pode gerar uma nova senha e envia-la via e-mail aos utilizadores que clicarem no link "Esqueceu a sua senha?" abaixo da caixa de login.</p>]]>	
+	</section>
+	
+	<section title="Registar Utilizador Existente">
+		<![CDATA[<p>O Editor-Gestor pode designar uma ou mais funções a qualquer utilizador registado.</p>]]>
+	</section>
+
+	<section title="Sincronizar registo de utilizadores">
+		<![CDATA[<p>Sincronizar registos fará com que um utilizador com função específica numa revista seja registado com a mesma função em outra revista, acedida no momento da execução. Esta função permite partilhar um grupo de utilizadores entre as revistas (por exemplo, Revisores) e sincronizar os seus registos entre revistas.</p>]]>
+	</section>
+</topic>

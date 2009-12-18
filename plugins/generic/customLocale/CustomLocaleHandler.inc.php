@@ -20,6 +20,9 @@ require_once('CustomLocaleAction.inc.php');
 import('handler.Handler');
 
 class CustomLocaleHandler extends Handler {
+	/** Plugin associated with the request */
+	var $plugin;
+	
 	/**
 	 * Constructor
 	 **/
@@ -28,12 +31,15 @@ class CustomLocaleHandler extends Handler {
 
 		$this->addCheck(new HandlerValidatorJournal($this));
 		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_SITE_ADMIN, ROLE_ID_JOURNAL_MANAGER)));
+
+		$plugin =& PluginRegistry::getPlugin('generic', 'CustomLocalePlugin');
+		$this->plugin =& $plugin;		
 	}
 
 	function index() {
-		CustomLocaleHandler::validate();
+		$this->validate();
 		$plugin =& PluginRegistry::getPlugin('generic', 'CustomLocalePlugin');
-		CustomLocaleHandler::setupTemplate($plugin, false);
+		$this->setupTemplate($plugin, false);
 
 		$journal = Request::getJournal();
 		$rangeInfo = Handler::getRangeInfo('locales');
@@ -47,9 +53,9 @@ class CustomLocaleHandler extends Handler {
 	}
 
 	function edit($args) {
-		CustomLocaleHandler::validate();
+		$this->validate();
 		$plugin =& PluginRegistry::getPlugin('generic', 'CustomLocalePlugin');
-		CustomLocaleHandler::setupTemplate($plugin, true);
+		$this->setupTemplate($plugin, true);
 
 		$locale = array_shift($args);
 		$file = array_shift($args);
@@ -74,9 +80,9 @@ class CustomLocaleHandler extends Handler {
 	}
 
 	function editLocaleFile($args) {
-		CustomLocaleHandler::validate();
+		$this->validate();
 		$plugin =& PluginRegistry::getPlugin('generic', 'CustomLocalePlugin');
-		CustomLocaleHandler::setupTemplate($plugin, true);
+		$this->setupTemplate($plugin, true);
 
 		$locale = array_shift($args);
 		if (!Locale::isLocaleValid($locale)) {
@@ -137,9 +143,9 @@ class CustomLocaleHandler extends Handler {
 	}
 
 	function saveLocaleFile($args) {
-		CustomLocaleHandler::validate();
+		$this->validate();
 		$plugin =& PluginRegistry::getPlugin('generic', 'CustomLocalePlugin');
-		CustomLocaleHandler::setupTemplate($plugin, true);
+		$this->setupTemplate($plugin, true);
 
 		$locale = array_shift($args);
 		if (!Locale::isLocaleValid($locale)) {
@@ -180,7 +186,7 @@ class CustomLocaleHandler extends Handler {
 
 		while (!empty($changes)) {
 			$key = array_shift($changes);
-			$value = CustomLocaleHandler::correctCr(array_shift($changes));
+			$value = $this->correctCr(array_shift($changes));
 			if (!empty($value)) {
 				if (!$file->update($key, $value)) {
 					$file->insert($key, $value);

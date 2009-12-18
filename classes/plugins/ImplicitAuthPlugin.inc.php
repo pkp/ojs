@@ -20,6 +20,10 @@
 import('plugins.Plugin');
 
 class ImplicitAuthPlugin extends Plugin {
+	function ImplicitAuthPlugin() {
+		parent::Plugin();
+	}
+
 	/**
 	 * Authenticate a user based on some external conditions or system.
 	 * Subclasses should implement this method.

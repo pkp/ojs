@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Submissions 
+
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000005" locale="pt_PT" title="Submissões" toc="editorial/toc/000004" subtoc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions">
+	<section>
+		<![CDATA[<p>Submissões à revista que são designadas ao Editor de Secção pelo Editor aparecem nesta fila Em Revisão do Editor de Secção. Editores de Secção têm acesso apenas a submissões que lhes foram designadas. Dependendo da política da revista, os Editores de Secção podem ser responsáveis apenas pela Revisão da submissão ou por ambas Revisão e Edição da Submissão.</p>]]>	
+	</section>
+</topic>

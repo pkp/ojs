@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * phpMyVisites plugin localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+
+	<!-- phpMyVisites -->
+	<message key="plugins.generic.phpmv.displayName">Модуль phpMyVisites</message>
+	<message key="plugins.generic.phpmv.description"><![CDATA[Интегрирует OJS с phpMyVisites, свободной программой анализа статистики запросов. Требует, чтобы phpMyVisites уже была установлена. Для дополнительной информации см. <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">сайт phpMyVisites</a>.]]></message>
+	<message key="plugins.generic.phpmv.enabled">Модуль phpMyVisites включен.</message>
+	<message key="plugins.generic.phpmv.disabled">Модуль phpMyVisites выключен.</message>
+	<!-- phpMyVisites Settings Management -->
+	<message key="plugins.generic.phpmv.manager.settings">Настройки</message>
+	<message key="plugins.generic.phpmv.manager.phpmvSettings">Настройки phpMyVisites</message>
+	<message key="plugins.generic.phpmv.manager.settings.description"><![CDATA[<p>Включение этого модуля позволяет использовать phpMyVisites для сбора и анализа статистики использования сайта данного журнала. Заметьте, что программа phpMyVisites уже должна быть установлена. Для дополнительной информации см. <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">сайт phpMyVisites</a>.</p>]]></message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvUrl">phpMyVisites Url</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvUrlInstructions">Полная ссылка на установленную phpMyVisites (напр. http://myserver.net/phpmv).</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvUrlRequired">Пожалуйста введите правильную ссылку. Она должна начинаться с http://.</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteId">Номер профиля сайта</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdInstructions"><![CDATA[В программе phpMyVisites нажмите на Administration->Modify site. Номер профиля будет показан рядом с именем профиля Вашего сайта.]]></message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdRequired">Пожалуйста введите номер профиля.</message>
+
+</locale>

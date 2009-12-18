@@ -15,8 +15,25 @@
  * @ingroup pages_login
  */
 
-define('HANDLER_CLASS', 'LoginHandler');
+// $Id$
 
-import('pages.login.LoginHandler');
+
+switch ($op) {
+	case 'index':
+	case 'implicitAuthLogin':
+	case 'implicitAuthReturn':
+	case 'signIn':
+	case 'signOut':
+	case 'lostPassword':
+	case 'requestResetPassword':
+	case 'resetPassword':
+	case 'changePassword':
+	case 'savePassword':
+	case 'signInAsUser':
+	case 'signOutAsUser':
+		define('HANDLER_CLASS', 'LoginHandler');
+		import('pages.login.LoginHandler');
+		break;
+}
 
 ?>
