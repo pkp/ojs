@@ -267,7 +267,7 @@ class ArticleHandler extends Handler {
 
 			// Use the article's CSS file, if set.
 			if ($galley->isHTMLGalley() && $styleFile =& $galley->getStyleFile()) {
-				$templateMgr->addStyleSheet($router->url(null, 'article', 'viewFile', array(
+				$templateMgr->addStyleSheet($router->url($request, null, 'article', 'viewFile', array(
 					$article->getArticleId(),
 					$galley->getBestGalleyId($journal),
 					$styleFile->getFileId()
