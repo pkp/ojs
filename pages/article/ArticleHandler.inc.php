@@ -24,32 +24,38 @@ import('rt.ojs.SharingRT');
 class ArticleHandler extends Handler {
 	/** journal associated with the request **/
 	var $journal;
-	
+
 	/** issue associated with the request **/
 	var $issue;
-	
+
 	/** article associated with the request **/
 	var $article;
 
 	/**
 	 * Constructor
-	 **/
-	function ArticleHandler() {
-		parent::Handler();
-		
+	 * @param $request Request
+	 */
+	function ArticleHandler(&$request) {
+		parent::Handler($request);
+		$router =& $request->getRouter();
+
 		$this->addCheck(new HandlerValidatorJournal($this));
-		$this->addCheck(new HandlerValidatorCustom($this, false, null, null, create_function('$journal', 'return $journal->getSetting(\'publishingMode\') != PUBLISHING_MODE_NONE;'), array(Request::getJournal())));
+		$this->addCheck(new HandlerValidatorCustom($this, false, null, null, create_function('$journal', 'return $journal->getSetting(\'publishingMode\') != PUBLISHING_MODE_NONE;'), array($router->getContext($request))));
 	}
 
 	/**
 	 * View Article.
+	 * @param $args array
+	 * @param $request Request
 	 */
-	function view($args) {
+	function view($args, &$request) {
+		$router =& $request->getRouter();
+
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 
 		$this->setupTemplate();
-		$this->validate($articleId, $galleyId);
+		$this->validate($request, $articleId, $galleyId);
 
 		$journal =& $this->journal;
 		$issue =& $this->issue;
@@ -66,17 +72,17 @@ class ArticleHandler extends Handler {
 		}
 
 		if (!$journalRt->getEnabled()) {
-			if (!$galley || $galley->isHtmlGalley()) return $this->viewArticle($args);
-			else if ($galley->isPdfGalley()) return $this->viewPDFInterstitial($args, $galley);
+			if (!$galley || $galley->isHtmlGalley()) return $this->viewArticle($args, $request);
+			else if ($galley->isPdfGalley()) return $this->viewPDFInterstitial($args, $request, $galley);
 			else if ($galley->isInlineable()) {
 				import('file.ArticleFileManager');
 				$articleFileManager = new ArticleFileManager($article->getArticleId());
 				return $articleFileManager->viewFile($galley->getFileId());
-			} else return $this->viewDownloadInterstitial($args, $galley);
+			} else return $this->viewDownloadInterstitial($args, $request, $galley);
 		}
 
 		if (!$article) {
-			Request::redirect(null, Request::getRequestedPage());
+			$request->redirect(null, $router->getRequestedPage($request));
 			return;
 		}
 
@@ -91,18 +97,20 @@ class ArticleHandler extends Handler {
 
 	/**
 	 * Article interstitial page before PDF is shown
+	 * @param $args array
+	 * @param $request Request
+	 * @param $galley ArticleGalley
 	 */
-	function viewPDFInterstitial($args, $galley = null) {
+	function viewPDFInterstitial($args, &$request, $galley = null) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? $args[1] : 0;
-		$this->validate($articleId, $galleyId);
+		$this->validate($request, $articleId, $galleyId);
 		$journal =& $this->journal;
 		$issue =& $this->issue;
-		$article =& $this->article;		
+		$article =& $this->article;
 		$this->setupTemplate();
 
-		if (!$galley || !is_a($galley, 'ArticleGalley')) {
-			unset($galley);
+		if (!$galley) {
 			$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 			if ($journal->getSetting('enablePublicGalleyId')) {
 				$galley =& $galleyDao->getGalleyByBestGalleyId($galleyId, $article->getArticleId());
@@ -111,7 +119,7 @@ class ArticleHandler extends Handler {
 			}
 		}
 
-		if (!$galley) Request::redirect(null, null, 'view', $articleId);
+		if (!$galley) $request->redirect(null, null, 'view', $articleId);
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
@@ -125,18 +133,20 @@ class ArticleHandler extends Handler {
 	/**
 	 * Article interstitial page before a non-PDF, non-HTML galley is
 	 * downloaded
+	 * @param $args array
+	 * @param $request Request
+	 * @param $galley ArticleGalley
 	 */
-	function viewDownloadInterstitial($args, $galley = null) {
+	function viewDownloadInterstitial($args, &$request, $galley = null) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? $args[1] : 0;
-		$this->validate($articleId, $galleyId);
+		$this->validate($request, $articleId, $galleyId);
 		$journal =& $this->journal;
 		$issue =& $this->issue;
-		$article =& $this->article;		
+		$article =& $this->article;
 		$this->setupTemplate();
 
-		if (!$galley || !is_a($galley, 'ArticleGalley')) {
-			unset($galley);
+		if (!$galley) {
 			$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 			if ($journal->getSetting('enablePublicGalleyId')) {
 				$galley =& $galleyDao->getGalleyByBestGalleyId($galleyId, $article->getArticleId());
@@ -145,7 +155,7 @@ class ArticleHandler extends Handler {
 			}
 		}
 
-		if (!$galley) Request::redirect(null, null, 'view', $articleId);
+		if (!$galley) $request->redirect(null, null, 'view', $articleId);
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
@@ -158,15 +168,18 @@ class ArticleHandler extends Handler {
 
 	/**
 	 * Article view
+	 * @param $args array
+	 * @param $request Request
 	 */
-	function viewArticle($args) {
+	function viewArticle($args, &$request) {
+		$router =& $request->getRouter();
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 
-		$this->validate($articleId, $galleyId);
+		$this->validate($request, $articleId, $galleyId);
 		$journal =& $this->journal;
 		$issue =& $this->issue;
-		$article =& $this->article;		
+		$article =& $this->article;
 		$this->setupTemplate();
 
 		$rtDao =& DAORegistry::getDAO('RTDAO');
@@ -232,7 +245,7 @@ class ArticleHandler extends Handler {
 			if (isset($article) && $article->getLocalizedFileName() && $article->getLocalizedShowCoverPage() && !$article->getLocalizedHideCoverPageAbstract($locale)) {
 				import('file.PublicFileManager');
 				$publicFileManager = new PublicFileManager();
-				$coverPagePath = Request::getBaseUrl() . '/';
+				$coverPagePath = $request->getBaseUrl() . '/';
 				$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
 				$templateMgr->assign('coverPagePath', $coverPagePath);
 				$templateMgr->assign('coverPageFileName', $article->getLocalizedFileName());
@@ -242,19 +255,19 @@ class ArticleHandler extends Handler {
 			}
 
 			// Increment the published article's abstract views count
-			if (!Request::isBot()) {
+			if (!$request->isBot()) {
 				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 				$publishedArticleDao->incrementViewsByArticleId($article->getArticleId());
 			}
 		} else {
-			if (!Request::isBot()) {
+			if (!$request->isBot()) {
 				// Increment the galley's views count
 				$galleyDao->incrementViews($galley->getGalleyId());
 			}
 
 			// Use the article's CSS file, if set.
 			if ($galley->isHTMLGalley() && $styleFile =& $galley->getStyleFile()) {
-				$templateMgr->addStyleSheet(Request::url(null, 'article', 'viewFile', array(
+				$templateMgr->addStyleSheet($router->url(null, 'article', 'viewFile', array(
 					$article->getArticleId(),
 					$galley->getBestGalleyId($journal),
 					$styleFile->getFileId()
@@ -284,11 +297,11 @@ class ArticleHandler extends Handler {
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('defineTermsContextId', isset($defineTermsContextId)?$defineTermsContextId:null);
 		$templateMgr->assign('comments', isset($comments)?$comments:null);
-		
+
 		$templateMgr->assign('sharingEnabled', $journalRt->getSharingEnabled());
-		
+
 		if($journalRt->getSharingEnabled()) {
-			$templateMgr->assign('sharingRequestURL', Request::getRequestURL());
+			$templateMgr->assign('sharingRequestURL', $request->getRequestURL());
 			$templateMgr->assign('sharingArticleTitle', $article->getArticleTitle());
 			$templateMgr->assign_by_ref('sharingUserName', $journalRt->getSharingUserName());
 			$templateMgr->assign_by_ref('sharingButtonStyle', $journalRt->getSharingButtonStyle());
@@ -309,15 +322,17 @@ class ArticleHandler extends Handler {
 
 	/**
 	 * Article Reading tools
+	 * @param $args array
+	 * @param $request Request
 	 */
-	function viewRST($args) {
+	function viewRST($args, &$request) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 
-		$this->validate($articleId, $galleyId);
+		$this->validate($request, $articleId, $galleyId);
 		$journal =& $this->journal;
 		$issue =& $this->issue;
-		$article =& $this->article;		
+		$article =& $this->article;
 		$this->setupTemplate();
 
 		$rtDao =& DAORegistry::getDAO('RTDAO');
@@ -381,16 +396,17 @@ class ArticleHandler extends Handler {
 	/**
 	 * View a file (inlines file).
 	 * @param $args array ($articleId, $galleyId, $fileId [optional])
+	 * @param $request Request
 	 */
-	function viewFile($args) {
+	function viewFile($args, &$request) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 		$fileId = isset($args[2]) ? (int) $args[2] : 0;
 
-		$this->validate($articleId, $galleyId);
+		$this->validate($request, $articleId, $galleyId);
 		$journal =& $this->journal;
 		$issue =& $this->issue;
-		$article =& $this->article;		
+		$article =& $this->article;
 
 		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 		if ($journal->getSetting('enablePublicGalleyId')) {
@@ -399,14 +415,14 @@ class ArticleHandler extends Handler {
 			$galley =& $galleyDao->getGalley($galleyId, $article->getArticleId());
 		}
 
-		if (!$galley) Request::redirect(null, null, 'view', $articleId);
+		if (!$galley) $request->redirect(null, null, 'view', $articleId);
 
 		if (!$fileId) {
 			$galleyDao->incrementViews($galley->getGalleyId());
 			$fileId = $galley->getFileId();
 		} else {
 			if (!$galley->isDependentFile($fileId)) {
-				Request::redirect(null, null, 'view', $articleId);
+				$request->redirect(null, null, 'view', $articleId);
 			}
 		}
 
@@ -418,14 +434,16 @@ class ArticleHandler extends Handler {
 
 	/**
 	 * Downloads the document
+	 * @param $args array
+	 * @param $request Request
 	 */
-	function download($args) {
+	function download($args, &$request) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? $args[1] : 0;
-		$this->validate($articleId, $galleyId);
+		$this->validate($request, $articleId, $galleyId);
 		$journal =& $this->journal;
 		$issue =& $this->issue;
-		$article =& $this->article;		
+		$article =& $this->article;
 
 		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 		if ($journal->getSetting('enablePublicGalleyId')) {
@@ -442,13 +460,18 @@ class ArticleHandler extends Handler {
 		}
 	}
 
-	function downloadSuppFile($args) {
+	/**
+	 * Download a supplementary file
+	 * @param $args array
+	 * @param $request Request
+	 */
+	function downloadSuppFile($args, &$request) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$suppId = isset($args[1]) ? $args[1] : 0;
-		$this->validate($articleId);
+		$this->validate($request, $articleId);
 		$journal =& $this->journal;
 		$issue =& $this->issue;
-		$article =& $this->article;		
+		$article =& $this->article;
 
 		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
 		if ($journal->getSetting('enablePublicSuppFileId')) {
@@ -470,16 +493,21 @@ class ArticleHandler extends Handler {
 
 	/**
 	 * Validation
+	 * @see lib/pkp/classes/handler/PKPHandler#validate()
+	 * @param $request Request
+	 * @param $articleId integer
+	 * @param $galleyId integer
 	 */
-	function validate($articleId, $galleyId = null) {
-		parent::validate();
+	function validate(&$request, $articleId, $galleyId = null) {
+		$router =& $request->getRouter();
+		parent::validate(null, $request);
 
 		import('issue.IssueAction');
 
-		$journal =& Request::getJournal();
+		$journal =& $router->getContext($request);
 		$journalId = $journal->getJournalId();
 		$article = $publishedArticle = $issue = null;
-		$user =& Request::getUser();
+		$user =& $request->getUser();
 		$userId = $user?$user->getId():0;
 
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
@@ -575,12 +603,12 @@ class ArticleHandler extends Handler {
 						if (!Validation::isLoggedIn()) {
 							Validation::redirectLogin("reader.subscriptionRequiredLoginText");
 						}
-						Request::redirect(null, 'about', 'subscriptions');
+						$request->redirect(null, 'about', 'subscriptions');
 					}
 				}
 			}
 		} else {
-			Request::redirect(null, 'index');
+			$request->redirect(null, 'index');
 		}
 		$this->journal =& $journal;
 		$this->issue =& $issue;
