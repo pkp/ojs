@@ -957,6 +957,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		$submission =& $this->submission;
+		$this->setupTemplate(true, $articleId, 'editing');
 
 		$reviewId = isset($args[1]) ? (int) $args[1] : null;
 
