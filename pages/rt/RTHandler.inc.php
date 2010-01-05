@@ -9,7 +9,7 @@
  * @class RTHandler
  * @ingroup pages_rt
  *
- * @brief Handle Reading Tools requests. 
+ * @brief Handle Reading Tools requests.
  */
 
 // $Id$
@@ -25,27 +25,31 @@ import('article.ArticleHandler');
 class RTHandler extends ArticleHandler {
 	/**
 	 * Constructor
-	 **/
-	function RTHandler() {
-		parent::ArticleHandler();
+	 * @param $request Request
+	 */
+	function RTHandler(&$request) {
+		parent::ArticleHandler($request);
 	}
 	/**
 	 * Display an author biography
+	 * @param $args array
+	 * @param $request Request
 	 */
-	function bio($args) {
+	function bio($args, &$request) {
+		$router =& $request->getRouter();
 		$this->setupTemplate();
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		$this->validate($articleId, $galleyId);
-		
-		$journal =& Request::getJournal();
+		$this->validate($request, $articleId, $galleyId);
+
+		$journal =& $router->getContext($request);
 		$article =& $this->article;
 
 		$rtDao =& DAORegistry::getDAO('RTDAO');
 		$journalRt =& $rtDao->getJournalRTByJournal($journal);
 
 		if (!$journalRt || !$journalRt->getAuthorBio()) {
-			Request::redirect(null, Request::getRequestedPage());
+			$request->redirect(null, $router->getRequestedPage($request));
 		}
 
 		$templateMgr =& TemplateManager::getManager();
@@ -57,22 +61,25 @@ class RTHandler extends ArticleHandler {
 
 	/**
 	 * Display the article metadata
+	 * @param $args array
+	 * @param $request Request
 	 */
-	function metadata($args) {
+	function metadata($args, &$request) {
+		$router =& $request->getRouter();
 		$this->setupTemplate();
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		$this->validate($articleId, $galleyId);
+		$this->validate($request, $articleId, $galleyId);
 
-		$journal =& Request::getJournal();
+		$journal =& $router->getContext($request);
 		$issue =& $this->issue;
 		$article =& $this->article;
-		
+
 		$rtDao =& DAORegistry::getDAO('RTDAO');
 		$journalRt =& $rtDao->getJournalRTByJournal($journal);
 
 		if (!$journalRt || !$journalRt->getViewMetadata()) {
-			Request::redirect(null, Request::getRequestedPage());
+			$request->redirect(null, $router->getRequestedPage($request));
 		}
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
@@ -91,17 +98,20 @@ class RTHandler extends ArticleHandler {
 
 	/**
 	 * Display an RT search context
+	 * @param $args array
+	 * @param $request Request
 	 */
-	function context($args) {
+	function context($args, &$request) {
+		$router =& $request->getRouter();
 		$this->setupTemplate();
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$contextId = Isset($args[2]) ? (int) $args[2] : 0;
 
-		$this->validate($articleId, $galleyId);
-		$journal =& Request::getJournal();
+		$this->validate($request, $articleId, $galleyId);
+		$journal =& $router->getContext($request);
 		$article =& $this->article;
-		
+
 		$rtDao =& DAORegistry::getDAO('RTDAO');
 		$journalRt =& $rtDao->getJournalRTByJournal($journal);
 
@@ -109,7 +119,7 @@ class RTHandler extends ArticleHandler {
 		if ($context) $version =& $rtDao->getVersion($context->getVersionId(), $journal->getJournalId());
 
 		if (!$context || !$version || !$journalRt || $journalRt->getVersion()==null || $journalRt->getVersion() !=  $context->getVersionId()) {
-			Request::redirect(null, 'article', 'view', array($articleId, $galleyId));
+			$request->redirect(null, 'article', 'view', array($articleId, $galleyId));
 		}
 
 		// Deal with the post and URL parameters for each search
@@ -171,7 +181,7 @@ class RTHandler extends ArticleHandler {
 		$templateMgr->assign_by_ref('searches', $searches);
 		$templateMgr->assign('searchParams', $searchParams);
 		$templateMgr->assign('searchValues', $searchValues);
-		$templateMgr->assign('defineTerm', Request::getUserVar('defineTerm'));
+		$templateMgr->assign('defineTerm', $request->getUserVar('defineTerm'));
 		$templateMgr->assign('keywords', explode(';', $article->getLocalizedSubject()));
 		$templateMgr->assign('coverageGeo', $article->getLocalizedCoverageGeo());
 		$templateMgr->assign_by_ref('journalSettings', $journal->getSettings());
@@ -180,23 +190,26 @@ class RTHandler extends ArticleHandler {
 
 	/**
 	 * Display citation information
+	 * @param $args array
+	 * @param $request Request
 	 */
-	function captureCite($args) {
+	function captureCite($args, &$request) {
+		$router =& $request->getRouter();
 		$this->setupTemplate();
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$citeType = isset($args[2]) ? $args[2] : null;
 
-		$this->validate($articleId, $galleyId);
-		$journal =& Request::getJournal();
+		$this->validate($request, $articleId, $galleyId);
+		$journal =& $router->getContext($request);
 		$issue =& $this->issue;
 		$article =& $this->article;
-		
+
 		$rtDao =& DAORegistry::getDAO('RTDAO');
 		$journalRt =& $rtDao->getJournalRTByJournal($journal);
 
 		if (!$journalRt || !$journalRt->getCaptureCite()) {
-			Request::redirect(null, Request::getRequestedPage());
+			$request->redirect(null, $router->getRequestedPage($request));
 		}
 
 		$templateMgr =& TemplateManager::getManager();
@@ -224,23 +237,26 @@ class RTHandler extends ArticleHandler {
 
 	/**
 	 * Display a printer-friendly version of the article
+	 * @param $args array
+	 * @param $request Request
 	 */
-	function printerFriendly($args) {
+	function printerFriendly($args, &$request) {
+		$router =& $request->getRouter();
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		
-		$this->validate($articleId, $galleyId);
-		$journal =& Request::getJournal();
+
+		$this->validate($request, $articleId, $galleyId);
+		$journal =& $router->getContext($request);
 		$issue =& $this->issue;
 		$article =& $this->article;
 
 		$this->setupTemplate();
-				
+
 		$rtDao =& DAORegistry::getDAO('RTDAO');
 		$journalRt =& $rtDao->getJournalRTByJournal($journal);
 
 		if (!$journalRt || !$journalRt->getPrinterFriendly()) {
-			Request::redirect(null, Request::getRequestedPage());
+			$request->redirect(null, $router->getRequestedPage($request));
 		}
 
 		$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
@@ -260,47 +276,50 @@ class RTHandler extends ArticleHandler {
 
 		// Use the article's CSS file, if set.
 		if ($galley && $galley->isHTMLGalley() && $styleFile =& $galley->getStyleFile()) {
-			$templateMgr->addStyleSheet(Request::url(null, 'article', 'viewFile', array(
+			$templateMgr->addStyleSheet($router->url($request, null, 'article', 'viewFile', array(
 				$article->getArticleId(),
 				$galley->getBestGalleyId($journal),
 				$styleFile->getFileId()
 			)));
 		}
 
-		$templateMgr->display('rt/printerFriendly.tpl');	
+		$templateMgr->display('rt/printerFriendly.tpl');
 	}
 
 	/**
 	 * Display the "Email Colleague" form
+	 * @param $args array
+	 * @param $request Request
 	 */
-	function emailColleague($args) {
+	function emailColleague($args, &$request) {
+		$router =& $request->getRouter();
 		$this->setupTemplate();
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 
-		$this->validate($articleId, $galleyId);
-		$journal =& Request::getJournal();
+		$this->validate($request, $articleId, $galleyId);
+		$journal =& $router->getContext($request);
 		$issue =& $this->issue;
 		$article =& $this->article;
-		
+
 		$rtDao =& DAORegistry::getDAO('RTDAO');
 		$journalRt =& $rtDao->getJournalRTByJournal($journal);
-		$user =& Request::getUser();
+		$user =& $request->getUser();
 
 		if (!$journalRt || !$journalRt->getEmailOthers() || !$user) {
-			Request::redirect(null, Request::getRequestedPage());
+			$request->redirect(null, $router->getRequestedPage($request));
 		}
 
 		import('mail.MailTemplate');
 		$email = new MailTemplate('EMAIL_LINK');
 
-		if (Request::getUserVar('send') && !$email->hasErrors()) {
+		if ($request->getUserVar('send') && !$email->hasErrors()) {
 			$email->send();
 
 			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->display('rt/sent.tpl');
 		} else {
-			if (!Request::getUserVar('continued')) {
+			if (!$request->getUserVar('continued')) {
 				$primaryAuthor = $article->getAuthors();
 				$primaryAuthor = $primaryAuthor[0];
 
@@ -311,38 +330,41 @@ class RTHandler extends ArticleHandler {
 					'number' => $issue?$issue->getNumber():null,
 					'year' => $issue?$issue->getYear():null,
 					'authorName' => $primaryAuthor->getFullName(),
-					'articleUrl' => Request::url(null, 'article', 'view', $article->getBestArticleId())
+					'articleUrl' => $router->url($request, null, 'article', 'view', array($article->getBestArticleId()))
 				));
 			}
-			$email->displayEditForm(Request::url(null, null, 'emailColleague', array($articleId, $galleyId)), null, 'rt/email.tpl', array('op' => 'emailColleague'));
+			$email->displayEditForm($router->url($request, null, null, 'emailColleague', array($articleId, $galleyId)), null, 'rt/email.tpl', array('op' => 'emailColleague'));
 		}
 	}
 
 	/**
 	 * Display the "email author" form
+	 * @param $args array
+	 * @param $request Request
 	 */
-	function emailAuthor($args) {
+	function emailAuthor($args, &$request) {
+		$router =& $request->getRouter();
 		$this->setupTemplate();
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 
-		$this->validate($articleId, $galleyId);
-		$journal =& Request::getJournal();
+		$this->validate($request, $articleId, $galleyId);
+		$journal =& $router->getContext($request);
 		$article =& $this->article;
-		
+
 		$rtDao =& DAORegistry::getDAO('RTDAO');
 		$journalRt =& $rtDao->getJournalRTByJournal($journal);
-		$user =& Request::getUser();
+		$user =& $request->getUser();
 
 		if (!$journalRt || !$journalRt->getEmailAuthor() || !$user) {
-			Request::redirect(null, Request::getRequestedPage());
+			$request->redirect(null, $router->getRequestedPage($request));
 		}
 
 		import('mail.MailTemplate');
 		$email = new MailTemplate();
 		$email->setAddressFieldsEnabled(false);
 
-		if (Request::getUserVar('send') && !$email->hasErrors()) {
+		if ($request->getUserVar('send') && !$email->hasErrors()) {
 			$authors =& $article->getAuthors();
 			$author =& $authors[0];
 			$email->addRecipient($author->getEmail(), $author->getFullName());
@@ -352,30 +374,33 @@ class RTHandler extends ArticleHandler {
 			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->display('rt/sent.tpl');
 		} else {
-			if (!Request::getUserVar('continued')) {
+			if (!$request->getUserVar('continued')) {
 				$email->setSubject('[' . $journal->getLocalizedSetting('initials') . '] ' . strip_tags($article->getLocalizedTitle()));
 			}
-			$email->displayEditForm(Request::url(null, null, 'emailAuthor', array($articleId, $galleyId)), null, 'rt/email.tpl', array('op' => 'emailAuthor'));
+			$email->displayEditForm($router->url($request, null, null, 'emailAuthor', array($articleId, $galleyId)), null, 'rt/email.tpl', array('op' => 'emailAuthor'));
 		}
 	}
 
 	/**
 	 * Display a list of supplementary files
+	 * @param $args array
+	 * @param $request Request
 	 */
-	function suppFiles($args) {
+	function suppFiles($args, &$request) {
+		$router =& $request->getRouter();
 		$this->setupTemplate();
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 
-		$this->validate($articleId, $galleyId);
-		$journal =& Request::getJournal();
+		$this->validate($request, $articleId, $galleyId);
+		$journal =& $router->getContext($request);
 		$article =& $this->article;
 
 		$rtDao =& DAORegistry::getDAO('RTDAO');
 		$journalRt =& $rtDao->getJournalRTByJournal($journal);
 
 		if (!$journalRt || !$journalRt->getSupplementaryFiles()) {
-			Request::redirect(null, Request::getRequestedPage());
+			$request->redirect(null, $router->getRequestedPage($request));
 		}
 
 		$templateMgr =& TemplateManager::getManager();
@@ -389,15 +414,18 @@ class RTHandler extends ArticleHandler {
 
 	/**
 	 * Display the metadata of a supplementary file
+	 * @param $args array
+	 * @param $request Request
 	 */
-	function suppFileMetadata($args) {
+	function suppFileMetadata($args, &$request) {
+		$router =& $request->getRouter();
 		$this->setupTemplate();
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$suppFileId = isset($args[2]) ? (int) $args[2] : 0;
 
-		$this->validate($articleId, $galleyId);
-		$journal =& Request::getJournal();
+		$this->validate($request, $articleId, $galleyId);
+		$journal =& $router->getContext($request);
 		$article =& $this->article;
 
 		$rtDao =& DAORegistry::getDAO('RTDAO');
@@ -407,7 +435,7 @@ class RTHandler extends ArticleHandler {
 		$suppFile = $suppFileDao->getSuppFile($suppFileId, $article->getArticleId());
 
 		if (!$journalRt || !$journalRt->getSupplementaryFiles() || !$suppFile) {
-			Request::redirect(null, Request::getRequestedPage());
+			$request->redirect(null, $router->getRequestedPage($request));
 		}
 
 		$templateMgr =& TemplateManager::getManager();
@@ -422,21 +450,24 @@ class RTHandler extends ArticleHandler {
 
 	/**
 	 * Display the "finding references" search engine list
+	 * @param $args array
+	 * @param $request Request
 	 */
-	function findingReferences($args) {
+	function findingReferences($args, &$request) {
+		$router =& $request->getRouter();
 		$this->setupTemplate();
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 
-		$this->validate($articleId, $galleyId);
-		$journal =& Request::getJournal();
+		$this->validate($request, $articleId, $galleyId);
+		$journal =& $router->getContext($request);
 		$article =& $this->article;
-		
+
 		$rtDao =& DAORegistry::getDAO('RTDAO');
 		$journalRt =& $rtDao->getJournalRTByJournal($journal);
 
 		if (!$journalRt || !$journalRt->getFindingReferences()) {
-			Request::redirect(null, Request::getRequestedPage());
+			$request->redirect(null, $router->getRequestedPage($request));
 		}
 
 		$templateMgr =& TemplateManager::getManager();
