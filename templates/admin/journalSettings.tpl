@@ -62,9 +62,9 @@ function doSubmit() {
 		<td class="value"><textarea name="description[{$formLocale|escape}]" id="description" cols="40" rows="10" class="textArea">{$description[$formLocale]|escape}</textarea></td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{fieldLabel name="path" key="journal.path" required="true"}</td>
+		<td class="label">{fieldLabel name="journalPath" key="journal.path" required="true"}</td>
 		<td class="value">
-			<input type="text" id="path" name="path" value="{$path|escape}" size="16" maxlength="32" class="textField" />
+			<input type="text" id="journalPath" name="journalPath" value="{$journalPath|escape}" size="16" maxlength="32" class="textField" />
 			<br />
 			{url|assign:"sampleUrl" journal="path"}
 			<span class="instruct">{translate key="admin.journals.urlWillBe" sampleUrl=$sampleUrl}</span>
