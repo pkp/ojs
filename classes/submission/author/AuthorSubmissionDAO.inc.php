@@ -295,6 +295,7 @@ class AuthorSubmissionDAO extends DAO {
 			case 'title': return 'submission_title';
 			case 'active': return 'a.submission_progress';
 			case 'views': return 'galley_views';
+			case 'status': return 'a.status';
 			default: return null;
 		}
 	}
