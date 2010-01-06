@@ -56,7 +56,8 @@ class Request extends PKPRequest {
 	 */
 	function &getJournal() {
 		$_this =& PKPRequest::_checkThis();
-		return $_this->_delegateToRouter('getContext', 1);
+		$returner = $_this->_delegateToRouter('getContext', 1);
+		return $returner;
 	}
 
 	/**
@@ -81,7 +82,8 @@ class Request extends PKPRequest {
 	 */
 	function &getContext($level = 1) {
 		$_this =& PKPRequest::_checkThis();
-		return $_this->_delegateToRouter('getContext', $level);
+		$returner = $_this->_delegateToRouter('getContext', $level);
+		return $returner;
 	}
 
 	/**
@@ -90,7 +92,8 @@ class Request extends PKPRequest {
 	 */
 	function &getContextByName($contextName) {
 		$_this =& PKPRequest::_checkThis();
-		return $_this->_delegateToRouter('getContextByName', $contextName);
+		$returner = $_this->_delegateToRouter('getContextByName', $contextName);
+		return $returner;
 	}
 
 	/**

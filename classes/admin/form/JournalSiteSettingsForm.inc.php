@@ -34,9 +34,9 @@ class JournalSiteSettingsForm extends Form {
 
 		// Validation checks for this form
 		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'admin.journals.form.titleRequired'));
-		$this->addCheck(new FormValidator($this, 'path', 'required', 'admin.journals.form.pathRequired'));
-		$this->addCheck(new FormValidatorAlphaNum($this, 'path', 'required', 'admin.journals.form.pathAlphaNumeric'));
-		$this->addCheck(new FormValidatorCustom($this, 'path', 'required', 'admin.journals.form.pathExists', create_function('$path,$form,$journalDao', 'return !$journalDao->journalExistsByPath($path) || ($form->getData(\'oldPath\') != null && $form->getData(\'oldPath\') == $path);'), array(&$this, DAORegistry::getDAO('JournalDAO'))));
+		$this->addCheck(new FormValidator($this, 'journalPath', 'required', 'admin.journals.form.pathRequired'));
+		$this->addCheck(new FormValidatorAlphaNum($this, 'journalPath', 'required', 'admin.journals.form.pathAlphaNumeric'));
+		$this->addCheck(new FormValidatorCustom($this, 'journalPath', 'required', 'admin.journals.form.pathExists', create_function('$path,$form,$journalDao', 'return !$journalDao->journalExistsByPath($path) || ($form->getData(\'oldPath\') != null && $form->getData(\'oldPath\') == $path);'), array(&$this, DAORegistry::getDAO('JournalDAO'))));
 		$this->addCheck(new FormValidatorPost($this));
 	}
 
@@ -62,7 +62,7 @@ class JournalSiteSettingsForm extends Form {
 				$this->_data = array(
 					'title' => $journal->getSetting('title', null), // Localized
 					'description' => $journal->getSetting('description', null), // Localized
-					'path' => $journal->getPath(),
+					'journalPath' => $journal->getPath(),
 					'enabled' => $journal->getEnabled()
 				);
 
@@ -81,7 +81,7 @@ class JournalSiteSettingsForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('title', 'description', 'path', 'enabled'));
+		$this->readUserVars(array('title', 'description', 'journalPath', 'enabled'));
 		$this->setData('enabled', (int)$this->getData('enabled'));
 
 		if (isset($this->journalId)) {
@@ -113,7 +113,7 @@ class JournalSiteSettingsForm extends Form {
 			$journal = new Journal();
 		}
 
-		$journal->setPath($this->getData('path'));
+		$journal->setPath($this->getData('journalPath'));
 		$journal->setEnabled($this->getData('enabled'));
 
 		if ($journal->getJournalId() != null) {
@@ -156,7 +156,7 @@ class JournalSiteSettingsForm extends Form {
 			Locale::requireComponents(array(LOCALE_COMPONENT_OJS_DEFAULT, LOCALE_COMPONENT_APPLICATION_COMMON));
 			$journalSettingsDao->installSettings($journalId, 'registry/journalSettings.xml', array(
 				'indexUrl' => Request::getIndexUrl(),
-				'journalPath' => $this->getData('path'),
+				'journalPath' => $this->getData('journalPath'),
 				'primaryLocale' => $site->getPrimaryLocale(),
 				'journalName' => $titles[$site->getPrimaryLocale()]
 			));

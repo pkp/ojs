@@ -52,7 +52,11 @@ class StaticPagesPlugin extends GenericPlugin {
 			$this->addLocaleData();
 			if ($this->getEnabled()) {
 				$this->import('StaticPagesDAO');
-				$staticPagesDAO = new StaticPagesDAO();
+				if (checkPhpVersion('5.0.0')) { // WARNING: see http://pkp.sfu.ca/wiki/index.php/Information_for_Developers#Use_of_.24this_in_the_constructur
+					$staticPagesDAO = new StaticPagesDAO();
+				} else {
+					$staticPagesDAO =& new StaticPagesDAO();
+				}
 				$returner =& DAORegistry::registerDAO('StaticPagesDAO', $staticPagesDAO);
 
 				HookRegistry::register('LoadHandler', array(&$this, 'callbackHandleContent'));
