@@ -110,7 +110,6 @@ class ReviewFormHandler extends ManagerHandler {
 			$reviewFormForm->execute();
 			Request::redirect(null, null, 'reviewForms');
 		} else {
-			$this->setupTemplate(true, $reviewForm);
 			$templateMgr =& TemplateManager::getManager();
 
 			if ($reviewFormId == null) {

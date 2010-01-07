@@ -167,6 +167,7 @@ class GroupHandler extends ManagerHandler {
 			$this->validate($groupId);
 			$group =& $this->group;
 		}
+		$this->setupTemplate($group);
 
 		import('manager.form.GroupForm');
 
@@ -177,7 +178,6 @@ class GroupHandler extends ManagerHandler {
 			$groupForm->execute();
 			Request::redirect(null, null, 'groups');
 		} else {
-			$this->setupTemplate($group);
 
 			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'groups'), 'manager.groups'));

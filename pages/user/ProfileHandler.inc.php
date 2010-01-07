@@ -70,7 +70,6 @@ class ProfileHandler extends UserHandler {
 			Request::redirect(null, Request::getRequestedPage());
 
 		} else {
-			$this->setupTemplate(true);
 			$profileForm->display();
 		}
 	}
