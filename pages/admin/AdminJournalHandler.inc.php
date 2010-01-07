@@ -78,6 +78,7 @@ class AdminJournalHandler extends AdminHandler {
 	 */
 	function updateJournal() {
 		$this->validate();
+		$this->setupTemplate();
 
 		import('admin.form.JournalSiteSettingsForm');
 
@@ -96,7 +97,6 @@ class AdminJournalHandler extends AdminHandler {
 			Request::redirect(null, null, 'journals');
 
 		} else {
-			$this->setupTemplate();
 			$settingsForm->display();
 		}
 	}
