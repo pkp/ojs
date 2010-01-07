@@ -109,7 +109,7 @@ class Request extends PKPRequest {
 
 	/**
 	 * Deprecated
-	 * @see OJSPageRouter::redirectHome()
+	 * @see PageRouter::redirectHome()
 	 */
 	function redirectHome() {
 		$_this =& PKPRequest::_checkThis();
