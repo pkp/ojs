@@ -61,7 +61,7 @@
 	{/if}
 
 	{if $article->getCitations()}
-		<h4>{translate key="article.citations"}</h4>
+		<h4>{translate key="submission.citations"}</h4>
 		<br />
 		<div>{$article->getCitations()|strip_unsafe_html|nl2br}</div>
 		<br />

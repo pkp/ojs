@@ -139,7 +139,6 @@
 	<message key="article.submissions">Submissions</message>
 	<message key="article.details">Details</message>
 	<message key="article.abstract">Abstract</message>
-	<message key="article.citations">References</message>
 	<message key="article.coverPage.altText">Cover Image</message>
 	<message key="article.accessLogoOpen.altText">Open Access</message>
 	<message key="article.accessLogoRestricted.altText">Restricted Access</message>
@@ -171,10 +170,7 @@
 	<message key="submission.proofreading">Proofreading</message>
 	<message key="submission.scheduling">Scheduling</message>
 	<message key="submission.scheduledIn">Scheduled for publication in {$issueName}.</message>
-	<message key="submission.scheduledIn.tba">(TBA)</message>
-	
-	<message key="submission.citations">References</message>
-	
+	<message key="submission.scheduledIn.tba">(TBA)</message>	
 	<message key="submissions.sec">Sec</message>
 	<message key="submissions.step1">Step 1</message>
 	<message key="submissions.step3">Step 3</message>
@@ -637,8 +633,6 @@ Active is how many reviews are currently being considered or underway.]]></messa
 <li>Click Upload on this page, which uploads the file from the computer to the journal's web site and renames it following the journal's conventions.</li>
 <li>Once the submission is uploaded, click Save and Continue at the bottom of this page.</li>
 </ol>]]></message>
-	
-	<message key="author.submit.submissionCitations">Provide a formatted list of references for works cited in this submission.</message>
 
 	<!-- Article Submission Step 4 -->
 	

@@ -987,7 +987,6 @@
 	<message key="payment.type.purchaseArticle">Εισφορά αγοράς άρθρου</message>
 	<message key="article.article">Άρθρο</message>
 	<message key="article.citations">Αναφορές</message>
-	<message key="submission.citations">Αναφορές</message>
 	<message key="user.manageMySubscriptions">Διαχείριση των Συνδρομών μου</message>
 	<message key="subscriptionTypes.currency">Νόμισμα</message>
 	<message key="subscriptionTypes.year">έτος</message>
@@ -1019,7 +1018,6 @@
 	<message key="manager.setup.citations">Δυνατότητα των συγγραφέων να παρέχουν ξεχωριστά μια λίστα με αναφορές (citations) ως τμήμα της υποβολής τους.</message>
 	<message key="reviewer.article.reviewGuidelinesDescription">Οι Οδηγίες Αξιολόγησης θα παρέχουν στους Αξιολογητές τα απαραίτητα κριτήρια για την κρίση της καταλληλότητας μιας υποβολής για το περιοδικό ακ μπορεί να περιλαμβάνει ειδικές οδηγίες για την προετοιμασία μιας ικανοποιητικές αξιολόγησης. Κατά τη διάρκεια της αξιολόγησης, οι αξιολογητές έρχονται σε επαφή με δύο ανοικτα΄κουτιά κειμένου, το πρώτο "για τον συγγραφέα και τον επιμελητή" και το δεύτερο "για τον επιμελητή". Εναλλακτικά, Ο Διαχειριστής του Περιοδικού μπορεί να δημιουργήσει μια φόρμα αξιολόγησης στις Φόρμες Αξιολόγησης. Σε κάθε περίπτωση, οι επιμελητές έχουν την επιλογή να συμπεριλαμβάνουν τις αξιολογήσεις στην επικοινωνία τους με τον συγγραφέα.</message>
 	<message key="reviewer.article.selectRecommendation">Επιλέξτε μια πρόταση και υποβάλετε την αξιολόγηση για την ολοκλήρωση της διαδικασίας. Θα πρέπει να εισάγετε το κείμενο της αξιολόγησης ή να "ανεβάσετε" το σχετικό αρχείο πριν επιλέξετε μια πρόταση.</message>
-	<message key="author.submit.submissionCitations">Παροχή μια λίστας αναφορών για εργασίες που αναφέρονται (cited) σε αυτή την υποβολή.</message>
 	<message key="user.subscriptions.mySubscriptions">Οι Συνδρομές μου</message>
 	<message key="user.subscriptions.individualSubscriptions">Ατομική Συνδρομή</message>
 	<message key="user.subscriptions.institutionalSubscriptions">Ιδρυματικές Συνδρομές</message>

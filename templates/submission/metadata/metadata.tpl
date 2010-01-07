@@ -171,11 +171,11 @@
 
 {if $currentJournal->getSetting('metaCitations')}
 	<div id="citations">
-	<h4>{translate key="article.citations"}</h4>
+	<h4>{translate key="submission.citations"}</h4>
 
 	<table width="100%" class="data">
 		<tr valign="top">
-			<td width="20%" class="label">{translate key="article.citations"}</td>
+			<td width="20%" class="label">{translate key="submission.citations"}</td>
 			<td width="80%" class="value">{$submission->getCitations()|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
 		</tr>
 	</table>

@@ -1054,7 +1054,6 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="submission.scheduling">Назначение</message>
 	<message key="submission.scheduledIn">Назначено к публикации в {$issueName}.</message>
 	<message key="submission.scheduledIn.tba">в процессе</message>
-	<message key="submission.citations">Литература</message>
 	<message key="journal.issn">ISSN</message>
 	<message key="user.manageMySubscriptions">Изменить параметры подписки</message>
 	<message key="user.noRoles.chooseJournal">Ваша учетная запись сейчас не ассоциирована ни с одним журналом. Пожалуйста выберите журнал:</message>
@@ -1149,7 +1148,6 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Задекларируйте, пожалуйста, наличие/отсутствие конфликта интересов в отношении рассматриваемой работі (см. <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Конфликт&nbsp;Интересов</a>).]]></message>
 	<message key="reviewer.competingInterests">Конфликт Интересов</message>
 	<message key="reviewer.article.ensuringBlindReview">Обеспечение Рецензирования Вслепую</message>
-	<message key="author.submit.submissionCitations">Дайте форматированный список ссылок на работы, использованные в данной рукописи.</message>
 	<message key="submission.layout.noLayoutFile">Отсутствует (Используйте в запросе Корректуру в качестве Гранок)</message>
 	<message key="submission.layout.publicGalleyId">Идентификатор Гранок</message>
 	<message key="submission.layout.galleyPublicIdentificationExists">Идентификатор гранок уже существует.</message>

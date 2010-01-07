@@ -866,7 +866,6 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	<message key="installer.upgradeApplication">Open Journal Systems をアップグレードする</message>
 	<message key="article.article">論文</message>
 	<message key="article.citations">参考文献</message>
-	<message key="submission.citations">参考文献</message>
 	<message key="user.manageMySubscriptions">購読管理</message>
 	<message key="subscriptionTypes.currency">通貨</message>
 	<message key="subscriptionTypes.years">年</message>
@@ -886,7 +885,6 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	<message key="about.subscriptionTypes.format">フォーマット</message>
 	<message key="about.subscriptionTypes.duration">期間</message>
 	<message key="manager.setup.citations">著者それぞれに投稿プロセスの一部として参考文献（引用）についての整形されたリストを提出可能にする。</message>
-	<message key="author.submit.submissionCitations">この投稿で引用している文献について整形した参考文献リストを提供してください。</message>
 	<message key="about.history">雑誌の履歴</message>
 	<message key="manager.people.confirmDisable">このユーザを無効にしますか？この処理によってユーザはシステムにログインできなくなります。
 
