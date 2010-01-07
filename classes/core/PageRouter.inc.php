@@ -1,12 +1,12 @@
 <?php
 
 /**
- * @file classes/core/OJSPageRouter.inc.php
+ * @file classes/core/PageRouter.inc.php
  *
  * Copyright (c) 2003-2009 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class OJSPageRouter
+ * @class PageRouter
  * @ingroup core
  *
  * @brief Class providing OJS-specific page routing.
@@ -17,7 +17,7 @@
 
 import('core.PKPPageRouter');
 
-class OJSPageRouter extends PKPPageRouter {
+class PageRouter extends PKPPageRouter {
 	/**
 	 * get the cacheable pages
 	 * @return array

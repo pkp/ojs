@@ -1,12 +1,12 @@
 <?php
 
 /**
- * @file classes/core/OJSApplication.inc.php
+ * @file classes/core/Application.inc.php
  *
  * Copyright (c) 2003-2009 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class OJSApplication
+ * @class Application
  * @ingroup core
  * @see PKPApplication
  *
@@ -24,26 +24,9 @@ define('ASSOC_TYPE_ARTICLE',	0x0000101);
 
 define('CONTEXT_JOURNAL', 1);
 
-class OJSApplication extends PKPApplication {
-	function OJSApplication() {
+class Application extends PKPApplication {
+	function Application() {
 		parent::PKPApplication();
-	}
-
-	function initialize(&$application) {
-		PKPApplication::initialize($application);
-		import('i18n.Locale');
-	}
-
-	/**
-	 * Get the dispatcher implementation singleton
-	 * @return Dispatcher
-	 */
-	function &getDispatcher() {
-		$dispatcher =& parent::getDispatcher();
-
-		// Inject application-specific configuration
-		$dispatcher->addRouterName('core.OJSPageRouter', ROUTE_PAGE);
-		return $dispatcher;
 	}
 
 	/**
