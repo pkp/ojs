@@ -392,6 +392,7 @@ class EditorHandler extends SectionEditorHandler {
 	 */
 	function assignEditor($args) {
 		$this->validate();
+		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_MANAGER)); // manager.people.noneEnrolled
 
 		$journal =& Request::getJournal();
 		$articleId = Request::getUserVar('articleId');
