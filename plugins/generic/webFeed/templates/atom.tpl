@@ -11,7 +11,7 @@
 <?xml version="1.0" encoding="{$defaultCharset|escape}"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	{* required elements *}
-	<id>{$journal->getUrl()}/issue/feed</id>
+	<id>{url page="issue" op="feed"}</id>
 	<title>{$journal->getLocalizedTitle()|escape:"html"|strip}</title>
 	<updated>{$issue->getDatePublished()|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</updated>
 
@@ -25,8 +25,8 @@
 		</author>
 	{/if}
 
-	<link rel="alternate" href="{$journal->getUrl()}" />
-	<link rel="self" type="application/atom+xml" href="{$journal->getUrl()}/feed/atom" />
+	<link rel="alternate" href="{$journal->getUrl()|escape}" />
+	<link rel="self" type="application/atom+xml" href="{url page="feed" op="atom"}" />
 
 	{* optional elements *}
 

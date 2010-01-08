@@ -46,7 +46,7 @@
 {iterate from=users item=user}
 {assign var="userid" value=$user->getId()}
 <tr valign="top">
-	<td>{if $isJournalManager}<a class="action" href="{url op="userProfile" path=$userid}">{/if}{$user->getUsername()}{if $isJournalManager}</a>{/if}</td>
+	<td>{if $isJournalManager}<a class="action" href="{url op="userProfile" path=$userid}">{/if}{$user->getUsername()|escape}{if $isJournalManager}</a>{/if}</td>
 	<td>{$user->getFullName(true)|escape}</td>
 	<td class="nowrap">
 		{assign var=emailString value="`$user->getFullName()` <`$user->getEmail()`>"}

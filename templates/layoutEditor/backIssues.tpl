@@ -38,7 +38,7 @@
 	<tr valign="top">
 		<td><a href="{url op="issueToc" path=$issue->getIssueId()}" class="action">{$issue->getIssueIdentification()|escape}</a></td>
 		<td>{$issue->getDatePublished()|date_format:"$dateFormatShort"}</td>
-		<td>{$issue->getNumArticles()}</td>
+		<td>{$issue->getNumArticles()|escape}</td>
 	</tr>
 	<tr>
 		<td colspan="5" class="{if $issues->eof()}end{/if}separator">&nbsp;</td>

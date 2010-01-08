@@ -38,7 +38,7 @@
 	{iterate from=issues item=issue}
 	<tr valign="top">
 		<td><a href="{url op="issueToc" path=$issue->getIssueId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>
-		<td>{$issue->getNumArticles()}</td>
+		<td>{$issue->getNumArticles()|escape}</td>
 		<td align="right"><a href="{url op="removeIssue" path=$issue->getIssueId()}" onclick="return confirm('{translate|escape:"jsparam" key="editor.issues.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 	</tr>
 	<tr>

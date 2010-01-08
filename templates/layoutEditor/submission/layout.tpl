@@ -19,7 +19,7 @@
 <table class="data" width="100%">
 	<tr>
 		<td class="label" width="20%">{translate key="user.role.layoutEditor"}</td>
-		<td class="value" width="80%">{$layoutEditor->getFullName()}</td>
+		<td class="value" width="80%">{$layoutEditor->getFullName()|escape}</td>
 	</tr>
 </table>
 </div>

@@ -28,7 +28,7 @@
 	<td class="label" width="20%">{translate key="common.type"}</td>
 	<td class="value" width="80%">
 		{if $suppFile->getType()|escape}
-			{$suppFile->getType()}
+			{$suppFile->getType()|escape}
 		{elseif $suppFile->getSuppFileTypeOther()}
 			{$suppFile->getSuppFileTypeOther()|escape}
 		{else}

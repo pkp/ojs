@@ -51,7 +51,7 @@ function toggleChecked() {
 		<td><input type="checkbox" name="issueId[]" value="{$issue->getIssueId()}"/></td>
 		<td><a href="{url page="issue" op="view" path=$issue->getIssueId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>
 		<td>{$issue->getDatePublished()|date_format:"$dateFormatShort"}</td>
-		<td>{$issue->getNumArticles()}</td>
+		<td>{$issue->getNumArticles()|escape}</td>
 		<td align="right"><a href="{plugin_url path="exportIssue"|to_array:$issue->getIssueId()}" class="action">{translate key="common.export"}</a></td>
 	</tr>
 	<tr>

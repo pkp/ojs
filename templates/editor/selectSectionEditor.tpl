@@ -43,7 +43,7 @@
 {iterate from=editors item=editor}
 {assign var=editorId value=$editor->getId()}
 <tr valign="top">
-	<td><a class="action" href="{url op="userProfile" path=$editorId}">{$editor->getFullName()}</a></td>
+	<td><a class="action" href="{url op="userProfile" path=$editorId}">{$editor->getFullName()|escape}</a></td>
 	<td>
 		{assign var=thisEditorSections value=$editorSections[$editorId]}
 		{foreach from=$thisEditorSections item=section}

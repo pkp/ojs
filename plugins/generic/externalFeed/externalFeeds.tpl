@@ -48,8 +48,8 @@
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
 {iterate from=feeds item=feed}
-	<tr valign="top" id="externalFeed-{$feed->getId()}" class="data">
-		<td class="drag">{$feed->getLocalizedTitle()}</td>
+	<tr valign="top" id="externalFeed-{$feed->getId()|escape}" class="data">
+		<td class="drag">{$feed->getLocalizedTitle()|escape}</td>
 		<td class="drag">{if $feed->getDisplayHomepage()}<img src="{$baseUrl}/templates/images/icons/checked.gif" alt="{translate key="plugins.generic.externalFeed.manager.displayHomepage.altText"}"/>{else}<img src="{$baseUrl}/templates/images/icons/unchecked.gif" alt="{translate key="plugins.generic.externalFeed.manager.noDisplayHomepage.altText"}"/>{/if}</td>
 		<td class="drag">{if $feed->getDisplayBlock() == $smarty.const.EXTERNAL_FEED_DISPLAY_BLOCK_ALL}<img src="{$baseUrl}/templates/images/icons/checked.gif" alt="{translate key="plugins.generic.externalFeed.manager.displayBlockAll.altText"}"/>{else}<img src="{$baseUrl}/templates/images/icons/unchecked.gif" alt="{translate key="plugins.generic.externalFeed.manager.noDisplayBlockAll.altText"}"/>{/if}</td>
 		<td class="drag">{if $feed->getDisplayBlock() == $smarty.const.EXTERNAL_FEED_DISPLAY_BLOCK_HOMEPAGE}<img src="{$baseUrl}/templates/images/icons/checked.gif" alt="{translate key="plugins.generic.externalFeed.manager.displayBlockHomepage.altText"}"/>{else}<img src="{$baseUrl}/templates/images/icons/unchecked.gif" alt="{translate key="plugins.generic.externalFeed.manager.noDisplayBlockHomepage.altText"}"/>{/if}</td>

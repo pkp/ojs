@@ -417,7 +417,7 @@ function prepBlockFields() {
 		<select name="journalTheme" class="selectMenu" id="journalTheme"{if empty($journalThemes)} disabled="disabled"{/if}>
 			<option value="">{translate key="common.none"}</option>
 			{foreach from=$journalThemes key=path item=journalThemePlugin}
-				<option value="{$path|escape}"{if $path == $journalTheme} selected="selected"{/if}>{$journalThemePlugin->getDisplayName()}</option>
+				<option value="{$path|escape}"{if $path == $journalTheme} selected="selected"{/if}>{$journalThemePlugin->getDisplayName()|escape}</option>
 			{/foreach}
 		</select>
 	</td>

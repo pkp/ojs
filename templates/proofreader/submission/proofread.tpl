@@ -17,7 +17,7 @@
 <table width="100%" class="data">
 	<tr>
 		<td class="label" width="20%">{translate key="user.role.proofreader"}</td>
-		<td class="value" width="80%">{$proofreader->getFullName()}</td>
+		<td class="value" width="80%">{$proofreader->getFullName()|escape}</td>
 	</tr>
 </table>
 

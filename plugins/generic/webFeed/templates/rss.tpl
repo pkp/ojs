@@ -15,10 +15,10 @@
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:prism="http://prismstandard.org/namespaces/1.2/basic/">
     
-	<channel rdf:about="{$journal->getUrl()}">
+	<channel rdf:about="{$journal->getUrl()|escape}">
 		{* required elements *}
 		<title>{$journal->getLocalizedTitle()|escape:"html"|strip}</title>
-		<link>{$journal->getUrl()}</link>
+		<link>{$journal->getUrl()|escape}</link>
 
 		{if $journal->getLocalizedDescription()}
 			{assign var="description" value=$journal->getLocalizedDescription()}
@@ -83,7 +83,7 @@
 			{/foreach}
 
 			<dc:date>{$article->getDatePublished()|date_format:"%Y-%m-%d"}</dc:date>
-			<prism:volume>{$issue->getVolume()}</prism:volume>
+			<prism:volume>{$issue->getVolume()|escape}</prism:volume>
 			<prism:publicationDate>{$article->getDatePublished()|date_format:"%Y-%m-%d"}</prism:publicationDate>
 		</item>
 	{/foreach}{* articles *}

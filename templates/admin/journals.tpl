@@ -35,7 +35,7 @@ $(document).ready(function() { setupTableDND("#adminJournals", "moveJournal"); }
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
 	{iterate from=journals item=journal}
-	<tr valign="top" id="journal-{$journal->getJournalID()}" class="data">
+	<tr valign="top" id="journal-{$journal->getJournalId()}" class="data">
 		<td><a class="action" href="{url journal=$journal->getPath() page="manager"}">{$journal->getLocalizedTitle()|escape}</a></td>
 		<td class="drag">{$journal->getPath()|escape}</td>
 		<td><a href="{url op="moveJournal" d=u id=$journal->getJournalId()}">&uarr;</a> <a href="{url op="moveJournal" d=d id=$journal->getJournalId()}">&darr;</a></td>

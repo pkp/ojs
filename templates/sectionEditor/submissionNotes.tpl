@@ -78,7 +78,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label" width="20%">{translate key="common.title"}</td>
-		<td class="value" width="80%"><input type="text" name="title" id="title" value="{$articleNote->getTitle()}" size="50" maxlength="120" class="textField" /></td>
+		<td class="value" width="80%"><input type="text" name="title" id="title" value="{$articleNote->getTitle()|escape}" size="50" maxlength="120" class="textField" /></td>
 	</tr>
 	<tr valign="top">
 		<td class="label" width="20%">{translate key="common.note"}</td>
@@ -90,7 +90,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label" width="20%">{translate key="common.uploadedFile"}</td>
-		<td class="value" width="80%">{if $articleNote->getFileId()}<a href="{url op="downloadFile" path=$articleId|to_array:$articleNote->getFileId()}">{$articleNote->getOriginalFileName()}</a><br /><input type="checkbox" name="removeUploadedFile" value="1" />&nbsp;{translate key="submission.notes.removeUploadedFile"}{else}&mdash;{/if}</td>
+		<td class="value" width="80%">{if $articleNote->getFileId()}<a href="{url op="downloadFile" path=$articleId|to_array:$articleNote->getFileId()}">{$articleNote->getOriginalFileName()|escape}</a><br /><input type="checkbox" name="removeUploadedFile" value="1" />&nbsp;{translate key="submission.notes.removeUploadedFile"}{else}&mdash;{/if}</td>
 	</tr>
 </table>
 <br />
@@ -140,8 +140,8 @@
 			</script>
 			{$note->getDateCreated()|date_format:$dateFormatTrunc}
 		</td>
-		<td><a class="action" href="javascript:toggleNote({$note->getNoteId()})">{$note->getTitle()}</a><div style="display: none" id="note{$note->getNoteId()}">{$note->getNote()|strip_unsafe_html|nl2br}</div></td>
-		<td>{if $note->getFileId()}<a class="action" href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$note->getFileId()}">{$note->getOriginalFileName()}</a>{else}&mdash;{/if}</td>
+		<td><a class="action" href="javascript:toggleNote({$note->getNoteId()})">{$note->getTitle()|escape}</a><div style="display: none" id="note{$note->getNoteId()}">{$note->getNote()|strip_unsafe_html|nl2br}</div></td>
+		<td>{if $note->getFileId()}<a class="action" href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$note->getFileId()}">{$note->getOriginalFileName()|escape}</a>{else}&mdash;{/if}</td>
 		<td align="right"><a href="{url op="submissionNotes" path=$submission->getArticleId()|to_array:"edit":$note->getNoteId()}" class="action">{translate key="common.view"}</a>&nbsp;|&nbsp;<a href="{url op="removeSubmissionNote" articleId=$submission->getArticleId() noteId=$note->getNoteId() fileId=$note->getFileId()}" onclick="return confirm('{translate|escape:"jsparam" key="submission.notes.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 	</tr>
 	<tr valign="top">

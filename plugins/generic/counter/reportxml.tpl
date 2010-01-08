@@ -22,7 +22,7 @@
     </Vendor>
     <Customer>
       <Name>{$reqUser->getUserName()|escape:"html"}</Name>
-      <ID>{$reqUser->getUserID()}</ID>
+      <ID>{$reqUser->getUserId()}</ID>
 
       {foreach from=$journalsArray key=journalkey item=journal}
 

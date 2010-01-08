@@ -1,7 +1,7 @@
 {$body}
 
-{$journal->getLocalizedTitle()}
-{$issue->getIssueIdentification()}
+{$journal->getLocalizedTitle()|strip_tags}
+{$issue->getIssueIdentification()|strip_tags}
 {translate key="issue.toc"}
 {url page="issue" op="view" path=$issue->getBestIssueId()}
 
