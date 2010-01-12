@@ -141,7 +141,6 @@
 	<message key="manager.setup.guidingSubmissions">Adım 3. Makale Gönderme Rehberi</message>
 	<message key="manager.setup.homepageImage">Giriş Sayfası Şekli</message>
 	<message key="manager.setup.homepageImageDescription">Sayfanın ortasına bir şekil veya grafik ekle.</message>
-	<message key="manager.setup.htmlSetupInstructions"><![CDATA[Eğer kurulum sırasında metin kutularına HTML eklentileri kullanarak veri girerseniz (font, renk vb.), &lt;enter&gt; girdiğiniz yerler kendiliğinden HTML satır sonu olan <tt>&lt;br&gt;</tt> komutu ile değiştirilecektir. (Editör Firefox ile uyumludur.)]]></message>
 	<message key="manager.setup.information">Bilgi</message>
 	<message key="manager.setup.information.description">Derginin kitaplıklar, olası yazarlar ve okuyucular için kısa tanıtımı yan sütünda yer almaktadır.</message>
 	<message key="manager.setup.information.forAuthors">Yazarlar için</message>

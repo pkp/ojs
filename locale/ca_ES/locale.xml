@@ -1079,7 +1079,6 @@ Noteu que podeu desactivar la interfície OAI per a aquest lloc editant la confi
 	<message key="manager.setup.focusAndScopeOfJournal">Temàtica i àmbit de la revista</message>
 	<message key="manager.setup.focusAndScopeDescription"><![CDATA[Introduïu un text informatiu perquè els autors/es, lectors/es i bibliotecaris/àries sàpiguen quins tipus d’articles es publiquen a la revista. Aquest text apareixerà a la secció &#171;Quant a la revista&#187;.]]></message>
 	<message key="manager.setup.focusAndScope">Temàtica i àmbit</message>
-	<message key="manager.setup.htmlSetupInstructions"><![CDATA[Si utilitzeu HTML en àrees de text (per exemple, per a indicar la mida o el color de la lletra), noteu que els &#171;retorns&#186; es tractaran com a <tt><br></tt>. L’editor d’HTML funciona amb els navegadors Firefox.]]></message>
 	<message key="manager.setup.peerReviewPolicy">Revisió de persones expertes</message>
 	<message key="manager.setup.peerReviewDescription"><![CDATA[Descriviu les polítiques per a la revisió de persones expertes de la revista i els processos per als lectors/es i els autors/es, incloent-hi el nombre de revisors/es que intervindran habitualment en la revisió d’una tramesa, els criteris que aquests hauran d’aplicar a l’hora de revisar, el temps mitjà estipulat per a les revisions i els criteris de selecció de revisors/es. Aquesta informació apareixerà a la secció &#171;Quant a la revista&#187;.]]></message>
 	<message key="manager.setup.reviewPolicy">Polítiques per a la revisió</message>

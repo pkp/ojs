@@ -994,7 +994,6 @@ Observera att OAI-gränssnittet kan avaktiveras från sidan om man redigerar OJS
 	<message key="manager.setup.focusAndScopeOfJournal">Tidskriftens ämne och fokus</message>
 	<message key="manager.setup.focusAndScopeDescription">Meddelandet nedan (syns under Om tidskriften) syftar till att förklara tidskriftens idé, vad som kommer att publiceras och i vilket format, för författare, läsare och bibliotekarier .</message>
 	<message key="manager.setup.focusAndScope">Ämne och fokus</message>
-	<message key="manager.setup.htmlSetupInstructions"><![CDATA[HTML kan användas i fälten för textredigering (fontstorlek, färg etc.), observera att "return" behandlas som <tt>&lt;br&gt;</tt>; HTML redigerare fungerar med Firefox.]]></message>
 	<message key="manager.setup.peerReviewPolicy">Sakkunigbedömning</message>
 	<message key="manager.setup.peerReviewDescription">Ange tidskriftens sakkunigbedömningspolicy och dess processer, ex. antal sakkuniga som används vid bedömning av en artikel, kriterium för bedömning av en artikel, tidåtgång per bedömd artikel, och hur rekrytering av sakkunnigbedömare ser ut. Den här informationen syns under Om tidskriften.</message>
 	<message key="manager.setup.reviewPolicy">Om bedömningsprocessen</message>

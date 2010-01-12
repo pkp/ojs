@@ -254,7 +254,6 @@
 	<message key="manager.setup.guidingSubmissions">Stap 3. Richtlijnen voor inzendingen</message>
 	<message key="manager.setup.homepageImage">Afbeelding voor de home-pagina</message>
 	<message key="manager.setup.homepageImageDescription">Voeg een afbeelding of grafisch bestand toe aan het midden van de pagina.</message>
-	<message key="manager.setup.htmlSetupInstructions"><![CDATA[HTML kan gebruikt worden in het tekstveld (voor lettergrootte, kleur enz.). "returns" worden behandeld als <tt><br></tt>; HTML editor werkt met Firefox browsers.]]></message>
 	<message key="manager.setup.includeCreativeCommons">Voeg bij al het werk dat gepubliceerd wordt in  tijdschriften met onmiddellijke of vertraagde Open Access een Creative Commons licentie toe.</message>
 	<message key="manager.setup.information">Informatie</message>
 	<message key="manager.setup.information.description">Korte beschrijvingen van het tijdschrift voor bibliothecarissen en mogelijke auteurs zijn beschikbaar in de "Informatie" sectie van de sidebar.</message>

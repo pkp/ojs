@@ -776,7 +776,6 @@
 	<message key="manager.setup.focusAndScopeOfJournal">Fóçüþ åñð ßçópè óf Jóürñål</message>
 	<message key="manager.setup.focusAndScopeDescription">Éñtèr å þtåtèmèñt bèlów, whîçh wîll åppèår îñ Æbóüt thè Jóürñål, thåt þpèåkþ tó åüthórþ, rèåðèrþ, åñð lîbrårîåñþ åbóüt thè råñgè óf årtîçlèþ åñð óthèr îtèmþ whîçh thè jóürñål wîll püblîþh.</message>
 	<message key="manager.setup.focusAndScope">Fóçüþ åñð þçópè</message>
-	<message key="manager.setup.htmlSetupInstructions"><![CDATA[HTML çåñ bè üþèð îñ tèxtårèå (fór fóñt þîzè, çólór, ètç.), wîth "rètürñþ" trèåtèð åþ <tt>&amp;lt;br&amp;gt;</tt>; HTML èðîtór wórkþ wîth Fîrèfóx brówþèrþ.]]></message>
 	<message key="manager.setup.peerReviewPolicy">Pèèr Rèvîèw</message>
 	<message key="manager.setup.peerReviewDescription">Òütlîñè thè jóürñål'þ pèèr rèvîèw pólîçý åñð próçèþþèþ fór rèåðèrþ åñð åüthórþ, îñçlüðîñg thè ñümbèr óf rèvîèwèrþ týpîçållý üþèð îñ rèvîèwîñg å þübmîþþîóñ, thè çrîtèrîå bý whîçh rèvîèwèrþ årè åþkèð tó jüðgè þübmîþþîóñþ, týpîçål tîmè tåkèñ tó çóñðüçt thè rèvîèwþ, åñð thè prîñçîplèþ fór rèçrüîtîñg rèvîèwèrþ. Thîþ wîll åppèår îñ Æbóüt thè Jóürñål.</message>
 	<message key="manager.setup.reviewPolicy">Rèvîèw Pólîçý</message>

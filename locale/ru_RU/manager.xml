@@ -121,7 +121,6 @@
 	<message key="manager.setup.guidingSubmissions">Шаг 3. Указания для авторов</message>
 	<message key="manager.setup.homepageImage">Логотип на домашней странице</message>
 	<message key="manager.setup.homepageImageDescription"></message>
-	<message key="manager.setup.htmlSetupInstructions"></message>
 	<message key="manager.setup.information"></message>
 	<message key="manager.setup.information.description"></message>
 	<message key="manager.setup.information.forAuthors">Для авторов</message>

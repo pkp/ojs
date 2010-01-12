@@ -251,7 +251,6 @@
 	<message key="manager.setup.guidingSubmissions">Bước 3. Hướng dẫn nộp bài</message>
 	<message key="manager.setup.homepageImage">Ảnh trang nhất</message>
 	<message key="manager.setup.homepageImageDescription">Thêm một hình ảnh hoặc file đồ họa vào giữa trang.</message>
-	<message key="manager.setup.htmlSetupInstructions"><![CDATA[Có thể sử dụng thẻ HTML trong ô text (cho font size, color, v.v.), với "returns" được hiểu là <tt>&lt;br&gt;</tt>; HTML editor tương thích với Firefox.]]></message>
 	<message key="manager.setup.includeCreativeCommons">Đối với những tạp chí cho truy cập mở ngay lập tức hoặc trễ thời gian, đính kèm ở những thời điểm thích hợp giấy phép Creative Commons vào tất cả các bài viết đã xuất bản.</message>
 	<message key="manager.setup.information">Thông tin</message>
 	<message key="manager.setup.information.description">Các mô tả ngắn gọn về tạp chí cho cán bộ thư viện, ban đọc và các tác giả tiềm năng, sẽ được hiển thị trong mục Thông tin ở cột bên.</message>

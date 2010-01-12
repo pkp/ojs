@@ -247,7 +247,6 @@
 	<message key="manager.setup.guidingSubmissions">مرجله 3: ساب میشن ها</message>
 	<message key="manager.setup.homepageImage">تصویر صفحه خانگی</message>
 	<message key="manager.setup.homepageImageDescription">افزودن یک تصویر در وسط صفحه</message>
-	<message key="manager.setup.htmlSetupInstructions"><![CDATA[HTML را میتوان در قسمت های متنی برای تعیین فونت ، رنگ و غیره بکار برد. ضرب کلید Enter به عنوان <tt>&lt;br&gt;</tt> تلقی میشود; ویراستار HTML با مرورگر فایر فاکس کار میکند.]]></message>
 	<message key="manager.setup.includeCreativeCommons">برای مجلاتی که دسترسی آزاد فوری یا تاخیری دارند, لیسانس Creative Commons license جهت مقالات چاپ شده آنها نشان بده</message>
 	<message key="manager.setup.information">اطلاعات</message>
 	<message key="manager.setup.information.description"> توصیف مختصر مجله برای کتابداران ، نویسندگان ، و خوانندگان که تحت قسمت اطلاعات حاشیه کنار صفحات ظاهر میشود.</message>

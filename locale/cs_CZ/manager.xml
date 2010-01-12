@@ -254,7 +254,6 @@
 	<message key="manager.setup.guidingSubmissions">Krok 3. Instrukce pro příspěvky</message>
 	<message key="manager.setup.homepageImage">Obrázek domácí stránky</message>
 	<message key="manager.setup.homepageImageDescription">Přidat obrázek na střed stránky.</message>
-	<message key="manager.setup.htmlSetupInstructions"><![CDATA[V textovém poli lze použít HTML (pro velikost fontu, barvu atd.) s „výsledky“ bude nakládáno jako s <tt>&lt;br&gt;</tt>; HTML editor funguje v prohlížeči Firefox.]]></message>
 	<message key="manager.setup.includeCreativeCommons">Přiřaďte v časopisech, které nabízejí okamžitý nebo zpožděný otevřený přístup, v patřičném čase veškeré publikované práce pod Creative Common licenci.</message>
 	<message key="manager.setup.information">Informace</message>
 	<message key="manager.setup.information.description">Stručné popisy časopisu pro knihovníky, případné autory a čtenáře jsou dostupné v sekci "Informace" postranního panelu.</message>

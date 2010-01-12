@@ -258,7 +258,6 @@
 	<message key="manager.setup.guidingSubmissions">Trin 3. Manuskriptvejledning</message>
 	<message key="manager.setup.homepageImage">Billede på hjemmeside</message>
 	<message key="manager.setup.homepageImageDescription">Tilføj et billede eller en grafikfil midt på siden.</message>
-	<message key="manager.setup.htmlSetupInstructions"><![CDATA[HTML kan benyttes i tekstområdet (til skriftstørrelse, farve osv.), og "linjeskift" behandles som <tt>&lt;br&gt;</tt>. HTML-editor fungerer sammen med Firefox-browsere.]]></message>
 	<message key="manager.setup.includeCreativeCommons">I forbindelse med tidsskrifter, der tilbyder øjeblikkelig eller forsinket Open Access, skal du sørge for, at der følger en Creative Commons-licens med alle publicerede værker på det relevante tidspunkt.</message>
 	<message key="manager.setup.information">Oplysninger</message>
 	<message key="manager.setup.information.description">Der findes korte beskrivelser af tidsskriftet til bibliotekarer og potentielle forfattere og læsere i sektionen &quot;Oplysninger&quot; i margenteksten.</message>

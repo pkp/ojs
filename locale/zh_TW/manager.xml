@@ -150,7 +150,6 @@
 	<message key="manager.setup.guidingSubmissions">步驟 3：投稿導引</message>
 	<message key="manager.setup.homepageImage">首頁圖像</message>
 	<message key="manager.setup.homepageImageDescription">加一個圖檔到網頁中。</message>
-	<message key="manager.setup.htmlSetupInstructions"><![CDATA[HTML能夠被使用在文字區域中（設定字形大小和字體色彩等等）， 按下"Enter"會被視為插入<tt>&lt;br&gt;</tt>標籤；HTML編輯器能在Firefox瀏覽器中執行。]]></message>
 	<message key="manager.setup.information">資訊</message>
 	<message key="manager.setup.information.description">給圖書館館員、未來的作者和讀者的簡要說明，在側邊欄的「資訊」區段中顯示。</message>
 	<message key="manager.setup.information.forAuthors">給作者</message>

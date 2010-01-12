@@ -244,7 +244,6 @@
 	<message key="manager.setup.guidelines">Smjernice</message>
 	<message key="manager.setup.homepageImage">Slika naslovne stranice</message>
 	<message key="manager.setup.homepageImageDescription">Dodajte sliku ili grafičku datoteku na sredini stranice.</message>
-	<message key="manager.setup.htmlSetupInstructions">Pri uređivanju prostora za tekst možete koristiti HTML oznake (za veličinu fonta, boju itd.).</message>
 	<message key="manager.setup.includeCreativeCommons">Ukoliko časopis omogućuje trenutni ili odgođen otvoren pristup, pravovremeno priloži Creative Commons licencu uz sve objavljene priloge.</message>
 	<message key="manager.setup.information">Informacije</message>
 	<message key="manager.setup.information.description">Kratak opis časopisa za knjižničare, buduće autore i čitatelje dostupan je svim posjetiteljima stranice pod odjeljkom "informacije" koji se nalazi u rubnom stupcu.</message>
