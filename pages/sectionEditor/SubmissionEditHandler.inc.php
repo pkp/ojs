@@ -512,6 +512,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function enrollSearch($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
+		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_MANAGER)); // manager.people.enrollment, manager.people.enroll
 		$submission =& $this->submission;
 
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
