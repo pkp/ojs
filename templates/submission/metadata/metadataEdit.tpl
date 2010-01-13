@@ -369,7 +369,7 @@ function moveAuthor(dir, authorIndex) {
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="sponsor" key="author.submit.agencies"}</td>
+		<td width="20%" class="label">{fieldLabel name="sponsor" key="submission.agencies"}</td>
 		<td width="80%" class="value">
 			<input type="text" name="sponsor[{$formLocale|escape}]" id="sponsor" value="{$sponsor[$formLocale]|escape}" size="60" maxlength="255" class="textField" />
 		</td>

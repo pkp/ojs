@@ -2047,7 +2047,7 @@ El camp Actives llista les revisions en curs.]]></message>
 	<message key="author.submit.submissionIndexingDescription">Indiqueu termes per a la indexació de la tramesa, separats per punt i coma (terme1; terme2; terme3).</message>
 	<message key="author.submit.submissionSupportingAgencies">Agències de suport</message>
 	<message key="author.submit.submissionSupportingAgenciesDescription">Identifiqueu les agències que aporten finançament o suport per a l’obra presentada en aquesta tramesa.</message>
-	<message key="author.submit.agencies">Agències</message>
+	<message key="submission.agencies">Agències</message>
 	<message key="author.submit.coverageInstructions">Fa referència a la ubicació geospacial, la cobertura cronològica o històrica i/o les característiques de la mostra de recerca.</message>
 	<message key="author.submit.subjectClassInstructions">Utilitzeu el sistema de classificació enllaçada per a seleccionar els termes de classificació i, si escau, els números.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Anglès=en; francès=fr; castellà=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Codis addicionals</a>.]]></message>

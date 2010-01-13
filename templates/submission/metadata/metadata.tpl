@@ -163,7 +163,7 @@
 	
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="20%" class="label">{translate key="author.submit.agencies"}</td>
+		<td width="20%" class="label">{translate key="submission.agencies"}</td>
 		<td width="80%" class="value">{$submission->getLocalizedSponsor()|escape|default:"&mdash;"}</td>
 	</tr>
 </table>

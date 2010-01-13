@@ -248,8 +248,6 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		$this->validate($articleId);
 		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId, 'editing');
-		Locale::requireComponents(array(LOCALE_COMPONENT_OJS_AUTHOR)); // FIXME author.submit.agencies
-
 		CopyeditorAction::viewMetadata($submission, ROLE_ID_COPYEDITOR);
 	}
 
