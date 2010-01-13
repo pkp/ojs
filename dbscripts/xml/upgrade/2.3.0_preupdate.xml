@@ -21,6 +21,7 @@
 	<!-- Bug #4664: abstract announcements -->
 	<sql>
 		<rename table="announcements" column="journal_id" to="assoc_id" />
+		<rename table="announcement_types" column="journal_id" to="assoc_id" />
 	</sql>
 
 	<!-- Bug #4153: abstract email templates -->
