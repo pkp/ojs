@@ -16,5 +16,5 @@
 	<message key="plugins.citationFormats.apa.displayName">Công cụ định dạnh trích dẫn APA</message>
 	<message key="plugins.citationFormats.apa.citationFormatName">APA</message>
 	<message key="plugins.citationFormats.apa.description">Công cụ này áp dụng định dạng trích dẫn APA.</message>
-	<message key="plugins.citationFormats.apa.retrieved"><![CDATA[Truy xuất {$retrievedDate}, từ <a href="{$url}" target="_new">{$url}</a>]]></message>
+	<message key="plugins.citationFormats.apa.retrieved"><![CDATA[Truy xuất từ <a href="{$url}" target="_new">{$url}</a>]]></message>
 </locale>

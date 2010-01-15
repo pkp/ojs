@@ -16,5 +16,5 @@
 	<message key="plugins.citationFormats.apa.displayName">Модуль формата ссылок APA</message>
 	<message key="plugins.citationFormats.apa.citationFormatName">APA</message>
 	<message key="plugins.citationFormats.apa.description">Этот модул реализует формат ссылок APA.</message>
-	<message key="plugins.citationFormats.apa.retrieved"><![CDATA[Получено {$retrievedDate}, из <a href="{$url}" target="_new">{$url}</a>]]></message>
+	<message key="plugins.citationFormats.apa.retrieved"><![CDATA[Получено из <a href="{$url}" target="_new">{$url}</a>]]></message>
 </locale>
