@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000008.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Granskarens roll - Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000008" locale="en_US" title="Granskarens roll" toc="editorial/toc/000000" subtoc="editorial/toc/000008" key="editorial.reviewersRole">
+	<section>
+		<![CDATA[<p>Granskaren inviteras via epost att läsa ett manuskript. Eposten inkluderar titel och abstract samt tidskriftens URL, användarnamn och lösenord som Granskaren använder för att logga in på tidskriften. Tidskriften möjliggör en granskningsfunktion som sänder manuskriptet som en epostbilaga till Granskaren tillsammans med önskemål om genomläsning. I detta fall svarar Granskaren via epost. Vad som beskrivs här är den mest vanliga metoden för granskningsförfarandet (och säkrar komplett dokumentation av processen), och innefattar att Granskaren utför sitt uppdrag på tidskriftens webbsida.</p>]]>	
+	</section>
+</topic>

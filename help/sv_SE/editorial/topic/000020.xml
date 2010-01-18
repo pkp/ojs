@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000020.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Redaktörens roll Manuskriptsammanfattning - Manuskriptets metadata
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000020" locale="en_US" title=";Manuskriptets metadata" toc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary.submissionMetadata">
+	<section>
+		<![CDATA[<p>Metadata som används för att indexera manuskriptet vid publicering har lagts in av Författaren och kan redigeras av Sektionsredaktören lika väl som av Författaren själv och Manusredaktören under den redaktionella processen.</p>]]>	
+	</section>
+</topic>

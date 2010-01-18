@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000027.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Administrativa sidor - Läsarverktyg - Versioner
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000027" locale="en_US" title="Relaterade uppsättningar" toc="journal/toc/000005" key="journal.managementPages.readingTools.versions">
+	<section>
+		<![CDATA[<p>Tidskriftsansvarig kan redigera, lägga till och kontrollera alla ämnes- och områdesbaserade uppsättningar under Läsarverkty. Dessa verktyg använder de databaser som valts ut för deras relevans och tillgänglighet för alla läsare. Då URL-adresserna för dessa databaser kan förändras måste Tidskriftsansvarig ibland ändra eller ta bort länkar. Dessa verktyg är indelade i kategorier, t ex Relaterade artiklar och Avhandlingar, med ett antal databaser för varje kategori.</p><p><em>Validera Läsarverktyg</em>. Denna funktion kontrollerar validiteten av de efterfrågade URL som används i databaserna för att finna information som är revevant för materialet som verktygen åtföljer (genom att använda Författarens indexeingsord). Om en URL inte är valid kan Tidskriftsansvarig justera länken genom att finna den korrekta URL, söka hjälp från någon annan eller ta bort databasen helt från Läsarverktyg. Då denna funktion finns för varje databas tar det tid att fullfölja, men det kommer leda till information om varje databas som vittnar om dess validitet eller källan till problemet. </p><p><em>Metadata för varje uppsättning av läsarverktyg</em>Metadata för varje uppsättning tillhandahåller verktygens namn samt en kort beskrivning, och tillåter Tidskriftsansvarig att modifiera uppställningen av verktygen eller skapa nya. </p><p><em>Kontexter för uppsättningen</em>. Varje uppsättning består av olika grupperingar, eller kontexter, av databaser (t ex Relaterade studier, Online fora) där varje kontext består av ett antal relevanta databaser. Dessa databaser kan skapas, redigeras eller tas bort. Dessa grupper kan också omgrupperas. </p><p><em> Exportera data </em>. Om Tidskriftsansvarig utvecklar fler läsarverktyg kan dessa exporteras till Public Knowledge Project så att andra tidskrifter kan använda dem. </p>]]>
+	</section>
+	
+</topic>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Innehållsförteckning för Tidskriftshantering - Administrativa sidor. 
+  *
+  * $Id$
+  -->
+
+<toc id="journal/toc/000001" locale="en_US" title="Administrativa sidor" parent_topic="journal/topic/000001">
+	<topic id="journal/topic/000034" title="Tillkännagivande" />
+	<topic id="journal/topic/000010" title="Söka filer" />
+	<topic id="journal/topic/000005" title="Tidskriftssektioner" />
+	<topic id="journal/topic/000036" title="Granskningsformulär" />
+	<topic id="journal/topic/000007" title="Språk" />
+	<topic id="journal/topic/000029" title="Sammanställning av redaktionella roller" />
+	<topic id="journal/topic/000035" title="Betalningar" />
+	<topic id="journal/topic/000006" title="Epost-mallar" />
+	<topic id="journal/topic/000009" title="Läsarverktyg" />
+	<topic id="journal/topic/000004" title="Setup" />
+	<topic id="journal/topic/000008" title="Statistik &amp; Rapporter" />
+	<topic id="journal/topic/000025" title="Abonnemang" />
+	<topic id="journal/topic/000030" title="System-plugins" />
+	<topic id="journal/topic/000031" title="Importera/Exportera data" />
+
+	<breadcrumb url="journal/topic/000000" title="Tidskriftshantering" />
+	<breadcrumb url="journal/topic/000001" title="Administrativa sidor" />
+</toc>

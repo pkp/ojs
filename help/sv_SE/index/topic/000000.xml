@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Index Hjälp 
+  *
+  * $Id$
+  -->
+
+<topic id="index/topic/000000" locale="en_US" title="OJS Hjälp" toc="index/toc/000000" key="index.index">
+	<section>
+		<![CDATA[<p>Hjälpdokumentet för Open Journal Systems (OJS) har utvecklats för att hjälpa användare i alla delar av publiceringsprocessen av vetenskapliga tidskrifter och professionstidskrifter. Det ska även fungera som en manual för OJS som beskriver omfattningen och systemet i denna programvara. Hjälpdokumentet ger också råd om vanlig praxis om publicering av tidskrifter. I tillägg till detta hjälpdokument, har användare även tillgång till tidskriftens tekniska support, som listas under Kontakt i Om tidskriften</p><p>Eftersom OJS använder sig av förutbestämda roller eller titlar för varje funktion eller process &mdash; från Tidskriftsansvarig som ansvarar för tidskriftens setup till Författaren som läser korrektur &mdash; så refererar varje område i manualen till uppgifterna för respektive roll. Enligt samma princip bestäms tillgång till dokumentet av vem som gör vad och var i systemet. Hjälp är relaterat till sammanhang; det man ser hör ihop med vilken roll man har. Användare kan ha mer än en roll i OJS (en Granskare kan också vara en Författare och en Tidskriftsansvarig kan också vara en Redaktör). Vad man ser beror också på var man befinner sig i OJS. Roll och plats bestämmer vilka hjälpfunktioner som visas, även om användaren kan ta sig därifrån till relaterade ämnen för att lära känna systemet. </p><p><em>Sök</em> I övre högra hörnet på varje sida finns Sök. Skriv in ett sökord och du får en lista över användbara hjälpfunktioner, kort beskrivning av varje steg och en länk till detta steg.</p><p><em>Innehållsförteckning</em> Genom att klicka på denna länk genereras en innehållsförteckning över tillgängliga hjälpfunktioner</p><p><em>Upp ett steg</em> När man klickar på denna länk kommer man upp ett steg i hierarkin. Om du t ex har valt Fil-läsare så är steget ovanför Tidskriftshantering.</p>]]>
+</section>
+</topic>

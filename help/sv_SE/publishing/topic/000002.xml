@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publiceringsprocessen - Schemaläggning
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000002" locale="en_US" title="Schemaläggning" toc="publishing/toc/000000" key="publishing.scheduleSubmissions">
+	<section>
+		<![CDATA[<p>När som helst under Redigeringsprocessen kan Sektionsredaktören schemalägga ett manuskript för publicering i ett speciellt häfte. Vanligtvis vill Redaktören placera manuskriptet i nästkommande häfte, men det kan vara fullt eller så önskar Redaktören att placera det i ett senare häfte för att få bättre spridning på teman eller tvärtom för att göra ett kluster av artiklar om ett specifikt ämne. </p><p><em>Kontinuerlig publicering av artiklar </em>. Om artiklar publiceras kontinuerligt så snart de är klara, schemalägger Redaktören artiklarna för vad som i praktiken är aktuellt häfte.</p><p>Så snart en artikel har placerats i ett visst häfte kommer häftets namn och länk till innehållsförteckningen presenteras för Layoutredaktörer och Korrekturläsare. </p>]]>
+	</section>
+	
+</topic>

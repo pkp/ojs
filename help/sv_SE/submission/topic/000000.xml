@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Index över manuskriptprocessen
+  *
+  * $Id$
+  -->
+
+<topic id="submission/topic/000000" locale="en_US" title="Manuskriptprocessen" toc="index/toc/000000" subtoc="submission/toc/000000" key="submission.index">
+	<section>
+		<![CDATA[<p>Tidskriften gör det möjligt för Författarna att ladda upp sitt manuskript direkt på tidskriftens webbsida. Beroende på vilka alternativ som valts av Tidskriftansvarig (Setup steg 4.1) kan författare, när de registerar sig som Författare, välja att också registrera sig som Granskare och/eller Läsare. När Författaren har avslutat registreringsprocessen förs han/hon direkt till Min sida som listar hans/hennes olika roller i tidskriften, t ex Författare, Granskare. Genom att klicka på rollen Författare kommer användaren till sin manuskriptsida som listar tidigare och aktuella manuskript och där ett nytt manuskript kan läggas in. Inskickningsprocessen för Författare kan delas upp i fem steg med tillgänglig information för varje steg. Författare behöver inte fullfölja alla fem steg vid ett och samma tillfälle utan kan återvända till vad som kan kommer listas som "{translate key="submissions.incomplete"}".</p>]]>	
+	</section>
+	
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000027.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Sektionsredaktörens roll Index - Redigering - Manusredigering
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000027" locale="en_US" title="Manusredigering" toc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing.copyediting">
+	<section>
+		<![CDATA[<p>När en Manusredaktör har valts ut och en epost skickats med begäran om att påbörja processen, kommer Manusredaktören att arbeta direkt i manuskriptet och justera texten i enlighet med tidskriftens instruktioner. I Steg 1, Initial redigering, kommer Manusredaktören redigera manuskriptet och ladda upp den redigerade versionen som därefter tas vidare till Steg 2, Författarens redigering. Manusredaktören kommer sedan skicka epost till Författaren, med kopia till Sektionsredaktören, med information om att redigeringen är klar samt en begäran om att Steg 2 påbörjas. Efter att Författaren kontrollerat ändringarna, svarat på frågor och laddat upp filen i Steg 2, skapar Manusredaktören en slutgiltig redigerad version i Steg 3, Slutgiltig redigering. Denna version skickas till Layout där den fungerar som Layoutversion. Innan Layout-redaktören påbörjar sitt arbete med att förbereda korrekturet, kan Sektionsredaktören vilja se den för att försäkra sig om att den lever upp till tidskriften standard och är i enlighet med alla instruktioner. </p><p><em>Redaktörens frågor om manusredigeringen</em>. I den initiala versionen kan Manusredaktören vilja ställa frågor till Redaktören (t ex angående tidskriftens stil) vilka Manusredaktören kommer att referera till i eposten som skickas till Författaren och Sektionsredaktören när Steg 1 fullföljts. Sektionsredaktören kan läsa Redaktörens frågor genom att klicka på filnamnet i Steg 2 och svara på frågorna direkt till Manusredaktören (genom att klicka på epost-ikonen unden Begäran). På detta sätt undviker man att ladda upp en version av filen ovanpå Författarens svar på den intitiala redigeringen av manuskriptet. </p><p><em>Manusredigeringsalternativ</em>. Skulle behov uppstå (om t ex Sektionsredaktören agerar som Manusredigerare) kan Sektionsredaktören ladda upp en version av manuskriptet till varje steg av Manusredigeringen. Var uppmärksam på att inte skriva över en version som laddats upp av Manusredaktören eller Författaren. </p>]]>	
+	</section>
+</topic>

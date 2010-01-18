@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000016.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roller - Redaktör
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000016" locale="en_US" title="Redaktör" toc="journal/toc/000003" key="journal.roles.editor">
+	<section>
+		<![CDATA[<p>Redaktören övervakar hela redaktions- och publiceringsprocessen. Vanligtvis är det Redaktören, som tillsammans med Tidskriftsansvarig, etablerar tidskriftens policy och procedurer som sedan läggs in i {help_topic key="journal.managementPages.setup" text="Setup"}. Under den redaktionella processen allokerar Redaktören manuskript till Sektionsredaktörer som tar manuskriptet genom granskning och redigering. Redaktören följer manuskriptets förlopp och hjälper till om det uppstår problem. När granskningen är avslutad tar vanligtvis Redaktören manuskriptet genom {help_topic key="editorial.sectionEditorsRole.editing" text="Redigering"} processen (inklusive manusredigering, layout och korrekturläsning) även om detta ansvar i vissa tidskrifter överlåts på den Sektionsredaktör som har ansvar för {help_topic key="editorial.sectionEditorsRole.review" text="Granskning"} processen. Redaktören schemalägger också manuskript för publicering, arrangerar innehållsförteckningar och publicerar häften som en del i {help_topic key="publishing.index" text="Publicerinsprocessen"}. Redaktören kan hämta tillbaka arkiverade manuskript och placera dem under Under granskning eller Under redigering som beskrivits i {help_topic key="editorial.editorsRole.submissions.archives" text="Arkiv"}.</p>]]>	
+	</section>
+	
+</topic>

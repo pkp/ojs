@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Innehållsförteckning för Tidskriftshantering - Roller. 
+  *
+  * $Id$
+  -->
+
+<toc id="journal/toc/000003" locale="en_US" title="Roller" parent_topic="journal/topic/000003">
+	<topic id="journal/topic/000015" title="Tidskriftsansvarig" />
+	<topic id="journal/topic/000016" title="Redaktör" />
+	<topic id="journal/topic/000017" title="Sektionsredaktör" />
+	<topic id="journal/topic/000019" title="Manusredaktör" />
+	<topic id="journal/topic/000018" title="Layoutredaktör" />
+	<topic id="journal/topic/000020" title="Korrekturläsare" />
+	<topic id="journal/topic/000021" title="Granskare" />
+	<topic id="journal/topic/000022" title="Författare" />
+	<topic id="journal/topic/000023" title="Läsare" />
+	<topic id="journal/topic/000032" title="Abonnemangsansvarig" />
+
+	<breadcrumb url="journal/topic/000000" title="Tidskriftshantering" />
+	<breadcrumb url="journal/topic/000003" title="Roller" />
+</toc>

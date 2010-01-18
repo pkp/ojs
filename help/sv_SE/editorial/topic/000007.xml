@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000007.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Sektionsredaktörens roll Index - Redigering
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000007" locale="en_US" title="Redigering" toc="editorial/toc/000004" subtoc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing">
+	<section>
+<![CDATA[<p>Sektionsredaktören övervakar manusredigering, layout och korrekturläsning genom att välja ut och allokera redaktionsmedlemmar så att dessa kan ta manuskriptet genom varje steg, och därigenom försäkra sig om att manuskriptet tas genom processen tidsenligt. Processen påbörjas när Sektionsredaktören allokerar Manusredaktör och begär redigering av manuskriptet. Sektionsredaktören kan välja att samtidigt selektera Layoutredaktör och Korrekturläsare (beroende på hur många av dessa roller tidskriften använder sig av), eller avvakta tills föregående steg har slutförts. För att byta Redaktör eller Korrekturläsare behöver Sektionsredaktören endast klicka {translate key="common.select"} igen och allokera en ny person. Den redaktionella fasen är komplett när manuskriptet har genomgått korrekturläsning och Sektionsredaktören därefter schemalagt det för publicering.</p><p><em>Manuskript under layout-fasen som behöver ytterligare redigering</em>. Redaktören kan ombesörja ytterligare redigering av layout-versionen om så behövs, genom att ladda ner layout-versionen och skicka den som en epost-bilaga till Manusredaktören (som kan välja att kontakta författaren). När väl denna extraredigering är genomförd och manuskriptet återsänt till Redaktören, kan han/hon ladda upp filen som layout-version.</p><p><em>Ändra korrektur efter att manuskript har schemalagts</em>. När väl manuskriptet har schemalagts, skickas sidan Redigering (tillsammans med sidorna Sammanfattning, Gransknings  och Historik) till Arkivet. Redaktören kan be Layoutredaktören som har tillgång via Akivet göra ändringar i korrekturet och ladda upp det igen. Detta kan man göra även efter att manuskriptet är publicerat. Det nya korrekturet kommer framstå som den publicerade versionen även om man måste vara mycket försiktig så att inte tidskriftens integritet äventyras, och Redaktören kanske väljer att lägga till en not som förklarar ändringarna.</p><p>För mer information om manusredigeringsprocessen, se {help_topic key="editorial.sectionEditorsRole.editing.copyediting" text="Manusredigering"}.</p><p>För mer information om layoutprocessen, se {help_topic key="editorial.sectionEditorsRole.editing.layout" text="Layout"}.</p><p>För mer information om korrekturläsning och schemaläggning, se {help_topic key="editorial.sectionEditorsRole.editing.proofreading" text="Korrekturläsning"}.</p>]]>	
+	</section>
+</topic>

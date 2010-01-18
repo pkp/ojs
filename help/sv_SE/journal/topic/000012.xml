@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000012.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Användare - Skapa ny användare 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000012" locale="en_US" title="Skapa ny användare" toc="journal/toc/000002" key="journal.users.createNewUser">
+	<section>
+		<![CDATA[<p>Tidskriftsansvarig kan använda länken Skapa ny användare, för att registrera någon och ge den en roll, från Tidskriftsansvarig till Läsare. Användare kan, när de loggar in på tidskriften, slutföra och ändra profilinformationen som lagts in av Tidskriftsansvarig.</p><p><em>Ändra ett lösenord</em>. Användare kan ändra sitt lösenord så snart de loggat in på tidskriften. Tidskriftsansvarig kan inte komma åt ett lösenord när det väl allokerats. Systemet kommer dock att generera ett nytt lösenord och skicka det via epost till användare som klickar på "{translate key="user.login.forgotPassword"}" länken på sidan Logg-in.</p><p><em>Lägg till existerande användare</em><br />
+Tidskriftsansvarig kan allokera en redan existerande användare till en eller flera nya roller.</p><p><em>Synkronisera användare</em><br />
+Synkronisering gör det möjligt för alla användare i en specifik roll i en specifik tidskrift att bli tilldelad samma roll i denna tidskrift. Denna funktion tillåter en vanlig uppsättning av användare, t ex granskare, att synkroniseras mellan tidskrifter</p>]]>
+	</section>
+	
+</topic>

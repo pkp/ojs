@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000035.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Författarens roll Redigering - Manusredigering
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000035" locale="en_US" title="Manusredigering" toc="editorial/toc/000011" key="editorial.authorsRole.editing.copyediting">
+	<section>
+		
+		<![CDATA[<p>Manusredaktören redigerar initialt direkt i manuskriptet och ger förslag på förbättringar i språk och förståelse och ser till att manuskriptet följer tidskriftens stil och format (speciellt det bibliografiska formatet). Manusredaktören laddar upp det redigerade manuskriptet i Steg 1 och skickar en epost till Författaren och Sektionsredaktören med information om att den initiala redigeringen är klar. Författaren har tillgång till denna version i Steg 1 av Manuskriptgranskning genom att klicka på filnamnet, spara filen och sedan öppna den. </p><p><em>Författarens genomgång av Manusredaktörens anmärkningar</em>. Författaren går igenom Manusredaktörens förslag på förbättringar och kan göra ytterligare ändringar i manuskripet i enlighet med tidskriftens instruktioner. (Detta är det sista tillfället att göra ändringar, då det bara är typografiska och formatteringsändringar som kan åtgärdas under korrekturprocessen.) Författaren bör också reagera på eventuella Författar-frågor (t ex saknade sidnummer, upp- och nervänd figur) från Manusredaktören; dessa finner man genom att klicka på ikonen intill Kommentarer till redigeringen. När Författaren är klar sparar han/hon filen och laddar sedan upp den i Steg 2 av Redigering vilket gör den tillgänglig för Manusredaktören.</p><p><em>Granska metadata</em>. Författaren skall även se över manuskriptets metadata för att justera eventuella fel och upptäcka om något saknas. Metadata används för att indexera manuskriptet när det publiceras och, beroende på hur mauskriptet är indexerat, hjälper läsaren att hitta artikeln. </p> <p>Slutligen klickar Författaren på epost-ikonen under Slutfört för att informera Manusredaktören och Sektionsredaktören att detta Steg nu är genomfört.</p>]]>	
+	</section>
+</topic>
+

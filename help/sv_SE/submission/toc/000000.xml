@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Innehållsförteckning för Inskickningsprocessen för Författare 
+  *
+  * $Id$
+  -->
+
+<toc id="submission/toc/000000" locale="en_US" title="Inskickningsprocessen" parent_topic="submission/topic/000000">
+	<topic id="submission/topic/000001" title="Författarinstruktioner" />
+	<topic id="submission/topic/000002" title="Manuskriptkrav" />
+	<topic id="submission/topic/000003" title="Indexering och Metadata" />
+	<topic id="submission/topic/000004" title="Tilläggsfiler" />
+	<breadcrumb url="submission/topic/000000" title="Inskickningsprocessen" />
+</toc>

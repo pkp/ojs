@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Inskickningsprocessen för Författare - Indexering och Metadata 
+  *
+  * $Id$
+  -->
+
+<topic id="submission/topic/000003" locale="en_US" title="Indexering och Metadata" toc="submission/toc/000000" key="submission.indexingAndMetadata">
+	<section>
+		<![CDATA[<p>I OJS deltar Författarna i indexeringen av manuskriptet i samband med att det skickas in. Även systemet genererar vissa delar av indexeringen och metadata som t ex tidskriftens titel, datum, URL etc. Metadata, eller data om data, är ett antal termer som beskriver dokumentet eller datan ifråga. Tidskriften använder sig av ett metadata-protokoll, för att indexera manuskripten, som har utvecklats och underhålls av the Open Archives Initiative (OAI) som i sin tur använder the Dublin Core Metadata Initiative. OAI Metadata Harvesting Protocol är den härskande standarden för forskning, och möjliggör för OAI-anpassade sökmotorer att skapa forskningsindex baserade på resurser från hela världen. Dock är tidskriftens innehåll tillgängligt även via Google och andra vanliga sökmotorer. </p><p><em>Metadata-element</em>. Dublin Core består av 15 metadata-element som används för att identifiera och beskriva dokument. Elementen inkluderar traditionella indexeringstermer för att identifiera element såsom författare, titel, beskrivning (abstract) och ämne. Sådana termer tillåter mer detaljerad indexering genom att inkludera element såsom typ, geografiska områden och sponsor. Tidskriftsansvarig och Redaktören har valt vilka metadata-element som är de rätta för denna tidskrift och har gett exempel på varje del &mdash; baserat på tidskriftens 'aims and scope' &mdash; för att vägleda Författarna.</p><p> När Författaren lägger in abstract kan begränsad HTML användas för att uppnå en mer komplex formattering.</p><p><em>Fördelar med indexering</em>.Författare uppmuntras att fullfölja indexeringen av sitt manuskript under steg 2 i inskickningsprocessen och kommer ha möjlighet att granska och revidera metadata som en del i den redaktionella processen. Metadata kommer också bli granskad i manusredigeringssteget. Metadata för denna tidskrift kommer att bli skördad (harvested) av ett antal sökmotorer dedikerade till forskning och som i princip skapar ett forskningsindex eller -guide. Arbeten som indexeras är mycket lättare att hitta och citeras därmed troligen oftare. Eftersom det finns en begränsning av antalet termer för indexering, uppmuntras Författare att tänka över hur deras arbete positioneras och hittas genom detaljerad indexering.</p>]]>
+
+	</section>
+	
+</topic>

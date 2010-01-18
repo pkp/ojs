@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000014.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Korrekturläsarens roll - Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000014" locale="en_US" title="Korrekturläsarens roll" toc="editorial/toc/000000" subtoc="editorial/toc/000014" key="editorial.proofreadersRole">
+	<section>
+		<![CDATA[<p>Korrekturläsaren får en epost från Sektionsredaktören med begäran om korrekturläsning. Om Korrekturläsaren kan ta sig an uppdraget kan han/hon logga in och påbörja processen.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Webbplatsens administration - Hantering av webbplatsen
+  *
+  * $Id$
+  -->
+
+<topic id="site/topic/000002" locale="en_US" title="Hantering av webbplatsen" toc="site/toc/000000" key="site.siteManagement">
+	<section>
+		<![CDATA[<p>OJS är utvecklat som ett multi-tidskriftssystem, och Huvudadministratören är ansvarig för konfigurering av inställningar och för att skapa nya tidskrifter som ska samexistera inom en och samma installation. Tidskrifternas webbsidor är självständiga, med undantag av användarkonton; medan en användare kan inneha vilken kombination som helst av roller och tidskrifter, kommer samma epost-adress och användarnamn att referera till samma användare oavsett tidskrift.</p>]]>
+	</section>
+	
+	
+	
+	
+	<section title="Installation för webbplatsen">
+		<![CDATA[<p>Huvudadministatören lägger in basinformation som gäller för alla tidskrifter på webbplatsen, inkl. namn och beskrivning samt kontaktinformation.</p>
+		<p><em>Omdirigerade tidskrifter.</em> Denna inställning kan användas för att säkerställa att alla förfrågningar omdirigeras till en specifik tidskrift. Inställningen används vanligtvis när en installation är värd för enbart en tidskrift.</p>]]>
+	</section>
+	
+	
+	
+	<section title="Alla tidskrifter på webbplatsen">
+		<![CDATA[<p>Eftersom OJS tillåter vilket antal webbplatser som helst kan nya tidskrifter skapas och administreras allt eftersom. Varje tidskrift som skapas är tillgänglig genom en unik URL baserad på den akronym som lagts in av Huvudadministratören. Tidskrifter som är under installation och konfigurering kan döljas från huvudwebbsidan tills dess de är redo att lanseras.</p>]]>
+	</section>
+
+	
+	<section title="Språk">
+		<![CDATA[<p>OJS är utvecklat som ett multi-språksystem som tillåter tidskrifter med olika språk att samexistera på en och samma webbplats. Huvudadministratören kan specificera webbsidans språk och installera ytterligare språk så snart de blir tillgängliga. </p>
+		<p>Ytterligare språk finns tillgängliga för nedladdning från OJS <a href="http://pkp.sfu.ca/" target="_blank">webbsida</a> så snart en översättning till ett nytt språk har inkommit. Dessa programvaror kan installeras i ett redan existerande OJS-system.</p>]]>
+	</section>
+	
+	
+	
+	
+	<section title="Verifieringskällor">
+		<![CDATA[<p>OJS verifierar automatiskt användare gentemot den interna databasen. Det är dock möjligt att använda andra metoder av verifiering som t ex LDAP. Ytterligare verifieringskällor finns tillgängliga som OJS-plugins. Se dokumentationen för varje plugin för mer information.</p>]]>
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000026.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Sekrionsredaktörens roll Index - Granskning - Redaktörens beslut
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000026" locale="en_US" title="Redaktörens beslut" toc="editorial/toc/000006" key="editorial.sectionEditorsRole.review.editorDecision">
+	<section>
+		<![CDATA[<p>När alla granskningsrapporterna har inkommit måste Sektionsredaktören komma fram till ett beslut angående manuskriptet.</p><p><em>Registrera beslutet</em>. Sektionsredaktören väljer ett beslut bland följande alternativ: Acceptera manuskript, Begära revidering, Återsända för granskning, eller Refusera manuskript.</p><p>Sektionsredaktören bör motivera sitt beslut till Författaren i korrespondensen mellan Redaktör och Författare (då Författaren inte kan se beslutet som registrerats i systemet av Redaktören). Sektionsredaktören kan även ladda upp en version av manuskriptet med förslag och kommentarer. Slutligen måste Sektionsredaktören skicka en epost till Författaren genom ikonen Informera Författare under Redaktörens beslut. Granskarens kommentarer kan importeras till denna epost genom att klicka på ikonen Importera granskningsrapporter overför epostens ämnesrad. Notera att Granskarens kommentarer enbart till Redaktören importeras inte. Sektionsredaktören kan ta ett initialt beslut (Revidering begärd), och efter att ha godtagit den reviderade versionen ta beslutet att acceptera.</p><p>Om Sektionsredaktören väljer Acceptera manuskript är nästa steg att välja ut den versionen av manuskriptet som ska gå till Manusredigering på sidan Redigering. Redaktörens version är granskningsversionen och Sektionsredaktören kan göra ändringar i denna version &mdash; återinföra författarnas namn, t ex &mdash; och ladda upp det som klart för att gå till redigering.</p><p>Om Sektionsredaktören väljer refusering förs manuskriptet över till Arkivet och får status Refuserat.</p><p><em>Återsända för granskning</em>. Sektionsredaktören kan initiera en andra granskningsomgång för ett manuskript genom att välja Återsänd för granskning. Sektionsredaktören skickar sedan en epost till Författaren (då Författaren inte kan se beslutet) och inkluderar en lista över saker som behöver åtgärdas innan manuskriptet skickas in igen för granskning. När Författaren skickat in den nya versionen för granskning hamnar den under Författarens version, och Sektionsredaktören markerar den för ny granskning. Den blir därmed granskningsversion för omgång 2 (och ska återigen kontrolleras för anonymitet och vid behov laddas upp igen under Granskningversion). Granskarna från omgång 1 kommer att finnas kvar även om deras rapporter och rekommendationer har hamnat under Se avböjningar, cancelleringar och tidgare granskningar. Sektionsredaktören kan aktivera förfrågan för varje Granskare från omgång 1 genom att klicka på epost-ikonen under Förfrågan, eller så kan Sektionsredaktören använda Ta bort Granskare och allokera en ny Granskare för omgång 2. Korrespondensen mellan Redaktör och Författare från omgång 1 placeras också under Se avböjningar, cancelleringar och tidigare granskningar där Sektionsredaktören kan läsa det vid behov.</p>]]>	
+	</section>
+</topic>

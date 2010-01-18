@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publiceringsprocessen Index 
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000000" locale="en_US" title="Publiceringsprocessen" toc="index/toc/000000" subtoc="publishing/toc/000000" key="publishing.index">
+	<section>
+		<![CDATA[<p>Redaktören ansvarar för publicerinsprocessen genom att skapa häften och/eller volymer, schemalägga häften, iordningställa innehållsförteckning och slutligen publicera häftet. Tidskriften kan publiceras i ett antal format. Det vanliga är att samla alla artiklar i ett häfte som publiceras kvartalsvis (eller månads- eller halvårsvis). Dock, en del elektroniska tidskrifter föredrar att publicera artiklar så snart de är klara, som delar i en årlig volym. I denna text används termen Häfte även om ett häfte består av en innehållsförteckning som identifieras genom (a) häftesnummer, volym och år, (b) volym och år, (c) år och (d) titel. Exakt hur häften ska identifieras bestäms i Setup av Tidskriftsansvarig.</p>]]>	
+	</section>
+	
+</topic>

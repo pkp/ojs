@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000043.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Korrekturläsarens roll - Korrekturläsning
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000043" locale="en_US" title="Korrekturläsning" toc="editorial/toc/000014" key="editorial.proofreadersRole.proofreading">
+	<section>
+		<![CDATA[<p>Efter att ha klickat på en artikel i listan över manuskript kommer Korrekturläsaren att ha tillgång till sid-korrektur och instruktioner för korrekturläsning. Korrekturläsaren kan även korrespondera med artikelns Huvudkontakt, Redaktören eller Layoutredaktören. På detta stadie ska endast typografiska- och formatteringsmässiga fel identifieras och rättas. Korrekturläsning kan fullföljas genom följande steg: </p><p><em>Granska Instruktioner för korrekturläsning.</em> Korrekturläsaren bör gå igenom tidskriftens standard för Korrekturläsning genom att klicka Instruktioner för korrekturläsning längst ner på sidan Redigering.</p><p><em>Granska korrektur-format.</em> Korrekturläsaren kan komma åt sid-korrekturen genom att klicka på Granska korrektur vid sidan om varje format under sektionen Layout och kan även komma åt eventuella tilläggsfiler genom att klicka på den motsvarande länken under Tilläggsfiler. Sid-korrektur är vanligtvis tillgängliga, och sedemera publicerade, i PDF- eller HTML-format och kan därmed inte redigeras direkt i filen. Tilläggsfiler publiceras i originalskick men kan i vissa fall redigeras.</p><p><em> Författarens korrektur-rättelser.</em> Korrekturläsaren är expert på tidskriftens standard och bör granska Författarens korrektur-rättelser för att ge Layoutredaktören råd (t ex bortse ifrån identifierade fel som ändå är korrekta i enlighet med tidskriftens standard. Genom att klicka på Korrektur-rättelser har Korrekturläsaren möjighet att se de rättelser som Författaren har föreslagit. </p><p><em>Tillhandahålla korrektur-rättelser.</em> Korrekturläsaren ska nu klicka på ikonen Korrektur-rättelser och lägga in sina detaljerade rättelser i enlighet med instruktionerna. När dessa har sparats kommer de vara tillgängliga för Layoutredaktören. </p><p><em> Korrekturläsningen är slutförd </em>När korrekturläsningen är slutförd klickar Korrekturläsaren på epost-ikonen under Slutfört och skickar därefter den genererade eposten till Sektionsredaktören. När eposten skickats (eller alternativt hoppats över istället för cancellerats) kommer artikeln att flyttas ifrån Korrekturläsarens aktiva Manuskriptlista till arkivet och Korrekturläsaren kan därmed inte återkomma och göra ytterligare rättelser.</p>]]>	
+	</section>
+	</topic>

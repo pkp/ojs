@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Innehållsförteckning för Tidskriftshantering - Adminstrativa sidor - Läsarverktyg.
+  *
+  * $Id$
+  -->
+
+<toc id="journal/toc/000005" locale="en_US" title="Läsarverktyg" parent_topic="journal/topic/000009">
+	<topic id="journal/topic/000026" title="Alternativ för läsarverktyg" />
+	<topic id="journal/topic/000027" title="Relaterade uppsättningar" />
+	<topic id="journal/topic/000028" title="Kontextlista" />
+
+	<breadcrumb url="journal/topic/000000" title="Tidskriftshantering" />
+	<breadcrumb url="journal/topic/000001" title="Administrativa sidor" />
+	<breadcrumb url="journal/topic/000009" title="Läsarverktyg" />
+</toc>

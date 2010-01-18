@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000040.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Layoutredaktörens roll - Layout
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000040" locale="en_US" title="Layout" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.layout">
+	<section>
+		<![CDATA[<p>Manuskriptets layoutversion har förberetts i enlighet med tidskriftens regler av Manusredaktören. Layoutredaktören omvandlar manuskriptet till tidskriftens filformat och stil. Layoutredaktören måste använda extern programvara för att konvertera till HTML, PDF, PS etc. (t ex Dreamweaver, Front Page, Acrobat). Tidskriftsansvarig kan göra layoutinstruktioner som är tillgängliga för Layoutredaktören som en hjälp för att kunna formattera filerna på ett korrekt sätt. </p><p><em>Ladda upp korrektur</em>. När Layoutredaktören laddar upp en fil i korrekturformat kommer systemet att identifiera filtypen, baserad på dess suffix (t ex PDF, HTML) samt ge information om filstorlek och originalnamnet. Denna etikett, som kommer att synas på tidskriftens innehållsförteckning, tillsammans med den publicerade artikeln, informerar läsare om vilken sorts filformat den är tillgänglig i. Layoutredaktören har också möjlighet att manuellt sätta en etikett på filen. Layoutredaktören kan ladda upp fler filer, radera filer samt redigera information, t ex filens namn. När HTML-filen laddas upp måste den kompletteras med ev bilder och stilmall.</p><p><em>Tilläggsfiler</em>. Om Författaren har laddat upp tilläggsfiler är de redan på plats. De skall publiceras i tidskriften i originalformat om inte tidskriften har en speciell policy runt detta (på samma sätt som med figurer och illustrationer). Även om tidskriftens policy är att publicera tilläggsfilerna i originalformat kan Redaktören ändå välja att kontrollera filerna för att säkerställa att de är läsbara och om de ytterligare kan förbättras för att helt vara i överensstämmelse med tidskriftens stil och standard. Tilläggsfiler kan skapas, modifieras, skrivas över och raderas av Layoutredaktören (precis som av Författaren).</p>]]>	
+	</section>
+</topic>

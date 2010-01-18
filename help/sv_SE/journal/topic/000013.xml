@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000013.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Användare - Importera användare
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000013" locale="en_US" title="Importera användare" toc="journal/toc/000002" key="journal.users.importUsers">
+	<section>
+		<![CDATA[<p>OJS erbjuder en enkelt funktion för att importera data om användare i XML-baserad format vilket lätt kan genereras från andra databaser med användarinformation. Konsultera dokumentationen för OJS för mer information om XML-format och XML DTD-data om användare.</p>]]>	
+	</section>
+
+</topic>

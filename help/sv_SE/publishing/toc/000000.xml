@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Innehållsförteckning för publiceringsprocessen. 
+  *
+  * $Id$
+  -->
+
+<toc id="publishing/toc/000000" locale="en_US" title="Publiceringsprocessen" parent_topic="publishing/topic/000000">
+	<topic id="publishing/topic/000001" title="Skapa häfte" />
+	<topic id="publishing/topic/000002" title="Schemalägga artiklar" />
+	<topic id="publishing/topic/000003" title="Innehållsförteckning" />
+	<topic id="publishing/topic/000004" title="Publicera" />
+	<breadcrumb url="publishing/topic/000000" title="Publiceringsprocessen" />
+</toc>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publiceringsprocessen - Innehållsförteckning
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000003" locale="en_US" title="Innehållsförteckning" toc="publishing/toc/000000" key="publishing.tableOfContents">
+	<section>
+		<![CDATA[<p>Så snart en artikel har schemalagts kommer den synas i det häftets innehållsförteckning och under dess sektion. Om det inte finns några artiklar för en viss sektion kommer den sektionen inte upp i innehållsförteckningen. Redaktören kan ändra ordningen på sektionerna och artiklarna kan omorganiseras inom respektive sektion.</p><p>Om Tidskriftsansvarig har aktiverat abonnemangskontrollen kan Redaktören dessutom ändra reglerna för tillgång till materialet (antingen abonnemang eller open access) på per-artikel basis.  </p>]]>	
+	</section>
+	
+</topic>

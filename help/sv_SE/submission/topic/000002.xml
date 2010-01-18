@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Inskickningsprocessen för Författare - Manuskriptkrav
+  *
+  * $Id$
+  -->
+
+<topic id="submission/topic/000002" locale="en_US" title="Manuskriptkrav" toc="submission/toc/000000" key="submission.submissionRequirements">
+	<section>
+		<![CDATA[<p>För att försäkra sig om att manuskriptet har ställts upp korrekt och i enlighet med tidskriftens krav, har Tidskriftsansvarig och Redaktören ställt upp ett antal krav som Författare måste efterfölja innan de tillåts gå vidare till steg 2. Om Författaren av någon anledning inte kan efterfölja kraven kan han/hon ändå markera alla punkter och sedan skicka en förklaring i Kommentarer till Redaktören </p>]]>	
+	</section>
+	
+</topic>

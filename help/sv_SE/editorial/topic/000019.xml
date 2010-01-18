@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000019.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Redaktörens roll Manuskript - Manuskripthantering
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000019" locale="en_US" title="Manuskripthantering" toc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary.submissionManagement">
+	<section>
+		<![CDATA[<p>Olika funktioner i manuskripthanteringen kan utföras på manuskriptets sida Sammanfattning.</p><p><em>Manuskript</em><br />Under Manuskriptpresentationen kan Redaktören maila till författaren; granska originalfilen samt bilagor; kontrollera att manuskriptet har hamnat i rätt sektion och läsa författarens kommentarer.</p><p>Innan Sektionsredaktören utses för manuskriptet ska Redaktören klicka på manuskriptfilens namn för att öppna filen och kontrollera att texten är lämplig för granskning och har hamnat i rätt sektion.</p><p><em>Publiceringsavgift</em><br />Om tidskriften accepterar elektronisk betalning har Redaktören möjlighet att markera publiceringsavgiften som antingen mottagen eller efterskänken. Avgifter som är markerade som sådana kommer även att återfinnas i tidskriftens betalningshistorik.</p><p><em>Redaktörer</em><br />För att ett manuskript ska kunna fortsätta till redigeringsstadiet måste Redaktören allokera en Sektionsredaktör från listan över användare med rätt att hantera granskningsprocessen. Om Sektionsredaktörer inte används av tidskriften kan Redaktören klicka på Lägg till mig själv, och personligen övervaka granskningsprocessen. Flera Sektionsredaktörer kan allokeras till ett manuskript och ombedes att antingen ta sig an granskning eller redigering, eller båda. Denna handling genererar en automatisk epost till Sektionsredaktören med tilldelning av uppdraget.</p><p><em>Status</em><br />Manuskriptets sida Sammanfattning håller reda på manuskriptets steg genom gransknings-, redigerings- och publiceringsprocessen. Om manuskriptet vid något tillfälle visar sig vara olämpligt för tidskriften kan det arkiveras här.</p><p>Om manuskriptet anses uppenbart olämpligt redan när det inkommer, kan Redaktören klicka på länken Arkivera manuskript vilket genererar en epost till Författaren som meddelar att manuskriptet inte kommer att skickas ut för granskning. Så snart eposten har skickats iväg hamnar manuskriptet i arkivet. Den allokerade Sektionsredaktören kan också utföra detta moment.</p>]]>	
+	</section>
+</topic>
+	

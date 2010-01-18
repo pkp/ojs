@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000032.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Författarens roll Index - Manuskript
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000032" locale="en_US" title="Manuskript" toc="editorial/toc/000009" key="editorial.authorsRole.submissions">
+	<section>
+		<![CDATA[<p>När Författaren loggar in och väljer Författar-rollen på Min sida kommer han/hon till listan över aktiva manuskript. Denna sida listar manuskripten som för närvarande är under redaktionell bearbetning. Författaren har även tillgång till sina tidigare manuskript under Arkiv och kan skicka in ett nytt manuskript för granskning genom att klicka på länken under Skicka in nytt manus. </p><p>Om tidskriften accepterar elektronisk betalning har Författaren möjlighet att göra manuskript-specifika betalningar ifrån denna sida. Om tidskriften så kräver, kommer länk för att kunna betala hanteringsavgift, 'fast-track' avgift och/eller publiceringsavgift att synas på denna sida, under Status. Att klicka på någon av dessa länkar tar Författaren till antingen en manuell betalningsmodell eller betalning via PayPal. Mer information om betalningsprocessen återfinns {help_topic key="journal.managementPages.payments" text="här"}.</p><p> Information omkring hanteringsavgiften återfinns {help_topic key="submission.index" text="här"}.</p>]]>	
+	</section>
+</topic>
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000015.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Redaktörens roll Manuskript - I väntan på granskning
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000015" locale="en_US" title="Manuskript i väntan på granskning" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.unassigned">
+	<section>
+		<![CDATA[<p>Varje nytt manuskript hamnar i Redaktörens lista över Manuskript i väntan på granskning. För att allokera ett manuskript från denna lista till en Sektionsredaktör, klickar Redaktören på manuskriptets titel vilket tar honom/henne till sidan Manuskriptpresentation för artikeln i fråga, varifrån Sektionsredaktören utses. När ett manuskript är allokerat till en Sektionsredaktör flyttas det från listan över Manuskript i väntan på granskning till listan över Manuskript under granskning.</p>]]>	
+	</section>
+</topic>
+	

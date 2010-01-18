@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Vanliga frågor 
+  *
+  * $Id$
+  -->
+
+<topic id="intro/topic/000001" locale="en_US" title="Vanliga frågor" toc="intro/toc/000000" key="intro.faq">
+	<section>
+		<![CDATA[
+<ol>
+	<li><a href="#section1">Hur startar jag en tidskrift med hjälp av OJS?</a></li>
+	<li><a href="#section2">Var finner jag teknisk support, skickar in buggar och föreslår förbättringar?</a></li>
+	<li><a href="#section3">Hur gör jag för att översätta OJS till ett annat språk?</a></li>
+	<li><a href="#section4">Varför får författare meddelande att tidskriften 'inte f n tar emot manuskript'?</a></li>
+	<li><a href="#section5">Vad kan man göra för att ett manuskript, som är under granskning eller under 'pre-print' stadiet, ska bli tillgängligt?</a></li>
+	<li><a href="#section6">Hur kan jag informera om tidskriften på nätet?</a></li>
+	<li><a href="#section7">Hur kan tidskriften presentera historiken över vilka som varit medlemmar i redaktionsrådet?</a></li>
+	<li><a href="#section8">Hur kan jag göra för att få läsare att anmäla sig som Granskare för tidskriften?</a></li>
+	<li><a href="#section9">Hur kan jag finna ytterligare Granskare för ett manuskript vid sidan om den nuvarande listan över tillgängliga Granskare?</a></li>
+	<li><a href="#section10">Vad finns det för olika sätt att publicera en tidskrift i open access format, d v s göra tidskriftens innehåll fritt tillgängligt för läsarna?</a></li>
+</ol>
+		]]>	
+	</section>
+	<section title="1. Hur startar jag en tidskrift med hjälp av OJS?">
+		<![CDATA[
+<ol type="a">
+	<li><a href="http://pkp.sfu.ca/ojs_download" target="_blank">Ladda hem</a> OJS och installera programvaran, i enlighet med installationsskriptet, på en webbserver som uppfyller programvarens krav.</li>
+	<li>För att logga in, använd användarnamn och lösenord för administratör, som genererats vid installationen av OJS</li>
+	<li>Skapa en ny tidskrift under Plattformens Tidskrifter.</li>
+	<li>Webbplatsens administratör kommer automatiskt att få rollen som Tidskriftsansvarig för den nya tidskriften men, om nödvändigt, kan han/hon skapa en ny användare (eller flera användare) med rollen som Tidskriftsansvarig.</li>
+	<li>Tidskriftsansvarig går sedan in i Setup och arbetar igenom de fem stegen (även om det inte är nödvändigt att göra alla på en gång) som resulterar i en färdig webbsida redo att ta emot manuskript, hantera den redaktionella processen och publicera tidskriften online.</li>
+	<li>Konsultera <a href="http://pkp.sfu.ca/files/OJSinanHour.pdf" target="_blank">OJS på en timme </a> för mer info om hur man kommer igång med OJS.</li>
+</ol>
+		]]>
+	</section>
+	<section title="2. Var finner jag teknisk support, skickar in buggar och föreslår förbättringar?">
+		<![CDATA[
+<p>The Public Knowledge Project tillhandahåller ett <a href="http://pkp.sfu.ca/support/forum/" target="_blank">Support-forum</a> med över tusen frågor och svar, där man kan söka och lägga in frågor. T ex kan man söka efter felmeddelanden och få förslag på lösningar. Om man inte finner lösningen där kan man skicka frågor till <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>. Rapporter om buggar ska gå via PKP's <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">Bugzilla</a>.</p>
+		]]>
+	</section>
+	<section title="3. Hur gör jag för att översätta OJS till något annat språk?">
+		<![CDATA[
+<p>Instruktioner är tillgängliga i docs/README filen som är inkluderad i programfilen som laddats hem. Ytterligare information om vanliga översättningsfrågor finns på <a href="http://pkp.sfu.ca/support/forum/" target="_blank">PKP Support-forum</a>.</p>
+		]]>
+	</section>
+	
+	<section title="4. Varför får författare meddelande att tidskriften inte f.n.tar emot manuskript?">
+		<![CDATA[
+<p>Om Tidskriftsansvarig har markerat alternativet "Material kan endast skickas in av Redaktörer och Sektionsredaktörer" för alla skapade sektioner, kan endast Redaktörer och Sektionsredaktörer skicka in material. Om inga sektioner är markerade kommer Författare att se detta meddelande.</p>
+		]]>
+	</section>
+<section title="5. Vad kan man göra för att ett manuskript, som är under granskning eller under 'pre-print' stadiet, ska bli tillgängligt?">
+		<![CDATA[
+	<p>Redaktörer har två alternativ för att erbjuda pre-print tillgänglihet. De kan skapa en pre-print sektion i vilken artiklar som är schemalagda för ett senare häfte kan läggas. Pre-print artiklar läggs till innehållsförteckningen för det aktuella häftet. Så snart det nya häftet är klart för publicering flyttar Redaktören bort artiklarna från det föregående häftet till det nya. Alternativt kan Redaktörerna använda URL för Läsa korrektur, på ett manuskript från layout-stadiet på artikelns Redigeringssida för att skapa en pre-print version. Den URL ger tillgång till artikeln (för utvalda läsare) innan den publiceras i ett häfte av tidskriften. PKP undersöker om det finns intresse för denna funktion och kommer eventuellt att utveckla en process för detta. </p>
+		]]>
+	</section>
+	
+	<section title="6. Hur kan jag informera om tidskriften på nätet?">
+		<![CDATA[
+<p>Inom kort kommer tidskriften dyka upp i Google och andra sökmotorer men man kan själv ta ytterligare steg. Kom ihåg att registrera tidskriften hos PKP Harvester i Setup steg 3. Detta leder till att din tidskrift blir indexerad i Open Archives Initiative's indexeringsorgan som inkluderar <a href="http://pkp.sfu.ca/harvester/" target="_blank">PKP Harvester</a> och <a href="http://oaister.umdl.umich.edu/o/oaister/" target="_blank">OAIster</a>. Om din tidskrift är open access, tala med en bibliotekarie om hur den kan komma med i bibliotekets elektroniska samling och hur du kan kontakta andra forskningsbibliotek genom en distributionskanal som studeras av bibliotekarier som har hand om tidskriftssamlingar. Undersök om du kan använda webbsidan eller distributionskanalen för att nå relevanta professionella organisationer och annonsera ett Call for Papers eller lansera tidskriften. Slutligen, i Setup under Säkerhet och inställningar för Tillgång (2.7) finns det möjlighet för Tidskrifsansvarig att registrera Läsare så att de regelbundet får information när nya häften publiceras.</p>
+		]]>
+	</section>
+	<section title="7. Hur kan tidskriften presentera historiken över vilka som varit medlemmar i redaktionsrådet?">
+		<![CDATA[
+<p>Tidskriftsansvarig kan lägga in denna information genom att länken Sammanställning av redaktionella roller, under Tidskriftshantering. Alternativt kan Tidskriftsansvarig skapa en ny sida, Redaktionsrådshistorik, under Om tidskriften (punkt 2.5 i Setup). På en sådan sida kan du registrera titel och år för redaktionsrådsmedlemmarna.</p>
+		]]>
+	</section>
+	<section title="8. Hur kan jag göra för att få läsare att anmäla sig som granskare för tidskriften?">
+		<![CDATA[
+<p>I Setup under Tillgänglighet och säkerhetsinställningar (4.1) kan Tidskriftsansvarig möjliggöra för läsare att registrera sig som Granskare, Läsare eller Författare. Granskarna kommer sedan återfinnas bland de Granskare som Sektionsredaktören kan välja ut och invitera att granska manuskript. I Setup 5.7, kan Tidskriftsansvarig göra ett tillägg i För läsare om tidskriftens intresse av att få fler läsare att registrera sig som Granskare. På samma sätt kan tidskriften uppmuntra användare att registrera sig för att få information och för att tidskriften skall kunna följa antalet läsare.</p>
+		]]>
+	</section>
+	<section title="9. Hur kan jag finna ytterligare granskare för ett manuskript vid sidan om den nuvarande listan över tillgängliga granskare?">
+		<![CDATA[
+<p>Det finns ett antal tekniker man kan använda. Så snart namnet på en potentiell Granskare har identifieras kan man få fram även hans/hennes epost och institution med en ytterligare sökning. </p>
+<ol type="a">
+	<li>Använd manuskriptets bibliografi för att identifiera lämpliga Granskare och googla därefter deras fulla namn för att hitta deras institution och epostadress.</li>
+	<li>Använd Boolean sökfunktion i Google genom att lägga in Författarens nyckelord, t ex postcolonialism + literature + South Africa, för att identifiera relaterat material och forskare som arbetar inom samma område.</li>
+	<li>Beroende på hur Författaren har identifierat manuskriptets ämne (se metadata i Manuskriptsammanfattningen), skicka förfrågningar till kollegor med expertise inom dessa områden.</li>
+	<li>Besök andra online-tidskrifter inom detta område för att identifiera Författare som eventuellt kan agera som Granskare för ett specifikt manuskript.</li>
+</ol>
+		]]>
+	</section>
+	<section title="10. Vad finns det för olika sätt att publicera en tidskrift i open access format, d v s göra tidskriftens innehåll fritt tillgängligt för läsarna?">
+		<![CDATA[
+<p>Läs gärna mer i John Willinsky's <a href="http://www.jpgmonline.com/article.asp?issn=0022-3859;year=2003;volume=49;issue=3;spage=263;epage=267;aulast=Willinsky;type=0" target="_blank">"The Nine Flavours of Open Access Scholarly Publishing"</a> i Journal of Postgraduate Medicine. Soros Foundation har också tagit fram en <a href="http://www.soros.org/openaccess/scholarly_guide.shtml" target="_blank">Guide to Open Access Publishing and Scholarly Societies</a> vilket är tänkt att vara "a guide meant to help scholarly societies &mdash; and small publishers &mdash; assess the options available to them for the future of their journal publishing programmes." <a href="http://www.arl.org/sparc/" target="_blank">SPARC</a>, the Scholarly Publishing and Academic Resources Coalition tillhandahåller också ett antal resurser som handlar om open access publicering.</p>
+		]]>
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000038.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Manusredaktörens roll - Manusredigering
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000038" locale="en_US" title="Manusredigering" toc="editorial/toc/000012" key="editorial.copyeditorsRole.copyediting">
+	<section>
+		<![CDATA[<p>Redigeringsprocessen är indelad i tre steg och involverar Manusredaktören och Författaren. I tillägg kan Manusredaktören redigera artikelns metadata när som helst genom att klicka Granska metadata. </p><p><em>Steg 1</em><br />Under första steget klickar Manusredaktören på filnamnet för att ladda ner manuskriptet och öppna det. Manusredaktören redigerar direkt i texten i enlighet med tidskriftens regler. (Dessa kan bli tillrättalagda av Tidskriftsansvarig i Setup Steg 4.5) </p><p>I tillägg kan Manusredaktören hålla reda på föreslagna förändringar och rättelser samt frågor till Författaren och/eller Sektionsredaktören genom att klicka på ikonen Redigera kommentarer. När Manusredaktören har slutfört sitt uppdrag sparar han/hon filen och laddar upp den för nästa steg som är Författarens redigering.</p><p>Så snart den redigerade filen har laddats upp klickar Manusredaktören på epost-ikonen under Slutfört i Steg 1. Detta genererar en epost till Författaren och Redaktören som meddelar att Steg 1 är genomfört. Manusredaktören ska notera i eposten om det har uppstått några frågor till Författaren och/eller Redaktören, som Sektionsredaktören ska ta ställning till. </p><p><em>Steg 2</em><br />Författaren kan nu logga in och få tillgång till artikeln från listan över manuskript (som återfinns under Min sida). Författaren laddar ner och öppnar den redigerade versionen från Steg 1 och granskar redigeringen och svarar på eventuella frågor direkt i filen. Författaren sparar filen och laddar upp den i Steg 2, vilket gör filen tillgänglig för Manusredaktören för en sista redigeringsomgång. Sektionsredaktören svarar på eventuella frågor från Redaktören via epost för att försäkra sig om att Författaren och Sektionsredaktören inte laddar upp olika versioner ovanpå varandra. Författaren skickar en epost till Manusredaktören och Sektionsredaktören och initierar därigenom det tredje steget. För mer information om Författarens redigeringsprocess se {help_topic key="editorial.authorsRole.editing.copyediting" text="Författarens roll: Manusredigering"}.</p><p><em>Steg 3</em><br />Manusredaktören laddar ner och öppnar den redigerade filen i Steg 2 och skapar en ren version (där alla spår från redigeringsprocessen har tagits bort) baserad på Författarens och Sektionsredaktörens svar. Därmed kan Layoutredaktören göra manuskriptet klart för publicering. Manusredaktören laddar upp den rena versionen i Steg 3 och den blir därmed Layoutversionen. Manusredaktören använder då epost-ikonen under Slutfört för att meddela Layoutredaktören att manusredigering för manuskriptet ifråga nu är fullt genomförd.</p>]]>	
+	</section>
+</topic>

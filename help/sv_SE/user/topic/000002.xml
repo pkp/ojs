@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Användargränssnitt - Om tidskriften
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000002" locale="en_US" title="Om tidskriften" toc="user/toc/000000" key="user.about">
+	<section>
+		<![CDATA[<p>Under Om tidskriften presenteras tidskriftens policy, procedurer och annat relevant material för att göra tidskriften så transparant som möjligt. Det är detta material som typiskt refereras till som 'front matter' i tidskrifter. Det är här som potentiella författare kan läsa om 'aims and scope', granskningspolicy och hur man formaterar och förbereder sitt manuskript samt hur man rent praktiskt skickar in det till tidskriften. </p>]]>	
+	</section>
+	
+</topic>

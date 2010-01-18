@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000034.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Författarens roll Granskning Index - Oberoende granskning
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000034" locale="en_US" title="Redaktörens beslut" toc="editorial/toc/000010" key="editorial.authorsRole.review.editorDecision">
+	<section>
+		<![CDATA[<p>När en granskningsprocess är avslutad tar Sektionsredaktören ett beslut och meddelar Författaren via epost. Detta beslut är även registrerat i korrespondensen mellan Redaktör och Författare på Författarens granskningssida. Om Sektionsredaktören begär revidering innan slutgiltigt beslut tas, har Författaren möjlighet att ladda upp en reviderad version av manuskriptet på denna sida, i tillägg till reviderade eller ytterligare tilläggsfiler (som data sets, forskningsverktyg, källdokument etc.). Sektionsredaktören har även möjlighet att ladda upp och presentera olika versioner av manuskripet eller andra dokument för Författaren. (För att se uppladdade filer klickar Författaren på filnamnet och öppnar filen direkt eller sparar ner den och öppnar sedan.) </p><p> Om ett manuskript blir accepterat fortsätter det vidare i den redaktionella processen till {help_topic key="editorial.editorsRole.submissions.inEditing" text="Redigering"} stadiet.</p><p><em>Återsända för granskning</em>. Om Sektionsredaktörens beslut är att manuskriptet ska revideras och därefter återsändas för ny granskning ska Författaren först meddela om han/hon är villig att utföra revideringen genom att använda Redaktör/Författare korrespondens. När revideringen gjorts laddar Författaren upp versionen för en andra granskningsomgång. Sektionsredaktören kommer att skicka det reviderade manuskripet till samma Granskare eller till en eller flera nya Granskare och meddela Författaren när ett beslut har tagits på samma sätt som i första omgången. </p>]]>	
+	</section>
+</topic>
+

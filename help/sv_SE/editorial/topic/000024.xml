@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000024.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Sektionsredaktörens roll Index - Granskning - Granskningsversion 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000024" locale="en_US" title="Granksningversion" toc="editorial/toc/000006" key="editorial.sectionEditorsRole.review.reviewVersion">
+	<section>
+		<![CDATA[<p>Den första uppgiften för Sektionsredaktören är att kontrollera manuskriptet för att försäkra sig om att originalversionen kan tjäna som granskningsversion, eller om en reviderad version behöver laddas upp. För att kunna se originalfilen klickar Sektionsredaktören på filnamnet intill granskningsversionen. </p><p><em>Att garantera en blind oberoende granskning</em>. Se instruktioner för {help_topic key="editorial.sectionEditorsRole.review.blindPeerReview" text="Att garantera en blind oberoende granskning"}. Sektionsredaktören ska även konsultera Manuskriptpresentationen för att kontrollera om tilläggsfiler kan göras tillgängliga för Granskare. Om Författaren vill presentera tilläggsfilerna för Granskaren ska dessa markeras; Sektionsredaktören kan av-markera dem om de inte anses lämpliga för Granskarens ögon.</p><p><em>Att fastställa manuskriptets granskningsversion</em>. Sektionsredaktören bestämmer vilken version av manuskriptet Granskarna ska se genom att a) välja originalversionen, om den är lämplig, b) genom att ladda upp en lämpligare version. Sektionsredaktören kan välja att justera smärre problem i originalfilen med hjälp av ordbehandlingsprogram, spara filen på skrivbordet och sedan ladda upp filen genom att använda Bläddra/Ladda upp knappen på sidan Gransknings.</p><p><em>Dåligt förberedda manuskript</em>. Om Författaren helt har misslyckats att följa tidskriftens författarinstruktioner, däribland kravet att manuskriptet ska vara av-identifierat, kan Sektionsredaktören välja att meddela Författaren att en ny version måste skickas in. Föfattaren kan därmed skicka in en uppdaterad version per epost direkt till redaktören som sedan laddar upp den som granskningsversionen. Sektionsredaktören kan även besluta att manuskriptet helt enkelt inte passar för tidskriften och informera Författaren om detta. Genom att gå till Manuskriptpresentationen och klicka "{translate key="editor.article.archiveSubmission"}" hamnar manuskriptet i Arkivet.</p>]]>	
+	</section>
+</topic>
+	

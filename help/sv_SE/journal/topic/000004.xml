@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Administrativa sidor - Setup 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000004" locale="en_US" title="Setup" toc="journal/toc/000001" key="journal.managementPages.setup">
+	<section>
+		<![CDATA[<p>Tidskriftsansvarig sätter upp tidskriften, efter det att systemet har installerats på en webbserver, genom att ta sig igenom fem steg, fylla i mallar och bestämma tidskriftshanteringen. Man behöver inte gå igenom alla steg på en gång: mallarna kan fyllas i och sedan sparas; och Tidskriftsansvarig kan närsomhelst gå in och avsluta uppgiften eller göra förändringar. </p><p>Setup är tillgänglig för Tidskriftsansvarig på sidan för Tidskriftshantering och innehåller hjälptexter som är inbyggda i varje mall. Att sätta upp tidskriftens webbsida kräver vissa beslut och att man förbereder texter för följande rubriker, som kan förberedas i samråd med Redaktören eller läggas till vid ett senare tillfälle. </p><ul><li>Huvudkontakt för tidskriften</li><li>Teknisk kontakt</li><li>Aims and Scope</li><li>Tidskriftssektioner och -policy</li><li>Författarinstruktioner</li><li>Checklista för Författare</li><li>Indexering och exempel</li><li>Policy för oberoende granskning</li><li>Instruktioner för Granskare</li><li>Copyright policy</li><li>Open access policy</li><li>Redaktionsråd/Granskningsråd</li><li>Policy för abonnemangshantering</li><li>Användande av Layoutredaktörer, Manusredaktörer, och/eller Korrekturläsare</li></ul>]]></section>
+
+</topic>

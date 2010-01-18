@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000008.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Administrativa sidor - Statistik och rapporter
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000008" locale="en_US" title="Statistik &amp; rapporter" toc="journal/toc/000001" key="journal.managementPages.statsAndReports">
+	<section>
+		<![CDATA[<p>Statistik &amp; Rapporter möjliggör för Tidskriftsansvarig att ta ut information om tidskriftens användarstatistik på två sätt. Dels, under Statistik, finns år-för-år-statistik på antal manuskript, redaktionsprocessen och användare. Dels kan Tidskriftsansvarig generera en av flera typer av rapporter över en bestämd tidsperiod.</p><p>Det finns fyra typer av rapporter tillgängliga:
+			 </p>
+		<ul>
+			<li><strong>Tidskriftsrapport</strong>: Rapporter om alla inkomna manuskript under en given tidsperiod.</li>
+			<li><strong>Redaktörsrapport</strong>: Rapport om inkomna manuskript grupperade per Redaktör.</li>
+			<li><strong>Granskningsrapport</strong>: Rapport om inkomna manuskript grupperade per Granskare.</li>
+			<li><strong>Sektionsrapport</strong>: Rapport om inkomna manuskript grupperade per sektion.</li>
+		</ul>
+		<p>Dessa rapporter är genererade i Comma-Separated Values (CSV) format och bör öppnas i en matris-applikation.</p>]]>
+	</section>
+	
+</topic>

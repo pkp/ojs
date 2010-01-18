@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000028.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Sektionsredaktörens roll Index - Redigaring - Layout
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000028" locale="en_US" title="Layout" toc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing.layout">
+	<section>
+	
+		<![CDATA[<p>Så snart Manusredaktören har färdigställt den 'rena' kopian i Steg 3 i Manusredigering så går den versionen av manuskriptet till Layout. När Sektionsredaktören får information om att manusredigeringen är klar ska han/hon välja ut en Layoutredaktör, om inte detta redan har gjorts, och begära att denne påbörjar sitt arbete, genom att klicka på epost-ikonen under Begär layout. Layoutredaktören kommer förbereda manuskriptkorrektur i tidskriftens olika publiceringsformat (t ex HTML, PDF, PS). Filerna med tilläggsfilerna som förblir i det ursprungliga formatet, kommer att granskas av Layoutredaktören och Korrekturläsaren för att säkerställa att grundläggande formattering är på plats och att filerna stämmer väl överens med tidskriftens standard. När Layoutredaktören har avslutat den initiala produktionen av korrekturet, vilket kommer att bli den version som publiceras, kommer Layoutredaktören skicka en epost till Redaktören.</p><p>Notera att Redaktören kan schemalägga ett manuskript för publicering när som helst i redigeringsprocessen. Denna information kommer vara tillgänglig för Layoutredaktörer och Korrekturläsare och kommer att ge dem möjlighet att läsa häftet innan det publiceras.</p>]]>	
+	</section>
+</topic>
+

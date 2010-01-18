@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000029.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Administrativa sidor - Grupper
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000029" locale="en_US" title="Sammanställning av redaktionella roller" toc="journal/toc/000001" key="journal.managementPages.groups">
+	<section>
+		<![CDATA[<p>Det finns två sätt som Tidskriftsansvarig kan använda för att definiera Sammanställning av redaktionella roller, vilka visas i sidan Redaktionsteam under Om tidskriften: antingen genom att använda allokerade redaktionella roller, eller genom att skapa nya redaktionella titlar. </p>]]>
+	</section>
+	
+	<section title="Skapa redaktionsteam med de redaktionellt tilldelade rollerna">
+		<![CDATA[<p>När detta alternativ väljs kommer information om Redaktionsteamet i Om tidskriften automatiskt genereras utifrån de av Tidskriftsansvarig definierade rollerna. Användare registrerade som Redaktörer, Sektionsredaktörer, Layoutredaktörer, Manuredaktörer och Korrekturläsare kommer att listas</p>]]>
+	</section>
+	
+	
+	
+	<section title="Skapa redaktionsteam utifrån nya redaktionella roller">
+		<![CDATA[<p>Om Tidskriftsansvarig önskar mer kontroll över informationen som presenteras på sidan Redaktionsteam under Om tidskriften, kan han/hon möjliggöra detta från sidan Sammanställning av redaktionella roller (se Tidskriftshantering). När denna funktion har aktiverats, kommer de nya titlarna att användas för att generera information om Redaktionsteamet, som tillgängliggörs för allmänheten liksom information om andra människor relaterade till tidskriften, om man så önskar.</p><p> För att skapa en ny titel klickar Tidskriftsansvarig på Skapa ny titel, skriver in titelns namn, t ex Huvudredaktör, Sektionsredaktör, Redaktionsråd, och bestämmer om titeln ska synas i Redaktionsteam under Om tidskriften, eller enbart återfinnas i Aktörer under Om tidskriften. Tidskriftsansvarig kan bestämma i vilken ordning titlarna ska visas på sidan Sammanställning av redaktionella roller genom att använda upp- och nerpilarna. Han/hon kan dessutom redigera och ta bort titlar om nödvändigt. </p><p> För att se, lägga till och ta bort användare av en specifik titel, klickar Tidskriftsansvarig på länken Medlemsskap vid sidan om namnet på titeln. Detta kommer att visa en lista över de befintliga användarna för en specifik titel. Tidskriftsansvarig kan bestämma i vilken ordning titlarna ska visas och kan ta bort medlemmar om nödvändigt. För att lägga till en ny medlem klickar Tidskriftsansvarig på Lägg till medlem och lägger till en användare från listan</p>]]>
+	</section>
+	
+</topic>

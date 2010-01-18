@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000013.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Layoutredaktörens roll - Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000013" locale="en_US" title="Layoutredaktörens roll" toc="editorial/toc/000000" subtoc="editorial/toc/000013" key="editorial.layoutEditorsRole">
+	<section>
+		<![CDATA[<p>Layoutredaktören får en epost från Manusredaktören eller Sektionsredaktören med begäran om layout för ett manuskript som har genomgått redigeringsstadiet. En Layoutredaktör som inte kan ta sig an arbetet svarar Sektionsredaktören via epost.</p>]]>	
+	</section>
+</topic>
+

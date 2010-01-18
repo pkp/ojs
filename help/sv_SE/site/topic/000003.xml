@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Webbplatsens administration - Administrativa funktioner 
+  *
+  * $Id$
+  -->
+
+<topic id="site/topic/000003" locale="en_US" title="Administrativa funktioner" toc="site/toc/000000" key="site.administrativeFunctions">
+	<section>
+		<![CDATA[<p>Ett flertal administrativa funktioner finns tillgängliga på webbplatsens administrativa område. Dessa funktioner bör användas med försiktighet eftersom felaktigt användande kan leda till oväntade resultat.</p>]]>
+	</section>
+		
+	
+
+	<section title="Systeminformation">
+		<![CDATA[<p>Generell information om servermiljön och OJS' versionshistorik (som inkluderar senaste uppgraderingarna). Ett webbaserat gränssnitt för att modifiera OJS-konfigurationsfilen finns också tillgängligt.</p>]]>
+	</section>
+		
+	
+	
+
+	<section title="Avbryta användarsessioner">
+		<![CDATA[<p>Tar bort alla aktiva användarsessioner i systemet, med begäran om att alla användare i systemet loggar in på nytt.</p>]]>
+	</section>
+		
+	
+
+	<section title="Ta bort data caches">
+		<![CDATA[<p>Tar bor alla 'cached data', inkl. information om språk, 'help cache' och 'search cache'.</p>]]>
+	</section>
+
+	<section title="Ta bort template cache">
+		<![CDATA[<p>Tar bort alla 'cached versions' av HTML-mallar. Denna funktion kan vara användbar för att kunna ladda upp mallar i vilka förändringar har utförts.</p>]]>
+	</section>
+
+	<section title="Sammansmälta användare">
+		<![CDATA[<p>Funktionen Sammansmälta användare tillåter Tidskriftsansvarig att sammansmälta två användarkonton till en genom att överföra redigeringsuppdrag, manuskript och annan historik från ett konto till ett annat, och helt och hållet ta bort det första. </p>
+		<p>Till skillnad från funktionen Sammansmälta användare som är tillgänglig för Tidskriftsansvarig och som är begränsad till att sammansmälta användarkonton för en specifik tidskrift, så tillåter funktionen Sammansmälta användare, under Webbplatsens administration, Huvudadministratören att sammansmälta två användarkonton från <em>olika</em> tidskrifter.</p>
+		<p>Följande delar överförs:</p>
+		
+				
+		
+			<ul>
+				<li>Artikelförfattare</li>
+				<li>Offentliga kommentarer på artiklar</li>
+				<li>Kommentarer på artiklar</li>
+				<li>Redaktörens uppdrag och beslut</li>
+				<li>Granskningsuppdrag</li>
+				<li>Layoutredaktörens uppdrag</li>
+				<li>Korrekturläsarens uppdrag</li>
+				<li>Artikelns epost och historik</li>
+				<li>Granskarens inloggningsnyckel</li>
+				<li>Roller</li>
+			</ul>
+		<p>Följande delar överförs <strong>inte</strong>:</p>
+			<ul>
+				<li>Sessioner</li>
+				<li>Abonnemang</li>
+				<li>Aviseringsstatus (t ex om användaren har anmält sig för att motta nyheter om tidskriften)</li>
+				<li>Medlemsskap av Redaktionsteamet</li>
+				<li>Sektionsredaktörens status i sektioner</li>
+				<li>Användarprofil (t ex förnamn, efternamn)</li>
+			</ul>
+		<p>Denna funktion bör användas med försiktighet då den inte är reversibel och involverar överföring av historik från en användare till en annan.</p>]]>
+	</section>
+</topic>

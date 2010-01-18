@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000034.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Tillkännagivanden 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000034" locale="en_US" title="Tillkännagivanden" toc="journal/toc/000001" key="journal.managementPages.announcements">
+	<section>
+		<![CDATA[<p>OJS gör det möjligt för Tidskriftsansvarig att lägga ut tillkännagivanden för besökare på webbsidan. Sådan information visas på sidan Tillkännagivanden och eventuellt direkt på tidskriftens webbsida.</p><p><em> Sätta upp modulen för Tillkännagivanden</em>. Tidskriftsansvarig måste indikera under Setup steg 4.4 att tidskriften kommer att publicera tillkännagivanden. I tillägg måste Tidskriftsansvarig indikera om informationen ska visas på tidskriftens hemsida. En introducerande text kan också läggas till och visas då högst upp på sidan Tillkännagivanden.</p><p><em>Skapa Tillkännagivanden</em> Tidskriftsansvarig skapar ett tillkännagivande genom att välja typ (om någon), genom att lägga in en titel och en kort och en lång beskrivning av tillkännagivandet. Den korta beskrivningen visas för läsare som en resumé av tillkännagivandet medan den långa visas när läsaren väljer att läsa hela tillkännagivandet. Ett utgångsdatum kan specificeras och tillkännagivandet kommer därmed inte visas när datumet har passerats. </p>]]>
+	</section>
+
+</topic>

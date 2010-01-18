@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Innehållsförteckning för Tidskriftshantering - Användare. 
+  *
+  * $Id$
+  -->
+
+<toc id="journal/toc/000002" locale="en_US" title="Användare" parent_topic="journal/topic/000002">
+	<topic id="journal/topic/000011" title="Användare i tidskriften" />
+	<topic id="journal/topic/000012" title="Skapa ny användare" />
+	<topic id="journal/topic/000033" title="Sammansmälta användare" />
+
+	<breadcrumb url="journal/topic/000000" title="Tidskriftshantering" />
+	<breadcrumb url="journal/topic/000002" title="Användare" />
+</toc>

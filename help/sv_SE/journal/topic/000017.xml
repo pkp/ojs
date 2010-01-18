@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000017.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roller - Sektionsredaktör 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000017" locale="en_US" title="Sektionsredaktör" toc="journal/toc/000003" key="journal.roles.sectionEditor">
+	<section>
+		<![CDATA[<p>Sektionsredaktören hanterar granskning och redigering av de manuskript han/hon allokerats. I vissa fall kan en Sektionsredaktör som har fått i uppgift att ta ett manuskript genom {help_topic key="editorial.sectionEditorsRole.review" text="Granskning"} processen även få ansvar för att ta manuskript som accepterats genom {help_topic key="editorial.sectionEditorsRole.editing" text="Redigering"} processen (dvs genom manusredigering, layout och korrekturläsning). Dock arbetar ofta Sektionsredaktörer endast med granskningsprocessen och en Redaktör i rollen som Sektionsredaktör övervakar manuskriptet genom redigeringsprocessen. Tidskriften har en policy om hur uppgifterna är fördelade.</p>]]>	
+	</section>
+</topic>

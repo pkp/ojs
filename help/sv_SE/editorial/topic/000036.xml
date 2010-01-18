@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000036.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Författarens roll Redigering - Korrekturläsning
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000036" locale="en_US" title="Korrekturläsning" toc="editorial/toc/000011" key="editorial.authorsRole.editing.proofreading">
+	<section>
+		<![CDATA[<p>Författaren läser korrekturet i form av HTML, PDF och/eller PS beroende på vilka format som tidskriften publicerar online. För att se dessa filer klickar Författaren på respektive format (och inte på filnamnet). Under korrekturstadiet görs enbart typografiska och formatteringsmässiga ändringar och dessa kan endast utföras av Manusredaktören. </p> <p>Om fler än ett filformat används kontrollerar Författaren självklart endast ett av dessa för stavfel men kontrollerar alla för eventuella formatteringsfel. Författaren bör följa Instruktioner för korrekturläsning när han/hon listar sina rättelser i text-rutan Rättelser, som Författaren kommer till genom att klicka på ikonen Korrektur-rättelser. Författaren ska även kontrollera eventuella tilläggsfiler. Dessa filer återfinns i originalskick och kan därför modifieras och laddas upp igen (även titeln kan ändras med hjälp av Redigering). Ändringar som görs i dessa filer ska noteras i text-rutan Rättelser.</p>]]>	
+	</section>
+</topic>

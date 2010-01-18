@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000044.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Att garantera en blind granskning
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000044" locale="en_US" title="Att garantera en blind granskning" toc="editorial/toc/000001" key="editorial.sectionEditorsRole.review.blindPeerReview">
+	<section>
+		<![CDATA[<p>För att garantera integriteten i en blind granskning får Författarnas och Granskarnas identitet inte avslöjas. Detta betyder att Författare, Redaktörer och Granskare (som alla laddar upp dokument som en del i granskningen) kontrollerar att de följande stegen i processen i relation till text och filidentifikation har utförts: </p>
+<ol><li> Författarna har bytt ut sina namn mot 'Författare', och i referenser och fotnötter har Författarens namn, artikelns titel etc bytts ut mot 'år'.</li>
+<li>Om man använder Microsoft Office bör författarens identifikation tas bort från filen (se under Filer i Word), genom att klicka på följande och börja med Fil på huvudmenyn: Fil &gt; Spara som &gt; Verktyg (eller Alternativ med Mac) &gt; Säkerhet &gt; Ta bort personlig information från filidentifikation på spara &gt; Spara.</li>
+<li>Med PDF ska författarnas namn också tas bort ifrån dokumentidentifikationen som finns under Fil på Adobe Acrobats huvudmeny.</li>
+</ol>]]>
+	</section>
+</topic>
+

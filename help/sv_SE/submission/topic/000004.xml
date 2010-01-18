@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Inskickningsprocess för Författare  - Tilläggsfiler
+  *
+  * $Id$
+  -->
+
+<topic id="submission/topic/000004" locale="en_US" title="Tilläggsfiler" toc="submission/toc/000000" key="submission.supplementaryFiles">
+	<section>
+		
+	<![CDATA[<p>Författaren kan ladda upp tilläggsfilerna i steg 4 under inskickningsprocessen. Tilläggsfilerna kan inkludera datasets, forskningsinstrument, källtexter och annat material som annars skulle kunna vara ett appendix till manuskriptet men som förtjänar att bli behandlade som separata dokument då de kan vara värdefulla i sig själva. Författaren kan dessutom indexera tilläggsfilerna oberoende av manuskriptet och därmed låter filerna bli en del av ett större index och återfinnas av de som letar efter den här typen av information. </p><p><em>Format för tilläggsfiler</em>. Tilläggsfiler laddas upp i sitt originalformat &mdash; och här finns det inga restriktioner &mdash; och förblir i det formatet till skillnad från manuskriptet vilket måste vara i tidskriftens standardformat och kommer att omvandlas till ett standardiserat publiceringsformat. Detta innebär att datasets som är tillgängliga i en matris eller 'flash demonstration' kan laddas upp och förbli i det formatet. Detta kan innebära en utmaning för Läsare, och Författare måste kanske tänka på detta genom att, i beskrivningen av tilläggsfilerna, visa vilka nedladdningsbara gratisprogram som finns för att öppna och granska tilläggsfilerna. </p>]]>
+	</section>
+	
+</topic>

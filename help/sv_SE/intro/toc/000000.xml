@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Innehållsförteckning för Introduktion till OJS. 
+  *
+  * $Id$
+  -->
+
+<toc id="intro/toc/000000" locale="en_US" title="Introduktion till OJS" parent_topic="intro/topic/000000">
+	<topic id="intro/topic/000001" title="Vanliga frågor" />
+	<breadcrumb url="intro/topic/000000" title="Introduktion till OJS" />
+</toc>

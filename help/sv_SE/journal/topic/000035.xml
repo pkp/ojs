@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000035.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Betalningar 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000035" locale="en_US" title="Betalningar" toc="journal/toc/000001" key="journal.managementPages.payments">
+	<section>
+		<![CDATA[<p>Från sidan Tidskriftshantering kan Tidskriftsansvarig aktivera modulen Betala avgift, antingen via Paypal eller genom en manuell process, för att hantera författaravgifter och tillgång till enskilda artiklar. Modulen Betala avgift håller reda på alla användare som betalat och visar information om avgifter under Om tidskriften. I tillägg är det möjligt för användare att förnya abonnemang och medlemskap fån Min sida. </p><p> Modulen Betala avgift är uppdelad i tre sektioner: Betalningsalternativ, Betalningsmetod och Betalningshistorik. </p>]]>
+</section>
+
+
+<section title="Betalningsalternativ">
+<![CDATA[<p>Det första steget för att sätta upp modulen Betala avgift är att aktivera alla önskade alternativ på sidan Betalningsalternativ.</p><p><em>Vanliga alternativ</em><br />Modulen kan slås på och av under Vanliga alternativ, och valutaslag kan väljas. Vänligen notera att valutaslaget i modulen Betalningar ska överensstämma med abonnemangets valutaslag, om abonnemang tillämpas.</p><p><em>Författaravgift</em><br />Tidskriftsansvarig kan aktivera individuella avgifter såsom inskickningsavgift, avgift för snabb hantering och publiceringavgift. I tillägg kan Tidskriftsansvarig justera avgiftsnivåerna och informationen samt ändra i "waiver policy", dvs huruvida avgift ska efterskänkas. All denna information visas i Författaravgifter under Om tidskriften men dyker också upp under inskickningsförfarandet.</p><p>Om modulen inte är aktiverad måste avgiften för att få skicka in ett manus betalas av Författaren före steg 5 i processen. Författare har möjlighet att begära en "waiver"; han/hon kan ändå skicka in manuskriptet men begäran måste bli behandlad av Redaktören från sidan Manus i väntan på granskning.</p><p>Avgiften för snabb hantering är valfri och behöver därför inte vara betald för att man ska kunna avsluta inskickningsförfarandet. Om avgiften betalts så blir manuskriptet gråfärgat i Redaktörens lista över manuskript för att markera snabb behandling.</p><p>Om Artikelavgift är aktiverad måste Författaren betala avgiften innan manuskriptet publiceras. Denna avgift måste inte var betald då manuskriptet skickas in. Författaren mottar besked från Redaktören om att artikeln har accepterats för publicering och måste då logga in och betala avgiften; detta kan göras från Författarens aktiva Lista över manuskript. Precis som med Inskickningsavgiften kan Författaren lämna önskemål om att avgiften kan efterskänkas. </p><p><em>Läsaravgift</em><br />Tidskriftsansvarig kan aktivera betalningar för abonnemang precis som för "pay-per-view" betalningar.</p><p>Om betalning för abonnemang är aktiverad kan abonnenter förnya sitt abonnemang fråm Min sida. Observera att abonnemang uppdateras inte automatiskt vid betalning. Betalning för abonnemang återfinns på sidan Betalningshistorik med en länk till abonnenten i fråga, men abonnemanget måste förnyas manuellt på sidan Abonnemang av antingen Tidskrifts- eller Abonnemangsansvarig. </p><p> Om Pay-per-View är aktiverad kommer tillgång till abonnemangsskyddat innehåll bli tillgängligt på en per-artikel basis.  Användare måste vara registrerade för att kunna köpa artiklar. När en artikel har köpts kommer användaren ha kontinuerlig tillgång den köpta artikeln. </p><p><em> Vanliga avgifter</em><br />Under Vanliga avgifter kan Tidskriftsansvarig aktivera avgifter för Föreningsmedlemsskap samt donationer till tidskriften.</p><p>Om alternativet för medlemsskap är aktiverat kommer informationen synas i Policy under Om tidskriften. Registrerade användare har också möjlighet att betala medlemsskap via Min sida.</p><p> Om alternativet Donationer aktiveras kommer en länk til Donationer automatiskt synas i högra navigationsområdet. Genom att klicka på denna länk kan registrerade användare göra en donation genom något av de betalningsalternativ som Tidskriftsansvarig har satt upp. </p>]]>
+	</section>
+	
+	
+	
+<section title="Betalningsmetoder">
+	<![CDATA[<p>Tidskriftsansvarig kan aktivera antingen Manuell betalning eller PayPal betalning från denna sida. Detta val bestämmer om användare hamnar på PayPal eller sidan för Manuell betalning. </p><p><em>Manuell betalning av avgift</em><br />Om detta alternativ väljs måste Tidskriftsansvarig också inkludera information för användare, dvs vem de ska kontakta eller hur de ska betala. Dessa instruktioner återfinns på sidan Manuell betalning av avgift, när betalning krävs, t ex när ett manuskript skickas in eller när en användare önskar förnya sitt abonnemang eller medlemsskap.</p><p> När Manuell betalning av avgift aktiveras måste Redaktören manuellt markera om det är ett Manuskript, Snabb hantering och om publiceringsavgiften är betald eller ska efterskänkas. Detta kan han/hon göra från sidan Manuskriptsammanfattning och relevant historik kommer synas på sidan Betalningshistorik. </p><p><em>Betalning via PayPal</em><br />Om detta alternativ har valts måste Tidskriftsansvarig välja mellan en test- eller produktions-URL som ska interagera med PayPal's Instant Payment Notification (IPN) service, och måste lägga in korrekt epost-adress för säljarens konto i det tillgängliga formuläret.</p><p> Användare kommer ges möjlighet att logga in på PayPal och betala en avgift, t ex när artikeln skickas in. Efter att PayPal har utfört betalningen förs användaren tillbaka till tidskriftens webbsida och avgiften kommer automatiskt läggas till i sidan Betalningshistorik.</p>]]>
+</section>
+
+
+<section title="Betalningshistorik">
+<![CDATA[<p>Sidan Betalningshistorik håller reda på vilka användare som har betalt, typ av betalning och andra detaljer. </p>]]>
+</section>
+</topic>

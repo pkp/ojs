@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000020.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roller - Korrekturläsare 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000020" locale="en_US" title="Korrekturläsare" toc="journal/toc/000003" key="journal.roles.proofreader">
+	<section>
+		<![CDATA[<p>Korrekturläsaren går noggrannt igenom de olika formaten av korrekturet (liksom Författaren). Korrekturläsaren (och Författaren) noterar typografiska felaktigheter och formatteringsfel som Layoutredaktören ska åtgärda. För vissa tidskrifter agerar även Redaktören eller Sektionsredaktören som Korrekturläsare</p><p>Mer information finns {help_topic key="editorial.proofreadersRole" text="här"}.</p>]]>	
+	</section>
+	
+</topic>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000007.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Administrativa sidor - Språk
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000007" locale="en_US" title="Språk" toc="journal/toc/000001" key="journal.managementPages.languages">
+	<section>
+		<![CDATA[<p>OJS kan publicera flerspråks-tidskrifter samt tidskrifter på andra språk än engelska. Dessa språk som har gjorts tillgängliga i systemet av Huvudadministratören är listade under Språk under Tidskriftshantering. Om man valt fler än ett språk under Supported Locales har besökare till sajten möjlighet att växla mellan språken via en rullista i navigationsområdet. I tillägg är det möjligt för användare att skriva in information i vilket som helst av de språk som gäller för tidskriften.</p>]]>	
+	</section>
+
+</topic>

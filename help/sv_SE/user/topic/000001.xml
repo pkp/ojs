@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Användargränssnitt - Hem
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000001" locale="en_US" title="Hem" toc="user/toc/000000" key="user.home">
+	<section>
+		<![CDATA[<p>Det finns två huvudsidor som heter Hem: en för OJS i sin helhet, Hem huvudwebbplats, och sedan en Hem på tidskriftsnivå. Dessa sidor innehåller till stor del samma information men skiljer sig åt i vissa aspekter.</p>]]>	
+	</section>
+	
+	
+	<section title="Hem huvudwebbplats">
+		<![CDATA[<p>När man går in på Hem huvudwebbplats finner man en beskrivning av platsen i sin helhet och en lista över tidskrifter som finns på platsen. Härifrån kan man gå till tidskriftens hemsida (Hem), komma åt aktuella häften samt registrera sig. Huvudwebbplatsens navigationsfunktioner är: </p><p><strong>Övre navigationsområdet</strong></p><p><em>Hem</em> och <em>Om tidskriften</em> som tillhandahåller informtion om sajten (till skillnad från en individuell tidskrift). </p><p><em>Logga in</em> tillåter att man skapar en användarprofil, om man inte redan gjort det. Se {help_topic key="user.registerAndProfile" text="Registrera och Profil"}. Loggin-länken kommer att ersättas av Min sida när du har registrerat dig och loggat in. Se {help_topic key="user.userHome" text="Min sida"}.</p><p><em>Registrera</em> tillåter att man lägger till en tidskrift på Min sida. </p><p><em>Sök</em> tillåter att man söker i hela webbplatsen eller bara i en enskild tidskrift. Se {help_topic key="user.searchAndBrowse" text="Sök och Bläddra"}.</p><p><strong>Högra navigationsområdet</strong></p><p><em>OJS-länken</em> tar dig till Public Knowledge Project som tillhandahåller resurser för OJS och andra relaterade programvaror.</p><p><em>Hjälp</em> tillhandahåller kontext-sensitiv support.</p><p>Formuläret under <em>Användare</em> tillåter att man loggar in med sitt användarnamn och lösenord. Efter att du har loggat in kommer du till Min sida och där finns det länkar under <em>Användare</em> till en lista av tidskrifter som du har registrerat dig för; till din profil; och för att logga ut. </p><p><em>Språk</em> tillåter att man väljer språk som OJS understödjer. </p><p>Sökfältet under <em>Tidskriftsinnehåll</em> tillåter att man söker på webbsidan på olika sätt. För en mer omfattande sökning klicka på Sök i övre navigationsområdet </p><p><em>Fontstorlek</em> tillåter att man ökar eller minskar fontstorleken. </p>]]>
+</section>
+
+
+<section title="Tidskriftens hemsida">
+		<![CDATA[<p>Hemsidan för en tidskrift kommer upp när man klickar på <em>Se tidskrift</em> eller <em>Aktuellt häfte</em> under tidskriftens namn under Hem eller när man klickar på tidskriftens namn under <em>Min sida</em>. Tidskriftens webbsida består av följande: </p><p><strong>Övre navigationsområdet</strong></p><p><em>Hem</em> och <em>Om tidskriften</em> som tillhandalhåller information om tidskriften. </p><p><em>Loggin</em> och <em>Registrera</em> fungerar som ovan men omdirigerar till tidskriftens hemsida snarare än webbplatsens Hem. </p><p><em>Min sida</em> kommer upp när man loggar in och visar användarens hemsida. Denna sida tillhandahåller länkar med vilka man kan hantera sina roller i tidskriften och även hantera sitt konto. </p>	<p><em>Sök</em> tillhandahåller omfattande sökfunktioner men används endast för att söka i den tidskrift som just nu granskas. </p>	<p><em>Aktuellt</em> visar innehållsförteckningen i aktuellt häfte om det finns en sådan. </p>	<p><em>Arkiv</em> visar tidigare publicerade häften, om det finns sådana. Om man klickar på ett tidigare publicerat häfte kommer innehållsförteckningen upp. </p><p><em>Tillkännagivanden</em> visas i det övre navigationsområdet om Tidskriftsansvarig har aktiverat denna funktion. Genom att klicka på denna länk kommer man till sidan Tillkännagivanden. </p><p><strong>Högra navigationsområdet</strong></p><p><em>OJS-länken</em> leder till Public Knowledge Projects webbsida som tillhandahåller resurser för OJS och andra relaterade programvaror. </p><p><em>Hjälp</em> tillhandahåller kontext-sensitiv support. </p><p>Formuläret under <em>Användare</em> tillåter att man kan logga in om man har användarnamn och lösenord. Efter att du har loggat in kommer du till Min sida och där finns det länkar under <em>Användare</em> till en lista över tidskrifter som du har registrerat dig för; till din profil; och för att logga ut. </p><p><em>Språk</em> tillåter att man väljer språk som OJS understödjer. </p><p>Sökfältet under <em>Tidskriftsinnehåll</em> tillåter att man söker på webbsidan på olika sätt. För en mer omfattande sökning klicka på Sök i övre navigationsområdet </p><p><em>Fontstorlek</em> tillåter att man ökar eller minskar fontstorleken. Det finns också information för Författare, Läsare och Bibliotekarier i högra navigationsområdet.  </p>]]>
+</section>
+</topic>

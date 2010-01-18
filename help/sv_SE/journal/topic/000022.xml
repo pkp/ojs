@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000022.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roller - Författtare 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000022" locale="en_US" title="Författare" toc="journal/toc/000003" key="journal.roles.author">
+	<section>
+		<![CDATA[<p>Författare kan registrera sig och skicka in material till tidskriften direkt via tidskriftens webbsida. Författaren ombeds att ladda upp materialet och lägga in metadata och indexeringsinformation. (Metadata förbättrar sök-kapaciteten för forskningsresultat online och för denna tidskrift.) Författaren kan ladda upp Tilläggsfiler i form av dataset, forskningsinstrument eller källtexter som berikar materialet samtidigt som de bidrar till mer öppen och robust forskning. Författaren har möjlighet att följa manuskriptet genom den redaktionella processen &mdash; samt delta i manusredigering och korrektuläsing &mdash; genom att logga in på tidskriftens webbsida.</p><p>Mer information finns {help_topic key="editorial.authorsRole" text="här"}.</p>]]>	
+	</section>
+	
+</topic>

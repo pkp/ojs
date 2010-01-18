@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000028.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Administrativa sidor - Läsarverktyg - Kontexter
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000028" locale="en_US" title="Kontexter" toc="journal/toc/000005" key="journal.managementPages.readingTools.contexts">
+	<section>
+		<![CDATA[<p>Varje uppsättning av Läsfunktioner består av individuella verktyg, t ex Relaterade studier eller Online fora, där varje verktyg utgörs av ett antal relevanta databaser grupperade i kontexter. Dessa databaser, och de kontexter de är organiserade i, kan skapas, redigeras eller tas bort.</p><p><em> Metadata i kontexter</em>.Tidskriftsansvarig kan förändra namnet på verktyget. Metadata gör det också möjligt att bestämma huruvida Författarens sökord (default), namn (t ex att använda med hans/hennes andra arbeten), eller geografiska indexeringstermer kan användas för att söka i databaser. Ett annat alternativ, som används tillsammans med Definiera termer, tillåter Läsaren att välja sökord genom att dubbelklicka på vilket ord som helst i texten. Tidskriftsansvarig kan använda dessa alternativ och bygga upp egna läsarverktyg.</p><p><em>Redigera sökning för varje verktyg </em>. Genom att använda Sök kan Tidskriftsansvarig redigera eller ta bort en URL för varje databas i ett verktyg, samt omgruppera databaserna som finns i verktygen. För varje databas tillhandahålls en URL som hjälper Läsaren att lära sig mer om databasen, och en URL som möjliggör en sökning. Det finns två typer av sökfunktioner som kan sättas upp, en FÅ-TAG-I sökfunktion, och om detta inte fungerar, så finns det en POST sökfunktion att tillgå.  </p>]]>
+	</section>
+	
+		<section title="FÅ-TAG-I sökfunktion">
+		<![CDATA[<p>För FÅ-TAG-I sökfunktionen söker man och ser på resultatets URL. T ex på Google ger en sökning på "FOOBAR" </p><p><samp class="code">http://www.google.ca/search?hl=en&q=FOOBAR&meta=</samp></p><p>Ersätt söktermen, FOOBAR, med variabeln &#123;$formKeywords&#125;. När OJS finner denna variabel ersätts den med det rätta värde från målets metadata. Detta resulterar i en ny URL </p><p><samp class="code">http://www.google.ca/search?hl=en&q=&#123;$formKeywords&#125;&meta=</samp></p><p> för RT. Dock, eftersom de andra variablerna är onödiga i det här fallet kan vi använda en förenklad URL </p><p><samp class="code">http://www.google.ca/search?q=&#123;$formKeywords&#125;</samp></p><p> för RT.</p>]]>
+	</section>
+			
+	<section title="POST sökning">
+		<![CDATA[<p>För POST sökning är det mer komplicerat. I Google kan man se sidans källa och notera <samp class="code">&lt;form action="/search" ...&gt;</samp> vilket ger en base URL att utgå ifrån<samp class="code">http://www.google.com/search</samp>. Man kan då se varje <samp class="code">&lt;input ...&gt;</samp> och<samp class="code">&lt;select ... &gt;</samp> element, och lägga till dem som<samp class="code">name=value</samp> par, åtskilda genom<samp class="code">&</samp> i slutet av URL'n. Det element som specifierar den textruta som accepterar text som användaren har lagt in (som i Googles fall heter <samp class="code">q</samp>) ska återigen ha ett värde av &#123;$formKeywords&#125;, som ersätts med det rätta värdet.</p><p> En något lättare väg för POST funktioner är att kopiera HTML-källan till en fil, ändra <samp class="code">method=post</samp> till<samp class="code">method=get</samp> i det lämpliga fältet och ändra funktionens <samp class="code">action=</samp>värde så att det blir en komplett URL, t ex <samp class="code">http://www.google.com/search</samp> i stället för<samp class="code">/search</samp>. Man kan sedan se den modfierade HTML-filen i sin webbläsare och använda FÅ-TAG-I metoden ovan för att konstruera URL'n.</p>Då vissa sökmotorer inte understödjer FÅ-TAG-I funktionen kan man lägga in POST funktionens data i Sök POST data. Om exemplet ovan hade krävt att data tas fram, ska man lägga in <samp class="code">http://www.google.com/search</samp>för sök-URL'n och <samp class="code">q=&#123;$formKeywords&#125;</samp> för POST data. </p><p>Se till att URL fungerar som de ska genom att ersätta &#123;$formKeywords&#125;med en term i URL'n och testa den för att se om den visar det förväntade sökresultatet. Notera att med POST funktionen är det inte alltid möjligt beroende på sajten. För URL som inte är inlagt i de rätta sökmotorerna är en annan möjlighet att använda Google och begränsa efter sajt. Man kan använda en förfrågan<samp class="code">site:mysite.com FOOBAR</samp> i Google för att söka enbart på termen "FOOBAR" i mysite.com. Detta används i nuvarande RT för flera sajter. </p>]]></section>
+</topic>

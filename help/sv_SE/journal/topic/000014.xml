@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000014.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Användare - Epost-användare
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000014" locale="en_US" title="Epost-användare" toc="journal/toc/000002" key="journal.users.emailUsers">
+	<section>
+		<![CDATA[<p>Tidskriftsansvarig har möjlighet att skicka epost till alla användare eller vissa grupper av användare. Notera att alla läsare kan skickas en epost med information om publicering av ett nytt häfte tillsammans med Innehållsförteckningen, eller i de fall där artiklar publiceras kontinuerligt {help_topic key="publishing.index" text="publishing"}, med titel och författare på artikeln. Tidskriften bör också ha en Integritetspolicy som kan läggas in under Setup, steg 2.3, och som finns tillgänglig under Om tidskriften. Den beskriver hur integriteten hos registrerade användare upprätthålls.</p>]]>	
+	</section>
+	
+</topic>

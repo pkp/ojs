@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Sektionsredaktörens roll - Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000004" locale="en_US" title="Sektionredaktörens roll" toc="editorial/toc/000000" subtoc="editorial/toc/000004" key="editorial.sectionEditorsRole">
+	<section>
+		<![CDATA[<p>Sektionsredaktörer hanterar vanligtvis både granskningen av inkomna manuskript och redigering av de som accepteras. Däremot, beroende på tidskriftens policy, kan en Sektionsredaktör få i uppdrag att enbart hantera granskningen och att Redaktören därefter tar över i rollen som Sektionsredaktör. <p></p>Det är Redaktören som skickar förfrågan till Sektionsredaktören och ber honom/henne hantera manuskriptet genom den redaktionella processen.</p>]]>	
+	</section>
+</topic>

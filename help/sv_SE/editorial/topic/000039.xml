@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000039.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Layoutredaktörens roll - Manuskript
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000039" locale="en_US" title="Manuskript" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.submissions">
+	<section>
+		<![CDATA[<p>När Layoutredaktören loggar in kommer han/hon ha tillgång till Min sida. På denna sida finns en länk till Layoutredaktörens sida Aktiva manuskript, liksom en länk till tidigare färdigställda manuskript via länken Arkiv samt en länk som visar Innehållsförteckning över eventuella framtida häften. </p><p><em>Aktiva manuskript</em><br />Genom att klicka på länken Aktiv från Min sida kommer Layoutredaktören till sidan Aktiva manuskript. Denna lista innehåller arbeten som han/hon har tillfrågats att layouta. Layoutprocessen kan initieras genom att klicka på en av manuskripttitlarna i listan. </p><p><em>Arkiv</em><br />Genom att klicka på Arkiv från Min sida kommer Layoutredaktören till Arkiv. Denna lista visar de arbeten som har fullföljt layoutprocessen och publicerats.</p><p><em>Häften</em><br />Genom att klicka på Framtida häften på Min sida kommer Layoutredaktören till en lista över framtida häften som ännu ej har publicerats. Detta tillåter Layoutredaktören att producera ett häfteskorrektur i sin helhet. </p>]]>	
+	</section>
+</topic>

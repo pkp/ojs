@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publiceringsprocessen - Skapa häfte
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000001" locale="en_US" title="Skapa häfte" toc="publishing/toc/000000" key="publishing.createIssue">
+	<section>
+		<![CDATA[<p>Innan Redaktören använder sidan Schemaläggning (se sidan Redigera för manuskriptet) för att samla ett häfte för publicering, måste han/hon gå till Skapa häfte. Häftet måste identifieras med rätt nummer och/eller titel, beroende på valet som gjorts under Setup (t ex Vol 2, Nr 5, 2008). Även om OJS under Skapa häfte uppmärksammar Redaktören på nästföljande häfte, kan Redaktören välja att bortse ifrån de automatiskt genererade volym- och häftesnummer samt år, och välja andra alternativ. Redaktören kan också välja att lägga in en titel på häftet som då kommer synas över Innehållsförteckningen vilket t ex kan användas för temahäften.</p><p><em>Abonnemangskontroll</em>. Om Tidskriftsansvarig har aktiverat Abonnemangskontroll (tillgänglig under Setup steg 4.1), kan Redaktören välja att aktivera abonnemangskontrollen på per-häfte basis. Att byta status för tillgång till abonnemang tillåter abonnenter att få tillgång till häftet. Om man däremot aktiverar status Open Access blir allt material fritt tillgängligt. Dessutom, även om Redaktören har aktiverat status Abonnemang så kan han/hon lägga in ett datum då materialet kan släppas fritt.</p><p><em>Skapa en omslagssida</em>. Det finns också ett alternativ för att ladda upp en illustration för omslaget, i formatet .jpg, .png eller .gif. Denna fil blir tillgänglig på innehållsförteckningen där den kommer listas som Omslagssida. Den kommer att synas på tidskriftens hemsida så länge häftet är aktuellt och kan klickas på för att komma till innehållsförteckningen för det aktuella häftet. När häftet har arkiverats kommer omslaget vara tillgängligt tillsammans med häftet genom innehållsförteckningen. </p><p><em> Aktuella, Framtida och Äldre häften</em>. Under Framtida häften kan Redaktören schemalägga artiklar som ska publiceras i nästa och kommande häften. Det kan vara lämpligt för Redaktören att hålla två eller tre framtida häften 'aktiva' för att t ex bättre kunna fördela materialet i volymen. </p>]]>
+	</section>
+	</topic>

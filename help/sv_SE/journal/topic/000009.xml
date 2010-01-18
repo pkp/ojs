@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000009.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Administrativa sidor - Läsarverktyg
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000009" locale="en_US" title="Läsarverktyg" toc="journal/toc/000001" subtoc="journal/toc/000005" key="journal.managementPages.readingTools">
+	<section>
+		<![CDATA[<p>Tidskriftsansvarig har möjlighet att välja en uppsättning läsarverktyg som återfinns i en kolumn till höger om materialet i de indexerade sektionerna av tidskriften (t ex artiklar men inte annonser för konferenser). Läsarverktygen är utformade för att hjälpa både erfarna och nya läsare genom att erbjuda bred tillgång till relaterat material från ett urval av i huvudsak open access källor. Verktygen använder sig av Författarnas sökord för att leta i relevanta databaser som presenteras för läsarna i ett nytt fönster. Läsarna har tillgång till verktyg som var och ett innehåller val av databaser tillsammans med information om databasen.</p><p>Under Alternativa läsarverktyg kan Tidskrifsansvarig välja generella tidskriftsverktyg som t ex 'Om Författaren', 'Hur citera material', och 'Skriva ut', och kan också välja mellan ett antal relaterade verktyg (t ex Humaniora, Utbildning, Fysik) som leder till ämnes- och områdesspecifika resurser. Tidskriftsansvarig har möjlihet att redigera eller ta bort existerande Relaterade verktyg eller lägga till nya. Se även {help_topic key="user.readingTools" text="Läsarverktyg"} på tidskriftens webbsida.</p>]]>
+	</section>
+	
+</topic>

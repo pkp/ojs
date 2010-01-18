@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000030.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Granskarens roll Index - Manuskript 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000030" locale="en_US" title="Manuskript" toc="editorial/toc/000008" key="editorial.reviewersRole.submissions">
+	<section>
+		<![CDATA[<p>När Granskaren loggar in sig på tidskriften kommer han/hon till Min sida. Genom att klicka på rollen som Granskare (eftersom en Granskare kan inneha flera roller, som t ex Författare) kommer Granskaren till Manuskriptsidan. På denna sida finns en lista över manuskript som Granskaren har inbjudits att granska eller som redan är under granskning. Listan över manuskript visar också i vilken granskningsomgång de befinner sig, eftersom vissa manuskript har gått in i en andra omgång av granskningen, till följd av Redaktörens beslut om att manuskriptet ska återsändas för granskning. Denna sida ger också tillgång till tidigare rapporter som Granskaren har utfört för tidskriften.</p>]]>	
+	</section>
+</topic>

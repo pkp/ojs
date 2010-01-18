@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000015.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roller - Tidskriftsansvarig
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000015" locale="en_US" title="Tidskriftsansvarig" toc="journal/toc/000003" key="journal.roles.journalManager">
+	<section>
+		<![CDATA[<p>Tidsriftsansvarig är ansvarig för hantering av publiceringssystemet. Detta kräver inga avancerade tekniska kunskaper men innebär att man får fylla i mallar och ladda upp filer. Tidskriftsansvarig utför {help_topic key="journal.managementPages.setup" text="Setup"} för tidskriften och allokerar Redaktörer, Sektionsredaktörer, Manusredaktörer, Layoutredaktörer, Korrekturläsare och Granskare. Alternativt, om Granskares namn och epost redan existerar i en annan databas, kan de importeras till systemet genom funktionen Importera användare under {help_topic key="journal.managementPages.importExport" text="Import/Export Data"}. Tidskriftsansvarig har också tillgång till tidskriftens övriga administrativa funktioner och kan skapa nya sektioner för tidskriften, redigera standard-epost, hantera  {help_topic key="journal.managementPages.readingTools" text="Läsarverktyg"} som finns tillgängliga för tidskriften samt följa upp {help_topic key="journal.managementPages.statsAndReports" text="Tidskriftsstatistik"} som systemet kan generera.</p><p>Notera att även om Tidskriftsansvarigs roll till synes är en per-tidskrift-roll, så bör Tidskriftsansvariga generellt uppfattas som ansvariga för installationen då de har möjlighet att anta roller för användare även i andra tidskrifter.</p>]]>
+	</section>
+		
+</topic>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000030.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Administrativa sidor - System-plugins
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000030" locale="en_US" title="System-plugins" toc="journal/toc/000001" key="journal.managementPages.plugins">
+	<section>
+		<![CDATA[<p>Sidan System-plugins tillåter Tidskriftsansvarig att se en lista över de plugins som finns installerade i OJS och utföra alla de funktioner som respektive plugin möjliggör. För mer information, se dokumentation för varje plugin som finns i OJS översikt över plugins (/path/to/install/plugins). </p>]]>
+	</section>
+	
+</topic>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Användare Index 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000002" locale="en_US" title="Användare" toc="journal/toc/000000" subtoc="journal/toc/000002" key="journal.users.index">
+	<section>
+		<![CDATA[<p>Det är Tidskriftsansvariges uppgift att hantera användare i OJS. Detta inkluderar att skapa användare, stänga konton, hantera roller etc. Tidskriftsansvarig kan söka bland och lägga till befintliga roller, modifiera profiler, sammansmälta konton, och kontakta grupper av användare .</p>]]>	
+	</section>
+
+</topic>

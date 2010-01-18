@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000033.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Administrativa sidor - Sammansmälta användare
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000033" locale="en_US" title="Sammansmälta användare" toc="journal/toc/000002" key="journal.managementPages.mergeUsers">
+	<section>
+		<![CDATA[<p>Funktionen Sammansmälta användare, som finns tillgänglig under Tidskriftshantering och Användare, tillåter Tidskriftsansvarig att sammansmälta två användarkonton till ett enda konto, och föra över redigeringsuppgifter, manuskript och en mängd andra uppgifter från ett konto till ett annat och tar bort det första.</p>
+		
+		<p>Följande uppgifter överförs:</p>
+			<ul>
+				<li>Artikelns författare</li>
+				<li>Offentliga kommentarer på artikeln</li>
+				<li>Artikelns noter</li>
+				<li>Redaktörens uppdrag och beslut</li>
+				<li>Granskningsuppdrag</li>
+				<li>Layoutredaktörens suppdrag</li>
+				<li>Korrekturläsarens uppdrag</li>
+				<li>Artikelns epost och processbeskrivning</li>
+				<li>Granskares loggin-detaljer</li>
+				<li>Roller</li>
+			</ul>
+		<p>Följande uppgifter <strong>not</strong> överförs:</p>
+			<ul>
+				<li>Sessioner</li>
+				<li>Abonnemang</li>
+				<li>Användares status (t ex om en användare har registrerat sig för att motta information om tidskriften)</li>
+				<li>Medlemsskap i Redaktionsteam</li>
+				<li>Sektionsredaktörens status om sin sektion</li>
+				<li>Information om användarprofil (t ex förnamn, efternamn)</li>
+			</ul>
+		<p>Denna funktion bör användas med försiktighet då den inte är reversibel och involverar en överföring av uppgifter från en användare till en annan.</p>]]>
+	</section>
+</topic>

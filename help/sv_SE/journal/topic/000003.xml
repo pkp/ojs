@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roller Index 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000003" locale="en_US" title="Roller" toc="journal/toc/000000" subtoc="journal/toc/000003" key="journal.roles.index">
+	<section>
+		<![CDATA[<p>OJS använder ett antal traditionella roller för tidskriftspublicering för att hantera publiceringsprocessen. En person kan ha mer än en roll så att tidskriften t ex kan hanteras av en person som innehar alla roller, exkl Granskare och Författare. Mer vanligt är kanske att en Tidskriftsansvarig även innehar rollen som Redaktör och Sektionsredaktör. Granskare är ofta registrerade som Författare. </p><p><em>Tillgång bestäms av roll</em>. Varje roll har sin förutbestämda tillgång till redaktions- och publiceringsprocessen. T ex loggar Författare och Granskare in sig på sitt respektive område på tidskriftens webbsida; och Sektionsredaktörer tillåts endast att se de manuskript de tilldelats. Detta betyder åtminstone i princip att det inte finns en potentiell konflikt om en Sektionsredaktör skickar in en artikel till tidskriften för granskning och eventuell publicering.</p>]]>	
+	</section>
+
+</topic>

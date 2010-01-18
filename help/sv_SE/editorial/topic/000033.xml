@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000033.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Författarens roll Granskning Index - Oberoende granskning
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000033" locale="en_US" title="Oberoende granskning" toc="editorial/toc/000010" key="editorial.authorsRole.review.peerReview">
+	<section>
+		<![CDATA[<p>Flera datum är registrerade på denna sida, inklusive datum för Redaktörens förfrågan till Granskare, datum för granskningsrapporter på gång och datum för färdiga rapporter. Författaren kan gå till tidskriftens granskningspolicy {help_topic key="user.about" text="Om tidskriften"} för att läsa mer om hur granskningsprocessen går till. Granskare har möjlighet att ladda upp filer till Författaren inklusive markerade versioner av manuskriptet. (För att se uppladdade filer klickar Författaren på filnamnet intill Ladda upp fil, och öppnar direkt eller sparar ner den på sin dator för att sedan öppna den. </p>]]>	
+	</section>
+</topic>

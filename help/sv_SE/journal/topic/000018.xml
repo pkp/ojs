@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000018.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roller - Layoutredaktör
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000018" locale="en_US" title="Layoutredaktör" toc="journal/toc/000003" key="journal.roles.layoutEditor">
+	<section>
+		<![CDATA[<p>Layoutredaktören omvandlar de redigerade versionerna till korrektur i HTML, PDF, PS etc, dvs de format som tidskriften valt ut för den elektroniska publiceringen. OJS tillhandahåller inte mjukvara för konvertering av ordbehandlade dokument till korrektur-format, så Layoutredaktören bör ha tillgång till och kunskap om externa mjukvarupaket för att skapa korrektur (med t ex Adobe Acrobat för PDF's eller Dreamweaver för HTML), som visar artiklarna på skärm i läsbar och för tidskriften relevant layout (genom att konsultera den layout som andra akademiska förlags tidskrifter använder, t ex Highwire Press för naturvetenskap, eller Muse Project för humaniora)</p><p>Mer information finns {help_topic key="editorial.layoutEditorsRole" text="här"}.</p>]]>	
+	</section>
+
+</topic>

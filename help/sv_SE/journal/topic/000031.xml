@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000031.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Administrativa sidor - Importera/Exportera
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000031" locale="en_US" title="Importera/Exportera data" toc="journal/toc/000001" key="journal.managementPages.importExport">
+	<section>
+		<![CDATA[<p>Funktionen Importera/Exportera data som är tillgänglig under Tidskriftshantering, tillåter Tidskriftsansvarig att lägga in och extrahera data från OJS. </p><p> Importera/Exportera data görs genom att använda olika plugins, beroende på format och typ av data. För mer information, se respektive plugins dokumentation som finns tillgänglig i översikten över plugins i OJS. Fem Importera/Exportera plugins kommer med OJS och är beskrivna härunder.</p><p>Importera/Exportera funktionalitet finns också tillgänglig som ett 'command-line' verktyg; för mer information se tools/importExport.php.</p>]]>
+	</section>
+		
+	
+	
+	<section title="Användar XML plugin">
+			<![CDATA[<p>Användar XML plugin kan användas för att importera och exportera användare och deras roller. För mer information se XML DTD i "plugins/importexport/users/users.dtd".</p>]]>
+	</section>
+	
+		
+	
+	<section title="Erudit artikel export plugin">
+			<![CDATA[<p>Erudit artikel export plugin möjliggör export av enskilda artiklar för fulltext-indexering genom att använda Erudits XML DTD. För mer information se <a href="http://www.erudit.org">http://www.erudit.org</a>.</p>]]>
+	</section>
+	
+		
+	
+	<section title="Artikel &amp; häftes XML plugin">
+			<![CDATA[<p>Artikel &amp; häftes XML plugin är den bästa metoden för att importera och exportera en större mängd av artiklar och häften. Den kan användas för att importera och exportera enskilda artiklar och häften samt flera häften inklusive omfattande metadata. För information om denna plugin se XML DTD i "plugins/importexport/native/native.dtd".</p>]]>
+	</section>
+	
+	
+	
+	
+	<section title="PubMed XML export plugin">
+			<![CDATA[<p>"PubMed XML export plugin tillhandahåller en importera/exportera funktion för att generera bibliografisk information för artiklar i aktuellt häfte i 'PubMed standard publisher data format XML' för indexering i NLM PubMed/MEDLINE. Detaljer om XML format och krav på data-kvalitet finns på <a href="http://www.ncbi.nlm.nih.gov/entrez/query/static/spec.html">http://www.ncbi.nlm.nih.gov/entrez/query/static/spec.html</a>. Mer information om denna plugin finns på 'plugins/importexport/pubmed'.</p>]]>
+	</section>
+
+	
+	
+	
+	<section title="Crossref XML export plugin">
+			<![CDATA[<p>Crossref XML export plugin tillhandahåller en importera/exportera funktion för att generera metadata för artiklar och häften som ska indexeras i CrossRef. Detaljer om XML format och krav på data-kvalitet finns på <a href="http://www.crossref.org/schema">http://www.crossref.org/schema</a>. Mer information om denna plugin finns på 'plugins/importexport/crossref'.</p>]]>
+	</section>
+	
+</topic>

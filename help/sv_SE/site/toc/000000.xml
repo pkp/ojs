@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Innehållsförteckning för Webbplatsens administration. 
+  *
+  * $Id$
+  -->
+
+<toc id="site/toc/000000" locale="en_US" title="Webbplatsens administration" parent_topic="site/topic/000000">
+	<topic id="site/topic/000001" title="Installation" />
+	<topic id="site/topic/000002" title="Hantering av webbplatsen" />
+	<topic id="site/topic/000003" title="Administrativa funktioner" />
+	<breadcrumb url="site/topic/000000" title="Webbplatsens administration" />
+</toc>

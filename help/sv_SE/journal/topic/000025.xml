@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000025.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Abonnemang 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000025" locale="en_US" title="Abonnemang" toc="journal/toc/000001" key="journal.managementPages.subscriptions">
+	<section>
+		<![CDATA[<p>OJS understödjer abonnemangstidskrifter genom att tillhandahålla abonnemangsverktyg och motsvarande skydd av lösenord för tidskriftens omline-material. Abonnemang kan hanteras för individuella användare, organisationer eller institutioner. En abonnemangstidskrift kan också erbjuda fri tillgång till tidigare publicerat material i form av försenad open access. Under Häfteshantering kan Redaktören tillåta att läsare får fri tillgång till materialet i ett häfte eller individuella artiklar, 0-24 månader efter att de publicerats. Tidskriftsansvarig, Redaktörer, Sektionsredaktörer, Layoutredaktörer, Manusredaktörer och Korrektuläsare har alltid fri tillgång till tidskriften som vore de abonnenter. </p><p><em>Sätta upp abonnemangsmodul</em>. Tidskriftsansvarig måste indikera under Setup, 4.1 Tillgång- och säkerhetsinställningar, att tidskriften kommer använda detta system för att hantera dess abonnemang och att någon som allokerats som Tidskriftsansvarig eller Abonnemangsansvarig har valts ut för att hantera denna funktion.</p>]]>	
+	</section>
+	
+		<section title="Abonnemangstyper">
+		<![CDATA[<p><em>Skapa typer av abonnemange</em>. Första steget när man sätter upp abonnemangshanteringen är att bestämma de olika typerna av abonnemang som tidskriften erbjuder. Tidskrifter erbjuder vanligtvis t ex privata abonnemang eller institutionella. Vissa tidskrifter har specialerbjudande för medlemmar av en organisation, eller för studenter. OJS möjliggör hantering av tryckt- och/eller online-abonnemang. Mer än en typ av abonnemang kan skapas för att täcka längre perioder (12 månader, 36 månader).</p><p><em> Alternativa abonnemangstyper</em>. För institutionella abonnemang, används 'validering via domän eller IP-verifiering' eftersom alla medlemmar av en institution som kommer in via dess domän eller IP-adress, får tillgång utan lösenord. På samma sätt ska alternativet 'medlemmar i en förening eller organisation' användas för medlemsabonnemang, antingen det är fritt för medlemmarna eller rabatterat. Använd alternativet 'offentligt synligt' för att göra abonnemangstypen och priset synligt under Abonnemang under Om tidskriften. Enbart dessa abonnemangstyper visas under Om tidskriften, emedan interna typer, t ex för personal, inte återfinns där.</p>]]>
+	</section>
+
+	
+	<section title="Skapa abonnemang">
+		<![CDATA[<p><em>Skapa abonnemang</em>. När det gäller privata abonnenter måste Abonnemanngsansvarig registrera dessa som Läsare, om han/hon inte redan är registrerad, och sedan under sidan Skapa abonnemang, lägga in typ och datum för abonnemanget. När denna information sparas kommer abonnenten få en epost med användarnamn som ger tillgång till allt publicerat material tills dess abonnenten tas bort ifrån abonnemangslistan av Tidskriftsansvarig. </p><p><em>Institutionella- och föreningsabonnemang </em>. För institutionella abonnemang måste kontaktpersonen vid institutionen registreras som Läsare och sedan plockas upp av Abonnemangsansvarig under sidan Skapa abonnemang. Kontaktpersonen måste tillhandahålla institutionens domän och/eller IP-adresser som används för att validera kontot, och därigenom bespara respektive användare från att registrera sig för att komma åt materialet. Organisationers medlemslistor kan importeras i OJS via funktionen Importera användare, under Tidskriftshantering</p>]]>
+	</section>
+	
+	
+	<section title="Abonnemangspolicy">
+		<![CDATA[<p>Under Abonnemangspolicy kan Tidskriftsansvarig lägga in kontaktinformation om Abonnemangsansvarig, som sedan återfinns under Om tidskriften; lägga in ytterligare information om abonnemang som också återfinns under Om tidskriften (abonnemangstyp och prisstruktur finns redan där); bestämma deadline för betalningspåminnelser (när abonnemanget håller på att gå ut); ställa in open access alternativ; och definiera policy för Författarens möjligheter att arkivera själv, som också återfinns under Om tidskriften.</p>]]>
+	</section>
+	
+
+</topic>

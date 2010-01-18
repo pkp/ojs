@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000037.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Manusredaktörens roll - Manuskript
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000037" locale="en_US" title="Manuskript" toc="editorial/toc/000012" key="editorial.copyeditorsRole.submissions">
+	<section>
+		<![CDATA[<p>När Manusredaktören loggar in, genom att klicka på Manusredaktör på Min sida, kommer han/hon till listan över manuskript. Denna lista innehåller de artiklar som Manusredaktören har ombetts att redigera. Tillgång ges också via Arkiv till de manuskript som Manusredaktören har färdigställt tidigare.</p><p>För att komma till sidan Manusredigering för ett specifikt manuskript klickar Manusredaktören på titeln som återfinns i Listan över aktiva manuskript. </p>]]>	
+	</section>
+</topic>

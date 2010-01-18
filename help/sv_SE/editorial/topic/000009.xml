@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000009.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Författarens roll - Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000009" locale="en_US" title="Författarens roll" toc="editorial/toc/000000" subtoc="editorial/toc/000009" key="editorial.authorsRole">
+	<section>
+		<![CDATA[<p>Författaren kan logga in på tidskriftens webbsida för att följa manuskriptets gång och delta i den redaktionella processen. Om det är fler än en Författare, ombeds den inskickande Författaren ange den Författare med vilken all korrespondens ska ske och som därmed får tillgång till webbsidan.</p>]]>	
+	</section>
+</topic>
+
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Användargränssnitt - Sök och Bläddra
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000005" locale="en_US" title="Sök och Bläddra" toc="user/toc/000000" key="user.searchAndBrowse">
+	<section>
+		<![CDATA[<p>Tidskriftens innehåll kan sökas efter författare, titel, abstract och indexeringstermer. Fulltexten kan sökas i både HTML- och PDF-filformat. Alternativt kan Läsare, genom att använda funktionen Bläddra i högermarginalen, bläddra igenom innehållet efter häfte, författare och titel. Även i andra tidskrifter som publiceras genom denna installation kan man bläddra.</p>]]>
+	</section>
+	
+</topic>

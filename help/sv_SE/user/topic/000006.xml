@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000006.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Användargränssnitt - Läsarverktyg
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000006" locale="en_US" title="Läsarverktyg" toc="user/toc/000000" key="user.readingTools">
+	<section>
+		<![CDATA[<p>Tidskrifter som använder OJS tillhandahåller ett antal läsarverktyg som åtföljer det material som publiceras i de olika sektionerna av tidskriften. Läsarverktygen är avsedda att hjälpa både experter och nya läsare med att bygga en kontext för tolkning, utvärdering och användning av den forskning de läser om. Olika uppsättningar av läsarverktyg har utvecklats för en rad akademiska discipliner från vilka Tidskriftsansvarig kan välja, uppdatera och redigera, för att understödja läsarmiljön. Läsarverktygen gör det möjligt för Läsare att gå med i relevanta fora samt kontakta Författaren eller dela materialet med en annan Läsare.</p><p><em> Hur Läsarverktygen fungerar</em>. Läsarverktygen har tagits fram för att tillhandahålla en kontext för den specifika artikeln eller det materialet som de åtföljer. Verktygen öppnas i kolumnen till höger om artikeln eller materialet som läses. Läsaren får tillgång till materialets indexeringsinformation, tryckt version och Författarens biografi. Verktygen gör det möjligt för Läsarna att slå upp ord i materialet (genom att dubbelklicka på vilket ord som helst i HTML-versionen) och skicka en epost till Författaren eller till en annan Läsare. Verktygen kan också använda materialets nyckelord och lägga in dem i sökmotorer med open access databaser och andra resurser grupperade i kategorier som t ex Forskningsstudier, Författares andra arbeten, Press och Media, Statliga webbsidor etc, beroende på vilken uppsättning av verktyg som har valts. Läsare kan också komma åt bakgrundsinformation för varje vald resurs. I varje kategori, vare sig det är Studier, Media eller Instruktioner, tillhandahåller verktygen 'multiple choice' eller databaser som kan konsulteras, samt en länk till Om tidskriften för resursen ifråga. (Tidskriftsansvarig har möjlighet att redigera eller ta bort befintliga resurser samt lägga till nya.)</p>]]>	
+	</section>
+	
+</topic>

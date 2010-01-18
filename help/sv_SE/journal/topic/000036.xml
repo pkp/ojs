@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000036.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Granskningsformulär
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000036" locale="en_US" title="Granskningsformulär" toc="journal/toc/000001" key="journal.managementPages.reviewForms">
+	<section>
+		<![CDATA[<p>Per automatik tillåter OJS Granskare att lägga in sina rapporter via ett enkelt formulär med två text-rutor: en fält bara för Redaktörens ögon och ett för både Författarens och Redaktörens ögon. Tidskriftsansvarig kan utöka denna funktion genom att skapa egna formulär. </p>
+		<p>Tidskriftsansvarig kan skapa ett Sektionsrelaterat formulär så att det automatiskt genereras för den sektionen: om mer än ett formulär är aktivt kan Redaktören ändå bortse ifrån det automatiskt genererade formuläret när en Granskare är allokerad på ett manuskript</p>
+		
+		<p><strong>'Låsta' granskningsrapporter</strong> Hur många formulär som helst kan skapas, dock kan man bara redigera och ta bort tills dess att formuläret har aktiverats (speciellt när en Redaktör allokerar ett manuskript på en Granskare och kräver att han/hon använder ett skapat formulär). Så snart formuläret har aktiverats blir det 'låst'; detta för att garantera en permanent historik. Ett skapat formulär kan avaktiveras och flyttas från listan över de formulär som är tillgängliga; det kan också kopieras genom att använda funktione Kopiera. Båda funktionerna diskuteras nedan.</p>]]>	
+	</section>
+	
+	
+	<section title="Skapa ett Granskningsformulär">
+		<![CDATA[<p>För att skapa ett granskningsformulär måste Tidskriftsansvarig klicka på länken Granskningsformulär från sidan Tidskriftshantering och sedan på Skapa formulär längst ner på sidan som kommer upp. Ett namn på och en beskrivning av formuläret måste läggas in. När man klickar på Spara förs Tidskriftsansvarig tillbaka till sidan Granskningsformulär där det nya formuläret visas.</p>]]>
+	</section>
+	
+	
+	
+	
+	<section title="Hantera granskningsformulär">
+		<![CDATA[<p>Tidskriftsansvarig har nu ett antal alternativ tillgängliga från sidan Granskningformulär för varje granskning:</p>
+		
+		
+		
+		
+		<p><strong>Redigera</strong> Genom att klicka på Redigera kan Tidskriftsansvarig ändra formulärets namn och beskrivning. Tidskriftsansvarig har också möjlighet att utöka formuläret genom att klicka på rubriken Ändra formulär: sidan listar då alla alternativ (textfält, radioknappar, rullistor och rutor som kan klickas i etc) som ligger i formuläret och tillåter honom/henne att lägga till nya detaljer genom att klicka på Ändra formulär. När en ny detalj har skapats kan Tidskriftsansvarig lägga in en beskrivande text och därmed utöka formuläret som Granskaren sedan ska fylla i. Så snart en detalj har skapats kan den redigeras eller tas bort tills dess att formuläet är 'låst' och därmed klart för att användas. Slutligen kan Tidskriftsansvrig klicka på Förhandsgranska för att se hur formuläret kommer presenteras för Granskaren. Alternativet Redigera tillåts endast tills dess att formuläret har använts en gång, då formuläret 'låses'.</p> 
+					
+			<p><strong>Aktivera/Avaktivera</strong> Genom att klicka på länken Aktivera kommer göra det valda formuläret till standard för en specifik tidskriftssektion (detta kan utföras ifrån Tidskriftssektioner under sidan Tidskriftshantering) och väljas av Redaktören när han/hon allokerar ett granskningsuppdrag. Avaktivera formuläret tar bort det som ett alternativ från dessa områden men tar inte bort själva formuläret</p>
+			
+			<p><strong>Kopiera</strong> Kopieringsfunktionen tillåter Tidskriftsansvarig att kopiera ett granskningsformulär som redan används fullt ut. Genom att klicka Kopiera, dupliceras formuläret i listan Granskningsformulär. Tidskriftsansvarig kan sedan ändra namnet på formuläret och redigera detaljerna vid behov.</p>
+			
+			
+			<p>Tidskriftsansvarig kan också kopiera vilka detaljer som helst från ett redigerbart formulär till ett annat. Tidskriftsansvarig måste då klicka på formulärets namn, klicka på Ändra formulär, välja de detaljer som skall kopieras genom att klicka i rutan till vänster om deras namn (eller, alternativt, klicka på Välj alla); från rullmenyn välja det formulär som detaljerna som ska kopieras till och sedan klicka Kopiera för att slutföra ändringen. Notera att de kopierade detaljerna fortfarande kan tas bort så länge formuläret inte har låsts och att individuella detaljer inte kan kopieras från formulär som redan har låsts. 
+						
+			<p><strong>Förhandsgranskning</strong> Länken Förhandsgranskning tillåter Tidskriftsansvarig att förhandsgranska formuläret. </p>
+						
+			
+			<p><strong>Ta bort</strong> Länken Ta bort kommer upp endast om formulet ännu inte har låsts. Om man klickar på länken kommer Tidskriftsansvarig få upp en ruta som frågar om man verkligen vill ta bort formuläret.</p>
+			
+			<p>Sidan Granskningsformulär listar också antalet aktuella granskningar under respektive formulär och antalet granskningar som har fullföljts med respektive formulär. </p>]]>
+			
+	
+	</section>
+</topic>

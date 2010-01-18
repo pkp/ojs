@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000007.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Användargränssnitt - Min sida
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000007" locale="en_US" title="Min sida" toc="user/toc/000000" key="user.userHome">
+	<section>
+		<![CDATA[<p>När en användare har loggat in sig visas Min sida i övre navigationsområdet. När man klickar på denna länk visas olika information beroende på om användaren bläddrar i en specifik tidskrift eller på webbsidan i sin helhet.</p>]]>	
+	</section>
+	
+
+<section title="Information om huvudwebbplatsens Min sida">
+		<![CDATA[<p>Om användaren är inloggad och bläddrar på huvudwebbplatsen kommer följande information att visas:</p>
+
+<p><em>Mina tidskrifter</em>. Användaren finner en lista över alla tidskrifter som han/hon har registrerat sig för, samt länkar till alla roller (Författare, Redaktör etc.) på per-tidskrift basis. Om användaren även är Huvudadministratör, kommer det också finnas länkar till webbsidans administrativa sidor.</p><p><em>Mitt konto</em>. Användaren kan använda länkar för att göra justeringar i kontot, inkl. att registrera sig för andra tidskrifter, redigera sin profil, ändra lösenord och logga ut. </p>]]>
+
+</section>
+
+<section title="Information om tidskriftens Min sida">
+		<![CDATA[<p>Om användaren är inloggad och bläddrar i en specifik tidskrift, visas information endast för denna tidskrift. Dessutom, under <em>Mitt konto</em> ersätts länken för att registrera sig för andra tidskrifter med Visa mina tidskrifter (och därmed tas användaren tillbaka till huvudwebbplatsens Min sida).  </p>]]>
+
+</section>
+
+</topic>
+

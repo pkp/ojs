@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000015.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roller - Abonnemangsansvarig 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000032" locale="en_US" title="Abonnemangsansvarig" toc="journal/toc/000003" key="journal.roles.subscriptionManager">
+	<section>
+		<![CDATA[<p>Abonnemangsansvarig hanterar tidskriftens abonnemang och abonnemangstyper. </p><p>För mer information se {help_topic key="journal.managementPages.subscriptions" text="här"}.</p>]]>
+	</section>
+	
+</topic>

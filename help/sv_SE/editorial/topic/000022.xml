@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000022.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Sektionsredaktörens roll Index - Under redigering
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000022" locale="en_US" title="Under redigering" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.inEditing">
+	<section>
+		<![CDATA[<p>Manuskript i listan Under redigering genomgår redigerings-, layout- och korrekturläsningsprocessen. När en Sektionsredaktör eller en Redaktör klickar på en titel i listan Under redigering kommer de till sidan Manuskript under redigering. När ett manuskript har genomgått redigeringsfasen och har schemalagts för ett häfte tas det bort från listan och överförs till Arkivet.</p><p>För mer information om redigeringsprocessen, se {help_topic key="editorial.sectionEditorsRole.editing" text="In Editing"}.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Sektionsredaktörenss roll Index - Manuskript
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000005" locale="en_US" title="Manuskript" toc="editorial/toc/000004" subtoc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions">
+	<section>
+		<![CDATA[<p>Manuskript som Redaktören tilldelat Sektionsredaktören återfinns i Sektionsredaktörens lista över manuskript under granskning. Sektionsredaktörer har endast tillgång till de manuskript som de har tilldelats. Beroende på tidskriftens policy, kan Sektionsredaktörer bli ansvariga för enbart granskningsprocessen eller för både granskningen och redigeringen av manuskriptet.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000029.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Sektionsredaktörens roll Index - Redigering - Korrekturläsning
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000029" locale="en_US" title="Korrekturläsning" toc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing.proofreading">
+	<section>
+		<![CDATA[<p>När Sektionsredaktören har informerats av Layoutredaktören att denna har färdigställt korrekturet, väljer han/hon ut en Korrekturläsare, om detta inte redan har gjorts. Därefter skickar Sektionsredaktören en epost till Författaren med begäran om korrekturläsning. När Författaren har kontrollerat filen och eventuella tilläggsfiler skickar han/hon en epost till Korrekturläsaren, med kopia till Sektionsredaktören. Alla felaktigheter noteras av Författaren och Korrekturläsaren i Korrektur-rättelser, en ikon under Korrekturläsning, eftersom Författare och Korrekturläsare inte kan markera direkt i korrekturet.  När Korrekturläsaren har fullföljt sitt uppdrag informerar han/hon Layoutredaktören, med kopia till Sektionsredaktören, och Layoutredaktören påbörjar korrigeringen av korrekturet och eventuella tillläggsfiler. Slutligen meddelar Layoutredaktören Sektionsredaktören att manuskriptet är klart för att schemaläggas för publicering. Vid detta tillfälle kan Sektionsredaktören återigen önska att läsa filerna och, om han/hon är nöjd, schemalägga manuskriptet för publicering genom att välja ett häfte under Schemaläggning och klicka "{translate key="common.record"}". Manuskriptet hamnar då i {help_topic key="publishing.index" text="Publiceringsprocessen"}.</p><p>Notera att Redaktören kan schemalägga ett manuskript för publicering när som helst i redaktionsprocesen; denna information kommer göras tillgänglig för Layoutredaktörer och Korrekturläsare och ge dem möjlighet att kontrollera häftet före publicering. </p>]]>
+	</section>
+</topic>

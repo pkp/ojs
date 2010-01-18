@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publiceringsprocessen - Publicera
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000004" locale="en_US" title="Publicera" toc="publishing/toc/000000" key="publishing.publish">
+	<section>
+		<![CDATA[<p>När det är dags att publicera ett häfte klickar Redaktören "{translate key="editor.issues.publishIssue"}" på sidan Publicera, dvs häftets innehållsförteckning. När ett häfte publiceras kommer dess innehållsförteckning att synas när {translate key="navigation.current"} klickas i av Läsaren. Häftets omslag, om det finns något, kommer visas på hemsidan. Föregående häfte {translate key="navigation.current"} flyttas till {translate key="navigation.archives"}. Om det inte finns något omslag kommer innehållsförteckningen att synas på hemsidan om inte Tidskriftsansvarig redan har lagt upp en text eller bild där. När Redaktören publicerat ett häfte skickas en epost till alla Läsare med innehållsförteckning samt en länk till tidskriftens hemsida.</p>]]>	
+		
+	
+	</section>
+	
+</topic>

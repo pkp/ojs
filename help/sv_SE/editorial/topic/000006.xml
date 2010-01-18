@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000006.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Sektionsredaktörens roll Index - Granskning
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000006" locale="en_US" title="Granskning" toc="editorial/toc/000004" subtoc="editorial/toc/000006" key="editorial.sectionEditorsRole.review">
+	<section>
+		<![CDATA[<p>Sidan Granskning för varje artikel listar alla moment som Sektionsredaktören behöver för att kunna organisera och genomföra granskningsprocessen. Sektionsredaktören väljer ut en granskningsversion av artikeln, allokerar en eller fler Granskare, och lägger in ett redaktionellt beslut. Beroende på det redaktionella beslutet tas artikeln från granskningslistan antingen vidare för bearbetning eller till arkivet, alternativt kommer det att skickas in igen för ny granskning. För mer information om hur man väljer ut granskningsversionen, se {help_topic key="editorial.sectionEditorsRole.review.reviewVersion" text="Graskningsversion"}.</p><p> För mer information om granskningsprocessen, se {help_topic key="editorial.sectionEditorsRole.review.peerReview" text="Oberoende granskning"}.</p><p> For mer information om redaktionellt beslut, se {help_topic key="editorial.sectionEditorsRole.review.editorDecision" text="Redaktörens beslut"}.</p>]]>
+	</section>
+</topic>

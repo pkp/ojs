@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000026.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Administrativa sidor - Läsarverktyg - Inställningar
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000026" locale="en_US" title="Alternativa läsarverktyg" toc="journal/toc/000005" key="journal.managementPages.readingTools.settings">
+	<section>
+		<![CDATA[<p>Tidskriftsansvarig kan bestämma att en eller alla av de generiska alternativa länkarna syns som en del av verktygen, i en kolumn till höger om alla delar i de tidskriftenssektioner som är indexerade (t ex artiklar och inte annonsering av konferenser). Tidskriftsansvarig kan även välja en ämnes- eller områdesbaserad uppsättning av Läsarverktyg, som visas som Relaterat material. Tidskriftsansvarig kan kontrollera, redigera, ta bort eller lägga till de verktyg som återfinns i varje Relaterade material, genom att gå till Relaterade uppsättningar, under Läsarverktyg.</p><p>Samma uppsättning av Läsarverktyg återfinns tillsammans med varje del av den indexerade versionen av tidskriften. Dock, Läsarverktyg använder de indexeringsord som Författaren tillhandahåller för att försäkra sig om att det material som finns i databaserna är relevant. Tidskriftansvarig kan ändra valda läsarverktyg närsomhelst.</p>]]>
+	</section>
+	
+</topic>

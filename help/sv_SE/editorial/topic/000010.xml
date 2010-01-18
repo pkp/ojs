@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000010.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Författarens roll Granskning - Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000010" locale="en_US" title="Granskning" toc="editorial/toc/000009" subtoc="editorial/toc/000010" key="editorial.authorsRole.review">
+	<section>
+		<![CDATA[<p>Författaren har möjlighet att följa manuskriptets gång genom granskningsprocessen och ladda upp reviderade versioner efter önskemål från den Sektionsredaktör som hanterar granskningsprocessen.</p>]]>	
+	</section>
+</topic>
+

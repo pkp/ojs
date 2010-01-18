@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000018.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Redaktörens roll Manuskript - Arkiv
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000018" locale="en_US" title="Arkiv" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.archives">
+	<section>
+		<![CDATA[<p>Manuskript i denna lista har genomgått den redaktionella processen vare sig de har refuserats, schemalagts eller publicerats. Denna lista ger Redaktörerna och den utvalda Sektionsredaktören full tillgång till manuskriptets redaktionella historik (Sammanfattning, Manuskriptpresentation, Granskning, Redigering och Historik).</p><p><em>För att återställa ett arkiverat dokument till den aktiva listan. </em>. Redaktören går till arkivet på Min sida och hittar manuskriptet. Ett klick på manuskriptets titel leder till manuskriptets sidor för Sammanfattning, Granskning, Redigering och Historik. På sidan Sammanfattning finns länken Återställ till aktiv lista som flyttar manuskriptet till listan Under granskning eller Under redigering beroende på vilket stadie manuskriptet var i när det arkiverades.</p>]]>	
+	</section>
+</topic>

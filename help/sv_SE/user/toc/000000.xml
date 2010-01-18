@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Innehållsförteckning för användargränssnitt. 
+  *
+  * $Id$
+  -->
+
+<toc id="user/toc/000000" locale="en_US" title="Tidskriftens webbsida" parent_topic="user/topic/000000">
+	<topic id="user/topic/000001" title="Hem" />
+	<topic id="user/topic/000002" title="Om tidskriften" />
+	<topic id="user/topic/000007" title="Min sida" />
+	<topic id="user/topic/000003" title="Registrera &amp; Profil" />
+	<topic id="user/topic/000004" title="Aktuellt &amp; Arkiv" />
+	<topic id="user/topic/000005" title="Sök &amp; Bläddra" />
+	<topic id="user/topic/000006" title="Läsarverktyg" />
+
+	<breadcrumb url="user/topic/000000" title="Tidskriftens webbsida" />
+</toc>

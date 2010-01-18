@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Användargränssnitt - Registera och Profil
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000003" locale="en_US" title="Registrera och Profil" toc="user/toc/000000" key="user.registerAndProfile">
+	<section>
+		<![CDATA[<p>Tidskriften använder ett registreringssystem för alla användare som är involverade i den redaktionella processen och publiceringsprocessen. Tidskriftens Integritetspolicy gäller alla registrerade användare. Varje registrerad användare har en profil som kan ändras efter det att användaren har loggat sig in på tidskriften. Länken för Profil återfinns i det högra fältet under Användare och på Min sida.</p><p>Det finns ett epost-alternativ som kan användas för att få information om att ett nytt häfte har publicerats. För tidskrifter som har mer än ett språk kan Granskare indikera i sin profil vilket språk de är komfortabla med när de ska granska manuskriptet.</p>]]>	
+	</section>
+	
+	
+
+	
+
+	<section title="Varför registrera sig?">
+
+<![CDATA[<p>När man registrerar sig skapar systemet Min sida vilket gör det lättare att komma åt tidskrifterna. Man måste registrera sig om man vill skicka in ett manus till en tidskrift eller om man önskar bli medlem av ett redaktionellt råd (t ex Redaktör, Granskare, Korrekturläsare).</p><p>Vissa tidskrifter begränsar tillgången till delar av sajten för de som inte är registrerade.</p>]]>
+</section>
+
+
+
+
+
+
+<section title="Integritetspolicy">
+<![CDATA[<p>Tidskriftens Integritetspolicy gäller för alla registrerade användare. Man kan finna mer information om detta under Om tidskriften.</p>]]>
+</section>
+
+
+<section title="Hur registrerar man sig?">
+<![CDATA[<p>Man kan registrera sig genom att klicka på Logg-in på någon av tidskrifternas hemsida. Alternativt kan man be Tidskriftsansvarig om hjälp med registrering. Kontaktinformation finns under Om tidskriften.</p>]]>
+</section>
+
+
+
+<section title="Profil">
+<![CDATA[<p>Man kan skapa en profil (inkl. användarnamn och lösenord) när man registrerar sig. Man kan ändra sin profil när som helst under tiden man är inloggad. I det högra navigationsområdet under Användare syns länken Min profil; klicka på denna länk för att komma till profilen. Här kan man ändra kontaktinformation, granskningsspecialitet samt roll, och man kan hantera epost-meddelanden för tidskrifter man har registrerat sig med.</p>]]>
+</section>
+
+
+
+
+</topic>

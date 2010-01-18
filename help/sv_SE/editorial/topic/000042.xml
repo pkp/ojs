@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000042.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Korrekturläsarens roll - Manuskript
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000042" locale="en_US" title="Manuskript" toc="editorial/toc/000014" key="editorial.proofreadersRole.submissions">
+	<section>
+		<![CDATA[<p>När Korrekturläsaren klickar på länken Korrekturläsare under Min sida kommer han/hon till Listan över manuskript. Denna lista visar manuskript som väntar på korrekturläsning. Korrekturläsaren har också tillgång till sina tidigare granskade arbeten via Arkiv. För att komma till korrektursidan, klickar Korrekturläsaren på manuskriptets titel. </p>]]>
+	</section>
+</topic>
