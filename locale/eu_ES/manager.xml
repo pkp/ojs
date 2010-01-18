@@ -247,7 +247,6 @@
 	<message key="manager.setup.guidingSubmissions">3. urratsa. Bidalketak egiteko gidalerroak</message>
 	<message key="manager.setup.homepageImage">Hasierako orriko irudia</message>
 	<message key="manager.setup.homepageImageDescription">Gehitu irudi bat edo grafiko bat orriaren erdian.</message>
-	<message key="manager.setup.htmlSetupInstructions"><![CDATA[Testu-arean HTML erabil daiteke (letra-tamaina, kolorea, etab. zehazteko), eta "lerro-jauziak" <tt>&lt;br&gt;</tt> bezala tratatuko dira; HTML editoreak Firefox arakatzaileekin funtzionatzen du.]]></message>
 	<message key="manager.setup.includeCreativeCommons">Sarrera libre berehalakoa edo geroratua ematen duten aldizkarietan, erantsi Creative Commons lizentzia bat argitaratutako lan guztiekin, behar den garaian.</message>
 	<message key="manager.setup.information">Informazioa</message>
 	<message key="manager.setup.information.description">Alboko barrako "Informazioa" sailean aldizkariaren azalpen labur bat ematen da liburuzainentzat eta egile eta irakurleentzat.</message>

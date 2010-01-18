@@ -175,31 +175,6 @@ class TemplateManager extends PKPTemplateManager {
 	}
 
 	/**
-	 * Generate a URL into OJS. (This is a wrapper around Request::url to make it available to Smarty templates.)
-	 */
-	function smartyUrl($params, &$smarty) {
-		// Extract the variables named in $paramList, and remove them
-		// from the params array. Variables remaining in params will be
-		// passed along to Request::url as extra parameters.
-		$context = array();
-		$contextList = OJSApplication::getContextList();
-
-		if ( !isset($params['context']) ) {
-			foreach ($contextList as $contextName) {
-				if (isset($params[$contextName])) {
-					$context[$contextName] = $params[$contextName];
-					unset($params[$contextName]);
-				} else {
-					$context[$contextName] = null;
-				}
-			}
-			$params['context'] = $context;
-		}
-
-		return parent::smartyUrl($params, $smarty);
-	}
-
-	/**
 	 * Display page links for a listing of items that has been
 	 * divided onto multiple pages.
 	 * Usage:

@@ -22,6 +22,7 @@ import('site.Version');
 import('site.VersionCheck');
 import('file.FileManager');
 import('install.Install');
+import('install.Upgrade');
 import('pages.manager.ManagerHandler');
 
 class PluginManagementHandler extends ManagerHandler {

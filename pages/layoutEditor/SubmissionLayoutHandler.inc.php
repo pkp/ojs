@@ -12,7 +12,7 @@
  * @brief Handle requests related to submission layout editing. 
  */
 
-// $Id: SubmissionLayoutHandler.inc.php,v 1.57 2009/11/20 00:30:06 mcrider Exp $
+// $Id$
 
 import('pages.layoutEditor.LayoutEditorHandler');
 
@@ -198,6 +198,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
+		$this->setupTemplate(true, $articleId, 'editing');
 
 		import('submission.form.ArticleGalleyForm');
 
@@ -228,7 +229,6 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			}
 			Request::redirect(null, null, 'submission', $articleId);
 		} else {
-			$this->setupTemplate(true, $articleId, 'editing');
 			$submitForm->display();
 		}
 	}
@@ -403,6 +403,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 		$submission =& $submissionLayoutHandler->submission;
+		$this->setupTemplate(true, $articleId, 'editing');
 
 		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
 
@@ -428,7 +429,6 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			Request::redirect(null, null, 'submission', $articleId);
 
 		} else {
-			$this->setupTemplate(true, $articleId, 'editing');
 			$submitForm->display();
 		}
 	}

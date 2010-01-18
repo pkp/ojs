@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * ojs2-devel//locale/sv_SE/author.xml
+  *
+  * Copyright (c) 2000-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the sv_SE (Swedish) locale.
+  *
+  * $Id$
+  -->
+
+<locale name="sv_SE" full_name = "Swedish">
+	<message key="author.submit">Nya manuskript</message>
+	<message key="author.track">Aktiva manuskript</message>
+	<message key="author.competingInterests"><![CDATA[Competing&nbsp;interests <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>]]></message>
+	<message key="author.submit.submitArticle">Skicka in ett manuskript</message>
+	<message key="author.submit.stepsToSubmit">Fem steg för att skicka in ett manuskript</message>
+	<message key="author.submit.startHereTitle">Påbörja en ny manusinlämning</message>
+	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Klicka här</a> för att gå till steg ett i femstegsprocessen för manusinlämning.]]></message>
+	<message key="author.submit.step1">Steg 1. Starta inlämning</message>
+	<message key="author.submit.step2">Steg 2. Ange metadata för manuskriptet</message>
+	<message key="author.submit.step3">Steg 3. Ladda upp manuskriptet</message>
+	<message key="author.submit.step4">Steg 4. Ladda upp eventuella komplementerande filer</message>
+	<message key="author.submit.step4a">Steg 4a. Lägg till en komplementerande fil</message>
+	<message key="author.submit.step5">Steg 5. Bekräfta manusinlämning</message>
+	<message key="author.submit.start">1. Starta</message>
+	<message key="author.submit.metadata">2. Ange Metadata</message>
+	<message key="author.submit.upload">3. Ladda upp manuskriptet</message>
+	<message key="author.submit.supplementaryFiles">4. Ladda upp komplementerande filer</message>
+	<message key="author.submit.confirmation">5. Bekräfta</message>
+	<message key="author.submit.cancelSubmission">Du kan göra klart manusinlämningen vid ett senare tillfälle genom att välja Aktiva manuskript under Din Författarsida.</message>
+	<message key="author.submit.notAccepting">Den här tidskriften tar för tillfället inte emot några manuskript.</message>
+	<message key="author.submit.requestWaiver">Begär avsägelse</message>
+	<message key="author.submit.qualityForWaiver">Vänligen överväg att avstå från avgiften för den här artikeln</message>
+	<message key="author.submit.addReasonsForWaiver">Vänligen använd kommentatorsfältet nedan för att förklara varför man ska avstå från avgiften.</message>
+	<message key="author.submissions.uploadCopyeditedVersion">Ladda upp manuskript i redigerad version</message>
+	<message key="author.submissions.proofreadingCorrections">Korrektur</message>
+	<message key="author.submissions.confirmDelete">Är du säker på att du vill radera den påbörjade manusinlämningen?</message>
+	<message key="author.submissions.viewStatus">Se Status</message>
+	<message key="author.submissions.noSubmissions">Inga manuskript.</message>
+	<message key="author.submit.howToSubmit"><![CDATA[Stöter du på problem? Kontakt <a href="mailto:{$supportEmail}">{$supportName}</a> för hjälp. ({$supportPhone}).]]></message>
+	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Stöter du på problem? Kontakta <a href="mailto:{$supportEmail}">{$supportName}</a> för hjälp.]]></message>
+	<message key="author.submit.journalSection">Tidskriftssektion</message>
+	<message key="author.submit.journalSectionDescription"><![CDATA[Välj lämplig sektion för det här manuskriptet (se Sektioner och Policies under <a href="{$aboutUrl}" target="_new">Om</a> Tidskriften).]]></message>
+	<message key="author.submit.selectSection">Vänligen välj en sektion...</message>
+	<message key="author.submit.submissionChecklist">Checklista för manusinlämning</message>
+	<message key="author.submit.submissionChecklistDescription">Bekräftar att manuskriptet är klart för granskning i tidskriften genom att kryssa för följande (kommentarer till redaktören kan läggas till nedan).</message>
+	<message key="author.submit.verifyChecklist">Alla moment i Checklistan för manusinlämning måste vara genomförda och förkryssade innan du kan gå vidare.</message>
+	<message key="author.submit.copyrightNoticeAgree">Författarna samtycker till upphovsrättsvillkoren för manuskriptet om och när texten blir accepterad för publicering. (Kommentarer till redaktören kan lämnas nedan).</message>
+	<message key="author.submit.copyrightNoticeAgreeRequired">Du måste samtycka till upphovsrättsvillkoren innan du kan fortsätta.</message>
+	<message key="author.submit.commentsForEditor">Kommentarer till redaktören</message>
+	<message key="author.submit.comments">Skriv in text (frivilligt)</message>
+	<message key="author.submit.form.sectionRequired">Välj en lämplig tidskriftssektion för manuskriptet.</message>
+	<message key="author.submit.privacyStatement">Tidskriftens sekretesspolicy</message>
+	<message key="author.submit.reorderInstructions">Sortera författarna så att de hamnar i rätt ordning enligt publikationen.</message>
+	<message key="author.submit.selectPrincipalContact">Huvudkontakt för korrespondens med redaktören.</message>
+	<message key="author.submit.addAuthor">Lägg till författare</message>
+	<message key="author.submit.deleteAuthor">Ta bort författare</message>
+	<message key="author.submit.submissionIndexingDescription">Lägg till relevanta sökord för indexering, separera orden med semikolon (ord1; ord2; ord3).</message>
+	<message key="author.submit.submissionSupportingAgencies">Stöttat av:</message>
+	<message key="author.submit.submissionSupportingAgenciesDescription">Uppge de personer eller organisationer som  bistått med finansiering eller support av forskningen som manuskriptet bygger på.</message>
+	<message key="author.submit.agencies">Organisationer eller motsvarande som har bidragit till manuskriptet</message>
+	<message key="author.submit.coverageInstructions">Refererar till geospatial, kronologisk eller historisk täckning, och/eller karakteristika av forskningsurvalet.</message>
+	<message key="author.submit.subjectClassInstructions">Använd klassificeringslänken för att ange ämnen.</message>
+	<message key="author.submit.languageInstructions"><![CDATA[Engelska=en; Franska=fr; Spanska=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Fler koder</a>.]]></message>
+	<message key="author.submit.form.authorRequired">Man måste ange minst en författare.</message>
+	<message key="author.submit.form.authorRequiredFields">Man måste ange för-, efternamn och E-postadress till respektive författare.</message>
+	<message key="author.submit.form.titleRequired">Skriv titeln på artikeln.</message>
+	<message key="author.submit.form.abstractRequired">Skriv in en sammanfattning av artikeln.</message>
+	<message key="author.submit.submissionFile">Manuskriptfilen</message>
+	<message key="author.submit.uploadSubmissionFile">Ladda upp manuskriptfilen</message>
+	<message key="author.submit.replaceSubmissionFile">Ersätt manuskriptfilen</message>
+	<message key="author.submit.noSubmissionFile">Ingen manuskriptfil har laddats upp.</message>
+	<message key="author.submit.noSubmissionConfirm">Är du säker på att du vill fortsätta utan att ladda upp manuskriptet?</message>
+	<message key="author.submit.supplementaryFilesInstructions">Det här är ett frivilligt moment där du har möjlighet att ladda upp komplementerande material. Filerna, som kan vara i vilket format som helst, kan innehålla exempelvis (a) forskningsinstrument, (b) forskningsdata (c) forskningskällor som annars inte skulle skulle vara tillgänglig för läsaren, (d) figurer, illustrationer och diagram som av olika anledningar inte fått utrymme i själva manuskriptet, eller annat material som tillför mervärde till arbetet.</message>
+	<message key="author.submit.supplementaryFiles.saveToUpload">Klicka Spara för att ladda upp fil (Ytterligare filer kan laddas upp vid senare tillfälle).</message>
+	<message key="author.submit.forgottenSubmitSuppFile">Är du säker på att du vill fortsätta utan att ladda upp den komplementerande fil som du har valt?</message>
+	<message key="author.submit.noSupplementaryFiles">Inga komplementerande filer har laddats upp till det här manuskriptet.</message>
+	<message key="author.submit.backToSupplementaryFiles">Tillbaka till komplementerande filer.</message>
+	<message key="author.submit.confirmDeleteSuppFile">Är du säker på att du vill radera den här komplementfilen?</message>
+	<message key="author.submit.uploadSuppFile">Ladda upp komplementerande filer</message>
+	<message key="author.submit.addSupplementaryFile">Lägg till en komplementerande fil</message>
+	<message key="author.submit.editSupplementaryFile">Redigera en komplementerande fil.</message>
+	<message key="author.submit.supplementaryFileData">Metadata för den komplementerande filen.</message>
+	<message key="author.submit.supplementaryFileDataDescription">För att det komplementerande materialet ska indexeras, lägg till följande metadata för de uppladdade filerna.</message>
+	<message key="author.submit.supplementaryFileUpload">Komplementerande fil</message>
+	<message key="author.submit.suppFile.createrOrOwner">Skapare (eller ägare) av filen</message>
+	<message key="author.submit.suppFile.researchInstrument">Forskningsinstrument</message>
+	<message key="author.submit.suppFile.researchMaterials">Forskningsmaterial</message>
+	<message key="author.submit.suppFile.researchResults">Forskningsresultat</message>
+	<message key="author.submit.suppFile.transcripts">Reproduktioner</message>
+	<message key="author.submit.suppFile.dataAnalysis">Analys</message>
+	<message key="author.submit.suppFile.dataSet">Forskningsdata</message>
+	<message key="author.submit.suppFile.sourceText">Källtext</message>
+	<message key="author.submit.suppFile.briefDescription">Kort beskrivning</message>
+	<message key="author.submit.suppFile.contributorOrSponsor">Övriga medverkande eller eventuell sponsrande organisation</message>
+	<message key="author.submit.suppFile.availableToPeers">Visa filen för granskare (utan metadata), så att anonym granskning kan garanteras.</message>
+	<message key="author.submit.suppFile.publisherDescription">Använd endast för formellt publicerat material.</message>
+	<message key="author.submit.suppFile.dateDescription">Datum när data samlades in ellet när instrumentet skapades.</message>
+	<message key="author.submit.suppFile.sourceDescription">Namn på studien, eller annan utgångspunkt.</message>
+	<message key="author.submit.suppFile.specifyOtherType">Annat; specificera</message>
+	<message key="author.submit.suppFile.noFile">Ingen fil har laddats upp.</message>
+	<message key="author.submit.suppFile.form.titleRequired">Skriv titeln på den komplementerande filen.</message>
+	<message key="author.submit.suppFile.form.subjectRequired">Lägg till ämne.</message>
+	<message key="author.submit.suppFile.form.descriptionRequired">Lägg till en beskrivning.</message>
+	<message key="author.suppFile.suppFilePublicIdentificationExists">Det finns redan ett komplementerande fil-id publikt.</message>
+	<message key="author.suppFile.publicSuppFileIdentifier">Publikt komplementerande fil-id</message>
+	<message key="author.submit.confirmationDescription">För att skicka in manuskriptet till {$journalTitle} klicka Avsluta inlämning. Den person som har angetts som huvudkontakt för manuskriptet kommer få ett bekräftelsemail och kommer att kunna logga in och följa manuskriptet väg genom den redaktionella processen. Tack för visat intresse för publicering i {$journalTitle}.</message>
+	<message key="author.submit.noFiles">Inga filer har laddats upp i samband med inlämningen.</message>
+	<message key="author.submit.filesSummary">Sammanfattning av uppladdning av filer</message>
+	<message key="author.submit.finishSubmission">Avsluta inlämning</message>
+	<message key="author.submit.submissionComplete">Inlämning avslutad. Tack för visat intresse för publicering i {$journalTitle}.</message>
+	<message key="author.submit.expedite"><![CDATA[Om det inlämnade manuskriptet är färdigt för publicering utan fortsatt granskning, redigering eller layoutändringar så kan manuskriptet placeras direkt i det sista redigeringsmomentet före publicering av <a href="{$expediteUrl}" class="action">Klicka här</a>. (OBS: Endast aktiverade redaktörer har möjlighet att göra det här valet.)]]></message>
+	<message key="author.article.uploadAuthorVersion">Ladda upp författarversion</message>
+	<message key="author.article.copyeditedFile">Manusredigerad fil</message>
+	<message key="author.article.authorRevisedFile">Författarfil</message>
+	<message key="author.submit.authorSubmitLoginMessage">Man måste registrera ett användarkonto för att skicka in bidrag till tidskriften. Detta för att våra granskare ska kunna arbeta med inlagda manuskript och kunna kontakta författare när statusen på inskickat material förändras.</message>
+</locale>

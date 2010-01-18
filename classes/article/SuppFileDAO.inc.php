@@ -117,8 +117,8 @@ class SuppFileDAO extends DAO {
 	 */
 	function &_returnSuppFileFromRow(&$row) {
 		$suppFile = new SuppFile();
-		$suppFile->setSuppFileID($row['supp_id']);
-		$suppFile->setPublicSuppFileID($row['public_supp_file_id']);
+		$suppFile->setSuppFileId($row['supp_id']);
+		$suppFile->setPublicSuppFileId($row['public_supp_file_id']);
 		$suppFile->setFileId($row['file_id']);
 		$suppFile->setArticleId($row['article_id']);
 		$suppFile->setType($row['type']);
@@ -152,7 +152,7 @@ class SuppFileDAO extends DAO {
 			$suppFile->setDateSubmitted(Core::getCurrentDate());
 		}
 		if ($suppFile->getSequence() == null) {
-			$suppFile->setSequence($this->getNextSuppFileSequence($suppFile->getArticleID()));
+			$suppFile->setSequence($this->getNextSuppFileSequence($suppFile->getArticleId()));
 		}
 		$this->update(
 			sprintf('INSERT INTO article_supplementary_files

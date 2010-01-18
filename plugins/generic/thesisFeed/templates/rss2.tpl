@@ -13,7 +13,7 @@
 	<channel>
 		{* required elements *}
 		<title>{$journal->getLocalizedTitle()|escape:"html"|strip}: {translate key="plugins.generic.thesis.manager.theses"}</title>
-		<link>{$journal->getUrl()}</link>
+		<link>{$journal->getUrl()|escape}</link>
 		{if $journal->getLocalizedDescription()}
 			{assign var="description" value=$journal->getLocalizedDescription()}
 		{elseif $journal->getLocalizedSetting('searchDescription')}

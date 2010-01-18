@@ -842,7 +842,6 @@ Titel des Klassifikationssystems]]></message>
 </ol>]]></message>
 	<message key="reviewer.article.reviewGuidelinesDescription">Die Begutachtungsrichtlinien geben den Gutachter/innen Kriterien an die Hand, mit deren Hilfe sie bewerten können, ob eine Einreichung für die Veröffentlichung in der Zeitschrift geeignet ist; sie können auch zusätzliche Instruktionen enthalten, die für eine effektive und hilfreiche Begutachtung nützlich sind. Für die Einreichung des Gutachtens stehen den Gutachter/innen zwei offene Textfelder zur Verfügung, eines "für die Autor/innen und die Redakteur/innen", ein zweites "für die Redakteur/innen". Alternativ können Zeitschriftenverwalter/innen ein Formular für die Begutachtung erstellen. Redakteur/innen haben immer die Option, in ihrer Kommunikation mit den Autor/innen Gutachten hinzuzufügen.</message>
 	<message key="reviewer.article.selectRecommendation">Wählen Sie eine Empfehlung aus und reichen Sie Ihr Gutachten ein, um den Begutachtungsprozess abzuschließen. Sie müssen das Gutachten direkt eingeben oder eine Datei hochladen, bevor Sie eine Empfehlung auswählen können.</message>
-	<message key="author.submit.submissionCitations">Stellen Sie bitte ein formatiertes Literaturverzeichnis für die Arbeiten zur Verfügung, die Sie in Ihrem Beitrag zitiert haben.</message>
 	<message key="user.subscriptions.mySubscriptions">Meine Abonnements</message>
 	<message key="user.subscriptions.individualSubscriptions">Individuelles Abonnement</message>
 	<message key="user.subscriptions.institutionalSubscriptions">Institutionelles Abonnement</message>
@@ -860,7 +859,6 @@ Titel des Klassifikationssystems]]></message>
 	<message key="user.subscriptions.form.institutionName">Name der Einrichtung</message>
 	<message key="user.subscriptions.form.institutionNameRequired">Ein Einrichtungsname ist erforderlich.</message>
 	<message key="article.citations">Literaturhinweise</message>
-	<message key="submission.citations">Literaturhinweise</message>
 	<message key="user.subscriptions.form.deleteIpRange">Löschen</message>
 	<message key="user.subscriptions.form.addIpRange">Hinzufügen</message>
 	<message key="about.subscriptions.individual">Individuelle Abonnements</message>

@@ -253,7 +253,6 @@
 	<message key="manager.setup.guidingSubmissions">Fase 3. Guida alla submission</message>
 	<message key="manager.setup.homepageImage">Immagine dell'home page</message>
 	<message key="manager.setup.homepageImageDescription">Aggiungi un'immagine che comparir&#x00E0; al centro della pagina..</message>
-	<message key="manager.setup.htmlSetupInstructions"><![CDATA[HTML pu&#x00F2; essere usato in una textarea (per il font carattere, colore, etc.), con "return" usato come <tt>&lt;br&gt;</tt>; HTML editor è predisposto principalmente per i browser Firefox.]]></message>
 	<message key="manager.setup.includeCreativeCommons">Per le riviste che offrono o danno in ritardo accesso aperto, includi una licenza Creative Commons con tutti i lavori pubblicati in tempo appropriato.</message>
 	<message key="manager.setup.information">Informazioni</message>
 	<message key="manager.setup.information.description">Una breve descrizione della rivista per i bibliotecari e i potenziali autori e lettori, &#x00E8; disponibile nella sezione "Informazioni" del menu laterale.</message>

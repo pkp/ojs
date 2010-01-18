@@ -134,7 +134,7 @@
 	{foreach name=suppFiles from=$submission->getSuppFiles() item=suppFile}
 	<tr>
 		<td width="2%">{$smarty.foreach.suppFiles.iteration}.</td>
-		<td width="26%">{$suppFile->getSuppFileTitle()}</td>
+		<td width="26%">{$suppFile->getSuppFileTitle()|escape}</td>
 		<td colspan="2"><a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$suppFile->getFileId()}" class="file">{$suppFile->getFileName()|escape}</a>&nbsp;&nbsp;{$suppFile->getDateModified()|date_format:$dateFormatShort}</td>
 		<td><a href="{url op="orderSuppFile" d=u articleId=$submission->getArticleId() suppFileId=$suppFile->getSuppFileId()}" class="plain">&uarr;</a> <a href="{url op="orderSuppFile" d=d articleId=$submission->getArticleId() suppFileId=$suppFile->getSuppFileId()}" class="plain">&darr;</a></td>
 		<td colspan="2">

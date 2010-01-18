@@ -82,7 +82,13 @@ class CommentHandler extends Handler {
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
 
+		$parent =& $commentDao->getComment($parentId, $articleId);
+		if (isset($parent) && $parent->getArticleId() != $articleId) {
+			Request::redirect(null, null, 'view', array($articleId, $galleyId));
+		}
+
 		$this->validate($articleId);
+		$this->setupTemplate($publishedArticle, $galleyId, $parent);
 
 		// Bring in comment constants
 		$commentDao =& DAORegistry::getDAO('CommentDAO');
@@ -101,11 +107,6 @@ class CommentHandler extends Handler {
 			default:
 				// Comments are disabled.
 				Validation::redirectLogin();
-		}
-
-		$parent =& $commentDao->getComment($parentId, $articleId);
-		if (isset($parent) && $parent->getArticleId() != $articleId) {
-			Request::redirect(null, null, 'view', array($articleId, $galleyId));
 		}
 
 		import('comment.form.CommentForm');
@@ -132,7 +133,6 @@ class CommentHandler extends Handler {
 			}
 		}
 
-		$this->setupTemplate($publishedArticle, $galleyId, $parent);
 		$commentForm->display();
 	}
 

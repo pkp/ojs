@@ -953,7 +953,6 @@ le droit de première publication, avec l’ouvrage disponible simultanément [S
 	<message key="journal.issn">ISSN</message>
 	<message key="article.article">Article</message>
 	<message key="article.citations">Références</message>
-	<message key="submission.citations">Références</message>
 	<message key="user.manageMySubscriptions">Gérer Mes abonnements</message>
 	<message key="subscriptionTypes.currency">Devise</message>
 	<message key="subscriptionTypes.year">année</message>
@@ -994,7 +993,6 @@ Titre du système de classification]]></message>
 	<message key="reviewer.article.reviewGuidelinesDescription">Les directives pour l'évaluation fourniront aux évaluateurs des critères pour juger de la pertinence d'une soumission pour fins de publication dans la revue, et peuvent inclure toutes instructions spéciales nécessaires à la préparation d'une évaluation efficace et utile. En effectuant l'évaluation, les évaluateurs se font présenter deux boîtes de texte, la première "pour l'auteur et le rédacteur" et la deuxième "pour le rédacteur." Alternativement, le directeur de la revue peut créer un formulaire d'évaluation par les pairs sous Formulaires d'évaluation. Dans tous les cas, les rédacteurs auront l'option d'inclure les évaluations dans leur correspondance avec l'auteur.</message>
 	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Déclarer si vous êtes en conflit d'intérêts en ce qui concerne cette recherche (voir <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Politique de CI</a>).]]></message>
 	<message key="reviewer.article.selectRecommendation">Choisir une recommandation et soumettre l'évaluation pour compléter le processus. Vous devez écrire une évaluation ou télécharger un fichier avant de choisir une recommandation.</message>
-	<message key="author.submit.submissionCitations">Fournir une liste structurée de références pour les travaux cités dans cette soumission.</message>
 	<message key="user.subscriptions.mySubscriptions">Mes abonnements</message>
 	<message key="user.subscriptions.individualSubscriptions">Abonnement individuel</message>
 	<message key="user.subscriptions.institutionalSubscriptions">Abonnements institutionnels</message>

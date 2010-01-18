@@ -357,8 +357,6 @@ function setRegAllowOpts(form) {
 
 <p>
 	<textarea name="copyeditInstructions[{$formLocale|escape}]" id="copyeditInstructions" rows="12" cols="60" class="textArea">{$copyeditInstructions[$formLocale]|escape}</textarea>
-	<br />
-	<span class="instruct">{translate key="manager.setup.htmlSetupInstructions"}</span>
 </p>
 </div><!-- copyeditInstructionsSection -->
 
@@ -387,8 +385,6 @@ function setRegAllowOpts(form) {
 
 <p>
 	<textarea name="layoutInstructions[{$formLocale|escape}]" id="layoutInstructions" rows="12" cols="60" class="textArea">{$layoutInstructions[$formLocale]|escape}</textarea>
-	<br />
-	<span class="instruct">{translate key="manager.setup.htmlSetupInstructions"}</span>
 </p>
 </div><!-- layoutInstructionsSection -->
 
@@ -457,8 +453,6 @@ function setRegAllowOpts(form) {
 
 <p>
 	<textarea name="proofInstructions[{$formLocale|escape}]" id="proofInstructions" rows="12" cols="60" class="textArea">{$proofInstructions[$formLocale]|escape}</textarea>
-	<br />
-	<span class="instruct">{translate key="manager.setup.htmlSetupInstructions"}</span>
 </p>
 </div>
 </div>

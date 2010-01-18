@@ -17,7 +17,7 @@
 
 	{* recommended elements *}
 	{* <author/> *}
-	<link rel="alternate" href="{$journal->getUrl()}" />
+	<link rel="alternate" href="{$journal->getUrl()|escape}" />
 	<link rel="self" type="application/atom+xml" href="{$selfUrl|escape}" />
 
 	{* optional elements *}

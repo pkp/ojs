@@ -224,7 +224,7 @@ class ArticleGalleyDAO extends DAO {
 				$galley->getLocale(),
 				(int)$galley->isHTMLGalley(),
 				$galley->isHTMLGalley() ? $galley->getStyleFileId() : null,
-				$galley->getSequence() == null ? $this->getNextGalleySequence($galley->getArticleID()) : $galley->getSequence()
+				$galley->getSequence() == null ? $this->getNextGalleySequence($galley->getArticleId()) : $galley->getSequence()
 			)
 		);
 		$galley->setGalleyId($this->getInsertGalleyId());

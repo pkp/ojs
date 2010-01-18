@@ -696,7 +696,6 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="navigation.browseByAuthor">توسط نویسنده</message>
 	<message key="article.article">مقاله</message>
 	<message key="article.citations">مراجع</message>
-	<message key="submission.citations">مراجع</message>
 	<message key="user.manageMySubscriptions">اداره اشتراکات من</message>
 	<message key="subscriptionTypes.currency">واحد پول</message>
 	<message key="subscriptionTypes.year">سال</message>
@@ -823,7 +822,6 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="sectionEditor.regrets">موارد انصراف</message>
 	<message key="sectionEditor.regrets.regret">انصراف</message>
 	<message key="reviewer.article.reviewGuidelinesDescription">راهنمای کارشناسی ضوابط قضاوت در مورد مناسب بودن مقاله جهت چاپ در مجله میباشد، و ممکن است شامل دستورالعمل های خاص مجله برای تهیه متن مناسب کارشناسی نیز بشود. در روند کارشناسی به کارشناسان دو جعبه متن ارائه میشود که اولی برای نویسنده و دبیر و دومی برای دبیر است. همچنین مدیر مجله میتواند یک فرم کارشناسی را با استفاده از ابزار موجود در فرم های کارشناسی طراحی کند. در تمام این حالات انتخاب نهائی با دبیر است که آیا حاصل کارشناسی یک کارشناس را در معرض دید نویشنده قرار بدهد یا خیر.</message>
-	<message key="author.submit.submissionCitations">لیست مرتب شده ای از مراجع بکار رفته در این ساب میشن را وارد کنید.</message>
 	<message key="submission.comments.viewableDescription"><![CDATA[این نظرات را میتوانید به رویت نویسنده برسانید.<br />
 پس از ذخیره باز هم میتوانید به این کار ادامه داده و نظرات بستری وارد کنید]]></message>
 	<message key="user.subscriptions.mySubscriptions">اشتراکات من</message>

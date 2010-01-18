@@ -949,7 +949,6 @@ Idiomas estão disponíveis para download manual no <a href="http://pkp.sfu.ca">
 	<message key="journal.issn">ISSN</message>
 	<message key="article.article">Artigo</message>
 	<message key="article.citations">Referências</message>
-	<message key="submission.citations">Referências</message>
 	<message key="user.manageMySubscriptions">Gerir Minhas Subscrições</message>
 	<message key="subscriptionTypes.currency">Moeda</message>
 	<message key="subscriptionTypes.year">ano</message>
@@ -987,7 +986,6 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desactivado o regi
 	<li>"Prazo" é preenchido quando o revisões indica disponibilidade para realizar a revisão; exibe o tempo em semanas até à data de entrega da revisão ou (-) semanas quando está atrasado.</li>
 </ol>]]></message>
 	<message key="reviewer.article.reviewGuidelinesDescription">As Directrizes para Revisão fornecerão aos revisores critérios necessários para julgar se uma submissão é adequada para publicação no periódico, e podem incluir quaisquer instruções especiais para preparar uma revisão efectiva e construtiva. Ao entrar na revisão, os revisores terão acesso a dois campos de texto aberto, sendo o primeiro "para autor e editor" e o segundo "somente para o editor". Como opção alternativa, o Editor-Gestor pode criar formulários específicos acedendo a "Formulários de Revisão", na Administração da revista. Em todos os casos, os editores terão a opção de incluir as revisões nas mensagens, ao se comunicarem com o autor.</message>
-	<message key="author.submit.submissionCitations">Forneça uma lista formatada de referências a citações incluídas nesta submissão.</message>
 	<message key="user.subscriptions.mySubscriptions">Minhas Subscrições</message>
 	<message key="user.subscriptions.individualSubscriptions">Subscrição Individual</message>
 	<message key="user.subscriptions.institutionalSubscriptions">Subscrição Institucional</message>

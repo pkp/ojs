@@ -19,6 +19,6 @@
 
 ({$article->getDatePublished()|date_format:'%Y'}).
 {$article->getLocalizedTitle()}.
-<em>{$journal->getLocalizedTitle()|capitalize}{if $issue}, {$issue->getVolume()|escape}</em>({$issue->getNumber()|escape}){else}</em>{/if}.
-{translate key="plugins.citationFormats.apa.retrieved" retrievedDate=$smarty.now|date_format:$dateFormatLong url=$articleUrl}
+<em>{$journal->getLocalizedTitle()|capitalize}{if $issue}, {$issue->getVolume()|escape}</em>{if $issue->getNumber()}({$issue->getNumber()|escape}){/if}{else}</em>{/if}{if $article->getPages()}, {$article->getPages()}{/if}.
+{if $article->getDOI()}doi:{$article->getDOI()}{else}{translate key="plugins.citationFormats.apa.retrieved" retrievedDate=$smarty.now|date_format:$dateFormatLong url=$articleUrl}{/if}
 </div>

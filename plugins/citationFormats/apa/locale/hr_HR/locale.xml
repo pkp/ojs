@@ -16,5 +16,5 @@
 	<message key="plugins.citationFormats.apa.displayName">Dodatak za APA bibliografski standard</message>
 	<message key="plugins.citationFormats.apa.citationFormatName">APA</message>
 	<message key="plugins.citationFormats.apa.description">Ovaj dodatak implementira APA bibliografski standard.</message>
-	<message key="plugins.citationFormats.apa.retrieved"><![CDATA[Posjećeno {$retrievedDate}, na <a href="{$url}" target="_new">{$url}</a>]]></message>
+	<message key="plugins.citationFormats.apa.retrieved"><![CDATA[Posjećeno na <a href="{$url}" target="_new">{$url}</a>]]></message>
 </locale>

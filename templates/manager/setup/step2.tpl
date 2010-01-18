@@ -33,8 +33,6 @@
 <p>{translate key="manager.setup.focusAndScopeDescription"}</p>
 <p>
 	<textarea name="focusScopeDesc[{$formLocale|escape}]" id="focusScopeDesc" rows="12" cols="60" class="textArea">{$focusScopeDesc[$formLocale]|escape}</textarea>
-	<br />
-	<span class="instruct">{translate key="manager.setup.htmlSetupInstructions"}</span>
 </p>
 </div>
 

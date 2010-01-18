@@ -16,5 +16,5 @@
 	<message key="plugins.citationFormats.apa.displayName">APA citeringsformat plugin</message>
 	<message key="plugins.citationFormats.apa.citationFormatName">APA</message>
 	<message key="plugins.citationFormats.apa.description">Dette plugin implementerter APA citeringsformate.</message>
-	<message key="plugins.citationFormats.apa.retrieved"><![CDATA[Hentet {$retrievedDate}, fra <a href="{$url}" target="_new">{$url}</a>]]></message>
+	<message key="plugins.citationFormats.apa.retrieved"><![CDATA[Hentet fra <a href="{$url}" target="_new">{$url}</a>]]></message>
 </locale>

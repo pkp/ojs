@@ -16,6 +16,6 @@
 	<message key="plugins.citationFormats.apa.displayName">APA aipamen-formatuaren plugina</message>
 	<message key="plugins.citationFormats.apa.citationFormatName">APA</message>
 	<message key="plugins.citationFormats.apa.description">Plugin honek APA aipamenen formatua inplementatzen du.</message>
-	<message key="plugins.citationFormats.apa.retrieved"><![CDATA[Eskuratua: {$retrievedDate}, <a href="{$url}" target="_new">{$url}</a>]]></message>
+	<message key="plugins.citationFormats.apa.retrieved"><![CDATA[Eskuratua: <a href="{$url}" target="_new">{$url}</a>]]></message>
 </locale>
 

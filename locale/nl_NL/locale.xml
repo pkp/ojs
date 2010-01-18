@@ -988,7 +988,6 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	<message key="journal.issn">ISSN</message>
 	<message key="article.article">Artikel</message>
 	<message key="article.citations">Referenties</message>
-	<message key="submission.citations">Referenties</message>
 	<message key="user.manageMySubscriptions">Mijn abonnementen beheren</message>
 	<message key="subscriptionTypes.currency">Valuta</message>
 	<message key="subscriptionTypes.year">jaar</message>
@@ -1049,7 +1048,6 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	<message key="subscriptions.institutionalOnlinePaymentDescription"><![CDATA[<strong>Noot:</strong> Institutionele abonnementen die online gekocht ziijn, worden pas actief na goedkeuring van het domein en de IP-reeksen.]]></message>
 	<message key="plugins.categories.oaiMetadataFormats.description">Deze format plugins drukken metadata uit in OAI communicatie.</message>
 	<message key="manager.setup.reviewProcessEmailDescription">Redacteuren sturen aan reviewers het verzoek om de inzending die wordt meegestuurd met de e-mail te reviewen. Reviewers e-mailen hun instemming (of verontschuldiging) en de review en aanbeveling. Redacteuren voeren de reactie van de reviewer en de review en aanbeveling in op de review-pagina van de inzending, om het reviewproces te registreren.</message>
-	<message key="author.submit.submissionCitations">Geef een geformatteerde lijst met referenties van de werken die geciteerd worden in deze inzending.</message>
 	<message key="user.subscriptions.form.membershipRequired">De gekozen abonnementsoort vereist lidmaatschapsinformatie.</message>
 	<message key="user.subscriptions.form.subscriptionExists">Deze gebruiker heeft al een individueel abonnement.</message>
 	<message key="user.subscriptions.form.membershipInstructions">Lidmaatschapsinformatie indien vereist voor de gekozen abonnementsoort.</message>

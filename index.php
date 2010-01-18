@@ -58,10 +58,9 @@
 
 // Initialize global environment
 define('INDEX_FILE_LOCATION', __FILE__);
-require('lib/pkp/includes/driver.inc.php');
+require('lib/pkp/includes/bootstrap.inc.php');
 
-// Initialize the application environment
-import('core.OJSApplication');
-$application = new OJSApplication();
+// Serve the request
+$application =& PKPApplication::getApplication();
 $application->execute();
 ?>

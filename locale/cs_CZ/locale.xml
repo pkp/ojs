@@ -990,7 +990,6 @@ Ověřování může selhat při vyhledávání URL, které vyžadují "posted f
 	<message key="journal.issn">ISSN</message>
 	<message key="article.article">Článek</message>
 	<message key="article.citations">Reference</message>
-	<message key="submission.citations">Reference</message>
 	<message key="subscriptionTypes.currency">Měna</message>
 	<message key="subscriptionTypes.year">rok</message>
 	<message key="subscriptionTypes.years">roků</message>
@@ -1027,7 +1026,6 @@ Ověřování může selhat při vyhledávání URL, které vyžadují "posted f
 	<message key="manager.setup.reviewProcessEmailDescription">Editoři posílají recenzentům požadavky na recenze s příspěvkem v příloze emailu. Recenzenti posílají editorům jejich souhlas (nebo odmítnutí) se zpracováním recenze a stejně tak posudek a doporučení. Editoři vkládají souhlas (nebo odmítnutí) a stejně tak posudek a doporučení na stránkách pro recenzování příspěvku, aby zaznamenali recenzní řízení.</message>
 	<message key="manager.setup.citations">Povolit autorům samostatně poskytnout formátovaný seznam referencí (citací) jako součást jejich příspěvku.</message>
 	<message key="reviewer.article.reviewGuidelinesDescription">Pokyny pro zpracování recenze poskytnou recenzentům kritéria pro posouzení vhodnosti příspěvku k publikování v časopisu a muhou zahrnovat jakékoliv specifické instrukce pro přípravu efektivního a užitečného (nápomocného) posudku. Při zpracování recenze mají recenzenti k dispozici dvě otevřená textová pole - provní "pro autora a editora" a druhé "pro editora." Alternativně může manažer časopisu pod "Forluláři posudků" vytvořit formulář posudku. V každem případě budou mít editoři možnost vložit posudky do korespondece s autorem.</message>
-	<message key="author.submit.submissionCitations">Uveďte formátovaný seznam referencí pro práce citované v tomto příspěvku.</message>
 	<message key="user.subscriptions.mySubscriptions">Moje předplatné</message>
 	<message key="user.subscriptions.individualSubscriptions">Individuální předplatné</message>
 	<message key="user.subscriptions.institutionalSubscriptions">Institucionální předplatné</message>

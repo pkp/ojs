@@ -150,7 +150,7 @@ class Journal extends DataObject {
 
 	function getJournalPageHeaderLogo($home = false) {
 		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getLocalizedJournalPageHeaderLogo($home);
+		return $this->getLocalizedPageHeaderLogo($home);
 	}
 	
 	/**

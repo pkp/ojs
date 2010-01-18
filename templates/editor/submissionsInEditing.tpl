@@ -45,7 +45,7 @@
 		<td>{if $layoutEditorProofSignoff->getDateCompleted()}{$layoutEditorProofSignoff->getDateCompleted()|date_format:$dateFormatTrunc}{else}&mdash;{/if}</td>
 		<td>
 			{assign var="editAssignments" value=$submission->getEditAssignments()}
-			{foreach from=$editAssignments item=editAssignment}{$editAssignment->getEditorInitials()} {/foreach}
+			{foreach from=$editAssignments item=editAssignment}{$editAssignment->getEditorInitials()|escape} {/foreach}
 		</td>
 	</tr>
 	<tr>

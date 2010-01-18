@@ -406,7 +406,7 @@ function moveAuthor(dir, authorIndex) {
 	
 	<table width="100%" class="data">
 	<tr valign="top">
-		<td width="30%" class="label">{fieldLabel name="sponsor" key="author.submit.agencies"}</td>
+		<td width="30%" class="label">{fieldLabel name="sponsor" key="submission.agencies"}</td>
 		<td width="70%" class="value"><input type="text" class="textField" name="sponsor[{$formLocale|escape}]" id="sponsor" value="{$sponsor[$formLocale]|escape}" size="60" maxlength="255" /></td>
 	</tr>
 	</table>
@@ -420,7 +420,7 @@ function moveAuthor(dir, authorIndex) {
 	
 	<table width="100%" class="data">
 		<tr valign="top">
-			<td width="30%" class="label">{fieldLabel name="citations" key="article.citations"}</td>
+			<td width="30%" class="label">{fieldLabel name="citations" key="submission.citations"}</td>
 			<td width="70%" class="value"><textarea name="citations" id="citations" class="textArea" rows="15" cols="60">{$citations|escape}</textarea></td>
 		</tr>
 	</table>

@@ -272,6 +272,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$articleId = Request::getUserVar('articleId');
 		$this->validate($articleId);
 		$authorSubmission =& $this->submission;
+		$this->setupTemplate(true, $articleId, 'summary');
 
 		if ($authorSubmission->getStatus() != STATUS_PUBLISHED && $authorSubmission->getStatus() != STATUS_ARCHIVED) {
 			$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
@@ -285,7 +286,6 @@ class TrackSubmissionHandler extends AuthorHandler {
 				$submitForm->execute();
 				Request::redirect(null, null, 'submission', $articleId);
 			} else {
-				$this->setupTemplate(true, $articleId, 'summary');
 				$submitForm->display();
 			}
 		} else {

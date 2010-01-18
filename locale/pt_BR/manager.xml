@@ -251,7 +251,6 @@
 	<message key="manager.setup.guidingSubmissions">Passo 3. Diretrizes para Submissão</message>
 	<message key="manager.setup.homepageImage">Imagem da Página Inicial</message>
 	<message key="manager.setup.homepageImageDescription">Inclua uma imagem para exibição no centro da página.</message>
-	<message key="manager.setup.htmlSetupInstructions"><![CDATA[Em caso de utilização de código HTML nas caixas de texto das Configurações (para tamanho de fonte, estilo da fonte, cor, entre outros), as quebras de linha "automáticas (return/enter)" no texto serão automaticamente tratadas como <tt>&lt;br&gt;</tt>. O Editor HTML funciona no Firefox.]]></message>
 	<message key="manager.setup.includeCreativeCommons">Para periódicos que oferecem acesso livre imediato ou adiado, inclua uma licença Creative Commons com todo o material na data de publicação.</message>
 	<message key="manager.setup.information">Informação</message>
 	<message key="manager.setup.information.description">Informações breves sobre a revista para bibliotecários, autores em potencial e leitores estão disponíveis na seção Informação na barra de ferramentas lateral.</message>

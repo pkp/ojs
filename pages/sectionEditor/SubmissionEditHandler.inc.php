@@ -512,6 +512,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function enrollSearch($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
+		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_MANAGER)); // manager.people.enrollment, manager.people.enroll
 		$submission =& $this->submission;
 
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
@@ -1282,6 +1283,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function saveSuppFile($args) {
 		$articleId = Request::getUserVar('articleId');
 		$this->validate($articleId);
+		$this->setupTemplate(true, $articleId, 'summary');
 		$submission =& $this->submission;
 
 		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
@@ -1307,7 +1309,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			
 			Request::redirect(null, null, $this->getFrom(), $articleId);
 		} else {
-			$this->setupTemplate(true, $articleId, 'summary');
 			$submitForm->display();
 		}
 	}
@@ -1602,6 +1603,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
+		$this->setupTemplate(true, $articleId, 'editing');
 		$submission =& $this->submission;
 
 		import('submission.form.ArticleGalleyForm');
@@ -1633,7 +1635,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			}
 			Request::redirect(null, null, 'submissionEditing', $articleId);
 		} else {
-			$this->setupTemplate(true, $articleId, 'editing');
 			$submitForm->display();
 		}
 	}

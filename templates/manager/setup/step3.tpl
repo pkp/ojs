@@ -36,8 +36,6 @@
 
 <p>
 	<textarea name="authorGuidelines[{$formLocale|escape}]" id="authorGuidelines" rows="12" cols="60" class="textArea">{$authorGuidelines[$formLocale]|escape}</textarea>
-	<br />
-	<span class="instruct">{translate key="manager.setup.htmlSetupInstructions"}</span>
 </p>
 
 <table width="100%" class="data">

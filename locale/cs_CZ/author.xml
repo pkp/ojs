@@ -58,7 +58,6 @@
 	<message key="author.submit.submissionIndexingDescription">Uveďte termíny pro indexování příspěvku; termíny oddělte středníkem (termín1; termín2; termín3).</message>
 	<message key="author.submit.submissionSupportingAgencies">Podporující agentury</message>
 	<message key="author.submit.submissionSupportingAgenciesDescription">Jmenujte agentury, které poskytly finance nebo jinak podpořily práci prezentovanou v tomto příspěvku.</message>
-	<message key="author.submit.agencies">Agentury</message>
 	<message key="author.submit.coverageInstructions">Vztahuje se k zeměpisné oblasti, chronologickému nebo historickému záběru a/nebo charakteristikám výzkumného souboru.</message>
 	<message key="author.submit.subjectClassInstructions">Pro výběr klasifikačních termínů (a pokud je to vhodné i čísel) použijte hyperlinkový klasifikační systém.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Čeština=cs; angličtina=en; francouzština=fr; španělština=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Další kódy</a>.]]></message>

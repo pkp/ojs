@@ -227,7 +227,7 @@ function moveAuthor(dir, authorIndex) {
 		<td>&nbsp;</td>
 	</tr>
 	{/if}
-	
+
 	{if $currentJournal->getSetting('metaSubjectClass')}
 	<tr valign="top">
 		<td rowspan="2" width="20%" class="label">{fieldLabel name="subjectClass" key="article.subjectClassification"}</td>
@@ -241,7 +241,7 @@ function moveAuthor(dir, authorIndex) {
 		<td>&nbsp;</td>
 	</tr>
 	{/if}
-	
+
 	{if $currentJournal->getSetting('metaSubject')}
 	<tr valign="top">
 		<td{if $currentJournal->getLocalizedSetting('metaSubjectExamples') != ''} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="subject" key="article.subject"}</td>
@@ -257,7 +257,7 @@ function moveAuthor(dir, authorIndex) {
 		<td>&nbsp;</td>
 	</tr>
 	{/if}
-	
+
 	{if $currentJournal->getSetting('metaCoverage')}
 	<tr valign="top">
 		<td{if $currentJournal->getLocalizedSetting('metaCoverageGeoExamples') != ''} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="coverageGeo" key="article.coverageGeo"}</td>
@@ -299,7 +299,7 @@ function moveAuthor(dir, authorIndex) {
 		<td>&nbsp;</td>
 	</tr>
 	{/if}
-	
+
 	{if $currentJournal->getSetting('metaType')}
 	<tr valign="top">
 		<td width="20%" {if $currentJournal->getLocalizedSetting('metaTypeExamples') != ''}rowspan="2" {/if}class="label">{fieldLabel name="type" key="article.type"}</td>
@@ -316,7 +316,7 @@ function moveAuthor(dir, authorIndex) {
 		<td>&nbsp;</td>
 	</tr>
 	{/if}
-	
+
 	<tr valign="top">
 		<td rowspan="2" width="20%" class="label">{fieldLabel name="language" key="article.language"}</td>
 		<td width="80%" class="value"><input type="text" class="textField" name="language" id="language" value="{$language|escape}" size="5" maxlength="10" /></td>
@@ -336,7 +336,7 @@ function moveAuthor(dir, authorIndex) {
 
 <table width="100%" class="data">
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="sponsor" key="author.submit.agencies"}</td>
+	<td width="20%" class="label">{fieldLabel name="sponsor" key="submission.agencies"}</td>
 	<td width="80%" class="value"><input type="text" class="textField" name="sponsor[{$formLocale|escape}]" id="sponsor" value="{$sponsor[$formLocale]|escape}" size="60" maxlength="255" /></td>
 </tr>
 </table>
@@ -351,7 +351,7 @@ function moveAuthor(dir, authorIndex) {
 
 <table width="100%" class="data">
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="citations" key="article.citations"}</td>
+	<td width="20%" class="label">{fieldLabel name="citations" key="submission.citations"}</td>
 	<td width="80%" class="value"><textarea name="citations" id="citations" class="textArea" rows="15" cols="60">{$citations|escape}</textarea></td>
 </tr>
 </table>

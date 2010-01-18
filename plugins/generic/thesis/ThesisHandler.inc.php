@@ -175,6 +175,7 @@ class ThesisHandler extends Handler {
 	 */
 	function save() {
 		$this->validate();
+		$this->setupTemplate();
 		$journal =& Request::getJournal();
 
 		if ($journal != null) {
@@ -198,12 +199,8 @@ class ThesisHandler extends Handler {
 
 			if ($thesisForm->validate()) {
 				$thesisForm->execute();
-
 				Request::redirect(null, 'thesis');
-
 			} else {
-				$this->setupTemplate();
-
 				$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 				$journalSettings =& $journalSettingsDao->getJournalSettings($journalId);
 

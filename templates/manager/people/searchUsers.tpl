@@ -119,7 +119,7 @@ function toggleChecked() {
 {assign var="stats" value=$statistics[$userid]}
 <tr valign="top">
 	<td><input type="checkbox" name="users[]" value="{$user->getId()}" /></td>
-	<td><a class="action" href="{url op="userProfile" path=$userid}">{$user->getUsername()}</a></td>
+	<td><a class="action" href="{url op="userProfile" path=$userid}">{$user->getUsername()|escape}</a></td>
 	<td>{$user->getFullName(true)|escape}</td>
 	<td class="nowrap">
 		{assign var=emailString value="`$user->getFullName()` <`$user->getEmail()`>"}

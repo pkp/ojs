@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * ojs2-devel//locale/sv_SE/admin.xml
+  *
+  * Copyright (c) 2000-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the sv_SE (Swedish) locale.
+  *
+  * $Id$
+  -->
+
+<locale name="sv_SE" full_name = "Swedish">
+	<message key="admin.hostedJournals">Tillgängliga tidskrifter</message>
+	<message key="admin.settings.journalRedirect">Omdirigering</message>
+	<message key="admin.settings.journalRedirectInstructions">Anropningar till huvudsidan kommer omdirigeras till den här tidskriften. Om sidan endast är värd för en tidskrift är detta en mer användbar lösning.</message>
+	<message key="admin.settings.noJournalRedirect">Omdirigera inte</message>
+	<message key="admin.languages.primaryLocaleInstructions">Det här kommer att vara förvalt språk för sidan och tillhörande tidskrifter.</message>
+	<message key="admin.languages.supportedLocalesInstructions">Välj språk som sidan ska stödja. Valda språk kommer finnas tillgängliga för sidans alla tidskrifter, och även finnas tillgänglig på sidans språkmeny, (som kan tas bort på enskilda tidskriftsspecifika sidor). Om endast ett språk är valt, kommer språkmenyn inte synas och utökade språkinställningar kommer inte finnas tillgängliga.</message>
+	<message key="admin.languages.confirmUninstall">Är du säker på att du vill avinstallera språket? Det kan komma att påverka de tidskrifter som stödjs av språket.</message>
+	<message key="admin.languages.installNewLocalesInstructions">Välj ytterligare språk som ska stödjas i systemet. Språken måste installeras innan de kan användas av tidskrifterna. Se OJS-dokumentationen för information om hur man lägger till nya språk.</message>
+	<message key="admin.languages.downloadLocales">Ladda ner språk</message>
+	<message key="admin.languages.downloadFailed">Nedladdnigen av språket misslyckades. Se felmeddelanden nedan för information.</message>
+	<message key="admin.languages.localeInstalled">"{$locale}" Språket har installerats. </message>
+	<message key="admin.languages.download">Ladda ner språk</message>
+	<message key="admin.languages.download.cannotOpen">Kan ej öppna språkbeskrivning från PKP:s hemsida.</message>
+	<message key="admin.languages.download.cannotModifyRegistry">Kan ej lägga till nya språk till språkregistreringsfilen, ex. "registry/locales.xml".</message>
+	<message key="admin.auth.ojs">OJS Användardatabas</message>
+	<message key="admin.auth.enableSyncProfiles">Aktivera användarprofilsynkronisering (om detta stöds av valideringsplug-in). Information om användarprofilen kommer uppdateras automatiskt från den externa källan när en användare loggar in, även profiländringar (inklusive lösenordsändringar) gjorda i OJS kommer automatiskt uppdateras på den externa källan. Om den här valmöjligheten inte är aktiverad så kommer OJS-profilinformation skötas separat från den externa källans profilinformation.</message>
+	<message key="admin.auth.enableSyncPasswords">Aktivera ändring av lösenord (om detta stöds av valideringsplug-in). Aktivering av den här valmöjligheten möjliggör för användaren att ändra sitt lösenord inifrån OJS och användningen av OJS "lost password"-funktion för att skaffa ett nytt lösenord. Dessa funktioner kommer inte vara tillgängliga för användare hos den här valideringskällan, om valmöjligheten inte är aktiverad.</message>
+	<message key="admin.auth.enableCreateUsers">Aktivera Skapa Användare (om detta stöds av valideringsplug-in). Användare skapade inom OJS på den här valideringskällan kommer automatiskt att läggas till den externa valideringskällan, om de inte redan finns där. Om den här källan är förvald valideringskälla så kommer OJS-konton skapade genom användarregistrering att läggas till den externa valideringskällan.</message>
+	<message key="admin.systemVersion">OJS-version</message>
+	<message key="admin.systemConfiguration">OJS-konfiguration</message>
+	<message key="admin.systemConfigurationDescription"><![CDATA[OJS konfigurationsinställningar från <tt>config.inc.php</tt>.]]></message>
+	<message key="admin.journals.journalSettings">Tidskriftsinställningar</message>
+	<message key="admin.journals.noneCreated">Inga tidskrifter har skapats.</message>
+	<message key="admin.journals.confirmDelete">Är du säker på att du vill radera den här tidskriften och allt dess innehåll?</message>
+	<message key="admin.journals.create">Skapa tidskrift</message>
+	<message key="admin.journals.createInstructions">Du kommer automatiskt att läggas till som tidskriftsansvarig. När du har skapat en ny tidskrift, logga in som tidskriftsansvarig för att fortsätta installation och aktivering av användare.</message>
+	<message key="admin.journals.urlWillBe">Tidskriftens URL kommer att vara: {$sampleUrl}</message>
+	<message key="admin.journals.form.titleRequired">Titelfältet är obligatoriskt.</message>
+	<message key="admin.journals.form.pathRequired">Sökvägsfältet är obligatoriskt.</message>
+	<message key="admin.journals.form.pathAlphaNumeric">Sökvägen får endast innehålla alfanumeriska tecken, understreck, och bindestreck, samt måste inledas och avslutas med ett alfanumeriskt tecken.</message>
+	<message key="admin.journals.form.pathExists">Vald sökväg används redan av en annan tidskrift.</message>
+	<message key="admin.journals.enableJournalInstructions">Gör tidskriften publik.</message>
+	<message key="admin.journals.journalDescription">Beskrivning av tidskriften</message>
+	<message key="admin.journals.importOJS1">Importera från OJS 1</message>
+	<message key="admin.journals.importOJS1.editMigratedJournal">Redigera migrerad tidskrift</message>
+	<message key="admin.journals.importOJS1.conflict.desc">Användarkonton innehåller motstridig information. OJS 1.x tillåter att olika användarkonton innehåller samma E-postadress, medan OJS 2.x inte tillåter detta. I listan nedan innehåller det andra användarkontot en tillfällig E-postadress. Ändra antingen E-postadressen eller slå ihop de olika kontona.</message>
+	<message key="admin.journals.importOJS1.conflict">{$firstUsername} ({$firstName}) och {$secondUsername} ({$secondName})</message>
+	<message key="admin.journals.importOJS1Instructions">Se UPGRADE-dokumentet som distribueras tillsammans med OJS för detaljerad information om datamigrering från OJS 1 till OJS 2.</message>
+	<message key="admin.journal.pathImportInstructions">Existerande sökväg eller sökväg som ska skapas (ex. "ojs").</message>
+	<message key="admin.journal.importPath">OJS 1 sökväg</message>
+	<message key="admin.journal.importPathInstructions">Fullständig lokal filsystemssökväg till OJS 1-installationen (ex., "/var/www/ojs").</message>
+	<message key="admin.journals.importSubscriptions">Importera abonnemangsinformation</message>
+	<message key="admin.journals.transcode">Konvertera artikelns metadata med ISO8859-1</message>
+	<message key="admin.journals.form.importPathRequired">Importerad sökväg är obligatorisk.</message>
+	<message key="admin.journals.importErrors">Importen misslyckades</message>
+	<message key="admin.mergeUsers">Lägg samman användare</message>
+	<message key="admin.mergeUsers.mergeUser">Lägg samman användare</message>
+	<message key="admin.mergeUsers.into.description">Välj användare hos vilken du ska tillämpa föregående användares författarskap, redaktörsskap, etc.</message>
+	<message key="admin.mergeUsers.from.description">Välj användare för sammanslagning med annat användarkonto (ex. när samma användare har två användarkonton). Det konto du har valt först kommer att raderas och dess manuskript kommer att placeras under det andra kontot.</message>
+	<message key="admin.mergeUsers.allUsers">Alla existerande användare</message>
+	<message key="admin.mergeUsers.confirm">Är du säker på att du vill lägga samman användarkontot: "{$oldUsername}" med: "{$newUsername}"? Användarkontot: "{$oldUsername}" kommer då att raderas. Åtgärden kan inte ångras.</message>
+	<message key="admin.mergerUsers.noneEnrolled">Inga existerande användare.</message>
+</locale>

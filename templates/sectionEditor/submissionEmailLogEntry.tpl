@@ -35,7 +35,7 @@
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="common.id"}</td>
-		<td width="80%" class="value">{$logEntry->getLogID()}</td>
+		<td width="80%" class="value">{$logEntry->getLogId()}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.date"}</td>

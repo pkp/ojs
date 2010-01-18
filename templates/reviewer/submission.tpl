@@ -116,7 +116,7 @@ function confirmSubmissionCheck() {
 	{* FIXME: Should be able to assign primary editorial contact *}
 	{if $editAssignments[0]}{assign var=firstEditAssignment value=$editAssignments[0]}{/if}
 	<td width="3%">{$currentStep|escape}.{assign var="currentStep" value=$currentStep+1}</td>
-	<td width="97%"><span class="instruct">{translate key="reviewer.article.notifyEditorA"}{if $firstEditAssignment}, {$firstEditAssignment->getEditorFullName()},{/if} {translate key="reviewer.article.notifyEditorB"}</span></td>
+	<td width="97%"><span class="instruct">{translate key="reviewer.article.notifyEditorA"}{if $firstEditAssignment}, {$firstEditAssignment->getEditorFullName()|escape},{/if} {translate key="reviewer.article.notifyEditorB"}</span></td>
 </tr>
 <tr valign="top">
 	<td>&nbsp;</td>

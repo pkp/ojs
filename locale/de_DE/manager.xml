@@ -191,7 +191,6 @@
 	<message key="manager.setup.guidingSubmissions">3. Schritt: Beitragseinreichung</message>
 	<message key="manager.setup.homepageImage">Startseitengrafik </message>
 	<message key="manager.setup.homepageImageDescription">Fügen Sie in die  Mitte der Seite ein Bild oder eine Grafikdatei ein.</message>
-	<message key="manager.setup.htmlSetupInstructions"><![CDATA[In den Textfeldern der Konfiguration kann HTML verwendet werden (Schriftgröße, -farbe etc.), wobei Zeilenwechsel automatisch als <tt>&lt;br&gt;</tt> eingetragen werden. Der HTML-Editor arbeitet mit Firefox-Browsern.]]></message>
 	<message key="manager.setup.information">Informationen</message>
 	<message key="manager.setup.information.description">Kurzbeschreibungen der Zeitschrift für Bibliothekar/innen, potentielle Autor/innen und Leser/innen finden sich unter "Informationen" in der Seitenleiste.</message>
 	<message key="manager.setup.information.forAuthors">Für Autor/innen</message>

@@ -43,7 +43,7 @@
 {/if}
 <tr valign="top">
 	<td width="20%" class="label">{translate key="article.article"}</td>
-	<td width="80%" class="value"><a target="_new" href="{url page="article" op="view" path=$article->getBestArticleId()}">{$article->getLocalizedTitle()}</a></td>
+	<td width="80%" class="value"><a target="_new" href="{url page="article" op="view" path=$article->getBestArticleId()}">{$article->getLocalizedTitle()|strip_unsafe_html}</a></td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="name" required="true" key="common.title"}</td>

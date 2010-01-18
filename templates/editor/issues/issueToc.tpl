@@ -78,7 +78,7 @@
 	{foreach from=$section[2] item=article name="currSection"}
 
 	{assign var="articleSeq" value=$articleSeq+1}
-	{assign var="articleId" value=$article->getArticleID()}
+	{assign var="articleId" value=$article->getArticleId()}
 	<tr>
 		<td>{$articleSeq|escape}.</td>
 		<td><a href="{url op="moveArticleToc" path=$issueId d=u sectionId=$section[0] pubId=$article->getPubId()}" class="plain">&uarr;</a>&nbsp;<a href="{url op="moveArticleToc" path=$issueId d=d sectionId=$section[0] pubId=$article->getPubId()}" class="plain">&darr;</a></td>

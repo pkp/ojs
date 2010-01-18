@@ -16,5 +16,5 @@
 	<message key="plugins.citationFormats.apa.displayName">Complemento de Formato de Citas APA</message>
 	<message key="plugins.citationFormats.apa.citationFormatName">APA</message>
 	<message key="plugins.citationFormats.apa.description">Este complemento implementa el formato de citas APA..</message>
-	<message key="plugins.citationFormats.apa.retrieved"><![CDATA[Consultado el {$retrievedDate}, de <a href="{$url}" target="_new">{$url}</a>]]></message>
+	<message key="plugins.citationFormats.apa.retrieved"><![CDATA[Consultado el de <a href="{$url}" target="_new">{$url}</a>]]></message>
 </locale>
