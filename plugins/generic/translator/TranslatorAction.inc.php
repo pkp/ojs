@@ -188,7 +188,7 @@ class TranslatorAction {
 			// We've successfully found a matching reference email.
 			// Compare it against the translation.
 			$bodyParams = Locale::getParameterNames($email['body']);
-			$referenceBodyParams = Locale::getParameterNames($referencEmails[$emailKey]['body']);
+			$referenceBodyParams = Locale::getParameterNames($referenceEmails[$emailKey]['body']);
 			$diff = array_diff($bodyParams, $referenceBodyParams);
 			if (!empty($diff)) {
 				$errors[EMAIL_ERROR_DIFFERING_PARAMS][] = array(
