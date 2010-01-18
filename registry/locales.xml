@@ -35,7 +35,7 @@
 	<locale key="pt_BR" name="Português (Brasil)"/>
 	<locale key="pt_PT" name="Português"/>
 	<locale key="ru_RU" name="Russian"/>
-	<locale key="sv_SV" complete="false" name="Swedish"/>
+	<locale key="sv_SE" complete="false" name="Swedish"/>
 	<locale key="tr_TR" complete="false" name="Türkiye Türkçesi"/>
 	<locale key="vi_VN" complete="false" name="Tiếng Việt"/>
 	<locale key="zh_TW" complete="false" name="繁體中文"/>
