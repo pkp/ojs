@@ -850,7 +850,7 @@ class SectionEditorAction extends Action {
 		// Only add the copyeditor if he has not already
 		// been assigned to review this article.
 		if (!$assigned && !HookRegistry::call('SectionEditorAction::selectCopyeditor', array(&$sectionEditorSubmission, &$copyeditorId))) {
-			$copyeditInitialSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $sectionEditorSubmission->getArticleId()); 
+			$copyeditInitialSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $sectionEditorSubmission->getArticleId());
 			$copyeditInitialSignoff->setUserId($copyeditorId);
 			$signoffDao->updateObject($copyeditInitialSignoff);
 
@@ -879,14 +879,14 @@ class SectionEditorAction extends Action {
 
 		$copyeditor = $sectionEditorSubmission->getUserBySignoffType('SIGNOFF_COPYEDITING_INITIAL');
 		if (!isset($copyeditor)) return true;
-		
+
 		if ($sectionEditorSubmission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL') && (!$email->isEnabled() || ($send && !$email->hasErrors()))) {
 			HookRegistry::call('SectionEditorAction::notifyCopyeditor', array(&$sectionEditorSubmission, &$copyeditor, &$email));
 			if ($email->isEnabled()) {
 				$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_COPYEDITOR, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
 				$email->send();
 			}
-			
+
 			$copyeditInitialSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $sectionEditorSubmission->getArticleId());
 			$copyeditInitialSignoff->setDateNotified(Core::getCurrentDate());
 			$copyeditInitialSignoff->setDateUnderway(null);
@@ -921,14 +921,14 @@ class SectionEditorAction extends Action {
 
 		// Only allow copyediting to be initiated if a copyedit file exists.
 		if ($sectionEditorSubmission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL') && !HookRegistry::call('SectionEditorAction::initiateCopyedit', array(&$sectionEditorSubmission))) {
-			$signoffDao =& DAORegistry::getDAO('SignoffDAO');			
-			
+			$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+
 			$copyeditSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $sectionEditorSubmission->getArticleId());
 			if (!$copyeditSignoff->getUserId()) {
 				$copyeditSignoff->setUserId($user->getId());
 			}
 			$copyeditSignoff->setDateNotified(Core::getCurrentDate());
-			
+
 			$signoffDao->updateObject($copyeditSignoff);
 		}
 	}
@@ -1428,7 +1428,7 @@ class SectionEditorAction extends Action {
 				$layoutFileId = $articleFileManager->uploadLayoutFile($fileName, $layoutSignoff->getFileId());
 			} else {
 				$layoutFileId = $articleFileManager->uploadLayoutFile($fileName);
-			}			
+			}
 			$layoutSignoff->setFileId($layoutFileId);
 			$signoffDao->updateObject($layoutSignoff);
 		}
@@ -1453,7 +1453,7 @@ class SectionEditorAction extends Action {
 			$layoutEditor =& $userDao->getUser($layoutSignoff->getUserId());
 			ArticleLog::logEvent($submission->getArticleId(), ARTICLE_LOG_LAYOUT_UNASSIGN, ARTICLE_LOG_TYPE_LAYOUT, $layoutSignoff->getId(), 'log.layout.layoutEditorUnassigned', array('editorName' => $layoutEditor->getFullName(), 'articleId' => $submission->getArticleId()));
 		}
-		
+
 		$layoutSignoff->setUserId($editorId);
 		$layoutSignoff->setDateNotified(null);
 		$layoutSignoff->setDateUnderway(null);
@@ -1807,7 +1807,7 @@ class SectionEditorAction extends Action {
 				Notification::createNotification($userRole['id'], "notification.type.reviewerComment",
 					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_REVIEWER_COMMENT);
 			}
-				
+
 			if ($emailComment) {
 				$commentForm->email();
 			}
@@ -1857,7 +1857,7 @@ class SectionEditorAction extends Action {
 				Notification::createNotification($userRole['id'], "notification.type.editorDecisionComment",
 					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_EDITOR_DECISION_COMMENT);
 			}
-				
+
 			if ($emailComment) {
 				$commentForm->email();
 			}
@@ -1942,74 +1942,70 @@ class SectionEditorAction extends Action {
 						$email->addCc ($author->getEmail(), $author->getFullName());
 					}
 				}
-			} else {
-				if (Request::getUserVar('importPeerReviews')) {
-					$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-					$reviewAssignments =& $reviewAssignmentDao->getReviewAssignmentsByArticleId($sectionEditorSubmission->getArticleId(), $sectionEditorSubmission->getCurrentRound());
-					$reviewIndexes =& $reviewAssignmentDao->getReviewIndexesForRound($sectionEditorSubmission->getArticleId(), $sectionEditorSubmission->getCurrentRound());
+			} elseif (Request::getUserVar('importPeerReviews')) {
+				$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+				$reviewAssignments =& $reviewAssignmentDao->getReviewAssignmentsByArticleId($sectionEditorSubmission->getArticleId(), $sectionEditorSubmission->getCurrentRound());
+				$reviewIndexes =& $reviewAssignmentDao->getReviewIndexesForRound($sectionEditorSubmission->getArticleId(), $sectionEditorSubmission->getCurrentRound());
 
-					$body = '';
-					foreach ($reviewAssignments as $reviewAssignment) {
-						// If the reviewer has completed the assignment, then import the review.
-						if ($reviewAssignment->getDateCompleted() != null && !$reviewAssignment->getCancelled()) {
-							// Get the comments associated with this review assignment
-							$articleComments =& $articleCommentDao->getArticleComments($sectionEditorSubmission->getArticleId(), COMMENT_TYPE_PEER_REVIEW, $reviewAssignment->getReviewId());
-							
-							if($articleComments) { 
-								$body .= "------------------------------------------------------\n";
-								$body .= Locale::translate('submission.comments.importPeerReviews.reviewerLetter', array('reviewerLetter' => chr(ord('A') + $reviewIndexes[$reviewAssignment->getReviewId()]))) . "\n";
-								if (is_array($articleComments)) {
-									foreach ($articleComments as $comment) {
-										// If the comment is viewable by the author, then add the comment.
-										if ($comment->getViewable()) {
-											$body .= String::html2utf(strip_tags($comment->getComments())) . "\n\n";
-										}
+				$body = '';
+				foreach ($reviewAssignments as $reviewAssignment) {
+					// If the reviewer has completed the assignment, then import the review.
+					if ($reviewAssignment->getDateCompleted() != null && !$reviewAssignment->getCancelled()) {
+						// Get the comments associated with this review assignment
+						$articleComments =& $articleCommentDao->getArticleComments($sectionEditorSubmission->getArticleId(), COMMENT_TYPE_PEER_REVIEW, $reviewAssignment->getReviewId());
+						if($articleComments) {
+							$body .= "------------------------------------------------------\n";
+							$body .= Locale::translate('submission.comments.importPeerReviews.reviewerLetter', array('reviewerLetter' => chr(ord('A') + $reviewIndexes[$reviewAssignment->getReviewId()]))) . "\n";
+							if (is_array($articleComments)) {
+								foreach ($articleComments as $comment) {
+									// If the comment is viewable by the author, then add the comment.
+									if ($comment->getViewable()) {
+										$body .= String::html2utf(
+											strip_tags(
+												str_replace(array('<p>', '<br>', '<br/>'), array("\n", "\n", "\n"), $comment->getComments())
+											)
+										) . "\n\n";
 									}
 								}
-								$body .= "------------------------------------------------------\n\n";
-							} 
-							if ($reviewFormId = $reviewAssignment->getReviewFormId()) {
-								$reviewId = $reviewAssignment->getReviewId();
-								
-								$reviewFormResponseDao =& DAORegistry::getDAO('ReviewFormResponseDAO');
-								$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
-								$reviewFormElements =& $reviewFormElementDao->getReviewFormElements($reviewFormId);
-								if(!$articleComments) {
-									$body .= "------------------------------------------------------\n";
-									$body .= Locale::translate('submission.comments.importPeerReviews.reviewerLetter', array('reviewerLetter' => chr(ord('A') + $reviewIndexes[$reviewAssignment->getReviewId()]))) . "\n\n";
-								}
-								foreach ($reviewFormElements as $reviewFormElement) {
-									$body .= strip_tags($reviewFormElement->getReviewFormElementQuestion()) . ": \n";
-									$reviewFormResponse = $reviewFormResponseDao->getReviewFormResponse($reviewId, $reviewFormElement->getReviewFormElementId());
-									
-									if ($reviewFormResponse) {
-										$possibleResponses = $reviewFormElement->getReviewFormElementPossibleResponses();
-										if (in_array($reviewFormElement->getElementType(), $reviewFormElement->getMultipleResponsesElementTypes())) {
-											if ($reviewFormElement->getElementType() == REVIEW_FORM_ELEMENT_TYPE_CHECKBOXES) {
-												foreach ($reviewFormResponse->getValue() as $value) {
-													$body .= "\t" . String::html2utf(strip_tags($possibleResponses[$value-1]['content'])) . "\n";
-												}
-											} else {
-												$body .= "\t" . String::html2utf(strip_tags($possibleResponses[$reviewFormResponse->getValue()-1]['content'])) . "\n";
-											}
-											$body .= "\n";
-										} else {
-											$body .= "\t" . String::html2utf(strip_tags($reviewFormResponse->getValue())) . "\n\n";
-										}
-									}
-								
-								}
-								$body .= "------------------------------------------------------\n\n";
-					
 							}
-							
-							
+							$body .= "------------------------------------------------------\n\n";
+						}
+						if ($reviewFormId = $reviewAssignment->getReviewFormId()) {
+							$reviewId = $reviewAssignment->getReviewId();
+							$reviewFormResponseDao =& DAORegistry::getDAO('ReviewFormResponseDAO');
+							$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
+							$reviewFormElements =& $reviewFormElementDao->getReviewFormElements($reviewFormId);
+							if(!$articleComments) {
+								$body .= "------------------------------------------------------\n";
+								$body .= Locale::translate('submission.comments.importPeerReviews.reviewerLetter', array('reviewerLetter' => chr(ord('A') + $reviewIndexes[$reviewAssignment->getReviewId()]))) . "\n\n";
+							}
+							foreach ($reviewFormElements as $reviewFormElement) {
+								$body .= strip_tags($reviewFormElement->getReviewFormElementQuestion()) . ": \n";
+								$reviewFormResponse = $reviewFormResponseDao->getReviewFormResponse($reviewId, $reviewFormElement->getReviewFormElementId());
+
+								if ($reviewFormResponse) {
+									$possibleResponses = $reviewFormElement->getReviewFormElementPossibleResponses();
+									if (in_array($reviewFormElement->getElementType(), $reviewFormElement->getMultipleResponsesElementTypes())) {
+										if ($reviewFormElement->getElementType() == REVIEW_FORM_ELEMENT_TYPE_CHECKBOXES) {
+											foreach ($reviewFormResponse->getValue() as $value) {
+												$body .= "\t" . String::html2utf(strip_tags($possibleResponses[$value-1]['content'])) . "\n";
+											}
+										} else {
+											$body .= "\t" . String::html2utf(strip_tags($possibleResponses[$reviewFormResponse->getValue()-1]['content'])) . "\n";
+										}
+										$body .= "\n";
+									} else {
+										$body .= "\t" . String::html2utf(strip_tags($reviewFormResponse->getValue())) . "\n\n";
+									}
+								}
+							}
+							$body .= "------------------------------------------------------\n\n";
 						}
 					}
-					$oldBody = $email->getBody();
-					if (!empty($oldBody)) $oldBody .= "\n";
-					$email->setBody($oldBody . $body);
 				}
+				$oldBody = $email->getBody();
+				if (!empty($oldBody)) $oldBody .= "\n";
+				$email->setBody($oldBody . $body);
 			}
 
 			$email->displayEditForm(Request::url(null, null, 'emailEditorDecisionComment', 'send'), array('articleId' => $sectionEditorSubmission->getArticleId()), 'submission/comment/editorDecisionEmail.tpl', array('isAnEditor' => true));
@@ -2158,7 +2154,7 @@ class SectionEditorAction extends Action {
 				Notification::createNotification($userRole['id'], "notification.type.layoutComment",
 					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_LAYOUT_COMMENT);
 			}
-				
+
 			if ($emailComment) {
 				$commentForm->email();
 			}
@@ -2207,8 +2203,8 @@ class SectionEditorAction extends Action {
 				$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getArticleId(), null, 'proofread');
 				Notification::createNotification($userRole['id'], "notification.type.proofreadComment",
 					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_PROOFREAD_COMMENT);
-			}	
-			
+			}
+
 			if ($emailComment) {
 				$commentForm->email();
 			}
