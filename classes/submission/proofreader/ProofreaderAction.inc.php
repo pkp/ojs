@@ -205,12 +205,16 @@ class ProofreaderAction extends Action {
 
 				$editAssignments =& $sectionEditorSubmission->getEditAssignments();
 
-				$receiver = $sectionEditorSubmission->getUserBySignoffType($signoffType);
+				$receiver = null;
 
 				$editorAdded = false;
 				foreach ($editAssignments as $editAssignment) {
 					if ($editAssignment->getIsEditor() || $editAssignment->getCanEdit()) {
-						$ccs[$editAssignment->getEditorEmail()] = $editAssignment->getEditorFullName();
+						if ($receiver === null) {
+							$receiver =& $userDao->getUser($editAssignment->getEditorId());
+						} else {
+							$ccs[$editAssignment->getEditorEmail()] = $editAssignment->getEditorFullName();
+						}
 						$editorAdded = true;
 					}
 				}
