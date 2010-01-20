@@ -88,6 +88,13 @@ class QuickSubmitForm extends Form {
 			$templateMgr->assign('addAuthorUrl', $jqueryPlugin->getScriptPath());
 		}
 		
+		if (Request::getUserVar('destination') == 'queue' ) {
+			$templateMgr->assign('publishToIssue', false);
+		} else {
+			$templateMgr->assign('issueNumber', Request::getUserVar('issueId'));
+			$templateMgr->assign('publishToIssue', true);
+		}
+
 		parent::display();
 	}
 

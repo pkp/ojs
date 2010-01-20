@@ -56,10 +56,10 @@ function moveAuthor(dir, authorIndex) {
 
 	<table class="data" width="100%">
 		<tr valign="top">	
-			<td><input type="radio" name="destination" checked="checked" value="queue" /> <label for="destination">{translate key="plugins.importexport.quickSubmit.leaveUnpublished"}</label></td>
+			<td><input type="radio" name="destination" value="queue" {if not $publishToIssue} checked="checked"{/if}/> <label for="destinationUnpublished">{translate key="plugins.importexport.quickSubmit.leaveUnpublished"}</label></td>
 		</tr>
 		<tr valign="top">	
-			<td class="label"><input type="radio" name="destination" value="issue" /> <label for="destination">{translate key="plugins.importexport.quickSubmit.addToExisting"}</label>    <select name="issueId" id="issueId" size="1" class="selectMenu">{html_options options=$issueOptions}</select></td>
+			<td class="label"><input type="radio" name="destination" value="issue" {if $publishToIssue} checked="checked"{/if}/> <label for="destinationIssue">{translate key="plugins.importexport.quickSubmit.addToExisting"}</label>    <select name="issueId" id="issueId" size="1" class="selectMenu">{html_options options=$issueOptions selected=$issueNumber}</select></td>
 		</tr>
 	</table>
 </div> <!-- /chooseDestination -->
