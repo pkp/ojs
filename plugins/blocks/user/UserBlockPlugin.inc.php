@@ -22,6 +22,7 @@ class UserBlockPlugin extends BlockPlugin {
 		$success = parent::register($category, $path);
 		if ($success) {
 			$this->addLocaleData();
+			Locale::requireComponents(array(LOCALE_COMPONENT_PKP_USER));
 		}
 		return $success;
 	}
