@@ -128,7 +128,7 @@ class SearchHandler extends Handler {
 			$templateMgr->assign('affiliation', $affiliation);
 
 			$countryDao =& DAORegistry::getDAO('CountryDAO');
-			$country =& $countryDao->getCountry($country);
+			$country = $countryDao->getCountry($country);
 			$templateMgr->assign('country', $country);
 
 			$templateMgr->display('search/authorDetails.tpl');
