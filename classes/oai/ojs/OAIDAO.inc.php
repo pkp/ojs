@@ -3,7 +3,7 @@
 /**
  * @file classes/oai/ojs/OAIDAO.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OAIDAO
@@ -13,7 +13,7 @@
  * @brief DAO operations for the OJS OAI interface.
  */
 
-// $Id: OAIDAO.inc.php,v 1.43 2009/11/19 14:51:38 asmecher Exp $
+// $Id$
 
 
 import('oai.OAI');

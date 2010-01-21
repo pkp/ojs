@@ -7,7 +7,7 @@
 /**
  * @file classes/oai/ojs/JournalOAI.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class JournalOAI
@@ -19,7 +19,7 @@
  * (based on where the request is directed).
  */
 
-// $Id: JournalOAI.inc.php,v 1.20 2009/11/19 14:51:38 asmecher Exp $
+// $Id$
 
 
 import('oai.OAI');

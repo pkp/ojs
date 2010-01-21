@@ -7,7 +7,7 @@
 /**
  * @file classes/oai/format/OAIMetadataFormat_NLM.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OAIMetadataFormat_NLM
@@ -17,7 +17,7 @@
  * @brief OAI metadata format class -- NLM 2.3
  */
 
-// $Id: OAIMetadataFormat_NLM.inc.php,v 1.1 2009/11/19 14:51:38 asmecher Exp $
+// $Id$
 
 
 class OAIMetadataFormat_NLM extends OAIMetadataFormat {

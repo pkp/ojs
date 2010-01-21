@@ -4,12 +4,12 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2003-2009 John Willinsky
+  * Copyright (c) 2003-2010 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the en_US (U.S. English) locale.
   *
-  * $Id: locale.xml,v 1.1 2009/11/19 14:51:38 asmecher Exp $
+  * $Id$
   -->
  
 <locale name="en_US" full_name="U.S. English">
