@@ -1,7 +1,7 @@
 {**
  * metadata.tpl
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Form for changing metadata of an article.
@@ -34,6 +34,7 @@ function moveAuthor(dir, authorIndex) {
 {/literal}
 
 {if count($formLocales) > 1}
+<div id="locales">
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
@@ -55,10 +56,11 @@ function moveAuthor(dir, authorIndex) {
 		</td>
 	</tr>
 </table>
+</div>
 {/if}
 
+<div id="authors">
 <h3>{translate key="article.authors"}</h3>
-
 <input type="hidden" name="deletedAuthors" value="{$deletedAuthors|escape}" />
 <input type="hidden" name="moveAuthor" value="0" />
 <input type="hidden" name="moveAuthorDir" value="" />
@@ -179,6 +181,7 @@ function moveAuthor(dir, authorIndex) {
 </table>
 
 <p><input type="submit" class="button" name="addAuthor" value="{translate key="author.submit.addAuthor"}" /></p>
+</div>
 
 
 <div class="separator"></div>
@@ -376,7 +379,7 @@ function moveAuthor(dir, authorIndex) {
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="hideAuthor" key="issue.toc"}</td>
-		<td width="80%" class="value">{translate key="editor.article.hideTocAuthorDescription"}: 
+		<td width="80%" class="value">{translate key="editor.article.hideTocAuthorDescription"}:
 			<select name="hideAuthor" id="hideAuthor" class="selectMenu">
 				{html_options options=$hideAuthorOptions selected=$hideAuthor|escape}
 			</select>

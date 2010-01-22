@@ -3,12 +3,12 @@
 <!--
   * upgrade.xml
   *
-  * Copyright (c) 2003-2009 John Willinsky
+  * Copyright (c) 2003-2010 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Upgrade descriptor file.
   *
-  * $Id: upgrade.xml,v 1.39.2.6 2009/11/19 11:52:38 asmecher Exp $
+  * $Id$
   -->
 
 <install version="2.2.4.0">
