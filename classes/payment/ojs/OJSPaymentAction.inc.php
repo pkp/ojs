@@ -60,7 +60,7 @@ class OJSPaymentAction {
 	  * Display all payments previously made
 	  */
 	 function viewPayments($args) {
-		$rangeInfo =& Handler::getRangeInfo('CompletedPayments');
+		$rangeInfo =& Handler::getRangeInfo('payments');
 		$paymentDao =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
 		$journal =& Request::getJournal();
 		$templateMgr =& TemplateManager::getManager();
