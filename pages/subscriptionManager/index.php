@@ -38,6 +38,10 @@ switch ($op) {
 	case 'saveSubscriptionPolicies':
 	case 'createUser':
 	case 'updateUser':
+	case 'payments':
+	case 'savePaymentSettings':
+	case 'viewPayments':
+	case 'viewPayment':
 	case 'payMethodSettings':
 	case 'savePayMethodSettings':
 	case 'suggestUsername':

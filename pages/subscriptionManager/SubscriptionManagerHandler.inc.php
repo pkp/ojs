@@ -9,7 +9,7 @@
  * @class SubscriptionManagerHandler
  * @ingroup pages_subscriptionManager
  *
- * @brief Handle requests for subscription management functions. 
+ * @brief Handle requests for subscription management functions.
  */
 
 // $Id$
@@ -17,7 +17,7 @@
 
 import('handler.Handler');
 
-class SubscriptionManagerHandler extends Handler {	
+class SubscriptionManagerHandler extends Handler {
 	/**
 	 * Constructor
 	 **/
@@ -391,20 +391,20 @@ class SubscriptionManagerHandler extends Handler {
 	}
 
 	/**
-	 * Display payments settings form 
+	 * Display payments settings form
 	 */
-	 function payments($args) {
+	function payments($args) {
 		$this->validate();
 		$this->setupTemplate();
 
 		import('payment.ojs.OJSPaymentAction');
 		OJSPaymentAction::payments($args);
-	 }
-	 
-	 /**
-	  * Execute the payments form or display it again if there are problems
-	  */
-	 function savePaymentSettings($args) {
+	}
+
+	/**
+	 * Execute the payments form or display it again if there are problems
+	 */
+	function savePaymentSettings($args) {
 		$this->validate();
 		$this->setupTemplate();
 
@@ -420,35 +420,35 @@ class SubscriptionManagerHandler extends Handler {
 				'backLink' => Request::url(null, null, 'payments'),
 				'backLinkLabel' => 'manager.payment.feePaymentOptions'
 			));
-			$templateMgr->display('common/message.tpl');		
+			$templateMgr->display('common/message.tpl');
 		}
-	 }	 
-	 
-	 /** 
-	  * Display all payments previously made
-	  */
-	 function viewPayments($args) {
+	}
+
+	/**
+	 * Display all payments previously made
+	 */
+	function viewPayments($args) {
 		$this->validate();
 		$this->setupTemplate();
 
 		import('payment.ojs.OJSPaymentAction');
 		OJSPaymentAction::viewPayments($args);
-	 }
+	}
 
-	 /** 
-	  * Display a single Completed payment 
-	  */
-	 function viewPayment($args) {
+	/**
+	 * Display a single Completed payment
+	 */
+	function viewPayment($args) {
 		$this->validate();
 		$this->setupTemplate();
 
 		import('payment.ojs.OJSPaymentAction');
 		OJSPaymentAction::viewPayment($args);
-	 }
+	}
 
 	/**
-	 * Display form to edit program settings.
-	 */
+	* Display form to edit program settings.
+	*/
 	function payMethodSettings() {
 		$this->validate();
 		$this->setupTemplate();
@@ -456,7 +456,7 @@ class SubscriptionManagerHandler extends Handler {
 		import('payment.ojs.OJSPaymentAction');
 		OJSPaymentAction::payMethodSettings();
 	}
-	
+
 	/**
 	 * Save changes to payment settings.
 	 */
@@ -476,7 +476,7 @@ class SubscriptionManagerHandler extends Handler {
 				'backLink' => Request::url(null, null, 'payMethodSettings'),
 				'backLinkLabel' => 'manager.payment.paymentMethods'
 			));
-			$templateMgr->display('common/message.tpl');		
+			$templateMgr->display('common/message.tpl');
 		}
 	}
 
@@ -492,7 +492,7 @@ class SubscriptionManagerHandler extends Handler {
 		);
 		echo $suggestion;
 	}
-	
+
 	/**
 	 * Setup common template variables.
 	 */
