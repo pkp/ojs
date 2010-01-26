@@ -132,7 +132,7 @@ class CommentDAO extends DAO {
 		$userDao =& DAORegistry::getDAO('UserDAO');
 
 		$comment = new Comment();
-		$comment->setCommentId($row['comment_id']);
+		$comment->setId($row['comment_id']);
 		$comment->setArticleId($row['article_id']);
 		$comment->setUser($userDao->getUser($row['user_id']), true);
 		$comment->setPosterIP($row['poster_ip']);
@@ -181,11 +181,11 @@ class CommentDAO extends DAO {
 			)
 		);
 
-		$comment->setCommentId($this->getInsertCommentId());
+		$comment->setId($this->getInsertCommentId());
 
 		if ($comment->getParentCommentId()) $this->incrementChildCount($comment->getParentCommentId());
 
-		return $comment->getCommentId();
+		return $comment->getId();
 	}
 
 	/**
@@ -217,7 +217,7 @@ class CommentDAO extends DAO {
 	 * @param Comment object
 	 */
 	function deleteComment(&$comment, $isRecursing = false) {
-		$result = $this->update('DELETE FROM comments WHERE comment_id = ?', $comment->getCommentId());
+		$result = $this->update('DELETE FROM comments WHERE comment_id = ?', $comment->getId());
 		if (!$isRecursing) $this->decrementChildCount($comment->getParentCommentId());
 		foreach ($comment->getChildren() as $child) {
 			$this->deleteComment($child, true);
@@ -265,7 +265,7 @@ class CommentDAO extends DAO {
 				$comment->getBody(),
 				$comment->getPosterName(),
 				$comment->getPosterEmail(),
-				$comment->getCommentId()
+				$comment->getId()
 			)
 		);
 	}

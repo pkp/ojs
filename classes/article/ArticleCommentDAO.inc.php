@@ -144,7 +144,7 @@ class ArticleCommentDAO extends DAO {
 	 */
 	function &_returnArticleCommentFromRow($row) {
 		$articleComment = new ArticleComment();
-		$articleComment->setCommentId($row['comment_id']);
+		$articleComment->setId($row['comment_id']);
 		$articleComment->setCommentType($row['comment_type']);
 		$articleComment->setRoleId($row['role_id']);
 		$articleComment->setArticleId($row['article_id']);
@@ -185,8 +185,8 @@ class ArticleCommentDAO extends DAO {
 			)
 		);
 
-		$articleComment->setCommentId($this->getInsertArticleCommentId());
-		return $articleComment->getCommentId();
+		$articleComment->setId($this->getInsertArticleCommentId());
+		return $articleComment->getId();
 	}
 
 	/**
@@ -202,7 +202,7 @@ class ArticleCommentDAO extends DAO {
 	 * @param ArticleComment object
 	 */
 	function deleteArticleComment($articleComment) {
-		$this->deleteArticleCommentById($articleComment->getCommentId());
+		$this->deleteArticleCommentById($articleComment->getId());
 	}
 
 	/**
@@ -254,7 +254,7 @@ class ArticleCommentDAO extends DAO {
 				$articleComment->getCommentTitle(),
 				$articleComment->getComments(),
 				$articleComment->getViewable() === null ? 1 : $articleComment->getViewable(),
-				$articleComment->getCommentId()
+				$articleComment->getId()
 			)
 		);
 	}

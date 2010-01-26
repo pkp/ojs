@@ -148,7 +148,7 @@
 		<td colspan="4">
 			{if $reviewAssignment->getMostRecentPeerReviewComment()}
 				{assign var="comment" value=$reviewAssignment->getMostRecentPeerReviewComment()}
-				<a href="javascript:openComments('{url op="viewPeerReviewComments" path=$submission->getArticleId()|to_array:$reviewAssignment->getReviewId() anchor=$comment->getCommentId()}');" class="icon">{icon name="comment"}</a> {$comment->getDatePosted()|date_format:$dateFormatShort}
+				<a href="javascript:openComments('{url op="viewPeerReviewComments" path=$submission->getArticleId()|to_array:$reviewAssignment->getReviewId() anchor=$comment->getId()}');" class="icon">{icon name="comment"}</a> {$comment->getDatePosted()|date_format:$dateFormatShort}
 			{else}
 				<a href="javascript:openComments('{url op="viewPeerReviewComments" path=$submission->getArticleId()|to_array:$reviewAssignment->getReviewId()}');" class="icon">{icon name="comment"}</a>{translate key="common.noComments"}
 			{/if}
@@ -211,7 +211,7 @@ name="viewable" value="1"{if $reviewerFile->getViewable()} checked="checked"{/if
 			{translate key="submission.editorAuthorRecord"}
 			{if $submission->getMostRecentEditorDecisionComment()}
 				{assign var="comment" value=$submission->getMostRecentEditorDecisionComment()}
-				<a href="javascript:openComments('{url op="viewEditorDecisionComments" path=$submission->getArticleId() anchor=$comment->getCommentId()}');" class="icon">{icon name="comment"}</a> {$comment->getDatePosted()|date_format:$dateFormatShort}
+				<a href="javascript:openComments('{url op="viewEditorDecisionComments" path=$submission->getArticleId() anchor=$comment->getId()}');" class="icon">{icon name="comment"}</a> {$comment->getDatePosted()|date_format:$dateFormatShort}
 			{else}
 				<a href="javascript:openComments('{url op="viewEditorDecisionComments" path=$submission->getArticleId()}');" class="icon">{icon name="comment"}</a>{translate key="common.noComments"}
 			{/if}
