@@ -3,7 +3,7 @@
 /**
  * @file ArticleReportDAO.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleReportDAO
@@ -120,11 +120,11 @@ class ArticleReportDAO extends DAO {
 					'biography',
 					$locale,
 					$journalId,
-					$article->getArticleId()
+					$article->getId()
 				)
 			);
 			$authorIterator = new DBRowIterator($result);
-			$authorsReturner[$article->getArticleId()] =& $authorIterator;
+			$authorsReturner[$article->getId()] =& $authorIterator;
 			unset($authorIterator);
 			$index++;
 			unset($article);

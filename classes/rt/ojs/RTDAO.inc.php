@@ -3,7 +3,7 @@
 /**
  * @file classes/rt/ojs/RTDAO.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class RTDAO
@@ -29,7 +29,7 @@ class RTDAO extends DAO {
 	 * @return RT
 	 */
 	function &getJournalRTByJournal(&$journal) {
-		$rt = new JournalRT($journal->getJournalId());
+		$rt = new JournalRT($journal->getId());
 		$rt->setEnabled($journal->getSetting('rtEnabled')?true:false);
 		$rt->setVersion((int) $journal->getSetting('rtVersionId'));
 		$rt->setAbstract($journal->getSetting('rtAbstract')?true:false);

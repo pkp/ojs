@@ -3,7 +3,7 @@
 /**
  * @file ResolverPlugin.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ResolverPlugin
@@ -83,7 +83,7 @@ class ResolverPlugin extends GatewayPlugin {
 				$page = (int) array_shift($args);
 
 				$issueDao =& DAORegistry::getDAO('IssueDAO');
-				$issues =& $issueDao->getPublishedIssuesByNumber($journal->getJournalId(), $volume, $number, $year);
+				$issues =& $issueDao->getPublishedIssuesByNumber($journal->getId(), $volume, $number, $year);
 
 				// Ensure only one issue matched, and fetch it.
 				$issue =& $issues->next();
@@ -128,7 +128,7 @@ class ResolverPlugin extends GatewayPlugin {
 		header('content-disposition: attachment; filename=holdings.txt');
 		echo "title\tissn\te_issn\tstart_date\tend_date\tembargo_months\tembargo_days\tjournal_url\tvol_start\tvol_end\tiss_start\tiss_end\n";
 		while ($journal =& $journals->next()) {
-			$issues =& $issueDao->getPublishedIssues($journal->getJournalId());
+			$issues =& $issueDao->getPublishedIssues($journal->getId());
 			$startDate = $endDate = null;
 			$startNumber = $endNumber = null;
 			$startVolume = $endVolume = null;

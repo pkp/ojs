@@ -3,7 +3,7 @@
 /**
  * @file EruditExportDom.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class EruditExportDom
@@ -22,7 +22,7 @@ class EruditExportDom {
 		$unavailableString = Locale::translate('plugins.importexport.erudit.unavailable');
 
 		$root =& XMLCustomWriter::createElement($doc, 'article');
-		XMLCustomWriter::setAttribute($root, 'idprop', $journal->getJournalId() . '-' . $issue->getIssueId() . '-' . $article->getArticleId() . '-' . $galley->getGalleyId(), false);
+		XMLCustomWriter::setAttribute($root, 'idprop', $journal->getId() . '-' . $issue->getIssueId() . '-' . $article->getId() . '-' . $galley->getGalleyId(), false);
 		XMLCustomWriter::setAttribute($root, 'arttype', 'article');
 
 		$lang = $article->getLanguage();
@@ -40,7 +40,7 @@ class EruditExportDom {
 		XMLCustomWriter::appendChild($adminNode, $articleInfoNode);
 
 		// The first public ID should be a full URL to the article.
-		$urlIdNode =& XMLCustomWriter::createChildWithText($doc, $articleInfoNode, 'idpublic', Request::url($journal->getPath(), 'article', 'view', array($article->getArticleId(), $galley->getGalleyId())));
+		$urlIdNode =& XMLCustomWriter::createChildWithText($doc, $articleInfoNode, 'idpublic', Request::url($journal->getPath(), 'article', 'view', array($article->getId(), $galley->getGalleyId())));
 		XMLCustomWriter::setAttribute($urlIdNode, 'scheme', 'sici');
 
 		/* --- journal --- */
@@ -80,7 +80,7 @@ class EruditExportDom {
 
 		$publisherInstitution =& $journal->getSetting('publisherInstitution');
 		$publisherNode =& XMLCustomWriter::createElement($doc, 'publisher');
-		XMLCustomWriter::setAttribute($publisherNode, 'id', 'ojs-' . $journal->getJournalId() . '-' . $issue->getIssueId() . '-' . $article->getArticleId());
+		XMLCustomWriter::setAttribute($publisherNode, 'id', 'ojs-' . $journal->getId() . '-' . $issue->getIssueId() . '-' . $article->getId());
 		XMLCustomWriter::appendChild($adminNode, $publisherNode);
 		$publisherInstitution = $unavailableString;
 		if (empty($publisherInstitution)) $publisherInstitution = $unavailableString;
@@ -88,12 +88,12 @@ class EruditExportDom {
 
 		$digprodNode =& XMLCustomWriter::createElement($doc, 'digprod');
 		XMLCustomWriter::createChildWithText($doc, $digprodNode, 'orgname', $publisherInstitution);
-		XMLCustomWriter::setAttribute($digprodNode, 'id', 'ojs-prod-' . $journal->getJournalId() . '-' . $issue->getIssueId() . '-' . $article->getArticleId());
+		XMLCustomWriter::setAttribute($digprodNode, 'id', 'ojs-prod-' . $journal->getId() . '-' . $issue->getIssueId() . '-' . $article->getId());
 		XMLCustomWriter::appendChild($adminNode, $digprodNode);
 
 		$digdistNode =& XMLCustomWriter::createElement($doc, 'digdist');
 		XMLCustomWriter::createChildWithText($doc, $digdistNode, 'orgname', $publisherInstitution);
-		XMLCustomWriter::setAttribute($digdistNode, 'id', 'ojs-dist-' . $journal->getJournalId() . '-' . $issue->getIssueId() . '-' . $article->getArticleId());
+		XMLCustomWriter::setAttribute($digdistNode, 'id', 'ojs-dist-' . $journal->getId() . '-' . $issue->getIssueId() . '-' . $article->getId());
 		XMLCustomWriter::appendChild($adminNode, $digdistNode);
 
 
@@ -125,7 +125,7 @@ class EruditExportDom {
 		foreach ($article->getAuthors() as $author) {
 			$authorNode =& XMLCustomWriter::createElement($doc, 'author');
 			XMLCustomWriter::appendChild($authorGroupNode, $authorNode);
-			XMLCustomWriter::setAttribute($authorNode, 'id', 'ojs-' . $journal->getJournalId() . '-' . $issue->getIssueId() . '-' . $article->getArticleId() . '-' . $galley->getGalleyId() . '-' . $authorNum);
+			XMLCustomWriter::setAttribute($authorNode, 'id', 'ojs-' . $journal->getId() . '-' . $issue->getIssueId() . '-' . $article->getId() . '-' . $galley->getGalleyId() . '-' . $authorNum);
 
 			$persNameNode =& XMLCustomWriter::createElement($doc, 'persname');
 			XMLCustomWriter::appendChild($authorNode, $persNameNode);
@@ -169,7 +169,7 @@ class EruditExportDom {
 		XMLCustomWriter::appendChild($root, $bodyNode);
 
 		import('file.ArticleFileManager');
-		$articleFileManager = new ArticleFileManager($article->getArticleId());
+		$articleFileManager = new ArticleFileManager($article->getId());
 		$file =& $articleFileManager->getFile($galley->getFileId());
 
 		$parser =& SearchFileParser::fromFile($file);

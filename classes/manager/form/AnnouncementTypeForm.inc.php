@@ -3,7 +3,7 @@
 /**
  * @file classes/manager/form/AnnouncementTypeForm.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AnnouncementTypeForm
@@ -43,7 +43,7 @@ class AnnouncementTypeForm extends PKPAnnouncementTypeForm {
 	function _setAnnouncementTypeAssocId(&$announcementType) {
 		$journal =& Request::getJournal();
 		$announcementType->setAssocType(ASSOC_TYPE_JOURNAL);
-		$announcementType->setAssocId($journal->getJournalId());
+		$announcementType->setAssocId($journal->getId());
 	}
 }
 

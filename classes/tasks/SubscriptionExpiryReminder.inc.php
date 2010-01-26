@@ -3,7 +3,7 @@
 /**
  * @file classes/tasks/SubscriptionExpiryReminder.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionExpiryReminder
@@ -32,7 +32,7 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
 
 		$journalName = $journal->getLocalizedTitle();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 		$user =& $userDao->getUser($subscription->getUserId());
 		if (!isset($user)) return false;
 
@@ -103,8 +103,8 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 				$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 				$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 				$dateEnd = $expiryYear . '-' . $expiryMonth . '-' . $expiryDay;
-				$individualSubscriptions =& $individualSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getJournalId()); 
-				$institutionalSubscriptions =& $institutionalSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getJournalId()); 
+				$individualSubscriptions =& $individualSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getId()); 
+				$institutionalSubscriptions =& $institutionalSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getId()); 
 
 				while (!$individualSubscriptions->eof()) {
 					$subscription =& $individualSubscriptions->next();
@@ -132,8 +132,8 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 				$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 				$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 				$dateEnd = $expiryYear . '-' . $expiryMonth . '-' . $expiryDay;
-				$individualSubscriptions =& $individualSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getJournalId()); 
-				$institutionalSubscriptions =& $institutionalSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getJournalId()); 
+				$individualSubscriptions =& $individualSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getId()); 
+				$institutionalSubscriptions =& $institutionalSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getId()); 
 
 				while (!$individualSubscriptions->eof()) {
 					$subscription =& $individualSubscriptions->next();
@@ -167,8 +167,8 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 				$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 				$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 				$dateEnd = $expiryYear . '-' . $expiryMonth . '-' . $expiryDay;
-				$individualSubscriptions =& $individualSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getJournalId()); 
-				$institutionalSubscriptions =& $institutionalSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getJournalId()); 
+				$individualSubscriptions =& $individualSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getId()); 
+				$institutionalSubscriptions =& $institutionalSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getId()); 
 
 				while (!$individualSubscriptions->eof()) {
 					$subscription =& $individualSubscriptions->next();
@@ -209,8 +209,8 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 				$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 				$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 				$dateEnd = $expiryYear . '-' . $expiryMonth . '-' . $expiryDay;
-				$individualSubscriptions =& $individualSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getJournalId()); 
-				$institutionalSubscriptions =& $institutionalSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getJournalId()); 
+				$individualSubscriptions =& $individualSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getId()); 
+				$institutionalSubscriptions =& $institutionalSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getId()); 
 
 				while (!$individualSubscriptions->eof()) {
 					$subscription =& $individualSubscriptions->next();

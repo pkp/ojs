@@ -3,7 +3,7 @@
 /**
  * @file RoleBlockPlugin.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class RoleBlockPlugin
@@ -77,7 +77,7 @@ class RoleBlockPlugin extends BlockPlugin {
 		if (!$journal || !$user) return null;
 
 		$userId = $user->getId();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 
 		$templateMgr =& TemplateManager::getManager();
 
@@ -110,7 +110,7 @@ class RoleBlockPlugin extends BlockPlugin {
 			case 'editor':
 				if (Request::getRequestedOp() == 'index') return null;
 				$editorSubmissionDao =& DAORegistry::getDAO('EditorSubmissionDAO');
-				$submissionsCount =& $editorSubmissionDao->getEditorSubmissionsCount($journal->getJournalId());
+				$submissionsCount =& $editorSubmissionDao->getEditorSubmissionsCount($journal->getId());
 				$templateMgr->assign('submissionsCount', $submissionsCount);
 				return 'editor.tpl';
 			case 'sectionEditor':

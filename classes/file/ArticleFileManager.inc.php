@@ -3,7 +3,7 @@
 /**
  * @file classes/file/ArticleFileManager.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleFileManager
@@ -435,7 +435,7 @@ class ArticleFileManager extends FileManager {
 	function &generateDummyFile(&$article) {
 		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
 		$articleFile = new ArticleFile();
-		$articleFile->setArticleId($article->getArticleId());
+		$articleFile->setArticleId($article->getId());
 		$articleFile->setFileName('temp');
 		$articleFile->setOriginalFileName('temp');
 		$articleFile->setFileType('temp');

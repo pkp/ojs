@@ -74,7 +74,7 @@ class PayMethodSettingsForm extends Form {
 		if (isset($this->plugins[$paymentMethodPluginName])) {
 			$plugin =& $this->plugins[$paymentMethodPluginName];
 			foreach ($plugin->getSettingsFormFieldNames() as $field) {
-				$this->_data[$field] = $plugin->getSetting($journal->getJournalId(), $field);
+				$this->_data[$field] = $plugin->getSetting($journal->getId(), $field);
 			}
 		}
 	}
@@ -110,7 +110,7 @@ class PayMethodSettingsForm extends Form {
 		if (isset($this->plugins[$paymentMethodPluginName])) {
 			$plugin =& $this->plugins[$paymentMethodPluginName];
 			foreach ($plugin->getSettingsFormFieldNames() as $field) {
-				$plugin->updateSetting($journal->getJournalId(), $field, $this->getData($field));
+				$plugin->updateSetting($journal->getId(), $field, $this->getData($field));
 			}
 		}
 	}

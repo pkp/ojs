@@ -3,7 +3,7 @@
 /**
  * @file ThesisFeedBlockPlugin.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ThesisFeedBlockPlugin
@@ -99,7 +99,7 @@ class ThesisFeedBlockPlugin extends BlockPlugin {
 		if (!$thesisPlugin->getEnabled()) return ''; 
 
 		$plugin =& $this->getThesisFeedPlugin();
-		$displayPage = $plugin->getSetting($journal->getJournalId(), 'displayPage');
+		$displayPage = $plugin->getSetting($journal->getId(), 'displayPage');
 		$requestedPage = Request::getRequestedPage();
 
 		if (($displayPage == 'all') || ($displayPage == 'homepage' && (empty($requestedPage) || $requestedPage == 'index' || $requestedPage == 'thesis')) || ($displayPage == $requestedPage)) { 

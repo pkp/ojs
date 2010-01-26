@@ -7,7 +7,7 @@
 /**
  * @file classes/sectionEditor/form/CreateReviewerForm.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CreateReviewerForm
@@ -173,7 +173,7 @@ class CreateReviewerForm extends Form {
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$journal =& Request::getJournal();
 		$role = new Role();
-		$role->setJournalId($journal->getJournalId());
+		$role->setJournalId($journal->getId());
 		$role->setUserId($userId);
 		$role->setRoleId(ROLE_ID_REVIEWER);
 		$roleDao->insertRole($role);

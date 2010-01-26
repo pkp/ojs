@@ -3,7 +3,7 @@
 /**
  * @file EndNoteCitationPlugin.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class EndNoteCitationPlugin
@@ -51,7 +51,7 @@ class EndNoteCitationPlugin extends CitationPlugin {
 	 * @param $issue object
 	 */
 	function cite(&$article, &$issue) {
-		header('Content-Disposition: attachment; filename="' . $article->getArticleId() . '-endNote.enw"');
+		header('Content-Disposition: attachment; filename="' . $article->getId() . '-endNote.enw"');
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->display($this->getTemplatePath() . '/citation.tpl', 'application/x-endnote-refer');
 	}

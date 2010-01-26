@@ -7,7 +7,7 @@
 /**
  * @file classes/article/Article.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Article
@@ -59,7 +59,7 @@ class Article extends Submission {
 	 */
 	function addAuthor($author) {
 		if ($author->getArticleId() == null) {
-			$author->setArticleId($this->getArticleId());
+			$author->setArticleId($this->getId());
 		}
 		parent::addAuthor($author);
 	}
@@ -93,7 +93,8 @@ class Article extends Submission {
 	 * @return int
 	 */
 	function getArticleId() {
-		return $this->getData('articleId');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
+		return $this->getId();
 	}
 
 	/**
@@ -101,7 +102,8 @@ class Article extends Submission {
 	 * @param $articleId int
 	 */
 	function setArticleId($articleId) {
-		return $this->setData('articleId', $articleId);
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
+		return $this->setId($articleId);
 	}
 
 	/**
@@ -451,7 +453,7 @@ class Article extends Submission {
 	 * @return array User IDs
 	 */
 	function getAssociatedUserIds($authors = true, $reviewers = true, $editors = true, $proofreader = true, $copyeditor = true, $layoutEditor = true) {
-		$articleId = $this->getArticleId();
+		$articleId = $this->getId();
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 
 		$userIds = array();
@@ -509,7 +511,7 @@ class Article extends Submission {
 	 */
 	function getSignoff($signoffType) {
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		return $signoffDao->getBySymbolic($signoffType, ASSOC_TYPE_ARTICLE, $this->getArticleId());
+		return $signoffDao->getBySymbolic($signoffType, ASSOC_TYPE_ARTICLE, $this->getId());
 	}
 
 	/**
@@ -522,7 +524,7 @@ class Article extends Submission {
 		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 
-		$signoff = $signoffDao->getBySymbolic($signoffType, ASSOC_TYPE_ARTICLE, $this->getArticleId());
+		$signoff = $signoffDao->getBySymbolic($signoffType, ASSOC_TYPE_ARTICLE, $this->getId());
 		if (!$signoff) return false;
 
 		if ($idOnly) return $signoff->getFileId();
@@ -540,7 +542,7 @@ class Article extends Submission {
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 		$userDao =& DAORegistry::getDAO('UserDAO');
 
-		$signoff = $signoffDao->getBySymbolic($signoffType, ASSOC_TYPE_ARTICLE, $this->getArticleId());
+		$signoff = $signoffDao->getBySymbolic($signoffType, ASSOC_TYPE_ARTICLE, $this->getId());
 		if (!$signoff) return false;
 
 		$user =& $userDao->getUser($signoff->getUserId());
@@ -555,7 +557,7 @@ class Article extends Submission {
 	function getUserIdBySignoffType($signoffType) {
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 
-		$signoff = $signoffDao->getBySymbolic($signoffType, ASSOC_TYPE_ARTICLE, $this->getArticleId());
+		$signoff = $signoffDao->getBySymbolic($signoffType, ASSOC_TYPE_ARTICLE, $this->getId());
 		if (!$signoff) return false;
 
 		return $signoff->getUserId();

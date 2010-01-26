@@ -3,7 +3,7 @@
 /**
  * @file IssueManagementHandler.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueManagementHandler
@@ -38,7 +38,7 @@ class IssueManagementHandler extends EditorHandler {
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		$rangeInfo = Handler::getRangeInfo('issues');
 		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->assign_by_ref('issues', $issueDao->getUnpublishedIssues($journal->getJournalId(), $rangeInfo));
+		$templateMgr->assign_by_ref('issues', $issueDao->getUnpublishedIssues($journal->getId(), $rangeInfo));
 		$templateMgr->assign('helpTopicId', 'publishing.index');
 		$templateMgr->display('editor/issues/futureIssues.tpl');
 	}
@@ -56,9 +56,9 @@ class IssueManagementHandler extends EditorHandler {
 		$rangeInfo = Handler::getRangeInfo('issues');
 
 		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->assign_by_ref('issues', $issueDao->getPublishedIssues($journal->getJournalId(), $rangeInfo));
+		$templateMgr->assign_by_ref('issues', $issueDao->getPublishedIssues($journal->getId(), $rangeInfo));
 
-		$allIssuesIterator = $issueDao->getPublishedIssues($journal->getJournalId());
+		$allIssuesIterator = $issueDao->getPublishedIssues($journal->getId());
 		$issueMap = array();
 		while ($issue =& $allIssuesIterator->next()) {
 			$issueMap[$issue->getIssueId()] = $issue->getIssueIdentification();
@@ -67,12 +67,12 @@ class IssueManagementHandler extends EditorHandler {
 		$templateMgr->assign('allIssues', $issueMap);
 		$templateMgr->assign('rangeInfo', $rangeInfo);
 
-		$currentIssue =& $issueDao->getCurrentIssue($journal->getJournalId());
+		$currentIssue =& $issueDao->getCurrentIssue($journal->getId());
 		$currentIssueId = $currentIssue?$currentIssue->getIssueId():null;
 		$templateMgr->assign('currentIssueId', $currentIssueId);
 
 		$templateMgr->assign('helpTopicId', 'publishing.index');
-		$templateMgr->assign('usesCustomOrdering', $issueDao->customIssueOrderingExists($journal->getJournalId()));
+		$templateMgr->assign('usesCustomOrdering', $issueDao->customIssueOrderingExists($journal->getId()));
 		$templateMgr->display('editor/issues/backIssues.tpl');
 	}
 
@@ -91,7 +91,7 @@ class IssueManagementHandler extends EditorHandler {
 		$publishedArticles = $publishedArticleDao->getPublishedArticles($issueId);
 		if (isset($publishedArticles) && !empty($publishedArticles)) {
 			foreach ($publishedArticles as $article) {
-				$articleDao->changeArticleStatus($article->getArticleId(),STATUS_QUEUED);
+				$articleDao->changeArticleStatus($article->getId(),STATUS_QUEUED);
 				$publishedArticleDao->deletePublishedArticleById($article->getPubId());
 			}
 		}
@@ -100,7 +100,7 @@ class IssueManagementHandler extends EditorHandler {
 		$issueDao->deleteIssue($issue);
 		if ($issue->getCurrent()) {
 			$journal =& Request::getJournal();
-			$issues = $issueDao->getPublishedIssues($journal->getJournalId());
+			$issues = $issueDao->getPublishedIssues($journal->getId());
 			if (!$issues->eof()) {
 				$issue =& $issues->next();
 				$issue->setCurrent(1);
@@ -218,7 +218,7 @@ class IssueManagementHandler extends EditorHandler {
 		$templateMgr->assign('issueId', $issueId);
 
 		$journal =& Request::getJournal();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 
 		import('issue.IssueAction');
 		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
@@ -254,7 +254,7 @@ class IssueManagementHandler extends EditorHandler {
 		import('file.PublicFileManager');
 		$journal =& Request::getJournal();
 		$publicFileManager = new PublicFileManager();
-		$publicFileManager->removeJournalFile($journal->getJournalId(),$issue->getFileName($formLocale));
+		$publicFileManager->removeJournalFile($journal->getId(),$issue->getFileName($formLocale));
 		$issue->setFileName('', $formLocale);
 		$issue->setOriginalFileName('', $formLocale);
 		$issue->setWidth('', $formLocale);
@@ -277,7 +277,7 @@ class IssueManagementHandler extends EditorHandler {
 		import('file.PublicFileManager');
 		$journal =& Request::getJournal();
 		$publicFileManager = new PublicFileManager();
-		$publicFileManager->removeJournalFile($journal->getJournalId(),$issue->getStyleFileName());
+		$publicFileManager->removeJournalFile($journal->getId(),$issue->getStyleFileName());
 		$issue->setStyleFileName('');
 		$issue->setOriginalStyleFileName('');
 
@@ -299,7 +299,7 @@ class IssueManagementHandler extends EditorHandler {
 		$templateMgr =& TemplateManager::getManager();
 
 		$journal =& Request::getJournal();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
@@ -386,7 +386,7 @@ class IssueManagementHandler extends EditorHandler {
 		$articles = $publishedArticleDao->getPublishedArticles($issueId);
 
 		foreach($articles as $article) {
-			$articleId = $article->getArticleId();
+			$articleId = $article->getId();
 			$pubId = $article->getPubId();
 			if (!isset($removedArticles[$articleId])) {
 				if (isset($pages[$articleId])) {
@@ -394,7 +394,7 @@ class IssueManagementHandler extends EditorHandler {
 				}
 				if (isset($publishedArticles[$articleId])) {
 					$publicArticleId = $publishedArticles[$articleId];
-					if (!$publicArticleId || !$publishedArticleDao->publicArticleIdExists($publicArticleId, $articleId, $journal->getJournalId())) {
+					if (!$publicArticleId || !$publishedArticleDao->publicArticleIdExists($publicArticleId, $articleId, $journal->getId())) {
 						$publishedArticleDao->updatePublishedArticleField($pubId, 'public_article_id', $publicArticleId);
 					}
 				}
@@ -432,10 +432,10 @@ class IssueManagementHandler extends EditorHandler {
 			$this->validate($issueId);
 			$issue =& $this->issue; 
 			$issue->setCurrent(1);
-			$issueDao->updateCurrentIssue($journal->getJournalId(), $issue);
+			$issueDao->updateCurrentIssue($journal->getId(), $issue);
 		} else {
 			$this->validate();
-			$issueDao->updateCurrentIssue($journal->getJournalId());
+			$issueDao->updateCurrentIssue($journal->getId());
 		}
 		Request::redirect(null, null, 'backIssues');
 	}
@@ -450,7 +450,7 @@ class IssueManagementHandler extends EditorHandler {
 		$nextId = Request::getUserVar('nextId');
 		$issue =& $this->issue; 
 		$journal =& Request::getJournal();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 
@@ -472,7 +472,7 @@ class IssueManagementHandler extends EditorHandler {
 				// we are dropping after the previous row
 				$newPos = $issueDao->getCustomIssueOrder($journalId, $prevId) + 0.5;
 		}
-		$issueDao->moveCustomIssueOrder($journal->getJournalId(), $issueId, $newPos);
+		$issueDao->moveCustomIssueOrder($journal->getId(), $issueId, $newPos);
 
 		if ($direction) {
 			// Only redirect the nonajax call
@@ -489,7 +489,7 @@ class IssueManagementHandler extends EditorHandler {
 		$journal =& Request::getJournal();
 
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$issueDao->deleteCustomIssueOrdering($journal->getJournalId());
+		$issueDao->deleteCustomIssueOrdering($journal->getId());
 
 		Request::redirect(null, null, 'backIssues');
 	}
@@ -504,7 +504,7 @@ class IssueManagementHandler extends EditorHandler {
 		$journal =& Request::getJournal();
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$section =& $sectionDao->getSection(Request::getUserVar('sectionId'), $journal->getJournalId());
+		$section =& $sectionDao->getSection(Request::getUserVar('sectionId'), $journal->getId());
 
 		if ($section != null) {
 			// If issue-specific section ordering isn't yet in place, bring it in.
@@ -545,7 +545,7 @@ class IssueManagementHandler extends EditorHandler {
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleById(Request::getUserVar('pubId'));
 
-		if ($publishedArticle != null && $publishedArticle->getIssueId() == $issue->getIssueId() && $issue->getJournalId() == $journal->getJournalId()) {
+		if ($publishedArticle != null && $publishedArticle->getIssueId() == $issue->getIssueId() && $issue->getJournalId() == $journal->getId()) {
 			$publishedArticle->setSeq($publishedArticle->getSeq() + (Request::getUserVar('d') == 'u' ? -1.5 : 1.5));
 			$publishedArticleDao->updatePublishedArticle($publishedArticle);
 			$publishedArticleDao->resequencePublishedArticles(Request::getUserVar('sectionId'),$issueId);
@@ -563,7 +563,7 @@ class IssueManagementHandler extends EditorHandler {
 		$issue =& $this->issue; 
 
 		$journal =& Request::getJournal();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 
 		if (!$issue->getPublished()) {
 			// Set the status of any attendant queued articles to STATUS_PUBLISHED.
@@ -571,7 +571,7 @@ class IssueManagementHandler extends EditorHandler {
 			$articleDao =& DAORegistry::getDAO('ArticleDAO');
 			$publishedArticles =& $publishedArticleDao->getPublishedArticles($issueId, null, true);
 			foreach ($publishedArticles as $publishedArticle) {
-				$article =& $articleDao->getArticle($publishedArticle->getArticleId());
+				$article =& $articleDao->getArticle($publishedArticle->getId());
 				if ($article && $article->getStatus() == STATUS_QUEUED) {
 					$article->setStatus(STATUS_PUBLISHED);
 					$article->stampStatusModified();
@@ -638,7 +638,7 @@ class IssueManagementHandler extends EditorHandler {
 		$issue =& $this->issue; 
 
 		$journal =& Request::getJournal();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 
 		$issue->setCurrent(0);
 		$issue->setPublished(0);
@@ -672,7 +672,7 @@ class IssueManagementHandler extends EditorHandler {
 		if (Request::getUserVar('send') && !$email->hasErrors()) {
 			$email->addRecipient($user->getEmail(), $user->getFullName());
 
-			$recipients = $roleDao->getUsersByJournalId($journal->getJournalId());
+			$recipients = $roleDao->getUsersByJournalId($journal->getId());
 
 			while (!$recipients->eof()) {
 				$recipient =& $recipients->next();
@@ -716,9 +716,9 @@ class IssueManagementHandler extends EditorHandler {
 					'editorialContactSignature' => $user->getContactSignature()
 				));
 			}
-			$allUsersCount = $roleDao->getJournalUsersCount($journal->getJournalId());
+			$allUsersCount = $roleDao->getJournalUsersCount($journal->getId());
 
-			$issuesIterator =& $issueDao->getIssues($journal->getJournalId());
+			$issuesIterator =& $issueDao->getIssues($journal->getId());
 
 			$email->displayEditForm(
 				Request::url(null, null, 'notifyUsers'),
@@ -745,15 +745,15 @@ class IssueManagementHandler extends EditorHandler {
 
 		if (isset($issueId)) {
 			$issueDao =& DAORegistry::getDAO('IssueDAO');
-			$issue = $issueDao->getIssueById($issueId, $journal->getJournalId());
+			$issue = $issueDao->getIssueById($issueId, $journal->getId());
 
 			if (!$issue) {
 				Request::redirect(null, null, 'createIssue');
 			}
 		}
 
-		if (!Validation::isEditor($journal->getJournalId())) {
-			if (isset($journal) && $allowLayoutEditor && Validation::isLayoutEditor($journal->getJournalId())) {
+		if (!Validation::isEditor($journal->getId())) {
+			if (isset($journal) && $allowLayoutEditor && Validation::isLayoutEditor($journal->getId())) {
 				// We're a Layout Editor. If specified, make sure that the issue is not published.
 				if ($issue && !$issue->getPublished()) {
 					Validation::redirectLogin();

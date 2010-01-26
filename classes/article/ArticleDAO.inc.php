@@ -3,7 +3,7 @@
 /**
  * @file classes/article/ArticleDAO.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleDAO
@@ -46,7 +46,7 @@ class ArticleDAO extends DAO {
 	 */
 	function updateLocaleFields(&$article) {
 		$this->updateDataObjectSettings('article_settings', $article, array(
-			'article_id' => $article->getArticleId()
+			'article_id' => $article->getId()
 		));
 	}
 
@@ -115,7 +115,7 @@ class ArticleDAO extends DAO {
 	 * @param $row array input row
 	 */
 	function _articleFromRow(&$article, &$row) {
-		$article->setArticleId($row['article_id']);
+		$article->setId($row['article_id']);
 		$article->setUserId($row['user_id']);
 		$article->setJournalId($row['journal_id']);
 		$article->setSectionId($row['section_id']);
@@ -181,17 +181,17 @@ class ArticleDAO extends DAO {
 			)
 		);
 
-		$article->setArticleId($this->getInsertArticleId());
+		$article->setId($this->getInsertArticleId());
 		$this->updateLocaleFields($article);
 
 		// Insert authors for this article
 		$authors =& $article->getAuthors();
 		for ($i=0, $count=count($authors); $i < $count; $i++) {
-			$authors[$i]->setArticleId($article->getArticleId());
+			$authors[$i]->setArticleId($article->getId());
 			$this->authorDao->insertAuthor($authors[$i]);
 		}
 
-		return $article->getArticleId();
+		return $article->getId();
 	}
 
 	/**
@@ -241,7 +241,7 @@ class ArticleDAO extends DAO {
 				$article->getFastTracked(),
 				$article->getHideAuthor(),
 				$article->getCommentsStatus(),
-				$article->getArticleId()
+				$article->getId()
 			)
 		);
 
@@ -260,11 +260,11 @@ class ArticleDAO extends DAO {
 		// Remove deleted authors
 		$removedAuthors = $article->getRemovedAuthors();
 		for ($i=0, $count=count($removedAuthors); $i < $count; $i++) {
-			$this->authorDao->deleteAuthorById($removedAuthors[$i], $article->getArticleId());
+			$this->authorDao->deleteAuthorById($removedAuthors[$i], $article->getId());
 		}
 
 		// Update author sequence numbers
-		$this->authorDao->resequenceAuthors($article->getArticleId());
+		$this->authorDao->resequenceAuthors($article->getId());
 	}
 
 	/**
@@ -272,7 +272,7 @@ class ArticleDAO extends DAO {
 	 * @param $article Article
 	 */
 	function deleteArticle(&$article) {
-		return $this->deleteArticleById($article->getArticleId());
+		return $this->deleteArticleById($article->getId());
 	}
 
 	/**
@@ -401,7 +401,7 @@ class ArticleDAO extends DAO {
 
 		while (!$articles->eof()) {
 			$article =& $articles->next();
-			$this->deleteArticleById($article->getArticleId());
+			$this->deleteArticleById($article->getId());
 		}
 	}
 

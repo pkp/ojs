@@ -3,7 +3,7 @@
 /**
  * @file StatisticsHandler.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class StatisticsHandler
@@ -52,33 +52,33 @@ class StatisticsHandler extends ManagerHandler {
 		$toDate = mktime(23, 59, 59, 12, 31, $statisticsYear);
 
 		$journalStatisticsDao =& DAORegistry::getDAO('JournalStatisticsDAO');
-		$articleStatistics = $journalStatisticsDao->getArticleStatistics($journal->getJournalId(), null, $fromDate, $toDate);
+		$articleStatistics = $journalStatisticsDao->getArticleStatistics($journal->getId(), null, $fromDate, $toDate);
 		$templateMgr->assign('articleStatistics', $articleStatistics);
 
-		$limitedArticleStatistics = $journalStatisticsDao->getArticleStatistics($journal->getJournalId(), $sectionIds, $fromDate, $toDate);
+		$limitedArticleStatistics = $journalStatisticsDao->getArticleStatistics($journal->getId(), $sectionIds, $fromDate, $toDate);
 		$templateMgr->assign('limitedArticleStatistics', $limitedArticleStatistics);
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$sections =& $sectionDao->getJournalSections($journal->getJournalId());
+		$sections =& $sectionDao->getJournalSections($journal->getId());
 		$templateMgr->assign('sections', $sections->toArray());
 
-		$issueStatistics = $journalStatisticsDao->getIssueStatistics($journal->getJournalId(), $fromDate, $toDate);
+		$issueStatistics = $journalStatisticsDao->getIssueStatistics($journal->getId(), $fromDate, $toDate);
 		$templateMgr->assign('issueStatistics', $issueStatistics);
 
-		$reviewerStatistics = $journalStatisticsDao->getReviewerStatistics($journal->getJournalId(), $sectionIds, $fromDate, $toDate);
+		$reviewerStatistics = $journalStatisticsDao->getReviewerStatistics($journal->getId(), $sectionIds, $fromDate, $toDate);
 		$templateMgr->assign('reviewerStatistics', $reviewerStatistics);
 
-		$allUserStatistics = $journalStatisticsDao->getUserStatistics($journal->getJournalId(), null, $toDate);
+		$allUserStatistics = $journalStatisticsDao->getUserStatistics($journal->getId(), null, $toDate);
 		$templateMgr->assign('allUserStatistics', $allUserStatistics);
 
-		$userStatistics = $journalStatisticsDao->getUserStatistics($journal->getJournalId(), $fromDate, $toDate);
+		$userStatistics = $journalStatisticsDao->getUserStatistics($journal->getId(), $fromDate, $toDate);
 		$templateMgr->assign('userStatistics', $userStatistics);
 
 		if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION) {
-			$allSubscriptionStatistics = $journalStatisticsDao->getSubscriptionStatistics($journal->getJournalId(), null, $toDate);
+			$allSubscriptionStatistics = $journalStatisticsDao->getSubscriptionStatistics($journal->getId(), null, $toDate);
 			$templateMgr->assign('allSubscriptionStatistics', $allSubscriptionStatistics);
 
-			$subscriptionStatistics = $journalStatisticsDao->getSubscriptionStatistics($journal->getJournalId(), $fromDate, $toDate);
+			$subscriptionStatistics = $journalStatisticsDao->getSubscriptionStatistics($journal->getId(), $fromDate, $toDate);
 			$templateMgr->assign('subscriptionStatistics', $subscriptionStatistics);
 		}
 

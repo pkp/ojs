@@ -3,7 +3,7 @@
 /**
  * @file ThesisHandler.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ThesisHandler
@@ -34,7 +34,7 @@ class ThesisHandler extends Handler {
 		$journal =& Request::getJournal();
 
 		if ($journal != null) {
-			$journalId = $journal->getJournalId();
+			$journalId = $journal->getId();
 		} else {
 			Request::redirect(null, 'index');
 		}
@@ -95,7 +95,7 @@ class ThesisHandler extends Handler {
 		$journal =& Request::getJournal();
 
 		if ($journal != null) {
-			$journalId = $journal->getJournalId();
+			$journalId = $journal->getId();
 		} else {
 			Request::redirect(null, 'index');
 		}
@@ -136,7 +136,7 @@ class ThesisHandler extends Handler {
 		$journal =& Request::getJournal();
 
 		if ($journal != null) {
-			$journalId = $journal->getJournalId();
+			$journalId = $journal->getId();
 		} else {
 			Request::redirect(null, 'index');
 		}
@@ -179,7 +179,7 @@ class ThesisHandler extends Handler {
 		$journal =& Request::getJournal();
 
 		if ($journal != null) {
-			$journalId = $journal->getJournalId();
+			$journalId = $journal->getId();
 		} else {
 			Request::redirect(null, 'index');
 		}

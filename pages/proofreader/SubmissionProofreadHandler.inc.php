@@ -3,7 +3,7 @@
 /**
  * @file SubmissionProofreadHandler.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubmissionProofreadHandler
@@ -75,7 +75,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		$this->validate($articleId);
 		$this->setupTemplate(true);
 
-		if (ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_COMPLETE', Request::getUserVar('send')?'':Request::url(null, 'proofreader', 'completeProofreader'))) {
+		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_COMPLETE', Request::getUserVar('send')?'':Request::url(null, 'proofreader', 'completeProofreader'))) {
 			Request::redirect(null, null, 'submission', $articleId);
 		}		
 	}
@@ -103,7 +103,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 
 		$proofreaderDao =& DAORegistry::getDAO('ProofreaderSubmissionDAO');
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$submission =& $proofreaderDao->getSubmission($articleId, $journal->getJournalId());
+		$submission =& $proofreaderDao->getSubmission($articleId, $journal->getId());
 
 		if (isset($submission)) {
 			$proofSignoff = $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $articleId);

@@ -3,7 +3,7 @@
 /**
  * @file classes/search/ArticleSearchIndex.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleSearchIndex
@@ -170,7 +170,7 @@ class ArticleSearchIndex {
 		}
 
 		// Update search index
-		$articleId = $article->getArticleId();
+		$articleId = $article->getId();
 		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_AUTHOR, $authorText);
 		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_TITLE, $article->getTitle(null));
 		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_ABSTRACT, $article->getAbstract(null));
@@ -211,10 +211,10 @@ class ArticleSearchIndex {
 	function indexArticleFiles(&$article) {
 		// Index supplementary files
 		$fileDao =& DAORegistry::getDAO('SuppFileDAO');
-		$files =& $fileDao->getSuppFilesByArticle($article->getArticleId());
+		$files =& $fileDao->getSuppFilesByArticle($article->getId());
 		foreach ($files as $file) {
 			if ($file->getFileId()) {
-				ArticleSearchIndex::updateFileIndex($article->getArticleId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $file->getFileId());
+				ArticleSearchIndex::updateFileIndex($article->getId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $file->getFileId());
 			}
 			ArticleSearchIndex::indexSuppFileMetadata($file);
 		}
@@ -222,10 +222,10 @@ class ArticleSearchIndex {
 
 		// Index galley files
 		$fileDao =& DAORegistry::getDAO('ArticleGalleyDAO');
-		$files =& $fileDao->getGalleysByArticle($article->getArticleId());
+		$files =& $fileDao->getGalleysByArticle($article->getId());
 		foreach ($files as $file) {
 			if ($file->getFileId()) {
-				ArticleSearchIndex::updateFileIndex($article->getArticleId(), ARTICLE_SEARCH_GALLEY_FILE, $file->getFileId());
+				ArticleSearchIndex::updateFileIndex($article->getId(), ARTICLE_SEARCH_GALLEY_FILE, $file->getFileId());
 			}
 		}
 	}
@@ -256,7 +256,7 @@ class ArticleSearchIndex {
 
 			if ($log) echo "Indexing \"", $journal->getLocalizedTitle(), "\" ... ";
 
-			$articles =& $articleDao->getArticlesByJournalId($journal->getJournalId());
+			$articles =& $articleDao->getArticlesByJournalId($journal->getId());
 			while (!$articles->eof()) {
 				$article =& $articles->next();
 				if ($article->getDateSubmitted()) {

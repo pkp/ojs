@@ -3,7 +3,7 @@
 /**
  * @file RefManCitationPlugin.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class RefManCitationPlugin
@@ -51,7 +51,7 @@ class RefManCitationPlugin extends CitationPlugin {
 	 * @param $issue object
 	 */
 	function cite(&$article, &$issue) {
-		header('Content-Disposition: attachment; filename="' . $article->getArticleId() . '-refMan.ris"');
+		header('Content-Disposition: attachment; filename="' . $article->getId() . '-refMan.ris"');
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->display($this->getTemplatePath() . '/citation.tpl', 'application/x-Research-Info-Systems');
 	}

@@ -3,7 +3,7 @@
 /**
  * @file MetsGatewayPlugin.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class METSGatewayPlugin
@@ -65,7 +65,7 @@ class METSGatewayPlugin extends GatewayPlugin {
 			case 'settings':
 				$journal =& Request::getJournal();
 				$this->import('SettingsForm');
-				$form = new SettingsForm($this, $journal->getJournalId());
+				$form = new SettingsForm($this, $journal->getId());
 				if (Request::getUserVar('save')) {
 					$form->readInputData();
 					if ($form->validate()) {
@@ -104,7 +104,7 @@ class METSGatewayPlugin extends GatewayPlugin {
 			$issueId = array_shift($args);
 			if (!$issueId)
 			{
-				$issuesResultSet =& $issueDao->getIssues($journal->getJournalId(), Handler::getRangeInfo('issues'));
+				$issuesResultSet =& $issueDao->getIssues($journal->getId(), Handler::getRangeInfo('issues'));
 				$issues = array();
 
 				while (!$issuesResultSet->eof())
@@ -118,7 +118,7 @@ class METSGatewayPlugin extends GatewayPlugin {
 			else if ($issueId == 'current')
 			{
 				$issues = array();
-				$issues[] =& $issueDao->getCurrentIssue($journal->getJournalId());
+				$issues[] =& $issueDao->getCurrentIssue($journal->getId());
 			}
 			else
 			{
@@ -139,7 +139,7 @@ class METSGatewayPlugin extends GatewayPlugin {
 
 	function exportIssues(&$journal, &$issues){
 		$journal =& Request::getJournal();
-		$this->journalId = $journal->getJournalId();
+		$this->journalId = $journal->getId();
 
 		$this->import('MetsExportDom');
 		$doc =& XMLCustomWriter::createDocument();
@@ -149,7 +149,7 @@ class METSGatewayPlugin extends GatewayPlugin {
 		XMLCustomWriter::setAttribute($root, 'xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance');
 		XMLCustomWriter::setAttribute($root, 'PROFILE', 'Australian METS Profile 1.0');
 		XMLCustomWriter::setAttribute($root, 'TYPE', 'journal');
-		XMLCustomWriter::setAttribute($root, 'OBJID', 'J-'.$journal->getJournalId());
+		XMLCustomWriter::setAttribute($root, 'OBJID', 'J-'.$journal->getId());
 		XMLCustomWriter::setAttribute($root, 'xsi:schemaLocation', 'http://www.loc.gov/METS/ http://www.loc.gov/mets/mets.xsd');
 		$HeaderNode =& MetsExportDom::createmetsHdr($doc);
 		XMLCustomWriter::appendChild($root, $HeaderNode);

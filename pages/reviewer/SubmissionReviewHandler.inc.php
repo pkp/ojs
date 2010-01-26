@@ -3,7 +3,7 @@
 /**
  * @file SubmissionReviewHandler.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubmissionReviewHandler
@@ -259,7 +259,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 
 		$reviewerSubmission =& $reviewerSubmissionDao->getReviewerSubmission($reviewId);
 
-		if (!$reviewerSubmission || $reviewerSubmission->getJournalId() != $journal->getJournalId()) {
+		if (!$reviewerSubmission || $reviewerSubmission->getJournalId() != $journal->getId()) {
 			$isValid = false;
 		} elseif ($user && empty($newKey)) {
 			if ($reviewerSubmission->getReviewerId() != $user->getId()) {

@@ -3,7 +3,7 @@
 /**
  * @file ThesisFeedGatewayPlugin.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ThesisFeedGatewayPlugin
@@ -121,11 +121,11 @@ class ThesisFeedGatewayPlugin extends GatewayPlugin {
 		if (!isset($typeMap[$type])) return false;
 
 		// Get limit setting, if any 
-		$limitRecentItems = $thesisFeedPlugin->getSetting($journal->getJournalId(), 'limitRecentItems');
-		$recentItems = (int) $thesisFeedPlugin->getSetting($journal->getJournalId(), 'recentItems');
+		$limitRecentItems = $thesisFeedPlugin->getSetting($journal->getId(), 'limitRecentItems');
+		$recentItems = (int) $thesisFeedPlugin->getSetting($journal->getId(), 'recentItems');
 
 		$thesisDao =& DAORegistry::getDAO('ThesisDAO');
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 		if ($limitRecentItems && $recentItems > 0) {
 			import('db.DBResultRange');
 			$rangeInfo = new DBResultRange($recentItems, 1);
@@ -135,11 +135,11 @@ class ThesisFeedGatewayPlugin extends GatewayPlugin {
 		}
 
 		// Get date of most recent thesis
-		$lastDateUpdated = $thesisFeedPlugin->getSetting($journal->getJournalId(), 'dateUpdated');
+		$lastDateUpdated = $thesisFeedPlugin->getSetting($journal->getId(), 'dateUpdated');
 		if ($theses->wasEmpty()) {
 			if (empty($lastDateUpdated)) { 
 				$dateUpdated = Core::getCurrentDate(); 
-				$thesisFeedPlugin->updateSetting($journal->getJournalId(), 'dateUpdated', $dateUpdated, 'string');			
+				$thesisFeedPlugin->updateSetting($journal->getId(), 'dateUpdated', $dateUpdated, 'string');			
 			} else {
 				$dateUpdated = $lastDateUpdated;
 			}
@@ -147,7 +147,7 @@ class ThesisFeedGatewayPlugin extends GatewayPlugin {
 			$mostRecentThesis =& $thesisDao->getMostRecentActiveThesisByJournalId($journalId);
 			$dateUpdated = $mostRecentThesis->getDateSubmitted();
 			if (empty($lastDateUpdated) || (strtotime($dateUpdated) > strtotime($lastDateUpdated))) { 
-				$thesisFeedPlugin->updateSetting($journal->getJournalId(), 'dateUpdated', $dateUpdated, 'string');			
+				$thesisFeedPlugin->updateSetting($journal->getId(), 'dateUpdated', $dateUpdated, 'string');			
 			}
 		}
 

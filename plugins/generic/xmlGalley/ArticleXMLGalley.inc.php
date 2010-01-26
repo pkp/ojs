@@ -3,7 +3,7 @@
 /**
  * @file ArticleXMLGalley.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleXMLGalley
@@ -82,13 +82,13 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 			$journal =& Request::getJournal();
 			$xmlGalleyPlugin =& PluginRegistry::getPlugin('generic', 'XMLGalleyPlugin');
 
-			$xsltRenderer = $xmlGalleyPlugin->getSetting($journal->getJournalId(), 'XSLTrenderer');
+			$xsltRenderer = $xmlGalleyPlugin->getSetting($journal->getId(), 'XSLTrenderer');
 
 			// get command for external XSLT tool
-			if ($xsltRenderer == "external") $xsltRenderer = $xmlGalleyPlugin->getSetting($journal->getJournalId(), 'externalXSLT');
+			if ($xsltRenderer == "external") $xsltRenderer = $xmlGalleyPlugin->getSetting($journal->getId(), 'externalXSLT');
 
 			// choose the configured stylesheet: built-in, or custom
-			$xslStylesheet = $xmlGalleyPlugin->getSetting($journal->getJournalId(), 'XSLstylesheet');
+			$xslStylesheet = $xmlGalleyPlugin->getSetting($journal->getId(), 'XSLstylesheet');
 			switch ($xslStylesheet) {
 				case 'NLM':
 					// if the XML galley is a PDF galley then render the XSL-FO stylesheet
@@ -102,7 +102,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 					// get file path for custom XSL sheet
 					import('file.JournalFileManager');
 					$journalFileManager = new JournalFileManager($journal);
-					$xslSheet = $journalFileManager->filesDir . $xmlGalleyPlugin->getSetting($journal->getJournalId(), 'customXSL');
+					$xslSheet = $journalFileManager->filesDir . $xmlGalleyPlugin->getSetting($journal->getId(), 'customXSL');
 					break;
 			}
 
@@ -245,7 +245,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 
 			$fopCommand = str_replace(array('%fo', '%pdf'), 
 					array($tempFoName, $pdfFileName), 
-					$xmlGalleyPlugin->getSetting($journal->getJournalId(), 'externalFOP'));
+					$xmlGalleyPlugin->getSetting($journal->getId(), 'externalFOP'));
 
 			// check for safe mode and escape the shell command
 			if( !ini_get('safe_mode') ) $fopCommand = escapeshellcmd($fopCommand);

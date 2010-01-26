@@ -3,7 +3,7 @@
 /**
  * @file SearchHandler.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SearchHandler
@@ -16,55 +16,47 @@
 
 
 import('search.ArticleSearch');
-import('handler.Handler');
 
 class SearchHandler extends Handler {
-	/**
-	 * Constructor
-	 **/
-	function SearchHandler() {
-		parent::Handler();
-		$this->addCheck(new HandlerValidatorCustom($this, false, null, null, create_function('$journal', 'return !$journal || $journal->getSetting(\'publishingMode\') != PUBLISHING_MODE_NONE;'), array(Request::getJournal())));
-	}
 
 	/**
 	 * Show the advanced form
 	 */
 	function index() {
-		$this->validate();
-		$this->advanced();
+		parent::validate();
+		SearchHandler::advanced();
 	}
 
 	/**
 	 * Show the advanced form
 	 */
 	function search() {
-		$this->validate();
-		$this->advanced();
+		parent::validate();
+		SearchHandler::advanced();
 	}
 
 	/**
 	 * Show advanced search form.
 	 */
 	function advanced() {
-		$this->validate();
-		$this->setupTemplate(false);
-		$templateMgr =& TemplateManager::getManager();
+		parent::validate();
+		SearchHandler::setupTemplate(false);
+		$templateMgr = &TemplateManager::getManager();
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 
 		if (Request::getJournal() == null) {
-			$journalDao =& DAORegistry::getDAO('JournalDAO');
-			$journals =& $journalDao->getEnabledJournalTitles();  //Enabled added
+			$journalDao = &DAORegistry::getDAO('JournalDAO');
+			$journals = &$journalDao->getEnabledJournalTitles();  //Enabled added
 			$templateMgr->assign('siteSearch', true);
 			$templateMgr->assign('journalOptions', array('' => Locale::Translate('search.allJournals')) + $journals);
 			$journalPath = Request::getRequestedJournalPath();
 			$yearRange = $publishedArticleDao->getArticleYearRange(null);
 		} else {
 			$journal =& Request::getJournal();
-			$yearRange = $publishedArticleDao->getArticleYearRange($journal->getJournalId());
+			$yearRange = $publishedArticleDao->getArticleYearRange($journal->getId());
 		}	
 
-		$this->assignAdvancedSearchParameters($templateMgr, $yearRange);
+		SearchHandler::assignAdvancedSearchParameters($templateMgr, $yearRange);
 
 		$templateMgr->display('search/advancedSearch.tpl');
 	}
@@ -73,12 +65,12 @@ class SearchHandler extends Handler {
 	 * Show index of published articles by author.
 	 */
 	function authors($args) {
-		$this->validate();
-		$this->setupTemplate(true);
+		parent::validate();
+		SearchHandler::setupTemplate(true);
 
 		$journal =& Request::getJournal();
 
-		$authorDao =& DAORegistry::getDAO('AuthorDAO');
+		$authorDao = &DAORegistry::getDAO('AuthorDAO');
 
 		if (isset($args[0]) && $args[0] == 'view') {
 			// View a specific author
@@ -88,7 +80,7 @@ class SearchHandler extends Handler {
 			$affiliation = Request::getUserVar('affiliation');
 			$country = Request::getUserVar('country');
 
-			$publishedArticles = $authorDao->getPublishedArticlesForAuthor($journal?$journal->getJournalId():null, $firstName, $middleName, $lastName, $affiliation, $country);
+			$publishedArticles = $authorDao->getPublishedArticlesForAuthor($journal?$journal->getId():null, $firstName, $middleName, $lastName, $affiliation, $country);
 
 			// Load information associated with each article.
 			$journals = array();
@@ -101,15 +93,15 @@ class SearchHandler extends Handler {
 			$journalDao =& DAORegistry::getDAO('JournalDAO');
 
 			foreach ($publishedArticles as $article) {
-				$articleId = $article->getArticleId();
+				$articleId = $article->getId();
 				$issueId = $article->getIssueId();
 				$sectionId = $article->getSectionId();
 				$journalId = $article->getJournalId();
 
 				if (!isset($issues[$issueId])) {
 					import('issue.IssueAction');
-					$issue =& $issueDao->getIssueById($issueId);
-					$issues[$issueId] =& $issue;
+					$issue = &$issueDao->getIssueById($issueId);
+					$issues[$issueId] = &$issue;
 					$issuesUnavailable[$issueId] = IssueAction::subscriptionRequired($issue) && (!IssueAction::subscribedUser($journal, $issueId, $articleId) && !IssueAction::subscribedDomain($journal, $issueId, $articleId));
 				}
 				if (!isset($journals[$journalId])) {
@@ -124,7 +116,7 @@ class SearchHandler extends Handler {
 				Request::redirect(null, Request::getRequestedPage());
 			}
 
-			$templateMgr =& TemplateManager::getManager();
+			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign_by_ref('publishedArticles', $publishedArticles);
 			$templateMgr->assign_by_ref('issues', $issues);
 			$templateMgr->assign('issuesUnavailable', $issuesUnavailable);
@@ -136,7 +128,7 @@ class SearchHandler extends Handler {
 			$templateMgr->assign('affiliation', $affiliation);
 
 			$countryDao =& DAORegistry::getDAO('CountryDAO');
-			$country =& $countryDao->getCountry($country);
+			$country = $countryDao->getCountry($country);
 			$templateMgr->assign('country', $country);
 
 			$templateMgr->display('search/authorDetails.tpl');
@@ -145,13 +137,13 @@ class SearchHandler extends Handler {
 			$searchInitial = Request::getUserVar('searchInitial');
 			$rangeInfo = Handler::getRangeInfo('authors');
 
-			$authors =& $authorDao->getAuthorsAlphabetizedByJournal(
-				isset($journal)?$journal->getJournalId():null,
+			$authors = &$authorDao->getAuthorsAlphabetizedByJournal(
+				isset($journal)?$journal->getId():null,
 				$searchInitial,
 				$rangeInfo
 			);
 
-			$templateMgr =& TemplateManager::getManager();
+			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign('searchInitial', Request::getUserVar('searchInitial'));
 			$templateMgr->assign('alphaList', explode(' ', Locale::translate('common.alphaList')));
 			$templateMgr->assign_by_ref('authors', $authors);
@@ -163,22 +155,21 @@ class SearchHandler extends Handler {
 	 * Show index of published articles by title.
 	 */
 	function titles($args) {
-		$this->validate();
-		$this->setupTemplate(true);
+		parent::validate();
+		SearchHandler::setupTemplate(true);
 
 		$journal =& Request::getJournal();
 
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 
 		$rangeInfo = Handler::getRangeInfo('search');
 
-		$articleIds =& $publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal(isset($journal)?$journal->getJournalId():null);
+		$articleIds = &$publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal(isset($journal)?$journal->getId():null);
 		$totalResults = count($articleIds);
 		$articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
-		import('core.VirtualArrayIterator');
-		$results = new VirtualArrayIterator(ArticleSearch::formatResults($articleIds), $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
+		$results = &new VirtualArrayIterator(ArticleSearch::formatResults($articleIds), $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign_by_ref('results', $results);
 		$templateMgr->display('search/titleIndex.tpl');
 	}
@@ -187,15 +178,15 @@ class SearchHandler extends Handler {
 	 * Show basic search results.
 	 */
 	function results() {
-		$this->validate();
-		$this->setupTemplate(true);
+		parent::validate();
+		SearchHandler::setupTemplate(true);
 
 		$rangeInfo = Handler::getRangeInfo('search');
 
 		$searchJournalId = Request::getUserVar('searchJournal');
 		if (!empty($searchJournalId)) {
-			$journalDao =& DAORegistry::getDAO('JournalDAO');
-			$journal =& $journalDao->getJournal($searchJournalId);
+			$journalDao = &DAORegistry::getDAO('JournalDAO');
+			$journal = &$journalDao->getJournal($searchJournalId);
 		} else {
 			$journal =& Request::getJournal();
 		}
@@ -206,9 +197,9 @@ class SearchHandler extends Handler {
 		// Load the keywords array with submitted values
 		$keywords = array($searchType => ArticleSearch::parseQuery(Request::getUserVar('query')));
 
-		$results =& ArticleSearch::retrieveResults($journal, $keywords, null, null, $rangeInfo);
+		$results = &ArticleSearch::retrieveResults($journal, $keywords, null, null, $rangeInfo);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->setCacheability(CACHEABILITY_NO_STORE);
 		$templateMgr->assign_by_ref('results', $results);
 		$templateMgr->assign('basicQuery', Request::getUserVar('query'));
@@ -220,17 +211,17 @@ class SearchHandler extends Handler {
 	 * Show advanced search results.
 	 */
 	function advancedResults() {
-		$this->validate();
-		$this->setupTemplate(true);
+		parent::validate();
+		SearchHandler::setupTemplate(true);
 
 		$rangeInfo = Handler::getRangeInfo('search');
 
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$searchJournalId = Request::getUserVar('searchJournal');
 		if (!empty($searchJournalId)) {
-			$journalDao =& DAORegistry::getDAO('JournalDAO');
-			$journal =& $journalDao->getJournal($searchJournalId);
-			$yearRange = $publishedArticleDao->getArticleYearRange($journal->getJournalId());
+			$journalDao = &DAORegistry::getDAO('JournalDAO');
+			$journal = &$journalDao->getJournal($searchJournalId);
+			$yearRange = $publishedArticleDao->getArticleYearRange($journal->getId());
 		} else {
 			$journal =& Request::getJournal();
 			$yearRange = $publishedArticleDao->getArticleYearRange(null);
@@ -252,11 +243,11 @@ class SearchHandler extends Handler {
 		$toDate = Request::getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
 		if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
 
-		$results =& ArticleSearch::retrieveResults($journal, $keywords, $fromDate, $toDate, $rangeInfo);
+		$results = &ArticleSearch::retrieveResults($journal, $keywords, $fromDate, $toDate, $rangeInfo);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign_by_ref('results', $results);
-		$this->assignAdvancedSearchParameters($templateMgr, $yearRange);
+		SearchHandler::assignAdvancedSearchParameters($templateMgr, $yearRange);
 
 		$templateMgr->display('search/searchResults.tpl');
 	}	
@@ -266,8 +257,8 @@ class SearchHandler extends Handler {
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
 	function setupTemplate($subclass = false) {
-		parent::setupTemplate();
-		$templateMgr =& TemplateManager::getManager();
+		parent::validate();
+		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', 'user.searchAndBrowse');
 		$templateMgr->assign('pageHierarchy',
 			$subclass ? array(array(Request::url(null, 'search'), 'navigation.search'))
@@ -292,16 +283,16 @@ class SearchHandler extends Handler {
 		$templateMgr->assign('type', Request::getUserVar('type'));
 		$templateMgr->assign('coverage', Request::getUserVar('coverage'));
 		$fromMonth = Request::getUserVar('dateFromMonth');
-		$fromDay = Request::getUserVar('dateFromDay');
-		$fromYear = Request::getUserVar('dateFromYear');
+                $fromDay = Request::getUserVar('dateFromDay');
+                $fromYear = Request::getUserVar('dateFromYear');
 		$templateMgr->assign('dateFromMonth', $fromMonth);
 		$templateMgr->assign('dateFromDay', $fromDay);
 		$templateMgr->assign('dateFromYear', $fromYear);
 		if (!empty($fromYear)) $templateMgr->assign('dateFrom', date('Y-m-d H:i:s',mktime(0,0,0,$fromMonth==null?12:$fromMonth,$fromDay==null?31:$fromDay,$fromYear)));
 
 		$toMonth = Request::getUserVar('dateToMonth');
-		$toDay = Request::getUserVar('dateToDay');
-		$toYear = Request::getUserVar('dateToYear');
+                $toDay = Request::getUserVar('dateToDay');
+                $toYear = Request::getUserVar('dateToYear');
 		$templateMgr->assign('dateToMonth', $toMonth);
 		$templateMgr->assign('dateToDay', $toDay);
 		$templateMgr->assign('dateToYear', $toYear);

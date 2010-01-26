@@ -3,7 +3,7 @@
 /**
  * @file ExternalFeedBlockPlugin.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ExternalFeedBlockPlugin
@@ -84,7 +84,7 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 		$journal =& Request::getJournal();
 		if (!$journal) return '';
 
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 		$plugin =& $this->getExternalFeedPlugin();
 		if (!$plugin->getEnabled()) return '';
 
@@ -93,7 +93,7 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 		$plugin->import('simplepie.SimplePie');
 		import('cache.CacheManager');
 
-		$feeds =& $externalFeedDao->getExternalFeedsByJournalId($journal->getJournalId());
+		$feeds =& $externalFeedDao->getExternalFeedsByJournalId($journal->getId());
 
 		while ($currentFeed =& $feeds->next()) {		
 			$displayBlock = $currentFeed->getDisplayBlock();

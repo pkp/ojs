@@ -3,7 +3,7 @@
 /**
  * @file StaticPagesPlugin.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package plugins.generic.staticPages
@@ -89,7 +89,7 @@ class StaticPagesPlugin extends GenericPlugin {
 	function getEnabled() {
 		$journal =& Request::getJournal();
 		if (!$journal) return false;
-		return $this->getSetting($journal->getJournalId(), 'enabled');
+		return $this->getSetting($journal->getId(), 'enabled');
 	}
 
 	/**
@@ -98,7 +98,7 @@ class StaticPagesPlugin extends GenericPlugin {
 	function setEnabled($enabled) {
 		$journal =& Request::getJournal();
 		if ($journal) {
-			$this->updateSetting($journal->getJournalId(), 'enabled', $enabled ? true : false);
+			$this->updateSetting($journal->getId(), 'enabled', $enabled ? true : false);
 
 			return true;
 		}
@@ -156,7 +156,7 @@ class StaticPagesPlugin extends GenericPlugin {
 				$journal =& Request::getJournal();
 
 				$this->import('StaticPagesSettingsForm');
-				$form = new StaticPagesSettingsForm($this, $journal->getJournalId());
+				$form = new StaticPagesSettingsForm($this, $journal->getId());
 
 				$templateMgr->assign('pageHierarchy', $pageCrumbs);
 				$form->initData();
@@ -169,7 +169,7 @@ class StaticPagesPlugin extends GenericPlugin {
 				$this->import('StaticPagesEditForm');
 
 				$staticPageId = isset($args[0])?(int)$args[0]:null;
-				$form = new StaticPagesEditForm($this, $journal->getJournalId(), $staticPageId);
+				$form = new StaticPagesEditForm($this, $journal->getId(), $staticPageId);
 
 				if ($form->isLocaleResubmit()) {
 					$form->readInputData();
@@ -193,7 +193,7 @@ class StaticPagesPlugin extends GenericPlugin {
 				$this->import('StaticPagesEditForm');
 
 				$staticPageId = isset($args[0])?(int)$args[0]:null;
-				$form = new StaticPagesEditForm($this, $journal->getJournalId(), $staticPageId);
+				$form = new StaticPagesEditForm($this, $journal->getId(), $staticPageId);
 
 				if (Request::getUserVar('edit')) {
 					$form->readInputData();

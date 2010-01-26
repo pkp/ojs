@@ -3,7 +3,7 @@
 /**
  * @file ReferralHandler.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ReferralHandler
@@ -70,7 +70,7 @@ class ReferralHandler extends Handler {
 			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 			$journal =& Request::getJournal();
 			$article =& $publishedArticleDao->getPublishedArticleByArticleId((int) Request::getUserVar('articleId'));
-			if (!$article || ($article->getUserId() != $user->getId() && !Validation::isSectionEditor($journal->getJournalId()) && !Validation::isEditor($journal->getJournalId()))) {
+			if (!$article || ($article->getUserId() != $user->getId() && !Validation::isSectionEditor($journal->getId()) && !Validation::isEditor($journal->getId()))) {
 				Request::redirect(null, 'author');
 			}
 		}
@@ -120,9 +120,9 @@ class ReferralHandler extends Handler {
 			$journal =& Request::getJournal();
 			$article =& $publishedArticleDao->getPublishedArticleByArticleId($referral->getArticleId());
 			if (!$article || !$journal) Request::redirect(null, 'index');
-			if ($article->getJournalId() != $journal->getJournalId()) Request::redirect(null, 'index');
+			if ($article->getJournalId() != $journal->getId()) Request::redirect(null, 'index');
 			// The article's submitter, journal SE, and journal Editors are allowed.
-			if ($article->getUserId() != $user->getId() && !Validation::isSectionEditor($journal->getJournalId()) && !Validation::isEditor($journal->getJournalId())) Request::redirect(null, 'index');
+			if ($article->getUserId() != $user->getId() && !Validation::isSectionEditor($journal->getId()) && !Validation::isEditor($journal->getId())) Request::redirect(null, 'index');
 		} else {
 			$referral = $article = null;
 		}

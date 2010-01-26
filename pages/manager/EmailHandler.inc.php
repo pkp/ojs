@@ -3,7 +3,7 @@
 /**
  * @file EmailHandler.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class EmailHandler
@@ -35,7 +35,7 @@ class EmailHandler extends ManagerHandler {
 
 		$journal =& Request::getJournal();
 		$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
-		$emailTemplates =& $emailTemplateDao->getEmailTemplates(Locale::getLocale(), $journal->getJournalId());
+		$emailTemplates =& $emailTemplateDao->getEmailTemplates(Locale::getLocale(), $journal->getId());
 
 		import('core.ArrayItemIterator');
 		$emailTemplates =& ArrayItemIterator::fromRangeInfo($emailTemplates, $rangeInfo);
@@ -106,8 +106,8 @@ class EmailHandler extends ManagerHandler {
 		$emailKey = array_shift($args);
 
 		$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
-		if ($emailTemplateDao->customTemplateExistsByKey($emailKey, $journal->getJournalId())) {
-			$emailTemplateDao->deleteEmailTemplateByKey($emailKey, $journal->getJournalId());
+		if ($emailTemplateDao->customTemplateExistsByKey($emailKey, $journal->getId())) {
+			$emailTemplateDao->deleteEmailTemplateByKey($emailKey, $journal->getId());
 		}
 
 		Request::redirect(null, null, 'emails');
@@ -124,7 +124,7 @@ class EmailHandler extends ManagerHandler {
 			$journal =& Request::getJournal();
 
 			$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
-			$emailTemplateDao->deleteEmailTemplateByKey($args[0], $journal->getJournalId());
+			$emailTemplateDao->deleteEmailTemplateByKey($args[0], $journal->getId());
 		}
 
 		Request::redirect(null, null, 'emails');
@@ -138,7 +138,7 @@ class EmailHandler extends ManagerHandler {
 
 		$journal =& Request::getJournal();
 		$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
-		$emailTemplateDao->deleteEmailTemplatesByJournal($journal->getJournalId());
+		$emailTemplateDao->deleteEmailTemplatesByJournal($journal->getId());
 
 		Request::redirect(null, null, 'emails');
 	}
@@ -154,14 +154,14 @@ class EmailHandler extends ManagerHandler {
 			$journal =& Request::getJournal();
 
 			$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
-			$emailTemplate = $emailTemplateDao->getBaseEmailTemplate($args[0], $journal->getJournalId());
+			$emailTemplate = $emailTemplateDao->getBaseEmailTemplate($args[0], $journal->getId());
 
 			if (isset($emailTemplate)) {
 				if ($emailTemplate->getCanDisable()) {
 					$emailTemplate->setEnabled(0);
 
 					if ($emailTemplate->getAssocId() == null) {
-						$emailTemplate->setAssocId($journal->getJournalId());
+						$emailTemplate->setAssocId($journal->getId());
 						$emailTemplate->setAssocType(ASSOC_TYPE_JOURNAL);
 					}
 
@@ -188,7 +188,7 @@ class EmailHandler extends ManagerHandler {
 			$journal =& Request::getJournal();
 
 			$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
-			$emailTemplate = $emailTemplateDao->getBaseEmailTemplate($args[0], $journal->getJournalId());
+			$emailTemplate = $emailTemplateDao->getBaseEmailTemplate($args[0], $journal->getId());
 
 			if (isset($emailTemplate)) {
 				if ($emailTemplate->getCanDisable()) {

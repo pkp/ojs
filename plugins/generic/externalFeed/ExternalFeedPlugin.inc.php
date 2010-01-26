@@ -3,7 +3,7 @@
 /**
  * @file ExternalFeedPlugin.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ExternalFeedPlugin
@@ -87,7 +87,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 	 */
 	function getStyleSheetFile() {
 		$journal =& Request::getJournal();
-		$journalId = $journal?$journal->getJournalId():0;
+		$journalId = $journal?$journal->getId():0;
 		$styleSheet = $this->getSetting($journalId, 'externalFeedStyleSheet');
 
 		if (empty($styleSheet)) {
@@ -198,7 +198,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 	function getEnabled() {
 		$journal =& Request::getJournal();
 		if (!$journal) return false;
-		return $this->getSetting($journal->getJournalId(), 'enabled');
+		return $this->getSetting($journal->getId(), 'enabled');
 	}
 
 	/**
@@ -208,7 +208,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 	 */
 	function displayHomepage($hookName, $args) {
 		$journal =& Request::getJournal();
-		$journalId = $journal?$journal->getJournalId():0;
+		$journalId = $journal?$journal->getId():0;
 
 		if ($this->getEnabled()) {
 			$requestedPage = Request::getRequestedPage();
@@ -218,7 +218,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 				$this->import('simplepie.SimplePie');
 				import('cache.CacheManager');
 
-				$feeds =& $externalFeedDao->getExternalFeedsByJournalId($journal->getJournalId());
+				$feeds =& $externalFeedDao->getExternalFeedsByJournalId($journal->getId());
 				$output = '<div id="externalFeedsHome">';
 
 				while ($currentFeed =& $feeds->next()) {		
@@ -300,7 +300,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 	function setEnabled($enabled) {
 		$journal =& Request::getJournal();
 		if ($journal) {
-			$this->updateSetting($journal->getJournalId(), 'enabled', $enabled ? true : false);
+			$this->updateSetting($journal->getId(), 'enabled', $enabled ? true : false);
 			return true;
 		}
 		return false;
@@ -324,7 +324,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 		$journal =& Request::getJournal();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 		$returner = true;
 
 		switch ($verb) {
@@ -456,7 +456,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 			case 'settings':
 				if ($this->getEnabled()) {
 					$this->import('ExternalFeedSettingsForm');
-					$form = new ExternalFeedSettingsForm($this, $journal->getJournalId());
+					$form = new ExternalFeedSettingsForm($this, $journal->getId());
 					if (Request::getUserVar('save')) {
 						Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'feeds'));
 					} elseif (Request::getUserVar('uploadStyleSheet')) {

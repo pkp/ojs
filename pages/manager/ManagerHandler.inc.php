@@ -3,7 +3,7 @@
 /**
  * @file ManagerHandler.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ManagerHandler
@@ -35,7 +35,7 @@ class ManagerHandler extends Handler {
 		$this->setupTemplate();
 		$journal =& Request::getJournal();
 		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->assign_by_ref('roleSettings', $this->retrieveRoleAssignmentPreferences($journal->getJournalId()));
+		$templateMgr->assign_by_ref('roleSettings', $this->retrieveRoleAssignmentPreferences($journal->getId()));
 		$templateMgr->assign('publishingMode', $journal->getSetting('publishingMode'));
 		$templateMgr->assign('announcementsEnabled', $journal->getSetting('enableAnnouncements'));
 		$session =& Request::getSession();
@@ -75,7 +75,7 @@ class ManagerHandler extends Handler {
 					// Check for a group ID and add recipients.
 					$groupDao =& DAORegistry::getDAO('GroupDAO');
 					$group =& $groupDao->getGroup($groupId);
-					if ($group && $group->getAssocId() == $journal->getJournalId() && $group->getAssocType() == ASSOC_TYPE_JOURNAL) {
+					if ($group && $group->getAssocId() == $journal->getId() && $group->getAssocType() == ASSOC_TYPE_JOURNAL) {
 						$groupMembershipDao =& DAORegistry::getDAO('GroupMembershipDAO');
 						$memberships =& $groupMembershipDao->getMemberships($group->getId());
 						$memberships =& $memberships->toArray();

@@ -3,7 +3,7 @@
 /**
  * @file CustomThemePlugin.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CustomThemePlugin
@@ -112,7 +112,7 @@ class CustomThemePlugin extends ThemePlugin {
 		$templateMgr->setCacheability(CACHEABILITY_MUST_REVALIDATE);
 
 		$this->import('CustomThemeSettingsForm');
-		$form = new CustomThemeSettingsForm($this, $journal->getJournalId());
+		$form = new CustomThemeSettingsForm($this, $journal->getId());
 		if (Request::getUserVar('save')) {
 			$form->readInputData();
 			if ($form->validate()) {

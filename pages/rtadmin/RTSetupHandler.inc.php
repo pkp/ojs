@@ -3,7 +3,7 @@
 /**
  * @file RTSetupHandler.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class RTSetupHandler
@@ -39,7 +39,7 @@ class RTSetupHandler extends RTAdminHandler {
 			$rt = $rtDao->getJournalRTByJournal($journal);
 
 			$versionOptions = array();
-			$versions = $rtDao->getVersions($journal->getJournalId());
+			$versions = $rtDao->getVersions($journal->getId());
 			foreach ($versions->toArray() as $version) {
 				$versionOptions[$version->getVersionId()] = $version->getTitle();
 			}

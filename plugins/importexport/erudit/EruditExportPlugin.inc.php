@@ -3,7 +3,7 @@
 /**
  * @file EruditExportPlugin.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class EruditExportPlugin
@@ -65,7 +65,7 @@ class EruditExportPlugin extends ImportExportPlugin {
 
 				$article =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
 				$galley =& $articleGalleyDao->getGalley($galleyId, $articleId);
-				if ($article && $galley && ($issue =& $issueDao->getIssueById($article->getIssueId(), $journal->getJournalId()))) {
+				if ($article && $galley && ($issue =& $issueDao->getIssueById($article->getIssueId(), $journal->getId()))) {
 					$this->exportArticle($journal, $issue, $article, $galley);
 					break;
 				}
@@ -75,7 +75,7 @@ class EruditExportPlugin extends ImportExportPlugin {
 				Locale::requireComponents(array(LOCALE_COMPONENT_PKP_SUBMISSION));
 				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 				$rangeInfo = Handler::getRangeInfo('articles');
-				$articleIds = $publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal($journal->getJournalId(), false);
+				$articleIds = $publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal($journal->getId(), false);
 				$totalArticles = count($articleIds);
 				$articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 				import('core.VirtualArrayIterator');
@@ -132,7 +132,7 @@ class EruditExportPlugin extends ImportExportPlugin {
 			return;
 		}
 
-		$publishedArticle =& $publishedArticleDao->getPublishedArticleByBestArticleId($journal->getJournalId(), $articleId);
+		$publishedArticle =& $publishedArticleDao->getPublishedArticleByBestArticleId($journal->getId(), $articleId);
 		if ($publishedArticle == null) {
 			echo Locale::translate('plugins.importexport.erudit.cliError') . "\n";
 			echo Locale::translate('plugins.importexport.erudit.export.error.articleNotFound', array('articleId' => $articleId)) . "\n\n";

@@ -3,7 +3,7 @@
 /**
  * @file classes/submission/copyeditor/CopyeditorAction.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CopyeditorAction
@@ -303,7 +303,7 @@ class CopyeditorAction extends Action {
 				import('notification.Notification');
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
 				foreach ($notificationUsers as $userRole) {
-					$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getArticleId(), null, 'layout');
+					$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'layout');
 					Notification::createNotification($userRole['id'], "notification.type.layoutComment",
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_LAYOUT_COMMENT);
 				}
@@ -352,7 +352,7 @@ class CopyeditorAction extends Action {
 				import('notification.Notification');
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
 				foreach ($notificationUsers as $userRole) {
-					$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getArticleId(), null, 'coypedit');
+					$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'coypedit');
 					Notification::createNotification($userRole['id'], "notification.type.copyeditComment",
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_COPYEDIT_COMMENT);
 				}

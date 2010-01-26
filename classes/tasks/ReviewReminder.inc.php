@@ -3,7 +3,7 @@
 /**
  * @file classes/tasks/ReviewReminder.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ReviewReminder
@@ -89,10 +89,10 @@ class ReviewReminder extends ScheduledTask {
 		$incompleteAssignments =& $reviewAssignmentDao->getIncompleteReviewAssignments();
 		foreach ($incompleteAssignments as $reviewAssignment) {
 			// Fetch the Article and the Journal if necessary.
-			if ($article == null || $article->getArticleId() != $reviewAssignment->getArticleId()) {
+			if ($article == null || $article->getId() != $reviewAssignment->getArticleId()) {
 				unset($article);
 				$article =& $articleDao->getArticle($reviewAssignment->getArticleId());
-				if ($journal == null || $journal->getJournalId() != $article->getJournalId()) {
+				if ($journal == null || $journal->getId() != $article->getJournalId()) {
 					unset($journal);
 					$journal =& $journalDao->getJournal($article->getJournalId());
 

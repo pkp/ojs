@@ -3,7 +3,7 @@
 /**
  * @file classes/search/ArticleSearchDAO.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleSearchDAO
@@ -100,7 +100,7 @@ class ArticleSearchDAO extends DAO {
 
 		if (!empty($journal)) {
 			$sqlWhere .= ' AND i.journal_id = ?';
-			$params[] = $journal->getJournalId();
+			$params[] = $journal->getId();
 		}
 
 		$result =& $this->retrieveCached(

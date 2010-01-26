@@ -3,7 +3,7 @@
 /**
  * @file classes/article/PublishedArticle.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PublishedArticle
@@ -252,7 +252,7 @@ class PublishedArticle extends Article {
 
 		// Get the Journal object (optimized)
 		$journal =& Request::getJournal();
-		if (!$journal || $journal->getJournalId() != $journalId) {
+		if (!$journal || $journal->getId() != $journalId) {
 			unset($journal);
 			$journalDao =& DAORegistry::getDAO('JournalDAO');
 			$journal =& $journalDao->getJournal($journalId);
@@ -265,7 +265,7 @@ class PublishedArticle extends Article {
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		$issue =& $issueDao->getIssueByArticleId($this->getArticleId());
 
-		if (!$issue || !$journal || $journal->getJournalId() != $issue->getJournalId() ) return null;
+		if (!$issue || !$journal || $journal->getId() != $issue->getJournalId() ) return null;
 
 		switch ( $doiSuffixSetting ) {
 			case 'customIdentifier':

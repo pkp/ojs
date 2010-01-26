@@ -3,7 +3,7 @@
 /**
  * @file plugins/importexport/crossref/CrossRefExportDom.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CrossRefExportDom
@@ -70,7 +70,7 @@ class CrossRefExportDom {
 		XMLCustomWriter::createChildWithText($doc, $head, 'doi_batch_id', $journal->getLocalizedSetting('initials') . '_' . time());
 		XMLCustomWriter::createChildWithText($doc, $head, 'timestamp', time());
 
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 
 		/* Depositor defaults to the Journal's technical Contact */
 		$depositorNode =& CrossRefExportDom::generateDepositorDom($doc, $journal->getSetting('supportName'), $journal->getSetting('supportEmail'));

@@ -1,12 +1,12 @@
 {**
  * userProfileForm.tpl
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * User profile form under journal management.
  *
- * $Id: userProfileForm.tpl,v 1.56 2009/11/20 00:47:16 mcrider Exp $
+ * $Id$
  *}
 {strip}
 {url|assign:"currentUrl" op="people" path="all"}

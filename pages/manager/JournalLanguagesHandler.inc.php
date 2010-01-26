@@ -3,7 +3,7 @@
 /**
  * @file JournalLanguagesHandler.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class JournalLanguagesHandler
@@ -80,7 +80,7 @@ class JournalLanguagesHandler extends ManagerHandler {
 					
 		$journal =& Request::getJournal();
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-		$journalSettingsDao->reloadLocalizedDefaultSettings($journal->getJournalId(), 'registry/journalSettings.xml', array(
+		$journalSettingsDao->reloadLocalizedDefaultSettings($journal->getId(), 'registry/journalSettings.xml', array(
 				'indexUrl' => Request::getIndexUrl(),
 				'journalPath' => $journal->getData('path'),
 				'primaryLocale' => $journal->getPrimaryLocale(),

@@ -3,7 +3,7 @@
 /**
  * @file NativeExportDom.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class NativeExportDom
@@ -55,7 +55,7 @@ class NativeExportDom {
 					XMLCustomWriter::appendChild($coverNode, $imageNode);
 					import('file.PublicFileManager');
 					$publicFileManager = new PublicFileManager();
-					$coverPagePath = $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
+					$coverPagePath = $publicFileManager->getJournalFilesPath($journal->getId()) . '/';
 					$coverPagePath .= $coverFile;
 					$embedNode =& XMLCustomWriter::createChildWithText($doc, $imageNode, 'embed', base64_encode($publicFileManager->readFile($coverPagePath)));
 					XMLCustomWriter::setAttribute($embedNode, 'filename', $issue->getOriginalFileName($locale));
@@ -243,7 +243,7 @@ class NativeExportDom {
 					XMLCustomWriter::appendChild($coverNode, $imageNode);
 					import('file.PublicFileManager');
 					$publicFileManager = new PublicFileManager();
-					$coverPagePath = $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
+					$coverPagePath = $publicFileManager->getJournalFilesPath($journal->getId()) . '/';
 					$coverPagePath .= $coverFile;
 					$embedNode =& XMLCustomWriter::createChildWithText($doc, $imageNode, 'embed', base64_encode($publicFileManager->readFile($coverPagePath)));
 					XMLCustomWriter::setAttribute($embedNode, 'filename', $article->getOriginalFileName($locale));
@@ -315,7 +315,7 @@ class NativeExportDom {
 		$isHtml = $galley->isHTMLGalley();
 
 		import('file.ArticleFileManager');
-		$articleFileManager = new ArticleFileManager($article->getArticleId());
+		$articleFileManager = new ArticleFileManager($article->getId());
 		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
 
 		$root =& XMLCustomWriter::createElement($doc, $isHtml?'htmlgalley':'galley');
@@ -441,7 +441,7 @@ class NativeExportDom {
 		}
 		
 		import('file.ArticleFileManager');
-		$articleFileManager = new ArticleFileManager($article->getArticleId());
+		$articleFileManager = new ArticleFileManager($article->getId());
 		$fileNode =& XMLCustomWriter::createElement($doc, 'file');
 		XMLCustomWriter::appendChild($root, $fileNode);
 		$embedNode =& XMLCustomWriter::createChildWithText($doc, $fileNode, 'embed', base64_encode($articleFileManager->readFile($suppFile->getFileId())));

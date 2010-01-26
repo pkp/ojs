@@ -3,7 +3,7 @@
 /**
  * @file SubscriptionBlockPlugin.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionBlockPlugin
@@ -71,7 +71,7 @@ class SubscriptionBlockPlugin extends BlockPlugin {
 	 */
 	function getContents(&$templateMgr) {
 		$journal =& Request::getJournal();
-		$journalId = ($journal)?$journal->getJournalId():null;
+		$journalId = ($journal)?$journal->getId():null;
 		if (!$journal) return '';
 
 		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION)

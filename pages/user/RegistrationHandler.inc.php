@@ -3,7 +3,7 @@
 /**
  * @file RegistrationHandler.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class RegistrationHandler
@@ -168,7 +168,7 @@ class RegistrationHandler extends UserHandler {
 		$journal = Request::getJournal();
 		if ($journal != null) {
 			$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-			if ($journalSettingsDao->getSetting($journal->getJournalId(), 'disableUserReg')) {
+			if ($journalSettingsDao->getSetting($journal->getId(), 'disableUserReg')) {
 				// Users cannot register themselves for this journal
 				$this->registrationDisabled();
 				exit;

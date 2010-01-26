@@ -1,7 +1,7 @@
 {**
  * referralForm.tpl
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Referral form.
@@ -24,7 +24,7 @@
 {if $referralId}
 <input type="hidden" name="referralId" value="{$referralId|escape}" />
 {/if}
-<input type="hidden" name="articleId" value="{$article->getArticleId()|escape}" />
+<input type="hidden" name="articleId" value="{$article->getId()|escape}" />
 
 {include file="common/formErrors.tpl"}
 

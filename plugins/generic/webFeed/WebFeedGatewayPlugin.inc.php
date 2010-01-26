@@ -3,7 +3,7 @@
 /**
  * @file WebFeedGatewayPlugin.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class WebFeedGatewayPlugin
@@ -98,7 +98,7 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 
 		// Make sure there's a current issue for this journal
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$issue =& $issueDao->getCurrentIssue($journal->getJournalId());
+		$issue =& $issueDao->getCurrentIssue($journal->getId());
 		if (!$issue) return false;
 
 		$webFeedPlugin =& $this->getWebFeedPlugin();
@@ -119,14 +119,14 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 		if (!isset($typeMap[$type])) return false;
 
 		// Get limit setting from web feeds plugin
-		$displayItems = $webFeedPlugin->getSetting($journal->getJournalId(), 'displayItems');
-		$recentItems = (int) $webFeedPlugin->getSetting($journal->getJournalId(), 'recentItems');
+		$displayItems = $webFeedPlugin->getSetting($journal->getId(), 'displayItems');
+		$recentItems = (int) $webFeedPlugin->getSetting($journal->getId(), 'recentItems');
 
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		if ($displayItems == 'recent' && $recentItems > 0) {
 			import('db.DBResultRange');
 			$rangeInfo = new DBResultRange($recentItems, 1);
-			$publishedArticleObjects =& $publishedArticleDao->getPublishedArticlesByJournalId($journal->getJournalId(), $rangeInfo);
+			$publishedArticleObjects =& $publishedArticleDao->getPublishedArticlesByJournalId($journal->getId(), $rangeInfo);
 			while ($publishedArticle =& $publishedArticleObjects->next()) {
 				$publishedArticles[]['articles'][] =& $publishedArticle;
 				unset($publishedArticle);

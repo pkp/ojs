@@ -3,7 +3,7 @@
 /**
  * @file PeopleHandler.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PeopleHandler
@@ -74,7 +74,7 @@ class PeopleHandler extends ManagerHandler {
 		$rangeInfo = Handler::getRangeInfo('users');
 
 		if ($roleId) {
-			$users =& $roleDao->getUsersByRoleId($roleId, $journal->getJournalId(), $searchType, $search, $searchMatch, $rangeInfo, $sort);
+			$users =& $roleDao->getUsersByRoleId($roleId, $journal->getId(), $searchType, $search, $searchMatch, $rangeInfo, $sort);
 			$templateMgr->assign('roleId', $roleId);
 			switch($roleId) {
 				case ROLE_ID_JOURNAL_MANAGER:
@@ -112,7 +112,7 @@ class PeopleHandler extends ManagerHandler {
 					break;
 			}
 		} else {
-			$users =& $roleDao->getUsersByJournalId($journal->getJournalId(), $searchType, $search, $searchMatch, $rangeInfo, $sort);
+			$users =& $roleDao->getUsersByJournalId($journal->getId(), $searchType, $search, $searchMatch, $rangeInfo, $sort);
 			$helpTopicId = 'journal.users.allUsers';
 		}
 
@@ -127,12 +127,12 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign('search', $search);
 		$templateMgr->assign('searchInitial', Request::getUserVar('searchInitial'));
 
-		$templateMgr->assign_by_ref('roleSettings', $this->retrieveRoleAssignmentPreferences($journal->getJournalId()));
+		$templateMgr->assign_by_ref('roleSettings', $this->retrieveRoleAssignmentPreferences($journal->getId()));
 
 		if ($roleId == ROLE_ID_REVIEWER) {
 			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 			$templateMgr->assign('rateReviewerOnQuality', $journal->getSetting('rateReviewerOnQuality'));
-			$templateMgr->assign('qualityRatings', $journal->getSetting('rateReviewerOnQuality') ? $reviewAssignmentDao->getAverageQualityRatings($journal->getJournalId()) : null);
+			$templateMgr->assign('qualityRatings', $journal->getSetting('rateReviewerOnQuality') ? $reviewAssignmentDao->getAverageQualityRatings($journal->getId()) : null);
 		}
 		$templateMgr->assign('helpTopicId', $helpTopicId);
 		$fieldOptions = Array(
@@ -200,7 +200,7 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign('search', $search);
 		$templateMgr->assign('searchInitial', Request::getUserVar('searchInitial'));
 
-		$templateMgr->assign_by_ref('roleSettings', $this->retrieveRoleAssignmentPreferences($journal->getJournalId()));
+		$templateMgr->assign_by_ref('roleSettings', $this->retrieveRoleAssignmentPreferences($journal->getId()));
 
 		$templateMgr->assign('roleId', $roleId);
 		$templateMgr->assign('roleName', $roleDao->getRoleName($roleId));
@@ -271,9 +271,9 @@ class PeopleHandler extends ManagerHandler {
 
 		if ($users != null && is_array($users) && $rolePath != '' && $rolePath != 'admin') {
 			for ($i=0; $i<count($users); $i++) {
-				if (!$roleDao->roleExists($journal->getJournalId(), $users[$i], $roleId)) {
+				if (!$roleDao->roleExists($journal->getId(), $users[$i], $roleId)) {
 					$role = new Role();
-					$role->setJournalId($journal->getJournalId());
+					$role->setJournalId($journal->getId());
 					$role->setUserId($users[$i]);
 					$role->setRoleId($roleId);
 
@@ -297,7 +297,7 @@ class PeopleHandler extends ManagerHandler {
 
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		if ($roleId != $roleDao->getRoleIdFromPath('admin')) {
-			$roleDao->deleteRoleByUserId(Request::getUserVar('userId'), $journal->getJournalId(), $roleId);
+			$roleDao->deleteRoleByUserId(Request::getUserVar('userId'), $journal->getId(), $roleId);
 		}
 
 		Request::redirect(null, null, 'people', $roleDao->getRolePath($roleId) . 's');
@@ -324,7 +324,7 @@ class PeopleHandler extends ManagerHandler {
 		$journalTitles =& $journalDao->getJournalTitles();
 
 		$journal =& Request::getJournal();
-		unset($journalTitles[$journal->getJournalId()]);
+		unset($journalTitles[$journal->getId()]);
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('rolePath', $rolePath);
@@ -350,7 +350,7 @@ class PeopleHandler extends ManagerHandler {
 			$roles =& $roleDao->getRolesByJournalId($syncJournal == 'all' ? null : $syncJournal, $roleId);
 			while (!$roles->eof()) {
 				$role =& $roles->next();
-				$role->setJournalId($journal->getJournalId());
+				$role->setJournalId($journal->getId());
 				if ($role->getRolePath() != 'admin' && !$roleDao->roleExists($role->getJournalId(), $role->getUserId(), $role->getRoleId())) {
 					$roleDao->insertRole($role);
 				}
@@ -394,7 +394,7 @@ class PeopleHandler extends ManagerHandler {
 
 		$templateMgr =& TemplateManager::getManager();
 
-		if ($userId !== null && !Validation::canAdminister($journal->getJournalId(), $userId)) {
+		if ($userId !== null && !Validation::canAdminister($journal->getId(), $userId)) {
 			// We don't have administrative rights
 			// over this user. Display an error.
 			$templateMgr->assign('pageTitle', 'manager.people');
@@ -406,7 +406,7 @@ class PeopleHandler extends ManagerHandler {
 
 		import('manager.form.UserManagementForm');
 
-		$templateMgr->assign_by_ref('roleSettings', $this->retrieveRoleAssignmentPreferences($journal->getJournalId()));
+		$templateMgr->assign_by_ref('roleSettings', $this->retrieveRoleAssignmentPreferences($journal->getId()));
 
 		$templateMgr->assign('currentUrl', Request::url(null, null, 'people', 'all'));
 		if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
@@ -434,7 +434,7 @@ class PeopleHandler extends ManagerHandler {
 		$userDao =& DAORegistry::getDAO('UserDAO');
 
 		$journal =& Request::getJournal();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 		$templateMgr =& TemplateManager::getManager();
 
 		$oldUserId = Request::getUserVar('oldUserId');
@@ -507,7 +507,7 @@ class PeopleHandler extends ManagerHandler {
 			$users =& $roleDao->getUsersByJournalId($journalId, $searchType, $search, $searchMatch, $rangeInfo, $sort);
 		}
 
-		$templateMgr->assign_by_ref('roleSettings', $this->retrieveRoleAssignmentPreferences($journal->getJournalId()));
+		$templateMgr->assign_by_ref('roleSettings', $this->retrieveRoleAssignmentPreferences($journal->getId()));
 
 		$templateMgr->assign('currentUrl', Request::url(null, null, 'people', 'all'));
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.mergeUsers');
@@ -555,7 +555,7 @@ class PeopleHandler extends ManagerHandler {
 		$journal =& Request::getJournal();
 
 		if ($userId != null && $userId != $user->getId()) {
-			if (!Validation::canAdminister($journal->getJournalId(), $userId)) {
+			if (!Validation::canAdminister($journal->getId(), $userId)) {
 				// We don't have administrative rights
 				// over this user. Display an error.
 				$templateMgr =& TemplateManager::getManager();
@@ -614,7 +614,7 @@ class PeopleHandler extends ManagerHandler {
 
 		if ($userId != null && $userId != $user->getId()) {
 			$roleDao =& DAORegistry::getDAO('RoleDAO');
-			$roleDao->deleteRoleByUserId($userId, $journal->getJournalId());
+			$roleDao->deleteRoleByUserId($userId, $journal->getId());
 		}
 
 		Request::redirect(null, null, 'people', 'all');
@@ -630,7 +630,7 @@ class PeopleHandler extends ManagerHandler {
 		$journal =& Request::getJournal();
 		$userId = Request::getUserVar('userId');
 
-		if (!empty($userId) && !Validation::canAdminister($journal->getJournalId(), $userId)) {
+		if (!empty($userId) && !Validation::canAdminister($journal->getId(), $userId)) {
 			// We don't have administrative rights
 			// over this user. Display an error.
 			$templateMgr =& TemplateManager::getManager();
@@ -710,7 +710,7 @@ class PeopleHandler extends ManagerHandler {
 			$site =& Request::getSite();
 			$journal =& Request::getJournal();
 			$roleDao =& DAORegistry::getDAO('RoleDAO');
-			$roles =& $roleDao->getRolesByUserId($user->getId(), $journal->getJournalId());
+			$roles =& $roleDao->getRolesByUserId($user->getId(), $journal->getId());
 
 			$countryDao =& DAORegistry::getDAO('CountryDAO');
 			$country = null;

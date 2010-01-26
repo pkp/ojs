@@ -3,7 +3,7 @@
 /**
  * @file DOAJPlugin.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DOAJPlugin
@@ -111,7 +111,7 @@ class DOAJPlugin extends ImportExportPlugin {
 		} else {
 			header("Content-Type: application/xml");
 			header("Cache-Control: private");
-			header("Content-Disposition: attachment; filename=\"journal-" . $journal->getJournalId() . ".xml\"");
+			header("Content-Disposition: attachment; filename=\"journal-" . $journal->getId() . ".xml\"");
 			XMLCustomWriter::printXML($doc);
 		}
 		return true;
@@ -144,7 +144,7 @@ class DOAJPlugin extends ImportExportPlugin {
 				'isPeerReviewed' => 'Yes',
 				'isOriginalResearch' => '',
 				'isAcademic' => '',
-				'isActive' => $this->compareToCurDate($journal->getJournalId()) ? 'Yes' : 'No',
+				'isActive' => $this->compareToCurDate($journal->getId()) ? 'Yes' : 'No',
 				'hasPrintedForm' => $issn != '' ? 'Yes' : 'No',
 				'hasEmbargo' => '',
 				'accessFrom' => $journal->getSetting('initialYear'),
@@ -159,7 +159,7 @@ class DOAJPlugin extends ImportExportPlugin {
 				'contactName' => $journal->getSetting('contactName'),
 				'contactEmail' => $journal->getSetting('contactEmail'),
 				'frequency' => ($journal->getSetting('volumePerYear'))*($journal->getSetting('issuePerVolume')),
-				'articlesPerIssue' => $this->getArticlesPerIssue($journal->getJournalId())
+				'articlesPerIssue' => $this->getArticlesPerIssue($journal->getId())
 			);
 			$mail->assignParams($paramArray);
 			$mail->addRecipient('Sonja.Brage@lub.lu.se', 'Sonja Brage');

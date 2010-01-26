@@ -3,7 +3,7 @@
 /**
  * @file classes/security/Validation.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Validation
@@ -193,7 +193,7 @@ class Validation {
 		if ($journalId === -1) {
 			// Get journal ID from request
 			$journal =& Request::getJournal();
-			$journalId = $journal == null ? 0 : $journal->getJournalId();
+			$journalId = $journal == null ? 0 : $journal->getId();
 		}
 
 		$sessionManager =& SessionManager::getManager();

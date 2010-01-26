@@ -3,7 +3,7 @@
 /**
  * @file QuickSubmitForm.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class QuickSubmitForm
@@ -31,7 +31,7 @@ class QuickSubmitForm extends Form {
 		$this->addCheck(new FormValidatorPost($this));
 		$this->addCheck(new FormValidator($this, 'sectionId', 'required', 'author.submit.form.sectionRequired'));
 		$this->addCheck(new FormValidatorLocale($this, 'tempFileId', 'required', 'plugins.importexport.quickSubmit.submissionRequired', create_function('$tempFileId', 'return $tempFileId > 0;')));
-		$this->addCheck(new FormValidatorCustom($this, 'sectionId', 'required', 'author.submit.form.sectionRequired', array(DAORegistry::getDAO('SectionDAO'), 'sectionExists'), array($journal->getJournalId())));
+		$this->addCheck(new FormValidatorCustom($this, 'sectionId', 'required', 'author.submit.form.sectionRequired', array(DAORegistry::getDAO('SectionDAO'), 'sectionExists'), array($journal->getId())));
 		$this->addCheck(new FormValidatorCustom($this, 'authors', 'required', 'author.submit.form.authorRequired', create_function('$authors', 'return count($authors) > 0;')));
 		$this->addCheck(new FormValidatorCustom($this, 'destination', 'required', 'plugins.importexport.quickSubmit.issueRequired', create_function('$destination, $form', 'return $destination == \'queue\'? true : ($form->getData(\'issueId\') > 0);'), array(&$this)));
 		$this->addCheck(new FormValidatorArray($this, 'authors', 'required', 'author.submit.form.authorRequiredFields', array('firstName', 'lastName')));
@@ -61,7 +61,7 @@ class QuickSubmitForm extends Form {
 		$templateMgr->assign('journal', $journal);
 	
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$templateMgr->assign('sectionOptions', array('0' => Locale::translate('author.submit.selectSection')) + $sectionDao->getSectionTitles($journal->getJournalId()));
+		$templateMgr->assign('sectionOptions', array('0' => Locale::translate('author.submit.selectSection')) + $sectionDao->getSectionTitles($journal->getId()));
 		
 		$countryDao =& DAORegistry::getDAO('CountryDAO');
 		$countries =& $countryDao->getCountries();
@@ -88,6 +88,13 @@ class QuickSubmitForm extends Form {
 			$templateMgr->assign('addAuthorUrl', $jqueryPlugin->getScriptPath());
 		}
 		
+		if (Request::getUserVar('destination') == 'queue' ) {
+			$templateMgr->assign('publishToIssue', false);
+		} else {
+			$templateMgr->assign('issueNumber', Request::getUserVar('issueId'));
+			$templateMgr->assign('publishToIssue', true);
+		}
+
 		parent::display();
 	}
 
@@ -154,7 +161,7 @@ class QuickSubmitForm extends Form {
 
 		$article = new Article();
 		$article->setUserId($user->getId());
-		$article->setJournalId($journal->getJournalId());
+		$article->setJournalId($journal->getId());
 		$article->setSectionId($this->getData('sectionId'));
 		$article->setLanguage(String::substr($journal->getPrimaryLocale(), 0, 2));
 		$article->setTitle($this->getData('title'), null); // Localized
@@ -181,7 +188,7 @@ class QuickSubmitForm extends Form {
 
 		// Insert the article to get it's ID
 		$articleDao->insertArticle($article);
-		$articleId = $article->getArticleId();
+		$articleId = $article->getId();
 
 		// Add authors
 		$authors = $this->getData('authors');
@@ -329,7 +336,7 @@ class QuickSubmitForm extends Form {
 		$journal =& Request::getJournal();
 		$submission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
-		$issue =& $issueDao->getIssueById($issueId, $journal->getJournalId());
+		$issue =& $issueDao->getIssueById($issueId, $journal->getId());
 
 		if ($issue) {
 			// Schedule against an issue.

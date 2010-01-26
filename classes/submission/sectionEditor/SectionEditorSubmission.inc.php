@@ -3,7 +3,7 @@
 /**
  * @file classes/submission/sectionEditor/SectionEditorSubmission.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SectionEditorSubmission
@@ -505,7 +505,7 @@ class SectionEditorSubmission extends Article {
 
 		$journal =& Request::getJournal();
 		// Sanity check
-		if (!$journal || $journal->getJournalId() != $this->getJournalId()) return null;
+		if (!$journal || $journal->getId() != $this->getJournalId()) return null;
 
 		// Check whether it's in review or editing.
 		$inEditing = false;

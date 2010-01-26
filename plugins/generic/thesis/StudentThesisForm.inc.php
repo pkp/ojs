@@ -3,7 +3,7 @@
 /**
  * @file StudentThesisForm.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class StudentThesisForm
@@ -34,7 +34,7 @@ class StudentThesisForm extends Form {
 	 */
 	function StudentThesisForm($thesisId = null) {
 		$journal =& Request::getJournal();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 		$thesisPlugin =& PluginRegistry::getPlugin('generic', 'ThesisPlugin');
 		$thesisPlugin->import('Thesis');
 
@@ -199,7 +199,7 @@ class StudentThesisForm extends Form {
 
 		$thesisDao =& DAORegistry::getDAO('ThesisDAO');
 		$journal =& Request::getJournal();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 
 		$thesis = new Thesis();
 

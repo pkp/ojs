@@ -3,7 +3,7 @@
 /**
  * @file AnnouncementHandler.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AnnouncementHandler
@@ -44,7 +44,7 @@ class AnnouncementHandler extends PKPAnnouncementHandler {
 	function &_getAnnouncements($rangeInfo = null) {
 		$journal =& Request::getJournal();
 		$announcementDao =& DAORegistry::getDAO('AnnouncementDAO');
-		$announcements =& $announcementDao->getAnnouncementsByAssocId(ASSOC_TYPE_JOURNAL, $journal->getJournalId(), $rangeInfo);
+		$announcements =& $announcementDao->getAnnouncementsByAssocId(ASSOC_TYPE_JOURNAL, $journal->getId(), $rangeInfo);
 
 		return $announcements;
 	}
@@ -52,7 +52,7 @@ class AnnouncementHandler extends PKPAnnouncementHandler {
 	function &_getAnnouncementTypes($rangeInfo = null) {
 		$journal =& Request::getJournal();
 		$announcementTypeDao =& DAORegistry::getDAO('AnnouncementTypeDAO');
-		$announcements =& $announcementTypeDao->getAnnouncementTypesByAssocId(ASSOC_TYPE_JOURNAL, $journal->getJournalId(), $rangeInfo);
+		$announcements =& $announcementTypeDao->getAnnouncementTypesByAssocId(ASSOC_TYPE_JOURNAL, $journal->getId(), $rangeInfo);
 
 		return $announcements;
 	}	
@@ -72,7 +72,7 @@ class AnnouncementHandler extends PKPAnnouncementHandler {
 		$journal =& Request::getJournal();
 		if ( $announcement && $journal 
 			&& $announcement->getAssocType() == ASSOC_TYPE_JOURNAL 
-			&& $announcement->getAssocId() == $journal->getJournalId())
+			&& $announcement->getAssocId() == $journal->getId())
 				return true;
 			
 		return false;
@@ -86,7 +86,7 @@ class AnnouncementHandler extends PKPAnnouncementHandler {
 	function _announcementTypeIsValid($typeId) {
 		$journal =& Request::getJournal();
 		$announcementTypeDao =& DAORegistry::getDAO('AnnouncementTypeDAO');
-		return (($typeId != null && $announcementTypeDao->getAnnouncementTypeAssocId($typeId) == $journal->getJournalId()) || $typeId == null);
+		return (($typeId != null && $announcementTypeDao->getAnnouncementTypeAssocId($typeId) == $journal->getId()) || $typeId == null);
 	}	
 }
 

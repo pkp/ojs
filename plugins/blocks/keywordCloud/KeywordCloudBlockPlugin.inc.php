@@ -3,7 +3,7 @@
 /**
  * @file KeywordCloudBlockPlugin.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class KeywordCloudBlockPlugin
@@ -93,7 +93,7 @@ class KeywordCloudBlockPlugin extends BlockPlugin {
 
 		import('cache.CacheManager');
 		$cacheManager =& CacheManager::getManager();
-		$cache =& $cacheManager->getFileCache('keywords_' . Locale::getLocale(), $journal->getJournalId(), array(&$this, '_cacheMiss'));
+		$cache =& $cacheManager->getFileCache('keywords_' . Locale::getLocale(), $journal->getId(), array(&$this, '_cacheMiss'));
 		// If the cache is older than a couple of days, regenerate it
 		if (time() - $cache->getCacheTime() > 60 * 60 * 24 * KEYWORD_BLOCK_CACHE_DAYS) $cache->flush();
 

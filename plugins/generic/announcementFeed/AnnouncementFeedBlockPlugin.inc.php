@@ -3,7 +3,7 @@
 /**
  * @file plugins/generic/announcementFeed/AnnouncementFeedBlockPlugin.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AnnouncementFeedBlockPlugin
@@ -96,7 +96,7 @@ class AnnouncementFeedBlockPlugin extends BlockPlugin {
 		if (!$journal->getSetting('enableAnnouncements')) return ''; 
 
 		$plugin =& $this->getAnnouncementFeedPlugin();
-		$displayPage = $plugin->getSetting($journal->getJournalId(), 'displayPage');
+		$displayPage = $plugin->getSetting($journal->getId(), 'displayPage');
 		$requestedPage = Request::getRequestedPage();
 
 		if (($displayPage == 'all') || ($displayPage == 'homepage' && (empty($requestedPage) || $requestedPage == 'index' || $requestedPage == 'announcement')) || ($displayPage == $requestedPage)) { 

@@ -7,7 +7,7 @@
 /**
  * @file pages/subscriptionManager/index.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @ingroup pages_subscriptionManager
@@ -38,6 +38,10 @@ switch ($op) {
 	case 'saveSubscriptionPolicies':
 	case 'createUser':
 	case 'updateUser':
+	case 'payments':
+	case 'savePaymentSettings':
+	case 'viewPayments':
+	case 'viewPayment':
 	case 'payMethodSettings':
 	case 'savePayMethodSettings':
 	case 'suggestUsername':

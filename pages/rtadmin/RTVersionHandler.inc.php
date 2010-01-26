@@ -3,7 +3,7 @@
 /**
  * @file RTVersionHandler.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class RTVersionHandler
@@ -34,7 +34,7 @@ class RTVersionHandler extends RTAdminHandler {
 		$journal = Request::getJournal();
 
 		import('rt.ojs.form.VersionForm');
-		$versionForm = new VersionForm(null, $journal->getJournalId());
+		$versionForm = new VersionForm(null, $journal->getId());
 
 		if (isset($args[0]) && $args[0]=='save') {
 			$versionForm->readInputData();
@@ -53,7 +53,7 @@ class RTVersionHandler extends RTAdminHandler {
 
 		$journal = Request::getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
-		$version =& $rtDao->getVersion($versionId, $journal->getJournalId());
+		$version =& $rtDao->getVersion($versionId, $journal->getId());
 
 		if ($version) {
 			$templateMgr =& TemplateManager::getManager();
@@ -70,7 +70,7 @@ class RTVersionHandler extends RTAdminHandler {
 
 		$fileField = 'versionFile';
 		if (isset($_FILES[$fileField]['tmp_name']) && is_uploaded_file($_FILES[$fileField]['tmp_name'])) {
-			$rtAdmin = new JournalRTAdmin($journal->getJournalId());
+			$rtAdmin = new JournalRTAdmin($journal->getId());
 			$rtAdmin->importVersion($_FILES[$fileField]['tmp_name']);
 		}
 		Request::redirect(null, null, 'versions');
@@ -80,7 +80,7 @@ class RTVersionHandler extends RTAdminHandler {
 		$this->validate();
 
 		$journal =& Request::getJournal();
-		$rtAdmin = new JournalRTAdmin($journal->getJournalId());
+		$rtAdmin = new JournalRTAdmin($journal->getId());
 		$rtAdmin->restoreVersions();
 
 		// If the journal RT was configured, change its state to
@@ -106,7 +106,7 @@ class RTVersionHandler extends RTAdminHandler {
 		$rangeInfo = Handler::getRangeInfo('versions');
 
 		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->assign_by_ref('versions', $rtDao->getVersions($journal->getJournalId(), $rangeInfo));
+		$templateMgr->assign_by_ref('versions', $rtDao->getVersions($journal->getId(), $rangeInfo));
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.versions');
 		$templateMgr->display('rtadmin/versions.tpl');
 	}
@@ -118,12 +118,12 @@ class RTVersionHandler extends RTAdminHandler {
 
 		$journal = Request::getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
-		$version =& $rtDao->getVersion($versionId, $journal->getJournalId());
+		$version =& $rtDao->getVersion($versionId, $journal->getId());
 
 		if (isset($version)) {
 			import('rt.ojs.form.VersionForm');
 			$this->setupTemplate(true, $version);
-			$versionForm = new VersionForm($versionId, $journal->getJournalId());
+			$versionForm = new VersionForm($versionId, $journal->getId());
 			$versionForm->initData();
 			$versionForm->display();
 		}
@@ -138,7 +138,7 @@ class RTVersionHandler extends RTAdminHandler {
 		$journal = Request::getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
 
-		$rtDao->deleteVersion($versionId, $journal->getJournalId());
+		$rtDao->deleteVersion($versionId, $journal->getId());
 
 		Request::redirect(null, null, 'versions');
 	}
@@ -150,11 +150,11 @@ class RTVersionHandler extends RTAdminHandler {
 
 		$journal = Request::getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
-		$version =& $rtDao->getVersion($versionId, $journal->getJournalId());
+		$version =& $rtDao->getVersion($versionId, $journal->getId());
 
 		if (isset($version)) {
 			import('rt.ojs.form.VersionForm');
-			$versionForm = new VersionForm($versionId, $journal->getJournalId());
+			$versionForm = new VersionForm($versionId, $journal->getId());
 			$versionForm->readInputData();
 			$versionForm->execute();
 		}

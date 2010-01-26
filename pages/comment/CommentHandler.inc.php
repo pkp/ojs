@@ -3,7 +3,7 @@
 /**
  * @file CommentHandler.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CommentHandler
@@ -51,7 +51,7 @@ class CommentHandler extends Handler {
 		$journal =& Request::getJournal();
 		
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		$isManager = $roleDao->roleExists($journal->getJournalId(), $userId, ROLE_ID_JOURNAL_MANAGER);
+		$isManager = $roleDao->roleExists($journal->getId(), $userId, ROLE_ID_JOURNAL_MANAGER);
 
 		if (!$comment) $comments =& $commentDao->getRootCommentsByArticleId($articleId, 1);
 		else $comments =& $comment->getChildren();
@@ -152,7 +152,7 @@ class CommentHandler extends Handler {
 		$commentDao =& DAORegistry::getDAO('CommentDAO');
 
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		if (!$roleDao->roleExists($journal->getJournalId(), $userId, ROLE_ID_JOURNAL_MANAGER)) {
+		if (!$roleDao->roleExists($journal->getId(), $userId, ROLE_ID_JOURNAL_MANAGER)) {
 			Request::redirect(null, 'index');
 		}
 
@@ -169,7 +169,7 @@ class CommentHandler extends Handler {
 		parent::validate();
 
 		$journal =& Request::getJournal();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
@@ -225,7 +225,7 @@ class CommentHandler extends Handler {
 			)
 		);
 
-		if ($comment) $pageHierarchy[] = array(Request::url(null, 'comment', 'view', array($article->getArticleId(), $galleyId)), 'comments.readerComments');
+		if ($comment) $pageHierarchy[] = array(Request::url(null, 'comment', 'view', array($article->getId(), $galleyId)), 'comments.readerComments');
 		$templateMgr->assign('pageHierarchy', $pageHierarchy);
 	}
 }

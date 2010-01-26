@@ -3,7 +3,7 @@
 /**
  * @file classes/install/Upgrade.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Upgrade
@@ -63,10 +63,10 @@ class Upgrade extends Installer {
 
 		$journals =& $journalDao->getJournals();
 		while ($journal =& $journals->next()) {
-			$articles =& $articleDao->getArticlesByJournalId($journal->getJournalId());
+			$articles =& $articleDao->getArticlesByJournalId($journal->getId());
 			while ($article =& $articles->next()) {
 				if (!$article->getReviewFileId() && $article->getSubmissionProgress() == 0) {
-					$authorSubmission =& $authorSubmissionDao->getAuthorSubmission($article->getArticleId());
+					$authorSubmission =& $authorSubmissionDao->getAuthorSubmission($article->getId());
 					AuthorAction::designateReviewVersion($authorSubmission, true);
 				}
 				unset($article);
@@ -229,7 +229,7 @@ class Upgrade extends Installer {
 		// Get journal IDs for insertion, including 0 for site-level
 		$journalIds = array(0);
 		while ($journal =& $journals->next()) {
-			$journalIds[] = $journal->getJournalId();
+			$journalIds[] = $journal->getId();
 			unset($journal);
 		}
 

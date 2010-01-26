@@ -3,7 +3,7 @@
 /**
  * @file LayoutEditorHandler.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class LayoutEditorHandler
@@ -77,7 +77,7 @@ class LayoutEditorHandler extends Handler {
 		if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
 
 		$rangeInfo = Handler::getRangeInfo('submissions');
-		$submissions = $layoutEditorSubmissionDao->getSubmissions($user->getId(), $journal->getJournalId(), $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $active, $rangeInfo, $sort, $sortDirection);
+		$submissions = $layoutEditorSubmissionDao->getSubmissions($user->getId(), $journal->getId(), $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $active, $rangeInfo, $sort, $sortDirection);
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('pageToDisplay', $page);
@@ -127,7 +127,7 @@ class LayoutEditorHandler extends Handler {
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		$rangeInfo = Handler::getRangeInfo('issues');
 		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->assign_by_ref('issues', $issueDao->getUnpublishedIssues($journal->getJournalId(), $rangeInfo));
+		$templateMgr->assign_by_ref('issues', $issueDao->getUnpublishedIssues($journal->getId(), $rangeInfo));
 		$templateMgr->assign('helpTopicId', 'publishing.index');
 		$templateMgr->display('layoutEditor/futureIssues.tpl');
 	}
@@ -148,9 +148,9 @@ class LayoutEditorHandler extends Handler {
 		$sortDirection = Request::getUserVar('sortDirection');
 
 		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->assign_by_ref('issues', $issueDao->getPublishedIssues($journal->getJournalId(), $rangeInfo));
+		$templateMgr->assign_by_ref('issues', $issueDao->getPublishedIssues($journal->getId(), $rangeInfo));
 
-		$allIssuesIterator = $issueDao->getPublishedIssues($journal->getJournalId());
+		$allIssuesIterator = $issueDao->getPublishedIssues($journal->getId());
 		$issueMap = array();
 		while ($issue =& $allIssuesIterator->next()) {
 			$issueMap[$issue->getIssueId()] = $issue->getIssueIdentification();
@@ -158,12 +158,12 @@ class LayoutEditorHandler extends Handler {
 		}
 		$templateMgr->assign('allIssues', $issueMap);
 
-		$currentIssue =& $issueDao->getCurrentIssue($journal->getJournalId());
+		$currentIssue =& $issueDao->getCurrentIssue($journal->getId());
 		$currentIssueId = $currentIssue?$currentIssue->getIssueId():null;
 		$templateMgr->assign('currentIssueId', $currentIssueId);
 
 		$templateMgr->assign('helpTopicId', 'publishing.index');
-		$templateMgr->assign('usesCustomOrdering', $issueDao->customIssueOrderingExists($journal->getJournalId()));
+		$templateMgr->assign('usesCustomOrdering', $issueDao->customIssueOrderingExists($journal->getId()));
 		$templateMgr->assign('sort', $sort);
 		$templateMgr->assign('sortDirection', $sortDirection);
 		$templateMgr->display('layoutEditor/backIssues.tpl');

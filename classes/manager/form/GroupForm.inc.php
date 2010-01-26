@@ -3,7 +3,7 @@
 /**
  * @file classes/manager/form/GroupForm.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class GroupForm
@@ -98,7 +98,7 @@ class GroupForm extends Form {
 		}
 
 		$this->group->setAssocType(ASSOC_TYPE_JOURNAL);
-		$this->group->setAssocId($journal->getJournalId());
+		$this->group->setAssocId($journal->getId());
 		$this->group->setTitle($this->getData('title'), null); // Localized
 		$this->group->setContext($this->getData('context'));
 

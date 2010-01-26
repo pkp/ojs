@@ -3,7 +3,7 @@
 /**
  * @file SubmissionEditHandler.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubmissionEditHandler
@@ -52,10 +52,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$user =& Request::getUser();
 
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-		$journalSettings = $journalSettingsDao->getJournalSettings($journal->getJournalId());
+		$journalSettings = $journalSettingsDao->getJournalSettings($journal->getId());
 
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		$isEditor = $roleDao->roleExists($journal->getJournalId(), $user->getId(), ROLE_ID_EDITOR);
+		$isEditor = $roleDao->roleExists($journal->getId(), $user->getId(), ROLE_ID_EDITOR);
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$section =& $sectionDao->getSection($submission->getSectionId());
@@ -75,7 +75,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('enableComments', $enableComments);
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$templateMgr->assign_by_ref('sections', $sectionDao->getSectionTitles($journal->getJournalId()));
+		$templateMgr->assign_by_ref('sections', $sectionDao->getSectionTitles($journal->getId()));
 		if ($enableComments) {
 			import('article.Article');
 			$templateMgr->assign('commentsStatus', $submission->getCommentsStatus());
@@ -103,15 +103,15 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$completedPaymentDAO =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
 			
 			if ( $paymentManager->submissionEnabled() ) {
-				$templateMgr->assign_by_ref('submissionPayment', $completedPaymentDAO->getSubmissionCompletedPayment ( $journal->getJournalId(), $articleId ));
+				$templateMgr->assign_by_ref('submissionPayment', $completedPaymentDAO->getSubmissionCompletedPayment ( $journal->getId(), $articleId ));
 			}
 			
 			if ( $paymentManager->fastTrackEnabled()  ) {
-				$templateMgr->assign_by_ref('fastTrackPayment', $completedPaymentDAO->getFastTrackCompletedPayment ( $journal->getJournalId(), $articleId ));
+				$templateMgr->assign_by_ref('fastTrackPayment', $completedPaymentDAO->getFastTrackCompletedPayment ( $journal->getId(), $articleId ));
 			}
 
 			if ( $paymentManager->publicationEnabled()  ) {
-				$templateMgr->assign_by_ref('publicationPayment', $completedPaymentDAO->getPublicationCompletedPayment ( $journal->getJournalId(), $articleId ));
+				$templateMgr->assign_by_ref('publicationPayment', $completedPaymentDAO->getPublicationCompletedPayment ( $journal->getId(), $articleId ));
 			}				   
 		}		
 
@@ -180,7 +180,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$round = isset($args[1]) ? $args[1] : $submission->getCurrentRound();
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$sections =& $sectionDao->getJournalSections($journal->getJournalId());
+		$sections =& $sectionDao->getJournalSections($journal->getId());
 
 		$showPeerReviewOptions = $round == $submission->getCurrentRound() && $submission->getReviewFile() != null ? true : false;
 
@@ -210,7 +210,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 
 		// get journal published review form titles
-		$reviewFormTitles =& $reviewFormDao->getJournalReviewFormTitles($journal->getJournalId(), 1);
+		$reviewFormTitles =& $reviewFormDao->getJournalReviewFormTitles($journal->getId(), 1);
 
 		$reviewFormResponseDao =& DAORegistry::getDAO('ReviewFormResponseDAO');
 		$reviewFormResponses = array();
@@ -290,7 +290,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$user =& Request::getUser();
-		$templateMgr->assign('isEditor', $roleDao->roleExists($journal->getJournalId(), $user->getId(), ROLE_ID_EDITOR));
+		$templateMgr->assign('isEditor', $roleDao->roleExists($journal->getId(), $user->getId(), ROLE_ID_EDITOR));
 
 		import('issue.IssueAction');
 		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
@@ -311,7 +311,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$publicationFeeEnabled = $paymentManager->publicationEnabled();
 		$templateMgr->assign('publicatonFeeEnabled',  $publicationFeeEnabled);
 		if ( $publicationFeeEnabled ) {
-			$templateMgr->assign_by_ref('publicationPayment', $completedPaymentDAO->getPublicationCompletedPayment ( $journal->getJournalId(), $articleId ));			   
+			$templateMgr->assign_by_ref('publicationPayment', $completedPaymentDAO->getPublicationCompletedPayment ( $journal->getId(), $articleId ));			   
 		}	
 
 		$templateMgr->assign('helpTopicId', 'editorial.sectionEditorsRole.editing');
@@ -425,7 +425,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			}
 
 			$rangeInfo =& Handler::getRangeInfo('reviewers');
-			$reviewers = $sectionEditorSubmissionDao->getReviewersForArticle($journal->getJournalId(), $articleId, $submission->getCurrentRound(), $searchType, $search, $searchMatch, $rangeInfo, $sort, $sortDirection);
+			$reviewers = $sectionEditorSubmissionDao->getReviewersForArticle($journal->getId(), $articleId, $submission->getCurrentRound(), $searchType, $search, $searchMatch, $rangeInfo, $sort, $sortDirection);
 
 			$journal = Request::getJournal();
 			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
@@ -439,7 +439,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 			$templateMgr->assign_by_ref('reviewers', $reviewers);
 			$templateMgr->assign('articleId', $articleId);
-			$templateMgr->assign('reviewerStatistics', $sectionEditorSubmissionDao->getReviewerStatistics($journal->getJournalId()));
+			$templateMgr->assign('reviewerStatistics', $sectionEditorSubmissionDao->getReviewerStatistics($journal->getId()));
 			$templateMgr->assign('fieldOptions', Array(
 				USER_FIELD_INTERESTS => 'user.interests',
 				USER_FIELD_FIRSTNAME => 'user.firstName',
@@ -447,9 +447,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				USER_FIELD_USERNAME => 'user.username',
 				USER_FIELD_EMAIL => 'user.email'
 			));
-			$templateMgr->assign('completedReviewCounts', $reviewAssignmentDao->getCompletedReviewCounts($journal->getJournalId()));
+			$templateMgr->assign('completedReviewCounts', $reviewAssignmentDao->getCompletedReviewCounts($journal->getId()));
 			$templateMgr->assign('rateReviewerOnQuality', $journal->getSetting('rateReviewerOnQuality'));
-			$templateMgr->assign('averageQualityRatings', $reviewAssignmentDao->getAverageQualityRatings($journal->getJournalId()));
+			$templateMgr->assign('averageQualityRatings', $reviewAssignmentDao->getAverageQualityRatings($journal->getId()));
 
 			$templateMgr->assign('helpTopicId', 'journal.roles.reviewer');
 			$templateMgr->assign('alphaList', explode(' ', Locale::translate('common.alphaList')));
@@ -576,9 +576,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		// Enroll reviewer
 		for ($i=0; $i<count($users); $i++) {
-			if (!$roleDao->roleExists($journal->getJournalId(), $users[$i], $roleId)) {
+			if (!$roleDao->roleExists($journal->getId(), $users[$i], $roleId)) {
 				$role = new Role();
-				$role->setJournalId($journal->getJournalId());
+				$role->setJournalId($journal->getId());
 				$role->setUserId($users[$i]);
 				$role->setRoleId($roleId);
 
@@ -730,7 +730,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$reviewAssignment = $reviewAssignmentDao->getReviewAssignmentById($reviewId);
 
 			$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-			$settings =& $settingsDao->getJournalSettings($journal->getJournalId());
+			$settings =& $settingsDao->getJournalSettings($journal->getId());
 
 			$templateMgr =& TemplateManager::getManager();
 
@@ -855,7 +855,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		
 		import('file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
-		$publicFileManager->removeJournalFile($journal->getJournalId(),$submission->getFileName($formLocale));
+		$publicFileManager->removeJournalFile($journal->getId(),$submission->getFileName($formLocale));
 		$submission->setFileName('', $formLocale);
 		$submission->setOriginalFileName('', $formLocale);
 		$submission->setWidth('', $formLocale);
@@ -884,7 +884,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$journal =& Request::getJournal();
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
-		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, $journal->getJournalId());
+		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, $journal->getId());
 		$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
 		$reviewFormElements =& $reviewFormElementDao->getReviewFormElements($reviewFormId);
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
@@ -934,7 +934,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$journal =& Request::getJournal();
 			$rangeInfo =& Handler::getRangeInfo('reviewForms');
 			$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
-			$reviewForms =& $reviewFormDao->getJournalActiveReviewForms($journal->getJournalId(), $rangeInfo);
+			$reviewForms =& $reviewFormDao->getJournalActiveReviewForms($journal->getId(), $rangeInfo);
 			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 			$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentById($reviewId);
 
@@ -1030,7 +1030,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 
-		if (isset($args[1]) && $args[1] != null && $roleDao->roleExists($journal->getJournalId(), $args[1], ROLE_ID_COPYEDITOR)) {
+		if (isset($args[1]) && $args[1] != null && $roleDao->roleExists($journal->getId(), $args[1], ROLE_ID_COPYEDITOR)) {
 			SectionEditorAction::selectCopyeditor($submission, $args[1]);
 			Request::redirect(null, null, 'submissionEditing', $articleId);
 		} else {
@@ -1052,8 +1052,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				$search = $searchInitial;
 			}
 
-			$copyeditors = $roleDao->getUsersByRoleId(ROLE_ID_COPYEDITOR, $journal->getJournalId(), $searchType, $search, $searchMatch);
-			$copyeditorStatistics = $sectionEditorSubmissionDao->getCopyeditorStatistics($journal->getJournalId());
+			$copyeditors = $roleDao->getUsersByRoleId(ROLE_ID_COPYEDITOR, $journal->getId(), $searchType, $search, $searchMatch);
+			$copyeditorStatistics = $sectionEditorSubmissionDao->getCopyeditorStatistics($journal->getId());
 
 			$templateMgr =& TemplateManager::getManager();
 
@@ -1302,7 +1302,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$article =& $articleDao->getArticle($articleId);
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
 			foreach ($notificationUsers as $userRole) {
-				$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getArticleId(), null, 'layout');
+				$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'layout');
 				Notification::createNotification($userRole['id'], "notification.type.suppFileModified",
 					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_SUPP_FILE_MODIFIED);
 			}
@@ -1468,7 +1468,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 
-		if ($editorId && $roleDao->roleExists($journal->getJournalId(), $editorId, ROLE_ID_LAYOUT_EDITOR)) {
+		if ($editorId && $roleDao->roleExists($journal->getId(), $editorId, ROLE_ID_LAYOUT_EDITOR)) {
 			SectionEditorAction::assignLayoutEditor($submission, $editorId);			
 			Request::redirect(null, null, 'submissionEditing', $articleId);
 		} else {
@@ -1486,10 +1486,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				$search = $searchInitial;
 			}
 
-			$layoutEditors = $roleDao->getUsersByRoleId(ROLE_ID_LAYOUT_EDITOR, $journal->getJournalId(), $searchType, $search, $searchMatch);
+			$layoutEditors = $roleDao->getUsersByRoleId(ROLE_ID_LAYOUT_EDITOR, $journal->getId(), $searchType, $search, $searchMatch);
 
 			$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
-			$layoutEditorStatistics = $sectionEditorSubmissionDao->getLayoutEditorStatistics($journal->getJournalId());
+			$layoutEditorStatistics = $sectionEditorSubmissionDao->getLayoutEditorStatistics($journal->getId());
 
 			$this->setupTemplate(true, $articleId, 'editing');
 
@@ -1620,7 +1620,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$article =& $articleDao->getArticle($articleId);
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
 			foreach ($notificationUsers as $userRole) {
-				$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getArticleId(), null, 'layout');
+				$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'layout');
 				Notification::createNotification($userRole['id'], "notification.type.galleyModified",
 					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_GALLEY_MODIFIED);
 			}
@@ -2075,7 +2075,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 
-		if ($userId && $articleId && $roleDao->roleExists($journal->getJournalId(), $userId, ROLE_ID_PROOFREADER)) {
+		if ($userId && $articleId && $roleDao->roleExists($journal->getId(), $userId, ROLE_ID_PROOFREADER)) {
 			import('submission.proofreader.ProofreaderAction');
 			ProofreaderAction::selectProofreader($userId, $submission);
 			Request::redirect(null, null, 'submissionEditing', $articleId);
@@ -2096,10 +2096,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				$search = $searchInitial;
 			}
 
-			$proofreaders = $roleDao->getUsersByRoleId(ROLE_ID_PROOFREADER, $journal->getJournalId(), $searchType, $search, $searchMatch);
+			$proofreaders = $roleDao->getUsersByRoleId(ROLE_ID_PROOFREADER, $journal->getId(), $searchType, $search, $searchMatch);
 
 			$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
-			$proofreaderStatistics = $sectionEditorSubmissionDao->getProofreaderStatistics($journal->getJournalId());
+			$proofreaderStatistics = $sectionEditorSubmissionDao->getProofreaderStatistics($journal->getId());
 
 			$templateMgr =& TemplateManager::getManager();
 
@@ -2319,7 +2319,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
 
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$issue =& $issueDao->getIssueById($issueId, $journal->getJournalId());
+		$issue =& $issueDao->getIssueById($issueId, $journal->getId());
 
 		if ($issue) {
 			// Schedule against an issue.
@@ -2386,7 +2386,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$user =& Request::getUser();
 
 		$queuedPayment =& $paymentManager->createQueuedPayment(
-			$journal->getJournalId(),
+			$journal->getId(),
 			PAYMENT_TYPE_SUBMISSION,
 			$markAsPaid ? $submission->getUserId() : $user->getId(),
 			$articleId,
@@ -2413,7 +2413,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$user =& Request::getUser();
 
 		$queuedPayment =& $paymentManager->createQueuedPayment(
-			$journal->getJournalId(),
+			$journal->getId(),
 			PAYMENT_TYPE_FASTTRACK,
 			$markAsPaid ? $submission->getUserId() : $user->getId(),
 			$articleId,
@@ -2442,7 +2442,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$user =& Request::getUser();
 
 		$queuedPayment =& $paymentManager->createQueuedPayment(
-			$journal->getJournalId(),
+			$journal->getId(),
 			PAYMENT_TYPE_PUBLICATION,
 			$markAsPaid ? $submission->getUserId() : $user->getId(),
 			$articleId,
@@ -2486,7 +2486,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		if ($sectionEditorSubmission == null) {
 			$isValid = false;
 
-		} else if ($sectionEditorSubmission->getJournalId() != $journal->getJournalId()) {
+		} else if ($sectionEditorSubmission->getJournalId() != $journal->getId()) {
 			$isValid = false;
 
 		} else if ($sectionEditorSubmission->getDateSubmitted() == null) {

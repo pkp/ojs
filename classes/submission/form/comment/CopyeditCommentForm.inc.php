@@ -3,7 +3,7 @@
 /**
  * @file classes/submission/form/comment/CopyeditCommentForm.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CopyeditCommentForm
@@ -25,7 +25,7 @@ class CopyeditCommentForm extends CommentForm {
 	 * @param $article object
 	 */
 	function CopyeditCommentForm($article, $roleId) {
-		parent::CommentForm($article, COMMENT_TYPE_COPYEDIT, $roleId, $article->getArticleId());
+		parent::CommentForm($article, COMMENT_TYPE_COPYEDIT, $roleId, $article->getId());
 	}
 
 	/**
@@ -40,7 +40,7 @@ class CopyeditCommentForm extends CommentForm {
 		$templateMgr->assign('commentType', 'copyedit');
 		$templateMgr->assign('hiddenFormParams', 
 			array(
-				'articleId' => $article->getArticleId()
+				'articleId' => $article->getId()
 			)
 		);
 
@@ -79,7 +79,7 @@ class CopyeditCommentForm extends CommentForm {
 
 		// Get editors
 		$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
-		$editAssignments =& $editAssignmentDao->getEditAssignmentsByArticleId($article->getArticleId());
+		$editAssignments =& $editAssignmentDao->getEditAssignmentsByArticleId($article->getId());
 		$editAssignments =& $editAssignments->toArray();
 		$editorAddresses = array();
 		foreach ($editAssignments as $editAssignment) {
@@ -89,7 +89,7 @@ class CopyeditCommentForm extends CommentForm {
 		// If no editors are currently assigned, send this message to
 		// all of the journal's editors.
 		if (empty($editorAddresses)) {
-			$editors =& $roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getJournalId());
+			$editors =& $roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getId());
 			while (!$editors->eof()) {
 				$editor =& $editors->next();
 				$editorAddresses[$editor->getEmail()] = $editor->getFullName();
@@ -97,7 +97,7 @@ class CopyeditCommentForm extends CommentForm {
 		}
 
 		// Get copyeditor
-		$copySignoff = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$copySignoff = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $article->getId());
 		if ($copySignoff != null && $copySignoff->getUserId() > 0) {
 			$copyeditor =& $userDao->getUser($copySignoff->getUserId());
 		} else {

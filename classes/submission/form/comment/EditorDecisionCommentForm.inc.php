@@ -3,7 +3,7 @@
 /**
  * @file classes/submission/formform/comment/EditorDecisionCommentForm.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class EditorDecisionCommentForm
@@ -24,7 +24,7 @@ class EditorDecisionCommentForm extends CommentForm {
 	 * @param $article object
 	 */
 	function EditorDecisionCommentForm($article, $roleId) {
-		parent::CommentForm($article, COMMENT_TYPE_EDITOR_DECISION, $roleId, $article->getArticleId());
+		parent::CommentForm($article, COMMENT_TYPE_EDITOR_DECISION, $roleId, $article->getId());
 	}
 
 	/**
@@ -98,7 +98,7 @@ class EditorDecisionCommentForm extends CommentForm {
 			// If no editors are currently assigned to this article,
 			// send the email to all editors for the journal
 			if (empty($editorAddresses)) {
-				$editors =& $roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getJournalId());
+				$editors =& $roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getId());
 				while (!$editors->eof()) {
 					$editor =& $editors->next();
 					$editorAddresses[$editor->getEmail()] = $editor->getFullName();

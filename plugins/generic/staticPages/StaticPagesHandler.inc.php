@@ -3,7 +3,7 @@
 /**
  * @file StaticPagesHandler.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package plugins.generic.staticPages
@@ -24,7 +24,7 @@ class StaticPagesHandler extends Handler {
 		if (count($args) > 0 ) {
 			Locale::requireComponents(array(LOCALE_COMPONENT_PKP_COMMON, LOCALE_COMPONENT_APPLICATION_COMMON));
 			$journal =& Request::getJournal();
-			$journalId = $journal->getJournalId();
+			$journalId = $journal->getId();
 			$path = $args[0];
 
 			$staticPagesPlugin =& PluginRegistry::getPlugin('generic', 'StaticPagesPlugin');

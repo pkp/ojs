@@ -3,7 +3,7 @@
 /**
  * @file NativeImportDom.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class NativeImportDom
@@ -88,7 +88,7 @@ class NativeImportDom {
 
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		$issue = new Issue();
-		$issue->setJournalId($journal->getJournalId());
+		$issue->setJournalId($journal->getId());
 
 		$journalSupportedLocales = array_keys($journal->getSupportedLocaleNames()); // => journal locales must be set up before
 		$journalPrimaryLocale = $journal->getPrimaryLocale();
@@ -215,7 +215,7 @@ class NativeImportDom {
 		}
 
 		if (($value = $issueNode->getAttribute('public_id')) != '') {
-			$anotherIssue = $issueDao->getIssueByPublicIssueId($value, $journal->getJournalId());
+			$anotherIssue = $issueDao->getIssueByPublicIssueId($value, $journal->getId());
 			if ($anotherIssue) {
 				$errors[] = array('plugins.importexport.native.import.error.duplicatePublicId', array('issueTitle' => $issue->getIssueIdentification(), 'otherIssueTitle' => $anotherIssue->getIssueIdentification()));
 				$hasErrors = true;
@@ -252,7 +252,7 @@ class NativeImportDom {
 			return false;
 		} else {
 			if ($issue->getCurrent()) {
-				$issueDao->updateCurrentIssue($journal->getJournalId());
+				$issueDao->updateCurrentIssue($journal->getId());
 			}
 			$issue->setIssueId($issueDao->insertIssue($issue));
 			$dependentItems[] = array('issue', $issue);
@@ -326,7 +326,7 @@ class NativeImportDom {
 
 					$originalName = basename($url);
 					$newName .= $publicFileManager->getExtension($originalName);
-					if (!$publicFileManager->copyJournalFile($journal->getJournalId(), $url, $newName)) {
+					if (!$publicFileManager->copyJournalFile($journal->getId(), $url, $newName)) {
 						$errors[] = array('plugins.importexport.native.import.error.couldNotCopy', array('url' => $url));
 						$hasErrors = true;
 					}
@@ -343,14 +343,14 @@ class NativeImportDom {
 					$newName .= $publicFileManager->getExtension($originalName);
 					$issue->setFileName($newName, $locale);
 					$issue->setOriginalFileName($publicFileManager->truncateFileName($originalName, 127), $locale);
-					if ($publicFileManager->writeJournalFile($journal->getJournalId(), $newName, base64_decode($embed->getValue()))===false) {
+					if ($publicFileManager->writeJournalFile($journal->getId(), $newName, base64_decode($embed->getValue()))===false) {
 						$errors[] = array('plugins.importexport.native.import.error.couldNotWriteFile', array('originalName' => $originalName));
 						$hasErrors = true;
 					}
 				}
 			}
 			// Store the image dimensions.
-			list($width, $height) = getimagesize($publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/' . $newName);
+			list($width, $height) = getimagesize($publicFileManager->getJournalFilesPath($journal->getId()) . '/' . $newName);
 			$issue->setWidth($width, $locale);
 			$issue->setHeight($height, $locale);	
 			
@@ -384,7 +384,7 @@ class NativeImportDom {
 		if (($node = $coverNode->getChildByName('image'))) {
 			import('file.PublicFileManager');
 			$publicFileManager = new PublicFileManager();
-			$newName = 'cover_article_' . $article->getArticleId()."_{$locale}"  . '.';
+			$newName = 'cover_article_' . $article->getId()."_{$locale}"  . '.';
 
 			if (($href = $node->getChildByName('href'))) {
 				$url = $href->getAttribute('src');
@@ -396,7 +396,7 @@ class NativeImportDom {
 
 					$originalName = basename($url);
 					$newName .= $publicFileManager->getExtension($originalName);
-					if (!$publicFileManager->copyJournalFile($journal->getJournalId(), $url, $newName)) {
+					if (!$publicFileManager->copyJournalFile($journal->getId(), $url, $newName)) {
 						$errors[] = array('plugins.importexport.native.import.error.couldNotCopy', array('url' => $url));
 						$hasErrors = true;
 					}
@@ -413,14 +413,14 @@ class NativeImportDom {
 					$newName .= $publicFileManager->getExtension($originalName);
 					$article->setFileName($newName, $locale);
 					$article->setOriginalFileName($publicFileManager->truncateFileName($originalName, 127), $locale);
-					if ($publicFileManager->writeJournalFile($journal->getJournalId(), $newName, base64_decode($embed->getValue()))===false) {
+					if ($publicFileManager->writeJournalFile($journal->getId(), $newName, base64_decode($embed->getValue()))===false) {
 						$errors[] = array('plugins.importexport.native.import.error.couldNotWriteFile', array('originalName' => $originalName));
 						$hasErrors = true;
 					}
 				}
 			}
 			// Store the image dimensions.
-			list($width, $height) = getimagesize($publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/' . $newName);
+			list($width, $height) = getimagesize($publicFileManager->getJournalFilesPath($journal->getId()) . '/' . $newName);
 			$article->setWidth($width, $locale);
 			$article->setHeight($height, $locale);	
 			
@@ -524,7 +524,7 @@ class NativeImportDom {
 		$foundSectionId = $foundSectionTitle = null;
 		$index = 0;
 		foreach($titles as $locale => $title) {
-			$section = $sectionDao->getSectionByTitle($title, $journal->getJournalId());
+			$section = $sectionDao->getSectionByTitle($title, $journal->getId());
 			if ($section) {
 				$sectionId = $section->getSectionId();
 				if ($foundSectionId) { 
@@ -555,7 +555,7 @@ class NativeImportDom {
 		$foundSectionId = $foundSectionAbbrev = null;
 		$index = 0;
 		foreach($abbrevs as $locale => $abbrev) {
-			$abbrevSection = $sectionDao->getSectionByAbbrev($abbrev, $journal->getJournalId());
+			$abbrevSection = $sectionDao->getSectionByAbbrev($abbrev, $journal->getId());
 			if ($abbrevSection) {
 				$sectionId = $abbrevSection->getSectionId();
 				if ($foundSectionId) {
@@ -593,12 +593,12 @@ class NativeImportDom {
 			$section->setAbbrev($abbrevs, null);
 			$section->setIdentifyType($identifyTypes, null);
 			$section->setPolicy($policies, null);
-			$section->setJournalId($journal->getJournalId());
+			$section->setJournalId($journal->getId());
 			$section->setSequence(REALLY_BIG_NUMBER);
 			$section->setMetaIndexed(1);
 			$section->setEditorRestricted(1);
 			$section->setSectionId($sectionDao->insertSection($section));
-			$sectionDao->resequenceSections($journal->getJournalId());
+			$sectionDao->resequenceSections($journal->getId());
 		}
 
 		if (!$section && $abbrevSection) {
@@ -636,7 +636,7 @@ class NativeImportDom {
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 
 		$article = new Article();
-		$article->setJournalId($journal->getJournalId());
+		$article->setJournalId($journal->getId());
 		$article->setUserId($user->getId());
 		$article->setSectionId($section->getSectionId());
 		$article->setStatus(STATUS_PUBLISHED);
@@ -786,31 +786,31 @@ class NativeImportDom {
 		// Create submission mangement records
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 
-		$initialCopyeditSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$initialCopyeditSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $article->getId());
 		$initialCopyeditSignoff->setUserId(0);
 		$signoffDao->updateObject($initialCopyeditSignoff);
 		
-		$authorCopyeditSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$authorCopyeditSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $article->getId());
 		$authorCopyeditSignoff->setUserId(0);
 		$signoffDao->updateObject($authorCopyeditSignoff);
 		
-		$finalCopyeditSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$finalCopyeditSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $article->getId());
 		$finalCopyeditSignoff->setUserId(0);
 		$signoffDao->updateObject($finalCopyeditSignoff);
 
-		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $article->getId());
 		$layoutSignoff->setUserId(0);
 		$signoffDao->updateObject($layoutSignoff);
 
-		$authorProofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_AUTHOR', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$authorProofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_AUTHOR', ASSOC_TYPE_ARTICLE, $article->getId());
 		$authorProofSignoff->setUserId(0);
 		$signoffDao->updateObject($authorProofSignoff);
 		
-		$proofreaderProofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$proofreaderProofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $article->getId());
 		$proofreaderProofSignoff->setUserId(0);
 		$signoffDao->updateObject($proofreaderProofSignoff);
 		
-		$layoutProofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$layoutProofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $article->getId());
 		$layoutProofSignoff->setUserId(0);
 		$signoffDao->updateObject($layoutProofSignoff);
 
@@ -818,17 +818,17 @@ class NativeImportDom {
 		import('article.log.ArticleLog');
 		import('article.log.ArticleEventLogEntry');
 		ArticleLog::logEvent(
-			$article->getArticleId(),
+			$article->getId(),
 			ARTICLE_LOG_ARTICLE_IMPORT,
 			ARTICLE_LOG_TYPE_DEFAULT,
 			0,
 			'log.imported',
-			array('userName' => $user->getFullName(), 'articleId' => $article->getArticleId())
+			array('userName' => $user->getFullName(), 'articleId' => $article->getId())
 		);
 
 		// Insert published article entry.
 		$publishedArticle = new PublishedArticle();
-		$publishedArticle->setArticleId($article->getArticleId());
+		$publishedArticle->setArticleId($article->getId());
 		$publishedArticle->setIssueId($issue->getIssueId());
 
 		if (($node = $articleNode->getChildByName('date_published'))) {
@@ -852,7 +852,7 @@ class NativeImportDom {
 
 		/* --- Galleys (html or otherwise handled simultaneously) --- */
 		import('file.ArticleFileManager');
-		$articleFileManager = new ArticleFileManager($article->getArticleId());
+		$articleFileManager = new ArticleFileManager($article->getId());
 
 		/* --- Handle galleys --- */
 		$hasErrors = false;
@@ -943,7 +943,7 @@ class NativeImportDom {
 		if ($isHtml) $galley = new ArticleHtmlGalley();
 		else $galley = new ArticleGalley();
 
-		$galley->setArticleId($article->getArticleId());
+		$galley->setArticleId($article->getId());
 		$galley->setSequence($galleyCount);
 
 		// just journal supported locales?
@@ -1070,7 +1070,7 @@ class NativeImportDom {
 		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
 			
 		$suppFile = new SuppFile();
-		$suppFile->setArticleId($article->getArticleId());
+		$suppFile->setArticleId($article->getId());
 
 		for ($index=0; ($node = $suppNode->getChildByName('title', $index)); $index++) {
 			$locale = $node->getAttribute('locale');

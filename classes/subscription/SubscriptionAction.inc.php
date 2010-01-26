@@ -3,7 +3,7 @@
 /**
  * @file SubscriptionAction.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionAction
@@ -20,7 +20,7 @@ class SubscriptionAction {
 	 */
 	function subscriptionsSummary() {
 		$journal =& Request::getJournal();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 
 		$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 		$statusOptions =& $individualSubscriptionDao->getStatusOptions();
@@ -88,7 +88,7 @@ class SubscriptionAction {
 		$toDate = Request::getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
 		if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
 
-		$subscriptions =& $subscriptionDao->getSubscriptionsByJournalId($journal->getJournalId(), $filterStatus, $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $rangeInfo);
+		$subscriptions =& $subscriptionDao->getSubscriptionsByJournalId($journal->getId(), $filterStatus, $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $rangeInfo);
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('subscriptions', $subscriptions);
@@ -178,7 +178,7 @@ class SubscriptionAction {
 		}
 
 		// Ensure subscription is for this journal
-		if ($subscriptionDao->getSubscriptionJournalId($subscriptionId) == $journal->getJournalId()) {
+		if ($subscriptionDao->getSubscriptionJournalId($subscriptionId) == $journal->getId()) {
 			$subscriptionDao->deleteSubscriptionById($subscriptionId);
 		}
 	}
@@ -198,7 +198,7 @@ class SubscriptionAction {
 		}
 
 		// Ensure subscription is for this journal
-		if ($subscriptionDao->getSubscriptionJournalId($subscriptionId) == $journal->getJournalId()) {
+		if ($subscriptionDao->getSubscriptionJournalId($subscriptionId) == $journal->getId()) {
 			$subscription =& $subscriptionDao->getSubscription($subscriptionId);
 			if ($subscription) $subscriptionDao->renewSubscription($subscription);
 		}
@@ -220,7 +220,7 @@ class SubscriptionAction {
 		}
 
 		// Ensure subscription is valid and for this journal
-		if (($subscriptionId != null && $subscriptionDao->getSubscriptionJournalId($subscriptionId) == $journal->getJournalId()) || ($subscriptionId == null && $userId)) {
+		if (($subscriptionId != null && $subscriptionDao->getSubscriptionJournalId($subscriptionId) == $journal->getId()) || ($subscriptionId == null && $userId)) {
 			$templateMgr =& TemplateManager::getManager();
 			$subscriptionCreated = Request::getUserVar('subscriptionCreated') == 1 ? 1 : 0;
 			$templateMgr->assign('subscriptionCreated', $subscriptionCreated);
@@ -323,7 +323,7 @@ class SubscriptionAction {
 			$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 		}
 
-		if (($subscriptionId != null && $subscriptionDao->getSubscriptionJournalId($subscriptionId) == $journal->getJournalId()) || $subscriptionId == null) {
+		if (($subscriptionId != null && $subscriptionDao->getSubscriptionJournalId($subscriptionId) == $journal->getId()) || $subscriptionId == null) {
 
 			if ($institutional) {
 				import('subscription.form.InstitutionalSubscriptionForm');
@@ -387,7 +387,7 @@ class SubscriptionAction {
 		$journal =& Request::getJournal();
 		$rangeInfo =& Handler::getRangeInfo('subscriptionTypes');
 		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
-		$subscriptionTypes =& $subscriptionTypeDao->getSubscriptionTypesByJournalId($journal->getJournalId(), $rangeInfo);
+		$subscriptionTypes =& $subscriptionTypeDao->getSubscriptionTypesByJournalId($journal->getId(), $rangeInfo);
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('subscriptionTypes', $subscriptionTypes);
@@ -406,7 +406,7 @@ class SubscriptionAction {
 		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscriptionTypeId);
 
-		if ($subscriptionType && $subscriptionType->getJournalId() == $journal->getJournalId()) {
+		if ($subscriptionType && $subscriptionType->getJournalId() == $journal->getId()) {
 			$direction = Request::getUserVar('dir');
 
 			if ($direction != null) {
@@ -443,7 +443,7 @@ class SubscriptionAction {
 		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
 
 		// Ensure subscription type is for this journal
-		if ($subscriptionTypeDao->getSubscriptionTypeJournalId($subscriptionTypeId) == $journal->getJournalId()) {
+		if ($subscriptionTypeDao->getSubscriptionTypeJournalId($subscriptionTypeId) == $journal->getId()) {
 			$subscriptionTypeDao->deleteSubscriptionTypeById($subscriptionTypeId);
 		}
 	}
@@ -458,7 +458,7 @@ class SubscriptionAction {
 		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
 
 		// Ensure subscription type is valid and for this journal
-		if (($subscriptionTypeId != null && $subscriptionTypeDao->getSubscriptionTypeJournalId($subscriptionTypeId) == $journal->getJournalId()) || $subscriptionTypeId == null) {
+		if (($subscriptionTypeId != null && $subscriptionTypeDao->getSubscriptionTypeJournalId($subscriptionTypeId) == $journal->getId()) || $subscriptionTypeId == null) {
 
 			import('subscription.form.SubscriptionTypeForm');
 
@@ -502,7 +502,7 @@ class SubscriptionAction {
 		$subscriptionTypeId = Request::getUserVar('typeId') == null ? null : (int) Request::getUserVar('typeId');
 		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
 
-		if (($subscriptionTypeId != null && $subscriptionTypeDao->getSubscriptionTypeJournalId($subscriptionTypeId) == $journal->getJournalId()) || $subscriptionTypeId == null) {
+		if (($subscriptionTypeId != null && $subscriptionTypeDao->getSubscriptionTypeJournalId($subscriptionTypeId) == $journal->getId()) || $subscriptionTypeId == null) {
 
 			$subscriptionTypeForm = new SubscriptionTypeForm($subscriptionTypeId);
 			$subscriptionTypeForm->readInputData();
@@ -612,7 +612,7 @@ class SubscriptionAction {
 		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
 
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		if ($roleDao->getJournalUsersRoleCount($journal->getJournalId(), ROLE_ID_SUBSCRIPTION_MANAGER) > 0) {
+		if ($roleDao->getJournalUsersRoleCount($journal->getId(), ROLE_ID_SUBSCRIPTION_MANAGER) > 0) {
 			$rolePath = $roleDao->getRolePath(ROLE_ID_SUBSCRIPTION_MANAGER);
 		} else {
 			$rolePath = $roleDao->getRolePath(ROLE_ID_JOURNAL_MANAGER);

@@ -3,7 +3,7 @@
 /**
  * @file classes/submission/form/SuppFileForm.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SuppFileForm
@@ -39,7 +39,7 @@ class SuppFileForm extends Form {
 
 		if (isset($suppFileId) && !empty($suppFileId)) {
 			$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
-			$this->suppFile =& $suppFileDao->getSuppFile($suppFileId, $article->getArticleId());
+			$this->suppFile =& $suppFileDao->getSuppFile($suppFileId, $article->getId());
 			if (isset($this->suppFile)) {
 				$this->suppFileId = $suppFileId;
 			}
@@ -110,7 +110,7 @@ class SuppFileForm extends Form {
 		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
 
 		$publicSuppFileId = $this->getData('publicSuppFileId');
-		if ($publicSuppFileId && $suppFileDao->suppFileExistsByPublicId($publicSuppFileId, $this->suppFileId, $journal->getJournalId())) {
+		if ($publicSuppFileId && $suppFileDao->suppFileExistsByPublicId($publicSuppFileId, $this->suppFileId, $journal->getId())) {
 			$this->addError('publicIssueId', Locale::translate('author.suppFile.suppFilePublicIdentificationExists'));
 			$this->addErrorField('publicSuppFileId');
 		}

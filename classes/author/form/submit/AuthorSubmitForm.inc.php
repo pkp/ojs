@@ -7,7 +7,7 @@
 /**
  * @file classes/author/form/submit/AuthorSubmitForm.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AuthorSubmitForm
@@ -42,7 +42,7 @@ class AuthorSubmitForm extends Form {
 		$this->addCheck(new FormValidatorPost($this));
 		$this->step = (int) $step;
 		$this->article = $article;
-		$this->articleId = $article ? $article->getArticleId() : null;
+		$this->articleId = $article ? $article->getId() : null;
 	}
 
 	/**
@@ -71,7 +71,7 @@ class AuthorSubmitForm extends Form {
 
 		$journal =& Request::getJournal();
 		$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-		$templateMgr->assign_by_ref('journalSettings', $settingsDao->getJournalSettings($journal->getJournalId()));
+		$templateMgr->assign_by_ref('journalSettings', $settingsDao->getJournalSettings($journal->getId()));
 
 		parent::display();
 	}
@@ -87,11 +87,11 @@ class AuthorSubmitForm extends Form {
 
 		$sectionEditorsDao =& DAORegistry::getDAO('SectionEditorsDAO');
 		$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
-		$sectionEditors =& $sectionEditorsDao->getEditorsBySectionId($journal->getJournalId(), $sectionId);
+		$sectionEditors =& $sectionEditorsDao->getEditorsBySectionId($journal->getId(), $sectionId);
 
 		foreach ($sectionEditors as $sectionEditorEntry) {
 			$editAssignment = new EditAssignment();
-			$editAssignment->setArticleId($article->getArticleId());
+			$editAssignment->setArticleId($article->getId());
 			$editAssignment->setEditorId($sectionEditorEntry['user']->getId());
 			$editAssignment->setCanReview($sectionEditorEntry['canReview']);
 			$editAssignment->setCanEdit($sectionEditorEntry['canEdit']);

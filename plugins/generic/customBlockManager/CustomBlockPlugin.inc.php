@@ -2,7 +2,7 @@
 /**
  * @file CustomBlockPlugin.inc.php
  *
- * Copyright (c) 2003-2008 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package plugins.generic.CustomBlockPlugin
@@ -100,7 +100,7 @@ class CustomBlockPlugin extends BlockPlugin {
 		$journal =& Request::getJournal();
 
 		$this->import('CustomBlockEditForm');
-		$form = new CustomBlockEditForm($this, $journal->getJournalId());
+		$form = new CustomBlockEditForm($this, $journal->getId());
 		
 		switch ($verb) {
 			case 'enable':
@@ -155,7 +155,7 @@ class CustomBlockPlugin extends BlockPlugin {
 		$journal =& Request::getJournal();
 		if (!$journal) return '';
 
-		$templateMgr->assign('customBlockContent', $this->getSetting($journal->getJournalId(), 'blockContent'));
+		$templateMgr->assign('customBlockContent', $this->getSetting($journal->getId(), 'blockContent'));
 		return parent::getContents($templateMgr);
 
 	}

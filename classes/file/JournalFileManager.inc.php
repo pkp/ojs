@@ -3,7 +3,7 @@
 /**
  * @file classes/file/JournalFileManager.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class JournalFileManager
@@ -34,7 +34,7 @@ class JournalFileManager extends FileManager {
 	 * @param $journalId int
 	 */
 	function JournalFileManager(&$journal) {
-		$this->journalId = $journal->getJournalId();
+		$this->journalId = $journal->getId();
 		$this->journal =& $journal;
 		$this->filesDir = Config::getVar('files', 'files_dir') . '/journals/' . $this->journalId . '/';
 	}

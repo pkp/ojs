@@ -3,7 +3,7 @@
 /**
  * @file classes/manager/form/EmailTemplateForm.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class EmailTemplateForm
@@ -51,7 +51,7 @@ class EmailTemplateForm extends Form {
 
 		$journal =& Request::getJournal();
 		$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
-		$emailTemplate =& $emailTemplateDao->getBaseEmailTemplate($this->emailKey, $journal->getJournalId());
+		$emailTemplate =& $emailTemplateDao->getBaseEmailTemplate($this->emailKey, $journal->getId());
 		$templateMgr->assign('canDisable', $emailTemplate?$emailTemplate->getCanDisable():false);
 		$templateMgr->assign('supportedLocales', $journal->getSupportedLocaleNames());
 		$templateMgr->assign('helpTopicId','journal.managementPages.emails');
@@ -64,7 +64,7 @@ class EmailTemplateForm extends Form {
 	function initData() {
 		$journal =& Request::getJournal();
 		$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
-		$emailTemplate =& $emailTemplateDao->getLocaleEmailTemplate($this->emailKey, $journal->getJournalId());
+		$emailTemplate =& $emailTemplateDao->getLocaleEmailTemplate($this->emailKey, $journal->getId());
 		$thisLocale = Locale::getLocale();
 
 		if ($emailTemplate) {
@@ -111,7 +111,7 @@ class EmailTemplateForm extends Form {
 		$journal =& Request::getJournal();
 
 		$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
-		$emailTemplate =& $emailTemplateDao->getLocaleEmailTemplate($this->emailKey, $journal->getJournalId());
+		$emailTemplate =& $emailTemplateDao->getLocaleEmailTemplate($this->emailKey, $journal->getId());
 
 		if (!$emailTemplate) {
 			$emailTemplate = new LocaleEmailTemplate();
@@ -128,7 +128,7 @@ class EmailTemplateForm extends Form {
 		}
 
 		$emailTemplate->setAssocType(ASSOC_TYPE_JOURNAL);
-		$emailTemplate->setAssocId($journal->getJournalId());
+		$emailTemplate->setAssocId($journal->getId());
 
 		$supportedLocales = $journal->getSupportedLocaleNames();
 		if (!empty($supportedLocales)) {

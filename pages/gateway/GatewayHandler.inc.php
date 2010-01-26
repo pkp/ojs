@@ -3,7 +3,7 @@
 /**
  * @file GatewayHandler.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class GatewayHandler
@@ -50,7 +50,7 @@ class GatewayHandler extends Handler {
 				$year = (int)$year;
 				$result =& $issueDao->retrieve(
 					'SELECT * FROM issues WHERE journal_id = ? AND year = ? AND published = 1 ORDER BY current DESC, year ASC, volume ASC, number ASC',
-					array($journal->getJournalId(), $year)
+					array($journal->getId(), $year)
 				);
 				if ($result->RecordCount() == 0) {
 					unset($year);
@@ -61,12 +61,12 @@ class GatewayHandler extends Handler {
 				$showInfo = true;
 				$result =& $issueDao->retrieve(
 					'SELECT MAX(year) FROM issues WHERE journal_id = ? AND published = 1',
-					$journal->getJournalId()
+					$journal->getId()
 				);
 				list($year) = $result->fields;
 				$result =& $issueDao->retrieve(
 					'SELECT * FROM issues WHERE journal_id = ? AND year = ? AND published = 1 ORDER BY current DESC, year ASC, volume ASC, number ASC',
-					array($journal->getJournalId(), $year)
+					array($journal->getId(), $year)
 				);
 			} else {
 				$showInfo = false;
@@ -79,13 +79,13 @@ class GatewayHandler extends Handler {
 			if (isset($year)) {
 				$result =& $issueDao->retrieve(
 					'SELECT MAX(year) FROM issues WHERE journal_id = ? AND published = 1 AND year < ?',
-					array($journal->getJournalId(), $year)
+					array($journal->getId(), $year)
 				);
 				list($prevYear) = $result->fields;
 
 				$result =& $issueDao->retrieve(
 					'SELECT MIN(year) FROM issues WHERE journal_id = ? AND published = 1 AND year > ?',
-					array($journal->getJournalId(), $year)
+					array($journal->getId(), $year)
 				);
 				list($nextYear) = $result->fields;
 			}

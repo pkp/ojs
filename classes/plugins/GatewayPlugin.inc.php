@@ -3,7 +3,7 @@
 /**
  * @file classes/plugins/GatewayPlugin.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class GatewayPlugin
@@ -73,7 +73,7 @@ class GatewayPlugin extends Plugin {
 	function getEnabled() {
 		$journal =& Request::getJournal();
 		if (!$journal) return false;
-		return $this->getSetting($journal->getJournalId(), 'enabled');
+		return $this->getSetting($journal->getId(), 'enabled');
 	}
 
 	/**
@@ -83,7 +83,7 @@ class GatewayPlugin extends Plugin {
 		$journal =& Request::getJournal();
 		if ($journal) {
 			$this->updateSetting(
-				$journal->getJournalId(),
+				$journal->getId(),
 				'enabled',
 				$enabled?true:false
 			);

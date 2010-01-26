@@ -3,7 +3,7 @@
 /**
  * @file METSExportPlugin.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PubMedExportPlugin
@@ -76,7 +76,7 @@ class METSExportPlugin extends ImportExportPlugin {
 				$this->setBreadcrumbs(array(), true);
 				Locale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR));
 				$issueDao =& DAORegistry::getDAO('IssueDAO');
-				$issues =& $issueDao->getIssues($journal->getJournalId(), Handler::getRangeInfo('issues'));
+				$issues =& $issueDao->getIssues($journal->getId(), Handler::getRangeInfo('issues'));
 
 				$siteDao =& DAORegistry::getDAO('SiteDAO');
 				$site = $siteDao->getSite();
@@ -101,7 +101,7 @@ class METSExportPlugin extends ImportExportPlugin {
 		XMLCustomWriter::setAttribute($root, 'xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance');
 		XMLCustomWriter::setAttribute($root, 'PROFILE', 'Australian METS Profile 1.0');
 		XMLCustomWriter::setAttribute($root, 'TYPE', 'journal');
-		XMLCustomWriter::setAttribute($root, 'OBJID', 'J-'.$journal->getJournalId());
+		XMLCustomWriter::setAttribute($root, 'OBJID', 'J-'.$journal->getId());
 		XMLCustomWriter::setAttribute($root, 'xsi:schemaLocation', 'http://www.loc.gov/METS/ http://www.loc.gov/mets/mets.xsd');
 		$headerNode =& MetsExportDom::createmetsHdr($doc);
 		XMLCustomWriter::appendChild($root, $headerNode);

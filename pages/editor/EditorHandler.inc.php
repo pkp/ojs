@@ -3,7 +3,7 @@
 /**
  * @file EditorHandler.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class EditorHandler
@@ -48,13 +48,13 @@ class EditorHandler extends SectionEditorHandler {
 
 		$templateMgr =& TemplateManager::getManager();
 		$journal =& Request::getJournal();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 		$user =& Request::getUser();
 
 		$editorSubmissionDao =& DAORegistry::getDAO('EditorSubmissionDAO');
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 
-		$sections =& $sectionDao->getSectionTitles($journal->getJournalId());
+		$sections =& $sectionDao->getSectionTitles($journal->getId());
 		$templateMgr->assign('sectionOptions', array(0 => Locale::Translate('editor.allSections')) + $sections);
 		$templateMgr->assign('fieldOptions', $this->getSearchFieldOptions());
 		$templateMgr->assign('dateFieldOptions', $this->getDateFieldOptions());
@@ -86,7 +86,7 @@ class EditorHandler extends SectionEditorHandler {
 
 			if ($sort == 'status') {			
 				$rawSubmissions =& $editorSubmissionDao->getUnfilteredEditorSubmissions(
-					$journal->getJournalId(),
+					$journal->getId(),
 					Request::getUserVar('section'),
 					0,
 					$searchField,
@@ -114,7 +114,7 @@ class EditorHandler extends SectionEditorHandler {
 				$submissions =& ArrayItemIterator::fromRangeInfo($submissionsArray, $rangeInfo);
 			}  else {
 				$rawSubmissions =& $editorSubmissionDao->getUnfilteredEditorSubmissions(
-					$journal->getJournalId(),
+					$journal->getId(),
 					Request::getUserVar('section'),
 					0,
 					$searchField,
@@ -145,7 +145,7 @@ class EditorHandler extends SectionEditorHandler {
 			$templateMgr->assign('sortDirection', $sortDirection);
 		}
 
-		$submissionsCount =& $editorSubmissionDao->getEditorSubmissionsCount($journal->getJournalId());
+		$submissionsCount =& $editorSubmissionDao->getEditorSubmissionsCount($journal->getId());
 		$templateMgr->assign('submissionsCount', $submissionsCount);
 		$templateMgr->assign('helpTopicId', 'editorial.editorsRole');
 		$templateMgr->display('editor/index.tpl');
@@ -159,7 +159,7 @@ class EditorHandler extends SectionEditorHandler {
 		$this->setupTemplate(EDITOR_SECTION_SUBMISSIONS);
 
 		$journal =& Request::getJournal();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 		$user =& Request::getUser();
 
 		$editorSubmissionDao =& DAORegistry::getDAO('EditorSubmissionDAO');
@@ -342,7 +342,7 @@ class EditorHandler extends SectionEditorHandler {
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$article =& $articleDao->getArticle($articleId);
 
-		if ($article && $article->getJournalId() === $journal->getJournalId()) {
+		if ($article && $article->getJournalId() === $journal->getId()) {
 			$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
 			$editAssignments =& $editAssignmentDao->getEditAssignmentsByArticleId($articleId);
 
@@ -378,9 +378,9 @@ class EditorHandler extends SectionEditorHandler {
 			$articleDao =& DAORegistry::getDAO('ArticleDAO');
 			$article =& $articleDao->getArticle($editAssignment->getArticleId());
 
-			if ($article && $article->getJournalId() === $journal->getJournalId()) {
+			if ($article && $article->getJournalId() === $journal->getId()) {
 				$editAssignmentDao->deleteEditAssignmentById($editAssignment->getEditId());
-				Request::redirect(null, null, 'submission', $article->getArticleId());
+				Request::redirect(null, null, 'submission', $article->getId());
 			}
 		}
 
@@ -399,8 +399,8 @@ class EditorHandler extends SectionEditorHandler {
 		$editorId = Request::getUserVar('editorId');
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 
-		$isSectionEditor = $roleDao->roleExists($journal->getJournalId(), $editorId, ROLE_ID_SECTION_EDITOR);
-		$isEditor = $roleDao->roleExists($journal->getJournalId(), $editorId, ROLE_ID_EDITOR);
+		$isSectionEditor = $roleDao->roleExists($journal->getId(), $editorId, ROLE_ID_SECTION_EDITOR);
+		$isEditor = $roleDao->roleExists($journal->getId(), $editorId, ROLE_ID_EDITOR);
 
 		if (isset($editorId) && $editorId != null && ($isEditor || $isSectionEditor)) {
 			// A valid section editor has already been chosen;
@@ -438,11 +438,11 @@ class EditorHandler extends SectionEditorHandler {
 			if (isset($args[0]) && $args[0] === 'editor') {
 				$roleName = 'user.role.editor';
 				$rolePath = 'editor';
-				$editors =& $editorSubmissionDao->getUsersNotAssignedToArticle($journal->getJournalId(), $articleId, RoleDAO::getRoleIdFromPath('editor'), $searchType, $search, $searchMatch, $rangeInfo);
+				$editors =& $editorSubmissionDao->getUsersNotAssignedToArticle($journal->getId(), $articleId, RoleDAO::getRoleIdFromPath('editor'), $searchType, $search, $searchMatch, $rangeInfo);
 			} else {
 				$roleName = 'user.role.sectionEditor';
 				$rolePath = 'sectionEditor';
-				$editors =& $editorSubmissionDao->getUsersNotAssignedToArticle($journal->getJournalId(), $articleId, RoleDAO::getRoleIdFromPath('sectionEditor'), $searchType, $search, $searchMatch, $rangeInfo);
+				$editors =& $editorSubmissionDao->getUsersNotAssignedToArticle($journal->getId(), $articleId, RoleDAO::getRoleIdFromPath('sectionEditor'), $searchType, $search, $searchMatch, $rangeInfo);
 			}
 
 			$templateMgr =& TemplateManager::getManager();
@@ -453,10 +453,10 @@ class EditorHandler extends SectionEditorHandler {
 			$templateMgr->assign('articleId', $articleId);
 
 			$sectionDao =& DAORegistry::getDAO('SectionDAO');
-			$sectionEditorSections =& $sectionDao->getEditorSections($journal->getJournalId());
+			$sectionEditorSections =& $sectionDao->getEditorSections($journal->getId());
 
 			$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
-			$editorStatistics = $editAssignmentDao->getEditorStatistics($journal->getJournalId());
+			$editorStatistics = $editAssignmentDao->getEditorStatistics($journal->getId());
 
 			$templateMgr->assign_by_ref('editorSections', $sectionEditorSections);
 			$templateMgr->assign('editorStatistics', $editorStatistics);
@@ -493,7 +493,7 @@ class EditorHandler extends SectionEditorHandler {
 
 		$status = $article->getStatus();
 
-		if ($article->getJournalId() == $journal->getJournalId() && ($status == STATUS_DECLINED || $status == STATUS_ARCHIVED)) {
+		if ($article->getJournalId() == $journal->getId() && ($status == STATUS_DECLINED || $status == STATUS_ARCHIVED)) {
 			// Delete article files
 			import('file.ArticleFileManager');
 			$articleFileManager = new ArticleFileManager($articleId);

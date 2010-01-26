@@ -3,7 +3,7 @@
 /**
  * @file PubMedExportDom.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PubMedExportDom
@@ -144,7 +144,7 @@ class PubMedExportDom {
 		XMLCustomWriter::appendChild($historyNode, $receivedNode);
 
 		// accepted for publication
-		$editordecisions = $editorSubmissionDao->getEditorDecisions($article->getArticleId());
+		$editordecisions = $editorSubmissionDao->getEditorDecisions($article->getId());
 
 		// if there are multiple decisions, make sure we get the accepted date
 		$editordecision = array_pop($editordecisions);

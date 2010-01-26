@@ -3,7 +3,7 @@
 /**
  * @file classes/manager/form/UserManagementForm.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class UserManagementForm
@@ -76,7 +76,7 @@ class UserManagementForm extends Form {
 		}
 
 		$journal =& Request::getJournal();
-		$journalId = $journal == null ? 0 : $journal->getJournalId();
+		$journalId = $journal == null ? 0 : $journal->getId();
 		import('pages.manager.PeopleHandler');
 		$rolePrefs = PeopleHandler::retrieveRoleAssignmentPreferences($journalId);
 		$activeRoles = array(
@@ -330,7 +330,7 @@ class UserManagementForm extends Form {
 					if (!$isManager && $roleId != ROLE_ID_READER) continue;
 					if ($roleId != null) {
 						$role = new Role();
-						$role->setJournalId($journal->getJournalId());
+						$role->setJournalId($journal->getId());
 						$role->setUserId($userId);
 						$role->setRoleId($roleId);
 						$roleDao->insertRole($role);

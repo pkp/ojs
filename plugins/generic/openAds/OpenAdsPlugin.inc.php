@@ -101,11 +101,11 @@ class OpenAdsPlugin extends GenericPlugin {
 		// Get the ad settings.
 		$headerAdHtml = $contentAdHtml = '';
 		if ($journal) {
-			$journalId = $journal->getJournalId();
+			$journalId = $journal->getId();
 			$this->import('OpenAdsConnection');
 			$openAdsConnection = new OpenAdsConnection($this, $this->getInstallationPath());
 			$headerAdHtml = $openAdsConnection->getAdHtml($this->getSetting($journalId, 'headerAdId'));
-			$headerAdOrientation = $this->getSetting($journal->getJournalId(), 'headerAdOrientation');
+			$headerAdOrientation = $this->getSetting($journal->getId(), 'headerAdOrientation');
 			$contentAdHtml = $openAdsConnection->getAdHtml($this->getSetting($journalId, 'contentAdId'));
 		}
 
@@ -161,7 +161,7 @@ class OpenAdsPlugin extends GenericPlugin {
 		//Get the ad settings.
 		$this->import('OpenAdsConnection');
 		$openAdsConnection = new OpenAdsConnection($this, $this->getInstallationPath());
-		$sidebarAdHtml = $openAdsConnection->getAdHtml($this->getSetting($journal->getJournalId(), 'sidebarAdId'));
+		$sidebarAdHtml = $openAdsConnection->getAdHtml($this->getSetting($journal->getId(), 'sidebarAdId'));
 
 		$index = strrpos($output, '<h5>' . Locale::translate('rt.readingTools') . '</h5>');
 		if ($index !== false && !empty($sidebarAdHtml)) {
@@ -203,7 +203,7 @@ class OpenAdsPlugin extends GenericPlugin {
 	function getEnabled() {
 		$journal =& Request::getJournal();
 		if (!$journal) return false;
-		return $this->getSetting($journal->getJournalId(), 'enabled');
+		return $this->getSetting($journal->getId(), 'enabled');
 	}
 
 	/**
@@ -212,7 +212,7 @@ class OpenAdsPlugin extends GenericPlugin {
 	function setEnabled($enabled) {
 		$journal =& Request::getJournal();
 		if ($journal) {
-			$this->updateSetting($journal->getJournalId(), 'enabled', $enabled ? true : false);
+			$this->updateSetting($journal->getId(), 'enabled', $enabled ? true : false);
 			return true;
 		}
 		return false;
@@ -242,7 +242,7 @@ class OpenAdsPlugin extends GenericPlugin {
 				$this->import('OpenAdsConnection');
 				$openAdsConnection = new OpenAdsConnection($this, $this->getInstallationPath());
 				$openAdsConnection->loadConfig();
-				$form = new OpenAdsSettingsForm($this, $openAdsConnection, $journal->getJournalId());
+				$form = new OpenAdsSettingsForm($this, $openAdsConnection, $journal->getId());
 				if (array_shift($args) == 'save') {
 					$form->readInputData();
 					$form->execute();

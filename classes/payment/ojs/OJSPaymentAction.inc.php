@@ -3,7 +3,7 @@
 /**
  * @file OJSPaymentAction.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OJSPaymentAction
@@ -60,12 +60,12 @@ class OJSPaymentAction {
 	  * Display all payments previously made
 	  */
 	 function viewPayments($args) {
-		$rangeInfo =& Handler::getRangeInfo('CompletedPayments');
+		$rangeInfo =& Handler::getRangeInfo('payments');
 		$paymentDao =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
 		$journal =& Request::getJournal();
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
-		$payments =& $paymentDao->getPaymentsByJournalId($journal->getJournalId(), $rangeInfo);
+		$payments =& $paymentDao->getPaymentsByJournalId($journal->getId(), $rangeInfo);
 		$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 		$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 

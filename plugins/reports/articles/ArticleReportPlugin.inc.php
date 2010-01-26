@@ -3,7 +3,7 @@
 /**
  * @file ArticleReportPlugin.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  * 
  * @class ArticleReportPlugin
@@ -59,7 +59,7 @@ class ArticleReportPlugin extends ReportPlugin {
 		header('content-disposition: attachment; filename=report.csv');
 
 		$articleReportDao =& DAORegistry::getDAO('ArticleReportDAO');
-		list($articlesIterator, $authorsIterator, $decisionsIteratorsArray) = $articleReportDao->getArticleReport($journal->getJournalId());
+		list($articlesIterator, $authorsIterator, $decisionsIteratorsArray) = $articleReportDao->getArticleReport($journal->getId());
 
 		$maxAuthors = $this->getMaxAuthorCount($authorsIterator);
 

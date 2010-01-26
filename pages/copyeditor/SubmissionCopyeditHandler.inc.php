@@ -3,7 +3,7 @@
 /**
  * @file SubmissionCopyeditHandler.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubmissionCopyeditHandler
@@ -140,7 +140,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 
 		if ($copyeditorSubmission == null) {
 			$isValid = false;
-		} else if ($copyeditorSubmission->getJournalId() != $journal->getJournalId()) {
+		} else if ($copyeditorSubmission->getJournalId() != $journal->getId()) {
 			$isValid = false;
 		} else {
 			if ($copyeditorSubmission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL') != $user->getId()) {
@@ -274,7 +274,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 
 		import('file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
-		$publicFileManager->removeJournalFile($journal->getJournalId(),$submission->getFileName($formLocale));
+		$publicFileManager->removeJournalFile($journal->getId(),$submission->getFileName($formLocale));
 		$submission->setFileName('', $formLocale);
 		$submission->setOriginalFileName('', $formLocale);
 		$submission->setWidth('', $formLocale);

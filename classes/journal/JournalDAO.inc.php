@@ -3,7 +3,7 @@
 /**
  * @file classes/journal/JournalDAO.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class JournalDAO
@@ -94,7 +94,7 @@ class JournalDAO extends DAO {
 		);
 
 		$journal->setJournalId($this->getInsertJournalId());
-		return $journal->getJournalId();
+		return $journal->getId();
 	}
 
 	/**
@@ -115,7 +115,7 @@ class JournalDAO extends DAO {
 				$journal->getSequence(),
 				$journal->getEnabled() ? 1 : 0,
 				$journal->getPrimaryLocale(),
-				$journal->getJournalId()
+				$journal->getId()
 			)
 		);
 	}
@@ -125,7 +125,7 @@ class JournalDAO extends DAO {
 	 * @param $journal Journal
 	 */
 	function deleteJournal(&$journal) {
-		return $this->deleteJournalById($journal->getJournalId());
+		return $this->deleteJournalById($journal->getId());
 	}
 
 	/**
@@ -218,7 +218,7 @@ class JournalDAO extends DAO {
 
 		$journalIterator =& $this->getJournals();
 		while ($journal =& $journalIterator->next()) {
-			$journals[$journal->getJournalId()] = $journal->getLocalizedTitle();
+			$journals[$journal->getId()] = $journal->getLocalizedTitle();
 			unset($journal);
 		}
 		unset($journalIterator);
@@ -235,7 +235,7 @@ class JournalDAO extends DAO {
 
 		$journalIterator =& $this->getEnabledJournals();
 		while ($journal =& $journalIterator->next()) {
-			$journals[$journal->getJournalId()] = $journal->getLocalizedTitle();
+			$journals[$journal->getId()] = $journal->getLocalizedTitle();
 			unset($journal);
 		}
 		unset($journalIterator);

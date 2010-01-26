@@ -3,7 +3,7 @@
 /**
  * @file SettingsForm.inc.php
  *
- * Copyright (c) 2003-2008 John Willinsky. For full terms see the file docs/COPYING.
+ * Copyright (c) 2003-2010 John Willinsky. For full terms see the file docs/COPYING.
  *
  * @class SettingsForm
  *

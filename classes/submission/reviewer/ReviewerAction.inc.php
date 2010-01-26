@@ -3,7 +3,7 @@
 /**
  * @file classes/submission/reviewer/ReviewerAction.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ReviewerAction
@@ -307,7 +307,7 @@ class ReviewerAction extends Action {
 				import('notification.Notification');
 				$notificationUsers = $article->getAssociatedUserIds();
 				foreach ($notificationUsers as $userRole) {
-					$url = Request::url(null, $userRole['role'], 'submissionReview', $article->getArticleId(), null, 'peerReview');
+					$url = Request::url(null, $userRole['role'], 'submissionReview', $article->getId(), null, 'peerReview');
 					Notification::createNotification($userRole['id'], "notification.type.reviewerComment",
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_REVIEWER_COMMENT);
 				}
@@ -362,7 +362,7 @@ class ReviewerAction extends Action {
 				$article =& $articleDao->getArticle($articleId);
 				$notificationUsers = $article->getAssociatedUserIds();
 				foreach ($notificationUsers as $userRole) {
-					$url = Request::url(null, $userRole['role'], 'submissionReview', $article->getArticleId(), null, 'peerReview');
+					$url = Request::url(null, $userRole['role'], 'submissionReview', $article->getId(), null, 'peerReview');
 					Notification::createNotification($userRole['id'], "notification.type.reviewerFormComment",
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_REVIEWER_FORM_COMMENT);
 				}
@@ -416,7 +416,7 @@ class ReviewerAction extends Action {
 		$result = false;
 		if (!HookRegistry::call('ReviewerAction::downloadReviewerFile', array(&$article, &$fileId, &$revision, &$canDownload, &$result))) {
 			if ($canDownload) {
-				return Action::downloadFile($article->getArticleId(), $fileId, $revision);
+				return Action::downloadFile($article->getId(), $fileId, $revision);
 			} else {
 				return false;
 			}

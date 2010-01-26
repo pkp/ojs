@@ -1,7 +1,7 @@
 {**
  * siteMap.tpl
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * About the Journal / Site Map.
@@ -39,7 +39,7 @@
 				<li>
 					{if $isUserLoggedIn}
 						<ul class="plain">
-							{assign var=currentJournalId value=$currentJournal->getJournalId()}
+							{assign var=currentJournalId value=$currentJournal->getId()}
 							{foreach from=$rolesByJournal[$currentJournalId] item=role}
 								{translate|assign:"roleName" key=$role->getRoleName()}
 								<li><a href="{url journal=`$currentJournal->getPath()` page=`$role->getRolePath()`}">{$roleName|escape}</a></li>

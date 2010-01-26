@@ -3,7 +3,7 @@
 /**
  * @file classes/article/PublishedArticleDAO.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PublishedArticleDAO
@@ -562,7 +562,7 @@ class PublishedArticleDAO extends DAO {
 				(?, ?, %s, ?, ?, ?)',
 				$this->datetimeToDB($publishedArticle->getDatePublished())),
 			array(
-				$publishedArticle->getArticleId(),
+				$publishedArticle->getId(),
 				$publishedArticle->getIssueId(),
 				$publishedArticle->getSeq(),
 				$publishedArticle->getAccessStatus(),
@@ -650,7 +650,7 @@ class PublishedArticleDAO extends DAO {
 				WHERE pub_id = ?',
 				$this->datetimeToDB($publishedArticle->getDatePublished())),
 			array(
-				$publishedArticle->getArticleId(),
+				$publishedArticle->getId(),
 				$publishedArticle->getIssueId(),
 				$publishedArticle->getSeq(),
 				$publishedArticle->getAccessStatus(),

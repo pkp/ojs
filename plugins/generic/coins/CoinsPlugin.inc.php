@@ -3,7 +3,7 @@
 /**
  * @file CoinsPlugin.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CoinsPlugin
@@ -87,7 +87,7 @@ class CoinsPlugin extends GenericPlugin {
 	function getEnabled() {
 		$journal =& Request::getJournal();
 		if (!$journal) return false;
-		return $this->getSetting($journal->getJournalId(), 'enabled');
+		return $this->getSetting($journal->getId(), 'enabled');
 	}
 
 	/**
@@ -96,7 +96,7 @@ class CoinsPlugin extends GenericPlugin {
 	function setEnabled($enabled) {
 		$journal =& Request::getJournal();
 		if ($journal) {
-			$this->updateSetting($journal->getJournalId(), 'enabled', $enabled ? true : false);
+			$this->updateSetting($journal->getId(), 'enabled', $enabled ? true : false);
 			return true;
 		}
 		return false;
@@ -120,7 +120,7 @@ class CoinsPlugin extends GenericPlugin {
 
 			$vars = array(
 				array('ctx_ver', 'Z39.88-2004'),
-				array('rft_id', Request::url(null, 'article', 'view', $article->getArticleId())),
+				array('rft_id', Request::url(null, 'article', 'view', $article->getId())),
 				array('rft_val_fmt', 'info:ofi/fmt:kev:mtx:journal'),
 				array('rft.genre', 'article'),
 				array('rft.title', $journal->getLocalizedTitle()),

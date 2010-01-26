@@ -3,7 +3,7 @@
 /**
  * @file classes/manager/form/LanguageSettingsForm.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class LanguageSettingsForm
@@ -124,7 +124,7 @@ class LanguageSettingsForm extends Form {
 		foreach ($this->_data as $name => $value) {
 			if (!in_array($name, array_keys($this->settings))) continue;
 			$settingsDao->updateSetting(
-				$journal->getJournalId(),
+				$journal->getId(),
 				$name,
 				$value,
 				$this->settings[$name]

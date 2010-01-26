@@ -38,7 +38,6 @@ OJS release:
     docs/release-notes/README-<VERSION>
 
 
-
 3. Generate CVS ChangeLog for the release:
 
     perl lib/pkp/classes/cliTool/cvs2cl.pl --delta <OLD-TAG>:<CURRENT-TAG> -f \

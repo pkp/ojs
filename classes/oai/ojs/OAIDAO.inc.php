@@ -3,7 +3,7 @@
 /**
  * @file classes/oai/ojs/OAIDAO.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OAIDAO
@@ -13,7 +13,7 @@
  * @brief DAO operations for the OJS OAI interface.
  */
 
-// $Id: OAIDAO.inc.php,v 1.43 2009/11/19 14:51:38 asmecher Exp $
+// $Id$
 
 
 import('oai.OAI');
@@ -452,7 +452,7 @@ class OAIDAO extends DAO {
 			$abbrev = $journal->getPath();
 			array_push($sets, new OAISet(urlencode($abbrev), $title, ''));
 
-			$sections =& $this->sectionDao->getJournalSections($journal->getJournalId());
+			$sections =& $this->sectionDao->getJournalSections($journal->getId());
 			foreach ($sections->toArray() as $section) {
 				array_push($sets, new OAISet(urlencode($abbrev) . ':' . urlencode($section->getLocalizedAbbrev()), $section->getLocalizedTitle(), ''));
 			}
@@ -476,15 +476,15 @@ class OAIDAO extends DAO {
 		$journalId = null;
 
 		$journal =& $this->journalDao->getJournalByPath($journalSpec);
-		if (!isset($journal) || (isset($restrictJournalId) && $journal->getJournalId() != $restrictJournalId)) {
+		if (!isset($journal) || (isset($restrictJournalId) && $journal->getId() != $restrictJournalId)) {
 			return array(0, 0);
 		}
 
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 		$sectionId = null;
 
 		if (isset($sectionSpec)) {
-			$section =& $this->sectionDao->getSectionByAbbrev($sectionSpec, $journal->getJournalId());
+			$section =& $this->sectionDao->getSectionByAbbrev($sectionSpec, $journal->getId());
 			if (isset($section)) {
 				$sectionId = $section->getSectionId();
 			} else {

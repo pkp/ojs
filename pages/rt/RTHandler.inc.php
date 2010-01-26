@@ -3,7 +3,7 @@
 /**
  * @file RTHandler.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class RTHandler
@@ -116,7 +116,7 @@ class RTHandler extends ArticleHandler {
 		$journalRt =& $rtDao->getJournalRTByJournal($journal);
 
 		$context =& $rtDao->getContext($contextId);
-		if ($context) $version =& $rtDao->getVersion($context->getVersionId(), $journal->getJournalId());
+		if ($context) $version =& $rtDao->getVersion($context->getVersionId(), $journal->getId());
 
 		if (!$context || !$version || !$journalRt || $journalRt->getVersion()==null || $journalRt->getVersion() !=  $context->getVersionId()) {
 			$request->redirect(null, 'article', 'view', array($articleId, $galleyId));
@@ -260,7 +260,7 @@ class RTHandler extends ArticleHandler {
 		}
 
 		$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
-		$galley =& $articleGalleyDao->getGalley($galleyId, $article->getArticleId());
+		$galley =& $articleGalleyDao->getGalley($galleyId, $article->getId());
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$section =& $sectionDao->getSection($article->getSectionId());
@@ -277,7 +277,7 @@ class RTHandler extends ArticleHandler {
 		// Use the article's CSS file, if set.
 		if ($galley && $galley->isHTMLGalley() && $styleFile =& $galley->getStyleFile()) {
 			$templateMgr->addStyleSheet($router->url($request, null, 'article', 'viewFile', array(
-				$article->getArticleId(),
+				$article->getId(),
 				$galley->getBestGalleyId($journal),
 				$styleFile->getFileId()
 			)));
@@ -433,7 +433,7 @@ class RTHandler extends ArticleHandler {
 		$journalRt =& $rtDao->getJournalRTByJournal($journal);
 
 		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
-		$suppFile = $suppFileDao->getSuppFile($suppFileId, $article->getArticleId());
+		$suppFile = $suppFileDao->getSuppFile($suppFileId, $article->getId());
 
 		if (!$journalRt || !$journalRt->getSupplementaryFiles() || !$suppFile) {
 			$request->redirect(null, $router->getRequestedPage($request));

@@ -7,7 +7,7 @@
 /**
  * @file classes/form/IssueForm.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueForm
@@ -87,7 +87,7 @@ class IssueForm extends Form {
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 
 		$publicIssueId = $this->getData('publicIssueId');
-		if ($publicIssueId && $issueDao->publicIssueIdExists($publicIssueId, $issueId, $journal->getJournalId())) {
+		if ($publicIssueId && $issueDao->publicIssueIdExists($publicIssueId, $issueId, $journal->getId())) {
 			$this->addError('publicIssueId', Locale::translate('editor.issues.issuePublicIdentificationExists'));
 			$this->addErrorField('publicIssueId');
 		}
@@ -166,7 +166,7 @@ class IssueForm extends Form {
 
 			// set up the default values for volume, number and year
 			$issueDao =& DAORegistry::getDAO('IssueDAO');
-			$issue = $issueDao->getLastCreatedIssue($journal->getJournalId());
+			$issue = $issueDao->getLastCreatedIssue($journal->getId());
 
 			if (isset($issue)) {
 				$volumePerYear = $journal->getSetting('volumePerYear');
@@ -292,7 +292,7 @@ class IssueForm extends Form {
 		$showYear = $this->getData('showYear');
 		$showTitle = $this->getData('showTitle');
 
-		$issue->setJournalId($journal->getJournalId());
+		$issue->setJournalId($journal->getId());
 		$issue->setTitle($this->getData('title'), null); // Localized
 		$issue->setVolume(empty($volume) ? 0 : $volume);
 		$issue->setNumber(empty($number) ? 0 : $number);
@@ -354,12 +354,12 @@ class IssueForm extends Form {
 			$journal = Request::getJournal();
 			$originalFileName = $publicFileManager->getUploadedFileName('coverPage');
 			$newFileName = 'cover_issue_' . $issueId . '_' . $this->getFormLocale() . '.' . $publicFileManager->getExtension($originalFileName);
-			$publicFileManager->uploadJournalFile($journal->getJournalId(), 'coverPage', $newFileName);
+			$publicFileManager->uploadJournalFile($journal->getId(), 'coverPage', $newFileName);
 			$issue->setOriginalFileName($publicFileManager->truncateFileName($originalFileName, 127), $this->getFormLocale());
 			$issue->setFileName($newFileName, $this->getFormLocale());
 
 			// Store the image dimensions.
-			list($width, $height) = getimagesize($publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/' . $newFileName);
+			list($width, $height) = getimagesize($publicFileManager->getJournalFilesPath($journal->getId()) . '/' . $newFileName);
 			$issue->setWidth($width, $this->getFormLocale());
 			$issue->setHeight($height, $this->getFormLocale());
 
@@ -370,7 +370,7 @@ class IssueForm extends Form {
 			$journal = Request::getJournal();
 			$originalFileName = $publicFileManager->getUploadedFileName('styleFile');
 			$newFileName = 'style_' . $issueId . '.css';
-			$publicFileManager->uploadJournalFile($journal->getJournalId(), 'styleFile', $newFileName);
+			$publicFileManager->uploadJournalFile($journal->getId(), 'styleFile', $newFileName);
 			$issue->setStyleFileName($newFileName);
 			$issue->setOriginalStyleFileName($publicFileManager->truncateFileName($originalFileName, 127));
 			$issueDao->updateIssue($issue);

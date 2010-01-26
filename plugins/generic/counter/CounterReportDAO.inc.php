@@ -3,7 +3,7 @@
 /**
  * @file plugins/generic/counter/CounterReportDAO.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CounterReportDAO
@@ -185,7 +185,7 @@ class CounterReportDAO extends DAO {
 		$journals =& $journalDao->getJournals();
 		$journalUrlMap = array();
 		while ($journal =& $journals->next()) {
-			$journalUrlMap[Request::url($journal->getPath(), 'index')] = $journal->getJournalId();
+			$journalUrlMap[Request::url($journal->getPath(), 'index')] = $journal->getId();
 			unset($journal);
 		}
 		unset($journals);

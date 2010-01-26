@@ -3,7 +3,7 @@
 /**
  * @file plugins/oaiMetadata/marc/OAIMetadataFormat_MARC.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OAIMetadataFormat_MARC
@@ -65,7 +65,7 @@ class OAIMetadataFormat_MARC extends OAIMetadataFormat {
 		// Relation
 		$relation = array();
 		foreach ($article->getSuppFiles() as $suppFile) {
-			$relation[] = Request::url($journal->getPath(), 'article', 'download', array($article->getArticleId(), $suppFile->getFileId()));
+			$relation[] = Request::url($journal->getPath(), 'article', 'download', array($article->getId(), $suppFile->getFileId()));
 		}
 
 		// Coverage

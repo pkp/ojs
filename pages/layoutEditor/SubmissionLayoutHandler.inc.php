@@ -3,7 +3,7 @@
 /**
  * @file SubmissionLayoutHandler.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubmissionLayoutHandler
@@ -214,7 +214,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			$article =& $articleDao->getArticle($articleId);
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
 			foreach ($notificationUsers as $userRole) {
-				$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getArticleId(), null, 'layout');
+				$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'layout');
 				Notification::createNotification($userRole['id'], "notification.type.galleyModified",
 					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_GALLEY_MODIFIED);
 			}
@@ -421,7 +421,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			$article =& $articleDao->getArticle($articleId);
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
 			foreach ($notificationUsers as $userRole) {
-				$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getArticleId(), null, 'layout');
+				$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'layout');
 				Notification::createNotification($userRole['id'], "notification.type.suppFileModified",
 					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_SUPP_FILE_MODIFIED);
 			}
@@ -549,7 +549,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 
 		$layoutDao =& DAORegistry::getDAO('LayoutEditorSubmissionDAO');
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$submission =& $layoutDao->getSubmission($articleId, $journal->getJournalId());
+		$submission =& $layoutDao->getSubmission($articleId, $journal->getId());
 
 		if (isset($submission)) {
 			$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);

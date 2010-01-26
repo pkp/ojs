@@ -3,7 +3,7 @@
 /**
  * @file SitemapHandler.inc.php
  *
- * Copyright (c) 2003-2008 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SitemapHandler
@@ -75,7 +75,7 @@ class SitemapHandler extends Handler {
 		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 		
 		$journal =& Request::getJournal();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 		
 		$doc =& XMLCustomWriter::createDocument();
 		$root =& XMLCustomWriter::createElement($doc, 'urlset');
@@ -104,11 +104,11 @@ class SitemapHandler extends Handler {
 			$articles = $publishedArticleDao->getPublishedArticles($issue->getIssueId());
 			foreach($articles as $article) {
 				// Abstract
-				XMLCustomWriter::appendChild($root, SitemapHandler::createUrlTree($doc, Request::url($journal->getPath(), 'article', 'view', array($article->getArticleId()))));
+				XMLCustomWriter::appendChild($root, SitemapHandler::createUrlTree($doc, Request::url($journal->getPath(), 'article', 'view', array($article->getId()))));
 				// Galley files
-				$galleys = $galleyDao->getGalleysByArticle($article->getArticleId());
+				$galleys = $galleyDao->getGalleysByArticle($article->getId());
 				foreach ($galleys as $galley) {
-					XMLCustomWriter::appendChild($root, SitemapHandler::createUrlTree($doc, Request::url($journal->getPath(), 'article', 'view', array($article->getArticleId(), $galley->getGalleyId()))));
+					XMLCustomWriter::appendChild($root, SitemapHandler::createUrlTree($doc, Request::url($journal->getPath(), 'article', 'view', array($article->getId(), $galley->getGalleyId()))));
 				}
 			}
 			unset($issue);

@@ -3,7 +3,7 @@
 /**
  * @file classes/core/Application.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Application
@@ -19,9 +19,11 @@
 
 import('core.PKPApplication');
 
-define('ASSOC_TYPE_JOURNAL',	0x0000100);
-define('ASSOC_TYPE_ARTICLE',	0x0000101);
-define('ASSOC_TYPE_CITATION',	0x0000102);
+define('ASSOC_TYPE_JOURNAL',  0x0000100);
+define('ASSOC_TYPE_ARTICLE',  0x0000101);
+define('ASSOC_TYPE_CITATION', 0x0000102);
+define('ASSOC_TYPE_AUTHOR',   0x0000103);
+define('ASSOC_TYPE_EDITOR',   0x0000104);
 
 define('CONTEXT_JOURNAL', 1);
 
@@ -87,6 +89,7 @@ class Application extends PKPApplication {
 			'ArticleSearchDAO' => 'search.ArticleSearchDAO',
 			'AuthorDAO' => 'article.AuthorDAO',
 			'AuthorSubmissionDAO' => 'submission.author.AuthorSubmissionDAO',
+			'CitationDAO' => 'citation.CitationDAO',
 			'CommentDAO' => 'comment.CommentDAO',
 			'CopyeditorSubmissionDAO' => 'submission.copyeditor.CopyeditorSubmissionDAO',
 			'EditAssignmentDAO' => 'submission.editAssignment.EditAssignmentDAO',

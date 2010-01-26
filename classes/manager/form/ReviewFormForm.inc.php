@@ -3,7 +3,7 @@
 /**
  * @file classes/manager/form/ReviewFormForm.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ReviewFormForm
@@ -62,7 +62,7 @@ class ReviewFormForm extends Form {
 		if ($this->reviewFormId != null) {
 			$journal =& Request::getJournal();
 			$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
-			$reviewForm =& $reviewFormDao->getReviewForm($this->reviewFormId, $journal->getJournalId());
+			$reviewForm =& $reviewFormDao->getReviewForm($this->reviewFormId, $journal->getId());
 
 			if ($reviewForm == null) {
 				$this->reviewFormId = null;
@@ -87,7 +87,7 @@ class ReviewFormForm extends Form {
 	 */
 	function execute() {
 		$journal =& Request::getJournal();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
 

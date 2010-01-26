@@ -3,7 +3,7 @@
 /**
  * @file RTContextHandler.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class RTContextHandler
@@ -33,7 +33,7 @@ class RTContextHandler extends RTAdminHandler {
 
 		$rtDao =& DAORegistry::getDAO('RTDAO');
 		$versionId = isset($args[0])?$args[0]:0;
-		$version =& $rtDao->getVersion($versionId, $journal->getJournalId());
+		$version =& $rtDao->getVersion($versionId, $journal->getId());
 
 		import('rt.ojs.form.ContextForm');
 		$contextForm = new ContextForm(null, $versionId);
@@ -57,7 +57,7 @@ class RTContextHandler extends RTAdminHandler {
 		$rangeInfo = Handler::getRangeInfo('contexts');
 
 		$versionId = isset($args[0])?$args[0]:0;
-		$version =& $rtDao->getVersion($versionId, $journal->getJournalId());
+		$version =& $rtDao->getVersion($versionId, $journal->getId());
 
 		if ($version) {
 			$this->setupTemplate(true, $version);
@@ -82,7 +82,7 @@ class RTContextHandler extends RTAdminHandler {
 
 		$journal = Request::getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
-		$version =& $rtDao->getVersion($versionId, $journal->getJournalId());
+		$version =& $rtDao->getVersion($versionId, $journal->getId());
 		$contextId = isset($args[1])?$args[1]:0;
 		$context =& $rtDao->getContext($contextId);
 
@@ -105,7 +105,7 @@ class RTContextHandler extends RTAdminHandler {
 
 		$journal = Request::getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
-		$version =& $rtDao->getVersion($versionId, $journal->getJournalId());
+		$version =& $rtDao->getVersion($versionId, $journal->getId());
 		$contextId = isset($args[1])?$args[1]:0;
 		$context =& $rtDao->getContext($contextId);
 
@@ -123,7 +123,7 @@ class RTContextHandler extends RTAdminHandler {
 
 		$journal = Request::getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
-		$version =& $rtDao->getVersion($versionId, $journal->getJournalId());
+		$version =& $rtDao->getVersion($versionId, $journal->getId());
 		$contextId = isset($args[1])?$args[1]:0;
 		$context =& $rtDao->getContext($contextId);
 
@@ -144,7 +144,7 @@ class RTContextHandler extends RTAdminHandler {
 
 		$journal = Request::getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
-		$version =& $rtDao->getVersion($versionId, $journal->getJournalId());
+		$version =& $rtDao->getVersion($versionId, $journal->getId());
 		$contextId = Request::getUserVar('id');
 		$context =& $rtDao->getContext($contextId);
 

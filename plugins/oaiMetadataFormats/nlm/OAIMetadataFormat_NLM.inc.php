@@ -7,7 +7,7 @@
 /**
  * @file classes/oai/format/OAIMetadataFormat_NLM.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OAIMetadataFormat_NLM
@@ -17,7 +17,7 @@
  * @brief OAI metadata format class -- NLM 2.3
  */
 
-// $Id: OAIMetadataFormat_NLM.inc.php,v 1.1 2009/11/19 14:51:38 asmecher Exp $
+// $Id$
 
 
 class OAIMetadataFormat_NLM extends OAIMetadataFormat {
@@ -35,7 +35,7 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 		$section =& $record->getData('section');
 		$issue =& $record->getData('issue');
 		$galleys =& $record->getData('galleys');
-		$articleId = $article->getArticleId();
+		$articleId = $article->getId();
 
 		// Cache issue ordering information.
 		static $issueId;
@@ -116,7 +116,7 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 		}
 
 		// Include editorships (optimized)
-		$response .= $this->getEditorialInfo($journal->getJournalId());
+		$response .= $this->getEditorialInfo($journal->getId());
 
 		$response .=
 			"\t\t\t</contrib-group>\n" .
@@ -202,7 +202,7 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 		// provide the full-text.
 		import('issue.IssueAction');
 		$subscriptionRequired = IssueAction::subscriptionRequired($issue);
-		$isSubscribedDomain = IssueAction::subscribedDomain($journal, $issue->getIssueId(), $article->getArticleId());
+		$isSubscribedDomain = IssueAction::subscribedDomain($journal, $issue->getIssueId(), $article->getId());
 
 		if (!$subscriptionRequired || $isSubscribedDomain) foreach ($galleys as $galley) {
 			$parser =& SearchFileParser::fromFile($galley);

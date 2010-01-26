@@ -3,7 +3,7 @@
 /**
  * @file DOAJExportDom.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DOAJExportDom
@@ -31,7 +31,7 @@ class DOAJExportDom {
 		// Records node contains all articles, each called a record
 		$records =& XMLCustomWriter::createElement($doc, 'records');
 
-		$pubArticles =& $pubArticleDao->getPublishedArticlesByJournalId($journal->getJournalId());
+		$pubArticles =& $pubArticleDao->getPublishedArticlesByJournalId($journal->getId());
 		while ($pubArticle =& $pubArticles->next()) {
 			$issue =& $issueDao->getIssueById($pubArticle->getIssueId());
 			if(!$issue) continue;
@@ -141,7 +141,7 @@ class DOAJExportDom {
 		}
 
 		/* --- FullText URL --- */
-		$fullTextUrl =& XMLCustomWriter::createChildWithText($doc, $root, 'fullTextUrl', Request::url(null, 'article', 'view', $article->getArticleId()));
+		$fullTextUrl =& XMLCustomWriter::createChildWithText($doc, $root, 'fullTextUrl', Request::url(null, 'article', 'view', $article->getId()));
 		XMLCustomWriter::setAttribute($fullTextUrl, 'format', 'html');
 
 		/* --- Keywords --- */

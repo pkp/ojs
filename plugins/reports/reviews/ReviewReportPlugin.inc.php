@@ -3,7 +3,7 @@
 /**
  * @file ReviewReportPlugin.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  * 
  * @class ReviewReportPlugin
@@ -60,7 +60,7 @@ class ReviewReportPlugin extends ReportPlugin {
 		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_SUBMISSION));
 
 		$reviewReportDao =& DAORegistry::getDAO('ReviewReportDAO');
-		list($commentsIterator, $reviewsIterator) = $reviewReportDao->getReviewReport($journal->getJournalId());
+		list($commentsIterator, $reviewsIterator) = $reviewReportDao->getReviewReport($journal->getId());
 
 		$comments = array();
 		while ($row =& $commentsIterator->next()) {

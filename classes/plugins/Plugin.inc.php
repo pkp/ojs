@@ -3,7 +3,7 @@
 /**
  * @file classes/plugins/Plugin.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Plugin
@@ -94,7 +94,7 @@ class Plugin extends PKPPlugin {
 		if (!$isNewJournal) return false;
 
 		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO');
-		$pluginSettingsDao->installSettings($journal->getJournalId(), $this->getName(), $this->getNewJournalPluginSettingsFile());
+		$pluginSettingsDao->installSettings($journal->getId(), $this->getName(), $this->getNewJournalPluginSettingsFile());
 
 		return false;
 	}

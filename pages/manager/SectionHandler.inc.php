@@ -3,7 +3,7 @@
 /**
  * @file SectionHandler.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SectionHandler
@@ -33,7 +33,7 @@ class SectionHandler extends ManagerHandler {
 		$journal =& Request::getJournal();
 		$rangeInfo =& Handler::getRangeInfo('sections');
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$sections =& $sectionDao->getJournalSections($journal->getJournalId(), $rangeInfo);
+		$sections =& $sectionDao->getJournalSections($journal->getId(), $rangeInfo);
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy', array(array(Request::url(null, 'manager'), 'manager.journalManagement')));
@@ -112,7 +112,7 @@ class SectionHandler extends ManagerHandler {
 			$journal =& Request::getJournal();
 
 			$sectionDao =& DAORegistry::getDAO('SectionDAO');
-			$sectionDao->deleteSectionById($args[0], $journal->getJournalId());
+			$sectionDao->deleteSectionById($args[0], $journal->getId());
 		}
 
 		Request::redirect(null, null, 'sections');
@@ -127,7 +127,7 @@ class SectionHandler extends ManagerHandler {
 		$journal =& Request::getJournal();
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$section =& $sectionDao->getSection(Request::getUserVar('id'), $journal->getJournalId());
+		$section =& $sectionDao->getSection(Request::getUserVar('id'), $journal->getId());
 
 		if ($section != null) {
 			$direction = Request::getUserVar('d');
@@ -150,7 +150,7 @@ class SectionHandler extends ManagerHandler {
 			}
 
 			$sectionDao->updateSection($section);
-			$sectionDao->resequenceSections($journal->getJournalId());
+			$sectionDao->resequenceSections($journal->getId());
 		}
 
 		// Moving up or down with the arrows requires a page reload.

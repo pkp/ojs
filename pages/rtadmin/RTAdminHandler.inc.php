@@ -3,7 +3,7 @@
 /**
  * @file RTAdminHandler.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class RTAdminHandler
@@ -42,7 +42,7 @@ class RTAdminHandler extends Handler {
 			$rtDao =& DAORegistry::getDAO('RTDAO');
 			$rt = $rtDao->getJournalRTByJournal($journal);
 			if (isset($rt)) {
-				$version = $rtDao->getVersion($rt->getVersion(), $journal->getJournalId());
+				$version = $rtDao->getVersion($rt->getVersion(), $journal->getId());
 			}
 
 			// Display the administration menu for this journal.
@@ -65,7 +65,7 @@ class RTAdminHandler extends Handler {
 			$allJournals =& $allJournals->toArray();
 
 			foreach ($allJournals as $journal) {
-				if ($roleDao->roleExists($journal->getJournalId(), $user->getId(), ROLE_ID_JOURNAL_MANAGER)) {
+				if ($roleDao->roleExists($journal->getId(), $user->getId(), ROLE_ID_JOURNAL_MANAGER)) {
 					$journals[] = $journal;
 				}
 			}
@@ -103,7 +103,7 @@ class RTAdminHandler extends Handler {
 		}
 
 		$versionId = isset($args[0])?$args[0]:0;
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 
 		$version = $rtDao->getVersion($versionId, $journalId);
 

@@ -3,7 +3,7 @@
 /**
  * @file IndexHandler.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IndexHandler
@@ -56,7 +56,7 @@ class IndexHandler extends Handler {
 
 			$displayCurrentIssue = $journal->getSetting('displayCurrentIssue');
 			$issueDao =& DAORegistry::getDAO('IssueDAO');
-			$issue =& $issueDao->getCurrentIssue($journal->getJournalId());
+			$issue =& $issueDao->getCurrentIssue($journal->getId());
 			if ($displayCurrentIssue && isset($issue)) {
 				import('pages.issue.IssueHandler');
 				// The current issue TOC/cover page should be displayed below the custom home page.
@@ -72,7 +72,7 @@ class IndexHandler extends Handler {
 				if ($enableAnnouncementsHomepage) {
 					$numAnnouncementsHomepage = $journal->getSetting('numAnnouncementsHomepage');
 					$announcementDao =& DAORegistry::getDAO('AnnouncementDAO');
-					$announcements =& $announcementDao->getNumAnnouncementsNotExpiredByAssocId(ASSOC_TYPE_JOURNAL, $journal->getJournalId(), $numAnnouncementsHomepage);
+					$announcements =& $announcementDao->getNumAnnouncementsNotExpiredByAssocId(ASSOC_TYPE_JOURNAL, $journal->getId(), $numAnnouncementsHomepage);
 					$templateMgr->assign('announcements', $announcements);
 					$templateMgr->assign('enableAnnouncementsHomepage', $enableAnnouncementsHomepage);
 				}

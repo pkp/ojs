@@ -3,7 +3,7 @@
 /**
  * @file FilesHandler.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class FilesHandler
@@ -149,7 +149,7 @@ class FilesHandler extends ManagerHandler {
 
 	function getRealFilesDir($currentDir) {
 		$journal =& Request::getJournal();
-		return Config::getVar('files', 'files_dir') . '/journals/' . $journal->getJournalId() .'/' . $currentDir;
+		return Config::getVar('files', 'files_dir') . '/journals/' . $journal->getId() .'/' . $currentDir;
 	}
 
 	function fileNameFilter($var) {

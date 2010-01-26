@@ -7,7 +7,7 @@
 /**
  * @file classes/submission/layoutEditor/LayoutEditorAction.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class LayoutEditorAction
@@ -35,12 +35,12 @@ class LayoutEditorAction extends Action {
 	 */
 	function orderGalley($article, $galleyId, $direction) {
 		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
-		$galley =& $galleyDao->getGalley($galleyId, $article->getArticleId());
+		$galley =& $galleyDao->getGalley($galleyId, $article->getId());
 
 		if (isset($galley)) {
 			$galley->setSequence($galley->getSequence() + ($direction == 'u' ? -1.5 : 1.5));
 			$galleyDao->updateGalley($galley);
-			$galleyDao->resequenceGalleys($article->getArticleId());
+			$galleyDao->resequenceGalleys($article->getId());
 		}
 	}
 
@@ -53,15 +53,15 @@ class LayoutEditorAction extends Action {
 		import('file.ArticleFileManager');
 
 		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
-		$galley =& $galleyDao->getGalley($galleyId, $article->getArticleId());
+		$galley =& $galleyDao->getGalley($galleyId, $article->getId());
 
 		if (isset($galley) && !HookRegistry::call('LayoutEditorAction::deleteGalley', array(&$article, &$galley))) {
-			$articleFileManager = new ArticleFileManager($article->getArticleId());
+			$articleFileManager = new ArticleFileManager($article->getId());
 
 			if ($galley->getFileId()) {
 				$articleFileManager->deleteFile($galley->getFileId());
 				import('search.ArticleSearchIndex');
-				ArticleSearchIndex::deleteTextIndex($article->getArticleId(), ARTICLE_SEARCH_GALLEY_FILE, $galley->getFileId());
+				ArticleSearchIndex::deleteTextIndex($article->getId(), ARTICLE_SEARCH_GALLEY_FILE, $galley->getFileId());
 			}
 			if ($galley->isHTMLGalley()) {
 				if ($galley->getStyleFileId()) {
@@ -105,12 +105,12 @@ class LayoutEditorAction extends Action {
 	 */
 	function orderSuppFile($article, $suppFileId, $direction) {
 		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
-		$suppFile =& $suppFileDao->getSuppFile($suppFileId, $article->getArticleId());
+		$suppFile =& $suppFileDao->getSuppFile($suppFileId, $article->getId());
 
 		if (isset($suppFile)) {
 			$suppFile->setSequence($suppFile->getSequence() + ($direction == 'u' ? -1.5 : 1.5));
 			$suppFileDao->updateSuppFile($suppFile);
-			$suppFileDao->resequenceSuppFiles($article->getArticleId());
+			$suppFileDao->resequenceSuppFiles($article->getId());
 		}
 	}
 
@@ -124,13 +124,13 @@ class LayoutEditorAction extends Action {
 
 		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
 
-		$suppFile =& $suppFileDao->getSuppFile($suppFileId, $article->getArticleId());
+		$suppFile =& $suppFileDao->getSuppFile($suppFileId, $article->getId());
 		if (isset($suppFile) && !HookRegistry::call('LayoutEditorAction::deleteSuppFile', array(&$article, &$suppFile))) {
 			if ($suppFile->getFileId()) {
-				$articleFileManager = new ArticleFileManager($article->getArticleId());
+				$articleFileManager = new ArticleFileManager($article->getId());
 				$articleFileManager->deleteFile($suppFile->getFileId());
 				import('search.ArticleSearchIndex');
-				ArticleSearchIndex::deleteTextIndex($article->getArticleId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $suppFile->getFileId());
+				ArticleSearchIndex::deleteTextIndex($article->getId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $suppFile->getFileId());
 			}
 			$suppFileDao->deleteSuppFile($suppFile);
 		}
@@ -259,7 +259,7 @@ class LayoutEditorAction extends Action {
 				import('notification.Notification');
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
 				foreach ($notificationUsers as $userRole) {
-					$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getArticleId(), null, 'layout');
+					$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'layout');
 					Notification::createNotification($userRole['id'], "notification.type.layoutComment",
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_LAYOUT_COMMENT);
 				}
@@ -308,7 +308,7 @@ class LayoutEditorAction extends Action {
 				import('notification.Notification');
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
 				foreach ($notificationUsers as $userRole) {
-					$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getArticleId(), null, 'proofread');
+					$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'proofread');
 					Notification::createNotification($userRole['id'], "notification.type.proofreadComment",
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_PROOFREAD_COMMENT);
 				}
@@ -344,19 +344,19 @@ class LayoutEditorAction extends Action {
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 		$suppDao =& DAORegistry::getDAO('SuppFileDAO');
 
-		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $article->getId());
 		if ($layoutSignoff->getFileId() == $fileId) {
 			$canDownload = true;
-		} else if($galleyDao->galleyExistsByFileId($article->getArticleId(), $fileId)) {
+		} else if($galleyDao->galleyExistsByFileId($article->getId(), $fileId)) {
 			$canDownload = true;
-		} else if($suppDao->suppFileExistsByFileId($article->getArticleId(), $fileId)) {
+		} else if($suppDao->suppFileExistsByFileId($article->getId(), $fileId)) {
 			$canDownload = true;
 		}
 
 		$result = false;
 		if (!HookRegistry::call('LayoutEditorAction::downloadFile', array(&$article, &$fileId, &$revision, &$canDownload, &$result))) {
 			if ($canDownload) {
-				return parent::downloadFile($article->getArticleId(), $fileId, $revision);
+				return parent::downloadFile($article->getId(), $fileId, $revision);
 			} else {
 				return false;
 			}

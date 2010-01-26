@@ -3,7 +3,7 @@
 /**
  * @file pages/admin/AdminLanguagesHandler.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AdminLanguagesHandler
@@ -196,7 +196,7 @@ class AdminLanguagesHandler extends AdminHandler {
 
 			if (is_array($supportedLocales)) {
 				$supportedLocales = array_intersect($supportedLocales, $siteSupportedLocales);
-				$settingsDao->updateSetting($journal->getJournalId(), 'supportedLocales', $supportedLocales, 'object');
+				$settingsDao->updateSetting($journal->getId(), 'supportedLocales', $supportedLocales, 'object');
 			}
 		}
 	}

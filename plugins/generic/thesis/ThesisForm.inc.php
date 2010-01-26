@@ -3,7 +3,7 @@
 /**
  * @file ThesisForm.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ThesisForm
@@ -188,7 +188,7 @@ class ThesisForm extends Form {
 
 		$thesisDao =& DAORegistry::getDAO('ThesisDAO');
 		$journal =& Request::getJournal();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 
 		if (isset($this->thesisId)) {
 			$thesis =& $thesisDao->getThesis($this->thesisId);

@@ -3,7 +3,7 @@
 /**
  * @file classes/article/ArticleHTMLGalley.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleHTMLGalley
@@ -180,7 +180,7 @@ class ArticleHTMLGalley extends ArticleGalley {
 					$journal =& Request::getJournal();
 					import ('file.PublicFileManager');
 					$publicFileManager = new PublicFileManager();
-					$url = Request::getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/' . implode('/', $urlParts) . ($anchor?'#' . $anchor:'');
+					$url = Request::getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getId()) . '/' . implode('/', $urlParts) . ($anchor?'#' . $anchor:'');
 				break;
 		}
 		return $matchArray[1] . $url . $matchArray[3];

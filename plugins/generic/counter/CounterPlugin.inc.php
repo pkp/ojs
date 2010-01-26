@@ -3,7 +3,7 @@
 /**
  * @file CounterPlugin.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CounterPlugin
@@ -88,7 +88,7 @@ class CounterPlugin extends GenericPlugin {
 		if (!$journal || Request::getRequestedPage() != 'article' || Request::getRequestedOp() != 'view') return false;
 		
 		$counterReportDao =& DAORegistry::getDAO('CounterReportDAO');
-		$counterReportDao->incrementCount($journal->getJournalId(), (int) strftime('%Y'), ((int) strftime('%m')) - 1, false, false);
+		$counterReportDao->incrementCount($journal->getId(), (int) strftime('%Y'), ((int) strftime('%m')) - 1, false, false);
 	}
 
 	/**

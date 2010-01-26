@@ -3,7 +3,7 @@
 /**
  * @file classes/submission/form/MetadataForm.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class MetadataForm
@@ -48,7 +48,7 @@ class MetadataForm extends Form {
 			$this->isEditor = true;
 		}
 
-		$copyeditInitialSignoff = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$copyeditInitialSignoff = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $article->getId());
 		// If the user is an author and the article hasn't passed the Copyediting stage, make the form editable.
 		if ($roleId == ROLE_ID_AUTHOR) {
 			if ($article->getStatus() != STATUS_PUBLISHED && ($copyeditInitialSignoff == null || $copyeditInitialSignoff->getDateCompleted() == null)) {
@@ -59,7 +59,7 @@ class MetadataForm extends Form {
 		// Copy editors are also allowed to edit metadata, but only if they have
 		// a current assignment to the article.
 		if ($roleId != null && ($roleId == ROLE_ID_COPYEDITOR)) {
-			$copyeditFinalSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $article->getArticleId());			
+			$copyeditFinalSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $article->getId());			
 			if ($copyeditFinalSignoff != null && $article->getStatus() != STATUS_PUBLISHED) {
 				if ($copyeditInitialSignoff->getDateNotified() != null && $copyeditFinalSignoff->getDateCompleted() == null) {
 					$this->canEdit = true;
@@ -168,7 +168,7 @@ class MetadataForm extends Form {
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', isset($this->article)?$this->article->getArticleId():null);
-		$templateMgr->assign('journalSettings', $settingsDao->getJournalSettings($journal->getJournalId()));
+		$templateMgr->assign('journalSettings', $settingsDao->getJournalSettings($journal->getId()));
 		$templateMgr->assign('rolePath', Request::getRequestedPage());
 		$templateMgr->assign('canViewAuthors', $this->canViewAuthors);
 
@@ -260,12 +260,12 @@ class MetadataForm extends Form {
 			$journal = Request::getJournal();
 			$originalFileName = $publicFileManager->getUploadedFileName('coverPage');
 			$newFileName = 'cover_article_' . $this->getData('articleId') . '_' . $this->getFormLocale() . '.' . $publicFileManager->getExtension($originalFileName);
-			$publicFileManager->uploadJournalFile($journal->getJournalId(), 'coverPage', $newFileName);
+			$publicFileManager->uploadJournalFile($journal->getId(), 'coverPage', $newFileName);
 			$article->setOriginalFileName($publicFileManager->truncateFileName($originalFileName, 127), $this->getFormLocale());
 			$article->setFileName($newFileName, $this->getFormLocale());
 
 			// Store the image dimensions.
-			list($width, $height) = getimagesize($publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/' . $newFileName);
+			list($width, $height) = getimagesize($publicFileManager->getJournalFilesPath($journal->getId()) . '/' . $newFileName);
 			$article->setWidth($width, $this->getFormLocale());
 			$article->setHeight($height, $this->getFormLocale());
 		}
@@ -357,7 +357,7 @@ class MetadataForm extends Form {
 		import('search.ArticleSearchIndex');
 		ArticleSearchIndex::indexArticleMetadata($article);
 
-		return $article->getArticleId();
+		return $article->getId();
 	}
 
 	/**

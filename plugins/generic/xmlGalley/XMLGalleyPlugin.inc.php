@@ -3,7 +3,7 @@
 /**
  * @file XMLGalleyPlugin.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class XMLGalleyPlugin
@@ -96,7 +96,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 		$journal =& Request::getJournal();
 
 		if (get_class($galley) == 'ArticleXMLGalley' && $galley->isPdfGalley() && 
-			$this->getSetting($journal->getJournalId(), 'nlmPDF') == 1) {
+			$this->getSetting($journal->getId(), 'nlmPDF') == 1) {
 			return $galley->viewFileContents();
 		} else return false;
 	}
@@ -164,7 +164,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 	function getEnabled() {
 		$journal =& Request::getJournal();
 		if (!$journal) return false;
-		return $this->getSetting($journal->getJournalId(), 'enabled');
+		return $this->getSetting($journal->getId(), 'enabled');
 	}
 
 	/**
@@ -173,28 +173,28 @@ class XMLGalleyPlugin extends GenericPlugin {
 	function setEnabled($enabled) {
 		$journal =& Request::getJournal();
 		if ($journal) {
-			$this->updateSetting($journal->getJournalId(), 'enabled', $enabled ? true : false);
+			$this->updateSetting($journal->getId(), 'enabled', $enabled ? true : false);
 
 			// set default XSLT renderer
-			if ($this->getSetting($journal->getJournalId(), 'XSLTrenderer') == "") {
+			if ($this->getSetting($journal->getId(), 'XSLTrenderer') == "") {
 
 				// Determine the appropriate XSLT processor for the system
 				if ( version_compare(PHP_VERSION,'5','>=') && extension_loaded('xsl') && extension_loaded('dom') ) {
 					// PHP5.x with XSL/DOM modules
-					$this->updateSetting($journal->getJournalId(), 'XSLTrenderer', 'PHP5');
+					$this->updateSetting($journal->getId(), 'XSLTrenderer', 'PHP5');
 
 				} elseif ( version_compare(PHP_VERSION,'5','<') && extension_loaded('xslt') ) {
 					// PHP4.x with XSLT module
-					$this->updateSetting($journal->getJournalId(), 'XSLTrenderer', 'PHP4');
+					$this->updateSetting($journal->getId(), 'XSLTrenderer', 'PHP4');
 
 				} else {
-					$this->updateSetting($journal->getJournalId(), 'XSLTrenderer', 'external');
+					$this->updateSetting($journal->getId(), 'XSLTrenderer', 'external');
 				}
 			}
 
 			// set default XSL stylesheet to NLM
-			if ($this->getSetting($journal->getJournalId(), 'XSLstylesheet') == "") {
-				$this->updateSetting($journal->getJournalId(), 'XSLstylesheet', 'NLM');
+			if ($this->getSetting($journal->getId(), 'XSLstylesheet') == "") {
+				$this->updateSetting($journal->getId(), 'XSLstylesheet', 'NLM');
 			}
 
 			return true;
@@ -216,16 +216,16 @@ class XMLGalleyPlugin extends GenericPlugin {
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 
 		$this->import('XMLGalleySettingsForm');
-		$form = new XMLGalleySettingsForm($this, $journal->getJournalId());
+		$form = new XMLGalleySettingsForm($this, $journal->getId());
 
 		switch ($verb) {
 			case 'test':
 				// test external XSLT renderer
-				$xsltRenderer = $this->getSetting($journal->getJournalId(), 'XSLTrenderer');
+				$xsltRenderer = $this->getSetting($journal->getId(), 'XSLTrenderer');
 
 				if ($xsltRenderer == "external") {
 					// get command for external XSLT tool
-					$xsltCommand = $this->getSetting($journal->getJournalId(), 'externalXSLT');
+					$xsltCommand = $this->getSetting($journal->getId(), 'externalXSLT');
 
 					// get test XML/XSL files
 					$xmlFile = dirname($_SERVER['SCRIPT_FILENAME']) . DIRECTORY_SEPARATOR . $this->getPluginPath() . '/transform/test.xml';
@@ -275,7 +275,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 							&& $extension == 'xsl') {
 
 							// if there is an existing XSL file, delete it from the journal files folder
-							$existingFile = $this->getSetting($journal->getJournalId(), 'customXSL');
+							$existingFile = $this->getSetting($journal->getId(), 'customXSL');
 							if (!empty($existingFile) && $fileManager->fileExists($fileManager->filesDir . $existingFile)) {
 								$fileManager->deleteFile($existingFile);
 							}
@@ -284,8 +284,8 @@ class XMLGalleyPlugin extends GenericPlugin {
 							$fileManager->uploadFile('customXSL', $fileName);
 
 							// update the plugin and form settings
-							$this->updateSetting($journal->getJournalId(), 'XSLstylesheet', 'custom');
-							$this->updateSetting($journal->getJournalId(), 'customXSL', $fileName);
+							$this->updateSetting($journal->getId(), 'XSLstylesheet', 'custom');
+							$this->updateSetting($journal->getId(), 'customXSL', $fileName);
 
 						} else $form->addError('content', Locale::translate('plugins.generic.xmlGalley.settings.customXSLInvalid'));
 
@@ -304,12 +304,12 @@ class XMLGalleyPlugin extends GenericPlugin {
 					$fileManager = new JournalFileManager($journal);
 
 					// delete the file from the journal files folder
-					$fileName = $this->getSetting($journal->getJournalId(), 'customXSL');
+					$fileName = $this->getSetting($journal->getId(), 'customXSL');
 					if (!empty($fileName)) $fileManager->deleteFile($fileName);
 
 					// update the plugin and form settings
-					$this->updateSetting($journal->getJournalId(), 'XSLstylesheet', 'NLM');
-					$this->updateSetting($journal->getJournalId(), 'customXSL', '');
+					$this->updateSetting($journal->getId(), 'XSLstylesheet', 'NLM');
+					$this->updateSetting($journal->getId(), 'customXSL', '');
 
 
 					$form->initData();

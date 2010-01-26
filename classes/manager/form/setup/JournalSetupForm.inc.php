@@ -7,7 +7,7 @@
 /**
  * @file classes/manager/form/setup/JournalSetupForm.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class JournalSetupForm
@@ -75,7 +75,7 @@ class JournalSetupForm extends Form {
 			if (isset($this->settings[$name])) {
 				$isLocalized = in_array($name, $this->getLocaleFieldNames());
 				$settingsDao->updateSetting(
-					$journal->getJournalId(),
+					$journal->getId(),
 					$name,
 					$value,
 					$this->settings[$name],

@@ -7,7 +7,7 @@
 /**
  * @file classes/submission/proofreader/ProofreaderAction.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ProofreaderAction
@@ -27,7 +27,7 @@ class ProofreaderAction extends Action {
 	 */
 	function selectProofreader($userId, $article) {
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$proofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$proofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $article->getId());
 
 		if (!HookRegistry::call('ProofreaderAction::selectProofreader', array(&$userId, &$article))) {
 			$proofSignoff->setUserId($userId);
@@ -40,7 +40,7 @@ class ProofreaderAction extends Action {
 			if (!isset($proofreader)) return;
 			import('article.log.ArticleLog');
 			import('article.log.ArticleEventLogEntry');
-			ArticleLog::logEvent($article->getArticleId(), ARTICLE_LOG_PROOFREAD_ASSIGN, ARTICLE_LOG_TYPE_PROOFREAD, $user->getId(), 'log.proofread.assign', Array('assignerName' => $user->getFullName(), 'proofreaderName' => $proofreader->getFullName(), 'articleId' => $article->getArticleId()));
+			ArticleLog::logEvent($article->getId(), ARTICLE_LOG_PROOFREAD_ASSIGN, ARTICLE_LOG_TYPE_PROOFREAD, $user->getId(), 'log.proofread.assign', Array('assignerName' => $user->getFullName(), 'proofreaderName' => $proofreader->getFullName(), 'articleId' => $article->getId()));
 		}
 	}
 
@@ -205,12 +205,16 @@ class ProofreaderAction extends Action {
 
 				$editAssignments =& $sectionEditorSubmission->getEditAssignments();
 
-				$receiver = $sectionEditorSubmission->getUserBySignoffType($signoffType);
+				$receiver = null;
 
 				$editorAdded = false;
 				foreach ($editAssignments as $editAssignment) {
 					if ($editAssignment->getIsEditor() || $editAssignment->getCanEdit()) {
-						$ccs[$editAssignment->getEditorEmail()] = $editAssignment->getEditorFullName();
+						if ($receiver === null) {
+							$receiver =& $userDao->getUser($editAssignment->getEditorId());
+						} else {
+							$ccs[$editAssignment->getEditorEmail()] = $editAssignment->getEditorFullName();
+						}
 						$editorAdded = true;
 					}
 				}
@@ -454,7 +458,7 @@ class ProofreaderAction extends Action {
 				import('notification.Notification');
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
 				foreach ($notificationUsers as $userRole) {
-					$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getArticleId(), null, 'proofread');
+					$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'proofread');
 					Notification::createNotification($userRole['id'], "notification.type.proofreadComment",
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_PROOFREAD_COMMENT);
 				}
@@ -504,7 +508,7 @@ class ProofreaderAction extends Action {
 				import('notification.Notification');
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
 				foreach ($notificationUsers as $userRole) {
-					$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getArticleId(), null, 'layout');
+					$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'layout');
 					Notification::createNotification($userRole['id'], "notification.type.layoutComment",
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_LAYOUT_COMMENT);
 				}

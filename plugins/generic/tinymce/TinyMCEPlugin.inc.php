@@ -3,7 +3,7 @@
 /**
  * @file plugins/generic/tinymce/TinyMCEPlugin.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class TinyMCEPlugin
@@ -414,7 +414,7 @@ class TinyMCEPlugin extends GenericPlugin {
 	 */
 	function getEnabled() {
 		$journal =& Request::getJournal();
-		$journalId = $journal?$journal->getJournalId():0;
+		$journalId = $journal?$journal->getId():0;
 		return $this->getSetting($journalId, 'enabled');
 	}
 
@@ -440,7 +440,7 @@ class TinyMCEPlugin extends GenericPlugin {
  	 */
 	function manage($verb, $args, &$message) {
 		$journal =& Request::getJournal();
-		$journalId = $journal?$journal->getJournalId():0;
+		$journalId = $journal?$journal->getId():0;
 		switch ($verb) {
 			case 'enable':
 				$this->updateSetting($journalId, 'enabled', true);

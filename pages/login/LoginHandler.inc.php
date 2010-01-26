@@ -3,7 +3,7 @@
 /**
  * @file LoginHandler.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class LoginHandler
@@ -30,7 +30,7 @@ class LoginHandler extends PKPLoginHandler {
 			$userId = (int)$args[0];
 			$journal =& Request::getJournal();
 
-			if (!Validation::canAdminister($journal->getJournalId(), $userId)) {
+			if (!Validation::canAdminister($journal->getId(), $userId)) {
 				// We don't have administrative rights
 				// over this user. Display an error.
 				$templateMgr =& TemplateManager::getManager();

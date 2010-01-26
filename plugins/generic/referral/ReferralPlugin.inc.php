@@ -3,7 +3,7 @@
 /**
  * @file plugins/generic/referral/ReferralPlugin.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ReferralPlugin
@@ -86,7 +86,7 @@ class ReferralPlugin extends GenericPlugin {
 			case 'article/comments.tpl':
 				$referralDao =& DAORegistry::getDAO('ReferralDAO');
 				$article = $templateMgr->get_template_vars('article');
-				$referrals =& $referralDao->getPublishedReferralsForArticle($article->getArticleId());
+				$referrals =& $referralDao->getPublishedReferralsForArticle($article->getId());
 			
 				$templateMgr->assign('referrals', $referrals);
 				$templateMgr->display($this->getTemplatePath() . 'readerReferrals.tpl', 'text/html', 'ReferralPlugin::addReaderReferralContent');
@@ -123,7 +123,7 @@ class ReferralPlugin extends GenericPlugin {
 	function logArticleRequest(&$templateMgr) {
 		$article = $templateMgr->get_template_vars('article');
 		if (!$article) return false;
-		$articleId = $article->getArticleId();
+		$articleId = $article->getId();
 
 		$referrer = isset($_SERVER['HTTP_REFERER'])?$_SERVER['HTTP_REFERER']:null;
 
@@ -133,11 +133,11 @@ class ReferralPlugin extends GenericPlugin {
 		$referralDao =& DAORegistry::getDAO('ReferralDAO');
 		if ($referralDao->referralExistsByUrl($articleId, $referrer)) {
 			// It exists -- increment the count
-			$referralDao->incrementReferralCount($article->getArticleId(), $referrer);
+			$referralDao->incrementReferralCount($article->getId(), $referrer);
 		} else {
 			// It's a new referral -- log it.
 			$referral = new Referral();
-			$referral->setArticleId($article->getArticleId());
+			$referral->setArticleId($article->getId());
 			$referral->setLinkCount(1);
 			$referral->setUrl($referrer);
 			$referral->setStatus(REFERRAL_STATUS_NEW);
@@ -192,7 +192,7 @@ class ReferralPlugin extends GenericPlugin {
 	 */
 	function getEnabled() {
 		$journal =& Request::getJournal();
-		$journalId = $journal?$journal->getJournalId():0;
+		$journalId = $journal?$journal->getId():0;
 		return $this->getSetting($journalId, 'enabled');
 	}
 
@@ -218,7 +218,7 @@ class ReferralPlugin extends GenericPlugin {
  	 */
 	function manage($verb, $args, &$message) {
 		$journal =& Request::getJournal();
-		$journalId = $journal?$journal->getJournalId():0;
+		$journalId = $journal?$journal->getId():0;
 		switch ($verb) {
 			case 'enable':
 				$this->updateSetting($journalId, 'enabled', true);

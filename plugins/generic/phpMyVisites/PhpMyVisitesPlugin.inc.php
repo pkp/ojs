@@ -3,7 +3,7 @@
 /**
  * @file PhpMyVisitesPlugin.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PhpMyVisitesPlugin
@@ -143,7 +143,7 @@ class PhpMyVisitesPlugin extends GenericPlugin {
 	function getEnabled() {
 		$journal =& Request::getJournal();
 		if (!$journal) return false;
-		return $this->getSetting($journal->getJournalId(), 'enabled');
+		return $this->getSetting($journal->getId(), 'enabled');
 	}
 
 	/**
@@ -152,7 +152,7 @@ class PhpMyVisitesPlugin extends GenericPlugin {
 	function setEnabled($enabled) {
 		$journal =& Request::getJournal();
 		if ($journal) {
-			$this->updateSetting($journal->getJournalId(), 'enabled', $enabled ? true : false);
+			$this->updateSetting($journal->getId(), 'enabled', $enabled ? true : false);
 			return true;
 		}
 		return false;
@@ -170,7 +170,7 @@ class PhpMyVisitesPlugin extends GenericPlugin {
 
 			if (!empty($currentJournal)) {
 				$journal =& Request::getJournal();
-				$journalId = $journal->getJournalId();
+				$journalId = $journal->getId();
 				$phpmvSiteId = $this->getSetting($journalId, 'phpmvSiteId');
 				$phpmvUrl = $this->getSetting($journalId, 'phpmvUrl');
 
@@ -212,7 +212,7 @@ class PhpMyVisitesPlugin extends GenericPlugin {
 				if ($this->getEnabled()) {
 					Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON,  LOCALE_COMPONENT_PKP_MANAGER));
 					$this->import('PhpMyVisitesSettingsForm');
-					$form = new PhpMyVisitesSettingsForm($this, $journal->getJournalId());
+					$form = new PhpMyVisitesSettingsForm($this, $journal->getId());
 					if (Request::getUserVar('save')) {
 						$form->readInputData();
 						if ($form->validate()) {
