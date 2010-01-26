@@ -306,7 +306,7 @@ class Journal extends DataObject {
 	 */
 	function &getSettings() {
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-		$settings =& $journalSettingsDao->getJournalSettings($this->getData('journalId'));
+		$settings =& $journalSettingsDao->getJournalSettings($this->getId());
 		return $settings;
 	}
 
@@ -327,7 +327,7 @@ class Journal extends DataObject {
 	 */
 	function &getSetting($name, $locale = null) {
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-		$setting =& $journalSettingsDao->getSetting($this->getData('journalId'), $name, $locale);
+		$setting =& $journalSettingsDao->getSetting($this->getId(), $name, $locale);
 		return $setting;
 	}
 
