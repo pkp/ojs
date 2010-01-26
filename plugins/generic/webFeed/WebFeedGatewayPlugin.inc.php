@@ -126,7 +126,7 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 		if ($displayItems == 'recent' && $recentItems > 0) {
 			import('db.DBResultRange');
 			$rangeInfo = new DBResultRange($recentItems, 1);
-			$publishedArticleObjects =& $publishedArticleDao->getPublishedArticlesByJournalId($journal->getId(), $rangeInfo);
+			$publishedArticleObjects =& $publishedArticleDao->getPublishedArticlesByJournalId($journal->getId(), $rangeInfo, null, true);
 			while ($publishedArticle =& $publishedArticleObjects->next()) {
 				$publishedArticles[]['articles'][] =& $publishedArticle;
 				unset($publishedArticle);
