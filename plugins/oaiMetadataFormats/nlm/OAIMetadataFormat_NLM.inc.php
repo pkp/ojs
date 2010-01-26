@@ -155,7 +155,7 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 
 		// Include galley links
 		foreach ($article->getGalleys() as $galley) {
-			$response .= "\t\t\t<self-uri content-type=\"" . htmlspecialchars(Core::cleanVar($galley->getFileType())) . "\" xlink:href=\"" . htmlspecialchars(Core::cleanVar(Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId(), $galley->getGalleyId())))) . "\" />\n";
+			$response .= "\t\t\t<self-uri content-type=\"" . htmlspecialchars(Core::cleanVar($galley->getFileType())) . "\" xlink:href=\"" . htmlspecialchars(Core::cleanVar(Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId(), $galley->getId())))) . "\" />\n";
 		}
 
 		// Include abstract(s)

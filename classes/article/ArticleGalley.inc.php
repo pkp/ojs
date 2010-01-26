@@ -68,7 +68,8 @@ class ArticleGalley extends ArticleFile {
 	 * @return int
 	 */
 	function getGalleyId() {
-		return $this->getData('galleyId');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
+		return $this->getId();
 	}
 
 	/**
@@ -76,7 +77,8 @@ class ArticleGalley extends ArticleFile {
 	 * @param $galleyId int
 	 */
 	function setGalleyId($galleyId) {
-		return $this->setData('galleyId', $galleyId);
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
+		return $this->setId($galleyId);
 	}
 
 	/**
@@ -188,7 +190,7 @@ class ArticleGalley extends ArticleFile {
 			$publicGalleyId = $this->getPublicGalleyId();
 			if (!empty($publicGalleyId)) return $publicGalleyId;
 		}
-		return $this->getGalleyId();
+		return $this->getId();
 	}
 }
 

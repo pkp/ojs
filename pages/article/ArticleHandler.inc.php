@@ -262,7 +262,7 @@ class ArticleHandler extends Handler {
 		} else {
 			if (!$request->isBot()) {
 				// Increment the galley's views count
-				$galleyDao->incrementViews($galley->getGalleyId());
+				$galleyDao->incrementViews($galley->getId());
 			}
 
 			// Use the article's CSS file, if set.
@@ -418,7 +418,7 @@ class ArticleHandler extends Handler {
 		if (!$galley) $request->redirect(null, null, 'view', $articleId);
 
 		if (!$fileId) {
-			$galleyDao->incrementViews($galley->getGalleyId());
+			$galleyDao->incrementViews($galley->getId());
 			$fileId = $galley->getFileId();
 		} else {
 			if (!$galley->isDependentFile($fileId)) {
@@ -451,7 +451,7 @@ class ArticleHandler extends Handler {
 		} else {
 			$galley =& $galleyDao->getGalley($galleyId, $article->getId());
 		}
-		if ($galley) $galleyDao->incrementViews($galley->getGalleyId());
+		if ($galley) $galleyDao->incrementViews($galley->getId());
 
 		if ($article && $galley && !HookRegistry::call('$this->downloadFile', array(&$article, &$galley))) {
 			import('file.ArticleFileManager');

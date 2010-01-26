@@ -108,7 +108,7 @@ class SitemapHandler extends Handler {
 				// Galley files
 				$galleys = $galleyDao->getGalleysByArticle($article->getId());
 				foreach ($galleys as $galley) {
-					XMLCustomWriter::appendChild($root, SitemapHandler::createUrlTree($doc, Request::url($journal->getPath(), 'article', 'view', array($article->getId(), $galley->getGalleyId()))));
+					XMLCustomWriter::appendChild($root, SitemapHandler::createUrlTree($doc, Request::url($journal->getPath(), 'article', 'view', array($article->getId(), $galley->getId()))));
 				}
 			}
 			unset($issue);

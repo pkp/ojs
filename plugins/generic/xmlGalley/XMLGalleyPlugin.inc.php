@@ -132,7 +132,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 		$articleXMLGalley = new ArticleXMLGalley();
 
 		// Create XML Galley with previous values
-		$articleXMLGalley->setGalleyId($galley->getGalleyId());
+		$articleXMLGalley->setGalleyId($galley->getId());
 		$articleXMLGalley->setArticleId($galley->getArticleId());
 		$articleXMLGalley->setFileId($galley->getFileId());
 		$articleXMLGalley->setLabel($galley->getLabel());

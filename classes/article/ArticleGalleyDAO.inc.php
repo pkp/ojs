@@ -183,7 +183,7 @@ class ArticleGalleyDAO extends DAO {
 		} else {
 			$galley = new ArticleGalley();
 		}
-		$galley->setGalleyId($row['galley_id']);
+		$galley->setId($row['galley_id']);
 		$galley->setPublicGalleyId($row['public_galley_id']);
 		$galley->setArticleId($row['article_id']);
 		$galley->setLocale($row['locale']);
@@ -227,11 +227,11 @@ class ArticleGalleyDAO extends DAO {
 				$galley->getSequence() == null ? $this->getNextGalleySequence($galley->getArticleId()) : $galley->getSequence()
 			)
 		);
-		$galley->setGalleyId($this->getInsertGalleyId());
+		$galley->setId($this->getInsertGalleyId());
 
-		HookRegistry::call('ArticleGalleyDAO::insertNewGalley', array(&$galley, $galley->getGalleyId()));
+		HookRegistry::call('ArticleGalleyDAO::insertNewGalley', array(&$galley, $galley->getId()));
 
-		return $galley->getGalleyId();
+		return $galley->getId();
 	}
 
 	/**
@@ -258,7 +258,7 @@ class ArticleGalleyDAO extends DAO {
 				(int)$galley->isHTMLGalley(),
 				$galley->isHTMLGalley() ? $galley->getStyleFileId() : null,
 				$galley->getSequence(),
-				$galley->getGalleyId()
+				$galley->getId()
 			)
 		);
 	}
@@ -268,7 +268,7 @@ class ArticleGalleyDAO extends DAO {
 	 * @param $galley ArticleGalley
 	 */
 	function deleteGalley(&$galley) {
-		return $this->deleteGalleyById($galley->getGalleyId());
+		return $this->deleteGalleyById($galley->getId());
 	}
 
 	/**
@@ -302,7 +302,7 @@ class ArticleGalleyDAO extends DAO {
 	function deleteGalleysByArticle($articleId) {
 		$galleys =& $this->getGalleysByArticle($articleId);
 		foreach ($galleys as $galley) {
-			$this->deleteGalleyById($galley->getGalleyId(), $articleId);
+			$this->deleteGalleyById($galley->getId(), $articleId);
 		}
 	}
 

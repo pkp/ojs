@@ -1055,7 +1055,7 @@ class NativeImportDom {
 				$galley->setStyleFileId($fileId);
 				$articleGalleyDao->updateGalley($galley);
 			} else {
-				$articleGalleyDao->insertGalleyImage($galley->getGalleyId(), $fileId);
+				$articleGalleyDao->insertGalleyImage($galley->getId(), $fileId);
 			}
 		}
 		return true;

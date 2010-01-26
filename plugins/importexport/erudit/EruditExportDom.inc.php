@@ -22,7 +22,7 @@ class EruditExportDom {
 		$unavailableString = Locale::translate('plugins.importexport.erudit.unavailable');
 
 		$root =& XMLCustomWriter::createElement($doc, 'article');
-		XMLCustomWriter::setAttribute($root, 'idprop', $journal->getId() . '-' . $issue->getIssueId() . '-' . $article->getId() . '-' . $galley->getGalleyId(), false);
+		XMLCustomWriter::setAttribute($root, 'idprop', $journal->getId() . '-' . $issue->getIssueId() . '-' . $article->getId() . '-' . $galley->getId(), false);
 		XMLCustomWriter::setAttribute($root, 'arttype', 'article');
 
 		$lang = $article->getLanguage();
@@ -40,7 +40,7 @@ class EruditExportDom {
 		XMLCustomWriter::appendChild($adminNode, $articleInfoNode);
 
 		// The first public ID should be a full URL to the article.
-		$urlIdNode =& XMLCustomWriter::createChildWithText($doc, $articleInfoNode, 'idpublic', Request::url($journal->getPath(), 'article', 'view', array($article->getId(), $galley->getGalleyId())));
+		$urlIdNode =& XMLCustomWriter::createChildWithText($doc, $articleInfoNode, 'idpublic', Request::url($journal->getPath(), 'article', 'view', array($article->getId(), $galley->getId())));
 		XMLCustomWriter::setAttribute($urlIdNode, 'scheme', 'sici');
 
 		/* --- journal --- */
@@ -125,7 +125,7 @@ class EruditExportDom {
 		foreach ($article->getAuthors() as $author) {
 			$authorNode =& XMLCustomWriter::createElement($doc, 'author');
 			XMLCustomWriter::appendChild($authorGroupNode, $authorNode);
-			XMLCustomWriter::setAttribute($authorNode, 'id', 'ojs-' . $journal->getId() . '-' . $issue->getIssueId() . '-' . $article->getId() . '-' . $galley->getGalleyId() . '-' . $authorNum);
+			XMLCustomWriter::setAttribute($authorNode, 'id', 'ojs-' . $journal->getId() . '-' . $issue->getIssueId() . '-' . $article->getId() . '-' . $galley->getId() . '-' . $authorNum);
 
 			$persNameNode =& XMLCustomWriter::createElement($doc, 'persname');
 			XMLCustomWriter::appendChild($authorNode, $persNameNode);

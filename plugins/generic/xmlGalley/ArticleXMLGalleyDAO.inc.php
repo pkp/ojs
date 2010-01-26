@@ -85,7 +85,7 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 					'SELECT xml_galley_id
 					FROM article_xml_galleys x
 					WHERE x.galley_id = ? AND x.article_id = ? ORDER BY xml_galley_id',
-					array($galley->getGalleyId(), $articleId)
+					array($galley->getId(), $articleId)
 				);
 
 				$xmlGalleyPlugin =& PluginRegistry::getPlugin('generic', 'XMLGalleyPlugin');
