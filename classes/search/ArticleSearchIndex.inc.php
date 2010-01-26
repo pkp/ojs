@@ -50,10 +50,10 @@ class ArticleSearchIndex {
 	 * @param $assocId int optional
 	 */
 	function updateTextIndex($articleId, $type, $text, $assocId = null) {
-			$searchDao =& DAORegistry::getDAO('ArticleSearchDAO');
-			$objectId = $searchDao->insertObject($articleId, $type, $assocId);
-			$position = 0;
-			ArticleSearchIndex::indexObjectKeywords($objectId, $text, $position);
+		$searchDao =& DAORegistry::getDAO('ArticleSearchDAO');
+		$objectId = $searchDao->insertObject($articleId, $type, $assocId);
+		$position = 0;
+		ArticleSearchIndex::indexObjectKeywords($objectId, $text, $position);
 	}
 
 	/**
@@ -271,7 +271,6 @@ class ArticleSearchIndex {
 			unset($journal);
 		}
 	}
-
 }
 
 ?>
