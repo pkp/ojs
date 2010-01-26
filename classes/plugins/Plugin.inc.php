@@ -94,7 +94,7 @@ class Plugin extends PKPPlugin {
 		if (!$isNewJournal) return false;
 
 		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO');
-		$pluginSettingsDao->installSettings($journal->getJournalId(), $this->getName(), $this->getNewJournalPluginSettingsFile());
+		$pluginSettingsDao->installSettings($journal->getId(), $this->getName(), $this->getNewJournalPluginSettingsFile());
 
 		return false;
 	}

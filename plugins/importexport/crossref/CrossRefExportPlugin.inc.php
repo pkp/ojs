@@ -90,7 +90,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 				$this->setBreadcrumbs(array(), true);
 				Locale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR));
 				$issueDao =& DAORegistry::getDAO('IssueDAO');
-				$issues =& $issueDao->getPublishedIssues($journal->getJournalId(), Handler::getRangeInfo('issues'));
+				$issues =& $issueDao->getPublishedIssues($journal->getId(), Handler::getRangeInfo('issues'));
 
 				$templateMgr->assign_by_ref('issues', $issues);
 				$templateMgr->display($this->getTemplatePath() . 'issues.tpl');
@@ -100,7 +100,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 				$this->setBreadcrumbs(array(), true);
 				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 				$rangeInfo = Handler::getRangeInfo('articles');
-				$articleIds = $publishedArticleDao->getPublishedArticleIdsByJournal($journal->getJournalId(), false);
+				$articleIds = $publishedArticleDao->getPublishedArticleIdsByJournal($journal->getId(), false);
 				$totalArticles = count($articleIds);
 				if ($rangeInfo->isValid()) $articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 				import('core.VirtualArrayIterator');
@@ -271,7 +271,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 				return;
 			case 'issue':
 				$issueId = array_shift($args);
-				$issue =& $issueDao->getIssueByBestIssueId($issueId, $journal->getJournalId());
+				$issue =& $issueDao->getIssueByBestIssueId($issueId, $journal->getId());
 				if ($issue == null) {
 					echo Locale::translate('plugins.importexport.crossref.cliError') . "\n";
 					echo Locale::translate('plugins.importexport.crossref.export.error.issueNotFound', array('issueId' => $issueId)) . "\n\n";

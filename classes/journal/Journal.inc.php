@@ -234,15 +234,8 @@ class Journal extends DataObject {
 	 * @return int
 	 */
 	function getJournalId() {
-		return $this->getData('journalId');
-	}
-
-	/**
-	 * Get ID of journal (for generic calls in PKP WAL).
-	 * @return int
-	 */
-	function getId() {
-		return $this->getData('journalId');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
+		return $this->getId();
 	}
 
 	/**
@@ -250,7 +243,8 @@ class Journal extends DataObject {
 	 * @param $journalId int
 	 */
 	function setJournalId($journalId) {
-		return $this->setData('journalId', $journalId);
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
+		return $this->setId($journalId);
 	}
 
 	/**

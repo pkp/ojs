@@ -168,7 +168,7 @@ class MetadataForm extends Form {
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', isset($this->article)?$this->article->getArticleId():null);
-		$templateMgr->assign('journalSettings', $settingsDao->getJournalSettings($journal->getJournalId()));
+		$templateMgr->assign('journalSettings', $settingsDao->getJournalSettings($journal->getId()));
 		$templateMgr->assign('rolePath', Request::getRequestedPage());
 		$templateMgr->assign('canViewAuthors', $this->canViewAuthors);
 
@@ -260,12 +260,12 @@ class MetadataForm extends Form {
 			$journal = Request::getJournal();
 			$originalFileName = $publicFileManager->getUploadedFileName('coverPage');
 			$newFileName = 'cover_article_' . $this->getData('articleId') . '_' . $this->getFormLocale() . '.' . $publicFileManager->getExtension($originalFileName);
-			$publicFileManager->uploadJournalFile($journal->getJournalId(), 'coverPage', $newFileName);
+			$publicFileManager->uploadJournalFile($journal->getId(), 'coverPage', $newFileName);
 			$article->setOriginalFileName($publicFileManager->truncateFileName($originalFileName, 127), $this->getFormLocale());
 			$article->setFileName($newFileName, $this->getFormLocale());
 
 			// Store the image dimensions.
-			list($width, $height) = getimagesize($publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/' . $newFileName);
+			list($width, $height) = getimagesize($publicFileManager->getJournalFilesPath($journal->getId()) . '/' . $newFileName);
 			$article->setWidth($width, $this->getFormLocale());
 			$article->setHeight($height, $this->getFormLocale());
 		}

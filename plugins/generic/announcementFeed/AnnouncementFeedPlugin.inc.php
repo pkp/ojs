@@ -60,7 +60,7 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 	 */
 	function getEnabled() {
 		$journal =& Request::getJournal();
-		$journalId = $journal?$journal->getJournalId():0;
+		$journalId = $journal?$journal->getId():0;
 		return $this->getSetting($journalId, 'enabled');
 	}
 
@@ -93,7 +93,7 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 			$templateManager =& $args[0];
 			$currentJournal =& $templateManager->get_template_vars('currentJournal');
 			$announcementsEnabled = $currentJournal ? $currentJournal->getSetting('enableAnnouncements') : false;
-			$displayPage = $currentJournal ? $this->getSetting($currentJournal->getJournalId(), 'displayPage') : null;
+			$displayPage = $currentJournal ? $this->getSetting($currentJournal->getId(), 'displayPage') : null;
 			$requestedPage = Request::getRequestedPage();
 
 			if ( $announcementsEnabled && (($displayPage == 'all') || ($displayPage == 'homepage' && (empty($requestedPage) || $requestedPage == 'index' || $requestedPage == 'announcement')) || ($displayPage == $requestedPage)) ) { 
@@ -152,7 +152,7 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 
 				$this->import('SettingsForm');
-				$form = new SettingsForm($this, $journal->getJournalId());
+				$form = new SettingsForm($this, $journal->getId());
 
 				if (Request::getUserVar('save')) {
 					$form->readInputData();
@@ -168,12 +168,12 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 				}
 				break;
 			case 'enable':
-				$this->updateSetting($journal->getJournalId(), 'enabled', true);
+				$this->updateSetting($journal->getId(), 'enabled', true);
 				$message = Locale::translate('plugins.generic.announcementfeed.enabled');
 				$returner = false;
 				break;
 			case 'disable':
-				$this->updateSetting($journal->getJournalId(), 'enabled', false);
+				$this->updateSetting($journal->getId(), 'enabled', false);
 				$message = Locale::translate('plugins.generic.announcementfeed.disabled');
 				$returner = false;
 				break;	

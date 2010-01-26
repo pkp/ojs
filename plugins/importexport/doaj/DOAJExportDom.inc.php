@@ -31,7 +31,7 @@ class DOAJExportDom {
 		// Records node contains all articles, each called a record
 		$records =& XMLCustomWriter::createElement($doc, 'records');
 
-		$pubArticles =& $pubArticleDao->getPublishedArticlesByJournalId($journal->getJournalId());
+		$pubArticles =& $pubArticleDao->getPublishedArticlesByJournalId($journal->getId());
 		while ($pubArticle =& $pubArticles->next()) {
 			$issue =& $issueDao->getIssueById($pubArticle->getIssueId());
 			if(!$issue) continue;

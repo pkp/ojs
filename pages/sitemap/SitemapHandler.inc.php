@@ -75,7 +75,7 @@ class SitemapHandler extends Handler {
 		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 		
 		$journal =& Request::getJournal();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 		
 		$doc =& XMLCustomWriter::createDocument();
 		$root =& XMLCustomWriter::createElement($doc, 'urlset');

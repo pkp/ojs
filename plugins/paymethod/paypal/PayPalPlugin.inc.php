@@ -86,7 +86,7 @@ class PayPalPlugin extends PaymethodPlugin {
 
 		// Make sure that all settings form fields have been filled in
 		foreach ($this->getSettingsFormFieldNames() as $settingName) {
-			$setting = $this->getSetting($journal->getJournalId(), $settingName);
+			$setting = $this->getSetting($journal->getId(), $settingName);
 			if (empty($setting)) return false;
 		}
 		return true;
@@ -113,7 +113,7 @@ class PayPalPlugin extends PaymethodPlugin {
 		$user =& Request::getUser();
 
 		$params = array(
-			'business' => $this->getSetting($journal->getJournalId(), 'selleraccount'),
+			'business' => $this->getSetting($journal->getId(), 'selleraccount'),
 			'item_name' => $queuedPayment->getName(),
 			'item_description' => $queuedPayment->getDescription(),  // not a paypal parameter (PayPal uses item_name)
 			'amount' => $queuedPayment->getAmount(),
@@ -134,7 +134,7 @@ class PayPalPlugin extends PaymethodPlugin {
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('params', $params);
-		$templateMgr->assign('paypalFormUrl', $this->getSetting($journal->getJournalId(), 'paypalurl'));
+		$templateMgr->assign('paypalFormUrl', $this->getSetting($journal->getId(), 'paypalurl'));
 		$templateMgr->display($this->getTemplatePath() . 'paymentForm.tpl');
 	}
 
@@ -167,7 +167,7 @@ class PayPalPlugin extends PaymethodPlugin {
 				}
 				// Create POST response
 				$ch = curl_init();
-				curl_setopt($ch, CURLOPT_URL, $this->getSetting($journal->getJournalId(), 'paypalurl'));
+				curl_setopt($ch, CURLOPT_URL, $this->getSetting($journal->getId(), 'paypalurl'));
 				curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 				curl_setopt($ch, CURLOPT_POST, 1);
 				curl_setopt($ch, CURLOPT_HTTPHEADER, Array('Content-Type: application/x-www-form-urlencoded', 'Content-Length: ' . strlen($req)));
@@ -226,7 +226,7 @@ class PayPalPlugin extends PaymethodPlugin {
 							if (
 								(($queuedAmount = $queuedPayment->getAmount()) != ($grantedAmount = Request::getUserVar('mc_gross')) && $queuedAmount > 0) ||
 								($queuedCurrency = $queuedPayment->getCurrencyCode()) != ($grantedCurrency = Request::getUserVar('mc_currency')) ||
-								($grantedEmail = Request::getUserVar('receiver_email')) != ($queuedEmail = $this->getSetting($journal->getJournalId(), 'selleraccount'))
+								($grantedEmail = Request::getUserVar('receiver_email')) != ($queuedEmail = $this->getSetting($journal->getId(), 'selleraccount'))
 							) {
 								// The integrity checks for the transaction failed. Complain.
 								$mail->assignParams(array(

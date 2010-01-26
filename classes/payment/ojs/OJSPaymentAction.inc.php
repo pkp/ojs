@@ -65,7 +65,7 @@ class OJSPaymentAction {
 		$journal =& Request::getJournal();
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
-		$payments =& $paymentDao->getPaymentsByJournalId($journal->getJournalId(), $rangeInfo);
+		$payments =& $paymentDao->getPaymentsByJournalId($journal->getId(), $rangeInfo);
 		$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 		$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 

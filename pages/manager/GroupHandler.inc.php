@@ -45,7 +45,7 @@ class GroupHandler extends ManagerHandler {
 		$rangeInfo =& Handler::getRangeInfo('groups');
 
 		$groupDao =& DAORegistry::getDAO('GroupDAO');
-		$groups =& $groupDao->getGroups(ASSOC_TYPE_JOURNAL, $journal->getJournalId(), null, $rangeInfo);
+		$groups =& $groupDao->getGroups(ASSOC_TYPE_JOURNAL, $journal->getId(), null, $rangeInfo);
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('groups', $groups);
@@ -92,7 +92,7 @@ class GroupHandler extends ManagerHandler {
 				$prevSeq = 0;
 			else {
 				$journal =& Request::getJournal();
-				$prevGroup =& $groupDao->getGroup($prevId, ASSOC_TYPE_JOURNAL, $journal->getJournalId());
+				$prevGroup =& $groupDao->getGroup($prevId, ASSOC_TYPE_JOURNAL, $journal->getId());
 				$prevSeq = $prevGroup->getSequence();
 			}
 
@@ -122,7 +122,7 @@ class GroupHandler extends ManagerHandler {
 
 		if ($groupId !== null) {
 			$groupDao =& DAORegistry::getDAO('GroupDAO');
-			$group =& $groupDao->getGroup($groupId, ASSOC_TYPE_JOURNAL, $journal->getJournalId());
+			$group =& $groupDao->getGroup($groupId, ASSOC_TYPE_JOURNAL, $journal->getId());
 			if (!$group) {
 				Request::redirect(null, null, 'groups');
 			}
@@ -262,7 +262,7 @@ class GroupHandler extends ManagerHandler {
 
 			$roleDao =& DAORegistry::getDAO('RoleDAO');
 			$journal =& Request::getJournal();
-			$users = $roleDao->getUsersByRoleId(null, $journal->getJournalId(), $searchType, $search, $searchMatch);
+			$users = $roleDao->getUsersByRoleId(null, $journal->getId(), $searchType, $search, $searchMatch);
 
 			$templateMgr =& TemplateManager::getManager();
 
@@ -347,7 +347,7 @@ class GroupHandler extends ManagerHandler {
 		$journal =& Request::getJournal();
 		$boardEnabled = Request::getUserVar('boardEnabled')==1?true:false;
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-		$journalSettingsDao->updateSetting($journal->getJournalId(), 'boardEnabled', $boardEnabled);
+		$journalSettingsDao->updateSetting($journal->getId(), 'boardEnabled', $boardEnabled);
 		Request::redirect(null, null, 'groups');
 	}
 
@@ -382,7 +382,7 @@ class GroupHandler extends ManagerHandler {
 
 		if ($groupId !== null) {
 			$groupDao =& DAORegistry::getDAO('GroupDAO');
-			$group =& $groupDao->getGroup($groupId, ASSOC_TYPE_JOURNAL, $journal->getJournalId());
+			$group =& $groupDao->getGroup($groupId, ASSOC_TYPE_JOURNAL, $journal->getId());
 
 			if (!$group) $passedValidation = false;
 			else $this->group =& $group;

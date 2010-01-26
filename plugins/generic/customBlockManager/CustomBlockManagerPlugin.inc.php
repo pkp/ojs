@@ -57,7 +57,7 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 				$journal =& Request::getJournal();
 				if ( !$journal ) return false;
 				
-				$blocks = $this->getSetting($journal->getJournalId(), 'blocks');
+				$blocks = $this->getSetting($journal->getId(), 'blocks');
 				if ( !is_array($blocks) ) break;
 				$i= 0;
 				foreach ( $blocks as $block ) {
@@ -86,7 +86,7 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 	function getEnabled() {
 		$journal =& Request::getJournal();
 		if (!$journal) return false;
-		return $this->getSetting($journal->getJournalId(), 'enabled');
+		return $this->getSetting($journal->getId(), 'enabled');
 	}
 
 	/**
@@ -95,7 +95,7 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 	function setEnabled($enabled) {
 		$journal =& Request::getJournal();
 		if ($journal) {
-			$this->updateSetting($journal->getJournalId(), 'enabled', $enabled ? true : false);
+			$this->updateSetting($journal->getId(), 'enabled', $enabled ? true : false);
 			return true;
 		}
 		return false;
@@ -162,7 +162,7 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 				$templateMgr->assign('pageHierarchy', $pageCrumbs);
 
 				$this->import('SettingsForm');
-				$form = new SettingsForm($this, $journal->getJournalId());
+				$form = new SettingsForm($this, $journal->getId());
 				$form->readInputData();
 				
 				if (Request::getUserVar('addBlock')) {

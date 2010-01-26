@@ -129,7 +129,7 @@ class PaymentSettingsForm extends Form {
 		foreach ($this->_data as $name => $value) {
 			$isLocalized = in_array($name, $this->getLocaleFieldNames());
 			$settingsDao->updateSetting(
-				$journal->getJournalId(),
+				$journal->getId(),
 				$name,
 				$value,
 				$this->settings[$name],

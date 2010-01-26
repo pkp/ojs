@@ -34,7 +34,7 @@ class ThesisHandler extends Handler {
 		$journal =& Request::getJournal();
 
 		if ($journal != null) {
-			$journalId = $journal->getJournalId();
+			$journalId = $journal->getId();
 		} else {
 			Request::redirect(null, 'index');
 		}
@@ -95,7 +95,7 @@ class ThesisHandler extends Handler {
 		$journal =& Request::getJournal();
 
 		if ($journal != null) {
-			$journalId = $journal->getJournalId();
+			$journalId = $journal->getId();
 		} else {
 			Request::redirect(null, 'index');
 		}
@@ -136,7 +136,7 @@ class ThesisHandler extends Handler {
 		$journal =& Request::getJournal();
 
 		if ($journal != null) {
-			$journalId = $journal->getJournalId();
+			$journalId = $journal->getId();
 		} else {
 			Request::redirect(null, 'index');
 		}
@@ -179,7 +179,7 @@ class ThesisHandler extends Handler {
 		$journal =& Request::getJournal();
 
 		if ($journal != null) {
-			$journalId = $journal->getJournalId();
+			$journalId = $journal->getId();
 		} else {
 			Request::redirect(null, 'index');
 		}

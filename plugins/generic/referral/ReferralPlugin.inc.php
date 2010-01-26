@@ -192,7 +192,7 @@ class ReferralPlugin extends GenericPlugin {
 	 */
 	function getEnabled() {
 		$journal =& Request::getJournal();
-		$journalId = $journal?$journal->getJournalId():0;
+		$journalId = $journal?$journal->getId():0;
 		return $this->getSetting($journalId, 'enabled');
 	}
 
@@ -218,7 +218,7 @@ class ReferralPlugin extends GenericPlugin {
  	 */
 	function manage($verb, $args, &$message) {
 		$journal =& Request::getJournal();
-		$journalId = $journal?$journal->getJournalId():0;
+		$journalId = $journal?$journal->getId():0;
 		switch ($verb) {
 			case 'enable':
 				$this->updateSetting($journalId, 'enabled', true);

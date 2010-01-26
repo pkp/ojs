@@ -33,7 +33,7 @@ class ReviewFormHandler extends ManagerHandler {
 		$journal =& Request::getJournal();
 		$rangeInfo =& Handler::getRangeInfo('reviewForms');
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
-		$reviewForms =& $reviewFormDao->getJournalReviewForms($journal->getJournalId(), $rangeInfo);
+		$reviewForms =& $reviewFormDao->getJournalReviewForms($journal->getId(), $rangeInfo);
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 
 		$templateMgr =& TemplateManager::getManager();
@@ -60,7 +60,7 @@ class ReviewFormHandler extends ManagerHandler {
 
 		$journal =& Request::getJournal();
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
-		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, $journal->getJournalId());
+		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, $journal->getId());
 
 		if ($reviewFormId != null && (!isset($reviewForm) || $reviewForm->getCompleteCount() != 0 || $reviewForm->getIncompleteCount() != 0)) {
 			Request::redirect(null, null, 'reviewForms');
@@ -96,7 +96,7 @@ class ReviewFormHandler extends ManagerHandler {
 
 		$journal =& Request::getJournal();
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
-		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, $journal->getJournalId());
+		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, $journal->getId());
 		if ($reviewFormId != null && (!isset($reviewForm) || $reviewForm->getCompleteCount() != 0 || $reviewForm->getIncompleteCount() != 0)) {
 			Request::redirect(null, null, 'reviewForms');
 		}
@@ -133,7 +133,7 @@ class ReviewFormHandler extends ManagerHandler {
 
 		$journal =& Request::getJournal();
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
-		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, $journal->getJournalId());
+		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, $journal->getId());
 		$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
 		$reviewFormElements =& $reviewFormElementDao->getReviewFormElements($reviewFormId);
 
@@ -168,7 +168,7 @@ class ReviewFormHandler extends ManagerHandler {
 
 		$journal =& Request::getJournal();
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
-		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, $journal->getJournalId());
+		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, $journal->getId());
 
 		if (isset($reviewForm) && $reviewForm->getCompleteCount() == 0 && $reviewForm->getIncompleteCount() == 0) {
 			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
@@ -179,7 +179,7 @@ class ReviewFormHandler extends ManagerHandler {
 				$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 			}
 
-			$reviewFormDao->deleteReviewFormById($reviewFormId, $journal->getJournalId());
+			$reviewFormDao->deleteReviewFormById($reviewFormId, $journal->getId());
 		}
 
 		Request::redirect(null, null, 'reviewForms');
@@ -196,7 +196,7 @@ class ReviewFormHandler extends ManagerHandler {
 
 		$journal =& Request::getJournal();
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
-		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, $journal->getJournalId());
+		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, $journal->getId());
 
 		if (isset($reviewForm) && !$reviewForm->getActive()) {
 			$reviewForm->setActive(1);
@@ -217,7 +217,7 @@ class ReviewFormHandler extends ManagerHandler {
 
 		$journal =& Request::getJournal();
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
-		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, $journal->getJournalId());
+		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, $journal->getId());
 
 		if (isset($reviewForm) && $reviewForm->getActive()) {
 			$reviewForm->setActive(0);
@@ -237,13 +237,13 @@ class ReviewFormHandler extends ManagerHandler {
 
 		$journal =& Request::getJournal();
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
-		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, $journal->getJournalId());
+		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, $journal->getId());
 
 		if (isset($reviewForm)) {
 			$reviewForm->setActive(0);
 			$reviewForm->setSequence(REALLY_BIG_NUMBER);
 			$newReviewFormId = $reviewFormDao->insertReviewForm($reviewForm);
-			$reviewFormDao->resequenceReviewForms($journal->getJournalId());
+			$reviewFormDao->resequenceReviewForms($journal->getId());
 
 			$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
 			$reviewFormElements =& $reviewFormElementDao->getReviewFormElements($reviewFormId);
@@ -267,7 +267,7 @@ class ReviewFormHandler extends ManagerHandler {
 
 		$journal =& Request::getJournal();
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
-		$reviewForm =& $reviewFormDao->getReviewForm(Request::getUserVar('id'), $journal->getJournalId());
+		$reviewForm =& $reviewFormDao->getReviewForm(Request::getUserVar('id'), $journal->getId());
 
 		if (isset($reviewForm)) {
 			$direction = Request::getUserVar('d');
@@ -290,7 +290,7 @@ class ReviewFormHandler extends ManagerHandler {
 			}
 
 			$reviewFormDao->updateReviewForm($reviewForm);
-			$reviewFormDao->resequenceReviewForms($journal->getJournalId());
+			$reviewFormDao->resequenceReviewForms($journal->getId());
 		}
 
 		// Moving up or down with the arrows requires a page reload.
@@ -309,7 +309,7 @@ class ReviewFormHandler extends ManagerHandler {
 
 		$journal =& Request::getJournal();
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
-		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, $journal->getJournalId());
+		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, $journal->getId());
 
 		if (!isset($reviewForm) || $reviewForm->getCompleteCount() != 0 || $reviewForm->getIncompleteCount() != 0) {
 			Request::redirect(null, null, 'reviewForms');
@@ -319,7 +319,7 @@ class ReviewFormHandler extends ManagerHandler {
 		$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
 		$reviewFormElements =& $reviewFormElementDao->getReviewFormElementsByReviewForm($reviewFormId, $rangeInfo);
 
-		$unusedReviewFormTitles =& $reviewFormDao->getJournalReviewFormTitles($journal->getJournalId(), 0);
+		$unusedReviewFormTitles =& $reviewFormDao->getJournalReviewFormTitles($journal->getId(), 0);
 
 		$this->setupTemplate(true, $reviewForm);
 		$templateMgr =& TemplateManager::getManager();
@@ -352,7 +352,7 @@ class ReviewFormHandler extends ManagerHandler {
 
 		$journal =& Request::getJournal();
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
-		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, $journal->getJournalId());
+		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, $journal->getId());
 		$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
 
 		if (!isset($reviewForm) || $reviewForm->getCompleteCount() != 0 || $reviewForm->getIncompleteCount() != 0 || ($reviewFormElementId != null && !$reviewFormElementDao->reviewFormElementExists($reviewFormElementId, $reviewFormId))) {
@@ -392,10 +392,10 @@ class ReviewFormHandler extends ManagerHandler {
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
 		$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
 
-		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, $journal->getJournalId());
+		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, $journal->getId());
 		$this->setupTemplate(true, $reviewForm);
 
-		if (!$reviewFormDao->unusedReviewFormExists($reviewFormId, $journal->getJournalId()) || ($reviewFormElementId != null && !$reviewFormElementDao->reviewFormElementExists($reviewFormElementId, $reviewFormId))) {
+		if (!$reviewFormDao->unusedReviewFormExists($reviewFormId, $journal->getId()) || ($reviewFormElementId != null && !$reviewFormElementDao->reviewFormElementExists($reviewFormElementId, $reviewFormId))) {
 			Request::redirect(null, null, 'reviewFormElements', array($reviewFormId));
 		}
 
@@ -464,7 +464,7 @@ class ReviewFormHandler extends ManagerHandler {
 		$journal =& Request::getJournal();
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
 
-		if ($reviewFormDao->unusedReviewFormExists($reviewFormId, $journal->getJournalId())) {
+		if ($reviewFormDao->unusedReviewFormExists($reviewFormId, $journal->getId())) {
 			$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
 			$reviewFormElementDao->deleteReviewFormElementById($reviewFormElementId);
 		}
@@ -482,7 +482,7 @@ class ReviewFormHandler extends ManagerHandler {
 		$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
 		$reviewFormElement =& $reviewFormElementDao->getReviewFormElement(Request::getUserVar('id'));
 
-		if (isset($reviewFormElement) && $reviewFormDao->unusedReviewFormExists($reviewFormElement->getReviewFormId(), $journal->getJournalId())) {
+		if (isset($reviewFormElement) && $reviewFormDao->unusedReviewFormExists($reviewFormElement->getReviewFormId(), $journal->getId())) {
 			$direction = Request::getUserVar('d');
 
 			if ($direction != null) {
@@ -526,11 +526,11 @@ class ReviewFormHandler extends ManagerHandler {
 		$journal =& Request::getJournal();
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
 
-		if (is_array($copy) && $reviewFormDao->unusedReviewFormExists($targetReviewFormId, $journal->getJournalId())) {
+		if (is_array($copy) && $reviewFormDao->unusedReviewFormExists($targetReviewFormId, $journal->getId())) {
 			$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
 			foreach ($copy as $reviewFormElementId) {
 				$reviewFormElement =& $reviewFormElementDao->getReviewFormElement($reviewFormElementId);
-				if (isset($reviewFormElement) && $reviewFormDao->unusedReviewFormExists($reviewFormElement->getReviewFormId(), $journal->getJournalId())) {
+				if (isset($reviewFormElement) && $reviewFormDao->unusedReviewFormExists($reviewFormElement->getReviewFormId(), $journal->getId())) {
 					$reviewFormElement->setReviewFormId($targetReviewFormId);
 					$reviewFormElement->setSequence(REALLY_BIG_NUMBER);
 					$reviewFormElementDao->insertReviewFormElement($reviewFormElement);

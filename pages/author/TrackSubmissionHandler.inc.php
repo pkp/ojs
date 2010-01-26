@@ -81,7 +81,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$this->setupTemplate(true, $articleId);
 
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-		$journalSettings = $journalSettingsDao->getJournalSettings($journal->getJournalId());
+		$journalSettings = $journalSettingsDao->getJournalSettings($journal->getId());
 
 		// Setting the round.
 		$round = isset($args[1]) ? $args[1] : $submission->getCurrentRound();
@@ -120,15 +120,15 @@ class TrackSubmissionHandler extends AuthorHandler {
 			$completedPaymentDAO =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
 			
 			if ( $paymentManager->submissionEnabled() ) {
-				$templateMgr->assign_by_ref('submissionPayment', $completedPaymentDAO->getSubmissionCompletedPayment ( $journal->getJournalId(), $articleId ));
+				$templateMgr->assign_by_ref('submissionPayment', $completedPaymentDAO->getSubmissionCompletedPayment ( $journal->getId(), $articleId ));
 			}
 			
 			if ( $paymentManager->fastTrackEnabled()  ) {
-				$templateMgr->assign_by_ref('fastTrackPayment', $completedPaymentDAO->getFastTrackCompletedPayment ( $journal->getJournalId(), $articleId ));
+				$templateMgr->assign_by_ref('fastTrackPayment', $completedPaymentDAO->getFastTrackCompletedPayment ( $journal->getId(), $articleId ));
 			}
 
 			if ( $paymentManager->publicationEnabled()  ) {
-				$templateMgr->assign_by_ref('publicationPayment', $completedPaymentDAO->getPublicationCompletedPayment ( $journal->getJournalId(), $articleId ));
+				$templateMgr->assign_by_ref('publicationPayment', $completedPaymentDAO->getPublicationCompletedPayment ( $journal->getId(), $articleId ));
 			}				   
 		}		
 
@@ -374,7 +374,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 
 		import('file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
-		$publicFileManager->removeJournalFile($journal->getJournalId(),$submission->getFileName($formLocale));
+		$publicFileManager->removeJournalFile($journal->getId(),$submission->getFileName($formLocale));
 		$submission->setFileName('', $formLocale);
 		$submission->setOriginalFileName('', $formLocale);
 		$submission->setWidth('', $formLocale);
@@ -465,7 +465,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 
 		if ($authorSubmission == null) {
 			$isValid = false;
-		} else if ($authorSubmission->getJournalId() != $journal->getJournalId()) {
+		} else if ($authorSubmission->getJournalId() != $journal->getId()) {
 			$isValid = false;
 		} else {
 			if ($authorSubmission->getUserId() != $user->getId()) {
@@ -601,7 +601,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$paymentManager =& OJSPaymentManager::getManager();
 		$user =& Request::getUser();
 
-		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getJournalId(), PAYMENT_TYPE_SUBMISSION, $user->getId(), $articleId, $journal->getSetting('submissionFee'));
+		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_SUBMISSION, $user->getId(), $articleId, $journal->getSetting('submissionFee'));
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
 	
 		$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
@@ -623,7 +623,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$paymentManager =& OJSPaymentManager::getManager();
 		$user =& Request::getUser();
 
-		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getJournalId(), PAYMENT_TYPE_FASTTRACK, $user->getId(), $articleId, $journal->getSetting('fastTrackFee'));
+		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_FASTTRACK, $user->getId(), $articleId, $journal->getSetting('fastTrackFee'));
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
 	
 		$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
@@ -645,7 +645,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$paymentManager =& OJSPaymentManager::getManager();
 		$user =& Request::getUser();
 
-		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getJournalId(), PAYMENT_TYPE_PUBLICATION, $user->getId(), $articleId, $journal->getSetting('publicationFee'));
+		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_PUBLICATION, $user->getId(), $articleId, $journal->getSetting('publicationFee'));
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
 	
 		$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);

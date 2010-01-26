@@ -89,7 +89,7 @@ class CopyeditCommentForm extends CommentForm {
 		// If no editors are currently assigned, send this message to
 		// all of the journal's editors.
 		if (empty($editorAddresses)) {
-			$editors =& $roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getJournalId());
+			$editors =& $roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getId());
 			while (!$editors->eof()) {
 				$editor =& $editors->next();
 				$editorAddresses[$editor->getEmail()] = $editor->getFullName();

@@ -82,7 +82,7 @@ class OpenAccessNotification extends ScheduledTask {
 
 			// Check if the current date corresponds to the open access date of any issues
 			$issueDao =& DAORegistry::getDAO('IssueDAO');
-			$issues =& $issueDao->getPublishedIssues($journal->getJournalId());
+			$issues =& $issueDao->getPublishedIssues($journal->getId());
 
 			while (!$issues->eof()) {
 				$issue =& $issues->next();
@@ -93,7 +93,7 @@ class OpenAccessNotification extends ScheduledTask {
 				if ($accessStatus == ISSUE_ACCESS_SUBSCRIPTION && !empty($openAccessDate) && strtotime($openAccessDate) == mktime(0,0,0,$curMonth, $curDay, $curYear)) {
 					// Notify all users who have open access notification set for this journal
 					$userSettingsDao =& DAORegistry::getDAO('UserSettingsDAO');
-					$users =& $userSettingsDao->getUsersBySetting('openAccessNotification', true, 'bool', $journal->getJournalId());
+					$users =& $userSettingsDao->getUsersBySetting('openAccessNotification', true, 'bool', $journal->getId());
 					$this->sendNotification($users, $journal, $issue);
 				}
 			}

@@ -116,7 +116,7 @@ class JournalSiteSettingsForm extends Form {
 		$journal->setPath($this->getData('journalPath'));
 		$journal->setEnabled($this->getData('enabled'));
 
-		if ($journal->getJournalId() != null) {
+		if ($journal->getId() != null) {
 			$isNewJournal = false;
 			$journalDao->updateJournal($journal);
 			$section = null;
@@ -169,7 +169,7 @@ class JournalSiteSettingsForm extends Form {
 			// Create a default "Articles" section
 			$sectionDao =& DAORegistry::getDAO('SectionDAO');
 			$section = new Section();
-			$section->setJournalId($journal->getJournalId());
+			$section->setJournalId($journal->getId());
 			$section->setTitle(Locale::translate('section.default.title'), $journal->getPrimaryLocale());
 			$section->setAbbrev(Locale::translate('section.default.abbrev'), $journal->getPrimaryLocale());
 			$section->setMetaIndexed(true);

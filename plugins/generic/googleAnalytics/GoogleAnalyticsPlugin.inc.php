@@ -143,7 +143,7 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 	function getEnabled() {
 		$journal =& Request::getJournal();
 		if (!$journal) return false;
-		return $this->getSetting($journal->getJournalId(), 'enabled');
+		return $this->getSetting($journal->getId(), 'enabled');
 	}
 
 	/**
@@ -152,7 +152,7 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 	function setEnabled($enabled) {
 		$journal =& Request::getJournal();
 		if ($journal) {
-			$this->updateSetting($journal->getJournalId(), 'enabled', $enabled ? true : false);
+			$this->updateSetting($journal->getId(), 'enabled', $enabled ? true : false);
 			return true;
 		}
 		return false;
@@ -170,7 +170,7 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 
 			if (!empty($currentJournal)) {
 				$journal =& Request::getJournal();
-				$journalId = $journal->getJournalId();
+				$journalId = $journal->getId();
 				$googleAnalyticsSiteId = $this->getSetting($journalId, 'googleAnalyticsSiteId');
 
 				if (!empty($googleAnalyticsSiteId)) {
@@ -214,7 +214,7 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 			case 'settings':
 				if ($this->getEnabled()) {
 					$this->import('GoogleAnalyticsSettingsForm');
-					$form = new GoogleAnalyticsSettingsForm($this, $journal->getJournalId());
+					$form = new GoogleAnalyticsSettingsForm($this, $journal->getId());
 					if (Request::getUserVar('save')) {
 						$form->readInputData();
 						if ($form->validate()) {

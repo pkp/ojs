@@ -88,7 +88,7 @@ class NativeImportDom {
 
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		$issue = new Issue();
-		$issue->setJournalId($journal->getJournalId());
+		$issue->setJournalId($journal->getId());
 
 		$journalSupportedLocales = array_keys($journal->getSupportedLocaleNames()); // => journal locales must be set up before
 		$journalPrimaryLocale = $journal->getPrimaryLocale();
@@ -215,7 +215,7 @@ class NativeImportDom {
 		}
 
 		if (($value = $issueNode->getAttribute('public_id')) != '') {
-			$anotherIssue = $issueDao->getIssueByPublicIssueId($value, $journal->getJournalId());
+			$anotherIssue = $issueDao->getIssueByPublicIssueId($value, $journal->getId());
 			if ($anotherIssue) {
 				$errors[] = array('plugins.importexport.native.import.error.duplicatePublicId', array('issueTitle' => $issue->getIssueIdentification(), 'otherIssueTitle' => $anotherIssue->getIssueIdentification()));
 				$hasErrors = true;
@@ -252,7 +252,7 @@ class NativeImportDom {
 			return false;
 		} else {
 			if ($issue->getCurrent()) {
-				$issueDao->updateCurrentIssue($journal->getJournalId());
+				$issueDao->updateCurrentIssue($journal->getId());
 			}
 			$issue->setIssueId($issueDao->insertIssue($issue));
 			$dependentItems[] = array('issue', $issue);
@@ -326,7 +326,7 @@ class NativeImportDom {
 
 					$originalName = basename($url);
 					$newName .= $publicFileManager->getExtension($originalName);
-					if (!$publicFileManager->copyJournalFile($journal->getJournalId(), $url, $newName)) {
+					if (!$publicFileManager->copyJournalFile($journal->getId(), $url, $newName)) {
 						$errors[] = array('plugins.importexport.native.import.error.couldNotCopy', array('url' => $url));
 						$hasErrors = true;
 					}
@@ -343,14 +343,14 @@ class NativeImportDom {
 					$newName .= $publicFileManager->getExtension($originalName);
 					$issue->setFileName($newName, $locale);
 					$issue->setOriginalFileName($publicFileManager->truncateFileName($originalName, 127), $locale);
-					if ($publicFileManager->writeJournalFile($journal->getJournalId(), $newName, base64_decode($embed->getValue()))===false) {
+					if ($publicFileManager->writeJournalFile($journal->getId(), $newName, base64_decode($embed->getValue()))===false) {
 						$errors[] = array('plugins.importexport.native.import.error.couldNotWriteFile', array('originalName' => $originalName));
 						$hasErrors = true;
 					}
 				}
 			}
 			// Store the image dimensions.
-			list($width, $height) = getimagesize($publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/' . $newName);
+			list($width, $height) = getimagesize($publicFileManager->getJournalFilesPath($journal->getId()) . '/' . $newName);
 			$issue->setWidth($width, $locale);
 			$issue->setHeight($height, $locale);	
 			
@@ -396,7 +396,7 @@ class NativeImportDom {
 
 					$originalName = basename($url);
 					$newName .= $publicFileManager->getExtension($originalName);
-					if (!$publicFileManager->copyJournalFile($journal->getJournalId(), $url, $newName)) {
+					if (!$publicFileManager->copyJournalFile($journal->getId(), $url, $newName)) {
 						$errors[] = array('plugins.importexport.native.import.error.couldNotCopy', array('url' => $url));
 						$hasErrors = true;
 					}
@@ -413,14 +413,14 @@ class NativeImportDom {
 					$newName .= $publicFileManager->getExtension($originalName);
 					$article->setFileName($newName, $locale);
 					$article->setOriginalFileName($publicFileManager->truncateFileName($originalName, 127), $locale);
-					if ($publicFileManager->writeJournalFile($journal->getJournalId(), $newName, base64_decode($embed->getValue()))===false) {
+					if ($publicFileManager->writeJournalFile($journal->getId(), $newName, base64_decode($embed->getValue()))===false) {
 						$errors[] = array('plugins.importexport.native.import.error.couldNotWriteFile', array('originalName' => $originalName));
 						$hasErrors = true;
 					}
 				}
 			}
 			// Store the image dimensions.
-			list($width, $height) = getimagesize($publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/' . $newName);
+			list($width, $height) = getimagesize($publicFileManager->getJournalFilesPath($journal->getId()) . '/' . $newName);
 			$article->setWidth($width, $locale);
 			$article->setHeight($height, $locale);	
 			
@@ -524,7 +524,7 @@ class NativeImportDom {
 		$foundSectionId = $foundSectionTitle = null;
 		$index = 0;
 		foreach($titles as $locale => $title) {
-			$section = $sectionDao->getSectionByTitle($title, $journal->getJournalId());
+			$section = $sectionDao->getSectionByTitle($title, $journal->getId());
 			if ($section) {
 				$sectionId = $section->getSectionId();
 				if ($foundSectionId) { 
@@ -555,7 +555,7 @@ class NativeImportDom {
 		$foundSectionId = $foundSectionAbbrev = null;
 		$index = 0;
 		foreach($abbrevs as $locale => $abbrev) {
-			$abbrevSection = $sectionDao->getSectionByAbbrev($abbrev, $journal->getJournalId());
+			$abbrevSection = $sectionDao->getSectionByAbbrev($abbrev, $journal->getId());
 			if ($abbrevSection) {
 				$sectionId = $abbrevSection->getSectionId();
 				if ($foundSectionId) {
@@ -593,12 +593,12 @@ class NativeImportDom {
 			$section->setAbbrev($abbrevs, null);
 			$section->setIdentifyType($identifyTypes, null);
 			$section->setPolicy($policies, null);
-			$section->setJournalId($journal->getJournalId());
+			$section->setJournalId($journal->getId());
 			$section->setSequence(REALLY_BIG_NUMBER);
 			$section->setMetaIndexed(1);
 			$section->setEditorRestricted(1);
 			$section->setSectionId($sectionDao->insertSection($section));
-			$sectionDao->resequenceSections($journal->getJournalId());
+			$sectionDao->resequenceSections($journal->getId());
 		}
 
 		if (!$section && $abbrevSection) {
@@ -636,7 +636,7 @@ class NativeImportDom {
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 
 		$article = new Article();
-		$article->setJournalId($journal->getJournalId());
+		$article->setJournalId($journal->getId());
 		$article->setUserId($user->getId());
 		$article->setSectionId($section->getSectionId());
 		$article->setStatus(STATUS_PUBLISHED);

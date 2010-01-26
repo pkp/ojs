@@ -40,9 +40,9 @@ class EmailHandler extends UserHandler {
 		// See if this is the Editor or Manager and an email template has been chosen
 		$template = Request::getUserVar('template');
 		if (	!$journal || empty($template) || (
-			!Validation::isJournalManager($journal->getJournalId()) &&
-			!Validation::isEditor($journal->getJournalId()) &&
-			!Validation::isSectionEditor($journal->getJournalId())
+			!Validation::isJournalManager($journal->getId()) &&
+			!Validation::isEditor($journal->getId()) &&
+			!Validation::isSectionEditor($journal->getId())
 		)) {
 			$template = null;
 		}
@@ -57,7 +57,7 @@ class EmailHandler extends UserHandler {
 		);
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		if ($journal) {
-			$roles =& $roleDao->getRolesByUserId($user->getId(), $journal->getJournalId());
+			$roles =& $roleDao->getRolesByUserId($user->getId(), $journal->getId());
 			foreach ($roles as $role) {
 				if (in_array($role->getRoleId(), $unlimitedEmailRoles)) $canSendUnlimitedEmails = true;
 			}
@@ -96,7 +96,7 @@ class EmailHandler extends UserHandler {
 			while ($editAssignment =& $editAssignments->next()) {
 				if ($editAssignment->getEditorId() === $user->getId()) $hasAccess = true;
 			}
-			if (Validation::isEditor($journal->getJournalId())) $hasAccess = true;
+			if (Validation::isEditor($journal->getId())) $hasAccess = true;
 
 			// 3. User is reviewer
 			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
@@ -114,7 +114,7 @@ class EmailHandler extends UserHandler {
 			if ($proofSignoff && $proofSignoff->getUserId() === $user->getId()) $hasAccess = true;
 
 			// Last, "deal-breakers" -- access is not allowed.
-			if (!$article || ($article && $article->getJournalId() !== $journal->getJournalId())) $hasAccess = false;
+			if (!$article || ($article && $article->getJournalId() !== $journal->getId())) $hasAccess = false;
 
 			if ($hasAccess) {
 				import('mail.ArticleMailTemplate');

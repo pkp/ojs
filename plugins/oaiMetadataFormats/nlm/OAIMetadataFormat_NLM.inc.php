@@ -116,7 +116,7 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 		}
 
 		// Include editorships (optimized)
-		$response .= $this->getEditorialInfo($journal->getJournalId());
+		$response .= $this->getEditorialInfo($journal->getId());
 
 		$response .=
 			"\t\t\t</contrib-group>\n" .

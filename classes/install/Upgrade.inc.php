@@ -63,7 +63,7 @@ class Upgrade extends Installer {
 
 		$journals =& $journalDao->getJournals();
 		while ($journal =& $journals->next()) {
-			$articles =& $articleDao->getArticlesByJournalId($journal->getJournalId());
+			$articles =& $articleDao->getArticlesByJournalId($journal->getId());
 			while ($article =& $articles->next()) {
 				if (!$article->getReviewFileId() && $article->getSubmissionProgress() == 0) {
 					$authorSubmission =& $authorSubmissionDao->getAuthorSubmission($article->getArticleId());
@@ -229,7 +229,7 @@ class Upgrade extends Installer {
 		// Get journal IDs for insertion, including 0 for site-level
 		$journalIds = array(0);
 		while ($journal =& $journals->next()) {
-			$journalIds[] = $journal->getJournalId();
+			$journalIds[] = $journal->getId();
 			unset($journal);
 		}
 

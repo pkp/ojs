@@ -55,7 +55,7 @@ class NativeExportDom {
 					XMLCustomWriter::appendChild($coverNode, $imageNode);
 					import('file.PublicFileManager');
 					$publicFileManager = new PublicFileManager();
-					$coverPagePath = $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
+					$coverPagePath = $publicFileManager->getJournalFilesPath($journal->getId()) . '/';
 					$coverPagePath .= $coverFile;
 					$embedNode =& XMLCustomWriter::createChildWithText($doc, $imageNode, 'embed', base64_encode($publicFileManager->readFile($coverPagePath)));
 					XMLCustomWriter::setAttribute($embedNode, 'filename', $issue->getOriginalFileName($locale));
@@ -243,7 +243,7 @@ class NativeExportDom {
 					XMLCustomWriter::appendChild($coverNode, $imageNode);
 					import('file.PublicFileManager');
 					$publicFileManager = new PublicFileManager();
-					$coverPagePath = $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
+					$coverPagePath = $publicFileManager->getJournalFilesPath($journal->getId()) . '/';
 					$coverPagePath .= $coverFile;
 					$embedNode =& XMLCustomWriter::createChildWithText($doc, $imageNode, 'embed', base64_encode($publicFileManager->readFile($coverPagePath)));
 					XMLCustomWriter::setAttribute($embedNode, 'filename', $article->getOriginalFileName($locale));

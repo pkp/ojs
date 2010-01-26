@@ -125,7 +125,7 @@ class SectionEditorAction extends Action {
 
 			$journal =& Request::getJournal();
 			$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-			$settings =& $settingsDao->getJournalSettings($journal->getJournalId());
+			$settings =& $settingsDao->getJournalSettings($journal->getId());
 			if (isset($settings['numWeeksPerReview'])) SectionEditorAction::setDueDate($sectionEditorSubmission->getArticleId(), $reviewAssignment->getReviewId(), null, $settings['numWeeksPerReview'], false);
 
 			// Add log

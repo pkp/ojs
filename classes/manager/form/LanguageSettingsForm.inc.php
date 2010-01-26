@@ -124,7 +124,7 @@ class LanguageSettingsForm extends Form {
 		foreach ($this->_data as $name => $value) {
 			if (!in_array($name, array_keys($this->settings))) continue;
 			$settingsDao->updateSetting(
-				$journal->getJournalId(),
+				$journal->getId(),
 				$name,
 				$value,
 				$this->settings[$name]

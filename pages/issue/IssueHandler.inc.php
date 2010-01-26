@@ -46,7 +46,7 @@ class IssueHandler extends Handler {
 		$journal =& Request::getJournal();
 
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$issue =& $issueDao->getCurrentIssue($journal->getJournalId());
+		$issue =& $issueDao->getCurrentIssue($journal->getId());
 
 		$templateMgr =& TemplateManager::getManager();
 
@@ -56,7 +56,7 @@ class IssueHandler extends Handler {
 
 			if ($styleFileName = $issue->getStyleFileName()) {
 				$templateMgr->addStyleSheet(
-					Request::getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/' . $styleFileName
+					Request::getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getId()) . '/' . $styleFileName
 				);
 			}
 
@@ -70,7 +70,7 @@ class IssueHandler extends Handler {
 			$templateMgr->assign('locale', $locale);
 
 			$coverPagePath = Request::getBaseUrl() . '/';
-			$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
+			$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getId()) . '/';
 			$templateMgr->assign('coverPagePath', $coverPagePath);
 
 			if (!$showToc && $issue->getFileName($locale) && $issue->getShowCoverPage($locale) && !$issue->getHideCoverPageCover($locale)) {
@@ -155,7 +155,7 @@ class IssueHandler extends Handler {
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 
 		if ($journal->getSetting('enablePublicIssueId')) {
-			$issue =& $issueDao->getIssueByBestIssueId($issueId, $journal->getJournalId());
+			$issue =& $issueDao->getIssueByBestIssueId($issueId, $journal->getId());
 		} else {
 			$issue =& $issueDao->getIssueById((int) $issueId);
 		}
@@ -183,7 +183,7 @@ class IssueHandler extends Handler {
 	 */
 	function setupIssueTemplate(&$issue, $showToc = false) {
 		$journal =& Request::getJournal();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 		$templateMgr =& TemplateManager::getManager();
 		if (isset($issue) && ($issue->getPublished() || Validation::isEditor($journalId) || Validation::isLayoutEditor($journalId) || Validation::isProofreader($journalId)) && $issue->getJournalId() == $journalId) {
 
@@ -280,12 +280,12 @@ class IssueHandler extends Handler {
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		$rangeInfo = Handler::getRangeInfo('issues');
 
-		$publishedIssuesIterator = $issueDao->getPublishedIssues($journal->getJournalId(), $rangeInfo);
+		$publishedIssuesIterator = $issueDao->getPublishedIssues($journal->getId(), $rangeInfo);
 
 		import('file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
 		$coverPagePath = Request::getBaseUrl() . '/';
-		$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
+		$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getId()) . '/';
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('coverPagePath', $coverPagePath);

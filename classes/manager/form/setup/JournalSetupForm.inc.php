@@ -75,7 +75,7 @@ class JournalSetupForm extends Form {
 			if (isset($this->settings[$name])) {
 				$isLocalized = in_array($name, $this->getLocaleFieldNames());
 				$settingsDao->updateSetting(
-					$journal->getJournalId(),
+					$journal->getId(),
 					$name,
 					$value,
 					$this->settings[$name],

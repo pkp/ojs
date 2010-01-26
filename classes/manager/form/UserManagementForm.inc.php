@@ -76,7 +76,7 @@ class UserManagementForm extends Form {
 		}
 
 		$journal =& Request::getJournal();
-		$journalId = $journal == null ? 0 : $journal->getJournalId();
+		$journalId = $journal == null ? 0 : $journal->getId();
 		import('pages.manager.PeopleHandler');
 		$rolePrefs = PeopleHandler::retrieveRoleAssignmentPreferences($journalId);
 		$activeRoles = array(
@@ -330,7 +330,7 @@ class UserManagementForm extends Form {
 					if (!$isManager && $roleId != ROLE_ID_READER) continue;
 					if ($roleId != null) {
 						$role = new Role();
-						$role->setJournalId($journal->getJournalId());
+						$role->setJournalId($journal->getId());
 						$role->setUserId($userId);
 						$role->setRoleId($roleId);
 						$roleDao->insertRole($role);

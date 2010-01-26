@@ -116,7 +116,7 @@ class RTHandler extends ArticleHandler {
 		$journalRt =& $rtDao->getJournalRTByJournal($journal);
 
 		$context =& $rtDao->getContext($contextId);
-		if ($context) $version =& $rtDao->getVersion($context->getVersionId(), $journal->getJournalId());
+		if ($context) $version =& $rtDao->getVersion($context->getVersionId(), $journal->getId());
 
 		if (!$context || !$version || !$journalRt || $journalRt->getVersion()==null || $journalRt->getVersion() !=  $context->getVersionId()) {
 			$request->redirect(null, 'article', 'view', array($articleId, $galleyId));

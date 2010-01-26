@@ -246,7 +246,7 @@ class ArticleHandler extends Handler {
 				import('file.PublicFileManager');
 				$publicFileManager = new PublicFileManager();
 				$coverPagePath = $request->getBaseUrl() . '/';
-				$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
+				$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getId()) . '/';
 				$templateMgr->assign('coverPagePath', $coverPagePath);
 				$templateMgr->assign('coverPageFileName', $article->getLocalizedFileName());
 				$templateMgr->assign('width', $article->getLocalizedWidth());
@@ -505,7 +505,7 @@ class ArticleHandler extends Handler {
 		import('issue.IssueAction');
 
 		$journal =& $router->getContext($request);
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 		$article = $publishedArticle = $issue = null;
 		$user =& $request->getUser();
 		$userId = $user?$user->getId():0;

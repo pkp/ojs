@@ -43,7 +43,7 @@ class AnnouncementTypeForm extends PKPAnnouncementTypeForm {
 	function _setAnnouncementTypeAssocId(&$announcementType) {
 		$journal =& Request::getJournal();
 		$announcementType->setAssocType(ASSOC_TYPE_JOURNAL);
-		$announcementType->setAssocId($journal->getJournalId());
+		$announcementType->setAssocId($journal->getId());
 	}
 }
 

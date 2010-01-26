@@ -28,7 +28,7 @@ class CustomLocalePlugin extends GenericPlugin {
 				$locale = Locale::getLocale();
 				$localeFiles = Locale::getLocaleFiles($locale);
 				$journal = Request::getJournal();
-				$journalId = $journal->getJournalId();
+				$journalId = $journal->getId();
 				$publicFilesDir = Config::getVar('files', 'public_files_dir');
 				$customLocalePathBase = $publicFilesDir . DIRECTORY_SEPARATOR . 'journals' . DIRECTORY_SEPARATOR . $journalId . DIRECTORY_SEPARATOR . CUSTOM_LOCALE_DIR . DIRECTORY_SEPARATOR . $locale . DIRECTORY_SEPARATOR;
 
@@ -54,7 +54,7 @@ class CustomLocalePlugin extends GenericPlugin {
 		$localeFilename =& $args[1];
 
 		$journal = Request::getJournal();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 		$publicFilesDir = Config::getVar('files', 'public_files_dir');
 		$customLocalePath = $publicFilesDir . DIRECTORY_SEPARATOR . 'journals' . DIRECTORY_SEPARATOR . $journalId . DIRECTORY_SEPARATOR . CUSTOM_LOCALE_DIR . DIRECTORY_SEPARATOR . $locale . DIRECTORY_SEPARATOR . $localeFilename;
 
@@ -82,13 +82,13 @@ class CustomLocalePlugin extends GenericPlugin {
 	function getEnabled() {
 		$journal =& Request::getJournal();
 		if (!$journal) return false;
-		return $this->getSetting($journal->getJournalId(), 'enabled');
+		return $this->getSetting($journal->getId(), 'enabled');
 	}
 
 	function setEnabled($enabled) {
 		$journal =& Request::getJournal();
 		if ($journal) {
-			$this->updateSetting($journal->getJournalId(), 'enabled', $enabled ? true : false);
+			$this->updateSetting($journal->getId(), 'enabled', $enabled ? true : false);
 			return true;
 		}
 		return false;

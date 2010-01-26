@@ -35,11 +35,11 @@ $(document).ready(function() { setupTableDND("#adminJournals", "moveJournal"); }
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
 	{iterate from=journals item=journal}
-	<tr valign="top" id="journal-{$journal->getJournalId()}" class="data">
+	<tr valign="top" id="journal-{$journal->getId()}" class="data">
 		<td><a class="action" href="{url journal=$journal->getPath() page="manager"}">{$journal->getLocalizedTitle()|escape}</a></td>
 		<td class="drag">{$journal->getPath()|escape}</td>
-		<td><a href="{url op="moveJournal" d=u id=$journal->getJournalId()}">&uarr;</a> <a href="{url op="moveJournal" d=d id=$journal->getJournalId()}">&darr;</a></td>
-		<td align="right"><a href="{url op="editJournal" path=$journal->getJournalId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a class="action" href="{url op="deleteJournal" path=$journal->getJournalId()}" onclick="return confirm('{translate|escape:"jsparam" key="admin.journals.confirmDelete"}')">{translate key="common.delete"}</a></td>
+		<td><a href="{url op="moveJournal" d=u id=$journal->getId()}">&uarr;</a> <a href="{url op="moveJournal" d=d id=$journal->getId()}">&darr;</a></td>
+		<td align="right"><a href="{url op="editJournal" path=$journal->getId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a class="action" href="{url op="deleteJournal" path=$journal->getId()}" onclick="return confirm('{translate|escape:"jsparam" key="admin.journals.confirmDelete"}')">{translate key="common.delete"}</a></td>
 	</tr>
 	{/iterate}
 	{if $journals->wasEmpty()}

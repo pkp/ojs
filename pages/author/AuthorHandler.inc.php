@@ -58,7 +58,7 @@ class AuthorHandler extends Handler {
 
 		if ($sort == 'status') {
 			// FIXME Does not pass $rangeInfo else we only get partial results
-			$unsortedSubmissions = $authorSubmissionDao->getAuthorSubmissions($user->getId(), $journal->getJournalId(), $active, null, $sort, $sortDirection);
+			$unsortedSubmissions = $authorSubmissionDao->getAuthorSubmissions($user->getId(), $journal->getId(), $active, null, $sort, $sortDirection);
 
 			// Sort all submissions by status, which is too complex to do in the DB
 			$submissionsArray = $unsortedSubmissions->toArray();
@@ -71,7 +71,7 @@ class AuthorHandler extends Handler {
 			import('core.ArrayItemIterator');
 			$submissions =& ArrayItemIterator::fromRangeInfo($submissionsArray, $rangeInfo);
 		} else {
-			$submissions = $authorSubmissionDao->getAuthorSubmissions($user->getId(), $journal->getJournalId(), $active, $rangeInfo, $sort, $sortDirection);
+			$submissions = $authorSubmissionDao->getAuthorSubmissions($user->getId(), $journal->getId(), $active, $rangeInfo, $sort, $sortDirection);
 		}
 
 		$templateMgr =& TemplateManager::getManager();

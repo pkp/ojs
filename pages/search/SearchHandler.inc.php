@@ -53,7 +53,7 @@ class SearchHandler extends Handler {
 			$yearRange = $publishedArticleDao->getArticleYearRange(null);
 		} else {
 			$journal =& Request::getJournal();
-			$yearRange = $publishedArticleDao->getArticleYearRange($journal->getJournalId());
+			$yearRange = $publishedArticleDao->getArticleYearRange($journal->getId());
 		}	
 
 		SearchHandler::assignAdvancedSearchParameters($templateMgr, $yearRange);
@@ -80,7 +80,7 @@ class SearchHandler extends Handler {
 			$affiliation = Request::getUserVar('affiliation');
 			$country = Request::getUserVar('country');
 
-			$publishedArticles = $authorDao->getPublishedArticlesForAuthor($journal?$journal->getJournalId():null, $firstName, $middleName, $lastName, $affiliation, $country);
+			$publishedArticles = $authorDao->getPublishedArticlesForAuthor($journal?$journal->getId():null, $firstName, $middleName, $lastName, $affiliation, $country);
 
 			// Load information associated with each article.
 			$journals = array();
@@ -138,7 +138,7 @@ class SearchHandler extends Handler {
 			$rangeInfo = Handler::getRangeInfo('authors');
 
 			$authors = &$authorDao->getAuthorsAlphabetizedByJournal(
-				isset($journal)?$journal->getJournalId():null,
+				isset($journal)?$journal->getId():null,
 				$searchInitial,
 				$rangeInfo
 			);
@@ -164,7 +164,7 @@ class SearchHandler extends Handler {
 
 		$rangeInfo = Handler::getRangeInfo('search');
 
-		$articleIds = &$publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal(isset($journal)?$journal->getJournalId():null);
+		$articleIds = &$publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal(isset($journal)?$journal->getId():null);
 		$totalResults = count($articleIds);
 		$articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 		$results = &new VirtualArrayIterator(ArticleSearch::formatResults($articleIds), $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
@@ -221,7 +221,7 @@ class SearchHandler extends Handler {
 		if (!empty($searchJournalId)) {
 			$journalDao = &DAORegistry::getDAO('JournalDAO');
 			$journal = &$journalDao->getJournal($searchJournalId);
-			$yearRange = $publishedArticleDao->getArticleYearRange($journal->getJournalId());
+			$yearRange = $publishedArticleDao->getArticleYearRange($journal->getId());
 		} else {
 			$journal =& Request::getJournal();
 			$yearRange = $publishedArticleDao->getArticleYearRange(null);

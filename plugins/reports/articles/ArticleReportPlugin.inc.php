@@ -59,7 +59,7 @@ class ArticleReportPlugin extends ReportPlugin {
 		header('content-disposition: attachment; filename=report.csv');
 
 		$articleReportDao =& DAORegistry::getDAO('ArticleReportDAO');
-		list($articlesIterator, $authorsIterator, $decisionsIteratorsArray) = $articleReportDao->getArticleReport($journal->getJournalId());
+		list($articlesIterator, $authorsIterator, $decisionsIteratorsArray) = $articleReportDao->getArticleReport($journal->getId());
 
 		$maxAuthors = $this->getMaxAuthorCount($authorsIterator);
 

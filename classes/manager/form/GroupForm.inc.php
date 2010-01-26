@@ -98,7 +98,7 @@ class GroupForm extends Form {
 		}
 
 		$this->group->setAssocType(ASSOC_TYPE_JOURNAL);
-		$this->group->setAssocId($journal->getJournalId());
+		$this->group->setAssocId($journal->getId());
 		$this->group->setTitle($this->getData('title'), null); // Localized
 		$this->group->setContext($this->getData('context'));
 

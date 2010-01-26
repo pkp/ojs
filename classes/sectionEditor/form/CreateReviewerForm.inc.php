@@ -173,7 +173,7 @@ class CreateReviewerForm extends Form {
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$journal =& Request::getJournal();
 		$role = new Role();
-		$role->setJournalId($journal->getJournalId());
+		$role->setJournalId($journal->getId());
 		$role->setUserId($userId);
 		$role->setRoleId(ROLE_ID_REVIEWER);
 		$roleDao->insertRole($role);

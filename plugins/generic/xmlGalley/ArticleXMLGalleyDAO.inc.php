@@ -97,7 +97,7 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 					$xmlGalley->setGalleyId($row['xml_galley_id']);
 
 					// only append PDF galleys if the correct plugin settings are set
-					if ( ($xmlGalleyPlugin->getSetting($journal->getJournalId(), 'nlmPDF') == 1 
+					if ( ($xmlGalleyPlugin->getSetting($journal->getId(), 'nlmPDF') == 1 
 							&& $xmlGalley->isPdfGalley()) || $xmlGalley->isHTMLGalley()) {
 						array_push($galleys, $xmlGalley);
 					}
@@ -142,8 +142,8 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 			$journal =& Request::getJournal();
 			$xmlGalleyPlugin =& PluginRegistry::getPlugin('generic', 'XMLGalleyPlugin');
 
-			if ($xmlGalleyPlugin->getSetting($journal->getJournalId(), 'nlmPDF') == 1 && 
-				$xmlGalleyPlugin->getSetting($journal->getJournalId(), 'XSLstylesheet') == 'NLM' ) {
+			if ($xmlGalleyPlugin->getSetting($journal->getId(), 'nlmPDF') == 1 && 
+				$xmlGalleyPlugin->getSetting($journal->getId(), 'XSLstylesheet') == 'NLM' ) {
 
 				// create a PDF galley
 				$this->update(

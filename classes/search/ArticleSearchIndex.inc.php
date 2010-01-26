@@ -256,7 +256,7 @@ class ArticleSearchIndex {
 
 			if ($log) echo "Indexing \"", $journal->getLocalizedTitle(), "\" ... ";
 
-			$articles =& $articleDao->getArticlesByJournalId($journal->getJournalId());
+			$articles =& $articleDao->getArticlesByJournalId($journal->getId());
 			while (!$articles->eof()) {
 				$article =& $articles->next();
 				if ($article->getDateSubmitted()) {

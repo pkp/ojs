@@ -71,7 +71,7 @@ class SubscriptionBlockPlugin extends BlockPlugin {
 	 */
 	function getContents(&$templateMgr) {
 		$journal =& Request::getJournal();
-		$journalId = ($journal)?$journal->getJournalId():null;
+		$journalId = ($journal)?$journal->getId():null;
 		if (!$journal) return '';
 
 		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION)

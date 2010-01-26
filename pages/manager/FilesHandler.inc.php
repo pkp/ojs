@@ -149,7 +149,7 @@ class FilesHandler extends ManagerHandler {
 
 	function getRealFilesDir($currentDir) {
 		$journal =& Request::getJournal();
-		return Config::getVar('files', 'files_dir') . '/journals/' . $journal->getJournalId() .'/' . $currentDir;
+		return Config::getVar('files', 'files_dir') . '/journals/' . $journal->getId() .'/' . $currentDir;
 	}
 
 	function fileNameFilter($var) {

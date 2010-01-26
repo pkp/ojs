@@ -68,7 +68,7 @@ class TemplateManager extends PKPTemplateManager {
 				$this->assign_by_ref('currentJournal', $journal);
 				$journalTitle = $journal->getLocalizedTitle();
 				$this->assign('siteTitle', $journalTitle);
-				$this->assign('publicFilesDir', $request->getBaseUrl() . '/' . PublicFileManager::getJournalFilesPath($journal->getJournalId()));
+				$this->assign('publicFilesDir', $request->getBaseUrl() . '/' . PublicFileManager::getJournalFilesPath($journal->getId()));
 
 				$this->assign('primaryLocale', $journal->getPrimaryLocale());
 				$this->assign('alternateLocales', $journal->getSetting('alternateLocales'));
@@ -83,7 +83,7 @@ class TemplateManager extends PKPTemplateManager {
 				$this->assign('displayPageHeaderTitleAltText', $journal->getLocalizedSetting('pageHeaderTitleImageAltText'));
 				$this->assign('displayPageHeaderLogoAltText', $journal->getLocalizedSetting('pageHeaderLogoImageAltText'));
 				$this->assign('displayFavicon', $journal->getLocalizedFavicon());
-				$this->assign('faviconDir', $request->getBaseUrl() . '/' . PublicFileManager::getJournalFilesPath($journal->getJournalId()));
+				$this->assign('faviconDir', $request->getBaseUrl() . '/' . PublicFileManager::getJournalFilesPath($journal->getId()));
 				$this->assign('alternatePageHeader', $journal->getLocalizedSetting('journalPageHeader'));
 				$this->assign('metaSearchDescription', $journal->getLocalizedSetting('searchDescription'));
 				$this->assign('metaSearchKeywords', $journal->getLocalizedSetting('searchKeywords'));
@@ -103,7 +103,7 @@ class TemplateManager extends PKPTemplateManager {
 				// Assign stylesheets and footer
 				$journalStyleSheet = $journal->getSetting('journalStyleSheet');
 				if ($journalStyleSheet) {
-					$this->addStyleSheet($request->getBaseUrl() . '/' . PublicFileManager::getJournalFilesPath($journal->getJournalId()) . '/' . $journalStyleSheet['uploadName']);
+					$this->addStyleSheet($request->getBaseUrl() . '/' . PublicFileManager::getJournalFilesPath($journal->getId()) . '/' . $journalStyleSheet['uploadName']);
 				}
 
 				import('payment.ojs.OJSPaymentManager');

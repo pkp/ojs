@@ -60,7 +60,7 @@ class ReviewReportPlugin extends ReportPlugin {
 		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_SUBMISSION));
 
 		$reviewReportDao =& DAORegistry::getDAO('ReviewReportDAO');
-		list($commentsIterator, $reviewsIterator) = $reviewReportDao->getReviewReport($journal->getJournalId());
+		list($commentsIterator, $reviewsIterator) = $reviewReportDao->getReviewReport($journal->getId());
 
 		$comments = array();
 		while ($row =& $commentsIterator->next()) {

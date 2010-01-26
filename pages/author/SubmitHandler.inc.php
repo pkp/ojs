@@ -176,7 +176,7 @@ class SubmitHandler extends AuthorHandler {
 					$templateMgr->assign_by_ref('journal', $journal);
 					// If this is an editor and there is a
 					// submission file, article can be expedited.
-					if (Validation::isEditor($journal->getJournalId()) && $article->getSubmissionFileId()) {
+					if (Validation::isEditor($journal->getId()) && $article->getSubmissionFileId()) {
 						$templateMgr->assign('canExpedite', true);
 					}
 					$templateMgr->assign('articleId', $articleId);
@@ -291,7 +291,7 @@ class SubmitHandler extends AuthorHandler {
 		$article =& $this->article;
 
 		// The author must also be an editor to perform this task.
-		if (Validation::isEditor($journal->getJournalId()) && $article->getSubmissionFileId()) {
+		if (Validation::isEditor($journal->getId()) && $article->getSubmissionFileId()) {
 			import('submission.editor.EditorAction');
 			EditorAction::expediteSubmission($article);
 			Request::redirect(null, 'editor', 'submissionEditing', array($article->getArticleId()));
@@ -321,7 +321,7 @@ class SubmitHandler extends AuthorHandler {
 		// Check that article exists for this journal and user and that submission is incomplete
 		if (isset($articleId)) {
 			$article =& $articleDao->getArticle((int) $articleId);
-			if (!$article || $article->getUserId() !== $user->getId() || $article->getJournalId() !== $journal->getJournalId() || ($step !== false && $step > $article->getSubmissionProgress())) {
+			if (!$article || $article->getUserId() !== $user->getId() || $article->getJournalId() !== $journal->getId() || ($step !== false && $step > $article->getSubmissionProgress())) {
 				Request::redirect(null, null, 'submit');
 			}
 		}

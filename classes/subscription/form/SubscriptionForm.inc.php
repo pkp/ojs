@@ -213,7 +213,7 @@ class SubscriptionForm extends Form {
 
 		// If notify email is requested, ensure subscription contact name and email exist.
 		if ($this->_data['notifyEmail'] == 1) {
-			$this->addCheck(new FormValidatorCustom($this, 'notifyEmail', 'required', 'manager.subscriptions.form.subscriptionContactRequired', create_function('', '$journal =& Request::getJournal(); $journalSettingsDao =& DAORegistry::getDAO(\'JournalSettingsDAO\'); $subscriptionName = $journalSettingsDao->getSetting($journal->getJournalId(), \'subscriptionName\'); $subscriptionEmail = $journalSettingsDao->getSetting($journal->getJournalId(), \'subscriptionEmail\'); return $subscriptionName != \'\' && $subscriptionEmail != \'\' ? true : false;'), array()));
+			$this->addCheck(new FormValidatorCustom($this, 'notifyEmail', 'required', 'manager.subscriptions.form.subscriptionContactRequired', create_function('', '$journal =& Request::getJournal(); $journalSettingsDao =& DAORegistry::getDAO(\'JournalSettingsDAO\'); $subscriptionName = $journalSettingsDao->getSetting($journal->getId(), \'subscriptionName\'); $subscriptionEmail = $journalSettingsDao->getSetting($journal->getId(), \'subscriptionEmail\'); return $subscriptionName != \'\' && $subscriptionEmail != \'\' ? true : false;'), array()));
 		}
 	}
 
@@ -227,7 +227,7 @@ class SubscriptionForm extends Form {
 		$userDao =& DAORegistry::getDAO('UserDAO');
 		$user =& $userDao->getUser($this->getData('userId'));
 
-		$subscription->setJournalId($journal->getJournalId());
+		$subscription->setJournalId($journal->getId());
 		$subscription->setStatus($this->getData('status'));
 		$subscription->setUserId($this->getData('userId'));
 		$subscription->setTypeId($this->getData('typeId'));
@@ -267,7 +267,7 @@ class SubscriptionForm extends Form {
 
 		$journal =& Request::getJournal();
 		$journalName = $journal->getLocalizedTitle();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 		$user =& $userDao->getUser($this->subscription->getUserId());
 		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($this->subscription->getTypeId());
 

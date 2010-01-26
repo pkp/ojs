@@ -101,7 +101,7 @@ class CustomLocaleHandler extends Handler {
 		import('file.FileManager');
 		import('file.EditableLocaleFile');
 		$journal = Request::getJournal();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 		$publicFilesDir = Config::getVar('files', 'public_files_dir');
 		$customLocaleDir = $publicFilesDir . DIRECTORY_SEPARATOR . 'journals' . DIRECTORY_SEPARATOR . $journalId . DIRECTORY_SEPARATOR . CUSTOM_LOCALE_DIR;
 		$customLocalePath = $customLocaleDir . DIRECTORY_SEPARATOR . $locale . DIRECTORY_SEPARATOR . $filename;
@@ -160,7 +160,7 @@ class CustomLocaleHandler extends Handler {
 		}
 
 		$journal =& Request::getJournal();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 		$changes = Request::getUserVar('changes');
 		$customFilesDir = Config::getVar('files', 'public_files_dir') . DIRECTORY_SEPARATOR . 'journals' . DIRECTORY_SEPARATOR . $journalId . DIRECTORY_SEPARATOR . CUSTOM_LOCALE_DIR . DIRECTORY_SEPARATOR . $locale;
 		$customFilePath = $customFilesDir . DIRECTORY_SEPARATOR . $filename;

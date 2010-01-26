@@ -116,11 +116,11 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 		if (!isset($typeMap[$type])) return false;
 
 		// Get limit setting, if any 
-		$limitRecentItems = $announcementFeedPlugin->getSetting($journal->getJournalId(), 'limitRecentItems');
-		$recentItems = (int) $announcementFeedPlugin->getSetting($journal->getJournalId(), 'recentItems');
+		$limitRecentItems = $announcementFeedPlugin->getSetting($journal->getId(), 'limitRecentItems');
+		$recentItems = (int) $announcementFeedPlugin->getSetting($journal->getId(), 'recentItems');
 
 		$announcementDao =& DAORegistry::getDAO('AnnouncementDAO');
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 		if ($limitRecentItems && $recentItems > 0) {
 			import('db.DBResultRange');
 			$rangeInfo = new DBResultRange($recentItems, 1);
@@ -130,11 +130,11 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 		}
 
 		// Get date of most recent announcement
-		$lastDateUpdated = $announcementFeedPlugin->getSetting($journal->getJournalId(), 'dateUpdated');
+		$lastDateUpdated = $announcementFeedPlugin->getSetting($journal->getId(), 'dateUpdated');
 		if ($announcements->wasEmpty()) {
 			if (empty($lastDateUpdated)) { 
 				$dateUpdated = Core::getCurrentDate(); 
-				$announcementFeedPlugin->updateSetting($journal->getJournalId(), 'dateUpdated', $dateUpdated, 'string');			
+				$announcementFeedPlugin->updateSetting($journal->getId(), 'dateUpdated', $dateUpdated, 'string');			
 			} else {
 				$dateUpdated = $lastDateUpdated;
 			}
@@ -142,7 +142,7 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 			$mostRecentAnnouncement =& $announcementDao->getMostRecentAnnouncementByAssocId(ASSOC_TYPE_JOURNAL, $journalId);
 			$dateUpdated = $mostRecentAnnouncement->getDatetimePosted();
 			if (empty($lastDateUpdated) || (strtotime($dateUpdated) > strtotime($lastDateUpdated))) { 
-				$announcementFeedPlugin->updateSetting($journal->getJournalId(), 'dateUpdated', $dateUpdated, 'string');			
+				$announcementFeedPlugin->updateSetting($journal->getId(), 'dateUpdated', $dateUpdated, 'string');			
 			}
 		}
 

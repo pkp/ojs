@@ -73,7 +73,7 @@ class GatewayPlugin extends Plugin {
 	function getEnabled() {
 		$journal =& Request::getJournal();
 		if (!$journal) return false;
-		return $this->getSetting($journal->getJournalId(), 'enabled');
+		return $this->getSetting($journal->getId(), 'enabled');
 	}
 
 	/**
@@ -83,7 +83,7 @@ class GatewayPlugin extends Plugin {
 		$journal =& Request::getJournal();
 		if ($journal) {
 			$this->updateSetting(
-				$journal->getJournalId(),
+				$journal->getId(),
 				'enabled',
 				$enabled?true:false
 			);

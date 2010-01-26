@@ -30,7 +30,7 @@ class LoginHandler extends PKPLoginHandler {
 			$userId = (int)$args[0];
 			$journal =& Request::getJournal();
 
-			if (!Validation::canAdminister($journal->getJournalId(), $userId)) {
+			if (!Validation::canAdminister($journal->getId(), $userId)) {
 				// We don't have administrative rights
 				// over this user. Display an error.
 				$templateMgr =& TemplateManager::getManager();

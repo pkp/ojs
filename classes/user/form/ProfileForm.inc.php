@@ -138,7 +138,7 @@ class ProfileForm extends Form {
 		$journal =& Request::getJournal();
 		if ($journal) {
 			$roleDao =& DAORegistry::getDAO('RoleDAO');
-			$roles =& $roleDao->getRolesByUserId($user->getId(), $journal->getJournalId());
+			$roles =& $roleDao->getRolesByUserId($user->getId(), $journal->getId());
 			$roleNames = array();
 			foreach ($roles as $role) $roleNames[$role->getRolePath()] = $role->getRoleName();
 			$templateMgr->assign('allowRegReviewer', $journal->getSetting('allowRegReviewer'));
@@ -264,7 +264,7 @@ class ProfileForm extends Form {
 		if ($journal) {
 			$role = new Role();
 			$role->setUserId($user->getId());
-			$role->setJournalId($journal->getJournalId());
+			$role->setJournalId($journal->getId());
 			if ($journal->getSetting('allowRegReviewer')) {
 				$role->setRoleId(ROLE_ID_REVIEWER);
 				$hasRole = Validation::isReviewer();

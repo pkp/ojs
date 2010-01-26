@@ -138,9 +138,9 @@ class JournalSetupStep5Form extends JournalSetupForm {
 			}
 
 			$uploadName = $settingName . '_' . $locale . $extension;
-			if ($fileManager->uploadJournalFile($journal->getJournalId(), $settingName, $uploadName)) {
+			if ($fileManager->uploadJournalFile($journal->getId(), $settingName, $uploadName)) {
 				// Get image dimensions
-				$filePath = $fileManager->getJournalFilesPath($journal->getJournalId());
+				$filePath = $fileManager->getJournalFilesPath($journal->getId());
 				list($width, $height) = getimagesize($filePath . '/' . $uploadName);
 
 				$value = $journal->getSetting($settingName);
@@ -178,12 +178,12 @@ class JournalSetupStep5Form extends JournalSetupForm {
 	function deleteImage($settingName, $locale = null) {
 		$journal =& Request::getJournal();
 		$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-		$setting = $settingsDao->getSetting($journal->getJournalId(), $settingName);
+		$setting = $settingsDao->getSetting($journal->getId(), $settingName);
 
 		import('file.PublicFileManager');
 		$fileManager = new PublicFileManager();
-		if ($fileManager->removeJournalFile($journal->getJournalId(), $locale !== null ? $setting[$locale]['uploadName'] : $setting['uploadName'] )) {
-			$returner = $settingsDao->deleteSetting($journal->getJournalId(), $settingName, $locale);
+		if ($fileManager->removeJournalFile($journal->getId(), $locale !== null ? $setting[$locale]['uploadName'] : $setting['uploadName'] )) {
+			$returner = $settingsDao->deleteSetting($journal->getId(), $settingName, $locale);
 			// Ensure page header is refreshed
 			if ($returner) {
 				$templateMgr =& TemplateManager::getManager();
@@ -215,14 +215,14 @@ class JournalSetupStep5Form extends JournalSetupForm {
 			}
 
 			$uploadName = $settingName . '.css';
-			if($fileManager->uploadJournalFile($journal->getJournalId(), $settingName, $uploadName)) {
+			if($fileManager->uploadJournalFile($journal->getId(), $settingName, $uploadName)) {
 				$value = array(
 					'name' => $fileManager->getUploadedFileName($settingName),
 					'uploadName' => $uploadName,
 					'dateUploaded' => date("Y-m-d g:i:s")
 				);
 
-				$settingsDao->updateSetting($journal->getJournalId(), $settingName, $value, 'object');
+				$settingsDao->updateSetting($journal->getId(), $settingName, $value, 'object');
 				return true;
 			}
 		}

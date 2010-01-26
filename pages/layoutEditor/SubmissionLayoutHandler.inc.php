@@ -549,7 +549,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 
 		$layoutDao =& DAORegistry::getDAO('LayoutEditorSubmissionDAO');
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$submission =& $layoutDao->getSubmission($articleId, $journal->getJournalId());
+		$submission =& $layoutDao->getSubmission($articleId, $journal->getId());
 
 		if (isset($submission)) {
 			$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);

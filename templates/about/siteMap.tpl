@@ -39,7 +39,7 @@
 				<li>
 					{if $isUserLoggedIn}
 						<ul class="plain">
-							{assign var=currentJournalId value=$currentJournal->getJournalId()}
+							{assign var=currentJournalId value=$currentJournal->getId()}
 							{foreach from=$rolesByJournal[$currentJournalId] item=role}
 								{translate|assign:"roleName" key=$role->getRoleName()}
 								<li><a href="{url journal=`$currentJournal->getPath()` page=`$role->getRolePath()`}">{$roleName|escape}</a></li>

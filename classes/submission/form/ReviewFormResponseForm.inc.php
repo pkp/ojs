@@ -49,7 +49,7 @@ class ReviewFormResponseForm extends Form {
 	function display() {
 		$journal =& Request::getJournal();
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
-		$reviewForm =& $reviewFormDao->getReviewForm($this->reviewFormId, $journal->getJournalId());
+		$reviewForm =& $reviewFormDao->getReviewForm($this->reviewFormId, $journal->getId());
 		$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
 		$reviewFormElements =& $reviewFormElementDao->getReviewFormElements($this->reviewFormId);
 		$reviewFormResponseDao =& DAORegistry::getDAO('ReviewFormResponseDAO');

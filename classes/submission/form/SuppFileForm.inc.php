@@ -110,7 +110,7 @@ class SuppFileForm extends Form {
 		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
 
 		$publicSuppFileId = $this->getData('publicSuppFileId');
-		if ($publicSuppFileId && $suppFileDao->suppFileExistsByPublicId($publicSuppFileId, $this->suppFileId, $journal->getJournalId())) {
+		if ($publicSuppFileId && $suppFileDao->suppFileExistsByPublicId($publicSuppFileId, $this->suppFileId, $journal->getId())) {
 			$this->addError('publicIssueId', Locale::translate('author.suppFile.suppFilePublicIdentificationExists'));
 			$this->addErrorField('publicSuppFileId');
 		}

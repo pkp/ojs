@@ -51,7 +51,7 @@ class CommentHandler extends Handler {
 		$journal =& Request::getJournal();
 		
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		$isManager = $roleDao->roleExists($journal->getJournalId(), $userId, ROLE_ID_JOURNAL_MANAGER);
+		$isManager = $roleDao->roleExists($journal->getId(), $userId, ROLE_ID_JOURNAL_MANAGER);
 
 		if (!$comment) $comments =& $commentDao->getRootCommentsByArticleId($articleId, 1);
 		else $comments =& $comment->getChildren();
@@ -152,7 +152,7 @@ class CommentHandler extends Handler {
 		$commentDao =& DAORegistry::getDAO('CommentDAO');
 
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		if (!$roleDao->roleExists($journal->getJournalId(), $userId, ROLE_ID_JOURNAL_MANAGER)) {
+		if (!$roleDao->roleExists($journal->getId(), $userId, ROLE_ID_JOURNAL_MANAGER)) {
 			Request::redirect(null, 'index');
 		}
 
@@ -169,7 +169,7 @@ class CommentHandler extends Handler {
 		parent::validate();
 
 		$journal =& Request::getJournal();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');

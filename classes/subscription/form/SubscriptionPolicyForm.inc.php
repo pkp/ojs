@@ -112,7 +112,7 @@ class SubscriptionPolicyForm extends Form {
 	function initData() {
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 		$journal =& Request::getJournal();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 
 		$this->_data = array(
 			'subscriptionName' => $journalSettingsDao->getSetting($journalId, 'subscriptionName'),
@@ -189,7 +189,7 @@ class SubscriptionPolicyForm extends Form {
 	function execute() {
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 		$journal =& Request::getJournal();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 
 		$journalSettingsDao->updateSetting($journalId, 'subscriptionName', $this->getData('subscriptionName'), 'string');
 		$journalSettingsDao->updateSetting($journalId, 'subscriptionEmail', $this->getData('subscriptionEmail'), 'string');

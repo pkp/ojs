@@ -188,7 +188,7 @@ class ThesisForm extends Form {
 
 		$thesisDao =& DAORegistry::getDAO('ThesisDAO');
 		$journal =& Request::getJournal();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 
 		if (isset($this->thesisId)) {
 			$thesis =& $thesisDao->getThesis($this->thesisId);

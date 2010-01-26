@@ -93,7 +93,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				$this->setBreadcrumbs(array(), true);
 				Locale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR));
 				$issueDao =& DAORegistry::getDAO('IssueDAO');
-				$issues =& $issueDao->getIssues($journal->getJournalId(), Handler::getRangeInfo('issues'));
+				$issues =& $issueDao->getIssues($journal->getId(), Handler::getRangeInfo('issues'));
 
 				$templateMgr->assign_by_ref('issues', $issues);
 				$templateMgr->display($this->getTemplatePath() . 'issues.tpl');
@@ -103,7 +103,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				$this->setBreadcrumbs(array(), true);
 				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 				$rangeInfo = Handler::getRangeInfo('articles');
-				$articleIds = $publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal($journal->getJournalId(), false);
+				$articleIds = $publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal($journal->getId(), false);
 				$totalArticles = count($articleIds);
 				if ($rangeInfo->isValid()) $articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 				import('core.VirtualArrayIterator');
@@ -135,7 +135,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				}
 
 				if (($issueId = Request::getUserVar('issueId'))) {
-					$context['issue'] = $issueDao->getIssueById($issueId, $journal->getJournalId());
+					$context['issue'] = $issueDao->getIssueById($issueId, $journal->getId());
 				}
 
 				if (!$temporaryFile) {
@@ -150,9 +150,9 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 					// import articles within an appropriate context. If not,
 					// prompt them for the.
 					if (!isset($context['issue']) || !isset($context['section'])) {
-						$issues =& $issueDao->getIssues($journal->getJournalId(), Handler::getRangeInfo('issues'));
+						$issues =& $issueDao->getIssues($journal->getId(), Handler::getRangeInfo('issues'));
 						$templateMgr->assign_by_ref('issues', $issues);
-						$templateMgr->assign('sectionOptions', array('0' => Locale::translate('author.submit.selectSection')) + $sectionDao->getSectionTitles($journal->getJournalId(), false));
+						$templateMgr->assign('sectionOptions', array('0' => Locale::translate('author.submit.selectSection')) + $sectionDao->getSectionTitles($journal->getId(), false));
 						$templateMgr->assign('temporaryFileId', $temporaryFile->getId());
 						return $templateMgr->display($this->getTemplatePath() . 'articleContext.tpl');
 					}
@@ -374,7 +374,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 						// Determine the extra context information required
 						// for importing articles.
 						if (array_shift($args) !== 'issue_id') return $this->usage($scriptName);
-						$issue =& $issueDao->getIssueByBestIssueId(($issueId = array_shift($args)), $journal->getJournalId());
+						$issue =& $issueDao->getIssueByBestIssueId(($issueId = array_shift($args)), $journal->getId());
 						if (!$issue) {
 							echo Locale::translate('plugins.importexport.native.cliError') . "\n";
 							echo Locale::translate('plugins.importexport.native.export.error.issueNotFound', array('issueId' => $issueId)) . "\n\n";
@@ -388,7 +388,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 								$section =& $sectionDao->getSection(($sectionIdentifier = array_shift($args)));
 								break;
 							case 'section_name':
-								$section =& $sectionDao->getSectionByTitle(($sectionIdentifier = array_shift($args)), $journal->getJournalId());
+								$section =& $sectionDao->getSectionByTitle(($sectionIdentifier = array_shift($args)), $journal->getId());
 								break;
 							case 'section_abbrev':
 								$section =& $sectionDao->getSectionByAbbrev(($sectionIdentifier = array_shift($args)));
@@ -429,7 +429,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				if ($xmlFile != '') switch (array_shift($args)) {
 					case 'article':
 						$articleId = array_shift($args);
-						$publishedArticle =& $publishedArticleDao->getPublishedArticleByBestArticleId($journal->getJournalId(), $articleId);
+						$publishedArticle =& $publishedArticleDao->getPublishedArticleByBestArticleId($journal->getId(), $articleId);
 						if ($publishedArticle == null) {
 							echo Locale::translate('plugins.importexport.native.cliError') . "\n";
 							echo Locale::translate('plugins.importexport.native.export.error.articleNotFound', array('articleId' => $articleId)) . "\n\n";
@@ -454,7 +454,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 						return;
 					case 'issue':
 						$issueId = array_shift($args);
-						$issue =& $issueDao->getIssueByBestIssueId($issueId, $journal->getJournalId());
+						$issue =& $issueDao->getIssueByBestIssueId($issueId, $journal->getId());
 						if ($issue == null) {
 							echo Locale::translate('plugins.importexport.native.cliError') . "\n";
 							echo Locale::translate('plugins.importexport.native.export.error.issueNotFound', array('issueId' => $issueId)) . "\n\n";
@@ -468,7 +468,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 					case 'issues':
 						$issues = array();
 						while (($issueId = array_shift($args))!==null) {
-							$issue =& $issueDao->getIssueByBestIssueId($issueId, $journal->getJournalId());
+							$issue =& $issueDao->getIssueByBestIssueId($issueId, $journal->getId());
 							if ($issue == null) {
 								echo Locale::translate('plugins.importexport.native.cliError') . "\n";
 								echo Locale::translate('plugins.importexport.native.export.error.issueNotFound', array('issueId' => $issueId)) . "\n\n";

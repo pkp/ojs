@@ -185,7 +185,7 @@ class CounterReportDAO extends DAO {
 		$journals =& $journalDao->getJournals();
 		$journalUrlMap = array();
 		while ($journal =& $journals->next()) {
-			$journalUrlMap[Request::url($journal->getPath(), 'index')] = $journal->getJournalId();
+			$journalUrlMap[Request::url($journal->getPath(), 'index')] = $journal->getId();
 			unset($journal);
 		}
 		unset($journals);

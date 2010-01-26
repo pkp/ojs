@@ -27,7 +27,7 @@ class MetsExportDom {
 		XMLCustomWriter::setAttribute($structMap, 'TYPE', 'logical');
 		$sDiv =& XMLCustomWriter::createElement($doc, 'METS:div');
 		XMLCustomWriter::setAttribute($sDiv, 'TYPE', 'journal');
-		XMLCustomWriter::setAttribute($sDiv, 'DMDID', 'J-'.$journal->getJournalId());
+		XMLCustomWriter::setAttribute($sDiv, 'DMDID', 'J-'.$journal->getId());
 		foreach ($issues as $issue) {
 			MetsExportDom::generateIssueDiv($doc, $sDiv, $issue);
 		}
@@ -126,7 +126,7 @@ class MetsExportDom {
 	 */
 	function generateJournalDmdSecDom(&$doc, $root, &$journal) {
 		$dmdSec =& XMLCustomWriter::createElement($doc, 'METS:dmdSec');
-		XMLCustomWriter::setAttribute($dmdSec, 'ID', 'J-'.$journal->getJournalId());
+		XMLCustomWriter::setAttribute($dmdSec, 'ID', 'J-'.$journal->getId());
 		$mdWrap =& XMLCustomWriter::createElement($doc, 'METS:mdWrap');
 		$xmlData =& XMLCustomWriter::createElement($doc, 'METS:xmlData');
 		XMLCustomWriter::setAttribute($mdWrap, 'MDTYPE', 'MODS');
@@ -619,7 +619,7 @@ class MetsExportDom {
 	{
 		$amdSec =& XMLCustomWriter::createElement($doc, 'METS:amdSec');
 		$techMD =& XMLCustomWriter::createElement($doc, 'METS:techMD');
-		XMLCustomWriter::setAttribute($techMD, 'ID', 'A-'.$journal->getJournalId());
+		XMLCustomWriter::setAttribute($techMD, 'ID', 'A-'.$journal->getId());
 		$mdWrap =& XMLCustomWriter::createElement($doc, 'METS:mdWrap');
 		XMLCustomWriter::setAttribute($mdWrap, 'MDTYPE', 'PREMIS');
 		$xmlData =& XMLCustomWriter::createElement($doc, 'METS:xmlData');
@@ -628,7 +628,7 @@ class MetsExportDom {
 		XMLCustomWriter::setAttribute($root, 'xsi:schemaLocation', str_replace(' http://www.loc.gov/standards/premis/v1 http://www.loc.gov/standards/premis/v1/PREMIS-v1-1.xsd', '', $root->getAttribute('xsi:schemaLocation')) . ' http://www.loc.gov/standards/premis/v1 http://www.loc.gov/standards/premis/v1/PREMIS-v1-1.xsd');
 		$objectIdentifier =& XMLCustomWriter::createElement($doc, 'premis:objectIdentifier');
 		XMLCustomWriter::createChildWithText($doc, $objectIdentifier, 'premis:objectIdentifierType', 'internal');
-		XMLCustomWriter::createChildWithText($doc, $objectIdentifier, 'premis:objectIdentifierValue', 'J-'.$journal->getJournalId());
+		XMLCustomWriter::createChildWithText($doc, $objectIdentifier, 'premis:objectIdentifierValue', 'J-'.$journal->getId());
 		XMLCustomWriter::appendChild($pObject, $objectIdentifier);
 		$preservationLevel =& Request::getUserVar('preservationLevel');
 		if($preservationLevel == ''){
@@ -685,7 +685,7 @@ class MetsExportDom {
 	 */
 	function getPublicFilePath(&$file, $pathComponent, &$journal) {
 		return Config::getVar('files', 'files_dir') . '/journals/' .
-			$journal->getJournalId() . '/articles/' .
+			$journal->getId() . '/articles/' .
 			$file->getArticleId() . '/' . $pathComponent .
 			'/' . $file->getFileName();
 	}

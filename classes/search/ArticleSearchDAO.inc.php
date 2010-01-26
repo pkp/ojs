@@ -100,7 +100,7 @@ class ArticleSearchDAO extends DAO {
 
 		if (!empty($journal)) {
 			$sqlWhere .= ' AND i.journal_id = ?';
-			$params[] = $journal->getJournalId();
+			$params[] = $journal->getId();
 		}
 
 		$result =& $this->retrieveCached(

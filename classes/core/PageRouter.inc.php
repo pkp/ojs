@@ -37,7 +37,7 @@ class PageRouter extends PKPPageRouter {
 
 		if ($journal =& $this->getContext($request, 1)) {
 			// The user is in the journal context, see if they have one role only
-			$roles =& $roleDao->getRolesByUserId($userId, $journal->getJournalId());
+			$roles =& $roleDao->getRolesByUserId($userId, $journal->getId());
 			if(count($roles) == 1) {
 				$role = array_shift($roles);
 				if ($role->getRoleId() == ROLE_ID_READER) $request->redirect(null, 'index');

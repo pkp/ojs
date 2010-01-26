@@ -259,7 +259,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 
 		$reviewerSubmission =& $reviewerSubmissionDao->getReviewerSubmission($reviewId);
 
-		if (!$reviewerSubmission || $reviewerSubmission->getJournalId() != $journal->getJournalId()) {
+		if (!$reviewerSubmission || $reviewerSubmission->getJournalId() != $journal->getId()) {
 			$isValid = false;
 		} elseif ($user && empty($newKey)) {
 			if ($reviewerSubmission->getReviewerId() != $user->getId()) {

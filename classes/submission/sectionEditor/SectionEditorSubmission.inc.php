@@ -505,7 +505,7 @@ class SectionEditorSubmission extends Article {
 
 		$journal =& Request::getJournal();
 		// Sanity check
-		if (!$journal || $journal->getJournalId() != $this->getJournalId()) return null;
+		if (!$journal || $journal->getId() != $this->getJournalId()) return null;
 
 		// Check whether it's in review or editing.
 		$inEditing = false;

@@ -43,7 +43,7 @@ class BlockPlugin extends Plugin {
 	 */
 	function getBlockContext() {
 		$journal =& Request::getJournal();
-		$journalId = ($journal?$journal->getJournalId():0);
+		$journalId = ($journal?$journal->getId():0);
 		return $this->getSetting($journalId, 'context');
 	}
 
@@ -53,7 +53,7 @@ class BlockPlugin extends Plugin {
 	 */
 	function setBlockContext($context) {
 		$journal =& Request::getJournal();
-		$journalId = ($journal?$journal->getJournalId():0);
+		$journalId = ($journal?$journal->getId():0);
 		return $this->updateSetting($journalId, 'context', $context, 'int');
 	}
 
@@ -72,7 +72,7 @@ class BlockPlugin extends Plugin {
 	 */
 	function getEnabled() {
 		$journal =& Request::getJournal();
-		$journalId = ($journal?$journal->getJournalId():0);
+		$journalId = ($journal?$journal->getId():0);
 		return $this->getSetting($journalId, 'enabled');
 	}
 
@@ -82,7 +82,7 @@ class BlockPlugin extends Plugin {
 	 */
 	function setEnabled($enabled) {
 		$journal =& Request::getJournal();
-		$journalId = ($journal?$journal->getJournalId():0);
+		$journalId = ($journal?$journal->getId():0);
 		return $this->updateSetting($journalId, 'enabled', $enabled, 'bool');
 	}
 
@@ -93,7 +93,7 @@ class BlockPlugin extends Plugin {
 	 */
 	function getSeq() {
 		$journal =& Request::getJournal();
-		$journalId = ($journal?$journal->getJournalId():0);
+		$journalId = ($journal?$journal->getId():0);
 		return $this->getSetting($journalId, 'seq');
 	}
 
@@ -104,7 +104,7 @@ class BlockPlugin extends Plugin {
 	 */
 	function setSeq($i) {
 		$journal =& Request::getJournal();
-		$journalId = ($journal?$journal->getJournalId():0);
+		$journalId = ($journal?$journal->getId():0);
 		return $this->updateSetting($journalId, 'seq', $i, 'int');
 	}
 

@@ -80,7 +80,7 @@ class JournalLanguagesHandler extends ManagerHandler {
 					
 		$journal =& Request::getJournal();
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-		$journalSettingsDao->reloadLocalizedDefaultSettings($journal->getJournalId(), 'registry/journalSettings.xml', array(
+		$journalSettingsDao->reloadLocalizedDefaultSettings($journal->getId(), 'registry/journalSettings.xml', array(
 				'indexUrl' => Request::getIndexUrl(),
 				'journalPath' => $journal->getData('path'),
 				'primaryLocale' => $journal->getPrimaryLocale(),

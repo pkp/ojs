@@ -180,7 +180,7 @@ class ArticleHTMLGalley extends ArticleGalley {
 					$journal =& Request::getJournal();
 					import ('file.PublicFileManager');
 					$publicFileManager = new PublicFileManager();
-					$url = Request::getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/' . implode('/', $urlParts) . ($anchor?'#' . $anchor:'');
+					$url = Request::getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getId()) . '/' . implode('/', $urlParts) . ($anchor?'#' . $anchor:'');
 				break;
 		}
 		return $matchArray[1] . $url . $matchArray[3];

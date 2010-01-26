@@ -34,7 +34,7 @@ class JournalFileManager extends FileManager {
 	 * @param $journalId int
 	 */
 	function JournalFileManager(&$journal) {
-		$this->journalId = $journal->getJournalId();
+		$this->journalId = $journal->getId();
 		$this->journal =& $journal;
 		$this->filesDir = Config::getVar('files', 'files_dir') . '/journals/' . $this->journalId . '/';
 	}

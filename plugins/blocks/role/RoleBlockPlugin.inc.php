@@ -77,7 +77,7 @@ class RoleBlockPlugin extends BlockPlugin {
 		if (!$journal || !$user) return null;
 
 		$userId = $user->getId();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 
 		$templateMgr =& TemplateManager::getManager();
 
@@ -110,7 +110,7 @@ class RoleBlockPlugin extends BlockPlugin {
 			case 'editor':
 				if (Request::getRequestedOp() == 'index') return null;
 				$editorSubmissionDao =& DAORegistry::getDAO('EditorSubmissionDAO');
-				$submissionsCount =& $editorSubmissionDao->getEditorSubmissionsCount($journal->getJournalId());
+				$submissionsCount =& $editorSubmissionDao->getEditorSubmissionsCount($journal->getId());
 				$templateMgr->assign('submissionsCount', $submissionsCount);
 				return 'editor.tpl';
 			case 'sectionEditor':

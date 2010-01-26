@@ -29,7 +29,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 
 		// Validation checks for this form
 		$this->addCheck(new FormValidator($this, 'sectionId', 'required', 'author.submit.form.sectionRequired'));
-		$this->addCheck(new FormValidatorCustom($this, 'sectionId', 'required', 'author.submit.form.sectionRequired', array(DAORegistry::getDAO('SectionDAO'), 'sectionExists'), array($journal->getJournalId())));
+		$this->addCheck(new FormValidatorCustom($this, 'sectionId', 'required', 'author.submit.form.sectionRequired', array(DAORegistry::getDAO('SectionDAO'), 'sectionExists'), array($journal->getId())));
 	}
 
 	/**
@@ -48,7 +48,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 		// to submit to sections flagged as "editor-only" for submissions.
 		// Otherwise, display only sections they are allowed to submit to.
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		$isEditor = $roleDao->roleExists($journal->getJournalId(), $user->getId(), ROLE_ID_EDITOR) || $roleDao->roleExists($journal->getJournalId(), $user->getId(), ROLE_ID_SECTION_EDITOR);
+		$isEditor = $roleDao->roleExists($journal->getId(), $user->getId(), ROLE_ID_EDITOR) || $roleDao->roleExists($journal->getId(), $user->getId(), ROLE_ID_SECTION_EDITOR);
 
 		// Set up required Payment Related Information
 		import('payment.ojs.OJSPaymentManager');
@@ -59,15 +59,15 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 			$articleId = $this->articleId;
 
 			if ( $paymentManager->submissionEnabled() ) {
-				$templateMgr->assign_by_ref('submissionPayment', $completedPaymentDAO->getSubmissionCompletedPayment ( $journal->getJournalId(), $articleId ));
+				$templateMgr->assign_by_ref('submissionPayment', $completedPaymentDAO->getSubmissionCompletedPayment ( $journal->getId(), $articleId ));
 			}
 
 			if ( $paymentManager->fastTrackEnabled()  ) {
-				$templateMgr->assign_by_ref('fastTrackPayment', $completedPaymentDAO->getFastTrackCompletedPayment ( $journal->getJournalId(), $articleId ));
+				$templateMgr->assign_by_ref('fastTrackPayment', $completedPaymentDAO->getFastTrackCompletedPayment ( $journal->getId(), $articleId ));
 			}
 		}
 
-		$templateMgr->assign('sectionOptions', array('0' => Locale::translate('author.submit.selectSection')) + $sectionDao->getSectionTitles($journal->getJournalId(), !$isEditor));
+		$templateMgr->assign('sectionOptions', array('0' => Locale::translate('author.submit.selectSection')) + $sectionDao->getSectionTitles($journal->getId(), !$isEditor));
 		parent::display();
 	}
 
@@ -114,7 +114,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 
 			$this->article = new Article();
 			$this->article->setUserId($user->getId());
-			$this->article->setJournalId($journal->getJournalId());
+			$this->article->setJournalId($journal->getId());
 			$this->article->setSectionId($this->getData('sectionId'));
 			$this->article->stampStatusModified();
 			$this->article->setSubmissionProgress($this->step + 1);

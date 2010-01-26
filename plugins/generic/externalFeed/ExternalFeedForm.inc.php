@@ -121,7 +121,7 @@ class ExternalFeedForm extends Form {
 	 */
 	function execute() {
 		$journal =& Request::getJournal();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 		$plugin =& $this->plugin;
 
 		$externalFeedDao =& DAORegistry::getDAO('ExternalFeedDAO');

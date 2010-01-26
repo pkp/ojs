@@ -40,7 +40,7 @@ class DonationsHandler extends Handler {
 
 		$user =& Request::getUser();
 
-		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getJournalId(), PAYMENT_TYPE_DONATION, $user->getId(), 0, 0);
+		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_DONATION, $user->getId(), 0, 0);
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
 	
 		$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);		

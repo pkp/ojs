@@ -40,7 +40,7 @@ class HandlerValidatorRoles extends HandlerValidator {
 	 */
 	function isValid() {
 		$journal =& Request::getJournal();
-		$journalId = ($journal)?$journal->getJournalId():0;
+		$journalId = ($journal)?$journal->getId():0;
 		
 		$user = Request::getUser();
 		if ( !$user ) return false;

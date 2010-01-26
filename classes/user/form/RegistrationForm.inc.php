@@ -266,21 +266,21 @@ class RegistrationForm extends Form {
 		$allowedRoles = array('reader' => 'registerAsReader', 'author' => 'registerAsAuthor', 'reviewer' => 'registerAsReviewer');
 
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-		if (!$journalSettingsDao->getSetting($journal->getJournalId(), 'allowRegReader')) {
+		if (!$journalSettingsDao->getSetting($journal->getId(), 'allowRegReader')) {
 			unset($allowedRoles['reader']);
 		}
-		if (!$journalSettingsDao->getSetting($journal->getJournalId(), 'allowRegAuthor')) {
+		if (!$journalSettingsDao->getSetting($journal->getId(), 'allowRegAuthor')) {
 			unset($allowedRoles['author']);
 		}
-		if (!$journalSettingsDao->getSetting($journal->getJournalId(), 'allowRegReviewer')) {
+		if (!$journalSettingsDao->getSetting($journal->getId(), 'allowRegReviewer')) {
 			unset($allowedRoles['reviewer']);
 		}
 
 		foreach ($allowedRoles as $k => $v) {
 			$roleId = $roleDao->getRoleIdFromPath($k);
-			if ($this->getData($v) && !$roleDao->roleExists($journal->getJournalId(), $userId, $roleId)) {
+			if ($this->getData($v) && !$roleDao->roleExists($journal->getId(), $userId, $roleId)) {
 				$role = new Role();
-				$role->setJournalId($journal->getJournalId());
+				$role->setJournalId($journal->getId());
 				$role->setUserId($userId);
 				$role->setRoleId($roleId);
 				$roleDao->insertRole($role);
@@ -324,7 +324,7 @@ class RegistrationForm extends Form {
 
 		if (isset($allowedRoles['reader']) && $this->getData('openAccessNotification')) {
 			$userSettingsDao =& DAORegistry::getDAO('UserSettingsDAO');
-			$userSettingsDao->updateSetting($userId, 'openAccessNotification', true, 'bool', $journal->getJournalId());
+			$userSettingsDao->updateSetting($userId, 'openAccessNotification', true, 'bool', $journal->getId());
 		}
 	}
 

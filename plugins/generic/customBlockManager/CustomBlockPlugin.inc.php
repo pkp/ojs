@@ -100,7 +100,7 @@ class CustomBlockPlugin extends BlockPlugin {
 		$journal =& Request::getJournal();
 
 		$this->import('CustomBlockEditForm');
-		$form = new CustomBlockEditForm($this, $journal->getJournalId());
+		$form = new CustomBlockEditForm($this, $journal->getId());
 		
 		switch ($verb) {
 			case 'enable':
@@ -155,7 +155,7 @@ class CustomBlockPlugin extends BlockPlugin {
 		$journal =& Request::getJournal();
 		if (!$journal) return '';
 
-		$templateMgr->assign('customBlockContent', $this->getSetting($journal->getJournalId(), 'blockContent'));
+		$templateMgr->assign('customBlockContent', $this->getSetting($journal->getId(), 'blockContent'));
 		return parent::getContents($templateMgr);
 
 	}

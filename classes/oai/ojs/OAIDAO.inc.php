@@ -452,7 +452,7 @@ class OAIDAO extends DAO {
 			$abbrev = $journal->getPath();
 			array_push($sets, new OAISet(urlencode($abbrev), $title, ''));
 
-			$sections =& $this->sectionDao->getJournalSections($journal->getJournalId());
+			$sections =& $this->sectionDao->getJournalSections($journal->getId());
 			foreach ($sections->toArray() as $section) {
 				array_push($sets, new OAISet(urlencode($abbrev) . ':' . urlencode($section->getLocalizedAbbrev()), $section->getLocalizedTitle(), ''));
 			}
@@ -476,15 +476,15 @@ class OAIDAO extends DAO {
 		$journalId = null;
 
 		$journal =& $this->journalDao->getJournalByPath($journalSpec);
-		if (!isset($journal) || (isset($restrictJournalId) && $journal->getJournalId() != $restrictJournalId)) {
+		if (!isset($journal) || (isset($restrictJournalId) && $journal->getId() != $restrictJournalId)) {
 			return array(0, 0);
 		}
 
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 		$sectionId = null;
 
 		if (isset($sectionSpec)) {
-			$section =& $this->sectionDao->getSectionByAbbrev($sectionSpec, $journal->getJournalId());
+			$section =& $this->sectionDao->getSectionByAbbrev($sectionSpec, $journal->getId());
 			if (isset($section)) {
 				$sectionId = $section->getSectionId();
 			} else {

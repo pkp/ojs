@@ -193,7 +193,7 @@ class Validation {
 		if ($journalId === -1) {
 			// Get journal ID from request
 			$journal =& Request::getJournal();
-			$journalId = $journal == null ? 0 : $journal->getJournalId();
+			$journalId = $journal == null ? 0 : $journal->getId();
 		}
 
 		$sessionManager =& SessionManager::getManager();

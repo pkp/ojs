@@ -60,12 +60,12 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 			$articleId = $this->articleId;
 
 			if ( $paymentManager->submissionEnabled() ) {
-				$templateMgr->assign_by_ref('submissionPayment', $completedPaymentDAO->getSubmissionCompletedPayment ( $journal->getJournalId(), $articleId ));
+				$templateMgr->assign_by_ref('submissionPayment', $completedPaymentDAO->getSubmissionCompletedPayment ( $journal->getId(), $articleId ));
 				$templateMgr->assign('manualPayment', $journal->getSetting('paymentMethodPluginName') == 'ManualPayment');
 			}
 
 			if ( $paymentManager->fastTrackEnabled()  ) {
-				$templateMgr->assign_by_ref('fastTrackPayment', $completedPaymentDAO->getFastTrackCompletedPayment ( $journal->getJournalId(), $articleId ));
+				$templateMgr->assign_by_ref('fastTrackPayment', $completedPaymentDAO->getFastTrackCompletedPayment ( $journal->getId(), $articleId ));
 			}
 		}
 
@@ -100,7 +100,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 			if ( !parent::validate() ) return false;
 
 			$journal =& Request::getJournal();
-			$journalId = $journal->getJournalId();
+			$journalId = $journal->getId();
 			$articleId = $this->articleId;
 			$user =& Request::getUser();
 

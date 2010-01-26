@@ -99,7 +99,7 @@ class ThesisFeedBlockPlugin extends BlockPlugin {
 		if (!$thesisPlugin->getEnabled()) return ''; 
 
 		$plugin =& $this->getThesisFeedPlugin();
-		$displayPage = $plugin->getSetting($journal->getJournalId(), 'displayPage');
+		$displayPage = $plugin->getSetting($journal->getId(), 'displayPage');
 		$requestedPage = Request::getRequestedPage();
 
 		if (($displayPage == 'all') || ($displayPage == 'homepage' && (empty($requestedPage) || $requestedPage == 'index' || $requestedPage == 'thesis')) || ($displayPage == $requestedPage)) { 

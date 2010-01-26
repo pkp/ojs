@@ -39,7 +39,7 @@ class RTSetupHandler extends RTAdminHandler {
 			$rt = $rtDao->getJournalRTByJournal($journal);
 
 			$versionOptions = array();
-			$versions = $rtDao->getVersions($journal->getJournalId());
+			$versions = $rtDao->getVersions($journal->getId());
 			foreach ($versions->toArray() as $version) {
 				$versionOptions[$version->getVersionId()] = $version->getTitle();
 			}

@@ -103,7 +103,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 
 		$proofreaderDao =& DAORegistry::getDAO('ProofreaderSubmissionDAO');
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$submission =& $proofreaderDao->getSubmission($articleId, $journal->getJournalId());
+		$submission =& $proofreaderDao->getSubmission($articleId, $journal->getId());
 
 		if (isset($submission)) {
 			$proofSignoff = $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $articleId);

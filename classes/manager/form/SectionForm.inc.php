@@ -51,13 +51,13 @@ class SectionForm extends Form {
 		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'manager.sections.form.titleRequired'));
 		$this->addCheck(new FormValidatorLocale($this, 'abbrev', 'required', 'manager.sections.form.abbrevRequired'));
 		$this->addCheck(new FormValidatorPost($this));
-		$this->addCheck(new FormValidatorCustom($this, 'reviewFormId', 'optional', 'manager.sections.form.reviewFormId', array(DAORegistry::getDAO('ReviewFormDAO'), 'reviewFormExists'), array($journal->getJournalId())));
+		$this->addCheck(new FormValidatorCustom($this, 'reviewFormId', 'optional', 'manager.sections.form.reviewFormId', array(DAORegistry::getDAO('ReviewFormDAO'), 'reviewFormExists'), array($journal->getId())));
 
 		$this->includeSectionEditor = $this->omitSectionEditor = null;
 
 		// Get a list of section editors for this journal.
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		$this->sectionEditors =& $roleDao->getUsersByRoleId(ROLE_ID_SECTION_EDITOR, $journal->getJournalId());
+		$this->sectionEditors =& $roleDao->getUsersByRoleId(ROLE_ID_SECTION_EDITOR, $journal->getId());
 		$this->sectionEditors =& $this->sectionEditors->toArray();
 	}
 
@@ -107,7 +107,7 @@ class SectionForm extends Form {
 		$templateMgr->assign('helpTopicId','journal.managementPages.sections');
 
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
-		$reviewForms =& $reviewFormDao->getJournalActiveReviewForms($journal->getJournalId());
+		$reviewForms =& $reviewFormDao->getJournalActiveReviewForms($journal->getId());
 		$reviewFormOptions = array();
 		while ($reviewForm =& $reviewForms->next()) {
 			$reviewFormOptions[$reviewForm->getReviewFormId()] = $reviewForm->getReviewFormTitle();
@@ -125,7 +125,7 @@ class SectionForm extends Form {
 		$sectionEditorsDao =& DAORegistry::getDAO('SectionEditorsDAO');
 		if (isset($this->sectionId)) {
 			$sectionDao =& DAORegistry::getDAO('SectionDAO');
-			$section =& $sectionDao->getSection($this->sectionId, $journal->getJournalId());
+			$section =& $sectionDao->getSection($this->sectionId, $journal->getId());
 
 			if ($section == null) {
 				unset($this->sectionId);
@@ -144,14 +144,14 @@ class SectionForm extends Form {
 					'hideAbout' => $section->getHideAbout(),
 					'disableComments' => $section->getDisableComments(),
 					'policy' => $section->getPolicy(null), // Localized
-					'assignedEditors' => $sectionEditorsDao->getEditorsBySectionId($journal->getJournalId(), $this->sectionId),
-					'unassignedEditors' => $sectionEditorsDao->getEditorsNotInSection($journal->getJournalId(), $this->sectionId),
+					'assignedEditors' => $sectionEditorsDao->getEditorsBySectionId($journal->getId(), $this->sectionId),
+					'unassignedEditors' => $sectionEditorsDao->getEditorsNotInSection($journal->getId(), $this->sectionId),
 					'wordCount' => $section->getAbstractWordCount()
 				);
 			}
 		} else {
 			$this->_data = array(
-				'unassignedEditors' => $sectionEditorsDao->getEditorsNotInSection($journal->getJournalId(), null)
+				'unassignedEditors' => $sectionEditorsDao->getEditorsNotInSection($journal->getId(), null)
 			);
 		}
 	}
@@ -195,7 +195,7 @@ class SectionForm extends Form {
 	 */
 	function execute() {
 		$journal =& Request::getJournal();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 

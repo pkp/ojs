@@ -33,7 +33,7 @@ class AnnouncementHandler extends PKPAnnouncementHandler {
 		$journal =& Request::getJournal();
 
 		$announcementDao =& DAORegistry::getDAO('AnnouncementDAO');
-		$announcements =& $announcementDao->getAnnouncementsNotExpiredByAssocId(ASSOC_TYPE_JOURNAL, $journal->getJournalId(), $rangeInfo);
+		$announcements =& $announcementDao->getAnnouncementsNotExpiredByAssocId(ASSOC_TYPE_JOURNAL, $journal->getId(), $rangeInfo);
 		$announcementsIntroduction = $journal->getLocalizedSetting('announcementsIntroduction');
 
 		return $announcements;
@@ -47,7 +47,7 @@ class AnnouncementHandler extends PKPAnnouncementHandler {
 	function _announcementIsValid($announcementId) {
 		$journal =& Request::getJournal();
 		$announcementDao =& DAORegistry::getDAO('AnnouncementDAO');		
-		return ($announcementId != null && $announcementDao->getAnnouncementAssocId($announcementId) == $journal->getJournalId());
+		return ($announcementId != null && $announcementDao->getAnnouncementAssocId($announcementId) == $journal->getId());
 	}
 }
 

@@ -46,7 +46,7 @@ class SectionEditorHandler extends Handler {
 		$this->setupTemplate();
 
 		$journal =& Request::getJournal();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 		$user =& Request::getUser();
 
 		$rangeInfo = Handler::getRangeInfo('submissions');
@@ -66,7 +66,7 @@ class SectionEditorHandler extends Handler {
 		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
 
 		$page = isset($args[0]) ? $args[0] : '';
-		$sections =& $sectionDao->getSectionTitles($journal->getJournalId());
+		$sections =& $sectionDao->getSectionTitles($journal->getId());
 		
 		$sort = Request::getUserVar('sort');
 		$sort = isset($sort) ? $sort : 'id';
@@ -104,7 +104,7 @@ class SectionEditorHandler extends Handler {
 
 		$submissions =& $sectionEditorSubmissionDao->$functionName(
 			$user->getId(),
-			$journal->getJournalId(),
+			$journal->getId(),
 			$filterSection,
 			$searchField,
 			$searchMatch,

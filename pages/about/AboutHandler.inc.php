@@ -40,9 +40,9 @@ class AboutHandler extends Handler {
 			$journal =& Request::getJournal();
 
 			$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-			$templateMgr->assign_by_ref('journalSettings', $journalSettingsDao->getJournalSettings($journal->getJournalId()));
+			$templateMgr->assign_by_ref('journalSettings', $journalSettingsDao->getJournalSettings($journal->getId()));
 
-			$customAboutItems =& $journalSettingsDao->getSetting($journal->getJournalId(), 'customAboutItems');
+			$customAboutItems =& $journalSettingsDao->getSetting($journal->getId(), 'customAboutItems');
 			if (isset($customAboutItems[Locale::getLocale()])) $templateMgr->assign('customAboutItems', $customAboutItems[Locale::getLocale()]);
 			elseif (isset($customAboutItems[Locale::getPrimaryLocale()])) $templateMgr->assign('customAboutItems', $customAboutItems[Locale::getPrimaryLocale()]);
 
@@ -59,7 +59,7 @@ class AboutHandler extends Handler {
 			$templateMgr->assign('paymentConfigured', $paymentManager->isConfigured());
 
 			$groupDao =& DAORegistry::getDAO('GroupDAO');
-			$groups =& $groupDao->getGroups(ASSOC_TYPE_JOURNAL, $journal->getJournalId(), GROUP_CONTEXT_PEOPLE);
+			$groups =& $groupDao->getGroups(ASSOC_TYPE_JOURNAL, $journal->getId(), GROUP_CONTEXT_PEOPLE);
 
 			$templateMgr->assign_by_ref('peopleGroups', $groups);
 			$templateMgr->assign('helpTopicId', 'user.about');
@@ -106,7 +106,7 @@ class AboutHandler extends Handler {
 		$journal =& Request::getJournal();
 
 		$templateMgr =& TemplateManager::getManager();
-		$journalSettings =& $journalSettingsDao->getJournalSettings($journal->getJournalId());
+		$journalSettings =& $journalSettingsDao->getJournalSettings($journal->getId());
 		$templateMgr->assign_by_ref('journalSettings', $journalSettings);
 		$templateMgr->display('about/contact.tpl');
 	}
@@ -133,19 +133,19 @@ class AboutHandler extends Handler {
 			// Editorial Team information using Role info.
 			$roleDao =& DAORegistry::getDAO('RoleDAO');
 
-			$editors =& $roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getJournalId());
+			$editors =& $roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getId());
 			$editors =& $editors->toArray();
 
-			$sectionEditors =& $roleDao->getUsersByRoleId(ROLE_ID_SECTION_EDITOR, $journal->getJournalId());
+			$sectionEditors =& $roleDao->getUsersByRoleId(ROLE_ID_SECTION_EDITOR, $journal->getId());
 			$sectionEditors =& $sectionEditors->toArray();
 
-			$layoutEditors =& $roleDao->getUsersByRoleId(ROLE_ID_LAYOUT_EDITOR, $journal->getJournalId());
+			$layoutEditors =& $roleDao->getUsersByRoleId(ROLE_ID_LAYOUT_EDITOR, $journal->getId());
 			$layoutEditors =& $layoutEditors->toArray();
 
-			$copyEditors =& $roleDao->getUsersByRoleId(ROLE_ID_COPYEDITOR, $journal->getJournalId());
+			$copyEditors =& $roleDao->getUsersByRoleId(ROLE_ID_COPYEDITOR, $journal->getId());
 			$copyEditors =& $copyEditors->toArray();
 
-			$proofreaders =& $roleDao->getUsersByRoleId(ROLE_ID_PROOFREADER, $journal->getJournalId());
+			$proofreaders =& $roleDao->getUsersByRoleId(ROLE_ID_PROOFREADER, $journal->getId());
 			$proofreaders =& $proofreaders->toArray();
 
 			$templateMgr->assign_by_ref('editors', $editors);
@@ -160,7 +160,7 @@ class AboutHandler extends Handler {
 			$groupDao =& DAORegistry::getDAO('GroupDAO');
 			$groupMembershipDao =& DAORegistry::getDAO('GroupMembershipDAO');
 
-			$allGroups =& $groupDao->getGroups(ASSOC_TYPE_JOURNAL, $journal->getJournalId(), GROUP_CONTEXT_EDITORIAL_TEAM);
+			$allGroups =& $groupDao->getGroups(ASSOC_TYPE_JOURNAL, $journal->getId(), GROUP_CONTEXT_EDITORIAL_TEAM);
 			$teamInfo = array();
 			$groups = array();
 			while ($group =& $allGroups->next()) {
@@ -202,7 +202,7 @@ class AboutHandler extends Handler {
 		if (	!$journal || !$group ||
 			$group->getContext() != GROUP_CONTEXT_PEOPLE ||
 			$group->getAssocType() != ASSOC_TYPE_JOURNAL ||
-			$group->getAssocId() != $journal->getJournalId()
+			$group->getAssocId() != $journal->getId()
 		) {
 			Request::redirect(null, 'about');
 		}
@@ -250,35 +250,35 @@ class AboutHandler extends Handler {
 
 		$user = null;
 		if ($journal->getSetting('boardEnabled') != true) {
-			$editors =& $roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getJournalId());
+			$editors =& $roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getId());
 			while ($potentialUser =& $editors->next()) {
 				if ($potentialUser->getId() == $userId)
 					$user =& $potentialUser;
 				unset($potentialUser);
 			}
 
-			$sectionEditors =& $roleDao->getUsersByRoleId(ROLE_ID_SECTION_EDITOR, $journal->getJournalId());
+			$sectionEditors =& $roleDao->getUsersByRoleId(ROLE_ID_SECTION_EDITOR, $journal->getId());
 			while ($potentialUser =& $sectionEditors->next()) {
 				if ($potentialUser->getId() == $userId)
 					$user =& $potentialUser;
 				unset($potentialUser);
 			}
 
-			$layoutEditors =& $roleDao->getUsersByRoleId(ROLE_ID_LAYOUT_EDITOR, $journal->getJournalId());
+			$layoutEditors =& $roleDao->getUsersByRoleId(ROLE_ID_LAYOUT_EDITOR, $journal->getId());
 			while ($potentialUser =& $layoutEditors->next()) {
 				if ($potentialUser->getId() == $userId)
 					$user = $potentialUser;
 				unset($potentialUser);
 			}
 
-			$copyEditors =& $roleDao->getUsersByRoleId(ROLE_ID_COPYEDITOR, $journal->getJournalId());
+			$copyEditors =& $roleDao->getUsersByRoleId(ROLE_ID_COPYEDITOR, $journal->getId());
 			while ($potentialUser =& $copyEditors->next()) {
 				if ($potentialUser->getId() == $userId)
 					$user = $potentialUser;
 				unset($potentialUser);
 			}
 
-			$proofreaders =& $roleDao->getUsersByRoleId(ROLE_ID_PROOFREADER, $journal->getJournalId());
+			$proofreaders =& $roleDao->getUsersByRoleId(ROLE_ID_PROOFREADER, $journal->getId());
 			while ($potentialUser =& $proofreaders->next()) {
 				if ($potentialUser->getId() == $userId)
 					$user = $potentialUser;
@@ -289,7 +289,7 @@ class AboutHandler extends Handler {
 			$groupDao =& DAORegistry::getDAO('GroupDAO');
 			$groupMembershipDao =& DAORegistry::getDAO('GroupMembershipDAO');
 
-			$allGroups =& $groupDao->getGroups(ASSOC_TYPE_JOURNAL, $journal->getJournalId());
+			$allGroups =& $groupDao->getGroups(ASSOC_TYPE_JOURNAL, $journal->getId());
 			while ($group =& $allGroups->next()) {
 				if (!$group->getAboutDisplayed()) continue;
 				$allMemberships =& $groupMembershipDao->getMemberships($group->getId());
@@ -330,13 +330,13 @@ class AboutHandler extends Handler {
 		$journal =& Request::getJournal();
 
 		$templateMgr =& TemplateManager::getManager();
-		$sections =& $sectionDao->getJournalSections($journal->getJournalId());
+		$sections =& $sectionDao->getJournalSections($journal->getId());
 		$sections =& $sections->toArray();
 		$templateMgr->assign_by_ref('sections', $sections);
 
 		$sectionEditorEntriesBySection = array();
 		foreach ($sections as $section) {
-			$sectionEditorEntriesBySection[$section->getSectionId()] =& $sectionEditorsDao->getEditorsBySectionId($journal->getJournalId(), $section->getSectionId());
+			$sectionEditorEntriesBySection[$section->getSectionId()] =& $sectionEditorsDao->getEditorsBySectionId($journal->getId(), $section->getSectionId());
 		}
 		$templateMgr->assign_by_ref('sectionEditorEntriesBySection', $sectionEditorEntriesBySection);
 
@@ -356,7 +356,7 @@ class AboutHandler extends Handler {
 		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
 
 		$journal =& Request::getJournal();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 
 		$subscriptionName =& $journalSettingsDao->getSetting($journalId, 'subscriptionName');
 		$subscriptionEmail =& $journalSettingsDao->getSetting($journalId, 'subscriptionEmail');
@@ -389,7 +389,7 @@ class AboutHandler extends Handler {
 		$this->setupTemplate(true);
 		
 		$journal =& Request::getJournal();
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 
 		import('payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
@@ -426,7 +426,7 @@ class AboutHandler extends Handler {
 		$journal =& Request::getJournal();
 
 		$templateMgr =& TemplateManager::getManager();
-		$journalSettings =& $journalDao->getJournalSettings($journal->getJournalId());
+		$journalSettings =& $journalDao->getJournalSettings($journal->getId());
 		$submissionChecklist = $journal->getLocalizedSetting('submissionChecklist');
 		if (!empty($submissionChecklist)) {
 			ksort($submissionChecklist);
@@ -477,9 +477,9 @@ class AboutHandler extends Handler {
 			$journals =& $journalDao->getEnabledJournals();
 			// Fetch the user's roles for each journal
 			foreach ($journals->toArray() as $journal) {
-				$roles =& $roleDao->getRolesByUserId($user->getId(), $journal->getJournalId());
+				$roles =& $roleDao->getRolesByUserId($user->getId(), $journal->getId());
 				if (!empty($roles)) {
-					$rolesByJournal[$journal->getJournalId()] =& $roles;
+					$rolesByJournal[$journal->getId()] =& $roles;
 				}
 			}
 		}
@@ -560,33 +560,33 @@ class AboutHandler extends Handler {
 		$toDate = mktime(23, 59, 59, 12, 31, $statisticsYear);
 
 		$journalStatisticsDao =& DAORegistry::getDAO('JournalStatisticsDAO');
-		$articleStatistics = $journalStatisticsDao->getArticleStatistics($journal->getJournalId(), null, $fromDate, $toDate);
+		$articleStatistics = $journalStatisticsDao->getArticleStatistics($journal->getId(), null, $fromDate, $toDate);
 		$templateMgr->assign('articleStatistics', $articleStatistics);
 
-		$limitedArticleStatistics = $journalStatisticsDao->getArticleStatistics($journal->getJournalId(), $sectionIds, $fromDate, $toDate);
+		$limitedArticleStatistics = $journalStatisticsDao->getArticleStatistics($journal->getId(), $sectionIds, $fromDate, $toDate);
 		$templateMgr->assign('limitedArticleStatistics', $limitedArticleStatistics);
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$sections =& $sectionDao->getJournalSections($journal->getJournalId());
+		$sections =& $sectionDao->getJournalSections($journal->getId());
 		$templateMgr->assign('sections', $sections->toArray());
 
-		$issueStatistics = $journalStatisticsDao->getIssueStatistics($journal->getJournalId(), $fromDate, $toDate);
+		$issueStatistics = $journalStatisticsDao->getIssueStatistics($journal->getId(), $fromDate, $toDate);
 		$templateMgr->assign('issueStatistics', $issueStatistics);
 
-		$reviewerStatistics = $journalStatisticsDao->getReviewerStatistics($journal->getJournalId(), $sectionIds, $fromDate, $toDate);
+		$reviewerStatistics = $journalStatisticsDao->getReviewerStatistics($journal->getId(), $sectionIds, $fromDate, $toDate);
 		$templateMgr->assign('reviewerStatistics', $reviewerStatistics);
 
-		$allUserStatistics = $journalStatisticsDao->getUserStatistics($journal->getJournalId(), null, $toDate);
+		$allUserStatistics = $journalStatisticsDao->getUserStatistics($journal->getId(), null, $toDate);
 		$templateMgr->assign('allUserStatistics', $allUserStatistics);
 
-		$userStatistics = $journalStatisticsDao->getUserStatistics($journal->getJournalId(), $fromDate, $toDate);
+		$userStatistics = $journalStatisticsDao->getUserStatistics($journal->getId(), $fromDate, $toDate);
 		$templateMgr->assign('userStatistics', $userStatistics);
 
 		if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION) {
-			$allSubscriptionStatistics = $journalStatisticsDao->getSubscriptionStatistics($journal->getJournalId(), null, $toDate);
+			$allSubscriptionStatistics = $journalStatisticsDao->getSubscriptionStatistics($journal->getId(), null, $toDate);
 			$templateMgr->assign('allSubscriptionStatistics', $allSubscriptionStatistics);
 
-			$subscriptionStatistics = $journalStatisticsDao->getSubscriptionStatistics($journal->getJournalId(), $fromDate, $toDate);
+			$subscriptionStatistics = $journalStatisticsDao->getSubscriptionStatistics($journal->getId(), $fromDate, $toDate);
 			$templateMgr->assign('subscriptionStatistics', $subscriptionStatistics);
 		}
 

@@ -93,7 +93,7 @@ class KeywordCloudBlockPlugin extends BlockPlugin {
 
 		import('cache.CacheManager');
 		$cacheManager =& CacheManager::getManager();
-		$cache =& $cacheManager->getFileCache('keywords_' . Locale::getLocale(), $journal->getJournalId(), array(&$this, '_cacheMiss'));
+		$cache =& $cacheManager->getFileCache('keywords_' . Locale::getLocale(), $journal->getId(), array(&$this, '_cacheMiss'));
 		// If the cache is older than a couple of days, regenerate it
 		if (time() - $cache->getCacheTime() > 60 * 60 * 24 * KEYWORD_BLOCK_CACHE_DAYS) $cache->flush();
 

@@ -70,7 +70,7 @@ class CrossRefExportDom {
 		XMLCustomWriter::createChildWithText($doc, $head, 'doi_batch_id', $journal->getLocalizedSetting('initials') . '_' . time());
 		XMLCustomWriter::createChildWithText($doc, $head, 'timestamp', time());
 
-		$journalId = $journal->getJournalId();
+		$journalId = $journal->getId();
 
 		/* Depositor defaults to the Journal's technical Contact */
 		$depositorNode =& CrossRefExportDom::generateDepositorDom($doc, $journal->getSetting('supportName'), $journal->getSetting('supportEmail'));

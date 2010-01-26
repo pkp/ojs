@@ -70,7 +70,7 @@ class WebFeedPlugin extends GenericPlugin {
 	 */
 	function getEnabled() {
 		$journal =& Request::getJournal();
-		$journalId = $journal?$journal->getJournalId():0;
+		$journalId = $journal?$journal->getId():0;
 		return $this->getSetting($journalId, 'enabled');
 	}
 
@@ -110,8 +110,8 @@ class WebFeedPlugin extends GenericPlugin {
 			$requestedPage = Request::getRequestedPage();
 			if ($currentJournal) {
 				$issueDao =& DAORegistry::getDAO('IssueDAO');
-				$currentIssue =& $issueDao->getCurrentIssue($currentJournal->getJournalId());
-				$displayPage = $this->getSetting($currentJournal->getJournalId(), 'displayPage');
+				$currentIssue =& $issueDao->getCurrentIssue($currentJournal->getId());
+				$displayPage = $this->getSetting($currentJournal->getId(), 'displayPage');
 			} 
 
 			if ( ($currentIssue) && (($displayPage == 'all') || ($displayPage == 'homepage' && (empty($requestedPage) || $requestedPage == 'index' || $requestedPage == 'issue')) || ($displayPage == 'issue' && $displayPage == $requestedPage)) ) { 
@@ -197,7 +197,7 @@ class WebFeedPlugin extends GenericPlugin {
 				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 
 				$this->import('SettingsForm');
-				$form = new SettingsForm($this, $journal->getJournalId());
+				$form = new SettingsForm($this, $journal->getId());
 
 				if (Request::getUserVar('save')) {
 					$form->readInputData();
@@ -213,12 +213,12 @@ class WebFeedPlugin extends GenericPlugin {
 				}
 				break;
 			case 'enable':
-				$this->updateSetting($journal->getJournalId(), 'enabled', true);
+				$this->updateSetting($journal->getId(), 'enabled', true);
 				$message = Locale::translate('plugins.generic.webfeed.enabled');
 				$returner = false;
 				break;
 			case 'disable':
-				$this->updateSetting($journal->getJournalId(), 'enabled', false);
+				$this->updateSetting($journal->getId(), 'enabled', false);
 				$message = Locale::translate('plugins.generic.webfeed.disabled');
 				$returner = false;
 				break;	

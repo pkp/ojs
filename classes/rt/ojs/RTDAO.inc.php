@@ -29,7 +29,7 @@ class RTDAO extends DAO {
 	 * @return RT
 	 */
 	function &getJournalRTByJournal(&$journal) {
-		$rt = new JournalRT($journal->getJournalId());
+		$rt = new JournalRT($journal->getId());
 		$rt->setEnabled($journal->getSetting('rtEnabled')?true:false);
 		$rt->setVersion((int) $journal->getSetting('rtVersionId'));
 		$rt->setAbstract($journal->getSetting('rtAbstract')?true:false);
