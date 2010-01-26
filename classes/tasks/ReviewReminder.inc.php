@@ -89,7 +89,7 @@ class ReviewReminder extends ScheduledTask {
 		$incompleteAssignments =& $reviewAssignmentDao->getIncompleteReviewAssignments();
 		foreach ($incompleteAssignments as $reviewAssignment) {
 			// Fetch the Article and the Journal if necessary.
-			if ($article == null || $article->getArticleId() != $reviewAssignment->getArticleId()) {
+			if ($article == null || $article->getId() != $reviewAssignment->getArticleId()) {
 				unset($article);
 				$article =& $articleDao->getArticle($reviewAssignment->getArticleId());
 				if ($journal == null || $journal->getId() != $article->getJournalId()) {

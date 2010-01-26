@@ -25,7 +25,7 @@ class CopyeditCommentForm extends CommentForm {
 	 * @param $article object
 	 */
 	function CopyeditCommentForm($article, $roleId) {
-		parent::CommentForm($article, COMMENT_TYPE_COPYEDIT, $roleId, $article->getArticleId());
+		parent::CommentForm($article, COMMENT_TYPE_COPYEDIT, $roleId, $article->getId());
 	}
 
 	/**
@@ -40,7 +40,7 @@ class CopyeditCommentForm extends CommentForm {
 		$templateMgr->assign('commentType', 'copyedit');
 		$templateMgr->assign('hiddenFormParams', 
 			array(
-				'articleId' => $article->getArticleId()
+				'articleId' => $article->getId()
 			)
 		);
 
@@ -79,7 +79,7 @@ class CopyeditCommentForm extends CommentForm {
 
 		// Get editors
 		$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
-		$editAssignments =& $editAssignmentDao->getEditAssignmentsByArticleId($article->getArticleId());
+		$editAssignments =& $editAssignmentDao->getEditAssignmentsByArticleId($article->getId());
 		$editAssignments =& $editAssignments->toArray();
 		$editorAddresses = array();
 		foreach ($editAssignments as $editAssignment) {
@@ -97,7 +97,7 @@ class CopyeditCommentForm extends CommentForm {
 		}
 
 		// Get copyeditor
-		$copySignoff = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$copySignoff = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $article->getId());
 		if ($copySignoff != null && $copySignoff->getUserId() > 0) {
 			$copyeditor =& $userDao->getUser($copySignoff->getUserId());
 		} else {

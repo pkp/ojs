@@ -73,10 +73,10 @@ class MetsExportDom {
 	function generateArticleDiv(&$doc, &$root, &$article, &$issue) {
 		$pDiv =& XMLCustomWriter::createElement($doc, 'METS:div');
 		XMLCustomWriter::setAttribute($pDiv, 'TYPE', 'article');
-		XMLCustomWriter::setAttribute($pDiv, 'DMDID', 'A-'.$article->getArticleId());
+		XMLCustomWriter::setAttribute($pDiv, 'DMDID', 'A-'.$article->getId());
 		$ArticleGalleyDAO =& DAORegistry::getDAO('ArticleGalleyDAO');
 		$i = 0;
-		$GalleysArray =& $ArticleGalleyDAO->getGalleysByArticle($article->getArticleId());
+		$GalleysArray =& $ArticleGalleyDAO->getGalleysByArticle($article->getId());
 		while ($i < sizeof($GalleysArray)) {
 			MetsExportDom::generateArticleFileDiv($doc, $pDiv,  $GalleysArray[$i]);
    		 	if($GalleysArray[$i]->isHTMLGalley()){
@@ -88,7 +88,7 @@ class MetsExportDom {
 			$i++; 
 		}
 		$SuppFileDAO =& DAORegistry::getDAO('SuppFileDAO');
-		$suppFilesArray =& $SuppFileDAO->getSuppFilesByArticle($article->getArticleId());
+		$suppFilesArray =& $SuppFileDAO->getSuppFilesByArticle($article->getId());
 		$i = 0;
 		while ($i < sizeof($suppFilesArray)) {
 			MetsExportDom::generateArticleSuppFilesDiv($doc, $pDiv, $suppFilesArray[$i]);
@@ -108,7 +108,7 @@ class MetsExportDom {
 
 	function generateArticleHtmlGalleyImageFileDiv(&$doc, &$root, &$imageFile, &$article){
 		$fDiv =& XMLCustomWriter::createElement($doc, 'METS:fptr');
-		XMLCustomWriter::setAttribute($fDiv, 'FILEID', 'F'.$imageFile->getFileId().'-A'.$article->getArticleId());
+		XMLCustomWriter::setAttribute($fDiv, 'FILEID', 'F'.$imageFile->getFileId().'-A'.$article->getId());
 		XMLCustomWriter::appendChild($root, $fDiv);
 	}
 	
@@ -252,7 +252,7 @@ class MetsExportDom {
 	 */
 	function generateArticleDmdSecDom(&$doc, &$root, &$article, &$issue) {
 		$dmdSec =& XMLCustomWriter::createElement($doc, 'METS:dmdSec');
-		XMLCustomWriter::setAttribute($dmdSec, 'ID', 'A-'.$article->getArticleId());
+		XMLCustomWriter::setAttribute($dmdSec, 'ID', 'A-'.$article->getId());
 		$mdWrap =& XMLCustomWriter::createElement($doc, 'METS:mdWrap');
 		$xmlData =& XMLCustomWriter::createElement($doc, 'METS:xmlData');
 		XMLCustomWriter::setAttribute($mdWrap, 'MDTYPE', 'MODS');
@@ -359,7 +359,7 @@ class MetsExportDom {
 		XMLCustomWriter::appendChild($mdWrap,$xmlData);
 		XMLCustomWriter::appendChild($root, $dmdSec);
 		$SuppFileDAO =& DAORegistry::getDAO('SuppFileDAO');
-		$suppFilesArray =& $SuppFileDAO->getSuppFilesByArticle($article->getArticleId());
+		$suppFilesArray =& $SuppFileDAO->getSuppFilesByArticle($article->getId());
 		$i = 0;
 		while ($i < sizeof($suppFilesArray)) {
 			MetsExportDom::generateArticleSuppFilesDmdSecDom($doc, $root, $suppFilesArray[$i]);
@@ -468,14 +468,14 @@ class MetsExportDom {
 	function generateArticleFilesDom(&$doc, $root, $article, &$issue) {
 		$ArticleGalleyDAO =& DAORegistry::getDAO('ArticleGalleyDAO');
 		$i = 0;
-		$GalleysArray =& $ArticleGalleyDAO->getGalleysByArticle($article->getArticleId());
+		$GalleysArray =& $ArticleGalleyDAO->getGalleysByArticle($article->getId());
 		while ($i < sizeof($GalleysArray)) {
 			if(!$GalleysArray[$i]->isHTMLGalley())
 				MetsExportDom::generateArticleFileDom($doc, $root, $article, $GalleysArray[$i], null);
 			$i++; 
 		}
 		$SuppFileDAO =& DAORegistry::getDAO('SuppFileDAO');
-		$suppFilesArray =& $SuppFileDAO->getSuppFilesByArticle($article->getArticleId());
+		$suppFilesArray =& $SuppFileDAO->getSuppFilesByArticle($article->getId());
 		$i = 0;
 		while ($i < sizeof($suppFilesArray)) {
 			MetsExportDom::generateArticleSuppFileDom($doc, $root, $article, $suppFilesArray[$i]);
@@ -486,7 +486,7 @@ class MetsExportDom {
 	function generateArticleHtmlGalleyFilesDom(&$doc, $root, $article, &$issue) {
 		$ArticleGalleyDAO =& DAORegistry::getDAO('ArticleGalleyDAO');
 		$i = 0;
-		$GalleysArray =& $ArticleGalleyDAO->getGalleysByArticle($article->getArticleId());
+		$GalleysArray =& $ArticleGalleyDAO->getGalleysByArticle($article->getId());
 		while ($i < sizeof($GalleysArray)) {
 			if($GalleysArray[$i]->isHTMLGalley()){
 				MetsExportDom::generateArticleFileDom($doc, $root, $article, $GalleysArray[$i], 'html');
@@ -510,7 +510,7 @@ class MetsExportDom {
 		$journal =& $journalDao->getJournal($article->getJournalId());
 
 		$chkmd5return = md5_file($filePath);
-		XMLCustomWriter::setAttribute($mfile, 'ID', 'F'.$imageFile->getFileId().'-A'.$article->getArticleId());
+		XMLCustomWriter::setAttribute($mfile, 'ID', 'F'.$imageFile->getFileId().'-A'.$article->getId());
 		if($useAttribute != null)
 			XMLCustomWriter::setAttribute($mfile, 'USE', $useAttribute);
 		XMLCustomWriter::setAttribute($mfile, 'SIZE', $imageFile->getFileSize());
@@ -526,7 +526,7 @@ class MetsExportDom {
 		}
 		else{
 			$fLocat =& XMLCustomWriter::createElement($doc, 'METS:FLocat');
-			$fileUrl = Request::url(null, 'article', 'viewFile', array($article->getArticleId(), $galley->getBestGalleyId($journal), $imageFile->getFileId()));
+			$fileUrl = Request::url(null, 'article', 'viewFile', array($article->getId(), $galley->getBestGalleyId($journal), $imageFile->getFileId()));
 			XMLCustomWriter::setAttribute($fLocat, 'xlink:href', $fileUrl);
 			XMLCustomWriter::setAttribute($fLocat, 'LOCTYPE', 'URL');
 			XMLCustomWriter::appendChild($mfile, $fLocat);

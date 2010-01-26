@@ -17,7 +17,7 @@
 {foreach from=$comments item=comment}
 {assign var=poster value=$comment->getUser()}
 	<li>
-		<a href="{url page="comment" op="view" path=$article->getArticleId()|to_array:$galleyId:$comment->getCommentId()}" target="_parent">{$comment->getTitle()|escape|default:"&nbsp;"}</a>
+		<a href="{url page="comment" op="view" path=$article->getId()|to_array:$galleyId:$comment->getCommentId()}" target="_parent">{$comment->getTitle()|escape|default:"&nbsp;"}</a>
 		{if $comment->getChildCommentCount()==1}
 			{translate key="comments.oneReply"}
 		{elseif $comment->getChildCommentCount()>0}
@@ -39,7 +39,7 @@
 {/foreach}
 </ul>
 
-<a href="{url page="comment" op="view" path=$article->getArticleId()|to_array:$galleyId}" class="action" target="_parent">{translate key="comments.viewAllComments"}</a>
+<a href="{url page="comment" op="view" path=$article->getId()|to_array:$galleyId}" class="action" target="_parent">{translate key="comments.viewAllComments"}</a>
 
 {assign var=needsSeparator value=1}
 {/if}{* $comments *}
@@ -50,6 +50,6 @@
 	{else}
 		<br/><br/>
 	{/if}
-	<a class="action" href="{url page="comment" op="add" path=$article->getArticleId()|to_array:$galleyId}" target="_parent">{translate key="rt.addComment"}</a>
+	<a class="action" href="{url page="comment" op="add" path=$article->getId()|to_array:$galleyId}" target="_parent">{translate key="rt.addComment"}</a>
 {/if}
 </div>

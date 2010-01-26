@@ -57,7 +57,7 @@ class ArticleMailTemplate extends MailTemplate {
 		$journal = isset($this->journal)?$this->journal:Request::getJournal();
 
 		$paramArray['articleTitle'] = strip_tags($article->getLocalizedTitle());
-		$paramArray['articleId'] = $article->getArticleId();
+		$paramArray['articleId'] = $article->getId();
 		$paramArray['journalName'] = strip_tags($journal->getLocalizedTitle());
 		$paramArray['sectionName'] = strip_tags($article->getSectionTitle());
 		$paramArray['articleAbstract'] = strip_tags($article->getLocalizedAbstract());
@@ -141,11 +141,11 @@ class ArticleMailTemplate extends MailTemplate {
 		$entry->setBccs($this->getBccString());
 
 		// Add log entry
-		$logEntryId = ArticleLog::logEmailEntry($article->getArticleId(), $entry);
+		$logEntryId = ArticleLog::logEmailEntry($article->getId(), $entry);
 
 		// Add attachments
 		import('file.ArticleFileManager');
-		$articleFileManager = new ArticleFileManager($article->getArticleId());
+		$articleFileManager = new ArticleFileManager($article->getId());
 		foreach ($this->getAttachmentFiles() as $attachment) {
 			$articleFileManager->temporaryFileToArticleFile(
 				$attachment,

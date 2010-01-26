@@ -260,7 +260,7 @@ class RTHandler extends ArticleHandler {
 		}
 
 		$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
-		$galley =& $articleGalleyDao->getGalley($galleyId, $article->getArticleId());
+		$galley =& $articleGalleyDao->getGalley($galleyId, $article->getId());
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$section =& $sectionDao->getSection($article->getSectionId());
@@ -277,7 +277,7 @@ class RTHandler extends ArticleHandler {
 		// Use the article's CSS file, if set.
 		if ($galley && $galley->isHTMLGalley() && $styleFile =& $galley->getStyleFile()) {
 			$templateMgr->addStyleSheet($router->url($request, null, 'article', 'viewFile', array(
-				$article->getArticleId(),
+				$article->getId(),
 				$galley->getBestGalleyId($journal),
 				$styleFile->getFileId()
 			)));
@@ -433,7 +433,7 @@ class RTHandler extends ArticleHandler {
 		$journalRt =& $rtDao->getJournalRTByJournal($journal);
 
 		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
-		$suppFile = $suppFileDao->getSuppFile($suppFileId, $article->getArticleId());
+		$suppFile = $suppFileDao->getSuppFile($suppFileId, $article->getId());
 
 		if (!$journalRt || !$journalRt->getSupplementaryFiles() || !$suppFile) {
 			$request->redirect(null, $router->getRequestedPage($request));

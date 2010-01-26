@@ -30,7 +30,7 @@
 		{assign var=hasAbstract value=1}
 	{/if}
 
-	{assign var=articleId value=$article->getArticleId()}
+	{assign var=articleId value=$article->getId()}
 	{if (!$subscriptionRequired || $article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN || $subscribedUser || $subscribedDomain || ($subscriptionExpiryPartial && $articleExpiryPartial.$articleId))}
 		{assign var=hasAccess value=1}
 	{else}

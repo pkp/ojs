@@ -93,10 +93,10 @@
 			{assign var=needsLoginNote value=1}
 			</li>
 		{elseif $postingAllowed}
-			<li><a href="{url page="comment" op="add" path=$article->getArticleId()|to_array:$galleyId}" target="_parent">{translate key="rt.addComment"}</a></li>
+			<li><a href="{url page="comment" op="add" path=$article->getId()|to_array:$galleyId}" target="_parent">{translate key="rt.addComment"}</a></li>
 		{/if}
 		{if $journalRt->getFindingReferences()}
-			<li><a href="javascript:openRTWindow('{url page="rt" op="findingReferences" path=$article->getArticleId()|to_array:$galleyId}');">{translate key="rt.findingReferences"}</a></li>
+			<li><a href="javascript:openRTWindow('{url page="rt" op="findingReferences" path=$article->getId()|to_array:$galleyId}');">{translate key="rt.findingReferences"}</a></li>
 		{/if}
 	</ul>
 </div>

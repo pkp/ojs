@@ -1302,7 +1302,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$article =& $articleDao->getArticle($articleId);
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
 			foreach ($notificationUsers as $userRole) {
-				$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getArticleId(), null, 'layout');
+				$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'layout');
 				Notification::createNotification($userRole['id'], "notification.type.suppFileModified",
 					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_SUPP_FILE_MODIFIED);
 			}
@@ -1620,7 +1620,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$article =& $articleDao->getArticle($articleId);
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
 			foreach ($notificationUsers as $userRole) {
-				$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getArticleId(), null, 'layout');
+				$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'layout');
 				Notification::createNotification($userRole['id'], "notification.type.galleyModified",
 					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_GALLEY_MODIFIED);
 			}

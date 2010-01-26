@@ -64,12 +64,12 @@ class AuthorAction extends Action {
 	function deleteArticleFile($article, $fileId, $revisionId) {
 		import('file.ArticleFileManager');
 
-		$articleFileManager = new ArticleFileManager($article->getArticleId());
+		$articleFileManager = new ArticleFileManager($article->getId());
 		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
 		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
 
-		$articleFile =& $articleFileDao->getArticleFile($fileId, $revisionId, $article->getArticleId());
-		$authorSubmission = $authorSubmissionDao->getAuthorSubmission($article->getArticleId());
+		$articleFile =& $articleFileDao->getArticleFile($fileId, $revisionId, $article->getId());
+		$authorSubmission = $authorSubmissionDao->getAuthorSubmission($article->getId());
 		$authorRevisions = $authorSubmission->getAuthorFileRevisions();
 
 		// Ensure that this is actually an author file.
@@ -290,7 +290,7 @@ class AuthorAction extends Action {
 				import('notification.Notification');
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
 				foreach ($notificationUsers as $userRole) {
-					$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getArticleId(), null, 'layout');
+					$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'layout');
 					Notification::createNotification($userRole['id'], "notification.type.layoutComment",
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_LAYOUT_COMMENT);
 				}
@@ -408,7 +408,7 @@ class AuthorAction extends Action {
 				import('notification.Notification');
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
 				foreach ($notificationUsers as $userRole) {
-					$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getArticleId(), null, 'copyedit');
+					$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'copyedit');
 					Notification::createNotification($userRole['id'], "notification.type.copyeditComment",
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_COPYEDIT_COMMENT);
 				}
@@ -458,7 +458,7 @@ class AuthorAction extends Action {
 				import('notification.Notification');
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
 				foreach ($notificationUsers as $userRole) {
-					$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getArticleId(), null, 'proofread');
+					$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'proofread');
 					Notification::createNotification($userRole['id'], "notification.type.proofreadComment",
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_PROOFREAD_COMMENT);
 				}
@@ -491,7 +491,7 @@ class AuthorAction extends Action {
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
 
-		$authorSubmission =& $authorSubmissionDao->getAuthorSubmission($article->getArticleId());
+		$authorSubmission =& $authorSubmissionDao->getAuthorSubmission($article->getId());
 		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $authorSubmission->getArticleId());
 
 		$canDownload = false;
@@ -560,7 +560,7 @@ class AuthorAction extends Action {
 
 			// Check current review version
 			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-			$reviewFilesByRound =& $reviewAssignmentDao->getReviewFilesByRound($article->getArticleId());
+			$reviewFilesByRound =& $reviewAssignmentDao->getReviewFilesByRound($article->getId());
 			$reviewFile = @$reviewFilesByRound[$article->getCurrentRound()];
 			if ($reviewFile && $fileId == $reviewFile->getFileId()) {
 				$canDownload = true;
@@ -578,7 +578,7 @@ class AuthorAction extends Action {
 		$result = false;
 		if (!HookRegistry::call('AuthorAction::downloadAuthorFile', array(&$article, &$fileId, &$revision, &$canDownload, &$result))) {
 			if ($canDownload) {
-				return Action::downloadFile($article->getArticleId(), $fileId, $revision);
+				return Action::downloadFile($article->getId(), $fileId, $revision);
 			} else {
 				return false;
 			}

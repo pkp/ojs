@@ -380,7 +380,7 @@ class EditorHandler extends SectionEditorHandler {
 
 			if ($article && $article->getJournalId() === $journal->getId()) {
 				$editAssignmentDao->deleteEditAssignmentById($editAssignment->getEditId());
-				Request::redirect(null, null, 'submission', $article->getArticleId());
+				Request::redirect(null, null, 'submission', $article->getId());
 			}
 		}
 

@@ -384,7 +384,7 @@ class NativeImportDom {
 		if (($node = $coverNode->getChildByName('image'))) {
 			import('file.PublicFileManager');
 			$publicFileManager = new PublicFileManager();
-			$newName = 'cover_article_' . $article->getArticleId()."_{$locale}"  . '.';
+			$newName = 'cover_article_' . $article->getId()."_{$locale}"  . '.';
 
 			if (($href = $node->getChildByName('href'))) {
 				$url = $href->getAttribute('src');
@@ -786,31 +786,31 @@ class NativeImportDom {
 		// Create submission mangement records
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 
-		$initialCopyeditSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$initialCopyeditSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $article->getId());
 		$initialCopyeditSignoff->setUserId(0);
 		$signoffDao->updateObject($initialCopyeditSignoff);
 		
-		$authorCopyeditSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$authorCopyeditSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $article->getId());
 		$authorCopyeditSignoff->setUserId(0);
 		$signoffDao->updateObject($authorCopyeditSignoff);
 		
-		$finalCopyeditSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$finalCopyeditSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $article->getId());
 		$finalCopyeditSignoff->setUserId(0);
 		$signoffDao->updateObject($finalCopyeditSignoff);
 
-		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $article->getId());
 		$layoutSignoff->setUserId(0);
 		$signoffDao->updateObject($layoutSignoff);
 
-		$authorProofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_AUTHOR', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$authorProofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_AUTHOR', ASSOC_TYPE_ARTICLE, $article->getId());
 		$authorProofSignoff->setUserId(0);
 		$signoffDao->updateObject($authorProofSignoff);
 		
-		$proofreaderProofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$proofreaderProofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $article->getId());
 		$proofreaderProofSignoff->setUserId(0);
 		$signoffDao->updateObject($proofreaderProofSignoff);
 		
-		$layoutProofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$layoutProofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $article->getId());
 		$layoutProofSignoff->setUserId(0);
 		$signoffDao->updateObject($layoutProofSignoff);
 
@@ -818,17 +818,17 @@ class NativeImportDom {
 		import('article.log.ArticleLog');
 		import('article.log.ArticleEventLogEntry');
 		ArticleLog::logEvent(
-			$article->getArticleId(),
+			$article->getId(),
 			ARTICLE_LOG_ARTICLE_IMPORT,
 			ARTICLE_LOG_TYPE_DEFAULT,
 			0,
 			'log.imported',
-			array('userName' => $user->getFullName(), 'articleId' => $article->getArticleId())
+			array('userName' => $user->getFullName(), 'articleId' => $article->getId())
 		);
 
 		// Insert published article entry.
 		$publishedArticle = new PublishedArticle();
-		$publishedArticle->setArticleId($article->getArticleId());
+		$publishedArticle->setArticleId($article->getId());
 		$publishedArticle->setIssueId($issue->getIssueId());
 
 		if (($node = $articleNode->getChildByName('date_published'))) {
@@ -852,7 +852,7 @@ class NativeImportDom {
 
 		/* --- Galleys (html or otherwise handled simultaneously) --- */
 		import('file.ArticleFileManager');
-		$articleFileManager = new ArticleFileManager($article->getArticleId());
+		$articleFileManager = new ArticleFileManager($article->getId());
 
 		/* --- Handle galleys --- */
 		$hasErrors = false;
@@ -943,7 +943,7 @@ class NativeImportDom {
 		if ($isHtml) $galley = new ArticleHtmlGalley();
 		else $galley = new ArticleGalley();
 
-		$galley->setArticleId($article->getArticleId());
+		$galley->setArticleId($article->getId());
 		$galley->setSequence($galleyCount);
 
 		// just journal supported locales?
@@ -1070,7 +1070,7 @@ class NativeImportDom {
 		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
 			
 		$suppFile = new SuppFile();
-		$suppFile->setArticleId($article->getArticleId());
+		$suppFile->setArticleId($article->getId());
 
 		for ($index=0; ($node = $suppNode->getChildByName('title', $index)); $index++) {
 			$locale = $node->getAttribute('locale');

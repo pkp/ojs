@@ -51,7 +51,7 @@ class CommentForm extends Form {
 		$this->article = $article;
 		$this->commentType = $commentType;
 		$this->roleId = $roleId;
-		$this->assocId = $assocId == null ? $article->getArticleId() : $assocId;
+		$this->assocId = $assocId == null ? $article->getId() : $assocId;
 
 		$this->user =& Request::getUser();
 
@@ -74,10 +74,10 @@ class CommentForm extends Form {
 		$article = $this->article;
 
 		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
-		$articleComments =& $articleCommentDao->getArticleComments($article->getArticleId(), $this->commentType, $this->assocId);
+		$articleComments =& $articleCommentDao->getArticleComments($article->getId(), $this->commentType, $this->assocId);
 
 		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->assign('articleId', $article->getArticleId());
+		$templateMgr->assign('articleId', $article->getId());
 		$templateMgr->assign('commentTitle', strip_tags($article->getLocalizedTitle()));
 		$user =& $this->user;
 		$templateMgr->assign('userId', $user->getId());
@@ -110,7 +110,7 @@ class CommentForm extends Form {
 		$comment = new ArticleComment();
 		$comment->setCommentType($this->commentType);
 		$comment->setRoleId($this->roleId);
-		$comment->setArticleId($article->getArticleId());
+		$comment->setArticleId($article->getId());
 		$comment->setAssocId($this->assocId);
 		$comment->setAuthorId($this->user->getId());
 		$comment->setCommentTitle($this->getData('commentTitle'));

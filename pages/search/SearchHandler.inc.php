@@ -93,7 +93,7 @@ class SearchHandler extends Handler {
 			$journalDao =& DAORegistry::getDAO('JournalDAO');
 
 			foreach ($publishedArticles as $article) {
-				$articleId = $article->getArticleId();
+				$articleId = $article->getId();
 				$issueId = $article->getIssueId();
 				$sectionId = $article->getSectionId();
 				$journalId = $article->getJournalId();

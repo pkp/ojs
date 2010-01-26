@@ -24,7 +24,7 @@ class EditorDecisionCommentForm extends CommentForm {
 	 * @param $article object
 	 */
 	function EditorDecisionCommentForm($article, $roleId) {
-		parent::CommentForm($article, COMMENT_TYPE_EDITOR_DECISION, $roleId, $article->getArticleId());
+		parent::CommentForm($article, COMMENT_TYPE_EDITOR_DECISION, $roleId, $article->getId());
 	}
 
 	/**

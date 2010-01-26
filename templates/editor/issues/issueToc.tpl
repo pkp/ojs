@@ -78,7 +78,7 @@
 	{foreach from=$section[2] item=article name="currSection"}
 
 	{assign var="articleSeq" value=$articleSeq+1}
-	{assign var="articleId" value=$article->getArticleId()}
+	{assign var="articleId" value=$article->getId()}
 	<tr>
 		<td>{$articleSeq|escape}.</td>
 		<td><a href="{url op="moveArticleToc" path=$issueId d=u sectionId=$section[0] pubId=$article->getPubId()}" class="plain">&uarr;</a>&nbsp;<a href="{url op="moveArticleToc" path=$issueId d=d sectionId=$section[0] pubId=$article->getPubId()}" class="plain">&darr;</a></td>
@@ -92,12 +92,12 @@
 		<td><select name="accessStatus[{$article->getPubId()}]" size="1" class="selectMenu">{html_options options=$accessOptions selected=$article->getAccessStatus()}</select></td>
 		{/if}
 		{if $enablePublicArticleId}
-		<td><input type="text" name="publishedArticles[{$article->getArticleId()}]" value="{$article->getPublicArticleId()|escape}" size="7" maxlength="255" class="textField" /></td>
+		<td><input type="text" name="publishedArticles[{$article->getId()}]" value="{$article->getPublicArticleId()|escape}" size="7" maxlength="255" class="textField" /></td>
 		{/if}
-		{if $enablePageNumber}<td><input type="text" name="pages[{$article->getArticleId()}]" value="{$article->getPages()|escape}" size="7" maxlength="255" class="textField" /></td>{/if}
-		<td><input type="checkbox" name="remove[{$article->getArticleId()}]" value="{$article->getPubId()}" /></td>
+		{if $enablePageNumber}<td><input type="text" name="pages[{$article->getId()}]" value="{$article->getPages()|escape}" size="7" maxlength="255" class="textField" /></td>{/if}
+		<td><input type="checkbox" name="remove[{$article->getId()}]" value="{$article->getPubId()}" /></td>
 		<td>
-			{if in_array($article->getArticleId(), $proofedArticleIds)}
+			{if in_array($article->getId(), $proofedArticleIds)}
 				{icon name="checked"}
 			{else}
 				{icon name="unchecked"}

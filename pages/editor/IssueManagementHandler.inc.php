@@ -91,7 +91,7 @@ class IssueManagementHandler extends EditorHandler {
 		$publishedArticles = $publishedArticleDao->getPublishedArticles($issueId);
 		if (isset($publishedArticles) && !empty($publishedArticles)) {
 			foreach ($publishedArticles as $article) {
-				$articleDao->changeArticleStatus($article->getArticleId(),STATUS_QUEUED);
+				$articleDao->changeArticleStatus($article->getId(),STATUS_QUEUED);
 				$publishedArticleDao->deletePublishedArticleById($article->getPubId());
 			}
 		}
@@ -386,7 +386,7 @@ class IssueManagementHandler extends EditorHandler {
 		$articles = $publishedArticleDao->getPublishedArticles($issueId);
 
 		foreach($articles as $article) {
-			$articleId = $article->getArticleId();
+			$articleId = $article->getId();
 			$pubId = $article->getPubId();
 			if (!isset($removedArticles[$articleId])) {
 				if (isset($pages[$articleId])) {
@@ -571,7 +571,7 @@ class IssueManagementHandler extends EditorHandler {
 			$articleDao =& DAORegistry::getDAO('ArticleDAO');
 			$publishedArticles =& $publishedArticleDao->getPublishedArticles($issueId, null, true);
 			foreach ($publishedArticles as $publishedArticle) {
-				$article =& $articleDao->getArticle($publishedArticle->getArticleId());
+				$article =& $articleDao->getArticle($publishedArticle->getId());
 				if ($article && $article->getStatus() == STATUS_QUEUED) {
 					$article->setStatus(STATUS_PUBLISHED);
 					$article->stampStatusModified();

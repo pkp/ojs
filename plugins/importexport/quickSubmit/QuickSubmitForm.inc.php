@@ -188,7 +188,7 @@ class QuickSubmitForm extends Form {
 
 		// Insert the article to get it's ID
 		$articleDao->insertArticle($article);
-		$articleId = $article->getArticleId();
+		$articleId = $article->getId();
 
 		// Add authors
 		$authors = $this->getData('authors');

@@ -105,9 +105,9 @@ class IssueHandler extends Handler {
 
 				$articleExpiryPartial = array();
 				foreach ($publishedArticlesTemp as $publishedArticle) {
-					$partial = IssueAction::subscribedUser($journal, $issue->getIssueId(), $publishedArticle->getArticleId());
-					if (!$partial) IssueAction::subscribedDomain($journal, $issue->getIssueId(), $publishedArticle->getArticleId()); 
-					$articleExpiryPartial[$publishedArticle->getArticleId()] = $partial;
+					$partial = IssueAction::subscribedUser($journal, $issue->getIssueId(), $publishedArticle->getId());
+					if (!$partial) IssueAction::subscribedDomain($journal, $issue->getIssueId(), $publishedArticle->getId()); 
+					$articleExpiryPartial[$publishedArticle->getId()] = $partial;
 				}
 				$templateMgr->assign_by_ref('articleExpiryPartial', $articleExpiryPartial);
 			}
@@ -234,9 +234,9 @@ class IssueHandler extends Handler {
 
 				$articleExpiryPartial = array();
 				foreach ($publishedArticlesTemp as $publishedArticle) {
-					$partial = IssueAction::subscribedUser($journal, $issue->getIssueId(), $publishedArticle->getArticleId());
-					if (!$partial) IssueAction::subscribedDomain($journal, $issue->getIssueId(), $publishedArticle->getArticleId()); 
-					$articleExpiryPartial[$publishedArticle->getArticleId()] = $partial;
+					$partial = IssueAction::subscribedUser($journal, $issue->getIssueId(), $publishedArticle->getId());
+					if (!$partial) IssueAction::subscribedDomain($journal, $issue->getIssueId(), $publishedArticle->getId()); 
+					$articleExpiryPartial[$publishedArticle->getId()] = $partial;
 				}
 				$templateMgr->assign_by_ref('articleExpiryPartial', $articleExpiryPartial);
 			}

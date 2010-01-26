@@ -154,7 +154,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 			XMLCustomWriter::appendChild($journalNode, $journalArticleNode);
 
 			// Create the DOI data
-			$DOIdataNode =& CrossRefExportDom::generateDOIdataDom($doc, $article->getDOI(), Request::url(null, 'article', 'view', $article->getArticleId()));
+			$DOIdataNode =& CrossRefExportDom::generateDOIdataDom($doc, $article->getDOI(), Request::url(null, 'article', 'view', $article->getId()));
 			XMLCustomWriter::appendChild($journalArticleNode, $DOIdataNode);							
 			XMLCustomWriter::appendChild($bodyNode, $journalNode);
 		}
@@ -212,7 +212,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 					XMLCustomWriter::appendChild($journalNode, $journalArticleNode);
 
 					// DOI data node
-					$DOIdataNode =& CrossRefExportDom::generateDOIdataDom($doc, $article->getDOI(), Request::url(null, 'article', 'view', $article->getArticleId()));
+					$DOIdataNode =& CrossRefExportDom::generateDOIdataDom($doc, $article->getDOI(), Request::url(null, 'article', 'view', $article->getId()));
 					XMLCustomWriter::appendChild($journalArticleNode, $DOIdataNode);							
 					XMLCustomWriter::appendChild($bodyNode, $journalNode);
 

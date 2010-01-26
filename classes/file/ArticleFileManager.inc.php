@@ -435,7 +435,7 @@ class ArticleFileManager extends FileManager {
 	function &generateDummyFile(&$article) {
 		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
 		$articleFile = new ArticleFile();
-		$articleFile->setArticleId($article->getArticleId());
+		$articleFile->setArticleId($article->getId());
 		$articleFile->setFileName('temp');
 		$articleFile->setOriginalFileName('temp');
 		$articleFile->setFileType('temp');

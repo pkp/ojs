@@ -225,7 +225,7 @@ class CommentHandler extends Handler {
 			)
 		);
 
-		if ($comment) $pageHierarchy[] = array(Request::url(null, 'comment', 'view', array($article->getArticleId(), $galleyId)), 'comments.readerComments');
+		if ($comment) $pageHierarchy[] = array(Request::url(null, 'comment', 'view', array($article->getId(), $galleyId)), 'comments.readerComments');
 		$templateMgr->assign('pageHierarchy', $pageHierarchy);
 	}
 }

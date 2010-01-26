@@ -35,7 +35,7 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 		$section =& $record->getData('section');
 		$issue =& $record->getData('issue');
 		$galleys =& $record->getData('galleys');
-		$articleId = $article->getArticleId();
+		$articleId = $article->getId();
 
 		// Cache issue ordering information.
 		static $issueId;
@@ -202,7 +202,7 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 		// provide the full-text.
 		import('issue.IssueAction');
 		$subscriptionRequired = IssueAction::subscriptionRequired($issue);
-		$isSubscribedDomain = IssueAction::subscribedDomain($journal, $issue->getIssueId(), $article->getArticleId());
+		$isSubscribedDomain = IssueAction::subscribedDomain($journal, $issue->getIssueId(), $article->getId());
 
 		if (!$subscriptionRequired || $isSubscribedDomain) foreach ($galleys as $galley) {
 			$parser =& SearchFileParser::fromFile($galley);

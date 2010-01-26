@@ -207,7 +207,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		} else {
 			header("Content-Type: application/xml");
 			header("Cache-Control: private");
-			header("Content-Disposition: attachment; filename=\"article-" . $article->getArticleId() . ".xml\"");
+			header("Content-Disposition: attachment; filename=\"article-" . $article->getId() . ".xml\"");
 			XMLCustomWriter::printXML($doc);
 		}
 		return true;

@@ -315,7 +315,7 @@ class NativeExportDom {
 		$isHtml = $galley->isHTMLGalley();
 
 		import('file.ArticleFileManager');
-		$articleFileManager = new ArticleFileManager($article->getArticleId());
+		$articleFileManager = new ArticleFileManager($article->getId());
 		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
 
 		$root =& XMLCustomWriter::createElement($doc, $isHtml?'htmlgalley':'galley');
@@ -441,7 +441,7 @@ class NativeExportDom {
 		}
 		
 		import('file.ArticleFileManager');
-		$articleFileManager = new ArticleFileManager($article->getArticleId());
+		$articleFileManager = new ArticleFileManager($article->getId());
 		$fileNode =& XMLCustomWriter::createElement($doc, 'file');
 		XMLCustomWriter::appendChild($root, $fileNode);
 		$embedNode =& XMLCustomWriter::createChildWithText($doc, $fileNode, 'embed', base64_encode($articleFileManager->readFile($suppFile->getFileId())));

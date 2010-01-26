@@ -562,7 +562,7 @@ class PublishedArticleDAO extends DAO {
 				(?, ?, %s, ?, ?, ?)',
 				$this->datetimeToDB($publishedArticle->getDatePublished())),
 			array(
-				$publishedArticle->getArticleId(),
+				$publishedArticle->getId(),
 				$publishedArticle->getIssueId(),
 				$publishedArticle->getSeq(),
 				$publishedArticle->getAccessStatus(),
@@ -650,7 +650,7 @@ class PublishedArticleDAO extends DAO {
 				WHERE pub_id = ?',
 				$this->datetimeToDB($publishedArticle->getDatePublished())),
 			array(
-				$publishedArticle->getArticleId(),
+				$publishedArticle->getId(),
 				$publishedArticle->getIssueId(),
 				$publishedArticle->getSeq(),
 				$publishedArticle->getAccessStatus(),

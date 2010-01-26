@@ -42,7 +42,7 @@ class AuthorSubmitForm extends Form {
 		$this->addCheck(new FormValidatorPost($this));
 		$this->step = (int) $step;
 		$this->article = $article;
-		$this->articleId = $article ? $article->getArticleId() : null;
+		$this->articleId = $article ? $article->getId() : null;
 	}
 
 	/**
@@ -91,7 +91,7 @@ class AuthorSubmitForm extends Form {
 
 		foreach ($sectionEditors as $sectionEditorEntry) {
 			$editAssignment = new EditAssignment();
-			$editAssignment->setArticleId($article->getArticleId());
+			$editAssignment->setArticleId($article->getId());
 			$editAssignment->setEditorId($sectionEditorEntry['user']->getId());
 			$editAssignment->setCanReview($sectionEditorEntry['canReview']);
 			$editAssignment->setCanEdit($sectionEditorEntry['canEdit']);

@@ -100,24 +100,24 @@ class EditorAction extends SectionEditorAction {
 		import('submission.proofreader.ProofreaderAction');
 
 		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($article->getArticleId());
+		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($article->getId());
 
 		$submissionFile = $sectionEditorSubmission->getSubmissionFile();
 
 		// Add a long entry before doing anything.
 		import('article.log.ArticleLog');
 		import('article.log.ArticleEventLogEntry');
-		ArticleLog::logEvent($article->getArticleId(), ARTICLE_LOG_EDITOR_EXPEDITE, ARTICLE_LOG_TYPE_EDITOR, $user->getId(), 'log.editor.submissionExpedited', array('editorName' => $user->getFullName(), 'articleId' => $article->getArticleId()));
+		ArticleLog::logEvent($article->getId(), ARTICLE_LOG_EDITOR_EXPEDITE, ARTICLE_LOG_TYPE_EDITOR, $user->getId(), 'log.editor.submissionExpedited', array('editorName' => $user->getFullName(), 'articleId' => $article->getId()));
 
 		// 1. Ensure that an editor is assigned.
 		$editAssignments =& $sectionEditorSubmission->getEditAssignments();
 		if (empty($editAssignments)) {
 			// No editors are currently assigned; assign self.
-			EditorAction::assignEditor($article->getArticleId(), $user->getId(), true);
+			EditorAction::assignEditor($article->getId(), $user->getId(), true);
 		}
 
 		// 2. Accept the submission and send to copyediting.
-		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($article->getArticleId());
+		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($article->getId());
 		if (!$sectionEditorSubmission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL', true)) {
 			SectionEditorAction::recordDecision($sectionEditorSubmission, SUBMISSION_EDITOR_DECISION_ACCEPT);
 			$reviewFile = $sectionEditorSubmission->getReviewFile();
@@ -125,14 +125,14 @@ class EditorAction extends SectionEditorAction {
 		}
 
 		// 3. Add a galley.
-		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($article->getArticleId());
+		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($article->getId());
 		$galleys =& $sectionEditorSubmission->getGalleys();
 		if (empty($galleys)) {
 			// No galley present -- use copyediting file.
 			import('file.ArticleFileManager');
 			$copyeditFile =& $sectionEditorSubmission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL');
 			$fileType = $copyeditFile->getFileType();
-			$articleFileManager = new ArticleFileManager($article->getArticleId());
+			$articleFileManager = new ArticleFileManager($article->getId());
 			$fileId = $articleFileManager->copyPublicFile($copyeditFile->getFilePath(), $fileType);
 
 			if (strstr($fileType, 'html')) {
@@ -140,7 +140,7 @@ class EditorAction extends SectionEditorAction {
 			} else {
 				$galley = new ArticleGalley();
 			}
-			$galley->setArticleId($article->getArticleId());
+			$galley->setArticleId($article->getId());
 			$galley->setFileId($fileId);
 			$galley->setLocale(Locale::getLocale());
 

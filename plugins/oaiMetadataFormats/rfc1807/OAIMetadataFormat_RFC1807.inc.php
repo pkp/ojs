@@ -42,7 +42,7 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 		// Relation
 		$relation = array();
 		foreach ($article->getSuppFiles() as $suppFile) {
-			$relation[] = Request::url($journal->getPath(), 'article', 'download', array($article->getArticleId(), $suppFile->getFileId()));
+			$relation[] = Request::url($journal->getPath(), 'article', 'download', array($article->getId(), $suppFile->getFileId()));
 		}
 
 		// Format creators

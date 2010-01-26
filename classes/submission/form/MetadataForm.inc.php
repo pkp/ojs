@@ -48,7 +48,7 @@ class MetadataForm extends Form {
 			$this->isEditor = true;
 		}
 
-		$copyeditInitialSignoff = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $article->getArticleId());
+		$copyeditInitialSignoff = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $article->getId());
 		// If the user is an author and the article hasn't passed the Copyediting stage, make the form editable.
 		if ($roleId == ROLE_ID_AUTHOR) {
 			if ($article->getStatus() != STATUS_PUBLISHED && ($copyeditInitialSignoff == null || $copyeditInitialSignoff->getDateCompleted() == null)) {
@@ -59,7 +59,7 @@ class MetadataForm extends Form {
 		// Copy editors are also allowed to edit metadata, but only if they have
 		// a current assignment to the article.
 		if ($roleId != null && ($roleId == ROLE_ID_COPYEDITOR)) {
-			$copyeditFinalSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $article->getArticleId());			
+			$copyeditFinalSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $article->getId());			
 			if ($copyeditFinalSignoff != null && $article->getStatus() != STATUS_PUBLISHED) {
 				if ($copyeditInitialSignoff->getDateNotified() != null && $copyeditFinalSignoff->getDateCompleted() == null) {
 					$this->canEdit = true;
@@ -357,7 +357,7 @@ class MetadataForm extends Form {
 		import('search.ArticleSearchIndex');
 		ArticleSearchIndex::indexArticleMetadata($article);
 
-		return $article->getArticleId();
+		return $article->getId();
 	}
 
 	/**

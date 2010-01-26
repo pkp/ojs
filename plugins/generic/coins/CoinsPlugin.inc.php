@@ -120,7 +120,7 @@ class CoinsPlugin extends GenericPlugin {
 
 			$vars = array(
 				array('ctx_ver', 'Z39.88-2004'),
-				array('rft_id', Request::url(null, 'article', 'view', $article->getArticleId())),
+				array('rft_id', Request::url(null, 'article', 'view', $article->getId())),
 				array('rft_val_fmt', 'info:ofi/fmt:kev:mtx:journal'),
 				array('rft.genre', 'article'),
 				array('rft.title', $journal->getLocalizedTitle()),

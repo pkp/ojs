@@ -101,7 +101,7 @@ class IssueAction {
 			if (Validation::isAuthor($journalId)) {
 				if ($article && $article->getUserId() == $userId) return true;
 				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-				if ($article) $publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($article->getArticleId());
+				if ($article) $publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($article->getId());
 				if (isset($publishedArticle) && $publishedArticle && $publishedArticle->getUserId() == $userId) return true;
 			}
 		}

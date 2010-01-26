@@ -51,7 +51,7 @@ class ProCiteCitationPlugin extends CitationPlugin {
 	 * @param $issue object
 	 */
 	function cite(&$article, &$issue) {
-		header('Content-Disposition: attachment; filename="' . $article->getArticleId() . '-proCite.ris"');
+		header('Content-Disposition: attachment; filename="' . $article->getId() . '-proCite.ris"');
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->display($this->getTemplatePath() . '/citation.tpl', 'application/x-Research-Info-Systems');
 	}

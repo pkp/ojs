@@ -151,7 +151,7 @@ class Action {
 				import('notification.Notification');
 				$notificationUsers = $article->getAssociatedUserIds();
 				foreach ($notificationUsers as $userRole) {
-					$url = Request::url(null, $userRole['role'], 'submission', $article->getArticleId(), null, 'metadata');
+					$url = Request::url(null, $userRole['role'], 'submission', $article->getId(), null, 'metadata');
 					Notification::createNotification($userRole['id'], "notification.type.metadataModified",
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_METADATA_MODIFIED);
 				}
@@ -160,7 +160,7 @@ class Action {
 				$user =& Request::getUser();
 				import('article.log.ArticleLog');
 				import('article.log.ArticleEventLogEntry');
-				ArticleLog::logEvent($article->getArticleId(), ARTICLE_LOG_METADATA_UPDATE, ARTICLE_LOG_TYPE_DEFAULT, 0, 'log.editor.metadataModified', Array('editorName' => $user->getFullName()));
+				ArticleLog::logEvent($article->getId(), ARTICLE_LOG_METADATA_UPDATE, ARTICLE_LOG_TYPE_DEFAULT, 0, 'log.editor.metadataModified', Array('editorName' => $user->getFullName()));
 
 				return true;
 			}
@@ -266,7 +266,7 @@ class Action {
 				import('notification.Notification');
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
 				foreach ($notificationUsers as $userRole) {
-					$url = Request::url(null, $userRole['role'], 'submissionReview', $article->getArticleId(), null, 'editorDecision');
+					$url = Request::url(null, $userRole['role'], 'submissionReview', $article->getId(), null, 'editorDecision');
 					Notification::createNotification($userRole['id'], "notification.type.submissionComment",
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_SUBMISSION_COMMENT);
 				}

@@ -1803,7 +1803,7 @@ class SectionEditorAction extends Action {
 			import('notification.Notification');
 			$notificationUsers = $article->getAssociatedUserIds();
 			foreach ($notificationUsers as $userRole) {
-				$url = Request::url(null, $userRole['role'], 'submissionReview', $article->getArticleId(), null, 'peerReview');
+				$url = Request::url(null, $userRole['role'], 'submissionReview', $article->getId(), null, 'peerReview');
 				Notification::createNotification($userRole['id'], "notification.type.reviewerComment",
 					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_REVIEWER_COMMENT);
 			}
@@ -1853,7 +1853,7 @@ class SectionEditorAction extends Action {
 			import('notification.Notification');
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
 			foreach ($notificationUsers as $userRole) {
-				$url = Request::url(null, $userRole['role'], 'submissionReview', $article->getArticleId(), null, 'editorDecision');
+				$url = Request::url(null, $userRole['role'], 'submissionReview', $article->getId(), null, 'editorDecision');
 				Notification::createNotification($userRole['id'], "notification.type.editorDecisionComment",
 					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_EDITOR_DECISION_COMMENT);
 			}
@@ -2027,8 +2027,8 @@ class SectionEditorAction extends Action {
 		$userDao =& DAORegistry::getDAO('UserDAO');
 		$journal =& Request::getJournal();
 
-		$comments =& $commentDao->getArticleComments($article->getArticleId(), COMMENT_TYPE_EDITOR_DECISION);
-		$reviewAssignments =& $reviewAssignmentDao->getReviewAssignmentsByArticleId($article->getArticleId(), $article->getCurrentRound());
+		$comments =& $commentDao->getArticleComments($article->getId(), COMMENT_TYPE_EDITOR_DECISION);
+		$reviewAssignments =& $reviewAssignmentDao->getReviewAssignmentsByArticleId($article->getId(), $article->getCurrentRound());
 
 		$commentsText = "";
 		foreach ($comments as $comment) {
@@ -2061,7 +2061,7 @@ class SectionEditorAction extends Action {
 				$email->assignParams($paramArray);
 			}
 
-			$email->displayEditForm(Request::url(null, null, 'blindCcReviewsToReviewers'), array('articleId' => $article->getArticleId()));
+			$email->displayEditForm(Request::url(null, null, 'blindCcReviewsToReviewers'), array('articleId' => $article->getId()));
 			return false;
 		}
 	}
@@ -2100,7 +2100,7 @@ class SectionEditorAction extends Action {
 			import('notification.Notification');
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
 			foreach ($notificationUsers as $userRole) {
-				$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getArticleId(), null, 'copyedit');
+				$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'copyedit');
 				Notification::createNotification($userRole['id'], "notification.type.copyeditComment",
 					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_COPYEDIT_COMMENT);
 			}
@@ -2150,7 +2150,7 @@ class SectionEditorAction extends Action {
 			import('notification.Notification');
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
 			foreach ($notificationUsers as $userRole) {
-				$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getArticleId(), null, 'layout');
+				$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'layout');
 				Notification::createNotification($userRole['id'], "notification.type.layoutComment",
 					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_LAYOUT_COMMENT);
 			}
@@ -2200,7 +2200,7 @@ class SectionEditorAction extends Action {
 			import('notification.Notification');
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
 			foreach ($notificationUsers as $userRole) {
-				$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getArticleId(), null, 'proofread');
+				$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'proofread');
 				Notification::createNotification($userRole['id'], "notification.type.proofreadComment",
 					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_PROOFREAD_COMMENT);
 			}

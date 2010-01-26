@@ -51,7 +51,7 @@ class RefManCitationPlugin extends CitationPlugin {
 	 * @param $issue object
 	 */
 	function cite(&$article, &$issue) {
-		header('Content-Disposition: attachment; filename="' . $article->getArticleId() . '-refMan.ris"');
+		header('Content-Disposition: attachment; filename="' . $article->getId() . '-refMan.ris"');
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->display($this->getTemplatePath() . '/citation.tpl', 'application/x-Research-Info-Systems');
 	}

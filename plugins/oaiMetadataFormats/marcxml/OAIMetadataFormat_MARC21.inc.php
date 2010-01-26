@@ -65,7 +65,7 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat {
 		// Relation
 		$relation = array();
 		foreach ($article->getSuppFiles() as $suppFile) {
-			$record->relation[] = Request::url($journal->getPath(), 'article', 'download', array($article->getArticleId(), $suppFile->getFileId()));
+			$record->relation[] = Request::url($journal->getPath(), 'article', 'download', array($article->getId(), $suppFile->getFileId()));
 		}
 
 		// Coverage

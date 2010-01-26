@@ -120,11 +120,11 @@ class ArticleReportDAO extends DAO {
 					'biography',
 					$locale,
 					$journalId,
-					$article->getArticleId()
+					$article->getId()
 				)
 			);
 			$authorIterator = new DBRowIterator($result);
-			$authorsReturner[$article->getArticleId()] =& $authorIterator;
+			$authorsReturner[$article->getId()] =& $authorIterator;
 			unset($authorIterator);
 			$index++;
 			unset($article);

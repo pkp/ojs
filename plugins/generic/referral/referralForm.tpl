@@ -24,7 +24,7 @@
 {if $referralId}
 <input type="hidden" name="referralId" value="{$referralId|escape}" />
 {/if}
-<input type="hidden" name="articleId" value="{$article->getArticleId()|escape}" />
+<input type="hidden" name="articleId" value="{$article->getId()|escape}" />
 
 {include file="common/formErrors.tpl"}
 

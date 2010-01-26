@@ -66,7 +66,7 @@ class Upgrade extends Installer {
 			$articles =& $articleDao->getArticlesByJournalId($journal->getId());
 			while ($article =& $articles->next()) {
 				if (!$article->getReviewFileId() && $article->getSubmissionProgress() == 0) {
-					$authorSubmission =& $authorSubmissionDao->getAuthorSubmission($article->getArticleId());
+					$authorSubmission =& $authorSubmissionDao->getAuthorSubmission($article->getId());
 					AuthorAction::designateReviewVersion($authorSubmission, true);
 				}
 				unset($article);

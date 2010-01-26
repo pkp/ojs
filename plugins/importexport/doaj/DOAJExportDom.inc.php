@@ -141,7 +141,7 @@ class DOAJExportDom {
 		}
 
 		/* --- FullText URL --- */
-		$fullTextUrl =& XMLCustomWriter::createChildWithText($doc, $root, 'fullTextUrl', Request::url(null, 'article', 'view', $article->getArticleId()));
+		$fullTextUrl =& XMLCustomWriter::createChildWithText($doc, $root, 'fullTextUrl', Request::url(null, 'article', 'view', $article->getId()));
 		XMLCustomWriter::setAttribute($fullTextUrl, 'format', 'html');
 
 		/* --- Keywords --- */
