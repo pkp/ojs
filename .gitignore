@@ -1,2 +1,4 @@
-/config.inc.php
-/cache/
+cache/
+public/
+config.inc.php
+.DS_Store
