@@ -94,7 +94,7 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 				while (!$result->EOF) {
 					$row = $result->GetRowAssoc(false);
 					$xmlGalley = $this->_getXMLGalleyFromId($row['xml_galley_id'], $articleId);
-					$xmlGalley->setGalleyId($row['xml_galley_id']);
+					$xmlGalley->setId($row['xml_galley_id']);
 
 					// only append PDF galleys if the correct plugin settings are set
 					if ( ($xmlGalleyPlugin->getSetting($journal->getId(), 'nlmPDF') == 1 

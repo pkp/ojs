@@ -77,7 +77,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 		$xmlGalleyDao = new ArticleXMLGalleyDAO();
 		$xmlGalley = $xmlGalleyDao->_getXMLGalleyFromId($galleyId, $articleId);
 		if ($xmlGalley) {
-			$xmlGalley->setGalleyId($galleyId);
+			$xmlGalley->setId($galleyId);
 			$returner = $xmlGalley;
 			return true;
 		}
@@ -132,7 +132,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 		$articleXMLGalley = new ArticleXMLGalley();
 
 		// Create XML Galley with previous values
-		$articleXMLGalley->setGalleyId($galley->getId());
+		$articleXMLGalley->setId($galley->getId());
 		$articleXMLGalley->setArticleId($galley->getArticleId());
 		$articleXMLGalley->setFileId($galley->getFileId());
 		$articleXMLGalley->setLabel($galley->getLabel());
