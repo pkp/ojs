@@ -78,7 +78,7 @@ class ReviewerAction extends Action {
 				$entry->setEventType($decline?ARTICLE_LOG_REVIEW_DECLINE:ARTICLE_LOG_REVIEW_ACCEPT);
 				$entry->setLogMessage($decline?'log.review.reviewDeclined':'log.review.reviewAccepted', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getArticleId(), 'round' => $reviewAssignment->getRound()));
 				$entry->setAssocType(ARTICLE_LOG_TYPE_REVIEW);
-				$entry->setAssocId($reviewAssignment->getReviewId());
+				$entry->setAssocId($reviewAssignment->getId());
 
 				ArticleLog::logEventEntry($reviewAssignment->getArticleId(), $entry);
 
@@ -162,7 +162,7 @@ class ReviewerAction extends Action {
 				$entry->setEventType(ARTICLE_LOG_REVIEW_RECOMMENDATION);
 				$entry->setLogMessage('log.review.reviewRecommendationSet', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getArticleId(), 'round' => $reviewAssignment->getRound()));
 				$entry->setAssocType(ARTICLE_LOG_TYPE_REVIEW);
-				$entry->setAssocId($reviewAssignment->getReviewId());
+				$entry->setAssocId($reviewAssignment->getId());
 
 				ArticleLog::logEventEntry($reviewAssignment->getArticleId(), $entry);
 			} else {
@@ -242,7 +242,7 @@ class ReviewerAction extends Action {
 			$entry->setEventType(ARTICLE_LOG_REVIEW_FILE);
 			$entry->setLogMessage('log.review.reviewerFile');
 			$entry->setAssocType(ARTICLE_LOG_TYPE_REVIEW);
-			$entry->setAssocId($reviewAssignment->getReviewId());
+			$entry->setAssocId($reviewAssignment->getId());
 
 			ArticleLog::logEventEntry($reviewAssignment->getArticleId(), $entry);
 		}

@@ -29,7 +29,7 @@ class ReviewReminder extends ScheduledTask {
 	function sendReminder ($reviewAssignment, $article, $journal) {
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao =& DAORegistry::getDAO('UserDAO');
-		$reviewId = $reviewAssignment->getReviewId();
+		$reviewId = $reviewAssignment->getId();
 
 		$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId());
 		if (!isset($reviewer)) return false;

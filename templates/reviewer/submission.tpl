@@ -12,7 +12,7 @@
  *}
 {strip}
 {assign var="articleId" value=$submission->getArticleId()}
-{assign var="reviewId" value=$reviewAssignment->getReviewId()}
+{assign var="reviewId" value=$reviewAssignment->getId()}
 {translate|assign:"pageTitleTranslated" key="submission.page.review" id=$articleId}
 {assign var="pageCrumbTitle" value="submission.review"}
 {include file="common/header.tpl"}
