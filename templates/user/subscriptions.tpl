@@ -62,12 +62,12 @@
 			<td width="20%" align="right">
 			{if $journalPaymentsEnabled && $acceptSubscriptionPayments}
 				{if $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT}
-					<a class="action" href="{url op="completePurchaseSubscription" path="individual"|to_array:$userIndividualSubscription->getSubscriptionId()}">{translate key="user.subscriptions.purchase"}</a>
+					<a class="action" href="{url op="completePurchaseSubscription" path="individual"|to_array:$userIndividualSubscription->getId()}">{translate key="user.subscriptions.purchase"}</a>
 				{elseif $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_ACTIVE}
 					{if !$isNonExpiring}
-						<a class="action" href="{url op="payRenewSubscription" path="individual"|to_array:$userIndividualSubscription->getSubscriptionId()}">{translate key="user.subscriptions.renew"}</a> | 
+						<a class="action" href="{url op="payRenewSubscription" path="individual"|to_array:$userIndividualSubscription->getId()}">{translate key="user.subscriptions.renew"}</a> | 
 					{/if}
-					<a class="action" href="{url op="purchaseSubscription" path="individual"|to_array:$userIndividualSubscription->getSubscriptionId()}">{translate key="user.subscriptions.purchase"}</a>
+					<a class="action" href="{url op="purchaseSubscription" path="individual"|to_array:$userIndividualSubscription->getId()}">{translate key="user.subscriptions.purchase"}</a>
 				{/if}
 			{else}
 				&nbsp;
@@ -116,12 +116,12 @@
 			<td width="20%" align="right">
 			{if $journalPaymentsEnabled && $acceptSubscriptionPayments}
 				{if $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT}
-					<a class="action" href="{url op="completePurchaseSubscription" path="institutional"|to_array:$userInstitutionalSubscription->getSubscriptionId()}">{translate key="user.subscriptions.purchase"}</a>
+					<a class="action" href="{url op="completePurchaseSubscription" path="institutional"|to_array:$userInstitutionalSubscription->getId()}">{translate key="user.subscriptions.purchase"}</a>
 				{elseif $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_ACTIVE}
 					{if !$isNonExpiring}
-						<a class="action" href="{url op="payRenewSubscription" path="institutional"|to_array:$userInstitutionalSubscription->getSubscriptionId()}">{translate key="user.subscriptions.renew"}</a> |  
+						<a class="action" href="{url op="payRenewSubscription" path="institutional"|to_array:$userInstitutionalSubscription->getId()}">{translate key="user.subscriptions.renew"}</a> |  
 					{/if}
-					<a class="action" href="{url op="purchaseSubscription" path="institutional"|to_array:$userInstitutionalSubscription->getSubscriptionId()}">{translate key="user.subscriptions.purchase"}</a>
+					<a class="action" href="{url op="purchaseSubscription" path="institutional"|to_array:$userInstitutionalSubscription->getId()}">{translate key="user.subscriptions.purchase"}</a>
 				{/if}
 			{else}
 				&nbsp;

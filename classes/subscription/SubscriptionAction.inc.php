@@ -627,11 +627,11 @@ class SubscriptionAction {
 		switch($mailTemplateKey) {
 			case 'SUBSCRIPTION_PURCHASE_INDL':
 			case 'SUBSCRIPTION_RENEW_INDL':
-				$paramArray['subscriptionUrl'] = Request::url($journal->getPath(), $rolePath, 'editSubscription', 'individual', array($subscription->getSubscriptionId()));
+				$paramArray['subscriptionUrl'] = Request::url($journal->getPath(), $rolePath, 'editSubscription', 'individual', array($subscription->getId()));
 				break;
 			case 'SUBSCRIPTION_PURCHASE_INSTL':
 			case 'SUBSCRIPTION_RENEW_INSTL':
-				$paramArray['subscriptionUrl'] = Request::url($journal->getPath(), $rolePath, 'editSubscription', 'institutional', array($subscription->getSubscriptionId()));
+				$paramArray['subscriptionUrl'] = Request::url($journal->getPath(), $rolePath, 'editSubscription', 'institutional', array($subscription->getId()));
 				$paramArray['institutionName'] = $subscription->getInstitutionName();
 				$paramArray['institutionMailingAddress'] = $subscription->getInstitutionMailingAddress();
 				$paramArray['domain'] = $subscription->getDomain();

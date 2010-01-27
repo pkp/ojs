@@ -50,7 +50,8 @@ class Subscription extends DataObject {
 	 * @return int
 	 */
 	function getSubscriptionId() {
-		return $this->getData('subscriptionId');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
+		return $this->getId();
 	}
 
 	/**
@@ -58,7 +59,8 @@ class Subscription extends DataObject {
 	 * @param $subscriptionId int
 	 */
 	function setSubscriptionId($subscriptionId) {
-		return $this->setData('subscriptionId', $subscriptionId);
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
+		return $this->setId($subscriptionId);
 	}
 
 	/**
