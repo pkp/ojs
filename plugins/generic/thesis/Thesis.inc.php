@@ -38,7 +38,8 @@ class Thesis extends DataObject {
 	 * @return int
 	 */
 	function getThesisId() {
-		return $this->getData('thesisId');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
+		return $this->getId();
 	}
 
 	/**
@@ -46,7 +47,8 @@ class Thesis extends DataObject {
 	 * @param $thesisId int
 	 */
 	function setThesisId($thesisId) {
-		return $this->setData('thesisId', $thesisId);
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
+		return $this->setId($thesisId);
 	}
 
 	/**

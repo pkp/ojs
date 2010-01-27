@@ -129,7 +129,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 		if ( !$xmlGalleyPlugin ) return parent::getHTMLContents();
 		if ( !$xmlGalleyPlugin->getEnabled() ) return parent::getHTMLContents();
 
-		$cache =& $this->_getXSLTCache($this->getFileName() . '-' . $this->getGalleyId());
+		$cache =& $this->_getXSLTCache($this->getFileName() . '-' . $this->getId());
 		$contents = $cache->getContents();
 
 		// if contents is false/empty, then we have an XSLT error
@@ -196,7 +196,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 		if ( !FileManager::fileExists($pdfFileName) || filemtime($pdfFileName) < filemtime($this->getFilePath()) ) {
 
 			// render XML into XSL-FO
-			$cache =& $this->_getXSLTCache($this->getFileName() . '-' . $this->getGalleyId());
+			$cache =& $this->_getXSLTCache($this->getFileName() . '-' . $this->getId());
 
 			$contents = $cache->getContents();
 			if ($contents == "") return false;		// if for some reason the XSLT failed, show original file
@@ -235,7 +235,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 			// create temporary FO file and write the contents
 			import('file.TemporaryFileManager');
 			$temporaryFileManager = new TemporaryFileManager();
-			$tempFoName = $temporaryFileManager->filesDir . $this->getFileName() . '-' . $this->getGalleyId() . '.fo';
+			$tempFoName = $temporaryFileManager->filesDir . $this->getFileName() . '-' . $this->getId() . '.fo';
 
 			$temporaryFileManager->writeFile($tempFoName, $contents);
 

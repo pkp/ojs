@@ -46,6 +46,8 @@ class ArticleFile extends DataObject {
 	 * @return int
 	 */
 	function getFileId() {
+		// WARNING: Do not modernize getter/setters without considering
+		// ID clash with subclasses ArticleGalley and ArticleNote!
 		return $this->getData('fileId');
 	}
 
@@ -54,6 +56,8 @@ class ArticleFile extends DataObject {
 	 * @param $fileId int
 	 */
 	function setFileId($fileId) {
+		// WARNING: Do not modernize getter/setters without considering
+		// ID clash with subclasses ArticleGalley and ArticleNote!
 		return $this->setData('fileId', $fileId);
 	}
 

@@ -17,7 +17,7 @@
 {foreach from=$comments item=comment}
 {assign var=poster value=$comment->getUser()}
 	<li>
-		<a href="{url page="comment" op="view" path=$article->getId()|to_array:$galleyId:$comment->getCommentId()}" target="_parent">{$comment->getTitle()|escape|default:"&nbsp;"}</a>
+		<a href="{url page="comment" op="view" path=$article->getId()|to_array:$galleyId:$comment->getId()}" target="_parent">{$comment->getTitle()|escape|default:"&nbsp;"}</a>
 		{if $comment->getChildCommentCount()==1}
 			{translate key="comments.oneReply"}
 		{elseif $comment->getChildCommentCount()>0}

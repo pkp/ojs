@@ -40,9 +40,9 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 		// Cache issue ordering information.
 		static $issueId;
 		static $sectionSeq;
-		if (!isset($issueId) || $issueId != $issue->getIssueId()) {
+		if (!isset($issueId) || $issueId != $issue->getId()) {
 			$sectionDao =& DAORegistry::getDAO('SectionDAO');
-			$issueId = $issue->getIssueId();
+			$issueId = $issue->getId();
 			$sections =& $sectionDao->getSectionsForIssue($issueId);
 			$sectionSeq = array();
 			$i=0;
@@ -127,7 +127,7 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 			"\t\t\t</pub-date>\n" .
 			($issue->getShowYear()?"\t\t\t<pub-date pub-type=\"collection\"><year>" . htmlspecialchars(Core::cleanVar($issue->getYear())) . "</year></pub-date>\n":'') .
 			($issue->getShowVolume()?"\t\t\t<volume>" . htmlspecialchars(Core::cleanVar($issue->getVolume())) . "</volume>\n":'') .
-			($issue->getShowNumber()?"\t\t\t<issue seq=\"" . htmlspecialchars(Core::cleanVar(($sectionSeq[$section->getSectionId()]*100) + $article->getSeq())) . "\">" . htmlspecialchars(Core::cleanVar($issue->getNumber())) . "</issue>\n":'') .
+			($issue->getShowNumber()?"\t\t\t<issue seq=\"" . htmlspecialchars(Core::cleanVar(($sectionSeq[$section->getId()]*100) + $article->getSeq())) . "\">" . htmlspecialchars(Core::cleanVar($issue->getNumber())) . "</issue>\n":'') .
 			"\t\t\t<issue-id pub-id-type=\"other\">" . htmlspecialchars(Core::cleanVar($issue->getBestIssueId())) . "</issue-id>\n" .
 			($issue->getShowTitle()?"\t\t\t<issue-title>" . htmlspecialchars(Core::cleanVar($issue->getIssueTitle())) . "</issue-title>\n":'');
 
@@ -155,7 +155,7 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 
 		// Include galley links
 		foreach ($article->getGalleys() as $galley) {
-			$response .= "\t\t\t<self-uri content-type=\"" . htmlspecialchars(Core::cleanVar($galley->getFileType())) . "\" xlink:href=\"" . htmlspecialchars(Core::cleanVar(Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId(), $galley->getGalleyId())))) . "\" />\n";
+			$response .= "\t\t\t<self-uri content-type=\"" . htmlspecialchars(Core::cleanVar($galley->getFileType())) . "\" xlink:href=\"" . htmlspecialchars(Core::cleanVar(Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId(), $galley->getId())))) . "\" />\n";
 		}
 
 		// Include abstract(s)
@@ -202,7 +202,7 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 		// provide the full-text.
 		import('issue.IssueAction');
 		$subscriptionRequired = IssueAction::subscriptionRequired($issue);
-		$isSubscribedDomain = IssueAction::subscribedDomain($journal, $issue->getIssueId(), $article->getId());
+		$isSubscribedDomain = IssueAction::subscribedDomain($journal, $issue->getId(), $article->getId());
 
 		if (!$subscriptionRequired || $isSubscribedDomain) foreach ($galleys as $galley) {
 			$parser =& SearchFileParser::fromFile($galley);

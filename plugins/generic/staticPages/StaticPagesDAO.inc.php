@@ -62,10 +62,10 @@ class StaticPagesDAO extends DAO {
 			)
 		);
 
-		$staticPage->setStaticPageId($this->getInsertStaticPageId());
+		$staticPage->setId($this->getInsertStaticPageId());
 		$this->updateLocaleFields($staticPage);
 
-		return $staticPage->getStaticPageId();
+		return $staticPage->getId();
 	}
 
 	function updateStaticPage(&$staticPage) {
@@ -78,7 +78,7 @@ class StaticPagesDAO extends DAO {
 				array(
 					$staticPage->getJournalId(),
 					$staticPage->getPath(),
-					$staticPage->getStaticPageId()
+					$staticPage->getId()
 					)
 			);
 		$this->updateLocaleFields($staticPage);
@@ -99,7 +99,7 @@ class StaticPagesDAO extends DAO {
 		$staticPagesPlugin->import('StaticPage');
 
 		$staticPage = new StaticPage();
-		$staticPage->setStaticPageId($row['static_page_id']);
+		$staticPage->setId($row['static_page_id']);
 		$staticPage->setPath($row['path']);
 		$staticPage->setJournalId($row['journal_id']);
 
@@ -125,7 +125,7 @@ class StaticPagesDAO extends DAO {
 	 */
 	function updateLocaleFields(&$staticPage) {
 		$this->updateDataObjectSettings('static_page_settings', $staticPage, array(
-			'static_page_id' => $staticPage->getStaticPageId()
+			'static_page_id' => $staticPage->getId()
 		));
 	}
 

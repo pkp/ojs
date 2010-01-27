@@ -13,8 +13,8 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<h3>{$reviewForm->getReviewFormTitle()}</h3>
-<p>{$reviewForm->getReviewFormDescription()}</p>
+<h3>{$reviewForm->getLocalizedTitle()}</h3>
+<p>{$reviewForm->getLocalizedDescription()}</p>
 
 {foreach from=$reviewFormElements name=reviewFormElements item=reviewFormElement}
 	<p>{$reviewFormElement->getReviewFormElementQuestion()}{if $reviewFormElement->getRequired()}*{/if}</p>
@@ -35,7 +35,7 @@
 		{elseif $reviewFormElement->getElementType() == REVIEW_FORM_ELEMENT_TYPE_RADIO_BUTTONS}
 			{assign var=possibleResponses value=$reviewFormElement->getReviewFormElementPossibleResponses()}
 			{foreach name=responses from=$possibleResponses key=responseId item=responseItem}
-				<input id="radio-{$responseId|escape}" name="{$reviewFormElement->getReviewFormElementId()}" type="radio">
+				<input id="radio-{$responseId|escape}" name="{$reviewFormElement->getId()}" type="radio">
 				<label for="radio-{$responseId|escape}">{$responseItem.content}</label>
 				<br/>
 			{/foreach}

@@ -253,7 +253,6 @@ class ArticleHTMLGalley extends ArticleGalley {
 	function setImageFiles(&$images) {
 		return $this->setData('images', $images);
 	}
-
 }
 
 ?>

@@ -27,11 +27,16 @@ class ReviewForm extends DataObject {
 		parent::DataObject();
 	}
 
+	function getReviewFormTitle() {
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
+		return $this->getLocalizedTitle();
+	}
+
 	/**
 	 * Get localized title.
 	 * @return string
 	 */
-	function getReviewFormTitle() {
+	function getLocalizedTitle() {
 		return $this->getLocalizedData('title');
 	}
 
@@ -39,8 +44,13 @@ class ReviewForm extends DataObject {
 	 * Get localized description.
 	 * @return array
 	 */
-	function getReviewFormDescription() {
+	function getLocalizedDescription() {
 		return $this->getLocalizedData('description');
+	}
+
+	function getReviewFormDescription() {
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
+		return $this->getLocalizedDescription();
 	}
 
 	//
@@ -52,7 +62,8 @@ class ReviewForm extends DataObject {
 	 * @return int
 	 */
 	function getReviewFormId() {
-		return $this->getData('reviewFormId');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
+		return $this->getId();
 	}
 
 	/**
@@ -60,7 +71,8 @@ class ReviewForm extends DataObject {
 	 * @param $reviewFormId int
 	 */
 	function setReviewFormId($reviewFormId) {
-		return $this->setData('reviewFormId', $reviewFormId);
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
+		return $this->setId($reviewFormId);
 	}
 
 	/**

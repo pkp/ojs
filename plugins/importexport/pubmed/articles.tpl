@@ -53,7 +53,7 @@ function toggleChecked() {
 	{assign var=issue value=$articleData.issue}
 	<tr valign="top">
 		<td><input type="checkbox" name="articleId[]" value="{$article->getId()}"/></td>
-		<td><a href="{url page="issue" op="view" path=$issue->getIssueId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>
+		<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>
 		<td>{$article->getLocalizedTitle()|strip_unsafe_html}</td>
 		<td>{$article->getAuthorString()|escape}</td>
 		<td align="right"><a href="{plugin_url path="exportArticle"|to_array:$article->getId()}" class="action">{translate key="common.export"}</a></td>

@@ -105,9 +105,9 @@ class ReviewFormForm extends Form {
 		$reviewForm->setTitle($this->getData('title'), null); // Localized
 		$reviewForm->setDescription($this->getData('description'), null); // Localized
 
-		if ($reviewForm->getReviewFormId() != null) {
+		if ($reviewForm->getId() != null) {
 			$reviewFormDao->updateReviewForm($reviewForm);
-			$reviewFormId = $reviewForm->getReviewFormId();
+			$reviewFormId = $reviewForm->getId();
 		} else {
 			$reviewFormId = $reviewFormDao->insertReviewForm($reviewForm);
 			$reviewFormDao->resequenceReviewForms($journalId, 0);

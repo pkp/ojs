@@ -486,7 +486,7 @@ class OAIDAO extends DAO {
 		if (isset($sectionSpec)) {
 			$section =& $this->sectionDao->getSectionByAbbrev($sectionSpec, $journal->getId());
 			if (isset($section)) {
-				$sectionId = $section->getSectionId();
+				$sectionId = $section->getId();
 			} else {
 				$sectionId = 0;
 			}

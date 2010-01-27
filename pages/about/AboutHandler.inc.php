@@ -336,7 +336,7 @@ class AboutHandler extends Handler {
 
 		$sectionEditorEntriesBySection = array();
 		foreach ($sections as $section) {
-			$sectionEditorEntriesBySection[$section->getSectionId()] =& $sectionEditorsDao->getEditorsBySectionId($journal->getId(), $section->getSectionId());
+			$sectionEditorEntriesBySection[$section->getId()] =& $sectionEditorsDao->getEditorsBySectionId($journal->getId(), $section->getId());
 		}
 		$templateMgr->assign_by_ref('sectionEditorEntriesBySection', $sectionEditorEntriesBySection);
 

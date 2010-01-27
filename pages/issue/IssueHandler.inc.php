@@ -83,7 +83,7 @@ class IssueHandler extends Handler {
 				$showToc = false;
 			} else {
 				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-				$publishedArticles =& $publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId(), true);
+				$publishedArticles =& $publishedArticleDao->getPublishedArticlesInSections($issue->getId(), true);
 				$templateMgr->assign_by_ref('publishedArticles', $publishedArticles);
 				$showToc = true;
 			}
@@ -101,12 +101,12 @@ class IssueHandler extends Handler {
 			if ($showToc && $subscriptionRequired && !$subscribedUser && !$subscribedDomain && $subscriptionExpiryPartial) {
 				$templateMgr->assign('subscriptionExpiryPartial', true);
 				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-				$publishedArticlesTemp =& $publishedArticleDao->getPublishedArticles($issue->getIssueId(), null, true);
+				$publishedArticlesTemp =& $publishedArticleDao->getPublishedArticles($issue->getId(), null, true);
 
 				$articleExpiryPartial = array();
 				foreach ($publishedArticlesTemp as $publishedArticle) {
-					$partial = IssueAction::subscribedUser($journal, $issue->getIssueId(), $publishedArticle->getId());
-					if (!$partial) IssueAction::subscribedDomain($journal, $issue->getIssueId(), $publishedArticle->getId()); 
+					$partial = IssueAction::subscribedUser($journal, $issue->getId(), $publishedArticle->getId());
+					if (!$partial) IssueAction::subscribedDomain($journal, $issue->getId(), $publishedArticle->getId()); 
 					$articleExpiryPartial[$publishedArticle->getId()] = $partial;
 				}
 				$templateMgr->assign_by_ref('articleExpiryPartial', $articleExpiryPartial);
@@ -210,7 +210,7 @@ class IssueHandler extends Handler {
 				$showToc = false;
 			} else {
 				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-				$publishedArticles =& $publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId(), true);
+				$publishedArticles =& $publishedArticleDao->getPublishedArticlesInSections($issue->getId(), true);
 
 				$publicFileManager = new PublicFileManager();
 				$templateMgr->assign('publishedArticles', $publishedArticles);
@@ -230,12 +230,12 @@ class IssueHandler extends Handler {
 			if ($showToc && $subscriptionRequired && !$subscribedUser && !$subscribedDomain && $subscriptionExpiryPartial) {
 				$templateMgr->assign('subscriptionExpiryPartial', true);
 				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-				$publishedArticlesTemp =& $publishedArticleDao->getPublishedArticles($issue->getIssueId(), null, true);
+				$publishedArticlesTemp =& $publishedArticleDao->getPublishedArticles($issue->getId(), null, true);
 
 				$articleExpiryPartial = array();
 				foreach ($publishedArticlesTemp as $publishedArticle) {
-					$partial = IssueAction::subscribedUser($journal, $issue->getIssueId(), $publishedArticle->getId());
-					if (!$partial) IssueAction::subscribedDomain($journal, $issue->getIssueId(), $publishedArticle->getId()); 
+					$partial = IssueAction::subscribedUser($journal, $issue->getId(), $publishedArticle->getId());
+					if (!$partial) IssueAction::subscribedDomain($journal, $issue->getId(), $publishedArticle->getId()); 
 					$articleExpiryPartial[$publishedArticle->getId()] = $partial;
 				}
 				$templateMgr->assign_by_ref('articleExpiryPartial', $articleExpiryPartial);

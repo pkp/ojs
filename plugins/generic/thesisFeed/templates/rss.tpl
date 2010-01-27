@@ -34,7 +34,7 @@
 		<items>
 			{foreach from=$theses item=thesis}
 			<rdf:Seq>
-				<rdf:li rdf:resource="{url page="thesis" op="view" path=$thesis->getThesisId()}"/>
+				<rdf:li rdf:resource="{url page="thesis" op="view" path=$thesis->getId()}"/>
 			</rdf:Seq>
 			{/foreach}
 		</items>
@@ -45,10 +45,10 @@
 {assign var="urlClose" value="</a>"|escape:html}
 
 {foreach from=$theses item=thesis}
-	<item rdf:about="{url page="thesis" op="view" path=$thesis->getThesisId()}">
+	<item rdf:about="{url page="thesis" op="view" path=$thesis->getId()}">
 		{* required elements *}
 		<title>{$thesis->getTitle()|strip|escape:"html"}</title>
-		<link>{url page="thesis" op="view" path=$thesis->getThesisId()}</link>
+		<link>{url page="thesis" op="view" path=$thesis->getId()}</link>
 
 		{if $thesis->getUrl()}
 			{assign var="thesisUrlOpen" value=$urlOpen|replace:"URL":$thesis->getUrl()|escape:"html"}

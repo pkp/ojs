@@ -35,7 +35,7 @@
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="common.id"}</td>
-		<td width="80%" class="value">{$logEntry->getLogId()}</td>
+		<td width="80%" class="value">{$logEntry->getId()}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.date"}</td>
@@ -67,7 +67,7 @@
 	</tr>
 </table>
 {if $isEditor}
-	<a href="{url op="clearSubmissionEventLog" path=$submission->getArticleId()|to_array:$logEntry->getLogId()}" onclick="return confirm('{translate|escape:"jsparam" key="submission.event.confirmDeleteLogEntry"}')" class="action">{translate key="submission.event.deleteLogEntry"}</a><br/>
+	<a href="{url op="clearSubmissionEventLog" path=$submission->getArticleId()|to_array:$logEntry->getId()}" onclick="return confirm('{translate|escape:"jsparam" key="submission.event.confirmDeleteLogEntry"}')" class="action">{translate key="submission.event.deleteLogEntry"}</a><br/>
 {/if}
 </div>
 <a class="action" href="{url op="submissionEventLog" path=$submission->getArticleId()}">{translate key="submission.event.backToEventLog"}</a>

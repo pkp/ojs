@@ -90,7 +90,7 @@ class UserIndividualSubscriptionForm extends Form {
 	function display() {
 		$templateMgr =& TemplateManager::getManager();
 		if (isset($this->subscription)) {
-			$subscriptionId = $this->subscription->getSubscriptionId();
+			$subscriptionId = $this->subscription->getId();
 		} else {
 			$subscriptionId = null;
 		}
@@ -158,7 +158,7 @@ class UserIndividualSubscriptionForm extends Form {
 		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($this->getData('typeId'));
 
-		$queuedPayment =& $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_PURCHASE_SUBSCRIPTION, $this->userId, $subscription->getSubscriptionId(), $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
+		$queuedPayment =& $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_PURCHASE_SUBSCRIPTION, $this->userId, $subscription->getId(), $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
 
 		$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);

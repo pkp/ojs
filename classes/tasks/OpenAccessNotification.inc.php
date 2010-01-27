@@ -48,7 +48,7 @@ class OpenAccessNotification extends ScheduledTask {
 			$email->assignParams($paramArray);
 
 			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-			$publishedArticles =& $publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId());
+			$publishedArticles =& $publishedArticleDao->getPublishedArticlesInSections($issue->getId());
 			$mimeBoundary = '==boundary_' . md5(microtime());
 
 			$templateMgr =& TemplateManager::getManager();

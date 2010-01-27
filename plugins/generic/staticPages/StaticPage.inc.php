@@ -106,7 +106,8 @@ class StaticPage extends DataObject {
 	 * @return int
 	 */
 	function getStaticPageId() {
-		return $this->getData('staticPageId');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
+		return $this->getId();
 	}
 
 	/**
@@ -114,7 +115,8 @@ class StaticPage extends DataObject {
 	 * @param $staticPageId int
 	 */
 	function setStaticPageId($staticPageId) {
-		return $this->setData('staticPageId', $staticPageId);
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
+		return $this->setId($staticPageId);
 	}
 }
 

@@ -40,13 +40,13 @@
 {foreach from=$theses item=thesis}
 	<entry>
 		{* required elements *}
-		<id>{url page="thesis" op="view" path=$thesis->getThesisId()}</id>
+		<id>{url page="thesis" op="view" path=$thesis->getId()}</id>
 		<title>{$thesis->getTitle()|strip|escape:"html"}</title>
 		<updated>{$thesis->getDateSubmitted()|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</updated>
 	  	<author>
 			<name>{$thesis->getStudentFullName()|escape:"html"|strip}</name>
         </author>
-		<link rel="alternate" href="{url page="thesis" op="view" path=$thesis->getThesisId()}" />
+		<link rel="alternate" href="{url page="thesis" op="view" path=$thesis->getId()}" />
 
 		{if $thesis->getUrl()}
 			{assign var="thesisUrlOpen" value=$urlOpen|replace:"URL":$thesis->getUrl()|escape:"html"}
@@ -54,7 +54,7 @@
 			{assign var="thesisUrlOpen" value=""}
 		{/if}
 
-		<summary type="html" xml:base="{url page="thesis" op="view" path=$thesis->getThesisId()}">{$thesis->getDepartment()|strip|escape:"html"}, {$thesis->getUniversity()|strip|escape:"html"}{$break}{$thesis->getDateApproved()|date_format:"%B, %Y"}{$break}{$break}{if $thesisUrlOpen}{$thesisUrlOpen}{translate key="plugins.generic.thesis.fullText"}{$urlClose}{$break}{$break}{/if}{$thesis->getAbstract()|strip|escape:"html"}</summary>
+		<summary type="html" xml:base="{url page="thesis" op="view" path=$thesis->getId()}">{$thesis->getDepartment()|strip|escape:"html"}, {$thesis->getUniversity()|strip|escape:"html"}{$break}{$thesis->getDateApproved()|date_format:"%B, %Y"}{$break}{$break}{if $thesisUrlOpen}{$thesisUrlOpen}{translate key="plugins.generic.thesis.fullText"}{$urlClose}{$break}{$break}{/if}{$thesis->getAbstract()|strip|escape:"html"}</summary>
 
 		{* optional elements *}
 		{* <category/> *}

@@ -1633,7 +1633,7 @@ class SectionEditorAction extends Action {
 		$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 		if (HookRegistry::call('SectionEditorAction::deleteArticleImage', array(&$submission, &$fileId, &$revision))) return;
 		foreach ($submission->getGalleys() as $galley) {
-			$images =& $articleGalleyDao->getGalleyImages($galley->getGalleyId());
+			$images =& $articleGalleyDao->getGalleyImages($galley->getId());
 			foreach ($images as $imageFile) {
 				if ($imageFile->getArticleId() == $submission->getArticleId() && $fileId == $imageFile->getFileId() && $imageFile->getRevision() == $revision) {
 					$articleFileManager = new ArticleFileManager($submission->getArticleId());
@@ -1708,7 +1708,7 @@ class SectionEditorAction extends Action {
 		$user =& Request::getUser();
 
 		$articleNote = new ArticleNote();
-		$articleNote->setNoteId(Request::getUserVar('noteId'));
+		$articleNote->setId(Request::getUserVar('noteId'));
 		$articleNote->setArticleId($articleId);
 		$articleNote->setUserId($user->getId());
 		$articleNote->setDateModified(Core::getCurrentDate());
@@ -1981,7 +1981,7 @@ class SectionEditorAction extends Action {
 							}
 							foreach ($reviewFormElements as $reviewFormElement) {
 								$body .= strip_tags($reviewFormElement->getReviewFormElementQuestion()) . ": \n";
-								$reviewFormResponse = $reviewFormResponseDao->getReviewFormResponse($reviewId, $reviewFormElement->getReviewFormElementId());
+								$reviewFormResponse = $reviewFormResponseDao->getReviewFormResponse($reviewId, $reviewFormElement->getId());
 
 								if ($reviewFormResponse) {
 									$possibleResponses = $reviewFormElement->getReviewFormElementPossibleResponses();

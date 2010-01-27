@@ -46,7 +46,7 @@ class SubscriptionDAO extends DAO {
 			'SELECT journal_id FROM subscriptions WHERE subscription_id = ?', $subscriptionId
 		);
 
-		$returner = isset($result->fields[0]) ? $result->fields[0] : false;	
+		$returner = isset($result->fields[0]) ? $result->fields[0] : false;
 
 		$result->Close();
 		unset($result);
@@ -73,7 +73,7 @@ class SubscriptionDAO extends DAO {
 
 	/**
 	 * Return number of subscriptions with given status.
-	 * @param status int 
+	 * @param status int
 	 * @return int
 	 */
 	function getStatusCount($status) {
@@ -116,7 +116,7 @@ class SubscriptionDAO extends DAO {
 	/**
 	 * Insert a new subscription.
 	 * @param $subscription Subscription
-	 * @return int 
+	 * @return int
 	 */
 	function insertSubscription(&$subscription) {
 		// must be implemented by sub-classes
@@ -193,11 +193,11 @@ class SubscriptionDAO extends DAO {
 	/**
 	 * Retrieve subscriptions matching a particular journal ID.
 	 * @param $journalId int
-	 * @param $status int 
+	 * @param $status int
 	 * @param $searchField int
 	 * @param $searchMatch string "is" or "contains" or "startsWith"
 	 * @param $search String to look in $searchField for
-	 * @param $dateField int 
+	 * @param $dateField int
 	 * @param $dateFrom String date to search from
 	 * @param $dateTo String date to search to
 	 * @return object DAOResultFactory containing matching Subscriptions
@@ -220,10 +220,10 @@ class SubscriptionDAO extends DAO {
 
 	/**
 	 * Function to renew a subscription by dateEnd + duration of subscription type
-	 * if the subscription is expired, renew to current date + duration  
+	 * if the subscription is expired, renew to current date + duration
 	 * @param $subscription Subscription
 	 * @return boolean
-	 */	
+	 */
 	function renewSubscription(&$subscription) {
 		// must be implemented by sub-classes
 		assert(false);
@@ -231,7 +231,7 @@ class SubscriptionDAO extends DAO {
 
 	/**
 	 * Internal function to generate user based search query.
-	 * @return string 
+	 * @return string
 	 */
 	function _generateUserNameSearchSQL($search, $searchMatch, $prefix, &$params) {
 		$first_last = $this->_dataSource->Concat($prefix.'first_name', '\' \'', $prefix.'last_name');
@@ -253,7 +253,7 @@ class SubscriptionDAO extends DAO {
 
 	/**
 	 * Internal function to generate subscription based search query.
-	 * @return string 
+	 * @return string
 	 */
 	function _generateSearchSQL($status = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, &$params) {
 
@@ -327,7 +327,6 @@ class SubscriptionDAO extends DAO {
 		return $searchSql;
 	}
 
-	
 	/**
 	 * Generator function to create object.
 	 * @return Subscription
@@ -344,7 +343,7 @@ class SubscriptionDAO extends DAO {
 	 */
 	function &_returnSubscriptionFromRow(&$row) {
 		$subscription = $this->createObject();
-		$subscription->setSubscriptionId($row['subscription_id']);
+		$subscription->setId($row['subscription_id']);
 		$subscription->setJournalId($row['journal_id']);
 		$subscription->setUserId($row['user_id']);
 		$subscription->setTypeId($row['type_id']);
@@ -363,7 +362,7 @@ class SubscriptionDAO extends DAO {
 	/**
 	 * Internal function to insert a new Subscription.
 	 * @param $subscription Subscription
-	 * @return int 
+	 * @return int
 	 */
 	function _insertSubscription(&$subscription) {
 		$returner = $this->update(
@@ -384,7 +383,7 @@ class SubscriptionDAO extends DAO {
 		);
 
 		$subscriptionId = $this->getInsertSubscriptionId();
-		$subscription->setSubscriptionId($subscriptionId);
+		$subscription->setId($subscriptionId);
 
 		return $subscriptionId;
 	}
@@ -417,7 +416,7 @@ class SubscriptionDAO extends DAO {
 				$subscription->getMembership(),
 				$subscription->getReferenceNumber(),
 				$subscription->getNotes(),
-				$subscription->getSubscriptionId()
+				$subscription->getId()
 			)
 		);
 
@@ -426,19 +425,19 @@ class SubscriptionDAO extends DAO {
 
 	/**
 	 * Internal function to renew a subscription by dateEnd + duration of subscription type
-	 * if the subscription is expired, renew to current date + duration  
+	 * if the subscription is expired, renew to current date + duration
 	 * @param $subscription Subscription
 	 * @return boolean
-	 */	
+	 */
 	function _renewSubscription(&$subscription) {
 		if ($subscription->isNonExpiring()) return;
 
 		$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionType =& $subscriptionTypeDAO->getSubscriptionType($subscription->getTypeId());
-		
+
 		$duration = $subscriptionType->getDuration();
 		$dateEnd = strtotime($subscription->getDateEnd());
-		
+
 		// if the subscription is expired, extend it to today + duration of subscription
 		$time = time();
 		if ($dateEnd < $time ) $dateEnd = $time;
@@ -446,7 +445,6 @@ class SubscriptionDAO extends DAO {
 		$subscription->setDateEnd(mktime(23, 59, 59, date("m", $dateEnd)+$duration, date("d", $dateEnd), date("Y", $dateEnd)));
 		$this->updateSubscription($subscription);
 	}
-
 }
 
 ?>

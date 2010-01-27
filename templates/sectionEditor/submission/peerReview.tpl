@@ -79,7 +79,7 @@
 			<td width="80%" class="value nowrap">
 				<form method="post" action="{url op="setSuppFileVisibility"}">
 				<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
-				<input type="hidden" name="fileId" value="{$suppFile->getSuppFileId()}" />
+				<input type="hidden" name="fileId" value="{$suppFile->getId()}" />
 
 				<a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$suppFile->getFileId():$suppFile->getRevision()}" class="file">{$suppFile->getFileName()|escape}</a>&nbsp;&nbsp;
 				{$suppFile->getDateModified()|date_format:$dateFormatShort}&nbsp;&nbsp;
@@ -239,7 +239,7 @@
 				<td>
 					{if $reviewAssignment->getMostRecentPeerReviewComment()}
 						{assign var="comment" value=$reviewAssignment->getMostRecentPeerReviewComment()}
-						<a href="javascript:openComments('{url op="viewPeerReviewComments" path=$submission->getArticleId()|to_array:$reviewAssignment->getReviewId() anchor=$comment->getCommentId()}');" class="icon">{icon name="comment"}</a>&nbsp;&nbsp;{$comment->getDatePosted()|date_format:$dateFormatShort}
+						<a href="javascript:openComments('{url op="viewPeerReviewComments" path=$submission->getArticleId()|to_array:$reviewAssignment->getReviewId() anchor=$comment->getId()}');" class="icon">{icon name="comment"}</a>&nbsp;&nbsp;{$comment->getDatePosted()|date_format:$dateFormatShort}
 					{else}
 						<a href="javascript:openComments('{url op="viewPeerReviewComments" path=$submission->getArticleId()|to_array:$reviewAssignment->getReviewId()}');" class="icon">{icon name="comment"}</a>&nbsp;&nbsp;{translate key="submission.comments.noComments"}
 					{/if}

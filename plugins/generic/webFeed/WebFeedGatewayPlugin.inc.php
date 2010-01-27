@@ -132,7 +132,7 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 				unset($publishedArticle);
 			}
 		} else {
-			$publishedArticles =& $publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId());
+			$publishedArticles =& $publishedArticleDao->getPublishedArticlesInSections($issue->getId());
 		}
 
 		$versionDao =& DAORegistry::getDAO('VersionDAO');

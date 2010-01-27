@@ -35,11 +35,11 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveSection"); });
 		<td class="headseparator" colspan="3">&nbsp;</td>
 	</tr>
 {iterate from=sections item=section name=sections}
-	<tr valign="top" id="section-{$section->getSectionId()}" class="data">
+	<tr valign="top" id="section-{$section->getId()}" class="data">
 		<td class="drag">{$section->getLocalizedTitle()|escape}</td>
 		<td class="drag">{$section->getLocalizedAbbrev()|escape}</td>
 		<td align="right" class="nowrap">
-			<a href="{url op="editSection" path=$section->getSectionId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url op="deleteSection" path=$section->getSectionId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.sections.confirmDelete"}')" class="action">{translate key="common.delete"}</a>&nbsp;|&nbsp;<a href="{url op="moveSection" d=u id=$section->getSectionId()}">&uarr;</a>&nbsp;<a href="{url op="moveSection" d=d id=$section->getSectionId()}">&darr;</a>
+			<a href="{url op="editSection" path=$section->getId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url op="deleteSection" path=$section->getId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.sections.confirmDelete"}')" class="action">{translate key="common.delete"}</a>&nbsp;|&nbsp;<a href="{url op="moveSection" d=u id=$section->getId()}">&uarr;</a>&nbsp;<a href="{url op="moveSection" d=d id=$section->getId()}">&darr;</a>
 		</td>
 	</tr>
 {/iterate}

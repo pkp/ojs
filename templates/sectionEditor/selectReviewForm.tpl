@@ -28,9 +28,9 @@
 	</tr>
 {iterate from=reviewForms item=reviewForm name=reviewForms}
 	<tr valign="top">
-		<td>{$reviewForm->getReviewFormTitle()|escape}</td>
+		<td>{$reviewForm->getLocalizedTitle()|escape}</td>
 		<td class="nowrap">
-			{if $assignedReviewFormId == $reviewForm->getReviewFormId()}{translate key="common.alreadyAssigned"}{else}<a href="{url op="selectReviewForm" path=$articleId|to_array:$reviewId:$reviewForm->getReviewFormId()}" class="action">{translate key="common.assign"}</a>{/if}&nbsp;|&nbsp;<a href="{url op="previewReviewForm" path=$reviewId|to_array:$reviewForm->getReviewFormId()}" class="action">{translate key="common.preview"}</a>
+			{if $assignedReviewFormId == $reviewForm->getId()}{translate key="common.alreadyAssigned"}{else}<a href="{url op="selectReviewForm" path=$articleId|to_array:$reviewId:$reviewForm->getId()}" class="action">{translate key="common.assign"}</a>{/if}&nbsp;|&nbsp;<a href="{url op="previewReviewForm" path=$reviewId|to_array:$reviewForm->getId()}" class="action">{translate key="common.preview"}</a>
 	</tr>
 	<tr>
 		<td colspan="2" class="{if $reviewForms->eof()}end{/if}separator">&nbsp;</td>

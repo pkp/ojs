@@ -71,7 +71,7 @@ class ArticleNoteDAO extends DAO {
 	 */
 	function &_returnArticleNoteFromRow($row) {
 		$articleNote = new ArticleNote();
-		$articleNote->setNoteId($row['note_id']);
+		$articleNote->setId($row['note_id']);
 		$articleNote->setArticleId($row['article_id']);
 		$articleNote->setUserId($row['user_id']);
 		$articleNote->setDateCreated($this->datetimeFromDB($row['date_created']));
@@ -109,8 +109,8 @@ class ArticleNoteDAO extends DAO {
 			)
 		);
 
-		$articleNote->setNoteId($this->getInsertArticleNoteId());
-		return $articleNote->getNoteId();
+		$articleNote->setId($this->getInsertArticleNoteId());
+		return $articleNote->getId();
 	}
 
 	/**
@@ -151,7 +151,7 @@ class ArticleNoteDAO extends DAO {
 				$articleNote->getTitle(),
 				$articleNote->getNote(),
 				$articleNote->getFileId(),
-				$articleNote->getNoteId()
+				$articleNote->getId()
 			)
 		);
 	}
