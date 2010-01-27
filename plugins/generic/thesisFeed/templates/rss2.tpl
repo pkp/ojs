@@ -38,7 +38,7 @@
 			<item>
 				{* required elements *}
 				<title>{$thesis->getTitle()|strip|escape:"html"}</title>
-				<link>{url page="thesis" op="view" path=$thesis->getThesisId()}</link>
+				<link>{url page="thesis" op="view" path=$thesis->getId()}</link>
 
 				{if $thesis->getUrl()}
 					{assign var="thesisUrlOpen" value=$urlOpen|replace:"URL":$thesis->getUrl()|escape:"html"}
@@ -49,7 +49,7 @@
 				<description>{$thesis->getDepartment()|strip|escape:"html"}, {$thesis->getUniversity()|strip|escape:"html"}{$break}{$thesis->getDateApproved()|date_format:"%B, %Y"}{$break}{$break}{if $thesisUrlOpen}{$thesisUrlOpen}{translate key="plugins.generic.thesis.fullText"}{$urlClose}{$break}{$break}{/if}{$thesis->getAbstract()|strip|escape:"html"}</description>
 
 				{* optional elements *}
-				<guid isPermaLink="true">{url page="thesis" op="view" path=$thesis->getThesisId()}</guid>
+				<guid isPermaLink="true">{url page="thesis" op="view" path=$thesis->getId()}</guid>
 				<pubDate>{$thesis->getDateSubmitted()|date_format:"%a, %d %b %Y %T %z"}</pubDate>
 			</item>
 		{/foreach}

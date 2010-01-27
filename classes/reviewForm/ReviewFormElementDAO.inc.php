@@ -45,7 +45,7 @@ class ReviewFormElementDAO extends DAO {
 	 */
 	function &_returnReviewFormElementFromRow(&$row) {
 		$reviewFormElement = new ReviewFormElement();
-		$reviewFormElement->setReviewFormElementId($row['review_form_element_id']);
+		$reviewFormElement->setId($row['review_form_element_id']);
 		$reviewFormElement->setReviewFormId($row['review_form_id']);
 		$reviewFormElement->setSequence($row['seq']);
 		$reviewFormElement->setElementType($row['element_type']);
@@ -72,7 +72,7 @@ class ReviewFormElementDAO extends DAO {
 	 */
 	function updateLocaleFields(&$reviewFormElement) {
 		$this->updateDataObjectSettings('review_form_element_settings', $reviewFormElement, array(
-			'review_form_element_id' => $reviewFormElement->getReviewFormElementId()
+			'review_form_element_id' => $reviewFormElement->getId()
 		));
 	}
 
@@ -94,9 +94,9 @@ class ReviewFormElementDAO extends DAO {
 			)
 		);
 
-		$reviewFormElement->setReviewFormElementId($this->getInsertReviewFormElementId());
+		$reviewFormElement->setId($this->getInsertReviewFormElementId());
 		$this->updateLocaleFields($reviewFormElement);
-		return $reviewFormElement->getReviewFormElementId();
+		return $reviewFormElement->getId();
 	}
 
 	/**
@@ -117,7 +117,7 @@ class ReviewFormElementDAO extends DAO {
 				$reviewFormElement->getSequence(),
 				$reviewFormElement->getElementType(),
 				$reviewFormElement->getRequired(),
-				$reviewFormElement->getReviewFormElementId()
+				$reviewFormElement->getId()
 			)
 		);
 		$this->updateLocaleFields($reviewFormElement);
@@ -129,7 +129,7 @@ class ReviewFormElementDAO extends DAO {
 	 * @param $reviewFormElement reviewFormElement
 	 */
 	function deleteReviewFormElement(&$reviewFormElement) {
-		return $this->deleteReviewFormElementById($reviewFormElement->getReviewFormElementId(), $reviewFormElement->getReviewFormId());
+		return $this->deleteReviewFormElementById($reviewFormElement->getId(), $reviewFormElement->getReviewFormId());
 	}
 
 	/**
@@ -188,7 +188,7 @@ class ReviewFormElementDAO extends DAO {
 
 		while (!$result->EOF) {
 			$reviewFormElement =& $this->_returnReviewFormElementFromRow($result->GetRowAssoc(false));
-			$reviewFormElements[$reviewFormElement->getReviewFormElementId()] = $reviewFormElement;
+			$reviewFormElements[$reviewFormElement->getId()] = $reviewFormElement;
 			$result->moveNext();
 		}
 

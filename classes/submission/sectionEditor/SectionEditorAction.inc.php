@@ -1708,7 +1708,7 @@ class SectionEditorAction extends Action {
 		$user =& Request::getUser();
 
 		$articleNote = new ArticleNote();
-		$articleNote->setNoteId(Request::getUserVar('noteId'));
+		$articleNote->setId(Request::getUserVar('noteId'));
 		$articleNote->setArticleId($articleId);
 		$articleNote->setUserId($user->getId());
 		$articleNote->setDateModified(Core::getCurrentDate());
@@ -1981,7 +1981,7 @@ class SectionEditorAction extends Action {
 							}
 							foreach ($reviewFormElements as $reviewFormElement) {
 								$body .= strip_tags($reviewFormElement->getReviewFormElementQuestion()) . ": \n";
-								$reviewFormResponse = $reviewFormResponseDao->getReviewFormResponse($reviewId, $reviewFormElement->getReviewFormElementId());
+								$reviewFormResponse = $reviewFormResponseDao->getReviewFormResponse($reviewId, $reviewFormElement->getId());
 
 								if ($reviewFormResponse) {
 									$possibleResponses = $reviewFormElement->getReviewFormElementPossibleResponses();

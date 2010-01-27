@@ -230,7 +230,7 @@ class ThesisForm extends Form {
 		$thesis->setDateSubmitted(Core::getCurrentDate());
 
 		// Update or insert thesis
-		if ($thesis->getThesisId() != null) {
+		if ($thesis->getId() != null) {
 			$thesisDao->updateThesis($thesis);
 		} else {
 			$thesisDao->insertThesis($thesis);

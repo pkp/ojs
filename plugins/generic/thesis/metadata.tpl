@@ -35,7 +35,7 @@
 	<meta name="DC.Date" scheme="ISO8601" content="{$thesis->getDateApproved()|date_format:"%Y-%m-%d"}"/>
 	<meta name="DC.Type" content="Electronic Thesis or Dissertation"/>
 	<meta name="DC.Format" scheme="IMT" content="text/html"/>		
-	<meta name="DC.Identifier" content="{url op="view" path=$thesis->getThesisId()}"/>
+	<meta name="DC.Identifier" content="{url op="view" path=$thesis->getId()}"/>
 {if $thesis->getUrl()}
 	<meta name="DC.Source" content="{$thesis->getUrl()|escape}"/>
 {/if}

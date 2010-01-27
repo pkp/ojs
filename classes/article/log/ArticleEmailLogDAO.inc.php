@@ -90,7 +90,7 @@ class ArticleEmailLogDAO extends DAO {
 	 */
 	function &_returnLogEntryFromRow(&$row) {
 		$entry = new ArticleEmailLogEntry();
-		$entry->setLogId($row['log_id']);
+		$entry->setId($row['log_id']);
 		$entry->setArticleId($row['article_id']);
 		$entry->setSenderId($row['sender_id']);
 		$entry->setDateSent($this->datetimeFromDB($row['date_sent']));
@@ -143,8 +143,8 @@ class ArticleEmailLogDAO extends DAO {
 			)
 		);
 
-		$entry->setLogId($this->getInsertLogId());
-		return $entry->getLogId();
+		$entry->setId($this->getInsertLogId());
+		return $entry->getId();
 	}
 
 	/**
