@@ -17,8 +17,8 @@
 
 import('classes.plugins.GenericPlugin');
 
-define('JQUERY_INSTALL_PATH', 'lib' . DIRECTORY_SEPARATOR . 'pkp' . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'jquery');
-define('JQUERY_JS_PATH', JQUERY_INSTALL_PATH . DIRECTORY_SEPARATOR . 'jquery-1.2.6.min.js');
+define('JQUERY_INSTALL_PATH', 'lib' . DIRECTORY_SEPARATOR . 'pkp' . DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'jquery');
+define('JQUERY_JS_PATH', JQUERY_INSTALL_PATH . DIRECTORY_SEPARATOR . 'jquery.min.js');
 define('JQUERY_SCRIPTS_DIR', 'plugins' . DIRECTORY_SEPARATOR . 'generic' . DIRECTORY_SEPARATOR . 'jquery' . DIRECTORY_SEPARATOR . 'scripts');
 
 class JQueryPlugin extends GenericPlugin {
@@ -120,9 +120,16 @@ class JQueryPlugin extends GenericPlugin {
 		$additionalHeadData = $templateManager->get_template_vars('additionalHeadData');
 		$baseUrl = $templateManager->get_template_vars('baseUrl');
 
-		$jQueryScript =
-		'	<script language="javascript" type="text/javascript" src="' . $this->getScriptPath() . '"></script>'
-		. "\n" . JQueryPlugin::addScripts($baseUrl, $scripts);
+		if(Config::getVar('general', 'enable_cdn')) {
+			$jQueryScript = '<script src="http://www.google.com/jsapi"></script>
+			<script>
+				google.load("jquery", "1");
+			</script>';
+		} else {
+			$jQueryScript = '<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/lib/jquery/jquery.min.js"></script>
+			<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/jqueryUi.min.js"></script>';
+		}
+		$jQueryScript .= "\n" . JQueryPlugin::addScripts($baseUrl, $scripts);
 
 		$templateManager->assign('additionalHeadData', $additionalHeadData."\n".$jQueryScript);
 	}
