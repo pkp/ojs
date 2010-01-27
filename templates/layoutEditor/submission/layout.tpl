@@ -110,15 +110,15 @@
 			{if $disableEdit}
 				&mdash;
 			{else}
-			<a href="{url op="orderSuppFile" d=u articleId=$submission->getArticleId() suppFileId=$suppFile->getSuppFileId()}" class="plain">&uarr;</a> <a href="{url op="orderSuppFile" d=d articleId=$submission->getArticleId() suppFileId=$suppFile->getSuppFileId()}" class="plain">&darr;</a>
+			<a href="{url op="orderSuppFile" d=u articleId=$submission->getArticleId() suppFileId=$suppFile->getId()}" class="plain">&uarr;</a> <a href="{url op="orderSuppFile" d=d articleId=$submission->getArticleId() suppFileId=$suppFile->getId()}" class="plain">&darr;</a>
 			{/if}
 		</td>
 		<td>
 			{if $disableEdit}
 				&mdash;
 			{else}
-			<a href="{url op="editSuppFile" path=$submission->getArticleId()|to_array:$suppFile->getSuppFileId()}" class="action">{translate key="common.edit"}</a>
-			<a href="{url op="deleteSuppFile" path=$submission->getArticleId()|to_array:$suppFile->getSuppFileId()}" onclick="return confirm('{translate|escape:"jsparam" key="submission.layout.confirmDeleteSupplementaryFile"}')" class="action">{translate key="common.delete"}</a>
+			<a href="{url op="editSuppFile" path=$submission->getArticleId()|to_array:$suppFile->getId()}" class="action">{translate key="common.edit"}</a>
+			<a href="{url op="deleteSuppFile" path=$submission->getArticleId()|to_array:$suppFile->getId()}" onclick="return confirm('{translate|escape:"jsparam" key="submission.layout.confirmDeleteSupplementaryFile"}')" class="action">{translate key="common.delete"}</a>
 			{/if}
 		</td>
 	</tr>

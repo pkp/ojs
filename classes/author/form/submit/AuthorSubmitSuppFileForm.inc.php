@@ -188,7 +188,7 @@ class AuthorSubmitSuppFileForm extends Form {
 			$suppFile->setFileId($fileId);
 			$this->setSuppFileData($suppFile);
 			$suppFileDao->insertSuppFile($suppFile);
-			$this->suppFileId = $suppFile->getSuppFileId();
+			$this->suppFileId = $suppFile->getId();
 		}
 
 		return $this->suppFileId;

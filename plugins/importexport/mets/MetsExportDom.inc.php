@@ -587,7 +587,7 @@ class MetsExportDom {
 			XMLCustomWriter::setAttribute($fLocat, 'xlink:href', Request::url(
 				$journal->getPath(),
 				'article', 'downloadSuppFile',
-				array($suppFile->getArticleId(), $suppFile->getSuppFileId())
+				array($suppFile->getArticleId(), $suppFile->getId())
 			));
 			XMLCustomWriter::setAttribute($fLocat, 'LOCTYPE', 'URL');
 			XMLCustomWriter::appendChild($mfile, $fLocat);
