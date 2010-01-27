@@ -36,7 +36,7 @@
 	{assign var=pos value=1}
 	{iterate from=issues item=issue}
 	<tr valign="top">
-		<td><a href="{url op="issueToc" path=$issue->getIssueId()}" class="action">{$issue->getIssueIdentification()|escape}</a></td>
+		<td><a href="{url op="issueToc" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|escape}</a></td>
 		<td>{$issue->getDatePublished()|date_format:"$dateFormatShort"}</td>
 		<td>{$issue->getNumArticles()|escape}</td>
 	</tr>

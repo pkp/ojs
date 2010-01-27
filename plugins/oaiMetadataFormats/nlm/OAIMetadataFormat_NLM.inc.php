@@ -40,9 +40,9 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 		// Cache issue ordering information.
 		static $issueId;
 		static $sectionSeq;
-		if (!isset($issueId) || $issueId != $issue->getIssueId()) {
+		if (!isset($issueId) || $issueId != $issue->getId()) {
 			$sectionDao =& DAORegistry::getDAO('SectionDAO');
-			$issueId = $issue->getIssueId();
+			$issueId = $issue->getId();
 			$sections =& $sectionDao->getSectionsForIssue($issueId);
 			$sectionSeq = array();
 			$i=0;
@@ -202,7 +202,7 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 		// provide the full-text.
 		import('issue.IssueAction');
 		$subscriptionRequired = IssueAction::subscriptionRequired($issue);
-		$isSubscribedDomain = IssueAction::subscribedDomain($journal, $issue->getIssueId(), $article->getId());
+		$isSubscribedDomain = IssueAction::subscribedDomain($journal, $issue->getId(), $article->getId());
 
 		if (!$subscriptionRequired || $isSubscribedDomain) foreach ($galleys as $galley) {
 			$parser =& SearchFileParser::fromFile($galley);

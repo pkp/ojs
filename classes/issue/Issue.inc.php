@@ -29,7 +29,8 @@ class Issue extends DataObject {
 	 * @return int
 	 */
 	function getIssueId() {
-		return $this->getData('issueId');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
+		return $this->getId();
 	}
 
 	/**
@@ -37,7 +38,8 @@ class Issue extends DataObject {
 	 * @param $issueId int
 	 */
 	function setIssueId($issueId) {
-		return $this->setData('issueId', $issueId);
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
+		return $this->setId($issueId);
 	}
 
 	/**
@@ -747,7 +749,7 @@ class Issue extends DataObject {
 			$publicIssueId = $this->getPublicIssueId();
 			if (!empty($publicIssueId)) return $publicIssueId;
 		}
-		return $this->getIssueId();
+		return $this->getId();
 	}
 }
 

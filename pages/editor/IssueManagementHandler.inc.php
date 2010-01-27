@@ -61,14 +61,14 @@ class IssueManagementHandler extends EditorHandler {
 		$allIssuesIterator = $issueDao->getPublishedIssues($journal->getId());
 		$issueMap = array();
 		while ($issue =& $allIssuesIterator->next()) {
-			$issueMap[$issue->getIssueId()] = $issue->getIssueIdentification();
+			$issueMap[$issue->getId()] = $issue->getIssueIdentification();
 			unset($issue);
 		}
 		$templateMgr->assign('allIssues', $issueMap);
 		$templateMgr->assign('rangeInfo', $rangeInfo);
 
 		$currentIssue =& $issueDao->getCurrentIssue($journal->getId());
-		$currentIssueId = $currentIssue?$currentIssue->getIssueId():null;
+		$currentIssueId = $currentIssue?$currentIssue->getId():null;
 		$templateMgr->assign('currentIssueId', $currentIssueId);
 
 		$templateMgr->assign('helpTopicId', 'publishing.index');
@@ -529,7 +529,7 @@ class IssueManagementHandler extends EditorHandler {
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$sectionDao->deleteCustomSectionOrdering($issueId);
 
-		Request::redirect(null, null, 'issueToc', $issue->getIssueId());
+		Request::redirect(null, null, 'issueToc', $issue->getId());
 	}
 
 	/**
@@ -545,7 +545,7 @@ class IssueManagementHandler extends EditorHandler {
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleById(Request::getUserVar('pubId'));
 
-		if ($publishedArticle != null && $publishedArticle->getIssueId() == $issue->getIssueId() && $issue->getJournalId() == $journal->getId()) {
+		if ($publishedArticle != null && $publishedArticle->getIssueId() == $issue->getId() && $issue->getJournalId() == $journal->getId()) {
 			$publishedArticle->setSeq($publishedArticle->getSeq() + (Request::getUserVar('d') == 'u' ? -1.5 : 1.5));
 			$publishedArticleDao->updatePublishedArticle($publishedArticle);
 			$publishedArticleDao->resequencePublishedArticles(Request::getUserVar('sectionId'),$issueId);
@@ -626,7 +626,7 @@ class IssueManagementHandler extends EditorHandler {
 		$notificationDao->sendToMailingList(Notification::createNotification(0, "notification.type.issuePublished",
 				null, $url, 1, NOTIFICATION_TYPE_PUBLISHED_ISSUE));
 				
-		Request::redirect(null, null, 'issueToc', $issue->getIssueId());
+		Request::redirect(null, null, 'issueToc', $issue->getId());
 	}
 
 	/**
@@ -684,7 +684,7 @@ class IssueManagementHandler extends EditorHandler {
 				$issue = $issueDao->getIssueById(Request::getUserVar('issue'));
 
 				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-				$publishedArticles =& $publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId());
+				$publishedArticles =& $publishedArticleDao->getPublishedArticlesInSections($issue->getId());
 
 				$templateMgr->assign_by_ref('journal', $journal);
 				$templateMgr->assign_by_ref('issue', $issue);

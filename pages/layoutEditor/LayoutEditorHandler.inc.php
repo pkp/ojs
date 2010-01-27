@@ -153,13 +153,13 @@ class LayoutEditorHandler extends Handler {
 		$allIssuesIterator = $issueDao->getPublishedIssues($journal->getId());
 		$issueMap = array();
 		while ($issue =& $allIssuesIterator->next()) {
-			$issueMap[$issue->getIssueId()] = $issue->getIssueIdentification();
+			$issueMap[$issue->getId()] = $issue->getIssueIdentification();
 			unset($issue);
 		}
 		$templateMgr->assign('allIssues', $issueMap);
 
 		$currentIssue =& $issueDao->getCurrentIssue($journal->getId());
-		$currentIssueId = $currentIssue?$currentIssue->getIssueId():null;
+		$currentIssueId = $currentIssue?$currentIssue->getId():null;
 		$templateMgr->assign('currentIssueId', $currentIssueId);
 
 		$templateMgr->assign('helpTopicId', 'publishing.index');

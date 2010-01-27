@@ -195,8 +195,8 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 
 		foreach ($issues as $issue) {
-			foreach ($sectionDao->getSectionsForIssue($issue->getIssueId()) as $section) {
-				foreach ($publishedArticleDao->getPublishedArticlesBySectionId($section->getId(), $issue->getIssueId()) as $article) {
+			foreach ($sectionDao->getSectionsForIssue($issue->getId()) as $section) {
+				foreach ($publishedArticleDao->getPublishedArticlesBySectionId($section->getId(), $issue->getId()) as $article) {
 					// Create the metadata node
 					// this does not need to be repeated for every article
 					// but its allowed to be and its simpler to do so					

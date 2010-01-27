@@ -99,9 +99,9 @@ class SitemapHandler extends Handler {
 		XMLCustomWriter::appendChild($root, SitemapHandler::createUrlTree($doc, Request::url($journal->getPath(), 'issue', 'archive')));
 		$publishedIssues =& $issueDao->getPublishedIssues($journalId);
 		while ($issue =& $publishedIssues->next()) {
-			XMLCustomWriter::appendChild($root, SitemapHandler::createUrlTree($doc, Request::url($journal->getPath(), 'issue', 'view', $issue->getIssueId())));
+			XMLCustomWriter::appendChild($root, SitemapHandler::createUrlTree($doc, Request::url($journal->getPath(), 'issue', 'view', $issue->getId())));
 			// Articles for issue
-			$articles = $publishedArticleDao->getPublishedArticles($issue->getIssueId());
+			$articles = $publishedArticleDao->getPublishedArticles($issue->getId());
 			foreach($articles as $article) {
 				// Abstract
 				XMLCustomWriter::appendChild($root, SitemapHandler::createUrlTree($doc, Request::url($journal->getPath(), 'article', 'view', array($article->getId()))));
