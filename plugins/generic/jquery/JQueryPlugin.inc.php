@@ -57,7 +57,7 @@ class JQueryPlugin extends GenericPlugin {
 	function getInstallSitePluginSettingsFile() {
 		return $this->getPluginPath() . '/settings.xml';
 	}
-	
+
 	/**
 	 * Get the URL for the jQuery script
 	 * @return string
@@ -65,7 +65,7 @@ class JQueryPlugin extends GenericPlugin {
 	function getScriptPath() {
 		return Request::getBaseUrl() . DIRECTORY_SEPARATOR . JQUERY_JS_PATH;
 	}
-	
+
 	/**
 	 * Given a $page and $op, return a list of scripts that should be loaded
 	 * @param $page string The requested page
@@ -73,25 +73,16 @@ class JQueryPlugin extends GenericPlugin {
 	 * @return array
 	 */
 	function getEnabledScripts($page, $op) {
-		$scripts = array();
+		$scripts = null;
 		switch ("$page/$op") {
+			case 'editor/submissionCitations':
+				$scripts = array();
+				break;
+
 			case 'editor/submissions':
-				$scripts[] = 'submissionSearch.js';
+				$scripts = array('submissionSearch.js');
 				break;
-			case 'editor/submission':
-			case 'editor/submissionReview':
-			case 'editor/submissionEditing':
-			case 'editor/submissionHistory':
-			case 'editor/submissionEventLog':
-			case 'editor/submissionEmailLog':
-			case 'editor/submissionNotes':
-			case 'editor/viewMetadata':
-			case 'editor/editComment':
-				//$scripts[] = 'editorDivs.js';
-				break;
-			case 'manager/setup':
-				//$scripts[] = 'dragLists.js';
-				break;
+
 			case 'admin/journals':
 			case 'editor/backIssues':
 			case 'manager/groupMembership':
@@ -103,8 +94,10 @@ class JQueryPlugin extends GenericPlugin {
 			case 'rtadmin/contexts':
 			case 'rtadmin/searches':
 			case 'subscriptionManager/subscriptionTypes':
-				$scripts[] = 'jquery.tablednd_0_5.js';
-				$scripts[] = 'tablednd.js';
+				$scripts = array(
+					'jquery.tablednd_0_5.js',
+					'tablednd.js'
+				);
 				break;
 
 		}
@@ -120,19 +113,20 @@ class JQueryPlugin extends GenericPlugin {
 	function callback($hookName, $args) {
 		$page = Request::getRequestedPage();
 		$op = Request::getRequestedOp();
-		if(!$scripts = JQueryPlugin::getEnabledScripts($page, $op)) return null;
-		
+		$scripts = JQueryPlugin::getEnabledScripts($page, $op);
+		if(is_null($scripts)) return null;
+
 		$templateManager =& $args[0];
 		$additionalHeadData = $templateManager->get_template_vars('additionalHeadData');
 		$baseUrl = $templateManager->get_template_vars('baseUrl');
-		
-		$jQueryScript = 
+
+		$jQueryScript =
 		'	<script language="javascript" type="text/javascript" src="' . $this->getScriptPath() . '"></script>'
 		. "\n" . JQueryPlugin::addScripts($baseUrl, $scripts);
 
 		$templateManager->assign('additionalHeadData', $additionalHeadData."\n".$jQueryScript);
 	}
-	
+
 	/**
 	 * Add scripts contained in scripts/ subdirectory to a string to be returned to callback func.
 	 * @param baseUrl string
@@ -143,7 +137,7 @@ class JQueryPlugin extends GenericPlugin {
 		$scriptOpen = '	<script language="javascript" type="text/javascript" src="';
 		$scriptClose = '"></script>';
 		$returner = '';
-		
+
 		foreach ($scripts as $script) {
 			if(file_exists(Core::getBaseDir() . DIRECTORY_SEPARATOR . JQUERY_SCRIPTS_DIR . DIRECTORY_SEPARATOR . $script)) {
 				$returner .= $scriptOpen . $baseUrl . DIRECTORY_SEPARATOR . JQUERY_SCRIPTS_DIR . DIRECTORY_SEPARATOR . $script . $scriptClose . "\n";
