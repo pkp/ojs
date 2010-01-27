@@ -13,8 +13,8 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<h3>{$reviewForm->getReviewFormTitle()}</h3>
-<p>{$reviewForm->getReviewFormDescription()}</p>
+<h3>{$reviewForm->getLocalizedTitle()}</h3>
+<p>{$reviewForm->getLocalizedDescription()}</p>
 
 {foreach from=$reviewFormElements name=reviewFormElements item=reviewFormElement}
 	<p>{$reviewFormElement->getReviewFormElementQuestion()}{if $reviewFormElement->getRequired()}*{/if}</p>

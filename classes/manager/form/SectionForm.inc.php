@@ -110,7 +110,7 @@ class SectionForm extends Form {
 		$reviewForms =& $reviewFormDao->getJournalActiveReviewForms($journal->getId());
 		$reviewFormOptions = array();
 		while ($reviewForm =& $reviewForms->next()) {
-			$reviewFormOptions[$reviewForm->getReviewFormId()] = $reviewForm->getReviewFormTitle();
+			$reviewFormOptions[$reviewForm->getId()] = $reviewForm->getLocalizedTitle();
 		}
 		$templateMgr->assign_by_ref('reviewFormOptions', $reviewFormOptions);
 
