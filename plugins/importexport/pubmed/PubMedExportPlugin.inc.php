@@ -152,7 +152,7 @@ class PubMedExportPlugin extends ImportExportPlugin {
 
 		foreach ($issues as $issue) {
 			foreach ($sectionDao->getSectionsForIssue($issue->getIssueId()) as $section) {
-				foreach ($publishedArticleDao->getPublishedArticlesBySectionId($section->getSectionId(), $issue->getIssueId()) as $article) {
+				foreach ($publishedArticleDao->getPublishedArticlesBySectionId($section->getId(), $issue->getIssueId()) as $article) {
 					$articleNode =& PubMedExportDom::generateArticleDom($doc, $journal, $issue, $section, $article);
 					XMLCustomWriter::appendChild($articleSetNode, $articleNode);
 				}

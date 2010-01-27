@@ -226,9 +226,9 @@ class SectionForm extends Form {
 		$section->setPolicy($this->getData('policy'), null); // Localized
 		$section->setAbstractWordCount($this->getData('wordCount'));
 
-		if ($section->getSectionId() != null) {
+		if ($section->getId() != null) {
 			$sectionDao->updateSection($section);
-			$sectionId = $section->getSectionId();
+			$sectionId = $section->getId();
 
 		} else {
 			$sectionId = $sectionDao->insertSection($section);

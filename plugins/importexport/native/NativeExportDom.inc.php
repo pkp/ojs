@@ -120,7 +120,7 @@ class NativeExportDom {
 		}
 
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-		foreach ($publishedArticleDao->getPublishedArticlesBySectionId($section->getSectionId(), $issue->getIssueId()) as $article) {
+		foreach ($publishedArticleDao->getPublishedArticlesBySectionId($section->getId(), $issue->getIssueId()) as $article) {
 			$articleNode =& NativeExportDom::generateArticleDom($doc, $journal, $issue, $section, $article);
 			XMLCustomWriter::appendChild($root, $articleNode);
 			unset($articleNode);

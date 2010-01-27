@@ -133,7 +133,7 @@ class SectionDAO extends DAO {
 	 */
 	function &_returnSectionFromRow(&$row) {
 		$section = new Section();
-		$section->setSectionId($row['section_id']);
+		$section->setId($row['section_id']);
 		$section->setJournalId($row['journal_id']);
 		$section->setReviewFormId($row['review_form_id']);
 		$section->setSequence($row['seq']);
@@ -168,7 +168,7 @@ class SectionDAO extends DAO {
 	 */
 	function updateLocaleFields(&$section) {
 		$this->updateDataObjectSettings('section_settings', $section, array(
-			'section_id' => $section->getSectionId()
+			'section_id' => $section->getId()
 		));
 	}
 
@@ -198,9 +198,9 @@ class SectionDAO extends DAO {
 			)
 		);
 
-		$section->setSectionId($this->getInsertSectionId());
+		$section->setId($this->getInsertSectionId());
 		$this->updateLocaleFields($section);
-		return $section->getSectionId();
+		return $section->getId();
 	}
 
 	/**
@@ -235,7 +235,7 @@ class SectionDAO extends DAO {
 				$section->getHideAbout(),
 				$section->getDisableComments(),
 				$section->getAbstractWordCount(),
-				$section->getSectionId()
+				$section->getId()
 			)
 		);
 		$this->updateLocaleFields($section);
@@ -247,7 +247,7 @@ class SectionDAO extends DAO {
 	 * @param $section Section
 	 */
 	function deleteSection(&$section) {
-		return $this->deleteSectionById($section->getSectionId(), $section->getJournalId());
+		return $this->deleteSectionById($section->getId(), $section->getJournalId());
 	}
 
 	/**
@@ -367,10 +367,10 @@ class SectionDAO extends DAO {
 		while (($section =& $sectionsIterator->next())) {
 			if ($submittableOnly) {
 				if (!$section->getEditorRestricted()) {
-					$sections[$section->getSectionId()] = $section->getLocalizedTitle();
+					$sections[$section->getId()] = $section->getLocalizedTitle();
 				}
 			} else {
-				$sections[$section->getSectionId()] = $section->getLocalizedTitle();
+				$sections[$section->getId()] = $section->getLocalizedTitle();
 			}
 			unset($section);
 		}
@@ -441,20 +441,20 @@ class SectionDAO extends DAO {
 			'DELETE FROM custom_section_orders WHERE issue_id = ?', $issueId
 		);
 	}
-	
+
 	/**
 	 * Delete a section from the custom section order table.
 	 * @param $issueId int
-	 * @param $sectionId int	 
+	 * @param $sectionId int
 	 */
 	function deleteCustomSection($issueId, $sectionId) {
 		$sequence = $this->getCustomSectionOrder($issueId, $sectionId);
-		
+
 		$this->update(
 			'DELETE FROM custom_section_orders WHERE issue_id = ? AND section_id = ?', array($issueId, $sectionId)
 		);
-		
-		// Reduce the section order of every successive section by one		
+
+		// Reduce the section order of every successive section by one
 		$this->update(
 			'UPDATE custom_section_orders SET seq = seq - 1 WHERE issue_id = ? AND seq > ?', array($issueId, $sequence)
 		);

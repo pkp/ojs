@@ -512,7 +512,7 @@ class IssueManagementHandler extends EditorHandler {
 				$sectionDao->setDefaultCustomSectionOrders($issueId);
 			}
 
-			$sectionDao->moveCustomSectionOrder($issueId, $section->getSectionId(), Request::getUserVar('newPos'), Request::getUserVar('d') == 'u');
+			$sectionDao->moveCustomSectionOrder($issueId, $section->getId(), Request::getUserVar('newPos'), Request::getUserVar('d') == 'u');
 		}
 
 		Request::redirect(null, null, 'issueToc', $issueId);

@@ -526,7 +526,7 @@ class NativeImportDom {
 		foreach($titles as $locale => $title) {
 			$section = $sectionDao->getSectionByTitle($title, $journal->getId());
 			if ($section) {
-				$sectionId = $section->getSectionId();
+				$sectionId = $section->getId();
 				if ($foundSectionId) { 
 					if ($foundSectionId != $sectionId) {
 						// Mismatching sections found. Throw an error.
@@ -611,7 +611,7 @@ class NativeImportDom {
 
 		// Handle custom ordering, if necessary.
 		if ($sectionIndex !== null) {
-			$sectionDao->insertCustomSectionOrder($issue->getIssueId(), $section->getSectionId(), $sectionIndex);
+			$sectionDao->insertCustomSectionOrder($issue->getIssueId(), $section->getId(), $sectionIndex);
 		}
 
 		$hasErrors = false;
@@ -638,7 +638,7 @@ class NativeImportDom {
 		$article = new Article();
 		$article->setJournalId($journal->getId());
 		$article->setUserId($user->getId());
-		$article->setSectionId($section->getSectionId());
+		$article->setSectionId($section->getId());
 		$article->setStatus(STATUS_PUBLISHED);
 		$article->setSubmissionProgress(0);
 		$article->setDateSubmitted(Core::getCurrentDate());
@@ -848,7 +848,7 @@ class NativeImportDom {
 
 		$publishedArticle->setPubId($publishedArticleDao->insertPublishedArticle($publishedArticle));
 
-		$publishedArticleDao->resequencePublishedArticles($section->getSectionId(), $issue->getIssueId());
+		$publishedArticleDao->resequencePublishedArticles($section->getId(), $issue->getIssueId());
 
 		/* --- Galleys (html or otherwise handled simultaneously) --- */
 		import('file.ArticleFileManager');
