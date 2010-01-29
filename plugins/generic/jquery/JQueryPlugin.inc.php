@@ -147,7 +147,7 @@ class JQueryPlugin extends GenericPlugin {
 
 		foreach ($scripts as $script) {
 			if(file_exists(Core::getBaseDir() . DIRECTORY_SEPARATOR . JQUERY_SCRIPTS_DIR . DIRECTORY_SEPARATOR . $script)) {
-				$returner .= $scriptOpen . $baseUrl . DIRECTORY_SEPARATOR . JQUERY_SCRIPTS_DIR . DIRECTORY_SEPARATOR . $script . $scriptClose . "\n";
+				$returner .= $scriptOpen . $baseUrl . '/plugins/generic/jquery/scripts/' . $script . $scriptClose . "\n";
 			}
 		}
 		return $returner;

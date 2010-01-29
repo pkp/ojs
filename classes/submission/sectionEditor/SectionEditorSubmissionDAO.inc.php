@@ -222,7 +222,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		// update review assignments
 		foreach ($sectionEditorSubmission->getReviewAssignments() as $roundReviewAssignments) {
 			foreach ($roundReviewAssignments as $reviewAssignment) {
-				if ($reviewAssignment->getReviewId() > 0) {
+				if ($reviewAssignment->getId() > 0) {
 					$this->reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 				} else {
 					$this->reviewAssignmentDao->insertReviewAssignment($reviewAssignment);

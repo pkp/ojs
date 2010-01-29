@@ -139,7 +139,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$reviewFormResponses = array();
 		if (isset($reviewAssignments[$numRounds-1])) {
 			foreach ($reviewAssignments[$numRounds-1] as $reviewAssignment) {
-				$reviewFormResponses[$reviewAssignment->getReviewId()] = $reviewFormResponseDao->reviewFormResponseExists($reviewAssignment->getReviewId());
+				$reviewFormResponses[$reviewAssignment->getId()] = $reviewFormResponseDao->reviewFormResponseExists($reviewAssignment->getId());
 			}
 		}
 		
@@ -195,7 +195,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		// Prepare an array to store the 'Notify Reviewer' email logs
 		$notifyReviewerLogs = array();
 		foreach ($submission->getReviewAssignments($round) as $reviewAssignment) {
-			$notifyReviewerLogs[$reviewAssignment->getReviewId()] = array();
+			$notifyReviewerLogs[$reviewAssignment->getId()] = array();
 		}
 
 		// Parse the list of email logs and populate the array.
@@ -224,7 +224,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				$reviewFormTitles[$reviewForm->getId()] = $reviewForm->getLocalizedTitle();
 			}
 			unset($reviewForm);
-			$reviewFormResponses[$reviewAssignment->getReviewId()] = $reviewFormResponseDao->reviewFormResponseExists($reviewAssignment->getReviewId());
+			$reviewFormResponses[$reviewAssignment->getId()] = $reviewFormResponseDao->reviewFormResponseExists($reviewAssignment->getId());
 		}
 		
 		$templateMgr =& TemplateManager::getManager();

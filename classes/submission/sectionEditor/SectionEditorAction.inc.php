@@ -126,12 +126,12 @@ class SectionEditorAction extends Action {
 			$journal =& Request::getJournal();
 			$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 			$settings =& $settingsDao->getJournalSettings($journal->getId());
-			if (isset($settings['numWeeksPerReview'])) SectionEditorAction::setDueDate($sectionEditorSubmission->getArticleId(), $reviewAssignment->getReviewId(), null, $settings['numWeeksPerReview'], false);
+			if (isset($settings['numWeeksPerReview'])) SectionEditorAction::setDueDate($sectionEditorSubmission->getArticleId(), $reviewAssignment->getId(), null, $settings['numWeeksPerReview'], false);
 
 			// Add log
 			import('article.log.ArticleLog');
 			import('article.log.ArticleEventLogEntry');
-			ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_REVIEW_ASSIGN, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewerAssigned', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $sectionEditorSubmission->getArticleId(), 'round' => $round));
+			ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_REVIEW_ASSIGN, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getId(), 'log.review.reviewerAssigned', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $sectionEditorSubmission->getArticleId(), 'round' => $round));
 		}
 	}
 
@@ -157,7 +157,7 @@ class SectionEditorAction extends Action {
 			// Add log
 			import('article.log.ArticleLog');
 			import('article.log.ArticleEventLogEntry');
-			ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_REVIEW_CLEAR, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewCleared', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $sectionEditorSubmission->getArticleId(), 'round' => $reviewAssignment->getRound()));
+			ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_REVIEW_CLEAR, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getId(), 'log.review.reviewCleared', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $sectionEditorSubmission->getArticleId(), 'round' => $reviewAssignment->getRound()));
 		}
 	}
 
@@ -316,7 +316,7 @@ class SectionEditorAction extends Action {
 					// Add log
 					import('article.log.ArticleLog');
 					import('article.log.ArticleEventLogEntry');
-					ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_REVIEW_CANCEL, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewCancelled', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $sectionEditorSubmission->getArticleId(), 'round' => $reviewAssignment->getRound()));
+					ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_REVIEW_CANCEL, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getId(), 'log.review.reviewCancelled', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $sectionEditorSubmission->getArticleId(), 'round' => $reviewAssignment->getRound()));
 				} else {
 					if (!Request::getUserVar('continued')) {
 						$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
@@ -511,7 +511,7 @@ class SectionEditorAction extends Action {
 			// Add log
 			import('article.log.ArticleLog');
 			import('article.log.ArticleEventLogEntry');
-			ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_RATE, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewerRated', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
+			ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_RATE, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getId(), 'log.review.reviewerRated', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
 		}
 	}
 
@@ -581,7 +581,7 @@ class SectionEditorAction extends Action {
 					$articleId,
 					ARTICLE_LOG_REVIEW_SET_DUE_DATE,
 					ARTICLE_LOG_TYPE_REVIEW,
-					$reviewAssignment->getReviewId(),
+					$reviewAssignment->getId(),
 					'log.review.reviewDueDateSet',
 					array(
 						'reviewerName' => $reviewer->getFullName(),
@@ -665,7 +665,7 @@ class SectionEditorAction extends Action {
 			// Add log
 			import('article.log.ArticleLog');
 			import('article.log.ArticleEventLogEntry');
-			ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_RECOMMENDATION_BY_PROXY, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewRecommendationSetByProxy', array('editorName' => $user->getFullName(), 'reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
+			ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_RECOMMENDATION_BY_PROXY, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getId(), 'log.review.reviewRecommendationSetByProxy', array('editorName' => $user->getFullName(), 'reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
 		}
 	}
 
@@ -1952,10 +1952,10 @@ class SectionEditorAction extends Action {
 					// If the reviewer has completed the assignment, then import the review.
 					if ($reviewAssignment->getDateCompleted() != null && !$reviewAssignment->getCancelled()) {
 						// Get the comments associated with this review assignment
-						$articleComments =& $articleCommentDao->getArticleComments($sectionEditorSubmission->getArticleId(), COMMENT_TYPE_PEER_REVIEW, $reviewAssignment->getReviewId());
+						$articleComments =& $articleCommentDao->getArticleComments($sectionEditorSubmission->getArticleId(), COMMENT_TYPE_PEER_REVIEW, $reviewAssignment->getId());
 						if($articleComments) {
 							$body .= "------------------------------------------------------\n";
-							$body .= Locale::translate('submission.comments.importPeerReviews.reviewerLetter', array('reviewerLetter' => chr(ord('A') + $reviewIndexes[$reviewAssignment->getReviewId()]))) . "\n";
+							$body .= Locale::translate('submission.comments.importPeerReviews.reviewerLetter', array('reviewerLetter' => chr(ord('A') + $reviewIndexes[$reviewAssignment->getId()]))) . "\n";
 							if (is_array($articleComments)) {
 								foreach ($articleComments as $comment) {
 									// If the comment is viewable by the author, then add the comment.
@@ -1971,13 +1971,13 @@ class SectionEditorAction extends Action {
 							$body .= "------------------------------------------------------\n\n";
 						}
 						if ($reviewFormId = $reviewAssignment->getReviewFormId()) {
-							$reviewId = $reviewAssignment->getReviewId();
+							$reviewId = $reviewAssignment->getId();
 							$reviewFormResponseDao =& DAORegistry::getDAO('ReviewFormResponseDAO');
 							$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
 							$reviewFormElements =& $reviewFormElementDao->getReviewFormElements($reviewFormId);
 							if(!$articleComments) {
 								$body .= "------------------------------------------------------\n";
-								$body .= Locale::translate('submission.comments.importPeerReviews.reviewerLetter', array('reviewerLetter' => chr(ord('A') + $reviewIndexes[$reviewAssignment->getReviewId()]))) . "\n\n";
+								$body .= Locale::translate('submission.comments.importPeerReviews.reviewerLetter', array('reviewerLetter' => chr(ord('A') + $reviewIndexes[$reviewAssignment->getId()]))) . "\n\n";
 							}
 							foreach ($reviewFormElements as $reviewFormElement) {
 								$body .= strip_tags($reviewFormElement->getReviewFormElementQuestion()) . ": \n";
@@ -2250,7 +2250,7 @@ class SectionEditorAction extends Action {
 			$entry->setEventType(ARTICLE_LOG_REVIEW_CONFIRM_BY_PROXY);
 			$entry->setLogMessage($accept?'log.review.reviewAcceptedByProxy':'log.review.reviewDeclinedByProxy', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getArticleId(), 'round' => $reviewAssignment->getRound(), 'userName' => $user->getFullName()));
 			$entry->setAssocType(ARTICLE_LOG_TYPE_REVIEW);
-			$entry->setAssocId($reviewAssignment->getReviewId());
+			$entry->setAssocId($reviewAssignment->getId());
 
 			ArticleLog::logEventEntry($reviewAssignment->getArticleId(), $entry);
 		}
@@ -2308,7 +2308,7 @@ class SectionEditorAction extends Action {
 			$entry->setEventType(ARTICLE_LOG_REVIEW_FILE_BY_PROXY);
 			$entry->setLogMessage('log.review.reviewFileByProxy', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getArticleId(), 'round' => $reviewAssignment->getRound(), 'userName' => $user->getFullName()));
 			$entry->setAssocType(ARTICLE_LOG_TYPE_REVIEW);
-			$entry->setAssocId($reviewAssignment->getReviewId());
+			$entry->setAssocId($reviewAssignment->getId());
 
 			ArticleLog::logEventEntry($reviewAssignment->getArticleId(), $entry);
 		}

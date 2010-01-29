@@ -15,8 +15,6 @@
 // $Id$
 
 
-ini_set('display_errors', E_ALL); // FIXME until I improve error handling
-
 require_once('TranslatorAction.inc.php');
 import('handler.Handler');
 
@@ -31,9 +29,9 @@ class TranslatorHandler extends Handler {
 		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_SITE_ADMIN)));
 
 		$plugin =& Registry::get('plugin');
-		$this->plugin =& $plugin;		
+		$this->plugin =& $plugin;
 	}
-	
+
 	function index() {
 		$this->validate();
 		$plugin =& $this->plugin;
@@ -64,7 +62,7 @@ class TranslatorHandler extends Handler {
 	}
 
 	function edit($args) {
-		$this->validate(); 		
+		$this->validate();
 		$plugin =& $this->plugin;
 		$this->setupTemplate();
 
