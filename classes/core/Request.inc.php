@@ -259,9 +259,9 @@ class Request {
 				$ipaddr = '';
 			}
 
-			// If multiple addresses are listed, take the first. (Supports ipv6.)
-			if (preg_match('/^([0-9.a-fA-F:]+)/', $ipaddr, $matches)) {
-				$ipaddr = $matches[1];
+			// If multiple addresses are listed, take the last. (Supports ipv6.)
+			if (preg_match_all('/^([0-9.a-fA-F:]+)/', $ipaddr, $matches)) {
+				$ipaddr = $matches[0][count($matches[0])-1];
 			}
 			HookRegistry::call('Request::getRemoteAddr', array(&$ipaddr));
 		}
