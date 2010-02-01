@@ -17,8 +17,11 @@
 
 
 import('submission.sectionEditor.SectionEditorSubmission');
-import('submission.author.AuthorSubmission'); // Bring in editor decision constants
-import('submission.reviewer.ReviewerSubmission'); // Bring in editor decision constants
+
+// Bring in editor decision constants
+import('submission.author.AuthorSubmission');
+import('submission.common.Action');
+import('submission.reviewer.ReviewerSubmission');
 
 class SectionEditorSubmissionDAO extends DAO {
 	var $articleDao;
@@ -629,7 +632,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	function &getSectionEditorSubmissionsCount($sectionEditorId, $journalId) {
 
 		$submissionsCount = array();
-		for($i = 0; $i < 4; $i++) {
+		for($i = 0; $i < 2; $i++) {
 			$submissionsCount[$i] = 0;
 		}
 
@@ -643,6 +646,7 @@ class SectionEditorSubmissionDAO extends DAO {
 			$inReview = true;
 			$decisions = $sectionEditorSubmission->getDecisions();
 			$decision = array_pop($decisions);
+
 			if (!empty($decision)) {
 				$latestDecision = array_pop($decision);
 				if ($latestDecision['decision'] == SUBMISSION_EDITOR_DECISION_ACCEPT) {
