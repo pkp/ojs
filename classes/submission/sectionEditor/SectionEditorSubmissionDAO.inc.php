@@ -630,48 +630,50 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * Function used for counting purposes for right nav bar
 	 */
 	function &getSectionEditorSubmissionsCount($sectionEditorId, $journalId) {
-
 		$submissionsCount = array();
 		for($i = 0; $i < 2; $i++) {
 			$submissionsCount[$i] = 0;
 		}
 
-		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId);
-
-		while (!$result->EOF) {
-			$row = $result->GetRowAssoc(false);
-			$sectionEditorSubmission =& $this->_returnSectionEditorSubmissionFromRow($row);
-
-			// check if submission is still in review
-			$inReview = true;
-			$decisions = $sectionEditorSubmission->getDecisions();
-			$decision = array_pop($decisions);
-
-			if (!empty($decision)) {
-				$latestDecision = array_pop($decision);
-				if ($latestDecision['decision'] == SUBMISSION_EDITOR_DECISION_ACCEPT) {
-					$inReview = false;
-				}
-			}
-
-			if ($inReview) {
-				if ($row['can_review']) {
-					// in review submissions
-					$submissionsCount[0] += 1;
-				}
-			} else {
-				// in editing submissions
-				if ($row['can_edit']) {
-					$submissionsCount[1] += 1;
-				}
-			}
-			unset($sectionEditorSubmission);
-			$result->MoveNext();
-		}
-
+		// Fetch a count of submissions in review.
+		// "d2" and "d" are used to fetch the single most recent
+		// editor decision.
+		$result =& $this->retrieve(
+			'SELECT	COUNT(*) AS review_count
+			FROM	articles a
+				LEFT JOIN edit_assignments e ON (a.article_id = e.article_id)
+				LEFT JOIN edit_decisions d ON (a.article_id = d.article_id)
+				LEFT JOIN edit_decisions d2 ON (a.article_id = d2.article_id AND d.date_decided < d2.date_decided)
+			WHERE	a.journal_id = ?
+				AND e.editor_id = ?
+				AND a.submission_progress = 0
+				AND a.status = ' . STATUS_QUEUED . '
+				AND d2.date_decided IS NULL
+				AND d.decision <> ' . SUBMISSION_EDITOR_DECISION_ACCEPT,
+			array((int) $journalId, (int) $sectionEditorId)
+		);
+		$submissionsCount[0] = $result->Fields('review_count');
 		$result->Close();
-		unset($result);
 
+		// Fetch a count of submissions in editing.
+		// "d2" and "d" are used to fetch the single most recent
+		// editor decision.
+		$result =& $this->retrieve(
+			'SELECT	COUNT(*) AS editing_count
+			FROM	articles a
+				LEFT JOIN edit_assignments e ON (a.article_id = e.article_id)
+				LEFT JOIN edit_decisions d ON (a.article_id = d.article_id)
+				LEFT JOIN edit_decisions d2 ON (a.article_id = d2.article_id AND d.date_decided < d2.date_decided)
+			WHERE	a.journal_id = ?
+				AND e.editor_id = ?
+				AND a.submission_progress = 0
+				AND a.status = ' . STATUS_QUEUED . '
+				AND d2.date_decided IS NULL
+				AND d.decision = ' . SUBMISSION_EDITOR_DECISION_ACCEPT,
+			array((int) $journalId, (int) $sectionEditorId)
+		);
+		$submissionsCount[1] = $result->Fields('editing_count');
+		$result->Close();
 		return $submissionsCount;
 	}
 

@@ -17,7 +17,10 @@
 
 
 import('submission.editor.EditorSubmission');
-import('submission.author.AuthorSubmission'); // Bring in editor decision constants
+
+// Bring in editor decision constants
+import('submission.common.Action');
+import('submission.author.AuthorSubmission');
 
 class EditorSubmissionDAO extends DAO {
 	var $articleDao;
@@ -574,52 +577,76 @@ class EditorSubmissionDAO extends DAO {
 	 * Function used for counting purposes for right nav bar
 	 */
 	function &getEditorSubmissionsCount($journalId) {
-
 		$submissionsCount = array();
 		for($i = 0; $i < 3; $i++) {
 			$submissionsCount[$i] = 0;
 		}
 
-		$result =& $this->getUnfilteredEditorSubmissions($journalId);
-
-		while (!$result->EOF) {
-			$editorSubmission =& $this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
-
-			// check if submission is still in review
-			$inReview = true;
-			$notDeclined = true;
-			$decisions = $editorSubmission->getDecisions();
-			$decision = array_pop($decisions);
-			if (!empty($decision)) {
-				$latestDecision = array_pop($decision);
-				import('submission.common.Action');
-				if ($latestDecision['decision'] == SUBMISSION_EDITOR_DECISION_ACCEPT) {
-					$inReview = false;
-				}
-			}
-
-			// used to check if editor exists for this submission
-			$editAssignments = $editorSubmission->getEditAssignments();
-
-			if (empty($editAssignments)) {
-				// unassigned submissions
-				$submissionsCount[0] += 1;
-			} else {
-				if ($inReview) {
-					if ($notDeclined) {
-						// in review submissions
-						$submissionsCount[1] += 1;
-					}
-				} else {
-					// in editing submissions
-					$submissionsCount[2] += 1;					
-				}
-			}
-			unset($editorSubmission);
-			$result->MoveNext();
-		}
+		// Fetch a count of unassigned submissions.
+		// "e2" and "e" are used to fetch only a single assignment
+		// if several exist.
+		$result =& $this->retrieve(
+			'SELECT	COUNT(*) AS unassigned_count
+			FROM	articles a
+				LEFT JOIN edit_assignments e ON (a.article_id = e.article_id)
+				LEFT JOIN edit_assignments e2 ON (a.article_id = e2.article_id AND e.edit_id < e2.edit_id)
+			WHERE	a.journal_id = ?
+				AND a.submission_progress = 0
+				AND a.status = ' . STATUS_QUEUED . '
+				AND e2.edit_id IS NULL
+				AND e.edit_id IS NULL',
+			array((int) $journalId)
+		);
+		$submissionsCount[0] = $result->Fields('unassigned_count');
 		$result->Close();
-		unset($result);
+
+		// Fetch a count of submissions in review.
+		// "e2" and "e" are used to fetch only a single assignment
+		// if several exist.
+		// "d2" and "d" are used to fetch the single most recent
+		// editor decision.
+		$result =& $this->retrieve(
+			'SELECT	COUNT(*) AS review_count
+			FROM	articles a
+				LEFT JOIN edit_assignments e ON (a.article_id = e.article_id)
+				LEFT JOIN edit_assignments e2 ON (a.article_id = e2.article_id AND e.edit_id < e2.edit_id)
+				LEFT JOIN edit_decisions d ON (a.article_id = d.article_id)
+				LEFT JOIN edit_decisions d2 ON (a.article_id = d2.article_id AND d.date_decided < d2.date_decided)
+			WHERE	a.journal_id = ?
+				AND a.submission_progress = 0
+				AND a.status = ' . STATUS_QUEUED . '
+				AND e2.edit_id IS NULL
+				AND e.edit_id IS NOT NULL
+				AND d2.date_decided IS NULL
+				AND d.decision <> ' . SUBMISSION_EDITOR_DECISION_ACCEPT,
+			array((int) $journalId)
+		);
+		$submissionsCount[1] = $result->Fields('review_count');
+		$result->Close();
+
+		// Fetch a count of submissions in editing.
+		// "e2" and "e" are used to fetch only a single assignment
+		// if several exist.
+		// "d2" and "d" are used to fetch the single most recent
+		// editor decision.
+		$result =& $this->retrieve(
+			'SELECT	COUNT(*) AS editing_count
+			FROM	articles a
+				LEFT JOIN edit_assignments e ON (a.article_id = e.article_id)
+				LEFT JOIN edit_assignments e2 ON (a.article_id = e2.article_id AND e.edit_id < e2.edit_id)
+				LEFT JOIN edit_decisions d ON (a.article_id = d.article_id)
+				LEFT JOIN edit_decisions d2 ON (a.article_id = d2.article_id AND d.date_decided < d2.date_decided)
+			WHERE	a.journal_id = ?
+				AND a.submission_progress = 0
+				AND a.status = ' . STATUS_QUEUED . '
+				AND e2.edit_id IS NULL
+				AND e.edit_id IS NOT NULL
+				AND d2.date_decided IS NULL
+				AND d.decision = ' . SUBMISSION_EDITOR_DECISION_ACCEPT,
+			array((int) $journalId)
+		);
+		$submissionsCount[2] = $result->Fields('editing_count');
+		$result->Close();
 
 		return $submissionsCount;
 	}
