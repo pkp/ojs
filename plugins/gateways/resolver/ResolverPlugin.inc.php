@@ -91,7 +91,7 @@ class ResolverPlugin extends GatewayPlugin {
 				unset($issues);
 
 				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-				$articles =& $publishedArticleDao->getPublishedArticles($issue->getIssueId());
+				$articles =& $publishedArticleDao->getPublishedArticles($issue->getId());
 				foreach ($articles as $article) {
 					// Look for the correct page in the list of articles.
 					$matches = null;

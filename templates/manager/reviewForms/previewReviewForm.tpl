@@ -15,16 +15,16 @@
 
 {if $reviewForm->getCompleteCount()==0 && $reviewForm->getIncompleteCount()==0}
 	<ul class="menu">
-		<li><a href="{url op="editReviewForm" path=$reviewForm->getReviewFormId()}">{translate key="manager.reviewForms.edit"}</a></li>
-		<li><a href="{url op="reviewFormElements" path=$reviewForm->getReviewFormId()}">{translate key="manager.reviewFormElements"}</a></li>
-		<li class="current"><a href="{url op="previewReviewForm" path=$reviewForm->getReviewFormId()}">{translate key="manager.reviewForms.preview"}</a></li>
+		<li><a href="{url op="editReviewForm" path=$reviewForm->getId()}">{translate key="manager.reviewForms.edit"}</a></li>
+		<li><a href="{url op="reviewFormElements" path=$reviewForm->getId()}">{translate key="manager.reviewFormElements"}</a></li>
+		<li class="current"><a href="{url op="previewReviewForm" path=$reviewForm->getId()}">{translate key="manager.reviewForms.preview"}</a></li>
 	</ul>
 {/if}
 
 <br/>
 
-<h3>{$reviewForm->getReviewFormTitle()}</h3>
-<p>{$reviewForm->getReviewFormDescription()}</p>
+<h3>{$reviewForm->getLocalizedTitle()}</h3>
+<p>{$reviewForm->getLocalizedDescription()}</p>
 
 {foreach from=$reviewFormElements name=reviewFormElements item=reviewFormElement}
 	<p>{$reviewFormElement->getReviewFormElementQuestion()}{if $reviewFormElement->getRequired()}*{/if}</p>
@@ -45,7 +45,7 @@
 		{elseif $reviewFormElement->getElementType() == REVIEW_FORM_ELEMENT_TYPE_RADIO_BUTTONS}
 			{assign var=possibleResponses value=$reviewFormElement->getReviewFormElementPossibleResponses()}
 			{foreach name=responses from=$possibleResponses key=responseId item=responseItem}
-				<input id="radio-{$responseId|escape}" name="{$reviewFormElement->getReviewFormElementId()}" type="radio"/>
+				<input id="radio-{$responseId|escape}" name="{$reviewFormElement->getId()}" type="radio"/>
 				<label for="radio-{$responseId|escape}">{$responseItem.content}</label>
 				<br/>
 			{/foreach}
@@ -62,7 +62,7 @@
 
 <br/>
 
-<form name="previewReviewForm" method="post" action="{if $reviewForm->getCompleteCount()!=0 || $reviewForm->getIncompleteCount()!=0}{url op="reviewForms"}{else}{url op="editReviewForm" path=$reviewForm->getReviewFormId()}{/if}">
+<form name="previewReviewForm" method="post" action="{if $reviewForm->getCompleteCount()!=0 || $reviewForm->getIncompleteCount()!=0}{url op="reviewForms"}{else}{url op="editReviewForm" path=$reviewForm->getId()}{/if}">
 	<p><input type="submit" value="{translate key="common.close"}" class="button defaultButton" /></p>
 </form>
 

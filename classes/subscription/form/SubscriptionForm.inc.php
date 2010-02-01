@@ -87,7 +87,7 @@ class SubscriptionForm extends Form {
 		$journal =& Request::getJournal();
 
 		if (isset($this->subscription)) {
-			$subscriptionId = $this->subscription->getSubscriptionId();
+			$subscriptionId = $this->subscription->getId();
 		} else {
 			$subscriptionId = null;
 		}

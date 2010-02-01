@@ -110,7 +110,7 @@ class SectionForm extends Form {
 		$reviewForms =& $reviewFormDao->getJournalActiveReviewForms($journal->getId());
 		$reviewFormOptions = array();
 		while ($reviewForm =& $reviewForms->next()) {
-			$reviewFormOptions[$reviewForm->getReviewFormId()] = $reviewForm->getReviewFormTitle();
+			$reviewFormOptions[$reviewForm->getId()] = $reviewForm->getLocalizedTitle();
 		}
 		$templateMgr->assign_by_ref('reviewFormOptions', $reviewFormOptions);
 
@@ -226,9 +226,9 @@ class SectionForm extends Form {
 		$section->setPolicy($this->getData('policy'), null); // Localized
 		$section->setAbstractWordCount($this->getData('wordCount'));
 
-		if ($section->getSectionId() != null) {
+		if ($section->getId() != null) {
 			$sectionDao->updateSection($section);
-			$sectionId = $section->getSectionId();
+			$sectionId = $section->getId();
 
 		} else {
 			$sectionId = $sectionDao->insertSection($section);

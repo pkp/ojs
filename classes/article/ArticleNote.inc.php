@@ -32,7 +32,8 @@ class ArticleNote extends ArticleFile {
 	 * @return int
 	 */
 	function getNoteId() {
-		return $this->getData('noteId');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
+		return $this->getId();
 	}
 
 	/**
@@ -40,7 +41,8 @@ class ArticleNote extends ArticleFile {
 	 * @param $noteId int
 	 */
 	function setNoteId($noteId) {
-		return $this->setData('noteId',$noteId);
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
+		return $this->setId($noteId);
 	}
 
 	/**

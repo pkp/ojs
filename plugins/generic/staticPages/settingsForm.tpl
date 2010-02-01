@@ -34,7 +34,7 @@
 	<tr valign="top">
 		<td width="20%" class="label">{$staticPage->getPath()|escape}</td>
 		<td width="50%" class="value" >{$staticPage->getStaticPageTitle()|strip_unsafe_html|truncate:40:"..."}</td>
-		<td width="30%"><a href="{url page="pages" op="view" path=$staticPage->getPath()}" class="action">{translate key="common.view"}</a> | <a href="{plugin_url path="edit"|to_array:$staticPage->getStaticPageId()}" class="action">{translate key="common.edit"}</a> | <a href="{plugin_url path="delete"|to_array:$staticPage->getStaticPageId()}" class="action">{translate key="common.delete"}</a></td>
+		<td width="30%"><a href="{url page="pages" op="view" path=$staticPage->getPath()}" class="action">{translate key="common.view"}</a> | <a href="{plugin_url path="edit"|to_array:$staticPage->getId()}" class="action">{translate key="common.edit"}</a> | <a href="{plugin_url path="delete"|to_array:$staticPage->getId()}" class="action">{translate key="common.delete"}</a></td>
 	</tr>
 	<tr>
 		<td colspan="3" class="{if $staticPages->eof()}end{/if}separator">&nbsp;</td>

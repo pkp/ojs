@@ -46,7 +46,7 @@
 {iterate from=theses item=thesis}
 	<tr valign="top">
 		<td width="80%">{$thesis->getTitle()|escape}</td>
-		<td width="20%" align="right"><a class="file" href="{url op="view" path=$thesis->getThesisId()}">{translate key="plugins.generic.thesis.view"}</a></td>
+		<td width="20%" align="right"><a class="file" href="{url op="view" path=$thesis->getId()}">{translate key="plugins.generic.thesis.view"}</a></td>
 	</tr>
 	<tr valign="top">
 		<td colspan="2" style="padding-left: 30px;font-style: italic;">{$thesis->getStudentFullName(true)|escape}<br />{$thesis->getDepartment()|escape}, {$thesis->getUniversity()|escape}

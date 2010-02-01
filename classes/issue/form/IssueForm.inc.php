@@ -150,7 +150,7 @@ class IssueForm extends Form {
 				'styleFileName' => $issue->getStyleFileName(),
 				'originalStyleFileName' => $issue->getOriginalStyleFileName()
 			);
-			return $issue->getIssueId();
+			return $issue->getId();
 
 		} else {
 			$journal =& Request::getJournal();

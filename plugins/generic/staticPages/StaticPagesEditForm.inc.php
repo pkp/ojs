@@ -73,7 +73,7 @@ class StaticPagesEditForm extends Form {
 
 			if ($staticPage != null) {
 				$this->_data = array(
-					'staticPageId' => $staticPage->getStaticPageId(),
+					'staticPageId' => $staticPage->getId(),
  					'pagePath' => $staticPage->getPath(),
 					'title' => $staticPage->getTitle(null),
 					'content' => $staticPage->getContent(null)

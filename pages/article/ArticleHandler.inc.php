@@ -226,8 +226,8 @@ class ArticleHandler extends Handler {
 				$templateMgr->assign('subscriptionRequired', IssueAction::subscriptionRequired($issue));
 			}
 
-			$templateMgr->assign('subscribedUser', IssueAction::subscribedUser($journal, isset($issue) ? $issue->getIssueId() : null, isset($article) ? $article->getId() : null));
-			$templateMgr->assign('subscribedDomain', IssueAction::subscribedDomain($journal, isset($issue) ? $issue->getIssueId() : null, isset($article) ? $article->getId() : null));
+			$templateMgr->assign('subscribedUser', IssueAction::subscribedUser($journal, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null));
+			$templateMgr->assign('subscribedDomain', IssueAction::subscribedDomain($journal, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null));
 
 			$templateMgr->assign('showGalleyLinks', $journal->getSetting('showGalleyLinks'));
 
@@ -262,7 +262,7 @@ class ArticleHandler extends Handler {
 		} else {
 			if (!$request->isBot()) {
 				// Increment the galley's views count
-				$galleyDao->incrementViews($galley->getGalleyId());
+				$galleyDao->incrementViews($galley->getId());
 			}
 
 			// Use the article's CSS file, if set.
@@ -418,7 +418,7 @@ class ArticleHandler extends Handler {
 		if (!$galley) $request->redirect(null, null, 'view', $articleId);
 
 		if (!$fileId) {
-			$galleyDao->incrementViews($galley->getGalleyId());
+			$galleyDao->incrementViews($galley->getId());
 			$fileId = $galley->getFileId();
 		} else {
 			if (!$galley->isDependentFile($fileId)) {
@@ -451,7 +451,7 @@ class ArticleHandler extends Handler {
 		} else {
 			$galley =& $galleyDao->getGalley($galleyId, $article->getId());
 		}
-		if ($galley) $galleyDao->incrementViews($galley->getGalleyId());
+		if ($galley) $galleyDao->incrementViews($galley->getId());
 
 		if ($article && $galley && !HookRegistry::call('$this->downloadFile', array(&$article, &$galley))) {
 			import('file.ArticleFileManager');
@@ -537,7 +537,7 @@ class ArticleHandler extends Handler {
 		// Make sure the reader has rights to view the article/issue.
 		if ($issue && $issue->getPublished()) {
 			$subscriptionRequired = IssueAction::subscriptionRequired($issue);
-			$isSubscribedDomain = IssueAction::subscribedDomain($journal, $issue->getIssueId(), $articleId);
+			$isSubscribedDomain = IssueAction::subscribedDomain($journal, $issue->getId(), $articleId);
 
 			// Check if login is required for viewing.
 			if (!$isSubscribedDomain && !Validation::isLoggedIn() && $journal->getSetting('restrictArticleAccess') && isset($galleyId) && $galleyId != 0) {
@@ -550,7 +550,7 @@ class ArticleHandler extends Handler {
 			     (isset($galleyId) && $galleyId!=0) ) {
 
 				// Subscription Access
-				$subscribedUser = IssueAction::subscribedUser($journal, $issue->getIssueId(), $articleId);
+				$subscribedUser = IssueAction::subscribedUser($journal, $issue->getId(), $articleId);
 
 				if (!(!$subscriptionRequired || $publishedArticle->getAccessStatus() == ARTICLE_ACCESS_OPEN || $subscribedUser)) {
 					// if payment information is enabled,

@@ -358,7 +358,7 @@ class ReviewAssignmentDAO extends DAO {
 	 */
 	function &_returnReviewAssignmentFromRow(&$row) {
 		$reviewAssignment = new ReviewAssignment();
-		$reviewAssignment->setReviewId($row['review_id']);
+		$reviewAssignment->setId($row['review_id']);
 		$reviewAssignment->setArticleId($row['article_id']);
 		$reviewAssignment->setReviewerId($row['reviewer_id']);
 		$reviewAssignment->setReviewerFullName($row['first_name'].' '.$row['last_name']);
@@ -426,8 +426,8 @@ class ReviewAssignmentDAO extends DAO {
 			)
 		);
 
-		$reviewAssignment->setReviewId($this->getInsertReviewId());
-		return $reviewAssignment->getReviewId();
+		$reviewAssignment->setId($this->getInsertReviewId());
+		return $reviewAssignment->getId();
 	}
 
 	/**
@@ -473,7 +473,7 @@ class ReviewAssignmentDAO extends DAO {
 				$reviewAssignment->getQuality(),
 				$reviewAssignment->getReminderWasAutomatic(),
 				$reviewAssignment->getReviewFormId(),
-				(int) $reviewAssignment->getReviewId()
+				(int) $reviewAssignment->getId()
 			)
 		);
 	}

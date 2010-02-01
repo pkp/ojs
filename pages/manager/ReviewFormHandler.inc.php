@@ -550,7 +550,7 @@ class ReviewFormHandler extends ManagerHandler {
 			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'reviewForms'), 'manager.reviewForms'));
 		}
 		if ($reviewForm) {
-			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'editReviewForm', $reviewForm->getReviewFormId()), $reviewForm->getReviewFormTitle(), true));
+			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'editReviewForm', $reviewForm->getId()), $reviewForm->getLocalizedTitle(), true));
 		}
 	}
 }

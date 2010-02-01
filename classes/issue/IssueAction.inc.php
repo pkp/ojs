@@ -199,7 +199,7 @@ class IssueAction {
 		$issueIterator = $issueDao->getUnpublishedIssues($journalId);
 		while (!$issueIterator->eof()) {
 			$issue =& $issueIterator->next();
-			$issueOptions[$issue->getIssueId()] = $issue->getIssueIdentification();
+			$issueOptions[$issue->getId()] = $issue->getIssueIdentification();
 		}
 		$issueOptions['-101'] = '------    ' . Locale::translate('editor.issues.currentIssue') . '    ------';
 		$issuesIterator = $issueDao->getPublishedIssues($journalId);
@@ -210,7 +210,7 @@ class IssueAction {
 		}
 		$issueOptions['-102'] = '------    ' . Locale::translate('editor.issues.backIssues') . '    ------';
 		foreach ($issues as $issue) {
-			$issueOptions[$issue->getIssueId()] = $issue->getIssueIdentification();
+			$issueOptions[$issue->getId()] = $issue->getIssueIdentification();
 		}
 
 		return $issueOptions;

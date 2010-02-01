@@ -48,11 +48,11 @@ function toggleChecked() {
 	
 	{iterate from=issues item=issue}
 	<tr valign="top">
-		<td><input type="checkbox" name="issueId[]" value="{$issue->getIssueId()}"/></td>
-		<td><a href="{url page="issue" op="view" path=$issue->getIssueId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>
+		<td><input type="checkbox" name="issueId[]" value="{$issue->getId()}"/></td>
+		<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>
 		<td>{$issue->getDatePublished()|date_format:"$dateFormatShort"}</td>
 		<td>{$issue->getNumArticles()|escape}</td>
-		<td align="right"><a href="{plugin_url path="exportIssue"|to_array:$issue->getIssueId()}" class="action">{translate key="common.export"}</a></td>
+		<td align="right"><a href="{plugin_url path="exportIssue"|to_array:$issue->getId()}" class="action">{translate key="common.export"}</a></td>
 	</tr>
 	<tr>
 		<td colspan="5" class="{if $issues->eof()}end{/if}separator">&nbsp;</td>

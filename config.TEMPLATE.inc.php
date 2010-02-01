@@ -92,6 +92,9 @@ restful_urls = Off
 ; /usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl
 xslt_command = ""
 
+; Allow javascript files to be served through a content delivery network (set to off to use local files)
+enable_cdn = On
+
 ;;;;;;;;;;;;;;;;;;;;;
 ; Database Settings ;
 ;;;;;;;;;;;;;;;;;;;;;

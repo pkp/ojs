@@ -53,7 +53,7 @@ class EditCommentForm extends Form {
 	function initData() {
 		$comment =& $this->comment;
 		$this->_data = array(
-			'commentId' => $comment->getCommentId(),
+			'commentId' => $comment->getId(),
 			'commentTitle' => $comment->getCommentTitle(),
 			'comments' => $comment->getComments(),
 			'viewable' => $comment->getViewable(),

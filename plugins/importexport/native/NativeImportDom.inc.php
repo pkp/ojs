@@ -314,7 +314,7 @@ class NativeImportDom {
 		if (($node = $coverNode->getChildByName('image'))) {
 			import('file.PublicFileManager');
 			$publicFileManager = new PublicFileManager();
-			$newName = 'cover_issue_' . $issue->getIssueId()."_{$locale}"  . '.';
+			$newName = 'cover_issue_' . $issue->getId()."_{$locale}"  . '.';
 
 			if (($href = $node->getChildByName('href'))) {
 				$url = $href->getAttribute('src');
@@ -526,7 +526,7 @@ class NativeImportDom {
 		foreach($titles as $locale => $title) {
 			$section = $sectionDao->getSectionByTitle($title, $journal->getId());
 			if ($section) {
-				$sectionId = $section->getSectionId();
+				$sectionId = $section->getId();
 				if ($foundSectionId) { 
 					if ($foundSectionId != $sectionId) {
 						// Mismatching sections found. Throw an error.
@@ -611,7 +611,7 @@ class NativeImportDom {
 
 		// Handle custom ordering, if necessary.
 		if ($sectionIndex !== null) {
-			$sectionDao->insertCustomSectionOrder($issue->getIssueId(), $section->getSectionId(), $sectionIndex);
+			$sectionDao->insertCustomSectionOrder($issue->getId(), $section->getId(), $sectionIndex);
 		}
 
 		$hasErrors = false;
@@ -638,7 +638,7 @@ class NativeImportDom {
 		$article = new Article();
 		$article->setJournalId($journal->getId());
 		$article->setUserId($user->getId());
-		$article->setSectionId($section->getSectionId());
+		$article->setSectionId($section->getId());
 		$article->setStatus(STATUS_PUBLISHED);
 		$article->setSubmissionProgress(0);
 		$article->setDateSubmitted(Core::getCurrentDate());
@@ -829,7 +829,7 @@ class NativeImportDom {
 		// Insert published article entry.
 		$publishedArticle = new PublishedArticle();
 		$publishedArticle->setArticleId($article->getId());
-		$publishedArticle->setIssueId($issue->getIssueId());
+		$publishedArticle->setIssueId($issue->getId());
 
 		if (($node = $articleNode->getChildByName('date_published'))) {
 			$publishedDate = strtotime($node->getValue());
@@ -848,7 +848,7 @@ class NativeImportDom {
 
 		$publishedArticle->setPubId($publishedArticleDao->insertPublishedArticle($publishedArticle));
 
-		$publishedArticleDao->resequencePublishedArticles($section->getSectionId(), $issue->getIssueId());
+		$publishedArticleDao->resequencePublishedArticles($section->getId(), $issue->getId());
 
 		/* --- Galleys (html or otherwise handled simultaneously) --- */
 		import('file.ArticleFileManager');
@@ -1055,7 +1055,7 @@ class NativeImportDom {
 				$galley->setStyleFileId($fileId);
 				$articleGalleyDao->updateGalley($galley);
 			} else {
-				$articleGalleyDao->insertGalleyImage($galley->getGalleyId(), $fileId);
+				$articleGalleyDao->insertGalleyImage($galley->getId(), $fileId);
 			}
 		}
 		return true;

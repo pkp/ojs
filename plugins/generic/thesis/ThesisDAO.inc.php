@@ -114,7 +114,7 @@ class ThesisDAO extends DAO {
 		$thesisPlugin->import('Thesis');
 
 		$thesis = new Thesis();
-		$thesis->setThesisId($row['thesis_id']);
+		$thesis->setId($row['thesis_id']);
 		$thesis->setJournalId($row['journal_id']);
 		$thesis->setStatus($row['status']);
 		$thesis->setDegree($row['degree']);
@@ -192,8 +192,8 @@ class ThesisDAO extends DAO {
 				$thesis->getLanguage()
 			)
 		);
-		$thesis->setThesisId($this->getInsertThesisId());
-		return $thesis->getThesisId();
+		$thesis->setId($this->getInsertThesisId());
+		return $thesis->getId();
 	}
 
 	/**
@@ -266,7 +266,7 @@ class ThesisDAO extends DAO {
 				$thesis->getCoverageSample(),
 				$thesis->getMethod(),
 				$thesis->getLanguage(),
-				$thesis->getThesisId()
+				$thesis->getId()
 			)
 		);
 	}
@@ -277,7 +277,7 @@ class ThesisDAO extends DAO {
 	 * @return boolean
 	 */
 	function deleteThesis($thesis) {
-		return $this->deleteThesisById($thesis->getThesisId());
+		return $this->deleteThesisById($thesis->getId());
 	}
 
 	/**

@@ -299,7 +299,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	function insertSubscription(&$institutionalSubscription) {
 		$subscriptionId = null;
 		if ($this->_insertSubscription($institutionalSubscription)) {
-			$subscriptionId = $institutionalSubscription->getSubscriptionId();
+			$subscriptionId = $institutionalSubscription->getId();
 
 			$returner = $this->update(
 				'INSERT INTO institutional_subscriptions
@@ -340,12 +340,12 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 					$institutionalSubscription->getInstitutionName(),
 					$institutionalSubscription->getInstitutionMailingAddress(),
 					$institutionalSubscription->getDomain(),
-					$institutionalSubscription->getSubscriptionId()
+					$institutionalSubscription->getId()
 				)
 			);
 
-			$this->_deleteSubscriptionIPRanges($institutionalSubscription->getSubscriptionId());
-			$this->_insertSubscriptionIPRanges($institutionalSubscription->getSubscriptionId(), $institutionalSubscription->getIPRanges());
+			$this->_deleteSubscriptionIPRanges($institutionalSubscription->getId());
+			$this->_insertSubscriptionIPRanges($institutionalSubscription->getId(), $institutionalSubscription->getIPRanges());
 		}
 
 		return $returner;
@@ -817,7 +817,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 			institutional_subscription_ip
 			WHERE subscription_id = ?
 			ORDER BY institutional_subscription_ip_id ASC',
-			$institutionalSubscription->getSubscriptionId()
+			$institutionalSubscription->getId()
 		);
 
 		$ipRanges = array();

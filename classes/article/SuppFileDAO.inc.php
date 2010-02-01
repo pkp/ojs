@@ -106,7 +106,7 @@ class SuppFileDAO extends DAO {
 	 */
 	function updateLocaleFields(&$suppFile) {
 		$this->updateDataObjectSettings('article_supp_file_settings', $suppFile, array(
-			'supp_id' => $suppFile->getSuppFileId()
+			'supp_id' => $suppFile->getId()
 		));
 	}
 
@@ -117,7 +117,7 @@ class SuppFileDAO extends DAO {
 	 */
 	function &_returnSuppFileFromRow(&$row) {
 		$suppFile = new SuppFile();
-		$suppFile->setSuppFileId($row['supp_id']);
+		$suppFile->setId($row['supp_id']);
 		$suppFile->setPublicSuppFileId($row['public_supp_file_id']);
 		$suppFile->setFileId($row['file_id']);
 		$suppFile->setArticleId($row['article_id']);
@@ -170,9 +170,9 @@ class SuppFileDAO extends DAO {
 				$suppFile->getSequence()
 			)
 		);
-		$suppFile->setSuppFileId($this->getInsertSuppFileId());
+		$suppFile->setId($this->getInsertSuppFileId());
 		$this->updateLocaleFields($suppFile);
-		return $suppFile->getSuppFileId();
+		return $suppFile->getId();
 	}
 
 	/**
@@ -199,7 +199,7 @@ class SuppFileDAO extends DAO {
 				$suppFile->getLanguage(),
 				$suppFile->getShowReviewers(),
 				$suppFile->getSequence(),
-				$suppFile->getSuppFileId()
+				$suppFile->getId()
 			)
 		);
 		$this->updateLocaleFields($suppFile);
@@ -211,7 +211,7 @@ class SuppFileDAO extends DAO {
 	 * @param $suppFile SuppFile
 	 */
 	function deleteSuppFile(&$suppFile) {
-		return $this->deleteSuppFileById($suppFile->getSuppFileId());
+		return $this->deleteSuppFileById($suppFile->getId());
 	}
 
 	/**

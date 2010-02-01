@@ -60,7 +60,8 @@ class Section extends DataObject {
 	 * @return int
 	 */
 	function getSectionId() {
-		return $this->getData('sectionId');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
+		return $this->getId();
 	}
 
 	/**
@@ -68,7 +69,8 @@ class Section extends DataObject {
 	 * @param $sectionId int
 	 */
 	function setSectionId($sectionId) {
-		return $this->setData('sectionId', $sectionId);
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
+		return $this->setId($sectionId);
 	}
 
 	/**
@@ -138,7 +140,7 @@ class Section extends DataObject {
 	function setAbbrev($abbrev, $locale) {
 		return $this->setData('abbrev', $abbrev, $locale);
 	}
-	
+
 	/**
 	 * Get abstract word count limit.
 	 * @return int

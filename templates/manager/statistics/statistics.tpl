@@ -18,7 +18,7 @@
 <form action="{url op="saveStatisticsSections"}" method="post">
 	<select name="sectionIds[]" class="selectMenu" multiple="multiple" size="5">
 		{foreach from=$sections item=section}
-			<option {if in_array($section->getSectionId(), $sectionIds)}selected="selected" {/if}value="{$section->getSectionId()}">{$section->getLocalizedTitle()}</option>
+			<option {if in_array($section->getId(), $sectionIds)}selected="selected" {/if}value="{$section->getId()}">{$section->getLocalizedTitle()}</option>
 		{/foreach}
 	</select><br/>&nbsp;<br/>
 	<input type="submit" value="{translate key="common.record"}" class="button defaultButton"/>

@@ -177,7 +177,7 @@ class IssueDAO extends DAO {
 	 */
 	function &_returnIssueFromRow($row) {
 		$issue = new Issue();
-		$issue->setIssueId($row['issue_id']);
+		$issue->setId($row['issue_id']);
 		$issue->setJournalId($row['journal_id']);
 		$issue->setVolume($row['volume']);
 		$issue->setNumber($row['number']);
@@ -218,7 +218,7 @@ class IssueDAO extends DAO {
 	 */
 	function updateLocaleFields(&$issue) {
 		$this->updateDataObjectSettings('issue_settings', $issue, array(
-			'issue_id' => $issue->getIssueId()
+			'issue_id' => $issue->getId()
 		));
 	}
 
@@ -252,7 +252,7 @@ class IssueDAO extends DAO {
 			)
 		);
 
-		$issue->setIssueId($this->getInsertIssueId());
+		$issue->setId($this->getInsertIssueId());
 
 		$this->updateLocaleFields($issue);
 
@@ -260,7 +260,7 @@ class IssueDAO extends DAO {
 			$this->resequenceCustomIssueOrders($issue->getJournalId());
 		}
 
-		return $issue->getIssueId();
+		return $issue->getId();
 	}
 
 	/**
@@ -334,7 +334,7 @@ class IssueDAO extends DAO {
 				(int) $issue->getShowTitle(),
 				$issue->getStyleFileName(),
 				$issue->getOriginalStyleFileName(),
-				(int) $issue->getIssueId()
+				(int) $issue->getId()
 			)
 		);
 
@@ -362,7 +362,7 @@ class IssueDAO extends DAO {
 			$publicFileManager->removeJournalFile($issue->getJournalId(), $fileName);
 		}
 
-		$issueId = $issue->getIssueId();
+		$issueId = $issue->getId();
 
 		// Delete issue-specific ordering if it exists.
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
@@ -605,7 +605,7 @@ class IssueDAO extends DAO {
 		$publishedIssues =& $this->getPublishedIssues($journalId);
 		$i=1;
 		while ($issue =& $publishedIssues->next()) {
-			$this->insertCustomIssueOrder($journalId, $issue->getIssueId(), $i);
+			$this->insertCustomIssueOrder($journalId, $issue->getId(), $i);
 			unset($issue);
 			$i++;
 		}

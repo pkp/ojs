@@ -89,7 +89,8 @@ class ArticleEmailLogEntry extends DataObject {
 	 * @return int
 	 */
 	function getLogId() {
-		return $this->getData('logId');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
+		return $this->getId();
 	}
 
 	/**
@@ -97,7 +98,8 @@ class ArticleEmailLogEntry extends DataObject {
 	 * @param $logId int
 	 */
 	function setLogId($logId) {
-		return $this->setData('logId', $logId);
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
+		return $this->setId($logId);
 	}
 
 	/**

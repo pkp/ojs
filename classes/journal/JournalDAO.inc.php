@@ -64,7 +64,7 @@ class JournalDAO extends DAO {
 	 */
 	function &_returnJournalFromRow(&$row) {
 		$journal = new Journal();
-		$journal->setJournalId($row['journal_id']);
+		$journal->setId($row['journal_id']);
 		$journal->setPath($row['path']);
 		$journal->setSequence($row['seq']);
 		$journal->setEnabled($row['enabled']);
@@ -93,7 +93,7 @@ class JournalDAO extends DAO {
 			)
 		);
 
-		$journal->setJournalId($this->getInsertJournalId());
+		$journal->setId($this->getInsertJournalId());
 		return $journal->getId();
 	}
 

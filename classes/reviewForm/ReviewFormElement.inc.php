@@ -55,7 +55,8 @@ class ReviewFormElement extends DataObject {
 	 * @return int
 	 */
 	function getReviewFormElementId() {
-		return $this->getData('reviewFormElementId');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
+		return $this->getId();
 	}
 
 	/**
@@ -63,7 +64,8 @@ class ReviewFormElement extends DataObject {
 	 * @param $reviewFormElementId int
 	 */
 	function setReviewFormElementId($reviewFormElementId) {
-		return $this->setData('reviewFormElementId', $reviewFormElementId);
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
+		return $this->setId();
 	}
 
 	/**

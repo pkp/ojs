@@ -36,14 +36,14 @@
 	{assign var=issue value=$articleData.issue}
 	{assign var=publishedArticle value=$articleData.publishedArticle}
 	<tr valign="top">
-		<td><a href="{url page="issue" op="view" path=$issue->getIssueId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>
+		<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>
 		<td>{$article->getLocalizedTitle()|strip_unsafe_html}</td>
 		<td>{$article->getAuthorString()|escape}</td>
 		<td>
 			{assign var="hasPriorAction" value=0}
 			{foreach from=$publishedArticle->getGalleys() item=galley}
 				{if $hasPriorAction}&nbsp;|&nbsp;{/if}
-				<a href="{plugin_url path="exportGalley"|to_array:$article->getId():$galley->getGalleyId()}" class="action">{$galley->getGalleyLabel()|escape}</a>
+				<a href="{plugin_url path="exportGalley"|to_array:$article->getId():$galley->getId()}" class="action">{$galley->getGalleyLabel()|escape}</a>
 				{assign var="hasPriorAction" value=1}
 			{/foreach}
 		</td>

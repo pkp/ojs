@@ -85,7 +85,7 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 					'SELECT xml_galley_id
 					FROM article_xml_galleys x
 					WHERE x.galley_id = ? AND x.article_id = ? ORDER BY xml_galley_id',
-					array($galley->getGalleyId(), $articleId)
+					array($galley->getId(), $articleId)
 				);
 
 				$xmlGalleyPlugin =& PluginRegistry::getPlugin('generic', 'XMLGalleyPlugin');
@@ -94,7 +94,7 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 				while (!$result->EOF) {
 					$row = $result->GetRowAssoc(false);
 					$xmlGalley = $this->_getXMLGalleyFromId($row['xml_galley_id'], $articleId);
-					$xmlGalley->setGalleyId($row['xml_galley_id']);
+					$xmlGalley->setId($row['xml_galley_id']);
 
 					// only append PDF galleys if the correct plugin settings are set
 					if ( ($xmlGalleyPlugin->getSetting($journal->getId(), 'nlmPDF') == 1 

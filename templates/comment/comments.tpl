@@ -57,13 +57,13 @@
 
 	{if $postingAllowed}
 		{if $hasPriorAction}&nbsp;|&nbsp;{/if}
-		<a href="{url op="add" path=$articleId|to_array:$galleyId:$comment->getCommentId()}" class="action">{translate key="comments.postReply"}</a>
+		<a href="{url op="add" path=$articleId|to_array:$galleyId:$comment->getId()}" class="action">{translate key="comments.postReply"}</a>
 		{assign var="hasPriorAction" value=1}
 	{/if}
 
 	{if $isManager}
 		{if $hasPriorAction}&nbsp;|&nbsp;{/if}
-		<a href="{url op="delete" path=$articleId|to_array:$galleyId:$comment->getCommentId()}" {if $comment->getChildCommentCount()!=0}onclick="return confirm('{translate|escape:"jsparam" key="comments.confirmDeleteChildren"}')" {/if}class="action">{translate key="comments.delete"}</a>
+		<a href="{url op="delete" path=$articleId|to_array:$galleyId:$comment->getId()}" {if $comment->getChildCommentCount()!=0}onclick="return confirm('{translate|escape:"jsparam" key="comments.confirmDeleteChildren"}')" {/if}class="action">{translate key="comments.delete"}</a>
 		{assign var="hasPriorAction" value=1}
 	{/if}
 

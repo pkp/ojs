@@ -86,7 +86,7 @@ class LayoutEditorAction extends Action {
 		$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 		if (HookRegistry::call('LayoutEditorAction::deleteArticleImage', array(&$submission, &$fileId, &$revision))) return;
 		foreach ($submission->getGalleys() as $galley) {
-			$images =& $articleGalleyDao->getGalleyImages($galley->getGalleyId());
+			$images =& $articleGalleyDao->getGalleyImages($galley->getId());
 			foreach ($images as $imageFile) {
 				if ($imageFile->getArticleId() == $submission->getArticleId() && $fileId == $imageFile->getFileId() && $imageFile->getRevision() == $revision) {
 					$articleFileManager = new ArticleFileManager($submission->getArticleId());

@@ -92,7 +92,7 @@ class ArticleEventLogDAO extends DAO {
 	 */
 	function &_returnLogEntryFromRow(&$row) {
 		$entry = new ArticleEventLogEntry();
-		$entry->setLogId($row['log_id']);
+		$entry->setId($row['log_id']);
 		$entry->setArticleId($row['article_id']);
 		$entry->setUserId($row['user_id']);
 		$entry->setDateLogged($this->datetimeFromDB($row['date_logged']));
@@ -137,8 +137,8 @@ class ArticleEventLogDAO extends DAO {
 			)
 		);
 
-		$entry->setLogId($this->getInsertLogId());
-		return $entry->getLogId();
+		$entry->setId($this->getInsertLogId());
+		return $entry->getId();
 	}
 
 	/**

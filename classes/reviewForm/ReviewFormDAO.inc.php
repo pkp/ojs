@@ -76,7 +76,7 @@ class ReviewFormDAO extends DAO {
 	 */
 	function &_returnReviewFormFromRow(&$row) {
 		$reviewForm = new ReviewForm();
-		$reviewForm->setReviewFormId($row['review_form_id']);
+		$reviewForm->setId($row['review_form_id']);
 		$reviewForm->setJournalId($row['journal_id']);
 		$reviewForm->setSequence($row['seq']);
 		$reviewForm->setActive($row['is_active']);
@@ -123,7 +123,7 @@ class ReviewFormDAO extends DAO {
 	 */
 	function updateLocaleFields(&$reviewForm) {
 		$this->updateDataObjectSettings('review_form_settings', $reviewForm, array(
-			'review_form_id' => $reviewForm->getReviewFormId()
+			'review_form_id' => $reviewForm->getId()
 		));
 	}
 
@@ -144,10 +144,10 @@ class ReviewFormDAO extends DAO {
 			)
 		);
 
-		$reviewForm->setReviewFormId($this->getInsertReviewFormId());
+		$reviewForm->setId($this->getInsertReviewFormId());
 		$this->updateLocaleFields($reviewForm);
 
-		return $reviewForm->getReviewFormId();
+		return $reviewForm->getId();
 	}
 
 	/**
@@ -166,7 +166,7 @@ class ReviewFormDAO extends DAO {
 				$reviewForm->getJournalId(),
 				$reviewForm->getSequence(),
 				$reviewForm->getActive(),
-				$reviewForm->getReviewFormId()
+				$reviewForm->getId()
 			)
 		);
 
@@ -180,7 +180,7 @@ class ReviewFormDAO extends DAO {
 	 * @param $reviewForm reviewForm
 	 */
 	function deleteReviewForm(&$reviewForm) {
-		return $this->deleteReviewFormById($reviewForm->getReviewFormId(), $reviewForm->getJournalId());
+		return $this->deleteReviewFormById($reviewForm->getId(), $reviewForm->getJournalId());
 	}
 
 	/**
@@ -211,7 +211,7 @@ class ReviewFormDAO extends DAO {
 
 		while (!$reviewForms->eof()) {
 			$reviewForm =& $reviewForms->next();
-			$this->deleteReviewFormById($reviewForm->getReviewFormId());
+			$this->deleteReviewFormById($reviewForm->getId());
 		}
 	}
 
@@ -369,7 +369,7 @@ class ReviewFormDAO extends DAO {
 			$reviewForms =& $this->getJournalUnusedReviewForms($journalId);
 		}
 		while (($reviewForm =& $reviewForms->next())) {
-			$reviewFormTitles[$reviewForm->getReviewFormId()] = $reviewForm->getReviewFormTitle();
+			$reviewFormTitles[$reviewForm->getId()] = $reviewForm->getLocalizedTitle();
 			unset($reviewForm);
 		}
 
