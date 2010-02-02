@@ -154,49 +154,6 @@ class EditorSubmissionDAO extends DAO {
 	}
 
 	/**
-	 * Get all submissions for a journal.
-	 * @param $journalId int
-	 * @param $status boolean true if queued, false if archived.
-	 * @return array EditorSubmission
-	 */
-	function &getEditorSubmissions($journalId, $status = true, $sectionId = 0, $rangeInfo = null) {
-		$primaryLocale = Locale::getPrimaryLocale();
-		$locale = Locale::getLocale();
-		$params = array(
-			'title',
-			$primaryLocale,
-			'title',
-			$locale,
-			'abbrev',
-			$primaryLocale,
-			'abbrev',
-			$locale,
-			$journalId,
-			$status
-		);
-		if ($sectionId) $params[] = $sectionId;
-
-		$sql = 'SELECT	a.*,
-				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
-				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
-
-			FROM	articles a
-				LEFT JOIN sections s ON (s.section_id = a.section_id)
-				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
-				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
-				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
-				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
-			WHERE	a.journal_id = ?
-				AND a.status = ?' .
-				($sectionId?' AND a.section_id = ?':'') .
-			' ORDER BY article_id ASC';
-
-		$result =& $this->retrieveRange($sql, $params, $rangeInfo);
-		$returner = new DAOResultFactory($result, $this, '_returnEditorSubmissionFromRow');
-		return $returner;
-	}
-
-	/**
 	 * Get all unfiltered submissions for a journal.
 	 * @param $journalId int
 	 * @param $sectionId int
@@ -207,11 +164,11 @@ class EditorSubmissionDAO extends DAO {
 	 * @param $dateField int Symbolic SUBMISSION_FIELD_DATE_... identifier
 	 * @param $dateFrom String date to search from
 	 * @param $dateTo String date to search to
-	 * @param $status boolean whether to return active or not
+	 * @param $additionalWhereSql String additional SQL "where" clause info
 	 * @param $rangeInfo object
 	 * @return array result
 	 */
-	function &getUnfilteredEditorSubmissions($journalId, $sectionId = 0, $editorId = 0, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $status = true, $rangeInfo = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
+	function &_getUnfilteredEditorSubmissions($journalId, $sectionId = 0, $editorId = 0, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $additionalWhereSql, $rangeInfo = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
 		$primaryLocale = Locale::getPrimaryLocale();
 		$locale = Locale::getLocale();
 		$params = array(
@@ -334,14 +291,15 @@ class EditorSubmissionDAO extends DAO {
 				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
 				LEFT JOIN article_settings atpl ON (a.article_id = atpl.article_id AND atpl.setting_name = ? AND atpl.locale = ?)
 				LEFT JOIN article_settings atl ON (a.article_id = atl.article_id AND atl.setting_name = ? AND atl.locale = ?)
-			WHERE
-				a.journal_id = ? AND a.submission_progress = 0';
-
-		// "Active" submissions have a status of STATUS_QUEUED and
-		// the layout editor has not yet been acknowledged.
-		// A status value of null doesn't discriminate.
-		if ($status === true) $sql .= ' AND a.status = ' . STATUS_QUEUED;
-		elseif ($status === false) $sql .= ' AND a.status <> ' . STATUS_QUEUED;
+				LEFT JOIN edit_assignments ea ON (a.article_id = ea.article_id)
+				LEFT JOIN edit_assignments ea2 ON (a.article_id = ea2.article_id AND ea.edit_id < ea2.edit_id)
+				LEFT JOIN edit_decisions edec ON (a.article_id = edec.article_id)
+				LEFT JOIN edit_decisions edec2 ON (a.article_id = edec2.article_id AND edec.date_decided < edec2.date_decided)
+			WHERE	edec2.date_decided IS NULL
+				AND ea2.edit_id IS NULL
+				AND a.journal_id = ?
+				AND a.submission_progress = 0' .
+				(!empty($additionalWhereSql)?" AND ($additionalWhereSql)":'');
 
 		if ($sectionId) {
 			$searchSql .= ' AND a.section_id = ?';
@@ -397,28 +355,14 @@ class EditorSubmissionDAO extends DAO {
 	 * @return array EditorSubmission
 	 */
 	function &getEditorSubmissionsUnassigned($journalId, $sectionId, $editorId, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
-		$editorSubmissions = array();
-
-		// FIXME Does not pass $rangeInfo else we only get partial results
-		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $editorId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, true, null, $sortBy, $sortDirection);
-
-		while (!$result->EOF) {
-			$editorSubmission =& $this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
-
-			// used to check if editor exists for this submission
-			$editAssignments =& $editorSubmission->getEditAssignments();
-
-			if (empty($editAssignments)) {
-				$editorSubmissions[] =& $editorSubmission;
-			}
-			unset($editorSubmission);
-			$result->MoveNext();
-		}
-		$result->Close();
-		unset($result);
-
-		import('core.ArrayItemIterator');
-		$returner =& ArrayItemIterator::fromRangeInfo($editorSubmissions, $rangeInfo);
+		$result =& $this->_getUnfilteredEditorSubmissions(
+			$journalId, $sectionId, $editorId,
+			$searchField, $searchMatch, $search,
+			$dateField, $dateFrom, $dateTo,
+			'a.status = ' . STATUS_QUEUED . ' AND ea.edit_id IS NULL',
+			$rangeInfo, $sortBy, $sortDirection
+		);
+		$returner = new DAOResultFactory($result, $this, '_returnEditorSubmissionFromRow');
 		return $returner;
 	}
 
@@ -437,47 +381,14 @@ class EditorSubmissionDAO extends DAO {
 	 * @return array EditorSubmission
 	 */
 	function &getEditorSubmissionsInReview($journalId, $sectionId, $editorId, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
-		$editorSubmissions = array();
-
-		// FIXME Does not pass $rangeInfo else we only get partial results
-		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $editorId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, true, null, $sortBy, $sortDirection);
-
-		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-		while (!$result->EOF) {
-			$editorSubmission =& $this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
-			$articleId = $editorSubmission->getArticleId();
-			for ($i = 1; $i <= $editorSubmission->getCurrentRound(); $i++) {
-				$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentsByArticleId($articleId, $i);
-				if (!empty($reviewAssignment)) {
-					$editorSubmission->setReviewAssignments($reviewAssignment, $i);
-				}
-			}
-
-			// check if submission is still in review
-			$inReview = true;
-			$decisions = $editorSubmission->getDecisions();
-			$decision = array_pop($decisions);
-			if (!empty($decision)) {
-				$latestDecision = array_pop($decision);
-				if ($latestDecision['decision'] == SUBMISSION_EDITOR_DECISION_ACCEPT) {
-					$inReview = false;			
-				}
-			}
-
-			// used to check if editor exists for this submission
-			$editAssignments =& $editorSubmission->getEditAssignments();
-
-			if (!empty($editAssignments) && $inReview) {
-				$editorSubmissions[] =& $editorSubmission;
-			}
-			unset($editorSubmission);
-			$result->MoveNext();
-		}
-		$result->Close();
-		unset($result);
-
-		import('core.ArrayItemIterator');
-		$returner =& ArrayItemIterator::fromRangeInfo($editorSubmissions, $rangeInfo);
+		$result =& $this->_getUnfilteredEditorSubmissions(
+			$journalId, $sectionId, $editorId,
+			$searchField, $searchMatch, $search,
+			$dateField, $dateFrom, $dateTo,
+			'a.status = ' . STATUS_QUEUED . ' AND ea.edit_id IS NOT NULL AND edec.decision <> ' . SUBMISSION_EDITOR_DECISION_ACCEPT,
+			$rangeInfo, $sortBy, $sortDirection
+		);
+		$returner = new DAOResultFactory($result, $this, '_returnEditorSubmissionFromRow');
 		return $returner;
 	}
 
@@ -496,41 +407,14 @@ class EditorSubmissionDAO extends DAO {
 	 * @return array EditorSubmission
 	 */
 	function &getEditorSubmissionsInEditing($journalId, $sectionId, $editorId, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
-		$editorSubmissions = array();
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-
-		// FIXME Does not pass $rangeInfo else we only get partial results
-		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $editorId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, true, null, $sortBy, $sortDirection);
-
-		while (!$result->EOF) {
-			$editorSubmission =& $this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
-			$articleId = $editorSubmission->getArticleId();
-
-			// check if submission is still in review
-			$inEditing = false;
-			$decisions = $editorSubmission->getDecisions();
-			$decision = array_pop($decisions);
-			if (!empty($decision)) {
-				$latestDecision = array_pop($decision);
-				if ($latestDecision['decision'] == SUBMISSION_EDITOR_DECISION_ACCEPT) {
-					$inEditing = true;	
-				}
-			}
-
-			// used to check if editor exists for this submission
-			$editAssignments = $editorSubmission->getEditAssignments();
-
-			if ($inEditing && !empty($editAssignments)) {
-				$editorSubmissions[] =& $editorSubmission;
-			}
-			unset($editorSubmission);
-			$result->MoveNext();
-		}
-		$result->Close();
-		unset($result);
-
-		import('core.ArrayItemIterator');
-		$returner =& ArrayItemIterator::fromRangeInfo($editorSubmissions, $rangeInfo);
+		$result =& $this->_getUnfilteredEditorSubmissions(
+			$journalId, $sectionId, $editorId,
+			$searchField, $searchMatch, $search,
+			$dateField, $dateFrom, $dateTo,
+			'a.status = ' . STATUS_QUEUED . ' AND ea.edit_id IS NOT NULL AND edec.decision = ' . SUBMISSION_EDITOR_DECISION_ACCEPT,
+			$rangeInfo, $sortBy, $sortDirection
+		);
+		$returner = new DAOResultFactory($result, $this, '_returnEditorSubmissionFromRow');
 		return $returner;
 	}
 
@@ -549,27 +433,14 @@ class EditorSubmissionDAO extends DAO {
 	 * @return array EditorSubmission
 	 */
 	function &getEditorSubmissionsArchives($journalId, $sectionId, $editorId, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
-		$editorSubmissions = array();
-
-		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $editorId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, false, $rangeInfo, $sortBy, $sortDirection);
-		while (!$result->EOF) {
-			$editorSubmission =& $this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
-			$editorSubmissions[] =& $editorSubmission;
-			unset($editorSubmission);
-			$result->MoveNext();
-		}
-
-		if (isset($rangeInfo) && $rangeInfo->isValid()) {
-			import('core.VirtualArrayIterator');
-			$returner = new VirtualArrayIterator($editorSubmissions, $result->MaxRecordCount(), $rangeInfo->getPage(), $rangeInfo->getCount());
-		} else {
-			import('core.ArrayItemIterator');
-			$returner = new ArrayItemIterator($editorSubmissions);
-		}
-
-		$result->Close();
-		unset($result);
-
+		$result =& $this->_getUnfilteredEditorSubmissions(
+			$journalId, $sectionId, $editorId,
+			$searchField, $searchMatch, $search,
+			$dateField, $dateFrom, $dateTo,
+			'a.status = ' . STATUS_QUEUED,
+			$rangeInfo, $sortBy, $sortDirection
+		);
+		$returner = new DAOResultFactory($result, $this, '_returnEditorSubmissionFromRow');
 		return $returner;
 	}
 
