@@ -31,4 +31,6 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Please select a tracking code to use.</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Legacy tracking code (urchin.js)</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.ga">New tracking code (ga.js)</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount">Google Analytics account number</message>
+	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">One or more Google Analytics account numbers entered for submission authors are not valid.</message>
 </locale>

@@ -66,7 +66,7 @@ class Author extends PKPAuthor {
 
 	/**
 	 * Set author competing interests.
-	 * @param $biography string
+	 * @param $competingInterests string
 	 * @param $locale string
 	 */
 	function setCompetingInterests($competingInterests, $locale) {
