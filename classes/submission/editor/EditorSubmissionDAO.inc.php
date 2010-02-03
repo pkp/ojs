@@ -294,8 +294,8 @@ class EditorSubmissionDAO extends DAO {
 				LEFT JOIN edit_assignments ea ON (a.article_id = ea.article_id)
 				LEFT JOIN edit_assignments ea2 ON (a.article_id = ea2.article_id AND ea.edit_id < ea2.edit_id)
 				LEFT JOIN edit_decisions edec ON (a.article_id = edec.article_id)
-				LEFT JOIN edit_decisions edec2 ON (a.article_id = edec2.article_id AND edec.date_decided < edec2.date_decided)
-			WHERE	edec2.date_decided IS NULL
+				LEFT JOIN edit_decisions edec2 ON (a.article_id = edec2.article_id AND edec.edit_decision_id < edec2.edit_decision_id)
+			WHERE	edec2.edit_decision_id IS NULL
 				AND ea2.edit_id IS NULL
 				AND a.journal_id = ?
 				AND a.submission_progress = 0' .
@@ -385,7 +385,7 @@ class EditorSubmissionDAO extends DAO {
 			$journalId, $sectionId, $editorId,
 			$searchField, $searchMatch, $search,
 			$dateField, $dateFrom, $dateTo,
-			'a.status = ' . STATUS_QUEUED . ' AND ea.edit_id IS NOT NULL AND edec.decision <> ' . SUBMISSION_EDITOR_DECISION_ACCEPT,
+			'a.status = ' . STATUS_QUEUED . ' AND ea.edit_id IS NOT NULL AND (edec.decision IS NULL OR edec.decision <> ' . SUBMISSION_EDITOR_DECISION_ACCEPT . ')',
 			$rangeInfo, $sortBy, $sortDirection
 		);
 		$returner = new DAOResultFactory($result, $this, '_returnEditorSubmissionFromRow');
@@ -482,14 +482,14 @@ class EditorSubmissionDAO extends DAO {
 				LEFT JOIN edit_assignments e ON (a.article_id = e.article_id)
 				LEFT JOIN edit_assignments e2 ON (a.article_id = e2.article_id AND e.edit_id < e2.edit_id)
 				LEFT JOIN edit_decisions d ON (a.article_id = d.article_id)
-				LEFT JOIN edit_decisions d2 ON (a.article_id = d2.article_id AND d.date_decided < d2.date_decided)
+				LEFT JOIN edit_decisions d2 ON (a.article_id = d2.article_id AND d.edit_decision_id < d2.edit_decision_id)
 			WHERE	a.journal_id = ?
 				AND a.submission_progress = 0
 				AND a.status = ' . STATUS_QUEUED . '
 				AND e2.edit_id IS NULL
 				AND e.edit_id IS NOT NULL
-				AND d2.date_decided IS NULL
-				AND d.decision <> ' . SUBMISSION_EDITOR_DECISION_ACCEPT,
+				AND d2.edit_decision_id IS NULL
+				AND (d.decision IS NULL OR d.decision <> ' . SUBMISSION_EDITOR_DECISION_ACCEPT . ')',
 			array((int) $journalId)
 		);
 		$submissionsCount[1] = $result->Fields('review_count');
@@ -506,13 +506,13 @@ class EditorSubmissionDAO extends DAO {
 				LEFT JOIN edit_assignments e ON (a.article_id = e.article_id)
 				LEFT JOIN edit_assignments e2 ON (a.article_id = e2.article_id AND e.edit_id < e2.edit_id)
 				LEFT JOIN edit_decisions d ON (a.article_id = d.article_id)
-				LEFT JOIN edit_decisions d2 ON (a.article_id = d2.article_id AND d.date_decided < d2.date_decided)
+				LEFT JOIN edit_decisions d2 ON (a.article_id = d2.article_id AND d.edit_decision_id < d2.edit_decision_id)
 			WHERE	a.journal_id = ?
 				AND a.submission_progress = 0
 				AND a.status = ' . STATUS_QUEUED . '
 				AND e2.edit_id IS NULL
 				AND e.edit_id IS NOT NULL
-				AND d2.date_decided IS NULL
+				AND d2.edit_decision_id IS NULL
 				AND d.decision = ' . SUBMISSION_EDITOR_DECISION_ACCEPT,
 			array((int) $journalId)
 		);
@@ -536,11 +536,11 @@ class EditorSubmissionDAO extends DAO {
 
 		if ($round == null) {
 			$result =& $this->retrieve(
-				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE article_id = ? ORDER BY date_decided ASC', $articleId
+				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE article_id = ? ORDER BY edit_decision_id ASC', $articleId
 			);
 		} else {
 			$result =& $this->retrieve(
-				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE article_id = ? AND round = ? ORDER BY date_decided ASC',
+				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE article_id = ? AND round = ? ORDER BY edit_decision_id ASC',
 				array($articleId, $round)
 			);
 		}
