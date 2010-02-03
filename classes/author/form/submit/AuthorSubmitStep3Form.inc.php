@@ -90,6 +90,7 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 				}
 			}
 		}
+		return parent::initData();
 	}
 
 	/**
@@ -221,6 +222,8 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 		for ($i=0, $count=count($deletedAuthors); $i < $count; $i++) {
 			$article->removeAuthor($deletedAuthors[$i]);
 		}
+
+		parent::execute();
 
 		// Save the article
 		$articleDao->updateArticle($article);

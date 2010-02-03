@@ -29,7 +29,13 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 		$success = parent::register($category, $path);
 		if (!Config::getVar('general', 'installed')) return false;
 		$this->addLocaleData();
-		if ($success) {
+		if ($success && $this->getEnabled()) {
+			// Insert field into author submission page
+			HookRegistry::register('Templates::Author::Submit::Authors', array($this, 'authorSubmit'));
+			HookRegistry::register('authorsubmitstep3form::initdata', array($this, 'authorSubmitInitData'));
+			HookRegistry::register('authorsubmitstep3form::execute', array($this, 'authorSubmitExecute'));
+			HookRegistry::register('authordao::getAdditionalFieldNames', array($this, 'authorSubmitGetFieldNames'));
+
 			// Insert Google Analytics page tag to common footer  
 			HookRegistry::register('Templates::Common::Footer::PageFooter', array($this, 'insertFooter'));
 
@@ -159,28 +165,80 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 	}
 
 	/**
+	 * Insert Google Scholar account info into author submission step 3
+	 */
+	function authorSubmit($hookName, $params) {
+		$smarty =& $params[1];
+		$output =& $params[2];
+
+		$output .= $smarty->fetch($this->getTemplatePath() . 'authorSubmit.tpl');
+		return false;
+	}
+
+	function authorSubmitGetFieldNames($hookName, $params) {
+		$fields =& $params[1];
+		$fields[] = 'gs';
+		return false;
+	}
+
+	function authorSubmitExecute($hookName, $params) {
+		$form =& $params[0];
+		$article =& $form->article;
+		$formAuthors = $form->getData('authors');
+		$articleAuthors =& $article->getAuthors();
+
+		for ($i=0; $i<count($articleAuthors); $i++) {
+			$articleAuthors[$i]->setData('gs', $formAuthors[$i]['gs']);
+		}
+
+		return false;
+	}
+
+	function authorSubmitInitData($hookName, $params) {
+		$form =& $params[0];
+		$article =& $form->article;
+		$formAuthors = $form->getData('authors');
+		$articleAuthors =& $article->getAuthors();
+
+		for ($i=0; $i<count($articleAuthors); $i++) {
+			$formAuthors[$i]['gs'] = $articleAuthors[$i]->getData('gs');
+		}
+
+		$form->setData('authors', $formAuthors);
+		return false;
+	}
+
+	/**
 	 * Insert Google Analytics page tag to footer
 	 */  
 	function insertFooter($hookName, $params) {
-		if ($this->getEnabled()) {
-			$smarty =& $params[1];
-			$output =& $params[2];
-			$templateMgr =& TemplateManager::getManager();
-			$currentJournal = $templateMgr->get_template_vars('currentJournal');
+		$smarty =& $params[1];
+		$output =& $params[2];
+		$templateMgr =& TemplateManager::getManager();
+		$currentJournal = $templateMgr->get_template_vars('currentJournal');
 
-			if (!empty($currentJournal)) {
-				$journal =& Request::getJournal();
-				$journalId = $journal->getId();
-				$googleAnalyticsSiteId = $this->getSetting($journalId, 'googleAnalyticsSiteId');
+		if (!empty($currentJournal)) {
+			$journal =& Request::getJournal();
+			$journalId = $journal->getId();
+			$googleAnalyticsSiteId = $this->getSetting($journalId, 'googleAnalyticsSiteId');
 
-				if (!empty($googleAnalyticsSiteId)) {
-					$templateMgr->assign('googleAnalyticsSiteId', $googleAnalyticsSiteId);
-					$trackingCode = $this->getSetting($journalId, 'trackingCode');
-					if ($trackingCode == "ga") {
-						$output .= $templateMgr->fetch($this->getTemplatePath() . 'pageTagGa.tpl'); 
-					} else {
-						$output .= $templateMgr->fetch($this->getTemplatePath() . 'pageTagUrchin.tpl'); 
-					}
+			$article = $templateMgr->get_template_vars('article');
+			if (Request::getRequestedPage() == 'article' && $article) {
+				$authorAccounts = array();
+				foreach ($article->getAuthors() as $author) {
+					$account = $author->getData('gs');
+					if (!empty($account)) $authorAccounts[] = $account;
+				}
+				$templateMgr->assign('gsAuthorAccounts', $authorAccounts);
+			}
+
+			if (!empty($googleAnalyticsSiteId)) {
+				$templateMgr->assign('googleAnalyticsSiteId', $googleAnalyticsSiteId);
+				$trackingCode = $this->getSetting($journalId, 'trackingCode');
+				if ($trackingCode == "ga") {
+					$output .= $templateMgr->fetch($this->getTemplatePath() . 'pageTagGa.tpl'); 
+				} else {
+					$output .= $templateMgr->fetch($this->getTemplatePath() . 'pageTagUrchin.tpl'); 
 				}
 			}
 		}
