@@ -90,22 +90,6 @@ class ReviewerSubmission extends Article {
 	}
 
 	/**
-	 * Get ID of article.
-	 * @return int
-	 */
-	function getArticleId() {
-		return $this->getData('articleId');
-	}
-
-	/**
-	 * Set ID of article.
-	 * @param $articleId int
-	 */
-	function setArticleId($articleId) {
-		return $this->setData('articleId', $articleId);
-	}
-
-	/**
 	 * Get ID of reviewer.
 	 * @return int
 	 */
@@ -172,7 +156,7 @@ class ReviewerSubmission extends Article {
 		}
 		return null;
 	}
-	
+
 	/**
 	 * Get reviewer recommendation.
 	 * @return string
