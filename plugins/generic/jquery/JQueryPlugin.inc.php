@@ -126,8 +126,8 @@ class JQueryPlugin extends GenericPlugin {
 				google.load("jquery", "1");
 			</script>';
 		} else {
-			$jQueryScript = '<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/lib/jquery/jquery.min.js"></script>
-			<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/jqueryUi.min.js"></script>';
+			$jQueryScript = '<script type="text/javascript" src="' . Request::getBaseUrl() . '/lib/pkp/js/lib/jquery/jquery.min.js"></script>
+			<script type="text/javascript" src="' . Request::getBaseUrl() . '/lib/pkp/js/lib/jquery/plugins/jqueryUi.min.js"></script>';
 		}
 		$jQueryScript .= "\n" . JQueryPlugin::addScripts($baseUrl, $scripts);
 
