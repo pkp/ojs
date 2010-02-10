@@ -112,6 +112,10 @@ class JQueryPlugin extends GenericPlugin {
 	 * @return boolean
 	 */
 	function callback($hookName, $args) {
+		// Only pages can receive scripts
+		$request =& Registry::get('request');
+		if (!is_a($request->getRouter(), 'PKPPageRouter')) return null;
+
 		$page = Request::getRequestedPage();
 		$op = Request::getRequestedOp();
 		$scripts = JQueryPlugin::getEnabledScripts($page, $op);

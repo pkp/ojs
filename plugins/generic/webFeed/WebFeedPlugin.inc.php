@@ -40,14 +40,14 @@ class WebFeedPlugin extends GenericPlugin {
 	 */
 	function getDescription() {
 		return Locale::translate('plugins.generic.webfeed.description');
-	}   
+	}
 
 	function register($category, $path) {
 		if (parent::register($category, $path)) {
 			if ($this->getEnabled()) {
 				HookRegistry::register('TemplateManager::display',array(&$this, 'callbackAddLinks'));
 				HookRegistry::register('PluginRegistry::loadCategory', array(&$this, 'callbackLoadCategory'));
-				HookRegistry::register('LoadHandler', array(&$this, 'callbackHandleShortURL') ); 
+				HookRegistry::register('LoadHandler', array(&$this, 'callbackHandleShortURL') );
 			}
 			$this->addLocaleData();
 			return true;
@@ -104,6 +104,10 @@ class WebFeedPlugin extends GenericPlugin {
 	 */
 	function callbackAddLinks($hookName, $args) {
 		if ($this->getEnabled()) {
+			// Only page requests will be handled
+			$request =& Registry::get('request');
+			if (!is_a($request->getRouter(), 'PKPPageRouter')) return false;
+
 			$templateManager =& $args[0];
 
 			$currentJournal =& $templateManager->get_template_vars('currentJournal');
@@ -112,9 +116,9 @@ class WebFeedPlugin extends GenericPlugin {
 				$issueDao =& DAORegistry::getDAO('IssueDAO');
 				$currentIssue =& $issueDao->getCurrentIssue($currentJournal->getId());
 				$displayPage = $this->getSetting($currentJournal->getId(), 'displayPage');
-			} 
+			}
 
-			if ( ($currentIssue) && (($displayPage == 'all') || ($displayPage == 'homepage' && (empty($requestedPage) || $requestedPage == 'index' || $requestedPage == 'issue')) || ($displayPage == 'issue' && $displayPage == $requestedPage)) ) { 
+			if ( ($currentIssue) && (($displayPage == 'all') || ($displayPage == 'homepage' && (empty($requestedPage) || $requestedPage == 'index' || $requestedPage == 'issue')) || ($displayPage == 'issue' && $displayPage == $requestedPage)) ) {
 				$additionalHeadData = $templateManager->get_template_vars('additionalHeadData');
 
 				$feedUrl1 = '<link rel="alternate" type="application/atom+xml" href="'.$currentJournal->getUrl().'/gateway/plugin/WebFeedGatewayPlugin/atom" />';
@@ -221,10 +225,10 @@ class WebFeedPlugin extends GenericPlugin {
 				$this->updateSetting($journal->getId(), 'enabled', false);
 				$message = Locale::translate('plugins.generic.webfeed.disabled');
 				$returner = false;
-				break;	
+				break;
 		}
 
-		return $returner;		
+		return $returner;
 	}
 }
 

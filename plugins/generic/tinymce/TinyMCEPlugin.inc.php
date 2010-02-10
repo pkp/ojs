@@ -327,6 +327,10 @@ class TinyMCEPlugin extends GenericPlugin {
 	 * @return boolean
 	 */
 	function callback($hookName, $args) {
+		// Only pages requests interest us here
+		$request =& Registry::get('request');
+		if (!is_a($request->getRouter(), 'PKPPageRouter')) return null;
+
 		$templateManager =& $args[0];
 
 		$page = Request::getRequestedPage();
