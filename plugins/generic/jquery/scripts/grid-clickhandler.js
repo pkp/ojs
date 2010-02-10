@@ -1,6 +1,6 @@
-// Initialise plugins
+// Grid settings button handler
 $(function(){
-	$('a.settings').live("click", (function() { // Initialize grid settings button handler
+	$('a.settings').live("click", (function() {
 		$(this).parent().siblings('.row_controls').toggle(300);
 	}));
 });

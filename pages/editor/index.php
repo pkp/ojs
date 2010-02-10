@@ -3,7 +3,7 @@
 /**
  * @defgroup pages_editor
  */
- 
+
 /**
  * @file pages/editor/index.php
  *
@@ -11,7 +11,7 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @ingroup pages_editor
- * @brief Handle requests for editor functions. 
+ * @brief Handle requests for editor functions.
  *
  */
 
@@ -30,6 +30,7 @@ switch ($op) {
 	case 'submissionReview':
 	case 'submissionEditing':
 	case 'submissionHistory':
+	case 'submissionCitations':
 	case 'changeSection':
 	case 'recordDecision':
 	case 'selectReviewer':

@@ -77,7 +77,14 @@ class JQueryPlugin extends GenericPlugin {
 		$scripts = null;
 		switch ("$page/$op") {
 			case 'editor/submissionCitations':
-				$scripts = array('modal.js', 'grid-clickhandler.js');
+			case 'sectionEditor/submissionCitations':
+				$scripts = array(
+					'grid-clickhandler.js',
+					'modal.js',
+					'lib/jquery/plugins/validate/jquery.validate.min.js',
+					'jqueryValidatorI18n.js',
+					'lib/jquery/plugins/ui.throbber.js'
+				);
 				break;
 
 			case 'editor/submissions':
