@@ -90,7 +90,6 @@ class TinyMCEPlugin extends GenericPlugin {
 							$fields[] = "authors-$i-competingInterests";
 						}
 						$fields[] = 'abstract';
-						$fields[] = 'citations';
 						break;
 				}
 				break;
@@ -162,7 +161,6 @@ class TinyMCEPlugin extends GenericPlugin {
 					$fields[] = "authors-$i-competingInterests";
 				}
 				$fields[] = 'abstract';
-				$fields[] = 'citations';
 				break;
 			case 'user/profile':
 			case 'user/register':
@@ -286,7 +284,6 @@ class TinyMCEPlugin extends GenericPlugin {
 					$fields[] = "authors-$i-competingInterests";
 				}
 				$fields[] = 'abstract';
-				$fields[] = 'citations';
 				break;
 			case 'sectionEditor/editSuppFile':
 			case 'editor/editSuppFile':
