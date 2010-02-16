@@ -90,7 +90,6 @@ class TinyMCEPlugin extends GenericPlugin {
 							$fields[] = "authors-$i-competingInterests";
 						}
 						$fields[] = 'abstract';
-						$fields[] = 'citations';
 						break;
 				}
 				break;
@@ -162,7 +161,6 @@ class TinyMCEPlugin extends GenericPlugin {
 					$fields[] = "authors-$i-competingInterests";
 				}
 				$fields[] = 'abstract';
-				$fields[] = 'citations';
 				break;
 			case 'user/profile':
 			case 'user/register':
@@ -286,7 +284,6 @@ class TinyMCEPlugin extends GenericPlugin {
 					$fields[] = "authors-$i-competingInterests";
 				}
 				$fields[] = 'abstract';
-				$fields[] = 'citations';
 				break;
 			case 'sectionEditor/editSuppFile':
 			case 'editor/editSuppFile':
@@ -327,6 +324,10 @@ class TinyMCEPlugin extends GenericPlugin {
 	 * @return boolean
 	 */
 	function callback($hookName, $args) {
+		// Only pages requests interest us here
+		$request =& Registry::get('request');
+		if (!is_a($request->getRouter(), 'PKPPageRouter')) return null;
+
 		$templateManager =& $args[0];
 
 		$page = Request::getRequestedPage();

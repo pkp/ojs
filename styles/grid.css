@@ -1,0 +1,264 @@
+.throbber {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    top: 25%;
+}
+
+/* @group Grid */
+
+div.grid div.wrapper {
+	margin: 10px;
+	padding: 20px;
+}
+
+div.grid div.actions {
+	margin-top: 10px;
+}
+
+div.grid table {
+	width: 100%;
+}
+
+div.grid th {
+	padding: 4px;
+	height: 30px;
+	vertical-align: middle;
+	text-align: center;
+}
+
+div.grid td {
+	text-align: center;
+	min-height: 40px;
+	height: 40px;
+	font-size: 85%;
+	vertical-align: middle;
+	padding: 2px 4px;
+}
+
+div.grid th:first-child, div.grid td:first-child, div.grid col.first_column {
+	text-align: left !important;
+}
+
+td.first_column {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+td.first_column a {
+	background-repeat: no-repeat;
+}
+
+div.grid .my_role {
+	border: 2px solid #ccc;
+}
+
+div.grid tr.category td {
+	text-align: left;
+	height: 20px;
+	font-size: 70%;
+	text-transform: uppercase;
+	padding-left: 10px;
+}
+
+.options {
+	float: right;
+	margin-bottom: 10px;
+}
+
+.options a {
+	background-position: 0px 50%;
+	display: inline;
+	padding: 5px 0px 5px 20px;
+	margin-left: 20px;
+	font-size: 90%;
+}
+
+.options a.add {
+	background: url(../lib/pkp/templates/images/structure/grid_new_file.png) no-repeat left;
+}
+
+.options a.sort {
+	background: url(../lib/pkp/templates/images/structure/grid_sort.png) no-repeat left;
+}
+
+.hidetext {
+	visibility: hidden;
+	overflow: hidden;
+}
+
+.row_actions, .row_controls {
+	background-color: #e8f0f8;
+}
+
+.row_actions, .row_file {
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+}
+
+.row_actions {
+	width: 25px;
+}
+
+.row_actions a {
+	margin-left: 5px;
+}
+
+.row_file {
+	margin-left: 15px;
+}
+
+.row_file a {
+	padding: 2px 20px;
+}
+
+.row_controls {
+	display: none;
+	clear: left;
+	height: 25px;
+	line-height: 25px;
+	vertical-align: middle;
+	overflow: hidden;
+	padding-left: 20px;
+}
+
+.row_controls a {
+	text-decoration: none;
+	color: #777;
+	font-size: 90%;
+	padding: 2px 30px 1px 20px;
+}
+
+.row_controls a:hover {
+	text-decoration: underline;
+}
+
+.row_controls a:hover {
+	text-decoration: underline;
+}
+
+a.sprite {
+	background-position: 0 top;
+	text-decoration: none;
+	padding: 1px 0px;
+}
+
+a.sprite:hover {
+	background-position: 0 bottom;
+}
+
+a.focus {
+	background-position: 0 bottom;
+}
+
+a.notes {
+	background: url(../lib/pkp/templates/images/structure/grid_note.png);
+}
+
+.hasnotes {
+	background-position: bottom !important;
+}
+
+a.settings {
+	background-image: url(../lib/pkp/templates/images/structure/grid_settings.png);
+}
+
+a.promote {
+	background-image: url(../lib/pkp/templates/images/structure/grid_promote.png);
+	margin-left: 40px;
+}
+
+a.delete {
+	background-image: url(../lib/pkp/templates/images/structure/grid_delete.png);
+}
+
+a.edit {
+	background-image: url(../lib/pkp/templates/images/structure/grid_edit.png);
+}
+
+a.more_info {
+	background-image: url(../lib/pkp/templates/images/structure/grid_information.png);
+}
+
+a.word {
+	background-image: url(../lib/pkp/templates/images/structure/page_white_word.png);
+}
+
+a.excel {
+	background-image: url(../lib/pkp/templates/images/structure/page_white_excel.png);
+}
+
+a.pdf {
+	background-image: url(../lib/pkp/templates/images/structure/page_white_acrobat.png);
+}
+
+a.picture {
+	background-image: url(../lib/pkp/templates/images/structure/page_white_picture.png);
+}
+
+a.html {
+	background-image: url(../lib/pkp/templates/images/structure/page_white_world.png);
+}
+
+.category td:first-child {
+	top: 0;
+}
+
+.group1 td:first-child {
+	background: url(../lib/pkp/templates/images/structure/grid_group_1.png) no-repeat;
+}
+
+.group2 td:first-child {
+	background: url(../lib/pkp/templates/images/structure/grid_group_2.png) no-repeat;
+}
+
+.group3 td:first-child {
+	background: url(../lib/pkp/templates/images/structure/grid_group_3.png) no-repeat;
+}
+
+.group4 td:first-child {
+	background: url(../lib/pkp/templates/images/structure/grid_group_4.png) no-repeat;
+}
+
+.group5 td:first-child {
+	background: url(../lib/pkp/templates/images/structure/grid_group_5.png) no-repeat;
+}
+
+a.task {
+	width: 100%;
+	height: 100%;
+	text-indent: -1500px;
+	overflow: hidden;
+	display: block;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+a.new {
+	background-image: url(../lib/pkp/templates/images/structure/grid_task.png);
+}
+
+a.accepted {
+	background-image: url(../lib/pkp/templates/images/structure/grid_task_accepted.png);
+}
+
+a.completed {
+	background-image: url(../lib/pkp/templates/images/structure/grid_task_complete.png);
+}
+
+a.overdue {
+	background-image: url(../lib/pkp/templates/images/structure/grid_email_overdue.png);
+}
+
+a.notify {
+	background-image: url(../lib/pkp/templates/images/structure/grid_email.png);
+}
+
+a.uploaded {
+	background-image: url(../lib/pkp/templates/images/structure/grid_folder.png);
+}
+
+/* @end */

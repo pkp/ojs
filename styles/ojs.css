@@ -1,0 +1,18 @@
+/* @group Imports */
+/* Includes CSS files necessary for OJS to use new interface components such as Grids */
+
+/* jQuery UI http://jqueryui.com */
+@import url("../lib/pkp/styles/jqueryUi.css");
+
+/* OOCSS - http://github.com/stubbornella/oocss */
+@import url("../lib/pkp/styles/oocss/grids.css");
+
+/* Content Elements */
+@import url("grid.css");
+
+/* Theme */
+@import url("../lib/pkp/styles/themes/default/theme.css");
+
+
+/* @end */
+

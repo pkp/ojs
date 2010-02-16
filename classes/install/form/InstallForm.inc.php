@@ -24,8 +24,6 @@ import('install.Install');
 import('site.VersionCheck');
 import('form.Form');
 
-define('PHP_REQUIRED_VERSION', '4.2.0');
-
 class InstallForm extends Form {
 
 	/** @var array locales supported by this system */

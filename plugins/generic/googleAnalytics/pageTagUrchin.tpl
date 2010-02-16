@@ -14,6 +14,10 @@
 <script type="text/javascript">
 _uacct = "{$googleAnalyticsSiteId|escape}";
 urchinTracker();
+{foreach from=$gsAuthorAccounts item=gsAuthorAccount}
+	_uff = 0; // Reset flag to allow for additional accounts
+	_uacct = "{$gsAuthorAccount|escape}";
+{/foreach}
 </script>
 <!-- /Google Analytics -->
 

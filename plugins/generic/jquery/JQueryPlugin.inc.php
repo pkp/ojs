@@ -17,7 +17,8 @@
 
 import('classes.plugins.GenericPlugin');
 
-define('JQUERY_INSTALL_PATH', 'lib' . DIRECTORY_SEPARATOR . 'pkp' . DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'jquery');
+define('JS_SCRIPTS_DIR', 'lib' . DIRECTORY_SEPARATOR . 'pkp' . DIRECTORY_SEPARATOR . 'js');
+define('JQUERY_INSTALL_PATH', JS_SCRIPTS_DIR . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'jquery');
 define('JQUERY_JS_PATH', JQUERY_INSTALL_PATH . DIRECTORY_SEPARATOR . 'jquery.min.js');
 define('JQUERY_SCRIPTS_DIR', 'plugins' . DIRECTORY_SEPARATOR . 'generic' . DIRECTORY_SEPARATOR . 'jquery' . DIRECTORY_SEPARATOR . 'scripts');
 
@@ -76,7 +77,14 @@ class JQueryPlugin extends GenericPlugin {
 		$scripts = null;
 		switch ("$page/$op") {
 			case 'editor/submissionCitations':
-				$scripts = array();
+			case 'sectionEditor/submissionCitations':
+				$scripts = array(
+					'grid-clickhandler.js',
+					'modal.js',
+					'lib/jquery/plugins/validate/jquery.validate.min.js',
+					'jqueryValidatorI18n.js',
+					'lib/jquery/plugins/ui.throbber.js'
+				);
 				break;
 
 			case 'editor/submissions':
@@ -111,6 +119,10 @@ class JQueryPlugin extends GenericPlugin {
 	 * @return boolean
 	 */
 	function callback($hookName, $args) {
+		// Only pages can receive scripts
+		$request =& Registry::get('request');
+		if (!is_a($request->getRouter(), 'PKPPageRouter')) return null;
+
 		$page = Request::getRequestedPage();
 		$op = Request::getRequestedOp();
 		$scripts = JQueryPlugin::getEnabledScripts($page, $op);
@@ -124,10 +136,11 @@ class JQueryPlugin extends GenericPlugin {
 			$jQueryScript = '<script src="http://www.google.com/jsapi"></script>
 			<script>
 				google.load("jquery", "1");
+				google.load("jqueryui", "1");
 			</script>';
 		} else {
-			$jQueryScript = '<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/lib/jquery/jquery.min.js"></script>
-			<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/jqueryUi.min.js"></script>';
+			$jQueryScript = '<script type="text/javascript" src="' . Request::getBaseUrl() . '/lib/pkp/js/lib/jquery/jquery.min.js"></script>
+			<script type="text/javascript" src="' . Request::getBaseUrl() . '/lib/pkp/js/lib/jquery/plugins/jqueryUi.min.js"></script>';
 		}
 		$jQueryScript .= "\n" . JQueryPlugin::addScripts($baseUrl, $scripts);
 
@@ -147,8 +160,11 @@ class JQueryPlugin extends GenericPlugin {
 
 		foreach ($scripts as $script) {
 			if(file_exists(Core::getBaseDir() . DIRECTORY_SEPARATOR . JQUERY_SCRIPTS_DIR . DIRECTORY_SEPARATOR . $script)) {
-				$returner .= $scriptOpen . $baseUrl . '/plugins/generic/jquery/scripts/' . $script . $scriptClose . "\n";
+				$scriptLocation = '/plugins/generic/jquery/scripts/';
+			} elseif(file_exists(Core::getBaseDir() . DIRECTORY_SEPARATOR . JS_SCRIPTS_DIR . DIRECTORY_SEPARATOR . $script)) {
+				$scriptLocation = '/lib/pkp/js/';
 			}
+			$returner .= $scriptOpen . $baseUrl . $scriptLocation . $script. $scriptClose . "\n";
 		}
 		return $returner;
 	}

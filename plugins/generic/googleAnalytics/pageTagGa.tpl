@@ -17,6 +17,13 @@ document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.
 var pageTracker = _gat._getTracker("{$googleAnalyticsSiteId|escape}");
 pageTracker._initData();
 pageTracker._trackPageview();
+{foreach from=$gsAuthorAccounts item=gsAuthorAccount key=k}
+	var authorTracker{$k|escape} = _gat._getTracker("{$gsAuthorAccount|escape}");
+	authorTracker{$k|escape}._setDomainName("none");
+	authorTracker{$k|escape}._setAllowLinker(true);
+	authorTracker{$k|escape}._initData();
+	authorTracker{$k|escape}._trackPageview();
+{/foreach}
 </script>
 <!-- /Google Analytics -->
 
