@@ -79,6 +79,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 	  * Display all payments previously made
 	  */
 	 function viewPayments($args) {
+		parent::validate();
 		$rangeInfo = &Handler::getRangeInfo('CompletedPayments');
 		$paymentDao = &DAORegistry::getDAO('OJSCompletedPaymentDAO');
 		$journal =& Request::getJournal();
@@ -96,6 +97,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 	  * Display a single Completed payment 
 	  */
 	 function viewPayment($args) {
+		parent::validate();
 		$paymentDao = &DAORegistry::getDAO('OJSCompletedPaymentDAO');
 		$completedPaymentId = $args[0];
 		$payment = &$paymentDao->getCompletedPayment($completedPaymentId);
