@@ -313,7 +313,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 				$proc->importStylesheet($xslDom);
 
 				// set XSL parameters
-				foreach ($arguments as $param => $value) {
+				foreach ((array) $arguments as $param => $value) {
 					$proc->setParameter(null, $param, $value);
 				}
 

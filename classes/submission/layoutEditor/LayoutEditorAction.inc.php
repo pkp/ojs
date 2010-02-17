@@ -67,7 +67,7 @@ class LayoutEditorAction extends Action {
 				if ($galley->getStyleFileId()) {
 					$articleFileManager->deleteFile($galley->getStyleFileId());
 				}
-				foreach ($galley->getImageFiles() as $image) {
+				foreach ((array) $galley->getImageFiles() as $image) {
 					$articleFileManager->deleteFile($image->getFileId());
 				}
 			}

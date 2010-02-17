@@ -32,26 +32,49 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 		// get derived galley from DB
 		if (isset($articleId)) {
 			$result =& $this->retrieve(
-				'SELECT x.*, x.galley_type AS file_type, 
-				g.file_id, g.html_galley, g.style_file_id, g.seq,
-				a.file_name, a.original_file_name, a.file_type, a.file_size, a.date_uploaded, a.date_modified
-				FROM article_xml_galleys x
-				LEFT JOIN article_galleys g ON (x.galley_id = g.galley_id)
-				LEFT JOIN article_files a ON (g.file_id = a.file_id)
-				WHERE x.xml_galley_id = ? AND x.article_id = ?',
-				array($galleyId, $articleId)
+				'SELECT	x.*,
+					x.galley_type AS file_type,
+					g.file_id,
+					g.html_galley,
+					g.style_file_id,
+					g.seq,
+					g.locale,
+					g.public_galley_id,
+					a.file_name,
+					a.original_file_name,
+					a.file_type,
+					a.file_size,
+					a.date_uploaded,
+					a.date_modified
+				FROM	article_xml_galleys x
+					LEFT JOIN article_galleys g ON (x.galley_id = g.galley_id)
+					LEFT JOIN article_files a ON (g.file_id = a.file_id)
+				WHERE	x.galley_id = ? AND
+					x.article_id = ?',
+				array((int) $galleyId, (int) $articleId)
 			);
 
 		} else {
 			$result =& $this->retrieve(
-				'SELECT x.*, x.galley_type AS file_type, 
-				g.file_id, g.html_galley, g.style_file_id, g.seq,
-				a.file_name, a.original_file_name, a.file_type, a.file_size, a.date_uploaded, a.date_modified
-				FROM article_xml_galleys x
-				LEFT JOIN article_galleys g ON (x.galley_id = g.galley_id)
-				LEFT JOIN article_files a ON (g.file_id = a.file_id)
-				WHERE x.xml_galley_id = ?',
-				$galleyId
+				'SELECT	x.*,
+					x.galley_type AS file_type, 
+					g.file_id,
+					g.html_galley,
+					g.style_file_id,
+					g.seq,
+					g.locale,
+					g.public_galley_id,
+					a.file_name,
+					a.original_file_name,
+					a.file_type,
+					a.file_size,
+					a.date_uploaded,
+					a.date_modified
+				FROM	article_xml_galleys x
+					LEFT JOIN article_galleys g ON (x.galley_id = g.galley_id)
+					LEFT JOIN article_files a ON (g.file_id = a.file_id)
+				WHERE	x.galley_id = ?',
+				array((int) $galleyId)
 			);
 		}
 
@@ -82,9 +105,11 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 
 				// get derived galleys from DB for this article
 				$result =& $this->retrieve(
-					'SELECT xml_galley_id
-					FROM article_xml_galleys x
-					WHERE x.galley_id = ? AND x.article_id = ? ORDER BY xml_galley_id',
+					'SELECT	galley_id
+					FROM	article_xml_galleys x
+					WHERE	x.galley_id = ? AND
+						x.article_id = ?
+					ORDER BY galley_id',
 					array($galley->getId(), $articleId)
 				);
 
@@ -93,19 +118,23 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 
 				while (!$result->EOF) {
 					$row = $result->GetRowAssoc(false);
-					$xmlGalley = $this->_getXMLGalleyFromId($row['xml_galley_id'], $articleId);
+					$xmlGalley = $this->_getXMLGalleyFromId($row['galley_id'], $articleId);
+
+// WARNING: See bug #5152 and note below.
+/*
 					$xmlGalley->setId($row['xml_galley_id']);
 
 					// only append PDF galleys if the correct plugin settings are set
 					if ( ($xmlGalleyPlugin->getSetting($journal->getId(), 'nlmPDF') == 1 
 							&& $xmlGalley->isPdfGalley()) || $xmlGalley->isHTMLGalley()) {
 						array_push($galleys, $xmlGalley);
-					}
+					} */
 					$result->moveNext();
 				}
 
 				// hide source XML galley; this could be made a plugin setting/checkbox
-				if (isset($xmlGalley)) unset($galleys[$key]);
+// WARNING: See bug #5152 and note below.
+//				if (isset($xmlGalley)) unset($galleys[$key]);
 			}
 			unset($galley);
 		}
@@ -137,6 +166,15 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 				)
 			);
 
+// WARNING: The below code is disabled because of bug #5152. When a galley
+// exists with the same galley_id as an entry in the article_xml_galleys table,
+// editing the XML galley will corrupt the entry in the galleys table for the
+// same galley_id. This has been fixed by retiring the article_xml_galleys
+// table's xml_galley_id in favour of using the galley_id instead, but this
+// means that only a single derived galley (=XHTML) is possible for an XML
+// galley upload.
+/*
+
 			// if we have enabled XML-PDF galley generation (plugin setting)
 			// and are using the built-in NLM stylesheet, append a PDF galley as well
 			$journal =& Request::getJournal();
@@ -159,7 +197,7 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 					)
 				);
 
-			}
+			}*/
 			return true;
 		}
 		return false;
@@ -194,7 +232,7 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 		$galleyId =& $args[0];
 
 		return $this->update(
-			'UPDATE article_xml_galleys SET views = views + 1 WHERE xml_galley_id = ?',
+			'UPDATE article_xml_galleys SET views = views + 1 WHERE galley_id = ?',
 			$galleyId
 		);
 
