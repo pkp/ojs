@@ -870,6 +870,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="payment.alreadyPaidMessage">Select this box if you've already sent your payment to the journal in order to finish the submission process.  The submission will not be reviewed until the payment arrives.  Click PAY NOW above to see the payment instructions.</message>
 	<message key="payment.paymentReceived">Payment Received</message>
 	<message key="payment.paymentSent">Payment has already been sent</message>
+	<message key="payment.authorFees">Author Fees</message>
 	<message key="payment.type.submission">Submission Fee</message>
 	<message key="payment.type.publication">Publication Fee</message>
 	<message key="payment.type.fastTrack">Fast Track Review Fee</message>
