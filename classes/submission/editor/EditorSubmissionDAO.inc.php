@@ -437,7 +437,7 @@ class EditorSubmissionDAO extends DAO {
 			$journalId, $sectionId, $editorId,
 			$searchField, $searchMatch, $search,
 			$dateField, $dateFrom, $dateTo,
-			'a.status = ' . STATUS_QUEUED,
+			'a.status <> ' . STATUS_QUEUED,
 			$rangeInfo, $sortBy, $sortDirection
 		);
 		$returner = new DAOResultFactory($result, $this, '_returnEditorSubmissionFromRow');
