@@ -288,7 +288,7 @@ class PayPalPlugin extends PaymethodPlugin {
 			case 'cancel':
 				Handler::setupTemplate();
 				$templateMgr->assign(array(
-					'currentUrl' => Request::url(null, null, 'index'),
+					'currentUrl' => Request::url(null, 'index'),
 					'pageTitle' => 'plugins.paymethod.paypal.purchase.cancelled.title',
 					'message' => 'plugins.paymethod.paypal.purchase.cancelled',
 					'backLink' => Request::getUserVar('ojsReturnUrl'),
