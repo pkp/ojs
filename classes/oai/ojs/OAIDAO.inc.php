@@ -73,12 +73,16 @@ class OAIDAO extends DAO {
 	 */
 	function getEarliestDatestamp($journalId = null) {
 		$result =& $this->retrieve(
-			'SELECT MIN(pa.date_published)
-			FROM published_articles pa, issues i
-			WHERE pa.issue_id = i.issue_id AND i.published = 1'
+			'SELECT	MIN(a.last_modified)
+			FROM	published_articles pa,
+				articles a,
+				issues i
+			WHERE	pa.issue_id = i.issue_id AND
+				i.published = 1 AND
+				a.article_id = pa.article_id'
 			. (isset($journalId) ? ' AND i.journal_id = ?' : ''),
 
-			isset($journalId) ? $journalId : false
+			isset($journalId) ? ((int) $journalId) : false
 		);
 
 		if (isset($result->fields[0])) {
@@ -102,12 +106,15 @@ class OAIDAO extends DAO {
 	 */
 	function recordExists($articleId, $journalId = null) {
 		$result =& $this->retrieve(
-			'SELECT COUNT(*)
-			FROM published_articles pa, issues i
-			WHERE pa.issue_id = i.issue_id AND i.published = 1 AND pa.article_id = ?'
+			'SELECT	COUNT(*)
+			FROM	published_articles pa,
+				issues i
+			WHERE	pa.issue_id = i.issue_id AND
+				i.published = 1 AND
+				pa.article_id = ?'
 			. (isset($journalId) ? ' AND i.journal_id = ?' : ''),
 
-			isset($journalId) ? array($articleId, $journalId) : $articleId
+			isset($journalId) ? array((int) $articleId, (int) $journalId) : ((int) $articleId)
 		);
 
 		$returner = $result->fields[0] == 1;
@@ -127,6 +134,7 @@ class OAIDAO extends DAO {
 	function &getRecord($articleId, $journalId = null) {
 		$result =& $this->retrieve(
 			'SELECT	pa.*,
+				a.last_modified,
 				a.article_id,
 				i.issue_id,
 				j.journal_id,
@@ -143,7 +151,7 @@ class OAIDAO extends DAO {
 				AND i.published = 1
 				AND pa.article_id = ?'
 			. (isset($journalId) ? ' AND a.journal_id = ?' : ''),
-			isset($journalId) ? array($articleId, $journalId) : $articleId
+			isset($journalId) ? array((int) $articleId, (int) $journalId) : ((int) $articleId)
 		);
 
 		$returner = null;
@@ -174,13 +182,14 @@ class OAIDAO extends DAO {
 
 		$params = array();
 		if (isset($journalId)) {
-			array_push($params, $journalId);
+			array_push($params, (int) $journalId);
 		}
 		if (isset($sectionId)) {
-			array_push($params, $sectionId);
+			array_push($params, (int) $sectionId);
 		}
 		$result =& $this->retrieve(
 			'SELECT	pa.*,
+				a.last_modified,
 				a.article_id,
 				j.journal_id,
 				s.section_id,
@@ -197,8 +206,8 @@ class OAIDAO extends DAO {
 				AND i.published = 1'
 				. (isset($journalId) ? ' AND a.journal_id = ?' : '')
 				. (isset($sectionId) ? ' AND a.section_id = ?' : '')
-				. (isset($from) ? ' AND pa.date_published >= ' . $this->datetimeToDB($from) : '')
-				. (isset($until) ? ' AND pa.date_published <= ' . $this->datetimeToDB($until) : '')
+				. (isset($from) ? ' AND a.last_modified >= ' . $this->datetimeToDB($from) : '')
+				. (isset($until) ? ' AND a.last_modified <= ' . $this->datetimeToDB($until) : '')
 				. ' ORDER BY journal_id',
 			$params
 		);
@@ -234,14 +243,14 @@ class OAIDAO extends DAO {
 
 		$params = array();
 		if (isset($journalId)) {
-			array_push($params, $journalId);
+			array_push($params, (int) $journalId);
 		}
 		if (isset($sectionId)) {
-			array_push($params, $sectionId);
+			array_push($params, (int) $sectionId);
 		}
 		$result =& $this->retrieve(
 			'SELECT	pa.article_id,
-				pa.date_published,
+				a.last_modified,
 				j.journal_id,
 				s.section_id
 			FROM	published_articles pa,
@@ -255,8 +264,8 @@ class OAIDAO extends DAO {
 				AND pa.issue_id = i.issue_id AND i.published = 1'
 				. (isset($journalId) ? ' AND a.journal_id = ?' : '')
 				. (isset($sectionId) ? ' AND a.section_id = ?' : '')
-				. (isset($from) ? ' AND pa.date_published >= ' . $this->datetimeToDB($from) : '')
-				. (isset($until) ? ' AND pa.date_published <= ' . $this->datetimeToDB($until) : '')
+				. (isset($from) ? ' AND a.last_modified >= ' . $this->datetimeToDB($from) : '')
+				. (isset($until) ? ' AND a.last_modified <= ' . $this->datetimeToDB($until) : '')
 				. ' ORDER BY journal_id',
 			$params
 		);
@@ -336,7 +345,7 @@ class OAIDAO extends DAO {
 		$record->setData('galleys', $galleys);
 
 		$record->identifier = $this->oai->articleIdToIdentifier($row['article_id']);
-		$record->datestamp = OAIUtils::UTCDate(strtotime($this->datetimeFromDB($row['date_published'])));
+		$record->datestamp = OAIUtils::UTCDate(strtotime($this->datetimeFromDB($row['last_modified'])));
 		$record->sets = array($journal->getPath() . ':' . $section->getLocalizedAbbrev());
 
 		return $record;
@@ -354,7 +363,7 @@ class OAIDAO extends DAO {
 		$record = new OAIRecord();
 
 		$record->identifier = $this->oai->articleIdToIdentifier($row['article_id']);
-		$record->datestamp = OAIUtils::UTCDate(strtotime($this->datetimeFromDB($row['date_published'])));
+		$record->datestamp = OAIUtils::UTCDate(strtotime($this->datetimeFromDB($row['last_modified'])));
 		$record->sets = array($journal->getPath() . ':' . $section->getLocalizedAbbrev());
 
 		return $record;
@@ -380,7 +389,8 @@ class OAIDAO extends DAO {
 	 */
 	function &getToken($tokenId) {
 		$result =& $this->retrieve(
-			'SELECT * FROM oai_resumption_tokens WHERE token = ?', $tokenId
+			'SELECT * FROM oai_resumption_tokens WHERE token = ?',
+			array($tokenId)
 		);
 
 		if ($result->RecordCount() == 0) {
@@ -408,7 +418,7 @@ class OAIDAO extends DAO {
 			$token->id = md5(uniqid(mt_rand(), true));
 			$result =& $this->retrieve(
 				'SELECT COUNT(*) FROM oai_resumption_tokens WHERE token = ?',
-				$token->id
+				array($token->id)
 			);
 			$val = $result->fields[0];
 
