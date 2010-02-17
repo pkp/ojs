@@ -8,7 +8,7 @@
  *
  *}
 <div id="authorFees">
-<h3>{translate key="manager.payment.authorFees"}</h3>
+<h3>{translate key="payment.authorFees"}</h3>
 <table width="100%" class="data">
 {if $currentJournal->getSetting('submissionFeeEnabled')}
 	<tr>

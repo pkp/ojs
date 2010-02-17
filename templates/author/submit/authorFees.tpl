@@ -8,7 +8,7 @@
  *
  *}
 <div id="authorFees">
-<h3>{translate key="manager.payment.authorFees"}</h3>
+<h3>{translate key="payment.authorFees"}</h3>
 <p>{translate key="about.authorFeesMessage"}</p>
 {if $currentJournal->getSetting('submissionFeeEnabled')}
 	<p>{$currentJournal->getLocalizedSetting('submissionFeeName')|escape}:
