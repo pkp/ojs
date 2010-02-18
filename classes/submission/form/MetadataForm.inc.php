@@ -142,6 +142,7 @@ class MetadataForm extends Form {
 				}
 			}
 		}
+		return parent::initData();
 	}
 
 	/**
@@ -349,6 +350,8 @@ class MetadataForm extends Form {
 		for ($i=0, $count=count($deletedAuthors); $i < $count; $i++) {
 			$article->removeAuthor($deletedAuthors[$i]);
 		}
+
+		parent::execute();
 
 		// Save the article
 		$articleDao->updateArticle($article);
