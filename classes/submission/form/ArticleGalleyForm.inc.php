@@ -230,7 +230,7 @@ class ArticleGalleyForm extends Form {
 				$publicGalleyId = $galley->getPublicgalleyId();
 				$suffix = '';
 				$i = 1;
-				while ($galleyDao->publicGalleyIdExists($publicGalleyId . $suffix, '')) {
+				while ($galleyDao->publicGalleyIdExists($publicGalleyId . $suffix, 0, $galley->getArticleId())) {
 					$suffix = '_'.$i++;
 				}
 

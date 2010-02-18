@@ -59,6 +59,7 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 	function displayPaymentForm($queuedPaymentId, &$queuedPayment) {
 		if (!$this->isConfigured()) return false;
 		$journal =& Request::getJournal();
+		Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
 		$templateMgr =& TemplateManager::getManager();
 		$user =& Request::getUser();
 
@@ -88,7 +89,7 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 		$ojsPaymentManager =& OJSPaymentManager::getManager();
 		$queuedPayment =& $ojsPaymentManager->getQueuedPayment($queuedPaymentId);
 		// if the queued payment doesn't exist, redirect away from payments
-		if ( !$queuedPayment ) Request::redirect(null, null, 'index');
+		if ( !$queuedPayment ) Request::redirect(null, 'index');
 
 		switch ( $op ) {
 			case 'notify':

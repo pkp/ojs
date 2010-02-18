@@ -132,6 +132,7 @@ class PayPalPlugin extends PaymethodPlugin {
 			'cmd' => '_xclick'
 		);
 
+		Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('params', $params);
 		$templateMgr->assign('paypalFormUrl', $this->getSetting($journal->getId(), 'paypalurl'));
@@ -287,7 +288,7 @@ class PayPalPlugin extends PaymethodPlugin {
 			case 'cancel':
 				Handler::setupTemplate();
 				$templateMgr->assign(array(
-					'currentUrl' => Request::url(null, null, 'index'),
+					'currentUrl' => Request::url(null, 'index'),
 					'pageTitle' => 'plugins.paymethod.paypal.purchase.cancelled.title',
 					'message' => 'plugins.paymethod.paypal.purchase.cancelled',
 					'backLink' => Request::getUserVar('ojsReturnUrl'),

@@ -143,7 +143,7 @@ class ArticleGalleyDAO extends DAO {
 		$result->Close();
 		unset($result);
 
-		HookRegistry::call('ArticleGalleyDAO::getGalleysByArticle', array(&$galleys, &$articleId));
+		HookRegistry::call('ArticleGalleyDAO::getArticleGalleys', array(&$galleys, &$articleId)); // FIXME: XMLGalleyPlugin uses this; should convert to DAO auto call
 
 		return $galleys;
 	}
