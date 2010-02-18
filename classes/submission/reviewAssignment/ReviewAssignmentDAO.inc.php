@@ -556,7 +556,7 @@ class ReviewAssignmentDAO extends DAO {
 	function getCompletedReviewCounts($journalId) {
 		$returner = Array();
 		$result =& $this->retrieve(
-			'SELECT r.reviewer_id, COUNT(r.review_id) AS count FROM review_assignments r, articles a WHERE r.article_id = a.article_id AND a.journal_id = ? AND r.date_completed IS NOT NULL GROUP BY r.reviewer_id',
+			'SELECT r.reviewer_id, COUNT(r.review_id) AS count FROM review_assignments r, articles a WHERE r.article_id = a.article_id AND a.journal_id = ? AND r.date_completed IS NOT NULL AND r.cancelled = 0 GROUP BY r.reviewer_id',
 			(int) $journalId
 			);
 
