@@ -83,7 +83,7 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 		$templateMgr =& TemplateManager::getManager();
 		$user =& Request::getUser();
 		$op = isset($args[0])?$args[0]:null;
-		$queuedPaymentId = (int) array_shift($args);
+		$queuedPaymentId = isset($args[1])?((int) $args[1]):0;
 
 		import('payment.ojs.OJSPaymentManager');
 		$ojsPaymentManager =& OJSPaymentManager::getManager();

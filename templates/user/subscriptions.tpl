@@ -48,6 +48,8 @@
 			{assign var="isNonExpiring" value=$userIndividualSubscription->isNonExpiring()}
 			{if $journalPaymentsEnabled && $acceptSubscriptionPayments && $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT}
 				<span class="disabled">{translate key="subscriptions.status.awaitingOnlinePayment"}</span>	
+			{elseif $journalPaymentsEnabled && $acceptSubscriptionPayments && $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT}
+				<span class="disabled">{translate key="subscriptions.status.awaitingManualPayment"}</span>	
 			{elseif $subscriptionStatus != $smarty.const.SUBSCRIPTION_STATUS_ACTIVE}
 				<span class="disabled">{translate key="subscriptions.inactive"}</span>	
 			{else}
@@ -100,6 +102,8 @@
 			{assign var="isNonExpiring" value=$userInstitutionalSubscription->isNonExpiring()}
 			{if $journalPaymentsEnabled && $acceptSubscriptionPayments && $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT}
 				<span class="disabled">{translate key="subscriptions.status.awaitingOnlinePayment"}</span>	
+			{elseif $journalPaymentsEnabled && $acceptSubscriptionPayments && $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT}
+				<span class="disabled">{translate key="subscriptions.status.awaitingManualPayment"}</span>	
 			{elseif $journalPaymentsEnabled && $acceptSubscriptionPayments && $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_NEEDS_APPROVAL}
 				<span class="disabled">{translate key="subscriptions.status.needsApproval"}</span>	
 			{elseif $subscriptionStatus != $smarty.const.SUBSCRIPTION_STATUS_ACTIVE}

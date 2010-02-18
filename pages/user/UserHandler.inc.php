@@ -434,7 +434,11 @@ class UserHandler extends Handler {
 			$subscription =& $subscriptionDao->getSubscription($subscriptionId);
 			$subscriptionStatus = $subscription->getStatus();
 			import('subscription.Subscription');
-			$validStatus = array(SUBSCRIPTION_STATUS_ACTIVE, SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT);
+			$validStatus = array(
+				SUBSCRIPTION_STATUS_ACTIVE,
+				SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT,
+				SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT
+			);
 
 			if (!in_array($subscriptionStatus, $validStatus)) Request::redirect(null, 'user'); 
 
@@ -505,7 +509,11 @@ class UserHandler extends Handler {
 			$subscription =& $subscriptionDao->getSubscription($subscriptionId);
 			$subscriptionStatus = $subscription->getStatus();
 			import('subscription.Subscription');
-			$validStatus = array(SUBSCRIPTION_STATUS_ACTIVE, SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT);
+			$validStatus = array(
+				SUBSCRIPTION_STATUS_ACTIVE,
+				SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT,
+				SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT
+			);
 
 			if (!in_array($subscriptionStatus, $validStatus)) Request::redirect(null, 'user'); 
 
@@ -640,7 +648,11 @@ class UserHandler extends Handler {
 
 		import('subscription.Subscription');
 		$subscriptionStatus = $subscription->getStatus();
-		$validStatus = array(SUBSCRIPTION_STATUS_ACTIVE, SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT);
+		$validStatus = array(
+			SUBSCRIPTION_STATUS_ACTIVE,
+			SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT,
+			SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT
+		);
 
 		if (!in_array($subscriptionStatus, $validStatus)) Request::redirect(null, 'user'); 
 

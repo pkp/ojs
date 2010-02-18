@@ -175,7 +175,16 @@ class UserInstitutionalSubscriptionForm extends Form {
 			$subscription =& $this->subscription;
 		}
 
-		$subscription->setStatus(SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT);
+		import('payment.ojs.OJSPaymentManager');
+		$paymentManager =& OJSPaymentManager::getManager();
+		$paymentPlugin =& $paymentManager->getPaymentPlugin();
+		
+		if ($paymentPlugin->getName() == 'ManualPayment') {
+			$subscription->setStatus(SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT);
+		} else {
+			$subscription->setStatus(SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT);
+		}
+
 		$subscription->setTypeId($typeId);
 		$subscription->setMembership($this->getData('membership') ? $this->getData('membership') : null);
 		$subscription->setDateStart($nonExpiring ? null : $today);
@@ -192,8 +201,6 @@ class UserInstitutionalSubscriptionForm extends Form {
 			$institutionalSubscriptionDao->updateSubscription($subscription);
 		}
 
-		import('payment.ojs.OJSPaymentManager');
-		$paymentManager =& OJSPaymentManager::getManager();
 		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($this->getData('typeId'));
 
