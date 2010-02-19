@@ -21,6 +21,8 @@
 
 		{if $journalPaymentsEnabled && $acceptSubscriptionPayments && $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT}
 			<span class="disabled">{translate key="subscriptions.status.awaitingOnlinePayment"}</span><br />
+		{elseif $journalPaymentsEnabled && $acceptSubscriptionPayments && $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT}
+			<span class="disabled">{translate key="subscriptions.status.awaitingOnlinePayment"}</span><br />
 		{else}
 			{if $individualSubscription->isNonExpiring()}
 				{translate key="subscriptionTypes.nonExpiring"}<br />
@@ -37,6 +39,8 @@
 
 		{if $journalPaymentsEnabled && $acceptSubscriptionPayments && $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT}
 			<span class="disabled">{translate key="subscriptions.status.awaitingOnlinePayment"}</span><br />
+		{elseif $journalPaymentsEnabled && $acceptSubscriptionPayments && $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT}
+			<span class="disabled">{translate key="subscriptions.status.awaitingManualPayment"}</span><br />
 		{else}
 			{if $individualSubscription->isNonExpiring()}
 				{translate key="subscriptionTypes.nonExpiring"}<br />

@@ -437,12 +437,17 @@ class PeopleHandler extends ManagerHandler {
 		$journalId = $journal->getId();
 		$templateMgr =& TemplateManager::getManager();
 
-		$oldUserId = Request::getUserVar('oldUserId');
+		$oldUserIds = (array) Request::getUserVar('oldUserIds');
 		$newUserId = Request::getUserVar('newUserId');
 
 		// Ensure that we have administrative priveleges over the specified user(s).
+		$canAdministerAll = true;
+		foreach ($oldUserIds as $oldUserId) {
+			if (!Validation::canAdminister($journalId, $oldUserId)) $canAdministerAll = false;
+		}
+		
 		if (
-			(!empty($oldUserId) && !Validation::canAdminister($journalId, $oldUserId)) ||
+			(!empty($oldUserIds) && !$canAdministerAll) ||
 			(!empty($newUserId) && !Validation::canAdminister($journalId, $newUserId))
 		) {
 			$templateMgr->assign('pageTitle', 'manager.people');
@@ -452,17 +457,12 @@ class PeopleHandler extends ManagerHandler {
 			return $templateMgr->display('common/error.tpl');
 		}
 
-		if (!empty($oldUserId) && !empty($newUserId)) {
+		if (!empty($oldUserIds) && !empty($newUserId)) {
 			import('user.UserAction');
-			UserAction::mergeUsers($oldUserId, $newUserId);
+			foreach ($oldUserIds as $oldUserId) {
+				UserAction::mergeUsers($oldUserId, $newUserId);
+			}
 			Request::redirect(null, 'manager');
-		}
-
-		if (!empty($oldUserId)) {
-			// Get the old username for the confirm prompt.
-			$oldUser =& $userDao->getUser($oldUserId);
-			$templateMgr->assign('oldUsername', $oldUser->getUsername());
-			unset($oldUser);
 		}
 
 		// The manager must select one or both IDs.
@@ -534,7 +534,7 @@ class PeopleHandler extends ManagerHandler {
 			USER_FIELD_INTERESTS => 'user.interests'
 		));
 		$templateMgr->assign('alphaList', explode(' ', Locale::translate('common.alphaList')));
-		$templateMgr->assign('oldUserId', $oldUserId);
+		$templateMgr->assign('oldUserIds', $oldUserIds);
 		$templateMgr->assign('rolePath', $roleDao->getRolePath($roleId));
 		$templateMgr->assign('roleSymbolic', $roleSymbolic);
 		$templateMgr->assign('sort', $sort);

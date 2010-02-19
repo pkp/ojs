@@ -85,8 +85,8 @@
 	<message key="manager.people.emailUsers.selectTemplate">Select a template</message>
 	<message key="manager.people.enrollExistingUser">Enroll an Existing User</message>
 	<message key="manager.people.enrollSyncJournal">With journal</message>
-	<message key="manager.people.mergeUsers.from.description">Select a user to merge into another user account (e.g., when someone has two user accounts). The account selected first will be deleted and its submissions, assignments, etc. will be attributed to the second account.</message>
-	<message key="manager.people.mergeUsers.into.description">Select a user to whom to attribute the previous user's authorships, editing assignments, etc.</message>
+	<message key="manager.people.mergeUsers.from.description">Select a user (or several) to merge into another user account (e.g., when someone has two user accounts). The account(s) selected first will be deleted and any submissions, assignments, etc. will be attributed to the second account.</message>
+	<message key="manager.people.mergeUsers.into.description">Select a user to whom to attribute the previous users' authorships, editing assignments, etc.</message>
 	<message key="manager.people.roleEnrollment">{$role} Enrollment</message>
 	<message key="manager.people.syncUserDescription">Enrollment synchronization will enroll all users enrolled in the specified role in the specified journal into the same role in this journal. This function allows a common set of users (e.g., Reviewers) to be synchronized between journals.</message>
 	<message key="manager.plugins.description">This page allows the Journal Manager to review and potentially configure the plugins that are currently installed. Plugins are divided into categories, according to their function. The categories are listed below, and within each category, its current set of plugins.</message>

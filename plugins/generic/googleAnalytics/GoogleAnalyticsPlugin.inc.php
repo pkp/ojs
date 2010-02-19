@@ -30,10 +30,19 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 		if (!Config::getVar('general', 'installed')) return false;
 		$this->addLocaleData();
 		if ($success && $this->getEnabled()) {
-			// Insert field into author submission page
-			HookRegistry::register('Templates::Author::Submit::Authors', array($this, 'authorSubmit'));
-			HookRegistry::register('authorsubmitstep3form::initdata', array($this, 'authorSubmitInitData'));
-			HookRegistry::register('authorsubmitstep3form::execute', array($this, 'authorSubmitExecute'));
+			// Insert field into author submission page and metadata form
+			HookRegistry::register('Templates::Author::Submit::Authors', array($this, 'metadataField'));
+			HookRegistry::register('Templates::Submission::MetadataEdit::Authors', array($this, 'metadataField'));
+
+			// Hook for initData in two forms
+			HookRegistry::register('metadataform::initdata', array($this, 'metadataInitData'));
+			HookRegistry::register('authorsubmitstep3form::initdata', array($this, 'metadataInitData'));
+
+			// Hook for execute in two forms
+			HookRegistry::register('authorsubmitstep3form::execute', array($this, 'metadataExecute'));
+			HookRegistry::register('metadataform::execute', array($this, 'metadataExecute'));
+
+			// Add element for AuthorDAO for storage
 			HookRegistry::register('authordao::getAdditionalFieldNames', array($this, 'authorSubmitGetFieldNames'));
 
 			// Insert Google Analytics page tag to common footer  
@@ -167,7 +176,7 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 	/**
 	 * Insert Google Scholar account info into author submission step 3
 	 */
-	function authorSubmit($hookName, $params) {
+	function metadataField($hookName, $params) {
 		$smarty =& $params[1];
 		$output =& $params[2];
 
@@ -181,7 +190,7 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 		return false;
 	}
 
-	function authorSubmitExecute($hookName, $params) {
+	function metadataExecute($hookName, $params) {
 		$form =& $params[0];
 		$article =& $form->article;
 		$formAuthors = $form->getData('authors');
@@ -194,7 +203,7 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 		return false;
 	}
 
-	function authorSubmitInitData($hookName, $params) {
+	function metadataInitData($hookName, $params) {
 		$form =& $params[0];
 		$article =& $form->article;
 		$formAuthors = $form->getData('authors');
@@ -232,7 +241,7 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 				$templateMgr->assign('gsAuthorAccounts', $authorAccounts);
 			}
 
-			if (!empty($googleAnalyticsSiteId)) {
+			if (!empty($googleAnalyticsSiteId) || !empty($authorAccounts)) {
 				$templateMgr->assign('googleAnalyticsSiteId', $googleAnalyticsSiteId);
 				$trackingCode = $this->getSetting($journalId, 'trackingCode');
 				if ($trackingCode == "ga") {

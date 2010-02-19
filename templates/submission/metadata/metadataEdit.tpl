@@ -121,6 +121,9 @@ function moveAuthor(dir, authorIndex) {
 		<td class="label">{fieldLabel name="authors-$authorIndex-biography" key="user.biography"}<br />{translate key="user.biography.description"}</td>
 		<td class="value"><textarea name="authors[{$authorIndex|escape}][biography][{$formLocale|escape}]" id="authors-{$authorIndex|escape}-biography" rows="5" cols="40" class="textArea">{$author.biography[$formLocale]|escape}</textarea></td>
 	</tr>
+
+{call_hook name="Templates::Submission::MetadataEdit::Authors"}
+
 	{if $smarty.foreach.authors.total > 1}
 	<tr valign="top">
 		<td class="label">{translate key="author.submit.reorder"}</td>
