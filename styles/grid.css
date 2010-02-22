@@ -1,11 +1,3 @@
-.throbber {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    left: 50%;
-    top: 25%;
-}
-
 /* @group Grid */
 
 div.grid div.wrapper {
@@ -88,19 +80,30 @@ div.grid tr.category td {
 	overflow: hidden;
 }
 
-.row_actions, .row_controls {
+.row_container
+{
+	padding-left: 25px;
+	padding-right: 30px;
+	overflow: hidden;
+}
+
+.row_container, .row_controls {
 	background-color: #e8f0f8;
 }
 
 .row_actions, .row_file {
+	position: relative;
 	float: left;
-	height: 40px;
+	min-height: 40px;
 	line-height: 40px;
 	vertical-align: middle;
 }
 
 .row_actions {
 	width: 25px;
+	right: 55px;
+	padding-top: 5px;
+	margin-left: -100%;
 }
 
 .row_actions a {
@@ -108,11 +111,18 @@ div.grid tr.category td {
 }
 
 .row_file {
-	margin-left: 15px;
+	width: 100%;
+	padding: 5px 15px;
+	background-color: #fff;
 }
 
 .row_file a {
 	padding: 2px 20px;
+}
+
+.multiline
+{
+	line-height: inherit;
 }
 
 .row_controls {
