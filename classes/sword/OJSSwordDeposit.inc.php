@@ -101,6 +101,7 @@ class OJSSwordDeposit {
 			'http://purl.org/net/sword-types/METSDSpaceSIP',
 			'application/zip', false, true
 		);
+		return $response;
 	}
 
 	function cleanup() {
