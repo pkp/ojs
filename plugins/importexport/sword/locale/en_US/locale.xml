@@ -17,4 +17,6 @@
 	<message key="plugins.importexport.sword.description">Deposit articles in remote repositories using the SWORD deposit protocol</message>
 	<message key="plugins.importexport.sword.deposit">Deposit</message>
 	<message key="plugins.importexport.sword.depositUrl">SWORD Deposit URL</message>
+	<message key="plugins.importexport.sword.depositSuccessful">Deposit Successful</message>
+	<message key="plugins.importexport.sword.depositSuccessfulDescription">The item(s) selected have been deposited.</message>
 </locale>
