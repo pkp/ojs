@@ -60,7 +60,7 @@ class CitationPlugin extends Plugin {
 	 * Used by the cite function to embed an HTML citation in the
 	 * templates/rt/captureCite.tpl template, which ships with OJS.
 	 */
-	function displayCitation($hookName, $args) {
+	function displayCitationHook($hookName, $args) {
 		$params =& $args[0];
 		$templateMgr =& $args[1];
 		$output =& $args[2];
@@ -70,17 +70,38 @@ class CitationPlugin extends Plugin {
 	}
 
 	/**
+	 * Display an HTML-formatted citation. Default implementation displays
+	 * an HTML-based citation using the citation.tpl template in the plugin
+	 * path.
+	 * @param $article object
+	 * @param $issue object
+	 */
+	function displayCitation(&$article, &$issue, &$journal) {
+		HookRegistry::register('Template::RT::CaptureCite', array(&$this, 'displayCitationHook'));
+		$templateMgr =& TemplateManager::getManager();
+		$templateMgr->assign_by_ref('citationPlugin', $this);
+		$templateMgr->assign_by_ref('article', $article);
+		$templateMgr->assign_by_ref('issue', $issue);
+		$templateMgr->assign_by_ref('journal', $journal);
+		$templateMgr->display('rt/captureCite.tpl');
+	}
+
+	/**
 	 * Return an HTML-formatted citation. Default implementation displays
 	 * an HTML-based citation using the citation.tpl template in the plugin
 	 * path.
 	 * @param $article object
 	 * @param $issue object
 	 */
-	function cite(&$article, &$issue) {
+	function fetchCitation(&$article, &$issue, &$journal) {
 		HookRegistry::register('Template::RT::CaptureCite', array(&$this, 'displayCitation'));
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('citationPlugin', $this);
-		$templateMgr->display('rt/captureCite.tpl');
+		$templateMgr->assign_by_ref('article', $article);
+		$templateMgr->assign_by_ref('issue', $issue);
+		$templateMgr->assign_by_ref('journal', $journal);
+		return $templateMgr->fetch($this->getTemplatePath() . '/citation.tpl');
 	}
 }
+
 ?>
