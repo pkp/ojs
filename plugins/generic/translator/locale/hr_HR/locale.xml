@@ -29,7 +29,6 @@
 
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.title">Nedostaju fraze</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.title">Suvišne fraze</message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.title">Neusklađena duljina fraza</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.title">Različit popis parametara</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.title">Nedostaju datoteke prijevoda</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.title">Nedostaju obrasci e-pošte</message>
@@ -38,10 +37,6 @@
 
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.message">Fraza "{$key}" nedostaje u  "{$filename}".  Za referencu je priložena engleska verzija fraze.</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.message">Fraza "{$key}" se više ne koristi i može se ukloniti iz "{$filename}".</message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.message"><![CDATA[Prijevod fraze "{$key}" u "{$filename}" je značajno različite duljine od referentne:<ul>
-		<li>{$value} ({$locale})</li>
-		<li>{$reference} ({$referenceLocale})</li>
-	</ul>]]></message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.message">Prijevod fraze "{$key}" u "{$filename}" razlikuje se od onog u referentnm prijevodu po korištenju parametara. Molimo provjerite sadrži li sve relevantne parametre. Popis parametara koji se ne podudaraju:</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.message">Datoteka prijevoda "{$filename}" ne postoji ili nije čitljiva.</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.message">Obrazac poruke e-pošte "{$key}" ne postoji u prijevodu.</message>

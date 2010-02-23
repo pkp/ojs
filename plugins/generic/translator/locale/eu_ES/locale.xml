@@ -30,7 +30,6 @@
 
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.title">Gakoak falta</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.title">Gako gehiegi</message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.title">Gako-luzera susmagarriak</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.title">Parametro-zerrenda desberdinak</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.title">Locale fitxategiak falta</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.title">Mezu el.ak falta</message>
@@ -39,10 +38,6 @@
 
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.message">"{$key}" gakoa falta da "{$filename}" fitxategian. Ingelesezko bertsioa eman da, besterik ezean.</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.message">"{$key}" gakoa ez da erabiltzen, eta kendu daiteke "{$filename}" fitxategitik.</message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.message"><![CDATA["{$filename}" fitxategiko "{$key}" locale-gakoaren luzera oso desberdina da erreferentziarekiko:<ul>
-		<li>{$value} ({$locale})</li>
-		<li>{$reference} ({$referenceLocale})</li>
-	</ul>]]></message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.message"> "{$filename}" fitxategiko "{$key}" locale-gakoa ez dator bat erreferentziako localearekin parametro-erabileran. Begiratu parametro garrantzitsu guztiak dauzkan. Hauek dira bat ez datozen parametroak:</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.message">"{$filename}" locale-fitxategia ez dago edo ezin da irakurri.</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.message">"{$key}" mezu elektronikoa ez dago itzulpenean.</message>

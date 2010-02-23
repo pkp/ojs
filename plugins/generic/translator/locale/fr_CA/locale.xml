@@ -29,7 +29,6 @@
 
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.title">Clés manquantes</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.title">Clés supplémentaires</message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.title">Clés de longueur suspecte</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.title">Listes de paramètres divergents</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.title">Fichiers de langue manquants</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.title">Courriels manquants</message>
@@ -38,10 +37,6 @@
 
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.message">La clé "{$key}" est absente de "{$filename}". La version anglaise a été fournie par défaut.</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.message">La clé "{$key}" n'est plus utilisée et peut être supprimée de "{$filename}".</message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.message"><![CDATA[La clé de la langue "{$key}" dans "{$filename}" a une longueur considérablement différente par rapport à la référence :<ul>
-		<li>{$value} ({$locale})</li>
-		<li>{$reference} ({$referenceLocale})</li>
-	</ul>]]></message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.message">La clé de langue "{$key}" dans "{$filename}" diffère de la langue de référence dans son utilisation des paramètres. Veuillez vérifier qu'elle contient tous les paramètres pertinents. Le(s)  paramètre(s) qui ne correspond(ent) pas est(sont) :</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.message">Le fichier de langue "{$filename}" est absent ou illisible.</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.message">Le courriel "{$key}" ne se trouve pas dans la traduction.</message>

@@ -29,7 +29,6 @@
 
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.title">Chaves em falta</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.title">Chaves em excesso</message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.title">Tamanho de conteúdo de chave suspeito</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.title">Lista diferente de parâmetros</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.title">Ficheiros de tradução em falta</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.title">E-mails em falta</message>
@@ -38,10 +37,6 @@
 
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.message">A chave "{$key}" está em falta no ficheiro "{$filename}". A versão em Inglês será oferecida como padrão.</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.message">A chave "{$key}" não é mais usada e pode ser eliminada de "{$filename}".</message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.message"><![CDATA[A chave  "{$key}" no ficheiro "{$filename}" possui uma diferença de comprimento considerável em relação à referência:<ul>
-		<li>{$value} ({$locale})</li>
-		<li>{$reference} ({$referenceLocale})</li>
-	</ul>]]></message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.message">O conteúdo de "{$key}" em "{$filename}" difere conteúdo da referência no uso de parâmetros. Verifique novamente se todos os parâmetros relevantes estão considerados. Os parâmetros que não coincidem são:</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.message">O arquivo de idioma "{$filename}" está em falta ou não está acessível para leitura.</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.message">A mensagem de e-mail "{$key}" está em falta no ficheiro de tradução.</message>

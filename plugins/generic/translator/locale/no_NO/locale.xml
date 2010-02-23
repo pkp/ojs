@@ -30,7 +30,6 @@
 
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.title">Manglende nøkler</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.title">Ekstranøkler</message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.title">Mistenkelige nøkkellengder</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.title">Avvikende parameterlister</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.title">Manglende lokalfiler</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.title">Manglende e-poster</message>
@@ -39,10 +38,6 @@
 
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.message">Nøkkelen "{$key}" mangler i "{$filename}". Den engelske utgaven blir oppgitt som standard.</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.message">Nøkkelen "{$key}" brukes ikke lenger, og kan fjernes fra "{$filename}".</message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.message"><![CDATA[Lokalnøkkelen "{$key}" i "{$filename}" er svært mye kortere eller lengre enn standardverdien:<ul>
-		<li>{$value} ({$locale})</li>
-		<li>{$reference} ({$referenceLocale})</li>
-	</ul>]]></message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.message">Lokalnøkkelen  "{$key}" i "{$filename}" bruker parametrene på en annen måte enn i standardversjonen. Vennligst kontrollér at den inneholder alle relevante parametre. Parametrene som ikke stemmer er:</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.message">Lokalfilen "{$filename}" mangler, eller er uleselig.</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.message">E-postmeldingen "{$key}" mangler i oversettelsen.</message>

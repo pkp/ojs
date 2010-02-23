@@ -65,18 +65,6 @@
 					{url|assign:"redirectUrl" op="editMiscFile" path=$locale|to_array:$filenameEscaped}
 				{/if}
 				<a href="{url op="createFile" path=$locale|to_array:$filenameEscaped redirectUrl=$redirectUrl}" onclick='return confirm("{translate|escape:"quotes" key="plugins.generic.translator.saveBeforeContinuing"}")' class="action">{translate key="common.create"}</a>
-			{elseif $type == 'LOCALE_ERROR_SUSPICIOUS_LENGTH'}
-				{assign var=defaultValue value=$error.value}
-				{assign var=wordCount value=$error.reference|explode:" "|@count}
-				{assign var=categoryCount value=$categoryCount+$wordCount}
-				<input type="hidden" name="stack[]" value="{$error.filename|escape}" />
-				<input type="hidden" name="stack[]" value="{$error.key|escape}" />
-				<br />
-				{if ($defaultValue|explode:"\n"|@count > 1) || (strlen($defaultValue) > 80)}
-					<textarea name="stack[]" class="textArea" cols="80" rows="5">{$defaultValue|escape}</textarea>
-				{else}
-					<input type="text" class="textField" name="stack[]" size="80" value="{$defaultValue|escape}" />
-				{/if}
 			{else}{* $type == LOCALE_ERROR_MISSING_KEY *}
 				{assign var=defaultValue value=$error.reference}
 				{assign var=wordCount value=$defaultValue|explode:" "|@count}

@@ -29,7 +29,6 @@
 
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.title">Claves ausentes</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.title">Claves extra</message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.title">Claves con longitud sospechosa</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.title">Lista de parámetros diferentes</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.title">Ficheros de traducción ausentes</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.title">Emails ausentes</message>
@@ -38,10 +37,6 @@
 
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.message">La clave "{$key}" está ausente en el fichero  "{$filename}". Se ha proporcionado la versión inglesa en su lugar.</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.message">La clave "{$key}" ya no está en uso y puede eliminarse del fichero "{$filename}".</message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.message"><![CDATA[La clave local "{$key}" en "{$filename}" tiene una longitud considerablemente distinta a la clave de referencia:<ul>
-		<li>{$value} ({$locale})</li>
-		<li>{$reference} ({$referenceLocale})</li>
-	</ul>]]></message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.message">La clave local "{$key}" en "{$filename}" utiliza sus parámetros de forma distinta a como lo hace la clave de referencia. Compruebe que utiliza todos los parámetros relevantes. Los parámetros no coincidentes son:</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.message">El fichero de traducción "{$filename}" no se encuentra o no se puede leer.</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.message">Falta el email "{$key}" en la traducción.</message>

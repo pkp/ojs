@@ -29,7 +29,6 @@
 
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.title">Claus que falten</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.title">Claus extres</message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.title">Claus amb longitud sospitosa</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.title">Llistes de paràmetres diferents</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.title">Fitxers de configuració regional que falten</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.title">Missatges de correu electrònic que falten</message>
@@ -38,10 +37,6 @@
 
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.message">La clau "{$key}" falta a "{$filename}". S'ha proporcionat la versió anglesa de manera predeterminada.</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.message">La clau "{$key}" ja no s'utilitza i es pot suprimir de "{$filename}".</message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.message"><![CDATA[The locale key "{$key}" in "{$filename}" has a considerably different length than the reference:<ul>
-		<li>{$value} ({$locale})</li>
-		<li>{$reference} ({$referenceLocale})</li>
-	</ul>]]></message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.message">La clau de configuració regional "{$key}" del fitxer "{$filename}" no utilitza els mateixos paràmetres que la configuració regional de referència. Comproveu que contingui tots els paràmetres rellevants. Els paràmetres que no coincideixen són els següents:</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.message">El fitxer de configuració regional "{$filename}" falta o no es pot llegir.</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.message">El missatge de correu electrònic "{$key}" no és a la traducció.</message>

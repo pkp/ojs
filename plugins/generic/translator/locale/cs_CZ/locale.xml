@@ -31,7 +31,6 @@
 
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.title">Chybějící klíče</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.title">Nadbytečné klíče</message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.title">Podezřelá délka klíče</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.title">Seznam oišících se parametrů</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.title">Chybějící soubory lokalizace</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.title">Chybějící emaily</message>
@@ -40,10 +39,6 @@
 
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.message">Klíč "{$key}" chybí v "{$filename}". Jako výchozí byla poskytnuta anglická verze.</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.message">Klíč "{$key}" již není používán a může být odstraněn z "{$filename}".</message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.message"><![CDATA[Klíč "{$key}" v "{$filename}" má významně odlišnou délku než reference:<ul>
-		<li>{$value} ({$locale})</li>
-		<li>{$reference} ({$referenceLocale})</li>
-	</ul>]]></message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.message">Klíč "{$key}" v "{$filename}" se liší od referenční lokalizace v použití parametrů. Překontrolujte prosím pečlivě, že obsahuje všechny relevantní parametry. Neshodné parametry jsou:</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.message">Soubor lokalizace "{$filename}" chybí nebo je nečitelný.</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.message">Emailová zpráva "{$key}" chybí v překladu.</message>

@@ -31,7 +31,6 @@
 
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.title">Ontbrekende sleutels</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.title">Extra sleutels</message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.title">Verdachte sleutellengtes</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.title">Verschillen in parameters</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.title">Ontbrekende Taalbestanden</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.title">Ontbrekende e-mails</message>
@@ -40,10 +39,6 @@
 
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.message">De sleutel "{$key}" ontbreekt in "{$filename}". De Engelse versie fungeert als standaardwaarde.</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.message">De sleutel "{$key}" wordt niet meer gebruikt en kan verwijderd worden uit "{$filename}".</message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.message"><![CDATA[De sleutel "{$key}" in "{$filename}" heeft een lengte die sterk afwijkt van de referentie:<ul>
-		<li>{$value} ({$locale})</li>
-		<li>{$reference} ({$referenceLocale})</li>
-	</ul>]]></message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.message">De sleutel "{$key}" in "{$filename}" gebruikt andere parameters dan de referentie. Controleer of alle relevante parameters gebruikt worden. De niet-overeenkomende parameters zijn:</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.message">Het taalbestand "{$filename}" ontbreekt of is niet leesbaar.</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.message">Het e-mailbericht "{$key}" ontbreekt in de vertaling.</message>

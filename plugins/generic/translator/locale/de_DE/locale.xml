@@ -30,7 +30,6 @@
 
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.title">Schlüssel fehlen</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.title">Extra-Schlüssel</message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.title">Ungewöhnliche Schlüsselänge</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.title">Unterschiedliche Parameterlisten</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.title">Fehlende Sprachdateien</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.title">Fehlende E-Mails</message>
@@ -39,10 +38,6 @@
 
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.message">Der Lokaleinstellungs-Schlüssel "{$key}" fehlt für "{$filename}". Die englische Fassung wurde als Default genutzt.</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.message">Der Schlüssel "{$key}" wird nicht mehr verwandt und kann aus "{$filename}" gelöscht werden.</message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.message"><![CDATA[Der Lokaleinstellungs-Schlüssel "{$key}" in "{$filename}" hat eine ungewöhnliche Länge:<ul>
-		<li>{$value} ({$locale})</li>
-		<li>{$reference} ({$referenceLocale})</li>
-	</ul>]]></message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.message">Der Lokaleinstellungs-Schlüssel "{$key}" in "{$filename}" unterscheidet sich von den Referenz-Lokaleinstellungen hinsichtlich der verwandten Parameter. Bitte prüfen Sie, dass alle relevanten Parameter enthalten sind. Unverträgliche Parameter sind:</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.message">Die Lokaleinstellungs-Datei "{$filename}" fehlt oder ist nicht lesbar.</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.message">Die E-Mail "{$key}" fehlt bei der Übersetzung.</message>
