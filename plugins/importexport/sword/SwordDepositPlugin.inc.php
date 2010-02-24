@@ -73,8 +73,18 @@ class SwordDepositPlugin extends ImportExportPlugin {
 				$username = Request::getUserVar('swordUsername');
 				$password = Request::getUserVar('swordPassword');
 				$depositIds = array();
-				foreach (Request::getUserVar('articleId') as $articleId) {
-					$depositIds[] = $this->deposit($depositUrl, $username, $password, $articleId);
+				try {
+					foreach (Request::getUserVar('articleId') as $articleId) {
+						$depositIds[] = $this->deposit($depositUrl, $username, $password, $articleId);
+					}
+				} catch (Exception $e) {
+					$templateMgr->assign(array(
+						'pageTitle' => 'plugins.importexport.sword.depositFailed',
+						'messageTranslated' => $e->getMessage(),
+						'backLink' => Request::url(null, null, null, array('plugin', $this->getName()), array('swordUrl' => $depositUrl, 'swordUsername' => $swordUsername)),
+						'backLinkLabel' => 'common.back'
+					));
+					return $templateMgr->display('common/message.tpl');
 				}
 				$templateMgr->assign(array(
 					'pageTitle' => 'plugins.importexport.sword.depositSuccessful',

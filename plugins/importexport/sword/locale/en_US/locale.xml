@@ -19,4 +19,5 @@
 	<message key="plugins.importexport.sword.depositUrl">SWORD Deposit URL</message>
 	<message key="plugins.importexport.sword.depositSuccessful">Deposit Successful</message>
 	<message key="plugins.importexport.sword.depositSuccessfulDescription">The item(s) selected have been deposited.</message>
+	<message key="plugins.importexport.sword.depositFailed">Deposit Failed</message>
 </locale>
