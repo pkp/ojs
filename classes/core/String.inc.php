@@ -12,7 +12,7 @@
  * @brief String manipulation wrapper class.
  */
 
-// $Id: String.inc.php,v 1.30.2.5 2009/11/19 10:43:55 asmecher Exp $
+// $Id$
 
 
 class String {

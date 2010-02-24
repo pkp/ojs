@@ -8,7 +8,7 @@
   *
   * Installation descriptor file.
   *
-  * $Id: install.xml,v 1.18.2.3 2009/11/19 11:52:38 asmecher Exp $
+  * $Id$
   -->
 
 <install version="2.2.4.0">

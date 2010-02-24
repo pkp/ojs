@@ -1,0 +1,18 @@
+Changed files from the standard Smarty distribution
+
+== Added ==
+CHANGED_FILES
+diff
+diff/Smarty.class.php.diff
+diff/Smarty_Compiler.class.php.diff
+
+== Modified ==
+[ Added method to compile templates without executing ]
+Smarty.class.php
+
+[ Changes expand object method calls within backticks ]
+Smarty_Compiler.class.php
+
+[ Changed to correct capitalize modifier; this has been contributed to Smarty
+  but is not currently released. ]
+modifier.capitalize.php
