@@ -33,7 +33,7 @@ class OJSSwordDeposit {
 
 	/**
 	 * Constructor.
-	 * Create a manager for handling temporary file uploads.
+	 * Create a SWORD deposit object for an OJS article.
 	 */
 	function OJSSwordDeposit(&$article) {
 		require_once('lib/pkp/lib/swordapp/swordappclient.php');
@@ -63,6 +63,9 @@ class OJSSwordDeposit {
 		$this->article =& $article;
 	}
 
+	/**
+	 * Register the article's metadata with the SWORD deposit.
+	 */
 	function setMetadata() {
 		$this->package->setCustodian($this->journal->getSetting('contactName'));
 		$this->package->setTitle($this->article->getTitle($this->journal->getPrimaryLocale()));
@@ -80,18 +83,75 @@ class OJSSwordDeposit {
 		$this->package->setCitation(html_entity_decode(strip_tags($plugin->fetchCitation($this->article, $this->issue, $this->journal))));
 	}
 
+	/**
+	 * Add a file to a package. Used internally.
+	 */
+	function _addFile(&$file) {
+		$targetFilename = $this->outPath . '/files/' . $file->getFilename();
+		copy($file->getFilePath(), $targetFilename);
+		$this->package->addFile($file->getFilename(), $file->getFileType());
+	}
+
+	/**
+	 * Add all article galleys to the deposit package.
+	 */
 	function addGalleys() {
 		foreach ($this->article->getGalleys() as $galley) {
-			$targetFilename = $this->outPath . '/files/' . $galley->getFilename();
-			copy($galley->getFilePath(), $targetFilename);
-			$this->package->addFile($galley->getFilename(), $galley->getFileType());
+			$this->_addFile($galley);
 		}
 	}
 
+	/**
+	 * Add the single most recent editorial file to the deposit package.
+	 * @return boolean true iff a file was successfully added to the package
+	 */
+	function addEditorial() {
+		// Move through signoffs in reverse order and try to use them.
+		foreach (array('SIGNOFF_LAYOUT', 'SIGNOFF_COPYEDITING_FINAL', 'SIGNOFF_COPYEDITING_AUTHOR', 'SIGNOFF_COPYEDITING_INITIAL') as $signoffName) {
+			$file =& $this->article->getFileBySignoffType($signoffName);
+			if ($file) {
+				$this->_addFile($file);
+				return true;
+			}
+			unset($file);
+		}
+
+		// If that didn't work, try the Editor Version.
+		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($this->article->getId());
+		$file =& $sectionEditorSubmission->getEditorFile();
+		if ($file) {
+			$this->_addFile($file);
+			return true;
+		}
+		unset($file);
+
+		// Try the Review Version.
+		$file =& $sectionEditorSubmission->getReviewFile();
+		if ($file) {
+			$this->_addFile($file);
+			return true;
+		}
+		unset($file);
+
+		// Otherwise, don't add anything (best not to go back to the
+		// author version, as it may not be vetted)
+		return false;
+	}
+
+	/**
+	 * Build the package.
+	 */
 	function createPackage() {
 		return $this->package->create();
 	}
 
+	/**
+	 * Deposit the package.
+	 * @param $url string SWORD deposit URL
+	 * @param $username string SWORD deposit username (i.e. email address for DSPACE)
+	 * @param $password string SWORD deposit password
+	 */
 	function deposit($url, $username, $password) {
 		$client = new SWORDAPPClient();
 		$response = $client->deposit(
@@ -104,6 +164,9 @@ class OJSSwordDeposit {
 		return $response;
 	}
 
+	/**
+	 * Clean up after a deposit, i.e. removing all created files.
+	 */
 	function cleanup() {
 		import('file.FileManager');
 		$fileManager = new FileManager();

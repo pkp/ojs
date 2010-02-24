@@ -43,6 +43,21 @@ function toggleChecked() {
 		<td class="label"><label for="swordPassword">{translate key="user.password"}</label></td>
 		<td class="value"><input type="password" id="swordPassword" name="swordPassword" value="{$swordPassword|escape}" size="20" /></td>
 	</tr>
+	<tr valign="top">
+		<td rowspan="2" class="label">
+			{translate key="common.options"}
+		</td>
+		<td class="value">
+			<input type="checkbox" id="depositGalleys" name="depositGalleys" {if $depositGalleys}checked="checked" {/if}/>
+			<label for="depositGalleys">{translate key="plugins.importexport.sword.depositGalleys"}</label>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td class="value">
+			<input type="checkbox" id="depositEditorial" name="depositEditorial" {if $depositEditorial}checked="checked" {/if}/>
+			<label for="depositEditorial">{translate key="plugins.importexport.sword.depositEditorial"}</label>
+		</td>
+	</tr>
 </table>
 </div>
 

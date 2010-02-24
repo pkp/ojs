@@ -47,7 +47,7 @@ class SwordDepositPlugin extends ImportExportPlugin {
 		return Locale::translate('plugins.importexport.sword.description');
 	}
 
-	function deposit($url, $username, $password, $articleId) {
+	function deposit($url, $username, $password, $articleId, $depositEditorial, $depositGalleys) {
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
 		$journal =& Request::getJournal();
@@ -55,7 +55,8 @@ class SwordDepositPlugin extends ImportExportPlugin {
 		import('sword.OJSSwordDeposit');
 		$deposit = new OJSSwordDeposit($publishedArticle);
 		$deposit->setMetadata();
-		$deposit->addGalleys();
+		if ($depositGalleys) $deposit->addGalleys();
+		if ($depositEditorial) $deposit->addEditorial();
 		$deposit->createPackage();
 		$response = $deposit->deposit($url, $username, $password);
 		$deposit->cleanup();
@@ -72,27 +73,56 @@ class SwordDepositPlugin extends ImportExportPlugin {
 				$depositUrl = Request::getUserVar('swordUrl');
 				$username = Request::getUserVar('swordUsername');
 				$password = Request::getUserVar('swordPassword');
+				$depositEditorial = Request::getUserVar('depositEditorial');
+				$depositGalleys = Request::getUserVar('depositGalleys');
 				$depositIds = array();
 				try {
 					foreach (Request::getUserVar('articleId') as $articleId) {
-						$depositIds[] = $this->deposit($depositUrl, $username, $password, $articleId);
+						$depositIds[] = $this->deposit(
+							$depositUrl,
+							$username,
+							$password,
+							$articleId,
+							$depositEditorial,
+							$depositGalleys
+						);
 					}
 				} catch (Exception $e) {
+					// Deposit failed
 					$templateMgr->assign(array(
 						'pageTitle' => 'plugins.importexport.sword.depositFailed',
 						'messageTranslated' => $e->getMessage(),
-						'backLink' => Request::url(null, null, null, array('plugin', $this->getName()), array('swordUrl' => $depositUrl, 'swordUsername' => $swordUsername)),
+						'backLink' => Request::url(
+							null, null, null,
+							array('plugin', $this->getName()),
+							array(
+								'swordUrl' => $depositUrl,
+								'swordUsername' => $swordUsername,
+								'depositEditorial' => $depositEditorial,
+								'depositGalleys' => $depositGalleys,
+							)
+						),
 						'backLinkLabel' => 'common.back'
 					));
 					return $templateMgr->display('common/message.tpl');
 				}
+				// Deposit was successful
 				$templateMgr->assign(array(
 					'pageTitle' => 'plugins.importexport.sword.depositSuccessful',
 					'message' => 'plugins.importexport.sword.depositSuccessfulDescription',
-					'backLink' => Request::url(null, null, null, array('plugin', $this->getName()), array('swordUrl' => $depositUrl, 'swordUsername' => $swordUsername)),
+					'backLink' => Request::url(
+						null, null, null,
+						array('plugin', $this->getName()),
+						array(
+							'swordUrl' => $depositUrl,
+							'swordUsername' => $swordUsername,
+							'depositEditorial' => $depositEditorial,
+							'depositGalleys' => $depositGalleys
+						)
+					),
 					'backLinkLabel' => 'common.continue'
 				));
-				$templateMgr->display('common/message.tpl');
+				return $templateMgr->display('common/message.tpl');
 				break;
 			default:
 				$journal =& Request::getJournal();
@@ -103,7 +133,7 @@ class SwordDepositPlugin extends ImportExportPlugin {
 				if ($rangeInfo->isValid()) $articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 				import('core.VirtualArrayIterator');
 				$iterator = new VirtualArrayIterator(ArticleSearch::formatResults($articleIds), $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
-				foreach (array('swordUrl', 'swordUsername', 'swordPassword') as $var) {
+				foreach (array('swordUrl', 'swordUsername', 'swordPassword', 'depositEditorial', 'depositGalleys') as $var) {
 					$templateMgr->assign($var, Request::getUserVar($var));
 				}
 				$templateMgr->assign_by_ref('articles', $iterator);
