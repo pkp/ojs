@@ -13,8 +13,7 @@
 # $Id$
 #
 
-CVSROOT=:pserver:anonymous@pkp.sfu.ca:/cvs
-MODULE=ojs2
+GITREP=git://github.com/pkp/ojs.git
 PRECOMPILE=1
 
 if [ -z "$1" ]; then
@@ -44,21 +43,22 @@ tools/buildpkg.sh						\
 tools/cvs2cl.pl							\
 tools/genLocaleReport.sh					\
 tools/genTestLocale.php						\
-tools/test"
+tools/test							\
+.git"
 
 
 cd $TMPDIR
 
-echo -n "Exporting $MODULE with tag $TAG ... "
-cvs -Q -d $CVSROOT export -r $TAG -d $BUILD $MODULE || exit 1
-echo "Done"
-
+echo -n "Cloning $GITREP and checking out tag $TAG ... "
+git clone -q -n $GITREP $BUILD || exit 1
 cd $BUILD
+git checkout -q $TAG || exit 1
+echo "Done"
 
 echo -n "Preparing package ... "
 cp config.TEMPLATE.inc.php config.inc.php
-find . -name .cvsignore -exec rm {} \;
-rm -r $EXCLUDE
+find . \( -name .cvsignore -o -name .gitignore -o -name .gitmodules -o -name .keepme \) -exec rm '{}' \;
+rm -rf $EXCLUDE
 echo "Done"
 
 if [ ! -z "$PRECOMPILE" ]; then
