@@ -44,6 +44,7 @@ tools/cvs2cl.pl							\
 tools/genLocaleReport.sh					\
 tools/genTestLocale.php						\
 tools/test							\
+test							\
 .git"
 
 
