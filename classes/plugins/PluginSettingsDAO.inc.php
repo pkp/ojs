@@ -26,7 +26,6 @@ class PluginSettingsDAO extends DAO {
 			$this->settingCache[$journalId] = array();
 		}
 		if (!isset($this->settingCache[$journalId][$pluginName])) {
-			import('cache.CacheManager');
 			$cacheManager =& CacheManager::getManager();
 			$this->settingCache[$journalId][$pluginName] = $cacheManager->getCache(
 				'pluginSettings-' . $journalId, $pluginName,
@@ -157,7 +156,6 @@ class PluginSettingsDAO extends DAO {
 				array($journalId, $pluginName)
 			);
 		} else {
-			import('cache.CacheManager');
 			$cacheManager =& CacheManager::getManager();
 			// NB: this actually deletes all plugins' settings cache
 			$cacheManager->flush('pluginSettings');
