@@ -79,8 +79,7 @@ class IndexHandler extends Handler {
 			}
 			$templateMgr->display('index/journal.tpl');
 		} else {
-			$siteDao =& DAORegistry::getDAO('SiteDAO');
-			$site =& $siteDao->getSite();
+			$site =& Request::getSite();
 
 			if ($site->getRedirect() && ($journal = $journalDao->getJournal($site->getRedirect())) != null) {
 				$request->redirect($journal->getPath());

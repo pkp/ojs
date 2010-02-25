@@ -716,22 +716,6 @@ class Issue extends DataObject {
 	}
 
 	/**
-	 * Get number of articles in this issue.
-	 * @return int
-	 */
-	function getNumArticles() {
-		return $this->getData('numArticles');
-	}
-
-	/**
-	 * Set number of articles in this issue.
-	 * @param $numArticles int
-	 */
-	function setNumArticles($numArticles) {
-		return $this->setData('numArticles', $numArticles);
-	}
-
-	/**
 	 * Return the "best" issue ID -- If a public issue ID is set,
 	 * use it; otherwise use the internal issue Id. (Checks the journal
 	 * settings to ensure that the public ID feature is enabled.)

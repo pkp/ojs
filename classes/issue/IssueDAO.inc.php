@@ -195,7 +195,6 @@ class IssueDAO extends DAO {
 		$issue->setShowTitle($row['show_title']);
 		$issue->setStyleFileName($row['style_file_name']);
 		$issue->setOriginalStyleFileName($row['original_style_file_name']);
-		$issue->setNumArticles($this->getNumArticles($row['issue_id']));
 
 		$this->getDataObjectSettings('issue_settings', 'issue_id', $row['issue_id'], $issue);
 
@@ -497,21 +496,6 @@ class IssueDAO extends DAO {
 		);
 
 		$returner = new DAOResultFactory($result, $this, '_returnIssueFromRow');
-		return $returner;
-	}
-
-	/**
-	 * Return number of articles assigned to an issue.
-	 * @param $issueId int
-	 * @return int
-	 */
-	function getNumArticles($issueId) {
-		$result =& $this->retrieve('SELECT COUNT(*) FROM published_articles WHERE issue_id = ?', $issueId);
-		$returner = isset($result->fields[0]) ? $result->fields[0] : 0;
-
-		$result->Close();
-		unset($result);
-
 		return $returner;
 	}
 
