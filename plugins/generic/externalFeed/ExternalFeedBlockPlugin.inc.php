@@ -91,7 +91,6 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 		$requestedPage = Request::getRequestedPage();
 		$externalFeedDao =& DAORegistry::getDAO('ExternalFeedDAO');
 		$plugin->import('simplepie.SimplePie');
-		import('cache.CacheManager');
 
 		$feeds =& $externalFeedDao->getExternalFeedsByJournalId($journal->getId());
 

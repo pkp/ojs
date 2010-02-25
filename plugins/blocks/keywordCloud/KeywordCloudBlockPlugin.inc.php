@@ -91,7 +91,6 @@ class KeywordCloudBlockPlugin extends BlockPlugin {
 	function getContents(&$templateMgr) {
 		$journal =& Request::getJournal();
 
-		import('cache.CacheManager');
 		$cacheManager =& CacheManager::getManager();
 		$cache =& $cacheManager->getFileCache('keywords_' . Locale::getLocale(), $journal->getId(), array(&$this, '_cacheMiss'));
 		// If the cache is older than a couple of days, regenerate it

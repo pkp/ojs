@@ -216,7 +216,6 @@ class ExternalFeedPlugin extends GenericPlugin {
 			if (empty($requestedPage) || $requestedPage == 'index') {
 				$externalFeedDao =& DAORegistry::getDAO('ExternalFeedDAO');
 				$this->import('simplepie.SimplePie');
-				import('cache.CacheManager');
 
 				$feeds =& $externalFeedDao->getExternalFeedsByJournalId($journal->getId());
 				$output = '<div id="externalFeedsHome">';

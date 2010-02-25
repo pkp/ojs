@@ -261,7 +261,6 @@ class Upgrade extends Installer {
 	 * @return boolean
 	 */
 	function clearDataCache() {
-		import('cache.CacheManager');
 		$cacheManager =& CacheManager::getManager();
 		$cacheManager->flush();
 		return true;

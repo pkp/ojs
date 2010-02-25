@@ -175,7 +175,6 @@ class AdminFunctionsHandler extends AdminHandler {
 		$this->validate();
 
 		// Clear the CacheManager's caches
-		import('cache.CacheManager');
 		$cacheManager =& CacheManager::getManager();
 		$cacheManager->flush();
 
