@@ -35,6 +35,7 @@ tools/buildpkg.sh						\
 tools/genLocaleReport.sh					\
 tools/genTestLocale.php						\
 tools/test							\
+lib/pkp/tests							\
 .git								\
 lib/pkp/.git"
 
