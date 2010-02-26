@@ -30,10 +30,10 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 		// Validation checks for this form
 		$this->addCheck(new FormValidatorCustom($this, 'authors', 'required', 'author.submit.form.authorRequired', create_function('$authors', 'return count($authors) > 0;')));
 		$this->addCheck(new FormValidatorArray($this, 'authors', 'required', 'author.submit.form.authorRequiredFields', array('firstName', 'lastName')));
-		$this->addCheck(new FormValidatorArrayCustom($this, 'authors', 'required', 'author.submit.form.authorRequiredFields', create_function('$email, $regExp', 'return String::regexp_match($regExp, $email);'), array(FormValidatorEmail::getRegexp()), false, array('email')));
-		$this->addCheck(new FormValidatorArrayCustom($this, 'authors', 'required', 'user.profile.form.urlInvalid', create_function('$url, $regExp', 'return empty($url) ? true : String::regexp_match($regExp, $url);'), array(FormValidatorUrl::getRegexp()), false, array('url')));
+		$this->addCheck(new FormValidatorArrayCustom($this, 'authors', 'required', 'author.submit.form.authorRequiredFields', create_function('$email, $regExp', 'return String::regexp_match($regExp, $email);'), array(ValidatorEmail::getRegexp()), false, array('email')));
+		$this->addCheck(new FormValidatorArrayCustom($this, 'authors', 'required', 'user.profile.form.urlInvalid', create_function('$url, $regExp', 'return empty($url) ? true : String::regexp_match($regExp, $url);'), array(ValidatorUrl::getRegexp()), false, array('url')));
 		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'author.submit.form.titleRequired'));
-		
+
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$section = $sectionDao->getSection($article->getSectionId());
 		$abstractWordCount = $section->getAbstractWordCount();
@@ -145,8 +145,8 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 		$countryDao =& DAORegistry::getDAO('CountryDAO');
 		$countries =& $countryDao->getCountries();
 		$templateMgr->assign_by_ref('countries', $countries);
-		
-		if (Request::getUserVar('addAuthor') || Request::getUserVar('delAuthor')  || Request::getUserVar('moveAuthor')) {	
+
+		if (Request::getUserVar('addAuthor') || Request::getUserVar('delAuthor')  || Request::getUserVar('moveAuthor')) {
 			$templateMgr->assign('scrollToAuthor', true);
 		}
 

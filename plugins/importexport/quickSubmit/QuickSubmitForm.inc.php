@@ -25,9 +25,9 @@ class QuickSubmitForm extends Form {
 	 */
 	function QuickSubmitForm(&$plugin) {
 		parent::Form($plugin->getTemplatePath() . 'index.tpl');
-		
+
 		$journal =& Request::getJournal();
-		
+
 		$this->addCheck(new FormValidatorPost($this));
 		$this->addCheck(new FormValidator($this, 'sectionId', 'required', 'author.submit.form.sectionRequired'));
 		$this->addCheck(new FormValidatorLocale($this, 'tempFileId', 'required', 'plugins.importexport.quickSubmit.submissionRequired', create_function('$tempFileId', 'return $tempFileId > 0;')));
@@ -35,12 +35,12 @@ class QuickSubmitForm extends Form {
 		$this->addCheck(new FormValidatorCustom($this, 'authors', 'required', 'author.submit.form.authorRequired', create_function('$authors', 'return count($authors) > 0;')));
 		$this->addCheck(new FormValidatorCustom($this, 'destination', 'required', 'plugins.importexport.quickSubmit.issueRequired', create_function('$destination, $form', 'return $destination == \'queue\'? true : ($form->getData(\'issueId\') > 0);'), array(&$this)));
 		$this->addCheck(new FormValidatorArray($this, 'authors', 'required', 'author.submit.form.authorRequiredFields', array('firstName', 'lastName')));
-		$this->addCheck(new FormValidatorArrayCustom($this, 'authors', 'required', 'user.profile.form.emailRequired', create_function('$email, $regExp', 'return String::regexp_match($regExp, $email);'), array(FormValidatorEmail::getRegexp()), false, array('email')));
-		$this->addCheck(new FormValidatorArrayCustom($this, 'authors', 'required', 'user.profile.form.urlInvalid', create_function('$url, $regExp', 'return empty($url) ? true : String::regexp_match($regExp, $url);'), array(FormValidatorUrl::getRegexp()), false, array('url')));
+		$this->addCheck(new FormValidatorArrayCustom($this, 'authors', 'required', 'user.profile.form.emailRequired', create_function('$email, $regExp', 'return String::regexp_match($regExp, $email);'), array(ValidatorEmail::getRegexp()), false, array('email')));
+		$this->addCheck(new FormValidatorArrayCustom($this, 'authors', 'required', 'user.profile.form.urlInvalid', create_function('$url, $regExp', 'return empty($url) ? true : String::regexp_match($regExp, $url);'), array(ValidatorUrl::getRegexp()), false, array('url')));
 		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'author.submit.form.titleRequired'));
 
 	}
-	
+
 	/**
 	 * Get the names of fields for which data should be localized
 	 * @return array
@@ -48,7 +48,7 @@ class QuickSubmitForm extends Form {
 	function getLocaleFieldNames() {
 		return array('tempFileId', 'title', 'abstract', 'discipline', 'subjectClass', 'subject', 'coverageGeo', 'coverageChron', 'coverageSample', 'type', 'sponsor');
 	}
-	
+
 	/**
 	 * Display the form.
 	 */
@@ -59,35 +59,35 @@ class QuickSubmitForm extends Form {
 		$formLocale = $this->getFormLocale();
 
 		$templateMgr->assign('journal', $journal);
-	
+
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$templateMgr->assign('sectionOptions', array('0' => Locale::translate('author.submit.selectSection')) + $sectionDao->getSectionTitles($journal->getId()));
-		
+
 		$countryDao =& DAORegistry::getDAO('CountryDAO');
 		$countries =& $countryDao->getCountries();
 		$templateMgr->assign_by_ref('countries', $countries);
-		
+
 		import('issue.IssueAction');
 		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 
 		import('file.TemporaryFileManager');
-		$temporaryFileManager = new TemporaryFileManager();		
+		$temporaryFileManager = new TemporaryFileManager();
 		$tempFileId = $this->getData('tempFileId');
 		if ($tempFileId[$formLocale] > 0) {
-			$submissionFile = $temporaryFileManager->getFile($tempFileId[$formLocale], $user->getId());	
+			$submissionFile = $temporaryFileManager->getFile($tempFileId[$formLocale], $user->getId());
 			$templateMgr->assign_by_ref('submissionFile', $submissionFile);
 		}
-		
-		if (Request::getUserVar('addAuthor') || Request::getUserVar('delAuthor')  || Request::getUserVar('moveAuthor')) {	
+
+		if (Request::getUserVar('addAuthor') || Request::getUserVar('delAuthor')  || Request::getUserVar('moveAuthor')) {
 			$templateMgr->assign('scrollToAuthor', true);
 		}
-		
+
 		$jqueryPlugin =& PluginRegistry::getPlugin('generic', 'JQueryPlugin');
 		if ($jqueryPlugin->isJQueryInstalled()) {
 			$templateMgr->assign('jqueryPath', $jqueryPlugin->getScriptPath());
 			$templateMgr->assign('addAuthorUrl', $jqueryPlugin->getScriptPath());
 		}
-		
+
 		if (Request::getUserVar('destination') == 'queue' ) {
 			$templateMgr->assign('publishToIssue', false);
 		} else {
@@ -128,7 +128,7 @@ class QuickSubmitForm extends Form {
 			)
 		);
 	}
-	
+
 	/**
 	 * Upload the submission file.
 	 * @param $fileName string
@@ -141,7 +141,7 @@ class QuickSubmitForm extends Form {
 
 		$temporaryFile = $temporaryFileManager->handleUpload($fileName, $user->getId());
 
-		if($temporaryFile) { 
+		if($temporaryFile) {
 			return $temporaryFile->getId();
 		} else {
 			return false;
@@ -149,7 +149,7 @@ class QuickSubmitForm extends Form {
 	}
 
 	/**
-	 * Save settings. 
+	 * Save settings.
 	 */
 	function execute() {
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
@@ -202,7 +202,7 @@ class QuickSubmitForm extends Form {
 				$author = new Author();
 				$isExistingAuthor = false;
 			}
-		
+
 			if ($author != null) {
 				$author->setArticleId($articleId);
 				$author->setFirstName($authors[$i]['firstName']);
@@ -218,7 +218,7 @@ class QuickSubmitForm extends Form {
 				$author->setBiography($authors[$i]['biography'], null);
 				$author->setPrimaryContact($this->getData('primaryContact') == $i ? 1 : 0);
 				$author->setSequence($authors[$i]['seq']);
-		
+
 				if ($isExistingAuthor == false) {
 					$article->addAuthor($author);
 				}
@@ -233,7 +233,7 @@ class QuickSubmitForm extends Form {
 		$articleFileManager = new ArticleFileManager($articleId);
 		foreach (array_keys($tempFileIds) as $locale) {
 			$temporaryFile = $temporaryFileManager->getFile($tempFileIds[$locale], $user->getId());
-			$fileId = $articleFileManager->temporaryFileToArticleFile($temporaryFile, ARTICLE_FILE_SUBMISSION);		
+			$fileId = $articleFileManager->temporaryFileToArticleFile($temporaryFile, ARTICLE_FILE_SUBMISSION);
 			$fileType = $temporaryFile->getFileType();
 
 			if (strstr($fileType, 'html')) {
@@ -270,13 +270,13 @@ class QuickSubmitForm extends Form {
 			}
 		}
 
-		
+
 		// Designate this as the review version by default.
 		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
 		$authorSubmission =& $authorSubmissionDao->getAuthorSubmission($articleId);
 		import('submission.author.AuthorAction');
 		AuthorAction::designateReviewVersion($authorSubmission, true);
-		
+
 		// Accept the submission
 		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		$sectionEditorSubmission->setReviewFile(ArticleFileManager::getFile($article->getSubmissionFileId()));
@@ -310,20 +310,20 @@ class QuickSubmitForm extends Form {
 
 		import("author.form.submit.AuthorSubmitForm");
 		AuthorSubmitForm::assignEditors($article);
-		
+
 		$articleDao->updateArticle($article);
 
 		// Add to end of editing queue
 		import('submission.editor.EditorAction');
 		EditorAction::expediteSubmission($article);
-		
+
 		if ($this->getData('destination') == "issue") {
 			// Add to an existing issue
 			$issueId = $this->getData('issueId');
 			$this->scheduleForPublication($articleId, $issueId);
 		}
 	}
-	
+
 	/**
 	 * Schedule an article for publication in a given issue
 	 */
@@ -332,7 +332,7 @@ class QuickSubmitForm extends Form {
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		
+
 		$journal =& Request::getJournal();
 		$submission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
