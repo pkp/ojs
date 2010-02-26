@@ -684,7 +684,7 @@ class SectionEditorAction extends Action {
 			$reviewFormResponseDao =& DAORegistry::getDAO('ReviewFormResponseDAO');
 			$responses = $reviewFormResponseDao->getReviewReviewFormResponseValues($reviewId);
 			if (!empty($responses)) {
-+				$reviewFormResponseDao->deleteByReviewId($reviewId);
+				$reviewFormResponseDao->deleteByReviewId($reviewId);
 			}
 			$reviewAssignment->setReviewFormId(null);
 			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
