@@ -118,12 +118,12 @@ class METSGatewayPlugin extends GatewayPlugin {
 			else if ($issueId == 'current')
 			{
 				$issues = array();
-				$issues[] =& $issueDao->getCurrentIssue($journal->getId());
+				$issues[] =& $issueDao->getCurrentIssue($journal->getId(), true);
 			}
 			else
 			{
 				$issues = array();
-				$issues[] =& $issueDao->getIssueById($issueId);
+				$issues[] =& $issueDao->getIssueById($issueId, null, true);
 			}
 			$this->exportIssues($journal, $issues);
 			return true;

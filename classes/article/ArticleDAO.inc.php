@@ -21,6 +21,22 @@ import('article.Article');
 class ArticleDAO extends DAO {
 	var $authorDao;
 
+	var $cache;
+
+	function _cacheMiss(&$cache, $id) {
+		$article =& $this->getArticle($id, null, false);
+		$cache->setCache($id, $article);
+		return $article;
+	}
+
+	function &_getCache() {
+		if (!isset($this->cache)) {
+			$cacheManager =& CacheManager::getManager();
+			$this->cache =& $cacheManager->getObjectCache('articles', 0, array(&$this, '_cacheMiss'));
+		}
+		return $this->cache;
+	}
+
 	/**
 	 * Constructor.
 	 */
@@ -54,9 +70,17 @@ class ArticleDAO extends DAO {
 	 * Retrieve an article by ID.
 	 * @param $articleId int
 	 * @param $journalId int optional
+	 * @param $useCache boolean optional
 	 * @return Article
 	 */
-	function &getArticle($articleId, $journalId = null) {
+	function &getArticle($articleId, $journalId = null, $useCache = false) {
+		if ($useCache) {
+			$cache =& $this->_getCache();
+			$returner =& $cache->get($articleId);
+			if ($returner && $journalId != null && $journalId != $returner->getJournalId()) $returner = null;
+			return $returner;
+		}
+
 		$primaryLocale = Locale::getPrimaryLocale();
 		$locale = Locale::getLocale();
 		$params = array(
@@ -138,7 +162,6 @@ class ArticleDAO extends DAO {
 		$article->setFastTracked($row['fast_tracked']);
 		$article->setHideAuthor($row['hide_author']);
 		$article->setCommentsStatus($row['comments_status']);
-
 
 		$article->setAuthors($this->authorDao->getAuthorsByArticle($row['article_id']));
 
@@ -265,6 +288,8 @@ class ArticleDAO extends DAO {
 
 		// Update author sequence numbers
 		$this->authorDao->resequenceAuthors($article->getId());
+
+		$this->flushCache();
 	}
 
 	/**
@@ -351,6 +376,8 @@ class ArticleDAO extends DAO {
 
 		$this->update('DELETE FROM article_settings WHERE article_id = ?', $articleId);
 		$this->update('DELETE FROM articles WHERE article_id = ?', $articleId);
+
+		$this->flushCache();
 	}
 
 	/**
@@ -500,6 +527,8 @@ class ArticleDAO extends DAO {
 		$this->update(
 			'UPDATE articles SET status = ? WHERE article_id = ?', array($status, $articleId)
 		);
+
+		$this->flushCache();
 	}
 
 	/**
@@ -510,6 +539,8 @@ class ArticleDAO extends DAO {
 		$this->update(
 			'UPDATE articles SET section_id = null WHERE section_id = ?', $sectionId
 		);
+
+		$this->flushCache();
 	}
 
 	/**
@@ -518,6 +549,19 @@ class ArticleDAO extends DAO {
 	 */
 	function getInsertArticleId() {
 		return $this->getInsertId('articles', 'article_id');
+	}
+
+	function flushCache() {
+		// Because both publishedArticles and articles are cached by
+		// article ID, flush both caches on update.
+		$cache =& $this->_getCache();
+		$cache->flush();
+		unset($cache);
+
+		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$cache =& $publishedArticleDao->_getCache();
+		$cache->flush();
+		unset($cache);
 	}
 }
 

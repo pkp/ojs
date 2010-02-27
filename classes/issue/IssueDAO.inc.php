@@ -19,12 +19,42 @@
 import ('issue.Issue');
 
 class IssueDAO extends DAO {
+	var $caches;
+
+	function _cacheMiss(&$cache, $id) {
+		if ($cache->getCacheId() === 'current') {
+			$issue =& $this->getCurrentIssue($id, false);
+		} else {
+			$issue =& $this->getIssueById($id, null, false);
+		}
+		$cache->setCache($id, $issue);
+		return $issue;
+	}
+
+	function &_getCache($cacheId) {
+		if (!isset($this->caches)) $this->caches = array();
+		if (!isset($this->caches[$cacheId])) {
+			$cacheManager =& CacheManager::getManager();
+			$this->caches[$cacheId] =& $cacheManager->getObjectCache('issues', $cacheId, array(&$this, '_cacheMiss'));
+		}
+		return $this->caches[$cacheId];
+	}
+
 	/**
 	 * Retrieve Issue by issue id
 	 * @param $issueId int
+	 * @param $journalId int optional
+	 * @param $useCache boolean optional
 	 * @return Issue object
 	 */
-	function &getIssueById($issueId, $journalId = null) {
+	function &getIssueById($issueId, $journalId = null, $useCache = false) {
+		if ($useCache) {
+			$cache =& $this->_getCache('issues');
+			$returner =& $cache->get($issueId);
+			if ($returner && $journalId != null && $journalId != $returner->getJournalId()) $returner = null;
+			return $returner;
+		}
+
 		if (isset($journalId)) {
 			$result =& $this->retrieve(
 				'SELECT i.* FROM issues i WHERE issue_id = ? AND journal_id = ?',
@@ -50,9 +80,18 @@ class IssueDAO extends DAO {
 	/**
 	 * Retrieve Issue by public issue id
 	 * @param $publicIssueId string
+	 * @param $journalId int optional
+	 * @param $useCache boolean optional
 	 * @return Issue object
 	 */
-	function &getIssueByPublicIssueId($publicIssueId, $journalId = null) {
+	function &getIssueByPublicIssueId($publicIssueId, $journalId = null, $useCache = false) {
+		if ($useCache) {
+			$cache =& $this->_getCache('issues');
+			$returner =& $cache->get($publicIssueId);
+			if ($returner && $journalId != null && $journalId != $returner->getJournalId()) $returner = null;
+			return $returner;
+		}
+
 		if (isset($journalId)) {
 			$result =& $this->retrieve(
 				'SELECT i.* FROM issues i WHERE public_issue_id = ? AND journal_id = ?',
@@ -109,11 +148,13 @@ class IssueDAO extends DAO {
 	 * Retrieve Issue by "best" issue id -- public ID if it exists,
 	 * falling back on the internal issue ID otherwise.
 	 * @param $issueId string
+	 * @param $journalId int optional
+	 * @param $useCache boolean optional
 	 * @return Issue object
 	 */
-	function &getIssueByBestIssueId($issueId, $journalId = null) {
-		$issue =& $this->getIssueByPublicIssueId($issueId, $journalId);
-		if (!isset($issue)) $issue =& $this->getIssueById((int) $issueId, $journalId);
+	function &getIssueByBestIssueId($issueId, $journalId = null, $useCache = false) {
+		$issue =& $this->getIssueByPublicIssueId($issueId, $journalId, $useCache);
+		if (!isset($issue)) $issue =& $this->getIssueById((int) $issueId, $journalId, $useCache);
 		return $issue;
 	}
 
@@ -140,9 +181,17 @@ class IssueDAO extends DAO {
 
 	/**
 	 * Retrieve current issue
+	 * @param $journalId int
+	 * @param $useCache boolean optional
 	 * @return Issue object
 	 */
-	function &getCurrentIssue($journalId) {
+	function &getCurrentIssue($journalId, $useCache = false) {
+		if ($useCache) {
+			$cache =& $this->_getCache('current');
+			$returner =& $cache->get($journalId);
+			return $returner;
+		}
+
 		$result =& $this->retrieve(
 			'SELECT i.* FROM issues i WHERE journal_id = ? AND current = 1', $journalId
 		);
@@ -167,6 +216,8 @@ class IssueDAO extends DAO {
 			'UPDATE issues SET current = 0 WHERE journal_id = ? AND current = 1', $journalId
 		);
 		if ($issue) $this->updateIssue($issue);
+		$cache =& $this->_getCache();
+		$cache->flush();
 	}
 
 
@@ -342,6 +393,9 @@ class IssueDAO extends DAO {
 		if ($this->customIssueOrderingExists($issue->getJournalId())) {
 			$this->resequenceCustomIssueOrders($issue->getJournalId());
 		}
+
+		$cache =& $this->_getCache();
+		$cache->flush();
 	}
 
 	/**
@@ -373,6 +427,9 @@ class IssueDAO extends DAO {
 		$this->update('DELETE FROM issue_settings WHERE issue_id = ?', $issueId);
 		$this->update('DELETE FROM issues WHERE issue_id = ?', $issueId);
 		$this->resequenceCustomIssueOrders($issue->getJournalId());
+
+		$cache =& $this->_getCache();
+		$cache->flush();
 	}
 
 	/**

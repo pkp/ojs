@@ -106,7 +106,7 @@ class XMLGalleySettingsForm extends Form {
 		// if there are changes, flush the XSLT cache
 		if ($flushCache == true) {
 			$cacheManager =& CacheManager::getManager();
-			$cacheManager->flush('xsltGalley');
+			$cacheManager->flush('xsltGalley', CACHE_TYPE_FILE);
 		}
 
 		$plugin->updateSetting($journalId, 'nlmPDF', $this->getData('nlmPDF'));

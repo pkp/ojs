@@ -24,6 +24,36 @@ class PublishedArticleDAO extends DAO {
 	var $galleyDao;
 	var $suppFileDao;
 
+	var $articleCache;
+	var $articlesInSectionsCache;
+
+	function _articleCacheMiss(&$cache, $id) {
+		$publishedArticle =& $this->getPublishedArticleByArticleId($id, null);
+		$cache->setCache($id, $publishedArticle);
+		return $publishedArticle;
+	}
+
+	function &_getPublishedArticleCache() {
+		if (!isset($this->articleCache)) {
+			$cacheManager =& CacheManager::getManager();
+			$this->articleCache =& $cacheManager->getObjectCache('publishedArticles', 0, array(&$this, '_articleCacheMiss'));
+		}
+		return $this->articleCache;
+	}
+
+	function _articlesInSectionsCacheMiss(&$cache, $id) {
+		$articlesInSections =& $this->getPublishedArticlesInSections($id, null);
+		$cache->setCache($id, $articlesInSections);
+		return $articlesInSections;
+	}
+
+	function &_getArticlesInSectionsCache() {
+		if (!isset($this->articlesInSectionsCache)) {
+			$cacheManager =& CacheManager::getManager();
+			$this->articlesInSectionsCache =& $cacheManager->getObjectCache('articlesInSections', 0, array(&$this, '_articlesInSectionsCacheMiss'));
+		}
+		return $this->articlesInSectionsCache;
+	}
  	/**
 	 * Constructor.
 	 */
@@ -38,14 +68,11 @@ class PublishedArticleDAO extends DAO {
 	/**
 	 * Retrieve Published Articles by issue id.  Limit provides number of records to retrieve
 	 * @param $issueId int
-	 * @param $limit int, default NULL
-	 * @param $simple boolean Whether or not to skip fetching dependent objects; default false
 	 * @return PublishedArticle objects array
 	 */
-	function &getPublishedArticles($issueId, $limit = NULL, $simple = false) {
+	function &getPublishedArticles($issueId) {
 		$primaryLocale = Locale::getPrimaryLocale();
 		$locale = Locale::getLocale();
-		$func = $simple?'_returnSimplePublishedArticleFromRow':'_returnPublishedArticleFromRow';
 		$publishedArticles = array();
 
 		$params = array(
@@ -80,11 +107,10 @@ class PublishedArticleDAO extends DAO {
 				AND a.status <> ' . STATUS_ARCHIVED . '
 			ORDER BY section_seq ASC, pa.seq ASC';
 
-		if (isset($limit)) $result =& $this->retrieveLimit($sql, $params, $limit);
-		else $result =& $this->retrieve($sql, $params);
+		$result =& $this->retrieve($sql, $params);
 
 		while (!$result->EOF) {
-			$publishedArticles[] =& $this->$func($result->GetRowAssoc(false));
+			$publishedArticles[] =& $this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
 
@@ -111,13 +137,11 @@ class PublishedArticleDAO extends DAO {
 	 * Retrieve all published articles in a journal.
 	 * @param $journalId int
 	 * @param $rangeInfo object
-	 * @param $simple boolean Whether or not to skip fetching dependent objects; default false
 	 * @return object
 	 */
-	function &getPublishedArticlesByJournalId($journalId, $rangeInfo = null, $simple = false, $reverse = false) {
+	function &getPublishedArticlesByJournalId($journalId, $rangeInfo = null, $reverse = false) {
 		$primaryLocale = Locale::getPrimaryLocale();
 		$locale = Locale::getLocale();
-		$func = $simple?'_returnSimplePublishedArticleFromRow':'_returnPublishedArticleFromRow';
 		$result =& $this->retrieveRange(
 			'SELECT	pa.*,
 				a.*,
@@ -149,20 +173,26 @@ class PublishedArticleDAO extends DAO {
 			$rangeInfo
 		);
 
-		$returner = new DAOResultFactory($result, $this, $func);
+		$returner = new DAOResultFactory($result, $this, '_returnPublishedArticleFromRow');
 		return $returner;
 	}
 
 	/**
 	 * Retrieve Published Articles by issue id
 	 * @param $issueId int
-	 * @param $simple boolean Whether or not to skip fetching dependent objects; default false
+	 * @param $useCache boolean optional
 	 * @return PublishedArticle objects array
 	 */
-	function &getPublishedArticlesInSections($issueId, $simple = false) {
+	function &getPublishedArticlesInSections($issueId, $useCache = false) {
+		if ($useCache) {
+			$cache =& $this->_getArticlesInSectionsCache();
+			$returner =& $cache->get($issueId);
+			return $returner;
+		}
+
+		$primaryLocale = Locale::getPrimaryLocale();
 		$primaryLocale = Locale::getPrimaryLocale();
 		$locale = Locale::getLocale();
-		$func = $simple?'_returnSimplePublishedArticleFromRow':'_returnPublishedArticleFromRow';
 		$publishedArticles = array();
 
 		$result =& $this->retrieve(
@@ -205,7 +235,7 @@ class PublishedArticleDAO extends DAO {
 		$currSectionId = 0;
 		while (!$result->EOF) {
 			$row =& $result->GetRowAssoc(false);
-			$publishedArticle =& $this->$func($row);
+			$publishedArticle =& $this->_returnPublishedArticleFromRow($row);
 			if ($publishedArticle->getSectionId() != $currSectionId) {
 				$currSectionId = $publishedArticle->getSectionId();
 				$publishedArticles[$currSectionId] = array(
@@ -321,10 +351,17 @@ class PublishedArticleDAO extends DAO {
 	 * Retrieve published article by article id
 	 * @param $articleId int
 	 * @param $journalId int optional
-	 * @param $simple boolean Whether or not to skip fetching dependent objects; default false
+	 * @param $useCache boolean optional
 	 * @return PublishedArticle object
 	 */
-	function &getPublishedArticleByArticleId($articleId, $journalId = null, $simple = false) {
+	function &getPublishedArticleByArticleId($articleId, $journalId = null, $useCache = false) {
+		if ($useCache) {
+			$cache =& $this->_getPublishedArticleCache();
+			$returner =& $cache->get($articleId);
+			if ($returner && $journalId != null && $journalId != $returner->getJournalId()) $returner = null;
+			return $returner;
+		}
+
 		$primaryLocale = Locale::getPrimaryLocale();
 		$locale = Locale::getLocale();
 		$params = array(
@@ -340,7 +377,6 @@ class PublishedArticleDAO extends DAO {
 		);
 		if ($journalId) $params[] = $journalId;
 
-		$func = $simple?'_returnSimplePublishedArticleFromRow':'_returnPublishedArticleFromRow';
 		$result =& $this->retrieve(
 			'SELECT	pa.*,
 				a.*,
@@ -361,7 +397,7 @@ class PublishedArticleDAO extends DAO {
 
 		$publishedArticle = null;
 		if ($result->RecordCount() != 0) {
-			$publishedArticle =& $this->$func($result->GetRowAssoc(false));
+			$publishedArticle =& $this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -374,13 +410,19 @@ class PublishedArticleDAO extends DAO {
 	 * Retrieve published article by public article id
 	 * @param $journalId int
 	 * @param $publicArticleId string
-	 * @param $simple boolean Whether or not to skip fetching dependent objects; default false
+	 * @param $useCache boolean optional
 	 * @return PublishedArticle object
 	 */
-	function &getPublishedArticleByPublicArticleId($journalId, $publicArticleId, $simple = false) {
+	function &getPublishedArticleByPublicArticleId($journalId, $publicArticleId, $useCache = false) {
+		if ($useCache) {
+			$cache =& $this->_getPublishedArticleCache();
+			$returner =& $cache->get($publicArticleId);
+			if ($returner && $journalId != null && $journalId != $returner->getJournalId()) $returner = null;
+			return $returner;
+		}
+
 		$primaryLocale = Locale::getPrimaryLocale();
 		$locale = Locale::getLocale();
-		$func = $simple?'_returnSimplePublishedArticleFromRow':'_returnPublishedArticleFromRow';
 		$result =& $this->retrieve(
 			'SELECT	pa.*,
 				a.*,
@@ -412,7 +454,7 @@ class PublishedArticleDAO extends DAO {
 
 		$publishedArticle = null;
 		if ($result->RecordCount() != 0) {
-			$publishedArticle =& $this->$func($result->GetRowAssoc(false));
+			$publishedArticle =& $this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -426,12 +468,12 @@ class PublishedArticleDAO extends DAO {
 	 * internal article ID; public article ID takes precedence.
 	 * @param $journalId int
 	 * @param $articleId string
-	 * @param $simple boolean Whether or not to skip fetching dependent objects; default false
+	 * @param $useCache boolean optional
 	 * @return PublishedArticle object
 	 */
-	function &getPublishedArticleByBestArticleId($journalId, $articleId, $simple = false) {
-		$article =& $this->getPublishedArticleByPublicArticleId($journalId, $articleId, $simple);
-		if (!isset($article)) $article =& $this->getPublishedArticleByArticleId((int) $articleId, $journalId, $simple);
+	function &getPublishedArticleByBestArticleId($journalId, $articleId, $useCache = false) {
+		$article =& $this->getPublishedArticleByPublicArticleId((int) $journalId, $articleId, $useCache);
+		if (!isset($article)) $article =& $this->getPublishedArticleByArticleId((int) $articleId, (int) $journalId, $useCache);
 		return $article;
 	}
 
@@ -440,7 +482,8 @@ class PublishedArticleDAO extends DAO {
 	 * alphabetically.
 	 * Note that if journalId is null, alphabetized article IDs for all
 	 * journals are returned.
-	 * @param $journalId int
+	 * @param $journalId int optional
+	 * @param $useCache boolean optional
 	 * @return Array
 	 */
 	function &getPublishedArticleIdsAlphabetizedByJournal($journalId = null, $useCache = true) {
@@ -516,21 +559,6 @@ class PublishedArticleDAO extends DAO {
 	 * @return PublishedArticle object
 	 */
 	function &_returnPublishedArticleFromRow($row, $callHooks = true) {
-		$publishedArticle =& $this->_returnSimplePublishedArticleFromRow($row, false);
-
-		$publishedArticle->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
-
-		if ($callHooks) HookRegistry::call('PublishedArticleDAO::_returnPublishedArticleFromRow', array(&$publishedArticle, &$row));
-		return $publishedArticle;
-	}
-
-	/**
-	 * creates and returns a published article object from a row, omitting supp files etc.
-	 * @param $row array
-	 * @param $callHooks boolean Whether or not to call hooks
-	 * @return PublishedArticle object
-	 */
-	function &_returnSimplePublishedArticleFromRow($row, $callHooks = true) {
 		$publishedArticle = new PublishedArticle();
 		$publishedArticle->setPubId($row['pub_id']);
 		$publishedArticle->setIssueId($row['issue_id']);
@@ -545,10 +573,12 @@ class PublishedArticleDAO extends DAO {
 		// Article attributes
 		$this->articleDao->_articleFromRow($publishedArticle, $row);
 
-		if ($callHooks) HookRegistry::call('PublishedArticleDAO::_returnSimplePublishedArticleFromRow', array(&$publishedArticle, &$row));
+		$publishedArticle->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
 
+		if ($callHooks) HookRegistry::call('PublishedArticleDAO::_returnPublishedArticleFromRow', array(&$publishedArticle, &$row));
 		return $publishedArticle;
 	}
+
 
 	/**
 	 * inserts a new published article into published_articles table
@@ -592,6 +622,8 @@ class PublishedArticleDAO extends DAO {
 		$this->update(
 			'DELETE FROM published_articles WHERE pub_id = ?', $pubId
 		);
+
+		$this->flushCache();
 	}
 
 	/**
@@ -603,6 +635,7 @@ class PublishedArticleDAO extends DAO {
 		return $this->update(
 			'DELETE FROM published_articles WHERE article_id = ?', $articleId
 		);
+		$this->flushCache();
 	}
 
 	/**
@@ -623,6 +656,8 @@ class PublishedArticleDAO extends DAO {
 
 		$result->Close();
 		unset($result);
+
+		$this->flushCache();
 	}
 
 	/**
@@ -630,9 +665,11 @@ class PublishedArticleDAO extends DAO {
 	 * @param $issueId int
 	 */
 	function deletePublishedArticlesByIssueId($issueId) {
-		return $this->update(
+		$this->update(
 			'DELETE FROM published_articles WHERE issue_id = ?', $issueId
 		);
+
+		$this->flushCache();
 	}
 
 	/**
@@ -660,6 +697,8 @@ class PublishedArticleDAO extends DAO {
 				$publishedArticle->getPubId()
 			)
 		);
+
+		$this->flushCache();
 	}
 
 	/**
@@ -672,6 +711,8 @@ class PublishedArticleDAO extends DAO {
 		$this->update(
 			"UPDATE published_articles SET $field = ? WHERE pub_id = ?", array($value, $pubId)
 		);
+
+		$this->flushCache();
 	}
 
 	/**
@@ -695,6 +736,8 @@ class PublishedArticleDAO extends DAO {
 
 		$result->close();
 		unset($result);
+
+		$this->flushCache();
 	}
 
 	/**

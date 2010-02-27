@@ -19,12 +19,37 @@
 import ('journal.Section');
 
 class SectionDAO extends DAO {
+	var $cache;
+
+	function _cacheMiss(&$cache, $id) {
+		$section =& $this->getSection($id, null, false);
+		$cache->setCache($id, $section);
+		return $section;
+	}
+
+	function &_getCache() {
+		if (!isset($this->cache)) {
+			$cacheManager =& CacheManager::getManager();
+			$this->cache =& $cacheManager->getObjectCache('sections', 0, array(&$this, '_cacheMiss'));
+		}
+		return $this->cache;
+	}
+
 	/**
 	 * Retrieve a section by ID.
 	 * @param $sectionId int
+	 * @param $journalId int optional
+	 * @param $useCache boolean optional
 	 * @return Section
 	 */
-	function &getSection($sectionId, $journalId = null) {
+	function &getSection($sectionId, $journalId = null, $useCache = false) {
+		if ($useCache) {
+			$cache =& $this->_getCache();
+			$returner =& $cache->get($sectionId);
+			if ($returner && $journalId != null && $journalId != $returner->getJournalId()) $returner = null;
+			return $returner;
+		}
+
 		$sql = 'SELECT * FROM sections WHERE section_id = ?';
 		$params = array($sectionId);
 		if ($journalId !== null) {

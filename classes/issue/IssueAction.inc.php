@@ -101,7 +101,7 @@ class IssueAction {
 			if (Validation::isAuthor($journalId)) {
 				if ($article && $article->getUserId() == $userId) return true;
 				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-				if ($article) $publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($article->getId());
+				if ($article) $publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($article->getId(), null, true);
 				if (isset($publishedArticle) && $publishedArticle && $publishedArticle->getUserId() == $userId) return true;
 			}
 		}
@@ -117,7 +117,7 @@ class IssueAction {
 		$user =& Request::getUser();
 		$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
+		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId, null, true);
 		$result = false;
 		if (isset($user) && isset($journal)) {
 			if (IssueAction::allowedPrePublicationAccess($journal, $publishedArticle)) {
@@ -163,7 +163,7 @@ class IssueAction {
 			if (!$result && $journal->getSetting('subscriptionExpiryPartial')) {
 				if (isset($articleId)) {
 					$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-					$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
+					$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId, null, true);
 					if (isset($publishedArticle)) {
 						import('subscription.SubscriptionDAO');
 						$result = $subscriptionDao->isValidInstitutionalSubscription(Request::getRemoteDomain(), Request::getRemoteAddr(), $journal->getId(), SUBSCRIPTION_DATE_END, $publishedArticle->getDatePublished());

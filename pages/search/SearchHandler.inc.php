@@ -116,7 +116,7 @@ class SearchHandler extends Handler {
 					$journals[$journalId] =& $journalDao->getJournal($journalId);
 				}
 				if (!isset($sections[$sectionId])) {
-					$sections[$sectionId] =& $sectionDao->getSection($sectionId);
+					$sections[$sectionId] =& $sectionDao->getSection($sectionId, $journalId, true);
 				}
 			}
 

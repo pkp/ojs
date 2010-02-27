@@ -23,7 +23,7 @@ class JournalSettingsDAO extends DAO {
 		}
 		if (!isset($settingCache[$journalId])) {
 			$cacheManager =& CacheManager::getManager();
-			$settingCache[$journalId] = $cacheManager->getCache(
+			$settingCache[$journalId] =& $cacheManager->getFileCache(
 				'journalSettings', $journalId,
 				array($this, '_cacheMiss')
 			);

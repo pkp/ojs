@@ -186,11 +186,11 @@ class ArticleHandler extends Handler {
 		$journalRt = $rtDao->getJournalRTByJournal($journal);
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$section =& $sectionDao->getSection($article->getSectionId());
+		$section =& $sectionDao->getSection($article->getSectionId(), $journal->getJournalid(), true);
 
 		if ($journalRt->getVersion()!=null && $journalRt->getDefineTerms()) {
 			// Determine the "Define Terms" context ID.
-			$version = $rtDao->getVersion($journalRt->getVersion(), $journalRt->getJournalId());
+			$version = $rtDao->getVersion($journalRt->getVersion(), $journalRt->getJournalId(), true);
 			if ($version) foreach ($version->getContexts() as $context) {
 				if ($context->getDefineTerms()) {
 					$defineTermsContextId = $context->getContextId();
@@ -347,7 +347,7 @@ class ArticleHandler extends Handler {
 		}
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$section =& $sectionDao->getSection($article->getSectionId());
+		$section =& $sectionDao->getSection($article->getSectionId(), $journal->getJournalId(), true);
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('issue', $issue);
@@ -512,17 +512,17 @@ class ArticleHandler extends Handler {
 
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		if ($journal->getSetting('enablePublicArticleId')) {
-			$publishedArticle =& $publishedArticleDao->getPublishedArticleByBestArticleId($journalId, $articleId);
+			$publishedArticle =& $publishedArticleDao->getPublishedArticleByBestArticleId((int) $journalId, $articleId, true);
 		} else {
-			$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId((int) $articleId, $journalId);
+			$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId((int) $articleId, (int) $journalId, true);
 		}
 
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		if (isset($publishedArticle)) {
-			$issue =& $issueDao->getIssueByArticleId($publishedArticle->getId(), $journalId);
+			$issue =& $issueDao->getIssueById($publishedArticle->getIssueId(), $publishedArticle->getJournalId(), true);
 		} else {
 			$articleDao =& DAORegistry::getDAO('ArticleDAO');
-			$article =& $articleDao->getArticle((int) $articleId, $journalId);
+			$article =& $articleDao->getArticle((int) $articleId, $journalId, true);
 		}
 
 		// If this is an editorial user who can view unpublished/unscheduled
