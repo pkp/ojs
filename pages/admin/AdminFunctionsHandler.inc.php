@@ -176,7 +176,8 @@ class AdminFunctionsHandler extends AdminHandler {
 
 		// Clear the CacheManager's caches
 		$cacheManager =& CacheManager::getManager();
-		$cacheManager->flush();
+		$cacheManager->flush(null, CACHE_TYPE_FILE);
+		$cacheManager->flush(null, CACHE_TYPE_OBJECT);
 
 		// Clear ADODB's cache
 		$userDao =& DAORegistry::getDAO('UserDAO'); // As good as any

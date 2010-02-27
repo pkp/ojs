@@ -19,6 +19,8 @@
 import('rt.ojs.JournalRT');
 
 class RTDAO extends DAO {
+	var $versionCache;
+
 	//
 	// RT
 	//
@@ -119,16 +121,37 @@ class RTDAO extends DAO {
 		return $returner;
 	}
 
+	function _versionCacheMiss(&$cache, $id) {
+		$ids = explode('-', $id);
+		$version =& $this->getVersion($ids[0], $ids[1], false);
+		$cache->setCache($id, $version);
+		return $version;
+	}
+
+	function &_getVersionCache() {
+		if (!isset($this->versionCache)) {
+			$cacheManager =& CacheManager::getManager();
+			$this->versionCache =& $cacheManager->getObjectCache('rtVersions', 0, array(&$this, '_versionCacheMiss'));
+		}
+		return $this->versionCache;
+	}
+
 	/**
 	 * Retrieve a version.
 	 * @param $versionId int
-	 * @param $journalId int
-	 * @return RTVersion
+	 * @param $journalId int optional
+	 * @return RTVersion optional
 	 */
-	function &getVersion($versionId, $journalId) {
+	function &getVersion($versionId, $journalId = null, $useCache = null) {
+		if ($useCache) {
+			$cache =& $this->_getVersionCache();
+			$returner =& $cache->get((int) $versionId . '-' . (int) $journalId);
+			return $returner;
+		}
+
 		$result =& $this->retrieve(
 			'SELECT * FROM rt_versions WHERE version_id = ? AND journal_id = ?',
-			array($versionId, $journalId)
+			array((int) $versionId, (int) $journalId)
 		);
 
 		$returner = null;
@@ -190,6 +213,9 @@ class RTDAO extends DAO {
 				(int) $journalId
 			)
 		);
+
+		$cache =& $this->_getVersionCache();
+		$cache->flush();
 	}
 
 	/**
@@ -214,6 +240,9 @@ class RTDAO extends DAO {
 			'DELETE FROM rt_versions WHERE version_id = ? AND journal_id = ?',
 			array((int) $versionId, (int) $journalId)
 		);
+
+		$cache =& $this->_getVersionCache();
+		$cache->flush();
 	}
 
 	/**

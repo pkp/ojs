@@ -569,7 +569,7 @@ class IssueManagementHandler extends EditorHandler {
 			// Set the status of any attendant queued articles to STATUS_PUBLISHED.
 			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 			$articleDao =& DAORegistry::getDAO('ArticleDAO');
-			$publishedArticles =& $publishedArticleDao->getPublishedArticles($issueId, null, true);
+			$publishedArticles =& $publishedArticleDao->getPublishedArticles($issueId);
 			foreach ($publishedArticles as $publishedArticle) {
 				$article =& $articleDao->getArticle($publishedArticle->getId());
 				if ($article && $article->getStatus() == STATUS_QUEUED) {

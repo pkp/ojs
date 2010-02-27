@@ -263,7 +263,7 @@ class PublishedArticle extends Article {
 
 		// Get the issue
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$issue =& $issueDao->getIssueByArticleId($this->getArticleId());
+		$issue =& $issueDao->getIssueById($this->getIssueId(), $this->getJournalId(), true);
 
 		if (!$issue || !$journal || $journal->getId() != $issue->getJournalId() ) return null;
 

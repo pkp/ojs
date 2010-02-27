@@ -98,7 +98,7 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 
 		// Make sure there's a current issue for this journal
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$issue =& $issueDao->getCurrentIssue($journal->getId());
+		$issue =& $issueDao->getCurrentIssue($journal->getId(), true);
 		if (!$issue) return false;
 
 		$webFeedPlugin =& $this->getWebFeedPlugin();
@@ -126,13 +126,13 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 		if ($displayItems == 'recent' && $recentItems > 0) {
 			import('db.DBResultRange');
 			$rangeInfo = new DBResultRange($recentItems, 1);
-			$publishedArticleObjects =& $publishedArticleDao->getPublishedArticlesByJournalId($journal->getId(), $rangeInfo, null, true);
+			$publishedArticleObjects =& $publishedArticleDao->getPublishedArticlesByJournalId($journal->getId(), $rangeInfo, true);
 			while ($publishedArticle =& $publishedArticleObjects->next()) {
 				$publishedArticles[]['articles'][] =& $publishedArticle;
 				unset($publishedArticle);
 			}
 		} else {
-			$publishedArticles =& $publishedArticleDao->getPublishedArticlesInSections($issue->getId());
+			$publishedArticles =& $publishedArticleDao->getPublishedArticlesInSections($issue->getId(), true);
 		}
 
 		$versionDao =& DAORegistry::getDAO('VersionDAO');

@@ -46,7 +46,7 @@ class IssueHandler extends Handler {
 		$journal =& Request::getJournal();
 
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$issue =& $issueDao->getCurrentIssue($journal->getId());
+		$issue =& $issueDao->getCurrentIssue($journal->getId(), true);
 
 		$templateMgr =& TemplateManager::getManager();
 
@@ -101,7 +101,7 @@ class IssueHandler extends Handler {
 			if ($showToc && $subscriptionRequired && !$subscribedUser && !$subscribedDomain && $subscriptionExpiryPartial) {
 				$templateMgr->assign('subscriptionExpiryPartial', true);
 				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-				$publishedArticlesTemp =& $publishedArticleDao->getPublishedArticles($issue->getId(), null, true);
+				$publishedArticlesTemp =& $publishedArticleDao->getPublishedArticles($issue->getId());
 
 				$articleExpiryPartial = array();
 				foreach ($publishedArticlesTemp as $publishedArticle) {
@@ -157,7 +157,7 @@ class IssueHandler extends Handler {
 		if ($journal->getSetting('enablePublicIssueId')) {
 			$issue =& $issueDao->getIssueByBestIssueId($issueId, $journal->getId());
 		} else {
-			$issue =& $issueDao->getIssueById((int) $issueId);
+			$issue =& $issueDao->getIssueById((int) $issueId, null, true);
 		}
 
 		if (!$issue) Request::redirect(null, null, 'current');
@@ -230,7 +230,7 @@ class IssueHandler extends Handler {
 			if ($showToc && $subscriptionRequired && !$subscribedUser && !$subscribedDomain && $subscriptionExpiryPartial) {
 				$templateMgr->assign('subscriptionExpiryPartial', true);
 				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-				$publishedArticlesTemp =& $publishedArticleDao->getPublishedArticles($issue->getId(), null, true);
+				$publishedArticlesTemp =& $publishedArticleDao->getPublishedArticles($issue->getId());
 
 				$articleExpiryPartial = array();
 				foreach ($publishedArticlesTemp as $publishedArticle) {
