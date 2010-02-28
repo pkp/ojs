@@ -115,7 +115,7 @@ debug = Off
 ; - memcache: Use the memcache server configured below
 ; - xcache: Use the xcache variable store
 ; - none: Use no caching.
-object_cache = xcache
+object_cache = none
 
 ; Enable memcache support
 memcache_hostname = localhost
