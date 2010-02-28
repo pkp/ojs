@@ -559,7 +559,7 @@ class ArticleDAO extends DAO {
 		unset($cache);
 
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-		$cache =& $publishedArticleDao->_getCache();
+		$cache =& $publishedArticleDao->_getPublishedArticleCache();
 		$cache->flush();
 		unset($cache);
 	}
