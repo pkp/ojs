@@ -114,6 +114,7 @@ debug = Off
 ; Choose the type of object data caching to use. Options are:
 ; - memcache: Use the memcache server configured below
 ; - xcache: Use the xcache variable store
+; - apc: Use the APC variable store
 ; - none: Use no caching.
 object_cache = none
 
