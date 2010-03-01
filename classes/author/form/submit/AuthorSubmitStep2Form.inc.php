@@ -3,7 +3,7 @@
 /**
  * @file classes/author/form/submit/AuthorSubmitStep2Form.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AuthorSubmitStep2Form
@@ -196,6 +196,7 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 					$article->addAuthor($author);
 				}
 			}
+			unset($author);
 		}
 
 		// Remove deleted authors

@@ -3,7 +3,7 @@
 /**
  * @file SubscriptionManagerHandler.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionManagerHandler
@@ -520,6 +520,19 @@ class SubscriptionManagerHandler extends Handler {
 			$userForm->initData();
 		}
 		$userForm->display();
+	}
+
+	/**
+	 * Get a suggested username, making sure it's not
+	 * already used by the system. (Poor-man's AJAX.)
+	 */
+	function suggestUsername() {
+		SubscriptionManagerHandler::validate();
+		$suggestion = Validation::suggestUsername(
+			Request::getUserVar('firstName'),
+			Request::getUserVar('lastName')
+		);
+		echo $suggestion;
 	}
 
 	/**

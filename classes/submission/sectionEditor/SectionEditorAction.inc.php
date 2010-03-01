@@ -3,7 +3,7 @@
 /**
  * @file classes/submission/sectionEditor/SectionEditorAction.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SectionEditorAction
@@ -1901,7 +1901,7 @@ class SectionEditorAction extends Action {
 									$body .= Locale::translate('submission.comments.importPeerReviews.reviewerLetter', array('reviewerLetter' => chr(ord('A') + $reviewIndexes[$reviewAssignment->getReviewId()]))) . "\n\n";
 								}
 								foreach ($reviewFormElements as $reviewFormElement) {
-									$body .= $reviewFormElement->getReviewFormElementQuestion() . ": \n";
+									$body .= strip_tags($reviewFormElement->getReviewFormElementQuestion()) . ": \n";
 									$reviewFormResponse = $reviewFormResponseDao->getReviewFormResponse($reviewId, $reviewFormElement->getReviewFormElementId());
 									
 									if ($reviewFormResponse) {

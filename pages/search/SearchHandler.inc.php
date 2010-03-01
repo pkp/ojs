@@ -3,7 +3,7 @@
 /**
  * @file SearchHandler.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SearchHandler
@@ -128,7 +128,7 @@ class SearchHandler extends Handler {
 			$templateMgr->assign('affiliation', $affiliation);
 
 			$countryDao =& DAORegistry::getDAO('CountryDAO');
-			$country =& $countryDao->getCountry($country);
+			$country = $countryDao->getCountry($country);
 			$templateMgr->assign('country', $country);
 
 			$templateMgr->display('search/authorDetails.tpl');

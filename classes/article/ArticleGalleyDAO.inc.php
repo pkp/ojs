@@ -3,7 +3,7 @@
 /**
  * @file classes/article/ArticleGalleyDAO.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleGalleyDAO
@@ -68,11 +68,17 @@ class ArticleGalleyDAO extends DAO {
 	 * galley ID, which is treated as an exception)
 	 * @param $publicGalleyId string
 	 * @param $galleyId int
+	 * @param $articleId int
 	 * @return boolean
 	 */
-	function publicGalleyIdExists($publicGalleyId, $galleyId) {
+	function publicGalleyIdExists($publicGalleyId, $galleyId, $articleId) {
 		$result = &$this->retrieve(
-			'SELECT COUNT(*) FROM article_galleys WHERE public_galley_id = ? AND galley_id <> ?', array($publicGalleyId, $galleyId)
+			'SELECT COUNT(*) FROM article_galleys WHERE public_galley_id = ? AND galley_id <> ? AND article_id = ?',
+			array(
+				$publicGalleyId,
+				(int) $galleyId,
+				(int) $articleId
+			)
 		);
 		$returner = $result->fields[0] ? true : false;
 

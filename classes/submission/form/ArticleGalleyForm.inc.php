@@ -7,7 +7,7 @@
 /**
  * @file classes/submission/form/ArticleGalleyForm.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleGalleyForm
@@ -84,7 +84,7 @@ class ArticleGalleyForm extends Form {
 		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 
 		$publicGalleyId = $this->getData('publicGalleyId');
-		if ($publicGalleyId && $galleyDao->publicGalleyIdExists($publicGalleyId, $this->galleyId)) {
+		if ($publicGalleyId && $galleyDao->publicGalleyIdExists($publicGalleyId, $this->galleyId, $this->articleId)) {
 			$this->addError('publicGalleyId', Locale::translate('submission.layout.galleyPublicIdentificationExists'));
 			$this->addErrorField('publicIssueId');
 		}

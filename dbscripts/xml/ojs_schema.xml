@@ -4,7 +4,7 @@
 <!--
   * ojs_schema.xml
   *
-  * Copyright (c) 2003-2009 John Willinsky
+  * Copyright (c) 2003-2010 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * OJS database schema in XML.
@@ -380,7 +380,7 @@
 	  *
 	  -->
 	<table name="sessions">
-		<field name="session_id" type="C2" size="32">
+		<field name="session_id" type="C2" size="40">
 			<NOTNULL/>
 		</field>
 		<field name="user_id" type="I8"/>
@@ -2314,7 +2314,7 @@
 			<KEY />
 			<AUTOINCREMENT />
 		</field>
-		<field name="session_id" type="C2" size="32">
+		<field name="session_id" type="C2" size="40">
 			<NOTNULL/>
 		</field>
 		<field name="value" type="C2" size="20">
