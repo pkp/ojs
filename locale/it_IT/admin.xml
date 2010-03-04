@@ -4,12 +4,12 @@
 <!--
   * ../ojs2-devel//locale/it_IT/admin.xml
   *
-  * Copyright (c) 2003-2010 John Willinsky
+  * Copyright (c) 2000-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the it_IT (Italiano) locale.
   *
-  * $Id$
+  * $Id: admin.xml,v 1.3 2009/12/08 04:16:20 jmacgreg Exp $
   -->
 
 <locale name="it_IT" full_name = "Italiano">
@@ -46,18 +46,7 @@
 	<message key="admin.journals.form.pathExists">Il percorso selezionato &#x00E8; gi&#x00E0; utilizzato da un'altra rivista.</message>
 	<message key="admin.journals.enableJournalInstructions">Consenti a questa rivista di apparire pubblicamente sul sito</message>
 	<message key="admin.journals.journalDescription">Descrizione della rivista</message>
-	<message key="admin.journals.importOJS1">Importa da OJS 1</message>
-	<message key="admin.journals.importOJS1.success">L'import della rivista si è concluso regolarmente.</message>
-	<message key="admin.journals.importOJS1.editMigratedJournal">Modifica il Journal importato</message>
-	<message key="admin.journals.importOJS1.redirect.desc">Per redirigere le URL di OJS1 a URL di OJS2, creare i seguenti file php, utilizzando il contenuto indicato sotto. I file corrispondenti dovranno essere sistemati nel percorso del filesystem di OJS1 o, per una singola installazione, in quello di OJS2.</message>
-	<message key="admin.journals.importOJS1.redirect.ojs1root">Inserisci nel vecchio percorso del filesystem di OJS1 (es. /var/www/ojs1).</message>
-	<message key="admin.journals.importOJS1.redirect.ojs1orojs2root">Inserisci il vecchio path del filesystem di OJS 1 (es: /var/www/ojs1) oppure, per una installazione con una sola rivista, inserisci il nuovo path di OJS 2 (es: /var/www/ojs2 )</message>
-	<message key="admin.journals.importOJS1.conflict.desc">Alcuni account hanno informazioni in conflitto. OJS 1.x permette a user account multipli di condividere lo stesso indirizzo email, mentre OJS 2.x no. Nell'elenco qui sotto, al secondo account &#x00E8; stato assegnato un account email temporaneo. Questo dovrebbe essere corretto a mano, assegnandogli un diverso account email, oppure fondendo gli account.</message>
-	<message key="admin.journals.importOJS1.conflict">{$firstUsername} ({$firstName}) e {$secondUsername} ({$secondName})</message>
-	<message key="admin.journals.importOJS1Instructions">Consulta la documentazione sull'UPGRADE distribuita con OJS per informazioni dettagliate sulla migrazione dei dati da OJS 1 a OJS 2.</message>
 	<message key="admin.journal.pathImportInstructions">Path di una rivista esistente o path da creare (e.g., "ojs").</message>
-	<message key="admin.journal.importPath">Path di OJS 1</message>
-	<message key="admin.journal.importPathInstructions">Completa il path del filesystem locale  per l'installazione di OJS 1  (e.g., "/var/www/ojs").</message>
 	<message key="admin.journals.importSubscriptions">Importa abbonamenti</message>
 	<message key="admin.journals.transcode">Converti i metadata dell'articolo da ISO8859-1</message>
 	<message key="admin.journals.redirect">Genera il codice per mappare le URL di OJS1 verso quelle di OJS2</message>
@@ -70,4 +59,5 @@
 	<message key="admin.mergeUsers.allUsers">Tutti gli utenti iscritti</message>
 	<message key="admin.mergeUsers.confirm">Sei sicuro di voler fondere l'account con il nome utente "{$oldUsername}" con l'account con il nome utente "{$newUsername}"? L'account con il nome utente "{$oldUsername}"  non esisterà più in seguito. Questa azione non è reversibile.</message>
 	<message key="admin.mergerUsers.noneEnrolled">Nessun utente iscritto.</message>
+	<message key="admin.locale.maybeIncomplete">I file marcati potrebbero essere incompleti.</message>
 </locale>

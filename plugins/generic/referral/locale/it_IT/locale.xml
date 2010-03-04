@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id: locale.xml,v 1.4 2009/04/08 19:54:42 asmecher Exp $
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.referral.name">Plugin del Referral</message>
+	<message key="plugins.generic.referral.description">Questo plugin tiene traccia delle URL che referenziano l'articolo (cioè, da quale URL esterna arrivano i lettori), permettendo agli autori di mantenete e potenzialmente pubblicare una lista delle URL che citano un articolo</message>
+	<message key="plugins.generic.referral.enabled"><![CDATA[Il plugin Referral &#232; stato abilitato.]]></message>
+	<message key="plugins.generic.referral.disabled"><![CDATA[Il plugin Referral &#232; stato disabilitato.]]></message>
+	
+	<message key="plugins.generic.referral.editReferral">Modifica il Refback</message>
+	<message key="plugins.generic.referral.createReferral">Crea un Refback</message>
+	<message key="plugins.generic.referral.referrals">Refback</message>
+	<message key="plugins.generic.referral.count">Hits</message>
+	<message key="plugins.generic.referral.dateAdded">Data di aggiunta</message>
+	<message key="plugins.generic.referral.all">Tutti</message>
+	<message key="plugins.generic.referral.all.empty">Non ci sono refbacks, per ora.</message>
+	<message key="plugins.generic.referral.status.new">Nuovo</message>
+	<message key="plugins.generic.referral.status.new.empty">Non ci sono nuovi refback.</message>
+	<message key="plugins.generic.referral.status.accept">Publicato</message>
+	<message key="plugins.generic.referral.status.accept.empty">Non ci sono refback pubblicati.</message>
+	<message key="plugins.generic.referral.status.decline">Ignorato</message>
+	<message key="plugins.generic.referral.status.decline.empty">Non ci sono refback ignorati</message>
+	<message key="plugins.generic.referral.confirmDelete">Sei sicuro di voler cancellare questo refback?</message>
+	<message key="plugins.generic.referral.nameRequired">Inserisci un nome per il refback.</message>
+	<message key="plugins.generic.referral.urlRequired">Inserisci la URL del refback.</message>
+</locale>

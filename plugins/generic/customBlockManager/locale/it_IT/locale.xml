@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id: locale.xml,v 1.3 2009/10/17 18:32:10 rcy Exp $
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.customBlockManager.displayName">Gestore di blocchi personalizzati</message>
+	<message key="plugins.generic.customBlockManager.description">This Plugin lets you manage custom sidebar blocks.  You can edit the blocks in the settings of each plugin that you create here.</message>	
+	<message key="plugin.generic.customBlockManager.introduction"><![CDATA[Si può utilizzare il plugin per aggiungere o cancellare plugin di blocchi personalizzati. Puoi successivamente modificare il contenuto dei plugin  tramite la pagina <a href="{$systemPluginsUrl}">Plugin</a> (nella sezione Plugin per i blocchi).  Per definire la posizione in cui comparirà il plugin, utilizza il <a href="{$setupStep56}">punto 5.6 del Setup</a>]]></message>
+	<message key="plugins.generic.customBlockManager.settings">Impostazioni</message>
+	<message key="plugins.generic.customBlockManager.description">This Plugin lets you manage custom sidebar blocks.  You can edit the blocks in the settings of each plugin that you create here.</message>
+	<message key="plugins.generic.customBlockManager.blockName">Nome del blocco</message>	
+	<message key="plugins.generic.customBlockManager.action">Azione</message>	
+	<message key="plugins.generic.customBlockManager.delete">Cancella</message>	
+	<message key="plugins.generic.customBlockManager.addBlock">Aggiungi un blocco</message>	
+
+	<message key="plugins.generic.customBlock.content">Contenuto</message>
+	<message key="plugins.generic.customBlock.saved"><![CDATA[Il contenuto del blocco &#232; stato salvato.]]></message>
+	<message key="plugins.generic.customBlock.nameSuffix">(Plugin del blocco personalizzato)</message>
+	<message key="plugins.generic.customBlock.description"><![CDATA[Questo blocco &#232; generato dall'utente.]]></message>
+	<message key="plugins.generic.customBlock.editContent">Modifica il contenuto della barra laterale</message>
+	<message key="plugins.generic.customBlock.contentRequired"><![CDATA[&#200; necessario inserire del contenuto. Se vuoi puoi cancellare questo blocco, attraverso il plugin Gestore di blocchi personalizzati o nascondendolo nel punto % del Setup]]></message>
+	<message key="plugins.generic.customBlock.edit">Modifica</message>
+</locale>

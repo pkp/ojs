@@ -4,12 +4,12 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2003-2010 John Willinsky
+  * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the it_IT (Italiano) locale.
   *
-  * $Id$
+  * $Id: locale.xml,v 1.5 2009/04/08 19:54:44 asmecher Exp $
   -->
  
 <locale name="it_IT" full_name="Italiano">
@@ -43,5 +43,7 @@
 	<message key="plugins.generic.xmlGalley.settings.customXSLRequired">Un file del foglio di stile XSL personalizzato deve essere specificato.</message>
 	<message key="plugins.generic.xmlGalley.settings.customXSLInvalid">Il file XSL caricato non era valido. Si prega di controllare il file e riprovare.</message>
 
+	<message key="plugins.generic.xmlGalley.enabled">Il plugin delle gabbie XML è stato abilitato.</message>
+	<message key="plugins.generic.xmlGalley.disabled">Il plugin delle gabbie XML è stato disabilitato.</message>
 </locale>
 

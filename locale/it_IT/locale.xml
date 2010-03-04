@@ -4,13 +4,13 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2003-2010 John Willinsky
+  * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the it_IT (Italian) locale.
   * Contributed by Andrea Marchitelli.
   *
-  * $Id$
+  * $Id: locale.xml,v 1.46 2009/12/08 04:16:20 jmacgreg Exp $
   -->
 
 <locale name="it_IT" full_name="Italian">
@@ -83,10 +83,6 @@
 	<message key="section.title">Titolo della sezione</message>
 	<message key="section.abbreviation">Acronimo</message>
 	<message key="section.abbreviation.example">(per esempio, Articoli=ART)</message>
-	<message key="section.default.title">Articoli</message>
-	<message key="section.default.abbrev">ART</message>
-	<message key="section.default.policy"></message>
-
 	<!-- Common Article Terms -->
 	<message key="article.articles">Articoli</message>
 	<message key="article.submissionId">ID della submission</message>
@@ -328,8 +324,6 @@ Da notare che l'interfaccia OAI puﵞ essere disabilitata per questo sito tramit
 Impostare il supporto LOCKSS per l'Open Journal Systems non deve avvenire fino a che la pubblicazione non &#x00E8; completamente in corso, a questo punto seguire questi due passi:]]></message>
 
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[Questa nota di copyright comparir&#x00E0; nella sezione About e nei metadati di ogni articolo. Tra le varie opzioni gli autori possono mantenere i diritti per i propri lavori, mentre la rivista ha i diritti esclusivi riguardo la prima pubblicazione. In alternativa, la rivista pu&#x00F2; richiedere che gli vengano trasferiti i diritti, garantendo comunque il permesso per un uso non commerciale degli articoli,
-inclusa la possibilit&#x00E0; di deposito in un archivio open access. &#x00C8; possibile inoltre consultare le <a href="http://www.creativecommons.org" target="_blank">Creative Commons</a> per avere delle licenze di copyright flessibili.]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Per avere i contenuti di questa rivista indicizzati all'interno di un sistema globale distribuito di database di ricerca, <a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">registrate</a> l'URL della vostra rivista con il Public Knowledge Project metadata <a href="http://www.pkp.ubc.ca/harvester/" target="_blank">harvester</a>. Questo strumento raccoglie i metadati di ogni articolo indicizzato nella rivista, permettendo cos&#x00EC; una ricerca accurata e globale tra i siti che aderiscono all'<a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
 <br /><br />
 Nota: se l'amministratore ha gi&#x00E0; registrato il sito all'interno del PKP Harvster, la vostra rivista sar&#x00E0; indicizzata automaticamente e non avrete bisogno di effettuare la registrazione.
@@ -558,7 +552,6 @@ Attivo &#x00E8; il numero di quante revisioni si stanno considerando o stanno an
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Commenti del correttore di bozze</message>
 
-	<message key="submission.archiveSubmission">Archivio delle Submission</message>
 	<message key="submission.proofread.corrections">Correzioni dei correttori di bozze</message>
 	<message key="submission.proofread.instructions">Istruzioni dei correttori di bozze</message>
 
@@ -762,8 +755,6 @@ Il vostro server supporta mbstring: <strong>{$supportsMBString}</strong>]]></mes
 	<message key="installer.localeInstructions">La lingua principale utilizzata dal sistema. Consultate la documentazione di OJS se siete interessati al supporto di lingue non presenti nell'elenco.</message>
 	<message key="installer.additionalLocalesInstructions">Selezionate le altre lingue che devono essere supportate dal sistema, in modo che possano essere utilizzate dai giornali presenti nel sito. Ulteriori aggiunte possono essere fatte in qualsiasi momento dall'interfaccia di amministrazione del sito.</message>
 	<message key="installer.filesDirInstructions">Inserite il percorso completo di una directory esistente dove conservare i file di cui &#x00E8; stato fatto l'upload. Questa directory non dovrebbe essere accessibile direttamente dal web. Assicuratevi che la directory esista e siano gi� stati concessi i permessi di scrittura. I percorsi Windows devono avere il separatore "/", come ad esempio "C:/myjournal/files".</message>
-	<message key="installer.installOJS">Installa Open Journal Systems</message>
-	<message key="installer.upgradeOJS">Upgrade Open Journal Systems</message>
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Attenzione:</strong> Se l'installazione &#x00E8; fallita durante la creazione del database potrebbe essere necessario cancellare la base di dati di OJS o le tabelle contenute prima di ripetere il processo.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>IMPORTANTE!</h4>
 <p>Il programma d'installazione non &#x00E8; riuscito a sovrascrivere il file di configurazione. Prima di utilizzare OJS, apite il file <tt>config.inc.php</tt> con un editor di testo e sostituitene il contenuto con quello del campo sottostante..</p>]]></message>
@@ -887,91 +878,6 @@ Il processo di validazione pu&#x00F2; non funzionare sugli URL di ricerca che ri
 	 * DEFAULT - Default settings for setup items.
 	 *
 	-->
-	<message key="default.journalSettings.checklist.notPreviouslyPublished">La submission non &#x00E8; stata precedentemente pubblicata, n&#x00E8; prima in un'altra rivista per considerazione (o una spiegazione &#x00E8; stata fornita nei commenti all'editor).</message>
-	<message key="default.journalSettings.checklist.fileFormat">Il file di submission &#x00E8; in un formato Microsoft Word, RTF, o WordPerfect.</message>
-	<message key="default.journalSettings.checklist.submissionAppearance">Il testo ha singoli spazi; usa un font 12-point ; impiega italic, piuttosto che  sottolineare (eccetto con gli indirizzi URL); e tutte le illustrazioni, figure, e tabelle sono posizionate  all'interno del testo nei punti appropriati, piuttosto che alla fine.</message>
-	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Il testo aderisce alle richieste stilistiche e bibliografiche riassunte nelle <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">linee guida dell'autore</a>, che si trova nell'About the Journal.]]></message>
-	<message key="default.journalSettings.checklist.anonymous"><![CDATA[Se si sta facendo la submission a una sezione peer-reviewed della rivista, seguire le istruzioni su <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">Come assicurare una revisione cieca</a>.]]></message>
-
-
-
-	<message key="default.journalSettings.privacyStatement">I nomi e gli indirizzi email inseriti in questo sito della rivista  sar&#x00E0; usato esclusivamente per gli scopi dichiarati di questa rivista e non sar&#x00E0; disponibile per ogni altro scopo o ogni altro partito.</message>
-	<message key="default.journalSettings.openAccessPolicy">Questa rivista fornisce accesso aperto e immediato ai suoi contenuti, nel principio che rendere le ricerche disponibili liberamente al pubblico aumenta il livello di scambio globale maggiore di conoscenza.</message>
-	<message key="default.journalSettings.authorSelfArchivePolicy">Agli autori &#x00E8; permesso inviare i loro articoli su siti web personali o istituzionali prima e dopo la pubblicazione in questa rivista (previa fornire dettagli bibliografici della pubblicazione).</message>
-
-	<message key="default.journalSettings.copyeditInstructions"><![CDATA[La fase di copyediting  &#x00E8; a migliorare flusso ,  chiarezza, grammatica, dicitura, e formattazione dell'articolo. Rappresenta l'ultima occasione per l'autore di apporre cambiamenti sostanziali, dato che nella fase successiva &#x00E8; limitato ai tipi e alle correzioni della formattazione.
-
-Il file di copyedited &#x00E8; ora in un formato Word o .rtf e per cui pu&#x00F2; essere facilmente modificato come un documento di elaborazione testi. Questo inseme di istruzioni mostrate qui propone due approcci al  copyediting. Una si sulla funzione Track Changes di  Microsoft Word e richiede che il copyeditor, editor e autore abbiano accesso a questo programma. un secondo sistema, indipendente dal programma, &#x00E8; stato preso in prestito, con il permesso, dall'Harvard Educational Review. L'editor della rivista  &#x00E8; nella posizione di modificare queste istruzioni, in questo modo possono fare suggerimenti per migliorare il processo di questa rivista.
-
-<h4>Sistemi di Copyediting</h4>
-
-<strong>1.Track Changes di Microsoft Word</strong>
-
-Sotto le utility nella barra del menu, la funzione Track Changes abilita il copyeditor a fare inserzioni (il testo appare colorato) e cancellazioni (il testo appare barrato in colore o sui margini come cancellato). Il copyeditor pu&#x00F2; sia inviare interrogazioni per l'autore (Interrogazioni autore) sia all'editor (interrogazioni editor) inserendo queste interrogazioni in parentesi quadre. La  versione di copyedit &#x00E8; caricata e l'editor viene avvertito. L'editor poi revisiona il testo e avverte l'autore.
-
-L'editor e l'autore dovrebbero lasciare quei cambiamenti di cui sono soddisfatti. Se saranno necessari ulteriori cambiamenti, il editor e l'autore possono fare cambiamenti alle inserzioni o cancellazioni iniziali, tanto quanto  fare nuove inserzioni o cancellazioni in qualsiasi altra parte del testo. Autori ed editors dovrebbero rispondere a ognuna di queste interrogazioni inviate loro, con risposte poste dentro parentesi quadre.
-
-Dopo che il testo &#x00E8; stato revisionato dall'editor e dall'autore, il copyeditor far&#x00E0; un passo finale sul testo accepting accettando i cambiamenti in preparazione per la fase di impaginazione e incolonnamento.
-
-
-<strong>2. Harvard Educational Review </strong>
-
-<strong>Istruzioni per effettuare revisioni elettroniche del manoscritto</strong>
-
-Si prega di seguire il protocollo per effettuare revisioni eletroniche del tuo manoscritto:
-
-<strong>Rispondere ai cambiamenti suggeriti</strong>
-&nbsp; Per ognuno dei cambiamenti suggeriti che hai accettato, togli il grassetto dal testo
-&nbsp; Per ognuno dei cambiamenti suggeriti che non hai accettato, reinserisci il testo originale e mettilo in <strong>grassetto</strong>
-
-<strong>Effettuare aggiunte e cancellazioni</strong>
-&nbsp; Indicare le aggiunte mettendo in <strong>grassetto</strong> il testo nuovo
-&nbsp; Sostituire le sezioni cancellate con: <strong>[testo cancellato]</strong>
-&nbsp; Se cancelli una o pi&#x00F9; proposizioni, si prega di indicarle con una nota, e.g., <strong>[cancellate 2 proposizioni]</strong>
-
-<strong>Rispondere alle interrogazioni dell'autore(QAs)</strong>
-&nbsp; Mantieni tutte le QAs intatte e  in grassetto all'interno del testo. Non cancellarle
-&nbsp; Per rispondere a una QA, aggiungi un commento dopo quest'ulitma. I commenti dovrebbero essere delimitati da:
-<strong>[Commento:</strong>]
-&nbsp; e.g., <strong>[commento: ampliata la discussione sulla metodologia come suggerito]</strong>
-
-<strong>Commentare</strong>
-&nbsp; Usa i commenti per spiegare cambi organizzativi o  revisioni maggiori
-&nbsp; e.g., <strong>[Commento: spostato il paragrafo sopra da p. 5 a p. 7]</strong>
-&nbsp; Nota: quando ci si riferisce ad un numero di pagina, si prega di usare il numero di pagine della copia stampata del manoscritto che ti &#x00E8; stata inviata. Questo &#x00E8; importante dato che il numero di pagine pu&#00F2; cambiare non appena un documento viene revisionato elettronicamente.
-
-<h4>Una illustrazione di una revisione elettronica</h4>
-
-<strong>Il file originale del manoscritto</strong>
-
-Prima di fare drammatici allontanamenti dalla struttura e organizzazione del tuo manoscritto originale, si prega di controllare con i vostri colleghi. Dopo che avete finito con le vostre revisioni, rinominare il file da NomeAutoreQA.doc a NomeAutoreQAR.doc (e.g., da LeeQA.doc a LeeQAR.doc). Stampa una copia del tuo manoscritto e inviala per posta con un floppy disk contenente il file di elaborazione del testo completamente modificato e rinominato.
-
-
-<strong>Manoscritto ritornato all'autore con interrogazioni e suggerimenti</strong>
-
-Prima di fare drammatici allontanamenti dalla struttura e organizzazione del<strong>manoscritto che ti stiamo rimandando</strong>, si prega di controllare con  gli editors dei pezzi. Dopo che avete finito con le vostre revisioni, rinominare il file da NomeAutoreQA.doc a NomeAutoreQAR.doc (e.g., da LeeQA.doc a LeeQAR.doc). Stampa una copia del tuo manoscritto e inviala per posta con un floppy disk contenente il file di elaborazione del testo completamente modificato e rinominato. <strong>[QA: In questo paragrafo, potrebbe aiutare a sollevare l'importanza di seguire con attenzione le istruzioni per fare revisioni elettroniche. Altrimenti il processo di pubblicazione pu&#x00F2; essere rallentato notevolmente]</strong>
-
-<strong>Manoscitto revisionato mandato indietro</strong>
-
-Prima di fare drammatici allontanamenti dalla struttura e organizzazione del<strong>manoscritto che ti stiamo rimandando</strong>, si prega di controllare con gli editors dei pezzi. <strong>Si prega di capire che non seguire le seguenti istruzioni pu&#x00F2; significativamente allungare  la pubblicazione del manoscritto.</strong>
-
-Dopo che avete finito con le vostre revisioni, rinominare il file da NomeAutoreQA.doc a NomeAutoreQAR.doc (e.g., da LeeQA.doc a LeeQAR.doc). Stampa una copia del tuo manoscritto e inviala per posta con un floppy disk contenente il file di elaborazione del testo completamente modificato e rinominato. <strong>[QA: In questo paragrafo, potrebbe aiutare a sollevare l'importanza di seguire con attenzione le istruzioni per fare revisioni elettroniche. Altrimenti il processo di pubblicazione pu&#x00F2; essere rallentato notevolmente][Commento: ho aggiunto una frase in risposta al tuo suggerimento.]</strong>
-
-<strong>Note:</strong>
-&bull; Il testo non in grassetto indica l'accettazione delle modifiche suggerite alla prima frase
-&bull; Frase aggiunta in risposta al QA. Il grassetto indica aggiunta di testo nuovo
-&bull; [parola cancellata] indica l'omissione di "completamente"
-&bull; Il commento contiene una risposta alla QA dell'editor]]></message>
-
-	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________
-{$journalName}
-{$indexUrl}/{$journalPath}
-]]></message>
-	<message key="default.journalSettings.forReaders"><![CDATA[Incoraggiamo i lettori a segnarsi per il servizio di notifica delle pubblicazioni per questa rivista. Usa il link <a href="{$indexUrl}/{$journalPath}/user/register">Registra</a> in alto alla  homepage della rivista. Con questa registrazione il lettore ricever&#x00E0; l'indice per email di ogni nuova uscita della rivista. Questa lista permette inoltre alla rivista di reclamamre un certo livello di suopporto o lettura. Vedi la <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">legge sulla privacy</a> della rivista che assicura il lettori che il loro nome e indirizzo email non sar&#x00E0; usato per altri fini.]]></message>
-	<message key="default.journalSettings.forAuthors"><![CDATA[Interessato alla sottomisione a questa rivista? Raccomandiamo di rivedere la pagina <a href="{$indexUrl}/{$journalPath}/about">About the Journal</a> per la sezione dei permessi della rivista, tanto quanto le <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">linee guida dell'autore</a>. Gli autori devono <a href="{$indexUrl}/{$journalPath}/user/register">registrarsi</a> con la submission precedente alla rivista, o se gi&#x00E0; registrato pu&#x00F9; semplicemente fare il <a href="{$indexUrl}/index/login">log in</a> e cominciare il processo in 5 fasi.]]></message>
-	<message key="default.journalSettings.forLibrarians"><![CDATA[Incoraggiamo ricerche di bibliotecari per mettere in lista questa rivista tra le riviste elettroniche in possesso alla biblioteca. Inoltre, potrebbe aver senso notare che il sistema di pubblicazione open source di questa rivista &#x00E8; adatto a ospitare per i loro membri di facolt&#x00E0; l'uso delle riviste in cui sono coinvolti nell'editing (vedi <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
-	<message key="default.journalSettings.lockssLicense"><![CDATA[Questa rivista utilizza il sistema LOCKSS  per creare un sistema di archiviazione distribuito tra le biblioteche partecipanti e permette a queste  di creare archivi permanenti della rivista per scopi di preservazioni e restauro. <a href="http://lockss.org/">Altro...</a>]]></message>
-
 	<message key="common.confirmComplete">Sei sicuro di voler contrassegnare questo lavoro come completato? Potresti non poter fare cambiamenti in seguito.</message>
 	<message key="common.payment">Pagamento</message>
 	<message key="common.payments">Pagamenti</message>
@@ -1032,11 +938,6 @@ Authors who publish with this journal agree to the following terms:
 	<message key="installer.databaseSettingsInstructions">Ojs richiede l'accesso a una banca dati SQL permemorizzare i suoi dat. Vedi i requisiti di sistema sopra per un elenco delle banche dati supportate. Nei campi sotto, fornisci le impostazioni per connetterti alla banca dati.</message>
 	<message key="log.editor.decision">Una decisione del curatore ({$decision}) per l'articolo {$articleId} è stata registrata da {$articleId}</message>
 	<message key="rt.admin.settings.addComment">Aggiungi un commento (abilita i lettori a inviare commenti, che l'amministratore della rivista potrà cancellare).</message>
-	<message key="default.journalSettings.submissionFeeDescription">Agli autori è richiesto di pagare una quota per la submission dell'articolo come parte del processo di submission per contribuire ai costi della rivista.</message>
-	<message key="default.journalSettings.fastTrackFeeDescription">Con il pagamento di questa quota, la revisione, la decisione editoriale, e la notifica all'autore su questo lavoro sono garantite entro 4 settimane.</message>
-	<message key="default.journalSettings.publicationFeeDescription">Se questo articolo viene accettato per la pubblicazione, ti sarà chiesto di pagare una quota di pubblicazione per l'articolo per coprire i costi della pubblicazione.</message>
-	<message key="author.submit.howToSubmit"><![CDATA[Hai incontrato difficoltà? Contatta <a href="mailto:{$supportEmail}">{$supportName}</a> per assistenza
-({$supportPhone}).]]></message>
 	<message key="rt.admin.settings.addComment.authenticated">Gli utenti devono essere registrati e loggati per inviare, senza possibilità di anonimato.</message>
 	<message key="rt.admin.settings.addComment.anonymous">Gli utenti devono essere registrati e loggati per inviare, con possibilità di anonimato.</message>
 	<message key="rt.admin.settings.addComment.unauthenticated">Gli utenti possono non registrarsi per inviare, con possibilità di anonimato.</message>
@@ -1051,31 +952,6 @@ Authors who publish with this journal agree to the following terms:
 	<message key="submission.layout.referenceLinking">Link ai riferimenti</message>
 	<message key="payment.submission.paySubmission">Paga la quota di submission</message>
 	<message key="debug.notes.currencyListLoad">Elenco delle valute caricate "{$filename}" da XML</message>
-	<message key="default.journalSettings.checklist.addressesLinked">Dove possibile, sono stati forniti le URL dei riferimenti</message>
-	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Per aggiungere link di riferimento al processo di layout</h4>
-	<p>Quando si trasforma una submission in HTML o PDF, assicurati che tutti gli hyperlink nella submission siano attivi.</p>
-	<h4>A. Quando l'autore fornisce un link con il riferimento</h4>
-	<ol>
-	<li>Mentre la submission è ancora nel suo formato word in lavorazione (es., Word), aggiungi la frase VEDI L'ARTICOLO alla fine del riferimento che ha una URL.</li>
-	<li>Trasforma questa frase in un hyperlink evidenziandola, e usando lo strumento inserci hyperlink di word e la URL preparata in #2.</li>
-	</ol>
-	<h4>B. Abilitare i lettori a Search Google Scholar per i riferimenti</h4>
-	<ol>
-	<li>Mentre la submission è ancora nel suo formato word in lavorazione (es., Word), copia il titolo del lavoro citato nella lista dei riferimenti (se un titolo sembra essere troppo comune – es., "Pace" – allora copia autore e titolo).</li>
-	<li>Incolla il titolo di riferimento tra i %22, mettendo un + tra ogni parola: http://scholar.google.com/scholar?q=%22PASTE+TITLE+HERE%22&hl=en&lr=&btnG=Search</li>
-	<li>Aggiungi la frase GS SEARCH alla fine di ogni citazione nella lista dei riferimenti della submission.</li>
-	<li>Trasforma questa frase in un hyperlink evidenziandola, e usando lo strumento Inserisci hyperlink di word e la URL preparata in #2.</li>
-	</ol>
-	<h4>C. Abiltare i lettori a ricercare i riferimenti con un DOI</h4>
-	<ol>
-	<li>Mentre la submission è ancora in Word, copia una serie di riferimenti nella CrossRef Text Query http://www.crossref.org/freeTextQuery/</li>
-	<li>Incolla ogni DOI che la Query fornisce nella seguente URL (tra = e &): http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI</li>
-	<li>Aggiungi la frase CrossRef alla fine di ogni citazione nell'elenco dei riferimenti della submission.</li>
-	<li>Trasforma questa frase in un hyperlink evidenziando la frase e usando lo strumento Inserisci Hyperlink di Word e la URL appropriata preparata in #2.</li>
-	</ol>]]></message>
-	<message key="default.journalSettings.waiverPolicy">Se non hai fondi per pagare tali quote, avrai l'opportunità di derogare ogni quota. Non vogliamo impedire la pubblicazione di lavori notevoli.</message>
-	<message key="default.journalSettings.membershipFeeDescription">Il pagamento di questa quota ti iscriverà come membro a questa associazione per un anno e ti permetterà l'accesso libero a questa rivista.</message>
-	<message key="default.journalSettings.donationFeeDescription">Donazioni di qualsiasi somma a questa rivista sono bene accette e fornisconi mezzi ai curatori per continuare a permettere alla rivista la più alta qualità per i suoi lettori.</message>
 	<message key="reviewer.competingInterests">Interessi concorrenziali</message>
 	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Dichiara se o meno hai interessi concorrenziali riguardo a questa ricerca (vedi
 <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>).]]></message>
@@ -1102,12 +978,10 @@ Authors who publish with this journal agree to the following terms:
 	<message key="user.noRoles.regReviewer">Registrati come revisore</message>
 	<message key="user.noRoles.regReviewerClosed">Registrati come revisore: la registrazione dei revisori è attualmente disabilitata.</message>
 	<message key="issue.coverPage.altText">Copertina</message>
-	<message key="user.profile.form.profileImageInvalid">Immagine non valida o troppo grande. I formati ammessi sono .gif, .jpg, or .png, e l'immagine non deve eccedere 150x150 pixels.</message>
 	<message key="about.aboutThisPublishingSystem.altText">Processo editoriale e di pubblicazione con OJS</message>
 	<message key="help.searchReturnResults">Torna ai risultati della ricerca</message>
 	<message key="payment.membership.ends">Finisce</message>
 	<message key="payment.subscription.expires">Scade</message>
-	<message key="default.journalSettings.purchaseArticleFeeDescription">Il pagamento di questa</message>
 	<message key="plugins.categories.implicitAuth">Plugin per l'autenticazione implicita</message>
 	<message key="submission.reviewForm">Modulo di revisione</message>
 	<message key="submission.reviewFormResponse">Risposta del modulo di revisione</message>
@@ -1124,57 +998,105 @@ Authors who publish with this journal agree to the following terms:
 	<message key="payment.membership.renewMembership">Rinnova l'iscrizione individuale</message>
 	<message key="log.review.reviewDeclinedByProxy">{$userName} ha rifiutato il round di revisione n. {$round} per l'articolo {$articleId} in favore di {$reviewerName}.</message>
 	<message key="debug.notes.helpMappingLoad">Mappatura del file XML {$filename}  di help ricaricata in cerca di {$id}.</message>
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>Questo passo è fatto per togliere qualunque errore nello spelling, nella grammatica e nella formattazione. Cambiamenti più sostanziali non possono essere fatti in questo passo, a meno che non siano stati discussi con il section editor. Nel layout, fai click su "visualizza" per vedere l'HTML, il PDF o altri formati di file disponibili utilizzati nella pubblicazione di questo item </p>
-<h4>Per gli errori di grammatica o di battitura</h4>
-
-<p>Copia il testo sbagliato e incollalo dentro l'area di correzione seguendo le istruzioni di "MODIFICA" qui di seguito</p>
-
-<pre>1. MODIFICA...
-poi il resto
-IN...
-poi il resto</pre>
-<br />
-<pre>2. MODIFICA...
-Rosso
-IN...
-Rossi</pre>
-<br />
-
-<h4>Per gli errori di formattazione</h4>
-
-<p>Descrivi la locazione e la natura del problema nell'apposita area dopo aver digitato "FORMATTAZIONE" come qui di seguito</p>
-<br />
-<pre>3. FORMATTAZIONE
-Il numero nella tabella 3 non è allineato nella prima colonna
-</pre>
-<br />
-<pre>4. FORMATTAZIONE
-Il paragrafo che comincia con "Questo ultimo argomento..." non è allineato</pre></pre>]]></message>
 	<message key="journal.issn">ISSN</message>
-	<message key="manager.setup.doiSuffix">Suffisso DOI</message>
-	<message key="common.ccLicense"><![CDATA[<br /><br />
-	<a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
-	<br />
-	A questo lavoro è stata attribuita una <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new">Licenza Creative Commons Attribution 3.0</a>.]]></message>
-	<message key="common.ccLicense.rt"><![CDATA[<div class="rtBlock">
-		<br />
-		<a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
-		<br />
-		A questo lavoro è stata attribuita una <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new">Licenza Creative Commons Attribution 3.0</a>.
-	</div>]]></message>
-	<message key="manager.setup.doiSuffixDefault">Usa i pattern di default (%j.v%vi%i.%a).</message>
-	<message key="manager.setup.doiSuffixPattern">Usa i pattern inseriti qui sotto per generare i suffissi DOI. Utilizza %j per le iniziali della rivista, %v per il numero del volume, %i per il numero del fascicolo, %a per l'ID dell'articolo in OJS, e %p per il numero della pagina.</message>
-	<message key="manager.setup.doiSuffixPattern.example">Per esempio, vol%viss%ipp%p potrebbe creare un DOI come 10.1234/vol3iss2pp230</message>
-	<message key="manager.setup.doiSuffixDescription">Un suffisso DOi può avere qualsiasi formato, ma deve essere univoco per ogni articolo pubblicato.</message>
-	<message key="manager.setup.doiSuffixCustomIdentifier">Come suffisso DOI, utilizza il "Custom Identifier" per gli articoli pubblicati  (deve essere abilitato nel Punto 4).</message>
-	<message key="manager.setup.publisherNoteDescription">Questo testo apparirà sotto l'intestazione "Editore" e sopra il nome/url dell'editore sotto "Sponsor della rivista" nella pagina "Info".</message>
-	<message key="manager.setup.sponsorNoteDescription">Questo testo apparirà sotto l'intestazione "Sponsor" e sopra la lista dei nomi e degli url degli sponsor sotto "Sponsor della rivista" nella pagina "Info".</message>
-	<message key="manager.setup.contributorNoteDescription">Questo testo apparirà sotto l'intestazione "Fonti di supporto" e sopra la lista dei nomi e degli url degli enti di supporto sotto "Sponsor della rivista" nella pagina "Info".</message>
-	<message key="manager.setup.form.doiPrefixPattern">Il pattern DOI deve essere nel formato 10.xxxx.</message>
-	<message key="author.submit.mustEnterWaiverReason">Se stai facendo domanda di rinuncia, devi inserire una motivazione nello spazio apposito.</message>
-	<message key="author.submissions.queuedReviewSubsequent">N° di revisione {$round}</message>
-	<message key="author.submissions.queuedReviewRevisions">In revisione: revisioni richieste</message>
-	<message key="author.submissions.queuedEditingCopyedit">In Editing: Copyedit richiesto</message>
-	<message key="author.submissions.queuedEditingProofread">In Editing: Correzione di bozze richiesta</message>
+	<message key="article.article">Articolo</message>
+	<message key="article.citations">Riferimenti bibliografici</message>
+	<message key="submission.citations">Riferimenti bibliografici</message>
+	<message key="user.manageMySubscriptions">Gestisci i miei abbonamenti</message>
+	<message key="subscriptionTypes.currency">Valuta</message>
+	<message key="subscriptionManager.individualSubscriptions">Abbonamenti individuali</message>
+	<message key="subscriptionManager.institutionalSubscriptions">Abbonamenti istituzionali</message>
+	<message key="subscriptionTypes.year">anno</message>
+	<message key="subscriptionTypes.years">anni</message>
+	<message key="subscriptionTypes.month">mese</message>
+	<message key="subscriptionTypes.months">mesi</message>
+	<message key="subscriptionTypes.nonExpiring">Senza scadenza</message>
+	<message key="subscriptionTypes.format">Formato</message>
+	<message key="subscriptionTypes.format.online">Online</message>
+	<message key="subscriptionTypes.format.print">Print</message>
+	<message key="subscriptionTypes.format.printOnline">Print e Online</message>
+	<message key="subscriptions.inactive">Inattivo</message>
+	<message key="subscriptions.status">Status</message>
+	<message key="subscriptions.status.active">Attivo</message>
+	<message key="subscriptions.status.needsInformation">Informazioni necessarie</message>
+	<message key="subscriptions.status.needsApproval">Approvazione necessarie</message>
+	<message key="subscriptions.status.awaitingManualPayment">In attesa di pagamento manuale</message>
+	<message key="subscriptions.status.awaitingOnlinePayment">In attesa di pagamento online</message>
+	<message key="subscriptions.status.other">Altro, vedi le note</message>
+	<message key="subscriptions.individualDescription">L'abbonamento individuale richiede una login per accedere ai contenuti riservati.</message>
+	<message key="subscriptions.institutionalDescription">L'abbonamento istituzionale non richiede login. Viene utilizzato il dominio o gli indirizzi IP dell'utente per accedere ai contenuti riservati.</message>
+	<message key="subscriptions.institutionalOnlinePaymentDescription"><![CDATA[<strong>N.B.</strong> Gli abbonamenti istituzionali acquistati online richiedono l'approvazione del dominio o degli indirizzi IP per essere attivate.]]></message>
+	<message key="subscriptionManager.subscriptionTypes">Tipi di abbonamento</message>
+	<message key="plugins.categories.oaiMetadataFormats">OAI Metadata Format Plugins</message>
+	<message key="plugins.categories.oaiMetadataFormats.description">Questi plugin esprimono il formato dei metadati nelle comunicazioni OAI-PMH</message>
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[La rivista utilizzerà uno schema di classificazione disponibile su Web.<br />
+Titolo dello schema di classificazione]]></message>
+	<message key="user.subscriptions.mySubscriptions">I miei abbonamenti</message>
+	<message key="user.subscriptions.individualSubscriptions">Abbonamenti individuali</message>
+	<message key="user.subscriptions.institutionalSubscriptions">Abbonamenti istituzionali</message>
+	<message key="user.subscriptions.renew">Rinnova</message>
+	<message key="user.subscriptions.purchase">Acquista</message>
+	<message key="user.subscriptions.purchaseNewSubscription">Acquista un nuovo abbonamento</message>
+	<message key="user.subscriptions.purchaseIndividualSubscription">Acquista un abbonamento individuale</message>
+	<message key="user.subscriptions.purchaseInstitutionalSubscription">Acquista un abbonamento istituzionale</message>
+	<message key="user.subscriptions.expires">Scadenza</message>
+	<message key="user.subscriptions.expired">Scaduto</message>
+	<message key="user.subscriptions.viewSubscriptionTypes">Vedi i tipi di abbonamento disponibili</message>
+	<message key="user.subscriptions.form.typeId">Tipi di abbonamento</message>
+	<message key="user.subscriptions.form.membership">Membership</message>
+	<message key="user.subscriptions.form.membershipRequired">I tipi di abbonamento selezionati richiedono informazioni sulla membership.</message>
+	<message key="user.subscriptions.form.typeIdValid">Seleziona un tipo di abbonamento valido.</message>
+	<message key="user.subscriptions.form.subscriptionExists"><![CDATA[Questo account ha gi&#224; un abbonamento individuale.]]></message>
+	<message key="user.subscriptions.form.membershipInstructions">Informazioni sulla membership, se richieste dal tipo di abbonamento.</message>
+	<message key="user.subscriptions.form.institutionName">Nome dell'ente</message>
+	<message key="user.subscriptions.form.institutionNameRequired"><![CDATA[&#200; necessario inserire il nome dell'ente]]></message>
+	<message key="user.subscriptions.form.institutionMailingAddress">Indirizzo postale</message>
+	<message key="user.subscriptions.form.domain">Dominio</message>
+	<message key="user.subscriptions.form.domainInstructions"><![CDATA[Se si indica il dominio, il range di IP &#232; facoltativo.<br />Sono validi i nomi di dominio (e.g. lib.sfu.ca).]]></message>
+	<message key="user.subscriptions.form.domainIPRangeRequired">I tipi di abbonamento selezionati richiedono l'indicazione di un dominio e/o un range di IP per l'autenticazione.</message>
+	<message key="user.subscriptions.form.domainValid">Inserisci un dominio valido</message>
+	<message key="user.subscriptions.form.ipRange">Range di IP</message>
+	<message key="user.subscriptions.form.ipRangeItem"><![CDATA[&#8226;]]></message>
+	<message key="user.subscriptions.form.ipRangeInstructions"><![CDATA[Se si indicano range di IP, i nomi di dominio sono facoltativi.<br />I valori ammessi sono IP address (es. 142.58.103.1), IP range (es. 142.58.103.1 - 142.58.103.4), IP range con mascheramento '*' (es. 142.58.*.*), e IP range con CIDR (es. 142.58.100.0/24).]]></message>
+	<message key="user.subscriptions.form.ipRangeValid">Inserisci un range di IP valido.</message>
+	<message key="user.subscriptions.form.deleteIpRange">Cancella</message>
+	<message key="user.subscriptions.form.addIpRange">Aggiungi</message>
+	<message key="about.history">Storia del periodico</message>
+	<message key="about.subscriptions.individual">Abbonamenti individuali</message>
+	<message key="about.subscriptions.institutional">Abbonamenti istituzionali</message>
+	<message key="about.subscriptionTypes.name">Nome</message>
+	<message key="about.subscriptionTypes.format">Formato</message>
+	<message key="about.subscriptionTypes.duration">Durata</message>
+	<message key="about.subscriptionTypes.cost">Costo</message>
+	<message key="payment.subscription.purchase">Acquista l'abbonamento</message>
+	<message key="installer.installApplication">Installa Open Journal Systems</message>
+	<message key="installer.upgradeApplication">Aggiorna Open Journal Systems</message>
+	<message key="manager.setup.citations">Permetti agli autori di inviare la bibliografia come lista separata.</message>
+	<message key="editor.submissionReview.notes"><![CDATA[<ol>
+	<li>Gli elementi evidenziati richiedono l'intervento dell'editor.</li>
+	<li>"Scadenza" viene valorizzato quando il revisore accetta l'incarico; mostra il numero di settimane rimaste prima della data di scadenza dell'incarico di revisione oppure (-) le settimane trascorse dalla scadenza.</li>
+</ol>]]></message>
+	<message key="reviewer.article.reviewGuidelinesDescription"><![CDATA[Le linee guida per la revisione indicano ai revisori i criteri per giudicare una submission e possono includere ulteriori istruzioni per la redazione di una revisione efficace e utile. Nel condurre la revisione, ai revisono vengono presentate due box per l'inserimento di testi liberi, il primo "per l'autore e per l'editor", il secondo "per l'editor". In alternativa, il journal manager &#242; creare un modulo per la revisione. In ogni caso, gli editor avranno la possibilit&#224; di includere le revisioni nella corrispondenza con gli autori.]]></message>
+	<message key="author.submit.submissionCitations">Fornisci la lista formattata delle opere citate nella submission</message>
+	<message key="notification.mailListDescription"><![CDATA[Inserisci il tuo indirizzo email per ricevere notifiche delle novit&#224; della rivista.]]></message>
+	<message key="notification.type.articleSubmitted"><![CDATA[&#200; stato proposto un nuovo articolo, "{$param}"]]></message>
+	<message key="notification.type.copyeditComment">Un copyeditor ha lasciato un commento su  "{$param}".</message>
+	<message key="notification.type.editing">Eventi modificati</message>
+	<message key="notification.type.editorDecisionComment"><![CDATA[La decisione dell'editor su  "{$param}" &#232; stata commentata.]]></message>
+	<message key="notification.type.galleyModified"><![CDATA[La gabbia di "{$param}" &#232; stata modificata.]]></message>
+	<message key="notification.type.issuePublished"><![CDATA[&#200; stato pubblicato un nuovo fascicolo.]]></message>
+	<message key="notification.type.layoutComment"><![CDATA[&#200; stato commentato il layout di "{$param}".]]></message>
+	<message key="notification.type.metadataModified">I metadati di "{$param}" sono stati modificati</message>
+	<message key="notification.type.newAnnouncement"><![CDATA[&#200; stato pubblicato un nuovo avviso.]]></message>
+	<message key="notification.type.proofreadComment">Il correttore di bozze ha commentato "{$param}".</message>
+	<message key="notification.type.reviewerComment">Un revisore ha commentato "{$param}".</message>
+	<message key="notification.type.reviewerFormComment"><![CDATA[&#200; stato completato un modulo di revisione per "{$param}".]]></message>
+	<message key="notification.type.site">Eventi del sito</message>
+	<message key="notification.notificationsPublicDescription"><![CDATA[Questa pagina mostra aggiornamenti importanti alla rivista, come avvisi o nuovi fascicoli. Puoi ricevere queste notifiche anche attraverso feed RSS (cliccando sulle immagini a destra o <a href="{$emailUrl}">viaemail.</a>]]></message>
+	<message key="notification.type.reviewing">Eventi legati alle revisioni</message>
+	<message key="notification.type.submissionComment">Un editor ha commentato  "{$param}".</message>
+	<message key="notification.type.submissions">Eventi legati alle submission</message>
+	<message key="notification.type.suppFileModified"><![CDATA[&#200; stato modificato un file supplementare di  "{$param}".]]></message>
+	<message key="notification.type.userComment">Un lettore ha commentato  "{$param}".</message>
 </locale>
 

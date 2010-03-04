@@ -4,15 +4,17 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2003-2010 John Willinsky
+  * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * COinS plugin localization strings for the it_IT (Italiano) locale.
   *
-  * $Id$
+  * $Id: locale.xml,v 1.5 2009/08/17 23:38:32 asmecher Exp $
   -->
  
 <locale name="it_IT" full_name="Italiano">
 	<message key="plugins.generic.coins.displayName">Plugin COinS</message>
 	<message key="plugins.generic.coins.description">Il plugin COinS aggiunge un descrittore OpenURL allle pagine dell'articolo (abstract e HTML) che può essere usato ad esempio per l'estrazione delle citazioni attraverso software per la gestione delle bibliografie.</message>
+	<message key="plugins.generic.coins.enabled">Il plugin COinS è stato abilitato.</message>
+	<message key="plugins.generic.coins.disabled">Il plugin COinS è stato disabilitato.</message>
 </locale>

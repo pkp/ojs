@@ -4,12 +4,12 @@
 <!--
   * ../ojs2-devel//locale/it_IT/author.xml
   *
-  * Copyright (c) 2003-2010 John Willinsky
+  * Copyright (c) 2000-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the it_IT (Italiano) locale.
   *
-  * $Id$
+  * $Id: author.xml,v 1.6 2009/12/08 04:16:20 jmacgreg Exp $
   -->
 
 <locale name="it_IT" full_name = "Italiano">
@@ -61,6 +61,7 @@
 	<message key="author.submit.submissionIndexingDescription">Fornisci i termini per indicizzare la submission; separa i termini con un punto e virgola (termine1; termine2; termine3).</message>
 	<message key="author.submit.submissionSupportingAgencies">Organizzazioni di supporto</message>
 	<message key="author.submit.submissionSupportingAgenciesDescription">Indica le organizzazioni che hanno finanziato o supportato il lavoro presentato in questa submission.</message>
+	<message key="author.submit.agencies">Organizzazioni</message>
 	<message key="author.submit.coverageInstructions">Riferimenti geografici, al periodo cronologico/storico e/o alle caratteristiche di un campione della ricerca.</message>
 	<message key="author.submit.subjectClassInstructions">Utilizza i link ipertestuali del sistema di classificazione per selezionare i termini e, se idonei, i numeri di classificazione.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Italiano=it; Inglese=en; Francese=fr; Spagnolo=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Altri codici</a>.]]></message>
@@ -116,4 +117,12 @@
 	<message key="author.article.copyeditedFile">Copyedited File</message>
 	<message key="author.article.authorRevisedFile">File dell'autore</message>
 	<message key="author.submit.authorSubmitLoginMessage">E' necessario un account utente per sottomettere a questa rivista. Questo permette ai nostri curatori di seguire le tue submission e contattarti quando lo stato della tua submission cambia, o se sono necessarie ulteriori informazioni da te.</message>
+	<message key="author.submissions.queuedReviewSubsequent">Al {$round} giro di revisione</message>
+	<message key="author.submissions.queuedReviewRevisions">In revisione: richieste revisioni</message>
+	<message key="author.submissions.queuedEditingCopyedit">In Editing: Richiesto copyediting</message>
+	<message key="author.submissions.queuedEditingProofread">In Editing: Richiesta correzione di bozze</message>
+	<message key="author.submit.howToSubmit"><![CDATA[Sei in difficolt&#224;? Contatta <a href="mailto:{$supportEmail}">{$supportName}</a> per assistenza ({$supportPhone}).]]></message>
+	<message key="author.submit.reorder">Riordina i nomi degli autori</message>
+	<message key="author.submit.form.wordCountAlert">Hai superato il numero massimo di parole previsto per gli abstract in questa sezione.</message>
+	<message key="author.submit.mustEnterWaiverReason">Se vuoi rinunciare, devi indicare il motivo.</message>
 </locale>

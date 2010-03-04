@@ -4,13 +4,13 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2003-2010 John Willinsky
+  * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Thesis abstracts plugin localization strings for the it_IT locale.
   * Contributed by AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: locale.xml,v 1.11 2009/08/14 18:41:22 jmacgreg Exp $
   -->
  
 <locale name="it_IT" full_name="Italiano">
@@ -204,4 +204,6 @@
 	<message key="plugins.generic.thesis.form.studentBio">Profilo biografico dello studente</message>
 	<message key="plugins.generic.thesis.manager.form.coverageSample">Esempio di caratteristiche di ricerca</message>
 	<message key="plugins.generic.thesis.form.coverageSample">Esempio di caratteristiche di ricerca</message>
+	<message key="plugins.generic.thesis.enabled">Il plugin delle tesi è stato abilitato.</message>
+	<message key="plugins.generic.thesis.disabled">Il plugin delle tesi è stato abilitato.</message>
 </locale>

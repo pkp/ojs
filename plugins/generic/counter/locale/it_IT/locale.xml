@@ -4,13 +4,13 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2003-2010 John Willinsky
+  * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the it_IT locale.
   * Contributed by AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: locale.xml,v 1.7 2009/08/17 23:38:32 asmecher Exp $
   -->
  
 <locale name="it_IT" full_name="Italiano">
@@ -30,4 +30,6 @@
 	<message key="plugins.generic.counter.1a.ytdPdf">YTD PDF</message>
 	<message key="plugins.generic.counter.1a.totalForAllJournals">Totale per tutti i journals</message>
 	<message key="plugins.generic.counter.migrate">Migrazione file di log</message>
+	<message key="plugins.generic.counter.enabled">Il plugin COUNTER è stato abilitato.</message>
+	<message key="plugins.generic.counter.disabled">Il plugin COUNTER è stato disabilitato.</message>
 </locale>

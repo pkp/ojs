@@ -4,12 +4,12 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2003-2010 John Willinsky
+  * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the it_IT (Italiano) locale.
   *
-  * $Id$
+  * $Id: locale.xml,v 1.6 2009/08/17 23:38:33 asmecher Exp $
   -->
  
 <locale name="it_IT" full_name="Italiano">
@@ -32,4 +32,6 @@
 	<message key="plugins.generic.customLocale.file.reference">Testo di default</message>
 	<message key="plugins.generic.customLocale.file.custom">Testo personalizzato</message>
 	<message key="plugins.generic.customLocale.localeKey.description">Inserisci una chiave da cercare.</message>
+	<message key="plugins.generic.customLocale.enabled">Il plugin della traduzione personalizzata è stato abilitato.</message>
+	<message key="plugins.generic.customLocale.disabled">Il plugin della traduzione personalizzata è stato disabilitato.</message>
 </locale>

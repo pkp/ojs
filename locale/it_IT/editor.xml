@@ -4,12 +4,12 @@
 <!--
   * ../ojs2-devel//locale/it_IT/editor.xml
   *
-  * Copyright (c) 2003-2010 John Willinsky
+  * Copyright (c) 2000-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the it_IT (Italiano) locale.
   *
-  * $Id$
+  * $Id: editor.xml,v 1.6 2009/12/08 04:16:20 jmacgreg Exp $
   -->
 
 <locale name="it_IT" full_name = "Italiano">
@@ -32,7 +32,6 @@
 	<message key="editor.submissionReview.confirmDecision">Siete sicuri di voler registrare questa decisione?</message>
 	<message key="editor.submissionReview.emailWillArchive">Questa submission sarà archiviata dopo che la email di notifica all'autore sarà sia inviata o sia che il tasto 'Salta email' sarà cliccato.</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Prima di poter inviare questa submission per il copyediting, assicurati che una revisione è disponibile e che l'autore è stato notificato sulla decisione utilizzando il link Notifica l'autore sopra.</message>
-	<message key="editor.submissionReview.notes">La scadenza indica il numero di settimane mancanti alla scadenza della dead-line di revisione. Viene valorizzata solo dopo l'accettazione di incarico da parte del revisore.</message>
 	<message key="editor.notifyUsers">Notifica utenti</message>
 	<message key="editor.notifyUsers.inProgress">Notificare gli utenti...</message>
 	<message key="editor.usersNotified">Utenti notificati</message>
@@ -202,4 +201,7 @@
 	<message key="editor.article.uploaded">Caricato</message>
 	<message key="editor.article.removeCoverPage">Rimuovi l'immagine di copertina?</message>
 	<message key="editor.article.remove">Rimuovi</message>
+	<message key="editor.issues.enableOpenAccessDate">Abilita l'open access differito.</message>
+	<message key="editor.issues.unpublishIssue">Nascondi il fascicolo pubblicato</message>
+	<message key="editor.issues.confirmUnpublish">Sei sicuro di voler nascondere il fascicolo pubblicato?</message>
 </locale>
