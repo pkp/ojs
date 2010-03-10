@@ -4,12 +4,12 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2003-2010 John Willinsky
+  * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Google Analytics plugin localization strings for the it_IT (Italiano) locale.
   *
-  * $Id$
+  * $Id: locale.xml,v 1.8 2009/04/08 19:54:41 asmecher Exp $
   -->
  
 <locale name="it_IT" full_name="Italiano">
@@ -30,4 +30,6 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Seleziona il codice di monitoraggio da utilizzare</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Codice di monitoraggio legacy (urchin.js)</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Nuovo codice di monitoraggio (ga.js)</message>
+	<message key="plugins.generic.googleAnalytics.enabled">Il plugin Google Analytics è stato abilitato.</message>
+	<message key="plugins.generic.googleAnalytics.disabled">Il plugin Google Analytics è stato disabilitato.</message>
 </locale>

@@ -4,12 +4,12 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2003-2010 John Willinsky
+  * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the it_IT (Italiano) locale.
   *
-  * $Id$
+  * $Id: locale.xml,v 1.4 2009/08/17 23:38:30 asmecher Exp $
   -->
  
 <locale name="it_IT" full_name="Italiano">
@@ -18,6 +18,7 @@
 	<message key="plugins.block.subscription.blockTitle">Abbonamento</message>
 	<message key="plugins.block.subscription.expires">Scadenza</message>
 	<message key="plugins.block.subscription.providedBy">Accesso fornito da:</message>
-	<message key="plugins.block.subscription.providedByInstitution">Accesso fornito dalla tua istituzione</message>
 	<message key="plugins.block.subscription.comingFromIP">Venendo dall'IP:</message>
+	<message key="plugins.block.subscription.about">Abbonamenti</message>
+	<message key="plugins.block.subscription.loginToVerifySubscription">Entra per verificare l'abbonamento</message>
 </locale>

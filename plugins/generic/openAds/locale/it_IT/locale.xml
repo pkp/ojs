@@ -9,7 +9,7 @@
   *
   * Localization strings for the it_IT (Italiano) locale.
   *
-  * $Id$
+  * $Id: locale.xml,v 1.7 2009/08/14 18:41:22 jmacgreg Exp $
   -->
  
 <locale name="it_IT" full_name="Italiano">
@@ -31,4 +31,6 @@
 	<message key="plugins.generic.openads.orientation.left">Sinistra</message>
 	<message key="plugins.generic.openads.orientation.centre">Centro</message>
 	<message key="plugins.generic.openads.orientation.right">Destra</message>
+	<message key="plugins.generic.openads.enabled">Il plugin OpenAds è stato abilitato.</message>
+	<message key="plugins.generic.openads.disabled">Il plugin OpenAds è stato disabilitato.</message>
 </locale>

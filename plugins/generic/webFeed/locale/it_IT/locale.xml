@@ -4,13 +4,13 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2003-2010 John Willinsky
+  * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the it_IT locale.
   * Contributed by AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: locale.xml,v 1.7 2009/04/08 19:54:44 asmecher Exp $
   -->
  
 <locale name="it_IT" full_name="Italiano">
@@ -26,5 +26,7 @@
 	<message key="plugins.generic.webfeed.rss1.altText">Logo del RSS1</message>
 	<message key="plugins.generic.webfeed.rss2.altText">Logo del RSS2</message>
 	<message key="plugins.generic.webfeed.settings.homepage">Visualizza i feed wen solamente sulla home page e sulle pagine dei fascicoli.</message>
+	<message key="plugins.generic.webfeed.enabled">Il plugin del feed RSS è stato abilitato.</message>
+	<message key="plugins.generic.webfeed.disabled">Il plugin del feed RSS è stato disabilitato.</message>
 </locale>
 

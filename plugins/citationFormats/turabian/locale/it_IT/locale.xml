@@ -4,12 +4,12 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2003-2010 John Willinsky
+  * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for this citation plugin in it_IT.
   *
-  * $Id$
+  * $Id: locale.xml,v 1.5 2009/04/08 19:54:39 asmecher Exp $
   -->
  
 <locale name="it_IT" full_name="Italiano">

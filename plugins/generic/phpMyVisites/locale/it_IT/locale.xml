@@ -4,12 +4,12 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2003-2010 John Willinsky
+  * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * phpMyVisites plugin localization strings for the it_IT (Italiano) locale.
   *
-  * $Id$
+  * $Id: locale.xml,v 1.6 2009/04/08 19:54:42 asmecher Exp $
   -->
  
 <locale name="it_IT" full_name="Italiano">
@@ -29,4 +29,6 @@
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdInstructions"><![CDATA[In phpMyVisites, clica su Administration->Modify site. Il numero del profilo del sito è visualizzato dopo il nome del profilo del tuo sito.]]></message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdRequired">Per favore inserisci un numero del profilo del sito.</message>
 
+	<message key="plugins.generic.phpmv.enabled">Il plugin phpMyVisites è stato abilitato.</message>
+	<message key="plugins.generic.phpmv.disabled">Il plugin phpMyVisites è stato disabilitato.</message>
 </locale>

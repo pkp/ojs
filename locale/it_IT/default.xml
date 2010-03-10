@@ -4,13 +4,13 @@
 <!--
   * default.xml
   *
-  * Copyright (c) 2003-2010 John Willinsky
+  * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the it_IT (Italian) locale.
   * Contributed by Andrea Bollini.
   *
-  * $Id$
+  * $Id: default.xml,v 1.1 2009/08/04 17:09:35 asmecher Exp $
   -->
  
 <locale name="it_IT" full_name="Italian">
@@ -124,7 +124,6 @@ Dopo che avete finito con le vostre revisioni, rinominare il file da NomeAutoreQ
 	<li>Trasforma questa frase in un hyperlink evidenziando la frase e usando lo strumento Inserisci Hyperlink di Word e la URL appropriata preparata in #2.</li>
 	</ol>]]></message>
 	<message key="default.journalSettings.waiverPolicy">Se non hai fondi per pagare tali quote, avrai l'opportunità di derogare ogni quota. Non vogliamo impedire la pubblicazione di lavori notevoli.</message>
-	<message key="default.journalSettings.payPerViewFeeDescription">Il pagamento di questa quota ti permetterà di vedere, scaricare, e stampare questo articolo.</message>
 	<message key="default.journalSettings.membershipFeeDescription">Il pagamento di questa quota ti iscriverà come membro a questa associazione per un anno e ti permetterà l'accesso libero a questa rivista.</message>
 	<message key="default.journalSettings.donationFeeDescription">Donazioni di qualsiasi somma a questa rivista sono bene accette e fornisconi mezzi ai curatori per continuare a permettere alla rivista la più alta qualità per i suoi lettori.</message>
 	<message key="default.journalSettings.purchaseArticleFeeDescription">Il pagamento di questa</message>
@@ -154,4 +153,13 @@ Il numero nella tabella 3 non è allineato nella prima colonna
 <br />
 <pre>4. FORMATTAZIONE
 Il paragrafo che comincia con "Questo ultimo argomento..." non è allineato</pre></pre>]]></message>
+	<message key="section.default.title">Articoli</message>
+	<message key="section.default.abbrev">ART</message>
+	<message key="default.journalSettings.submissionFee">Submission</message>
+	<message key="default.journalSettings.fastTrackFee">Review espressa</message>
+	<message key="default.journalSettings.publicationFee">Pubblicazione di un articolo</message>
+	<message key="default.journalSettings.purchaseArticleFee">Acquisto di un articolo</message>
+	<message key="default.journalSettings.membershipFee">Membership</message>
+	<message key="default.journalSettings.donationFee">Donazioni alla rivista</message>
+	<message key="section.default.policy">Policy di default</message>
 </locale>

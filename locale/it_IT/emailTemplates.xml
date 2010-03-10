@@ -3,38 +3,40 @@
 <!--
   * emailTemplateData.xml
   *
-  * Copyright (c) 2003-2010 John Willinsky
+  * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
   *
-  * $Id$
+  * $Id: emailTemplates.xml,v 1.5 2009/12/08 04:16:20 jmacgreg Exp $
   -->
 <email_texts locale="it_IT">
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>Conferma di richiesta password</subject>
-		<body>Abbiamo ricevuto una richiesta di resettare la password per il sito web {$siteTitle}.
+		<body><![CDATA[Abbiamo ricevuto una richiesta di resettare la password per  {$siteTitle}.
 
-Se non ha fatto questa richiesta, ignori pure questo messaggioe la password non sarà modificata. Se desidera generare una nuova password, clicchi sulla URL qui sotto.
+Se non hai fatto questa richiesta, ignora pure questo messaggio e la password non sar&#224; modificata. Se desideri generare una nuova password, clicca sul link qui sotto.
 
 Reset password: {$url}
 
-{$principalContactSignature}</body>
+{$principalContactSignature}]]></body>
 		<description>Questa email viene mandata ad un utente registrato quando questi indica che ha dimenticato la sua password o non riesce a fare il log in. Fornisce una URL per il reset della password.</description>
 	</email_text>
 	<email_text key="PASSWORD_RESET">
 		<subject>Password Reset</subject>
-		<body>La tua password è stata resettata con successo per questo sito web {$siteTitle}. Ricordare questa username e password, dato che è necessaria per ogni azione rispetto alla rivista.
+		<body><![CDATA[La tua password per {$siteTitle} &#232; stata resettata con successo. 
+Ricorda username e password, necessarie per accedere alle funzioni speciali.
 
 La tua username: {$username}
 La tua nuova password: {$password}
 
-{$principalContactSignature}</body>
+{$principalContactSignature}]]></body>
 		<description>Questa email viene mandata ad un utente registrato quando ha resettato la password seguendo il processo descritto nella email PASSWORD_RESETTA_CONFERMA.</description>
 	</email_text>
 	<email_text key="USER_REGISTER">
 		<subject>Registrazione nuovo utente</subject>
-		<body>Grazie per esserti registrato a {$journalName}. Ricordi la username e password, che sono necessarie per ogni azione sulla rivista.
+		<body>Grazie per esserti registrato a {$journalName}. 
+Ricordi la username e password, necessarie per le funzioni speciali della rivista.
 
 Username: {$username}
 Password: {$password}
@@ -45,9 +47,8 @@ Grazie,
 	</email_text>
 	<email_text key="PUBLISH_NOTIFY">
 		<subject>Pubblicato un nuovo fascicolo</subject>
-		<body>Lettori:
-
- All'indirizzo {$journalUrl} è stata pubblicata un nuovo fascicolo di {$journalName}. 
+		<body>Gentile lettore,
+All'indirizzo {$journalUrl} è stato pubblicato un nuovo numero di {$journalName}. 
 
 Grazie per l'interesse dimostratoci,
 {$editorialContactSignature}</body>
@@ -55,21 +56,21 @@ Grazie per l'interesse dimostratoci,
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
 		<subject>Notifica di abbonamento</subject>
-		<body>{$subscriberName}:
+		<body><![CDATA[Gentile{$subscriberName}:
 
-EE' stato attivato il Suo abbonamento a {$journalName}, con le seguenti caratteristiche:
+Il Suo abbonamento a {$journalName} &#232; stato attivato con le seguenti caratteristiche:
 
 {$subscriptionType}
 
 Accedere al contenuto disponibile solo agli abbonanti, facendo semplicemente il log in al sistema con la tua username, "{$username}".
 
-Una volta effettuato il log in al sistema può modificare i dettagli del profilo e la password in ogni momento.
+Una volta effettuato il log in al sistema pu&#242; modificare i dettagli del profilo e la password in ogni momento.
 
 Gli utenti istituzionali vengono riconosciuti automaticamente dal sistema.
 
 Per qualsiasi domanda non esiti a contattarmi.
 
-{$subscriptionContactSignature}</body>
+{$subscriptionContactSignature}]]></body>
 		<description>Questa email notifica ai lettori registrati che l'amministratore una sottoscrizione per loro. Questa fornisce la URL del journal insieme con le istruzioni per l'accesso.</description>
 	</email_text>
 	<email_text key="LOCKSS_EXISTING_ARCHIVE">
@@ -123,9 +124,10 @@ La ringrazio per la preferenza espressa nei confronti di {$journalName}.
 		<subject>Submission non idonea</subject>
 		<body>{$authorName}:
 
-Una revisione iniziale di "{$articleTitle}" ha rilevato che questa submission non rientra nello scopo e nel focus di {$journalName}. Le suggerisco di consultare meglio la sezione About della rivista, per saperne di più sui lavori che pubblichiamo. Puà comunque considerare di proporre la submission ad altra rivista più idonea.
+Una revisione iniziale di "{$articleTitle}" ha rilevato che questa submission non rientra nello scopo e nel focus di {$journalName}. Le suggerisco di consultare meglio la sezione delle informazioni della rivista, per saperne di più sui lavori che pubblichiamo. Può comunque considerare di proporre la submission ad altra rivista più idonea.
 
 {$editorialContactSignature}</body>
+		<description></description>
 	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
 		<subject>Commento alla submission </subject>
@@ -138,7 +140,8 @@ Una revisione iniziale di "{$articleTitle}" ha rilevato che questa submission no
 	</email_text>
 	<email_text key="SUBMISSION_DECISION_REVIEWERS">
 		<subject>Decisione su "{$articleTitle}"</subject>
-		<body>Essendo uno dei revisori per la  submission, "{$articleTitle}," a {$journalName}, ti comunico suggerimenti e decisioni mandate all'autore della submission. Grazie ancora per il tuo contributo.
+		<body>Essendo uno dei revisori per la  submission "{$articleTitle}," a {$journalName}, ti comunico i suggerimenti e decisioni mandate all'autore della submission. 
+Grazie ancora per il tuo contributo.
  
 {$editorialContactSignature}
 
@@ -692,5 +695,169 @@ Password: {$password}
 Grazie,
 {$principalContactSignature}</body>
 		<description>Questa email viene spedita a un nuovo revisore registrato come benvenuto nel sistema e gli fornsice una nota con nome utente e password</description>
+	</email_text>
+	<email_text key="NOTIFICATION">
+		<subject>Nuova notifica da {$siteTitle}</subject>
+		<body>Hai ricevuto una nuova notifica da  {$siteTitle}:
+
+{$notificationContents}
+
+Link: {$url}
+
+{$principalContactSignature}</body>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST">
+		<subject>Nuova notifica da {$siteTitle}</subject>
+		<body>Hai ricevuto una notifica da  {$siteTitle}:
+--
+{$notificationContents}
+
+Link: {$url}
+--
+
+Se non vuoi ricevere altre notifiche, vai alla pagina {$unsubscribeLink} per cancellarti.
+
+{$principalContactSignature}</body>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
+		<subject>Benvenuto nella mailing list di {$siteTitle}!</subject>
+		<body><![CDATA[Hai chiesto di ricevere notifiche da {$siteTitle}.
+
+Clicca su questo link per confermare e aggiungere il tuo indirizzo nella lista di distribuzione: {$confirmLink}
+
+Se non vuoi ricevere email di notifica, vai alla pagina {$unsubscribeLink} per cancellarti.
+
+La tua password per disabilitare le notifiche &#232;: {$password}
+
+{$principalContactSignature}]]></body>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST_PASSWORD">
+		<subject>Informazioni sulla tua iscrizione alla mailing list per le notifiche di {$siteTitle}</subject>
+		<body>Se non vuoi ricevere altre notifiche, vai alla pagina {$unsubscribeLink}  e inserisci il tuo indirizzo email e questa password: {$password}
+
+{$principalContactSignature}</body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_ACCEPT">
+		<subject>Decisione dell'editor</subject>
+		<body><![CDATA[{$authorName}:
+
+Abbiamo raggiunto una decisione riguardo alla Sua submission a {$journalTitle}, "{$articleTitle}".
+
+La decisione &#232;:
+
+{$editorialContactSignature}]]></body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_REVISIONS">
+		<subject>Decisione dell'editor</subject>
+		<body><![CDATA[{$authorName}:
+
+Abbiamo raggiunto una decisione sulla Sua submission a {$journalTitle}, "{$articleTitle}".
+
+La nostra decisione &#232;:
+
+{$editorialContactSignature}]]></body>
+		<description></description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INSTL">
+		<subject>Rinnovo dell'abbonamento istituzionale</subject>
+		<body><![CDATA[&#200; stato rinnovato online un abbonamento istituzionale a {$journalName} con i seguenti dettagli.
+
+Tipo di abbonamento:
+{$subscriptionType}
+
+Ente:
+{$institutionName}
+{$institutionMailingAddress}
+
+Dominio (se indicato):
+{$domain}
+
+IP Ranges (se indicato):
+{$ipRanges}
+
+Contattare:
+{$userDetails}
+
+Membership (se indicato):
+{$membership}
+
+Per vedere o modificare i dettagli, andare alla pagina: {$subscriptionUrl}]]></body>
+		<description>Notifica del rinnovo di un abbonamento istituzionale.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INDL">
+		<subject>Rinnovo dell'abbonamento individuale</subject>
+		<body><![CDATA[&#200; stato rinnovato online un abbonamento individuale a {$journalName} con i seguenti dettagli.
+
+Tipo di abbonamento:
+{$subscriptionType}
+
+Utente:
+{$userDetails}
+
+Membership (se indicato):
+{$membership}
+
+Per vedere o modificare i dettagli dell'abbonamento, vai alla pagina: {$subscriptionUrl}]]></body>
+		<description>Notifica del rinnovo di un abbonamento individuale.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
+		<subject>Acquisto di un abbonamento istituzionale</subject>
+		<body><![CDATA[&#200; stato acquistato un abbonamento istituzionale a {$journalName} con i dettagli indicati sotto. Per attivare l'abbonamentop, utilizzare il link fornito sotto e selezionare lo status 'Attivo'per tale abbonamento.
+
+Tipo di abbonamento:
+{$subscriptionType}
+
+Ente:
+{$institutionName}
+{$institutionMailingAddress}
+
+Dominio (se indicato):
+{$domain}
+
+IP Ranges (se indicato):
+{$ipRanges}
+
+Contattare:
+{$userDetails}
+
+Membership (se indicato):
+{$membership}
+
+Per vedere o modificare i dettagli, andare alla pagina: {$subscriptionUrl}]]></body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
+		<subject>Acquisto di un abbonamento individuale</subject>
+		<body><![CDATA[&#200; stato acquistato online un abbonamento individuale a {$journalName} con i seguenti dettagli.
+
+Tipo di abbonamento:
+{$subscriptionType}
+
+Utente:
+{$userDetails}
+
+Membership (se indicato):
+{$membership}
+
+Per vedere o modificare i dettagli dell'abbonamento, vai alla pagina: {$subscriptionUrl}]]></body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_RESUBMIT">
+		<subject>Decisione dell'editor</subject>
+		<body><![CDATA[{$authorName}:
+
+Abbiamo raggiunto una decisione riguardo alla Sua submission a {$journalTitle}, "{$articleTitle}".
+
+La decisione &#232;:
+
+{$editorialContactSignature}]]></body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_DECLINE">
+		<subject>Decisione dell'editor</subject>
+		<body><![CDATA[{$authorName}:
+
+Abbiamo raggiunto una decisione riguardo alla Sua submission a {$journalTitle}, "{$articleTitle}".
+
+La decisione &#232;:
+
+{$editorialContactSignature}]]></body>
 	</email_text>
 </email_texts>

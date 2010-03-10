@@ -4,13 +4,13 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2003-2010 John Willinsky
+  * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * LDAP authentication plugin localization strings for the it_IT (Italiano) locale.
   * Contributed by AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: locale.xml,v 1.11 2009/12/08 04:17:02 jmacgreg Exp $
   -->
  
 <locale name="it_IT" full_name="Italiano">

@@ -4,15 +4,17 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2003-2010 John Willinsky
+  * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the it_IT (Italiano) locale.
   *
-  * $Id$
+  * $Id: locale.xml,v 1.5 2009/04/08 19:54:42 asmecher Exp $
   -->
  
 <locale name="it_IT" full_name="Italiano">
 	<message key="plugins.generic.sehl.name">SEHL Plugin</message>
 	<message key="plugins.generic.sehl.description">Questo plugin implementa il Search Engine HighLighting (SEHL) cosicchè quando un motore di ricerca individua un articolo HTML, le parole chiavi ricercate vengono evidenziate.</message>
+	<message key="plugins.generic.sehl.enabled">Il plugin SEHL è stato abilitato.</message>
+	<message key="plugins.generic.sehl.disabled">Il plugin SEHL è stato disabilitato.</message>
 </locale>
