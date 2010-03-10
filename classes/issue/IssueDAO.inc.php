@@ -557,6 +557,21 @@ class IssueDAO extends DAO {
 	}
 
 	/**
+	 * Return number of articles assigned to an issue.
+	 * @param $issueId int
+	 * @return int
+	 */
+	function getNumArticles($issueId) {
+		$result =& $this->retrieve('SELECT COUNT(*) FROM published_articles WHERE issue_id = ?', $issueId);
+		$returner = isset($result->fields[0]) ? $result->fields[0] : 0;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
+	}
+
+	/**
 	 * Delete the custom ordering of a published issue.
 	 * @param $journalId int
 	 */

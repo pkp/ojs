@@ -716,6 +716,15 @@ class Issue extends DataObject {
 	}
 
 	/**
+	 * Get number of articles in this issue.
+	 * @return int
+	 */
+	function getNumArticles() {
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		return $issueDao->getNumArticles($this->getId());
+	}
+
+	/**
 	 * Return the "best" issue ID -- If a public issue ID is set,
 	 * use it; otherwise use the internal issue Id. (Checks the journal
 	 * settings to ensure that the public ID feature is enabled.)
