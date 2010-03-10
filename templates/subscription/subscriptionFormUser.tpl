@@ -42,7 +42,10 @@
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="userAffiliation" key="user.affiliation"}</td>
-	<td class="value"><textarea name="userAffiliation" id="userAffiliation" rows="5" cols="40" class="textArea">{$userAffiliation|escape}</textarea></td>
+	<td class="value">
+		<textarea name="userAffiliation" id="userAffiliation" rows="5" cols="40" class="textArea">{$userAffiliation|escape}</textarea><br/>
+		<span class="instruct">{translate key="user.affiliation.description"}</span>
+	</td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="userUrl" key="user.url"}</td>

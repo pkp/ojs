@@ -130,6 +130,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
 					$newUser->setSignature(Request::getUserVar($i.'_signature'), null);
 					$newUser->setBiography(Request::getUserVar($i.'_biography'), null);
 					$newUser->setInterests(Request::getUserVar($i.'_interests'), null);
+					$newUser->setGossip(Request::getUserVar($i.'_gossip'), null);
 					$newUser->setCountry(Request::getUserVar($i.'_country'));
 					$newUser->setMailingAddress(Request::getUserVar($i.'_mailingAddress'));
 					$newUser->setFax(Request::getUserVar($i.'_fax'));
