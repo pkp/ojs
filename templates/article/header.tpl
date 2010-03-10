@@ -15,7 +15,7 @@
 <head>
 	<title>{$article->getLocalizedTitle()|escape} | {$article->getFirstAuthor(true)|escape} | {$currentJournal->getLocalizedTitle()|escape}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset|escape}" />
-	<meta name="description" content="{$article->getLocalizedTitle()|escape}" />
+	<meta name="description" content="{$article->getLocalizedTitle()|strip_tags|escape}" />
 	{if $article->getLocalizedSubject()}
 		<meta name="keywords" content="{$article->getLocalizedSubject()|escape}" />
 	{/if}

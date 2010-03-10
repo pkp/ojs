@@ -88,6 +88,10 @@
 		<td class="value">{$user->getLocalizedInterests()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
+		<td class="label">{translate key="user.gossip"}</td>
+		<td class="value">{$user->getLocalizedGossip()|escape|default:"&mdash;"}</td>
+	</tr>
+	<tr valign="top">
 		<td class="label">{translate key="common.mailingAddress"}</td>
 		<td class="value">{$user->getMailingAddress()|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
 	</tr>

@@ -45,8 +45,7 @@ class ArticleReportDAO extends DAO {
 					LEFT JOIN section_settings sl ON (sl.section_id=a.section_id AND sl.setting_name = ? AND sl.locale = ?)
 			WHERE
 				a.journal_id = ?
-			ORDER BY
-				title',
+			ORDER BY a.article_id',
 			array(
 				'title',
 				$primaryLocale,

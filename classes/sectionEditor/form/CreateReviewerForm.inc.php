@@ -55,7 +55,7 @@ class CreateReviewerForm extends Form {
 	}
 
 	function getLocaleFieldNames() {
-		return array('biography', 'interests');
+		return array('biography', 'interests', 'gossip');
 	}
 
 	/**
@@ -98,6 +98,7 @@ class CreateReviewerForm extends Form {
 			'country',
 			'biography',
 			'interests',
+			'gossip',
 			'userLocales',
 			'sendNotify',
 			'username'
@@ -136,6 +137,7 @@ class CreateReviewerForm extends Form {
 		$user->setCountry($this->getData('country'));
 		$user->setBiography($this->getData('biography'), null); // Localized
 		$user->setInterests($this->getData('interests'), null); // Localized
+		$user->setGossip($this->getData('gossip'), null); // Localized
 		$user->setMustChangePassword($this->getData('mustChangePassword') ? 1 : 0);
 
 		$authDao =& DAORegistry::getDAO('AuthSourceDAO');
