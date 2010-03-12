@@ -484,7 +484,7 @@ class ReviewAssignmentDAO extends DAO {
 	 */
 	function deleteReviewAssignmentById($reviewId) {
 		$reviewFormResponseDao =& DAORegistry::getDAO('ReviewFormResponseDAO');
-		$reviewFormResponseDao->deleteReviewFormResponseByReviewId($reviewId);
+		$reviewFormResponseDao->deleteByReviewId($reviewId);
 
 		return $this->update(
 			'DELETE FROM review_assignments WHERE review_id = ?',

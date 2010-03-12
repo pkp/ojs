@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * 2.3.0_update.xml
+  *
+  * Copyright (c) 2003-2010 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 2.3.2 database updates XML file.
+  *
+  * $Id$
+  -->
+<data>
+	<!-- Bug #5124: port review forms to pkp-lib -->
+	<sql>
+		<query>UPDATE review_forms SET assoc_type = 256</query><!-- ASSOC_TYPE_JOURNAL -->
+	</sql>
+</data>
