@@ -101,6 +101,11 @@
 		<!-- 2.2.x to 2.3 -->
 		<data file="dbscripts/xml/upgrade/2.3.0_subscription_ip.xml" />
 	</upgrade>
+
+	<upgrade minversion="2.0.0.0" maxversion="2.3.1.0">
+		<!-- 2.x to 2.3.2 -->
+		<data file="dbscripts/xml/upgrade/2.3.2_preupdate.xml" />
+	</upgrade>
 	
 	<!-- PKP schema components -->
 	<schema file="lib/pkp/xml/schema/common.xml" />
@@ -109,6 +114,7 @@
 	<schema file="lib/pkp/xml/schema/scheduledTasks.xml" />
 	<schema file="lib/pkp/xml/schema/temporaryFiles.xml" />
 	<schema file="lib/pkp/xml/schema/citation.xml" />
+	<schema file="lib/pkp/xml/schema/reviewForms.xml" />
 
 	<!-- OJS schema -->
 	<schema file="dbscripts/xml/ojs_schema.xml" />
@@ -175,5 +181,10 @@
 
 	<upgrade minversion="2.0.0.0" maxversion="2.3.0.0">
 		<note file="docs/release-notes/README-2.3.1" />
+	</upgrade>
+	
+	<upgrade minversion="2.0.0.0" maxversion="2.3.1.0">
+		<!-- 2.x to 2.3.2 -->
+		<data file="dbscripts/xml/upgrade/2.3.2_update.xml" />
 	</upgrade>
 </install>

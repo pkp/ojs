@@ -123,10 +123,10 @@ class ReviewFormElementForm extends Form {
 
 		if ($reviewFormElement->getId() != null) {
 			$reviewFormElementDao->deleteSetting($reviewFormElement->getId(), 'possibleResponses');
-			$reviewFormElementDao->updateReviewFormElement($reviewFormElement);
+			$reviewFormElementDao->updateObject($reviewFormElement);
 			$this->reviewFormElementId = $reviewFormElement->getId();
 		} else {
-			$this->reviewFormElementId = $reviewFormElementDao->insertReviewFormElement($reviewFormElement);
+			$this->reviewFormElementId = $reviewFormElementDao->insertObject($reviewFormElement);
 			$reviewFormElementDao->resequenceReviewFormElements($this->reviewFormId);
 		}
 
