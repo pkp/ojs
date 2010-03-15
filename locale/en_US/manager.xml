@@ -131,6 +131,7 @@
 	<message key="manager.reviewFormElements.question">Item</message>
 	<message key="manager.reviewFormElements.radiobuttons">Radio buttons (you can only choose one)</message>
 	<message key="manager.reviewFormElements.required">Reviewers required to complete item</message>
+	<message key="manager.reviewFormElements.included">Included in message to author</message>
 	<message key="manager.reviewFormElements.smalltextfield">Single word text box</message>
 	<message key="manager.reviewFormElements.textarea">Extended text box</message>
 	<message key="manager.reviewFormElements.textfield">Single line text box</message>

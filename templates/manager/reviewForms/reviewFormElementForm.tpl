@@ -62,6 +62,13 @@ function togglePossibleResponses(newValue, multipleResponsesElementTypesString) 
 	</td>
 </tr>
 <tr valign="top">
+	<td>&nbsp;</td>
+	<td class="value">
+		<input type="checkbox" name="included" id="included" value="1" {if $included}checked="checked"{/if} />
+		{fieldLabel name="included" key="manager.reviewFormElements.included"}
+	</td>
+</tr>
+<tr valign="top">
 	<td class="label">{fieldLabel name="elementType" required="true" key="manager.reviewFormElements.elementType"}</td>
 	<td class="value">
 		<select name="elementType" id="elementType" class="selectMenu" size="1" onchange="togglePossibleResponses(this.options[this.selectedIndex].value, '{$multipleResponsesElementTypesString}')">{html_options_translate options=$reviewFormElementTypeOptions selected=$elementType}</select>
