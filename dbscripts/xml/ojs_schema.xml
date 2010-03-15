@@ -1262,7 +1262,7 @@
 		<field name="author_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="comment_title" type="C2" size="90">
+		<field name="comment_title" type="C2" size="255">
 			<NOTNULL/>
 		</field>
 		<field name="comments" type="X"/>
