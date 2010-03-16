@@ -179,7 +179,7 @@ class ArticleCommentDAO extends DAO {
 				$articleComment->getArticleId(),
 				$articleComment->getAssocId(),
 				$articleComment->getAuthorId(),
-				$articleComment->getCommentTitle(),
+				String::substr($articleComment->getCommentTitle(), 0, 255),
 				$articleComment->getComments(),
 				$articleComment->getViewable() === null ? 0 : $articleComment->getViewable()
 			)
@@ -251,7 +251,7 @@ class ArticleCommentDAO extends DAO {
 				$articleComment->getArticleId(),
 				$articleComment->getAssocId(),
 				$articleComment->getAuthorId(),
-				$articleComment->getCommentTitle(),
+				String::substr($articleComment->getCommentTitle(), 0, 255),
 				$articleComment->getComments(),
 				$articleComment->getViewable() === null ? 1 : $articleComment->getViewable(),
 				$articleComment->getId()
