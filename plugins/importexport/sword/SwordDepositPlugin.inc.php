@@ -25,6 +25,7 @@ class SwordDepositPlugin extends ImportExportPlugin {
 	 * 	the plugin will not be registered.
 	 */
 	function register($category, $path) {
+		import('sword.OJSSwordDeposit');
 		$success = parent::register($category, $path);
 		$this->addLocaleData();
 		return $success;
@@ -52,7 +53,6 @@ class SwordDepositPlugin extends ImportExportPlugin {
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
 		$journal =& Request::getJournal();
 
-		import('sword.OJSSwordDeposit');
 		$deposit = new OJSSwordDeposit($publishedArticle);
 		$deposit->setMetadata();
 		if ($depositGalleys) $deposit->addGalleys();
@@ -68,18 +68,20 @@ class SwordDepositPlugin extends ImportExportPlugin {
 		parent::display($args);
 		$this->setBreadcrumbs();
 
+		$swordUrl = Request::getUserVar('swordUrl');
+		$username = Request::getUserVar('swordUsername');
+		$password = Request::getUserVar('swordPassword');
+		$swordDepositPoint = Request::getUserVar('swordDepositPoint');
+		$depositEditorial = Request::getUserVar('depositEditorial');
+		$depositGalleys = Request::getUserVar('depositGalleys');
+
 		switch (array_shift($args)) {
 			case 'deposit':
-				$depositUrl = Request::getUserVar('swordUrl');
-				$username = Request::getUserVar('swordUsername');
-				$password = Request::getUserVar('swordPassword');
-				$depositEditorial = Request::getUserVar('depositEditorial');
-				$depositGalleys = Request::getUserVar('depositGalleys');
 				$depositIds = array();
 				try {
 					foreach (Request::getUserVar('articleId') as $articleId) {
 						$depositIds[] = $this->deposit(
-							$depositUrl,
+							$swordDepositPoint,
 							$username,
 							$password,
 							$articleId,
@@ -96,8 +98,9 @@ class SwordDepositPlugin extends ImportExportPlugin {
 							null, null, null,
 							array('plugin', $this->getName()),
 							array(
-								'swordUrl' => $depositUrl,
+								'swordUrl' => $swordUrl,
 								'swordUsername' => $swordUsername,
+								'swordDepositPoint' => $swordDepositPoint,
 								'depositEditorial' => $depositEditorial,
 								'depositGalleys' => $depositGalleys,
 							)
@@ -114,8 +117,9 @@ class SwordDepositPlugin extends ImportExportPlugin {
 						null, null, null,
 						array('plugin', $this->getName()),
 						array(
-							'swordUrl' => $depositUrl,
+							'swordUrl' => $swordUrl,
 							'swordUsername' => $swordUsername,
+							'swordDepositPoint' => $swordDepositPoint,
 							'depositEditorial' => $depositEditorial,
 							'depositGalleys' => $depositGalleys
 						)
@@ -133,8 +137,19 @@ class SwordDepositPlugin extends ImportExportPlugin {
 				if ($rangeInfo->isValid()) $articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 				import('core.VirtualArrayIterator');
 				$iterator = new VirtualArrayIterator(ArticleSearch::formatResults($articleIds), $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
-				foreach (array('swordUrl', 'swordUsername', 'swordPassword', 'depositEditorial', 'depositGalleys') as $var) {
+				foreach (array('swordUrl', 'swordUsername', 'swordPassword', 'depositEditorial', 'depositGalleys', 'swordDepositPoint') as $var) {
 					$templateMgr->assign($var, Request::getUserVar($var));
+				}
+				if (!empty($swordUrl)) {
+					$client = new SWORDAPPClient();
+					$doc = $client->servicedocument($swordUrl, $username, $password, '');
+					$depositPoints = array();
+					foreach ($doc->sac_workspaces as $workspace) {
+						foreach ($workspace->sac_collections as $collection) {
+							$depositPoints["$collection->sac_href"] = "$collection->sac_colltitle";
+						}
+					}
+					$templateMgr->assign_by_ref('swordDepositPoints', $depositPoints);
 				}
 				$templateMgr->assign_by_ref('articles', $iterator);
 				$templateMgr->display($this->getTemplatePath() . 'index.tpl');

@@ -44,6 +44,13 @@ function toggleChecked() {
 		<td class="value"><input type="password" id="swordPassword" name="swordPassword" value="{$swordPassword|escape}" size="20" /></td>
 	</tr>
 	<tr valign="top">
+		<td class="label"><label for="swordDepositPoint">{translate key="plugins.importexport.sword.depositPoint"}</label></td>
+		<td class="value">
+			{html_options name="swordDepositPoint" options=$swordDepositPoints selected=$swordDepositPoint}
+			<input type="button" onclick="document.articles.action='{plugin_url}'; document.articles.submit()" value="{translate key="common.refresh"}" />
+		</td>
+	</tr>
+	<tr valign="top">
 		<td rowspan="2" class="label">
 			{translate key="common.options"}
 		</td>
