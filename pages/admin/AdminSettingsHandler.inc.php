@@ -82,15 +82,9 @@ class AdminSettingsHandler extends AdminHandler {
 		} elseif ($settingsForm->validate()) {
 			$settingsForm->execute();
 			$templateMgr =& TemplateManager::getManager();
-			$templateMgr->assign(array(
-				'currentUrl' => Request::url(null, null, 'settings'),
-				'pageTitle' => 'admin.siteSettings',
-				'message' => 'common.changesSaved',
-				'backLink' => Request::url(null, Request::getRequestedPage()),
-				'backLinkLabel' => 'admin.siteAdmin'
-			));
-			$templateMgr->display('common/message.tpl');
-			exit();
+			import('notification.Notification');
+			Notification::createTrivialNotification('common.changesSaved');
+			Request::redirect(null, null, 'index');
 		}
 		$settingsForm->display();
 	}

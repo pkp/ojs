@@ -20,4 +20,8 @@
 	<sql>
 		<query>UPDATE review_form_elements SET included = 1</query>
 	</sql>
+	<!-- Bug #5234: add JQuery-based notification support -->
+	<sql>
+		<query>UPDATE notifications SET level = 2</query><!-- NOTIFICATION_LEVEL_NORMAL -->
+	</sql>
 </data>
