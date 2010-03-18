@@ -83,7 +83,7 @@
 		<!-- #4756# Rename journal_id to assoc_id in user_settings -->
 		<data file="dbscripts/xml/upgrade/2.3.0_usersettings.xml" />
 	</upgrade>
-	
+
 	<upgrade minversion="2.0.0.0" maxversion="2.2.0.0">
 		<!-- 2.x to 2.2.1 -->
 		<data file="dbscripts/xml/upgrade/2.2.1_preupdate.xml" />
@@ -91,12 +91,12 @@
 
 	<!-- Create signoffs table before migration occurs -->
 	<schema file="lib/pkp/xml/schema/signoff.xml" />
-	
+
 	<upgrade minversion="2.0.0.0" maxversion="2.2.9.0">
 		<!-- 2.x to 2.3 -->
 		<data file="dbscripts/xml/upgrade/2.3.0_preupdate.xml" />
 	</upgrade>
-	
+
 	<upgrade minversion="2.2.0.0" maxversion="2.2.9.0">
 		<!-- 2.2.x to 2.3 -->
 		<data file="dbscripts/xml/upgrade/2.3.0_subscription_ip.xml" />
@@ -106,7 +106,7 @@
 		<!-- 2.x to 2.3.2 -->
 		<data file="dbscripts/xml/upgrade/2.3.2_preupdate.xml" />
 	</upgrade>
-	
+
 	<!-- PKP schema components -->
 	<schema file="lib/pkp/xml/schema/common.xml" />
 	<schema file="lib/pkp/xml/schema/groups.xml" />
@@ -171,7 +171,6 @@
 	<upgrade minversion="2.0.0.0" maxversion="2.2.9.0">
 		<code function="separateSubscriptions" />
 		<data file="dbscripts/xml/upgrade/2.3.0_update.xml" />
-		<data file="dbscripts/xml/upgrade/2.3.0_subscription_ip2.xml" />
 		<code function="localizeMoreJournalSettings" />
 		<code function="cleanImageAlts" />
 		<code function="cleanTitles" />
@@ -179,10 +178,16 @@
 		<note file="docs/release-notes/README-2.3.0" />
 	</upgrade>
 
+	<upgrade minversion="2.2.0.0" maxversion="2.2.9.0">
+		<!-- 2.2.x to 2.3 -->
+		<data file="dbscripts/xml/upgrade/2.3.0_subscription_ip2.xml" />
+	</upgrade>
+
+
 	<upgrade minversion="2.0.0.0" maxversion="2.3.0.0">
 		<note file="docs/release-notes/README-2.3.1" />
 	</upgrade>
-	
+
 	<upgrade minversion="2.0.0.0" maxversion="2.3.1.0">
 		<!-- 2.x to 2.3.2 -->
 		<data file="dbscripts/xml/upgrade/2.3.2_update.xml" />
