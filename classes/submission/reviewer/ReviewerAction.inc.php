@@ -304,12 +304,15 @@ class ReviewerAction extends Action {
 				$commentForm->execute();
 
 				// Send a notification to associated users
-				import('notification.Notification');
+				import('notification.NotificationManager');
+				$notificationManager = new NotificationManager();
 				$notificationUsers = $article->getAssociatedUserIds();
 				foreach ($notificationUsers as $userRole) {
 					$url = Request::url(null, $userRole['role'], 'submissionReview', $article->getId(), null, 'peerReview');
-					Notification::createNotification($userRole['id'], "notification.type.reviewerComment",
-						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_REVIEWER_COMMENT);
+					$notificationManager->createNotification(
+						$userRole['id'], 'notification.type.reviewerComment',
+						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_REVIEWER_COMMENT
+					);
 				}
 				
 				if ($emailComment) {
@@ -354,7 +357,8 @@ class ReviewerAction extends Action {
 				$reviewForm->execute();
 
 				// Send a notification to associated users
-				import('notification.Notification');
+				import('notification.NotificationManager');
+				$notificationManager = new NotificationManager();
 				$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 				$reviewAssignment = $reviewAssignmentDao->getReviewAssignmentById($reviewId);
 				$articleId = $reviewAssignment->getArticleId();
@@ -363,8 +367,10 @@ class ReviewerAction extends Action {
 				$notificationUsers = $article->getAssociatedUserIds();
 				foreach ($notificationUsers as $userRole) {
 					$url = Request::url(null, $userRole['role'], 'submissionReview', $article->getId(), null, 'peerReview');
-					Notification::createNotification($userRole['id'], "notification.type.reviewerFormComment",
-						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_REVIEWER_FORM_COMMENT);
+					$notificationManager->createNotification(
+						$userRole['id'], 'notification.type.reviewerFormComment',
+						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_REVIEWER_FORM_COMMENT
+					);
 				}
 				
 			} else {

@@ -1800,12 +1800,15 @@ class SectionEditorAction extends Action {
 			$commentForm->execute();
 
 			// Send a notification to associated users
-			import('notification.Notification');
+			import('notification.NotificationManager');
+				$notificationManager = new NotificationManager();
 			$notificationUsers = $article->getAssociatedUserIds();
 			foreach ($notificationUsers as $userRole) {
 				$url = Request::url(null, $userRole['role'], 'submissionReview', $article->getId(), null, 'peerReview');
-				Notification::createNotification($userRole['id'], "notification.type.reviewerComment",
-					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_REVIEWER_COMMENT);
+				$notificationManager->createNotification(
+					$userRole['id'], 'notification.type.reviewerComment',
+					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_REVIEWER_COMMENT
+				);
 			}
 
 			if ($emailComment) {
@@ -1850,12 +1853,15 @@ class SectionEditorAction extends Action {
 			$commentForm->execute();
 
 			// Send a notification to associated users
-			import('notification.Notification');
+			import('notification.NotificationManager');
+				$notificationManager = new NotificationManager();
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
 			foreach ($notificationUsers as $userRole) {
 				$url = Request::url(null, $userRole['role'], 'submissionReview', $article->getId(), null, 'editorDecision');
-				Notification::createNotification($userRole['id'], "notification.type.editorDecisionComment",
-					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_EDITOR_DECISION_COMMENT);
+				$notificationManager->createNotification(
+					$userRole['id'], 'notification.type.editorDecisionComment',
+					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_EDITOR_DECISION_COMMENT
+				);
 			}
 
 			if ($emailComment) {
@@ -2097,12 +2103,15 @@ class SectionEditorAction extends Action {
 			$commentForm->execute();
 
 			// Send a notification to associated users
-			import('notification.Notification');
+			import('notification.NotificationManager');
+				$notificationManager = new NotificationManager();
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
 			foreach ($notificationUsers as $userRole) {
 				$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'copyedit');
-				Notification::createNotification($userRole['id'], "notification.type.copyeditComment",
-					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_COPYEDIT_COMMENT);
+				$notificationManager->createNotification(
+					$userRole['id'], 'notification.type.copyeditComment',
+					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_COPYEDIT_COMMENT
+				);
 			}
 
 			if ($emailComment) {
@@ -2147,12 +2156,15 @@ class SectionEditorAction extends Action {
 			$commentForm->execute();
 
 			// Send a notification to associated users
-			import('notification.Notification');
+			import('notification.NotificationManager');
+			$notificationManager = new NotificationManager();
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
 			foreach ($notificationUsers as $userRole) {
 				$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'layout');
-				Notification::createNotification($userRole['id'], "notification.type.layoutComment",
-					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_LAYOUT_COMMENT);
+				$notificationManager->createNotification(
+					$userRole['id'], 'notification.type.layoutComment',
+					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_LAYOUT_COMMENT
+				);
 			}
 
 			if ($emailComment) {
@@ -2197,12 +2209,15 @@ class SectionEditorAction extends Action {
 			$commentForm->execute();
 
 			// Send a notification to associated users
-			import('notification.Notification');
+			import('notification.NotificationManager');
+			$notificationManager = new NotificationManager();
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
 			foreach ($notificationUsers as $userRole) {
 				$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'proofread');
-				Notification::createNotification($userRole['id'], "notification.type.proofreadComment",
-					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_PROOFREAD_COMMENT);
+				$notificationManager->createNotification(
+					$userRole['id'], 'notification.type.proofreadComment',
+					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_PROOFREAD_COMMENT
+				);
 			}
 
 			if ($emailComment) {

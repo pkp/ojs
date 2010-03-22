@@ -608,7 +608,8 @@ class IssueManagementHandler extends EditorHandler {
 		$issueDao->updateCurrentIssue($journalId,$issue);
 		
 		// Send a notification to associated users
-		import('notification.Notification');
+		import('notification.NotificationManager');
+		$notificationManager = new NotificationManager();
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$notificationUsers = array();
 		$allUsers = $roleDao->getUsersByJournalId($journalId);
@@ -619,12 +620,17 @@ class IssueManagementHandler extends EditorHandler {
 		}
 		$url = Request::url(null, 'issue', 'current');
 		foreach ($notificationUsers as $userRole) {
-			Notification::createNotification($userRole['id'], "notification.type.issuePublished",
-				null, $url, 1, NOTIFICATION_TYPE_PUBLISHED_ISSUE);
+			$notificationManager->createNotification(
+				$userRole['id'], 'notification.type.issuePublished',
+				null, $url, 1, NOTIFICATION_TYPE_PUBLISHED_ISSUE
+			);
 		}
-		$notificationDao =& DAORegistry::getDAO('NotificationDAO');
-		$notificationDao->sendToMailingList(Notification::createNotification(0, "notification.type.issuePublished",
-				null, $url, 1, NOTIFICATION_TYPE_PUBLISHED_ISSUE));
+		$notificationManager->sendToMailingList(
+			$notificationManager->createNotification(
+				0, 'notification.type.issuePublished',
+				null, $url, 1, NOTIFICATION_TYPE_PUBLISHED_ISSUE
+			)
+		);
 				
 		Request::redirect(null, null, 'issueToc', $issue->getId());
 	}

@@ -153,7 +153,8 @@ class SubmitHandler extends AuthorHandler {
 
 				if ($step == 5) {
 					// Send a notification to associated users
-					import('notification.Notification');
+					import('notification.NotificationManager');
+					$notificationManager = new NotificationManager();
 					$articleDao =& DAORegistry::getDAO('ArticleDAO');
 					$article =& $articleDao->getArticle($articleId);
 					$roleDao =& DAORegistry::getDAO('RoleDAO');
@@ -167,8 +168,10 @@ class SubmitHandler extends AuthorHandler {
 					}
 					foreach ($notificationUsers as $userRole) {
 						$url = Request::url(null, 'editor', 'submission', $articleId);
-						Notification::createNotification($userRole['id'], "notification.type.articleSubmitted",
-							$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_ARTICLE_SUBMITTED);
+						$notificationManager->createNotification(
+							$userRole['id'], 'notification.type.articleSubmitted',
+							$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_ARTICLE_SUBMITTED
+						);
 					}
 
 					$journal =& Request::getJournal();

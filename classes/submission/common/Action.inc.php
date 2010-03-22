@@ -148,12 +148,14 @@ class Action {
 				$metadataForm->execute();
 
 				// Send a notification to associated users
-				import('notification.Notification');
+				import('notification.NotificationManager');
+				$notificationManager = new NotificationManager();
 				$notificationUsers = $article->getAssociatedUserIds();
 				foreach ($notificationUsers as $userRole) {
 					$url = Request::url(null, $userRole['role'], 'submission', $article->getId(), null, 'metadata');
-					Notification::createNotification($userRole['id'], "notification.type.metadataModified",
-						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_METADATA_MODIFIED);
+					$notificationManager->createNotification($userRole['id'], 'notification.type.metadataModified',
+						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_METADATA_MODIFIED
+					);
 				}
 
 				// Add log entry
@@ -263,12 +265,15 @@ class Action {
 				$commentForm->execute();
 
 				// Send a notification to associated users
-				import('notification.Notification');
+				import('notification.NotificationManager');
+				$notificationManager = new NotificationManager();
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
 				foreach ($notificationUsers as $userRole) {
 					$url = Request::url(null, $userRole['role'], 'submissionReview', $article->getId(), null, 'editorDecision');
-					Notification::createNotification($userRole['id'], "notification.type.submissionComment",
-						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_SUBMISSION_COMMENT);
+					$notificationManager->createNotification(
+						$userRole['id'], 'notification.type.submissionComment',
+						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_SUBMISSION_COMMENT
+					);
 				}
 
 				if ($emailComment) {

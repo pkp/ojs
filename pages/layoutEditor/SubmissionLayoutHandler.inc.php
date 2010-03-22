@@ -209,14 +209,17 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			$submitForm->execute();
 
 			// Send a notification to associated users
-			import('notification.Notification');
+			import('notification.NotificationManager');
+			$notificationManager = new NotificationManager();
 			$articleDao =& DAORegistry::getDAO('ArticleDAO'); 
 			$article =& $articleDao->getArticle($articleId);
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
 			foreach ($notificationUsers as $userRole) {
 				$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'layout');
-				Notification::createNotification($userRole['id'], "notification.type.galleyModified",
-					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_GALLEY_MODIFIED);
+				$notificationManager->createNotification(
+					$userRole['id'], 'notification.type.galleyModified',
+					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_GALLEY_MODIFIED
+				);
 			}
 
 			if (Request::getUserVar('uploadImage')) {
@@ -416,14 +419,17 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			$submitForm->execute();
 
 			// Send a notification to associated users
-			import('notification.Notification');
+			import('notification.NotificationManager');
+			$notificationManager = new NotificationManager();
 			$articleDao =& DAORegistry::getDAO('ArticleDAO'); 
 			$article =& $articleDao->getArticle($articleId);
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
 			foreach ($notificationUsers as $userRole) {
 				$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'layout');
-				Notification::createNotification($userRole['id'], "notification.type.suppFileModified",
-					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_SUPP_FILE_MODIFIED);
+				$notificationManager->createNotification(
+					$userRole['id'], 'notification.type.suppFileModified',
+					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_SUPP_FILE_MODIFIED
+				);
 			}
 			
 			Request::redirect(null, null, 'submission', $articleId);
