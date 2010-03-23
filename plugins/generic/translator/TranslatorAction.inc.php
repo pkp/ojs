@@ -78,7 +78,7 @@ class TranslatorAction {
 		$categories = PluginRegistry::getCategories();
 		foreach ($categories as $category) {
 			$plugins =& PluginRegistry::loadCategory($category, true);
-			foreach (array_keys($plugins) as $name) {
+			if (is_array($plugins)) foreach (array_keys($plugins) as $name) {
 				$plugin =& $plugins[$name];
 				$templatesFile = $plugin->getInstallEmailTemplatesFile();
 				if ($templatesFile) {
