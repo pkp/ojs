@@ -984,6 +984,9 @@
 		<index name="review_assignments_reviewer_id">
 			<col>reviewer_id</col>
 		</index>
+		<index name="review_assignments_form_id">
+			<col>review_form_id</col>
+		</index>
 	</table>
 
 	<!--
