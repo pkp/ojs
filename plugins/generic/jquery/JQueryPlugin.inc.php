@@ -83,10 +83,10 @@ class JQueryPlugin extends GenericPlugin {
 			case 'editor/submissionCitations':
 			case 'sectionEditor/submissionCitations':
 				$scripts[] = 'plugins/generic/jquery/scripts/grid-clickhandler.js';
-				$scripts[] = 'plugins/generic/jquery/scripts/modal.js';
-				$scripts[] = 'lib/jquery/plugins/validate/jquery.validate.min.js';
-				$scripts[] = 'plugins/generic/jquery/scripts/jqueryValidatorI18n.js';
-				$scripts[] = 'lib/jquery/plugins/ui.throbber.js';
+				$scripts[] = 'lib/pkp/js/modal.js';
+				$scripts[] = 'lib/pkp/js/lib/jquery/plugins/validate/jquery.validate.min.js';
+				$scripts[] = 'lib/pkp/js/jqueryValidatorI18n.js';
+				$scripts[] = 'lib/pkp/js/lib/jquery/plugins/ui.throbber.js';
 				break;
 			case 'editor/submissions':
 				$scripts[] = 'plugins/generic/jquery/scripts/submissionSearch.js';
