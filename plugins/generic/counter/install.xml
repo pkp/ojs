@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "../../../lib/pkp/dtd/install.dtd">
+<!--
+  * install.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Installation descriptor file.
+  *
+  * $Id$
+  -->
+
+<install version="1.1.0">
+  <!-- COUNTER schema -->
+  <schema file="schema.xml" />
+</install>
