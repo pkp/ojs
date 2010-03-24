@@ -94,6 +94,9 @@ class AdminJournalHandler extends AdminHandler {
 			PluginRegistry::loadCategory('blocks');
 			$settingsForm->execute();
 
+			import('notification.NotificationManager');
+			$notificationManager = new NotificationManager();
+			$notificationManager->createTrivialNotification('notification.notification', 'common.changesSaved');
 			Request::redirect(null, null, 'journals');
 
 		} else {
