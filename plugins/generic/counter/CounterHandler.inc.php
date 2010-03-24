@@ -12,7 +12,6 @@
  * @brief Counter statistics request handler.
  */
 
-// $Id$
 
 
 import('handler.Handler');
@@ -47,54 +46,44 @@ class CounterHandler extends Handler {
 	/**
 	* Internal function to collect structures for output
 	*/
-	function _arrangeEntry($entry, $months, $year) {
-		$entryArray=null;
+	function _arrangeEntries($entries, $begin, $end) {
+		$ret=null;
 
-		$thisYear = date('Y');
-		$thisMonth = date('n');
+		$i = 0;
 
-		for ($i = 0; $i <= 11; $i++) {
-			if ( ($i+1 > $thisMonth) && ($year == $thisYear) ) break;
-			$entryArray[$i]['start'] = date("Y-m-d", mktime(0, 0, 0, $i+1, 1, $year));
-			$entryArray[$i]['end']   = date("Y-m-t", mktime(0, 0, 0, $i+1, 1, $year));
-			$entryArray[$i]['count_total'] = $entry[$months[$i]];
+		foreach ($entries as $entry) {
+			$ret[$i]['start'] = date("Y-m-d", mktime(0, 0, 0, $entry['month'], 1, $entry['year']));
+			$ret[$i]['end']   = date("Y-m-t", mktime(0, 0, 0, $entry['month'], 1, $entry['year']));
+			$ret[$i]['count_html']  = $entry['count_html'];
+			$ret[$i]['count_pdf']   = $entry['count_pdf'];
+			$i++;
 		}
 
-		$entryArray[$i]['start'] = date("Y-m-d", mktime(0, 0, 0, 1, 1, $year));
-		$entryArray[$i]['end']   = date("Y-m-t", mktime(0, 0, 0, 12, 1, $year));
-		$entryArray[$i]['count_total'] = $entry['count_ytd_total'];
-		$entryArray[$i]['count_html']  = $entry['count_ytd_html'];
-		$entryArray[$i]['count_pdf']   = $entry['count_ytd_pdf'];
-
-		return $entryArray;
+		return $ret;
 	}
 
 
 	/**
 	* Internal function to assign information for the Counter part of a report
 	*/
-	function _assignTemplateCounterXML($templateManager) {
+	function _assignTemplateCounterXML($templateManager, $begin, $end='') {
 		$journal =& Request::getJournal();
-		$year = Request::getUserVar('year');
 		
-		if ($year < 2000) $year = 2000;
-
 		$counterReportDao =& DAORegistry::getDAO('CounterReportDAO');
-		$months = $counterReportDao->getMonthLabels();
-
-		$entry = $counterReportDao->buildMonthlyTotalLog($year);
-		$totalsArray = $this->_arrangeEntry($entry, $months, $year);
 
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$journalIds = $counterReportDao->getJournalIds();
+
+		if ($end == '') $end = $begin;
 
 		$i=0;
 
 		foreach ($journalIds as $journalId) {
 			$journal =& $journalDao->getJournal($journalId);
 			if (!$journal) continue;
-			$entry = $counterReportDao->buildMonthlyLog($journalId, $year);
-			$journalsArray[$i]['entries'] = $this->_arrangeEntry($entry, $months, $year);
+			$entries = $counterReportDao->getMonthlyLogRange($journalId, $begin, $end);
+
+			$journalsArray[$i]['entries'] = $this->_arrangeEntries($entries, $begin, $end);
 			$journalsArray[$i]['journalTitle'] = $journal->getLocalizedTitle();
 			$journalsArray[$i]['publisherInstitution'] = $journal->getSetting('publisherInstitution');
 			$journalsArray[$i]['printIssn'] = $journal->getSetting('printIssn');
@@ -110,7 +99,6 @@ class CounterHandler extends Handler {
 		$reqUser =& Request::getUser();
 		$templateManager->assign_by_ref('reqUser', $reqUser);
 
-		$templateManager->assign_by_ref('totalsArray', $totalsArray);
 		$templateManager->assign_by_ref('journalsArray', $journalsArray);
 
 		$templateManager->assign('siteTitle', $siteTitle);
@@ -128,7 +116,12 @@ class CounterHandler extends Handler {
 
 		$templateManager =& TemplateManager::getManager();
 
-		$this->_assignTemplateCounterXML($templateManager);
+		$year = Request::getUserVar('year');
+
+		$begin = "$year-01-01";
+		$end = "$year-12-01";
+
+		$this->_assignTemplateCounterXML($templateManager, $begin, $end);
 
 		$templateManager->display($plugin->getTemplatePath() . 'reportxml.tpl', 'text/xml');
 	}
@@ -143,37 +136,6 @@ class CounterHandler extends Handler {
 		$this->setupTemplate(true);
 
 		$templateManager =& TemplateManager::getManager();
-
-		$this->_assignTemplateCounterXML($templateManager);
-
-/*
-		$SOAPRequest = '<soapenv:Envelope
-						  xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
-						  xmlns:coun="http://www.niso.org/schemas/sushi/counter"
-						  xmlns:sus="http://www.niso.org/schemas/sushi">
-						<soapenv:Header/>
-						<soapenv:Body>
-						  <coun:ReportRequest Created="?" ID="?">
-							<sus:Requestor>
-							  <sus:ID>reqIDdata99</sus:ID>
-							  <sus:Name>reqNamedata99</sus:Name>
-							  <sus:Email>recEmaildata99</sus:Email>
-							</sus:Requestor>
-							<sus:CustomerReference>
-							  <sus:ID>test/prime</sus:ID>
-							</sus:CustomerReference>
-							<sus:ReportDefinition Name="JR1" Release="3">
-							  <sus:Filters>
-								 <sus:UsageDateRange>
-									<sus:Begin>2009-01-01</sus:Begin>
-									<sus:End>2009-06-01</sus:End>
-								 </sus:UsageDateRange>
-							  </sus:Filters>
-							</sus:ReportDefinition>
-						  </coun:ReportRequest>
-						</soapenv:Body>
-						</soapenv:Envelope>';
-*/
 
 		$SOAPRequest = file_get_contents('php://input');
 
@@ -210,36 +172,74 @@ class CounterHandler extends Handler {
 		$tree = $parser->parseText($SOAPRequest);
 		$parser->destroy(); // is this necessary?
 
-		$reportRequestNode = $tree->getChildByName($soapEnvPrefix.'Body')->getChildByName($counterPrefix.'ReportRequest');
+		if (!$tree) {
+			$templateManager->assign('Faultcode', 'Client');
+			$templateManager->assign('Faultstring', 'The parser was unable to parse the input.');
+			header("HTTP/1.0 500 Internal Server Error");
+			$templateManager->display($plugin->getTemplatePath() . 'soaperror.tpl', 'text/xml');
+		} else {
 
-		$requestorID = $reportRequestNode->getChildByName($sushiPrefix.'Requestor')->getChildByName($sushiPrefix.'ID')->getValue();
-		$requestorName = $reportRequestNode->getChildByName($sushiPrefix.'Requestor')->getChildByName($sushiPrefix.'Name')->getValue();
-		$requestorEmail = $reportRequestNode->getChildByName($sushiPrefix.'Requestor')->getChildByName($sushiPrefix.'Email')->getValue();
+			$reportRequestNode = $tree->getChildByName($soapEnvPrefix.'Body')->getChildByName($counterPrefix.'ReportRequest');
 
-		$customerReferenceID = $reportRequestNode->getChildByName($sushiPrefix.'CustomerReference')->getChildByName($sushiPrefix.'ID')->getValue();
+			$requestorID = $reportRequestNode->getChildByName($sushiPrefix.'Requestor')->getChildByName($sushiPrefix.'ID')->getValue();
+			$requestorName = $reportRequestNode->getChildByName($sushiPrefix.'Requestor')->getChildByName($sushiPrefix.'Name')->getValue();
+			$requestorEmail = $reportRequestNode->getChildByName($sushiPrefix.'Requestor')->getChildByName($sushiPrefix.'Email')->getValue();
 
-		$reportName = $reportRequestNode->getChildByName($sushiPrefix.'ReportDefinition')->getAttribute('Name');
-		$reportRelease = $reportRequestNode->getChildByName($sushiPrefix.'ReportDefinition')->getAttribute('Release');
+			$customerReferenceID = $reportRequestNode->getChildByName($sushiPrefix.'CustomerReference')->getChildByName($sushiPrefix.'ID')->getValue();
 
-		$usageDateRange = $reportRequestNode->getChildByName($sushiPrefix.'ReportDefinition')->getChildByName($sushiPrefix.'Filters')->getChildByName($sushiPrefix.'UsageDateRange');
-		$usageDateBegin = $usageDateRange->getChildByName($sushiPrefix.'Begin')->getValue();
-		$usageDateEnd = $usageDateRange->getChildByName($sushiPrefix.'End')->getValue();
+			$reportName = $reportRequestNode->getChildByName($sushiPrefix.'ReportDefinition')->getAttribute('Name');
+			$reportRelease = $reportRequestNode->getChildByName($sushiPrefix.'ReportDefinition')->getAttribute('Release');
 
-		$templateManager->assign('requestorID', $requestorID);
-		$templateManager->assign('requestorName', $requestorName);
-		$templateManager->assign('requestorEmail', $requestorEmail);
-		$templateManager->assign('customerReferenceID', $customerReferenceID);
-		$templateManager->assign('reportName', $reportName);
-		$templateManager->assign('reportRelease', $reportRelease);
-		$templateManager->assign('usageDateBegin', $usageDateBegin);
-		$templateManager->assign('usageDateEnd', $usageDateEnd);
-		
-		$templateManager->assign('templatePath', $plugin->getTemplatePath());
+			$usageDateRange = $reportRequestNode->getChildByName($sushiPrefix.'ReportDefinition')->getChildByName($sushiPrefix.'Filters')->getChildByName($sushiPrefix.'UsageDateRange');
+			$usageDateBegin = $usageDateRange->getChildByName($sushiPrefix.'Begin')->getValue();
+			$usageDateEnd = $usageDateRange->getChildByName($sushiPrefix.'End')->getValue();
 
-		$templateManager->display($plugin->getTemplatePath() . 'sushixml.tpl', 'text/plain');
+
+			CounterHandler::_assignTemplateCounterXML($templateManager, $usageDateBegin, $usageDateEnd);
+
+			$templateManager->assign('requestorID', $requestorID);
+			$templateManager->assign('requestorName', $requestorName);
+			$templateManager->assign('requestorEmail', $requestorEmail);
+			$templateManager->assign('customerReferenceID', $customerReferenceID);
+			$templateManager->assign('reportName', $reportName);
+			$templateManager->assign('reportRelease', $reportRelease);
+			$templateManager->assign('usageDateBegin', $usageDateBegin);
+			$templateManager->assign('usageDateEnd', $usageDateEnd);
+
+			$templateManager->assign('templatePath', $plugin->getTemplatePath());
+
+			$templateManager->display($plugin->getTemplatePath() . 'sushixml.tpl', 'text/xml');
+		}
 	}
 
 
+	/**
+	 * Internal function to form some of the CSV columns
+	 */
+	function _formColumns(&$cols, $entries) {
+		$currTotal = '';
+		$htmlTotal = '';
+		$pdfTotal = '';
+		for ($i = 1; $i <= 12; $i++) {
+			$currTotal = '';
+			foreach ($entries as $entry) {
+				if ($i==$entry['month']) {
+					$currTotal = $entry['count_html'] + $entry['count_pdf'];
+					$htmlTotal += $entry['count_html'];
+					$pdfTotal += $entry['count_pdf'];
+					break;
+				}
+			}
+			$cols[]=$currTotal;
+		}
+		$cols[] = $htmlTotal + $pdfTotal;
+		$cols[] = $htmlTotal;
+		$cols[] = $pdfTotal;
+	}
+
+	/**
+	* Counter report as CSV
+	*/
 	function report() {
 		$this->validate();
 		$plugin =& $this->plugin;
@@ -247,6 +247,8 @@ class CounterHandler extends Handler {
 
 		$journal =& Request::getJournal();
 		$year = Request::getUserVar('year');
+		$begin = "$year-01-01";
+		$end = "$year-12-01";
 
 		$counterReportDao =& DAORegistry::getDAO('CounterReportDAO');
 
@@ -279,7 +281,7 @@ class CounterHandler extends Handler {
 		fputcsv($fp, $cols);
 
 		// Display the totals first
-		$entry = $counterReportDao->buildMonthlyTotalLog($year);
+		$totals = $counterReportDao->getMonthlyTotalRange($begin, $end);
 		$cols = array(
 			Locale::translate('plugins.generic.counter.1a.totalForAllJournals'),
 			'-', // Publisher
@@ -287,13 +289,7 @@ class CounterHandler extends Handler {
 			'-',
 			'-'
 		);
-		$months = $counterReportDao->getMonthLabels();
-		for ($i = 0; $i < 12; $i++) {
-			$cols[] = $entry[$months[$i]];
-		}
-		$cols[] = $entry['count_ytd_total'];
-		$cols[] = $entry['count_ytd_html'];
-		$cols[] = $entry['count_ytd_pdf'];
+		CounterHandler::_formColumns($cols, $totals);
 		fputcsv($fp, $cols);
 
 		// Get statistics from the log.
@@ -302,21 +298,15 @@ class CounterHandler extends Handler {
 		foreach ($journalIds as $journalId) {
 			$journal =& $journalDao->getJournal($journalId);
 			if (!$journal) continue;
-			$entry = $counterReportDao->buildMonthlyLog($journalId, $year);
+			$entries = $counterReportDao->getMonthlyLogRange($journalId, $begin, $end);
 			$cols = array(
 				$journal->getLocalizedTitle(),
-				$journal->getLocalizedSetting('publisherInstitution'),
-				'', // Platform
+				$journal->getSetting('publisherInstitution'),
+				'Open Journal Systems', // Platform
 				$journal->getSetting('printIssn'),
 				$journal->getSetting('onlineIssn')
 			);
-			$months = $counterReportDao->getMonthLabels();
-			for ($i = 0; $i < 12; $i++) {
-				$cols[] = $entry[$months[$i]];
-			}
-			$cols[] = $entry['count_ytd_total'];
-			$cols[] = $entry['count_ytd_html'];
-			$cols[] = $entry['count_ytd_pdf'];
+			CounterHandler::_formColumns($cols, $entries);
 			fputcsv($fp, $cols);
 			unset($journal, $entry);
 		}

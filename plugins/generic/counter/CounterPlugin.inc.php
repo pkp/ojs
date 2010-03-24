@@ -12,8 +12,6 @@
  * @brief COUNTER plugin; provides COUNTER statistics.
  */
 
-// $Id$
-
 
 import('classes.plugins.GenericPlugin');
 
@@ -88,7 +86,7 @@ class CounterPlugin extends GenericPlugin {
 		if (!$journal || Request::getRequestedPage() != 'article' || Request::getRequestedOp() != 'view') return false;
 		
 		$counterReportDao =& DAORegistry::getDAO('CounterReportDAO');
-		$counterReportDao->incrementCount($journal->getId(), (int) strftime('%Y'), ((int) strftime('%m')) - 1, false, false);
+		$counterReportDao->incrementCount($journal->getJournalId(), (int) strftime('%Y'), (int) strftime('%m'), false, false);
 	}
 
 	/**
@@ -135,7 +133,7 @@ class CounterPlugin extends GenericPlugin {
 				$session->setSessionVar('lastRequest', time());
 
 				$counterReportDao =& DAORegistry::getDAO('CounterReportDAO');
-				$counterReportDao->incrementCount($article->getJournalId(), (int) strftime('%Y'), ((int) strftime('%m')) - 1, $galley->isPdfGalley(), $galley->isHTMLGalley());
+				$counterReportDao->incrementCount($article->getJournalId(), (int) strftime('%Y'), (int) strftime('%m'), $galley->isPdfGalley(), $galley->isHTMLGalley());
 				break;
 		}
 

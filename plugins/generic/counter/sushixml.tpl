@@ -1,12 +1,10 @@
 {**
- * reportxml.tpl
+ * sushixml.tpl
  *
  * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * SUSHI response XML
- *
- *
  *}
 <?xml version="1.0" encoding="UTF-8"?>
 <SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"

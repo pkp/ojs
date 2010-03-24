@@ -5,8 +5,6 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * COUNTER report XML
- *
- *
  *}
 {if $omitWrapper neq 'true'}
 <?xml version="1.0" encoding="UTF-8"?>
@@ -22,7 +20,7 @@
     </Vendor>
     <Customer>
       <Name>{$reqUser->getUserName()|escape:"html"}</Name>
-      <ID>{$reqUser->getUserId()}</ID>
+      <ID>{$reqUser->getUserID()|escape:"html"}</ID>
 
       {foreach from=$journalsArray key=journalkey item=journal}
 
@@ -35,7 +33,7 @@
           <Type>Online_ISSN</Type>
           <Value>{$journal.onlineIssn|escape:"html"}</Value>
         </ItemIdentifier>
-        <ItemPlatform>Z</ItemPlatform>
+        <ItemPlatform>Open Journal Systems</ItemPlatform>
         <ItemPublisher>{$journal.publisherInstitution|escape:"html"}</ItemPublisher>
         <ItemName>{$journal.journalTitle|escape:"html"}</ItemName>
         <ItemDataType>Journal</ItemDataType>
@@ -48,10 +46,10 @@
             <End>{$requests.end}</End>
           </Period>
           <Category>Requests</Category>
-          <Instance>
+          {if $requests.count_total neq ''}<Instance>
             <MetricType>ft_total</MetricType>
             <Count>{$requests.count_total}</Count>
-          </Instance>
+          </Instance>{/if}
 
           {if $requests.count_html neq ''}<Instance>
             <MetricType>ft_html</MetricType>

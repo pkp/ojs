@@ -12,17 +12,7 @@
  * @brief Class for managing COUNTER records.
  */
 
-// $Id$
-
-
 class CounterReportDAO extends DAO {
-	/**
-	 * Get the month labels named in the database.
-	 * @return array
-	 */
-	function getMonthLabels() {
-		return array('count_jan', 'count_feb', 'count_mar', 'count_apr', 'count_may', 'count_jun', 'count_jul', 'count_aug', 'count_sep', 'count_oct', 'count_nov', 'count_dec');
-	}
 
 	/**
 	 * Get the years for which log entries exist in the DB.
@@ -60,21 +50,29 @@ class CounterReportDAO extends DAO {
 		return $journalIds;
 	}
 
+
 	/**
-	 * Retrieve a monthly log entry by date.
+	 * Retrieve a monthly log entry range.
 	 * @param $journalId int
-	 * @param $year int
-	 * @return array
+	 * @param $begin
+	 * @param $end
+	 * @return 2D array
 	 */
-	function getMonthlyLog($journalId, $year) {
+	function getMonthlyLogRange($journalId, $begin, $end) {
+		$begin 		= getdate(strtotime($begin));
+		$end 		= getdate(strtotime($end));
+		$beginComb 	= $begin['year'] * 100 + $begin['mon'];
+		$endComb 	= $end['year'] * 100 + $end['mon'];
+
 		$result =& $this->retrieve(
-			'SELECT * FROM counter_monthly_log WHERE journal_id = ? AND year = ?',
-			array((int) $journalId, (int) $year)
+			'SELECT * FROM counter_monthly_log
+			WHERE journal_id = ? AND year * 100 + month >= ? AND year * 100 + month <= ?',
+			array((int) $journalId, (int) $beginComb, (int) $endComb)
 		);
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = $result->GetRowAssoc(false);
+			$returner = $result->GetArray();
 		}
 
 		$result->Close();
@@ -84,35 +82,27 @@ class CounterReportDAO extends DAO {
 	}
 
 	/**
-	 * Retrieve a monthly total by date.
-	 * @param $year int
-	 * @return array
+	 * Retrieve a monthly log entry range.
+	 * @param $begin
+	 * @param $end
+	 * @return 2D array
 	 */
-	function buildMonthlyTotalLog($year) {
-		$sql =	'SELECT	';
-		$months = $this->getMonthLabels();
-		for ($i=0; $i<12; $i++) {
-			$sql .= "SUM($months[$i]) AS $months[$i], ";
-		}
-		$sql .= '	SUM(count_ytd_total) AS count_ytd_total,
-				SUM(count_ytd_html) AS count_ytd_html,
-				SUM(count_ytd_pdf) AS count_ytd_pdf
-			FROM	counter_monthly_log
-			WHERE	year = ?';
+	function getMonthlyTotalRange($begin, $end) {
+		$begin 		= getdate(strtotime($begin));
+		$end 		= getdate(strtotime($end));
+		$beginComb 	= $begin['year'] * 100 + $begin['mon'];
+		$endComb 	= $end['year'] * 100 + $end['mon'];
 
 		$result =& $this->retrieve(
-			$sql,
-			array((int) $year)
+			'SELECT month, SUM(count_html) as count_html, SUM(count_pdf) as count_pdf FROM counter_monthly_log
+			WHERE year * 100 + month >= ? AND year * 100 + month <= ?
+			GROUP BY month',
+			array((int) $beginComb, (int) $endComb)
 		);
 
+		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = $result->GetRowAssoc(false);
-		} else {
-			$returner = array();
-			for ($i=0; $i<12; $i++) $returner[$months[$i]] = 0;
-			$returner['count_ytd_total'] = 0;
-			$returner['count_ytd_html'] = 0;
-			$returner['count_ytd_pdf'] = 0;
+			$returner = $result->GetArray();
 		}
 
 		$result->Close();
@@ -121,22 +111,28 @@ class CounterReportDAO extends DAO {
 		return $returner;
 	}
 
+
 	/**
-	 * Fetch a monthly log entry, inserting if none is found.
-	 * @param $journalId int
-	 * @param $year int
-	 */	
-	function buildMonthlyLog($journalId, $year) {
-		$monthlyLog = $this->getMonthlyLog($journalId, $year);
-		if ($monthlyLog === null) {
+	 * Internal function to create the monthly record
+	 */
+	function _conditionalCreate($journalId, $year, $month) {
+		$result =& $this->retrieve(
+			'SELECT * FROM counter_monthly_log WHERE journal_id = ? AND year = ? AND month = ?',
+			array((int) $journalId, (int) $year, (int) $month)
+		);
+
+		$returner = false;
+		if ($result->RecordCount() == 0) {
 			$this->update(
-				'INSERT INTO counter_monthly_log (journal_id, year) VALUES (?, ?)',
-				array((int) $journalId, (int) $year)
+				'INSERT INTO counter_monthly_log (journal_id, year, month) VALUES (?, ?, ?)',
+				array((int) $journalId, (int) $year, (int) $month)
 			);
-			$monthlyLog = $this->getMonthlyLog($journalId, $year);
 		}
-		return $monthlyLog;
+
+		$result->Close();
+		unset($result);
 	}
+
 
 	/**
 	 * Increment counters for a journal and year.
@@ -148,23 +144,17 @@ class CounterReportDAO extends DAO {
 	 * @return boolean
 	 */
 	function incrementCount($journalId, $year, $month, $isPdf, $isHtml) {
-		// Ensure that the log entry exists. Is this necessary,
-		// or can we get an update count and insert if it's 0?
-		$this->buildMonthlyLog($journalId, $year);
+		// create the monthly record if it does not exist
+		$this->_conditionalCreate($journalId, $year, $month);
 
-		// Validate months
-		$months = $this->getMonthLabels();
-		if (!isset($months[(int) $month])) return false;
-		$monthCol = $months[(int) $month];
+		if ($month < 1 || $month > 12) return false;
 
 		$this->update(
 			"UPDATE counter_monthly_log SET " .
-			"count_ytd_total = count_ytd_total + 1," .
-			"$monthCol = $monthCol + 1" .
-			($isHtml?', count_ytd_html = count_ytd_html + 1':'') .
-			($isPdf?', count_ytd_pdf = count_ytd_pdf + 1':'') .
-			" WHERE journal_id = ? AND year = ?",
-			array((int) $journalId, (int) $year)
+			' count_html = count_html + ' . ($isHtml?'1,':'0,') .
+			' count_pdf = count_pdf + ' . ($isPdf?'1':'0') .
+			" WHERE journal_id = ? AND year = ? AND month = ?",
+			array((int) $journalId, (int) $year, (int) $month)
 		);
 
 		return true;
@@ -185,7 +175,7 @@ class CounterReportDAO extends DAO {
 		$journals =& $journalDao->getJournals();
 		$journalUrlMap = array();
 		while ($journal =& $journals->next()) {
-			$journalUrlMap[Request::url($journal->getPath(), 'index')] = $journal->getId();
+			$journalUrlMap[Request::url($journal->getPath(), 'index')] = $journal->getJournalId();
 			unset($journal);
 		}
 		unset($journals);
@@ -201,7 +191,7 @@ class CounterReportDAO extends DAO {
 			$journalId = $journalUrlMap[$journalUrl];
 			$stamp = strtotime($stamp);
 			$year = strftime('%Y', $stamp);
-			$month = strftime('%m', $stamp) - 1; // 0-based
+			$month = strftime('%m', $stamp);
 
 			$this->incrementCount($journalId, $year, $month, $type == 'pdf', $type == 'html');
 		}

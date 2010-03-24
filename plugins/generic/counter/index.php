@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('CounterPlugin.inc.php');
 
 return new CounterPlugin();

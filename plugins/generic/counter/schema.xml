@@ -8,89 +8,43 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * COUNTER statistics plugin schema in XML.
-  *
-  * $Id$
   -->
 
-<schema version="0.2">
+<schema version="1.7">
 
-	<!--
-	 *
-	 * TABLE counter_monthly_log
-	 *
-	 -->
-	<table name="counter_monthly_log">
-		<field name="year" type="I8">
-			<NOTNULL/>
-		</field>
-		<field name="journal_id" type="I8">
-			<NOTNULL/>
-		</field>
-		<field name="count_jan" type="I8" >
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="count_feb" type="I8">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="count_mar" type="I8">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="count_apr" type="I8">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="count_may" type="I8">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="count_jun" type="I8">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="count_jul" type="I8">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="count_aug" type="I8">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="count_sep" type="I8">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="count_oct" type="I8">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="count_nov" type="I8">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="count_dec" type="I8">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="count_ytd_total" type="I8">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="count_ytd_html" type="I8">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="count_ytd_pdf" type="I8">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<descr>Monthly COUNTER statistics</descr>
-		<index name="counter_monthly_log_pkey">
-			<col>year</col>
-			<col>journal_id</col>
-			<UNIQUE/>
-		</index>
-	</table>
+  <!--
+   *
+   * TABLE counter_monthly_log
+   *
+   -->
+  <table name="counter_monthly_log">
+    <field name="year" type="I8">
+      <NOTNULL/>
+    </field>
+    <field name="month" type="I8">
+      <NOTNULL/>
+    </field>
+    <field name="journal_id" type="I8">
+      <NOTNULL/>
+    </field>
+    <field name="count_html" type="I8">
+      <NOTNULL/>
+      <DEFAULT VALUE="0"/>
+    </field>
+    <field name="count_pdf" type="I8">
+      <NOTNULL/>
+      <DEFAULT VALUE="0"/>
+    </field>
+    <field name="count_other" type="I8">
+      <NOTNULL/>
+      <DEFAULT VALUE="0"/>
+    </field>
+    <descr>Monthly COUNTER statistics</descr>
+    <index name="counter_monthly_log_key">
+      <col>year</col>
+      <col>month</col>
+      <col>journal_id</col>
+      <UNIQUE/>
+    </index>
+  </table>
 </schema>
