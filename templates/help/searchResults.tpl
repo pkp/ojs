@@ -32,7 +32,7 @@
 			{foreach name=results from=$searchResults item=result}
 				{assign var=sections value=$result.topic->getSections()}
 				{assign var=resultNum value=$resultNum+1}
-				<li id="result{$resultNum}">
+				<li id="result-{$resultNum}">
 					<a href="{url op="view" path=$result.topic->getId()|explode:"/" keyword=$helpSearchKeyword|escape result=$resultNum}">{$result.topic->getTitle()}</a>
 					{eval var=$sections[0]->getContent()|strip_tags|truncate:200}
 					<div class="searchBreadcrumb">

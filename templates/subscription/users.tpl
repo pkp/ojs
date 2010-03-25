@@ -51,7 +51,7 @@
 	<td>{if $isJournalManager}<a class="action" href="{url op="userProfile" path=$userid}">{/if}{$user->getUsername()}{if $isJournalManager}</a>{/if}</td>
 	<td>{$user->getFullName(true)|escape}</td>
 	<td class="nowrap">
-		{assign var=emailString value="`$user->getFullName()` <`$user->getEmail()`>"}
+		{assign var=emailString value=$user->getFullName()|concat:" <":$user->getEmail():">"}
 		{url|assign:"url" page="user" op="email" to=$emailString|to_array}
 		{$user->getEmail()|truncate:20:"..."|escape}&nbsp;{icon name="mail" url=$url}
 	</td>

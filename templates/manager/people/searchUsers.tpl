@@ -110,7 +110,7 @@ function toggleChecked() {
 	<td><a class="action" href="{url op="userProfile" path=$userid}">{$user->getUsername()}</a></td>
 	<td>{$user->getFullName(true)|escape}</td>
 	<td class="nowrap">
-		{assign var=emailString value="`$user->getFullName()` <`$user->getEmail()`>"}
+		{assign var=emailString value=$user->getFullName()|concat:" <":$user->getEmail():">"}
 		{url|assign:"url" page="user" op="email" to=$emailString|to_array}
 		{$user->getEmail()|truncate:20:"..."|escape}&nbsp;{icon name="mail" url=$url}
 	</td>

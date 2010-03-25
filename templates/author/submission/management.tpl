@@ -50,7 +50,7 @@
 		<td class="label">{translate key="submission.submitter"}</td>
 		<td colspan="2" class="value">
 			{assign var="submitter" value=$submission->getUser()}
-			{assign var=emailString value="`$submitter->getFullName()` <`$submitter->getEmail()`>"}
+			{assign var=emailString value=$submitter->getFullName()|concat:" <":$submitter->getEmail():">"}
 			{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl subject=$submission->getArticleTitle|strip_tags articleId=$submission->getArticleId()}
 			{$submitter->getFullName()|escape} {icon name="mail" url=$url}
 		</td>
@@ -68,7 +68,7 @@
 		{assign var="editAssignments" value=$submission->getEditAssignments()}
 		<td width="80%" colspan="2" class="data">
 			{foreach from=$editAssignments item=editAssignment}
-				{assign var=emailString value="`$editAssignment->getEditorFullName()` <`$editAssignment->getEditorEmail()`>"}
+				{assign var=emailString value=$editAssignment->getEditorFullName()|concat:" <":$editAssignment->getEditorEmail():">"}
 				{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl subject=$submission->getArticleTitle|strip_tags articleId=$submission->getArticleId()}
 				{$editAssignment->getEditorFullName()|escape} {icon name="mail" url=$url}
 				{if !$editAssignment->getCanEdit() || !$editAssignment->getCanReview()}

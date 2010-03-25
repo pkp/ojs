@@ -34,7 +34,7 @@
 	</tr>
 	{foreach from=$files item=file name=files}
 	{if $currentDir}
-		{assign var=filePath value="$currentDir/`$file.name`"}
+		{assign var=filePath value=$currentDir|concat:"/":$file.name}
 	{else}
 		{assign var=filePath value=$file.name}
 	{/if}

@@ -22,7 +22,7 @@
 	{if $journalSettings.enableLockss && $currentJournal->getLocalizedSetting('lockssLicense') != ''}<li>&#187; <a href="{url op="editorialPolicies" anchor="archiving"}">{translate key="about.archiving"}</a></li>{/if}
 	{foreach key=key from=$currentJournal->getLocalizedSetting('customAboutItems') item=customAboutItem}
 		{if !empty($customAboutItem.title)}
-			<li>&#187; <a href="{url op="editorialPolicies" anchor=custom`$key`}">{$customAboutItem.title|escape}</a></li>
+			<li>&#187; <a href="{url op="editorialPolicies" anchor=custom-$key}">{$customAboutItem.title|escape}</a></li>
 		{/if}
 	{/foreach}
 </ul>
@@ -113,7 +113,7 @@
 
 {foreach key=key from=$currentJournal->getLocalizedSetting('customAboutItems') item=customAboutItem name=customAboutItems}
 	{if !empty($customAboutItem.title)}
-		<a name="custom{$key|escape}"></a><h3>{$customAboutItem.title|escape}</h3>
+		<a name="custom-{$key|escape}"></a><h3>{$customAboutItem.title|escape}</h3>
 		<p>{$customAboutItem.content|nl2br}</p>
 		{if !$smarty.foreach.customAboutItems.last}<div class="separator">&nbsp;</div>{/if}
 	{/if}

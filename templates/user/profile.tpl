@@ -139,7 +139,7 @@
 
 {foreach from=$journals name=journalNotifications key=thisJournalId item=thisJournal}
 	{assign var=thisJournalId value=$thisJournal->getJournalId()}
-	{assign var=notificationEnabled value=`$journalNotifications.$thisJournalId`}
+	{assign var=notificationEnabled value=$journalNotifications.$thisJournalId}
 	{if !$notFirstJournal}
 		{assign var=notFirstJournal value=1}
 		<tr valign="top">

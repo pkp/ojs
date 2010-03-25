@@ -17,7 +17,7 @@
 {if !empty($helpSearchResult) && !empty($helpSearchKeyword)}
 <br />
 
-<div><a href="{url op="search" anchor="result`$helpSearchResult`"|escape keyword=$helpSearchKeyword|escape}">{translate key="help.searchReturnResults"}</a></div>
+<div><a href="{url op="search" anchor="result-$helpSearchResult"|escape keyword=$helpSearchKeyword|escape}">{translate key="help.searchReturnResults"}</a></div>
 {/if}
 
 <br />

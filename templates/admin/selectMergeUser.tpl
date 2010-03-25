@@ -80,7 +80,7 @@
 		<td>{$user->getUsername()|escape|wordwrap:15:" ":true}</td>
 		<td>{$user->getFullName()|escape}</td>
 		<td class="nowrap">
-			{assign var=emailString value="`$user->getFullName()` <`$user->getEmail()`>"}
+			{assign var=emailString value=$user->getFullName()|concat:" <":$user->getEmail():">"}
 			{url|assign:"redirectUrl" path=$roleSymbolic}
 			{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$redirectUrl}
 			{$user->getEmail()|truncate:15:"..."|escape}&nbsp;{icon name="mail" url=$url}

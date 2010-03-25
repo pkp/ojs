@@ -52,7 +52,7 @@ function confirmSubmissionCheck() {
 			<td class="label">{translate key="reviewer.article.submissionEditor"}</td>
 			<td class="value">
 	{/if}
-			{assign var=emailString value="`$editAssignment->getEditorFullName()` <`$editAssignment->getEditorEmail()`>"}
+			{assign var=emailString value=$editAssignment->getEditorFullName()|concat:" <":$editAssignment->getEditorEmail():">"}
 			{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl subject=$submission->getArticleTitle()|strip_tags articleId=$articleId}
 			{$editAssignment->getEditorFullName()|escape} {icon name="mail" url=$url}
 			{if !$editAssignment->getCanEdit() || !$editAssignment->getCanReview()}
