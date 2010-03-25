@@ -52,7 +52,7 @@
 	<td width="80%" class="value">
 		{foreach from=$groupContextOptions item=groupContextOptionKey key=groupContextOptionValue}
 			<input type="radio" name="context" value="{$groupContextOptionValue|escape}" {if $context == $groupContextOptionValue}checked="checked" {/if} id="context-{$groupContextOptionValue|escape}" />&nbsp;
-			{fieldLabel name="context-`$groupContextOptionValue`" key=$groupContextOptionKey}<br />
+			{fieldLabel name="context-"|concat:$groupContextOptionValue key=$groupContextOptionKey}<br />
 		{/foreach}
 	</td>
 </tr>

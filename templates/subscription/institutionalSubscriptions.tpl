@@ -84,7 +84,7 @@
 	{assign var=isNonExpiring value=$subscription->isNonExpiring()}
 	<tr valign="top">
 		<td>
-			{assign var=emailString value="`$subscription->getUserFullName()` <`$subscription->getUserEmail()`>"}
+			{assign var=emailString value=$subscription->getUserFullName()|concat:" <":$subscription->getUserEmail():">"}
 			{url|assign:"redirectUrl" op="subscriptions" path="institutional" escape=false}
 			{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$redirectUrl}
 			{$subscription->getInstitutionName()|escape}&nbsp;{icon name="mail" url=$url}

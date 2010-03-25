@@ -4,7 +4,7 @@
  * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Generic email template form
+ * Editor's "Notify Users" email template form
  *
  * $Id$
  *}
@@ -32,7 +32,7 @@
 		<ul class="plain">
 	{/if}
 	{if $message.type == MAIL_ERROR_INVALID_EMAIL}
-		{translate|assign:"message" key="email.invalid" email=`$message.address`}
+		{translate|assign:"message" key="email.invalid" email=$message.address}
 		<li>{$message|escape}</li>
 	{/if}
 {/foreach}

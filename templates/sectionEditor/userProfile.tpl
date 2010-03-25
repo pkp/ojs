@@ -58,7 +58,7 @@
 	<td class="label">{translate key="user.email"}:</td>
 	<td class="value">
 		{$user->getEmail()|escape} 
-		{assign var=emailString value="`$user->getFullName()` <`$user->getEmail()`>"}
+		{assign var=emailString value=$user->getFullName()|concat:" <":$user->getEmail():">"}
 		{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl}
 		{icon name="mail" url=$url}
 	</td>

@@ -9,7 +9,7 @@
  * $Id$
  *}
 {strip}
-{assign var="pageTitle" value=`$roleName`s}
+{assign var="pageTitle" value=$roleName|concat:"s"}
 {include file="common/header.tpl"}
 {/strip}
 

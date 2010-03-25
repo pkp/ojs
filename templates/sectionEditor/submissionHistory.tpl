@@ -79,7 +79,7 @@
 		<td>{$logEntry->getDateLogged()|date_format:$dateFormatShort}</td>
 		<td>{$logEntry->getLogLevel()|escape}</td>
 		<td>
-			{assign var=emailString value="`$logEntry->getUserFullName()` <`$logEntry->getUserEmail()`>"}
+			{assign var=emailString value=$logEntry->getUserFullName()|concat:" <":$logEntry->getUserEmail():">"}
 			{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl subject=$logEntry->getEventTitle()|translate articleId=$submission->getArticleId()}
 			{$logEntry->getUserFullName()|escape} {icon name="mail" url=$url}
 		</td>

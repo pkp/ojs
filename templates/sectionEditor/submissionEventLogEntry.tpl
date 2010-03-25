@@ -43,7 +43,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="submission.event.logLevel"}</td>
-		<td class="value">{translate key=`$logEntry->getLogLevelString()`}</td>
+		<td class="value">{translate key=$logEntry->getLogLevelString()}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.type"}</td>
@@ -52,7 +52,7 @@
 	<tr valign="top">
 		<td class="label">{translate key="common.user"}</td>
 		<td class="value">
-			{assign var=emailString value="`$logEntry->getUserFullName()` <`$logEntry->getUserEmail()`>"}
+			{assign var=emailString value=$logEntry->getUserFullName()|concat:" <":$logEntry->getUserEmail():">"}
 			{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl subject=$logEntry->getEventTitle()|translate articleId=$submission->getArticleId()}
 			{$logEntry->getUserFullName()|escape} {icon name="mail" url=$url}
 		</td>

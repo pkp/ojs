@@ -37,7 +37,7 @@
       </s:Filters>
     </s:ReportDefinition>
     <Report>
-{include file="`$templatePath`reportxml.tpl" omitWrapper='true'}
+{include file=$templatePath|concat:"reportxml.tpl" omitWrapper='true'}
     </Report>
   </ReportResponse>
 </SOAP-ENV:Body>

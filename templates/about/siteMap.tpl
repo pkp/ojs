@@ -22,7 +22,7 @@
 	<ul class="plain">
 	{if $journals|@count>1 && !$currentJournal}
 		{foreach from=$journals item=journal}
-			<li><a href="{url journal=`$journal->getPath()` page="about" op="siteMap"}">{$journal->getLocalizedTitle()|escape}</a></li>
+			<li><a href="{url journal=$journal->getPath() page="about" op="siteMap"}">{$journal->getLocalizedTitle()|escape}</a></li>
 		{/foreach}
 	{else}
 		{if $journals|@count==1}
@@ -33,36 +33,36 @@
 			{assign var=onlyOneJournal value=1}
 		{/if}
 
-		<li><a href="{url journal=`$currentJournal->getPath()`}">{$currentJournal->getLocalizedTitle()|escape}</a><br/>
+		<li><a href="{url journal=$currentJournal->getPath()}">{$currentJournal->getLocalizedTitle()|escape}</a><br/>
 			<ul class="plain">
-				<li><a href="{url journal=`$currentJournal->getPath()` page="about"}">{translate key="navigation.about"}</a></li>
+				<li><a href="{url journal=$currentJournal->getPath() page="about"}">{translate key="navigation.about"}</a></li>
 				<li>
 					{if $isUserLoggedIn}
 						<ul class="plain">
 							{assign var=currentJournalId value=$currentJournal->getId()}
 							{foreach from=$rolesByJournal[$currentJournalId] item=role}
 								{translate|assign:"roleName" key=$role->getRoleName()}
-								<li><a href="{url journal=`$currentJournal->getPath()` page=`$role->getRolePath()`}">{$roleName|escape}</a></li>
+								<li><a href="{url journal=$currentJournal->getPath() page=$role->getRolePath()}">{$roleName|escape}</a></li>
 							{/foreach}
 						</ul>
 					{else}
 						<ul class="plain">
-							<li><a href="{url journal=`$currentJournal->getPath()` page="login"}">{translate key="navigation.login"}</a></li>
-							<li><a href="{url journal=`$currentJournal->getPath()` page="register"}">{translate key="navigation.register"}</a></li>
+							<li><a href="{url journal=$currentJournal->getPath() page="login"}">{translate key="navigation.login"}</a></li>
+							<li><a href="{url journal=$currentJournal->getPath() page="register"}">{translate key="navigation.register"}</a></li>
 						</ul>
 					{/if}
 				</li>
 				{if $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
-					<li><a href="{url journal=`$currentJournal->getPath()` page="search"}">{translate key="navigation.search"}</a><br />
+					<li><a href="{url journal=$currentJournal->getPath() page="search"}">{translate key="navigation.search"}</a><br />
 						<ul class="plain">
-							<li><a href="{url journal=`$currentJournal->getPath()` page="search" op="authors"}">{translate key="navigation.browseByAuthor"}</a></li>
-							<li><a href="{url journal=`$currentJournal->getPath()` page="search" op="titles"}">{translate key="navigation.browseByTitle"}</a></li>
+							<li><a href="{url journal=$currentJournal->getPath() page="search" op="authors"}">{translate key="navigation.browseByAuthor"}</a></li>
+							<li><a href="{url journal=$currentJournal->getPath() page="search" op="titles"}">{translate key="navigation.browseByTitle"}</a></li>
 						</ul>
 					</li>
 					<li>{translate key="issue.issues"}<br/>
 						<ul class="plain">
-							<li><a href="{url journal=`$currentJournal->getPath()` page="issue" op="current"}">{translate key="journal.currentIssue"}</a></li>
-							<li><a href="{url journal=`$currentJournal->getPath()` page="issue" op="archive"}">{translate key="navigation.archives"}</a></li>
+							<li><a href="{url journal=$currentJournal->getPath() page="issue" op="current"}">{translate key="journal.currentIssue"}</a></li>
+							<li><a href="{url journal=$currentJournal->getPath() page="issue" op="archive"}">{translate key="navigation.archives"}</a></li>
 						</ul>
 					</li>
 				{/if}{* $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE *}

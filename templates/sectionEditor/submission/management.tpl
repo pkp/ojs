@@ -51,7 +51,7 @@
 		<td class="label">{translate key="submission.submitter"}</td>
 		<td colspan="2" class="value">
 			{assign var="submitter" value=$submission->getUser()}
-			{assign var=emailString value="`$submitter->getFullName()` <`$submitter->getEmail()`>"}
+			{assign var=emailString value=$submitter->getFullName()|concat:" <":$submitter->getEmail():">"}
 			{url|assign:"url" page="user" op="email" redirectUrl=$currentUrl to=$emailString|to_array subject=$submission->getLocalizedTitle|strip_tags articleId=$submission->getArticleId()}
 			{$submitter->getFullName()|escape} {icon name="mail" url=$url}
 		</td>
