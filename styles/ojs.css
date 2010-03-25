@@ -16,5 +16,10 @@
 /* fix for conflict - sidebars and modal (modal title bar taking on the height of the side bar) */
 .ui-dialog {clear:both;}
 
+/* override the global setting for the row actions icon */
+a.settings:hover {
+	background-color:transparent;
+}
+
 /* @end */
 
