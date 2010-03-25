@@ -13,6 +13,8 @@
 /* Theme */
 @import url("../lib/pkp/styles/themes/default/theme.css");
 
+/* fix for conflict - sidebars and modal (modal title bar taking on the height of the side bar) */
+.ui-dialog {clear:both;}
 
 /* @end */
 
