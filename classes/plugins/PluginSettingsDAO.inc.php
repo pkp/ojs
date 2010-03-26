@@ -22,17 +22,17 @@ class PluginSettingsDAO extends DAO {
 		if (!isset($settingCache)) {
 			$settingCache = array();
 		}
-		if (!isset($this->settingCache[$journalId])) {
-			$this->settingCache[$journalId] = array();
+		if (!isset($settingCache[$journalId])) {
+			$settingCache[$journalId] = array();
 		}
-		if (!isset($this->settingCache[$journalId][$pluginName])) {
+		if (!isset($settingCache[$journalId][$pluginName])) {
 			$cacheManager =& CacheManager::getManager();
-			$this->settingCache[$journalId][$pluginName] =& $cacheManager->getFileCache(
+			$settingCache[$journalId][$pluginName] =& $cacheManager->getFileCache(
 				'pluginSettings-' . $journalId, $pluginName,
 				array($this, '_cacheMiss')
 			);
 		}
-		return $this->settingCache[$journalId][$pluginName];
+		return $settingCache[$journalId][$pluginName];
 	}
 
 	/**
