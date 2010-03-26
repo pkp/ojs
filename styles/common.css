@@ -85,7 +85,7 @@ a:hover {
 
 #announcementsHome {
 	width: 100%;
-	margin: 2em 0 2em 0;	
+	margin: 2em 0 2em 0;
 }
 
 #announcementsHome h3 {
@@ -138,7 +138,7 @@ table.announcements td.intro {
 }
 
 table.announcements tr.title {
-	vertical-align: top; 
+	vertical-align: top;
 }
 
 table.announcements td.title {
@@ -323,8 +323,8 @@ table.listing tr.data td.drag {
  * Other organizational elements
  */
 
-li.pluginManaged { 
-	color: green; 
+li.pluginManaged {
+	color: green;
 }
 
 div.progressbar {
@@ -344,4 +344,13 @@ td.notificationFunction {
 	padding-left: 5px;
 	padding-right: 5px;
 	text-align: right;
+}
+
+.throbber {
+	display: none;
+	background: url(../lib/pkp/templates/images/throbber.gif) no-repeat;
+	width: 25px;
+	height: 25px;
+	margin-left: 50%;
+	margin-top: 5%;
 }
