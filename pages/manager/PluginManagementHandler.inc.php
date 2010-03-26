@@ -203,26 +203,24 @@ class PluginManagementHandler extends ManagerHandler {
 			if(FileManager::fileExists($installFile)) {
 				$params = $this->setConnectionParams();
 				$installer = new Install($params, $installFile, true);
+				$installer->setCurrentVersion($pluginVersion);
+				
 
-				if ($installer->execute()) {
-					$newVersion =& $installer->getNewVersion();
-				} else {
+				if (!$installer->execute()) {
 					// Roll back the copy
 					FileManager::rmtree($pluginDest);
 					$templateMgr->assign('message', array('manager.plugins.installFailed', $installer->getErrorString()));
 					return false;
 				}
-			} else {
-				$newVersion = $pluginVersion;
-			}
+			} 
 			
-			$message = array('manager.plugins.installSuccessful', $newVersion->getVersionString());
+			$message = array('manager.plugins.installSuccessful', $pluginVersion->getVersionString());
 			$templateMgr->assign('message', $message);
 			$templateMgr->assign('uploaded', true);
 			$templateMgr->assign('error', false);
 			
-			$newVersion->setCurrent(1);
-			$versionDao->insertVersion($newVersion);
+			$pluginVersion->setCurrent(1);
+			$versionDao->insertVersion($pluginVersion);
 			return true;
 		} else {
 			if ($this->checkIfNewer($pluginName, $pluginVersion)) {
