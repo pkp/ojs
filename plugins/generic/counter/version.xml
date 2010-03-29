@@ -11,6 +11,6 @@
 <version>
   <application>counter</application>
   <type>plugins.generic</type>
-  <release>1.7.0.0</release>
-  <date>2010-03-24</date>
+  <release>1.1.0.0</release>
+  <date>2010-03-29</date>
 </version>

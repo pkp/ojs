@@ -10,7 +10,7 @@
   * COUNTER statistics plugin schema in XML.
   -->
 
-<schema version="1.7">
+<schema version="0.2">
 
   <!--
    *
