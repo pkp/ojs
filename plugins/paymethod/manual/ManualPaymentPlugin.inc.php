@@ -87,7 +87,7 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 		$ojsPaymentManager =& OJSPaymentManager::getManager();
 		$queuedPayment =& $ojsPaymentManager->getQueuedPayment($queuedPaymentId);
 		// if the queued payment doesn't exist, redirect away from payments
-		if ( !$queuedPayment ) Request::redirect(null, null, 'index');
+		if ( !$queuedPayment ) Request::redirect(null, 'index');
 
 		switch ( $op ) {
 			case 'notify':	
