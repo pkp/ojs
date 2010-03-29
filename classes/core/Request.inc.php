@@ -247,20 +247,17 @@ class Request {
 	function getRemoteAddr() {
 		static $ipaddr;
 		if (!isset($ipaddr)) {
-			if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-				$ipaddr = $_SERVER['HTTP_X_FORWARDED_FOR'];
-			} else if (isset($_SERVER['REMOTE_ADDR'])) {
-				$ipaddr = $_SERVER['REMOTE_ADDR'];
-			}
-			if (!isset($ipaddr) || empty($ipaddr)) {
-				$ipaddr = getenv('REMOTE_ADDR');
-			}
-			if (!isset($ipaddr) || $ipaddr == false) {
+			if (isset($_SERVER['HTTP_X_FORWARDED_FOR']) &&
+				preg_match_all('/([0-9.a-fA-F:]+)/', $_SERVER['HTTP_X_FORWARDED_FOR'], $matches)) {
+			} else if (isset($_SERVER['REMOTE_ADDR']) && 
+				preg_match_all('/([0-9.a-fA-F:]+)/', $_SERVER['REMOTE_ADDR'], $matches)) {
+			} else if (preg_match_all('/([0-9.a-fA-F:]+)/', getenv('REMOTE_ADDR'), $matches)) {
+			} else {
 				$ipaddr = '';
 			}
 
-			// If multiple addresses are listed, take the last. (Supports ipv6.)
-			if (preg_match_all('/([0-9.a-fA-F:]+)/', $ipaddr, $matches)) {
+			if (!isset($ipaddr)) {
+				// If multiple addresses are listed, take the last. (Supports ipv6.)
 				$ipaddr = $matches[0][count($matches[0])-1];
 			}
 			HookRegistry::call('Request::getRemoteAddr', array(&$ipaddr));
