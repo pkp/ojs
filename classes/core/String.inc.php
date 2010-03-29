@@ -135,6 +135,40 @@ class String {
 	}
 
 	/**
+	 * @see http://ca.php.net/manual/en/function.substr_replace.php
+	 * Thanks to poster at http://ca.php.net/manual/en/function.substr-replace.php#90146
+	 */
+	function substr_replace($string, $replacement, $start, $length = null) {
+		if (function_exists('mb_substr_replace') === false) {
+			function mb_substr_replace($string, $replacement, $start, $length = null) {
+				if (extension_loaded('mbstring') === true) {
+					$string_length = String::strlen($string);
+
+					if ($start < 0) {
+						$start = max(0, $string_length + $start);
+					} else if ($start > $string_length) {
+						$start = $string_length;
+					}
+
+					if ($length < 0) {
+						$length = max(0, $string_length - $start + $length);
+					} else if ((is_null($length) === true) || ($length > $string_length)) {
+						$length = $string_length;
+					}
+
+					if (($start + $length) > $string_length) {
+						$length = $string_length - $start;
+					}
+
+					return String::substr($string, 0, $start) . $replacement . String::substr($string, $start + $length, $string_length - $start - $length);
+				}
+			}
+
+			return (is_null($length) === true) ? substr_replace($string, $replacement, $start) : substr_replace($string, $replacement, $start, $length);
+		}
+	}
+
+	/**
 	 * @see http://ca.php.net/manual/en/function.strtolower.php
 	 */
 	function strtolower($string) {

@@ -187,6 +187,7 @@ class TemplateManager extends Smarty {
 		$this->register_function('get_debug_info', array(&$this, 'smartyGetDebugInfo'));
 		$this->register_function('assign_mailto', array(&$this, 'smartyAssignMailto'));
 		$this->register_function('display_template', array(&$this, 'smartyDisplayTemplate'));
+		$this->register_modifier('truncate', array(&$this, 'smartyTruncate'));
 
 		$this->register_function('url', array(&$this, 'smartyUrl'));
 
@@ -718,6 +719,213 @@ class TemplateManager extends Smarty {
 				return str_replace('&#039;', '\\\'', $value);
 			default:
 				return smarty_modifier_escape($string, $esc_type, $char_set);
+		}
+	}
+
+	/**
+	 * Override the built-in smarty truncate modifier to support mbstring and HTML tags
+	 * text properly, if possible.
+	 */
+	function smartyTruncate($string, $length = 80, $etc = '...', $break_words = false, $middle = false, $skip_tags = true) {
+		if ($length == 0) return '';
+
+		if (String::strlen($string) > $length) {
+			$originalLength = String::strlen($string);
+			if ($skip_tags) {
+				if ($middle) {
+					$tagsReverse = array();
+					$this->_removeTags($string, $tagsReverse, true, $length);
+				}
+				$tags = array();
+				$string = $this->_removeTags($string, $tags, false, $length);
+			}
+			$length -= min($length, String::strlen($etc));
+			if (!$middle) {        	
+				if(!$break_words) {
+					$string = String::regexp_replace('/\s+?(\S+)?$/', '', String::substr($string, 0, $length+1));
+				} else $string = String::substr($string, 0, $length+1);
+				if ($skip_tags) $string = $this->_reinsertTags($string, $tags);
+				return $this->_closeTags($string) . $etc;
+			} else {
+				$firstHalf = String::substr($string, 0, $length/2);
+				$secondHalf = String::substr($string, -$length/2);
+
+				if($break_words) {
+					if($skip_tags) {
+						$firstHalf = $this->_reinsertTags($firstHalf, $tags);
+						$secondHalf = $this->reinsertTags($secondHalf, $tagsReverse, true);
+						return $this->_closeTags($firstHalf) . $etc . $this->_closeTags($secondHalf, true);
+					} else {
+						return $firstHalf . $etc . $secondHalf;
+					}
+				} else {
+					for($i=$length/2; $string[$i] != ' '; $i++) {
+						$firstHalf = String::substr($string, 0, $i+1);
+					}
+					for($i=$length/2; String::substr($string, -$i, 1) != ' '; $i++) {
+						$secondHalf = String::substr($string, -$i-1);
+					}
+
+					if ($skip_tags) {
+						$firstHalf = $this->_reinsertTags($firstHalf, $tags);
+						$secondHalf = $this->reinsertTags($secondHalf, $tagsReverse, strlen($string));
+						return $this->_closeTags($firstHalf) . $etc . $this->_closeTags($secondHalf, true);  
+					} else {
+						return $firstHalf . $etc . $secondHalf;
+					}
+				}
+			}
+		} else {
+			return $string;
+		}
+	}
+
+	/**
+	 * Helper function: Remove XHTML tags and insert them into a global array along with their position
+	 * @author Matt Crider
+	 * @param string
+	 * @param array
+	 * @param boolean
+	 * @param int
+	 * @return string
+	 */
+	function _removeTags($string, &$tags, $reverse = false, $length) {
+		if($reverse) {
+			return $this->_removeTagsAuxReverse($string, 0, $tags, $length);
+		} else {
+			return $this->_removeTagsAux($string, 0, $tags, $length);
+		}
+	}
+
+	/**
+	 * Helper function: Recursive function called by _removeTags
+	 * @author Matt Crider
+	 * @param string
+	 * @param int
+	 * @param array
+	 * @param int
+	 * @return string
+	 */
+	function _removeTagsAux($string, $loc, &$tags, $length) {
+		if(strlen($string) > 0 && $length > 0) {
+			$length--;
+			if(String::substr($string, 0, 1) == '<') {
+				$closeBrack = String::strpos($string, '>')+1;
+				if($closeBrack) {
+					$tags[] = array(String::substr($string, 0, $closeBrack), $loc);
+					return $this->_removeTagsAux(String::substr($string, $closeBrack), $loc+$closeBrack, $tags, $length);
+				}
+			}
+			return String::substr($string, 0, 1) . $this->_removeTagsAux(String::substr($string, 1), $loc+1, $tags, $length);
+		}
+	}
+
+	/**
+	 * Helper function: Recursive function called by _removeTags
+	 * Removes tags from the back of the string and keeps a record of their position from the back
+	 * @author Matt Crider
+	 * @param string
+	 * @param int loc Keeps track of position from the back of original string 
+	 * @param array
+	 * @param int
+	 * @return string
+	 */
+	function _removeTagsAuxReverse($string, $loc, &$tags, $length) {
+		$backLoc = String::strlen($string)-1;
+		if($backLoc >= 0 && $length > 0) {
+			$length--;
+			if(String::substr($string, $backLoc, 1) == '>') {
+				$tag = '>';
+				$openBrack = 1;
+				while (String::substr($string, $backLoc-$openBrack, 1) != '<') {
+					$tag = String::substr($string, $backLoc-$openBrack, 1) . $tag;
+					$openBrack++;
+				}
+				$tag = '<' . $tag;
+				$openBrack++;
+			
+				$tags[] = array($tag, $loc);
+				return $this->_removeTagsAuxReverse(String::substr($string, 0, -$openBrack), $loc+$openBrack, $tags, $length);
+			}
+			return $this->_removeTagsAuxReverse(String::substr($string, 0, -1), $loc+1, $tags, $length) . String::substr($string, $backLoc, 1);
+		}
+	}
+
+
+	/**
+	 * Helper function: Reinsert tags from the tag array into their original position in the string
+	 * @author Matt Crider
+	 * @param string
+	 * @param array
+	 * @param boolean Set to true to reinsert tags starting at the back of the string
+	 * @return string
+	 */
+	function _reinsertTags($string, &$tags, $reverse = false) {
+		if(empty($tags)) return $string;
+		
+		for($i = 0; $i < count($tags); $i++) {
+			$length = String::strlen($string);
+			if ($tags[$i][1] < String::strlen($string)) {
+				if ($reverse) {
+					if ($tags[$i][1] == 0) { // Cannot use -0 as the start index (its same as +0)
+						$string = String::substr_replace($string, $tags[$i][0], $length, 0);
+					} else {
+						$string = String::substr_replace($string, $tags[$i][0], -$tags[$i][1], 0);
+					}
+				} else {
+					$string = String::substr_replace($string, $tags[$i][0], $tags[$i][1], 0);
+				}
+			}
+		}
+	
+		return $string;
+	}
+
+	/**
+	 * Helper function: Closes all dangling XHTML tags in a string
+	 * Modified from http://milianw.de/code-snippets/close-html-tags
+	 *  by Milian Wolff <mail@milianw.de> 
+	 * @param string
+	 * @return string
+	 */
+	function _closeTags($string, $open = false){
+		// Put all opened tags into an array
+		String::regexp_match_all("#<([a-z]+)( .*)?(?!/)>#iU", $string, $result);
+		$openedtags = $result[1];
+		
+		// Put all closed tags into an array
+		String::regexp_match_all("#</([a-z]+)>#iU", $string, $result);
+		$closedtags = $result[1];
+		$len_opened = count($openedtags);
+		$len_closed = count($closedtags);
+		// All tags are closed
+		if(count($closedtags) == $len_opened){
+			return $string;
+		}
+
+		$openedtags = array_reverse($openedtags);
+		$closedtags = array_reverse($closedtags);
+
+		if ($open) {
+			// Open tags
+			for($i=0; $i < $len_closed; $i++) {
+				if (!in_array($closedtags[$i],$openedtags)){
+					$string = '<'.$closedtags[$i].'>' . $string;
+				} else {
+					unset($openedtags[array_search($closedtags[$i],$openedtags)]);
+				}
+			}
+			return $string;
+		} else {
+			// Close tags
+			for($i=0; $i < $len_opened; $i++) {
+				if (!in_array($openedtags[$i],$closedtags)){
+					$string .= '</'.$openedtags[$i].'>';
+				} else {
+					unset($closedtags[array_search($openedtags[$i],$closedtags)]);
+				}
+			}
+			return $string;
 		}
 	}
 
