@@ -33,7 +33,7 @@
 <body>
 
 <div id="container">
-<div id="main" style="width: 150px; font-size: 0.7em; padding-top: 1.5em; padding-left: 1em">
+<div id="main">
 
 <h5>{$journal->getLocalizedInitials()|escape}{if $issue}<br />{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}{/if}</h5>
 
