@@ -12,7 +12,7 @@
   -->
 <data>
 	<table name="email_templates_default_data">
-		<field_default name="locale">en_US</field_default>
+		<field_default name="locale">ca_ES</field_default>
 
 		<!--
 		  *
