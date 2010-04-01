@@ -53,6 +53,7 @@ class EndNoteCitationPlugin extends CitationPlugin {
 	 */
 	function displayCitation(&$article, &$issue, &$journal) {
 		header('Content-Disposition: attachment; filename="' . $article->getId() . '-endNote.enw"');
+		header('Content-Type: application/x-endnote-refer');
 		echo parent::fetchCitation($article, $issue, $journal);
 	}
 }

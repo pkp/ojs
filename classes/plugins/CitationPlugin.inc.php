@@ -94,7 +94,6 @@ class CitationPlugin extends Plugin {
 	 * @param $issue object
 	 */
 	function fetchCitation(&$article, &$issue, &$journal) {
-		HookRegistry::register('Template::RT::CaptureCite', array(&$this, 'displayCitation'));
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('citationPlugin', $this);
 		$templateMgr->assign_by_ref('article', $article);

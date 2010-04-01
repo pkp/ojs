@@ -53,6 +53,7 @@ class ProCiteCitationPlugin extends CitationPlugin {
 	 */
 	function displayCitation(&$article, &$issue, &$journal) {
 		header('Content-Disposition: attachment; filename="' . $article->getId() . '-proCite.ris"');
+		header('Content-Type: application/x-Research-Info-Systems');
 		echo parent::fetchCitation($article, $issue, $journal);
 	}
 }
