@@ -49,11 +49,11 @@ class EndNoteCitationPlugin extends CitationPlugin {
 	 * Return a custom-formatted citation.
 	 * @param $article object
 	 * @param $issue object
+	 * @param $journal object
 	 */
-	function cite(&$article, &$issue) {
+	function displayCitation(&$article, &$issue, &$journal) {
 		header('Content-Disposition: attachment; filename="' . $article->getId() . '-endNote.enw"');
-		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->display($this->getTemplatePath() . '/citation.tpl', 'application/x-endnote-refer');
+		parent::displayCitation($article, $issue, $journal);
 	}
 }
 

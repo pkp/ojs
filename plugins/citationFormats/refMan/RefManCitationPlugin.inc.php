@@ -46,14 +46,14 @@ class RefManCitationPlugin extends CitationPlugin {
 	}
 
 	/**
-	 * Return a custom-formatted citation.
+	 * Display a custom-formatted citation.
 	 * @param $article object
 	 * @param $issue object
+	 * @param $journal object
 	 */
-	function cite(&$article, &$issue) {
+	function displayCitation(&$article, &$issue, &$journal) {
 		header('Content-Disposition: attachment; filename="' . $article->getId() . '-refMan.ris"');
-		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->display($this->getTemplatePath() . '/citation.tpl', 'application/x-Research-Info-Systems');
+		parent::displayCitation($article, $issue, $journal);
 	}
 }
 
