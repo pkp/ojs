@@ -97,7 +97,8 @@ class ReviewFormResponseForm extends Form {
 
 		$reviewFormResponseDao =& DAORegistry::getDAO('ReviewFormResponseDAO');
 
-		foreach ($this->getData('reviewFormResponses') as $reviewFormElementId => $reviewFormResponseValue) {
+		$reviewFormResponses = $this->getData('reviewFormResponses');
+		if (is_array($reviewFormResponses)) foreach ($reviewFormResponses as $reviewFormElementId => $reviewFormResponseValue) {
 			$reviewFormResponse =& $reviewFormResponseDao->getReviewFormResponse($this->reviewId, $reviewFormElementId);
 			if (!isset($reviewFormResponse)) {
 				$reviewFormResponse = new ReviewFormResponse();
