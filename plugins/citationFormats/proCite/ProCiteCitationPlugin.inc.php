@@ -49,10 +49,11 @@ class ProCiteCitationPlugin extends CitationPlugin {
 	 * Display a custom-formatted citation.
 	 * @param $article object
 	 * @param $issue object
+	 * @param $journal object
 	 */
 	function displayCitation(&$article, &$issue, &$journal) {
 		header('Content-Disposition: attachment; filename="' . $article->getId() . '-proCite.ris"');
-		parent::displayCitation($article, $issue, $journal);
+		echo parent::fetchCitation($article, $issue, $journal);
 	}
 }
 

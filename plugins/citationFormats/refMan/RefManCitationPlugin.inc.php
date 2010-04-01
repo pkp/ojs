@@ -53,7 +53,7 @@ class RefManCitationPlugin extends CitationPlugin {
 	 */
 	function displayCitation(&$article, &$issue, &$journal) {
 		header('Content-Disposition: attachment; filename="' . $article->getId() . '-refMan.ris"');
-		parent::displayCitation($article, $issue, $journal);
+		echo parent::fetchCitation($article, $issue, $journal);
 	}
 }
 

@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-<div id="citation">
 {if $galleyId}
 	{url|assign:"articleUrl" page="article" op="view" path=$articleId|to_array:$galleyId}
 {else}
@@ -25,4 +24,3 @@
 %K {$article->getLocalizedSubject()|escape}
 %X {$article->getLocalizedAbstract()|strip_tags|replace:"\n":" "|replace:"\r":" "}
 %U {$articleUrl}
-</div>
