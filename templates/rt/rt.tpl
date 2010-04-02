@@ -8,32 +8,6 @@
  *
  * $Id$
  *}
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<title>{$article->getFirstAuthor(true)|escape}</title>
-	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset|escape}" />
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-
-	<link rel="stylesheet" href="{$baseUrl}/lib/pkp/styles/common.css" type="text/css" />
-	<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />
-	<link rel="stylesheet" href="{$baseUrl}/styles/articleView.css" type="text/css" />
-	<link rel="stylesheet" href="{$baseUrl}/lib/pkp/styles/rt.css" type="text/css" />
-
-	{foreach from=$stylesheets item=cssUrl}
-		<link rel="stylesheet" href="{$cssUrl}" type="text/css" />
-	{/foreach}
-
-	<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/general.js"></script>
-	{$additionalHeadData}
-</head>
-<body>
-
-<div id="container">
-<div id="main">
 
 <h5>{$journal->getLocalizedInitials()|escape}{if $issue}<br />{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}{/if}</h5>
 
@@ -141,29 +115,7 @@
 	{translate key="common.ccLicense.rt"}
 {/if}
 
-<div class="rtSeparatorThin"></div>
-
-{if $galley}
-	{if $galley->isHtmlGalley()}
-		<a href="{url op="viewArticle" path=$articleId|to_array:$galleyId}" target="_parent" class="rtAction">{translate key="common.close"}</a>
-	{elseif $galley->isPdfGalley()}
-		<a href="{url op="viewPDFInterstitial" path=$articleId|to_array:$galleyId}" target="_parent" class="rtAction">{translate key="common.close"}</a>
-	{else}
-		<a href="{url op="viewDownloadInterstitial" path=$articleId|to_array:$galleyId}" target="_parent" class="rtAction">{translate key="common.close"}</a>
-	{/if}
-{else}
-	<a href="{url op="viewArticle" path=$articleId}" target="_parent" class="rtAction">{translate key="common.close"}</a>
-{/if}
-
 {if $needsLoginNote}
 {url|assign:"loginUrl" page="user" op="register"}
 <p><em style="font-size: 0.9em">{translate key="rt.email.needLogin" loginUrl=$loginUrl}</em></p>
 {/if}
-
-</div>
-
-</div>
-
-</body>
-
-</html>

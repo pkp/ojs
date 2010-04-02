@@ -26,6 +26,9 @@
 	<link rel="stylesheet" href="{$baseUrl}/lib/pkp/styles/common.css" type="text/css" />
 	<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />
 	<link rel="stylesheet" href="{$baseUrl}/styles/articleView.css" type="text/css" />
+	{if $journalRt && $journalRt->getEnabled()}
+		<link rel="stylesheet" href="{$baseUrl}/lib/pkp/styles/rtEmbedded.css" type="text/css" />
+	{/if}
 
 	{foreach from=$stylesheets item=cssUrl}
 		<link rel="stylesheet" href="{$cssUrl}" type="text/css" />
@@ -39,6 +42,12 @@
 <div id="container">
 
 <div id="body">
+
+{if $journalRt && $journalRt->getEnabled()}
+	<div id="rt">
+		{include file="rt/rt.tpl"}
+	</div>
+{/if}
 
 <div id="main">
 

@@ -21,6 +21,16 @@
 			</div>
 		</div>
 		{$galley->getHTMLContents()}
+	{elseif $galley->isPdfGalley()}
+		<div id="articlePdf">
+		{url|assign:"pdfUrl" op="viewFile" path=$articleId|to_array:$galley->getBestGalleyId($currentJournal)}
+		<object type="application/pdf" data="{$pdfUrl}" width="100%" height="100%">
+			{translate key="article.pdf.pluginMissing"}
+		</object>
+		<br/>
+		{* The target="_parent" is for the sake of iphones, which present scroll problems otherwise. *}
+		<p><a class="action" target="_parent" href="{url op="download" path=$articleId|to_array:$galley->getBestGalleyId($currentJournal)}">{translate key="article.pdf.download"}</a></p>
+		</div>{* articlePdf *}
 	{/if}
 {else}
 	<div id="topBar">
