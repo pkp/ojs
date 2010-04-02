@@ -44,29 +44,31 @@ class AdminSettingsHandler extends AdminHandler {
 
 	/**
 	 * Validate and save changes to site settings.
+	 * @param $args array
+	 * @param $request object
 	 */
-	function saveSettings() {
+	function saveSettings($args, $request) {
 		$this->validate();
 		$this->setupTemplate(true);
-		$site =& Request::getSite();
+		$site =& $request->getSite();
 
 		import('admin.form.SiteSettingsForm');
 
 		$settingsForm = new SiteSettingsForm();
 		$settingsForm->readInputData();
 
-		if (Request::getUserVar('uploadSiteStyleSheet')) {
+		if ($request->getUserVar('uploadSiteStyleSheet')) {
 			if (!$settingsForm->uploadSiteStyleSheet()) {
 				$settingsForm->addError('siteStyleSheet', Locale::translate('admin.settings.siteStyleSheetInvalid'));
 			}
-		} elseif (Request::getUserVar('deleteSiteStyleSheet')) {
+		} elseif ($request->getUserVar('deleteSiteStyleSheet')) {
 			$publicFileManager = new PublicFileManager();
 			$publicFileManager->removeSiteFile($site->getSiteStyleFilename());
-		} elseif (Request::getUserVar('uploadPageHeaderTitleImage')) {
+		} elseif ($request->getUserVar('uploadPageHeaderTitleImage')) {
 			if (!$settingsForm->uploadPageHeaderTitleImage($settingsForm->getFormLocale())) {
 				$settingsForm->addError('pageHeaderTitleImage', Locale::translate('admin.settings.homeHeaderImageInvalid'));
 			}
-		} elseif (Request::getUserVar('deletePageHeaderTitleImage')) {
+		} elseif ($request->getUserVar('deletePageHeaderTitleImage')) {
 			$publicFileManager = new PublicFileManager();
 			$setting = $site->getSetting('pageHeaderTitleImage');
 			$formLocale = $settingsForm->getFormLocale();
@@ -85,11 +87,10 @@ class AdminSettingsHandler extends AdminHandler {
 			import('notification.NotificationManager');
 			$notificationManager = new NotificationManager();
 			$notificationManager->createTrivialNotification('notification.notification', 'common.changesSaved');
-			Request::redirect(null, null, 'index');
+			$request->redirect(null, null, 'index');
 		}
 		$settingsForm->display();
 	}
-
 }
 
 ?>

@@ -323,10 +323,6 @@ table.listing tr.data td.drag {
  * Other organizational elements
  */
 
-li.pluginManaged {
-	color: green;
-}
-
 div.progressbar {
 	background-image: url(../templates/images/progbg.gif);
 	background-repeat: no-repeat;

@@ -35,13 +35,6 @@
 		{/if}
 	{/foreach}
 	
-	{if $message}
-		<ul>
-			<li class="pluginManaged">{$message}</li>
-		</ul>
-	{/if}
-
-	
 	<ul class="plain">
 	{foreach from=$plugins item=plugin}
 		{if !$plugin->getHideManagement()}

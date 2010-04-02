@@ -70,8 +70,10 @@ class PluginHandler extends ManagerHandler {
 
 	/**
 	 * Perform plugin-specific management functions.
+	 * @param $args array
+	 * @param $request object
 	 */
-	function plugin($args) {
+	function plugin($args, &$request) {
 		$category = array_shift($args);
 		$plugin = array_shift($args);
 		$verb = array_shift($args);
@@ -82,11 +84,10 @@ class PluginHandler extends ManagerHandler {
 		$plugins =& PluginRegistry::loadCategory($category);
 		$message = null;
 		if (!isset($plugins[$plugin]) || !$plugins[$plugin]->manage($verb, $args, $message)) {
-			if ($message) {
-				$templateMgr =& TemplateManager::getManager();
-				$templateMgr->assign('message', $message);
-			}
-			PluginHandler::plugins(array($category));
+			import('notification.NotificationManager');
+			$notificationManager = new NotificationManager();
+			$notificationManager->createTrivialNotification(Locale::translate('notification.notification'), $message, NOTIFICATION_TYPE_SUCCESS, null, 0);
+			$request->redirect(null, null, 'plugins', array($category));
 		}
 	}
 	
