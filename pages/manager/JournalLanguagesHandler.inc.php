@@ -9,7 +9,7 @@
  * @class JournalLanguagesHandler
  * @ingroup pages_manager
  *
- * @brief Handle requests for changing journal language settings. 
+ * @brief Handle requests for changing journal language settings.
  */
 
 // $Id$
@@ -40,8 +40,10 @@ class JournalLanguagesHandler extends ManagerHandler {
 
 	/**
 	 * Save changes to language settings.
+	 * @param $args array
+	 * @param $request object
 	 */
-	function saveLanguageSettings() {
+	function saveLanguageSettings($args, &$request) {
 		$this->validate();
 		$this->setupTemplate(true);
 
@@ -52,54 +54,53 @@ class JournalLanguagesHandler extends ManagerHandler {
 
 		if ($settingsForm->validate()) {
 			$settingsForm->execute();
-
-			$templateMgr =& TemplateManager::getManager();
-			$templateMgr->assign(array(
-				'currentUrl' => Request::url(null, null, 'languages'),
-				'pageTitle' => 'common.languages',
-				'message' => 'common.changesSaved',
-				'backLink' => Request::url(null, Request::getRequestedPage()),
-				'backLinkLabel' => 'manager.journalManagement'
-			));
-			$templateMgr->display('common/message.tpl');
-
+			import('notification.NotificationManager');
+			$notificationManager = new NotificationManager();
+			$notificationManager->createTrivialNotification('notification.notification', 'common.changesSaved');
+			$request->redirect(null, null, 'index');
 		} else {
 			$settingsForm->display();
 		}
 	}
-	
-	function reloadLocalizedDefaultSettings() {
+
+	/**
+	 * Reload the default localized settings for the journal.
+	 * @param $args array
+	 * @param $request object
+	 */
+	function reloadLocalizedDefaultSettings($args, &$request) {
 		// make sure the locale is valid
-		$locale = Request::getUserVar('localeToLoad');
+		$locale = $request->getUserVar('localeToLoad');
 		if ( !Locale::isLocaleValid($locale) ) {
-			Request::redirect(null, null, 'languages');
+			$request->redirect(null, null, 'languages');
 		}
 
 		$this->validate();
 		$this->setupTemplate(true);
-					
-		$journal =& Request::getJournal();
+
+		$journal =& $request->getJournal();
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-		$journalSettingsDao->reloadLocalizedDefaultSettings($journal->getId(), 'registry/journalSettings.xml', array(
-				'indexUrl' => Request::getIndexUrl(),
+		$journalSettingsDao->reloadLocalizedDefaultSettings(
+			$journal->getId(), 'registry/journalSettings.xml',
+			array(
+				'indexUrl' => $request->getIndexUrl(),
 				'journalPath' => $journal->getData('path'),
 				'primaryLocale' => $journal->getPrimaryLocale(),
 				'journalName' => $journal->getTitle($journal->getPrimaryLocale())
 			),
-			$locale);
+			$locale
+		);
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign(array(
-			'currentUrl' => Request::url(null, null, 'languages'),
+			'currentUrl' => $request->url(null, null, 'languages'),
 			'pageTitle' => 'common.languages',
 			'message' => 'common.changesSaved',
-			'backLink' => Request::url(null, Request::getRequestedPage()),
+			'backLink' => $request->url(null, $request->getRequestedPage()),
 			'backLinkLabel' => 'manager.journalManagement'
 		));
 		$templateMgr->display('common/message.tpl');
 	}
-
-	
-
 }
+
 ?>
