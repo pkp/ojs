@@ -79,8 +79,8 @@
 		<td colspan="2" class="value"><span class="instruct">{translate key="admin.settings.journalRedirectInstructions"}</span></td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{fieldLabel name="about" key="admin.settings.aboutDescription"}</td>
-		<td colspan="2" class="value"><textarea name="about[{$formLocale|escape}]" id="aboutDescription" cols="40" rows="10" class="textArea">{$about[$formLocale]|escape}</textarea></td>
+		<td class="label">{fieldLabel name="aboutField" key="admin.settings.aboutDescription"}</td>
+		<td colspan="2" class="value"><textarea name="about[{$formLocale|escape}]" id="aboutField" cols="40" rows="10" class="textArea">{$about[$formLocale]|escape}</textarea></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="contactName" key="admin.settings.contactName" required="true"}</td>

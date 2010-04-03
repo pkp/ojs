@@ -72,7 +72,7 @@ class TinyMCEPlugin extends GenericPlugin {
 			case 'admin/settings':
 			case 'admin/saveSettings':
 				$fields[] = 'intro';
-				$fields[] = 'aboutDescription';
+				$fields[] = 'aboutField';
 				break;
 			case 'admin/createJournal':
 			case 'admin/updateJournal':

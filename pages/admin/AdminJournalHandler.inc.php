@@ -75,17 +75,19 @@ class AdminJournalHandler extends AdminHandler {
 
 	/**
 	 * Save changes to a journal's settings.
+	 * @param $args array
+	 * @param $request object
 	 */
-	function updateJournal() {
+	function updateJournal($args, &$request) {
 		$this->validate();
 		$this->setupTemplate();
 
 		import('admin.form.JournalSiteSettingsForm');
 
 		if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
-			$settingsForm = new JournalSiteSettingsForm(Request::getUserVar('journalId'));
+			$settingsForm = new JournalSiteSettingsForm($request->getUserVar('journalId'));
 		} else {
-			$settingsForm =& new JournalSiteSettingsForm(Request::getUserVar('journalId'));
+			$settingsForm =& new JournalSiteSettingsForm($request->getUserVar('journalId'));
 		}
 
 		$settingsForm->readInputData();
@@ -97,7 +99,7 @@ class AdminJournalHandler extends AdminHandler {
 			import('notification.NotificationManager');
 			$notificationManager = new NotificationManager();
 			$notificationManager->createTrivialNotification('notification.notification', 'common.changesSaved');
-			Request::redirect(null, null, 'journals');
+			$request->redirect(null, null, 'journals');
 
 		} else {
 			$settingsForm->display();
@@ -107,8 +109,9 @@ class AdminJournalHandler extends AdminHandler {
 	/**
 	 * Delete a journal.
 	 * @param $args array first parameter is the ID of the journal to delete
+	 * @param $request object
 	 */
-	function deleteJournal($args) {
+	function deleteJournal($args, &$request) {
 		$this->validate();
 
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
@@ -130,20 +133,22 @@ class AdminJournalHandler extends AdminHandler {
 			}
 		}
 
-		Request::redirect(null, null, 'journals');
+		$request->redirect(null, null, 'journals');
 	}
 
 	/**
 	 * Change the sequence of a journal on the site index page.
+	 * @param $args array
+	 * @param $request object
 	 */
-	function moveJournal() {
+	function moveJournal($args, &$request) {
 		$this->validate();
 
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journal =& $journalDao->getJournal(Request::getUserVar('id'));
+		$journal =& $journalDao->getJournal($request->getUserVar('id'));
 
 		if ($journal != null) {
-			$direction = Request::getUserVar('d');
+			$direction = $request->getUserVar('d');
 
 			if ($direction != null) {
 				// moving with up or down arrow
@@ -151,7 +156,7 @@ class AdminJournalHandler extends AdminHandler {
 
 			} else {
 				// Dragging and dropping onto another journal
-				$prevId = Request::getUserVar('prevId');
+				$prevId = $request->getUserVar('prevId');
 				if ($prevId == null)
 					$prevSeq = 0;
 				else {
@@ -169,7 +174,7 @@ class AdminJournalHandler extends AdminHandler {
 			// In the case of a drag and drop move, the display has been
 			// updated on the client side, so no reload is necessary.
 			if ($direction != null) {
-				Request::redirect(null, null, 'journals');
+				$request->redirect(null, null, 'journals');
 			}
 		}
 	}

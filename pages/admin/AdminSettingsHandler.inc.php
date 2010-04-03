@@ -83,7 +83,6 @@ class AdminSettingsHandler extends AdminHandler {
 			}
 		} elseif ($settingsForm->validate()) {
 			$settingsForm->execute();
-			$templateMgr =& TemplateManager::getManager();
 			import('notification.NotificationManager');
 			$notificationManager = new NotificationManager();
 			$notificationManager->createTrivialNotification('notification.notification', 'common.changesSaved');
