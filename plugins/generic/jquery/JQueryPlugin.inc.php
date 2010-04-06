@@ -62,6 +62,9 @@ class JQueryPlugin extends GenericPlugin {
 	function getEnabledScripts($page, $op) {
 		$scripts = array();
 		switch ("$page/$op") {
+			case 'article/view':
+				$scripts[] = 'lib/pkp/js/articleView.js';
+				break;
 			case 'editor/submissionCitations':
 			case 'sectionEditor/submissionCitations':
 				$scripts[] = 'plugins/generic/jquery/scripts/grid-clickhandler.js';

@@ -10,27 +10,23 @@
  *}
 {include file="article/header.tpl"}
 
+<script type="text/javascript">
+	{literal}initPdfResize();{/literal}
+</script>
+
 {if $galley}
 	{if $galley->isHTMLGalley()}
-		<div id="topBar">
-			<div id="articleFontSize">
-				{translate key="article.fontSize"}:&nbsp;
-				<a href="#" onclick="setFontSize('{translate|escape:"jsparam" key="article.fontSize.small.altText"}');" class="icon">{icon path="lib/pkp/templates/images/icons/" name="font_small"}</a>&nbsp;
-				<a href="#" onclick="setFontSize('{translate|escape:"jsparam" key="article.fontSize.medium.altText"}');" class="icon">{icon path="lib/pkp/templates/images/icons/" name="font_medium"}</a>&nbsp;
-				<a href="#" onclick="setFontSize('{translate|escape:"jsparam" key="article.fontSize.large.altText"}');" class="icon">{icon path="lib/pkp/templates/images/icons/" name="font_large"}</a>
-			</div>
-		</div>
 		{$galley->getHTMLContents()}
 	{elseif $galley->isPdfGalley()}
-		<div id="articlePdf">
+		<div id="articlePdf" class="ui-widget-content">
 		{url|assign:"pdfUrl" op="viewFile" path=$articleId|to_array:$galley->getBestGalleyId($currentJournal)}
-		<object type="application/pdf" data="{$pdfUrl}" width="100%" height="100%">
+		<object type="application/pdf" data="{$pdfUrl}" width="99%" height="99%">
 			{translate key="article.pdf.pluginMissing"}
 		</object>
-		<br/>
+		<br /><br />
 		{* The target="_parent" is for the sake of iphones, which present scroll problems otherwise. *}
-		<p><a class="action" target="_parent" href="{url op="download" path=$articleId|to_array:$galley->getBestGalleyId($currentJournal)}">{translate key="article.pdf.download"}</a></p>
 		</div>{* articlePdf *}
+		<p><a class="action" target="_parent" href="{url op="download" path=$articleId|to_array:$galley->getBestGalleyId($currentJournal)}">{translate key="article.pdf.download"}</a></p>
 	{/if}
 {else}
 	<div id="topBar">
@@ -47,12 +43,6 @@
 				{/if}
 			</div>
 		{/if}
-		<div id="articleFontSize">
-				{translate key="article.fontSize"}:&nbsp;
-			<a href="#" onclick="setFontSize('{translate|escape:"jsparam" key="article.fontSize.small.altText"}');" class="icon">{icon path="lib/pkp/templates/images/icons/" name="font_small"}</a>&nbsp;
-			<a href="#" onclick="setFontSize('{translate|escape:"jsparam" key="article.fontSize.medium.altText"}');" class="icon">{icon path="lib/pkp/templates/images/icons/" name="font_medium"}</a>&nbsp;
-			<a href="#" onclick="setFontSize('{translate|escape:"jsparam" key="article.fontSize.large.altText"}');" class="icon">{icon path="lib/pkp/templates/images/icons/" name="font_large"}</a>
-		</div>
 	</div>
 	{if $coverPagePath}
 		<div id="articleCoverImage"><img src="{$coverPagePath|escape}{$coverPageFileName|escape}"{if $coverPageAltText != ''} alt="{$coverPageAltText|escape}"{else} alt="{translate key="article.coverPage.altText"}"{/if}{if $width} width="{$width|escape}"{/if}{if $height} height="{$height|escape}"{/if}/>
@@ -82,14 +72,14 @@
 	{else}
 		{assign var=hasAccess value=0}
 	{/if}
-	
+
 	{if $galleys}
 		{translate key="reader.fullText"}
 		{if $hasAccess || ($subscriptionRequired && $showGalleyLinks)}
 			{foreach from=$article->getLocalizedGalleys() item=galley name=galleyList}
 				<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getBestGalleyId($currentJournal)}" class="file" target="_parent">{$galley->getGalleyLabel()|escape}</a>
 				{if $subscriptionRequired && $showGalleyLinks && $restrictOnlyPdf}
-					{if $article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN || !$galley->isPdfGalley()}	
+					{if $article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN || !$galley->isPdfGalley()}
 						<img class="accessLogo" src="{$baseUrl}/lib/pkp/templates/images/icons/fulltext_open_medium.gif" alt="{translate key="article.accessLogoOpen.altText"}" />
 					{else}
 						<img class="accessLogo" src="{$baseUrl}/lib/pkp/templates/images/icons/fulltext_restricted_medium.gif" alt="{translate key="article.accessLogoRestricted.altText"}" />
@@ -102,7 +92,7 @@
 				{else}
 					<img class="accessLogo" src="{$baseUrl}/lib/pkp/templates/images/icons/fulltext_restricted_medium.gif" alt="{translate key="article.accessLogoRestricted.altText"}" />
 				{/if}
-			{/if}					
+			{/if}
 		{else}
 			&nbsp;<a href="{url page="about" op="subscriptions"}" target="_parent">{translate key="reader.subscribersOnly"}</a>
 		{/if}

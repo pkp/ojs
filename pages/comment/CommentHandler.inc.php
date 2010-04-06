@@ -23,7 +23,7 @@ import('handler.Handler');
 class CommentHandler extends Handler {
 	/** issue associated with this request **/
 	var $issue;
-	
+
 	/** article associated with this request **/
 	var $article;
 
@@ -33,7 +33,7 @@ class CommentHandler extends Handler {
 	function CommentHandler() {
 		parent::Handler();
 	}
-	
+
 	function view($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
@@ -49,7 +49,7 @@ class CommentHandler extends Handler {
 		$comment =& $commentDao->getComment($commentId, $articleId, 2);
 
 		$journal =& Request::getJournal();
-		
+
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$isManager = $roleDao->roleExists($journal->getId(), $userId, ROLE_ID_JOURNAL_MANAGER);
 
@@ -78,6 +78,7 @@ class CommentHandler extends Handler {
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$parentId = isset($args[2]) ? (int) $args[2] : 0;
 		$journal =& Request::getJournal();
+		$commentDao =& DAORegistry::getDAO('CommentDAO');
 
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
@@ -91,8 +92,6 @@ class CommentHandler extends Handler {
 		$this->setupTemplate($publishedArticle, $galleyId, $parent);
 
 		// Bring in comment constants
-		$commentDao =& DAORegistry::getDAO('CommentDAO');
-
 		$enableComments = $journal->getSetting('enableComments');
 		switch ($enableComments) {
 			case COMMENTS_UNAUTHENTICATED:
@@ -117,7 +116,7 @@ class CommentHandler extends Handler {
 			$commentForm->readInputData();
 			if ($commentForm->validate()) {
 				$commentForm->execute();
-				
+
 				// Send a notification to associated users
 				import('notification.NotificationManager');
 				$notificationManager = new NotificationManager();
@@ -131,7 +130,7 @@ class CommentHandler extends Handler {
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_USER_COMMENT
 					);
 				}
-				
+
 				Request::redirect(null, null, 'view', array($articleId, $galleyId, $parentId), array('refresh' => 1));
 			}
 		}

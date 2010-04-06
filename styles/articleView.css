@@ -24,8 +24,9 @@
 }
 
 #articlePdf {
-	width: 100%;
+	width: 98%;
 	height: 400px;
+	padding: 1px 0px 1px 1px;
 }
 
 #main h2 {
@@ -118,7 +119,7 @@ div.rtBlock {
 
 div.rtBlock a {
 	text-transform: none;
-	text-decoration: none;	
+	text-decoration: none;
 }
 
 div.rtBlock ul {
@@ -146,10 +147,6 @@ a.rtAction {
 *  (based on NLM DTD classes)
 */
 
-table {
-	background-color: #F0F0E8;
-}
-
 table.bm {
 	border: 1px solid #000;
 }
@@ -167,4 +164,27 @@ dt {
 
 dd {
 	margin-left: 100px;
+}
+
+.articleToolItem {
+	margin-bottom: 3px;
+}
+
+.articleToolIcon {
+	padding-right: 5px;
+	vertical-align: middle;
+}
+
+#sidebarRTRelatedItems ul {
+	padding: 0px;
+}
+
+#sidebarRTRelatedItems li {
+	margin-bottom:3px;
+}
+
+#toggleRelatedItems {
+	display: none;
+	padding-top:3px;
+	cursor: pointer;
 }
