@@ -373,7 +373,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		assert(isset($plugins['JQueryPlugin']));
 		$jQueryPlugin =& $plugins['JQueryPlugin'];
 		assert(is_a($plugins['JQueryPlugin'], 'JQueryPlugin'));
-		$templateMgr->assign('jQueryEnabled', (boolean)$jQueryPlugin->getEnabled());
+		$templateMgr->assign('jQueryEnabled', (boolean)$jQueryPlugin->isJQueryInstalled());
 
 		// Add the grid URL
 		// FIXME: Refactor to the template when {load_div} accepts operations as parameters
