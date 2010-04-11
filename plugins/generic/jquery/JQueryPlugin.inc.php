@@ -208,7 +208,9 @@ class JQueryPlugin extends GenericPlugin {
 	 * @return boolean
 	 */
 	function isJQueryInstalled() {
-		return file_exists(JQUERY_JS_PATH);
+		// We may not register jQuery when the application is not yet installed
+		// as access to the template manager (see register method) requires db access.
+		return Config::getVar('general', 'installed') && file_exists(JQUERY_JS_PATH);
 	}
 }
 
