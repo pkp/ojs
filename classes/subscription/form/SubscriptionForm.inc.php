@@ -155,7 +155,8 @@ class SubscriptionForm extends Form {
 
 		// If subscription type requires it, membership is provided
 		$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
-		$needMembership = $subscriptionTypeDao->getSubscriptionTypeMembership($this->getData('typeId'));
+		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($this->getData('typeId'));
+		$needMembership = $subscriptionType->getMembership();
 
 		if ($needMembership) { 
 			$this->addCheck(new FormValidator($this, 'membership', 'required', 'manager.subscriptions.form.membershipRequired'));
@@ -163,8 +164,9 @@ class SubscriptionForm extends Form {
 
 		// If subscription type requires it, domain and/or IP range is provided
 		$isInstitutional = $subscriptionTypeDao->getSubscriptionTypeInstitutional($this->getData('typeId'));
+ 		$isOnline = $subscriptionType->getFormat() != SUBSCRIPTION_TYPE_FORMAT_PRINT ? true : false;
 
-		if ($isInstitutional) { 
+		if ($isInstitutional && $isOnline) { 
 			$this->addCheck(new FormValidatorCustom($this, 'domain', 'required', 'manager.subscriptions.form.domainIPRangeRequired', create_function('$domain, $ipRange', 'return $domain != \'\' || $ipRange != \'\' ? true : false;'), array($this->getData('ipRange'))));
 		}
 
