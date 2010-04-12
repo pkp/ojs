@@ -104,8 +104,13 @@ class InstitutionalSubscriptionForm extends SubscriptionForm {
 			}
 		}
 
-		// Domain or at least one IP range has been provided
-		$this->addCheck(new FormValidatorCustom($this, 'domain', 'required', 'manager.subscriptions.form.domainIPRangeRequired', create_function('$domain, $ipRangeProvided', 'return ($domain != \'\' || $ipRangeProvided) ? true : false;'), array($ipRangeProvided)));
+		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($this->getData('typeId'));
+
+		// If online or print + online, domain or at least one IP range has been provided
+		if ($subscriptionType->getFormat() != SUBSCRIPTION_TYPE_FORMAT_PRINT) {
+			$this->addCheck(new FormValidatorCustom($this, 'domain', 'required', 'manager.subscriptions.form.domainIPRangeRequired', create_function('$domain, $ipRangeProvided', 'return ($domain != \'\' || $ipRangeProvided) ? true : false;'), array($ipRangeProvided)));
+		}
 
 		// If provided ensure IP ranges have IP address format; IP addresses may contain wildcards
 		if ($ipRangeProvided) {	
