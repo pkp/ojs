@@ -25,29 +25,7 @@ class Plugin extends PKPPlugin {
 		parent::PKPPlugin();
 	}
 
-	function getTemplatePath() {
-		$basePath = dirname(dirname(dirname(__FILE__)));
-		return "file:$basePath/" . $this->getPluginPath() . '/';
-	}
-
-	/**
-	 * Called as a plugin is registered to the registry. Subclasses over-
-	 * riding this method should call the parent method first.
-	 * @param $category String Name of category plugin was registered to
-	 * @param $path String The path the plugin was found in
-	 * @return boolean True iff plugin initialized successfully; if false,
-	 * 	the plugin will not be registered.
-	 */
-	function register($category, $path) {
-		$returner = parent::register($category, $path);
-		if ($this->getNewJournalPluginSettingsFile()) {
-			HookRegistry::register ('JournalSiteSettingsForm::execute', array(&$this, 'installJournalSettings'));
-		}
-		return $returner;
-	}
-
 	function getSetting($journalId, $name) {
-		if (!Config::getVar('general', 'installed')) return null;
 		if (defined('RUNNING_UPGRADE')) {
 			// Bug #2504: Make sure plugin_settings table is not
 			// used if it's not available.
@@ -55,8 +33,7 @@ class Plugin extends PKPPlugin {
 			$version =& $versionDao->getCurrentVersion(null, true);
 			if ($version->compare('2.1.0') < 0) return null;
 		}
-		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO');
-		return $pluginSettingsDao->getSetting($journalId, $this->getName(), $name);
+		return parent::getSetting(array($journalId), $name);
 	}
 
 	/**
@@ -67,8 +44,7 @@ class Plugin extends PKPPlugin {
 	 * @param $type string optional
 	 */
 	function updateSetting($journalId, $name, $value, $type = null) {
-		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO');
-		$pluginSettingsDao->updateSetting($journalId, $this->getName(), $name, $value, $type);
+		parent::updateSetting(array($journalId), $name, $value, $type);
 	}
 
 	/**
@@ -77,61 +53,19 @@ class Plugin extends PKPPlugin {
 	 * Subclasses using default settings should override this.
 	 * @return string
 	 */
+	function getContextSpecificPluginSettingsFile() {
+		// The default implementation delegates to the old
+		// method for backwards compatibility.
+		return $this->getNewJournalPluginSettingsFile();
+	}
+
+	/**
+	 * For backwards compatibility only.
+	 *
+	 * New plug-ins should override getContextSpecificPluginSettingsFile
+	 */
 	function getNewJournalPluginSettingsFile() {
 		return null;
-	}
-
-	/**
-	 * Callback used to install settings on journal creation.
-	 * @param $hookName string
-	 * @param $args array
-	 * @return boolean
-	 */
-	function installJournalSettings($hookName, $args) {
-		$journal =& $args[1];
-		$isNewJournal = $args[3];
-
-		if (!$isNewJournal) return false;
-
-		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO');
-		$pluginSettingsDao->installSettings($journal->getId(), $this->getName(), $this->getNewJournalPluginSettingsFile());
-
-		return false;
-	}
-
-	/**
-	 * Callback used to install settings on system install.
-	 * @param $hookName string
-	 * @param $args array
-	 * @return boolean
-	 */
-	function installSiteSettings($hookName, $args) {
-		$installer =& $args[0];
-		$result =& $args[1];
-
-		// Settings are only installed during automated installs. FIXME!
-		if (!$installer->getParam('manualInstall')) {
-			$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO');
-			$pluginSettingsDao->installSettings(0, $this->getName(), $this->getInstallSitePluginSettingsFile());
-		}
-
-		return false;
-	}
-	
-	/**
-	 * Get the current version of this plugin
-	 * @return object Version
-	 */
-	function getCurrentVersion() {
-		$versionDao =& DAORegistry::getDAO('VersionDAO'); 
-		$product = basename($this->getPluginPath());
-		$installedPlugin = $versionDao->getCurrentVersion($product);
-		
-		if ($installedPlugin) {
-			return $installedPlugin;
-		} else {
-			return false;
-		}
 	}
 }
 
