@@ -48,13 +48,15 @@
 </div>
 {/if}
 
-<div id="submissionPreparationChecklist"><h3>{translate key="about.submissionPreparationChecklist"}</h3>
-<p>{translate key="about.submissionPreparationChecklist.description"}</p>
-<ol>
-	{foreach from=$submissionChecklist item=checklistItem}
-		<li>{$checklistItem.content|nl2br}</li>	
-	{/foreach}
-</ol>
+{if $submissionChecklist}
+	<div id="submissionPreparationChecklist"><h3>{translate key="about.submissionPreparationChecklist"}</h3>
+	<p>{translate key="about.submissionPreparationChecklist.description"}</p>
+	<ol>
+		{foreach from=$submissionChecklist item=checklistItem}
+			<li>{$checklistItem.content|nl2br}</li>	
+		{/foreach}
+	</ol>
+{/if}{* $submissionChecklist *}
 
 <div class="separator">&nbsp;</div>
 </div>
