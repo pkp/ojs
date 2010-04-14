@@ -554,6 +554,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	function &getSubscriptionsByJournalId($journalId, $status = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null) {
 
 		$params = array($journalId);
+		$ipRangeSql1 = $ipRangeSql2 = '';
 		$searchSql = $this->_generateSearchSQL($status, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, $params);
 
 		if (!empty($search)) switch ($searchField) {
@@ -592,6 +593,8 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 					$search = $search . '%';
 				}
 				$params[] = $search;
+				$ipRangeSql1 = ', institutional_subscription_ip isip' ;
+				$ipRangeSql2 = ' AND s.subscription_id = isip.subscription_id';
 				break;
 		}
 
@@ -601,14 +604,14 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 				subscriptions s,
 				subscription_types st,
 				users u,
-				institutional_subscriptions iss,
-				institutional_subscription_ip isip
-				WHERE s.type_id = st.type_id
+				institutional_subscriptions iss'
+				. $ipRangeSql1 .
+				' WHERE s.type_id = st.type_id
 				AND s.user_id = u.user_id
 				AND st.institutional = 1
-				AND s.subscription_id = iss.subscription_id
-				AND s.subscription_id = isip.subscription_id
-				AND s.journal_id = ?';
+				AND s.subscription_id = iss.subscription_id'
+				. $ipRangeSql2 .
+				' AND s.journal_id = ?';
 
 		$result =& $this->retrieveRange(
 			$sql . ' ' . $searchSql . ' ORDER BY iss.institution_name ASC, s.subscription_id',
@@ -826,6 +829,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 			$ipRanges[] = $ipRow['ip_string'];
 			$ipResult->moveNext();
 		}
+
 		$institutionalSubscription->setIPRanges($ipRanges);
 		$ipResult->Close();
 		unset($ipResult);

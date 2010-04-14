@@ -24,4 +24,8 @@
 	<sql>
 		<query>UPDATE notifications SET level = 2</query><!-- NOTIFICATION_LEVEL_NORMAL -->
 	</sql>
+	<!-- Bug #5310: Empty IP ranges stored in db -->
+	<sql>
+		<query>DELETE FROM institutional_subscription_ip WHERE ip_start = 0 AND ip_end IS NULL</query>
+	</sql>
 </data>

@@ -144,7 +144,12 @@ class InstitutionalSubscriptionForm extends SubscriptionForm {
 		$this->subscription->setInstitutionName($this->getData('institutionName'));
 		$this->subscription->setInstitutionMailingAddress($this->getData('institutionMailingAddress'));
 		$this->subscription->setDomain($this->getData('domain'));
-		$this->subscription->setIPRanges($this->getData('ipRanges'));
+
+		$ipRanges = $this->getData('ipRanges');
+		if (empty($ipRanges) || empty($ipRanges[0])) {
+			$ipRanges = array();
+		}
+		$this->subscription->setIPRanges($ipRanges);
 
 		$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 		if ($insert) {
