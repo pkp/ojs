@@ -9,7 +9,7 @@
   * This XSL stylesheet transforms OJS 1.x import XML into OJS 2.x import XML.
   * It is currently functional but incomplete and unlikely to receive much
   * attention; please feel free to contribute additions and updates by
-  * contacting the OJS team at pkp-support@sfu.ca.
+  * contacting the OJS team at pkp.contact@gmail.com.
   *
   * $Id$
   -->
