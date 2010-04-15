@@ -175,8 +175,10 @@ class CrossRefExportDom {
 		$contributorsNode =& XMLCustomWriter::createElement($doc, 'contributors');
 
 		/* AuthorList */
+		$isFirst = true;
 		foreach ($article->getAuthors() as $author) {
-			$authorNode =& CrossRefExportDom::generateAuthorDom($doc, $author);
+			$authorNode =& CrossRefExportDom::generateAuthorDom($doc, $author, $isFirst);
+			$isFirst = false;
 			XMLCustomWriter::appendChild($contributorsNode, $authorNode);
 		}
 		XMLCustomWriter::appendChild($journalArticleNode, $contributorsNode);
@@ -215,12 +217,12 @@ class CrossRefExportDom {
 	 * @param $author Author
 	 * @return XMLNode
 	 */
-	function &generateAuthorDom(&$doc, &$author) {
+	function &generateAuthorDom(&$doc, &$author, $isFirst = false) {
 		$authorNode =& XMLCustomWriter::createElement($doc, 'person_name');
 		XMLCustomWriter::setAttribute($authorNode, 'contributor_role', 'author');
 
 		/* there should only be 1 primary contact per article */
-		if ($author->getPrimaryContact()) {
+		if ($isFirst) {
 			XMLCustomWriter::setAttribute($authorNode, 'sequence', 'first');
 		} else {
 			XMLCustomWriter::setAttribute($authorNode, 'sequence', 'additional');
