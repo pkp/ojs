@@ -363,9 +363,10 @@ class TinyMCEPlugin extends GenericPlugin {
 					elements : "' . $enableFields . '",
 					relative_urls : false,
 					forced_root_block : false,
+					paste_auto_cleanup_on_paste : true,
 					apply_source_formatting : false,
 					theme : "advanced",
-					theme_advanced_buttons1 : "cut,copy,paste,pastetext,pasteword,|,bold,italic,underline,bullist,numlist,|,link,unlink,help,code,fullscreen,ibrowser",
+					theme_advanced_buttons1 : "cut,copy,paste,|,bold,italic,underline,bullist,numlist,|,link,unlink,help,code,fullscreen,ibrowser",
 					theme_advanced_buttons2 : "",
 					theme_advanced_buttons3 : ""
 				});
