@@ -84,9 +84,11 @@ class PluginHandler extends ManagerHandler {
 		$plugins =& PluginRegistry::loadCategory($category);
 		$message = null;
 		if (!isset($plugins[$plugin]) || !$plugins[$plugin]->manage($verb, $args, $message)) {
-			import('notification.NotificationManager');
-			$notificationManager = new NotificationManager();
-			$notificationManager->createTrivialNotification(Locale::translate('notification.notification'), $message, NOTIFICATION_TYPE_SUCCESS, null, 0);
+			if ($message) {
+				import('notification.NotificationManager');
+				$notificationManager = new NotificationManager();
+				$notificationManager->createTrivialNotification(Locale::translate('notification.notification'), $message, NOTIFICATION_TYPE_SUCCESS, null, 0);
+			}
 			$request->redirect(null, null, 'plugins', array($category));
 		}
 	}
