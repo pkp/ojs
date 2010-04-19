@@ -728,7 +728,7 @@ class Upgrade extends Installer {
 		foreach ($categories as $category) {
 			PluginRegistry::loadCategory($category, true);
 			$plugins = PluginRegistry::getPlugins($category);
-			foreach ($plugins as $plugin) {
+			if (is_array($plugins)) foreach ($plugins as $plugin) {
 				$versionFile = $plugin->getPluginPath() . '/version.xml';
 				
 				if (FileManager::fileExists($versionFile)) {
