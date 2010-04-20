@@ -18,9 +18,8 @@
 #main {
 	position: relative;
 	float: left;
-	width:47%;
+	width: 47%;
 	height: 100%;
-	text-align: center;
 	margin-left: 0;
 	margin-right: 0 !important;
 	display: inline;
