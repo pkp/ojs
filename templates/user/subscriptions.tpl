@@ -35,6 +35,42 @@
 	{/if}
 </p>
 
+{if $journalPaymentsEnabled && $acceptSubscriptionPayments}
+<h3>{translate key="user.subscriptions.subscriptionStatus"}</h3>
+<p>{translate key="user.subscriptions.statusInformation"}</p>
+<table width="100%" class="listing">
+	<tr>
+		<td colspan="2" class="headseparator">&nbsp;</td>
+	</tr>
+	<tr class="heading" valign="bottom">
+		<td width="30%">{translate key="user.subscriptions.status"}</td>
+		<td width="70%">{translate key="user.subscriptions.statusDescription"}</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="headseparator">&nbsp;</td>
+	</tr>
+	<tr valign="top">
+		<td>{translate key="subscriptions.status.needsInformation"}</td>
+		<td>{translate key="user.subscriptions.status.needsInformationDescription"}</td>
+	</tr>
+	<tr valign="top">
+		<td>{translate key="subscriptions.status.needsApproval"}</td>
+		<td>{translate key="user.subscriptions.status.needsApprovalDescription"}</td>
+	</tr>
+	<tr valign="top">
+		<td>{translate key="subscriptions.status.awaitingManualPayment"}</td>
+		<td>{translate key="user.subscriptions.status.awaitingManualPaymentDescription"}</td>
+	</tr>
+	<tr valign="top">
+		<td>{translate key="subscriptions.status.awaitingOnlinePayment"}</td>
+		<td>{translate key="user.subscriptions.status.awaitingOnlinePaymentDescription"}</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="headseparator">&nbsp;</td>
+	</tr>
+</table>
+{/if}
+
 {if $individualSubscriptionTypesExist}
 	<h3>{translate key="user.subscriptions.individualSubscriptions"}</h3>
 	<p>{translate key="subscriptions.individualDescription"}</p>

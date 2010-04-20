@@ -722,6 +722,14 @@ current password.<br /><br />Enter your email address below to reset your passwo
 
 	<!-- Subscriptions -->
 	<message key="user.subscriptions.mySubscriptions">My Subscriptions</message>
+	<message key="user.subscriptions.subscriptionStatus">Subscription Status</message>
+	<message key="user.subscriptions.statusInformation">Active and expired subscriptions are displayed below along with their expiration date. In addition, the following status information may be included with each subscription.</message>
+	<message key="user.subscriptions.status">Status</message>
+	<message key="user.subscriptions.statusDescription">Description</message>
+	<message key="user.subscriptions.status.needsInformationDescription">Additional information is needed before the subscription can be activated</message>
+	<message key="user.subscriptions.status.needsApprovalDescription">Subscription must be reviewed before it can be activated</message>
+	<message key="user.subscriptions.status.awaitingManualPaymentDescription">Manual payment has been initiated but not yet received</message>
+	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">An online payment has been initiated but canceled or not completed</message>
 	<message key="user.subscriptions.individualSubscriptions">Individual Subscription</message>
 	<message key="user.subscriptions.institutionalSubscriptions">Institutional Subscriptions</message>
 	<message key="user.subscriptions.renew">Renew</message>
