@@ -86,7 +86,7 @@
 {else}
 	<tr>
 		<td colspan="3" align="left">{page_info iterator=$payments}</td>
-		<td align="right">{page_links anchor="payments" name="payments" iterator=$payments searchField=$searchField searchMatch=$searchMatch search=$search dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateFromMonth=$dateFromMonth dateToDay=$dateToDay dateToYear=$dateToYear dateToMonth=$dateToMonth roleSymbolic=$roleSymbolic searchInitial=$searchInitial}</td>
+		<td align="right">{page_links anchor="payments" name="payments" iterator=$payments}</td>
 	</tr>
 {/if}
 </table>
