@@ -80,7 +80,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 	  */
 	 function viewPayments($args) {
 		parent::validate();
-		$rangeInfo = &Handler::getRangeInfo('CompletedPayments');
+		$rangeInfo = &Handler::getRangeInfo('payments');
 		$paymentDao = &DAORegistry::getDAO('OJSCompletedPaymentDAO');
 		$journal =& Request::getJournal();
 		$templateMgr = &TemplateManager::getManager();
