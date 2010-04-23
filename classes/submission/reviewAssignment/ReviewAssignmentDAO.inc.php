@@ -138,17 +138,24 @@ class ReviewAssignmentDAO extends DAO {
 	function &getReviewAssignmentsByArticleId($articleId, $round = null) {
 		$reviewAssignments = array();
 
-		if ($round == null) {
-			$result =& $this->retrieve(
-				'SELECT r.*, r2.review_revision, a.review_file_id, u.first_name, u.last_name FROM review_assignments r LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round) LEFT JOIN articles a ON (r.article_id = a.article_id) WHERE r.article_id = ? ORDER BY round, review_id',
-				(int) $articleId
-			);
-		} else {
-			$result =& $this->retrieve(
-				'SELECT r.*, r2.review_revision, a.review_file_id, u.first_name, u.last_name FROM review_assignments r LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round) LEFT JOIN articles a ON (r.article_id = a.article_id) WHERE r.article_id = ? AND r.round = ? ORDER BY review_id',
-				array((int) $articleId, (int) $round)
-			);
-		}
+		$args = array((int) $articleId);
+		if ($round) $args[] = (int) $round;
+
+		$result =& $this->retrieve(
+			'SELECT	r.*,
+				r2.review_revision,
+				a.review_file_id,
+				u.first_name,
+				u.last_name
+			FROM	review_assignments r
+				LEFT JOIN users u ON (r.reviewer_id = u.user_id)
+				LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round)
+				LEFT JOIN articles a ON (r.article_id = a.article_id)
+			WHERE	r.article_id = ?
+			' . ($round ? ' AND r.round = ? ':'') . '
+			ORDER BY review_id',
+			$args
+		);
 
 		while (!$result->EOF) {
 			$reviewAssignments[] =& $this->_returnReviewAssignmentFromRow($result->GetRowAssoc(false));

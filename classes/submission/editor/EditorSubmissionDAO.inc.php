@@ -103,6 +103,16 @@ class EditorSubmissionDAO extends DAO {
 			$editorSubmission->setDecisions($this->getEditorDecisions($row['article_id'], $i), $i);
 		}
 
+		// Review Rounds
+		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+		for ($i = 1; $i <= $editorSubmission->getCurrentRound(); $i++) {
+			$reviewAssignments =& $reviewAssignmentDao->getReviewAssignmentsByArticleId($editorSubmission->getId(), $i);
+			if (!empty($reviewAssignments)) {
+				$editorSubmission->setReviewAssignments($reviewAssignments, $i);
+			}
+			unset($reviewAssignments);
+		}
+
 		HookRegistry::call('EditorSubmissionDAO::_returnEditorSubmissionFromRow', array(&$editorSubmission, &$row));
 
 		return $editorSubmission;
