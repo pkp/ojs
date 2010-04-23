@@ -26,7 +26,7 @@
 
 {literal}
 function changePaymentMethod() {
-	document.paymentSettingsForm.action="{/literal}{url op="payMethodSettings" escape=false}{literal}";
+	document.paymentSettingsForm.action="{/literal}{url|escape:"javascript" op="payMethodSettings" escape=false}{literal}";
 		document.paymentSettingsForm.submit();
 	}
 
