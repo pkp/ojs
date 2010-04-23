@@ -53,5 +53,5 @@
 	{page_info iterator=$authors}&nbsp;&nbsp;&nbsp;&nbsp;{page_links anchor="authors" iterator=$authors name="authors" searchInitial=$searchInitial}
 {else}
 {/if}
-<div>
+</div>
 {include file="common/footer.tpl"}
