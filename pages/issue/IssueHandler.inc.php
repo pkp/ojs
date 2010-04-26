@@ -251,6 +251,9 @@ class IssueHandler extends Handler {
 			if ( $paymentManager->onlyPdfEnabled() ) {
 				$templateMgr->assign('restrictOnlyPdf', true);
 			}
+			if ( $paymentManager->purchaseArticleEnabled() ) {
+				$templateMgr->assign('purchaseArticleEnabled', true);
+			}			
 
 		} else {
 			$issueCrumbTitle = Locale::translate('archive.issueUnavailable');
