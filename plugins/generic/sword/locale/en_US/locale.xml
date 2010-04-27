@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2010 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id: locale.xml,v 1.23 2010/01/21 18:52:13 asmecher Exp $
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.sword.displayName">SWORD Plugin</message>
+	<message key="plugins.generic.sword.description">Allow Journal Managers and (optionally) Authors to deposit articles via the SWORD protocol</message>
+	<message key="plugins.generic.sword.enabled">The SWORD plugin has been enabled.</message>
+	<message key="plugins.generic.sword.disable">The SWORD plugin has been disabled.</message>
+	<message key="plugins.generic.sword.settings">Settings</message>
+	<message key="plugins.generic.sword.settings.allowAuthorSpecify">Allow the author to specify a deposit point</message>
+	<message key="plugins.generic.sword.settings.depositPoints">Deposit Points</message>
+	<message key="plugins.generic.sword.depositPoints.create">Create Deposit Point</message>
+	<message key="plugins.generic.sword.depositPoints.edit">Edit Deposit Point</message>
+	<message key="plugins.generic.sword.depositPoints.type.automatic">Automatic</message>
+	<message key="plugins.generic.sword.depositPoints.type.optionalSelection">Optional; Flexible</message>
+	<message key="plugins.generic.sword.depositPoints.type.optionalFixed">Optional; Fixed</message>
+	<message key="plugins.generic.sword.depositPoints.type.manager">Manager Only</message>
+	<message key="plugins.generic.sword.depositPoints.type.description"><![CDATA[<h4>Deposit Point Types:</h4>
+<p><strong>Automatic</strong>: The deposit occurs automatically. The full SWORD deposit point is specified. A username and password must be specified.<br/>
+<strong>Optional; Flexible</strong>: The author can choose whether or not to deposit. The specified URL indicates a service document, and the author may choose which specific deposit point to use from that document.<br/>
+<strong>Optional; Fixed</strong>: The author can choose whether or not to deposit. The URL specifies the specific SWORD deposit point.<br/>
+<strong>Manager Only</strong>: Only the Journal Manager may use this deposit point. The URL indicates a service document.
+</p>]]></message>
+	<message key="plugins.generic.sword.depositPoints.password.description">If you do not specify a password here, you and/or the author will be prompted for one when the deposit occurs. Note that this password will be visible to all Journal Managers and will be stored unencrypted in the database.</message>
+	<message key="plugins.generic.sword.depositPoints.name">Name</message>
+	<message key="plugins.importexport.sword.displayName">SWORD Import/Export Deposit Plugin</message>
+	<message key="plugins.importexport.sword.description">Deposit articles in remote repositories using the SWORD deposit protocol</message>
+	<message key="plugins.importexport.sword.deposit">Deposit</message>
+	<message key="plugins.importexport.sword.serviceDocUrl">Service Document URL</message>
+	<message key="plugins.importexport.sword.depositUrl">Deposit Point URL</message>
+	<message key="plugins.importexport.sword.depositPoint">Deposit Point</message>
+	<message key="plugins.importexport.sword.depositPoint.addRemove">Add/Remove</message>
+	<message key="plugins.importexport.sword.depositGalleys">Deposit Galleys</message>
+	<message key="plugins.importexport.sword.depositEditorial">Deposit Most Recent Editorial File</message>
+	<message key="plugins.importexport.sword.depositSuccessful">Deposit Successful</message>
+	<message key="plugins.importexport.sword.depositSuccessfulDescription">The item(s) selected have been deposited.</message>
+	<message key="plugins.importexport.sword.depositFailed">Deposit Failed</message>
+</locale>
