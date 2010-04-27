@@ -68,8 +68,8 @@ class OJSSwordDeposit {
 	 */
 	function setMetadata() {
 		$this->package->setCustodian($this->journal->getSetting('contactName'));
-		$this->package->setTitle($this->article->getTitle($this->journal->getPrimaryLocale()));
-		$this->package->setAbstract($this->article->getAbstract($this->journal->getPrimaryLocale()));
+		$this->package->setTitle(html_entity_decode($this->article->getTitle($this->journal->getPrimaryLocale()), ENT_QUOTES, 'UTF-8'));
+		$this->package->setAbstract(html_entity_decode(strip_tags($this->article->getAbstract($this->journal->getPrimaryLocale())), ENT_QUOTES, 'UTF-8'));
 		$this->package->setType($this->section->getIdentifyType($this->journal->getPrimaryLocale()));
 
 		$doi = $this->article->getDOI();
@@ -80,7 +80,7 @@ class OJSSwordDeposit {
 		}
 
 		$plugin =& PluginRegistry::loadPlugin('citationFormats', 'bibtex');
-		$this->package->setCitation(html_entity_decode(strip_tags($plugin->fetchCitation($this->article, $this->issue, $this->journal))));
+		$this->package->setCitation(html_entity_decode(strip_tags($plugin->fetchCitation($this->article, $this->issue, $this->journal)), ENT_QUOTES, 'UTF-8'));
 	}
 
 	/**

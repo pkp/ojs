@@ -21,6 +21,10 @@ class BibtexCitationPlugin extends CitationPlugin {
 	function register($category, $path) {
 		$success = parent::register($category, $path);
 		$this->addLocaleData();
+
+		$templateMgr =& TemplateManager::getManager();
+		$templateMgr->register_modifier('bibtex_escape', array(&$this, 'bibtexEscape'));
+
 		return $success;
 	}
 
@@ -45,6 +49,18 @@ class BibtexCitationPlugin extends CitationPlugin {
 		return Locale::translate('plugins.citationFormats.bibtex.description');
 	}
 
+	/**
+	 * @function bibtex_escape Escape strings for inclusion in BibTeX cites
+	 * @param $arg string
+	 * @return string
+	 */
+	function bibtexEscape($arg) {
+		return htmlspecialchars($returner = str_replace(
+			array('{', '}', '$','"', '&apos;'),
+			array('\\{', '\\}', '\\$', '\\"', '\''),
+			html_entity_decode($arg, ENT_QUOTES, 'UTF-8')
+		));
+	}
 }
 
 ?>
