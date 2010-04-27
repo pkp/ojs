@@ -476,8 +476,7 @@ class RoleDAO extends DAO {
 				return null;
 		}
 	}
-	
-		
+
 	/**
 	 * Map a column heading value to a database value for sorting
 	 * @param string
@@ -488,6 +487,7 @@ class RoleDAO extends DAO {
 			case 'username': return 'u.username';
 			case 'name': return 'u.last_name';
 			case 'email': return 'u.email';
+			case 'id': return 'u.user_id';
 			default: return null;
 		}
 	}
