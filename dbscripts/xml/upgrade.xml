@@ -174,7 +174,6 @@
 		<code function="localizeMoreJournalSettings" />
 		<code function="cleanImageAlts" />
 		<code function="cleanTitles" />
-		<code function="addPluginVersions" />
 		<note file="docs/release-notes/README-2.3.0" />
 
 		<!-- Post-2.3.0 additions -->
@@ -207,5 +206,10 @@
 	<upgrade minversion="2.0.0.0" maxversion="2.3.1.0">
 		<!-- 2.x to 2.3.2 -->
 		<data file="dbscripts/xml/upgrade/2.3.2_update.xml" />
+	</upgrade>
+
+	<upgrade minversion="2.0.0.0" maxversion="2.3.1.2">
+		<code function="addPluginVersions" />
+		<data file="dbscripts/xml/upgrade/2.3.3_update.xml" />
 	</upgrade>
 </install>

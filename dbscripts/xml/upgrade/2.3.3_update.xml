@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * 2.3.3_update.xml
+  *
+  * Copyright (c) 2003-2010 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 2.3.3 database updates XML file.
+  -->
+<data>
+	<!-- Bug #5268: Performance optimization: lazy load for plug-ins -->
+	<sql>
+		<query>UPDATE versions SET lazy_load = 0, product_class_name = '' WHERE product_type = 'core'</query>
+	</sql>
+	<sql>
+		<query>DELETE FROM versions WHERE product_type = 'plugins.generic' AND product = 'jquery'</query>
+	</sql>
+</data>

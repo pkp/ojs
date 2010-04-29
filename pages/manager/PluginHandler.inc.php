@@ -23,14 +23,14 @@ class PluginHandler extends ManagerHandler {
 	function PluginHandler() {
 		parent::ManagerHandler();
 	}
-	
+
 	/**
 	 * Display a list of plugins along with management options.
 	 */
 	function plugins($args) {
 		$category = isset($args[0])?$args[0]:null;
 		$categories = PluginRegistry::getCategories();
-		
+
 		$templateMgr =& TemplateManager::getManager();
 		$this->validate();
 
@@ -53,7 +53,7 @@ class PluginHandler extends ManagerHandler {
 					$plugins = array_merge($plugins, PluginRegistry::loadCategory($category));
 				}
 			}
-			
+
 			$this->setupTemplate(true);
 			$templateMgr->assign('pageTitle', 'manager.plugins.pluginManagement');
 			$templateMgr->assign('pageHierarchy', PluginHandler::setBreadcrumbs(false));
@@ -64,7 +64,7 @@ class PluginHandler extends ManagerHandler {
 		$templateMgr->assign('mainPage', $mainPage);
 		$templateMgr->assign('isSiteAdmin', Validation::isSiteAdmin());
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.plugins');
-		
+
 		$templateMgr->display('manager/plugins/plugins.tpl');
 	}
 
@@ -92,7 +92,7 @@ class PluginHandler extends ManagerHandler {
 			$request->redirect(null, null, 'plugins', array($category));
 		}
 	}
-	
+
 	/**
 	 * Set the page's breadcrumbs
 	 * @param $subclass boolean
@@ -111,7 +111,7 @@ class PluginHandler extends ManagerHandler {
 				false
 			)
 		);
-		
+
 		if ($subclass) {
 			$pageCrumbs[] = array(
 				Request::url(null, 'manager', 'plugins'),
@@ -122,7 +122,7 @@ class PluginHandler extends ManagerHandler {
 
 		return $pageCrumbs;
 	}
-	
+
 }
 
 ?>

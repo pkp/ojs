@@ -575,7 +575,7 @@ class Upgrade extends Installer {
 
 	/**
 	 * For 2.3 upgrade: Separate out individual and institutional subscriptions.
-	   Also pull apart single ip range string into multiple, shorter strings.  
+	   Also pull apart single ip range string into multiple, shorter strings.
 	 * @return boolean
 	 */
 	function separateSubscriptions() {
@@ -589,7 +589,7 @@ class Upgrade extends Installer {
 			$subscriptionId = (int) $row['subscription_id'];
 			$membership = $row['membership'] ? $row['membership'] : '';
 
-			// Insert into new subscriptions table			
+			// Insert into new subscriptions table
 			$subscriptionDao->update('INSERT INTO subscriptions (subscription_id, journal_id, user_id, type_id, date_start, date_end, status, membership, reference_number, notes) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', array($subscriptionId, (int) $row['journal_id'], (int) $row['user_id'], (int) $row['type_id'], $row['date_start'], $row['date_end'], 1, $membership, '', ''));
 
 			// If institutional subscription, also add records to institutional_subscriptions
@@ -637,7 +637,7 @@ class Upgrade extends Installer {
 						// Convert wildcard IP to IP range
 						} else {
 							$ipStart = sprintf('%u', ip2long(str_replace(SUBSCRIPTION_IP_RANGE_WILDCARD, '0', trim($curIPString))));
-							$ipEnd = sprintf('%u', ip2long(str_replace(SUBSCRIPTION_IP_RANGE_WILDCARD, '255', trim($curIPString)))); 
+							$ipEnd = sprintf('%u', ip2long(str_replace(SUBSCRIPTION_IP_RANGE_WILDCARD, '255', trim($curIPString))));
 						}
 
 					// Convert wildcard IP range to IP range
@@ -650,7 +650,7 @@ class Upgrade extends Installer {
 					}
 
 					if ($ipStart != null) {
-						$subscriptionDao->update('INSERT INTO institutional_subscription_ip (subscription_id, ip_string, ip_start, ip_end) VALUES(?, ?, ?, ?)', array($subscriptionId, $curIPString, $ipStart, $ipEnd));	
+						$subscriptionDao->update('INSERT INTO institutional_subscription_ip (subscription_id, ip_string, ip_start, ip_end) VALUES(?, ?, ?, ?)', array($subscriptionId, $curIPString, $ipStart, $ipEnd));
 					}
 				}
 			}
@@ -660,10 +660,10 @@ class Upgrade extends Installer {
 
 		$result->Close();
 		unset($result);
-		
+
 		return true;
 	}
-	
+
 	/**
 	 * For 2.3 upgrade: Add clean titles for every article title so sorting by title ignores punctuation.
 	 * @return boolean
@@ -681,7 +681,7 @@ class Upgrade extends Installer {
 		}
 		$result->Close();
 		unset($result);
-		
+
 		return true;
 	}
 
@@ -716,13 +716,13 @@ class Upgrade extends Installer {
 		}
 		return true;
 	}
-	
+
 	/**
 	 * For 2.3 upgrade:  Add initial plugin data to versions table
 	 * @return boolean
 	 */
 	function addPluginVersions() {
-		$versionDao =& DAORegistry::getDAO('VersionDAO'); 
+		$versionDao =& DAORegistry::getDAO('VersionDAO');
 		import('site.VersionCheck');
 		$categories = PluginRegistry::getCategories();
 		foreach ($categories as $category) {
@@ -730,26 +730,20 @@ class Upgrade extends Installer {
 			$plugins = PluginRegistry::getPlugins($category);
 			if (is_array($plugins)) foreach ($plugins as $plugin) {
 				$versionFile = $plugin->getPluginPath() . '/version.xml';
-				
+
 				if (FileManager::fileExists($versionFile)) {
 					$versionInfo =& VersionCheck::parseVersionXML($versionFile);
-					$pluginVersion = $versionInfo['version'];		
-					$pluginVersion->setCurrent(1);
-					$versionDao->insertVersion($pluginVersion);
+					$pluginVersion = $versionInfo['version'];
 				} else {
-					$pluginVersion = new Version();
-					$pluginVersion->setMajor(1);
-					$pluginVersion->setMinor(0);
-					$pluginVersion->setRevision(0);
-					$pluginVersion->setBuild(0);
-					$pluginVersion->setDateInstalled(Core::getCurrentDate());
-					$pluginVersion->setCurrent(1);
-					$pluginVersion->setProductType('plugins.' . $category);
-					$pluginVersion->setProduct(basename($plugin->getPluginPath()));
-					$versionDao->insertVersion($pluginVersion);
+					$pluginVersion = new Version(
+						1, 0, 0, 0, Core::getCurrentDate(), 1,
+						'plugins.'.$category, basename($plugin->getPluginPath()), '', 0
+					);
 				}
+				$versionDao->insertVersion($pluginVersion, true);
 			}
 		}
+
 		return true;
 	}
 }

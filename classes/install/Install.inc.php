@@ -131,7 +131,7 @@ class Install extends PKPInstall {
 			}
 
 			// Add initial plugin data to versions table
-			$versionDao =& DAORegistry::getDAO('VersionDAO'); 
+			$versionDao =& DAORegistry::getDAO('VersionDAO');
 			import('site.VersionCheck');
 			$categories = PluginRegistry::getCategories();
 			foreach ($categories as $category) {
@@ -139,24 +139,17 @@ class Install extends PKPInstall {
 				$plugins = PluginRegistry::getPlugins($category);
 				foreach ($plugins as $plugin) {
 					$versionFile = $plugin->getPluginPath() . '/version.xml';
-		
+
 					if (FileManager::fileExists($versionFile)) {
 						$versionInfo =& VersionCheck::parseVersionXML($versionFile);
-						$pluginVersion = $versionInfo['version'];		
-						$pluginVersion->setCurrent(1);
-						$versionDao->insertVersion($pluginVersion);
+						$pluginVersion = $versionInfo['version'];
 					}  else {
-						$pluginVersion = new Version();
-						$pluginVersion->setMajor(1);
-						$pluginVersion->setMinor(0);
-						$pluginVersion->setRevision(0);
-						$pluginVersion->setBuild(0);
-						$pluginVersion->setDateInstalled(Core::getCurrentDate());
-						$pluginVersion->setCurrent(1);
-						$pluginVersion->setProductType('plugins.' . $category);
-						$pluginVersion->setProduct(basename($plugin->getPluginPath()));
-						$versionDao->insertVersion($pluginVersion);
+						$pluginVersion = new Version(
+							1, 0, 0, 0, Core::getCurrentDate(), 1,
+							'plugins.'.$category, basename($plugin->getPluginPath()), '', 0
+						);
 					}
+					$versionDao->insertVersion($pluginVersion, true);
 				}
 			}
 		}
