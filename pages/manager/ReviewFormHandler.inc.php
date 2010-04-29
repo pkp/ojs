@@ -37,6 +37,8 @@ class ReviewFormHandler extends ManagerHandler {
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 
 		$templateMgr =& TemplateManager::getManager();
+		$templateMgr->addJavaScript('lib/pkp/js/jquery.tablednd_0_5.js');
+		$templateMgr->addJavaScript('lib/pkp/js/tablednd.js');
 		$templateMgr->assign_by_ref('reviewForms', $reviewForms);
 		$templateMgr->assign('helpTopicId','journal.managementPages.reviewForms');
 		$templateMgr->display('manager/reviewForms/reviewForms.tpl');
@@ -324,6 +326,9 @@ class ReviewFormHandler extends ManagerHandler {
 		$this->setupTemplate(true, $reviewForm);
 		$templateMgr =& TemplateManager::getManager();
 
+		$templateMgr->addJavaScript('lib/pkp/js/jquery.tablednd_0_5.js');
+		$templateMgr->addJavaScript('lib/pkp/js/tablednd.js');
+
 		$templateMgr->assign_by_ref('unusedReviewFormTitles', $unusedReviewFormTitles);
 		$templateMgr->assign_by_ref('reviewFormElements', $reviewFormElements);
 		$templateMgr->assign('reviewFormId', $reviewFormId);
@@ -501,7 +506,7 @@ class ReviewFormHandler extends ManagerHandler {
 
 				$reviewFormElement->setSequence($prevSeq + .5);
 			}
-				
+
 			$reviewFormElementDao->updateObject($reviewFormElement);
 			$reviewFormElementDao->resequenceReviewFormElements($reviewFormElement->getReviewFormId());
 		}

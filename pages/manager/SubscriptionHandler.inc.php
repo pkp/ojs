@@ -9,7 +9,7 @@
  * @class SubscriptionHandler
  * @ingroup pages_manager
  *
- * Handle requests for subscription management functions. 
+ * Handle requests for subscription management functions.
  */
 
 // $Id$
@@ -207,6 +207,10 @@ class SubscriptionHandler extends ManagerHandler {
 	function subscriptionTypes() {
 		$this->validate();
 		$this->setupTemplate();
+
+		$templateMgr =& TemplateManager::getManager();
+		$templateMgr->addJavaScript('lib/pkp/js/jquery.tablednd_0_5.js');
+		$templateMgr->addJavaScript('lib/pkp/js/tablednd.js');
 
 		import('subscription.SubscriptionAction');
 		SubscriptionAction::subscriptionTypes();

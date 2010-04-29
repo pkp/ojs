@@ -25,7 +25,7 @@ class RTSearchHandler extends RTAdminHandler {
 	function RTSearchHandler() {
 		parent::RTAdminHandler();
 	}
-	
+
 	function createSearch($args) {
 		$this->validate();
 
@@ -69,6 +69,9 @@ class RTSearchHandler extends RTAdminHandler {
 			$this->setupTemplate(true, $version, $context);
 
 			$templateMgr =& TemplateManager::getManager();
+
+			$templateMgr->addJavaScript('lib/pkp/js/jquery.tablednd_0_5.js');
+			$templateMgr->addJavaScript('lib/pkp/js/tablednd.js');
 
 			$templateMgr->assign_by_ref('version', $version);
 			$templateMgr->assign_by_ref('context', $context);

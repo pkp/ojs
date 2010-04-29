@@ -9,7 +9,7 @@
  * @class GroupHandler
  * @ingroup pages_manager
  *
- * @brief Handle requests for editorial team management functions. 
+ * @brief Handle requests for editorial team management functions.
  */
 
 // $Id$
@@ -22,24 +22,24 @@ class GroupHandler extends ManagerHandler {
 
 	/** groupMembership associated with the request **/
 	var $groupMembership;
-	
+
 	/** user associated with the request **/
 	var $user;
-	
+
 	/**
 	 * Constructor
 	 **/
 	function GroupHandler() {
 		parent::ManagerHandler();
 	}
-	
+
 	/**
 	 * Display a list of groups for the current journal.
 	 */
 	function groups() {
 		$this->validate();
 		$this->setupTemplate();
-		
+
 		$journal =& Request::getJournal();
 
 		$rangeInfo =& Handler::getRangeInfo('groups');
@@ -48,6 +48,8 @@ class GroupHandler extends ManagerHandler {
 		$groups =& $groupDao->getGroups(ASSOC_TYPE_JOURNAL, $journal->getId(), null, $rangeInfo);
 
 		$templateMgr =& TemplateManager::getManager();
+		$templateMgr->addJavaScript('lib/pkp/js/jquery.tablednd_0_5.js');
+		$templateMgr->addJavaScript('lib/pkp/js/tablednd.js');
 		$templateMgr->assign_by_ref('groups', $groups);
 		$templateMgr->assign('boardEnabled', $journal->getSetting('boardEnabled'));
 		$templateMgr->display('manager/groups/groups.tpl');
@@ -60,7 +62,7 @@ class GroupHandler extends ManagerHandler {
 	function deleteGroup($args) {
 		$groupId = isset($args[0])?(int)$args[0]:0;
 		$this->validate($groupId);
-		
+
 		$group =& $this->group;
 
 		$groupDao =& DAORegistry::getDAO('GroupDAO');
@@ -80,11 +82,11 @@ class GroupHandler extends ManagerHandler {
 		$group =& $this->group;
 		$groupDao =& DAORegistry::getDAO('GroupDAO');
 		$direction = Request::getUserVar('d');
-		
+
 		if ($direction != null) {
 			// moving with up or down arrow
 			$group->setSequence($group->getSequence() + ($direction == 'u' ? -1.5 : 1.5));
-			
+
 		} else {
 			// Dragging and dropping
 			$prevId = Request::getUserVar('prevId');
@@ -206,6 +208,8 @@ class GroupHandler extends ManagerHandler {
 		$groupMembershipDao =& DAORegistry::getDAO('GroupMembershipDAO');
 		$memberships =& $groupMembershipDao->getMemberships($group->getId(), $rangeInfo);
 		$templateMgr =& TemplateManager::getManager();
+		$templateMgr->addJavaScript('lib/pkp/js/jquery.tablednd_0_5.js');
+		$templateMgr->addJavaScript('lib/pkp/js/tablednd.js');
 		$templateMgr->assign_by_ref('memberships', $memberships);
 		$templateMgr->assign_by_ref('group', $group);
 		$templateMgr->display('manager/groups/memberships.tpl');

@@ -56,6 +56,10 @@ class IssueManagementHandler extends EditorHandler {
 		$rangeInfo = Handler::getRangeInfo('issues');
 
 		$templateMgr =& TemplateManager::getManager();
+
+		$templateMgr->addJavaScript('lib/pkp/js/jquery.tablednd_0_5.js');
+		$templateMgr->addJavaScript('lib/pkp/js/tablednd.js');
+
 		$templateMgr->assign_by_ref('issues', $issueDao->getPublishedIssues($journal->getId(), $rangeInfo));
 
 		$allIssuesIterator = $issueDao->getPublishedIssues($journal->getId());
@@ -82,7 +86,7 @@ class IssueManagementHandler extends EditorHandler {
 	function removeIssue($args) {
 		$issueId = isset($args[0]) ? (int) $args[0] : 0;
 		$this->validate($issueId);
-		$issue =& $this->issue; 
+		$issue =& $this->issue;
 		$isBackIssue = $issue->getPublished() > 0 ? true: false;
 
 		// remove all published articles and return original articles to editing queue
@@ -177,7 +181,7 @@ class IssueManagementHandler extends EditorHandler {
 	function issueData($args) {
 		$issueId = isset($args[0]) ? $args[0] : 0;
 		$this->validate($issueId, true);
-		$issue =& $this->issue; 
+		$issue =& $this->issue;
 		$this->setupTemplate(EDITOR_SECTION_ISSUES);
 
 		$templateMgr =& TemplateManager::getManager();
@@ -211,7 +215,7 @@ class IssueManagementHandler extends EditorHandler {
 	function editIssue($args) {
 		$issueId = isset($args[0]) ? (int) $args[0] : 0;
 		$this->validate($issueId, true);
-		$issue =& $this->issue; 
+		$issue =& $this->issue;
 		$this->setupTemplate(EDITOR_SECTION_ISSUES);
 
 		$templateMgr =& TemplateManager::getManager();
@@ -249,7 +253,7 @@ class IssueManagementHandler extends EditorHandler {
 		$issueId = isset($args[0]) ? (int)$args[0] : 0;
 		$formLocale = $args[1];
 		$this->validate($issueId, true);
-		$issue =& $this->issue; 
+		$issue =& $this->issue;
 
 		import('file.PublicFileManager');
 		$journal =& Request::getJournal();
@@ -272,7 +276,7 @@ class IssueManagementHandler extends EditorHandler {
 	function removeStyleFile($args) {
 		$issueId = isset($args[0]) ? (int)$args[0] : 0;
 		$this->validate($issueId, true);
-		$issue =& $this->issue; 
+		$issue =& $this->issue;
 
 		import('file.PublicFileManager');
 		$journal =& Request::getJournal();
@@ -293,7 +297,7 @@ class IssueManagementHandler extends EditorHandler {
 	function issueToc($args) {
 		$issueId = isset($args[0]) ? $args[0] : 0;
 		$this->validate($issueId, true);
-		$issue =& $this->issue; 
+		$issue =& $this->issue;
 		$this->setupTemplate(EDITOR_SECTION_ISSUES);
 
 		$templateMgr =& TemplateManager::getManager();
@@ -404,14 +408,14 @@ class IssueManagementHandler extends EditorHandler {
 			} else {
 				$article->setStatus(STATUS_QUEUED);
 				$article->stampStatusModified();
-				
-				// If the article is the only one in the section, delete the section from custom issue ordering				
+
+				// If the article is the only one in the section, delete the section from custom issue ordering
 				$sectionId = $article->getSectionId();
 				$publishedArticleArray =& $publishedArticleDao->getPublishedArticlesBySectionId($sectionId, $issueId);
 				if (sizeof($publishedArticleArray) == 1) {
 					$sectionDao->deleteCustomSection($issueId, $sectionId);
 				}
-				
+
 				$publishedArticleDao->deletePublishedArticleById($pubId);
 				$publishedArticleDao->resequencePublishedArticles($article->getSectionId(), $issueId);
 			}
@@ -430,7 +434,7 @@ class IssueManagementHandler extends EditorHandler {
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		if ($issueId) {
 			$this->validate($issueId);
-			$issue =& $this->issue; 
+			$issue =& $this->issue;
 			$issue->setCurrent(1);
 			$issueDao->updateCurrentIssue($journal->getId(), $issue);
 		} else {
@@ -448,7 +452,7 @@ class IssueManagementHandler extends EditorHandler {
 		$this->validate($issueId);
 		$prevId = Request::getUserVar('prevId');
 		$nextId = Request::getUserVar('nextId');
-		$issue =& $this->issue; 
+		$issue =& $this->issue;
 		$journal =& Request::getJournal();
 		$journalId = $journal->getId();
 
@@ -500,7 +504,7 @@ class IssueManagementHandler extends EditorHandler {
 	function moveSectionToc($args) {
 		$issueId = isset($args[0]) ? $args[0] : 0;
 		$this->validate($issueId, true);
-		$issue =& $this->issue; 
+		$issue =& $this->issue;
 		$journal =& Request::getJournal();
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
@@ -524,7 +528,7 @@ class IssueManagementHandler extends EditorHandler {
 	function resetSectionOrder($args) {
 		$issueId = isset($args[0]) ? $args[0] : 0;
 		$this->validate($issueId, true);
-		$issue =& $this->issue; 
+		$issue =& $this->issue;
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$sectionDao->deleteCustomSectionOrdering($issueId);
@@ -538,7 +542,7 @@ class IssueManagementHandler extends EditorHandler {
 	function moveArticleToc($args) {
 		$issueId = isset($args[0]) ? $args[0] : 0;
 		$this->validate($issueId, true);
-		$issue =& $this->issue; 
+		$issue =& $this->issue;
 
 		$journal =& Request::getJournal();
 
@@ -560,7 +564,7 @@ class IssueManagementHandler extends EditorHandler {
 	function publishIssue($args) {
 		$issueId = isset($args[0]) ? (int) $args[0] : 0;
 		$this->validate($issueId);
-		$issue =& $this->issue; 
+		$issue =& $this->issue;
 
 		$journal =& Request::getJournal();
 		$journalId = $journal->getId();
@@ -606,7 +610,7 @@ class IssueManagementHandler extends EditorHandler {
 
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		$issueDao->updateCurrentIssue($journalId,$issue);
-		
+
 		// Send a notification to associated users
 		import('notification.NotificationManager');
 		$notificationManager = new NotificationManager();
@@ -631,7 +635,7 @@ class IssueManagementHandler extends EditorHandler {
 				null, $url, 1, NOTIFICATION_TYPE_PUBLISHED_ISSUE
 			)
 		);
-				
+
 		Request::redirect(null, null, 'issueToc', $issue->getId());
 	}
 
@@ -641,7 +645,7 @@ class IssueManagementHandler extends EditorHandler {
 	function unpublishIssue($args) {
 		$issueId = isset($args[0]) ? (int) $args[0] : 0;
 		$this->validate($issueId);
-		$issue =& $this->issue; 
+		$issue =& $this->issue;
 
 		$journal =& Request::getJournal();
 		$journalId = $journal->getId();
@@ -661,7 +665,7 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function notifyUsers($args) {
 		$this->validate(Request::getUserVar('issue'));
-		$issue =& $this->issue; 
+		$issue =& $this->issue;
 		$this->setupTemplate(EDITOR_SECTION_ISSUES);
 
 		$userDao =& DAORegistry::getDAO('UserDAO');

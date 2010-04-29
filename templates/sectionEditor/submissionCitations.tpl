@@ -25,12 +25,7 @@
 <div id="submissionCitations">
 	<h3>{translate key="submission.citations"}</h3>
 
-	{if $jQueryEnabled}
-		{load_div id="citationGridContainer" loadMessageId="submission.citations.form.loadMessage" url="$citationGridUrl"}
-	{else}
-		{url|assign:"genericPluginsUrl" page="manager" op="plugins" path="generic"}
-		<p><span class="formError">{translate key="submission.citations.jQueryRequired" genericPluginsUrl=$genericPluginsUrl}</span></p>
-	{/if}
+	{load_div id="citationGridContainer" loadMessageId="submission.citations.form.loadMessage" url="$citationGridUrl"}
 </div>
 
 {include file="common/footer.tpl"}

@@ -9,7 +9,7 @@
  * @class AdminJournalHandler
  * @ingroup pages_admin
  *
- * @brief Handle requests for journal management in site administration. 
+ * @brief Handle requests for journal management in site administration.
  */
 
 // $Id$
@@ -37,6 +37,8 @@ class AdminJournalHandler extends AdminHandler {
 		$journals =& $journalDao->getJournals($rangeInfo);
 
 		$templateMgr =& TemplateManager::getManager();
+		$templateMgr->addJavaScript('lib/pkp/js/jquery.tablednd_0_5.js');
+		$templateMgr->addJavaScript('lib/pkp/js/tablednd.js');
 		$templateMgr->assign_by_ref('journals', $journals);
 		$templateMgr->assign('helpTopicId', 'site.siteManagement');
 		$templateMgr->display('admin/journals.tpl');

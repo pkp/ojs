@@ -9,7 +9,7 @@
  * @class EditorHandler
  * @ingroup pages_editor
  *
- * @brief Handle requests for editor functions. 
+ * @brief Handle requests for editor functions.
  */
 
 // $Id$
@@ -33,9 +33,9 @@ class EditorHandler extends SectionEditorHandler {
 	 **/
 	function EditorHandler() {
 		parent::SectionEditorHandler();
-		
+
 		$this->addCheck(new HandlerValidatorJournal($this));
-		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_EDITOR)));		
+		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_EDITOR)));
 	}
 
 	/**
@@ -73,7 +73,7 @@ class EditorHandler extends SectionEditorHandler {
 			$dateSearchField = Request::getUserVar('dateSearchField');
 			$searchMatch = Request::getUserVar('searchMatch');
 			$search = Request::getUserVar('search');
-		
+
 			$sort = Request::getUserVar('sort');
 			$sort = isset($sort) ? $sort : 'id';
 			$sortDirection = Request::getUserVar('sortDirection');
@@ -84,7 +84,7 @@ class EditorHandler extends SectionEditorHandler {
 			$toDate = Request::getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
 			if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
 
-			if ($sort == 'status') {			
+			if ($sort == 'status') {
 				$rawSubmissions =& $editorSubmissionDao->getUnfilteredEditorSubmissions(
 					$journal->getId(),
 					Request::getUserVar('section'),
@@ -101,7 +101,7 @@ class EditorHandler extends SectionEditorHandler {
 					$sortDirection
 				);
 				$submissions = new DAOResultFactory($rawSubmissions, $editorSubmissionDao, '_returnEditorSubmissionFromRow');
-			
+
 				// Sort all submissions by status, which is too complex to do in the DB
 				$submissionsArray = $submissions->toArray();
 				$compare = create_function('$s1, $s2', 'return strcmp($s1->getSubmissionStatus(), $s2->getSubmissionStatus());');
@@ -167,7 +167,7 @@ class EditorHandler extends SectionEditorHandler {
 
 		$page = isset($args[0]) ? $args[0] : '';
 		$sections =& $sectionDao->getSectionTitles($journalId);
-		
+
 		$sort = Request::getUserVar('sort');
 		$sort = isset($sort) ? $sort : 'id';
 		$sortDirection = Request::getUserVar('sortDirection');
@@ -181,7 +181,7 @@ class EditorHandler extends SectionEditorHandler {
 		$filterSectionOptions = array(
 			FILTER_SECTION_ALL => Locale::Translate('editor.allSections')
 		) + $sections;
- 
+
 		// Get the user's search conditions, if any
 		$searchField = Request::getUserVar('searchField');
 		$dateSearchField = Request::getUserVar('dateSearchField');
@@ -222,7 +222,7 @@ class EditorHandler extends SectionEditorHandler {
 			if ($filterEditor == null) {
 				$filterEditor = FILTER_EDITOR_ALL;
 				$user->updateSetting('filterEditor', $filterEditor, 'int', $journalId);
-			}	
+			}
 		}
 
 		if ($filterEditor == FILTER_EDITOR_ME) {
@@ -239,7 +239,7 @@ class EditorHandler extends SectionEditorHandler {
 			if ($filterSection == null) {
 				$filterSection = FILTER_SECTION_ALL;
 				$user->updateSetting('filterSection', $filterSection, 'int', $journalId);
-			}	
+			}
 		}
 
 		$submissions =& $editorSubmissionDao->$functionName(
@@ -258,6 +258,7 @@ class EditorHandler extends SectionEditorHandler {
 		);
 
 		$templateMgr =& TemplateManager::getManager();
+
 		$templateMgr->assign('pageToDisplay', $page);
 		$templateMgr->assign('editor', $user->getFullName());
 		$templateMgr->assign('editorOptions', $filterEditorOptions);
@@ -473,7 +474,7 @@ class EditorHandler extends SectionEditorHandler {
 				USER_FIELD_EMAIL => 'user.email'
 			));
 			$templateMgr->assign('alphaList', explode(' ', Locale::translate('common.alphaList')));
-			$templateMgr->assign('helpTopicId', 'editorial.editorsRole.submissionSummary.submissionManagement');	
+			$templateMgr->assign('helpTopicId', 'editorial.editorsRole.submissionSummary.submissionManagement');
 			$templateMgr->display('editor/selectSectionEditor.tpl');
 		}
 	}

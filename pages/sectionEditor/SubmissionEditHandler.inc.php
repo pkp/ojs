@@ -366,14 +366,15 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr =& TemplateManager::getManager();
 
 		// Add extra style sheets required for ajax components
+		// FIXME: Must be removed after OMP->OJS backporting
 		$templateMgr->addStyleSheet($request->getBaseUrl().'/styles/ojs.css');
 
-		// Check whether the jQuery plugin is enabled
-		$plugins =& PluginRegistry::getPlugins('generic');
-		assert(isset($plugins['JQueryPlugin']));
-		$jQueryPlugin =& $plugins['JQueryPlugin'];
-		assert(is_a($plugins['JQueryPlugin'], 'JQueryPlugin'));
-		$templateMgr->assign('jQueryEnabled', (boolean)$jQueryPlugin->isJQueryInstalled());
+		// Add extra java script required for ajax components
+		// FIXME: Must be removed after OMP->OJS backporting
+		$templateMgr->addJavaScript('lib/pkp/js/grid-clickhandler.js');
+		$templateMgr->addJavaScript('lib/pkp/js/modal.js');
+		$templateMgr->addJavaScript('lib/pkp/js/lib/jquery/plugins/validate/jquery.validate.min.js');
+		$templateMgr->addJavaScript('lib/pkp/js/jqueryValidatorI18n.js');
 
 		// Add the grid URL
 		// FIXME: Refactor to the template when {load_div} accepts operations as parameters
