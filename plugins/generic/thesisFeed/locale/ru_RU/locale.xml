@@ -15,8 +15,6 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.thesisfeed.displayName">Модуль тезисов диссертаций</message>
 	<message key="plugins.generic.thesisfeed.description">Модуль производит новостную ленту в формате RSS/Atom, содержащую тезисы диссертаций.</message>
-	<message key="plugins.generic.thesisfeed.enabled">Модуль тезисов диссертаций включен.</message>
-	<message key="plugins.generic.thesisfeed.disabled">Модуль тезисов диссертаций выключен.</message>
 
 	<message key="plugins.generic.thesisfeed.settings">Настройки</message>
 	<message key="plugins.generic.thesisfeed.settings.all">Поместить ссылки на ленту на всех страницах журнала.</message>

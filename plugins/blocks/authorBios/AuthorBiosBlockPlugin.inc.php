@@ -18,23 +18,6 @@
 import('plugins.BlockPlugin');
 
 class AuthorBiosBlockPlugin extends BlockPlugin {
-	function register($category, $path) {
-		$success = parent::register($category, $path);
-		if ($success) {
-			$this->addLocaleData();
-		}
-		return $success;
-	}
-
-	/**
-	 * Get the name of this plugin. The name must be unique within
-	 * its category.
-	 * @return String name of plugin
-	 */
-	function getName() {
-		return 'AuthorBiosBlockPlugin';
-	}
-
 	/**
 	 * Get the display name of this plugin.
 	 * @return String

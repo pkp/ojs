@@ -43,7 +43,5 @@
 	<message key="plugins.generic.xmlGalley.settings.customXSLRequired">Uma folha de estilos XSL deve ser especificada.</message>
 	<message key="plugins.generic.xmlGalley.settings.customXSLInvalid">O arquivo XSL enviado não é válido. Verifique o documento e tente novamente.</message>
 
-	<message key="plugins.generic.xmlGalley.enabled">O Plugin de Composição em XML foi activado.</message>
-	<message key="plugins.generic.xmlGalley.disabled">O Plugin de Composição em XML foi desactivado.</message>
 </locale>
 

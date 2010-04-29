@@ -204,6 +204,4 @@
 	<message key="plugins.generic.thesis.form.supervisorEmail">Zuzendariaren helb. el.</message>
 	<message key="plugins.generic.thesis.form.supervisorEmailValid">Zuzendariaren baliozko helb. el. bat eman behar da.</message>
 
-	<message key="plugins.generic.thesis.enabled">Tesien plugina gaitu da.</message>
-	<message key="plugins.generic.thesis.disabled">Tesien plugina desgaitu da.</message>
 </locale>

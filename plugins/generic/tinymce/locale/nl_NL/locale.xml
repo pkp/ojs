@@ -20,6 +20,4 @@
 	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Deze plugin verzorgt WYSIWYG bewerken in OJS tekstvelden met behulp van de <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> content editor. <strong>TinyMCE is momenteel niet geïnstalleerd. Installeer het in {$tinyMcePath}.</strong>]]></message>
 
 	<message key="plugins.generic.tinymce.settings">Instellingen</message>
-	<message key="plugins.generic.tinymce.enabled">De TinyMCE plugin is ingeschakeld.</message>
-	<message key="plugins.generic.tinymce.disabled">De TinyMCE plugin is uitgeschakeld.</message>
 </locale>

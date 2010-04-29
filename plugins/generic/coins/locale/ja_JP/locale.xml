@@ -15,6 +15,4 @@
 <locale name="ja_JP" full_name="日本語">
 	<message key="plugins.generic.coins.displayName">COinSプラグイン</message>
 	<message key="plugins.generic.coins.description">論文ページ（抄録とHTML版）にCOinSを追加して、例えば引用作成ツールが情報を抽出できるようにします。</message>
-	<message key="plugins.generic.coins.enabled">COinS プラグインは有効です。</message>
-	<message key="plugins.generic.coins.disabled">COinS プラグインは無効です。</message>
 </locale>

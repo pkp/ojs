@@ -43,7 +43,5 @@
 	<message key="plugins.generic.xmlGalley.settings.customXSLRequired">Un file del foglio di stile XSL personalizzato deve essere specificato.</message>
 	<message key="plugins.generic.xmlGalley.settings.customXSLInvalid">Il file XSL caricato non era valido. Si prega di controllare il file e riprovare.</message>
 
-	<message key="plugins.generic.xmlGalley.enabled">Il plugin delle gabbie XML è stato abilitato.</message>
-	<message key="plugins.generic.xmlGalley.disabled">Il plugin delle gabbie XML è stato disabilitato.</message>
 </locale>
 

@@ -50,7 +50,5 @@
 	<message key="plugins.generic.xmlGalley.settings.customXSLRequired">Ένα προσαρμοσμένο αρχείου XSL stylesheet πρέπει να οριστεί.</message>
 	<message key="plugins.generic.xmlGalley.settings.customXSLInvalid">Το ανεβασμένο αρχείο XSL δεν ήταν έγκυρο. Παρακαλούμε ελέγξτε το αρχείο και ξαναπροσπαθήστε.</message>
 
-	<message key="plugins.generic.xmlGalley.enabled">Το XML Galley Plugin έχει ενεργοποιηθεί.</message>
-	<message key="plugins.generic.xmlGalley.disabled">Το XML Galley Plugin έχει απενεργοποιηθεί.</message>
 </locale>
 

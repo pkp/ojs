@@ -26,15 +26,6 @@ class WebFeedBlockPlugin extends BlockPlugin {
 	}
 
 	/**
-	 * Get the name of this plugin. The name must be unique within
-	 * its category.
-	 * @return String name of plugin
-	 */
-	function getName() {
-		return 'WebFeedBlockPlugin';
-	}
-
-	/**
 	 * Get the display name of this plugin.
 	 * @return String
 	 */
@@ -99,7 +90,7 @@ class WebFeedBlockPlugin extends BlockPlugin {
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		$currentIssue =& $issueDao->getCurrentIssue($journal->getId(), true);
 
-		if ( ($currentIssue) && (($displayPage == 'all') || ($displayPage == 'homepage' && (empty($requestedPage) || $requestedPage == 'index' || $requestedPage == 'issue')) || ($displayPage == 'issue' && $displayPage == $requestedPage)) ) { 
+		if ( ($currentIssue) && (($displayPage == 'all') || ($displayPage == 'homepage' && (empty($requestedPage) || $requestedPage == 'index' || $requestedPage == 'issue')) || ($displayPage == 'issue' && $displayPage == $requestedPage)) ) {
 			return parent::getContents($templateMgr);
 		} else {
 			return '';

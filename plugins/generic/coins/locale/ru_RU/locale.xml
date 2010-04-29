@@ -15,6 +15,4 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.coins.displayName">Модуль COinS</message>
 	<message key="plugins.generic.coins.description">Модуль COinS добавляет дескриптор OpenURL на страницы статей (резюме и HTML), это позволяет извлекать метаданные автоматически.</message>
-	<message key="plugins.generic.coins.enabled">Модуль COinS включен.</message>
-	<message key="plugins.generic.coins.disabled">Модуль COinS выключен.</message>
 </locale>

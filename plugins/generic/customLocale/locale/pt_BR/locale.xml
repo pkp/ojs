@@ -32,6 +32,4 @@
 	<message key="plugins.generic.customLocale.file.reference">Texto original</message>
 	<message key="plugins.generic.customLocale.file.custom">Texto customizado</message>
 	<message key="plugins.generic.customLocale.localeKey.description">Digite uma chave de tradução completa para pesquisar.</message>
-	<message key="plugins.generic.customLocale.enabled">O Plugin de Customização de Idioma foi habilitado.</message>
-	<message key="plugins.generic.customLocale.disabled">O Plugin de Customização de Idioma foi desabilitado.</message>
 </locale>

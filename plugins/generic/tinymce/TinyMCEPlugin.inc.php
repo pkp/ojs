@@ -30,7 +30,6 @@ class TinyMCEPlugin extends GenericPlugin {
 	 */
 	function register($category, $path) {
 		if (parent::register($category, $path)) {
-			$this->addLocaleData();
 			if ($this->isMCEInstalled() && $this->getEnabled()) {
 				HookRegistry::register('TemplateManager::display',array(&$this, 'callback'));
 			}
@@ -44,7 +43,7 @@ class TinyMCEPlugin extends GenericPlugin {
 	 * creation.
 	 * @return string
 	 */
-	function getNewJournalPluginSettingsFile() {
+	function getContextSpecificPluginSettingsFile() {
 		return $this->getPluginPath() . '/settings.xml';
 	}
 
@@ -378,14 +377,6 @@ class TinyMCEPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Get the symbolic name of this plugin
-	 * @return string
-	 */
-	function getName() {
-		return 'TinyMCEPlugin';
-	}
-
-	/**
 	 * Get the display name of this plugin
 	 * @return string
 	 */
@@ -411,49 +402,13 @@ class TinyMCEPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Check whether or not this plugin is enabled
-	 * @return boolean
-	 */
-	function getEnabled() {
-		$journal =& Request::getJournal();
-		$journalId = $journal?$journal->getId():0;
-		return $this->getSetting($journalId, 'enabled');
-	}
-
-	/**
 	 * Get a list of available management verbs for this plugin
 	 * @return array
 	 */
 	function getManagementVerbs() {
 		$verbs = array();
-		if ($this->isMCEInstalled()) $verbs[] = array(
-			($this->getEnabled()?'disable':'enable'),
-			Locale::translate($this->getEnabled()?'manager.plugins.disable':'manager.plugins.enable')
-		);
+		if ($this->isMCEInstalled()) $verbs = parent::getManagementVerbs();
 		return $verbs;
-	}
-
- 	/*
- 	 * Execute a management verb on this plugin
- 	 * @param $verb string
- 	 * @param $args array
-	 * @param $message string Location for the plugin to put a result msg
- 	 * @return boolean
- 	 */
-	function manage($verb, $args, &$message) {
-		$journal =& Request::getJournal();
-		$journalId = $journal?$journal->getId():0;
-		switch ($verb) {
-			case 'enable':
-				$this->updateSetting($journalId, 'enabled', true);
-				$message = Locale::translate('plugins.generic.tinymce.enabled');
-				break;
-			case 'disable':
-				$this->updateSetting($journalId, 'enabled', false);
-				$message = Locale::translate('plugins.generic.tinymce.disabled');
-				break;
-		}
-		return false;
 	}
 }
 ?>

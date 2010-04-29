@@ -15,8 +15,6 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.customLocale.name">Модуль Подстройки Языка</message>
 	<message key="plugins.generic.customLocale.description">Этот модуль позволяет изменять текст пользовательского интерфейса, используемый OJS по умолчанию.</message>
-	<message key="plugins.generic.customLocale.enabled">Модуль подстройки языка включен.</message>
-	<message key="plugins.generic.customLocale.disabled">Модуль подстройки языка выключен.</message>
 
 	<message key="plugins.generic.customLocale.longDescription">На этой странице показаны все языки, используемые журналом.</message>
 	<message key="plugins.generic.customLocale.localeDescription">Здесь приведены все файлы, которые определяют интерфейс на выбранном языке.</message>

@@ -15,6 +15,4 @@
 <locale name="cs_CZ" full_name="Czech">
 	<message key="plugins.generic.coins.displayName">COinS Plugin</message>
 	<message key="plugins.generic.coins.description">COinS plugin přidává na stránky článků OpenURL popisovač (abstrakt a HTML), který může být použitý např. pro extrahování do citačních nástrojů.</message>
-	<message key="plugins.generic.coins.enabled">Byl povolen plugin COinS.</message>
-	<message key="plugins.generic.coins.disabled">Byl zakázán plugin COinS.</message>
 </locale>

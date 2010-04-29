@@ -15,8 +15,6 @@
 <locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.generic.referral.name">Terugverwijzingen plugin</message>
 	<message key="plugins.generic.referral.description">De terugverwijzingen plugin registreert URL's die naar artikelen verwijzen (bv. als een lezer een externe link naar een artikel volgt). Zo wordt het auteurs mogelijk gemaakt om een automatisch bijgehouden lijst met verwijzingen naar het artikel de onderhouden en eventueel te publiceren.</message>
-	<message key="plugins.generic.referral.enabled">De terugverwijzingen plugin is ingeschakeld.</message>
-	<message key="plugins.generic.referral.disabled">De terugverwijzingen plugin is uitgeschakeld</message>
 	
 	<message key="plugins.generic.referral.editReferral">Bewerk terugverwijzing</message>
 	<message key="plugins.generic.referral.createReferral">Terugverwijzing aanmaken</message>

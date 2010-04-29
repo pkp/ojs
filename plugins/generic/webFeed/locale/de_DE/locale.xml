@@ -28,6 +28,4 @@
 	<message key="plugins.generic.webfeed.atom.altText">Atom-Logo</message>
 	<message key="plugins.generic.webfeed.rss1.altText">RSS1-Logo</message>
 	<message key="plugins.generic.webfeed.rss2.altText">RSS2-Logo</message>
-	<message key="plugins.generic.webfeed.enabled">Das Web-Feed-Plug-In wurde aktiviert.</message>
-	<message key="plugins.generic.webfeed.disabled">Web-Feed-Plug-In wurde ausgeschaltet.</message>
 </locale>

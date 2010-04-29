@@ -15,8 +15,6 @@
 <locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.generic.referral.name">Plugin de Apontamentos a Artigos</message>
 	<message key="plugins.generic.referral.description">O Plugin de Apontamentos a Artigos mantém controle de URLs que apontam a artigos (quando um leitor clica em um link para um artigo em outro site, por exemplo), permitindo aos autores manter e possivelmente publicar um lista atualizada automaticamente de apontamentos a um artigo.</message>
-	<message key="plugins.generic.referral.enabled">Plugin de Apontamentos a Artigos foi habilitado.</message>
-	<message key="plugins.generic.referral.disabled">Plugin de Apontamentos a Artigos foi desabilitado.</message>
 	
 	<message key="plugins.generic.referral.editReferral">Editar apontamento</message>
 	<message key="plugins.generic.referral.createReferral">Criar apontamento</message>

@@ -32,6 +32,4 @@
 	<message key="plugins.generic.customLocale.file.edit">Επεξεργασία {$filename}</message>
 	<message key="plugins.generic.customLocale.file.reference">Εξ'ορισμού κείμενο</message>
 	<message key="plugins.generic.customLocale.file.custom">Προσαρμοσμένο κείμενο</message>
-	<message key="plugins.generic.customLocale.enabled">Το Plugin Προσαρμοσμένων τοπικών ρυθμίσεων έχει ενεργοποιηθεί.</message>
-	<message key="plugins.generic.customLocale.disabled">Το Plugin Προσαρμοσμένων τοπικών ρυθμίσεων έχει απενεργοποιηθεί.</message>
 </locale>

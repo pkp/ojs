@@ -45,7 +45,5 @@
 	<message key="plugins.generic.counter.1a.ytdHtml">HTML año en curso</message>
 	<message key="plugins.generic.counter.1a.ytdPdf">PDF año en curso</message>
 	<message key="plugins.generic.counter.1a.totalForAllJournals">Total para todas las revistas</message>
-	<message key="plugins.generic.counter.enabled">El plugin COUNTER ha sido habilitado.</message>
-	<message key="plugins.generic.counter.disabled">El plugin COUNTER ha sido deshabilitado.</message>
 	<message key="plugins.generic.counter.migrate">Migrar fichero de log</message>
 </locale>

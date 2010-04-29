@@ -17,6 +17,4 @@
 <locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.generic.coins.displayName">COinS Plugin</message>
 	<message key="plugins.generic.coins.description">De COinS plugin voegt een OpenURL descriptor toe aan artikelpagina's (samenvatting en HTML) die bijvoorbeeld gebruikt kan worden voor extractie naar citatiegereedschappen.</message>
-	<message key="plugins.generic.coins.enabled">De COinS plugin is ingeschakeld.</message>
-	<message key="plugins.generic.coins.disabled">De COinS plugin is uitgeschakeld.</message>
 </locale>

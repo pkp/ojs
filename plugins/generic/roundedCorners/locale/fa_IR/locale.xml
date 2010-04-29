@@ -13,6 +13,4 @@
 <locale full_name="Farsi" name="fa_IR" >
 	<message key="plugins.generic.roundedcorners.displayName" >گوشه های گرد</message>
 	<message key="plugins.generic.roundedcorners.description" >این پلاگین زمینه ای بر روی هر بلوک موجود در نوار حاشیه می اندازد و گوشه های آنرا گرد می سازد. برای تغییر رنگهای بکار رفته در آن می توان فایل استایل شیت این پلاگین را ویرایش کرد.</message>
-	<message key="plugins.generic.roundedcorners.enabled">پلاگین گوشه های گرد فعال شده است</message>
-	<message key="plugins.generic.roundedcorners.disabled">پلاگین گوشه های گرد غیر فعال شده است</message>
 </locale>

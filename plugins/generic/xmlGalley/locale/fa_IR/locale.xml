@@ -35,6 +35,4 @@
 	<message key="plugins.generic.xmlGalley.settings.customXSLRequired" >استایل شیت XSL سفارشی شده میبایست ذکر شود.</message>
 	<message key="plugins.generic.xmlGalley.settings.customXSLInvalid" >فایل XSL آپلود شده معتبر نیست. لطفا فایل را چک و دوباره امتحان کنید.</message>
 	<message key="plugins.generic.xmlGalley.settings.externalXSLTTest">ازمایش XSLT</message>
-	<message key="plugins.generic.xmlGalley.enabled">پلاگین گالی ایک ام ال فعال شده است</message>
-	<message key="plugins.generic.xmlGalley.disabled">پلاگین گالی ایک ام ال غیر فعال شده است</message>
 </locale>

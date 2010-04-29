@@ -30,6 +30,4 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Escolha um código de acompanhamento</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Código de acompanhamento legado (urchin.js)</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Código de acompanhamento novo (ga.js)</message>
-	<message key="plugins.generic.googleAnalytics.enabled">O Plugin Google Analytics foi activado.</message>
-	<message key="plugins.generic.googleAnalytics.disabled">O Plugin Google Analytics foi desactivado.</message>
 </locale>

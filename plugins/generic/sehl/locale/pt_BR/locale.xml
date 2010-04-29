@@ -15,6 +15,4 @@
 <locale name="pt_BR" full_name="Português do Brasil">
 	<message key="plugins.generic.sehl.name">Plugin SEHL</message>
 	<message key="plugins.generic.sehl.description">Este plugin implementa Destaque para Termos Pesquisados (Search Engine HighLighting - SEHL) para marcar o texto pesquisado em documentos publicados em HTML.</message>
-	<message key="plugins.generic.sehl.enabled">O Plugin SEHL foi habilitado.</message>
-	<message key="plugins.generic.sehl.disabled">O Plugin SEHL foi desabilitado.</message>
 </locale>

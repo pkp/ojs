@@ -19,15 +19,6 @@ import('plugins.BlockPlugin');
 
 class ThesisFeedBlockPlugin extends BlockPlugin {
 	/**
-	 * Get the name of this plugin. The name must be unique within
-	 * its category.
-	 * @return String name of plugin
-	 */
-	function getName() {
-		return 'ThesisFeedBlockPlugin';
-	}
-
-	/**
 	 * Get the display name of this plugin.
 	 * @return String
 	 */
@@ -40,14 +31,6 @@ class ThesisFeedBlockPlugin extends BlockPlugin {
 	 */
 	function getDescription() {
 		return Locale::translate('plugins.generic.thesisfeed.description');
-	}
-
-	/**
-	 * Get the supported contexts (e.g. BLOCK_CONTEXT_...) for this block.
-	 * @return array
-	 */
-	function getSupportedContexts() {
-		return array(BLOCK_CONTEXT_LEFT_SIDEBAR, BLOCK_CONTEXT_RIGHT_SIDEBAR);
 	}
 
 	/**
@@ -96,13 +79,13 @@ class ThesisFeedBlockPlugin extends BlockPlugin {
 		if (!$journal) return '';
 
 		$thesisPlugin =& $this->getThesisPlugin();
-		if (!$thesisPlugin->getEnabled()) return ''; 
+		if (!$thesisPlugin->getEnabled()) return '';
 
 		$plugin =& $this->getThesisFeedPlugin();
 		$displayPage = $plugin->getSetting($journal->getId(), 'displayPage');
 		$requestedPage = Request::getRequestedPage();
 
-		if (($displayPage == 'all') || ($displayPage == 'homepage' && (empty($requestedPage) || $requestedPage == 'index' || $requestedPage == 'thesis')) || ($displayPage == $requestedPage)) { 
+		if (($displayPage == 'all') || ($displayPage == 'homepage' && (empty($requestedPage) || $requestedPage == 'index' || $requestedPage == 'thesis')) || ($displayPage == $requestedPage)) {
 			return parent::getContents($templateMgr);
 		} else {
 			return '';

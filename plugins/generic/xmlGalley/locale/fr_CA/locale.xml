@@ -43,7 +43,5 @@
 	<message key="plugins.generic.xmlGalley.settings.customXSLRequired">Il faut spécifier un fichier de feuille de style XSL personnalisée.</message>
 	<message key="plugins.generic.xmlGalley.settings.customXSLInvalid">Le fichier XSL téléchargé n'était pas valide. Veuillez vérifier le fichier et essayer de nouveau.</message>
 
-	<message key="plugins.generic.xmlGalley.enabled">Le plugiciel d'épreuve en placard XML a été activé.</message>
-	<message key="plugins.generic.xmlGalley.disabled">Le plugiciel d'épreuve en placard XML a été désactivé.</message>
 </locale>
 

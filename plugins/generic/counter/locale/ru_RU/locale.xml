@@ -15,8 +15,6 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.counter.description"><![CDATA[Модуль COUNTER позволяет записать и показать на <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a> активность сайта.]]></message>
 	<message key="plugins.generic.counter">Статистика COUNTER</message>
-	<message key="plugins.generic.counter.enabled">Модуль COUNTER включен.</message>
-	<message key="plugins.generic.counter.disabled">Модуль COUNTER выключен.</message>
 	<message key="plugins.generic.counter.migrate">Переместить Log File</message>
 	<message key="plugins.generic.counter.1a.title">Отчет журнала 1 (R2): Запросы полнотекстовых статей по месяцам и журналам</message>
 	<message key="plugins.generic.counter.1a.title1">Отчет журнала 1 (R2)</message>

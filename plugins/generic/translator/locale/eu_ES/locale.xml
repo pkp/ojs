@@ -68,8 +68,6 @@
 	<message key="plugins.generic.translator.deleteKey">Ezabatu gako hau</message>
 	<message key="plugins.generic.translator.deleteEmail">Ezabatu mezu elektroniko hau</message>
 	<message key="plugins.generic.translator.saveBeforeContinuing">Ziurtatu orri honetan egindako aldaketa guztiak gordeta daudela; galdu egingo dira bestela. Jarraitu nahi duzu? Jarraitzen baduzu, gorde gabeko aldaketak galdu egingo dira.</message>
-	<message key="plugins.generic.translator.enabled">Itzultzailearen plugina gaitu da.</message>
-	<message key="plugins.generic.translator.disabled">Itzultzailearen plugina desgaitu da.</message>
 	<message key="plugins.generic.translator.fileNotWriteable">Locale fitxategi hau ezin du idatzi zerbitzariak. Egin dituzun aldaketak ez dira gordeko.</message>
 	<message key="plugins.generic.translator.filesNotWriteable">Locale fitxategi hauek ezin ditu idatzi zerbitzariak- Egin dizkiezun aldaketak ez dira gordeko.</message>
 </locale>

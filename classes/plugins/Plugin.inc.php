@@ -12,8 +12,6 @@
  * @brief Abstract class for plugins
  */
 
-// $Id$
-
 
 import('plugins.PKPPlugin');
 
@@ -25,32 +23,46 @@ class Plugin extends PKPPlugin {
 		parent::PKPPlugin();
 	}
 
+	/**
+	 * Backwards compatible convenience version of
+	 * the generic getContextSpecificSetting() method.
+	 *
+	 * @see PKPPlugin::getContextSpecificSetting()
+	 *
+	 * @param $journalId
+	 * @param $name
+	 */
 	function getSetting($journalId, $name) {
 		if (defined('RUNNING_UPGRADE')) {
 			// Bug #2504: Make sure plugin_settings table is not
 			// used if it's not available.
 			$versionDao =& DAORegistry::getDAO('VersionDAO');
-			$version =& $versionDao->getCurrentVersion(null, true);
+			$version =& $versionDao->getCurrentVersion();
 			if ($version->compare('2.1.0') < 0) return null;
 		}
-		return parent::getSetting(array($journalId), $name);
+		return $this->getContextSpecificSetting(array($journalId), $name);
 	}
 
 	/**
-	 * Update a plugin setting.
+	 * Backwards compatible convenience version of
+	 * the generic updateContextSpecificSetting() method.
+	 *
+	 * @see PKPPlugin::updateContextSpecificSetting()
+	 *
 	 * @param $journalId int
 	 * @param $name string The name of the setting
 	 * @param $value mixed
 	 * @param $type string optional
 	 */
 	function updateSetting($journalId, $name, $value, $type = null) {
-		parent::updateSetting(array($journalId), $name, $value, $type);
+		$this->updateContextSpecificSetting(array($journalId), $name, $value, $type);
 	}
 
 	/**
 	 * Get the filename of the settings data for this plugin to install
 	 * when a journal is created (i.e. journal-level plugin settings).
 	 * Subclasses using default settings should override this.
+	 *
 	 * @return string
 	 */
 	function getContextSpecificPluginSettingsFile() {
@@ -62,7 +74,11 @@ class Plugin extends PKPPlugin {
 	/**
 	 * For backwards compatibility only.
 	 *
-	 * New plug-ins should override getContextSpecificPluginSettingsFile
+	 * New plug-ins should override getContextSpecificPluginSettingsFile()
+	 *
+	 * @see PKPPlugin::getContextSpecificPluginSettingsFile()
+	 *
+	 * @return string
 	 */
 	function getNewJournalPluginSettingsFile() {
 		return null;

@@ -15,8 +15,6 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.webfeed.displayName">Модуль новостной ленты</message>
 	<message key="plugins.generic.webfeed.description">Модуль формирует новостную ленту в форматах RSS/Atom для текущего выпуска.</message>
-	<message key="plugins.generic.webfeed.enabled">Модуль новостной ленты включен.</message>
-	<message key="plugins.generic.webfeed.disabled">Модуль новостной ленты выключен.</message>
 
 	<message key="plugins.generic.webfeed.settings">Настройки</message>
 	<message key="plugins.generic.webfeed.settings.issue">Показать ссылки на ленту только на странице выпуска.</message>

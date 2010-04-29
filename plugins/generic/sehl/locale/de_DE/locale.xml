@@ -16,6 +16,4 @@
 <locale name="de_DE" full_name="German">
 	<message key="plugins.generic.sehl.name">SEHL-Plug-In</message>
 	<message key="plugins.generic.sehl.description">Dieses Plug-In implementiert "Search Engine HighLighting" (SEHL), sodass die Schlagworte, die von Suchmaschinen in einem HTML-Artikel gefunden werden, hervorgehoben werden.</message>
-	<message key="plugins.generic.sehl.enabled">Das SEHL-Plug-In wurde aktiviert.</message>
-	<message key="plugins.generic.sehl.disabled">Das SEHL-Plug-In wurde ausgeschaltet.</message>
 </locale>

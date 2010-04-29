@@ -15,8 +15,6 @@
 <locale name="cs_CZ" full_name="Czech">
 	<message key="plugins.generic.referral.name">Odkazovací plugin</message>
 	<message key="plugins.generic.referral.description">Odkazovací plugin sleduje příchozí URL citací článků (např.: když čtenář následuje externí odkaz na článek) a umožňuje autorům spravovat a případně vydávat automaticky aktualizovaný seznam citací článku.</message>
-	<message key="plugins.generic.referral.enabled">Odkazovací plugin byl povolen.</message>
-	<message key="plugins.generic.referral.disabled">Odkazovací plugin byl zakázán.</message>
 	
 	<message key="plugins.generic.referral.editReferral">Editovat zpětnou citaci</message>
 	<message key="plugins.generic.referral.createReferral">Vytvořit zpětnou citaci</message>

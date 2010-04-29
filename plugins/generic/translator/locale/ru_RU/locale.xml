@@ -17,8 +17,6 @@
 	<message key="plugins.generic.translator.description">Этот модуль предназначен для редактирования файлов, содержащих перевод системных сообщений на разных языках.</message>
 	<message key="plugins.generic.translator.longdescription">На этих страницах администратор сайта может создавать, редактировать и проверять переводы системных сообщений OJS. Изменения производятся в масштабах всего сайта, а потому не должны быть специфичными для какого либо конкретного журнала. Если вы исправляете или создаете новый перевод, подумайте над его передачей в Public Knowledge Project для включения в последующие версии OJS.</message>
 	<message key="plugins.generic.translator.localeDescription">Эта страница содержит ссылки для создания и редактирования всех компонент перевода OJS. Полнота перевода в целом определяется полнотой перевода всех приведенных компонент.</message>
-	<message key="plugins.generic.translator.enabled">Модуль локализации включен.</message>
-	<message key="plugins.generic.translator.disabled">Модуль локализации выключен.</message>
 	
 	<message key="plugins.generic.translator.localeName">Язык</message>
 	<message key="plugins.generic.translator.localeKey">Ключ</message>

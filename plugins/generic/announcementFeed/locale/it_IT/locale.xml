@@ -26,6 +26,4 @@
 	<message key="plugins.generic.announcementfeed.atom.altText">Logo dell'atom</message>
 	<message key="plugins.generic.announcementfeed.rss1.altText">Logo del RSS1</message>
 	<message key="plugins.generic.announcementfeed.rss2.altText">Logo del RSS2</message>
-	<message key="plugins.generic.announcementfeed.enabled">Il plugin del feed degli avvisi è stato abilitato.</message>
-	<message key="plugins.generic.announcementfeed.disabled">Il plugin del feed degli avvisi è stato disabilitato.</message>
 </locale>

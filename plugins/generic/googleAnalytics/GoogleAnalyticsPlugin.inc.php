@@ -18,7 +18,6 @@
 import('classes.plugins.GenericPlugin');
 
 class GoogleAnalyticsPlugin extends GenericPlugin {
-
 	/**
 	 * Called as a plugin is registered to the registry
 	 * @param $category String Name of category plugin was registered to
@@ -28,7 +27,6 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 	function register($category, $path) {
 		$success = parent::register($category, $path);
 		if (!Config::getVar('general', 'installed')) return false;
-		$this->addLocaleData();
 		if ($success && $this->getEnabled()) {
 			// Insert field into author submission page and metadata form
 			HookRegistry::register('Templates::Author::Submit::Authors', array($this, 'metadataField'));
@@ -45,7 +43,7 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 			// Add element for AuthorDAO for storage
 			HookRegistry::register('authordao::getAdditionalFieldNames', array($this, 'authorSubmitGetFieldNames'));
 
-			// Insert Google Analytics page tag to common footer  
+			// Insert Google Analytics page tag to common footer
 			HookRegistry::register('Templates::Common::Footer::PageFooter', array($this, 'insertFooter'));
 
 			// Insert Google Analytics page tag to article footer
@@ -64,16 +62,6 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 			HookRegistry::register('Templates::Help::Footer::PageFooter', array($this, 'insertFooter'));
 		}
 		return $success;
-	}
-
-	/**
-	 * Get the name of this plugin. The name must be unique within
-	 * its category, and should be suitable for part of a filename
-	 * (ie short, no spaces, and no dependencies on cases being unique).
-	 * @return String name of plugin
-	 */
-	function getName() {
-		return 'GoogleAnalyticsPlugin';
 	}
 
 	function getDisplayName() {
@@ -135,42 +123,9 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 	function getManagementVerbs() {
 		$verbs = array();
 		if ($this->getEnabled()) {
-			$verbs[] = array(
-				'disable',
-				Locale::translate('manager.plugins.disable')
-			);
-			$verbs[] = array(
-				'settings',
-				Locale::translate('plugins.generic.googleAnalytics.manager.settings')
-			);
-		} else {
-			$verbs[] = array(
-				'enable',
-				Locale::translate('manager.plugins.enable')
-			);
+			$verbs[] = array('settings', Locale::translate('plugins.generic.googleAnalytics.manager.settings'));
 		}
-		return $verbs;
-	}
-
-	/**
-	 * Determine whether or not this plugin is enabled.
-	 */
-	function getEnabled() {
-		$journal =& Request::getJournal();
-		if (!$journal) return false;
-		return $this->getSetting($journal->getId(), 'enabled');
-	}
-
-	/**
-	 * Set the enabled/disabled state of this plugin
-	 */
-	function setEnabled($enabled) {
-		$journal =& Request::getJournal();
-		if ($journal) {
-			$this->updateSetting($journal->getId(), 'enabled', $enabled ? true : false);
-			return true;
-		}
-		return false;
+		return parent::getManagementVerbs($verbs);
 	}
 
 	/**
@@ -219,7 +174,7 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 
 	/**
 	 * Insert Google Analytics page tag to footer
-	 */  
+	 */
 	function insertFooter($hookName, $params) {
 		$smarty =& $params[1];
 		$output =& $params[2];
@@ -245,9 +200,9 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 				$templateMgr->assign('googleAnalyticsSiteId', $googleAnalyticsSiteId);
 				$trackingCode = $this->getSetting($journalId, 'trackingCode');
 				if ($trackingCode == "ga") {
-					$output .= $templateMgr->fetch($this->getTemplatePath() . 'pageTagGa.tpl'); 
+					$output .= $templateMgr->fetch($this->getTemplatePath() . 'pageTagGa.tpl');
 				} else {
-					$output .= $templateMgr->fetch($this->getTemplatePath() . 'pageTagUrchin.tpl'); 
+					$output .= $templateMgr->fetch($this->getTemplatePath() . 'pageTagUrchin.tpl');
 				}
 			}
 		}
@@ -262,48 +217,37 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
  	 * @return boolean
  	 */
 	function manage($verb, $args, &$message) {
-		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
-		$journal =& Request::getJournal();
-		$returner = true;
+		if (!parent::manage($verb, $args, $message)) return false;
 
 		switch ($verb) {
-			case 'enable':
-				$this->setEnabled(true);
-				$message = Locale::translate('plugins.generic.googleAnalytics.enabled');
-				$returner = false;
-				break;
-			case 'disable':
-				$this->setEnabled(false);
-				$message = Locale::translate('plugins.generic.googleAnalytics.disabled');
-				$returner = false;
-				break;
 			case 'settings':
-				if ($this->getEnabled()) {
-					$this->import('GoogleAnalyticsSettingsForm');
-					$form = new GoogleAnalyticsSettingsForm($this, $journal->getId());
-					if (Request::getUserVar('save')) {
-						$form->readInputData();
-						if ($form->validate()) {
-							$form->execute();
-							Request::redirect(null, 'manager', 'plugin');
-						} else {
-							$this->setBreadCrumbs(true);
-							$form->display();
-						}
+				$templateMgr =& TemplateManager::getManager();
+				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
+				$journal =& Request::getJournal();
+
+				$this->import('GoogleAnalyticsSettingsForm');
+				$form = new GoogleAnalyticsSettingsForm($this, $journal->getId());
+				if (Request::getUserVar('save')) {
+					$form->readInputData();
+					if ($form->validate()) {
+						$form->execute();
+						Request::redirect(null, 'manager', 'plugin');
+						return false;
 					} else {
 						$this->setBreadCrumbs(true);
-						$form->initData();
 						$form->display();
 					}
 				} else {
-					Request::redirect(null, 'manager');
+					$this->setBreadCrumbs(true);
+					$form->initData();
+					$form->display();
 				}
-				break;
+				return true;
 			default:
-				Request::redirect(null, 'manager');
+				// Unknown management verb
+				assert(false);
+				return false;
 		}
-		return $returner;
 	}
 }
 ?>

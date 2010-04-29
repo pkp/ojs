@@ -24,18 +24,9 @@ class ThesisFeedPlugin extends GenericPlugin {
 				HookRegistry::register('TemplateManager::display',array(&$this, 'callbackAddLinks'));
 				HookRegistry::register('PluginRegistry::loadCategory', array(&$this, 'callbackLoadCategory'));
 			}
-			$this->addLocaleData();
 			return true;
 		}
 		return false;
-	}
-
-	/**
-	 * Get the symbolic name of this plugin
-	 * @return string
-	 */
-	function getName() {
-		return 'ThesisFeedPlugin';
 	}
 
 	/**
@@ -52,16 +43,6 @@ class ThesisFeedPlugin extends GenericPlugin {
 	 */
 	function getDescription() {
 		return Locale::translate('plugins.generic.thesisfeed.description');
-	}   
-
-	/**
-	 * Check whether or not this plugin is enabled
-	 * @return boolean
-	 */
-	function getEnabled() {
-		$journal =& Request::getJournal();
-		$journalId = $journal?$journal->getId():0;
-		return $this->getSetting($journalId, 'enabled');
 	}
 
 	/**
@@ -94,12 +75,12 @@ class ThesisFeedPlugin extends GenericPlugin {
 			$currentJournal =& $templateManager->get_template_vars('currentJournal');
 
 			$thesisPlugin =& PluginRegistry::getPlugin('generic', 'ThesisPlugin');
-			$thesisEnabled = $thesisPlugin->getEnabled(); 
+			$thesisEnabled = $thesisPlugin->getEnabled();
 
 			$displayPage = $currentJournal ? $this->getSetting($currentJournal->getId(), 'displayPage') : null;
 			$requestedPage = Request::getRequestedPage();
 
-			if ( $thesisEnabled && (($displayPage == 'all') || ($displayPage == 'homepage' && (empty($requestedPage) || $requestedPage == 'index' || $requestedPage == 'thesis')) || ($displayPage == $requestedPage)) ) { 
+			if ( $thesisEnabled && (($displayPage == 'all') || ($displayPage == 'homepage' && (empty($requestedPage) || $requestedPage == 'index' || $requestedPage == 'thesis')) || ($displayPage == $requestedPage)) ) {
 
 				// if we have a journal selected, append feed meta-links into the header
 				$additionalHeadData = $templateManager->get_template_vars('additionalHeadData');
@@ -121,21 +102,9 @@ class ThesisFeedPlugin extends GenericPlugin {
 	function getManagementVerbs() {
 		$verbs = array();
 		if ($this->getEnabled()) {
-			$verbs[] = array(
-				'disable',
-				Locale::translate('manager.plugins.disable')
-			);
-			$verbs[] = array(
-				'settings',
-				Locale::translate('plugins.generic.thesisfeed.settings')
-			);
-		} else {
-			$verbs[] = array(
-				'enable',
-				Locale::translate('manager.plugins.enable')
-			);
+			$verbs[] = array('settings', Locale::translate('plugins.generic.thesisfeed.settings'));
 		}
-		return $verbs;
+		return parent::getManagementVerbs($verbs);
 	}
 
  	/*
@@ -146,11 +115,12 @@ class ThesisFeedPlugin extends GenericPlugin {
  	 * @return boolean
  	 */
 	function manage($verb, $args, &$message) {
-		$returner = true;
-		$journal =& Request::getJournal();
+		if (!parent::manage($verb, $args, $message)) return false;
 
 		switch ($verb) {
 			case 'settings':
+				$journal =& Request::getJournal();
+
 				Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON,  LOCALE_COMPONENT_PKP_MANAGER));
 				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
@@ -163,6 +133,7 @@ class ThesisFeedPlugin extends GenericPlugin {
 					if ($form->validate()) {
 						$form->execute();
 						Request::redirect(null, null, 'plugins');
+						return false;
 					} else {
 						$form->display();
 					}
@@ -170,20 +141,12 @@ class ThesisFeedPlugin extends GenericPlugin {
 					$form->initData();
 					$form->display();
 				}
-				break;
-			case 'enable':
-				$this->updateSetting($journal->getId(), 'enabled', true);
-				$message = Locale::translate('plugins.generic.thesisfeed.enabled');
-				$returner = false;
-				break;
-			case 'disable':
-				$this->updateSetting($journal->getId(), 'enabled', false);
-				$message = Locale::translate('plugins.generic.thesisfeed.disabled');
-				$returner = false;
-				break;	
+				return true;
+			default:
+				// Unknown management verb
+				assert(false);
+				return false;
 		}
-
-		return $returner;		
 	}
 }
 

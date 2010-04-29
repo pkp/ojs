@@ -29,6 +29,4 @@
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdInstructions"><![CDATA[En phpMyVisites, pulse en Administration->Modify site. El Número de Perfil del Sitio (site profile number) se muestra junto al nombre del perfil del sitio (site profile name).]]></message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdRequired">Por favor, escriba un número de perfil del sitio.</message>
 
-	<message key="plugins.generic.phpmv.enabled">El plugin phpMyVisites ha sido habilitado.</message>
-	<message key="plugins.generic.phpmv.disabled">El plugin phpMyVisites ha sido deshabilitado.</message>
 </locale>

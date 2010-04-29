@@ -203,6 +203,4 @@
 	<message key="plugins.generic.thesis.form.uploadCodeInstructions">Para uso exclusivo do Departamento.</message>
 	<message key="plugins.generic.thesis.form.studentEmailPublish">Publicar e-mail do aluno</message>
 	<message key="plugins.generic.thesis.form.studentEmailPublishInstructions">Publicar o e-mail do aluno junto com o resumo, caso a opção seja seleccionada.</message>
-	<message key="plugins.generic.thesis.enabled">O Plugin de Teses foi activado.</message>
-	<message key="plugins.generic.thesis.disabled">O Plugin de Teses foi desactivado.</message>
 </locale>

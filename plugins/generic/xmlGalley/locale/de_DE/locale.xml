@@ -44,7 +44,5 @@
 	<message key="plugins.generic.xmlGalley.settings.customXSLRequired">Eine XSL-Stylesheet-Datei muss spezifiziert werden.</message>
 	<message key="plugins.generic.xmlGalley.settings.customXSLInvalid">Die hochgeladene XSL-Datei war ungültig. Bitte prüfen Sie die Datei und versuchen Sie es dann noch einmal.</message>
 
-	<message key="plugins.generic.xmlGalley.enabled">Das XML-Korrekturfassungen-Plug-In wurde aktiviert.</message>
-	<message key="plugins.generic.xmlGalley.disabled">Das XML-Korrekturfassungen-Plug-In wurde ausgeschaltet.</message>
 </locale>
 

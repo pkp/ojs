@@ -18,7 +18,6 @@
 import('classes.plugins.GenericPlugin');
 
 class XMLGalleyPlugin extends GenericPlugin {
-
 	function register($category, $path) {
 		if (parent::register($category, $path)) {
 			if ($this->getEnabled()) {
@@ -39,14 +38,9 @@ class XMLGalleyPlugin extends GenericPlugin {
 				HookRegistry::register( 'ArticleHandler::downloadFile', array(&$this, 'viewXMLGalleyFile') );
 			}
 
-			$this->addLocaleData();
 			return true;
 		}
 		return false;
-	}
-
-	function getName() {
-		return 'XMLGalleyPlugin';
 	}
 
 	function getDisplayName() {
@@ -95,14 +89,14 @@ class XMLGalleyPlugin extends GenericPlugin {
 
 		$journal =& Request::getJournal();
 
-		if (get_class($galley) == 'ArticleXMLGalley' && $galley->isPdfGalley() && 
+		if (get_class($galley) == 'ArticleXMLGalley' && $galley->isPdfGalley() &&
 			$this->getSetting($journal->getId(), 'nlmPDF') == 1) {
 			return $galley->viewFileContents();
 		} else return false;
 	}
 
 	/**
-	 * Append some special attributes to a galley identified as XML, and 
+	 * Append some special attributes to a galley identified as XML, and
 	 * Return an ArticleXMLGalley object as appropriate
 	 */
 	function returnXMLGalley($hookName, $args) {
@@ -124,7 +118,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 
 	/**
 	 * Internal function to return an ArticleXMLGalley object from an ArticleGalley object
-	 * @param $galley ArticleGalley 
+	 * @param $galley ArticleGalley
 	 * @return ArticleXMLGalley
 	 */
 	function _returnXMLGalleyFromArticleGalley(&$galley) {
@@ -159,22 +153,12 @@ class XMLGalleyPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Determine whether or not this plugin is enabled.
-	 */
-	function getEnabled() {
-		$journal =& Request::getJournal();
-		if (!$journal) return false;
-		return $this->getSetting($journal->getId(), 'enabled');
-	}
-
-	/**
 	 * Set the enabled/disabled state of this plugin
 	 */
 	function setEnabled($enabled) {
+		parent::setEnabled($enabled);
 		$journal =& Request::getJournal();
 		if ($journal) {
-			$this->updateSetting($journal->getId(), 'enabled', $enabled ? true : false);
-
 			// set default XSLT renderer
 			if ($this->getSetting($journal->getId(), 'XSLTrenderer') == "") {
 
@@ -202,7 +186,19 @@ class XMLGalleyPlugin extends GenericPlugin {
 		return false;
 	}
 
- 	/*
+
+	/**
+	 * Display verbs for the management interface.
+	 */
+	function getManagementVerbs() {
+		$verbs = array();
+		if ($this->getEnabled()) {
+			$verbs[] = array('settings', Locale::translate('plugins.generic.xmlGalley.manager.settings'));
+		}
+		return parent::getManagementVerbs($verbs);
+	}
+
+	/*
  	 * Execute a management verb on this plugin
  	 * @param $verb string
  	 * @param $args array
@@ -210,6 +206,8 @@ class XMLGalleyPlugin extends GenericPlugin {
  	 * @return boolean
  	 */
 	function manage($verb, $args, &$message) {
+		if (!parent::manage($verb, $args, $message)) return false;
+
 		$journal =& Request::getJournal();
 
 		$templateMgr =& TemplateManager::getManager();
@@ -271,7 +269,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 						$fileName = $fileManager->getUploadedFileName('customXSL');
 						$extension = strtolower($fileManager->getExtension($fileName));
 
-						if (($type == 'text/xml' || $type == 'text/xml' || $type == 'application/xml' || $type == 'application/xslt+xml') 
+						if (($type == 'text/xml' || $type == 'text/xml' || $type == 'application/xml' || $type == 'application/xslt+xml')
 							&& $extension == 'xsl') {
 
 							// if there is an existing XSL file, delete it from the journal files folder
@@ -320,39 +318,11 @@ class XMLGalleyPlugin extends GenericPlugin {
 					$form->display();
 				}
 				return true;
-			case 'enable':
-				$this->setEnabled(true);
-				$message = Locale::translate('plugins.generic.xmlGalley.enabled');
-				return false;
-			case 'disable':
-				$this->setEnabled(false);
-				$message = Locale::translate('plugins.generic.xmlGalley.disabled');
+			default:
+				// Unknown management verb
+				assert(false);
 				return false;
 		}
 	}
-
-	/**
-	 * Display verbs for the management interface.
-	 */
-	function getManagementVerbs() {
-		$verbs = array();
-		if ($this->getEnabled()) {
-			$verbs[] = array(
-				'disable',
-				Locale::translate('manager.plugins.disable')
-			);
-			$verbs[] = array(
-				'settings',
-				Locale::translate('plugins.generic.xmlGalley.manager.settings')
-			);
-		} else {
-			$verbs[] = array(
-				'enable',
-				Locale::translate('manager.plugins.enable')
-			);
-		}
-		return $verbs;
-	}
-
 }
 ?>

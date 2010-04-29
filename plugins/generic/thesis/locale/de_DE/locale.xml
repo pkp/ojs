@@ -204,6 +204,4 @@
 	<message key="plugins.generic.thesis.form.supervisorMiddleName">Mittelname des Betreuers/der Betreuerin</message>
 	<message key="plugins.generic.thesis.form.supervisorEmail">E-Mail des Betreuers/der Betreuerin</message>
 	<message key="plugins.generic.thesis.form.supervisorEmailValid">Gültige Mailadresse erforderlich.</message>
-	<message key="plugins.generic.thesis.enabled">Das Plug-In für Dissertationen wurde aktiviert.</message>
-	<message key="plugins.generic.thesis.disabled">Das Plug-In für Dissertationen wurde ausgeschaltet.</message>
 </locale>

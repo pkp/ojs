@@ -29,7 +29,5 @@
 	<message key="plugins.generic.counter.1a.ytdHtml">YTD-HTML</message>
 	<message key="plugins.generic.counter.1a.ytdPdf">YTD-PDF</message>
 	<message key="plugins.generic.counter.1a.totalForAllJournals">Gesamtsumme für alle Zeitschriften</message>
-	<message key="plugins.generic.counter.enabled">Das COUNTER-Plug-In wurde aktiviert.</message>
-	<message key="plugins.generic.counter.disabled">Das COUNTER-Plug-In wurde ausgeschaltet.</message>
 	<message key="plugins.generic.counter.migrate">Protokolldatei migrieren</message>
 </locale>

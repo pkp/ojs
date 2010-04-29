@@ -16,28 +16,11 @@
 import('plugins.BlockPlugin');
 
 class SubscriptionBlockPlugin extends BlockPlugin {
-	function register($category, $path) {
-		$success = parent::register($category, $path);
-		if ($success) {
-			$this->addLocaleData();
-		}
-		return $success;
-	}
-
-	/**
-	 * Get the name of this plugin. The name must be unique within
-	 * its category.
-	 * @return String name of plugin
-	 */
-	function getName() {
-		return 'SubscriptionBlockPlugin';
-	}
-
 	/**
 	 * Install default settings on journal creation.
 	 * @return string
 	 */
-	function getNewJournalPluginSettingsFile() {
+	function getContextSpecificPluginSettingsFile() {
 		return $this->getPluginPath() . '/settings.xml';
 	}
 
@@ -54,14 +37,6 @@ class SubscriptionBlockPlugin extends BlockPlugin {
 	 */
 	function getDescription() {
 		return Locale::translate('plugins.block.subscription.description');
-	}
-
-	/**
-	 * Get the supported contexts (e.g. BLOCK_CONTEXT_...) for this block.
-	 * @return array
-	 */
-	function getSupportedContexts() {
-		return array(BLOCK_CONTEXT_LEFT_SIDEBAR, BLOCK_CONTEXT_RIGHT_SIDEBAR);
 	}
 
 	/**
@@ -82,23 +57,23 @@ class SubscriptionBlockPlugin extends BlockPlugin {
 		$templateMgr->assign('userLoggedIn', isset($userId) ? true : false);
 
 		if (isset($userId)) {
-			$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');	
+			$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 			$individualSubscription =& $subscriptionDao->getSubscriptionByUserForJournal($userId, $journalId);
 			$templateMgr->assign_by_ref('individualSubscription', $individualSubscription);
-		} 
+		}
 
 		// If no individual subscription or if not valid, check for institutional subscription
 		if (!isset($individualSubscription) || !$individualSubscription->isValid()) {
 			$IP = Request::getRemoteAddr();
 			$domain = Request::getRemoteDomain();
-			$subscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');	
+			$subscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 			$subscriptionId = $subscriptionDao->isValidInstitutionalSubscription($domain, $IP, $journalId);
 			if ($subscriptionId) {
 				$institutionalSubscription =& $subscriptionDao->getSubscription($subscriptionId);
 				$templateMgr->assign_by_ref('institutionalSubscription', $institutionalSubscription);
 				$templateMgr->assign('userIP', $IP);
 			}
-		}	
+		}
 
 		if (isset($individualSubscription) || isset($institutionalSubscription)) {
 			import('payment.ojs.OJSPaymentManager');

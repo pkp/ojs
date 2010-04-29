@@ -15,8 +15,6 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.xmlGalley.displayName">Модуль гранок в формате XML</message>
 	<message key="plugins.generic.xmlGalley.description">Этот модуль генрирует гранки в формате XHTML из статьи в XML используя XSLT.</message>
-	<message key="plugins.generic.xmlGalley.enabled">Модуль гранок в формате XML включен.</message>
-	<message key="plugins.generic.xmlGalley.disabled">Модуль гранок в формате XML выключен.</message>
 
 	<message key="plugins.generic.xmlGalley.manager.settings">Настройки</message>
 

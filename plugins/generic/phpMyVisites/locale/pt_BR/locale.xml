@@ -29,6 +29,4 @@
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdInstructions"><![CDATA[Dentro do phpMyVisites, clique em Administração -> Modificar Portal (Administration->Modify site). O número do perfil do portal é exibido próximo ao seu nome.]]></message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdRequired">Informe o número do perfil do portal.</message>
 
-	<message key="plugins.generic.phpmv.enabled">O Plugin phpMyVisites foi habilitado.</message>
-	<message key="plugins.generic.phpmv.disabled">O Plugin phpMyVisites foi desabilitado.</message>
 </locale>

@@ -26,6 +26,4 @@
 	<message key="plugins.generic.thesisfeed.atom.altText">Logo di Atom</message>
 	<message key="plugins.generic.thesisfeed.rss1.altText">Logo di RSS1</message>
 	<message key="plugins.generic.thesisfeed.rss2.altText">Logo di RSS2</message>
-	<message key="plugins.generic.thesisfeed.enabled">Il plugin Abstract delle tesi è stato abilitato.</message>
-	<message key="plugins.generic.thesisfeed.disabled">Il plugin Abstract delle tesi è stato disabilitato.</message>
 </locale>

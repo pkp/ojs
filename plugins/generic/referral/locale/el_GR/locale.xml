@@ -15,8 +15,6 @@
 <locale name="el_GR" full_name="Greek">
 	<message key="plugins.generic.referral.name">Referral Plugin</message>
 	<message key="plugins.generic.referral.description">Το Referral Plugin ανιχνεύει εισερχόμενους συνδέσμους σε άρθρα  (π.χ. όταν ένας αναγνώστης ακολουθεί έναν εξωτερικό σύνδεσμο σε ένα άρθρο),  και επιτρέπει στους Συγγραφείς να διατηρούν και πιθανώς να δημοσιεύουν αυτόματα μια ενημερωμένη λίστα με εξωτερικούς συνδέσμους σε ένα άρθρο τους.</message>
-	<message key="plugins.generic.referral.enabled">Το Referral Plugin έχει ενεργοποιηθεί.</message>
-	<message key="plugins.generic.referral.disabled">Το Referral Plugin έχει απενεργοποιηθεί.</message>
 	
 	<message key="plugins.generic.referral.editReferral">Επεξεργασία Refback</message>
 	<message key="plugins.generic.referral.createReferral">Δημιουργία Refback</message>

@@ -16,4 +16,6 @@
 	<type>plugins.blocks</type>
 	<release>1.0.0.0</release>
 	<date>2010-04-05</date>
+	<lazy-load>1</lazy-load>
+	<class>RelatedItemsPlugin</class>
 </version>

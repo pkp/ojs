@@ -28,7 +28,5 @@
 	<message key="plugins.generic.counter.1a.ytdHtml">HTML YTD</message>
 	<message key="plugins.generic.counter.1a.ytdPdf">PDF YTD</message>
 	<message key="plugins.generic.counter.1a.totalForAllJournals">Total para todas as revistas</message>
-	<message key="plugins.generic.counter.enabled">O Plugin COUNTER foi activado.</message>
-	<message key="plugins.generic.counter.disabled">O Plugin COUNTER foi desactivado.</message>
 	<message key="plugins.generic.counter.migrate">Migrar ficheiro de histórico.</message>
 </locale>

@@ -15,8 +15,6 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.xmlGalley.displayName">XML Galley Plugin</message>
 	<message key="plugins.generic.xmlGalley.description">This plugin generates XHTML galleys from an XML article using XSLT.</message>
-	<message key="plugins.generic.xmlGalley.enabled">The XML Galley Plugin has been enabled.</message>
-	<message key="plugins.generic.xmlGalley.disabled">The XML Galley Plugin has been disabled.</message>
 
 	<message key="plugins.generic.xmlGalley.manager.settings">Settings</message>
 

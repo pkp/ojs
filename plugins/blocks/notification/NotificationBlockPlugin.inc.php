@@ -18,14 +18,6 @@
 import('plugins.BlockPlugin');
 
 class NotificationBlockPlugin extends BlockPlugin {
-	function register($category, $path) {
-		$success = parent::register($category, $path);
-		if ($success) {
-			$this->addLocaleData();
-		}
-		return $success;
-	}
-
 	/**
 	 * Determine whether the plugin is enabled. Overrides parent so that
 	 * the plugin will be displayed during install.
@@ -47,25 +39,8 @@ class NotificationBlockPlugin extends BlockPlugin {
 	 * Install default settings on journal creation.
 	 * @return string
 	 */
-	function getNewJournalPluginSettingsFile() {
+	function getContextSpecificPluginSettingsFile() {
 		return $this->getPluginPath() . '/settings.xml';
-	}
-
-	/**
-	 * Get the supported contexts (e.g. BLOCK_CONTEXT_...) for this block.
-	 * @return array
-	 */
-	function getSupportedContexts() {
-		return array(BLOCK_CONTEXT_LEFT_SIDEBAR, BLOCK_CONTEXT_RIGHT_SIDEBAR);
-	}
-
-	/**
-	 * Get the name of this plugin. The name must be unique within
-	 * its category.
-	 * @return String name of plugin
-	 */
-	function getName() {
-		return 'NotificationBlockPlugin';
 	}
 
 	/**
@@ -82,18 +57,18 @@ class NotificationBlockPlugin extends BlockPlugin {
 	function getDescription() {
 		return Locale::translate('plugins.block.notification.description');
 	}
-	
-	
+
+
 	function getContents(&$templateMgr) {
 		$user =& Request::getUser();
 		$journal =& Request::getJournal();
-		
+
 		if ($user && $journal) {
 			$userId = $user->getId();
 			$notificationDao =& DAORegistry::getDAO('NotificationDAO');
 			$templateMgr->assign('unreadNotifications',  $notificationDao->getUnreadNotificationCount($userId));
 		}
-		
+
 		return parent::getContents($templateMgr);
 	}
 }

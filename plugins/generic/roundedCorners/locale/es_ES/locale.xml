@@ -15,6 +15,4 @@
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.generic.roundedcorners.displayName">Esquinas Redondeadas</message>
 	<message key="plugins.generic.roundedcorners.description">Este Complemento coloca un fondo en cada bloque (barra) de herramientas lateral y redondea las esquinas. Se puede modificar los colores editando la hoja de estilo CSS del Complemento.</message>
-	<message key="plugins.generic.roundedcorners.enabled">El plugin Corners Redondeados ha sido habilitado.</message>
-	<message key="plugins.generic.roundedcorners.disabled">El plugin Corners Redondeados ha sido deshabilitado.</message>
 </locale>

@@ -36,6 +36,4 @@
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdInstructions">Μέσα στο phpMyVisites, πατήστε στο Administration->Modify site. Ο αριθμός προφίλ ιστοτόπου εμφανίζεται δίπλα από το όνομα προφίλ του ιστοτόπου σας.</message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdRequired">Εισάγετε έναν αριθμό προφίλ ιστοτόπου.</message>
 
-	<message key="plugins.generic.phpmv.enabled">Το phpMyVisitesPlugin έχει ενεργοποιηθεί.</message>
-	<message key="plugins.generic.phpmv.disabled">Το phpMyVisitesPlugin έχει απενεργοποιηθεί.</message>
 </locale>

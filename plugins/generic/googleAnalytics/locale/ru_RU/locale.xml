@@ -17,8 +17,6 @@
 	<!-- Google Analytics -->
 	<message key="plugins.generic.googleAnalytics.displayName">Модуль Google Analytics</message>
 	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Интегрирует OJS с Google Analytics, системой для анализа траффика компании Google. Требует наличия у Вас учетной записи в системе Google Analytics. См. <a href="http://www.google.com/analytics/" title="Google Analytics site">сайт Google Analytics</a>.]]></message>
-	<message key="plugins.generic.googleAnalytics.enabled">Модуль Google Analytics включен.</message>
-	<message key="plugins.generic.googleAnalytics.disabled">Модуль Google Analytics выключен.</message>
 
 	<!-- Google Analytics Settings Management -->
 	<message key="plugins.generic.googleAnalytics.manager.settings">Настройки</message>

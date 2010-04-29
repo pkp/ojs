@@ -16,6 +16,4 @@
 <locale name="de_DE" full_name="German">
 	<message key="plugins.generic.roundedcorners.displayName">Runde Ecken</message>
 	<message key="plugins.generic.roundedcorners.description">Mittels dieses Plug-Ins können Sie für jeden Seitenleistenblock einen Hintergund und runde Rahmen vergeben. Farbliche Änderungen können durch die CSS-Stylesheets in diesem Plug-In umgesetzt werden.</message>
-	<message key="plugins.generic.roundedcorners.enabled">Das Runde-Ecken-Plug-In wurde aktiviert.</message>
-	<message key="plugins.generic.roundedcorners.disabled">Das Runde-Ecken-Plug-In wurde ausgeschaltet.</message>
 </locale>

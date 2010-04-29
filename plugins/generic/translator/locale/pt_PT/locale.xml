@@ -68,8 +68,6 @@
 	<message key="plugins.generic.translator.deleteEmail">Eliminar e-mail</message>
 	<message key="plugins.generic.translator.saveBeforeContinuing">Certifique-se de guardar qualquer alteração efectuada nesta página antes de continuar ou elas serão perdidas. Deseja continuar? Se sim, quaisquer mudança não guardada será perdida.</message>
 	<message key="plugins.generic.translator.localeKey.description">Insira uma chave de tradução completa para pesquisar.</message>
-	<message key="plugins.generic.translator.enabled">O Plugin de Tradução foi activado.</message>
-	<message key="plugins.generic.translator.disabled">O Plugin de Tradução foi desactivado.</message>
 	<message key="plugins.generic.translator.fileNotWriteable">Este ficheiro de tradução não possui permissão de escrita. Quaisquer alterações realizadas não serão salvas.</message>
 	<message key="plugins.generic.translator.filesNotWriteable">Os seguintes arquivos de tradução não possuem permissão de escrita. Quaisquer alterações realizadas não serão guardadas.</message>
 </locale>

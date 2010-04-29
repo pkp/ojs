@@ -25,9 +25,7 @@ class SehlPlugin extends GenericPlugin {
 		if (parent::register($category, $path)) {
 			$journal =& Request::getJournal();
 			$journalId = $journal?$journal->getId():0;
-			$isEnabled = $this->getSetting($journalId, 'enabled');
 
-			$this->addLocaleData();
 			HookRegistry::register('TemplateManager::display',array(&$this, 'displayTemplateCallback'));
 			return true;
 		}
@@ -128,53 +126,12 @@ class SehlPlugin extends GenericPlugin {
 		return (substr($output, 0, $startIndex) . $newOutput);
 	}
 
-	function getName() {
-		return 'SehlPlugin';
-	}
-
 	function getDisplayName() {
 		return Locale::translate('plugins.generic.sehl.name');
 	}
 
 	function getDescription() {
 		return Locale::translate('plugins.generic.sehl.description');
-	}
-
-	function getEnabled() {
-		$journal =& Request::getJournal();
-		$journalId = $journal?$journal->getId():0;
-		return $this->getSetting($journalId, 'enabled');
-	}
-
-	function getManagementVerbs() {
-		return array(array(
-			($this->getEnabled()?'disable':'enable'),
-			Locale::translate($this->getEnabled()?'manager.plugins.disable':'manager.plugins.enable')
-		));
-	}
-
- 	/*
- 	 * Execute a management verb on this plugin
- 	 * @param $verb string
- 	 * @param $args array
-	 * @param $message string Location for the plugin to put a result msg
- 	 * @return boolean
- 	 */
-	function manage($verb, $args, &$message) {
-		$journal =& Request::getJournal();
-		$journalId = $journal?$journal->getId():0;
-		switch ($verb) {
-			case 'enable':
-				$this->updateSetting($journalId, 'enabled', true);
-				$message = Locale::translate('plugins.generic.sehl.enabled');
-				break;
-			case 'disable':
-				$this->updateSetting($journalId, 'enabled', false);
-				$message = Locale::translate('plugins.generic.sehl.disabled');
-				break;
-		}
-		
-		return false;
 	}
 }
 

@@ -205,6 +205,4 @@
 	<message key="plugins.generic.thesis.form.studentEmailPublishInstructions">Si se selecciona, se publicará el email del estudiante junto al resumen de tesis.</message>
 	<message key="plugins.generic.thesis.manager.form.studentBio">Nota biográfica del estudiante</message>
 	<message key="plugins.generic.thesis.form.studentBio">Nota biográfica del estudiante</message>
-	<message key="plugins.generic.thesis.enabled">El plugin Thesis ha sido habilitado.</message>
-	<message key="plugins.generic.thesis.disabled">El plugin Thesis ha sido deshabilitado.</message>
 </locale>

@@ -32,6 +32,4 @@
 	<message key="plugins.generic.customLocale.file.reference">デフォルトテキスト</message>
 	<message key="plugins.generic.customLocale.file.custom">カスタムテキスト</message>
 	<message key="plugins.generic.customLocale.localeKey.description">検索するロケールキーを入力してください。</message>
-	<message key="plugins.generic.customLocale.enabled">カスタムロケールプラグインは有効です。</message>
-	<message key="plugins.generic.customLocale.disabled">カスタムロケールプラグインは無効です。</message>
 </locale>

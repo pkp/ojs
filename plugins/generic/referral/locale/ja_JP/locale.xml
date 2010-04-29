@@ -15,8 +15,6 @@
 <locale name="ja_JP" full_name="日本語">
 	<message key="plugins.generic.referral.name">紹介プラグイン</message>
 	<message key="plugins.generic.referral.description">紹介プラグインでは論文に対して発生する refback URL (例: 読者が論文の外部リンクをたどった場合)を追跡し，著者が論文に対する refback 自動的にアップデートされるリストを保持もしくは公開することができます。</message>
-	<message key="plugins.generic.referral.enabled">紹介プラグインは有効です。</message>
-	<message key="plugins.generic.referral.disabled">紹介プラグインは無効です。</message>
 	
 	<message key="plugins.generic.referral.editReferral">Refback を編集</message>
 	<message key="plugins.generic.referral.createReferral">Refback を作成</message>

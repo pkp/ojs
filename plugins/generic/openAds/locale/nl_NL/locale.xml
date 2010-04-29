@@ -32,6 +32,4 @@
 	<message key="plugins.generic.openads.orientation.left">Links</message>
 	<message key="plugins.generic.openads.orientation.centre">Midden</message>
 	<message key="plugins.generic.openads.orientation.right">Rechts</message>
-	<message key="plugins.generic.openads.enabled">De OpenAds plugin is ingeschakeld.</message>
-	<message key="plugins.generic.openads.disabled">De OpenAds plugin is uitgeschakeld.</message>
 </locale>

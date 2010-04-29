@@ -15,6 +15,4 @@
 	<message key="plugins.generic.tinymce.description" ><![CDATA[با این پلاگین میتوان متون موجود در جعبه های متن را بصورتی که میخواهید ویرایش کنید. برای این کار از ویرایشگر محتوی <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> استفاده میشود.]]></message>
 	<message key="plugins.generic.tinymce.descriptionDisabled" ><![CDATA[با این پلاگین میتوان محتوی جعبه متن ها را بصورت پیشرفته ویرایش کرد. هنگام ویرایش متن به همان صورتی که میخواهید در خواهد آمد. رای این کار از ویرایشگر محتوی <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> استفاده میشود. <strong>به نظر میرسد TinyMCE بر روی سایت شما نصب نشده است. لطفا آنرا در فولدر {$tinyMcePath} نصب کنید.</strong>]]></message>
 	<message key="plugins.generic.tinymce.settings" >تنظیمات</message>
-	<message key="plugins.generic.tinymce.enabled">پلاگین تینی ام سی ای فعال شده است</message>
-	<message key="plugins.generic.tinymce.disabled">پلاگین تینی ام سی ای غیر فعال شده است</message>
 </locale>

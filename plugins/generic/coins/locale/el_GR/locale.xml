@@ -15,6 +15,4 @@
 <locale name="el_GR" full_name="Greek">
 	<message key="plugins.generic.coins.displayName">COinS Plugin</message>
 	<message key="plugins.generic.coins.description">Το COinS plugin προσθέτει ένα OpenURL χαρακτηριστικό στις σελίδες του άρθρου (περίληψη και HTML) που μπορεί να χρησιμεύσει π.χ. για εξαγωγή σε εργαλεία διαχείρισης αναφορών.</message>
-	<message key="plugins.generic.coins.enabled">Το COinS Plugin έχει ενεργοποιηθεί.</message>
-	<message key="plugins.generic.coins.disabled">Το COinS Plugin έχει απενεργοποιηθεί.</message>
 </locale>

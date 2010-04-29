@@ -27,7 +27,6 @@ class ReferralPlugin extends GenericPlugin {
 	 */
 	function register($category, $path) {
 		if (parent::register($category, $path)) {
-			$this->addLocaleData();
 			if ($this->getEnabled()) {
 				HookRegistry::register ('TemplateManager::display', array(&$this, 'handleTemplateDisplay'));
 				HookRegistry::register ('LoadHandler', array(&$this, 'handleLoadHandler'));
@@ -69,7 +68,7 @@ class ReferralPlugin extends GenericPlugin {
 				if ($referralFilter == 0) $referralFilter = null;
 
 				$referrals =& $referralDao->getReferralsByUserId($user->getId(), $referralFilter, $rangeInfo);
-			
+
 				$templateMgr->assign('referrals', $referrals);
 				$templateMgr->assign('referralFilter', $referralFilter);
 				$templateMgr->display($this->getTemplatePath() . 'authorReferrals.tpl', 'text/html', 'ReferralPlugin::addAuthorReferralContent');
@@ -87,7 +86,7 @@ class ReferralPlugin extends GenericPlugin {
 				$referralDao =& DAORegistry::getDAO('ReferralDAO');
 				$article = $templateMgr->get_template_vars('article');
 				$referrals =& $referralDao->getPublishedReferralsForArticle($article->getId());
-			
+
 				$templateMgr->assign('referrals', $referrals);
 				$templateMgr->display($this->getTemplatePath() . 'readerReferrals.tpl', 'text/html', 'ReferralPlugin::addReaderReferralContent');
 				break;
@@ -151,16 +150,8 @@ class ReferralPlugin extends GenericPlugin {
 	 * creation.
 	 * @return string
 	 */
-	function getNewJournalPluginSettingsFile() {
+	function getContextSpecificPluginSettingsFile() {
 		return $this->getPluginPath() . '/settings.xml';
-	}
-
-	/**
-	 * Get the symbolic name of this plugin
-	 * @return string
-	 */
-	function getName() {
-		return 'ReferralPlugin';
 	}
 
 	/**
@@ -184,53 +175,6 @@ class ReferralPlugin extends GenericPlugin {
 	 */
 	function getInstallSchemaFile() {
 		return $this->getPluginPath() . '/' . 'schema.xml';
-	}
-
-	/**
-	 * Check whether or not this plugin is enabled
-	 * @return boolean
-	 */
-	function getEnabled() {
-		$journal =& Request::getJournal();
-		$journalId = $journal?$journal->getId():0;
-		return $this->getSetting($journalId, 'enabled');
-	}
-
-	/**
-	 * Get a list of available management verbs for this plugin
-	 * @return array
-	 */
-	function getManagementVerbs() {
-		$verbs = array();
-		$verbs[] = array(
-			($this->getEnabled()?'disable':'enable'),
-			Locale::translate($this->getEnabled()?'manager.plugins.disable':'manager.plugins.enable')
-		);
-		return $verbs;
-	}
-
- 	/*
- 	 * Execute a management verb on this plugin
- 	 * @param $verb string
- 	 * @param $args array
-	 * @param $message string Location for the plugin to put a result msg
- 	 * @return boolean
- 	 */
-	function manage($verb, $args, &$message) {
-		$journal =& Request::getJournal();
-		$journalId = $journal?$journal->getId():0;
-		switch ($verb) {
-			case 'enable':
-				$this->updateSetting($journalId, 'enabled', true);
-				$message = Locale::translate('plugins.generic.referral.enabled');
-				break;
-			case 'disable':
-				$this->updateSetting($journalId, 'enabled', false);
-				$message = Locale::translate('plugins.generic.referral.disabled');
-				break;
-		}
-		
-		return false;
 	}
 }
 

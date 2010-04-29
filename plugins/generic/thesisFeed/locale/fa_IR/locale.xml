@@ -24,6 +24,4 @@
 	<message key="plugins.generic.thesisfeed.atom.altText">لوگوی اتم</message>
 	<message key="plugins.generic.thesisfeed.rss1.altText">لوگوی آر اس اس ۱</message>
 	<message key="plugins.generic.thesisfeed.rss2.altText">لوگوی آر اس اس ۲</message>
-	<message key="plugins.generic.thesisfeed.enabled">پلاگین فید چکیده پایان نامه فعال شده است</message>
-	<message key="plugins.generic.thesisfeed.disabled">پلاگین فید چکیده پایان نامه غیرفعال شده است</message>
 </locale>

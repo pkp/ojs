@@ -204,6 +204,4 @@
 	<message key="plugins.generic.thesis.form.supervisorEmail">Email vedoucího práce</message>
 	<message key="plugins.generic.thesis.form.supervisorEmailValid">Je vyžadován platný email vedoucího práce.</message>
 
-	<message key="plugins.generic.thesis.enabled">Byl povolen plugin Závěrečné práce.</message>
-	<message key="plugins.generic.thesis.disabled">Byl zakázán plugin Závěrečné práce.</message>
 </locale>

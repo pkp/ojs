@@ -15,8 +15,6 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.announcementfeed.displayName">Модуль ленты объявлений</message>
 	<message key="plugins.generic.announcementfeed.description">Модуль производит ленту в формате RSS/Atom, которая содержит объявления журнала.</message>
-	<message key="plugins.generic.announcementfeed.enabled">Модуль ленты объявлений включен.</message>
-	<message key="plugins.generic.announcementfeed.disabled">Модуль ленты объявлений выключен.</message>
 	
 	<message key="plugins.generic.announcementfeed.settings">Настройки</message>
 	<message key="plugins.generic.announcementfeed.settings.all">Показать ссылки на ленту на всех страницах журнала.</message>

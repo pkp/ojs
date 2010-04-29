@@ -17,6 +17,4 @@
 <locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.generic.sehl.name">SEHL Plugin</message>
 	<message key="plugins.generic.sehl.description">Deze plugin implementeert Zoekmachine Accenten (Search Engine HighLighting - SEHL), waarbij de zoekmachine de gezochte woorden accentueert in een HTML artikel.</message>
-	<message key="plugins.generic.sehl.enabled">De SEHL plugin is ingeschakeld.</message>
-	<message key="plugins.generic.sehl.disabled">De SEHL plugin is uitgeschakeld.</message>
 </locale>

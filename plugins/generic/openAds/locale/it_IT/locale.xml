@@ -31,6 +31,4 @@
 	<message key="plugins.generic.openads.orientation.left">Sinistra</message>
 	<message key="plugins.generic.openads.orientation.centre">Centro</message>
 	<message key="plugins.generic.openads.orientation.right">Destra</message>
-	<message key="plugins.generic.openads.enabled">Il plugin OpenAds è stato abilitato.</message>
-	<message key="plugins.generic.openads.disabled">Il plugin OpenAds è stato disabilitato.</message>
 </locale>

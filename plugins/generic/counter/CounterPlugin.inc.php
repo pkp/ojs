@@ -23,9 +23,8 @@ class CounterPlugin extends GenericPlugin {
 	 * 	the plugin will not be registered.
 	 */
 	function register($category, $path) {
-		$isEnabled = $this->getSetting(0, 'enabled');
 		$success = parent::register($category, $path);
-		if ($success && $isEnabled === true) {
+		if ($success && $this->getEnabled()) {
 
 			HookRegistry::register ('Templates::Admin::Index::AdminFunctions', array(&$this, 'displayMenuOption'));
 			HookRegistry::register ('Templates::Manager::Index::ManagementPages', array(&$this, 'displayMenuOption'));
@@ -40,22 +39,11 @@ class CounterPlugin extends GenericPlugin {
 		return $success;
 	}
 
-	/**
-	 * Get the name of this plugin. The name must be unique within
-	 * its category.
-	 * @return String name of plugin
-	 */
-	function getName() {
-		return 'CounterPlugin';
-	}
-
 	function getDisplayName() {
-		$this->addLocaleData();
 		return Locale::translate('plugins.generic.counter');
 	}
 
 	function getDescription() {
-		$this->addLocaleData();
 		return Locale::translate('plugins.generic.counter.description');
 	}
 
@@ -73,7 +61,6 @@ class CounterPlugin extends GenericPlugin {
 		$smarty =& $args[1];
 		$output =& $args[2];
 
-		$this->addLocaleData();
 		$output .= '<li>&#187; <a href="' . Request::url(null, 'counter') . '">' . Locale::translate('plugins.generic.counter') . '</a></li>';
 		return false;
 	}
@@ -84,7 +71,7 @@ class CounterPlugin extends GenericPlugin {
 	function logRequestInline($hookName, $args) {
 		$journal =& Request::getJournal();
 		if (!$journal || Request::getRequestedPage() != 'article' || Request::getRequestedOp() != 'view') return false;
-		
+
 		$counterReportDao =& DAORegistry::getDAO('CounterReportDAO');
 		$counterReportDao->incrementCount($journal->getJournalId(), (int) strftime('%Y'), (int) strftime('%m'), false, false);
 	}
@@ -147,7 +134,6 @@ class CounterPlugin extends GenericPlugin {
 
 		// If the request is for the log analyzer itself, handle it.
 		if ($page === 'counter') {
-			$this->addLocaleData();
 			$this->import('CounterHandler');
 			Registry::set('plugin', $this);
 			define('HANDLER_CLASS', 'CounterHandler');
@@ -162,35 +148,20 @@ class CounterPlugin extends GenericPlugin {
 	}
 
 	function getManagementVerbs() {
-		$this->addLocaleData();
-		$isEnabled = $this->getSetting(0, 'enabled');
-
 		$verbs = array();
 
-		// Non-site admin managers cannot manage Counter plugin.
-		if (!Validation::isSiteAdmin()) return $verbs;
+		if ($this->getEnabled()) {
+			$verbs[] = array('counter', Locale::translate('plugins.generic.counter'));
 
-		if ($isEnabled) {
-			$verbs[] = array(
-				'counter',
-				Locale::translate('plugins.generic.counter')
-			);
 			$this->import('CounterReportDAO');
 			$counterReportDao = new CounterReportDAO();
 			DAORegistry::registerDAO('CounterReportDAO', $counterReportDao);
 			$counterReportDao =& DAORegistry::getDAO('CounterReportDAO');
 			if (file_exists($counterReportDao->getOldLogFilename())) {
-				$verbs[] = array(
-					'migrate',
-					Locale::translate('plugins.generic.counter.migrate')
-				);
+				$verbs[] = array('migrate', Locale::translate('plugins.generic.counter.migrate'));
 			}
 		}
-		$verbs[] = array(
-			($isEnabled?'disable':'enable'),
-			Locale::translate($isEnabled?'manager.plugins.disable':'manager.plugins.enable')
-		);
-		return $verbs;
+		return parent::getManagementVerbs($verbs);
 	}
 
  	/*
@@ -201,29 +172,21 @@ class CounterPlugin extends GenericPlugin {
  	 * @return boolean
  	 */
 	function manage($verb, $args, &$message) {
-		// Non-site admin managers cannot manage Counter plugin.
-		if (!Validation::isSiteAdmin()) return false;
-
-		$isEnabled = $this->getSetting(0, 'enabled');
-		$this->addLocaleData();
+		if (!parent::manage($verb, $args, $message)) return false;
 		switch ($verb) {
 			case 'migrate':
 				$counterReportDao =& DAORegistry::getDAO('CounterReportDAO');
 				$counterReportDao->upgradeFromLogFile();
 				Request::redirect('index', 'counter');
-				break;
-			case 'enable':
-				$this->updateSetting(0, 'enabled', true);
-				$message = Locale::translate('plugins.generic.counter.enabled');
-				break;
-			case 'disable':
-				$this->updateSetting(0, 'enabled', false);
-				$message = Locale::translate('plugins.generic.counter.disabled');
-				break;
+				return false;
 			case 'counter':
-				if ($isEnabled) Request::redirect(null, 'counter');
+				Request::redirect(null, 'counter');
+				return false;
+			default:
+				// Unknown management verb
+				assert(false);
+				return false;
 		}
-		return false;
 	}
 }
 

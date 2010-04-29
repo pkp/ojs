@@ -18,7 +18,6 @@
 import('classes.plugins.GenericPlugin');
 
 class ThesisPlugin extends GenericPlugin {
-
 	/**
 	 * Called as a plugin is registered to the registry
 	 * @param $category String Name of category plugin was registered to
@@ -27,7 +26,6 @@ class ThesisPlugin extends GenericPlugin {
 	 */
 	function register($category, $path) {
 		$success = parent::register($category, $path);
-		$this->addLocaleData();
 		if ($success && $this->getEnabled()) {
 			$this->import('ThesisDAO');
 			$thesisDao = new ThesisDAO();
@@ -46,16 +44,6 @@ class ThesisPlugin extends GenericPlugin {
 			HookRegistry::register('Templates::Search::SearchResults::PreResults', array($this, 'displaySearchLink'));
 		}
 		return $success;
-	}
-
-	/**
-	 * Get the name of this plugin. The name must be unique within
-	 * its category, and should be suitable for part of a filename
-	 * (ie short, no spaces, and no dependencies on cases being unique).
-	 * @return String name of plugin
-	 */
-	function getName() {
-		return 'ThesisPlugin';
 	}
 
 	function getDisplayName() {
@@ -133,34 +121,10 @@ class ThesisPlugin extends GenericPlugin {
 	function getManagementVerbs() {
 		$verbs = array();
 		if ($this->getEnabled()) {
-			$verbs[] = array(
-				'disable',
-				Locale::translate('manager.plugins.disable')
-			);
-			$verbs[] = array(
-				'theses',
-				Locale::translate('plugins.generic.thesis.manager.theses')
-			);
-			$verbs[] = array(
-				'settings',
-				Locale::translate('plugins.generic.thesis.manager.settings')
-			);
-		} else {
-			$verbs[] = array(
-				'enable',
-				Locale::translate('manager.plugins.enable')
-			);
+			$verbs[] = array('theses', Locale::translate('plugins.generic.thesis.manager.theses'));
+			$verbs[] = array('settings', Locale::translate('plugins.generic.thesis.manager.settings'));
 		}
-		return $verbs;
-	}
-
-	/**
-	 * Determine whether or not this plugin is enabled.
-	 */
-	function getEnabled() {
-		$journal =& Request::getJournal();
-		if (!$journal) return false;
-		return $this->getSetting($journal->getId(), 'enabled');
+		return parent::getManagementVerbs($verbs);
 	}
 
 	function setupPublicHandler($hookName, $params) {
@@ -202,18 +166,6 @@ class ThesisPlugin extends GenericPlugin {
 		return false;
 	}
 
-	/**
-	 * Set the enabled/disabled state of this plugin
-	 */
-	function setEnabled($enabled) {
-		$journal =& Request::getJournal();
-		if ($journal) {
-			$this->updateSetting($journal->getId(), 'enabled', $enabled ? true : false);
-			return true;
-		}
-		return false;
-	}
-
  	/*
  	 * Execute a management verb on this plugin
  	 * @param $verb string
@@ -222,186 +174,158 @@ class ThesisPlugin extends GenericPlugin {
  	 * @return boolean
  	 */
 	function manage($verb, $args, &$message) {
+		if (!parent::manage($verb, $args, $message)) return false;
+
 		Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON,  LOCALE_COMPONENT_PKP_MANAGER, LOCALE_COMPONENT_PKP_USER));
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 		$journal =& Request::getJournal();
-		$returner = true;
 
 		switch ($verb) {
-			case 'enable':
-				$this->setEnabled(true);
-				$message = Locale::translate('plugins.generic.thesis.enabled');
-				$returner = false;
-				break;
-			case 'disable':
-				$this->setEnabled(false);
-				$message = Locale::translate('plugins.generic.thesis.disabled');
-				$returner = false;
-				break;
 			case 'settings':
-				if ($this->getEnabled()) {
-					$this->import('ThesisSettingsForm');
-					$form = new ThesisSettingsForm($this, $journal->getId());
-					if (Request::getUserVar('save')) {
-						$form->readInputData();
-						if ($form->validate()) {
-							$form->execute();
-							Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'theses'));
-						} else {
-							$this->setBreadCrumbs(true);
-							$form->display();
-						}
+				$this->import('ThesisSettingsForm');
+				$form = new ThesisSettingsForm($this, $journal->getId());
+				if (Request::getUserVar('save')) {
+					$form->readInputData();
+					if ($form->validate()) {
+						$form->execute();
+						Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'theses'));
+						return false;
 					} else {
 						$this->setBreadCrumbs(true);
-						$form->initData();
 						$form->display();
 					}
 				} else {
-					Request::redirect(null, 'manager');
+					$this->setBreadCrumbs(true);
+					$form->initData();
+					$form->display();
 				}
-				break;
+				return true;
 			case 'delete':
-				if ($this->getEnabled()) {
-					if (!empty($args)) {
-						$thesisId = (int) $args[0];	
-						$thesisDao =& DAORegistry::getDAO('ThesisDAO');
-
-						// Ensure thesis is for this journal
-						if ($thesisDao->getThesisJournalId($thesisId) == $journal->getId()) {
-							$thesisDao->deleteThesisById($thesisId);
-						}
-					}
-					Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'theses'));
-				} else {
-					Request::redirect(null, 'manager');
-				}
-				break;
-			case 'create':
-			case 'edit':
-				if ($this->getEnabled()) {
-					$thesisId = !isset($args) || empty($args) ? null : (int) $args[0];
+				if (!empty($args)) {
+					$thesisId = (int) $args[0];
 					$thesisDao =& DAORegistry::getDAO('ThesisDAO');
 
-					// Ensure thesis is valid and for this journal
-					if (($thesisId != null && $thesisDao->getThesisJournalId($thesisId) == $journal->getId()) || ($thesisId == null)) {
-						$this->import('ThesisForm');
+					// Ensure thesis is for this journal
+					if ($thesisDao->getThesisJournalId($thesisId) == $journal->getId()) {
+						$thesisDao->deleteThesisById($thesisId);
+					}
+				}
+				Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'theses'));
+				return true;
+			case 'create':
+			case 'edit':
+				$thesisId = !isset($args) || empty($args) ? null : (int) $args[0];
+				$thesisDao =& DAORegistry::getDAO('ThesisDAO');
 
+				// Ensure thesis is valid and for this journal
+				if (($thesisId != null && $thesisDao->getThesisJournalId($thesisId) == $journal->getId()) || ($thesisId == null)) {
+					$this->import('ThesisForm');
+
+					if ($thesisId == null) {
+						$templateMgr->assign('thesisTitle', 'plugins.generic.thesis.manager.createTitle');
+					} else {
+						$templateMgr->assign('thesisTitle', 'plugins.generic.thesis.manager.editTitle');
+					}
+
+					$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+					$journalSettings =& $journalSettingsDao->getJournalSettings($journal->getId());
+
+					$thesisForm = new ThesisForm($thesisId);
+					$thesisForm->initData();
+					$this->setBreadCrumbs(true);
+					$templateMgr->assign('journalSettings', $journalSettings);
+					$thesisForm->display();
+				} else {
+					Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'theses'));
+				}
+				return true;
+			case 'update':
+				$this->import('ThesisForm');
+				$thesisId = Request::getUserVar('thesisId') == null ? null : (int) Request::getUserVar('thesisId');
+				$thesisDao =& DAORegistry::getDAO('ThesisDAO');
+
+				if (($thesisId != null && $thesisDao->getThesisJournalId($thesisId) == $journal->getId()) || $thesisId == null) {
+
+					$thesisForm = new ThesisForm($thesisId);
+					$thesisForm->readInputData();
+
+					if ($thesisForm->validate()) {
+						$thesisForm->execute();
+
+						if (Request::getUserVar('createAnother')) {
+							Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'create'));
+						} else {
+							Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'theses'));
+						}
+					} else {
 						if ($thesisId == null) {
 							$templateMgr->assign('thesisTitle', 'plugins.generic.thesis.manager.createTitle');
 						} else {
-							$templateMgr->assign('thesisTitle', 'plugins.generic.thesis.manager.editTitle');	
+							$templateMgr->assign('thesisTitle', 'plugins.generic.thesis.manager.editTitle');
 						}
 
 						$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 						$journalSettings =& $journalSettingsDao->getJournalSettings($journal->getId());
 
-						$thesisForm = new ThesisForm($thesisId);
-						$thesisForm->initData();
 						$this->setBreadCrumbs(true);
 						$templateMgr->assign('journalSettings', $journalSettings);
 						$thesisForm->display();
-					} else {
-						Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'theses'));
 					}
 				} else {
-					Request::redirect(null, 'manager');
+					Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'theses'));
 				}
-				break;
-			case 'update':
-				if ($this->getEnabled()) {
-					$this->import('ThesisForm');
-					$thesisId = Request::getUserVar('thesisId') == null ? null : (int) Request::getUserVar('thesisId');
-					$thesisDao =& DAORegistry::getDAO('ThesisDAO');
-
-					if (($thesisId != null && $thesisDao->getThesisJournalId($thesisId) == $journal->getId()) || $thesisId == null) {
-
-						$thesisForm = new ThesisForm($thesisId);
-						$thesisForm->readInputData();
-
-						if ($thesisForm->validate()) {
-							$thesisForm->execute();
-
-							if (Request::getUserVar('createAnother')) {
-								Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'create'));
-							} else {
-								Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'theses'));
-							}				
-						} else {
-							if ($thesisId == null) {
-								$templateMgr->assign('thesisTitle', 'plugins.generic.thesis.manager.createTitle');
-							} else {
-								$templateMgr->assign('thesisTitle', 'plugins.generic.thesis.manager.editTitle');	
-							}
-
-							$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-							$journalSettings =& $journalSettingsDao->getJournalSettings($journal->getId());
-
-							$this->setBreadCrumbs(true);
-							$templateMgr->assign('journalSettings', $journalSettings);
-							$thesisForm->display();
-						}		
-					} else {
-						Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'theses'));
-					}
-				} else {
-					Request::redirect(null, 'manager');
-				}	
-				break;
+				return true;
 			default:
-				if ($this->getEnabled()) {
-					$this->import('Thesis');
-					$searchField = null;
-					$searchMatch = null;
-					$search = Request::getUserVar('search');
-					$dateFrom = Request::getUserDateVar('dateFrom', 1, 1);
-					if ($dateFrom !== null) $dateFrom = date('Y-m-d H:i:s', $dateFrom);
-					$dateTo = Request::getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
-					if ($dateTo !== null) $dateTo = date('Y-m-d H:i:s', $dateTo);
+				$this->import('Thesis');
+				$searchField = null;
+				$searchMatch = null;
+				$search = Request::getUserVar('search');
+				$dateFrom = Request::getUserDateVar('dateFrom', 1, 1);
+				if ($dateFrom !== null) $dateFrom = date('Y-m-d H:i:s', $dateFrom);
+				$dateTo = Request::getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
+				if ($dateTo !== null) $dateTo = date('Y-m-d H:i:s', $dateTo);
 
-					if (!empty($search)) {
-						$searchField = Request::getUserVar('searchField');
-						$searchMatch = Request::getUserVar('searchMatch');
-					}			
-
-					$rangeInfo =& Handler::getRangeInfo('theses');
-					$thesisDao =& DAORegistry::getDAO('ThesisDAO');
-					$theses =& $thesisDao->getThesesByJournalId($journal->getId(), $searchField, $search, $searchMatch, $dateFrom, $dateTo, null, $rangeInfo);
-
-					$templateMgr->assign('theses', $theses);
-					$this->setBreadCrumbs();
-
-					// Set search parameters
-					$duplicateParameters = array(
-						'searchField', 'searchMatch', 'search',
-						'dateFromMonth', 'dateFromDay', 'dateFromYear',
-						'dateToMonth', 'dateToDay', 'dateToYear'
-					);
-					foreach ($duplicateParameters as $param)
-						$templateMgr->assign($param, Request::getUserVar($param));
-
-					$templateMgr->assign('dateFrom', $dateFrom);
-					$templateMgr->assign('dateTo', $dateTo);
-					$templateMgr->assign('yearOffsetPast', THESIS_APPROVED_YEAR_OFFSET_PAST);
-
-					$fieldOptions = Array(
-						THESIS_FIELD_FIRSTNAME => 'plugins.generic.thesis.manager.studentFirstName',
-						THESIS_FIELD_LASTNAME => 'plugins.generic.thesis.manager.studentLastName',
-						THESIS_FIELD_EMAIL => 'plugins.generic.thesis.manager.studentEmail',
-						THESIS_FIELD_DEPARTMENT => 'plugins.generic.thesis.manager.department',
-						THESIS_FIELD_UNIVERSITY => 'plugins.generic.thesis.manager.university',
-						THESIS_FIELD_TITLE => 'plugins.generic.thesis.manager.title',
-						THESIS_FIELD_ABSTRACT => 'plugins.generic.thesis.manager.abstract',
-						THESIS_FIELD_SUBJECT => 'plugins.generic.thesis.manager.keyword'
-					);
-					$templateMgr->assign('fieldOptions', $fieldOptions);
-
-					$templateMgr->display($this->getTemplatePath() . 'theses.tpl');
-				} else {
-					Request::redirect(null, 'manager');
+				if (!empty($search)) {
+					$searchField = Request::getUserVar('searchField');
+					$searchMatch = Request::getUserVar('searchMatch');
 				}
+
+				$rangeInfo =& Handler::getRangeInfo('theses');
+				$thesisDao =& DAORegistry::getDAO('ThesisDAO');
+				$theses =& $thesisDao->getThesesByJournalId($journal->getId(), $searchField, $search, $searchMatch, $dateFrom, $dateTo, null, $rangeInfo);
+
+				$templateMgr->assign('theses', $theses);
+				$this->setBreadCrumbs();
+
+				// Set search parameters
+				$duplicateParameters = array(
+					'searchField', 'searchMatch', 'search',
+					'dateFromMonth', 'dateFromDay', 'dateFromYear',
+					'dateToMonth', 'dateToDay', 'dateToYear'
+				);
+				foreach ($duplicateParameters as $param)
+					$templateMgr->assign($param, Request::getUserVar($param));
+
+				$templateMgr->assign('dateFrom', $dateFrom);
+				$templateMgr->assign('dateTo', $dateTo);
+				$templateMgr->assign('yearOffsetPast', THESIS_APPROVED_YEAR_OFFSET_PAST);
+
+				$fieldOptions = Array(
+					THESIS_FIELD_FIRSTNAME => 'plugins.generic.thesis.manager.studentFirstName',
+					THESIS_FIELD_LASTNAME => 'plugins.generic.thesis.manager.studentLastName',
+					THESIS_FIELD_EMAIL => 'plugins.generic.thesis.manager.studentEmail',
+					THESIS_FIELD_DEPARTMENT => 'plugins.generic.thesis.manager.department',
+					THESIS_FIELD_UNIVERSITY => 'plugins.generic.thesis.manager.university',
+					THESIS_FIELD_TITLE => 'plugins.generic.thesis.manager.title',
+					THESIS_FIELD_ABSTRACT => 'plugins.generic.thesis.manager.abstract',
+					THESIS_FIELD_SUBJECT => 'plugins.generic.thesis.manager.keyword'
+				);
+				$templateMgr->assign('fieldOptions', $fieldOptions);
+
+				$templateMgr->display($this->getTemplatePath() . 'theses.tpl');
+				return true;
 		}
-		return $returner;
 	}
 
 }

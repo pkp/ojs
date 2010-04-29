@@ -26,7 +26,5 @@
 	<message key="plugins.generic.thesisfeed.atom.altText">Atom logoa</message>
 	<message key="plugins.generic.thesisfeed.rss1.altText">RSS1 logoa</message>
 	<message key="plugins.generic.thesisfeed.rss2.altText">RSS2 logoa</message>
-	<message key="plugins.generic.thesisfeed.enabled">Tesi-laburpenak elikatzeko iturriaren plugina gaitu da.</message>
-	<message key="plugins.generic.thesisfeed.disabled">Tesi-laburpenak elikatzeko iturriaren plugina desgaitu da.</message>
 </locale>
 

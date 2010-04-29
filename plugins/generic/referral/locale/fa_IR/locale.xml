@@ -15,8 +15,6 @@
 <locale name="fa_IR" full_name="Persian">
 	<message key="plugins.generic.referral.name">پلاگین ارجاع</message>
 	<message key="plugins.generic.referral.description">پلاگین ارجاع برای ردگیری ارجاعات به مقالات میباشد. وقتی که یک خواننده از طریق لینکی از خارج به یک مقاله میرسند، این پلاگین نویسنده را قادر میسازد تا لیستی قابل انتشاری از این ارجاعات را داشته باشد و مرتبا آنها را بروز رسانی کند.</message>
-	<message key="plugins.generic.referral.enabled">پلاگین ارجاع فعال شده است.</message>
-	<message key="plugins.generic.referral.disabled">پلاگین ارجاع غیر فعال است.</message>
 	
 	<message key="plugins.generic.referral.editReferral">ویرایش ارجاع</message>
 	<message key="plugins.generic.referral.createReferral">ایجاد ارجاع</message>

@@ -26,14 +26,6 @@ class OpenAdsBlockPlugin extends BlockPlugin {
 	}
 
 	/**
-	 * Get the symbolic name of this plugin
-	 * @return string
-	 */
-	function getName() {
-		return 'OpenAdsBlockPlugin';
-	}
-
-	/**
 	 * Get the display name of this plugin
 	 * @return string
 	 */
@@ -65,14 +57,6 @@ class OpenAdsBlockPlugin extends BlockPlugin {
 	function getTemplatePath() {
 		$plugin =& $this->getOpenAdsPlugin();
 		return $plugin->getTemplatePath();
-	}
-
-	/**
-	 * Get the supported contexts (e.g. BLOCK_CONTEXT_...) for this block.
-	 * @return array
-	 */
-	function getSupportedContexts() {
-		return array(BLOCK_CONTEXT_LEFT_SIDEBAR, BLOCK_CONTEXT_RIGHT_SIDEBAR);
 	}
 
 	/**

@@ -15,6 +15,4 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.sehl.name">Модуль SEHL</message>
 	<message key="plugins.generic.sehl.description">Этот модуль реализует подстветку ключевых слов, использованных при поиске страницы. При его использовании и нахождении статьи в журнале через поисковик, использованные ключевые слова будут подсвечены.</message>
-	<message key="plugins.generic.sehl.enabled">Модуль подсветки искомых слов включен.</message>
-	<message key="plugins.generic.sehl.disabled">Модуль подсветки искомых слов выключен.</message>
 </locale>

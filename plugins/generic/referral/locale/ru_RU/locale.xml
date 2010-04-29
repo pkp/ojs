@@ -15,8 +15,6 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.referral.name">Модуль обратных ссылок</message>
 	<message key="plugins.generic.referral.description">Модуль обратных ссылок отслеживает ссылки, приведшие на статьи в журнале (например, когда читатель приходит на статью с другого сайта), позволяя авторам смотреть и, по желанию, публиковать автоматический список тех, кто сослался на статью.</message>
-	<message key="plugins.generic.referral.enabled">Модуль обратных ссылок включен.</message>
-	<message key="plugins.generic.referral.disabled">Модуль обратных ссылок выключен.</message>
 	
 	<message key="plugins.generic.referral.editReferral">Редактировать ссылку</message>
 	<message key="plugins.generic.referral.createReferral">Создать ссылку</message>

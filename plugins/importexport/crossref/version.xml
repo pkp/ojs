@@ -13,7 +13,7 @@
   -->
 <version>
 	<application>crossref</application>
-	<type>plugins.generic</type>
+	<type>plugins.importexport</type>
 	<release>1.1.0.0</release>
 	<date>2009-10-27</date>
 </version>

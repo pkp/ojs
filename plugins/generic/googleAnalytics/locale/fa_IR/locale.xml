@@ -23,6 +23,4 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">لطفا یک کد پیگیری انتخاب کنید</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">کد پیگیری سنتی (urchin.js)</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.ga">کد پیگیری جدید  (ga.js)</message>
-	<message key="plugins.generic.googleAnalytics.enabled">پلاگین آنالیتیک گوگل فعال شده است</message>
-	<message key="plugins.generic.googleAnalytics.disabled">پلاگین آنالیتیک گوگل غیر فعال شده است</message>
 </locale>

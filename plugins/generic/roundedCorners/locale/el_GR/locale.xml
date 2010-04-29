@@ -22,6 +22,4 @@
 <locale name="el_GR" full_name="Greek">	
 	<message key="plugins.generic.roundedcorners.displayName">Rounded Corners</message>
 	<message key="plugins.generic.roundedcorners.description">Αυτό το Plugin βάζει ένα φόντο σε κάθε block της πλαϊνής μπάρας και στρογγυλεύει τις γωνίες του.  Αλλαγές στα χρώματα μπορούν να γίνουν διαμορφώνοντας κατάλληλα το CSS stylesheet που βρίσκετε στο plugin.</message>
-	<message key="plugins.generic.roundedcorners.enabled">Το Rounded Corners Plugin έχει ενεργοποιηθεί.</message>
-	<message key="plugins.generic.roundedcorners.disabled">Το Rounded Corners Plugin έχει απενεργοποιηθεί.</message>
 </locale>

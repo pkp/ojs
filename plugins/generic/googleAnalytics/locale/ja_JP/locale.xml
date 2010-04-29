@@ -30,6 +30,4 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCode">トラッキングコード</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">使用するトラッキングコードを選択してください。</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">以前のトラッキングコード (urchin.js)</message>
-	<message key="plugins.generic.googleAnalytics.enabled">Google Analytics プラグインは有効です。</message>
-	<message key="plugins.generic.googleAnalytics.disabled">Google Analytics プラグインは無効です。</message>
 </locale>

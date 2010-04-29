@@ -26,6 +26,4 @@
 	<message key="plugins.generic.announcementfeed.atom.altText">Atomロゴ</message>
 	<message key="plugins.generic.announcementfeed.rss1.altText">RSS1ロゴ</message>
 	<message key="plugins.generic.announcementfeed.rss2.altText">RSS2ロゴ</message>
-	<message key="plugins.generic.announcementfeed.enabled">雑誌のお知らせフィードプラグインは有効です。</message>
-	<message key="plugins.generic.announcementfeed.disabled">雑誌のお知らせフィードプラグインは無効です。</message>
 </locale>

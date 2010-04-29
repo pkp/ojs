@@ -15,6 +15,4 @@
 <locale name="ja_JP" full_name="日本語">
 	<message key="plugins.generic.roundedcorners.displayName">角丸プラグイン</message>
 	<message key="plugins.generic.roundedcorners.description">サイドバーブロックを角の丸い四角で囲みます。背景色は、プラグインフォルダにあるCSSスタイルシートを編集して変更できます。</message>
-	<message key="plugins.generic.roundedcorners.enabled">角丸プラグインは有効です。</message>
-	<message key="plugins.generic.roundedcorners.disabled">角丸プラグインは無効です。</message>
 </locale>

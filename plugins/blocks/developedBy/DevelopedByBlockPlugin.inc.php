@@ -18,14 +18,6 @@
 import('plugins.BlockPlugin');
 
 class DevelopedByBlockPlugin extends BlockPlugin {
-	function register($category, $path) {
-		$success = parent::register($category, $path);
-		if ($success) {
-			$this->addLocaleData();
-		}
-		return $success;
-	}
-
 	/**
 	 * Determine whether the plugin is enabled. Overrides parent so that
 	 * the plugin will be displayed during install.
@@ -47,7 +39,7 @@ class DevelopedByBlockPlugin extends BlockPlugin {
 	 * Install default settings on journal creation.
 	 * @return string
 	 */
-	function getNewJournalPluginSettingsFile() {
+	function getContextSpecificPluginSettingsFile() {
 		return $this->getPluginPath() . '/settings.xml';
 	}
 
@@ -62,29 +54,12 @@ class DevelopedByBlockPlugin extends BlockPlugin {
 	}
 
 	/**
-	 * Get the supported contexts (e.g. BLOCK_CONTEXT_...) for this block.
-	 * @return array
-	 */
-	function getSupportedContexts() {
-		return array(BLOCK_CONTEXT_LEFT_SIDEBAR, BLOCK_CONTEXT_RIGHT_SIDEBAR);
-	}
-
-	/**
 	 * Determine the plugin sequence. Overrides parent so that
 	 * the plugin will be displayed during install.
 	 */
 	function getSeq() {
 		if (!Config::getVar('general', 'installed')) return 1;
 		return parent::getSeq();
-	}
-
-	/**
-	 * Get the name of this plugin. The name must be unique within
-	 * its category.
-	 * @return String name of plugin
-	 */
-	function getName() {
-		return 'DevelopedByBlockPlugin';
 	}
 
 	/**

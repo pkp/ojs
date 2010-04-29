@@ -26,15 +26,6 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 	}
 
 	/**
-	 * Get the name of this plugin. The name must be unique within
-	 * its category.
-	 * @return String name of plugin
-	 */
-	function getName() {
-		return 'ExternalFeedBlockPlugin';
-	}
-
-	/**
 	 * Get the display name of this plugin.
 	 * @return String
 	 */
@@ -47,14 +38,6 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 	 */
 	function getDescription() {
 		return Locale::translate('plugins.generic.externalFeed.description');
-	}
-
-	/**
-	 * Get the supported contexts (e.g. BLOCK_CONTEXT_...) for this block.
-	 * @return array
-	 */
-	function getSupportedContexts() {
-		return array(BLOCK_CONTEXT_LEFT_SIDEBAR, BLOCK_CONTEXT_RIGHT_SIDEBAR);
 	}
 
 	/**
@@ -94,9 +77,9 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 
 		$feeds =& $externalFeedDao->getExternalFeedsByJournalId($journal->getId());
 
-		while ($currentFeed =& $feeds->next()) {		
+		while ($currentFeed =& $feeds->next()) {
 			$displayBlock = $currentFeed->getDisplayBlock();
-			if (($displayBlock == EXTERNAL_FEED_DISPLAY_BLOCK_NONE) || 
+			if (($displayBlock == EXTERNAL_FEED_DISPLAY_BLOCK_NONE) ||
 				(($displayBlock == EXTERNAL_FEED_DISPLAY_BLOCK_HOMEPAGE &&
 				(!empty($requestedPage)) && $requestedPage != 'index'))
 			) continue;

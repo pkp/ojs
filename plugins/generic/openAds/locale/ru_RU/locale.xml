@@ -18,8 +18,6 @@
 	<message key="plugins.generic.openads">Модуль OpenAds</message>
 	<message key="plugins.generic.openads.settings.description">Используйте эту форму для выбора зон OpenAds, которые будут показаны OJS.</message>
 	<message key="plugins.generic.openads.manager.settings">Настройки</message>
-	<message key="plugins.generic.openads.enabled">Модуль OpenAds включен.</message>
-	<message key="plugins.generic.openads.disabled">Модуль OpenAds выключен.</message>
 
 	<message key="plugins.generic.openads.error.configFileNotFound">Невозможно прочитать конфигурационный файл {$filename}.</message>
 	<message key="plugins.generic.openads.error.missingParameter">По крайней мере один из необходимых параметров настройки OpenAds не найдет в конфигурационном файле. Требуются параметры dbhost, dbuser, dbpassword, dbname, url_prefix, и table_prefix.</message>

@@ -50,7 +50,5 @@
 	<message key="plugins.generic.counter.1a.onlineIssn">آی اس اس ان آنلاین</message>
 	<message key="plugins.generic.counter.1a.ytdTotal">YTD کل</message>
 	<message key="plugins.generic.counter.1a.ytdHtml">YTD HTML</message>
-	<message key="plugins.generic.counter.enabled">پلاگین COUNTER فعال شده است</message>
-	<message key="plugins.generic.counter.disabled">پلاگین COUNTER غیر فعال شده است</message>
 	<message key="plugins.generic.counter.migrate">مهاجرت فایل لاگ</message>
 </locale>

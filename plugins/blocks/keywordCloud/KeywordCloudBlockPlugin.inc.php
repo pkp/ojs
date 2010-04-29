@@ -21,23 +21,6 @@ define('KEYWORD_BLOCK_MAX_ITEMS', 20);
 define('KEYWORD_BLOCK_CACHE_DAYS', 2);
 
 class KeywordCloudBlockPlugin extends BlockPlugin {
-	function register($category, $path) {
-		$success = parent::register($category, $path);
-		if ($success) {
-			$this->addLocaleData();
-		}
-		return $success;
-	}
-
-	/**
-	 * Get the name of this plugin. The name must be unique within
-	 * its category.
-	 * @return String name of plugin
-	 */
-	function getName() {
-		return 'KeywordCloudBlockPlugin';
-	}
-
 	/**
 	 * Get the display name of this plugin.
 	 * @return String
@@ -51,14 +34,6 @@ class KeywordCloudBlockPlugin extends BlockPlugin {
 	 */
 	function getDescription() {
 		return Locale::translate('plugins.block.keywordCloud.description');
-	}
-
-	/**
-	 * Get the supported contexts (e.g. BLOCK_CONTEXT_...) for this block.
-	 * @return array
-	 */
-	function getSupportedContexts() {
-		return array(BLOCK_CONTEXT_LEFT_SIDEBAR, BLOCK_CONTEXT_RIGHT_SIDEBAR);
 	}
 
 	function _cacheMiss(&$cache, $id) {

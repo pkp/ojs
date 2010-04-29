@@ -24,6 +24,4 @@
 	<message key="plugins.generic.announcementfeed.atom.altText">لوگوی اتم</message>
 	<message key="plugins.generic.announcementfeed.rss1.altText">لوگوی آر اس اس ۱</message>
 	<message key="plugins.generic.announcementfeed.rss2.altText">لوگوی آر اس اس ۲</message>
-	<message key="plugins.generic.announcementfeed.enabled">پلاگین فید اطلاع رسانی فعال شده است</message>
-	<message key="plugins.generic.announcementfeed.disabled">پلاگین فید اطلاع رسانی غیر فعال شده است</message>
 </locale>

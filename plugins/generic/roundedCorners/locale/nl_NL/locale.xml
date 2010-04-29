@@ -17,6 +17,4 @@
 <locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.generic.roundedcorners.displayName">Afgeronde hoeken</message>
 	<message key="plugins.generic.roundedcorners.description">Deze Plugin zet een achtergrond met afgeronde hoeken achter ieder blok van de sidebar. De kleuren kunnen veranderd worden door de CSS stylesheet in de plugin aan te passen.</message>
-	<message key="plugins.generic.roundedcorners.enabled">De Rounded Corners plugin is ingeschakeld.</message>
-	<message key="plugins.generic.roundedcorners.disabled">De Rounded Corners plugin is uitgeschakeld.</message>
 </locale>

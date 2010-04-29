@@ -20,8 +20,6 @@
 	<message key="plugins.generic.externalFeed.description">Publish content from external Atom/RSS web syndication feeds. For example, from an external WordPress, Drupal, or OCS install.</message>
 	<message key="plugins.generic.externalFeed.noneExist">No External Feeds</message>
 	<message key="plugins.generic.externalFeed.title">Title</message>
-	<message key="plugins.generic.externalFeed.enabled">The External Feed Plugin has been enabled.</message>
-	<message key="plugins.generic.externalFeed.disabled">The External Feed Plugin has been disabled.</message>
 	<message key="plugins.generic.externalFeed.posted">Posted</message>
 	<message key="plugins.generic.externalFeed.more">More...</message>
 

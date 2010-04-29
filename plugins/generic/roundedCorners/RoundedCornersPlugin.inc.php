@@ -16,26 +16,20 @@
 import('classes.plugins.GenericPlugin');
 
 class RoundedCornersPlugin extends GenericPlugin {
-
-	function getName() {
-		return 'RoundedCornersPlugin';
-	}
-
 	function getDisplayName() {
 		return Locale::translate('plugins.generic.roundedcorners.displayName');
 	}
 
 	function getDescription() {
 		return Locale::translate('plugins.generic.roundedcorners.description');
-	}   
+	}
 
 	function register($category, $path) {
 		if (!Config::getVar('general', 'installed')) return false;
-		if (parent::register($category, $path)) {	
+		if (parent::register($category, $path)) {
 			if ( $this->getEnabled() ) {
 				HookRegistry::register('TemplateManager::display', array(&$this, 'templateManagerCallback'));
 			}
-			$this->addLocaleData();
 			return true;
 		}
 		return false;
@@ -50,70 +44,8 @@ class RoundedCornersPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Determine whether or not this plugin is enabled.
-	 */
-	function getEnabled() {
-		$journal =& Request::getJournal();
-		if (!$journal) return false;
-		return $this->getSetting($journal->getId(), 'enabled');
-	}
-
-	/**
-	 * Set the enabled/disabled state of this plugin
-	 */
-	function setEnabled($enabled) {
-		$journal =& Request::getJournal();
-		if ($journal) {
-			$this->updateSetting($journal->getId(), 'enabled', $enabled ? true : false);
-			return true;
-		}
-		return false;
-	}
-
-	/**
-	 * Display verbs for the management interface.
-	 */
-	function getManagementVerbs() {
-		$verbs = array();
-		if ($this->getEnabled()) {
-			$verbs[] = array(
-				'disable',
-				Locale::translate('manager.plugins.disable')
-			);
-		} else {
-			$verbs[] = array(
-				'enable',
-				Locale::translate('manager.plugins.enable')
-			);
-		}
-		return $verbs;
-	}
-
-	/**
-	 * Perform management functions
- 	 * @param $verb string
- 	 * @param $args array
-	 * @param $message string Location for the plugin to put a result msg
-	 */
-	function manage($verb, $args, &$message) {
-		$returner = false;
-
-		switch ($verb) {
-			case 'enable':
-				$this->setEnabled(true);
-				$message = Locale::translate('plugins.generic.roundedcorners.enabled');
-				break;
-			case 'disable':
-				$this->setEnabled(false);
-				$message = Locale::translate('plugins.generic.roundedcorners.disabled');
-				break;
-		}
-		return $returner;		
-	}
-
-	/** 
 	 * Do the work of adding in the <span> blocks
-	 */	
+	 */
 	function roundOutputFilter($output, &$smarty) {
 		$top = '<span class="rtop"><span class="r1"></span><span class="r2"></span><span class="r3"></span><span class="r4"></span></span><div class="roundedCorner">';
 		$bottom = '</div><span class="rbottom"><span class="r4"></span><span class="r3"></span><span class="r2"></span><span class="r1"></span></span>';
@@ -121,7 +53,7 @@ class RoundedCornersPlugin extends GenericPlugin {
 
 		$matches = RoundedCornersPlugin::_getDivs($newOutput, 'block');
 		if (count($matches) > 0) {
-			foreach ($matches as $match) {	
+			foreach ($matches as $match) {
 				if (preg_match('/<div[^>]+class\=\"block\"[^>]*>(\s*)(<\/div>[^<]*)$/', $match) > 0 ) continue;
 
 				$newBlock = preg_replace('/(<div[^>]+class\=\"block)(\"[^>]*>)/is', "\\1 alreadyRounded\\2$top", $match, PREG_OFFSET_CAPTURE);
@@ -135,7 +67,7 @@ class RoundedCornersPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * look for the opening and closing divs with a particular $class in the $subject 
+	 * look for the opening and closing divs with a particular $class in the $subject
 	 * Have to count opening and closing divs since regexes are not so good matching opening and closing tags
 	 */
 	function _getDivs($subject, $class) {

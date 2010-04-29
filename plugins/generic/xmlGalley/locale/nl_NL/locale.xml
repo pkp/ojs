@@ -45,7 +45,5 @@
 	<message key="plugins.generic.xmlGalley.settings.customXSLRequired">Er moet een eigen XSL stylesheetbestand gespecificeerd worden.</message>
 	<message key="plugins.generic.xmlGalley.settings.customXSLInvalid">Het opgegeven XSL bestand is niet correct. Controleer het bestand en probeer het opnieuw.</message>
 
-	<message key="plugins.generic.xmlGalley.enabled">De XML-proeven plugin is ingeschakeld</message>
-	<message key="plugins.generic.xmlGalley.disabled">De XML-proeven plugin is uitgeschakeld</message>
 </locale>
 

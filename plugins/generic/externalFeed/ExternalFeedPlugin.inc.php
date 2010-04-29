@@ -18,7 +18,6 @@
 import('classes.plugins.GenericPlugin');
 
 class ExternalFeedPlugin extends GenericPlugin {
-
 	/**
 	 * Called as a plugin is registered to the registry
 	 * @param $category String Name of category plugin was registered to
@@ -27,7 +26,6 @@ class ExternalFeedPlugin extends GenericPlugin {
 	 */
 	function register($category, $path) {
 		$success = parent::register($category, $path);
-		$this->addLocaleData();
 
 		if ($success && $this->getEnabled()) {
 			$this->import('ExternalFeedDAO');
@@ -48,16 +46,6 @@ class ExternalFeedPlugin extends GenericPlugin {
 			HookRegistry::register('Templates::Manager::Index::ManagementPages', array($this, 'displayManagerLink'));
 		}
 		return $success;
-	}
-
-	/**
-	 * Get the name of this plugin. The name must be unique within
-	 * its category, and should be suitable for part of a filename
-	 * (ie short, no spaces, and no dependencies on cases being unique).
-	 * @return String name of plugin
-	 */
-	function getName() {
-		return 'ExternalFeedPlugin';
 	}
 
 	function getDisplayName() {
@@ -171,34 +159,10 @@ class ExternalFeedPlugin extends GenericPlugin {
 	function getManagementVerbs() {
 		$verbs = array();
 		if ($this->getEnabled()) {
-			$verbs[] = array(
-				'disable',
-				Locale::translate('manager.plugins.disable')
-			);
-			$verbs[] = array(
-				'feeds',
-				Locale::translate('plugins.generic.externalFeed.manager.feeds')
-			);
-			$verbs[] = array(
-				'settings',
-				Locale::translate('plugins.generic.externalFeed.manager.settings')
-			);
-		} else {
-			$verbs[] = array(
-				'enable',
-				Locale::translate('manager.plugins.enable')
-			);
+			$verbs[] = array('feeds', Locale::translate('plugins.generic.externalFeed.manager.feeds'));
+			$verbs[] = array('settings', Locale::translate('plugins.generic.externalFeed.manager.settings'));
 		}
-		return $verbs;
-	}
-
-	/**
-	 * Determine whether or not this plugin is enabled.
-	 */
-	function getEnabled() {
-		$journal =& Request::getJournal();
-		if (!$journal) return false;
-		return $this->getSetting($journal->getId(), 'enabled');
+		return parent::getManagementVerbs($verbs);
 	}
 
 	/**
@@ -220,7 +184,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 				$feeds =& $externalFeedDao->getExternalFeedsByJournalId($journal->getId());
 				$output = '<div id="externalFeedsHome">';
 
-				while ($currentFeed =& $feeds->next()) {		
+				while ($currentFeed =& $feeds->next()) {
 					if (!$currentFeed->getDisplayHomepage()) continue;
 					$feed = new SimplePie();
 					$feed->set_feed_url($currentFeed->getUrl());
@@ -293,18 +257,6 @@ class ExternalFeedPlugin extends GenericPlugin {
 		return false;
 	}
 
-	/**
-	 * Set the enabled/disabled state of this plugin
-	 */
-	function setEnabled($enabled) {
-		$journal =& Request::getJournal();
-		if ($journal) {
-			$this->updateSetting($journal->getId(), 'enabled', $enabled ? true : false);
-			return true;
-		}
-		return false;
-	}
-
  	/*
  	 * Execute a management verb on this plugin
  	 * @param $verb string
@@ -313,6 +265,8 @@ class ExternalFeedPlugin extends GenericPlugin {
  	 * @return boolean
  	 */
 	function manage($verb, $args, &$message) {
+		if (!parent::manage($verb, $args, $message)) return false;
+
 		Locale::requireComponents(
 			array(
 				LOCALE_COMPONENT_APPLICATION_COMMON,
@@ -324,167 +278,136 @@ class ExternalFeedPlugin extends GenericPlugin {
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 		$journal =& Request::getJournal();
 		$journalId = $journal->getId();
-		$returner = true;
 
 		switch ($verb) {
-			case 'enable':
-				$this->setEnabled(true);
-				$message = Locale::translate('plugins.generic.externalFeed.enabled');
-				$returner = false;
-				break;
-			case 'disable':
-				$this->setEnabled(false);
-				$message = Locale::translate('plugins.generic.externalFeed.disabled');
-				$returner = false;
-				break;
 			case 'delete':
-				if ($this->getEnabled()) {
-					if (!empty($args)) {
-						$externalFeedId = !isset($args) || empty($args) ? null : (int) $args[0];
-						$externalFeedDao =& DAORegistry::getDAO('ExternalFeedDAO');
-
-						// Ensure externalFeed is for this journal
-						if ($externalFeedDao->getExternalFeedJournalId($externalFeedId) == $journalId) {
-							$externalFeedDao->deleteExternalFeedById($externalFeedId);
-						}
-					}
-					Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'feeds'));
-				} else {
-					Request::redirect(null, 'manager');
-				}
-				break;
-			case 'move':
-				if ($this->getEnabled()) {
+				if (!empty($args)) {
 					$externalFeedId = !isset($args) || empty($args) ? null : (int) $args[0];
 					$externalFeedDao =& DAORegistry::getDAO('ExternalFeedDAO');
 
-					// Ensure externalFeed is valid and for this journal
-					if (($externalFeedId != null && $externalFeedDao->getExternalFeedJournalId($externalFeedId) == $journalId)) {
-						$feed =& $externalFeedDao->getExternalFeed($externalFeedId);
-
-						$direction = Request::getUserVar('dir');
-
-						if ($direction != null) {
-							// moving with up or down arrow
-							$isDown = ($direction=='d');
-							$feed->setSeq($feed->getSeq()+($isDown?1.5:-1.5));
-							$externalFeedDao->updateExternalFeed($feed);
-							$externalFeedDao->resequenceExternalFeeds($feed->getJournalId());
-						}
+					// Ensure externalFeed is for this journal
+					if ($externalFeedDao->getExternalFeedJournalId($externalFeedId) == $journalId) {
+						$externalFeedDao->deleteExternalFeedById($externalFeedId);
 					}
-					Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'feeds'));
-				} else {
-					Request::redirect(null, 'manager');
 				}
-				break;
+				Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'feeds'));
+				return true;
+			case 'move':
+				$externalFeedId = !isset($args) || empty($args) ? null : (int) $args[0];
+				$externalFeedDao =& DAORegistry::getDAO('ExternalFeedDAO');
+
+				// Ensure externalFeed is valid and for this journal
+				if (($externalFeedId != null && $externalFeedDao->getExternalFeedJournalId($externalFeedId) == $journalId)) {
+					$feed =& $externalFeedDao->getExternalFeed($externalFeedId);
+
+					$direction = Request::getUserVar('dir');
+
+					if ($direction != null) {
+						// moving with up or down arrow
+						$isDown = ($direction=='d');
+						$feed->setSeq($feed->getSeq()+($isDown?1.5:-1.5));
+						$externalFeedDao->updateExternalFeed($feed);
+						$externalFeedDao->resequenceExternalFeeds($feed->getJournalId());
+					}
+				}
+				Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'feeds'));
+				return true;
 			case 'create':
 			case 'edit':
-				if ($this->getEnabled()) {
-					$externalFeedId = !isset($args) || empty($args) ? null : (int) $args[0];
-					$externalFeedDao =& DAORegistry::getDAO('ExternalFeedDAO');
+				$externalFeedId = !isset($args) || empty($args) ? null : (int) $args[0];
+				$externalFeedDao =& DAORegistry::getDAO('ExternalFeedDAO');
 
-					// Ensure externalFeed is valid and for this journal
-					if (($externalFeedId != null && $externalFeedDao->getExternalFeedJournalId($externalFeedId) == $journalId) || ($externalFeedId == null)) {
-						$this->import('ExternalFeedForm');
+				// Ensure externalFeed is valid and for this journal
+				if (($externalFeedId != null && $externalFeedDao->getExternalFeedJournalId($externalFeedId) == $journalId) || ($externalFeedId == null)) {
+					$this->import('ExternalFeedForm');
 
+					if ($externalFeedId == null) {
+						$templateMgr->assign('externalFeedTitle', 'plugins.generic.externalFeed.manager.createTitle');
+					} else {
+						$templateMgr->assign('externalFeedTitle', 'plugins.generic.externalFeed.manager.editTitle');
+					}
+
+					$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+					$journalSettings =& $journalSettingsDao->getJournalSettings($journalId);
+
+					$externalFeedForm = new ExternalFeedForm($this, $externalFeedId);
+					if ($externalFeedForm->isLocaleResubmit()) {
+						$externalFeedForm->readInputData();
+					} else {
+						$externalFeedForm->initData();
+					}
+					$this->setBreadCrumbs(true);
+					$templateMgr->assign('journalSettings', $journalSettings);
+					$externalFeedForm->display();
+				} else {
+					Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'feeds'));
+				}
+				return true;
+			case 'update':
+				$externalFeedId = Request::getUserVar('feedId') == null ? null : (int) Request::getUserVar('feedId');
+				$externalFeedDao =& DAORegistry::getDAO('ExternalFeedDAO');
+
+				if (($externalFeedId != null && $externalFeedDao->getExternalFeedJournalId($externalFeedId) == $journalId) || $externalFeedId == null) {
+
+					$this->import('ExternalFeedForm');
+					$externalFeedForm = new ExternalFeedForm($this, $externalFeedId);
+					$externalFeedForm->readInputData();
+
+					if ($externalFeedForm->validate()) {
+						$externalFeedForm->execute();
+
+						if (Request::getUserVar('createAnother')) {
+							Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'create'));
+						} else {
+							Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'feeds'));
+						}
+					} else {
 						if ($externalFeedId == null) {
 							$templateMgr->assign('externalFeedTitle', 'plugins.generic.externalFeed.manager.createTitle');
 						} else {
-							$templateMgr->assign('externalFeedTitle', 'plugins.generic.externalFeed.manager.editTitle');	
+							$templateMgr->assign('externalFeedTitle', 'plugins.generic.externalFeed.manager.editTitle');
 						}
 
 						$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 						$journalSettings =& $journalSettingsDao->getJournalSettings($journalId);
 
-						$externalFeedForm = new ExternalFeedForm($this, $externalFeedId);
-						if ($externalFeedForm->isLocaleResubmit()) {
-							$externalFeedForm->readInputData();
-						} else {
-							$externalFeedForm->initData();
-						}
 						$this->setBreadCrumbs(true);
 						$templateMgr->assign('journalSettings', $journalSettings);
 						$externalFeedForm->display();
-					} else {
-						Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'feeds'));
 					}
 				} else {
-					Request::redirect(null, 'manager');
+					Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'feeds'));
 				}
-				break;
-			case 'update':
-				if ($this->getEnabled()) {
-					$externalFeedId = Request::getUserVar('feedId') == null ? null : (int) Request::getUserVar('feedId');
-					$externalFeedDao =& DAORegistry::getDAO('ExternalFeedDAO');
-
-					if (($externalFeedId != null && $externalFeedDao->getExternalFeedJournalId($externalFeedId) == $journalId) || $externalFeedId == null) {
-
-						$this->import('ExternalFeedForm');
-						$externalFeedForm = new ExternalFeedForm($this, $externalFeedId);
-						$externalFeedForm->readInputData();
-
-						if ($externalFeedForm->validate()) {
-							$externalFeedForm->execute();
-
-							if (Request::getUserVar('createAnother')) {
-								Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'create'));
-							} else {
-								Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'feeds'));
-							}				
-						} else {
-							if ($externalFeedId == null) {
-								$templateMgr->assign('externalFeedTitle', 'plugins.generic.externalFeed.manager.createTitle');
-							} else {
-								$templateMgr->assign('externalFeedTitle', 'plugins.generic.externalFeed.manager.editTitle');	
-							}
-
-							$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-							$journalSettings =& $journalSettingsDao->getJournalSettings($journalId);
-
-							$this->setBreadCrumbs(true);
-							$templateMgr->assign('journalSettings', $journalSettings);
-							$externalFeedForm->display();
-						}		
-					} else {
-						Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'feeds'));
-					}
-				} else {
-					Request::redirect(null, 'manager');
-				}	
-				break;
+				return true;
 			case 'settings':
-				if ($this->getEnabled()) {
-					$this->import('ExternalFeedSettingsForm');
-					$form = new ExternalFeedSettingsForm($this, $journal->getId());
-					if (Request::getUserVar('save')) {
-						Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'feeds'));
-					} elseif (Request::getUserVar('uploadStyleSheet')) {
-						$form->uploadStyleSheet();
-					} elseif (Request::getUserVar('deleteStyleSheet')) {
-						$form->deleteStyleSheet();
-					}
-					$this->setBreadCrumbs(true);
-					$form->initData();
-					$form->display();
-				} else {
-					Request::redirect(null, 'manager');
+				$this->import('ExternalFeedSettingsForm');
+				$form = new ExternalFeedSettingsForm($this, $journal->getId());
+				if (Request::getUserVar('save')) {
+					Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'feeds'));
+				} elseif (Request::getUserVar('uploadStyleSheet')) {
+					$form->uploadStyleSheet();
+				} elseif (Request::getUserVar('deleteStyleSheet')) {
+					$form->deleteStyleSheet();
 				}
-				break;
+				$this->setBreadCrumbs(true);
+				$form->initData();
+				$form->display();
+				return true;
 			default:
-				if ($this->getEnabled()) {
-					$this->import('ExternalFeed');
-					$rangeInfo =& Handler::getRangeInfo('feeds');
-					$externalFeedDao =& DAORegistry::getDAO('ExternalFeedDAO');
-					$feeds =& $externalFeedDao->getExternalFeedsByJournalId($journalId, $rangeInfo);
-					$templateMgr->assign('feeds', $feeds);
-					$this->setBreadCrumbs();
+				$this->import('ExternalFeed');
+				$rangeInfo =& Handler::getRangeInfo('feeds');
+				$externalFeedDao =& DAORegistry::getDAO('ExternalFeedDAO');
+				$feeds =& $externalFeedDao->getExternalFeedsByJournalId($journalId, $rangeInfo);
+				$templateMgr->assign('feeds', $feeds);
+				$this->setBreadCrumbs();
 
-					$templateMgr->display($this->getTemplatePath() . 'externalFeeds.tpl');
-				} else {
-					Request::redirect(null, 'manager');
-				}
+				$templateMgr->display($this->getTemplatePath() . 'externalFeeds.tpl');
+				return true;
+			default:
+				// Unknown management verb
+				assert(false);
+				return false;
 		}
-		return $returner;
 	}
 
 }

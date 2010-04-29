@@ -18,7 +18,6 @@
 import('classes.plugins.GenericPlugin');
 
 class CoinsPlugin extends GenericPlugin {
-
 	/**
 	 * Called as a plugin is registered to the registry
 	 * @param $category String Name of category plugin was registered to
@@ -28,21 +27,10 @@ class CoinsPlugin extends GenericPlugin {
 	function register($category, $path) {
 		$success = parent::register($category, $path);
 		if (!Config::getVar('general', 'installed')) return false;
-		$this->addLocaleData();
 		if ($success) {
 			HookRegistry::register('Templates::Article::Footer::PageFooter', array($this, 'insertFooter'));
 		}
 		return $success;
-	}
-
-	/**
-	 * Get the name of this plugin. The name must be unique within
-	 * its category, and should be suitable for part of a filename
-	 * (ie short, no spaces, and no dependencies on cases being unique).
-	 * @return String name of plugin
-	 */
-	function getName() {
-		return 'CoinsPlugin';
 	}
 
 	function getDisplayName() {
@@ -63,48 +51,8 @@ class CoinsPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Display verbs for the management interface.
-	 */
-	function getManagementVerbs() {
-		$verbs = array();
-		if ($this->getEnabled()) {
-			$verbs[] = array(
-				'disable',
-				Locale::translate('manager.plugins.disable')
-			);
-		} else {
-			$verbs[] = array(
-				'enable',
-				Locale::translate('manager.plugins.enable')
-			);
-		}
-		return $verbs;
-	}
-
-	/**
-	 * Determine whether or not this plugin is enabled.
-	 */
-	function getEnabled() {
-		$journal =& Request::getJournal();
-		if (!$journal) return false;
-		return $this->getSetting($journal->getId(), 'enabled');
-	}
-
-	/**
-	 * Set the enabled/disabled state of this plugin
-	 */
-	function setEnabled($enabled) {
-		$journal =& Request::getJournal();
-		if ($journal) {
-			$this->updateSetting($journal->getId(), 'enabled', $enabled ? true : false);
-			return true;
-		}
-		return false;
-	}
-
-	/**
 	 * Insert COinS tag.
-	 */  
+	 */
 	function insertFooter($hookName, $params) {
 		if ($this->getEnabled()) {
 			$smarty =& $params[1];
@@ -153,30 +101,6 @@ class CoinsPlugin extends GenericPlugin {
 
 			$output .= "<span class=\"Z3988\" title=\"$title\"></span>\n";
 		}
-		return false;
-	}
-
- 	/*
- 	 * Execute a management verb on this plugin
- 	 * @param $verb string
- 	 * @param $args array
-	 * @param $message string Location for the plugin to put a result msg
- 	 * @return boolean
- 	 */
-	function manage($verb, $args, &$message) {
-		switch ($verb) {
-			case 'enable':
-				$this->setEnabled(true);
-				$message = Locale::translate('plugins.generic.coins.enabled');
-				break;
-			case 'disable':
-				$this->setEnabled(false);
-				$message = Locale::translate('plugins.generic.coins.disabled');
-				break;
-			default:
-				Request::redirect(null, 'manager');
-		}
-		
 		return false;
 	}
 }

@@ -19,14 +19,6 @@ import('classes.plugins.GenericPlugin');
 
 class WebFeedPlugin extends GenericPlugin {
 	/**
-	 * Get the symbolic name of this plugin
-	 * @return string
-	 */
-	function getName() {
-		return 'WebFeedPlugin';
-	}
-
-	/**
 	 * Get the display name of this plugin
 	 * @return string
 	 */
@@ -49,7 +41,6 @@ class WebFeedPlugin extends GenericPlugin {
 				HookRegistry::register('PluginRegistry::loadCategory', array(&$this, 'callbackLoadCategory'));
 				HookRegistry::register('LoadHandler', array(&$this, 'callbackHandleShortURL') );
 			}
-			$this->addLocaleData();
 			return true;
 		}
 		return false;
@@ -60,18 +51,8 @@ class WebFeedPlugin extends GenericPlugin {
 	 * creation.
 	 * @return string
 	 */
-	function getNewJournalPluginSettingsFile() {
+	function getContextSpecificPluginSettingsFile() {
 		return $this->getPluginPath() . '/settings.xml';
-	}
-
-	/**
-	 * Check whether or not this plugin is enabled
-	 * @return boolean
-	 */
-	function getEnabled() {
-		$journal =& Request::getJournal();
-		$journalId = $journal?$journal->getId():0;
-		return $this->getSetting($journalId, 'enabled');
 	}
 
 	/**
@@ -166,21 +147,9 @@ class WebFeedPlugin extends GenericPlugin {
 	function getManagementVerbs() {
 		$verbs = array();
 		if ($this->getEnabled()) {
-			$verbs[] = array(
-				'disable',
-				Locale::translate('manager.plugins.disable')
-			);
-			$verbs[] = array(
-				'settings',
-				Locale::translate('plugins.generic.webfeed.settings')
-			);
-		} else {
-			$verbs[] = array(
-				'enable',
-				Locale::translate('manager.plugins.enable')
-			);
+			$verbs[] = array('settings', Locale::translate('plugins.generic.webfeed.settings'));
 		}
-		return $verbs;
+		return parent::getManagementVerbs($verbs);
 	}
 
  	/*
@@ -191,11 +160,12 @@ class WebFeedPlugin extends GenericPlugin {
  	 * @return boolean
  	 */
 	function manage($verb, $args, &$message) {
-		$returner = true;
-		$journal =& Request::getJournal();
+		if (!parent::manage($verb, $args, $message)) return false;
 
 		switch ($verb) {
 			case 'settings':
+				$journal =& Request::getJournal();
+
 				Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON,  LOCALE_COMPONENT_PKP_MANAGER));
 				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
@@ -208,6 +178,7 @@ class WebFeedPlugin extends GenericPlugin {
 					if ($form->validate()) {
 						$form->execute();
 						Request::redirect(null, null, 'plugins');
+						return false;
 					} else {
 						$form->display();
 					}
@@ -215,20 +186,12 @@ class WebFeedPlugin extends GenericPlugin {
 					$form->initData();
 					$form->display();
 				}
-				break;
-			case 'enable':
-				$this->updateSetting($journal->getId(), 'enabled', true);
-				$message = Locale::translate('plugins.generic.webfeed.enabled');
-				$returner = false;
-				break;
-			case 'disable':
-				$this->updateSetting($journal->getId(), 'enabled', false);
-				$message = Locale::translate('plugins.generic.webfeed.disabled');
-				$returner = false;
-				break;
+				return true;
+			default:
+				// Unknown management verb
+				assert(false);
+				return false;
 		}
-
-		return $returner;
 	}
 }
 

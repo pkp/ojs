@@ -15,8 +15,6 @@
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.generic.referral.name">Verweise-Plug-In</message>
 	<message key="plugins.generic.referral.description">Das Verweise-Plug-In verfolgt eingehende Refback-URLs zu Artikeln (z.B. wenn ein/e Leser/in einem externen Link zu einem Artikel folgt), so dass Autor/innen eine automatisch aktualisierte Liste von Verweise auf einen Artikel pflegen und ggf. veröffentlichen können.</message>
-	<message key="plugins.generic.referral.enabled">Das Verweise-Plug-In wurde aktiviert.</message>
-	<message key="plugins.generic.referral.disabled">Das Verweise-Plug-In wurde deaktiviert.</message>
 	
 	<message key="plugins.generic.referral.editReferral">Refback bearbeiten</message>
 	<message key="plugins.generic.referral.createReferral">Refback anlegen</message>

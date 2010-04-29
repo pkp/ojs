@@ -15,8 +15,6 @@
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.generic.referral.name">Referral Plugin</message>
 	<message key="plugins.generic.referral.description"></message>
-	<message key="plugins.generic.referral.enabled">El plugin Referral ha sido habilitado.</message>
-	<message key="plugins.generic.referral.disabled">El plugin Referral ha sido deshabilitado.</message>
 	
 	<message key="plugins.generic.referral.editReferral">Editar Refback</message>
 	<message key="plugins.generic.referral.createReferral">Crear Refback</message>

@@ -61,8 +61,6 @@
 	<message key="plugins.generic.translator.deleteEmail" >این ایمیل را حذف کن</message>
 	<message key="plugins.generic.translator.saveBeforeContinuing" >قبل از ترک این صفحه مطمئن شوید که تمام تغییرات را ذخیره کرده اید و گرنه از بین خواهند رفت. آیا میخواهید ادامه دهید؟ در این صورت هر گونه تغییر ذخیره نشده از بین خواهد رفت.</message>
 	<message key="plugins.generic.translator.localeKey.description">کلید بومی را بصورت کامل برای جستجو وارد کنید.</message>
-	<message key="plugins.generic.translator.enabled">پلاگین مترجم فعال شده است</message>
-	<message key="plugins.generic.translator.disabled">پلاگین مترجم غیر فعال شده است</message>
 	<message key="plugins.generic.translator.fileNotWriteable">این فایل زبانی قابل نوشتن توسط سرور نیست. هر تغییری که بدهید ذخیره نخواهد شد.</message>
 	<message key="plugins.generic.translator.filesNotWriteable">این فایلهای زبانی قابل نوشتن توسط سرور نیست. هر تغییری که در آنها بدهید ذخیره نخواهد شد.</message>
 </locale>

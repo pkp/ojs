@@ -15,6 +15,4 @@
 <locale name="pt_PT" full_name="Português">
 	<message key="plugins.generic.roundedcorners.displayName">Cantos Arredondados</message>
 	<message key="plugins.generic.roundedcorners.description">Este plugin insere imagens de fundo em cada bloco das barras laterais e arredonda os seus cantos. Altere as cores utilizando a folha de estilos CSS do plugin.</message>
-	<message key="plugins.generic.roundedcorners.enabled">O Plugin Cantos Arredondados foi activado.</message>
-	<message key="plugins.generic.roundedcorners.disabled">O Plugin Cantos Arredondados foi desactivado.</message>
 </locale>

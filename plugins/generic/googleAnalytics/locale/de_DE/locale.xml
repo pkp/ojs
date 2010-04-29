@@ -31,6 +31,4 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Bitte wählen Sie einen Tracking-Code zur Verwendung aus.</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Neuer Tracking-Code (ga.js)</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Legacy Tracking Code (urchin.js)</message>
-	<message key="plugins.generic.googleAnalytics.enabled">Das Google-Analytics-Plug-In wurde aktiviert.</message>
-	<message key="plugins.generic.googleAnalytics.disabled">Das Google-Analytics-Plug-In wurde ausgeschaltet.</message>
 </locale>

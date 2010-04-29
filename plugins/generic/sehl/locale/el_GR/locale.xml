@@ -22,6 +22,4 @@
 <locale name="el_GR" full_name="Greek">	
 	<message key="plugins.generic.sehl.name">SEHL Plugin</message>
 	<message key="plugins.generic.sehl.description">Το plugin αυτό υλοποιεί το εφέ Search Engine HighLighting (SEHL) όπου όταν μια μηχανή αναζήτηση εντοπίζει ένα HTML άρθρο, οι όροι αναζήτηση τονίζονται.</message>
-	<message key="plugins.generic.sehl.enabled">Το SEHL Plugin έχει ενεργοποιηθεί.</message>
-	<message key="plugins.generic.sehl.disabled">Το SEHL Plugin έχει απενεργοποιηθεί.</message>
 </locale>

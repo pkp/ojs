@@ -15,8 +15,6 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.counter.description"><![CDATA[The COUNTER plugin allows recording and <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a> reporting on site activity.]]></message>
 	<message key="plugins.generic.counter">COUNTER Statistics</message>
-	<message key="plugins.generic.counter.enabled">The COUNTER Plugin has been enabled.</message>
-	<message key="plugins.generic.counter.disabled">The COUNTER Plugin has been disabled.</message>
 	<message key="plugins.generic.counter.migrate">Migrate Log File</message>
 	<message key="plugins.generic.counter.1a.title">Journal Report 1 (R2): Full-Text Article Requests by Month and Journal</message>
 	<message key="plugins.generic.counter.1a.title1">Journal Report 1 (R2)</message>

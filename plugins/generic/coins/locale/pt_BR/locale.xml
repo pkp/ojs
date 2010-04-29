@@ -15,6 +15,4 @@
 <locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.generic.coins.displayName">Plugin COinS</message>
 	<message key="plugins.generic.coins.description">O plugin COinS inclui um descritor do tipo OpenURL às páginas dos artigos (resumo e HTML) que podem ser utilizados para extração de dados por ferramentas de citação, por exemplo.</message>
-	<message key="plugins.generic.coins.enabled">O Plugin COins foi habilitado.</message>
-	<message key="plugins.generic.coins.disabled">O Plugin COins foi desabilitado.</message>
 </locale>

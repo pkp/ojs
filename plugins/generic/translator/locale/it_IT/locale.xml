@@ -73,8 +73,6 @@
 	<message key="plugins.generic.translator.deleteEmail">Cancella questa email</message>
 	<message key="plugins.generic.translator.saveBeforeContinuing">Assicurati di salvare ogni cambiamento fatto in questa pagina prima di continuare o saranno persi. Vuoi continuare? Se sì, ogni modifica non salvata verrà persa.</message>
 	<message key="plugins.generic.translator.localeKey.description">Inserisci una chiave intera da cercare.</message>
-	<message key="plugins.generic.translator.enabled">Il plugin per le traduzioni è stato abilitato.</message>
-	<message key="plugins.generic.translator.disabled">Il plugin per le traduzioni è stato disabilitato.</message>
 	<message key="plugins.generic.translator.fileNotWriteable"><![CDATA[Qusto file non &#232; scrivibile dal server. Tutti i cambiamenti andranno perduti.]]></message>
 	<message key="plugins.generic.translator.filesNotWriteable">Qusti file non sono scrivibili dal server. Tutti i cambiamenti andranno perduti.</message>
 	<message key="plugins.generic.translator.tarMissing"><![CDATA[La funzione di esportazione di questo plugin &#232; stata disattivata perch&#233; il corrispondente tar non &#232; disponibile nel sistema. Assicurati di avere il tar installato sul server e configurane il path in config.inc.php's Sezione [cli].]]></message>

@@ -17,8 +17,6 @@
 	<!-- phpMyVisites -->
 	<message key="plugins.generic.phpmv.displayName">Модуль phpMyVisites</message>
 	<message key="plugins.generic.phpmv.description"><![CDATA[Интегрирует OJS с phpMyVisites, свободной программой анализа статистики запросов. Требует, чтобы phpMyVisites уже была установлена. Для дополнительной информации см. <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">сайт phpMyVisites</a>.]]></message>
-	<message key="plugins.generic.phpmv.enabled">Модуль phpMyVisites включен.</message>
-	<message key="plugins.generic.phpmv.disabled">Модуль phpMyVisites выключен.</message>
 	<!-- phpMyVisites Settings Management -->
 	<message key="plugins.generic.phpmv.manager.settings">Настройки</message>
 	<message key="plugins.generic.phpmv.manager.phpmvSettings">Настройки phpMyVisites</message>

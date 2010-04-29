@@ -30,6 +30,4 @@
 	<message key="plugins.generic.openads.orientation.left">Ezkerrean</message>
 	<message key="plugins.generic.openads.orientation.centre">Erdian</message>
 	<message key="plugins.generic.openads.orientation.right">Eskuinean</message>
-	<message key="plugins.generic.openads.enabled">OpenAds plugina gaitu da.</message>
-	<message key="plugins.generic.openads.disabled">OpenAds plugina desgaitu da.</message>
 </locale>

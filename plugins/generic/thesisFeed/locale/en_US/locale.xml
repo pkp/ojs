@@ -15,8 +15,6 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.thesisfeed.displayName">Thesis Abstracts Feed Plugin</message>
 	<message key="plugins.generic.thesisfeed.description">This plugin produces RSS/Atom web syndication feeds for thesis abstracts.</message>
-	<message key="plugins.generic.thesisfeed.enabled">The Thesis Abstracts Feed Plugin has been enabled.</message>
-	<message key="plugins.generic.thesisfeed.disabled">The Thesis Abstracts Feed Plugin has been disabled.</message>
 
 	<message key="plugins.generic.thesisfeed.settings">Settings</message>
 	<message key="plugins.generic.thesisfeed.settings.all">Display feed links on all journal pages.</message>

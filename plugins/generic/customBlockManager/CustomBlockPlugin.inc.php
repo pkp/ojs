@@ -9,19 +9,14 @@
  * @class CustomBlockPlugin
  *
  * A generic sidebar block that can be customized through the CustomBlockManagerPlugin
- * 
+ *
  */
 
 import('plugins.BlockPlugin');
 
 class CustomBlockPlugin extends BlockPlugin {
-	var $blockName; 
-	
-	function CustomBlockPlugin($blockName) {
-		$this->blockName = $blockName;
-		return parent::BlockPlugin();
-	}
-	
+	var $blockName;
+
 	/**
 	 * Get the management plugin
 	 * @return object
@@ -29,7 +24,7 @@ class CustomBlockPlugin extends BlockPlugin {
 	function &getManagerPlugin() {
 		$plugin =& PluginRegistry::getPlugin('generic', 'CustomBlockManagerPlugin');
 		return $plugin;
-	}	
+	}
 	/**
 	 * Override the builtin to get the correct plugin path.
 	 * @return string
@@ -56,7 +51,7 @@ class CustomBlockPlugin extends BlockPlugin {
 		if (!Config::getVar('general', 'installed')) return true;
 		return parent::getEnabled();
 	}
-	
+
 	function getManagementVerbs() {
 		$verbs = parent::getManagementVerbs();
 		if ($this->getEnabled()) {
@@ -67,7 +62,7 @@ class CustomBlockPlugin extends BlockPlugin {
 			$verbs[] = array(
 				'edit',
 				Locale::translate('plugins.generic.customBlock.edit')
-			);			
+			);
 		} else {
 			$verbs[] = array(
 				'enable',
@@ -81,8 +76,6 @@ class CustomBlockPlugin extends BlockPlugin {
 	 * Perform management functions
 	 */
 	function manage($verb, $args) {
-		$returner = true;
-
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 
@@ -96,26 +89,26 @@ class CustomBlockPlugin extends BlockPlugin {
 				'user.role.manager'
 			)
 		);
-		
+
 		$journal =& Request::getJournal();
 
 		$this->import('CustomBlockEditForm');
 		$form = new CustomBlockEditForm($this, $journal->getId());
-		
+
 		switch ($verb) {
 			case 'enable':
 				$this->setEnabled(true);
-				break;
+				return false;
 			case 'disable':
 				$this->setEnabled(false);
-				break;
+				return false;
 			case 'edit':
 				$pageCrumbs[] = array(
 					Request::url(null, 'manager', 'plugins'),
 					Locale::translate('manager.plugins'),
 					true
 				);
-								
+
 				$templateMgr->assign('pageHierarchy', $pageCrumbs);
 				$form->initData();
 				$form->display();
@@ -123,31 +116,30 @@ class CustomBlockPlugin extends BlockPlugin {
 
 			case 'save':
 				$form->readInputData();
-				if ($form->validate()) {						
+				if ($form->validate()) {
 					$form->save();
 					$pageCrumbs[] = array(Request::url(null, 'manager', 'plugins'), 'manager.plugins');
 					$templateMgr->assign(array(
 						'currentUrl' => Request::url(null, null, null, array($this->getCategory(), $this->getName(), 'edit')),
 						'pageTitleTranslated' => $this->getDisplayName(),
-						'pageHierarchy' => $pageCrumbs, 
+						'pageHierarchy' => $pageCrumbs,
 						'message' => 'plugins.generic.customBlock.saved',
 						'backLink' => Request::url(null, 'manager', 'plugins'),
 						'backLinkLabel' => 'common.continue'
 					));
 					$templateMgr->display('common/message.tpl');
-					exit;
 				} else {
 					$form->addTinyMCE();
 					$form->readInputData();
 					$form->display();
-					exit;
 				}
-			}
-			$returner = false;	
+				exit;
+		}
+		return false;
 	}
 
 	/**
-	 * Get the contents of the Block 
+	 * Get the contents of the Block
 	 * @param $templateMgr object
 	 * @return string
 	 */
@@ -171,29 +163,12 @@ class CustomBlockPlugin extends BlockPlugin {
 	}
 
 	/**
-	 * Get the supported contexts (e.g. BLOCK_CONTEXT_...) for this block.
-	 * @return array
-	 */
-	function getSupportedContexts() {
-		return array(BLOCK_CONTEXT_LEFT_SIDEBAR, BLOCK_CONTEXT_RIGHT_SIDEBAR);
-	}
-
-	/**
 	 * Determine the plugin sequence. Overrides parent so that
 	 * the plugin will be displayed during install.
 	 */
 	function getSeq() {
 		if (!Config::getVar('general', 'installed')) return 1;
 		return parent::getSeq();
-	}
-
-	/**
-	 * Get the name of this plugin. The name must be unique within
-	 * its category.
-	 * @return String name of plugin
-	 */
-	function getName() {
-		return $this->blockName . 'CustomBlockPlugin';
 	}
 
 	/**

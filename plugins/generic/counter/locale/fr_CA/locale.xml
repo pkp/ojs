@@ -28,7 +28,5 @@
 	<message key="plugins.generic.counter.1a.ytdHtml">Cumul annuel - HTML</message>
 	<message key="plugins.generic.counter.1a.ytdPdf">Cumul annuel - PDF</message>
 	<message key="plugins.generic.counter.1a.totalForAllJournals">Total pour toutes les revues</message>
-	<message key="plugins.generic.counter.enabled">Le plugiciel COUNTER a été activé.</message>
-	<message key="plugins.generic.counter.disabled">Le plugiciel COUNTER a été désactivé.</message>
 	<message key="plugins.generic.counter.migrate">Migrer le fichier journalisation</message>
 </locale>

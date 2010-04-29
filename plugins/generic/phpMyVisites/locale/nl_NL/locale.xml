@@ -31,6 +31,4 @@
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdInstructions"><![CDATA[Klik in phpMyVisites op Administration->Modify site. Het site profiel nummer wordt getoond naast uw siteprofiel naam.]]></message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdRequired">Voer een site profielnummer in.</message>
 
-	<message key="plugins.generic.phpmv.enabled">De phpMyVisites plugin is ingeschakeld.</message>
-	<message key="plugins.generic.phpmv.disabled">De phpMyVisites plugin is uitgeschakeld.</message>
 </locale>

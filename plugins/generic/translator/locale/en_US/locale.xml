@@ -17,8 +17,6 @@
 	<message key="plugins.generic.translator.description">This plugin allows web-based maintenance of translation files.</message>
 	<message key="plugins.generic.translator.longdescription">This area allows the Site Administrator to build, modify and check translations of OJS. This is site-wide and should not be used to customize a single OJS journal. If you correct or create a translation, please consider submitting it to the Public Knowledge Project for distribution with future releases.</message>
 	<message key="plugins.generic.translator.localeDescription">This page lists all components of an OJS translation and provides the translator with the opportunity to edit each. A full translation of a translation should contain complete translations of all components.</message>
-	<message key="plugins.generic.translator.enabled">The Translator Plugin has been enabled.</message>
-	<message key="plugins.generic.translator.disabled">The Translator Plugin has been disabled.</message>
 	
 	<message key="plugins.generic.translator.tarMissing">The export function of this plugin has been deactivated because the configured tar binary cannot be found on this system. Please make sure that you have the tar program installed and then configure the path to the tar binary in config.inc.php's [cli] section!</message>
 	

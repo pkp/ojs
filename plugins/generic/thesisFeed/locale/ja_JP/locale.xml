@@ -26,6 +26,4 @@
 	<message key="plugins.generic.thesisfeed.atom.altText">Atomロゴ</message>
 	<message key="plugins.generic.thesisfeed.rss1.altText">RSS1ロゴ</message>
 	<message key="plugins.generic.thesisfeed.rss2.altText">RSS2ロゴ</message>
-	<message key="plugins.generic.thesisfeed.enabled">学位論文要旨フィードプラグインは有効です。</message>
-	<message key="plugins.generic.thesisfeed.disabled">学位論文要旨フィードプラグインは無効です。</message>
 </locale>

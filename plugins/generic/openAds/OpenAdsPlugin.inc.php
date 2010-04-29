@@ -32,8 +32,6 @@ class OpenAdsPlugin extends GenericPlugin {
 	 */
 	function register($category, $path) {
 		if (parent::register($category, $path)) {
-			$this->addLocaleData();
-
 			if ($this->getEnabled()) {
 				HookRegistry::register('TemplateManager::display', array(&$this, 'mainCallback'));
 				HookRegistry::register('PluginRegistry::loadCategory', array(&$this, 'callbackLoadCategory'));
@@ -62,15 +60,6 @@ class OpenAdsPlugin extends GenericPlugin {
 				break;
 		}
 		return false;
-	}
-
-	/**
-	 * Get the name of this plugin. The name must be unique within
-	 * its category.
-	 * @return String name of plugin
-	 */
-	function getName() {
-		return 'OpenAdsPlugin';
 	}
 
 	function getDisplayName() {
@@ -180,64 +169,33 @@ class OpenAdsPlugin extends GenericPlugin {
 	function getManagementVerbs() {
 		$verbs = array();
 		if ($this->getEnabled()) {
-			$verbs[] = array(
-				'disable',
-				Locale::translate('manager.plugins.disable')
-			);
-			if ($this->isConfigured()) $verbs[] = array(
-				'settings',
-				Locale::translate('plugins.generic.openads.manager.settings')
-			);
+			$verbs[] = array('disable', Locale::translate('common.disable'));
+			if ($this->isConfigured()) {
+				$verbs[] = array('settings', Locale::translate('plugins.generic.openads.manager.settings'));
+			}
 		} else {
-			if ($this->isConfigured()) $verbs[] = array(
-				'enable',
-				Locale::translate('manager.plugins.enable')
-			);
+			if ($this->isConfigured()) {
+				$verbs[] = array('enable', Locale::translate('common.enable'));
+			}
 		}
 		return $verbs;
 	}
 
-	/**
-	 * Determine whether or not this plugin is enabled.
-	 */
-	function getEnabled() {
-		$journal =& Request::getJournal();
-		if (!$journal) return false;
-		return $this->getSetting($journal->getId(), 'enabled');
-	}
-
-	/**
-	 * Set the enabled/disabled state of this plugin
-	 */
-	function setEnabled($enabled) {
-		$journal =& Request::getJournal();
-		if ($journal) {
-			$this->updateSetting($journal->getId(), 'enabled', $enabled ? true : false);
-			return true;
-		}
-		return false;
-	}
-
- 	/*
- 	 * Execute a management verb on this plugin
- 	 * @param $verb string
- 	 * @param $args array
+	/*
+	 * Execute a management verb on this plugin
+	 * @param $verb string
+	 * @param $args array
 	 * @param $message string Location for the plugin to put a result msg
- 	 * @return boolean
- 	 */
+	 * @return boolean
+	 */
 	function manage($verb, $args, &$message) {
-		$templateMgr =& TemplateManager::getManager();
-		$journal =& Request::getJournal();
-		$returner = false;
+		if (!parent::manage($verb, $args, $message)) return false;
 
 		switch ($verb) {
-			case 'enable': $this->setEnabled(true); 
-				$message = Locale::translate('plugins.generic.openAds.enabled');
-				break;
-			case 'disable': $this->setEnabled(false); 
-				$message = Locale::translate('plugins.generic.openAds.disabled');
-				break;
 			case 'settings':
+				$templateMgr =& TemplateManager::getManager();
+				$journal =& Request::getJournal();
+
 				$this->import('OpenAdsSettingsForm');
 				$this->import('OpenAdsConnection');
 				$openAdsConnection = new OpenAdsConnection($this, $this->getInstallationPath());
@@ -247,13 +205,17 @@ class OpenAdsPlugin extends GenericPlugin {
 					$form->readInputData();
 					$form->execute();
 					Request::redirect(null, 'manager', 'plugins');
+					return false;
 				} else {
 					$form->initData();
 					$form->display();
-					$returner = true;
+					return true;
 				}
+			default:
+				// Unknown management verb
+				assert(false);
+				return false;
 		}
-		return $returner;
 	}
 
 	/**

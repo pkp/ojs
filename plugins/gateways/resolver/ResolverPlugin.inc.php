@@ -35,7 +35,7 @@ class ResolverPlugin extends GatewayPlugin {
 	 * creation.
 	 * @return string
 	 */
-	function getNewJournalPluginSettingsFile() {
+	function getContextSpecificPluginSettingsFile() {
 		return $this->getPluginPath() . '/settings.xml';
 	}
 

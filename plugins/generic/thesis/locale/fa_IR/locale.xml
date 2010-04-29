@@ -225,6 +225,4 @@
 	<message key="plugins.generic.thesis.manager.createTitle">ایجاد</message>
 	<message key="plugins.generic.thesis.manager.edit">ویرایش چکیده پایان نامه</message>
 	<message key="plugins.generic.thesis.manager.editTitle">ویرایش</message>
-	<message key="plugins.generic.thesis.enabled">پلاگین پایان نامه فعال شده است</message>
-	<message key="plugins.generic.thesis.disabled">پلاگین پایان نامه غیر فعال شده است</message>
 </locale>

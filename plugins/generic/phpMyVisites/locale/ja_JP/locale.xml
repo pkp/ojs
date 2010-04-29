@@ -29,6 +29,4 @@
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdInstructions"><![CDATA[phpMyVisitesにおいて、Administration->Modify siteの順にクリックしてください。サイトプロファイル数はサイトプロファイル名の横に表示されています。]]></message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdRequired">サイトフロファイル数を入力してください。</message>
 
-	<message key="plugins.generic.phpmv.enabled">phpMyVisites プラグインは有効です。</message>
-	<message key="plugins.generic.phpmv.disabled">phpMyVisites プラグインは無効です。</message>
 </locale>
