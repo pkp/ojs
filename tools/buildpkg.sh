@@ -8,7 +8,7 @@
 #
 # Script to create an OJS package for distribution.
 #
-# Usage: buildpkg.sh <version> [<tag>]
+# Usage: buildpkg.sh <version> [<tag>] [<patch_dir>]
 #
 # $Id$
 #
@@ -21,7 +21,7 @@ if [ -z "$1" ]; then
 fi
 
 VERSION=$1
-TAG=${2-origin/master}
+TAG=${2-official/master}
 PATCHDIR=${3-}
 PREFIX=ojs
 BUILD=$PREFIX-$VERSION
@@ -54,7 +54,7 @@ echo "Done"
 
 echo -n "Preparing package ... "
 cp config.TEMPLATE.inc.php config.inc.php
-find . \( -name .cvsignore -o -name .gitignore -o -name .gitmodules -o -name .keepme \) -exec rm '{}' \;
+find . \( -name .gitignore -o -name .gitmodules -o -name .keepme \) -exec rm '{}' \;
 rm -rf $EXCLUDE
 echo "Done"
 

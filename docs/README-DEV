@@ -12,7 +12,7 @@ have your patch included in the OJS codebase, we suggest discussing it with the 
 plans.
 
 For code that is intended for inclusion in the main codebase:
-* Patches against a current CVS checkout are preferred; alternately, patches
+* Patches against a current git clone are preferred; alternately, patches
   against the most recent release version are acceptable.
 * Unless agreed with the development team, users should be able to toggle
   contributed features between enabled and disabled with a single setting; the
@@ -141,6 +141,12 @@ _____________________
   abstractions should be used around non-backwards compatible code (e.g., using
   function_exists() to check for an available function and using an alternate
   implementation if it does not exist).
+* Traditionally we used static access to class methods a lot. These provide
+  a relatively easy to implement Singleton-like design pattern. They have two
+  important drawbacks though: static methods cannot be overridden which inhibits
+  clean OO design and they are notoriously difficult to unit test. That's why
+  we try to no longer introduce static method calls and refactor to object methods
+  where possible.
 
 
 HTML/XML
@@ -168,14 +174,15 @@ SQL
 OJS Conventions
 _______________
 
-CVS
+git
 ---
-* A web interface to the CVS repository is located at <http://pkp.sfu.ca/cvs/>.
-* A brief log message describing the changes made must be included with all CVS
+* A web interface to the git repository is located at <http://github.com/pkp>.
+* A brief log message describing the changes made must be included with all git
   commits.
-* Whenever possible, CVS commit log messages should include "#BUG_ID_NUMBER#" to
-  reference a Bugzilla report at <http://pkp.sfu.ca/bugzilla/> (it will be
-  automatically linked when viewing a log in CVSweb).
+* Whenever possible, git commit log messages should include "*BUG_ID_NUMBER*" to
+  reference a Bugzilla report at <http://pkp.sfu.ca/bugzilla/>.
+* Please consult http://pkp.sfu.ca/wiki/index.php/HOW-TO_check_out_PKP_applications_from_git
+  for instructions on setting up a development environment.
 
 
 File Header
@@ -193,8 +200,6 @@ File Header
  * @class CLASS
  *
  * DESCRIPTION.
- *
- * $Id$
  */
 
 
@@ -239,8 +244,6 @@ Templates
 	 * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
 	 *
 	 * DESCRIPTION.
-	 *
-	 * $Id$
 	 *}
 	{assign var="pageTitle" value="user.userHome"}
 	{include file="common/header.tpl"}
@@ -275,7 +278,7 @@ Input Validation
 * For example, in template forms:
 	<input type="text" name="title" value="{$title|escape}" />
 * Retrieving user input:
-	$foo = Request::getUserVar('foo');
+	$foo = $request->getUserVar('foo');
 * Escaping habits in order of precedence:
   - Manager's Step 5 text fields: No escaping performed
   - Abstracts, notes, comments, emails: {$field|strip_unsafe_html|nl2br}
@@ -296,7 +299,7 @@ Note that these should apply to parameters supplied to {translate key="..."} and
 
 Other Tips
 ----------
-* Use Request::redirectUrl($url), or better yet, Request::redirect(...) for
+* Use $request->redirectUrl($url), or better yet, $request->redirect(...) for
   HTTP redirects instead of header('Location: ...');
 * For additional coding convention information, see the OJS Design Document
   at <http://pkp.sfu.ca/ojs/OJSTechnicalReference.pdf>.

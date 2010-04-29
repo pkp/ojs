@@ -14,11 +14,11 @@ OJS release:
     Commands that may be helpful in determining what bugs have been closed
     since the last release (whose tag is specified in place of <last-tag>:
 
-    cvs log -r<last-tag>::HEAD          # Generate a log from the last release
-        | grep -o -e "^#\([0-9]\+\)#"   # Look for bug IDs in the commit notes
-        | sed "s/#//g"                  # Remove the octothorpes
-        | sort -n | uniq                # Get a unique sorted list
-        > bug_ids.txt                   # Dump to a file
+	git log --pretty=oneline <last-tag>..HEAD # Generate a log from the last release
+        | egrep -o "(#|\*)([0-9]+)(#|\*)"     # Look for bug IDs in the commit notes
+        | sed -r "s/(#|\*)//g"                # Remove the octothorpes
+        | sort -nu                            # Get a unique sorted list
+        > bug_ids.txt                         # Dump to a file
 
     The titles of these bugs can be fetched as follows:
 
@@ -38,10 +38,9 @@ OJS release:
     docs/release-notes/README-<VERSION>
 
 
-3. Generate CVS ChangeLog for the release:
+3. Generate ChangeLog for the release:
 
-    perl lib/pkp/classes/cliTool/cvs2cl.pl --delta <OLD-TAG>:<CURRENT-TAG> -f \
-        docs/release-notes/ChangeLog-<VERSION>
+    see e.g. http://github.com/jwiegley/git-scripts/blob/master/git-changelog
 
 
 4. Copy the current changelog and release notes to docs/:
@@ -50,11 +49,14 @@ OJS release:
     cp docs/release-notes/README-<VERSION> docs/RELEASE
 
 
-5. After committing any pending modifications, tag the release in CVS (both the
+5. After committing any pending modifications, tag the release in git (both the
 OJS codebase and the PKP library to be distributed with it):
 
-    cvs rtag ojs-<MAJOR>_<MINOR>_<REVISION>-<BUILD> ojs2
-    cvs rtag ojs-<MAJOR>_<MINOR>_<REVISION>-<BUILD> pkp
+	cd lib/pkp
+    git tag ojs-<MAJOR>_<MINOR>_<REVISION>-<BUILD>
+    cd ../..
+    git tag ojs-<MAJOR>_<MINOR>_<REVISION>-<BUILD>
+    git push --tags
 
 
 6. Build the OJS package and patch files:

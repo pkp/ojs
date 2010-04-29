@@ -39,10 +39,10 @@ Obtaining the latest OJS code
 -----------------------------
 
 The OJS source code is available in three forms: as patches against older
-releases of OJS, from an anonymous CVS repository, and as a complete
+releases of OJS, from read-only github access, and as a complete
 stand-alone package.
 
-Patching or updating from CVS are the recommended approach if you have made
+Patching or updating from github is the recommended approach if you have made
 local modifications to the system.
 
 1. Patch
@@ -77,17 +77,22 @@ manually added after applying the patch, search the patch file for lines like:
 can be found in the distribution archive.
 
 
-2. CVS
+2. git
 
-If your instance of OJS was checked out from the PKP anonymous CVS repository
-(see docs/README-CVS), you can update the OJS code using a CVS client.
+If your instance of OJS was checked out from github (see docs/README-GIT),
+you can update the OJS code using a git client.
 
-To update the OJS code from a CVS check-out, run the following command from
+To update the OJS code from a git check-out, run the following command from
 your OJS directory:
 
-    $ cvs update -r TAG
+    $ git rebase --onto <new-release-tag> <previous-release-tag>
 
-"TAG" should be replaced with the CVS tag corresponding to the new release.
+This assumes that you have made local changes and committed them on top of
+the old release tag. The command will take your custom changes and apply
+them on top of the new release. This may cause merge conflicts which have to
+be resolved in the usual way, e.g. using a merge tool like kdiff3.
+
+"TAG" should be replaced with the git tag corresponding to the new release.
 OJS release version tags are of the form "ojs-MAJOR_MINOR_REVSION-BUILD".
 For example, the tag for the initial release of OJS 2.1.0 is "ojs-2_1_0-0".
 
