@@ -168,13 +168,6 @@ class ArticleHandler extends Handler {
 			}
 		}
 
-		// Add font sizer js and css if not already in header
-		$additionalHeadData = $templateMgr->get_template_vars('additionalHeadData');
-		if (strpos(strtolower($additionalHeadData), 'sizer.js') === false) {
-			$additionalHeadData .= $templateMgr->fetch('common/sizer.tpl');
-			$templateMgr->assign('additionalHeadData', $additionalHeadData);
-		}
-
 		$templateMgr->assign_by_ref('issue', $issue);
 		$templateMgr->assign_by_ref('article', $article);
 		$templateMgr->assign_by_ref('galley', $galley);
