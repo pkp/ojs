@@ -214,6 +214,7 @@ class AdminLanguagesHandler extends AdminHandler {
 	 */
 	function downloadLocale($args, &$request) {
 		$this->validate();
+		$this->setupTemplate(true);
 		$locale = $request->getUserVar('locale');
 
 		import('i18n.LanguageAction');
@@ -233,10 +234,11 @@ class AdminLanguagesHandler extends AdminHandler {
 			$templateMgr->display('admin/languageDownloadErrors.tpl');
 			return;
 		}
-		$templateMgr->assign('messageTranslated', Locale::translate('admin.languages.localeInstalled', array('locale' => $locale)));
-		$templateMgr->assign('backLink', $request->url(null, null, 'languages'));
-		$templateMgr->assign('backLinkLabel', 'admin.languages.languageSettings');
-		$templateMgr->display('common/message.tpl');
+
+		import('notification.NotificationManager');
+		$notificationManager = new NotificationManager();
+		$notificationManager->createTrivialNotification(Locale::translate('notification.notification'), Locale::translate('admin.languages.localeInstalled', array('locale' => $locale)), NOTIFICATION_TYPE_SUCCESS, null, false);
+		$request->redirect(null, null, 'languages');
 	}
 }
 

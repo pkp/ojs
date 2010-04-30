@@ -91,15 +91,11 @@ class JournalLanguagesHandler extends ManagerHandler {
 			$locale
 		);
 
-		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->assign(array(
-			'currentUrl' => $request->url(null, null, 'languages'),
-			'pageTitle' => 'common.languages',
-			'message' => 'common.changesSaved',
-			'backLink' => $request->url(null, $request->getRequestedPage()),
-			'backLinkLabel' => 'manager.journalManagement'
-		));
-		$templateMgr->display('common/message.tpl');
+		// Display a notification
+		import('notification.NotificationManager');
+		$notificationManager = new NotificationManager();
+		$notificationManager->createTrivialNotification('notification.notification', 'common.changesSaved');
+		$request->redirect(null, null, 'languages');
 	}
 }
 
