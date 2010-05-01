@@ -8,8 +8,6 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Plugin version information.
-  *
-  * $Id$
   -->
 <version>
 	<application>readingTools</application>
@@ -17,5 +15,5 @@
 	<release>1.0.0.0</release>
 	<date>2010-04-05</date>
 	<lazy-load>1</lazy-load>
-	<class>RTPlugin</class>
+	<class>ReadingToolsBlockPlugin</class>
 </version>

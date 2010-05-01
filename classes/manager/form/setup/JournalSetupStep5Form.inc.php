@@ -65,7 +65,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 	function display() {
 		$journal =& Request::getJournal();
 
-		$allThemes =& PluginRegistry::loadCategory('themes', true);
+		$allThemes =& PluginRegistry::loadCategory('themes');
 		$journalThemes = array();
 		foreach ($allThemes as $key => $junk) {
 			$plugin =& $allThemes[$key]; // by ref
@@ -90,9 +90,8 @@ class JournalSetupStep5Form extends JournalSetupForm {
 		));
 
 		// Make lists of the sidebar blocks available.
-		$templateMgr->initialize();
 		$leftBlockPlugins = $disabledBlockPlugins = $rightBlockPlugins = array();
-		$plugins =& PluginRegistry::getPlugins('blocks');
+		$plugins =& PluginRegistry::loadCategory('blocks');
 		foreach ($plugins as $key => $junk) {
 			if (!$plugins[$key]->getEnabled() || $plugins[$key]->getBlockContext() == '') {
 				if (count(array_intersect($plugins[$key]->getSupportedContexts(), array(BLOCK_CONTEXT_LEFT_SIDEBAR, BLOCK_CONTEXT_RIGHT_SIDEBAR))) > 0) $disabledBlockPlugins[] =& $plugins[$key];
@@ -158,7 +157,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 
 				if ($newImage) {
 					$altText = $journal->getSetting($settingName.'AltText');
-					if (!empty($altText[$locale])) { 
+					if (!empty($altText[$locale])) {
 						$this->setData($settingName.'AltText', $altText);
 					}
 				}

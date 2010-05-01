@@ -15,6 +15,6 @@
 		<query>UPDATE versions SET lazy_load = 0, product_class_name = '' WHERE product_type = 'core'</query>
 	</sql>
 	<sql>
-		<query>DELETE FROM versions WHERE product_type = 'plugins.generic' AND product = 'jquery'</query>
+		<query>DELETE FROM versions WHERE product_type = 'plugins.generic' AND product IN ('jquery', 'shibboleth')</query>
 	</sql>
 </data>
