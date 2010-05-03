@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('submission.sectionEditor.SectionEditorAction');
+import('classes.submission.sectionEditor.SectionEditorAction');
 
 class EditorAction extends SectionEditorAction {
 	/**
@@ -39,7 +39,7 @@ class EditorAction extends SectionEditorAction {
 		$sectionEditor =& $userDao->getUser($sectionEditorId);
 		if (!isset($sectionEditor)) return true;
 
-		import('mail.ArticleMailTemplate');
+		import('classes.mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($editorSubmission, 'EDITOR_ASSIGN');
 
 		if ($user->getId() === $sectionEditorId || !$email->isEnabled() || ($send && !$email->hasErrors())) {
@@ -66,8 +66,8 @@ class EditorAction extends SectionEditorAction {
 			$editorSubmissionDao->updateEditorSubmission($editorSubmission);
 
 			// Add log
-			import('article.log.ArticleLog');
-			import('article.log.ArticleEventLogEntry');
+			import('classes.article.log.ArticleLog');
+			import('classes.article.log.ArticleEventLogEntry');
 			ArticleLog::logEvent($articleId, ARTICLE_LOG_EDITOR_ASSIGN, ARTICLE_LOG_TYPE_EDITOR, $sectionEditorId, 'log.editor.editorAssigned', array('editorName' => $sectionEditor->getFullName(), 'articleId' => $articleId));
 			return true;
 		} else {
@@ -95,9 +95,9 @@ class EditorAction extends SectionEditorAction {
 	function expediteSubmission($article) {
 		$user =& Request::getUser();
 
-		import('submission.editor.EditorAction');
-		import('submission.sectionEditor.SectionEditorAction');
-		import('submission.proofreader.ProofreaderAction');
+		import('classes.submission.editor.EditorAction');
+		import('classes.submission.sectionEditor.SectionEditorAction');
+		import('classes.submission.proofreader.ProofreaderAction');
 
 		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($article->getId());
@@ -105,8 +105,8 @@ class EditorAction extends SectionEditorAction {
 		$submissionFile = $sectionEditorSubmission->getSubmissionFile();
 
 		// Add a long entry before doing anything.
-		import('article.log.ArticleLog');
-		import('article.log.ArticleEventLogEntry');
+		import('classes.article.log.ArticleLog');
+		import('classes.article.log.ArticleEventLogEntry');
 		ArticleLog::logEvent($article->getId(), ARTICLE_LOG_EDITOR_EXPEDITE, ARTICLE_LOG_TYPE_EDITOR, $user->getId(), 'log.editor.submissionExpedited', array('editorName' => $user->getFullName(), 'articleId' => $article->getId()));
 
 		// 1. Ensure that an editor is assigned.
@@ -129,7 +129,7 @@ class EditorAction extends SectionEditorAction {
 		$galleys =& $sectionEditorSubmission->getGalleys();
 		if (empty($galleys)) {
 			// No galley present -- use copyediting file.
-			import('file.ArticleFileManager');
+			import('classes.file.ArticleFileManager');
 			$copyeditFile =& $sectionEditorSubmission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL');
 			$fileType = $copyeditFile->getFileType();
 			$articleFileManager = new ArticleFileManager($article->getId());

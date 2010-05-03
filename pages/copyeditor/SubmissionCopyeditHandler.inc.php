@@ -170,7 +170,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 
 		$send = Request::getUserVar('send') ? true : false;
 
-		import('submission.proofreader.ProofreaderAction');
+		import('classes.submission.proofreader.ProofreaderAction');
 
 		if (ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_AUTHOR_COMPLETE', $send?'':Request::url(null, 'copyeditor', 'authorProofreadingComplete', 'send'))) {
 			Request::redirect(null, null, 'submission', $articleId);
@@ -220,7 +220,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley =& $galleyDao->getGalley($galleyId, $articleId);
 
-		import('file.ArticleFileManager'); // FIXME
+		import('classes.file.ArticleFileManager'); // FIXME
 
 		if (isset($galley)) {
 			if ($galley->isHTMLGalley()) {
@@ -272,7 +272,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		$submission =& $this->submission;
 		$journal =& Request::getJournal();
 
-		import('file.PublicFileManager');
+		import('classes.file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
 		$publicFileManager->removeJournalFile($journal->getId(),$submission->getFileName($formLocale));
 		$submission->setFileName('', $formLocale);

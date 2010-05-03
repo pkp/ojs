@@ -77,7 +77,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$templateMgr->assign_by_ref('sections', $sectionDao->getSectionTitles($journal->getId()));
 		if ($enableComments) {
-			import('article.Article');
+			import('classes.article.Article');
 			$templateMgr->assign('commentsStatus', $submission->getCommentsStatus());
 			$templateMgr->assign_by_ref('commentsStatusOptions', Article::getCommentsStatusOptions());
 		}
@@ -96,7 +96,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 
 		// Set up required Payment Related Information
-		import('payment.ojs.OJSPaymentManager');
+		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
 		if ( $paymentManager->submissionEnabled() || $paymentManager->fastTrackEnabled() || $paymentManager->publicationEnabled()) {
 			$templateMgr->assign('authorFees', true);
@@ -156,7 +156,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$templateMgr->assign_by_ref('editorDecisionOptions', SectionEditorSubmission::getEditorDecisionOptions());
 
-		import('submission.reviewAssignment.ReviewAssignment');
+		import('classes.submission.reviewAssignment.ReviewAssignment');
 		$templateMgr->assign_by_ref('reviewerRatingOptions', ReviewAssignment::getReviewerRatingOptions());
 		$templateMgr->assign_by_ref('reviewerRecommendationOptions', ReviewAssignment::getReviewerRecommendationOptions());
 
@@ -199,7 +199,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 
 		// Parse the list of email logs and populate the array.
-		import('article.log.ArticleLog');
+		import('classes.article.log.ArticleLog');
 		$emailLogEntries =& ArticleLog::getEmailLogEntries($articleId);
 		foreach ($emailLogEntries->toArray() as $emailLog) {
 			if ($emailLog->getEventType() == ARTICLE_EMAIL_REVIEW_NOTIFY_REVIEWER) {
@@ -248,7 +248,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('editorDecisionOptions',SectionEditorSubmission::getEditorDecisionOptions());
 		$templateMgr->assign_by_ref('lastDecision', $lastDecision);
 
-		import('submission.reviewAssignment.ReviewAssignment');
+		import('classes.submission.reviewAssignment.ReviewAssignment');
 		$templateMgr->assign_by_ref('reviewerRecommendationOptions', ReviewAssignment::getReviewerRecommendationOptions());
 		$templateMgr->assign_by_ref('reviewerRatingOptions', ReviewAssignment::getReviewerRatingOptions());
 
@@ -292,7 +292,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$user =& Request::getUser();
 		$templateMgr->assign('isEditor', $roleDao->roleExists($journal->getId(), $user->getId(), ROLE_ID_EDITOR));
 
-		import('issue.IssueAction');
+		import('classes.issue.IssueAction');
 		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($submission->getArticleId());
@@ -304,7 +304,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('submissionAccepted', $submissionAccepted);
 
 		// Set up required Payment Related Information
-		import('payment.ojs.OJSPaymentManager');
+		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
 		$completedPaymentDAO =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
 
@@ -334,7 +334,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$rangeInfo =& Handler::getRangeInfo('submissionNotes');
 		$submissionNotes =& $articleNoteDao->getArticleNotes($articleId, $rangeInfo);
 
-		import('article.log.ArticleLog');
+		import('classes.article.log.ArticleLog');
 		$rangeInfo =& Handler::getRangeInfo('eventLogEntries');
 		$eventLogEntries =& ArticleLog::getEventLogEntries($articleId, $rangeInfo);
 		$rangeInfo =& Handler::getRangeInfo('emailLogEntries');
@@ -513,7 +513,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		$submission =& $this->submission;
 
-		import('sectionEditor.form.CreateReviewerForm');
+		import('classes.sectionEditor.form.CreateReviewerForm');
 		$createReviewerForm = new CreateReviewerForm($articleId);
 		$this->setupTemplate(true, $articleId);
 
@@ -815,7 +815,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign('reviewId', $reviewId);
 
-			import('submission.reviewAssignment.ReviewAssignment');
+			import('classes.submission.reviewAssignment.ReviewAssignment');
 			$templateMgr->assign_by_ref('reviewerRecommendationOptions', ReviewAssignment::getReviewerRecommendationOptions());
 
 			$templateMgr->display('sectionEditor/reviewerRecommendation.tpl');
@@ -898,7 +898,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->validate($articleId);
 		$submission =& $this->submission;
 
-		import('file.PublicFileManager');
+		import('classes.file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
 		$publicFileManager->removeJournalFile($journal->getId(),$submission->getFileName($formLocale));
 		$submission->setFileName('', $formLocale);
@@ -1266,7 +1266,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId, 'summary');
 
-		import('submission.form.SuppFileForm');
+		import('classes.submission.form.SuppFileForm');
 
 		$submitForm = new SuppFileForm($submission);
 
@@ -1289,7 +1289,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId, 'summary');
 
-		import('submission.form.SuppFileForm');
+		import('classes.submission.form.SuppFileForm');
 
 		$submitForm = new SuppFileForm($submission, $suppFileId);
 
@@ -1333,7 +1333,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
 
-		import('submission.form.SuppFileForm');
+		import('classes.submission.form.SuppFileForm');
 
 		$submitForm = new SuppFileForm($submission, $suppFileId);
 		$submitForm->readInputData();
@@ -1342,7 +1342,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$submitForm->execute();
 
 			// Send a notification to associated users
-			import('notification.NotificationManager');
+			import('lib.pkp.classes.notification.NotificationManager');
 			$notificationManager = new NotificationManager();
 			$articleDao =& DAORegistry::getDAO('ArticleDAO');
 			$article =& $articleDao->getArticle($articleId);
@@ -1612,7 +1612,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		$submission =& $this->submission;
 
-		import('submission.form.ArticleGalleyForm');
+		import('classes.submission.form.ArticleGalleyForm');
  		$galleyForm = new ArticleGalleyForm($articleId);
 		$galleyId = $galleyForm->execute($fileName);
 
@@ -1631,7 +1631,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$this->setupTemplate(true, $articleId, 'editing');
 
-		import('submission.form.ArticleGalleyForm');
+		import('classes.submission.form.ArticleGalleyForm');
 
 		$submitForm = new ArticleGalleyForm($articleId, $galleyId);
 
@@ -1654,7 +1654,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->setupTemplate(true, $articleId, 'editing');
 		$submission =& $this->submission;
 
-		import('submission.form.ArticleGalleyForm');
+		import('classes.submission.form.ArticleGalleyForm');
 
 		$submitForm = new ArticleGalleyForm($articleId, $galleyId);
 
@@ -1663,7 +1663,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$submitForm->execute();
 
 			// Send a notification to associated users
-			import('notification.NotificationManager');
+			import('lib.pkp.classes.notification.NotificationManager');
 			$notificationManager = new NotificationManager();
 			$articleDao =& DAORegistry::getDAO('ArticleDAO');
 			$article =& $articleDao->getArticle($articleId);
@@ -1766,7 +1766,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley =& $galleyDao->getGalley($galleyId, $articleId);
 
-		import('file.ArticleFileManager'); // FIXME
+		import('classes.file.ArticleFileManager'); // FIXME
 
 		if (isset($galley)) {
 			if ($galley->isHTMLGalley()) {
@@ -1794,7 +1794,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->validate($articleId);
 		$submission =& $this->submission;
 
-		import('submission.form.SuppFileForm');
+		import('classes.submission.form.SuppFileForm');
 
 		$suppFileForm = new SuppFileForm($submission);
 		$suppFileForm->setData('title', Locale::translate('common.untitled'));
@@ -1848,7 +1848,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		} else {
 			$rangeInfo =& Handler::getRangeInfo('eventLogEntries');
 
-			import('article.log.ArticleLog');
+			import('classes.article.log.ArticleLog');
 			$eventLogEntries =& ArticleLog::getEventLogEntries($articleId, $rangeInfo);
 			$templateMgr->assign('eventLogEntries', $eventLogEntries);
 			$templateMgr->display('sectionEditor/submissionEventLog.tpl');
@@ -1916,7 +1916,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign_by_ref('submission', $submission);
 
 		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
-		import('file.ArticleFileManager');
+		import('classes.file.ArticleFileManager');
 		$templateMgr->assign('attachments', $articleFileDao->getArticleFilesByAssocId($logId, ARTICLE_FILE_ATTACHMENT));
 
 		if ($logId) {
@@ -1931,7 +1931,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		} else {
 			$rangeInfo =& Handler::getRangeInfo('emailLogEntries');
 
-			import('article.log.ArticleLog');
+			import('classes.article.log.ArticleLog');
 			$emailLogEntries =& ArticleLog::getEmailLogEntries($articleId, $rangeInfo);
 			$templateMgr->assign_by_ref('emailLogEntries', $emailLogEntries);
 			$templateMgr->display('sectionEditor/submissionEmailLog.tpl');
@@ -2127,7 +2127,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 
 		if ($userId && $articleId && $roleDao->roleExists($journal->getId(), $userId, ROLE_ID_PROOFREADER)) {
-			import('submission.proofreader.ProofreaderAction');
+			import('classes.submission.proofreader.ProofreaderAction');
 			ProofreaderAction::selectProofreader($userId, $submission);
 			Request::redirect(null, null, 'submissionEditing', $articleId);
 		} else {
@@ -2191,7 +2191,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		$this->setupTemplate(true, $articleId, 'editing');
 
-		import('submission.proofreader.ProofreaderAction');
+		import('classes.submission.proofreader.ProofreaderAction');
 		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_AUTHOR_REQUEST', $send?'':Request::url(null, null, 'notifyAuthorProofreader'))) {
 			Request::redirect(null, null, 'submissionEditing', $articleId);
 		}
@@ -2206,7 +2206,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		$this->setupTemplate(true, $articleId, 'editing');
 
-		import('submission.proofreader.ProofreaderAction');
+		import('classes.submission.proofreader.ProofreaderAction');
 		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_AUTHOR_ACK', $send?'':Request::url(null, null, 'thankAuthorProofreader'))) {
 			Request::redirect(null, null, 'submissionEditing', $articleId);
 		}
@@ -2257,7 +2257,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		$this->setupTemplate(true, $articleId, 'editing');
 
-		import('submission.proofreader.ProofreaderAction');
+		import('classes.submission.proofreader.ProofreaderAction');
 		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_REQUEST', $send?'':Request::url(null, null, 'notifyProofreader'))) {
 			Request::redirect(null, null, 'submissionEditing', $articleId);
 		}
@@ -2272,7 +2272,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		$this->setupTemplate(true, $articleId, 'editing');
 
-		import('submission.proofreader.ProofreaderAction');
+		import('classes.submission.proofreader.ProofreaderAction');
 		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_ACK', $send?'':Request::url(null, null, 'thankProofreader'))) {
 			Request::redirect(null, null, 'submissionEditing', $articleId);
 		}
@@ -2332,7 +2332,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$signoff->setDateAcknowledged(null);
 		$signoffDao->updateObject($signoff);
 
-		import('submission.proofreader.ProofreaderAction');
+		import('classes.submission.proofreader.ProofreaderAction');
 		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUT_REQUEST', $send?'':Request::url(null, null, 'notifyLayoutEditorProofreader'))) {
 			Request::redirect(null, null, 'submissionEditing', $articleId);
 		}
@@ -2347,7 +2347,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		$this->setupTemplate(true, $articleId, 'editing');
 
-		import('submission.proofreader.ProofreaderAction');
+		import('classes.submission.proofreader.ProofreaderAction');
 		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUT_ACK', $send?'':Request::url(null, null, 'thankLayoutEditorProofreader'))) {
 			Request::redirect(null, null, 'submissionEditing', $articleId);
 		}
@@ -2432,7 +2432,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		$submission =& $this->submission;
-		import('payment.ojs.OJSPaymentManager');
+		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
 		$user =& Request::getUser();
 
@@ -2459,7 +2459,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$journal =& Request::getJournal();
 		$submission =& $this->submission;
 
-		import('payment.ojs.OJSPaymentManager');
+		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
 		$user =& Request::getUser();
 
@@ -2488,7 +2488,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$journal =& Request::getJournal();
 		$submission =& $this->submission;
 
-		import('payment.ojs.OJSPaymentManager');
+		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
 		$user =& Request::getUser();
 

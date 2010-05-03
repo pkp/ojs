@@ -22,8 +22,8 @@
 // $Id$
 
 
-import('oai.OAI');
-import('oai.ojs.OAIDAO');
+import('lib.pkp.classes.oai.OAI');
+import('classes.oai.ojs.OAIDAO');
 
 class JournalOAI extends OAI {
 	/** @var $site Site associated site object */

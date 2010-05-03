@@ -13,7 +13,7 @@
  * @brief dc metadata format plugin for OAI.
  */
 
-import('plugins.OAIMetadataFormatPlugin');
+import('classes.plugins.OAIMetadataFormatPlugin');
 
 class OAIMetadataFormatPlugin_DC extends OAIMetadataFormatPlugin {
 	/**

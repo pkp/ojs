@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('form.Form');
+import('lib.pkp.classes.form.Form');
 
 class QuickSubmitForm extends Form {
 
@@ -67,10 +67,10 @@ class QuickSubmitForm extends Form {
 		$countries =& $countryDao->getCountries();
 		$templateMgr->assign_by_ref('countries', $countries);
 
-		import('issue.IssueAction');
+		import('classes.issue.IssueAction');
 		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 
-		import('file.TemporaryFileManager');
+		import('classes.file.TemporaryFileManager');
 		$temporaryFileManager = new TemporaryFileManager();
 		$tempFileId = $this->getData('tempFileId');
 		if ($tempFileId[$formLocale] > 0) {
@@ -135,7 +135,7 @@ class QuickSubmitForm extends Form {
 	 * @return int TemporaryFile ID
 	 */
 	function uploadSubmissionFile($fileName) {
-		import('file.TemporaryFileManager');
+		import('classes.file.TemporaryFileManager');
 		$temporaryFileManager = new TemporaryFileManager();
 		$user =& Request::getUser();
 
@@ -226,8 +226,8 @@ class QuickSubmitForm extends Form {
 		}
 
 		// Add the submission files as galleys
-		import('file.TemporaryFileManager');
-		import('file.ArticleFileManager');
+		import('classes.file.TemporaryFileManager');
+		import('classes.file.ArticleFileManager');
 		$tempFileIds = $this->getData('tempFileId');
 		$temporaryFileManager = new TemporaryFileManager();
 		$articleFileManager = new ArticleFileManager($articleId);
@@ -237,10 +237,10 @@ class QuickSubmitForm extends Form {
 			$fileType = $temporaryFile->getFileType();
 
 			if (strstr($fileType, 'html')) {
-				import('article.ArticleHTMLGalley');
+				import('classes.article.ArticleHTMLGalley');
 				$galley = new ArticleHTMLGalley();
 			} else {
-				import('article.ArticleGalley');
+				import('classes.article.ArticleGalley');
 				$galley = new ArticleGalley();
 			}
 			$galley->setArticleId($articleId);
@@ -274,13 +274,13 @@ class QuickSubmitForm extends Form {
 		// Designate this as the review version by default.
 		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
 		$authorSubmission =& $authorSubmissionDao->getAuthorSubmission($articleId);
-		import('submission.author.AuthorAction');
+		import('classes.submission.author.AuthorAction');
 		AuthorAction::designateReviewVersion($authorSubmission, true);
 
 		// Accept the submission
 		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		$sectionEditorSubmission->setReviewFile(ArticleFileManager::getFile($article->getSubmissionFileId()));
-		import('submission.sectionEditor.SectionEditorAction');
+		import('classes.submission.sectionEditor.SectionEditorAction');
 		SectionEditorAction::recordDecision($sectionEditorSubmission, SUBMISSION_EDITOR_DECISION_ACCEPT);
 
 		// Create signoff infrastructure
@@ -308,13 +308,13 @@ class QuickSubmitForm extends Form {
 		$signoffDao->updateObject($proofProofreaderSignoff);
 		$signoffDao->updateObject($proofLayoutEditorSignoff);
 
-		import("author.form.submit.AuthorSubmitForm");
+		import('classes.author.form.submit.AuthorSubmitForm');
 		AuthorSubmitForm::assignEditors($article);
 
 		$articleDao->updateArticle($article);
 
 		// Add to end of editing queue
-		import('submission.editor.EditorAction');
+		import('classes.submission.editor.EditorAction');
 		EditorAction::expediteSubmission($article);
 
 		if ($this->getData('destination') == "issue") {

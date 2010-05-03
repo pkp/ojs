@@ -18,7 +18,7 @@
 
 // $Id$
 
-import('form.Form');
+import('lib.pkp.classes.form.Form');
 
 class UserInstitutionalSubscriptionForm extends Form {
 
@@ -135,7 +135,7 @@ class UserInstitutionalSubscriptionForm extends Form {
 
 		// If provided ensure IP ranges have IP address format; IP addresses may contain wildcards
 		if ($ipRangeProvided) {	
-			import('subscription.InstitutionalSubscription');
+			import('classes.subscription.InstitutionalSubscription');
 			$this->addCheck(new FormValidatorArrayCustom($this, 'ipRanges', 'required', 'user.subscriptions.form.ipRangeValid', create_function('$ipRange, $regExp', 'return String::regexp_match($regExp, $ipRange);'),
 				array(
 					'/^' .
@@ -163,7 +163,7 @@ class UserInstitutionalSubscriptionForm extends Form {
 		$insert = false;
 
 		if (!isset($this->subscription)) {
-			import('subscription.InstitutionalSubscription');
+			import('classes.subscription.InstitutionalSubscription');
 			$subscription = new InstitutionalSubscription();
 			$subscription->setJournalId($journalId);
 			$subscription->setUserId($this->userId);
@@ -175,7 +175,7 @@ class UserInstitutionalSubscriptionForm extends Form {
 			$subscription =& $this->subscription;
 		}
 
-		import('payment.ojs.OJSPaymentManager');
+		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
 		$paymentPlugin =& $paymentManager->getPaymentPlugin();
 		

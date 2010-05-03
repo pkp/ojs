@@ -18,7 +18,7 @@ define ('AD_ORIENTATION_LEFT',		1);
 define ('AD_ORIENTATION_RIGHT',		2);
 define ('AD_ORIENTATION_CENTRE',	3);
 
-import('classes.plugins.GenericPlugin');
+import('lib.pkp.classes.plugins.GenericPlugin');
 
 class OpenAdsPlugin extends GenericPlugin {
 	/** @var $templateName string Used to track the name of current template */

@@ -30,7 +30,7 @@ define('ARTICLE_SEARCH_GALLEY_FILE',		0x00000080);
 define('ARTICLE_SEARCH_SUPPLEMENTARY_FILE',	0x00000100);
 define('ARTICLE_SEARCH_INDEX_TERMS',		0x00000078);
 
-import('search.ArticleSearchIndex');
+import('classes.search.ArticleSearchIndex');
 
 class ArticleSearch {
 
@@ -270,7 +270,7 @@ class ArticleSearch {
 					unset($issue);
 					$issue =& $issueDao->getIssueById($issueId);
 					$issueCache[$issueId] =& $issue;
-					import('issue.IssueAction');
+					import('classes.issue.IssueAction');
 					$issueAvailabilityCache[$issueId] = !IssueAction::subscriptionRequired($issue) || IssueAction::subscribedUser($journalCache[$journalId], $issueId, $articleId) || IssueAction::subscribedDomain($journalCache[$journalId], $issueId, $articleId);
 				}
 
@@ -338,7 +338,7 @@ class ArticleSearch {
 		$results =& ArticleSearch::formatResults($results);
 
 		// Return the appropriate iterator.
-		import('core.VirtualArrayIterator');
+		import('lib.pkp.classes.core.VirtualArrayIterator');
 		$returner = new VirtualArrayIterator($results, $totalResults, $page, $itemsPerPage);
 		return $returner;
 	}

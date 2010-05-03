@@ -16,7 +16,7 @@
 // $Id$
 
 
-import('article.ArticleFile');
+import('classes.article.ArticleFile');
 
 define('INLINEABLE_TYPES_FILE', Config::getVar('general', 'registry_dir') . DIRECTORY_SEPARATOR . 'inlineTypes.txt');
 
@@ -208,7 +208,7 @@ class ArticleFileDAO extends DAO {
 	 * @return array ArticleFiles
 	 */
 	function &getArticleFilesByAssocId($assocId, $type) {
-		import('file.ArticleFileManager');
+		import('classes.file.ArticleFileManager');
 		$articleFiles = array();
 
 		$result =& $this->retrieve(

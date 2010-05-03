@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('xml.XMLCustomWriter');
+import('lib.pkp.classes.xml.XMLCustomWriter');
 
 class NativeExportDom {
 	function &generateIssueDom(&$doc, &$journal, &$issue) {
@@ -53,7 +53,7 @@ class NativeExportDom {
 				if ($coverFile != '') {
 					$imageNode =& XMLCustomWriter::createElement($doc, 'image');
 					XMLCustomWriter::appendChild($coverNode, $imageNode);
-					import('file.PublicFileManager');
+					import('classes.file.PublicFileManager');
 					$publicFileManager = new PublicFileManager();
 					$coverPagePath = $publicFileManager->getJournalFilesPath($journal->getId()) . '/';
 					$coverPagePath .= $coverFile;
@@ -241,7 +241,7 @@ class NativeExportDom {
 				if ($coverFile != '') {
 					$imageNode =& XMLCustomWriter::createElement($doc, 'image');
 					XMLCustomWriter::appendChild($coverNode, $imageNode);
-					import('file.PublicFileManager');
+					import('classes.file.PublicFileManager');
 					$publicFileManager = new PublicFileManager();
 					$coverPagePath = $publicFileManager->getJournalFilesPath($journal->getId()) . '/';
 					$coverPagePath .= $coverFile;
@@ -314,7 +314,7 @@ class NativeExportDom {
 	function &generateGalleyDom(&$doc, &$journal, &$issue, &$article, &$galley) {
 		$isHtml = $galley->isHTMLGalley();
 
-		import('file.ArticleFileManager');
+		import('classes.file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($article->getId());
 		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
 
@@ -440,7 +440,7 @@ class NativeExportDom {
 			unset($sourceNode);
 		}
 		
-		import('file.ArticleFileManager');
+		import('classes.file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($article->getId());
 		$fileNode =& XMLCustomWriter::createElement($doc, 'file');
 		XMLCustomWriter::appendChild($root, $fileNode);

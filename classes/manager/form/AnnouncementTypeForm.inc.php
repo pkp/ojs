@@ -15,7 +15,7 @@
 
 // $Id$
 
-import('manager.form.PKPAnnouncementTypeForm');
+import('lib.pkp.classes.manager.form.PKPAnnouncementTypeForm');
 
 class AnnouncementTypeForm extends PKPAnnouncementTypeForm {
 	/**

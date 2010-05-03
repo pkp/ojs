@@ -15,9 +15,9 @@
 // $Id$
 
 
-import('rt.ojs.JournalRTAdmin');
-import('handler.Handler');
-import('rtadmin.RTSharingHandler');
+import('classes.rt.ojs.JournalRTAdmin');
+import('classes.handler.Handler');
+import('pages.rtadmin.RTSharingHandler');
 
 class RTAdminHandler extends Handler {
 	/**
@@ -110,7 +110,7 @@ class RTAdminHandler extends Handler {
 		if ($version) {
 			// Validate the URLs for a single version
 			$versions = array(&$version);
-			import('core.ArrayItemIterator');
+			import('lib.pkp.classes.core.ArrayItemIterator');
 			$versions = new ArrayItemIterator($versions, 1, 1);
 		} else {
 			// Validate all URLs for this journal

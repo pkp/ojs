@@ -16,7 +16,7 @@
 // $Id$
 
 
-import('article.Article');
+import('classes.article.Article');
 
 class CopyeditorSubmission extends Article {
 

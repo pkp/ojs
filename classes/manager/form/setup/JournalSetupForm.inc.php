@@ -19,8 +19,8 @@
 // $Id$
 
 
-import("manager.form.setup.JournalSetupForm");
-import('form.Form');
+import('classes.manager.form.setup.JournalSetupForm');
+import('lib.pkp.classes.form.Form');
 
 class JournalSetupForm extends Form {
 	var $step;

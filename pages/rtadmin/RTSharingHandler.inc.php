@@ -15,9 +15,9 @@
 // $Id$
 
 
-import('rt.ojs.JournalRTAdmin');
-import('rtadmin.RTAdminHandler');
-import('rt.ojs.SharingRT');
+import('classes.rt.ojs.JournalRTAdmin');
+import('pages.rtadmin.RTAdminHandler');
+import('classes.rt.ojs.SharingRT');
 
 class RTSharingHandler {
 	function settings() {

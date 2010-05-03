@@ -15,8 +15,8 @@
 // $Id$
 
 
-import('search.ArticleSearch');
-import('handler.Handler');
+import('classes.search.ArticleSearch');
+import('classes.handler.Handler');
 
 class SearchHandler extends Handler {
 	/**
@@ -107,7 +107,7 @@ class SearchHandler extends Handler {
 				$journalId = $article->getJournalId();
 
 				if (!isset($issues[$issueId])) {
-					import('issue.IssueAction');
+					import('classes.issue.IssueAction');
 					$issue =& $issueDao->getIssueById($issueId);
 					$issues[$issueId] =& $issue;
 					$issuesUnavailable[$issueId] = IssueAction::subscriptionRequired($issue) && (!IssueAction::subscribedUser($journal, $issueId, $articleId) && !IssueAction::subscribedDomain($journal, $issueId, $articleId));
@@ -175,7 +175,7 @@ class SearchHandler extends Handler {
 		$articleIds =& $publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal(isset($journal)?$journal->getId():null);
 		$totalResults = count($articleIds);
 		$articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
-		import('core.VirtualArrayIterator');
+		import('lib.pkp.classes.core.VirtualArrayIterator');
 		$results = new VirtualArrayIterator(ArticleSearch::formatResults($articleIds), $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
 
 		$templateMgr =& TemplateManager::getManager();

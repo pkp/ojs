@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('classes.plugins.GenericPlugin');
+import('lib.pkp.classes.plugins.GenericPlugin');
 
 class ExternalFeedPlugin extends GenericPlugin {
 	/**
@@ -81,7 +81,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 		if (empty($styleSheet)) {
 			return $this->getDefaultStyleSheetFile();
 		} else {
-			import('file.PublicFileManager');
+			import('classes.file.PublicFileManager');
 			$fileManager = new PublicFileManager();
 			return $fileManager->getJournalFilesPath($journalId) . '/' . $styleSheet['uploadName'];
 		}

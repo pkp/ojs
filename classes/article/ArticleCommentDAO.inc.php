@@ -16,7 +16,7 @@
 // $Id$
 
 
-import('article.ArticleComment');
+import('classes.article.ArticleComment');
 
 class ArticleCommentDAO extends DAO {
 	/**

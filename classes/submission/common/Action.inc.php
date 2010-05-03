@@ -58,7 +58,7 @@ class Action {
 	 */
 	function viewMetadata($article, $roleId) {
 		if (!HookRegistry::call('Action::viewMetadata', array(&$article, &$roleId))) {
-			import("submission.form.MetadataForm");
+			import('classes.submission.form.MetadataForm');
 			$metadataForm = new MetadataForm($article, $roleId);
 			if ($metadataForm->getCanEdit() && $metadataForm->isLocaleResubmit()) {
 				$metadataForm->readInputData();
@@ -75,7 +75,7 @@ class Action {
 	 */
 	function saveMetadata($article) {
 		if (!HookRegistry::call('Action::saveMetadata', array(&$article))) {
-			import("submission.form.MetadataForm");
+			import('classes.submission.form.MetadataForm');
 			$metadataForm = new MetadataForm($article);
 			$metadataForm->readInputData();
 
@@ -148,7 +148,7 @@ class Action {
 				$metadataForm->execute();
 
 				// Send a notification to associated users
-				import('notification.NotificationManager');
+				import('lib.pkp.classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
 				$notificationUsers = $article->getAssociatedUserIds();
 				foreach ($notificationUsers as $userRole) {
@@ -160,8 +160,8 @@ class Action {
 
 				// Add log entry
 				$user =& Request::getUser();
-				import('article.log.ArticleLog');
-				import('article.log.ArticleEventLogEntry');
+				import('classes.article.log.ArticleLog');
+				import('classes.article.log.ArticleEventLogEntry');
 				ArticleLog::logEvent($article->getId(), ARTICLE_LOG_METADATA_UPDATE, ARTICLE_LOG_TYPE_DEFAULT, 0, 'log.editor.metadataModified', Array('editorName' => $user->getFullName()));
 
 				return true;
@@ -176,7 +176,7 @@ class Action {
 	 * @param $revision int
 	 */
 	function downloadFile($articleId, $fileId, $revision = null) {
-		import('file.ArticleFileManager');
+		import('classes.file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($articleId);
 		return $articleFileManager->downloadFile($fileId, $revision);
 	}
@@ -188,7 +188,7 @@ class Action {
 	 * @param $revision int
 	 */
 	function viewFile($articleId, $fileId, $revision = null) {
-		import('file.ArticleFileManager');
+		import('classes.file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($articleId);
 		return $articleFileManager->viewFile($fileId, $revision);
 	}
@@ -242,7 +242,7 @@ class Action {
 	 */
 	function editComment($article, $comment) {
 		if (!HookRegistry::call('Action::editComment', array(&$article, &$comment))) {
-			import("submission.form.comment.EditCommentForm");
+			import('classes.submission.form.comment.EditCommentForm');
 
 			$commentForm = new EditCommentForm($article, $comment);
 			$commentForm->initData();
@@ -256,7 +256,7 @@ class Action {
 	 */
 	function saveComment($article, &$comment, $emailComment) {
 		if (!HookRegistry::call('Action::saveComment', array(&$article, &$comment, &$emailComment))) {
-			import("submission.form.comment.EditCommentForm");
+			import('classes.submission.form.comment.EditCommentForm');
 
 			$commentForm = new EditCommentForm($article, $comment);
 			$commentForm->readInputData();
@@ -265,7 +265,7 @@ class Action {
 				$commentForm->execute();
 
 				// Send a notification to associated users
-				import('notification.NotificationManager');
+				import('lib.pkp.classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
 				foreach ($notificationUsers as $userRole) {

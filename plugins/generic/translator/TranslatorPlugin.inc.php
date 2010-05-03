@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('classes.plugins.GenericPlugin');
+import('lib.pkp.classes.plugins.GenericPlugin');
 
 class TranslatorPlugin extends GenericPlugin {
 	function register($category, $path) {

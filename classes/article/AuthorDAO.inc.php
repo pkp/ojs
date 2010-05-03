@@ -16,8 +16,8 @@
 // $Id$
 
 
-import('article.Author');
-import('article.Article');
+import('classes.article.Author');
+import('classes.article.Article');
 
 class AuthorDAO extends DAO {
 	/**

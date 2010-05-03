@@ -13,7 +13,7 @@
  *
  */
 
-import('handler.Handler');
+import('classes.handler.Handler');
 
 class StaticPagesHandler extends Handler {
 	function index( $args ) {

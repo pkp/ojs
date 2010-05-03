@@ -16,9 +16,9 @@
 // $Id$
 
 
-import('rt.ojs.RTDAO');
-import('rt.ojs.JournalRT');
-import('handler.Handler');
+import('classes.rt.ojs.RTDAO');
+import('classes.rt.ojs.JournalRT');
+import('classes.handler.Handler');
 
 class CommentHandler extends Handler {
 	/** issue associated with this request **/
@@ -108,7 +108,7 @@ class CommentHandler extends Handler {
 				Validation::redirectLogin();
 		}
 
-		import('comment.form.CommentForm');
+		import('classes.comment.form.CommentForm');
 		$commentForm = new CommentForm(null, $articleId, $galleyId, isset($parent)?$parentId:null);
 		$commentForm->initData();
 
@@ -118,7 +118,7 @@ class CommentHandler extends Handler {
 				$commentForm->execute();
 
 				// Send a notification to associated users
-				import('notification.NotificationManager');
+				import('lib.pkp.classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
 				$articleDAO =& DAORegistry::getDAO('ArticleDAO');
 				$article =& $articleDAO->getArticle($articleId);
@@ -191,7 +191,7 @@ class CommentHandler extends Handler {
 		$issue =& $issueDao->getIssueByArticleId($articleId);
 
 		if (isset($issue) && isset($article)) {
-			import('issue.IssueAction');
+			import('classes.issue.IssueAction');
 			$subscriptionRequired = IssueAction::subscriptionRequired($issue);
 			$subscribedUser = IssueAction::subscribedUser($journal, $issue->getId(), $articleId);
 

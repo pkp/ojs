@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('form.Form');
+import('lib.pkp.classes.form.Form');
 
 class ProfileForm extends Form {
 
@@ -50,7 +50,7 @@ class ProfileForm extends Form {
 		$profileImage = $user->getSetting('profileImage');
 		if (!$profileImage) return false;
 
-		import('file.PublicFileManager');
+		import('classes.file.PublicFileManager');
 		$fileManager = new PublicFileManager();
 		if ($fileManager->removeSiteFile($profileImage['uploadName'])) {
 			return $user->updateSetting('profileImage', null);
@@ -60,7 +60,7 @@ class ProfileForm extends Form {
 	}
 
 	function uploadProfileImage() {
-		import('file.PublicFileManager');
+		import('classes.file.PublicFileManager');
 		$fileManager = new PublicFileManager();
 
 		$user =& $this->user;

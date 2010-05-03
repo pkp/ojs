@@ -15,8 +15,8 @@
 // $Id$
 
 
-import('submission.proofreader.ProofreaderAction');
-import('handler.Handler');
+import('classes.submission.proofreader.ProofreaderAction');
+import('classes.handler.Handler');
 
 class ProofreaderHandler extends Handler {
 	/**
@@ -97,7 +97,7 @@ class ProofreaderHandler extends Handler {
 			SUBMISSION_FIELD_DATE_PROOFREADING_COMPLETE => 'submissions.proofreadingComplete'
 		));
 
-		import('issue.IssueAction');
+		import('classes.issue.IssueAction');
 		$issueAction = new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
 		$templateMgr->assign('helpTopicId', 'editorial.proofreadersRole.submissions');
@@ -117,7 +117,7 @@ class ProofreaderHandler extends Handler {
 		$pageHierarchy = $subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'proofreader'), 'user.role.proofreader'))
 				: array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'proofreader'), 'user.role.proofreader'));
 
-		import('submission.sectionEditor.SectionEditorAction');
+		import('classes.submission.sectionEditor.SectionEditorAction');
 		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'proofreader');
 		if (isset($submissionCrumb)) {
 			$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);

@@ -19,7 +19,7 @@
 // $Id$
 
 
-import('form.Form');
+import('lib.pkp.classes.form.Form');
 
 class RegistrationForm extends Form {
 
@@ -48,7 +48,7 @@ class RegistrationForm extends Form {
 		} else {
 			$this->existingUser = Request::getUserVar('existingUser') ? 1 : 0;
 	
-			import('captcha.CaptchaManager');
+			import('lib.pkp.classes.captcha.CaptchaManager');
 			$captchaManager = new CaptchaManager();
 			$this->captchaEnabled = ($captchaManager->isEnabled() && Config::getVar('captcha', 'captcha_on_register'))?true:false;
 	
@@ -97,7 +97,7 @@ class RegistrationForm extends Form {
 		$journal =& Request::getJournal();
 
 		if ($this->captchaEnabled) {
-			import('captcha.CaptchaManager');
+			import('lib.pkp.classes.captcha.CaptchaManager');
 			$captchaManager = new CaptchaManager();
 			$captcha =& $captchaManager->createCaptcha();
 			if ($captcha) {
@@ -289,10 +289,10 @@ class RegistrationForm extends Form {
 		}
 
 		if (!$this->existingUser) {
-			import('mail.MailTemplate');
+			import('classes.mail.MailTemplate');
 			if ($requireValidation) {
 				// Create an access key
-				import('security.AccessKeyManager');
+				import('lib.pkp.classes.security.AccessKeyManager');
 				$accessKeyManager = new AccessKeyManager();
 				$accessKey = $accessKeyManager->createKey('RegisterContext', $user->getId(), null, Config::getVar('email', 'validation_timeout'));
 

@@ -15,7 +15,7 @@
 // $Id$
 
 
-import("manager.form.setup.JournalSetupForm");
+import('classes.manager.form.setup.JournalSetupForm');
 
 class JournalSetupStep3Form extends JournalSetupForm {
 	/**
@@ -68,7 +68,7 @@ class JournalSetupStep3Form extends JournalSetupForm {
 	 * Display the form
 	 */
 	function display() {
-		import('mail.MailTemplate');
+		import('classes.mail.MailTemplate');
 		$mail = new MailTemplate('SUBMISSION_ACK');
 		if ($mail->isEnabled()) {
 			$templateMgr =& TemplateManager::getManager();

@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('handler.Handler');
+import('classes.handler.Handler');
 
 class AboutHandler extends Handler {
 	/**
@@ -54,7 +54,7 @@ class AboutHandler extends Handler {
 			}
 			
 			// Hide membership if the payment method is not configured
-			import('payment.ojs.OJSPaymentManager');
+			import('classes.payment.ojs.OJSPaymentManager');
 			$paymentManager =& OJSPaymentManager::getManager();
 			$templateMgr->assign('paymentConfigured', $paymentManager->isConfigured());
 
@@ -391,7 +391,7 @@ class AboutHandler extends Handler {
 		$journal =& Request::getJournal();
 		$journalId = $journal->getId();
 
-		import('payment.ojs.OJSPaymentManager');
+		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
 
 		$membershipEnabled = $paymentManager->membershipEnabled();

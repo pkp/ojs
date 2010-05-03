@@ -15,8 +15,8 @@
 // $Id$
 
 
-import ('issue.IssueAction');
-import('handler.Handler');
+import ('classes.issue.IssueAction');
+import('classes.handler.Handler');
 
 class IssueHandler extends Handler {
 	/**
@@ -51,7 +51,7 @@ class IssueHandler extends Handler {
 		$templateMgr =& TemplateManager::getManager();
 
 		if ($issue != null) {
-			import('file.PublicFileManager');
+			import('classes.file.PublicFileManager');
 			$publicFileManager = new PublicFileManager();
 
 			if ($styleFileName = $issue->getStyleFileName()) {
@@ -92,7 +92,7 @@ class IssueHandler extends Handler {
 			$templateMgr->assign('showToc', $showToc);
 
 			// Subscription Access
-			import('issue.IssueAction');
+			import('classes.issue.IssueAction');
 			$subscriptionRequired = IssueAction::subscriptionRequired($issue);
 			$subscribedUser = IssueAction::subscribedUser($journal);
 			$subscribedDomain = IssueAction::subscribedDomain($journal);
@@ -117,7 +117,7 @@ class IssueHandler extends Handler {
 			$templateMgr->assign('subscribedDomain', $subscribedDomain);
 			$templateMgr->assign('showGalleyLinks', $journal->getSetting('showGalleyLinks'));
 
-			import('payment.ojs.OJSPaymentManager');
+			import('classes.payment.ojs.OJSPaymentManager');
 			$paymentManager =& OJSPaymentManager::getManager();
 			if ( $paymentManager->onlyPdfEnabled() ) {
 				$templateMgr->assign('restrictOnlyPdf', true);
@@ -192,7 +192,7 @@ class IssueHandler extends Handler {
 
 			$locale = Locale::getLocale();
 
-			import('file.PublicFileManager');
+			import('classes.file.PublicFileManager');
 			$publicFileManager = new PublicFileManager();
 			$coverPagePath = Request::getBaseUrl() . '/';
 			$coverPagePath .= $publicFileManager->getJournalFilesPath($journalId) . '/';
@@ -221,7 +221,7 @@ class IssueHandler extends Handler {
 			$templateMgr->assign('issue', $issue);
 
 			// Subscription Access
-			import('issue.IssueAction');
+			import('classes.issue.IssueAction');
 			$subscriptionRequired = IssueAction::subscriptionRequired($issue);
 			$subscribedUser = IssueAction::subscribedUser($journal);
 			$subscribedDomain = IssueAction::subscribedDomain($journal);
@@ -246,7 +246,7 @@ class IssueHandler extends Handler {
 			$templateMgr->assign('subscribedDomain', $subscribedDomain);
 			$templateMgr->assign('showGalleyLinks', $journal->getSetting('showGalleyLinks'));
 
-			import('payment.ojs.OJSPaymentManager');
+			import('classes.payment.ojs.OJSPaymentManager');
 			$paymentManager =& OJSPaymentManager::getManager();
 			if ( $paymentManager->onlyPdfEnabled() ) {
 				$templateMgr->assign('restrictOnlyPdf', true);
@@ -261,7 +261,7 @@ class IssueHandler extends Handler {
 		}
 
 		if ($styleFileName = $issue->getStyleFileName()) {
-			import('file.PublicFileManager');
+			import('classes.file.PublicFileManager');
 			$publicFileManager = new PublicFileManager();
 			$templateMgr->addStyleSheet(
 				Request::getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journalId) . '/' . $styleFileName
@@ -285,7 +285,7 @@ class IssueHandler extends Handler {
 
 		$publishedIssuesIterator = $issueDao->getPublishedIssues($journal->getId(), $rangeInfo);
 
-		import('file.PublicFileManager');
+		import('classes.file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
 		$coverPagePath = Request::getBaseUrl() . '/';
 		$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getId()) . '/';

@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('handler.Handler');
+import('classes.handler.Handler');
 
 class UserHandler extends Handler {
 	/**
@@ -91,7 +91,7 @@ class UserHandler extends Handler {
 					|| $subscriptionTypeDAO->subscriptionTypesExistByInstitutional($journalId, true)) ? true : false;
 			$templateMgr->assign('subscriptionsEnabled', $subscriptionsEnabled);
 
-			import('payment.ojs.OJSPaymentManager');
+			import('classes.payment.ojs.OJSPaymentManager');
 			$paymentManager =& OJSPaymentManager::getManager();
 			$membershipEnabled = $paymentManager->membershipEnabled();
 			$templateMgr->assign('membershipEnabled', $membershipEnabled);
@@ -151,7 +151,7 @@ class UserHandler extends Handler {
 			$userInstitutionalSubscriptions =& $subscriptionDAO->getSubscriptionsByUserForJournal($userId, $journalId);
 		}
 
-		import('payment.ojs.OJSPaymentManager');
+		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
 		$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
 
@@ -344,7 +344,7 @@ class UserHandler extends Handler {
 
 	function viewCaptcha($args) {
 		$captchaId = (int) array_shift($args);
-		import('captcha.CaptchaManager');
+		import('lib.pkp.classes.captcha.CaptchaManager');
 		$captchaManager = new CaptchaManager();
 		if ($captchaManager->isEnabled()) {
 			$captchaDao =& DAORegistry::getDAO('CaptchaDAO');
@@ -399,7 +399,7 @@ class UserHandler extends Handler {
 		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION)
 			Request::redirect(null, 'user');
 
-		import('payment.ojs.OJSPaymentManager');
+		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
 		$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
 		if (!$acceptSubscriptionPayments) Request::redirect(null, 'user');
@@ -416,11 +416,11 @@ class UserHandler extends Handler {
 
 		if ($institutional == 'institutional') {
 			$institutional = true;
-			import('subscription.form.UserInstitutionalSubscriptionForm');
+			import('classes.subscription.form.UserInstitutionalSubscriptionForm');
 			$subscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 		} else {
 			$institutional = false;
-			import('subscription.form.UserIndividualSubscriptionForm');
+			import('classes.subscription.form.UserIndividualSubscriptionForm');
 			$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 		}
 
@@ -433,7 +433,7 @@ class UserHandler extends Handler {
 			// Ensure subscription can be updated
 			$subscription =& $subscriptionDao->getSubscription($subscriptionId);
 			$subscriptionStatus = $subscription->getStatus();
-			import('subscription.Subscription');
+			import('classes.subscription.Subscription');
 			$validStatus = array(
 				SUBSCRIPTION_STATUS_ACTIVE,
 				SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT,
@@ -474,7 +474,7 @@ class UserHandler extends Handler {
 		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION)
 			Request::redirect(null, 'user');
 
-		import('payment.ojs.OJSPaymentManager');
+		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
 		$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
 		if (!$acceptSubscriptionPayments) Request::redirect(null, 'user');
@@ -491,11 +491,11 @@ class UserHandler extends Handler {
 
 		if ($institutional == 'institutional') {
 			$institutional = true;
-			import('subscription.form.UserInstitutionalSubscriptionForm');
+			import('classes.subscription.form.UserInstitutionalSubscriptionForm');
 			$subscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 		} else {
 			$institutional = false;
-			import('subscription.form.UserIndividualSubscriptionForm');
+			import('classes.subscription.form.UserIndividualSubscriptionForm');
 			$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 		}
 
@@ -508,7 +508,7 @@ class UserHandler extends Handler {
 			// Ensure subscription can be updated
 			$subscription =& $subscriptionDao->getSubscription($subscriptionId);
 			$subscriptionStatus = $subscription->getStatus();
-			import('subscription.Subscription');
+			import('classes.subscription.Subscription');
 			$validStatus = array(
 				SUBSCRIPTION_STATUS_ACTIVE,
 				SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT,
@@ -574,7 +574,7 @@ class UserHandler extends Handler {
 		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION)
 			Request::redirect(null, 'user');
 
-		import('payment.ojs.OJSPaymentManager');
+		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
 		$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
 		if (!$acceptSubscriptionPayments) Request::redirect(null, 'user');
@@ -597,7 +597,7 @@ class UserHandler extends Handler {
 
 		$subscription =& $subscriptionDAO->getSubscription($subscriptionId);
 		$subscriptionStatus = $subscription->getStatus();
-		import('subscription.Subscription');
+		import('classes.subscription.Subscription');
 		$validStatus = array(SUBSCRIPTION_STATUS_ACTIVE, SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT);
 
 		if (!in_array($subscriptionStatus, $validStatus)) Request::redirect(null, 'user'); 
@@ -621,7 +621,7 @@ class UserHandler extends Handler {
 		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION)
 			Request::redirect(null, 'user');
 
-		import('payment.ojs.OJSPaymentManager');
+		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
 		$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
 		if (!$acceptSubscriptionPayments) Request::redirect(null, 'user');
@@ -646,7 +646,7 @@ class UserHandler extends Handler {
 
 		if ($subscription->isNonExpiring()) Request::redirect(null, 'user'); 
 
-		import('subscription.Subscription');
+		import('classes.subscription.Subscription');
 		$subscriptionStatus = $subscription->getStatus();
 		$validStatus = array(
 			SUBSCRIPTION_STATUS_ACTIVE,
@@ -669,7 +669,7 @@ class UserHandler extends Handler {
 		$this->validate();
 		$this->setupTemplate();
 
-		import('payment.ojs.OJSPaymentManager');
+		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
 
 		$journal =& Request::getJournal();

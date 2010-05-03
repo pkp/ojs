@@ -20,8 +20,8 @@
 // $Id$
 
 
-import('form.Form');
-import('issue.Issue'); // Bring in constants
+import('lib.pkp.classes.form.Form');
+import('classes.issue.Issue'); // Bring in constants
 
 class IssueForm extends Form {
 
@@ -92,7 +92,7 @@ class IssueForm extends Form {
 			$this->addErrorField('publicIssueId');
 		}
 
-		import('file.PublicFileManager');
+		import('classes.file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
 
 		if ($publicFileManager->uploadedFileExists('coverPage')) {
@@ -348,7 +348,7 @@ class IssueForm extends Form {
 			$issue->setIssueId($issueId);
 		}
 
-		import('file.PublicFileManager');
+		import('classes.file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
 		if ($publicFileManager->uploadedFileExists('coverPage')) {
 			$journal = Request::getJournal();

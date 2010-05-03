@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('form.Form');
+import('lib.pkp.classes.form.Form');
 
 class CustomThemeSettingsForm extends Form {
 
@@ -109,7 +109,7 @@ class CustomThemeSettingsForm extends Form {
 		$css .= "body {color: $customThemeForegroundColour;}\n";
 		$css .= "input.defaultButton {color: $customThemeForegroundColour;}\n";
 
-		import('file.FileManager');
+		import('lib.pkp.classes.file.FileManager');
 		FileManager::writeFile(dirname(__FILE__) . '/custom.css', $css);
 	}
 }

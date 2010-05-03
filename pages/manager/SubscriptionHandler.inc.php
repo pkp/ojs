@@ -31,7 +31,7 @@ class SubscriptionHandler extends ManagerHandler {
 		$this->validate();
 		$this->setupTemplate();
 
-		import('subscription.SubscriptionAction');
+		import('classes.subscription.SubscriptionAction');
 		SubscriptionAction::subscriptionsSummary();
 	}
 
@@ -53,7 +53,7 @@ class SubscriptionHandler extends ManagerHandler {
 		$this->setupTemplate();
 
 		array_shift($args);
-		import('subscription.SubscriptionAction');
+		import('classes.subscription.SubscriptionAction');
 		SubscriptionAction::subscriptions($institutional);
 	}
 
@@ -78,7 +78,7 @@ class SubscriptionHandler extends ManagerHandler {
 		$this->setupTemplate();
 
 		array_shift($args);
-		import('subscription.SubscriptionAction');
+		import('classes.subscription.SubscriptionAction');
 		SubscriptionAction::deleteSubscription($args, $institutional);
 
 		Request::redirect(null, null, 'subscriptions', $redirect);
@@ -105,7 +105,7 @@ class SubscriptionHandler extends ManagerHandler {
 		$this->setupTemplate();
 
 		array_shift($args);
-		import('subscription.SubscriptionAction');
+		import('classes.subscription.SubscriptionAction');
 		SubscriptionAction::renewSubscription($args, $institutional);
 
 		Request::redirect(null, null, 'subscriptions', $redirect);
@@ -132,7 +132,7 @@ class SubscriptionHandler extends ManagerHandler {
 		$this->setupTemplate(true, $institutional);
 
 		array_shift($args);
-		import('subscription.SubscriptionAction');
+		import('classes.subscription.SubscriptionAction');
 		$editSuccess = SubscriptionAction::editSubscription($args, $institutional);
 
 		if (!$editSuccess) {
@@ -167,7 +167,7 @@ class SubscriptionHandler extends ManagerHandler {
 		$this->setupTemplate(true, $institutional);
 
 		array_shift($args);
-		import('subscription.SubscriptionAction');
+		import('classes.subscription.SubscriptionAction');
 		SubscriptionAction::selectSubscriber($args, $institutional);
 	}
 
@@ -191,7 +191,7 @@ class SubscriptionHandler extends ManagerHandler {
 		$this->setupTemplate(true, $institutional);
 
 		array_shift($args);
-		import('subscription.SubscriptionAction');
+		import('classes.subscription.SubscriptionAction');
 		$updateSuccess = SubscriptionAction::updateSubscription($args, $institutional);
 
 		if ($updateSuccess && Request::getUserVar('createAnother')) {
@@ -212,7 +212,7 @@ class SubscriptionHandler extends ManagerHandler {
 		$templateMgr->addJavaScript('lib/pkp/js/jquery.tablednd_0_5.js');
 		$templateMgr->addJavaScript('lib/pkp/js/tablednd.js');
 
-		import('subscription.SubscriptionAction');
+		import('classes.subscription.SubscriptionAction');
 		SubscriptionAction::subscriptionTypes();
 	}
 
@@ -223,7 +223,7 @@ class SubscriptionHandler extends ManagerHandler {
 		$this->validate();
 		$this->setupTemplate();
 
-		import('subscription.SubscriptionAction');
+		import('classes.subscription.SubscriptionAction');
 		SubscriptionAction::moveSubscriptionType($args);
 
 		Request::redirect(null, null, 'subscriptionTypes');
@@ -237,7 +237,7 @@ class SubscriptionHandler extends ManagerHandler {
 		$this->validate();
 		$this->setupTemplate();
 
-		import('subscription.SubscriptionAction');
+		import('classes.subscription.SubscriptionAction');
 		SubscriptionAction::deleteSubscriptionType($args);
 
 		Request::redirect(null, null, 'subscriptionTypes');
@@ -254,7 +254,7 @@ class SubscriptionHandler extends ManagerHandler {
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'subscriptionTypes'), 'manager.subscriptionTypes'));
 
-		import('subscription.SubscriptionAction');
+		import('classes.subscription.SubscriptionAction');
 		$editSuccess = SubscriptionAction::editSubscriptionType($args);
 
 		if (!$editSuccess) {
@@ -279,7 +279,7 @@ class SubscriptionHandler extends ManagerHandler {
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'subscriptionTypes'), 'manager.subscriptionTypes'));
 
-		import('subscription.SubscriptionAction');
+		import('classes.subscription.SubscriptionAction');
 		$updateSuccess = SubscriptionAction::updateSubscriptionType();
 
 		if ($updateSuccess && Request::getUserVar('createAnother')) {
@@ -296,7 +296,7 @@ class SubscriptionHandler extends ManagerHandler {
 		$this->validate();
 		$this->setupTemplate();
 
-		import('subscription.SubscriptionAction');
+		import('classes.subscription.SubscriptionAction');
 		SubscriptionAction::subscriptionPolicies();
 	}
 
@@ -307,7 +307,7 @@ class SubscriptionHandler extends ManagerHandler {
 		$this->validate();
 		$this->setupTemplate();
 
-		import('subscription.SubscriptionAction');
+		import('classes.subscription.SubscriptionAction');
 		SubscriptionAction::saveSubscriptionPolicies($args);
 	}
 

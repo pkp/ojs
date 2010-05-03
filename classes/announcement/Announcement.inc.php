@@ -20,7 +20,7 @@
 
 // $Id$
 
-import('announcement.PKPAnnouncement');
+import('lib.pkp.classes.announcement.PKPAnnouncement');
 
 class Announcement extends PKPAnnouncement {
 

@@ -41,7 +41,7 @@ class SubmitHandler extends AuthorHandler {
 		$this->setupTemplate(true);
 
 		$formClass = "AuthorSubmitStep{$step}Form";
-		import("author.form.submit.$formClass");
+		import("classes.author.form.submit.$formClass");
 
 		$submitForm = new $formClass($article);
 		if ($submitForm->isLocaleResubmit()) {
@@ -65,7 +65,7 @@ class SubmitHandler extends AuthorHandler {
 		$article =& $this->article;
 
 		$formClass = "AuthorSubmitStep{$step}Form";
-		import("author.form.submit.$formClass");
+		import("classes.author.form.submit.$formClass");
 
 		$submitForm = new $formClass($article);
 		$submitForm->readInputData();
@@ -153,7 +153,7 @@ class SubmitHandler extends AuthorHandler {
 
 				if ($step == 5) {
 					// Send a notification to associated users
-					import('notification.NotificationManager');
+					import('lib.pkp.classes.notification.NotificationManager');
 					$notificationManager = new NotificationManager();
 					$articleDao =& DAORegistry::getDAO('ArticleDAO');
 					$article =& $articleDao->getArticle($articleId);
@@ -206,7 +206,7 @@ class SubmitHandler extends AuthorHandler {
 		$article =& $this->article;
 		$this->setupTemplate(true);
 
-		import("author.form.submit.AuthorSubmitSuppFileForm");
+		import('classes.author.form.submit.AuthorSubmitSuppFileForm');
 		$submitForm = new AuthorSubmitSuppFileForm($article);
 		$submitForm->setData('title', Locale::translate('common.untitled'));
 		$suppFileId = $submitForm->execute();
@@ -226,7 +226,7 @@ class SubmitHandler extends AuthorHandler {
 		$article =& $this->article;
 		$this->setupTemplate(true);
 
-		import("author.form.submit.AuthorSubmitSuppFileForm");
+		import('classes.author.form.submit.AuthorSubmitSuppFileForm');
 		$submitForm = new AuthorSubmitSuppFileForm($article, $suppFileId);
 
 		if ($submitForm->isLocaleResubmit()) {
@@ -249,7 +249,7 @@ class SubmitHandler extends AuthorHandler {
 		$article =& $this->article;
 		$this->setupTemplate(true);
 
-		import("author.form.submit.AuthorSubmitSuppFileForm");
+		import('classes.author.form.submit.AuthorSubmitSuppFileForm');
 		$submitForm = new AuthorSubmitSuppFileForm($article, $suppFileId);
 		$submitForm->readInputData();
 
@@ -266,7 +266,7 @@ class SubmitHandler extends AuthorHandler {
 	 * @param $args array, the first parameter is the supplementary file to delete
 	 */
 	function deleteSubmitSuppFile($args) {
-		import("file.ArticleFileManager");
+		import('classes.file.ArticleFileManager');
 
 		$articleId = Request::getUserVar('articleId');
 		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
@@ -295,7 +295,7 @@ class SubmitHandler extends AuthorHandler {
 
 		// The author must also be an editor to perform this task.
 		if (Validation::isEditor($journal->getId()) && $article->getSubmissionFileId()) {
-			import('submission.editor.EditorAction');
+			import('classes.submission.editor.EditorAction');
 			EditorAction::expediteSubmission($article);
 			Request::redirect(null, 'editor', 'submissionEditing', array($article->getId()));
 		}

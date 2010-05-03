@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('form.Form');
+import('lib.pkp.classes.form.Form');
 
 class EditCommentForm extends Form {
 
@@ -291,7 +291,7 @@ class EditCommentForm extends Form {
 	 * @param $recipients array of recipients (email address => name)
 	 */
 	function email($recipients) {
-		import('mail.ArticleMailTemplate');
+		import('classes.mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($this->article, 'SUBMISSION_COMMENT');
 		$journal =& Request::getJournal();
 		if ($journal) $email->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));

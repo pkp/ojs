@@ -19,8 +19,8 @@
 // $Id$
 
 
-import('rt.RT');
-import('rt.ojs.RTDAO');
+import('lib.pkp.classes.rt.RT');
+import('classes.rt.ojs.RTDAO');
 
 class JournalRT extends RT {
 	var $journalId;

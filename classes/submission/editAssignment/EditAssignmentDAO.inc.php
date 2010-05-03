@@ -16,7 +16,7 @@
 // $Id$
 
 
-import('submission.editAssignment.EditAssignment');
+import('classes.submission.editAssignment.EditAssignment');
 
 class EditAssignmentDAO extends DAO {
 	/**

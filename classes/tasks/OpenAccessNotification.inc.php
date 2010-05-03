@@ -19,7 +19,7 @@
 // $Id$
 
 
-import('scheduledTask.ScheduledTask');
+import('lib.pkp.classes.scheduledTask.ScheduledTask');
 
 class OpenAccessNotification extends ScheduledTask {
 
@@ -33,7 +33,7 @@ class OpenAccessNotification extends ScheduledTask {
 	function sendNotification ($users, $journal, $issue) {
 		if ($users->getCount() != 0) {
 
-			import('mail.MailTemplate');
+			import('classes.mail.MailTemplate');
 			$email = new MailTemplate('OPEN_ACCESS_NOTIFY');
 
 			$email->setSubject($email->getSubject($journal->getPrimaryLocale()));

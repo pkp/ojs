@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('rt.ojs.JournalRTAdmin');
+import('classes.rt.ojs.JournalRTAdmin');
 import('pages.rtadmin.RTAdminHandler');
 
 class RTContextHandler extends RTAdminHandler {
@@ -35,7 +35,7 @@ class RTContextHandler extends RTAdminHandler {
 		$versionId = isset($args[0])?$args[0]:0;
 		$version =& $rtDao->getVersion($versionId, $journal->getId());
 
-		import('rt.ojs.form.ContextForm');
+		import('classes.rt.ojs.form.ContextForm');
 		$contextForm = new ContextForm(null, $versionId);
 
 		if (isset($args[1]) && $args[1]=='save') {
@@ -68,7 +68,7 @@ class RTContextHandler extends RTAdminHandler {
 
 			$templateMgr->assign_by_ref('version', $version);
 
-			import('core.ArrayItemIterator');
+			import('lib.pkp.classes.core.ArrayItemIterator');
 			$templateMgr->assign_by_ref('contexts', new ArrayItemIterator($version->getContexts(), $rangeInfo->getPage(), $rangeInfo->getCount()));
 
 			$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.contexts');
@@ -89,7 +89,7 @@ class RTContextHandler extends RTAdminHandler {
 		$context =& $rtDao->getContext($contextId);
 
 		if (isset($version) && isset($context) && $context->getVersionId() == $version->getVersionId()) {
-			import('rt.ojs.form.ContextForm');
+			import('classes.rt.ojs.form.ContextForm');
 			$this->setupTemplate(true, $version, $context);
 			$contextForm = new ContextForm($contextId, $versionId);
 			$contextForm->initData();
@@ -130,7 +130,7 @@ class RTContextHandler extends RTAdminHandler {
 		$context =& $rtDao->getContext($contextId);
 
 		if (isset($version) && isset($context) && $context->getVersionId() == $version->getVersionId()) {
-			import('rt.ojs.form.ContextForm');
+			import('classes.rt.ojs.form.ContextForm');
 			$contextForm = new ContextForm($contextId, $versionId);
 			$contextForm->readInputData();
 			$contextForm->execute();

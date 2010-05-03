@@ -20,7 +20,7 @@
 // $Id$
 
 
-import('form.Form');
+import('lib.pkp.classes.form.Form');
 
 class ArticleGalleyForm extends Form {
 	/** @var int the ID of the article */
@@ -129,7 +129,7 @@ class ArticleGalleyForm extends Form {
 	 * @return int the galley ID
 	 */
 	function execute($fileName = null) {
-		import('file.ArticleFileManager');
+		import('classes.file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($this->articleId);
 		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 
@@ -149,7 +149,7 @@ class ArticleGalleyForm extends Form {
 				}
 
 				// Update file search index
-				import('search.ArticleSearchIndex');
+				import('classes.search.ArticleSearchIndex');
 				ArticleSearchIndex::updateFileIndex($this->articleId, ARTICLE_SEARCH_GALLEY_FILE, $galley->getFileId());
 			}
 
@@ -181,7 +181,7 @@ class ArticleGalleyForm extends Form {
 				$fileId = $articleFileManager->uploadPublicFile($fileName);
 
 				// Update file search index
-				import('search.ArticleSearchIndex');
+				import('classes.search.ArticleSearchIndex');
 				ArticleSearchIndex::updateFileIndex($this->articleId, ARTICLE_SEARCH_GALLEY_FILE, $fileId);
 			} else {
 				$fileId = 0;
@@ -250,7 +250,7 @@ class ArticleGalleyForm extends Form {
 	 * @param $imageName string file input key
 	 */
 	function uploadImage() {
-		import('file.ArticleFileManager');
+		import('classes.file.ArticleFileManager');
 		$fileManager = new ArticleFileManager($this->articleId);
 		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 
@@ -279,7 +279,7 @@ class ArticleGalleyForm extends Form {
 	 * @param $imageId int the file ID of the image
 	 */
 	function deleteImage($imageId) {
-		import('file.ArticleFileManager');
+		import('classes.file.ArticleFileManager');
 		$fileManager = new ArticleFileManager($this->articleId);
 		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 

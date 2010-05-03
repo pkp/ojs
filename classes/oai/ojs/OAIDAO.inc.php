@@ -16,8 +16,8 @@
 // $Id$
 
 
-import('oai.OAI');
-import('issue.Issue');
+import('lib.pkp.classes.oai.OAI');
+import('classes.issue.Issue');
 
 class OAIDAO extends DAO {
  	/** @var $oai JournalOAI parent OAI object */

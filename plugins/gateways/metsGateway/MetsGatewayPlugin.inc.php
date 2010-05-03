@@ -17,7 +17,7 @@
 
 import('classes.plugins.GatewayPlugin');
 
-import('xml.XMLCustomWriter');
+import('lib.pkp.classes.xml.XMLCustomWriter');
 
 class METSGatewayPlugin extends GatewayPlugin {
 	/**

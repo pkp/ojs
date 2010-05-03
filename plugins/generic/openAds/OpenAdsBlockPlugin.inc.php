@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('classes.plugins.BlockPlugin');
+import('lib.pkp.classes.plugins.BlockPlugin');
 
 class OpenAdsBlockPlugin extends BlockPlugin {
 	/**

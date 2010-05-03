@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('db.DAO');
+import('lib.pkp.classes.db.DAO');
 
 /* These constants are used for user-selectable search fields. */
 define('THESIS_FIELD_FIRSTNAME',	'student_first_name');

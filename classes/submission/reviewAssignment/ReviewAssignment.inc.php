@@ -594,7 +594,7 @@ class ReviewAssignment extends DataObject {
 	 */
 	function &getReviewerRecommendationOptions() {
 		// Bring in reviewer constants
-		import('submission.reviewer.ReviewerSubmission');
+		import('classes.submission.reviewer.ReviewerSubmission');
 
 		static $reviewerRecommendationOptions = array(
 			'' => 'common.chooseOne',

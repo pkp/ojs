@@ -16,7 +16,7 @@
 // $Id$
 
 
-import('submission.layoutEditor.LayoutEditorSubmission');
+import('classes.submission.layoutEditor.LayoutEditorSubmission');
 
 class LayoutEditorSubmissionDAO extends DAO {
 	/** Helper DAOs */

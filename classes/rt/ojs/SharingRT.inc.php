@@ -18,7 +18,7 @@
 
 // $Id$
 
-import('i18n.Locale');
+import('classes.i18n.Locale');
 
 class SharingRT {
 	function getLanguages() {

@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('handler.Handler');
+import('classes.handler.Handler');
 
 class ThesisHandler extends Handler {
 	/**
@@ -220,7 +220,7 @@ class ThesisHandler extends Handler {
 	function viewCaptcha($args) {
 		$this->validate();
 		$captchaId = (int) array_shift($args);
-		import('captcha.CaptchaManager');
+		import('lib.pkp.classes.captcha.CaptchaManager');
 		$captchaManager = new CaptchaManager();
 		if ($captchaManager->isEnabled()) {
 			$captchaDao =& DAORegistry::getDAO('CaptchaDAO');

@@ -15,7 +15,7 @@
 // $Id$
 
 
-import("manager.form.setup.JournalSetupForm");
+import('classes.manager.form.setup.JournalSetupForm');
 
 class JournalSetupStep5Form extends JournalSetupForm {
 	/**
@@ -124,7 +124,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 		$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 		$faviconTypes = array('.ico', '.png', '.gif');
 
-		import('file.PublicFileManager');
+		import('classes.file.PublicFileManager');
 		$fileManager = new PublicFileManager();
 		if ($fileManager->uploadedFileExists($settingName)) {
 			$type = $fileManager->getUploadedFileType($settingName);
@@ -179,7 +179,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 		$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 		$setting = $settingsDao->getSetting($journal->getId(), $settingName);
 
-		import('file.PublicFileManager');
+		import('classes.file.PublicFileManager');
 		$fileManager = new PublicFileManager();
 		if ($fileManager->removeJournalFile($journal->getId(), $locale !== null ? $setting[$locale]['uploadName'] : $setting['uploadName'] )) {
 			$returner = $settingsDao->deleteSetting($journal->getId(), $settingName, $locale);
@@ -205,7 +205,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 		$journal =& Request::getJournal();
 		$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 
-		import('file.PublicFileManager');
+		import('classes.file.PublicFileManager');
 		$fileManager = new PublicFileManager();
 		if ($fileManager->uploadedFileExists($settingName)) {
 			$type = $fileManager->getUploadedFileType($settingName);

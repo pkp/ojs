@@ -16,7 +16,7 @@
 
 
 require_once('TranslatorAction.inc.php');
-import('handler.Handler');
+import('classes.handler.Handler');
 
 class TranslatorHandler extends Handler {
 	var $plugin;
@@ -40,7 +40,7 @@ class TranslatorHandler extends Handler {
 		$rangeInfo = Handler::getRangeInfo('locales');
 
 		$templateMgr =& TemplateManager::getManager();
-		import('core.ArrayItemIterator');
+		import('lib.pkp.classes.core.ArrayItemIterator');
 		$templateMgr->assign('locales', new ArrayItemIterator(Locale::getAllLocales(), $rangeInfo->getPage(), $rangeInfo->getCount()));
 		$templateMgr->assign('masterLocale', MASTER_LOCALE);
 
@@ -80,7 +80,7 @@ class TranslatorHandler extends Handler {
 		$miscFilesRangeInfo = Handler::getRangeInfo('miscFiles');
 		$emailsRangeInfo = Handler::getRangeInfo('emails');
 
-		import('core.ArrayItemIterator');
+		import('lib.pkp.classes.core.ArrayItemIterator');
 		$templateMgr->assign('localeFiles', new ArrayItemIterator($localeFiles, $localeFilesRangeInfo->getPage(), $localeFilesRangeInfo->getCount()));
 		$templateMgr->assign('miscFiles', new ArrayItemIterator($miscFiles, $miscFilesRangeInfo->getPage(), $miscFilesRangeInfo->getCount()));
 		$templateMgr->assign('emails', new ArrayItemIterator($emails, $emailsRangeInfo->getPage(), $emailsRangeInfo->getCount()));
@@ -159,7 +159,7 @@ class TranslatorHandler extends Handler {
 		}
 
 		// Save the changes file by file.
-		import('file.EditableLocaleFile');
+		import('lib.pkp.classes.file.EditableLocaleFile');
 		foreach ($changesByFile as $filename => $changes) {
 			$file = new EditableLocaleFile($locale, $filename);
 			foreach ($changes as $key => $value) {
@@ -191,7 +191,7 @@ class TranslatorHandler extends Handler {
 		}
 
 		// Deal with email removals
-		import('file.EditableEmailFile');
+		import('lib.pkp.classes.file.EditableEmailFile');
 		$deleteEmails = Request::getUserVar('deleteEmail');
 		if (!empty($deleteEmails)) {
 			$file = new EditableEmailFile($locale, Locale::getEmailTemplateFilename($locale));
@@ -243,7 +243,7 @@ class TranslatorHandler extends Handler {
 		}
 
 
-		import('file.EditableLocaleFile');
+		import('lib.pkp.classes.file.EditableLocaleFile');
 		$localeContentsRangeInfo = Handler::getRangeInfo('localeContents');
 		$localeContents = EditableLocaleFile::load($filename);
 
@@ -269,7 +269,7 @@ class TranslatorHandler extends Handler {
 
 		$templateMgr->assign('filename', $filename);
 		$templateMgr->assign('locale', $locale);
-		import('core.ArrayItemIterator');
+		import('lib.pkp.classes.core.ArrayItemIterator');
 		$templateMgr->assign_by_ref('localeContents', new ArrayItemIterator($localeContents, $localeContentsRangeInfo->getPage(), $localeContentsRangeInfo->getCount()));
 		$templateMgr->assign('referenceLocaleContents', EditableLocaleFile::load(TranslatorAction::determineReferenceFilename($locale, $filename)));
 
@@ -311,7 +311,7 @@ class TranslatorHandler extends Handler {
 			Request::redirect(null, null, 'edit', $locale);
 		}
 
-		import('file.EditableLocaleFile');
+		import('lib.pkp.classes.file.EditableLocaleFile');
 		$changes = Request::getUserVar('changes');
 		$file = new EditableLocaleFile($locale, $filename);
 
@@ -404,7 +404,7 @@ class TranslatorHandler extends Handler {
 			Request::redirect(null, null, 'edit', $locale);
 		}
 
-		import('file.FileManager');
+		import('lib.pkp.classes.file.FileManager');
 		FileManager::copyFile(TranslatorAction::determineReferenceFilename($locale, $filename), $filename);
 		Request::redirectUrl(Request::getUserVar('redirectUrl'));
 	}
@@ -423,7 +423,7 @@ class TranslatorHandler extends Handler {
 
 		if (!in_array($emailKey, array_keys($emails))) Request::redirect(null, null, 'index');
 
-		import('file.EditableEmailFile');
+		import('lib.pkp.classes.file.EditableEmailFile');
 		$file = new EditableEmailFile($locale, Locale::getEmailTemplateFilename($locale));
 
 		$subject = Request::getUserVar('subject');
@@ -473,7 +473,7 @@ class TranslatorHandler extends Handler {
 			}
 		}
 
-		import('file.EditableEmailFile');
+		import('lib.pkp.classes.file.EditableEmailFile');
 		$file = new EditableEmailFile($locale, $targetFilename);
 
 		$subject = $this->correctCr(Request::getUserVar('subject'));

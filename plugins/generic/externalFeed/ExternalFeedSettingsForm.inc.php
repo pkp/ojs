@@ -14,7 +14,7 @@
 
 // $Id$
 
-import('form.Form');
+import('lib.pkp.classes.form.Form');
 
 class ExternalFeedSettingsForm extends Form {
 
@@ -80,7 +80,7 @@ class ExternalFeedSettingsForm extends Form {
 		$plugin =& $this->plugin;
 		$settingName = 'externalFeedStyleSheet';
 
-		import('file.PublicFileManager');
+		import('classes.file.PublicFileManager');
 		$fileManager =& new PublicFileManager();
 
 		if ($fileManager->uploadedFileExists($settingName)) {
@@ -115,7 +115,7 @@ class ExternalFeedSettingsForm extends Form {
 
 		$setting = $plugin->getSetting($journalId, $settingName);
 
-		import('file.PublicFileManager');
+		import('classes.file.PublicFileManager');
 		$fileManager =& new PublicFileManager();
 
 		if ($fileManager->removeJournalFile($journalId, $setting['uploadName'])) {

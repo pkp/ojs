@@ -19,7 +19,7 @@ class OJSPaymentAction {
 	 * Display Payments Settings Form (main payments page)
 	 */
 	 function payments($args) {
-		import('payment.ojs.form.PaymentSettingsForm');
+		import('classes.payment.ojs.form.PaymentSettingsForm');
 		$form = new PaymentSettingsForm();
 
 		$journal =& Request::getJournal();
@@ -38,7 +38,7 @@ class OJSPaymentAction {
 	  * Execute the form or display it again if there are problems
 	  */
 	 function savePaymentSettings($args) {
-		import('payment.ojs.form.PaymentSettingsForm');
+		import('classes.payment.ojs.form.PaymentSettingsForm');
 		$settingsForm = new PaymentSettingsForm();
 
 		$journal =& Request::getJournal();
@@ -104,7 +104,7 @@ class OJSPaymentAction {
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
 
 		$journal =& Request::getJournal();
-		import('payment.ojs.form.PayMethodSettingsForm');
+		import('classes.payment.ojs.form.PayMethodSettingsForm');
 		
 		$settingsForm = new PayMethodSettingsForm();
 		$settingsForm->initData();
@@ -116,7 +116,7 @@ class OJSPaymentAction {
 	 */
 	function savePayMethodSettings() {
 		$journal =& Request::getJournal();
-		import('payment.ojs.form.PayMethodSettingsForm');
+		import('classes.payment.ojs.form.PayMethodSettingsForm');
 
 		$settingsForm = new PayMethodSettingsForm();
 		$settingsForm->readInputData();

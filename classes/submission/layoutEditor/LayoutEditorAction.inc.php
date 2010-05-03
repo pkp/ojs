@@ -19,7 +19,7 @@
 // $Id$
 
 
-import('submission.common.Action');
+import('classes.submission.common.Action');
 
 class LayoutEditorAction extends Action {
 
@@ -50,7 +50,7 @@ class LayoutEditorAction extends Action {
 	 * @param $galleyId int
 	 */
 	function deleteGalley($article, $galleyId) {
-		import('file.ArticleFileManager');
+		import('classes.file.ArticleFileManager');
 
 		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley =& $galleyDao->getGalley($galleyId, $article->getId());
@@ -60,7 +60,7 @@ class LayoutEditorAction extends Action {
 
 			if ($galley->getFileId()) {
 				$articleFileManager->deleteFile($galley->getFileId());
-				import('search.ArticleSearchIndex');
+				import('classes.search.ArticleSearchIndex');
 				ArticleSearchIndex::deleteTextIndex($article->getId(), ARTICLE_SEARCH_GALLEY_FILE, $galley->getFileId());
 			}
 			if ($galley->isHTMLGalley()) {
@@ -82,7 +82,7 @@ class LayoutEditorAction extends Action {
 	 * @param $revision int (optional)
 	 */
 	function deleteArticleImage($submission, $fileId, $revision) {
-		import('file.ArticleFileManager');
+		import('classes.file.ArticleFileManager');
 		$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 		if (HookRegistry::call('LayoutEditorAction::deleteArticleImage', array(&$submission, &$fileId, &$revision))) return;
 		foreach ($submission->getGalleys() as $galley) {
@@ -120,7 +120,7 @@ class LayoutEditorAction extends Action {
 	 * @param $suppFileId int
 	 */
 	function deleteSuppFile($article, $suppFileId) {
-		import('file.ArticleFileManager');
+		import('classes.file.ArticleFileManager');
 
 		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
 
@@ -129,7 +129,7 @@ class LayoutEditorAction extends Action {
 			if ($suppFile->getFileId()) {
 				$articleFileManager = new ArticleFileManager($article->getId());
 				$articleFileManager->deleteFile($suppFile->getFileId());
-				import('search.ArticleSearchIndex');
+				import('classes.search.ArticleSearchIndex');
 				ArticleSearchIndex::deleteTextIndex($article->getId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $suppFile->getFileId());
 			}
 			$suppFileDao->deleteSuppFile($suppFile);
@@ -151,7 +151,7 @@ class LayoutEditorAction extends Action {
 			return true;
 		}
 
-		import('mail.ArticleMailTemplate');
+		import('classes.mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($submission, 'LAYOUT_COMPLETE');
 
 		$editAssignments =& $submission->getEditAssignments();
@@ -169,8 +169,8 @@ class LayoutEditorAction extends Action {
 
 			// Add log entry
 			$user =& Request::getUser();
-			import('article.log.ArticleLog');
-			import('article.log.ArticleEventLogEntry');
+			import('classes.article.log.ArticleLog');
+			import('classes.article.log.ArticleEventLogEntry');
 			ArticleLog::logEvent($submission->getArticleId(), ARTICLE_LOG_LAYOUT_COMPLETE, ARTICLE_LOG_TYPE_LAYOUT, $user->getId(), 'log.layout.layoutEditComplete', Array('editorName' => $user->getFullName(), 'articleId' => $submission->getArticleId()));
 
 			return true;
@@ -204,7 +204,7 @@ class LayoutEditorAction extends Action {
 	 * @param $submission object
 	 */
 	function uploadLayoutVersion($submission) {
-		import('file.ArticleFileManager');
+		import('classes.file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($submission->getArticleId());
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 		$layoutEditorSubmissionDao =& DAORegistry::getDAO('LayoutEditorSubmissionDAO');
@@ -233,7 +233,7 @@ class LayoutEditorAction extends Action {
 	 */
 	function viewLayoutComments($article) {
 		if (!HookRegistry::call('LayoutEditorAction::viewLayoutComments', array(&$article))) {
-			import("submission.form.comment.LayoutCommentForm");
+			import('classes.submission.form.comment.LayoutCommentForm');
 
 			$commentForm = new LayoutCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
 			$commentForm->initData();
@@ -247,7 +247,7 @@ class LayoutEditorAction extends Action {
 	 */
 	function postLayoutComment($article, $emailComment) {
 		if (!HookRegistry::call('LayoutEditorAction::postLayoutComment', array(&$article, &$emailComment))) {
-			import("submission.form.comment.LayoutCommentForm");
+			import('classes.submission.form.comment.LayoutCommentForm');
 
 			$commentForm = new LayoutCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
 			$commentForm->readInputData();
@@ -256,7 +256,7 @@ class LayoutEditorAction extends Action {
 				$commentForm->execute();
 				
 				// Send a notification to associated users
-				import('notification.NotificationManager');
+				import('lib.pkp.classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
 				foreach ($notificationUsers as $userRole) {
@@ -285,7 +285,7 @@ class LayoutEditorAction extends Action {
 	 */
 	function viewProofreadComments($article) {
 		if (!HookRegistry::call('LayoutEditorAction::viewProofreadComments', array(&$article))) {
-			import("submission.form.comment.ProofreadCommentForm");
+			import('classes.submission.form.comment.ProofreadCommentForm');
 
 			$commentForm = new ProofreadCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
 			$commentForm->initData();
@@ -299,7 +299,7 @@ class LayoutEditorAction extends Action {
 	 */
 	function postProofreadComment($article, $emailComment) {
 		if (!HookRegistry::call('LayoutEditorAction::postProofreadComment', array(&$article, &$emailComment))) {
-			import('submission.form.comment.ProofreadCommentForm');
+			import('classes.submission.form.comment.ProofreadCommentForm');
 
 			$commentForm = new ProofreadCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
 			$commentForm->readInputData();
@@ -308,7 +308,7 @@ class LayoutEditorAction extends Action {
 				$commentForm->execute();
 				
 				// Send a notification to associated users
-				import('notification.NotificationManager');
+				import('lib.pkp.classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
 				foreach ($notificationUsers as $userRole) {

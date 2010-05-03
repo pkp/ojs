@@ -16,8 +16,8 @@
 // $Id$
 
 
-import('article.ArticleGalley');
-import('article.ArticleHTMLGalley');
+import('classes.article.ArticleGalley');
+import('classes.article.ArticleHTMLGalley');
 
 class ArticleGalleyDAO extends DAO {
 	/** Helper file DAOs. */

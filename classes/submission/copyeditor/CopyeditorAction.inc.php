@@ -16,7 +16,7 @@
 // $Id$
 
 
-import('submission.common.Action');
+import('classes.submission.common.Action');
 
 class CopyeditorAction extends Action {
 
@@ -47,7 +47,7 @@ class CopyeditorAction extends Action {
 		}
 
 		$user =& Request::getUser();
-		import('mail.ArticleMailTemplate');
+		import('classes.mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($copyeditorSubmission, 'COPYEDIT_COMPLETE');
 
 		$editAssignments = $copyeditorSubmission->getEditAssignments();
@@ -71,8 +71,8 @@ class CopyeditorAction extends Action {
 			
 
 			// Add log entry
-			import('article.log.ArticleLog');
-			import('article.log.ArticleEventLogEntry');
+			import('classes.article.log.ArticleLog');
+			import('classes.article.log.ArticleEventLogEntry');
 			ArticleLog::logEvent($copyeditorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_INITIAL, ARTICLE_LOG_TYPE_COPYEDIT, $user->getId(), 'log.copyedit.initialEditComplete', Array('copyeditorName' => $user->getFullName(), 'articleId' => $copyeditorSubmission->getArticleId()));
 
 			return true;
@@ -113,7 +113,7 @@ class CopyeditorAction extends Action {
 		}
 
 		$user =& Request::getUser();
-		import('mail.ArticleMailTemplate');
+		import('classes.mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($copyeditorSubmission, 'COPYEDIT_FINAL_COMPLETE');
 
 		$editAssignments = $copyeditorSubmission->getEditAssignments();
@@ -133,7 +133,7 @@ class CopyeditorAction extends Action {
 				$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $copyeditorSubmission->getArticleId());
 
 				if (!$layoutSignoff->getFileId()) {
-					import('file.ArticleFileManager');
+					import('classes.file.ArticleFileManager');
 					$articleFileManager = new ArticleFileManager($copyeditorSubmission->getArticleId());
 					if ($layoutFileId = $articleFileManager->copyToLayoutFile($copyEdFile->getFileId(), $copyEdFile->getRevision())) {
 						$layoutSignoff->setFileId($layoutFileId);
@@ -143,8 +143,8 @@ class CopyeditorAction extends Action {
 			}
 
 			// Add log entry
-			import('article.log.ArticleLog');
-			import('article.log.ArticleEventLogEntry');
+			import('classes.article.log.ArticleLog');
+			import('classes.article.log.ArticleEventLogEntry');
 			ArticleLog::logEvent($copyeditorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_FINAL, ARTICLE_LOG_TYPE_COPYEDIT, $user->getId(), 'log.copyedit.finalEditComplete', Array('copyeditorName' => $user->getFullName(), 'articleId' => $copyeditorSubmission->getArticleId()));
 
 			return true;
@@ -201,8 +201,8 @@ class CopyeditorAction extends Action {
 			if (isset($update)) {
 				// Add log entry
 				$user =& Request::getUser();
-				import('article.log.ArticleLog');
-				import('article.log.ArticleEventLogEntry');
+				import('classes.article.log.ArticleLog');
+				import('classes.article.log.ArticleEventLogEntry');
 				ArticleLog::logEvent($copyeditorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_INITIATE, ARTICLE_LOG_TYPE_COPYEDIT, $user->getId(), 'log.copyedit.initiate', Array('copyeditorName' => $user->getFullName(), 'articleId' => $copyeditorSubmission->getArticleId()));
 			}
 		}
@@ -213,7 +213,7 @@ class CopyeditorAction extends Action {
 	 * @param $copyeditorSubmission object
 	 */
 	function uploadCopyeditVersion($copyeditorSubmission, $copyeditStage) {
-		import("file.ArticleFileManager");
+		import('classes.file.ArticleFileManager');
 		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
 		$copyeditorSubmissionDao =& DAORegistry::getDAO('CopyeditorSubmissionDAO');		
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
@@ -249,8 +249,8 @@ class CopyeditorAction extends Action {
 			$signoffDao->updateObject($signoff);
 
 			// Add log
-			import('article.log.ArticleLog');
-			import('article.log.ArticleEventLogEntry');
+			import('classes.article.log.ArticleLog');
+			import('classes.article.log.ArticleEventLogEntry');
 
 			$entry = new ArticleEventLogEntry();
 			$entry->setArticleId($copyeditorSubmission->getArticleId());
@@ -277,7 +277,7 @@ class CopyeditorAction extends Action {
 	 */
 	function viewLayoutComments($article) {
 		if (!HookRegistry::call('CopyeditorAction::viewLayoutComments', array(&$article))) {
-			import("submission.form.comment.LayoutCommentForm");
+			import('classes.submission.form.comment.LayoutCommentForm');
 
 			$commentForm = new LayoutCommentForm($article, ROLE_ID_COPYEDITOR);
 			$commentForm->initData();
@@ -291,7 +291,7 @@ class CopyeditorAction extends Action {
 	 */
 	function postLayoutComment($article, $emailComment) {
 		if (!HookRegistry::call('CopyeditorAction::postLayoutComment', array(&$article, &$emailComment))) {
-			import("submission.form.comment.LayoutCommentForm");
+			import('classes.submission.form.comment.LayoutCommentForm');
 
 			$commentForm = new LayoutCommentForm($article, ROLE_ID_COPYEDITOR);
 			$commentForm->readInputData();
@@ -300,7 +300,7 @@ class CopyeditorAction extends Action {
 				$commentForm->execute();
 
 				// Send a notification to associated users
-				import('notification.NotificationManager');
+				import('lib.pkp.classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
 				foreach ($notificationUsers as $userRole) {
@@ -329,7 +329,7 @@ class CopyeditorAction extends Action {
 	 */
 	function viewCopyeditComments($article) {
 		if (!HookRegistry::call('CopyeditorAction::viewCopyeditComments', array(&$article))) {
-			import("submission.form.comment.CopyeditCommentForm");
+			import('classes.submission.form.comment.CopyeditCommentForm');
 
 			$commentForm = new CopyeditCommentForm($article, ROLE_ID_COPYEDITOR);
 			$commentForm->initData();
@@ -343,7 +343,7 @@ class CopyeditorAction extends Action {
 	 */
 	function postCopyeditComment($article, $emailComment) {
 		if (!HookRegistry::call('CopyeditorAction::postCopyeditComment', array(&$article, &$emailComment))) {
-			import("submission.form.comment.CopyeditCommentForm");
+			import('classes.submission.form.comment.CopyeditCommentForm');
 
 			$commentForm = new CopyeditCommentForm($article, ROLE_ID_COPYEDITOR);
 			$commentForm->readInputData();
@@ -352,7 +352,7 @@ class CopyeditorAction extends Action {
 				$commentForm->execute();
 
 				// Send a notification to associated users
-				import('notification.NotificationManager');
+				import('lib.pkp.classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
 				foreach ($notificationUsers as $userRole) {

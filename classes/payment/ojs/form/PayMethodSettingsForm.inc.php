@@ -15,7 +15,7 @@
 
 // $Id$
 
-import('form.Form');
+import('lib.pkp.classes.form.Form');
 
 class PayMethodSettingsForm extends Form {
 	/** @var $errors string */

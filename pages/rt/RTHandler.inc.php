@@ -15,12 +15,12 @@
 // $Id$
 
 
-import('rt.RT');
+import('lib.pkp.classes.rt.RT');
 
-import('rt.ojs.RTDAO');
-import('rt.ojs.JournalRT');
+import('classes.rt.ojs.RTDAO');
+import('classes.rt.ojs.JournalRT');
 
-import('article.ArticleHandler');
+import('pages.article.ArticleHandler');
 
 class RTHandler extends ArticleHandler {
 	/**
@@ -304,7 +304,7 @@ class RTHandler extends ArticleHandler {
 			$request->redirect(null, $router->getRequestedPage($request));
 		}
 
-		import('mail.MailTemplate');
+		import('classes.mail.MailTemplate');
 		$email = new MailTemplate('EMAIL_LINK');
 
 		if ($request->getUserVar('send') && !$email->hasErrors()) {
@@ -354,7 +354,7 @@ class RTHandler extends ArticleHandler {
 			$request->redirect(null, $router->getRequestedPage($request));
 		}
 
-		import('mail.MailTemplate');
+		import('classes.mail.MailTemplate');
 		$email = new MailTemplate();
 		$email->setAddressFieldsEnabled(false);
 

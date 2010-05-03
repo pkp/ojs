@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('sectionEditor.SectionEditorHandler');
+import('pages.sectionEditor.SectionEditorHandler');
 
 define('EDITOR_SECTION_HOME', 0);
 define('EDITOR_SECTION_SUBMISSIONS', 1);
@@ -25,7 +25,7 @@ define('EDITOR_SECTION_ISSUES', 2);
 define('FILTER_EDITOR_ALL', 0);
 define('FILTER_EDITOR_ME', 1);
 
-import ('submission.editor.EditorAction');
+import ('classes.submission.editor.EditorAction');
 
 class EditorHandler extends SectionEditorHandler {
 	/**
@@ -60,7 +60,7 @@ class EditorHandler extends SectionEditorHandler {
 		$templateMgr->assign('dateFieldOptions', $this->getDateFieldOptions());
 
 		// Bring in the print_issue_id function (FIXME?)
-		import('issue.IssueAction');
+		import('classes.issue.IssueAction');
 		$issueAction = new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
 
@@ -110,7 +110,7 @@ class EditorHandler extends SectionEditorHandler {
 					$submissionsArray = array_reverse($submissionsArray);
 				}
 				// Convert submission array back to an ItemIterator class
-				import('core.ArrayItemIterator');
+				import('lib.pkp.classes.core.ArrayItemIterator');
 				$submissions =& ArrayItemIterator::fromRangeInfo($submissionsArray, $rangeInfo);
 			}  else {
 				$rawSubmissions =& $editorSubmissionDao->getUnfilteredEditorSubmissions(
@@ -277,7 +277,7 @@ class EditorHandler extends SectionEditorHandler {
 		$templateMgr->assign('fieldOptions', $this->getSearchFieldOptions());
 		$templateMgr->assign('dateFieldOptions', $this->getDateFieldOptions());
 
-		import('issue.IssueAction');
+		import('classes.issue.IssueAction');
 		$issueAction = new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
 
@@ -496,7 +496,7 @@ class EditorHandler extends SectionEditorHandler {
 
 		if ($article->getJournalId() == $journal->getId() && ($status == STATUS_DECLINED || $status == STATUS_ARCHIVED)) {
 			// Delete article files
-			import('file.ArticleFileManager');
+			import('classes.file.ArticleFileManager');
 			$articleFileManager = new ArticleFileManager($articleId);
 			$articleFileManager->deleteArticleTree();
 
@@ -525,7 +525,7 @@ class EditorHandler extends SectionEditorHandler {
 		else if ($level==EDITOR_SECTION_SUBMISSIONS) $pageHierarchy = array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'editor'), 'user.role.editor'), array(Request::url(null, 'editor', 'submissions'), 'article.submissions'));
 		else if ($level==EDITOR_SECTION_ISSUES) $pageHierarchy = array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, $isLayoutEditor?'layoutEditor':'editor'), $isLayoutEditor?'user.role.layoutEditor':'user.role.editor'), array(Request::url(null, $isLayoutEditor?'layoutEditor':'editor', 'futureIssues'), 'issue.issues'));
 
-		import('submission.sectionEditor.SectionEditorAction');
+		import('classes.submission.sectionEditor.SectionEditorAction');
 		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'editor');
 		if (isset($submissionCrumb)) {
 			$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);

@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('plugins.BlockPlugin');
+import('lib.pkp.classes.plugins.BlockPlugin');
 
 class ExternalFeedBlockPlugin extends BlockPlugin {
 	/**

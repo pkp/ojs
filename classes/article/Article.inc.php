@@ -43,7 +43,7 @@ define ('COMMENTS_SECTION_DEFAULT', 0);
 define ('COMMENTS_DISABLE', 1);
 define ('COMMENTS_ENABLE', 2);
 
-import('submission.Submission');
+import('lib.pkp.classes.submission.Submission');
 
 class Article extends Submission {
 	/**

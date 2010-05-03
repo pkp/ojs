@@ -126,10 +126,10 @@ class IssueManagementHandler extends EditorHandler {
 		$this->validate();
 		$this->setupTemplate(EDITOR_SECTION_ISSUES);
 
-		import('issue.form.IssueForm');
+		import('classes.issue.form.IssueForm');
 
 		$templateMgr =& TemplateManager::getManager();
-		import('issue.IssueAction');
+		import('classes.issue.IssueAction');
 		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 		$templateMgr->assign('helpTopicId', 'publishing.createIssue');
 
@@ -154,7 +154,7 @@ class IssueManagementHandler extends EditorHandler {
 		$this->validate();
 		$this->setupTemplate(EDITOR_SECTION_ISSUES);
 
-		import('issue.form.IssueForm');
+		import('classes.issue.form.IssueForm');
 		if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
 			$issueForm = new IssueForm('editor/issues/createIssue.tpl');
 		} else {
@@ -168,7 +168,7 @@ class IssueManagementHandler extends EditorHandler {
 			$this->futureIssues();
 		} else {
 			$templateMgr =& TemplateManager::getManager();
-			import('issue.IssueAction');
+			import('classes.issue.IssueAction');
 			$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 			$templateMgr->assign('helpTopicId', 'publishing.createIssue');
 			$issueForm->display();
@@ -185,10 +185,10 @@ class IssueManagementHandler extends EditorHandler {
 		$this->setupTemplate(EDITOR_SECTION_ISSUES);
 
 		$templateMgr =& TemplateManager::getManager();
-		import('issue.IssueAction');
+		import('classes.issue.IssueAction');
 		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 
-		import('issue.form.IssueForm');
+		import('classes.issue.form.IssueForm');
 
 		if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
 			$issueForm = new IssueForm('editor/issues/issueData.tpl');
@@ -224,10 +224,10 @@ class IssueManagementHandler extends EditorHandler {
 		$journal =& Request::getJournal();
 		$journalId = $journal->getId();
 
-		import('issue.IssueAction');
+		import('classes.issue.IssueAction');
 		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 
-		import('issue.form.IssueForm');
+		import('classes.issue.form.IssueForm');
 		if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
 			$issueForm = new IssueForm('editor/issues/issueData.tpl');
 		} else {
@@ -255,7 +255,7 @@ class IssueManagementHandler extends EditorHandler {
 		$this->validate($issueId, true);
 		$issue =& $this->issue;
 
-		import('file.PublicFileManager');
+		import('classes.file.PublicFileManager');
 		$journal =& Request::getJournal();
 		$publicFileManager = new PublicFileManager();
 		$publicFileManager->removeJournalFile($journal->getId(),$issue->getFileName($formLocale));
@@ -278,7 +278,7 @@ class IssueManagementHandler extends EditorHandler {
 		$this->validate($issueId, true);
 		$issue =& $this->issue;
 
-		import('file.PublicFileManager');
+		import('classes.file.PublicFileManager');
 		$journal =& Request::getJournal();
 		$publicFileManager = new PublicFileManager();
 		$publicFileManager->removeJournalFile($journal->getId(),$issue->getStyleFileName());
@@ -361,7 +361,7 @@ class IssueManagementHandler extends EditorHandler {
 			ARTICLE_ACCESS_OPEN => Locale::Translate('editor.issues.open')
 		));
 
-		import('issue.IssueAction');
+		import('classes.issue.IssueAction');
 		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 		$templateMgr->assign('helpTopicId', 'publishing.tableOfContents');
 		$templateMgr->display('editor/issues/issueToc.tpl');
@@ -612,7 +612,7 @@ class IssueManagementHandler extends EditorHandler {
 		$issueDao->updateCurrentIssue($journalId,$issue);
 
 		// Send a notification to associated users
-		import('notification.NotificationManager');
+		import('lib.pkp.classes.notification.NotificationManager');
 		$notificationManager = new NotificationManager();
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$notificationUsers = array();
@@ -676,7 +676,7 @@ class IssueManagementHandler extends EditorHandler {
 		$user =& Request::getUser();
 		$templateMgr =& TemplateManager::getManager();
 
-		import('mail.MassMail');
+		import('lib.pkp.classes.mail.MassMail');
 		$email = new MassMail('PUBLISH_NOTIFY');
 
 		if (Request::getUserVar('send') && !$email->hasErrors()) {

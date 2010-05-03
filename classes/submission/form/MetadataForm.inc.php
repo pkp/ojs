@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('form.Form');
+import('lib.pkp.classes.form.Form');
 
 class MetadataForm extends Form {
 	/** @var Article current article */
@@ -182,7 +182,7 @@ class MetadataForm extends Form {
 		}
 
 		if ($this->isEditor) {
-			import('article.Article');
+			import('classes.article.Article');
 			$hideAuthorOptions = array(
 				AUTHOR_TOC_DEFAULT => Locale::Translate('editor.article.hideTocAuthorDefault'),
 				AUTHOR_TOC_HIDE => Locale::Translate('editor.article.hideTocAuthorHide'),
@@ -255,7 +255,7 @@ class MetadataForm extends Form {
 		$section =& $sectionDao->getSection($article->getSectionId());
 		$article->setAbstract($this->getData('abstract'), null); // Localized
 
-		import('file.PublicFileManager');
+		import('classes.file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
 		if ($publicFileManager->uploadedFileExists('coverPage')) {
 			$journal = Request::getJournal();
@@ -357,7 +357,7 @@ class MetadataForm extends Form {
 		$articleDao->updateArticle($article);
 
 		// Update search index
-		import('search.ArticleSearchIndex');
+		import('classes.search.ArticleSearchIndex');
 		ArticleSearchIndex::indexArticleMetadata($article);
 
 		return $article->getId();

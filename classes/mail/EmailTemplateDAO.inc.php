@@ -16,8 +16,8 @@
 // $Id$
 
 
-import('mail.PKPEmailTemplateDAO');
-import('mail.EmailTemplate');
+import('lib.pkp.classes.mail.PKPEmailTemplateDAO');
+import('lib.pkp.classes.mail.EmailTemplate');
 
 class EmailTemplateDAO extends PKPEmailTemplateDAO {
 	/**

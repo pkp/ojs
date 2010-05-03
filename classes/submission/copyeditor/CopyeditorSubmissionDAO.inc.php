@@ -16,7 +16,7 @@
 // $Id$
 
 
-import('submission.copyeditor.CopyeditorSubmission');
+import('classes.submission.copyeditor.CopyeditorSubmission');
 
 class CopyeditorSubmissionDAO extends DAO {
 	var $articleDao;

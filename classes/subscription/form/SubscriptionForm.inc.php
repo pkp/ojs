@@ -19,7 +19,7 @@
 // $Id$
 
 
-import('form.Form');
+import('lib.pkp.classes.form.Form');
 
 class SubscriptionForm extends Form {
 
@@ -298,7 +298,7 @@ class SubscriptionForm extends Form {
 			'subscriptionContactSignature' => $subscriptionContactSignature
 		);
 
-		import('mail.MailTemplate');
+		import('classes.mail.MailTemplate');
 		$mail = new MailTemplate($mailTemplateKey);
 		$mail->setFrom($subscriptionEmail, $subscriptionName);
 		$mail->addRecipient($user->getEmail(), $user->getFullName());

@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('security.Role');
+import('classes.security.Role');
 
 class Validation {
 

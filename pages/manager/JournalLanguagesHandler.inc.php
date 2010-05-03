@@ -31,7 +31,7 @@ class JournalLanguagesHandler extends ManagerHandler {
 		$this->validate();
 		$this->setupTemplate(true);
 
-		import('manager.form.LanguageSettingsForm');
+		import('classes.manager.form.LanguageSettingsForm');
 
 		$settingsForm = new LanguageSettingsForm();
 		$settingsForm->initData();
@@ -47,14 +47,14 @@ class JournalLanguagesHandler extends ManagerHandler {
 		$this->validate();
 		$this->setupTemplate(true);
 
-		import('manager.form.LanguageSettingsForm');
+		import('classes.manager.form.LanguageSettingsForm');
 
 		$settingsForm = new LanguageSettingsForm();
 		$settingsForm->readInputData();
 
 		if ($settingsForm->validate()) {
 			$settingsForm->execute();
-			import('notification.NotificationManager');
+			import('lib.pkp.classes.notification.NotificationManager');
 			$notificationManager = new NotificationManager();
 			$notificationManager->createTrivialNotification('notification.notification', 'common.changesSaved');
 			$request->redirect(null, null, 'index');
@@ -92,7 +92,7 @@ class JournalLanguagesHandler extends ManagerHandler {
 		);
 
 		// Display a notification
-		import('notification.NotificationManager');
+		import('lib.pkp.classes.notification.NotificationManager');
 		$notificationManager = new NotificationManager();
 		$notificationManager->createTrivialNotification('notification.notification', 'common.changesSaved');
 		$request->redirect(null, null, 'languages');

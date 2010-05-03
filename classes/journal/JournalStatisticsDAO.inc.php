@@ -32,7 +32,7 @@ class JournalStatisticsDAO extends DAO {
 	 */
 	function getArticleStatistics($journalId, $sectionIds = null, $dateStart = null, $dateEnd = null) {
 		// Bring in status constants
-		import('article.Article');
+		import('classes.article.Article');
 
 		$params = array($journalId);
 		if (!empty($sectionIds)) {
@@ -105,7 +105,7 @@ class JournalStatisticsDAO extends DAO {
 					}
 				}
 
-				import('submission.common.Action');
+				import('classes.submission.common.Action');
 				switch ($row['decision']) {
 					case SUBMISSION_EDITOR_DECISION_ACCEPT:
 						$returner['submissionsAccept']++;

@@ -257,7 +257,7 @@ class OJSCompletedPaymentDAO extends DAO {
 	 * @return CompletedPayment
 	 */
 	function &_returnPaymentFromRow(&$row) {
-		import('payment.ojs.OJSCompletedPayment');
+		import('classes.payment.ojs.OJSCompletedPayment');
 
 		$payment = new OJSCompletedPayment();
 		$payment->setTimestamp($this->datetimeFromDB($row['timestamp']));

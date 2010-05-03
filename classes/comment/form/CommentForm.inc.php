@@ -20,7 +20,7 @@
 // $Id$
 
 
-import('form.Form');
+import('lib.pkp.classes.form.Form');
 
 class CommentForm extends Form {
 
@@ -53,7 +53,7 @@ class CommentForm extends Form {
 		$commentDao =& DAORegistry::getDAO('CommentDAO');
 		$this->comment =& $commentDao->getComment($commentId, $articleId);
 
-		import('captcha.CaptchaManager');
+		import('lib.pkp.classes.captcha.CaptchaManager');
 		$captchaManager = new CaptchaManager();
 		$this->captchaEnabled = ($captchaManager->isEnabled() && Config::getVar('captcha', 'captcha_on_comments'))?true:false;
 
@@ -116,7 +116,7 @@ class CommentForm extends Form {
 		}
 
 		if ($this->captchaEnabled) {
-			import('captcha.CaptchaManager');
+			import('lib.pkp.classes.captcha.CaptchaManager');
 			$captchaManager = new CaptchaManager();
 			$captcha =& $captchaManager->createCaptcha();
 			if ($captcha) {

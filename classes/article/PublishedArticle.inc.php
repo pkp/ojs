@@ -16,7 +16,7 @@
 // $Id$
 
 
-import('article.Article');
+import('classes.article.Article');
 
 // Access status
 define('ARTICLE_ACCESS_ISSUE_DEFAULT', 0);

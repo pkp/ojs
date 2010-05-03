@@ -15,7 +15,7 @@
 
 // $Id$
 
-import('form.Form');
+import('lib.pkp.classes.form.Form');
 
 class PaymentSettingsForm extends Form {
 	/** @var validCurrencies array keys are valid subscription type currencies */

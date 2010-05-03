@@ -13,7 +13,7 @@
  *
  */
 
-import('db.DAO');
+import('lib.pkp.classes.db.DAO');
 
 class PayPalDAO extends DAO {
 

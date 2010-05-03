@@ -12,7 +12,7 @@
  *
  */
 
-import('classes.plugins.GenericPlugin');
+import('lib.pkp.classes.plugins.GenericPlugin');
 
 class CustomBlockManagerPlugin extends GenericPlugin {
 	function getDisplayName() {

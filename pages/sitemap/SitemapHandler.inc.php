@@ -15,8 +15,8 @@
 // $Id$
 
 
-import('xml.XMLCustomWriter');
-import('handler.Handler');
+import('lib.pkp.classes.xml.XMLCustomWriter');
+import('classes.handler.Handler');
 
 define('SITEMAP_XSD_URL', 'http://www.sitemaps.org/schemas/sitemap/0.9');
 

@@ -18,7 +18,7 @@
 
 // $Id$
 
-import('form.Form');
+import('lib.pkp.classes.form.Form');
 
 class UserIndividualSubscriptionForm extends Form {
 
@@ -128,7 +128,7 @@ class UserIndividualSubscriptionForm extends Form {
 		$insert = false;
 
 		if (!isset($this->subscription)) {
-			import('subscription.IndividualSubscription');
+			import('classes.subscription.IndividualSubscription');
 			$subscription = new IndividualSubscription();
 			$subscription->setJournalId($journalId);
 			$subscription->setUserId($this->userId);
@@ -140,7 +140,7 @@ class UserIndividualSubscriptionForm extends Form {
 			$subscription =& $this->subscription;
 		}
 
-		import('payment.ojs.OJSPaymentManager');
+		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
 		$paymentPlugin =& $paymentManager->getPaymentPlugin();
 		

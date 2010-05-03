@@ -59,7 +59,7 @@ class AdminJournalHandler extends AdminHandler {
 		$this->validate();
 		$this->setupTemplate();
 
-		import('admin.form.JournalSiteSettingsForm');
+		import('classes.admin.form.JournalSiteSettingsForm');
 
 		if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
 			$settingsForm = new JournalSiteSettingsForm(!isset($args) || empty($args) ? null : $args[0]);
@@ -84,7 +84,7 @@ class AdminJournalHandler extends AdminHandler {
 		$this->validate();
 		$this->setupTemplate();
 
-		import('admin.form.JournalSiteSettingsForm');
+		import('classes.admin.form.JournalSiteSettingsForm');
 
 		if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
 			$settingsForm = new JournalSiteSettingsForm($request->getUserVar('journalId'));
@@ -98,7 +98,7 @@ class AdminJournalHandler extends AdminHandler {
 			PluginRegistry::loadCategory('blocks');
 			$settingsForm->execute();
 
-			import('notification.NotificationManager');
+			import('lib.pkp.classes.notification.NotificationManager');
 			$notificationManager = new NotificationManager();
 			$notificationManager->createTrivialNotification('notification.notification', 'common.changesSaved');
 			$request->redirect(null, null, 'journals');
@@ -123,13 +123,13 @@ class AdminJournalHandler extends AdminHandler {
 			if ($journalDao->deleteJournalById($journalId)) {
 				// Delete journal file tree
 				// FIXME move this somewhere better.
-				import('file.FileManager');
+				import('lib.pkp.classes.file.FileManager');
 				$fileManager = new FileManager();
 
 				$journalPath = Config::getVar('files', 'files_dir') . '/journals/' . $journalId;
 				$fileManager->rmtree($journalPath);
 
-				import('file.PublicFileManager');
+				import('classes.file.PublicFileManager');
 				$publicFileManager = new PublicFileManager();
 				$publicFileManager->rmtree($publicFileManager->getJournalFilesPath($journalId));
 			}

@@ -16,7 +16,7 @@
 // $Id$
 
 
-import ('issue.Issue');
+import ('classes.issue.Issue');
 
 class IssueDAO extends DAO {
 	var $caches;
@@ -403,7 +403,7 @@ class IssueDAO extends DAO {
 	 * @param $issue object issue
 	 */
 	function deleteIssue(&$issue) {
-		import('file.PublicFileManager');
+		import('classes.file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
 
 		if (is_array($issue->getFileName(null))) foreach ($issue->getFileName(null) as $fileName) {

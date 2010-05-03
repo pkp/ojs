@@ -11,7 +11,7 @@
  * Operations for retrieving and modifying StaticPages objects.
  *
  */
-import('db.DAO');
+import('lib.pkp.classes.db.DAO');
 
 class StaticPagesDAO extends DAO {
 

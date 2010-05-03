@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('form.Form');
+import('lib.pkp.classes.form.Form');
 
 class SubscriptionTypeForm extends Form {
 	/** @var typeId int the ID of the subscription type being edited */

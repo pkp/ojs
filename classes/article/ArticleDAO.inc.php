@@ -16,7 +16,7 @@
 // $Id$
 
 
-import('article.Article');
+import('classes.article.Article');
 
 class ArticleDAO extends DAO {
 	var $authorDao;
@@ -363,7 +363,7 @@ class ArticleDAO extends DAO {
 		$suppFileDao->deleteSuppFilesByArticle($articleId);
 
 		// Delete article files -- first from the filesystem, then from the database
-		import('file.ArticleFileManager');
+		import('classes.file.ArticleFileManager');
 		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
 		$articleFiles =& $articleFileDao->getArticleFilesByArticle($articleId);
 

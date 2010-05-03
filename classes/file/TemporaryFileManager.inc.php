@@ -16,7 +16,7 @@
 // $Id$
 
 
-import('file.PKPTemporaryFileManager');
+import('lib.pkp.classes.file.PKPTemporaryFileManager');
 
 class TemporaryFileManager extends PKPTemporaryFileManager {
 	/**

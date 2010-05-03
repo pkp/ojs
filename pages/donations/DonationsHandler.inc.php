@@ -20,7 +20,7 @@
 // $Id$
 
 
-import('handler.Handler');
+import('classes.handler.Handler');
 
 class DonationsHandler extends Handler {
 	/**
@@ -30,7 +30,7 @@ class DonationsHandler extends Handler {
 		parent::Handler();
 	}
 	function index( $args ) {
-		import('payment.ojs.OJSPaymentManager');
+		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
 		$journal =& Request::getJournal();
 

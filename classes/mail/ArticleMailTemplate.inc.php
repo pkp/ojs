@@ -17,8 +17,8 @@
 // $Id$
 
 
-import('mail.MailTemplate');
-import('article.log.ArticleEmailLogEntry'); // Bring in log constants
+import('classes.mail.MailTemplate');
+import('classes.article.log.ArticleEmailLogEntry'); // Bring in log constants
 
 class ArticleMailTemplate extends MailTemplate {
 
@@ -122,8 +122,8 @@ class ArticleMailTemplate extends MailTemplate {
 	 * Save the email in the article email log.
 	 */
 	function log() {
-		import('article.log.ArticleEmailLogEntry');
-		import('article.log.ArticleLog');
+		import('classes.article.log.ArticleEmailLogEntry');
+		import('classes.article.log.ArticleLog');
 		$entry = new ArticleEmailLogEntry();
 		$article =& $this->article;
 
@@ -144,7 +144,7 @@ class ArticleMailTemplate extends MailTemplate {
 		$logEntryId = ArticleLog::logEmailEntry($article->getId(), $entry);
 
 		// Add attachments
-		import('file.ArticleFileManager');
+		import('classes.file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($article->getId());
 		foreach ($this->getAttachmentFiles() as $attachment) {
 			$articleFileManager->temporaryFileToArticleFile(

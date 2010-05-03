@@ -15,7 +15,7 @@
 // $Id$
 
 
-import("author.form.submit.AuthorSubmitForm");
+import('classes.author.form.submit.AuthorSubmitForm');
 
 class AuthorSubmitStep4Form extends AuthorSubmitForm {
 	/**

@@ -183,7 +183,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley =& $galleyDao->getGalley($galleyId, $articleId);
 
-		import('file.ArticleFileManager'); // FIXME
+		import('classes.file.ArticleFileManager'); // FIXME
 
 		if (isset($galley)) {
 			if ($galley->isHTMLGalley()) {

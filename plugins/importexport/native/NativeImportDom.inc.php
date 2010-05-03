@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('xml.XMLCustomWriter');
+import('lib.pkp.classes.xml.XMLCustomWriter');
 
 class NativeImportDom {
 	function importArticles(&$journal, &$nodes, &$issue, &$section, &$articles, &$errors, &$user, $isCommandLine) {
@@ -312,7 +312,7 @@ class NativeImportDom {
 		if (($node = $coverNode->getChildByName('caption'))) $issue->setCoverPageDescription($node->getValue(), $locale);
 
 		if (($node = $coverNode->getChildByName('image'))) {
-			import('file.PublicFileManager');
+			import('classes.file.PublicFileManager');
 			$publicFileManager = new PublicFileManager();
 			$newName = 'cover_issue_' . $issue->getId()."_{$locale}"  . '.';
 
@@ -382,7 +382,7 @@ class NativeImportDom {
 		if (($node = $coverNode->getChildByName('altText'))) $article->setCoverPageAltText($node->getValue(), $locale);
 
 		if (($node = $coverNode->getChildByName('image'))) {
-			import('file.PublicFileManager');
+			import('classes.file.PublicFileManager');
 			$publicFileManager = new PublicFileManager();
 			$newName = 'cover_article_' . $article->getId()."_{$locale}"  . '.';
 
@@ -815,8 +815,8 @@ class NativeImportDom {
 		$signoffDao->updateObject($layoutProofSignoff);
 
 		// Log the import in the article event log.
-		import('article.log.ArticleLog');
-		import('article.log.ArticleEventLogEntry');
+		import('classes.article.log.ArticleLog');
+		import('classes.article.log.ArticleEventLogEntry');
 		ArticleLog::logEvent(
 			$article->getId(),
 			ARTICLE_LOG_ARTICLE_IMPORT,
@@ -851,7 +851,7 @@ class NativeImportDom {
 		$publishedArticleDao->resequencePublishedArticles($section->getId(), $issue->getId());
 
 		/* --- Galleys (html or otherwise handled simultaneously) --- */
-		import('file.ArticleFileManager');
+		import('classes.file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($article->getId());
 
 		/* --- Handle galleys --- */
@@ -883,7 +883,7 @@ class NativeImportDom {
 		if ($hasErrors) return false;
 
 		// Index the inserted article.
-		import('search.ArticleSearchIndex');
+		import('classes.search.ArticleSearchIndex');
 		ArticleSearchIndex::indexArticleMetadata($article);
 		ArticleSearchIndex::indexArticleFiles($article);
 

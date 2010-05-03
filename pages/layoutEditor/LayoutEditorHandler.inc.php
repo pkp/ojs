@@ -15,8 +15,8 @@
 // $Id$
 
 
-import('submission.layoutEditor.LayoutEditorAction');
-import('handler.Handler');
+import('classes.submission.layoutEditor.LayoutEditorAction');
+import('classes.handler.Handler');
 
 class LayoutEditorHandler extends Handler {
 	/**
@@ -107,7 +107,7 @@ class LayoutEditorHandler extends Handler {
 			SUBMISSION_FIELD_DATE_PROOFREADING_COMPLETE => 'submissions.proofreadingComplete'
 		));
 
-		import('issue.IssueAction');
+		import('classes.issue.IssueAction');
 		$issueAction = new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
 		$templateMgr->assign('helpTopicId', 'editorial.layoutEditorsRole.submissions');
@@ -180,7 +180,7 @@ class LayoutEditorHandler extends Handler {
 		$pageHierarchy = $subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'layoutEditor'), 'user.role.layoutEditor'))
 				: array(array(Request::url(null, 'user'), 'navigation.user'));
 
-		import('submission.sectionEditor.SectionEditorAction');
+		import('classes.submission.sectionEditor.SectionEditorAction');
 		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'layoutEditor');
 		if (isset($submissionCrumb)) {
 			$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
@@ -194,7 +194,7 @@ class LayoutEditorHandler extends Handler {
 	 */
 	function instructions($args) {
 		$this->setupTemplate();
-		import('submission.proofreader.ProofreaderAction');
+		import('classes.submission.proofreader.ProofreaderAction');
 		if (!isset($args[0]) || !LayoutEditorAction::instructions($args[0], array('layout', 'proof', 'referenceLinking'))) {
 			Request::redirect(null, Request::getRequestedPage());
 		}

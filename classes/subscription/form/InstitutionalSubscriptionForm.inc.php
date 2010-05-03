@@ -18,7 +18,7 @@
 
 // $Id$
 
-import('subscription.form.SubscriptionForm');
+import('classes.subscription.form.SubscriptionForm');
 
 class InstitutionalSubscriptionForm extends SubscriptionForm {
 	/**
@@ -134,7 +134,7 @@ class InstitutionalSubscriptionForm extends SubscriptionForm {
 	function execute() {
 		$insert = false;
 		if (!isset($this->subscription)) {
-			import('subscription.InstitutionalSubscription');
+			import('classes.subscription.InstitutionalSubscription');
 			$this->subscription = new InstitutionalSubscription();
 			$insert = true;
 		}

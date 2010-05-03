@@ -18,8 +18,8 @@
 // Filter section
 define('FILTER_SECTION_ALL', 0);
 
-import('submission.sectionEditor.SectionEditorAction');
-import('handler.Handler');
+import('classes.submission.sectionEditor.SectionEditorAction');
+import('classes.handler.Handler');
 
 class SectionEditorHandler extends Handler {
 	/**
@@ -149,7 +149,7 @@ class SectionEditorHandler extends Handler {
 			SUBMISSION_FIELD_DATE_PROOFREADING_COMPLETE => 'submissions.proofreadingComplete'
 		));
 
-		import('issue.IssueAction');
+		import('classes.issue.IssueAction');
 		$issueAction = new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
 		$templateMgr->assign('sort', $sort);
@@ -178,7 +178,7 @@ class SectionEditorHandler extends Handler {
 		$pageHierarchy = $subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, $isEditor?'editor':'sectionEditor'), $isEditor?'user.role.editor':'user.role.sectionEditor'), array(Request::url(null, 'sectionEditor'), 'article.submissions'))
 			: array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, $isEditor?'editor':'sectionEditor'), $isEditor?'user.role.editor':'user.role.sectionEditor'));
 
-		import('submission.sectionEditor.SectionEditorAction');
+		import('classes.submission.sectionEditor.SectionEditorAction');
 		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'sectionEditor');
 		if (isset($submissionCrumb)) {
 			$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
@@ -192,7 +192,7 @@ class SectionEditorHandler extends Handler {
 	 */
 	function instructions($args) {
 		$this->setupTemplate();
-		import('submission.proofreader.ProofreaderAction');
+		import('classes.submission.proofreader.ProofreaderAction');
 		if (!isset($args[0]) || !ProofreaderAction::instructions($args[0], array('copy', 'proof'))) {
 			Request::redirect(null, null, 'index');
 		}

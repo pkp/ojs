@@ -16,10 +16,10 @@
 // $Id$
 
 
-import('rt.ojs.RTDAO');
-import('rt.ojs.JournalRT');
-import('handler.Handler');
-import('rt.ojs.SharingRT');
+import('classes.rt.ojs.RTDAO');
+import('classes.rt.ojs.JournalRT');
+import('classes.handler.Handler');
+import('classes.rt.ojs.SharingRT');
 
 class ArticleHandler extends Handler {
 	/** journal associated with the request **/
@@ -111,7 +111,7 @@ class ArticleHandler extends Handler {
 		if (!$galley) {
 			// Get the subscription status if displaying the abstract;
 			// if access is open, we can display links to the full text.
-			import('issue.IssueAction');
+			import('classes.issue.IssueAction');
 
 			// The issue may not exist, if this is an editorial user
 			// and scheduling hasn't been completed yet for the article.
@@ -124,7 +124,7 @@ class ArticleHandler extends Handler {
 
 			$templateMgr->assign('showGalleyLinks', $journal->getSetting('showGalleyLinks'));
 
-			import('payment.ojs.OJSPaymentManager');
+			import('classes.payment.ojs.OJSPaymentManager');
 			$paymentManager =& OJSPaymentManager::getManager();
 			if ( $paymentManager->onlyPdfEnabled() ) {
 				$templateMgr->assign('restrictOnlyPdf', true);
@@ -136,7 +136,7 @@ class ArticleHandler extends Handler {
 			// Article cover page.
 			$locale = Locale::getLocale();
 			if (isset($article) && $article->getLocalizedFileName() && $article->getLocalizedShowCoverPage() && !$article->getLocalizedHideCoverPageAbstract($locale)) {
-				import('file.PublicFileManager');
+				import('classes.file.PublicFileManager');
 				$publicFileManager = new PublicFileManager();
 				$coverPagePath = $request->getBaseUrl() . '/';
 				$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getId()) . '/';
@@ -336,7 +336,7 @@ class ArticleHandler extends Handler {
 		}
 
 		if (!HookRegistry::call('$this->viewFile', array(&$article, &$galley, &$fileId))) {
-			import('submission.common.Action');
+			import('classes.submission.common.Action');
 			Action::viewFile($article->getId(), $fileId);
 		}
 	}
@@ -363,7 +363,7 @@ class ArticleHandler extends Handler {
 		if ($galley) $galleyDao->incrementViews($galley->getId());
 
 		if ($article && $galley && !HookRegistry::call('$this->downloadFile', array(&$article, &$galley))) {
-			import('file.ArticleFileManager');
+			import('classes.file.ArticleFileManager');
 			$articleFileManager = new ArticleFileManager($article->getId());
 			$articleFileManager->downloadFile($galley->getFileId());
 		}
@@ -390,7 +390,7 @@ class ArticleHandler extends Handler {
 		}
 
 		if ($article && $suppFile) {
-			import('file.ArticleFileManager');
+			import('classes.file.ArticleFileManager');
 			$articleFileManager = new ArticleFileManager($article->getId());
 			if ($suppFile->isInlineable()) {
 				$articleFileManager->viewFile($suppFile->getFileId());
@@ -411,7 +411,7 @@ class ArticleHandler extends Handler {
 		$router =& $request->getRouter();
 		parent::validate(null, $request);
 
-		import('issue.IssueAction');
+		import('classes.issue.IssueAction');
 
 		$journal =& $router->getContext($request);
 		$journalId = $journal->getId();
@@ -463,7 +463,7 @@ class ArticleHandler extends Handler {
 
 				if (!(!$subscriptionRequired || $publishedArticle->getAccessStatus() == ARTICLE_ACCESS_OPEN || $subscribedUser)) {
 					// if payment information is enabled,
-					import('payment.ojs.OJSPaymentManager');
+					import('classes.payment.ojs.OJSPaymentManager');
 					$paymentManager =& OJSPaymentManager::getManager();
 
 					if ( $paymentManager->purchaseArticleEnabled() || $paymentManager->membershipEnabled() ) {

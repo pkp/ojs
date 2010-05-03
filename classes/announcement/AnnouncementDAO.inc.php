@@ -15,8 +15,8 @@
 
 // $Id$
 
-import('announcement.Announcement');
-import('announcement.PKPAnnouncementDAO');
+import('classes.announcement.Announcement');
+import('lib.pkp.classes.announcement.PKPAnnouncementDAO');
 
 class AnnouncementDAO extends PKPAnnouncementDAO {
 

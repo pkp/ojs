@@ -49,7 +49,7 @@ class AdminLanguagesHandler extends AdminHandler {
 		$templateMgr->assign('uninstalledLocales', array_diff(array_keys(Locale::getAllLocales()), $site->getInstalledLocales()));
 		$templateMgr->assign('helpTopicId', 'site.siteManagement');
 
-		import('i18n.LanguageAction');
+		import('classes.i18n.LanguageAction');
 		$languageAction = new LanguageAction();
 		if ($languageAction->isDownloadAvailable()) {
 			$templateMgr->assign('downloadAvailable', true);
@@ -94,7 +94,7 @@ class AdminLanguagesHandler extends AdminHandler {
 
 		$this->_removeLocalesFromJournals($request);
 
-		import('notification.NotificationManager');
+		import('lib.pkp.classes.notification.NotificationManager');
 		$notificationManager = new NotificationManager();
 		$notificationManager->createTrivialNotification('notification.notification', 'common.changesSaved');
  
@@ -217,7 +217,7 @@ class AdminLanguagesHandler extends AdminHandler {
 		$this->setupTemplate(true);
 		$locale = $request->getUserVar('locale');
 
-		import('i18n.LanguageAction');
+		import('classes.i18n.LanguageAction');
 		$languageAction = new LanguageAction();
 
 		if (!$languageAction->isDownloadAvailable()) $request->redirect(null, null, 'languages');
@@ -235,7 +235,7 @@ class AdminLanguagesHandler extends AdminHandler {
 			return;
 		}
 
-		import('notification.NotificationManager');
+		import('lib.pkp.classes.notification.NotificationManager');
 		$notificationManager = new NotificationManager();
 		$notificationManager->createTrivialNotification(Locale::translate('notification.notification'), Locale::translate('admin.languages.localeInstalled', array('locale' => $locale)), NOTIFICATION_TYPE_SUCCESS, null, false);
 		$request->redirect(null, null, 'languages');

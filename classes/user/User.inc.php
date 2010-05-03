@@ -16,7 +16,7 @@
 // $Id$
 
 
-import('user.PKPUser');
+import('lib.pkp.classes.user.PKPUser');
 
 class User extends PKPUser {
 

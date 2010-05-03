@@ -16,7 +16,7 @@
 // $Id$
 
 
-import ('article.log.ArticleEventLogEntry');
+import ('classes.article.log.ArticleEventLogEntry');
 
 class ArticleEventLogDAO extends DAO {
 	/**

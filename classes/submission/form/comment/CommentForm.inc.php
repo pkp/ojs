@@ -16,7 +16,7 @@
 // $Id$
 
 
-import('form.Form');
+import('lib.pkp.classes.form.Form');
 
 class CommentForm extends Form {
 
@@ -130,7 +130,7 @@ class CommentForm extends Form {
 		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
 		$journal =& Request::getJournal();
 
-		import('mail.ArticleMailTemplate');
+		import('classes.mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($article, 'SUBMISSION_COMMENT');
 		$email->setFrom($this->user->getEmail(), $this->user->getFullName());
 

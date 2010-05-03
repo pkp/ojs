@@ -16,7 +16,7 @@
 // $Id$
 
 
-import('submission.reviewer.ReviewerSubmission');
+import('classes.submission.reviewer.ReviewerSubmission');
 
 class ReviewerSubmissionDAO extends DAO {
 	var $articleDao;

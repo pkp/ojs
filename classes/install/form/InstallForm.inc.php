@@ -20,9 +20,9 @@
 // $Id$
 
 
-import('install.Install');
-import('site.VersionCheck');
-import('form.Form');
+import('classes.install.Install');
+import('lib.pkp.classes.site.VersionCheck');
+import('lib.pkp.classes.form.Form');
 
 class InstallForm extends Form {
 

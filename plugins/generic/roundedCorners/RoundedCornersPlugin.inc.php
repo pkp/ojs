@@ -13,7 +13,7 @@
  *
  */
 
-import('classes.plugins.GenericPlugin');
+import('lib.pkp.classes.plugins.GenericPlugin');
 
 class RoundedCornersPlugin extends GenericPlugin {
 	function getDisplayName() {

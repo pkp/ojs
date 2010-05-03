@@ -15,7 +15,7 @@
 // $Id$
 
 
-import("author.form.submit.AuthorSubmitForm");
+import('classes.author.form.submit.AuthorSubmitForm');
 
 class AuthorSubmitStep2Form extends AuthorSubmitForm {
 
@@ -69,7 +69,7 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 	 * @return boolean
 	 */
 	function uploadSubmissionFile($fileName) {
-		import("file.ArticleFileManager");
+		import('classes.file.ArticleFileManager');
 
 		$articleFileManager = new ArticleFileManager($this->articleId);
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');

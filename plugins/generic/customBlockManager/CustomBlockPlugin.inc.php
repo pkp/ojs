@@ -12,7 +12,7 @@
  *
  */
 
-import('plugins.BlockPlugin');
+import('lib.pkp.classes.plugins.BlockPlugin');
 
 class CustomBlockPlugin extends BlockPlugin {
 	var $blockName;

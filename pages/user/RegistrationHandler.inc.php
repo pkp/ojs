@@ -34,7 +34,7 @@ class RegistrationHandler extends UserHandler {
 		$journal =& Request::getJournal();
 
 		if ($journal != null) {
-			import('user.form.RegistrationForm');
+			import('classes.user.form.RegistrationForm');
 
 			if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
 				$regForm = new RegistrationForm();
@@ -64,7 +64,7 @@ class RegistrationHandler extends UserHandler {
 	function registerUser() {
 		$this->validate();
 		$this->setupTemplate(true);
-		import('user.form.RegistrationForm');
+		import('classes.user.form.RegistrationForm');
 
 		if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
 			$regForm = new RegistrationForm();
@@ -136,7 +136,7 @@ class RegistrationHandler extends UserHandler {
 		if (!$user) Request::redirect(null, 'login');
 
 		// Checks user & token
-		import('security.AccessKeyManager');
+		import('lib.pkp.classes.security.AccessKeyManager');
 		$accessKeyManager = new AccessKeyManager();
 		$accessKeyHash = AccessKeyManager::generateKeyHash($accessKeyCode);
 		$accessKey =& $accessKeyManager->validateKey(

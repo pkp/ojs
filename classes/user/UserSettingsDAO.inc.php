@@ -16,7 +16,7 @@
 // $Id$
 
 
-import('user.PKPUserSettingsDAO');
+import('lib.pkp.classes.user.PKPUserSettingsDAO');
 
 class UserSettingsDAO extends PKPUserSettingsDAO {
 	/**

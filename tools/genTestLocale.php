@@ -21,7 +21,7 @@ define('DEFAULT_IN_LOCALE', 'en_US');
 define('DEFAULT_OUT_LOCALE', 'te_ST');
 define('DEFAULT_OUT_LOCALE_NAME', "Test Lo\xc3\xa7ale");
 
-import('i18n.Locale');
+import('classes.i18n.Locale');
 
 class genTestLocale extends CommandLineTool {
 
@@ -101,7 +101,7 @@ class genTestLocale extends CommandLineTool {
 
 		$destDir = dirname($outFile);
 		if (!file_exists($destDir)) {
-			import('file.FileManager');
+			import('lib.pkp.classes.file.FileManager');
 			if (!FileManager::mkdir($destDir)) {
 				printf('Failed to createDirectory \'%s\'', $destDir);
 				exit(1);

@@ -15,7 +15,7 @@
 
 //$Id$
 
-import('payment.QueuedPayment');
+import('lib.pkp.classes.payment.QueuedPayment');
 
 class OJSQueuedPayment extends QueuedPayment {
 	var $journalId;

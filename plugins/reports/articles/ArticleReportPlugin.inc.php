@@ -110,7 +110,7 @@ class ArticleReportPlugin extends ReportPlugin {
 		$fp = fopen('php://output', 'wt');
 		String::fputcsv($fp, array_values($columns));
 
-		import('article.Article'); // Bring in getStatusMap function
+		import('classes.article.Article'); // Bring in getStatusMap function
 		$statusMap =& Article::getStatusMap();
 
 		$authorIndex = 0;

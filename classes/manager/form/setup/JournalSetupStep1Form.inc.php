@@ -15,7 +15,7 @@
 // $Id$
 
 
-import("manager.form.setup.JournalSetupForm");
+import('classes.manager.form.setup.JournalSetupForm');
 
 class JournalSetupStep1Form extends JournalSetupForm {
 	/**

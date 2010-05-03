@@ -16,7 +16,7 @@
 // $Id$
 
 
-import ('journal.Journal');
+import ('classes.journal.Journal');
 
 class JournalDAO extends DAO {
 	/**

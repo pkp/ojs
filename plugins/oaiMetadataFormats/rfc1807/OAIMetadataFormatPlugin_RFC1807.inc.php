@@ -16,7 +16,7 @@
 // $Id$
 
 
-import('plugins.OAIMetadataFormatPlugin');
+import('classes.plugins.OAIMetadataFormatPlugin');
 
 class OAIMetadataFormatPlugin_RFC1807 extends OAIMetadataFormatPlugin {
 

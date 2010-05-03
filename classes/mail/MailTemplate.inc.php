@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('mail.PKPMailTemplate');
+import('lib.pkp.classes.mail.PKPMailTemplate');
 
 class MailTemplate extends PKPMailTemplate {
 	/** @var $journal object The journal this message relates to */

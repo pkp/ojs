@@ -15,8 +15,8 @@
 // $Id$
 
 
-import('submission.reviewer.ReviewerAction');
-import('handler.Handler');
+import('classes.submission.reviewer.ReviewerAction');
+import('classes.handler.Handler');
 
 class ReviewerHandler extends Handler {
 	/**
@@ -66,7 +66,7 @@ class ReviewerHandler extends Handler {
 				$submissionsArray = array_reverse($submissionsArray);
 			}
 			// Convert submission array back to an ItemIterator class
-			import('core.ArrayItemIterator');
+			import('lib.pkp.classes.core.ArrayItemIterator');
 			$submissions =& ArrayItemIterator::fromRangeInfo($submissionsArray, $rangeInfo);
 		}  else {
 			$submissions = $reviewerSubmissionDao->getReviewerSubmissionsByReviewerId($user->getId(), $journal->getId(), $active, $rangeInfo, $sort, $sortDirection);
@@ -77,10 +77,10 @@ class ReviewerHandler extends Handler {
 		$templateMgr->assign('pageToDisplay', $page);
 		$templateMgr->assign_by_ref('submissions', $submissions);
 
-		import('submission.reviewAssignment.ReviewAssignment');
+		import('classes.submission.reviewAssignment.ReviewAssignment');
 		$templateMgr->assign_by_ref('reviewerRecommendationOptions', ReviewAssignment::getReviewerRecommendationOptions());
 
-		import('issue.IssueAction');
+		import('classes.issue.IssueAction');
 		$issueAction = new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
 		$templateMgr->assign('helpTopicId', 'editorial.reviewersRole.submissions');
@@ -105,7 +105,7 @@ class ReviewerHandler extends Handler {
 
 		define('REVIEWER_ACCESS_KEY_SESSION_VAR', 'ReviewerAccessKey');
 
-		import('security.AccessKeyManager');
+		import('lib.pkp.classes.security.AccessKeyManager');
 		$accessKeyManager = new AccessKeyManager();
 
 		$session =& Request::getSession();

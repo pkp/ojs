@@ -16,7 +16,7 @@
 // $Id$
 
 
-import('rt.ojs.JournalRT');
+import('classes.rt.ojs.JournalRT');
 
 class RTDAO extends DAO {
 	var $versionCache;

@@ -14,7 +14,7 @@
 
 // $Id$
 
-import('manager.PKPAnnouncementHandler');
+import('lib.pkp.pages.manager.PKPAnnouncementHandler');
 
 class AnnouncementHandler extends PKPAnnouncementHandler {
 	/**

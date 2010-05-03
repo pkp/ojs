@@ -76,7 +76,7 @@ class ReviewFormHandler extends ManagerHandler {
 				$templateMgr->assign('pageTitle', 'manager.reviewForms.edit');
 			}
 
-			import('manager.form.ReviewFormForm');
+			import('classes.manager.form.ReviewFormForm');
 			$reviewFormForm = new ReviewFormForm($reviewFormId);
 
 			if ($reviewFormForm->isLocaleResubmit()) {
@@ -104,7 +104,7 @@ class ReviewFormHandler extends ManagerHandler {
 		}
 		$this->setupTemplate(true, $reviewForm);
 
-		import('manager.form.ReviewFormForm');
+		import('classes.manager.form.ReviewFormForm');
 		$reviewFormForm = new ReviewFormForm($reviewFormId);
 		$reviewFormForm->readInputData();
 
@@ -332,7 +332,7 @@ class ReviewFormHandler extends ManagerHandler {
 		$templateMgr->assign_by_ref('unusedReviewFormTitles', $unusedReviewFormTitles);
 		$templateMgr->assign_by_ref('reviewFormElements', $reviewFormElements);
 		$templateMgr->assign('reviewFormId', $reviewFormId);
-		import('reviewForm.ReviewFormElement');
+		import('lib.pkp.classes.reviewForm.ReviewFormElement');
 		$templateMgr->assign_by_ref('reviewFormElementTypeOptions', ReviewFormElement::getReviewFormElementTypeOptions());
 		$templateMgr->assign('helpTopicId','journal.managementPages.reviewForms');
 		$templateMgr->display('manager/reviewForms/reviewFormElements.tpl');
@@ -373,7 +373,7 @@ class ReviewFormHandler extends ManagerHandler {
 			$templateMgr->assign('pageTitle', 'manager.reviewFormElements.edit');
 		}
 
-		import('manager.form.ReviewFormElementForm');
+		import('classes.manager.form.ReviewFormElementForm');
 		$reviewFormElementForm = new ReviewFormElementForm($reviewFormId, $reviewFormElementId);
 		if ($reviewFormElementForm->isLocaleResubmit()) {
 			$reviewFormElementForm->readInputData();
@@ -404,7 +404,7 @@ class ReviewFormHandler extends ManagerHandler {
 			Request::redirect(null, null, 'reviewFormElements', array($reviewFormId));
 		}
 
-		import('manager.form.ReviewFormElementForm');
+		import('classes.manager.form.ReviewFormElementForm');
 		$reviewFormElementForm = new ReviewFormElementForm($reviewFormId, $reviewFormElementId);
 		$reviewFormElementForm->readInputData();
 		$formLocale = $reviewFormElementForm->getFormLocale();

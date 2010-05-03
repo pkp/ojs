@@ -16,7 +16,7 @@
 // $Id$
 
 
-import ('journal.Section');
+import ('classes.journal.Section');
 
 class SectionDAO extends DAO {
 	var $cache;

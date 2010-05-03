@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('install.Installer');
+import('lib.pkp.classes.install.Installer');
 
 class Upgrade extends Installer {
 
@@ -45,7 +45,7 @@ class Upgrade extends Installer {
 	 * @return boolean
 	 */
 	function rebuildSearchIndex() {
-		import('search.ArticleSearchIndex');
+		import('classes.search.ArticleSearchIndex');
 		ArticleSearchIndex::rebuildIndex();
 		return true;
 	}
@@ -59,7 +59,7 @@ class Upgrade extends Installer {
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
-		import('submission.author.AuthorAction');
+		import('classes.submission.author.AuthorAction');
 
 		$journals =& $journalDao->getJournals();
 		while ($journal =& $journals->next()) {
@@ -579,7 +579,7 @@ class Upgrade extends Installer {
 	 * @return boolean
 	 */
 	function separateSubscriptions() {
-		import('subscription.InstitutionalSubscription');
+		import('classes.subscription.InstitutionalSubscription');
 		$subscriptionDao =& DAORegistry::getDAO('SubscriptionDAO');
 
 		// Retrieve all subscriptions from pre-2.3 subscriptions table
@@ -723,7 +723,7 @@ class Upgrade extends Installer {
 	 */
 	function addPluginVersions() {
 		$versionDao =& DAORegistry::getDAO('VersionDAO');
-		import('site.VersionCheck');
+		import('lib.pkp.classes.site.VersionCheck');
 		$categories = PluginRegistry::getCategories();
 		foreach ($categories as $category) {
 			PluginRegistry::loadCategory($category);

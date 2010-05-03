@@ -15,8 +15,8 @@
 // $Id$
 
 
-import('submission.common.Action');
-import('db.DBRowIterator');
+import('classes.submission.common.Action');
+import('lib.pkp.classes.db.DBRowIterator');
 
 class ArticleReportDAO extends DAO {
 	/**

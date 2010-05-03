@@ -59,7 +59,7 @@ class SectionHandler extends ManagerHandler {
 		$this->validate();
 		$this->setupTemplate(true);
 
-		import('manager.form.SectionForm');
+		import('classes.manager.form.SectionForm');
 
 		$sectionForm = new SectionForm(!isset($args) || empty($args) ? null : ((int) $args[0]));
 		if ($sectionForm->isLocaleResubmit()) {
@@ -77,7 +77,7 @@ class SectionHandler extends ManagerHandler {
 		$this->validate();
 		$this->setupTemplate(true);
 
-		import('manager.form.SectionForm');
+		import('classes.manager.form.SectionForm');
 		$sectionForm = new SectionForm(!isset($args) || empty($args) ? null : ((int) $args[0]));
 
 		switch (Request::getUserVar('editorAction')) {

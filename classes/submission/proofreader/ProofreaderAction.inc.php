@@ -18,7 +18,7 @@
 
 // $Id$
 
-import('submission.common.Action');
+import('classes.submission.common.Action');
 
 class ProofreaderAction extends Action {
 
@@ -38,8 +38,8 @@ class ProofreaderAction extends Action {
 			$userDao =& DAORegistry::getDAO('UserDAO');
 			$proofreader =& $userDao->getUser($userId);
 			if (!isset($proofreader)) return;
-			import('article.log.ArticleLog');
-			import('article.log.ArticleEventLogEntry');
+			import('classes.article.log.ArticleLog');
+			import('classes.article.log.ArticleEventLogEntry');
 			ArticleLog::logEvent($article->getId(), ARTICLE_LOG_PROOFREAD_ASSIGN, ARTICLE_LOG_TYPE_PROOFREAD, $user->getId(), 'log.proofread.assign', Array('assignerName' => $user->getFullName(), 'proofreaderName' => $proofreader->getFullName(), 'articleId' => $article->getId()));
 		}
 	}
@@ -60,7 +60,7 @@ class ProofreaderAction extends Action {
 		$user =& Request::getUser();
 		$ccs = array();
 
-		import('mail.ArticleMailTemplate');
+		import('classes.mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($sectionEditorSubmission, $mailType);
 
 		switch($mailType) {
@@ -431,7 +431,7 @@ class ProofreaderAction extends Action {
 	 */
 	function viewProofreadComments($article) {
 		if (!HookRegistry::call('ProofreaderAction::viewProofreadComments', array(&$article))) {
-			import("submission.form.comment.ProofreadCommentForm");
+			import('classes.submission.form.comment.ProofreadCommentForm');
 
 			$commentForm = new ProofreadCommentForm($article, ROLE_ID_PROOFREADER);
 			$commentForm->initData();
@@ -446,7 +446,7 @@ class ProofreaderAction extends Action {
 	 */
 	function postProofreadComment($article, $emailComment) {
 		if (!HookRegistry::call('ProofreaderAction::postProofreadComment', array(&$article, &$emailComment))) {
-			import("submission.form.comment.ProofreadCommentForm");
+			import('classes.submission.form.comment.ProofreadCommentForm');
 
 			$commentForm = new ProofreadCommentForm($article, ROLE_ID_PROOFREADER);
 			$commentForm->readInputData();
@@ -455,7 +455,7 @@ class ProofreaderAction extends Action {
 				$commentForm->execute();
 
 				// Send a notification to associated users
-				import('notification.NotificationManager');
+				import('lib.pkp.classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
 				foreach ($notificationUsers as $userRole) {
@@ -484,7 +484,7 @@ class ProofreaderAction extends Action {
 	 */
 	function viewLayoutComments($article) {
 		if (!HookRegistry::call('ProofreaderAction::viewLayoutComments', array(&$article))) {
-			import("submission.form.comment.LayoutCommentForm");
+			import('classes.submission.form.comment.LayoutCommentForm');
 
 			$commentForm = new LayoutCommentForm($article, ROLE_ID_PROOFREADER);
 			$commentForm->initData();
@@ -499,7 +499,7 @@ class ProofreaderAction extends Action {
 	 */
 	function postLayoutComment($article, $emailComment) {
 		if (!HookRegistry::call('ProofreaderAction::postLayoutComment', array(&$article, &$emailComment))) {
-			import("submission.form.comment.LayoutCommentForm");
+			import('classes.submission.form.comment.LayoutCommentForm');
 
 			$commentForm = new LayoutCommentForm($article, ROLE_ID_PROOFREADER);
 			$commentForm->readInputData();
@@ -508,7 +508,7 @@ class ProofreaderAction extends Action {
 				$commentForm->execute();
 								
 				// Send a notification to associated users
-				import('notification.NotificationManager');
+				import('lib.pkp.classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
 				foreach ($notificationUsers as $userRole) {

@@ -15,8 +15,8 @@
 
 // $Id$
 
-import('subscription.SubscriptionDAO');
-import('subscription.IndividualSubscription');
+import('classes.subscription.SubscriptionDAO');
+import('classes.subscription.IndividualSubscription');
 
 class IndividualSubscriptionDAO extends SubscriptionDAO {
 	/**

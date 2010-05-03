@@ -232,10 +232,10 @@ class SubscriptionAction {
 			}
 
 			if ($institutional) {
-				import('subscription.form.InstitutionalSubscriptionForm');
+				import('classes.subscription.form.InstitutionalSubscriptionForm');
 				$subscriptionForm = new InstitutionalSubscriptionForm($subscriptionId, $userId);
 			} else {
-				import('subscription.form.IndividualSubscriptionForm');
+				import('classes.subscription.form.IndividualSubscriptionForm');
 				$subscriptionForm = new IndividualSubscriptionForm($subscriptionId, $userId);
 			}
 			$subscriptionForm->initData();
@@ -292,7 +292,7 @@ class SubscriptionAction {
 		$templateMgr->assign('search', $searchQuery);
 		$templateMgr->assign('searchInitial', Request::getUserVar('searchInitial'));
 
-		import('security.Validation');
+		import('classes.security.Validation');
 		$templateMgr->assign('isJournalManager', Validation::isJournalManager());
 
 		$templateMgr->assign('fieldOptions', Array(
@@ -326,10 +326,10 @@ class SubscriptionAction {
 		if (($subscriptionId != null && $subscriptionDao->getSubscriptionJournalId($subscriptionId) == $journal->getId()) || $subscriptionId == null) {
 
 			if ($institutional) {
-				import('subscription.form.InstitutionalSubscriptionForm');
+				import('classes.subscription.form.InstitutionalSubscriptionForm');
 				$subscriptionForm = new InstitutionalSubscriptionForm($subscriptionId);
 			} else {
-				import('subscription.form.IndividualSubscriptionForm');
+				import('classes.subscription.form.IndividualSubscriptionForm');
 				$subscriptionForm = new IndividualSubscriptionForm($subscriptionId);
 			}
 			$subscriptionForm->readInputData();
@@ -460,7 +460,7 @@ class SubscriptionAction {
 		// Ensure subscription type is valid and for this journal
 		if (($subscriptionTypeId != null && $subscriptionTypeDao->getSubscriptionTypeJournalId($subscriptionTypeId) == $journal->getId()) || $subscriptionTypeId == null) {
 
-			import('subscription.form.SubscriptionTypeForm');
+			import('classes.subscription.form.SubscriptionTypeForm');
 
 			$templateMgr =& TemplateManager::getManager();
 			$subscriptionTypeCreated = Request::getUserVar('subscriptionTypeCreated') == 1 ? 1 : 0;
@@ -496,7 +496,7 @@ class SubscriptionAction {
 	 * Save changes to a subscription type.
 	 */
 	function updateSubscriptionType() {
-		import('subscription.form.SubscriptionTypeForm');
+		import('classes.subscription.form.SubscriptionTypeForm');
 
 		$journal =& Request::getJournal();
 		$subscriptionTypeId = Request::getUserVar('typeId') == null ? null : (int) Request::getUserVar('typeId');
@@ -529,7 +529,7 @@ class SubscriptionAction {
 	 * Display subscription policies for the current journal.
 	 */
 	function subscriptionPolicies() {
-		import('subscription.form.SubscriptionPolicyForm');
+		import('classes.subscription.form.SubscriptionPolicyForm');
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.subscriptions');
@@ -538,7 +538,7 @@ class SubscriptionAction {
 			$templateMgr->assign('scheduledTasksEnabled', true);
 		}
 
-		import('payment.ojs.OJSPaymentManager');
+		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
 		$templateMgr->assign('acceptSubscriptionPayments', $paymentManager->acceptSubscriptionPayments());				
 
@@ -555,7 +555,7 @@ class SubscriptionAction {
 	 * Save subscription policies for the current journal.
 	 */
 	function saveSubscriptionPolicies($args = array()) {
-		import('subscription.form.SubscriptionPolicyForm');
+		import('classes.subscription.form.SubscriptionPolicyForm');
 
 		$subscriptionPolicyForm = new SubscriptionPolicyForm();
 		$subscriptionPolicyForm->readInputData();
@@ -567,7 +567,7 @@ class SubscriptionAction {
 			$templateMgr->assign('scheduledTasksEnabled', true);
 		}
 
-		import('payment.ojs.OJSPaymentManager');
+		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
 		$templateMgr->assign('acceptSubscriptionPayments', $paymentManager->acceptSubscriptionPayments());				
 
@@ -639,7 +639,7 @@ class SubscriptionAction {
 				break;
 		}
 
-		import('mail.MailTemplate');
+		import('classes.mail.MailTemplate');
 		$mail = new MailTemplate($mailTemplateKey);
 		$mail->setFrom($subscriptionContactEmail, $subscriptionContactName);
 		$mail->addRecipient($subscriptionContactEmail, $subscriptionContactName);

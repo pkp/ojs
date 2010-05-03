@@ -19,7 +19,7 @@
 
 // $Id$
 
-import('subscription.Subscription');
+import('classes.subscription.Subscription');
 
 define('SUBSCRIPTION_IP_RANGE_RANGE', '-');
 define('SUBSCRIPTION_IP_RANGE_WILDCARD', '*');

@@ -13,9 +13,9 @@
  */
 
 
-import('handler.PKPHandler');
-import('handler.validation.HandlerValidatorJournal');
-import('handler.validation.HandlerValidatorSubmissionComment');
+import('lib.pkp.classes.handler.PKPHandler');
+import('classes.handler.validation.HandlerValidatorJournal');
+import('classes.handler.validation.HandlerValidatorSubmissionComment');
 
 class Handler extends PKPHandler {
 	function Handler() {

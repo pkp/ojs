@@ -16,8 +16,8 @@
 // $Id$
 
 
-import('subscription.Subscription');
-import('subscription.SubscriptionType');
+import('classes.subscription.Subscription');
+import('classes.subscription.SubscriptionType');
 
 define('SUBSCRIPTION_USER',				0x01);
 define('SUBSCRIPTION_MEMBERSHIP',		0x02);

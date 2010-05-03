@@ -20,7 +20,7 @@
 // $Id$
 
 
-import('article.Article');
+import('classes.article.Article');
 
 class ProofreaderSubmission extends Article {
 

@@ -15,8 +15,8 @@
 
 // $Id$
 
-import('subscription.SubscriptionDAO');
-import('subscription.InstitutionalSubscription');
+import('classes.subscription.SubscriptionDAO');
+import('classes.subscription.InstitutionalSubscription');
 
 define('SUBSCRIPTION_INSTITUTION_NAME',	0x20);
 define('SUBSCRIPTION_DOMAIN',			0x21);

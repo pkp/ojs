@@ -16,7 +16,7 @@
 // $Id$
 
 
-import('article.PublishedArticle');
+import('classes.article.PublishedArticle');
 
 class PublishedArticleDAO extends DAO {
 	var $articleDao;

@@ -14,7 +14,7 @@
 
 
 
-import('handler.Handler');
+import('classes.handler.Handler');
 
 class CounterHandler extends Handler {
 	/** Plugin associated with this request **/

@@ -15,8 +15,8 @@
 // $Id$
 
 
-import('submission.author.AuthorAction');
-import('handler.Handler');
+import('classes.submission.author.AuthorAction');
+import('classes.handler.Handler');
 
 class AuthorHandler extends Handler {
 	/**
@@ -68,7 +68,7 @@ class AuthorHandler extends Handler {
 				$submissionsArray = array_reverse($submissionsArray);
 			}
 			// Convert submission array back to an ItemIterator class
-			import('core.ArrayItemIterator');
+			import('lib.pkp.classes.core.ArrayItemIterator');
 			$submissions =& ArrayItemIterator::fromRangeInfo($submissionsArray, $rangeInfo);
 		} else {
 			$submissions = $authorSubmissionDao->getAuthorSubmissions($user->getId(), $journal->getId(), $active, $rangeInfo, $sort, $sortDirection);
@@ -83,7 +83,7 @@ class AuthorHandler extends Handler {
 		$templateMgr->assign_by_ref('submissions', $submissions);
 
 		// assign payment 
-		import('payment.ojs.OJSPaymentManager');
+		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
 
 		if ( $paymentManager->isConfigured() ) {		
@@ -95,7 +95,7 @@ class AuthorHandler extends Handler {
 			$templateMgr->assign_by_ref('completedPaymentDAO', $completedPaymentDAO);
 		} 				
 
-		import('issue.IssueAction');
+		import('classes.issue.IssueAction');
 		$issueAction = new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
 		$templateMgr->assign('helpTopicId', 'editorial.authorsRole.submissions');
@@ -125,7 +125,7 @@ class AuthorHandler extends Handler {
 		$pageHierarchy = $subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'author'), 'user.role.author'), array(Request::url(null, 'author'), 'article.submissions'))
 			: array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'author'), 'user.role.author'));
 
-		import('submission.sectionEditor.SectionEditorAction');
+		import('classes.submission.sectionEditor.SectionEditorAction');
 		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'author');
 		if (isset($submissionCrumb)) {
 			$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
@@ -138,7 +138,7 @@ class AuthorHandler extends Handler {
 	 * @param $args (type)
 	 */
 	function instructions($args) {
-		import('submission.proofreader.ProofreaderAction');
+		import('classes.submission.proofreader.ProofreaderAction');
 		if (!isset($args[0]) || !ProofreaderAction::instructions($args[0], array('copy', 'proof'))) {
 			Request::redirect(null, null, 'index');
 		}

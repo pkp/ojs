@@ -148,7 +148,7 @@ class PayPalPlugin extends PaymethodPlugin {
 		if (!$journal) return parent::handle($args);
 
 		// Just in case we need to contact someone
-		import('mail.MailTemplate');
+		import('classes.mail.MailTemplate');
 		$contactName = $journal->getSetting('contactName');
 		$contactEmail = $journal->getSetting('contactEmail');
 		$mail = new MailTemplate('PAYPAL_INVESTIGATE_PAYMENT');
@@ -205,7 +205,7 @@ class PayPalPlugin extends PaymethodPlugin {
 							);
 							$queuedPaymentId = Request::getUserVar('custom');
 
-							import('payment.ojs.OJSPaymentManager');
+							import('classes.payment.ojs.OJSPaymentManager');
 							$ojsPaymentManager =& OJSPaymentManager::getManager();
 
 							// Verify the cost and user details as per PayPal spec.

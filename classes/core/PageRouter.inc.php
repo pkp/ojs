@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('core.PKPPageRouter');
+import('lib.pkp.classes.core.PKPPageRouter');
 
 class PageRouter extends PKPPageRouter {
 	/**

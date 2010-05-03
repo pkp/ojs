@@ -19,7 +19,7 @@
 // $Id$
 
 
-import('form.Form');
+import('lib.pkp.classes.form.Form');
 
 class AuthorSubmitForm extends Form {
 

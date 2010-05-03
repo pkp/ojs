@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('xml.XMLCustomWriter');
+import('lib.pkp.classes.xml.XMLCustomWriter');
 
 class DOAJExportDom {
 	/**

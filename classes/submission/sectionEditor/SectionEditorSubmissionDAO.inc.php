@@ -16,12 +16,12 @@
 // $Id$
 
 
-import('submission.sectionEditor.SectionEditorSubmission');
+import('classes.submission.sectionEditor.SectionEditorSubmission');
 
 // Bring in editor decision constants
-import('submission.author.AuthorSubmission');
-import('submission.common.Action');
-import('submission.reviewer.ReviewerSubmission');
+import('classes.submission.author.AuthorSubmission');
+import('classes.submission.common.Action');
+import('classes.submission.reviewer.ReviewerSubmission');
 
 class SectionEditorSubmissionDAO extends DAO {
 	var $articleDao;

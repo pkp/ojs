@@ -15,8 +15,8 @@
 // $Id$
 
 
-import('plugins.Plugin');
-import('oai.OAIStruct');
+import('classes.plugins.Plugin');
+import('lib.pkp.classes.oai.OAIStruct');
 
 class OAIMetadataFormatPlugin extends Plugin {
 	function OAIMetadataFormatPlugin() {

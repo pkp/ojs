@@ -17,7 +17,7 @@
  * @brief Class describing a payment ready to be in the database.
  *
  */
-import('payment.Payment');
+import('lib.pkp.classes.payment.Payment');
 
 class OJSCompletedPayment extends Payment {
 	var $journalId;

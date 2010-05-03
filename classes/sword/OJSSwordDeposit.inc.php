@@ -15,9 +15,9 @@
 // $Id: CaptchaManager.inc.php,v 1.7 2010/01/22 20:42:41 asmecher Exp $
 
 
-require_once('lib/pkp/lib/swordapp/swordappclient.php');
-require_once('lib/pkp/lib/swordapp/swordappentry.php');
-require_once('lib/pkp/lib/swordapp/packager_mets_swap.php');
+require_once('./lib/pkp/lib/swordapp/swordappclient.php');
+require_once('./lib/pkp/lib/swordapp/swordappentry.php');
+require_once('./lib/pkp/lib/swordapp/packager_mets_swap.php');
 
 class OJSSwordDeposit {
 	/** @var $package SWORD deposit METS package */
@@ -168,7 +168,7 @@ class OJSSwordDeposit {
 	 * Clean up after a deposit, i.e. removing all created files.
 	 */
 	function cleanup() {
-		import('file.FileManager');
+		import('lib.pkp.classes.file.FileManager');
 		$fileManager = new FileManager();
 
 		$fileManager->rmtree($this->outPath);

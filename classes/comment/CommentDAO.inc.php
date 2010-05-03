@@ -16,7 +16,7 @@
 // $Id$
 
 
-import('comment.Comment');
+import('classes.comment.Comment');
 
 define ('ARTICLE_COMMENT_RECURSE_ALL', -1);
 

@@ -14,8 +14,8 @@
 
 // $Id$
 
-import('plugins.AuthPlugin');
-import('security.AuthSourceDAO');
+import('classes.plugins.AuthPlugin');
+import('lib.pkp.classes.security.AuthSourceDAO');
 import('pages.admin.AdminHandler');
 
 class AuthSourcesHandler extends AdminHandler {
@@ -85,7 +85,7 @@ class AuthSourcesHandler extends AdminHandler {
 		$this->validate();
 		$this->setupTemplate(true);
 
-		import('security.form.AuthSourceSettingsForm');
+		import('classes.security.form.AuthSourceSettingsForm');
 		$form = new AuthSourceSettingsForm((int)@$args[0]);
 		$form->initData();
 		$form->display();
@@ -97,7 +97,7 @@ class AuthSourcesHandler extends AdminHandler {
 	function updateAuthSource($args) {
 		$this->validate();
 
-		import('security.form.AuthSourceSettingsForm');
+		import('classes.security.form.AuthSourceSettingsForm');
 		$form = new AuthSourceSettingsForm((int)@$args[0]);
 		$form->readInputData();
 		$form->execute();

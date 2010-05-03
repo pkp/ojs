@@ -20,7 +20,7 @@ define('SWORD_DEPOSIT_TYPE_OPTIONAL_SELECTION',	2);
 define('SWORD_DEPOSIT_TYPE_OPTIONAL_FIXED',	3);
 define('SWORD_DEPOSIT_TYPE_MANAGER',		4);
 
-import('classes.plugins.GenericPlugin');
+import('lib.pkp.classes.plugins.GenericPlugin');
 
 class SwordPlugin extends GenericPlugin {
 	/**

@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('article.ArticleGalley');
+import('classes.article.ArticleGalley');
 
 class ArticleHTMLGalley extends ArticleGalley {
 
@@ -41,7 +41,7 @@ class ArticleHTMLGalley extends ArticleGalley {
 	 * @return string
 	 */
 	function getHTMLContents() {
-		import('file.ArticleFileManager');
+		import('classes.file.ArticleFileManager');
 		$fileManager = new ArticleFileManager($this->getArticleId());
 		$contents = $fileManager->readFile($this->getFileId());
 		$journal =& Request::getJournal();
@@ -171,14 +171,14 @@ class ArticleHTMLGalley extends ArticleGalley {
 				break;
 			case 'sitepublic':
 					array_shift($urlParts);
-					import ('file.PublicFileManager');
+					import ('classes.file.PublicFileManager');
 					$publicFileManager = new PublicFileManager();
 					$url = Request::getBaseUrl() . '/' . $publicFileManager->getSiteFilesPath() . '/' . implode('/', $urlParts) . ($anchor?'#' . $anchor:'');
 				break;
 			case 'public':
 					array_shift($urlParts);
 					$journal =& Request::getJournal();
-					import ('file.PublicFileManager');
+					import ('classes.file.PublicFileManager');
 					$publicFileManager = new PublicFileManager();
 					$url = Request::getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getId()) . '/' . implode('/', $urlParts) . ($anchor?'#' . $anchor:'');
 				break;

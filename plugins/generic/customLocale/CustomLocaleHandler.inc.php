@@ -17,7 +17,7 @@
 
 require_once('CustomLocalePlugin.inc.php');
 require_once('CustomLocaleAction.inc.php');
-import('handler.Handler');
+import('classes.handler.Handler');
 
 class CustomLocaleHandler extends Handler {
 	/** Plugin associated with the request */
@@ -45,7 +45,7 @@ class CustomLocaleHandler extends Handler {
 		$rangeInfo = Handler::getRangeInfo('locales');
 
 		$templateMgr =& TemplateManager::getManager();
-		import('core.ArrayItemIterator');
+		import('lib.pkp.classes.core.ArrayItemIterator');
 		$templateMgr->assign('locales', new ArrayItemIterator($journal->getSupportedLocaleNames(), $rangeInfo->getPage(), $rangeInfo->getCount()));
 		$templateMgr->assign('masterLocale', MASTER_LOCALE);
 
@@ -70,7 +70,7 @@ class CustomLocaleHandler extends Handler {
 
 		$localeFilesRangeInfo = Handler::getRangeInfo('localeFiles');
 
-		import('core.ArrayItemIterator');
+		import('lib.pkp.classes.core.ArrayItemIterator');
 		$templateMgr->assign('localeFiles', new ArrayItemIterator($localeFiles, $localeFilesRangeInfo->getPage(), $localeFilesRangeInfo->getCount()));
 
 		$templateMgr->assign('locale', $locale);
@@ -98,8 +98,8 @@ class CustomLocaleHandler extends Handler {
 
 		$templateMgr =& TemplateManager::getManager();
 
-		import('file.FileManager');
-		import('file.EditableLocaleFile');
+		import('lib.pkp.classes.file.FileManager');
+		import('lib.pkp.classes.file.EditableLocaleFile');
 		$journal = Request::getJournal();
 		$journalId = $journal->getId();
 		$publicFilesDir = Config::getVar('files', 'public_files_dir');
@@ -135,7 +135,7 @@ class CustomLocaleHandler extends Handler {
 
 		$templateMgr->assign('filename', $filename);
 		$templateMgr->assign('locale', $locale);
-		import('core.ArrayItemIterator');
+		import('lib.pkp.classes.core.ArrayItemIterator');
 		$templateMgr->assign_by_ref('referenceLocaleContents', new ArrayItemIterator($referenceLocaleContents, $referenceLocaleContentsRangeInfo->getPage(), $referenceLocaleContentsRangeInfo->getCount()));
 		$templateMgr->assign('localeContents', $localeContents);
 
@@ -166,8 +166,8 @@ class CustomLocaleHandler extends Handler {
 		$customFilePath = $customFilesDir . DIRECTORY_SEPARATOR . $filename;
 
 		// Create empty custom locale file if it doesn't exist
-		import('file.FileManager');
-		import('file.EditableLocaleFile');
+		import('lib.pkp.classes.file.FileManager');
+		import('lib.pkp.classes.file.EditableLocaleFile');
 		if (!FileManager::fileExists($customFilePath)) {
 			$numParentDirs = substr_count($customFilePath, DIRECTORY_SEPARATOR); 
 			$parentDirs = '';

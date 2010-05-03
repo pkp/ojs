@@ -13,7 +13,7 @@
  *
  */
 
-import('form.Form');
+import('lib.pkp.classes.form.Form');
 
 class StaticPagesEditForm extends Form {
 	/** @var $journalId int */
@@ -92,7 +92,7 @@ class StaticPagesEditForm extends Form {
 		// Enable TinyMCE with specific params
 		$additionalHeadData = $templateMgr->get_template_vars('additionalHeadData');
 
-		import('file.JournalFileManager');
+		import('classes.file.JournalFileManager');
 		$publicFileManager = new PublicFileManager();
 		$tinyMCE_script = '
 		<script language="javascript" type="text/javascript" src="'.Request::getBaseUrl().'/'.TINYMCE_JS_PATH.'/tiny_mce.js"></script>

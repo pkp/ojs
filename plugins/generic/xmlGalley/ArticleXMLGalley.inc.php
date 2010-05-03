@@ -15,8 +15,8 @@
 // $Id$
 
 
-import('article.ArticleHTMLGalley');
-import('article.SuppFileDAO');
+import('classes.article.ArticleHTMLGalley');
+import('classes.article.SuppFileDAO');
 
 class ArticleXMLGalley extends ArticleHTMLGalley {
 
@@ -99,7 +99,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 					break;
 				case 'custom';
 					// get file path for custom XSL sheet
-					import('file.JournalFileManager');
+					import('classes.file.JournalFileManager');
 					$journalFileManager = new JournalFileManager($journal);
 					$xslSheet = $journalFileManager->filesDir . $xmlGalleyPlugin->getSetting($journal->getId(), 'customXSL');
 					break;
@@ -188,7 +188,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 	 * @return string
 	 */
 	function viewFileContents() {
-		import('file.FileManager');
+		import('lib.pkp.classes.file.FileManager');
 		$pdfFileName = CacheManager::getFileCachePath() . DIRECTORY_SEPARATOR . 'fc-xsltGalley-' . str_replace(FileManager::parseFileExtension($this->getFileName()), 'pdf', $this->getFileName());
 
 		// if file does not exist or is outdated, regenerate it from FO
@@ -232,7 +232,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 			}
 
 			// create temporary FO file and write the contents
-			import('file.TemporaryFileManager');
+			import('classes.file.TemporaryFileManager');
 			$temporaryFileManager = new TemporaryFileManager();
 			$tempFoName = $temporaryFileManager->filesDir . $this->getFileName() . '-' . $this->getId() . '.fo';
 

@@ -15,8 +15,8 @@
 // $Id$
 
 
-import('rt.RTAdmin');
-import('rt.ojs.RTDAO');
+import('lib.pkp.classes.rt.RTAdmin');
+import('classes.rt.ojs.RTDAO');
 
 define('RT_DIRECTORY', 'rt');
 define('DEFAULT_RT_LOCALE', 'en_US');
@@ -36,7 +36,7 @@ class JournalRTAdmin extends RTAdmin {
 	}
 
 	function restoreVersions($deleteBeforeLoad = true) {
-		import('rt.RTXMLParser');
+		import('lib.pkp.classes.rt.RTXMLParser');
 		$parser = new RTXMLParser();
 
 		if ($deleteBeforeLoad) $this->dao->deleteVersionsByJournalId($this->journalId);
@@ -60,7 +60,7 @@ class JournalRTAdmin extends RTAdmin {
 	}
 
 	function importVersion($filename) {
-		import ('rt.RTXMLParser');
+		import ('lib.pkp.classes.rt.RTXMLParser');
 		$parser = new RTXMLParser();
 
 		$version =& $parser->parse($filename);

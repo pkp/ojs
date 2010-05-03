@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('form.Form');
+import('lib.pkp.classes.form.Form');
 
 class StudentThesisForm extends Form {
 
@@ -43,7 +43,7 @@ class StudentThesisForm extends Form {
 			THESIS_DEGREE_DOCTORATE => Locale::translate('plugins.generic.thesis.manager.degree.doctorate')
 		);
 
-		import('captcha.CaptchaManager');
+		import('lib.pkp.classes.captcha.CaptchaManager');
 		$captchaManager = new CaptchaManager();
 		$this->captchaEnabled = $captchaManager->isEnabled() ? true : false;
 
@@ -116,7 +116,7 @@ class StudentThesisForm extends Form {
 		$templateMgr =& TemplateManager::getManager();
 
 		if ($this->captchaEnabled) {
-			import('captcha.CaptchaManager');
+			import('lib.pkp.classes.captcha.CaptchaManager');
 			$captchaManager = new CaptchaManager();
 			$captcha =& $captchaManager->createCaptcha();
 			if ($captcha) {
@@ -281,7 +281,7 @@ class StudentThesisForm extends Form {
 				'thesisContactSignature' => $thesisContactSignature 
 			);
 
-			import('mail.MailTemplate');
+			import('classes.mail.MailTemplate');
 			$mail = new MailTemplate('THESIS_ABSTRACT_CONFIRM');
 			$mail->setFrom($thesisEmail, "\"" . $thesisName . "\"");
 			$mail->assignParams($paramArray);

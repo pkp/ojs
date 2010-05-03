@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('xml.XMLCustomWriter');
+import('lib.pkp.classes.xml.XMLCustomWriter');
 
 class MetsExportDom {
 
@@ -494,7 +494,7 @@ class MetsExportDom {
 
 	function generateArticleHtmlGalleyImageFileDom(&$doc, &$root, &$article, &$galley, &$imageFile, $useAttribute, &$journal) {
 		import('classes.file.PublicFileManager');
-		import('classes.file.FileManager');
+		import('lib.pkp.classes.file.FileManager');
 		$contentWrapper =& Request::getUserVar('contentWrapper');
 		$mfile =& XMLCustomWriter::createElement($doc, 'METS:file');
 		$filePath  = MetsExportDom::getPublicFilePath($imageFile , '/public/', $journal);
@@ -532,7 +532,7 @@ class MetsExportDom {
 	 */
 	function generateArticleFileDom(&$doc, &$root, &$article, &$galleyFile, $useAttribute, &$journal) {
 		import('classes.file.PublicFileManager');
-		import('classes.file.FileManager');
+		import('lib.pkp.classes.file.FileManager');
 		$contentWrapper =& Request::getUserVar('contentWrapper');
 		$mfile =& XMLCustomWriter::createElement($doc, 'METS:file');
 		$filePath  = MetsExportDom::getPublicFilePath($galleyFile , '/public/', $journal);
@@ -566,7 +566,7 @@ class MetsExportDom {
 	 */
 	function generateArticleSuppFileDom(&$doc, &$root, &$article, &$suppFile, &$journal) {
 		import('classes.file.PublicFileManager');
-		import('classes.file.FileManager');
+		import('lib.pkp.classes.file.FileManager');
 		$contentWrapper =& Request::getUserVar('contentWrapper');
 		$mfile =& XMLCustomWriter::createElement($doc, 'METS:file');
 		$filePath  = MetsExportDom::getPublicFilePath($suppFile , '/supp/', $journal);

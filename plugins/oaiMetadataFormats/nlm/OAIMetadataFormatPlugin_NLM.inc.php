@@ -13,7 +13,7 @@
  * @brief NLM Journal Article metadata format plugin for OAI.
  */
 
-import('plugins.OAIMetadataFormatPlugin');
+import('classes.plugins.OAIMetadataFormatPlugin');
 
 class OAIMetadataFormatPlugin_NLM extends OAIMetadataFormatPlugin {
 	/**

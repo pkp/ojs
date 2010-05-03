@@ -15,8 +15,8 @@
 // $Id$
 
 
-import('install.Upgrade');
-import('form.Form');
+import('classes.install.Upgrade');
+import('lib.pkp.classes.form.Form');
 
 class UpgradeForm extends Form {
 

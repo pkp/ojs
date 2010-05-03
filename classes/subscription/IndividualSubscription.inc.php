@@ -19,7 +19,7 @@
 
 // $Id$
 
-import('subscription.Subscription');
+import('classes.subscription.Subscription');
 
 class IndividualSubscription extends Subscription {
 

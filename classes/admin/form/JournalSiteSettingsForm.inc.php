@@ -15,8 +15,8 @@
 // $Id$
 
 
-import('db.DBDataXMLParser');
-import('form.Form');
+import('lib.pkp.classes.db.DBDataXMLParser');
+import('lib.pkp.classes.form.Form');
 
 class JournalSiteSettingsForm extends Form {
 
@@ -144,7 +144,7 @@ class JournalSiteSettingsForm extends Form {
 			}
 
 			// Make the file directories for the journal
-			import('file.FileManager');
+			import('lib.pkp.classes.file.FileManager');
 			FileManager::mkdir(Config::getVar('files', 'files_dir') . '/journals/' . $journalId);
 			FileManager::mkdir(Config::getVar('files', 'files_dir'). '/journals/' . $journalId . '/articles');
 			FileManager::mkdir(Config::getVar('files', 'files_dir'). '/journals/' . $journalId . '/issues');
@@ -162,7 +162,7 @@ class JournalSiteSettingsForm extends Form {
 			));
 
 			// Install the default RT versions.
-			import('rt.ojs.JournalRTAdmin');
+			import('classes.rt.ojs.JournalRTAdmin');
 			$journalRtAdmin = new JournalRTAdmin($journalId);
 			$journalRtAdmin->restoreVersions(false);
 

@@ -16,8 +16,8 @@
 
 //$Id$
 
-import('payment.ojs.OJSQueuedPayment');
-import('payment.PaymentManager');
+import('classes.payment.ojs.OJSQueuedPayment');
+import('lib.pkp.classes.payment.PaymentManager');
 
 define('PAYMENT_TYPE_MEMBERSHIP',		0x000000001 );
 define('PAYMENT_TYPE_RENEW_SUBSCRIPTION',	0x000000002 );
@@ -83,7 +83,7 @@ class OJSPaymentManager extends PaymentManager {
 	}
 
 	function &createCompletedPayment( $queuedPayment, $payMethod ) {
-		import('payment.ojs.OJSCompletedPayment');
+		import('classes.payment.ojs.OJSCompletedPayment');
 		$payment = new OJSCompletedPayment();
 		$payment->setJournalId($queuedPayment->getJournalId());
 		$payment->setType($queuedPayment->getType());
@@ -176,7 +176,7 @@ class OJSPaymentManager extends PaymentManager {
 				// Update subscription end date now that payment is completed
 				if ($institutional) {
 					// Still requires approval from JM/SM since includes domain and IP ranges
-					import('subscription.InstitutionalSubscription');
+					import('classes.subscription.InstitutionalSubscription');
 					$subscription->setStatus(SUBSCRIPTION_STATUS_NEEDS_APPROVAL);
 					if ($subscription->isNonExpiring()) {
 						$institutionalSubscriptionDao->updateSubscription($subscription);
@@ -187,11 +187,11 @@ class OJSPaymentManager extends PaymentManager {
 					// Notify JM/SM of completed online purchase
 					$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 					if ($journalSettingsDao->getSetting($subscription->getJournalId(), 'enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional')) {
-						import('subscription.SubscriptionAction');
+						import('classes.subscription.SubscriptionAction');
 						SubscriptionAction::sendOnlinePaymentNotificationEmail($subscription, 'SUBSCRIPTION_PURCHASE_INSTL');
 					}
 				} else {
-					import('subscription.IndividualSubscription');
+					import('classes.subscription.IndividualSubscription');
 					$subscription->setStatus(SUBSCRIPTION_STATUS_ACTIVE);
 					if ($subscription->isNonExpiring()) {
 						$individualSubscriptionDao->updateSubscription($subscription);
@@ -201,7 +201,7 @@ class OJSPaymentManager extends PaymentManager {
 					// Notify JM/SM of completed online purchase
 					$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 					if ($journalSettingsDao->getSetting($subscription->getJournalId(), 'enableSubscriptionOnlinePaymentNotificationPurchaseIndividual')) {
-						import('subscription.SubscriptionAction');
+						import('classes.subscription.SubscriptionAction');
 						SubscriptionAction::sendOnlinePaymentNotificationEmail($subscription, 'SUBSCRIPTION_PURCHASE_INDL');
 					}
 				}
@@ -229,7 +229,7 @@ class OJSPaymentManager extends PaymentManager {
 					// Notify JM/SM of completed online purchase
 					$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 					if ($journalSettingsDao->getSetting($subscription->getJournalId(), 'enableSubscriptionOnlinePaymentNotificationRenewInstitutional')) {
-						import('subscription.SubscriptionAction');
+						import('classes.subscription.SubscriptionAction');
 						SubscriptionAction::sendOnlinePaymentNotificationEmail($subscription, 'SUBSCRIPTION_RENEW_INSTL');
 					}
 				} else {
@@ -238,7 +238,7 @@ class OJSPaymentManager extends PaymentManager {
 					// Notify JM/SM of completed online purchase
 					$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 					if ($journalSettingsDao->getSetting($subscription->getJournalId(), 'enableSubscriptionOnlinePaymentNotificationRenewIndividual')) {
-						import('subscription.SubscriptionAction');
+						import('classes.subscription.SubscriptionAction');
 						SubscriptionAction::sendOnlinePaymentNotificationEmail($subscription, 'SUBSCRIPTION_RENEW_INDL');
 					}
 				}

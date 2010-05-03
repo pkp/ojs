@@ -13,7 +13,7 @@
  *
  */
 
-import('plugins.Plugin');
+import('classes.plugins.Plugin');
 
 class PaymethodPlugin extends Plugin {
 	/**

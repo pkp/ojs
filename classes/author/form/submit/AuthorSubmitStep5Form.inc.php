@@ -15,7 +15,7 @@
 // $Id$
 
 
-import("author.form.submit.AuthorSubmitForm");
+import('classes.author.form.submit.AuthorSubmitForm');
 
 class AuthorSubmitStep5Form extends AuthorSubmitForm {
 
@@ -52,7 +52,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		$templateMgr->assign_by_ref('journal', Request::getJournal());
 
 		// Set up required Payment Related Information
-		import('payment.ojs.OJSPaymentManager');
+		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
 		if ( $paymentManager->submissionEnabled() || $paymentManager->fastTrackEnabled() || $paymentManager->publicationEnabled()) {
 			$templateMgr->assign('authorFees', true);
@@ -94,7 +94,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 	 * Validate the form
 	 */
 	function validate() {
-		import('payment.ojs.OJSPaymentManager');
+		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
 		if ( $paymentManager->submissionEnabled() ) {
 			if ( !parent::validate() ) return false;
@@ -180,12 +180,12 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		$user =& Request::getUser();
 
 		// Update search index
-		import('search.ArticleSearchIndex');
+		import('classes.search.ArticleSearchIndex');
 		ArticleSearchIndex::indexArticleMetadata($article);
 		ArticleSearchIndex::indexArticleFiles($article);
 
 		// Send author notification email
-		import('mail.ArticleMailTemplate');
+		import('classes.mail.ArticleMailTemplate');
 		$mail = new ArticleMailTemplate($article, 'SUBMISSION_ACK', null, null, null, false);
 		$mail->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 		if ($mail->isEnabled()) {
@@ -218,8 +218,8 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 			$mail->send();
 		}
 
-		import('article.log.ArticleLog');
-		import('article.log.ArticleEventLogEntry');
+		import('classes.article.log.ArticleLog');
+		import('classes.article.log.ArticleEventLogEntry');
 		ArticleLog::logEvent($this->articleId, ARTICLE_LOG_ARTICLE_SUBMIT, ARTICLE_LOG_TYPE_AUTHOR, $user->getId(), 'log.author.submitted', array('submissionId' => $article->getId(), 'authorName' => $user->getFullName()));
 
 		return $this->articleId;

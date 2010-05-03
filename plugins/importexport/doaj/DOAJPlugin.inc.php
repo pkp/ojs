@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('xml.XMLCustomWriter');
+import('lib.pkp.classes.xml.XMLCustomWriter');
 
 import('classes.plugins.ImportExportPlugin');
 
@@ -126,7 +126,7 @@ class DOAJPlugin extends ImportExportPlugin {
 
 		$issn = $journal->getSetting('printIssn');
 
-		import('mail.MailTemplate');
+		import('classes.mail.MailTemplate');
 		$mail = new MailTemplate('DOAJ_EMAIL_REP');
 
 		if ($send && !$mail->hasErrors()) {

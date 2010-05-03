@@ -13,7 +13,7 @@
  */
 
 
-import('pages.login.PKPLoginHandler');
+import('lib.pkp.pages.login.PKPLoginHandler');
 
 class LoginHandler extends PKPLoginHandler {
 	/**

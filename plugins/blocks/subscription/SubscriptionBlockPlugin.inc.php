@@ -13,7 +13,7 @@
  *
  */
 
-import('plugins.BlockPlugin');
+import('lib.pkp.classes.plugins.BlockPlugin');
 
 class SubscriptionBlockPlugin extends BlockPlugin {
 	/**
@@ -76,7 +76,7 @@ class SubscriptionBlockPlugin extends BlockPlugin {
 		}
 
 		if (isset($individualSubscription) || isset($institutionalSubscription)) {
-			import('payment.ojs.OJSPaymentManager');
+			import('classes.payment.ojs.OJSPaymentManager');
 			$paymentManager =& OJSPaymentManager::getManager();
 			$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
 			$templateMgr->assign('acceptSubscriptionPayments', $acceptSubscriptionPayments);

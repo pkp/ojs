@@ -17,7 +17,7 @@
 // $Id$
 
 
-import('plugins.Plugin');
+import('classes.plugins.Plugin');
 
 class ImplicitAuthPlugin extends Plugin {
 	function ImplicitAuthPlugin() {

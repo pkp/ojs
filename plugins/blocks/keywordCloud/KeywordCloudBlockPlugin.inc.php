@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('plugins.BlockPlugin');
+import('lib.pkp.classes.plugins.BlockPlugin');
 
 define('KEYWORD_BLOCK_MAX_ITEMS', 20);
 define('KEYWORD_BLOCK_CACHE_DAYS', 2);

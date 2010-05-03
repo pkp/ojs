@@ -191,7 +191,7 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 			"\t</front>\n";
 
 		// Include body text (for search indexing only)
-		import('search.ArticleSearchIndex');
+		import('classes.search.ArticleSearchIndex');
 		$text = '';
 		$galleys = $article->getGalleys();
 
@@ -200,7 +200,7 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 
 		// Determine any access limitations. If there are, do not
 		// provide the full-text.
-		import('issue.IssueAction');
+		import('classes.issue.IssueAction');
 		$subscriptionRequired = IssueAction::subscriptionRequired($issue);
 		$isSubscribedDomain = IssueAction::subscribedDomain($journal, $issue->getId(), $article->getId());
 

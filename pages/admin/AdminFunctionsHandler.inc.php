@@ -15,9 +15,9 @@
 // $Id$
 
 
-import('site.Version');
-import('site.VersionDAO');
-import('site.VersionCheck');
+import('lib.pkp.classes.site.Version');
+import('lib.pkp.classes.site.VersionDAO');
+import('lib.pkp.classes.site.VersionCheck');
 import('pages.admin.AdminHandler');
 
 class AdminFunctionsHandler extends AdminHandler {

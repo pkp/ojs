@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('classes.plugins.GenericPlugin');
+import('lib.pkp.classes.plugins.GenericPlugin');
 
 class ThesisFeedPlugin extends GenericPlugin {
 	function register($category, $path) {

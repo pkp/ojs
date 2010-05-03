@@ -16,7 +16,7 @@
 // $Id$
 
 
-import('article.ArticleFile');
+import('classes.article.ArticleFile');
 
 class ArticleGalley extends ArticleFile {
 

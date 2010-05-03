@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('xml.XMLCustomWriter');
+import('lib.pkp.classes.xml.XMLCustomWriter');
 
 class EruditExportDom {
 	function &generateArticleDom(&$doc, &$journal, &$issue, &$article, &$galley) {
@@ -168,7 +168,7 @@ class EruditExportDom {
 		$bodyNode =& XMLCustomWriter::createElement($doc, 'body');
 		XMLCustomWriter::appendChild($root, $bodyNode);
 
-		import('file.ArticleFileManager');
+		import('classes.file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($article->getId());
 		$file =& $articleFileManager->getFile($galley->getFileId());
 

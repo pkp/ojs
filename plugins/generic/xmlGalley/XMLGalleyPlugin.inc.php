@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('classes.plugins.GenericPlugin');
+import('lib.pkp.classes.plugins.GenericPlugin');
 
 class XMLGalleyPlugin extends GenericPlugin {
 	function register($category, $path) {
@@ -258,7 +258,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 				} elseif (Request::getUserVar('uploadCustomXSL')) {
 					$form->readInputData();
 
-					import('file.JournalFileManager');
+					import('classes.file.JournalFileManager');
 
 					// if the a valid custom XSL is uploaded, process it
 					$fileManager = new JournalFileManager($journal);
@@ -296,7 +296,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 				// if we are deleting an existing custom XSL sheet
 				} elseif (Request::getUserVar('deleteCustomXSL')) {
 
-					import('file.JournalFileManager');
+					import('classes.file.JournalFileManager');
 
 					// if the a valid custom XSL is uploaded, process it
 					$fileManager = new JournalFileManager($journal);

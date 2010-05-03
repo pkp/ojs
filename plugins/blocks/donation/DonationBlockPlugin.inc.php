@@ -13,7 +13,7 @@
  *
  */
 
-import('plugins.BlockPlugin');
+import('lib.pkp.classes.plugins.BlockPlugin');
 
 class DonationBlockPlugin extends BlockPlugin {
 	/**
@@ -69,7 +69,7 @@ class DonationBlockPlugin extends BlockPlugin {
 	function getContents(&$templateMgr) {
 		$journal =& Request::getJournal();
 		if (!$journal) return '';
-		import('payment.ojs.OJSPaymentManager');
+		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
 		$templateMgr->assign('donationEnabled', $paymentManager->donationEnabled());
 

@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('form.Form');
+import('lib.pkp.classes.form.Form');
 
 class AuthorSubmitSuppFileForm extends Form {
 	/** @var int the ID of the article */
@@ -153,7 +153,7 @@ class AuthorSubmitSuppFileForm extends Form {
 	 * @return int the supplementary file ID
 	 */
 	function execute() {
-		import("file.ArticleFileManager");
+		import('classes.file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($this->articleId);
 		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
 

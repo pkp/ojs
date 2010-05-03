@@ -15,7 +15,7 @@
 // $Id$
 
 
-import('form.Form');
+import('lib.pkp.classes.form.Form');
 
 class XMLGalleySettingsForm extends Form {
 	/** @var $journalId int */

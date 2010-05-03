@@ -18,11 +18,11 @@ define('VERSION_FILE', '/version.xml');
 define('INSTALL_FILE', '/install.xml');
 define('UPGRADE_FILE', '/upgrade.xml');
 
-import('site.Version');
-import('site.VersionCheck');
-import('file.FileManager');
-import('install.Install');
-import('install.Upgrade');
+import('lib.pkp.classes.site.Version');
+import('lib.pkp.classes.site.VersionCheck');
+import('lib.pkp.classes.file.FileManager');
+import('classes.install.Install');
+import('classes.install.Upgrade');
 import('pages.manager.ManagerHandler');
 
 class PluginManagementHandler extends ManagerHandler {
@@ -135,7 +135,7 @@ class PluginManagementHandler extends ManagerHandler {
 		$templateMgr->assign('pageHierarchy', $this->setBreadcrumbs(true));
 
 		if (Request::getUserVar('uploadPlugin')) {
-			import('file.TemporaryFileManager');
+			import('classes.file.TemporaryFileManager');
 			$temporaryFileManager = new TemporaryFileManager();
 			$user =& Request::getUser();
 

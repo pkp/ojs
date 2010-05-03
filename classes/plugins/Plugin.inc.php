@@ -13,7 +13,7 @@
  */
 
 
-import('plugins.PKPPlugin');
+import('lib.pkp.classes.plugins.PKPPlugin');
 
 class Plugin extends PKPPlugin {
 	/**

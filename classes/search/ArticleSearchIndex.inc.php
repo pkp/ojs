@@ -15,9 +15,9 @@
 // $Id$
 
 
-import('search.SearchFileParser');
-import('search.SearchHTMLParser');
-import('search.SearchHelperParser');
+import('lib.pkp.classes.search.SearchFileParser');
+import('lib.pkp.classes.search.SearchHTMLParser');
+import('lib.pkp.classes.search.SearchHelperParser');
 
 define('SEARCH_STOPWORDS_FILE', 'registry/stopwords.txt');
 
@@ -63,7 +63,7 @@ class ArticleSearchIndex {
 	 * @param $fileId int
 	 */
 	function updateFileIndex($articleId, $type, $fileId) {
-		import('file.ArticleFileManager');
+		import('classes.file.ArticleFileManager');
 		$fileMgr = new ArticleFileManager($articleId);
 		$file =& $fileMgr->getFile($fileId);
 
