@@ -304,7 +304,7 @@ class JournalStatisticsDAO extends DAO {
 				review_assignments r
 				LEFT JOIN users u ON (u.user_id = r.reviewer_id)
 			WHERE	a.journal_id = ?
-				AND r.article_id = a.article_id
+				AND r.submission_id = a.article_id
 				AND af.article_id = a.article_id
 				AND af.file_id = a.review_file_id
 				AND af.revision = 1' .

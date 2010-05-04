@@ -69,8 +69,8 @@ class AuthorSubmission extends Article {
 	 * @param $reviewAssignment ReviewAssignment
 	 */
 	function addReviewAssignment($reviewAssignment) {
-		if ($reviewAssignment->getArticleId() == null) {
-			$reviewAssignment->setArticleId($this->getArticleId());
+		if ($reviewAssignment->getSubmissionId() == null) {
+			$reviewAssignment->setSubmissionId($this->getArticleId());
 		}
 
 		array_push($this->reviewAssignments, $reviewAssignment);

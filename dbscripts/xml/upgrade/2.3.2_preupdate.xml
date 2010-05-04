@@ -2,7 +2,7 @@
 <!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
 
 <!--
-  * 2.3.0_preupdate.xml
+  * 2.3.2_preupdate.xml
   *
   * Copyright (c) 2003-2010 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -16,5 +16,10 @@
 	<!-- Bug #5124: port review forms to pkp-lib -->
 	<sql>
 		<rename table="review_forms" column="journal_id" to="assoc_id" />
+	</sql>
+	<!-- Bug #5386: port review assignments to pkp-lib -->
+	<sql>
+		<rename table="review_assignments" column="article_id" to="submission_id" />
+		<rename table="review_rounds" column="article_id" to="submission_id" />
 	</sql>
 </data>

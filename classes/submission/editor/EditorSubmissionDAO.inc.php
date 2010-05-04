@@ -293,7 +293,7 @@ class EditorSubmissionDAO extends DAO {
 				LEFT JOIN users pe ON (pe.user_id = spr.user_id)
 				LEFT JOIN signoffs sle ON (a.article_id = sle.assoc_id AND scf.assoc_type = ? AND sle.symbolic = ?)
 				LEFT JOIN users le ON (le.user_id = sle.user_id)
-				LEFT JOIN review_assignments r ON (r.article_id = a.article_id)
+				LEFT JOIN review_assignments r ON (r.submission_id = a.article_id)
 				LEFT JOIN users re ON (re.user_id = r.reviewer_id AND cancelled = 0)
 				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)

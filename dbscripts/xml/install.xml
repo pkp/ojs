@@ -22,6 +22,7 @@
 	<schema file="lib/pkp/xml/schema/temporaryFiles.xml" />
 	<schema file="lib/pkp/xml/schema/signoff.xml" />
 	<schema file="lib/pkp/xml/schema/announcements.xml" />
+	<schema file="lib/pkp/xml/schema/reviews.xml" />
 	<schema file="lib/pkp/xml/schema/reviewForms.xml" />
 
 	<!-- OJS schema -->

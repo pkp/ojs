@@ -72,15 +72,15 @@ class ReviewerAction extends Action {
 				import('classes.article.log.ArticleEventLogEntry');
 
 				$entry = new ArticleEventLogEntry();
-				$entry->setArticleId($reviewAssignment->getArticleId());
+				$entry->setArticleId($reviewAssignment->getSubmissionId());
 				$entry->setUserId($reviewer->getId());
 				$entry->setDateLogged(Core::getCurrentDate());
 				$entry->setEventType($decline?ARTICLE_LOG_REVIEW_DECLINE:ARTICLE_LOG_REVIEW_ACCEPT);
-				$entry->setLogMessage($decline?'log.review.reviewDeclined':'log.review.reviewAccepted', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getArticleId(), 'round' => $reviewAssignment->getRound()));
+				$entry->setLogMessage($decline?'log.review.reviewDeclined':'log.review.reviewAccepted', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getSubmissionId(), 'round' => $reviewAssignment->getRound()));
 				$entry->setAssocType(ARTICLE_LOG_TYPE_REVIEW);
 				$entry->setAssocId($reviewAssignment->getId());
 
-				ArticleLog::logEventEntry($reviewAssignment->getArticleId(), $entry);
+				ArticleLog::logEventEntry($reviewAssignment->getSubmissionId(), $entry);
 
 				return true;
 			} else {
@@ -156,15 +156,15 @@ class ReviewerAction extends Action {
 				import('classes.article.log.ArticleEventLogEntry');
 
 				$entry = new ArticleEventLogEntry();
-				$entry->setArticleId($reviewAssignment->getArticleId());
+				$entry->setArticleId($reviewAssignment->getSubmissionId());
 				$entry->setUserId($reviewer->getId());
 				$entry->setDateLogged(Core::getCurrentDate());
 				$entry->setEventType(ARTICLE_LOG_REVIEW_RECOMMENDATION);
-				$entry->setLogMessage('log.review.reviewRecommendationSet', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getArticleId(), 'round' => $reviewAssignment->getRound()));
+				$entry->setLogMessage('log.review.reviewRecommendationSet', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getSubmissionId(), 'round' => $reviewAssignment->getRound()));
 				$entry->setAssocType(ARTICLE_LOG_TYPE_REVIEW);
 				$entry->setAssocId($reviewAssignment->getId());
 
-				ArticleLog::logEventEntry($reviewAssignment->getArticleId(), $entry);
+				ArticleLog::logEventEntry($reviewAssignment->getSubmissionId(), $entry);
 			} else {
 				if (!Request::getUserVar('continued')) {
 					$assignedEditors = $email->ccAssignedEditors($reviewerSubmission->getArticleId());
@@ -207,7 +207,7 @@ class ReviewerAction extends Action {
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');		
 		$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentById($reviewId);
 
-		$articleFileManager = new ArticleFileManager($reviewAssignment->getArticleId());
+		$articleFileManager = new ArticleFileManager($reviewAssignment->getSubmissionId());
 
 		// Only upload the file if the reviewer has yet to submit a recommendation
 		// and if review forms are not used
@@ -236,7 +236,7 @@ class ReviewerAction extends Action {
 			$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId());
 
 			$entry = new ArticleEventLogEntry();
-			$entry->setArticleId($reviewAssignment->getArticleId());
+			$entry->setArticleId($reviewAssignment->getSubmissionId());
 			$entry->setUserId($reviewer->getId());
 			$entry->setDateLogged(Core::getCurrentDate());
 			$entry->setEventType(ARTICLE_LOG_REVIEW_FILE);
@@ -244,7 +244,7 @@ class ReviewerAction extends Action {
 			$entry->setAssocType(ARTICLE_LOG_TYPE_REVIEW);
 			$entry->setAssocId($reviewAssignment->getId());
 
-			ArticleLog::logEventEntry($reviewAssignment->getArticleId(), $entry);
+			ArticleLog::logEventEntry($reviewAssignment->getSubmissionId(), $entry);
 		}
 	}
 
@@ -262,7 +262,7 @@ class ReviewerAction extends Action {
 		$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentById($reviewId);
 
 		if (!HookRegistry::call('ReviewerAction::deleteReviewerVersion', array(&$reviewAssignment, &$fileId, &$revision))) {
-			$articleFileManager = new ArticleFileManager($reviewAssignment->getArticleId());
+			$articleFileManager = new ArticleFileManager($reviewAssignment->getSubmissionId());
 			$articleFileManager->deleteFile($fileId, $revision);
 		}
 	}
@@ -361,7 +361,7 @@ class ReviewerAction extends Action {
 				$notificationManager = new NotificationManager();
 				$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 				$reviewAssignment = $reviewAssignmentDao->getReviewAssignmentById($reviewId);
-				$articleId = $reviewAssignment->getArticleId();
+				$articleId = $reviewAssignment->getSubmissionId();
 				$articleDao =& DAORegistry::getDAO('ArticleDAO'); 
 				$article =& $articleDao->getArticle($articleId);
 				$notificationUsers = $article->getAssociatedUserIds();

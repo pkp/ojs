@@ -15,6 +15,8 @@
 // $Id$
 
 
+import('classes.plugins.Plugin');
+
 class ReportPlugin extends Plugin {
 	function ReportPlugin() {
 		parent::Plugin();

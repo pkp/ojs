@@ -71,7 +71,7 @@ class SectionEditorSubmissionDAO extends DAO {
 				r2.review_revision
 			FROM	articles a
 				LEFT JOIN sections s ON (s.section_id = a.section_id)
-				LEFT JOIN review_rounds r2 ON (a.article_id = r2.article_id AND a.current_round = r2.round)
+				LEFT JOIN review_rounds r2 ON (a.article_id = r2.submission_id AND a.current_round = r2.round)
 				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
 				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
@@ -194,7 +194,7 @@ class SectionEditorSubmissionDAO extends DAO {
 				'UPDATE review_rounds
 					SET
 						review_revision = ?
-					WHERE article_id = ? AND round = ?',
+					WHERE submission_id = ? AND round = ?',
 				array(
 					$sectionEditorSubmission->getReviewRevision(),
 					$sectionEditorSubmission->getArticleId(),
@@ -262,7 +262,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	function createReviewRound($articleId, $round, $reviewRevision) {
 		$this->update(
 			'INSERT INTO review_rounds
-				(article_id, round, review_revision)
+				(submission_id, round, review_revision)
 				VALUES
 				(?, ?, ?)',
 			array($articleId, $round, $reviewRevision)
@@ -289,7 +289,7 @@ class SectionEditorSubmissionDAO extends DAO {
 			FROM	articles a
 				LEFT JOIN edit_assignments e ON (e.article_id = a.article_id)
 				LEFT JOIN sections s ON (s.section_id = a.section_id)
-				LEFT JOIN review_rounds r2 ON (a.article_id = r2.article_id AND a.current_round = r2.round)
+				LEFT JOIN review_rounds r2 ON (a.article_id = r2.submission_id AND a.current_round = r2.round)
 				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
 				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
@@ -461,7 +461,7 @@ class SectionEditorSubmissionDAO extends DAO {
 				LEFT JOIN users ce ON (scf.user_id = ce.user_id)
 				LEFT JOIN signoffs spr ON (a.article_id = spr.assoc_id AND spr.assoc_type = ? AND spr.symbolic = ?)
 				LEFT JOIN users pe ON (pe.user_id = spr.user_id)
-				LEFT JOIN review_rounds r2 ON (a.article_id = r2.article_id and a.current_round = r2.round)
+				LEFT JOIN review_rounds r2 ON (a.article_id = r2.submission_id and a.current_round = r2.round)
 				LEFT JOIN signoffs sle ON (a.article_id = sle.assoc_id AND sle.assoc_type = ? AND sle.symbolic = ?) LEFT JOIN users le ON (le.user_id = sle.user_id)
 				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
@@ -636,7 +636,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	 */
 	function deleteReviewRoundsByArticle($articleId) {
 		return $this->update(
-			'DELETE FROM review_rounds WHERE article_id = ?',
+			'DELETE FROM review_rounds WHERE submission_id = ?',
 			$articleId
 		);
 	}
@@ -682,7 +682,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	 */
 	function getMaxReviewRound($articleId) {
 		$result =& $this->retrieve(
-			'SELECT MAX(round) FROM review_rounds WHERE article_id = ?', $articleId
+			'SELECT MAX(round) FROM review_rounds WHERE submission_id = ?', $articleId
 		);
 		$returner = isset($result->fields[0]) ? $result->fields[0] : 0;
 
@@ -700,7 +700,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	 */
 	function reviewRoundExists($articleId, $round) {
 		$result =& $this->retrieve(
-			'SELECT COUNT(*) FROM review_rounds WHERE article_id = ? AND round = ?', array($articleId, $round)
+			'SELECT COUNT(*) FROM review_rounds WHERE submission_id = ? AND round = ?', array($articleId, $round)
 		);
 		$returner = isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
 
@@ -793,7 +793,7 @@ class SectionEditorSubmissionDAO extends DAO {
 			LEFT JOIN review_assignments a ON (a.reviewer_id = u.user_id)
 				LEFT JOIN review_assignments ac ON (ac.reviewer_id = u.user_id AND ac.date_completed IS NOT NULL)
 				LEFT JOIN review_assignments ai ON (ai.reviewer_id = u.user_id AND ai.date_completed IS NULL)
-				LEFT JOIN review_assignments ar ON (ar.reviewer_id = u.user_id AND ar.cancelled = 0 AND ar.article_id = ? AND ar.round = ?)
+				LEFT JOIN review_assignments ar ON (ar.reviewer_id = u.user_id AND ar.cancelled = 0 AND ar.submission_id = ? AND ar.round = ?)
 				LEFT JOIN user_settings s ON (u.user_id = s.user_id AND s.setting_name = ?)
 				LEFT JOIN roles r ON (r.user_id = u.user_id)
 			WHERE	u.user_id = r.user_id AND
@@ -988,11 +988,19 @@ class SectionEditorSubmissionDAO extends DAO {
 		$statistics = Array();
 
 		// Get counts of completed submissions
-		$result =& $this->retrieve('SELECT ra.reviewer_id AS editor_id, MAX(ra.date_notified) AS last_notified FROM review_assignments ra, articles a WHERE ra.article_id = a.article_id AND a.journal_id = ? GROUP BY ra.reviewer_id', $journalId);
+		$result =& $this->retrieve(
+			'SELECT	r.reviewer_id, MAX(r.date_notified) AS last_notified
+			FROM	review_assignments r,
+				articles a
+			WHERE	r.submission_id = a.article_id AND
+				a.journal_id = ?
+			GROUP BY r.reviewer_id',
+			(int) $journalId
+		);
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
-			if (!isset($statistics[$row['editor_id']])) $statistics[$row['editor_id']] = array();
-			$statistics[$row['editor_id']]['last_notified'] = $this->datetimeFromDB($row['last_notified']);
+			if (!isset($statistics[$row['reviewer_id']])) $statistics[$row['editor_id']] = array();
+			$statistics[$row['reviewer_id']]['last_notified'] = $this->datetimeFromDB($row['last_notified']);
 			$result->MoveNext();
 		}
 
@@ -1000,7 +1008,18 @@ class SectionEditorSubmissionDAO extends DAO {
 		unset($result);
 
 		// Get completion status
-		$result =& $this->retrieve('SELECT r.reviewer_id, COUNT(*) AS incomplete FROM review_assignments r, articles a WHERE r.article_id = a.article_id AND r.date_notified IS NOT NULL AND r.date_completed IS NULL AND r.cancelled = 0 AND a.journal_id = ? GROUP BY r.reviewer_id', $journalId);
+		$result =& $this->retrieve(
+			'SELECT	r.reviewer_id, COUNT(*) AS incomplete
+			FROM	review_assignments r,
+				articles a
+			WHERE	r.submission_id = a.article_id AND
+				r.date_notified IS NOT NULL AND
+				r.date_completed IS NULL AND
+				r.cancelled = 0 AND
+				a.journal_id = ?
+			GROUP BY r.reviewer_id',
+			(int) $journalId
+		);
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			if (!isset($statistics[$row['reviewer_id']])) $statistics[$row['reviewer_id']] = array();
@@ -1012,7 +1031,17 @@ class SectionEditorSubmissionDAO extends DAO {
 		unset($result);
 
 		// Calculate time taken for completed reviews
-		$result =& $this->retrieve('SELECT r.reviewer_id, r.date_notified, r.date_completed FROM review_assignments r, articles a WHERE r.article_id = a.article_id AND r.date_notified IS NOT NULL AND r.date_completed IS NOT NULL AND r.declined = 0 AND a.journal_id = ?', $journalId);
+		$result =& $this->retrieve(
+			'SELECT	r.reviewer_id, r.date_notified, r.date_completed
+			FROM	review_assignments r,
+				articles a
+			WHERE	r.submission_id = a.article_id AND
+				r.date_notified IS NOT NULL AND
+				r.date_completed IS NOT NULL AND
+				r.declined = 0 AND
+				a.journal_id = ?',
+			(int) $journalId
+		);
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			if (!isset($statistics[$row['reviewer_id']])) $statistics[$row['reviewer_id']] = array();

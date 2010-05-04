@@ -60,7 +60,7 @@ class ReviewReportDAO extends DAO {
 				(r.cancelled=1) AS cancelled,
 				r.recommendation AS recommendation
 			FROM	review_assignments r
-				LEFT JOIN articles a ON r.article_id = a.article_id
+				LEFT JOIN articles a ON r.submission_id = a.article_id
 				LEFT JOIN article_settings asl ON (a.article_id=asl.article_id AND asl.locale=? AND asl.setting_name=?)
 				LEFT JOIN article_settings aspl ON (a.article_id=aspl.article_id AND aspl.locale=? AND aspl.setting_name=?),
 				users u
