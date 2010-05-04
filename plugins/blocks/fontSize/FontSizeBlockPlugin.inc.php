@@ -18,15 +18,6 @@
 import('lib.pkp.classes.plugins.BlockPlugin');
 
 class FontSizeBlockPlugin extends BlockPlugin {
-	function register($category, $path) {
-		$success = parent::register($category, $path);
-		if ($success) {
-			$templateMgr =& TemplateManager::getManager();
-			$templateMgr->assign('baseUrl', Request::getBasePath() . '/');
-			$additionalHeadData = $templateMgr->get_template_vars('additionalHeadData');
-		}
-		return $success;
-	}
 
 	/**
 	 * Determine whether the plugin is enabled. Overrides parent so that
