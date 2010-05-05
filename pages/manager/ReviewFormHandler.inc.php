@@ -174,7 +174,7 @@ class ReviewFormHandler extends ManagerHandler {
 
 		if (isset($reviewForm) && $reviewForm->getCompleteCount() == 0 && $reviewForm->getIncompleteCount() == 0) {
 			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-			$reviewAssignments =& $reviewAssignmentDao->getReviewAssignmentsByReviewFormId($reviewFormId);
+			$reviewAssignments =& $reviewAssignmentDao->getByReviewFormId($reviewFormId);
 
 			foreach ($reviewAssignments as $reviewAssignment) {
 				$reviewAssignment->setReviewFormId('');

@@ -111,7 +111,7 @@ class AuthorSubmissionDAO extends DAO {
 
 		// Review Assignments
 		for ($i = 1; $i <= $row['current_round']; $i++) {
-			$authorSubmission->setReviewAssignments($this->reviewAssignmentDao->getReviewAssignmentsByArticleId($row['article_id'], $i), $i);
+			$authorSubmission->setReviewAssignments($this->reviewAssignmentDao->getBySubmissionId($row['article_id'], $i), $i);
 		}
 
 		// Comments

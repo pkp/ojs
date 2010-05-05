@@ -106,7 +106,7 @@ class EditorSubmissionDAO extends DAO {
 		// Review Rounds
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 		for ($i = 1; $i <= $editorSubmission->getCurrentRound(); $i++) {
-			$reviewAssignments =& $reviewAssignmentDao->getReviewAssignmentsByArticleId($editorSubmission->getId(), $i);
+			$reviewAssignments =& $reviewAssignmentDao->getBySubmissionId($editorSubmission->getId(), $i);
 			if (!empty($reviewAssignments)) {
 				$editorSubmission->setReviewAssignments($reviewAssignments, $i);
 			}

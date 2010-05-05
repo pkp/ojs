@@ -55,7 +55,7 @@ class ReviewFormResponseForm extends Form {
 		$reviewFormResponseDao =& DAORegistry::getDAO('ReviewFormResponseDAO');
 		$reviewFormResponses =& $reviewFormResponseDao->getReviewReviewFormResponseValues($this->reviewId);
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-		$reviewAssignment = $reviewAssignmentDao->getReviewAssignmentById($this->reviewId);
+		$reviewAssignment = $reviewAssignmentDao->getById($this->reviewId);
 
 		$editorPreview = Request::getRequestedPage() != 'reviewer';
 
@@ -92,7 +92,7 @@ class ReviewFormResponseForm extends Form {
 	 */
 	function execute() {
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-		$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentById($this->reviewId);
+		$reviewAssignment =& $reviewAssignmentDao->getById($this->reviewId);
 		$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 
 		$reviewFormResponseDao =& DAORegistry::getDAO('ReviewFormResponseDAO');

@@ -146,7 +146,7 @@ class SectionEditorAction extends Action {
 		$userDao =& DAORegistry::getDAO('UserDAO');
 		$user =& Request::getUser();
 
-		$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentById($reviewId);
+		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 
 		if (isset($reviewAssignment) && $reviewAssignment->getSubmissionId() == $sectionEditorSubmission->getArticleId() && !HookRegistry::call('SectionEditorAction::clearReview', array(&$sectionEditorSubmission, $reviewAssignment))) {
 			$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId());
@@ -175,7 +175,7 @@ class SectionEditorAction extends Action {
 		$journal =& Request::getJournal();
 		$user =& Request::getUser();
 
-		$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentById($reviewId);
+		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 
 		$isEmailBasedReview = $journal->getSetting('mailSubmissionsToReviewers')==1?true:false;
 		$reviewerAccessKeysEnabled = $journal->getSetting('reviewerAccessKeysEnabled');
@@ -289,7 +289,7 @@ class SectionEditorAction extends Action {
 		$journal =& Request::getJournal();
 		$user =& Request::getUser();
 
-		$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentById($reviewId);
+		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 		$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId());
 		if (!isset($reviewer)) return true;
 
@@ -350,7 +350,7 @@ class SectionEditorAction extends Action {
 
 		$journal =& Request::getJournal();
 		$user =& Request::getUser();
-		$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentById($reviewId);
+		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 		$reviewerAccessKeysEnabled = $journal->getSetting('reviewerAccessKeysEnabled');
 
 		// If we're using access keys, disable the address fields
@@ -445,7 +445,7 @@ class SectionEditorAction extends Action {
 		$journal =& Request::getJournal();
 		$user =& Request::getUser();
 
-		$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentById($reviewId);
+		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 
 		import('classes.mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($sectionEditorSubmission, 'REVIEW_ACK');
@@ -492,7 +492,7 @@ class SectionEditorAction extends Action {
 		$userDao =& DAORegistry::getDAO('UserDAO');
 		$user =& Request::getUser();
 
-		$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentById($reviewId);
+		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 		$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId());
 		if (!isset($reviewer)) return false;
 
@@ -525,7 +525,7 @@ class SectionEditorAction extends Action {
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
 
-		$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentById($reviewId);
+		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 		$articleFile =& $articleFileDao->getArticleFile($fileId, $revision);
 
 		if ($reviewAssignment->getSubmissionId() == $articleId && $reviewAssignment->getReviewerFileId() == $fileId && !HookRegistry::call('SectionEditorAction::makeReviewerFileViewable', array(&$reviewAssignment, &$articleFile, &$viewable))) {
@@ -547,7 +547,7 @@ class SectionEditorAction extends Action {
 		$userDao =& DAORegistry::getDAO('UserDAO');
 		$user =& Request::getUser();
 
-		$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentById($reviewId);
+		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 		$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId());
 		if (!isset($reviewer)) return false;
 
@@ -647,7 +647,7 @@ class SectionEditorAction extends Action {
 		$userDao =& DAORegistry::getDAO('UserDAO');
 		$user =& Request::getUser();
 
-		$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentById($reviewId);
+		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 		$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId(), true);
 
 		if ($reviewAssignment->getSubmissionId() == $articleId && !HookRegistry::call('SectionEditorAction::setReviewerRecommendation', array(&$reviewAssignment, &$reviewer, &$recommendation, &$acceptOption))) {
@@ -676,7 +676,7 @@ class SectionEditorAction extends Action {
 	 */
 	function clearReviewForm($sectionEditorSubmission, $reviewId) {
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-		$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentById($reviewId);
+		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 
 		if (HookRegistry::call('SectionEditorAction::clearReviewForm', array(&$sectionEditorSubmission, &$reviewAssignment, &$reviewId))) return $reviewId;
 
@@ -699,7 +699,7 @@ class SectionEditorAction extends Action {
 	 */
 	function addReviewForm($sectionEditorSubmission, $reviewId, $reviewFormId) {
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-		$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentById($reviewId);
+		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 
 		if (HookRegistry::call('SectionEditorAction::addReviewForm', array(&$sectionEditorSubmission, &$reviewAssignment, &$reviewId, &$reviewFormId))) return $reviewFormId;
 
@@ -725,7 +725,7 @@ class SectionEditorAction extends Action {
 	 */
 	function viewReviewFormResponse($sectionEditorSubmission, $reviewId) {
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-		$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentById($reviewId);
+		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 
 		if (HookRegistry::call('SectionEditorAction::viewReviewFormResponse', array(&$sectionEditorSubmission, &$reviewAssignment, &$reviewId))) return $reviewId;
 
@@ -1950,7 +1950,7 @@ class SectionEditorAction extends Action {
 				}
 			} elseif (Request::getUserVar('importPeerReviews')) {
 				$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-				$reviewAssignments =& $reviewAssignmentDao->getReviewAssignmentsByArticleId($sectionEditorSubmission->getArticleId(), $sectionEditorSubmission->getCurrentRound());
+				$reviewAssignments =& $reviewAssignmentDao->getBySubmissionId($sectionEditorSubmission->getArticleId(), $sectionEditorSubmission->getCurrentRound());
 				$reviewIndexes =& $reviewAssignmentDao->getReviewIndexesForRound($sectionEditorSubmission->getArticleId(), $sectionEditorSubmission->getCurrentRound());
 
 				$body = '';
@@ -2034,7 +2034,7 @@ class SectionEditorAction extends Action {
 		$journal =& Request::getJournal();
 
 		$comments =& $commentDao->getArticleComments($article->getId(), COMMENT_TYPE_EDITOR_DECISION);
-		$reviewAssignments =& $reviewAssignmentDao->getReviewAssignmentsByArticleId($article->getId(), $article->getCurrentRound());
+		$reviewAssignments =& $reviewAssignmentDao->getBySubmissionId($article->getId(), $article->getCurrentRound());
 
 		$commentsText = "";
 		foreach ($comments as $comment) {
@@ -2241,7 +2241,7 @@ class SectionEditorAction extends Action {
 		$userDao =& DAORegistry::getDAO('UserDAO');
 		$user =& Request::getUser();
 
-		$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentById($reviewId);
+		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 		$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId(), true);
 
 		if (HookRegistry::call('SectionEditorAction::acceptReviewForReviewer', array(&$reviewAssignment, &$reviewer, &$accept))) return;
@@ -2280,7 +2280,7 @@ class SectionEditorAction extends Action {
 		$userDao =& DAORegistry::getDAO('UserDAO');
 		$user =& Request::getUser();
 
-		$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentById($reviewId);
+		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 		$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId(), true);
 
 		if (HookRegistry::call('SectionEditorAction::uploadReviewForReviewer', array(&$reviewAssignment, &$reviewer))) return;

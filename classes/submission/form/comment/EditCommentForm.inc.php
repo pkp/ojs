@@ -168,7 +168,7 @@ class EditCommentForm extends Form {
 
 		// Get reviewer
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-		$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentById($this->comment->getAssocId());
+		$reviewAssignment =& $reviewAssignmentDao->getById($this->comment->getAssocId());
 		if ($reviewAssignment != null && $reviewAssignment->getReviewerId() != null) {
 			$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId());
 		} else {

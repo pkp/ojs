@@ -43,7 +43,7 @@ class ReviewerAction extends Action {
 
 		$reviewId = $reviewerSubmission->getReviewId();
 
-		$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentById($reviewId);
+		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 		$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId());
 		if (!isset($reviewer)) return true;
 
@@ -126,7 +126,7 @@ class ReviewerAction extends Action {
 		$reviewerRecommendationOptions =& ReviewAssignment::getReviewerRecommendationOptions();
 		if (!isset($reviewerRecommendationOptions[$recommendation])) return true;
 
-		$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentById($reviewerSubmission->getReviewId());
+		$reviewAssignment =& $reviewAssignmentDao->getById($reviewerSubmission->getReviewId());
 		$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId());
 		if (!isset($reviewer)) return true;
 
@@ -205,7 +205,7 @@ class ReviewerAction extends Action {
 	function uploadReviewerVersion($reviewId) {
 		import('classes.file.ArticleFileManager');
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');		
-		$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentById($reviewId);
+		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 
 		$articleFileManager = new ArticleFileManager($reviewAssignment->getSubmissionId());
 
@@ -259,7 +259,7 @@ class ReviewerAction extends Action {
 
 		$articleId = Request::getUserVar('articleId');
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-		$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentById($reviewId);
+		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 
 		if (!HookRegistry::call('ReviewerAction::deleteReviewerVersion', array(&$reviewAssignment, &$fileId, &$revision))) {
 			$articleFileManager = new ArticleFileManager($reviewAssignment->getSubmissionId());
@@ -360,7 +360,7 @@ class ReviewerAction extends Action {
 				import('lib.pkp.classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
 				$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-				$reviewAssignment = $reviewAssignmentDao->getReviewAssignmentById($reviewId);
+				$reviewAssignment = $reviewAssignmentDao->getById($reviewId);
 				$articleId = $reviewAssignment->getSubmissionId();
 				$articleDao =& DAORegistry::getDAO('ArticleDAO'); 
 				$article =& $articleDao->getArticle($articleId);
@@ -394,7 +394,7 @@ class ReviewerAction extends Action {
 	 */
 	function downloadReviewerFile($reviewId, $article, $fileId, $revision = null) {
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');		
-		$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentById($reviewId);
+		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 		$journal =& Request::getJournal();
 
 		$canDownload = false;

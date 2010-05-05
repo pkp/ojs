@@ -100,7 +100,7 @@ class EmailHandler extends UserHandler {
 
 			// 3. User is reviewer
 			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-			foreach ($reviewAssignmentDao->getReviewAssignmentsByArticleId($articleId) as $reviewAssignment) {
+			foreach ($reviewAssignmentDao->getBySubmissionId($articleId) as $reviewAssignment) {
 				if ($reviewAssignment->getReviewerId() === $user->getId()) $hasAccess = true;
 			}
 			// 4. User is copyeditor

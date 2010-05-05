@@ -772,7 +772,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$journal =& Request::getJournal();
 
 			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-			$reviewAssignment = $reviewAssignmentDao->getReviewAssignmentById($reviewId);
+			$reviewAssignment = $reviewAssignmentDao->getById($reviewId);
 
 			$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 			$settings =& $settingsDao->getJournalSettings($journal->getId());
@@ -933,7 +933,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
 		$reviewFormElements =& $reviewFormElementDao->getReviewFormElements($reviewFormId);
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-		$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentById($reviewId);
+		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('pageTitle', 'manager.reviewForms.preview');
@@ -981,7 +981,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
 			$reviewForms =& $reviewFormDao->getActiveByAssocId(ASSOC_TYPE_JOURNAL, $journal->getId(), $rangeInfo);
 			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-			$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentById($reviewId);
+			$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 
 			$this->setupTemplate(true, $articleId, 'review');
 			$templateMgr =& TemplateManager::getManager();

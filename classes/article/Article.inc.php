@@ -493,7 +493,7 @@ class Article extends Submission {
 
 		if($reviewers) {
 			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-			$reviewAssignments =& $reviewAssignmentDao->getReviewAssignmentsByArticleId($articleId);
+			$reviewAssignments =& $reviewAssignmentDao->getBySubmissionId($articleId);
 			foreach ($reviewAssignments as $reviewAssignment) {
 				$userId = $reviewAssignment->getReviewerId();
 				if ($userId) $userIds[] = array('id' => $userId, 'role' => 'reviewer');

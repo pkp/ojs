@@ -145,7 +145,7 @@ class SectionEditorSubmissionDAO extends DAO {
 
 		// Review Assignments
 		for ($i = 1; $i <= $row['current_round']; $i++) {
-			$sectionEditorSubmission->setReviewAssignments($this->reviewAssignmentDao->getReviewAssignmentsByArticleId($row['article_id'], $i), $i);
+			$sectionEditorSubmission->setReviewAssignments($this->reviewAssignmentDao->getBySubmissionId($row['article_id'], $i), $i);
 		}
 
 		// Layout Editing
