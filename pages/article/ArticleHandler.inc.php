@@ -81,7 +81,7 @@ class ArticleHandler extends Handler {
 		$enableComments = $journal->getSetting('enableComments');
 
 		if (($article->getEnableComments()) && ($enableComments == COMMENTS_AUTHENTICATED || $enableComments == COMMENTS_UNAUTHENTICATED || $enableComments == COMMENTS_ANONYMOUS)) {
-			$comments =& $commentDao->getRootCommentsByArticleId($article->getId());
+			$comments =& $commentDao->getRootCommentsBySubmissionId($article->getId());
 		}
 
 		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');

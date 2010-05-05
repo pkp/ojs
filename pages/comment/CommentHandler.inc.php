@@ -46,14 +46,14 @@ class CommentHandler extends Handler {
 		$userId = isset($user)?$user->getId():null;
 
 		$commentDao =& DAORegistry::getDAO('CommentDAO');
-		$comment =& $commentDao->getComment($commentId, $articleId, 2);
+		$comment =& $commentDao->getById($commentId, $articleId, 2);
 
 		$journal =& Request::getJournal();
 
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$isManager = $roleDao->roleExists($journal->getId(), $userId, ROLE_ID_JOURNAL_MANAGER);
 
-		if (!$comment) $comments =& $commentDao->getRootCommentsByArticleId($articleId, 1);
+		if (!$comment) $comments =& $commentDao->getRootCommentsBySubmissionId($articleId, 1);
 		else $comments =& $comment->getChildren();
 
 		$this->setupTemplate($article, $galleyId, $comment);
@@ -62,7 +62,7 @@ class CommentHandler extends Handler {
 		if (Request::getUserVar('refresh')) $templateMgr->setCacheability(CACHEABILITY_NO_CACHE);
 		if ($comment) {
 			$templateMgr->assign_by_ref('comment', $comment);
-			$templateMgr->assign_by_ref('parent', $commentDao->getComment($comment->getParentCommentId(), $articleId));
+			$templateMgr->assign_by_ref('parent', $commentDao->getById($comment->getParentCommentId(), $articleId));
 		}
 		$templateMgr->assign_by_ref('comments', $comments);
 		$templateMgr->assign('articleId', $articleId);
@@ -83,7 +83,7 @@ class CommentHandler extends Handler {
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
 
-		$parent =& $commentDao->getComment($parentId, $articleId);
+		$parent =& $commentDao->getById($parentId, $articleId);
 		if (isset($parent) && $parent->getArticleId() != $articleId) {
 			Request::redirect(null, null, 'view', array($articleId, $galleyId));
 		}
@@ -158,7 +158,7 @@ class CommentHandler extends Handler {
 			Request::redirect(null, 'index');
 		}
 
-		$comment =& $commentDao->getComment($commentId, $articleId, ARTICLE_COMMENT_RECURSE_ALL);
+		$comment =& $commentDao->getById($commentId, $articleId, SUBMISSION_COMMENT_RECURSE_ALL);
 		if ($comment)$commentDao->deleteComment($comment);
 
 		Request::redirect(null, null, 'view', array($articleId, $galleyId), array('refresh' => '1'));

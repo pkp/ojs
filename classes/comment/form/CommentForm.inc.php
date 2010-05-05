@@ -51,7 +51,7 @@ class CommentForm extends Form {
 		$this->articleId = $articleId;
 
 		$commentDao =& DAORegistry::getDAO('CommentDAO');
-		$this->comment =& $commentDao->getComment($commentId, $articleId);
+		$this->comment =& $commentDao->getById($commentId, $articleId);
 
 		import('lib.pkp.classes.captcha.CaptchaManager');
 		$captchaManager = new CaptchaManager();
@@ -85,7 +85,7 @@ class CommentForm extends Form {
 			);
 		} else {
 			$commentDao =& DAORegistry::getDAO('CommentDAO');
-			$comment =& $commentDao->getComment($this->parentId, $this->articleId);
+			$comment =& $commentDao->getById($this->parentId, $this->articleId);
 			$this->_data = array();
 			$user = Request::getUser();
 			if ($user) {
@@ -187,7 +187,7 @@ class CommentForm extends Form {
 		if (isset($this->comment)) {
 			$commentDao->updateComment($comment);
 		} else {
-			$comment->setArticleId($this->articleId);
+			$comment->setSubmissionId($this->articleId);
 			$comment->setChildCommentCount(0);
 			$commentDao->insertComment($comment);
 			$this->commentId = $comment->getId();

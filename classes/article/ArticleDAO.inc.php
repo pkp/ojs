@@ -311,7 +311,7 @@ class ArticleDAO extends DAO {
 		$publishedArticleDao->deletePublishedArticleByArticleId($articleId);
 
 		$commentDao =& DAORegistry::getDAO('CommentDAO');
-		$commentDao->deleteCommentsByArticle($articleId);
+		$commentDao->deleteBySubmissionId($articleId);
 
 		$articleNoteDao =& DAORegistry::getDAO('ArticleNoteDAO');
 		$articleNoteDao->clearAllArticleNotes($articleId);

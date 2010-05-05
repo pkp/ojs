@@ -558,45 +558,6 @@
 	</table>
 
 	<!--
-	 *
-	 * TABLE comments
-	 *
-	 -->
-	<table name="comments">
-		<field name="comment_id" type="I8">
-			<KEY />
-			<AUTOINCREMENT/>
-		</field>
-		<field name="article_id" type="I8">
-			<NOTNULL/>
-		</field>
-		<field name="parent_comment_id" type="I8"/>
-		<field name="num_children" type="I4">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="user_id" type="I8"/>
-		<field name="poster_ip" type="C2" size="15">
-			<NOTNULL/>
-		</field>
-		<field name="poster_name" type="C2" size="90"/>
-		<field name="poster_email" type="C2" size="90"/>
-		<field name="title" type="C2" size="255">
-			<NOTNULL/>
-		</field>
-		<field name="body" type="X"/>
-		<field name="date_posted" type="T"/>
-		<field name="date_modified" type="T"/>
-		<descr>Reader comments on articles.</descr>
-		<index name="comments_article_id">
-			<col>article_id</col>
-		</index>
-		<index name="comments_user_id">
-			<col>user_id</col>
-		</index>
-	</table>
-
-	<!--
 	  *
 	  * TABLE article_authors
 	  *

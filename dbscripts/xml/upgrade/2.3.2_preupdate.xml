@@ -22,4 +22,8 @@
 		<rename table="review_assignments" column="article_id" to="submission_id" />
 		<rename table="review_rounds" column="article_id" to="submission_id" />
 	</sql>
+	<!-- Bug #5397: port "comments" into pkp-lib -->
+	<sql>
+		<rename table="comments" column="article_id" to="submission_id" />
+	</sql>
 </data>

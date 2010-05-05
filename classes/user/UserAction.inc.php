@@ -45,7 +45,7 @@ class UserAction {
 		}
 
 		$commentDao =& DAORegistry::getDAO('CommentDAO');
-		foreach ($commentDao->getCommentsByUserId($oldUserId) as $comment) {
+		foreach ($commentDao->getByUserId($oldUserId) as $comment) {
 			$comment->setUserId($newUserId);
 			$commentDao->updateComment($comment);
 			unset($comment);
