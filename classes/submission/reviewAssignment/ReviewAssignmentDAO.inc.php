@@ -308,27 +308,27 @@ class ReviewAssignmentDAO extends PKPReviewAssignmentDAO {
 		return new ReviewAssignment();
 	}
 
-        /**
-         * Internal function to return a review assignment object from a row.
-         * @param $row array
-         * @return ReviewAssignment
-         */
-        function &_fromRow(&$row) {
-                $reviewAssignment =& parent::_fromRow($row);
-                $reviewFileId = $this->_getSubmissionReviewFileId($reviewAssignment->getSubmissionId());
-                $reviewAssignment->setReviewFileId($reviewFileId);
+	/**
+	 * Internal function to return a review assignment object from a row.
+	 * @param $row array
+	 * @return ReviewAssignment
+	 */
+	function &_fromRow(&$row) {
+		$reviewAssignment =& parent::_fromRow($row);
+		$reviewFileId = $this->_getSubmissionReviewFileId($reviewAssignment->getSubmissionId());
+		$reviewAssignment->setReviewFileId($reviewFileId);
 
-                // Files
-                $reviewAssignment->setReviewFile($this->articleFileDao->getArticleFile($row[$reviewFileId], $row['review_revision']));
-                $reviewAssignment->setReviewerFile($this->articleFileDao->getArticleFile($row['reviewer_file_id']));
-                $reviewAssignment->setReviewerFileRevisions($this->articleFileDao->getArticleFileRevisions($row['reviewer_file_id']));
+		// Files
+		$reviewAssignment->setReviewFile($this->articleFileDao->getArticleFile($reviewFileId, $row['review_revision']));
+		$reviewAssignment->setReviewerFile($this->articleFileDao->getArticleFile($row['reviewer_file_id']));
+		$reviewAssignment->setReviewerFileRevisions($this->articleFileDao->getArticleFileRevisions($row['reviewer_file_id']));
 
-                // Comments
-                $reviewAssignment->setMostRecentPeerReviewComment($this->articleCommentDao->getMostRecentArticleComment($row['submission_id'], COMMENT_TYPE_PEER_REVIEW, $row['review_id']));
+		// Comments
+		$reviewAssignment->setMostRecentPeerReviewComment($this->articleCommentDao->getMostRecentArticleComment($row['submission_id'], COMMENT_TYPE_PEER_REVIEW, $row['review_id']));
 
-                HookRegistry::call('ReviewAssignmentDAO::_fromRow', array(&$reviewAssignment, &$row));
-                return $reviewAssignment;
-        }
+		HookRegistry::call('ReviewAssignmentDAO::_fromRow', array(&$reviewAssignment, &$row));
+		return $reviewAssignment;
+	}
 }
 
 ?>
