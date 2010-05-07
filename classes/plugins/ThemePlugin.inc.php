@@ -15,6 +15,8 @@
 // $Id$
 
 
+import('classes.plugins.Plugin');
+
 class ThemePlugin extends Plugin {
 	function ThemePlugin() {
 		parent::Plugin();

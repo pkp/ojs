@@ -15,6 +15,8 @@
 // $Id$
 
 
+import('classes.plugins.Plugin');
+
 class CitationPlugin extends Plugin {
 	function CitationPlugin() {
 		parent::Plugin();
