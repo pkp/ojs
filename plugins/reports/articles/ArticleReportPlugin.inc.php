@@ -56,7 +56,7 @@ class ArticleReportPlugin extends ReportPlugin {
 		$journal =& Request::getJournal();
 
 		header('content-type: text/comma-separated-values');
-		header('content-disposition: attachment; filename=report.csv');
+		header('content-disposition: attachment; filename=articles-' . date('Ymd') . '.csv');
 
 		$articleReportDao =& DAORegistry::getDAO('ArticleReportDAO');
 		list($articlesIterator, $authorsIterator, $decisionsIteratorsArray) = $articleReportDao->getArticleReport($journal->getId());

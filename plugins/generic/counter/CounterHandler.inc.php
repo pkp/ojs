@@ -253,7 +253,7 @@ class CounterHandler extends Handler {
 		$counterReportDao =& DAORegistry::getDAO('CounterReportDAO');
 
 		header('content-type: text/comma-separated-values');
-		header('content-disposition: attachment; filename=report.csv');
+		header('content-disposition: attachment; filename=counter-' . date('Ymd') . '.csv');
 
 		$fp = fopen('php://output', 'wt');
 		String::fputcsv($fp, array(Locale::translate('plugins.generic.counter.1a.title1')));
