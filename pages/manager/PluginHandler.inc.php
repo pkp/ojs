@@ -75,7 +75,7 @@ class PluginHandler extends ManagerHandler {
 	 */
 	function plugin($args, &$request) {
 		$category = array_shift($args);
-		$plugin = array_shift($args);
+		$plugin = String::strtolower(array_shift($args));
 		$verb = array_shift($args);
 
 		$this->validate();
