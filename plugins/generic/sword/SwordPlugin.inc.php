@@ -51,6 +51,7 @@ class SwordPlugin extends GenericPlugin {
 		if (parent::register($category, $path)) {
 			HookRegistry::register('PluginRegistry::loadCategory', array(&$this, 'callbackLoadCategory'));
 			if ($this->getEnabled()) {
+				HookRegistry::register('SectionEditorAction::emailEditorDecisionComment', array(&$this, 'callbackAutomaticDeposits'));
 			}
 			$this->addLocaleData();
 			return true;
@@ -89,6 +90,51 @@ class SwordPlugin extends GenericPlugin {
 	}
 
 	/**
+	 * Hook registry function that is called when it's time to perform all automatic
+	 * deposits.
+	 * @param $hookName string
+	 * @param $args array
+	 */
+	function callbackAutomaticDeposits($hookName, $args) {
+		$sectionEditorSubmission =& $args[0];
+
+		// Determine if the most recent decision was an "Accept"
+		$decisions = $sectionEditorSubmission->getDecisions();
+		$decisions = array_pop($decisions); // Rounds
+		$decision = array_pop($decisions);
+		$decisionConst = $decision?$decision['decision']:null;
+		if ($decisionConst != SUBMISSION_EDITOR_DECISION_ACCEPT) return false;
+
+		// The most recent decision was an "Accept"; perform auto deposits.
+		$journal =& Request::getJournal();
+		$depositPoints = $this->getSetting($journal->getId(), 'depositPoints');
+		import('classes.sword.OJSSwordDeposit');
+
+		import('lib.pkp.classes.notification.NotificationManager');
+		$notificationManager = new NotificationManager();
+
+		foreach ($depositPoints as $depositPoint) {
+			if ($depositPoint['type'] != SWORD_DEPOSIT_TYPE_AUTOMATIC) continue;
+
+			// For each automatic deposit point, perform a deposit.
+			$deposit = new OJSSwordDeposit($sectionEditorSubmission);
+			$deposit->setMetadata();
+			$deposit->addEditorial();
+			$deposit->createPackage();
+			$deposit->deposit(
+				$depositPoint['url'],
+				$depositPoint['username'],
+				$depositPoint['password']
+			);
+			$deposit->cleanup();
+			unset($deposit);
+
+			$notificationManager->createTrivialNotification(Locale::translate('notification.notification'), Locale::translate('plugins.generic.sword.automaticDepositComplete', array('itemTitle' => $sectionEditorSubmission->getLocalizedTitle(), 'repositoryName' => $depositPoint['name'])), NOTIFICATION_TYPE_SUCCESS, null, false);
+		}
+		return false;
+	}
+
+	/**
 	 * Display verbs for the management interface.
 	 */
 	function getManagementVerbs() {
@@ -121,6 +167,7 @@ class SwordPlugin extends GenericPlugin {
 	function manage($verb, $args, &$message) {
 		$returner = true;
 		$journal =& Request::getJournal();
+		$this->addLocaleData();
 
 		switch ($verb) {
 			case 'settings':

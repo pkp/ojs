@@ -72,15 +72,21 @@ class OJSSwordDeposit {
 		$this->package->setAbstract(html_entity_decode(strip_tags($this->article->getAbstract($this->journal->getPrimaryLocale())), ENT_QUOTES, 'UTF-8'));
 		$this->package->setType($this->section->getIdentifyType($this->journal->getPrimaryLocale()));
 
-		$doi = $this->article->getDOI();
-		if ($doi !== null) $this->package->setIdentifier($doi);
+		// The article can be published or not. Support either.
+		if (is_a($this->article, 'PublishedArticle')) {
+			$doi = $this->article->getDOI();
+			if ($doi !== null) $this->package->setIdentifier($doi);
+		}
 
 		foreach ($this->article->getAuthors() as $author) {
 			$this->package->addCreator($author->getFullName());
 		}
 
-		$plugin =& PluginRegistry::loadPlugin('citationFormats', 'bibtex');
-		$this->package->setCitation(html_entity_decode(strip_tags($plugin->fetchCitation($this->article, $this->issue, $this->journal)), ENT_QUOTES, 'UTF-8'));
+		// The article can be published or not. Support either.
+		if (is_a($this->article, 'PublishedArticle')) {
+			$plugin =& PluginRegistry::loadPlugin('citationFormats', 'bibtex');
+			$this->package->setCitation(html_entity_decode(strip_tags($plugin->fetchCitation($this->article, $this->issue, $this->journal)), ENT_QUOTES, 'UTF-8'));
+		}
 	}
 
 	/**

@@ -27,13 +27,15 @@
 	<message key="plugins.generic.sword.depositPoints.type.optionalFixed">Optional; Fixed</message>
 	<message key="plugins.generic.sword.depositPoints.type.manager">Manager Only</message>
 	<message key="plugins.generic.sword.depositPoints.type.description"><![CDATA[<h4>Deposit Point Types:</h4>
-<p><strong>Automatic</strong>: The deposit occurs automatically. The full SWORD deposit point is specified. A username and password must be specified.<br/>
-<strong>Optional; Flexible</strong>: The author can choose whether or not to deposit. The specified URL indicates a service document, and the author may choose which specific deposit point to use from that document.<br/>
-<strong>Optional; Fixed</strong>: The author can choose whether or not to deposit. The URL specifies the specific SWORD deposit point.<br/>
-<strong>Manager Only</strong>: Only the Journal Manager may use this deposit point. The URL indicates a service document.
+<p><strong>Automatic</strong>: The deposit occurs automatically. The full SWORD deposit point is specified. A username and password must be specified. Deposit occurs after notifying the author of acceptance.<br/>
+<strong>Optional; Flexible</strong>: The author can choose whether or not to deposit. The specified URL indicates a service document, and the author may choose which specific deposit point to use from that document. Deposit occurs after notifying the author of acceptance.<br/>
+<strong>Optional; Fixed</strong>: The author can choose whether or not to deposit. The URL specifies the specific SWORD deposit point. Deposit occurs after notifying the author of acceptance.<br/>
+<strong>Manager Only</strong>: Only the Journal Manager may use this deposit point. The URL indicates a service document. Deposit is manually performed by the Journal Manager using the Import/Export interface in Journal Management.
 </p>]]></message>
 	<message key="plugins.generic.sword.depositPoints.password.description">If you do not specify a password here, you and/or the author will be prompted for one when the deposit occurs. Note that this password will be visible to all Journal Managers and will be stored unencrypted in the database.</message>
 	<message key="plugins.generic.sword.depositPoints.name">Name</message>
+	<message key="plugins.generic.sword.automaticDepositComplete">The item "{$itemTitle}" was automatically deposited into the repository "{$repositoryName}".</message>
+
 	<message key="plugins.importexport.sword.displayName">SWORD Import/Export Deposit Plugin</message>
 	<message key="plugins.importexport.sword.description">Deposit articles in remote repositories using the SWORD deposit protocol</message>
 	<message key="plugins.importexport.sword.deposit">Deposit</message>
