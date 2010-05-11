@@ -57,12 +57,12 @@ class ThesisFeedPlugin extends GenericPlugin {
 		switch ($category) {
 			case 'blocks':
 				$this->import('ThesisFeedBlockPlugin');
-				$blockPlugin = new ThesisFeedBlockPlugin();
+				$blockPlugin = new ThesisFeedBlockPlugin($this->getName());
 				$plugins[$blockPlugin->getSeq()][$blockPlugin->getPluginPath()] =& $blockPlugin;
 				break;
 			case 'gateways':
 				$this->import('ThesisFeedGatewayPlugin');
-				$gatewayPlugin = new ThesisFeedGatewayPlugin();
+				$gatewayPlugin = new ThesisFeedGatewayPlugin($this->getName());
 				$plugins[$gatewayPlugin->getSeq()][$gatewayPlugin->getPluginPath()] =& $gatewayPlugin;
 				break;
 		}
@@ -74,8 +74,10 @@ class ThesisFeedPlugin extends GenericPlugin {
 			$templateManager =& $args[0];
 			$currentJournal =& $templateManager->get_template_vars('currentJournal');
 
-			$thesisPlugin =& PluginRegistry::getPlugin('generic', 'ThesisPlugin');
-			$thesisEnabled = $thesisPlugin->getEnabled();
+			// Determine whether the thesis plugin is enabled
+			$application =& PKPApplication::getApplication();
+			$products = $application->getEnabledProducts('plugins.generic');
+			$thesisEnabled = $products['thesis'];
 
 			$displayPage = $currentJournal ? $this->getSetting($currentJournal->getId(), 'displayPage') : null;
 			$requestedPage = Request::getRequestedPage();

@@ -24,14 +24,6 @@ import('lib.pkp.classes.plugins.GenericPlugin');
 
 class SwordPlugin extends GenericPlugin {
 	/**
-	 * Get the symbolic name of this plugin
-	 * @return string
-	 */
-	function getName() {
-		return 'SwordPlugin';
-	}
-
-	/**
 	 * Get the display name of this plugin
 	 * @return string
 	 */
@@ -51,7 +43,7 @@ class SwordPlugin extends GenericPlugin {
 		if (parent::register($category, $path)) {
 			HookRegistry::register('PluginRegistry::loadCategory', array(&$this, 'callbackLoadCategory'));
 			if ($this->getEnabled()) {
-				HookRegistry::register('SectionEditorAction::emailEditorDecisionComment', array(&$this, 'callbackAutomaticDeposits'));
+				HookRegistry::register('SectionEditorAction::emailEditorDecisionComment', array(&$this, 'callbackAuthorDeposits'));
 			}
 			$this->addLocaleData();
 			return true;
@@ -82,7 +74,7 @@ class SwordPlugin extends GenericPlugin {
 		switch ($category) {
 			case 'importexport':
 				$this->import('SwordImportExportPlugin');
-				$importExportPlugin = new SwordImportExportPlugin();
+				$importExportPlugin = new SwordImportExportPlugin($this->getName());
 				$plugins[$importExportPlugin->getSeq()][$importExportPlugin->getPluginPath()] =& $importExportPlugin;
 				break;
 		}
@@ -91,11 +83,11 @@ class SwordPlugin extends GenericPlugin {
 
 	/**
 	 * Hook registry function that is called when it's time to perform all automatic
-	 * deposits.
+	 * deposits and notify the author of optional deposits.
 	 * @param $hookName string
 	 * @param $args array
 	 */
-	function callbackAutomaticDeposits($hookName, $args) {
+	function callbackAuthorDeposits($hookName, $args) {
 		$sectionEditorSubmission =& $args[0];
 
 		// Determine if the most recent decision was an "Accept"
@@ -113,8 +105,13 @@ class SwordPlugin extends GenericPlugin {
 		import('lib.pkp.classes.notification.NotificationManager');
 		$notificationManager = new NotificationManager();
 
+		$sendDepositNotification = $this->getSetting($journal->getId(), 'allowAuthorSpecify') ? true : false;
+
 		foreach ($depositPoints as $depositPoint) {
-			if ($depositPoint['type'] != SWORD_DEPOSIT_TYPE_AUTOMATIC) continue;
+			$depositType = $depositPoint['type'];
+
+			if ($depositType == SWORD_DEPOSIT_TYPE_OPTIONAL_SELECTION || $depositType == SWORD_DEPOSIT_TYPE_OPTIONAL_FIXED) $sendDepositNotification = true;
+			if ($depositType != SWORD_DEPOSIT_TYPE_AUTOMATIC) continue;
 
 			// For each automatic deposit point, perform a deposit.
 			$deposit = new OJSSwordDeposit($sectionEditorSubmission);
@@ -131,6 +128,26 @@ class SwordPlugin extends GenericPlugin {
 
 			$notificationManager->createTrivialNotification(Locale::translate('notification.notification'), Locale::translate('plugins.generic.sword.automaticDepositComplete', array('itemTitle' => $sectionEditorSubmission->getLocalizedTitle(), 'repositoryName' => $depositPoint['name'])), NOTIFICATION_TYPE_SUCCESS, null, false);
 		}
+
+		if ($sendDepositNotification) {
+			$submittingUser =& $sectionEditorSubmission->getUser();
+
+			import('classes.mail.MailTemplate');
+			$contactName = $journal->getSetting('contactName');
+			$contactEmail = $journal->getSetting('contactEmail');
+			$mail = new MailTemplate('SWORD_DEPOSIT_NOTIFICATION');
+			$mail->setFrom($contactEmail, $contactName);
+			$mail->addRecipient($submittingUser->getEmail(), $submittingUser->getFullName());
+			$mail->assignParams(array(
+				'journalName' => $journal->getLocalizedTitle(),
+				'articleTitle' => $sectionEditorSubmission->getLocalizedTitle(),
+				'swordDepositUrl' => Request::url(
+					null, 'sword', 'index', $sectionEditorSubmission->getId()
+				)
+			));
+			$mail->send();
+		}
+
 		return false;
 	}
 
@@ -216,7 +233,7 @@ class SwordPlugin extends GenericPlugin {
 					$form->readInputData();
 					if ($form->validate()) {
 						$form->execute();
-						Request::redirect(null, null, null, array('generic', 'SwordPlugin', 'settings'));
+						Request::redirect(null, null, null, array('generic', $this->getName(), 'settings'));
 					} else {
 						$form->display();
 					}

@@ -18,6 +18,17 @@
 import('classes.plugins.ImportExportPlugin');
 
 class SwordImportExportPlugin extends ImportExportPlugin {
+	/** @var $parentPluginName string Name of parent plugin */
+	var $parentPluginName;
+
+	/**
+	 * Constructor
+	 */
+	function SwordImportExportPlugin($parentPluginName) {
+		parent::ImportExportPlugin();
+		$this->parentPluginName = $parentPluginName;
+	}
+
 	/**
 	 * Called as a plugin is registered to the registry
 	 * @param $category String Name of category plugin was registered to
@@ -53,7 +64,7 @@ class SwordImportExportPlugin extends ImportExportPlugin {
 	 * @return object
 	 */
 	function &getSwordPlugin() {
-		$plugin =& PluginRegistry::getPlugin('generic', 'SwordPlugin');
+		$plugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		return $plugin;
 	}
 

@@ -18,6 +18,17 @@
 import('lib.pkp.classes.plugins.BlockPlugin');
 
 class ThesisFeedBlockPlugin extends BlockPlugin {
+	/** @var $parentPluginName string Name of parent plugin */
+	var $parentPluginName;
+
+	/**
+	 * Constructor
+	 */
+	function ThesisFeedBlockPlugin($parentPluginName) {
+		parent::BlockPlugin();
+		$this->parentPluginName = $parentPluginName;
+	}
+
 	/**
 	 * Get the display name of this plugin.
 	 * @return String
@@ -38,16 +49,7 @@ class ThesisFeedBlockPlugin extends BlockPlugin {
 	 * @return object
 	 */
 	function &getThesisFeedPlugin() {
-		$plugin =& PluginRegistry::getPlugin('generic', 'ThesisFeedPlugin');
-		return $plugin;
-	}
-
-	/**
-	 * Get the thesis plugin
-	 * @return object
-	 */
-	function &getThesisPlugin() {
-		$plugin =& PluginRegistry::getPlugin('generic', 'ThesisPlugin');
+		$plugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		return $plugin;
 	}
 
@@ -78,8 +80,10 @@ class ThesisFeedBlockPlugin extends BlockPlugin {
 		$journal =& Request::getJournal();
 		if (!$journal) return '';
 
-		$thesisPlugin =& $this->getThesisPlugin();
-		if (!$thesisPlugin->getEnabled()) return '';
+		// If the thesis plugin isn't enabled, don't do anything.
+		$application =& PKPApplication::getApplication();
+		$products =& $application->getEnabledProducts('plugins.generic');
+		if (!isset($products['thesis'])) return '';
 
 		$plugin =& $this->getThesisFeedPlugin();
 		$displayPage = $plugin->getSetting($journal->getId(), 'displayPage');

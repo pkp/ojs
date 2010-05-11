@@ -19,20 +19,19 @@
 import('classes.plugins.GatewayPlugin');
 
 class WebFeedGatewayPlugin extends GatewayPlugin {
+	/** @var $parentPluginName string Name of parent plugin */
+	var $parentPluginName;
+
+	function WebFeedGatewayPlugin($parentPluginName) {
+		parent::GatewayPlugin();
+		$this->parentPluginName = $parentPluginName;
+	}
+
 	/**
 	 * Hide this plugin from the management interface (it's subsidiary)
 	 */
 	function getHideManagement() {
 		return true;
-	}
-
-	/**
-	 * Get the name of this plugin. The name must be unique within
-	 * its category.
-	 * @return String name of plugin
-	 */
-	function getName() {
-		return 'WebFeedGatewayPlugin';
 	}
 
 	function getDisplayName() {
@@ -48,7 +47,7 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 	 * @return object
 	 */
 	function &getWebFeedPlugin() {
-		$plugin =& PluginRegistry::getPlugin('generic', 'WebFeedPlugin');
+		$plugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		return $plugin;
 	}
 

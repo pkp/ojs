@@ -19,13 +19,15 @@
 import('classes.plugins.GatewayPlugin');
 
 class ThesisFeedGatewayPlugin extends GatewayPlugin {
+	/** @var $parentPluginName string Name of parent plugin */
+	var $parentPluginName;
+
 	/**
-	 * Get the name of this plugin. The name must be unique within
-	 * its category.
-	 * @return String name of plugin
+	 * Constructor
 	 */
-	function getName() {
-		return 'ThesisFeedGatewayPlugin';
+	function ThesisFeedGatewayPlugin($parentPluginName) {
+		parent::GatewayPlugin();
+		$this->parentPluginName = $parentPluginName;
 	}
 
 	function getDisplayName() {
@@ -41,7 +43,7 @@ class ThesisFeedGatewayPlugin extends GatewayPlugin {
 	 * @return object
 	 */
 	function &getThesisFeedPlugin() {
-		$plugin =& PluginRegistry::getPlugin('generic', 'ThesisFeedPlugin');
+		$plugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		return $plugin;
 	}
 

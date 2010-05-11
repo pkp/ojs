@@ -18,6 +18,14 @@
 import('lib.pkp.classes.plugins.BlockPlugin');
 
 class WebFeedBlockPlugin extends BlockPlugin {
+	/** @var $parentPluginName string Name of parent plugin */
+	var $parentPluginName;
+
+	function WebFeedBlockPlugin($parentPluginName) {
+		parent::BlockPlugin();
+		$this->parentPluginName = $parentPluginName;
+	}
+
 	/**
 	 * Hide this plugin from the management interface (it's subsidiary)
 	 */
@@ -53,7 +61,7 @@ class WebFeedBlockPlugin extends BlockPlugin {
 	 * @return object
 	 */
 	function &getWebFeedPlugin() {
-		$plugin =& PluginRegistry::getPlugin('generic', 'WebFeedPlugin');
+		$plugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		return $plugin;
 	}
 
