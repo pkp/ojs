@@ -784,18 +784,19 @@ class SectionEditorSubmissionDAO extends DAO {
 				u.user_id,
 				u.last_name,
 				ar.review_id,
-				AVG(a.quality) AS average_quality,
+				AVG(ra.quality) AS average_quality,
 				COUNT(ac.review_id) AS completed,
 				COUNT(ai.review_id) AS incomplete,
 				MAX(ac.date_notified) AS latest,
 				AVG(ac.date_completed-ac.date_notified) AS average
 			FROM	users u
-			LEFT JOIN review_assignments a ON (a.reviewer_id = u.user_id)
+			LEFT JOIN review_assignments ra ON (ra.reviewer_id = u.user_id)
 				LEFT JOIN review_assignments ac ON (ac.reviewer_id = u.user_id AND ac.date_completed IS NOT NULL)
 				LEFT JOIN review_assignments ai ON (ai.reviewer_id = u.user_id AND ai.date_completed IS NULL)
 				LEFT JOIN review_assignments ar ON (ar.reviewer_id = u.user_id AND ar.cancelled = 0 AND ar.submission_id = ? AND ar.round = ?)
 				LEFT JOIN user_settings s ON (u.user_id = s.user_id AND s.setting_name = ?)
 				LEFT JOIN roles r ON (r.user_id = u.user_id)
+				LEFT JOIN articles a ON (ra.submission_id = a.article_id)
 			WHERE	u.user_id = r.user_id AND
 				r.journal_id = ? AND
 				r.role_id = ? ' . $searchSql . 'GROUP BY u.user_id, u.last_name, ar.review_id' .
