@@ -18,6 +18,13 @@
 import('lib.pkp.classes.plugins.BlockPlugin');
 
 class ExternalFeedBlockPlugin extends BlockPlugin {
+	/** @var $parentPluginName string Name of parent plugin */
+	var $parentPluginName;
+
+	function ExternalFeedBlockPlugin($parentPluginName) {
+		$this->parentPluginName = $parentPluginName;
+	}
+
 	/**
 	 * Hide this plugin from the management interface (it's subsidiary)
 	 */
@@ -45,7 +52,7 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 	 * @return object
 	 */
 	function &getExternalFeedPlugin() {
-		$plugin =& PluginRegistry::getPlugin('generic', 'ExternalFeedPlugin');
+		$plugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		return $plugin;
 	}
 

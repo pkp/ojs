@@ -146,7 +146,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 		switch ($category) {
 			case 'blocks':
 				$this->import('ExternalFeedBlockPlugin');
-				$blockPlugin = new ExternalFeedBlockPlugin();
+				$blockPlugin = new ExternalFeedBlockPlugin($this->getName());
 				$plugins[$blockPlugin->getSeq()][$blockPlugin->getPluginPath()] =& $blockPlugin;
 				break;
 		}
