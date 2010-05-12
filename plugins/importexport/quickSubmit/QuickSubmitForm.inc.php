@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file QuickSubmitForm.inc.php
+ * @file plugins/importexport/quickSubmit/QuickSubmitForm.inc.php
  *
  * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -262,6 +262,10 @@ class QuickSubmitForm extends Form {
 				$article->setSubmissionFileId($fileId);
 				$article->SetReviewFileId($fileId);
 			}
+
+			// Update file search index
+			import('classes.search.ArticleSearchIndex');
+			ArticleSearchIndex::updateFileIndex($galley->getArticleId(), ARTICLE_SEARCH_GALLEY_FILE, $galley->getFileId());
 		}
 
 
@@ -316,6 +320,9 @@ class QuickSubmitForm extends Form {
 			$issueId = $this->getData('issueId');
 			$this->scheduleForPublication($articleId, $issueId);
 		}
+
+		import('classes.search.ArticleSearchIndex');
+		ArticleSearchIndex::indexArticleMetadata($article);
 	}
 
 	/**
