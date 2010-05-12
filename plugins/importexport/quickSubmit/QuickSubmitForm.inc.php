@@ -82,12 +82,6 @@ class QuickSubmitForm extends Form {
 			$templateMgr->assign('scrollToAuthor', true);
 		}
 
-		$jqueryPlugin =& PluginRegistry::getPlugin('generic', 'JQueryPlugin');
-		if ($jqueryPlugin->isJQueryInstalled()) {
-			$templateMgr->assign('jqueryPath', $jqueryPlugin->getScriptPath());
-			$templateMgr->assign('addAuthorUrl', $jqueryPlugin->getScriptPath());
-		}
-
 		if (Request::getUserVar('destination') == 'queue' ) {
 			$templateMgr->assign('publishToIssue', false);
 		} else {
