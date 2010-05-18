@@ -28,8 +28,9 @@ class MailTemplate extends PKPMailTemplate {
 	 * @param $enableAttachments boolean optional Whether or not to enable article attachments in the template
 	 * @param $journal object optional The journal this message relates to
 	 * @param $includeSignature boolean optional
+	 * @param $ignorePostedData boolean optional
 	 */
-	function MailTemplate($emailKey = null, $locale = null, $enableAttachments = null, $journal = null, $includeSignature = true) {
+	function MailTemplate($emailKey = null, $locale = null, $enableAttachments = null, $journal = null, $includeSignature = true, $ignorePostedData = false) {
 		parent::PKPMailTemplate($emailKey, $locale, $enableAttachments, $includeSignature);
 
 		// If a journal wasn't specified, use the current request.
@@ -47,7 +48,7 @@ class MailTemplate extends PKPMailTemplate {
 			if (!empty($userSig)) $userSig = "\n" . $userSig;
 		}
 
-		if (isset($emailTemplate) && Request::getUserVar('subject')==null && Request::getUserVar('body')==null) {
+		if (isset($emailTemplate) && ($ignorePostedData || (Request::getUserVar('subject')==null && Request::getUserVar('body')==null))) {
 			$this->setSubject($emailTemplate->getSubject());
 			$this->setBody($emailTemplate->getBody() . $userSig);
 			$this->enabled = $emailTemplate->getEnabled();

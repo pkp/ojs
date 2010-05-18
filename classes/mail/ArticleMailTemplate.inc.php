@@ -45,10 +45,11 @@ class ArticleMailTemplate extends MailTemplate {
 	 * @param $enableAttachments boolean optional
 	 * @param $journal object optional
 	 * @param $includeSignature boolean optional
+	 * @param $ignorePostedData boolean optional
 	 * @see MailTemplate::MailTemplate()
 	 */
-	function ArticleMailTemplate($article, $emailKey = null, $locale = null, $enableAttachments = null, $journal = null, $includeSignature = true) {
-		parent::MailTemplate($emailKey, $locale, $enableAttachments, $journal, $includeSignature);
+	function ArticleMailTemplate($article, $emailKey = null, $locale = null, $enableAttachments = null, $journal = null, $includeSignature = true, $ignorePostedData = false) {
+		parent::MailTemplate($emailKey, $locale, $enableAttachments, $journal, $includeSignature, $ignorePostedData);
 		$this->article = $article;
 	}
 

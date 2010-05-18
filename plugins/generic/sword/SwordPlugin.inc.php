@@ -43,6 +43,7 @@ class SwordPlugin extends GenericPlugin {
 		if (parent::register($category, $path)) {
 			HookRegistry::register('PluginRegistry::loadCategory', array(&$this, 'callbackLoadCategory'));
 			if ($this->getEnabled()) {
+				HookRegistry::register('LoadHandler', array(&$this, 'callbackLoadHandler'));
 				HookRegistry::register('SectionEditorAction::emailEditorDecisionComment', array(&$this, 'callbackAuthorDeposits'));
 			}
 			$this->addLocaleData();
@@ -79,6 +80,21 @@ class SwordPlugin extends GenericPlugin {
 				break;
 		}
 		return false;
+	}
+
+	/**
+	 * Hook registry function that is called to display the sword deposit page for authors.
+	 * @param $hookName string
+	 * @param $args array
+	 */
+	function callbackLoadHandler($hookName, $args) {
+		$page =& $args[0];
+		if ($page === 'sword') {
+			define('HANDLER_CLASS', 'SwordHandler');
+			define('SWORD_PLUGIN_NAME', $this->getName());
+			$handlerFile =& $args[2];
+			$handlerFile = $this->getPluginPath() . '/' . 'SwordHandler.inc.php';
+		}
 	}
 
 	/**
@@ -132,12 +148,13 @@ class SwordPlugin extends GenericPlugin {
 		if ($sendDepositNotification) {
 			$submittingUser =& $sectionEditorSubmission->getUser();
 
-			import('classes.mail.MailTemplate');
+			import('classes.mail.ArticleMailTemplate');
 			$contactName = $journal->getSetting('contactName');
 			$contactEmail = $journal->getSetting('contactEmail');
-			$mail = new MailTemplate('SWORD_DEPOSIT_NOTIFICATION');
+			$mail = new ArticleMailTemplate($sectionEditorSubmission, 'SWORD_DEPOSIT_NOTIFICATION', null, null, $journal, true, true);
 			$mail->setFrom($contactEmail, $contactName);
 			$mail->addRecipient($submittingUser->getEmail(), $submittingUser->getFullName());
+
 			$mail->assignParams(array(
 				'journalName' => $journal->getLocalizedTitle(),
 				'articleTitle' => $sectionEditorSubmission->getLocalizedTitle(),
@@ -145,6 +162,7 @@ class SwordPlugin extends GenericPlugin {
 					null, 'sword', 'index', $sectionEditorSubmission->getId()
 				)
 			));
+
 			$mail->send();
 		}
 
@@ -262,6 +280,14 @@ class SwordPlugin extends GenericPlugin {
 			SWORD_DEPOSIT_TYPE_OPTIONAL_FIXED => 'plugins.generic.sword.depositPoints.type.optionalFixed',
 			SWORD_DEPOSIT_TYPE_MANAGER => 'plugins.generic.sword.depositPoints.type.manager'
 		);
+	}
+
+	function getInstallEmailTemplatesFile() {
+		return ($this->getPluginPath() . DIRECTORY_SEPARATOR . 'emailTemplates.xml');
+	}
+
+	function getInstallEmailTemplateDataFile() {
+		return ($this->getPluginPath() . '/locale/{$installedLocale}/emailTemplates.xml');
 	}
 }
 
