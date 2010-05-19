@@ -16,12 +16,12 @@
 GITREP=git://github.com/pkp/ojs.git
 
 if [ -z "$1" ]; then
-	echo "Usage: $0 <version> [<tag>] [<patch_dir>]";
+	echo "Usage: $0 <version> [<tag>-<branch>] [<patch_dir>]";
 	exit 1;
 fi
 
 VERSION=$1
-TAG=${2-official/master}
+TAG=$2
 PATCHDIR=${3-}
 PREFIX=ojs
 BUILD=$PREFIX-$VERSION
