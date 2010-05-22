@@ -60,7 +60,7 @@ class CitationGridHandler extends PKPCitationGridHandler {
 		$this->addCheck(new HandlerValidatorRoles($this, false, 'Insufficient privileges!', null, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR)));
 
 		// Execute application-independent checks
-		if (!parent::validate($requiredContexts, $request)) return false;
+		if (!parent::validate($requiredContexts, $request, $journal)) return false;
 
 		// Retrieve and validate the article id
 		$articleId =& $request->getUserVar('assocId');
