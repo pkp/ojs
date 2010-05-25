@@ -62,7 +62,7 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 				break;
 			case 'gateways':
 				$this->import('AnnouncementFeedGatewayPlugin');
-				$gatewayPlugin = new AnnouncementFeedGatewayPlugin();
+				$gatewayPlugin = new AnnouncementFeedGatewayPlugin($this->getName());
 				$plugins[$gatewayPlugin->getSeq()][$gatewayPlugin->getPluginPath()] =& $gatewayPlugin;
 				break;
 		}
