@@ -57,7 +57,7 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 		switch ($category) {
 			case 'blocks':
 				$this->import('AnnouncementFeedBlockPlugin');
-				$blockPlugin = new AnnouncementFeedBlockPlugin();
+				$blockPlugin = new AnnouncementFeedBlockPlugin($this->getName());
 				$plugins[$blockPlugin->getSeq()][$blockPlugin->getPluginPath()] =& $blockPlugin;
 				break;
 			case 'gateways':
