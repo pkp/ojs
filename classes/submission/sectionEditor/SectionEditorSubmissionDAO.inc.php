@@ -718,7 +718,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	 */
 	function reviewerExists($articleId, $reviewerId, $round) {
 		$result =& $this->retrieve(
-			'SELECT COUNT(*) FROM review_assignments WHERE article_id = ? AND reviewer_id = ? AND round = ? AND cancelled = 0', array($articleId, $reviewerId, $round)
+			'SELECT COUNT(*) FROM review_assignments WHERE submission_id = ? AND reviewer_id = ? AND round = ? AND cancelled = 0', array((int) $articleId, (int) $reviewerId, (int) $round)
 		);
 		$returner = isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
 
