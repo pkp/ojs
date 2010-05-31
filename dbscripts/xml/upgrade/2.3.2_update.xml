@@ -28,4 +28,8 @@
 	<sql>
 		<query>DELETE FROM institutional_subscription_ip WHERE ip_start = 0 AND ip_end IS NULL</query>
 	</sql>
+	<!-- Bug #5440: Migrate submission notes into PKP "notes" -->
+	<sql>
+		<query>UPDATE notes SET assoc_type = 257</query><!-- ASSOC_TYPE_ARTICLE -->
+	</sql>
 </data>

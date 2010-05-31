@@ -163,8 +163,8 @@ class ArticleCommentDAO extends DAO {
 
 	/**
 	 * inserts a new article comment into article_comments table
-	 * @param ArticleNote object
-	 * @return Article Note Id int
+	 * @param ArticleComment object
+	 * @return Article Comment Id int
 	 */
 	function insertArticleComment(&$articleComment) {
 		$this->update(

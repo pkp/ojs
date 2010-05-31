@@ -329,10 +329,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->setupTemplate(true, $articleId);
 
 		// submission notes
-		$articleNoteDao =& DAORegistry::getDAO('ArticleNoteDAO');
+		$noteDao =& DAORegistry::getDAO('NoteDAO');
 
 		$rangeInfo =& Handler::getRangeInfo('submissionNotes');
-		$submissionNotes =& $articleNoteDao->getArticleNotes($articleId, $rangeInfo);
+		$submissionNotes =& $noteDao->getByAssoc(ASSOC_TYPE_ARTICLE, $articleId, $rangeInfo);
 
 		import('classes.article.log.ArticleLog');
 		$rangeInfo =& Handler::getRangeInfo('eventLogEntries');
@@ -2045,11 +2045,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$submission =& $this->submission;
 
 		$rangeInfo =& Handler::getRangeInfo('submissionNotes');
-		$articleNoteDao =& DAORegistry::getDAO('ArticleNoteDAO');
+		$noteDao =& DAORegistry::getDAO('NoteDAO');
 
 		// submission note edit
 		if ($noteViewType == 'edit') {
-			$articleNote = $articleNoteDao->getArticleNoteById($noteId);
+			$note = $noteDao->getById($noteId);
 		}
 
 		$templateMgr =& TemplateManager::getManager();
@@ -2057,14 +2057,14 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign('noteViewType', $noteViewType);
-		if (isset($articleNote)) {
-			$templateMgr->assign_by_ref('articleNote', $articleNote);
+		if (isset($note)) {
+			$templateMgr->assign_by_ref('articleNote', $note);
 		}
 
 		if ($noteViewType == 'edit' || $noteViewType == 'add') {
 			$templateMgr->assign('showBackLink', true);
 		} else {
-			$submissionNotes =& $articleNoteDao->getArticleNotes($articleId, $rangeInfo);
+			$submissionNotes =& $noteDao->getByAssoc(ASSOC_TYPE_ARTICLE, $articleId, $rangeInfo);
 			$templateMgr->assign_by_ref('submissionNotes', $submissionNotes);
 		}
 

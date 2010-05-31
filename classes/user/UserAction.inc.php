@@ -51,12 +51,12 @@ class UserAction {
 			unset($comment);
 		}
 
-		$articleNoteDao =& DAORegistry::getDAO('ArticleNoteDAO');
-		$articleNotes =& $articleNoteDao->getArticleNotesByUserId($oldUserId);
-		while ($articleNote =& $articleNotes->next()) {
-			$articleNote->setUserId($newUserId);
-			$articleNoteDao->updateArticleNote($articleNote);
-				unset($articleNote);
+		$noteDao =& DAORegistry::getDAO('NoteDAO');
+		$notes =& $noteDao->getByUserId($oldUserId);
+		while ($note =& $notes->next()) {
+			$note->setUserId($newUserId);
+			$noteDao->updateObject($note);
+			unset($note);
 		}
 
 		$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');

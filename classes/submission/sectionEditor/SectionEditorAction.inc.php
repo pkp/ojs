@@ -1651,18 +1651,21 @@ class SectionEditorAction extends Action {
 	function addSubmissionNote($articleId) {
 		import('classes.file.ArticleFileManager');
 
-		$articleNoteDao =& DAORegistry::getDAO('ArticleNoteDAO');
+		$noteDao =& DAORegistry::getDAO('NoteDAO');
 		$user =& Request::getUser();
+		$journal =& Request::getJournal();
 
-		$articleNote = new ArticleNote();
-		$articleNote->setArticleId($articleId);
-		$articleNote->setUserId($user->getId());
-		$articleNote->setDateCreated(Core::getCurrentDate());
-		$articleNote->setDateModified(Core::getCurrentDate());
-		$articleNote->setTitle(Request::getUserVar('title'));
-		$articleNote->setNote(Request::getUserVar('note'));
+		$note = $noteDao->newDataObject();
+		$note->setAssocType(ASSOC_TYPE_ARTICLE);
+		$note->setAssocId($articleId);
+		$note->setUserId($user->getId());
+		$note->setContextId($journal->getId());
+		$note->setDateCreated(Core::getCurrentDate());
+		$note->setDateModified(Core::getCurrentDate());
+		$note->setTitle(Request::getUserVar('title'));
+		$note->setContents(Request::getUserVar('note'));
 
-		if (!HookRegistry::call('SectionEditorAction::addSubmissionNote', array(&$articleId, &$articleNote))) {
+		if (!HookRegistry::call('SectionEditorAction::addSubmissionNote', array(&$articleId, &$note))) {
 			$articleFileManager = new ArticleFileManager($articleId);
 			if ($articleFileManager->uploadedFileExists('upload')) {
 				$fileId = $articleFileManager->uploadSubmissionNoteFile('upload');
@@ -1670,9 +1673,9 @@ class SectionEditorAction extends Action {
 				$fileId = 0;
 			}
 
-			$articleNote->setFileId($fileId);
+			$note->setFileId($fileId);
 
-			$articleNoteDao->insertArticleNote($articleNote);
+			$noteDao->insertObject($note);
 		}
 	}
 
@@ -1693,8 +1696,8 @@ class SectionEditorAction extends Action {
 			$articleFileManager->deleteFile($fileId);
 		}
 
-		$articleNoteDao =& DAORegistry::getDAO('ArticleNoteDAO');
-		$articleNoteDao->deleteArticleNoteById($noteId);
+		$noteDao =& DAORegistry::getDAO('NoteDAO');
+		$noteDao->deleteById($noteId);
 	}
 
 	/**
@@ -1704,37 +1707,41 @@ class SectionEditorAction extends Action {
 	function updateSubmissionNote($articleId) {
 		import('classes.file.ArticleFileManager');
 
-		$articleNoteDao =& DAORegistry::getDAO('ArticleNoteDAO');
+		$noteDao =& DAORegistry::getDAO('NoteDAO');
+
 		$user =& Request::getUser();
+		$journal =& Request::getJournal();
 
-		$articleNote = new ArticleNote();
-		$articleNote->setId(Request::getUserVar('noteId'));
-		$articleNote->setArticleId($articleId);
-		$articleNote->setUserId($user->getId());
-		$articleNote->setDateModified(Core::getCurrentDate());
-		$articleNote->setTitle(Request::getUserVar('title'));
-		$articleNote->setNote(Request::getUserVar('note'));
-		$articleNote->setFileId(Request::getUserVar('fileId'));
+		$note = new Note();
+		$note->setId(Request::getUserVar('noteId'));
+		$note->setAssocType(ASSOC_TYPE_ARTICLE);
+		$note->setAssocId($articleId);
+		$note->setUserId($user->getId());
+		$note->setDateModified(Core::getCurrentDate());
+		$note->setContextId($journal->getId());
+		$note->setTitle(Request::getUserVar('title'));
+		$note->setContents(Request::getUserVar('note'));
+		$note->setFileId(Request::getUserVar('fileId'));
 
-		if (HookRegistry::call('SectionEditorAction::updateSubmissionNote', array(&$articleId, &$articleNote))) return;
+		if (HookRegistry::call('SectionEditorAction::updateSubmissionNote', array(&$articleId, &$note))) return;
 
 		$articleFileManager = new ArticleFileManager($articleId);
 
 		// if there is a new file being uploaded
 		if ($articleFileManager->uploadedFileExists('upload')) {
 			// Attach the new file to the note, overwriting existing file if necessary
-			$fileId = $articleFileManager->uploadSubmissionNoteFile('upload', $articleNote->getFileId(), true);
-			$articleNote->setFileId($fileId);
+			$fileId = $articleFileManager->uploadSubmissionNoteFile('upload', $note->getFileId(), true);
+			$note->setFileId($fileId);
 
 		} else {
 			if (Request::getUserVar('removeUploadedFile')) {
 				$articleFileManager = new ArticleFileManager($articleId);
-				$articleFileManager->deleteFile($articleNote->getFileId());
-				$articleNote->setFileId(0);
+				$articleFileManager->deleteFile($note->getFileId());
+				$note->setFileId(0);
 			}
 		}
 
-		$articleNoteDao->updateArticleNote($articleNote);
+		$noteDao->updateObject($note);
 	}
 
 	/**
@@ -1746,9 +1753,9 @@ class SectionEditorAction extends Action {
 
 		import('classes.file.ArticleFileManager');
 
-		$articleNoteDao =& DAORegistry::getDAO('ArticleNoteDAO');
+		$noteDao =& DAORegistry::getDAO('NoteDAO');
 
-		$fileIds = $articleNoteDao->getAllArticleNoteFileIds($articleId);
+		$fileIds = $noteDao->getAllFileIds(ASSOC_TYPE_ARTICLE, $articleId);
 
 		if (!empty($fileIds)) {
 			$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
@@ -1759,7 +1766,7 @@ class SectionEditorAction extends Action {
 			}
 		}
 
-		$articleNoteDao->clearAllArticleNotes($articleId);
+		$noteDao->deleteByAssoc(ASSOC_TYPE_ARTICLE, $articleId);
 
 	}
 

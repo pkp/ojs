@@ -313,8 +313,8 @@ class ArticleDAO extends DAO {
 		$commentDao =& DAORegistry::getDAO('CommentDAO');
 		$commentDao->deleteBySubmissionId($articleId);
 
-		$articleNoteDao =& DAORegistry::getDAO('ArticleNoteDAO');
-		$articleNoteDao->clearAllArticleNotes($articleId);
+		$noteDao =& DAORegistry::getDAO('NoteDAO');
+		$noteDao->deleteByAssoc(ASSOC_TYPE_ARTICLE, $articleId);
 
 		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$sectionEditorSubmissionDao->deleteDecisionsByArticle($articleId);

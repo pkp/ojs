@@ -87,7 +87,7 @@ class Application extends PKPApplication {
 			'ArticleDAO' => 'classes.article.ArticleDAO',
 			'ArticleFileDAO' => 'classes.article.ArticleFileDAO',
 			'ArticleGalleyDAO' => 'classes.article.ArticleGalleyDAO',
-			'ArticleNoteDAO' => 'classes.article.ArticleNoteDAO',
+			'ArticleNoteDAO' => 'classes.article.ArticleNoteDAO', // DEPRECATED
 			'ArticleSearchDAO' => 'classes.search.ArticleSearchDAO',
 			'AuthorDAO' => 'classes.article.AuthorDAO',
 			'AuthorSubmissionDAO' => 'classes.submission.author.AuthorSubmissionDAO',
@@ -105,6 +105,7 @@ class Application extends PKPApplication {
 			'JournalStatisticsDAO' => 'classes.journal.JournalStatisticsDAO',
 			'LayoutEditorSubmissionDAO' => 'classes.submission.layoutEditor.LayoutEditorSubmissionDAO',
 			'MetadataDescriptionDAO' => 'lib.pkp.classes.metadata.MetadataDescriptionDAO',
+			'NoteDAO' => 'classes.note.NoteDAO',
 			'OAIDAO' => 'classes.oai.ojs.OAIDAO',
 			'OJSCompletedPaymentDAO' => 'classes.payment.ojs.OJSCompletedPaymentDAO',
 			'PluginSettingsDAO' => 'classes.plugins.PluginSettingsDAO',
