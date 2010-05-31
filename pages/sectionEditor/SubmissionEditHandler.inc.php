@@ -331,8 +331,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		// submission notes
 		$noteDao =& DAORegistry::getDAO('NoteDAO');
 
-		$rangeInfo =& Handler::getRangeInfo('submissionNotes');
-		$submissionNotes =& $noteDao->getByAssoc(ASSOC_TYPE_ARTICLE, $articleId, $rangeInfo);
+		$submissionNotes =& $noteDao->getByAssoc(ASSOC_TYPE_ARTICLE, $articleId);
 
 		import('classes.article.log.ArticleLog');
 		$rangeInfo =& Handler::getRangeInfo('eventLogEntries');
@@ -2064,7 +2063,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		if ($noteViewType == 'edit' || $noteViewType == 'add') {
 			$templateMgr->assign('showBackLink', true);
 		} else {
-			$submissionNotes =& $noteDao->getByAssoc(ASSOC_TYPE_ARTICLE, $articleId, $rangeInfo);
+			$submissionNotes =& $noteDao->getByAssoc(ASSOC_TYPE_ARTICLE, $articleId);
 			$templateMgr->assign_by_ref('submissionNotes', $submissionNotes);
 		}
 
