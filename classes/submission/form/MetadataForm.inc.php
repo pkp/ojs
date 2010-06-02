@@ -320,7 +320,7 @@ class MetadataForm extends Form {
 
 			} else {
 				// Create a new author
-				$author = new Author();
+				$author =& new Author();
 				$isExistingAuthor = false;
 			}
 
