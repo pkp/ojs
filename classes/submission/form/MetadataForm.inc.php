@@ -320,7 +320,11 @@ class MetadataForm extends Form {
 
 			} else {
 				// Create a new author
-				$author =& new Author();
+				if (checkPhpVersion('5.0.0')) { // *5488* PHP4 Requires explicit instantiation-by-reference
+					$author = new Author();
+				} else {
+					$author =& new Author();
+				}
 				$isExistingAuthor = false;
 			}
 
