@@ -13,6 +13,17 @@
 {include file="common/header.tpl"}
 {/strip}
 
+{literal}
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#interests").tagit({
+			availableTags: [{/literal}{$existingInterests}{literal}]
+			{/literal}{if $currentInterests}{literal}, currentTags: [{/literal}{$currentInterests}]{/if}{literal}
+		});
+	});
+</script>
+{/literal}
+
 <form name="register" method="post" action="{url op="registerUser"}">
 
 <p>{translate key="user.register.completeForm"}</p>
@@ -206,7 +217,11 @@
 {/if}
 
 </table>
-
+<div id="reviewerInterestsContainer" style="margin-left:40px;">
+	<label class="desc">{translate key="user.register.reviewerInterests"}</label>
+	<ul id="interests"></ul>
+</div>
+<br />
 <p><input type="submit" value="{translate key="user.register"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="index" escape=false}'" /></p>
 
 {if ! $implicitAuth}

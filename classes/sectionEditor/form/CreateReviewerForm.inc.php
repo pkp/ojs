@@ -61,7 +61,7 @@ class CreateReviewerForm extends Form {
 	/**
 	 * Display the form.
 	 */
-	function display() {
+	function display(&$args, &$request) {
 		$templateMgr =& TemplateManager::getManager();
 		$site =& Request::getSite();
 		$templateMgr->assign('articleId', $this->articleId);
@@ -74,7 +74,10 @@ class CreateReviewerForm extends Form {
 		$countryDao =& DAORegistry::getDAO('CountryDAO');
 		$countries =& $countryDao->getCountries();
 		$templateMgr->assign_by_ref('countries', $countries);
-
+		
+		$interestDao =& DAORegistry::getDAO('InterestsDAO');
+		$templateMgr->assign('existingInterests', implode(",", $interestDao->getAllUniqueInterests()));
+		
 		parent::display();
 	}
 
@@ -136,10 +139,9 @@ class CreateReviewerForm extends Form {
 		$user->setMailingAddress($this->getData('mailingAddress'));
 		$user->setCountry($this->getData('country'));
 		$user->setBiography($this->getData('biography'), null); // Localized
-		$user->setInterests($this->getData('interests'), null); // Localized
 		$user->setGossip($this->getData('gossip'), null); // Localized
 		$user->setMustChangePassword($this->getData('mustChangePassword') ? 1 : 0);
-
+		
 		$authDao =& DAORegistry::getDAO('AuthSourceDAO');
 		$auth =& $authDao->getDefaultPlugin();
 		$user->setAuthId($auth?$auth->getAuthId():0);
@@ -172,6 +174,13 @@ class CreateReviewerForm extends Form {
 		$user->setDateRegistered(Core::getCurrentDate());
 		$userId = $userDao->insertUser($user);
 
+		// Add reviewer interests to interests table
+		$interestDao =& DAORegistry::getDAO('InterestsDAO');
+		$interests = Request::getUserVar('interests');
+		if (empty($interests)) $interests = array();
+		elseif (!is_array($interests)) $interests = array($interests);
+		$interestDao->insertInterests($interests, $userId, true);
+		
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$journal =& Request::getJournal();
 		$role = new Role();

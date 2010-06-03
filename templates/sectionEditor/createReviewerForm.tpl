@@ -13,6 +13,17 @@
 {include file="common/header.tpl"}
 {/strip}
 
+{literal}
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#interests").tagit({
+			availableTags: [{/literal}{$existingInterests}{literal}]
+			{/literal}{if $currentInterests}{literal}, currentTags: [{/literal}{$currentInterests}]{/if}{literal}
+		});
+	});
+</script>
+{/literal}
+
 <form method="post" name="reviewerForm" action="{url op="createReviewer" path=$articleId|to_array:"create"}">
 
 {include file="common/formErrors.tpl"}
@@ -117,8 +128,8 @@
 		<td class="value"><input type="text" name="fax" id="fax" value="{$fax|escape}" size="15" maxlength="24" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{fieldLabel name="interests" key="user.interests"}</td>
-		<td class="value"><textarea name="interests[{$formLocale|escape}]" id="interests" rows="3" cols="40" class="textArea">{$interests[$formLocale]|escape}</textarea></td>
+		<td class="label">{fieldLabel key="user.interests"}</td>
+		<td class="value"><ul id="interests"></ul><br /></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="gossip" key="user.gossip"}</td>

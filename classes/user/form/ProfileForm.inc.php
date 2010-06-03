@@ -160,8 +160,9 @@ class ProfileForm extends Form {
 	/**
 	 * Initialize form data from current settings.
 	 */
-	function initData() {
-		$user =& Request::getUser();
+	function initData(&$args, &$request) {
+		$user =& $request->getUser();
+		$interestDao =& DAORegistry::getDAO('InterestsDAO');
 
 		$this->_data = array(
 			'salutation' => $user->getSalutation(),
@@ -179,11 +180,12 @@ class ProfileForm extends Form {
 			'mailingAddress' => $user->getMailingAddress(),
 			'country' => $user->getCountry(),
 			'biography' => $user->getBiography(null), // Localized
-			'interests' => $user->getInterests(null), // Localized
 			'userLocales' => $user->getLocales(),
 			'isAuthor' => Validation::isAuthor(),
 			'isReader' => Validation::isReader(),
-			'isReviewer' => Validation::isReviewer()
+			'isReviewer' => Validation::isReviewer(),
+			'existingInterests' => implode(",", $interestDao->getAllUniqueInterests()),
+			'currentInterests' => implode(",", $interestDao->getInterests($user->getId()))
 		);
 	}
 
@@ -240,7 +242,13 @@ class ProfileForm extends Form {
 		$user->setMailingAddress($this->getData('mailingAddress'));
 		$user->setCountry($this->getData('country'));
 		$user->setBiography($this->getData('biography'), null); // Localized
-		$user->setInterests($this->getData('interests'), null); // Localized
+		
+		// Add reviewer interests to interests table
+		$interestDao =& DAORegistry::getDAO('InterestsDAO');
+		$interests = Request::getUserVar('interests');
+		if (empty($interests)) $interests = array();
+		elseif (!is_array($interests)) $interests = array($interests);
+		$interestDao->insertInterests($interests, $user->getId(), true);
 
 		$site =& Request::getSite();
 		$availableLocales = $site->getSupportedLocales();

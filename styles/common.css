@@ -387,3 +387,71 @@ td.notificationFunction {
 	width: 20px;
 	height: 23px;
 }
+
+
+
+/* @group Tag-it */
+
+ul.tagit {
+	padding:1px 5px;
+	border-style:solid;
+	border-width:1px;
+	border-color:#C6C6C6;
+	overflow:auto !important;
+	width:500px;
+}
+ul.tagit li {
+	-moz-border-radius:5px 5px 5px 5px;
+	display: block;
+	float: left !important;
+	margin:2px 5px 2px 0;
+	clear: none;
+}
+ul.tagit li.tagit-choice {
+	background-color:#DEE7F8;
+	border:1px solid #CAD8F3;
+	padding:2px 4px 3px;
+}
+ul.tagit li.tagit-choice:hover {
+	background-color:#bbcef1;
+	border-color:#6d95e0;
+}
+ul.tagit li.tagit-new {
+	padding:2px 4px 3px;
+	padding:2px 4px 1px;
+	padding:2px 4px 1px 0;
+}
+
+ul.tagit li.tagit-choice input {
+	display:block !important;
+	float:left;
+	margin:2px 5px 2px 0;
+}
+ul.tagit li.tagit-choice a.close {
+	color:#777777;
+	cursor:pointer;
+	font-size:12px;
+	font-weight:bold;
+	outline:medium none;
+	padding:2px 0 2px 3px;
+	text-decoration:none;
+}
+ul.tagit input[type="text"] {
+	-moz-box-sizing:border-box;
+	border:none;
+	margin:0;
+	padding:0;
+	width:inherit;
+	border-color:#C6C6C6;
+	background-color:#FFFFFF;
+	color:#333333;
+}
+
+ul.tagit li:after, ul.tagit li div:after {
+	content:" "; 
+	display:block;
+	clear:none; 
+}
+
+/* @end */
+

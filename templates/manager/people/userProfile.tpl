@@ -85,7 +85,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="user.interests"}</td>
-		<td class="value">{$user->getLocalizedInterests()|escape|default:"&mdash;"}</td>
+		<td class="value">{$user->getInterests()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="user.gossip"}</td>

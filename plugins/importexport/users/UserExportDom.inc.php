@@ -55,14 +55,9 @@ class UserExportDom {
 					unset($signatureNode);
 				}
 			}
-			if (is_array($user->getInterests(null))) {
-				foreach($user->getInterests(null) as $locale => $value) {
-					$interestsNode =& XMLCustomWriter::createChildWithText($doc, $userNode, 'interests', $value, false);
-					if ($interestsNode) {
-						XMLCustomWriter::setAttribute($interestsNode, 'locale', $locale);
-					}
-					unset($interestsNode);
-				}
+			$interestsNode =& XMLCustomWriter::createChildWithText($doc, $userNode, 'interests', $user->getInterests(), false);
+			if ($interestsNode) {
+				XMLCustomWriter::setAttribute($interestsNode, 'locale', $locale);
 			}
 			if (is_array($user->getGossip(null))) {
 				foreach($user->getGossip(null) as $locale => $value) {

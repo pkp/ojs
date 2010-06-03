@@ -27,7 +27,7 @@ class RegistrationHandler extends UserHandler {
 	/**
 	 * Display registration form for new users.
 	 */
-	function register() {
+	function register(&$args, &$request) {
 		$this->validate();
 		$this->setupTemplate(true);
 
@@ -44,7 +44,7 @@ class RegistrationHandler extends UserHandler {
 			if ($regForm->isLocaleResubmit()) {
 				$regForm->readInputData();
 			} else {
-				$regForm->initData();
+				$regForm->initData($args, $request);
 			}
 			$regForm->display();
 
@@ -61,7 +61,7 @@ class RegistrationHandler extends UserHandler {
 	/**
 	 * Validate user registration information and register new user.
 	 */
-	function registerUser() {
+	function registerUser(&$args, &$request) {
 		$this->validate();
 		$this->setupTemplate(true);
 		import('classes.user.form.RegistrationForm');

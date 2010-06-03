@@ -363,8 +363,8 @@ class PeopleHandler extends ManagerHandler {
 	/**
 	 * Display form to create a new user.
 	 */
-	function createUser() {
-		PeopleHandler::editUser();
+	function createUser(&$args, &$request) {
+		PeopleHandler::editUser($args, $request);
 	}
 
 	/**
@@ -384,7 +384,7 @@ class PeopleHandler extends ManagerHandler {
 	 * Display form to create/edit a user profile.
 	 * @param $args array optional, if set the first parameter is the ID of the user to edit
 	 */
-	function editUser($args = array()) {
+	function editUser(&$args = array(), &$request) {
 		$this->validate();
 		$this->setupTemplate(true);
 
@@ -418,7 +418,7 @@ class PeopleHandler extends ManagerHandler {
 		if ($userForm->isLocaleResubmit()) {
 			$userForm->readInputData();
 		} else {
-			$userForm->initData();
+			$userForm->initData($args, $request);
 		}
 		$userForm->display();
 	}

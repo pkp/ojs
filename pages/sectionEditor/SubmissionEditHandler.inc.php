@@ -507,7 +507,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	/**
 	 * Create a new user as a reviewer.
 	 */
-	function createReviewer($args) {
+	function createReviewer(&$args, &$request) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		$submission =& $this->submission;
@@ -523,7 +523,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				$newUserId = $createReviewerForm->execute();
 				Request::redirect(null, null, 'selectReviewer', array($articleId, $newUserId));
 			} else {
-				$createReviewerForm->display();
+				$createReviewerForm->display($args, $request);
 			}
 		} else {
 			// Display the "create user" form.
@@ -532,7 +532,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			} else {
 				$createReviewerForm->initData();
 			}
-			$createReviewerForm->display();
+			$createReviewerForm->display($args, $request);
 		}
 
 	}

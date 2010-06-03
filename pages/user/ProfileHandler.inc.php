@@ -27,7 +27,7 @@ class ProfileHandler extends UserHandler {
 	/**
 	 * Display form to edit user's profile.
 	 */
-	function profile() {
+	function profile(&$args, &$request) {
 		$this->validate();
 		$this->setupTemplate(true);
 
@@ -37,7 +37,7 @@ class ProfileHandler extends UserHandler {
 		if ($profileForm->isLocaleResubmit()) {
 			$profileForm->readInputData();
 		} else {
-			$profileForm->initData();
+			$profileForm->initData($args, $request);
 		}
 		$profileForm->display();
 	}

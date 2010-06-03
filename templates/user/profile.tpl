@@ -14,6 +14,17 @@
 {include file="common/header.tpl"}
 {/strip}
 
+{literal}
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#interests").tagit({
+			availableTags: [{/literal}{$existingInterests}{literal}]
+			{/literal}{if $currentInterests}{literal}, currentTags: [{/literal}{$currentInterests}]{/if}{literal}
+		});
+	});
+</script>
+{/literal}
+
 <form name="profile" method="post" action="{url op="saveProfile"}" enctype="multipart/form-data">
 
 {include file="common/formErrors.tpl"}
@@ -119,8 +130,8 @@
 	</tr>
 {/if}
 <tr valign="top">
-	<td class="label">{fieldLabel name="interests" key="user.interests"}</td>
-	<td class="value"><textarea name="interests[{$formLocale|escape}]" id="interests" rows="5" cols="40" class="textArea">{$interests[$formLocale]|escape}</textarea></td>
+	<td class="label">{fieldLabel key="user.interests"}</td>
+	<td class="value"><ul id="interests"></ul><br /></td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="biography" key="user.biography"}<br />{translate key="user.biography.description"}</td>
