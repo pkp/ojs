@@ -195,7 +195,7 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 			}
 
 			if ($author != null) {
-				$author->setArticleId($article->getId());
+				$author->setSubmissionId($article->getId());
 				$author->setFirstName($authors[$i]['firstName']);
 				$author->setMiddleName($authors[$i]['middleName']);
 				$author->setLastName($authors[$i]['lastName']);

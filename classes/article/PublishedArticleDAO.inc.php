@@ -760,7 +760,7 @@ class PublishedArticleDAO extends DAO {
 			$row = $result->GetRowAssoc(false);
 			$author = new Author();
 			$author->setId($row['author_id']);
-			$author->setArticleId($row['article_id']);
+			$author->setSubmissionId($row['article_id']);
 			$author->setFirstName($row['first_name']);
 			$author->setMiddleName($row['middle_name']);
 			$author->setLastName($row['last_name']);

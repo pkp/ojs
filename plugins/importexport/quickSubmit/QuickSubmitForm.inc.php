@@ -198,7 +198,7 @@ class QuickSubmitForm extends Form {
 			}
 
 			if ($author != null) {
-				$author->setArticleId($articleId);
+				$author->setSubmissionId($articleId);
 				$author->setFirstName($authors[$i]['firstName']);
 				$author->setMiddleName($authors[$i]['middleName']);
 				$author->setLastName($authors[$i]['lastName']);

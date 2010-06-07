@@ -58,8 +58,8 @@ class Article extends Submission {
 	 * @param $author Author
 	 */
 	function addAuthor($author) {
-		if ($author->getArticleId() == null) {
-			$author->setArticleId($this->getId());
+		if ($author->getSubmissionId() == null) {
+			$author->setSubmissionId($this->getId());
 		}
 		parent::addAuthor($author);
 	}
