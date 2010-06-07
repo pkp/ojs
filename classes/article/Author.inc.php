@@ -19,14 +19,12 @@
 import('lib.pkp.classes.submission.PKPAuthor');
 
 class Author extends PKPAuthor {
-
 	/**
 	 * Constructor.
 	 */
 	function Author() {
 		parent::PKPAuthor();
 	}
-
 
 	//
 	// Get/set methods
@@ -37,7 +35,8 @@ class Author extends PKPAuthor {
 	 * @return int
 	 */
 	function getArticleId() {
-		return $this->getData('articleId');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
+		return $this->getSubmissionId();
 	}
 
 	/**
@@ -45,14 +44,20 @@ class Author extends PKPAuthor {
 	 * @param $articleId int
 	 */
 	function setArticleId($articleId) {
-		return $this->setData('articleId', $articleId);
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
+		return $this->setSubmissionId($articleId);
 	}
 
 	/**
 	 * Get the localized competing interests statement for this author
 	 */
-	function getAuthorCompetingInterests() {
+	function getLocalizedCompetingInterests() {
 		return $this->getLocalizedData('competingInterests');
+	}
+
+	function getAuthorCompetingInterests() {
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
+		return $this->getLocalizedCompetingInterests();
 	}
 
 	/**

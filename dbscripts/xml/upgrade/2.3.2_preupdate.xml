@@ -32,4 +32,10 @@
 		<rename table="article_notes" column="article_id" to="assoc_id" />
 		<rename table="article_notes" column="note" to="contents" />
 	</sql>
+	<!-- Bug #5490: port authors into pkp-lib -->
+	<sql>
+		<rename table="article_author_settings" to="author_settings" />
+		<rename table="article_authors" to="authors" />
+		<rename table="authors" column="article_id" to="submission_id" />
+	</sql>
 </data>

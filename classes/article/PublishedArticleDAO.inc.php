@@ -748,7 +748,12 @@ class PublishedArticleDAO extends DAO {
 	function getPublishedArticleAuthors($issueId) {
 		$authors = array();
 		$result =& $this->retrieve(
-			'SELECT aa.* FROM article_authors aa, published_articles pa WHERE aa.article_id = pa.article_id AND pa.issue_id = ? ORDER BY pa.issue_id', $issueId
+			'SELECT	aa.*
+			FROM	authors aa,
+				published_articles pa
+			WHERE	aa.submission_id = pa.article_id AND
+				pa.issue_id = ? ORDER BY pa.issue_id',
+			(int) $issueId
 		);
 
 		while (!$result->EOF) {

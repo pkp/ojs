@@ -106,13 +106,13 @@ class ArticleReportDAO extends DAO {
 					aa.country AS country,
 					aa.url AS url,
 					COALESCE(aasl.setting_value, aas.setting_value) AS biography
-				FROM article_authors aa
-					LEFT JOIN articles a ON aa.article_id=a.article_id
-					LEFT JOIN article_author_settings aas ON (aa.author_id=aas.author_id AND aas.setting_name = ? AND aas.locale = ?)
-					LEFT JOIN article_author_settings aasl ON (aa.author_id=aasl.author_id AND aasl.setting_name = ? AND aasl.locale = ?)
+				FROM	authors aa
+					LEFT JOIN articles a ON (aa.submission_id = a.article_id)
+					LEFT JOIN author_settings aas ON (aa.author_id = aas.author_id AND aas.setting_name = ? AND aas.locale = ?)
+					LEFT JOIN author_settings aasl ON (aa.author_id = aasl.author_id AND aasl.setting_name = ? AND aasl.locale = ?)
 				WHERE
 					a.journal_id = ? AND
-					aa.article_id = ?',
+					aa.submission_id = ?',
 				array(
 					'biography',
 					$primaryLocale,

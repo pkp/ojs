@@ -450,10 +450,9 @@ class SectionEditorSubmissionDAO extends DAO {
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev,
 				r2.review_revision
-			FROM
-				articles a
-				INNER JOIN article_authors aa ON (aa.article_id = a.article_id)
-				LEFT JOIN article_authors aap ON (aap.article_id = a.article_id AND aap.primary_contact = 1)
+			FROM	articles a
+				LEFT JOIN authors aa ON (aa.submission_id = a.article_id)
+				LEFT JOIN authors aap ON (aap.submission_id = a.article_id AND aap.primary_contact = 1)
 				LEFT JOIN edit_assignments e ON (e.article_id = a.article_id)
 				LEFT JOIN users ed ON (e.editor_id = ed.user_id)
 				LEFT JOIN sections s ON (s.section_id = a.section_id)

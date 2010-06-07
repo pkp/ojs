@@ -176,8 +176,8 @@ class AuthorSubmissionDAO extends DAO {
 				(SELECT SUM(g.views) FROM article_galleys g WHERE (g.article_id = a.article_id AND g.locale = ?)) AS galley_views,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
-			FROM articles a
-				LEFT JOIN article_authors aa ON (aa.article_id = a.article_id AND aa.primary_contact = 1)
+			FROM	articles a
+				LEFT JOIN authors aa ON (aa.submission_id = a.article_id AND aa.primary_contact = 1)
 				LEFT JOIN article_settings atpl ON (atpl.article_id = a.article_id AND atpl.setting_name = ? AND atpl.locale = ?)
 				LEFT JOIN article_settings atl ON (atl.article_id = a.article_id AND atl.setting_name = ? AND atl.locale = ?)
 				LEFT JOIN sections s ON (s.section_id = a.section_id)

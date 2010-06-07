@@ -48,12 +48,12 @@
 				{url|assign:"competingInterestGuidelinesUrl" page="information" op="competingInterestGuidelines"}
 				{translate key="author.competingInterests" competingInterestGuidelinesUrl=$competingInterestGuidelinesUrl}
 			</td>
-			<td class="value">{$author->getAuthorCompetingInterests()|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
+			<td class="value">{$author->getLocalizedCompetingInterests()|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
 		</tr>
 	{/if}
 	<tr valign="top">
 		<td class="label">{translate key="user.biography"}</td>
-		<td class="value">{$author->getAuthorBiography()|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
+		<td class="value">{$author->getLocalizedBiography()|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
 	</tr>
 	{if $author->getPrimaryContact()}
 		<tr valign="top">
