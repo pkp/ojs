@@ -75,7 +75,7 @@ class CreateReviewerForm extends Form {
 		$countries =& $countryDao->getCountries();
 		$templateMgr->assign_by_ref('countries', $countries);
 		
-		$interestDao =& DAORegistry::getDAO('InterestsDAO');
+		$interestDao =& DAORegistry::getDAO('InterestDAO');
 		$templateMgr->assign('existingInterests', implode(",", $interestDao->getAllUniqueInterests()));
 		
 		parent::display();
@@ -175,7 +175,7 @@ class CreateReviewerForm extends Form {
 		$userId = $userDao->insertUser($user);
 
 		// Add reviewer interests to interests table
-		$interestDao =& DAORegistry::getDAO('InterestsDAO');
+		$interestDao =& DAORegistry::getDAO('InterestDAO');
 		$interests = Request::getUserVar('interests');
 		if (empty($interests)) $interests = array();
 		elseif (!is_array($interests)) $interests = array($interests);
