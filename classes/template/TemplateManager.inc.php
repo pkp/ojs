@@ -91,6 +91,12 @@ class TemplateManager extends PKPTemplateManager {
 				$this->assign('numPageLinks', $journal->getSetting('numPageLinks'));
 				$this->assign('itemsPerPage', $journal->getSetting('itemsPerPage'));
 				$this->assign('enableAnnouncements', $journal->getSetting('enableAnnouncements'));
+				$this->assign(
+					'hideRegisterLink',
+					!$journal->getSetting('allowRegReviewer') &&
+					!$journal->getSetting('allowRegReader') &&
+					!$journal->getSetting('allowRegAuthor')
+				);
 
 				// Load and apply theme plugin, if chosen
 				$themePluginPath = $journal->getSetting('journalTheme');
