@@ -88,6 +88,7 @@ class CoinsPlugin extends GenericPlugin {
 				$vars[] = array('rft.au', $author->getFullName());
 			}
 
+			if ($doi = $article->getDoi()) $vars[] = array('rft_id', 'info:doi/' . $doi);
 			if ($article->getPages()) $vars[] = array('rft.pages', $article->getPages());
 			if ($journal->getSetting('printIssn')) $vars[] = array('rft.issn', $journal->getSetting('printIssn'));
 			if ($journal->getSetting('onlineIssn')) $vars[] = array('rft.issn', $journal->getSetting('onlineIssn'));
