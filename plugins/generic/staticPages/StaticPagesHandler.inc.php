@@ -27,7 +27,7 @@ class StaticPagesHandler extends Handler {
 			$journalId = $journal->getId();
 			$path = $args[0];
 
-			$staticPagesPlugin =& PluginRegistry::getPlugin('generic', 'StaticPagesPlugin');
+			$staticPagesPlugin =& PluginRegistry::getPlugin('generic', STATIC_PAGES_PLUGIN_NAME);
 			$templateMgr =& TemplateManager::getManager();
 
 			$staticPagesDAO =& DAORegistry::getDAO('StaticPagesDAO');

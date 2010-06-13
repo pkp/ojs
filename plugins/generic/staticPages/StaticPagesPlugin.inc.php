@@ -28,12 +28,10 @@ class StaticPagesPlugin extends GenericPlugin {
 	}
 
 	function isTinyMCEInstalled() {
-		$tinyMCEPlugin =& PluginRegistry::getPlugin('generic', 'TinyMCEPlugin');
-
-		if ( $tinyMCEPlugin )
-			return $tinyMCEPlugin->getEnabled();
-
-		return false;
+		// If the thesis plugin isn't enabled, don't do anything.
+		$application =& PKPApplication::getApplication();
+		$products =& $application->getEnabledProducts('plugins.generic');
+		return (isset($products['tinymce']));
 	}
 
 	/**
@@ -47,9 +45,9 @@ class StaticPagesPlugin extends GenericPlugin {
 			if ($this->getEnabled()) {
 				$this->import('StaticPagesDAO');
 				if (checkPhpVersion('5.0.0')) { // WARNING: see http://pkp.sfu.ca/wiki/index.php/Information_for_Developers#Use_of_.24this_in_the_constructur
-					$staticPagesDAO = new StaticPagesDAO();
+					$staticPagesDAO = new StaticPagesDAO($this->getName());
 				} else {
-					$staticPagesDAO =& new StaticPagesDAO();
+					$staticPagesDAO =& new StaticPagesDAO($this->getName());
 				}
 				$returner =& DAORegistry::registerDAO('StaticPagesDAO', $staticPagesDAO);
 
@@ -70,6 +68,7 @@ class StaticPagesPlugin extends GenericPlugin {
 		$op =& $args[1];
 
 		if ( $page == 'pages' ) {
+			define('STATIC_PAGES_PLUGIN_NAME', $this->getName()); // Kludge
 			define('HANDLER_CLASS', 'StaticPagesHandler');
 			$this->import('StaticPagesHandler');
 			return true;
