@@ -131,6 +131,10 @@ class NativeExportDom {
 
 	function &generateArticleDom(&$doc, &$journal, &$issue, &$section, &$article) {
 		$root =& XMLCustomWriter::createElement($doc, 'article');
+		if ($doi = $article->getDOI()) {
+			$idNode =& XMLCustomWriter::createChildWithText($doc, $root, 'id', $doi);
+			XMLCustomWriter::setAttribute($idNode, 'type', 'doi');
+		}
 
 		/* --- Titles and Abstracts --- */
 		if (is_array($article->getTitle(null))) foreach ($article->getTitle(null) as $locale => $title) {

@@ -43,6 +43,13 @@
 <!ENTITY % externalformat "href | embed">
 
 <!ELEMENT id (#PCDATA)>
+	<!--
+	  - For articles, the plugin can export DOIs in the "id" element
+	  - using type="doi". Note that DOIs are NOT currently supported
+	  - for import.
+	  -->
+	<!ATTLIST id
+		type CDATA #IMPLIED>
 
 <!ELEMENT title (#PCDATA)>
 	<!ATTLIST title

@@ -110,6 +110,12 @@ class PubMedExportDom {
 			XMLCustomWriter::createChildWithText($doc, $root, 'LastPage', $article->getBestArticleId($journal));			
 		}
 
+		/* --- DOI --- */
+		if ($doi = $article->getDOI()) {
+			$doiNode =& XMLCustomWriter::createChildWithText($doc, $root, 'ELocationID', $doi, false);
+			XMLCustomWriter::setAttribute($doiNode, 'EIdType', 'doi');
+		}
+		
 		/* --- Language --- */
 		XMLCustomWriter::createChildWithText($doc, $root, 'Language', strtoupper($article->getLanguage()), false);
 
