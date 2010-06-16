@@ -145,6 +145,7 @@ class Application extends PKPApplication {
 			'generic',
 			'implicitAuth',
 			'importexport',
+			'oaiMetadataFormats',
 			'paymethod',
 			'reports',
 			'themes'
