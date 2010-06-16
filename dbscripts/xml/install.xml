@@ -26,6 +26,7 @@
 	<schema file="lib/pkp/xml/schema/reviews.xml" />
 	<schema file="lib/pkp/xml/schema/reviewForms.xml" />
 	<schema file="lib/pkp/xml/schema/submissions.xml" />
+	<schema file="lib/pkp/xml/schema/comments.xml" />
 
 	<!-- OJS schema -->
 	<schema file="dbscripts/xml/ojs_schema.xml" />
