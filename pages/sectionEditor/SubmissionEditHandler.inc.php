@@ -376,7 +376,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->addJavaScript('lib/pkp/js/jqueryValidatorI18n.js');
 
 		// Add the grid URL
-		// FIXME: Refactor to the template when {load_div} accepts operations as parameters
 		$dispatcher =& $this->getDispatcher();
 		$citationGridUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.citation.CitationGridHandler', 'fetchGrid', null, array('assocId' => $articleId));
 		$templateMgr->assign('citationGridUrl', $citationGridUrl);
