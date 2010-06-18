@@ -82,7 +82,7 @@ class ProofreaderAction extends Action {
 					'authorUsername' => $receiver->getUsername(),
 					'authorPassword' => $receiver->getPassword(),
 					'editorialContactSignature' => $user->getContactSignature(),
-					'submissionUrl' => Request::url(null, 'author', 'submission', $articleId)
+					'submissionUrl' => Request::url(null, 'author', 'submissionEditing', $articleId)
 				);
 				break;
 
