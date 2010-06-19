@@ -17,12 +17,24 @@ import('lib.pkp.classes.plugins.BlockPlugin');
 class CustomBlockPlugin extends BlockPlugin {
 	var $blockName;
 
+	/** @var $parentPluginName string Name of parent plugin */
+	var $parentPluginName;
+
+	/**
+	 * Constructor
+	 */
+	function CustomBlockPlugin($blockName, $parentPluginName) {
+		$this->blockName = $blockName;
+		$this->parentPluginName = $parentPluginName;
+		parent::BlockPlugin();
+	}
+
 	/**
 	 * Get the management plugin
 	 * @return object
 	 */
 	function &getManagerPlugin() {
-		$plugin =& PluginRegistry::getPlugin('generic', 'CustomBlockManagerPlugin');
+		$plugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		return $plugin;
 	}
 	/**

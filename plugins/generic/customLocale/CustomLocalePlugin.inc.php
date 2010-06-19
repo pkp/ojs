@@ -114,7 +114,7 @@ class CustomLocalePlugin extends GenericPlugin {
 		if (!parent::manage($verb, $args, $message)) return false;
 
 		$this->import('CustomLocaleHandler');
-		$customLocaleHandler = new CustomLocaleHandler();
+		$customLocaleHandler = new CustomLocaleHandler($this->getName());
 		switch ($verb) {
 			case 'edit':
 				$customLocaleHandler->edit($args);

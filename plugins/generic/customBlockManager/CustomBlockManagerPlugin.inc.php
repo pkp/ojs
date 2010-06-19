@@ -49,20 +49,20 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 				$this->import('CustomBlockPlugin');
 
 				$journal =& Request::getJournal();
-				if ( !$journal ) return false;
+				if (!$journal) return false;
 
 				$blocks = $this->getSetting($journal->getId(), 'blocks');
-				if ( !is_array($blocks) ) break;
-				$i= 0;
-				foreach ( $blocks as $block ) {
-					$blockPlugin = new CustomBlockPlugin($block);
+				if (!is_array($blocks)) break;
+				$i=0;
+				foreach ($blocks as $block) {
+					$blockPlugin = new CustomBlockPlugin($block, $this->getName());
 
-					//default the block to being enabled
-					if ( $blockPlugin->getEnabled() !== false) {
+					// default the block to being enabled
+					if ($blockPlugin->getEnabled() !== false) {
 						$blockPlugin->setEnabled(true);
 					}
-					//default the block to the right sidebar
-					if ( !is_numeric($blockPlugin->getBlockContext())) {
+					// default the block to the right sidebar
+					if (!is_numeric($blockPlugin->getBlockContext())) {
 						$blockPlugin->setBlockContext(BLOCK_CONTEXT_RIGHT_SIDEBAR);
 					}
 					$plugins[$blockPlugin->getSeq()][$blockPlugin->getPluginPath() . $i] =& $blockPlugin;
@@ -121,7 +121,6 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 				if (Request::getUserVar('addBlock')) {
 					// Add a block
 					$editData = true;
-					//$blocks = is_null($form->getData('blocks'))?array():$form->getData('blocks');
 					$blocks = $form->getData('blocks');
 					array_push($blocks, '');
 					$form->_data['blocks'] = $blocks;

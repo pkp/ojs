@@ -48,15 +48,6 @@ class ThesisFeedGatewayPlugin extends GatewayPlugin {
 	}
 
 	/**
-	 * Get the thesis plugin
-	 * @return object
-	 */
-	function &getThesisPlugin() {
-		$plugin =& PluginRegistry::getPlugin('generic', 'ThesisPlugin');
-		return $plugin;
-	}
-
-	/**
 	 * Override the builtin to get the correct plugin path.
 	 */
 	function getPluginPath() {
@@ -101,8 +92,9 @@ class ThesisFeedGatewayPlugin extends GatewayPlugin {
 		if (!$journal) return false;
 
 		// Make sure thesis abstracts and feed plugin are enabled
-		$thesisPlugin =& $this->getThesisPlugin();
-		$thesisEnabled = $thesisPlugin->getEnabled(); 
+		$application =& PKPApplication::getApplication();
+		$products = $application->getEnabledProducts('plugins.generic');
+		$thesisEnabled = $products['thesis'];
 		$thesisFeedPlugin =& $this->getThesisFeedPlugin();
 		$thesisFeedPluginEnabled = $thesisFeedPlugin->getEnabled();
 

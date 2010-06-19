@@ -18,6 +18,14 @@
 import('lib.pkp.classes.plugins.BlockPlugin');
 
 class OpenAdsBlockPlugin extends BlockPlugin {
+	/** @var $parentPluginName string Name of parent plugin */
+	var $parentPluginName;
+
+	function OpenAdsBlockPlugin($parentPluginName) {
+		$this->parentPluginName = $parentPluginName;
+		parent::BlockPlugin();
+	}
+
 	/**
 	 * Hide this plugin from the management interface (it's subsidiary)
 	 */
@@ -81,7 +89,7 @@ class OpenAdsBlockPlugin extends BlockPlugin {
 	 * @return object
 	 */
 	function &getOpenAdsPlugin() {
-		$plugin =& PluginRegistry::getPlugin('generic', 'OpenAdsPlugin');
+		$plugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		return $plugin;
 	}
 

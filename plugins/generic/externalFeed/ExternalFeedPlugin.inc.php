@@ -30,7 +30,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 		if ($success && $this->getEnabled()) {
 			$this->import('ExternalFeedDAO');
 
-			$externalFeedDao = new ExternalFeedDAO();
+			$externalFeedDao = new ExternalFeedDAO($this->getName());
 			$returner =& DAORegistry::registerDAO('ExternalFeedDAO', $externalFeedDao);
 
 			$templateMgr =& TemplateManager::getManager();

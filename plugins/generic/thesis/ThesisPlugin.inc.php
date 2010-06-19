@@ -28,7 +28,7 @@ class ThesisPlugin extends GenericPlugin {
 		$success = parent::register($category, $path);
 		if ($success && $this->getEnabled()) {
 			$this->import('ThesisDAO');
-			$thesisDao = new ThesisDAO();
+			$thesisDao = new ThesisDAO($this->getName());
 			$returner =& DAORegistry::registerDAO('ThesisDAO', $thesisDao);
 
 			// Handler for public thesis abstract pages
@@ -131,6 +131,7 @@ class ThesisPlugin extends GenericPlugin {
 		$page =& $params[0];
 		if ($page == 'thesis') {
 			define('HANDLER_CLASS', 'ThesisHandler');
+			define('THESIS_PLUGIN_NAME', $this->getName()); // Kludge
 			$handlerFile =& $params[2];
 			$handlerFile = $this->getPluginPath() . '/' . 'ThesisHandler.inc.php';
 		}
@@ -231,7 +232,7 @@ class ThesisPlugin extends GenericPlugin {
 					$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 					$journalSettings =& $journalSettingsDao->getJournalSettings($journal->getId());
 
-					$thesisForm = new ThesisForm($thesisId);
+					$thesisForm = new ThesisForm($this->getName(), $thesisId);
 					$thesisForm->initData();
 					$this->setBreadCrumbs(true);
 					$templateMgr->assign('journalSettings', $journalSettings);
@@ -247,7 +248,7 @@ class ThesisPlugin extends GenericPlugin {
 
 				if (($thesisId != null && $thesisDao->getThesisJournalId($thesisId) == $journal->getId()) || $thesisId == null) {
 
-					$thesisForm = new ThesisForm($thesisId);
+					$thesisForm = new ThesisForm($this->getName(), $thesisId);
 					$thesisForm->readInputData();
 
 					if ($thesisForm->validate()) {

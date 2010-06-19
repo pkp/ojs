@@ -26,19 +26,19 @@ class CustomLocaleHandler extends Handler {
 	/**
 	 * Constructor
 	 **/
-	function CustomLocaleHandler() {
+	function CustomLocaleHandler($parentPluginName) {
 		parent::Handler();
 
 		$this->addCheck(new HandlerValidatorJournal($this));
 		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_SITE_ADMIN, ROLE_ID_JOURNAL_MANAGER)));
 
-		$plugin =& PluginRegistry::getPlugin('generic', 'CustomLocalePlugin');
+		$plugin =& PluginRegistry::getPlugin('generic', $parentPluginName);
 		$this->plugin =& $plugin;		
 	}
 
 	function index() {
 		$this->validate();
-		$plugin =& PluginRegistry::getPlugin('generic', 'CustomLocalePlugin');
+		$plugin =& $this->plugin;
 		$this->setupTemplate($plugin, false);
 
 		$journal = Request::getJournal();
@@ -54,7 +54,7 @@ class CustomLocaleHandler extends Handler {
 
 	function edit($args) {
 		$this->validate();
-		$plugin =& PluginRegistry::getPlugin('generic', 'CustomLocalePlugin');
+		$plugin =& $this->plugin;
 		$this->setupTemplate($plugin, true);
 
 		$locale = array_shift($args);
@@ -81,7 +81,7 @@ class CustomLocaleHandler extends Handler {
 
 	function editLocaleFile($args) {
 		$this->validate();
-		$plugin =& PluginRegistry::getPlugin('generic', 'CustomLocalePlugin');
+		$plugin =& $this->plugin;
 		$this->setupTemplate($plugin, true);
 
 		$locale = array_shift($args);
@@ -144,7 +144,7 @@ class CustomLocaleHandler extends Handler {
 
 	function saveLocaleFile($args) {
 		$this->validate();
-		$plugin =& PluginRegistry::getPlugin('generic', 'CustomLocalePlugin');
+		$plugin =& $this->plugin;
 		$this->setupTemplate($plugin, true);
 
 		$locale = array_shift($args);

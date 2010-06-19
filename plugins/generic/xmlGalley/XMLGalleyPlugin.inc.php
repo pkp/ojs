@@ -22,7 +22,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 		if (parent::register($category, $path)) {
 			if ($this->getEnabled()) {
 				$this->import('ArticleXMLGalleyDAO');
-				$xmlGalleyDao = new ArticleXMLGalleyDAO();
+				$xmlGalleyDao = new ArticleXMLGalleyDAO($this->getName());
 				DAORegistry::registerDAO('ArticleXMLGalleyDAO', $xmlGalleyDao);
 
 				// NB: These hooks essentially modify/overload the existing ArticleGalleyDAO methods
@@ -68,7 +68,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 		$articleId =& $args[1];
 		$returner =& $args[2];
 
-		$xmlGalleyDao = new ArticleXMLGalleyDAO();
+		$xmlGalleyDao = new ArticleXMLGalleyDAO($this->getName());
 		$xmlGalley = $xmlGalleyDao->_getXMLGalleyFromId($galleyId, $articleId);
 		if ($xmlGalley) {
 			$xmlGalley->setId($galleyId);
@@ -123,7 +123,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 	 */
 	function _returnXMLGalleyFromArticleGalley(&$galley) {
 		$this->import('ArticleXMLGalley');
-		$articleXMLGalley = new ArticleXMLGalley();
+		$articleXMLGalley = new ArticleXMLGalley($this->getName());
 
 		// Create XML Galley with previous values
 		$articleXMLGalley->setId($galley->getId());
@@ -231,7 +231,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 
 					// create a testing article galley object (to access the XSLT render method)
 					$this->import('ArticleXMLGalley');
-					$xmlGalley = new ArticleXMLGalley();
+					$xmlGalley = new ArticleXMLGalley($this->getName());
 
 					// transform the XML using whatever XSLT processor we have available
 					$result = $xmlGalley->transformXSLT($xmlFile, $xslFile, $xsltCommand);

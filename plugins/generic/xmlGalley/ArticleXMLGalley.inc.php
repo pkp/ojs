@@ -19,11 +19,14 @@ import('classes.article.ArticleHTMLGalley');
 import('classes.article.SuppFileDAO');
 
 class ArticleXMLGalley extends ArticleHTMLGalley {
+	/** @var $parentPluginName string Name of parent plugin */
+	var $parentPluginName;
 
 	/**
 	 * Constructor.
 	 */
-	function ArticleXMLGalley() {
+	function ArticleXMLGalley($parentPluginName) {
+		$this->parentPluginName = $parentPluginName;
 		parent::ArticleHTMLGalley();
 	}
 
@@ -79,7 +82,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 		static $contents;
 		if (!isset($contents)) {
 			$journal =& Request::getJournal();
-			$xmlGalleyPlugin =& PluginRegistry::getPlugin('generic', 'XMLGalleyPlugin');
+			$xmlGalleyPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 
 			$xsltRenderer = $xmlGalleyPlugin->getSetting($journal->getId(), 'XSLTrenderer');
 
@@ -121,7 +124,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 	 * @return string
 	 */
 	function getHTMLContents() {
-		$xmlGalleyPlugin =& PluginRegistry::getPlugin('generic', 'XMLGalleyPlugin');
+		$xmlGalleyPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 
 		// if the XML Galley plugin is not installed or enabled,
 		// then pass through to ArticleHTMLGalley
@@ -240,7 +243,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 
 			// perform %fo and %pdf replacements for fully-qualified shell command
 			$journal =& Request::getJournal();
-			$xmlGalleyPlugin =& PluginRegistry::getPlugin('generic', 'XMLGalleyPlugin');
+			$xmlGalleyPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 
 			$fopCommand = str_replace(array('%fo', '%pdf'), 
 					array($tempFoName, $pdfFileName), 

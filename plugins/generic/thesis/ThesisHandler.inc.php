@@ -39,7 +39,7 @@ class ThesisHandler extends Handler {
 			Request::redirect(null, 'index');
 		}
 
-		$thesisPlugin =& PluginRegistry::getPlugin('generic', 'ThesisPlugin');
+		$thesisPlugin =& PluginRegistry::getPlugin('generic', THESIS_PLUGIN_NAME);
 
 		if ($thesisPlugin != null) {
 			$thesesEnabled = $thesisPlugin->getEnabled();
@@ -100,7 +100,7 @@ class ThesisHandler extends Handler {
 			Request::redirect(null, 'index');
 		}
 
-		$thesisPlugin =& PluginRegistry::getPlugin('generic', 'ThesisPlugin');
+		$thesisPlugin =& PluginRegistry::getPlugin('generic', THESIS_PLUGIN_NAME);
 
 		if ($thesisPlugin != null) {
 			$thesesEnabled = $thesisPlugin->getEnabled();
@@ -117,7 +117,7 @@ class ThesisHandler extends Handler {
 			$templateMgr->assign('journalSettings', $journalSettings);
 			$thesisDao =& DAORegistry::getDAO('ThesisDAO');
 
-			$thesisForm = new StudentThesisForm();
+			$thesisForm = new StudentThesisForm(THESIS_PLUGIN_NAME);
 			$thesisForm->initData();
 			$thesisForm->display();
 
@@ -141,7 +141,7 @@ class ThesisHandler extends Handler {
 			Request::redirect(null, 'index');
 		}
 
-		$thesisPlugin =& PluginRegistry::getPlugin('generic', 'ThesisPlugin');
+		$thesisPlugin =& PluginRegistry::getPlugin('generic', THESIS_PLUGIN_NAME);
 
 		if ($thesisPlugin != null) {
 			$thesesEnabled = $thesisPlugin->getEnabled();
@@ -184,7 +184,7 @@ class ThesisHandler extends Handler {
 			Request::redirect(null, 'index');
 		}
 
-		$thesisPlugin =& PluginRegistry::getPlugin('generic', 'ThesisPlugin');
+		$thesisPlugin =& PluginRegistry::getPlugin('generic', THESIS_PLUGIN_NAME);
 
 		if ($thesisPlugin != null) {
 			$thesesEnabled = $thesisPlugin->getEnabled();
@@ -194,7 +194,7 @@ class ThesisHandler extends Handler {
 			$thesisDao =& DAORegistry::getDAO('ThesisDAO');
 			$thesisPlugin->import('StudentThesisForm');
 
-			$thesisForm = new StudentThesisForm();
+			$thesisForm = new StudentThesisForm(THESIS_PLUGIN_NAME);
 			$thesisForm->readInputData();
 
 			if ($thesisForm->validate()) {

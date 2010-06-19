@@ -28,14 +28,19 @@ class StudentThesisForm extends Form {
 	/** @var boolean whether or not upload code is enabled */
 	var $uploadCodeEnabled;
 
+	/** @var $parentPluginName string Name of parent plugin */
+	var $parentPluginName;
+
 	/**
 	 * Constructor
-	 * @param thesisId int leave as default for new thesis
+	 * @param $parentPluginName string Name of parent plugin
+	 * @param $thesisId int leave as default for new thesis
 	 */
-	function StudentThesisForm($thesisId = null) {
+	function StudentThesisForm($parentPluginName, $thesisId = null) {
 		$journal =& Request::getJournal();
 		$journalId = $journal->getId();
-		$thesisPlugin =& PluginRegistry::getPlugin('generic', 'ThesisPlugin');
+		$this->parentPluginName = $parentPluginName;
+		$thesisPlugin =& PluginRegistry::getPlugin('generic', $parentPluginName);
 		$thesisPlugin->import('Thesis');
 
 		$this->validDegrees = array (
@@ -111,7 +116,7 @@ class StudentThesisForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$thesisPlugin =& PluginRegistry::getPlugin('generic', 'ThesisPlugin');
+		$thesisPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		$thesisPlugin->import('Thesis');
 		$templateMgr =& TemplateManager::getManager();
 
@@ -194,7 +199,7 @@ class StudentThesisForm extends Form {
 	 * Save thesis. 
 	 */
 	function execute() {
-		$thesisPlugin =& PluginRegistry::getPlugin('generic', 'ThesisPlugin');
+		$thesisPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		$thesisPlugin->import('Thesis');
 
 		$thesisDao =& DAORegistry::getDAO('ThesisDAO');

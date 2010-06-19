@@ -28,13 +28,17 @@ class ThesisForm extends Form {
 	/** @var validDegrees array keys are valid thesis degree values */
 	var $validDegrees;
 
+	/** @var $parentPluginName string Name of parent plugin */
+	var $parentPluginName;
 
 	/**
 	 * Constructor
-	 * @param thesisId int leave as default for new thesis
+	 * @param $parentPluginName string Name of parent plugin
+	 * @param $thesisId int leave as default for new thesis
 	 */
-	function ThesisForm($thesisId = null) {
-		$thesisPlugin =& PluginRegistry::getPlugin('generic', 'ThesisPlugin');
+	function ThesisForm($parentPluginName, $thesisId = null) {
+		$this->parentPluginName = $parentPluginName;
+		$thesisPlugin =& PluginRegistry::getPlugin('generic', $parentPluginName);
 		$thesisPlugin->import('Thesis');
 
 		$this->validStatus = array (
@@ -108,7 +112,7 @@ class ThesisForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$thesisPlugin =& PluginRegistry::getPlugin('generic', 'ThesisPlugin');
+		$thesisPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		$thesisPlugin->import('Thesis');
 
 		$templateMgr =& TemplateManager::getManager();
@@ -183,7 +187,7 @@ class ThesisForm extends Form {
 	 * Save thesis. 
 	 */
 	function execute() {
-		$thesisPlugin =& PluginRegistry::getPlugin('generic', 'ThesisPlugin');
+		$thesisPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		$thesisPlugin->import('Thesis');
 
 		$thesisDao =& DAORegistry::getDAO('ThesisDAO');

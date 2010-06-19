@@ -21,6 +21,17 @@ import('classes.article.ArticleGalleyDAO');
 
 
 class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
+	/** @var $parentPluginName string Name of parent plugin */
+	var $parentPluginName;
+
+	/**
+	 * Constructor
+	 */
+	function ArticleXMLGalleyDAO($parentPluginName) {
+		$this->parentPluginName = $parentPluginName;
+		parent::ArticleGalleyDAO();
+	}
+
 	/**
 	 * Internal function to return an ArticleXMLGalley object from an XML galley Id
 	 * @param $galleyId int
@@ -82,7 +93,7 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 		if ($result->RecordCount() != 0) {
 			$articleGalley =& $this->_returnGalleyFromRow($result->GetRowAssoc(false));
 
-			$xmlGalleyPlugin =& PluginRegistry::getPlugin('generic', 'XMLGalleyPlugin');
+			$xmlGalleyPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 			$xmlGalley = $xmlGalleyPlugin->_returnXMLGalleyFromArticleGalley($articleGalley);
 			return $xmlGalley;
 		}
@@ -113,7 +124,7 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 					array($galley->getId(), $articleId)
 				);
 
-				$xmlGalleyPlugin =& PluginRegistry::getPlugin('generic', 'XMLGalleyPlugin');
+				$xmlGalleyPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 				$journal =& Request::getJournal();
 
 				while (!$result->EOF) {
@@ -178,7 +189,7 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 			// if we have enabled XML-PDF galley generation (plugin setting)
 			// and are using the built-in NLM stylesheet, append a PDF galley as well
 			$journal =& Request::getJournal();
-			$xmlGalleyPlugin =& PluginRegistry::getPlugin('generic', 'XMLGalleyPlugin');
+			$xmlGalleyPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 
 			if ($xmlGalleyPlugin->getSetting($journal->getId(), 'nlmPDF') == 1 && 
 				$xmlGalleyPlugin->getSetting($journal->getId(), 'XSLstylesheet') == 'NLM' ) {

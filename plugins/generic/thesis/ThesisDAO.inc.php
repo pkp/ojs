@@ -39,6 +39,17 @@ define('THESIS_ORDER_TITLE_ASC',			7);
 define('THESIS_ORDER_TITLE_DESC',			8);
 
 class ThesisDAO extends DAO {
+	/** @var $parentPluginName string Name of parent plugin */
+	var $parentPluginName;
+
+	/**
+	 * Constructor
+	 */
+	function ThesisDAO($parentPluginName) {
+		$this->parentPluginName = $parentPluginName;
+		parent::DAO();
+	}
+
 	/**
 	 * Retrieve an thesis by thesis ID.
 	 * @param $thesisId int
@@ -94,7 +105,7 @@ class ThesisDAO extends DAO {
 	 * @return boolean
 	 */
 	function isThesisActive($thesisId) {
-		$thesisPlugin =& PluginRegistry::getPlugin('generic', 'ThesisPlugin');
+		$thesisPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		$thesisPlugin->import('Thesis');
 
 		$result =& $this->retrieve(
@@ -110,7 +121,7 @@ class ThesisDAO extends DAO {
 	 * @return Thesis
 	 */
 	function &_returnThesisFromRow(&$row) {
-		$thesisPlugin =& PluginRegistry::getPlugin('generic', 'ThesisPlugin');
+		$thesisPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		$thesisPlugin->import('Thesis');
 
 		$thesis = new Thesis();
@@ -413,7 +424,7 @@ class ThesisDAO extends DAO {
 	 * @return object DAOResultFactory containing matching Theses 
 	 */
 	function &getActiveThesesByJournalId($journalId, $searchType = null, $search = null, $searchMatch = null, $dateFrom = null, $dateTo = null, $resultOrder = null, $rangeInfo = null) {
-		$thesisPlugin =& PluginRegistry::getPlugin('generic', 'ThesisPlugin');
+		$thesisPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		$thesisPlugin->import('Thesis');
 
 		$paramArray = array(THESIS_STATUS_ACTIVE, (int) $journalId);

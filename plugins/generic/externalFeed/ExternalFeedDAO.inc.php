@@ -18,6 +18,17 @@
 import('lib.pkp.classes.db.DAO');
 
 class ExternalFeedDAO extends DAO {
+	/** @var $parentPluginName string Name of parent plugin */
+	var $parentPluginName;
+
+	/**
+	 * Constructor
+	 */
+	function ExternalFeedDAO($parentPluginName) {
+		$this->parentPluginName = $parentPluginName;
+		parent::DAO();
+	}
+
 	/**
 	 * Retrieve an ExternalFeed by ID.
 	 * @param $feedId int
@@ -55,7 +66,7 @@ class ExternalFeedDAO extends DAO {
 	 * @return ExternalFeed
 	 */
 	function &_returnExternalFeedFromRow(&$row) {
-		$externalFeedPlugin =& PluginRegistry::getPlugin('generic', 'ExternalFeedPlugin');
+		$externalFeedPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		$externalFeedPlugin->import('ExternalFeed');
 
 		$externalFeed =& new ExternalFeed();
