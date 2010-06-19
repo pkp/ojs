@@ -99,6 +99,7 @@ class OAIMetadataFormat_DC extends OAIMetadataFormat {
 			$this->formatElement('type', $types, true) .
 			$this->formatElement('format', $formats) .
 			$this->formatElement('identifier', Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId()))) .
+			(($doi = $article->getDOI())?$this->formatElement('identifier', $doi, false, array('xsi:type' => 'dcterms:DOI')):'') .
 			$this->formatElement('source', $sources, true) .
 			$this->formatElement('language', strip_tags($article->getLanguage())) .
 			$this->formatElement('relation', $relation) .
@@ -123,15 +124,20 @@ class OAIMetadataFormat_DC extends OAIMetadataFormat {
 	 * @param $value mixed
 	 * @param $multilingual boolean optional
 	 */
-	function formatElement($name, $value, $multilingual = false) {
+	function formatElement($name, $value, $multilingual = false, $attribs = array()) {
 		if (!is_array($value)) {
 			$value = array($value);
+		}
+
+		$attribText = '';
+		foreach ($attribs as $n => $v) {
+			$attribText .= " $n=\"" . htmlspecialchars($v) . "\"";
 		}
 
 		$response = '';
 		foreach ($value as $key => $v) {
 			$key = str_replace('_', '-', $key);
-			if (!$multilingual) $response .= "\t<dc:$name>" . OAIUtils::prepOutput($v) . "</dc:$name>\n";
+			if (!$multilingual) $response .= "\t<dc:$name$attribText>" . OAIUtils::prepOutput($v) . "</dc:$name>\n";
 			else {
 				if (is_array($v)) {
 					foreach ($v as $subV) {
