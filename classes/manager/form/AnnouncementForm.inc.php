@@ -61,7 +61,7 @@ class AnnouncementForm extends PKPAnnouncementForm {
 	 * Save announcement.
 	 */
 	function execute() {
-		parent::execute();
+		$announcement = parent::execute();
 		$journal =& Request::getJournal();
 		$journalId = $journal->getId();
 
@@ -76,7 +76,7 @@ class AnnouncementForm extends PKPAnnouncementForm {
 			$notificationUsers[] = array('id' => $user->getId());
 			unset($user);
 		}
-		$url = Request::url(null, 'announcement', 'view', array(1));
+		$url = Request::url(null, 'announcement', 'view', array($announcement->getId()));
 		foreach ($notificationUsers as $userRole) {
 			$notificationManager->createNotification(
 				$userRole['id'], 'notification.type.newAnnouncement',
