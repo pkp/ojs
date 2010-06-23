@@ -12,8 +12,6 @@
  * @brief Perform system upgrade.
  */
 
-// $Id$
-
 
 import('lib.pkp.classes.install.Installer');
 
@@ -741,6 +739,39 @@ class Upgrade extends Installer {
 				}
 				$versionDao->insertVersion($pluginVersion, true);
 			}
+		}
+
+		return true;
+	}
+
+	/**
+	 * Installs filter template entries into the filters
+	 * table.
+	 * FIXME: Move this to plug-in installation when moving filters to plug-ins, see #5157.
+	 * NB: This code will not be released, it's just for dev upgrade.
+	 * That's also why there's no corresponding method in Install.inc.php.
+	 */
+	function installFilterTemplates() {
+		$filterDao =& DAORegistry::getDAO('FilterDAO');
+		$filtersToBeInstalled = array(
+			'lib.pkp.classes.citation.lookup.crossref.CrossrefNlmCitationSchemaFilter',
+			//'lib.pkp.classes.citation.lookup.isbndb.*', // FIXME: requires generic filter persistence, see #5511
+			'lib.pkp.classes.citation.lookup.pubmed.PubmedNlmCitationSchemaFilter',
+			'lib.pkp.classes.citation.lookup.worldcat.WorldcatNlmCitationSchemaFilter',
+			'lib.pkp.classes.citation.parser.freecite.FreeciteRawCitationNlmCitationSchemaFilter',
+			'lib.pkp.classes.citation.parser.paracite.ParaciteRawCitationNlmCitationSchemaFilter',
+			'lib.pkp.classes.citation.parser.parscit.ParscitRawCitationNlmCitationSchemaFilter',
+			'lib.pkp.classes.citation.parser.regex.RegexRawCitationNlmCitationSchemaFilter'
+		);
+		foreach($filtersToBeInstalled as $filterToBeInstalled) {
+			// Make sure that the filter template has not been
+			// installed before.
+			$existingTemplate =& $filterDao->getObjectsByClass($filterToBeInstalled, true);
+			if ($existingTemplate->RecordCount()) continue;
+
+			$filter =& instantiate($filterToBeInstalled, 'Filter');
+			$filter->setIsTemplate(true);
+			$filterDao->insertObject($filter);
 		}
 
 		return true;

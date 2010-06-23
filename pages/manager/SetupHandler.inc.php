@@ -9,10 +9,8 @@
  * @class SetupHandler
  * @ingroup pages_manager
  *
- * @brief Handle requests for journal setup functions. 
+ * @brief Handle requests for journal setup functions.
  */
-
-// $Id$
 
 import('pages.manager.ManagerHandler');
 
@@ -28,8 +26,9 @@ class SetupHandler extends ManagerHandler {
 	 * Display journal setup form for the selected step.
 	 * Displays setup index page if a valid step is not specified.
 	 * @param $args array optional, if set the first parameter is the step to display
+	 * @param $request Request
 	 */
-	function setup($args) {
+	function setup($args, &$request) {
 		$this->validate();
 		$this->setupTemplate(true);
 
@@ -46,10 +45,10 @@ class SetupHandler extends ManagerHandler {
 			} else {
 				$setupForm->initData();
 			}
-			$setupForm->display();
+			$setupForm->display($request, $this->getDispatcher());
 
 		} else {
-			$templateMgr =& TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager($request);
 			$templateMgr->assign('helpTopicId','journal.managementPages.setup');
 			$templateMgr->display('manager/setup/index.tpl');
 		}
@@ -58,8 +57,9 @@ class SetupHandler extends ManagerHandler {
 	/**
 	 * Save changes to journal settings.
 	 * @param $args array first parameter is the step being saved
+	 * @param $request Request
 	 */
-	function saveSetup($args) {
+	function saveSetup($args, &$request) {
 		$this->validate();
 
 		$step = isset($args[0]) ? (int) $args[0] : 0;
@@ -78,14 +78,14 @@ class SetupHandler extends ManagerHandler {
 			// Check for any special cases before trying to save
 			switch ($step) {
 				case 1:
-					if (Request::getUserVar('addSponsor')) {
+					if ($request->getUserVar('addSponsor')) {
 						// Add a sponsor
 						$editData = true;
 						$sponsors = $setupForm->getData('sponsors');
 						array_push($sponsors, array());
 						$setupForm->setData('sponsors', $sponsors);
 
-					} else if (($delSponsor = Request::getUserVar('delSponsor')) && count($delSponsor) == 1) {
+					} else if (($delSponsor = $request->getUserVar('delSponsor')) && count($delSponsor) == 1) {
 						// Delete a sponsor
 						$editData = true;
 						list($delSponsor) = array_keys($delSponsor);
@@ -94,14 +94,14 @@ class SetupHandler extends ManagerHandler {
 						array_splice($sponsors, $delSponsor, 1);
 						$setupForm->setData('sponsors', $sponsors);
 
-					} else if (Request::getUserVar('addContributor')) {
+					} else if ($request->getUserVar('addContributor')) {
 						// Add a contributor
 						$editData = true;
 						$contributors = $setupForm->getData('contributors');
 						array_push($contributors, array());
 						$setupForm->setData('contributors', $contributors);
 
-					} else if (($delContributor = Request::getUserVar('delContributor')) && count($delContributor) == 1) {
+					} else if (($delContributor = $request->getUserVar('delContributor')) && count($delContributor) == 1) {
 						// Delete a contributor
 						$editData = true;
 						list($delContributor) = array_keys($delContributor);
@@ -113,14 +113,14 @@ class SetupHandler extends ManagerHandler {
 					break;
 
 				case 2:
-					if (Request::getUserVar('addCustomAboutItem')) {
+					if ($request->getUserVar('addCustomAboutItem')) {
 						// Add a custom about item
 						$editData = true;
 						$customAboutItems = $setupForm->getData('customAboutItems');
 						$customAboutItems[$formLocale][] = array();
 						$setupForm->setData('customAboutItems', $customAboutItems);
 
-					} else if (($delCustomAboutItem = Request::getUserVar('delCustomAboutItem')) && count($delCustomAboutItem) == 1) {
+					} else if (($delCustomAboutItem = $request->getUserVar('delCustomAboutItem')) && count($delCustomAboutItem) == 1) {
 						// Delete a custom about item
 						$editData = true;
 						list($delCustomAboutItem) = array_keys($delCustomAboutItem);
@@ -130,14 +130,14 @@ class SetupHandler extends ManagerHandler {
 						array_splice($customAboutItems[$formLocale], $delCustomAboutItem, 1);
 						$setupForm->setData('customAboutItems', $customAboutItems);
 					}
-					if (Request::getUserVar('addReviewerDatabaseLink')) {
+					if ($request->getUserVar('addReviewerDatabaseLink')) {
 						// Add a reviewer database link
 						$editData = true;
 						$reviewerDatabaseLinks = $setupForm->getData('reviewerDatabaseLinks');
 						array_push($reviewerDatabaseLinks, array());
 						$setupForm->setData('reviewerDatabaseLinks', $reviewerDatabaseLinks);
 
-					} else if (($delReviewerDatabaseLink = Request::getUserVar('delReviewerDatabaseLink')) && count($delReviewerDatabaseLink) == 1) {
+					} else if (($delReviewerDatabaseLink = $request->getUserVar('delReviewerDatabaseLink')) && count($delReviewerDatabaseLink) == 1) {
 						// Delete a custom about item
 						$editData = true;
 						list($delReviewerDatabaseLink) = array_keys($delReviewerDatabaseLink);
@@ -149,7 +149,7 @@ class SetupHandler extends ManagerHandler {
 					break;
 
 				case 3:
-					if (Request::getUserVar('addChecklist')) {
+					if ($request->getUserVar('addChecklist')) {
 						// Add a checklist item
 						$editData = true;
 						$checklist = $setupForm->getData('submissionChecklist');
@@ -162,7 +162,7 @@ class SetupHandler extends ManagerHandler {
 						array_push($checklist[$formLocale], array('order' => $lastOrder+1));
 						$setupForm->setData('submissionChecklist', $checklist);
 
-					} else if (($delChecklist = Request::getUserVar('delChecklist')) && count($delChecklist) == 1) {
+					} else if (($delChecklist = $request->getUserVar('delChecklist')) && count($delChecklist) == 1) {
 						// Delete a checklist item
 						$editData = true;
 						list($delChecklist) = array_keys($delChecklist);
@@ -184,11 +184,12 @@ class SetupHandler extends ManagerHandler {
 					break;
 
 				case 4:
-					$journal =& Request::getJournal();
+					$router =& $request->getRouter();
+					$journal =& $router->getContext(&$request);
 					$templates = $journal->getSetting('templates');
 					import('classes.file.JournalFileManager');
 					$journalFileManager = new JournalFileManager($journal);
-					if (Request::getUserVar('addTemplate')) {
+					if ($request->getUserVar('addTemplate')) {
 						// Add a layout template
 						$editData = true;
 						if (!is_array($templates)) $templates = array();
@@ -201,10 +202,10 @@ class SetupHandler extends ManagerHandler {
 							'originalFilename' => $originalFilename,
 							'fileType' => $fileType,
 							'filename' => $filename,
-							'title' => Request::getUserVar('template-title')
+							'title' => $request->getUserVar('template-title')
 						);
 						$journal->updateSetting('templates', $templates);
-					} else if (($delTemplate = Request::getUserVar('delTemplate')) && count($delTemplate) == 1) {
+					} else if (($delTemplate = $request->getUserVar('delTemplate')) && count($delTemplate) == 1) {
 						// Delete a template
 						$editData = true;
 						list($delTemplate) = array_keys($delTemplate);
@@ -217,98 +218,98 @@ class SetupHandler extends ManagerHandler {
 					}
 					$setupForm->setData('templates', $templates);
 					break;
-				case 5:	
-					if (Request::getUserVar('uploadHomeHeaderTitleImage')) {
+				case 5:
+					if ($request->getUserVar('uploadHomeHeaderTitleImage')) {
 						if ($setupForm->uploadImage('homeHeaderTitleImage', $formLocale)) {
 							$editData = true;
 						} else {
 							$setupForm->addError('homeHeaderTitleImage', Locale::translate('manager.setup.homeTitleImageInvalid'));
 						}
 
-					} else if (Request::getUserVar('deleteHomeHeaderTitleImage')) {
+					} else if ($request->getUserVar('deleteHomeHeaderTitleImage')) {
 						$editData = true;
 						$setupForm->deleteImage('homeHeaderTitleImage', $formLocale);
 
-					} else if (Request::getUserVar('uploadHomeHeaderLogoImage')) {
+					} else if ($request->getUserVar('uploadHomeHeaderLogoImage')) {
 						if ($setupForm->uploadImage('homeHeaderLogoImage', $formLocale)) {
 							$editData = true;
 						} else {
 							$setupForm->addError('homeHeaderLogoImage', Locale::translate('manager.setup.homeHeaderImageInvalid'));
 						}
 
-					} else if (Request::getUserVar('deleteHomeHeaderLogoImage')) {
+					} else if ($request->getUserVar('deleteHomeHeaderLogoImage')) {
 						$editData = true;
 						$setupForm->deleteImage('homeHeaderLogoImage', $formLocale);
 
-					} else if (Request::getUserVar('uploadJournalFavicon')) {
+					} else if ($request->getUserVar('uploadJournalFavicon')) {
 						if ($setupForm->uploadImage('journalFavicon', $formLocale)) {
 							$editData = true;
 						} else {
 							$setupForm->addError('journalFavicon', Locale::translate('manager.setup.journalFaviconInvalid'));
 						}
 
-					} else if (Request::getUserVar('deleteJournalFavicon')) {
+					} else if ($request->getUserVar('deleteJournalFavicon')) {
 						$editData = true;
 						$setupForm->deleteImage('journalFavicon', $formLocale);
 
-					} else if (Request::getUserVar('uploadPageHeaderTitleImage')) {
+					} else if ($request->getUserVar('uploadPageHeaderTitleImage')) {
 						if ($setupForm->uploadImage('pageHeaderTitleImage', $formLocale)) {
 							$editData = true;
 						} else {
 							$setupForm->addError('pageHeaderTitleImage', Locale::translate('manager.setup.pageHeaderTitleImageInvalid'));
 						}
 
-					} else if (Request::getUserVar('deletePageHeaderTitleImage')) {
+					} else if ($request->getUserVar('deletePageHeaderTitleImage')) {
 						$editData = true;
 						$setupForm->deleteImage('pageHeaderTitleImage', $formLocale);
 
-					} else if (Request::getUserVar('uploadPageHeaderLogoImage')) {
+					} else if ($request->getUserVar('uploadPageHeaderLogoImage')) {
 						if ($setupForm->uploadImage('pageHeaderLogoImage', $formLocale)) {
 							$editData = true;
 						} else {
 							$setupForm->addError('pageHeaderLogoImage', Locale::translate('manager.setup.pageHeaderLogoImageInvalid'));
 						}
 
-					} else if (Request::getUserVar('deletePageHeaderLogoImage')) {
+					} else if ($request->getUserVar('deletePageHeaderLogoImage')) {
 						$editData = true;
 						$setupForm->deleteImage('pageHeaderLogoImage', $formLocale);
 
-					} else if (Request::getUserVar('uploadHomepageImage')) {
+					} else if ($request->getUserVar('uploadHomepageImage')) {
 						if ($setupForm->uploadImage('homepageImage', $formLocale)) {
 							$editData = true;
 						} else {
 							$setupForm->addError('homepageImage', Locale::translate('manager.setup.homepageImageInvalid'));
 						}
 
-					} else if (Request::getUserVar('deleteHomepageImage')) {
+					} else if ($request->getUserVar('deleteHomepageImage')) {
 						$editData = true;
 						$setupForm->deleteImage('homepageImage', $formLocale);
-					} else if (Request::getUserVar('uploadJournalStyleSheet')) {
+					} else if ($request->getUserVar('uploadJournalStyleSheet')) {
 						if ($setupForm->uploadStyleSheet('journalStyleSheet')) {
 							$editData = true;
 						} else {
 							$setupForm->addError('journalStyleSheet', Locale::translate('manager.setup.journalStyleSheetInvalid'));
 						}
 
-					} else if (Request::getUserVar('deleteJournalStyleSheet')) {
+					} else if ($request->getUserVar('deleteJournalStyleSheet')) {
 						$editData = true;
 						$setupForm->deleteImage('journalStyleSheet');
 
-					} else if (Request::getUserVar('addNavItem')) {
+					} else if ($request->getUserVar('addNavItem')) {
 						// Add a navigation bar item
 						$editData = true;
 						$navItems = $setupForm->getData('navItems');
 						$navItems[$formLocale][] = array();
 						$setupForm->setData('navItems', $navItems);
 
-					} else if (($delNavItem = Request::getUserVar('delNavItem')) && count($delNavItem) == 1) {
+					} else if (($delNavItem = $request->getUserVar('delNavItem')) && count($delNavItem) == 1) {
 						// Delete a  navigation bar item
 						$editData = true;
 						list($delNavItem) = array_keys($delNavItem);
 						$delNavItem = (int) $delNavItem;
 						$navItems = $setupForm->getData('navItems');
 						if (is_array($navItems) && is_array($navItems[$formLocale])) {
-							array_splice($navItems[$formLocale], $delNavItem, 1);		
+							array_splice($navItems[$formLocale], $delNavItem, 1);
 							$setupForm->setData('navItems', $navItems);
 						}
 					}
@@ -318,20 +319,22 @@ class SetupHandler extends ManagerHandler {
 			if (!isset($editData) && $setupForm->validate()) {
 				$setupForm->execute();
 
-				Request::redirect(null, null, 'setupSaved', $step);
+				$request->redirect(null, null, 'setupSaved', $step);
 			} else {
 				$setupForm->display();
 			}
 
 		} else {
-			Request::redirect();
+			$request->redirect();
 		}
 	}
 
 	/**
 	 * Display a "Settings Saved" message
+	 * @param $args array
+	 * @param $request Request
 	 */
-	function setupSaved($args) {
+	function setupSaved($args, &$request) {
 		$this->validate();
 
 		$step = isset($args[0]) ? (int) $args[0] : 0;
@@ -339,23 +342,28 @@ class SetupHandler extends ManagerHandler {
 		if ($step >= 1 && $step <= 5) {
 			$this->setupTemplate(true);
 
-			$templateMgr =& TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager($request);
 			$templateMgr->assign('setupStep', $step);
 			$templateMgr->assign('helpTopicId', 'journal.managementPages.setup');
 			$templateMgr->display('manager/setup/settingsSaved.tpl');
 		} else {
-			Request::redirect(null, 'index');
+			$request->redirect(null, 'index');
 		}
 	}
 
-	function downloadLayoutTemplate($args) {
+	/**
+	 * @param $args array
+	 * @param $request Request
+	 */
+	function downloadLayoutTemplate($args, &$request) {
 		$this->validate();
-		$journal =& Request::getJournal();
+		$router =& $request->getRouter();
+		$journal =& $router->getContext($request);
 		$templates = $journal->getSetting('templates');
 		import('classes.file.JournalFileManager');
 		$journalFileManager = new JournalFileManager($journal);
 		$templateId = (int) array_shift($args);
-		if ($templateId >= count($templates) || $templateId < 0) Request::redirect(null, null, 'setup');
+		if ($templateId >= count($templates) || $templateId < 0) $request->redirect(null, null, 'setup');
 		$template =& $templates[$templateId];
 
 		$filename = "template-$templateId." . $journalFileManager->parseFileExtension($template['originalFilename']);

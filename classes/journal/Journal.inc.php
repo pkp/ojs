@@ -17,8 +17,6 @@
  * @brief Describes basic journal properties.
  */
 
-// $Id$
-
 
 define('PUBLISHING_MODE_OPEN', 0);
 define('PUBLISHING_MODE_SUBSCRIPTION', 1);
@@ -152,7 +150,7 @@ class Journal extends DataObject {
 		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
 		return $this->getLocalizedPageHeaderLogo($home);
 	}
-	
+
 	/**
 	 * Get localized favicon
 	 * @return string

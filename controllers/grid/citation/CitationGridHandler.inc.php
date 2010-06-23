@@ -12,7 +12,7 @@
  * @brief Handle OJS specific parts of citation grid requests.
  */
 
-import('lib.pkp.controllers.grid.citation.PKPCitationGridHandler');
+import('lib.pkp.classes.controllers.grid.citation.PKPCitationGridHandler');
 
 // import validation classes
 import('classes.handler.validation.HandlerValidatorJournal');
@@ -45,8 +45,6 @@ class CitationGridHandler extends PKPCitationGridHandler {
 		// Retrieve the request context
 		$router =& $request->getRouter();
 		$journal =& $router->getContext($request);
-
-		if (!parent::validate($requiredContexts, $request, $journal)) return false;
 
 		// NB: Error messages are in plain English as they directly go to fatal errors
 		// which are not directed to end users. (Validation errors in components are

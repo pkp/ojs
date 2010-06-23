@@ -5,8 +5,6 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Step 3 of journal setup.
- *
- * $Id$
  *}
 {assign var="pageTitle" value="manager.setup.guidingSubmissions"}
 {include file="manager/setup/setupHeader.tpl"}
@@ -47,6 +45,22 @@
 		</td>
 	</tr>
 </table>
+<div id="citationFilterSetupToggle" {if !$metaCitations}style="visible: none"{/if}>
+	{load_div id="parserFilterGridContainer" loadMessageId="manager.setup.filter.parser.grid.loadMessage" url="$parserFilterGridUrl"}
+	{load_div id="lookupFilterGridContainer" loadMessageId="manager.setup.filter.lookup.grid.loadMessage" url="$lookupFilterGridUrl"}
+</div>
+{literal}<script type='text/javascript'>
+	$(function(){
+		$('#metaCitations').change(function(){
+			checkbox = this.attr('checked');
+			$filterSetupBox = $('#citationFilterSetupToggle');
+			toggleState = ($filterSetupBox.css('display') === 'block');
+			if (checkbox !== toggleState) {
+				$filterSetupBox.toggle(300);
+			}
+		})
+	});	
+</script>{/literal}
 </div>
 
 <div id="submissionPreparationChecklist">

@@ -12,7 +12,6 @@
  * @brief Form for Step 3 of journal setup.
  */
 
-// $Id$
 
 
 import('classes.manager.form.setup.JournalSetupForm');
@@ -66,13 +65,32 @@ class JournalSetupStep3Form extends JournalSetupForm {
 
 	/**
 	 * Display the form
+	 * @param $request Request
+	 * @param $dispatcher Dispatcher
 	 */
-	function display() {
+	function display(&$request, &$dispatcher) {
 		import('classes.mail.MailTemplate');
 		$mail = new MailTemplate('SUBMISSION_ACK');
 		if ($mail->isEnabled()) {
-			$templateMgr =& TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager($request);
 			$templateMgr->assign('submissionAckEnabled', true);
+
+			// Add extra style sheets required for ajax components
+			// FIXME: Must be removed after OMP->OJS backporting
+			$templateMgr->addStyleSheet($request->getBaseUrl().'/styles/ojs.css');
+
+			// Add extra java script required for ajax components
+			// FIXME: Must be removed after OMP->OJS backporting
+			$templateMgr->addJavaScript('lib/pkp/js/grid-clickhandler.js');
+			$templateMgr->addJavaScript('lib/pkp/js/modal.js');
+			$templateMgr->addJavaScript('lib/pkp/js/lib/jquery/plugins/validate/jquery.validate.min.js');
+			$templateMgr->addJavaScript('lib/pkp/js/jqueryValidatorI18n.js');
+
+			// Add the grid URLs
+			$parserFilterGridUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.filter.ParserFilterGridHandler', 'fetchGrid');
+			$templateMgr->assign('parserFilterGridUrl', $parserFilterGridUrl);
+			$lookupFilterGridUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.filter.LookupFilterGridHandler', 'fetchGrid');
+			$templateMgr->assign('lookupFilterGridUrl', $lookupFilterGridUrl);
 		}
 
 		parent::display();
