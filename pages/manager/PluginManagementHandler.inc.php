@@ -12,8 +12,6 @@
  * @brief Handle requests for installing/upgrading/deleting plugins.
  */
 
-// $Id$
-
 define('VERSION_FILE', '/version.xml');
 define('INSTALL_FILE', '/install.xml');
 define('UPGRADE_FILE', '/upgrade.xml');
@@ -134,39 +132,58 @@ class PluginManagementHandler extends ManagerHandler {
 		$templateMgr->assign('path', $function);
 		$templateMgr->assign('pageHierarchy', $this->setBreadcrumbs(true));
 
+		$errorMsg = '';
 		if (Request::getUserVar('uploadPlugin')) {
 			import('classes.file.TemporaryFileManager');
 			$temporaryFileManager = new TemporaryFileManager();
 			$user =& Request::getUser();
+		} else {
+			$errorMsg = 'manager.plugins.fileSelectError';
+		}
 
+		if (empty($errorMsg)) {
 			if ($temporaryFile = $temporaryFileManager->handleUpload('newPlugin', $user->getId())) {
-				// tar archive basename must equal plugin directory name, and plugin files must be in root directory
-				$pluginName = basename($temporaryFile->getOriginalFileName(), '.tar.gz');
-				$pluginDir = dirname($temporaryFile->getFilePath());
+				// tar archive basename (less potential version number) must equal plugin directory name
+				// and plugin files must be in a directory named after the plug-in.
+				$matches = array();
+				String::regexp_match_get('/^[a-zA-Z0-9]+/', basename($temporaryFile->getOriginalFileName(), '.tar.gz'), $matches);
+				$pluginName = array_pop($matches);
+				// Create random dirname to avoid symlink attacks.
+				$pluginDir = dirname($temporaryFile->getFilePath()) . DIRECTORY_SEPARATOR . $pluginName . substr(md5(mt_rand()), 0, 10);
+				mkdir($pluginDir);
+			} else {
+				$errorMsg = 'manager.plugins.uploadError';
+			}
+		}
 
-				// Test whether the tar binary is available for the export to work
-				$tarBinary = Config::getVar('cli', 'tar');
-				if (!empty($tarBinary) && file_exists($tarBinary)) {
-					exec($tarBinary.' -xzf ' . escapeshellarg($temporaryFile->getFilePath()) . ' -C ' . escapeshellarg($pluginDir));
+		if (empty($errorMsg)) {
+			// Test whether the tar binary is available for the export to work
+			$tarBinary = Config::getVar('cli', 'tar');
+			if (!empty($tarBinary) && file_exists($tarBinary)) {
+				exec($tarBinary.' -xzf ' . escapeshellarg($temporaryFile->getFilePath()) . ' -C ' . escapeshellarg($pluginDir));
+			} else {
+				$errorMsg = 'manager.plugins.tarCommandNotFound';
+			}
+		}
 
-					if ($function == 'install') {
-						$this->installPlugin($pluginDir . DIRECTORY_SEPARATOR . $pluginName, $templateMgr);
-					} else if ($function == 'upgrade') {
-						$this->upgradePlugin($pluginDir . DIRECTORY_SEPARATOR . $pluginName, $templateMgr);
-					}
-				} else {
-					$templateMgr->assign('error', true);
-					$templateMgr->assign('message', 'manager.plugins.tarCommandNotFound');
+		if (empty($errorMsg)) {
+			// We should now find a directory named after the
+			// plug-in within the extracted archive.
+			$pluginDir .= DIRECTORY_SEPARATOR . $pluginName;
+			if (is_dir($pluginDir)) {
+				if ($function == 'install') {
+					$this->installPlugin($pluginDir, $templateMgr);
+				} else if ($function == 'upgrade') {
+					$this->upgradePlugin($pluginDir, $templateMgr);
 				}
 			} else {
-				$templateMgr->assign('error', true);
-				$templateMgr->assign('message', 'manager.plugins.uploadError');
+				$errorMsg = 'manager.plugins.invalidPluginArchive';
 			}
-		} else if (Request::getUserVar('installPlugin')) {
-			if(Request::getUserVar('pluginUploadLocation') == '') {
-				$templateMgr->assign('error', true);
-				$templateMgr->assign('message', 'manager.plugins.fileSelectError');
-			}
+		}
+
+		if (!empty($errorMsg)) {
+			$templateMgr->assign('error', true);
+			$templateMgr->assign('message', $errorMsg);
 		}
 
 		$templateMgr->display('manager/plugins/managePlugins.tpl');
