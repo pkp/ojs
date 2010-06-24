@@ -27,7 +27,7 @@
 	{assign var="hasRole" value=1}
 	{if !$currentJournal}<h4><a href="{url journal=$journal->getPath() page="user"}">{$journal->getLocalizedTitle()|escape}</a></h4>
 	{else}<h3>{$journal->getLocalizedTitle()|escape}</h3>{/if}
-	{assign var="journalId" value=$journal->getjournalId()}
+	{assign var="journalId" value=$journal->getId()}
 	{assign var="journalPath" value=$journal->getPath()}
 	<table width="100%" class="info">
 		{if $isValid.JournalManager.$journalId}
