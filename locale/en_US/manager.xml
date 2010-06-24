@@ -105,7 +105,7 @@
 	<message key="manager.plugins.invalidPluginArchive">The uploaded plugin archive does not contain a folder that corresponds to the plugin name.</message>
 	<message key="manager.plugins.pleaseInstall">Plugin does not exist.  Please Install instead</message>
 	<message key="manager.plugins.pleaseUpgrade">Plugin already exists, but is newer than installed version.  Please upgrade instead</message>
-	<message key="manager.plugins.tarCommandNotFound">The tar command is not available. Please correctly configure it in your "confic.inc.php".</message>
+	<message key="manager.plugins.tarCommandNotFound">The tar command is not available. Please correctly configure it in your "config.inc.php".</message>
 	<message key="manager.plugins.upgrade">Upgrade Plugin</message>
 	<message key="manager.plugins.upgradeDescription">This form allows you to upgrade a plugin.  Please ensure the plugin is compressed as a .tar.gz file.</message>
 	<message key="manager.plugins.upgradeFailed">Upgrade failed</message>
