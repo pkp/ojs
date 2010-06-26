@@ -29,10 +29,20 @@
 	<meta name="citation_doi" content="{$article->getDOI()|escape}"/>
 {/if}
 	<meta name="citation_abstract_html_url" content="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}"/>
-{foreach from=$article->getGalleys() item=dc_galley}
-{if $dc_galley->getFileType()=="application/pdf"}
-	<meta name="citation_pdf_url" content="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$dc_galley->getBestGalleyId($currentJournal)}"/>
+{if $article->getLanguage()}
+	<meta name="citation_language" content="{$article->getLanguage()|strip_tags|escape}"/>
+{/if}
+{if $article->getSubject(null)}{foreach from=$article->getSubject(null) key=metaLocale item=metaValue}
+	{foreach from=$metaValue|explode:"; " item=gsKeyword}
+		{if $gsKeyword}
+			<meta name="citation_keywords" xml:lang="{$metaLocale|String_substr:0:2|escape}" content="{$gsKeyword|escape}"/>
+		{/if}
+	{/foreach}
+{/foreach}{/if}
+{foreach from=$article->getGalleys() item=gs_galley}
+{if $gs_galley->getFileType()=="application/pdf"}
+	<meta name="citation_pdf_url" content="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$gs_galley->getBestGalleyId($currentJournal)}"/>
 {else}
-	<meta name="citation_fulltext_html_url" content="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$dc_galley->getBestGalleyId($currentJournal)}"/>
+	<meta name="citation_fulltext_html_url" content="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$gs_galley->getBestGalleyId($currentJournal)}"/>
 {/if}
 {/foreach}
