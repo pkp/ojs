@@ -30,6 +30,6 @@
 	<message key="plugins.generic.referral.status.decline">Ignored</message>
 	<message key="plugins.generic.referral.status.decline.empty">There are currently no ignored refbacks.</message>
 	<message key="plugins.generic.referral.confirmDelete">Are you sure you wish to delete this refback?</message>
-	<message key="plugins.generic.referral.nameRequired">A refback name is required.</message>
+	<message key="plugins.generic.referral.nameRequired">A refback title is required.</message>
 	<message key="plugins.generic.referral.urlRequired">A refback URL is required.</message>
 </locale>
