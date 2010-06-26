@@ -31,7 +31,6 @@
 	<message key="editor.submissionArchive.confirmDelete">Jste si jistý, že chcete trvale smazat tento příspěvek?</message>
 	<message key="editor.submissionReview.confirmDecision">Jste si jistý, že chcete zaznamenat toto rozhodnutí?</message>
 	<message key="editor.submissionReview.emailWillArchive">Tento příspěvek bude archivován poté, co bude odeslán email Informovat autora nebo bude kliknuto na tlačítko přeskočit email.</message>
-	<message key="editor.submissionReview.cannotSendToCopyediting">Před tím, než budete moci zaslat tento příspěvek na redigování, musíte zajistit, aby byl dostupný recenzní posudek, a že autor byl informován o rozhodnutí použitím odkazu Informovat autora.</message>
 	<message key="editor.notifyUsers">Informovat uživatele</message>
 	<message key="editor.notifyUsers.inProgress">Probíhá informování uživatelů...</message>
 	<message key="editor.usersNotified">Uživatelé byli informováni</message>
@@ -164,7 +163,6 @@
 	<message key="editor.article.resubmitForReview">Znovu odeslat soubor na recenzi</message>
 	<message key="editor.article.resubmitFileForPeerReview">Znovu odeslat zvolený soubor na recenzi</message>
 	<message key="editor.article.sendToCopyedit">Poslat soubor na redigování</message>
-	<message key="editor.article.sendFileToCopyedit">Zvolte soubor pro redigování</message>
 	<message key="editor.article.selectProofreader">Přidělit korektora</message>
 	<message key="editor.article.replaceProofreader">Nahradit korektora</message>
 	<message key="editor.article.authorComments">Komentář autora</message>

@@ -31,7 +31,6 @@
 	<message key="editor.submissionArchive.confirmDelete">Weet u zeker dat u deze inzending definitief wilt verwijderen?</message>
 	<message key="editor.submissionReview.confirmDecision">Weet u zeker dat u deze beslissing wilt vastleggen?</message>
 	<message key="editor.submissionReview.emailWillArchive">Deze inzending wordt gearchiveerd nadat de notificatie e-mail naar de auteur is verstuurd of de Sla e-mail over functie is gekozen.</message>
-	<message key="editor.submissionReview.cannotSendToCopyediting">Voordat u deze inzending naar de tekstredactie kunt sturen moet u zich ervan verzekeren dat er een revisie aanwezig is en dat de auteur is ingelicht (gebruik daarvoor de Auteur inlichten link hierboven).</message>
 	<message key="editor.notifyUsers">Gebruikers inlichten</message>
 	<message key="editor.notifyUsers.inProgress">Gebruikers inlichten...</message>
 	<message key="editor.usersNotified">Gebruikers ingelicht</message>
@@ -164,7 +163,6 @@
 	<message key="editor.article.resubmitForReview">Bestand opnieuw indienen voor review</message>
 	<message key="editor.article.resubmitFileForPeerReview">Bestand opnieuw indienen voor peer review</message>
 	<message key="editor.article.sendToCopyedit">Bestand naar opmaak sturen</message>
-	<message key="editor.article.sendFileToCopyedit">Kies bestand voor opmaak</message>
 	<message key="editor.article.selectProofreader">Proeflezen toekennen</message>
 	<message key="editor.article.replaceProofreader">Proeflezer vervangen</message>
 	<message key="editor.article.authorComments">Commentaar auteur</message>

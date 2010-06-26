@@ -30,7 +30,6 @@
 	<message key="editor.submissionArchive.confirmDelete">¿Seguro que quiere eliminar este envío?</message>
 	<message key="editor.submissionReview.confirmDecision">¿Seguro que quiere guardar esta decisión?</message>
 	<message key="editor.submissionReview.emailWillArchive">Este envío será archivado después de lanzar el email de Notificación a Autor/a o pulsar el botón de "No Enviar email".</message>
-	<message key="editor.submissionReview.cannotSendToCopyediting">Antes de pasar este envío a "Pruebas", debe asegurarse de que existen revisiones y de que el/la autor/a ha recibido aviso de los resultados usando el vínculo "Notificar a Autor/a" en la parte superior.</message>
 	<message key="editor.notifyUsers">Notificar usuarias/os</message>
 	<message key="editor.notifyUsers.inProgress">Notificaciones a usuarios...</message>
 	<message key="editor.usersNotified">Usuarias/os notificados</message>
@@ -163,7 +162,6 @@
 	<message key="editor.article.resubmitForReview">Reenviar fichero para revisión</message>
 	<message key="editor.article.resubmitFileForPeerReview">Reenviar el fichero seleccionado para revisión por pares</message>
 	<message key="editor.article.sendToCopyedit">Enviar fichero a corrección</message>
-	<message key="editor.article.sendFileToCopyedit">Seleccione el fichero para la corrección en edición</message>
 	<message key="editor.article.selectProofreader">Asignar corrector/a de pruebas</message>
 	<message key="editor.article.replaceProofreader">Reemplazar corrector/a de pruebas</message>
 	<message key="editor.article.authorComments">Comentarios de autor/a</message>

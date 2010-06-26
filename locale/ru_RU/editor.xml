@@ -137,7 +137,6 @@
 	<message key="editor.article.resubmitForReview">Послать рецензентам</message>
 	<message key="editor.article.resubmitFileForPeerReview">Послать выбранный файл спецрецензентам</message>
 	<message key="editor.article.sendToCopyedit">Послать файл на верстку</message>
-	<message key="editor.article.sendFileToCopyedit">Послать выбранный файл редактору</message>
 	<message key="editor.article.selectProofreader">Назначить корректора</message>
 	<message key="editor.article.replaceProofreader">Заменить корректора</message>
 	<message key="editor.article.authorComments">Комментарии автора</message>
@@ -160,7 +159,6 @@
 	<message key="editor.allEditors">Все редакторы</message>
 	<message key="editor.me">Я</message>
 	<message key="editor.submissionReview.emailWillArchive">Эта рукопись будет заархивирована после того как отправлено Уведомление Автору или нажата кнопка "Не отправлять уведомление".</message>
-	<message key="editor.submissionReview.cannotSendToCopyediting">Перед отправкой рукописи литературному редактору, необходимо уточнить, что она доступна и что автор уведомлен о решении (используя ссылку "Уведомить Автора" выше).</message>
 	<message key="editor.notifyUsers.inProgress">Рассылаются уведомления...</message>
 	<message key="editor.issues.volumeRequired">Нужно ввести номер тома, представляющий собой положительное число.</message>
 	<message key="editor.issues.numberRequired">Нужно ввести номер выпуска, представляющий собой положительное число.</message>

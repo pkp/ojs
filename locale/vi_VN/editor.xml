@@ -30,7 +30,6 @@
 	<message key="editor.submissionArchive.confirmDelete">Quý vị có chắc chắn muốn xóa vĩnh viễn bài nộp này?</message>
 	<message key="editor.submissionReview.confirmDecision">Quý vị có chắc chắn muốn ghi lại quyết định này?</message>
 	<message key="editor.submissionReview.emailWillArchive">Bài nộp này sẽ được lưu sau khi email Thông báo cho Tác giả được gửi đi hoặc nút "Bỏ qua Email" được sử dụng.</message>
-	<message key="editor.submissionReview.cannotSendToCopyediting">Trước khi gửi bài nộp đi biên tập bản thảo, bạn cần đảm bảo rằng bản hiệu đính đã sẵn sàng và tác giả đã được thông báo về quyết định đó thông qua đường dẫn Báo cho Tác giả trên đây.</message>
 	<message key="editor.submissionReview.notes">Thời hạn chỉ số tuần còn lại cho đến khi ngày hết hợn phản biện hoặc (-) số tuần quá hạn. Nó được nhập vào khi người phản biện đồng ý tiến hành phản biện.</message>
 	<message key="editor.notifyUsers">Thông báo cho người dùng</message>
 	<message key="editor.notifyUsers.inProgress">Đang thông báo cho người dùng...</message>
@@ -164,7 +163,6 @@
 	<message key="editor.article.resubmitForReview">Nộp lại file để Phản biện</message>
 	<message key="editor.article.resubmitFileForPeerReview">Nộp lại file đã chọn để phản biện chuyên gia</message>
 	<message key="editor.article.sendToCopyedit">Gửi file đi Biên tập bản thảo</message>
-	<message key="editor.article.sendFileToCopyedit">Chọn file để Biên tập bản thảo</message>
 	<message key="editor.article.selectProofreader">Giao Người soát lỗi</message>
 	<message key="editor.article.replaceProofreader">Thay Người soát lỗi</message>
 	<message key="editor.article.authorComments">Bình luận của Tác giả</message>

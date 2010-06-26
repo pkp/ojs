@@ -29,7 +29,6 @@
 	<message key="editor.submissionArchive.confirmDelete">Jeste li sigurni da želite trajno obrisati ovu prijavu?</message>
 	<message key="editor.submissionReview.confirmDecision">Jeste li sigurni da želite zapisati ovu odluku?</message>
 	<message key="editor.submissionReview.emailWillArchive">Ovaj će prilog biti arhiviran nakon što se o ishodu e-poštom obavijesti autora ili se odabere opcija "izostavi e-poštu".</message>
-	<message key="editor.submissionReview.cannotSendToCopyediting">Da bi prilog mogao biti poslan na lekturu autor mora biti obaviješten (koristeći istoimenu opciju), a tekst rukopisa se mora nalaziti u sustavu.</message>
 	<message key="editor.notifyUsers">Obavijesti korisnike</message>
 	<message key="editor.notifyUsers.inProgress">Obavještavam korisnike...</message>
 	<message key="editor.usersNotified">Korisnika obavješteno</message>
@@ -156,7 +155,6 @@
 	<message key="editor.article.resubmitForReview">Ponovno podnesi datoteku za recenziju</message>
 	<message key="editor.article.resubmitFileForPeerReview">Odaberite verziju za naredni krug recenzije</message>
 	<message key="editor.article.sendToCopyedit">Pošalji datoteku u lekturu</message>
-	<message key="editor.article.sendFileToCopyedit">Odaberite datoteku za lekturu</message>
 	<message key="editor.article.selectProofreader">Dodijeli korektora</message>
 	<message key="editor.article.replaceProofreader">Zamijeni korektora</message>
 	<message key="editor.article.authorComments">Komentari autora</message>

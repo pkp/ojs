@@ -149,7 +149,6 @@
 	<message key="editor.article.resubmitForReview">Send inn fil igjen til Fagvurdering</message>
 	<message key="editor.article.resubmitFileForPeerReview">Send inn den valgte filen igjen til fagvurdering</message>
 	<message key="editor.article.sendToCopyedit">Send fil til Manusredigering</message>
-	<message key="editor.article.sendFileToCopyedit">Velg fil til Manusredigering</message>
 	<message key="editor.article.selectProofreader">Oppnevn Korrekturleser</message>
 	<message key="editor.article.replaceProofreader">Erstatt Korrekturleser</message>
 	<message key="editor.article.authorComments">Forfatter kommentarer</message>
@@ -174,7 +173,6 @@
 	<message key="editor.allEditors">Alle Redaktører</message>
 	<message key="editor.me">Meg</message>
 	<message key="editor.submissionReview.emailWillArchive">Dette innsendte manuskriptet vil bli overført til arkivet så snart E-post til forfatteren er sendt eller kansellert.</message>
-	<message key="editor.submissionReview.cannotSendToCopyediting">Før du kan sende dette manuskriptet til Layoutredigering må du forsikre deg om at det er opprettet en revidert filversjon og at Forfatteren er varslet via 'E-post Forfatteren'-lenken ovenfor.</message>
 	<message key="editor.notifyUsers.inProgress">Varsler Brukere ...</message>
 	<message key="editor.issues.titleRequired">Det er påkrevet med en tittel til utgaven.</message>
 	<message key="editor.issues.issueIdentificationRequired">Utgaveidentifikasjon er påkrevet: vennligst velg minst én av alternativene for utgaveidentifikasjon.</message>

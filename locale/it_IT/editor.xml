@@ -31,7 +31,6 @@
 	<message key="editor.submissionArchive.confirmDelete">Siete sicuri di voler cancellare definitivamente questa submission?</message>
 	<message key="editor.submissionReview.confirmDecision">Siete sicuri di voler registrare questa decisione?</message>
 	<message key="editor.submissionReview.emailWillArchive">Questa submission sarà archiviata dopo che la email di notifica all'autore sarà sia inviata o sia che il tasto 'Salta email' sarà cliccato.</message>
-	<message key="editor.submissionReview.cannotSendToCopyediting">Prima di poter inviare questa submission per il copyediting, assicurati che una revisione è disponibile e che l'autore è stato notificato sulla decisione utilizzando il link Notifica l'autore sopra.</message>
 	<message key="editor.notifyUsers">Notifica utenti</message>
 	<message key="editor.notifyUsers.inProgress">Notificare gli utenti...</message>
 	<message key="editor.usersNotified">Utenti notificati</message>
@@ -165,7 +164,6 @@
 	<message key="editor.article.resubmitForReview">Invia di nuovo il file per la review</message>
 	<message key="editor.article.resubmitFileForPeerReview">Invia di nuovo i file selezionati per la peer review</message>
 	<message key="editor.article.sendToCopyedit">Invia i file al copyediting</message>
-	<message key="editor.article.sendFileToCopyedit">Seleziona il file per il Copyedit</message>
 	<message key="editor.article.selectProofreader">Assegna il correttore di bozze</message>
 	<message key="editor.article.replaceProofreader">Sostituisci il correttore di bozze</message>
 	<message key="editor.article.authorComments">Commenti dell'autore</message>

@@ -145,7 +145,6 @@
 	<message key="editor.article.resubmitForReview">Değerlendirme için Yeniden Başvuru Dosyası</message>
 	<message key="editor.article.resubmitFileForPeerReview">Seçilen dosyayı yaniden hakem değerlendirmesine gönder</message>
 	<message key="editor.article.sendToCopyedit">Dosyayı Sayfa Düzenleyicisine gönder</message>
-	<message key="editor.article.sendFileToCopyedit">Dosyayı Sayfa Düzenleme için seç</message>
 	<message key="editor.article.selectProofreader">Düzeltmen ata</message>
 	<message key="editor.article.replaceProofreader">Düzeltmeni değiştir</message>
 	<message key="editor.article.authorComments">Yazar yorumları</message>

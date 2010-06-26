@@ -147,7 +147,6 @@
 	<message key="editor.article.resubmitForReview">Datei erneut zur Begutachtung einreichen</message>
 	<message key="editor.article.resubmitFileForPeerReview">Die ausgewählte Datei erneut zum Peer Review einreichen</message>
 	<message key="editor.article.sendToCopyedit">Datei ans Lektorat schicken</message>
-	<message key="editor.article.sendFileToCopyedit">Datei für das Lektorat auswählen</message>
 	<message key="editor.article.selectProofreader">Beitrag einer Korrekturlektorin/einem Korrekturlektor zuweisen</message>
 	<message key="editor.article.replaceProofreader">Korrekturlektor/in ersetzen</message>
 	<message key="editor.article.authorComments">Kommentare der Autorin/des Autors</message>
@@ -169,7 +168,6 @@
 	<message key="editor.allEditors">Alle Redakteur/innen</message>
 	<message key="editor.me">Ich</message>
 	<message key="editor.submissionReview.emailWillArchive">Dieser Beitrag wird archiviert, nachdem die Benachrichtigungs-E-Mail an die Autorin/den Autor entweder versendet wurde oder nachdem "E-Mail überspringen" angeklickt wurde.</message>
-	<message key="editor.submissionReview.cannotSendToCopyediting">Stellen Sie sicher, dass eine überarbeitete Version zur Verfügung steht und dass die Autorin/der Autor benachrichtigt wurde (nutzen Sie dazu den "Autor/in benachrichtigen"-Link oben), ehe Sie den Beitrag ins Lektorat schicken.</message>
 	<message key="editor.notifyUsers.inProgress">Benutzer/innen werden benachrichtigt.</message>
 	<message key="editor.issues.volumeRequired">Die Angabe "Band" (als positive ganze Zahl) ist erforderlich.</message>
 	<message key="editor.issues.numberRequired">Die Angabe "Nummer" (als positive ganze Zahl) ist erforderlich.</message>

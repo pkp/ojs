@@ -30,7 +30,6 @@
 	<message key="editor.submissionArchive.confirmDelete">Deseja realmente eliminar esta submissão?</message>
 	<message key="editor.submissionReview.confirmDecision">Deseja realmente registar a decisão?</message>
 	<message key="editor.submissionReview.emailWillArchive">Esta submissão será arquivada após a mensagem de Notificar Autor ser enviada ou pressionado o botão "Não enviar e-mail".</message>
-	<message key="editor.submissionReview.cannotSendToCopyediting">Antes de enviar a submissão para a edição de texto, assegure-se que disponibiliza uma versão revista e notificar o autor sobre a decisão editorial, através da ferramenta Notificar Autor.</message>
 	<message key="editor.notifyUsers">Notificar Utilizadores</message>
 	<message key="editor.notifyUsers.inProgress">Notificando utilizadores...</message>
 	<message key="editor.usersNotified">Utilizadores Notificados</message>
@@ -163,7 +162,6 @@
 	<message key="editor.article.resubmitForReview">Enviar documento novamente para Revisão</message>
 	<message key="editor.article.resubmitFileForPeerReview">Enviar documento seleccionado para revisão por pares</message>
 	<message key="editor.article.sendToCopyedit">Enviar documento para Edição de Texto</message>
-	<message key="editor.article.sendFileToCopyedit">Seleccionar documento para Edição de Texto</message>
 	<message key="editor.article.selectProofreader">Seleccionar Leitor de Prova</message>
 	<message key="editor.article.replaceProofreader">Substituir Leitor de Prova</message>
 	<message key="editor.article.authorComments">Comentários do Autor</message>

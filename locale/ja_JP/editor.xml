@@ -25,7 +25,6 @@
 	<message key="editor.submissionArchive.confirmDelete">この投稿物を完全に削除してもよいですか。</message>
 	<message key="editor.submissionReview.confirmDecision">この判断を記録してもよいですか。</message>
 	<message key="editor.submissionReview.emailWillArchive">この投稿物は、著者に通知メールが送信された、またはメール送信をスキップボタンが押された後、保存されます。</message>
-	<message key="editor.submissionReview.cannotSendToCopyediting">この投稿物をコピーエディタに送信する前に、改訂版が利用可能になっていること、および、上にある「著者に通知」リンクを使って著者に判断が通知されていることを確認してください。</message>
 	<message key="editor.notifyUsers">ユーザへの通知</message>
 	<message key="editor.notifyUsers.inProgress">ユーザに通知しています</message>
 	<message key="editor.usersNotified">通知されたユーザ</message>
@@ -154,7 +153,6 @@
 	<message key="editor.article.resubmitForReview">査読用にファイルを再投稿</message>
 	<message key="editor.article.resubmitFileForPeerReview">査読用に選択したファイルを再投稿</message>
 	<message key="editor.article.sendToCopyedit">コピーエディタにファイルを送信</message>
-	<message key="editor.article.sendFileToCopyedit">整理作業用ファイルの選択</message>
 	<message key="editor.article.selectProofreader">校正者の任命</message>
 	<message key="editor.article.replaceProofreader">校正者の置換</message>
 	<message key="editor.article.authorComments">著者のコメント</message>

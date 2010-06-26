@@ -28,7 +28,6 @@
 	<message key="editor.submissionArchive.confirmDelete">آیا می خواهید برای همیشه این ساب میشن را حذف کنید؟</message>
 	<message key="editor.submissionReview.confirmDecision">آیا از تصمیم گرفته شده مطمئن هستید؟</message>
 	<message key="editor.submissionReview.emailWillArchive">با توجه به اینکه بر روی لینک &quot;بایگانی کردن&quot; کلیک کرده اید چنانچه در صفحه بعد (ارسال ایمیل) دکمه ارسال یا انجام بدون ارسال را بزنید در هر حال مقاله بایگانی خواهد شد' مگر اینکه دکمه کنسل را بزنید.</message>
-	<message key="editor.submissionReview.cannotSendToCopyediting">قبل از اینکه بتوانید این ساب میشن را برای ویراستاری ارسال کنید میبایست مطمئن شوید که آخرین نسخه اصلاح شده موجود است و نویسندگان از تصمیم سردبیر با استفاده از لینک &quot;خبر به نویسنده&quot; مطلع شده اند.</message>
 	<message key="editor.notifyUsers">اطلاع به کاربران</message>
 	<message key="editor.notifyUsers.inProgress">خبر به نویسنده ...</message>
 	<message key="editor.usersNotified">کاربران باخبر شدند</message>
@@ -160,7 +159,6 @@
 	<message key="editor.article.resubmitForReview">ساب میت مجدد فایل برای کارشناسی</message>
 	<message key="editor.article.resubmitFileForPeerReview">ساب میت مجدد فایل انتخاب شده برای کارشناسی</message>
 	<message key="editor.article.sendToCopyedit">ارسال فایل برای ویراستاری</message>
-	<message key="editor.article.sendFileToCopyedit">نسخه ویراستاری فایل را انتخاب کنید.</message>
 	<message key="editor.article.selectProofreader">انتصاب چک کننده نهائی</message>
 	<message key="editor.article.replaceProofreader">جایگزین کردن چک کننده نهائی</message>
 	<message key="editor.article.authorComments">نظرات نویسنده</message>

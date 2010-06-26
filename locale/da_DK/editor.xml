@@ -31,7 +31,6 @@
 	<message key="editor.submissionArchive.confirmDelete">Er du sikker på, at du vil slette dette manuskript permanent?</message>
 	<message key="editor.submissionReview.confirmDecision">Er du sikker på, at du vil registrere denne beslutning?</message>
 	<message key="editor.submissionReview.emailWillArchive">Manuskriptet arkiveres, når du har sendt e-mailen Underret forfatter, eller når du har trykket på knappen Spring e-mail over.</message>
-	<message key="editor.submissionReview.cannotSendToCopyediting">Inden du kan sende dette manuskript til manuskriptredigering, skal du sørge for, at der findes en revision, og at forfatteren er blevet underrettet om beslutningen ved hjælp af linket Underret forfatter ovenfor.</message>
 	<message key="editor.notifyUsers">Underret brugere</message>
 	<message key="editor.notifyUsers.inProgress">Underretter brugere...</message>
 	<message key="editor.usersNotified">Underrettede brugere</message>
@@ -164,7 +163,6 @@
 	<message key="editor.article.resubmitForReview">Fremsend filen igen til bedømmelse</message>
 	<message key="editor.article.resubmitFileForPeerReview">Fremsend markeret fil igen til peer review</message>
 	<message key="editor.article.sendToCopyedit">Send fil til manuskriptredigering</message>
-	<message key="editor.article.sendFileToCopyedit">Vælg fil til manuskriptredigering</message>
 	<message key="editor.article.selectProofreader">Tildel korrekturlæser</message>
 	<message key="editor.article.replaceProofreader">Erstat korrekturlæser</message>
 	<message key="editor.article.authorComments">Kommentarer fra forfatter</message>

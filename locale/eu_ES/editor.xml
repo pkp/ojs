@@ -31,7 +31,6 @@
 	<message key="editor.submissionArchive.confirmDelete">Ziur zaude betiko ezabatu nahi duzula bidalketa hau?</message>
 	<message key="editor.submissionReview.confirmDecision">Ziur zaude erabaki hau grabatu nahi duzula?</message>
 	<message key="editor.submissionReview.emailWillArchive">Bidalketa hau artxibatuko da Egileari jakinarazteko mezu elektronikoa bidaltzen denean edo 'Saltatu mezua' botoia sakatzen denean.</message>
-	<message key="editor.submissionReview.cannotSendToCopyediting">Bidalketa hau zuzentzera bidali aurretik, ebaluazioa egin dela eta egileari jakinarazi zaiola ( goiko "Jakinarazi egileari" estekaren bidez)  ziurtatu behar duzu.</message>
 	<message key="editor.notifyUsers">Jakinarazi erabiltzaileei</message>
 	<message key="editor.notifyUsers.inProgress">Jakinarazi erabiltzaileei...</message>
 	<message key="editor.usersNotified">Jakinarazitako erabiltzaileak</message>
@@ -164,7 +163,6 @@
 	<message key="editor.article.resubmitForReview">Birbidali fitxategia ebaluatzeko</message>
 	<message key="editor.article.resubmitFileForPeerReview">Birbidali hautatutako fitxategia adituen ebaluaziorako</message>
 	<message key="editor.article.sendToCopyedit">Bidali fitxategia Zuzentzera</message>
-	<message key="editor.article.sendFileToCopyedit">Hautatu Zuzentzeko fitxategia</message>
 	<message key="editor.article.selectProofreader">Izendatu proba-zuzentzailea</message>
 	<message key="editor.article.replaceProofreader">Ordeztu proba-zuzentzailea</message>
 	<message key="editor.article.authorComments">Egilearen iruzkinak</message>

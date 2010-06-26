@@ -31,7 +31,6 @@
 	<message key="editor.submissionArchive.confirmDelete">Esteu segur/a que voleu suprimir aquesta tramesa de manera permanent?</message>
 	<message key="editor.submissionReview.confirmDecision">Esteu segur/a que voleu enregistrar aquesta decisió?</message>
 	<message key="editor.submissionReview.emailWillArchive"><![CDATA[Aquesta tramesa s’arxivarà després d’haver enviat el missatge de correu electrònic &#171;Notifica a l’autor/a&#187; o d’haver premut el botó &#171;Omet el missatge&#187; de correu electrònic.]]></message>
-	<message key="editor.submissionReview.cannotSendToCopyediting"><![CDATA[Abans de poder enviar aquesta tramesa al corrector/a cal que us assegureu que hi ha una revisió disponible i que la decisió ha estat notificada a l’autor/a mitjançant l’enllaç &#171;Notifica a l’autor/a&#187;.]]></message>
 	<message key="editor.notifyUsers">Notifica als usuaris/usuàries</message>
 	<message key="editor.notifyUsers.inProgress">S’està notificant als usuaris/usuàries...</message>
 	<message key="editor.usersNotified">S’ha notificat als usuaris/usuàries.</message>
@@ -165,7 +164,6 @@
 	<message key="editor.article.resubmitForReview">Torna a trametre el fitxer per a la revisió</message>
 	<message key="editor.article.resubmitFileForPeerReview">Torna a trametre el fitxer seleccionat per a la revisió de persones expertes</message>
 	<message key="editor.article.sendToCopyedit">Envia el fitxer per a la correcció</message>
-	<message key="editor.article.sendFileToCopyedit">Selecciona el fitxer que es corregirà</message>
 	<message key="editor.article.selectProofreader">Assigna un corrector/a de proves</message>
 	<message key="editor.article.replaceProofreader">Reemplaça el corrector/a de proves</message>
 	<message key="editor.article.authorComments">Comentaris de l’autor/a</message>

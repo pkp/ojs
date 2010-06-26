@@ -25,7 +25,6 @@
 	<message key="editor.submissionArchive.confirmDelete">Είστε βέβαιοι ότι επιθυμείτε να διαγράψετε οριστικά τη συγκεκριμένη υποβολή;</message>
 	<message key="editor.submissionReview.confirmDecision">Είστε βέβαιοι ότι επιθυμείτε να καταχωρήσετε τη συγκεκριμένη απόφαση;</message>
 	<message key="editor.submissionReview.emailWillArchive">Η υποβολή θα αρχειοθετηθεί αφότου το ηλεκτρονικό μήνυμα "Ενημέρωση του Συγγραφέα" αποσταλεί ή επιλεγεί η "Παράλειψη e-mail".</message>
-	<message key="editor.submissionReview.cannotSendToCopyediting">Πριν στείλετε την υποβολή για Επιμέλεια του Κειμένου, πρέπει να βεβαιωθείτε ότι υπάρχει διαθέσιμη μια αναθεώρηση και ότι ο συγγραφέας έχει ενημερωθεί σχετικά με την χρήση του συνδέσμου "Ενημέρωση του Συγγραφέα".</message>
 	<message key="editor.notifyUsers">Ενημέρωση χρηστών</message>
 	<message key="editor.notifyUsers.inProgress">Ενημέρωση χρηστών...</message>
 	<message key="editor.usersNotified">Η ενημέρωση των χρηστών πραγματοποιήθηκε</message>
@@ -155,7 +154,6 @@
 	<message key="editor.article.resubmitForReview">Εκ νέου υποβολή αρχείου για αξιολόγηση </message>
 	<message key="editor.article.resubmitFileForPeerReview"> Εκ νέου υποβολή επιλεγμένου αρχείου για αξιολόγηση από ομότιμους αξιολογητές</message>
 	<message key="editor.article.sendToCopyedit">Αποστολή αρχείου για επιμέλεια κειμένου</message>
-	<message key="editor.article.sendFileToCopyedit">Επιλογή αρχείου για επιμέλεια κειμένου</message>
 	<message key="editor.article.selectProofreader">Ανάθεση Επιμελητή κειμένων</message>
 	<message key="editor.article.replaceProofreader">Αντικατάσταση Επιμελητή τυπογραφικών δοκιμίων</message>
 	<message key="editor.article.authorComments">Σχόλια συγγραφέα</message>

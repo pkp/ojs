@@ -149,7 +149,6 @@
 	<message key="editor.article.resubmitForReview">重新提交檔案以供審查</message>
 	<message key="editor.article.resubmitFileForPeerReview">重新提交所選的檔案以供審查</message>
 	<message key="editor.article.sendToCopyedit">寄交檔案供校樣編輯</message>
-	<message key="editor.article.sendFileToCopyedit">選擇檔案供校樣編輯</message>
 	<message key="editor.article.selectProofreader">指派校對者</message>
 	<message key="editor.article.replaceProofreader">替換校對者</message>
 	<message key="editor.article.authorComments">作者意見</message>

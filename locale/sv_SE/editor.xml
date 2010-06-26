@@ -27,7 +27,6 @@
 	<message key="editor.submissionArchive.confirmDelete">Är du säker på att du vill ta bort det här manuskriptet permanent?</message>
 	<message key="editor.submissionReview.confirmDecision">Är du säker på att du vill registrera det här beslutet?</message>
 	<message key="editor.submissionReview.emailWillArchive">Det här manuskriptet kommer att arkiveras när Meddela Författare-Eposten har skickats (eller när du klickar på Skip E-postknappen).</message>
-	<message key="editor.submissionReview.cannotSendToCopyediting">Innan du skickar manuskriptet för redigering, kontrollera att det finns tillgängliga granskare och att författaren meddelas om granskning med hjälp av Meddela Författaren-länken ovan.</message>
 	<message key="editor.notifyUsers">Meddela användare</message>
 	<message key="editor.notifyUsers.inProgress">Meddelar användare...</message>
 	<message key="editor.usersNotified">Användare har meddelats</message>
@@ -161,7 +160,6 @@
 	<message key="editor.article.resubmitForReview">Återsänd filen för granskning</message>
 	<message key="editor.article.resubmitFileForPeerReview">Återsänd vald fil för Granskning</message>
 	<message key="editor.article.sendToCopyedit">Skicka filen till Manusredigering</message>
-	<message key="editor.article.sendFileToCopyedit">Välj fil för Manusredigering</message>
 	<message key="editor.article.selectProofreader">Lägg till korrekturläsare</message>
 	<message key="editor.article.replaceProofreader">Ersätt korrekturläsare</message>
 	<message key="editor.article.authorComments">Författarkommentarer</message>

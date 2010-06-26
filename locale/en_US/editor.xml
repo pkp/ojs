@@ -31,7 +31,8 @@
 	<message key="editor.submissionArchive.confirmDelete">Are you sure you want to permanently delete this submission?</message>
 	<message key="editor.submissionReview.confirmDecision">Are you sure you wish to record this decision?</message>
 	<message key="editor.submissionReview.emailWillArchive">This submission will be archived after the Notify Author email is either sent or its Skip Email button is pressed.</message>
-	<message key="editor.submissionReview.cannotSendToCopyediting">Before you can send this submission to copyediting, you must ensure that a revision is available and that the author has been notified of the decision using the Notify Author link above.</message>
+	<message key="editor.submissionReview.cannotSendToCopyediting">Before sending a submission to Copyediting, use Notify Author link to inform author of decision and select the version to be sent.</message>
+	<message key="editor.submissionReview.sendToCopyediting">Send to Copyediting</message>
 	<message key="editor.notifyUsers">Notify Users</message>
 	<message key="editor.notifyUsers.inProgress">Notifying users...</message>
 	<message key="editor.usersNotified">Users Notified</message>
@@ -167,7 +168,6 @@
 	<message key="editor.article.resubmitForReview">Resubmit file for Review</message>
 	<message key="editor.article.resubmitFileForPeerReview">Resubmit selected file for peer review</message>
 	<message key="editor.article.sendToCopyedit">Send file to Copyediting</message>
-	<message key="editor.article.sendFileToCopyedit">Select file for Copyediting</message>
 	<message key="editor.article.selectProofreader">Assign Proofreader</message>
 	<message key="editor.article.replaceProofreader">Replace Proofreader</message>
 	<message key="editor.article.authorComments">Author Comments</message>

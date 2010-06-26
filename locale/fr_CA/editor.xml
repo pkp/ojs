@@ -30,7 +30,6 @@
 	<message key="editor.submissionArchive.confirmDelete">Êtes-vous certain de vouloir supprimer définitivement cette soumission?</message>
 	<message key="editor.submissionReview.confirmDecision">Êtes-vous certain de vouloir enregistrer cette décision?</message>
 	<message key="editor.submissionReview.emailWillArchive">Cette soumission sera archivée après l'envoi du courriel Avis à l'auteur, ou à l'après avoir cliquer sur le bouton Omettre le courriel.</message>
-	<message key="editor.submissionReview.cannotSendToCopyediting">Avant d'envoyer cette soumission en révision, vous devez vous assurer qu'une révision est disponible et que l'auteur a été avisé de la décision en utilisant le lien "Aviser l'auteur" ci-dessus.</message>
 	<message key="editor.notifyUsers">Informer les utilisateurs</message>
 	<message key="editor.notifyUsers.inProgress">Aviser les utilisateurs...</message>
 	<message key="editor.usersNotified">Utilisateurs avisés</message>
@@ -163,7 +162,6 @@
 	<message key="editor.article.resubmitForReview">Soumettre à nouveau le fichier pour évaluation</message>
 	<message key="editor.article.resubmitFileForPeerReview">Soumettre à nouveau le fichier sélectionné pour évaluation par les pairs</message>
 	<message key="editor.article.sendToCopyedit">Envoyer le fichier en révision</message>
-	<message key="editor.article.sendFileToCopyedit">Sélectionner un fichier pour la révision</message>
 	<message key="editor.article.selectProofreader">Assigner le correcteur d'épreuves</message>
 	<message key="editor.article.replaceProofreader">Remplacer le correcteur d'épreuves</message>
 	<message key="editor.article.authorComments">Commentaires de l'auteur</message>
