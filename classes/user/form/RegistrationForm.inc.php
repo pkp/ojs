@@ -155,7 +155,7 @@ class RegistrationForm extends Form {
 			'salutation', 'firstName', 'middleName', 'lastName',
 			'gender', 'initials', 'country',
 			'affiliation', 'email', 'userUrl', 'phone', 'fax', 'signature',
-			'mailingAddress', 'biography', 'interests', 'userLocales',
+			'mailingAddress', 'biography', 'interestsKeywords', 'userLocales',
 			'registerAsReader', 'openAccessNotification', 'registerAsAuthor',
 			'registerAsReviewer', 'existingUser', 'sendPassword'
 		);
@@ -220,7 +220,7 @@ class RegistrationForm extends Form {
 			$user->setFax($this->getData('fax'));
 			$user->setMailingAddress($this->getData('mailingAddress'));
 			$user->setBiography($this->getData('biography'), null); // Localized
-			$user->setInterests($this->getData('interests'), null); // Localized
+			$user->setInterests($this->getData('interestsKeywords'), null); // Localized
 			$user->setDateRegistered(Core::getCurrentDate());
 			$user->setCountry($this->getData('country'));
 
