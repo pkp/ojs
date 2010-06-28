@@ -32,6 +32,10 @@ class TranslatorHandler extends Handler {
 		$this->plugin =& $plugin;
 	}
 
+	function getEmailTemplateFilename($locale) {
+		return 'locale/' . $locale . '/emailTemplates.xml';
+	}
+
 	function index() {
 		$this->validate();
 		$plugin =& $this->plugin;
@@ -194,7 +198,7 @@ class TranslatorHandler extends Handler {
 		import('lib.pkp.classes.file.EditableEmailFile');
 		$deleteEmails = Request::getUserVar('deleteEmail');
 		if (!empty($deleteEmails)) {
-			$file = new EditableEmailFile($locale, Locale::getEmailTemplateFilename($locale));
+			$file = new EditableEmailFile($locale, $this->getEmailTemplateFilename($locale));
 			foreach ($deleteEmails as $key) {
 				$file->delete($key);
 			}
@@ -424,12 +428,11 @@ class TranslatorHandler extends Handler {
 		if (!in_array($emailKey, array_keys($emails))) Request::redirect(null, null, 'index');
 
 		import('lib.pkp.classes.file.EditableEmailFile');
-		$file = new EditableEmailFile($locale, Locale::getEmailTemplateFilename($locale));
+		$file = new EditableEmailFile($locale, $this->getEmailTemplateFilename($locale));
 
 		$subject = Request::getUserVar('subject');
 		$body = Request::getUserVar('body');
 		$description = Request::getUserVar('description');
-
 		if ($file->delete($emailKey)) $file->write();
 		Request::redirect(null, null, 'edit', $locale, null, 'emails');
 	}
