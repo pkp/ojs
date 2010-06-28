@@ -106,7 +106,6 @@ class ReferralPlugin extends GenericPlugin {
 				HookRegistry::register ('TemplateManager::include', array(&$this, 'handleReaderTemplateInclude'));
 			case 'article/interstitial.tpl':
 			case 'article/pdfInterstitial.tpl':
-			case 'article/view.tpl':
 				$this->logArticleRequest($templateMgr);
 				break;
 			case 'author/index.tpl':
