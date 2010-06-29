@@ -755,7 +755,6 @@ class Upgrade extends Installer {
 		$filterDao =& DAORegistry::getDAO('FilterDAO');
 		$filtersToBeInstalled = array(
 			'lib.pkp.classes.citation.lookup.crossref.CrossrefNlmCitationSchemaFilter',
-			//'lib.pkp.classes.citation.lookup.isbndb.*', // FIXME: requires generic filter persistence, see #5511
 			'lib.pkp.classes.citation.lookup.pubmed.PubmedNlmCitationSchemaFilter',
 			'lib.pkp.classes.citation.lookup.worldcat.WorldcatNlmCitationSchemaFilter',
 			'lib.pkp.classes.citation.parser.freecite.FreeciteRawCitationNlmCitationSchemaFilter',
@@ -766,12 +765,47 @@ class Upgrade extends Installer {
 		foreach($filtersToBeInstalled as $filterToBeInstalled) {
 			// Make sure that the filter template has not been
 			// installed before.
-			$existingTemplate =& $filterDao->getObjectsByClass($filterToBeInstalled, true);
-			if ($existingTemplate->RecordCount()) continue;
+			$existingTemplates =& $filterDao->getObjectsByClass($filterToBeInstalled, true);
+			if ($existingTemplates->getCount()) continue;
 
 			$filter =& instantiate($filterToBeInstalled, 'Filter');
 			$filter->setIsTemplate(true);
 			$filterDao->insertObject($filter);
+		}
+
+		// The ISBN filter template is based on a composite filter
+		// and needs to be instantiated differently.
+		$alreadyInstalled = false;
+		$existingTemplatesFactory =& $filterDao->getObjectsByClass('lib.pkp.classes.filter.GenericSequencerFilter', true);
+		$existingTemplates =& $existingTemplatesFactory->toArray();
+		foreach($existingTemplates as $existingTemplate) {
+			$subFilters =& $existingTemplate->getFilters();
+			if (count($subFilters) != 2) continue;
+			if (!(isset($subFilters[1]) && is_a($subFilters[1], 'IsbndbNlmCitationSchemaIsbnFilter'))) continue;
+			if (!(isset($subFilters[2]) && is_a($subFilters[2], 'IsbndbIsbnNlmCitationSchemaFilter'))) continue;
+			$alreadyInstalled = true;
+			break;
+		}
+		if (!$alreadyInstalled) {
+			$isbndbTransformation = array(
+				'metadata::lib.pkp.classes.metadata.nlm.NlmCitationSchema(CITATION)',
+				'metadata::lib.pkp.classes.metadata.nlm.NlmCitationSchema(CITATION)'
+			);
+			import('lib.pkp.classes.filter.GenericSequencerFilter');
+			$isbndbFilter = new GenericSequencerFilter('ISBNdb', $isbndbTransformation);
+			$isbndbFilter->setIsTemplate(true);
+
+			import('lib.pkp.classes.citation.lookup.isbndb.IsbndbNlmCitationSchemaIsbnFilter');
+			$nlmToIsbnFilter = new IsbndbNlmCitationSchemaIsbnFilter();
+			$isbndbFilter->addFilter($nlmToIsbnFilter);
+
+			import('lib.pkp.classes.citation.lookup.isbndb.IsbndbIsbnNlmCitationSchemaFilter');
+			$isbnToNlmFilter = new IsbndbIsbnNlmCitationSchemaFilter();
+			// Add the second filter and link its API key to the first
+			// so that the user only has to enter it once for both.
+			$isbndbFilter->addFilter($isbnToNlmFilter, array('apiKey' => array($nlmToIsbnFilter->getSeq(), 'apiKey')));
+
+			$filterDao->insertObject($isbndbFilter);
 		}
 
 		return true;
