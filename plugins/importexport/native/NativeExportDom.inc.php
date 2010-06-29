@@ -22,6 +22,21 @@ class NativeExportDom {
 		$root =& XMLCustomWriter::createElement($doc, 'issue');
 
 		XMLCustomWriter::setAttribute($root, 'published', $issue->getPublished()?'true':'false');
+
+		switch (
+			(int) $issue->getShowVolume() .
+			(int) $issue->getShowNumber() .
+			(int) $issue->getShowYear() .
+			(int) $issue->getShowTitle()
+		) {
+			case '1110': $idType = 'num_vol_year'; break;
+			case '1010': $idType = 'vol_year'; break;
+			case '0010': $idType = 'year'; break;
+			case '0001': $idType = 'title'; break;
+			default: $idType = null;
+		}
+		XMLCustomWriter::setAttribute($root, 'identification', $idType, false);
+
 		XMLCustomWriter::setAttribute($root, 'current', $issue->getCurrent()?'true':'false');
 		XMLCustomWriter::setAttribute($root, 'public_id', $issue->getPublicIssueId(), false);
 
