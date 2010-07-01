@@ -23,7 +23,7 @@
 {if !$currentJournal}<h3>{translate key="user.myJournals"}</h3>{/if}
 
 {foreach from=$userJournals item=journal}
-	<div id="journal">
+	<div id="journal-{$journal->getPath()|escape}">
 	{assign var="hasRole" value=1}
 	{if !$currentJournal}<h4><a href="{url journal=$journal->getPath() page="user"}">{$journal->getLocalizedTitle()|escape}</a></h4>
 	{else}<h3>{$journal->getLocalizedTitle()|escape}</h3>{/if}
