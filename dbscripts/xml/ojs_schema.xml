@@ -423,6 +423,7 @@
 			<KEY />
 			<AUTOINCREMENT />
 		</field>
+		<field name="locale" type="C2" size="5" />
 		<field name="user_id" type="I8">
 			<NOTNULL />
 		</field>

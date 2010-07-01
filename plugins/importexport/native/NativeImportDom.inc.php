@@ -636,6 +636,7 @@ class NativeImportDom {
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 
 		$article = new Article();
+		$article->setLocale($journalPrimaryLocale); // FIXME in bug #5543
 		$article->setJournalId($journal->getId());
 		$article->setUserId($user->getId());
 		$article->setSectionId($section->getId());

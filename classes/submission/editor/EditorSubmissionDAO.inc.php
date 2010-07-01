@@ -197,7 +197,6 @@ class EditorSubmissionDAO extends DAO {
 			'abbrev',
 			$locale,
 			'cleanTitle', // Article title
-			$primaryLocale,
 			'cleanTitle',
 			$locale,
 			$journalId
@@ -298,7 +297,7 @@ class EditorSubmissionDAO extends DAO {
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
 				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
 				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
-				LEFT JOIN article_settings atpl ON (a.article_id = atpl.article_id AND atpl.setting_name = ? AND atpl.locale = ?)
+				LEFT JOIN article_settings atpl ON (a.article_id = atpl.article_id AND atpl.setting_name = ? AND atpl.locale = a.locale)
 				LEFT JOIN article_settings atl ON (a.article_id = atl.article_id AND atl.setting_name = ? AND atl.locale = ?)
 				LEFT JOIN edit_assignments ea ON (a.article_id = ea.article_id)
 				LEFT JOIN edit_assignments ea2 ON (a.article_id = ea2.article_id AND ea.edit_id < ea2.edit_id)

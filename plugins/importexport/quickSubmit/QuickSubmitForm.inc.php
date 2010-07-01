@@ -154,6 +154,7 @@ class QuickSubmitForm extends Form {
 		$user =& Request::getUser();
 
 		$article = new Article();
+		$article->setLocale($journal->getPrimaryLocale()); // FIXME in bug #5543
 		$article->setUserId($user->getId());
 		$article->setJournalId($journal->getId());
 		$article->setSectionId($this->getData('sectionId'));

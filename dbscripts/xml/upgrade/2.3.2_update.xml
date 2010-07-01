@@ -32,4 +32,13 @@
 	<sql>
 		<query>UPDATE notes SET assoc_type = 257</query><!-- ASSOC_TYPE_ARTICLE -->
 	</sql>
+	<!-- Bug #5543: Implement multilingual specification -->
+	<sql>
+		<query driver="mysql">
+			UPDATE articles a, journals j SET a.locale = j.primary_locale WHERE a.journal_id = j.journal_id
+		</query>
+		<query driver="postgres7">
+			UPDATE articles SET locale = j.primary_locale FROM journals j WHERE articles.journal_id = j.journal_id
+		</query>
+	</sql>
 </data>

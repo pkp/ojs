@@ -489,7 +489,7 @@ class PublishedArticleDAO extends DAO {
 	function &getPublishedArticleIdsAlphabetizedByJournal($journalId = null, $useCache = true) {
 		$params = array(
 			'cleanTitle', Locale::getLocale(),
-			'cleanTitle', Locale::getPrimaryLocale()
+			'cleanTitle'
 		);
 		if (isset($journalId)) $params[] = $journalId;
 
@@ -503,7 +503,7 @@ class PublishedArticleDAO extends DAO {
 				articles a
 				LEFT JOIN sections s ON s.section_id = a.section_id
 				LEFT JOIN article_settings atl ON (a.article_id = atl.article_id AND atl.setting_name = ? AND atl.locale = ?)
-				LEFT JOIN article_settings atpl ON (a.article_id = atpl.article_id AND atpl.setting_name = ? AND atpl.locale = ?)
+				LEFT JOIN article_settings atpl ON (a.article_id = atpl.article_id AND atpl.setting_name = ? AND atpl.locale = a.locale)
 			WHERE	pa.article_id = a.article_id
 				AND i.issue_id = pa.issue_id
 				AND i.published = 1

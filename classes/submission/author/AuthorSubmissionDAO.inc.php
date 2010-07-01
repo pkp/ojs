@@ -178,7 +178,7 @@ class AuthorSubmissionDAO extends DAO {
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
 			FROM	articles a
 				LEFT JOIN authors aa ON (aa.submission_id = a.article_id AND aa.primary_contact = 1)
-				LEFT JOIN article_settings atpl ON (atpl.article_id = a.article_id AND atpl.setting_name = ? AND atpl.locale = ?)
+				LEFT JOIN article_settings atpl ON (atpl.article_id = a.article_id AND atpl.setting_name = ? AND atpl.locale = a.locale)
 				LEFT JOIN article_settings atl ON (atl.article_id = a.article_id AND atl.setting_name = ? AND atl.locale = ?)
 				LEFT JOIN sections s ON (s.section_id = a.section_id)
 				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
@@ -191,7 +191,6 @@ class AuthorSubmissionDAO extends DAO {
 			array(
 				$locale,
 				'cleanTitle',
-				$primaryLocale,
 				'cleanTitle',
 				$locale,
 				'title',

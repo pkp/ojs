@@ -210,7 +210,7 @@ class ReviewerSubmissionDAO extends DAO {
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
 			FROM	articles a
 				LEFT JOIN review_assignments r ON (a.article_id = r.submission_id)
-				LEFT JOIN article_settings atpl ON (atpl.article_id = a.article_id AND atpl.setting_name = ? AND atpl.locale = ?)
+				LEFT JOIN article_settings atpl ON (atpl.article_id = a.article_id AND atpl.setting_name = ? AND atpl.locale = a.locale)
 				LEFT JOIN article_settings atl ON (atl.article_id = a.article_id AND atl.setting_name = ? AND atl.locale = ?)
 				LEFT JOIN sections s ON (s.section_id = a.section_id)
 				LEFT JOIN users u ON (r.reviewer_id = u.user_id)
@@ -236,15 +236,14 @@ class ReviewerSubmissionDAO extends DAO {
 		$result =& $this->retrieveRange(
 			$sql,
 			array(
-				'cleanTitle',
-				$primaryLocale,
+				'cleanTitle', // Article title
 				'cleanTitle',
 				$locale,
-				'title',
+				'title', // Section title
 				$primaryLocale,
 				'title',
 				$locale,
-				'abbrev',
+				'abbrev', // Section abbreviation
 				$primaryLocale,
 				'abbrev',
 				$locale,

@@ -113,6 +113,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 			$user =& Request::getUser();
 
 			$this->article = new Article();
+			$this->article->setLocale(Locale::getLocale()); // FIXME in bug #5543
 			$this->article->setUserId($user->getId());
 			$this->article->setJournalId($journal->getId());
 			$this->article->setSectionId($this->getData('sectionId'));
