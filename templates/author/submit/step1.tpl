@@ -20,12 +20,13 @@
 <p>{translate key=$howToKeyName supportName=$journalSettings.supportName supportEmail=$journalSettings.supportEmail supportPhone=$journalSettings.supportPhone}</p>
 
 <div class="separator"></div>
-<div id="section">
+
 {if count($sectionOptions) <= 1}
 	<p>{translate key="author.submit.notAccepting"}</p>
 {else}
 
 <form name="submit" method="post" action="{url op="saveSubmit" path=$submitStep}" onsubmit="return checkSubmissionChecklist()">
+{include file="common/formErrors.tpl"}
 
 {if count($sectionOptions) == 2}
 	{* If there's only one section, force it and skip the section parts
@@ -34,6 +35,7 @@
 		<input type="hidden" name="sectionId" value="{$key|escape}" />
 	{/foreach}
 {else}{* if count($sectionOptions) == 2 *}
+<div id="section">
 
 <h3>{translate key="author.submit.journalSection"}</h3>
 
@@ -44,8 +46,6 @@
 	<input type="hidden" name="articleId" value="{$articleId|escape}" />
 {/if}
 <input type="hidden" name="submissionChecklist" value="1" />
-</div>
-{include file="common/formErrors.tpl"}
 
 <table class="data" width="100%">
 	<tr valign="top">	
@@ -53,6 +53,8 @@
 		<td width="80%" class="value"><select name="sectionId" id="sectionId" size="1" class="selectMenu">{html_options options=$sectionOptions selected=$sectionId}</select></td>
 	</tr>
 </table>
+
+</div>{* section *}
 
 <div class="separator"></div>
 
@@ -86,11 +88,11 @@ function checkSubmissionChecklist() {
 {/if}
 
 {if $currentJournal->getLocalizedSetting('submissionChecklist')}
-<div id="checklist">
 {foreach name=checklist from=$currentJournal->getLocalizedSetting('submissionChecklist') key=checklistId item=checklistItem}
 	{if $checklistItem.content}
 		{if !$notFirstChecklistItem}
 			{assign var=notFirstChecklistItem value=1}
+			<div id="checklist">
 			<h3>{translate key="author.submit.submissionChecklist"}</h3>
 			<p>{translate key="author.submit.submissionChecklistDescription"}</p>
 			<table width="100%" class="data">
@@ -101,9 +103,9 @@ function checkSubmissionChecklist() {
 		</tr>
 	{/if}
 {/foreach}
-</div>
 {if $notFirstChecklistItem}
 	</table>
+	</div>{* checklist *}
 	<div class="separator"></div>
 {/if}
 
@@ -122,27 +124,32 @@ function checkSubmissionChecklist() {
 		<td width="95%"><label for="copyrightNoticeAgree">{translate key="author.submit.copyrightNoticeAgree"}</label></td>
 	</tr>
 </table>
-{/if}
-</div>
+{/if}{* $journalSettings.copyrightNoticeAgree *}
+</div>{* copyrightNotice *}
+
 <div class="separator"></div>
-{/if}
+
+{/if}{* $currentJournal->getLocalizedSetting('copyrightNotice') != '' *}
+
 <div id="privacyStatement">
 <h3>{translate key="author.submit.privacyStatement"}</h3>
 <br />
 {$currentJournal->getLocalizedSetting('privacyStatement')|nl2br}
 </div>
+
 <div class="separator"></div>
+
 <div id="commentsForEditor">
 <h3>{translate key="author.submit.commentsForEditor"}</h3>
-<table width="100%" class="data">
 
+<table width="100%" class="data">
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="commentsToEditor" key="author.submit.comments"}</td>
 	<td width="80%" class="value"><textarea name="commentsToEditor" id="commentsToEditor" rows="3" cols="40" class="textArea">{$commentsToEditor|escape}</textarea></td>
 </tr>
-
 </table>
-</div>
+</div>{* commentsForEditor *}
+
 <div class="separator"></div>
 
 <p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="{if $articleId}confirmAction('{url page="author"}', '{translate|escape:"jsparam" key="author.submit.cancelSubmission"}'){else}document.location.href='{url page="author" escape=false}'{/if}" /></p>
