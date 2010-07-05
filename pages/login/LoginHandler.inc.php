@@ -31,6 +31,7 @@ class LoginHandler extends PKPLoginHandler {
 			$journal =& Request::getJournal();
 
 			if (!Validation::canAdminister($journal->getId(), $userId)) {
+				$this->setupTemplate();
 				// We don't have administrative rights
 				// over this user. Display an error.
 				$templateMgr =& TemplateManager::getManager();
@@ -98,6 +99,14 @@ class LoginHandler extends PKPLoginHandler {
 		} else { 
 			$mail->setFrom($site->getLocalizedContactEmail(), $site->getLocalizedContactName());
 		}
+	}
+
+	/**
+	 * Configure the template for display.
+	 */
+	function setupTemplate() {
+		Locale::requireComponents(array(LOCALE_COMPONENT_OJS_MANAGER, LOCALE_COMPONENT_PKP_MANAGER));
+		parent::setupTemplate();
 	}
 }
 
