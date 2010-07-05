@@ -33,6 +33,7 @@ class LanguageSettingsForm extends Form {
 
 		$this->settings = array(
 			'supportedLocales' => 'object',
+			'supportedSubmissionLocales' => 'object',
 			'supportedFormLocales' => 'object'
 		);
 
@@ -69,7 +70,7 @@ class LanguageSettingsForm extends Form {
 
 		$this->setData('primaryLocale', $journal->getPrimaryLocale());
 
-		foreach (array('supportedFormLocales', 'supportedLocales') as $name) {
+		foreach (array('supportedFormLocales', 'supportedSubmissionLocales', 'supportedLocales') as $name) {
 			if ($this->getData($name) == null || !is_array($this->getData($name))) {
 				$this->setData($name, array());
 			}
@@ -84,7 +85,7 @@ class LanguageSettingsForm extends Form {
 		$vars[] = 'primaryLocale';
 		$this->readUserVars($vars);
 
-		foreach (array('supportedFormLocales', 'supportedLocales') as $name) {
+		foreach (array('supportedFormLocales', 'supportedSubmissionLocales', 'supportedLocales') as $name) {
 			if ($this->getData($name) == null || !is_array($this->getData($name))) {
 				$this->setData($name, array());
 			}
@@ -99,7 +100,7 @@ class LanguageSettingsForm extends Form {
 		$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 
 		// Verify additional locales
-		foreach (array('supportedLocales', 'supportedFormLocales') as $name) {
+		foreach (array('supportedLocales', 'supportedSubmissionLocales', 'supportedFormLocales') as $name) {
 			$$name = array();
 			foreach ($this->getData($name) as $locale) {
 				if (Locale::isLocaleValid($locale) && in_array($locale, $this->availableLocales)) {
@@ -112,13 +113,14 @@ class LanguageSettingsForm extends Form {
 
 		// Make sure at least the primary locale is chosen as available
 		if ($primaryLocale != null && !empty($primaryLocale)) {
-			foreach (array('supportedLocales', 'supportedFormLocales') as $name) {
+			foreach (array('supportedLocales', 'supportedSubmissionLocales', 'supportedFormLocales') as $name) {
 				if (!in_array($primaryLocale, $$name)) {
 					array_push($$name, $primaryLocale);
 				}
 			}
 		}
 		$this->setData('supportedLocales', $supportedLocales);
+		$this->setData('supportedSubmissionLocales', $supportedSubmissionLocales);
 		$this->setData('supportedFormLocales', $supportedFormLocales);
 
 		foreach ($this->_data as $name => $value) {

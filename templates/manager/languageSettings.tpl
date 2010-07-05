@@ -39,6 +39,7 @@
 		<tr valign="top">
 			<td width="20%">&nbsp;</td>
 			<td align="center" width="10%">{translate key="manager.language.ui"}</td>
+			<td align="center" width="20%">{translate key="manager.language.submissions"}</td>
 			<td align="center" width="10%">{translate key="manager.language.forms"}</td>
 			<td width="60%">&nbsp;</td>
 		</tr>
@@ -46,6 +47,7 @@
 			<tr>
 				<td>{$localeName|escape}</td>
 				<td align="center"><input type="checkbox" name="supportedLocales[]" value="{$localeKey|escape}"{if in_array($localeKey, $supportedLocales)} checked="checked"{/if}/></td>
+				<td align="center"><input type="checkbox" name="supportedSubmissionLocales[]" value="{$localeKey|escape}"{if in_array($localeKey, $supportedSubmissionLocales)} checked="checked"{/if}/></td>
 				<td align="center"><input type="checkbox" name="supportedFormLocales[]" value="{$localeKey|escape}"{if in_array($localeKey, $supportedFormLocales)} checked="checked"{/if}/></td>
 				<td><a href="{url op="reloadLocalizedDefaultSettings" localeToLoad=$localeKey}" onclick="return confirm('{translate|escape:"jsparam" key="manager.language.confirmDefaultSettingsOverwrite"}')" class="action">{translate key="manager.language.reloadLocalizedDefaultSettings"}</a></td>
 			</tr>

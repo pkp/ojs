@@ -40,5 +40,9 @@
 		<query driver="postgres7">
 			UPDATE articles SET locale = j.primary_locale FROM journals j WHERE articles.journal_id = j.journal_id
 		</query>
+		<!-- Use the current set of form locales as a default for supported submission locales -->
+		<query>
+			INSERT INTO journal_settings (journal_id, locale, setting_name, setting_value, setting_type) SELECT journal_id, locale, 'supportedSubmissionLocales', setting_value, setting_type FROM journal_settings WHERE setting_name = 'supportedFormLocales'
+		</query>
 	</sql>
 </data>

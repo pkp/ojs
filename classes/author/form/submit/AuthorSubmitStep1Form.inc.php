@@ -30,6 +30,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 		// Validation checks for this form
 		$this->addCheck(new FormValidator($this, 'sectionId', 'required', 'author.submit.form.sectionRequired'));
 		$this->addCheck(new FormValidatorCustom($this, 'sectionId', 'required', 'author.submit.form.sectionRequired', array(DAORegistry::getDAO('SectionDAO'), 'sectionExists'), array($journal->getId())));
+		$this->addCheck(new FormValidatorInSet($this, 'locale', 'required', 'author.submit.form.localeRequired', $journal->getSetting('supportedSubmissionLocales')));
 	}
 
 	/**
@@ -44,11 +45,13 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 		// Get sections for this journal
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 
-		// If this user is a section editor or an editor, they are allowed
-		// to submit to sections flagged as "editor-only" for submissions.
-		// Otherwise, display only sections they are allowed to submit to.
+		// If this user is a section editor or an editor, they are
+		// allowed to submit to sections flagged as "editor-only" for
+		// submissions. Otherwise, display only sections they are
+		// allowed to submit to.
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$isEditor = $roleDao->roleExists($journal->getId(), $user->getId(), ROLE_ID_EDITOR) || $roleDao->roleExists($journal->getId(), $user->getId(), ROLE_ID_SECTION_EDITOR);
+		$templateMgr->assign('sectionOptions', array('0' => Locale::translate('author.submit.selectSection')) + $sectionDao->getSectionTitles($journal->getId(), !$isEditor));
 
 		// Set up required Payment Related Information
 		import('classes.payment.ojs.OJSPaymentManager');
@@ -58,16 +61,26 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 			$completedPaymentDAO =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
 			$articleId = $this->articleId;
 
-			if ( $paymentManager->submissionEnabled() ) {
-				$templateMgr->assign_by_ref('submissionPayment', $completedPaymentDAO->getSubmissionCompletedPayment ( $journal->getId(), $articleId ));
+			if ($paymentManager->submissionEnabled()) {
+				$templateMgr->assign_by_ref('submissionPayment', $completedPaymentDAO->getSubmissionCompletedPayment ($journal->getId(), $articleId));
 			}
 
-			if ( $paymentManager->fastTrackEnabled()  ) {
-				$templateMgr->assign_by_ref('fastTrackPayment', $completedPaymentDAO->getFastTrackCompletedPayment ( $journal->getId(), $articleId ));
+			if ($paymentManager->fastTrackEnabled()) {
+				$templateMgr->assign_by_ref('fastTrackPayment', $completedPaymentDAO->getFastTrackCompletedPayment ($journal->getId(), $articleId));
 			}
 		}
 
-		$templateMgr->assign('sectionOptions', array('0' => Locale::translate('author.submit.selectSection')) + $sectionDao->getSectionTitles($journal->getId(), !$isEditor));
+		// Provide available submission languages. (Convert the array
+		// of locale symbolic names xx_XX into an associative array
+		// of symbolic names => readable names.)
+		$templateMgr->assign(
+			'supportedSubmissionLocaleNames',
+			array_flip(array_intersect(
+				array_flip(Locale::getAllLocales()),
+				$journal->getSetting('supportedSubmissionLocales')
+			))
+		);
+
 		parent::display();
 	}
 
@@ -78,8 +91,28 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 		if (isset($this->article)) {
 			$this->_data = array(
 				'sectionId' => $this->article->getSectionId(),
+				'locale' => $this->article->getLocale(),
 				'commentsToEditor' => $this->article->getCommentsToEditor()
 			);
+		} else {
+			$journal =& Request::getJournal();
+			$supportedSubmissionLocales = $journal->getSetting('supportedSubmissionLocales');
+			// Try these locales in order until we find one that's
+			// supported to use as a default.
+			$tryLocales = array(
+				$this->getFormLocale(), // Current form locale
+				Locale::getLocale(), // Current UI locale
+				$journal->getPrimaryLocale(), // Journal locale
+				$supportedSubmissionLocales[array_shift(array_keys($supportedSubmissionLocales))] // Fallback: first one on the list
+			);
+			$this->_data = array();
+			foreach ($tryLocales as $locale) {
+				if (in_array($locale, $supportedSubmissionLocales)) {
+					// Found a default to use
+					$this->_data['locale'] = $locale;
+					break;
+				}
+			}
 		}
 	}
 
@@ -87,7 +120,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('submissionChecklist', 'copyrightNoticeAgree', 'sectionId', 'commentsToEditor'));
+		$this->readUserVars(array('locale', 'submissionChecklist', 'copyrightNoticeAgree', 'sectionId', 'commentsToEditor'));
 	}
 
 	/**
@@ -113,7 +146,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 			$user =& Request::getUser();
 
 			$this->article = new Article();
-			$this->article->setLocale(Locale::getLocale()); // FIXME in bug #5543
+			$this->article->setLocale($this->getData('locale'));
 			$this->article->setUserId($user->getId());
 			$this->article->setJournalId($journal->getId());
 			$this->article->setSectionId($this->getData('sectionId'));

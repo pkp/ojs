@@ -21,12 +21,13 @@
 
 <div class="separator"></div>
 
+<form name="submit" method="post" action="{url op="saveSubmit" path=$submitStep}" onsubmit="return checkSubmissionChecklist()">
+{include file="common/formErrors.tpl"}
+{if $articleId}<input type="hidden" name="articleId" value="{$articleId|escape}" />{/if}
+
 {if count($sectionOptions) <= 1}
 	<p>{translate key="author.submit.notAccepting"}</p>
 {else}
-
-<form name="submit" method="post" action="{url op="saveSubmit" path=$submitStep}" onsubmit="return checkSubmissionChecklist()">
-{include file="common/formErrors.tpl"}
 
 {if count($sectionOptions) == 2}
 	{* If there's only one section, force it and skip the section parts
@@ -42,9 +43,6 @@
 {url|assign:"url" page="about"}
 <p>{translate key="author.submit.journalSectionDescription" aboutUrl=$url}</p>
 
-{if $articleId}
-	<input type="hidden" name="articleId" value="{$articleId|escape}" />
-{/if}
 <input type="hidden" name="submissionChecklist" value="1" />
 
 <table class="data" width="100%">
@@ -59,6 +57,30 @@
 <div class="separator"></div>
 
 {/if}{* if count($sectionOptions) == 2 *}
+
+{if count($supportedSubmissionLocaleNames) == 1}
+	{* There is only one supported submission locale; choose it invisibly *}
+	{foreach from=$supportedSubmissionLocaleNames item=locale}
+		<input type="hidden" name="locale" value="{$locale|escape}" />
+	{/foreach}
+{else}
+	{* There are several submission locales available; allow choice *}
+	<div id="submissionLocale">
+
+	<h3>{translate key="author.submit.submissionLocale"}</h3>
+	<p>{translate key="author.submit.submissionLocaleDescription"}</p>
+
+	<table class="data" width="100%">
+		<tr valign="top">	
+			<td width="20%" class="label">{fieldLabel name="locale" required="true" key="article.language"}</td>
+			<td width="80%" class="value"><select name="locale" id="locale" size="1" class="selectMenu">{html_options options=$supportedSubmissionLocaleNames selected=$locale}</select></td>
+		</tr>
+	</table>
+
+	<div class="separator"></div>
+
+	</div>{* submissionLocale *}
+{/if}{* count($supportedSubmissionLocaleNames) == 1 *}
 
 <script type="text/javascript">
 {literal}

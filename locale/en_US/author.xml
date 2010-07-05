@@ -51,6 +51,8 @@
 	<message key="author.submit.journalSection">Journal Section</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Select the appropriate section for this submission (see Sections and Policies in <a href="{$aboutUrl}" target="_new">About</a> the Journal).]]></message>
 	<message key="author.submit.selectSection">Please select a section...</message>
+	<message key="author.submit.submissionLocale">Submission Language</message>
+	<message key="author.submit.submissionLocaleDescription">This journal accepts submissions in several languages. Choose the primary language of the submission from the pulldown below.</message>
 	<message key="author.submit.submissionChecklist">Submission Checklist</message>
 	<message key="author.submit.submissionChecklistDescription">Indicate that this submission is ready to be considered by this journal by checking off the following (comments to the editor can be added below).</message>
 	<message key="author.submit.verifyChecklist">You must make sure all items in the submission checklist are satisfied before continuing.</message>
@@ -59,6 +61,7 @@
 	<message key="author.submit.commentsForEditor">Comments for the Editor</message>
 	<message key="author.submit.comments">Enter text (optional)</message>
 	<message key="author.submit.form.sectionRequired">Please select an appropriate journal section for this submission.</message>
+	<message key="author.submit.form.localeRequired">Please select a submission language.</message>
 	<message key="author.submit.privacyStatement">Journal's Privacy Statement</message>
 	<message key="author.submit.reorderInstructions">Reorder authors to appear in the order they will be listed on publication.</message>
 	<message key="author.submit.reorder">Reorder author's name</message>
