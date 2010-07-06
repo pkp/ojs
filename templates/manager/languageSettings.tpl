@@ -41,7 +41,7 @@
 			<td align="center" width="10%">{translate key="manager.language.ui"}</td>
 			<td align="center" width="20%">{translate key="manager.language.submissions"}</td>
 			<td align="center" width="10%">{translate key="manager.language.forms"}</td>
-			<td width="60%">&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
 		{foreach from=$availableLocales key=localeKey item=localeName}
 			<tr>

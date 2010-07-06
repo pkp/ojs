@@ -133,6 +133,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 		if (isset($this->article)) {
 			// Update existing article
 			$this->article->setSectionId($this->getData('sectionId'));
+			$this->article->setLocale($this->getData('locale'));
 			$this->article->setCommentsToEditor($this->getData('commentsToEditor'));
 			if ($this->article->getSubmissionProgress() <= $this->step) {
 				$this->article->stampStatusModified();
