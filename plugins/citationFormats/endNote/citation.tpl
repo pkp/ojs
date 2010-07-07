@@ -24,3 +24,12 @@
 %K {$article->getLocalizedSubject()|escape}
 %X {$article->getLocalizedAbstract()|strip_tags|replace:"\n":" "|replace:"\r":" "}
 %U {$articleUrl}
+%J {$currentJournal->getLocalizedTitle()|escape}
+{if $issue->getShowVolume()}%V {$issue->getVolume()|escape}
+{/if}
+{if $issue->getShowNumber()}%N {$issue->getNumber()|escape}
+{/if}
+{if $currentJournal->getSetting('onlineIssn')}%@ {$currentJournal->getSetting('onlineIssn')}|escape}
+{elseif $currentJournal->getSetting('printIssn')}%@ {$currentJournal->getSetting('printIssn')}|escape}
+{/if}
+
