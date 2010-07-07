@@ -20,12 +20,6 @@ import('classes.handler.validation.HandlerValidatorSubmissionComment');
 class Handler extends PKPHandler {
 	function Handler() {
 		parent::PKPHandler();
-
-		$journal =& Request::getJournal();
-		$page = Request::getRequestedPage();
-		if ( $journal && $journal->getSetting('restrictSiteAccess')) {
-			$this->addCheck(new HandlerValidatorCustom($this, true, null, null, create_function('$page', 'if (!Validation::isLoggedIn() && !in_array($page, Handler::getLoginExemptions())) return false; else return true;'), array($page)));
-		}
 	}
 }
 
