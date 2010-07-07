@@ -28,6 +28,8 @@ class OAIMetadataFormat_DC extends OAIMetadataFormat {
 		$issue =& $record->getData('issue');
 		$galleys =& $record->getData('galleys');
 
+		Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
+
 		// Sources contains journal title, issue ID, and pages
 		$sources = $this->stripAssocArray((array) $journal->getTitle(null));
 		$pages = $article->getPages();
@@ -56,7 +58,6 @@ class OAIMetadataFormat_DC extends OAIMetadataFormat {
 		}
 
 		// Types
-		Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
 		$types = $this->stripAssocArray((array) $section->getIdentifyType(null));
 		$types = array_merge_recursive(
 			empty($types)?array(Locale::getLocale() => Locale::translate('rt.metadata.pkp.peerReviewed')):$types,
