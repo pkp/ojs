@@ -62,7 +62,7 @@ function toggleChecked() {
 {assign var=reviewFormElementExists value=1}
 	<tr valign="top" id="formelt-{$reviewFormElement->getId()}" class="data">
 		<td><input type="checkbox" name="copy[]" value="{$reviewFormElement->getId()|escape}"/></td>
-		<td class="drag">{$reviewFormElement->getLocalizedQuestion()|strip_unsafe_html|truncate:200:"..."|escape}</td>
+		<td class="drag">{$reviewFormElement->getLocalizedQuestion()|truncate:200:"..."}</td>
 		<td class="nowrap">
 			<a href="{url op="editReviewFormElement" path=$reviewFormElement->getReviewFormId()|to_array:$reviewFormElement->getId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url op="deleteReviewFormElement" path=$reviewFormElement->getReviewFormId()|to_array:$reviewFormElement->getId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.reviewFormElements.confirmDelete"}')" class="action">{translate key="common.delete"}</a>&nbsp;|&nbsp;<a href="{url op="moveReviewFormElement" d=u id=$reviewFormElement->getId()}" class="action">&uarr;</a>&nbsp;<a href="{url op="moveReviewFormElement" d=d reviewFormElementId=$reviewFormElement->getId()}" class="action">&darr;</a>
 		</td>
