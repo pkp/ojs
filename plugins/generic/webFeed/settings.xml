@@ -17,4 +17,12 @@
 		<name>enabled</name>
 		<value>true</value>
 	</setting>
+	<setting type="string">
+		<name>displayPage</name>
+		<value>homepage</value>
+	</setting>
+	<setting type="bool">
+		<name>displayItems</name>
+		<value>issue</value>
+	</setting>
 </plugin_settings>
