@@ -48,7 +48,8 @@ class EmailTemplateDAO extends PKPEmailTemplateDAO {
 	 * @return EmailTemplate
 	 */
 	function &getEmailTemplate($emailKey, $locale, $journalId) {
-		return parent::getEmailTemplate($emailKey, $locale, ASSOC_TYPE_JOURNAL, $journalId);
+		$returner =& parent::getEmailTemplate($emailKey, $locale, ASSOC_TYPE_JOURNAL, $journalId);
+		return $returner;
 	}
 
 	/**
