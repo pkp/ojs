@@ -19,6 +19,16 @@
 {include file="common/header.tpl"}
 {/strip}
 
+<script type="text/javascript">
+{literal}
+$(document).ready(function() {
+	{/literal}{foreach from=$sections key=sectionKey item=section}{literal}
+	setupTableDND("#issueToc-{/literal}{$sectionKey|escape}{/literal}", "{/literal}{url|escape:"jsparam" op=moveArticleToc escape=false}{literal}");
+	{/literal}{/foreach}{literal}
+});
+{/literal}
+</script>
+
 {if !$isLayoutEditor}{* Layout Editors can also access this page. *}
 	<ul class="menu">
 		<li><a href="{url op="createIssue"}">{translate key="editor.navigation.createIssue"}</a></li>
@@ -48,20 +58,20 @@
 {if $customSectionOrderingExists}{translate key="editor.issues.resetSectionOrder" url=$url}<br/>{/if}
 <form method="post" action="{url op="updateIssueToc" path=$issueId}" onsubmit="return confirm('{translate|escape:"jsparam" key="editor.issues.saveChanges"}')">
 
-{assign var=numCols value=6}
+{assign var=numCols value=5}
 {if $issueAccess == $smarty.const.ISSUE_ACCESS_SUBSCRIPTION && $currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION}{assign var=numCols value=$numCols+1}{/if}
 {if $enablePublicArticleId}{assign var=numCols value=$numCols+1}{/if}
 {if $enablePageNumber}{assign var=numCols value=$numCols+1}{/if}
 
-{foreach from=$sections item=section}
+{foreach from=$sections key=sectionKey item=section}
 <h4>{$section[1]}{if $section[4]}<a href="{url op="moveSectionToc" path=$issueId d=u newPos=$section[4] sectionId=$section[0]}" class="plain">&uarr;</a>{else}&uarr;{/if} {if $section[5]}<a href="{url op="moveSectionToc" path=$issueId d=d newPos=$section[5] sectionId=$section[0]}" class="plain">&darr;</a>{else}&darr;{/if}</h4>
 
-<table width="100%" class="listing">
+<table width="100%" class="listing" id="issueToc-{$sectionKey|escape}">
 	<tr>
 		<td colspan="{$numCols|escape}" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
-		<td width="10%" colspan="2">{translate key="editor.issues.order"}</td>
+		<td width="5%">&nbsp;</td>
 		<td width="15%">{translate key="article.authors"}</td>
 		<td>{translate key="article.title"}</td>
 		{if $issueAccess == $smarty.const.ISSUE_ACCESS_SUBSCRIPTION && $currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION}<td width="10%">{translate key="editor.issues.access"}</td>{/if}
@@ -79,15 +89,14 @@
 
 	{assign var="articleSeq" value=$articleSeq+1}
 	{assign var="articleId" value=$article->getId()}
-	<tr>
-		<td>{$articleSeq|escape}.</td>
-		<td><a href="{url op="moveArticleToc" path=$issueId d=u sectionId=$section[0] pubId=$article->getPubId()}" class="plain">&uarr;</a>&nbsp;<a href="{url op="moveArticleToc" path=$issueId d=d sectionId=$section[0] pubId=$article->getPubId()}" class="plain">&darr;</a></td>
+	<tr id="article-{$article->getPubId()|escape}" class="data">
+		<td><a href="{url op="moveArticleToc" d=u id=$article->getPubId()}" class="plain">&uarr;</a>&nbsp;<a href="{url op="moveArticleToc" d=d id=$article->getPubId()}" class="plain">&darr;</a></td>
 		<td>
 			{foreach from=$article->getAuthors() item=author name=authorList}
 				{$author->getLastName()|escape}{if !$smarty.foreach.authorList.last},{/if}
 			{/foreach}
 		</td>
-		<td>{if !$isLayoutEditor}<a href="{url op="submission" path=$articleId}" class="action">{/if}{$article->getLocalizedTitle()|strip_unsafe_html|truncate:60:"..."}{if !$isLayoutEditor}</a>{/if}</td>
+		<td class="drag">{if !$isLayoutEditor}<a href="{url op="submission" path=$articleId}" class="action">{/if}{$article->getLocalizedTitle()|strip_unsafe_html|truncate:60:"..."}{if !$isLayoutEditor}</a>{/if}</td>
 		{if $issueAccess == $smarty.const.ISSUE_ACCESS_SUBSCRIPTION && $currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION}
 		<td><select name="accessStatus[{$article->getPubId()}]" size="1" class="selectMenu">{html_options options=$accessOptions selected=$article->getAccessStatus()}</select></td>
 		{/if}
@@ -104,10 +113,6 @@
 			{/if}
 		</td>
 	</tr>
-	<tr>
-		<td colspan="{$numCols|escape}" class="{if $smarty.foreach.currSection.last}end{/if}separator">&nbsp;</td>
-	</tr>
-
 	{/foreach}
 </table>
 {foreachelse}

@@ -364,6 +364,10 @@ class IssueManagementHandler extends EditorHandler {
 		import('classes.issue.IssueAction');
 		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 		$templateMgr->assign('helpTopicId', 'publishing.tableOfContents');
+
+		$templateMgr->addJavaScript('lib/pkp/js/jquery.tablednd_0_5.js');
+		$templateMgr->addJavaScript('lib/pkp/js/tablednd.js');
+
 		$templateMgr->display('editor/issues/issueToc.tpl');
 	}
 
@@ -539,23 +543,44 @@ class IssueManagementHandler extends EditorHandler {
 	/**
 	 * Change the sequence of the articles.
 	 */
-	function moveArticleToc($args) {
-		$issueId = isset($args[0]) ? $args[0] : 0;
-		$this->validate($issueId, true);
+	function moveArticleToc($args, $request) {
+		$this->validate(null, true);
 		$issue =& $this->issue;
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle =& $publishedArticleDao->getPublishedArticleById(Request::getUserVar('pubId'));
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
 
-		if ($publishedArticle != null && $publishedArticle->getIssueId() == $issue->getId() && $issue->getJournalId() == $journal->getId()) {
-			$publishedArticle->setSeq($publishedArticle->getSeq() + (Request::getUserVar('d') == 'u' ? -1.5 : 1.5));
-			$publishedArticleDao->updatePublishedArticle($publishedArticle);
-			$publishedArticleDao->resequencePublishedArticles(Request::getUserVar('sectionId'),$issueId);
+		$publishedArticle =& $publishedArticleDao->getPublishedArticleById($request->getUserVar('id'));
+		$issue =& $issueDao->getIssueById($publishedArticle->getIssueId());
+
+		if (!$publishedArticle || $publishedArticle->getIssueId() != $issue->getId() || $issue->getJournalId() != $journal->getId()) $request->redirect(null, null, 'index');
+
+		if ($d = $request->getUserVar('d')) {
+			// Moving by up/down arrows
+			$publishedArticle->setSeq(
+				$publishedArticle->getSeq() + ($d == 'u' ? -1.5 : 1.5)
+			);
+		} else {
+			// Moving by drag 'n' drop
+			$prevId = $request->getUserVar('prevId');
+			if ($prevId == null) {
+				$nextId = $request->getUserVar('nextId');
+				$nextArticle = $publishedArticleDao->getPublishedArticleById($nextId);
+				$publishedArticle->setSeq($nextArticle->getSeq() - .5);
+			} else {
+				$prevArticle = $publishedArticleDao->getPublishedArticleById($prevId);
+				$publishedArticle->setSeq($prevArticle->getSeq() + .5);
+			}
 		}
+		$publishedArticleDao->updatePublishedArticle($publishedArticle);
+		$publishedArticleDao->resequencePublishedArticles($publishedArticle->getSectionId(), $issue->getIssueId());
 
-		Request::redirect(null, null, 'issueToc', $issueId);
+		// Only redirect if we're not doing drag and drop
+		if ($d) {
+			$request->redirect(null, null, 'issueToc', $publishedArticle->getIssueId());
+		}
 	}
 
 	/**
