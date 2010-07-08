@@ -37,7 +37,8 @@
 	<message key="editor.notifyUsers.allUsers">All users associated with this conference ({$count} users)</message>
 	<message key="editor.notifyUsers.allReaders">All readers ({$count} users)</message>
 	<message key="editor.notifyUsers.allAuthors">All published authors ({$count} users)</message>
-	<message key="editor.notifyUsers.allSubscribers">All subscribers ({$count} users)</message>
+	<message key="editor.notifyUsers.allIndividualSubscribers">All individual subscribers ({$count} users)</message>
+	<message key="editor.notifyUsers.allInstitutionalSubscribers">All institutional subscribers ({$count} users)</message>
 	<message key="editor.notifyUsers.inProgress">Notifying users...</message>
 	<message key="editor.usersNotified">Users Notified</message>
 	<message key="editor.notifyUsers.allUsers">Send this message to all users associated with this journal ({$count} users)</message>

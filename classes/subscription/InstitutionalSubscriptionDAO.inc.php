@@ -147,20 +147,19 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * @param status int 
 	 * @return int
 	 */
-	function getStatusCount($journalId, $status) {
+	function getStatusCount($journalId, $status = null) {
+		$params = array((int) $journalId);
+		if ($status !== null) $params[] = (int) $status;
+
 		$result =& $this->retrieve(
-			'SELECT COUNT(*)
-			FROM
-			subscriptions s,
-			subscription_types st
-			WHERE s.type_id = st.type_id
-			AND st.institutional = 1
-			AND s.journal_id = ?
-			AND s.status = ?',
-			array(
-				$journalId,
-				$status
-			)
+			'SELECT	COUNT(*)
+			FROM	subscriptions s,
+				subscription_types st
+			WHERE	s.type_id = st.type_id AND
+				st.institutional = 1 AND
+				s.journal_id = ?
+			' . ($status !== null?' AND s.status = ?':''),
+			$params
 		);
 
 		$returner = isset($result->fields[0]) ? $result->fields[0] : 0;
@@ -169,6 +168,15 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 		unset($result);
 
 		return $returner;
+	}
+
+	/**
+	 * Get the number of institutional subscriptions for a particular journal.
+	 * @param $journalId int
+	 * @return int
+	 */
+	function getSubscribedUserCount($journalId) {
+		return $this->getStatusCount($journalId);
 	}
 
 	/**

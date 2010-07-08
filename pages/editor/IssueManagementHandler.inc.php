@@ -698,6 +698,7 @@ class IssueManagementHandler extends EditorHandler {
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$authorDao =& DAORegistry::getDAO('AuthorDAO');
 		$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+		$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 
 		$journal =& Request::getJournal();
 		$user =& Request::getUser();
@@ -710,8 +711,11 @@ class IssueManagementHandler extends EditorHandler {
 			$email->addRecipient($user->getEmail(), $user->getFullName());
 
 			switch (Request::getUserVar('whichUsers')) {
-				case 'allSubscribers':
+				case 'allIndividualSubscribers':
 					$recipients =& $individualSubscriptionDao->getSubscribedUsers($journal->getId());
+					break;
+				case 'allInstitutionalSubscribers':
+					$recipients =& $institutionalSubscriptionDao->getSubscribedUsers($journal->getId());
 					break;
 				case 'allAuthors':
 					$recipients =& $authorDao->getAuthorsAlphabetizedByJournal($journal->getId(), null, null, true);
@@ -789,7 +793,8 @@ class IssueManagementHandler extends EditorHandler {
 					'allUsersCount' => $allUsersCount,
 					'allReadersCount' => $roleDao->getJournalUsersCount($journal->getId(), ROLE_ID_READER),
 					'allAuthorsCount' => $authorCount,
-					'allSubscribersCount' => $individualSubscriptionDao->getSubscribedUserCount($journal->getId()),
+					'allIndividualSubscribersCount' => $individualSubscriptionDao->getSubscribedUserCount($journal->getId()),
+					'allInstitutionalSubscribersCount' => $institutionalSubscriptionDao->getSubscribedUserCount($journal->getId()),
 				)
 			);
 		}
