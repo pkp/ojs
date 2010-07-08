@@ -265,12 +265,18 @@ class RoleDAO extends DAO {
 	/**
 	 * Retrieve the number of users associated with the specified journal.
 	 * @param $journalId int
+	 * @param $roleId int ROLE_ID_... (optional) role to count
 	 * @return int
 	 */
-	function getJournalUsersCount($journalId) {
+	function getJournalUsersCount($journalId, $roleId = null) {
+		$userDao =& DAORegistry::getDAO('UserDAO');
+
+		$params = array((int) $journalId);
+		if ($roleId !== null) $params[] = (int) $roleId;
+
 		$result =& $this->retrieve(
-			'SELECT COUNT(DISTINCT(user_id)) FROM roles WHERE journal_id = ?',
-			(int) $journalId
+			'SELECT COUNT(DISTINCT(user_id)) FROM roles WHERE journal_id = ?' . ($roleId === null?'':' AND role_id = ?'),
+			$params
 		);
 
 		$returner = $result->fields[0];

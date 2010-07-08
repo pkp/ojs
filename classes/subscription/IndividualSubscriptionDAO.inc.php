@@ -138,20 +138,19 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @param status int 
 	 * @return int
 	 */
-	function getStatusCount($journalId, $status) {
+	function getStatusCount($journalId, $status = null) {
+		$params = array((int) $journalId);
+		if ($status !== null) $params[] = (int) $status;
+
 		$result =& $this->retrieve(
-			'SELECT COUNT(*)
-			FROM
-			subscriptions s,
-			subscription_types st
-			WHERE s.type_id = st.type_id
-			AND st.institutional = 0
-			AND s.journal_id = ?
-			AND s.status = ?',
-			array (
-				$journalId,
-				$status
-			)
+			'SELECT	COUNT(*)
+			FROM	subscriptions s,
+				subscription_types st
+			WHERE	s.type_id = st.type_id AND
+				st.institutional = 0 AND
+				s.journal_id = ?
+			' . ($status !== null?' AND s.status = ?':''),
+			$params
 		);
 
 		$returner = isset($result->fields[0]) ? $result->fields[0] : 0;
@@ -160,6 +159,15 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 		unset($result);
 
 		return $returner;
+	}
+
+	/**
+	 * Get the number of individual subscriptions for a particular journal.
+	 * @param $journalId int
+	 * @return int
+	 */
+	function getSubscribedUserCount($journalId) {
+		return $this->getStatusCount($journalId);
 	}
 
 	/**
@@ -459,6 +467,31 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 		);
 
 		$returner = new DAOResultFactory($result, $this, '_returnSubscriptionFromRow');
+
+		return $returner;
+	}
+
+	/**
+	 * Retrieve all individual subscribed users.
+	 * @return object DAOResultFactory containing IndividualSubscriptions
+	 */
+	function &getSubscribedUsers($journalId, $rangeInfo = null) {
+		$result =& $this->retrieveRange(
+			'SELECT	u.*
+			FROM	subscriptions s,
+				subscription_types st,
+				users u
+			WHERE	s.type_id = st.type_id AND
+				st.institutional = 0 AND
+				s.user_id = u.user_id AND
+				s.journal_id = ?
+			ORDER BY u.last_name ASC, s.subscription_id',
+			array((int) $journalId),
+			$rangeInfo
+		);
+
+		$userDao =& DAORegistry::getDAO('UserDAO');
+		$returner = new DAOResultFactory($result, $userDao, '_returnUserFromRow');
 
 		return $returner;
 	}

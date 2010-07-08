@@ -107,9 +107,11 @@ class AuthorDAO extends PKPAuthorDAO {
 	 * alphabetized authors for all journals are returned.
 	 * @param $journalId int
 	 * @param $initial An initial the last names must begin with
+	 * @param $rangeInfo Range information
+	 * @param $includeEmail Whether or not to include the email in the select distinct
 	 * @return array Authors ordered by sequence
 	 */
-	function &getAuthorsAlphabetizedByJournal($journalId = null, $initial = null, $rangeInfo = null) {
+	function &getAuthorsAlphabetizedByJournal($journalId = null, $initial = null, $rangeInfo = null, $includeEmail = false) {
 		$authors = array();
 		$params = array();
 
@@ -126,7 +128,7 @@ class AuthorDAO extends PKPAuthorDAO {
 				CAST(\'\' AS CHAR) AS url,
 				0 AS author_id,
 				0 AS submission_id,
-				CAST(\'\' AS CHAR) AS email,
+				' . ($includeEmail?'aa.email AS email,':'CAST(\'\' AS CHAR) AS email,') . '
 				0 AS primary_contact,
 				0 AS seq,
 				aa.first_name AS first_name,

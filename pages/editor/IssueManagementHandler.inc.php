@@ -696,6 +696,8 @@ class IssueManagementHandler extends EditorHandler {
 		$userDao =& DAORegistry::getDAO('UserDAO');
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$authorDao =& DAORegistry::getDAO('AuthorDAO');
+		$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 
 		$journal =& Request::getJournal();
 		$user =& Request::getUser();
@@ -707,7 +709,24 @@ class IssueManagementHandler extends EditorHandler {
 		if (Request::getUserVar('send') && !$email->hasErrors()) {
 			$email->addRecipient($user->getEmail(), $user->getFullName());
 
-			$recipients = $roleDao->getUsersByJournalId($journal->getId());
+			switch (Request::getUserVar('whichUsers')) {
+				case 'allSubscribers':
+					$recipients =& $individualSubscriptionDao->getSubscribedUsers($journal->getId());
+					break;
+				case 'allAuthors':
+					$recipients =& $authorDao->getAuthorsAlphabetizedByJournal($journal->getId(), null, null, true);
+					break;
+				case 'allUsers':
+					$recipients =& $roleDao->getUsersByJournalId($journal->getId());
+					break;
+				case 'allReaders':
+				default:
+					$recipients =& $roleDao->getUsersByRoleId(
+						ROLE_ID_READER,
+						$journal->getId()
+					);
+					break;
+			}
 
 			while (!$recipients->eof()) {
 				$recipient =& $recipients->next();
@@ -751,9 +770,15 @@ class IssueManagementHandler extends EditorHandler {
 					'editorialContactSignature' => $user->getContactSignature()
 				));
 			}
-			$allUsersCount = $roleDao->getJournalUsersCount($journal->getId());
 
 			$issuesIterator =& $issueDao->getIssues($journal->getId());
+
+			$allUsersCount = $roleDao->getJournalUsersCount($journal->getId());
+
+			// FIXME: There should be a better way of doing this.
+			$authors =& $authorDao->getAuthorsAlphabetizedByJournal($journal->getId(), null, null, true);
+			$authorCount = $authors->getCount();
+
 
 			$email->displayEditForm(
 				Request::url(null, null, 'notifyUsers'),
@@ -761,7 +786,10 @@ class IssueManagementHandler extends EditorHandler {
 				'editor/notifyUsers.tpl',
 				array(
 					'issues' => $issuesIterator,
-					'allUsersCount' => $allUsersCount
+					'allUsersCount' => $allUsersCount,
+					'allReadersCount' => $roleDao->getJournalUsersCount($journal->getId(), ROLE_ID_READER),
+					'allAuthorsCount' => $authorCount,
+					'allSubscribersCount' => $individualSubscriptionDao->getSubscribedUserCount($journal->getId()),
 				)
 			);
 		}

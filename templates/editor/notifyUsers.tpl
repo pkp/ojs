@@ -42,6 +42,48 @@
 	<br/>
 {/if}
 
+<div id="recipients">
+<h3>{translate key="email.recipients"}</h3>
+<table id="recipients" class="data" width="100%">
+<tr valign="top">
+	<td><input type="radio" id="allUsers" name="whichUsers" value="allUsers"/></td>
+	<td class="label">
+		<label for="allUsers">{translate key="editor.notifyUsers.allUsers" count=$allUsersCount|default:0}</label>
+	</td>
+</tr>
+<tr valign="top">
+	<td><input type="radio" id="allReaders" name="whichUsers" value="allReaders"/></td>
+	<td class="label">
+		<label for="allReaders">{translate key="editor.notifyUsers.allReaders" count=$allReadersCount|default:0}</label>
+	</td>
+</tr>
+<tr valign="top">
+	<td><input type="radio" id="allAuthors" name="whichUsers" value="allAuthors"/></td>
+	<td class="label">
+		<label for="allAuthors">{translate key="editor.notifyUsers.allAuthors" count=$allAuthorsCount|default:0}</label>
+	</td>
+</tr>
+{if $currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION}
+<tr valign="top">
+	<td><input type="radio" id="allSubscribers" name="whichUsers" value="allSubscribers"/></td>
+	<td class="label">
+		<label for="allSubscribers">{translate key="editor.notifyUsers.allSubscribers" count=$allSubscribersCount|default:0}</label>
+	</td>
+</tr>
+{/if}{* publishingMode is PUBLISHING_MODE_SUBSCRIPTION *}
+{if $senderEmail}
+	<tr valign="top">
+		<td><input type="checkbox" name="bccSender" value="1"{if $bccSender} checked{/if}/></td>
+		<td class="label">
+			{translate key="email.bccSender" address=$senderEmail|escape}
+		</td>
+	</tr>
+{/if}
+</table>
+</div>{* recipients *}
+
+<br/>
+
 <div id="issue">
 <h3>{translate key="issue.issue"}</h3>
 <table class="data" width="100%">
