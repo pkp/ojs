@@ -109,7 +109,7 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 				"\t\t\t\t\t\t<surname>" . htmlspecialchars(Core::cleanVar($author->getLastName())) . "</surname>\n" .
 				"\t\t\t\t\t\t<given-names>" . htmlspecialchars(Core::cleanVar($author->getFirstName()) . (($s = $author->getMiddleName()) != ''?" $s":'')) . "</given-names>\n" .
 				"\t\t\t\t\t</name>\n" .
-				(($s = $author->getAffiliation()) != ''?"\t\t\t\t\t<aff>" . htmlspecialchars(Core::cleanVar($s)) . "</aff>\n":'') .
+				(($s = $author->getLocalizedAffiliation()) != ''?"\t\t\t\t\t<aff>" . htmlspecialchars(Core::cleanVar($s)) . "</aff>\n":'') .
 				"\t\t\t\t\t<email>" . htmlspecialchars(Core::cleanVar($author->getEmail())) . "</email>\n" .
 				(($s = $author->getUrl()) != ''?"\t\t\t\t\t<uri>" . htmlspecialchars(Core::cleanVar($s)) . "</uri>\n":'') .
 				"\t\t\t\t</contrib>\n";

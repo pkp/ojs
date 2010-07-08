@@ -901,7 +901,16 @@ class NativeImportDom {
 		if (($node = $authorNode->getChildByName('firstname'))) $author->setFirstName($node->getValue());
 		if (($node = $authorNode->getChildByName('middlename'))) $author->setMiddleName($node->getValue());
 		if (($node = $authorNode->getChildByName('lastname'))) $author->setLastName($node->getValue());
-		if (($node = $authorNode->getChildByName('affiliation'))) $author->setAffiliation($node->getValue());
+		for ($index=0; ($node = $authorNode->getChildByName('affiliation', $index)); $index++) {
+			$locale = $node->getAttribute('locale');
+			if ($locale == '') {
+				$locale = $journalPrimaryLocale;
+			} elseif (!in_array($locale, $journalSupportedLocales)) {
+				$errors[] = array('plugins.importexport.native.import.error.articleAuthorAffiliationLocaleUnsupported', array('authorFullName' => $author->getFullName(), 'articleTitle' => $article->getLocalizedTitle(), 'issueTitle' => $issue->getIssueIdentification(), 'locale' => $locale));
+				return false;
+			} 
+			$author->setAffiliation($node->getValue(), $locale);
+		}
 		if (($node = $authorNode->getChildByName('country'))) $author->setCountry($node->getValue());
 		if (($node = $authorNode->getChildByName('email'))) $author->setEmail($node->getValue());
 		if (($node = $authorNode->getChildByName('url'))) $author->setUrl($node->getValue());

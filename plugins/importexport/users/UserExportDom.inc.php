@@ -39,13 +39,21 @@ class UserExportDom {
 			XMLCustomWriter::createChildWithText($doc, $userNode, 'last_name', $user->getLastName());
 			XMLCustomWriter::createChildWithText($doc, $userNode, 'initials', $user->getInitials(), false);
 			XMLCustomWriter::createChildWithText($doc, $userNode, 'gender', $user->getGender(), false);
-			XMLCustomWriter::createChildWithText($doc, $userNode, 'affiliation', $user->getAffiliation(), false);
 			XMLCustomWriter::createChildWithText($doc, $userNode, 'email', $user->getEmail());
 			XMLCustomWriter::createChildWithText($doc, $userNode, 'url', $user->getUrl(), false);
 			XMLCustomWriter::createChildWithText($doc, $userNode, 'phone', $user->getPhone(), false);
 			XMLCustomWriter::createChildWithText($doc, $userNode, 'fax', $user->getFax(), false);
 			XMLCustomWriter::createChildWithText($doc, $userNode, 'mailing_address', $user->getMailingAddress(), false);
 			XMLCustomWriter::createChildWithText($doc, $userNode, 'country', $user->getCountry(), false);
+			if (is_array($user->getAffiliation(null))) {
+				foreach($user->getAffiliation(null) as $locale => $value) {
+					$affiliationNode =& XMLCustomWriter::createChildWithText($doc, $userNode, 'affiliation', $value, false);
+					if ($affiliationNode) {
+						XMLCustomWriter::setAttribute($affiliationNode, 'locale', $locale);
+					}
+					unset($affiliationNode);
+				}
+			}
 			if (is_array($user->getSignature(null))) {
 				foreach($user->getSignature(null) as $locale => $value) {
 					$signatureNode =& XMLCustomWriter::createChildWithText($doc, $userNode, 'signature', $value, false);

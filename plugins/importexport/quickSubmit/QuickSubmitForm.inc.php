@@ -203,7 +203,9 @@ class QuickSubmitForm extends Form {
 				$author->setFirstName($authors[$i]['firstName']);
 				$author->setMiddleName($authors[$i]['middleName']);
 				$author->setLastName($authors[$i]['lastName']);
-				$author->setAffiliation($authors[$i]['affiliation']);
+				if (array_key_exists('affiliation', $authors[$i])) {
+					$author->setAffiliation($authors[$i]['affiliation'], null);
+				}
 				$author->setCountry($authors[$i]['country']);
 				$author->setEmail($authors[$i]['email']);
 				$author->setUrl($authors[$i]['url']);

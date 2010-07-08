@@ -238,7 +238,11 @@ class SubscriptionAction {
 				import('classes.subscription.form.IndividualSubscriptionForm');
 				$subscriptionForm = new IndividualSubscriptionForm($subscriptionId, $userId);
 			}
-			$subscriptionForm->initData();
+			if ($subscriptionForm->isLocaleResubmit()) {
+				$subscriptionForm->readInputData();
+			} else {
+				$subscriptionForm->initData();
+			}
 			$subscriptionForm->display();
 			return true;
 		} else {

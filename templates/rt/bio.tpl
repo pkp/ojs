@@ -20,7 +20,7 @@
 <p>
 	<em>{$author->getFullName()|escape}</em><br />
 	{if $author->getUrl()}<a href="{$author->getUrl()|escape:"quotes"}">{$author->getUrl()|escape}</a><br/>{/if}
-	{if $author->getAffiliation()}{$author->getAffiliation()|escape}{/if}
+	{if $author->getLocalizedAffiliation()}{$author->getLocalizedAffiliation()|escape}{/if}
 	{if $author->getCountry()}<br/>{$author->getCountryLocalized()|escape}{/if}
 </p>
 

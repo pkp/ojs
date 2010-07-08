@@ -131,7 +131,7 @@ class CreateReviewerForm extends Form {
 		$user->setLastName($this->getData('lastName'));
 		$user->setGender($this->getData('gender'));
 		$user->setInitials($this->getData('initials'));
-		$user->setAffiliation($this->getData('affiliation'));
+		$user->setAffiliation($this->getData('affiliation'), null); // Localized
 		$user->setEmail($this->getData('email'));
 		$user->setUrl($this->getData('userUrl'));
 		$user->setPhone($this->getData('phone'));

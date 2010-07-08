@@ -312,7 +312,12 @@ class NativeExportDom {
 		XMLCustomWriter::createChildWithText($doc, $root, 'middlename', $author->getMiddleName(), false);
 		XMLCustomWriter::createChildWithText($doc, $root, 'lastname', $author->getLastName());
 
-		XMLCustomWriter::createChildWithText($doc, $root, 'affiliation', $author->getAffiliation(), false);
+		$affiliations = $author->getAffiliation(null);
+		if (is_array($affiliations)) foreach ($affiliations as $locale => $affiliation) {
+			$n =& XMLCustomWriter::createChildWithText($doc, $root, 'affiliation', $author->getAffiliation(), false);
+			XMLCustomWriter::setAttribute($n, 'locale', $locale);
+			unset($n);
+		}
 		XMLCustomWriter::createChildWithText($doc, $root, 'country', $author->getCountry(), false);
 		XMLCustomWriter::createChildWithText($doc, $root, 'email', $author->getEmail(), false);
 		XMLCustomWriter::createChildWithText($doc, $root, 'url', $author->getUrl(), false);

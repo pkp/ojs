@@ -156,7 +156,7 @@ class UserManagementForm extends Form {
 					'signature' => $user->getSignature(null), // Localized
 					'initials' => $user->getInitials(),
 					'gender' => $user->getGender(),
-					'affiliation' => $user->getAffiliation(),
+					'affiliation' => $user->getAffiliation(null), // Localized
 					'email' => $user->getEmail(),
 					'userUrl' => $user->getUrl(),
 					'phone' => $user->getPhone(),
@@ -256,7 +256,7 @@ class UserManagementForm extends Form {
 		$user->setLastName($this->getData('lastName'));
 		$user->setInitials($this->getData('initials'));
 		$user->setGender($this->getData('gender'));
-		$user->setAffiliation($this->getData('affiliation'));
+		$user->setAffiliation($this->getData('affiliation'), null); // Localized
 		$user->setSignature($this->getData('signature'), null); // Localized
 		$user->setEmail($this->getData('email'));
 		$user->setUrl($this->getData('userUrl'));

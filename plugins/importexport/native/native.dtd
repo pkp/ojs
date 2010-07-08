@@ -123,7 +123,7 @@
 		public_id CDATA #IMPLIED
 		language CDATA "en">
 
-<!ELEMENT author (firstname, middlename?, lastname, affiliation?, country?, email, url?, competing_interests*, biography*)>
+<!ELEMENT author (firstname, middlename?, lastname, affiliation*, country?, email, url?, competing_interests*, biography*)>
 	<!-- One author should be designated as the primary contact for this
 	     article. If no author is designated, the first author with an
 	     email address will be used; if multiple authors are designated, the
@@ -135,7 +135,11 @@
 <!ELEMENT firstname (#PCDATA)>
 <!ELEMENT middlename (#PCDATA)>
 <!ELEMENT lastname (#PCDATA)>
+
 <!ELEMENT affiliation (#PCDATA)>
+	<!ATTLIST affiliation
+		locale CDATA #IMPLIED>
+
 <!ELEMENT country (#PCDATA)>
 <!ELEMENT email (#PCDATA)>
 <!ELEMENT url (#PCDATA)>

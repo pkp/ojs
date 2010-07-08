@@ -33,7 +33,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="user.affiliation"}</td>
-		<td class="value">{$author.affiliation|escape|nl2br|default:"&mdash;"}</td>
+		<td class="value">{$author.affiliation.$formLocale|escape|nl2br|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.country"}</td>

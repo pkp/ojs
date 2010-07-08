@@ -43,7 +43,7 @@
 <tr valign="top">
 	<td class="label">{fieldLabel name="userAffiliation" key="user.affiliation"}</td>
 	<td class="value">
-		<textarea name="userAffiliation" id="userAffiliation" rows="5" cols="40" class="textArea">{$userAffiliation|escape}</textarea><br/>
+		<textarea name="userAffiliation[{$formLocale|escape}]" id="userAffiliation" rows="5" cols="40" class="textArea">{$userAffiliation[$formLocale]|escape}</textarea><br/>
 		<span class="instruct">{translate key="user.affiliation.description"}</span>
 	</td>
 </tr>

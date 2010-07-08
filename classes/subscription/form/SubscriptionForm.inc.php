@@ -107,7 +107,7 @@ class SubscriptionForm extends Form {
 		$templateMgr->assign('userLastName', $user->getLastName());
 		$templateMgr->assign('userInitials', $user->getInitials());
 		$templateMgr->assign('userGender', $user->getGender());
-		$templateMgr->assign('userAffiliation', $user->getAffiliation());
+		$templateMgr->assign('userAffiliation', $user->getAffiliation(null)); // Localized
 		$templateMgr->assign('userUrl', $user->getUrl());
 		$templateMgr->assign('userFullName', $user->getFullName());
 		$templateMgr->assign('userEmail', $user->getEmail());
@@ -152,7 +152,7 @@ class SubscriptionForm extends Form {
 				'userLastName', $user->getLastName(),
 				'userInitials', $user->getInitials(),
 				'userGender', $user->getGender(),
-				'userAffiliation', $user->getAffiliation(),
+				'userAffiliation', $user->getAffiliation(null),
 				'userUrl', $user->getUrl(),
 				'userEmail' => $user->getEmail(),
 				'userPhone' => $user->getPhone(),
@@ -246,7 +246,7 @@ class SubscriptionForm extends Form {
 		$user->setLastName($this->getData('userLastName'));
 		$user->setInitials($this->getData('userInitials'));
 		$user->setGender($this->getData('userGender'));
-		$user->setAffiliation($this->getData('userAffiliation'));
+		$user->setAffiliation($this->getData('userAffiliation'), null); // Localized
 		$user->setUrl($this->getData('userUrl'));
 		$user->setEmail($this->getData('userEmail'));
 		$user->setPhone($this->getData('userPhone'));

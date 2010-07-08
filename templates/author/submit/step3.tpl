@@ -51,6 +51,9 @@ function moveAuthor(dir, authorIndex) {
 				{foreach from=$author.biography key="thisLocale" item="thisBiography"}
 					{if $thisLocale != $formLocale}<input type="hidden" name="authors[{$authorIndex|escape}][biography][{$thisLocale|escape}]" value="{$thisBiography|escape}" />{/if}
 				{/foreach}
+				{foreach from=$author.affiliation key="thisLocale" item="thisAffiliation"}
+					{if $thisLocale != $formLocale}<input type="hidden" name="authors[{$authorIndex|escape}][affiliation][{$thisLocale|escape}]" value="{$thisAffiliation|escape}" />{/if}
+				{/foreach}
 			{/foreach}
 			{form_language_chooser form="submit" url=$submitFormUrl}
 			<span class="instruct">{translate key="form.formLanguage.description"}</span>
@@ -98,7 +101,7 @@ function moveAuthor(dir, authorIndex) {
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="authors-$authorIndex-affiliation" key="user.affiliation"}</td>
 	<td width="80%" class="value">
-		<textarea name="authors[{$authorIndex|escape}][affiliation]" class="textArea" id="authors-{$authorIndex|escape}-affiliation" rows="5" cols="40">{$author.affiliation|escape}</textarea><br/>
+		<textarea name="authors[{$authorIndex|escape}][affiliation][{$formLocale|escape}]" class="textArea" id="authors-{$authorIndex|escape}-affiliation" rows="5" cols="40">{$author.affiliation[$formLocale]|escape}</textarea><br/>
 		<span class="instruct">{translate key="user.affiliation.description"}</span>
 	</td>
 </tr>
@@ -159,7 +162,7 @@ function moveAuthor(dir, authorIndex) {
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="authors-0-affiliation" key="user.affiliation"}</td>
 	<td width="80%" class="value">
-		<textarea name="authors[0][affiliation]" class="textArea" id="authors-0-affiliation" rows="5" cols="40"></textarea><br/>
+		<textarea name="authors[0][affiliation][{$formLocale|escape}]" class="textArea" id="authors-0-affiliation" rows="5" cols="40"></textarea><br/>
 		<span class="instruct">{translate key="user.affiliation.description"}</span>
 	</td>
 </tr>

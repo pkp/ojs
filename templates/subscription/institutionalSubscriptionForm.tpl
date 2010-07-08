@@ -31,6 +31,20 @@
 {include file="common/formErrors.tpl"}
 
 <table class="data" width="100%">
+{if count($formLocales) > 1}
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
+		<td width="80%" class="value">
+			{if $subscriptionId}
+				{url|assign:"formUrl" op="editSubscription" path="institutional"|to_array:$subscriptionId userId=$userId escape=false}
+			{else}
+				{url|assign:"formUrl" op="createSubscription" path="institutional" escape=false}
+			{/if}
+			{form_language_chooser form="subscriptionForm" url=$formUrl}
+			<span class="instruct">{translate key="form.formLanguage.description"}</span>
+		</td>
+	</tr>
+{/if}
 {include file="subscription/subscriptionForm.tpl"}
 </table>
 
@@ -102,7 +116,7 @@
 		{assign var=emailString value="$userFullName <$userEmail>"}
 		{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl}
 		{$username|escape}&nbsp;&nbsp;{icon name="mail" url=$url}&nbsp;&nbsp;<a href="{if $subscriptionId}{url op="selectSubscriber" path="institutional" subscriptionId=$subscriptionId}{else}{url op="selectSubscriber" path="institutional"}{/if}" class="action">{translate key="common.select"}</a>
-		<input type="hidden" name="userId" id="userId" value="{$userId}"/>
+		<input type="hidden" name="userId" id="userId" value="{$userId|escape}"/>
 	</td>
 </tr>
 {include file="subscription/subscriptionFormUser.tpl"}

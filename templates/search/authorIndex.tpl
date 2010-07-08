@@ -29,7 +29,7 @@
 	{assign var=lastAuthorName value=$authorName}
 	{assign var=lastAuthorCountry value=$authorCountry}
 
-	{assign var=authorAffiliation value=$author->getAffiliation()}
+	{assign var=authorAffiliation value=$author->getLocalizedAffiliation()}
 	{assign var=authorCountry value=$author->getCountry()}
 
 	{assign var=authorFirstName value=$author->getFirstName()}

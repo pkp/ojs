@@ -111,6 +111,7 @@ The following formats are accepted:
 
 	<message key="plugins.importexport.native.import.error.articleAuthorCompetingInterestsLocaleUnsupported">An author competing interest was provided for the author "{$authorFullName}" of the article "{$articleTitle}" in the issue "{$issueTitle}" in a locale ("{$locale}") that this journal does not support.</message>
 	<message key="plugins.importexport.native.import.error.articleAuthorBiographyLocaleUnsupported">An author biography was provided for the author "{$authorFullName}" of the article "{$articleTitle}" in the issue "{$issueTitle}" in a locale ("{$locale}") that this journal does not support.</message>
+	<message key="plugins.importexport.native.import.error.articleAuthorAffiliationLocaleUnsupported">An author affiliation was provided for the author "{$authorFullName}" of the article "{$articleTitle}" in the issue "{$issueTitle}" in a locale ("{$locale}") that this journal does not support.</message>
 
 	<message key="plugins.importexport.native.import.error.galleyLocaleUnsupported">A galley of the article "{$articleTitle}" in the issue "{$issueTitle}" was provided in a locale ("{$locale}") that this journal does not support.</message>
 

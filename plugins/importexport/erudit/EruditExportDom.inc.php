@@ -134,10 +134,10 @@ class EruditExportDom {
 			XMLCustomWriter::createChildWithText($doc, $persNameNode, 'middlename', $author->getMiddleName(), false);
 			XMLCustomWriter::createChildWithText($doc, $persNameNode, 'familyname', $author->getLastName());
 
-			if ($author->getAffiliation() != '') {
+			if ($author->getLocalizedAffiliation() != '') {
 				$affiliationNode =& XMLCustomWriter::createElement($doc, 'affiliation');
 				XMLCustomWriter::appendChild($authorNode, $affiliationNode);
-				XMLCustomWriter::createChildWithText($doc, $affiliationNode, 'blocktext', $author->getAffiliation(), false);
+				XMLCustomWriter::createChildWithText($doc, $affiliationNode, 'blocktext', $author->getLocalizedAffiliation(), false);
 			}
 
 			$authorNum++;

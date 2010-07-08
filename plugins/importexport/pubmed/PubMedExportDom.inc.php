@@ -190,7 +190,7 @@ class PubMedExportDom {
 		XMLCustomWriter::createChildWithText($doc, $root, 'LastName', ucfirst($author->getLastName()));
 
 		if ($author->getPrimaryContact()) {
-			XMLCustomWriter::createChildWithText($doc, $root, 'Affiliation', $author->getAffiliation() . '. ' . $author->getEmail(), false);
+			XMLCustomWriter::createChildWithText($doc, $root, 'Affiliation', $author->getLocalizedAffiliation() . '. ' . $author->getEmail(), false);
 		}
 
 		return $root;

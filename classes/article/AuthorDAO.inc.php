@@ -65,19 +65,24 @@ class AuthorDAO extends PKPAuthorDAO {
 	function &getPublishedArticlesForAuthor($journalId, $firstName, $middleName, $lastName, $affiliation, $country) {
 		$publishedArticles = array();
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-		$params = array($firstName, $middleName, $lastName, $affiliation, $country);
-		if ($journalId !== null) $params[] = $journalId;
+		$params = array(
+			'affiliation',
+			$firstName, $middleName, $lastName,
+			$affiliation, $country
+		);
+		if ($journalId !== null) $params[] = (int) $journalId;
 
 		$result =& $this->retrieve(
 			'SELECT DISTINCT
 				aa.submission_id
 			FROM	authors aa
 				LEFT JOIN articles a ON (aa.submission_id = a.article_id)
+				LEFT JOIN author_settings as ON (as.author_id = aa.author_id AND as.setting_name = ?)
 			WHERE	aa.first_name = ?
 				AND a.status = ' . STATUS_PUBLISHED . '
 				AND (aa.middle_name = ?' . (empty($middleName)?' OR aa.middle_name IS NULL':'') . ')
 				AND aa.last_name = ?
-				AND (aa.affiliation = ?' . (empty($affiliation)?' OR aa.affiliation IS NULL':'') . ')
+				AND (as.setting_value = ?' . (empty($affiliation)?' OR as.setting_value IS NULL':'') . ')
 				AND (aa.country = ?' . (empty($country)?' OR aa.country IS NULL':'') . ') ' .
 				($journalId!==null?(' AND a.journal_id = ?'):''),
 			$params
@@ -134,19 +139,19 @@ class AuthorDAO extends PKPAuthorDAO {
 				aa.first_name AS first_name,
 				aa.middle_name AS middle_name,
 				aa.last_name AS last_name,
-				aa.affiliation AS affiliation,
+				as.setting_value AS affiliation,
 				aa.country
-			FROM	authors aa,
-				articles a,
-				published_articles pa,
-				issues i
-			WHERE	i.issue_id = pa.issue_id
-				AND i.published = 1
-				AND aa.submission_id = a.article_id ' .
-				(isset($journalId)?'AND a.journal_id = ? ':'') . '
-				AND pa.article_id = a.article_id
-				AND a.status = ' . STATUS_PUBLISHED . '
-				AND (aa.last_name IS NOT NULL AND aa.last_name <> \'\')' .
+			FROM	authors aa
+				LEFT JOIN author_settings AS on (aa.author_id = as.author_id AND as.setting_name = ?)
+				LEFT JOIN articles a ON (a.article_id = as.article_id)
+				LEFT JOIN published_articles pa ON (pa.article_id = a.article_id)
+				LEFT JOIN issues i ON (pa.issue_id = i.issue_id)
+			WHERE	i.published = 1 AND
+				aa.submission_id = a.article_id AND ' .
+				(isset($journalId)?'a.journal_id = ? AND ':'') . '
+				pa.article_id = a.article_id AND
+				a.status = ' . STATUS_PUBLISHED . ' AND
+				(aa.last_name IS NOT NULL AND aa.last_name <> \'\')' .
 				$initialSql . '
 			ORDER BY aa.last_name, aa.first_name',
 			empty($params)?false:$params,
@@ -172,15 +177,14 @@ class AuthorDAO extends PKPAuthorDAO {
 	function insertAuthor(&$author) {
 		$this->update(
 			'INSERT INTO authors
-				(submission_id, first_name, middle_name, last_name, affiliation, country, email, url, primary_contact, seq)
+				(submission_id, first_name, middle_name, last_name, country, email, url, primary_contact, seq)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$author->getSubmissionId(),
 				$author->getFirstName(),
 				$author->getMiddleName() . '', // make non-null
 				$author->getLastName(),
-				$author->getAffiliation() . '', // make non-null
 				$author->getCountry(),
 				$author->getEmail(),
 				$author->getUrl(),
@@ -205,7 +209,6 @@ class AuthorDAO extends PKPAuthorDAO {
 			SET	first_name = ?,
 				middle_name = ?,
 				last_name = ?,
-				affiliation = ?,
 				country = ?,
 				email = ?,
 				url = ?,
@@ -216,7 +219,6 @@ class AuthorDAO extends PKPAuthorDAO {
 				$author->getFirstName(),
 				$author->getMiddleName() . '', // make non-null
 				$author->getLastName(),
-				$author->getAffiliation() . '', // make non-null
 				$author->getCountry(),
 				$author->getEmail(),
 				$author->getUrl(),

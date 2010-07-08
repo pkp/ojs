@@ -77,7 +77,7 @@
 <p>
 	<em>{$user->getFullName()|escape}</em> {icon name="mail" url=$address}<br />
 	{if $user->getUrl()}<a href="{$user->getUrl()|escape:"quotes"}" target="_new">{$user->getUrl()|escape}</a><br/>{/if}
-	{if $user->getAffiliation()}{$user->getAffiliation()|escape}{assign var=needsComma value=1}{/if}{if $country}{if $needsComma}, {/if}{$country|escape}{/if}
+	{if $user->getLocalizedAffiliation()}{$user->getLocalizedAffiliation()|escape}{assign var=needsComma value=1}{/if}{if $country}{if $needsComma}, {/if}{$country|escape}{/if}
 </p>
 
 <p>{$user->getLocalizedBiography()|nl2br|strip_unsafe_html}</p>

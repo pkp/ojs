@@ -31,16 +31,16 @@
 </h4>
 
 <table class="listing" width="100%">
-	{if $user->getAffiliation()}
+	{if $user->getLocalizedAffiliation()}
 		<tr valign="top">
 			<td class="label" width="20%">
 				{translate key="user.affiliation"}
 			</td>
 			<td class="data" width="80%">
-				{$user->getAffiliation()|escape|nl2br}
+				{$user->getLocalizedAffiliation()|escape|nl2br}
 			</td>
 		</tr>
-	{/if}{* $user->getAffiliation() *}
+	{/if}{* $user->getLocalizedAffiliation() *}
 
 	{if $user->getLocalizedBiography()}
 		<tr valign="top">

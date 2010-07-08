@@ -319,7 +319,7 @@ class LDAPAuthPlugin extends AuthPlugin {
 		if (isset($lastName))
 			$user->setLastName($lastName);
 		if (isset($affiliation))
-			$user->setAffiliation($affiliation);
+			$user->setAffiliation($affiliation, Locale::getLocale());
 		if (isset($email))
 			$user->setEmail($email);
 		if (isset($phone))
@@ -349,7 +349,7 @@ class LDAPAuthPlugin extends AuthPlugin {
 		if ($user->getLastName())
 			$attr['sn'] = $user->getLastName();
 		if ($user->getAffiliation())
-			$attr['organizationName'] = $user->getAffiliation();
+			$attr['organizationName'] = $user->getAffiliation(Locale::getLocale());
 		if ($user->getEmail())
 			$attr['mail'] = $user->getEmail();
 		if ($user->getPhone())

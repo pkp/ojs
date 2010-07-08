@@ -50,7 +50,7 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 		$authors = $article->getAuthors();
 		for ($i = 0, $num = count($authors); $i < $num; $i++) {
 			$authorName = $authors[$i]->getFullName(true);
-			$affiliation = $authors[$i]->getAffiliation();
+			$affiliation = $authors[$i]->getLocalizedAffiliation();
 			if (!empty($affiliation)) {
 				$authorName .= '; ' . $affiliation;
 			}

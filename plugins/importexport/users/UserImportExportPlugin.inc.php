@@ -136,7 +136,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
 					$newUser->setFax(Request::getUserVar($i.'_fax'));
 					$newUser->setPhone(Request::getUserVar($i.'_phone'));
 					$newUser->setUrl(Request::getUserVar($i.'_url'));
-					$newUser->setAffiliation(Request::getUserVar($i.'_affiliation'));
+					$newUser->setAffiliation(Request::getUserVar($i.'_affiliation'), null);
 					$newUser->setGender(Request::getUserVar($i.'_gender'));
 					$newUser->setInitials(Request::getUserVar($i.'_initials'));
 					$newUser->setSalutation(Request::getUserVar($i.'_salutation'));

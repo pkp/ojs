@@ -162,7 +162,10 @@ class ArticleSearchIndex {
 			array_push($authorText, $author->getFirstName());
 			array_push($authorText, $author->getMiddleName());
 			array_push($authorText, $author->getLastName());
-			array_push($authorText, $author->getAffiliation());
+			$affiliations = $author->getAffiliation(null);
+			if (is_array($affiliations)) foreach ($affiliations as $affiliation) { // Localized
+				array_push($authorText, $affiliation);
+			}
 			$bios = $author->getBiography(null);
 			if (is_array($bios)) foreach ($bios as $bio) { // Localized
 				array_push($authorText, strip_tags($bio));
