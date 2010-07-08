@@ -134,7 +134,7 @@ function confirmAndPrompt(userId) {
 		</td>
 		<td align="right">
 			{if $roleId}
-			<a href="{url op="unEnroll" path=$roleId userId=$user->getId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.people.confirmUnenroll"}')" class="action">{translate key="manager.people.unenroll"}</a>&nbsp;|
+			<a href="{url op="unEnroll" path=$roleId userId=$user->getId() journalId=$currentJournal->getId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.people.confirmUnenroll"}')" class="action">{translate key="manager.people.unenroll"}</a>&nbsp;|
 			{/if}
 			<a href="{url op="editUser" path=$user->getId()}" class="action">{translate key="common.edit"}</a>
 			{if $thisUser->getId() != $user->getId()}

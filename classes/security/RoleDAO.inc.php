@@ -112,10 +112,14 @@ class RoleDAO extends DAO {
 	 */
 	function &getRolesByUserId($userId, $journalId = null) {
 		$roles = array();
+		$params = array((int) $userId);
+		if ($journalId !== null) $params[] = (int) $journalId;
 
 		$result =& $this->retrieve(
-			'SELECT * FROM roles WHERE user_id = ?' . (isset($journalId) ? ' AND journal_id = ?' : ''),
-			isset($journalId) ? array((int) $userId, (int) $journalId) : ((int) $userId)
+			'SELECT * FROM roles WHERE user_id = ?
+			' . (isset($journalId) ? ' AND journal_id = ?' : '') . '
+			ORDER BY journal_id',
+			$params
 		);
 
 		while (!$result->EOF) {

@@ -124,10 +124,31 @@
 <div id="enrollment>">
 <h4>{translate key="manager.people.enrollment"}</h4>
 
-<ul>
 {section name=role loop=$userRoles}
-	<li>{translate key=$userRoles[role]->getRoleName()} <a href="{url op="unEnroll" path=$userRoles[role]->getRoleId() userId=$user->getId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.people.confirmUnenroll"}')" class="action">{translate key="manager.people.unenroll"}</a></li>
+	{assign var=roleJournalId value=$userRoles[role]->getJournalId()}
+	{if $isSiteAdmin && $lastJournalTitle != $journalTitles[$roleJournalId]}
+		{if $notFirstRole}
+			</ul>
+		{/if}
+		{assign var=lastJournalTitle value=$journalTitles[$roleJournalId]}
+		<h3>{$lastJournalTitle}</h3>
+		{if $notFirstRole}
+			<ul>
+		{/if}
+	{/if}
+	{if !$notFirstRole}
+		<ul>
+		{assign var=notFirstRole value=1}
+	{/if}
+	<li>
+		{translate key=$userRoles[role]->getRoleName()}
+		{if $userRoles[role]->getRoleId() != $smarty.const.ROLE_ID_SITE_ADMIN}
+			<a href="{url op="unEnroll" path=$userRoles[role]->getRoleId() userId=$user->getId() journalId=$userRoles[role]->getJournalId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.people.confirmUnenroll"}')" class="action">{translate key="manager.people.unenroll"}</a>
+		{/if}
+	</li>
 {/section}
-</ul>
+{if $notFirstRole}
+	</ul>
+{/if}
 </div>
 {include file="common/footer.tpl"}

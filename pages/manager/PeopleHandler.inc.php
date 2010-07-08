@@ -9,7 +9,7 @@
  * @class PeopleHandler
  * @ingroup pages_manager
  *
- * @brief Handle requests for people management functions. 
+ * @brief Handle requests for people management functions.
  */
 
 // $Id$
@@ -28,7 +28,7 @@ class PeopleHandler extends ManagerHandler {
 	/**
 	 * Display list of people in the selected role.
 	 * @param $args array first parameter is the role ID to display
-	 */	
+	 */
 	function people($args) {
 		$this->validate();
 		$this->setupTemplate(true);
@@ -37,7 +37,7 @@ class PeopleHandler extends ManagerHandler {
 
 		if (Request::getUserVar('roleSymbolic')!=null) $roleSymbolic = Request::getUserVar('roleSymbolic');
 		else $roleSymbolic = isset($args[0])?$args[0]:'all';
-		
+
 		$sort = Request::getUserVar('sort');
 		$sort = isset($sort) ? $sort : 'name';
 		$sortDirection = Request::getUserVar('sortDirection');
@@ -168,7 +168,7 @@ class PeopleHandler extends ManagerHandler {
 
 		$roleId = (int)(isset($args[0])?$args[0]:Request::getUserVar('roleId'));
 		$journal =& $journalDao->getJournalByPath(Request::getRequestedJournalPath());
-		
+
 		$sort = Request::getUserVar('sort');
 		$sort = isset($sort) ? $sort : 'name';
 		$sortDirection = Request::getUserVar('sortDirection');
@@ -289,15 +289,16 @@ class PeopleHandler extends ManagerHandler {
 	 * Unenroll a user from a role.
 	 */
 	function unEnroll($args) {
-		$roleId = isset($args[0])?$args[0]:0;
+		$roleId = (int) array_shift($args);
+		$journalId = (int) Request::getUserVar('journalId');
+		$userId = (int) Request::getUserVar('userId');
+
 		$this->validate();
 
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journal =& $journalDao->getJournalByPath(Request::getRequestedJournalPath());
-
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		if ($roleId != $roleDao->getRoleIdFromPath('admin')) {
-			$roleDao->deleteRoleByUserId(Request::getUserVar('userId'), $journal->getId(), $roleId);
+		$journal =& Request::getJournal();
+		if ($roleId != ROLE_ID_SITE_ADMIN && (Validation::isSiteAdmin() || $journalId = $journal->getId())) {
+			$roleDao =& DAORegistry::getDAO('RoleDAO');
+			$roleDao->deleteRoleByUserId($userId, $journalId, $roleId);
 		}
 
 		Request::redirect(null, null, 'people', $roleDao->getRolePath($roleId) . 's');
@@ -445,7 +446,7 @@ class PeopleHandler extends ManagerHandler {
 		foreach ($oldUserIds as $oldUserId) {
 			if (!Validation::canAdminister($journalId, $oldUserId)) $canAdministerAll = false;
 		}
-		
+
 		if (
 			(!empty($oldUserIds) && !$canAdministerAll) ||
 			(!empty($newUserId) && !Validation::canAdminister($journalId, $newUserId))
@@ -479,7 +480,7 @@ class PeopleHandler extends ManagerHandler {
 			$roleId = 0;
 			$roleName = 'manager.people.allUsers';
 		}
-		
+
 		$sort = Request::getUserVar('sort');
 		$sort = isset($sort) ? $sort : 'name';
 		$sortDirection = Request::getUserVar('sortDirection');
@@ -705,12 +706,22 @@ class PeopleHandler extends ManagerHandler {
 			$templateMgr->assign('backLink', Request::url(null, null, 'people', 'all'));
 			$templateMgr->assign('backLinkLabel', 'manager.people.allUsers');
 			$templateMgr->display('common/error.tpl');
-
 		} else {
 			$site =& Request::getSite();
 			$journal =& Request::getJournal();
+
+			$isSiteAdmin = Validation::isSiteAdmin();
+			$templateMgr->assign('isSiteAdmin', $isSiteAdmin);
 			$roleDao =& DAORegistry::getDAO('RoleDAO');
-			$roles =& $roleDao->getRolesByUserId($user->getId(), $journal->getId());
+			$roles =& $roleDao->getRolesByUserId($user->getId(), $isSiteAdmin?null:$journal->getId());
+			$templateMgr->assign_by_ref('userRoles', $roles);
+			if ($isSiteAdmin) {
+				// We'll be displaying all roles, so get ready to display
+				// journal names other than the current journal.
+				$journalDao =& DAORegistry::getDAO('JournalDAO');
+				$journalTitles =& $journalDao->getJournalTitles();
+				$templateMgr->assign_by_ref('journalTitles', $journalTitles);
+			}
 
 			$countryDao =& DAORegistry::getDAO('CountryDAO');
 			$country = null;
@@ -720,7 +731,6 @@ class PeopleHandler extends ManagerHandler {
 			$templateMgr->assign('country', $country);
 
 			$templateMgr->assign_by_ref('user', $user);
-			$templateMgr->assign_by_ref('userRoles', $roles);
 			$templateMgr->assign('localeNames', Locale::getAllLocales());
 			$templateMgr->display('manager/people/userProfile.tpl');
 		}
