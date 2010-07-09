@@ -77,12 +77,12 @@ class AuthorDAO extends PKPAuthorDAO {
 				aa.submission_id
 			FROM	authors aa
 				LEFT JOIN articles a ON (aa.submission_id = a.article_id)
-				LEFT JOIN author_settings as ON (as.author_id = aa.author_id AND as.setting_name = ?)
+				LEFT JOIN author_settings asl ON (asl.author_id = aa.author_id AND asl.setting_name = ?)
 			WHERE	aa.first_name = ?
 				AND a.status = ' . STATUS_PUBLISHED . '
 				AND (aa.middle_name = ?' . (empty($middleName)?' OR aa.middle_name IS NULL':'') . ')
 				AND aa.last_name = ?
-				AND (as.setting_value = ?' . (empty($affiliation)?' OR as.setting_value IS NULL':'') . ')
+				AND (asl.setting_value = ?' . (empty($affiliation)?' OR asl.setting_value IS NULL':'') . ')
 				AND (aa.country = ?' . (empty($country)?' OR aa.country IS NULL':'') . ') ' .
 				($journalId!==null?(' AND a.journal_id = ?'):''),
 			$params
@@ -118,7 +118,10 @@ class AuthorDAO extends PKPAuthorDAO {
 	 */
 	function &getAuthorsAlphabetizedByJournal($journalId = null, $initial = null, $rangeInfo = null, $includeEmail = false) {
 		$authors = array();
-		$params = array();
+		$params = array(
+			'affiliation', Locale::getPrimaryLocale(),
+			'affiliation', Locale::getLocale()
+		);
 
 		if (isset($journalId)) $params[] = $journalId;
 		if (isset($initial)) {
@@ -136,14 +139,18 @@ class AuthorDAO extends PKPAuthorDAO {
 				' . ($includeEmail?'aa.email AS email,':'CAST(\'\' AS CHAR) AS email,') . '
 				0 AS primary_contact,
 				0 AS seq,
-				aa.first_name AS first_name,
-				aa.middle_name AS middle_name,
-				aa.last_name AS last_name,
-				as.setting_value AS affiliation,
+				aa.first_name,
+				aa.middle_name,
+				aa.last_name,
+				asl.setting_value AS affiliation_l,
+				asl.locale,
+				aspl.setting_value AS affiliation_pl,
+				aspl.locale AS primary_locale,
 				aa.country
 			FROM	authors aa
-				LEFT JOIN author_settings AS on (aa.author_id = as.author_id AND as.setting_name = ?)
-				LEFT JOIN articles a ON (a.article_id = as.article_id)
+				LEFT JOIN author_settings aspl ON (aa.author_id = aspl.author_id AND aspl.setting_name = ? AND aspl.locale = ?)
+				LEFT JOIN author_settings asl ON (aa.author_id = asl.author_id AND asl.setting_name = ? AND asl.locale = ?)
+				LEFT JOIN articles a ON (a.article_id = aa.submission_id)
 				LEFT JOIN published_articles pa ON (pa.article_id = a.article_id)
 				LEFT JOIN issues i ON (pa.issue_id = i.issue_id)
 			WHERE	i.published = 1 AND
@@ -154,11 +161,11 @@ class AuthorDAO extends PKPAuthorDAO {
 				(aa.last_name IS NOT NULL AND aa.last_name <> \'\')' .
 				$initialSql . '
 			ORDER BY aa.last_name, aa.first_name',
-			empty($params)?false:$params,
+			$params,
 			$rangeInfo
 		);
 
-		$returner = new DAOResultFactory($result, $this, '_returnAuthorFromRow');
+		$returner = new DAOResultFactory($result, $this, '_returnSimpleAuthorFromRow');
 		return $returner;
 	}
 
