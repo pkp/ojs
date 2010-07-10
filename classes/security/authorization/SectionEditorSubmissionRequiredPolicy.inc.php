@@ -1,0 +1,56 @@
+<?php
+/**
+ * @file classes/security/authorization/SectionEditorSubmissionRequiredPolicy.inc.php
+ *
+ * Copyright (c) 2000-2010 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @class SectionEditorSubmissionRequiredPolicy
+ * @ingroup security_authorization
+ *
+ * @brief Policy that ensures that the request contains a valid section
+ *  editor submission.
+ */
+
+import('lib.pkp.classes.security.authorization.SubmissionRequiredPolicy');
+
+class SectionEditorSubmissionRequiredPolicy extends SubmissionRequiredPolicy {
+	/**
+	 * Constructor
+	 * @param $request PKPRequest
+	 */
+	function SectionEditorSubmissionRequiredPolicy(&$request, &$args, $submissionParameterName = 'articleId') {
+		parent::SubmissionRequiredPolicy($request, $args, $submissionParameterName, 'Invalid section editor submission or no section editor submission requested!');
+	}
+
+	//
+	// Implement template methods from AuthorizationPolicy
+	//
+	/**
+	 * @see AuthorizationPolicy::effect()
+	 */
+	function effect() {
+		// Get the article id.
+		$articleId = $this->getSubmissionId();
+		if ($articleId === false) return AUTHORIZATION_DENY;
+
+		// Validate the article id.
+		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+		if (!is_a($sectionEditorSubmission, 'SectionEditorSubmission')) return AUTHORIZATION_DENY;
+
+		// Check whether the article is actually part of the journal
+		// in the context.
+		$request =& $this->getRequest();
+		$router =& $request->getRouter();
+		$journal =& $router->getContext($request);
+		if (!is_a($journal, 'Journal')) return AUTHORIZATION_DENY;
+		if ($sectionEditorSubmission->getJournalId() != $journal->getId()) return AUTHORIZATION_DENY;
+
+		// Save the article to the authorization context.
+		$this->addAuthorizedContextObject(ASSOC_TYPE_ARTICLE, $sectionEditorSubmission);
+		return AUTHORIZATION_PERMIT;
+	}
+}
+
+?>

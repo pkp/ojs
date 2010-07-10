@@ -24,34 +24,23 @@ class FilterGridHandler extends PKPFilterGridHandler {
 	 */
 	function FilterGridHandler() {
 		parent::PKPFilterGridHandler();
+		$this->addRoleAssignment(
+				ROLE_ID_JOURNAL_MANAGER,
+				array('fetchGrid', 'addFilter', 'editFilter', 'updateFilter', 'deleteFilter'));
 	}
 
 
 	//
-	// Overridden methods from PKPHandler
+	// Implement template methods from PKPHandler
 	//
 	/**
-	 * OJS-specific authorization and validation checks
-	 *
-	 * Checks whether the user is the assigned manager for
-	 * the filter grid's context (=journal).
-	 *
-	 * @see PKPHandler::validate()
+	 * @see PKPHandler::authorize()
 	 */
-	function validate($requiredContexts, &$request) {
-		// Retrieve the request context
-		$router =& $request->getRouter();
-		$journal =& $router->getContext($request);
+	function authorize(&$request, &$args, $roleAssignments) {
+		// Make sure the user can change the journal setup.
+		import('classes.security.authorization.OjsJournalSetupPolicy');
+		$this->addPolicy(new OjsJournalSetupPolicy($request));
 
-		// 1) We need a journal
-		$this->addCheck(new HandlerValidatorJournal($this, false, 'No journal in context!'));
-
-		// 2) Only journal managers or site administrators may access
-		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_SITE_ADMIN, ROLE_ID_JOURNAL_MANAGER)));
-
-		// Execute application-independent checks
-		if (!parent::validate($requiredContexts, $request, $journal)) return false;
-
-		return true;
+		return parent::authorize($request, $args, $roleAssignments);
 	}
 }
