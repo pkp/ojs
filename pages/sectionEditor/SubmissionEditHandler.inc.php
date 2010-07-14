@@ -375,6 +375,39 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->addJavaScript('lib/pkp/js/lib/jquery/plugins/validate/jquery.validate.min.js');
 		$templateMgr->addJavaScript('lib/pkp/js/jqueryValidatorI18n.js');
 
+
+		// Check whether the citation editor requirements are complete.
+		// 1) journal setting.
+		$citationEditorConfigurationError = null;
+		$journal =& $router->getContext($request);
+		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		$journalSettings = $journalSettingsDao->getJournalSettings($journal->getId());
+		if (!$journalSettings['metaCitations']) {
+			$citationEditorConfigurationError = 'submission.citations.pleaseSetup';
+		}
+
+		// 2) PHP5 availability.
+		if (!$citationEditorConfigurationError && !checkPhpVersion('5.0.0')) {
+			$citationEditorConfigurationError = 'submission.citations.php5Required';
+		}
+
+		// 3) At least one citation parser is available.
+		$filterDao =& DAORegistry::getDAO('FilterDAO');
+		$inputSample = 'arbitrary strings';
+		import('lib.pkp.classes.metadata.MetadataDescription');
+		$outputSample = new MetadataDescription('lib.pkp.classes.metadata.nlm.NlmCitationSchema', ASSOC_TYPE_CITATION);
+		$configuredCitationParsers =& $filterDao->getCompatibleObjects($inputSample, $outputSample);
+		if (!$citationEditorConfigurationError && !count($configuredCitationParsers)) {
+			$citationEditorConfigurationError = 'submission.citations.pleaseAddParserFilter';
+		}
+
+		// 4) A citation output filter has been set.
+		if (!$citationEditorConfigurationError && !($journalSettings['metaCitationOutputFilterId'] > 0)) {
+			$citationEditorConfigurationError = 'submission.citations.pleaseConfigureOutputStyle';
+		}
+
+		$templateMgr->assign('citationEditorConfigurationError', $citationEditorConfigurationError);
+
 		// Add the grid URL
 		$dispatcher =& $this->getDispatcher();
 		$citationGridUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.citation.CitationGridHandler', 'fetchGrid', null, array('assocId' => $articleId));
@@ -383,12 +416,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		// Add the submission
 		$submission =& $this->submission;
 		$templateMgr->assign_by_ref('submission', $submission);
-
-		// Add the journal settings
-		$journal =& $router->getContext($request);
-		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-		$journalSettings = $journalSettingsDao->getJournalSettings($journal->getId());
-		$templateMgr->assign_by_ref('journalSettings', $journalSettings);
 
 		// Display the page
 		$templateMgr->display('sectionEditor/submissionCitations.tpl');

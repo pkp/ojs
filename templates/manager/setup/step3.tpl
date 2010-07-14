@@ -36,6 +36,7 @@
 	<textarea name="authorGuidelines[{$formLocale|escape}]" id="authorGuidelines" rows="12" cols="60" class="textArea">{$authorGuidelines[$formLocale]|escape}</textarea>
 </p>
 
+<a name="metaCitationEditing"></a>
 <p>{translate key="manager.setup.metaCitationsDescription"}</p>
 <table width="100%" class="data">
 	<tr valign="top">

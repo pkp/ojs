@@ -70,16 +70,7 @@ class JournalSetupStep3Form extends JournalSetupForm {
 	 * @param $dispatcher Dispatcher
 	 */
 	function display(&$request, &$dispatcher) {
-		import('classes.mail.MailTemplate');
-		$mail = new MailTemplate('SUBMISSION_ACK');
-		if ($mail->isEnabled()) {
-			$templateMgr =& TemplateManager::getManager($request);
-			$templateMgr->assign('submissionAckEnabled', true);
-		}
-
-		//
-		// Citation editor filter configuration
-		//
+		$templateMgr =& TemplateManager::getManager($request);
 		// Add extra style sheets required for ajax components
 		// FIXME: Must be removed after OMP->OJS backporting
 		$templateMgr->addStyleSheet($request->getBaseUrl().'/styles/ojs.css');
@@ -91,13 +82,20 @@ class JournalSetupStep3Form extends JournalSetupForm {
 		$templateMgr->addJavaScript('lib/pkp/js/lib/jquery/plugins/validate/jquery.validate.min.js');
 		$templateMgr->addJavaScript('lib/pkp/js/jqueryValidatorI18n.js');
 
-		// Add the filter grid URLs
+		import('classes.mail.MailTemplate');
+		$mail = new MailTemplate('SUBMISSION_ACK');
+		if ($mail->isEnabled()) {
+			$templateMgr->assign('submissionAckEnabled', true);
+		}
+
+		// Citation editor filter configuration
+		// 1) Add the filter grid URLs
 		$parserFilterGridUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.filter.ParserFilterGridHandler', 'fetchGrid');
 		$templateMgr->assign('parserFilterGridUrl', $parserFilterGridUrl);
 		$lookupFilterGridUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.filter.LookupFilterGridHandler', 'fetchGrid');
 		$templateMgr->assign('lookupFilterGridUrl', $lookupFilterGridUrl);
 
-		// Create a list of all available citation output filters.
+		// 2) Create a list of all available citation output filters.
 		import('lib.pkp.classes.metadata.MetadataDescription');
 		$inputSample = new MetadataDescription('lib.pkp.classes.metadata.nlm.NlmCitationSchema', ASSOC_TYPE_CITATION);
 		$outputSample = 'any string';
