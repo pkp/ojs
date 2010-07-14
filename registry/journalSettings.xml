@@ -88,6 +88,22 @@
 			</array>
 		</value>
 	</setting>
+	<setting type="object" locale="0">
+		<name>supportedFormLocales</name>
+		<value>
+			<array>
+				<element>{$primaryLocale}</element>
+			</array>
+		</value>
+	</setting>
+	<setting type="object" locale="0">
+		<name>supportedSubmissionLocales</name>
+		<value>
+			<array>
+				<element>{$primaryLocale}</element>
+			</array>
+		</value>
+	</setting>
 	<setting type="object" locale="1">
 		<name>submissionChecklist</name>
 		<value>
