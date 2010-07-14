@@ -18,8 +18,11 @@ class OjsSubmissionEditingPolicy extends OjsJournalPolicy {
 	/**
 	 * Constructor
 	 * @param $request PKPRequest
+	 * @param $args array
+	 * @param $roleAssignments array
+	 * @param $submissionParameterName string
 	 */
-	function OjsSubmissionEditingPolicy(&$request, &$args, $submissionParameterName = 'articleId') {
+	function OjsSubmissionEditingPolicy(&$request, &$args, $roleAssignments, $submissionParameterName = 'articleId') {
 		parent::OjsJournalPolicy($request);
 
 		// Editorial components can only be called if there's a
@@ -35,16 +38,16 @@ class OjsSubmissionEditingPolicy extends OjsJournalPolicy {
 		//
 		// Editor role
 		//
-		// Editors can access all operations for all submissions.
-		$editorialRolePolicy->addPolicy(new RoleBasedHandlerOperationPolicy($request, ROLE_ID_EDITOR));
+		// Editors can access all remote operations for all submissions.
+		$editorialRolePolicy->addPolicy(new RoleBasedHandlerOperationPolicy($request, ROLE_ID_EDITOR, $roleAssignments[ROLE_ID_EDITOR]));
 
 
 		//
 		// Section editor role
 		//
-		// 1) Series editors can access all operations ...
+		// 1) Series editors can access all remote operations ...
 		$sectionEditorPolicy = new PolicySet(COMBINING_DENY_OVERRIDES);
-		$sectionEditorPolicy->addPolicy(new RoleBasedHandlerOperationPolicy($request, ROLE_ID_SECTION_EDITOR));
+		$sectionEditorPolicy->addPolicy(new RoleBasedHandlerOperationPolicy($request, ROLE_ID_SECTION_EDITOR, $roleAssignments[ROLE_ID_SECTION_EDITOR]));
 
 		// 2) ... but only if the requested submission has been explicitly assigned to them.
 		import('classes.security.authorization.SectionSubmissionAssignmentPolicy');

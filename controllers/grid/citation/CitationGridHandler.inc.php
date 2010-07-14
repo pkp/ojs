@@ -39,8 +39,7 @@ class CitationGridHandler extends PKPCitationGridHandler {
 	function authorize(&$request, &$args, $roleAssignments) {
 		// Make sure the user can edit the submission in the request.
 		import('classes.security.authorization.OjsSubmissionEditingPolicy');
-		$this->addPolicy(new OjsSubmissionEditingPolicy($request, $args, 'assocId'));
-
+		$this->addPolicy(new OjsSubmissionEditingPolicy($request, $args, $roleAssignments, 'assocId'));
 		return parent::authorize($request, $args, $roleAssignments);
 	}
 
@@ -51,7 +50,7 @@ class CitationGridHandler extends PKPCitationGridHandler {
 	function initialize(&$request) {
 		// Associate the citation editor with the authorized article.
 		$this->setAssocType(ASSOC_TYPE_ARTICLE);
-		$article =& $this->getAuthorizationContextObject(ASSOC_TYPE_ARTICLE);
+		$article =& $this->getAuthorizedContextObject(ASSOC_TYPE_ARTICLE);
 		assert(is_a($article, 'Article'));
 		$this->setAssocObject($article);
 
