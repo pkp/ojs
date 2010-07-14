@@ -250,7 +250,7 @@ class SectionEditorAction extends Action {
 						'reviewerUsername' => $reviewer->getUsername(),
 						'reviewerPassword' => $reviewer->getPassword(),
 						'editorialContactSignature' => $user->getContactSignature(),
-						'reviewGuidelines' => $journal->getLocalizedSetting('reviewGuidelines'),
+						'reviewGuidelines' => String::html2utf(strip_tags($journal->getLocalizedSetting('reviewGuidelines'))),
 						'submissionReviewUrl' => $submissionUrl,
 						'abstractTermIfEnabled' => ($sectionEditorSubmission->getLocalizedAbstract() == ''?'':Locale::translate('article.abstract')),
 						'passwordResetUrl' => Request::url(null, 'login', 'resetPassword', $reviewer->getUsername(), array('confirm' => Validation::generatePasswordResetHash($reviewer->getId())))
