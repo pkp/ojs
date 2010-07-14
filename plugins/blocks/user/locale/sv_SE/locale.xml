@@ -4,12 +4,12 @@
 <!--
   * locale.xml
   *
-  * Translated to sv_SV per@funke.com 2010-03-15
+  * Translated to sv_SE per@funke.com 2010-03-15
   *
   * Copyright (c) 2003-2009 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the sv_SV (Swedish) locale.
+  * Localization strings for the sv_SE (Swedish) locale.
   * Translation by per@funke.com 2009-11-27
   *
   * $Id: locale.xml,v 1.2.2.1 2009/04/08 19:43:11 asmecher Exp $

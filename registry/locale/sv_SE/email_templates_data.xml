@@ -16,7 +16,7 @@
 
 <data>
 	<table name="email_templates_default_data">
-		<field_default name="locale">sv_SV</field_default>
+		<field_default name="locale">sv_SE</field_default>
 
 		<!--
 		  *
