@@ -36,6 +36,7 @@
 	<textarea name="authorGuidelines[{$formLocale|escape}]" id="authorGuidelines" rows="12" cols="60" class="textArea">{$authorGuidelines[$formLocale]|escape}</textarea>
 </p>
 
+<p>{translate key="manager.setup.metaCitationsDescription"}</p>
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="5%" class="label">
@@ -46,8 +47,11 @@
 	</tr>
 </table>
 <div id="citationFilterSetupToggle" {if !$metaCitations}style="visible: none"{/if}>
+	<p>{translate key="manager.setup.citationFilterParserDescription"}</p>
 	{load_div id="parserFilterGridContainer" loadMessageId="manager.setup.filter.parser.grid.loadMessage" url="$parserFilterGridUrl"}
+	<p>{translate key="manager.setup.citationFilterLookupDescription"}</p>
 	{load_div id="lookupFilterGridContainer" loadMessageId="manager.setup.filter.lookup.grid.loadMessage" url="$lookupFilterGridUrl"}
+	<p>{translate key="manager.setup.citationOutputStyleDescription"}</p>
 	{fbvSelect id="metaCitationOutputFilterSelect" name="metaCitationOutputFilterId"
 			from=$metaCitationOutputFilters translate=false selected=$metaCitationOutputFilterId|escape
 			defaultValue="-1" defaultLabel="manager.setup.filter.pleaseSelect"|translate}
