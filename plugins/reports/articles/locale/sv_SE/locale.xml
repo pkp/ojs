@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id: locale.xml,v 1.1.2.1 2009/04/08 19:43:26 asmecher Exp $
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.reports.articles.displayName">Artikelrapport.  (Högerklicka, välj 'Spara som...', starta Excel 2003, välj 'Öppna fil' el. Excel 2007, välj 'Data', 'Externa data', 'Textfil')</message>
+	<message key="plugins.reports.articles.description">Det här tillägssprogrammet skapar en kommaseparerad lista för import till Excel..</message>
+	<message key="plugins.reports.articles.nodecision">Inget beslut</message>
+</locale>
