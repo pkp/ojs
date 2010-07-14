@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id: locale.xml,v 1.2.2.1 2009/04/08 19:43:10 asmecher Exp $
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.block.navigation.displayName">Navigationblock</message>
+	<message key="plugins.block.navigation.description">Det här tillägget skapar en navigationslänk i en sidoram</message>
+	<message key="plugins.block.navigation.journalContent">Publikationens innehåll</message>
+</locale>

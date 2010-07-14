@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * LDAP authentication plugin localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id: locale.xml,v 1.6.2.1 2009/04/08 19:43:08 asmecher Exp $
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.auth.ldap.displayName">LDAP</message>
+	<message key="plugins.auth.ldap.description">Detta tillägg ger möjligheter till autentisering ock synkronisering av användrakonton mot en extern LDAP-server.</message>
+	
+	<message key="plugins.auth.ldap.settings">LDAP inställningars</message>
+	<message key="plugins.auth.ldap.settings.hostname">Servernamn</message>
+	<message key="plugins.auth.ldap.settings.hostname.description">t. ex.., "ldap.example.com", eller "ldaps://ldap.example.com" (för säker överföring [SSL])</message>
+	<message key="plugins.auth.ldap.settings.port">Serverport (Normalt 389 och säker kommunikation [LDAPS] 636)</message>
+	<message key="plugins.auth.ldap.settings.port.description">Valfritt. Standardvärde 389 (LDAP) ellerr 636 (LDAP over SSL)</message>
+	<message key="plugins.auth.ldap.settings.basedn">Bas DN</message>
+	<message key="plugins.auth.ldap.settings.basedn.description">E.g., "ou=people,dc=example,dc=com"</message>
+	<message key="plugins.auth.ldap.settings.managerdn">Manager DN</message>
+	<message key="plugins.auth.ldap.settings.managerdn.description">E.g., "cn=Manager,dc=example,dc=com"</message>
+	<message key="plugins.auth.ldap.settings.managerpwd">Manager lösenord</message>
+	<message key="plugins.auth.ldap.settings.managerpwd.description">Manager DN och lösenord är bara nödvändiga om användarprofil/-lösenord synkrinisering behövs eller mööjlighet att skapa användare i  LDAP-katalogen är konfigurerad</message>
+	<message key="plugins.auth.ldap.settings.uid">Kontots namn attribut</message>
+	<message key="plugins.auth.ldap.settings.uid.description">Attribut som unikt kan identiffiera ett anvndarobjekt såsom UID ellerCN eller sAMAccountName</message>
+	<message key="plugins.auth.ldap.settings.pwhash">Lösenordskryptering</message>
+	<message key="plugins.auth.ldap.settings.pwhash.description">Hash format för lösenord som sparas på servern. SSHa rekommenderas (Kräver PHP > 4.3.0)</message>
+	<message key="plugins.auth.ldap.settings.saslopt">SASL inställningar (frivilligt)</message>
+	<message key="plugins.auth.ldap.settings.sasl">Använd SASL istället för "simple authentication" (Kräver PHP >= 5)</message>
+	<message key="plugins.auth.ldap.settings.saslmech">SASL mekanism</message>
+	<message key="plugins.auth.ldap.settings.saslmech.description">T. ex., "DIGEST-MD5"</message>
+	<message key="plugins.auth.ldap.settings.saslrealm">"Realm"/Domän</message>
+	<message key="plugins.auth.ldap.settings.saslauthzid">Efterfrågat auktorisations-ID</message>
+	<message key="plugins.auth.ldap.settings.saslprop">SASL säkehetsegenskaper</message>
+</locale>

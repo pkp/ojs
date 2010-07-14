@@ -193,4 +193,6 @@
 	<message key="editor.article.coverPage">Omslagsbild</message>
 	<message key="editor.article.coverPageInstructions">(Tillåtna format: .gif, .jpg, eller .png )</message>
 	<message key="editor.article.uploaded">Uppladdad</message>
+	<message key="editor.submissionReview.cannotSendToCopyediting">Innan du skickar manuskriptet för redigering, kontrollera att det finns tillgängliga granskare och att författaren meddelas om granskning med hjälp av Meddela Författaren-länken ovan.</message>
+	<message key="editor.article.sendFileToCopyedit">Välj fil för Manusredigering</message>
 </locale>
