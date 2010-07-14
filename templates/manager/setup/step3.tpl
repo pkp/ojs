@@ -59,12 +59,24 @@
 </div>
 {literal}<script type='text/javascript'>
 	$(function(){
-		$('#metaCitations').change(function(){
-			checkbox = $(this).attr('checked');
-			$filterSetupBox = $('#citationFilterSetupToggle');
-			toggleState = ($filterSetupBox.css('display') === 'block');
-			if (checkbox !== toggleState) {
-				$filterSetupBox.toggle(300);
+		// jQuerify DOM elements
+		$metaCitationsCheckbox = $('#metaCitations');
+		$metaCitationsSetupBox = $('#citationFilterSetupToggle');
+		
+		// Set the initial state
+		initialCheckboxState = $metaCitationsCheckbox.attr('checked');
+		if (initialCheckboxState) {
+			$metaCitationsSetupBox.css('display', 'block');
+		} else {
+			$metaCitationsSetupBox.css('display', 'none');
+		}
+		
+		// Toggle the settings box
+		$metaCitationsCheckbox.change(function(){
+			checkboxState = $metaCitationsCheckbox.attr('checked');
+			toggleState = ($metaCitationsSetupBox.css('display') === 'block');
+			if (checkboxState !== toggleState) {
+				$metaCitationsSetupBox.toggle(300);
 			}
 		})
 	});	
