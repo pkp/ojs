@@ -760,7 +760,11 @@ class Upgrade extends Installer {
 			'lib.pkp.classes.citation.parser.freecite.FreeciteRawCitationNlmCitationSchemaFilter',
 			'lib.pkp.classes.citation.parser.paracite.ParaciteRawCitationNlmCitationSchemaFilter',
 			'lib.pkp.classes.citation.parser.parscit.ParscitRawCitationNlmCitationSchemaFilter',
-			'lib.pkp.classes.citation.parser.regex.RegexRawCitationNlmCitationSchemaFilter'
+			'lib.pkp.classes.citation.parser.regex.RegexRawCitationNlmCitationSchemaFilter',
+			'lib.pkp.classes.citation.output.abnt.NlmCitationSchemaAbntFilter',
+			'lib.pkp.classes.citation.output.apa.NlmCitationSchemaApaFilter',
+			'lib.pkp.classes.citation.output.mla.NlmCitationSchemaMlaFilter',
+			'lib.pkp.classes.citation.output.vancouver.NlmCitationSchemaVancouverFilter'
 		);
 		foreach($filtersToBeInstalled as $filterToBeInstalled) {
 			// Make sure that the filter template has not been
@@ -768,9 +772,20 @@ class Upgrade extends Installer {
 			$existingTemplates =& $filterDao->getObjectsByClass($filterToBeInstalled, true);
 			if ($existingTemplates->getCount()) continue;
 
+			// Install filter template.
 			$filter =& instantiate($filterToBeInstalled, 'Filter');
 			$filter->setIsTemplate(true);
 			$filterDao->insertObject($filter);
+
+			// Install citation output filter instances. We can do this
+			// as citation output filters do not need any configuration
+			// so far.
+			if (is_a($filter, 'NlmCitationSchemaCitationOutputFormatFilter')) {
+				$filter->setId(null);
+				$filter->setIsTemplate(false);
+				$filterDao->insertObject($filter);
+			}
+			unset($filter);
 		}
 
 		// The ISBN filter template is based on a composite filter
