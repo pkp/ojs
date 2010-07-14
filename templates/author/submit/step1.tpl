@@ -60,7 +60,7 @@
 
 {if count($supportedSubmissionLocaleNames) == 1}
 	{* There is only one supported submission locale; choose it invisibly *}
-	{foreach from=$supportedSubmissionLocaleNames item=locale}
+	{foreach from=$supportedSubmissionLocaleNames item=localeName key=locale}
 		<input type="hidden" name="locale" value="{$locale|escape}" />
 	{/foreach}
 {else}

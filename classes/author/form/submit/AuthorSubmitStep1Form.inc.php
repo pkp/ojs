@@ -32,7 +32,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 		$this->addCheck(new FormValidatorCustom($this, 'sectionId', 'required', 'author.submit.form.sectionRequired', array(DAORegistry::getDAO('SectionDAO'), 'sectionExists'), array($journal->getId())));
 
 		$supportedSubmissionLocales = $journal->getSetting('supportedSubmissionLocales');
-		if (!is_array($supportedSubmissionLocales) || count($supportedSubmissionLocales) < 1) $supportedSubmissionLocales = array($journal->getPrimaryLocale);
+		if (!is_array($supportedSubmissionLocales) || count($supportedSubmissionLocales) < 1) $supportedSubmissionLocales = array($journal->getPrimaryLocale());
 		$this->addCheck(new FormValidatorInSet($this, 'locale', 'required', 'author.submit.form.localeRequired', $supportedSubmissionLocales));
 	}
 
@@ -76,11 +76,13 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 		// Provide available submission languages. (Convert the array
 		// of locale symbolic names xx_XX into an associative array
 		// of symbolic names => readable names.)
+		$supportedSubmissionLocales = $journal->getSetting('supportedSubmissionLocales');
+		if (empty($supportedSubmissionLocales)) $supportedSubmissionLocales = array($journal->getPrimaryLocale());
 		$templateMgr->assign(
 			'supportedSubmissionLocaleNames',
 			array_flip(array_intersect(
 				array_flip(Locale::getAllLocales()),
-				$journal->getSetting('supportedSubmissionLocales')
+				$supportedSubmissionLocales
 			))
 		);
 
