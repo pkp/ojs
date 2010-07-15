@@ -769,29 +769,20 @@ class Upgrade extends Installer {
 		foreach($filtersToBeInstalled as $filterToBeInstalled) {
 			// Make sure that the filter template has not been
 			// installed before.
-			$existingTemplates =& $filterDao->getObjectsByClass($filterToBeInstalled, true);
+			$existingTemplates =& $filterDao->getObjectsByClass($filterToBeInstalled, 0, true);
 			if ($existingTemplates->getCount()) continue;
 
 			// Install filter template.
 			$filter =& instantiate($filterToBeInstalled, 'Filter');
 			$filter->setIsTemplate(true);
-			$filterDao->insertObject($filter);
-
-			// Install citation output filter instances. We can do this
-			// as citation output filters do not need any configuration
-			// so far.
-			if (is_a($filter, 'NlmCitationSchemaCitationOutputFormatFilter')) {
-				$filter->setId(null);
-				$filter->setIsTemplate(false);
-				$filterDao->insertObject($filter);
-			}
+			$filterDao->insertObject($filter, 0);
 			unset($filter);
 		}
 
 		// The ISBN filter template is based on a composite filter
 		// and needs to be instantiated differently.
 		$alreadyInstalled = false;
-		$existingTemplatesFactory =& $filterDao->getObjectsByClass('lib.pkp.classes.filter.GenericSequencerFilter', true);
+		$existingTemplatesFactory =& $filterDao->getObjectsByClass('lib.pkp.classes.filter.GenericSequencerFilter', 0, true);
 		$existingTemplates =& $existingTemplatesFactory->toArray();
 		foreach($existingTemplates as $existingTemplate) {
 			$subFilters =& $existingTemplate->getFilters();
@@ -820,7 +811,7 @@ class Upgrade extends Installer {
 			// so that the user only has to enter it once for both.
 			$isbndbFilter->addFilter($isbnToNlmFilter, array('apiKey' => array($nlmToIsbnFilter->getSeq(), 'apiKey')));
 
-			$filterDao->insertObject($isbndbFilter);
+			$filterDao->insertObject($isbndbFilter, 0);
 		}
 
 		return true;

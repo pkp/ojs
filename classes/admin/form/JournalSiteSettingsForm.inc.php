@@ -179,6 +179,17 @@ class JournalSiteSettingsForm extends Form {
 			$section->setHideTitle(false);
 			$sectionDao->insertSection($section);
 
+			// Instantiate citation output filters from templates.
+			import('lib.pkp.classes.metadata.MetadataDescription');
+			$inputSample = new MetadataDescription('lib.pkp.classes.metadata.nlm.NlmCitationSchema', ASSOC_TYPE_CITATION);
+			$outputSample = 'any string';
+			$filterDao =& DAORegistry::getDAO('FilterDAO');
+			$citationOutputFilters =& $filterDao->getCompatibleObjects($inputSample, $outputSample, 0, true);
+			foreach($citationOutputFilters as $citationOutputFilter) {
+				// Install filter instance.
+				$citationOutputFilter->setIsTemplate(false);
+				$filterDao->insertObject($citationOutputFilter, $journal->getId());
+			}
 		}
 		$journal->updateSetting('title', $this->getData('title'), 'string', true);
 		$journal->updateSetting('description', $this->getData('description'), 'string', true);

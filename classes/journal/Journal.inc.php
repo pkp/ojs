@@ -338,7 +338,7 @@ class Journal extends DataObject {
 	 */
 	function updateSetting($name, $value, $type = null, $isLocalized = false) {
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-		return $journalSettingsDao->updateSetting($this->getJournalId(), $name, $value, $type, $isLocalized);
+		return $journalSettingsDao->updateSetting($this->getId(), $name, $value, $type, $isLocalized);
 	}
 }
 

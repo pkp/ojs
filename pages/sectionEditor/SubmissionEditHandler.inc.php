@@ -396,7 +396,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$inputSample = 'arbitrary strings';
 		import('lib.pkp.classes.metadata.MetadataDescription');
 		$outputSample = new MetadataDescription('lib.pkp.classes.metadata.nlm.NlmCitationSchema', ASSOC_TYPE_CITATION);
-		$configuredCitationParsers =& $filterDao->getCompatibleObjects($inputSample, $outputSample);
+		$configuredCitationParsers =& $filterDao->getCompatibleObjects($inputSample, $outputSample, $journal->getId());
 		if (!$citationEditorConfigurationError && !count($configuredCitationParsers)) {
 			$citationEditorConfigurationError = 'submission.citations.pleaseAddParserFilter';
 		}
