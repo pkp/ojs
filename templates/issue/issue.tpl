@@ -23,6 +23,7 @@
 		<img src="{$coverPagePath|escape}{$article->getFileName($locale)|escape}"{if $article->getCoverPageAltText($locale) != ''} alt="{$article->getCoverPageAltText($locale)|escape}"{else} alt="{translate key="article.coverPage.altText"}"{/if}/></a></div>
 	</td>
 	{/if}
+	{call_hook name="Templates::Issue::Issue::ArticleCoverImage"}
 
 	{if $article->getLocalizedAbstract() == ""}
 		{assign var=hasAbstract value=0}

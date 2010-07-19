@@ -156,4 +156,7 @@ function sortSearch(heading, direction) {
 	{call_hook name="Templates::Editor::Index::Issues"}
 </ul>
 </div>
+
+{call_hook name="Templates::Editor::Index::AdditionalItems"}
+
 {include file="common/footer.tpl"}

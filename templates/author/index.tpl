@@ -26,4 +26,7 @@
 {url|assign:"submitUrl" op="submit"}
 {translate submitUrl=$submitUrl key="author.submit.startHereLink"}<br />
 </div>
+
+{call_hook name="Templates::Author::Index::AdditionalItems"}
+
 {include file="common/footer.tpl"}

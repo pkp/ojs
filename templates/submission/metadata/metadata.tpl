@@ -13,6 +13,7 @@
 
 {if $canEditMetadata}
 	<p><a href="{url op="viewMetadata" path=$submission->getArticleId()}" class="action">{translate key="submission.editMetadata"}</a></p>
+	{call_hook name="Templates::Submission::Metadata::Metadata::AdditionalEditItems"}
 {/if}
 
 <div id="authors">

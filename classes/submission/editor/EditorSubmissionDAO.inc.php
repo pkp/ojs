@@ -453,6 +453,32 @@ class EditorSubmissionDAO extends DAO {
 	}
 
 	/**
+	 * Get all submissions for a journal.
+	 * @param $journalId int
+	 * @param $sectionId int
+	 * @param $editorId int
+	 * @param $searchField int Symbolic SUBMISSION_FIELD_... identifier
+	 * @param $searchMatch string "is" or "contains" or "startsWith"
+	 * @param $search String to look in $searchField for
+	 * @param $dateField int Symbolic SUBMISSION_FIELD_DATE_... identifier
+	 * @param $dateFrom String date to search from
+	 * @param $dateTo String date to search to
+	 * @param $rangeInfo object
+	 * @return array EditorSubmission
+	 */
+	function &getEditorSubmissions($journalId, $sectionId, $editorId, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
+		$result =& $this->_getUnfilteredEditorSubmissions(
+			$journalId, $sectionId, $editorId,
+			$searchField, $searchMatch, $search,
+			$dateField, $dateFrom, $dateTo,
+			null,
+			$rangeInfo, $sortBy, $sortDirection
+		);
+		$returner = new DAOResultFactory($result, $this, '_returnEditorSubmissionFromRow');
+		return $returner;
+	}
+
+	/**
 	 * Function used for counting purposes for right nav bar
 	 */
 	function &getEditorSubmissionsCount($journalId) {

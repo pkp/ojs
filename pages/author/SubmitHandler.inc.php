@@ -150,6 +150,7 @@ class SubmitHandler extends AuthorHandler {
 
 			if (!isset($editData) && $submitForm->validate()) {
 				$articleId = $submitForm->execute();
+				HookRegistry::call('Author::SubmitHandler::saveSubmit', array(&$step, &$article, &$submitForm));
 
 				if ($step == 5) {
 					// Send a notification to associated users

@@ -84,6 +84,8 @@
 	<div class="separator"></div>
 {/if}
 
+{call_hook name="Templates::Author::Submit::Step5::AdditionalItems"}
+
 <p><input type="submit" value="{translate key="author.submit.finishSubmission"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="confirmAction('{url page="author"}', '{translate|escape:"jsparam" key="author.submit.cancelSubmission"}')" /></p>
 
 </form>
