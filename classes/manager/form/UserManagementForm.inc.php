@@ -346,7 +346,9 @@ class UserManagementForm extends Form {
 			// Add reviewer interests to interests table
 			$interestDao =& DAORegistry::getDAO('InterestDAO');
 			$interests = Request::getUserVar('interestsKeywords');
-			if (empty($interests)) $interests = array();
+			$interestsTextOnly = explode(",", str_replace("\"", "", Request::getUserVar('interests'))); // If JS is disabled, this will be the control to read
+			if (isset($interestsTextOnly) && !isset($interests)) $interests = $interestsTextOnly;
+			if (empty($interests))  $interests = array();
 			elseif (!is_array($interests)) $interests = array($interests);
 			$interestDao->insertInterests($interests, $userId, true);
 
