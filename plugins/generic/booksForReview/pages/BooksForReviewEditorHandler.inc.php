@@ -649,19 +649,16 @@ class BooksForReviewEditorHandler extends Handler {
 							$countries =& $countryDao->getCountries();
 							$userCountry = $countries[$userCountryCode];
 							$userMailingAddress .= "\n" . $userCountry;
-
-							$userMailingAddress = str_replace("<br />", "\n", $userMailingAddress);
-							$userMailingAddress = str_replace("<p>", "\n", $userMailingAddress);
 						}
 
 						$paramArray = array(
 							'authorName' => strip_tags($userName),
-							'authorMailingAddress' => strip_tags($userMailingAddress),
+							'authorMailingAddress' => String::html2text($userMailingAddress),
 							'bookForReviewTitle' => '"' . strip_tags($book->getLocalizedTitle()) . '"',
 							'bookForReviewDueDate' => date('l, F j, Y', $dueDateTimestamp),
 							'userProfileUrl' => $request->url(null, 'user', 'profile'),
 							'submissionUrl' => $request->url(null, 'author', 'submit'),
-							'editorialContactSignature' => strip_tags($book->getEditorContactSignature())
+							'editorialContactSignature' => String::html2text($book->getEditorContactSignature())
 						);
 
 						$email->addRecipient($userEmail, $userName);
@@ -736,7 +733,7 @@ class BooksForReviewEditorHandler extends Handler {
 						'authorName' => strip_tags($userFullName),
 						'bookForReviewTitle' => '"' . strip_tags($book->getLocalizedTitle()) . '"',
 						'submissionUrl' => $request->url(null, 'author', 'submit'),
-						'editorialContactSignature' => strip_tags($book->getEditorContactSignature())
+						'editorialContactSignature' => String::html2text($book->getEditorContactSignature())
 					);
 
 					$email->addRecipient($userEmail, $userFullName);
@@ -815,16 +812,14 @@ class BooksForReviewEditorHandler extends Handler {
 						$countries =& $countryDao->getCountries();
 						$userCountry = $countries[$userCountryCode];
 						$userMailingAddress .= "\n" . $userCountry;
-						$userMailingAddress = str_replace("<br />", "\n", $userMailingAddress);
-						$userMailingAddress = str_replace("<p>", "\n", $userMailingAddress);
 					}
 
 					$paramArray = array(
 						'authorName' => strip_tags($userFullName),
-						'authorMailingAddress' => strip_tags($userMailingAddress),
+						'authorMailingAddress' => String::html2text($userMailingAddress),
 						'bookForReviewTitle' => '"' . strip_tags($book->getLocalizedTitle()) . '"',
 						'submissionUrl' => $request->url(null, 'author', 'submit'),
-						'editorialContactSignature' => strip_tags($book->getEditorContactSignature())
+						'editorialContactSignature' => String::html2text($book->getEditorContactSignature())
 					);
 
 					$email->addRecipient($userEmail, $userFullName);
@@ -903,7 +898,7 @@ class BooksForReviewEditorHandler extends Handler {
 					$paramArray = array(
 						'authorName' => strip_tags($userFullName),
 						'bookForReviewTitle' => '"' . strip_tags($book->getLocalizedTitle()) . '"',
-						'editorialContactSignature' => strip_tags($book->getEditorContactSignature())
+						'editorialContactSignature' => String::html2text($book->getEditorContactSignature())
 					);
 
 					$email->addRecipient($userEmail, $userFullName);
