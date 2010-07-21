@@ -755,11 +755,10 @@ class PublishedArticleDAO extends DAO {
 				aspl.setting_value AS affiliation_pl,
 				asl.setting_value AS affiliation_l
 			FROM	authors aa
-				LEFT JOIN published_articles pa ON (pa.article_id = aa.article_id)
+				LEFT JOIN published_articles pa ON (pa.article_id = aa.submission_id)
 				LEFT JOIN author_settings aspl ON (aspl.author_id = aa.author_id AND aspl.setting_name = ? AND aspl.locale = ?)
 				LEFT JOIN author_settings asl ON (asl.author_id = aa.author_id AND asl.setting_name = ? AND asl.locale = ?)
-			WHERE	aa.submission_id = pa.article_id AND
-				pa.issue_id = ? ORDER BY pa.issue_id',
+			WHERE	pa.issue_id = ? ORDER BY pa.issue_id',
 			array(
 				'affiliation', $primaryLocale,
 				'affiliation', $locale,

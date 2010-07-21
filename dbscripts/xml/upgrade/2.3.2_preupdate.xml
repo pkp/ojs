@@ -43,5 +43,8 @@
 		<query>
 			INSERT INTO author_settings (author_id, setting_name, setting_type, setting_value, locale) SELECT aa.author_id, 'affiliation', 'string', aa.affiliation, j.primary_locale FROM authors aa, articles a, journals j WHERE aa.submission_id = a.article_id AND a.journal_id = j.journal_id
 		</query>
+		<query>
+			INSERT INTO user_settings (user_id, setting_name, setting_type, setting_value, locale) SELECT u.user_id, 'affiliation', 'string', u.affiliation, s.primary_locale FROM users u, site s
+		</query>
 	</sql>
 </data>
