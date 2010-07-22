@@ -38,17 +38,17 @@
 
 <br />
 
-<table width="100%" class="listing">
+<table class="booksForReviewListing">
 {iterate from=booksForReview item=bookForReview}
 	<tr>
 		<td colspan="2" class="endseparator">&nbsp;</td>
 	</tr>
 	<tr>
 		{if $bookForReview->getFileName($locale)}
-		<td width="25%"><img style="width:150px" src="{$coverPagePath|escape}{$bookForReview->getFileName($locale)|escape}"{if $bookForReview->getCoverPageAltText($locale) != ''} alt="{$bookForReview->getCoverPageAltText($locale)|escape}"{else} alt="{translate key="plugins.generic.booksForReview.public.coverPage.altText"}"{/if}/></td>
-		<td width="75%">
+		<td class="coverPage"><img src="{$coverPagePath|escape}{$bookForReview->getFileName($locale)|escape}"{if $bookForReview->getCoverPageAltText($locale) != ''} alt="{$bookForReview->getCoverPageAltText($locale)|escape}"{else} alt="{translate key="plugins.generic.booksForReview.public.coverPage.altText"}"{/if}/></td>
+		<td class="coverDetails">
 		{else}
-		<td width="100%" colspan="2">
+		<td class="details" colspan="2">
 		{/if}
 			<h3><a href="{url op="viewBookForReview" path=$bookForReview->getId()}">{$bookForReview->getLocalizedTitle()|escape}</a></h3>
 		{translate key=$bookForReview->getAuthorTypeString()}&nbsp;{$bookForReview->getAuthorString()|escape}

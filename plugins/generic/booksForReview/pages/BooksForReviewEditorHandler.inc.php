@@ -1018,6 +1018,9 @@ class BooksForReviewEditorHandler extends Handler {
 			);
 		}
 		$templateMgr->assign('pageHierarchy', $pageCrumbs);
+
+		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
+		$templateMgr->addStyleSheet(Request::getBaseUrl() . '/' . $bfrPlugin->getStyleSheet());
 	}
 }
 

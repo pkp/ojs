@@ -12,16 +12,16 @@
 
 <br/>
 
-<div id="viewBookForReview">
+<div id="bookForReviewDetails">
 
-<table width="100%" class="listing">
-	<tr valign="top">
+<table class="bookForReviewDetails">
+	<tr>
 		{if $bookForReview->getFileName($locale)}
-			<td width="25%"><br /><img style="width:150px" src="{$coverPagePath|escape}{$bookForReview->getFileName($locale)|escape}"{if $bookForReview->getCoverPageAltText($locale) != ''} alt="{$bookForReview->getCoverPageAltText($locale)|escape}"{else} alt="{translate key="plugins.generic.booksForReview.public.coverPage.altText"}"{/if}/></td>
+			<td class="coverPage"><br /><img src="{$coverPagePath|escape}{$bookForReview->getFileName($locale)|escape}"{if $bookForReview->getCoverPageAltText($locale) != ''} alt="{$bookForReview->getCoverPageAltText($locale)|escape}"{else} alt="{translate key="plugins.generic.booksForReview.public.coverPage.altText"}"{/if}/></td>
 		{else}
-			<td width="25%">&nbsp;</td>
+			<td class="coverPage">&nbsp;</td>
 		{/if}
-		<td width="75%">
+		<td class="coverDetails">
 			<h3>{$bookForReview->getLocalizedTitle()|escape}</h3>
 			{translate key=$bookForReview->getAuthorTypeString()}&nbsp;{$bookForReview->getAuthorString()|escape}
 			<br />

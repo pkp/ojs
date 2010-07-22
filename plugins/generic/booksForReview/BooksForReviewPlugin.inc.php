@@ -116,14 +116,14 @@ class BooksForReviewPlugin extends GenericPlugin {
 	 * Get the filename of the ADODB schema for this plugin.
 	 */
 	function getInstallSchemaFile() {
-		return $this->getPluginPath() . '/xml/' . 'schema.xml';
+		return $this->getPluginPath() . '/xml/schema.xml';
 	}
 
 	/**
 	 * Get the filename of the email keys for this plugin.
 	 */
 	function getInstallEmailTemplatesFile() {
-		return $this->getPluginPath() . '/xml/' . 'emailTemplates.xml';
+		return $this->getPluginPath() . '/xml/emailTemplates.xml';
 	}
 
 	/**
@@ -137,14 +137,21 @@ class BooksForReviewPlugin extends GenericPlugin {
 	 * Get the template path for this plugin.
 	 */
 	function getTemplatePath() {
-		return parent::getTemplatePath() . 'templates' . '/';
+		return parent::getTemplatePath() . 'templates/';
 	}
 
 	/**
 	 * Get the handler path for this plugin.
 	 */
 	function getHandlerPath() {
-		return $this->getPluginPath() . '/' . 'pages' . '/';
+		return $this->getPluginPath() . '/pages/';
+	}
+
+	/**
+	 * Get the stylesheet for this plugin.
+	 */
+	function getStyleSheet() {
+		return $this->getPluginPath() . '/styles/booksForReview.css';
 	}
 
 	/**

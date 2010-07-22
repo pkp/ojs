@@ -182,8 +182,10 @@ class BooksForReviewAuthorHandler extends Handler {
 				'user.role.author'
 			)
 		);
-
 		$templateMgr->assign('pageHierarchy', $pageCrumbs);
+
+		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
+		$templateMgr->addStyleSheet(Request::getBaseUrl() . '/' . $bfrPlugin->getStyleSheet());
 	}
 }
 

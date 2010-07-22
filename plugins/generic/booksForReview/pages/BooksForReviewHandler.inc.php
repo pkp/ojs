@@ -135,8 +135,9 @@ class BooksForReviewHandler extends Handler {
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
 	function setupTemplate($subclass = false) {
+		$templateMgr =& TemplateManager::getManager();
+
 		if ($subclass) {
-			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->append(
 				'pageHierarchy',
 				array(
@@ -146,6 +147,9 @@ class BooksForReviewHandler extends Handler {
 				)
 			);
 		}
+
+		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
+		$templateMgr->addStyleSheet(Request::getBaseUrl() . '/' . $bfrPlugin->getStyleSheet());
 	}
 }
 
