@@ -14,7 +14,7 @@
  
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.customBlockManager.displayName">Gestore di blocchi personalizzati</message>
-	<message key="plugins.generic.customBlockManager.description">This Plugin lets you manage custom sidebar blocks.  You can edit the blocks in the settings of each plugin that you create here.</message>	
+	<message key="plugins.generic.customBlockManager.description">Questo plugin permette di gestire blocchi personalizzati sulle barre laterali. E' possibile modificare i blocchi nelle impostazioni di ciascun plugin creato.</message>	
 	<message key="plugin.generic.customBlockManager.introduction"><![CDATA[Si può utilizzare il plugin per aggiungere o cancellare plugin di blocchi personalizzati. Puoi successivamente modificare il contenuto dei plugin  tramite la pagina <a href="{$systemPluginsUrl}">Plugin</a> (nella sezione Plugin per i blocchi).  Per definire la posizione in cui comparirà il plugin, utilizza il <a href="{$setupStep56}">punto 5.6 del Setup</a>]]></message>
 	<message key="plugins.generic.customBlockManager.settings">Impostazioni</message>
 	<message key="plugins.generic.customBlockManager.description">This Plugin lets you manage custom sidebar blocks.  You can edit the blocks in the settings of each plugin that you create here.</message>
@@ -28,6 +28,6 @@
 	<message key="plugins.generic.customBlock.nameSuffix">(Plugin del blocco personalizzato)</message>
 	<message key="plugins.generic.customBlock.description"><![CDATA[Questo blocco &#232; generato dall'utente.]]></message>
 	<message key="plugins.generic.customBlock.editContent">Modifica il contenuto della barra laterale</message>
-	<message key="plugins.generic.customBlock.contentRequired"><![CDATA[&#200; necessario inserire del contenuto. Se vuoi puoi cancellare questo blocco, attraverso il plugin Gestore di blocchi personalizzati o nascondendolo nel punto % del Setup]]></message>
+	<message key="plugins.generic.customBlock.contentRequired"><![CDATA[Inserisci del contenuto. Se vuoi puoi cancellare questo blocco, attraverso il plugin Gestore di blocchi personalizzati o nascondendolo nel punto <a href="{$setupStep56}">punto 5.6 del Setup</a>]]></message>
 	<message key="plugins.generic.customBlock.edit">Modifica</message>
 </locale>

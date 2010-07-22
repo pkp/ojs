@@ -19,14 +19,13 @@
 	
 	<message key="plugins.importexport.pubmed.export">Esporta i dati</message>
 	<message key="plugins.importexport.pubmed.export.issues">Esporta fascicoli</message>
-	<message key="plugins.importexport.pubmed.export.selectIssue">Selezioona i fascicoli da esportare.</message>
+	<message key="plugins.importexport.pubmed.export.selectIssue">Seleziona i fascicoli da esportare.</message>
 	<message key="plugins.importexport.pubmed.export.articles">Esporta articoli</message>
 	<message key="plugins.importexport.pubmed.export.selectArticle">Seleziona gli articoli da esportare.</message>
 	
-	<message key="plugins.importexport.pubmed.cliUsage"><![CDATA[Uso: 
+	<message key="plugins.importexport.pubmed.cliUsage">Uso: 
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
-]]></message>
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]</message>
 	<message key="plugins.importexport.pubmed.cliError">ERRORE:</message>
 
 	<message key="plugins.importexport.pubmed.export.error.issueNotFound">Non esiste corrispondenza per lo specifico ID di fasciolo "{$issueId}".</message>

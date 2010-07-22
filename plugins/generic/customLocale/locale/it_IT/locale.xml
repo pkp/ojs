@@ -13,8 +13,8 @@
   -->
  
 <locale name="it_IT" full_name="Italiano">
-	<message key="plugins.generic.customLocale.name">Custom Locale Plugin</message>
-	<message key="plugins.generic.customLocale.description">Questo plugin permette la personalizzazione dell'interfaccia utente di default utilizzata da OJS.</message>
+	<message key="plugins.generic.customLocale.name">Plugin per la personalizzazione dell'interfaccia</message>
+	<message key="plugins.generic.customLocale.description">Questo plugin permette la personalizzazione dell'interfaccia utente utilizzata da OJS per questa rivista.</message>
 
 	<message key="plugins.generic.customLocale.longDescription">Questa pagina elenca tutti i file delle Localizzazioni correntemente installati su questa rivista.</message>
 	<message key="plugins.generic.customLocale.localeDescription">Questa pagina elenca tutti i file disponibili per la lingua selezionata.</message>
@@ -32,4 +32,6 @@
 	<message key="plugins.generic.customLocale.file.reference">Testo di default</message>
 	<message key="plugins.generic.customLocale.file.custom">Testo personalizzato</message>
 	<message key="plugins.generic.customLocale.localeKey.description">Inserisci una chiave da cercare.</message>
+	<message key="plugins.generic.customLocale.enabled">Il plugin della traduzione personalizzata è stato abilitato.</message>
+	<message key="plugins.generic.customLocale.disabled">Il plugin della traduzione personalizzata è stato disabilitato.</message>
 </locale>

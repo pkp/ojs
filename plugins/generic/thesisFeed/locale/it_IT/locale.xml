@@ -14,7 +14,7 @@
  
 <locale name="it_IT" full_name="Italiano">
 	<message key="plugins.generic.thesisfeed.displayName">Plugin dei Feed RSS/Atom per gli Abstract delle Tesiiee</message>
-	<message key="plugins.generic.thesisfeed.description">Questo plugin produce feed RSS/Atom di diffusione web per gli abstract delle tesi.</message>
+	<message key="plugins.generic.thesisfeed.description">Questo plugin produce feed RSS/Atom per gli abstract delle tesi.</message>
 
 	<message key="plugins.generic.thesisfeed.settings">Impostazioni</message>
 	<message key="plugins.generic.thesisfeed.settings.all">Mostra i link ai feed RSS in tutte le pagine della rivista.</message>
@@ -26,4 +26,6 @@
 	<message key="plugins.generic.thesisfeed.atom.altText">Logo di Atom</message>
 	<message key="plugins.generic.thesisfeed.rss1.altText">Logo di RSS1</message>
 	<message key="plugins.generic.thesisfeed.rss2.altText">Logo di RSS2</message>
+	<message key="plugins.generic.thesisfeed.enabled">Il plugin Abstract delle tesi è stato abilitato.</message>
+	<message key="plugins.generic.thesisfeed.disabled">Il plugin Abstract delle tesi è stato disabilitato.</message>
 </locale>

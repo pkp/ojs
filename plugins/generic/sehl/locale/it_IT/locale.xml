@@ -13,6 +13,8 @@
   -->
  
 <locale name="it_IT" full_name="Italiano">
-	<message key="plugins.generic.sehl.name">SEHL Plugin</message>
+	<message key="plugins.generic.sehl.name">Plugin SEH</message>
 	<message key="plugins.generic.sehl.description">Questo plugin implementa il Search Engine HighLighting (SEHL) cosicchè quando un motore di ricerca individua un articolo HTML, le parole chiavi ricercate vengono evidenziate.</message>
+	<message key="plugins.generic.sehl.enabled">Il plugin SEHL è stato abilitato.</message>
+	<message key="plugins.generic.sehl.disabled">Il plugin SEHL è stato disabilitato.</message>
 </locale>

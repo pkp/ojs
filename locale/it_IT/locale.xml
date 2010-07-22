@@ -51,10 +51,10 @@
 	<message key="navigation.otherJournals">Altre riviste</message>
 	<message key="navigation.browseByIssue">per Fascicolo</message>
 	<message key="navigation.browseByAuthor">per Autore</message>
-	<message key="navigation.infoForAuthors">per gli Autori</message>
-	<message key="navigation.infoForLibrarians">per i Bibliotecari</message>
-	<message key="navigation.infoForAuthors.long">Informazioni per gli Autori</message>
-	<message key="navigation.infoForLibrarians.long">Informazioni per i Bibliotecari</message>
+	<message key="navigation.infoForAuthors">per gli autori</message>
+	<message key="navigation.infoForLibrarians">per i bibliotecari</message>
+	<message key="navigation.infoForAuthors.long">Informazioni per gli autori</message>
+	<message key="navigation.infoForLibrarians.long">Informazioni per i bibliotecari</message>
 
 	<!-- Article Queues -->
 	<message key="common.queue.long.submissionsUnassigned">Non assegnato</message>
@@ -81,7 +81,7 @@
 	<message key="section.section">Sezione</message>
 	<message key="section.sections">Sezioni</message>
 	<message key="section.title">Titolo della sezione</message>
-	<message key="section.abbreviation">Acronimo</message>
+	<message key="section.abbreviation">Abbreviazione</message>
 	<message key="section.abbreviation.example">(per esempio, Articoli=ART)</message>
 	<!-- Common Article Terms -->
 	<message key="article.articles">Articoli</message>
@@ -95,8 +95,8 @@
 	<message key="article.suppFile">File supplementare</message>
 	<message key="article.suppFiles">File supplementari</message>
 	<message key="article.suppFilesAbbrev">Files supp.</message>
-	<message key="article.discipline">Classificazione accademica</message>
-	<message key="article.subjectClassification">Classificazione per soggetto</message>
+	<message key="article.discipline">Settore scientifico-disciplinare (MIUR)</message>
+	<message key="article.subjectClassification">Classificazione</message>
 	<message key="article.subject">Keywords</message>
 	<message key="article.coverage">Ambito</message>
 	<message key="article.coverageGeo">Ambito geografico</message>
@@ -107,7 +107,7 @@
 	<message key="article.sectionEditor">SE</message>
 	<message key="article.commentsToEditor">Commenti per l'editor</message>
 	<message key="article.submission">submission</message>
-	<message key="article.submissions">submissions</message>
+	<message key="article.submissions">submission</message>
 	<message key="article.abstract">Abstract</message>
 	<message key="article.details">Dettagli</message>
 
@@ -115,7 +115,7 @@
 	<message key="submission.submissionEditing">Editing della submission</message>
 	<message key="submission.changeSection">Cambia</message>
 	<message key="submission.editorDecision">Decisione dell'editor</message>
-	<message key="submission.round">Round {$round}</message>
+	<message key="submission.round"><![CDATA[Round&nbsp;{$round}]]></message>
 	<message key="submission.editorReview">Revisione dell'editor</message>
 	<message key="submission.notifyAuthor">Informa l'autore</message>
 	<message key="submission.notifyEditor">Informa l'editor</message>
@@ -167,7 +167,7 @@
 	<message key="user.myJournals">Le mie riviste</message>
 
 	<!-- Roles -->
-	<message key="user.role.manager">Jornal Manager</message>
+	<message key="user.role.manager">Journal Manager</message>
 	<message key="user.role.editor">Editor</message>
 	<message key="user.role.sectionEditor">Section editor</message>
 	<message key="user.role.layoutEditor">Layout editor</message>
@@ -191,10 +191,10 @@
 	<message key="issue.volume">Volume</message>
 	<message key="issue.number">Numero</message>
 	<message key="issue.vol">Vol</message>
-	<message key="issue.no">No</message>
+	<message key="issue.no">N°</message>
 	<message key="issue.year">Anno</message>
 	<message key="issue.noIssues">Nessun fascicolo</message>
-	<message key="issue.toc">Indice</message>
+	<message key="issue.toc">Sommario</message>
 	<message key="issue.abstract">Abstract</message>
 
 	<!--
@@ -211,7 +211,7 @@
 	<message key="submission.event.general.defaultEvent">Evento di Submission</message>
 	<message key="submission.event.general.articleSubmitted">Articolo Inviato</message>
 	<message key="submission.event.general.issueScheduled">Submission inserita nella programmazione dell'uscita corrente</message>
-	<message key="submission.event.general.issueAssigned">Submission assegnata all'uscita corrente</message>
+	<message key="submission.event.general.issueAssigned">Submission assegnata al fascicolo</message>
 	<message key="submission.event.general.articlePublished">Articolo pubblicato</message>
 
 	<message key="submission.event.author.authorRevision">Revisione dell'autore inviata</message>
@@ -350,7 +350,7 @@ Fate <a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">click qui
 
 	<!-- People Management -->
 
-	<message key="manager.people.confirmDisable">Disabilita l'utente? In questo modo non potr&#x00E0; pi&#x00F9; entrare nel sistema.
+	<message key="manager.people.confirmDisable">Disabilita l'utente? In questo modo non potrà più entrare nel sistema.
 
 Puoi facoltativamente fornire all'utente una ragione per disattivare il loro account.</message>
 	<message key="manager.people.noAdministrativeRights"><![CDATA[Spiacente, non hai i diritti di amministrazione su questo utente. Questo potrebbe essere successo perch&#x00C8;:
@@ -358,8 +358,7 @@ Puoi facoltativamente fornire all'utente una ragione per disattivare il loro acc
 			<li>L'utente &#x00C8; l'amministratore del sito</li>
 			<li>l'utente &#x00C8; attivo in riviste che non puoi controllare</li>
 		</ul>
-	Questo compito deve essere svolto dall'amministratore del sito.
-	]]></message>
+	Questo compito deve essere svolto dall'amministratore del sito.]]></message>
 
 
 
@@ -583,7 +582,7 @@ Attivo &#x00E8; il numero di quante revisioni si stanno considerando o stanno an
 	<message key="submission.comments.saveAndEmailEditor">Salva e manda una Email all'editor</message>
 
 	<!-- Login -->
-	<message key="user.login.registerNewAccount">Non sei un utente? Registrati con questo sito</message>
+	<message key="user.login.registerNewAccount">Non sei già utente di questo sito? Vai alla registrazione</message>
 	<message key="user.login.resetPasswordInstructions"><![CDATA[Per ragioni di sicurezza, questo sistema manda una email con una password per risettare agli utenti registrati, piuttosto che  richiamare la password corrente.
 <br /><br />Inserisci sotto il tuo indirizzo email per risettare la password. Ti verr&#x00E0; inviata la conferma a questo indirizzo  email.]]></message>
 
@@ -597,9 +596,9 @@ Attivo &#x00E8; il numero di quante revisioni si stanno considerando o stanno an
 	<message key="user.register.privacyStatement">Tutela della privacy</message>
 	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Clicca qui</a> se sei gi&#x00E0; a questo o a un'altra rivista su questo sito.]]></message>
 	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Clicca qui</a> Se <strong>non</strong> sei gi&#x00E0; registrato a questo o un'altra rivista su questo sito.]]></message>
-	<message key="user.register.loginToRegister">Inserisci la tua username and password per registrarti a questa rivista.</message>
+	<message key="user.register.loginToRegister">Inserisci la tua username e la password per registrarti a questa rivista.</message>
 	<message key="user.register.registrationDisabled">Questa rivista attualmente non sta accettando registrazioni di utenti.</message>
-	<message key="user.register.form.passwordLengthTooShort">La password Che hai inserito non &#x00E8; abbastanza lunga.</message>
+	<message key="user.register.form.passwordLengthTooShort">La password Che hai inserito non è abbastanza lunga.</message>
 	<message key="user.register.readerDescription">Notificato con una email sulla pubblicazione di una uscita della rivista.</message>
 	<message key="user.register.openAccessNotificationDescription">Avvisato con una email quando una nuova uscita del journal diventa open access.</message>
 	<message key="user.register.authorDescription">Abilitato a sottomettere items nella rivista.</message>
@@ -660,24 +659,24 @@ Attivo &#x00E8; il numero di quante revisioni si stanno considerando o stanno an
 	<message key="about.aboutTheJournal">Informazioni sulla rivista</message>
 	<message key="about.editorialTeam">Redazione</message>
 	<message key="about.editorialTeam.biography">Biografia</message>
-	<message key="about.editorialPolicies">Politica editoriale</message>
-	<message key="about.focusAndScope">Direzione e scopo</message>
-	<message key="about.sectionPolicies">Policy delle sezioni</message>
-	<message key="about.submissions">Submissions</message>
-	<message key="about.sponsors">Sponsors</message>
+	<message key="about.editorialPolicies">Politiche editoriali</message>
+	<message key="about.focusAndScope">Ambito di interesse</message>
+	<message key="about.sectionPolicies">Politiche delle sezioni</message>
+	<message key="about.submissions">Submission</message>
+	<message key="about.sponsors">Sponsor</message>
 	<message key="about.contributors">Fonti di supporto</message>
-	<message key="about.onlineSubmissions">Online Submissions</message>
-	<message key="about.onlineSubmissions.haveAccount">Hai gi&#x00E0; una Username/Password per {$journalTitle}?</message>
+	<message key="about.onlineSubmissions">Invia una proposta</message>
+	<message key="about.onlineSubmissions.haveAccount">Hai già una Username/Password per {$journalTitle}?</message>
 	<message key="about.onlineSubmissions.login">Vai al Login</message>
 	<message key="about.onlineSubmissions.needAccount">Hai bisogno di una Username/Password?</message>
 	<message key="about.onlineSubmissions.registration">Vai alla Registrazione</message>
-	<message key="about.onlineSubmissions.registrationRequired">Sono richieste la registrazione e il login per sottomettere gli items online e controllare lo stato corrente delle submissions.</message>
-	<message key="about.authorGuidelines">Linee guida degli autori</message>
-	<message key="about.submissionPreparationChecklist">Lista di controllo di preparazione alla submission</message>
-	<message key="about.submissionPreparationChecklist.description">Essendo una parte del processo di submission, agli autori verr&#x00E0; richiesto di controllare l'approvazione delle loro submission e degli item seguenti, e le submission possono ritornare all'autore se non aderiscono alle linee guida.</message>
-	<message key="about.copyrightNotice">Copyright Notice</message>
-	<message key="about.privacyStatement">Legge sulla privacy</message>
-	<message key="about.peerReviewProcess">Il processo di peer review </message>
+	<message key="about.onlineSubmissions.registrationRequired"><![CDATA[&Egrave; necessario essere registrati e autenticati per inviare proposte di contributi e controllare lo status di quelle gi&agrave; inviate.]]></message>
+	<message key="about.authorGuidelines">Linee guida per gli autori</message>
+	<message key="about.submissionPreparationChecklist">Lista di controllo per l'invio di una proposta</message>
+	<message key="about.submissionPreparationChecklist.description">Gli autori devono controllare la rispondenza della loro proposta di contributo alle richieste seguenti, pena il rifiuto delle submission che non aderiscano a queste linne guida.</message>
+	<message key="about.copyrightNotice">Informazioni sul copyright</message>
+	<message key="about.privacyStatement">Informazioni sulla privacy</message>
+	<message key="about.peerReviewProcess">Il processo di peer review</message>
 	<message key="about.publicationFrequency">Frequenza di pubblicazione</message>
 	<message key="about.openAccessPolicy">Open Access</message>
 	<message key="about.delayedOpenAccess">Delayed Open Access</message>
@@ -685,10 +684,10 @@ Attivo &#x00E8; il numero di quante revisioni si stanno considerando o stanno an
 	<message key="about.delayedOpenAccessDescription2">mese(i) dopo la pubblicazione di un fascicolo.</message>
 	<message key="about.authorSelfArchive">Self-Archiving dell'autore</message>
 	<message key="about.archiving">Archiviazione</message>
-	<message key="about.subscriptions">Sottoscrizioni</message>
+	<message key="about.subscriptions">Abbonamenti</message>
 	<message key="about.subscriptionsContact">Contatto per gli abbonamenti</message>
 	<message key="about.availableSubscriptionTypes">Tipi di abbonamento</message>
-	<message key="about.journalSponsorship">Sponsorship della rivista</message>
+	<message key="about.journalSponsorship">Gerenza e sponsor</message>
 	<message key="about.aboutThisPublishingSystem">Informazioni su questo sistema di pubblicazione</message>
 	<message key="about.aboutOJSJournal"><![CDATA[Questo journal usa Open Journal Systems {$ojsVersion}, che &#x00E8; un software open source per la pubblicazione e amministrazione di journal  sviluppato, supportato, e liberamente distribuito da <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> sotto la GNU General Public License.]]></message>
 	<message key="about.aboutOJSSite"><![CDATA[Questo sito usa Open Journal Systems {$ojsVersion}, che &#x00E8; un programma di amministrazione e publicazione di riviste open source sviluppato, supportato, e distribuito liberamente dal <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> sotto la GNU General Public License.]]></message>
@@ -704,7 +703,7 @@ Attivo &#x00E8; il numero di quante revisioni si stanno considerando o stanno an
 	<message key="installer.ojsUpgrade">Aggiornamento OJS</message>
 	<message key="installer.installationInstructions"><![CDATA[<p>Grazie per utilizzare <strong>Open Journal Systems {$version}</strong> del Public Knowledge Project. Prima di proseguire, leggete il file di <a href="{$baseUrl}/docs/README">README</a> incluso con il software. Per maggiore informazioni sul Public Knowledge Project ed i suoi progetti, visitate il <a href="http://www.pkp.ubc.ca/" target="_blank">PKP web site</a>. Per segnalazioni di bug o domande al supporto tecnico su Open Journal Systems scrivete a <a href="mailto:ojs@pkp.ubc.ca">ojs@pkp.ubc.ca</a>, oppure visitate il servizio online di <a href="http://www.pkp.ubc.ca/bugzilla/" target="_blank">segnalazione bug</a>.</p>
 
-<p>Grazie per aver scaricato il Public Knowledge Project <strong>Open Journal Systems</strong>. Prima di procedere, si prega di leggere <a href="{$baseUrl}/docs/README">README</a> file incluso con il programma. Per ulteriori informazioni sul Public Knowledge Project e i suoi progetti, si prega di visitare <a href="http://pkp.sfu.ca/" target="_blank">il sito web PKP</a>. Se hai dei bug da segnalare o richieste di supporto tecnico su Open Journal Systems, vedi il <a href="http://pkp.sfu.ca/support/forum">forum di supporto</a> o visita online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">il sistema di segnalazione dei bug</a> di PKP. Nonostante il forum di supporto sarebbe il metodo preferito per il contatto, puoi inoltre mandare una email al team a <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Grazie per aver scaricato il Public Knowledge Project <strong>Open Journal Systems</strong>. Prima di procedere, si prega di leggere <a href="{$baseUrl}/docs/README">README</a> file incluso con il programma. Per ulteriori informazioni sul Public Knowledge Project e i suoi progetti, si prega di visitare <a href="http://pkp.sfu.ca/" target="_blank">il sito web PKP</a>. Se hai dei bug da segnalare o richieste di supporto tecnico su Open Journal Systems, vedi il <a href="http://pkp.sfu.ca/support/forum">forum di supporto</a> o visita online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">il sistema di segnalazione dei bug</a> di PKP. Nonostante il forum di supporto sarebbe il metodo preferito per il contatto, puoi inoltre mandare una email al team a <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
 
 <h4>Aggiornamento</h4>
 
@@ -746,7 +745,7 @@ Attivo &#x00E8; il numero di quante revisioni si stanno considerando o stanno an
 <p>Selezionate <strong>Installazione Manuale</strong> per visualizzare le istruzioni SQL necessarie per creare la struttura del database di OJS e i dati iniziali, in modo che l'installazione del database possa essere effettuata manualmente. Questa opzione &#x00E8; utile per il debug relativo ai problemi d'installazione, in particolare per le piattaforme non supportate. Da notare che questa opzione non crea n&#x00E9; il database n&#x00E9; le relative tabelle, sebbene nel file di configurazione verranno scritte le impostazioni del database fornite.</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS versione {$version}</h4>
 
-<p>Grazie per aver scaricato il Public Knowledge Project <strong>Open Journal Systems</strong>. Prima di procedere, si prega di leggere <a href="{$baseUrl}/docs/README">README</a> e <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> i  files inclusi in questo programma. Per ulteriori informazioni sul Public Knowledge Project e i suoi progetti, si prega di visitare il <a href="http://pkp.sfu.ca/" target="_blank">sito web PKP</a>. Se hai dei bug da segnalare o richieste di supporto tecnico su Open Journal Systems, vedi il <a href="http://pkp.sfu.ca/support/forum">forum di supporto</a> o visita online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">il sistema di segnalazione dei bug</a> di PKP. Nonostante il forum di supporto sarebbe il metodo preferito per il contatto, puoi inoltre mandare una email al team a <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Grazie per aver scaricato il Public Knowledge Project <strong>Open Journal Systems</strong>. Prima di procedere, si prega di leggere <a href="{$baseUrl}/docs/README">README</a> e <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> i  files inclusi in questo programma. Per ulteriori informazioni sul Public Knowledge Project e i suoi progetti, si prega di visitare il <a href="http://pkp.sfu.ca/" target="_blank">sito web PKP</a>. Se hai dei bug da segnalare o richieste di supporto tecnico su Open Journal Systems, vedi il <a href="http://pkp.sfu.ca/support/forum">forum di supporto</a> o visita online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">il sistema di segnalazione dei bug</a> di PKP. Nonostante il forum di supporto sarebbe il metodo preferito per il contatto, puoi inoltre mandare una email al team a <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
 <p>&#x00E0; <strong>fortemente raccomandato</strong> fare un backup del tuo database,directory dei files , e directory di installazione di OJS   prima di procedere.</p>
 <p>Se stai operando in <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, si prega di assicurarsi che  the max_execution_time directive nel tuo file di configurazione php.ini  sia impostato ad un limite alto. Se questo o qualche altro tempo limite (e.g.  il "Timeout" directive di apache) viene raggiunto e l'aggiornamento viene interrotto, sar&#x00E0; richiesto un intervento manuale.</p>]]></message>
 	<message key="installer.localeSettingsInstructions"><![CDATA[Per un supporto completo di Unicode (UTF-8), selezionate UTF-8 per tutti i set di caratteri. Da notare che questo supporto richiede dei server di database MySQL >= 4.1.1 o PostgreSQL >= 7.1, e PHP >= 4.3.0 compilato con il supporto per la libreria <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> (presente di default nelle installazioni pi&#x00F9; recenti di PHP). Se il vostro server non ha questi requisiti potreste avere dei problemi nell'utilizzo di set di caratteri estesi.
@@ -754,7 +753,7 @@ Attivo &#x00E8; il numero di quante revisioni si stanno considerando o stanno an
 Il vostro server supporta mbstring: <strong>{$supportsMBString}</strong>]]></message>
 	<message key="installer.localeInstructions">La lingua principale utilizzata dal sistema. Consultate la documentazione di OJS se siete interessati al supporto di lingue non presenti nell'elenco.</message>
 	<message key="installer.additionalLocalesInstructions">Selezionate le altre lingue che devono essere supportate dal sistema, in modo che possano essere utilizzate dai giornali presenti nel sito. Ulteriori aggiunte possono essere fatte in qualsiasi momento dall'interfaccia di amministrazione del sito.</message>
-	<message key="installer.filesDirInstructions">Inserite il percorso completo di una directory esistente dove conservare i file di cui &#x00E8; stato fatto l'upload. Questa directory non dovrebbe essere accessibile direttamente dal web. Assicuratevi che la directory esista e siano gi� stati concessi i permessi di scrittura. I percorsi Windows devono avere il separatore "/", come ad esempio "C:/myjournal/files".</message>
+	<message key="installer.filesDirInstructions">Inserite il percorso completo di una directory esistente dove conservare i file di cui è stato fatto l'upload. Questa directory non dovrebbe essere accessibile direttamente dal web. Assicuratevi che la directory esista e siano gi� stati concessi i permessi di scrittura. I percorsi Windows devono avere il separatore "/", come ad esempio "C:/myjournal/files".</message>
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Attenzione:</strong> Se l'installazione &#x00E8; fallita durante la creazione del database potrebbe essere necessario cancellare la base di dati di OJS o le tabelle contenute prima di ripetere il processo.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>IMPORTANTE!</h4>
 <p>Il programma d'installazione non &#x00E8; riuscito a sovrascrivere il file di configurazione. Prima di utilizzare OJS, apite il file <tt>config.inc.php</tt> con un editor di testo e sostituitene il contenuto con quello del campo sottostante..</p>]]></message>
@@ -965,7 +964,7 @@ Authors who publish with this journal agree to the following terms:
 	<message key="article.comments.sectionDefault">Default</message>
 	<message key="article.comments.disable">Disattivo</message>
 	<message key="article.comments.enable">Attivo</message>
-	<message key="article.fontSize">Dimenzione del font</message>
+	<message key="article.fontSize">Dimensione del font</message>
 	<message key="article.fontSize.small.altText">Piccolo</message>
 	<message key="article.fontSize.medium.altText">Medio</message>
 	<message key="article.fontSize.large.altText">Grande</message>

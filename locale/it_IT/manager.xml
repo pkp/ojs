@@ -14,7 +14,7 @@
 
 <locale name="it_IT" full_name = "Italiano">
 	<message key="manager.emails.confirmResetAll">Siete sicuri di voler ripristinare tutti i modelli di email di questa rivista? In questo modo verranno perse tutte le personalizzazioni effettuate.</message>
-	<message key="manager.files.note">Nota: il Files Browser &#x00E8; una funzione avanzata che permette di vedere e manipolare direttamente i files e le directories associate ad una rivista.</message>
+	<message key="manager.files.note">Nota: il Files Browser è una funzione avanzata che permette di vedere e manipolare direttamente i files e le directories associate ad una rivista.</message>
 	<message key="manager.groups">Redazione</message>
 	<message key="manager.groups.context.editorialTeam">Sottogruppo della Redazione (es. Revisori)</message>
 	<message key="manager.groups.context.editorialTeam.short">Gruppo editoriale</message>
@@ -23,24 +23,24 @@
 	<message key="manager.groups.disableBoard">OJS elenca automaticamente le persone secondo i ruoli assegnati (amministratore della rivista, copyeditor, ecc.)</message>
 	<message key="manager.groups.enableBoard">L'amministratore della rivista crea i ruoli e raggruppa manualmente le persone per ogni ruolo.</message>
 	<message key="manager.groups.enableBoard.description"><![CDATA[Sotto <a href="{$aboutEditorialTeamUrl}">Persone</a> in Info:]]></message>
-	<message key="manager.groups.noneCreated">Non &#x00E8; stata creata nessuna posizione della redazione.</message>
+	<message key="manager.groups.noneCreated">Non è stata creata nessuna posizione della redazione.</message>
 	<message key="manager.journalManagement">Gestione della rivista</message>
 	<message key="manager.language.confirmDefaultSettingsOverwrite">Questo sostituirà qualunque personalizzazione fatta per la rivista</message>
 	<message key="manager.language.reloadLocalizedDefaultSettings">Ricarica i settaggi di default locali</message>
-	<message key="manager.languages.languageInstructions"><![CDATA[Ojs può essere reso accessibile agli utenti in molte lingue supportate. Inoltre OJS può operare come sistema multilingue, fornendo agli utenti la possibilità di scegliere fra le lingue in ogni pagina, e permettendo di inserire certi dati in diverse lingue addizionali.<br /><br/>Se una lingua supportata da OJS non è nella lista qui sotto, chiedi al tuo amministratore del sito di installare la lingua dall'interfaccia  dell'amministratore del sito. Per avere istruzioni sui supporti aggiuntivi per nuove lingue, si prega di consultare la documentazione di OJS.]]></message>
-	<message key="manager.languages.noneAvailable">Spiacenti, ma nessuna lingua aggiuntiva &#x00E8; disponibile. Contattate l'amministratore del sito se volete utilizzare un'altra lingua per questa rivista.</message>
-	<message key="manager.languages.primaryLocaleInstructions">Questa sar&#x00E0; la lingua di default di questa rivista.</message>
+	<message key="manager.languages.languageInstructions"><![CDATA[Ojs può essere reso accessibile agli utenti in molte lingue. Inoltre OJS può operare come sistema multilingue, fornendo agli utenti la possibilità di scegliere fra le lingue in ogni pagina, e permettendo di inserire certi dati in diverse lingue addizionali.<br /><br/>Se una lingua supportata da OJS non è nella lista qui sotto, chiedi al tuo amministratore del sito di installare la lingua dall'interfaccia  dell'amministratore del sito. Per avere istruzioni sui supporti aggiuntivi per nuove lingue, si prega di consultare la documentazione di OJS.]]></message>
+	<message key="manager.languages.noneAvailable">Spiacenti, ma nessuna lingua aggiuntiva è disponibile. Contattate l'amministratore del sito se volete utilizzare un'altra lingua per questa rivista.</message>
+	<message key="manager.languages.primaryLocaleInstructions">Questa sarà la lingua di default di questa rivista.</message>
 	<message key="manager.managementPages">Pagine di gestione</message>
 	<message key="manager.payment.action">Azione</message>
 	<message key="manager.payment.addPayment">Aggiungi un pagamento</message>
 	<message key="manager.payment.amount">Importo</message>
-	<message key="manager.payment.authorFees">Quote dell'autore</message>
+	<message key="manager.payment.authorFees">Tariffe per gli autori</message>
 	<message key="manager.payment.authorFeesDescription">Le opzioni selezionate, insieme alle loro descrizioni e quote (che possono essere modificate qui sotto), appariranno nel Passo 1 del processo di submission e in About the Journal sotto Submissions, come anche ai punti dove viene richiesto il pagamento.</message>
 	<message key="manager.payment.currency">Valuta</message>
 	<message key="manager.payment.currencymessage">OJS non effettua alcuna conversione di valuta. Nell'accettare i pagamenti per gli abbonamenti, devi assicurarti che la valuta della  coincida con una specificata qui.</message>
 	<message key="manager.payment.description">Descrizione</message>
 	<message key="manager.payment.details">Dettagli</message>
-	<message key="manager.payment.editSubscription">Modifica l'abbonamento </message>
+	<message key="manager.payment.editSubscription">Modifica l'abbonamento</message>
 	<message key="manager.payment.enable">Abilita</message>
 	<message key="manager.payment.feePaymentOptions">Opzioni di pagamento della quota</message>
 	<message key="manager.payment.form.numeric">Tutti i costi devono essere valori numerici positivi (sono permessi i decimali)</message>
@@ -330,7 +330,7 @@
 	<message key="manager.setup.noUseProofreaders">Il controllo delle bozze saà affidato a un Editor o a un Section Editor.</message>
 	<message key="manager.setup.numPageLinks">Link alle pagine</message>
 	<message key="manager.setup.onlineAccessManagement">Accesso al contenuto della rivista</message>
-	<message key="manager.setup.onlineIssn">ISSN della versione online</message>
+	<message key="manager.setup.onlineIssn">E-ISSN</message>
 	<message key="manager.setup.openAccess">Il journal fornir&#x00E0; i suoi contenuti in open access.</message>
 	<message key="manager.setup.openAccessPolicy">Policy di Open Access</message>
 	<message key="manager.setup.openAccessPolicyDescription">La rivista pu&#x00F9; operare sotto l'open access o un modello di abbonamento, o una qualche combinazione delle due. Il modulo di abbonamemento viene attivato sotto l'amministrazione della rivista (e include opzioni per il Delayed Open Access e Author Self-Archiving).</message>
@@ -342,7 +342,7 @@
 	<message key="manager.setup.policies.description">Argomento, peer review, sezioni, privacy, accesso, sicurezza, e altre voci riguardanti gli item.</message>
 	<message key="manager.setup.principalContact">Contatto principale</message>
 	<message key="manager.setup.principalContactDescription">Questa posizione, che pu&#x00F2; essere considerata come la posizione principale di direzione, gestione o amministrativa, sar&#x00E0; presente nella home page della rivista, insieme al contatto per il supporto tecnico.</message>
-	<message key="manager.setup.printIssn">ISSN della versione cartacea</message>
+	<message key="manager.setup.printIssn">ISSN</message>
 	<message key="manager.setup.privacyStatement">Dichiarazione di Privacy</message>
 	<message key="manager.setup.privacyStatement2">Dichiarazionedi privacy</message>
 	<message key="manager.setup.privacyStatementDescription">Questa dichiarazione comparir&#x00E0; sia nella sezione About sia nelle pagine di submission degli autori e di notificazione di registrazione. Segue la policy di privacy consigliata da OJS che pu&#x00F2; essere modificata in qualsiasi momento.</message>
@@ -501,7 +501,7 @@
 	<message key="manager.subscriptionPolicies.openAccessNotificationDescription">I lettori registrati avranno la possibilit&#x00E0; di ricevere l'indice tramite email quando una nuova uscita diventa open access.</message>
 	<message key="manager.subscriptionPolicies.openAccessNotificationDisabled"><![CDATA[<strong>Nota:</strong> Per attivare questa opzione, l'aaministratore del sito deve abilitare l'opzione <tt>scheduled_tasks</tt> nel file di configurazione di OJS. Potrebbero essere necessarie ulteriori configurazioni del server per supportare questa funzionalit&#x00E0; (che potrebbe non essere attivabile su tutti i server), come indicato nella documentazione di OJS.]]></message>
 	<message key="manager.subscriptionPolicies.openAccessOptions">Opzioni Open Access</message>
-	<message key="manager.subscriptionPolicies.openAccessOptionsDescription">Le riviste in abbonamento possono fornire due forme di open access (accesso libero) ai loro contenuti, che incrementerà la leggibilità e la citazione di contenuti. Nota che anche con il delayed open access, gli editors saranno ancora in grado di designare articoli specifici all'interno di un fascicolo per l'open access. Le policies selezionate appariranno nelle informazioni della rivista.</message>
+	<message key="manager.subscriptionPolicies.openAccessOptionsDescription">Le riviste ad abbonamento possono provvedere un "accesso aperto posticipato" al loro contenuto e/o permettere che l'autore depositi liberamente i suou contributi (entrambe le formule accrescono lettori e citazioni).</message>
 	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformation">Informazioni sull'abbonamento</message>
 	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformationDescription">I tipi di abbonamento e strutture di pagamento saranno automaticamente messi sotto abbonamenti nella pagina informazioni della rivista, insieme con il nome e le informazioni del contatto per il responsabile degli abbonamenti. Informazioni aggiuntive sugli abbonamenti, come i metodi di pagamento o supporto per gli abbonati nei paesi in via di sviluppo, possono essere aggiunti qui.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContact">Amministratore Abbonamenti</message>
@@ -526,7 +526,8 @@
 	<message key="manager.subscriptions.form.dateStartRequired">&#x00C8; necessario selezionare  la data d'inizio dell'abbonamento.</message>
 	<message key="manager.subscriptions.form.dateStartValid">Selezionate una data d'inizio abbonamento valida.</message>
 	<message key="manager.subscriptions.form.domain">Dominio</message>
-	<message key="manager.subscriptions.form.domainInstructions">Inserite un dominio se il tipo di abbonamento scelto è di quelli per le istituzioni. Se avete inserito il dominio, la presenza del range degli indirizzi IP è opzionale. I valori ammessi sono i nomi di dominio (es. lib.sfu.ca).</message>
+	<message key="manager.subscriptions.form.domainInstructions">Se avete inserito il dominio, la presenza del range degli indirizzi IP è opzionale. 
+I valori ammessi sono i nomi di dominio (es. lib.sfu.ca).</message>
 	<message key="manager.subscriptions.form.domainIPRangeRequired">Il tipo di abbonamento scelto richiede l'autenticazione tramite dominio o range di indirizzi IP.</message>
 	<message key="manager.subscriptions.form.domainValid">Inserite un dominio valido.</message>
 	<message key="manager.subscriptions.form.ipRange">Range di IP</message>
@@ -548,8 +549,8 @@
 	<message key="manager.subscriptions.form.userIdValid">Selezionate un utente valido.</message>
 	<message key="manager.subscriptions.ipRange">Range degli IP</message>
 	<message key="manager.subscriptions.membership">Membro</message>
-	<message key="manager.subscriptions.noneCreated">Non è presente nessun abbonamento.</message>
-	<message key="manager.subscriptions.select">Incarica un abbonato</message>
+	<message key="manager.subscriptions.noneCreated">Non ci sono abbonamenti.</message>
+	<message key="manager.subscriptions.select">Seleziona</message>
 	<message key="manager.subscriptions.selectSubscriber.desc">I privilegi di accesso per abbonati sono automaticamente garantiti ai Journal Manager, Editor, Section Editor, Layout Editors, Copyeditor, e Proofreader del journal.</message>
 	<message key="manager.subscriptions.subscriptionCreatedSuccessfully">Abbonamento creato con successo.</message>
 	<message key="manager.subscriptions.subscriptionType">Tipo di abbonamento</message>
