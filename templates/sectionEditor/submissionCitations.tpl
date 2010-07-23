@@ -364,7 +364,7 @@
 			<div id="citationEditorCanvas" class="canvas">
 				<div id="citationEditorNavPane" class="pane left-pane">
 					{if !$citationEditorConfigurationError}
-						{load_div id="citationGridContainer" loadMessageId="submission.citations.form.loadMessage" url="$citationGridUrl"}
+						{load_url_in_div id="#citationGridContainer" loadMessageId="submission.citations.form.loadMessage" url="$citationGridUrl"}
 					{/if}
 				</div>
 				<div id="citationEditorDetailPane" class="pane right-pane">

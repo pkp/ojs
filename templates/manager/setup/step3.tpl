@@ -49,9 +49,9 @@
 </table>
 <div id="citationFilterSetupToggle" {if !$metaCitations}style="visible: none"{/if}>
 	<p>{translate key="manager.setup.citationFilterParserDescription"}</p>
-	{load_div id="parserFilterGridContainer" loadMessageId="manager.setup.filter.parser.grid.loadMessage" url="$parserFilterGridUrl"}
+	{load_url_in_div id="parserFilterGridContainer" loadMessageId="manager.setup.filter.parser.grid.loadMessage" url="$parserFilterGridUrl"}
 	<p>{translate key="manager.setup.citationFilterLookupDescription"}</p>
-	{load_div id="lookupFilterGridContainer" loadMessageId="manager.setup.filter.lookup.grid.loadMessage" url="$lookupFilterGridUrl"}
+	{load_url_in_div id="lookupFilterGridContainer" loadMessageId="manager.setup.filter.lookup.grid.loadMessage" url="$lookupFilterGridUrl"}
 	<p>{translate key="manager.setup.citationOutputStyleDescription"}</p>
 	{fbvSelect id="metaCitationOutputFilterSelect" name="metaCitationOutputFilterId"
 			from=$metaCitationOutputFilters translate=false selected=$metaCitationOutputFilterId|escape
