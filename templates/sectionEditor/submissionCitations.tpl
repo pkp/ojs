@@ -167,11 +167,11 @@
 		padding-top: 30px;
 	}
 	
-	div.grid div.approved_citation {
+	div.grid tr.approved-citation div.row_file {
 		background-color: #E8F0F8;
 	}
 
-	div.grid div.approved_citation span {
+	div.grid tr.approved-citation div.row_file span {
 		color: #777777;
 	}
 	
@@ -261,6 +261,10 @@
 		float: right;
 	}
 
+	div.pane div.pane_actions button.secondary-button {
+		float: left;
+	}
+
 	/* Style for fullscreen support */
 	.fullscreen {
 		display: block;
@@ -308,24 +312,24 @@
 		margin: 0;
 	}
 	
-	div.pane div.grid div.active_cell:hover {
+	div.pane div.grid div.active-cell:hover {
 		background-color: #B6C9D5;
 		cursor: pointer;
 		text-decoration: underline:
 	}
 	
-	div.pane div.grid .current_item .row_file,
-	div.pane div.grid .current_item .row_container,
-	div.pane div.grid .current_item td {
+	div.pane div.grid .current-item .row_file,
+	div.pane div.grid .current-item .row_container,
+	div.pane div.grid .current-item td {
 		background-color: #B6C9D5;
 	}
 	
-	div.pane div.grid .current_item .row_container {
+	div.pane div.grid .current-item .row_container {
 		border-left: 3px solid #20538D;
 		padding-left: 22px;
 	}
 	
-	div.pane div.grid .current_item .row_actions {
+	div.pane div.grid .current-item .row_actions {
 		width: 22px;
 	}
 </style>
