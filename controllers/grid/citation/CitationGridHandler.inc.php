@@ -44,7 +44,6 @@ class CitationGridHandler extends PKPCitationGridHandler {
 	}
 
 	/**
-	 * Configure the grid
 	 * @see PKPHandler::initialize()
 	 */
 	function initialize(&$request) {
@@ -55,5 +54,18 @@ class CitationGridHandler extends PKPCitationGridHandler {
 		$this->setAssocObject($article);
 
 		parent::initialize($request);
+	}
+
+	//
+	// Override methods from PKPCitationGridHandler
+	//
+	/**
+	 * @see PKPCitationGridHandler::exportCitations()
+	 */
+	function exportCitations($args, &$request) {
+		$dispatcher =& $this->getDispatcher();
+		$articleMetadataUrl = $dispatcher->url($request, ROUTE_PAGE, null, 'editor', 'viewMetadata', $this->getAssocId());
+		$noCitationsFoundMessage = Locale::translate("submission.citations.pleaseImportCitationsFirst", array('articleMetadataUrl' => $articleMetadataUrl));
+		return parent::exportCitations($args, $request, $noCitationsFoundMessage);
 	}
 }

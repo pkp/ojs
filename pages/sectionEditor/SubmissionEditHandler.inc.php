@@ -376,7 +376,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 
 		// Check whether the citation editor requirements are complete.
-		// 1) journal setting.
+		// 1) Citation editing must be enabled for the journal.
 		$citationEditorConfigurationError = null;
 		$journal =& $router->getContext($request);
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
@@ -407,13 +407,25 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$templateMgr->assign('citationEditorConfigurationError', $citationEditorConfigurationError);
 
+		// Should we display the "Introduction" tab?
+		if (is_null($citationEditorConfigurationError)) {
+			$user =& $request->getUser();
+			$userSettingsDAO =& DAORegistry::getDAO('UserSettingsDAO');
+			$introductionHide = (boolean)$userSettingsDAO->getSetting($user->getId(), 'citation-editor-hide-intro');
+		} else {
+			// Always show the introduction tab if we have a configuration error.
+			$introductionHide = false;
+		}
+		$templateMgr->assign('introductionHide', $introductionHide);
+
+
 		// Display a help message if no citations have been imported/added yet.
 		$citationDao =& DAORegistry::getDAO('CitationDAO');
 		$citations =& $citationDao->getObjectsByAssocId(ASSOC_TYPE_ARTICLE, $articleId);
 		if ($citations->getCount() > 0) {
 			$initialHelpMessage = Locale::translate('submission.citations.pleaseClickOnCitationToStartEditing');
 		} else {
-			$templateMgr->assign('articleMetadataUrl', $router->url($request, null, null, 'viewMetadata', $articleId));
+			$articleMetadataUrl = $router->url($request, null, null, 'viewMetadata', $articleId);
 			$initialHelpMessage = Locale::translate('submission.citations.pleaseImportCitationsFirst', array('articleMetadataUrl' => $articleMetadataUrl));
 		}
 		$templateMgr->assign('initialHelpMessage', $initialHelpMessage);
@@ -421,6 +433,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		// Add the grid URL
 		$citationGridUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.citation.CitationGridHandler', 'fetchGrid', null, array('assocId' => $articleId));
 		$templateMgr->assign('citationGridUrl', $citationGridUrl);
+
+		// Add the export URL
+		$citationGridUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.citation.CitationGridHandler', 'exportCitations', null, array('assocId' => $articleId));
+		$templateMgr->assign('citationExportUrl', $citationGridUrl);
 
 		// Add the submission
 		$submission =& $this->submission;
