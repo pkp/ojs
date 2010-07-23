@@ -13,7 +13,7 @@
 <locale name="en_US" full_name="U.S. English">
 
 	<!-- Books For Review Notifications -->
-	<message key="plugins.generic.booksForReview.notification.bookRequested">The book for review has been successfully requested.</message>
+	<message key="plugins.generic.booksForReview.notification.bookRequested">Book requested. Awaiting confirmation from the Editor.</message>
 	<message key="plugins.generic.booksForReview.notification.bookCreated">New book for review created.</message>
 	<message key="plugins.generic.booksForReview.notification.bookUpdated">Book for review updated.</message>
 	<message key="plugins.generic.booksForReview.notification.bookMailed">Book for review recorded as mailed.</message>
