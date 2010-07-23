@@ -403,7 +403,22 @@ function moveAuthor(dir, authorIndex) {
 	<td width="80%" class="value"><textarea name="citations" id="citations" class="textArea" rows="15" cols="60">{$citations|escape}</textarea></td>
 </tr>
 </table>
-</div?
+</div>
+<script type="text/javascript">
+	// Display warning when citations are being changed.
+	$(function() {ldelim}
+		$('#citations').change(function() {ldelim}
+			var $this = $(this);
+			var originalContent = $this.text();
+			var newContent = $this.val();
+			if(originalContent != newContent) {ldelim}
+				if (!confirm('{translate key="submission.citations.metadata.changeWarning"}')) {ldelim}
+					$this.val(originalContent);
+				{rdelim}
+			{rdelim}
+		{rdelim});
+	{rdelim});
+</script>
 <div class="separator"></div>
 {/if}
 

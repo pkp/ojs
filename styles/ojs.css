@@ -4,15 +4,15 @@
 /* OOCSS - http://github.com/stubbornella/oocss */
 @import url("../lib/pkp/styles/oocss/grids.css");
 
-/* Content Elements */
-@import url("grid.css");
-
 /* Theme */
 @import url("../lib/pkp/styles/themes/default/theme.css");
 
+/* Theme */
+@import url("grid.css");
+
 /* FIXME: temporary workaround for #5137 - size attribute for smarty form tags does not work */
 input.large, select.large, textarea.textarea{
-	width:100%;
+	width:99%;
 }
 
 /* fix for conflict - sidebars and modal (modal title bar taking on the height of the side bar) */
