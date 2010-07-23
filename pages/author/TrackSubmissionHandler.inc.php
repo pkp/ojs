@@ -9,7 +9,7 @@
  * @class TrackSubmissionHandler
  * @ingroup pages_author
  *
- * @brief Handle requests for submission tracking. 
+ * @brief Handle requests for submission tracking.
  */
 
 // $Id$
@@ -19,7 +19,7 @@ import('pages.author.AuthorHandler');
 class TrackSubmissionHandler extends AuthorHandler {
 	/** submission associated with the request **/
 	var $submission;
-	
+
 	/**
 	 * Constructor
 	 **/
@@ -118,19 +118,19 @@ class TrackSubmissionHandler extends AuthorHandler {
 		if ( $paymentManager->submissionEnabled() || $paymentManager->fastTrackEnabled() || $paymentManager->publicationEnabled()) {
 			$templateMgr->assign('authorFees', true);
 			$completedPaymentDAO =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
-			
+
 			if ( $paymentManager->submissionEnabled() ) {
 				$templateMgr->assign_by_ref('submissionPayment', $completedPaymentDAO->getSubmissionCompletedPayment ( $journal->getId(), $articleId ));
 			}
-			
+
 			if ( $paymentManager->fastTrackEnabled()  ) {
 				$templateMgr->assign_by_ref('fastTrackPayment', $completedPaymentDAO->getFastTrackCompletedPayment ( $journal->getId(), $articleId ));
 			}
 
 			if ( $paymentManager->publicationEnabled()  ) {
 				$templateMgr->assign_by_ref('publicationPayment', $completedPaymentDAO->getPublicationCompletedPayment ( $journal->getId(), $articleId ));
-			}				   
-		}		
+			}
+		}
 
 		$templateMgr->assign('helpTopicId','editorial.authorsRole');
 
@@ -320,7 +320,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$templateMgr->assign('useCopyeditors', $journal->getSetting('useCopyeditors'));
 		$templateMgr->assign('useLayoutEditors', $journal->getSetting('useLayoutEditors'));
 		$templateMgr->assign('useProofreaders', $journal->getSetting('useProofreaders'));
-		$templateMgr->assign('helpTopicId', 'editorial.authorsRole.editing');	
+		$templateMgr->assign('helpTopicId', 'editorial.authorsRole.editing');
 		$templateMgr->display('author/submissionEditing.tpl');
 	}
 
@@ -330,7 +330,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 	function uploadRevisedVersion() {
 		$articleId = Request::getUserVar('articleId');
 		$this->validate($articleId);
-		$submission =& $this->submission;	
+		$submission =& $this->submission;
 		$this->setupTemplate(true);
 
 		AuthorAction::uploadRevisedVersion($submission);
@@ -347,7 +347,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		AuthorAction::viewMetadata($submission, ROLE_ID_AUTHOR);
 	}
 
-	function saveMetadata() {
+	function saveMetadata($args, &$request) {
 		$articleId = Request::getUserVar('articleId');
 		$this->validate($articleId);
 		$submission =& $this->submission;
@@ -357,8 +357,8 @@ class TrackSubmissionHandler extends AuthorHandler {
 		// the author from changing the metadata.
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 		$initialSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $submission->getArticleId());
-		if ($initialSignoff->getDateCompleted() != null || AuthorAction::saveMetadata($submission)) {
- 			Request::redirect(null, null, 'submission', $articleId);
+		if ($initialSignoff->getDateCompleted() != null || AuthorAction::saveMetadata($submission, $request)) {
+ 			$request->redirect(null, null, 'submission', $articleId);
  		}
 	}
 
@@ -403,7 +403,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$articleId = Request::getUserVar('articleId');
 		$this->validate($articleId);
 		$submission =& $this->submission;
-		$this->setupTemplate(true);		
+		$this->setupTemplate(true);
 
 		if (AuthorAction::completeAuthorCopyedit($submission, Request::getUserVar('send'))) {
 			Request::redirect(null, null, 'submissionEditing', $articleId);
@@ -586,48 +586,48 @@ class TrackSubmissionHandler extends AuthorHandler {
 	//
 	// Payment Actions
 	//
-	
+
 	/**
 	 * Display a form to pay for the submission an article
 	 * @param $args array ($articleId)
 	 */
 	function paySubmissionFee($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
-		
+
 		$this->validate($articleId);
 		$this->setupTemplate(true, $articleId);
-		
+
 		$journal =& Request::getJournal();
-		
+
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
 		$user =& Request::getUser();
 
 		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_SUBMISSION, $user->getId(), $articleId, $journal->getSetting('submissionFee'));
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
-	
+
 		$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
-	}	
-	
+	}
+
 	/**
 	 * Display a form to pay for Fast Tracking an article
 	 * @param $args array ($articleId)
 	 */
 	function payFastTrackFee($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
-		
+
 		$this->validate($articleId);
 		$this->setupTemplate(true, $articleId);
-		
+
 		$journal =& Request::getJournal();
-				
+
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
 		$user =& Request::getUser();
 
 		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_FASTTRACK, $user->getId(), $articleId, $journal->getSetting('fastTrackFee'));
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
-	
+
 		$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
 	}
 
@@ -637,19 +637,19 @@ class TrackSubmissionHandler extends AuthorHandler {
 	 */
 	function payPublicationFee($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
-		
+
 		$this->validate($articleId);
 		$this->setupTemplate(true, $articleId);
-		
+
 		$journal =& Request::getJournal();
-		
+
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
 		$user =& Request::getUser();
 
 		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_PUBLICATION, $user->getId(), $articleId, $journal->getSetting('publicationFee'));
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
-	
+
 		$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
 	}
 

@@ -72,22 +72,24 @@ class Action {
 	/**
 	 * Save metadata.
 	 * @param $article object
+	 * @param $request PKPRequest
 	 */
-	function saveMetadata($article) {
+	function saveMetadata($article, &$request) {
+		$router =& $request->getRouter();
 		if (!HookRegistry::call('Action::saveMetadata', array(&$article))) {
 			import('classes.submission.form.MetadataForm');
 			$metadataForm = new MetadataForm($article);
 			$metadataForm->readInputData();
 
 			// Check for any special cases before trying to save
-			if (Request::getUserVar('addAuthor')) {
+			if ($request->getUserVar('addAuthor')) {
 				// Add an author
 				$editData = true;
 				$authors = $metadataForm->getData('authors');
 				array_push($authors, array());
 				$metadataForm->setData('authors', $authors);
 
-			} else if (($delAuthor = Request::getUserVar('delAuthor')) && count($delAuthor) == 1) {
+			} else if (($delAuthor = $request->getUserVar('delAuthor')) && count($delAuthor) == 1) {
 				// Delete an author
 				$editData = true;
 				list($delAuthor) = array_keys($delAuthor);
@@ -105,12 +107,12 @@ class Action {
 					$metadataForm->setData('primaryContact', 0);
 				}
 
-			} else if (Request::getUserVar('moveAuthor')) {
+			} else if ($request->getUserVar('moveAuthor')) {
 				// Move an author up/down
 				$editData = true;
-				$moveAuthorDir = Request::getUserVar('moveAuthorDir');
+				$moveAuthorDir = $request->getUserVar('moveAuthorDir');
 				$moveAuthorDir = $moveAuthorDir == 'u' ? 'u' : 'd';
-				$moveAuthorIndex = (int) Request::getUserVar('moveAuthorIndex');
+				$moveAuthorIndex = (int) $request->getUserVar('moveAuthorIndex');
 				$authors = $metadataForm->getData('authors');
 
 				if (!(($moveAuthorDir == 'u' && $moveAuthorIndex <= 0) || ($moveAuthorDir == 'd' && $moveAuthorIndex >= count($authors) - 1))) {
@@ -145,21 +147,21 @@ class Action {
 				if (!$metadataForm->validate()) {
 					return $metadataForm->display();
 				}
-				$metadataForm->execute();
+				$metadataForm->execute($request);
 
 				// Send a notification to associated users
 				import('lib.pkp.classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
 				$notificationUsers = $article->getAssociatedUserIds();
 				foreach ($notificationUsers as $userRole) {
-					$url = Request::url(null, $userRole['role'], 'submission', $article->getId(), null, 'metadata');
+					$url = $router->url($request, null, $userRole['role'], 'submission', $article->getId(), null, 'metadata');
 					$notificationManager->createNotification($userRole['id'], 'notification.type.metadataModified',
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_METADATA_MODIFIED
 					);
 				}
 
 				// Add log entry
-				$user =& Request::getUser();
+				$user =& $request->getUser();
 				import('classes.article.log.ArticleLog');
 				import('classes.article.log.ArticleEventLogEntry');
 				ArticleLog::logEvent($article->getId(), ARTICLE_LOG_METADATA_UPDATE, ARTICLE_LOG_TYPE_DEFAULT, 0, 'log.editor.metadataModified', Array('editorName' => $user->getFullName()));

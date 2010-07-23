@@ -160,9 +160,12 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 	function execute() {
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$authorDao =& DAORegistry::getDAO('AuthorDAO');
+		$article =& $this->article;
+
+		// Retrieve the previous citation list for comparison.
+		$previousRawCitationList = $article->getCitations();
 
 		// Update article
-		$article =& $this->article;
 		$article->setTitle($this->getData('title'), null); // Localized
 		$article->setAbstract($this->getData('abstract'), null); // Localized
 		$article->setDiscipline($this->getData('discipline'), null); // Localized
@@ -227,6 +230,12 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 
 		// Save the article
 		$articleDao->updateArticle($article);
+
+		// Update references list if it changed.
+		$rawCitationList = $article->getCitations();
+		if ($previousRawCitationList != $rawCitationList) {
+			$citationDao->importCitations(ASSOC_TYPE_ARTICLE, $article->getId(), $rawCitationList);
+		}
 
 		return $this->articleId;
 	}

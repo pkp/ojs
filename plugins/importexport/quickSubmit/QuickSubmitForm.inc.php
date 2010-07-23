@@ -324,8 +324,13 @@ class QuickSubmitForm extends Form {
 			$this->scheduleForPublication($articleId, $issueId);
 		}
 
+		// Index article.
 		import('classes.search.ArticleSearchIndex');
 		ArticleSearchIndex::indexArticleMetadata($article);
+
+		// Import the references list.
+		$rawCitationList = $article->getCitations();
+		$citationDao->importCitations(ASSOC_TYPE_ARTICLE, $articleId, $rawCitationList);
 	}
 
 	/**

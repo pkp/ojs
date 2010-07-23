@@ -5,8 +5,6 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Subtemplate defining the submission status table.
- *
- * $Id$
  *}
 <div id="status">
 <h3>{translate key="common.status"}</h3>
@@ -26,9 +24,9 @@
 		</td>
 		<td width="50%" class="value">
 			{if $status != STATUS_ARCHIVED}
-				<a href="{url op="unsuitableSubmission" articleId=$submission->getArticleId()}" class="action">{translate key="editor.article.archiveSubmission"}</a>
+				<a href="{url op="unsuitableSubmission" articleId=$submission->getId()}" class="action">{translate key="editor.article.archiveSubmission"}</a>
 			{else}
-				<a href="{url op="restoreToQueue" path=$submission->getArticleId()}" class="action">{translate key="editor.article.restoreToQueue"}</a>
+				<a href="{url op="restoreToQueue" path=$submission->getId()}" class="action">{translate key="editor.article.restoreToQueue"}</a>
 			{/if}
 		</td>
 	</tr>
@@ -44,7 +42,7 @@
 	<tr>
 		<td class="label">{translate key="comments.readerComments"}</td>
 		<td class="value">{translate key=$submission->getCommentsStatusString()}</td>
-		<td class="value"><form action="{url op="updateCommentsStatus" path=$submission->getArticleId()}" method="post">{translate key="submission.changeComments"} <select name="commentsStatus" size="1" class="selectMenu">{html_options_translate options=$commentsStatusOptions selected=$submission->getCommentsStatus()}</select> <input type="submit" value="{translate key="common.record"}" class="button" /></form></td>
+		<td class="value"><form action="{url op="updateCommentsStatus" path=$submission->getId()}" method="post">{translate key="submission.changeComments"} <select name="commentsStatus" size="1" class="selectMenu">{html_options_translate options=$commentsStatusOptions selected=$submission->getCommentsStatus()}</select> <input type="submit" value="{translate key="common.record"}" class="button" /></form></td>
 	</tr>
 {/if}
 </table>

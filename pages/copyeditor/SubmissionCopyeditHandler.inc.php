@@ -9,7 +9,7 @@
  * @class SubmissionCopyeditHandler
  * @ingroup pages_copyeditor
  *
- * @brief Handle requests for submission tracking. 
+ * @brief Handle requests for submission tracking.
  */
 
 // $Id$
@@ -30,7 +30,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		$articleId = $args[0];
 		$this->validate($articleId);
 		$submission =& $this->submission;
-		$this->setupTemplate(true, $articleId);		
+		$this->setupTemplate(true, $articleId);
 		$journal =& Request::getJournal();
 
 		CopyeditorAction::copyeditUnderway($submission);
@@ -251,14 +251,14 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		CopyeditorAction::viewMetadata($submission, ROLE_ID_COPYEDITOR);
 	}
 
-	function saveMetadata() {
+	function saveMetadata($args, &$request) {
 		$articleId = Request::getUserVar('articleId');
 		$this->validate($articleId);
 		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId);
 
-		if (CopyeditorAction::saveMetadata($submission)) {
-			Request::redirect(null, null, 'submission', $articleId);
+		if (CopyeditorAction::saveMetadata($submission, $request)) {
+			$request->redirect(null, null, 'submission', $articleId);
 		}
 	}
 

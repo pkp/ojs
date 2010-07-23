@@ -11,7 +11,7 @@
 <div id="editors">
 <h3>{translate key="user.role.editors"}</h3>
 <form action="{url op="setEditorFlags"}" method="post">
-<input type="hidden" name="articleId" value="{$submission->getArticleId()}"/>
+<input type="hidden" name="articleId" value="{$submission->getId()}"/>
 <table width="100%" class="listing">
 	<tr class="heading" valign="bottom">
 		<td width="{if $isEditor}20%{else}25%{/if}">&nbsp;</td>
@@ -30,7 +30,7 @@
 			<td>{if $editAssignment->getIsEditor()}{translate key="user.role.editor"}{else}{translate key="user.role.sectionEditor"}{/if}</td>
 			<td>
 				{assign var=emailString value=$editAssignment->getEditorFullName()|concat:" <":$editAssignment->getEditorEmail():">"}
-				{url|assign:"url" page="user" op="email" redirectUrl=$currentUrl to=$emailString|to_array subject=$submission->getLocalizedTitle|strip_tags articleId=$submission->getArticleId()}
+				{url|assign:"url" page="user" op="email" redirectUrl=$currentUrl to=$emailString|to_array subject=$submission->getLocalizedTitle|strip_tags articleId=$submission->getId()}
 				{$editAssignment->getEditorFullName()|escape} {icon name="mail" url=$url}
 			</td>
 			<td>
@@ -70,9 +70,9 @@
 </table>
 {if $isEditor}
 	<input type="submit" class="button defaultButton" value="{translate key="common.record"}"/>&nbsp;&nbsp;
-	<a href="{url op="assignEditor" path="sectionEditor" articleId=$submission->getArticleId()}" class="action">{translate key="editor.article.assignSectionEditor"}</a>
-	|&nbsp;<a href="{url op="assignEditor" path="editor" articleId=$submission->getArticleId()}" class="action">{translate key="editor.article.assignEditor"}</a>
-	{if !$selfAssigned}|&nbsp;<a href="{url op="assignEditor" path="editor" editorId=$userId articleId=$submission->getArticleId()}" class="action">{translate key="common.addSelf"}</a>{/if}
+	<a href="{url op="assignEditor" path="sectionEditor" articleId=$submission->getId()}" class="action">{translate key="editor.article.assignSectionEditor"}</a>
+	|&nbsp;<a href="{url op="assignEditor" path="editor" articleId=$submission->getId()}" class="action">{translate key="editor.article.assignEditor"}</a>
+	{if !$selfAssigned}|&nbsp;<a href="{url op="assignEditor" path="editor" editorId=$userId articleId=$submission->getId()}" class="action">{translate key="common.addSelf"}</a>{/if}
 {/if}
 </form>
 </div>

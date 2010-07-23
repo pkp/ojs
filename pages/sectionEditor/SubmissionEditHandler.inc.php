@@ -12,8 +12,6 @@
  * @brief Handle requests for submission tracking.
  */
 
-// $Id$
-
 
 define('SECTION_EDITOR_ACCESS_EDIT', 0x00001);
 define('SECTION_EDITOR_ACCESS_REVIEW', 0x00002);
@@ -357,6 +355,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 */
 	function submissionCitations($args, $request) {
 		$router =& $request->getRouter();
+		$dispatcher =& $this->getDispatcher();
 
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$this->validate($articleId);
@@ -408,8 +407,18 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$templateMgr->assign('citationEditorConfigurationError', $citationEditorConfigurationError);
 
+		// Display a help message if no citations have been imported/added yet.
+		$citationDao =& DAORegistry::getDAO('CitationDAO');
+		$citations =& $citationDao->getObjectsByAssocId(ASSOC_TYPE_ARTICLE, $articleId);
+		if ($citations->getCount() > 0) {
+			$initialHelpMessage = Locale::translate('submission.citations.pleaseClickOnCitationToStartEditing');
+		} else {
+			$templateMgr->assign('articleMetadataUrl', $router->url($request, null, null, 'viewMetadata', $articleId));
+			$initialHelpMessage = Locale::translate('submission.citations.pleaseImportCitationsFirst', array('articleMetadataUrl' => $articleMetadataUrl));
+		}
+		$templateMgr->assign('initialHelpMessage', $initialHelpMessage);
+
 		// Add the grid URL
-		$dispatcher =& $this->getDispatcher();
 		$citationGridUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.citation.CitationGridHandler', 'fetchGrid', null, array('assocId' => $articleId));
 		$templateMgr->assign('citationGridUrl', $citationGridUrl);
 
@@ -902,15 +911,15 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		SectionEditorAction::viewMetadata($submission, ROLE_ID_SECTION_EDITOR);
 	}
 
-	function saveMetadata() {
-		$articleId = Request::getUserVar('articleId');
+	function saveMetadata($args, &$request) {
+		$articleId = $request->getUserVar('articleId');
 		$this->validate($articleId);
 		Locale::requireComponents(array(LOCALE_COMPONENT_OJS_AUTHOR));
 		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId, 'summary');
 
-		if (SectionEditorAction::saveMetadata($submission)) {
-			Request::redirect(null, null, 'submission', $articleId);
+		if (SectionEditorAction::saveMetadata($submission, $request)) {
+			$request->redirect(null, null, 'submission', $articleId);
 		}
 	}
 
