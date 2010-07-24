@@ -62,8 +62,7 @@
 			}
 		});
 
-
-		// Introduction message disable feature.
+		// Feature to disable introduction message.
 		{/literal}{if !$introductionHide}{literal}
 			$('#introductionHide').change(function() {
 				$.getJSON(
@@ -83,10 +82,7 @@
 		{/literal}{/if}{literal}
 
 		// Throbber feature (binds to ajaxAction()'s 'actionStart' event).
-		$('#citationEditorDetailCanvas').bind('actionStart', function() {
-			$('#citationEditorDetailCanvas').html('<div id="citationEditorThrobber" class="throbber"></div>');
-			$('#citationEditorThrobber').show();
-		});
+		actionThrobber('#citationEditorDetailCanvas');
 
 		// Fullscreen feature.
 		var $citationEditor = $('#submissionCitations');
@@ -159,7 +155,7 @@
 	}
 	
 	div.main-tabs>.canvas {
-		height: 600px;
+		height: 800px;
 	}
 	
 	div.canvas div.text-pane {
@@ -167,7 +163,13 @@
 		padding-top: 30px;
 	}
 	
-	div.grid tr.approved-citation div.row_file {
+	div.grid tr div.row_container {
+		background-color: #FFFFFF;
+		border-bottom: 1px solid #B6C9D5;
+	}
+	
+	div.grid tr.approved-citation div.row_file,
+	div.grid tr.approved-citation div.row_container {
 		background-color: #E8F0F8;
 	}
 
@@ -179,12 +181,67 @@
 		float: right;
 		margin-top: 5px;
 	}
+	
+	.citation-form-block {
+		margin-bottom: 40px;
+	}
+	
+	.citation-comparison {
+		margin-bottom: 10px;
+	}
+		
+	.citation-comparison div.value {
+		border: 1px solid #AAAAAA;
+		padding: 5px;
+		background-color: #FFFFFF;
+		margin-right: 25px;
+	}
+	
+	#editableRawCitation div.value {
+		margin-right: 41px;  // FIXME: check for box model bug in IE
+	}
+		
+	#editableRawCitation textarea.textarea {
+		width: 100%;
+		padding: 5px;
+	}
+	
+	.citation-comparison span,
+	#editableRawCitation textarea.textarea {
+		font-size: 1.3em;
+	}
+	
+	.citation-comparison-deletion {
+		color: red;
+		text-decoration: line-through;
+	}
+		
+	.citation-comparison-addition {
+		color: green;
+		text-decoration: underline;
+	}
+	
+	#rawCitationWithMarkup a {
+		display: block;
+		float: right;
+		width: 14px;
+		height: 14px;
+		margin-top: 0.8em; 
+	}
+		
+	#generatedCitationWithMarkup span {
+		cursor: default;
+	}
+	
+	#citationFormErrorsAndComparison .throbber {
+		height: 150px;
+	}
 		
 	/* Generic styles for composite UIs and 2-pane layout */
 	.ui-tabs ul.main-tabs {
 		background: none #FBFBF3;
 		border: 0 none;
-		padding: 0
+		padding: 0;
 	}
 
 	.ui-tabs ul.main-tabs li.ui-tabs-selected a {
@@ -248,7 +305,7 @@
 	}
 	
 	div.pane div.help-message {
-		margin: 20px 40px;
+		margin: 20px 40px 40px 40px;
 		padding-left: 30px;
 		background: transparent url("/pkp-ojs/lib/pkp/templates/images/icons/alert.gif") no-repeat;
 	}
@@ -312,16 +369,11 @@
 		margin: 0;
 	}
 	
-	div.pane div.grid div.active-cell:hover {
+	div.pane div.grid div.clickable-row:hover,
+	div.pane div.grid div.clickable-row:hover div.row_file {
 		background-color: #B6C9D5;
 		cursor: pointer;
 		text-decoration: underline:
-	}
-	
-	div.pane div.grid .current-item .row_file,
-	div.pane div.grid .current-item .row_container,
-	div.pane div.grid .current-item td {
-		background-color: #B6C9D5;
 	}
 	
 	div.pane div.grid .current-item .row_container {
