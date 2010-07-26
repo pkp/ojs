@@ -286,12 +286,12 @@
 		text-decoration: underline:
 	}
 	
-	.composite-ui div.two-pane>div.left-pane div.grid .current-item .row_container {
+	.composite-ui div.two-pane>div.left-pane div.grid tr.approved-citation .row_container {
 		border-left: 3px solid #20538D;
 		padding-left: 22px;
 	}
 	
-	.composite-ui div.two-pane>div.left-pane div.grid .current-item .row_actions {
+	.composite-ui div.two-pane>div.left-pane div.grid tr.approved-citation .row_actions {
 		width: 22px;
 	}
 
@@ -364,13 +364,23 @@
 		min-height: 0;
 		line-height: 1em;
 		text-align: left;
-		background-color: #EFEFEF;
 	}
 	
 	.composite-ui div.two-pane>div.right-pane div.grid .row_container {
-		background-color: #EFEFEF;
+		background-color: #FFFFFF;
+		padding-right: 30px;
+		padding-right: 5px;
 	}
 
+	.composite-ui div.two-pane>div.right-pane div.grid .row_actions {
+		right: 26px;
+	}
+
+	.composite-ui div.two-pane>div.right-pane div.grid .row_file {
+		width: auto;
+		padding: 0;
+	}
+	
 	/* Citation editor: editor height */
 	#submissionCitations.composite-ui div.main-tabs>.canvas {
 		height: 600px;
@@ -384,17 +394,9 @@
 		height: 570px; /* This is necessary for tbody overflow to work. */
 	}
 
-	.composite-ui div.two-pane>div.left-pane div.grid tr.approved-citation div.row_file,
-	.composite-ui div.two-pane>div.left-pane div.grid tr.approved-citation div.row_container {
-		background-color: #E8F0F8;
-	}
-
-	.composite-ui div.two-pane>div.left-pane div.grid tr.approved-citation div.clickable-row:hover {
+	.composite-ui div.two-pane>div.left-pane div.grid tr.current-item div.row_file,
+	.composite-ui div.two-pane>div.left-pane div.grid tr.current-item div.row_container {
 		background-color: #B6C9D5;
-	}
-	
-	#submissionCitations.composite-ui div.grid tr.approved-citation div.row_file span {
-		color: #777777;
 	}
 
 	/* Citation editor: citation detail editor - before/after fields */
