@@ -373,6 +373,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->addJavaScript('lib/pkp/js/modal.js');
 		$templateMgr->addJavaScript('lib/pkp/js/lib/jquery/plugins/validate/jquery.validate.min.js');
 		$templateMgr->addJavaScript('lib/pkp/js/jqueryValidatorI18n.js');
+		$templateMgr->addJavaScript('lib/pkp/js/splitter.js');
+
 
 
 		// Check whether the citation editor requirements are complete.

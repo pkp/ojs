@@ -22,8 +22,6 @@
 
 {* JavaScript - FIXME: will be moved to JS file as soon as development is done *}
 {literal}
-<script type="text/javascript" src="/pkp-ojs/lib/pkp/js/splitter.js"></script>
-
 <script type="text/javascript">
 	$(function() {
 		// Vertical splitter.
@@ -226,7 +224,8 @@
 	.composite-ui div.pane div.help-message {
 		margin: 20px 40px 40px 40px;
 		padding-left: 30px;
-		background: transparent url("/pkp-ojs/lib/pkp/templates/images/icons/alert.gif") no-repeat;
+		/* FIXME: change path when moving this to its own file */
+		background: transparent url("../../../../lib/pkp/templates/images/icons/alert.gif") no-repeat;
 	}
 
 	/* Composite UI: text pane layout */
@@ -304,7 +303,8 @@
 		font-size: 0;
 		border-top: solid 1px #9cbdff;
 		border-bottom: solid 1px #9cbdff;
-		background: #cbe1fb url(/pkp-ojs/lib/pkp/styles/splitter/ui-bg_pane.gif) 0% 50%;
+		/* FIXME: change path when moving this to its own file */
+		background: #cbe1fb url(../../../../lib/pkp/styles/splitter/ui-bg_pane.gif) 0% 50%;
 	}
 
 	.composite-ui div.two-pane>div.splitbarV.working,

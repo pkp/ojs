@@ -13,7 +13,7 @@
 
 {url|assign:"competingInterestGuidelinesUrl" page="information" op="competingInterestGuidelines"}
 
-<form name="metadata" method="post" action="{url op="saveMetadata"}" enctype="multipart/form-data"  onsubmit="alert('form submit'); return false;">
+<form name="metadata" method="post" action="{url op="saveMetadata"}" enctype="multipart/form-data">
 <input type="hidden" name="articleId" value="{$articleId|escape}" />
 {include file="common/formErrors.tpl"}
 
@@ -441,7 +441,7 @@ function moveAuthor(dir, authorIndex) {
 <div class="separator"></div>
 
 
-<p><input type="submit" value="{translate key="submission.saveMetadata"}" class="button defaultButton" onclick="alert('submit button');"/> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="history.go(-1)" /></p>
+<p><input type="submit" value="{translate key="submission.saveMetadata"}" class="button defaultButton"/> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="history.go(-1)" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 
