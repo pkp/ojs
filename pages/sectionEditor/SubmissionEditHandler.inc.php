@@ -81,7 +81,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($submission->getArticleId());
+		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($submission->getId());
 		if ($publishedArticle) {
 			$issueDao =& DAORegistry::getDAO('IssueDAO');
 			$issue =& $issueDao->getIssueById($publishedArticle->getIssueId());
@@ -293,7 +293,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		import('classes.issue.IssueAction');
 		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($submission->getArticleId());
+		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($submission->getId());
 		$templateMgr->assign_by_ref('publishedArticle', $publishedArticle);
 
 		$templateMgr->assign('useCopyeditors', $useCopyeditors);
@@ -1089,7 +1089,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 					// to send a file to copyediting.
 					SectionEditorAction::setCopyeditFile($submission, $file[0], $file[1]);
 
-					$signoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $submission->getArticleId());
+					$signoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $submission->getId());
 					$signoff->setFileId($file[0]);
 					$signoff->setFileRevision($file[1]);
 					$signoffDao->updateObject($signoff);
@@ -1103,7 +1103,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			if (isset($file[0]) && isset($file[1])) {
 				SectionEditorAction::resubmitFile($submission, $file[0], $file[1]);
 
-				$signoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $submission->getArticleId());
+				$signoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $submission->getId());
 				$signoff->setFileId($file[0]);
 				$signoff->setFileRevision($file[1]);
 				$signoffDao->updateObject($signoff);
@@ -2429,7 +2429,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				$publishedArticleDao->updatePublishedArticle($publishedArticle);
 			} else {
 				$publishedArticle = new PublishedArticle();
-				$publishedArticle->setArticleId($submission->getArticleId());
+				$publishedArticle->setId($submission->getId());
 				$publishedArticle->setIssueId($issueId);
 				$publishedArticle->setDatePublished(Core::getCurrentDate());
 				$publishedArticle->setSeq(REALLY_BIG_NUMBER);

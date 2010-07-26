@@ -95,7 +95,7 @@
 				$('.composite-ui div.main-tabs>.canvas').each(function() {
 					$(this).css('height', beforeFullscreen.height);
 				});
-				$('.composite-ui div.two-pane>div.left-pane tbody').first().css('height', beforeFullscreen.navHeight);
+				$('.composite-ui div.two-pane>div.left-pane .scrollable').first().css('height', beforeFullscreen.navHeight);
 				
 				$('body').css('overflow', 'auto');
 				window.scroll(beforeFullscreen.x, beforeFullscreen.y);
@@ -119,7 +119,7 @@
 				$('.composite-ui div.main-tabs>.canvas').each(function() {
 					$(this).css('height', canvasHeight+'px');
 				});
-				$('.composite-ui div.two-pane>div.left-pane tbody').first().css('height', (canvasHeight-30)+'px');
+				$('.composite-ui div.two-pane>div.left-pane .scrollable').first().css('height', (canvasHeight-30)+'px');
 				window.scroll(0,0);
 				$(this).text('{/literal}{translate key="common.fullscreenOff"}{literal}');
 			}
@@ -131,10 +131,12 @@
 		// Resize citation editor in fullscreen mode
 		// when the browser window is being resized.
 		$(window).resize(function() {
+			canvasHeight=$(window).height()-$('ul.main-tabs').height();
 			if ($citationEditor.hasClass('fullscreen')) {
 				$('div.main-tabs>.canvas').each(function() {
-					$(this).css('height', ($(window).height()-$('ul.main-tabs').height())+'px');
+					$(this).css('height', canvasHeight+'px');
 				});
+				$('.composite-ui div.two-pane>div.left-pane .scrollable').first().css('height', (canvasHeight-30)+'px');
 			}
 		});
 	});

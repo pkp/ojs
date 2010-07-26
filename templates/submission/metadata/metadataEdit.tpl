@@ -5,8 +5,6 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Form for changing metadata of an article (used in MetadataForm)
- *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="submission.editMetadata"}
@@ -15,7 +13,7 @@
 
 {url|assign:"competingInterestGuidelinesUrl" page="information" op="competingInterestGuidelines"}
 
-<form name="metadata" method="post" action="{url op="saveMetadata"}" enctype="multipart/form-data">
+<form name="metadata" method="post" action="{url op="saveMetadata"}" enctype="multipart/form-data"  onsubmit="alert('form submit'); return false;">
 <input type="hidden" name="articleId" value="{$articleId|escape}" />
 {include file="common/formErrors.tpl"}
 
@@ -407,11 +405,12 @@ function moveAuthor(dir, authorIndex) {
 <script type="text/javascript">
 	// Display warning when citations are being changed.
 	$(function() {ldelim}
-		$('#citations').change(function() {ldelim}
+		$('#citations').change(function(e) {ldelim}
 			var $this = $(this);
 			var originalContent = $this.text();
 			var newContent = $this.val();
 			if(originalContent != newContent) {ldelim}
+				// Display confirm message.
 				if (!confirm('{translate key="submission.citations.metadata.changeWarning"}')) {ldelim}
 					$this.val(originalContent);
 				{rdelim}
@@ -442,7 +441,7 @@ function moveAuthor(dir, authorIndex) {
 <div class="separator"></div>
 
 
-<p><input type="submit" value="{translate key="submission.saveMetadata"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="history.go(-1)" /></p>
+<p><input type="submit" value="{translate key="submission.saveMetadata"}" class="button defaultButton" onclick="alert('submit button');"/> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="history.go(-1)" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 
