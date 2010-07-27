@@ -59,13 +59,6 @@ class DOAJPlugin extends ImportExportPlugin {
 		return Locale::translate('plugins.importexport.doaj.description');
 	}
 
-	function getInstallEmailTemplatesFile() {
-		return ($this->getPluginPath() . DIRECTORY_SEPARATOR . 'emailTemplates.xml');
-	}
-
-	function getInstallEmailTemplateDataFile() {
-		return ($this->getPluginPath() . '/locale/{$installedLocale}/emailTemplates.xml');
-	}
 	/**
 	 * Display the plugin
 	 * @param $args array
@@ -80,9 +73,9 @@ class DOAJPlugin extends ImportExportPlugin {
 				// export an xml file with the journal's information
 				$this->exportJournal($journal);
 				break;
-			case 'email':
+			case 'contact':
 				// present a form autofilled with journal information to send to the DOAJ representative
-				$this->emailRep($journal, Request::getUserVar('send'));
+				$this->contact($journal);
 				break;
 			default:
 				$this->setBreadcrumbs();
@@ -118,88 +111,34 @@ class DOAJPlugin extends ImportExportPlugin {
 	}
 
 	/**
-	 * Send the request email to DOAJ.
+	 * Auto-fill the DOAJ form.
 	 * @param $journal object
 	 */
-	function emailRep(&$journal, $send = false) {
+	function contact(&$journal, $send = false) {
 		$user =& Request::getUser();
 
 		$issn = $journal->getSetting('printIssn');
 
-		import('classes.mail.MailTemplate');
-		$mail = new MailTemplate('DOAJ_EMAIL_REP');
-
-		if ($send && !$mail->hasErrors()) {
-			$mail->send();
-			Request::redirect(null, 'manager', 'importexport');
-		} else {
-			$paramArray = array(
-				'username' => $user->getFirstName() . ' ' . $user->getLastName(),
-				'journalName' => $journal->getLocalizedTitle(),
-				'isOpenAccess' => $journal->getSetting('publishingMode') == PUBLISHING_MODE_OPEN ? 'Yes' : 'No',
-				'altTitle' => $journal->getLocalizedSetting('abbreviation'),
-				'journalURL' => $journal->getUrl(),
-				'hasAuthorFee' => $journal->getSetting('submissionFee') > 0 ? 'Yes' : 'No',
-				'infoURL' => $journal->getUrl(),
-				'isPeerReviewed' => 'Yes',
-				'isOriginalResearch' => '',
-				'isAcademic' => '',
-				'isActive' => $this->compareToCurDate($journal->getId()) ? 'Yes' : 'No',
-				'hasPrintedForm' => $issn != '' ? 'Yes' : 'No',
-				'hasEmbargo' => '',
-				'accessFrom' => $journal->getSetting('initialYear'),
-				'firstVolume' => $journal->getSetting('initialVolume'),
-				'firstIssue' => $journal->getSetting('initialNumber'),
-				'issn' => $issn,
-				'eissn' => $journal->getSetting('onlineIssn'),
-				'publisherName' => $journal->getSetting('publisherInstitution'),
-				'country' => $user->getCountry(),
-				'languages' => Locale::getLocale(),
-				'keywords' => $journal->getLocalizedSetting('searchKeywords'),
-				'contactName' => $journal->getSetting('contactName'),
-				'contactEmail' => $journal->getSetting('contactEmail'),
-				'frequency' => ($journal->getSetting('volumePerYear'))*($journal->getSetting('issuePerVolume')),
-				'articlesPerIssue' => $this->getArticlesPerIssue($journal->getId())
-			);
-			$mail->assignParams($paramArray);
-			$mail->addRecipient('Sonja.Brage@lub.lu.se', 'Sonja Brage');
-			$mail->displayEditForm(Request::url(null, 'manager', 'importexport', array('plugin', $this->getName(), 'email')));
+		$paramArray = array(
+			'name' => $user->getFullName(),
+			'email' => $user->getEmail(),
+			'title' => $journal->getLocalizedTitle(),
+			'description' => String::html2text($journal->getLocalizedSetting('focusScopeDesc')),
+			'url' => $journal->getUrl(),
+			'charging' => $journal->getSetting('submissionFee') > 0 ? 'Y' : 'N',
+			'issn' => $issn,
+			'eissn' => $journal->getSetting('onlineIssn'),
+			'pub' => $journal->getSetting('publisherInstitution'),
+			'language' => Locale::getLocale(),
+			'keywords' => $journal->getLocalizedSetting('searchKeywords'),
+			'contact_person' => $journal->getSetting('contactName'),
+			'contact_email' => $journal->getSetting('contactEmail')
+		);
+		$url = 'http://www.doaj.org/doaj?func=suggest&owner=1';
+		foreach ($paramArray as $name => $value) {
+			$url .= '&' . urlencode($name) . '=' . urlencode($value);
 		}
-	}
-
-	/**
-	 * Get the number of articles per issue.
-	 * @param $journalId int
-	 * @return int
-	 */
-	function getArticlesPerIssue ($journalId) {
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-		$journalStatsDao =& DAORegistry::getDAO('JournalStatisticsDAO');	
-		
-		$articleCount = $publishedArticleDao->getPublishedArticleCountByJournalId($journalId);
-		$numIssues = $journalStatsDao->getIssueStatistics($journalId);
-		
-		if ($numIssues['numPublishedIssues'] > 0) 
-			return round($articleCount / $numIssues['numPublishedIssues'], 2);
-		else return 0;		
-	}
-
-	/**
-	 * See if the most recent issue was more than a year old. If so,
-	 * return false. Else return true. (No published issues returns false.)
-	 * @param $journalId int
-	 * @return boolean
-	 */
-	function compareToCurDate ($journalId) {
-		// Get date from latest issue of the journal
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$lastIssue = $issueDao->getLastCreatedIssue($journalId);
-
-		if (!$lastIssue) return false;
-
-		$issueDate = strtotime($lastIssue->getDatePublished());
-
-		return ($issueDate > time() - (60 * 60 * 24 * 365));
+		Request::redirectUrl($url);
 	}
 }
 
