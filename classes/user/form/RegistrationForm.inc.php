@@ -71,6 +71,7 @@ class RegistrationForm extends Form {
 				$this->addCheck(new FormValidator($this, 'lastName', 'required', 'user.profile.form.lastNameRequired'));
 				$this->addCheck(new FormValidatorUrl($this, 'userUrl', 'optional', 'user.profile.form.urlInvalid'));
 				$this->addCheck(new FormValidatorEmail($this, 'email', 'required', 'user.profile.form.emailRequired'));
+				$this->addCheck(new FormValidatorCustom($this, 'email', 'required', 'user.register.form.emailsDoNotMatch', create_function('$email,$form', 'return $email == $form->getData(\'confirmEmail\');'), array(&$this)));
 				$this->addCheck(new FormValidatorCustom($this, 'email', 'required', 'user.register.form.emailExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByEmail'), array(), true));
 				if ($this->captchaEnabled) {
 					$this->addCheck(new FormValidatorCaptcha($this, 'captcha', 'captchaId', 'common.captchaField.badCaptcha'));
@@ -154,7 +155,7 @@ class RegistrationForm extends Form {
 			'username', 'password', 'password2',
 			'salutation', 'firstName', 'middleName', 'lastName',
 			'gender', 'initials', 'country',
-			'affiliation', 'email', 'userUrl', 'phone', 'fax', 'signature',
+			'affiliation', 'email', 'confirmEmail', 'userUrl', 'phone', 'fax', 'signature',
 			'mailingAddress', 'biography', 'interestsKeywords', 'userLocales',
 			'registerAsReader', 'openAccessNotification', 'registerAsAuthor',
 			'registerAsReviewer', 'existingUser', 'sendPassword'

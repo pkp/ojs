@@ -155,6 +155,11 @@
 		</tr>
 
 		<tr valign="top">
+			<td class="label">{fieldLabel name="confirmEmail" required="true" key="user.confirmEmail"}</td>
+			<td class="value"><input type="text" id="confirmEmail" name="confirmEmail" value="{$confirmEmail|escape}" size="30" maxlength="90" class="textField" /></td>
+		</tr>
+
+		<tr valign="top">
 			<td class="label">{fieldLabel name="userUrl" key="user.url"}</td>
 			<td class="value"><input type="text" id="userUrl" name="userUrl" value="{$userUrl|escape}" size="30" maxlength="90" class="textField" /></td>
 		</tr>
