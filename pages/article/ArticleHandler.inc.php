@@ -153,8 +153,9 @@ class ArticleHandler extends Handler {
 				$publishedArticleDao->incrementViewsByArticleId($article->getId());
 			}
 		} else {
-			if (!$request->isBot()) {
-				// Increment the galley's views count
+			if (!$request->isBot() && !$galley->isPdfGalley()) {
+				// Increment the galley's views count.
+				// PDF galley views are counted in viewFile.
 				$galleyDao->incrementViews($galley->getId());
 			}
 
