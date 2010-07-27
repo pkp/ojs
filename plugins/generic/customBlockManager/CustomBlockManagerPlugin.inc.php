@@ -68,6 +68,7 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 					$plugins[$blockPlugin->getSeq()][$blockPlugin->getPluginPath() . $i] =& $blockPlugin;
 
 					$i++;
+					unset($blockPlugin);
 				}
 				break;
 		}

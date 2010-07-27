@@ -37,6 +37,15 @@ class CustomBlockPlugin extends BlockPlugin {
 		$plugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		return $plugin;
 	}
+
+	/**
+	 * Get the symbolic name of the plugin.
+	 * @return string
+	 */
+	function getName() {
+		return $this->blockName;
+	}
+
 	/**
 	 * Override the builtin to get the correct plugin path.
 	 * @return string
