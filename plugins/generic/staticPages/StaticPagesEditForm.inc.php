@@ -130,6 +130,14 @@ class StaticPagesEditForm extends Form {
 	}
 
 	/**
+	 * Get the names of localized fields
+	 * @return array
+	 */
+	function getLocaleFieldNames() {
+		return array('title', 'content');
+	}
+
+	/**
 	 * Save page into DB
 	 */
 	function save() {
