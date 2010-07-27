@@ -411,7 +411,6 @@ http://journals.mui.ac.ir/index.php/index/index
 <li>از ستاره یعنی <b>*</b> در کلمات به عنوان علامت سرکش استفاده کنید تا جایگزین هر تعداد حروف شود. مثلا  <i>soci* morality</i> معادل  "sociological" یا "societal" میباشد</li>
 </ul>]]></message>
 <!-- صفحه بینابینی PDF ها-->  <message key="article.pdf.title">فايل پی دی اف</message>
-	<message key="article.pdf.note"><![CDATA[چنانچه مرورگر شما دارای قابلیت نمایش فایل PDF باشد که آخرین نسخه آن در  <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a> قابل دانلود است ، دراین صورت فایل PDF انتخاب شده در اینجا بارگیری میشود. همچنین فایل مزبور قابل دان لود نیز میباشد. برای اطلاعات بیشتر در مورد فایل های PDF به <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">بخش سوالات رایج در مورد PDF</a> مراجعه کنید.<br /><br />اگر فایل بصورت اتوماتیک دان لود نشد ، <a href="{$url}">اینجا</a> را کلیک کنید.]]></message>
 <!-- صفحه بینابینی برای گالی های غیر PDF و غیر  HTML-->  <message key="article.nonpdf.title">دان لود مقاله</message>
 	<message key="article.nonpdf.note"><![CDATA[فایل انتخاب شده بصورت اتوماتیک دان لود خواهد شد. در غیر این صورت بر روی لینک زیر کلیک کنید. توجه داشته باشید که برای دیدن محتویات این فایل ممکن است ابزار خاصی احتیاج داشته باشید.<br /><br />چنانچه فایل بصورت اتوماتیک دان لود نشد ، <a href="{$url}">اینجا</a> را کلیک کنید.]]></message>
 <!-- اندکس سایت -->  <message key="site.journalsHosted">لیست مجلات موجود بر روی این سایت</message>

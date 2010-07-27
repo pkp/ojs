@@ -630,7 +630,6 @@ Attivo &#x00E8; il numero di quante revisioni si stanno considerando o stanno an
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	<message key="article.pdf.note"><![CDATA[il file PDF che hai selezionato dovrebbe caricarsi qui, se il tuo Web browser ha installato un plug-in di lettura dei PDF  (per esempio, una cersione recente di<a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>). In alternativa, il file PDF  verr&#x00E0; scaricato sul tuo computer, dove pu&#x00F2; essere aperto da un  reader PDF . Se volessi ulteriori informazioni su come stampare, salvare, and e lavorare con i  PDF, Highwire Press fornisce un utile <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions circa i PDF</a>.<br /><br />Se il file non si scarica automaticamente, <a href="{$url}">cliccare qui</a>.]]></message>
 
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Scarica articolo</message>

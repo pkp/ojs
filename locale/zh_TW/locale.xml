@@ -687,7 +687,6 @@
 
 	<!-- Interstitial page for PDFs 插入PDF頁面 -->
 	<message key="article.pdf.title">可攜式文件格式(Portable Document Format; PDF)</message>
-	<message key="article.pdf.note"><![CDATA[您選擇的PDF檔案應該會載入至此，如果您的網頁瀏覽器安裝有PDF閱讀器的外掛程式（比方說，最新版本的<a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>）。否則，這份PDF檔案會被下載到您的電腦上，同樣可以用一個PDF閱讀器來開啟。如果您要知道更多有關怎麼樣進行列印、存黨和編輯PDF的資訊，Highwire Press網站提供了一個有用的<a href="http://highwire.stanford.edu/help/pdf-faq.dtl">PDF常見問題</a>說明。<br /><br />如果這份檔案沒有自動下載到您的電腦上，請<a href="{$url}">點擊這裡</a>。]]></message>
 	
 	<!-- Interstitial page for non-PDF non-HTML galleys 非PDF、非HTML排版樣式的插入頁面-->
 	<message key="article.nonpdf.title">文章下載</message>

@@ -812,7 +812,6 @@ da bidali zuzentzeko fitxategia hautatu arte Ebaluazio-orrian, Editorearen eraba
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	<message key="article.pdf.note"><![CDATA[Zuk hautatutako PDF fitxategia hemen kargatuko da zure web-arakatzaileak PDFak irakurtzeko plugina instalatuta badauka (esate baterako <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>-en bertsio berri samar bat). Bestela, PDF fitxategia zure ordenagailura deskarga dezakezu, baina hor ere PDF irakurlearekin ireki beharko duzu. PDFak inprimatzeko, gordetzeko edo erabiltzeko informazio gehiago nahi baduzu, Highwire Press-ek <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions about PDFs</a> orrian eskaintzen dituen azalpenak irakur ditzakezu.<br /><br />Fitxategia ez bada automatikoki deskargatzen, <a href="{$url}">egin klik hemen</a>.]]></message>
 	
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Artikulua deskargatu</message>

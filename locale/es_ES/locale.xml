@@ -623,7 +623,6 @@ la contraseña actual.<br /><br />Introduzca su dirección de correo-e para camb
 	
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	<message key="article.pdf.note"><![CDATA[El fichero PDF que ha seleccionado se debería cargar aquí si su navegador cuenta con un plug-in  para ficheros PDF (por ejemplo, una versión reciente de <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>). Alternativamente, el fichero PDF se bajará a su ordenador, donde puede ser abierto usando un lector de ficheros PDF. Si quiere obtener más información sobre como imprimir, guardar, y trabajar con PDFs, Highwire Press cuenta con una útil sección de <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Preguntas Frecuentes sobre PDFs</a> (en inglés).<br /><br />Si el fichero no se descarga automáticamente, <a href="{$url}">haga click aquí</a>.]]></message>
 	
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Descargar artículo</message>

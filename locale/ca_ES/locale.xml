@@ -711,7 +711,6 @@ El camp Actives llista les revisions en curs.]]></message>
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	<message key="article.pdf.note"><![CDATA[El fitxer PDF es carregarà aquí si el vostre navegador web té instal·lat un connector per a la lectura de fitxers PDF (com ara una versió recent de l’<a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>). Si ho preferiu, podeu baixar el fitxer PDF al vostre ordinador, on també el podreu obrir mitjançant un lector de PDF. Si necessiteu més informació sobre com heu d’imprimir, desar i treballar amb fitxers PDF, consulteu el document <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions about PDFs (preguntes més freqüents sobre els fitxers PDF)</a> proporcionat per Highwire Press.<br /><br /><a href="{$url}">Feu clic aquí</a> si el fitxer no baixa automàticament.]]></message>
 	
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Baixada de l’article</message>

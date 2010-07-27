@@ -659,7 +659,6 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	<message key="article.pdf.note"><![CDATA[Het PDF bestand dat u heeft geselecteerd wordt hier getoond als uw web-browser een PDF plugin geïnstalleerd heeft (bijvoorbeeld een recente versie van <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>). Anders wodt het bestand op uw computer opgeslagen waar het met een PDF lezer geopend kan worden. Als u meer informatie wilt over afdrukken, bewaren en werken met PDF's heeft Highwire Press het behulpzame <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions about PDFs</a> (Engels).<br /><br />Als het bestand niet automatisch wordt geladen, <a href="{$url}">klik hier</a>.]]></message>
 	
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Artikel download</message>

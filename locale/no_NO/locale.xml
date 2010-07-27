@@ -599,7 +599,6 @@ nåværende passordet.<br /><br />Skriv inn e-postadressen din nedenfor, for å 
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
- 	<message key="article.pdf.note"><![CDATA[PDF-filen Du selected du valgte skal nå bli lastet ned, hvis nettleseren din Web har en plugin for visning av PDF-filer (for eksempel en oppdatert versjon av <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>). Ellers blir PDF filen lastet ned på maskinen din, hvor den også kan åpnes ved hjelp av en PDF leser. Hvis du vil vite mer om hvordan du skriver ut, lagrer, og arbeider med PDFer, har Highwire Press gitt en nyttig <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions om PDFer</a>.<br /><br />Hvis filen ikke lastes ned automatisk, <a href="{$url}">klikk her</a>.]]></message>
 	
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Artikkelnedlasting</message>

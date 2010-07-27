@@ -632,7 +632,6 @@ vaš korisnički račun, unesite u polja ispod vašu sadašnju i novu lozinku.</
 </ul>]]></message>
 
 	<!--  Interstitial page for PDFs  --><message key="article.pdf.title">Prijenosni format dokumenta (PDF)</message>
-	<message key="article.pdf.note"><![CDATA[ PDF datoteka koju ste odabrali trebala bi se učitati ovdje, ako vaš mrežni preglednik ima instaliran PDF čitač (na primjer, posljednja verzija <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>). Alternativno, PDF datoteku možete pohraniti u vaše računalo, gdje je isto tako možete otvoriti pomoću PDF čitača. Želite li više informacija o tome kako isprintati, spremiti i raditi s PDF datotekama, pogledajte koristan pregled <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">učestalo potavljenih upita o PDF datotekama</a> u izdanju Highwire Pressa.<br /><br />Ako se datoteka ne skida automatski, <a href="{$url}">kliknite ovdje</a>.]]></message>
 	
 	<!--  Interstitial page for non-PDF non-HTML galleys  --><message key="article.nonpdf.title">Preuzimanje članka</message>
 	<message key="article.nonpdf.note"><![CDATA[Datoteka koju ste odabrali trebala bi se započeti automatski preuzimati. Ako se to ne dogodi, kliknite na poveznicu ispod. Ova datoteka možda zahtijeva posebni program ili dodatak za prikaz.<br /><br />Ako se datoteka ne skida automatski, <a href="{$url}">kliknite ovdje</a>.]]></message>

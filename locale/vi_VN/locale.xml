@@ -600,7 +600,6 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Định dạng file PDF (PDF)</message>
-	<message key="article.pdf.note"><![CDATA[File PDF quý vị chọn sẽ được tải ngay trên màn hình này nếu trình duyệt Web của quý vị tích hợp phần mềm đọc file PDF (ví dụ, phiên bản mới của <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>). Nếu không, file PDF sẽ được tải xuống máy tính của quý vị và cũng có thể mở ra bằng một phần mềm đọc PDF. Nếu quý vị cần thêm thông tin về cách in, ghi và thao tác với file PDF, có thể tìm hiểu thêm tài liệu của Highwire Press <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Hỏi đáp về PDF</a>.<br /><br />Nếu file không tự động tải xuống, <a href="{$url}">nhấp chuột vào đây</a>.]]></message>
 	
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Tải bài viết</message>

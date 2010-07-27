@@ -496,7 +496,7 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 </ul>]]></message>
   <!-- Interstitial page for PDFs -->
   <message key="article.pdf.title">PDF</message>
-  <message key="article.pdf.note"><![CDATA[使用しているWebブラウザにPDFリーダープラグイン（例えば、<a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>の最新版）をインストールしていれば、選択したPDFファイルがここにロードされるはずです。PDFファイルをダウンロードすることもできます。ダウンロードしたファイルもPDFリーダーを使って開くことができます。 PDFファイルの印刷、保存、作成などについてさらに詳しく知りたい場合は、Highwire Pressが提供している<a href="http://highwire.stanford.edu/help/pdf-faq.dtl">PDFに関するよくある質問</a>が参考になります。<br /><br />ファイルが自動的にダウンロードされない場合は、<a href="{$url}">ここをクリック</a>してください。]]></message>
+
   <!-- Interstitial page for non-PDF non-HTML galleys -->
   <message key="article.nonpdf.title">論文のダウンロード</message>
   <message key="article.nonpdf.note"><![CDATA[選択したファイルは自動的にダウンロードが開始するはずです。開始しない場合は、下のリンクをクリックしてください。このファイルを見るには特別なビューアーやプラグインが必要な場合がありますので注意してください。<br /><br />ファイルが自動的にダウンロードされない場合は、<a href="{$url}">ここをクリック</a>してください。]]></message>

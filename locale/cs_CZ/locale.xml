@@ -660,7 +660,6 @@ současného hesla.<br /><br />Pro resetování Vašeho hesla vložte níže Va�
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	<message key="article.pdf.note"><![CDATA[PDF soubor, který jste vybral, by se měl nahrát sem, pokud je ve Vašem internetovém prohlížeči nainstalován plug-in pro PDF reader (například poslední verze <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>). Alternativně bude PDF soubor stažen do Vašeho počítače, kde může být také otevřen s použitím PDF readeru. Pokud chcete více informací o tom, jak tisknout, ukládat a pracovat s PDF soubory, Highwire Press poskytuje užitečné <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Často kladené otázky o PDF</a>.<br /><br />Pokud se soubor nestáhne automaticky, <a href="{$url}">klikněte zde</a>.]]></message>
 	
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Stažení článku</message>

@@ -587,7 +587,6 @@ Active indique combien d'évaluations sont présentement considérées ou en cou
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Format de document portable (PDF)</message>
-	<message key="article.pdf.note"><![CDATA[Le fichier PDF que vous avez sélectionné devrait se charger ici, si votre navigateur Web dispose d'un lecteur PDF (par exemple, une  version récente de <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>). Le fichier PDF peut également être téléchargé sur votre poste de travail, où il peut être ouvert à l'aide d'un logiciel de lecture de fichiers PDF. Pour plus de renseignements sur la façon d'imprimer, d'enregistrer, et de manipuler des fichiers PDF, Highwire Press fournit une page de <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Foire aux questions sur les PDF</a>.<br /><br />Si le fichier ne se télécharge pas automatiquement, <a href="{$url}">cliquer ici</a>.]]></message>
 	
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Télécharger l'article</message>

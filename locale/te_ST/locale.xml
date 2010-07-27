@@ -1780,7 +1780,6 @@ Thè fîlè çåñ bè vîèwèð bý çlîçkîñg óñ thè fîlè ñåmè. Æ
 	<message key="search.operator.and">åñð</message>
 	<message key="search.operator.or">ór</message>
 	<message key="article.pdf.title">Pórtåblè Ðóçümèñt Fórmåt (PÐF)</message>
-	<message key="article.pdf.note"><![CDATA[Thè PÐF fîlè ýóü þèlèçtèð þhóülð lóåð hèrè, îf ýóür Wèb brówþèr håþ å PÐF rèåðèr plüg-îñ îñþtållèð (fór èxåmplè, å rèçèñt vèrþîóñ óf <a href="http://www.adobe.com/products/acrobat/readstep2.html">Æðóbè Æçróbåt Rèåðèr</a>). Æltèrñåtîvèlý, thè PÐF fîlè wîll ðówñlóåð tó ýóür çómpütèr, whèrè ît çåñ ålþó bè ópèñèð üþîñg å PÐF rèåðèr. Îf ýóü wóülð lîkè mórè îñfórmåtîóñ åbóüt hów tó prîñt, þåvè, åñð wórk wîth PÐFþ, Hîghwîrè Prèþþ próvîðèþ å hèlpfül <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frèqüèñtlý Æþkèð Qüèþtîóñþ åbóüt PÐFþ</a>.<br /><br />Îf thè fîlè ðóèþ ñót ðówñlóåð åütómåtîçållý, <a href="{$url}">çlîçk hèrè</a>.]]></message>
 	<message key="article.nonpdf.title">Ærtîçlè Ðówñlóåð</message>
 	<message key="article.nonpdf.note"><![CDATA[Thè fîlè ýóü þèlèçtèð þhóülð bègîñ ðówñlóåðîñg åütómåtîçållý. Îf ît ðóèþ ñót, çlîçk thè lîñk bèlów. Ñótè thåt thîþ fîlè måý rèqüîrè å þpèçîål vîèwèr ór plügîñ tó vîèw.<br /><br />Îf thè fîlè ðóèþ ñót ðówñlóåð åütómåtîçållý, <a href="{$url}">çlîçk hèrè</a>.]]></message>
 	<message key="site.journalsHosted">Jóürñålþ hóþtèð óñ thîþ þîtè</message>

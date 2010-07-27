@@ -662,7 +662,6 @@
 
         <!-- Interstitial page for PDFs -->
         <message key="article.pdf.title">Portable Document Format (PDF)</message>
-        <message key="article.pdf.note"><![CDATA[Εάν το πρόγραμμα φυλλομέτρησης που διαθέτετε έχει εγκατεστημένο plug-in προγράμματος ανάγνωσης αρχείων PDF, πρέπει να πραγματοποιήσετε φόρτωση του αρχείο PDF που επιλέξατε (για παράδειγμα, πρόσφατη έκδοση <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>). Εναλλακτικά, το αρχείο PDF θα κατέβει στον ηλεκτρονικό σας υπολογιστή όπου θα μπορεί να ανοίξει και με χρήση προγράμματος ανάγνωσης αρχείων PDF. Εάν επιθυμείτε περισσότερες πληροφορίες σχετικά με τον τρόπο εκτύπωσης, αποθήκευσης και εργασίας με αρχεία PDF, το Highwire Press παρέχει βοήθεια στο <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Συχνές ερωτήσεις σχετικά με PDF</a>.<br /><br />Εάν το αρχείο δεν κατέβει αυτόματα,<a href="{$url}">κάντε κλικ εδώ</a>.]]></message>         
         
         <!-- Interstitial page for non-PDF non-HTML galleys -->
         <message key="article.nonpdf.title">Κατέβασμα άρθρου</message>

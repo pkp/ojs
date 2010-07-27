@@ -583,7 +583,6 @@ Activo indica revisão em consideração ou em progresso.]]></message>
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	<message key="article.pdf.note"><![CDATA[O documento PDF escolhido deverá abrir no navegador, caso o plug-in de leitura de PDF tenha sido instalado (por exemplo, uma versão actualizada do <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>). Também é possível transferir o documento para o computador, onde pode ser lido através de um leitor de PDF. Para mais informações sobre como imprimir, guardar e trabalhar com PDFs, o portal Highwire Press possui um <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions about PDFs</a>. Outro endereço para ajuda é <a href="http://www.baciotti.com.br/html/downloads_pdf_livre_faq.asp">portal Baciotti</a> em português.<br /><br />Caso o documento não seja transferido automaticamente, <a href="{$url}">clique aqui</a>.]]></message>
 	
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Transferir artigo</message>

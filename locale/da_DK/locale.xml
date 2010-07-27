@@ -666,7 +666,6 @@ aktuelle adgangskode.<br /><br />Angiv din e-mail-adresse nedenfor for at nulsti
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">PDF (Portable Document Format)</message>
-	<message key="article.pdf.note"><![CDATA[Den valgte PDF-fil indlæses her, hvis der er installeret en PDF-læser-plug-in i webbrowseren (f.eks. en ny version af <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>). Ellers hentes PDF-filen til computeren, hvor den kan åbnes ved hjælp af en PDF-læser. Hvis du vil have flere oplysninger om, hvordan du udskriver, gemmer og arbejder med PDF-filer, kan du hos Highwire Press finde <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">ofte stillede spørgsmål om PDF-filer</a>.<br /><br />Hvis filen ikke hentes automatisk, skal du <a href="{$url}">klikke her</a>.]]></message>
 	
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Hent artikel</message>

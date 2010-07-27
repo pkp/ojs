@@ -721,7 +721,6 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	<message key="article.pdf.note"><![CDATA[Filen du har valt kommer att laddas ned automatiskt om din webbläsare har en plugin installerad för visning av PDF-filer (exempelvis en uppdaterad version av <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>). Annars kan PDF-filen sparas ned till din dator där den kan öppnas med hjälp av PDF-läsare. (Om du vill ha mer information om hur du skriver ut, sparar, och arbetar med PDF-filer, se Highwire Press <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">FAQ om PDF-filer</a>.<br /><br />Om filen inte laddas ned automatiskt, <a href="{$url}">Klicka här</a>.]]></message>
 	
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Artikelnedladdning</message>

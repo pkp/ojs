@@ -766,7 +766,6 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	<message key="article.pdf.note"><![CDATA[PDF файл, который Вы выбрали, начнет открываться на этой странице, если в Вашем броузере установлен плагин <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>. В противном случае Вы можете скачать файл на Ваш компъютер и открыть его при помощи PDF чтеца. Больше об этом на страницах <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">PDF ЧаВо</a>.<br /><br />Если файл не открывается автоматически, <a href="{$pdfUrl}">нажмите здесь</a>.]]></message>
 	
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Скачать статью</message>

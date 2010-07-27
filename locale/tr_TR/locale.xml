@@ -638,7 +638,6 @@ artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Taşınabilir döküman formatı (PDF)</message>
-	<message key="article.pdf.note"><![CDATA[Eğer web tarayıcınıza PDF okuyucu yüklenmişse (Ör. Son versiyonu) seçtiğiniz PDF dosyası buradan yüklenebilir <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>)Alternatif olarak PDF dosyası bilgisayarınıza yüklenecek ve bir PDF okuyucu kullanılarak  açılabilecektir. Eğer PDF'ler ile nasıl çalışma, kayıt, baskı yapılacağı hakkında daha fazla bilgi isterseniz Highwire Press yardımcı olacaktır <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">PDF'ler ile ilgili sık sorulan sorular </a>.<br /><br /> Eğer dosya otomatik olarak indirilmez ise, <a href="{$url}">burayı tıklayın</a>.]]></message>
 	
 	<!-- PDF ve HTML dışı gönderiler için ara sayfa -->
 	<message key="article.nonpdf.title">Makale indirme </message>
