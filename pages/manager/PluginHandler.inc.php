@@ -34,7 +34,7 @@ class PluginHandler extends ManagerHandler {
 		$templateMgr =& TemplateManager::getManager();
 		$this->validate();
 
-		if (isset($category)) {
+		if (isset($category) && in_array($category, $categories)) {
 			// The user specified a category of plugins to view;
 			// get the plugins in that category only.
 			$mainPage = false;
