@@ -807,9 +807,14 @@ class Upgrade extends Installer {
 
 			import('lib.pkp.classes.citation.lookup.isbndb.IsbndbIsbnNlmCitationSchemaFilter');
 			$isbnToNlmFilter = new IsbndbIsbnNlmCitationSchemaFilter();
-			// Add the second filter and link its API key to the first
-			// so that the user only has to enter it once for both.
-			$isbndbFilter->addFilter($isbnToNlmFilter, array('apiKey' => array($nlmToIsbnFilter->getSeq(), 'apiKey')));
+			$isbndbFilter->addFilter($isbnToNlmFilter);
+
+			// Add the settings mapping.
+			$isbndbFilter->setSettingsMapping(
+					array(
+						'apiKey' => array('seq'.$nlmToIsbnFilter->getSeq().'_apiKey', 'seq'.$isbnToNlmFilter->getSeq().'_apiKey'),
+						'isOptional' => array('seq'.$nlmToIsbnFilter->getSeq().'_isOptional', 'seq'.$isbnToNlmFilter->getSeq().'_isOptional')
+					));
 
 			$filterDao->insertObject($isbndbFilter, 0);
 		}
