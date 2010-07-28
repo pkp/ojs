@@ -193,6 +193,10 @@ class JournalSiteSettingsForm extends Form {
 		}
 		$journal->updateSetting('title', $this->getData('title'), 'string', true);
 		$journal->updateSetting('description', $this->getData('description'), 'string', true);
+
+		// Make sure all plugins are loaded for settings preload
+		PluginRegistry::loadAllPlugins();
+
 		HookRegistry::call('JournalSiteSettingsForm::execute', array(&$this, &$journal, &$section, &$isNewJournal));
 	}
 
