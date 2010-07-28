@@ -32,4 +32,8 @@
 	<message key="plugins.generic.referral.confirmDelete">Are you sure you wish to delete this refback?</message>
 	<message key="plugins.generic.referral.nameRequired">A refback title is required.</message>
 	<message key="plugins.generic.referral.urlRequired">A refback URL is required.</message>
+	<message key="plugins.generic.referral.settings">Referral Plugin Settings</message>
+	<message key="plugins.generic.referral.settings.description">The Referral Plugin captures URLs that link to articles published within this journal so that they can be curated by the author and optionally published. This form allows the Journal Manager to control how these links are captured.</message>
+	<message key="plugins.generic.referral.excusions">Exclusions</message>
+	<message key="plugins.generic.referral.exclusions.description"><![CDATA[Enter a list of regular expression patterns, one per line, to be treated as exclusions for referral logging. This can be used to prevent search engine requests from cluttering the list of referrals. For more information on regular expressions, see <a href="http://ca.php.net/manual/en/ref.pcre.php" target="_new">http://ca.php.net/manual/en/ref.pcre.php</a>.]]></message>
 </locale>

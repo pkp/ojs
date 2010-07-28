@@ -40,6 +40,86 @@ class ReferralPlugin extends GenericPlugin {
 		return false;
 	}
 
+	/**
+	 * Display verbs for the management interface.
+	 */
+	function getManagementVerbs() {
+		$verbs = array();
+		if ($this->getEnabled()) {
+			$verbs[] = array('settings', Locale::translate('plugins.generic.googleAnalytics.manager.settings'));
+		}
+		return parent::getManagementVerbs($verbs);
+	}
+
+ 	/*
+ 	 * Execute a management verb on this plugin
+ 	 * @param $verb string
+ 	 * @param $args array
+	 * @param $message string Location for the plugin to put a result msg
+ 	 * @return boolean
+ 	 */
+	function manage($verb, $args, &$message) {
+		if (!parent::manage($verb, $args, $message)) return false;
+
+		switch ($verb) {
+			case 'settings':
+				$templateMgr =& TemplateManager::getManager();
+				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
+				$journal =& Request::getJournal();
+
+				$this->import('ReferralPluginSettingsForm');
+				$form = new ReferralPluginSettingsForm($this, $journal->getId());
+				if (Request::getUserVar('save')) {
+					$form->readInputData();
+					if ($form->validate()) {
+						$form->execute();
+						Request::redirect(null, 'manager', 'plugin');
+						return false;
+					} else {
+						$this->setBreadCrumbs(true);
+						$form->display();
+					}
+				} else {
+					$this->setBreadCrumbs(true);
+					$form->initData();
+					$form->display();
+				}
+				return true;
+			default:
+				// Unknown management verb
+				assert(false);
+		}
+	}
+
+	/**
+	 * Set the page's breadcrumbs, given the plugin's tree of items
+	 * to append.
+	 * @param $subclass boolean
+	 */
+	function setBreadcrumbs($isSubclass = false) {
+		$templateMgr =& TemplateManager::getManager();
+		$pageCrumbs = array(
+			array(
+				Request::url(null, 'user'),
+				'navigation.user'
+			),
+			array(
+				Request::url(null, 'manager'),
+				'user.role.manager'
+			)
+		);
+		if ($isSubclass) $pageCrumbs[] = array(
+			Request::url(null, 'manager', 'plugins'),
+			'manager.plugins'
+		);
+
+		$templateMgr->assign('pageHierarchy', $pageCrumbs);
+	}
+
+	/**
+	 * Intercept the load handler hook to present the user-facing
+	 * referrals list if necessary.
+	 */
 	function handleLoadHandler($hookName, $args) {
 		$page =& $args[0];
 		$op =& $args[1];
@@ -55,6 +135,9 @@ class ReferralPlugin extends GenericPlugin {
 		return false;
 	}
 
+	/**
+	 * Intercept the author index page to add referral content
+	 */
 	function handleAuthorTemplateInclude($hookName, $args) {
 		$templateMgr =& $args[0];
 		$params =& $args[1];
@@ -77,6 +160,9 @@ class ReferralPlugin extends GenericPlugin {
 		return false;
 	}
 
+	/**
+	 * Intercept the article comments template to add referral content
+	 */
 	function handleReaderTemplateInclude($hookName, $args) {
 		$templateMgr =& $args[0];
 		$params =& $args[1];
@@ -118,6 +204,10 @@ class ReferralPlugin extends GenericPlugin {
 		return false;
 	}
 
+	/**
+	 * Intercept requests for article display to collect and record
+	 * incoming referrals.
+	 */
 	function logArticleRequest(&$templateMgr) {
 		$article = $templateMgr->get_template_vars('article');
 		if (!$article) return false;
@@ -133,7 +223,13 @@ class ReferralPlugin extends GenericPlugin {
 			// It exists -- increment the count
 			$referralDao->incrementReferralCount($article->getId(), $referrer);
 		} else {
-			// It's a new referral -- log it.
+			// It's a new referral. Log it unless it's excluded.
+			$journal = $templateMgr->get_template_vars('currentJournal');
+			$exclusions = $this->getSetting($journal->getId(), 'exclusions');
+			foreach (array_map('trim', explode("\n", "$exclusions")) as $exclusion) {
+				if (empty($exclusion)) continue;
+				if (preg_match($exclusion, $referrer)) return false;
+			}
 			$referral = new Referral();
 			$referral->setArticleId($article->getId());
 			$referral->setLinkCount(1);
@@ -142,6 +238,7 @@ class ReferralPlugin extends GenericPlugin {
 			$referral->setDateAdded(Core::getCurrentDate());
 			$referralDao->insertReferral($referral);
 		}
+		return false;
 	}
 
 	/**

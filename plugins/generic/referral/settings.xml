@@ -17,4 +17,9 @@
 		<name>enabled</name>
 		<value>true</value>
 	</setting>
+	<setting type="string">
+		<name>exclusions</name>
+		<value>#^http://www.google.#
+#^http://www.yahoo.#</value>
+	</setting>
 </plugin_settings>
