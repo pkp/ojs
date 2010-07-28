@@ -89,6 +89,8 @@ class QuickSubmitForm extends Form {
 			$templateMgr->assign('publishToIssue', true);
 		}
 
+		$templateMgr->assign('enablePageNumber', $journal->getSetting('enablePageNumber'));
+
 		parent::display();
 	}
 
@@ -102,6 +104,7 @@ class QuickSubmitForm extends Form {
 				'tempFileId',
 				'destination',
 				'issueId',
+				'pages',
 				'sectionId',
 				'authors',
 				'primaryContact',
@@ -170,6 +173,7 @@ class QuickSubmitForm extends Form {
 		$article->setType($this->getData('type'), null); // Localized
 		$article->setSponsor($this->getData('sponsor'), null); // Localized
 		$article->setCitations($this->getData('citations'));
+		$article->setPages($this->getData('pages'));
 
 		// Set some default values so the ArticleDAO doesn't complain when adding this article
 		$article->setDateSubmitted(Core::getCurrentDate());
@@ -230,36 +234,38 @@ class QuickSubmitForm extends Form {
 		$articleFileManager = new ArticleFileManager($articleId);
 		foreach (array_keys($tempFileIds) as $locale) {
 			$temporaryFile = $temporaryFileManager->getFile($tempFileIds[$locale], $user->getId());
-			$fileId = $articleFileManager->temporaryFileToArticleFile($temporaryFile, ARTICLE_FILE_SUBMISSION);
-			$fileType = $temporaryFile->getFileType();
+			if ($temporaryFile) {
+				$fileId = $articleFileManager->temporaryFileToArticleFile($temporaryFile, ARTICLE_FILE_SUBMISSION);
+				$fileType = $temporaryFile->getFileType();
 
-			if (strstr($fileType, 'html')) {
-				import('classes.article.ArticleHTMLGalley');
-				$galley = new ArticleHTMLGalley();
-			} else {
-				import('classes.article.ArticleGalley');
-				$galley = new ArticleGalley();
-			}
-			$galley->setArticleId($articleId);
-			$galley->setFileId($fileId);
-			$galley->setLocale($locale);
-
-			if ($galley->isHTMLGalley()) {
-				$galley->setLabel('HTML');
-			} else {
-				if (strstr($fileType, 'pdf')) {
-					$galley->setLabel('PDF');
-				} else if (strstr($fileType, 'postscript')) {
-					$galley->setLabel('Postscript');
-				} else if (strstr($fileType, 'xml')) {
-					$galley->setLabel('XML');
+				if (strstr($fileType, 'html')) {
+					import('classes.article.ArticleHTMLGalley');
+					$galley = new ArticleHTMLGalley();
 				} else {
-					$galley->setLabel(Locale::translate('common.untitled'));
+					import('classes.article.ArticleGalley');
+					$galley = new ArticleGalley();
 				}
-			}
+				$galley->setArticleId($articleId);
+				$galley->setFileId($fileId);
+				$galley->setLocale($locale);
 
-			$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
-			$galleyDao->insertGalley($galley);
+				if ($galley->isHTMLGalley()) {
+					$galley->setLabel('HTML');
+				} else {
+					if (strstr($fileType, 'pdf')) {
+						$galley->setLabel('PDF');
+					} else if (strstr($fileType, 'postscript')) {
+						$galley->setLabel('Postscript');
+					} else if (strstr($fileType, 'xml')) {
+						$galley->setLabel('XML');
+					} else {
+						$galley->setLabel(Locale::translate('common.untitled'));
+					}
+				}
+
+				$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+				$galleyDao->insertGalley($galley);
+			}
 
 			if ($locale == $journal->getPrimaryLocale()) {
 				$article->setSubmissionFileId($fileId);
@@ -268,7 +274,7 @@ class QuickSubmitForm extends Form {
 
 			// Update file search index
 			import('classes.search.ArticleSearchIndex');
-			ArticleSearchIndex::updateFileIndex($galley->getArticleId(), ARTICLE_SEARCH_GALLEY_FILE, $galley->getFileId());
+			if (isset($galley)) ArticleSearchIndex::updateFileIndex($galley->getArticleId(), ARTICLE_SEARCH_GALLEY_FILE, $galley->getFileId());
 		}
 
 
@@ -316,7 +322,7 @@ class QuickSubmitForm extends Form {
 
 		// Add to end of editing queue
 		import('classes.submission.editor.EditorAction');
-		EditorAction::expediteSubmission($article);
+		if (isset($galley)) EditorAction::expediteSubmission($article);
 
 		if ($this->getData('destination') == "issue") {
 			// Add to an existing issue
@@ -329,6 +335,7 @@ class QuickSubmitForm extends Form {
 		ArticleSearchIndex::indexArticleMetadata($article);
 
 		// Import the references list.
+		$citationDao =& DAORegistry::getDAO('CitationDAO');
 		$rawCitationList = $article->getCitations();
 		$citationDao->importCitations(ASSOC_TYPE_ARTICLE, $articleId, $rawCitationList);
 	}

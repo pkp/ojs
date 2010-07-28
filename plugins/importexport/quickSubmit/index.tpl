@@ -56,11 +56,27 @@ function moveAuthor(dir, authorIndex) {
 
 	<table class="data" width="100%">
 		<tr valign="top">	
-			<td><input type="radio" name="destination" value="queue" {if not $publishToIssue} checked="checked"{/if}/> <label for="destinationUnpublished">{translate key="plugins.importexport.quickSubmit.leaveUnpublished"}</label></td>
+			<td class="label" width="5%">
+				<input type="radio" name="destination" id="destinationUnpublished" value="queue" {if not $publishToIssue} checked="checked"{/if}{if $enablePageNumber} onclick="document.submit.pages.disabled = true;document.submit.pagesHidden.value = document.submit.pages.value; document.submit.pages.value = '';"{/if}/>
+			</td>
+			<td class="value" width="95%">{fieldLabel name="destinationUnpublished" key="plugins.importexport.quickSubmit.leaveUnpublished"}</td>
 		</tr>
 		<tr valign="top">	
-			<td class="label"><input type="radio" name="destination" value="issue" {if $publishToIssue} checked="checked"{/if}/> <label for="destinationIssue">{translate key="plugins.importexport.quickSubmit.addToExisting"}</label>    <select name="issueId" id="issueId" size="1" class="selectMenu">{html_options options=$issueOptions selected=$issueNumber}</select></td>
+			<td class="label">
+				<input type="radio" id="destinationIssue" name="destination" value="issue" {if $publishToIssue} checked="checked"{/if}{if $enablePageNumber} onclick="document.submit.pages.disabled = false;document.submit.pages.value = document.submit.pagesHidden.value;"{/if}/>
+			</td>
+			<td class="value">{fieldLabel name="destinationIssue" key="plugins.importexport.quickSubmit.addToExisting"} <select name="issueId" id="issueId" size="1" class="selectMenu">{html_options options=$issueOptions selected=$issueNumber}</select></td>
 		</tr>
+		{if $enablePageNumber}
+			<tr valign="top">
+				<td class="label">&nbsp;</td>
+				<td class="value">
+					{fieldLabel name="pages" key="editor.issues.pages"}&nbsp;
+					<input name="pages" id="pages" {if $publishToIssue}value="{$pages|escape}" {else}disabled="disabled" {/if}size="20" maxlength="40" class="textField" />
+					<input type="hidden" name="pagesHidden" value="{$pages|escape}" />
+				</td>
+			</tr>
+		{/if}{* $enablePageNumber *}
 	</table>
 </div> <!-- /chooseDestination -->
 	 
@@ -201,7 +217,7 @@ function moveAuthor(dir, authorIndex) {
 				</td>
 			</tr>
 			<tr valign="top">
-				<td width="70%" class="value" colspan="2"><input type="radio" name="primaryContact" value="{$authorIndex|escape}"{if $primaryContact == $authorIndex} checked="checked"{/if} /> <label for="primaryContact">{translate key="author.submit.selectPrincipalContact"}</label> <input type="submit" name="delAuthor[{$authorIndex|escape}]" value="{translate key="author.submit.deleteAuthor"}" class="button" /></td>
+				<td width="70%" class="value" colspan="2"><input type="radio" id="primaryContact" name="primaryContact" value="{$authorIndex|escape}"{if $primaryContact == $authorIndex} checked="checked"{/if} /> {fieldLabel name="primaryContact" key="author.submit.selectPrincipalContact"} <input type="submit" name="delAuthor[{$authorIndex|escape}]" value="{translate key="author.submit.deleteAuthor"}" class="button" /></td>
 			</tr>
 			<tr>
 				<td colspan="2"><br/></td>
