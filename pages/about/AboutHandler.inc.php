@@ -285,19 +285,24 @@ class AboutHandler extends Handler {
 				unset($potentialUser);
 			}
 
+			// Currently we always publish emails in this mode.
+			$publishEmail = true;
 		} else {
 			$groupDao =& DAORegistry::getDAO('GroupDAO');
 			$groupMembershipDao =& DAORegistry::getDAO('GroupMembershipDAO');
 
 			$allGroups =& $groupDao->getGroups(ASSOC_TYPE_JOURNAL, $journal->getId());
+			$publishEmail = false;
 			while ($group =& $allGroups->next()) {
 				if (!$group->getAboutDisplayed()) continue;
 				$allMemberships =& $groupMembershipDao->getMemberships($group->getId());
 				while ($membership =& $allMemberships->next()) {
 					if (!$membership->getAboutDisplayed()) continue;
 					$potentialUser =& $membership->getUser();
-					if ($potentialUser->getId() == $userId)
+					if ($potentialUser->getId() == $userId) {
 						$user = $potentialUser;
+						if ($group->getPublishEmail()) $publishEmail = true;
+					}
 					unset($membership);
 				}
 				unset($group);
@@ -313,6 +318,7 @@ class AboutHandler extends Handler {
 		}
 
 		$templateMgr->assign_by_ref('user', $user);
+		$templateMgr->assign_by_ref('publishEmail', $publishEmail);
 		$templateMgr->display('about/editorialTeamBio.tpl');
 	}
 

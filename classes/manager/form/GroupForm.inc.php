@@ -70,10 +70,12 @@ class GroupForm extends Form {
 		if ($this->group != null) {
 			$this->_data = array(
 				'title' => $this->group->getTitle(null), // Localized
+				'publishEmail' => $this->group->getPublishEmail(),
 				'context' => $this->group->getContext()
 			);
 		} else {
 			$this->_data = array(
+				'publishEmail' => 1,
 				'context' => GROUP_CONTEXT_EDITORIAL_TEAM
 			);
 		}
@@ -83,7 +85,7 @@ class GroupForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('title', 'context'));
+		$this->readUserVars(array('title', 'context', 'publishEmail'));
 	}
 
 	/**
@@ -101,6 +103,7 @@ class GroupForm extends Form {
 		$this->group->setAssocId($journal->getId());
 		$this->group->setTitle($this->getData('title'), null); // Localized
 		$this->group->setContext($this->getData('context'));
+		$this->group->setPublishEmail($this->getData('publishEmail'));
 
 		// Eventually this will be a general Groups feature; for now,
 		// we're just using it to display journal team entries in About.

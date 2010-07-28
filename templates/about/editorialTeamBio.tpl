@@ -72,10 +72,14 @@
 <div id="mainContent">
 <h2>{$pageTitleTranslated}</h2>
 
-{assign_mailto var=address address=$user->getEmail()|escape}
 <div id="content">
 <p>
-	<em>{$user->getFullName()|escape}</em> {icon name="mail" url=$address}<br />
+	<em>{$user->getFullName()|escape}</em>
+	{if $publishEmail}
+		{assign_mailto var=address address=$user->getEmail()|escape}
+		{icon name="mail" url=$address}
+	{/if}
+	<br />
 	{if $user->getUrl()}<a href="{$user->getUrl()|escape:"quotes"}" target="_new">{$user->getUrl()|escape}</a><br/>{/if}
 	{if $user->getLocalizedAffiliation()}{$user->getLocalizedAffiliation()|escape}{assign var=needsComma value=1}{/if}{if $country}{if $needsComma}, {/if}{$country|escape}{/if}
 </p>

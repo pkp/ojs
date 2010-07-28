@@ -48,6 +48,13 @@
 </tr>
 
 <tr valign="top">
+	<td width="20%" class="label">&nbsp;</td>
+	<td width="80%" class="value">
+		<input type="checkbox" name="publishEmail" value="1" {if $publishEmail}checked="checked" {/if} id="publishEmail" />&nbsp;
+		{fieldLabel name="publishEmail" key="manager.groups.publishEmails"}
+	</td>
+</tr>
+<tr valign="top">
 	<td width="20%" class="label">{translate key="common.type"}</td>
 	<td width="80%" class="value">
 		{foreach from=$groupContextOptions item=groupContextOptionKey key=groupContextOptionValue}

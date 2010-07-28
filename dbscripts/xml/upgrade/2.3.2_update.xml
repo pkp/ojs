@@ -48,4 +48,8 @@
 			INSERT INTO journal_settings (journal_id, locale, setting_name, setting_value, setting_type) SELECT journal_id, locale, 'supportedSubmissionLocales', setting_value, setting_type FROM journal_settings WHERE setting_name = 'supportedFormLocales'
 		</query>
 	</sql>
+	<!-- Bug #5522: Add a publish/do not publish flag for group emails -->
+	<sql>
+		<query>UPDATE groups SET publish_email = 1</query>
+	</sql>
 </data>
