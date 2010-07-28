@@ -67,7 +67,7 @@
 {else}
 	<tr>
 		<td colspan="3" align="left">{page_info iterator=$referrals}</td>
-		<td colspan="3" align="right">{page_links anchor="referrals" name="referrals" iterator=$referrals}</td>
+		<td colspan="3" align="right">{page_links anchor="referrals" name="referrals" iterator=$referrals referralFilter=$referralFilter}</td>
 	</tr>
 {/if}
 </table>

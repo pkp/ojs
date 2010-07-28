@@ -202,7 +202,8 @@ class ReferralDAO extends DAO {
 				a.user_id = ?' .
 				($status !== null?' AND r.status = ?':'') . '
 			ORDER BY r.date_added',
-			$params
+			$params,
+			$rangeInfo
 		);
 
 		$returner = new DAOResultFactory($result, $this, '_returnReferralFromRow');
