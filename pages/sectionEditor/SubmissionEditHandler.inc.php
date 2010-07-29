@@ -384,12 +384,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 		$journalSettings = $journalSettingsDao->getJournalSettings($journal->getId());
 		if (!$journalSettings['metaCitations']) {
-			$citationEditorConfigurationError = 'submission.citations.pleaseSetup';
+			$citationEditorConfigurationError = 'submission.citations.editor.pleaseSetup';
 		}
 
 		// 2) PHP5 availability.
 		if (!$citationEditorConfigurationError && !checkPhpVersion('5.0.0')) {
-			$citationEditorConfigurationError = 'submission.citations.php5Required';
+			$citationEditorConfigurationError = 'submission.citations.editor.php5Required';
 		}
 
 		// 3) At least one citation parser is available.
@@ -399,12 +399,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$outputSample = new MetadataDescription('lib.pkp.classes.metadata.nlm.NlmCitationSchema', ASSOC_TYPE_CITATION);
 		$configuredCitationParsers =& $filterDao->getCompatibleObjects($inputSample, $outputSample, $journal->getId());
 		if (!$citationEditorConfigurationError && !count($configuredCitationParsers)) {
-			$citationEditorConfigurationError = 'submission.citations.pleaseAddParserFilter';
+			$citationEditorConfigurationError = 'submission.citations.editor.pleaseAddParserFilter';
 		}
 
 		// 4) A citation output filter has been set.
 		if (!$citationEditorConfigurationError && !($journalSettings['metaCitationOutputFilterId'] > 0)) {
-			$citationEditorConfigurationError = 'submission.citations.pleaseConfigureOutputStyle';
+			$citationEditorConfigurationError = 'submission.citations.editor.pleaseConfigureOutputStyle';
 		}
 
 		$templateMgr->assign('citationEditorConfigurationError', $citationEditorConfigurationError);
@@ -425,10 +425,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$citationDao =& DAORegistry::getDAO('CitationDAO');
 		$citations =& $citationDao->getObjectsByAssocId(ASSOC_TYPE_ARTICLE, $articleId);
 		if ($citations->getCount() > 0) {
-			$initialHelpMessage = Locale::translate('submission.citations.pleaseClickOnCitationToStartEditing');
+			$initialHelpMessage = Locale::translate('submission.citations.editor.details.pleaseClickOnCitationToStartEditing');
 		} else {
 			$articleMetadataUrl = $router->url($request, null, null, 'viewMetadata', $articleId);
-			$initialHelpMessage = Locale::translate('submission.citations.pleaseImportCitationsFirst', array('articleMetadataUrl' => $articleMetadataUrl));
+			$initialHelpMessage = Locale::translate('submission.citations.editor.pleaseImportCitationsFirst', array('articleMetadataUrl' => $articleMetadataUrl));
 		}
 		$templateMgr->assign('initialHelpMessage', $initialHelpMessage);
 

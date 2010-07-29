@@ -410,13 +410,39 @@
 		background-color: #FFFFFF;
 	}
 	
+	#rawCitationWithMarkup .actions, #editableRawCitation .actions {
+		float: right;
+	}
+		
 	#editableRawCitation div.value {
-		margin-right: 41px;  // FIXME: check for box model bug in IE
+		margin-right: 15px;  // FIXME: check for box model bug in IE
 	}
 		
 	#editableRawCitation textarea.textarea {
 		width: 100%;
 		padding: 5px;
+	}
+	
+	#editableRawCitation .options-head .ui-icon {
+		float: left;
+	}
+	
+	#editableRawCitation .option-block {
+		margin-bottom: 10px;
+		padding-left: 30px;
+	}
+	
+	#editableRawCitation .option-block p {
+		margin: 5px 0 0 0;
+	}
+	
+	#editableRawCitation .option-block-option {
+		float: left;
+		margin-left: 5px;
+	}
+
+	#editableRawCitation .clear {
+		clear: both;
 	}
 	
 	#rawCitationWithMarkup div.value {
@@ -425,10 +451,10 @@
 	
 	#rawCitationWithMarkup a {
 		display: block;
-		float: right;
 		width: 14px;
 		height: 14px;
-		margin-top: 0.8em; 
+		margin-top: 1em;
+		margin-left: 0; 
 	}
 		
 	#generatedCitationWithMarkup span {
@@ -462,9 +488,9 @@
 	<div id="citationEditorMainTabs">
 		<button id="fullScreenButton" type="button">{translate key="common.fullscreen"}</button>
 		<ul class="main-tabs">
-			{if !$introductionHide}<li><a href="#citationEditorTabIntroduction">{translate key="submission.citations.editor.tab.introduction"}</a></li>{/if}
-			<li><a href="#citationEditorTabEdit">{translate key="submission.citations.editor.tab.edit"}</a></li>
-			<li><a href="#citationEditorTabExport">{translate key="submission.citations.editor.tab.export"}</a></li>
+			{if !$introductionHide}<li><a href="#citationEditorTabIntroduction">{translate key="submission.citations.editor.introduction"}</a></li>{/if}
+			<li><a href="#citationEditorTabEdit">{translate key="submission.citations.editor.edit"}</a></li>
+			<li><a href="#citationEditorTabExport">{translate key="submission.citations.editor.export"}</a></li>
 		</ul>
 		{if !$introductionHide}
 			<div id="citationEditorTabIntroduction" class="main-tabs">
@@ -475,7 +501,7 @@
 								{capture assign="citationSetupUrl"}{url page="manager" op="setup" path="3" anchor="metaCitationEditing"}{/capture}
 								{translate key=$citationEditorConfigurationError citationSetupUrl=$citationSetupUrl}
 							{else}
-								{translate key="submission.citations.editor.introductionMessage"}
+								{translate key="submission.citations.editor.introduction.introductionMessage"}
 								<input id="introductionHide" type="checkbox" >Don't show this message again.</input>
 							{/if}
 						</div>
@@ -487,7 +513,7 @@
 			<div id="citationEditorCanvas" class="canvas two-pane">
 				<div id="citationEditorNavPane" class="pane left-pane">
 					{if !$citationEditorConfigurationError}
-						{load_url_in_div id="#citationGridContainer" loadMessageId="submission.citations.form.loadMessage" url="$citationGridUrl"}
+						{load_url_in_div id="#citationGridContainer" loadMessageId="submission.citations.editor.loadMessage" url="$citationGridUrl"}
 					{/if}
 				</div>
 				<div id="citationEditorDetailPane" class="pane right-pane">

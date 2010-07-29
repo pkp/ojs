@@ -26,7 +26,7 @@ class CitationGridHandler extends PKPCitationGridHandler {
 		parent::PKPCitationGridHandler();
 		$this->addRoleAssignment(
 				array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR),
-				array('fetchGrid', 'addCitation', 'editCitation', 'checkCitation', 'updateCitation', 'deleteCitation', 'exportCitations', 'fetchCitationFormErrorsAndComparison'));
+				array('fetchGrid', 'addCitation', 'editCitation', 'updateRawCitation', 'checkCitation', 'updateCitation', 'deleteCitation', 'exportCitations', 'fetchCitationFormErrorsAndComparison'));
 	}
 
 
@@ -65,7 +65,7 @@ class CitationGridHandler extends PKPCitationGridHandler {
 	function exportCitations($args, &$request) {
 		$dispatcher =& $this->getDispatcher();
 		$articleMetadataUrl = $dispatcher->url($request, ROUTE_PAGE, null, 'editor', 'viewMetadata', $this->getAssocId());
-		$noCitationsFoundMessage = Locale::translate("submission.citations.pleaseImportCitationsFirst", array('articleMetadataUrl' => $articleMetadataUrl));
+		$noCitationsFoundMessage = Locale::translate("submission.citations.editor.pleaseImportCitationsFirst", array('articleMetadataUrl' => $articleMetadataUrl));
 		return parent::exportCitations($args, $request, $noCitationsFoundMessage);
 	}
 }
