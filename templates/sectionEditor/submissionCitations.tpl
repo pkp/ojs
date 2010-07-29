@@ -399,6 +399,32 @@
 		background-color: #B6C9D5;
 	}
 
+	/* Citation editor: citation detail editor */
+	#editCitationForm .actions {
+		float: right;
+	}
+		
+	#editCitationForm .options-head .ui-icon {
+		float: left;
+	}
+	
+	#editCitationForm .option-block {
+		margin-bottom: 10px;
+	}
+	
+	#editCitationForm .option-block p {
+		margin: 5px 0 0 0;
+	}
+	
+	#editCitationForm .option-block-option {
+		float: left;
+		margin-left: 5px;
+	}
+
+	#editCitationForm .clear {
+		clear: both;
+	}
+	
 	/* Citation editor: citation detail editor - before/after fields */
 	#submissionCitations.composite-ui div.two-pane>div.right-pane .citation-comparison {
 		margin-bottom: 10px;
@@ -410,10 +436,6 @@
 		background-color: #FFFFFF;
 	}
 	
-	#rawCitationWithMarkup .actions, #editableRawCitation .actions {
-		float: right;
-	}
-		
 	#editableRawCitation div.value {
 		margin-right: 15px;  // FIXME: check for box model bug in IE
 	}
@@ -423,26 +445,8 @@
 		padding: 5px;
 	}
 	
-	#editableRawCitation .options-head .ui-icon {
-		float: left;
-	}
-	
-	#editableRawCitation .option-block {
-		margin-bottom: 10px;
+	#rawCitationEditingExpertOptions .option-block {
 		padding-left: 30px;
-	}
-	
-	#editableRawCitation .option-block p {
-		margin: 5px 0 0 0;
-	}
-	
-	#editableRawCitation .option-block-option {
-		float: left;
-		margin-left: 5px;
-	}
-
-	#editableRawCitation .clear {
-		clear: both;
 	}
 	
 	#rawCitationWithMarkup div.value {
@@ -480,7 +484,10 @@
 		height: 150px;
 	}
 	
-	/* Citation fields */
+	/* Citation editor: citation detail editor - internal citation service result tabs */
+	#citationImprovementResultsBlock .options-head.active {
+		margin-top: 40px;
+	}
 </style>
 {/literal}
 
