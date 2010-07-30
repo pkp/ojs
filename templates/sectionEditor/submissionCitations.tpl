@@ -484,6 +484,11 @@
 		height: 150px;
 	}
 	
+	/* Citation editor: citation detail editor - improvement options: author query */
+	#authorQueryResult {
+		float: left;
+	}
+	
 	/* Citation editor: citation detail editor - internal citation service result tabs */
 	#citationImprovementResultsBlock .options-head.active {
 		margin-top: 40px;

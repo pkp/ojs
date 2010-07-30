@@ -26,7 +26,9 @@ class CitationGridHandler extends PKPCitationGridHandler {
 		parent::PKPCitationGridHandler();
 		$this->addRoleAssignment(
 				array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR),
-				array('fetchGrid', 'addCitation', 'editCitation', 'updateRawCitation', 'checkCitation', 'updateCitation', 'deleteCitation', 'exportCitations', 'fetchCitationFormErrorsAndComparison'));
+				array('fetchGrid', 'addCitation', 'editCitation', 'updateRawCitation',
+					'checkCitation', 'updateCitation', 'deleteCitation', 'exportCitations',
+					'fetchCitationFormErrorsAndComparison', 'sendAuthorQuery'));
 	}
 
 

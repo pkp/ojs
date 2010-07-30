@@ -893,4 +893,20 @@ Subscription URL: {$subscriptionUrl}
 </body>
 		<description>This email notifies the Subscription Manager that an institutional subscription has been renewed online. It provides summary information about the subscription and a quick access link to the renewed subscription.</description>
 	</email_text>
+	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
+		<subject>Citation Editing</subject>
+		<body>{$authorFirstName},
+
+Could you please verify or provide us with the proper citation for the following reference from your article, {$articleTitle}:
+
+{$rawCitation}
+
+Thanks!
+
+{$userFirstName}
+Copy-Editor, {$journalName}
+</body>
+		<description>This email allows copyeditors to request additional information about references from authors.</description>
+	</email_text>
 </email_texts>
+
