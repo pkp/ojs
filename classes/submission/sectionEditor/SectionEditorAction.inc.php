@@ -403,14 +403,17 @@ class SectionEditorAction extends Action {
 
 				$submissionUrl = Request::url(null, 'reviewer', 'submission', $reviewId, $reviewerAccessKeysEnabled?array('key' => 'ACCESS_KEY'):array());
 
-				//
-				// FIXME: Assign correct values!
-				//
+				// Format the review due date
+				$reviewDueDate = strtotime($reviewAssignment->getDateDue());
+				$dateFormatShort = Config::getVar('general', 'date_format_short');
+				if ($reviewDueDate == -1) $reviewDueDate = $dateFormatShort; // Default to something human-readable if no date specified
+				else $reviewDueDate = strftime($dateFormatShort, $reviewDueDate);
+
 				$paramArray = array(
 					'reviewerName' => $reviewer->getFullName(),
 					'reviewerUsername' => $reviewer->getUsername(),
 					'reviewerPassword' => $reviewer->getPassword(),
-					'reviewDueDate' => strftime(Config::getVar('general', 'date_format_short'), strtotime($reviewAssignment->getDateDue())),
+					'reviewDueDate' => $reviewDueDate,
 					'editorialContactSignature' => $user->getContactSignature(),
 					'passwordResetUrl' => Request::url(null, 'login', 'resetPassword', $reviewer->getUsername(), array('confirm' => Validation::generatePasswordResetHash($reviewer->getId()))),
 					'submissionReviewUrl' => $submissionUrl

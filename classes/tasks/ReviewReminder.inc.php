@@ -58,12 +58,18 @@ class ReviewReminder extends ScheduledTask {
 		}
 		$submissionReviewUrl = Request::url($journal->getPath(), 'reviewer', 'submission', $reviewId, $urlParams);
 
+		// Format the review due date
+		$reviewDueDate = strtotime($reviewAssignment->getDateDue());
+		$dateFormatShort = Config::getVar('general', 'date_format_short');
+		if ($reviewDueDate == -1) $reviewDueDate = $dateFormatShort; // Default to something human-readable if no date specified
+		else $reviewDueDate = strftime($dateFormatShort, $reviewDueDate);
+
 		$paramArray = array(
 			'reviewerName' => $reviewer->getFullName(),
 			'reviewerUsername' => $reviewer->getUsername(),
 			'journalUrl' => $journal->getUrl(),
 			'reviewerPassword' => $reviewer->getPassword(),
-			'reviewDueDate' => strftime(Config::getVar('general', 'date_format_short'), strtotime($reviewAssignment->getDateDue())),
+			'reviewDueDate' => $reviewDueDate,
 			'weekLaterDate' => strftime(Config::getVar('general', 'date_format_short'), strtotime('+1 week')),
 			'editorialContactSignature' => $journal->getSetting('contactName') . "\n" . $journal->getLocalizedTitle(),
 			'passwordResetUrl' => Request::url($journal->getPath(), 'login', 'resetPassword', $reviewer->getUsername(), array('confirm' => Validation::generatePasswordResetHash($reviewer->getId()))),
