@@ -17,8 +17,6 @@
  * @brief Article class.
  */
 
-// $Id$
-
 
 // Submission status constants
 define('STATUS_ARCHIVED', 0);
@@ -51,6 +49,13 @@ class Article extends Submission {
 	 */
 	function Article() {
 		parent::Submission();
+	}
+
+	/**
+	 * @see Submission::getAssocType()
+	 */
+	function getAssocType() {
+		return ASSOC_TYPE_ARTICLE;
 	}
 
 	/**

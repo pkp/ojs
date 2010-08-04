@@ -3,7 +3,7 @@
 /**
  * @defgroup oai_format_nlm
  */
- 
+
 /**
  * @file classes/oai/format/OAIMetadataFormat_NLM.inc.php
  *
@@ -16,8 +16,6 @@
  *
  * @brief OAI metadata format class -- NLM 2.3
  */
-
-// $Id$
 
 
 class OAIMetadataFormat_NLM extends OAIMetadataFormat {
