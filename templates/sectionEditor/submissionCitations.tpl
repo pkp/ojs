@@ -493,6 +493,21 @@
 	#citationImprovementResultsBlock .options-head.active {
 		margin-top: 40px;
 	}
+
+	#citationImprovementResultsBlock div.grid td {
+		font-size: 1em;
+		line-height: 1.3em;
+	}
+
+	#citationImprovementResultsBlock div.grid td.citation-source-action-cell {
+		text-align: right;
+	}
+
+	#citationImprovementResultsBlock div.grid tr.citation-source-action-row td {
+		border-bottom: 0 none;
+		text-align: right;
+		padding-right: 0;
+	}
 </style>
 {/literal}
 
