@@ -767,6 +767,7 @@ class Upgrade extends Installer {
 			'lib.pkp.classes.citation.output.vancouver.NlmCitationSchemaVancouverFilter',
 			'lib.pkp.classes.importexport.nlm.PKPSubmissionNlmXmlFilter'
 		);
+		import('lib.pkp.classes.citation.output.PlainTextReferencesListFilter');
 		foreach($filtersToBeInstalled as $filterToBeInstalled) {
 			// Instantiate filter.
 			$filter =& instantiate($filterToBeInstalled, 'Filter');
@@ -794,17 +795,34 @@ class Upgrade extends Installer {
 
 			// Install the filter or template.
 			$filterDao->insertObject($filter, 0);
+
+			// If this is a citation output filter then also install a corresponding references list filter.
+			if (is_a($filter, 'NlmCitationSchemaCitationOutputFormatFilter')) {
+				// Only Vancouver Style listings require numerical ordering.
+				if (is_a($filter, 'NlmCitationSchemaVancouverFilter')) {
+					$ordering = REFERENCES_LIST_ORDERING_NUMERICAL;
+				} else {
+					$ordering = REFERENCES_LIST_ORDERING_ALPHABETICAL;
+				}
+
+				// Instantiate the filter.
+				$referencesListFilter = new PlainTextReferencesListFilter($filter->getDisplayName(), $filter->getClassName(), $ordering);
+				$referencesListFilter->setIsTemplate(false);
+
+				// Install the filter.
+				$filterDao->insertObject($referencesListFilter, 0);
+				unset($referencesListFilter);
+			}
+
 			unset($filter);
 		}
 
 		// Composite filters are more complex to install because they
 		// need to be constructed first:
-		// 1) Retrieve existing composites.
+		// 1) Check and install the ISBNdb filter template.
+		$alreadyInstalled = false;
 		$existingTemplatesFactory =& $filterDao->getObjectsByClass('lib.pkp.classes.filter.GenericSequencerFilter', 0, true);
 		$existingTemplates =& $existingTemplatesFactory->toArray();
-
-		// 2) Check and install the ISBNdb filter template.
-		$alreadyInstalled = false;
 		foreach($existingTemplates as $existingTemplate) {
 			$subFilters =& $existingTemplate->getFilters();
 			if (count($subFilters) != 2) continue;
@@ -846,6 +864,8 @@ class Upgrade extends Installer {
 
 		// 3) Check and install the NLM XML 2.3 output filter.
 		$alreadyInstalled = false;
+		$existingTemplatesFactory =& $filterDao->getObjectsByClass('lib.pkp.classes.filter.GenericSequencerFilter', 0, false);
+		$existingTemplates =& $existingTemplatesFactory->toArray();
 		foreach($existingTemplates as $existingTemplate) {
 			$subFilters =& $existingTemplate->getFilters();
 			if (count($subFilters) != 2) continue;
