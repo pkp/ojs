@@ -63,7 +63,7 @@ function sortSearch(heading, direction) {
 	<tr><td colspan="8" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">{sort_search key="common.id" sort="id"}</td>
-		<td width="5%"><span class="disabled">MM-DD</span><br />{sort_search key="common.assign" sort="assignDate"}</td>
+		<td width="5%"><span class="disabled">{translate key="submission.date.mmdd"}</span><br />{sort_search key="common.assign" sort="assignDate"}</td>
 		<td width="5%">{sort_search key="submissions.sec" sort="section"}</td>
 		<td width="25%">{sort_search key="article.authors" sort="authors"}</td>
 		<td width="30%">{sort_search key="article.title" sort="title"}</td>

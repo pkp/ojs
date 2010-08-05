@@ -15,7 +15,7 @@
 	</tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">{sort_search key="common.id" sort="id"}</td>
-		<td width="5%"><span class="disabled">MM-DD</span><br />{sort_heading key="submissions.submit" sort="submitDate"}</td>
+		<td width="5%"><span class="disabled">{translate key="submission.date.mmdd"}</span><br />{sort_heading key="submissions.submit" sort="submitDate"}</td>
 		<td width="5%">{sort_search key="submissions.sec" sort="section"}</td>
 		<td width="15%">{sort_search key="article.authors" sort="authors"}</td>
 		<td width="25%">{sort_search key="article.title" sort="title"}</td>

@@ -85,7 +85,7 @@
 	<tr valign="top">
 		<td class="label">{fieldLabel name="dateCreated" key="common.date"}</td>
 		<td class="value">
-			<input type="text" id="dateCreated" name="dateCreated" value="{$dateCreated|escape}" size="11" maxlength="10" class="textField" /> YYYY-MM-DD
+			<input type="text" id="dateCreated" name="dateCreated" value="{$dateCreated|escape}" size="11" maxlength="10" class="textField" /> {translate key="submission.date.yyyymmdd"}
 			<br />
 			<span class="instruct">{translate key="author.submit.suppFile.dateDescription"}</span>
 		</td>

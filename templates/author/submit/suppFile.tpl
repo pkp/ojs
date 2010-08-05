@@ -72,7 +72,7 @@
 </tr>
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="dateCreated" key="common.date"}</td>
-	<td width="80%" class="value"><input type="text" name="dateCreated" class="textField" id="dateCreated" value="{$dateCreated|escape}" size="11" maxlength="10" /> YYYY-MM-DD</td>
+	<td width="80%" class="value"><input type="text" name="dateCreated" class="textField" id="dateCreated" value="{$dateCreated|escape}" size="11" maxlength="10" /> {translate key="submission.date.yyyymmdd"}</td>
 </tr>
 <tr valign="top">
 	<td>&nbsp;</td>
