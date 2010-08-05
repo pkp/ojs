@@ -764,26 +764,47 @@ class Upgrade extends Installer {
 			'lib.pkp.classes.citation.output.abnt.NlmCitationSchemaAbntFilter',
 			'lib.pkp.classes.citation.output.apa.NlmCitationSchemaApaFilter',
 			'lib.pkp.classes.citation.output.mla.NlmCitationSchemaMlaFilter',
-			'lib.pkp.classes.citation.output.vancouver.NlmCitationSchemaVancouverFilter'
+			'lib.pkp.classes.citation.output.vancouver.NlmCitationSchemaVancouverFilter',
+			'lib.pkp.classes.importexport.nlm.PKPSubmissionNlmXmlFilter'
 		);
 		foreach($filtersToBeInstalled as $filterToBeInstalled) {
-			// Make sure that the filter template has not been
-			// installed before.
-			$existingTemplates =& $filterDao->getObjectsByClass($filterToBeInstalled, 0, true);
-			if ($existingTemplates->getCount()) continue;
-
-			// Install filter template.
+			// Instantiate filter.
 			$filter =& instantiate($filterToBeInstalled, 'Filter');
-			$filter->setIsTemplate(true);
+
+			// Install citation output filters as non-configurable site-wide filter instances.
+			if (is_a($filter, 'NlmCitationSchemaCitationOutputFormatFilter') ||
+					is_a($filter, 'PKPSubmissionNlmXmlFilter')) {
+				$filter->setIsTemplate(false);
+
+				// Check whether the filter instance has been
+				// installed before.
+				$existingFilters =& $filterDao->getObjectsByClass($filterToBeInstalled, 0, false);
+
+			// Install other filter as configurable templates.
+			} else {
+				$filter->setIsTemplate(true);
+
+				// Check whether the filter template has been
+				// installed before.
+				$existingFilters =& $filterDao->getObjectsByClass($filterToBeInstalled, 0, true);
+			}
+
+			// Guarantee idempotence.
+			if ($existingFilters->getCount()) continue;
+
+			// Install the filter or template.
 			$filterDao->insertObject($filter, 0);
 			unset($filter);
 		}
 
-		// The ISBN filter template is based on a composite filter
-		// and needs to be instantiated differently.
-		$alreadyInstalled = false;
+		// Composite filters are more complex to install because they
+		// need to be constructed first:
+		// 1) Retrieve existing composites.
 		$existingTemplatesFactory =& $filterDao->getObjectsByClass('lib.pkp.classes.filter.GenericSequencerFilter', 0, true);
 		$existingTemplates =& $existingTemplatesFactory->toArray();
+
+		// 2) Check and install the ISBNdb filter template.
+		$alreadyInstalled = false;
 		foreach($existingTemplates as $existingTemplate) {
 			$subFilters =& $existingTemplate->getFilters();
 			if (count($subFilters) != 2) continue;
@@ -793,6 +814,7 @@ class Upgrade extends Installer {
 			break;
 		}
 		if (!$alreadyInstalled) {
+			// Instantiate the filter as a configurable template.
 			$isbndbTransformation = array(
 				'metadata::lib.pkp.classes.metadata.nlm.NlmCitationSchema(CITATION)',
 				'metadata::lib.pkp.classes.metadata.nlm.NlmCitationSchema(CITATION)'
@@ -801,10 +823,12 @@ class Upgrade extends Installer {
 			$isbndbFilter = new GenericSequencerFilter('ISBNdb', $isbndbTransformation);
 			$isbndbFilter->setIsTemplate(true);
 
+			// Instantiate and add the NLM-to-ISBN filter.
 			import('lib.pkp.classes.citation.lookup.isbndb.IsbndbNlmCitationSchemaIsbnFilter');
 			$nlmToIsbnFilter = new IsbndbNlmCitationSchemaIsbnFilter();
 			$isbndbFilter->addFilter($nlmToIsbnFilter);
 
+			// Instantiate and add the ISBN-to-NLM filter.
 			import('lib.pkp.classes.citation.lookup.isbndb.IsbndbIsbnNlmCitationSchemaFilter');
 			$isbnToNlmFilter = new IsbndbIsbnNlmCitationSchemaFilter();
 			$isbndbFilter->addFilter($isbnToNlmFilter);
@@ -816,7 +840,44 @@ class Upgrade extends Installer {
 						'isOptional' => array('seq'.$nlmToIsbnFilter->getSeq().'_isOptional', 'seq'.$isbnToNlmFilter->getSeq().'_isOptional')
 					));
 
+			// Persist the composite filter.
 			$filterDao->insertObject($isbndbFilter, 0);
+		}
+
+		// 3) Check and install the NLM XML 2.3 output filter.
+		$alreadyInstalled = false;
+		foreach($existingTemplates as $existingTemplate) {
+			$subFilters =& $existingTemplate->getFilters();
+			if (count($subFilters) != 2) continue;
+			if (!(isset($subFilters[1]) && is_a($subFilters[1], 'PKPSubmissionNlmXmlFilter'))) continue;
+			if (!(isset($subFilters[2]) && is_a($subFilters[2], 'XSLTransformationFilter'))) continue;
+			$alreadyInstalled = true;
+			break;
+		}
+		if (!$alreadyInstalled) {
+			// Instantiate the filter as a non-configurable filter instance.
+			$nlm23Transformation = array(
+				'class::lib.pkp.classes.submission.Submission',
+				'xml::*'
+			);
+			$nlm23Filter = new GenericSequencerFilter('NLM Journal Publishing V2.3 ref-list', $nlm23Transformation);
+			$nlm23Filter->setIsTemplate(false);
+
+			// Instantiate and add the NLM 3.0 export filter.
+			import('lib.pkp.classes.importexport.nlm.PKPSubmissionNlmXmlFilter');
+			$nlm30Filter = new PKPSubmissionNlmXmlFilter();
+			$nlm23Filter->addFilter($nlm30Filter);
+
+			// Instantiate, configure and add the NLM 3.0 to 2.3 downgrade XSL transformation.
+			import('lib.pkp.classes.xslt.XSLTransformationFilter');
+			$downgradeFilter = new XSLTransformationFilter(
+				'NLM 3.0 to 2.3 ref-list downgrade',
+				array('xml::*', 'xml::*'));
+			$downgradeFilter->setXSLFilename('lib/pkp/classes/importexport/nlm/nlm-ref-list-30-to-23.xsl');
+			$nlm23Filter->addFilter($downgradeFilter);
+
+			// Persist the composite filter.
+			$filterDao->insertObject($nlm23Filter, 0);
 		}
 
 		return true;

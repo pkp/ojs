@@ -49,7 +49,7 @@
 						// Re-load export tab whenever it is shown.
 						$.getJSON('{/literal}{$citationExportUrl}{literal}', function(jsonData) {
 							if (jsonData.status === true) {
-								$("#citationEditorExportPane").html(jsonData.content);
+								$("#citationEditorExportCanvas").replaceWith(jsonData.content);
 							} else {
 								// Alert that loading failed
 								alert(jsonData.content);
@@ -231,7 +231,7 @@
 	/* Composite UI: text pane layout */
 	.composite-ui div.canvas>div.text-pane {
 		background-color: #CED7E1;
-		padding-top: 30px;
+		padding: 30px;
 	}
 	
 	/* Composite UI: grids as sub-components */
@@ -386,14 +386,15 @@
 		height: 600px;
 	}
 	
-	/* Citation editor: citation list */
 	#submissionCitations.composite-ui div.two-pane>div.left-pane div.grid .scrollable {
-		/* The overflow definition should be in the generic styles part
-		   but as the height is citation editor specific we better define
-		   the overflow here to make the connection more obvious. */
-		height: 570px; /* This is necessary for tbody overflow to work. */
+		height: 570px; /* This is necessary for overflow. */
 	}
-
+	
+	#submissionCitations.composite-ui div.text-pane .scrollable {
+		height: 465px; /* This is necessary for overflow. */
+	}
+	
+	/* Citation editor: citation list */
 	.composite-ui div.two-pane>div.left-pane div.grid tr.current-item div.row_file,
 	.composite-ui div.two-pane>div.left-pane div.grid tr.current-item div.row_container {
 		background-color: #B6C9D5;
