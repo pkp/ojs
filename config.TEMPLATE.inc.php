@@ -88,9 +88,9 @@ restful_urls = Off
 enable_cdn = On
 
 ; Set the maximum number of citation checking processes that may run in parallel.
-; Too high numbers can increase server load and lead to many parallel outgoing
-; requests to citation checking web services. Too low numbers can lead to significantly
-; slower citation checking performance. You probably should set a value between 3
+; Too high a value can increase server load and lead to too many parallel outgoing
+; requests to citation checking web services. Too low a value can lead to significantly
+; slower citation checking performance. A reasonable value is probably between 3
 ; and 10. The more your connection bandwidth allows the better.
 citation_checking_max_processes = 10
 
