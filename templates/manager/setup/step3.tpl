@@ -36,51 +36,6 @@
 	<textarea name="authorGuidelines[{$formLocale|escape}]" id="authorGuidelines" rows="12" cols="60" class="textArea">{$authorGuidelines[$formLocale]|escape}</textarea>
 </p>
 
-<a name="metaCitationEditing"></a>
-<p>{translate key="manager.setup.metaCitationsDescription"}</p>
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="5%" class="label">
-			<input type="checkbox" name="metaCitations" id="metaCitations" value="1"{if $metaCitations} checked="checked"{/if} />
-		</td>
-		<td width="95%" class="value"><label for="metaCitations">{translate key="manager.setup.citations"}</label>
-		</td>
-	</tr>
-</table>
-<div id="citationFilterSetupToggle" {if !$metaCitations}style="visible: none"{/if}>
-	<p>{translate key="manager.setup.citationFilterParserDescription"}</p>
-	{load_url_in_div id="#parserFilterGridContainer" loadMessageId="manager.setup.filter.parser.grid.loadMessage" url="$parserFilterGridUrl"}
-	<p>{translate key="manager.setup.citationFilterLookupDescription"}</p>
-	{load_url_in_div id="#lookupFilterGridContainer" loadMessageId="manager.setup.filter.lookup.grid.loadMessage" url="$lookupFilterGridUrl"}
-	<p>{translate key="manager.setup.citationOutputStyleDescription"}</p>
-	{fbvSelect id="metaCitationOutputFilterSelect" name="metaCitationOutputFilterId"
-			from=$metaCitationOutputFilters translate=false selected=$metaCitationOutputFilterId|escape
-			defaultValue="-1" defaultLabel="manager.setup.filter.pleaseSelect"|translate}
-</div>
-{literal}<script type='text/javascript'>
-	$(function(){
-		// jQuerify DOM elements
-		$metaCitationsCheckbox = $('#metaCitations');
-		$metaCitationsSetupBox = $('#citationFilterSetupToggle');
-		
-		// Set the initial state
-		initialCheckboxState = $metaCitationsCheckbox.attr('checked');
-		if (initialCheckboxState) {
-			$metaCitationsSetupBox.css('display', 'block');
-		} else {
-			$metaCitationsSetupBox.css('display', 'none');
-		}
-		
-		// Toggle the settings box
-		$metaCitationsCheckbox.change(function(){
-			checkboxState = $metaCitationsCheckbox.attr('checked');
-			toggleState = ($metaCitationsSetupBox.css('display') === 'block');
-			if (checkboxState !== toggleState) {
-				$metaCitationsSetupBox.toggle(300);
-			}
-		})
-	});	
-</script>{/literal}
 </div>
 
 <div id="submissionPreparationChecklist">
@@ -351,6 +306,63 @@
 	</tr>
 	{/if}
 </table>
+</div>
+
+<div class="separator"></div>
+
+<div id="citationAssistant">
+<h3>3.7 {translate key="manager.setup.citationAssistant"}</h3>
+
+<a name="metaCitationEditing"></a>
+<p>{translate key="manager.setup.metaCitationsDescription"}</p>
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="5%" class="label">
+			<input type="checkbox" name="metaCitations" id="metaCitations" value="1"{if $metaCitations} checked="checked"{/if} />
+		</td>
+		<td width="95%" class="value"><label for="metaCitations">{translate key="manager.setup.citations"}</label>
+		</td>
+	</tr>
+</table>
+
+<div id="citationFilterSetupToggle" {if !$metaCitations}style="visible: none"{/if}>
+	<h4>{translate key="manager.setup.citationFilterParser"}</h4>
+	<p>{translate key="manager.setup.citationFilterParserDescription"}</p>
+	{load_url_in_div id="#parserFilterGridContainer" loadMessageId="manager.setup.filter.parser.grid.loadMessage" url="$parserFilterGridUrl"}
+	
+	<h4>{translate key="manager.setup.citationFilterLookup"}</h4>
+	<p>{translate key="manager.setup.citationFilterLookupDescription"}</p>
+	{load_url_in_div id="#lookupFilterGridContainer" loadMessageId="manager.setup.filter.lookup.grid.loadMessage" url="$lookupFilterGridUrl"}
+	<h4>{translate key="manager.setup.citationOutput"}</h4>
+	<p>{translate key="manager.setup.citationOutputStyleDescription"}</p>
+	{fbvSelect id="metaCitationOutputFilterSelect" name="metaCitationOutputFilterId"
+			from=$metaCitationOutputFilters translate=false selected=$metaCitationOutputFilterId|escape
+			defaultValue="-1" defaultLabel="manager.setup.filter.pleaseSelect"|translate}
+</div>
+{literal}<script type='text/javascript'>
+	$(function(){
+		// jQuerify DOM elements
+		$metaCitationsCheckbox = $('#metaCitations');
+		$metaCitationsSetupBox = $('#citationFilterSetupToggle');
+		
+		// Set the initial state
+		initialCheckboxState = $metaCitationsCheckbox.attr('checked');
+		if (initialCheckboxState) {
+			$metaCitationsSetupBox.css('display', 'block');
+		} else {
+			$metaCitationsSetupBox.css('display', 'none');
+		}
+		
+		// Toggle the settings box
+		$metaCitationsCheckbox.change(function(){
+			checkboxState = $metaCitationsCheckbox.attr('checked');
+			toggleState = ($metaCitationsSetupBox.css('display') === 'block');
+			if (checkboxState !== toggleState) {
+				$metaCitationsSetupBox.toggle(300);
+			}
+		})
+	});	
+</script>{/literal}
 </div>
 
 <div class="separator"></div>
