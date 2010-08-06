@@ -87,6 +87,13 @@ restful_urls = Off
 ; Allow javascript files to be served through a content delivery network (set to off to use local files)
 enable_cdn = On
 
+; Set the maximum number of citation checking processes that may run in parallel.
+; Too high numbers can increase server load and lead to many parallel outgoing
+; requests to citation checking web services. Too low numbers can lead to significantly
+; slower citation checking performance. You probably should set a value between 3
+; and 10. The more your connection bandwidth allows the better.
+citation_checking_max_processes = 10
+
 ;;;;;;;;;;;;;;;;;;;;;
 ; Database Settings ;
 ;;;;;;;;;;;;;;;;;;;;;
