@@ -432,6 +432,14 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 		$templateMgr->assign('initialHelpMessage', $initialHelpMessage);
 
+		// Find out whether all citations have been processed or not.
+		$unprocessedCitations =& $citationDao->getObjectsByAssocId(ASSOC_TYPE_ARTICLE, $articleId, 0, CITATION_CHECKED);
+		if ($unprocessedCitations->getCount() > 0) {
+			$templateMgr->assign('unprocessedCitations', $unprocessedCitations->toArray());
+		} else {
+			$templateMgr->assign('unprocessedCitations', false);
+		}
+
 		// Add the grid URL
 		$citationGridUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.citation.CitationGridHandler', 'fetchGrid', null, array('assocId' => $articleId));
 		$templateMgr->assign('citationGridUrl', $citationGridUrl);

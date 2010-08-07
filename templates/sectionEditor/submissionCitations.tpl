@@ -20,64 +20,110 @@
 	<li class="current"><a href="{url op="submissionCitations" path=$submission->getId()}">{translate key="submission.citations"}</a></li>
 </ul>
 
-{* JavaScript - FIXME: will be moved to JS file as soon as development is done *}
-{literal}
 <script type="text/javascript">
-	$(function() {
+	$(function() {ldelim}
+		{if $unprocessedCitations !== false}
+			// Activate "Refresh Citation List" button.
+			$('#refreshCitationListButton').click(function() {ldelim}
+				var $citationGrid = $('#citationGridContainer');
+				
+				// Activate the throbber.
+				actionThrobber('#citationGridContainer');
+						
+				// Trigger the throbber.
+				$citationGrid.triggerHandler('actionStart');
+				
+				// Reload the citation list.
+				$.getJSON('{$citationGridUrl}&refresh=1', function(jsonData) {ldelim}
+					// Stop the throbber.
+					$citationGrid.triggerHandler('actionStop');
+
+					// Replace the grid.
+					if (jsonData.status === true) {ldelim}
+						$citationGrid.html(jsonData.content);
+					{rdelim} else {ldelim}
+						alert(jsonData.content);
+					{rdelim}
+
+					// Check whether all missing citations
+					// have been added.
+					var unprocessedCitationIds = [{strip}
+						{foreach name=unprocessedCitations from=$unprocessedCitations item=unprocessedCitation}
+							{$unprocessedCitation->getId()}
+							{if !$smarty.foreach.unprocessedCitations.last},{/if}
+						{/foreach}
+					{/strip}];
+					var missingIds = false;
+					for (var i in unprocessedCitationIds) {ldelim}
+						if ($('#component-grid-citation-citationgrid-row-'+unprocessedCitationIds[i]).length == 0) {ldelim}
+							missingIds = true;
+							break;
+						{rdelim}
+					{rdelim}
+
+					// Remove the refresh button if all originally
+					// missing citations have been processed by now.
+					if (!missingIds) {ldelim}
+						$('#refreshCitationListMessage').remove();
+					{rdelim}
+				{rdelim});
+			{rdelim});
+		{/if}
+
 		// Vertical splitter.
-		$('#citationEditorCanvas').splitter({
+		$('#citationEditorCanvas').splitter({ldelim}
 			splitVertical:true,
 			A:$('#citationEditorNavPane'),
 			minAsize:200,
 			B:$('#citationEditorDetailPane'),
 			minBsize:300
-		});
+		{rdelim});
 
 		// Main tabs.
-		$mainTabs = $('#citationEditorMainTabs').tabs({
-			show: function(e, ui) {
+		$mainTabs = $('#citationEditorMainTabs').tabs({ldelim}
+			show: function(e, ui) {ldelim}
 				// Make sure the citation editor is correctly sized when
 				// opened for the first time.
-				if (ui.panel.id == 'citationEditorTabEdit') {
+				if (ui.panel.id == 'citationEditorTabEdit') {ldelim}
 					$('#citationEditorCanvas').triggerHandler('resize');
-				}
-				{/literal}{if !$citationEditorConfigurationError}{literal}
-					if (ui.panel.id == 'citationEditorTabExport') {
+				{rdelim}
+				{if !$citationEditorConfigurationError}
+					if (ui.panel.id == 'citationEditorTabExport') {ldelim}
 						$('#citationEditorExportPane').html('<div id="citationEditorExportThrobber" class="throbber"></div>');
 						$('#citationEditorExportThrobber').show();
 						
 						// Re-load export tab whenever it is shown.
-						$.getJSON('{/literal}{$citationExportUrl}{literal}', function(jsonData) {
-							if (jsonData.status === true) {
+						$.getJSON('{$citationExportUrl}', function(jsonData) {ldelim}
+							if (jsonData.status === true) {ldelim}
 								$("#citationEditorExportCanvas").replaceWith(jsonData.content);
-							} else {
+							{rdelim} else {ldelim}
 								// Alert that loading failed
 								alert(jsonData.content);
-							}
-						});
-					}
-				{/literal}{/if}{literal}
-			}
-		});
+							{rdelim}
+						{rdelim});
+					{rdelim}
+				{/if}
+			{rdelim}
+		{rdelim});
 
-		{/literal}{if !$introductionHide}{literal}
+		{if !$introductionHide}
 			// Feature to disable introduction message.
-			$('#introductionHide').change(function() {
+			$('#introductionHide').change(function() {ldelim}
 				$.getJSON(
-					'{/literal}{url router=$smarty.const.ROUTE_COMPONENT component="api.user.UserApiHandler" op="setUserSetting"}{literal}?setting-name=citation-editor-hide-intro&setting-value='+($(this).attr('checked')===true ? 'true' : 'false'),
-					function(jsonData) {
-						if (jsonData.status !== true) {
+					'{url router=$smarty.const.ROUTE_COMPONENT component="api.user.UserApiHandler" op="setUserSetting"}?setting-name=citation-editor-hide-intro&setting-value='+($(this).attr('checked')===true ? 'true' : 'false'),
+					function(jsonData) {ldelim}
+						if (jsonData.status !== true) {ldelim}
 							alert(jsonData.content);
-						}
-					}
+						{rdelim}
+					{rdelim}
 				);
-			});
-		{/literal}{/if}{literal}
+			{rdelim});
+		{/if}
 
-		{/literal}{if $citationEditorConfigurationError}{literal}
+		{if $citationEditorConfigurationError}
 			// Disable editor when not properly configured.
 			$mainTabs.tabs('option', 'disabled', [1, 2]);
-		{/literal}{/if}{literal}
+		{/if}
 
 		// Throbber feature (binds to ajaxAction()'s 'actionStart' event).
 		actionThrobber('#citationEditorDetailCanvas');
@@ -85,61 +131,60 @@
 		// Fullscreen feature.
 		var $citationEditor = $('#submissionCitations');
 		var beforeFullscreen;
-		$('#fullScreenButton').click(function() {
-			if ($citationEditor.hasClass('fullscreen')) {
+		$('#fullScreenButton').click(function() {ldelim}
+			if ($citationEditor.hasClass('fullscreen')) {ldelim}
 				// Going back to normal: Restore saved values.
 				$citationEditor.removeClass('fullscreen');
 				$('.composite-ui>.ui-tabs').css('margin-top', beforeFullscreen.topMargin);
-				$('.composite-ui div.main-tabs>.canvas').each(function() {
+				$('.composite-ui div.main-tabs>.canvas').each(function() {ldelim}
 					$(this).css('height', beforeFullscreen.height);
-				});
+				{rdelim});
 				$('.composite-ui div.two-pane>div.left-pane .scrollable').first().css('height', beforeFullscreen.navHeight);
 				
 				$('body').css('overflow', 'auto');
 				window.scroll(beforeFullscreen.x, beforeFullscreen.y);
-				$(this).text('{/literal}{translate key="common.fullscreen"}{literal}');
-			} else {
+				$(this).text('{translate key="common.fullscreen"}');
+			{rdelim} else {ldelim}
 				// Going fullscreen:
 				// 1) Save current values.
-				beforeFullscreen = {
+				beforeFullscreen = {ldelim}
 					topMargin: $('.composite-ui>.ui-tabs').css('margin-top'),
 					height: $('.composite-ui div.main-tabs>.canvas').first().css('height'),
 					navHeight: $('.composite-ui div.two-pane>div.left-pane tbody').first().css('height'),
 					x: $(window).scrollLeft(),
 					y: $(window).scrollTop()
-				};
+				{rdelim};
 		
 				// 2) Set values needed to go fullscreen.
 				$('body').css('overflow', 'hidden');
 				$citationEditor.addClass('fullscreen');
 				$('.composite-ui>.ui-tabs').css('margin-top', '0');
 				canvasHeight=$(window).height()-$('ul.main-tabs').height();
-				$('.composite-ui div.main-tabs>.canvas').each(function() {
+				$('.composite-ui div.main-tabs>.canvas').each(function() {ldelim}
 					$(this).css('height', canvasHeight+'px');
-				});
+				{rdelim});
 				$('.composite-ui div.two-pane>div.left-pane .scrollable').first().css('height', (canvasHeight-30)+'px');
 				window.scroll(0,0);
-				$(this).text('{/literal}{translate key="common.fullscreenOff"}{literal}');
-			}
+				$(this).text('{translate key="common.fullscreenOff"}');
+			{rdelim}
 
 			// Resize 2-pane layout.
 			$('.two-pane').css('width', '100%').triggerHandler('resize');
-		});
+		{rdelim});
 
 		// Resize citation editor in fullscreen mode
 		// when the browser window is being resized.
-		$(window).resize(function() {
+		$(window).resize(function() {ldelim}
 			canvasHeight=$(window).height()-$('ul.main-tabs').height();
-			if ($citationEditor.hasClass('fullscreen')) {
-				$('div.main-tabs>.canvas').each(function() {
+			if ($citationEditor.hasClass('fullscreen')) {ldelim}
+				$('div.main-tabs>.canvas').each(function() {ldelim}
 					$(this).css('height', canvasHeight+'px');
-				});
+				{rdelim});
 				$('.composite-ui div.two-pane>div.left-pane .scrollable').first().css('height', (canvasHeight-30)+'px');
-			}
-		});
-	});
+			{rdelim}
+		{rdelim});
+	{rdelim});
 </script>
-{/literal}
 
 {* CSS - FIXME: will be moved to JS file as soon as development is done *}
 {literal}
@@ -512,6 +557,14 @@
 </style>
 {/literal}
 
+{if $unprocessedCitations !== false}
+	<div id="refreshCitationListMessage" class="composite-ui">
+		<p>
+			<span class="formError">{translate key="submission.citations.editor.unprocessedCitations"}</span>
+		</p>
+		<button id="refreshCitationListButton" type="button" title="{translate key="submission.citations.editor.unprocessedCitationsButtonTitle"}">{translate key="submission.citations.editor.unprocessedCitationsButton"}</button>
+	</div>
+{/if}
 <div id="submissionCitations" class="composite-ui">
 	<div id="citationEditorMainTabs">
 		<button id="fullScreenButton" type="button">{translate key="common.fullscreen"}</button>
