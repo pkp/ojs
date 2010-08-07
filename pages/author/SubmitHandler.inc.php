@@ -19,7 +19,7 @@ import('pages.author.AuthorHandler');
 class SubmitHandler extends AuthorHandler {
 	/** article associated with the request **/
 	var $article;
-	
+
 	/**
 	 * Constructor
 	 **/
@@ -55,8 +55,9 @@ class SubmitHandler extends AuthorHandler {
 	/**
 	 * Save a submission step.
 	 * @param $args array first parameter is the step being saved
+	 * @param $request Request
 	 */
-	function saveSubmit($args) {
+	function saveSubmit($args, &$request) {
 		$step = isset($args[0]) ? (int) $args[0] : 0;
 		$articleId = Request::getUserVar('articleId');
 
@@ -149,7 +150,7 @@ class SubmitHandler extends AuthorHandler {
 			}
 
 			if (!isset($editData) && $submitForm->validate()) {
-				$articleId = $submitForm->execute();
+				$articleId = $submitForm->execute($request);
 				HookRegistry::call('Author::SubmitHandler::saveSubmit', array(&$step, &$article, &$submitForm));
 
 				if ($step == 5) {

@@ -12,8 +12,6 @@
  * @brief Form for Step 3 of author article submission.
  */
 
-// $Id$
-
 
 import('classes.author.form.submit.AuthorSubmitForm');
 
@@ -155,9 +153,10 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 
 	/**
 	 * Save changes to article.
+	 * @param $request Request
 	 * @return int the article ID
 	 */
-	function execute() {
+	function execute(&$request) {
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$authorDao =& DAORegistry::getDAO('AuthorDAO');
 		$article =& $this->article;
@@ -232,9 +231,10 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 		$articleDao->updateArticle($article);
 
 		// Update references list if it changed.
+		$citationDao =& DAORegistry::getDAO('CitationDAO');
 		$rawCitationList = $article->getCitations();
 		if ($previousRawCitationList != $rawCitationList) {
-			$citationDao->importCitations(ASSOC_TYPE_ARTICLE, $article->getId(), $rawCitationList);
+			$citationDao->importCitations($request, ASSOC_TYPE_ARTICLE, $article->getId(), $rawCitationList);
 		}
 
 		return $this->articleId;

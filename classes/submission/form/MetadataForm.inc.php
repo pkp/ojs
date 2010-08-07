@@ -366,51 +366,10 @@ class MetadataForm extends Form {
 		import('classes.search.ArticleSearchIndex');
 		ArticleSearchIndex::indexArticleMetadata($article);
 
+		// Update references list if it changed.
 		$rawCitationList = $article->getCitations();
 		if ($previousRawCitationList != $rawCitationList) {
-			// Update references list if it changed.
-			$citationDao->importCitations(ASSOC_TYPE_ARTICLE, $article->getId(), $rawCitationList);
-
-			// Start citation checking with the maximum of
-			// free processes:
-			// 1) Get the maximum number of parallel processes.
-			$maxProcesses = (int)Config::getVar('general', 'citation_checking_max_processes');
-
-			// 2) Add processes until all process slots are filled.
-			$siteSettingsDao =& DAORegistry::getDAO('SiteSettingsDAO');
-			$router =& $request->getRouter();
-			$dispatcher =& $router->getDispatcher();
-			$citationCheckingUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'api.citation.CitationApiHandler', 'checkAllCitations');
-			$urlParts = parse_url($citationCheckingUrl);
-			assert(isset($urlParts['scheme']) && isset($urlParts['host']) && isset($urlParts['path']) && !isset($urlParts['fragment']));
-			if ($urlParts['scheme'] == 'https') {
-				$port = 443;
-				$transport = 'ssl://';
-			} else {
-				$port = 80;
-				$transport = '';
-			}
-			$currentProcesses = (int)$siteSettingsDao->getSetting('citation_checking_executing_processes');
-			if ($currentProcesses < $maxProcesses) {
-				do {
-					$stream = fsockopen($transport.$urlParts['host'], $port);
-					if (!$stream) break;
-				    $backgroundRequest =
-				    	'GET '.$urlParts['path']." HTTP/1.1\r\n"
-				    	.'Host: '.$urlParts['host']."\r\n"
-				    	."User-Agent: OJS\r\n"
-				    	."Connection: Close\r\n\r\n";
-					stream_set_blocking($stream, 0);
-				    fwrite($stream, $backgroundRequest);
-				    fclose($stream);
-					unset($stream);
-					$currentProcesses++;
-				} while ($currentProcesses < $maxProcesses);
-			} else {
-				// If there are no free process slots then
-				// the already running processes will take care
-				// of the newly added citations as well.
-			}
+			$citationDao->importCitations($request, ASSOC_TYPE_ARTICLE, $article->getId(), $rawCitationList);
 		}
 
 		return $article->getId();

@@ -153,8 +153,11 @@ class QuickSubmitForm extends Form {
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
 
-		$journal =& Request::getJournal();
-		$user =& Request::getUser();
+		$application =& PKPApplication::getApplication();
+		$request =& $application->getRequest();
+		$user =& $request->getUser();
+		$router =& $request->getRouter();
+		$journal =& $router->getContext($request);
 
 		$article = new Article();
 		$article->setLocale($journal->getPrimaryLocale()); // FIXME in bug #5543
@@ -337,7 +340,7 @@ class QuickSubmitForm extends Form {
 		// Import the references list.
 		$citationDao =& DAORegistry::getDAO('CitationDAO');
 		$rawCitationList = $article->getCitations();
-		$citationDao->importCitations(ASSOC_TYPE_ARTICLE, $articleId, $rawCitationList);
+		$citationDao->importCitations($request, ASSOC_TYPE_ARTICLE, $articleId, $rawCitationList);
 	}
 
 	/**
