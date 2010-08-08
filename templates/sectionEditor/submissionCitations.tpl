@@ -578,11 +578,11 @@
 				<div id="citationEditorIntroductionCanvas" class="canvas">
 					<div id="citationEditorIntroductionPane" class="pane text-pane">
 						<div class="help-message">
+							{capture assign="citationSetupUrl"}{url page="manager" op="setup" path="3" anchor="metaCitationEditing"}{/capture}
 							{if $citationEditorConfigurationError}
-								{capture assign="citationSetupUrl"}{url page="manager" op="setup" path="3" anchor="metaCitationEditing"}{/capture}
 								{translate key=$citationEditorConfigurationError citationSetupUrl=$citationSetupUrl}
 							{else}
-								{translate key="submission.citations.editor.introduction.introductionMessage"}
+								{translate key="submission.citations.editor.introduction.introductionMessage" citationSetupUrl=$citationSetupUrl}
 								<input id="introductionHide" type="checkbox" >Don't show this message again.</input>
 							{/if}
 						</div>
