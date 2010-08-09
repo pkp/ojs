@@ -248,6 +248,11 @@ class PublishedArticle extends Article {
 	 * Get a DOI for this article.
 	 */
 	function getDOI() {
+		// If we already have an assigned DOI, use it.
+		$storedDOI = $this->getStoredDOI();
+		if ($storedDOI) return $storedDOI;
+
+		// Otherwise, create a new one.
 		$journalId = $this->getJournalId();
 
 		// Get the Journal object (optimized)
@@ -269,7 +274,7 @@ class PublishedArticle extends Article {
 
 		switch ( $doiSuffixSetting ) {
 			case 'customIdentifier':
-				return $doiPrefix . '/' . $this->getBestArticleId();
+				$doi = $doiPrefix . '/' . $this->getBestArticleId();
 				break;
 			case 'pattern':
 				$suffixPattern = $journal->getSetting('doiSuffixPattern');
@@ -283,11 +288,18 @@ class PublishedArticle extends Article {
 				$suffixPattern = String::regexp_replace('/%a/', $this->getArticleId(), $suffixPattern);
 				// %p - page number
 				$suffixPattern = String::regexp_replace('/%p/', $this->getPages(), $suffixPattern);
-				return $doiPrefix . '/' . $suffixPattern;
+				$doi = $doiPrefix . '/' . $suffixPattern;
 				break;
 			default:
-				return $doiPrefix . '/' . String::strtolower($journal->getLocalizedSetting('initials')) . '.v' . $issue->getVolume() . 'i' . $issue->getNumber() . '.' . $this->getArticleId();
+				$doi = $doiPrefix . '/' . String::strtolower($journal->getLocalizedSetting('initials')) . '.v' . $issue->getVolume() . 'i' . $issue->getNumber() . '.' . $this->getArticleId();
 		}
+
+		// Save the generated DOI
+		$this->setStoredDOI($doi);
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$articleDao->changeDOI($this->getId(), $doi);
+
+		return $doi;
 	}
 }
 

@@ -44,9 +44,8 @@
 
 <!ELEMENT id (#PCDATA)>
 	<!--
-	  - For articles, the plugin can export DOIs in the "id" element
-	  - using type="doi". Note that DOIs are NOT currently supported
-	  - for import.
+	  - For articles, the plugin can import and export DOIs in the "id"
+	  - element using type="doi".
 	  -->
 	<!ATTLIST id
 		type CDATA #IMPLIED>

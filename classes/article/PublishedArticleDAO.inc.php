@@ -137,11 +137,23 @@ class PublishedArticleDAO extends DAO {
 	 * Retrieve all published articles in a journal.
 	 * @param $journalId int
 	 * @param $rangeInfo object
+	 * @param $reverse boolean Whether to reverse the sort order
 	 * @return object
 	 */
-	function &getPublishedArticlesByJournalId($journalId, $rangeInfo = null, $reverse = false) {
+	function &getPublishedArticlesByJournalId($journalId = null, $rangeInfo = null, $reverse = false) {
 		$primaryLocale = Locale::getPrimaryLocale();
 		$locale = Locale::getLocale();
+		$params = array(
+			'title',
+			$primaryLocale,
+			'title',
+			$locale,
+			'abbrev',
+			$primaryLocale,
+			'abbrev',
+			$locale
+		);
+		if ($journalId !== null) $params[] = (int) $journalId;
 		$result =& $this->retrieveRange(
 			'SELECT	pa.*,
 				a.*,
@@ -155,21 +167,59 @@ class PublishedArticleDAO extends DAO {
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
 				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
 				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
-			WHERE a.journal_id = ?
-				AND i.published = 1
+			WHERE 	i.published = 1
+				' . ($journalId !== null?'AND a.journal_id = ?':'') . '
 				AND a.status <> ' . STATUS_ARCHIVED . '
 			ORDER BY date_published '. ($reverse?'DESC':'ASC'),
-			array(
-				'title',
-				$primaryLocale,
-				'title',
-				$locale,
-				'abbrev',
-				$primaryLocale,
-				'abbrev',
-				$locale,
-				$journalId
-			),
+			$params,
+			$rangeInfo
+		);
+
+		$returner = new DAOResultFactory($result, $this, '_returnPublishedArticleFromRow');
+		return $returner;
+	}
+
+	/**
+	 * Retrieve all published articles in a journal by DOI.
+	 * @param $doi string
+	 * @param $journalId int
+	 * @param $rangeInfo object
+	 * @return object
+	 */
+	function &getPublishedArticlesByDOI($doi, $journalId = null, $rangeInfo = null) {
+		$primaryLocale = Locale::getPrimaryLocale();
+		$locale = Locale::getLocale();
+		$params = array(
+			'title',
+			$primaryLocale,
+			'title',
+			$locale,
+			'abbrev',
+			$primaryLocale,
+			'abbrev',
+			$locale,
+			$doi
+		);
+		if ($journalId !== null) $params[] = (int) $journalId;
+		$result =& $this->retrieveRange(
+			'SELECT	pa.*,
+				a.*,
+				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
+				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
+			FROM	published_articles pa
+				LEFT JOIN articles a ON pa.article_id = a.article_id
+				LEFT JOIN issues i ON pa.issue_id = i.issue_id
+				LEFT JOIN sections s ON s.section_id = a.section_id
+				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
+				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
+				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
+				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
+			WHERE 	i.published = 1
+				AND a.doi = ?
+				' . ($journalId !== null?'AND a.journal_id = ?':'') . '
+				AND a.status <> ' . STATUS_ARCHIVED . '
+			ORDER BY date_published '. ($reverse?'DESC':'ASC'),
+			$params,
 			$rangeInfo
 		);
 

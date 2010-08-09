@@ -25,23 +25,23 @@ class GatewayHandler extends Handler {
 		parent::Handler();
 	}
 
-	function index() {
-		Request::redirect(null, 'index');
+	function index($args, $request) {
+		$request->redirect(null, 'index');
 	}
 
-	function lockss() {
+	function lockss($args, $request) {
 		$this->validate();
 		$this->setupTemplate();
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		$templateMgr =& TemplateManager::getManager();
 
 		if ($journal != null) {
 			if (!$journal->getSetting('enableLockss')) {
-				Request::redirect(null, 'index');
+				$request->redirect(null, 'index');
 			}
 
-			$year = Request::getUserVar('year');
+			$year = $request->getUserVar('year');
 
 			$issueDao =& DAORegistry::getDAO('IssueDAO');
 
@@ -117,18 +117,19 @@ class GatewayHandler extends Handler {
 	/**
 	 * Handle requests for gateway plugins.
 	 */
-	function plugin($args) {
+	function plugin($args, $request) {
 		$this->validate();
 		$pluginName = array_shift($args);
 
 		$plugins =& PluginRegistry::loadCategory('gateways');
 		if (isset($pluginName) && isset($plugins[$pluginName])) {
 			$plugin =& $plugins[$pluginName];
-			if (!$plugin->fetch($args)) {
-				Request::redirect(null, 'index');
+			if (!$plugin->fetch($args, $request)) {
+				$request->redirect(null, 'index');
 			}
+		} else {
+			$request->redirect(null, 'index');
 		}
-		else Request::redirect(null, 'index');
 	}
 }
 

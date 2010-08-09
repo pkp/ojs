@@ -144,6 +144,22 @@ class Article extends Submission {
 	}
 
 	/**
+	 * Get stored DOI of the submission.
+	 * @return int
+	 */
+	function getStoredDOI() {
+		return $this->getData('doi');
+	}
+
+	/**
+	 * Set the stored DOI of the submission.
+	 * @param $doi string
+	 */
+	function setStoredDOI($doi) {
+		return $this->setData('doi', $doi);
+	}
+
+	/**
 	 * Get title of article's section.
 	 * @return string
 	 */

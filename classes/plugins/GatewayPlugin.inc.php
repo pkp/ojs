@@ -109,8 +109,10 @@ class GatewayPlugin extends Plugin {
 
 	/**
 	 * Handle fetch requests for this plugin.
+	 * @param $args array
+	 * @param $request object
 	 */
-	function fetch($args) {
+	function fetch($args, $request) {
 		// Subclasses should override this function.
 		return false;
 	}

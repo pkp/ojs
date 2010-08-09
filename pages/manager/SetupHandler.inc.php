@@ -78,7 +78,12 @@ class SetupHandler extends ManagerHandler {
 			// Check for any special cases before trying to save
 			switch ($step) {
 				case 1:
-					if ($request->getUserVar('addSponsor')) {
+					if ($request->getUserVar('reassignDOIs')) {
+						$articleDao =& DAORegistry::getDAO('ArticleDAO');
+						$journal =& $request->getJournal();
+						$articleDao->assignDOIs(true, $journal->getId());
+						$editData = true;
+					} else if ($request->getUserVar('addSponsor')) {
 						// Add a sponsor
 						$editData = true;
 						$sponsors = $setupForm->getData('sponsors');

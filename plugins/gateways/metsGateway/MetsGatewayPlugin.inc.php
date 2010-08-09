@@ -88,7 +88,7 @@ class METSGatewayPlugin extends GatewayPlugin {
 	/**
 	 * Handle fetch requests for this plugin.
 	 */
-	function fetch($args)
+	function fetch($args, $request)
 	{
 		if (!$this->getEnabled()) {
 			return false;
@@ -99,7 +99,7 @@ class METSGatewayPlugin extends GatewayPlugin {
 		}
 		else
 		{
-			$journal =& Request::getJournal();
+			$journal =& $request->getJournal();
 			$issueDao =& DAORegistry::getDAO('IssueDAO');
 			$issueId = array_shift($args);
 			if (!$issueId)

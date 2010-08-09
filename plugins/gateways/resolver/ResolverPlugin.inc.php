@@ -59,13 +59,22 @@ class ResolverPlugin extends GatewayPlugin {
 	/**
 	 * Handle fetch requests for this plugin.
 	 */
-	function fetch($args) {
+	function fetch($args, $request) {
 		if (!$this->getEnabled()) {
 			return false;
 		}
 
 		$scheme = array_shift($args);
 		switch ($scheme) {
+			case 'doi':
+				$doi = implode('/', $args);
+				$journal =& $request->getJournal();
+				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+				$articles =& $publishedArticleDao->getPublishedArticlesByDOI($doi, $journal?$journal->getId():null);
+				while ($article =& $articles->next()) {
+					$request->redirect(null, 'article', 'view', $article->getBestArticleId());
+				}
+				break;
 			case 'vnp': // Volume, number, page
 			case 'ynp': // Volume, number, year, page
 				// This can only be used from within a journal context
@@ -111,6 +120,7 @@ class ResolverPlugin extends GatewayPlugin {
 		// Failure.
 		header("HTTP/1.0 500 Internal Server Error");
 		$templateMgr =& TemplateManager::getManager();
+		Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
 		$templateMgr->assign('message', 'plugins.gateways.resolver.errors.errorMessage');
 		$templateMgr->display('common/message.tpl');
 		exit;

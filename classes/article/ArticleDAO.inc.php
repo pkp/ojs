@@ -146,6 +146,7 @@ class ArticleDAO extends DAO {
 		$article->setSectionId($row['section_id']);
 		$article->setSectionTitle($row['section_title']);
 		$article->setSectionAbbrev($row['section_abbrev']);
+		$article->setStoredDOI($row['doi']);
 		$article->setLanguage($row['language']);
 		$article->setCommentsToEditor($row['comments_to_ed']);
 		$article->setCitations($row['citations']);
@@ -180,9 +181,9 @@ class ArticleDAO extends DAO {
 		$article->stampModified();
 		$this->update(
 			sprintf('INSERT INTO articles
-				(locale, user_id, journal_id, section_id, language, comments_to_ed, citations, date_submitted, date_status_modified, last_modified, status, submission_progress, current_round, submission_file_id, revised_file_id, review_file_id, editor_file_id, pages, fast_tracked, hide_author, comments_status)
+				(locale, user_id, journal_id, section_id, language, comments_to_ed, citations, date_submitted, date_status_modified, last_modified, status, submission_progress, current_round, submission_file_id, revised_file_id, review_file_id, editor_file_id, pages, fast_tracked, hide_author, comments_status, doi)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, %s, %s, %s, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, %s, %s, %s, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 				$this->datetimeToDB($article->getDateSubmitted()), $this->datetimeToDB($article->getDateStatusModified()), $this->datetimeToDB($article->getLastModified())),
 			array(
 				$article->getLocale(),
@@ -202,7 +203,8 @@ class ArticleDAO extends DAO {
 				$article->getPages(),
 				$article->getFastTracked()?1:0,
 				$article->getHideAuthor() === null ? 0 : $article->getHideAuthor(),
-				$article->getCommentsStatus() === null ? 0 : $article->getCommentsStatus()
+				$article->getCommentsStatus() === null ? 0 : $article->getCommentsStatus(),
+				$article->getStoredDOI()
 			)
 		);
 
@@ -246,7 +248,8 @@ class ArticleDAO extends DAO {
 					pages = ?,
 					fast_tracked = ?,
 					hide_author = ?,
-					comments_status = ?
+					comments_status = ?,
+					doi = ?
 				WHERE article_id = ?',
 				$this->datetimeToDB($article->getDateSubmitted()), $this->datetimeToDB($article->getDateStatusModified()), $this->datetimeToDB($article->getLastModified())),
 			array(
@@ -266,6 +269,7 @@ class ArticleDAO extends DAO {
 				$article->getFastTracked(),
 				$article->getHideAuthor(),
 				$article->getCommentsStatus(),
+				$article->getStoredDOI(),
 				$article->getId()
 			)
 		);
@@ -383,15 +387,27 @@ class ArticleDAO extends DAO {
 	}
 
 	/**
-	 * Get all articles for a journal.
+	 * Get all articles for a journal (or all articles in the system).
 	 * @param $userId int
 	 * @param $journalId int
 	 * @return DAOResultFactory containing matching Articles
 	 */
-	function &getArticlesByJournalId($journalId) {
+	function &getArticlesByJournalId($journalId = null) {
 		$primaryLocale = Locale::getPrimaryLocale();
 		$locale = Locale::getLocale();
 		$articles = array();
+
+		$params = array(
+			'title',
+			$primaryLocale,
+			'title',
+			$locale,
+			'abbrev',
+			$primaryLocale,
+			'abbrev',
+			$locale
+		);
+		if ($journalId !== null) $params[] = (int) $journalId;
 
 		$result =& $this->retrieve(
 			'SELECT	a.*,
@@ -403,18 +419,8 @@ class ArticleDAO extends DAO {
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
 				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
 				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
-			WHERE a.journal_id = ?',
-			array(
-				'title',
-				$primaryLocale,
-				'title',
-				$locale,
-				'abbrev',
-				$primaryLocale,
-				'abbrev',
-				$locale,
-				$journalId
-			)
+			' . ($journalId !== null ? 'WHERE a.journal_id = ?' : ''),
+			$params
 		);
 
 		$returner = new DAOResultFactory($result, $this, '_returnArticleFromRow');
@@ -527,8 +533,41 @@ class ArticleDAO extends DAO {
 	 */
 	function changeArticleStatus($articleId, $status) {
 		$this->update(
-			'UPDATE articles SET status = ? WHERE article_id = ?', array($status, $articleId)
+			'UPDATE articles SET status = ? WHERE article_id = ?', array((int) $status, (int) $articleId)
 		);
+
+		$this->flushCache();
+	}
+
+	/**
+	 * Change the DOI of an article
+	 * @param $articleId int
+	 * @param $doi string
+	 */
+	function changeDOI($articleId, $doi) {
+		$this->update(
+			'UPDATE articles SET doi = ? WHERE article_id = ?', array($doi, (int) $articleId)
+		);
+
+		$this->flushCache();
+	}
+
+	function assignDOIs($forceReassign = false, $journalId = null) {
+		if ($forceReassign) {
+			$this->update(
+				'UPDATE articles SET doi = null' . ($journalId !== null?' WHERE journal_id = ?':''),
+				$journalId !== null?array((int) $journalId):false
+			);
+			$this->flushCache();
+		}
+
+		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$articles =& $publishedArticleDao->getPublishedArticlesByJournalId($journalId);
+		while ($article =& $articles->next()) {
+			// Cause a DOI to be fetched and stored.
+			$article->getDOI();
+			unset($article);
+		}
 
 		$this->flushCache();
 	}

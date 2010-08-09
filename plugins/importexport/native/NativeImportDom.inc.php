@@ -832,6 +832,14 @@ class NativeImportDom {
 		$publishedArticle->setArticleId($article->getId());
 		$publishedArticle->setIssueId($issue->getId());
 
+		for ($index=0; ($node = $articleNode->getChildByName('id', $index)); $index++) {
+			switch ($node->getAttribute('type')) {
+				case 'doi':
+					$publishedArticle->setStoredDOI($node->getValue());
+					break;
+			}
+		}
+
 		if (($node = $articleNode->getChildByName('date_published'))) {
 			$publishedDate = strtotime($node->getValue());
 			if ($publishedDate === -1) {

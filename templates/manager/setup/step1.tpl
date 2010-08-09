@@ -100,6 +100,13 @@
 		</td>
 	</tr>
 	<tr valign="top">
+		<td class="label">&nbsp;</td>
+		<td class="value">
+			<span class="instruct">{translate key="manager.setup.doiReassign.description"}</span><br/>
+			<input type="submit" name="reassignDOIs" value="{translate key="manager.setup.doiReassign"}" />
+		</td>
+	</tr>
+	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="mailingAddress" key="common.mailingAddress"}</td>
 		<td width="80%" class="value">
 			<textarea name="mailingAddress" id="mailingAddress" rows="3" cols="40" class="textArea">{$mailingAddress|escape}</textarea>

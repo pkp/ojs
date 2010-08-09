@@ -247,6 +247,8 @@
 	<message key="manager.setup.doiSuffixPattern.example">For example, vol%viss%ipp%p could create a DOI such as 10.1234/vol3iss2pp230</message>
 	<message key="manager.setup.doiSuffixDescription">A DOI suffix can take any form, but must be unique for each published item.</message>
 	<message key="manager.setup.doiSuffixCustomIdentifier">Use the "Custom Identifier" for published items as the DOI suffix (must be enabled in Step 4).</message>
+	<message key="manager.setup.doiReassign">Reassign DOIs</message>
+	<message key="manager.setup.doiReassign.description">If you change your DOI configuration, DOIs that have already been assigned will not be affected. Once the DOI configuration is saved, use this button to clear all existing DOIs so that the new settings will take effect with existing articles.</message>
 	<message key="manager.setup.editorDecision">Editor Decision</message>
 	<message key="manager.setup.editorialMembers">Go to Board Members and add Editorial Board and/or Review Board members. This can be done at any point in operating the journal.</message>
 	<message key="manager.setup.editorialProcess1">One or more editors handle the basic steps without designated roles.</message>

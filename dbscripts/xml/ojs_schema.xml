@@ -456,6 +456,7 @@
 		<field name="review_file_id" type="I8"/>
 		<field name="editor_file_id" type="I8"/>
 		<field name="pages" type="C2" size="255"/>
+		<field name="doi" type="C2" size="255"/>
 		<field name="fast_tracked" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
