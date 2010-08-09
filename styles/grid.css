@@ -13,9 +13,12 @@ div.grid table {
 	width: 100%;
 }
 
-div.grid th {
+div.grid thead tr {
+	height: 30px; /* Must be set for tr rather than th for Chromium compat. */
+}
+
+div.grid thead th {
 	padding: 4px;
-	height: 30px;
 	vertical-align: middle;
 	text-align: center;
 }

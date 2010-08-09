@@ -301,9 +301,12 @@
 		width: 100%;
 	}
 	
+	.composite-ui div.two-pane table.pane_header tr {
+		height: 30px; /* Must be set for tr rather than th for Chromium compat. */
+	}
+
 	.composite-ui div.two-pane table.pane_header th {
 		padding: 4px;
-		height: 30px;
 		background-color: #CED7E1;
 		color: #20538D;
 		vertical-align: middle;
@@ -584,7 +587,7 @@
 								{translate key="submission.citations.editor.introduction.introductionMessage" citationSetupUrl=$citationSetupUrl}
 							{else}
 								{translate key="submission.citations.editor.introduction.introductionMessage" citationSetupUrl=$citationSetupUrl}
-								<input id="introductionHide" type="checkbox" >Don't show this message again.</input>
+								<input id="introductionHide" type="checkbox" />{translate key="submission.citations.editor.details.dontShowMessageAgain"}
 							{/if}
 						</div>
 					</div>
