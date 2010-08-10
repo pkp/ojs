@@ -190,6 +190,17 @@
 {* CSS - FIXME: will be moved to JS file as soon as development is done *}
 {literal}
 <style type="text/css">
+	/* Composite UI: general */
+	.composite-ui button {	
+		white-space: nowrap;
+	}
+	
+	/* Composite UI: general: browser specific */
+	.browserChrome .composite-ui select,
+	.browserChrome .composite-ui button {
+		padding: 2px;
+	}
+	
 	/* Composite UI: main tabs */
 	.composite-ui>.ui-tabs {
 		margin-top: 20px;
