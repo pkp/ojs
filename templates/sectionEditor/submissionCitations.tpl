@@ -308,6 +308,11 @@
 		border-bottom: 1px solid #B6C9D5;
 	}
 	
+	.composite-ui div.grid .row_actions a {
+		text-decoration: none; /* Opera */
+		padding-right: 5px;
+	}
+
 	/* Composite UI: 2-pane layout */
 	.composite-ui div.two-pane table.pane_header {
 		width: 100%;
