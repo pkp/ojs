@@ -38,10 +38,11 @@
 					// Stop the throbber.
 					$citationGrid.triggerHandler('actionStop');
 
-					// Replace the grid.
 					if (jsonData.status === true) {ldelim}
+						// Replace the grid.
 						$citationGrid.html(jsonData.content);
 					{rdelim} else {ldelim}
+						// Display the error message.
 						alert(jsonData.content);
 					{rdelim}
 
@@ -370,12 +371,19 @@
 	.composite-ui div.two-pane>div.right-pane div.wrapper {
 		position: absolute;
 		top: 30px;
-		bottom: 60px;
+		bottom: 0;
 		padding-top: 10px;
-		padding-bottom: 0;
+		padding-bottom: 10px;
 	}
 	
-	.composite-ui div.two-pane>div.right-pane div.pane_actions {
+	.composite-ui div.two-pane>div.right-pane div.wrapper.with-pane-actions {
+		bottom: 60px;
+		padding-bottom: 0;
+		left: 0;
+		right: 0;
+	}
+	
+	.composite-ui div.two-pane>div.right-pane div.pane-actions {
 		width: 100%;
 		position: absolute;
 		margin: 0px;
@@ -383,15 +391,15 @@
 		bottom: 0;
 	}
 	
-	.composite-ui div.two-pane>div.right-pane div.pane_actions>div {
+	.composite-ui div.two-pane>div.right-pane div.pane-actions>div {
 		padding: 20px 30px;
 	}
 	
-	.composite-ui div.two-pane>div.right-pane div.pane_actions button {
+	.composite-ui div.two-pane>div.right-pane div.pane-actions button {
 		float: right;
 	}
 
-	.composite-ui div.two-pane>div.right-pane div.pane_actions button.secondary-button {
+	.composite-ui div.two-pane>div.right-pane div.pane-actions button.secondary-button {
 		float: none;
 	}
 	
