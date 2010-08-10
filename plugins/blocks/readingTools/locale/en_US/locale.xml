@@ -22,5 +22,5 @@
 	<message key="plugins.block.readingTools.emailThisArticle">Email this article</message>
 	<message key="plugins.block.readingTools.loginRequired">Login required</message>
 	<message key="plugins.block.readingTools.printThisArticle">Print this article</message>
-	<message key="plugins.block.readingTools.postComment">Post a Comment</message
+	<message key="plugins.block.readingTools.postComment">Post a Comment</message>
 </locale>
