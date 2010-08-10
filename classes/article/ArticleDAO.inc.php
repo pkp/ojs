@@ -13,8 +13,6 @@
  * @brief Operations for retrieving and modifying Article objects.
  */
 
-// $Id$
-
 
 import('classes.article.Article');
 
@@ -341,11 +339,11 @@ class ArticleDAO extends DAO {
 		$proofreadAuthorSignoffs = $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_AUTHOR', ASSOC_TYPE_ARTICLE, $articleId);
 		$proofreadProofreaderSignoffs = $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $articleId);
 		$proofreadLayoutSignoffs = $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
-		$signoffs = array($copyedInitialSignoffs, $copyedAuthorSignoffs, $copyedFinalSignoffs, $layoutSignoffs, 
+		$signoffs = array($copyedInitialSignoffs, $copyedAuthorSignoffs, $copyedFinalSignoffs, $layoutSignoffs,
 						$proofreadAuthorSignoffs, $proofreadProofreaderSignoffs, $proofreadLayoutSignoffs);
 		foreach ($signoffs as $signoff) {
 			if ( $signoff ) $signoffDao->deleteObject($signoff);
-		}		
+		}
 
 		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
 		$articleCommentDao->deleteArticleComments($articleId);
