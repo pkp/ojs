@@ -56,6 +56,13 @@ echo -n "Preparing package ... "
 cp config.TEMPLATE.inc.php config.inc.php
 find . \( -name .gitignore -o -name .gitmodules -o -name .keepme \) -exec rm '{}' \;
 rm -rf $EXCLUDE
+
+# Create cache directories
+mkdir cache
+mkdir cache/t_compile
+mkdir cache/t_cache
+mkdir cache/_db
+
 echo "Done"
 
 cd ..
