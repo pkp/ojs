@@ -86,7 +86,7 @@
 				// Make sure the citation editor is correctly sized when
 				// opened for the first time.
 				if (ui.panel.id == 'citationEditorTabEdit') {ldelim}
-					$('#citationEditorCanvas').triggerHandler('resize');
+					$('#citationEditorCanvas').triggerHandler('splitterRecalc');
 				{rdelim}
 				{if !$citationEditorConfigurationError}
 					if (ui.panel.id == 'citationEditorTabExport') {ldelim}
@@ -170,7 +170,7 @@
 			{rdelim}
 
 			// Resize 2-pane layout.
-			$('.two-pane').css('width', '100%').triggerHandler('resize');
+			$('.two-pane').css('width', '100%').triggerHandler('splitterRecalc');
 		{rdelim});
 
 		// Resize citation editor in fullscreen mode
