@@ -92,7 +92,7 @@ enable_cdn = On
 ; requests to citation checking web services. Too low a value can lead to significantly
 ; slower citation checking performance. A reasonable value is probably between 3
 ; and 10. The more your connection bandwidth allows the better.
-citation_checking_max_processes = 10
+citation_checking_max_processes = 3
 
 ;;;;;;;;;;;;;;;;;;;;;
 ; Database Settings ;
