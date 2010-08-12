@@ -12,8 +12,6 @@
  * @brief Form for Step 1 of author article submission.
  */
 
-// $Id$
-
 
 import('classes.author.form.submit.AuthorSubmitForm');
 
@@ -176,7 +174,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 			$this->article->addAuthor($author);
 
 			$articleDao->insertArticle($this->article);
-			$this->articleId = $this->article->getArticleId();
+			$this->articleId = $this->article->getId();
 		}
 
 		return $this->articleId;

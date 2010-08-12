@@ -5,8 +5,6 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Show listing of unassigned submissions.
- *
- * $Id$
  *}
 <div id="submissions">
 <table width="100%" class="listing">
@@ -26,11 +24,11 @@
 	
 	{iterate from=submissions item=submission}
 	<tr valign="top" {if $submission->getFastTracked()} class="fastTracked"{/if}>
-		<td>{$submission->getArticleId()}</td>
+		<td>{$submission->getId()}</td>
 		<td>{$submission->getDateSubmitted()|date_format:$dateFormatTrunc}</td>
 		<td>{$submission->getSectionAbbrev()|escape}</td>
 		<td>{$submission->getAuthorString(true)|truncate:40:"..."|escape}</td>
-		<td><a href="{url op="submission" path=$submission->getArticleId()}" class="action">{$submission->getLocalizedTitle()|strip_unsafe_html|truncate:60:"..."}</a></td>
+		<td><a href="{url op="submission" path=$submission->getId()}" class="action">{$submission->getLocalizedTitle()|strip_unsafe_html|truncate:60:"..."}</a></td>
 	</tr>
 	<tr>
 		<td colspan="5" class="{if $submissions->eof()}end{/if}separator">&nbsp;</td>

@@ -212,7 +212,7 @@ class ArticleDAO extends DAO {
 		// Insert authors for this article
 		$authors =& $article->getAuthors();
 		for ($i=0, $count=count($authors); $i < $count; $i++) {
-			$authors[$i]->setArticleId($article->getId());
+			$authors[$i]->setSubmissionId($article->getId());
 			$this->authorDao->insertAuthor($authors[$i]);
 		}
 

@@ -16,14 +16,14 @@
 	<tr>
 		<td width="20%" class="label">{translate key="user.role.copyeditor"}</td>
 		{if $submission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL')}<td width="20%" class="value">{$copyeditor->getFullName()|escape}</td>{/if}
-		<td class="value"><a href="{url op="selectCopyeditor" path=$submission->getArticleId()}" class="action">{translate key="editor.article.selectCopyeditor"}</a></td>
+		<td class="value"><a href="{url op="selectCopyeditor" path=$submission->getId()}" class="action">{translate key="editor.article.selectCopyeditor"}</a></td>
 	</tr>
 </table>
 {/if}
 
 <table width="100%" class="info">
 	<tr>
-		<td width="28%" colspan="2"><a href="{url op="viewMetadata" path=$submission->getArticleId()}" class="action">{translate key="submission.reviewMetadata"}</a></td>
+		<td width="28%" colspan="2"><a href="{url op="viewMetadata" path=$submission->getId()}" class="action">{translate key="submission.reviewMetadata"}</a></td>
 		<td width="18%" class="heading">{translate key="submission.request"}</td>
 		<td width="18%" class="heading">{translate key="submission.underway"}</td>
 		<td width="18%" class="heading">{translate key="submission.complete"}</td>
@@ -36,7 +36,7 @@
 		<td>
 			{if $useCopyeditors}
 				{if $submission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL') && $initialCopyeditFile}
-					{url|assign:"url" op="notifyCopyeditor" articleId=$submission->getArticleId()}
+					{url|assign:"url" op="notifyCopyeditor" articleId=$submission->getId()}
 					{if $initialCopyeditSignoff->getDateUnderway()}
 						{translate|escape:"javascript"|assign:"confirmText" key="sectionEditor.copyedit.confirmRenotify"}
 						{icon name="mail" onclick="return confirm('$confirmText')" url=$url}
@@ -48,7 +48,7 @@
 				{/if}
 			{else}
 				{if !$initialCopyeditSignoff->getDateNotified() && $initialCopyeditFile}
-					<a href="{url op="initiateCopyedit" articleId=$submission->getArticleId()}" class="action">{translate key="common.initiate"}</a>
+					<a href="{url op="initiateCopyedit" articleId=$submission->getId()}" class="action">{translate key="common.initiate"}</a>
 				{/if}
 			{/if}
 			{$initialCopyeditSignoff->getDateNotified()|date_format:$dateFormatShort|default:""}
@@ -64,7 +64,7 @@
 			{if $initialCopyeditSignoff->getDateCompleted()}
 				{$initialCopyeditSignoff->getDateCompleted()|date_format:$dateFormatShort}
 			{elseif !$useCopyeditors}
-				<a href="{url op="completeCopyedit" articleId=$submission->getArticleId()}" class="action">{translate key="common.complete"}</a>
+				<a href="{url op="completeCopyedit" articleId=$submission->getId()}" class="action">{translate key="common.complete"}</a>
 			{else}
 				&mdash;
 			{/if}
@@ -72,7 +72,7 @@
 		<td>
 			{if $useCopyeditors}
 				{if $submission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL') &&  $initialCopyeditSignoff->getDateNotified() && !$initialCopyeditSignoff->getDateAcknowledged()}
-					{url|assign:"url" op="thankCopyeditor" articleId=$submission->getArticleId()}
+					{url|assign:"url" op="thankCopyeditor" articleId=$submission->getId()}
 					{icon name="mail" url=$url}
 				{else}
 					{icon name="mail" disabled="disable"}
@@ -88,7 +88,7 @@
 		<td colspan="5">
 			{translate key="common.file"}:
 			{if $initialCopyeditFile}
-				<a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$initialCopyeditFile->getFileId():$initialCopyeditFile->getRevision()}" class="file">{$initialCopyeditFile->getFileName()|escape}</a>&nbsp;&nbsp;{$initialCopyeditFile->getDateModified()|date_format:$dateFormatShort}
+				<a href="{url op="downloadFile" path=$submission->getId()|to_array:$initialCopyeditFile->getFileId():$initialCopyeditFile->getRevision()}" class="file">{$initialCopyeditFile->getFileName()|escape}</a>&nbsp;&nbsp;{$initialCopyeditFile->getDateModified()|date_format:$dateFormatShort}
 			{else}
 				{translate key="submission.copyedit.mustUploadFileForInitialCopyedit"}
 			{/if}
@@ -103,7 +103,7 @@
 		<td>{translate key="submission.copyedit.editorAuthorReview"}</td>
 		<td>
 			{if ($submission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL') || !$useCopyeditors) && $initialCopyeditSignoff->getDateCompleted()}
-				{url|assign:"url" op="notifyAuthorCopyedit articleId=$submission->getArticleId()}
+				{url|assign:"url" op="notifyAuthorCopyedit articleId=$submission->getId()}
 				{if $authorCopyeditSignoff->getDateUnderway()}
 					{translate|escape:"javascript"|assign:"confirmText" key="sectionEditor.author.confirmRenotify"}
 					{icon name="mail" onclick="return confirm('$confirmText')" url=$url}
@@ -123,7 +123,7 @@
 		</td>
 		<td>
 			{if ($submission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL') || !$useCopyeditors) && $authorCopyeditSignoff->getDateNotified() && !$authorCopyeditSignoff->getDateAcknowledged()}
-				{url|assign:"url" op="thankAuthorCopyedit articleId=$submission->getArticleId()}
+				{url|assign:"url" op="thankAuthorCopyedit articleId=$submission->getId()}
 				{icon name="mail" url=$url}
 			{else}
 				{icon name="mail" disabled="disable"}
@@ -136,7 +136,7 @@
 		<td colspan="5">
 			{translate key="common.file"}:
 			{if $editorAuthorCopyeditFile}
-				<a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$editorAuthorCopyeditFile->getFileId():$editorAuthorCopyeditFile->getRevision()}" class="file">{$editorAuthorCopyeditFile->getFileName()|escape}</a>&nbsp;&nbsp;{$editorAuthorCopyeditFile->getDateModified()|date_format:$dateFormatShort}
+				<a href="{url op="downloadFile" path=$submission->getId()|to_array:$editorAuthorCopyeditFile->getFileId():$editorAuthorCopyeditFile->getRevision()}" class="file">{$editorAuthorCopyeditFile->getFileName()|escape}</a>&nbsp;&nbsp;{$editorAuthorCopyeditFile->getDateModified()|date_format:$dateFormatShort}
 			{/if}
 		</td>
 	</tr>
@@ -150,7 +150,7 @@
 		<td>
 			{if $useCopyeditors}
 				{if $submission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL') && $authorCopyeditSignoff->getDateCompleted()}
-					{url|assign:"url" op="notifyFinalCopyedit articleId=$submission->getArticleId()}
+					{url|assign:"url" op="notifyFinalCopyedit articleId=$submission->getId()}
 					{if $finalCopyeditSignoff->getDateUnderway()}
 						{translate|escape:"javascript"|assign:"confirmText" key="sectionEditor.copyedit.confirmRenotify"}
 						{icon name="mail" onclick="return confirm('$confirmText')" url=$url}
@@ -174,7 +174,7 @@
 			{if $finalCopyeditSignoff->getDateCompleted()}
 				{$finalCopyeditSignoff->getDateCompleted()|date_format:$dateFormatShort}
 			{elseif !$useCopyeditors}
-				<a href="{url op="completeFinalCopyedit" articleId=$submission->getArticleId()}" class="action">{translate key="common.complete"}</a>
+				<a href="{url op="completeFinalCopyedit" articleId=$submission->getId()}" class="action">{translate key="common.complete"}</a>
 			{else}
 				&mdash;
 			{/if}
@@ -182,7 +182,7 @@
 		<td>
 			{if $useCopyeditors}
 				{if $submission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL') &&  $finalCopyeditSignoff->getDateNotified() && !$finalCopyeditSignoff->getDateAcknowledged()}
-					{url|assign:"url" op="thankFinalCopyedit articleId=$submission->getArticleId()}
+					{url|assign:"url" op="thankFinalCopyedit articleId=$submission->getId()}
 					{icon name="mail" url=$url}
 				{else}
 					{icon name="mail" disabled="disable"}
@@ -198,7 +198,7 @@
 		<td colspan="5">
 			{translate key="common.file"}:
 			{if $finalCopyeditFile}
-				<a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$finalCopyeditFile->getFileId():$finalCopyeditFile->getRevision()}" class="file">{$finalCopyeditFile->getFileName()|escape}</a>&nbsp;&nbsp;{$finalCopyeditFile->getDateModified()|date_format:$dateFormatShort}
+				<a href="{url op="downloadFile" path=$submission->getId()|to_array:$finalCopyeditFile->getFileId():$finalCopyeditFile->getRevision()}" class="file">{$finalCopyeditFile->getFileName()|escape}</a>&nbsp;&nbsp;{$finalCopyeditFile->getDateModified()|date_format:$dateFormatShort}
 			{/if}
 		</td>
 	</tr>
@@ -215,7 +215,7 @@
 {assign var="canUploadCopyedit" value="1"}
 {/if}
 <form method="post" action="{url op="uploadCopyeditVersion"}"  enctype="multipart/form-data">
-	<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
+	<input type="hidden" name="articleId" value="{$submission->getId()}" />
 	{translate key="submission.uploadFileTo"}
 	<input type="radio" name="copyeditStage" id="copyeditStageInitial" value="initial" checked="checked" /><label for="copyeditStageInitial">{translate key="navigation.stepNumber" step=1}</label>,
 	<input type="radio" name="copyeditStage" id="copyeditStageAuthor" value="author"{if $canUploadCopyedit == 1} disabled="disabled"{else} checked="checked"{/if} /><label for="copyeditStageAuthor"{if $canUploadCopyedit == 1} class="disabled"{/if}>{translate key="navigation.stepNumber" step=2}</label>, {translate key="common.or"}
@@ -227,9 +227,9 @@
 {translate key="submission.copyedit.copyeditComments"}
 {if $submission->getMostRecentCopyeditComment()}
 	{assign var="comment" value=$submission->getMostRecentCopyeditComment()}
-	<a href="javascript:openComments('{url op="viewCopyeditComments" path=$submission->getArticleId() anchor=$comment->getId()}');" class="icon">{icon name="comment"}</a>{$comment->getDatePosted()|date_format:$dateFormatShort}
+	<a href="javascript:openComments('{url op="viewCopyeditComments" path=$submission->getId() anchor=$comment->getId()}');" class="icon">{icon name="comment"}</a>{$comment->getDatePosted()|date_format:$dateFormatShort}
 {else}
-	<a href="javascript:openComments('{url op="viewCopyeditComments" path=$submission->getArticleId()}');" class="icon">{icon name="comment"}</a>{translate key="common.noComments"}
+	<a href="javascript:openComments('{url op="viewCopyeditComments" path=$submission->getId()}');" class="icon">{icon name="comment"}</a>{translate key="common.noComments"}
 {/if}
 
 {if $currentJournal->getLocalizedSetting('copyeditInstructions')}
