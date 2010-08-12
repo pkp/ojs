@@ -353,14 +353,15 @@
 			$metaCitationsSetupBox.css('display', 'none');
 		}
 		
-		// Toggle the settings box
-		$metaCitationsCheckbox.change(function(){
+		// Toggle the settings box.
+		// NB: Has to be click() rather than change() to work in IE.
+		$metaCitationsCheckbox.click(function(){
 			checkboxState = $metaCitationsCheckbox.attr('checked');
 			toggleState = ($metaCitationsSetupBox.css('display') === 'block');
 			if (checkboxState !== toggleState) {
 				$metaCitationsSetupBox.toggle(300);
 			}
-		})
+		});
 	});	
 </script>{/literal}
 </div>

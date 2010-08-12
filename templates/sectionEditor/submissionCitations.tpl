@@ -109,7 +109,7 @@
 
 		{if !$introductionHide}
 			// Feature to disable introduction message.
-			$('#introductionHide').change(function() {ldelim}
+			$('#introductionHide').click(function() {ldelim}
 				$.getJSON(
 					'{url router=$smarty.const.ROUTE_COMPONENT component="api.user.UserApiHandler" op="setUserSetting"}?setting-name=citation-editor-hide-intro&setting-value='+($(this).attr('checked')===true ? 'true' : 'false'),
 					function(jsonData) {ldelim}
