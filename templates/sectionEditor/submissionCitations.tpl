@@ -367,8 +367,7 @@
 		height: 100%;
 		line-height: 0;
 		font-size: 0;
-		border-top: solid 1px #9cbdff;
-		border-bottom: solid 1px #9cbdff;
+		border: solid 0px;
 		/* FIXME: change path when moving this to its own file */
 		background: #cbe1fb url(../../../../lib/pkp/styles/splitter/ui-bg_pane.gif) 0% 50%;
 	}
