@@ -308,7 +308,8 @@
 		border-bottom: 1px solid #B6C9D5;
 	}
 	
-	.composite-ui div.grid .row_actions a {
+	.composite-ui div.grid .row_actions a,
+	.composite-ui div.grid .options a {
 		text-decoration: none; /* Opera */
 		padding-right: 5px;
 	}
