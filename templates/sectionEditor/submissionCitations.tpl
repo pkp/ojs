@@ -359,6 +359,7 @@
 
 	.composite-ui div.two-pane>div.left-pane div.grid tr.approved-citation .row_actions {
 		width: 22px;
+		left: -3px;
 	}
 
 	/* Composite UI: 2-pane layout - splitbar */
@@ -447,6 +448,7 @@
 
 	.composite-ui div.two-pane>div.right-pane div.grid .row_actions {
 		right: 26px;
+		padding-top: 2px;
 	}
 
 	.composite-ui div.two-pane>div.right-pane div.grid .row_actions a {

@@ -97,8 +97,8 @@ div.grid tr.category td {
 	overflow: hidden;
 }
 
-.row_container
-{
+.row_container {
+	position: relative; /* Required to anchor absolute row actions positioning below. */
 	padding-left: 25px;
 	padding-right: 30px;
 	overflow: hidden;
@@ -109,18 +109,17 @@ div.grid tr.category td {
 }
 
 .row_actions, .row_file {
-	position: relative;
-	float: left;
 	min-height: 40px;
 	line-height: 40px;
 	vertical-align: middle;
 }
 
 .row_actions {
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 25px;
-	right: 55px;
 	padding-top: 5px;
-	margin-left: -100%;
 }
 
 .row_actions a {
@@ -145,7 +144,6 @@ div.grid tr.category td {
 
 .row_controls {
 	display: none;
-	clear: left;
 	height: 25px;
 	line-height: 25px;
 	vertical-align: middle;
