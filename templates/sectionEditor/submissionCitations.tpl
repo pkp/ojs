@@ -397,6 +397,8 @@
 		position: absolute;
 		top: 30px;
 		bottom: 0;
+		left: 0;
+		right: 0;
 		padding-top: 10px;
 		padding-bottom: 10px;
 	}
@@ -404,20 +406,18 @@
 	.composite-ui div.two-pane>div.right-pane div.wrapper.with-pane-actions {
 		bottom: 60px;
 		padding-bottom: 0;
-		left: 0;
-		right: 0;
 	}
 
 	.composite-ui div.two-pane>div.right-pane div.pane-actions {
-		width: 100%;
 		position: absolute;
 		margin: 0px;
-		left: 0;
 		bottom: 0;
+		height: 40px;
+		width: 100%;
 	}
 
 	.composite-ui div.two-pane>div.right-pane div.pane-actions>div {
-		padding: 20px 30px;
+		padding: 0 30px;
 	}
 
 	.composite-ui div.two-pane>div.right-pane div.pane-actions button {
@@ -425,7 +425,7 @@
 	}
 
 	.composite-ui div.two-pane>div.right-pane div.pane-actions button.secondary-button {
-		float: none;
+		float: left;
 	}
 
 	.composite-ui div.two-pane>div.right-pane .form-block {
