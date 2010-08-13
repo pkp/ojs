@@ -15,8 +15,9 @@
 
 import('lib.pkp.classes.plugins.GenericPlugin');
 
-define('TINYMCE_INSTALL_PATH', 'lib' . DIRECTORY_SEPARATOR . 'pkp' . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'tinymce');
-define('TINYMCE_JS_PATH', TINYMCE_INSTALL_PATH . DIRECTORY_SEPARATOR . 'jscripts' . DIRECTORY_SEPARATOR . 'tiny_mce');
+// Define TinyMCE paths with unix-style separators for inclusion in browser.
+define('TINYMCE_INSTALL_PATH', 'lib/pkp/lib/tinymce');
+define('TINYMCE_JS_PATH', TINYMCE_INSTALL_PATH . '/jscripts/tiny_mce');
 
 class TinyMCEPlugin extends GenericPlugin {
 	/**
@@ -396,7 +397,7 @@ class TinyMCEPlugin extends GenericPlugin {
 	 * @return boolean
 	 */
 	function isMCEInstalled() {
-		return file_exists(TINYMCE_JS_PATH . '/tiny_mce.js');
+		return file_exists(str_replace('/', DIRECTORY_SEPARATOR, TINYMCE_JS_PATH) . DIRECTORY_SEPARATOR. 'tiny_mce.js');
 	}
 
 	/**
