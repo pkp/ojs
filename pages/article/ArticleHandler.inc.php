@@ -135,7 +135,7 @@ class ArticleHandler extends Handler {
 
 			// Article cover page.
 			$locale = Locale::getLocale();
-			if (isset($article) && $article->getLocalizedFileName() && $article->getLocalizedShowCoverPage() && !$article->getLocalizedHideCoverPageAbstract($locale)) {
+			if (isset($article) && $article->getLocalizedFileName() && $article->getLocalizedShowCoverPage() && !$article->getLocalizedHideCoverPageAbstract()) {
 				import('classes.file.PublicFileManager');
 				$publicFileManager = new PublicFileManager();
 				$coverPagePath = $request->getBaseUrl() . '/';
@@ -143,7 +143,7 @@ class ArticleHandler extends Handler {
 				$templateMgr->assign('coverPagePath', $coverPagePath);
 				$templateMgr->assign('coverPageFileName', $article->getLocalizedFileName());
 				$templateMgr->assign('width', $article->getLocalizedWidth());
-				$templateMgr->assign('height', $article->getLocalized());
+				$templateMgr->assign('height', $article->getLocalizedHeight());
 				$templateMgr->assign('coverPageAltText', $article->getLocalizedCoverPageAltText());
 			}
 
