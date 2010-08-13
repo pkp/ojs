@@ -137,8 +137,8 @@ div.grid tr.category td {
 	padding: 2px 20px;
 }
 
-.multiline
-{
+.multiline {
+	line-height: 125%; /* IE7 doesn't support "inherit", all other browsers will ignore this. */
 	line-height: inherit;
 }
 
