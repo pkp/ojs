@@ -343,6 +343,11 @@
 	}
 
 	/* Composite UI: 2-pane layout - navigation list */
+	.composite-ui div.two-pane>div.left-pane div.grid .scrollable {
+		position: relative; /* Required to fix overflow:auto + inner table scrolling bug in IE7, see <http://snook.ca/archives/html_and_css/position_relative_overflow_ie/>. */
+		zoom: 1; /* Sets proprietary hasLayout property in IE < 8 - required for scrollbar to appear, see <http://stackoverflow.com/questions/139000/div-with-overflowauto-and-a-100-wide-table-problem> for a similar problem. */
+	}
+
 	.composite-ui div.two-pane>div.left-pane div.grid div.row_container {
 		background-color: #FFFFFF;
 	}
