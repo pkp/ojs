@@ -196,8 +196,10 @@
 
 	/* Composite UI: general: browser specific */
 	.browserChrome .composite-ui select,
-	.browserChrome .composite-ui button {
-		padding: 2px;
+	.browserChrome .composite-ui button,
+	.browserSafari .composite-ui select,
+	.browserSafari .composite-ui button {
+		padding: 2px; /* Fixes WebKit browsers' ugly buttons and drop-downs. */
 	}
 
 	/* Composite UI: main tabs */
