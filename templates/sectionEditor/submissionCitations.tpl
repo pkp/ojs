@@ -525,12 +525,17 @@
 	}
 
 	#editableRawCitation div.value {
-		margin-right: 15px;  // FIXME: check for box model bug in IE
+		margin-right: 15px;
+	}
+
+	#editableRawCitation div.value>div {
+		padding-right: 14px; /* Conditional div only seen by IE < 8 fixing textarea sizing bug in IE 7. */
 	}
 
 	#editableRawCitation textarea.textarea {
 		width: 100%;
 		padding: 5px;
+		overflow-y: auto; /* Hide scrollbar in IE7. */
 	}
 
 	#rawCitationEditingExpertOptions .option-block {
@@ -546,7 +551,7 @@
 		width: 14px;
 		height: 14px;
 		margin-top: 1em;
-		margin-left: 0; 
+		margin-left: 0;
 	}
 
 	#generatedCitationWithMarkup span {
