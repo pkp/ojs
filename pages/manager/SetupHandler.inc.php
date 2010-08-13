@@ -326,7 +326,7 @@ class SetupHandler extends ManagerHandler {
 
 				$request->redirect(null, null, 'setupSaved', $step);
 			} else {
-				$setupForm->display();
+				$setupForm->display($request, $this->getDispatcher());
 			}
 
 		} else {

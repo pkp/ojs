@@ -41,7 +41,7 @@ class JournalSetupForm extends Form {
 	/**
 	 * Display the form.
 	 */
-	function display() {
+	function display($request, $dispatcher) {
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('setupStep', $this->step);
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.setup');

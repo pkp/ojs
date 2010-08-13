@@ -105,11 +105,11 @@ class JournalSetupStep1Form extends JournalSetupForm {
 	/**
 	 * Display the form.
 	 */
-	function display() {
+	function display($request, $dispatcher) {
 		$templateMgr =& TemplateManager::getManager();
 		if (Config::getVar('email', 'allow_envelope_sender'))
 			$templateMgr->assign('envelopeSenderEnabled', true);
-		parent::display();
+		parent::display($request, $dispatcher);
 	}
 }
 

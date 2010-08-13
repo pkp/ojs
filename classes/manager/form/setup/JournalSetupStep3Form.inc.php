@@ -69,7 +69,7 @@ class JournalSetupStep3Form extends JournalSetupForm {
 	 * @param $request Request
 	 * @param $dispatcher Dispatcher
 	 */
-	function display(&$request, &$dispatcher) {
+	function display($request, $dispatcher) {
 		$templateMgr =& TemplateManager::getManager($request);
 		// Add extra style sheets required for ajax components
 		// FIXME: Must be removed after OMP->OJS backporting
@@ -108,7 +108,7 @@ class JournalSetupStep3Form extends JournalSetupForm {
 		}
 		$templateMgr->assign_by_ref('metaCitationOutputFilters', $metaCitationOutputFilters);
 
-		parent::display();
+		parent::display($request, $dispatcher);
 	}
 }
 

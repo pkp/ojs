@@ -62,8 +62,8 @@ class JournalSetupStep5Form extends JournalSetupForm {
 	/**
 	 * Display the form.
 	 */
-	function display() {
-		$journal =& Request::getJournal();
+	function display($request, $dispatcher) {
+		$journal =& $request->getJournal();
 
 		$allThemes =& PluginRegistry::loadCategory('themes');
 		$journalThemes = array();
@@ -111,7 +111,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 		));
 
 		$templateMgr->setCacheability(CACHEABILITY_MUST_REVALIDATE);
-		parent::display();
+		parent::display($request, $dispatcher);
 	}
 
 	/**
