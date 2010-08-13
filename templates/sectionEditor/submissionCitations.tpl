@@ -449,6 +449,11 @@
 		right: 26px;
 	}
 
+	.composite-ui div.two-pane>div.right-pane div.grid .row_actions a {
+		display: block;
+		padding-bottom: 4px;
+	}
+
 	.composite-ui div.two-pane>div.right-pane div.grid .row_file {
 		width: auto;
 		padding: 0;

@@ -78,7 +78,7 @@ div.grid tr.category td {
 
 .options a {
 	background-position: 0px 50%;
-	display: inline;
+	display: block; /* Required for IE7 when displaying background images larger than the font size. */
 	padding: 5px 0px 5px 20px;
 	margin-left: 20px;
 	font-size: 90%;
