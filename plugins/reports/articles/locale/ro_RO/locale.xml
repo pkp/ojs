@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2010 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ro_RO (Română) locale.
+  * KOSSON FECIT
+  * $Id: locale.xml,v 1.1 2008/06/12 00:29:31 asmecher Exp $
+  -->
+
+<locale name="ro_RO" full_name="Română">
+	<message key="plugins.reports.articles.displayName">Raport privind articolele</message>
+	<message key="plugins.reports.articles.description">Acest modul implementează un sistem de raportare CSV, care conţie o listă de articole şi informaţiile care le privesc pe acestea.</message>
+	<message key="plugins.reports.articles.nodecision">Nicio decizie</message>
+</locale>

@@ -9,11 +9,11 @@
   *
   * Localization strings for the no_NO (Norwegian) locale.
   *
-  * $Id$
+  * $Id: locale.xml,v 1.4 2009/08/17 23:38:33 asmecher Exp $
   -->
  
 <locale name="no_NO" full_name="Norwegian">
-	<message key="plugins.generic.customLocale.name">Plugin for tilpasning av oversatte lokalfilsett</message>
+	<message key="plugins.generic.customLocale.name">Programutvidelse for tilpasning av oversatte lokalfilsett</message>
 	<message key="plugins.generic.customLocale.description">Denne plugin'en gjør det mulig å velge hvilke språk som skal brukes i brukergrensesnittet til OJS.</message>
 
 	<message key="plugins.generic.customLocale.longDescription">På denne siden finner du en liste med alle de oversatte lokalfilsettene som er installert hittil.</message>
@@ -32,4 +32,6 @@
 	<message key="plugins.generic.customLocale.file.edit">Redigerer {$filename}</message>
 	<message key="plugins.generic.customLocale.file.reference">Standardtekst</message>
 	<message key="plugins.generic.customLocale.file.custom">Tilpasset tekst</message>
+	<message key="plugins.generic.customLocale.enabled">Programvareutvidelsen for tilpasninger av tekster er slått på.</message>
+	<message key="plugins.generic.customLocale.disabled">Programvareutvidelsen for tilpasninger av tekster er slått av.</message>
 </locale>

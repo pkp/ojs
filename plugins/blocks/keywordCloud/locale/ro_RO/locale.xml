@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id: locale.xml,v 1.1 2009/05/27 16:02:16 asmecher Exp $
+  -->
+ 
+<locale name="ro_RO" full_name="Română">
+	<message key="plugins.block.keywordCloud.displayName">Zona norului cuvintelor cheie</message>
+	<message key="plugins.block.keywordCloud.description">Acest modul afișează un nor de etichete constituit din cuvintele cheie puse la articole.</message>
+	<message key="plugins.block.keywordCloud.title">Cuvinte cheie</message>
+</locale>

@@ -9,48 +9,41 @@
   *
   * Localization strings for the no_NO (Norwegian) locale.
   *
-  * $Id$
+  * $Id: admin.xml,v 1.3 2009/08/15 00:45:15 asmecher Exp $
   -->
 
 <locale name="no_NO" full_name = "Norwegian">
 	<message key="admin.hostedJournals">Nettstedets tidsskrift</message>
-	<message key="admin.settings.journalRedirect">Tidsskrift redirect</message>
+	<message key="admin.settings.journalRedirect">Tidsskriftomdirigering</message>
 	<message key="admin.settings.journalRedirectInstructions">Henvendelser til hovednettstedet vil bli omdirigert til dette tidsskriftet. Dette er nyttig hvis nettstedet for eksempel bare er vert for ett tidsskrift.</message>
-	<message key="admin.settings.noJournalRedirect">Ikke redirect</message>
-	<message key="admin.languages.primaryLocaleInstructions">Dette vil bli default språk for nettstedet og alle de tidsskriftene det er vert for. (OJS ble oversatt til norsk i 2006 av universitetslektor Karl Henrik Flyum, Institutt for lærerutdanning og skoleutvikling, Universitetet i Oslo. Ta kontakt hvis du har spørsmål til oversettelsen, eller vil melde fra om feil.  (k.h.flyum@ils.uio.no)</message>
-	<message key="admin.languages.supportedLocalesInstructions">Velg alle lokalinnstillinger som nettstedet skal støtte. De valgte lokalinnstillingene vil bli tilgjengelig til bruk for alle tidsskrift nettstedet er vert for, og de vil også bli vist i en språkvalgmeny som vil vises på hver nettstedside (men som kan overstyres tidsskriftspesifikke sider). Hvis multiple lokalinnstillinger ikke er valgt, vil språkvekslingsmenyen ikke bli vist og utvidete språkinnstillinger vil ikke være tilgjengelig for tidsskriftet.</message>
+	<message key="admin.settings.noJournalRedirect">Ikke omdiriger</message>
+	<message key="admin.languages.primaryLocaleInstructions">Dette vil bli standard språk for nettstedet og alle de tidsskriftene det er vert for.</message>
+	<message key="admin.languages.supportedLocalesInstructions">Velg alle lokalinnstillinger som nettstedet skal støtte. De valgte lokalinnstillingene vil bli tilgjengelig til bruk for alle tidsskrift nettstedet er vert for, og de vil også bli vist i en språkvalgmeny som vil vises på hver nettstedside (men som kan overstyres på tidsskriftspesifikke sider). Hvis multiple lokalinnstillinger ikke er valgt, vil språkvekslingsmenyen ikke bli vist og utvidete språkinnstillinger vil ikke være tilgjengelig for tidsskriftet.</message>
 	<message key="admin.languages.confirmUninstall">Er du sikker på at du vil avinstallere denne lokalinnstillingen? Dette kan påvirke alle lokale tidsskrift som for tiden bruker lokalinnstillingen.</message>
 	<message key="admin.languages.installNewLocalesInstructions">Velg øvrige lokalinnstillinger å installere støtte for i dette systemet. Lokalinnstillinger må være installert før de kan brukes av lokale tidsskrift. Konsulter OJS-dokumentasjonen for informasjon om å legge til støtte for flere språk.</message>
-	<message key="admin.auth.ojs">OJS Brukerdatabase</message>
-	<message key="admin.auth.enableSyncProfiles">Slå på brukerprofilsynkronisering (hvis støttet av denne validerings-pluginen). Brukerprofilinformasjon vil bli automatisk oppdatert fra den eksterne kilden når en bruker logger inn, og profilendringer (herunder passordendringer) som gjøres innenfor OJS vil bli automatisk oppdatert på den eksterne kilden. Hvis denne valgmuligheten ikke er slått på, vil OJS profilinformasjon bli holdt atskilt fra den eksterne kildens profilinformasjon.</message>
-	<message key="admin.auth.enableSyncPasswords">Slå på endring av brukerpassord (hvis støttet av denne validerings-pluginen). Ved å slå på denne valgmuligheten tillater brukere å endre passordet sitt innenfra OJS og å bruke OJS "lost password"-funksjonen for å lage seg nytt passord. Disse funksjonene vil ikke være tilgjengelig for brukere hos denne valideringskilden, hvis denne valgmuligheten ikke er slått på.</message>
-	<message key="admin.auth.enableCreateUsers">Slå på brukeroppretting (hvis støttet av denne validerings-pluginen). Brukere opprettet innenfor OJS med denne valideringskilden vil automatisk bli lagt til i den eksterne valideringskilden, hvis de ikke allerede finnes der. Hvis denne kilden er default valideringskilde, vil dessuten alle OJS-kontoer opprettet gjennom brukerregistrering også bli lagt til i den eksterne valideringskilden.</message>
-	<message key="admin.systemVersion">OJS versjon</message>
-	<message key="admin.systemConfiguration">OJS konfigurasjon</message>
-	<message key="admin.systemConfigurationDescription"><![CDATA[OJS konfigurasjonsinnstillinger fra <tt>config.inc.php</tt>.]]></message>
+	<message key="admin.auth.ojs">OJS brukerdatabase</message>
+	<message key="admin.auth.enableSyncProfiles">Slå på brukerprofilsynkronisering (hvis støttet av denne programutvidelse for autentisering). Brukerprofilinformasjon vil bli automatisk oppdatert fra den eksterne kilden når en bruker logger inn, og profilendringer (herunder passordendringer) som gjøres innenfor OJS vil bli automatisk oppdatert på den eksterne kilden. Hvis denne valgmuligheten ikke er slått på, vil OJS profilinformasjon bli holdt atskilt fra den eksterne kildens profilinformasjon.</message>
+	<message key="admin.auth.enableSyncPasswords">Slå på endring av brukerpassord (hvis støttet av denne programutvidelsen for autentisering). Ved å slå på denne valgmuligheten tillates brukere å endre passordet sitt innenfra OJS og å bruke OJS' "mistet passord"-funksjon for å lage seg nytt passord. Disse funksjonene vil ikke være tilgjengelig for brukere hos denne autentiseringskilden, hvis denne valgmuligheten ikke er slått på.</message>
+	<message key="admin.auth.enableCreateUsers">Slå på brukeroppretting (hvis støttet av denne programutvidelsen for autentisering). Brukere opprettet innenfor OJS med denne autentiseringskilden vil automatisk bli lagt til i den eksterne autentiseringskilden, hvis de ikke allerede finnes der. Hvis denne kilden er default valideringskilde, vil dessuten alle OJS-kontoer opprettet gjennom brukerregistrering også bli lagt til i den eksterne valideringskilden.</message>
+	<message key="admin.systemVersion">OJS-versjon</message>
+	<message key="admin.systemConfiguration">OJS-konfigurasjon</message>
+	<message key="admin.systemConfigurationDescription"><![CDATA[OJS-konfigurasjonsinnstillinger fra <tt>config.inc.php</tt>.]]></message>
 	<message key="admin.journals.journalSettings">Tidsskriftinnstillinger</message>
 	<message key="admin.journals.noneCreated">Ingen tidsskrift er opprettet.</message>
 	<message key="admin.journals.confirmDelete">Er du sikker på at du vil slette dette tidsskriftet for alltid, også alt innhold?</message>
 	<message key="admin.journals.create">Opprett tidsskrift</message>
 	<message key="admin.journals.createInstructions">Du vil automatisk bli vervet som redaksjonsleder for dette tidsskriftet. Etter å ha opprettet et nytt tidsskrift, må du logge inn som redaksjonsleder for å fortsette med  oppsett og brukerverving.</message>
-	<message key="admin.journals.urlWillBe">Tidsskriftets URL vil bli {$sampleUrl}</message>
+	<message key="admin.journals.urlWillBe">Dette bør være ett enkelt kort ord eller akronym som identifiserer tidsskriftet. Tidsskriftets URL vil bli {$sampleUrl}</message>
 	<message key="admin.journals.form.titleRequired">En tittel er påkrevet.</message>
 	<message key="admin.journals.form.pathRequired">En filsti er påkrevet.</message>
 	<message key="admin.journals.form.pathAlphaNumeric">Filstien kan bare inneholde alfanumeriske tegn, understrek og bindestrek, og må begynne og slutte med et alfanumerisk tegn.</message>
 	<message key="admin.journals.form.pathExists">Den valgte filstien er allerede tatt i bruk av et annet tidsskrift.</message>
-	<message key="admin.journals.enableJournalInstructions">Tillat at dette tidsskriftetvises offentlig på nettstedet</message>
+	<message key="admin.journals.enableJournalInstructions">Tillat at dette tidsskriftet vises offentlig på nettstedet</message>
 	<message key="admin.journals.journalDescription">Tidsskriftbeskrivelse</message>
-	<message key="admin.journals.importOJS1">Importer fra OJS 1</message>
-	<message key="admin.journals.importOJS1.editMigratedJournal">Rediger migrert Tidsskrift</message>
-	<message key="admin.journals.importOJS1.conflict.desc">Noen brukerkontoer inneholdt motstridende informasjon. OJS 1.x tillater multiple brukerkontoer å dele samme e-postadresse, men det gjør ikke OJS 2.x. I listen nedenfor har den andre kontoen på listen hatt en midlertidig e-postkonto tilknyttet. Dette må rettes for hånd, enten ved å tilordne en annen e-postkonto, eller ved å slå sammen kontoer.</message>
-	<message key="admin.journals.importOJS1.conflict">{$firstUsername} ({$firstName}) og {$secondUsername} ({$secondName})</message>
-	<message key="admin.journals.importOJS1Instructions">Konsulter UPGRADE dokumentet som fulgte med OJS for detaljert informasjon om migrering av data fra OJS 1 til OJS 2.</message>
 	<message key="admin.journal.pathImportInstructions">Eksisterende tidsskriftfilsti, eller filsti som skal opprettes (for eks. "ojs").</message>
-	<message key="admin.journal.importPath">OJS 1 filsti</message>
-	<message key="admin.journal.importPathInstructions">Fullstendig lokal filsystem filsti til OJS 1 installasjonen (for eks. "/var/www/ojs").</message>
 	<message key="admin.journals.importSubscriptions">Importer abonnement</message>
-	<message key="admin.journals.transcode">Transcode artikkelens metadata fra ISO8859-1</message>
-	<message key="admin.journals.form.importPathRequired">Import filsti er påkrevet.</message>
+	<message key="admin.journals.transcode">Artikkelens Transcode-metadata fra ISO8859-1</message>
+	<message key="admin.journals.form.importPathRequired">Filsti for import er påkrevet.</message>
 	<message key="admin.journals.importErrors">Importeringen var ikke vellykket</message>
 	<message key="admin.languages.downloadLocales">Last ned oversatte lokalfiler</message>
 	<message key="admin.languages.downloadFailed">Noe gikk galt med nedlastingen av oversatte lokalfiler. Se feilmeldingen(e) nedenfor.</message>
@@ -58,11 +51,7 @@
 	<message key="admin.languages.download">Last ned oversatte lokalfiler</message>
 	<message key="admin.languages.download.cannotOpen">Språkdeskriptoren fra PKP-nettstedet lar seg ikke åpne.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Kan ikke legge til de oversatte lokalfilene i registerfilen for lokalfiler, som vanligvis heter "registry/locales.xml".</message>
-	<message key="admin.journals.importOJS1.success">Importen av tidsskriftet var vellykket.</message>
-	<message key="admin.journals.importOJS1.redirect.desc">To redirect OJS 1 URLs to OJS 2 URLs, create the following PHP files using the file contents below. The corresponding files can then be placed in the OJS 1 filesystem path, or, for single journal installations, in the OJS 2 filesystem path.</message>
-	<message key="admin.journals.importOJS1.redirect.ojs1root">Place in the old OJS 1 filesystem path (i.e., /var/www/ojs1).</message>
-	<message key="admin.journals.importOJS1.redirect.ojs1orojs2root">Place in the old OJS 1 filesystem path (i.e., /var/www/ojs1), or, for single journal installations, in the new OJS 2 filesystem path (i.e., /var/www/ojs2).</message>
-	<message key="admin.journals.redirect">Generate code to map OJS 1 URLs to OJS 2 URLs</message>
+	<message key="admin.journals.redirect">Generer kode for å oversette OJS 1 URLs to OJS 2 URLs</message>
 	<message key="admin.mergeUsers">Slå sammen brukere</message>
 	<message key="admin.mergeUsers.mergeUser">Slå sammen bruker</message>
 	<message key="admin.mergeUsers.into.description">Velg en bruker som du vil overføre den forrige brukerens oppgaver til: forfatterskap, redaktøroppgaver m.m.</message>
@@ -70,4 +59,5 @@
 	<message key="admin.mergeUsers.allUsers">Alle vervete brukere</message>
 	<message key="admin.mergeUsers.confirm">Er du sikker på at du vil slå sammen brukerkontoen med navnet "{$oldUsername}" med kontoen med brukernavnet "{$newUsername}"?  Etterpå finnes ikke brukerkontoen med navnet "{$oldUsername}" lenger. Denne handlingen kan ikke omgjøres.</message>
 	<message key="admin.mergerUsers.noneEnrolled">Ingen vervete brukere</message>
+	<message key="admin.locale.maybeIncomplete">Merkede lokaliseringsfiler kan være ukomplette.</message>
 </locale>

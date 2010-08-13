@@ -9,11 +9,11 @@
   *
   * Localization strings for the no_NO (Norwegian) locale.
   *
-  * $Id$
+  * $Id: locale.xml,v 1.4 2009/08/17 23:38:36 asmecher Exp $
   -->
  
 <locale name="no_NO" full_name="Norwegian">
-	<message key="plugins.importexport.pubmed.displayName">PubMed XML-eksport plugin</message>
+	<message key="plugins.importexport.pubmed.displayName">Programutvidelse for PubMed XML-eksport</message>
 	<message key="plugins.importexport.pubmed.description">Eksporterer artikkelmetadata i PubMed XML-format for indeksering i MEDLINE.</message>
 	
 	<message key="plugins.importexport.pubmed.export">Eksporter data</message>

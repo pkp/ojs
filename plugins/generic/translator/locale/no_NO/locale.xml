@@ -9,13 +9,13 @@
   *
   * Localization strings for the no_NO (Norwegian) locale.
   *
-  * $Id$
+  * $Id: locale.xml,v 1.4 2009/08/17 23:38:34 asmecher Exp $
   -->
  
 <locale name="no_NO" full_name="Norwegian">
-	<message key="plugins.generic.translator.name">Plugin for oversettelse</message>
-	<message key="plugins.generic.translator.description">Denne plugin'en gjør det mulig å vedlikeholde oversettelsesfilene i webgrensesnittet.</message>
-	<message key="plugins.generic.translator.longdescription"><![CDATA[Dette området gjør det mulig for nettstedets administrator å lage, endre og korrigere oversettelsen av OJS. Denne funksjonen gjelder hele nettstedet, og bør derfor ikke brukes for å tilpasse oversettelsen til ett bestemt OJS-tidsskrift. Hvis du lager eller korrigerer en oversettelse ber vi om at du vurderer å avgi den til <I>Public Knowledge Project</I> for distribusjon sammen med fremtidige versjoner av programvaren. (Spørsmål om denne norske oversettelsen kan rettes til Karl Henrik Flyum; k.h.flyum@ils.uio.no)]]></message>
+	<message key="plugins.generic.translator.name">Programutvidelse for oversettelse</message>
+	<message key="plugins.generic.translator.description">Denne programutvidelsen gjør det mulig å vedlikeholde oversettelsesfilene i webgrensesnittet.</message>
+	<message key="plugins.generic.translator.longdescription"><![CDATA[Dette området gjør det mulig for nettstedets administrator å lage, endre og korrigere oversettelsen av OJS. Denne funksjonen gjelder hele nettstedet, og bør derfor ikke brukes for å tilpasse oversettelsen til ett bestemt OJS-tidsskrift. Hvis du lager eller korrigerer en oversettelse ber vi om at du vurderer å avgi den til <I>Public Knowledge Project</I> for distribusjon sammen med fremtidige versjoner av programvaren.]]></message>
 	<message key="plugins.generic.translator.localeDescription">På denne siden er alle komponentene i en OJS-oversettelse listet opp, slik at oversetteren får mulighet til å redigere hver enkelt komponent. En fullstendig oversettelse skal omfatte oversettelser av alle komponentene.</message>
 
 	<message key="plugins.generic.translator.localeName">Lokalfilsettets navn</message>
@@ -30,6 +30,7 @@
 
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.title">Manglende nøkler</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.title">Ekstranøkler</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.title">Mistenkelige nøkkellengder</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.title">Avvikende parameterlister</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.title">Manglende lokalfiler</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.title">Manglende e-poster</message>
@@ -38,6 +39,10 @@
 
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.message">Nøkkelen "{$key}" mangler i "{$filename}". Den engelske utgaven blir oppgitt som standard.</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.message">Nøkkelen "{$key}" brukes ikke lenger, og kan fjernes fra "{$filename}".</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.message"><![CDATA[Lokalnøkkelen "{$key}" i "{$filename}" er svært mye kortere eller lengre enn standardverdien:<ul>
+		<li>{$value} ({$locale})</li>
+		<li>{$reference} ({$referenceLocale})</li>
+	</ul>]]></message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.message">Lokalnøkkelen  "{$key}" i "{$filename}" bruker parametrene på en annen måte enn i standardversjonen. Vennligst kontrollér at den inneholder alle relevante parametre. Parametrene som ikke stemmer er:</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.message">Lokalfilen "{$filename}" mangler, eller er uleselig.</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.message">E-postmeldingen "{$key}" mangler i oversettelsen.</message>
@@ -47,7 +52,7 @@
 	<message key="plugins.generic.translator.locale">{$locale} Lokalfilsett</message>
 	<message key="plugins.generic.translator.localeFiles">Lokalfilsett-filer</message>
 	<message key="plugins.generic.translator.miscFiles">Diverse filer</message>
-	<message key="plugins.generic.translator.emails">E-post maler</message>
+	<message key="plugins.generic.translator.emails">E-postmaler</message>
 	<message key="plugins.generic.translator.file.filename">Filnavn</message>
 	<message key="plugins.generic.translator.file.edit">Redigerer {$filename}</message>
 	<message key="plugins.generic.translator.email.edit">Redigerer {$emailKey}</message>
@@ -68,4 +73,9 @@
 	<message key="plugins.generic.translator.deleteKey">Slett denne nøkkelen</message>
 	<message key="plugins.generic.translator.deleteEmail">Slett denne e-postmalen</message>
 	<message key="plugins.generic.translator.saveBeforeContinuing">Pass på å lagre endringene du har gjort for denne siden før du går videre, ellers forsvinner de. Vil du gå videre? I så fall mister du alle endringer du ikke har lagret.</message>
+	<message key="plugins.generic.translator.enabled">Oversettelses-programutvidelsen er slått på.</message>
+	<message key="plugins.generic.translator.disabled">Oversettelses-programutvidelsen er slått av.</message>
+	<message key="plugins.generic.translator.tarMissing">Eksportfunksjonen i denne programutvidelsen har blitt deaktivert fordi det tar-programmet som er angitt ikke finnes på dette systemet. Forsikre deg om at tar-programmet er installert og konfigurer så stien til tar-programmet i config.inc.phps [cli] seksjon.</message>
+	<message key="plugins.generic.translator.fileNotWriteable">Serveren kan ikke skrive til denne lokaliseringsfilen. Ingen endringer du gjør vil bli lagret.</message>
+	<message key="plugins.generic.translator.filesNotWriteable">Serveren kan ikke skrive til disse lokaliseringsfilene. Ingen endringer du gjør vil bli lagret.</message>
 </locale>

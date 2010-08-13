@@ -9,21 +9,23 @@
   *
   * Localization strings for the no_NO (Norwegian) locale.
   *
-  * $Id$
+  * $Id: locale.xml,v 1.4 2009/08/17 23:38:32 asmecher Exp $
   -->
  
 <locale name="no_NO" full_name="Norwegian">
-	<message key="plugins.generic.announcementfeed.displayName">Plugin for feed av 'Kunngjøringer'.</message>
-	<message key="plugins.generic.announcementfeed.description">Denne plugin'en produserer RSS/Atom feed av tidsskriftets 'Kunngjøringer'.</message>
+	<message key="plugins.generic.announcementfeed.displayName">Programutvidelse for feed av Kunngjøringer.</message>
+	<message key="plugins.generic.announcementfeed.description">Denne programutvidelsen produserer RSS/Atom feed av tidsskriftets Kunngjøringer.</message>
 
 	<message key="plugins.generic.announcementfeed.settings">Innstillinger</message>
 	<message key="plugins.generic.announcementfeed.settings.all">Vis feed-lenker på alle tidsskriftsider.</message>
-	<message key="plugins.generic.announcementfeed.settings.homepage">Vis feed-lenker bare på hjemmesiden og 'Kunngjørings'-siden.</message>
-	<message key="plugins.generic.announcementfeed.settings.announcement">Vis feed-lenker bare på 'Kunngjørings'-siden.</message>
-	<message key="plugins.generic.announcementfeed.settings.recentAnnouncements1">Begrens feed'en til</message>
+	<message key="plugins.generic.announcementfeed.settings.homepage">Vis feed-lenker bare på hjemmesiden og kunngjøringssiden.</message>
+	<message key="plugins.generic.announcementfeed.settings.announcement">Vis feed-lenker bare på kunngjøringssiden.</message>
+	<message key="plugins.generic.announcementfeed.settings.recentAnnouncements1">Begrens feeden til</message>
 	<message key="plugins.generic.announcementfeed.settings.recentAnnouncements2">nyeste kunngjøringer.</message>
 	<message key="plugins.generic.announcementfeed.settings.recentItemsRequired">Vennligst oppgi et tall for hvor mange av de nyeste kunngjøringene som skal vises.</message>
 	<message key="plugins.generic.announcementfeed.atom.altText">Atom logo</message>
 	<message key="plugins.generic.announcementfeed.rss1.altText">RSS1 logo</message>
 	<message key="plugins.generic.announcementfeed.rss2.altText">RSS2 logo</message>
+	<message key="plugins.generic.announcementfeed.enabled">Programutvidelsen for kunngjøringer har blitt slått på.</message>
+	<message key="plugins.generic.announcementfeed.disabled">Programutvidelsen for kunngjøringer har blitt slått av.</message>
 </locale>

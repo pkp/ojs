@@ -9,12 +9,12 @@
   *
   * Localization strings for this citation plugin in no_NO.
   *
-  * $Id$
+  * $Id: locale.xml,v 1.4 2009/08/17 23:38:30 asmecher Exp $
   -->
  
 <locale name="no_NO" full_name="Norwegian">
-	<message key="plugins.citationFormats.apa.displayName">APA referanseformat-plugin</message>
+	<message key="plugins.citationFormats.apa.displayName">Programutvidelse for APA referanseformat</message>
 	<message key="plugins.citationFormats.apa.citationFormatName">APA</message>
-	<message key="plugins.citationFormats.apa.description">Denne plugin'en implementerer referanseformatet fra APA.</message>
-	<message key="plugins.citationFormats.apa.retrieved"><![CDATA[Nedlastet fra <a href="{$url}" target="_new">{$url}</a>]]></message>
+	<message key="plugins.citationFormats.apa.description">Denne programutvidelsen implementerer referanseformatet fra APA.</message>
+	<message key="plugins.citationFormats.apa.retrieved"><![CDATA[Nedlastet {$retrievedDate}, fra <a href="{$url}" target="_new">{$url}</a>]]></message>
 </locale>

@@ -8,14 +8,14 @@
   *
   * Localized email templates XML file.
   *
-  * $Id$
+  * $Id: emailTemplates.xml,v 1.3 2009/09/04 15:25:47 asmecher Exp $
   -->
 <email_texts locale="no_NO">
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>Fornying av passord bekreftes</subject>
 		<body>Vi har mottatt en forespørsel om å få fornyet passordet ditt til nettstedet for {$siteTitle}.
 
-Hvis du ikke har sendt oss en slik forespørsel, kan du beholde det gamle passordet ditt ved å ikke følge denne instruksen: Hvis du ønsker nytt passord, klikk på lenken nedenfor.
+Hvis du ikke har sendt oss en slik forespørsel, kan du beholde det gamle passordet ditt ved å ignorere denne e-posten. Hvis du ønsker nytt passord, klikk på lenken nedenfor.
 
 Forny passordet: {$url}
 
@@ -47,7 +47,7 @@ Vennlig hilsen,
 		<subject>Ny utgave</subject>
 		<body>Til registrerte lesere:
 
-{$journalName} har nettopp publisert en ny utgave på nettstedet {$journalUrl}. Her kan du lese Innholdfortegnelsen, før du går videre til nettstedet for å se nærmere på innholdet.
+{$journalName} har nettopp publisert en ny utgave på nettstedet {$journalUrl}. Her kan du lese innholdsfortegnelsen, før du går videre til nettstedet for å se nærmere på innholdet.
 
 Takk for den interessen du viser  for arbeidet vårt,
 {$editorialContactSignature}</body>
@@ -364,7 +364,7 @@ Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har 
 
 Jeg har nå gått igjennom de revisjonene manusredaktøren har bedt om for mitt manuskript "{$articleTitle}" for {$journalName}, og det er nå klart for siste runde manusredigering før layoutredigeringen settes i gang.
 
-Takk for at deres bidrag til arbeidet mitt,
+Takk for deres bidrag til arbeidet mitt,
 {$authorName}</body>
 		<description>Denne e-posten sendes av Forfatteren til Seksjonsredaktøren for å varsle om at Forfatterens manusredigering er fullført.</description>
 	</email_text>
@@ -461,7 +461,7 @@ Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har 
 		<subject>Sluttkorrektur gjennomført (Forfatter)</subject>
 		<body>{$editorialContactName}:
 
-Jeg har nå gjennomført min sluttkorrektur av mitt manuskript "{$articleTitle}" for {$journalName}. Manuskriptfilen er nå klar for endelig korrekturlesing av Korrekturleseren og Layoutredaktøren.
+Jeg har nå gjennomført min sluttkorrektur av mitt manuskript "{$articleTitle}" for {$journalName}. Manuskriptfilen er nå klar for endelig korrekturlesing av korrekturleseren og layoutredaktøren.
 
 {$authorName}</body>
 		<description>Denne e-posten fra Forfatteren til Korrekturleseren og Redaktøren varsler dem om at Forfatteren har gjennomført sin korrekturlesing. De vil finne detaljene som kommentarer fra forfatteren til manuskriptfilen.</description>
@@ -472,7 +472,7 @@ Jeg har nå gjennomført min sluttkorrektur av mitt manuskript "{$articleTitle}"
 
 Takk for at du har gjennomført sluttkorrektur av ditt manuskript "{$articleTitle}" før publisering i {$journalName}. Vi ser nå fram til å publisere arbeidet ditt om ikke lenge.
 
-Hvis du har krysset av på din brukerside for å få e-post varsel når ny utgave blir publisert, vil du få Innholdsfortegnelsen til nye utgaver av tidsskriftet så snart de blir utgitt. Hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg.
+Hvis du har krysset av på din brukerside for å få e-post varsel når ny utgave blir publisert, vil du få innholdsfortegnelsen til nye utgaver av tidsskriftet så snart de blir utgitt. Hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg.
 
 {$editorialContactSignature}</body>
 		<description>Denne e-posten fra Seksjonsredaktøren til Forfatteren bekrefter at forfatteren har gjennomført sin sluttkorrektur, og takker for innsatsen.</description>
@@ -527,7 +527,7 @@ Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har 
 		<subject>Korrektur ferdigstilt (Layoutredaktør)</subject>
 		<body>{$editorialContactName}:
 
-Manuskriptfilen til manuskriptet "{$articleTitle}" er nå ferdigstilt etter korrektur for {$journalName}. Manuskriptfilen er med dette klar til publisering.
+Sidekorrekturen til manuskriptet "{$articleTitle}" er nå ferdigstilt etter korrektur for {$journalName}. Manuskriptfilen er med dette klar til publisering.
 
 {$layoutEditorName}</body>
 		<description>Denne e-posten fra Layoutredaktøren til Seksjonsredaktøren varsler om at de siste korrigeringene i manuskriptfilen er gjennomført, og at den dermed er klar for publisering.</description>
@@ -536,7 +536,7 @@ Manuskriptfilen til manuskriptet "{$articleTitle}" er nå ferdigstilt etter korr
 		<subject>Bekrefter ferdigstilt korrektur (Layoutredaktør)</subject>
 		<body>{$layoutEditorName}:
 
-Takk for at du har ferdigstilt maniskriptfilen til manuskriptet "{$articleTitle}" for publisering i {$journalName}. Med dette arbeidet har du gitt et viktig bidrag til publiseringsarbeidet vårt: takk for innsatsen.
+Takk for at du har ferdigstilt sidekorrekturen til manuskriptet "{$articleTitle}" for publisering i {$journalName}. Med dette arbeidet har du gitt et viktig bidrag til publiseringsarbeidet vårt: takk for innsatsen.
 
 {$editorialContactSignature}</body>
 		<description>Denne e-posten fra Seksjonsredaktøren til Layoutredaktøren bekrefter at manuskriptfilen er ferdigstilt for publisering, og takker for interessen.</description>
@@ -584,7 +584,7 @@ Abonnementet ditt på {$journalName} utløper snart.
 {$subscriptionType}
 Utløpsdato: {$expiryDate}
 
-Hvis du fortsatt vil ha tilgang til dette tidsskriftet, må jeg be deg om å gå til tidsskriftets nettsted for å fornye abonnementet. Du logger inn med brukernavnet ditt: "{$username}".
+Hvis du fortsatt vil ha tilgang til dette tidsskriftet, må du gå til tidsskriftets nettsted for å fornye abonnementet. Du logger inn med brukernavnet ditt: "{$username}".
 
 Hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg.
 
@@ -600,7 +600,7 @@ Abonnementet ditt på {$journalName} er utløpt.
 {$subscriptionType}
 Utløpsdato: {$expiryDate}
 
-Hvis du vil fornye abonnementet ditt, må jeg be deg om å gå til tidsskriftets nettsted. Du logger inn med brukernavnet ditt: "{$username}".
+Hvis du vil fornye abonnementet ditt, må du gå til tidsskriftets nettsted. Du logger inn med brukernavnet ditt: "{$username}".
 
 Hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg.
 
@@ -617,7 +617,7 @@ Dette er det siste varselet du vil motta fra oss om dette.
 {$subscriptionType}
 Utløpsdato: {$expiryDate}
 
-Hvis du vil fornye abonnementet ditt, må jeg be deg om å gå til tidsskriftets nettsted. Du logger inn med brukernavnet ditt: "{$username}".
+Hvis du vil fornye abonnementet ditt, må du gå til tidsskriftets nettsted. Du logger inn med brukernavnet ditt: "{$username}".
 
 Hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg.
 
@@ -640,7 +640,7 @@ Takk,
 		<subject>Registrering som fagkonsulent for {$journalName}</subject>
 		<body>På grunn av ditt faglige omdømme har vi tillatt oss å registrere navnet ditt databasen over potensielle fagkonsulenter for {$journalName}. Dette innebærer ingen form for forpliktelse fra din side, men gir oss en enkel mulighet til å henvende oss til deg hvis vi får manuskript vi tror du vil være interessert i være fagkonsulent for. Hvis du blir bedt om å påta deg et slikt oppdrag, vil du få mulighet til å se tittel og sammendrag for det aktuelle manuskriptet gjennom nettstedet vårt, og du vil alltid stå fritt til å akseptere eller avslå oppdraget. Du kan dessuten når som helst be om at navnet ditt blir fjernet fra databasen vår over potensielle fagkonsulenter.
 
-Vi gir deg her et brukernavn og et passord til nettstedet vårt, som kan brukes til alt alminnelig samarbeid med {$journalName}. der kan du også endre profilopplysningene dine; som for eksempel institusjonstilknytning og faginteresser.
+Vi gir deg her et brukernavn og et passord til nettstedet vårt, som kan brukes til alt alminnelig samarbeid med {$journalName}. Der kan du også endre profilopplysningene dine; som for eksempel institusjonstilknytning og faginteresser.
 
 Brukernavn: {$username}
 Passord: {$password}
@@ -648,5 +648,176 @@ Passord: {$password}
 På forhånd takk,
 {$principalContactSignature}</body>
 		<description>Denne e-posten sendes til nyregistrerte fagkonsulenter for å ønske dem velkommen til systemet, og gi dem tilgang til deres brukernavn og passord.</description>
+	</email_text>
+	<email_text key="NOTIFICATION">
+		<subject>Ny melding fra {$siteTitle}</subject>
+		<body>Du har fått en ny melding fra {$siteTitle}:
+
+{$notificationContents}
+
+Lenke: {$url}
+
+{$principalContactSignature}</body>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST">
+		<subject>Ny melding fra {$siteTitle}</subject>
+		<body>Du har en ny melding fra {$siteTitle}:
+--
+{$notificationContents}
+
+Lenke: {$url}
+--
+
+Om du ikke lenger ønsker å motte slike meldinger per e-post, gå til  {$unsubscribeLink} og oppgi din e-postadresse og passord. 
+
+{$principalContactSignature}</body>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
+		<subject>Velkommen til e-postlisten til {$siteTitle}!</subject>
+		<body>Du har bedt om å få meldinger fra {$siteTitle}.
+			
+Vennligst klikke på denne lenken for å bekrefte ditt ønske og legge din e-postadresse til e-postlisten: {$confirmLink}
+
+Om du ikke lenger ønsker å få meldinger via e-post, gå til {$unsubscribeLink} og oppgi din e-postadresse og passord.
+
+Ditt passord for å slå av e-postmeldinger er: {$password}
+
+{$principalContactSignature}</body>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST_PASSWORD">
+		<subject>Din e-postmeldingsinformasjon vedrørende {$siteTitle}</subject>
+		<body>Ditt nye passord for å stoppe e-postmeldinger er: {$password}
+
+Om du ikke lenger ønsker å motta e-postmeldinger, gå til {$unsubscribeLink} og oppgi din e-postadresse og passord.
+
+{$principalContactSignature}</body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_ACCEPT">
+		<subject>Redaktørens beslutning</subject>
+		<body>{$authorName}:
+
+Vi har tatt en beslutning med hensyn til ditt innsendte manus til {$journalTitle}, "{$articleTitle}".
+
+Vår beslutning er:
+
+{$editorialContactSignature}</body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_RESUBMIT">
+		<subject>Redaktørens beslutning</subject>
+		<body>{$authorName}:
+
+Vi har tatt en beslutning med hensyn til ditt innsendte manus til {$journalTitle}, "{$articleTitle}".
+
+Vår beslutning er:
+
+{$editorialContactSignature}</body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_REVISIONS">
+		<subject>Redaktørens beslutning</subject>
+		<body>{$authorName}:
+
+Vi har tatt en beslutning vedrørende ditt insendte manuskript til {$journalTitle}, "{$articleTitle}".
+
+Vår beslutning er:
+
+{$editorialContactSignature}</body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_DECLINE">
+		<subject>Redaktørens beslutning</subject>
+		<body>{$authorName}:
+
+Vi har tatt en beslutning vedrørende ditt insendte manuskript til {$journalTitle}, "{$articleTitle}".
+
+Vår beslutning er:
+
+{$editorialContactSignature}</body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
+		<subject>Abonnementskjøp: Individuelt abonnement</subject>
+		<body>Et individuelt abonnement på {$journalName} har blitt kjøpt online. Detaljer om kjøpet:
+
+Abonnementstype:
+{$subscriptionType}
+
+Bruker:
+{$userDetails}
+
+Medlemskapsinformasjon (om oppgitt):
+{$membership}
+
+For å se eller endre dette abonnementet, bruk følgende URL.
+
+Abonnements-URL: {$subscriptionUrl}</body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
+		<subject>Abonnementskjøp: Institusjonelt abonnement</subject>
+		<body>Et institusjonelt abonnement på {$journalName} har blitt kjøpt online. Detaljer om kjøpet nedenfor. For å aktivisere abonnementet, bruk den angitte abonnements-URLen og sett abonnementsstatus til «Aktiv».
+
+Abonnementstype:
+{$subscriptionType}
+
+Institusjon:
+{$institutionName}
+{$institutionMailingAddress}
+
+Domene (om angitt):
+{$domain}
+
+IP-område (om angitt):
+{$ipRanges}
+
+Kontaktperson:
+{$userDetails}
+
+Medlemskapsinformasjon (om oppgitt):
+{$membership}
+
+For å se eller endre dette abonnementet, bruk følgende URL.
+
+Abonnements-URL: {$subscriptionUrl}</body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INDL">
+		<subject>Abonnementsfornyelse: Individuelt abonnement</subject>
+		<body>Et individuelt abonnement på {$journalName} har blitt fornyet online. For mer informasjon se nedenfor.
+
+Abonnementstype:
+{$subscriptionType}
+
+Bruker:
+{$userDetails}
+
+Medlemskapsinformasjon (om oppgitt):
+{$membership}
+
+For å se eller endre dette abonnementet, bruk nedenstående URL.
+
+Abonnements-URL: {$subscriptionUrl}</body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INSTL">
+		<subject>Abonnementsfornyelse: Institusjonelt abonnement</subject>
+		<body>Et institusjonelt abonnement på {$journalName} har blitt fornyet online. For mer informasjon se nedenfor.
+
+Abonnementstype:
+{$subscriptionType}
+
+Institusjon:
+{$institutionName}
+{$institutionMailingAddress}
+
+Domene (om angitt):
+{$domain}
+
+IP-område (om angitt):
+{$ipRanges}
+
+Kontaktperson:
+{$userDetails}
+
+Medlemskapsinformasjon (om angitt):
+{$membership}
+
+For å se eller endre dette abonnementet, bruk nedenstående URL.
+
+Abonnements-URL: {$subscriptionUrl}</body>
 	</email_text>
 </email_texts>

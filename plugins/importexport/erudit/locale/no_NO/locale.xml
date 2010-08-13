@@ -9,12 +9,12 @@
   *
   * Localization strings for the no_NO (Norwegian) locale.
   *
-  * $Id$
+  * $Id: locale.xml,v 1.4 2009/08/17 23:38:35 asmecher Exp $
   -->
  
 <locale name="no_NO" full_name="Norwegian">
-	<message key="plugins.importexport.erudit.displayName">Erudit Article Export plugin</message>
-	<message key="plugins.importexport.erudit.description">Eksporterer artikler ved hjelp av det engelske Erudit DTD</message>
+	<message key="plugins.importexport.erudit.displayName">Programutvidelse for Erudit artikkeleksport</message>
+	<message key="plugins.importexport.erudit.description">Eksporterer artikler ved hjelp av den engelske Erudit DTD</message>
 
 	<message key="plugins.importexport.erudit.cliUsage">Bruk: {$scriptName} {$pluginName} [xmlFileName] [journalPath] [articleId] [galleyLabel]</message>
 	<message key="plugins.importexport.erudit.export">Eksporter data</message>

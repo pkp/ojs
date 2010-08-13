@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * emailTemplates.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  *
+  * $Id: emailTemplates.xml,v 1.0 9:43 PM 8/11/2010 kosson Exp $
+  -->
+<email_texts locale="ro_RO">
+	<email_text key="PAYPAL_INVESTIGATE_PAYMENT">
+		<subject>Activitate PayPal anormală</subject>
+		<body>Open Journal Systems a sesizat o activitate anormală privind suportul pentru plăți prin PayPal pentru revista {$journalName}. Această activitate necesită investigații sau intervenția manuală.
+                       
+Acest email a fost generat de modulul pentru plăți prin PayPal al Open Journal Systems.
+
+Informații postfactum pentru solicitarea:
+{$postInfo}
+
+Informații suplimentare (dacă sunt oferite):
+{$additionalInfo}
+
+Variabile de server:
+{$serverVars}
+</body>
+		<description>Acest șablon de email este utilizat pentru a înștiința contactul primar al unei reviste asupra sesizării de către modulul pentru plăți prin PayPal a unor activități anormale sau asupra unei activități care necesită intervenția manuală.</description>
+	</email_text>
+</email_texts>

@@ -9,15 +9,16 @@
   *
   * Localization strings for the no_NO (Norwegian) locale.
   *
-  * $Id$
+  * $Id: locale.xml,v 1.4 2009/08/17 23:38:30 asmecher Exp $
   -->
  
 <locale name="no_NO" full_name="Norwegian">
 	<message key="plugins.block.subscription.displayName">Abonnementsblokk</message>
-	<message key="plugins.block.subscription.description">Denne plugin'en oppretter Abonnementsinformasjon i sidespalten.</message>
+	<message key="plugins.block.subscription.description">Denne programutvidelsen oppretter abonnementsinformasjon i sidespalten.</message>
 	<message key="plugins.block.subscription.blockTitle">Abonnement</message>
 	<message key="plugins.block.subscription.expires">Utløper</message>
 	<message key="plugins.block.subscription.providedBy">Tilgangen gis av:</message>
-	<message key="plugins.block.subscription.providedByInstitution">Tilgangen gis av din institusjon</message>
 	<message key="plugins.block.subscription.comingFromIP">Kommer fra IP:</message>
+	<message key="plugins.block.subscription.loginToVerifySubscription">Logg inn for å bekrefte abonnementet</message>
+	<message key="plugins.block.subscription.about">Abonnementer</message>
 </locale>

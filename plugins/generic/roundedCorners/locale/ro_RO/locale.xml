@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2010 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ro_RO (Română) locale.
+  * KOSSON FECIT
+  * $Id: locale.xml,v 1.2 2008/06/13 20:16:46 asmecher Exp $
+  -->
+ 
+<locale name="ro_RO" full_name="Română">
+	<message key="plugins.generic.roundedcorners.displayName">Colţuri rotunjite</message>
+	<message key="plugins.generic.roundedcorners.description">Acest modul pune un fundal pe fiecare bloc lateral reuşind rotunjirea colţurilor. Se pot face modificări în ceea ce priveşte culorile folosite prin editarea stylesheetului CSS existent în modul.</message>
+	<message key="plugins.generic.roundedcorners.enabled">Modulul colțurilor rotunkite a fost activat.</message>
+	<message key="plugins.generic.roundedcorners.disabled">Modulul colțurilor rotunkite a fost dezactivat.</message>
+
+</locale>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2010 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ro_RO (Română) locale.
+  * KOSSON FECIT
+  * Contributed by Dan Galewsky, University of Texas
+  *
+  * $Id: locale.xml,v 1.0 8:41 PM 8/11/2010 kosson Exp $
+  -->
+ 
+<locale name="ro_RO" full_name="Română">
+	<message key="plugins.implicitAuth.shibboleth.displayName">ShibAuthPlugin</message>
+	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Acest modul se aplică în tot siteul şi este activat din fişierul de configurare al OJS.</message>
+</locale>

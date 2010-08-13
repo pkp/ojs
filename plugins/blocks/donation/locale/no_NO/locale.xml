@@ -9,10 +9,10 @@
   *
   * Localization strings for the no_NO (Norwegian) locale.
   *
-  * $Id$
+  * $Id: locale.xml,v 1.4 2009/08/17 23:38:29 asmecher Exp $
   -->
  
 <locale name="no_NO" full_name="Norwegian">
 	<message key="plugins.block.donation.displayName">Donasjonsblokk</message>
-	<message key="plugins.block.donation.description">Denne plugin'en oppretter en lenke for Donasjoner i sidespalten.</message>
+	<message key="plugins.block.donation.description">Denne programutvidelsen oppretter en lenke for donasjoner i sidespalten.</message>
 </locale>

@@ -9,11 +9,11 @@
   *
   * Localization strings for this citation plugin in no_NO.
   *
-  * $Id$
+  * $Id: locale.xml,v 1.4 2009/08/17 23:38:30 asmecher Exp $
   -->
  
 <locale name="no_NO" full_name="Norwegian">
-	<message key="plugins.citationFormats.bibtex.displayName">BibTeX siteringsformat plugin</message>
+	<message key="plugins.citationFormats.bibtex.displayName">Programutvidelse for BibTeX siteringsformat</message>
 	<message key="plugins.citationFormats.bibtex.citationFormatName">BibTeX</message>
-	<message key="plugins.citationFormats.bibtex.description">Denne plugin'en implementerer BibTeX siteringsformat.</message>
+	<message key="plugins.citationFormats.bibtex.description">Denne programutvidelsen implementerer BibTeX siteringsformat.</message>
 </locale>

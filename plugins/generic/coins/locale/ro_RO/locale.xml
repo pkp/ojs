@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2010 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * COinS plugin localization strings for the ro_RO (Română) locale.
+  *
+  * $Id: locale.xml,v 1.1 2008/05/29 05:27:10 asmecher Exp $
+  -->
+ 
+<locale name="ro_RO" full_name="Română">
+	<message key="plugins.generic.coins.displayName">Modulul COinS</message>
+	<message key="plugins.generic.coins.description">Acest modul adaugă un descriptor OpenURL la paginile articolelor (abstract şi HTML) care poate fi utilizat, de exemplu, pentru regăsirea prin intermediul instrumentelor pentru referinţe bibliografice.</message>
+	<message key="plugins.generic.coins.enabled">A fost activat modulul COinS.</message>
+	<message key="plugins.generic.coins.disabled">A fost dezactivat modulul COinS.</message>
+
+</locale>

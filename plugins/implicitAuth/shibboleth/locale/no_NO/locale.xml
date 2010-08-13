@@ -11,10 +11,10 @@
   *
   * Contributed by Dan Galewsky, University of Texas
   *
-  * $Id$
+  * $Id: locale.xml,v 1.4 2009/08/17 23:38:34 asmecher Exp $
   -->
  
 <locale name="no_NO" full_name="Norwegian">
-	<message key="plugins.implicitAuth.shibboleth.displayName">ShibAuthPlugin</message>
-	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Denne plugin'en vil gjelde for hele nettstedet, og må slås på i OJS config-filen.</message>
+	<message key="plugins.implicitAuth.shibboleth.displayName">Programutvidelse for ShibAuth</message>
+	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Denne programutvidelsen vil gjelde for hele nettstedet, og må slås på i OJS config-filen.</message>
 </locale>

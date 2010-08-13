@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ro_RO (Romanian) locale.
+  *
+  * $Id: locale.xml,v 1.0 8:31 PM 8/11/2010 kosson Exp $
+  -->
+ 
+<locale name="ro_RO" full_name="Română">
+	<message key="plugins.generic.webfeed.displayName">Modul pentru fluxuri web</message>
+	<message key="plugins.generic.webfeed.description">Acest modul emite fluxuri web RSS/Atom pentru numărul curent.</message>
+	<message key="plugins.generic.webfeed.enabled">Modulul pentru fluxuri web a fost activat.</message>
+	<message key="plugins.generic.webfeed.disabled">Modulul pentru fluxuri web a fost dezactivat.</message>
+
+	<message key="plugins.generic.webfeed.settings">Setări</message>
+	<message key="plugins.generic.webfeed.settings.issue">Afișează linkurile fluxului doar pe paginile numărului de revistă.</message>
+	<message key="plugins.generic.webfeed.settings.homepage">Afișează linkurile fluxului doar pe pagina principală și pe paginile numărului de revistă.</message>
+	<message key="plugins.generic.webfeed.settings.all">Afișează linkurile fluxului pe toate paginile revistei.</message>
+
+	<message key="plugins.generic.webfeed.settings.currentIssue">Afișează articolele în cadrul numărului de curând publicat.</message>
+	<message key="plugins.generic.webfeed.settings.recentArticles">cele mai recent publicate articole.</message>
+	<message key="plugins.generic.webfeed.settings.recentItemsRequired">Introdu un număr zecimal pozitiv pentru articolele publicate recent.</message>
+	<message key="plugins.generic.webfeed.atom.altText">Atom logo</message>
+	<message key="plugins.generic.webfeed.rss1.altText">RSS1 logo</message>
+	<message key="plugins.generic.webfeed.rss2.altText">RSS2 logo</message>
+</locale>
