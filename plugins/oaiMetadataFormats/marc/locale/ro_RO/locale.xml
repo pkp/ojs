@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ro_RO (Romanian) locale.
+  *
+  * $Id: locale.xml,v 1.0 9:27 PM 8/11/2010 kosson Exp $
+  -->
+ 
+<locale name="ro_RO" full_name="Română">
+	<message key="plugins.OAIMetadata.marc.displayName">Formant de metadate MARC</message>
+	<message key="plugins.OAIMetadata.marc.description">Structurează metadatele într-un mod conform cu formatul MARC.</message>
+</locale>

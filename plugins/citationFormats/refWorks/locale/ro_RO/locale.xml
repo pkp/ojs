@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2010 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for this citation plugin in ro_RO.
+  * KOSSON FECIT
+  * $Id: locale.xml,v 1.2 2008/06/11 18:55:11 asmecher Exp $
+  -->
+ 
+<locale name="ro_RO" full_name="Română">
+	<message key="plugins.citationFormats.refWorks.displayName">Modul pentru citarea în format RefWorks</message>
+	<message key="plugins.citationFormats.refWorks.citationFormatName">RefWorks</message>
+	<message key="plugins.citationFormats.refWorks.description">Acest modul implementează formatul RefWorks pentru citări.</message>
+	<message key="plugins.citationFormats.refWorks.export">Export către RefWorks</message>
+</locale>

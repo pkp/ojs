@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2010 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ro_RO (Romanian) locale.
+  * KOSSON FECIT
+
+  * $Id: locale.xml,v 1.2 2008/06/11 18:55:09 asmecher Exp $
+  -->
+ 
+<locale name="ro_RO" full_name="Română">
+	<message key="plugins.block.navigation.displayName">Zona de navigare</message>
+	<message key="plugins.block.navigation.description">Acest modul afişează bara laterală cu linkuri.</message>
+	<message key="plugins.block.navigation.journalContent">Conţinutul revistei</message>
+</locale>
