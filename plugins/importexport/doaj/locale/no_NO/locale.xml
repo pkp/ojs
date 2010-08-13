@@ -9,11 +9,11 @@
   *
   * Localization strings for the no_NO (Norwegian) locale.
   *
-  * $Id$
+  * $Id: locale.xml,v 1.4 2009/08/17 23:38:35 asmecher Exp $
   -->
 
 <locale name="no_NO" full_name="Norwegian">
-	<message key="plugins.importexport.doaj.displayName">DOAJ eksportplugin</message>
+	<message key="plugins.importexport.doaj.displayName">Programutvidelse for eksport til DOAJ</message>
 	<message key="plugins.importexport.doaj.description">Eksporter tidsskrift til DOAJ og e-post tidsskriftinformasjon til DOAJs ansvarlige</message>
 
 	

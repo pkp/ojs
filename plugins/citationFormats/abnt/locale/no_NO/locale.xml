@@ -9,13 +9,13 @@
   *
   * Localization strings for this citation plugin in no_NO.
   *
-  * $Id$
+  * $Id: locale.xml,v 1.4 2009/08/17 23:38:30 asmecher Exp $
   -->
  
 <locale name="no_NO" full_name="Norwegian">
-	<message key="plugins.citationFormats.abnt.displayName">ABNT siteringsformat plugin</message>
+	<message key="plugins.citationFormats.abnt.displayName">Programutvidelse for ABNT siteringsformat</message>
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
-	<message key="plugins.citationFormats.abnt.description">Denne plugin'en implementerer ABNT-siteringsformatet.</message>
+	<message key="plugins.citationFormats.abnt.description">Denne programutvidelsen implementerer ABNT-siteringsformatet.</message>
 	<message key="plugins.citationFormat.abnt.location">Nord-Amerika</message>
 	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Tilgjengelig: <a href="{$url}" target="_new">{$url}</a>. Nedlastet dato: {$retrievedDate}]]></message>
 </locale>

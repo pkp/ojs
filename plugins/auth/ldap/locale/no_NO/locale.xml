@@ -9,27 +9,27 @@
   *
   * LDAP authentication plugin localization strings for the no_NO (Norwegian) locale.
   *
-  * $Id$
+  * $Id: locale.xml,v 1.4 2009/08/17 23:38:29 asmecher Exp $
   -->
  
 <locale name="no_NO" full_name="Norwegian">
 	<message key="plugins.auth.ldap.displayName">LDAP</message>
-	<message key="plugins.auth.ldap.description">Denne plugin'en gir mulighet til å autentisere og synkronisere brukerkonti mot en ekstern LDAP-datakilde.</message>
+	<message key="plugins.auth.ldap.description">Denne programutvidelsen gir mulighet til å autentisere og synkronisere brukerkonti mot en ekstern LDAP-datakilde.</message>
 	
 	<message key="plugins.auth.ldap.settings">LDAP-innstillinger</message>
 	<message key="plugins.auth.ldap.settings.hostname">Vertserverens navn</message>
-	<message key="plugins.auth.ldap.settings.hostname.description">For eks. "ldap.example.com", eller "ldaps://ldap.example.com" (for bruk av SSL)</message>
+	<message key="plugins.auth.ldap.settings.hostname.description">F.eks. "ldap.example.com" eller "ldaps://ldap.example.com" (for bruk av SSL)</message>
 	<message key="plugins.auth.ldap.settings.port">Serverport</message>
-	<message key="plugins.auth.ldap.settings.port.description">Valgfritt. Standard til 389 (LDAP) eller 636 (LDAP over SSL)</message>
+	<message key="plugins.auth.ldap.settings.port.description">Valgfritt. Standard er 389 (LDAP) eller 636 (LDAP over SSL)</message>
 	<message key="plugins.auth.ldap.settings.basedn">Base DN</message>
-	<message key="plugins.auth.ldap.settings.basedn.description">For eks. "ou=people,dc=example,dc=com"</message>
+	<message key="plugins.auth.ldap.settings.basedn.description">F.eks. "ou=people,dc=example,dc=com"</message>
 	<message key="plugins.auth.ldap.settings.managerdn">Manager DN</message>
-	<message key="plugins.auth.ldap.settings.managerdn.description">For eks. "cn=Manager,dc=example,dc=com"</message>
-	<message key="plugins.auth.ldap.settings.managerpwd">Manager-passord</message>
-	<message key="plugins.auth.ldap.settings.managerpwd.description">Manager DN og -passord er bare påkrevet hvis brukerprofil/passord-synkronisering eller brukeropprettings-opsjonen er slått på. Hvis LDAP bare skal brukes til autentisering kan disse opsjonene utelates.</message>
-	<message key="plugins.auth.ldap.settings.uid">Kontonavn-attributt</message>
-	<message key="plugins.auth.ldap.settings.uid.description">Den attributt-verdien som gir unik identifikasjon av et brukerobjekt, slik som uid eller cn eller sAMAccountName.</message>
-	<message key="plugins.auth.ldap.settings.pwhash">Passord-kryptering</message>
+	<message key="plugins.auth.ldap.settings.managerdn.description">F.eks. "cn=Manager,dc=example,dc=com"</message>
+	<message key="plugins.auth.ldap.settings.managerpwd">Managerpassord</message>
+	<message key="plugins.auth.ldap.settings.managerpwd.description">Manager-DN og -passord er bare påkrevet hvis brukerprofil/passord-synkronisering eller brukeropprettings-opsjonen er slått på. Hvis LDAP bare skal brukes til autentisering kan disse opsjonene utelates.</message>
+	<message key="plugins.auth.ldap.settings.uid">Kontonavnattributt</message>
+	<message key="plugins.auth.ldap.settings.uid.description">Den attributtverdien som gir unik identifikasjon av et brukerobjekt, slik som uid eller cn eller sAMAccountName.</message>
+	<message key="plugins.auth.ldap.settings.pwhash">Passordkryptering</message>
 	<message key="plugins.auth.ldap.settings.pwhash.description"><![CDATA[Hash-format for passord som lagres på serveren. SSHA anbefales (krever PHP >= 4.3.0).]]></message>
 	<message key="plugins.auth.ldap.settings.saslopt">SASL-innstillinger (valgfritt)</message>
 	<message key="plugins.auth.ldap.settings.sasl"><![CDATA[Bruk SASL i stedet for enkel autentisering (krever PHP >= 5)]]></message>

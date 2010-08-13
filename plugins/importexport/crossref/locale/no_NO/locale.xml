@@ -9,11 +9,11 @@
   *
   * Localization strings for the no_NO (Norwegian) locale.
   *
-  * $Id$
+  * $Id: locale.xml,v 1.4 2009/08/17 23:38:35 asmecher Exp $
   -->
  
 <locale name="no_NO" full_name="Norwegian">
-	<message key="plugins.importexport.crossref.displayName">CrossRef XML eksport plugin</message>
+	<message key="plugins.importexport.crossref.displayName">Programutvidelse for eksport til CrossRef XML</message>
 	<message key="plugins.importexport.crossref.description">Eksporter artikkelmetadata i CrossRef XML-format.</message>
 	
 	<message key="plugins.importexport.crossref.export">Eksporter data</message>
@@ -30,5 +30,5 @@
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">Ingen utgave stemmer med den angitte utgave-ID'en "{$issueId}".</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">Ingen artikkel stemmer med den angitte artikkel-ID'en "{$articleId}".</message>
 
-	<message key="plugins.importexport.crossref.errors.noDOIprefix">For å bruke denne plugin'en må et gyldig DOI-prefix må være spesifisert under oppsett av tidsskriftet.</message>
+	<message key="plugins.importexport.crossref.errors.noDOIprefix">For å bruke denne programutvidelsen må et gyldig DOI-prefix må være spesifisert under oppsett av tidsskriftet.</message>
 </locale>

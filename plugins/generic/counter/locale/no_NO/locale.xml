@@ -9,38 +9,26 @@
   *
   * Localization strings for the no_NO (Norwegian) locale.
   *
-  * $Id$
+  * $Id: locale.xml,v 1.4 2009/08/17 23:38:32 asmecher Exp $
   -->
  
 <locale name="no_NO" full_name="Norwegian">
-	<message key="plugins.generic.counter.description"><![CDATA[COUNTER-plugin'en gjør det mulig å registrere og <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a>-rapportere trafikken på siden.]]></message>
-	<message key="plugins.generic.counter">COUNTER: statistikk</message>
+	<message key="plugins.generic.counter.description"><![CDATA[COUNTER-programutvidelsen gjør det mulig å registrere og <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a>-rapportere trafikken på siden.]]></message>
+	<message key="plugins.generic.counter">COUNTER-statistikk</message>
 
-	<message key="plugins.generic.counter.clearLog">Tøm loggen</message>
-	<message key="plugins.generic.counter.confirmClear">Er du sikker på at du vil tømme loggen? Denne handlingen kan ikke omgjøres.</message>
-	<message key="plugins.generic.counter.browseLog">Se igjennom loggen</message>
-	<message key="plugins.generic.counter.browseLog.logBrowser">Logg browser</message>
-
-	<message key="plugins.generic.counter.entry.timestamp">Tidsangivelse</message>
-	<message key="plugins.generic.counter.entry.site">Nettsted</message>
-	<message key="plugins.generic.counter.entry.journal">Tidsskrift</message>
-	<message key="plugins.generic.counter.entry.user">Bruker</message>
-	<message key="plugins.generic.counter.sessionNumber">Sesjon #{$sessionNumber}</message>
-	<message key="plugins.generic.counter.entry.type">Type</message>
-	<message key="plugins.generic.counter.entry.type.article">Artikkel</message>
-	<message key="plugins.generic.counter.entry.type.search">Søk</message>
-	<message key="plugins.generic.counter.entry.value">Verdi</message>
-
-	<message key="plugins.generic.counter.1a.title">Tidsskrift-rapport 1 (R2): Fulltekst artikkelforespørsel per måned og tidsskrift</message>
+	<message key="plugins.generic.counter.1a.title">Tidsskrift-rapport 1 (R2): Fulltekst artikkelforespørsler per måned og tidsskrift</message>
 	<message key="plugins.generic.counter.1a.title1">Tidsskrift-rapport 1 (R2)</message>
-	<message key="plugins.generic.counter.1a.title2">Antall artikkelnedlastninger per måned og tidsskrift(År {$year})</message>
+	<message key="plugins.generic.counter.1a.title2">Antall artikkelnedlastninger per måned og tidsskrift (År {$year})</message>
 	<message key="plugins.generic.counter.1a.dateRun">Kjørt dato:</message>
 	<message key="plugins.generic.counter.1a.publisher">Utgiver</message>
 	<message key="plugins.generic.counter.1a.platform">Plattform</message>
-	<message key="plugins.generic.counter.1a.printIssn">ISSN (trykket utgave)</message>
+	<message key="plugins.generic.counter.1a.printIssn">ISSN (trykt utgave)</message>
 	<message key="plugins.generic.counter.1a.onlineIssn">ISSN (nettutgave)</message>
-	<message key="plugins.generic.counter.1a.ytdTotal">YTD Total</message>
-	<message key="plugins.generic.counter.1a.ytdHtml">YTD HTML</message>
-	<message key="plugins.generic.counter.1a.ytdPdf">YTD PDF</message>
-	<message key="plugins.generic.counter.1a.totalForAllJournals">Total for alle tidsskrift</message>
+	<message key="plugins.generic.counter.1a.ytdTotal">HIÅ Total</message>
+	<message key="plugins.generic.counter.1a.ytdHtml">HIÅ HTML</message>
+	<message key="plugins.generic.counter.1a.ytdPdf">HIÅ PDF</message>
+	<message key="plugins.generic.counter.1a.totalForAllJournals">Totalt for alle tidsskrift</message>
+	<message key="plugins.generic.counter.enabled">COUNTER-programutvidelsen har blitt slått på.</message>
+	<message key="plugins.generic.counter.disabled">COUNTER-programutvidelsen har blitt slått av.</message>
+	<message key="plugins.generic.counter.migrate">Flytt loggfil</message>
 </locale>

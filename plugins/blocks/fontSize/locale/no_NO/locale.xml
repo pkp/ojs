@@ -9,14 +9,14 @@
   *
   * Localization strings for the no_NO (Norwegian) locale.
   *
-  * $Id$
+  * $Id: locale.xml,v 1.4 2009/08/17 23:38:29 asmecher Exp $
   -->
  
 <locale name="no_NO" full_name="Norwegian">
 	<message key="plugins.block.fontSize.displayName">Skriftstørrelser</message>
-	<message key="plugins.block.fontSize.description">Denne plugin'en gjør det mulig for brukerne å selv velge størrelse på nettstedets visningsskrift.</message>
+	<message key="plugins.block.fontSize.description">Denne programutvidelsen gjør det mulig å velge skriftstørrelse.</message>
 	<message key="plugins.block.fontSize.title">Skriftstørrelse</message>
 	<message key="plugins.block.fontSize.small">Liten</message>
-	<message key="plugins.block.fontSize.medium">Middelstor</message>
+	<message key="plugins.block.fontSize.medium">Mellomstor</message>
 	<message key="plugins.block.fontSize.large">Stor</message>
 </locale>

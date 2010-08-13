@@ -9,11 +9,11 @@
   *
   * Localization strings for the no_NO (Norwegian) locale.
   *
-  * $Id$
+  * $Id: locale.xml,v 1.4 2009/08/17 23:38:36 asmecher Exp $
   -->
  
 <locale name="no_NO" full_name="Norwegian">
-	<message key="plugins.importexport.users.displayName">Brukere XML-plugin</message>
+	<message key="plugins.importexport.users.displayName">Programutvidelse for XML-eksport og -import av brukere</message>
 	<message key="plugins.importexport.users.description">Importer og eksporter brukere</message>
 
 	<message key="plugins.importexport.users.cliUsage">Bruk: {$scriptName} {$pluginName} [kommando] ...
@@ -40,7 +40,7 @@ Eksempler:
 	<message key="plugins.importexport.users.import.instructions"><![CDATA[Velg en XML-datafil med brukerinformasjon for import til dette tidsskriftet. Se 'Hjelp' for detaljer om formatet for denne filen.<br /><br />Vennligst merk at hvis den importerte filen inneholder brukernavn eller e-postadresser som allerede finnes i systemet, så vil ikke brukerdataene for disse brukerne bli importert, og eventuelle nye roller vil knyttes til de eksisterende brukerne.]]></message>
 	<message key="plugins.importexport.users.import.failedToImportUser">Kunne ikke importere brukeren</message>
 	<message key="plugins.importexport.users.import.failedToImportRole">Kunne ikke tilordne brukerrollen</message>
-	<message key="plugins.importexport.users.import.dataFile">Brukerdata-fil</message>
+	<message key="plugins.importexport.users.import.dataFile">Brukerdatafil</message>
 	<message key="plugins.importexport.users.import.sendNotify">Send e-postvarsel med brukernavn og passord til hver av de importerte brukerne.</message>
 	<message key="plugins.importexport.users.import.continueOnError">Fortsett å importere øvrige brukere selv om en feil oppstår.</message>
 	<message key="plugins.importexport.users.import.noFileError">Ingen fil ble lastet opp!</message>
