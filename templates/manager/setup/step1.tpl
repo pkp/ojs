@@ -41,7 +41,7 @@
 		<td width="80%" class="value"><input type="text" name="initials[{$formLocale|escape}]" id="initials" value="{$initials[$formLocale]|escape}" size="8" maxlength="16" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="abbreviation" required="true" key="manager.setup.journalAbbreviation"}</td>
+		<td width="20%" class="label">{fieldLabel name="abbreviation" key="manager.setup.journalAbbreviation"}</td>
 		<td width="80%" class="value"><input type="text" name="abbreviation[{$formLocale|escape}]" id="abbreviation" value="{$abbreviation[$formLocale]|escape}" size="40" maxlength="120" class="textField" /></td>
 	</tr>
 	<tr valign="top">
