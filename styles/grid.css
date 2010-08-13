@@ -23,6 +23,7 @@ div.grid div.actions {
 
 div.grid table {
 	width: 100%;
+	border-collapse: collapse; /* Required for IE7 to remove table borders. */
 }
 
 div.grid thead tr {

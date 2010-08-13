@@ -316,6 +316,7 @@
 	/* Composite UI: 2-pane layout */
 	.composite-ui div.two-pane table.pane_header {
 		width: 100%;
+		border-collapse: collapse; /* Required for IE7 to remove table borders. */
 	}
 
 	.composite-ui div.two-pane table.pane_header tr {
