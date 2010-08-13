@@ -27,11 +27,12 @@ div.grid table {
 }
 
 div.grid thead tr {
-	height: 30px; /* Must be set for tr rather than th for Chromium compat. */
+	height: 30px; /* Must be set for tr rather than th for Chromium. */
+	padding: 4px 0;
 }
 
 div.grid thead th {
-	padding: 4px;
+	padding: 0 4px; /* Padding top/bottom must be 0 for IE7. */
 	vertical-align: middle;
 	text-align: center;
 }

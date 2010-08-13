@@ -321,10 +321,11 @@
 
 	.composite-ui div.two-pane table.pane_header tr {
 		height: 30px; /* Must be set for tr rather than th for Chromium compat. */
+		padding: 4px 0;
 	}
 
 	.composite-ui div.two-pane table.pane_header th {
-		padding: 4px;
+		padding: 0 4px; /* Padding top/bottom must be 0 for IE7. */
 		background-color: #CED7E1;
 		color: #20538D;
 		vertical-align: middle;
