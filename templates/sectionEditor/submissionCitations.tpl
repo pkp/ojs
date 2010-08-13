@@ -26,13 +26,13 @@
 			// Activate "Refresh Citation List" button.
 			$('#refreshCitationListButton').click(function() {ldelim}
 				var $citationGrid = $('#citationGridContainer');
-				
+
 				// Activate the throbber.
 				actionThrobber('#citationGridContainer');
-						
+
 				// Trigger the throbber.
 				$citationGrid.triggerHandler('actionStart');
-				
+
 				// Reload the citation list.
 				$.getJSON('{$citationGridUrl}&refresh=1', function(jsonData) {ldelim}
 					// Stop the throbber.
@@ -92,7 +92,7 @@
 					if (ui.panel.id == 'citationEditorTabExport') {ldelim}
 						$('#citationEditorExportPane').html('<div id="citationEditorExportThrobber" class="throbber"></div>');
 						$('#citationEditorExportThrobber').show();
-						
+
 						// Re-load export tab whenever it is shown.
 						$.getJSON('{$citationExportUrl}', function(jsonData) {ldelim}
 							if (jsonData.status === true) {ldelim}
@@ -141,7 +141,7 @@
 					$(this).css('height', beforeFullscreen.height);
 				{rdelim});
 				$('.composite-ui div.two-pane>div.left-pane .scrollable').first().css('height', beforeFullscreen.navHeight);
-				
+
 				$('body').css('overflow', 'auto');
 				window.scroll(beforeFullscreen.x, beforeFullscreen.y);
 				$(this).text('{translate key="common.fullscreen"}');
@@ -155,7 +155,7 @@
 					x: $(window).scrollLeft(),
 					y: $(window).scrollTop()
 				{rdelim};
-		
+
 				// 2) Set values needed to go fullscreen.
 				$('body').css('overflow', 'hidden');
 				$citationEditor.addClass('fullscreen');
@@ -190,24 +190,23 @@
 {* CSS - FIXME: will be moved to JS file as soon as development is done *}
 {literal}
 <style type="text/css">
-	/* Composite UI: general */
-	.composite-ui button {	
+	.composite-ui button {
 		white-space: nowrap;
 	}
-	
+
 	/* Composite UI: general: browser specific */
 	.browserChrome .composite-ui select,
 	.browserChrome .composite-ui button {
 		padding: 2px;
 	}
-	
+
 	/* Composite UI: main tabs */
 	.composite-ui>.ui-tabs {
 		margin-top: 20px;
 		padding: 0;
 		border: 0 none;
 	}
-	
+
 	.composite-ui>.ui-tabs ul.main-tabs {
 		background: none #FBFBF3;
 		border: 0 none;
@@ -222,13 +221,13 @@
 		padding-bottom: 2px;
 		background: none #CED7E1;
 	}
-	
+
 	.composite-ui>.ui-tabs ul.main-tabs a {
 		color: #CCCCCC;
 		font-size: 1.5em;
 		padding: 0.2em 3em;
 	}
-	
+
 	.composite-ui>.ui-tabs div.main-tabs {
 		padding: 0;
 		padding: 0;
@@ -241,22 +240,22 @@
 		background-color:#EFEFEF;
 		width: 100%;
 	}
-	
+
 	.composite-ui div.pane {
 		border: 1px solid #B6C9D5;
 		background-color: #EFEFEF;
 		height: 100%;
 	}
-	
+
 	.composite-ui div.pane div.wrapper {
 		padding: 30px;
 	}
-	
+
 	.composite-ui .scrollable {
 		overflow-y: auto;
 		overflow-x: hidden;
 	}
-	
+
 	/* Composite UI: fullscreen support */
 	.fullscreen {
 		display: block;
@@ -276,7 +275,7 @@
 		float: right;
 		margin-top: 5px;
 	}
-	
+
 	/* Composite UI: generic help or info message */
 	.composite-ui div.pane div.help-message {
 		margin: 20px 40px 40px 40px;
@@ -290,7 +289,7 @@
 		background-color: #CED7E1;
 		padding: 30px;
 	}
-	
+
 	/* Composite UI: grids as sub-components */
 	.composite-ui div.grid table {
 		border: 0 none;
@@ -299,15 +298,15 @@
 	.composite-ui div.grid th .options {
 		margin: 0;
 	}
-	
+
 	.composite-ui div.grid th .options a {
 		margin: 0;
 	}
-	
+
 	.composite-ui div.grid td {
 		border-bottom: 1px solid #B6C9D5;
 	}
-	
+
 	.composite-ui div.grid .row_actions a,
 	.composite-ui div.grid .options a {
 		text-decoration: none; /* Opera */
@@ -318,7 +317,7 @@
 	.composite-ui div.two-pane table.pane_header {
 		width: 100%;
 	}
-	
+
 	.composite-ui div.two-pane table.pane_header tr {
 		height: 30px; /* Must be set for tr rather than th for Chromium compat. */
 	}
@@ -329,7 +328,7 @@
 		color: #20538D;
 		vertical-align: middle;
 	}
-	
+
 	.composite-ui div.two-pane>div.left-pane,
 	.composite-ui div.two-pane>div.right-pane {
 		float: left;
@@ -338,24 +337,24 @@
 	.composite-ui div.two-pane>div.left-pane {
 		width: 25%;
 	}
-	
+
 	/* Composite UI: 2-pane layout - navigation list */
 	.composite-ui div.two-pane>div.left-pane div.grid div.row_container {
 		background-color: #FFFFFF;
 	}
-	
+
 	.composite-ui div.two-pane>div.left-pane div.grid div.clickable-row:hover,
 	.composite-ui div.two-pane>div.left-pane div.grid div.clickable-row:hover div.row_file {
 		background-color: #B6C9D5;
 		cursor: pointer;
 		text-decoration: underline:
 	}
-	
+
 	.composite-ui div.two-pane>div.left-pane div.grid tr.approved-citation .row_container {
 		border-left: 3px solid #20538D;
 		padding-left: 22px;
 	}
-	
+
 	.composite-ui div.two-pane>div.left-pane div.grid tr.approved-citation .row_actions {
 		width: 22px;
 	}
@@ -383,7 +382,7 @@
 	.composite-ui div.two-pane>div.right-pane {
 		position: relative;
 	}
-	
+
 	.composite-ui div.two-pane>div.right-pane div.wrapper {
 		position: absolute;
 		top: 30px;
@@ -391,14 +390,14 @@
 		padding-top: 10px;
 		padding-bottom: 10px;
 	}
-	
+
 	.composite-ui div.two-pane>div.right-pane div.wrapper.with-pane-actions {
 		bottom: 60px;
 		padding-bottom: 0;
 		left: 0;
 		right: 0;
 	}
-	
+
 	.composite-ui div.two-pane>div.right-pane div.pane-actions {
 		width: 100%;
 		position: absolute;
@@ -406,11 +405,11 @@
 		left: 0;
 		bottom: 0;
 	}
-	
+
 	.composite-ui div.two-pane>div.right-pane div.pane-actions>div {
 		padding: 20px 30px;
 	}
-	
+
 	.composite-ui div.two-pane>div.right-pane div.pane-actions button {
 		float: right;
 	}
@@ -418,17 +417,17 @@
 	.composite-ui div.two-pane>div.right-pane div.pane-actions button.secondary-button {
 		float: none;
 	}
-	
+
 	.composite-ui div.two-pane>div.right-pane .form-block {
 		margin-bottom: 40px;
 		clear: both;
 	}
-	
+
 	/* Composite UI: 2-pane layout - detail editor grids */
 	.composite-ui div.two-pane>div.right-pane div.grid table {
 		border-top: 1px solid #B6C9D5;
 	}
-	
+
 	.composite-ui div.two-pane>div.right-pane div.grid td,
 	.composite-ui div.two-pane>div.right-pane div.grid .row_actions,
 	.composite-ui div.two-pane>div.right-pane div.grid .row_file {
@@ -437,7 +436,7 @@
 		line-height: 1em;
 		text-align: left;
 	}
-	
+
 	.composite-ui div.two-pane>div.right-pane div.grid .row_container {
 		background-color: #FFFFFF;
 		padding-right: 30px;
@@ -452,20 +451,20 @@
 		width: auto;
 		padding: 0;
 	}
-	
+
 	/* Citation editor: editor height */
 	#submissionCitations.composite-ui div.main-tabs>.canvas {
 		height: 600px;
 	}
-	
+
 	#submissionCitations.composite-ui div.two-pane>div.left-pane div.grid .scrollable {
 		height: 570px; /* This is necessary for overflow. */
 	}
-	
+
 	#submissionCitations.composite-ui div.text-pane .scrollable {
 		height: 465px; /* This is necessary for overflow. */
 	}
-	
+
 	/* Citation editor: citation list */
 	.composite-ui div.two-pane>div.left-pane div.grid tr.current-item div.row_file,
 	.composite-ui div.two-pane>div.left-pane div.grid tr.current-item div.row_container {
@@ -476,19 +475,19 @@
 	#editCitationForm .actions {
 		float: right;
 	}
-		
+
 	#editCitationForm .options-head .ui-icon {
 		float: left;
 	}
-	
+
 	#editCitationForm .option-block {
 		margin-bottom: 10px;
 	}
-	
+
 	#editCitationForm .option-block p {
 		margin: 5px 0 0 0;
 	}
-	
+
 	#editCitationForm .option-block-option {
 		float: left;
 		margin-left: 5px;
@@ -497,35 +496,35 @@
 	#editCitationForm .clear {
 		clear: both;
 	}
-	
+
 	/* Citation editor: citation detail editor - before/after fields */
 	#submissionCitations.composite-ui div.two-pane>div.right-pane .citation-comparison {
 		margin-bottom: 10px;
 	}
-		
+
 	#submissionCitations.composite-ui div.two-pane>div.right-pane .citation-comparison div.value {
 		border: 1px solid #AAAAAA;
 		padding: 5px;
 		background-color: #FFFFFF;
 	}
-	
+
 	#editableRawCitation div.value {
 		margin-right: 15px;  // FIXME: check for box model bug in IE
 	}
-		
+
 	#editableRawCitation textarea.textarea {
 		width: 100%;
 		padding: 5px;
 	}
-	
+
 	#rawCitationEditingExpertOptions .option-block {
 		padding-left: 30px;
 	}
-	
+
 	#rawCitationWithMarkup div.value {
 		margin-right: 25px;
 	}
-	
+
 	#rawCitationWithMarkup a {
 		display: block;
 		width: 14px;
@@ -533,26 +532,26 @@
 		margin-top: 1em;
 		margin-left: 0; 
 	}
-		
+
 	#generatedCitationWithMarkup span {
 		cursor: default;
 	}
-	
+
 	#submissionCitations.composite-ui div.two-pane>div.right-pane .citation-comparison span,
 	#editableRawCitation textarea.textarea {
 		font-size: 1.3em;
 	}
-	
+
 	#submissionCitations.composite-ui div.two-pane>div.right-pane .citation-comparison-deletion {
 		color: red;
 		text-decoration: line-through;
 	}
-		
+
 	#submissionCitations.composite-ui div.two-pane>div.right-pane .citation-comparison-addition {
 		color: green;
 		text-decoration: underline;
 	}
-	
+
 	#citationFormErrorsAndComparison .throbber {
 		height: 150px;
 	}
@@ -561,7 +560,7 @@
 	#authorQueryResult {
 		float: left;
 	}
-	
+
 	/* Citation editor: citation detail editor - internal citation service result tabs */
 	#citationImprovementResultsBlock .options-head.active {
 		margin-top: 40px;

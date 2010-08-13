@@ -12,8 +12,6 @@
  * @brief TinyMCE WYSIWYG plugin for textareas - to allow cross-browser HTML editing
  */
 
-// $Id$
-
 
 import('lib.pkp.classes.plugins.GenericPlugin');
 

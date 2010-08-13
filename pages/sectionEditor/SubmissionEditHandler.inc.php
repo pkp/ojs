@@ -376,7 +376,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->addJavaScript('lib/pkp/js/splitter.js');
 
 
-
 		// Check whether the citation editor requirements are complete.
 		// 1) Citation editing must be enabled for the journal.
 		$citationEditorConfigurationError = null;

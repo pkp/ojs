@@ -1,3 +1,15 @@
+/**
+ * ojs.css
+ *
+ * Copyright (c) 2000-2010 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * Temporary file based on omp.css for early introduction of
+ * AJAX components to OJS.
+ *
+ * FIXME: Must be consolidated with other OJS-wide style sheets.
+ */
+
 /* @group Imports */
 /* Includes CSS files necessary for OJS to use new interface components such as Grids */
 
@@ -7,8 +19,8 @@
 /* Theme */
 @import url("../lib/pkp/styles/themes/default/theme.css");
 
-/* Theme */
-@import url("grid.css");
+/* FIXME: This is a partial extract from OMP's content.css to support grids in OJS. Needs to be consolidated when migrating OMP->OJS. */ 
+@import url("content.css");
 
 /* FIXME: temporary workaround for #5137 - size attribute for smarty form tags does not work */
 input.large, select.large, textarea.textarea{
@@ -18,7 +30,7 @@ input.large, select.large, textarea.textarea{
 /* fix for conflict - sidebars and modal (modal title bar taking on the height of the side bar) */
 .ui-dialog {clear:both;}
 
-/* override the global setting for the row actions icon */
+/* override the global setting for row actions icon */
 a.settings:hover {
 	background-color:transparent;
 }
