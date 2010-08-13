@@ -576,7 +576,20 @@
 	#citationFormErrorsAndComparison .throbber {
 		height: 150px;
 	}
-	
+
+	/* Citation editor: citation detail editor - improvement options: manual editing */
+	.composite-ui div.two-pane>div.right-pane div.grid table {
+		table-layout: fixed; /* IE7 hack to ensure that input fields fill 100% of the cell without overflow */
+	}
+
+	.composite-ui div.two-pane>div.right-pane div.grid td.first_column {
+		width: 150px;
+	}
+
+	.composite-ui div.two-pane>div.right-pane div.grid td.first_column select {
+		width: 100%;
+	}
+
 	/* Citation editor: citation detail editor - improvement options: author query */
 	#authorQueryResult {
 		float: left;
