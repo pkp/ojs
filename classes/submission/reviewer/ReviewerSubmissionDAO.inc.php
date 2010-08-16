@@ -157,7 +157,7 @@ class ReviewerSubmissionDAO extends DAO {
 	function updateReviewerSubmission(&$reviewerSubmission) {
 		return $this->update(
 			sprintf('UPDATE review_assignments
-				SET	article_id = ?,
+				SET	submission_id = ?,
 					reviewer_id = ?,
 					round = ?,
 					competing_interests = ?,
