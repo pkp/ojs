@@ -28,7 +28,7 @@ class PublishedArticleDAO extends DAO {
 	var $articlesInSectionsCache;
 
 	function _articleCacheMiss(&$cache, $id) {
-		$publishedArticle =& $this->getPublishedArticleByArticleId($id, null);
+		$publishedArticle =& $this->getPublishedArticleByBestArticleId(null, $id, null);
 		$cache->setCache($id, $publishedArticle);
 		return $publishedArticle;
 	}
@@ -425,7 +425,7 @@ class PublishedArticleDAO extends DAO {
 			$locale,
 			$articleId
 		);
-		if ($journalId) $params[] = $journalId;
+		if ($journalId) $params[] = (int) $journalId;
 
 		$result =& $this->retrieve(
 			'SELECT	pa.*,
@@ -441,7 +441,7 @@ class PublishedArticleDAO extends DAO {
 				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
 			WHERE	pa.article_id = a.article_id
 				AND a.article_id = ?' .
-				(isset($journalId)?' AND a.journal_id = ?':''),
+				($journalId?' AND a.journal_id = ?':''),
 			$params
 		);
 
@@ -473,6 +473,20 @@ class PublishedArticleDAO extends DAO {
 
 		$primaryLocale = Locale::getPrimaryLocale();
 		$locale = Locale::getLocale();
+
+		$params = array(
+			'title',
+			$primaryLocale,
+			'title',
+			$locale,
+			'abbrev',
+			$primaryLocale,
+			'abbrev',
+			$locale,
+			$publicArticleId
+		);
+		if ($journalId) $params[] = (int) $journalId;
+
 		$result =& $this->retrieve(
 			'SELECT	pa.*,
 				a.*,
@@ -487,19 +501,8 @@ class PublishedArticleDAO extends DAO {
 				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
 			WHERE	pa.article_id = a.article_id
 				AND pa.public_article_id = ?
-				AND a.journal_id = ?',
-			array(
-				'title',
-				$primaryLocale,
-				'title',
-				$locale,
-				'abbrev',
-				$primaryLocale,
-				'abbrev',
-				$locale,
-				$publicArticleId,
-				$journalId
-			)
+				' . ($journalId?' AND a.journal_id = ?':''),
+			$params
 		);
 
 		$publishedArticle = null;
