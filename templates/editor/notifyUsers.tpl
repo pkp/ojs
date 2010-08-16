@@ -1,3 +1,5 @@
+<!-- templates/editor/notifyUsers.tpl -->
+
 {**
  * email.tpl
  *
@@ -131,3 +133,6 @@
 </form>
 </div>
 {include file="common/footer.tpl"}
+
+<!-- / templates/editor/notifyUsers.tpl -->
+

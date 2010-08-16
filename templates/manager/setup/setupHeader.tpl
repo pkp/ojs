@@ -1,3 +1,5 @@
+<!-- templates/manager/setup/setupHeader.tpl -->
+
 {**
  * setupHeader.tpl
  *
@@ -21,3 +23,6 @@
 	<li id="step4" {if $setupStep == 4} class="current"{/if}><a href="{url op="setup" path="4"}">4. {translate key="manager.setup.management"}</a></li>
 	<li id="step5" {if $setupStep == 5} class="current"{/if}><a href="{url op="setup" path="5"}">5. {translate key="manager.setup.look"}</a></li>
 </ul>
+
+<!-- / templates/manager/setup/setupHeader.tpl -->
+

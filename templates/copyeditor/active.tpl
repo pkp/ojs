@@ -1,3 +1,5 @@
+<!-- templates/copyeditor/active.tpl -->
+
 {**
  * active.tpl
  *
@@ -57,3 +59,6 @@
 {/if}
 </table>
 </div>
+
+<!-- / templates/copyeditor/active.tpl -->
+

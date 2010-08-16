@@ -1,3 +1,5 @@
+<!-- templates/article/dublincore.tpl -->
+
 {**
  * dublincore.tpl
  *
@@ -83,3 +85,6 @@
 {/foreach}
 	<meta name="DC.Type" content="Text.Serial.Journal"/>
 	<meta name="DC.Type.articleType" content="{$article->getSectionTitle()|strip_tags|escape}"/>	
+
+<!-- / templates/article/dublincore.tpl -->
+

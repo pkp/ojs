@@ -1,3 +1,5 @@
+<!-- templates/article/googlescholar.tpl -->
+
 {**
  * googlescholar.tpl
  *
@@ -46,3 +48,6 @@
 	<meta name="citation_fulltext_html_url" content="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$gs_galley->getBestGalleyId($currentJournal)}"/>
 {/if}
 {/foreach}
+
+<!-- / templates/article/googlescholar.tpl -->
+

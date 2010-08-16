@@ -1,3 +1,5 @@
+<!-- templates/sectionEditor/submissionNotes.tpl -->
+
 {**
  * submissionNotes.tpl
  *
@@ -169,3 +171,6 @@
 {/if}
 </div>
 {include file="common/footer.tpl"}
+
+<!-- / templates/sectionEditor/submissionNotes.tpl -->
+

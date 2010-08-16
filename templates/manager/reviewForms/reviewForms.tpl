@@ -1,3 +1,5 @@
+<!-- templates/manager/reviewForms/reviewForms.tpl -->
+
 {**
  * reviewForms.tpl
  *
@@ -84,3 +86,6 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveReviewForm"); })
 <a class="action" href="{url op="createReviewForm"}">{translate key="manager.reviewForms.create"}</a>
 </div>
 {include file="common/footer.tpl"}
+
+<!-- / templates/manager/reviewForms/reviewForms.tpl -->
+

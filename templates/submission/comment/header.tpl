@@ -1,3 +1,5 @@
+<!-- templates/submission/comment/header.tpl -->
+
 {**
  * header.tpl
  *
@@ -43,4 +45,7 @@
 <div id="main">
 <h2>{translate key=$pageTitle}</h2>
 <div id="content">
+
+
+<!-- / templates/submission/comment/header.tpl -->
 

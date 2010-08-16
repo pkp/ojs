@@ -1,3 +1,5 @@
+<!-- templates/sectionEditor/selectUser.tpl -->
+
 {**
  * selectUser.tpl
  *
@@ -73,3 +75,6 @@
 {/if}
 </div>
 {include file="common/footer.tpl"}
+
+<!-- / templates/sectionEditor/selectUser.tpl -->
+

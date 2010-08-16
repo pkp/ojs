@@ -1,3 +1,5 @@
+<!-- templates/editor/index.tpl -->
+
 {**
  * index.tpl
  *
@@ -160,3 +162,6 @@ function sortSearch(heading, direction) {
 {call_hook name="Templates::Editor::Index::AdditionalItems"}
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/editor/index.tpl -->
+

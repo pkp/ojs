@@ -1,3 +1,5 @@
+<!-- templates/manager/people/userProfileForm.tpl -->
+
 {**
  * userProfileForm.tpl
  *
@@ -277,3 +279,6 @@
 {/if}
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/manager/people/userProfileForm.tpl -->
+

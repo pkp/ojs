@@ -1,3 +1,5 @@
+<!-- templates/subscription/subscriptionForm.tpl -->
+
 {**
  * subscriptionForm.tpl
  *
@@ -47,3 +49,6 @@
 		<input type="text" name="referenceNumber" value="{$referenceNumber|escape}" id="referenceNumber" size="30" maxlength="40" class="textField" />
 	</td>
 </tr>
+
+<!-- / templates/subscription/subscriptionForm.tpl -->
+

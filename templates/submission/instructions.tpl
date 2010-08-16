@@ -1,3 +1,5 @@
+<!-- templates/submission/instructions.tpl -->
+
 {**
  * instructions.tpl
  *
@@ -59,3 +61,6 @@
 </div>
 </body>
 </html>
+
+<!-- / templates/submission/instructions.tpl -->
+

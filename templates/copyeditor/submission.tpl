@@ -1,3 +1,5 @@
+<!-- templates/copyeditor/submission.tpl -->
+
 {**
  * submission.tpl
  *
@@ -25,3 +27,6 @@
 {include file="copyeditor/submission/layout.tpl"}
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/copyeditor/submission.tpl -->
+

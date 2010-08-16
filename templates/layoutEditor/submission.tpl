@@ -1,3 +1,5 @@
+<!-- templates/layoutEditor/submission.tpl -->
+
 {**
  * submission.tpl
  *
@@ -29,3 +31,6 @@
 {include file="layoutEditor/submission/scheduling.tpl"}
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/layoutEditor/submission.tpl -->
+

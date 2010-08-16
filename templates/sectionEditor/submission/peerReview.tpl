@@ -1,3 +1,5 @@
+<!-- templates/sectionEditor/submission/peerReview.tpl -->
+
 {**
  * peerReview.tpl
  *
@@ -325,3 +327,6 @@
 {/if}
 {/foreach}
 </div>
+
+<!-- / templates/sectionEditor/submission/peerReview.tpl -->
+

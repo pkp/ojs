@@ -1,3 +1,5 @@
+<!-- templates/article/footer.tpl -->
+
 {**
  * footer.tpl
  *
@@ -88,3 +90,6 @@
 
 </body>
 </html>
+
+<!-- / templates/article/footer.tpl -->
+

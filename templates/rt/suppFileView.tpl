@@ -1,3 +1,5 @@
+<!-- templates/rt/suppFileView.tpl -->
+
 {**
  * suppFileView.tpl
  *
@@ -99,3 +101,6 @@
 </div>
 
 {include file="rt/footer.tpl"}
+
+<!-- / templates/rt/suppFileView.tpl -->
+

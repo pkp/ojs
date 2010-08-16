@@ -1,3 +1,5 @@
+<!-- templates/manager/reviewForms/reviewFormForm.tpl -->
+
 {**
  * reviewFormForm.tpl
  *
@@ -57,3 +59,6 @@
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/manager/reviewForms/reviewFormForm.tpl -->
+

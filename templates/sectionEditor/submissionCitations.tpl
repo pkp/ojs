@@ -1,3 +1,5 @@
+<!-- templates/sectionEditor/submissionCitations.tpl -->
+
 {**
  * submissionCitations.tpl
  *
@@ -677,3 +679,6 @@
 </div>
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/sectionEditor/submissionCitations.tpl -->
+

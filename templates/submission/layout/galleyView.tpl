@@ -1,3 +1,5 @@
+<!-- templates/submission/layout/galleyView.tpl -->
+
 {**
  * galleyView.tpl
  *
@@ -111,3 +113,6 @@
 </form>
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/submission/layout/galleyView.tpl -->
+

@@ -1,3 +1,5 @@
+<!-- templates/about/editorialTeamBio.tpl -->
+
 {**
  * editorialTeamBio.tpl
  *
@@ -95,3 +97,6 @@
 </div><!-- container -->
 </body>
 </html>
+
+<!-- / templates/about/editorialTeamBio.tpl -->
+

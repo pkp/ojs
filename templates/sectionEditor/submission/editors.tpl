@@ -1,3 +1,5 @@
+<!-- templates/sectionEditor/submission/editors.tpl -->
+
 {**
  * editors.tpl
  *
@@ -76,3 +78,6 @@
 {/if}
 </form>
 </div>
+
+<!-- / templates/sectionEditor/submission/editors.tpl -->
+

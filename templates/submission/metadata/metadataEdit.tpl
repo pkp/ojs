@@ -1,3 +1,5 @@
+<!-- templates/submission/metadata/metadataEdit.tpl -->
+
 {**
  * metadataEdit.tpl
  *
@@ -448,3 +450,6 @@ function moveAuthor(dir, authorIndex) {
 </form>
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/submission/metadata/metadataEdit.tpl -->
+

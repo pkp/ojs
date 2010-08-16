@@ -1,3 +1,5 @@
+<!-- templates/reviewer/active.tpl -->
+
 {**
  * active.tpl
  *
@@ -52,3 +54,6 @@
 {/if}
 </table>
 </div>
+
+<!-- / templates/reviewer/active.tpl -->
+

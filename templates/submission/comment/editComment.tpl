@@ -1,3 +1,5 @@
+<!-- templates/submission/comment/editComment.tpl -->
+
 {**
  * editComment.tpl
  *
@@ -53,3 +55,6 @@
 </form>
 
 {include file="submission/comment/footer.tpl"}
+
+<!-- / templates/submission/comment/editComment.tpl -->
+

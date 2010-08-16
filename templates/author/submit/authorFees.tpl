@@ -1,3 +1,5 @@
+<!-- templates/author/submit/authorFees.tpl -->
+
 {**
  * authorFees.tpl
  *
@@ -38,3 +40,5 @@
 	<p>{$currentJournal->getLocalizedSetting('waiverPolicy')}</p>
 {/if}
 </div>
+<!-- / templates/author/submit/authorFees.tpl -->
+

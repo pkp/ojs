@@ -1,3 +1,5 @@
+<!-- templates/sectionEditor/submissionReview.tpl -->
+
 {**
  * submissionReview.tpl
  *
@@ -28,3 +30,6 @@
 {include file="sectionEditor/submission/editorDecision.tpl"}
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/sectionEditor/submissionReview.tpl -->
+

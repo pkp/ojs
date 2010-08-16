@@ -1,3 +1,5 @@
+<!-- templates/subscription/subscriptionsSummary.tpl -->
+
 {**
  * subscriptionsSummary.tpl
  *
@@ -40,3 +42,6 @@
 <a href="{url op="selectSubscriber" path="institutional"}" class="action">{translate key="manager.subscriptions.create"}</a>
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/subscription/subscriptionsSummary.tpl -->
+

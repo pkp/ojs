@@ -1,3 +1,5 @@
+<!-- templates/submission/layout/proofGalleyHTML.tpl -->
+
 {**
  * proofGalleyHTML.tpl
  *
@@ -29,3 +31,6 @@
 	{$galley->getHTMLContents()}
 </body>
 </html>
+
+<!-- / templates/submission/layout/proofGalleyHTML.tpl -->
+

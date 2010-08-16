@@ -1,3 +1,5 @@
+<!-- templates/manager/reviewForms/reviewFormElementForm.tpl -->
+
 {**
  * reviewFormElementForm.tpl
  *
@@ -109,3 +111,6 @@ function togglePossibleResponses(newValue, multipleResponsesElementTypesString) 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/manager/reviewForms/reviewFormElementForm.tpl -->
+

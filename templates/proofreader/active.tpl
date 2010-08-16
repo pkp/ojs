@@ -1,3 +1,5 @@
+<!-- templates/proofreader/active.tpl -->
+
 {**
  * active.tpl
  *
@@ -60,3 +62,6 @@
 {/if}
 </table>
 </div>
+
+<!-- / templates/proofreader/active.tpl -->
+

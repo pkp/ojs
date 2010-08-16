@@ -1,3 +1,5 @@
+<!-- templates/submission/reviewForm/reviewFormResponse.tpl -->
+
 {**
  * reviewFormResponse.tpl
  *
@@ -71,3 +73,6 @@
 </form>
 </div>
 {include file="submission/comment/footer.tpl"}
+
+<!-- / templates/submission/reviewForm/reviewFormResponse.tpl -->
+

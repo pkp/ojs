@@ -1,3 +1,5 @@
+<!-- templates/submission/layout/proofGalleyTop.tpl -->
+
 {**
  * proofGalleyTop.tpl
  *
@@ -35,3 +37,6 @@
 	</table>
 </body>
 </html>
+
+<!-- / templates/submission/layout/proofGalleyTop.tpl -->
+

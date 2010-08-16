@@ -1,3 +1,5 @@
+<!-- templates/subscription/users.tpl -->
+
 {**
  * users.tpl
  *
@@ -76,3 +78,6 @@
 <a href="{url op="createUser" source=$selectSubscriberUrl}" class="action">{translate key="manager.people.createUser"}</a>
 	</div>
 {include file="common/footer.tpl"}
+
+<!-- / templates/subscription/users.tpl -->
+

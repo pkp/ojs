@@ -1,3 +1,5 @@
+<!-- templates/proofreader/completed.tpl -->
+
 {**
  * completed.tpl
  *
@@ -114,3 +116,6 @@ function sortSearch(heading, direction) {
 {/if}
 </table>
 </div>
+
+<!-- / templates/proofreader/completed.tpl -->
+

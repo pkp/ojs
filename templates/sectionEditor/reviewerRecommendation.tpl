@@ -1,3 +1,5 @@
+<!-- templates/sectionEditor/reviewerRecommendation.tpl -->
+
 {**
  * setDueDate.tpl
  *
@@ -34,3 +36,6 @@
 </form>
 </div>
 {include file="common/footer.tpl"}
+
+<!-- / templates/sectionEditor/reviewerRecommendation.tpl -->
+

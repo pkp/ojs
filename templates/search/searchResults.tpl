@@ -1,3 +1,5 @@
+<!-- templates/search/searchResults.tpl -->
+
 {**
  * searchResults.tpl
  *
@@ -132,3 +134,6 @@ function ensureKeyword() {
 </div>	
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/search/searchResults.tpl -->
+

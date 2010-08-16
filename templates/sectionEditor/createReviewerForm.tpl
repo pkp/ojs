@@ -1,3 +1,5 @@
+<!-- templates/sectionEditor/createReviewerForm.tpl -->
+
 {**
  * createReviewerForm.tpl
  *
@@ -170,3 +172,6 @@
 </form>
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/sectionEditor/createReviewerForm.tpl -->
+

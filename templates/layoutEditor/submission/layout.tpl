@@ -1,3 +1,5 @@
+<!-- templates/layoutEditor/submission/layout.tpl -->
+
 {**
  * layout.tpl
  *
@@ -160,3 +162,6 @@
 {/foreach}
 </div>
 </div>
+
+<!-- / templates/layoutEditor/submission/layout.tpl -->
+

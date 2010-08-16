@@ -1,3 +1,5 @@
+<!-- templates/about/siteMap.tpl -->
+
 {**
  * siteMap.tpl
  *
@@ -84,3 +86,6 @@
 </ul>
 </div>
 {include file="common/footer.tpl"}
+
+<!-- / templates/about/siteMap.tpl -->
+

@@ -1,3 +1,5 @@
+<!-- templates/author/submit/step5.tpl -->
+
 {**
  * step5.tpl
  *
@@ -91,3 +93,6 @@
 </form>
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/author/submit/step5.tpl -->
+

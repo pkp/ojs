@@ -1,3 +1,5 @@
+<!-- templates/payments/payMethodSettingsForm.tpl -->
+
 {**
  * paymentSettingsForm.tpl
  *
@@ -61,3 +63,6 @@ function changePaymentMethod() {
 </form>
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/payments/payMethodSettingsForm.tpl -->
+

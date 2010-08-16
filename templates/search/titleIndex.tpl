@@ -1,3 +1,5 @@
+<!-- templates/search/titleIndex.tpl -->
+
 {**
  * titleIndex.tpl
  *
@@ -74,3 +76,6 @@
 </table>
 </div>
 {include file="common/footer.tpl"}
+
+<!-- / templates/search/titleIndex.tpl -->
+

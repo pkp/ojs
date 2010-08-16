@@ -1,3 +1,5 @@
+<!-- templates/search/authorIndex.tpl -->
+
 {**
  * authorIndex.tpl
  *
@@ -55,3 +57,6 @@
 {/if}
 </div>
 {include file="common/footer.tpl"}
+
+<!-- / templates/search/authorIndex.tpl -->
+

@@ -1,3 +1,5 @@
+<!-- templates/rtadmin/contexts.tpl -->
+
 {**
  * contexts.tpl
  *
@@ -66,3 +68,6 @@ $(document).ready(function() { setupTableDND("#dragTable",
 </div>
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/rtadmin/contexts.tpl -->
+

@@ -1,3 +1,5 @@
+<!-- templates/help/helpToc.tpl -->
+
 {**
  * helpToc.tpl
  *
@@ -12,3 +14,5 @@
 {translate|assign:applicationHelpTranslated key="help.ojsHelp"}
 {include file="core:help/helpToc.tpl"}
 {/strip}
+<!-- / templates/help/helpToc.tpl -->
+
