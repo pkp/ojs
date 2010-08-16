@@ -7,8 +7,6 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Installation descriptor file.
-  *
-  * $Id$
   -->
 
 <install version="2.3.1.2">

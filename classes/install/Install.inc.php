@@ -152,6 +152,9 @@ class Install extends PKPInstall {
 					$versionDao->insertVersion($pluginVersion, true);
 				}
 			}
+
+			// Install filters and filter templates.
+			$this->installFilterTemplates();
 		}
 
 		return true;
