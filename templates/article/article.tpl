@@ -1,3 +1,5 @@
+<!-- templates/article/article.tpl -->
+
 {**
  * article.tpl
  *
@@ -103,3 +105,6 @@
 {include file="article/comments.tpl"}
 
 {include file="article/footer.tpl"}
+
+<!-- / templates/article/article.tpl -->
+

@@ -1,3 +1,5 @@
+<!-- templates/author/submissionReview.tpl -->
+
 {**
  * submissionReview.tpl
  *
@@ -32,3 +34,6 @@
 {include file="author/submission/editorDecision.tpl"}
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/author/submissionReview.tpl -->
+

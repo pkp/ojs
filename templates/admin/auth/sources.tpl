@@ -1,3 +1,5 @@
+<!-- templates/admin/auth/sources.tpl -->
+
 {**
  * sources.tpl
  *
@@ -76,3 +78,6 @@
 </div>
 </div>
 {include file="common/footer.tpl"}
+
+<!-- / templates/admin/auth/sources.tpl -->
+

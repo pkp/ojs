@@ -1,3 +1,5 @@
+<!-- templates/sectionEditor/submissionsInEditing.tpl -->
+
 {**
  * submissionsInEditing.tpl
  *
@@ -59,3 +61,6 @@
 {/if}
 </table>
 </div>
+
+<!-- / templates/sectionEditor/submissionsInEditing.tpl -->
+

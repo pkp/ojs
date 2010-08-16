@@ -1,3 +1,5 @@
+<!-- templates/editor/selectSectionEditor.tpl -->
+
 {**
  * selectSectionEditor.tpl
  *
@@ -84,3 +86,6 @@
 </table>
 </div>
 {include file="common/footer.tpl"}
+
+<!-- / templates/editor/selectSectionEditor.tpl -->
+

@@ -1,3 +1,5 @@
+<!-- templates/about/editorialTeamBoard.tpl -->
+
 {**
  * editorialTeam.tpl
  *
@@ -29,3 +31,6 @@
 {/foreach}{* $groups *}
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/about/editorialTeamBoard.tpl -->
+

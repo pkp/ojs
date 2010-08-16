@@ -1,3 +1,5 @@
+<!-- templates/sectionEditor/selectReviewForm.tpl -->
+
 {**
  * assignReviewForm.tpl
  *
@@ -54,3 +56,6 @@
 </div>
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/sectionEditor/selectReviewForm.tpl -->
+

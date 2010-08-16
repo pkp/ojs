@@ -1,3 +1,5 @@
+<!-- templates/subscription/subscriptionTypeForm.tpl -->
+
 {**
  * subscriptionTypeForm.tpl
  *
@@ -127,3 +129,6 @@
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/subscription/subscriptionTypeForm.tpl -->
+

@@ -1,3 +1,5 @@
+<!-- templates/rtadmin/searches.tpl -->
+
 {**
  * searches.tpl
  *
@@ -67,3 +69,6 @@ $(document).ready(function() { setupTableDND("#dragTable",
 </div>
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/rtadmin/searches.tpl -->
+

@@ -1,3 +1,5 @@
+<!-- templates/sectionEditor/searchUsers.tpl -->
+
 {**
  * searchUsers.tpl
  *
@@ -75,3 +77,6 @@
 {/if}
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/sectionEditor/searchUsers.tpl -->
+

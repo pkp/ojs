@@ -1,3 +1,5 @@
+<!-- templates/about/memberships.tpl -->
+
 {**
  * memberships.tpl
  *
@@ -18,3 +20,6 @@
 {translate key="manager.subscriptionTypes.cost"} {$membershipFee|string_format:"%.2f"} ({$currency|escape})</p> 
 </div>
 {include file="common/footer.tpl"}
+
+<!-- / templates/about/memberships.tpl -->
+

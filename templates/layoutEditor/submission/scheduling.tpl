@@ -1,3 +1,5 @@
+<!-- templates/layoutEditor/submission/scheduling.tpl -->
+
 {**
  * scheduling.tpl
  *
@@ -27,3 +29,5 @@
 	{/if}
 {/if}
 </div>
+<!-- / templates/layoutEditor/submission/scheduling.tpl -->
+

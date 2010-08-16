@@ -1,3 +1,5 @@
+<!-- templates/subscription/individualSubscriptionForm.tpl -->
+
 {**
  * individualSubscriptionForm.tpl
  *
@@ -83,3 +85,6 @@
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/subscription/individualSubscriptionForm.tpl -->
+

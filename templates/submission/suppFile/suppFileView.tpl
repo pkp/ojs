@@ -1,3 +1,5 @@
+<!-- templates/submission/suppFile/suppFileView.tpl -->
+
 {**
  * suppFileView.tpl
  *
@@ -92,3 +94,6 @@
 </table>
 </div>
 {include file="common/footer.tpl"}
+
+<!-- / templates/submission/suppFile/suppFileView.tpl -->
+

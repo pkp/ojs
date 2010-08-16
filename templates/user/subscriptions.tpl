@@ -1,3 +1,5 @@
+<!-- templates/user/subscriptions.tpl -->
+
 {**
  * subscriptions.tpl
  *
@@ -184,3 +186,6 @@
 {/if}
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/user/subscriptions.tpl -->
+

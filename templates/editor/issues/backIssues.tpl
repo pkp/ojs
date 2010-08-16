@@ -1,3 +1,5 @@
+<!-- templates/editor/issues/backIssues.tpl -->
+
 {**
  * backIssues.tpl
  *
@@ -87,3 +89,6 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveIssue"); });
 </form>
 </div>
 {include file="common/footer.tpl"}
+
+<!-- / templates/editor/issues/backIssues.tpl -->
+

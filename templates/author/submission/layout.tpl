@@ -1,3 +1,5 @@
+<!-- templates/author/submission/layout.tpl -->
+
 {**
  * layout.tpl
  *
@@ -107,3 +109,5 @@
 {/if}
 </div>
 </div>
+<!-- / templates/author/submission/layout.tpl -->
+

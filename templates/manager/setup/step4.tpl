@@ -1,3 +1,5 @@
+<!-- templates/manager/setup/step4.tpl -->
+
 {**
  * step4.tpl
  *
@@ -467,3 +469,6 @@ function setRegAllowOpts(form) {
 </form>
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/manager/setup/step4.tpl -->
+

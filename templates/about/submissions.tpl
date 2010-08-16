@@ -1,3 +1,5 @@
+<!-- templates/about/submissions.tpl -->
+
 {**
  * submissions.tpl
  *
@@ -98,3 +100,6 @@
 </div>
 {/if}
 {include file="common/footer.tpl"}
+
+<!-- / templates/about/submissions.tpl -->
+

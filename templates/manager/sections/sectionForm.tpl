@@ -1,3 +1,5 @@
+<!-- templates/manager/sections/sectionForm.tpl -->
+
 {**
  * sectionForm.tpl
  *
@@ -245,3 +247,6 @@ function checkEditorAssignments() {
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 {include file="common/footer.tpl"}
+
+<!-- / templates/manager/sections/sectionForm.tpl -->
+

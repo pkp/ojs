@@ -1,3 +1,5 @@
+<!-- templates/issue/archive.tpl -->
+
 {**
  * archive.tpl
  *
@@ -51,3 +53,6 @@
 {/if}
 </div>
 {include file="common/footer.tpl"}
+
+<!-- / templates/issue/archive.tpl -->
+

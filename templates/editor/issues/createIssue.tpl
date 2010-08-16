@@ -1,3 +1,5 @@
+<!-- templates/editor/issues/createIssue.tpl -->
+
 {**
  * createIssue.tpl
  *
@@ -136,3 +138,6 @@
 </form>
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/editor/issues/createIssue.tpl -->
+

@@ -1,3 +1,5 @@
+<!-- templates/about/history.tpl -->
+
 {**
  * history.tpl
  *
@@ -16,3 +18,6 @@
 {$history}
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/about/history.tpl -->
+

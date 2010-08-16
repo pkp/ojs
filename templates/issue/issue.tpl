@@ -1,3 +1,5 @@
+<!-- templates/issue/issue.tpl -->
+
 {**
  * issue.tpl
  *
@@ -80,3 +82,6 @@
 <div class="separator"></div>
 {/if}
 {/foreach}
+
+<!-- / templates/issue/issue.tpl -->
+

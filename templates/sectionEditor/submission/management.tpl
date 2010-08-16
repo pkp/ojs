@@ -1,3 +1,5 @@
+<!-- templates/sectionEditor/submission/management.tpl -->
+
 {**
  * management.tpl
  *
@@ -79,3 +81,6 @@
 	{/if}
 </table>
 </div>
+
+<!-- / templates/sectionEditor/submission/management.tpl -->
+

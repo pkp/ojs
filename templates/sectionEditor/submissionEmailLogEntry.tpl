@@ -1,3 +1,5 @@
+<!-- templates/sectionEditor/submissionEmailLogEntry.tpl -->
+
 {**
  * submissionEmailLogEntry.tpl
  *
@@ -97,3 +99,6 @@
 <a href="{url op="submissionEmailLog" path=$submission->getArticleId()}" class="action">{translate key="submission.email.backToEmailLog"}</a>
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/sectionEditor/submissionEmailLogEntry.tpl -->
+

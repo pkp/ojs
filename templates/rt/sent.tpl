@@ -1,3 +1,5 @@
+<!-- templates/rt/sent.tpl -->
+
 {**
  * bio.tpl
  *
@@ -16,3 +18,6 @@
 <p>{translate key="rt.email.sent"}</p>
 
 {include file="rt/footer.tpl"}
+
+<!-- / templates/rt/sent.tpl -->
+

@@ -1,3 +1,5 @@
+<!-- templates/about/editorialTeam.tpl -->
+
 {**
  * editorialTeam.tpl
  *
@@ -96,3 +98,6 @@
 </div>
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/about/editorialTeam.tpl -->
+

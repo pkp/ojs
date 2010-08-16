@@ -1,3 +1,5 @@
+<!-- templates/user/publicProfile.tpl -->
+
 {**
  * publicProfile.tpl
  *
@@ -57,3 +59,6 @@
 </div>{* id="mainContent" *}
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/user/publicProfile.tpl -->
+

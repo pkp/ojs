@@ -1,3 +1,5 @@
+<!-- templates/user/lostPassword.tpl -->
+
 {**
  * lostPassword.tpl
  *
@@ -13,3 +15,5 @@
 {assign var="registerLocaleKey" value="user.login.registerNewAccount"}
 {include file="core:user/lostPassword.tpl"}
 {/strip}
+<!-- / templates/user/lostPassword.tpl -->
+

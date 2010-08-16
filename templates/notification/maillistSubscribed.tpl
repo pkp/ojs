@@ -1,3 +1,5 @@
+<!-- templates/notification/maillistSubscribed.tpl -->
+
 {**
  * index.tpl
  *
@@ -32,3 +34,6 @@
 
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/notification/maillistSubscribed.tpl -->
+

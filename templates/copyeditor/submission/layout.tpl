@@ -1,3 +1,5 @@
+<!-- templates/copyeditor/submission/layout.tpl -->
+
 {**
  * layout.tpl
  *
@@ -75,3 +77,5 @@
 {/if}
 </div>
 </div>
+<!-- / templates/copyeditor/submission/layout.tpl -->
+

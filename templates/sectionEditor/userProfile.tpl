@@ -1,3 +1,5 @@
+<!-- templates/sectionEditor/userProfile.tpl -->
+
 {**
  * userProfile.tpl
  *
@@ -110,3 +112,6 @@
 </table>
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/sectionEditor/userProfile.tpl -->
+

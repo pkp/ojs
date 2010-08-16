@@ -1,3 +1,5 @@
+<!-- templates/manager/sections/sections.tpl -->
+
 {**
  * sections.tpl
  *
@@ -64,3 +66,6 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveSection"); });
 </div>
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/manager/sections/sections.tpl -->
+

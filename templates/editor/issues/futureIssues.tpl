@@ -1,3 +1,5 @@
+<!-- templates/editor/issues/futureIssues.tpl -->
+
 {**
  * futureIssues.tpl
  *
@@ -61,3 +63,6 @@
 </table>
 </div>
 {include file="common/footer.tpl"}
+
+<!-- / templates/editor/issues/futureIssues.tpl -->
+

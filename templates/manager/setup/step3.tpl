@@ -1,3 +1,5 @@
+<!-- templates/manager/setup/step3.tpl -->
+
 {**
  * step3.tpl
  *
@@ -375,3 +377,6 @@
 </form>
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/manager/setup/step3.tpl -->
+

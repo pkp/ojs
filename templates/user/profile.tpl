@@ -1,3 +1,5 @@
+<!-- templates/user/profile.tpl -->
+
 {**
  * profile.tpl
  *
@@ -192,3 +194,6 @@
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/user/profile.tpl -->
+

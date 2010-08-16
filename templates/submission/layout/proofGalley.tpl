@@ -1,3 +1,5 @@
+<!-- templates/submission/layout/proofGalley.tpl -->
+
 {**
  * proofGalley.tpl
  *
@@ -44,3 +46,6 @@
 </noframes>
 </frameset>
 </html>
+
+<!-- / templates/submission/layout/proofGalley.tpl -->
+

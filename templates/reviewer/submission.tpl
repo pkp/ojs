@@ -1,3 +1,5 @@
+<!-- templates/reviewer/submission.tpl -->
+
 {**
  * submission.tpl
  *
@@ -357,4 +359,7 @@ function confirmSubmissionCheck() {
 {/if}
 
 {include file="common/footer.tpl"}
+
+
+<!-- / templates/reviewer/submission.tpl -->
 

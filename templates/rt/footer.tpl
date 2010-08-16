@@ -1,3 +1,5 @@
+<!-- templates/rt/footer.tpl -->
+
 {**
  * footer.tpl
  *
@@ -21,3 +23,6 @@
 </div>
 </body>
 </html>
+
+<!-- / templates/rt/footer.tpl -->
+

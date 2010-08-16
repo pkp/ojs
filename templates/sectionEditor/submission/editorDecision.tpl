@@ -1,3 +1,5 @@
+<!-- templates/sectionEditor/submission/editorDecision.tpl -->
+
 {**
  * editorDecision.tpl
  *
@@ -173,3 +175,6 @@
 
 </form>
 </div>
+
+<!-- / templates/sectionEditor/submission/editorDecision.tpl -->
+

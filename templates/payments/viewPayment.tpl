@@ -1,3 +1,5 @@
+<!-- templates/payments/viewPayment.tpl -->
+
 {**
  * viewPayment.tpl
  *
@@ -84,3 +86,6 @@
 {/if}
 <p><input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="manager" op="viewPayments" escape=false}'" /></p>
 {include file="common/footer.tpl"}
+
+<!-- / templates/payments/viewPayment.tpl -->
+

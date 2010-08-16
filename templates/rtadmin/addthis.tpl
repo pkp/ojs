@@ -1,3 +1,5 @@
+<!-- templates/rtadmin/addthis.tpl -->
+
 {**
  * settings.tpl
  *
@@ -79,3 +81,6 @@
 </form>
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/rtadmin/addthis.tpl -->
+

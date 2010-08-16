@@ -1,3 +1,5 @@
+<!-- templates/admin/journals.tpl -->
+
 {**
  * journals.tpl
  *
@@ -63,3 +65,6 @@ $(document).ready(function() { setupTableDND("#adminJournals", "moveJournal"); }
 <p><a href="{url op="createJournal"}" class="action">{translate key="admin.journals.create"}</a></p>
 
 {include file="common/footer.tpl"}
+
+<!-- / templates/admin/journals.tpl -->
+

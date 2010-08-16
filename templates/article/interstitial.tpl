@@ -1,3 +1,5 @@
+<!-- templates/article/interstitial.tpl -->
+
 {**
  * interstitial.tpl
  *
@@ -51,3 +53,6 @@
 </div>
 </body>
 </html>
+
+<!-- / templates/article/interstitial.tpl -->
+

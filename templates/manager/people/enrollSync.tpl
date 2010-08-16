@@ -1,3 +1,5 @@
+<!-- templates/manager/people/enrollSync.tpl -->
+
 {**
  * enrollSync.tpl
  *
@@ -61,3 +63,6 @@
 </form>
 </div>
 {include file="common/footer.tpl"}
+
+<!-- / templates/manager/people/enrollSync.tpl -->
+

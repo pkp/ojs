@@ -1,3 +1,5 @@
+<!-- templates/article/header.tpl -->
+
 {**
  * header.tpl
  *
@@ -101,3 +103,6 @@
 </div>
 
 <div id="content">
+
+<!-- / templates/article/header.tpl -->
+

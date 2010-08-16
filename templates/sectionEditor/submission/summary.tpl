@@ -1,3 +1,5 @@
+<!-- templates/sectionEditor/submission/summary.tpl -->
+
 {**
  * summary.tpl
  *
@@ -50,3 +52,6 @@
 	</tr>
 </table>
 </div>
+
+<!-- / templates/sectionEditor/submission/summary.tpl -->
+
