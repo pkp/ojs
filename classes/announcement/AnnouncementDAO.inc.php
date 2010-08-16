@@ -13,7 +13,6 @@
  * @brief Operations for retrieving and modifying Announcement objects.
  */
 
-// $Id$
 
 import('classes.announcement.Announcement');
 import('lib.pkp.classes.announcement.PKPAnnouncementDAO');
