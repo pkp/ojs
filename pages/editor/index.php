@@ -196,6 +196,7 @@ switch ($op) {
 	case 'deleteEditAssignment':
 	case 'assignEditor':
 	case 'deleteSubmission':
+	case 'instructions':
 		define('HANDLER_CLASS', 'EditorHandler');
 		import('pages.editor.EditorHandler');
 }
