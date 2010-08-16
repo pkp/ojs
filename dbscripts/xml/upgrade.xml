@@ -11,7 +11,7 @@
   * $Id$
   -->
 
-<install version="2.3.1.2">
+<install version="2.3.3.0">
 	<upgrade minversion="2.0.0.0" maxversion="2.2.0.0">
 		<!-- Correct null public issue IDs; this caused problems with
 		     2.x -> 2.2.0 upgrades using public issue IDs.-->
@@ -102,9 +102,9 @@
 		<data file="dbscripts/xml/upgrade/2.3.0_subscription_ip.xml" />
 	</upgrade>
 
-	<upgrade minversion="2.2.1.0" maxversion="2.3.1.0">
-		<!-- 2.2.1 to 2.3.2 -->
-		<data file="dbscripts/xml/upgrade/2.3.2_preupdate.xml" />
+	<upgrade minversion="2.2.1.0" maxversion="2.3.2.9">
+		<!-- 2.2.1 to 2.3.3 -->
+		<data file="dbscripts/xml/upgrade/2.3.3_preupdate.xml" />
 	</upgrade>
 
 	<!-- PKP schema components -->
@@ -208,12 +208,11 @@
 		<note file="docs/release-notes/README-2.3.1" />
 	</upgrade>
 
-	<upgrade minversion="2.0.0.0" maxversion="2.3.1.0">
-		<!-- 2.x to 2.3.2 -->
-		<data file="dbscripts/xml/upgrade/2.3.2_update.xml" />
+	<upgrade minversion="2.0.0.0" maxversion="2.3.1.9">
+		<note file="docs/release-notes/README-2.3.2" />
 	</upgrade>
 
-	<upgrade minversion="2.0.0.0" maxversion="2.3.1.2">
+	<upgrade minversion="2.0.0.0" maxversion="2.3.2.9">
 		<code function="addPluginVersions" />
 		<code function="installFilterTemplates" />
 		<code function="installEmailTemplate" key="CITATION_EDITOR_AUTHOR_QUERY" locales="en_US" />
