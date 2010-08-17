@@ -77,7 +77,7 @@ class ThesisFeedPlugin extends GenericPlugin {
 			// Determine whether the thesis plugin is enabled
 			$application =& PKPApplication::getApplication();
 			$products = $application->getEnabledProducts('plugins.generic');
-			$thesisEnabled = $products['thesis'];
+			$thesisEnabled = isset($products['thesis'])?$products['thesis']:false;
 
 			$displayPage = $currentJournal ? $this->getSetting($currentJournal->getId(), 'displayPage') : null;
 			$requestedPage = Request::getRequestedPage();
