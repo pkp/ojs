@@ -7,7 +7,6 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Common site header.
- *
  *}
 {strip}
 {translate|assign:"applicationName" key="common.openJournalSystems"}

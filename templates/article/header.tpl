@@ -7,8 +7,6 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Article View -- Header component.
- *
- * $Id$
  *}
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -45,6 +43,17 @@
 	{foreach from=$stylesheets item=cssUrl}
 		<link rel="stylesheet" href="{$cssUrl}" type="text/css" />
 	{/foreach}
+
+	<!-- Base Jquery -->
+	{if $allowCDN}<script src="http://www.google.com/jsapi"></script>
+	<script>
+		google.load("jquery", "{$smarty.const.CDN_JQUERY_VERSION}");
+		google.load("jqueryui", "{$smarty.const.CDN_JQUERY_UI_VERSION}");
+	</script>
+	{else}
+	<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/lib/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/jqueryUi.min.js"></script>
+	{/if}
 
 	<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/general.js"></script>
 	{$additionalHeadData}
