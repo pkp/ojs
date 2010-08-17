@@ -411,8 +411,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		// Should we display the "Introduction" tab?
 		if (is_null($citationEditorConfigurationError)) {
 			$user =& $request->getUser();
-			$userSettingsDAO =& DAORegistry::getDAO('UserSettingsDAO');
-			$introductionHide = (boolean)$userSettingsDAO->getSetting($user->getId(), 'citation-editor-hide-intro');
+			$userSettingsDao =& DAORegistry::getDAO('UserSettingsDAO');
+			$introductionHide = (boolean)$userSettingsDao->getSetting($user->getId(), 'citation-editor-hide-intro');
 		} else {
 			// Always show the introduction tab if we have a configuration error.
 			$introductionHide = false;

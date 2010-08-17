@@ -358,7 +358,6 @@
 	.composite-ui div.two-pane>div.left-pane div.grid div.clickable-row:hover div.row_file {
 		background-color: #B6C9D5;
 		cursor: pointer;
-		text-decoration: underline:
 	}
 
 	.composite-ui div.two-pane>div.left-pane div.grid tr.approved-citation .row_container {
