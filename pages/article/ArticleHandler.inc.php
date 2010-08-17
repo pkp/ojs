@@ -13,8 +13,6 @@
  *
  */
 
-// $Id$
-
 
 import('classes.rt.ojs.RTDAO');
 import('classes.rt.ojs.JournalRT');
@@ -528,7 +526,7 @@ class ArticleHandler extends Handler {
 
 	function setupTemplate() {
 		parent::setupTemplate();
-		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_READER));
+		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_PKP_SUBMISSION));
 	}
 }
 
