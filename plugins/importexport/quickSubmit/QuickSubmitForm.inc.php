@@ -237,6 +237,7 @@ class QuickSubmitForm extends Form {
 		$articleFileManager = new ArticleFileManager($articleId);
 		foreach (array_keys($tempFileIds) as $locale) {
 			$temporaryFile = $temporaryFileManager->getFile($tempFileIds[$locale], $user->getId());
+			$fileId = null;
 			if ($temporaryFile) {
 				$fileId = $articleFileManager->temporaryFileToArticleFile($temporaryFile, ARTICLE_FILE_SUBMISSION);
 				$fileType = $temporaryFile->getFileType();
@@ -289,7 +290,8 @@ class QuickSubmitForm extends Form {
 
 		// Accept the submission
 		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
-		$sectionEditorSubmission->setReviewFile(ArticleFileManager::getFile($article->getSubmissionFileId()));
+		$articleFileManager = new ArticleFileManager($articleId);
+		$sectionEditorSubmission->setReviewFile($articleFileManager->getFile($article->getSubmissionFileId()));
 		import('classes.submission.sectionEditor.SectionEditorAction');
 		SectionEditorAction::recordDecision($sectionEditorSubmission, SUBMISSION_EDITOR_DECISION_ACCEPT);
 
