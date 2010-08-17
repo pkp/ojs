@@ -21,6 +21,7 @@ class AnnouncementHandler extends PKPAnnouncementHandler {
 	 **/
 	function AnnouncementHandler() {
 		parent::PKPAnnouncementHandler();
+		$this->addCheck(new HandlerValidatorJournal($this));
 	}
 
 	/**
