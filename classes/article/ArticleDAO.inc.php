@@ -378,6 +378,10 @@ class ArticleDAO extends DAO {
 
 		$articleFileDao->deleteArticleFiles($articleId);
 
+		// Delete article citations.
+		$citationDao =& DAORegistry::getDAO('CitationDAO');
+		$citationDao->deleteObjectsByAssocId(ASSOC_TYPE_ARTICLE, $articleId);
+
 		$this->update('DELETE FROM article_settings WHERE article_id = ?', $articleId);
 		$this->update('DELETE FROM articles WHERE article_id = ?', $articleId);
 
