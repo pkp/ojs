@@ -61,7 +61,7 @@ class ArticleMailTemplate extends MailTemplate {
 		$paramArray['articleId'] = $article->getId();
 		$paramArray['journalName'] = strip_tags($journal->getLocalizedTitle());
 		$paramArray['sectionName'] = strip_tags($article->getSectionTitle());
-		$paramArray['articleAbstract'] = strip_tags($article->getLocalizedAbstract());
+		$paramArray['articleAbstract'] = String::html2text($article->getLocalizedAbstract());
 		$paramArray['authorString'] = strip_tags($article->getAuthorString());
 
 		parent::assignParams($paramArray);
