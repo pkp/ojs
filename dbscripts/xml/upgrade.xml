@@ -105,6 +105,7 @@
 	<upgrade minversion="2.2.1.0" maxversion="2.3.2.9">
 		<!-- 2.2.1 to 2.3.3 -->
 		<data file="dbscripts/xml/upgrade/2.3.3_preupdate.xml" />
+		<data file="dbscripts/xml/upgrade/2.3.3_preaffiliations.xml" condition="return $installer->columnExists('users', 'affiliation') &amp;&amp; $installer->columnExists('authors', 'affiliation');" />
 	</upgrade>
 
 	<!-- PKP schema components -->
