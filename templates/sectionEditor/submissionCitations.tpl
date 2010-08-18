@@ -192,6 +192,12 @@
 {* CSS - FIXME: will be moved to JS file as soon as development is done *}
 {literal}
 <style type="text/css">
+	/* General: auto-complete */
+	.ui-autocomplete.ui-menu .ui-menu-item a {
+		text-align: left;
+	}
+
+	/* Composite UI: general */
 	.composite-ui button {
 		white-space: nowrap;
 	}
