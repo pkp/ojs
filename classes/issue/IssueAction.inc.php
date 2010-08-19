@@ -205,7 +205,7 @@ class IssueAction {
 		$issuesIterator = $issueDao->getPublishedIssues($journalId);
 		$issues = $issuesIterator->toArray();
 		if (isset($issues[0]) && $issues[0]->getCurrent()) {
-			$issueOptions[$issues[0]->getIssueId()] = $issues[0]->getIssueIdentification();
+			$issueOptions[$issues[0]->getId()] = $issues[0]->getIssueIdentification();
 			array_shift($issues);
 		}
 		$issueOptions['-102'] = '------    ' . Locale::translate('editor.issues.backIssues') . '    ------';

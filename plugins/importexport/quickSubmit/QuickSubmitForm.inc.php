@@ -12,8 +12,6 @@
  * @brief Form for QuickSubmit one-page submission plugin
  */
 
-// $Id$
-
 
 import('lib.pkp.classes.form.Form');
 

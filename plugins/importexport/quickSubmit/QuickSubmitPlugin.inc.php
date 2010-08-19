@@ -12,7 +12,6 @@
  * @brief Quick Submit one-page submission plugin
  */
 
-//$Id$
 
 import('classes.plugins.ImportExportPlugin');
 
@@ -155,7 +154,7 @@ class QuickSubmitPlugin extends ImportExportPlugin {
 		}
 
 	}
-	
+
 	/**
 	 * Extend the {url ...} for smarty to support this plugin.
 	 */
