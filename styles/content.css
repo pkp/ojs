@@ -399,8 +399,7 @@ a.uploaded {
 .composite-ui div.pane div.help-message {
 	margin: 40px;
 	padding-left: 30px;
-	/* FIXME: change path when moving this to its own file */
-	background: transparent url("../../../../lib/pkp/templates/images/icons/alert.gif") no-repeat;
+	background: transparent url("../lib/pkp/templates/images/icons/alert.gif") no-repeat;
 }
 
 /* Composite UI: text pane layout */
@@ -493,8 +492,7 @@ a.uploaded {
 	line-height: 0;
 	font-size: 0;
 	border: solid 0px;
-	/* FIXME: change path when moving this to its own file */
-	background: #cbe1fb url(../../../../lib/pkp/styles/splitter/ui-bg_pane.gif) 0% 50%;
+	background: #cbe1fb url(../lib/pkp/styles/splitter/ui-bg_pane.gif) 0% 50%;
 }
 
 .composite-ui div.two-pane>div.splitbarV.working,
