@@ -139,7 +139,7 @@
 				// Going back to normal: Restore saved values.
 				$citationEditor.removeClass('fullscreen');
 				$('.composite-ui>.ui-tabs').css('margin-top', beforeFullscreen.topMargin);
-				$('.composite-ui div.main-tabs>.canvas').each(function() {ldelim}
+				$('.composite-ui>.ui-tabs div.main-tabs').each(function() {ldelim}
 					$(this).css('height', beforeFullscreen.height);
 				{rdelim});
 				$('.composite-ui div.two-pane>div.left-pane .scrollable').first().css('height', beforeFullscreen.navHeight);
@@ -152,8 +152,8 @@
 				// 1) Save current values.
 				beforeFullscreen = {ldelim}
 					topMargin: $('.composite-ui>.ui-tabs').css('margin-top'),
-					height: $('.composite-ui div.main-tabs>.canvas').first().css('height'),
-					navHeight: $('.composite-ui div.two-pane>div.left-pane tbody').first().css('height'),
+					height: $('.composite-ui>.ui-tabs div.main-tabs').first().css('height'),
+					navHeight: $('.composite-ui div.two-pane>div.left-pane .scrollable').first().css('height'),
 					x: $(window).scrollLeft(),
 					y: $(window).scrollTop()
 				{rdelim};
@@ -163,7 +163,7 @@
 				$citationEditor.addClass('fullscreen');
 				$('.composite-ui>.ui-tabs').css('margin-top', '0');
 				canvasHeight=$(window).height()-$('ul.main-tabs').height();
-				$('.composite-ui div.main-tabs>.canvas').each(function() {ldelim}
+				$('.composite-ui>.ui-tabs div.main-tabs').each(function() {ldelim}
 					$(this).css('height', canvasHeight+'px');
 				{rdelim});
 				$('.composite-ui div.two-pane>div.left-pane .scrollable').first().css('height', (canvasHeight-30)+'px');
@@ -178,13 +178,17 @@
 		// Resize citation editor in fullscreen mode
 		// when the browser window is being resized.
 		$(window).resize(function() {ldelim}
-			canvasHeight=$(window).height()-$('ul.main-tabs').height();
+			// Adjust editor height to new window height when in fullscreen mode. 
 			if ($citationEditor.hasClass('fullscreen')) {ldelim}
-				$('div.main-tabs>.canvas').each(function() {ldelim}
+				canvasHeight=$(window).height()-$('ul.main-tabs').height();
+				$('.composite-ui>.ui-tabs div.main-tabs').each(function() {ldelim}
 					$(this).css('height', canvasHeight+'px');
 				{rdelim});
 				$('.composite-ui div.two-pane>div.left-pane .scrollable').first().css('height', (canvasHeight-30)+'px');
 			{rdelim}
+			
+			// Adjust 2-pane layout to new window width.
+			$('.two-pane').css('width', '100%').triggerHandler('splitterRecalc');
 		{rdelim});
 	{rdelim});
 </script>
@@ -243,6 +247,10 @@
 		padding: 0;
 	}
 
+	.composite-ui>.ui-tabs div.main-tabs>.canvas {
+		height: 100%;
+	}
+
 	/* Composite UI: canvas and pane */
 	.composite-ui div.canvas {
 		margin: 0;
@@ -288,7 +296,7 @@
 
 	/* Composite UI: generic help or info message */
 	.composite-ui div.pane div.help-message {
-		margin: 20px 40px 40px 40px;
+		margin: 40px;
 		padding-left: 30px;
 		/* FIXME: change path when moving this to its own file */
 		background: transparent url("../../../../lib/pkp/templates/images/icons/alert.gif") no-repeat;
@@ -297,7 +305,7 @@
 	/* Composite UI: text pane layout */
 	.composite-ui div.canvas>div.text-pane {
 		background-color: #CED7E1;
-		padding: 30px;
+		padding: 0 30px;
 	}
 
 	/* Composite UI: grids as sub-components */
@@ -476,16 +484,12 @@
 	}
 
 	/* Citation editor: editor height */
-	#submissionCitations.composite-ui div.main-tabs>.canvas {
+	#submissionCitations.composite-ui div.main-tabs {
 		height: 600px;
 	}
 
 	#submissionCitations.composite-ui div.two-pane>div.left-pane div.grid .scrollable {
 		height: 570px; /* This is necessary for overflow. */
-	}
-
-	#submissionCitations.composite-ui div.text-pane .scrollable {
-		height: 465px; /* This is necessary for overflow. */
 	}
 
 	/* Citation editor: citation list */
@@ -620,6 +624,20 @@
 		border-bottom: 0 none;
 		text-align: right;
 		padding-right: 0;
+	}
+
+	/* Citation editor: citation export */
+	#citationEditorExportPane {
+		position: relative;
+	}
+	
+	#citationEditorExportPane .scrollable {
+		/* The following settings are necessary for overflow. */
+		position: absolute;
+		top: 11em;
+		bottom: 30px;
+		left: 30px;
+		right: 30px;
 	}
 </style>
 {/literal}
