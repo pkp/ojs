@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id: locale.xml,v 1.2.2.1 2009/04/08 19:43:17 asmecher Exp $
+  -->
+ 
+<locale name="zh_CN" full_name="China .PR">
+	<message key="plugins.generic.roundedcorners.displayName">圆角</message>
+	<message key="plugins.generic.roundedcorners.description">这个插件放置一个背景到每个边栏的单元里，使其实现圆角。通过编辑本插件的CSS样式表可以修改其颜色.</message>
+	<message key="plugins.generic.roundedcorners.enabled">圆角插件已开启。</message>
+	<message key="plugins.generic.roundedcorners.disabled">圆角插件已关闭。</message>
+
+</locale>

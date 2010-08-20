@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Google Analytics plugin localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id: locale.xml,v 1.3.2.1 2009/04/08 19:43:16 asmecher Exp $
+  -->
+ 
+<locale name="zh_CN" full_name="China .PR">
+
+	<!-- Google Analytics -->
+	<message key="plugins.generic.googleAnalytics.displayName">Google Analytics插件</message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[OJS与Google Analytics（网站流量分析应用）整合。要求你已经设置一个Google Analytics帐户。请到 <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics site</a> 了解更多信息.]]></message>
+	<message key="plugins.generic.googleAnalytics.enabled">Google Analytics插件已开启。</message>
+	<message key="plugins.generic.googleAnalytics.disabled">Google Analytics插件已关闭。</message>
+
+	<!-- Google Analytics Settings Management -->
+	<message key="plugins.generic.googleAnalytics.manager.settings">设置</message>
+	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">Google Analytics 设置</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p>启用了Google Analytics插件,可以用来收集和分析本杂志的网站使用和流量。请注意，此插件要求你已经设置一个谷歌Analytics帐户。请参看<a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics site</a> for 了解更多信息.</p><p>请注意，Google Analytics 可能需要多达24日前收集的统计和报告时间。在此期间，'检查状态'功能可能无法准确地报告它是否检测到了该杂志需要跟踪代码.</p>]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId">账户号码</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions"><![CDATA[在谷歌分析，点击'检查状态'来查看网站的跟踪代码。对于旧版的跟踪代码，帐户号码是显示在跟踪代码为：_uacct = "###".对于新的跟踪代码，帐户号码是显示在跟踪代码为：var pageTracker = _gat._getTracker ("###").输入对应的###。]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">请输入一个账户号码.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCode">跟踪代码</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">请选择一个跟踪代码使用。</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">旧版跟踪代码(urchin.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.ga">新跟踪代码 (ga.js)</message>
+</locale>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id: locale.xml,v 1.1 2009/05/27 16:02:16 asmecher Exp $
+  -->
+ 
+<locale name="zh_CN" full_name="China">
+	<message key="plugins.block.keywordCloud.displayName">关键字云插件(Keyword Cloud Block)</message>
+	<message key="plugins.block.keywordCloud.description">该插件提供了文章的关键字标签云。(This plugin provides a tag cloud of article keywords.)</message>
+	<message key="plugins.block.keywordCloud.title">关键字(Keywords)</message>
+</locale>

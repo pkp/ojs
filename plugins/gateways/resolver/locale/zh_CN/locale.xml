@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id: locale.xml,v 1.5.2.1 2009/04/08 19:43:14 asmecher Exp $
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.gateways.resolver.displayName">解析插件</message>
+	<message key="plugins.gateways.resolver.description">这个插件可以解析基于引证信息的刊期和文章。</message>
+	<message key="plugins.gateways.resolver.errors.errorMessage">使用指定的引文信息未能解决单一实体。请确保引文信息是全面的，并且是指在这个在OJS部署里的实体。</message>
+	<message key="plugins.gateways.resolver.exportHoldings">导出控制</message>
+</locale>

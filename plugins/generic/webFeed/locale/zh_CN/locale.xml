@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id: locale.xml,v 1.7.2.1 2009/04/08 19:43:20 asmecher Exp $
+  -->
+ 
+<locale name="zh_CN" full_name="China .PR">
+	<message key="plugins.generic.webfeed.displayName">网络Feed插件</message>
+	<message key="plugins.generic.webfeed.description">这个插件为当前的刊期生成的RSS / Atom的网络联合供稿。</message>
+	<message key="plugins.generic.webfeed.enabled">网络Feed插件已开启。</message>
+	<message key="plugins.generic.webfeed.disabled">网络Feed插件已关闭。</message>
+
+	<message key="plugins.generic.webfeed.settings">设置</message>
+	<message key="plugins.generic.webfeed.settings.issue">只在刊期页面显示Feed链接.</message>
+	<message key="plugins.generic.webfeed.settings.homepage">只在首页和刊期页面显示Feed链接。</message>
+	<message key="plugins.generic.webfeed.settings.all">在所有页面显示feed链接</message>
+
+	<message key="plugins.generic.webfeed.settings.currentIssue">在当前出版的刊期里显示的项目</message>
+	<message key="plugins.generic.webfeed.settings.recentArticles">更多最近出版的项目。</message>
+	<message key="plugins.generic.webfeed.settings.recentItemsRequired">请为最近出版的项目制定一个整数。</message>
+	<message key="plugins.generic.webfeed.atom.altText">Atom logo</message>
+	<message key="plugins.generic.webfeed.rss1.altText">RSS1 logo</message>
+	<message key="plugins.generic.webfeed.rss2.altText">RSS2 logo</message>
+</locale>

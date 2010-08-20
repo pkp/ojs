@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * COinS plugin localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id: locale.xml,v 1.4 2009/04/08 19:54:40 asmecher Exp $
+  -->
+ 
+<locale name="zh_CN" full_name="China">
+	<message key="plugins.generic.coins.displayName">COinS插件</message>
+	<message key="plugins.generic.coins.description">COinS插件在文章页面（摘要和HTML）添加一个OpenURL描述，可用于引证工具的提取。</message>
+	<message key="plugins.generic.coins.enabled">COinS插件已开启。</message>
+	<message key="plugins.generic.coins.disabled">COinS插件已禁用。</message>
+</locale>

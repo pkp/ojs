@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id: locale.xml,v 1.2.2.1 2009/04/08 19:43:11 asmecher Exp $
+  -->
+ 
+<locale name="zh_CN" full_name="China PR">
+	<message key="plugins.block.user.displayName">用户单元</message>
+	<message key="plugins.block.user.description">本插件是用于在边栏显示用户帐户的工具（例如登录，注销，账户信息等）</message>
+	<message key="plugins.block.user.loggedInAs">登录为...</message>
+	<message key="plugins.block.user.myJournals">我的期刊</message>
+	<message key="plugins.block.user.myProfile">我的信息</message>
+	<message key="plugins.block.user.logout">注销</message>
+	<message key="plugins.block.user.signOutAsUser">注销用户</message>
+	<message key="plugins.block.user.rememberMe">记住我</message>
+</locale>
