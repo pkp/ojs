@@ -34,7 +34,7 @@ class OJSInstallTool extends InstallTool {
 	 * FIXME: Use readline if available?
 	 */
 	function readParams() {
-		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_INSTALLER, LOCALE_COMPONENT_APPLICATION_COMMON));
+		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_INSTALLER, LOCALE_COMPONENT_APPLICATION_COMMON, LOCALE_COMPONENT_PKP_USER));
 		printf("%s\n", Locale::translate('installer.ojsInstallation'));
 
 		parent::readParams();
