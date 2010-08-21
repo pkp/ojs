@@ -393,6 +393,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 				$form->initData();
 				$form->display();
 				return true;
+			case 'feeds':
 			default:
 				$this->import('ExternalFeed');
 				$rangeInfo =& Handler::getRangeInfo('feeds');
@@ -403,12 +404,8 @@ class ExternalFeedPlugin extends GenericPlugin {
 
 				$templateMgr->display($this->getTemplatePath() . 'externalFeeds.tpl');
 				return true;
-			default:
-				// Unknown management verb
-				assert(false);
-				return false;
 		}
 	}
-
 }
+
 ?>
