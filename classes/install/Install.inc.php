@@ -18,8 +18,6 @@
  * It can also be used for a "manual install" to retrieve the SQL statements required for installation.
  */
 
-// $Id$
-
 
 // Default installation data
 define('INSTALLER_DEFAULT_SITE_TITLE', 'common.openJournalSystems');
