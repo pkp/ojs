@@ -52,7 +52,7 @@
 	</sql>
 	<!-- Bug #5268: Performance optimization: lazy load for plug-ins -->
 	<sql>
-		<query>UPDATE versions SET lazy_load = 0, product_class_name = '' WHERE product_type = 'core'</query>
+		<query>UPDATE versions SET lazy_load = 0, sitewide = 1, product_class_name = '' WHERE product_type = 'core'</query>
 		<query>DELETE FROM versions WHERE product_type = 'plugins.generic' AND product IN ('jquery', 'shibboleth')</query>
 		<query>DELETE FROM plugin_settings WHERE plugin_name = 'JQueryPlugin'</query>
 	</sql>

@@ -15,5 +15,6 @@
 	<release>1.1.0.0</release>
 	<date>2010-03-29</date>
 	<lazy-load>1</lazy-load>
+	<sitewide>1</sitewide>
 	<class>CounterPlugin</class>
 </version>
