@@ -349,109 +349,23 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	}
 
 	/**
-	 * Display the citation editor
+	 * Display the citation editing assistant.
 	 * @param $args array
 	 * @param $request Request
 	 */
 	function submissionCitations($args, $request) {
-		$router =& $request->getRouter();
-		$dispatcher =& $this->getDispatcher();
-
+		// Authorize the request.
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$this->validate($articleId);
 
+		// Prepare the view.
 		$this->setupTemplate(true, $articleId);
+
+		// Insert the citation editing assistant into the view.
+		SectionEditorAction::editCitations($request, $this->submission);
+
+		// Render the view.
 		$templateMgr =& TemplateManager::getManager();
-
-		// Add extra style sheets required for ajax components
-		// FIXME: Must be removed after OMP->OJS backporting
-		$templateMgr->addStyleSheet($request->getBaseUrl().'/styles/ojs.css');
-
-		// Add extra java script required for ajax components
-		// FIXME: Must be removed after OMP->OJS backporting
-		$templateMgr->addJavaScript('lib/pkp/js/grid-clickhandler.js');
-		$templateMgr->addJavaScript('lib/pkp/js/modal.js');
-		$templateMgr->addJavaScript('lib/pkp/js/lib/jquery/plugins/validate/jquery.validate.min.js');
-		$templateMgr->addJavaScript('lib/pkp/js/jqueryValidatorI18n.js');
-		$templateMgr->addJavaScript('lib/pkp/js/splitter.js');
-
-
-		// Check whether the citation editor requirements are complete.
-		// 1) Citation editing must be enabled for the journal.
-		$citationEditorConfigurationError = null;
-		$journal =& $router->getContext($request);
-		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-		$journalSettings = $journalSettingsDao->getJournalSettings($journal->getId());
-		if (!$journalSettings['metaCitations']) {
-			$citationEditorConfigurationError = 'submission.citations.editor.pleaseSetup';
-		}
-
-		// 2) PHP5 availability.
-		if (!$citationEditorConfigurationError && !checkPhpVersion('5.0.0')) {
-			$citationEditorConfigurationError = 'submission.citations.editor.php5Required';
-		}
-
-		// 3) At least one citation parser is available.
-		$filterDao =& DAORegistry::getDAO('FilterDAO');
-		$inputSample = 'arbitrary strings';
-		import('lib.pkp.classes.metadata.MetadataDescription');
-		$outputSample = new MetadataDescription('lib.pkp.classes.metadata.nlm.NlmCitationSchema', ASSOC_TYPE_CITATION);
-		$configuredCitationParsers =& $filterDao->getCompatibleObjects($inputSample, $outputSample, $journal->getId());
-		if (!$citationEditorConfigurationError && !count($configuredCitationParsers)) {
-			$citationEditorConfigurationError = 'submission.citations.editor.pleaseAddParserFilter';
-		}
-
-		// 4) A citation output filter has been set.
-		if (!$citationEditorConfigurationError && !($journalSettings['metaCitationOutputFilterId'] > 0)) {
-			$citationEditorConfigurationError = 'submission.citations.editor.pleaseConfigureOutputStyle';
-		}
-
-		$templateMgr->assign('citationEditorConfigurationError', $citationEditorConfigurationError);
-
-		// Should we display the "Introduction" tab?
-		if (is_null($citationEditorConfigurationError)) {
-			$user =& $request->getUser();
-			$userSettingsDao =& DAORegistry::getDAO('UserSettingsDAO');
-			$introductionHide = (boolean)$userSettingsDao->getSetting($user->getId(), 'citation-editor-hide-intro');
-		} else {
-			// Always show the introduction tab if we have a configuration error.
-			$introductionHide = false;
-		}
-		$templateMgr->assign('introductionHide', $introductionHide);
-
-
-		// Display a help message if no citations have been imported/added yet.
-		$citationDao =& DAORegistry::getDAO('CitationDAO');
-		$citations =& $citationDao->getObjectsByAssocId(ASSOC_TYPE_ARTICLE, $articleId);
-		if ($citations->getCount() > 0) {
-			$initialHelpMessage = Locale::translate('submission.citations.editor.details.pleaseClickOnCitationToStartEditing');
-		} else {
-			$articleMetadataUrl = $router->url($request, null, null, 'viewMetadata', $articleId);
-			$initialHelpMessage = Locale::translate('submission.citations.editor.pleaseImportCitationsFirst', array('articleMetadataUrl' => $articleMetadataUrl));
-		}
-		$templateMgr->assign('initialHelpMessage', $initialHelpMessage);
-
-		// Find out whether all citations have been processed or not.
-		$unprocessedCitations =& $citationDao->getObjectsByAssocId(ASSOC_TYPE_ARTICLE, $articleId, 0, CITATION_CHECKED);
-		if ($unprocessedCitations->getCount() > 0) {
-			$templateMgr->assign('unprocessedCitations', $unprocessedCitations->toArray());
-		} else {
-			$templateMgr->assign('unprocessedCitations', false);
-		}
-
-		// Add the grid URL
-		$citationGridUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.citation.CitationGridHandler', 'fetchGrid', null, array('assocId' => $articleId));
-		$templateMgr->assign('citationGridUrl', $citationGridUrl);
-
-		// Add the export URL
-		$citationGridUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.citation.CitationGridHandler', 'exportCitations', null, array('assocId' => $articleId));
-		$templateMgr->assign('citationExportUrl', $citationGridUrl);
-
-		// Add the submission
-		$submission =& $this->submission;
-		$templateMgr->assign_by_ref('submission', $submission);
-
-		// Display the page
 		$templateMgr->display('sectionEditor/submissionCitations.tpl');
 	}
 

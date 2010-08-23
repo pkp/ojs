@@ -588,11 +588,11 @@ a.uploaded {
 /* @group CitationAssistant */
 
 /* Citation assistant: editor height */
-#submissionCitations.composite-ui div.main-tabs {
+#citationEditor.composite-ui div.main-tabs {
 	height: 600px;
 }
 
-#submissionCitations.composite-ui div.two-pane>div.left-pane div.grid .scrollable {
+#citationEditor.composite-ui div.two-pane>div.left-pane div.grid .scrollable {
 	height: 570px; /* This is necessary for overflow. */
 }
 
@@ -629,11 +629,11 @@ a.uploaded {
 }
 
 /* Citation assistant: citation detail editor - before/after fields */
-#submissionCitations.composite-ui div.two-pane>div.right-pane .citation-comparison {
+#citationEditor.composite-ui div.two-pane>div.right-pane .citation-comparison {
 	margin-bottom: 10px;
 }
 
-#submissionCitations.composite-ui div.two-pane>div.right-pane .citation-comparison div.value {
+#citationEditor.composite-ui div.two-pane>div.right-pane .citation-comparison div.value {
 	border: 1px solid #AAAAAA;
 	padding: 5px;
 	background-color: #FFFFFF;
@@ -673,17 +673,17 @@ a.uploaded {
 	cursor: default;
 }
 
-#submissionCitations.composite-ui div.two-pane>div.right-pane .citation-comparison span,
+#citationEditor.composite-ui div.two-pane>div.right-pane .citation-comparison span,
 #editableRawCitation textarea.textarea {
 	font-size: 1.3em;
 }
 
-#submissionCitations.composite-ui div.two-pane>div.right-pane .citation-comparison-deletion {
+#citationEditor.composite-ui div.two-pane>div.right-pane .citation-comparison-deletion {
 	color: red;
 	text-decoration: line-through;
 }
 
-#submissionCitations.composite-ui div.two-pane>div.right-pane .citation-comparison-addition {
+#citationEditor.composite-ui div.two-pane>div.right-pane .citation-comparison-addition {
 	color: green;
 	text-decoration: underline;
 }

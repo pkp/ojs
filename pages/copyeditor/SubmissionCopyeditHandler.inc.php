@@ -12,7 +12,6 @@
  * @brief Handle requests for submission tracking.
  */
 
-// $Id$
 
 import('pages.copyeditor.CopyeditorHandler');
 
@@ -26,16 +25,20 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 	/** submission associated with the request **/
 	var $submission;
 
-	function submission($args) {
+	function submission($args, &$request) {
 		$articleId = $args[0];
 		$this->validate($articleId);
+
+		$router =& $request->getRouter();
+
 		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId);
-		$journal =& Request::getJournal();
 
 		CopyeditorAction::copyeditUnderway($submission);
 
+		$journal =& $router->getContext($request);
 		$useLayoutEditors = $journal->getSetting('useLayoutEditors');
+		$metaCitations = $journal->getSetting('metaCitations');
 
 		$templateMgr =& TemplateManager::getManager();
 
@@ -45,6 +48,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		$templateMgr->assign_by_ref('editorAuthorCopyeditFile', $submission->getFileBySignoffType('SIGNOFF_COPYEDITING_AUTHOR'));
 		$templateMgr->assign_by_ref('finalCopyeditFile', $submission->getFileBySignoffType('SIGNOFF_COPYEDITING_FINAL'));
 		$templateMgr->assign('useLayoutEditors', $useLayoutEditors);
+		$templateMgr->assign('metaCitations', $metaCitations);
 		$templateMgr->assign('helpTopicId', 'editorial.copyeditorsRole.copyediting');
 		$templateMgr->display('copyeditor/submission.tpl');
 	}
@@ -140,11 +144,13 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 
 		if ($copyeditorSubmission == null) {
 			$isValid = false;
-		} else if ($copyeditorSubmission->getJournalId() != $journal->getId()) {
-			$isValid = false;
 		} else {
-			if ($copyeditorSubmission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL') != $user->getId()) {
+			if ($copyeditorSubmission->getJournalId() != $journal->getId()) {
 				$isValid = false;
+			} else {
+				if ($copyeditorSubmission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL') != $user->getId()) {
+					$isValid = false;
+				}
 			}
 		}
 
@@ -284,6 +290,31 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		$articleDao->updateArticle($submission);
 
 		Request::redirect(null, null, 'viewMetadata', $articleId);
+	}
+
+
+	//
+	// Citation Editing
+	//
+	/**
+	 * Display the citation editing assistant.
+	 * @param $args array
+	 * @param $request Request
+	 */
+	function submissionCitations($args, &$request) {
+		// Authorize the request.
+		$articleId = $args[0];
+		$this->validate($articleId);
+
+		// Prepare the view.
+		$this->setupTemplate(true, $articleId);
+
+		// Insert the citation editing assistant into the view.
+		CopyeditorAction::editCitations($request, $this->submission);
+
+		// Render the view.
+		$templateMgr =& TemplateManager::getManager();
+		$templateMgr->display('copyeditor/submissionCitations.tpl');
 	}
 }
 

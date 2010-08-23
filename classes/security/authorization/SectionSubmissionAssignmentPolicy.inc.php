@@ -10,8 +10,8 @@
  *
  * @brief Class to control access to journal sections.
  *
- * NB: This policy expects a previously authorized article in the
- * authorization context.
+ * NB: This policy expects a previously authorized section editor
+ * submission in the authorization context.
  */
 
 import('lib.pkp.classes.security.authorization.AuthorizationPolicy');
@@ -40,21 +40,16 @@ class SectionSubmissionAssignmentPolicy extends AuthorizationPolicy {
 		$user =& $this->_request->getUser();
 		if (!is_a($user, 'PKPUser')) return AUTHORIZATION_DENY;
 
-		// Get the journal
-		$router =& $this->_request->getRouter();
-		$journal =& $router->getContext($this->_request);
-		if (!is_a($journal, 'Journal')) return AUTHORIZATION_DENY;
-
-		// Get the article
-		$article =& $this->getAuthorizedContextObject(ASSOC_TYPE_ARTICLE);
-		if (!is_a($article, 'Article')) return AUTHORIZATION_DENY;
+		// Get the section editor submission.
+		$sectionEditorSubmission =& $this->getAuthorizedContextObject(ASSOC_TYPE_ARTICLE);
+		if (!is_a($sectionEditorSubmission, 'SectionEditorSubmission')) return AUTHORIZATION_DENY;
 
 		// Section editors can only access submissions in their series
 		// that they have been explicitly assigned to.
 
 		// 1) Retrieve the edit assignments
 		$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
-		$editAssignments =& $editAssignmentDao->getEditAssignmentsByArticleId($article->getId());
+		$editAssignments =& $editAssignmentDao->getEditAssignmentsByArticleId($sectionEditorSubmission->getId());
 		if (!is_a($editAssignments, 'DAOResultFactory')) return AUTHORIZATION_DENY;
 		$editAssignmentsArray =& $editAssignments->toArray();
 

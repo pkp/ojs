@@ -30,13 +30,13 @@ class SectionEditorSubmissionRequiredPolicy extends SubmissionRequiredPolicy {
 	 * @see AuthorizationPolicy::effect()
 	 */
 	function effect() {
-		// Get the article id.
-		$articleId = $this->getSubmissionId();
-		if ($articleId === false) return AUTHORIZATION_DENY;
+		// Get the submission id.
+		$submissionId = $this->getSubmissionId();
+		if ($submissionId === false) return AUTHORIZATION_DENY;
 
-		// Validate the article id.
+		// Validate the section editor submission id.
 		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($submissionId);
 		if (!is_a($sectionEditorSubmission, 'SectionEditorSubmission')) return AUTHORIZATION_DENY;
 
 		// Check whether the article is actually part of the journal
@@ -47,7 +47,7 @@ class SectionEditorSubmissionRequiredPolicy extends SubmissionRequiredPolicy {
 		if (!is_a($journal, 'Journal')) return AUTHORIZATION_DENY;
 		if ($sectionEditorSubmission->getJournalId() != $journal->getId()) return AUTHORIZATION_DENY;
 
-		// Save the article to the authorization context.
+		// Save the section editor submission to the authorization context.
 		$this->addAuthorizedContextObject(ASSOC_TYPE_ARTICLE, $sectionEditorSubmission);
 		return AUTHORIZATION_PERMIT;
 	}

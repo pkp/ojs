@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup submission
+ * @defgroup submission_common
  */
 
 /**
@@ -11,12 +11,10 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Action
- * @ingroup submission
+ * @ingroup submission_common
  *
- * @brief Action class.
+ * @brief Application-specific submission actions.
  */
-
-// $Id$
 
 
 /* These constants correspond to editing decision "decision codes". */
@@ -39,19 +37,19 @@ define('SUBMISSION_FIELD_DATE_COPYEDIT_COMPLETE', 5);
 define('SUBMISSION_FIELD_DATE_LAYOUT_COMPLETE', 6);
 define('SUBMISSION_FIELD_DATE_PROOFREADING_COMPLETE', 7);
 
-class Action {
+import('lib.pkp.classes.submission.common.PKPAction');
 
+class Action extends PKPAction {
 	/**
 	 * Constructor.
 	 */
 	function Action() {
-
+		parent::PKPAction();
 	}
 
-	/**
-	 * Actions.
-	 */
-
+	//
+	// Actions.
+	//
 	/**
 	 * View metadata of an article.
 	 * @param $article object

@@ -25,38 +25,64 @@ class OjsSubmissionEditingPolicy extends OjsJournalPolicy {
 	function OjsSubmissionEditingPolicy(&$request, &$args, $roleAssignments, $submissionParameterName = 'articleId') {
 		parent::OjsJournalPolicy($request);
 
+		// Create a "permit overrides" policy set that specifies
+		// editor and copyeditor access to submissions.
+		$submissionEditingPolicy = new PolicySet(COMBINING_PERMIT_OVERRIDES);
+
+		//
+		// Editor roles (Editor and Section Editor) policy
+		//
+		$editorsPolicy = new PolicySet(COMBINING_DENY_OVERRIDES);
+
 		// Editorial components can only be called if there's a
 		// valid section editor submission in the request.
+		// FIXME: We should find a way to check whether the user actually
+		// is a (section) editor before we execute this expensive policy.
 		import('classes.security.authorization.SectionEditorSubmissionRequiredPolicy');
-		$this->addPolicy(new SectionEditorSubmissionRequiredPolicy($request, $args, $submissionParameterName));
+		$editorsPolicy->addPolicy(new SectionEditorSubmissionRequiredPolicy($request, $args, $submissionParameterName));
 
-		// Create an "allow overrides" policy set that specifies
-		// role-specific access to editorial components.
-		$editorialRolePolicy = new PolicySet(COMBINING_PERMIT_OVERRIDES);
+		$editorRolesPolicy = new PolicySet(COMBINING_PERMIT_OVERRIDES);
 
+		// Editors can access all operations.
+		$editorRolesPolicy->addPolicy(new RoleBasedHandlerOperationPolicy($request, ROLE_ID_EDITOR, $roleAssignments[ROLE_ID_EDITOR]));
 
-		//
-		// Editor role
-		//
-		// Editors can access all remote operations for all submissions.
-		$editorialRolePolicy->addPolicy(new RoleBasedHandlerOperationPolicy($request, ROLE_ID_EDITOR, $roleAssignments[ROLE_ID_EDITOR]));
-
-
-		//
-		// Section editor role
-		//
-		// 1) Series editors can access all remote operations ...
+		// Section editors
 		$sectionEditorPolicy = new PolicySet(COMBINING_DENY_OVERRIDES);
+		// 1) Section editors can access all remote operations ...
 		$sectionEditorPolicy->addPolicy(new RoleBasedHandlerOperationPolicy($request, ROLE_ID_SECTION_EDITOR, $roleAssignments[ROLE_ID_SECTION_EDITOR]));
 
 		// 2) ... but only if the requested submission has been explicitly assigned to them.
 		import('classes.security.authorization.SectionSubmissionAssignmentPolicy');
 		$sectionEditorPolicy->addPolicy(new SectionSubmissionAssignmentPolicy($request));
-		$editorialRolePolicy->addPolicy($sectionEditorPolicy);
+		$editorRolesPolicy->addPolicy($sectionEditorPolicy);
+
+		$editorsPolicy->addPolicy($editorRolesPolicy);
+
+		$submissionEditingPolicy->addPolicy($editorsPolicy);
 
 
-		// Add the role-specific policies to this policy set.
-		$this->addPolicy($editorialRolePolicy);
+		//
+		// Copyeditor policy
+		//
+		$copyeditorPolicy = new PolicySet(COMBINING_DENY_OVERRIDES);
+
+		// 1) Copyeditors can only access editorial components when a valid
+		//    copyeditor submission is in the request ...
+		import('classes.security.authorization.CopyeditorSubmissionRequiredPolicy');
+		$copyeditorPolicy->addPolicy(new CopyeditorSubmissionRequiredPolicy($request, $args, $submissionParameterName));
+
+		// 2) ... If that's the case then copyeditors can access all remote operations ...
+		$copyeditorPolicy->addPolicy(new RoleBasedHandlerOperationPolicy($request, ROLE_ID_COPYEDITOR, $roleAssignments[ROLE_ID_SECTION_EDITOR]));
+
+		// 3) ... but only if the requested submission has been explicitly assigned to them.
+		import('classes.security.authorization.CopyeditorSubmissionAssignmentPolicy');
+		$copyeditorPolicy->addPolicy(new CopyeditorSubmissionAssignmentPolicy($request));
+
+		$submissionEditingPolicy->addPolicy($copyeditorPolicy);
+
+
+		// Add the submission editing policies to this policy set.
+		$this->addPolicy($submissionEditingPolicy);
 	}
 }
 

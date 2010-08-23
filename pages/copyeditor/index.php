@@ -3,7 +3,7 @@
 /**
  * @defgroup pages_copyeditor
  */
- 
+
 /**
  * @file pages/copyeditor/index.php
  *
@@ -11,7 +11,7 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @ingroup pages_copyeditor
- * @brief Handle requests for copyeditor functions. 
+ * @brief Handle requests for copyeditor functions.
  *
  */
 
@@ -44,6 +44,10 @@ switch ($op) {
 	case 'viewMetadata':
 	case 'saveMetadata':
 	case 'removeArticleCoverPage':
+	//
+	// Citation Editing
+	//
+	case 'submissionCitations':
 		define('HANDLER_CLASS', 'SubmissionCopyeditHandler');
 		import('pages.copyeditor.SubmissionCopyeditHandler');
 		break;
@@ -56,7 +60,7 @@ switch ($op) {
 	case 'postCopyeditComment':
 	case 'editComment':
 	case 'saveComment':
-	case 'deleteComment':	
+	case 'deleteComment':
 		define('HANDLER_CLASS', 'SubmissionCommentsHandler');
 		import('pages.copyeditor.SubmissionCommentsHandler');
 		break;
