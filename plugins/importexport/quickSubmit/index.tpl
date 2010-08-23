@@ -24,6 +24,16 @@ function moveAuthor(dir, authorIndex) {
 	form.moveAuthorIndex.value = authorIndex;
 	form.submit();
 }
+
+// Update the required attribute of the abstract field
+function updateAbstractRequired() {
+	var a = {{/literal}{foreach from=$sectionAbstractsRequired key=rSectionId item=rAbstractRequired}{$rSectionId|escape}: {$rAbstractRequired|escape}, {/foreach}{literal}};
+	var selectedIndex = document.submit.sectionId.selectedIndex;
+	var sectionId = document.submit.sectionId.options[selectedIndex].value;
+	var abstractRequired = a[sectionId];
+	var e = document.getElementById("abstractRequiredAsterisk");
+	e.style.visibility = abstractRequired?"visible":"hidden";
+}
 // -->
 </script>
 {/literal}
@@ -93,6 +103,7 @@ function moveAuthor(dir, authorIndex) {
 			   of the interface. *}
 			{foreach from=$sectionOptions item=val key=key}
 				<input type="hidden" name="sectionId" value="{$key|escape}" />
+				{assign var=abstractRequired value=$sectionAbstractsRequired[$key]}
 			{/foreach}
 		{else}{* if count($sectionOptions) == 2 *}
 		<h4>{translate key="author.submit.journalSection"}</h4>
@@ -103,7 +114,7 @@ function moveAuthor(dir, authorIndex) {
 		<table class="data" width="100%">
 			<tr valign="top">	
 				<td width="30%" class="label">{fieldLabel name="sectionId" required="true" key="section.section"}</td>
-				<td width="70%" class="value"><select name="sectionId" id="sectionId" size="1" class="selectMenu">{html_options options=$sectionOptions selected=$sectionId}</select></td>
+				<td width="70%" class="value"><select name="sectionId" id="sectionId" size="1" class="selectMenu" onchange="updateAbstractRequired()">{html_options options=$sectionOptions selected=$sectionId}</select></td>
 			</tr>
 		</table>
 		
@@ -291,7 +302,11 @@ function moveAuthor(dir, authorIndex) {
 		</tr>
 		
 		<tr valign="top">
-			<td width="30%" class="label">{fieldLabel name="abstract" key="article.abstract"}</td>
+			{if $sectionAbstractsRequired[$sectionId]}
+				{* If a section is already chosen, respect the "required" flag *}
+				{assign var=abstractRequired value="true"}
+			{/if}
+			<td width="30%" class="label">{fieldLabel name="abstract" key="article.abstract" required=$abstractRequired}<span id="abstractRequiredAsterisk" style="visibility: hidden;">*</div></td>
 			<td width="70%" class="value"><textarea name="abstract[{$formLocale|escape}]" id="abstract" class="textArea" rows="15" cols="60">{$abstract[$formLocale]|escape}</textarea></td>
 		</tr>
 		</table>

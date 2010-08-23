@@ -59,7 +59,16 @@ class QuickSubmitForm extends Form {
 		$templateMgr->assign('journal', $journal);
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$templateMgr->assign('sectionOptions', array('0' => Locale::translate('author.submit.selectSection')) + $sectionDao->getSectionTitles($journal->getId()));
+		$sections =& $sectionDao->getJournalSections($journal->getId());
+		$sectionTitles = $sectionAbstractsRequired = array();
+		while ($section =& $sections->next()) {
+			$sectionTitles[$section->getId()] = $section->getLocalizedTitle();
+			$sectionAbstractsRequired[(int) $section->getId()] = (int) (!$section->getAbstractsNotRequired());
+			unset($section);
+		}
+
+		$templateMgr->assign('sectionOptions', array('0' => Locale::translate('author.submit.selectSection')) + $sectionTitles);
+		$templateMgr->assign('sectionAbstractsRequired', $sectionAbstractsRequired);
 
 		$countryDao =& DAORegistry::getDAO('CountryDAO');
 		$countries =& $countryDao->getCountries();
@@ -122,6 +131,12 @@ class QuickSubmitForm extends Form {
 				'abstract'
 			)
 		);
+
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$section =& $sectionDao->getSection($this->getData('sectionId'));
+		if ($section && !$section->getAbstractsNotRequired()) {
+			$this->addCheck(new FormValidatorLocale($this, 'abstract', 'required', 'author.submit.form.abstractRequired'));
+		}
 	}
 
 	/**
