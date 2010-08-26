@@ -330,11 +330,11 @@
 <div id="citationFilterSetupToggle" {if !$metaCitations}style="visible: none"{/if}>
 	<h4>{translate key="manager.setup.citationFilterParser"}</h4>
 	<p>{translate key="manager.setup.citationFilterParserDescription"}</p>
-	{load_url_in_div id="#parserFilterGridContainer" loadMessageId="manager.setup.filter.parser.grid.loadMessage" url="$parserFilterGridUrl"}
+	{load_url_in_div id="parserFilterGridContainer" loadMessageId="manager.setup.filter.parser.grid.loadMessage" url="$parserFilterGridUrl"}
 	
 	<h4>{translate key="manager.setup.citationFilterLookup"}</h4>
 	<p>{translate key="manager.setup.citationFilterLookupDescription"}</p>
-	{load_url_in_div id="#lookupFilterGridContainer" loadMessageId="manager.setup.filter.lookup.grid.loadMessage" url="$lookupFilterGridUrl"}
+	{load_url_in_div id="lookupFilterGridContainer" loadMessageId="manager.setup.filter.lookup.grid.loadMessage" url="$lookupFilterGridUrl"}
 	<h4>{translate key="manager.setup.citationOutput"}</h4>
 	<p>{translate key="manager.setup.citationOutputStyleDescription"}</p>
 	{fbvSelect id="metaCitationOutputFilterSelect" name="metaCitationOutputFilterId"
