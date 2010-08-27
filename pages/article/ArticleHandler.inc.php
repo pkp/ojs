@@ -334,7 +334,7 @@ class ArticleHandler extends Handler {
 			}
 		}
 
-		if (!HookRegistry::call('$this->viewFile', array(&$article, &$galley, &$fileId))) {
+		if (!HookRegistry::call('ArticleHandler::viewFile', array(&$article, &$galley, &$fileId))) {
 			import('classes.submission.common.Action');
 			Action::viewFile($article->getId(), $fileId);
 		}
