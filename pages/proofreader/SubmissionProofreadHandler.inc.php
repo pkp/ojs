@@ -80,13 +80,14 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		}		
 	}
 
-	function viewMetadata($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+	function viewMetadata($args, $request) {
+		$articleId = (int) array_shift($args);
+		$journal =& $request->getJournal();
 		$this->validate($articleId);
 		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId, 'summary');
 
-		ProofreaderAction::viewMetadata($submission, ROLE_ID_PROOFREADER);
+		ProofreaderAction::viewMetadata($submission, $journal);
 	}
 
 	/**

@@ -249,12 +249,13 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 	/**
 	 * Metadata functions.
 	 */
-	function viewMetadata($args) {
-		$articleId = $args[0];
+	function viewMetadata($args, $request) {
+		$articleId = (int) array_shift($args);
+		$journal =& $request->getJournal();
 		$this->validate($articleId);
 		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId, 'editing');
-		CopyeditorAction::viewMetadata($submission, ROLE_ID_COPYEDITOR);
+		CopyeditorAction::viewMetadata($submission, $journal);
 	}
 
 	function saveMetadata($args, &$request) {

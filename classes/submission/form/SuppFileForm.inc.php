@@ -32,8 +32,19 @@ class SuppFileForm extends Form {
 	 * @param $article object
 	 * @param $suppFileId int (optional)
 	 */
-	function SuppFileForm($article, $suppFileId = null) {
-		parent::Form('submission/suppFile/suppFile.tpl');
+	function SuppFileForm($article, $journal, $suppFileId = null) {
+		$supportedSubmissionLocales = $journal->getSetting('supportedSubmissionLocales');
+		if (empty($supportedSubmissionLocales)) $supportedSubmissionLocales = array($journal->getPrimaryLocale());
+
+		parent::Form(
+			'submission/suppFile/suppFile.tpl',
+			true,
+			$article->getLocale(),
+			array_flip(array_intersect(
+				array_flip(Locale::getAllLocales()),
+				$supportedSubmissionLocales
+			))
+		);
 
 		$this->article = $article;
 

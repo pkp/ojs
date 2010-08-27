@@ -33,10 +33,22 @@ class AuthorSubmitSuppFileForm extends Form {
 	/**
 	 * Constructor.
 	 * @param $article object
+	 * @param $journal object
 	 * @param $suppFileId int (optional)
 	 */
-	function AuthorSubmitSuppFileForm($article, $suppFileId = null) {
-		parent::Form('author/submit/suppFile.tpl');
+	function AuthorSubmitSuppFileForm(&$article, &$journal, $suppFileId = null) {
+		$supportedSubmissionLocales = $journal->getSetting('supportedSubmissionLocales');
+		if (empty($supportedSubmissionLocales)) $supportedSubmissionLocales = array($journal->getPrimaryLocale());
+
+		parent::Form(
+			'author/submit/suppFile.tpl',
+			true,
+			$article->getLocale(),
+			array_flip(array_intersect(
+				array_flip(Locale::getAllLocales()),
+				$supportedSubmissionLocales
+			))
+		);
 		$this->articleId = $article->getId();
 
 		if (isset($suppFileId) && !empty($suppFileId)) {
@@ -48,7 +60,7 @@ class AuthorSubmitSuppFileForm extends Form {
 		}
 
 		// Validation checks for this form
-		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'author.submit.suppFile.form.titleRequired'));
+		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'author.submit.suppFile.form.titleRequired', $this->getRequiredLocale()));
 		$this->addCheck(new FormValidatorPost($this));
 	}
 

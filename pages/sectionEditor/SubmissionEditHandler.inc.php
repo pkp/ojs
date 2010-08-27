@@ -840,14 +840,16 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 	}
 
-	function viewMetadata($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+	function viewMetadata($args, $request) {
+		$articleId = (int) array_shift($args);
+		$journal =& $request->getJournal();
+
 		$this->validate($articleId);
 		Locale::requireComponents(array(LOCALE_COMPONENT_OJS_AUTHOR));
 		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId, 'summary');
 
-		SectionEditorAction::viewMetadata($submission, ROLE_ID_SECTION_EDITOR);
+		SectionEditorAction::viewMetadata($submission, $journal);
 	}
 
 	function saveMetadata($args, &$request) {
@@ -1233,15 +1235,17 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 * Add a supplementary file.
 	 * @param $args array ($articleId)
 	 */
-	function addSuppFile($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+	function addSuppFile($args, $request) {
+		$articleId = (int) array_shift($args);
+		$journal =& $request->getJournal();
+
 		$this->validate($articleId);
 		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId, 'summary');
 
 		import('classes.submission.form.SuppFileForm');
 
-		$submitForm = new SuppFileForm($submission);
+		$submitForm = new SuppFileForm($submission, $journal);
 
 		if ($submitForm->isLocaleResubmit()) {
 			$submitForm->readInputData();
@@ -1255,16 +1259,18 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 * Edit a supplementary file.
 	 * @param $args array ($articleId, $suppFileId)
 	 */
-	function editSuppFile($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		$suppFileId = isset($args[1]) ? (int) $args[1] : 0;
+	function editSuppFile($args, $request) {
+		$articleId = (int) array_shift($args);
+		$suppFileId = (int) array_shift($args);
+		$journal =& $request->getJournal();
+
 		$this->validate($articleId);
 		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId, 'summary');
 
 		import('classes.submission.form.SuppFileForm');
 
-		$submitForm = new SuppFileForm($submission, $suppFileId);
+		$submitForm = new SuppFileForm($submission, $journal, $suppFileId);
 
 		if ($submitForm->isLocaleResubmit()) {
 			$submitForm->readInputData();
@@ -1298,17 +1304,18 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 * Save a supplementary file.
 	 * @param $args array ($suppFileId)
 	 */
-	function saveSuppFile($args) {
-		$articleId = Request::getUserVar('articleId');
+	function saveSuppFile($args, $request) {
+		$articleId = $request->getUserVar('articleId');
 		$this->validate($articleId);
 		$this->setupTemplate(true, $articleId, 'summary');
 		$submission =& $this->submission;
 
-		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
+		$suppFileId = (int) array_shift($args);
+		$journal =& $request->getJournal();
 
 		import('classes.submission.form.SuppFileForm');
 
-		$submitForm = new SuppFileForm($submission, $suppFileId);
+		$submitForm = new SuppFileForm($submission, $journal, $suppFileId);
 		$submitForm->readInputData();
 
 		if ($submitForm->validate()) {
@@ -1321,14 +1328,14 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$article =& $articleDao->getArticle($articleId);
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
 			foreach ($notificationUsers as $userRole) {
-				$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'layout');
+				$url = $request->url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'layout');
 				$notificationManager->createNotification(
 					$userRole['id'], 'notification.type.suppFileModified',
 					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_SUPP_FILE_MODIFIED
 				);
 			}
 
-			Request::redirect(null, null, $this->getFrom(), $articleId);
+			$request->redirect(null, null, $this->getFrom(), $articleId);
 		} else {
 			$submitForm->display();
 		}
@@ -1429,8 +1436,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	/**
 	 * Upload a layout file (either layout version, galley, or supp. file).
 	 */
-	function uploadLayoutFile() {
-		$layoutFileType = Request::getUserVar('layoutFileType');
+	function uploadLayoutFile($args, $request) {
+		$layoutFileType = $request->getUserVar('layoutFileType');
 		if ($layoutFileType == 'submission') {
 			$this->uploadLayoutVersion();
 
@@ -1438,10 +1445,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$this->uploadGalley('layoutFile');
 
 		} else if ($layoutFileType == 'supp') {
-			$this->uploadSuppFile('layoutFile');
+			$this->uploadSuppFile('layoutFile', $request);
 
 		} else {
-			Request::redirect(null, null, $this->getFrom(), Request::getUserVar('articleId'));
+			$request->redirect(null, null, $this->getFrom(), Request::getUserVar('articleId'));
 		}
 	}
 
@@ -1762,18 +1769,19 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	/**
 	 * Upload a new supplementary file.
 	 */
-	function uploadSuppFile($fileName = null) {
-		$articleId = Request::getUserVar('articleId');
+	function uploadSuppFile($fileName = null, $request) {
+		$articleId = $request->getUserVar('articleId');
 		$this->validate($articleId);
 		$submission =& $this->submission;
+		$journal =& $request->getJournal();
 
 		import('classes.submission.form.SuppFileForm');
 
-		$suppFileForm = new SuppFileForm($submission);
+		$suppFileForm = new SuppFileForm($submission, $journal);
 		$suppFileForm->setData('title', Locale::translate('common.untitled'));
 		$suppFileId = $suppFileForm->execute($fileName);
 
-		Request::redirect(null, null, 'editSuppFile', array($articleId, $suppFileId));
+		$request->redirect(null, null, 'editSuppFile', array($articleId, $suppFileId));
 	}
 
 	/**

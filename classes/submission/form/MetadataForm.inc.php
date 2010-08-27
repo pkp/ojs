@@ -31,7 +31,7 @@ class MetadataForm extends Form {
 	/**
 	 * Constructor.
 	 */
-	function MetadataForm($article) {
+	function MetadataForm($article, $journal) {
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 
@@ -66,8 +66,19 @@ class MetadataForm extends Form {
 		}
 
 		if ($this->canEdit) {
-			parent::Form('submission/metadata/metadataEdit.tpl');
-			$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'author.submit.form.titleRequired'));
+			$supportedSubmissionLocales = $journal->getSetting('supportedSubmissionLocales');
+			if (empty($supportedSubmissionLocales)) $supportedSubmissionLocales = array($journal->getPrimaryLocale());
+
+			parent::Form(
+				'submission/metadata/metadataEdit.tpl',
+				true,
+				$article->getLocale(),
+				array_flip(array_intersect(
+					array_flip(Locale::getAllLocales()),
+					$supportedSubmissionLocales
+				))
+			);
+			$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'author.submit.form.titleRequired', $this->getRequiredLocale(), $this->getSupportedLocales()));
 			$this->addCheck(new FormValidatorArray($this, 'authors', 'required', 'author.submit.form.authorRequiredFields', array('firstName', 'lastName')));
 			$this->addCheck(new FormValidatorArrayCustom($this, 'authors', 'required', 'author.submit.form.authorRequiredFields', create_function('$email, $regExp', 'return String::regexp_match($regExp, $email);'), array(ValidatorEmail::getRegexp()), false, array('email')));
 			$this->addCheck(new FormValidatorArrayCustom($this, 'authors', 'required', 'user.profile.form.urlInvalid', create_function('$url, $regExp', 'return empty($url) ? true : String::regexp_match($regExp, $url);'), array(ValidatorUrl::getRegexp()), false, array('url')));

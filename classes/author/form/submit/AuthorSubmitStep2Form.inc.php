@@ -22,8 +22,8 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 	/**
 	 * Constructor.
 	 */
-	function AuthorSubmitStep2Form($article) {
-		parent::AuthorSubmitForm($article, 2);
+	function AuthorSubmitStep2Form(&$article, &$journal) {
+		parent::AuthorSubmitForm($article, 2, $journal);
 
 		// Validation checks for this form
 	}

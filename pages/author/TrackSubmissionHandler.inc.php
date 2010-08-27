@@ -191,8 +191,10 @@ class TrackSubmissionHandler extends AuthorHandler {
 	 * Add a supplementary file.
 	 * @param $args array ($articleId)
 	 */
-	function addSuppFile($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+	function addSuppFile($args, $request) {
+		$articleId = (int) array_shift($args);
+		$journal =& $request->getJournal();
+
 		$this->validate($articleId);
 		$authorSubmission =& $this->submission;
 
@@ -201,7 +203,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 
 			import('classes.submission.form.SuppFileForm');
 
-			$submitForm = new SuppFileForm($authorSubmission);
+			$submitForm = new SuppFileForm($authorSubmission, $journal);
 
 			if ($submitForm->isLocaleResubmit()) {
 				$submitForm->readInputData();
@@ -210,7 +212,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 			}
 			$submitForm->display();
 		} else {
-			Request::redirect(null, null, 'submission', $articleId);
+			$request->redirect(null, null, 'submission', $articleId);
 		}
 	}
 
@@ -338,13 +340,14 @@ class TrackSubmissionHandler extends AuthorHandler {
 		Request::redirect(null, null, 'submissionReview', $articleId);
 	}
 
-	function viewMetadata($args) {
+	function viewMetadata($args, $request) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$journal =& $request->getJournal();
 		$this->validate($articleId);
 		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId, 'summary');
 
-		AuthorAction::viewMetadata($submission, ROLE_ID_AUTHOR);
+		AuthorAction::viewMetadata($submission, $journal);
 	}
 
 	function saveMetadata($args, &$request) {

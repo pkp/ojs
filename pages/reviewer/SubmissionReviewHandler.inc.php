@@ -144,16 +144,17 @@ class SubmissionReviewHandler extends ReviewerHandler {
 	 * View the submission metadata
 	 * @param $args array
 	 */
-	function viewMetadata($args) {
-		$reviewId = $args[0];
-		$articleId = $args[1];
+	function viewMetadata($args, $request) {
+		$reviewId = (int) array_shift($args);
+		$articleId = (int) array_shift($args);
+		$journal =& $request->getJournal();
 
 		$this->validate($reviewId);
 		$reviewerSubmission =& $this->submission;
 
 		$this->setupTemplate(true, $articleId, $reviewId);
 
-		ReviewerAction::viewMetadata($reviewerSubmission, ROLE_ID_REVIEWER);
+		ReviewerAction::viewMetadata($reviewerSubmission, $journal);
 	}
 
 	/**

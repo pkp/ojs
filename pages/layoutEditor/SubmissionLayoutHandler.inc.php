@@ -81,14 +81,15 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$templateMgr->display('layoutEditor/submission.tpl');
 	}
 
-	function viewMetadata($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+	function viewMetadata($args, $request) {
+		$articleId = (int) array_shift($args);
+		$journal =& $request->getJournal();
 		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 		$submission =& $submissionLayoutHandler->submission;
 		$this->setupTemplate(true, $articleId, 'summary');
 
-		LayoutEditorAction::viewMetadata($submission, ROLE_ID_LAYOUT_EDITOR);
+		LayoutEditorAction::viewMetadata($submission, $journal);
 	}
 
 	/**
@@ -114,16 +115,16 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	/**
 	 * Create a new layout file (layout version, galley, or supp file) with the uploaded file.
 	 */
-	function uploadLayoutFile() {
-		$articleId = Request::getUserVar('articleId');
+	function uploadLayoutFile($args, $request) {
+		$articleId = $request->getUserVar('articleId');
 		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 		$submission =& $submissionLayoutHandler->submission;
 
-		switch (Request::getUserVar('layoutFileType')) {
+		switch ($request->getUserVar('layoutFileType')) {
 			case 'submission':
 				LayoutEditorAction::uploadLayoutVersion($submission);
-				Request::redirect(null, null, 'submission', $articleId);
+				$request->redirect(null, null, 'submission', $articleId);
 				break;
 			case 'galley':
 				import('classes.submission.form.ArticleGalleyForm');
@@ -131,20 +132,20 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 				$galleyForm = new ArticleGalleyForm($articleId);
 				$galleyId = $galleyForm->execute('layoutFile');
 
-				Request::redirect(null, null, 'editGalley', array($articleId, $galleyId));
+				$request->redirect(null, null, 'editGalley', array($articleId, $galleyId));
 				break;
 			case 'supp':
 				import('classes.submission.form.SuppFileForm');
-
-				$suppFileForm = new SuppFileForm($submission);
+				$journal =& $request->getJournal();
+				$suppFileForm = new SuppFileForm($submission, $journal);
 				$suppFileForm->setData('title', Locale::translate('common.untitled'));
 				$suppFileId = $suppFileForm->execute('layoutFile');
 
-				Request::redirect(null, null, 'editSuppFile', array($articleId, $suppFileId));
+				$request->redirect(null, null, 'editSuppFile', array($articleId, $suppFileId));
 				break;
 			default:
 				// Invalid upload type.
-				Request::redirect(null, 'layoutEditor');
+				$request->redirect(null, 'layoutEditor');
 		}
 	}
 
@@ -359,9 +360,11 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	 * Edit a supplementary file.
 	 * @param $args array ($articleId, $suppFileId)
 	 */
-	function editSuppFile($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		$suppFileId = isset($args[1]) ? (int) $args[1] : 0;
+	function editSuppFile($args, $request) {
+		$articleId = (int) array_shift($args);
+		$suppFileId = (int) array_shift($args);
+		$journal =& $request->getJournal();
+
 		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 		$submission =& $submissionLayoutHandler->submission;
@@ -371,7 +374,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		if ($this->layoutEditingEnabled($submission)) {
 			import('classes.submission.form.SuppFileForm');
 
-			$submitForm = new SuppFileForm($submission, $suppFileId);
+			$submitForm = new SuppFileForm($submission, $journal, $suppFileId);
 
 			if ($submitForm->isLocaleResubmit()) {
 				$submitForm->readInputData();
@@ -379,15 +382,13 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 				$submitForm->initData();
 			}
 			$submitForm->display();
-
-
 		} else {
 			// View supplementary file only
 			$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
 			$suppFile =& $suppFileDao->getSuppFile($suppFileId, $articleId);
 
 			if (!isset($suppFile)) {
-				Request::redirect(null, null, 'submission', $articleId);
+				$request->redirect(null, null, 'submission', $articleId);
 			}
 
 			$templateMgr =& TemplateManager::getManager();
@@ -401,18 +402,19 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	 * Save a supplementary file.
 	 * @param $args array ($suppFileId)
 	 */
-	function saveSuppFile($args) {
-		$articleId = Request::getUserVar('articleId');
+	function saveSuppFile($args, $request) {
+		$articleId = $request->getUserVar('articleId');
 		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 		$submission =& $submissionLayoutHandler->submission;
 		$this->setupTemplate(true, $articleId, 'editing');
 
-		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
+		$suppFileId = (int) array_shift($args);
+		$journal =& $request->getJournal();
 
 		import('classes.submission.form.SuppFileForm');
 
-		$submitForm = new SuppFileForm($submission, $suppFileId);
+		$submitForm = new SuppFileForm($submission, $journal, $suppFileId);
 		$submitForm->readInputData();
 
 		if ($submitForm->validate()) {
@@ -425,15 +427,14 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			$article =& $articleDao->getArticle($articleId);
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
 			foreach ($notificationUsers as $userRole) {
-				$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'layout');
+				$url = $request->url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'layout');
 				$notificationManager->createNotification(
 					$userRole['id'], 'notification.type.suppFileModified',
 					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_SUPP_FILE_MODIFIED
 				);
 			}
 			
-			Request::redirect(null, null, 'submission', $articleId);
-
+			$request->redirect(null, null, 'submission', $articleId);
 		} else {
 			$submitForm->display();
 		}

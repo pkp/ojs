@@ -20,10 +20,8 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 	/**
 	 * Constructor.
 	 */
-	function AuthorSubmitStep1Form($article = null) {
-		parent::AuthorSubmitForm($article, 1);
-
-		$journal =& Request::getJournal();
+	function AuthorSubmitStep1Form(&$article, &$journal) {
+		parent::AuthorSubmitForm($article, 1, $journal);
 
 		// Validation checks for this form
 		$this->addCheck(new FormValidator($this, 'sectionId', 'required', 'author.submit.form.sectionRequired'));

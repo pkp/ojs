@@ -54,10 +54,10 @@ class Action extends PKPAction {
 	 * View metadata of an article.
 	 * @param $article object
 	 */
-	function viewMetadata($article, $roleId) {
+	function viewMetadata($article, $journal) {
 		if (!HookRegistry::call('Action::viewMetadata', array(&$article, &$roleId))) {
 			import('classes.submission.form.MetadataForm');
-			$metadataForm = new MetadataForm($article, $roleId);
+			$metadataForm = new MetadataForm($article, $journal);
 			if ($metadataForm->getCanEdit() && $metadataForm->isLocaleResubmit()) {
 				$metadataForm->readInputData();
 			} else {
@@ -76,7 +76,8 @@ class Action extends PKPAction {
 		$router =& $request->getRouter();
 		if (!HookRegistry::call('Action::saveMetadata', array(&$article))) {
 			import('classes.submission.form.MetadataForm');
-			$metadataForm = new MetadataForm($article);
+			$journal =& $request->getJournal();
+			$metadataForm = new MetadataForm($article, $journal);
 			$metadataForm->readInputData();
 
 			// Check for any special cases before trying to save
