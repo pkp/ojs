@@ -9,6 +9,7 @@
  * $Id$
  *}
 <?xml version="1.0" encoding="{$defaultCharset|escape}"?>
+<!-- plugins/generic/webFeed/templates/atom.tpl -->
 <feed xmlns="http://www.w3.org/2005/Atom">
 	{* required elements *}
 	<id>{url page="issue" op="feed"}</id>

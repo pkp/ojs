@@ -1,14 +1,15 @@
-<!-- templates/rtadmin/exportXml.tpl -->
+{**
+ * templates/rtadmin/exportXml.tpl
+ *
+ * Copyright (c) 2003-2010 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * XML reading tools export
+ *}
 
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE version SYSTEM "{$baseUrl}/rt/rt-version.dtd">
-
-<!--
-  * {$version->getKey()|escape}.xml
-  *
-  * Reading Tools version: {$version->getTitle()|escape} ({$version->getLocale()|escape})
-  -->
-
+<!-- templates/rtadmin/exportXml.tpl -->
 <version id="{$version->getKey()|escape}" locale="{$version->getLocale()|escape}">
 	<version_title>{$version->getTitle()|escape}</version_title>
 	<version_description>{$version->getDescription()|escape}</version_description>

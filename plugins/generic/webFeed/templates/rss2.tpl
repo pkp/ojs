@@ -9,6 +9,7 @@
  * $Id$
  *}
 <?xml version="1.0" encoding="{$defaultCharset|escape}"?>
+<!-- plugins/generic/webFeed/templates/rss2.tpl -->
 <rss version="2.0">
 	<channel>
 		{* required elements *}
