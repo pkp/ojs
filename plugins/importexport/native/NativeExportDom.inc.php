@@ -84,7 +84,7 @@ class NativeExportDom {
 
 		XMLCustomWriter::createChildWithText($doc, $root, 'date_published', NativeExportDom::formatDate($issue->getDatePublished()), false);
 
-		if (XMLCustomWriter::createChildWithText($doc, $root, 'access_date', NativeExportDom::formatDate($issue->getDatePublished()), false)==null) {
+		if (XMLCustomWriter::createChildWithText($doc, $root, 'access_date', NativeExportDom::formatDate($issue->getOpenAccessDate()), false)==null) {
 			// This may be an open access issue. Check and flag
 			// as necessary.
 
