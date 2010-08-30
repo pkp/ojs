@@ -55,7 +55,7 @@ class Action extends PKPAction {
 	 * @param $article object
 	 */
 	function viewMetadata($article, $journal) {
-		if (!HookRegistry::call('Action::viewMetadata', array(&$article, &$roleId))) {
+		if (!HookRegistry::call('Action::viewMetadata', array(&$article, &$journal))) {
 			import('classes.submission.form.MetadataForm');
 			$metadataForm = new MetadataForm($article, $journal);
 			if ($metadataForm->getCanEdit() && $metadataForm->isLocaleResubmit()) {
