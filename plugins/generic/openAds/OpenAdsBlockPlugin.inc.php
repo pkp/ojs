@@ -34,6 +34,14 @@ class OpenAdsBlockPlugin extends BlockPlugin {
 	}
 
 	/**
+	 * Get the symbolic name of this plugin
+	 * @return string
+	 */
+	function getName() {
+		return 'OpenAdsBlockPlugin';
+	}
+
+	/**
 	 * Get the display name of this plugin
 	 * @return string
 	 */

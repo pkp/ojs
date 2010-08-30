@@ -34,6 +34,15 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 		return true;
 	}
 
+	/**
+	 * Get the name of this plugin. The name must be unique within
+	 * its category.
+	 * @return String name of plugin
+	 */
+	function getName() {
+		return 'WebFeedGatewayPlugin';
+	}
+
 	function getDisplayName() {
 		return Locale::translate('plugins.generic.webfeed.displayName');
 	}

@@ -31,6 +31,15 @@ class AnnouncementFeedBlockPlugin extends BlockPlugin {
 	}
 
 	/**
+	 * Get the name of this plugin. The name must be unique within
+	 * its category.
+	 * @return String name of plugin
+	 */
+	function getName() {
+		return 'AnnouncementFeedBlockPlugin';
+	}
+
+	/**
 	 * Get the display name of this plugin.
 	 * @return String
 	 */

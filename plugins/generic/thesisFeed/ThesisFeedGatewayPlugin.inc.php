@@ -23,6 +23,15 @@ class ThesisFeedGatewayPlugin extends GatewayPlugin {
 	var $parentPluginName;
 
 	/**
+	 * Get the name of this plugin. The name must be unique within
+	 * its category.
+	 * @return String name of plugin
+	 */
+	function getName() {
+		return 'ThesisFeedGatewayPlugin';
+	}
+
+	/**
 	 * Constructor
 	 */
 	function ThesisFeedGatewayPlugin($parentPluginName) {

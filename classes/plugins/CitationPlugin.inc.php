@@ -28,8 +28,7 @@ class CitationPlugin extends Plugin {
 	 * @return String name of plugin
 	 */
 	function getName() {
-		// This should not be used as this is an abstract class
-		return 'CitationPlugin';
+		assert(false); // Should always be overridden
 	}
 
 	/**

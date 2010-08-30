@@ -50,7 +50,7 @@ class AuthPlugin extends Plugin {
 	 * @return string
 	 */
 	function getName() {
-		return 'auth';
+		assert(false); // Should always be overridden
 	}
 
 	/**

@@ -48,14 +48,14 @@ class PaymethodPlugin extends Plugin {
 	 * @return String name of plugin
 	 */
 	function getName() {
-		return 'PaymethodPlugin';
+		assert(false); // Should always be overridden
 	}
 
 	/**
 	 * Get a description of this plugin.
 	 */
 	function getDescription() {
-		return 'This is the base payment method plugin class. It contains no concrete implementation. Its functions must be overridden by subclasses to provide actual functionality.';
+		assert(false); // Should always be overridden
 	}
 
 	/**
@@ -66,7 +66,7 @@ class PaymethodPlugin extends Plugin {
 	}
 
 	function displayPaymentForm($queuedPaymentId, $key, &$queuedPayment) {
-		die('ABSTRACT METHOD');
+		assert(false); // Should always be overridden
 	}
 
 	function isConfigured() {

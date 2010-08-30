@@ -28,8 +28,7 @@ class ReportPlugin extends Plugin {
 	 * @return String name of plugin
 	 */
 	function getName() {
-		// This should not be used as this is an abstract class
-		return 'ReportPlugin';
+		assert(false); // Should always be overridden
 	}
 
 	/**
@@ -38,18 +37,14 @@ class ReportPlugin extends Plugin {
 	 * @return String
 	 */
 	function getDisplayName() {
-		// This name should never be displayed because child classes
-		// will override this method.
-		return 'Abstract Report Plugin';
+		assert(false); // Should always be overridden
 	}
 
 	/**
 	 * Get a description of the plugin.
 	 */
 	function getDescription() {
-		// This name should never be displayed because child classes
-		// will override this method.
-		return 'This is the ReportPlugin base class. Its functions can be overridden by subclasses to provide import/export functionality for various formats.';
+		assert(false); // Should always be overridden
 	}
 
 	/**

@@ -45,28 +45,28 @@ class OAIMetadataFormatPlugin extends Plugin {
 	 * @return String name of plugin
 	 */
 	function getName() {
-		return 'Base OAIMetadata plugin class: abstract function getName()';
+		assert(false); // Should always be overridden
 	}
 
 	/**
 	 * Get the display name for this plugin.
 	 */
 	function getDisplayName() {
-		return 'Base OAIMetadata plugin class: abstract function getDisplayName()';
+		assert(false); // Should always be overridden
 	}
 
 	/**
 	 * Get a description of this plugin.
 	 */
 	function getDescription() {
-		return 'Base OAIMetadata plugin class: abstract function getDescription()';
+		assert(false); // Should always be overridden
 	}
 
 	/**
 	 * Get the metadata prefix for this plugin's format.
 	 */
 	function getMetadataPrefix() {
-		return 'Base OAIMetadata plugin class: abstract function getMetadataPrefix()';
+		assert(false); // Should always be overridden
 	}
 
 	function getSchema() {
@@ -81,7 +81,7 @@ class OAIMetadataFormatPlugin extends Plugin {
 	 * Get a hold of the class that does the formatting.
 	 */
 	function getFormatClass() {
-		return 'Base OAIMetadata plugin class: abstract function getFormatClass()';
+		assert(false); // Should always be overridden
 	}
 
 	function callback_formatRequest($hookName, $args) {
