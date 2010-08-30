@@ -290,12 +290,6 @@ MEDLINE/PubMed, OLDMEDLINE, LOCATORplus, MEDLINEplus, ClinicalTrials.gov, DIRLIN
     <context_abbrev>اتاقهای گفتگوی آنلاین</context_abbrev>
     <context_description>در اینجا میتوانید به چندین اتاق گفتگوی آنلاین که به افزایش اطلاعات شما در زمینه تحقیقات علمی کمک می کند دسترسی داشته باشید.</context_description>
     <search>
-      <search_title>Liszt</search_title>
-      <search_description>این یک سرویس رایگان است که توسط تاپیکا میزبانی میشود و با شما امکان میدهد که گروههای مباحثه در زمینه بیولوژی را پیدا کرده و در آنها شرکت نموده و از طریق ایمیل با آنها در ارتباط باشید . </search_description>
-      <url>http://www.liszt.com/dir/?cid=191</url>
-      <search_url>http://www.liszt.com/search/?search_type=cat&amp;query={$formKeywords}</search_url>
-    </search>
-    <search>
       <search_title>مایند:بانک اطلاعاتی همایشها </search_title>
       <search_description>از این سرویس میتوانید برای جستجوی سازمانها و برنامه گذارانی که در زمینه کنفرانسها ٫ کنگره ها و همایشها و سمپوزیومها فعال هستند استفاده کنید.</search_description>
       <url>http://www.interdok.com/</url>

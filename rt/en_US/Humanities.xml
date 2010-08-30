@@ -604,13 +604,6 @@
 			<search_url>http://lists.village.virginia.edu/cgi-bin/AT-Humanistsearch.cgi?sp=sp&amp;searchButton.x=15&amp;searchButton.y=14&amp;search={$formKeywords}</search_url>
 			
 		</search>
-		<search>
-			<search_title>Liszt</search_title>
-			<search_description>Liszt, hosted by Topica, is a free service that allows you to find, manage and participate in email lists and discussion groups in humanities.</search_description>
-			<url>http://www.liszt.com/dir/?cid=0</url>
-			<search_url>http://lists.topica.com/search/?x=28&amp;y=5&amp;search_type=cat&amp;query={$formKeywords}</search_url>
-			
-		</search>
 	</context>
 	<context>
 		<context_title>Teaching files</context_title>

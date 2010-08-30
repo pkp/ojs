@@ -384,12 +384,6 @@ PKP OAI
       <search_url>http://search.eurekalert.org/e3/query.html?col=ev3rel&amp;qc=ev3rel&amp;qt={$formKeywords}</search_url>
     </search>
     <search>
-      <search_title>Liszt</search_title>
-      <search_description>این سرویس که به میزبانی شرکت تاپیکا ارایه می شود سرویسی رایگان برای عضویت و شرکت در گروه های مباحثه در زمینه علوم زیستی می باشد .</search_description>
-      <url>http://www.liszt.com/dir/?cid=0</url>
-      <search_url>http://www.liszt.com/search/?search_type=cat&amp;amp;query={$formKeywords}</search_url>
-    </search>
-    <search>
       <search_title>Mad Science Net: The 24-hour exploding laboratory</search_title>
       <search_description>این یک مجموعه بسیار جامع از منابع علمی است که به صورت 24 ساعته متخصصان آن به پرسش های شما پاسخ می دهند .</search_description>
       <url>http://www.madsci.org/</url>

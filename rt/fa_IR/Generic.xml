@@ -299,12 +299,6 @@ OCLC
 		<context_abbrev>محل های آنلاین</context_abbrev>
 		<context_description>محل های آنلاین را انتخاب کنید ، دسترسی آزاد و عمومی متن مطالعات تحقیقاتی روی سایت شما قرار می گیرد</context_description>
 		<search>
-			<search_title>Liszt</search_title>
-			<search_description>لیس زد تی که با تاپیکا هاست می شود یک سرویس آزاد است که به شما اجازه می دهد فهرست ایمیل ها را پیدا کنید، مدیریت کنید و در گروههای بحث در زمینه های متفاوت شرکت کنید </search_description>
-			<url>http://www.liszt.com/dir/?cid=0</url>
-			<search_url>http://www.liszt.com/search/?search_type=cat&amp;amp;query={$formKeywords}</search_url>
-		</search>
-		<search>
 			<search_title>MInd: the Meetings Index:نمایه ی جلسات</search_title>
 			<search_description>از این سرویس برای مشخص کردن و محلی کردن سازمان دهنده ها و حامیان برای کنفرانس ها، سمینارها، ملاقات ها، نشست ها، و همایش ها ( در آینده و گذشته) استفاده می شود.</search_description>
 			<url>http://www.interdok.com/</url>

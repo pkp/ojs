@@ -316,13 +316,6 @@
 			<search_url>http://www.medicalconferences.com/scripts/search_partner.pl?PID=234523&amp;L=&amp;Q_DATE_STARTD=-&amp;Q_DATE_STARTM=-&amp;Q_DATE_STARTY=-&amp;Q_DATE_ENDD=-&amp;Q_DATE_ENDM=-&amp;Q_DATE_ENDY=-&amp;x=4&amp;y=11&amp;&amp;K={$formKeywords}</search_url>
 			
 		</search>
-		<search>
-			<search_title>Liszt</search_title>
-			<search_description>Liszt, hosted by Topica, is a free service that allows you to find, manage and participate in email lists and discussion groups in Cognitive science.</search_description>
-			<url>http://www.liszt.com/dir/?cid=1564</url>
-			<search_url>http://www.liszt.com/search/?search_type=cat&amp;query={$formKeywords}</search_url>
-			
-		</search>
 	</context>
 	<context>
 		<context_title>Multimedia</context_title>

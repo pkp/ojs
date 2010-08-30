@@ -280,13 +280,6 @@ A més, el govern canadenc també ha creat una sèrie de portals que recopilen t
 		<context_description>En aquesta secció s&apos;ofereixen una sèrie de fòrums d&apos;accés lliure que poden enriquir el context dels estudis de recerca del vostre lloc.</context_description>
 
 		<search>
-			<search_title>Liszt</search_title>
-			<search_description>Liszt, allotjat a Topica, és un servei gratuït que permet la cerca, gestió i participació en llistes de distribució i grups de discussió de diverses matèries.</search_description>
-			<url>http://www.topica.com/</url>
-			<search_url>http://www.liszt.com/search/?search_type=cat&amp;amp;query={$formKeywords}</search_url>
-			
-		</search>
-		<search>
 			<search_title>MInd: the Meetings Index</search_title>
 			<search_description>Aquest servei permet contactar amb organitzadors i patrocinadors per a futures conferències, congressos, reunions i simpòsiums, i també consultar actes de conferències (tant futures com passades).</search_description>
 			<url>http://www.interdok.com/</url>

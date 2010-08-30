@@ -444,13 +444,6 @@
 			<search_url>http://ccgi.sociologyonline.force9.co.uk/cgi-bin/site/searchnews.pl?dosearch</search_url>
 			<search_post>match=keywords&amp;searchin=(All)&amp;author=(All)&amp;category=(All)&amp;newsfrom=(All)&amp;resultnumber=10&amp;sort=new&amp;multipage=on&amp;linkcompression=10&amp;highlight=on&amp;searchquery={$formKeywords}</search_post>			
 		</search>
-		<search>
-			<search_title>Liszt</search_title>
-			<search_description>Liszt, hosted by Topica, is a free service that allows you to find, manage and participate in email lists and discussion groups in social sciences.</search_description>
-			<url>http://www.liszt.com/dir/?cid=0</url>
-			<search_url>http://www.liszt.com/search/?search_type=cat&amp;amp;query={$formKeywords}</search_url>
-			
-		</search>
 	</context>
 	<context>
 		<context_title>Legal materials</context_title>

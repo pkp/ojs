@@ -219,12 +219,6 @@
     <context_abbrev>تالارهای گفتمان</context_abbrev>
     <context_description>در اینجا می توانید به تالار های گفتگوی رایگان اینترنتی دستیابی پیدا کنید که به کسترش اطلاعات عمومی شما در زمنیه های مختلف کمک کند . </context_description>
     <search>
-      <search_title>Liszt</search_title>
-      <search_description>این سرویس که به میزبانی شرکت تاپیکا ارایه می شود سرویسی رایگان برای عضویت و شرکت در گروه های مباحثه در زمینه علوم زیستی می باشد .</search_description>
-      <url>http://www.liszt.com/dir/?cid=0</url>
-      <search_url>http://www.liszt.com/search/?search_type=cat&amp;amp;query={$formKeywords}</search_url>
-    </search>
-    <search>
       <search_title>MInd: فهرست همایش ها</search_title>
       <search_description>از این سرویس می توانید برای آشنایی ویافتن مکان شرکت های برپا کننده همایش ها . کنفرانس ها و سمپوزیوم ها استفاده کنید .</search_description>
       <url>http://www.interdok.com/mind/</url>
