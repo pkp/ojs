@@ -25,7 +25,7 @@
 {literal}
 $(document).ready(function() {
 	{/literal}{foreach from=$sections key=sectionKey item=section}{literal}
-	setupTableDND("#issueToc-{/literal}{$sectionKey|escape}{/literal}", "{/literal}{url|escape:"jsparam" op=moveArticleToc escape=false}{literal}");
+	setupTableDND("#issueToc-{/literal}{$sectionKey|escape}{literal}", "{/literal}{url|escape:"jsparam" op=moveArticleToc escape=false}{literal}");
 	{/literal}{/foreach}{literal}
 });
 {/literal}
