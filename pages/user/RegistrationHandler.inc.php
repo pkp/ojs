@@ -44,7 +44,7 @@ class RegistrationHandler extends UserHandler {
 			if ($regForm->isLocaleResubmit()) {
 				$regForm->readInputData();
 			} else {
-				$regForm->initData($args, $request);
+				$regForm->initData();
 			}
 			$regForm->display();
 

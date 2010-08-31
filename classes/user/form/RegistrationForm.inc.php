@@ -136,14 +136,13 @@ class RegistrationForm extends Form {
 	/**
 	 * Initialize default data.
 	 */
-	function initData(&$args, &$request) {
+	function initData() {
 		$this->setData('registerAsReader', 1);
 		$this->setData('existingUser', $this->existingUser);
 		$this->setData('userLocales', array());
 		$this->setData('sendPassword', 1);
 		
 		$interestDao =& DAORegistry::getDAO('InterestDAO');
-		$context = $request->getContext();
 		$this->setData('existingInterests', implode(",", $interestDao->getAllUniqueInterests()));
 	}
 
