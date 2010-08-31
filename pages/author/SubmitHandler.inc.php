@@ -145,7 +145,7 @@ class SubmitHandler extends AuthorHandler {
 
 				case 4:
 					if ($request->getUserVar('submitUploadSuppFile')) {
-						SubmitHandler::submitUploadSuppFile();
+						SubmitHandler::submitUploadSuppFile(array(), $request);
 						return;
 					}
 					break;
@@ -212,7 +212,7 @@ class SubmitHandler extends AuthorHandler {
 
 		import('classes.author.form.submit.AuthorSubmitSuppFileForm');
 		$submitForm = new AuthorSubmitSuppFileForm($article, $journal);
-		$submitForm->setData('title', Locale::translate('common.untitled'));
+		$submitForm->setData('title', array($article->getLocale() => Locale::translate('common.untitled')));
 		$suppFileId = $submitForm->execute();
 
 		Request::redirect(null, null, 'submitSuppFile', $suppFileId, array('articleId' => $articleId));

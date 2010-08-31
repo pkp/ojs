@@ -1778,7 +1778,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		import('classes.submission.form.SuppFileForm');
 
 		$suppFileForm = new SuppFileForm($submission, $journal);
-		$suppFileForm->setData('title', Locale::translate('common.untitled'));
+		$suppFileForm->setData('title', array($submission->getLocale() => Locale::translate('common.untitled')));
 		$suppFileId = $suppFileForm->execute($fileName);
 
 		$request->redirect(null, null, 'editSuppFile', array($articleId, $suppFileId));
