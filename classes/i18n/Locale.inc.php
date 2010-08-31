@@ -145,6 +145,11 @@ class Locale extends PKPLocale {
 	 * @return string
 	 */
 	function getPrimaryLocale() {
+		static $locale;
+		if ($locale) return $locale;
+
+		if (defined('SESSION_DISABLE_INIT') || !Config::getVar('general', 'installed')) return $locale = LOCALE_DEFAULT;
+
 		$journal =& Request::getJournal();
 
 		if (isset($journal)) {
