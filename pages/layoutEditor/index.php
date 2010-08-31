@@ -31,8 +31,8 @@ switch ($op) {
 	case 'editIssue':
 	case 'removeCoverPage':
 	case 'removeStyleFile':
-		define('HANDLER_CLASS', 'EditorHandler');
-		import('pages.editor.EditorHandler');
+		define('HANDLER_CLASS', 'IssueManagementHandler');
+		import('pages.editor.IssueManagementHandler');
 		break;
 	case 'viewMetadata':
 	//
