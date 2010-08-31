@@ -59,7 +59,7 @@ class AuthPlugin extends Plugin {
 	 * @return string
 	 */
 	function getDisplayName() {
-		return 'Abstract Authentication Plugin';
+		assert(false); // Should always be overridden
 	}
 
 	/**
@@ -68,7 +68,7 @@ class AuthPlugin extends Plugin {
 	 * @return string
 	 */
 	function getDescription() {
-		'Authentication plugin base class';
+		assert(false); // Should always be overridden
 	}
 
 	/**
