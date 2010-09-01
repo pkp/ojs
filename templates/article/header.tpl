@@ -24,6 +24,7 @@
 	{include file="article/googlescholar.tpl"}
 	{call_hook name="Templates::Article::Header::Metadata"}
 
+	<link rel="stylesheet" href="http://localhost/dev/ojs/lib/pkp/styles/pkp.css" type="text/css" />
 	<link rel="stylesheet" href="{$baseUrl}/lib/pkp/styles/common.css" type="text/css" />
 	<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />
 	<link rel="stylesheet" href="{$baseUrl}/styles/articleView.css" type="text/css" />
@@ -103,7 +104,6 @@
 		{/if}
 	</div>
 {/if}
-
 
 <div id="main">
 

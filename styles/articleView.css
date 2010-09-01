@@ -29,6 +29,26 @@
 	padding: 1px 0px 1px 1px;
 }
 
+#articlePdf.fullscreen {
+	position: fixed;
+	width: 95%;
+	height: 95%;
+	left: 20px;
+	top: 10px;
+}
+
+#fullscreenShow {
+	display: none;
+	float: right;
+}
+
+#fullscreenHide {
+	display: none;
+	position: fixed;
+	bottom: 3px;
+	right: 3px;
+}
+
 #main h2 {
 	font-size: 1.0em;
 }

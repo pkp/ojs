@@ -10,23 +10,23 @@
  *}
 {include file="article/header.tpl"}
 
-<script type="text/javascript">
-	{literal}initPdfResize();{/literal}
-</script>
-
 {if $galley}
 	{if $galley->isHTMLGalley()}
 		{$galley->getHTMLContents()}
 	{elseif $galley->isPdfGalley()}
 		<div id="articlePdf" class="ui-widget-content">
-		{url|assign:"pdfUrl" op="viewFile" path=$articleId|to_array:$galley->getBestGalleyId($currentJournal)}
-		<object type="application/pdf" data="{$pdfUrl}" width="99%" height="99%">
-			{translate key="article.pdf.pluginMissing"}
-		</object>
-		<br /><br />
-		{* The target="_parent" is for the sake of iphones, which present scroll problems otherwise. *}
+			{url|assign:"pdfUrl" op="viewFile" path=$articleId|to_array:$galley->getBestGalleyId($currentJournal)}
+			<object id="pdfObject" type="application/pdf" data="{$pdfUrl}" width="99%" height="99%">
+				<div id="pluginMissing">{translate key="article.pdf.pluginMissing"}</div>
+			</object>
+			<br /><br />
+			{* The target="_parent" is for the sake of iphones, which present scroll problems otherwise. *}
 		</div>{* articlePdf *}
-		<p><a class="action" target="_parent" href="{url op="download" path=$articleId|to_array:$galley->getBestGalleyId($currentJournal)}">{translate key="article.pdf.download"}</a></p>
+		<p>
+			<a class="action" target="_parent" href="{url op="download" path=$articleId|to_array:$galley->getBestGalleyId($currentJournal)}">{translate key="article.pdf.download"}</a>
+			<a class="action" href="#" id="fullscreenShow">{translate key="common.fullscreen"}</a>
+			<a class="action" href="#" id="fullscreenHide">{translate key="common.fullscreenOff"}</a>
+		</p>
 	{/if}
 {else}
 	<div id="topBar">
