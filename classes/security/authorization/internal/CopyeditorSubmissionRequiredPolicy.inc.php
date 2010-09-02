@@ -20,7 +20,7 @@ class CopyeditorSubmissionRequiredPolicy extends SubmissionRequiredPolicy {
 	 * @param $request PKPRequest
 	 */
 	function CopyeditorSubmissionRequiredPolicy(&$request, &$args, $submissionParameterName = 'articleId') {
-		parent::SubmissionRequiredPolicy($request, $args, $submissionParameterName);
+		parent::SubmissionRequiredPolicy($request, $args, $submissionParameterName, 'user.authorization.invalidCopyditorSubmission');
 	}
 
 	//

@@ -24,7 +24,7 @@ class JournalPolicy extends PolicySet {
 
 		// Ensure that we have a journal in the context.
 		import('lib.pkp.classes.security.authorization.ContextRequiredPolicy');
-		$this->addPolicy(new ContextRequiredPolicy($request, 'No journal in context!'));
+		$this->addPolicy(new ContextRequiredPolicy($request, 'user.authorization.noJournal'));
 	}
 }
 
