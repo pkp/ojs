@@ -1,12 +1,12 @@
 <?php
 /**
- * @file classes/security/authorization/SectionEditorSubmissionRequiredPolicy.inc.php
+ * @file classes/security/authorization/internal/SectionEditorSubmissionRequiredPolicy.inc.php
  *
  * Copyright (c) 2000-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SectionEditorSubmissionRequiredPolicy
- * @ingroup security_authorization
+ * @ingroup security_authorization_internal
  *
  * @brief Policy that ensures that the request contains a valid section
  *  editor submission.
@@ -20,7 +20,7 @@ class SectionEditorSubmissionRequiredPolicy extends SubmissionRequiredPolicy {
 	 * @param $request PKPRequest
 	 */
 	function SectionEditorSubmissionRequiredPolicy(&$request, &$args, $submissionParameterName = 'articleId') {
-		parent::SubmissionRequiredPolicy($request, $args, $submissionParameterName, 'Invalid section editor submission or no section editor submission requested!');
+		parent::SubmissionRequiredPolicy($request, $args, $submissionParameterName, 'user.authorization.invalidSectionEditorSubmission');
 	}
 
 	//

@@ -1,12 +1,12 @@
 <?php
 /**
- * @file classes/security/authorization/CopyeditorSubmissionRequiredPolicy.inc.php
+ * @file classes/security/authorization/internal/CopyeditorSubmissionRequiredPolicy.inc.php
  *
  * Copyright (c) 2000-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CopyeditorSubmissionRequiredPolicy
- * @ingroup security_authorization
+ * @ingroup security_authorization_internal
  *
  * @brief Policy that ensures that the request contains a valid
  *  copyeditor submission.
@@ -20,7 +20,7 @@ class CopyeditorSubmissionRequiredPolicy extends SubmissionRequiredPolicy {
 	 * @param $request PKPRequest
 	 */
 	function CopyeditorSubmissionRequiredPolicy(&$request, &$args, $submissionParameterName = 'articleId') {
-		parent::SubmissionRequiredPolicy($request, $args, $submissionParameterName, 'Invalid section editor submission or no section editor submission requested!');
+		parent::SubmissionRequiredPolicy($request, $args, $submissionParameterName);
 	}
 
 	//
