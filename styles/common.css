@@ -9,6 +9,24 @@
  * $Id$
  */
 
+/*
+ * Notifications
+ * FIXME: (Re)move once OJS styles are consolidated with new styles and themes
+ */
+@import url("../lib/pkp/styles/themes/default/pnotify.css");
+
+.ui-pnotify-title {
+	font-size: 0.8em;
+}
+
+.ui-pnotify-text {
+	font-size: 0.6em;
+}
+
+.ui-pnotify-history-container .ui-pnotify-history-header {
+	font-size: 0.8em;
+}
+
 /**
  * Common HTML elements
  */
