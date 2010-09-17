@@ -62,6 +62,15 @@ class SuppFileForm extends Form {
 	}
 
 	/**
+	 * Get the default form locale.
+	 * @return string
+	 */
+	function getDefaultFormLocale() {
+		if ($this->article) return $this->article->getLocale();
+		return parent::getDefaultFormLocale();
+	}
+
+	/**
 	 * Get the names of fields for which data should be localized
 	 * @return array
 	 */

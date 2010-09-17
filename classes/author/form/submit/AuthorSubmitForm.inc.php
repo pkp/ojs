@@ -90,6 +90,15 @@ class AuthorSubmitForm extends Form {
 	}
 
 	/**
+	 * Get the default form locale.
+	 * @return string
+	 */
+	function getDefaultFormLocale() {
+		if ($this->article) return $this->article->getLocale();
+		return parent::getDefaultFormLocale();
+	}
+
+	/**
 	 * Automatically assign Section Editors to new submissions.
 	 * @param $article object
 	 * @return array of section editors

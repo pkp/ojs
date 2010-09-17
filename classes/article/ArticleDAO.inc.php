@@ -227,7 +227,7 @@ class ArticleDAO extends DAO {
 		$article->stampModified();
 		$this->update(
 			sprintf('UPDATE articles
-				SET
+				SET	locale = ?,
 					user_id = ?,
 					section_id = ?,
 					language = ?,
@@ -251,6 +251,7 @@ class ArticleDAO extends DAO {
 				WHERE article_id = ?',
 				$this->datetimeToDB($article->getDateSubmitted()), $this->datetimeToDB($article->getDateStatusModified()), $this->datetimeToDB($article->getLastModified())),
 			array(
+				$article->getLocale(),
 				$article->getUserId(),
 				$article->getSectionId(),
 				$article->getLanguage(),
