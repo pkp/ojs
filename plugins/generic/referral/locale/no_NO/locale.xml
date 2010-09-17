@@ -15,9 +15,6 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.referral.name">Programutvidelse for innkommende lenker</message>
 	<message key="plugins.generic.referral.description">Programutvidelsen for innkommende lenker holder oversikt over innkommende URLer som lenker til artikler (dvs. når en leser følger en ekstern lenke til en artikkel), slik at forfattere kan vedlikeholde og ev. publisere en automatisk oppdatert liste over innkommende lenker til en artikkel.</message>
-	<message key="plugins.generic.referral.enabled">Programutvidelse for innkommende lenker er slått på.</message>
-	<message key="plugins.generic.referral.disabled">Programutvidelse for innkommende lenker er slått av.</message>
-	
 	<message key="plugins.generic.referral.editReferral">Rediger innkommende lenke</message>
 	<message key="plugins.generic.referral.createReferral">Lag innkommende lenke</message>
 	<message key="plugins.generic.referral.referrals">Innkommende lenker</message>

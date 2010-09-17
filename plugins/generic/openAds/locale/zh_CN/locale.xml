@@ -18,9 +18,6 @@
 	<message key="plugins.generic.openads">OpenAds插件</message>
 	<message key="plugins.generic.openads.settings.description">使用这种形式来选择使用Openads的广告将在OJS显示每个潜在的位置区。</message>
 	<message key="plugins.generic.openads.manager.settings">设置</message>
-	<message key="plugins.generic.openads.enabled">OpenAds插件已开启。</message>
-	<message key="plugins.generic.openads.disabled">OpenAds插件已关闭。</message>
-
 	<message key="plugins.generic.openads.error.configFileNotFound">配置文件, {$filename}, 不能获取.</message>
 	<message key="plugins.generic.openads.error.missingParameter">至少需要有一个配置参数不能从OpenAds配置文件里读取。所需的参数是dbhost，给dbuser，dbpassword，dbname的，url_prefix和table_prefix.</message>
 	<message key="plugins.generic.openads.error.dbConnectionError">无法连接到OpenAds 数据库.</message>

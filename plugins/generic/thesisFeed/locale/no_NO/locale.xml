@@ -15,9 +15,6 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.thesisfeed.displayName">Programutvidelse for publisering av avhandlingssammendrag</message>
 	<message key="plugins.generic.thesisfeed.description">Denne programutvidelsen lager RSS/Atom web-publiseringsstrøm for avhandlingssammendrag.</message>
-	<message key="plugins.generic.thesisfeed.enabled">Programutvidelse for publisering av avhandlingssammendrag er slått på.</message>
-	<message key="plugins.generic.thesisfeed.disabled">Programutvidelse for publisering av avhandlingssammendrag er slått av.</message>
-
 	<message key="plugins.generic.thesisfeed.settings">Innstillinger</message>
 	<message key="plugins.generic.thesisfeed.settings.all">Vis publiseringslenker på alle sider i tidsskriftet.</message>
 	<message key="plugins.generic.thesisfeed.settings.homepage">Vis publiseringslenker bare på hjemmesiden og siden med avhandlingssammendrag.</message>

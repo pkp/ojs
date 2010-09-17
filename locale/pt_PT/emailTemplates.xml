@@ -1015,4 +1015,18 @@ Para visualizar ou editar esta subscrição, aceda à URL a seguir.
 URL: {$subscriptionUrl}</body>
 		<description>Esta mensagem notifica o Editor-Gestor que uma subscrição institucional foi renovada online. Oferece informações sobre a subscrição e um link para acesso rápido à mesma.</description>
 	</email_text>
+	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
+		<subject>Edição da Citação</subject>
+		<body>{$authorFirstName},
+
+Por favor indique as citações do seu artigo, {$articleTitle}:
+
+{$rawCitation}
+
+Obrigado!
+
+{$userFirstName}
+Editor, {$journalName}</body>
+		<description></description>
+	</email_text>
 </email_texts>

@@ -13,6 +13,6 @@
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.block.donation.displayName">Donation Block</message>
+	<message key="plugins.block.donation.displayName">Bloque de donativos</message>
 	<message key="plugins.block.donation.description">Este Complemento proporciona un vínculo en una barra lateral para aceptar donaciones.</message>
 </locale>

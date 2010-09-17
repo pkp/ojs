@@ -126,4 +126,5 @@ Sunt acceptate următoarele formate:
 	<message key="plugins.importexport.native.import.success">Import cu succes</message>
 	<message key="plugins.importexport.native.import.success.description">Importul s-a făcut cu succes. Elementele importate cu succes sunt listate mai jos.</message>
 
+	<message key="plugins.importexport.native.import.error.articleAuthorAffiliationLocaleUnsupported">A fost introdusă afilierea autorului "{$authorFullName}" al articolului "{$articleTitle}" din numărul "{$issueTitle}" în localizarea ("{$locale}") pe care această revistă nu o suportă.</message>
 </locale>

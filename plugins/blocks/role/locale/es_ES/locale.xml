@@ -13,6 +13,6 @@
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.block.role.displayName">Role-Specific Block</message>
-	<message key="plugins.block.role.description">Este Complemento proporciona un bloque lateral de información de usuario, tal como número de envíos, y algunos vínculos de acceso frecuente para los Editores, Autores, ...</message>
+	<message key="plugins.block.role.displayName">Bloque de Roles</message>
+	<message key="plugins.block.role.description">Este plugin ofrece un bloque en la barra lateral que contiene información de las funciones específicas de roles como el recuento de presentaciones y enlaces rápidos para los Editores, Autores, etc</message>
 </locale>

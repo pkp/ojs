@@ -18,8 +18,6 @@
 	<message key="plugins.generic.phpmv.displayName">Modulul phpMyVisites</message>
 	<message key="plugins.generic.phpmv.description"><![CDATA[Integrează OJS cu phpMyVisites: o aplicaţie open source pentru analiza traficului pe site. Necesită instalarea deja a lui phpMyVisites. Vedeţi <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">siteul phpMyVisites</a> pentru mai multe informaţii.]]></message>
 
-	<message key="plugins.generic.phpmv.enabled">Modulul phpMyVisites a fost activat.</message>
-	<message key="plugins.generic.phpmv.disabled">Modulul phpMyVisites a fost dezactivat.</message>
 	<!-- phpMyVisites Settings Management -->
 	<message key="plugins.generic.phpmv.manager.settings">Setări</message>
 	<message key="plugins.generic.phpmv.manager.phpmvSettings">Setările pentru phpMyVisites</message>

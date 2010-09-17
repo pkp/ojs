@@ -13,12 +13,12 @@
   -->
  
 <locale name="pt_BR" full_name="Português do Brasil">
-	<message key="plugins.importexport.users.displayName">Plugin Usuários em XML</message>
-	<message key="plugins.importexport.users.description">Importar e exportar usuários no formato XML</message>
+	<message key="plugins.importexport.users.displayName">Usuários em XML</message>
+	<message key="plugins.importexport.users.description">Importar e exportar cadastros no formato XML</message>
 
 	<message key="plugins.importexport.users.cliUsage">Uso: {$scriptName} {$pluginName} [comando] ...
 Comandos:
-	import [xmlFileName] [journal_path] [optional flags]
+	import [xmlFileName] [journal_path] [flags opcionais]
 	export [xmlFileName] [journal_path]
 	export [xmlFileName] [journal_path] [role_path1] [role_path2] ...
 
@@ -28,26 +28,26 @@ Flags opcionais:
 	send_notify: Caso especificado, enviar e-mails de notificação contendo login 
 		e senha para usuários importados
 
-Examples:
-	Import users into myJournal from myImportFile.xml, continuing on error:
-	{$scriptName} {$pluginName} import myImportFile.xml myJournal continue_on_error
+Exemplos:
+	Importar cadastros para MinhaRevista do arquivo meuArquivoImportacao.xml, continuando a importação em caso de erro:
+	{$scriptName} {$pluginName} import meuArquivoImportacao.xml MinhaRevista continue_on_error
 
-	Export all users from myJournal:
-	{$scriptName} {$pluginName} export myExportFile.xml myJournal
+	Exportar todos os cadastros de MinhaRevista:
+	{$scriptName} {$pluginName} export meuArquivoExportacao.xml MinhaRevista
 
-	Export all users registered as reviewers, along with their reviewer roles only:
-	{$scriptName} {$pluginName} export myExportFile.xml myJournal reviewer</message>
-	<message key="plugins.importexport.users.import.importUsers">Importar Cadastros</message>
+	Exportar todos os cadastros com papel de avaliador, com o papel de avaliador apenas:
+	{$scriptName} {$pluginName} export avaliadores.xml MinhaRevista reviewer</message>
+	<message key="plugins.importexport.users.import.importUsers">Importar cadastros</message>
 	<message key="plugins.importexport.users.import.instructions"><![CDATA[Escolha um documento XML contendo as informações de cadastro para importação nesta revista. Veja a ajuda do sistema para detalhes sobre o formato do documento.<br /><br />Caso o documento possua logins ou e-mails já cadastrados no sistema, os dados cadastrais não serão importados e quaisquer funções adicionais serão designadas aos cadastros existentes.]]></message>
 	<message key="plugins.importexport.users.import.failedToImportUser">Falha na importação de cadastro</message>
-	<message key="plugins.importexport.users.import.failedToImportRole">Falha ao designar função ao cadastro</message>
-	<message key="plugins.importexport.users.import.dataFile">Arquivo de dados do Usuário</message>
-	<message key="plugins.importexport.users.import.sendNotify">Enviar notificação via e-mail para cada cadastro importado, com login e senha do usuário.</message>
+	<message key="plugins.importexport.users.import.failedToImportRole">Falha ao designar papel ao cadastro</message>
+	<message key="plugins.importexport.users.import.dataFile">Arquivo de cadastro</message>
+	<message key="plugins.importexport.users.import.sendNotify">Enviar notificação via e-mail para cada cadastro importado, com login e senha respectivo.</message>
 	<message key="plugins.importexport.users.import.continueOnError">Continuar a importação de outros cadastros caso ocorra uma falha.</message>
 	<message key="plugins.importexport.users.import.noFileError">Nenhum arquivo enviado!</message>
 	<message key="plugins.importexport.users.import.usersWereImported">Os seguintes cadastros foram importados com sucesso para o sistema</message>
 	<message key="plugins.importexport.users.import.errorsOccurred">Erros ocorridos durante a importação</message>
-	<message key="plugins.importexport.users.import.confirmUsers">Deseja importar os usuários listados para o sistema</message>
+	<message key="plugins.importexport.users.import.confirmUsers">Deseja importar os cadastros listados para o sistema</message>
 	<message key="plugins.importexport.users.unknownJournal">Caminho da revista inválido</message>
 
 	<message key="plugins.importexport.users.export.exportUsers">Exportar cadastros</message>
@@ -56,5 +56,5 @@ Examples:
 	<message key="plugins.importexport.users.export.errorsOccurred">Error ocorridos durante a exportação</message>
 	<message key="plugins.importexport.users.export.couldNotWriteFile">Não foi possível escrever para o arquivo</message>
 	<message key="plugins.importexport.users.import.warning">Aviso</message>
-	<message key="plugins.importexport.users.import.encryptionMismatch">Não é possível usar senhas criptografadas com o algoritmo {$importHash}; o sistema está configurado para utilizar o algoritmo {$ojsHash}. Caso continue, será necessário recriar todas as senhas de usuários importados.</message>
+	<message key="plugins.importexport.users.import.encryptionMismatch">Não é possível usar senhas criptografadas com o algoritmo {$importHash}; o sistema está configurado para utilizar o algoritmo {$ojsHash}. Caso continue, será necessário recriar todas as senhas de cadastros importados.</message>
 </locale>

@@ -13,12 +13,12 @@
  -->
  
 <locale name="pt_BR" full_name="Português do Brasil">
-	<message key="plugins.paymethod.manual.displayName">Plugin de Pagamento Manual</message>
+	<message key="plugins.paymethod.manual.displayName">Controle de pagamento manual</message>
 	<message key="plugins.paymethod.manual.description">O responsável registrará o recebimento do pagamento pelo usuário.</message>
 	<message key="plugins.paymethod.manual">Registro de pagamento</message>
-	<message key="plugins.paymethod.manual.settings">Configurações para Pagamento Manual</message>
+	<message key="plugins.paymethod.manual.settings">Configurações para controle de pagamento</message>
 	<message key="plugins.paymethod.manual.settings.instructions">Instruções</message>
-	<message key="plugins.paymethod.manual.settings.manualInstructions">Instruções para usuários que escolhem o Método de Pagamento Manual</message>
+	<message key="plugins.paymethod.manual.settings.manualInstructions">Instruções para usuários que escolhem o método de pagamento manual</message>
 	<message key="plugins.paymethod.manual.purchase.title">Título</message>
 	<message key="plugins.paymethod.manual.purchase.fee">Taxa</message>
 	<message key="plugins.paymethod.manual.sendNotificationOfPayment">Enviar notificação de pagamento</message>

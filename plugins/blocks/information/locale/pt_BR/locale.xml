@@ -13,7 +13,7 @@
   -->
  
 <locale name="pt_BR" full_name="Português do Brasil">
-	<message key="plugins.block.information.displayName">Plugin Bloco de Informações</message>
-	<message key="plugins.block.information.description">Este plugin oferece links para informações na barra lateral.</message>
+	<message key="plugins.block.information.displayName">Informações por público</message>
+	<message key="plugins.block.information.description">Este plugin oferece links para informações por público-alvo na barra lateral.</message>
 	<message key="plugins.block.information.link">Informações</message>
 </locale>

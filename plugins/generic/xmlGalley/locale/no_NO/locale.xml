@@ -15,9 +15,6 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.xmlGalley.displayName">Programutvidelse for XML korrekturutgave</message>
 	<message key="plugins.generic.xmlGalley.description">Denne programutvidelsen lager XHTML-korrekturutgaver av en XML-artikkel ved bruk av XSLT.</message>
-	<message key="plugins.generic.xmlGalley.enabled">Programutvidelsen for XML korrekturutgave er slått på.</message>
-	<message key="plugins.generic.xmlGalley.disabled">Programutvidelsen for XML korrekturutgave er slått av.</message>
-
 	<message key="plugins.generic.xmlGalley.manager.settings">Innstillinger</message>
 
 	<!-- XML Article Galleys Settings Management -->

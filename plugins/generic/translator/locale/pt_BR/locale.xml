@@ -13,9 +13,9 @@
   -->
  
 <locale name="pt_BR" full_name="Português do Brasil">
-	<message key="plugins.generic.translator.name">Plugin de Tradução</message>
-	<message key="plugins.generic.translator.description">Este plugin permite a manutenção, via browser, dos arquivos de tradução.</message>
-	<message key="plugins.generic.translator.longdescription">Esta área permite ao Administrador do Portal construir, modificar e verificar as traduções do Sistema. Isto permeia todo o sistema e não deve ser usado para customizar uma única instalação. Se você corrigir ou criar uma tradução, por favor, envie-a ao Public Knowledge Project para distribuiçãp em versões futuras.</message>
+	<message key="plugins.generic.translator.name">Tradução de idiomas</message>
+	<message key="plugins.generic.translator.description">Este plugin permite a manutenção, via Web, dos arquivos de tradução.</message>
+	<message key="plugins.generic.translator.longdescription">Esta área permite ao administrador do portal construir, modificar e verificar as traduções do sistema. Isto permeia todo o sistema e não deve ser usado para personalizar uma única instalação. Se você corrigir ou criar uma tradução, por favor, envie-a ao Public Knowledge Project para distribuição em versões futuras.</message>
 	<message key="plugins.generic.translator.localeDescription">Esta página lista todos os componentes de tradução do sistema e permite ao tradutor a oportunidade de editar cada um deles. Uma tradução deve conter traduções completas de todos estes componentes.</message>
 
 	<message key="plugins.generic.translator.localeName">Nome do idioma</message>
@@ -35,10 +35,10 @@
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.title">E-mails excedentes</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.title">Lista de parâmetros de e-mail diferentes</message>
 
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.message">A chave "{$key}" está faltando no arquivo "{$filename}". A versão em Inglês será oferecida como padrão.</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.message">A chave "{$key}" está faltando no arquivo "{$filename}". A versão em inglês será oferecida como padrão.</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.message">A chave "{$key}" não é mais usada e pode ser excluída de "{$filename}".</message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.message">O conteúdo de "{$key}" em "{$filename}" difere conteúdo da referência no uso de parâmetros. Verifique novamente se todos os parâmetros relevantes estão considerados. Os parâmetros que não coincidem são:</message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.message">O arquivo de idioma "{$filename}" está faltando ou não está acessível para leitura.</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.message">O conteúdo de "{$key}" em "{$filename}" difere do conteúdo da referência no uso de parâmetros. Verifique novamente se todos os parâmetros relevantes estão considerados. Os parâmetros que não coincidem são:</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.message">O arquivo de idioma "{$filename}" está faltando ou está sem permissão de leitura.</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.message">A mensagem de e-mail "{$key}" está faltando no arquivo de tradução.</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.message">A mensagem de e-mail "{$key}" não é mais utilizada e pode ser removida.</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.message">A mensagem de e-mail "{$key}" difere do conteúdo da mensagem de referência no uso de parâmetros. Verifique novamente se todos os parâmetros relevantes estão considerados. Os parâmetros que não coincidem são:</message>
@@ -54,20 +54,21 @@
 	<message key="plugins.generic.translator.file.translation">Tradução</message>
 	<message key="plugins.generic.translator.email.reference">Conteúdo de referência</message>
 	<message key="plugins.generic.translator.email.translation">Tradução</message>
-	<message key="plugins.generic.translator.file.reset">Restabelecer</message>
-	<message key="plugins.generic.translator.file.resetToReference">Restabelecer para o valor de referência</message>
-	<message key="plugins.generic.translator.email.reset">Restabelecer</message>
-	<message key="plugins.generic.translator.email.resetToReference">Restabelecer para o valor de referência</message>
-	<message key="plugins.generic.translator.file.resetConfirm">Deseja realmente restabelecer o conteúdo do arquivo para os valores originais?</message>
-	<message key="plugins.generic.translator.email.resetConfirm">Deseja realmente restabelecer o conteúdo dos e-mails para os valores originais?</message>
+	<message key="plugins.generic.translator.file.reset">Restaurar</message>
+	<message key="plugins.generic.translator.file.resetToReference">Restaurar para o valor de referência</message>
+	<message key="plugins.generic.translator.email.reset">Restaurar</message>
+	<message key="plugins.generic.translator.email.resetToReference">Restaurar para o valor de referência</message>
+	<message key="plugins.generic.translator.file.resetConfirm">Deseja realmente restaurar o conteúdo do arquivo para os valores originais?</message>
+	<message key="plugins.generic.translator.email.resetConfirm">Deseja realmente restaurar o conteúdo dos e-mails para os valores originais?</message>
 	<message key="plugins.generic.translator.file.doesNotExistNote">* O arquivo ainda não foi traduzido</message>
-	<message key="plugins.generic.translator.file.confirmCreate">O arquivo "{$filename}" será criado usando a versão em Inglês; você precisará traduzir todo o texto do arquivo. Deseja continuar?</message>
-	<message key="plugins.generic.translator.email.description">Nos campos abaixo, traduza o Título, Corpo e Descrição, padrões do e-mail. A Descrição é apenas uma referência para o Editor-Gerente.</message>
+	<message key="plugins.generic.translator.file.confirmCreate">O arquivo "{$filename}" será criado usando a versão em inglês; você precisará traduzir todo o texto do arquivo. Deseja continuar?</message>
+	<message key="plugins.generic.translator.email.description">Nos campos abaixo do modelo de mensagem, traduza o Título, Corpo e Descrição. A Descrição é apenas uma referência para o editor-gerente.</message>
 	<message key="plugins.generic.translator.confirmDelete">Deseja realmente excluir este item? Esta ação é irreversível.</message>
 	<message key="plugins.generic.translator.deleteKey">Excluir chave</message>
 	<message key="plugins.generic.translator.deleteEmail">Excluir e-mail</message>
-	<message key="plugins.generic.translator.saveBeforeContinuing">Certifique-se de salvar qualquer alteração efetuada nesta página antes de continuar ou elas serão perdidas. Deseja continuar? Se sim, quaisquer mudança não salva será perdida.</message>
+	<message key="plugins.generic.translator.saveBeforeContinuing">Certifique-se de salvar qualquer alteração efetuada nesta página antes de continuar ou elas serão perdidas. Deseja continuar? Se sim, quaisquer alterações não salvas serão perdidas.</message>
 	<message key="plugins.generic.translator.localeKey.description">Digite uma chave de tradução completa para pesquisar.</message>
 	<message key="plugins.generic.translator.fileNotWriteable">Este arquivo de tradução não possui permissão de escrita. Quaisquer alterações realizadas não serão salvas.</message>
 	<message key="plugins.generic.translator.filesNotWriteable">Os seguintes arquivos de tradução não possuem permissão de escrita. Quaisquer alterações realizadas não serão salvas.</message>
+	<message key="plugins.generic.translator.tarMissing">A função de exportação deste plugin foi desativada devido à indisponibilidade do binário tar no seu servidor. Certifique-se que o aplicativo tar esteja instalado e em seguida configure o caminho para o binário do tar na seção [cli] do arquivo config.inc.php.</message>
 </locale>

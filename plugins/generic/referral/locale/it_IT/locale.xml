@@ -13,11 +13,8 @@
   -->
  
 <locale name="en_US" full_name="U.S. English">
-	<message key="plugins.generic.referral.name">Plugin del Referral</message>
+	<message key="plugins.generic.referral.name">Referral</message>
 	<message key="plugins.generic.referral.description">Questo plugin tiene traccia delle URL che referenziano l'articolo (cioè, da quale URL esterna arrivano i lettori), permettendo agli autori di mantenete e potenzialmente pubblicare una lista delle URL che citano un articolo</message>
-	<message key="plugins.generic.referral.enabled"><![CDATA[Il plugin Referral &#232; stato abilitato.]]></message>
-	<message key="plugins.generic.referral.disabled"><![CDATA[Il plugin Referral &#232; stato disabilitato.]]></message>
-	
 	<message key="plugins.generic.referral.editReferral">Modifica il Refback</message>
 	<message key="plugins.generic.referral.createReferral">Crea un Refback</message>
 	<message key="plugins.generic.referral.referrals">Refback</message>
@@ -34,4 +31,8 @@
 	<message key="plugins.generic.referral.confirmDelete">Sei sicuro di voler cancellare questo refback?</message>
 	<message key="plugins.generic.referral.nameRequired">Inserisci un nome per il refback.</message>
 	<message key="plugins.generic.referral.urlRequired">Inserisci la URL del refback.</message>
+	<message key="plugins.generic.referral.excusions">Esclusioni</message>
+	<message key="plugins.generic.referral.settings">Impostazioni del plugin dei referral</message>
+	<message key="plugins.generic.referral.settings.description">Il plugin dei referral cattura le URL che linkano un articolo pubblicato in questa rivista, in maniera che possano essere verificate dall'autore ed eventualmente pubblicate. Questo modulo permette all'amministratore della rivista di controllare in che modo tali link vengano catturati.</message>
+	<message key="plugins.generic.referral.exclusions.description"><![CDATA[Inserisci una lista di pattern di espressioni regolari, una per riga, da escludere nel plugin dei referral. Questa funzione può essere utilizzata per escludere le richieste dei motori di ricerca dalla lista. Per maggiori informazioni sulle espressioni regolari, vedi per esempio <a href="http://php.html.it/articoli/leggi/851/espressioni-regolari/">http://php.html.it/articoli/leggi/851/espressioni-regolari/</a>.]]></message>
 </locale>

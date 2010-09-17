@@ -137,7 +137,7 @@
 
 		4. 格式化
 		以「这个最新主题...」开头的段落没有缩排]]</message>
-	<message key="default.journalSettings.emailSignature">－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+	<message key="default.journalSettings.emailSignature">________________________________________________________________________
 {$journalName}
 {$indexUrl}/{$journalPath}</message>
 	<message key="default.journalSettings.forReaders"><![CDATA[我们鼓励为这个杂志读者签署的出版通知服务，Use the <a href="{$indexUrl}/{$journalPath}/user/register">Register</a> link at the top of the homepage for the journal. This registration will result in the reader receiving the Table of Contents by email for each new issue of the journal. This list also allows the journal to claim a certain level of support or readership. See the journal's <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Privacy Statement</a> which assures readers that their name and email address will not be used for other purposes.]]></message>

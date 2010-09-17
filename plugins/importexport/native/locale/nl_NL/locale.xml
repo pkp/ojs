@@ -126,4 +126,5 @@ De follgende formaten worden geaccepteerd:
 	<message key="plugins.importexport.native.import.success">Import gelukt</message>
 	<message key="plugins.importexport.native.import.success.description">De import is gelukt. De geïmporteerde items worden hieronder getoond.</message>
 
+	<message key="plugins.importexport.native.import.error.articleAuthorAffiliationLocaleUnsupported">Een auteurs-affilitatie van auteur "{$authorFullName}" voor artikel "{$articleTitle}" in nummer "{$issueTitle}" heeft een taal ("{$locale}") die niet door dit tijdschrift wordt ondersteund.</message>
 </locale>

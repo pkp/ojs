@@ -17,9 +17,6 @@
 	<!-- Google Analytics -->
 	<message key="plugins.generic.googleAnalytics.displayName">Google Analytics插件</message>
 	<message key="plugins.generic.googleAnalytics.description"><![CDATA[OJS与Google Analytics（网站流量分析应用）整合。要求你已经设置一个Google Analytics帐户。请到 <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics site</a> 了解更多信息.]]></message>
-	<message key="plugins.generic.googleAnalytics.enabled">Google Analytics插件已开启。</message>
-	<message key="plugins.generic.googleAnalytics.disabled">Google Analytics插件已关闭。</message>
-
 	<!-- Google Analytics Settings Management -->
 	<message key="plugins.generic.googleAnalytics.manager.settings">设置</message>
 	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">Google Analytics 设置</message>
@@ -31,4 +28,6 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">请选择一个跟踪代码使用。</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">旧版跟踪代码(urchin.js)</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.ga">新跟踪代码 (ga.js)</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount">Google Analytics账户编号</message>
+	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">为投稿作者输入一个或者多个Google Analytics账户编号是无效的</message>
 </locale>

@@ -16,4 +16,5 @@
 	<message key="plugins.citationFormats.mla.displayName">MLA-Zitationsformat-Plug-In</message>
 	<message key="plugins.citationFormats.mla.citationFormatName">MLA</message>
 	<message key="plugins.citationFormats.mla.description">Dieses Plug-In implementiert das MLA-Zitationsformat.</message>
+	<message key="plugins.citationFormats.mla.noPages">S.</message>
 </locale>

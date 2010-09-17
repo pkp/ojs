@@ -947,7 +947,6 @@ Idiomas estão disponíveis para download manual no <a href="http://pkp.sfu.ca">
 	<message key="article.fontSize.large.altText">Maior</message>
 	<message key="journal.issn">ISSN</message>
 	<message key="article.article">Artigo</message>
-	<message key="article.citations">Referências</message>
 	<message key="user.manageMySubscriptions">Gerir Minhas Subscrições</message>
 	<message key="subscriptionTypes.currency">Moeda</message>
 	<message key="subscriptionTypes.year">ano</message>
@@ -1046,4 +1045,16 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desactivado o regi
 	<message key="notification.type.suppFileModified">Ficheiro(s) suplementar(es) de "{$param}" foram alterados.</message>
 	<message key="notification.type.userComment">Um leitor comentou sobre "{$param}".</message>
 	<message key="navigation.archives">Anteriores</message>
+	<message key="user.register.reviewerInterests">Identificar os interesses de revisão (áreas relevantes e métodos de investigação):</message>
+	<message key="user.subscriptions.subscriptionStatus">Estado da Subscrição</message>
+	<message key="user.subscriptions.statusInformation">As subscrições activas e expiradas são exibidas em baixo assim prazo de expiração. Além disso, a informação seguinte sobre o estado pode ser incluída em cada subscrição.</message>
+	<message key="user.subscriptions.status">Estado</message>
+	<message key="user.subscriptions.statusDescription">Descrição</message>
+	<message key="user.subscriptions.status.needsInformationDescription">É necessária informação adicional antes da subscrução ser activada</message>
+	<message key="user.subscriptions.status.needsApprovalDescription">A subscrição é analisada antes de ser activada</message>
+	<message key="user.subscriptions.status.awaitingManualPaymentDescription">O pagamento manual foi iniciado mas ainda não foi recebido</message>
+	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">Um pagamento online foi iniciado mas foi cancelado ou está incompleto</message>
+	<message key="article.pdf.download">Transferir este ficheiro PDF</message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>O ficheiro PDF seleccionado deveria ser carregado no se browser como um plugin de leitura de PDF previamente instalado (por exemplo, uma versão recente de <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Em alternativa, pode transferir o ficheiro PDF directamente para o seu computador, onde pode ser aberto com um leitor PDF. Para transferir o PDF, clique sobre o link em baixo.</p> <p>Se pretende obter mais informação sobre como imprimir, guardar e guardar PDF's, Highwire Press fornece uma útil <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions sobre PDF's</a>.</p>]]></message>
+	<message key="payment.authorFees">Taxas de Autor</message>
 </locale>

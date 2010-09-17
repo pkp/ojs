@@ -204,7 +204,5 @@
 	<message key="plugins.generic.thesis.form.supervisorEmail">导师邮箱。Supervisor email</message>
 	<message key="plugins.generic.thesis.form.supervisorEmailValid">一个有效的导师邮箱是必须的。A valid supervisor's email is required.</message>
 	
-	<message key="plugins.generic.thesis.enabled">论文插件已开启。</message>
-	<message key="plugins.generic.thesis.disabled">论文插件已关闭。</message>
 </locale>
 

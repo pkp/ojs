@@ -14,7 +14,7 @@
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.generic.webfeed.displayName">Plugin Feed</message>
+	<message key="plugins.generic.webfeed.displayName">Plugin Web de fuentes RSS/Atom</message>
 	<message key="plugins.generic.webfeed.description">Este plugin produce canales RSS/Atom para el Número en curso.</message>	
 	<message key="plugins.generic.webfeed.settings">Opciones</message>
 	<message key="plugins.generic.webfeed.settings.currentIssue">Mostrar elementos del último número publicado</message>

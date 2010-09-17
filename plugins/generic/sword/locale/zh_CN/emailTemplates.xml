@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * emailTemplateData.xml
+  *
+  * Copyright (c) 2003-2010 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  *
+  * $Id$
+  -->
+<email_texts locale="zh_CN">
+	<email_text key="SWORD_DEPOSIT_NOTIFICATION">
+		<subject>存入通知</subject>
+		<body>恭喜您的文章"{$articleTitle}"已经被 {$journalName}录取。您可以选择这篇稿件自动存入一个或者多个仓储。
+
+进入{$swordDepositUrl}继续。
+
+这个邮件由Open Journal Systems' 的SWORD deposit 插件自动生成。</body>
+		<description>本邮件模板用于通知作者关于SWORD存储的存入点选择</description>
+	</email_text>
+</email_texts>

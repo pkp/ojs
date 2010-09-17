@@ -123,4 +123,7 @@
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[اگر مشکلی داشتید جهت کمک با <a href="mailto:{$supportEmail}">{$supportName}</a> تماس بگیرید.]]></message>
 	<message key="author.submit.reorder">تغییر ترتیب نویسنده</message>
 	<message key="author.submit.form.wordCountAlert">تعداد کلمات چکیده از سقف مجاز برای این نوع مقاله تجاوز کرده است.</message>
+	<message key="author.submit.submissionLocale">زبان ساب میشن</message>
+	<message key="author.submit.submissionLocaleDescription">این مجله ساب میشن را در چندین زبان قبول می کند. لطفا زبان اولیه ساب میشن را از منوی پائین کشیدنی انتخاب کنید</message>
+	<message key="author.submit.form.localeRequired">لظفا یک زبان ساب میشن را انتخاب کنید</message>
 </locale>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * emailTemplateData.xml
+  *
+  * Copyright (c) 2003-2010 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  *
+  * $Id$
+  -->
+<email_texts locale="fr_CA">
+	<email_text key="SWORD_DEPOSIT_NOTIFICATION">
+		<subject>Avis de dépôt</subject>
+		<body>Félicitations pour l'acceptation de votre soumission, "{$articleTitle}", pour publication dans la revue {$journalName}. Si vous le souhaitez, vous pouvez déposer automatiquement votre soumission dans un ou plusieurs de nos services d'archivage.
+
+Aller à {$swordDepositUrl} afin de procéder.
+
+Ce courriel a été généré par le plugiciel de dépôt SWORD du Open Journal Systems.</body>
+	</email_text>
+</email_texts>

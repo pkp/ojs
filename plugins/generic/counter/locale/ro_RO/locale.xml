@@ -22,12 +22,6 @@
 	
 	
 	
-	<message key="plugins.generic.counter.enabled">A fost activat modulul COUNTER.</message>
-	<message key="plugins.generic.counter.disabled">A fost dezactivat modulul COUNTER.</message>
-
-
-	
-	
 	<message key="plugins.generic.counter.migrate">Migrează fișierul de log</message>
 
 		

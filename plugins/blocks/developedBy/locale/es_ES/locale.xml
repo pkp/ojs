@@ -13,6 +13,6 @@
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.block.developedBy.displayName">"Developed By" Block</message>
+	<message key="plugins.block.developedBy.displayName">Bloque "Desarrollado por"</message>
 	<message key="plugins.block.developedBy.description">Este Complemento poporciona una barra lateral con un vínculo a "Creado por".</message>
 </locale>

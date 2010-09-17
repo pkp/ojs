@@ -15,9 +15,6 @@
 <locale name="zh_CN" full_name="China PR">
 	<message key="plugins.generic.customLocale.name">定制语系插件</message>
 	<message key="plugins.generic.customLocale.description">这个插件激活默认用户界面的使用OJS文本的定制功能。</message>
-	<message key="plugins.generic.customLocale.enabled">定制语系插件已开启。</message>
-	<message key="plugins.generic.customLocale.disabled">定制语系插件已关闭。</message>
-
 	<message key="plugins.generic.customLocale.longDescription">本页面列出当前所有为期刊已经安装的语系。</message>
 	<message key="plugins.generic.customLocale.localeDescription">本页面列出为已选择的语系准备的所有可以使用的文件。</message>
 	<message key="plugins.generic.customLocale.fileDescription">输入文本到相关的定制文本框。如果使用默认的OJS翻译，请让定制文本框为空.</message>

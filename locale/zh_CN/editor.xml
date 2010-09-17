@@ -167,7 +167,6 @@
 	<message key="editor.article.resubmitForReview">重新提交文件审阅</message>
 	<message key="editor.article.resubmitFileForPeerReview">重新提交选定的同行评议的文件</message>
 	<message key="editor.article.sendToCopyedit">发送文件给文字编辑</message>
-	<message key="editor.article.sendFileToCopyedit">选择文件给文字编辑</message>
 	<message key="editor.article.selectProofreader">指派校对</message>
 	<message key="editor.article.replaceProofreader">替换校对</message>
 	<message key="editor.article.authorComments">作者评论</message>
@@ -204,4 +203,9 @@
 	<message key="editor.article.removeCoverPage">删除封面?</message>
 	<message key="editor.article.remove">删除</message>
 	<message key="editor.issues.invalidAccessDate">读取的数据无效.</message>
+	<message key="editor.submissionReview.sendToCopyediting">发送给文字编辑</message>
+	<message key="editor.notifyUsers.allReaders">所有读者（{$count}人）</message>
+	<message key="editor.notifyUsers.allAuthors">所有已出版作者（{$count}人）</message>
+	<message key="editor.notifyUsers.allIndividualSubscribers">所有的个人订户（{$count}订户）</message>
+	<message key="editor.notifyUsers.allInstitutionalSubscribers">所有的机构订户（{$count}订户）</message>
 </locale>

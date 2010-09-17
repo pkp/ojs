@@ -874,4 +874,17 @@ Pour afficher ou modifier cet abonnement, veuillez utiliser l'URL suivant.
 
 URL de l'abonnement : {$subscriptionUrl}</body>
 	</email_text>
+	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
+		<subject>Modification des références</subject>
+		<body>{$authorFirstName},
+
+Pourriez-vous vérifier ou nous fournir la référence complète pour la référence suivante, provenant de votre article, {$articleTitle}:
+
+{$rawCitation}
+
+Merci!
+
+{$userFirstName}
+Réviseur, {$journalName}</body>
+	</email_text>
 </email_texts>

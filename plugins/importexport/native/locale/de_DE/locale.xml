@@ -127,4 +127,5 @@ Folgende Formate sind gültig:
 	<message key="plugins.importexport.native.import.success">Import erfolgreich</message>
 	<message key="plugins.importexport.native.import.success.description">Der Import war erfolgreich. Die erfolgreich importierten Elemente sind unten aufgeführt.</message>
 
+	<message key="plugins.importexport.native.import.error.articleAuthorAffiliationLocaleUnsupported">Für den Autor  "{$authorFullName}" des Artikels "{$articleTitle}" in der Ausgabe "{$issueTitle}" wurde eine Institution in einer Sprachversion ("{$locale}") angegeben, die diese Zeitschrift nicht unterstützt.</message>
 </locale>

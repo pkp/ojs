@@ -36,8 +36,7 @@
 	issue_id [issueId] section_name [name]
 
 {$scriptName} {$pluginName} import [xmlFileName] [journal_path]
-	issue_id [issueId] section_abbrev [abbrev]
-]]></message>
+	issue_id [issueId] section_abbrev [abbrev]]]></message>
 	<message key="plugins.importexport.native.export">データのエクスポート</message>
 	<message key="plugins.importexport.native.export.issues">巻号のエクスポート</message>
 	<message key="plugins.importexport.native.export.sections">セクションのエクスポート</message>
@@ -50,7 +49,7 @@
 	<message key="plugins.importexport.native.import.articles.description">インポート中のファイルには複数の論文が含まれています。これらの論文をインポートする巻号とセクションを指定する必要があります。これらの論文をすべて同じ巻号の同じセクションにインポートしたくない場合は、(1)XMLファイルを分割する、(2)インポート後に適当な巻号およびセクションに移動する、のいずれかの対応をしてください。</message>
 
 	<message key="plugins.importexport.native.import">データのインポート</message>
-	<message key="plugins.importexport.native.import.description">文書型定義 native.dtd に基づくデータのインポートをサポートしています。サポートしているルートノードは、&amp;lt;article&amp;gt;、&amp;lt;articles&amp;gt;、&amp;lt;issue&amp;gt;、&amp;lt;issues&amp;gt;です。</message>
+	<message key="plugins.importexport.native.import.description"><![CDATA[文書型定義 native.dtd に基づくデータのインポートをサポートしています。サポートしているルートノードは、&lt;article&gt;、&lt;articles&gt;、&lt;issue&gt;、&lt;issues&gt;です。]]></message>
 
 	<message key="plugins.importexport.native.import.error">インポートエラー</message>
 	<message key="plugins.importexport.native.import.error.description">インポート処理中にエラーが発生しました。インポートファイルのフォーマットが仕様に準拠していることを確認してください。エラーの内容は以下の通りです。</message>
@@ -117,4 +116,5 @@
 	<message key="plugins.importexport.native.import.error.articleSuppFileSponsorLocaleUnsupported">巻号（"{$issueTitle}"）の論文（"{$articleTitle}"）の補助ファイル（"{$suppFileTitle}"）のスポンサーに、この雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
 	<message key="plugins.importexport.native.import.error.articleSuppFileSourceLocaleUnsupported">巻号（"{$issueTitle}"）の論文（"{$articleTitle}"）の補助ファイル（"{$suppFileTitle}"）の情報源に、この雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
 	<message key="plugins.importexport.native.error.uploadFailed">アップロードが失敗しました。サーバがアップロードを許可していること、ファイルサイズがPHPやWebサーバの許容量を超えていないことを確認してください。</message>
+	<message key="plugins.importexport.native.import.error.articleAuthorAffiliationLocaleUnsupported">"{$issueTitle}" の "{$articleTitle}" という論文の "{$authorFullName}" に対して，この雑誌でサポートしていないロケール  ("{$locale}")  で著者の所属が付与されました。</message>
 </locale>

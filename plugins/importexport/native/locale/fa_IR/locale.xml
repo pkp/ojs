@@ -105,4 +105,13 @@
 	<message key="plugins.importexport.native.import.success" >واردات مقاله با موفقیت انجام شد</message>
 	<message key="plugins.importexport.native.import.success.description" >واردات مقاله موفق بود. موارد وارد شده در پائین ذکر شده است.</message>
 	<message key="plugins.importexport.native.error.uploadFailed">آپلود شکست خورد - لطفا مشخص کنید که آیا سرورشما اجازه آپلود میدهد و اینکه اندازه فایل بیش از حد تعیین شده در تنظیمات php نیست</message>
+	<message key="plugins.importexport.native.import.error.articleAuthorAffiliationLocaleUnsupported">وابستگی سازمانی مربوط به نویسنده
+"{$authorFullName}"
+از مقاله 
+"{$articleTitle}" 
+در شماره 
+"{$issueTitle}"
+به زبانی
+("{$locale}")
+وارد شده است  که این مجله حمایت نمی کند.</message>
 </locale>

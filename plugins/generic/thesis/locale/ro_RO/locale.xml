@@ -204,6 +204,4 @@
 	<message key="plugins.generic.thesis.form.supervisorEmail">Emailul îndrumătorului</message>
 	<message key="plugins.generic.thesis.form.supervisorEmailValid">Este necesar o adresă de email validă pentru îndrumător.</message>
 
-	<message key="plugins.generic.thesis.enabled">Modulul pentru teze a fost activat.</message>
-	<message key="plugins.generic.thesis.disabled">Modulul pentru teze a fost dezactivat.</message>
 </locale>

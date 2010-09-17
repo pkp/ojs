@@ -68,7 +68,6 @@
 	<message key="author.submit.submissionIndexingDescription">依照本期刊所使用的领域类别以及编辑提供的范例，来选择能够最佳地说明此份稿件内容的词汇。以分号(;)来分隔多个词汇（如，词汇1; 词汇2; 词汇3）。</message>
 	<message key="author.submit.submissionSupportingAgencies">支持机构</message>
 	<message key="author.submit.submissionSupportingAgenciesDescription">指明为本文之工作提供经费或者协助的机构</message>
-	<message key="author.submit.agencies">机构</message>
 	<message key="author.submit.coverageInstructions">地理空间位置、年代或历史涵盖范围，以及＼或者研究样本的特色.</message>
 	<message key="author.submit.subjectClassInstructions">使用有超链接的分类系统来选择分类词汇以及（如果适合的话）数字.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; 中文=zh<a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">其他代码</a>.]]></message>
@@ -125,4 +124,7 @@
 	<message key="author.article.copyeditedFile">文本编辑文件</message>
 	<message key="author.article.authorRevisedFile">作者文件</message>
 	<message key="author.submit.authorSubmitLoginMessage">投稿要求有一个本期刊的用户帐户.这个帐户用于编辑跟踪您的投稿，当投稿的状态改变的时候通知你，或者编辑需要您的相信信息 .</message>
+	<message key="author.submit.submissionLocale">投稿语言</message>
+	<message key="author.submit.submissionLocaleDescription">本期刊支持多语言投稿。请从下面的下拉菜单中选择投稿的主语言。</message>
+	<message key="author.submit.form.localeRequired">请选择一种提交语言</message>
 </locale>

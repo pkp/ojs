@@ -394,9 +394,8 @@ Am ajuns la o concluzie privind propunerea intitulată "{$articleTitle}" făcut�
 
 Decizia noastră este:
 
-{$editorialContactSignature}
-</body>
-		<description>Acest email de la Redactor(șef)/ Editor sau redactorul de secțiune către autor, are rolul de a-l anunța pe acesta despre decizia care s-a luat privitor la propunerea sa.</description>
+{$editorialContactSignature}</body>
+		<description>Acest email de la Redactor(șef)/ Editor sau redactorul de secțiune către autor; are rolul de a-l anunța pe acesta despre decizia care s-a luat privitor la propunerea sa.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
 		<subject>Decizia redactorului</subject>
@@ -610,7 +609,7 @@ Mulțumim pentru efortul de pregătire a asamblărilor pentru manuscrisul intitu
 Propunerea intitulată "{$articleTitle}" înaintată revistei {$journalName} trebuie să fie corectată urmând acești pași:
 1. Clic pe URL-ul propunerii de mai jos.
 2. Autentifică-te pe siteul revistei și consultă INSTRUCȚIUNILE PENTRU CORECTURĂ.
-3. Clic pe VEZI CORECTURA în machetă și inspectează asamblarea într-unul dintre formatele deja propuse.
+3. Clic pe VEZI REZULTATUL în machetă și inspectează asamblarea într-unul dintre formatele deja propuse.
 4. Introdu corecturile (tipografice și de formatare) la secțiunea corecturilor.
 5. Salvează și trimite prin email corecturile redactorului de machetă cât și corectorului.
 6. Trimite emailul de ÎNCHEIERE redactorului.
@@ -648,10 +647,10 @@ Dacă te înscrii la serviciul nostru de notificare, vei primi un email conțin�
 Propunerea intitulată "{$articleTitle}" trimisă {$journalName} are nevoie în acest moment de corectură urmându-se următorii pași:
 1. Clic pe URL-ul propunerii de mai jos.
 2. Autentifică-te la revistă și consultă INSTRUCȚIUNILE PENTRU CORECTURĂ.
-3. Clic pe VEZI CORECTURA în machetă și corectează asamblarea într-unul dintre formatele deja propuse.
+3. Clic pe VEZI REZULTATUL în machetă și corectează asamblarea într-unul dintre formatele deja propuse.
 4. Introdu corecțiile (tipografice și de formatare).
 5. Salvează și trimite prin email corecturile redactorului de machetă.
-6. Trimite emailui de ÎNCHEIERE redactorului.
+6. Trimite emailul de ÎNCHEIERE redactorului.
 
 URL-ul manuscrisului: {$submissionUrl}
 Nume utilizator: {$proofreaderUsername}
@@ -894,5 +893,18 @@ Pentru a vedea sau edita acest abonament, urmați următorul URL.
 URL-ul pentru abonament: {$subscriptionUrl}
 </body>
 		<description>Acest email înștiințează managerul de abonamente de faptul că a fost reînnoit online un abonament instituțional. Sunt oferite informații generale despre abonament și un link pentru accesul rapid la acesta.</description>
+	</email_text>
+	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
+		<subject>Redactarea referințelor bibliografice</subject>
+		<body>{$authorFirstName},
+
+Puteți să verificați sau să ne dați referințele bibliografice pentru articolul {$articleTitle}:
+
+{$rawCitation}
+
+Vă mulțumim!
+
+{$userFirstName}
+Redactor, {$journalName}</body>
 	</email_text>
 </email_texts>

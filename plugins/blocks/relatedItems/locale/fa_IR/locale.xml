@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2010 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.block.relatedItems.displayName">بلوک آیتم های مربوطه</message>
+	<message key="plugins.block.relatedItems.description">این افزونه بلوکی حاوی آیتم های مربوطه را در نوار جانبی ابزاهای خواندن نمایش میدهد</message>
+	<message key="plugins.block.relatedItems.title">آیتم های مربوطه</message>
+	<message key="plugins.block.relatedItems.hide">پنهان</message>
+	<message key="plugins.block.relatedItems.show">نمایش همه</message>
+</locale>

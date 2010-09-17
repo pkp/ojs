@@ -13,7 +13,7 @@
  -->
  
 <locale name="pt_BR" full_name="Português do Brasil">
-	<message key="plugins.paymethod.paypal.displayName">Plugin de Pagamento via Paypal</message>
+	<message key="plugins.paymethod.paypal.displayName">Pagamento via Paypal</message>
 
 	<!-- PayPal Settings Form -->
 	<message key="plugins.paymethod.paypal.settings.paypalenable">Habilitar PayPal</message>
@@ -26,8 +26,8 @@
 
 	<!-- PayPal -->
 	<message key="plugins.paymethod.paypal">Pagamento via PayPal</message>
-	<message key="plugins.paymethod.paypal.description"><![CDATA[O Plugin PayPal permite a usuários, sendo ou não membros do PayPal, utilizar a maioria dos cartões de crédito, bem como Cheques Eletrônicos (eChecks). O responsável deve criar uma <a href="http://www.paypal.com" target="_new">Conta de Negócios PayPal</a>.]]></message>
-	<message key="plugins.paymethod.paypal.warning">Clique em "Continuar" para acessar o portal do PayPal. Após realizar o pagamento através do PayPal clique em "Retornar ao vendedor" ("Return to Merchant") para retornar ao site de onde iniciou a compra.</message>
+	<message key="plugins.paymethod.paypal.description"><![CDATA[O plugin de pagamentos via PayPal permite a usuários, sendo ou não membros do PayPal, utilizar a maioria dos cartões de crédito, bem como Cheques Eletrônicos (eChecks). O responsável deve criar uma <a href="http://www.paypal.com" target="_new">conta de negócios PayPal</a>.]]></message>
+	<message key="plugins.paymethod.paypal.warning">Clique em "Continuar" para acessar o portal do PayPal. Após realizar o pagamento por meio do PayPal, clique em "Retornar ao vendedor" ("Return to Merchant") para retornar ao site de onde iniciou a compra.</message>
 	<message key="plugins.paymethod.paypal.purchase.description">Descrição</message>
 	<message key="plugins.paymethod.paypal.purchase.cancelled">Sua compra foi cancelada.</message>
 	<message key="plugins.paymethod.paypal.purchase.cancelled.title">Compra cancelada.</message>

@@ -13,14 +13,13 @@
   -->
 
 <locale name="pt_BR" full_name="Português (Brasil)">
-	<message key="plugins.importexport.doaj.displayName">Plugin de Exportação DOAJ</message>
-	<message key="plugins.importexport.doaj.description">Exportar revista para DOAJ e notificar via e-mail dados da revista ao representante do DOAJ</message>
+	<message key="plugins.importexport.doaj.displayName">Exportação para DOAJ</message>
+	<message key="plugins.importexport.doaj.description">Exportar revista para o DOAJ, incluindo dados da revista para inclusão.</message>
 
 	
 	<message key="plugins.importexport.doaj.export">Exportar dados da revista para DOAJ</message>
-	<message key="plugins.importexport.doaj.export.journal">Exportar Revista</message>
-	<message key="plugins.importexport.doaj.export.email">Enviar e-mail ao representante do DOAJ</message>
+	<message key="plugins.importexport.doaj.export.journal">Exportar revista</message>
 	<message key="plugins.importexport.doaj.export.journalInfo">Exportar informações de artigos em XML para arquivamento pelo DOAJ</message>
-	<message key="plugins.importexport.doaj.export.emailInfo">Para considerar seu periódico para arquivamento pelo DOAJ, envie este formulário parcialmente preenchido, completando o mais detalhadamente possível o resto do formulário.</message>
-
+	<message key="plugins.importexport.doaj.export.contact">Solicitar inclusão ao DOAJ</message>
+	<message key="plugins.importexport.doaj.export.contactInfo">Para que seu periódico seja considerado para inclusão no DOAJ, preencha este formulário da forma mais completa possível, que foi previamente preenchido com dados parciais, e encaminhe ao DOAJ.</message>
 </locale>

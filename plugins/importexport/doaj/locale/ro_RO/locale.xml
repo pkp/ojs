@@ -19,8 +19,7 @@
 	
 	<message key="plugins.importexport.doaj.export">Exportă datele revistei în DOAJ</message>
 	<message key="plugins.importexport.doaj.export.journal">Exportă revista</message>
-	<message key="plugins.importexport.doaj.export.email">Trimite email reprezentantului DOAJ</message>
 	<message key="plugins.importexport.doaj.export.journalInfo">Exportă informaţiile articolului în XML pentru arhivarea în DOAJ</message>
-	<message key="plugins.importexport.doaj.export.emailInfo">Pentru notarea revistei dumneavoastră în DOAJ, vă rugăm să expediaţi acest formular parţial autocompletat către DOAJ şi introduceţi informaţiile lipsă pe cât de complet posibil.</message>
-
+	<message key="plugins.importexport.doaj.export.contact">Contactează DOAJ pentru includere</message>
+	<message key="plugins.importexport.doaj.export.contactInfo">Pentru includerea revistei în DOAJ, depune acest formular completat semiautomat către DOAJ și completează informația lipsă.</message>
 </locale>

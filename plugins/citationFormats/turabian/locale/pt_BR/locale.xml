@@ -13,7 +13,7 @@
   -->
  
 <locale name="pt_BR" full_name="Português do Brasil">
-	<message key="plugins.citationFormats.turabian.displayName">Plugin Formato de Citação Turabian</message>
+	<message key="plugins.citationFormats.turabian.displayName">Citação Turabian</message>
 	<message key="plugins.citationFormats.turabian.citationFormatName">Turabian</message>
 	<message key="plugins.citationFormats.turabian.description">Este plugin implementa o formato de citação Turabian.</message>
 </locale>

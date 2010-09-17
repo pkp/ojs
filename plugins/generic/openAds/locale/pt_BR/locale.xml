@@ -13,10 +13,10 @@
   -->
  
 <locale name="pt_BR" full_name="Português do Brasil">
-	<message key="plugins.generic.openads.description">O Plugin OpenAds permite incluir anúncios do servidor de publicidade OpenAds no sistema.</message>
-	<message key="plugins.generic.openads.descriptionUnconfigured"><![CDATA[O plugin permite incluir publicidade dinâmica do servidor OpenAds dentro do sistema. <strong>Leia o README disponível em plugins/generic/openAds para informações sobre como habilitar o plugin.</strong>]]></message>
-	<message key="plugins.generic.openads">Plugin OpenAds</message>
-	<message key="plugins.generic.openads.settings.description">Utilize o formulário para escolher as regiões de publicidade OpenAds onde serão exibidos os conteúdos em potencial no sistema.</message>
+	<message key="plugins.generic.openads.description">Esta ferramenta permite incluir anúncios do servidor de publicidade OpenAds no sistema.</message>
+	<message key="plugins.generic.openads.descriptionUnconfigured"><![CDATA[A ferramenta permite incluir publicidade dinâmica do servidor OpenAds dentro do sistema. <strong>Leia o README disponível em plugins/generic/openAds para informações sobre como habilitar o plugin.</strong>]]></message>
+	<message key="plugins.generic.openads">Publicidade OpenAds</message>
+	<message key="plugins.generic.openads.settings.description">Use o formulário para escolher as regiões de publicidade OpenAds onde serão exibidos os conteúdos em potencial no sistema.</message>
 	<message key="plugins.generic.openads.manager.settings">Configurações</message>
 
 	<message key="plugins.generic.openads.error.configFileNotFound">Impossível acessar o arquivo de configuração {$filename}.</message>
@@ -24,7 +24,7 @@
 	<message key="plugins.generic.openads.error.dbConnectionError">Impossível conectar à base de dados OpenAds.</message>
 
 	<message key="plugins.generic.openads.headerAd">Anúncio no cabeçalho</message>
-	<message key="plugins.generic.openads.contentAd">Anúncio de Conteúdo</message>
+	<message key="plugins.generic.openads.contentAd">Anúncio no conteúdo</message>
 	<message key="plugins.generic.openads.sidebarAd">Anúncio na barra lateral</message>
 
 	<message key="plugins.generic.openads.orientation.left">Esquerda</message>

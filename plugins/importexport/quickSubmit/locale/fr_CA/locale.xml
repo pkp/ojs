@@ -22,4 +22,10 @@
 	<message key="plugins.importexport.quickSubmit.issueRequired">Vous devez sélectionner le numéro où l'article doit être ajouté.</message>
 	<message key="plugins.importexport.quickSubmit.leaveUnpublished">Laisser non publié</message>
 	<message key="plugins.importexport.quickSubmit.saveAndCreateAnother">Enregistrer et en créer un autre</message>
+	<message key="plugins.importexport.quickSubmit.submissionData">Données de la soumission</message>
+	<message key="plugins.importexport.quickSubmit.submissionDescription">Choisir le fichier qui doit être utilisé comme épreuve finale pour cette soumission.</message>
+	<message key="plugins.importexport.quickSubmit.submissionRequired">Vous devez télécharger le fichier pour cette soumission.</message>
+	<message key="plugins.importexport.quickSubmit.success">Article ajouté</message>
+	<message key="plugins.importexport.quickSubmit.successDescription">Création de l'article avec succès.</message>
+	<message key="plugins.importexport.quickSubmit.successReturn">Retourner au plugiciel QuickSubmit.</message>
 </locale>

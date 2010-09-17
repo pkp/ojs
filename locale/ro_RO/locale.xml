@@ -97,7 +97,7 @@
 	<message key="common.queue.short.submissionsArchives">Arhive</message>
 	<message key="common.queue.long.active">Propuneri active</message>
 	<message key="common.queue.short.active">Activ</message>
-	<message key="common.queue.long.completed">Arhivează</message>
+	<message key="common.queue.long.completed">Arhivate</message>
 	<message key="common.queue.short.completed">Arhivează</message>
 	
 	<!--
@@ -142,7 +142,6 @@
 	<message key="article.submissions">Propuneri</message>
 	<message key="article.details">Detalii</message>
 	<message key="article.abstract">Abstract</message>
-	<message key="article.citations">Referințe</message>
 	<message key="article.coverPage.altText">Imagine copertă</message>
 	<message key="article.accessLogoOpen.altText">Acces deschis</message>
 	<message key="article.accessLogoRestricted.altText">Acces restricționat</message>
@@ -175,8 +174,6 @@
 	<message key="submission.scheduling">Programare</message>
 	<message key="submission.scheduledIn">Programat pentru publicare în {$issueName}.</message>
 	<message key="submission.scheduledIn.tba">(TBA)</message>
-	
-	<message key="submission.citations">Referințe</message>
 	
 	<message key="submissions.sec">Sec</message>
 	<message key="submissions.step1">Pas 1</message>
@@ -663,11 +660,11 @@ Activ însemnă câte evaluări sunt în prezent luate în considerare sau în d
         <message key="reviewer.article.reviewSchedule">Programul de evaluare</message>
         <message key="reviewer.article.reviewSteps">Pașii pentru evaluare</message>
         <message key="reviewer.article.reviewerGuidelines">Îndrumările pentru evaluator</message>
-	<message key="reviewer.article.reviewGuidelinesDescription"><![CDATA[Îndrumările pentru evaluatori vor oferi acestora criteriile după care vor judeca dacă o propunere se pretează la a fi publicată în revistă și pot include instrucțiuni speciale pentru pregătirea unei evaluări concrete și de ajutor. În desfășurarea evaluării sunt puse la dispoziție două căsuțe de text: prima „pentru autor și redactor” iar ce-a de-a doua pentru „editor/redactor”. Suplimentar, managerul revistei poate crea un formular de evaluare în zona destinată acestora. În orice caz, redactorii vor avea opțiunea de a include evaluările în corespondența cu autorul.]]></message>
+	<message key="reviewer.article.reviewGuidelinesDescription">Îndrumările pentru evaluatori vor oferi acestora criteriile după care vor judeca dacă o propunere se pretează la a fi publicată în revistă și pot include instrucțiuni speciale pentru pregătirea unei evaluări concrete și de ajutor. În desfășurarea evaluării sunt puse la dispoziție două căsuțe de text: prima „pentru autor și redactor” iar ce-a de-a doua pentru „editor/redactor”. Suplimentar, managerul revistei poate crea un formular de evaluare în zona destinată acestora. În orice caz, redactorii vor avea opțiunea de a include evaluările în corespondența cu autorul.</message>
         <message key="reviewer.article.notifyEditorA">Înștiințează redactorul propunerii</message>
         <message key="reviewer.article.notifyEditorB">dacă vei face evaluarea.</message>
         <message key="reviewer.article.consultGuidelines">Dacă vei face evaluarea, consultă indicaţiile de mai jos.</message>
-		<message key="reviewer.article.downloadSubmission">Clic pe numele fişierelor pentru a le descărca (pe ecran sau tipărindu-le) fişierele asociate cu această propunere.</message>
+		<message key="reviewer.article.downloadSubmission">Clic pe numele fişierelor asociate cu această propunere pentru a le descărca (vizualiza pe ecran sau pentru a le tipări).</message>
         <message key="reviewer.article.enterCompetingInterests"><![CDATA[Declară dacă eşti sau nu în conflict de interese privind această cercetare (vezi <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Regulamentul&nbsp;CI</a>).]]></message>
 	<message key="reviewer.competingInterests">Conflictul de interese</message>
         <message key="reviewer.article.enterReviewA">Clic pe pictogramă pentru a introduce (sau pentru a copia) evaluarea ta pentru această propunere.</message>
@@ -699,15 +696,14 @@ Activ însemnă câte evaluări sunt în prezent luate în considerare sau în d
 	<!-- Article Submission Step 2 -->
 	
 	<!-- Article Submission Step 3 -->
-	<message key="author.submit.uploadInstructions"><![CDATA[
-<p>Pentru a încărca un manuscris în sistemul revistei, completaţi următorii paşi.</p>
+	<message key="author.submit.uploadInstructions"><![CDATA[<p>Pentru a încărca un manuscris în sistemul revistei, completaţi următorii paşi.</p>
 
 <ol>
 <li>Din această pagină, clic pe navigare (sau alege fişier) care deschide o fereastră de selecţie pentru a localiza fişierul de pe hard discul computerului personal.</li>
 <li>Localizează fişierul pe care doreşti să-l propui şi selectează-l.</li>
 <li>Apasă pe „alege fișierul” din fereastra de selecţie, plasând numele fişierului pe această pagină.</li>
 <li>Apasă pe încarcă din această pagină, care va conduce la încărcarea fişierului de pe computer pe siteul revistei, fiind redenumit urmând convenţiile interne ale revistei.</li>
-<li>Din moment ce propunerea este încărcată, apasă pe „salvare şi continuă” din partea inferioară a paginii.</li>
+<li>Din moment ce propunerea este încărcată, apasă pe „salvează şi continuă” din partea inferioară a paginii.</li>
 
 
 
@@ -715,8 +711,6 @@ Activ însemnă câte evaluări sunt în prezent luate în considerare sau în d
 
 </ol>]]></message>
 	
-	<message key="author.submit.submissionCitations">Introdu o listă formatată de referințe la lucrările citate în această propunere.</message>
-
 	<!-- Article Submission Step 4 -->
 	
 	<!-- Article Submission Step 4a: Supplementary Files -->
@@ -778,7 +772,7 @@ Activ însemnă câte evaluări sunt în prezent luate în considerare sau în d
 (După salvare, se pot adăuga alte comentarii.)]]></message>
 	<message key="submission.comments.canShareWithAuthor">Pentru autor şi redactor</message>
 	<message key="submission.comments.cannotShareWithAuthor">Pentru redactor</message>
-	<message key="submission.comments.blindCcReviewers">După expediere, trimite o copie editabilă în BCC-ului pentru a fi trimisă şi evaluatorilor.</message>
+	<message key="submission.comments.blindCcReviewers">La expediere, trimite și o copie editabilă adăugând adresa la BCC pentru a fi trimisă şi evaluatorilor.</message>
 	<message key="submission.comments.forAuthorEditor">Pentru autor şi redactor</message>
 	<message key="submission.comments.forEditor">Pentru redactor</message>
 	<message key="submission.comments.saveAndEmailAuthor">Salvează şi trimite email autorului</message>
@@ -869,8 +863,6 @@ parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta 
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	<message key="article.pdf.note"><![CDATA[Fişierul PDF selectat ar trebui să se încarce aici, dacă browserul web folosit  are un modul care să citească PDFurile (de exemplu, o versiune recentă de <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>). Altfel, fişierul PDF se va descărca pe computerul personal, de unde poate fi descărcat folosind un cititor de pdf-uri. Dacă doreşti mai multe informaţii despre cum să tipăreşti, să salvezi şi să lucrezi cu PDFuri, Highwire Press oferă un ajutor prin <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Întrebările frecvente despre pdf-uri</a>.<br /><br />Dacă fişierul nu se descarcă automat, <a href="{$url}">apăsaţi aici</a>.]]></message>
-	
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Descarcă articolul</message>
 	
@@ -898,7 +890,7 @@ parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta 
 	<message key="about.journalContact">Contactul principal pentru revistă</message>
 	<message key="about.aboutTheJournal">Despre revistă</message>
 	<message key="about.history">Istoricul revistei</message>
-	<message key="about.editorialTeam">Colectivul redacţional</message>
+	<message key="about.editorialTeam">Colectivul de redacţie</message>
 	<message key="about.editorialTeam.biography">Biografie</message>
 	<message key="about.editorialPolicies">Politici editoriale</message>
 	<message key="about.focusAndScope">Obiective și acoperire</message>
@@ -1014,7 +1006,7 @@ parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta 
 	<li>Sistem de operare: orice OS care suportă softwareul de mai sus, incluzând <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
 </ul>
 
-<p>Pentru că PKP nu are resursele să testeze oricare combinaţie posibilă de versiuni software şi de platforme, astfel nefiind garantată operarea corectă sau asistenţă.</p>
+<p>Pentru că PKP nu are resursele să testeze orice combinaţie posibilă de versiuni software şi de platforme, nu este implicată operarea corectă sau asistenţă.</p>
 
 <p>Modificarea acestor setări poate fi făcută după instalare prin editarea fişierului <tt>config.inc.php</tt> din directorul de bază al OJS sau folosind interfaţa web a siteului.</p>
 
@@ -1234,4 +1226,16 @@ Validarea poate eşua pe URL-urile de căutare care necesită date postate într
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">Lista de monede "{$filename}" a fost încărcată din XML</message>
 	<message key="debug.notes.helpMappingLoad">Fişierul XML de mapare a sistemului de asistenţă {$filename} a fost reîncărcat în căutarea lui {$id}.</message>
+	<message key="user.register.reviewerInterests">Identificarea intereselor în contextul evaluării (zone ale subiectelor de studiu și metodele de cercetare):</message>
+	<message key="user.subscriptions.subscriptionStatus">Starea propunerii</message>
+	<message key="user.subscriptions.statusInformation">Abonamentele active și cele care au expirat sunt afișate mai jos împreună cu data expirării. Suplimentar, informațiile privind starea, pot fi incluse cu fiecare abonament.</message>
+	<message key="user.subscriptions.status">Stare</message>
+	<message key="user.subscriptions.statusDescription">Descriere</message>
+	<message key="user.subscriptions.status.needsInformationDescription">Sunt necesare informații suplimentare înainte ca propunerea să fie activată</message>
+	<message key="user.subscriptions.status.needsApprovalDescription">Propunerea trebuie să fie evaluată înainte de a fi activată</message>
+	<message key="user.subscriptions.status.awaitingManualPaymentDescription">A fost inițiată plata manuală, dar nu a fost primită încă</message>
+	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">A fost inițiată plata online dar nu a fost încheiată</message>
+	<message key="article.pdf.download">Descarcă acest fișier PDF</message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>Fișierul PDF pe care l-ai selectat ar trebui încărcat aici dacă browserul web are un modul specific instalat (de exemplu, o versiune recentă <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Poți descărca fișierul direct pe computerul propriu, de unde pot fi deschise. Pentru a descărca PDF-ul, clic pe linkul pentru descărcare de mai jos.</p> <p>Dacă doriți informații mai multe despre cum puteți printa, salva și lucra cu PDF-urile, Highwire Press oferă un util <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions privind PDF-urile</a>.</p>]]></message>
+	<message key="payment.authorFees">Taxe pentru autori</message>
 </locale>

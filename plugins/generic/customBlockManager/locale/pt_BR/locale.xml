@@ -13,8 +13,8 @@
   -->
  
 <locale name="pt_BR" full_name="Português (Brasil)">
-	<message key="plugins.generic.customBlockManager.displayName">Adminsitração de Blocos Personalizados</message>
-	<message key="plugin.generic.customBlockManager.introduction"><![CDATA[Use este plugin para incluir ou excluir plugins de bloco personalizados.  Em seguida, edite o conteúdo através da página <a href="{$systemPluginsUrl}">Plugins do Sistema</a> (na seção Plugins de Bloco).  Para incluir seu plugin no local desejado na barra lateral, acesse <a href="{$setupStep56}">Passo 5.6</a>]]></message>
+	<message key="plugins.generic.customBlockManager.displayName">Administração de blocos personalizados</message>
+	<message key="plugin.generic.customBlockManager.introduction"><![CDATA[Esta ferramenta permite incluir ou excluir plugins de bloco personalizados. Após incluir blocos, edite seus conteúdos na página <a href="{$systemPluginsUrl}">Plugins do sistema</a> (na seção Plugins de bloco).  Para incluir seu plugin no local desejado nas barras laterais disponíveis, acesse <a href="{$setupStep56}">Passo 5.6</a>]]></message>
 	<message key="plugins.generic.customBlockManager.settings">Configurações</message>
 	<message key="plugins.generic.customBlockManager.blockName">Nome do bloco</message>	
 	<message key="plugins.generic.customBlockManager.action">Ação</message>	
@@ -23,10 +23,10 @@
 
 	<message key="plugins.generic.customBlock.content">Conteúdo</message>
 	<message key="plugins.generic.customBlock.saved">O conteúdo do bloco foi salvo com sucesso.</message>
-	<message key="plugins.generic.customBlock.nameSuffix">(Plugin de Bloco Personalizado)</message>
+	<message key="plugins.generic.customBlock.nameSuffix">(Plugin de bloco personalizado)</message>
 	<message key="plugins.generic.customBlock.description">Bloco produzido pelo usuário.</message>
 	<message key="plugins.generic.customBlock.editContent">Editar o conteúdo da barra lateral</message>
-	<message key="plugins.generic.customBlock.contentRequired">Algum conteúdo é obrigatório. Caso deseje excluir este bloco, acesse o Gerente de Blocos Personalizados ou desabilitando o bloco no Passo 5 de configuração da revista.</message>
+	<message key="plugins.generic.customBlock.contentRequired">Algum conteúdo é obrigatório. Caso deseje excluir este bloco, acesse o plugin Administração de blocos personalizados ou desabilitando o bloco no Passo 5.6 de configuração da revista.</message>
 	<message key="plugins.generic.customBlock.edit">Editar</message>
-	<message key="plugins.generic.customBlockManager.description">Este plugin oferece controle aos blocos personalizados das barras laterais. Você pode editar os blocos nas configurações de cada plugin que você criar aqui.</message>
+	<message key="plugins.generic.customBlockManager.description">Este plugin permite administrar os blocos personalizados das barras laterais. Você pode editar os blocos nas configurações de cada plugin que você criar aqui.</message>
 </locale>

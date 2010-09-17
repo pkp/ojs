@@ -204,6 +204,4 @@
 	<message key="plugins.generic.thesis.form.supervisorEmail">Veileders e-postadresse</message>
 	<message key="plugins.generic.thesis.form.supervisorEmailValid">En gyldig e-postadresse for veileder må oppgis.</message>
 
-	<message key="plugins.generic.thesis.enabled">Programutvidelse for publisering av avhandlingssammendrag er slått på.</message>
-	<message key="plugins.generic.thesis.disabled">Programutvidelse for publisering av avhandlingssammendrag er slått av.</message>
 </locale>

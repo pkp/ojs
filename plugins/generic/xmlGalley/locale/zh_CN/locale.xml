@@ -15,9 +15,6 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.xmlGalley.displayName">XML展示插件</message>
 	<message key="plugins.generic.xmlGalley.description">本插件利用XSLT将XML文章生成XHTML.</message>
-	<message key="plugins.generic.xmlGalley.enabled">XML展示插件已开启。</message>
-	<message key="plugins.generic.xmlGalley.disabled">XML展示插件已关闭。</message>
-
 	<message key="plugins.generic.xmlGalley.manager.settings">设置</message>
 
 	<!-- XML Article Galleys Settings Management -->

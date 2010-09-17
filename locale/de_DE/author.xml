@@ -124,4 +124,7 @@
 	<message key="author.submissions.queuedEditingProofread">In redaktioneller Bearbeitung: Korrekturlektorat angefragt</message>
 	<message key="author.submit.reorder">Autor/innennamen umordnen</message>
 	<message key="author.submit.form.wordCountAlert">Sie haben die maximale Länge für Abstracts in dieser Rubrik überschritten.</message>
+	<message key="author.submit.submissionLocale">Beitragssprache</message>
+	<message key="author.submit.submissionLocaleDescription">Diese Zeitschrift nimmt Beiträge in verschiedenen Sprachen entgegen. Wählen Sie die primäre Sprache des Beitrags aus dem Auswahlmenü unten.</message>
+	<message key="author.submit.form.localeRequired">Bitte wählen Sie eine Beitragssprache.</message>
 </locale>

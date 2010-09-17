@@ -202,4 +202,10 @@
 	<message key="editor.issues.unpublishIssue">Despublicar número</message>
 	<message key="editor.issues.confirmUnpublish">¿Está serguro de que quiere despublicar este número publicado?</message>
 	<message key="editor.article.archiveSubmission">Rechazar y Archivar Presentación</message>
+	<message key="editor.submissionReview.sendToCopyediting">Enviar a Corrección de estilo</message>
+	<message key="editor.notifyUsers.allReaders">Todos los lectores</message>
+	<message key="editor.notifyUsers.allAuthors">Todos los autores publicados ({$count} usuarios)</message>
+	<message key="editor.notifyUsers.allIndividualSubscribers">Todos los suscriptores individuales  ({$count} usuarios)</message>
+	<message key="editor.notifyUsers.allInstitutionalSubscribers">Todos los subscriptores institucionales ({$count} usuarios)</message>
+	<message key="editor.submissionReview.cannotSendToCopyediting">Antes de enviar una presentación a corrección de estilo, use el enlace Notificar al Autor para informar al autor de la decisión y seleccione la versión que se enviará.</message>
 </locale>

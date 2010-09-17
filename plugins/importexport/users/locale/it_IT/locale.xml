@@ -14,7 +14,7 @@
   -->
  
 <locale name="it_IT" full_name="Italiano">
-	<message key="plugins.importexport.users.displayName">Plugin  XML Utenti</message>
+	<message key="plugins.importexport.users.displayName">Utenti</message>
 	<message key="plugins.importexport.users.description">Importa/esporta utenti</message>
 
 	<message key="plugins.importexport.users.cliUsage">Uso: {$scriptName} {$pluginName} [command] ...
@@ -41,7 +41,7 @@ Examples:
 	<message key="plugins.importexport.users.import.importUsers">Importa Utenti</message>
 	<message key="plugins.importexport.users.import.instructions"><![CDATA[Seleziona un file XML contenente informazioni sugli utenti da importare in questa rivista. Vedi la guida per dettagli sul formato di questo file.<br />Nota che se il file contiene username o indirizzi email gi&#x00E0; esistente nel sistema, i dati per quegli utenti non saranno importati e agli utenti esisenti verranno assegnati anche i nuovi ruoli.]]></message>
 	<message key="plugins.importexport.users.import.failedToImportUser">Importazione utente fallita</message>
-	<message key="plugins.importexport.users.import.failedToImportRole">Assegnazionee ruolo all'utente fallita</message>
+	<message key="plugins.importexport.users.import.failedToImportRole">Assegnazione del ruolo all'utente fallita</message>
 	<message key="plugins.importexport.users.import.dataFile">File dei dati utente</message>
 	<message key="plugins.importexport.users.import.sendNotify">Invia un email di notifica contenente username e password a ogni utente importato .</message>
 	<message key="plugins.importexport.users.import.continueOnError">Continua a importare altri utenti anche se si presenta un erore.</message>

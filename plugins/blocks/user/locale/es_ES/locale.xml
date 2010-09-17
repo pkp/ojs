@@ -13,7 +13,7 @@
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.block.user.displayName">User Block</message>
+	<message key="plugins.block.user.displayName">Bloque de usuarios</message>
 	<message key="plugins.block.user.description">Este Complemento proporciona una barra lateral con herramientas de cuenta de usuario (e.g. Acceder, Salir, perfil, etc).</message>
 	<message key="plugins.block.user.loggedInAs">Su identificación actual es...</message>
 	<message key="plugins.block.user.myJournals">Mis Revistas</message>

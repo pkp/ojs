@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2010 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.block.readingTools.displayName">Ferramentas para leitura</message>
+	<message key="plugins.block.readingTools.description">Este plugin exibe as ferramentas para leitura como um bloco na lateral da página.</message>
+	<message key="plugins.block.readingTools.title">Ferramentas para leitura</message>
+	<message key="plugins.block.readingTools.aboutTheAuthor">Sobre os autores</message>
+	<message key="plugins.block.readingTools.aboutTheAuthors">Sobre o autor</message>
+	<message key="plugins.block.readingTools.articleTools">Ferramentas de artigos</message>
+	<message key="plugins.block.readingTools.emailThisArticle">Enviar artigo via e-mail</message>
+	<message key="plugins.block.readingTools.loginRequired">Restrito a usuários cadastrados</message>
+	<message key="plugins.block.readingTools.printThisArticle">Imprimir artigo</message>
+	<message key="plugins.block.readingTools.postComment">Enviar comentário</message>
+</locale>

@@ -20,7 +20,7 @@
 	<message key="plugins.block.user.loggedInAs">Ingelogd als...</message>
 	<message key="plugins.block.user.myJournals">Mijn tijdschriften</message>
 	<message key="plugins.block.user.myProfile">Mijn profiel</message>
-	<message key="plugins.block.user.logout">Log uit</message>
-	<message key="plugins.block.user.signOutAsUser">Log uit als gebruiker</message>
+	<message key="plugins.block.user.logout">Uitloggen</message>
+	<message key="plugins.block.user.signOutAsUser">Uitloggen als gebruiker</message>
 	<message key="plugins.block.user.rememberMe">Blijf ingelogd</message>
 </locale>

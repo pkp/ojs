@@ -13,7 +13,7 @@
   -->
 
 <locale name="pt_BR" full_name="Português (Brasil)">
-	<message key="plugins.reports.articles.displayName">Plugin de Relatório de Artigos</message>
-	<message key="plugins.reports.articles.description">Este plugin implementa um relatório em CSV contendo a lista de artigos e seus dados.</message>
+	<message key="plugins.reports.articles.displayName">Relatório de artigos</message>
+	<message key="plugins.reports.articles.description">Este plugin implementa um relatório no formato CSV (planilha eletrônica) contendo a lista de artigos e seus dados.</message>
 	<message key="plugins.reports.articles.nodecision">Sem decisão</message>
 </locale>

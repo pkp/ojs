@@ -17,9 +17,6 @@
 	<message key="plugins.generic.translator.description">Acest modul permite întreţinerea bazată pe servicii web a fişierelor de traducere.</message>
 	<message key="plugins.generic.translator.longdescription">Această zonă permite administratorului siteului să construiască, să modifice şi să verifice traducerile OJS. Acesta este valabil pentru tot siteul şi nu ar trebui să fie folosit pentru a adapta pentru o singură revistă. Dacă corectaţi sau creeaţi o traducere, consideraţi trimiterea acesteia la Public Knowledge Project pentru distribuirea cu viitoarele distribuţii.</message>
 	<message key="plugins.generic.translator.localeDescription">Această pagină afişează toate componentele unei traduceri OJS şi oferă translatorului posibilitatea de le edita pe fiecare. O traducere completă ar trebui să existe traduceri pentru toate componentele.</message>
-	<message key="plugins.generic.translator.enabled">Modulul Translator a fost activat.</message>
-	<message key="plugins.generic.translator.disabled">Modulul Translator a fost dezactivat.</message>
-	
 	<message key="plugins.generic.translator.tarMissing">Funcția de export pentru acest modul a fost dezactivată deoarece binarul tar configurat nu poate fi găsit pe acest sistem. Asigură-te că ai instalat utilitarul tar și apoi configurează calea către binar în secțiunea corespunzătoare din config.inc.php's [cli]!</message>
 
 	<message key="plugins.generic.translator.localeName">Numele localizării</message>
@@ -34,7 +31,6 @@
 
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.title">Chei lipsă</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.title">Chei suplimentare</message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.title">Chei cu lungime îndoielnică</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.title">Liste de parametri care diferă</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.title">Fişiere lipsă pentru localizări</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.title">Emailuri lipsă</message>
@@ -43,10 +39,6 @@
 
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.message">Cheia "{$key}" lipseşte din "{$filename}". Versiunea în limba engleză este dată implicit.</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.message">Cheia "{$key}" nu mai este folosită şi poate fi eliminată din "{$filename}".</message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.message"><![CDATA[Cheia locală "{$key}" din "{$filename}" are o lungime considerabil diferită decât referinţa:<ul>
-		<li>{$value} ({$locale})</li>
-		<li>{$reference} ({$referenceLocale})</li>
-	</ul>]]></message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.message">Cheia locală "{$key}" din "{$filename}" diferă de localizarea referită prin utilizarea parametrilor. Verificaţi de două ori să conţină toţi parametrii relevanţi. Parametrul(ii) care diferă:</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.message">Fişierul de localizare "{$filename}" lipseşte sau nu poate fi citit.</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.message">Mesajul email "{$key}" lipseşte din traducere.</message>

@@ -26,6 +26,4 @@
 	<message key="plugins.generic.announcementfeed.atom.altText">Atom logo</message>
 	<message key="plugins.generic.announcementfeed.rss1.altText">RSS1 logo</message>
 	<message key="plugins.generic.announcementfeed.rss2.altText">RSS2 logo</message>
-	<message key="plugins.generic.announcementfeed.enabled">Programutvidelsen for kunngjøringer har blitt slått på.</message>
-	<message key="plugins.generic.announcementfeed.disabled">Programutvidelsen for kunngjøringer har blitt slått av.</message>
 </locale>

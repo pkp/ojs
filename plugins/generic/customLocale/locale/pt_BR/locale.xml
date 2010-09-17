@@ -13,16 +13,16 @@
   -->
  
 <locale name="pt_BR" full_name="Português (Brasil)">
-	<message key="plugins.generic.customLocale.name">Plugin de Customização de Idioma</message>
-	<message key="plugins.generic.customLocale.description">Este plugin permite a customização do idioma da interface padrão do sistema.</message>
+	<message key="plugins.generic.customLocale.name">Personalização de idioma</message>
+	<message key="plugins.generic.customLocale.description">Este plugin permite a personalização do idioma da interface padrão do sistema, sem alterar os arquivos originais.</message>
 
 	<message key="plugins.generic.customLocale.longDescription">Esta página lista todos os idiomas atualmente instalados na revista.</message>
 	<message key="plugins.generic.customLocale.localeDescription">Esta página lista todos os arquivos disponíveis para o idioma selecionado.</message>
-	<message key="plugins.generic.customLocale.fileDescription">Informe o texto no campo correspondente. Deixe o campo em branco para utilizar a tradução original.</message>
+	<message key="plugins.generic.customLocale.fileDescription">Informe o texto no campo correspondente. Deixe o campo em branco para utilizar o texto original.</message>
 	<message key="plugins.generic.customLocale.localeName">Título para a tradução</message>
 	<message key="plugins.generic.customLocale.localeKey">Chave</message>
 	<message key="plugins.generic.customLocale.localeKeyValue">Valor</message>
-	<message key="plugins.generic.customLocale.customize">Customizar</message>
+	<message key="plugins.generic.customLocale.customize">Personalizar</message>
 	<message key="plugins.generic.customLocale.availableLocales">Idiomas disponíveis</message>
 
 	<message key="plugins.generic.customLocale.locale">Idioma {$locale}</message>
@@ -30,6 +30,6 @@
 	<message key="plugins.generic.customLocale.file.filename">Nome do arquivo</message>
 	<message key="plugins.generic.customLocale.file.edit">Editando {$filename}</message>
 	<message key="plugins.generic.customLocale.file.reference">Texto original</message>
-	<message key="plugins.generic.customLocale.file.custom">Texto customizado</message>
+	<message key="plugins.generic.customLocale.file.custom">Texto personalizado</message>
 	<message key="plugins.generic.customLocale.localeKey.description">Digite uma chave de tradução completa para pesquisar.</message>
 </locale>

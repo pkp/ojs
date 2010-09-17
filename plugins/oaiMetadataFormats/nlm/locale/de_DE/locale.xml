@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2010 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.oaiMetadata.nlm.displayName">NLM-Metadaten-Format</message>
+	<message key="plugins.oaiMetadata.nlm.description">Strukturiert Metadaten auf eine zum NLM-Format für Zeitschriftenartikel kompatible Weise.</message>
+</locale>

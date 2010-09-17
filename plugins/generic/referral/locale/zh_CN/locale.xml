@@ -15,9 +15,6 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.referral.name">Referral Plugin</message>
 	<message key="plugins.generic.referral.description">The Referral Plugin tracks incoming refback URLs to articles (i.e. when a reader follows an external link to an article), allowing Authors to maintain and potentially publish an automatically-updated list of refbacks to an article.</message>
-	<message key="plugins.generic.referral.enabled">The Referral Plugin has been enabled.</message>
-	<message key="plugins.generic.referral.disabled">The Referral Plugin has been disabled.</message>
-	
 	<message key="plugins.generic.referral.editReferral">Edit Refback</message>
 	<message key="plugins.generic.referral.createReferral">Create Refback</message>
 	<message key="plugins.generic.referral.referrals">Refbacks</message>
@@ -34,4 +31,6 @@
 	<message key="plugins.generic.referral.confirmDelete">Are you sure you wish to delete this refback?</message>
 	<message key="plugins.generic.referral.nameRequired">A refback name is required.</message>
 	<message key="plugins.generic.referral.urlRequired">A refback URL is required.</message>
+	<message key="plugins.generic.referral.settings">转介插件设置</message>
+	<message key="plugins.generic.referral.excusions">排除</message>
 </locale>

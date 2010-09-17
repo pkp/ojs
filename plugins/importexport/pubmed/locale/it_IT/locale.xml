@@ -14,8 +14,8 @@
   -->
  
 <locale name="it_IT" full_name="Italiano">
-	<message key="plugins.importexport.pubmed.displayName">PubMed XML Export Plugin</message>
-	<message key="plugins.importexport.pubmed.description">Esporta i metadati degli articoli in formato PubMed XML per l'indicizzazione in MEDLINE.</message>
+	<message key="plugins.importexport.pubmed.displayName">PubMed XML</message>
+	<message key="plugins.importexport.pubmed.description">Esporta i metadati degli articoli in formato XML  compatibile con PubMed.</message>
 	
 	<message key="plugins.importexport.pubmed.export">Esporta i dati</message>
 	<message key="plugins.importexport.pubmed.export.issues">Esporta fascicoli</message>

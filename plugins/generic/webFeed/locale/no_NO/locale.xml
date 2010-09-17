@@ -15,9 +15,6 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.webfeed.displayName">Programutvidelse for webstrømmer</message>
 	<message key="plugins.generic.webfeed.description">Denne programutvidelsen skaper en RSS/Atom-strøm for siste utgave av tidsskriftet.</message>
-	<message key="plugins.generic.webfeed.enabled">Programutvidelse for webstrømmer er aktivisert.</message>
-	<message key="plugins.generic.webfeed.disabled">Programutvidelse for webstrømmer er deaktivert.</message>
-
 	<message key="plugins.generic.webfeed.settings">Innstillinger</message>
 	<message key="plugins.generic.webfeed.settings.issue">Vis webstrømlenker bare på utgavesidene.</message>
 	<message key="plugins.generic.webfeed.settings.homepage">Vis webstrømlenker både på hjemmesiden og på utgavesidene.</message>

@@ -13,8 +13,8 @@
   -->
  
 <locale name="it_IT" full_name="Italiano">
-	<message key="plugins.generic.xmlGalley.displayName">Plugin per bozze XML</message>
-	<message key="plugins.generic.xmlGalley.description">Questo plugin genera bozze XHTML da un articolo XML usando XSLT.</message>
+	<message key="plugins.generic.xmlGalley.displayName">Gabbie XML</message>
+	<message key="plugins.generic.xmlGalley.description">Questo plugin genera file XHTML a partire da un articolo XML usando XSLT.</message>
 
 	<message key="plugins.generic.xmlGalley.manager.settings">Impostazioni</message>
 
@@ -43,7 +43,5 @@
 	<message key="plugins.generic.xmlGalley.settings.customXSLRequired">Un file del foglio di stile XSL personalizzato deve essere specificato.</message>
 	<message key="plugins.generic.xmlGalley.settings.customXSLInvalid">Il file XSL caricato non è valido. Si prega di controllare il file e riprovare.</message>
 
-	<message key="plugins.generic.xmlGalley.enabled">Il plugin delle gabbie XML è stato abilitato.</message>
-	<message key="plugins.generic.xmlGalley.disabled">Il plugin delle gabbie XML è stato disabilitato.</message>
 </locale>
 

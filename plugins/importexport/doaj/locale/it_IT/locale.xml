@@ -13,14 +13,13 @@
   -->
 
 <locale name="it_IT" full_name="Italiano">
-	<message key="plugins.importexport.doaj.displayName">Plugin di Export DOAJ</message>
+	<message key="plugins.importexport.doaj.displayName">Export per DOAJ</message>
 	<message key="plugins.importexport.doaj.description">Esporta i metadati degli articoli e della rivista per DOAJ e invia una email di informazioni sulla rivista a DOAJ</message>
 
 	
 	<message key="plugins.importexport.doaj.export">Esporta i dati della rivista per DOAJ</message>
 	<message key="plugins.importexport.doaj.export.journal">Esporta la rivista</message>
-	<message key="plugins.importexport.doaj.export.email">Invia una email a DOAJ</message>
 	<message key="plugins.importexport.doaj.export.journalInfo">Esporta le informazioni in XML  sugli articoli per l'archiviazione in DOAJ</message>
-	<message key="plugins.importexport.doaj.export.emailInfo">Per la suggerire l'inclusione della rivista in DOAJ, puoi  inviare questo modulo parzialmente precompilato a DOAJ,  completando al meglio le informazioni.</message>
-
+	<message key="plugins.importexport.doaj.export.contact">Suggerisci la rivista a DOAJ</message>
+	<message key="plugins.importexport.doaj.export.contactInfo">Per proporre la rivista a DOAJ completa e invia questo modulo.</message>
 </locale>

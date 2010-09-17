@@ -837,4 +837,18 @@ Para ver o editar esta suscripción, use el siguiente enlace.
 Enlace de la suscripción: {$subscriptionUrl}</body>
 		<description>Este correo notifica al Gestor de Suscripciones de que una suscripción institucional ha sido comprada online. Proporciona información resumida sobre la suscripción y un enlace rápido a la suscripción comprada.</description>
 	</email_text>
+	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
+		<subject>Edición de Citas</subject>
+		<body>{$authorFirstName},
+
+Por favor, ¿Podría usted verificar o proporcionarnos la cita adecuada para la siguiente referencia de su artículo, {$articleTitle}:
+
+{$rawCitation}
+
+Gracias!
+
+{$userFirstName}
+Corrector de estilo, {$journalName}</body>
+		<description>Este correo electrónico permite a los correctores de estilo solicitar información adicional acerca de las referencias de los autores.</description>
+	</email_text>
 </email_texts>

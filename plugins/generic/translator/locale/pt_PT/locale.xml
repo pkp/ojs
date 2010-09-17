@@ -70,4 +70,5 @@
 	<message key="plugins.generic.translator.localeKey.description">Insira uma chave de tradução completa para pesquisar.</message>
 	<message key="plugins.generic.translator.fileNotWriteable">Este ficheiro de tradução não possui permissão de escrita. Quaisquer alterações realizadas não serão salvas.</message>
 	<message key="plugins.generic.translator.filesNotWriteable">Os seguintes arquivos de tradução não possuem permissão de escrita. Quaisquer alterações realizadas não serão guardadas.</message>
+	<message key="plugins.generic.translator.tarMissing">A funcionalidade de exportação deste plugin foi desactivada porque o binário tar configurado não foi encontrado no sistema. Certifique-se que tem o aplicação tar instalada e a seguir configure o caminho para o binário tar na secção config.inc.php's [cli]!</message>
 </locale>

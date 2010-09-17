@@ -20,8 +20,6 @@
 	<message key="plugins.generic.externalFeed.description">Publică conținut preluat de pe un flux extern Atom/RSS. De exemplu de la o instalare de WordPress, Drupal, sau OCS.</message>
 	<message key="plugins.generic.externalFeed.noneExist">Nu sunt fluxuri externe</message>
 	<message key="plugins.generic.externalFeed.title">Titlu</message>
-	<message key="plugins.generic.externalFeed.enabled">A fost activat modulul pentru fluxuri externe.</message>
-	<message key="plugins.generic.externalFeed.disabled">A fost dezactivat modulul pentru fluxuri externe.</message>
 	<message key="plugins.generic.externalFeed.posted">Postat</message>
 	<message key="plugins.generic.externalFeed.more">Mai departe...</message>
 

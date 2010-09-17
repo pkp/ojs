@@ -904,4 +904,18 @@ IP范围(可选):
 </body>
 		<description>这个邮件通知订阅管理员一个团体订阅已经在线续订了。邮件还将提供关于续订的摘要信息和到续订的快速存取链接.</description>
 	</email_text>
+	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
+		<subject>引文编辑</subject>
+		<body>{$authorFirstName},
+
+对于下面的在您文章里列出的参考文献，请您验证并提供给我们正确的引用, {$articleTitle}:
+
+{$rawCitation}
+
+谢谢!
+
+{$userFirstName}
+Copy-Editor, {$journalName}</body>
+		<description>本邮件允许文字编辑向作者要求参考文献的其他信息</description>
+	</email_text>
 </email_texts>

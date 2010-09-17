@@ -15,8 +15,6 @@
 <locale name="ro_RO" full_name="Română">
 	<message key="plugins.generic.thesisfeed.displayName">Modul pentru fluxurile generate de abstracte</message>
 	<message key="plugins.generic.thesisfeed.description">Acest modul produce fluxuri web RSS/Atom pentru abstractele lucrărilor.</message>
-	<message key="plugins.generic.thesisfeed.enabled">Modul pentru fluxurile generate de abstracte a fost activat.</message>
-	<message key="plugins.generic.thesisfeed.disabled">Modul pentru fluxurile generate de abstracte a fost dezactivat.</message>
 	<message key="plugins.generic.thesisfeed.settings">Setări</message>
 	<message key="plugins.generic.thesisfeed.settings.all">Afişează linkuri pentru fluxuri pe toate paginile revistei.</message>
 	<message key="plugins.generic.thesisfeed.settings.homepage">Afişează linkuri pentru fluxuri soar în pagina principală şi în pagina abstractelor.</message>

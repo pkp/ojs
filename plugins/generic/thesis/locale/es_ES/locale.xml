@@ -29,10 +29,10 @@
 	<message key="plugins.generic.thesis.manager.degree.doctorate">Doctorado</message>
 	<message key="plugins.generic.thesis.manager.dateApproved">Fecha Aprobado</message>
 	<message key="plugins.generic.thesis.manager.studentName">Nombre de Estudiante</message>
-	<message key="plugins.generic.thesis.manager.title">Título de Tesis</message>
-	<message key="plugins.generic.thesis.manager.confirmDelete">¿Esta seguro que quiere permanentemente borrar este resumen de tesis?</message>
-	<message key="plugins.generic.thesis.manager.noneCreated">No se creo un resumen de tesis.</message>
-	<message key="plugins.generic.thesis.manager.create">Crear un nuevo resumen de tesis</message>
+	<message key="plugins.generic.thesis.manager.title">Título</message>
+	<message key="plugins.generic.thesis.manager.confirmDelete">¿Esta seguro que quiere borrar permanentemente este resumen de tesis?</message>
+	<message key="plugins.generic.thesis.manager.noneCreated">No hay Resumen de Tesis.</message>
+	<message key="plugins.generic.thesis.manager.create">Crear un nuevo Resumen de Tesis</message>
 	<message key="plugins.generic.thesis.manager.createTitle">Crear</message>
 	<message key="plugins.generic.thesis.manager.edit">Editar el Resumen de Tesis</message>
 	<message key="plugins.generic.thesis.manager.editTitle">Editar</message>

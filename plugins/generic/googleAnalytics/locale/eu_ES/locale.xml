@@ -29,5 +29,8 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Hautatu erabili nahi den segimendu-kodea</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Segimendu-kode heredatua (urchin.js)</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Segimendu-kode berria (ga.js)</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount">Google Analytics kontu-zenbakia</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount.description">Google Analytics erabiliz argitaratutako artikulu baten irakurleak bilatzeko, sartu kontu-zenbaki bat hemen (adib., UA-xxxxxx-x).</message>
+	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Egileek egindako aurkezpenerako sartutako Google Analytics kontuko zenbaki bat edo gehiago ez dira baliozkoak.</message>
 </locale>
 

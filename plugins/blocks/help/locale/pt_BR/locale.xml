@@ -13,6 +13,6 @@
   -->
  
 <locale name="pt_BR" full_name="Português do Brasil">
-	<message key="plugins.block.help.displayName">Plugin de Ajuda</message>
+	<message key="plugins.block.help.displayName">Ajuda do sistema</message>
 	<message key="plugins.block.help.description">Este plugin oferece um link na barra lateral para a ajuda do sistema.</message>
 </locale>

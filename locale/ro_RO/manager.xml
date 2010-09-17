@@ -17,12 +17,12 @@
 	<message key="manager.emails.confirmResetAll">Eşti sigur că doreşti să resetezi toate şabloanele pentru emailurile revistei? Veţi pierde toate adaptările făcute.</message>
 	<message key="manager.files.note">Notă: Browserul de fişiere este o funcţionalitate avansată care permite ca fişierele şi directoarele asociate cu o revistă să fie văzute şi manipulate în mod direct.</message>
 	<message key="manager.groups">Caseta editorială</message>
-	<message key="manager.groups.context.editorialTeam">Vezi ca titlul să apară sub echipa redacţională în „subsecţiunea colectivului redacțional” din secţiunea „despre revistă” (de ex: Redactor)</message>
+	<message key="manager.groups.context.editorialTeam">Vezi ca titulatura să apară sub echipa redacţională în subsecţiunea „colectivului de redacție” din secţiunea „despre revistă” (de ex: Redactor)</message>
 	<message key="manager.groups.context.editorialTeam.short">Colectivul de redacție</message>
-	<message key="manager.groups.context.people">Vezi ca titlul să apară ca fiind propria categorie sub colectiv (de ex: Colectivul de redacţie)</message>
+	<message key="manager.groups.context.people">Vezi ca titulatura să apară ca fiind propria categorie sub colectiv (de ex: Colectivul de redacţie)</message>
 	<message key="manager.groups.create">Introdu o titulatură pentru poziția deținută</message>
 	<message key="manager.groups.disableBoard">OJS afişează membrii colectivului redacţional sub secţiunile aferente rolurilor atribuite (Manager de revistă, Redactor, etc.)</message>
-	<message key="manager.groups.enableBoard">Managerul revistei creează titlurile şi adaugă colectivul sub fiecare titlu.</message>
+	<message key="manager.groups.enableBoard">Managerul revistei creează titulaturile şi adaugă colectivul sub fiecare dintre acestea.</message>
 	<message key="manager.groups.enableBoard.description"><![CDATA[Sub <a href="{$aboutEditorialTeamUrl}">Colectiv</a> în secțiunea „despre”:]]></message>
 	<message key="manager.groups.noneCreated">Nu au fost create poziții în echipa editorială.</message>
 	<message key="manager.journalManagement">Managementul revistei</message>
@@ -30,7 +30,7 @@
 	<message key="manager.language.forms">Formulare</message>
 	<message key="manager.language.confirmDefaultSettingsOverwrite">Va avea ca efect înlocuirea oricăror setări specifice unei localizări pe care le-ai avut cât timp ai utilizat respectiva localizare</message>
 	<message key="manager.language.reloadLocalizedDefaultSettings">Reîncarcă setările implicite specifice localizării</message>
-	<message key="manager.languages.languageInstructions"><![CDATA[OJS poate fi utilizat în câteva limbi care sunt suportate. De asemenea, OJS poate opera şi ca un sistem multilingv, oferindu-le posibilitatea utilizatorilor să schimbe limbile în oricare pagină, permiţând ca anumite date să fie întroduse în câteva limbi adiționale.<br /><br/>Dacă o limbă suportată de OJS nu este menţionată mai jos, cereţi administratorului să instaleze limba din interfaţa de administrare a siteului. Pentru instrucţiuni privind adăugarea suportului pentru noi limbi, te rog consultă documentaţia OJS.]]></message>
+	<message key="manager.languages.languageInstructions"><![CDATA[OJS poate fi utilizat în mai multe limbi implementate în pachete de localizare. De asemenea, OJS poate opera  ca şi sistem multilingv, oferindu-le  utilizatorilor posibilitatea să aleagă limba dorită pentru oricare dintre pagini, fiind permis ca anumite date să fie întroduse în câteva limbi suplimentare.<br /><br/>Dacă o limbă suportată de OJS nu este menţionată mai jos, cereţi administratorului să instaleze limba din interfaţa de administrare a siteului. Pentru instrucţiuni privind adăugarea suportului pentru noi limbi, te rog consultă documentaţia OJS.]]></message>
 	<message key="manager.languages.noneAvailable">Scuze, nu sunt disponibile limbi suplimentare. Contactaţi administratorul siteului dacă doreşti să foloseşti limbi suplimentare pentru această revistă.</message>
 	<message key="manager.languages.primaryLocaleInstructions">Aceasta va fi limba aleasă implicit pentru siteul revistei.</message>
 	<message key="manager.managementPages">Pagini pentru management</message>
@@ -144,7 +144,7 @@
 	<message key="manager.reviewForms.form.titleRequired">Este necesar un titlu pentru formularul de evaluare.</message>
 	<message key="manager.reviewForms.inReview">În curs de evaluare</message>
 	<message key="manager.reviewForms.list.description">Formularele de evaluare (peer review) create aici vor fi prezentate evaluatorilor/referenţilor pentru a fi completate, în locul formularului implicit care constă din două căsuţe de text. Prima „pentru autor şi redactor" iar a doua „pentru redactor”. Formularele de evaluare pot fi desemnate pentru o secţiune specifică a unei reviste iar redactorii au opţiunea de a alege din care formular să aleagă pentru a atribui evaluarea. În toate cazurile, redactorii au opţiunea de a include evaluările în legătură cu autorul.</message>
-	<message key="manager.reviewForms.noneChosen">Niciuna / Formular de evaluare deschis</message>
+	<message key="manager.reviewForms.noneChosen">Niciunul / Formular de evaluare deschis</message>
 	<message key="manager.reviewForms.noneCreated">Nu au fost creat niciun formular pentru evaluare.</message>
 	<message key="manager.reviewForms.preview">Formular de previzualizare</message>
 	<message key="manager.reviewForms.title">Titlu</message>
@@ -153,7 +153,7 @@
 	<message key="manager.sections.confirmDelete">Eşti sigur că doreşti să ştergi permanent această secţiune? Va trebui să republici toate articolele care au stat în aceasta.</message>
 	<message key="manager.sections.create">Creează secţiune</message>
 	<message key="manager.sections.disableComments">Dezactivează comentariile cititorilor pentru această secţiune.</message>
-	<message key="manager.section.sectionEditorInstructions">Adaugă un redactor de secțiune acestei secțiuni pentru a avea automat atribuite propunerile către acesta. Alternativa este ca redactorii de secțiune să fie angajați manual la momentul când apare o propunere. Dacă un redactor de secșiune este adăugat, acesta poate fi desemnat automat pentru a supraveghea EVALUAREA (peer review) și/sau REDACTAREA (redactarea, machetarea și corectura) propunerilor către această secțiune. Redactorii de secțiune sunt creați dând clic pe redactorii de secțiune de sub roluri în secțiunea de management a revistei.</message>
+	<message key="manager.section.sectionEditorInstructions">Adaugă un redactor de secțiune acestei secțiuni pentru a avea automat atribuite propunerile către acesta. Alternativa este ca redactorii de secțiune să fie angajați manual la momentul când apare o propunere. Dacă un redactor de secțiune este adăugat, acesta poate fi desemnat automat pentru a supraveghea EVALUAREA (peer review) și/sau REDACTAREA (redactarea, machetarea și corectura) propunerilor către această secțiune. Redactorii de secțiune sunt creați dând clic pe redactorii de secțiune de sub roluri în secțiunea de management a revistei.</message>
 	<message key="manager.sections.editorRestriction">Articolele pot fi propuse doar de redactori şi de redactorii de secţiune.</message>
 	<message key="manager.sections.editors">Redactorii de secțiune</message>
 	<message key="manager.sections.form.abbrevRequired">Este necesar un titlu abreviat pentru această secţiune</message>
@@ -171,12 +171,12 @@
 	<message key="manager.sections.policy">Regulamentul de publicare al secţiunii</message>
 	<message key="manager.sections.readingTools">Instrumente pentru lectură</message>
 	<message key="manager.sections.reviewed">Evaluat prin peer review</message>
-	<message key="manager.sections.submissionIndexing">Nu va fi inclus la momentul indexării revistei</message>
-	<message key="manager.sections.submissionReview">Nu va fi evaluat prin peer-review</message>
-	<message key="manager.section.submissionsToThisSection">Propuneri făcute pentru această secţiune a revistei</message>
+	<message key="manager.sections.submissionIndexing">Nu vor fi incluse la momentul indexării revistei</message>
+	<message key="manager.sections.submissionReview">Nu vor fi evaluate prin peer-review</message>
+	<message key="manager.section.submissionsToThisSection">Propunerile făcute pentru această secţiune a revistei:</message>
 	<message key="manager.sections.unassigned">Redactori de secțiune disponibili</message>
 	<message key="manager.sections.wordCount">Contor cuvinte</message>
-	<message key="manager.sections.wordCountInstructions">Limitează numărul de cuvinte din abstract pentru această secțiune la (0 înseamnă nelimitat): </message>
+	<message key="manager.sections.wordCountInstructions">Limitează numărul de cuvinte din abstract pentru această secțiune la (0 înseamnă nelimitat):</message>
 	<message key="manager.setup">Setări</message>
 	<message key="manager.setup.aboutItemContent">Conţinut</message>
 	<message key="manager.setup.addAboutItem">Adaugă un element descriptiv - despre</message>
@@ -252,12 +252,12 @@
 	<message key="manager.setup.editorialReviewBoard">Colectivul editorial / de evaluatori</message>
 	<message key="manager.setup.editorialReviewBoardDescription">Revistele au un colectiv editorial care îngrijeşte la direcţiile redacţionale ale revistei, participă în numirea redactorilor iar prin calitatea membrilor acestui colectiv dau o poziţie revistei în sfera domeniului. Colectivul de evaluare joacă un rol similar, dar, în plus, conduc procesele de evaluare. Membrii colectivului de evaluare nu vor avea acces la sistemul administrativ al revistei, dar vor fi adăugaţi la lista celor care sunt disponibili pentru a face evaluări.</message>
 	<message key="manager.setup.emailBounceAddress">Adresă de salt</message>
-	<message key="manager.setup.emailBounceAddressDescription">AOricare email care nu poate fi trimis va avea ca rezultat o eroare trimisă la această adresă.</message>
+	<message key="manager.setup.emailBounceAddressDescription">Orice email care nu poate fi trimis va avea ca rezultat o eroare trimisă la această adresă.</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Notă:</strong> Pentru a folosi această opţiune, administratorul trebuie să activeze opţiunea <tt>allow_envelope_sender</tt> din fişierul de configurare al OJS. Poate să fie nevoie de configurări suplimentare pentru server pentru a suporta această funcţie (ceea ce nu se poate aplica pentru toate serverele), după cum este precizat şi în documentaţia OJS.]]></message>
 	<message key="manager.setup.emails">Identificare emailuri</message>
 	<message key="manager.setup.emailSignature">Semnătură</message>
 	<message key="manager.setup.emailSignatureDescription">Emailurile care sunt trimise de sistem din partea revistei vor avea următoarea semnătură ataşată la final. Textele șablon ale emailurilor care sunt deja pregătite sunt disponibile pentru editare la secţiunea de management a revistei.</message>
-	<message key="manager.setup.enableAnnouncements">Permite managerilor revistei să adauge anunţuri la revistă.</message>
+	<message key="manager.setup.enableAnnouncements">Permite managerilor revistei să adauge noutăți la revistă.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Afişarea</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">celor mai recente anunţuri pe pagina principală destinată anunțurilor.</message>
 	<message key="manager.setup.enablePageNumber">Numerotarea paginilor pentru articole va fi calculată şi introdusă manual în cuprins (ex. p. 14-26).</message>
@@ -290,10 +290,9 @@
 	<message key="manager.setup.generalInformation">Informaţii generale</message>
 	<message key="manager.setup.gettingDownTheDetails">Pasul 1. Stabilirea detaliilor</message>
 	<message key="manager.setup.guidelines">Îndrumări</message>
-	<message key="manager.setup.guidingSubmissions">Pasul 3. Direcționarea propunerilor</message>
+	<message key="manager.setup.guidingSubmissions">Pasul 3. Îndrumarea propunerilor</message>
 	<message key="manager.setup.homepageImage">Imaginea care apare în pagina principală</message>
 	<message key="manager.setup.homepageImageDescription">Adaugă o imagine sau un fişier grafic la partea mediană a paginii.</message>
-	<message key="manager.setup.htmlSetupInstructions"><![CDATA[HTML-ul poate fi utilizat în zona de text (pentru dimensiunea fontului, culoare, etc.), având capătul de rând marcat ca  <tt>&lt;br&gt;</tt>; editorul HTML funcționează cu browserele Firefox.]]></message>
 	<message key="manager.setup.includeCreativeCommons">Pentru revistele care oferă acces deschis imediat sau cu embargo, includeţi la timpul potrivit o licenţă Creative Commons care să cuprindă toate articolele publicate.</message>
 	<message key="manager.setup.information">Informaţie</message>
 	<message key="manager.setup.information.description">Descrierea pe scurt a revistei necesară bibliotecarilor, autorilor şi cititorilor care prospectează, este disponibilă în secţiunea „Informaţii” din bara laterale.</message>
@@ -303,7 +302,7 @@
 	<message key="manager.setup.initialIssue">Primul număr</message>
 	<message key="manager.setup.initialIssueDescription">În funcţie de formatul selectat, identificaţi numărul, volumul, şi/sau anul primului număr care va fi publicat cu OJS:</message>
 	<message key="manager.setup.institution">Instituţie</message>
-	<message key="manager.setup.issnDescription"><![CDATA[ISSN (International Standard Serial Number) este un număr cu 8 digiţi care identifică un periodic incluzând periodicele electronice. Aceste numere sunt gesionate de o reţea globală de Centre Naţionale coordonate de un Centru Internaţional aflat la Paris susţinut de UNESCO şi Guvernul Francez. Un număr poate fi obţinut de la <a href="http://www.issn.org" target="_new">siteul ISSN</a>. Acest lucru poate fi făcut în orice moment al vieţii unei reviste.]]></message>
+	<message key="manager.setup.issnDescription"><![CDATA[ISSN (International Standard Serial Number) este un număr cu 8 digiţi care identifică un periodic incluzând periodicele electronice. Aceste numere sunt gestionate de o reţea globală de centre naţionale coordonate de un Centru Internaţional aflat la Paris susţinut de UNESCO şi Guvernul Francez. Un număr poate fi obţinut de la <a href="http://www.issn.org" target="_new">siteul ISSN</a>. Acest lucru poate fi făcut în orice moment al existenței unei reviste.]]></message>
 	<message key="manager.setup.issuePerVolume">Numere per volum</message>
 	<message key="manager.setup.itemsDescription">Elementele pentru bara de navigaţie pot fi adăugate la setul curent (Acasă, Despre, Spaţiul utilizatorului, etc.), care apare la partea superioară a paginii.</message>
 	<message key="manager.setup.itemsPerPage">Elemente per pagină</message>
@@ -334,7 +333,7 @@
 	<message key="manager.setup.journalStyleSheetInvalid">Format necorespunzător pentru style sheet. Formatul acceptat este .css.</message>
 	<message key="manager.setup.journalTheme">Modelul vizual al revistei</message>
 	<message key="manager.setup.journalTitle">Titlul revistei</message>
-	<message key="manager.setup.labelName">Numele mărcii</message>
+	<message key="manager.setup.labelName">Nume element meniu</message>
 	<message key="manager.setup.layoutAndGalleys">Redactorii machetei</message>
 	<message key="manager.setup.layoutInstructions">Instrucţiuni pentru machetare</message>
 	<message key="manager.setup.layoutInstructionsDescription">Instrucţiunile pentru machetare pot fi pregătite pentru formatarea articolelor de publicat în revistă şi pot fi introduse mai jos ca HTML sau text simplu. Acestea vor fi disponibile redactorului de machetă şi redactorului de secţiune pentru pagina de redactare a fiecăreia dintre propuneri. (Pentru că fiecare revistă poate să implice propriul format de fişiere, standardele bibliografice, style sheeturi, etc., nu este dat un set implicit de instrucţiuni în acest sens.)</message>
@@ -357,8 +356,8 @@
 	<message key="manager.setup.managingTheJournal">Pasul 4. Managementul revistei</message>
 	<message key="manager.setup.navigationBar">Bara de navigaţie</message>
 	<message key="manager.setup.navigationBarDescription">Adaugă sau elimină elemente suplimentare din bara de navigaţie.</message>
-	<message key="manager.setup.navItemIsAbsolute">URL-ul este un URL absolut (ex. „http://www.exemplu.com”) şi nu o cale relativă la site (ex. „/manager/setup”)</message>
-	<message key="manager.setup.navItemIsLiteral">Valoarea etichetei este un şir de litere (ex. „Setarea revistei”) şi nu un mesaj cheie a unei localizări de limbă precum (ex. „manager.setup”)</message>
+	<message key="manager.setup.navItemIsAbsolute">URL-ul este un URL absolut (ex. „http://www.exemplu.com”) şi nu o cale relativă a siteului (ex. „/manager/setup”)</message>
+	<message key="manager.setup.navItemIsLiteral">Valoarea etichetei este un şir de litere (ex. „Setarea revistei”) şi nu un mesaj cheie a unei localizări de limbă precum este de exemplu: „manager.setup”.</message>
 	<message key="manager.setup.noImageFileUploaded">Nu există niciun fişier de imagine încărcat.</message>
 	<message key="manager.setup.noStyleSheetUploaded">Nu a fost încărcat niciun style sheet.</message>
 	<message key="manager.setup.note">Notă</message>
@@ -384,7 +383,7 @@
 	<message key="manager.setup.policies">Politici</message>
 	<message key="manager.setup.policies.description">Focus, peer review, secţiuni, spaţiu privat, securitate şi alte aspecte privind articolele.</message>
 	<message key="manager.setup.principalContact">Contactul principal</message>
-	<message key="manager.setup.principalContactDescription">Această poziţie, care poate fi considerată ca fiind redactorul principal, redactorul de serviciu sau poziţii din personalul administrativ, va fi afișată pe pagina principală a revistei sub contact lângă cel al suportului tehnic.</message>
+	<message key="manager.setup.principalContactDescription">Această poziţie, care poate fi considerată ca fiind redactorul șef, redactorul de serviciu sau poziţii din personalul administrativ, va fi afișată pe pagina principală a revistei sub contact lângă cel al suportului tehnic.</message>
 	<message key="manager.setup.printIssn">ISSN-ul variantei tipărite</message>
 	<message key="manager.setup.privacyStatement">Declaraţia de confidenţialitate</message>
 	<message key="manager.setup.privacyStatement2">Declaraţie de confidenţialitate</message>
@@ -450,7 +449,7 @@
 	<message key="manager.setup.selectEditorDescription">Redactorul șef al revistei care se va îngriji de procesul editorial.</message>
 	<message key="manager.setup.selectSectionDescription">Secţiunea revistei pentru care articolul va fi luat în considerare.</message>
 	<message key="manager.setup.showGalleyLinksDescription">Arată întotdeauna linkuri căte zona de asamblare şi indică accesul restricţionat.</message>
-	<message key="manager.setup.siteAccess">Site suplimentar și restricții de acces la articole</message>
+	<message key="manager.setup.siteAccess">Restricții suplimentare privind accesul pe site și la articole</message>
 	<message key="manager.setup.sponsors">Organizaţii sponsor</message>
 	<message key="manager.setup.sponsorNoteDescription">Acest text va apărea sub colontitlul (headerul) „sponsori” și deasupra listei cu numele sponsorilor și al url-urilor de sub „sponsorii revistei” din pagina „despre”.</message>
 	<message key="manager.setup.sponsorsDescription">Numele organizaţiilor (ex. asociaţii ştiinţifice, departamente în cadrul universităţilor, cooperări, etc.) care sponsorizează revista vor apărea la secţiunea despre revistă şi pot fi acompaniate de o notă de recunoaştere.</message>
@@ -681,4 +680,12 @@
 	<message key="manager.subscriptionTypes.name">Tipul de abonament</message>
 	<message key="manager.subscriptionTypes.noneCreated">Nu a fost creat niciun tip de abonament.</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Tipul de abonament a fost creat cu succes.</message>
+	<message key="manager.groups.publishEmails">Publică adresele de email ale membrilor</message>
+	<message key="manager.language.submissions">Propunerile</message>
+	<message key="manager.plugins.invalidPluginArchive">Arhiva modulelor încărcate nu conține un director care să corespundă cu numele modulului.</message>
+	<message key="manager.plugins.tarCommandNotFound">Comanda tar nu este disponibilă. Configurați-l corect în fișierul "config.inc.php".</message>
+	<message key="manager.plugins.versionFileInvalid">version.xml din directorul modulului conține date nevalide.</message>
+	<message key="manager.reviewFormElements.included">Inclus în mesajul către autor</message>
+	<message key="manager.setup.doiReassign">Reatribuie DOI-urile</message>
+	<message key="manager.setup.doiReassign.description">Dacă schimbi configurarea DOI-urile, DOI-urile care deja au fost atribuite nu vor fi afectate. Din moment ce configurarea DOI-urilor este salvată, folosește acest buton pentru a elimina toate DOI-urile existente astfel încât noile setări să aibă efect asupra articolelor existente.</message>
 </locale>

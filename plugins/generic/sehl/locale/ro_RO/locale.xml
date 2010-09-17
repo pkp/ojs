@@ -15,6 +15,4 @@
 <locale name="ro_RO" full_name="Română">
 	<message key="plugins.generic.sehl.name">Modulul SEHL</message>
 	<message key="plugins.generic.sehl.description">Acest modul implementează Search Engine HighLighting (SEHL) astfel ca în momemtul în care motorul de căutare localizează un articol HTML, cuvintele după care s-a făcut căutarea sunt evidenţiate.</message>
-	<message key="plugins.generic.sehl.enabled">Modulul SEHL a fost activat.</message>
-	<message key="plugins.generic.sehl.disabled">Modulul SEHL a fost dezactivat.</message>
 </locale>

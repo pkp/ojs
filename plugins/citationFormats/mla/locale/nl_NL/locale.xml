@@ -18,4 +18,5 @@
 	<message key="plugins.citationFormats.mla.displayName">MLA citatieformaat plugin</message>
 	<message key="plugins.citationFormats.mla.citationFormatName">MLA</message>
 	<message key="plugins.citationFormats.mla.description">Deze plugin implementeert het MLA citatieformaat.</message>
+	<message key="plugins.citationFormats.mla.noPages">g.pag.</message>
 </locale>

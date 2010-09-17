@@ -13,6 +13,6 @@
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.block.help.displayName">Help Block</message>
+	<message key="plugins.block.help.displayName">Bloque de ayuda</message>
 	<message key="plugins.block.help.description">Este Complemento proporciona un vínculo a la ayuda en barra lateral.</message>
 </locale>

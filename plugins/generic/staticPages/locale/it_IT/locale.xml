@@ -13,24 +13,24 @@
   -->
  
 <locale name="it_IT" full_name="Italian">
-	<message key="plugins.generic.staticPages.displayName">Static Pages Plugin</message>
-	<message key="plugins.generic.staticPages.description">Questo plugin permette la gestione di pagine statiche.</message>
+	<message key="plugins.generic.staticPages.displayName">Pagine statiche</message>
+	<message key="plugins.generic.staticPages.description">Questo plugin permette la creazione e la gestione di pagine statiche.</message>
 	<message key="plugins.generic.staticPages.pageTitle">Titolo</message>
 	<message key="plugins.generic.staticPages.content">Contenuto</message>
 
 	<message key="plugins.generic.staticPages.path">Path</message>
-	<message key="plugins.generic.staticPages.requirement.tinymce"><![CDATA[<strong>The TinyMCE Plugin must be installed and enabled in order to add/edit content.</strong>]]></message>
+	<message key="plugins.generic.staticPages.requirement.tinymce"><![CDATA[<strong>Bisogna aver installato e abilitato il plugin TinyMCE per aggiungere e/o modificare contenuti.</strong>]]></message>
 
 	<message key="plugins.generic.staticPages.editAddContent">Modifica/Aggiungi Contenuto</message>
 
-	<message key="plugins.generic.staticPages.addStaticPage">Aggiungi una Pagina Statica</message>
+	<message key="plugins.generic.staticPages.addStaticPage">Aggiungi una pagina Statica</message>
 	<message key="plugins.generic.staticPages.addNewPage">Aggiungi una nuova pagina</message>
 	<message key="plugins.generic.staticPages.editStaticPage">Modifica la Pagina Statica</message>	
 
 	<message key="plugins.generic.staticPages.settingInstructions">Qui di seguito l'elenco delle pagine statiche create. Puoi modificare o cancellare le pagine utilizzando i links sulla destra.</message>
 	<message key="plugins.generic.staticPages.editInstructions">Utilizza il form seguente per aggiungere/editare contenuti.</message>
-	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[Le pagine possono essere raggiunte come: {$pagesPath}, dove %PATH% &egrave; il valore scelto. <strong>Nota:</strong> Due pagine non possono avere lo stesso path.]]></message>
-	<message key="plugins.generic.staticPages.duplicatePath">Questo path esiste gi&#224; per una diversa pagina statica.</message>
+	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[Le pagine possono essere raggiunte all'indirizzo: {$pagesPath}, dove %PATH% &egrave; il valore scelto. <strong>Nota:</strong> Due pagine non possono avere lo stesso path.]]></message>
+	<message key="plugins.generic.staticPages.duplicatePath">Questo path esiste già per una diversa pagina.</message>
 	
 	<message key="plugins.generic.staticPages.pageSaved">Pagina salvata con successo.</message>
 	<message key="plugins.generic.staticPages.pageDeleted">Pagina cancellata con successo.</message>

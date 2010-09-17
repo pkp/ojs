@@ -15,8 +15,8 @@
 <locale name="pt_BR" full_name="Português do Brasil">
 
 	<!-- phpMyVisites -->
-	<message key="plugins.generic.phpmv.displayName">Plugin phpMyVisites</message>
-	<message key="plugins.generic.phpmv.description"><![CDATA[Integre o sistema com o phpMyVisites, uma ferramenta livre e gratuita de análise de tráfego web. Exige a instalação prévia do phpMyVisites. Saiba mais em <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">phpMyVisites</a>.]]></message>
+	<message key="plugins.generic.phpmv.displayName">Análise de tráfego phpMyVisites</message>
+	<message key="plugins.generic.phpmv.description"><![CDATA[Integre o sistema com o phpMyVisites, uma ferramenta livre e gratuita de análise de tráfego Web. Exige a instalação prévia do phpMyVisites. Saiba mais em <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">phpMyVisites</a>.]]></message>
 
 	<!-- phpMyVisites Settings Management -->
 	<message key="plugins.generic.phpmv.manager.settings">Configurações</message>

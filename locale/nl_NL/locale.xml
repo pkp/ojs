@@ -52,7 +52,7 @@
 	<message key="navigation.journalHelp">Tijdschrift help</message>
 	<message key="navigation.archives">Archieven</message>
 	<message key="navigation.current">Actueel</message>
-	<message key="navigation.otherJournals">Andere tijdschriften</message>
+	<message key="navigation.otherJournals">Overige tijdschriften</message>
 	<message key="navigation.browseByIssue">Op nummer</message>
 	<message key="navigation.browseByAuthor">Op auteur</message>
 	<message key="navigation.infoForAuthors">Voor auteurs</message>
@@ -169,7 +169,7 @@
 
 	<!-- User -->
 	<message key="user.showAllJournals">Toon mijn tijdschriften</message>
-	<message key="user.registerForOtherJournals">Registreer voor andere tijdschriften</message>
+	<message key="user.registerForOtherJournals">Registreren voor andere tijdschriften</message>
 	<message key="user.myJournals">Mijn tijdschriften</message>
 	
 	<!-- Roles -->
@@ -344,7 +344,7 @@ Merk op dat de OAI interface voor deze site uitgeschakeld kan worden door de con
 Het inrichten van LOCKSS ondersteuning voor Open Journal Systems hoeft pas te gebeuren als publicatie plaatsvindt. Volg dan deze twee stappen:]]></message>
 	
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Voorgestelde Creative Commons auteursrechtverklaringen</h3>
+	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Voorgestelde Creative Commons auteursrecht verklaringen</h3>
 <h4>1. Concept beleid voor Open Access tijdschriften</h4>
 Auteurs die publiceren bij dit tijdschrift, onderschrijven de volgende voorwaarden:
 <ol type="a">
@@ -667,7 +667,7 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<!-- Site index -->
 	<message key="site.journalsHosted">Tijdschriften op deze site</message>
 	<message key="site.journalView">Bekijk tijdschrift</message>
-	<message key="site.journalRegister">Registreer</message>
+	<message key="site.journalRegister">Registreren</message>
 	<message key="site.journalCurrent">Huidig nummer</message>
 	
 
@@ -688,27 +688,27 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="about.editorialTeam">Redactie</message>
 	<message key="about.editorialTeam.biography">Biografie</message>
 	<message key="about.editorialPolicies">Redactioneel beleid</message>
-	<message key="about.focusAndScope">Focus en afbakening</message>
+	<message key="about.focusAndScope">Focus en missie</message>
 	<message key="about.sectionPolicies">Beleid secties</message>
 	<message key="about.submissions">Inzendingen</message>
 	<message key="about.sponsors">Sponsors</message>
 	<message key="about.contributors">Bijdragen</message>
-	<message key="about.onlineSubmissions">Online inzendingen</message>
+	<message key="about.onlineSubmissions">Online indienen manuscript</message>
 	<message key="about.onlineSubmissions.haveAccount">Heeft u al een gebruikersnaam/wachtwoord voor {$journalTitle}?</message>
-	<message key="about.onlineSubmissions.login">Ga naar Login</message>
+	<message key="about.onlineSubmissions.login">Ga naar inloggen</message>
 	<message key="about.onlineSubmissions.needAccount">Gebruikersnaam/wachtwoord nodig?</message>
 	<message key="about.onlineSubmissions.registration">Ga naar registratie</message>
-	<message key="about.onlineSubmissions.registrationRequired">Registratie en login zijn nodig om online inzendingen te kunnen doen en de status van inzendingen te kunnen controleren.</message>
+	<message key="about.onlineSubmissions.registrationRequired">Registratie en inloggen zijn nodig om online manuscripten in te kunnen zenden en de status van inzendingen te kunnen controleren.</message>
 	<message key="about.authorGuidelines">Richtlijnen voor auteurs</message>
 	<message key="about.submissionPreparationChecklist">Checklist ter voorbereiding van inzending</message>
-	<message key="about.submissionPreparationChecklist.description">Als onderdeel van het inzendingsproces moeten auteurs verklaren dat hun inzending voldoet aan de volgende richtlijnen. Inzendingen kunnen geretourneerd worden als ze daar niet aan voldoen.</message>
-	<message key="about.copyrightNotice">Verklaring van auteursrecht</message>
+	<message key="about.submissionPreparationChecklist.description">Als onderdeel van de inzendingsprocedure moeten auteurs verklaren dat hun inzending voldoet aan de volgende richtlijnen. Inzendingen kunnen geretourneerd worden als ze daar niet aan voldoen.</message>
+	<message key="about.copyrightNotice">Auteursrecht verklaring</message>
 	<message key="about.privacyStatement">Privacy verklaring</message>
 	<message key="about.authorFees">Kosten auteurs</message>
 	<message key="about.authorFeesMessage">Dit tijdschrift berekent de volgende kosten aan auteurs.</message>
-	<message key="about.peerReviewProcess">Peer review proces</message>
-	<message key="about.publicationFrequency">Publicatiefrequentie</message>
-	<message key="about.openAccessPolicy">Open Access Beleid</message>
+	<message key="about.peerReviewProcess">Peer review procedure</message>
+	<message key="about.publicationFrequency">Verschijningsfrequentie</message>
+	<message key="about.openAccessPolicy">Open Access beleid</message>
 	<message key="about.delayedOpenAccess">Vertraagde Open Access</message>
 	<message key="about.delayedOpenAccessDescription1">De inhoud van dit tijdschrift zal beschikbaar zijn in een open access formaat</message>
 	<message key="about.delayedOpenAccessDescription2">maand(en) nadat een nummer gepubliceerd is.</message>
@@ -718,7 +718,7 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="about.subscriptionsContact">Contact voor abonnementen</message>
 	<message key="about.availableSubscriptionTypes">Abonnementstypes</message>
 	<message key="about.memberships">Lidmaatschappen</message>
-	<message key="about.journalSponsorship">Tijdschriftsponsors</message>
+	<message key="about.journalSponsorship">Sponsors</message>
 	<message key="about.aboutThisPublishingSystem">Over dit publicatiesysteem</message>
 	<message key="about.aboutOJSJournal"><![CDATA[Dit tijdschrift gebruikt Open Journal Systems {$ojsVersion}, open source software voor het beheren en publiceren van een tijdschrift, ondersteund en gratis geleverd door het <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> onder de GNU General Public License.]]></message>
 	<message key="about.aboutOJSSite"><![CDATA[Deze site gebruikt Open Journal Systems {$ojsVersion}, open source software voor het beheren en publiceren van een tijdschrift, ondersteund en gratis geleverd door het <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> onder de GNU General Public License.]]></message>
@@ -742,7 +742,7 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="payment.payNow">Betaal nu</message>
 	<message key="payment.waive">Kwijtschelden</message>
 	<message key="payment.alreadyPaid">Reeds betaald</message>
-	<message key="payment.alreadyPaidMessage">Selecteer dit vak als uw betaling naar het tijdschrift is verstuurd om het inzendingsproces af te ronden. De inzending wordt niet beoordeeld totdat de betaling is verwerkt. Klik Betaal nu om de betalingsinstructies te bekijken.</message>
+	<message key="payment.alreadyPaidMessage">Selecteer dit vak als uw betaling naar het tijdschrift is verstuurd om de inzendingsprocedure af te ronden. De inzending wordt pas beoordeeld als de betaling is verwerkt. Klik Betaal nu om de betalingsinstructies te bekijken.</message>
 	<message key="payment.paymentReceived">Betaling ontvangen</message>
 	<message key="payment.paymentSent">Betaling is verzonden</message>
 	<message key="payment.type.submission">Inzendingskosten</message>
@@ -979,14 +979,13 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	<message key="user.noRoles.noRolesForJournal">Uw profiel heeft geen rollen voor dit tijdschrift. Kies uit de acties hieronder:</message>
 	<message key="user.noRoles.submitArticle">Zend een voorstel in</message>
 	<message key="user.noRoles.submitArticleRegClosed">Zend een artikel in: registratie van auteurs is momenteel uitgeschakeld.</message>
-	<message key="user.noRoles.regReviewer">Registreer als reviewer</message>
-	<message key="user.noRoles.regReviewerClosed">Registreer als reviewer: registratie is momenteel uitgeschakeld.</message>
+	<message key="user.noRoles.regReviewer">Registreren als reviewer</message>
+	<message key="user.noRoles.regReviewerClosed">Registreren als reviewer: registratie is momenteel uitgeschakeld.</message>
 	<message key="issue.coverPage.altText">Omslag</message>
 	<message key="plugins.categories.implicitAuth">Impliciete authenticatie plugins</message>
 	<message key="plugins.categories.implicitAuth.description">Impliciete authenticatie plugins implementeren de ondersteuning voor authenticatie van gebruikers op basis van http headers.</message>
 	<message key="journal.issn">ISSN</message>
 	<message key="article.article">Artikel</message>
-	<message key="article.citations">Referenties</message>
 	<message key="user.manageMySubscriptions">Mijn abonnementen beheren</message>
 	<message key="subscriptionTypes.currency">Valuta</message>
 	<message key="subscriptionTypes.year">jaar</message>
@@ -1005,13 +1004,13 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	<message key="subscriptions.status.needsApproval">Goedkeuring nodig</message>
 	<message key="subscriptions.status.awaitingManualPayment">Wacht op handmatige betaling</message>
 	<message key="subscriptions.status.awaitingOnlinePayment">Wacht op online betaling</message>
-	<message key="subscriptions.status.other">Anders, zie opmerkingen</message>
+	<message key="subscriptions.status.other">Overige, zie opmerkingen</message>
 	<message key="subscriptionManager.individualSubscriptions">Individuele abonnementen</message>
 	<message key="subscriptionManager.institutionalSubscriptions">Institutionele abonnementen</message>
 	<message key="subscriptionManager.subscriptionTypes">Abonnementsoorten</message>
 	<message key="plugins.categories.oaiMetadataFormats">OAI Metadata formaat plugins</message>
-	<message key="subscriptions.individualDescription">Bij idividuele abonnementen is een inlog vereistom teogang te krijgen tot de inhoud.</message>
-	<message key="subscriptions.institutionalDescription">Voor institutionele abonnementen is geen login nodig.Toegang tot de inhour wordt geregeld aan de hand van het domein en/of het IP-adres van de gebruiker.</message>
+	<message key="subscriptions.individualDescription">Bij individuele abonnementen is inloggen nodig om teogang te krijgen tot de inhoud.</message>
+	<message key="subscriptions.institutionalDescription">Voor institutionele abonnementen is inloggen niet nodig.Toegang tot de inhoud wordt geregeld aan de hand van het domein en/of het IP-adres van de gebruiker.</message>
 	<message key="manager.setup.citations">Sta auteurs toe om afzonderlijk een geformatteerde lijst met referenties (citaties) mee te leveren als onderdeel van hun inzending.</message>
 	<message key="user.subscriptions.mySubscriptions">Mijn abonnementen</message>
 	<message key="user.subscriptions.individualSubscriptions">Individueel abonnement</message>
@@ -1046,7 +1045,7 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	<message key="installer.upgradeApplication">Upgrade Open Journal Systems</message>
 	<message key="subscriptions.institutionalOnlinePaymentDescription"><![CDATA[<strong>Noot:</strong> Institutionele abonnementen die online gekocht ziijn, worden pas actief na goedkeuring van het domein en de IP-reeksen.]]></message>
 	<message key="plugins.categories.oaiMetadataFormats.description">Deze format plugins drukken metadata uit in OAI communicatie.</message>
-	<message key="manager.setup.reviewProcessEmailDescription">Redacteuren sturen aan reviewers het verzoek om de inzending die wordt meegestuurd met de e-mail te reviewen. Reviewers e-mailen hun instemming (of verontschuldiging) en de review en aanbeveling. Redacteuren voeren de reactie van de reviewer en de review en aanbeveling in op de review-pagina van de inzending, om het reviewproces te registreren.</message>
+	<message key="manager.setup.reviewProcessEmailDescription">Redacteuren sturen aan reviewers het verzoek om de inzending die wordt meegestuurd met de e-mail te reviewen. Reviewers e-mailen hun instemming (of verontschuldiging) en de review en aanbeveling. Redacteuren voeren de reactie van de reviewer en de review en aanbeveling in op de review-pagina van de inzending, om de review procedure te registreren.</message>
 	<message key="user.subscriptions.form.membershipRequired">De gekozen abonnementsoort vereist lidmaatschapsinformatie.</message>
 	<message key="user.subscriptions.form.subscriptionExists">Deze gebruiker heeft al een individueel abonnement.</message>
 	<message key="user.subscriptions.form.membershipInstructions">Lidmaatschapsinformatie indien vereist voor de gekozen abonnementsoort.</message>
@@ -1077,4 +1076,16 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	<message key="notification.type.proofreadComment">Een proeflezer heeft een opmerking geplaatst bij "{$param}".</message>
 	<message key="notification.type.userComment">Een lezer heeft een opmerking geplaatst bij "{$param}"</message>
 	<message key="notification.type.suppFileModified">Aanvullende bestanden van "{$param}" zijn gewijzigd.</message>
+	<message key="user.subscriptions.subscriptionStatus">Abonnementsstatus</message>
+	<message key="user.subscriptions.statusDescription">Beschrijving</message>
+	<message key="user.subscriptions.status">Status</message>
+	<message key="user.subscriptions.status.needsInformationDescription">Er is additionele informatie nodig voordat het abonnement geactiveerd kan worden</message>
+	<message key="user.subscriptions.status.needsApprovalDescription">Het abonnement moet beoordeeld worden voor het geactiveerd kan worden</message>
+	<message key="user.subscriptions.status.awaitingManualPaymentDescription">Handmatige betaling is gestart, maar nog niet ontvangen</message>
+	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">Een online betaling is gestart, maar gestopt of niet voltooid</message>
+	<message key="article.pdf.download">Dit PDF bestand downloaden</message>
+	<message key="user.subscriptions.statusInformation">Actieve en verlopen abonnementen worden hieronder met hun afloopdatum getoond. De volgende aanvullende informatie kan bij de abonnementen opgenomen worden.</message>
+	<message key="payment.authorFees">Kosten auteurs</message>
+	<message key="user.register.reviewerInterests">Geef review-interesses (kennisgebieden en onderzoeksmethodes)</message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>Het PDF bestand dat u gekozen hebt zal hier geladen worden als uw webbrowser een plugin voor het lezen  van PDF's geïnstalleerd heeft (bijvoorbeeld een recente versie van <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>U kunt het PDF bestand ook direct naar uw computer downloaden en het openen in een PDF-lezer. Om een PDF de downloaden, klik op de download-link hieronder.</p> <p>Als u meer informatie wilt over het afdrukken, bewaren en werken met PDF's, Highwire Press heeft een handige <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions about PDFs</a>.</p>]]></message>
 </locale>

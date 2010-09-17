@@ -19,7 +19,7 @@
 	<message key="author.submit.submitArticle">Stuur een artikel in</message>
 	<message key="author.submit.stepsToSubmit">Vijf stappen voor inzenden</message>
 	<message key="author.submit.startHereTitle">Start een nieuwe inzending</message>
-	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Klik hier</a>om naar de eerste stap van het inzendingsproces te gaan.]]></message>
+	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Klik hier</a>om naar de eerste stap van de inzendingsprocedure te gaan.]]></message>
 	<message key="author.submit.step1">Stap 1. De inzending starten</message>
 	<message key="author.submit.step4">Stap 4. Aanvullende bestanden laden</message>
 	<message key="author.submit.step4a">Stap 4a. Een aanvullend bestand toevoegen</message>
@@ -45,8 +45,8 @@
 	<message key="author.submit.submissionChecklist">Checklist voor inzending</message>
 	<message key="author.submit.submissionChecklistDescription">Aangeven dat de inzending gereed is om bekeken te worden door het tijdschrift door de volgende aan te vinken (opmerkingen voor de redacteur kunnen hieronder later toegevoegd worden).</message>
 	<message key="author.submit.verifyChecklist">U moet zich ervan verzekeren dat alle onderdelen van de inzendings-checklist zijn afgewerkt voordat u verdergaat.</message>
-	<message key="author.submit.copyrightNoticeAgree">De auteurs verklaren zich akkoord met de voorwaarden van deze Auteursrechtenverklaring die van toepassing is op deze inzending als het gepubliceerd wordt door dit tijdschrift (opmerkingen voor de redacteur kunnen hieronder later toegevoegd worden).</message>
-	<message key="author.submit.copyrightNoticeAgreeRequired">U moet akkoord gaan met de voorwaarden van de auteursrechtenverklaring voor u door kunt gaan.</message>
+	<message key="author.submit.copyrightNoticeAgree">De auteurs verklaren zich akkoord met de voorwaarden van deze auteursrecht verklaring die van toepassing is op deze inzending als het gepubliceerd wordt door dit tijdschrift (opmerkingen voor de redacteur kunnen hieronder later toegevoegd worden).</message>
+	<message key="author.submit.copyrightNoticeAgreeRequired">U moet akkoord gaan met de voorwaarden van de auteursrecht verklaring voor u door kunt gaan.</message>
 	<message key="author.submit.commentsForEditor">Opmerkingen voor de redacteur</message>
 	<message key="author.submit.comments">Tekst opgeven (optioneel)</message>
 	<message key="author.submit.form.sectionRequired">Kies een geschikte tijdschriftsectie voor deze inzending.</message>
@@ -124,4 +124,7 @@
 	<message key="author.submit.form.wordCountAlert">U heeft het maximaal aantal woorden voor een samenvatting in deze sectie overschreden.</message>
 	<message key="author.submissions.queuedEditingCopyedit">Onder redactie: tekstredactie gevraagd</message>
 	<message key="author.submissions.queuedEditingProofread">Onder redactie: proeflezen gevraagd</message>
+	<message key="author.submit.submissionLocale">Taal van de inzending</message>
+	<message key="author.submit.form.localeRequired">Selecteer een taal voor de inzending.</message>
+	<message key="author.submit.submissionLocaleDescription">Dit tijdschrift accepteert inzendingen in verschillende  talen. Kies de taal van de inzending uit het menu hieronder.</message>
 </locale>

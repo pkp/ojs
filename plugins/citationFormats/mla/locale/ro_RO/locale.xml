@@ -16,4 +16,5 @@
 	<message key="plugins.citationFormats.mla.displayName">Modul pentru citarea în format MLA</message>
 	<message key="plugins.citationFormats.mla.citationFormatName">MLA</message>
 	<message key="plugins.citationFormats.mla.description">Acest modul implementează formatul MLA pentru citări.</message>
+	<message key="plugins.citationFormats.mla.noPages">nr. pag.</message>
 </locale>

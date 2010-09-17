@@ -15,9 +15,6 @@
 <locale name="ro_RO" full_name="Română">
 	<message key="plugins.generic.announcementfeed.displayName">Modul pentru fluxuri</message>
 	<message key="plugins.generic.announcementfeed.description">Acest modul produce agregare web de tip RSS/Atom pentru anunţurile din cadrul revistei.</message>
-	<message key="plugins.generic.announcementfeed.enabled">A fost activat modulul pentru fluxul de anunțuri.</message>
-	<message key="plugins.generic.announcementfeed.disabled">A fost dezactivat modulul pentru fluxul de anunțuri.</message>
-
 	<message key="plugins.generic.announcementfeed.settings">Setări</message>
 	<message key="plugins.generic.announcementfeed.settings.all">Afişează linkuri la fluxuri pe toate paginile revistei.</message>
 	<message key="plugins.generic.announcementfeed.settings.homepage">Afişează linkuri la fluxuri doar pe prima pagină şi pagina pentru anunţuri.</message>

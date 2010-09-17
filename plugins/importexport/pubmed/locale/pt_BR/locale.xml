@@ -13,7 +13,7 @@
   -->
  
 <locale name="pt_BR" full_name="Português do Brasil">
-	<message key="plugins.importexport.pubmed.displayName">Plugin Exportador PubMed XML</message>
+	<message key="plugins.importexport.pubmed.displayName">Exportação formato PubMed XML</message>
 	<message key="plugins.importexport.pubmed.description">Exporta metadados de artigos no formato PubMed XML para indexação na MEDLINE.</message>
 	
 	<message key="plugins.importexport.pubmed.export">Exportar dados</message>
@@ -22,7 +22,7 @@
 	<message key="plugins.importexport.pubmed.export.articles">Exportar artigos</message>
 	<message key="plugins.importexport.pubmed.export.selectArticle">Selecionar artigos para exportar.</message>
 	
-	<message key="plugins.importexport.pubmed.cliUsage">Modo de Usar: 
+	<message key="plugins.importexport.pubmed.cliUsage">Uso: 
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]</message>
 	<message key="plugins.importexport.pubmed.cliError">ERRO:</message>

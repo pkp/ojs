@@ -589,28 +589,7 @@ jhvdo hkrqh: {$expiryDate}
 {$subscriptionContactSignature}</body>
 		<description>This email notifies a subscriber that their subscription has expired. It provides the journal's URL along with instructions for access.</description>
 	</email_text>
-	<email_text key="REVIEWER_RECOMMEND">
-		<subject>({$articleId}) معرفی کارشناس</subject>
-		<body>جناب آقای / خانم  دکتر {$authorName}:
-برای تسریع در امر رسیدگی به مقاله شما با عنوان "{$articleTitle} ({$articleId})," و همچنین جهت افزایش کیفیت مقالاتی که چاپ میشوند, میتوانید کارشناسانی را برای انجام کارشناسی مقاله خود معرفی نمائید. به عنوان راهنمائی خدمت شما عرض میشود که شما میتوانید کارشناسان مناسبی از بین مراجع مقاله خود پیدا کرده و به ما معرفی کنید. به ازای هر کارشناسی که میخواهید معرفی کنید لطفا اطلاعات زیر را در مورد وی ارسال نمائید:
-نام:
-نام خانوادگی:
-عنوان سازمان:
-ایمیل:
-
-هنگام انتخاب کارشناس لطفا نکات زیر را در نظر داشته باشید:
-
-۱. کارشناسان معرفی شده نباید از گروه یا مؤسسه خود شما باشند و همچنین نباید ظرف ۵ سال گذشته با شما و یا سایر نویسندگان مقاله شما مقاله مشترک چاپ کرده باشند.
-۲.لطفا توجه داشته باشید که معرفی کارشناس از سوی شما فقط به منظور کمک به پردازش مقاله خودتان میباشد و هیچگونه اجباری برای سردبیر برای قبول این کارشناسان وجود ندارد.
-۳. در صورت داشتن هرگونه سؤال با اینجانب تماس بگیرید
-
-از توجه شما متشکرم 
-{$journalName}
-
-{$editorialContactSignature}</body>
-		<description>این ایمیل از نویسندگان میخواهد تا کارشناس برای مقاله خود معرفی کنند.</description>
-	</email_text>
-	<email_text key="COPYEDIT_ACK">
+		<email_text key="COPYEDIT_ACK">
 		<subject>تشکر بخاطر ویراستاری ({$articleId})</subject>
 		<body>{$copyeditorName}:
 
@@ -892,5 +871,18 @@ Subscription Type:
 برای مشاهده و ویرایش این اشتراک، لطفا به آدرس زیر بروید.
 
 آدرس اشتراک: {$subscriptionUrl}</body>
+	</email_text>
+	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
+		<subject>ویرایش ارجاع</subject>
+		<body>{$authorFirstName},
+
+لطفا ارجاع صحیح برای رفرانس زیر از مقاله شما {$articleTitle} را مشخص کنید و یا تایید نمائید:
+
+{$rawCitation}
+
+بت تشکر!
+
+{$userFirstName}
+ویراستار, {$journalName}</body>
 	</email_text>
 </email_texts>

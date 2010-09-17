@@ -32,6 +32,4 @@
 	<message key="plugins.generic.customLocale.file.edit">Redigerer {$filename}</message>
 	<message key="plugins.generic.customLocale.file.reference">Standardtekst</message>
 	<message key="plugins.generic.customLocale.file.custom">Tilpasset tekst</message>
-	<message key="plugins.generic.customLocale.enabled">Programvareutvidelsen for tilpasninger av tekster er slått på.</message>
-	<message key="plugins.generic.customLocale.disabled">Programvareutvidelsen for tilpasninger av tekster er slått av.</message>
 </locale>

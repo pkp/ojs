@@ -679,4 +679,12 @@
 	<message key="manager.subscriptionTypes.form.subscriptions">Subscrições</message>
 	<message key="manager.subscriptionTypes.form.individual">Individual (utilizadores validados via autenticação)</message>
 	<message key="manager.subscriptionTypes.form.options">Opções</message>
+	<message key="manager.groups.publishEmails">Publicar os endereços dos membros</message>
+	<message key="manager.language.submissions">Submissões</message>
+	<message key="manager.plugins.invalidPluginArchive">O plugin de arquivo carregado não contém uma pasta que corresponde ao nome do plugin.</message>
+	<message key="manager.plugins.tarCommandNotFound">O comando tar não está disponível. Por favor, configure-o correctamente no config.inc.php.</message>
+	<message key="manager.plugins.versionFileInvalid">version.xml no directório do plugin contém dados inválidos.</message>
+	<message key="manager.reviewFormElements.included">Incluído na mensagem para o autor</message>
+	<message key="manager.setup.doiReassign">Reatribuir DOI's</message>
+	<message key="manager.setup.doiReassign.description">Se alterar a sua configuração DOI, os DOI's que foram atribuídos não serão afectados. Uma vez guardada a configuração DOI, use o botão para limpar todos os DOI's existentes de modo a que as novas configurações não afectem os artigos existentes.</message>
 </locale>

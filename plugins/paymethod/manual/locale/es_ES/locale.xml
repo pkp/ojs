@@ -14,7 +14,7 @@
  
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.paymethod.manual.displayName">Pago Manual</message>
-	<message key="plugins.paymethod.manual.description">El responsable registra manualmente el pago de los usuarios (sin registro en este software).</message>
+	<message key="plugins.paymethod.manual.description">El gestor registra manualmente el pago de los usuarios (fuera de este software).</message>
 	<message key="plugins.paymethod.manual">Pago Manual</message>
 	<message key="plugins.paymethod.manual.settings">Opciones de Pago Manual</message>
 	<message key="plugins.paymethod.manual.settings.instructions">Instrucciones</message>

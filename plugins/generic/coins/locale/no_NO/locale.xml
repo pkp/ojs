@@ -15,6 +15,4 @@
 <locale name="no_NO" full_name="Norwegian">
 	<message key="plugins.generic.coins.displayName">Programutvidelse for COinS</message>
 	<message key="plugins.generic.coins.description">COinS-programutvidelsen legger til en OpenURL descriptor for artikkelsider (sammendrag og HTML) som for eks. kan brukes som informasjon til siteringsverktøy.</message>
-	<message key="plugins.generic.coins.enabled">COinS-programutvidelsen har blitt slått på.</message>
-	<message key="plugins.generic.coins.disabled">COinS-programutvidelsen har blitt slått av.</message>
 </locale>

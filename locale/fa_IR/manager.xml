@@ -686,4 +686,14 @@
 	<message key="manager.subscriptionTypes.form.subscriptions">اشتراک ها</message>
 	<message key="manager.subscriptionTypes.form.individual">شخصی. تایید هویت از طریق ورود به سیستم</message>
 	<message key="manager.subscriptionTypes.form.options">گزینه ها</message>
+	<message key="manager.groups.publishEmails">چاپ آدرس ایمیل عضو</message>
+	<message key="manager.language.submissions">ساب میشن ها</message>
+	<message key="manager.plugins.invalidPluginArchive">آرشیو پلاگین آپلود فاقد پوشه ای که با نام پلاگین مطابقت داشته باشد هست.</message>
+	<message key="manager.plugins.tarCommandNotFound">دستور tar در دسترس نیست. لطفا به نحو صحیحی آن را در فایل 
+"config.inc.php"
+تنظیم کنید.</message>
+	<message key="manager.plugins.versionFileInvalid">version.xml در پوشه پلاگین حاوی داده های بی اعتبار است.</message>
+	<message key="manager.reviewFormElements.included">در داخل پیام برای نویسنده ضمیمه شده است.</message>
+	<message key="manager.setup.doiReassign">انتساب مجدد دی او آی ها</message>
+	<message key="manager.setup.doiReassign.description">در صورت تغییر تنظیمات دی او آی خود، دی او آی هائی که تا هم اکنون انتساب داده شده اند تحت تاثیر قرار نخواهند گرفت. به مجرد ذخیره تنظیمات دی او آی، از این دکمه برای پاک کردن تمام دی او آی های موجود استفاده کنید، بطوری که تنظیمات جدید برای مقالات موجود اعمال گردد.</message>
 </locale>

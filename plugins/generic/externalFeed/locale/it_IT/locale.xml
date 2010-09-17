@@ -17,11 +17,9 @@
 	<!-- External Feed -->
 	<message key="plugins.generic.externalFeed.displayName">Feed esterni</message>
 	<message key="plugins.generic.externalFeed.block.displayName">Blocco dei feed esterni</message>
-	<message key="plugins.generic.externalFeed.description">Pubblica contenuti da feed esterni Atom/RSS. Per esempio da istallazioni WordPress, Drupal o OCS esterne.</message>
+	<message key="plugins.generic.externalFeed.description">Pubblica contenuti da feed esterni Atom/RSS, per esempio da istallazioni WordPress, Drupal o OCS esterne.</message>
 	<message key="plugins.generic.externalFeed.noneExist">Nessun feed esterno</message>
 	<message key="plugins.generic.externalFeed.title">Titolo</message>
-	<message key="plugins.generic.externalFeed.enabled">Il plugin per i feed esterni è stato abilitato.</message>
-	<message key="plugins.generic.externalFeed.disabled">Il plugin per i feed esterni è stato disabilitato.</message>
 	<message key="plugins.generic.externalFeed.posted">Inviato</message>
 	<message key="plugins.generic.externalFeed.more">Leggi ancora...</message>
 

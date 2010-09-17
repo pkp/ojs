@@ -16,7 +16,7 @@
 	<message key="plugins.generic.openads.description">Il plugin OpenAds permette di inserire annunci dinamici dal server di annunci OpenAds in OJS.</message>
 	<message key="plugins.generic.openads.descriptionUnconfigured"><![CDATA[Il plugin OpenAds permette di inserire annunci dinamici dal server di annunci OpenAds in OJS.
 <strong>Si prega di leggere il file README in plugins/generic/openAds per informazioni su come abilitare questo plugin.</strong>]]></message>
-	<message key="plugins.generic.openads">Plugin OpenAds</message>
+	<message key="plugins.generic.openads">OpenAds</message>
 	<message key="plugins.generic.openads.settings.description">Utilizza questo modulo per selezionare le zone in cui far comparire gli annunci OpenAds in OJS.</message>
 	<message key="plugins.generic.openads.manager.settings">Impostazioni</message>
 
@@ -31,6 +31,4 @@
 	<message key="plugins.generic.openads.orientation.left">Sinistra</message>
 	<message key="plugins.generic.openads.orientation.centre">Centro</message>
 	<message key="plugins.generic.openads.orientation.right">Destra</message>
-	<message key="plugins.generic.openads.enabled">Il plugin OpenAds è stato abilitato.</message>
-	<message key="plugins.generic.openads.disabled">Il plugin OpenAds è stato disabilitato.</message>
 </locale>

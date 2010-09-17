@@ -29,4 +29,5 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Vyberte prosím sledovací kód, který se má použít.</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Starší sledovací kód (urchin.js)</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Nový sledovací kód (ga.js)</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount">číslo účtu Google Analytics</message>
 </locale>

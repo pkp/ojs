@@ -24,6 +24,6 @@
 	<message key="plugins.importexport.METSExport.settings.FContent">Use codificacióon base64 para el envoltorio de contenido (content wrapper)</message>
 	<message key="plugins.importexport.METSExport.settings.FLocat">Use el URL del bitstream para el envoltorio de contenido (content wrapper)</message>
 	<message key="plugins.importexport.METSExport.settings.organization">METS:agente elemento organización atributo</message>
-	<message key="plugins.importexport.METSExport.settings.preservationLevel">PREMIS nivel de conservación</message>
+	<message key="plugins.importexport.METSExport.settings.preservationLevel">Nivel de conservación PREMIS</message>
 	<message key="plugins.importexport.METSExport.settings.exportSuppFiles">Exportar ficheros complementarios</message>
 </locale>

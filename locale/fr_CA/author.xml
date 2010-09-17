@@ -64,7 +64,7 @@
 	<message key="author.submit.submissionSupportingAgenciesDescription">Identifier les organismes qui ont fourni du financement ou du soutien pour le travail présenté dans cette soumission.</message>
 	<message key="author.submit.coverageInstructions">Renvoie à une lieu géo-spatial, une couverture historique ou chronologique, et/ou à des caractéristiques d'un échantillon de recherche.</message>
 	<message key="author.submit.subjectClassInstructions">Utiliser le système de classification par liens pour sélectionner les termes de la classification et, s'il y a lieu, les numéros.</message>
-	<message key="author.submit.languageInstructions"><![CDATA[anglais=an; français=fr; espagnol=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Codes supplémentaires</a>.]]></message>
+	<message key="author.submit.languageInstructions"><![CDATA[anglais=en; français=fr; espagnol=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Codes supplémentaires</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Au moins un auteur est obligatoire.</message>
 	<message key="author.submit.form.authorRequiredFields">Les prénom, nom de famille, et courriel de chaque auteur sont obligatoires.</message>
 	<message key="author.submit.form.titleRequired">Veuillez saisir le titre de votre article.</message>
@@ -124,4 +124,7 @@
 	<message key="author.submissions.queuedEditingProofread">En révision : Correction d'épreuves requise</message>
 	<message key="author.submit.reorder">Réordonner le nom de l'auteur</message>
 	<message key="author.submit.form.wordCountAlert">Vous avez dépassé la limite maximale de mots fixée pour les résumés, dans cette section de la rubrique</message>
+	<message key="author.submit.submissionLocale">Langue de la soumission</message>
+	<message key="author.submit.submissionLocaleDescription">La revue accepte les soumissions dans plusieurs langues. Choisir la langue principale de la soumission à partir de la liste déroulante ci-dessous.</message>
+	<message key="author.submit.form.localeRequired">Veuillez sélectionner une langue de soumission.</message>
 </locale>

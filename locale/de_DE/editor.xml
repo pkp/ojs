@@ -201,5 +201,11 @@
 	<message key="editor.issues.enableOpenAccessDate">Verzögerten freien Zugang aktivieren</message>
 	<message key="editor.issues.unpublishIssue">Ausgabe zurückziehen</message>
 	<message key="editor.issues.confirmUnpublish">Sind sie sicher, dass Sie diese bereits veröffentlichte Ausgabe zurückziehen wollen?</message>
-	<message key="editor.article.archiveSubmission">Beitrag archivieren</message>
+	<message key="editor.article.archiveSubmission">Beitrag ablehnen und archivieren</message>
+	<message key="editor.submissionReview.cannotSendToCopyediting">Bevor Sie einen Beitrag ins Lektorat überweisen, nutzen Sie bitten den ‚Autor/in benachrichtigen‘-Link, um den/die Autor/in über die Entscheidung zu informieren, und wählen Sie die zu überweisende Version aus.</message>
+	<message key="editor.submissionReview.sendToCopyediting">Ins Lektorat überweisen</message>
+	<message key="editor.notifyUsers.allReaders">Alle Leser/innen ({$count} Nutzer/innen)</message>
+	<message key="editor.notifyUsers.allAuthors">Alle veröffentlichten Autor/innen ({$count} Nutzer/innen)</message>
+	<message key="editor.notifyUsers.allIndividualSubscribers">Alle individuellen Abonnent/innen ({$count} Nutzer/innen)</message>
+	<message key="editor.notifyUsers.allInstitutionalSubscribers">Alle institutionellen Abonnent/innen ({$count} Nutzer/innen)</message>
 </locale>

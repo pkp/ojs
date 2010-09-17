@@ -32,4 +32,10 @@
 	<message key="plugins.generic.referral.confirmDelete">آیا مطمئن هستید که میخواهید این ارجاع را حذف کنید؟</message>
 	<message key="plugins.generic.referral.nameRequired">نام ارجاع لازم است.</message>
 	<message key="plugins.generic.referral.urlRequired">آدرس ارجاع لازم است.</message>
+	<message key="plugins.generic.referral.settings">تنظیمات پلاگین رفرال</message>
+	<message key="plugins.generic.referral.settings.description">پلاگین رفرال آدرس هائی که به مقالات چاپ شده این مجله لینک دارند را شکار میکند بطوری که نویسنده می تواند از آنها استفاده کند و یا آنها را می توان چاپ کرد. مدی مجله با استفاده از این فرم می تواند چگونگی شکار این لینکها را کنترل کند.</message>
+	<message key="plugins.generic.referral.excusions">موارد خروج</message>
+	<message key="plugins.generic.referral.exclusions.description"><![CDATA[لیستی از عبارات منظم را برای استفاده به منظور موارد خروجی لاگ های رفرال وارد کنید، یک عبارت در هر سطر. بدین وسیله می توان مانع از شلوغی بیش از حد لیست رفرال ها شد. برای اطلاعات بیشتر در خصوص عبارات منظم به آدرس
+<a href="http://ca.php.net/manual/en/ref.pcre.php" target="_new">http://ca.php.net/manual/en/ref.pcre.php</a>
+مراجعه کنید.]]></message>
 </locale>

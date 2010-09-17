@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2010 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.block.readingTools.displayName">Leesgereedschappen blok</message>
+	<message key="plugins.block.readingTools.description">Deze plugin toont een blok leesgereedschappen in de leesgereedschappen-sidebar.</message>
+	<message key="plugins.block.readingTools.title">Leesgereedschappen</message>
+	<message key="plugins.block.readingTools.aboutTheAuthor">Over de auteur</message>
+	<message key="plugins.block.readingTools.aboutTheAuthors">Over de auteurs</message>
+	<message key="plugins.block.readingTools.articleTools">Artikel-gereedschappen</message>
+	<message key="plugins.block.readingTools.emailThisArticle">E-mail dit artikel</message>
+	<message key="plugins.block.readingTools.loginRequired">Inloggen verplicht</message>
+	<message key="plugins.block.readingTools.printThisArticle">Dit artikel afdrukken</message>
+	<message key="plugins.block.readingTools.postComment">Een opmerking plaatsen</message>
+</locale>

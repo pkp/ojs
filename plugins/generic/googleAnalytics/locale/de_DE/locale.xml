@@ -31,4 +31,7 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Bitte wählen Sie einen Tracking-Code zur Verwendung aus.</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Neuer Tracking-Code (ga.js)</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Legacy Tracking Code (urchin.js)</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount">Google Analytics Account-Nummer</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount.description">Um die Leser/innenschaft veröffentlichter Artikel per Google Analytics zu verfolgen, geben Sie hier eine Account-Nummer ein (z.B. UA-xxxxxx-x).</message>
+	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Eine oder mehrere Google-Analytics-Accountnummern, die für Autor/innen des Beitrags eingegeben worden sind, sind nicht gültig.</message>
 </locale>

@@ -23,4 +23,8 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">لطفا یک کد پیگیری انتخاب کنید</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">کد پیگیری سنتی (urchin.js)</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.ga">کد پیگیری جدید  (ga.js)</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount">شمار حساب کاربری گوگل آنالیتیک</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount.description">برای دریابی خوانندگی مقاله چاپ شده با استفاده از گوگل آنالیتیک، شماره حساب کاربری را در اینجا وارد کنید مانند
+UA-xxxxxx-x</message>
+	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">یک یا چند مورد از شماره های حساب کاربری وارد شده برای گوگل آنالیتیک معتبر نیستند.</message>
 </locale>

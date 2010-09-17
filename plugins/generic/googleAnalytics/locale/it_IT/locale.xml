@@ -15,8 +15,8 @@
 <locale name="it_IT" full_name="Italiano">
 
 	<!-- Google Analytics -->
-	<message key="plugins.generic.googleAnalytics.displayName">Google Analytics Plugin</message>
-	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Integra OJS con Google Analytics, il sito web di Google sull'applicazione d'analisi di traffico. E' necessario che tu abbia già impostato un account in Google Analytics. Si veda <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics site</a> per maggiori informazioni.]]></message>
+	<message key="plugins.generic.googleAnalytics.displayName">Statistiche con Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Integra OJS con Google Analytics, il sito web di Google per l'analisi delle statistiche sul  traffico. E' necessario che tu abbia già impostato un account in Google Analytics. Si veda <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics site</a> per maggiori informazioni.]]></message>
 
 	<!-- Google Analytics Settings Management -->
 	<message key="plugins.generic.googleAnalytics.manager.settings">Impostazioni</message>
@@ -30,6 +30,7 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Seleziona il codice di monitoraggio da utilizzare</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Codice di monitoraggio legacy (urchin.js)</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Nuovo codice di monitoraggio (ga.js)</message>
-	<message key="plugins.generic.googleAnalytics.enabled">Il plugin Google Analytics è stato abilitato.</message>
-	<message key="plugins.generic.googleAnalytics.disabled">Il plugin Google Analytics è stato disabilitato.</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount.description">Per tracciare la lettura degli articoli utilizzando Google Analytics, inserisci il numero dell'account qui (es. UA-xxxxxx-x).</message>
+	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Uno o più numeri di account inseriti non sono validi.</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount">Numero dell'account Google Analytics</message>
 </locale>

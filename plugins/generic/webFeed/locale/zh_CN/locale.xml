@@ -15,9 +15,6 @@
 <locale name="zh_CN" full_name="China .PR">
 	<message key="plugins.generic.webfeed.displayName">网络Feed插件</message>
 	<message key="plugins.generic.webfeed.description">这个插件为当前的刊期生成的RSS / Atom的网络联合供稿。</message>
-	<message key="plugins.generic.webfeed.enabled">网络Feed插件已开启。</message>
-	<message key="plugins.generic.webfeed.disabled">网络Feed插件已关闭。</message>
-
 	<message key="plugins.generic.webfeed.settings">设置</message>
 	<message key="plugins.generic.webfeed.settings.issue">只在刊期页面显示Feed链接.</message>
 	<message key="plugins.generic.webfeed.settings.homepage">只在首页和刊期页面显示Feed链接。</message>

@@ -20,7 +20,7 @@
 
 	<message key="plugins.generic.thesisfeed.settings">Instellingen</message>
 	<message key="plugins.generic.thesisfeed.settings.all">Toon feed links op alle tijdschriftpagina's.</message>
-	<message key="plugins.generic.thesisfeed.settings.homepage">Toon feed links alleen op de startpagina en de pagina met samenvattingen.</message>
+	<message key="plugins.generic.thesisfeed.settings.homepage">Toon feed links alleen op de home-pagina en de pagina met samenvattingen.</message>
 	<message key="plugins.generic.thesisfeed.settings.thesis">Toon feed links alleen op de pagina met samenvattingen.</message>
 	<message key="plugins.generic.thesisfeed.settings.recentThesis1">Beperk feed tot</message>
 	<message key="plugins.generic.thesisfeed.settings.recentThesis2">Meest recent ingezonden thesis-samenvattingen.</message>

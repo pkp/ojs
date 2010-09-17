@@ -67,8 +67,8 @@
 	<message key="common.queue.short.submissionsArchives">Archives</message>
 	<message key="common.queue.long.active">Soumissions actives</message>
 	<message key="common.queue.short.active">Actives</message>
-	<message key="common.queue.long.completed">Archiver</message>
-	<message key="common.queue.short.completed">Archiver</message>
+	<message key="common.queue.long.completed">Archivée(s)</message>
+	<message key="common.queue.short.completed">Archivée(s)</message>
 	
 	<!--
 	 *
@@ -115,10 +115,10 @@
 	<message key="submission.submissionEditing">Révision de la soumission</message>
 	<message key="submission.changeSection">Changer pour</message>
 	<message key="submission.editorDecision">Décision du rédacteur</message>
-	<message key="submission.round">Cycle&#x00A0;{$round}</message>
+	<message key="submission.round">Cycle {$round}</message>
 	<message key="submission.editorReview">Évaluation du rédacteur</message>
-	<message key="submission.notifyAuthor">Alerter l'auteur</message>
-	<message key="submission.notifyEditor">Alerter le rédacteur</message>
+	<message key="submission.notifyAuthor">Aviser l'auteur</message>
+	<message key="submission.notifyEditor">Aviser le rédacteur</message>
 	<message key="submission.editorAuthorRecord">Registre des courriels avec les rédacteur/auteur</message>
 	<message key="submission.reviewersVersion">Version du fichier annotée par l'évaluateur</message>
 	<message key="submission.postReviewVersion">Version du fichier post-évaluation</message>
@@ -951,7 +951,6 @@ le droit de première publication, avec l’ouvrage disponible simultanément [S
 	<message key="payment.type.purchaseArticle">Frais d'achat de l'article</message>
 	<message key="journal.issn">ISSN</message>
 	<message key="article.article">Article</message>
-	<message key="article.citations">Références</message>
 	<message key="user.manageMySubscriptions">Gérer Mes abonnements</message>
 	<message key="subscriptionTypes.currency">Devise</message>
 	<message key="subscriptionTypes.year">année</message>
@@ -1056,4 +1055,16 @@ La validation peut échouer sur les URL de recherche qui nécessitent des formul
 	<message key="notification.type.suppFileModified">Le (ou les) fichier(s) supplémentaire(s) de "{$param}" a (ont) été modifié(s).</message>
 	<message key="notification.type.userComment">Un lecteur a fait un commentaire sur "{$param}"</message>
 	<message key="debug.notes.helpMappingLoad">Fichier de mappage d'aide XML {$filename} rechargé à la recherche de {$id}.</message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>Le fichier PDF que vous avez sélectionné devrait s'afficher ici si votre navigateur Web a un plugiciel de lecture PDF d'installé (par exemple, une version récente de <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Sinon, vous pouvez également télécharger directement le fichier PDF sur votre poste de travail, où il peut être ouvert à l'aide d'un outil de lecture PDF. Pour télécharger le PDF, cliquer sur le lien Télécharger ci-dessous.</p> <p>Si vous désirez avoir plus d'information concernant l'impression, l'enregistrement et l'édition des fichiers PDF, Highwire Press fournit un <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">FAQ (Frequently Asked Questions) à propos des PDF)</a> très utile.</p>]]></message>
+	<message key="user.register.reviewerInterests">Identifier les intérêts d'évaluation (questions de fond et méthodes de recherche) :</message>
+	<message key="user.subscriptions.subscriptionStatus">Statut de l'abonnement</message>
+	<message key="user.subscriptions.statusInformation">Les abonnements actifs et échus sont affichés ci-dessous avec leur date d'expiration. De plus, les informations suivantes sur le statut peuvent être incluses avec chaque abonnement.</message>
+	<message key="user.subscriptions.status">Statut</message>
+	<message key="user.subscriptions.statusDescription">Description</message>
+	<message key="user.subscriptions.status.needsInformationDescription">Des informations supplémentaires sont nécessaires avant l'activation de l'abonnement</message>
+	<message key="user.subscriptions.status.needsApprovalDescription">L'abonnement doit être étudié avant d'être activé</message>
+	<message key="user.subscriptions.status.awaitingManualPaymentDescription">Le paiement manuel a été initié mais n'a pas encore été reçu</message>
+	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">Un paiement en ligne a été initié mais annulé ou non complété</message>
+	<message key="article.pdf.download">Télécharger ce fichier PDF</message>
+	<message key="payment.authorFees">Droits d'auteur</message>
 </locale>

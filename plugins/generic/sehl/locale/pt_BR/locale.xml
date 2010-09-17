@@ -13,6 +13,6 @@
   -->
  
 <locale name="pt_BR" full_name="Português do Brasil">
-	<message key="plugins.generic.sehl.name">Plugin SEHL</message>
-	<message key="plugins.generic.sehl.description">Este plugin implementa Destaque para Termos Pesquisados (Search Engine HighLighting - SEHL) para marcar o texto pesquisado em documentos publicados em HTML.</message>
+	<message key="plugins.generic.sehl.name">SEHL destaque de termos</message>
+	<message key="plugins.generic.sehl.description">Este plugin implementa destaque para os termos pesquisados (Search Engine HighLighting - SEHL), marcando o termo, digitado no campo de pesquisa, nos resultados encontrados nos documentos publicados em HTML.</message>
 </locale>

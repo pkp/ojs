@@ -15,9 +15,6 @@
 <locale name="zh_CN" full_name="China PR">
 	<message key="plugins.generic.thesisfeed.displayName">论文摘要供稿插件</message>
 	<message key="plugins.generic.thesisfeed.description">这个插件提供论文摘要的RSS/ATOM网络联合供稿服务.</message>
-	<message key="plugins.generic.thesisfeed.enabled">论文摘要供稿插件已开启。</message>
-	<message key="plugins.generic.thesisfeed.disabled">论文摘要供稿插件已关闭。</message>
-
 	<message key="plugins.generic.thesisfeed.settings">设置</message>
 	<message key="plugins.generic.thesisfeed.settings.all">显示供稿(Feed)链接在所有期刊页面。</message>
 	<message key="plugins.generic.thesisfeed.settings.homepage">只在首页和论文摘要页面显示供稿(Feed)链接。</message>

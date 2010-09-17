@@ -15,6 +15,4 @@
 <locale name="zh_CN" full_name="China">
 	<message key="plugins.generic.coins.displayName">COinS插件</message>
 	<message key="plugins.generic.coins.description">COinS插件在文章页面（摘要和HTML）添加一个OpenURL描述，可用于引证工具的提取。</message>
-	<message key="plugins.generic.coins.enabled">COinS插件已开启。</message>
-	<message key="plugins.generic.coins.disabled">COinS插件已禁用。</message>
 </locale>

@@ -13,6 +13,6 @@
   -->
  
 <locale name="pt_BR" full_name="Português (Brasil)">
-	<message key="plugins.block.notification.displayName">Plugin Bloco de "Notificações"</message>
+	<message key="plugins.block.notification.displayName">Notificações</message>
 	<message key="plugins.block.notification.description">Este plugin exibe informações sobre as notificações do sistema.</message>
 </locale>

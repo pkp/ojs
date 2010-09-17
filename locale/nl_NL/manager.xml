@@ -35,7 +35,7 @@
 	<message key="manager.payment.addPayment">Voeg betaling toe</message>
 	<message key="manager.payment.amount">Hoeveelheid</message>
 	<message key="manager.payment.authorFees">Betaling door de auteur</message>
-	<message key="manager.payment.authorFeesDescription">De geselecteerde opties worden met hun beschrijving en kosten getoond in stap 1 van het inzendingsproces en in Over dit Tijdschrift en op de plaatsen waar betaling vereist is.</message>
+	<message key="manager.payment.authorFeesDescription">De geselecteerde opties worden met hun beschrijving en kosten getoond in stap 1 van de inzendingsprocecure en in Over het tijdschrift en op de plaatsen waar betaling vereist is.</message>
 	<message key="manager.payment.currency">Valuta</message>
 	<message key="manager.payment.currencymessage">OJS converteert valuta niet. Als u betalingen voor abonnementen accepteert, verzeker u ervan de valuta van het abonnement overeenkomt met de opgegeven valuta.</message>
 	<message key="manager.payment.description">Beschrijving</message>
@@ -70,7 +70,7 @@
 	<message key="manager.payment.paymentMethods">Betalingsmethodes</message>
 	<message key="manager.payment.paymentType">Betalingstype</message>
 	<message key="manager.payment.readerFees">Betaling door de lezer</message>
-	<message key="manager.payment.readerFeesDescription">De geselecteerde opties worden met hun beschrijving (die hieronder aangepast kan worden) en kosten getoond in stap 1 van het inzendingsproces en in Over dit tijdschrift en op de plaatsen waar betaling vereist is.</message>
+	<message key="manager.payment.readerFeesDescription">De geselecteerde opties worden met hun beschrijving (die hieronder aangepast kan worden) en kosten getoond in stap 1 van de inzendingsprocedure en in Over het tijdschrift en op de plaatsen waar betaling vereist is.</message>
 	<message key="manager.payment.records">Historie</message>
 	<message key="manager.payments">Betalingen</message>
 	<message key="manager.payment.userName">Betaling ID</message>
@@ -167,9 +167,9 @@
 	<message key="manager.setup.announcementsIntroduction">Additionele informatie</message>
 	<message key="manager.setup.announcementsIntroductionDescription">Andere informatie die op de Nieuwsberichten pagina getoond moet worden aan de lezers.</message>
 	<message key="manager.setup.appearInAboutJournal">(Om op te nemen in Over dit Tijdschrift)</message>
-	<message key="manager.setup.authorCopyrightNotice">Verklaring inzake auteursrecht</message>
-	<message key="manager.setup.authorCopyrightNoticeAgree">Verplicht auteurs de verklaring van auteursrecht te onderschrijven als onderdeel van het inzendingsproces.</message>
-	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[De verklaring inzake auteursrecht hieronder wordt getoond bij Over dit tijdschrift en in de metadata van ieder gepubliceerd artikel. Hoewel ieder tijdschrift een eigen auteursrechtovereenkomst kan hanteren, raadt het Public Knowledge Project de <a href="http://creativecommons.org" target="_new" class="action">Creative Commons</a> licentie aan. Daartoe biedt het een <a href="{$sampleCopyrightWordingUrl}" target="_new" class="action">voorbeeld auteursrechtverklaring</a> die met knippen en plakken in het veld hieronder geplaatst kan worden voor tijdschriften die (a) open access aanbieden, (b) vertraagde open access aanbieden, of (c) geen open access aanbieden.]]></message>
+	<message key="manager.setup.authorCopyrightNotice">Auteursrecht verklaring</message>
+	<message key="manager.setup.authorCopyrightNoticeAgree">Verplicht auteurs de auteursrecht verklaring te onderschrijven als onderdeel van de inzendingsprocedure.</message>
+	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[De auteursrecht verklaring hieronder wordt getoond bij Over dit tijdschrift en in de metadata van ieder gepubliceerd artikel. Hoewel ieder tijdschrift een eigen auteursrechtovereenkomst kan hanteren, raadt het Public Knowledge Project de <a href="http://creativecommons.org" target="_new" class="action">Creative Commons</a> licentie aan. Daartoe biedt het een <a href="{$sampleCopyrightWordingUrl}" target="_new" class="action">voorbeeld auteursrecht verklaring</a> die met knippen en plakken in het veld hieronder geplaatst kan worden voor tijdschriften die (a) open access aanbieden, (b) vertraagde open access aanbieden, of (c) geen open access aanbieden.]]></message>
 	<message key="manager.setup.authorGuidelines">Richtlijnen voor auteurs</message>
 	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Ten behoeve van de auteurs opstellen van de bibliografische en formatteringsstandaards voor inzendingen voor het tijdschrift (bv., <i>Publication Manual of the American Psychological Association</i>, 5e editie, 2001). Het is aan te bevelen om voorbeelden te geven van de gangbare citatieformaten voor tijdschriften en boeken voor gebruik in inzendingen. Identificeer ook de bruikbare typen van aanvullende bestanden (bv. datasets, onderzoeksinstrumenten, enz.) die auteurs aangemoedigd worden om met hun inzendingen mee te leveren teneinde de betrokkenheid van de lezers met hun werk te vergroten.]]></message>
 	<message key="manager.setup.competingInterests">Strijdige belangen</message>
@@ -183,7 +183,7 @@
 	<message key="manager.setup.copyediting">Tekstredacteuren</message>
 	<message key="manager.setup.copyeditInstructions">Instructies voor tekstredactie</message>
 	<message key="manager.setup.copyeditInstructionsDescription">Instructies voor de tekstredactie worden in de inzendings-redactie fase beschikbaar gesteld aan de tekstredacteurs, auteurs en sectieredacteurs.Zie hieronder voor een set voorbeeldinstructies in HTML. Deze kunnen op ieder gewenst moment door de tijdschriftbeheerder gewijzigd of vervangen worden (in HTML of gewone tekst).</message>
-	<message key="manager.setup.copyrightNotice">Vermelding van auteursrecht</message>
+	<message key="manager.setup.copyrightNotice">Auteursrecht verklaring</message>
 	<message key="manager.setup.coverage">Bereik</message>
 	<message key="manager.setup.coverageChronExamples">(Bv. Europese renaissance; het Juras; Derde trimester; enz.)</message>
 	<message key="manager.setup.coverageChronProvideExamples">Geef voorbeelden van relevante chronologische of historische termen voor dit veld</message>
@@ -212,7 +212,7 @@
 	<message key="manager.setup.editorialProcess2">De eindredacteur behandelt de inzendings-wachtrij en de inhoudsopgave, de sectieredacteuren behandelen de reviews en redactie van de inzendingen.</message>
 	<message key="manager.setup.editorialProcess3">De eindredacteur behandelt de inzendings-wachtrij, de redactie van de inzendingen en de inhoudsopgave, de sectieredacteuren doen de reviews.</message>
 	<message key="manager.setup.editorialReviewBoard">Redactie / Review team</message>
-	<message key="manager.setup.editorialReviewBoardDescription">Tijdschriften hebben een redactieteam om de redactionele richting van het tijdschrift te beoordelen, deel te nemen in het benoemen van redacteuren, en door middel van de reputatie van de leden van het redactieteam, het tijdschrift aanzicht in het veld te geven. Reviewteams hebben een soortgelijke rol maar leiden bovendien het reviewproces. Reviewteam leden hebben geen toegang tot het administratieve systeem van het tijdschrift maar worden toegevoegd aan de lijst van beschikbare reviewers.</message>
+	<message key="manager.setup.editorialReviewBoardDescription">Tijdschriften hebben een redactieteam om de redactionele richting van het tijdschrift te beoordelen, deel te nemen in het benoemen van redacteuren, en door middel van de reputatie van de leden van het redactieteam, het tijdschrift aanzicht in het veld te geven. Reviewteams hebben een soortgelijke rol maar leiden bovendien de reviewprocedure. Reviewteam leden hebben geen toegang tot het administratieve systeem van het tijdschrift maar worden toegevoegd aan de lijst van beschikbare reviewers.</message>
 	<message key="manager.setup.emailBounceAddress">Retouradres voor onbestelbare e-mail</message>
 	<message key="manager.setup.emailBounceAddressDescription">E-mails die niet afgeleverd kunnen worden, resulteren in een foutbericht op dit adres.</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Noot:</strong> Om deze optie te activeren moet de beheerder de <tt>allow_envelope_sender</tt> optie in het OJS configuratiebestand inschakelen. Additionale server configuratie kan noodzakelijk zijn om deze optie te gebruiken (die niet op alle servers ondersteund wordt) zoals aangegeven in de OJS documentatie.]]></message>
@@ -231,10 +231,10 @@
 	<message key="manager.setup.enableUserRegistration.author">Auteurs (kunnen materiaal inzenden)</message>
 	<message key="manager.setup.enableUserRegistration.reader">Lezers (krijgen notificaties en tellen mee als abonnee)</message>
 	<message key="manager.setup.enableUserRegistration.reviewer">Reviewer (beschikbaar voor het beoordelen van inzendingen)</message>
-	<message key="manager.setup.focusAndScope">Focus and afbakening</message>
+	<message key="manager.setup.focusAndScope">Focus en missie</message>
 	<message key="manager.setup.focusAndScopeDescription">Geef hieronder een verklaring voor auteurs, lezers en bobliothecarissen die aangeeft wat voor artikelen en ander materiaal het tijdschrift publiceert. De verklaring wordt getoond bij Over dit tijdschrift.</message>
-	<message key="manager.setup.focusAndScopeOfJournal">Focus en afbakening van het tijdschrift</message>
-	<message key="manager.setup.focusScope">Doelgroep en afbakening</message>
+	<message key="manager.setup.focusAndScopeOfJournal">Focus en missie van het tijdschrift</message>
+	<message key="manager.setup.focusScope">Focus en missie</message>
 	<message key="manager.setup.focusScopeDescription"><![CDATA[<strong>VOORBEELD HTML DATA</strong>]]></message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Voor auteurs ter indexering van hun werk</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJS houdt zich aan het <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protocol voor Metadata Harvesting, de standaard voor het leveren van goed geïndexeerde toegang tot elektronische wetenschappelijke informatie op wereldschaal. Alle auteurs gebruiken een soortgelijk sjabloon voor het leveren van metadata bij hun inzendingen. De tijdschriftbeheerder selecteert de categorieën voor indexering en levert de auteurs relevante voorbeelden om hen te helpen bij het indexeren van hun werk. Categorieën moeten gescheiden door een puntkomma (bv., term1; term2). De voorbeelden worden als zodanig geïntroduceerd door het gebruik van termen als "bv."  of "voorbeeld".]]></message>
@@ -322,7 +322,7 @@
 	<message key="manager.setup.notifications">Bevestiging van inzending</message>
 	<message key="manager.setup.notifications.copyPrimaryContact">Stuur een kopie naar de primaire contactpersoon van het tijdschrift (zoals vastgelegd in stap 1 van het inrichten).</message>
 	<message key="manager.setup.notifications.copySpecifiedAddress">Stuur een kopie naar het volgende e-mail adres:</message>
-	<message key="manager.setup.notifications.description">Na voltooiing van het inzendingsproces krijgen auteurs automatisch een e-mail ter bevestiging (deze e-mail kan bekeken en bewerkt worden in Voorbereide E-mails). Aanvullend kunnen de volgende kopieën van deze e-mail verzonden worden:</message>
+	<message key="manager.setup.notifications.description">Na voltooiing van de inzendingsprocedure krijgen auteurs automatisch een e-mail ter bevestiging (deze e-mail kan bekeken en bewerkt worden in Voorbereide E-mails). Aanvullend kunnen de volgende kopieën van deze e-mail verzonden worden:</message>
 	<message key="manager.setup.notifications.submissionAckDisabled"><![CDATA[<strong>Noot:</strong> Het bevestigen van inzendingen is momenteel uitgeschakeld. Omde deze voorziening te gebruiken moet  SUBMISSION_ACK email in <a class="action" href="{$preparedEmailsUrl}">Voorbereide e-mails</a> ingeschakeld worden.]]></message>
 	<message key="manager.setup.notifyAllAuthorsOnDecision">Gebruik ook de e-mailadressen van alle co-auteurs bij het versturen van de bericht-auteur e-mail, niet alleen dat van de auteur die het atrikel instuurt.</message>
 	<message key="manager.setup.noUseCopyeditors">Tekstredactie wordt uitgevoerd door een redacteur of sectieredacteur die wordt toegewezen aan de inzending.</message>
@@ -357,7 +357,7 @@
 	<message key="manager.setup.publicationFormatVolume">Volume</message>
 	<message key="manager.setup.publicationFormatYear">Jaar</message>
 	<message key="manager.setup.publicationSchedule">Publicatieschema</message>
-	<message key="manager.setup.publicationScheduleDescription">Artikelen kunnen collectief gepubliceerd worden als onderdeel van een nummer met een eigen inhoudsopgave. Het is ook mogelijk om artikelen te publiceren zodra ze gereed zijn door ze toe te voegen aan de inhoudsopgave van het "actuele" volume. Geef lezers in Over dit tijdschrift inzicht in het systeem dat door dit tijdschrift gebruikt wordt en in de verwachte publicatiefrequentie.</message>
+	<message key="manager.setup.publicationScheduleDescription">Artikelen kunnen collectief gepubliceerd worden als onderdeel van een nummer met een eigen inhoudsopgave. Het is ook mogelijk om artikelen te publiceren zodra ze gereed zijn door ze toe te voegen aan de inhoudsopgave van het "actuele" volume. Geef lezers in Over dit tijdschrift inzicht in het systeem dat door dit tijdschrift gebruikt wordt en in de verwachte verschijningsfrequentie.</message>
 	<message key="manager.setup.publicationScheduling">Publicatieplanning</message>
 	<message key="manager.setup.publicIdentifier">Identificatie van tijdschriftinhoud</message>
 	<message key="manager.setup.publisher">Uitgever</message>
@@ -391,10 +391,10 @@
 	<message key="manager.setup.reviewOptions.reviewTime">Tijd voor review</message>
 	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Maak links naar <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Verzeker een blinde review</a> op pagina's waar auteurs en reviewers bestanden laden.]]></message>
 	<message key="manager.setup.reviewPolicy">Beleid voor reviews</message>
-	<message key="manager.setup.reviewProcess">Reviewproces</message>
-	<message key="manager.setup.reviewProcessDescription"><![CDATA[OJS kent twee modellen voor het beheer van het reviewproces. Het standaard reviewproces wordt aanbevolen omdat het de reviewers stap voor stap door het proces leidt, wat een complete review-historie voor iedere inzending oplevert. Het maakt gebruik van automatische herinneringen en standaard aanbevelingen voor inzendingen (Accepteer; Accepteer met revisies; Inzenden voor review; Elders inzenden; Weiger; Zie opmerkingen).<br /><br />Kies een van de volgende:]]></message>
-	<message key="manager.setup.reviewProcessEmail">E-mail bijlage reviewproces</message>
-	<message key="manager.setup.reviewProcessStandard">Standaard reviewproces</message>
+	<message key="manager.setup.reviewProcess">Review procedure</message>
+	<message key="manager.setup.reviewProcessDescription"><![CDATA[OJS kent twee modellen voor het beheer van de reviewprocedure. De standaard reviewprocedure wordt aanbevolen omdat het de reviewers stap voor stap door het proces leidt, wat een complete review-historie voor iedere inzending oplevert. Het maakt gebruik van automatische herinneringen en standaard aanbevelingen voor inzendingen (Accepteer; Accepteer met revisies; Inzenden voor review; Elders inzenden; Weiger; Zie opmerkingen).<br /><br />Kies een van de volgende:]]></message>
+	<message key="manager.setup.reviewProcessEmail">E-mail bijlage reviewprocedure</message>
+	<message key="manager.setup.reviewProcessStandard">Standaard reviewprocedure</message>
 	<message key="manager.setup.reviewProcessStandardDescription">Redacteuren e-mailen geselecteerde reviewers de titel en samenvatting van een inzending met een uitnodiging om in te loggen op de website van het tijdschrift om de review te voltooien. Reviewers gaan naar de website van het tijdschrift om om de review  te accepteren, de inzendingen op te halen, hun commentaren in te zenden en een aanbeveling te kiezen.</message>
 	<message key="manager.setup.searchEngineIndexing">Zoek-indexering</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Geef hier sleutelwoorden (gescheiden door puntkommas) en een korte omschrijving van het tijdschrift om de gebruikers van zoekmachines te helpen bij het vinden van het tijdschrift.</message>
@@ -661,7 +661,7 @@
 	<message key="manager.plugins.installSuccessful">Versie met succes geïnstalleerd</message>
 	<message key="manager.plugins.upgradeSuccessful">Met succes opgewaardeerd naar versie</message>
 	<message key="manager.sections.wordCountInstructions">Begrens aantal woorden voor deze sectie (0 voor ongelimiteerd):</message>
-	<message key="manager.setup.contributorNoteDescription">Deze tekst verschijnt onder de kop "Ondersteunende organisaties"  en boven de lijst met ondersteunende organisaties bij "tijdschriftsponsors" op de pagina "Over".</message>
+	<message key="manager.setup.contributorNoteDescription">Deze tekst verschijnt onder de kop "Ondersteunende organisaties"  en boven de lijst met ondersteunende organisaties bij "Sponsors" op de pagina "Over het tijdschrift".</message>
 	<message key="manager.setup.history">Geschiedenis van het tijdschrift</message>
 	<message key="manager.setup.historyDescription">Deze tekst verschijnt in de "Over" sectie van de website van het tijdschrift en kan gebruikt worden om de veranderingen in het tijdschrift, de redactie en andere relevante historische feiten te beschrijven.</message>
 	<message key="manager.setup.doiSuffixDefault">Gebruik standaardpatroon (%j.v%vi%i.%a).</message>
@@ -674,9 +674,17 @@
 	<message key="manager.setup.journalFaviconInvalid">Onjuist favicon formaat. Geldige formaten zijn .ico, .png en .gif.</message>
 	<message key="manager.setup.noPublishing">OJS zal niet gebruikt worden om de inhoud van het tijdschrift online te publiceren.</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotifications">Berichten over online betalingen</message>
-	<message key="manager.setup.publisherNoteDescription">Deze tekst wordt getoond onder de kop "uitgever" en boven de naam/url van de uitgever onder "tijdschriftsponsors"  op de "Over" pagina.</message>
-	<message key="manager.setup.sponsorNoteDescription">Deze tekst wordt getoond onder de "sponsors" kop en boven de lijst met sponsornamen en url's onder "tijdschriftsponsors"  op de "Over" pagina.</message>
+	<message key="manager.setup.publisherNoteDescription">Deze tekst wordt getoond onder de kop "uitgever" en boven de naam/url van de uitgever onder "Sponsors"  op de pagina "Over het tijdschrift".</message>
+	<message key="manager.setup.sponsorNoteDescription">Deze tekst wordt getoond onder de "sponsors" kop en boven de lijst met sponsornamen en url's onder "Sponsors"  op de pagina "Over het tijdschrift".</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotificationsDescription">Automatische e-mailberichten (aan te passen door de tijdschriftbeheerders  bij de OJS voorbereide e-mails) die gestuurd kunnen worden aan de abonnementenbeheerder bij het voltooien van online betalingen van abonnementen.</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"><![CDATA[<strong>Noot:</strong> Institutionele abonnementen die online gekocht worden vereisen goedkeuring van het opgegeven domein en IP reeksen en activatie van het abonnement door de abonnementenbeheerder.]]></message>
 	<message key="manager.subscriptionPolicies.onlinePaymentDisabled"><![CDATA[<strong>Noot:</strong> Om deze opties in te schakelen moet de tijdschriftbeheerder de online betalingen module, inclusief online betalingen voor abonnementen inschakelen bij Kosten voor Lezers.]]></message>
+	<message key="manager.setup.doiReassign.description">As u uw DOI configuratie verandert heeft dat geen invloed op reeds toegekende DOIs. Gebruik deze knop om alle bestaande DOI instellingen te wissen nadat de DOI configuratie is opgeslagen, om de nieuwe instellingen effect te laten hebben op bestaande artikelen.</message>
+	<message key="manager.language.submissions">Inzendingen</message>
+	<message key="manager.plugins.invalidPluginArchive">Het geladen plugin-archief bevat geen map die overeenkomt met de naam van de plugin.</message>
+	<message key="manager.plugins.tarCommandNotFound">Het tar commando is niet beschikbaar. Configureer het correct in uw "config.inc.php".</message>
+	<message key="manager.plugins.versionFileInvalid">version.xml in de map van de plugin bevat ongeldige data.</message>
+	<message key="manager.groups.publishEmails">Publiceer e-mail adressen van abonnees</message>
+	<message key="manager.reviewFormElements.included">Opgenomen in het bericht aan de auteur</message>
+	<message key="manager.setup.doiReassign">DOI's opnieuw toekennen</message>
 </locale>

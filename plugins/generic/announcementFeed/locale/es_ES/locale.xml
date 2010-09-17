@@ -22,7 +22,7 @@
 	<message key="plugins.generic.announcementfeed.settings.announcement">Mostrar enlaces de los canales solo en la página de anuncios.</message>
 	<message key="plugins.generic.announcementfeed.settings.recentAnnouncements1">Limitar canal a</message>
 	<message key="plugins.generic.announcementfeed.settings.recentAnnouncements2">anuncios más recientes.</message>
-	<message key="plugins.generic.announcementfeed.settings.recentItemsRequired">Por favor ingrese un número entero positivo para anuncios recientes. para</message>
+	<message key="plugins.generic.announcementfeed.settings.recentItemsRequired">Por favor introduzca un número entero positivo para anuncios recientes.</message>
 	<message key="plugins.generic.announcementfeed.atom.altText">Logo Atom</message>
 	<message key="plugins.generic.announcementfeed.rss1.altText">Logo RSS1</message>
 	<message key="plugins.generic.announcementfeed.rss2.altText">Logo RSS2</message>

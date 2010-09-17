@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * emailTemplateData.xml
+  *
+  * Copyright (c) 2003-2010 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  *
+  * $Id$
+  -->
+<email_texts locale="pt_BR">
+	<email_text key="SWORD_DEPOSIT_NOTIFICATION">
+		<subject>Notificação de depósito em repositório SWORD</subject>
+		<body>Parabéns pela aceitação de publicação de sua submissão "{$articleTitle}", na revista {$journalName}. 
+Caso deseje, pode depositar automaticamente esta submissão em um ou mais repositórios.
+
+Acesse {$swordDepositUrl} para proceder.
+
+Esta é uma mensagem automática da ferramenta de Depósito SWORD do Open Journal Systems.</body>
+		<description>Mensagem de notificação ao autor, de pontos de depósito opcional para repositórios SWORD.</description>
+	</email_text>
+</email_texts>

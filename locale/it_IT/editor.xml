@@ -165,7 +165,6 @@
 	<message key="editor.article.resubmitForReview">Invia di nuovo il file per la review</message>
 	<message key="editor.article.resubmitFileForPeerReview">Invia di nuovo i file selezionati per la peer review</message>
 	<message key="editor.article.sendToCopyedit">Invia i file al copyediting</message>
-	<message key="editor.article.sendFileToCopyedit">Seleziona il file per il Copyedit</message>
 	<message key="editor.article.selectProofreader">Assegna il correttore di bozze</message>
 	<message key="editor.article.replaceProofreader">Sostituisci il correttore di bozze</message>
 	<message key="editor.article.authorComments">Commenti dell'autore</message>
@@ -204,4 +203,9 @@
 	<message key="editor.issues.enableOpenAccessDate">Abilita l'open access differito.</message>
 	<message key="editor.issues.unpublishIssue">Nascondi il fascicolo pubblicato</message>
 	<message key="editor.issues.confirmUnpublish">Sei sicuro di voler nascondere il fascicolo pubblicato?</message>
+	<message key="editor.submissionReview.sendToCopyediting">Invia al copyediting</message>
+	<message key="editor.notifyUsers.allReaders">Tutti i lettori ({$count} utenti)</message>
+	<message key="editor.notifyUsers.allAuthors">Tutti gli autori ({$count} utenti)</message>
+	<message key="editor.notifyUsers.allIndividualSubscribers">Tutti gli abbonati persona ({$count} utenti)</message>
+	<message key="editor.notifyUsers.allInstitutionalSubscribers">Tutti gli abbonati enti ({$count} utenti)</message>
 </locale>

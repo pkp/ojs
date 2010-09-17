@@ -16,5 +16,6 @@
 	<message key="plugins.citationFormats.mla.displayName">MLA aipamen-formatuaren plugina</message>
 	<message key="plugins.citationFormats.mla.citationFormatName">MLA</message>
 	<message key="plugins.citationFormats.mla.description">Plugin honek MLA aipamenen formatua inplementatzen du.</message>
+	<message key="plugins.citationFormats.mla.noPages">or. kop.</message>
 </locale>
 

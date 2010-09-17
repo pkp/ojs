@@ -13,8 +13,8 @@
   -->
  
 <locale name="pt_BR" full_name="Português do Brasil">
-	<message key="plugins.generic.tinymce.name">Plugin TinyMCE</message>
-	<message key="plugins.generic.tinymce.description"><![CDATA[Este plugin permite edição WYSIWYG (What You See Is What You Get) em campos de texto através do editor de conteúdo <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>.]]></message>
-	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Este plugin permite edição WYSIWYG (What You See Is What You Get) em campos de texto através do editor de conteúdo <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>. O <strong>TinyMCE não está instalado atualmente. Faça a instalação em {$tinyMcePath}.</strong>]]></message>
+	<message key="plugins.generic.tinymce.name">Editor TinyMCE</message>
+	<message key="plugins.generic.tinymce.description"><![CDATA[Este plugin permite a alimentação de conteúdo WYSIWYG (What You See Is What You Get) em campos de texto por meio da ferramenta <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>.]]></message>
+	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Este plugin permite a alimentação de conteúdo WYSIWYG (What You See Is What You Get) em campos de texto por meio da ferramenta <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>. O <strong>TinyMCE não está instalado atualmente. Instale-o na pasta {$tinyMcePath}.</strong>]]></message>
 	<message key="plugins.generic.tinymce.settings">Configurações</message>
 </locale>

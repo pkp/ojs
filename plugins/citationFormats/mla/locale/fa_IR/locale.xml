@@ -14,4 +14,5 @@
 	<message key="plugins.citationFormats.mla.displayName" >پلاگین الگوی مرجع نویسی ام ال آ</message>
 	<message key="plugins.citationFormats.mla.citationFormatName" >ام ال آ</message>
 	<message key="plugins.citationFormats.mla.description" >این پلاگین الگوی مرجع نویسی ام ال آ را اعمال میکند.</message>
+	<message key="plugins.citationFormats.mla.noPages">n. pag.</message>
 </locale>

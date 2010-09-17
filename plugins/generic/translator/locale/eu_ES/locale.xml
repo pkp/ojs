@@ -70,4 +70,5 @@
 	<message key="plugins.generic.translator.saveBeforeContinuing">Ziurtatu orri honetan egindako aldaketa guztiak gordeta daudela; galdu egingo dira bestela. Jarraitu nahi duzu? Jarraitzen baduzu, gorde gabeko aldaketak galdu egingo dira.</message>
 	<message key="plugins.generic.translator.fileNotWriteable">Locale fitxategi hau ezin du idatzi zerbitzariak. Egin dituzun aldaketak ez dira gordeko.</message>
 	<message key="plugins.generic.translator.filesNotWriteable">Locale fitxategi hauek ezin ditu idatzi zerbitzariak- Egin dizkiezun aldaketak ez dira gordeko.</message>
+	<message key="plugins.generic.translator.tarMissing">Plugin honetako “esportatu” funtzioa desaktibatu egin da, sistema honetan ez baita aurkitu konfiguratutako tar bitarrik. Mesedez, ziurtatu tar programa instalatuta duzula, eta, ondoren, konfiguratu tar bitarraren bidea config.inc.php's [cli] atalean!</message>
 </locale>

@@ -13,7 +13,7 @@
   -->
  
 <locale name="pt_BR" full_name="Português (Brasil)">
-	<message key="plugins.importexport.METSExport.displayName">Plugin de Exportação METS XML</message>
+	<message key="plugins.importexport.METSExport.displayName">Exportação formato METS XML</message>
 	<message key="plugins.importexport.METSExport.description">Exportar revistas no formato METS XML</message>
 	<message key="plugins.importexport.METSExport.settings">Configurações</message>
 	<message key="plugins.importexport.METSExport.export">Exportar dados</message>

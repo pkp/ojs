@@ -201,4 +201,10 @@
 	<message key="editor.issues.unpublishIssue">لغو چاپ شماره مجله</message>
 	<message key="editor.issues.confirmUnpublish">آیا مطمئن هستید که میخواهید چاپ شماره مجله را لغو کنید؟</message>
 	<message key="editor.article.archiveSubmission">رد وبایگانی کردن ساب میشن</message>
+	<message key="editor.submissionReview.cannotSendToCopyediting">قبل از ارسال ساب میشن برای ویراستاری، با استفاده از لینک باخبرسازی نویسنده تصمیم خود را به اطلاع وی برسانید و سپی نسخه ویراستاری را انتخاب کنید.</message>
+	<message key="editor.submissionReview.sendToCopyediting">ارسال برای ویراستاری</message>
+	<message key="editor.notifyUsers.allReaders">تمام خواننگان: {$count} کاربر</message>
+	<message key="editor.notifyUsers.allAuthors">تمام نویسندگان چاپ شده: {$count} کاربر</message>
+	<message key="editor.notifyUsers.allIndividualSubscribers">تمام مشترکین: {$count} کاربر</message>
+	<message key="editor.notifyUsers.allInstitutionalSubscribers">تمام مؤسسات مشترک: {$count} کاربر</message>
 </locale>

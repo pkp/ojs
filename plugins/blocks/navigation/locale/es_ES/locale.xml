@@ -13,7 +13,7 @@
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.block.navigation.displayName">Navigation Block</message>
+	<message key="plugins.block.navigation.displayName">Bloque de Navegación</message>
 	<message key="plugins.block.navigation.description">Este Complemento proporciona vínculos de navegación en el lateral.</message>
 	<message key="plugins.block.navigation.journalContent">Contenido de la Revista</message>
 </locale>

@@ -32,4 +32,8 @@
 	<message key="plugins.generic.referral.confirmDelete">Deseja realmente excluir este apontamento?</message>
 	<message key="plugins.generic.referral.nameRequired">Um nome para o apontamento é obrigatório.</message>
 	<message key="plugins.generic.referral.urlRequired">A URL do apontamento é obrigatória.</message>
+	<message key="plugins.generic.referral.settings">Configurações do Plugin Referral</message>
+	<message key="plugins.generic.referral.settings.description">O Plugin Referral captura os URL's que apontam para artigos publicados pela revista de modo a que possa revistos pelo autor e opcionalmente publicados. Este formulário permite ao Editor-Gestor controlar a forma como estes links são capturados.</message>
+	<message key="plugins.generic.referral.excusions">Exclusões</message>
+	<message key="plugins.generic.referral.exclusions.description"><![CDATA[Insira uma lista de expressões regulares padronizadas, uma por linha, para serem tratadas como exclusões para o histórico do referral. Para mais informações sobre expressões regulares, consulte href="http://ca.php.net/manual/en/ref.pcre.php" <a target="_new"> http://ca.php.net/manual / pt / ref.pcre.php </ a>.]]></message>
 </locale>

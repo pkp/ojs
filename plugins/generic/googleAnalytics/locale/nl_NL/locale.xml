@@ -32,4 +32,7 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Nieuwe tracking code (ga.js)</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Kies de te gebruiken tracking code</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Oude tracking code (urchin.js)</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount">Google Analytics account-nummer</message>
+	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Een of meer van de Google Analytics account-nummers van de auteurs van deze inzending zijn niet geldig.</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount.description">Geef een Google Analytics account-nummer om de lezers van gepubliceerde artikelen te volgen met Google Analytics (bv. UA-xxxxxx-x)</message>
 </locale>

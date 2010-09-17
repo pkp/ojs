@@ -13,7 +13,7 @@
   -->
  
 <locale name="pt_BR" full_name="Português (Brasil)">
-	<message key="plugins.block.subscription.displayName">Plugin Bloco de Assinatura</message>
+	<message key="plugins.block.subscription.displayName">Dados do assinante</message>
 	<message key="plugins.block.subscription.description">Este plugin oferece informações sobre a assinatura nas barras laterais.</message>
 	<message key="plugins.block.subscription.blockTitle">Assinatura</message>
 	<message key="plugins.block.subscription.expires">Expiração</message>

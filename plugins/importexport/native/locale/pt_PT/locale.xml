@@ -136,4 +136,5 @@ Os seguintes formatos são aceitos:
 	<message key="plugins.importexport.native.import.error.articleSuppFileSponsorLocaleUnsupported">O patrocinador do documento suplementar "{$suppFileTitle}" do artigo "{$articleTitle}" da edição "{$issueTitle}" foi fornecido no idioma ("{$locale}"), não suportado por esta revista.</message>
 	<message key="plugins.importexport.native.import.error.articleSuppFileSourceLocaleUnsupported">A fonte do documento suplementar "{$suppFileTitle}" do artigo "{$articleTitle}" da edição "{$issueTitle}" foi fornecido no idioma ("{$locale}"), não suportado por esta revista.</message>
 	<message key="plugins.importexport.native.error.uploadFailed">O envio falhou; certifique-se de que o envio de ficheiros está activado no servidor e que o ficheiro não é maior que o permitido pelo PHP e/ou a configuração do servidor.</message>
+	<message key="plugins.importexport.native.import.error.articleAuthorAffiliationLocaleUnsupported">Foi fornecida uma afiliação para o autor "{$authorFullName}" do artigo "{$articleTitle}" no número "{$issueTitle}" num local ("{$locale}") que esta revista não suporta.</message>
 </locale>

@@ -589,8 +589,6 @@ nåværende passordet.<br /><br />Skriv inn e-postadressen din nedenfor for å t
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
- 	<message key="article.pdf.note"><![CDATA[PDF-filen du valgte skal nå bli lastet ned, hvis nettleseren din har en programutvidelse for visning av PDF-filer (for eksempel en oppdatert versjon av <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>). Ellers blir PDF-filen lastet ned på maskinen din, hvor den også kan åpnes ved hjelp av en PDF-leser. Hvis du vil vite mer om hvordan du skriver ut, lagrer, og arbeider med PDFer, har Highwire Press en nyttig <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions om PDFer</a>.<br /><br />Hvis filen ikke lastes ned automatisk, <a href="{$url}">klikk her</a>.]]></message>
-	
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Artikkelnedlasting</message>
 	<message key="article.nonpdf.note"><![CDATA[Filen du valgte skal nå bli lastet ned automatisk. Hvis ikke, kan du klikke på lenken nedenfor. Merk at filen kan kreve et spesielt leseprogram eller en programutvidelse for å vises.<br /><br />Hvis filen ikke lastes ned automatisk, <a href="{$url}">klikk her</a>.]]></message>
@@ -954,8 +952,6 @@ Authors who publish with this journal agree to the following terms:
 	<message key="rt.metadata.pkp.doi">Digital Object Identifier</message>
 	<message key="debug.notes.helpMappingLoad">Gjenopplastet XML bidrar til å kartlegge filen {$filename} under søk etter {$id}.</message>
 	<message key="article.article">Artikkel</message>
-	<message key="article.citations">Referanser</message>
-	<message key="submission.citations">Referanser</message>
 	<message key="user.manageMySubscriptions">Administrer mine abonnementer</message>
 	<message key="subscriptionTypes.currency">Valuta</message>
 	<message key="subscriptionTypes.year">år</message>
@@ -990,7 +986,6 @@ Authors who publish with this journal agree to the following terms:
 	<li>"Forventet" fylles ut når fagfellevurdereren aksepterer oppdraget; det viser antall uker frem til forfallsdato for vurderingen eller (-) antall uker siden vuderingen skulle vært ferdig.</li>
 </ol>]]></message>
 	<message key="reviewer.article.reviewGuidelinesDescription">Retningslinjene for fagfellevurdering gir fagfellevurdererne kriterier for vurdering av hvorvidt en innlevering er egnet for publisering i tidsskriftet, og kan også inneholde veiledning i å skrive en effektiv og hjelpsom vurdering. Ved gjennomføring av vurderingen får fagfellevurdererne to tekstbokser tilgjengelig, en merket  "for forfatter og redaktør," og den andre merket "for redaktøren." Som et alternativ kan tidsskriftadministratoren lage vurderingsskjema under Vurderingsskjema. Uansett vil redaktøren kunne inkludere fagfellevurderingene i korrespondanse med forfattere.</message>
-	<message key="author.submit.submissionCitations">Last opp en formattert referanseliste for verker som det er referert til i denne innleveringen.</message>
 	<message key="user.subscriptions.mySubscriptions">Mine abonnementer</message>
 	<message key="user.subscriptions.individualSubscriptions">Personlige abonnementer</message>
 	<message key="user.subscriptions.institutionalSubscriptions">Institusjonelle abonnementer</message>
@@ -1051,5 +1046,9 @@ Authors who publish with this journal agree to the following terms:
 	<message key="notification.type.submissions">Innleveringshendelser</message>
 	<message key="notification.type.suppFileModified">Tilleggsfilene til "{$param}" har blitt endret.</message>
 	<message key="notification.type.userComment">En leser har kommentert "{$param}".</message>
+	<message key="user.register.reviewerInterests">Angi interessante vurderingsområder (hovedområder og forskningsmetoder):</message>
+	<message key="user.subscriptions.subscriptionStatus">Abonnementsstatus</message>
+	<message key="user.subscriptions.status">Status</message>
+	<message key="user.subscriptions.statusDescription">Beskrivelse</message>
 </locale>
 

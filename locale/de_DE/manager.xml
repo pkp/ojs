@@ -679,4 +679,12 @@
 	<message key="manager.subscriptions.form.referenceNumber">Referenznummer</message>
 	<message key="manager.subscriptions.referenceNumber">Referenznummer</message>
 	<message key="manager.subscriptionTypes.form.individual">Individuell (Benutzer/innen erhalten ihren Zugang durch Einloggen)</message>
+	<message key="manager.language.submissions">Beiträge</message>
+	<message key="manager.plugins.invalidPluginArchive">Das hochgeladene Plug-In-Archiv enthält keinen zum Plug-In-Namen passenden Ordner.</message>
+	<message key="manager.plugins.tarCommandNotFound">Der tar-Befehl ist nicht verfügbar. Bitte konfigurieren Sie ihn in Ihrer  "config.inc.php".</message>
+	<message key="manager.plugins.versionFileInvalid">version.xml im Plug-In-Verzeichnis enthält ungültige Daten.</message>
+	<message key="manager.setup.doiReassign">DOI neu zuweisen</message>
+	<message key="manager.reviewFormElements.included">In Nachricht an Autor/in aufgenommen</message>
+	<message key="manager.setup.doiReassign.description">Wenn Sie Ihre DOI-Konfiguration ändern, werden bereits zugewiesene DOI nicht betroffen sein. Sobald die DOI-Konfiguration gespeichert worden ist, nutzen Sie bitte diesen Knopf, um alle bestehenden DOI zu löschen, so dass die neuen Einstellungen für bestehende Artikel gelten.</message>
+	<message key="manager.groups.publishEmails">Veröffentlichen der E-Mail-Adressen der Mitglieder</message>
 </locale>

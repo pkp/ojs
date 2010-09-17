@@ -13,9 +13,9 @@
   -->
  
 <locale name="it_IT" full_name="Italiano">
-	<message key="plugins.citationFormats.abnt.displayName">Plugin del formato di citazioni ABNT</message>
+	<message key="plugins.citationFormats.abnt.displayName">ABNT (NBR 6023:2000)</message>
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
-	<message key="plugins.citationFormats.abnt.description">Questo plugin implementa il formato di citazioni ABNT.</message>
-	<message key="plugins.citationFormat.abnt.location">Nord America</message>
-	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Disponibile a: <a href="{$url}" target="_new">{$url}</a>. Data di accesso: {$retrievedDate}]]></message>
+	<message key="plugins.citationFormats.abnt.description"><![CDATA[Questo plugin implementa il formato di citazioni ABNT, <a href="http://www.habitus.ifcs.ufrj.br/pdf/abntnbr6023.pdf">http://www.habitus.ifcs.ufrj.br/pdf/abntnbr6023.pdf</a>]]></message>
+	<message key="plugins.citationFormat.abnt.location">Italia</message>
+	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Disponibile all'indirizzo: <a href="{$url}" target="_new">{$url}</a>. Data di accesso: {$retrievedDate}]]></message>
 </locale>

@@ -988,7 +988,6 @@ Ověřování může selhat při vyhledávání URL, které vyžadují "posted f
 	<message key="payment.type.purchaseArticle">Zaplatit poplatek za článek</message>
 	<message key="journal.issn">ISSN</message>
 	<message key="article.article">Článek</message>
-	<message key="article.citations">Reference</message>
 	<message key="subscriptionTypes.currency">Měna</message>
 	<message key="subscriptionTypes.year">rok</message>
 	<message key="subscriptionTypes.years">roků</message>

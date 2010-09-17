@@ -865,7 +865,6 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	<message key="installer.installApplication">Open Journal Systems をインストールする</message>
 	<message key="installer.upgradeApplication">Open Journal Systems をアップグレードする</message>
 	<message key="article.article">論文</message>
-	<message key="article.citations">参考文献</message>
 	<message key="user.manageMySubscriptions">購読管理</message>
 	<message key="subscriptionTypes.currency">通貨</message>
 	<message key="subscriptionTypes.years">年</message>
@@ -912,4 +911,16 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	<message key="user.subscriptions.form.ipRangeInstructions"><![CDATA[ここでIPアドレスを入力された場合は，ドメイン名の入力はオプションです。<br />有効なIPアドレス値は次のようなものです。IPアドレス (例: 142.58.103.1), IPアドレス範囲 (例: 142.58.103.1 - 142.58.103.4), ワイルドカード '*' を使用したIPアドレス範囲 (例: 142.58.*.*), CIDR IPアドレス範囲 (例: 142.58.100.0/24)]]></message>
 	<message key="payment.subscription.purchase">購読手続</message>
 	<message key="reviewer.article.reviewGuidelinesDescription">査読の手引きは、投稿物がこの雑誌で発表することがふさわしいかどうかを判断するための基準や，効果的で参考になる査読をするための特別な指示を査読者に提供します。査読をすすめるにあたり査読者には，2つの入力欄（「著者と編集者用」と「編集者用」）が提供されます。また雑誌管理者は査読フォームを使用してピアレビューフォームを作成することもできます。いずれの場合も，編集者は著者への通知に査読結果を含めるか否かを選択することができます。</message>
+	<message key="user.subscriptions.subscriptionStatus">講読状態</message>
+	<message key="user.register.reviewerInterests">査読可能分野を定義 (研究テーマや研究手法)</message>
+	<message key="user.subscriptions.status.needsInformationDescription">講読をアクティベートする前に追加情報が必要です。</message>
+	<message key="article.pdf.download">このPDFをダウンロード</message>
+	<message key="user.subscriptions.status">状態</message>
+	<message key="user.subscriptions.statusDescription">備考</message>
+	<message key="user.subscriptions.status.needsApprovalDescription">講読がアクティベイトされる前に審査が必要です。</message>
+	<message key="payment.authorFees">投稿料</message>
+	<message key="user.subscriptions.status.awaitingManualPaymentDescription">手作業による支払いは開始されましたが，まだ受け取っていません。</message>
+	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">オンライン支払は開始されましたが，キャンセルあるいは完了していません。</message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>使用しているWebブラウザにPDFリーダープラグイン（例えば、<a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a> の最新版）をインストールしていれば，選択したPDFファイルがここにロードされるはずです。</p><p>また，PDFファイルをダウンロードすることもできます。ダウンロードしたファイルもPDFリーダーを使って開くことができます。 ダウンロードする場合は下記のリンクをクリックしてください。</p><p>PDFファイルの印刷，保存．作成などについてさらに詳しく知りたい場合は，Highwire Pressが提供している <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions about PDFs</a> が参考になります。</p>]]></message>
+	<message key="user.subscriptions.statusInformation">アクティベートあるいは有効期限切れの講読が有効期限順に下記に表示されます。また，次のようなステータス情報がそれぞれの講読ごとに表示される場合があります。</message>
 </locale>

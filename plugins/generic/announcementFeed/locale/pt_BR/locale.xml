@@ -13,8 +13,8 @@
   -->
  
 <locale name="pt_BR" full_name="Português (Brasil)">
-	<message key="plugins.generic.announcementfeed.displayName">Plugin de Canal de Divulgação (Feed RSS)</message>
-	<message key="plugins.generic.announcementfeed.description">Este plugin produz um canal de divulgação RSS/Atom das notícias da revista</message>
+	<message key="plugins.generic.announcementfeed.displayName">Canal de notícias</message>
+	<message key="plugins.generic.announcementfeed.description">Este plugin produz um canal de divulgação RSS/Atom das notícias da revista.</message>
 
 	<message key="plugins.generic.announcementfeed.settings">Configurações</message>
 	<message key="plugins.generic.announcementfeed.settings.all">Exibir links em todas as páginas.</message>

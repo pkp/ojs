@@ -933,4 +933,19 @@ IPアドレス範囲 (ある場合):
 
 購読URL: {$subscriptionUrl}</body>
 	</email_text>
+	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
+		<subject>引用の編集</subject>
+		<body>{$authorFirstName} 様,
+
+あなたの下記の論文に含まれる参考文献についてご確認いただき，正確な引用情報をご提供ください。
+
+{$articleTitle}:
+
+{$rawCitation}
+
+どうぞよろしくお願い致します。
+
+{$userFirstName}
+{$journalName} コピーエディタ</body>
+	</email_text>
 </email_texts>

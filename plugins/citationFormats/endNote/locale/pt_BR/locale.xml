@@ -13,7 +13,7 @@
   -->
  
 <locale name="pt_BR" full_name="Português do Brasil">
-	<message key="plugins.citationFormats.endNote.displayName">Plugin Formato de Citação EndNote</message>
-	<message key="plugins.citationFormats.endNote.citationFormatName"><![CDATA[EndNote - formato EndNote (Macintosh & Windows)]]></message>
+	<message key="plugins.citationFormats.endNote.displayName">Citação EndNote</message>
+	<message key="plugins.citationFormats.endNote.citationFormatName"><![CDATA[EndNote - formato Macintosh & Windows]]></message>
 	<message key="plugins.citationFormats.endNote.description">Este plugin implementa o formato de citação EndNote.</message>
 </locale>

@@ -20,8 +20,7 @@
 	<message key="plugins.importexport.erudit.displayName">Plugin de exportación de artículos Erudit</message>
 	<message key="plugins.importexport.erudit.description">Exportar artículos usando el DTD inglés Erudit</message>
 
-	<message key="plugins.importexport.erudit.cliUsage"><![CDATA[Uso: {$scriptName} {$pluginName} [xmlFileName] [journalPath] [articleId] [galleyLabel]
-]]></message>
+	<message key="plugins.importexport.erudit.cliUsage">Uso: {$scriptName} {$pluginName} [xmlFileName] [journalPath] [articleId] [galleyLabel]</message>
 	<message key="plugins.importexport.erudit.export">Exportar datos</message>
 	<message key="plugins.importexport.erudit.export.issues">Exportar números</message>
 	<message key="plugins.importexport.erudit.export.sections">Exportar secciones</message>
@@ -36,5 +35,5 @@
 	<message key="plugins.importexport.erudit.export.error.articleNotFound">No hay ningún artículo con la ID "{$articleId}".</message>
 	<message key="plugins.importexport.erudit.export.error.galleyNotFound">No hay ningún galerada con la etiqueta "{$galleyLabel}".</message>
 
-	<message key="plugins.importexport.erudit.unavailable">Inasequible</message>
+	<message key="plugins.importexport.erudit.unavailable">No disponible</message>
 </locale>

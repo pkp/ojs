@@ -13,9 +13,9 @@
   -->
  
 <locale name="pt_BR" full_name="Português do Brasil">
-	<message key="plugins.block.fontSize.displayName">Plugin Bloco para Tamanho de Fonte</message>
+	<message key="plugins.block.fontSize.displayName">Tamanho de fonte</message>
 	<message key="plugins.block.fontSize.description">Este plugin habilita a ferramenta de alteração de tamanho de fonte.</message>
-	<message key="plugins.block.fontSize.title">Tamanho de Fonte</message>
+	<message key="plugins.block.fontSize.title">Tamanho de fonte</message>
 	<message key="plugins.block.fontSize.small">Menor</message>
 	<message key="plugins.block.fontSize.medium">Médio</message>
 	<message key="plugins.block.fontSize.large">Maior</message>

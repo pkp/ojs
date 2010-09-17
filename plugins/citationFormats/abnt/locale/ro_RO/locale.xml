@@ -16,7 +16,7 @@
 	<message key="plugins.citationFormats.abnt.displayName">modul pentru citarea în format ABNT</message>
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">Acest modul implementează formatul ABNT pentru citări.</message>
-	<message key="plugins.citationFormat.acao.location">America de Nord</message>
 	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Disponibil de la: <a href="{$url}" target="_new">{$url}</a>. Data accesării: {$retrievedDate}]]></message>
 
+	<message key="plugins.citationFormat.abnt.location">America de Nord</message>
 </locale>

@@ -32,4 +32,8 @@
 	<message key="plugins.generic.referral.confirmDelete">Êtes-vous certain de vouloir supprimer ce renvoi?</message>
 	<message key="plugins.generic.referral.nameRequired">Le nom de renvoi est obligatoire.</message>
 	<message key="plugins.generic.referral.urlRequired">L'URL du renvoi est obligatoire.</message>
+	<message key="plugins.generic.referral.exclusions.description"><![CDATA[Saisir une liste d'expressions régulières, une par ligne, qui seront traitées comme des exclusions pour la journalisation des renvois. Ça peut être utilisé pour empêcher les requêtes de moteurs de recherche de créer du bruit dans la liste des renvois. Pour plus d'information sur les expressions régulières, voir <a href="http://ca.php.net/manual/en/ref.pcre.php" target="_new">http://ca.php.net/manual/en/ref.pcre.php</a>.]]></message>
+	<message key="plugins.generic.referral.settings">Paramètres du plugiciel de référence</message>
+	<message key="plugins.generic.referral.settings.description">Le plugiciel de référence enregistre les URLs qui sont liés aux articles publiés dans la revue afin qu'il puissent être organisés par l'auteur et optionnellement publiés. Ce formulaire permet au Directeur de revue de contrôler comment ces liens sont enregistrés.</message>
+	<message key="plugins.generic.referral.excusions">Exclusions</message>
 </locale>

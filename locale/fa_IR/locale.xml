@@ -694,7 +694,6 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="common.payments">پرداخت ها</message>
 	<message key="navigation.browseByAuthor">توسط نویسنده</message>
 	<message key="article.article">مقاله</message>
-	<message key="article.citations">مراجع</message>
 	<message key="user.manageMySubscriptions">اداره اشتراکات من</message>
 	<message key="subscriptionTypes.currency">واحد پول</message>
 	<message key="subscriptionTypes.year">سال</message>
@@ -897,4 +896,27 @@ lib.sfu.ca]]></message>
 	<message key="notification.type.submissions">رویدادهای ساب میشن</message>
 	<message key="notification.type.suppFileModified">فایل الحاقی مربوط به "{$param}" تغییر یافت.</message>
 	<message key="notification.type.userComment">یک خواننده نظری در مورد "{$param}" داده است</message>
+	<message key="user.register.reviewerInterests">تشخیص علائق کارشناسی: زمینه ها و روشهای پژوهشی مهم</message>
+	<message key="user.subscriptions.subscriptionStatus">وضعیت اشتراک</message>
+	<message key="user.subscriptions.statusInformation">اشتراکات فعال و منقضی هر دو در زیر همراه با تاریخ انقضا آنها نشان داده شده اند. به علاوه به ازای هر اشتراک اطلاعات وضعیتی زیر نیز ممکن است نشان داده شوند.</message>
+	<message key="user.subscriptions.status">وضعیت</message>
+	<message key="user.subscriptions.statusDescription">توصیف</message>
+	<message key="user.subscriptions.status.needsInformationDescription">قبل از فعال کردن اشتراک اطلاعات بیشتری لازم است</message>
+	<message key="user.subscriptions.status.needsApprovalDescription">قبل از فعال سازی اشتراک می بایست مرور گردد</message>
+	<message key="user.subscriptions.status.awaitingManualPaymentDescription">پرداخت دستی راه اندازی شده است ولی هنوز وصول نشده است</message>
+	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">پرداخت آن لاین شورع شده است ولی کامل نشده است</message>
+	<message key="article.pdf.download">دانلود این فایل پی دی اف</message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>
+در صورتی که مرورگر شما پلاگین خواندن پی دی اف را داشته باشد فایل پی دی اف خود را می تواندی در اینجا لود کنید. به عنوان مثال نسخه اخیر
+(<a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>)
+</p>
+<p>
+همچنین می توانید فایل پی دی اف را دالود کرده و با یک برنامه مخصوص خواندن فایلهای پی دی اف آن را باز کنید. برای دان لود فایل پی دی اف بر روی لینک دانلود کلیک گنید.
+</p>
+<p>
+جنانچه نیاز به اطلاعات بیشتر در مورد چگونگی چاپ، ذخیره و کار کردن با فایل های پی دی اف داشته باشید سایت های وایر
+<a href="http://highwire.stanford.edu/help/pdf-faq.dtl">سؤالات متداولی در باره پی دی اف </a>
+دارد
+</P>]]></message>
+	<message key="payment.authorFees">نرخ نویسنده</message>
 </locale>

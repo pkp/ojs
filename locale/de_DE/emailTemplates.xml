@@ -432,25 +432,7 @@ Unsere Entscheidung lautet:
 </body>
 		<description>Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung zu ihrer/seiner Einreichung.</description>
 	</email_text>
-	<email_text key="EDITOR_REVIEW">
-		<subject>Redaktionelle Begutachtung Ihres Beitrags</subject>
-		<body>{$authorName},
-
-wir haben die Begutachtung Ihres Beitrags "{$articleTitle}" jetzt abgeschlossen. Wir haben uns entschieden... 
-
-{$comments}.
-
-Weitere Bemerkungen zu Ihrem Manuskript aus den redaktionellen bzw. den Peer-Review-Gutachten erhalten Sie, wenn Sie sich bei der Zeitschrift einloggen.
-
-URL des Beitrags: {$submissionUrl}
-Benutzer/innenname: {$authorUsername}
-
-Wenn Sie noch Fragen haben, können Sie sich gerne an mich wenden.
-
-{$editorialContactSignature}</body>
-		<description>Diese E-Mail wird von der/dem Rubrikredakteur/in an die Autorin/den Autor einer Einreichung gesendet, um sie/ihn darüber zu informieren, dass eine Entscheidung in Bezug auf ihre/seine Einreichung getroffen worden ist.</description>
-	</email_text>
-	<email_text key="COPYEDIT_REQUEST">
+		<email_text key="COPYEDIT_REQUEST">
 		<subject>Bitte um ein Lektorat</subject>
 		<body>{$copyeditorName},
 
@@ -910,5 +892,19 @@ Um sich dieses Abonnement anzusehen oder es zu ändern, benutzen Sie bitte die f
 Abonnement-URL: {$subscriptionUrl}
 </body>
 		<description>Diese E-Mail benachrichtigt die/den Abonnementverwalter/in, dass ein institutionelles Abonement online erneuert worden ist. Sie liefert Informationen über das Abonnement und einen Link zum schnellen Zugriff auf das erneuerte Abonnement.</description>
+	</email_text>
+	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
+		<subject>Zitationsbearbeitung</subject>
+		<body>{$authorFirstName},
+
+könnten Sie uns bitte die korrekte Zitation für den folgenden Verweis aus Ihrem Artikel {$articleTitle} bestätigen bzw. nachreichen:
+
+{$rawCitation}
+
+Vielen Dank!
+
+{$userFirstName}
+Lektor/in, {$journalName}</body>
+		<description>Diese E-Mail ermöglicht es Lektor/innen, zusätzliche Informationen über Verweise von Autor/innen anzufordern.</description>
 	</email_text>
 </email_texts>

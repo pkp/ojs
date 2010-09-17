@@ -13,8 +13,8 @@
   -->
  
 <locale name="pt_BR" full_name="Português do Brasil">
-	<message key="plugins.citationFormats.apa.displayName">Plugin Formato de Citação APA</message>
+	<message key="plugins.citationFormats.apa.displayName">Citação APA</message>
 	<message key="plugins.citationFormats.apa.citationFormatName">APA</message>
 	<message key="plugins.citationFormats.apa.description">This plugin implements the APA citation format.</message>
-	<message key="plugins.citationFormats.apa.retrieved"><![CDATA[Acesso em de <a href="{$url}" target="_new">{$url}</a>]]></message>
+	<message key="plugins.citationFormats.apa.retrieved"><![CDATA[Recuperado de <a href="{$url}" target="_new">{$url}</a>]]></message>
 </locale>

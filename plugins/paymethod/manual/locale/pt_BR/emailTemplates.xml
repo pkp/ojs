@@ -13,12 +13,12 @@
 <email_texts locale="pt_BR">
 	<email_text key="MANUAL_PAYMENT_NOTIFICATION">
 		<subject>Notificação de pagamento manual</subject>
-		<body>É necessário realizar o processamento de um pagamento manual de assinatura da revista {$journalName} do usuário {$userFullName} (login "{$userName}").
+		<body>É necessário realizar o processamento de um pagamento manual de assinatura da revista {$journalName}, pelo usuário {$userFullName} (login "{$userName}").
 
 O item adquirido é "{$itemName}".
-O custo é {$itemCost} ({$itemCurrencyCode}).
+Valor em ({$itemCurrencyCode}): {$itemCost}
 
-Esta mensagem foi gerada pelo Plugin de Pagamento Manual do OJS.</body>
-		<description>Esta mensagem notifica o editor-gerente que um pagamento manual foi realizado e exige processamento.</description>
+Esta é uma mensagem automática da ferramenta de Pagamento manual do Open Journal Systems.</body>
+		<description>Mensagem automática notificando editor-gerente que um pagamento manual foi realizado e exige processamento.</description>
 	</email_text>
 </email_texts>

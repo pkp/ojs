@@ -13,7 +13,7 @@
   -->
  
 <locale name="pt_BR" full_name="Português do Brasil">
-	<message key="plugins.auth.ldap.displayName">LDAP</message>
+	<message key="plugins.auth.ldap.displayName">Autenticação LDAP</message>
 	<message key="plugins.auth.ldap.description">Plugin de Autenticação LDAP, que permite a sincronização de contas de usuários em uma fonte externa LDAP.</message>
 	
 	<message key="plugins.auth.ldap.settings">Configurações LDAP</message>
@@ -35,7 +35,7 @@
 	<message key="plugins.auth.ldap.settings.saslmech.description">Ex.: "DIGEST-MD5"</message>
 	<message key="plugins.auth.ldap.settings.saslrealm">Domínio</message>
 	<message key="plugins.auth.ldap.settings.saslauthzid">ID de Autorização Solicitado</message>
-	<message key="plugins.auth.ldap.settings.saslprop">Propriedades de Segurança SASL</message>
+	<message key="plugins.auth.ldap.settings.saslprop">Propriedades de segurança SASL</message>
 	<message key="plugins.auth.ldap.settings.uid">Atributo de nome de conta</message>
 	<message key="plugins.auth.ldap.settings.uid.description">O atributo cujo valor identifica de forma única um objeto usuário, como um uid ou cn ou sAMAccountName.</message>
 </locale>

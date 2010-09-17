@@ -20,8 +20,6 @@
 	<message key="plugins.generic.externalFeed.description">Publiser innhold fra eksterne Atom/RSS-strømmer. For eksempel fra en ekstern WordPress, Drupal, eller OCSinstallasjon.</message>
 	<message key="plugins.generic.externalFeed.noneExist">Ingen eksterne kilder</message>
 	<message key="plugins.generic.externalFeed.title">Tittel</message>
-	<message key="plugins.generic.externalFeed.enabled">Programutvidelse for eksternt innhold har blitt slått på.</message>
-	<message key="plugins.generic.externalFeed.disabled">Programutvidelse for eksternt innhold har blitt slått av.</message>
 	<message key="plugins.generic.externalFeed.posted">Publisert</message>
 	<message key="plugins.generic.externalFeed.more">Mer ...</message>
 

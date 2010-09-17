@@ -15,8 +15,6 @@
 <locale name="zh_CN" full_name="China P.R">
 	<message key="plugins.generic.counter.description"><![CDATA[计数器插件提供关于站点活动的记录和<a href="http://www.projectcounter.org/about.html" target="_new">计数</a>报告.]]></message>
 	<message key="plugins.generic.counter">计数器统计</message>
-	<message key="plugins.generic.counter.enabled">COUNTER插件已开启。</message>
-	<message key="plugins.generic.counter.disabled">COUNTER插件已关闭。</message>	
 	<message key="plugins.generic.counter.migrate">日志文件迁移</message>
 	<message key="plugins.generic.counter.1a.title">期刊报告1(R2): 按月份与杂志的全文文章点击请求</message>
 	<message key="plugins.generic.counter.1a.title1">期刊报告1(R2)</message>

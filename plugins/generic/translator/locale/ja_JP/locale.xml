@@ -70,4 +70,5 @@
 	<message key="plugins.generic.translator.localeKey.description">検索するロケールキーを入力してください。</message>
 	<message key="plugins.generic.translator.fileNotWriteable">このロケールファイルにはサーバによる書込みができません。修正内容は保存されません。</message>
 	<message key="plugins.generic.translator.filesNotWriteable">このロケールファイルにはサーバによる書込みができません。修正内容は保存されません。</message>
+	<message key="plugins.generic.translator.tarMissing">このプラグインの抽出機能は，システムで tar binary が設定されていないために無効です。tar プログラムがインストールされて config.inc.php の [cli] セクションで tar binary へのパスが設定されているか確認してください。</message>
 </locale>

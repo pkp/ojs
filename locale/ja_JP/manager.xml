@@ -679,4 +679,12 @@
 	<message key="manager.subscriptions.form.referenceNumber">整理番号</message>
 	<message key="manager.subscriptions.referenceNumber">整理番号</message>
 	<message key="manager.subscriptions.selectContact">購読連絡担当者の選択</message>
+	<message key="manager.setup.doiReassign">DOIを新たに割り振る</message>
+	<message key="manager.setup.doiReassign.description">DOIの設定を修正しても，既に付与されたDOIについては影響されません。DOIの設定を保存後，下記のボタンを使用した場合は，DOI情報がすべて消去され，既存の論文に新たな設定が適用されます。</message>
+	<message key="manager.plugins.tarCommandNotFound">tarコマンドが使用できません。"config.inc.php" で正しく設定してください。</message>
+	<message key="manager.plugins.versionFileInvalid">プラグインディレクトリ内の version.xml に不正なデータが含まれています。</message>
+	<message key="manager.groups.publishEmails">出版メンバーのメールアドレス</message>
+	<message key="manager.reviewFormElements.included">著者へのメッセージに含める</message>
+	<message key="manager.language.submissions">投稿</message>
+	<message key="manager.plugins.invalidPluginArchive">アップロードされたプラグインのアーカイブにプラグイン名に一致するフォルダが含まれていません。</message>
 </locale>

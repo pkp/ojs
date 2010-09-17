@@ -15,7 +15,4 @@
 <locale name="zh_CN" full_name="China">
 	<message key="plugins.generic.sehl.name">SEHL插件</message>
 	<message key="plugins.generic.sehl.description">这个插件实现搜索引擎突出（SEHL），这样，当一个搜索引擎查找一个HTML文章，被检索的关键字高亮显示。</message>
-	<message key="plugins.generic.sehl.enabled">SEHL插件已开启。</message>
-	<message key="plugins.generic.sehl.disabled">SEHL插件已关闭。</message>
-
 </locale>

@@ -44,18 +44,7 @@
 	<message key="admin.journals.form.pathExists">Hautatutako bidea beste aldizkari batek erabiltzen du.</message>
 	<message key="admin.journals.enableJournalInstructions">Gaitu aldizkari hau publikoki agertzeko gunean.</message>
 	<message key="admin.journals.journalDescription">Aldizkariaren azalpena</message>
-	<message key="admin.journals.importOJS1">Inportatu OJS 1etik</message>
-	<message key="admin.journals.importOJS1.success">Aldizkaria ondo inportatu da.</message>
-	<message key="admin.journals.importOJS1.editMigratedJournal">Editatu migratutako aldizkaria</message>
-	<message key="admin.journals.importOJS1.redirect.desc">OJS 1eko URLak OJS 2ko URLetara birbideratzeko, sortu ondorengo PHP fitxategiak beheko edukiarekin. Fitxategi horiek OJS 1 fitxategi-sistemaren kokalekuan jarri ahal izango dira edo, aldizkari bakarreko instalazioa bada, OJS 2 fitxategi-sistemaren kokalekuan..</message>
-	<message key="admin.journals.importOJS1.redirect.ojs1root">Jarri OJS 1 fitxategi-sistema zaharraren kokalekuan (h.d., /var/www/ojs1).</message>
-	<message key="admin.journals.importOJS1.redirect.ojs1orojs2root">Jarri OJS 1 fitxategi-sistema zaharraren kokalekuan (h.d., /var/www/ojs1), edo, aldizkari bakarreko instalazioa bada, OJS 2 fitxategi-sistema berriaren kokalekuan (h.d., /var/www/ojs2).</message>
-	<message key="admin.journals.importOJS1.conflict.desc">Erabiltzaile-kontu batzuen datuek gatazka sortzen dute. OJS 1.x bertsioak onartzen du hainbat erabiltzailek helbide elektroniko bera izatea, baina OJS 2.x bertsioak ez. Beheko zerrendan, bigarren kontuari behin-behineko helbide elektroniko bat esleitu zaio. Eskuz zuzendu daiteke, beste helbide elektroniko bat esleituz edo posta-kontuak batuz.</message>
-	<message key="admin.journals.importOJS1.conflict">{$firstUsername} ({$firstName}) eta {$secondUsername} ({$secondName})</message>
-	<message key="admin.journals.importOJS1Instructions">Datuak OJS 1etik OJS 2ra migratzeko informazio xehea ikusteko, kontsultatu OJSrekin banatzen den UPGRADE dokumentua.</message>
 	<message key="admin.journal.pathImportInstructions">Lehendik dagoen aldizkariaren kokalekua edo berria (adib., "ojs")</message>
-	<message key="admin.journal.importPath">OJS 1 bidea</message>
-	<message key="admin.journal.importPathInstructions">Osatu OJS 1 instalazioaren fitxategi-sistema lokalaren bidea (adib., "/var/www/ojs")</message>
 	<message key="admin.journals.importSubscriptions">Inportatu harpidetzak</message>
 	<message key="admin.journals.transcode">Bihurtu artikuluen metadatuak ISO8859-1etik.</message>
 	<message key="admin.journals.redirect">Sortu kodea OJS1 URLak OJS 2 URLetara mapatzeko</message>
@@ -68,4 +57,7 @@
 	<message key="admin.mergeUsers.allUsers">Inskribatutako erabiltzaile guztiak</message>
 	<message key="admin.mergeUsers.confirm">Ziur zaude "{$oldUsername}" erabiltzaile-izena duen kontua ezabatu eta "{$newUsername}" erabiltzaile-izena duen kontuarekin batu nahi duzula? "{$oldUsername}" kontua galdu egingo da. Ekintza hau ezingo da desegin.</message>
 	<message key="admin.mergerUsers.noneEnrolled">Inskribatutako erabiltzailerik ez.</message>
+	<message key="admin.locale.maybeIncomplete">Markatutako localeak osatu gabe egon daitezke.</message>
+	<message key="admin.languages.installNewLocalesInstructions">Hauta itzazu locale osagarriak sistema horretarako laguntzailea instalatzeko. Localeak aldizkari ostalariak erabili baino lehen instalatu behar dira. Ikusi OJS-ren dokumentazioa hizkuntza berrientzako laguntzaileak gehitzeari buruzko informazioa eskuratzeko.</message>
+	<message key="admin.journals.createInstructions">Aldizkari honen kudeatzaile gisa emango duzu izena automatikoki. Aldizkari berria sortu ondoren, bertara kudeatzaile gisa sartu haren ezarpenarekin eta erabiltzailearen izen-ematearekin jarraitzeko.</message>
 </locale>

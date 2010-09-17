@@ -13,7 +13,7 @@
   -->
  
 <locale name="pt_BR" full_name="Português do Brasil">
-	<message key="plugins.importexport.erudit.displayName">Plugin de Exportação Formato Erudit</message>
+	<message key="plugins.importexport.erudit.displayName">Exportação para formato Erudit</message>
 	<message key="plugins.importexport.erudit.description">Exporta artigos utilizando a DTD inglesa Erudit</message>
 
 	<message key="plugins.importexport.erudit.cliUsage">Uso: {$scriptName} {$pluginName} [documentoXML] [caminhoRevista] [articleId] [galleyLabel]</message>
@@ -22,8 +22,8 @@
 	<message key="plugins.importexport.erudit.export.sections">Exportar seções</message>
 	<message key="plugins.importexport.erudit.export.articles">Exportar artigos</message>
 
-	<message key="plugins.importexport.erudit.selectIssue">Escolher edições</message>
-	<message key="plugins.importexport.erudit.selectArticle">Escolher artigo</message>
+	<message key="plugins.importexport.erudit.selectIssue">Escolha a edição</message>
+	<message key="plugins.importexport.erudit.selectArticle">Escolha o artigo</message>
 
 	<message key="plugins.importexport.erudit.cliError">ERRO:</message>
 	<message key="plugins.importexport.erudit.error.unknownJournal">Caminho da revista "{$journalPath}" inexistente.</message>

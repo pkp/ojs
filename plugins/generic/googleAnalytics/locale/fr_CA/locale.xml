@@ -30,4 +30,7 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Prière de sélectionner le code de repérage à utiliser.</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Code de repérage patrimonial (urchin.js)</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Nouveau code de repérage (ga.js)</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount">Numéro de compte Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount.description">Pour retracer le lectorat des articles publiés à l'aide de Google Analytics, saisir un numéro de compte ici (par ex., UA-xxxxxx-x).</message>
+	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Un ou plusieurs numéro de compte Google Analytics saisi(s) pour les auteurs des soumissions ne sont pas valides.</message>
 </locale>

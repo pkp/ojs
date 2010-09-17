@@ -70,4 +70,5 @@
 	<message key="plugins.generic.translator.localeKey.description">Saisir une clé de langue complète à rechercher.</message>
 	<message key="plugins.generic.translator.fileNotWriteable">Ce fichier de langue n'est pas disponible en écriture par le serveur. Les modifications apportées ne seront pas enregistrées.</message>
 	<message key="plugins.generic.translator.filesNotWriteable">Ces fichiers de langue ne sont pas disponibles en écriture par le serveur. Les modifications apportées ne seront pas enregistrées.</message>
+	<message key="plugins.generic.translator.tarMissing">La fonctionnalité d'exportation de ce plugiciel a été désactivée car le tar binaire configuré ne peut pas être trouvé sur le système. Veuillez vous assurer que vous avez le programme tar d'installé et configurer ensuite le chemin au tar binaire dans la section [cli] de config.inc.php!</message>
 </locale>

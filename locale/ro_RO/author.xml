@@ -47,8 +47,8 @@
 	<message key="author.submissions.confirmDelete">Eşti sigur că doreşti să această propunere incompletă?</message>
 	<message key="author.submissions.viewStatus">Vezi starea</message>
 	<message key="author.submissions.noSubmissions">Nicio propunere.</message>
-	<message key="author.submit.howToSubmit"><![CDATA[Întâmpini dificultăţi? Contactaţi-ne <a href="mailto:{$supportEmail}">{$supportName}</a> pentru asistenţă ({$supportPhone}).]]></message>
-	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Întâmpini dificultăţi? Contactaţi-ne <a href="mailto:{$supportEmail}">{$supportName}</a> pentru asistenţă.]]></message>
+	<message key="author.submit.howToSubmit"><![CDATA[Întâmpini dificultăţi? Ia legătura cu <a href="mailto:{$supportEmail}">{$supportName}</a> pentru ajutor ({$supportPhone}).]]></message>
+	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Întâmpini dificultăţi? Ia legătura cu <a href="mailto:{$supportEmail}">{$supportName}</a> pentru ajutor.]]></message>
 	<message key="author.submit.journalSection">Secţiune de revistă</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Selectează secţiunea corespunzătoare pentru această propunere (vezi secţiunile şi politicile la secţiunea <a href="{$aboutUrl}" target="_new">despre</a> revistă).]]></message>
 	<message key="author.submit.selectSection">Selectează o secţiune...</message>
@@ -57,19 +57,18 @@
 	<message key="author.submit.verifyChecklist">Trebuie să te asiguri că toate elementele din lista de verificare sunt îndeplinite pentru a continua.</message>
 	<message key="author.submit.copyrightNoticeAgree">Autorii sunt de acord cu termenii acestei note privind drepturile de autor, care se va aplica acestei propuneri dacă şi când este publicată de către această revistă (comentariile către editor pot fi adăugate mai jos).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Trebuie să fii de acord cu termenii privind drepturile de autor înainte de a continua.</message>
-	<message key="author.submit.commentsForEditor">Comentarii adresate redactorului</message>
+	<message key="author.submit.commentsForEditor">Informații suplimentare pentru redactor(șef)/editor principal</message>
 	<message key="author.submit.comments">Introdu text (opţional)</message>
 	<message key="author.submit.form.sectionRequired">Selectează o secţiune corespunzătoare pentru această propunere.</message>
 	<message key="author.submit.privacyStatement">Declaraţia de confidenţialitate a revistei</message>
-	<message key="author.submit.reorderInstructions">Reordonează autorii să apară în ordinea în care vor fi afişaţi în publicaţie.</message>
+	<message key="author.submit.reorderInstructions">Reordonează autorii să apară în ordinea în care vor fi afișați în revistă.</message>
 	<message key="author.submit.reorder">Reorder author's name</message>
 	<message key="author.submit.selectPrincipalContact">Contactul principal pentru corespondenţa editorială.</message>
 	<message key="author.submit.addAuthor">Adaugă autor</message>
 	<message key="author.submit.deleteAuthor">Şterge autor</message>
 	<message key="author.submit.submissionIndexingDescription">Furnizează termenii pentru indexarea propunerii; separă termenii cu punct şi virgulă (termen1; termen2; termen3).</message>
-	<message key="author.submit.submissionSupportingAgencies">Agenţiile care sprijină publicarea articolului</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">Identifică agenţiile care au oferit finanţare sau sprijin pentru lucrarea prezentată în această propunere.</message>
-	<message key="author.submit.agencies">Agenţii</message>
+	<message key="author.submit.submissionSupportingAgencies">Organizațiile care sprijină publicarea articolului</message>
+	<message key="author.submit.submissionSupportingAgenciesDescription">Numește organizațiile care au oferit finanțare sau sprijin pentru lucrarea prezentată în această propunere.</message>
 	<message key="author.submit.coverageInstructions">Se referă la localizarea geo-spaţială, acoperirea cronologică şi istorică şi/sau caracteristicile mostrei de cercetare.</message>
 	<message key="author.submit.subjectClassInstructions">Utilizează sistemul de clasificare cu hiperlinkuri pentru a selecta termenii de clasificare iar dacă este necesar numerele asociate.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Engleză=en; Franceză=fr; Spaniolă=es; Română=ro. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Coduri suplimentare</a>.]]></message>
@@ -126,4 +125,7 @@
 	<message key="author.article.copyeditedFile">Fişier redactat</message>
 	<message key="author.article.authorRevisedFile">Fişierul autorului</message>
 	<message key="author.submit.authorSubmitLoginMessage">Este necesar un cont de utilizator pentru a trimite propuneri acestei reviste. Acest lucru permite redactorilor noştri să urmărească propunerile şi să te contacteze atunci când statutul propunerii tale se modifică sau dacă sunt necesare informaţii suplimentare din partea ta.</message>
+	<message key="author.submit.submissionLocale">Limba pentru propuneri</message>
+	<message key="author.submit.submissionLocaleDescription">Această revistă acceptă propuneri în mai multe limbi. Alegeți limba primară a propunerilor din meniul derulant.</message>
+	<message key="author.submit.form.localeRequired">Selectează o limbă pentru propunere.</message>
 </locale>

@@ -14,17 +14,17 @@
 
 <locale name="it_IT" full_name = "Italiano">
 	<message key="admin.hostedJournals">Riviste</message>
-	<message key="admin.settings.journalRedirect">Scarica altre lingue</message>
+	<message key="admin.settings.journalRedirect">Redirect</message>
 	<message key="admin.settings.journalRedirectInstructions">Prevede un redirect dal sito principale a una rivista. Può essere utile, ad esempio, se il sito ospita solo una rivista.</message>
 	<message key="admin.settings.noJournalRedirect">Nessun redirect</message>
-	<message key="admin.languages.primaryLocaleInstructions">Database degli utenti OJS</message>
-	<message key="admin.languages.supportedLocalesInstructions">Seleziona tutte le lingue aggiuntive che saranno supportate dal sito. Le lingue scelte potranno essere selezionate da tutte le riviste ospitate tramite un menu presente in tutte le pagine del sito (in ogni caso il layout potrà sempre essere modificato personalizzando le pagine della singola rivista). Se non vengono impostate più lingue, il menu di selezione non sarà presente e non saranno disponibili le impostazioni estese per le lingue.</message>
-	<message key="admin.languages.confirmUninstall">Lo scaricamento della lingua è fallito. Il(I) messaggio(i) di errore qui sotto descrive il motivo dell'insuccesso.</message>
-	<message key="admin.languages.installNewLocalesInstructions">Sei sicuro di voler cancellare definitivamente questa rivista e tutti i suoi contenuti?</message>
+	<message key="admin.languages.primaryLocaleInstructions">Questa sarà la lingua di default del sito e di ogni rivista.</message>
+	<message key="admin.languages.supportedLocalesInstructions">Seleziona tutte le localizzazioni supportate dal sito. Le lingue scelte saranno disponibili per tutte le riviste ospitate e saranno visibili nel menu presente in tutte le pagine del sito (in ogni caso il layout potrà sempre essere modificato personalizzando le pagine della singola rivista). Se non vengono impostate più lingue, il menu di selezione non sarà presente e non saranno disponibili le impostazioni estese per le lingue.</message>
+	<message key="admin.languages.confirmUninstall">Sei sicuro di voler disinstallare questa localizzazione? Questa operazione avrà effetto su tutte le lingue che la stanno utilizzando</message>
+	<message key="admin.languages.installNewLocalesInstructions">Seleziona le localizzazioni da installare nel sistema. I file di localizzazione vanno installati, prima che le riviste possano utilizzarli. Leggi la documentazione di OJS per ulteriori informazioni su come aggiungere nuove lingue</message>
 	<message key="admin.languages.downloadLocales">Scarica i file di localizzazione</message>
 	<message key="admin.languages.downloadFailed">Lo scaricamento della lingua è fallito. Il(I) messaggio(i) di errore qui sotto descrive il motivo dell'insuccesso.</message>
 	<message key="admin.languages.localeInstalled">La lingua "{$locale}" è stata installata.</message>
-	<message key="admin.languages.download">Scarica la lingua</message>
+	<message key="admin.languages.download">Scarica localizzazione</message>
 	<message key="admin.languages.download.cannotOpen">Non è possibile aprire il descrittore della lingua dal sito web del PKP.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Non è possibile aggiungere la nuova lingua al file di registro della lingua, solitamente "registry/locales.xml".</message>
 	<message key="admin.auth.ojs">Database degli utenti OJS</message>
@@ -37,14 +37,14 @@
 	<message key="admin.journals.journalSettings">Impostazioni della rivista</message>
 	<message key="admin.journals.noneCreated">Non è stata creata nessuna rivista.</message>
 	<message key="admin.journals.confirmDelete">Sei sicuro di voler cancellare definitivamente questa rivista e tutti i suoi contenuti?</message>
-	<message key="admin.journals.create">Crea una rivista</message>
-	<message key="admin.journals.createInstructions">Sarete automaticamente registrati come manager di questa rivista. Dopo aver creato una nuova rivista, effettuate il log in come manager per continuare ad effettuare il setup e la registrazione degli utenti.</message>
-	<message key="admin.journals.urlWillBe">La URL della rivista sarà {$sampleUrl}</message>
-	<message key="admin.journals.form.titleRequired">È necessario inserire un titolo</message>
-	<message key="admin.journals.form.pathRequired">È necessario inserire un path.</message>
+	<message key="admin.journals.create">Crea una nuova rivista</message>
+	<message key="admin.journals.createInstructions">Sarete automaticamente registrati come manager di questa rivista. Dopo aver creato una nuova rivista, effettuate il log in come manager per continuare il setup e registrare gli utenti.</message>
+	<message key="admin.journals.urlWillBe">Utilizzare un termine breve o un acronimo. La URL della rivista sarà {$sampleUrl}</message>
+	<message key="admin.journals.form.titleRequired">Inserire un titolo</message>
+	<message key="admin.journals.form.pathRequired">Inserire un path.</message>
 	<message key="admin.journals.form.pathAlphaNumeric">Il path può contenere solo caratteri alfanumerici, underscore e trattini, e deve iniziare e finire con un carattere alfanumerico. Non può contenere spazi.</message>
-	<message key="admin.journals.form.pathExists">Il pathselezionato è già utilizzato da un'altra rivista.</message>
-	<message key="admin.journals.enableJournalInstructions">Mostra la rivista sul sito</message>
+	<message key="admin.journals.form.pathExists">Il path indicato è già utilizzato da un'altra rivista.</message>
+	<message key="admin.journals.enableJournalInstructions">Mostra pubblicamente la rivista sul sito</message>
 	<message key="admin.journals.journalDescription">Descrizione della rivista</message>
 	<message key="admin.journal.pathImportInstructions">Path di una rivista esistente o path da creare (es., "ojs").</message>
 	<message key="admin.journals.importSubscriptions">Importa abbonamenti</message>
@@ -52,7 +52,7 @@
 	<message key="admin.journals.redirect">Genera il codice per mappare le URL di OJS1 verso quelle di OJS2</message>
 	<message key="admin.journals.form.importPathRequired">È richiesto il path dell'importazione.</message>
 	<message key="admin.journals.importErrors">Importazione fallita</message>
-	<message key="admin.mergeUsers">Fondi gli utenti</message>
+	<message key="admin.mergeUsers">Fusione utenti</message>
 	<message key="admin.mergeUsers.mergeUser">Fondi l'utente</message>
 	<message key="admin.mergeUsers.into.description">Seleziona l'utente al quale si vuole attribuire le autorizzazioni dell'utente precedente, modificando gli incarichi assegnati, ecc.</message>
 	<message key="admin.mergeUsers.from.description">Seleziona un utente da fondere sull'account di un altro utente (es., quando qualcuno ha due account da utente). L'account selezionato sarà cancellato e le sue submission, gli incarichi, ecc. saranno attribuiti al secondo account.</message>

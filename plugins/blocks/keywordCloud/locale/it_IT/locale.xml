@@ -14,6 +14,6 @@
  
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.block.keywordCloud.displayName">Blocco della nuvola di Keyword</message>
-	<message key="plugins.block.keywordCloud.description">Quest plugin crea una nuvola di tag utilizzando le keywords degli articoli.</message>
+	<message key="plugins.block.keywordCloud.description">Questo plugin visualizza le keywords degli articoli in forma di nuvola.</message>
 	<message key="plugins.block.keywordCloud.title">Keywords</message>
 </locale>

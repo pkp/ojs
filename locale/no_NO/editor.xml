@@ -148,7 +148,6 @@
 	<message key="editor.article.resubmitForReview">Send inn fil igjen til fagvurdering</message>
 	<message key="editor.article.resubmitFileForPeerReview">Send inn den valgte filen igjen til fagvurdering</message>
 	<message key="editor.article.sendToCopyedit">Send fil til manusredigering</message>
-	<message key="editor.article.sendFileToCopyedit">Velg fil til manusredigering</message>
 	<message key="editor.article.selectProofreader">Oppnevn korrekturleser</message>
 	<message key="editor.article.replaceProofreader">Erstatt korrekturleser</message>
 	<message key="editor.article.authorComments">Forfatters kommentarer</message>

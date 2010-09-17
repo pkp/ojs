@@ -19,8 +19,7 @@
 	
 	<message key="plugins.importexport.doaj.export">雑誌データをDOAJにエクスポートする</message>
 	<message key="plugins.importexport.doaj.export.journal">雑誌情報をエクスポートする</message>
-	<message key="plugins.importexport.doaj.export.email">DOAJにメールする</message>
 	<message key="plugins.importexport.doaj.export.journalInfo">DOAJでアーカイブするための論文情報をXML形式でエクスポートします。</message>
-	<message key="plugins.importexport.doaj.export.emailInfo">この雑誌をDOAJに登録するために、このフォームを使ってDOAJにメールしてください。</message>
-
+	<message key="plugins.importexport.doaj.export.contact">DOAJにメールする</message>
+	<message key="plugins.importexport.doaj.export.contactInfo">この雑誌をDOAJに登録するために、このフォームを使ってDOAJにメールしてください。</message>
 </locale>

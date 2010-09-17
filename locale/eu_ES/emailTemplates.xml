@@ -337,25 +337,7 @@ Mesedez, berrets iezaguzu aldizkariarentzat biziki garrantzitsua den lan hori bu
 {$editorialContactSignature}</body>
 		<description>Mezu hau automatikoki bidaltzen da ebaluatzaile baten epea amaitu eta erantzun ez duenean (ikus Konfigurazioko 2. urratseko Ebaluazio-aukerak) eta klik bakarreko ebaluatzaile-sarbidea gaituta dagoenean. Programatutako atazak (scheduled_tasks) gaituta eta konfiguratuta egon behar dute (ikus konfigurazio-fitxategia).</description>
 	</email_text>
-	<email_text key="EDITOR_REVIEW">
-		<subject>Editorearen ebaluazioa artikuluari buruz</subject>
-		<body>{$authorName}:
-
-Zuk bidalitako "{$articleTitle}" artikulua ebaluatu dugu, eta jarraian azaltzen dizugu hartu dugun erabakia...
-
-{$comments}.
-
-Lanari buruzko ohar eta iruzkin gehiago, editorearen eta adituaren ebaluazioan eginak, aldizkariaren webgunean aurkituko dituzu:
-
-Artikuluaren URLa: {$submissionUrl}
-Erabiltzaile-izena: {$authorUsername}
-
-Galderaren bat baduzu, jar zaitez harremanetan nirekin, mesedez.
-
-{$editorialContactSignature}</body>
-		<description>Mezu hau Ataleko editoreak Egileari bidaltzen dio, hark bidalitako artikuluari buruzko erabakia hartu dutela jakinarazteko.</description>
-	</email_text>
-	<email_text key="COPYEDIT_REQUEST">
+		<email_text key="COPYEDIT_REQUEST">
 		<subject>Zuzenketa egiteko eskaera</subject>
 		<body>{$copyeditorName}:
 

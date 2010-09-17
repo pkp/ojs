@@ -16,9 +16,9 @@
 	<message key="plugins.importexport.quickSubmit.addToExisting">Aggiungi a un fascicolo esistente:</message>
 	<message key="plugins.importexport.quickSubmit.chooseDestination">Destinazione della submission</message>
 	<message key="plugins.importexport.quickSubmit.chooseDestinationDescription">Seleziona se aggiungere le nuove submission a un fascicolo esistente o se lasciarle nella coda di editing.</message>
-	<message key="plugins.importexport.quickSubmit.displayName">Plugin QuickSubmit</message>
-	<message key="plugins.importexport.quickSubmit.description">Plugin per la submission rapida</message>
-	<message key="plugins.importexport.quickSubmit.descriptionLong">Questo plugin permette di aggiungere rapidamente submission complete alla coda di editing o direttamente a un fascicolo.</message>
+	<message key="plugins.importexport.quickSubmit.displayName">QuickSubmit</message>
+	<message key="plugins.importexport.quickSubmit.description">Caricamento rapido di articoli</message>
+	<message key="plugins.importexport.quickSubmit.descriptionLong">Questo plugin permette di aggiungere rapidamente articoli alla coda di editing o direttamente a un fascicolo.</message>
 	<message key="plugins.importexport.quickSubmit.issueRequired">Devi selezionare il fascicolo al quale aggiungere l'articolo.</message>
 	<message key="plugins.importexport.quickSubmit.leaveUnpublished">Lascia non pubblicato</message>
 	<message key="plugins.importexport.quickSubmit.saveAndCreateAnother">Salva e creane un altro</message>

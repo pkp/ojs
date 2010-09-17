@@ -20,8 +20,6 @@
 	<message key="plugins.generic.externalFeed.description">从网络联合供稿的ATOM/RSS提取内容发布。例如，从WordPress, Drupal, 或者OCS.</message>
 	<message key="plugins.generic.externalFeed.noneExist">无外部Feed</message>
 	<message key="plugins.generic.externalFeed.title">标题</message>
-	<message key="plugins.generic.externalFeed.enabled">外部Feed插件已经激活.</message>
-	<message key="plugins.generic.externalFeed.disabled">外部Feed插件已经被禁用。</message>
 	<message key="plugins.generic.externalFeed.posted">已提交</message>
 	<message key="plugins.generic.externalFeed.more">更多...</message>
 

@@ -104,9 +104,9 @@
 	<message key="editor.navigation.createIssue">Creează un număr de revistă</message>
 	<message key="editor.navigation.issueArchive">Numere anterioare</message>
 	<message key="editor.article.designateReviewVersion">Desemnează fişierul original ca fiind versiunea de evaluare</message>
-	<message key="editor.article.uploadReviewVersion">Încarcă o versiune de evalaure revizuită</message>
+	<message key="editor.article.uploadReviewVersion">Încarcă o versiune de evaluare revizuită</message>
 	<message key="editor.article.showSuppFile">Prezintă fişierul evaluatorilor</message>
-	<message key="editor.article.layoutAndProof">Machetă &amp; Corectură</message>
+	<message key="editor.article.layoutAndProof"><![CDATA[Machetă & Corectură]]></message>
 	<message key="editor.article.clear">Elimină</message>
 	<message key="editor.article.clearReviewer">Elimină evaluatorul</message>
 	<message key="editor.article.changeSection">Schimbă secţiunea</message>
@@ -168,8 +168,7 @@
 	<message key="editor.article.resubmitForReview">Retrimite fişierul spre evaluare</message>
 	<message key="editor.article.resubmitFileForPeerReview">Retrimite fişierul selectat pentru evaluarea peer review</message>
 	<message key="editor.article.sendToCopyedit">Trimite fişierul către (tehno)redactare</message>
-	<message key="editor.article.sendFileToCopyedit">Trimite fişierul spre a fi (tehno)redactat</message>
-	<message key="editor.article.selectProofreader">Desemnează corector</message>
+	<message key="editor.article.selectProofreader">Angajează corector</message>
 	<message key="editor.article.replaceProofreader">Înlocuieşte corectorul</message>
 	<message key="editor.article.authorComments">Comentariile autorului</message>
 	<message key="editor.article.proofreaderComments">Comentariile corectorului</message>
@@ -205,4 +204,9 @@
 	<message key="editor.article.removeCoverPage">Elimini imaginea copertei?</message>
 	<message key="editor.article.remove">Elimină</message>
 	<message key="editor.issues.invalidAccessDate">Data accesului nu este validă.</message>
+	<message key="editor.submissionReview.sendToCopyediting">Trimite pentru (teno)redactare</message>
+	<message key="editor.notifyUsers.allReaders">Toți cititorii ({$count} utilizatori)</message>
+	<message key="editor.notifyUsers.allAuthors">Toți autorii publicați ({$count} utilizatori)</message>
+	<message key="editor.notifyUsers.allIndividualSubscribers">Toți abonații individuali ({$count} utilizatori)</message>
+	<message key="editor.notifyUsers.allInstitutionalSubscribers">Toți abonații instituționali ({$count} utilizatori)</message>
 </locale>

@@ -124,4 +124,7 @@
 	<message key="author.submit.form.wordCountAlert">このセクションにおけるアブストラクトの最大文字数を超過しています。</message>
 	<message key="author.submit.reorder">著者名の並べ替え</message>
 	<message key="author.submit.expedite"><![CDATA[もしこの投稿が査読，編集，レイアウト作業なしで公開可能なフォーマットである場合は，<a href="{$expediteUrl}" class="action">ここをクリックすることで</a> 編集作業の最終段階に直接配置することができます。(注意: 雑誌編集者だけがこのオプションを選択する権限があります。)]]></message>
+	<message key="author.submit.submissionLocaleDescription">このジャーナルは複数の言語による投稿を受け付けています。下記のプルダウンより投稿言語を選択してください。</message>
+	<message key="author.submit.form.localeRequired">投稿言語を選択してください。</message>
+	<message key="author.submit.submissionLocale">投稿言語</message>
 </locale>

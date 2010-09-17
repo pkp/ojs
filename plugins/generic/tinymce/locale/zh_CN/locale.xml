@@ -16,8 +16,5 @@
 	<message key="plugins.generic.tinymce.name">TinyMCE插件</message>
 	<message key="plugins.generic.tinymce.description"><![CDATA[本插件启动文本输入框的WYSIWYG  <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> 文本编辑器.]]></message>
 	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[本插件启动文本输入框的WYSIWYG <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>内容编辑器. <strong>TinyMCE还没有安装;请先安装{$tinyMcePath}.</strong>]]></message>
-	<message key="plugins.generic.tinymce.enabled">TinyMCE插件已开启。</message>
-	<message key="plugins.generic.tinymce.disabled">TinyMCE插件已关闭。</message>
-
 	<message key="plugins.generic.tinymce.settings">设置</message>
 </locale>

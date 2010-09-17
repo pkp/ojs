@@ -28,7 +28,5 @@
 	<message key="plugins.generic.counter.1a.ytdHtml">HIÅ HTML</message>
 	<message key="plugins.generic.counter.1a.ytdPdf">HIÅ PDF</message>
 	<message key="plugins.generic.counter.1a.totalForAllJournals">Totalt for alle tidsskrift</message>
-	<message key="plugins.generic.counter.enabled">COUNTER-programutvidelsen har blitt slått på.</message>
-	<message key="plugins.generic.counter.disabled">COUNTER-programutvidelsen har blitt slått av.</message>
 	<message key="plugins.generic.counter.migrate">Flytt loggfil</message>
 </locale>

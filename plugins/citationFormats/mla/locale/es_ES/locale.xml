@@ -16,4 +16,5 @@
 	<message key="plugins.citationFormats.mla.displayName">Complemento de Formato de Citas MLA</message>
 	<message key="plugins.citationFormats.mla.citationFormatName">MLA</message>
 	<message key="plugins.citationFormats.mla.description">Este complemento implementa el formato de citas MLA.</message>
+	<message key="plugins.citationFormats.mla.noPages">núm. pág.</message>
 </locale>

@@ -13,7 +13,7 @@
   -->
  
 <locale name="pt_BR" full_name="Português (Brasil)">
-	<message key="plugins.block.keywordCloud.displayName">Plugin Nuvem de Palavras-chave</message>
-	<message key="plugins.block.keywordCloud.description">Este plugin oferece uma nuvem de tags de palavras-chave dos artigos.</message>
+	<message key="plugins.block.keywordCloud.displayName">Nuvem de palavras-chave</message>
+	<message key="plugins.block.keywordCloud.description">Este plugin oferece uma nuvem de tags contendo as palavras-chave dos artigos.</message>
 	<message key="plugins.block.keywordCloud.title">Palavras-chave</message>
 </locale>

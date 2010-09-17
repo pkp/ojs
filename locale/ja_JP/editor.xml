@@ -202,4 +202,10 @@
 	<message key="editor.issues.unpublishIssue">未公開巻号</message>
 	<message key="editor.issues.confirmUnpublish">公開されているこの巻号を未公開にしますか？</message>
 	<message key="editor.article.archiveSubmission">投稿を謝絶してアーカイブにうつす</message>
+	<message key="editor.notifyUsers.allReaders">すべての読者 ({$count} ユーザ)</message>
+	<message key="editor.notifyUsers.allIndividualSubscribers">すべての個人購読者 ({$count} ユーザ)</message>
+	<message key="editor.notifyUsers.allInstitutionalSubscribers">すべての機関購読者 ({$count} ユーザ)</message>
+	<message key="editor.submissionReview.sendToCopyediting">コピーエディタに送信</message>
+	<message key="editor.notifyUsers.allAuthors">すべての公開済の著者 ({$count} ユーザ)</message>
+	<message key="editor.submissionReview.cannotSendToCopyediting">コピーエディタに投稿論文を送る前に，著者通知リンクを使用して著者への決定通知と送信するバージョンを選択します。</message>
 </locale>

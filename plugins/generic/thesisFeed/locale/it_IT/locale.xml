@@ -13,7 +13,7 @@
   -->
  
 <locale name="it_IT" full_name="Italiano">
-	<message key="plugins.generic.thesisfeed.displayName">Plugin dei Feed RSS/Atom per gli Abstract delle Tesiiee</message>
+	<message key="plugins.generic.thesisfeed.displayName">Feed RSS/Atom per gli Abstract delle Tesi</message>
 	<message key="plugins.generic.thesisfeed.description">Questo plugin produce feed RSS/Atom per gli abstract delle tesi.</message>
 
 	<message key="plugins.generic.thesisfeed.settings">Impostazioni</message>
@@ -22,10 +22,8 @@
 	<message key="plugins.generic.thesisfeed.settings.thesis">Mostra i link ai feed RSS solo nella pagina degli abstract delle tesi.</message>
 	<message key="plugins.generic.thesisfeed.settings.recentThesis1">Limita i feed RSS ai</message>
 	<message key="plugins.generic.thesisfeed.settings.recentThesis2">abstract di tesi inserite più recenti.</message>
-	<message key="plugins.generic.thesisfeed.settings.recentItemsRequired">Per favore inserisci un integrale positivo per il numero di abstract delle tesi.</message>
-	<message key="plugins.generic.thesisfeed.atom.altText">Logo di Atom</message>
-	<message key="plugins.generic.thesisfeed.rss1.altText">Logo di RSS1</message>
-	<message key="plugins.generic.thesisfeed.rss2.altText">Logo di RSS2</message>
-	<message key="plugins.generic.thesisfeed.enabled">Il plugin Abstract delle tesi è stato abilitato.</message>
-	<message key="plugins.generic.thesisfeed.disabled">Il plugin Abstract delle tesi è stato disabilitato.</message>
+	<message key="plugins.generic.thesisfeed.settings.recentItemsRequired">Inserisci un numero positivo intero.</message>
+	<message key="plugins.generic.thesisfeed.atom.altText">Logo Atom</message>
+	<message key="plugins.generic.thesisfeed.rss1.altText">Logo RSS1</message>
+	<message key="plugins.generic.thesisfeed.rss2.altText">Logo RSS2</message>
 </locale>

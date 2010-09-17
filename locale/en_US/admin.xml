@@ -24,7 +24,7 @@
 	<message key="admin.languages.installNewLocalesInstructions">Select any additional locales to install support for in this system. Locales must be installed before they can be used by hosted journals. See the OJS documentation for information on adding support for new languages.</message>
 	<message key="admin.languages.downloadLocales">Download Locales</message>
 	<message key="admin.languages.downloadFailed">The locale download failed. The error message(s) below describe the failure.</message>
-	<message key="admin.languages.localeInstalled">The "{$locale}" locale has been installed. </message>
+	<message key="admin.languages.localeInstalled">The "{$locale}" locale has been installed.</message>
 	<message key="admin.languages.download">Download Locale</message>
 	<message key="admin.languages.download.cannotOpen">Cannot open language descriptor from PKP web site.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Cannot add the new locale to the locale registry file, typically "registry/locales.xml".</message>

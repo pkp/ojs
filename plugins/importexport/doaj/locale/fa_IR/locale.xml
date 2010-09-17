@@ -21,4 +21,6 @@
 	<message key="plugins.importexport.doaj.export.journalInfo">صدور اطلاعات مقاله بصورت ایکس ام ال برای ذخیره در دواج</message>
 	<message key="plugins.importexport.doaj.export.emailInfo">این ایمیل برای ارسال درخواست به دواج است. لطفا قسمتهای مورد لزوم را بر حسب سلیقه خود کامل کنید.</message>
 
+	<message key="plugins.importexport.doaj.export.contact">برای محسوب شدن با DOAJ تماس بگیرید</message>
+	<message key="plugins.importexport.doaj.export.contactInfo">برای احتساب مجله خود در DOAJ لطفا این فرم نیمه اتوماتیک را به DOAJ ارسال کنید. قبل از ارسال فیلدهای خالی را تکمیل کنید.</message>
 </locale>

@@ -15,9 +15,6 @@
 <locale name="ro_RO" full_name="Română">
 	<message key="plugins.generic.webfeed.displayName">Modul pentru fluxuri web</message>
 	<message key="plugins.generic.webfeed.description">Acest modul emite fluxuri web RSS/Atom pentru numărul curent.</message>
-	<message key="plugins.generic.webfeed.enabled">Modulul pentru fluxuri web a fost activat.</message>
-	<message key="plugins.generic.webfeed.disabled">Modulul pentru fluxuri web a fost dezactivat.</message>
-
 	<message key="plugins.generic.webfeed.settings">Setări</message>
 	<message key="plugins.generic.webfeed.settings.issue">Afișează linkurile fluxului doar pe paginile numărului de revistă.</message>
 	<message key="plugins.generic.webfeed.settings.homepage">Afișează linkurile fluxului doar pe pagina principală și pe paginile numărului de revistă.</message>

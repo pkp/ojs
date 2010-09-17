@@ -63,4 +63,9 @@
 	<message key="plugins.generic.translator.localeKey.description">کلید بومی را بصورت کامل برای جستجو وارد کنید.</message>
 	<message key="plugins.generic.translator.fileNotWriteable">این فایل زبانی قابل نوشتن توسط سرور نیست. هر تغییری که بدهید ذخیره نخواهد شد.</message>
 	<message key="plugins.generic.translator.filesNotWriteable">این فایلهای زبانی قابل نوشتن توسط سرور نیست. هر تغییری که در آنها بدهید ذخیره نخواهد شد.</message>
+	<message key="plugins.generic.translator.tarMissing">فانکشن اکسپورت مربوط به این پلاگین غیرفعال شده است زیرا که فایل اجرائی تار ذکر شده در تنظیمات بر روی این سیستم یافت نشد. لطفا اطمینان حاصل کنید که برنامه تار نصب است و سپس مسیر آن را به نحو صحیحی در فایل 
+config.inc.php
+در قسمت
+[cli]
+وارد کنید.</message>
 </locale>

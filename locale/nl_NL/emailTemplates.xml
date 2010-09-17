@@ -30,7 +30,7 @@ Uw gebruikersnaam: {$username}
 Uw nieuwe wachtwoord: {$password}
 
 {$principalContactSignature}</body>
-		<description>Deze e-mail wordt verstuurd naar een geregistreerde gebruiker als ze met succes hun wachtwoord hebben veranderd volgens het proces dat is beschreven in de PASSWORD_RESET_CONFIRM e-mail.</description>
+		<description>Deze e-mail wordt verstuurd naar een geregistreerde gebruiker als ze met succes hun wachtwoord hebben veranderd volgens de procedure die is beschreven in de PASSWORD_RESET_CONFIRM e-mail.</description>
 	</email_text>
 	<email_text key="USER_REGISTER">
 		<subject>Tijdschriftregistratie</subject>
@@ -124,7 +124,7 @@ Gebruikersnaam: {$authorUsername}
 Neemt u alstublieft contact op als u vragen heeft. Dank u voor het overwegen van dit tijdschrift als podium voor u werk.
 
 {$editorialContactSignature}</body>
-		<description>Deze e-mail wordt, indien geactiveerd, automatisch verstuurd naar een auteur als die het proces van inzenden van een manuscript bij het tijdschrift voltooit. Er wordt informatie gegeven over het volgen van de inzending door het proces en de auteur wordt bedankt voor de inzending.</description>
+		<description>Deze e-mail wordt, indien geactiveerd, automatisch verstuurd naar een auteur als die de inzendprocedure van een manuscript bij het tijdschrift voltooit. Er wordt informatie gegeven over het volgen van de inzending door het proces en de auteur wordt bedankt voor de inzending.</description>
 	</email_text>
 	<email_text key="SUBMISSION_UNSUITABLE">
 		<subject>Ongeschikte inzending</subject>
@@ -872,5 +872,18 @@ Lidmaatschapsinformatie (indien opgegeven):
 Gebruik de volgende URL om dit abonnement te bekijken of bewerken.
 
 Abonnement URL: {$subscriptionUrl}</body>
+	</email_text>
+	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
+		<subject>Citatie redactie</subject>
+		<body>{$authorFirstName},
+
+Kunt u de juiste citatie van de volgende referentie uit uw artikel {$articleTitle} verifiëren of verschaffen:
+
+{$rawCitation}
+
+Dank!
+
+{$userFirstName}
+Tekstredacteur, {$journalName}</body>
 	</email_text>
 </email_texts>

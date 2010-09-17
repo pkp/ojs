@@ -17,8 +17,6 @@
 	<!-- Google Analytics -->
 	<message key="plugins.generic.googleAnalytics.displayName">Modul pentru Google Analytics</message>
 	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Integrează OJS cu Google Analytics, siteul Google pentru aplicaţia pentru analizarea traficului pe site. Acesta necesită existenţa deja a unui cont la Google Analytics. Vezi şi <a href="http://www.google.com/analytics/" title="Google Analytics site">siteul Google Analytics</a> pentru mai multe informaţii.]]></message>
-	<message key="plugins.generic.googleAnalytics.enabled">Modulul Google Analytics a fost activat.</message>
-	<message key="plugins.generic.googleAnalytics.disabled">Modulul Google Analytics a fost dezactivat.</message>
 	<!-- Google Analytics Settings Management -->
 	<message key="plugins.generic.googleAnalytics.manager.settings">Setări</message>
 	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">Setări Google Analytics</message>
@@ -30,4 +28,7 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Selectează un cod de urmărire pentru a fi folosit.</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Cod de urmărire vechi (urchin.js)</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Cod de urmărire nou (ga.js)</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount">Numărul contului Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount.description">Pentur a urmări articolele folosind Google Analytics introdu aici numărul contului (ex, UA-xxxxxx-x).</message>
+	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Unul sau mai multe numere de cont pentru Google Analytics sunt nevalide.</message>
 </locale>

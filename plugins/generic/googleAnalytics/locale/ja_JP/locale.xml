@@ -30,4 +30,7 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCode">トラッキングコード</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">使用するトラッキングコードを選択してください。</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">以前のトラッキングコード (urchin.js)</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount">Google Analytics アカウント番号</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount.description">Google Analytics を使用して公開中の論文のアクセス状況をトラックするために，ここにアカウント番号 (例. UA-xxxxxx-x) を入力してください。</message>
+	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">投稿者が入力したGoogle Analytics アカウント番号が不正です。</message>
 </locale>

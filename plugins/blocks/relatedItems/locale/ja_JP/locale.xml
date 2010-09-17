@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2010 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.block.relatedItems.displayName">関連アイテムブロック</message>
+	<message key="plugins.block.relatedItems.description">読書ツールサイドバーに関連アイテムブロックを表示します。</message>
+	<message key="plugins.block.relatedItems.title">関連アイテム</message>
+	<message key="plugins.block.relatedItems.hide">非表示</message>
+	<message key="plugins.block.relatedItems.show">すべて表示</message>
+</locale>

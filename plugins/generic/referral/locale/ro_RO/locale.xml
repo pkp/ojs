@@ -15,9 +15,6 @@
 <locale name="ro_RO" full_name="Română">
 	<message key="plugins.generic.referral.name">Modulul referințelor bibliografice</message>
 	<message key="plugins.generic.referral.description">Modulul referințelor bibliografice urmărește referințele prin evaluarea URL-urilor articolelor (de ex. atunci când un cititor dă clic pe un URL ce conduce către un articol extern), permițând autorilor să-și mențină și să publice o listă actualizată automat cu trimiterile făcute (refbacks) către un anume articol.</message>
-	<message key="plugins.generic.referral.enabled">Modulul referințelor bibliografice a fost activat.</message>
-	<message key="plugins.generic.referral.disabled">Modulul referințelor bibliografice a fost dezactivat.</message>
-	
 	<message key="plugins.generic.referral.editReferral">Editează referință</message>
 	<message key="plugins.generic.referral.createReferral">Creează referință</message>
 	<message key="plugins.generic.referral.referrals">Referințe</message>
@@ -34,4 +31,8 @@
 	<message key="plugins.generic.referral.confirmDelete">Ești sigur(ă) că dorești să ștergi această referință?</message>
 	<message key="plugins.generic.referral.nameRequired">Este necesar un nume pentru această referință.</message>
 	<message key="plugins.generic.referral.urlRequired">Este necesar un URL pentru această referință.</message>
+	<message key="plugins.generic.referral.settings">Setările modulului pentru referințe bibliografice</message>
+	<message key="plugins.generic.referral.settings.description">Modulul pentru referințe bibliografice capturează URL-ul care conduce la articolele publicate în această revistă astfel ca acestea să poată fi îngrijite de autor și opțional publicate. Acest formular permite ca managerul revistei să controleze cum sunt capturate aceste URL-uri.</message>
+	<message key="plugins.generic.referral.excusions">Excluderi</message>
+	<message key="plugins.generic.referral.exclusions.description"><![CDATA[Introdu o listă cu expresii, una per linie, pentru a fi tratată ca excluderi pentru evidența referințelor bibliografice. Acestea pot fi utilizate pentru a preveni ca cererile de la motoarele de căutare să aglomereze lista. Pentru mai multe detalii privind expresiile regulate, vezi <a href="http://ca.php.net/manual/en/ref.pcre.php" target="_new">http://ca.php.net/manual/en/ref.pcre.php</a>.]]></message>
 </locale>

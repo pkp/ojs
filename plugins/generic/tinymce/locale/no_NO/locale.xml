@@ -18,6 +18,4 @@
 	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Denne programutvidelsen oppretter WYSIWYG-redigering i OJS tekstfelt ved bruk av <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> content editor. <strong>TinyMCE er for øyeblikket ikke installert; installer den i {$tinyMcePath}.</strong>]]></message>
 
 	<message key="plugins.generic.tinymce.settings">Innstillinger</message>
-	<message key="plugins.generic.tinymce.enabled">TinyMCE-programutvidelsen har blitt slått på.</message>
-	<message key="plugins.generic.tinymce.disabled">TinyMCE-programutvidelsen har blitt slått av.</message>
 </locale>

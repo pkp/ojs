@@ -14,7 +14,7 @@
   -->
  
 <locale name="it_IT" full_name="Italiano">
-	<message key="plugins.generic.counter.description"><![CDATA[Il plugin COUNTER permette la registrazione e il report in <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a> sull'attività nel sito.]]></message>
+	<message key="plugins.generic.counter.description"><![CDATA[Il plugin COUNTER permette la registrazione e il report in formato <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a> sull'attività nel sito.]]></message>
 	<message key="plugins.generic.counter">Statistiche COUNTER</message>
 
 	<message key="plugins.generic.counter.1a.title">Journal Report 1 (R2): Articoli Full-Text richiesti per mese e Journal</message>
@@ -30,6 +30,4 @@
 	<message key="plugins.generic.counter.1a.ytdPdf">YTD PDF</message>
 	<message key="plugins.generic.counter.1a.totalForAllJournals">Totale per tutte le riviste</message>
 	<message key="plugins.generic.counter.migrate">Migrazione file di log</message>
-	<message key="plugins.generic.counter.enabled">Il plugin COUNTER è stato abilitato.</message>
-	<message key="plugins.generic.counter.disabled">Il plugin COUNTER è stato disabilitato.</message>
 </locale>

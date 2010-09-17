@@ -86,10 +86,6 @@
 	<message key="section.title">Título de sección</message>
 	<message key="section.abbreviation">Abreviatura</message>
 	<message key="section.abbreviation.example">(Por ejemplo, Artículos=ART)</message>
-	<message key="section.default.title">Artículos</message>
-	<message key="section.default.abbrev">ART</message>
-	<message key="section.default.policy"></message>
-	
 	<!-- Common Article Terms -->
 	<message key="article.articles">Artículos</message>
 	<message key="article.submissionId">ID de envío</message>
@@ -327,8 +323,6 @@ Tenga en cuenta que el interfaz OAI se puede desactivar editando la configuraci�
 Configurar el soporte LOCKSS para Open Journal Systems no es necesario hasta que se comienza a publicar, cuando esto ocurra es necesario que siga estos dos pasos:]]></message>
 	
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[Esta Nota de Copyright aparecerá en Acerca de la Revista y en los metadatos de cada elemento publicado. Los/as autores/as pueden mantener el copyright, concediendo a la revista el derecho de primera publicación. Alternativamente, las/os autoras/es puede transferir el copyright a la revista, la cual permitirá a las/os autoras/es el uso no-comercial del trabajo, 
-incluyendo el derecho a colocarlo en un archivo de acceso libre. Además, se puede consultar <a href="http://www.creativecommons.org" target="_blank">Creative Commons</a> sobre licencias de copyright flexibles.]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Para indexar los contenidos de esta revista en un sistema globalmente distribuido de bases de datos de investigación, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registre</a> la URL de su revista en el Public Knowledge Project metadata <a href="http://pkp.sfu.ca/harvester/" target="_blank">harvester</a>. Esta herramienta recopila los metadatos de cada elemento indexado en esta revista, permitiendo una búsqueda precisa y exhaustiva de los sitios de investigación que se adhieren al <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Protocolo de Recogida de Metadatos de la Iniciativa de Archivos Abierto</a>.
 <br /><br />
 Tenga en cuenta que si su administrador/a ya ha registrado este sitio en el PKP Harvester, su revista será indexada automáticamente si necesidad de registrarla.
@@ -544,7 +538,6 @@ Activas es el número de revisiones que en este momento están consideradas como
 	
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Comentarios de corrección de prueba</message>
-	<message key="submission.archiveSubmission">Archivar envío</message>
 	<message key="submission.proofread.corrections">Correcciones de prueba</message>
 	<message key="submission.proofread.instructions">Instrucciones de corrección de prueba</message>
 
@@ -747,8 +740,6 @@ Su servidor soporta mbstring en este momento: <strong>{$supportsMBString}</stron
 	<message key="installer.localeInstructions">El idioma primario de este sistema. Por favor, consulte la documentación de OJS si está interesado en el soporte de idiomas que no están listados aquí.</message>
 	<message key="installer.additionalLocalesInstructions">Seleccione otros idiomas adicionales para soportar en este sistema. Estos idiomas estarán disponibles para las revistas alojadas en este sitio web. Se pueden instalar idiomas adicionales en cualquier momento desde el interfaz administrativo.</message>
 	<message key="installer.filesDirInstructions"><![CDATA[Introduzca la ruta completa a un directorio existente donde se subirán los ficheros. Este directorio no debería ser accesible por web. <strong>Asegúrese de que este directorio existe y de que tiene permisos de escritura antes de proceder con la instalación</strong>. Las rutas en windows se deben indicar con barra invertida, p.e. "C:/mirevista/ficheros".]]></message>
-	<message key="installer.installOJS">instalar Sistema Open Journal</message>
-	<message key="installer.upgradeOJS">Actualizar Sistema Open Journal</message>
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Cuidado:</strong> Si la instalación falló justo cuando estaba instalando la base de datos es posible que sea necesario eliminar la base de datos OJS o las tablas antes de intentar reinstalar la base de datos.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>¡IMPORTANTE!</h4>
 <p>El instalador no ha podido sobreescribir automáticamente el fichero de configuración. Antes de usar el sistema abra <tt>config.inc.php</tt> en un editor de textos y reemplace su contenido con el contenido del fichero que le mostramos abajo.</p>]]></message>
@@ -890,41 +881,14 @@ La validación puede fallar en URLs de búsque que necesitan el envío de formul
 	<message key="plugins.categories.implicitAuth.description">Los "Plugins" de autenticación implicita implementan el soporte para la autenticación de usuarios basado en encabezados http</message>
 	<message key="submission.layout.publicGalleyId">Publicar identificador de Galera</message>
 	<message key="submission.layout.galleyPublicIdentificationExists">Publicar identificador de galera existente</message>
-	<message key="user.profile.form.profileImageInvalid">Formato de imagen inválido o imagen muy grande. Formatos aceptados son .gif, .jpg, o .png, y la imagen no debe exceder 150x150 pixeles.</message>
 	<message key="about.aboutThisPublishingSystem.altText">Proceso de Edición y Publicación en OJS</message>
 	<message key="help.searchReturnResults">Volver a los resultados de la búsqueda</message>
 	<message key="payment.type.purchaseArticle">Comprar Artículo</message>
-	<message key="common.ccLicense"><![CDATA[<br /><br />
-	<a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
-	<br />
-	Este trabajo está autorizado por una <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new">Licencia de Atribución de Bienes Comunes Creativos (CC) 3.0 </a>.]]></message>
-	<message key="common.ccLicense.rt"><![CDATA[<div class="rtBlock">
-		<br />
-		<a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
-		<br />
-		Este trabajo está autorizado por una <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new">Licencia de Atribución de Bienes Comunes Creativos (CC) 3.0</a>.
-	</div>]]></message>
 	<message key="journal.issn">ISSN</message>
-	<message key="manager.setup.doiSuffix">Sufijo DOI</message>
-	<message key="manager.setup.doiSuffixDefault">Emplee el valor predefinido (%j.v%vi%i.%a).</message>
-	<message key="manager.setup.doiSuffixPattern">Emplee los patrones siguientes para generar sufijos DOI. Emplee %j para las iniciales de las revistas, %v para el número del volumen, %i para la numeración del número, %a para el ID del artículo en el OJS y %p para el número de página</message>
-	<message key="manager.setup.doiSuffixPattern.example">Por ejemplo, vol%viss%ipp%p puede crear un DOI como 10.1234/vol3iss2pp230</message>
-	<message key="manager.setup.doiSuffixDescription">Un sufijo DOI puede tener cualquier forma, pero debe ser único para cada artículo publicado.</message>
-	<message key="manager.setup.doiSuffixCustomIdentifier">Emplee el “Identificador personalizado” para los artículos publicados con sufijo DOI (debe ser habilitado en el Paso 4)</message>
-	<message key="manager.setup.publisherNoteDescription">Este texto aparecerá debajo del encabezado “Editor” y sobre el nombre/url del editor en “Patrocinio de la Revista” en la página “Acerca de la Revista”</message>
-	<message key="manager.setup.sponsorNoteDescription">Este texto aparecerá debajo del encabezado “Patrocinadores” y sobre la lista de nombres y url de los patrocinadores en “Patrocinio de la Revista” en la página “Acerca de la Revista”</message>
-	<message key="manager.setup.contributorNoteDescription">Este texto aparecerá debajo del encabezado “Soporte” y sobre la lista de nombres y url de las organizaciones que sustentan la revista en “Patrocinio de la Revista” en la página “Acerca de la Revista”</message>
-	<message key="manager.setup.form.doiPrefixPattern">El patrón DOI debe tener forma 10.xxxx.</message>
-	<message key="author.submit.mustEnterWaiverReason">Si usted está solicitando una dispensa debe dar una razón en el espacio proporcionado.</message>
-	<message key="author.submissions.queuedReviewSubsequent">Ronda en Revisión {$round}</message>
-	<message key="author.submissions.queuedReviewRevisions">En Revisión: Revisiones Solicitadas</message>
-	<message key="author.submissions.queuedEditingCopyedit">En Edición: Edición de Composición Solicitada</message>
-	<message key="author.submissions.queuedEditingProofread">En Edición: Corrección Solicitada</message>
 	<message key="common.confirmComplete">¿Está seguro de que quiere marcar esta tarea como completada? Puede que no pueda hacer cambios después.</message>
 	<message key="common.payment">Pago</message>
 	<message key="common.payments">Pagos</message>
 	<message key="article.article">Artículo</message>
-	<message key="article.citations">Citas</message>
 	<message key="submission.sent">Enviado</message>
 	<message key="user.manageMySubscriptions">Administrar Mis Suscripciones</message>
 	<message key="subscriptionTypes.currency">Moneda</message>
@@ -1086,4 +1050,32 @@ Título del sistema de clasificación]]></message>
 </ol>]]></message>
 	<message key="reviewer.article.reviewGuidelinesDescription">Las Directrices de Revisión proporcionarán a los revisores criterios para judgar la idoneidad de una presentación para ser publicada en la revista, y puede incluir instrucciones especiales para realizar una revisión efectiva y útil. En la realización de la revisión, los revisores son presentados con dos cajas de texto abiertas, la primera "para autor y editor" , y la segunda "para el editor". Alternativamente, el Gestor de la Revista puede crear una revisión de expertos. En todos los casos, los editores tendrán la opción de compartir los comentarios correspondientes con el Autor.</message>
 	<message key="manager.setup.reviewProcessEmailDescription">Los Editores envían a los Revisores la solicitud de revisión de la presentación incluida en el email. Los revisores envían un email a los editores con su aprobación o su rechazo junto con la revisión y las recomendaciones. Los editores aprueban o rechazan la presentación e introducen la revisión y recomendaciones en la página de revisión de la presentación, para completar el proceso de revisión.</message>
+	<message key="user.subscriptions.subscriptionStatus">Estado de la Suscripción</message>
+	<message key="user.subscriptions.status">Estado</message>
+	<message key="user.subscriptions.statusDescription">Descripción</message>
+	<message key="user.register.reviewerInterests">Identificar los intereses de la revisión (áreas sustantivas y métodos de investigación):</message>
+	<message key="user.subscriptions.status.needsInformationDescription">Se necesita información adicional antes de que se pueda activar la suscripción</message>
+	<message key="user.subscriptions.status.needsApprovalDescription">La suscripción debe ser revisada antes de pueda ser activada</message>
+	<message key="article.pdf.download">Descargar este fichero PDF</message>
+	<message key="payment.authorFees">Tasas Autor</message>
+	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">Se ha iniciado un pago online pero ha sido cancelado o no completado.</message>
+	<message key="user.subscriptions.statusInformation">Las suscripciones activas y vencidas se muestran a continuación junto con su fecha de caducidad. Además, la siguiente información de estado se pueden incluir con cada suscripción.</message>
+	<message key="user.subscriptions.status.awaitingManualPaymentDescription">Se ha iniciado un pago manual, pero aún no se ha recibido.</message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>El archivo PDF que ha seleccionado se debe cargar aquí si su navegador Web tiene un lector de PDF plug-in instalado (por ejemplo, una versión reciente de <a href = "http://www.adobe.com/products/acrobat/ readstep2.html "> Adobe Acrobat Reader </a>).</p> Si lo prefiere, también puede descargar el archivo PDF directamente a su ordenador, desde donde se puede abrir usando un lector de PDF. Para descargar el PDF, haga clic en el enlace de descarga. </p><p> Si desea obtener más información acerca de cómo imprimir, guardar y trabajar con archivos PDF, Highwire Press proporciona un enlace de <a href="http://highwire.stanford.edu/help/pdf-faq.dtl"> Preguntas más frecuentes sobre los archivos PDF </a>.</p>]]></message>
+	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Proposed Creative Commons Copyright Notices</h3>
+<h4>1. Política propuesta para Revistas que ofrecen Acceso Abierto</h4>
+Los autores que publican en esta revista están de acuerdo con los siguientes términos:
+<ol type="a">
+	<li>Los autores conservan los derechos de autor y garantizan a la revista el derecho de ser la primera publicación del trabajo al igual que licenciado bajo una <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> que permite a otros compartir el trabajo con un reconocimiento de la autoría del trabajo y la publicación inicial en esta revista.</li>
+	<li>Los autores pueden establecer por separado acuerdos adicionales para la distribución no exclusiva de la versión de la obra publicada en la revista (por ejemplo, situarlo en un repositorio institucional o publicarlo en un libro), con un reconocimiento de su publicación inicial en esta revista.</li>
+	<li>Se permite y se anima a los autores a difundir sus trabajos electrónicamente (por ejemplo, en repositorios institucionales o en su propio sitio web) antes y durante el proceso de envío, ya que puede dar lugar a intercambios productivos, así como a una citación más temprana y mayor de los trabajos publicados (Véase <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>) (en inglés).</li>
+</ol>
+
+<h4>Política propuesta para Revistas que ofrecen Acceso Abierto Embargado</h4>
+Los autores que publican en esta revista están de acuerdo con los siguientes términos::
+<ol type="a">
+	<li>Los autores conservan los derechos de autor y conceden a la revista el derecho de la primera publicación, con el trabajo [SPECIFY PERIOD OF TIME] a la vez que tras la publicación esté licenciado bajo una <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> que permite a otros compartir el trabajo con un reconocimiento de la autoría de la obra y la publicación inicial en esta revista.</li>
+	 <li>Los autores pueden establecer por separado acuerdos adicionales para la distribución no exclusiva de la versión de la obra publicada en la revista (por ejemplo, situarlo en un repositorio institucional o publicarlo en un libro), con un reconocimiento de su publicación inicial en esta revista.</li>
+	 <li>Se permite y se anima a los autores a difundir sus trabajos electrónicamente (por ejemplo, en repositorios institucionales o en su propio sitio web) antes y durante el proceso de envío, ya que puede dar lugar a intercambios productivos, así como a una citación más temprana y mayor de los trabajos publicados (Véase <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>) (en inglés).</li>
+</ol>]]></message>
 </locale>

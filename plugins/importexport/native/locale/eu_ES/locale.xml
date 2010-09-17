@@ -126,4 +126,5 @@ Formatu hauek onartzen dira:
 	<message key="plugins.importexport.native.import.success">Ongi inportatu da</message>
 	<message key="plugins.importexport.native.import.success.description">Inportazioa ondo egin da. Beheko zerrendan daude inportatutako elementuak.</message>
 
+	<message key="plugins.importexport.native.import.error.articleAuthorAffiliationLocaleUnsupported">Egile-afiliazio bat eman zaio "{$articleTitle}" artikuluaren "{$authorFullName}"egileari, "{$issueTitle}" gaian, ("{$locale}") localean, baina aldizkari honek ez du babesten.</message>
 </locale>

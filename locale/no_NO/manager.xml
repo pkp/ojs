@@ -150,7 +150,6 @@
 	<message key="manager.setup.guidingSubmissions">Trinn 3. Innsending av manuskript</message>
 	<message key="manager.setup.homepageImage">Hjemmesidebilde</message>
 	<message key="manager.setup.homepageImageDescription">Legg til en bilde- eller grafikkfil til midten av siden.</message>
-	<message key="manager.setup.htmlSetupInstructions"><![CDATA[HTML kan brukes i tekstområdet (for typestørrelse, farge etc.), med linjeskift behandlet som <tt>&lt;br&gt;</tt>; HTML-editoren virker med Firefox nettlesere.]]></message>
 	<message key="manager.setup.information">Informasjon</message>
 	<message key="manager.setup.information.description">Korte beskrivelser av tidsskriftet for interesserte bibliotekarer, forfattere, og lesere som blir tilgjengelig i 'informasjon'-delen av sidefeltet.</message>
 	<message key="manager.setup.information.forAuthors">For forfattere</message>

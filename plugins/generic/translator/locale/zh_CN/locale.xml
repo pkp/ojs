@@ -17,9 +17,6 @@
 	<message key="plugins.generic.translator.description">此插件允许基于网络的维护翻译文件。</message>
 	<message key="plugins.generic.translator.longdescription">此区域允许网站管理员创建，修改和检查OJS翻译。这是整个网站的，不应用来定制一本OJS期刊。如果你正确或创建一个翻译，请考虑为将来的版本提交到分配公共知识项目。</message>
 	<message key="plugins.generic.translator.localeDescription">本页面列出了一OJS翻译所有组件，并提供了机会，编辑每个翻译。一个完整的译本翻译应包含所有组件的完整翻译。</message>
-	<message key="plugins.generic.translator.enabled">翻译插件已开启。</message>
-	<message key="plugins.generic.translator.disabled">翻译插件已关闭。</message>
-	
 	<message key="plugins.generic.translator.tarMissing">The export function of this plugin has been deactivated because the configured tar binary cannot be found on this system. Please make sure that you have the tar program installed and then configure the path to the tar binary in config.inc.php's [cli] section!</message>
 	
 	<message key="plugins.generic.translator.localeName">语系名称</message>
@@ -34,7 +31,6 @@
 	
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.title">丢失键</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.title">额外的键</message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.title">可疑的键长度</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.title">不同的参数列表</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.title">缺少语言环境的文件</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.title">丢失邮件</message>
@@ -43,10 +39,6 @@
 
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.message">键"{$key}"在文件里"{$filename}"不存在.英文版本已提供的默认。</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.message">键"{$key}" 不再使用并被从文件 "{$filename}"里移除.</message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.message"><![CDATA[在"{$filename}"文件里的语言环境键"{$key}" 有较参考明显的不同长度：<ul>
-		<li>{$value} ({$locale})</li>
-		<li>{$reference} ({$referenceLocale})</li>
-	</ul>]]></message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.message">在"{$filename}"文件里的语言环境键"{$key}" 区别于参考语言环境的参数。请仔细检查它包含所有相关参数. 不匹配的参数:</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.message">语言环境文件 "{$filename}"不存在或者无法读取.</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.message">电子邮箱信息 "{$key}" 不存在。</message>

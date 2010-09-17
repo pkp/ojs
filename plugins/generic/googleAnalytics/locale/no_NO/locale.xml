@@ -17,9 +17,6 @@
 	<!-- Google Analytics -->
 	<message key="plugins.generic.googleAnalytics.displayName">Programutvidelse for Google Analytics</message>
 	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Integrer OJS og Google Analytics, Googles verktøy for nettstedstrafikkanalyse. Det kreves at du allerede har en konto hos Google Analytics. Se <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics nettsted</a> for mer informasjon.]]></message>
-	<message key="plugins.generic.googleAnalytics.enabled">Programutvidelsen for Google Analytics er slått på.</message>
-	<message key="plugins.generic.googleAnalytics.disabled">Programutvidelsen for Google Analytics er slått av.</message>
-
 	<!-- Google Analytics Settings Management -->
 	<message key="plugins.generic.googleAnalytics.manager.settings">Innstillinger</message>
 	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">Innstillinger for Google Analytics</message>

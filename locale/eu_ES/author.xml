@@ -114,4 +114,17 @@
 	<message key="author.article.copyeditedFile">Zuzendutako fitxategia</message>
 	<message key="author.article.authorRevisedFile">Egilearen fitxategia</message>
 	<message key="author.submit.authorSubmitLoginMessage">Aldizkari honetara bidalketak egiteko, erabiltzaile-kontua eduki behar da. Horrela, editoreek zure bidalketen jarraipena egin ahal izango dute eta zurekin harremanetan jarri ahal izango dira lanaren egoeraren berri emateko eta informazio osagarria eskatzeko.</message>
+	<message key="author.submit.addReasonsForWaiver">Mesedez, erabili beheko iruzkin-laukia tarifak zergatik salbuetsi behar diren azaltzeko.</message>
+	<message key="author.submit.mustEnterWaiverReason">Salbuespen bat eskatu nahi baduzu, arrazoiren bat idatzi behar duzu horretarako jarritako lekuan.</message>
+	<message key="author.submissions.queuedReviewSubsequent">Ebaluazio-fasean {$round}</message>
+	<message key="author.submissions.queuedReviewRevisions">Ebaluatzen: ebaluazioak behar dira</message>
+	<message key="author.submissions.queuedEditingCopyedit">Editatzen: Zuzenketak egiteko eskatu da.</message>
+	<message key="author.submissions.queuedEditingProofread">Editatzen: proba-zuzenketa eskatu da.</message>
+	<message key="author.submit.submissionLocale">Aurkezpenaren hizkuntza</message>
+	<message key="author.submit.submissionLocaleDescription">Aldizkari honek hainbat hizkuntzatako aurkezpenak onartzen ditu. Aukeratu aurkezpenaren hizkuntza nagusia beheko goitibeherakotik.</message>
+	<message key="author.submit.form.localeRequired">Mesedez, aukeratu aurkezpenaren hizkuntza.</message>
+	<message key="author.submit.reorder">Berriz eskatu egilearen izena</message>
+	<message key="author.submit.form.wordCountAlert">Laburpenetarako gehienezko hitz kopurua gainditu duzu atal honetan.</message>
+	<message key="author.submit.supplementaryFilesInstructions">Aukerako pauso honek aurkezpenari Fitxategi Osagarriak gehitzeko aukera ematen du. Artxiboak zeinahi formatutan egon daitezke, eta hauek izan ditzakete, besteak beste: (a)bilaketa-tresnak, (b) datu multzoak, ikerlanaren bilaketaren ebaluazio etikoa betetzen duena, (c) irakurlearentzat beste edozein modutara eskuragarri egongo ez liratekeen iturriak, (d) irudiak eta taulak ezin dira sartu testuan bertan, ezta lanari ekarpenak egiteko beste materialak ere.</message>
+	<message key="author.submit.supplementaryFiles.saveToUpload">Egin klik “Gorde” botoian fitxategia kargatzeko (horren ondoren fitxategi osagarriak kargatu daitezke).</message>
 </locale>

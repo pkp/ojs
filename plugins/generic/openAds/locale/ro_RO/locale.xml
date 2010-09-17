@@ -18,9 +18,6 @@
 	<message key="plugins.generic.openads">Modulul OpenAds</message>
 	<message key="plugins.generic.openads.settings.description">Folosiţi acest formular pentru a selecta zonele OpenAds care vor fi afişate în OJS pentru fiecare locaţie posibilă.</message>
 	<message key="plugins.generic.openads.manager.settings">Setări</message>
-	<message key="plugins.generic.openads.enabled">Modulul OpenAds a fost activat.</message>
-	<message key="plugins.generic.openads.disabled">Modulul OpenAds a fost dezactivat.</message
-	<message key="plugins.generic.openads.error.configFileNotFound">Fişierul de configurare, {$filename} nu a putut fi accesat.</message>
 	<message key="plugins.generic.openads.error.missingParameter">Cel puţin unul dintre parametrii de configurare al OpenAds nu a putut fi citit din fişierul de configurare. Parametrii ceruţi sunt dbhost, dbuser, dbpassword, dbname, url_prefix, şi table_prefix.</message>
 	<message key="plugins.generic.openads.error.dbConnectionError">Nu m-am putut conecta la baza de date OpenAds.</message>
 
@@ -31,4 +28,5 @@
 	<message key="plugins.generic.openads.orientation.left">Stânga</message>
 	<message key="plugins.generic.openads.orientation.centre">Centru</message>
 	<message key="plugins.generic.openads.orientation.right">Dreapta</message>
+	<message key="plugins.generic.openads.error.configFileNotFound">Fișierul de configurare {$filename} nu a putut fi accesat.</message>
 </locale>

@@ -164,4 +164,5 @@ http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI
 	<message key="default.journalSettings.purchaseArticleFee">خرید مقاله</message>
 	<message key="default.journalSettings.membershipFee">عضویت انجمن</message>
 	<message key="default.journalSettings.donationFee">اهدا به مجله</message>
+	<message key="section.default.policy">section.default.policy</message>
 </locale>

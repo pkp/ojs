@@ -16,7 +16,7 @@
  
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.gateways.resolver.displayName">Plugin para Resolver</message>
-	<message key="plugins.gateways.resolver.description">Este plugin resuelve los números y artículos basado en la información de la citación.</message>
-	<message key="plugins.gateways.resolver.errors.errorMessage">No se ha podido resolver un solo elemento basado en la información de la citación especificada.  Por favor asegúrese que la información de la citación es comprensiva y se refiere al artículo en esta versión de OJS.</message>
-	<message key="plugins.gateways.resolver.exportHoldings">Exportar las tenencias</message>
+	<message key="plugins.gateways.resolver.description">Este plugin obtiene números y artículos basado en  información de citas.</message>
+	<message key="plugins.gateways.resolver.errors.errorMessage">No se ha podido resolver una entidad basada en la información de la cita especificada.  Por favor asegúrese que la información de la cita es comprensible y se refiere a una entidad de este despliegue de OJS.</message>
+	<message key="plugins.gateways.resolver.exportHoldings">Exportación Participaciones</message>
 </locale>

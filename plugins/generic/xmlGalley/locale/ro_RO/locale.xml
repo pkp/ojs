@@ -15,9 +15,6 @@
 <locale name="ro_RO" full_name="Română">
 	<message key="plugins.generic.xmlGalley.displayName">Modul asamblării în XML</message>
 	<message key="plugins.generic.xmlGalley.description">Acest modul generează asamblări XHTML dintr-un articol XML folosindu-se XSLT.</message>
-	<message key="plugins.generic.xmlGalley.enabled">Modul asamblării în XML a fost activat.</message>
-	<message key="plugins.generic.xmlGalley.disabled">Modul asamblării în XML a fost dezactivat.</message>
-
 	<message key="plugins.generic.xmlGalley.manager.settings">Setări</message>
 
 	<!-- XML Article Galleys Settings Management -->

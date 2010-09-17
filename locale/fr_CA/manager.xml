@@ -229,7 +229,7 @@
 	<message key="manager.setup.enableUserRegistration.reader">Lecteurs (recevra des avis et sera considéré de la même façon qu'un abonné)</message>
 	<message key="manager.setup.enableUserRegistration.reviewer">Évaluateurs (disponible pour l'évaluation de soumissions)</message>
 	<message key="manager.setup.focusAndScope">Énoncé de mission</message>
-	<message key="manager.setup.focusAndScopeDescription">Saisir un énoncé de mission ci-dessous, qui apparaîtra dans À propos de la revue, indiquant aux auteurs, aux lecteurs et aux bibliothécaires les types d'articles que la revue publient.</message>
+	<message key="manager.setup.focusAndScopeDescription">Saisir un énoncé de mission ci-dessous, qui apparaîtra dans À propos de la revue, indiquant aux auteurs, aux lecteurs et aux bibliothécaires les types d'articles que la revue publie.</message>
 	<message key="manager.setup.focusAndScopeOfJournal">Politique éditoriale de la revue</message>
 	<message key="manager.setup.focusScope">Politique éditoriale</message>
 	<message key="manager.setup.focusScopeDescription"><![CDATA[<strong>EXEMPLE DE DONNÉES HTML</strong>]]></message>
@@ -244,7 +244,7 @@
 	<message key="manager.setup.form.supportNameRequired">Le nom du soutien est obligatoire.</message>
 	<message key="manager.setup.frequencyOfPublication">Première publication et périodicité</message>
 	<message key="manager.setup.frequencyOfPublicationDescription">Établir le numéro de publication (volume et/ou numéro) et l'année pour la première publication de la revue, ainsi que la périodicité prévue pour les publications de la revue.</message>
-	<message key="manager.setup.frequencyOfPublicationNote">Note : Laisser les éléments vides s'ils ne sont pas utilisés par cette revue, et les rédacteurs peuvent réinitialiser les nombres dans le processus de publication.</message>
+	<message key="manager.setup.frequencyOfPublicationNote">Note : Laisser les éléments vides s'ils ne sont pas utilisés par cette revue; les rédacteurs peuvent réinitialiser les chiffres lors du processus de publication.</message>
 	<message key="manager.setup.generalInformation">Information générale</message>
 	<message key="manager.setup.gettingDownTheDetails">Étape 1. Consignation des détails</message>
 	<message key="manager.setup.guidelines">Directives</message>
@@ -386,7 +386,7 @@
 	<message key="manager.setup.reviewOptions.reviewerRatings">Notations de l'évaluateur</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Rappels à l'évaluateur</message>
 	<message key="manager.setup.reviewOptions.reviewTime">Temps d'évaluation</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Fournir des liens à <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Assurer une évaluation à l'aveugle</a> sur les pages où les auteurs et les évaluateurs peuvent télécharger des fichiers.]]></message>
+	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Fournir un lien vers <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Assurer une évaluation à l'aveugle</a> dans les pages où les auteurs et les évaluateurs peuvent télécharger des fichiers.]]></message>
 	<message key="manager.setup.reviewPolicy">Politique d'évaluation</message>
 	<message key="manager.setup.reviewProcess">Processus d'évaluation</message>
 	<message key="manager.setup.reviewProcessDescription"><![CDATA[OJS prend en charge deux modèles pour la gestion du processus d'évaluation. Le processus d'évaluation standard est recommandé parce qu'il accompagne les évaluateurs durant tout le processus, fait en sorte d'obtenir un historique complet de l'évaluation de chaque soumission, et tire avantage des avis de rappel automatiques et des recommandations standard pour les soumissions (Accepter; Accepter avec révisions; Soumettre pour évaluation; Soumettre ailleurs; Refuser; Voir les commentaires).<br /><br />Sélectionner un des suivants :]]></message>
@@ -679,4 +679,13 @@
 	<message key="manager.subscriptionTypes.form.subscriptions">Abonnements</message>
 	<message key="manager.subscriptionTypes.form.individual">Individuel (utilisateurs sont validés via la connexion)</message>
 	<message key="manager.subscriptionTypes.form.options">Options</message>
+	<message key="manager.groups.publishEmails">Publier les courriels des membres</message>
+	<message key="manager.language.submissions">Soumissions</message>
+	<message key="manager.plugins.invalidPluginArchive">Les archives du plugiciel téléchargées ne contiennent pas un dossier qui corresponde au nom du plugiciel.</message>
+	<message key="manager.plugins.tarCommandNotFound">La commande tar n'est pas disponible. Veuillez la configurer correctement dans votre "config.inc.php".</message>
+	<message key="manager.plugins.versionFileInvalid">version.xml dans le répertoire du plugiciel contient des données invalides.</message>
+	<message key="manager.reviewFormElements.included">Inclus dans le message à l'auteur</message>
+	<message key="manager.setup.addNavItem">Ajouter un élément</message>
+	<message key="manager.setup.doiReassign">Réaffecter les DOIs</message>
+	<message key="manager.setup.doiReassign.description">Si vous modifier votre configuration DOI, les DOIs qui ont déjà été affectés ne seront pas visés. Du moment que la configuration DOI est enregistrée, utiliser ce bouton pour effacer tous les DOIs existants afin que les nouveaux paramètres s'appliquent aux articles existants.</message>
 </locale>

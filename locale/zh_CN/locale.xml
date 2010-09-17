@@ -139,7 +139,6 @@
 	<message key="article.submissions">投稿</message>
 	<message key="article.details">详细</message>
 	<message key="article.abstract">摘要</message>
-	<message key="article.citations">参考文献</message>
 	<message key="article.coverPage.altText">封面图片</message>
 	<message key="article.accessLogoOpen.altText">开放存取</message>
 	<message key="article.accessLogoRestricted.altText">受限制的访问</message>
@@ -172,8 +171,6 @@
 	<message key="submission.scheduling">计划（Scheduling）</message>
 	<message key="submission.scheduledIn">在出版计划的 {$issueName}.</message>
 	<message key="submission.scheduledIn.tba">(TBA)</message>
-	
-	<message key="submission.citations">参考文献</message>
 	
 	<message key="submissions.sec">Sec</message>
 	<message key="submissions.step1">步骤一</message>
@@ -728,8 +725,6 @@ Note that if your site administrator has already registered this site with these
 		</ol>
 		您可以点击文件的名称来查看该份文件。可以上传一份新的或者修改过的文件，删除掉目前出现的这份文件。也可以（在下一步骤）使用「补充文件」来增加额外的文件。如果您上传稿件时出现问题，请联系 <a href="mailto:{$supportEmail}">{$supportName}</a> ，透过电子邮件或电话 {$supportPhone}取得协助。]]></message>
 	
-	<message key="author.submit.submissionCitations">提供一个格式化的被您的投稿引用的参考文献列表.</message>
-
 	<!-- Article Submission Step 4 -->
 	
 	<!-- Article Submission Step 4a: Supplementary Files -->
@@ -869,8 +864,6 @@ Note that if your site administrator has already registered this site with these
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">便携文件格式(PDF)</message>
-	<message key="article.pdf.note"><![CDATA[您选择的PDF文件应该在这里加载, 如果您的Web浏览器已经安装了一个PDF阅读器插件(例如,最新版本的 <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>). 否则，PDF格式的文件将下载到您的计算机，您可以使用PDF阅读器打开它.如果您想了解更多的关于如何打印，保存，编辑PDF文件的信息, Highwire Press 提供了一些很有帮助的 <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">信息</a>.<br /><br />如果文件不能自动下载, 请<a href="{$url}">点击这里</a>.]]></message>
-	
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">文章下载</message>
 	<message key="article.nonpdf.note"><![CDATA[您选择的文件将开始自动下载。如果没有，请点击下面的链接。请注意，此文件可能需要一种特殊的工具或插件来查看.<br /><br />如果该文件不自动下载， <a href="{$url}">请点击这里</a>.]]></message>
@@ -1183,4 +1176,13 @@ Note that if your site administrator has already registered this site with these
 	<message key="debug.notes.currencyListLoad">已经从XML载入货币列表：{$filename}</message>
 	<message key="debug.notes.helpMappingLoad">Reloaded XML help mapping file {$filename} in search of {$id}.</message>
 	<message key="about.aboutOJSSite"><![CDATA[本站使用开放期刊系统（OJS  {$ojsVersion} ）.OJS是一个开源的期刊管理于出版软件，由<a href="http://pkp.sfu.ca/">Public Knowledge Project</a>组织研发，遵循GNU General Public License.]]></message>
+	<message key="user.subscriptions.subscriptionStatus">订阅状态</message>
+	<message key="user.subscriptions.status">状态</message>
+	<message key="user.subscriptions.statusDescription">描述</message>
+	<message key="user.subscriptions.status.needsInformationDescription">订阅激活需要附加信息</message>
+	<message key="user.subscriptions.status.needsApprovalDescription">订阅在激活前必须被审查</message>
+	<message key="user.subscriptions.status.awaitingManualPaymentDescription">人工付费已经可以支付但是尚未收到。</message>
+	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">在线支付已经被初始化但是被取消或者不完整</message>
+	<message key="article.pdf.download">下载PDF文件</message>
+	<message key="payment.authorFees">作者费用</message>
 </locale>

@@ -30,4 +30,7 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Escolha um código de acompanhamento</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Código de acompanhamento legado (urchin.js)</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Código de acompanhamento novo (ga.js)</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount">Número de conta do Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount.description">Para acompanhar a leitura de um artigo publicado usando o Google Analytics, insira um número de conta aqui (e.g. UA-xxxxxx-x).</message>
+	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Um dos números de conta do Google Analytics inseridos para submissão não é válido.</message>
 </locale>

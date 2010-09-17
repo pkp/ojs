@@ -292,7 +292,6 @@
 	<message key="manager.setup.guidingSubmissions">步骤 3：投稿导引</message>
 	<message key="manager.setup.homepageImage">首页图像</message>
 	<message key="manager.setup.homepageImageDescription">加一个图片到网页中。</message>
-	<message key="manager.setup.htmlSetupInstructions"><![CDATA[HTML能够被使用在文字区域中（配置字形大小和字体色彩等等）， 按下"Enter"会被视为插入<tt>&lt;br&gt;</tt>标签；HTML编辑器能在Firefox浏览器中执行。]]></message>
 	<message key="manager.setup.includeCreativeCommons">对于那些提供直接开放存取或者延后开放存取的期刊，包含一个Creative Commons license.</message>
 	<message key="manager.setup.information">信息</message>
 	<message key="manager.setup.information.description">给图书馆馆员、未来的作者和读者的简要说明，在侧边栏的「信息」区段中显示。</message>
@@ -680,4 +679,11 @@
 	<message key="manager.subscriptionTypes.name">订阅类型</message>
 	<message key="manager.subscriptionTypes.noneCreated">没有建立任何的订阅类型。</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">成功建立订阅类型</message>
+	<message key="manager.plugins.versionFileInvalid">在插件目录里version.xml含有错误信息</message>
+	<message key="manager.reviewFormElements.included">包括给作者的信息</message>
+	<message key="manager.setup.doiReassign">重新分配DOI识别符</message>
+	<message key="manager.groups.publishEmails">发布成员电子邮件地址</message>
+	<message key="manager.language.submissions">投稿</message>
+	<message key="manager.plugins.invalidPluginArchive">上传插件不包含一个对应插件名的目录。</message>
+	<message key="manager.plugins.tarCommandNotFound">tar命令不可用。请正确配置你的“config.inc.php”。</message>
 </locale>

@@ -15,7 +15,4 @@
 <locale name="ro_RO" full_name="Română">
 	<message key="plugins.generic.coins.displayName">Modulul COinS</message>
 	<message key="plugins.generic.coins.description">Acest modul adaugă un descriptor OpenURL la paginile articolelor (abstract şi HTML) care poate fi utilizat, de exemplu, pentru regăsirea prin intermediul instrumentelor pentru referinţe bibliografice.</message>
-	<message key="plugins.generic.coins.enabled">A fost activat modulul COinS.</message>
-	<message key="plugins.generic.coins.disabled">A fost dezactivat modulul COinS.</message>
-
 </locale>
