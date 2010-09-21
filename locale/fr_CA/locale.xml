@@ -582,7 +582,7 @@ Active indique combien d'évaluations sont présentement considérées ou en cou
 <li>Utiliser des parenthèses pour faire une recherche plus complexe, c.-à-d. <em>archive ((revue OU conférence) SAUF thèses)</em></li>
 <li>Rechercher une phrase exacte en la mettant entre guillemets, c.-à-d. <em>"Publication en accès libre"</em></li>
 <li>Exclure un mot en le préfixant avec <strong>-</strong> ou <em>SAUF</em>, c.-à-d. <em>en ligne -politiques</em> ou <em>en ligne SAUF politiques</em></li>
-<li>Utiliser <strong>*</strong> comme troncature dans un terme pour y faire correspondre toute séquence de caractères, c.-à-d. <em>soci* moralité</em> feront apparaître les documents contenant «&#x00A0;sociologique&#x00A0;» ou «&#x00A0;socialisme&#x00A0;»</li>
+<li>Utiliser <strong>*</strong> comme troncature dans un terme pour y faire correspondre toute séquence de caractères, c.-à-d. <em>soci* moralité</em> feront apparaître les documents contenant « sociologique » ou « socialisme »</li>
 </ul>]]></message>
 
 	<!-- Interstitial page for PDFs -->
@@ -877,7 +877,7 @@ le droit de première publication, avec l’ouvrage disponible simultanément [S
 	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>Afin de permettre aux lecteurs de repérer les versions en ligne de l'ouvrage cité par un auteur, les options suivantes sont disponibles.</p>
 
 <ol>
-	<li><strong>Ajouter un outil de lecture</strong><p>Le directeur de la revue peut ajouter «&#x00A0;Trouver des références&#x00A0;» aux Outils de lecture accompagnant les articles publiés, pour permettre aux lecteurs d'insérer le titre d'une référence et de rechercher l'ouvrage cité dans des bases de données universitaires présélectionnées.</p></li>
+	<li><strong>Ajouter un outil de lecture</strong><p>Le directeur de la revue peut ajouter « Trouver des références » aux Outils de lecture accompagnant les articles publiés, pour permettre aux lecteurs d'insérer le titre d'une référence et de rechercher l'ouvrage cité dans des bases de données universitaires présélectionnées.</p></li>
 	<li><strong>Liens incorporés dans les références</strong><p>Le responsable de la mise en page peut ajouter un lien à des références en ligne, en suivant les instructions suivantes (qui peuvent être modifiées).</p></li>
 </ol>]]></message>
 	<message key="sectionEditor.review.enrollReviewer">Inscrire un utilisateur existant en tant qu'évaluateur</message>

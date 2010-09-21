@@ -122,7 +122,7 @@ Lorsque que vos révisions sont terminées, changer le nom du fichier de AuthorN
 	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>L'étape de correction d'épreuves vise à corriger toute erreur dans le formatage, la grammaire et l'orthographe de l'épreuve. Des modifications plus substanciels ne peuvent être effectués à cette étape, à moins que cela ne soit discuté avec le Responsable de rubrique. Dans Mise en page, cliquer sur AFFICHER L'ÉPREUVE pour voir le HTML, le PDF et les autres formats de fichiers disponibles utilisés dans la publication de cet article.</p>
 <h4>Pour les erreurs de grammaire et d'orthographe</h4>
 
-<p>Copier le mot ou les groupes de mots problématiques et les coller dans la boîte Corrections d'épreuves avec les instructions au rédacteur «&#x00A0;MODIFIER POUR&#x00A0;» comme suit...</p>
+<p>Copier le mot ou les groupes de mots problématiques et les coller dans la boîte Corrections d'épreuves avec les instructions au rédacteur « MODIFIER POUR » comme suit...</p>
 
 <pre>1. MODIFIER...
 then the others
