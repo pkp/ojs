@@ -10,11 +10,11 @@
   * Author's Role Index 
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000009.xml,v 1.8 2009/04/08 19:54:27 asmecher Exp $
   -->
 
-<topic id="editorial/topic/000009" locale="it_IT" title="Author's Role" toc="editorial/toc/000000" subtoc="editorial/toc/000009" key="editorial.authorsRole">
+<topic id="editorial/topic/000009" locale="it_IT" title="Il ruolo dell'autore" toc="editorial/toc/000000" subtoc="editorial/toc/000009" key="editorial.authorsRole">
 	<section>
-		<![CDATA[<p>L'autore dui una submission pu&#00F9; fare il log in al sito web del journal per seguire i progressi della submission e partecipare nel processo editoriale. Se c'&#x00E8; pi&#x00F2; di un autore, l'autore che sottomette l'item deve identificare il contatto principale che diventa colui al quale &#x00E8; trasmessa tutta la corrispondenza editoriale  e che accede al sito web del journal.</p>]]>	
+		<![CDATA[<p>L'autore di un contributo proposto a una rivista pu&#00F9; fare il login al sito web della rivista per seguire i progressi della submission e prendere parte al processo editoriale. Se c'&#x00E8; pi&#x00F2; di un autore, l'autore che invia la proposta di contributo deve identificare il contatto principale che diventa colui al quale &#x00E8; trasmessa tutta la corrispondenza editoriale  e che accede al sito web del journal.</p>]]>	
 	</section>
 </topic>

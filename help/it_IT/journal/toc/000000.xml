@@ -10,12 +10,12 @@
   * table of contents for Journal Management. 
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000000.xml,v 1.8 2009/04/08 19:54:27 asmecher Exp $
   -->
 
 <toc id="journal/toc/000000" locale="it_IT" title="Journal Management" parent_topic="journal/topic/000000">
-	<topic id="journal/topic/000001" title="Management Pages" />
-	<topic id="journal/topic/000002" title="Users" />
-	<topic id="journal/topic/000003" title="Roles" />
-	<breadcrumb url="journal/topic/000000" title="Journal Management" />
+	<topic id="journal/topic/000001" title="Pagine di gestione" />
+	<topic id="journal/topic/000002" title="Utenti" />
+	<topic id="journal/topic/000003" title="Ruoli" />
+	<breadcrumb url="journal/topic/000000" title="Gestione della rivista" />
 </toc>

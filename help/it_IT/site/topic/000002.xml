@@ -10,28 +10,29 @@
   * Site Administration - Site Management 
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000002.xml,v 1.8 2009/04/08 19:54:28 asmecher Exp $
   -->
 
-<topic id="site/topic/000002" locale="it_IT" title="Site Management" toc="site/toc/000000" key="site.siteManagement">
+<topic id="site/topic/000002" locale="it_IT" title="Gestione del sito" toc="site/toc/000000" key="site.siteManagement">
 	<section>
-		<![CDATA[<p>OJS &#x00E8; costruito per essere un sistema multi-journal, e l'amministratore del sito &#x00E8; responsabile per configurare i livelli del sito  e creare nuovi journal che saranno ospitati nel sito.</p>]]>	
+		<![CDATA[<p>OJS &#x00E8; costruito per essere un sistema multi-rivista, e l'amministratore del sito &#x00E8; responsabile per configurare i livelli del sito  e creare le nuove riviste che saranno ospitate nel sito.</p>]]>	
 	</section>
 	
-	<section title="Site Settings">
-		<![CDATA[<p>L'informazione basilare &#x00E8; inserita dall'amministratore del sito che &#x00E8; applcabile a tutti i journals ospitati, incluso i titolo del sito e la descrizione, e le informazioni per il contatto.</p>
-		<p><em>Journal Redirect.</em> Questa impostazione pu&#x00F2; esssere usata per assicurarsi che tutte le richieste siano reindirizzate al sito web del journal. Tipicamente questa impostazione viene utilizzata quando il sito web ospita un solo journal.</p>]]>
+	<section title="impostazioni del sito">
+		<![CDATA[<p>Le informazioni di base sono inserite dall'amministratore del sito.</p>
+		<p><em>Journal Redirect.</em> Questa impostazione pu&#x00F2; esssere usata per assicurarsi che tutte le richieste siano reindirizzate al sito web di una rivista. Tipicamente questa impostazione viene utilizzata quando il sito web ospita una sola rivista.</p>]]>
 	</section>
 	
-	<section title="Hosted Journals">
-		<![CDATA[<p>Dato che OJS permette di generare qualsiasi numero di siti web di journal distinti, possono essere creati e gestiti nuovi journal in ogni momento. Ogni journal che &#x00E8; stato creato pu&#00F2; essere reggiunto tramite un URL unica dal sito OJS pricipale che &#x00E8; basato su un path inserito dall'amministratore del sito. I Journal che sono attualmente nel processo di impostazione e configurazione possono essere nascosti dal sito principale  fino a che sono pronti per essere attivi.</p>]]>
+	<section title="Riviste ospitate">
+		<![CDATA[<p>Dato che OJS permette di gestire quante riviste si voglia, esse possono essere create e gestite in ogni momento. Ogni rivista che &#x00E8; stata creata pu&#00F2; essere reggiunta tramite un URL unica dal sito OJS pricipale che &#x00E8; basata su un path inserito dall'amministratore del sito. Le nuove riviste, non ancora in produzione,  possono essere nascosti dal sito principale fino a che sono pronti per essere attivate.</p>]]>
 	</section>
 	
-	<section title="Languages">
-		<![CDATA[<p>OJS &#x00E8; costruito per essere un sistema multilingua, permettendo ai journal il supporto di una vasta gamma di lingue da ospitare in un singolo sito. L'amministratore del sito pu&#x00F2; specificare la lingua di default del sito e installare locales addizionali quando sono disonibili per rendere altr lingue usufruibili dai journal. I siti dei journal sono completamente indipendenti, ad esscezione degli account degli utenti; sebbene ogni utente possa asssociare al suo account diversi ruoli e journal diversi, in ogni combinazione, email e username saranno le stesse per ogni journal</p>
-		<p>Pacchetti di lingue aggiuntive tipicamente saranno disponibil per essere scaricate da Open Journal Systems <a href="http://pkp.sfu.ca/" target="_blank">web site</a> non appena vengono ricevute traduzioni dagli utetni contributori. Questi pacchetti possono essere installati in sistema OJS esistente per renderle disponibili ai journal.</p>]]>
+	<section title="Lingue">
+		<![CDATA[<p>OJS &#x00E8; costruito per essere un sistema multilingua, e permette alle riviste il supporto di una vasta gamma di lingue da ospitare in un singolo sito. L'amministratore del sito pu&#x00F2; specificare la lingua di default del sito e installare lingue addizionali quando sono disponibili. I siti dei journal sono completamente indipendenti, ad eccezione degli account degli utenti; sebbene ogni utente possa asssociare al suo account diversi ruoli e riviste diverse, in ogni combinazione, email e username saranno le stesse per ognuna.</p>
+		<p>Pacchetti di lingue aggiuntive sono disponibil per essere scaricate dal sito web di <a href="http://pkp.sfu.ca/ojs" target="_blank">Open Journal Systems</a> non appena vengono ricevute traduzioni dagli utenti contributori. Questi pacchetti possono essere installati in sistema OJS esistente per renderle disponibili ai journal.</p>
+		<p>La traduzione in lingua italiana è resa disponibile da <a href="http://www.aepic.it/ojs.php" target="_blank">AePIC team, CILEA</a>. ]]>
 	</section>
-		<section title="Authentication Sources">
-		<![CDATA[<p>Per default, OJS autentica gli utentio sul suo database interno. &#200; tuttavia possibile usare altri metodi di autenticazione, come LDAP. ALtri metodi di autenticazione sono forniti dai plugin di OJS; si veda la documentazione di questi ultimi per ulteriori informazioni</p>]]>
+		<section title="Fonti di autenticazione">
+		<![CDATA[<p>Per default, OJS autentica gli utenti sul suo database interno. &#200; tuttavia possibile usare altri metodi di autenticazione, come LDAP. ALtri metodi di autenticazione sono forniti dai plugin di OJS; si veda la documentazione di questi ultimi per ulteriori informazioni</p>]]>
 	</section>
 </topic>

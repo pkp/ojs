@@ -10,11 +10,11 @@
   * Roles - Reviewer 
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000021.xml,v 1.8 2009/04/08 19:54:28 asmecher Exp $
   -->
 
-<topic id="journal/topic/000021" locale="it_IT" title="Reviewer" toc="journal/toc/000003" key="journal.roles.reviewer">
+<topic id="journal/topic/000021" locale="it_IT" title="Revisori" toc="journal/toc/000003" key="journal.roles.reviewer">
 	<section>
-		<![CDATA[<p>Il revisore viene selezionato dal Section Editor per revisionare una submission. Ai revisori &#x00E8; richiesto di sottomettere revisioni al sito web del journal (nonstante alcuni journal optino per una politica di revisione per email) e possono carica allegati ad uso del curatore e dell'autore. I revisori possono essere valutati dai section editor, a seconda sempre delle politiche del journal.</p>]]>	
+		<![CDATA[<p>Il revisore viene selezionato dal Section Editor per revisionare una submission. Ai revisori &#x00E8; richiesto di inviare le loro osservazioni attraverso il sito web della rivista (anche se è possibile scegliere una politica di revisione per email) e possono caricare allegati ad uso dell'editor e/o dell'autore. I revisori possono essere valutati dai section editor, a seconda sempre delle politiche della rivista.</p>]]>	
 	</section>
 </topic>

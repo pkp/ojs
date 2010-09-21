@@ -10,13 +10,13 @@
   * table of contents for Editorial Process - Reviewer's Role
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000008.xml,v 1.8 2009/04/08 19:54:27 asmecher Exp $
   -->
 
-<toc id="editorial/toc/000008" locale="it_IT" title="Reviewer's Role" parent_topic="editorial/topic/000008">
-	<topic id="editorial/topic/000030" title="Submissions" />
-	<topic id="editorial/topic/000031" title="Review" />
+<toc id="editorial/toc/000008" locale="it_IT" title="Il ruolo del revisore" parent_topic="editorial/topic/000008">
+	<topic id="editorial/topic/000030" title="Submission" />
+	<topic id="editorial/topic/000031" title="Revisione" />
 
-	<breadcrumb url="editorial/topic/000000" title="Editorial Process" />
-	<breadcrumb url="editorial/topic/000008" title="Reviewer's Role" />
+	<breadcrumb url="editorial/topic/000000" title="Il processo editoriale" />
+		<breadcrumb url="editorial/topic/000008" title="Il ruolo del revisore" />
 </toc>

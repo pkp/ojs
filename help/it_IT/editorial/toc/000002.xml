@@ -10,16 +10,16 @@
   * table of contents for Editorial Process - Editor's Role - Submissions
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000002.xml,v 1.8 2009/04/08 19:54:27 asmecher Exp $
   -->
 
 <toc id="editorial/toc/000002" locale="it_IT" title="Submissions" parent_topic="editorial/topic/000002">
-	<topic id="editorial/topic/000015" title="Unassigned" />
-	<topic id="editorial/topic/000016" title="In Review" />
-	<topic id="editorial/topic/000017" title="In Editing" />
-	<topic id="editorial/topic/000018" title="Archives" />
+	<topic id="editorial/topic/000015" title="Non assegnate" />
+	<topic id="editorial/topic/000016" title="In revisione" />
+	<topic id="editorial/topic/000017" title="In lavorazione" />
+	<topic id="editorial/topic/000018" title="Archivi" />
 
-	<breadcrumb url="editorial/topic/000000" title="Editorial Process" />
-	<breadcrumb url="editorial/topic/000001" title="Editor's Role" />
-	<breadcrumb url="editorial/topic/000002" title="Submissions" />
+	<breadcrumb url="editorial/topic/000000" title="Processo editoriale" />
+	<breadcrumb url="editorial/topic/000001" title="Ruolo dell'editor" />
+	<breadcrumb url="editorial/topic/000002" title="Submission" />
 </toc>

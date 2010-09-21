@@ -10,11 +10,11 @@
   * Editor's Role Index 
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000001.xml,v 1.8 2009/04/08 19:54:27 asmecher Exp $
   -->
 
-<topic id="editorial/topic/000001" locale="it_IT" title="Editor's Role" toc="editorial/toc/000000" subtoc="editorial/toc/000001" key="editorial.editorsRole">
+<topic id="editorial/topic/000001" locale="it_IT" title="Il ruolo dell'editor" toc="editorial/toc/000000" subtoc="editorial/toc/000001" key="editorial.editorsRole">
 	<section>
-		<![CDATA[<p>Il curatore supervisiona il processo editoriale, cominciando con l'assegnamento di un curaotre di sezione a una submission. Il curatore spsso ha il ruolo, a seconda delle politiche del journal, di curatore di sezione nel vedere accettate le submissions nella fase di editing del processo editoriale.</p>]]>	
+		<![CDATA[<p>L'editor supervisiona il processo editoriale, cominciando con l'assegnazione di un eventuale editor di sezione a una submission. L'editor spesso ha il ruolo, a seconda delle politiche della rivista, di curatore di sezione che controlla le submissions accettate e quelle nella fase di editing del processo editoriale.</p>]]>	
 	</section>
 </topic>

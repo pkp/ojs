@@ -10,11 +10,11 @@
   * Users - Email Users
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000014.xml,v 1.8 2009/04/08 19:54:28 asmecher Exp $
   -->
 
-<topic id="journal/topic/000014" locale="it_IT" title="Email Users" toc="journal/toc/000002" key="journal.users.emailUsers">
+<topic id="journal/topic/000014" locale="it_IT" title="Inviare email agli utenti" toc="journal/toc/000002" key="journal.users.emailUsers">
 	<section>
-		<![CDATA[<p>Il Journal Manager &#00F2; inviare email a tutti gli tenti o a sottoinsiemi di questi. Da notare che tutti i Lettori ricevono una email di notifica sulla pubblicazione di ogni uscita con un a copia dell'indice  o, nel caso di continui {help_topic key="publishing.index" text="publishing"}, con il titolo e l'autore della submission. Il journal inoltre dovrebbe avere una politica di Privacy , inserita nel setup e disponibile nell'About del Journal, che descrive come la privacy di utenti registrati a questo journal sar&#x00E0; rispettata.</p>]]>	
+		<![CDATA[<p>L'amministratore della rivista &#00F2; inviare email a tutti gli tenti o a sottoinsiemi di questi. Da notare che tutti i lettori ricevono un'email di notifica alla pubblicazione di ogni fascicolo che ne contiene l'indice  o, nel caso di pubblicazioni liquide ({help_topic key="publishing.index" text="publishing"}), con il titolo e l'autore della submission. La rivista inoltre dovrebbe predisporre informazioni sulla Privacy , inserite nel setup e disponibili nella pagina delle informazioni, che descrive come viene rispettata la privacy degli utenti registrati.</p>]]>	
 	</section>
 </topic>

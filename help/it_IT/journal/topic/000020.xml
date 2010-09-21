@@ -10,11 +10,11 @@
   * Roles - Proofreader 
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000020.xml,v 1.8 2009/04/08 19:54:28 asmecher Exp $
   -->
 
-<topic id="journal/topic/000020" locale="it_IT" title="Proofreader" toc="journal/toc/000003" key="journal.roles.proofreader">
+<topic id="journal/topic/000020" locale="it_IT" title="Correzione di bozze" toc="journal/toc/000003" key="journal.roles.proofreader">
 	<section>
-		<![CDATA[<p>Il correttore legge attentamente le bozze nei vari formati in cui il journal pubblica (cos&#236 come l'autore). Il correttore di bozze (e l'autore) registra ogni errore tipografico e di formattazione da sistemare per il layout editor. Nel caso di alcuni journal, il curatore o il Section Editor lavoreranno pure come correttore di bozze.</p>]]>	
+		<![CDATA[<p>Il correttore legge attentamente le bozze nei vari formati in cui la rivista pubblica (cos&#236 come l'autore). Il correttore di bozze (e l'autore) registra ogni errore tipografico e di formattazione da sistemare successivamente. Nel caso di alcune riviste, il curatore o il Section Editor lavoreranno pure come correttori di bozze.</p>]]>	
 	</section>
 </topic>

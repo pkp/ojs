@@ -9,11 +9,11 @@
   *
   * Management Pages - System Plugins
   *
-  * $Id$
+  * $Id: 000030.xml,v 1.6 2009/08/17 23:38:28 asmecher Exp $
   -->
 
-<topic id="journal/topic/000030" locale="it_IT" title="System Plugins" toc="journal/toc/000001" key="journal.managementPages.plugins">
+<topic id="journal/topic/000030" locale="it_IT" title="Plugin" toc="journal/toc/000001" key="journal.managementPages.plugins">
 	<section>
-		<![CDATA[<p>La pagina Plugin di sistema permette al Journal Manager di vedere una lista di plugin installati OJS e permette di eseguire ogni azione prevista dai plugin. Per maggiorni informazioni, si veda la documentazione di ciascun plugin.</p>]]>
+		<![CDATA[<p>La pagina dei plugin permette al Journal Manager di vedere la lista dei plugin installati su OJS e  di eseguire ogni azione prevista dai plugin. Per maggiorni informazioni, si veda la documentazione di ciascun plugin.</p>]]>
 	</section>
 </topic>

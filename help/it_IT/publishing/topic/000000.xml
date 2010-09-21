@@ -10,11 +10,11 @@
   * Publishing Process Index 
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000000.xml,v 1.8 2009/04/08 19:54:28 asmecher Exp $
   -->
 
-<topic id="publishing/topic/000000" locale="it_IT" title="Publishing Process" toc="index/toc/000000" subtoc="publishing/toc/000000" key="publishing.index">
+<topic id="publishing/topic/000000" locale="it_IT" title="Processo di pubblicazione" toc="index/toc/000000" subtoc="publishing/toc/000000" key="publishing.index">
 	<section>
-		<![CDATA[<p>Il curatore controlla il processo di pubblicazione creando uscite e/o volumi per il journal, mettendo in programma le submission per quelle uscite, e poi organizzando l'indice, e infine pubblicando l'uscita. Il journal pu&#x00F2; essere pubblicato in un certo numero di formati. Lo schema tipico &#x00E8; riunire le submission in una uscita che viene pubblicata trimestralmente (o mensilmente o due volte l'anno). Ad ogni modo, alcuni journal elettronici preferiscono pubblicare le submission non appena sono pronte, come parte di un volume annuale, che inizia con la prima submission e chiude a fine anno, quando comincia un altro volume. Per gli scopi di questo Help, viene usato il termine uscita, nonstante una uscita consiste dellindice che pu&#x00F2; essere identificato da (a) uscita, volume, anno; (b) volume, anno; (c) anno; o (d) titolo. Come si posnno modificare le uscite fa parte del Setup del journal che il Journal Manager ha configurato.</p>]]>	
+		<![CDATA[<p>Il curatore controlla il processo di pubblicazione creando fascicoli e/o volumi per la rivista, mettendo in programma le submission per i diversi fascicoli, e poi organizzando l'indice, e infine pubblicando i fascicoli. Il journal pu&#x00F2; essere pubblicato in un certo numero di formati. Lo schema tipico &#x00E8; riunire le submission in una uscita che viene pubblicata trimestralmente (o mensilmente o due volte l'anno). Ad ogni modo, alcune riviste elettroniche preferiscono pubblicare le submission non appena sono pronte, come parte di un volume annuale, che inizia con la prima submission e chiude a fine anno, quando comincia un altro volume. La gestione generale dei fascicoli è stabilita dall'amministratore della rivista nel setup.</p>]]>	
 	</section>
 </topic>

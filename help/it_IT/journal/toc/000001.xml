@@ -10,27 +10,27 @@
   * table of contents for Journal Management - Management Pages. 
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000001.xml,v 1.8 2009/04/08 19:54:27 asmecher Exp $
   -->
 
-<toc id="journal/toc/000001" locale="it_IT" title="Management Pages" parent_topic="journal/topic/000001">
+<toc id="journal/toc/000001" locale="it_IT" title="Pagine di gestione" parent_topic="journal/topic/000001">
 	<topic id="journal/topic/000004" title="Setup" />
 	<topic id="journal/topic/000005" title="Sezioni" />
-	<topic id="journal/topic/000006" title="Emails" />
+	<topic id="journal/topic/000006" title="Email" />
 		<topic id="journal/topic/000010" title="Navigazione tra i file" />
 
 	<topic id="journal/topic/000007" title="Lingua" />
 	<topic id="journal/topic/000029" title="Redazione" />
 	<topic id="journal/topic/000006" title="Email standard" />
-	<topic id="journal/topic/000009" title="Reading Tools" />
-	<topic id="journal/topic/000008" title="Stats &amp; Reports" />
-	<topic id="journal/topic/000009" title="Reading Tools" />
-	<topic id="journal/topic/000025" title="Sottoscrizioni" />
+	<topic id="journal/topic/000009" title="Strumenti di lettura" />
+	<topic id="journal/topic/000008" title="Statistiche &amp; Report" />
+	<topic id="journal/topic/000009" title="Strumenti di lettura" />
+	<topic id="journal/topic/000025" title="Abbonamenti" />
 	<topic id="journal/topic/000034" title="Anvvisi" />
 	<topic id="journal/topic/000030" title="Plugin" />
 	<topic id="journal/topic/000031" title="Import/Export dei dati" />
 	
 	
-	<breadcrumb url="journal/topic/000000" title="Amministrazione del Journal" />
+	<breadcrumb url="journal/topic/000000" title="Amministrazione della rivista" />
 	<breadcrumb url="journal/topic/000001" title="Amministrazione delle pagine" />
 </toc>

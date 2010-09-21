@@ -10,11 +10,11 @@
   * User Interface - Current and Archives
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000004.xml,v 1.8 2009/04/08 19:54:28 asmecher Exp $
   -->
 
-<topic id="user/topic/000004" locale="it_IT" title="Current and Archives" toc="user/toc/000000" key="user.currentAndArchives">
+<topic id="user/topic/000004" locale="it_IT" title="Fascicolo corrente e archivi" toc="user/toc/000000" key="user.currentAndArchives">
 	<section>
-		<![CDATA[<p>Le uscite del journal sono rese disponibili come una uscita o una edizione corrente, e un insieme di archivi di uscite precedenti. Il Journal Manager pu&#x00F2; portare nel sito web di questo journal precedenti uscite che erano state pubblicate precedentemente all'uso di questo sistema cos&#236 formino parte degli archivi che sono disponibili al lettore nel sito web del journal.</p>]]>	
+		<![CDATA[<p>Sono raggiungibili, per orgni rivista, il fascicolo corrente e, attraverso gli archivi quelli precedenti. L'amministratore pu&#x00F2; anche importare in OJS fascicoli precedentemente pubblicati con altro sistema.</p>]]>	
 	</section>
 </topic>

@@ -10,11 +10,11 @@
   * Section Editor's Role Index - In Review
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000021.xml,v 1.9 2009/04/08 19:54:27 asmecher Exp $
   -->
 
-<topic id="editorial/topic/000021" locale="it_IT" title="In Review" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.inReview">
+<topic id="editorial/topic/000021" locale="it_IT" title="In revisione" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.inReview">
 	<section>
-		<![CDATA[<p>Le submission che stanno nella lista in Revisione sono soggette ad un processo di revisione che porta a una decisione del curatore di sezione di accettazione o rifiuto della submission. Il limiti del processo di revisione, incluso quali sezioni del journal hanno una peer review condotta sulle submission e quanti revisori vengono utilizzati, viene spiegato nella politica di revisione del journal preparata dai curatori e dal manager del journal. Quando un curatore di sezione o un curatore clica su una submission nella coda in revisione , vengono mandati alla pagina di revisione della  submission, dove la viene fatta la peer review e viene raggiunta una decisione editoriale per l'item. Se il curatore di sezione accetta una submission per la pubblicazione, questa allora va nella coda In Editing. Se la submission viene rifiutata, viene mandata negli archivi.</p>]]>	
+		<![CDATA[<p>Le submission che si trovano nella lista 'In revisione' sono soggette ad un processo di revisione che porta a una decisione dell'editor di accettazione o rifiuto della proposta. Quando un editor clicca su una proposta in questa coda, arriva alla pagina di revisione della  submission, dove viene gestita la peer review. Quando l'editor accetta una proposta per la pubblicazione, questa si sposta nella coda 'In editing'. Se la submission viene rifiutata, viene mandata negli archivi.</p>]]>	
 	</section>
 </topic>

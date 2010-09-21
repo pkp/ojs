@@ -10,11 +10,11 @@
   * Reviewer's Role Index 
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000008.xml,v 1.8 2009/04/08 19:54:27 asmecher Exp $
   -->
 
-<topic id="editorial/topic/000008" locale="it_IT" title="Reviewer's Role" toc="editorial/toc/000000" subtoc="editorial/toc/000008" key="editorial.reviewersRole">
+<topic id="editorial/topic/000008" locale="it_IT" title="Il ruolo del revisore" toc="editorial/toc/000000" subtoc="editorial/toc/000008" key="editorial.reviewersRole">
 	<section>
-		<![CDATA[<p>Il revisore viene invitato con una email a revisionare una submission, che include il suo titolo e l'abstract, tanto quanto la URL del journal e una username e password per il revisore da usare per entrare nel journal. Il journal ha la possibilit&#x00E0; di unsare una opzione del revisore che manda una submission comee allegato email al revisore insieme con un invito di revisione. In questo caso il revisore quindi risponde con una email. Quello che viene descritto qui &#x00E8; il metodo principale di revisione (e assicurarsi una registraione completa del processo), il quale coinvolge il revisore che conduce la revisione sul sito web del journal.</p>]]>	
+		<![CDATA[<p>Il revisore viene invitato a valutare una submission, con una e-mail che ne include il titolo e l'abstract, e la URL della rivista. La rivista ha l'opzione di inviare una submission come allegato email al revisore. In questo caso il revisore quindi risponde con una email. Quello che viene descritto qui &#x00E8; il metodo principale di revisione, utile ad assicurarsi una registrazione completa del processo, nel quale il revisore conduce la revisione attraverso il sito web della rivista.</p>]]>	
 	</section>
 </topic>

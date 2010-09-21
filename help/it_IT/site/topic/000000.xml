@@ -10,11 +10,11 @@
   * Site Administration Main 
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000000.xml,v 1.8 2009/04/08 19:54:28 asmecher Exp $
   -->
 
-<topic id="site/topic/000000" locale="it_IT" title="Site Administration" toc="index/toc/000000" subtoc="site/toc/000000" key="site.index">
+<topic id="site/topic/000000" locale="it_IT" title="Amministrazione del sito" toc="index/toc/000000" subtoc="site/toc/000000" key="site.index">
 	<section>
-		<![CDATA[<p>Questo sistema di gestione e pubblicazione dijournal &#x00E8; costruito per essere installato e amministrato da un local web server. Una volta installato, l'amministratore del sito pu&#x00F2; usarlo per generare tanti siti di journal quanti ne sono richiesti, e supervisione l'amministrazione di ogni sito del journal che &#x00E8, stato creato.</p>]]>	
+		<![CDATA[<p>OJS &#x00E8; costruito per essere installato e amministrato su un web server locale. Una volta installato, l'amministratore del sito pu&#x00F2; usarlo per generare tanti siti di riviste quanti ne sono necessari, e supervisione l'amministrazione di ogni sito che &#x00E8, stato creato.</p>]]>	
 	</section>
 </topic>

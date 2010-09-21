@@ -10,11 +10,11 @@
   * Management Pages - Languages 
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000007.xml,v 1.8 2009/04/08 19:54:28 asmecher Exp $
   -->
 
-<topic id="journal/topic/000007" locale="it_IT" title="Languages" toc="journal/toc/000001" key="journal.managementPages.languages">
+<topic id="journal/topic/000007" locale="it_IT" title="Lingue" toc="journal/toc/000001" key="journal.managementPages.languages">
 	<section>
-		<![CDATA[<p>Questo sistema pu&#x00F2; supportare journal multi lingua, tanto quanto journal in lingue che non siano l'inglese. Queste lingue rese dsponibile al sistema dall'amministratore del sito sono elencate sotto Lingue nell'amministrazione del Journal, e possono essere selezionate a turno per l'utilizzo del sito del journal.</p>]]>	
+		<![CDATA[<p>Questo sistema pu&#x00F2; supportare riviste multi o mono lingua, in inglese o altre lingue. Le lingue rese dsponibile dall'amministratore del sito sono elencate sotto 'Lingue' nelle pagine di amministrazione e possono essere selezionate secondo necessità.</p>]]>	
 	</section>
 </topic>

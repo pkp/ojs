@@ -10,11 +10,11 @@
   * Layout Editor's Role - Submissions
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000039.xml,v 1.9 2009/04/08 19:54:27 asmecher Exp $
   -->
 
-<topic id="editorial/topic/000039" locale="it_IT" title="Submissions" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.submissions">
+<topic id="editorial/topic/000039" locale="it_IT" title="Submission" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.submissions">
 	<section>
-		<![CDATA[<p>Non appena il curatore del layout effettua il log in, clicando sul link curatore del layout Home page utente si trova la coda delle submission.  Questa coda elenca quei lavori per i quali deve fare il layout. Accede inoltre a quelle submissions che sono state completate nel passato.  Il curatore del layout clica sul titolo dei lavori che conduce alla pagina del curatore del layout per quella submission.</p>]]>	
+		<![CDATA[<p>Non appena il layout editor effettua il log in, cliccando sul link Layout editor nella Home utente si trova la coda delle submission.  Questa coda elenca quei lavori per i quali deve preparare l'impaginazione. Accede inoltre a quelle submission che sono state completate in passato.  Per iniziare la lavorazione di un contributo, il curatore del layout deve cliccare sul titolo del contributo stesso.</p>]]>	
 	</section>
 </topic>

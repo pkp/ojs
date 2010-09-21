@@ -10,13 +10,13 @@
   * table of contents for Author Submission Process. 
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000000.xml,v 1.8 2009/04/08 19:54:28 asmecher Exp $
   -->
 
-<toc id="submission/toc/000000" locale="it_IT" title="Submission Process" parent_topic="submission/topic/000000">
-	<topic id="submission/topic/000001" title="Author Guidelines" />
-	<topic id="submission/topic/000002" title="Submission Requirements" />
-	<topic id="submission/topic/000003" title="Indexing and Metadata" />
-	<topic id="submission/topic/000004" title="Supplementary Files" />
-	<breadcrumb url="submission/topic/000000" title="Submission Process" />
+<toc id="submission/toc/000000" locale="it_IT" title="Il processo di submission" parent_topic="submission/topic/000000">
+	<topic id="submission/topic/000001" title="Linee guida per gli autori" />
+	<topic id="submission/topic/000002" title="Requisiti per la submission" />
+	<topic id="submission/topic/000003" title="Indicizzazione e metadati" />
+	<topic id="submission/topic/000004" title="File aggiuntivi" />
+	<breadcrumb url="submission/topic/000000" title="Processo di submission" />
 </toc>

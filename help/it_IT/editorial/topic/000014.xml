@@ -10,11 +10,11 @@
   * Proofreader's Role Index 
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000014.xml,v 1.8 2009/04/08 19:54:27 asmecher Exp $
   -->
 
-<topic id="editorial/topic/000014" locale="it_IT" title="Proofreader's Role" toc="editorial/toc/000000" subtoc="editorial/toc/000014" key="editorial.proofreadersRole">
+<topic id="editorial/topic/000014" locale="it_IT" title="Il ruolo del oorrettore di bozze" toc="editorial/toc/000000" subtoc="editorial/toc/000014" key="editorial.proofreadersRole">
 	<section>
-		<![CDATA[<p>Il correttore di bozze riceve una email di richiesta dall'autore o dal curatore di sezione chiedendo di fare una correzione finale della submission nei suopi formati di prova preparati per la pubblicazione. Un curatore di layout che non &#x00E8; in grado di fare il layout, semplicemente risponde tramite email al curatore di sezione.</p>]]>	
+		<![CDATA[<p>Il correttore di bozze riceve una email di richiesta dall'autore o dal curatore di sezione che gli chiede di fare l'ultimo controllo e l'ultima serie di correzioni all'articolo prima della pubblicazione.</p>]]>	
 	</section>
 </topic>

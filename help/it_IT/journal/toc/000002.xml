@@ -10,14 +10,14 @@
   * table of contents for Journal Management - Users. 
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000002.xml,v 1.8 2009/04/08 19:54:28 asmecher Exp $
   -->
 
-<toc id="journal/toc/000002" locale="it_IT" title="Users" parent_topic="journal/topic/000002">
-	<topic id="journal/topic/000011" title="All Users" />
-	<topic id="journal/topic/000033" title="Merge Users" />
-	<topic id="journal/topic/000014" title="Email Users" />
+<toc id="journal/toc/000002" locale="it_IT" title="Utenti" parent_topic="journal/topic/000002">
+	<topic id="journal/topic/000011" title="Tutti gli utenti" />
+	<topic id="journal/topic/000033" title="Fondi utenti" />
+	<topic id="journal/topic/000014" title="Scrivi agli utenti" />
 
-	<breadcrumb url="journal/topic/000000" title="Journal Management" />
-	<breadcrumb url="journal/topic/000002" title="Users" />
+	<breadcrumb url="journal/topic/000000" title="Gestione della rivista" />
+	<breadcrumb url="journal/topic/000002" title="Utenti" />
 </toc>

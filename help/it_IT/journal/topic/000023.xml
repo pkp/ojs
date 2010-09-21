@@ -10,11 +10,11 @@
   * Roles - Reader 
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000023.xml,v 1.8 2009/04/08 19:54:28 asmecher Exp $
   -->
 
-<topic id="journal/topic/000023" locale="it_IT" title="Reader" toc="journal/toc/000003" key="journal.roles.reader">
+<topic id="journal/topic/000023" locale="it_IT" title="Lettori" toc="journal/toc/000003" key="journal.roles.reader">
 	<section>
-		<![CDATA[<p>I lettori includono sottoscrizioni per i journal per cui l'accesso &#x00E8; basato sulla subscription e i lettori che scelgono di registrarsi per  i journal open access (sia da subito open access sia open dopoun periodo di tempo dalla pubblicazione iniziale del contenuto del journal). I lettori registrati ricevono una notifica con con la pubblicazione di opgni uscita che include l'indice del journal. Gli autori nel registrarsi al journal hanno l'opzione di prendere anche di lettori.</p>]]>	
+		<![CDATA[<p>I lettori comprendono sia gli abbonati (per le riviste che scelgono di riservare l'accesso agli articoli pubblicati), sia i lettori che scelgono di registrarsi nel caso di riviste open access. I lettori registrati ricevono una notifica della pubblicazione di ogni uscita, che include l'indice del journal.</p>]]>	
 	</section>
 </topic>

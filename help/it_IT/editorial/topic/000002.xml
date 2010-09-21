@@ -10,11 +10,11 @@
   * Editor's Role Submissions Index 
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000002.xml,v 1.8 2009/04/08 19:54:27 asmecher Exp $
   -->
 
-<topic id="editorial/topic/000002" locale="it_IT" title="Submissions" toc="editorial/toc/000001" subtoc="editorial/toc/000002" key="editorial.editorsRole.submissions">
+<topic id="editorial/topic/000002" locale="it_IT" title="Submission" toc="editorial/toc/000001" subtoc="editorial/toc/000002" key="editorial.editorsRole.submissions">
 	<section>
-		<![CDATA[<p>Tutte le submission al journal devono trovarsi in una delle quattro code nella pagina di submission, a seconda della fase del processo editoriale in cui sono. I curatori hanno accesso a tutte le submissions del journal tramite questa pagina, mentre i curatori di sezione hanno accesso solo a quelle submission a cui sono stati assegnati.</p>]]>	
+		<![CDATA[<p>Tutte le proposte a una rivista devono trovarsi in una delle quattro code nella pagina di submission, a seconda della fase del processo editoriale in cui sono. Gli editor hanno accesso a tutte le submission tramite questa pagina, mentre i curatori di sezione hanno accesso solo a quelle submission a cui sono stati assegnati.</p>]]>	
 	</section>
 </topic>

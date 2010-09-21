@@ -10,10 +10,10 @@
   * Table of contents for Introduction to OJS. 
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000000.xml,v 1.8 2009/04/08 19:54:27 asmecher Exp $
   -->
 
-<toc id="intro/toc/000000" locale="it_IT" title="Introduction to OJS" parent_topic="intro/topic/000000">
+<toc id="intro/toc/000000" locale="it_IT" title="Introduzione a OJS" parent_topic="intro/topic/000000">
 	<topic id="intro/topic/000001" title="FAQ" />
-	<breadcrumb url="intro/topic/000000" title="Introduction to OJS" />
+	<breadcrumb url="intro/topic/000000" title="Introduzione a OJS" />
 </toc>

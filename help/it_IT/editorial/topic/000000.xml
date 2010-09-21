@@ -10,11 +10,11 @@
   * Editorial Process Index 
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000000.xml,v 1.8 2009/04/08 19:54:27 asmecher Exp $
   -->
 
-<topic id="editorial/topic/000000" locale="it_IT" title="Editorial Process" toc="index/toc/000000" subtoc="editorial/toc/000000" key="editorial.index">
+<topic id="editorial/topic/000000" locale="it_IT" title="Il processo editoriale" toc="index/toc/000000" subtoc="editorial/toc/000000" key="editorial.index">
 	<section>
-		<![CDATA[<p>Il processo editoriale per una submission al journal consta di una revisione, tipicamente una blind peer review, seguita dalla decisione del curatore di sezione di accettare o rifiutare la submission. Se accettata nella fase di revisione del processo editoriale, la submission passa attraverso la fase di editing che consiste del copyedit, layout e correzione di bozze. Poi la submission viene inviata e ne viene programmata la pubblicazione in un volume del journal. A seconda di come &#x00E8; stato organizzato il journal, il processo editoriale pu&#x00F2; essere condotto da un singolo o da un team di curatori, curatori di sezione, copyeditors, curatori del layout, e correttori di bozze.</p>]]>	
+		<![CDATA[<p>Il processo editoriale per ciascuna proposta comprende la submission, una revisione, tipicamente una blind peer review, seguita dalla decisione dell'editor di accettare o rifiutare la submission. Se accettata nella fase di revisione del processo editoriale, la submission passa attraverso la fase di editing che consiste del copyedit, nell'impaginazione (layout) e correzione di bozze. Poi viene programmata la pubblicazione in uno dei fascicoli della rivista di prossima pubblicazione. A seconda di come &#x00E8; gestita la rivista, il processo editoriale pu&#x00F2; essere condotto da un singolo o da un team di editor, editor di sezione, copyeditors, editor del layout, e correttori di bozze.</p>]]>	
 	</section>
 </topic>

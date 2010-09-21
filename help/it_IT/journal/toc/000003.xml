@@ -10,21 +10,21 @@
   * table of contents for Journal Management - Roles. 
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000003.xml,v 1.8 2009/04/08 19:54:28 asmecher Exp $
   -->
 
-<toc id="journal/toc/000003" locale="it_IT" title="Roles" parent_topic="journal/topic/000003">
-	<topic id="journal/topic/000015" title="Journal Manager" />
+<toc id="journal/toc/000003" locale="it_IT" title="Ruoli" parent_topic="journal/topic/000003">
+	<topic id="journal/topic/000015" title="Amministratore della rivista" />
 	<topic id="journal/topic/000016" title="Editor" />
-	<topic id="journal/topic/000017" title="Section Editor" />
+	<topic id="journal/topic/000017" title="Editor di sezione" />
 	<topic id="journal/topic/000019" title="Copyeditor" />
 		<topic id="journal/topic/000018" title="Layout Editor" />
-	<topic id="journal/topic/000020" title="Proofreader" />
-	<topic id="journal/topic/000021" title="Reviewer" />
-	<topic id="journal/topic/000022" title="Author" />
-	<topic id="journal/topic/000023" title="Reader" />
-	<topic id="journal/topic/000032" title="Subscription Manager" />
+	<topic id="journal/topic/000020" title="Correttore di bozze" />
+	<topic id="journal/topic/000021" title="Revisore" />
+	<topic id="journal/topic/000022" title="Autore" />
+	<topic id="journal/topic/000023" title="Lettore" />
+	<topic id="journal/topic/000032" title="Gestore degli abbonamenti" />
 
-	<breadcrumb url="journal/topic/000000" title="Journal Management" />
-	<breadcrumb url="journal/topic/000003" title="Roles" />
+	<breadcrumb url="journal/topic/000000" title="Gestione della rivista" />
+	<breadcrumb url="journal/topic/000003" title="Ruoli" />
 </toc>

@@ -9,19 +9,19 @@
   *
   * Management Pages - Merge Users
   *
-  * $Id$
+  * $Id: 000033.xml,v 1.6 2009/08/17 23:38:28 asmecher Exp $
   -->
 
-<topic id="journal/topic/000033" locale="it_IT" title="Merge Users" toc="journal/toc/000002" key="journal.managementPages.mergeUsers">
+<topic id="journal/topic/000033" locale="it_IT" title="Fondi utenti" toc="journal/toc/000002" key="journal.managementPages.mergeUsers">
 	<section>
-		<![CDATA[<p>La funzione di unione utenti, raggiungibile dal Journal Management sotto Utenti, permette al Journal Manager di unire gli account di due utenti in uno solo, trasferendo sottomissioni, incarichi e numerosi altri record da uno all'altro e cancellando poi definitivamente il primo.</p>
+		<![CDATA[<p>La funzione di fusione degli utenti, raggiungibile dal Journal Management sotto Utenti, permette al Journal Manager di fondere gli account di due utenti in uno solo, trasferendo submission, incarichi e numerosi altridati da uno all'altro e cancellando poi definitivamente il primo.</p>
 		<p>Vengono trasferiti i seguenti oggetti:
 			<ul>
-				<li>Paternita degli articoli</li>
+				<li>Paternità degli articoli</li>
 				<li>Commenti pubblici agli articoli</li>
 				<li>Note agli articoli</li>
 				<li>Incarichi agli editor e note</li>
-				<li>Assegnazione di review</li>
+				<li>Assegnazione di revisione</li>
 				<li>Incarichi al Layout editor</li>
 				<li>Incarichi al correttore di bozze</li>
 				<li>Email degli articoli e note di log</li>
@@ -30,8 +30,8 @@
 		I seguenti oggetti <strong>NON</strong> sono trasferiti:
 			<ul>
 				<li>Sessioni</li>
-				<li>Sottoscrizioni</li>
-				<li>Notifiche di status (se un utente ha chiesto di ricevere notifiche sulle news del journal)</li>
+				<li>Abbonamenti</li>
+				<li>Notifiche (se un utente ha chiesto di ricevere notifiche sulle news del journal)</li>
 				<li>Appartenenza a comitati editoriali</li>
 				<li>Ruolo di editor o editor di sezione</li>
 				<li>Ruoli</li>

@@ -9,12 +9,12 @@
   *
   * Announcements 
   *
-  * $Id$
+  * $Id: 000034.xml,v 1.8 2009/08/17 23:38:28 asmecher Exp $
   -->
 
-<topic id="journal/topic/000034" locale="it_IT" title="Announcements" toc="journal/toc/000001" key="journal.managementPages.announcements">
+<topic id="journal/topic/000034" locale="it_IT" title="Avvisi" toc="journal/toc/000001" key="journal.managementPages.announcements">
 	<section>
-		<![CDATA[<p>OJS permette al Journal Managers di fare annunci visibili da coloro che visitano il sito. Tali avvisi compaiono sulla Pagina degli avvisi e, facoltativamente, sull'homepage del journal.</p><p><em>Spiegazione del modulo Avvisi</em>. Il Journal Manager deve indicare in Setup, Management, 4.4 Avvisi, che il journal pubblicher&#224; avvisi. Inoltre, il Journal Manager deve indicare se tali avvisi andranno visualizzati sulla homepage o meno. Si pu&#242; stabilire qui se gli avvisi appariranno in cima alla Pagina degli avvisi.</p><p><em>Creare un avviso</em>. Il Journal Manager crea un avviso selezionando il tipo d'avviso (se esiste), indicandone il titolo, e inserendone il testo completo e una breve descrizione. la descrizione breve viene visualizzata dai lettori come sommario dell'avviso, mentre il testo completo viene visualizzato dai lettori che clicano sui dettagli dell'avviso. Si pu&#242; inserire anche una data di scadenza, facoltativa. Gli avvisi che hanno una data di scadenza, verranno mostrati solo fino a tale data.</p>]]>
+		<![CDATA[<p>OJS permette all'amministratore della rivista di pubblicare avvisi visibili da coloro che visitano il sito. Tali avvisi compaiono nella Pagina degli avvisi e, se si vuole, sull'homepagedella rivista.</p><p><em>Il modulo Avvisi</em>. Il Journal Manager deve scegliere nel Setup, Gestione, 4.4 Avvisi,  la possibilit&#224; di pubblicare avvisi. Inoltre, il Journal Manager deve indicare se tali avvisi andranno visualizzati sulla homepage o meno. </p><p><em>Creare un avviso</em>. Il Journal Manager crea un avviso selezionando il tipo d'avviso (se esiste), indicandone il titolo, e inserendone il testo completo e una breve descrizione. La descrizione breve viene visualizzata dai lettori come sommario, mentre il testo completo viene visualizzato dai lettori che cliccano sui dettagli dell'avviso. Si pu&#242; inserire anche una data di scadenza, facoltativa. Gli avvisi che hanno una data di scadenza, verranno mostrati solo fino a tale data.</p>]]>
 	</section>
 
 </topic>

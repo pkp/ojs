@@ -10,11 +10,11 @@
   * Section Editor's Role Index - Review 
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000006.xml,v 1.8 2009/04/08 19:54:27 asmecher Exp $
   -->
 
 <topic id="editorial/topic/000006" locale="it_IT" title="Review" toc="editorial/toc/000004" subtoc="editorial/toc/000006" key="editorial.sectionEditorsRole.review">
 	<section>
-		<![CDATA[<p>Il curatore di sezione conduce la peer review per la submission, anche se alcune sezioni del journal possono non usare peer review (e.g., Revisioni di libri), e il curatore di sezione inserisce un decisione editoriale per la submission nella pagina di revisione.</p>]]>	
+		<![CDATA[<p>Il Section editor gestisce il processo di revisione della proposta, anche se alcune sezioni della rivista potrebbero non utilizzare la peer review (es. Revisioni di libri). Prende inoltre una decisione sulla pubblicazione della proposta, inserendola nella pagina della revisione.</p>]]>	
 	</section>
 </topic>

@@ -10,11 +10,11 @@
   * Editor's Role Submissions - In Editing 
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000017.xml,v 1.9 2009/04/08 19:54:27 asmecher Exp $
   -->
 
-<topic id="editorial/topic/000017" locale="it_IT" title="In Editing" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.inEditing">
+<topic id="editorial/topic/000017" locale="it_IT" title="In editing" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.inEditing">
 	<section>
-		<![CDATA[<p>Le submission in questa coda passeranno per il copyedit, il layout e la correzione delle bozze. Quando un curatore di sezione o un curatore clica sul titolo di una submission nella coda di editing, vengono mandati nella pagina di editing della submission.</p>]]>	
+		<![CDATA[<p>Le submission in questa coda passeranno per il copyediting, l'impaginazione e la correzione delle bozze. Quando un editor clicca sul titolo di una submission nella coda di editing, raggiunge la pagina di editing della submission.</p>]]>	
 	</section>
 </topic>

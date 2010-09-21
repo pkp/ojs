@@ -10,11 +10,11 @@
   * Editor's Role Submission Summary - Submission Management
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000019.xml,v 1.10 2009/04/08 19:54:27 asmecher Exp $
   -->
 
-<topic id="editorial/topic/000019" locale="it_IT" title="Submission Management" toc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary.submissionManagement">
+<topic id="editorial/topic/000019" locale="it_IT" title="Gestione della submission" toc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary.submissionManagement">
 	<section>
-		<![CDATA[<p>Prima di assegnare un curatore di sezione a dirigere la revisione di una submission, il curatore dovrebbe clicare sul none del file della submission per aprirlo e assicurarsi che il testo appaia idoneo per la revisione dal journal, and che sia nella sezione giusta per il journal.</p><p><em>Submission inappropriate</em>. se la submission &#xE008; ovviamente non appropriata per il journal, il curatore pu&#x00F2; mandare una email all'autore e indicare che non sar&#x00E0; spedita per la submission. Il curatore  pu&#x00F2; allora archiviare la submission, mandandola negli archivi. Anche il curatore di sezione assegnato &#x00E8; in una posizione per fare questa azione.</p><p><em>Assegnare un curatore di sezione a una submission</em>. Il curatore seleziona un curatore di sezione dalla lista associata alla sezione (Articolo, revisione libri, etc.) a cui appartiene la  submission. Questa azione mander&#x00E0; in automatico una email  al curatore di sezione con la notifica dell'assegnamento.</p>]]>	
+		<![CDATA[<p>Prima di assegnare un section editor a coordinare la revisione di una submission, l'editor dovrebbe aprire il file e assicurarsi che il testo appaia sia idoneo per la submission e che sia stato proposto per la sezione appropriata.</p><p><em>Submission inappropriate</em>. Se la proposta &#xE008; chiaramente non appropriata per la rivista, l'editor pu&#x00F2; mandare una email all'autore e comunicare che essa non sar&#x00E0; inviata in revisione. L'editor   pu&#x00F2; quindi archiviare la submission. </p><p><em>Assegnare un Section editor a una proposta</em>. L'editor seleziona un curatore di sezione dalla lista associata alla sezione alla quale è stata assegnata la proposta. Questa azione mander&#x00E0; in automatico una email  al curatore di sezione con la notifica dell'assegnazione.</p>]]>	
 	</section>
 </topic>

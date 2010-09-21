@@ -10,14 +10,14 @@
   * table of contents for Editorial Process - Layout Editor's Role
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000013.xml,v 1.8 2009/04/08 19:54:27 asmecher Exp $
   -->
 
-<toc id="editorial/toc/000013" locale="it_IT" title="Layout Editor's Role" parent_topic="editorial/topic/000013">
-	<topic id="editorial/topic/000039" title="Submissions" />
+<toc id="editorial/toc/000013" locale="it_IT" title="Il ruolo del Layout editor" parent_topic="editorial/topic/000013">
+	<topic id="editorial/topic/000039" title="Submission" />
 	<topic id="editorial/topic/000040" title="Layout" />
-	<topic id="editorial/topic/000041" title="Proofreading" />
+	<topic id="editorial/topic/000041" title="Correzione delle bozze" />
 
-	<breadcrumb url="editorial/topic/000000" title="Editorial Process" />
-	<breadcrumb url="editorial/topic/000013" title="Layout Editor's Role" />
+	<breadcrumb url="editorial/topic/000000" title="Il processo editoriale" />
+	<breadcrumb url="editorial/topic/000013" title="Il ruolo del Layout editor" />
 </toc>

@@ -10,11 +10,11 @@
   * Editor's Role Submissions - Unassigned 
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000015.xml,v 1.9 2009/04/08 19:54:27 asmecher Exp $
   -->
 
-<topic id="editorial/topic/000015" locale="it_IT" title="Unassigned" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.unassigned">
+<topic id="editorial/topic/000015" locale="it_IT" title="Non assegnate" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.unassigned">
 	<section>
-		<![CDATA[<p>Ogni submission al journal inizia il processo nella coda dei non assegati del curatore. Per assegnare una submission in questa lista a un curatore di sezione, il curatore clica sul titolo della submission. Questo manda il curatore nella oagina di submission appropriata dove viene assegnato il curatore di sezione. Quando una submission &#x00E8; assegnata a un curatore di sezione, questa passa dalla coda non assegnata  alla coda in revisione. Se c'&#x00E8; solo un curatore di sezione associato ad un sezione, allora le submission a quella sezione sono automaticamente assegnate a quella persona e vai immediatamente alle submission da Non assegnate nella Coda revisioni.</p>]]>	
+		<![CDATA[<p>Ogni proposta alla rivista inizia il processo nella coda dei lavori non assegati (visualizzata dall'editor). Per assegnare una submission tra quelle qui elencate a un curatore, l'editor clicca sul titolo della submission, arrivando alla pagina con i dettagli della submission, dove assegna il curatore del manoscritto. Quando una submission &#x00E8; assegnata a un curatore di sezione, questa passa dalla coda 'Non assegnate'  a quella 'In revisione'. Se c'&#x00E8; solo un curatore di sezione associato ad un sezione, allora le submission a quella sezione sono automaticamente assegnate a quella persona.</p>]]>	
 	</section>
 </topic>

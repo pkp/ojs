@@ -10,11 +10,11 @@
   * Copyeditor's Role - Submissions
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000037.xml,v 1.9 2009/04/08 19:54:27 asmecher Exp $
   -->
 
-<topic id="editorial/topic/000037" locale="it_IT" title="Submissions" toc="editorial/toc/000012" key="editorial.copyeditorsRole.submissions">
+<topic id="editorial/topic/000037" locale="it_IT" title="Submission" toc="editorial/toc/000012" key="editorial.copyeditorsRole.submissions">
 	<section>
-		<![CDATA[<p>Una volta che il Copyeditor effettua il log in, clicando sul link del copyeditor nella Home page dell'utente si arriva alla coda dell submission. Questa coda elenca quei lavori che sono stati richiesti per il copyedit. Permette inoltre l'accesso a quelle submission che hanno completato in passato.  Il copyeditor clica sul titolo dei lavori il che porta alla pagina del copyeditor per quella submission.</p>]]>	
+		<![CDATA[<p>Una volta che il Copyeditor effettua il log in, cliccando sul link del copyeditor nella 'Home utente', arriva alla coda dell submission. Questa coda elenca quei lavori in attesa di copyedit. Permette inoltre l'accesso alle submission completate. Cliccando sul titolo del contributo si arriva alla pagina con il dettaglio della proposta e i file corrispondenti.</p>]]>	
 	</section>
 </topic>

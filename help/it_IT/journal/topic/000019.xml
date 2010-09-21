@@ -10,11 +10,11 @@
   * Roles - Copyeditor 
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000019.xml,v 1.8 2009/04/08 19:54:28 asmecher Exp $
   -->
 
 <topic id="journal/topic/000019" locale="it_IT" title="Copyeditor" toc="journal/toc/000003" key="journal.roles.copyeditor">
 	<section>
-		<![CDATA[<p>Il Copyeditor modifica submission per migliorare la grammatica e la chiarezza, lavora con gli autori per assicurarsi che tutto sia a posto, garanisce stretta aderenza allo stile bibliografico e testuale del journal, e produce una copia pulita, modificata copy per il layout editor per trasormarla in bozze nel formato di pubblicazione del journal. Alcuni journal hanno un curatore o un Section Editor che adempiono a questo ruolo.</p>]]>	
+		<![CDATA[<p>Il Copyeditor modifica submission per migliorare lo stile e la chiarezza, lavora con gli autori per assicurarsi che tutto sia a posto, garanisce stretta aderenza allo stile bibliografico e testuale della rivista e produce una copia pulita, modificata, pronta per il lavoro di impaginazione del layout editor. In alcune riviste, l'editor svolge anche il ruolo di copyeditor.</p>]]>	
 	</section>
 </topic>

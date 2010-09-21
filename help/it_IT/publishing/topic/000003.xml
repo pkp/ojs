@@ -10,11 +10,11 @@
   * Publishing Process - Table of Contents
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000003.xml,v 1.8 2009/04/08 19:54:28 asmecher Exp $
   -->
 
 <topic id="publishing/topic/000003" locale="it_IT" title="Table of Contents" toc="publishing/toc/000000" key="publishing.tableOfContents">
 	<section>
-		<![CDATA[<p>Una volta che una submission &#x00E8; messa in programma, apparir&#x00E0; nell'indice di quella uscita sotto l'intastazione della sua sezione. Se non ci sono submission in una sezione, quella sezione non apparir&#x00E0; nell'indice. Il curatore pu&#x00F2; riordinare le sezioni, e le submission possono essere riordinate all'interno di una sezione.</p>]]>	
+		<![CDATA[<p>Una volta che una submission &#x00E8; messa in programma, apparir&#x00E0; nell'indice di quella uscita sotto l'intestazione della sua sezione. Se non ci sono submission in una sezione, quella sezione non apparir&#x00E0; nell'indice. Il curatore pu&#x00F2; riordinare le sezioni, e le submission possono essere riordinate all'interno di una sezione.</p>]]>	
 	</section>
 </topic>

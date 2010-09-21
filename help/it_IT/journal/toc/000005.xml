@@ -10,15 +10,15 @@
   * table of contents for Journal Management - Management Pages - Reading Tools.
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000005.xml,v 1.8 2009/04/08 19:54:28 asmecher Exp $
   -->
 
-<toc id="journal/toc/000005" locale="it_IT" title="Reading Tools" parent_topic="journal/topic/000009">
-	<topic id="journal/topic/000026" title="Settings" />
-	<topic id="journal/topic/000027" title="Versions" />
-	<topic id="journal/topic/000028" title="Contexts" />
+<toc id="journal/toc/000005" locale="it_IT" title="Strumenti di lettura" parent_topic="journal/topic/000009">
+	<topic id="journal/topic/000026" title="Impostazioni" />
+	<topic id="journal/topic/000027" title="Versioni" />
+	<topic id="journal/topic/000028" title="Contesti" />
 
-	<breadcrumb url="journal/topic/000000" title="Journal Management" />
-	<breadcrumb url="journal/topic/000001" title="Management Pages" />
-	<breadcrumb url="journal/topic/000009" title="Reading Tools" />
+	<breadcrumb url="journal/topic/000000" title="Gestione della rivista" />
+	<breadcrumb url="journal/topic/000001" title="Pagine di amministrazione" />
+	<breadcrumb url="journal/topic/000009" title="Strumenti di lettura" />
 </toc>

@@ -10,17 +10,17 @@
   * table of contents for User Interface. 
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000000.xml,v 1.8 2009/04/08 19:54:28 asmecher Exp $
   -->
 
-<toc id="user/toc/000000" locale="it_IT" title="Journal Web Site" parent_topic="user/topic/000000">
+<toc id="user/toc/000000" locale="it_IT" title="Sito web della rivista" parent_topic="user/topic/000000">
 	<topic id="user/topic/000001" title="Home" />
-	<topic id="user/topic/000002" title="About" />
-	<topic id="user/topic/000007" title="User Home" />
-	<topic id="user/topic/000003" title="Register &amp; Profile" />
-	<topic id="user/topic/000004" title="Current &amp; Archives" />
-	<topic id="user/topic/000005" title="Search &amp; Browse" />
-	<topic id="user/topic/000006" title="Reading Tools" />
+	<topic id="user/topic/000002" title="Info" />
+	<topic id="user/topic/000007" title="Home utente" />
+	<topic id="user/topic/000003" title="Registrazione &amp; Profilo" />
+	<topic id="user/topic/000004" title="Fascicolo corrente &amp; Archivi" />
+	<topic id="user/topic/000005" title="Ricerca &amp; Navigazione" />
+	<topic id="user/topic/000006" title="Strumenti di lettura" />
 
-	<breadcrumb url="user/topic/000000" title="Journal Web Site" />
+	<breadcrumb url="user/topic/000000" title="Sito web della rivista" />
 </toc>

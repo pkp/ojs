@@ -10,13 +10,13 @@
   * table of contents for Publishing Process. 
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000000.xml,v 1.8 2009/04/08 19:54:28 asmecher Exp $
   -->
 
-<toc id="publishing/toc/000000" locale="it_IT" title="Publishing Process" parent_topic="publishing/topic/000000">
-	<topic id="publishing/topic/000001" title="Create Issue" />
-	<topic id="publishing/topic/000002" title="Schedule Submissions" />
+<toc id="publishing/toc/000000" locale="it_IT" title="Processo di pubblicazione" parent_topic="publishing/topic/000000">
+	<topic id="publishing/topic/000001" title="Crea un fascicolo" />
+	<topic id="publishing/topic/000002" title="Programma i contributi" />
 	<topic id="publishing/topic/000003" title="Table of Contents" />
-	<topic id="publishing/topic/000004" title="Publish" />
-	<breadcrumb url="publishing/topic/000000" title="Publishing Process" />
+	<topic id="publishing/topic/000004" title="Publica" />
+	<breadcrumb url="publishing/topic/000000" title="Processo di pubblicazione" />
 </toc>

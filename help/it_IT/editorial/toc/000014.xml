@@ -10,13 +10,13 @@
   * table of contents for Editorial Process - Proofreader's Role
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000014.xml,v 1.8 2009/04/08 19:54:27 asmecher Exp $
   -->
 
-<toc id="editorial/toc/000014" locale="it_IT" title="Proofreader's Role" parent_topic="editorial/topic/000014">
-	<topic id="editorial/topic/000042" title="Submissions" />
-	<topic id="editorial/topic/000043" title="Proofreading" />
+<toc id="editorial/toc/000014" locale="it_IT" title="Il ruolo del correttore di bozze" parent_topic="editorial/topic/000014">
+	<topic id="editorial/topic/000042" title="Submission" />
+	<topic id="editorial/topic/000043" title="Correzione delle bozze" />
 
-	<breadcrumb url="editorial/topic/000000" title="Editorial Process" />
-	<breadcrumb url="editorial/topic/000014" title="Proofreader's Role" />
+	<breadcrumb url="editorial/topic/000000" title="Il processo editoriale" />
+	<breadcrumb url="editorial/topic/000014" title="Il ruolo del correttore di bozze" />
 </toc>

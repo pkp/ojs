@@ -10,15 +10,15 @@
   * Site Administration - Administration Functions 
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000003.xml,v 1.9 2009/04/08 19:54:28 asmecher Exp $
   -->
 
-<topic id="site/topic/000003" locale="it_IT" title="Administrative Functions" toc="site/toc/000000" key="site.administrativeFunctions">
+<topic id="site/topic/000003" locale="it_IT" title="Funzioni amministrative" toc="site/toc/000000" key="site.administrativeFunctions">
 	<section>
-		<![CDATA[<p>Molte funzioni amministrative sono dipsonibili nell'area di amministrazione del sito. Queste funzioni generalmente dovrebbero essere usate con cautela, dato che un uso improrpio potrebbe portare a risultati inaspettati.</p>
-		<p><em>Informazioni sul Sistema.</em> Informazioni generali sull'ambinte server e lo storici della versione di OJS  (inclusi passati upgrade). Viene fornita inoltre una interfaccia web per modificare il file di configurazione di OJS.</p>
-		<p><em>Expire User Sessions.</em> Elimina tutte le sessioni utente attive nel sistema, richiedendo ad ogni utente che attualmente &#x00E8; autenticato di rifare di nuov il log in al sistema.</p>
-		<p><em>Elimina i dati della Cache.</em> Elimina tutti i dati della cache, comprese informazioni locali, aiuto cache, e cerca nella cache.</p>
-		<p><em>Elimina i Template Cache.</em> Elimina tutte le versioni nell memoria cache dei templates HTML. Questa funzione pu&#x00F2; essere utile a forzare di ricaricare i templates dopo che sono stati modificati.</p>]]>
+		<![CDATA[<p>Molte funzioni amministrative sono disponibili nell'area di amministrazione del sito. Queste funzioni generalmente dovrebbero essere usate con cautela, dato che un uso impropio potrebbe portare a risultati dannosi.</p>
+		<p><em>Informazioni sul Sistema.</em> Informazioni generali sull'ambinte server e sullo storico della vrsione di OJS  (inclusi passati upgrade). Viene fornita inoltre una interfaccia web per modificare il file di configurazione di OJS.</p>
+		<p><em>Termina le sessioni utente.</em> Chiude tutte le sessioni utente attive nel sistema, richiedendo ad ogni utente  attualmente &#x00E8; autenticato di rifare di nuovo il log in al sistema.</p>
+		<p><em>Pulisci la cache dei dati.</em> Elimina tutti i dati della cache, comprese informazioni locali, aiuto cache, e cerca nella cache.</p>
+		<p><em>Pulisci la cache dei template.</em> Elimina tutte le versioni nella memoria cache dei templates HTML. Questa funzione pu&#x00F2; essere utile a forzare il ricaricamento dei template dopo che sono stati modificati.</p>]]>
 	</section>
 </topic>

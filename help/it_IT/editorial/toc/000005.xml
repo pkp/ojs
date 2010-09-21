@@ -10,15 +10,15 @@
   * table of contents for Editorial Process - Section Editor's Role - Submissions
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000005.xml,v 1.8 2009/04/08 19:54:27 asmecher Exp $
   -->
 
-<toc id="editorial/toc/000005" locale="it_IT" title="Submissions" parent_topic="editorial/topic/000005">
-	<topic id="editorial/topic/000021" title="In Review" />
-	<topic id="editorial/topic/000022" title="In Editing" />
-	<topic id="editorial/topic/000023" title="Archives" />
+<toc id="editorial/toc/000005" locale="it_IT" title="Submission" parent_topic="editorial/topic/000005">
+	<topic id="editorial/topic/000021" title="In revisione" />
+	<topic id="editorial/topic/000022" title="In modifica" />
+	<topic id="editorial/topic/000023" title="Archiv" />
 
-	<breadcrumb url="editorial/topic/000000" title="Editorial Process" />
-	<breadcrumb url="editorial/topic/000004" title="Section Editor's Role" />
-	<breadcrumb url="editorial/topic/000005" title="Submissions" />
+	<breadcrumb url="editorial/topic/000000" title="Il processo editoriale" />
+	<breadcrumb url="editorial/topic/000004" title="Il ruolo del Section editor" />
+	<breadcrumb url="editorial/topic/000005" title="Submission" />
 </toc>

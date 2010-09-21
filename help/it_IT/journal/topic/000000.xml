@@ -10,11 +10,11 @@
   * Journal Management Main 
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000000.xml,v 1.8 2009/04/08 19:54:28 asmecher Exp $
   -->
 
-<topic id="journal/topic/000000" locale="it_IT" title="Journal Management" toc="index/toc/000000" subtoc="journal/toc/000000" key="journal.index">
+<topic id="journal/topic/000000" locale="it_IT" title="Amministrazione della rivista" toc="index/toc/000000" subtoc="journal/toc/000000" key="journal.index">
 	<section>
-		<![CDATA[<p>Il Journal Manager controlla tutti gli aspetti dell'ammnistrazione del Journal, consultandosi con i curatori, dal impostare e configurare il sistema del journal a iscrivere utenti nei vari ruoli necessari per far andare avanti il journal. L'amministrazione del Journal inizia con l'impostare il journal e include la creazione di utenti assegnandoli ai vari ruoli richiesti per fa r procedere il journal, oltre che a impostare le varie sezioni del journal.</p>]]>	
+		<![CDATA[<p>L'amministratore della rivista controlla tutti gli aspetti dell'amministrazione della rivista, consultandosi con gli editor, dall'impostare e configurare il sistema a iscrivere utenti nei vari ruoli necessari per far andare avanti il lavoro redazionale. L'amministratore inizia con l'impostare la rivista e con la creazione di utenti, assegnandoli ai vari ruoli richiesti per far procedere la rivista, oltre che a impostare le varie sezioni della rivista stessa.</p>]]>	
 	</section>
 </topic>

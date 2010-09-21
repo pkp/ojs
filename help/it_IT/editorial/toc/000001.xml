@@ -10,14 +10,14 @@
   * table of contents for Editorial Process - Editor's Role 
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000001.xml,v 1.8 2009/04/08 19:54:27 asmecher Exp $
   -->
 
-<toc id="editorial/toc/000001" locale="it_IT" title="Editor's Role" parent_topic="editorial/topic/000001">
-	<topic id="editorial/topic/000002" title="Submissions" />
-	<topic id="editorial/topic/000003" title="Submission Summary" />
+<toc id="editorial/toc/000001" locale="it_IT" title="Ruolo dell'editor" parent_topic="editorial/topic/000001">
+	<topic id="editorial/topic/000002" title="Submission" />
+	<topic id="editorial/topic/000003" title="Sommario della submission" />
 	<topic id="editorial/topic/000044" title="Assicurare una revisione cieca" />
 
-	<breadcrumb url="editorial/topic/000000" title="Editorial Process" />
-	<breadcrumb url="editorial/topic/000001" title="Editor's Role" />
+	<breadcrumb url="editorial/topic/000000" title="Processo editoriale" />
+	<breadcrumb url="editorial/topic/000001" title="Ruolo dell'editor" />
 </toc>

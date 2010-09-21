@@ -10,15 +10,15 @@
   * Publishing Process - Create Issue
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000001.xml,v 1.10 2009/04/08 19:54:28 asmecher Exp $
   -->
 
-<topic id="publishing/topic/000001" locale="it_IT" title="Create Issue" toc="publishing/toc/000000" key="publishing.createIssue">
+<topic id="publishing/topic/000001" locale="it_IT" title="Crea un fascicolo" toc="publishing/toc/000000" key="publishing.createIssue">
 	<section>
 		<![CDATA[
-		<p>Prima di usare Schedule Submission per mettere in programma una submission in una uscita per la pubblicazione, il curatore deve usare Create Issue per assicurarsi che ci sia una uscita in cui mettere la submission. L'uscita deve essere identificata con l'appropriato numero e/o titolo, a seconda delle opzioni scelte nel Setup (e.g., Vol 2, No 5, 2008).  Mentre il sistema richiamer&#x00E0; il curatore nel Create Issue con la successiva uscita, ogni volta che un'uscita sta per essere creata, il curatore pu&#x00F2; sovrascrivere e inserire un nuovo insieme di numero o unanno differente. Le uscite inoltre hanno la possibilit&#x00E0; di aver aggiunto un titolo, che apparir&#x00E0; sopra l'indice, e pu&#x00F2; essere usato, per esempio, per uscite speciali del journal.</p>
-		<p><em>Creare una cover page</em>. C'&#x00E8; anche l'opzione di caricare una illustrazione per la copertina del journal, in formato .jpg, .png or .gif. Queste file sar&#x00E0; accessibile dall'indice dove sar&#x00E0; elencato come Cover Page. apparir&#x00E0; nella homepage del journal mentre l'uscita del journal &#x00E8; Current, e pu&#x00F2; essere clicato per raggiungere l'indice di quella uscita. Quando l'uscita viene archiviata, la copertina rimarr&#x00E0; accessibile con l'uscita tramite l'indice.</p>
-		<p><em>Uscite Correnti, Future e Passate</em>. L'uscita corrente &#x00E8; quella pubblicata pi&#x00F9; di recente. Le uscite future sono quelle in cui il curatore metyte in programma le submission che devono essere pubblicate nel prossimo futuro. Il curatore potrebbe volere che ci siano sempre una serie di due-tre uscite attive, non pubblicate, che abilita submission ad essere programmate su una coppia di uscite per ragioni di accordo, per esempio. Le uscite passate, non sono pi&#x00F9; correnti, e sono gi&#x00E0; state pubblicate.</p>
+		<p>Prima di usare 'Programmazione delle Submission' per mettere in programma una submission in una uscita per la pubblicazione, il curatore deve usare 'Create fascicolo' per assicurarsi che ci sia una uscita in cui mettere la submission. L'uscita deve essere identificata con l'appropriato numero e/o titolo, a seconda delle opzioni scelte nel Setup (es., Vol. 2, N. 5, 2008).  Il sistema precompila i campi identificativi, ma l'editor può fare tutte le modifiche che ritiene opportune, per esempio, per uscite speciali del journal.</p>
+		<p><em>Creare una cover page</em>. C'&#x00E8; anche la possibilità di caricare un'illustrazione per la copertina della rivista, in formato .jpg, .png o .gif. Questo file sar&#x00E0; accessibile dall'indice dove sar&#x00E0; elencato come Cover Page. apparir&#x00E0; nella homepage della rivista mentre l'uscita del journal &#x00E8; Current, e pu&#x00F2; essere cliccato per raggiungere l'indice di quel fascicolo.</p>
+		<p><em>Fascicoli correnti, future e passate</em>. L'uscita corrente &#x00E8; quella pubblicata pi&#x00F9; di recente. Le uscite future sono quelle in cui il curatore mette in programma le submission che devono essere pubblicate nel prossimo futuro. Il curatore potrebbe volere che ci siano sempre una serie di due-tre uscite attive, non pubblicate, che permettano la programmazione delle submission su un paio di fascicoli.</p>
 		]]>
 	</section>
 </topic>

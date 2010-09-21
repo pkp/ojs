@@ -10,11 +10,11 @@
   * Proofreader's Role - Submissions
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000042.xml,v 1.9 2009/04/08 19:54:27 asmecher Exp $
   -->
 
-<topic id="editorial/topic/000042" locale="it_IT" title="Submissions" toc="editorial/toc/000014" key="editorial.proofreadersRole.submissions">
+<topic id="editorial/topic/000042" locale="it_IT" title="Submission" toc="editorial/toc/000014" key="editorial.proofreadersRole.submissions">
 	<section>
-		<![CDATA[<p>Non appena il correttore di bozze effettua il logs in, clicando sul link correttore di bozze nella Home page utente si va all coda delle submission. Questa coda elenca i lavori richiesti per il layout. Fornisce, inoltre, accesso a quelle submission completate in passato. Il correttore di bozze clica sul titolo dei lavori. questo conduce alla pagina di correzione del correttore di bozze.</p>]]>	
+		<![CDATA[<p>Non appena il correttore di bozze effettua il log in, cliccando sul link 'Correttore di bozze' nella Home  utente, va all coda delle submission. Questa coda elenca i lavori da rivedere. Il correttore di bozze clicca sul titolo dell'articolo per arrivare alla pagina di correzione.</p>]]>	
 	</section>
 </topic>

@@ -10,11 +10,11 @@
   * Author's Role Editing Index 
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000011.xml,v 1.8 2009/04/08 19:54:27 asmecher Exp $
   -->
 
 <topic id="editorial/topic/000011" locale="it_IT" title="Editing" toc="editorial/toc/000009" subtoc="editorial/toc/000011" key="editorial.authorsRole.editing">
 	<section>
-		<![CDATA[<p>L'autore contribuisce sia al copyedit sia alla correzione di bozze della submission nella fase di editing, non appena la submission &#x00E8; pronta per la pubblicazione electronica e/o di stampa.</p>]]>	
+		<![CDATA[<p>L'autore contribuisce sia al copyediting sia alla correzione di bozze, non appena la submission &#x00E8; pronta per la pubblicazione electronica e/o a stampa.</p>]]>	
 	</section>
 </topic>

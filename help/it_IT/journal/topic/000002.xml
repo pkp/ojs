@@ -10,11 +10,11 @@
   * Users Index 
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000002.xml,v 1.8 2009/04/08 19:54:28 asmecher Exp $
   -->
 
-<topic id="journal/topic/000002" locale="it_IT" title="Users" toc="journal/toc/000000" subtoc="journal/toc/000002" key="journal.users.index">
+<topic id="journal/topic/000002" locale="it_IT" title="Utenti" toc="journal/toc/000000" subtoc="journal/toc/000002" key="journal.users.index">
 	<section>
-		<![CDATA[<p>Il Journal Manager pu&#x00F2; iscrivere persone nel sistema e assegnare loro uno o pi&#x00F9; ruoli processo editoriale e di pubblicazione. Nell'effettuare il log in, il Journal Manager viene mandato all'amministrazione del Journal, dove le opzioni includono creare nuovi utenti, importare un insieme di nuovi utenti, e inviare email agli utenti. Il Journal Manager inoltre pu&#x00F2; accedere agli utenti registrati sotto tuttti i ruoli, tanto quanto aggiungere persone a questi ruoli. Il Journal Manager &#x00E8; colui il quale pu&#x00F2; iscirvere diverse persone a differenti ruoli, bench&#x00E8;  curatori e Section Editor possono iscirvere revisori. D'altra parte, autori e lettori possono segnarsi, sia come volontari revisori (se sono stati fatti gli inserimenti appopriati nel setup 2.6).</p>]]>	
+		<![CDATA[<p>Il Journal Manager pu&#x00F2; iscrivere persone nel sistema e assegnare loro uno o pi&#x00F9; ruoli processo editoriale e di pubblicazione. Nell'effettuare il login, il Journal Manager entra nell'amministrazione della rivista, dove le opzioni per creare nuovi utenti, importare un insieme di utenti e inviare email agli utenti. Il Journal Manager inoltre pu&#x00F2; accedere agli utenti registrati sotto tutti i ruoli e aggiungere persone a questi ruoli. Il Journal Manager pu&#x00F2; iscrivere diverse persone a differenti ruoli (editor e Section Editor possono iscrivere revisori). D'altra parte, autori e lettori possono segnarsi, sia come revisori volontari (se sono state fatte scelte in tal senso nel setup 2.6).</p>]]>	
 	</section>
 </topic>

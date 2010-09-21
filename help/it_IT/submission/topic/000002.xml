@@ -10,11 +10,11 @@
   * Author Submission Process - Submission Requirements 
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000002.xml,v 1.8 2009/04/08 19:54:28 asmecher Exp $
   -->
 
-<topic id="submission/topic/000002" locale="it_IT" title="Submission Requirements" toc="submission/toc/000000" key="submission.submissionRequirements">
+<topic id="submission/topic/000002" locale="it_IT" title="Requisiti delle submission" toc="submission/toc/000000" key="submission.submissionRequirements">
 	<section>
-		<![CDATA[<p>Per accertarsi che le submission al journal siano effettuate correttamente e siano in un formato idoneo per il processo, il Journal Manager e il curatore hanno sviluppato un insieme di requisiti per la Submission che l'autore deve accettare, prima di avere il permesso di passare al passo due de processo di Submission dell'autore. Se l'autore non &#x00E8; in grado di soddisfare una delle richieste per qualche ragione, pu&#x00F2; segnare la richiesta e fornire una spiegazione nei commenti al curatore.</p>]]>	
+		<![CDATA[<p>Per accertarsi che le proposte siano effettuate correttamente e siano in un formato idoneo al processo di pubblicazione, l'amministratore della rivista e l'editor hanno predisposto un insieme di requisiti per la submission, in forma di checklist che l'autore deve accettare, prima di passare al passo successivo del processo di submission. Se l'autore non &#x00E8; in grado di soddisfare una delle richieste per qualche ragione, pu&#x00F2; accettare comunque la richiesta e fornire una spiegazione nei commenti destinati all'editor.</p>]]>	
 	</section>
 </topic>

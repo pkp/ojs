@@ -10,15 +10,15 @@
   * table of contents for Editorial Process - Section Editor's Role - Review
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000006.xml,v 1.8 2009/04/08 19:54:27 asmecher Exp $
   -->
 
-<toc id="editorial/toc/000006" locale="it_IT" title="Review" parent_topic="editorial/topic/000006">
-	<topic id="editorial/topic/000024" title="Review Version" />
+<toc id="editorial/toc/000006" locale="it_IT" title="Revisione" parent_topic="editorial/topic/000006">
+	<topic id="editorial/topic/000024" title="Versione da revisionare" />
 	<topic id="editorial/topic/000025" title="Peer Review" />
-	<topic id="editorial/topic/000026" title="Editor Decision" />
+	<topic id="editorial/topic/000026" title="La decisione dell'editor" />
 
-	<breadcrumb url="editorial/topic/000000" title="Editorial Process" />
-	<breadcrumb url="editorial/topic/000004" title="Section Editor's Role" />
-	<breadcrumb url="editorial/topic/000006" title="Review" />
+	<breadcrumb url="editorial/topic/000000" title="Il processo editoriale" />
+	<breadcrumb url="editorial/topic/000004" title="Il ruolo del Section editor" />
+	<breadcrumb url="editorial/topic/000006" title="Revisione" />
 </toc>

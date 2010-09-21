@@ -10,11 +10,11 @@
   * Section Editor's Role Index - Archives
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000023.xml,v 1.8 2009/04/08 19:54:27 asmecher Exp $
   -->
 
-<topic id="editorial/topic/000023" locale="it_IT" title="Archives" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.archives">
+<topic id="editorial/topic/000023" locale="it_IT" title="Archivi" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.archives">
 	<section>
-		<![CDATA[<p>Le submission in questa coda sono passate attraverso il processo editoriale, sia se  sono state rifiutate che programmate per la pubblicazione, o pubblicate. Questa coda fornisce ai curatori e al curatore di sezione assegnato accesso completo allo storico editoriale della submission (Riassunto, submission, revisione, editing, e storico).</p>]]>	
+		<![CDATA[<p>Le submission in questa coda sono passate attraverso il processo editoriale, sia se  sono state rifiutate che   pubblicate. Questa coda fornisce agli editor accesso completo allo storico editoriale delle proposte e dei contributi.</p>]]>	
 	</section>
 </topic>

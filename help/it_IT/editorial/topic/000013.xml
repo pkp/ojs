@@ -10,11 +10,11 @@
   * Layout Editor's Role Index 
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000013.xml,v 1.8 2009/04/08 19:54:27 asmecher Exp $
   -->
 
-<topic id="editorial/topic/000013" locale="it_IT" title="Layout Editor's Role" toc="editorial/toc/000000" subtoc="editorial/toc/000013" key="editorial.layoutEditorsRole">
+<topic id="editorial/topic/000013" locale="it_IT" title="Il ruolo del Layout Editor" toc="editorial/toc/000000" subtoc="editorial/toc/000013" key="editorial.layoutEditorsRole">
 	<section>
-		<![CDATA[<p>Il curatore del layout  riceve una email di richiesta dal copyeditor o dal curatore di sezione chiedendo il layout di una submission che ha completato la fase di copyedit. Un curatore di layout che non &#x00E8; in grado di fare il layout, semplicemente risponde tramite email al curatore di sezione.</p>]]>	
+		<![CDATA[<p>Il layout  editor riceve una email di richiesta dal copyeditor o dal curatore di sezione con la richiesta di impaginare un contributo che ha completato la fase di copyedit. Se il layout editor non &#x00E8; in grado di preparare l'impaginazione, lo comunica all'editor.</p>]]>	
 	</section>
 </topic>

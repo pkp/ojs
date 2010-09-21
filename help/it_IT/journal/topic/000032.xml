@@ -9,11 +9,11 @@
   *
   * Roles - Subscription Manager 
   *
-  * $Id$
+  * $Id: 000032.xml,v 1.6 2009/08/17 23:38:28 asmecher Exp $
   -->
 
-<topic id="journal/topic/000032" locale="it_IT" title="Subscription Manager" toc="journal/toc/000003" key="journal.roles.subscriptionManager">
+<topic id="journal/topic/000032" locale="it_IT" title="Gestore degli abbonamenti" toc="journal/toc/000003" key="journal.roles.subscriptionManager">
 	<section>
-		<![CDATA[<p>Il Subscription Manager amministra le sottoscrizioni alla rivista e i tipi di sottoscrizione.</p>]]>
+		<![CDATA[<p>Il gestore degli abbonamenti amministra gli abbonamenti alla rivista e i tipi di abbonamento.</p>]]>
 	</section>
 </topic>

@@ -10,14 +10,14 @@
   * table of contents for Editorial Process - Editor's Role - Submission Summary
   * Thanks to AePIC Team CILEA.
   *
-  * $Id$
+  * $Id: 000003.xml,v 1.8 2009/04/08 19:54:27 asmecher Exp $
   -->
 
-<toc id="editorial/toc/000003" locale="it_IT" title="Submission Summary" parent_topic="editorial/topic/000003">
-	<topic id="editorial/topic/000019" title="Submission Management" />
+<toc id="editorial/toc/000003" locale="it_IT" title="Sommario della submission" parent_topic="editorial/topic/000003">
+	<topic id="editorial/topic/000019" title="Gestione delle submission" />
 	<topic id="editorial/topic/000020" title="Submission Metadata" />
 
-	<breadcrumb url="editorial/topic/000000" title="Editorial Process" />
-	<breadcrumb url="editorial/topic/000001" title="Editor's Role" />
-	<breadcrumb url="editorial/topic/000003" title="Submission Summary" />
+	<breadcrumb url="editorial/topic/000000" title="Processo editoriale" />
+	<breadcrumb url="editorial/topic/000001" title="Ruolo dell'editor" />
+	<breadcrumb url="editorial/topic/000003" title="Sommario della submission" />
 </toc>
