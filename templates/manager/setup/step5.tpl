@@ -1,5 +1,3 @@
-<!-- templates/manager/setup/step5.tpl -->
-
 {**
  * step5.tpl
  *
@@ -535,6 +533,4 @@ function prepBlockFields() {
 </form>
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/manager/setup/step5.tpl -->
 

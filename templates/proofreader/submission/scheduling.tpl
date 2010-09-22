@@ -1,5 +1,3 @@
-<!-- templates/proofreader/submission/scheduling.tpl -->
-
 {**
  * scheduling.tpl
  *
@@ -25,5 +23,3 @@
 	<a href="{url page="issue" op="view" path=$issue->getBestIssueId()}" class="action">{translate key="issue.toc"}</a>
 {/if}
 </div>
-<!-- / templates/proofreader/submission/scheduling.tpl -->
-

@@ -1,5 +1,3 @@
-<!-- templates/rt/metadata.tpl -->
-
 {**
  * metadata.tpl
  *
@@ -185,6 +183,4 @@
 </table>
 
 {include file="rt/footer.tpl"}
-
-<!-- / templates/rt/metadata.tpl -->
 

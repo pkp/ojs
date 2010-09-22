@@ -1,5 +1,3 @@
-<!-- templates/common/navbar.tpl -->
-
 {**
  * navbar.tpl
  *
@@ -45,6 +43,4 @@
 		{/foreach}
 	</ul>
 </div>
-
-<!-- / templates/common/navbar.tpl -->
 

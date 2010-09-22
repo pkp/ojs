@@ -7,7 +7,6 @@
  * SUSHI response XML
  *}
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- plugins/generic/counter/sushixml.tpl -->
 <SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
   xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance"
   xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"

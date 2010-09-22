@@ -1,5 +1,3 @@
-<!-- templates/reviewer/completed.tpl -->
-
 {**
  * completed.tpl
  *
@@ -86,6 +84,4 @@
 {/if}
 </table>
 </div>
-
-<!-- / templates/reviewer/completed.tpl -->
 

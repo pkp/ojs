@@ -1,5 +1,3 @@
-<!-- templates/search/advancedSearch.tpl -->
-
 {**
  * advancedSearch.tpl
  *
@@ -133,6 +131,4 @@ function ensureKeyword() {
 {translate key="search.syntaxInstructions"}
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/search/advancedSearch.tpl -->
 

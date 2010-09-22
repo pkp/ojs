@@ -1,5 +1,3 @@
-<!-- templates/install/upgrade.tpl -->
-
 {**
  * upgrade.tpl
  *
@@ -14,5 +12,3 @@
 {assign var="pageTitle" value="installer.ojsUpgrade"}
 {include file="core:install/upgrade.tpl"}
 {/strip}
-<!-- / templates/install/upgrade.tpl -->
-

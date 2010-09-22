@@ -1,5 +1,3 @@
-<!-- templates/author/submit/step4.tpl -->
-
 {**
  * step4.tpl
  *
@@ -81,6 +79,4 @@ function confirmForgottenUpload() {
 </form>
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/author/submit/step4.tpl -->
 

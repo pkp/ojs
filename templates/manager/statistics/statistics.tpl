@@ -1,5 +1,3 @@
-<!-- templates/manager/statistics/statistics.tpl -->
-
 {**
  * statistics.tpl
  *
@@ -108,6 +106,4 @@
 <input type="submit" class="button defaultButton" value="{translate key="common.record"}"/>
 </form>
 </div>
-
-<!-- / templates/manager/statistics/statistics.tpl -->
 

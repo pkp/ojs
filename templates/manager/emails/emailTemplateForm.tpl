@@ -1,5 +1,3 @@
-<!-- templates/manager/emails/emailTemplateForm.tpl -->
-
 {**
  * mailTemplate.tpl
  *
@@ -80,6 +78,4 @@
 </form>
 </div>
 {include file="common/footer.tpl"}
-
-<!-- / templates/manager/emails/emailTemplateForm.tpl -->
 

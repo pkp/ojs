@@ -1,5 +1,3 @@
-<!-- templates/rt/context.tpl -->
-
 {**
  * context.tpl
  *
@@ -156,6 +154,4 @@
 </div>
 
 {include file="rt/footer.tpl"}
-
-<!-- / templates/rt/context.tpl -->
 

@@ -1,5 +1,3 @@
-<!-- templates/author/index.tpl -->
-
 {**
  * index.tpl
  *
@@ -32,6 +30,4 @@
 {call_hook name="Templates::Author::Index::AdditionalItems"}
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/author/index.tpl -->
 

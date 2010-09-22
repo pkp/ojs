@@ -1,5 +1,3 @@
-<!-- templates/sectionEditor/submission/scheduling.tpl -->
-
 {**
  * scheduling.tpl
  *
@@ -61,5 +59,3 @@
 	</table>
 {/if}
 </div>
-<!-- / templates/sectionEditor/submission/scheduling.tpl -->
-

@@ -1,5 +1,3 @@
-<!-- templates/proofreader/submission/layout.tpl -->
-
 {**
  * layout.tpl
  *
@@ -76,6 +74,4 @@
 {/if}
 </div>
 </div>
-
-<!-- / templates/proofreader/submission/layout.tpl -->
 

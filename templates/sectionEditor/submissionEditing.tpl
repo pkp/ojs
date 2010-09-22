@@ -1,5 +1,3 @@
-<!-- templates/sectionEditor/submissionEditing.tpl -->
-
 {**
  * submissionEditing.tpl
  *
@@ -43,6 +41,4 @@
 {include file="sectionEditor/submission/proofread.tpl"}
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/sectionEditor/submissionEditing.tpl -->
 

@@ -1,5 +1,3 @@
-<!-- templates/sectionEditor/submission/authorFees.tpl -->
-
 {**
  * authorFees.tpl
  *
@@ -50,5 +48,3 @@
 {/if}
 </table>
 </div>
-<!-- / templates/sectionEditor/submission/authorFees.tpl -->
-

@@ -1,5 +1,3 @@
-<!-- templates/author/submission/authorFees.tpl -->
-
 {**
  * authorFees.tpl
  *
@@ -47,5 +45,3 @@
 {/if}
 </table>
 </div>
-<!-- / templates/author/submission/authorFees.tpl -->
-

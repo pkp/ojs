@@ -1,5 +1,3 @@
-<!-- templates/information/information.tpl -->
-
 {**
  * information.tpl
  *
@@ -17,6 +15,4 @@
 <p>{$content|nl2br}</p>
 </div>
 {include file="common/footer.tpl"}
-
-<!-- / templates/information/information.tpl -->
 

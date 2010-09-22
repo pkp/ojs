@@ -1,5 +1,3 @@
-<!-- templates/rtadmin/settings.tpl -->
-
 {**
  * settings.tpl
  *
@@ -97,6 +95,4 @@
 </form>
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/rtadmin/settings.tpl -->
 

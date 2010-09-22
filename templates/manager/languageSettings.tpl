@@ -1,5 +1,3 @@
-<!-- templates/manager/languageSettings.tpl -->
-
 {**
  * languageSettings.tpl
  *
@@ -74,6 +72,4 @@
 {/if}
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/manager/languageSettings.tpl -->
 

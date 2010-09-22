@@ -1,5 +1,3 @@
-<!-- templates/user/registerSite.tpl -->
-
 {**
  * registerSite.tpl
  *
@@ -29,6 +27,4 @@
 {/if}
 </div>
 {include file="common/footer.tpl"}
-
-<!-- / templates/user/registerSite.tpl -->
 

@@ -1,5 +1,3 @@
-<!-- templates/gateway/lockss.tpl -->
-
 {**
  * lockss.tpl
  *
@@ -126,6 +124,4 @@
 </div>
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/gateway/lockss.tpl -->
 

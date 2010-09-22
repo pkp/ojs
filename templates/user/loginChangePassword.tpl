@@ -1,5 +1,3 @@
-<!-- templates/user/loginChangePassword.tpl -->
-
 {**
  * loginChangePassword.tpl
  *
@@ -14,5 +12,3 @@
 {assign var="passwordLengthRestrictionLocaleKey" value="user.register.passwordLengthRestriction"}
 {include file="core:user/loginChangePassword.tpl"}
 {/strip}
-<!-- / templates/user/loginChangePassword.tpl -->
-

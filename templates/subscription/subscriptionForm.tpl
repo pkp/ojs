@@ -1,5 +1,3 @@
-<!-- templates/subscription/subscriptionForm.tpl -->
-
 {**
  * subscriptionForm.tpl
  *
@@ -112,6 +110,4 @@ chooseEndDate();
 
 // -->
 </script>
-
-<!-- / templates/subscription/subscriptionForm.tpl -->
 

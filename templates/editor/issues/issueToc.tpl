@@ -1,5 +1,3 @@
-<!-- templates/editor/issues/issueToc.tpl -->
-
 {**
  * issueToc.tpl
  *
@@ -137,6 +135,4 @@ $(document).ready(function() {
 {/if}
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/editor/issues/issueToc.tpl -->
 

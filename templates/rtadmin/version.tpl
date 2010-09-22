@@ -1,5 +1,3 @@
-<!-- templates/rtadmin/version.tpl -->
-
 {**
  * version.tpl
  *
@@ -51,6 +49,4 @@
 </form>
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/rtadmin/version.tpl -->
 

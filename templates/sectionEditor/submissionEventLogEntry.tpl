@@ -1,5 +1,3 @@
-<!-- templates/sectionEditor/submissionEventLogEntry.tpl -->
-
 {**
  * submissionEventLogEntry.tpl
  *
@@ -75,6 +73,4 @@
 <a class="action" href="{url op="submissionEventLog" path=$submission->getArticleId()}">{translate key="submission.event.backToEventLog"}</a>
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/sectionEditor/submissionEventLogEntry.tpl -->
 

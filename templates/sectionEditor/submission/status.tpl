@@ -1,5 +1,3 @@
-<!-- templates/sectionEditor/submission/status.tpl -->
-
 {**
  * status.tpl
  *
@@ -49,6 +47,4 @@
 {/if}
 </table>
 </div>
-
-<!-- / templates/sectionEditor/submission/status.tpl -->
 

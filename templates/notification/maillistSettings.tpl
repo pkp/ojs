@@ -1,5 +1,3 @@
-<!-- templates/notification/maillistSettings.tpl -->
-
 {**
  * index.tpl
  *
@@ -44,6 +42,4 @@
 </form>
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/notification/maillistSettings.tpl -->
 

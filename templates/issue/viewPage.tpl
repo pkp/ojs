@@ -1,5 +1,3 @@
-<!-- templates/issue/viewPage.tpl -->
-
 {**
  * viewPage.tpl
  *
@@ -27,6 +25,4 @@
 {include file="issue/view.tpl"}
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/issue/viewPage.tpl -->
 

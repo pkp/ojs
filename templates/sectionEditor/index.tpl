@@ -1,5 +1,3 @@
-<!-- templates/sectionEditor/index.tpl -->
-
 {**
  * index.tpl
  *
@@ -87,6 +85,4 @@ function sortSearch(heading, direction) {
 {/if}
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/sectionEditor/index.tpl -->
 

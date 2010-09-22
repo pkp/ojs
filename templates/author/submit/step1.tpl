@@ -1,5 +1,3 @@
-<!-- templates/author/submit/step1.tpl -->
-
 {**
  * step1.tpl
  *
@@ -185,6 +183,4 @@ function checkSubmissionChecklist() {
 {/if}{* If not accepting submissions *}
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/author/submit/step1.tpl -->
 

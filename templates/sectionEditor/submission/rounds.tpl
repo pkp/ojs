@@ -1,5 +1,3 @@
-<!-- templates/sectionEditor/submission/rounds.tpl -->
-
 {**
  * rounds.tpl
  *
@@ -255,6 +253,4 @@ name="viewable" value="1"{if $reviewerFile->getViewable()} checked="checked"{/if
 
 {/section}
 </div>
-
-<!-- / templates/sectionEditor/submission/rounds.tpl -->
 

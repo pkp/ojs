@@ -1,5 +1,3 @@
-<!-- templates/rt/rt.tpl -->
-
 {**
  * rt.tpl
  *
@@ -121,6 +119,4 @@
 {url|assign:"loginUrl" page="user" op="register"}
 <p><em style="font-size: 0.9em">{translate key="rt.email.needLogin" loginUrl=$loginUrl}</em></p>
 {/if}
-
-<!-- / templates/rt/rt.tpl -->
 

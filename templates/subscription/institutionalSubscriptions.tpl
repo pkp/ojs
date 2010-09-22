@@ -1,5 +1,3 @@
-<!-- templates/subscription/institutionalSubscriptions.tpl -->
-
 {**
  * institutionalSubscriptions.tpl
  *
@@ -119,6 +117,4 @@
 </div>
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/subscription/institutionalSubscriptions.tpl -->
 

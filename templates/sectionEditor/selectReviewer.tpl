@@ -1,5 +1,3 @@
-<!-- templates/sectionEditor/selectReviewer.tpl -->
-
 {**
  * selectReviewer.tpl
  *
@@ -126,6 +124,4 @@ function sortSearch(heading, direction) {
 </div>
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/sectionEditor/selectReviewer.tpl -->
 

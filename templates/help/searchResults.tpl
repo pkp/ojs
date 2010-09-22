@@ -1,5 +1,3 @@
-<!-- templates/help/searchResults.tpl -->
-
 {**
  * searchResults.tpl
  *
@@ -14,5 +12,3 @@
 {translate|assign:applicationHelpTranslated key="help.ojsHelp"}
 {include file="core:help/searchResults.tpl"}
 {/strip}
-<!-- / templates/help/searchResults.tpl -->
-

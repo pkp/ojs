@@ -1,5 +1,3 @@
-<!-- templates/sectionEditor/submission/proofread.tpl -->
-
 {**
  * proofread.tpl
  *
@@ -192,6 +190,4 @@
 <a href="javascript:openHelp('{url op="instructions" path="proof"}')" class="action">{translate key="submission.proofread.instructions"}</a>
 {/if}
 </div>
-
-<!-- / templates/sectionEditor/submission/proofread.tpl -->
 

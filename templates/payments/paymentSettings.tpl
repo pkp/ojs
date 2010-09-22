@@ -1,5 +1,3 @@
-<!-- templates/payments/paymentSettings.tpl -->
-
 {**
  * paymentSettings.tpl
  *
@@ -187,6 +185,4 @@
 </form>
 </div>
 {include file="common/footer.tpl"}
-
-<!-- / templates/payments/paymentSettings.tpl -->
 

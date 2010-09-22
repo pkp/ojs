@@ -1,5 +1,3 @@
-<!-- templates/admin/systemConfigUpdated.tpl -->
-
 {**
  * systemConfigUpdated.tpl
  *
@@ -38,6 +36,4 @@
 <a class="action" href="{url op="systemInfo"}">{translate key="admin.systemInformation"}</a>
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/admin/systemConfigUpdated.tpl -->
 

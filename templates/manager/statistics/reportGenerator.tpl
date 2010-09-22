@@ -1,5 +1,3 @@
-<!-- templates/manager/statistics/reportGenerator.tpl -->
-
 {**
  * reportGenerator.tpl
  *
@@ -39,5 +37,3 @@
 
 </form>
 </div>
-<!-- / templates/manager/statistics/reportGenerator.tpl -->
-

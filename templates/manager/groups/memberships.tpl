@@ -1,5 +1,3 @@
-<!-- templates/manager/groups/memberships.tpl -->
-
 {**
  * memberships.tpl
  *
@@ -69,6 +67,4 @@ $(document).ready(function() { setupTableDND("#dragTable", {/literal}"{url op=mo
 <a href="{url op="addMembership" path=$group->getId()}" class="action">{translate key="manager.groups.membership.addMember"}</a>
 </div>
 {include file="common/footer.tpl"}
-
-<!-- / templates/manager/groups/memberships.tpl -->
 

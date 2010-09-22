@@ -1,5 +1,3 @@
-<!-- templates/submission/metadata/metadata.tpl -->
-
 {**
  * metadata.tpl
  *
@@ -184,6 +182,4 @@
 {/if}
 
 </div><!-- metadata -->
-
-<!-- / templates/submission/metadata/metadata.tpl -->
 

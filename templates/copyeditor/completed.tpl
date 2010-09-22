@@ -1,5 +1,3 @@
-<!-- templates/copyeditor/completed.tpl -->
-
 {**
  * completed.tpl
  *
@@ -117,6 +115,4 @@ function sortSearch(heading, direction) {
 {/if}
 </table>
 </div>
-
-<!-- / templates/copyeditor/completed.tpl -->
 

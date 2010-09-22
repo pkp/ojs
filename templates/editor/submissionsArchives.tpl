@@ -1,5 +1,3 @@
-<!-- templates/editor/submissionsArchives.tpl -->
-
 {**
  * submissionsArchives.tpl
  *
@@ -66,6 +64,4 @@
 {/if}
 </table>
 </div>
-
-<!-- / templates/editor/submissionsArchives.tpl -->
 

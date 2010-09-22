@@ -1,5 +1,3 @@
-<!-- templates/proofreader/submission.tpl -->
-
 {**
  * submission.tpl
  *
@@ -32,6 +30,4 @@
 {include file="proofreader/submission/scheduling.tpl"}
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/proofreader/submission.tpl -->
 

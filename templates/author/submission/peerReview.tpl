@@ -1,5 +1,3 @@
-<!-- templates/author/submission/peerReview.tpl -->
-
 {**
  * peerReview.tpl
  *
@@ -113,5 +111,3 @@
 
 {/section}
 </div>
-<!-- / templates/author/submission/peerReview.tpl -->
-

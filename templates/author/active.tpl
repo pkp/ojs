@@ -1,5 +1,3 @@
-<!-- templates/author/active.tpl -->
-
 {**
  * active.tpl
  *
@@ -105,6 +103,4 @@
 {/if}
 </table>
 </div>
-
-<!-- / templates/author/active.tpl -->
 

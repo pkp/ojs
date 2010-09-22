@@ -1,5 +1,3 @@
-<!-- templates/manager/groups/groups.tpl -->
-
 {**
  * groups.tpl
  *
@@ -100,6 +98,4 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveGroup"); });
 </div>
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/manager/groups/groups.tpl -->
 

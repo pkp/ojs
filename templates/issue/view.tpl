@@ -1,5 +1,3 @@
-<!-- templates/issue/view.tpl -->
-
 {**
  * view.tpl
  *
@@ -43,6 +41,4 @@
 	{translate key="current.noCurrentIssueDesc"}
 {/if}
 
-
-<!-- / templates/issue/view.tpl -->
 

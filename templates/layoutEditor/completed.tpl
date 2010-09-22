@@ -1,5 +1,3 @@
-<!-- templates/layoutEditor/completed.tpl -->
-
 {**
  * completed.tpl
  *
@@ -116,6 +114,4 @@ function sortSearch(heading, direction) {
 {/if}
 </table>
 </div>
-
-<!-- / templates/layoutEditor/completed.tpl -->
 

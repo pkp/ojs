@@ -1,5 +1,3 @@
-<!-- templates/sectionEditor/citationEditor.tpl -->
-
 {**
  * citationEditor.tpl
  *
@@ -238,6 +236,4 @@
 		</div>
 	</div>
 </div>
-
-<!-- / templates/sectionEditor/citationEditor.tpl -->
 

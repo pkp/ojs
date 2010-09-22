@@ -1,5 +1,3 @@
-<!-- templates/about/statistics.tpl -->
-
 {**
  * statistics.tpl
  *
@@ -89,6 +87,4 @@
 </table>
 </div>
 {include file="common/footer.tpl"}
-
-<!-- / templates/about/statistics.tpl -->
 

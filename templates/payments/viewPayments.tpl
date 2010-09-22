@@ -1,5 +1,3 @@
-<!-- templates/payments/viewPayments.tpl -->
-
 {**
  * viewPayments.tpl
  *
@@ -94,6 +92,4 @@
 </table>
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/payments/viewPayments.tpl -->
 

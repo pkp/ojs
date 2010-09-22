@@ -1,5 +1,3 @@
-<!-- templates/rt/bio.tpl -->
-
 {**
  * bio.tpl
  *
@@ -33,6 +31,4 @@
 {/foreach}
 
 {include file="rt/footer.tpl"}
-
-<!-- / templates/rt/bio.tpl -->
 

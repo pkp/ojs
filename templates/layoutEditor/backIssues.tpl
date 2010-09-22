@@ -1,5 +1,3 @@
-<!-- templates/layoutEditor/backIssues.tpl -->
-
 {**
  * backIssues.tpl
  *
@@ -63,6 +61,4 @@
 </table>
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/layoutEditor/backIssues.tpl -->
 

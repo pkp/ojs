@@ -1,5 +1,3 @@
-<!-- templates/admin/languages.tpl -->
-
 {**
  * languages.tpl
  *
@@ -128,6 +126,4 @@
 {/if}{* $downloadAvailable *}
 </div>
 {include file="common/footer.tpl"}
-
-<!-- / templates/admin/languages.tpl -->
 

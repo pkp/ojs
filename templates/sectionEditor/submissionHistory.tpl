@@ -1,5 +1,3 @@
-<!-- templates/sectionEditor/submissionHistory.tpl -->
-
 {**
  * submissionHistory.tpl
  *
@@ -198,6 +196,4 @@
 <a class="action" href="{url op="clearAllSubmissionNotes" articleId=$submission->getArticleId()}" onclick="return confirm('{translate|escape:"jsparam" key="submission.notes.confirmDeleteAll"}')">{translate key="submission.notes.clearAllNotes"}</a>
 </div>
 {include file="common/footer.tpl"}
-
-<!-- / templates/sectionEditor/submissionHistory.tpl -->
 

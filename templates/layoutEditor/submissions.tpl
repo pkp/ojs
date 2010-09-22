@@ -1,5 +1,3 @@
-<!-- templates/layoutEditor/submissions.tpl -->
-
 {**
  * submissions.tpl
  *
@@ -25,6 +23,4 @@
 {include file="layoutEditor/$pageToDisplay.tpl"}
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/layoutEditor/submissions.tpl -->
 

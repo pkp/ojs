@@ -1,5 +1,3 @@
-<!-- templates/admin/languageDownloadErrors.tpl -->
-
 {**
  * languageDownloadErrors.tpl
  *
@@ -25,6 +23,4 @@
 <a href="{url op="languages"}" class="action">{translate key="common.languages"}</a>
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/admin/languageDownloadErrors.tpl -->
 

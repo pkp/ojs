@@ -1,5 +1,3 @@
-<!-- templates/search/authorDetails.tpl -->
-
 {**
  * authorDetails.tpl
  *
@@ -42,6 +40,4 @@
 </ul>
 </div>
 {include file="common/footer.tpl"}
-
-<!-- / templates/search/authorDetails.tpl -->
 

@@ -1,5 +1,3 @@
-<!-- templates/subscription/subscriptionTypes.tpl -->
-
 {**
  * subscriptionTypes.tpl
  *
@@ -78,6 +76,4 @@ $(document).ready(function() { setupTableDND("#subscriptionTypesTable", "moveSub
 </div>
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/subscription/subscriptionTypes.tpl -->
 

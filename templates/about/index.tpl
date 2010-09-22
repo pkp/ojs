@@ -1,5 +1,3 @@
-<!-- templates/about/index.tpl -->
-
 {**
  * index.tpl
  *
@@ -72,6 +70,4 @@
 </div>
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/about/index.tpl -->
 

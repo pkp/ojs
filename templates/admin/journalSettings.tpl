@@ -1,5 +1,3 @@
-<!-- templates/admin/journalSettings.tpl -->
-
 {**
  * journalSettings.tpl
  *
@@ -86,6 +84,4 @@ function doSubmit() {
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/admin/journalSettings.tpl -->
 

@@ -1,5 +1,3 @@
-<!-- templates/copyeditor/submission/copyedit.tpl -->
-
 {**
  * copyedit.tpl
  *
@@ -143,5 +141,3 @@
 <a href="javascript:openHelp('{url op="instructions" path="copy"}')" class="action">{translate key="submission.copyedit.instructions"}</a>
 {/if}
 </div>
-<!-- / templates/copyeditor/submission/copyedit.tpl -->
-

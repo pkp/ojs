@@ -1,5 +1,3 @@
-<!-- templates/admin/settings.tpl -->
-
 {**
  * settings.tpl
  *
@@ -124,6 +122,4 @@
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/admin/settings.tpl -->
 

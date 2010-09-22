@@ -1,5 +1,3 @@
-<!-- templates/submission/comment/comment.tpl -->
-
 {**
  * comment.tpl
  *
@@ -88,6 +86,4 @@ window.opener.location.reload();
 {/if}
 
 {include file="submission/comment/footer.tpl"}
-
-<!-- / templates/submission/comment/comment.tpl -->
 

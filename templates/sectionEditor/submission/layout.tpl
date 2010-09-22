@@ -1,5 +1,3 @@
-<!-- templates/sectionEditor/submission/layout.tpl -->
-
 {**
  * layout.tpl
  *
@@ -179,6 +177,4 @@
 {/if}
 </div>
 </div>
-
-<!-- / templates/sectionEditor/submission/layout.tpl -->
 

@@ -1,5 +1,3 @@
-<!-- templates/rt/suppFiles.tpl -->
-
 {**
  * suppFiles.tpl
  *
@@ -49,6 +47,4 @@
 {/foreach}
 
 {include file="rt/footer.tpl"}
-
-<!-- / templates/rt/suppFiles.tpl -->
 

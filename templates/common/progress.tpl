@@ -1,5 +1,3 @@
-<!-- templates/common/progress.tpl -->
-
 {**
  * progress.tpl
  *
@@ -26,6 +24,4 @@
 {/if}
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/common/progress.tpl -->
 

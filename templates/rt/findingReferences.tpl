@@ -1,5 +1,3 @@
-<!-- templates/rt/findingReferences.tpl -->
-
 {**
  * bio.tpl
  *
@@ -81,6 +79,4 @@ function invokeWLA() {
 </form>
 
 {include file="rt/footer.tpl"}
-
-<!-- / templates/rt/findingReferences.tpl -->
 

@@ -1,5 +1,3 @@
-<!-- templates/reviewer/index.tpl -->
-
 {**
  * index.tpl
  *
@@ -25,6 +23,4 @@
 {include file="reviewer/$pageToDisplay.tpl"}
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/reviewer/index.tpl -->
 

@@ -1,5 +1,3 @@
-<!-- templates/manager/people/selectMergeUser.tpl -->
-
 {**
  * selectMergeUser.tpl
  *
@@ -150,6 +148,4 @@
 </div>
 </div>
 {include file="common/footer.tpl"}
-
-<!-- / templates/manager/people/selectMergeUser.tpl -->
 

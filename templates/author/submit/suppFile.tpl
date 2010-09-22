@@ -1,5 +1,3 @@
-<!-- templates/author/submit/suppFile.tpl -->
-
 {**
  * suppFile.tpl
  *
@@ -161,6 +159,4 @@
 </form>
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/author/submit/suppFile.tpl -->
 

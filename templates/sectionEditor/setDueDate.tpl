@@ -1,5 +1,3 @@
-<!-- templates/sectionEditor/setDueDate.tpl -->
-
 {**
  * setDueDate.tpl
  *
@@ -45,6 +43,4 @@
 </form>
 </div>
 {include file="common/footer.tpl"}
-
-<!-- / templates/sectionEditor/setDueDate.tpl -->
 

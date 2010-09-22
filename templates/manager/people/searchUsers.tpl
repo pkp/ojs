@@ -1,5 +1,3 @@
-<!-- templates/manager/people/searchUsers.tpl -->
-
 {**
  * searchUsers.tpl
  *
@@ -169,6 +167,4 @@ function toggleChecked() {
 {/if}
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/manager/people/searchUsers.tpl -->
 

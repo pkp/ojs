@@ -1,5 +1,3 @@
-<!-- templates/rtadmin/context.tpl -->
-
 {**
  * context.tpl
  *
@@ -72,6 +70,4 @@
 </form>
 </div>
 {include file="common/footer.tpl"}
-
-<!-- / templates/rtadmin/context.tpl -->
 

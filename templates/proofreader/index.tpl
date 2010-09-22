@@ -1,5 +1,3 @@
-<!-- templates/proofreader/index.tpl -->
-
 {**
  * index.tpl
  *
@@ -25,6 +23,4 @@
 {include file="proofreader/$pageToDisplay.tpl"}
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/proofreader/index.tpl -->
 

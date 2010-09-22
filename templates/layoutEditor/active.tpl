@@ -1,5 +1,3 @@
-<!-- templates/layoutEditor/active.tpl -->
-
 {**
  * active.tpl
  *
@@ -60,6 +58,4 @@
 {/if}
 </table>
 </div>
-
-<!-- / templates/layoutEditor/active.tpl -->
 

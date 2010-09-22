@@ -1,5 +1,3 @@
-<!-- templates/submission/comment/footer.tpl -->
-
 {**
  * footer.tpl
  *
@@ -16,6 +14,4 @@
 </div>
 </body>
 </html>
-
-<!-- / templates/submission/comment/footer.tpl -->
 

@@ -1,5 +1,3 @@
-<!-- templates/install/install.tpl -->
-
 {**
  * install.tpl
  *
@@ -14,5 +12,3 @@
 {assign var="pageTitle" value="installer.ojsInstallation"}
 {include file="core:install/install.tpl"}
 {/strip}
-<!-- / templates/install/install.tpl -->
-

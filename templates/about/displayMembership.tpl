@@ -1,5 +1,3 @@
-<!-- templates/about/displayMembership.tpl -->
-
 {**
  * displayMembership.tpl
  *
@@ -27,6 +25,4 @@
 </div>
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/about/displayMembership.tpl -->
 

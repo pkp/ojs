@@ -35,5 +35,3 @@
 {/foreach}
 </version>
 
-<!-- / templates/rtadmin/exportXml.tpl -->
-

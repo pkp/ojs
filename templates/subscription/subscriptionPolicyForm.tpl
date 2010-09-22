@@ -1,5 +1,3 @@
-<!-- templates/subscription/subscriptionPolicyForm.tpl -->
-
 {**
  * subscriptionPolicyForm.tpl
  *
@@ -258,6 +256,4 @@
 </form>
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/subscription/subscriptionPolicyForm.tpl -->
 

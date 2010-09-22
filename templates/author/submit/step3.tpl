@@ -1,5 +1,3 @@
-<!-- templates/author/submit/step3.tpl -->
-
 {**
  * step3.tpl
  *
@@ -390,6 +388,4 @@ function moveAuthor(dir, authorIndex) {
 {/if}
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/author/submit/step3.tpl -->
 

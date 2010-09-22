@@ -1,5 +1,3 @@
-<!-- templates/editor/issues/issueData.tpl -->
-
 {**
  * issueData.tpl
  *
@@ -180,6 +178,4 @@
 </form>
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/editor/issues/issueData.tpl -->
 

@@ -1,5 +1,3 @@
-<!-- templates/sectionEditor/submissionCitations.tpl -->
-
 {**
  * submissionCitations.tpl
  *
@@ -25,6 +23,4 @@
 {include file="citation/citationEditor.tpl}
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/sectionEditor/submissionCitations.tpl -->
 

@@ -1,5 +1,3 @@
-<!-- templates/index/journal.tpl -->
-
 {**
  * index.tpl
  *
@@ -50,6 +48,4 @@
 {/if}
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/index/journal.tpl -->
 

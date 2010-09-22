@@ -1,5 +1,3 @@
-<!-- templates/editor/notifyUsersEmail.tpl -->
-
 {$body}
 
 {$journal->getLocalizedTitle()|strip_tags}
@@ -22,6 +20,4 @@
 
 {/foreach}
 {literal}{$templateSignature}{/literal}
-
-<!-- / templates/editor/notifyUsersEmail.tpl -->
 

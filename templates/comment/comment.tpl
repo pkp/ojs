@@ -1,5 +1,3 @@
-<!-- templates/comment/comment.tpl -->
-
 {**
  * comment.tpl
  *
@@ -90,6 +88,4 @@ function handleAnonymousCheckbox(theBox) {
 </div>
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/comment/comment.tpl -->
 

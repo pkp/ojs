@@ -1,5 +1,3 @@
-<!-- templates/copyeditor/submission/summary.tpl -->
-
 {**
  * summary.tpl
  *
@@ -52,6 +50,4 @@
 	</tr>
 </table>
 </div>
-
-<!-- / templates/copyeditor/submission/summary.tpl -->
 

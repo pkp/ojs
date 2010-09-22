@@ -1,5 +1,3 @@
-<!-- templates/rtadmin/journals.tpl -->
-
 {**
  * journals.tpl
  *
@@ -24,6 +22,4 @@
 </ul>
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/rtadmin/journals.tpl -->
 

@@ -1,5 +1,3 @@
-<!-- templates/author/submissionEditing.tpl -->
-
 {**
  * submissionEditing.tpl
  *
@@ -37,6 +35,4 @@
 {include file="author/submission/proofread.tpl"}
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/author/submissionEditing.tpl -->
 

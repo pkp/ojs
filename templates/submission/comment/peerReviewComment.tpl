@@ -1,5 +1,3 @@
-<!-- templates/submission/comment/peerReviewComment.tpl -->
-
 {**
  * comment.tpl
  *
@@ -107,6 +105,4 @@ window.opener.location.reload();
 {/if}
 
 {include file="submission/comment/footer.tpl"}
-
-<!-- / templates/submission/comment/peerReviewComment.tpl -->
 

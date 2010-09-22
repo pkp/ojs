@@ -8,7 +8,6 @@
  *}
 {if $omitWrapper neq 'true'}
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- plugins/generic/counter/reportxml.tpl -->
 <Reports xmlns="http://www.niso.org/schemas/counter"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.niso.org/schemas/counter http://www.niso.org/schemas/sushi/counter3_0.xsd">

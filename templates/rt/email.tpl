@@ -1,5 +1,3 @@
-<!-- templates/rt/email.tpl -->
-
 {**
  * email.tpl
  *
@@ -167,6 +165,4 @@ function deleteAttachment(fileId) {
 {assign var=omitCloseButton value=1}
 
 {include file="rt/footer.tpl"}
-
-<!-- / templates/rt/email.tpl -->
 

@@ -1,5 +1,3 @@
-<!-- templates/rt/captureCite.tpl -->
-
 {**
  * captureCite.tpl
  *
@@ -37,6 +35,4 @@
 <div class="separator"></div>
 
 {include file="rt/footer.tpl"}
-
-<!-- / templates/rt/captureCite.tpl -->
 

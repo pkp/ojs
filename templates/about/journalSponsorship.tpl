@@ -1,5 +1,3 @@
-<!-- templates/about/journalSponsorship.tpl -->
-
 {**
  * journalSponsorship.tpl
  *
@@ -66,6 +64,4 @@
 {/if}
 
 {include file="common/footer.tpl"}
-
-<!-- / templates/about/journalSponsorship.tpl -->
 

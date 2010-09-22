@@ -1,5 +1,3 @@
-<!-- templates/subscription/subscriptionFormUser.tpl -->
-
 {**
  * subscriptionForm.tpl
  *
@@ -89,6 +87,4 @@
 		</select>
 	</td>
 </tr>
-
-<!-- / templates/subscription/subscriptionFormUser.tpl -->
 
