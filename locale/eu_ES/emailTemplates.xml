@@ -887,4 +887,21 @@ Harpidetza hau ikusi edo editatzeko, erabili ondorengo URLa.
 Harpidetza URLa: {$subscriptionUrl}</body>
 		<description>Mezu honek Harpidetza-kudeatzaileari jakinarazten dio erakunde-harpidetza bat berritu dutela linean. Harpidetza-datuen laburpena ematen du eta berritutako harpidetzara bizkor joateko esteka.</description>
 	</email_text>
+	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
+		<subject>Aipuak editatzea</subject>
+		<body>{$authorFirstName} jauna/andrea,
+
+Mesedez, egiaztatu edo emango al zeniguke zure {$articleTitle} artikuluan agertzen den aipu egokia honako erreferentzia honetarako?
+
+
+{$rawCitation} 
+
+
+Eskerrik asko!
+
+
+{$userFirstName}
+Zuzentzailea, {$journalName}</body>
+		<description>Mezu elektroniko honekin zuzentzaileek erreferentziei buruzko informazio osagarria eskatzen diete egileei.</description>
+	</email_text>
 </email_texts>

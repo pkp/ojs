@@ -1116,5 +1116,10 @@ Balidazioak huts egin dezake bilaketa egiteko inprimaki-datuak bidaltzea eskatze
 	<message key="notification.type.submissions">Aurkezpenen gertaerak</message>
 	<message key="notification.type.suppFileModified">"{$param}'s" artikuluaren fitxategi osagarriak aldatu dira.</message>
 	<message key="notification.type.userComment">Irakurle batek iruzkin bat egin du  "{$param}" artikuluari buruz.</message>
+	<message key="user.authorization.copyeditorAssignmentMissing">Sarbidea ukatuta! Ez zaizu esleitu artikulu honen zuzenketa egitea.</message>
+	<message key="user.authorization.noJournal">Ez dago aldizkaririk testuinguruan!</message>
+	<message key="user.authorization.sectionAssignment">Zure atalekoa ez den artikulu batean sartu nahi duzu.</message>
+	<message key="user.authorization.invalidCopyditorSubmission">Zuzentzailearen aurkezpena ez da baliozkoa edo ez da kontsultatu zuzentzailearen aurkezpenik!</message>
+	<message key="user.authorization.invalidSectionEditorSubmission">Ataleko editorearen aurkezpena ez da baliozkoa edo ez da kontsultatu Ataleko editorearen aurkezpenik!</message>
 </locale>
 
