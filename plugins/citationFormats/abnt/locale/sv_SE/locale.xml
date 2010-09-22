@@ -20,5 +20,5 @@
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">Det här tillägget implementerar ABNT citationsformat. Om det finns problem med formatet kontrollera bugrapport på adressen http://pkp.sfu.ca/bugzilla/show_bug.cgi?id=4645</message>
 	<message key="plugins.citationFormat.abnt.location">North America</message>
-	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Tillgänglig på: <a href="{$url}" target="_new">{$url}</a>. Senaste access: {$retrievedDate}]]></message>
+	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Tillgänglig på: &lt;<a href="{$url}" target="_new">{$url}</a>&gt;. Senaste access: {$retrievedDate}]]></message>
 </locale>

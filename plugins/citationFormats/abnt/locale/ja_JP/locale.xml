@@ -17,5 +17,5 @@
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">ABNT引用形式を実装します。</message>
 	<message key="plugins.citationFormat.abnt.location">北米</message>
-	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[入手先: <a href="{$url}" target="_new">{$url}</a>. 参照: {$retrievedDate}]]></message>
+	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[入手先: &lt;<a href="{$url}" target="_new">{$url}</a>&gt;. 参照: {$retrievedDate}]]></message>
 </locale>

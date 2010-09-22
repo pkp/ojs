@@ -16,7 +16,7 @@
 	<message key="plugins.citationFormats.abnt.description" >این پلاگین الگوی مرجع نویسی آ بی ان تی را اعمال میکند.</message>
 	<message key="plugins.citationFormat.abnt.location" >آمریکای شمالی</message>
 	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[قابل دسترسی در:
-<a href="{$url}" target="_new">{$url}</a>.
+&lt;<a href="{$url}" target="_new">{$url}</a>&gt;.
 تاریخ دسترسی:
 {$retrievedDate}]]></message>
 </locale>

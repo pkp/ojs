@@ -17,6 +17,6 @@
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">Plugin honek ABNT aipamenen formatua inplementatzen du.</message>
 	<message key="plugins.citationFormat.abnt.location">Ipar Amerika</message>
-	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Hemen dago erabilgarri: <a href="{$url}" target="_new">{$url}</a>. Atzitze-data: {$retrievedDate}]]></message>
+	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Hemen dago erabilgarri: &lt;<a href="{$url}" target="_new">{$url}</a>&gt;. Atzitze-data: {$retrievedDate}]]></message>
 </locale>
 

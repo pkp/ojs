@@ -17,5 +17,5 @@
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">本插件实现了ABNT引文格式(This plugin implements the ABNT citation format).</message>
 	<message key="plugins.citationFormat.abnt.location">北美</message>
-	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[可用(Available at): <a href="{$url}" target="_new">{$url}</a>. 访问日期: {$retrievedDate}]]></message>
+	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[可用(Available at): &lt;<a href="{$url}" target="_new">{$url}</a>&gt;. 访问日期: {$retrievedDate}]]></message>
 </locale>

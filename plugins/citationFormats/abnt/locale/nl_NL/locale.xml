@@ -19,5 +19,5 @@
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">Dize plugin implementeert het ABNT citatieformaat.</message>
 	<message key="plugins.citationFormat.abnt.location">Noord-Amerika</message>
-	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Beschikbaar op: <a href="{$url}" target="_new">{$url}</a>. Datum gebruik: {$retrievedDate}]]></message>
+	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Beschikbaar op: &lt;<a href="{$url}" target="_new">{$url}</a>&gt;. Datum gebruik: {$retrievedDate}]]></message>
 </locale>

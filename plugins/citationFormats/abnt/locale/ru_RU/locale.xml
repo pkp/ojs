@@ -17,5 +17,5 @@
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">Реализует формат ссылок ABNT.</message>
 	<message key="plugins.citationFormat.abnt.location">Северная Америка</message>
-	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Доступно на: <a href="{$url}" target="_new">{$url}</a>. Дата получения: {$retrievedDate}]]></message>
+	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Доступно на: &lt;<a href="{$url}" target="_new">{$url}</a>&gt;. Дата получения: {$retrievedDate}]]></message>
 </locale>

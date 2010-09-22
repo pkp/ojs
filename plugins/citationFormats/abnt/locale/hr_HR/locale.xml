@@ -17,5 +17,5 @@
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">Ovaj dodatak implementira ABNT bibliografski standard.</message>
 	<message key="plugins.citationFormat.abnt.location">Sjeverna amerika</message>
-	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Dostupno na: <a href="{$url}" target="_new">{$url}</a>. Posjećeno: {$retrievedDate}]]></message>
+	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Dostupno na: &lt;<a href="{$url}" target="_new">{$url}</a>&gt;. Posjećeno: {$retrievedDate}]]></message>
 </locale>
