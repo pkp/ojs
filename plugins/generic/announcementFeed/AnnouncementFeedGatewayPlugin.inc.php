@@ -44,15 +44,6 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 		return true;
 	}
 
-	/**
-	 * Get the name of this plugin. The name must be unique within
-	 * its category.
-	 * @return String name of plugin
-	 */
-	function getName() {
-		return 'AnnouncementFeedGatewayPlugin';
-	}
-
 	function getDisplayName() {
 		return Locale::translate('plugins.generic.announcementfeed.displayName');
 	}
@@ -66,7 +57,7 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 	 * @return object
 	 */
 	function &getAnnouncementFeedPlugin() {
-		$plugin =& PluginRegistry::getPlugin('generic', $this->pluginName);
+		$plugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		return $plugin;
 	}
 
