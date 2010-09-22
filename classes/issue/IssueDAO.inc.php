@@ -216,7 +216,11 @@ class IssueDAO extends DAO {
 			'UPDATE issues SET current = 0 WHERE journal_id = ? AND current = 1', $journalId
 		);
 		if ($issue) $this->updateIssue($issue);
-		$cache =& $this->_getCache();
+
+		$cache =& $this->_getCache('issues');
+		$cache->flush();
+		unset($cache);
+		$cache =& $this->_getCache('current');
 		$cache->flush();
 	}
 
@@ -394,7 +398,10 @@ class IssueDAO extends DAO {
 			$this->resequenceCustomIssueOrders($issue->getJournalId());
 		}
 
-		$cache =& $this->_getCache();
+		$cache =& $this->_getCache('issues');
+		$cache->flush();
+		unset($cache);
+		$cache =& $this->_getCache('current');
 		$cache->flush();
 	}
 
@@ -428,7 +435,10 @@ class IssueDAO extends DAO {
 		$this->update('DELETE FROM issues WHERE issue_id = ?', $issueId);
 		$this->resequenceCustomIssueOrders($issue->getJournalId());
 
-		$cache =& $this->_getCache();
+		$cache =& $this->_getCache('issues');
+		$cache->flush();
+		unset($cache);
+		$cache =& $this->_getCache('current');
 		$cache->flush();
 	}
 
