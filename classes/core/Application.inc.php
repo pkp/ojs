@@ -14,8 +14,6 @@
  *
  */
 
-// $Id$
-
 
 import('lib.pkp.classes.core.PKPApplication');
 
@@ -23,9 +21,6 @@ define('PHP_REQUIRED_VERSION', '4.2.0');
 
 define('ASSOC_TYPE_JOURNAL',  0x0000100);
 define('ASSOC_TYPE_ARTICLE',  0x0000101);
-define('ASSOC_TYPE_CITATION', 0x0000102);
-define('ASSOC_TYPE_AUTHOR',   0x0000103);
-define('ASSOC_TYPE_EDITOR',   0x0000104);
 
 define('CONTEXT_JOURNAL', 1);
 

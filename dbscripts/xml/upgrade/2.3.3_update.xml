@@ -59,7 +59,7 @@
 	<!-- Bug #5394: Implement controlled vocab meta-data properties (and the respective validation) -->
 	<sql>
 		<!-- Deleting existing entries for idempotence. This will change the IDs of vocab entries which
-		     could be a problem if referring data exists. We assume that this is an upgrade from a verion
+		     could be a problem if referring data exists. We assume that this is an upgrade from a version
 		     that doesn't know these vocabs at all so there should be no depending data. If this becomes
 		     a problem we can use ALTER TABLE AUTO_INCREMENT = ... -->
 		<query driver="mysql">
