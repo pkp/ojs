@@ -44,9 +44,10 @@ class IndividualSubscriptionForm extends SubscriptionForm {
 		}
 
 		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
-		$this->subscriptionTypes =& $subscriptionTypeDao->getSubscriptionTypesByInstitutional($journalId, false);
+		$subscriptionTypes =& $subscriptionTypeDao->getSubscriptionTypesByInstitutional($journalId, false);
+		$this->subscriptionTypes =& $subscriptionTypes->toArray();
 
-		$subscriptionTypeCount = $this->subscriptionTypes->getCount();
+		$subscriptionTypeCount = count($this->subscriptionTypes);
 		if ($subscriptionTypeCount == 0) {
 			$this->addError('typeId', Locale::translate('manager.subscriptions.form.typeRequired'));
 			$this->addErrorField('typeId');

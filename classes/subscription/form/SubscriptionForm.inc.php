@@ -29,7 +29,7 @@ class SubscriptionForm extends Form {
 	/** @var userId int the user associated with the subscription */
 	var $userId;
 
-	/** @var subscriptionTypes DAOResult subscription types */
+	/** @var subscriptionTypes Array of subscription types */
 	var $subscriptionTypes;
 
 	/** @var validStatus array valid subscription status values */

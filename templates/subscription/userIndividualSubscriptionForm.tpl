@@ -19,9 +19,9 @@
 <br/>
 
 {if $subscriptionId}
-<form method="post" action="{url op="payPurchaseSubscription" path="individual"|to_array:$subscriptionId}">
+<form method="post" name="subscriptionForm" action="{url op="payPurchaseSubscription" path="individual"|to_array:$subscriptionId}">
 {else}
-<form method="post" action="{url op="payPurchaseSubscription" path="individual"}">
+<form method="post" name="subscriptionForm" action="{url op="payPurchaseSubscription" path="individual"}">
 {/if}
 
 {include file="common/formErrors.tpl"}
@@ -30,9 +30,9 @@
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="typeId" required="true" key="user.subscriptions.form.typeId"}</td>
 	<td width="80%" class="value"><select name="typeId" id="typeId" class="selectMenu">
-		{iterate from=subscriptionTypes item=subscriptionType}
+		{foreach from=$subscriptionTypes item=subscriptionType}
 			<option value="{$subscriptionType->getTypeId()}"{if $typeId == $subscriptionType->getTypeId()} selected="selected"{/if}>{$subscriptionType->getSummaryString()|escape}</option>
-		{/iterate}
+		{/foreach}
 	</select></td>
 </tr>
 <tr valign="top">

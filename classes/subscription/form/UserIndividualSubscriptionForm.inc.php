@@ -28,7 +28,7 @@ class UserIndividualSubscriptionForm extends Form {
 	/** @var subscription the subscription being purchased */
 	var $subscription;
 
-	/** @var subscriptionTypes DAOResult subscription types */
+	/** @var subscriptionTypes Array subscription types */
 	var $subscriptionTypes;
 
 	/**
@@ -54,7 +54,8 @@ class UserIndividualSubscriptionForm extends Form {
 		$journalId = $journal->getId();
 
 		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
-		$this->subscriptionTypes =& $subscriptionTypeDao->getSubscriptionTypesByInstitutional($journalId, false, false);
+		$subscriptionTypes =& $subscriptionTypeDao->getSubscriptionTypesByInstitutional($journalId, false, false);
+		$this->subscriptionTypes =& $subscriptionTypes->toArray();
 
 		// Ensure subscription type is valid
 		$this->addCheck(new FormValidatorCustom($this, 'typeId', 'required', 'user.subscriptions.form.typeIdValid', create_function('$typeId, $journalId', '$subscriptionTypeDao =& DAORegistry::getDAO(\'SubscriptionTypeDAO\'); return ($subscriptionTypeDao->subscriptionTypeExistsByTypeId($typeId, $journalId) && $subscriptionTypeDao->getSubscriptionTypeInstitutional($typeId) == 0) && $subscriptionTypeDao->getSubscriptionTypeDisablePublicDisplay($typeId) == 0;'), array($journal->getId())));
