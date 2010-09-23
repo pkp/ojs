@@ -159,6 +159,7 @@ div.grid tr.category td {
 	vertical-align: middle;
 	overflow: hidden;
 	padding-left: 20px;
+	white-space: nowrap;
 }
 
 .row_controls a {
