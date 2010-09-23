@@ -242,7 +242,7 @@
 		{if !$introductionHide}
 			<div id="citationEditorTabIntroduction" class="main-tabs">
 				<div id="citationEditorIntroductionCanvas" class="canvas">
-					<div id="citationEditorIntroductionPane" class="pane text-pane">
+					<div id="citationEditorIntroductionPane" class="pane text-pane scrollable">
 						<div class="help-message">
 							{capture assign="citationSetupUrl"}{url page="manager" op="setup" path="3" anchor="metaCitationEditing"}{/capture}
 							{if $citationEditorConfigurationError}
