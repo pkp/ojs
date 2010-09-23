@@ -116,20 +116,50 @@
 		// Throbber feature (binds to ajaxAction()'s 'actionStart' event).
 		actionThrobber('#citationEditorDetailCanvas');
 
+		//
 		// Fullscreen feature.
+		//
+		/**
+		 * Opera has an ugly bug in connection with
+		 * vertical resize and absolute positioning.
+		 * This function works around this bug with an
+		 * equally ugly hack.
+		 */
+		var operaVerticalResizeBugWorkaround = function() {ldelim}
+			if ($.browser.opera) {ldelim}
+				// Opera needs to be remembered that the export
+				// pane is positioned absolutely.
+				// We do this by resizing, taking a breath so that
+				// Opera repaints and then resizing again.
+				$('#citationEditorExportPane>.scrollable').css('bottom', '29px');
+				setTimeout(function() {ldelim}
+					$('#citationEditorExportPane>.scrollable').css('bottom', '30px');
+				{rdelim}, 250);
+			{rdelim}
+		{rdelim};
+
 		var $citationEditor = $('#citationEditor');
 		var beforeFullscreen;
 		$('#fullScreenButton').click(function() {ldelim}
 			if ($citationEditor.hasClass('fullscreen')) {ldelim}
-				// Going back to normal: Restore saved values.
-				$citationEditor.removeClass('fullscreen');
+				// Going back to normal:
+				// 1) Unbind tab change event (for Opera compat).
+				$('.composite-ui>.ui-tabs').unbind('tabsselect');
+
+				// 2) Remove additional CSS.
+				$citationEditor
+					// Remove the fullscreen layout.
+					.removeClass('fullscreen')
+					// Remove IE7 width hack (see below, window resizing event handling for IE).
+					.css('width', '');
+
+				// 3) Restore original values.
 				$('.composite-ui>.ui-tabs').css('margin-top', beforeFullscreen.topMargin);
 				$('.composite-ui>.ui-tabs div.main-tabs').each(function() {ldelim}
-					$(this).css('height', beforeFullscreen.height);
+					$(this).height(beforeFullscreen.height);
 				{rdelim});
-				$('.composite-ui div.two-pane>div.left-pane .scrollable').first().css('height', beforeFullscreen.navHeight);
-
-				$('body').css('overflow', 'auto');
+				$('.composite-ui div.two-pane>div.left-pane .scrollable').first().height(beforeFullscreen.height-30);
+				$('body, html').css('overflow', 'auto'); // html for IE7, body for the rest
 				window.scroll(beforeFullscreen.x, beforeFullscreen.y);
 				$(this).text('{translate key="common.fullscreen"}');
 			{rdelim} else {ldelim}
@@ -137,43 +167,58 @@
 				// 1) Save current values.
 				beforeFullscreen = {ldelim}
 					topMargin: $('.composite-ui>.ui-tabs').css('margin-top'),
-					height: $('.composite-ui>.ui-tabs div.main-tabs').first().css('height'),
-					navHeight: $('.composite-ui div.two-pane>div.left-pane .scrollable').first().css('height'),
+					height: $('.composite-ui>.ui-tabs div.main-tabs').not('.ui-tabs-hide').height(),
 					x: $(window).scrollLeft(),
 					y: $(window).scrollTop()
 				{rdelim};
 
 				// 2) Set values needed to go fullscreen.
-				$('body').css('overflow', 'hidden');
+				$('body, html').css('overflow', 'hidden'); // html for IE7, body for the rest
 				$citationEditor.addClass('fullscreen');
 				$('.composite-ui>.ui-tabs').css('margin-top', '0');
 				canvasHeight=$(window).height()-$('ul.main-tabs').height();
 				$('.composite-ui>.ui-tabs div.main-tabs').each(function() {ldelim}
-					$(this).css('height', canvasHeight+'px');
+					$(this).height(canvasHeight);
 				{rdelim});
-				$('.composite-ui div.two-pane>div.left-pane .scrollable').first().css('height', (canvasHeight-30)+'px');
+				$('.composite-ui div.two-pane>div.left-pane .scrollable').first().height(canvasHeight-30);
 				window.scroll(0,0);
 				$(this).text('{translate key="common.fullscreenOff"}');
+
+				// 3) Bind event to tab change (for Opera compat).
+				$('.composite-ui>.ui-tabs').bind('tabsselect', function() {ldelim}
+					window.scroll(0,0);
+				{rdelim});
 			{rdelim}
 
 			// Resize 2-pane layout.
 			$('.two-pane').css('width', '100%').triggerHandler('splitterRecalc');
+
+			// Opera vertical resize bug workaround.
+			operaVerticalResizeBugWorkaround();
 		{rdelim});
 
 		// Resize citation editor in fullscreen mode
 		// when the browser window is being resized.
 		$(window).resize(function() {ldelim}
-			// Adjust editor height to new window height when in fullscreen mode. 
+			// Adjust editor height to new window height when in fullscreen mode.
 			if ($citationEditor.hasClass('fullscreen')) {ldelim}
+				// IE7 needs to be told explicitly that we
+				// really want to maintain 100% width.
+				$citationEditor.width($(window).width());
+
+				// Correctly adapt the height of scrollable areas.
 				canvasHeight=$(window).height()-$('ul.main-tabs').height();
 				$('.composite-ui>.ui-tabs div.main-tabs').each(function() {ldelim}
-					$(this).css('height', canvasHeight+'px');
+					$(this).height(canvasHeight);
 				{rdelim});
-				$('.composite-ui div.two-pane>div.left-pane .scrollable').first().css('height', (canvasHeight-30)+'px');
+				$('.composite-ui div.two-pane>div.left-pane .scrollable').first().height(canvasHeight-30);
 			{rdelim}
-			
+
 			// Adjust 2-pane layout to new window width.
 			$('.two-pane').css('width', '100%').triggerHandler('splitterRecalc');
+
+			// Opera vertical resize bug workaround.
+			operaVerticalResizeBugWorkaround();
 		{rdelim});
 	{rdelim});
 </script>
