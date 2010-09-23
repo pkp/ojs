@@ -44,10 +44,16 @@
 
 	<!-- Base Jquery -->
 	{if $allowCDN}<script src="http://www.google.com/jsapi"></script>
-	<script>
-		google.load("jquery", "{$smarty.const.CDN_JQUERY_VERSION}");
-		google.load("jqueryui", "{$smarty.const.CDN_JQUERY_UI_VERSION}");
-	</script>
+	<script type="text/javascript">{literal}
+		// Provide a local fallback if the CDN cannot be reached
+		if (typeof google == 'undefined') {
+			document.write(unescape("%3Cscript src='{/literal}{$baseUrl}{literal}/lib/pkp/js/lib/jquery/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
+			document.write(unescape("%3Cscript src='{/literal}{$baseUrl}{literal}/lib/pkp/js/lib/jquery/plugins/jqueryUi.min.js' type='text/javascript'%3E%3C/script%3E"));
+		} else {
+			google.load("jquery", "{/literal}{$smarty.const.CDN_JQUERY_VERSION}{literal}");
+			google.load("jqueryui", "{/literal}{$smarty.const.CDN_JQUERY_UI_VERSION}{literal}");
+		}
+	{/literal}</script>
 	{else}
 	<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/lib/jquery/jquery.min.js"></script>
 	<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/jqueryUi.min.js"></script>
