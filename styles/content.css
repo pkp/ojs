@@ -341,7 +341,7 @@ a.uploaded {
 .composite-ui>.ui-tabs ul.main-tabs a {
 	color: #CCCCCC;
 	font-size: 1.5em;
-	padding: 0.2em 3em;
+	padding: 0.2em 1em;
 }
 
 .composite-ui>.ui-tabs div.main-tabs {
