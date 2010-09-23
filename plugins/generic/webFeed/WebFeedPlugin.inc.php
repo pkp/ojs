@@ -19,15 +19,6 @@ import('lib.pkp.classes.plugins.GenericPlugin');
 
 class WebFeedPlugin extends GenericPlugin {
 	/**
-	 * Get the name of this plugin. The name must be unique within
-	 * its category.
-	 * @return String name of plugin
-	 */
-	function getName() {
-		return 'WebFeedBlockPlugin';
-	}
-
-	/**
 	 * Get the display name of this plugin
 	 * @return string
 	 */
