@@ -36,11 +36,6 @@ function initRelatedItems() {
 $(document).ready(function(){
 	var inlineStyle = ''; // Store the inline style that resizable creates, and reassign it when done with fullscreen
 
-	if($("#pluginMissing").is(":hidden")) {
-		$('#fullscreenShow').show();
-		$("#articlePdf").resizable({ containment: 'parent', handles: 'se' });
-	}
-
 	$('#sidebarToggle').click(function() {
 		$('#sidebar').toggle().toggleClass("sidebar-hidden");
 		$('#main').toggleClass("main-full");
@@ -51,6 +46,7 @@ $(document).ready(function(){
 		$("#articlePdf").removeAttr("style");  // Resizable doesn't work in fullscreen
 		$("#articlePdf").resizable("destroy");  // Resizable doesn't work in fullscreen
 		$("#articlePdf").addClass('fullscreen');
+		$("#fade").fadeIn(2000);
 		$("#fullscreenHide").show();
 		return false;
 	});
@@ -58,6 +54,7 @@ $(document).ready(function(){
 	$('#fullscreenHide').click(function() {
 		$("#articlePdf").attr("style", inlineStyle);
 		$("#articlePdf").removeClass('fullscreen');
+		$("#fade").hide();
 		$("#fullscreenHide").hide();
 		$("#articlePdf").resizable({ containment: 'parent', handles: 'se' }); // Reinitialize resizable
 		return false;

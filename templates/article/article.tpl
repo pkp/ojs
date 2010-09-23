@@ -14,15 +14,24 @@
 	{if $galley->isHTMLGalley()}
 		{$galley->getHTMLContents()}
 	{elseif $galley->isPdfGalley()}
-		<div id="articlePdf" class="ui-widget-content">
-			{url|assign:"pdfUrl" op="viewFile" path=$articleId|to_array:$galley->getBestGalleyId($currentJournal)}
-			<object id="pdfObject" type="application/pdf" data="{$pdfUrl}" width="99%" height="99%">
-				<div id="pluginMissing">{translate key="article.pdf.pluginMissing"}</div>
-			</object>
-			<br /><br />
-			{* The target="_parent" is for the sake of iphones, which present scroll problems otherwise. *}
-		</div>{* articlePdf *}
+		{url|assign:"pdfUrl" op="viewFile" path=$articleId|to_array:$galley->getBestGalleyId($currentJournal)}
+		<script type="text/javascript">{literal}
+			$(document).ready(function(){
+				var success = new PDFObject({ url: "{/literal}{$pdfUrl}{literal}" }).embed("articlePdf");
+				if (success) {
+					// PDF was embedded; enbale fullscreen mode and the resizable widget
+					$('#fullscreenShow').show();
+					$("#articlePdfResizer").resizable({ containment: 'parent', handles: 'se' });
+				}
+			});
+		{/literal}</script>
+		<div id="articlePdfResizer">
+			<div id="articlePdf" class="ui-widget-content">
+				{translate key="article.pdf.pluginMissing"}
+			</div>
+		</div>
 		<p>
+			{* The target="_parent" is for the sake of iphones, which present scroll problems otherwise. *}
 			<a class="action" target="_parent" href="{url op="download" path=$articleId|to_array:$galley->getBestGalleyId($currentJournal)}">{translate key="article.pdf.download"}</a>
 			<a class="action" href="#" id="fullscreenShow">{translate key="common.fullscreen"}</a>
 			<a class="action" href="#" id="fullscreenHide">{translate key="common.fullscreenOff"}</a>

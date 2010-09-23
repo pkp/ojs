@@ -105,6 +105,7 @@ class ArticleHandler extends Handler {
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->addJavaScript('js/articleView.js');
+		$templateMgr->addJavaScript('js/pdfobject.js');
 
 		if (!$galley) {
 			// Get the subscription status if displaying the abstract;
