@@ -67,13 +67,13 @@
 <tr valign="top">
 	<td><input type="radio" id="allIndividualSubscribers" name="whichUsers" value="allIndividualSubscribers"/></td>
 	<td class="label">
-		<label for="allIndividualSubscribers">{translate key="editor.notifyUsers.allIndividualSubscribers" count=$allSubscribersCount|default:0}</label>
+		<label for="allIndividualSubscribers">{translate key="editor.notifyUsers.allIndividualSubscribers" count=$allIndividualSubscribersCount|default:0}</label>
 	</td>
 </tr>
 <tr valign="top">
 	<td><input type="radio" id="allInstitutionalSubscribers" name="whichUsers" value="allInstitutionalSubscribers"/></td>
 	<td class="label">
-		<label for="allInstitutionalSubscribers">{translate key="editor.notifyUsers.allInstitutionalSubscribers" count=$allSubscribersCount|default:0}</label>
+		<label for="allInstitutionalSubscribers">{translate key="editor.notifyUsers.allInstitutionalSubscribers" count=$allInstitutionalSubscribersCount|default:0}</label>
 	</td>
 </tr>
 {/if}{* publishingMode is PUBLISHING_MODE_SUBSCRIPTION *}
