@@ -541,7 +541,7 @@ class Article extends Submission {
 	 * @param $idOnly boolean Return only file ID
 	 * @return ArticleFile
 	 */
-	function getFileBySignoffType($signoffType, $idOnly = false) {
+	function &getFileBySignoffType($signoffType, $idOnly = false) {
 		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 
