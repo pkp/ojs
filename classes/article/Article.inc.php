@@ -546,9 +546,15 @@ class Article extends Submission {
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 
 		$signoff = $signoffDao->getBySymbolic($signoffType, ASSOC_TYPE_ARTICLE, $this->getId());
-		if (!$signoff) return false;
+		if (!$signoff) {
+			$returner = false;
+			return $returner;
+		}
 
-		if ($idOnly) return $signoff->getFileId();
+		if ($idOnly) {
+			$returner = $signoff->getFileId();
+			return $returner;
+		}
 
 		$articleFile =& $articleFileDao->getArticleFile($signoff->getFileId(), $signoff->getFileRevision());
 		return $articleFile;
@@ -564,7 +570,10 @@ class Article extends Submission {
 		$userDao =& DAORegistry::getDAO('UserDAO');
 
 		$signoff = $signoffDao->getBySymbolic($signoffType, ASSOC_TYPE_ARTICLE, $this->getId());
-		if (!$signoff) return false;
+		if (!$signoff) {
+			$returner = false;
+			return $returner;
+		}
 
 		$user =& $userDao->getUser($signoff->getUserId());
 		return $user;
