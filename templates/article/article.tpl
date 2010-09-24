@@ -15,13 +15,25 @@
 		{$galley->getHTMLContents()}
 	{elseif $galley->isPdfGalley()}
 		{url|assign:"pdfUrl" op="viewFile" path=$articleId|to_array:$galley->getBestGalleyId($currentJournal)}
+		{translate|assign:"noPluginText" key='article.pdf.pluginMissing'}
 		<script type="text/javascript">{literal}
 			$(document).ready(function(){
-				var success = new PDFObject({ url: "{/literal}{$pdfUrl}{literal}" }).embed("articlePdf");
-				if (success) {
-					// PDF was embedded; enbale fullscreen mode and the resizable widget
-					$('#fullscreenShow').show();
-					$("#articlePdfResizer").resizable({ containment: 'parent', handles: 'se' });
+				if ($.browser.webkit) { // PDFObject does not correctly work with safari's built-in PDF viewer
+					var embedCode = "<object id='pdfObject' type='application/pdf' data='{/literal}{$pdfUrl}{literal}' width='99%' height='99%'><div id='pluginMissing'>{/literal}{$noPluginKey}{literal}</div></object>";
+					$("#articlePdf").html(embedCode);
+					if($("#pluginMissing").is(":hidden")) {
+						$('#fullscreenShow').show();
+						$("#articlePdf").resizable({ containment: 'parent', handles: 'se' });
+					} else { // Chrome Mac hides the embed object, obscuring the text.  Reinsert.
+						$("#articlePdf").html('{/literal}{$noPluginText}{literal}');
+					}
+				} else {
+					var success = new PDFObject({ url: "{/literal}{$pdfUrl}{literal}" }).embed("articlePdf");
+					if (success) {
+						// PDF was embedded; enbale fullscreen mode and the resizable widget
+						$('#fullscreenShow').show();
+						$("#articlePdfResizer").resizable({ containment: 'parent', handles: 'se' });
+					}
 				}
 			});
 		{/literal}</script>
