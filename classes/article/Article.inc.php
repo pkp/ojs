@@ -559,7 +559,7 @@ class Article extends Submission {
 	 * @param $signoffType string
 	 * @return User
 	 */
-	function getUserBySignoffType($signoffType) {
+	function &getUserBySignoffType($signoffType) {
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 		$userDao =& DAORegistry::getDAO('UserDAO');
 
