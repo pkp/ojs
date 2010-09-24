@@ -145,7 +145,7 @@ class RTDAO extends DAO {
 	function &getVersion($versionId, $journalId = null, $useCache = null) {
 		if ($useCache) {
 			$cache =& $this->_getVersionCache();
-			$returner =& $cache->get((int) $versionId . '-' . (int) $journalId);
+			$returner = $cache->get((int) $versionId . '-' . (int) $journalId);
 			return $returner;
 		}
 

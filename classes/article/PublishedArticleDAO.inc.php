@@ -236,7 +236,7 @@ class PublishedArticleDAO extends DAO {
 	function &getPublishedArticlesInSections($issueId, $useCache = false) {
 		if ($useCache) {
 			$cache =& $this->_getArticlesInSectionsCache();
-			$returner =& $cache->get($issueId);
+			$returner = $cache->get($issueId);
 			return $returner;
 		}
 
@@ -407,7 +407,7 @@ class PublishedArticleDAO extends DAO {
 	function &getPublishedArticleByArticleId($articleId, $journalId = null, $useCache = false) {
 		if ($useCache) {
 			$cache =& $this->_getPublishedArticleCache();
-			$returner =& $cache->get($articleId);
+			$returner = $cache->get($articleId);
 			if ($returner && $journalId != null && $journalId != $returner->getJournalId()) $returner = null;
 			return $returner;
 		}
@@ -466,7 +466,7 @@ class PublishedArticleDAO extends DAO {
 	function &getPublishedArticleByPublicArticleId($journalId, $publicArticleId, $useCache = false) {
 		if ($useCache) {
 			$cache =& $this->_getPublishedArticleCache();
-			$returner =& $cache->get($publicArticleId);
+			$returner = $cache->get($publicArticleId);
 			if ($returner && $journalId != null && $journalId != $returner->getJournalId()) $returner = null;
 			return $returner;
 		}

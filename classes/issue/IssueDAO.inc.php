@@ -50,7 +50,7 @@ class IssueDAO extends DAO {
 	function &getIssueById($issueId, $journalId = null, $useCache = false) {
 		if ($useCache) {
 			$cache =& $this->_getCache('issues');
-			$returner =& $cache->get($issueId);
+			$returner = $cache->get($issueId);
 			if ($returner && $journalId != null && $journalId != $returner->getJournalId()) $returner = null;
 			return $returner;
 		}
@@ -87,7 +87,7 @@ class IssueDAO extends DAO {
 	function &getIssueByPublicIssueId($publicIssueId, $journalId = null, $useCache = false) {
 		if ($useCache) {
 			$cache =& $this->_getCache('issues');
-			$returner =& $cache->get($publicIssueId);
+			$returner = $cache->get($publicIssueId);
 			if ($returner && $journalId != null && $journalId != $returner->getJournalId()) $returner = null;
 			return $returner;
 		}
@@ -188,7 +188,7 @@ class IssueDAO extends DAO {
 	function &getCurrentIssue($journalId, $useCache = false) {
 		if ($useCache) {
 			$cache =& $this->_getCache('current');
-			$returner =& $cache->get($journalId);
+			$returner = $cache->get($journalId);
 			return $returner;
 		}
 

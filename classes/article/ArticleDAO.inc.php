@@ -74,7 +74,7 @@ class ArticleDAO extends DAO {
 	function &getArticle($articleId, $journalId = null, $useCache = false) {
 		if ($useCache) {
 			$cache =& $this->_getCache();
-			$returner =& $cache->get($articleId);
+			$returner = $cache->get($articleId);
 			if ($returner && $journalId != null && $journalId != $returner->getJournalId()) $returner = null;
 			return $returner;
 		}

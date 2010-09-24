@@ -45,7 +45,7 @@ class SectionDAO extends DAO {
 	function &getSection($sectionId, $journalId = null, $useCache = false) {
 		if ($useCache) {
 			$cache =& $this->_getCache();
-			$returner =& $cache->get($sectionId);
+			$returner = $cache->get($sectionId);
 			if ($returner && $journalId != null && $journalId != $returner->getJournalId()) $returner = null;
 			return $returner;
 		}
