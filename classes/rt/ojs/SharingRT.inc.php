@@ -51,7 +51,7 @@ class SharingRT {
 				'h' => 16
 			),
 			'bookmark' => array (
-			'img' => 'lg-bookmark-en.gif',
+				'img' => 'lg-bookmark-en.gif',
 				'w' => 125,
 				'h' => 16
 			),
@@ -87,7 +87,7 @@ class SharingRT {
 	function sharingButtonImage($journalRt) {
 		$btnStyle = $journalRt->getSharingButtonStyle();
 		if ($journalRt->getSharingLanguage() != 'en') {
-			if ($btnStyle == 'bookmark' || $btnStyle == 'adthis' || $btnStyle == 'bookmark-sm') {
+			if ($btnStyle == 'bookmark' || $btnStyle == 'addthis' || $btnStyle == 'bookmark-sm') {
 				$btnStyle = 'share';
 			}
 		}
@@ -97,10 +97,9 @@ class SharingRT {
 		}
 		$btnRecord = $btnStyles[$btnStyle];
 		$btnUrl = (strpos(trim($btnRecord['img']), 'http://') !== 0 ? "http://s7.addthis.com/static/btn/" : "") . $btnRecord['img'];
-		$btnUrl = str_replace('%lang%', SharingRT :: sharingLocale($journalRt->getSharingLanguage()), $btnUrl);
+		$btnUrl = str_replace('%lang%', SharingRT::sharingLocale($journalRt->getSharingLanguage()), $btnUrl);
 		$btnWidth = $btnRecord['w'];
 		$btnHeight = $btnRecord['h'];
-		$btnHeight = Locale :: getLocale();
 		return array (
 			$btnUrl,
 			$btnWidth,
@@ -117,8 +116,8 @@ class SharingRT {
 	 * @param $default string
 	 */
 	function sharingLocale($default) {
-		//getLocal() returns a string like 'en_US'
-		$locale = Locale :: getLocale();
+		// getLocale() returns a string like 'en_US'.
+		$locale = Locale::getLocale();
 		$lang = substr($locale, 0, 2);
 		$languages = SharingRT::getLanguages();
 		if (isset ($languages[$lang])) {
