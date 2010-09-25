@@ -82,10 +82,14 @@
 		</div>
 	{/if}
 
-	{if $article->getCitations()}
+	{if $citationFactory}
 		<h4>{translate key="submission.citations"}</h4>
 		<br />
-		<div>{$article->getCitations()|strip_unsafe_html|nl2br}</div>
+		<div>
+			{iterate from=citationFactory item=citation}
+				<p>{$citation->getRawCitation()|strip_unsafe_html}</p>
+			{/iterate}
+		</div>
 		<br />
 	{/if}
 

@@ -61,7 +61,7 @@ class ArticleHandler extends Handler {
 		$journalRt = $rtDao->getJournalRTByJournal($journal);
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$section =& $sectionDao->getSection($article->getSectionId(), $journal->getJournalid(), true);
+		$section =& $sectionDao->getSection($article->getSectionId(), $journal->getId(), true);
 
 		$version = null;
 		if ($journalRt->getVersion()!=null && $journalRt->getDefineTerms()) {
@@ -145,6 +145,14 @@ class ArticleHandler extends Handler {
 				$templateMgr->assign('height', $article->getLocalizedHeight());
 				$templateMgr->assign('coverPageAltText', $article->getLocalizedCoverPageAltText());
 			}
+
+			// References list.
+			// FIXME: We only display the edited raw citations right now. We also want
+			// to allow for generated citations to be displayed here (including a way for
+			// the reader to choose any of the installed citation styles for output), see #5938.
+			$citationDao =& DAORegistry::getDAO('CitationDAO'); /* @var $citationDao CitationDAO */
+			$citationFactory =& $citationDao->getObjectsByAssocId(ASSOC_TYPE_ARTICLE, $article->getId());
+			$templateMgr->assign('citationFactory', $citationFactory);
 
 			// Increment the published article's abstract views count
 			if (!$request->isBot()) {

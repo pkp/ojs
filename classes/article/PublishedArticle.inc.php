@@ -241,7 +241,7 @@ class PublishedArticle extends Article {
 			$publicArticleId = $this->getPublicArticleId();
 			if (!empty($publicArticleId)) return $publicArticleId;
 		}
-		return $this->getArticleId();
+		return $this->getId();
 	}
 
 	/**
