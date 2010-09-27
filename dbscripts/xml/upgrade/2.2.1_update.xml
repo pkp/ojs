@@ -8,6 +8,8 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * 2.2.1 database updates XML file.
+  * WARNING: This script is only executed on the condition that the theses
+  * table exists. (See dbscripts/xml/upgrade.xml.)
   *
   * $Id$
   -->

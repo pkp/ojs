@@ -163,7 +163,9 @@
 	</upgrade>
 
 	<upgrade minversion="2.0.0.0" maxversion="2.2.0.0">
-		<data file="dbscripts/xml/upgrade/2.2.1_update.xml" />
+		<!-- Only execute the upgrade statements if the theses table exists -->
+		<data file="dbscripts/xml/upgrade/2.2.1_update.xml" condition="return $installer->columnExists('theses', 'thesis_id');" />
+
 		<code function="renamePayPerViewSettings" />
 		<code function="clearDataCache" />
 		<note file="docs/release-notes/README-2.2.1" />
