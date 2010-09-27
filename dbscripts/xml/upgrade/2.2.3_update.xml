@@ -14,6 +14,6 @@
 <data>
 	<!-- Bug #3791: Author country is sometimes null, sometimes empty. Disambiguate. -->
 	<sql>
-		<query>UPDATE article_authors SET country = '' WHERE country IS NULL</query>
+		<query>UPDATE authors SET country = '' WHERE country IS NULL</query>
 	</sql>
 </data>
