@@ -743,6 +743,42 @@ class Upgrade extends Installer {
 
 		return true;
 	}
+
+	/**
+	 * For 2.3.3 upgrade:  Migrate reviewing interests from free text to controlled vocab structure
+	 * @return boolean
+	 */
+	function migrateReviewingInterests() {
+		$userDao =& DAORegistry::getDAO('UserDAO');
+		$interestDao =& DAORegistry::getDAO('InterestDAO');
+
+		$result =& $userDao->retrieve('SELECT setting_value as interests, user_id FROM user_settings WHERE setting_name = ?', 'interests');
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+
+			if(!empty($row['interests'])) {
+				$userId = $row['user_id'];
+				$interests = explode(',', $row['interests']);
+
+				if (empty($interests))  $interests = array();
+				elseif (!is_array($interests)) $interests = array($interests);
+
+				// Trim whitespace from the beginning and end of each element
+				foreach($interests as $key => $interest) {
+					$interests[$key] = trim($interest);
+				}
+
+				$interestDao->insertInterests($interests, $userId, false);
+			}
+
+			$result->MoveNext();
+		}
+
+		// Remove old interests from the user_setting table
+		$userDao->update('DELETE FROM user_settings WHERE setting_name = ?', 'interests');
+
+		return true;
+	}
 }
 
 ?>

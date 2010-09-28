@@ -219,6 +219,7 @@
 		<code function="addPluginVersions" />
 		<code function="installFilterTemplates" />
 		<code function="installEmailTemplate" key="CITATION_EDITOR_AUTHOR_QUERY" locales="en_US" />
+		<code function="migrateReviewingInterests" />
 		<data file="dbscripts/xml/upgrade/2.3.3_update.xml" />
 	</upgrade>
 </install>
