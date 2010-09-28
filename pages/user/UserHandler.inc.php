@@ -277,10 +277,10 @@ class UserHandler extends Handler {
 	 * Become a given role.
 	 */
 	function become($args) {
-		parent::validate(true, true);
+		parent::validate(true);
+
 		$journal =& Request::getJournal();
 		$user =& Request::getUser();
-		if (!$user) Request::redirect(null, null, 'index');
 
 		switch (array_shift($args)) {
 			case 'author':
