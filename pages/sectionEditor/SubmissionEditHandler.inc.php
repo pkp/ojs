@@ -481,7 +481,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	/**
 	 * Create a new user as a reviewer.
 	 */
-	function createReviewer(&$args, &$request) {
+	function createReviewer($args, &$request) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		$submission =& $this->submission;

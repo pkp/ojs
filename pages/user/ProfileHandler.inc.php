@@ -27,7 +27,7 @@ class ProfileHandler extends UserHandler {
 	/**
 	 * Display form to edit user's profile.
 	 */
-	function profile(&$args, &$request) {
+	function profile($args, &$request) {
 		$this->validate();
 		$this->setupTemplate(true);
 
