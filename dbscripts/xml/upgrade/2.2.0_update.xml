@@ -23,7 +23,7 @@
 		<query driver="postgres7">SELECT SETVAL('articles_article_id_seq', (SELECT MAX(article_id) FROM articles)+1)</query>
 		<query driver="postgres7">SELECT SETVAL('published_articles_pub_id_seq', (SELECT MAX(pub_id) FROM published_articles)+1)</query>
 		<query driver="postgres7">SELECT SETVAL('comments_comment_id_seq', (SELECT MAX(comment_id) FROM comments)+1)</query>
-		<query driver="postgres7">SELECT SETVAL('article_authors_author_id_seq', (SELECT MAX(author_id) FROM authors)+1)</query><!-- WARNING: article_authors_author_id_seq will be named for article_authors, although the table has been renamed to articles. -->
+		<query driver="postgres7">SELECT SETVAL('authors_author_id_seq', (SELECT MAX(author_id) FROM authors)+1)</query>
 		<query driver="postgres7">SELECT SETVAL('article_files_file_id_seq', (SELECT MAX(file_id) FROM article_files)+1)</query>
 		<query driver="postgres7">SELECT SETVAL('article_supplementary_files_supp_id_seq', (SELECT MAX(supp_id) FROM article_supplementary_files)+1)</query>
 		<query driver="postgres7">SELECT SETVAL('article_notes_note_id_seq', (SELECT MAX(note_id) FROM article_notes)+1)</query>
