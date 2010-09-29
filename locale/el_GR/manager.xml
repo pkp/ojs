@@ -679,4 +679,12 @@
 	<message key="manager.subscriptionTypes.form.subscriptions">Συνδρομές</message>
 	<message key="manager.subscriptionTypes.form.individual">Ατομική (οι χρήστες ταυτοποιούνται μέσω σύνδεσης)</message>
 	<message key="manager.subscriptionTypes.form.options">Επιλογές</message>
+	<message key="manager.groups.publishEmails">Δημοσίευση διευθύνσεων email μελών</message>
+	<message key="manager.language.submissions">Υποβολές</message>
+	<message key="manager.plugins.invalidPluginArchive">Το αρχείο Plugin που φορτώθηκε δεν περιέχει έναν φάκελλο που να αντιστοιχεί στο όνομα του plugin.</message>
+	<message key="manager.plugins.tarCommandNotFound">Η εντολή tar δεν είναι διαθέσιμη. Παρακαλούμε διορθώστε τις ρυθμίσεις στο αρχείο  "config.inc.php".</message>
+	<message key="manager.plugins.versionFileInvalid">Το αρχείο version.xml στον φάκελλο των plugin περιέχει μη έγκυρα δεδομένα.</message>
+	<message key="manager.reviewFormElements.included">Περιλαμβάνονται στο μήνυμα προς τον Συγγραφέα</message>
+	<message key="manager.setup.doiReassign">Επανεκχώριση DOIs</message>
+	<message key="manager.setup.doiReassign.description">Αν αλλάξετε τις ρυθμίσεις των DOI, τα DOIs που έχετε ήδη εκχωρήσει/αναθέσει δεν θα επηρεαστούν. Μόλις οι νέες ρυθμίσεις αποθηκευτούν, χρησιμοποιήστε αυτό το κουμπί για να καθαρίσετε όλα τα υφιστάμενα DOIs ώστε οι νέες ρυθμίσεις να εφαρμοστούν στα υφιστάμενα άρθρα.</message>
 </locale>

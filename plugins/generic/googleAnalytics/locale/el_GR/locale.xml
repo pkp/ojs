@@ -37,4 +37,7 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Επιλέξτε ένα tracking code για χρήση.</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Legacy tracking code (urchin.js)</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Νέο tracking code (urchin.js)</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount">Αριθμός λογαριασμού στο Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount.description">Για την ανίχνευση της αναγνωσιμότητας ενός δημοσιευμένου άρθρου με την χρήση του Google Analytics, εισάγετ έναν αριθμό λογαριασμού (π.χ. UA-xxxxxx-x).</message>
+	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Ένας ή περισσότεροι αριθμοί λογαριασμού στην Google Analytics που χρησιμοποιήθηκαν για συγγραφείς υποβολών δεν είναι έγκυροι.</message>
 </locale>

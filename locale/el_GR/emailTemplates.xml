@@ -871,4 +871,18 @@ URL Συνδρομής: {$subscriptionUrl}</body>
 
 URL συνδρομής: {$subscriptionUrl}</body>
 	</email_text>
+	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
+		<subject>Επεξεργασία Παραπομπής</subject>
+		<body>{$authorFirstName},
+
+Θα σας παρακαλούσαμε να επιβεβαιώσετε ή να μας παρέχετε τα ορθά στοιχεία  για την παρακάτω παραπομπή του άρθρου σας με τίτλο {$articleTitle}:
+
+{$rawCitation}
+
+Σας ευχαριστούμε πολύ!
+
+{$userFirstName}
+{$journalName}</body>
+		<description>Αυτό το μήνυμα επιτρέπει στους επιμελητές κειμένων να ζητούν πρόσθετε πληροφορίες σχετικά με τις παραπομπές άρθρων από τους συγγραφείς.</description>
+	</email_text>
 </email_texts>

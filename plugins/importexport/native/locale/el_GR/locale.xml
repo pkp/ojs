@@ -132,4 +132,5 @@ Commands:
 	<message key="plugins.importexport.native.import.success.description">Η εισαγωγή των δεδομένων ήταν επιτυχημένη. Τα στοιχεία που εισήχθηκαν επιτυχώς παρατίθενται παρακάτω.</message>
 
 	<message key="plugins.importexport.native.error.uploadFailed">Το ανέβασμα απέτυχε. Σιγουρευτείτε το ανέβασμα αρχείων επιτρέπεται στον εξυπηρετητή σας και ότι το αρχείο δεν είναι υπερβολικά μεγάλο σύμφωνα με τις ρυθμίσεις του web εξπυηρετητή σας και της PHP.</message>
+	<message key="plugins.importexport.native.import.error.articleAuthorAffiliationLocaleUnsupported">Το περιοδικό δεν υποστηρίζει την συσχέτιση με έναν φορέα του συγγραφέα  "{$authorFullName}" του άρθρου "{$articleTitle}" στο τεύχος "{$issueTitle}" και στο αρχείο τοπικών ρυθμίσεων ("{$locale}").</message>
 </locale>

@@ -32,4 +32,8 @@
 	<message key="plugins.generic.referral.confirmDelete">Είστε σίγουροι ότι επιθυμείτε να διαγράψετε αυτό το refback;</message>
 	<message key="plugins.generic.referral.nameRequired">Απαιτείται ένα όνομα refback</message>
 	<message key="plugins.generic.referral.urlRequired">Απαιτείται ένα refback URL.</message>
+	<message key="plugins.generic.referral.settings">Ρυθμίσεις Plugin Παραπομπής</message>
+	<message key="plugins.generic.referral.settings.description">Το Plugin Παραπομπής συλλαμβάνει URLs που συνδέουν δημοσιευμένα άρθρα του περιοδικού ώστε να μέσω κατάλληλης επιμέλειας από τον Συγγραφέα να εκδοθούν. Αυτή η φόρμα επιτρέπει στον διαχειριστή του περιοδικού να ελέγχει πως αυτοί οι σύνδεσμοι "συλλαμβάνονται".</message>
+	<message key="plugins.generic.referral.excusions">Εξαιρέσεις</message>
+	<message key="plugins.generic.referral.exclusions.description"><![CDATA[Εισάγετε μια λίστα από κανονικές εκφράσεις, μία ανά γραμμή, ώστε να χρησιμοποιηθούν ως εξαιρέσεις στην καταγραφή παραπομπών. Αυτό θα χρησιμεύσει για να αποτρέψει τα αιτήματα αναζήτησης στις μηχανές αναζήτησης να αχρηστεύσουν  την λίστα παραπομπών/αναφορών. Για περισσότερες πληροφορίες, δείτε <a href="http://ca.php.net/manual/en/ref.pcre.php" target="_new">http://ca.php.net/manual/en/ref.pcre.php</a>.]]></message>
 </locale>

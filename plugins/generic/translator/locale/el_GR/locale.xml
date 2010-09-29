@@ -77,4 +77,5 @@
 	<message key="plugins.generic.translator.localeKey.description">Εισάγετε ένα κλειδί τοπικής ρύθμισης για αναζήτηση.</message>
 	<message key="plugins.generic.translator.fileNotWriteable">Αυτό το αρχείο τοπικών ρυθμίσεων δεν είναι εγράψιμο από τον εξυπηρετητή. Οι αλλαγές που θα κάνετε δεν θα αποθηκευτούν.</message>
 	<message key="plugins.generic.translator.filesNotWriteable">Αυτά τα αρχεία τοπικών ρυθμίσεων δεν είναι εγράψιμα από τον εξυπηρετητή. Οι αλλαγές που θα κάνετε δεν θα αποθηκευτούν.</message>
+	<message key="plugins.generic.translator.tarMissing">Η λειτουργία εξαγωγής αυτού του plugin απενεργοποιήθηκε γιατί το διαμορφωμένο tar binary δεν βρέθηκε στο σύστημα. Παρακαλούμε ελέγξτε αν το tar πρόγραμμα είναι εγκατεστημένο και μετά διαμορφώστε ανάλογα την διαδρομή στο tar binary στην αντίστοιχη ενότητα του αρχείου config.inc.php's [cli]!</message>
 </locale>

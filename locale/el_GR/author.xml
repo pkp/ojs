@@ -124,4 +124,7 @@
 	<message key="author.submissions.queuedEditingProofread">Προς Επιμέλεια: Έχει γίνει αίτημα για Επιμέλεια Τυπογραφικού Δοκιμίου</message>
 	<message key="author.submit.reorder">Αναδιάτασξη ονόματος συγγραφέα</message>
 	<message key="author.submit.form.wordCountAlert">Έχετε ξεπεράσει το μέγιστο αριθμό λέξεων για περιλήψεις αυτής της ενότητας.</message>
+	<message key="author.submit.submissionLocale">Γλώσσα υποβολής</message>
+	<message key="author.submit.submissionLocaleDescription">Το περιοδικό δέχεται υποβολές σε πολλές γλώσσεες. Επιλέξτε την κύρια γλώσσα της υποβολής από το παρακάτω μενού.</message>
+	<message key="author.submit.form.localeRequired">Παρακαλούμε επιλέξτε μια γλώσσα υποβολής.</message>
 </locale>

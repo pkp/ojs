@@ -15,4 +15,5 @@
 <locale name="el_GR" full_name="Greek">
 	<message key="plugins.block.keywordCloud.description">Αυτό το plugin παρέχει ένα  tag cloud με λέξεις κλειδιά για ένα άρθρο.</message>
 	<message key="plugins.block.keywordCloud.title">Λέξεις κλειδιά</message>
+	<message key="plugins.block.keywordCloud.displayName">Blocl Νέφους Λέξεων Κλειδιών</message>
 </locale>

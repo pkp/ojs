@@ -28,4 +28,5 @@
 	<message key="plugins.generic.customBlock.editContent">Επεξεργασία περιεχομένου πλαϊνής μπάρας</message>
 	<message key="plugins.generic.customBlock.contentRequired">Απαιτείται η ύπαρξη περιεχομένου. Αν επιθυμείτε να διαγράψετε αυτό το block, μπορείτε να το κάνετε με το Block Manager Plugin ή απο-επιλέγοντας το block στο Βήμα 5 στην Οργάνωση του περιοδικού.</message>
 	<message key="plugins.generic.customBlock.edit">Επεξεργασία</message>
+	<message key="plugins.generic.customBlockManager.description">Αυτό το Plugin σας επιτρέπει να διαμορφώνετε δικά σας block στην πλαϊνή μπάρα. Μπορείτε να διαμορφώσετε κατάλληλα τα block μέσω των ρυθμίσεων κάθε plugin που δημιουργείτε εδώ.</message>
 </locale>

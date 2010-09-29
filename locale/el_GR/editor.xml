@@ -202,4 +202,10 @@
 	<message key="editor.issues.unpublishIssue">Μη Δημοσιευμένο Τεύχος</message>
 	<message key="editor.issues.confirmUnpublish">Είστε σίγουροι ότι θέλετε να αποσύρετε αυτό το δημοσιευμένο τεύχος;</message>
 	<message key="editor.article.archiveSubmission">Απόρριψη και Αρχειοθέτηση Υποβολής</message>
+	<message key="editor.submissionReview.cannotSendToCopyediting">Πριν στείλετε μια υποβολή στον Επιμελητή Κειμένου, χρησιμοποιήστε τον σύνδεσμο Ενημέρωση Συγγραφέα για να τον ενημερώσετε για την απόφαση της αξιολόγησης και επιλέξτε την έκδοση του άρθρου για αποστολή.</message>
+	<message key="editor.submissionReview.sendToCopyediting">Αποστολή για Επιμέλεια Κειμένου</message>
+	<message key="editor.notifyUsers.allReaders">Όλοι οι αναγνώστες ({$count} χρήστες)</message>
+	<message key="editor.notifyUsers.allAuthors">Όλοι οι δημοσιευμένοι συγγραφείς ({$count} χρήστες)</message>
+	<message key="editor.notifyUsers.allIndividualSubscribers">Όλοι οι μεμονωμένοι αναγνώστες ({$count} χρήστες)</message>
+	<message key="editor.notifyUsers.allInstitutionalSubscribers">Όλοι ιδρυματικοί συνδρομητές ({$count} χρήστες)</message>
 </locale>

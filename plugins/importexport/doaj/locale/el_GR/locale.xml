@@ -19,8 +19,7 @@
 	
 	<message key="plugins.importexport.doaj.export">Εξαγωγή δεδομένων του περιοδικού στο DOAJ</message>
 	<message key="plugins.importexport.doaj.export.journal">Εξαγωγή περιοδικού</message>
-	<message key="plugins.importexport.doaj.export.email">Αποστολή Email στον αντιπρόσωπο του DOAJ</message>
 	<message key="plugins.importexport.doaj.export.journalInfo">Εξαγωγή πληροφοριών άρθρου σε XML για αρχειοθέτηση στο DOAJ</message>
-	<message key="plugins.importexport.doaj.export.emailInfo">Για την προβολή του περιοδικού σας στο DOAJ, σας παρακαλούμε υποβάλλετε αυτή την φόρμα στο DOAJ, συμπληρώνοντας τα κενά πεδία όσο καλύτεροα μπορείτε.</message>
-
+	<message key="plugins.importexport.doaj.export.contact">Επικοινωνήστε με το DOAJ</message>
+	<message key="plugins.importexport.doaj.export.contactInfo">Για να εξεταστεί η ευρετηρίαση του περιοδικού σας στο DOAJ, παρακαλούμε υποβάλλεται αυτή την μερικώς συμπληρωμένη φόρμα, αφού πρώτα συμπληρώσετε τα στοιχεία που λείπουν.</message>
 </locale>

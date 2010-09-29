@@ -985,7 +985,6 @@
 	<message key="help.searchReturnResults">Επιστροφή στα αποτελέσματα της αναζήτησης</message>
 	<message key="payment.type.purchaseArticle">Εισφορά αγοράς άρθρου</message>
 	<message key="article.article">Άρθρο</message>
-	<message key="article.citations">Αναφορές</message>
 	<message key="user.manageMySubscriptions">Διαχείριση των Συνδρομών μου</message>
 	<message key="subscriptionTypes.currency">Νόμισμα</message>
 	<message key="subscriptionTypes.year">έτος</message>
@@ -1077,4 +1076,21 @@
 	<message key="notification.type.submissions">Γεγονότα Υποβολής</message>
 	<message key="notification.type.suppFileModified">Έχουν μεταβληθεί τα συμπληρωματικά αρχεία της "{$param}".</message>
 	<message key="notification.type.userComment">Ένας αναγνώστης έχει κάνει ένα σχόλιο για το "{$param}"</message>
+	<message key="user.register.reviewerInterests">Προσδιορίστε τα ενδιαφέροντα αξιολόγησης (θεματικές περιοχές και ερευνητικές μέθοδοι):</message>
+	<message key="user.subscriptions.subscriptionStatus">Κατάσταση Συνδρομής</message>
+	<message key="user.subscriptions.statusInformation">Οι ενεργές και μη συνδρομές παρασιάζονται παρακάτω μαζί με την ημερομηνία λήξης τους. Επιπρόσθετα οι παρακάτω πληροφορίες μπορούν να συμπερλιηφθούν για την κατάσταση κάθε συνδρομής.</message>
+	<message key="user.subscriptions.status">Κατάσταση</message>
+	<message key="user.subscriptions.statusDescription">Περιγραφή</message>
+	<message key="user.subscriptions.status.needsInformationDescription">Απαιτούνται πρόσθετες πληροφορίες πριν ενεργοποιηθεί η πρόσβαση</message>
+	<message key="user.subscriptions.status.needsApprovalDescription">Η συνδρομή θα πρέπει να ελεγχθεί πρι ενεργοποιηθεί</message>
+	<message key="user.subscriptions.status.awaitingManualPaymentDescription">Η χειρωνακτική πληρωμή έχει ξεκινήσει αλλά δεν έχει ακόμα παραληφθεί</message>
+	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">Μια online πληρωμή έχει ξεκινήσει, αλλά ακυρώθηκε ή δεν ολοκληρώθηκε</message>
+	<message key="article.pdf.download">Κατεβάστε αυτό το αρχείο PDF</message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>Το αρχείο PDF που επιλέξατε αθ πρέπει να φορτωθείεδώ αν ο Web browser σας έχει εγκατεστημένο ένα PDF plug-in ανάγνωσης τέτοιων αρχείων (π.χ. μια πρόσφατη έκδοση του <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Εναλλακτικά μπορείτε να κατεβάσετε το αρχείο κατευθείαν στον υπολογιστή σας, όπου μπορείτε να το ανοίξετε με ένα πρόγραμμα ανάγνωσης PDF. Για να κατεβάσετε το  αρχείο PDF, πατήστε τον σύνδεσμο φόρτωσης παρακάτω .</p> <p>Αν θέλετε περισσότερες πληροφορίες σχετικά με την εκτύπωση, αποθήκευση και χρήση των PDF αρχείων, ο οίκος Highwire Press παρέχει ένα χρήσιμο <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">FAQ σχετικό με PDF</a>.</p>]]></message>
+	<message key="payment.authorFees">Εισφορές Συγγραφέων</message>
+	<message key="user.authorization.copyeditorAssignmentMissing">Η πρόσβαση δεν είναι δυνατή. Δεν σας έχει ανατεθεί ο ρόλος του Επιμελητή Κειμένου για αυτό το άρθρο.</message>
+	<message key="user.authorization.noJournal">Δεν υπάρχει κανένα περιοδικό!</message>
+	<message key="user.authorization.sectionAssignment">Προσπαθείτε να προσπελάσετε ένα άρθρο που ανήκει στην ενότητά σας.</message>
+	<message key="user.authorization.invalidCopyditorSubmission">Μή έγκυρη υποβολή Επιμελητή Κειμένου ή Δεν έχει ζητηθεί υποβολή Επιμελητή Κειμένου</message>
+	<message key="user.authorization.invalidSectionEditorSubmission">Μή έγκυρη υποβολή Επιμελητή Ενότητας ή Δεν έχει ζητηθεί υποβολή Επιμελητή Ενότητας!</message>
 </locale>

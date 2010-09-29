@@ -23,4 +23,5 @@
 	<message key="plugins.citationFormats.mla.displayName">Plugin σχήματος παραπομπής MLA </message>
 	<message key="plugins.citationFormats.mla.citationFormatName">MLA</message>
 	<message key="plugins.citationFormats.mla.description">Το plugin αυτό υλοποιεί το σχήμα παραπομπής  MLA.</message>
+	<message key="plugins.citationFormats.mla.noPages">α. σελ.</message>
 </locale>
