@@ -14,7 +14,7 @@
 	<type>core</type>
 	<release>2.3.3.0</release>
 	<tag>ojs-2_3_3-0</tag>
-	<date>2009-12-31</date>
+	<date>2010-09-29</date>
 	<info>http://pkp.sfu.ca/ojs/</info>
 	<package>http://pkp.sfu.ca/ojs/download/ojs-2.3.3.tar.gz</package>
 	<patch from="2.0.0.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.0_to_2.3.3.patch.gz</patch>
