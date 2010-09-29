@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2010 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.OAIMetadata.rfc1807.displayName">RFC1807 Σχήμα Μεταδεδομένων</message>
+	<message key="plugins.OAIMetadata.rfc1807.description">Μορφοποεί τα μεταδεδομένα ώστε να είναι συμβατά με την μορφή RFC1807.</message>
+</locale>

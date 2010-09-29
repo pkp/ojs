@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2010 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.block.relatedItems.displayName">Block σχετικών στοιχείων</message>
+	<message key="plugins.block.relatedItems.description">Αυτό το plugin εμφανίζει ένα block που περιέχει στοιχεία σχετικά με τα εργαλεία ανάγνωσης της πλαϊνής μπάρας.</message>
+	<message key="plugins.block.relatedItems.title">Σχετικά Στοιχεία</message>
+	<message key="plugins.block.relatedItems.hide">Απόκρυψη</message>
+	<message key="plugins.block.relatedItems.show">Προβολή όλων</message>
+</locale>
