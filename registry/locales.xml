@@ -20,7 +20,7 @@
 	<locale key="da_DK" complete="false" name="Danish" iso639-2b="dan" />
 	<locale key="de_DE" name="Deutsch (Deutschland)" iso639-2b="ger" />
 	<locale key="en_US" name="English" iso639-2b="eng" />
-	<locale key="el_GR" complete="false" name="Greek" iso639-2b="gre" />
+	<locale key="el_GR" name="Greek" iso639-2b="gre" />
 	<locale key="es_ES" name="Español (España)" iso639-2b="spa" />
 	<locale key="eu_ES" complete="false" name="Basque (Euskara)" iso639-2b="eus" />
 	<locale key="fa_IR" name="Persian" iso639-2b="per" />
