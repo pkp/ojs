@@ -106,8 +106,8 @@ username = ojs
 password = ojs
 name = ojs
 
-; Enable persistent connections (recommended)
-persistent = On
+; Enable persistent connections
+persistent = Off
 
 ; Enable database debug output (very verbose!)
 debug = Off
