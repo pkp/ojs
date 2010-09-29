@@ -170,7 +170,7 @@ database_charset = Off
 ; If disabled, strings will be passed through in their native encoding
 ; Note that client_charset and database collation must be set
 ; to "utf-8" for this to work, as characters are stored in utf-8
-charset_normalization = On
+charset_normalization = Off
 
 ;;;;;;;;;;;;;;;;;
 ; File Settings ;

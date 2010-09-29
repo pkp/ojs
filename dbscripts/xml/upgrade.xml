@@ -185,20 +185,18 @@
 		<note file="docs/release-notes/README-2.3.0" />
 
 		<!-- Post-2.3.0 additions -->
-		<!-- FIXME: Enable this after translations.
-			<code function="installEmailTemplate" key="NOTIFICATION" locales="FIXME,FIXME,FIXME" />
-			<code function="installEmailTemplate" key="NOTIFICATION_MAILLIST" locales="FIXME,FIXME,FIXME" />
-			<code function="installEmailTemplate" key="NOTIFICATION_MAILLIST_WELCOME" locales="FIXME,FIXME,FIXME" />
-			<code function="installEmailTemplate" key="NOTIFICATION_MAILLIST_PASSWORD" locales="FIXME,FIXME,FIXME" />
-			<code function="installEmailTemplate" key="EDITOR_DECISION_ACCEPT" locales="FIXME,FIXME,FIXME" />
-			<code function="installEmailTemplate" key="EDITOR_DECISION_REVISIONS" locales="FIXME,FIXME,FIXME" />
-			<code function="installEmailTemplate" key="EDITOR_DECISION_RESUBMIT" locales="FIXME,FIXME,FIXME" />
-			<code function="installEmailTemplate" key="EDITOR_DECISION_DECLINE" locales="FIXME,FIXME,FIXME" />
-			<code function="installEmailTemplate" key="SUBSCRIPTION_PURCHASE_INDL" locales="FIXME,FIXME,FIXME" />
-			<code function="installEmailTemplate" key="SUBSCRIPTION_PURCHASE_INSTL" locales="FIXME,FIXME,FIXME" />
-			<code function="installEmailTemplate" key="SUBSCRIPTION_RENEW_INDL" locales="FIXME,FIXME,FIXME" />
-			<code function="installEmailTemplate" key="SUBSCRIPTION_RENEW_INSTL" locales="FIXME,FIXME,FIXME" />
-		-->
+		<code function="installEmailTemplate" key="NOTIFICATION" locales="cs_CZ,de_DE,el_GR,en_US,es_ES,eu_ES,fa_IR,fr_CA,it_IT,ja_JP,nl_NL,no_NO,pt_BR,pt_PT,ro_RO,ru_RU,zh_CN" />
+		<code function="installEmailTemplate" key="NOTIFICATION_MAILLIST" locales="cs_CZ,de_DE,el_GR,en_US,es_ES,eu_ES,fa_IR,fr_CA,it_IT,ja_JP,nl_NL,no_NO,pt_BR,pt_PT,ro_RO,ru_RU,zh_CN" />
+		<code function="installEmailTemplate" key="NOTIFICATION_MAILLIST_WELCOME" locales="cs_CZ,de_DE,el_GR,en_US,es_ES,eu_ES,fa_IR,fr_CA,it_IT,ja_JP,nl_NL,no_NO,pt_BR,pt_PT,ro_RO,ru_RU,zh_CN" />
+		<code function="installEmailTemplate" key="NOTIFICATION_MAILLIST_PASSWORD" locales="cs_CZ,de_DE,el_GR,en_US,es_ES,eu_ES,fa_IR,fr_CA,it_IT,ja_JP,nl_NL,no_NO,pt_BR,pt_PT,ro_RO,ru_RU,zh_CN" />
+		<code function="installEmailTemplate" key="EDITOR_DECISION_ACCEPT" locales="cs_CZ,de_DE,el_GR,en_US,es_ES,eu_ES,fa_IR,fr_CA,it_IT,ja_JP,nl_NL,no_NO,pt_BR,pt_PT,ro_RO,ru_RU,zh_CN" />
+		<code function="installEmailTemplate" key="EDITOR_DECISION_REVISIONS" locales="cs_CZ,de_DE,el_GR,en_US,es_ES,eu_ES,fa_IR,fr_CA,it_IT,ja_JP,nl_NL,no_NO,pt_BR,pt_PT,ro_RO,ru_RU,zh_CN" />
+		<code function="installEmailTemplate" key="EDITOR_DECISION_RESUBMIT" locales="cs_CZ,de_DE,el_GR,en_US,es_ES,eu_ES,fa_IR,fr_CA,it_IT,ja_JP,nl_NL,no_NO,pt_BR,pt_PT,ro_RO,ru_RU,zh_CN" />
+		<code function="installEmailTemplate" key="EDITOR_DECISION_DECLINE" locales="cs_CZ,de_DE,el_GR,en_US,es_ES,eu_ES,fa_IR,fr_CA,it_IT,ja_JP,nl_NL,no_NO,pt_BR,pt_PT,ro_RO,ru_RU,zh_CN" />
+		<code function="installEmailTemplate" key="SUBSCRIPTION_PURCHASE_INDL" locales="cs_CZ,de_DE,el_GR,en_US,es_ES,eu_ES,fa_IR,fr_CA,it_IT,ja_JP,nl_NL,no_NO,pt_BR,pt_PT,ro_RO,ru_RU,zh_CN" />
+		<code function="installEmailTemplate" key="SUBSCRIPTION_PURCHASE_INSTL" locales="cs_CZ,de_DE,el_GR,en_US,es_ES,eu_ES,fa_IR,fr_CA,it_IT,ja_JP,nl_NL,no_NO,pt_BR,pt_PT,ro_RO,ru_RU,zh_CN" />
+		<code function="installEmailTemplate" key="SUBSCRIPTION_RENEW_INDL" locales="cs_CZ,de_DE,el_GR,en_US,es_ES,eu_ES,fa_IR,fr_CA,it_IT,ja_JP,nl_NL,no_NO,pt_BR,pt_PT,ro_RO,ru_RU,zh_CN" />
+		<code function="installEmailTemplate" key="SUBSCRIPTION_RENEW_INSTL" locales="cs_CZ,de_DE,el_GR,en_US,es_ES,eu_ES,fa_IR,fr_CA,it_IT,ja_JP,nl_NL,no_NO,pt_BR,pt_PT,ro_RO,ru_RU,zh_CN" />
 	</upgrade>
 
 	<upgrade minversion="2.2.0.0" maxversion="2.2.9.0">
