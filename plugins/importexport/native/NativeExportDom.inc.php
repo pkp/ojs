@@ -32,6 +32,7 @@ class NativeExportDom {
 			case '1110': $idType = 'num_vol_year'; break;
 			case '1010': $idType = 'vol_year'; break;
 			case '0010': $idType = 'year'; break;
+			case '1000': $idType = 'vol'; break;
 			case '0001': $idType = 'title'; break;
 			default: $idType = null;
 		}
