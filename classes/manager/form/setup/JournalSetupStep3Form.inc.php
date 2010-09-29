@@ -89,24 +89,36 @@ class JournalSetupStep3Form extends JournalSetupForm {
 		}
 
 		// Citation editor filter configuration
-		// 1) Add the filter grid URLs
-		$parserFilterGridUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.filter.ParserFilterGridHandler', 'fetchGrid');
-		$templateMgr->assign('parserFilterGridUrl', $parserFilterGridUrl);
-		$lookupFilterGridUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.filter.LookupFilterGridHandler', 'fetchGrid');
-		$templateMgr->assign('lookupFilterGridUrl', $lookupFilterGridUrl);
-
-		// 2) Create a list of all available citation output filters.
-		$router =& $request->getRouter();
-		$journal =& $router->getContext($request);
-		import('lib.pkp.classes.metadata.MetadataDescription');
-		$inputSample = new MetadataDescription('lib.pkp.classes.metadata.nlm.NlmCitationSchema', ASSOC_TYPE_CITATION);
-		$outputSample = 'any string';
-		$filterDao =& DAORegistry::getDAO('FilterDAO');
-		$metaCitationOutputFilterObjects =& $filterDao->getCompatibleObjects($inputSample, $outputSample, $journal->getId());
-		foreach($metaCitationOutputFilterObjects as $metaCitationOutputFilterObject) {
-			$metaCitationOutputFilters[$metaCitationOutputFilterObject->getId()] = $metaCitationOutputFilterObject->getDisplayName();
+		//
+		// 1) Check whether PHP5 is available.
+		if (!checkPhpVersion('5.0.0')) {
+			Locale::requireComponents(array(LOCALE_COMPONENT_PKP_SUBMISSION));
+			$citationEditorError = 'submission.citations.editor.php5Required';
+		} else {
+			$citationEditorError = null;
 		}
-		$templateMgr->assign_by_ref('metaCitationOutputFilters', $metaCitationOutputFilters);
+		$templateMgr->assign('citationEditorError', $citationEditorError);
+
+		if (!$citationEditorError) {
+			// 2) Add the filter grid URLs
+			$parserFilterGridUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.filter.ParserFilterGridHandler', 'fetchGrid');
+			$templateMgr->assign('parserFilterGridUrl', $parserFilterGridUrl);
+			$lookupFilterGridUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.filter.LookupFilterGridHandler', 'fetchGrid');
+			$templateMgr->assign('lookupFilterGridUrl', $lookupFilterGridUrl);
+
+			// 3) Create a list of all available citation output filters.
+			$router =& $request->getRouter();
+			$journal =& $router->getContext($request);
+			import('lib.pkp.classes.metadata.MetadataDescription');
+			$inputSample = new MetadataDescription('lib.pkp.classes.metadata.nlm.NlmCitationSchema', ASSOC_TYPE_CITATION);
+			$outputSample = 'any string';
+			$filterDao =& DAORegistry::getDAO('FilterDAO');
+			$metaCitationOutputFilterObjects =& $filterDao->getCompatibleObjects($inputSample, $outputSample, $journal->getId());
+			foreach($metaCitationOutputFilterObjects as $metaCitationOutputFilterObject) {
+				$metaCitationOutputFilters[$metaCitationOutputFilterObject->getId()] = $metaCitationOutputFilterObject->getDisplayName();
+			}
+			$templateMgr->assign_by_ref('metaCitationOutputFilters', $metaCitationOutputFilters);
+		}
 
 		parent::display($request, $dispatcher);
 	}

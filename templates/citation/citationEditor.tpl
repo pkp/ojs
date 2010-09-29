@@ -247,9 +247,9 @@
 							{capture assign="citationSetupUrl"}{url page="manager" op="setup" path="3" anchor="metaCitationEditing"}{/capture}
 							{if $citationEditorConfigurationError}
 								{translate key=$citationEditorConfigurationError citationSetupUrl=$citationSetupUrl}
-								{translate key="submission.citations.editor.introduction.introductionMessage" citationSetupUrl=$citationSetupUrl}
+								{if $showIntroductoryMessage}{translate key="submission.citations.editor.introduction.introductionMessage" citationSetupUrl=$citationSetupUrl}{/if}
 							{else}
-								{translate key="submission.citations.editor.introduction.introductionMessage" citationSetupUrl=$citationSetupUrl}
+								{if $showIntroductoryMessage}{translate key="submission.citations.editor.introduction.introductionMessage" citationSetupUrl=$citationSetupUrl}{/if}
 								<input id="introductionHide" type="checkbox" />{translate key="submission.citations.editor.details.dontShowMessageAgain"}
 							{/if}
 						</div>
