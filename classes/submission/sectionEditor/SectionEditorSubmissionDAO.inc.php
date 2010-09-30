@@ -482,9 +482,9 @@ class SectionEditorSubmissionDAO extends DAO {
 		$result =& $this->retrieveRange($sql . ' ' . $searchSql . ($sortBy?(' ORDER BY ' . $this->getSortMapping($sortBy) . ' ' . $this->getDirectionMapping($sortDirection)) : ''),
 			$params,
 			$rangeInfo
-		);	
+		);
 
-		return $result;	
+		return $result;
 	}
 
 	/**
@@ -688,7 +688,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		unset($result);
 
 		return $returner;
-	}	
+	}
 
 	/**
 	 * Check if a review round exists for a specified article.
@@ -738,7 +738,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * @return DAOResultFactory containing matching Users
 	 */
 	function &getReviewersForArticle($journalId, $articleId, $round, $searchType = null, $search = null, $searchMatch = null, $rangeInfo = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
-		$paramArray = array($articleId, $round, 'interests', $journalId, RoleDAO::getRoleIdFromPath('reviewer'));
+		$paramArray = array($articleId, $round, 'interest', $journalId, RoleDAO::getRoleIdFromPath('reviewer'));
 		$searchSql = '';
 
 		$searchTypeMap = array(
@@ -746,8 +746,8 @@ class SectionEditorSubmissionDAO extends DAO {
 			USER_FIELD_LASTNAME => 'u.last_name',
 			USER_FIELD_USERNAME => 'u.username',
 			USER_FIELD_EMAIL => 'u.email',
-			USER_FIELD_INTERESTS => 's.setting_value'
-		);
+			USER_FIELD_INTERESTS => 'cves.setting_value'
+			);
 
 		if (isset($search) && isset($searchTypeMap[$searchType])) {
 			$fieldName = $searchTypeMap[$searchType];
@@ -788,14 +788,16 @@ class SectionEditorSubmissionDAO extends DAO {
 				MAX(ac.date_notified) AS latest,
 				AVG(ac.date_completed-ac.date_notified) AS average
 			FROM	users u
-			LEFT JOIN review_assignments ra ON (ra.reviewer_id = u.user_id)
+			  LEFT JOIN review_assignments ra ON (ra.reviewer_id = u.user_id)
 				LEFT JOIN review_assignments ac ON (ac.reviewer_id = u.user_id AND ac.date_completed IS NOT NULL)
 				LEFT JOIN review_assignments ai ON (ai.reviewer_id = u.user_id AND ai.date_completed IS NULL)
 				LEFT JOIN review_assignments ar ON (ar.reviewer_id = u.user_id AND ar.cancelled = 0 AND ar.submission_id = ? AND ar.round = ?)
-				LEFT JOIN user_settings s ON (u.user_id = s.user_id AND s.setting_name = ?)
 				LEFT JOIN roles r ON (r.user_id = u.user_id)
 				LEFT JOIN articles a ON (ra.submission_id = a.article_id)
-			WHERE	u.user_id = r.user_id AND
+				LEFT JOIN controlled_vocabs cv ON (cv.assoc_id = u.user_id AND cv.symbolic = ?)
+				LEFT JOIN controlled_vocab_entries cve ON (cve.controlled_vocab_id = cv.controlled_vocab_id)
+				LEFT JOIN controlled_vocab_entry_settings cves ON (cves.controlled_vocab_entry_id = cve.controlled_vocab_entry_id)
+			WHERE u.user_id = r.user_id AND
 				r.journal_id = ? AND
 				r.role_id = ? ' . $searchSql . 'GROUP BY u.user_id, u.last_name, ar.review_id' .
 			($sortBy?(' ORDER BY ' . $this->getSortMapping($sortBy) . ' ' . $this->getDirectionMapping($sortDirection)) : ''),
@@ -869,7 +871,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	function &getCopyeditorsNotAssignedToArticle($journalId, $articleId, $searchType = null, $search = null, $searchMatch = null) {
 		$users = array();
 
-		$paramArray = array('interests', $articleId, ASSOC_TYPE_ARTICLE, 'SIGNOFF_COPYEDITING_INITIAL', $journalId, RoleDAO::getRoleIdFromPath('copyeditor'));
+		$paramArray = array('interest', $articleId, ASSOC_TYPE_ARTICLE, 'SIGNOFF_COPYEDITING_INITIAL', $journalId, RoleDAO::getRoleIdFromPath('copyeditor'));
 		$searchSql = '';
 
 		$searchTypeMap = array(
@@ -877,7 +879,7 @@ class SectionEditorSubmissionDAO extends DAO {
 			USER_FIELD_LASTNAME => 'u.last_name',
 			USER_FIELD_USERNAME => 'u.username',
 			USER_FIELD_EMAIL => 'u.email',
-			USER_FIELD_INTERESTS => 's.setting_value'
+			USER_FIELD_INTERESTS => 'cves.setting_value'
 		);
 
 		if (isset($search) && isset($searchTypeMap[$searchType])) {
@@ -911,7 +913,9 @@ class SectionEditorSubmissionDAO extends DAO {
 		$result =& $this->retrieve(
 			'SELECT	u.*
 			FROM	users u
-				LEFT JOIN user_settings s ON (u.user_id = s.user_id AND s.setting_name = ?)
+				LEFT JOIN controlled_vocabs cv ON (cv.assoc_id = u.user_id AND cv.symbolic = ?)
+				LEFT JOIN controlled_vocab_entries cve ON (cve.controlled_vocab_id = cv.controlled_vocab_id)
+				LEFT JOIN controlled_vocab_entry_settings cves ON (cves.controlled_vocab_entry_id = cve.controlled_vocab_entry_id)
 				LEFT JOIN roles r ON (r.user_id = u.user_id)
 				LEFT JOIN signoffs sci ON (sci.user_id = u.user_id AND sci.assoc_id = ? AND sci.assoc_type = ? AND sci.symbolic = ?)
 			WHERE	r.journal_id = ? AND
@@ -1124,7 +1128,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			if (!isset($statistics[$row['editor_id']])) $statistics[$row['editor_id']] = array();
-			$statistics[$row['editor_id']]['complete'] = $row['complete'];	
+			$statistics[$row['editor_id']]['complete'] = $row['complete'];
 			$result->MoveNext();
 		}
 
@@ -1156,7 +1160,7 @@ class SectionEditorSubmissionDAO extends DAO {
 
 		return $statistics;
 	}
-	
+
 	/**
 	 * Map a column heading value to a database value for sorting
 	 * @param string
@@ -1169,7 +1173,7 @@ class SectionEditorSubmissionDAO extends DAO {
 			case 'section': return 'section_abbrev';
 			case 'authors': return 'author_name';
 			case 'title': return 'submission_title';
-			case 'active': return 'incomplete';		
+			case 'active': return 'incomplete';
 			case 'subCopyedit': return 'copyedit_completed';
 			case 'subLayout': return 'layout_completed';
 			case 'subProof': return 'proofread_completed';

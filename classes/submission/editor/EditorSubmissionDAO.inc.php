@@ -121,7 +121,7 @@ class EditorSubmissionDAO extends DAO {
 	/**
 	 * Insert a new EditorSubmission.
 	 * @param $editorSubmission EditorSubmission
-	 */	
+	 */
 	function insertEditorSubmission(&$editorSubmission) {
 		$this->update(
 			sprintf('INSERT INTO edit_assignments
@@ -610,7 +610,7 @@ class EditorSubmissionDAO extends DAO {
 	function &getUsersNotAssignedToArticle($journalId, $articleId, $roleId, $searchType=null, $search=null, $searchMatch=null, $rangeInfo = null) {
 		$users = array();
 
-		$paramArray = array('interests', $articleId, $journalId, $roleId);
+		$paramArray = array('interest', $articleId, $journalId, $roleId);
 		$searchSql = '';
 
 		$searchTypeMap = array(
@@ -618,7 +618,7 @@ class EditorSubmissionDAO extends DAO {
 			USER_FIELD_LASTNAME => 'u.last_name',
 			USER_FIELD_USERNAME => 'u.username',
 			USER_FIELD_EMAIL => 'u.email',
-			USER_FIELD_INTERESTS => 's.setting_value'
+			USER_FIELD_INTERESTS => 'cves.setting_value'
 		);
 
 		if (!empty($search) && isset($searchTypeMap[$searchType])) {
@@ -653,7 +653,9 @@ class EditorSubmissionDAO extends DAO {
 			'SELECT DISTINCT
 				u.*
 			FROM	users u
-				LEFT JOIN user_settings s ON (u.user_id = s.user_id AND s.setting_name = ?)
+				LEFT JOIN controlled_vocabs cv ON (cv.assoc_id = u.user_id AND cv.symbolic = ?)
+				LEFT JOIN controlled_vocab_entries cve ON (cve.controlled_vocab_id = cv.controlled_vocab_id)
+				LEFT JOIN controlled_vocab_entry_settings cves ON (cves.controlled_vocab_entry_id = cve.controlled_vocab_entry_id)
 				LEFT JOIN roles r ON (r.user_id = u.user_id)
 				LEFT JOIN edit_assignments e ON (e.editor_id = u.user_id AND e.article_id = ?)
 			WHERE	r.journal_id = ? AND
@@ -674,7 +676,7 @@ class EditorSubmissionDAO extends DAO {
 	function getInsertEditId() {
 		return $this->getInsertId('edit_assignments', 'edit_id');
 	}
-	
+
 	/**
 	 * Map a column heading value to a database value for sorting
 	 * @param string
@@ -687,7 +689,7 @@ class EditorSubmissionDAO extends DAO {
 			case 'section': return 'section_abbrev';
 			case 'authors': return 'author_name';
 			case 'title': return 'submission_title';
-			case 'active': return 'a.submission_progress';		
+			case 'active': return 'a.submission_progress';
 			case 'subCopyedit': return 'copyedit_completed';
 			case 'subLayout': return 'layout_completed';
 			case 'subProof': return 'proofread_completed';

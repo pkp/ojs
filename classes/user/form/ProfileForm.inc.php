@@ -169,8 +169,8 @@ class ProfileForm extends Form {
 			$existingInterests = $interestDao->getAllUniqueInterests();
 		} else $existingInterests = null;
 		// Get the user's current set of interests
-		if ($interestDao->getInterests($user->getId(), false)) {
-			$currentInterests = $interestDao->getInterests($user->getId(), false);
+		if ($interestDao->getInterests($user->getId())) {
+			$currentInterests = $interestDao->getInterests($user->getId());
 		} else $currentInterests = null;
 
 		$this->_data = array(

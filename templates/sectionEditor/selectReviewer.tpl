@@ -23,7 +23,7 @@ function sortSearch(heading, direction) {
 }
 // -->
 {/literal}
-</script> 
+</script>
 
 <div id="selectReviewer">
 <h3>{translate key="editor.article.selectReviewer"}</h3>
@@ -72,7 +72,7 @@ function sortSearch(heading, direction) {
 
 <tr valign="top">
 	<td><a class="action" href="{url op="userProfile" path=$userId}">{$reviewer->getFullName()|escape}</a></td>
-	<td>{$reviewer->getInterests()|escape}</td>
+	<td>{$reviewer->getInterests()|urldecode|escape}</td>
 	{if $rateReviewerOnQuality}<td>
 		{if $qualityCount}{$averageQualityRatings[$userId].average|string_format:"%.1f"}
 		{else}{translate key="common.notApplicableShort"}{/if}
