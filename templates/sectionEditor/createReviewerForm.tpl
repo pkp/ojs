@@ -130,7 +130,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel key="user.interests"}</td>
-		<td class="value"><ul id="interests"></ul><br /><textarea name="interests" id="interestsTextOnly" rows="5" cols="40" class="textArea">{$currentInterests|escape}</textarea></td>
+		<td class="value"><ul id="interests"></ul><br /><textarea name="interests" id="interestsTextOnly" rows="5" cols="40" class="textArea"></textarea></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="gossip" key="user.gossip"}</td>

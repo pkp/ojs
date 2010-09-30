@@ -233,16 +233,14 @@ class RegistrationForm extends Form {
 			$interestTextOnly = Request::getUserVar('interests');
 			if(!empty($interestsTextOnly)) {
 				// If JS is disabled, this will be the input to read
-				$interestsTextOnly = explode(",", str_replace("\"", "", $interestTextOnly));
+				$interestsTextOnly = explode(",", $interestTextOnly);
 			} else $interestsTextOnly = null;
 			if ($interestsTextOnly && !isset($interests)) {
 				$interests = $interestsTextOnly;
 			} elseif (isset($interests) && !is_array($interests)) {
 				$interests = array($interests);
 			}
-			if (!empty($interests)) {
-				$interestDao->insertInterests($interests, $user->getId(), true);
-			}
+			$interestDao->insertInterests($interests, $user->getId(), true);
 
 			$site =& Request::getSite();
 			$availableLocales = $site->getSupportedLocales();
