@@ -140,7 +140,7 @@ class SwordImportExportPlugin extends ImportExportPlugin {
 							array('plugin', $this->getName()),
 							array(
 								'swordUrl' => $swordUrl,
-								'swordUsername' => $swordUsername,
+								'swordUsername' => $username,
 								'swordDepositPoint' => $swordDepositPoint,
 								'depositEditorial' => $depositEditorial,
 								'depositGalleys' => $depositGalleys,
@@ -159,7 +159,7 @@ class SwordImportExportPlugin extends ImportExportPlugin {
 						array('plugin', $this->getName()),
 						array(
 							'swordUrl' => $swordUrl,
-							'swordUsername' => $swordUsername,
+							'swordUsername' => $username,
 							'swordDepositPoint' => $swordDepositPoint,
 							'depositEditorial' => $depositEditorial,
 							'depositGalleys' => $depositGalleys
@@ -186,8 +186,8 @@ class SwordImportExportPlugin extends ImportExportPlugin {
 					$client = new SWORDAPPClient();
 					$doc = $client->servicedocument($swordUrl, $username, $password, '');
 					$depositPoints = array();
-					foreach ($doc->sac_workspaces as $workspace) {
-						foreach ($workspace->sac_collections as $collection) {
+					if (is_array($doc->sac_workspaces)) foreach ($doc->sac_workspaces as $workspace) {
+						if (is_array($workspace->sac_collections)) foreach ($workspace->sac_collections as $collection) {
 							$depositPoints["$collection->sac_href"] = "$collection->sac_colltitle";
 						}
 					}
