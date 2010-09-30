@@ -118,6 +118,8 @@ class Notification extends PKPNotification {
 	 */
 	function getSubscriptionSettings() {
 		$journal = Request::getJournal();
+		if (!$journal) return array();
+
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
 
