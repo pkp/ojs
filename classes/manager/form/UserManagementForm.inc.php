@@ -62,7 +62,7 @@ class UserManagementForm extends Form {
 		$userDao =& DAORegistry::getDAO('UserDAO');
 		$templateMgr =& TemplateManager::getManager();
 		$site =& Request::getSite();
-		
+
 		$templateMgr->assign('genderOptions', $userDao->getGenderOptions());
 		$templateMgr->assign('minPasswordLength', $site->getMinPasswordLength());
 		$templateMgr->assign('source', Request::getUserVar('source'));
@@ -145,6 +145,15 @@ class UserManagementForm extends Form {
 			$userDao =& DAORegistry::getDAO('UserDAO');
 			$user =& $userDao->getUser($this->userId);
 
+			// Get all available interests to populate the autocomplete with
+			if ($interestDao->getAllUniqueInterests()) {
+				$existingInterests = $interestDao->getAllUniqueInterests();
+			} else $existingInterests = null;
+			// Get the user's current set of interests
+			if ($interestDao->getInterests($user->getId(), false)) {
+				$currentInterests = $interestDao->getInterests($user->getId(), false);
+			} else $currentInterests = null;
+
 			if ($user != null) {
 				$this->_data = array(
 					'authId' => $user->getAuthId(),
@@ -164,8 +173,8 @@ class UserManagementForm extends Form {
 					'mailingAddress' => $user->getMailingAddress(),
 					'country' => $user->getCountry(),
 					'biography' => $user->getBiography(null), // Localized
-					'existingInterests' => implode(",", $interestDao->getAllUniqueInterests()),
-					'currentInterests' => implode(",", $interestDao->getInterests($user->getId())),
+					'existingInterests' => $existingInterests,
+					'currentInterests' => $currentInterests,
 					'gossip' => $user->getGossip(null), // Localized
 					'userLocales' => $user->getLocales()
 				);
@@ -268,7 +277,7 @@ class UserManagementForm extends Form {
 		$user->setGossip($this->getData('gossip'), null); // Localized
 		$user->setMustChangePassword($this->getData('mustChangePassword') ? 1 : 0);
 		$user->setAuthId((int) $this->getData('authId'));
-		
+
 		$site =& Request::getSite();
 		$availableLocales = $site->getSupportedLocales();
 
@@ -343,14 +352,22 @@ class UserManagementForm extends Form {
 				}
 			}
 
-			// Add reviewer interests to interests table
+			// Add reviewing interests to interests table
 			$interestDao =& DAORegistry::getDAO('InterestDAO');
 			$interests = Request::getUserVar('interestsKeywords');
-			$interestsTextOnly = explode(",", str_replace("\"", "", Request::getUserVar('interests'))); // If JS is disabled, this will be the control to read
-			if (isset($interestsTextOnly) && !isset($interests)) $interests = $interestsTextOnly;
-			if (empty($interests))  $interests = array();
-			elseif (!is_array($interests)) $interests = array($interests);
-			$interestDao->insertInterests($interests, $userId, true);
+			$interestTextOnly = Request::getUserVar('interests');
+			if(!empty($interestsTextOnly)) {
+				// If JS is disabled, this will be the input to read
+				$interestsTextOnly = explode(",", str_replace("\"", "", $interestTextOnly));
+			} else $interestsTextOnly = null;
+			if ($interestsTextOnly && !isset($interests)) {
+				$interests = $interestsTextOnly;
+			} elseif (isset($interests) && !is_array($interests)) {
+				$interests = array($interests);
+			}
+			if (!empty($interests)) {
+				$interestDao->insertInterests($interests, $user->getId(), true);
+			}
 
 			if ($sendNotify) {
 				// Send welcome email to user

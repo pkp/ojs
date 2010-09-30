@@ -15,12 +15,14 @@
 {/strip}
 
 {literal}
+
 <script type="text/javascript">
 	$(document).ready(function(){
 		$("#interestsTextOnly").hide();
 		$("#interests").tagit({
-			availableTags: [{/literal}{$existingInterests}{literal}]
-			{/literal}{if $currentInterests}{literal}, currentTags: [{/literal}{$currentInterests}]{/if}{literal}
+			{/literal}{if $existingInterests}{literal} availableTags: [{/literal}{foreach name=existingInterests from=$existingInterests item=interest}"{$interest|escape:"javascript"}"{if !$smarty.foreach.existingInterests.last}, {/if}{/foreach}{literal}],{/literal}{/if}
+			{if $currentInterests}{literal}currentTags: [{/literal}{foreach name=currentInterests from=$currentInterests item=interest}"{$interest|escape:"javascript"}"{if !$smarty.foreach.currentInterests.last}, {/if}{/foreach}{literal}]{/literal}
+					  {else}{literal}currentTags: []{/literal}{/if}{literal}
 		});
 	});
 </script>

@@ -16,10 +16,10 @@
 {literal}
 <script type="text/javascript">
 	$(document).ready(function(){
+		$("#interestsTextOnly").hide();
 		$("#interests").tagit({
-			$("#interestsTextOnly").hide();
-			availableTags: [{/literal}{$existingInterests}{literal}]
-			{/literal}{if $currentInterests}{literal}, currentTags: [{/literal}{$currentInterests}]{/if}{literal}
+			{/literal}{if $existingInterests}{literal} availableTags: [{/literal}{foreach name=existingInterests from=$existingInterests item=interest}"{$interest|escape:"javascript"}"{if !$smarty.foreach.existingInterests.last}, {/if}{/foreach}{literal}],{/literal}{/if}
+			{literal}currentTags: []
 		});
 	});
 </script>
@@ -35,12 +35,12 @@
 
 	function generateUsername() {
 		var req = makeAsyncRequest();
- 
+
 		if (document.reviewerForm.lastName.value == "") {
 			alert("{/literal}{translate key="manager.people.mustProvideName"}{literal}");
 			return;
 		}
- 
+
 		req.onreadystatechange = function() {
 			if (req.readyState == 4) {
 				document.reviewerForm.username.value = req.responseText;

@@ -19,8 +19,9 @@
 	$(document).ready(function(){
 		$("#interestsTextOnly").hide();
 		$("#interests").tagit({
-			availableTags: [{/literal}{$existingInterests}{literal}]
-			{/literal}{if $currentInterests}{literal}, currentTags: [{/literal}{$currentInterests}]{/if}{literal}
+			{/literal}{if $existingInterests}{literal} availableTags: [{/literal}{foreach name=existingInterests from=$existingInterests item=interest}"{$interest|escape:"javascript"}"{if !$smarty.foreach.existingInterests.last}, {/if}{/foreach}{literal}],{/literal}{/if}
+			{if $currentInterests}{literal}currentTags: [{/literal}{foreach name=currentInterests from=$currentInterests item=interest}"{$interest|escape:"javascript"}"{if !$smarty.foreach.currentInterests.last}, {/if}{/foreach}{literal}]{/literal}
+					  {else}{literal}currentTags: []{/literal}{/if}{literal}
 		});
 	});
 </script>
@@ -130,7 +131,7 @@
 		<td class="value"><input type="text" name="initials" id="initials" value="{$initials|escape}" size="5" maxlength="5" class="textField" />&nbsp;&nbsp;{translate key="user.initialsExample"}</td>
 	</tr>
 	{if not $userId}
-	<tr valign="top">	
+	<tr valign="top">
 		<td class="label">{fieldLabel name="enrollAs" key="manager.people.enrollUserAs"}</td>
 		<td class="value">
 			<select name="enrollAs[]" id="enrollAs" multiple="multiple" size="11" class="selectMenu">
@@ -155,7 +156,7 @@
 	</tr>
 	{/if}
 	{if $authSourceOptions}
-	<tr valign="top">	
+	<tr valign="top">
 		<td class="label">{fieldLabel name="authId" key="manager.people.authSource"}</td>
 		<td class="value"><select name="authId" id="authId" size="1" class="selectMenu">
 			<option value=""></option>
@@ -163,7 +164,7 @@
 		</select></td>
 	</tr>
 	{/if}
-	
+
 	{if !$implicitAuth}
 		<tr valign="top">
 			<td class="label">{fieldLabel name="password" required=$passwordRequired key="user.password"}</td>
@@ -197,7 +198,7 @@
 			<td class="value"><input type="checkbox" name="mustChangePassword" id="mustChangePassword" value="1"{if $mustChangePassword} checked="checked"{/if} /> <label for="mustChangePassword">{translate key="manager.people.userMustChangePassword"}</label></td>
 		</tr>
 	{/if}{* !$implicitAuth *}
-	
+
 	<tr valign="top">
 		<td class="label">{fieldLabel name="affiliation" key="user.affiliation"}</td>
 		<td class="value">
