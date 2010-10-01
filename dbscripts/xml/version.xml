@@ -12,9 +12,9 @@
 <version>
 	<application>ojs2</application>
 	<type>core</type>
-	<release>2.3.3.0</release>
-	<tag>ojs-2_3_3-0</tag>
-	<date>2010-09-29</date>
+	<release>2.3.3.1</release>
+	<tag>ojs-2_3_3-1</tag>
+	<date>2010-10-01</date>
 	<info>http://pkp.sfu.ca/ojs/</info>
 	<package>http://pkp.sfu.ca/ojs/download/ojs-2.3.3.tar.gz</package>
 	<patch from="2.0.0.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.0_to_2.3.3.patch.gz</patch>
@@ -35,4 +35,5 @@
 	<patch from="2.3.1.2">http://pkp.sfu.ca/ojs/download/patch/ojs-2.3.1-2_to_2.3.3.patch.gz</patch>
 	<patch from="2.3.2.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.3.2_to_2.3.3.patch.gz</patch>
 	<patch from="2.3.2.1">http://pkp.sfu.ca/ojs/download/patch/ojs-2.3.2-1_to_2.3.3.patch.gz</patch>
+	<patch from="2.3.3.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.3.3_to_2.3.3-1.patch.gz</patch>
 </version>
