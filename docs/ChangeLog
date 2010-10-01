@@ -1,3 +1,9 @@
+commit c49e1c8e323c9b819d66b17bcceb3f05a677c3ce
+Author: Alec Smecher <alec@smecher.bc.ca>
+Date:   Fri Oct 1 12:39:27 2010 -0700
+
+    *6015* Fixed email validator problem
+
 commit cf65e173ba9cc9267b0195ab4e933ad1f26a7d94
 Author: Alec Smecher <alec@smecher.bc.ca>
 Date:   Thu Sep 30 14:19:23 2010 -0700
