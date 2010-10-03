@@ -109,11 +109,8 @@ class JournalSetupStep3Form extends JournalSetupForm {
 			// 3) Create a list of all available citation output filters.
 			$router =& $request->getRouter();
 			$journal =& $router->getContext($request);
-			import('lib.pkp.classes.metadata.MetadataDescription');
-			$inputSample = new MetadataDescription('lib.pkp.classes.metadata.nlm.NlmCitationSchema', ASSOC_TYPE_CITATION);
-			$outputSample = 'any string';
-			$filterDao =& DAORegistry::getDAO('FilterDAO');
-			$metaCitationOutputFilterObjects =& $filterDao->getCompatibleObjects($inputSample, $outputSample, $journal->getId());
+			$filterDao =& DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
+			$metaCitationOutputFilterObjects =& $filterDao->getObjectsByGroup('nlm30-element-citation=>plaintext', $journal->getId());
 			foreach($metaCitationOutputFilterObjects as $metaCitationOutputFilterObject) {
 				$metaCitationOutputFilters[$metaCitationOutputFilterObject->getId()] = $metaCitationOutputFilterObject->getDisplayName();
 			}
