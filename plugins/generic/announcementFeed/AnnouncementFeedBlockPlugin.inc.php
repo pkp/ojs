@@ -18,11 +18,11 @@
 import('lib.pkp.classes.plugins.BlockPlugin');
 
 class AnnouncementFeedBlockPlugin extends BlockPlugin {
-    var $parentPluginName;
-    
-    function AnnouncementFeedBlockPlugin($parentPluginName) {
-        $this->parentPluginName = $parentPluginName;
-    }
+	var $parentPluginName;
+	
+	function AnnouncementFeedBlockPlugin($parentPluginName) {
+		$this->parentPluginName = $parentPluginName;
+	}
 	/**
 	 * Hide this plugin from the management interface (it's subsidiary)
 	 */

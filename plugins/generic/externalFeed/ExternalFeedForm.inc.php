@@ -49,11 +49,11 @@ class ExternalFeedForm extends Form {
 	/** 
 	* Get the names of fields for which localized data is allowed.
 	* @return array
-	*/         
+	*/
 	function getLocaleFieldNames() {
 		$feedDao =& DAORegistry::getDAO('ExternalFeedDAO');
 		return $feedDao->getLocaleFieldNames();
-	}               
+	}
 
 	/**
 	 * Display the form.
