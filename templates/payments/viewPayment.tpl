@@ -34,7 +34,13 @@
 		</tr>
 		<tr>
 			<td width="25%">{translate key="user.username"}</td>
-			<td><a class="action" href="{url op="userProfile" path=$payment->getUserId()}">{$payment->getUsername()|escape}</a></td>
+			<td>
+			{if $isJournalManager}
+				<a class="action" href="{url op="userProfile" path=$payment->getUserId()}">{$payment->getUsername()|escape}</a>
+			{else}
+				{$payment->getUsername()|escape}
+			{/if}
+			</td>
 		</tr>
 		<tr>
 			<td width="25%">{translate key="manager.payment.description"}</td>
@@ -69,9 +75,17 @@
 		{if $payment->isSubscription()}
 			{assign var=subscriptionId value=$payment->getAssocId()}
 			{if $individualSubscriptionDao->subscriptionExists($subscriptionId)}
-				<tr><td colspan="2"><a class="action" href="{url page="subscriptionManager" op="editSubscription" path="individual"|to_array:$subscriptionId}">{translate key="manager.payment.editSubscription"}</a></td></tr>
+				<tr>
+					<td colspan="2">
+						<a class="action" href="{url op="editSubscription" path="individual"|to_array:$subscriptionId}">{translate key="manager.payment.editSubscription"}</a>
+					</td>
+				</tr>
 			{elseif $institutionalSubscriptionDao->subscriptionExists($subscriptionId)}
-				<tr><td colspan="2"><a class="action" href="{url page="subscriptionManager" op="editSubscription" path="institutional"|to_array:$subscriptionId}">{translate key="manager.payment.editSubscription"}</a></td></tr>
+				<tr>
+					<td colspan="2">
+						<a class="action" href="{url op="editSubscription" path="institutional"|to_array:$subscriptionId}">{translate key="manager.payment.editSubscription"}</a>
+					</td>
+				</tr>
 			{/if}
 		{/if}
 		<tr>

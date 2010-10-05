@@ -69,6 +69,7 @@ class OJSPaymentAction {
 		$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 		$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 
+		$templateMgr->assign('isJournalManager', Validation::isJournalManager($journal->getId()));
 		$templateMgr->assign_by_ref('individualSubscriptionDao', $individualSubscriptionDao);
 		$templateMgr->assign_by_ref('institutionalSubscriptionDao', $institutionalSubscriptionDao);
 		$templateMgr->assign_by_ref('payments', $payments);
@@ -84,11 +85,13 @@ class OJSPaymentAction {
 		$completedPaymentId = $args[0];
 		$payment =& $paymentDao->getCompletedPayment($completedPaymentId);
 
+		$journal =& Request::getJournal();
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
 		$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 		$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 
+		$templateMgr->assign('isJournalManager', Validation::isJournalManager($journal->getId()));
 		$templateMgr->assign_by_ref('individualSubscriptionDao', $individualSubscriptionDao);
 		$templateMgr->assign_by_ref('institutionalSubscriptionDao', $institutionalSubscriptionDao);
 		$templateMgr->assign_by_ref('payment', $payment);
