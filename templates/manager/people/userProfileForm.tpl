@@ -20,7 +20,7 @@
 		$("#interestsTextOnly").hide();
 		$("#interests").tagit({
 			{/literal}{if $existingInterests}{literal} availableTags: [{/literal}{foreach name=existingInterests from=$existingInterests item=interest}"{$interest|escape|escape:"javascript"}"{if !$smarty.foreach.existingInterests.last}, {/if}{/foreach}{literal}],{/literal}{/if}
-			{if $currentInterests}{literal}currentTags: [{/literal}{foreach name=currentInterests from=$currentInterests item=interest}"{$interest|escape|escape:"javascript"}"{if !$smarty.foreach.currentInterests.last}, {/if}{/foreach}{literal}]{/literal}
+			{if $interestsKeywords}{literal}currentTags: [{/literal}{foreach name=currentInterests from=$interestsKeywords item=interest}"{$interest|escape|escape:"javascript"}"{if !$smarty.foreach.currentInterests.last}, {/if}{/foreach}{literal}]{/literal}
 					  {else}{literal}currentTags: []{/literal}{/if}{literal}
 		});
 	});
@@ -230,7 +230,7 @@
 		<td class="label">{fieldLabel key="user.interests"}</td>
 		<td class="value"><ul id="interests"></ul><br />
 			<textarea name="interests" id="interestsTextOnly" rows="5" cols="40" class="textArea">
-				{foreach name=currentInterests from=$currentInterests item=interest}{$interest|urldecode}{if !$smarty.foreach.currentInterests.last}, {/if}{/foreach}
+				{foreach name=currentInterests from=$interestsKeywords item=interest}{$interest|urldecode}{if !$smarty.foreach.currentInterests.last}, {/if}{/foreach}
 			</textarea>
 		</td>
 	</tr>

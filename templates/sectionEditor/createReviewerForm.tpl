@@ -19,7 +19,8 @@
 		$("#interestsTextOnly").hide();
 		$("#interests").tagit({
 			{/literal}{if $existingInterests}{literal} availableTags: [{/literal}{foreach name=existingInterests from=$existingInterests item=interest}"{$interest|escape|escape:"javascript"}"{if !$smarty.foreach.existingInterests.last}, {/if}{/foreach}{literal}],{/literal}{/if}
-			{literal}currentTags: []
+			{if $interestsKeywords}{literal}currentTags: [{/literal}{foreach name=currentInterests from=$interestsKeywords item=interest}"{$interest|escape|escape:"javascript"}"{if !$smarty.foreach.currentInterests.last}, {/if}{/foreach}{literal}]{/literal}
+					  {else}{literal}currentTags: []{/literal}{/if}{literal}
 		});
 	});
 </script>
@@ -130,7 +131,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel key="user.interests"}</td>
-		<td class="value"><ul id="interests"></ul><br /><textarea name="interests" id="interestsTextOnly" rows="5" cols="40" class="textArea"></textarea></td>
+		<td class="value"><ul id="interests"></ul><br /><textarea name="interests" id="interestsTextOnly" rows="5" cols="40" class="textArea">{foreach name=currentInterests from=$interestsKeywords item=interest}{$interest|urldecode}{if !$smarty.foreach.currentInterests.last}, {/if}{/foreach}</textarea></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="gossip" key="user.gossip"}</td>
