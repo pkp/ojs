@@ -39,7 +39,7 @@
 		</td>
 		<td>
 			{if $payment->isSubscription()}
-				<a href="{url page="subscriptionManager" op="editSubscription" path=$payment->getAssocId() }" >{$payment->getName()|escape}</a>
+				<a href="{url op="editSubscription" path=$payment->getAssocId() }" >{$payment->getName()|escape}</a>
 			{else}
 				{$payment->getName()|escape}
 			{/if}
