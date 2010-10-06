@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * 2.3.3.2_update.xml
+  *
+  * Copyright (c) 2003-2010 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 2.3.3.2 database updates XML file.
+  -->
+<data>
+	<!-- Bug #5919: Re-implement submission 'type' column as int -->
+	<sql>
+		<!-- First, change all strings to their integer equivalents -->
+		<query>UPDATE article_files SET type = 1 WHERE type = 'submission/original'</query><!-- ARTICLE_FILE_SUBMISSION -->
+		<query>UPDATE article_files SET type = 2 WHERE type = 'submission/review'</query><!-- ARTICLE_FILE_REVIEW -->
+		<query>UPDATE article_files SET type = 3 WHERE type = 'submission/editor'</query><!-- ARTICLE_FILE_EDITOR -->
+		<query>UPDATE article_files SET type = 4 WHERE type = 'submission/copyedit'</query><!-- ARTICLE_FILE_COPYEDIT -->
+		<query>UPDATE article_files SET type = 5 WHERE type = 'submission/layout'</query><!-- ARTICLE_FILE_LAYOUT -->
+		<query>UPDATE article_files SET type = 6 WHERE type = 'supp'</query><!-- ARTICLE_FILE_SUPP -->
+		<query>UPDATE article_files SET type = 7 WHERE type = 'public'</query><!-- ARTICLE_FILE_PUBLIC -->
+		<query>UPDATE article_files SET type = 8 WHERE type = 'note'</query><!-- ARTICLE_FILE_NOTE -->
+		<query>UPDATE article_files SET type = 9 WHERE type = 'attachment'</query><!-- ARTICLE_FILE_ATTACHMENT -->
+
+		<!-- Then, alter the column changing it to a BIGINT -->
+		<query>ALTER TABLE article_files MODIFY type BIGINT(20)</query>
+	</sql>
+
+</data>

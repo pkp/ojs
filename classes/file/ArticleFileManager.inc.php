@@ -26,17 +26,7 @@
 
 
 import('lib.pkp.classes.file.FileManager');
-
-/* File type suffixes */
-define('ARTICLE_FILE_SUBMISSION',	'SM');
-define('ARTICLE_FILE_REVIEW',		'RV');
-define('ARTICLE_FILE_EDITOR',		'ED');
-define('ARTICLE_FILE_COPYEDIT',		'CE');
-define('ARTICLE_FILE_LAYOUT',		'LE');
-define('ARTICLE_FILE_PUBLIC',		'PB');
-define('ARTICLE_FILE_SUPP',		'SP');
-define('ARTICLE_FILE_NOTE',		'NT');
-define('ARTICLE_FILE_ATTACHMENT',	'AT');
+import('classes.article.ArticleFile');
 
 class ArticleFileManager extends FileManager {
 
@@ -223,11 +213,9 @@ class ArticleFileManager extends FileManager {
 		$articleFile =& $this->getFile($fileId, $revision);
 
 		if (isset($articleFile)) {
-			$fileType = $articleFile->getFileType();
-			$filePath = $this->filesDir . $articleFile->getType() . '/' . $articleFile->getFileName();
+			$filePath = $this->filesDir .  $this->typeToPath($articleFile->getType()) . '/' . $articleFile->getFileName();
 
 			return parent::readFile($filePath, $output);
-
 		} else {
 			return false;
 		}
@@ -255,7 +243,7 @@ class ArticleFileManager extends FileManager {
 		}
 
 		foreach ($files as $f) {
-			parent::deleteFile($this->filesDir . $f->getType() . '/' . $f->getFileName());
+			parent::deleteFile($this->filesDir . $this->typeToPath($f->getType()) . '/' . $f->getFileName());
 		}
 
 		$articleFileDao->deleteArticleFileById($fileId, $revision);
@@ -281,7 +269,7 @@ class ArticleFileManager extends FileManager {
 		$articleFile =& $this->getFile($fileId, $revision);
 		if (isset($articleFile)) {
 			$fileType = $articleFile->getFileType();
-			$filePath = $this->filesDir . $articleFile->getType() . '/' . $articleFile->getFileName();
+			$filePath = $this->filesDir .  $this->typeToPath($articleFile->getType()) . '/' . $articleFile->getFileName();
 
 			return parent::downloadFile($filePath, $fileType, $inline);
 
@@ -359,6 +347,25 @@ class ArticleFileManager extends FileManager {
 		}
 	}
 
+ /**
+   * Return type abbreviation associated with a type code (used for naming files).
+   * @param $type string
+   * @return string
+   */
+  function typeToAbbrev($type) {
+    switch ($type) {
+      case ARTICLE_FILE_PUBLIC: return 'PB';
+      case ARTICLE_FILE_SUPP: return 'SP';
+      case ARTICLE_FILE_NOTE: return 'NT';
+      case ARTICLE_FILE_REVIEW: return 'RV';
+      case ARTICLE_FILE_EDITOR: return 'ED';
+      case ARTICLE_FILE_COPYEDIT: return 'CE';
+      case ARTICLE_FILE_LAYOUT: return 'LE';
+      case ARTICLE_FILE_ATTACHMENT: return 'AT';
+      case ARTICLE_FILE_SUBMISSION: default: return 'SM';
+    }
+  }
+
 	/**
 	 * Copies an existing ArticleFile and renames it.
 	 * @param $sourceFileId int
@@ -388,7 +395,7 @@ class ArticleFileManager extends FileManager {
 			return false;
 		}
 
-		$sourceDir = $this->filesDir . $sourceArticleFile->getType() . '/';
+		$sourceDir = $this->filesDir .  $this->typeToPath($sourceArticleFile->getType()) . '/';
 
 		if ($destFileId != null) {
 			$articleFile->setFileId($destFileId);
@@ -400,7 +407,7 @@ class ArticleFileManager extends FileManager {
 		$articleFile->setFileType($sourceArticleFile->getFileType());
 		$articleFile->setFileSize($sourceArticleFile->getFileSize());
 		$articleFile->setOriginalFileName($sourceArticleFile->getFileName());
-		$articleFile->setType($destTypePath);
+		$articleFile->setType($destType);
 		$articleFile->setDateUploaded(Core::getCurrentDate());
 		$articleFile->setDateModified(Core::getCurrentDate());
 		$articleFile->setRound($this->article->getCurrentRound()); // FIXME This field is only applicable for review files?
@@ -410,7 +417,7 @@ class ArticleFileManager extends FileManager {
 
 		// Rename the file.
 		$fileExtension = $this->parseFileExtension($sourceArticleFile->getFileName());
-		$newFileName = $this->articleId.'-'.$fileId.'-'.$revision.'-'.$destType.'.'.$fileExtension;
+		$newFileName = $this->articleId.'-'.$fileId.'-'.$revision.'-'.$this->typeToAbbrev($destType).'.'.$fileExtension;
 
 		if (!$this->fileExists($destDir, 'dir')) {
 			// Try to create destination directory
@@ -471,7 +478,7 @@ class ArticleFileManager extends FileManager {
 	 */
 	function generateFilename(&$articleFile, $type, $originalName) {
 		$extension = $this->parseFileExtension($originalName);
-		$newFileName = $articleFile->getArticleId().'-'.$articleFile->getFileId().'-'.$articleFile->getRevision().'-'.$type.'.'.$extension;
+		$newFileName = $articleFile->getArticleId().'-'.$articleFile->getFileId().'-'.$articleFile->getRevision().'-'.$this->typeToAbbrev($type).'.'.$extension;
 		$articleFile->setFileName($newFileName);
 		return $newFileName;
 	}
@@ -479,7 +486,7 @@ class ArticleFileManager extends FileManager {
 	/**
 	 * PRIVATE routine to upload the file and add it to the database.
 	 * @param $fileName string index into the $_FILES array
-	 * @param $type string identifying type
+	 * @param $type int identifying type
 	 * @param $fileId int ID of an existing file to update
 	 * @param $overwrite boolean overwrite all previous revisions of the file (revision number is still incremented)
 	 * @return int the file ID (false if upload failed)
@@ -509,7 +516,7 @@ class ArticleFileManager extends FileManager {
 		$articleFile->setFileType($_FILES[$fileName]['type']);
 		$articleFile->setFileSize($_FILES[$fileName]['size']);
 		$articleFile->setOriginalFileName(ArticleFileManager::truncateFileName($_FILES[$fileName]['name'], 127));
-		$articleFile->setType($typePath);
+		$articleFile->setType($type);
 		$articleFile->setRound($this->article->getCurrentRound());
 
 		$newFileName = $this->generateFilename($articleFile, $type, $this->getUploadedFileName($fileName));
@@ -564,7 +571,7 @@ class ArticleFileManager extends FileManager {
 		$articleFile->setFileType($mimeType);
 		$articleFile->setFileSize(strlen($contents));
 		$articleFile->setOriginalFileName(ArticleFileManager::truncateFileName($fileName, 127));
-		$articleFile->setType($typePath);
+		$articleFile->setType($type);
 		$articleFile->setRound($this->article->getCurrentRound());
 
 		$newFileName = $this->generateFilename($articleFile, $type, $fileName);
@@ -617,7 +624,7 @@ class ArticleFileManager extends FileManager {
 
 		$articleFile->setFileType($mimeType);
 		$articleFile->setOriginalFileName(ArticleFileManager::truncateFileName(basename($url), 127));
-		$articleFile->setType($typePath);
+		$articleFile->setType($type);
 		$articleFile->setRound($this->article->getCurrentRound());
 
 		$newFileName = $this->generateFilename($articleFile, $type, $articleFile->getOriginalFileName());
@@ -655,7 +662,7 @@ class ArticleFileManager extends FileManager {
 		$articleFile =& $this->generateDummyFile($this->article);
 		$articleFile->setFileType($temporaryFile->getFileType());
 		$articleFile->setOriginalFileName($temporaryFile->getOriginalFileName());
-		$articleFile->setType($typePath);
+		$articleFile->setType($type);
 		$articleFile->setRound($this->article->getCurrentRound());
 		$articleFile->setAssocId($assocId);
 

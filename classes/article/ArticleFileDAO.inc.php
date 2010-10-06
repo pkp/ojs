@@ -213,7 +213,7 @@ class ArticleFileDAO extends DAO {
 
 		$result =& $this->retrieve(
 			'SELECT * FROM article_files WHERE assoc_id = ? AND type = ?',
-			array($assocId, ArticleFileManager::typeToPath($type))
+			array($assocId, $type)
 		);
 
 		while (!$result->EOF) {

@@ -587,7 +587,7 @@
 			<NOTNULL/>
 		</field>
 		<field name="original_file_name" type="C2" size="127"/>
-		<field name="type" type="C2" size="40">
+		<field name="type" type="I8">
 			<NOTNULL/>
 		</field>
 		<field name="viewable" type="I1" />
