@@ -220,7 +220,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 	 * Edit a supplementary file.
 	 * @param $args array ($articleId, $suppFileId)
 	 */
-	function editSuppFile($args) {
+	function editSuppFile($args, &$request) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$suppFileId = isset($args[1]) ? (int) $args[1] : 0;
 		$this->validate($articleId);
@@ -231,7 +231,8 @@ class TrackSubmissionHandler extends AuthorHandler {
 
 			import('classes.submission.form.SuppFileForm');
 
-			$submitForm = new SuppFileForm($authorSubmission, $suppFileId);
+			$journal =& $request->getJournal();
+			$submitForm = new SuppFileForm($authorSubmission, $journal, $suppFileId);
 
 			if ($submitForm->isLocaleResubmit()) {
 				$submitForm->readInputData();
@@ -270,7 +271,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 	 * Save a supplementary file.
 	 * @param $args array ($suppFileId)
 	 */
-	function saveSuppFile($args) {
+	function saveSuppFile($args, &$request) {
 		$articleId = Request::getUserVar('articleId');
 		$this->validate($articleId);
 		$authorSubmission =& $this->submission;
@@ -281,7 +282,8 @@ class TrackSubmissionHandler extends AuthorHandler {
 
 			import('classes.submission.form.SuppFileForm');
 
-			$submitForm = new SuppFileForm($authorSubmission, $suppFileId);
+			$journal =& $request->getJournal();
+			$submitForm = new SuppFileForm($authorSubmission, $journal, $suppFileId);
 			$submitForm->readInputData();
 
 			if ($submitForm->validate()) {
