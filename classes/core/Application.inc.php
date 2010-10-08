@@ -86,7 +86,6 @@ class Application extends PKPApplication {
 			'ArticleSearchDAO' => 'classes.search.ArticleSearchDAO',
 			'AuthorDAO' => 'classes.article.AuthorDAO',
 			'AuthorSubmissionDAO' => 'classes.submission.author.AuthorSubmissionDAO',
-			'CitationDAO' => 'lib.pkp.classes.citation.CitationDAO',
 			'CommentDAO' => 'lib.pkp.classes.comment.CommentDAO',
 			'CopyeditorSubmissionDAO' => 'classes.submission.copyeditor.CopyeditorSubmissionDAO',
 			'EditAssignmentDAO' => 'classes.submission.editAssignment.EditAssignmentDAO',
@@ -101,7 +100,6 @@ class Application extends PKPApplication {
 			'JournalSettingsDAO' => 'classes.journal.JournalSettingsDAO',
 			'JournalStatisticsDAO' => 'classes.journal.JournalStatisticsDAO',
 			'LayoutEditorSubmissionDAO' => 'classes.submission.layoutEditor.LayoutEditorSubmissionDAO',
-			'MetadataDescriptionDAO' => 'lib.pkp.classes.metadata.MetadataDescriptionDAO',
 			'NoteDAO' => 'classes.note.NoteDAO',
 			'OAIDAO' => 'classes.oai.ojs.OAIDAO',
 			'OJSCompletedPaymentDAO' => 'classes.payment.ojs.OJSCompletedPaymentDAO',
@@ -133,9 +131,21 @@ class Application extends PKPApplication {
 	 */
 	function getPluginCategories() {
 		return array(
+			// NB: Meta-data plug-ins are first in the list as this
+			// will make them being loaded (and installed) first.
+			// This is necessary as many other plug-in categories
+			// depend on meta-data. This is a very rudimentary type of
+			// dependency management for plug-ins.
+			'metadata',
 			'auth',
 			'blocks',
+			// NB: 'citationFormats' is an obsolete category for backwards
+			// compatibility only. This will be replaced by 'citationOutput',
+			// see #5156.
 			'citationFormats',
+			'citationLookup',
+			'citationOutput',
+			'citationParser',
 			'gateways',
 			'generic',
 			'implicitAuth',
