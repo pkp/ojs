@@ -80,9 +80,9 @@ class SubmissionReviewHandler extends ReviewerHandler {
 	 * Confirm whether the review has been accepted or not.
 	 * @param $args array optional
 	 */
-	function confirmReview($args = null) {
-		$reviewId = Request::getUserVar('reviewId');
-		$declineReview = Request::getUserVar('declineReview');
+	function confirmReview($args, $request) {
+		$reviewId = (int) $request->getUserVar('reviewId');
+		$declineReview = $request->getUserVar('declineReview');
 
 		$reviewerSubmissionDao =& DAORegistry::getDAO('ReviewerSubmissionDAO');
 
@@ -94,11 +94,11 @@ class SubmissionReviewHandler extends ReviewerHandler {
 		$decline = isset($declineReview) ? 1 : 0;
 
 		if (!$reviewerSubmission->getCancelled()) {
-			if (ReviewerAction::confirmReview($reviewerSubmission, $decline, Request::getUserVar('send'))) {
-				Request::redirect(null, null, 'submission', $reviewId);
+			if (ReviewerAction::confirmReview($reviewerSubmission, $decline, $request->getUserVar('send'), $request)) {
+				$request->redirect(null, null, 'submission', $reviewId);
 			}
 		} else {
-			Request::redirect(null, null, 'submission', $reviewId);
+			$request->redirect(null, null, 'submission', $reviewId);
 		}
 	}
 
@@ -122,9 +122,9 @@ class SubmissionReviewHandler extends ReviewerHandler {
 	/**
 	 * Record the reviewer recommendation.
 	 */
-	function recordRecommendation() {
-		$reviewId = Request::getUserVar('reviewId');
-		$recommendation = Request::getUserVar('recommendation');
+	function recordRecommendation($args, $request) {
+		$reviewId = (int) $request->getUserVar('reviewId');
+		$recommendation = (int) $request->getUserVar('recommendation');
 
 		$this->validate($reviewId);
 		$reviewerSubmission =& $this->submission;
@@ -132,11 +132,11 @@ class SubmissionReviewHandler extends ReviewerHandler {
 		$this->setupTemplate(true);
 
 		if (!$reviewerSubmission->getCancelled()) {
-			if (ReviewerAction::recordRecommendation($reviewerSubmission, $recommendation, Request::getUserVar('send'))) {
-				Request::redirect(null, null, 'submission', $reviewId);
+			if (ReviewerAction::recordRecommendation($reviewerSubmission, $recommendation, $request->getUserVar('send'), $request)) {
+				$request->redirect(null, null, 'submission', $reviewId);
 			}
 		} else {
-			Request::redirect(null, null, 'submission', $reviewId);
+			$request->redirect(null, null, 'submission', $reviewId);
 		}
 	}
 
@@ -159,15 +159,17 @@ class SubmissionReviewHandler extends ReviewerHandler {
 
 	/**
 	 * Upload the reviewer's annotated version of an article.
+	 * @param $args array
+	 * @param $request object
 	 */
-	function uploadReviewerVersion() {
-		$reviewId = Request::getUserVar('reviewId');
+	function uploadReviewerVersion($args, $request) {
+		$reviewId = $request->getUserVar('reviewId');
 
 		$this->validate($reviewId);
 		$this->setupTemplate(true);
 		
-		ReviewerAction::uploadReviewerVersion($reviewId);
-		Request::redirect(null, null, 'submission', $reviewId);
+		ReviewerAction::uploadReviewerVersion($reviewId, $this->submission, $request);
+		$request->redirect(null, null, 'submission', $reviewId);
 	}
 
 	/*

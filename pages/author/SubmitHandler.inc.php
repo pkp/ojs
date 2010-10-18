@@ -33,7 +33,7 @@ class SubmitHandler extends AuthorHandler {
 	 * @param $args array optional, if set the first parameter is the step to display
 	 */
 	function submit($args, $request) {
-		$step = isset($args[0]) ? (int) $args[0] : 0;
+		$step = (int) array_shift($args);
 		$articleId = $request->getUserVar('articleId');
 		$journal =& $request->getJournal();
 
@@ -44,7 +44,7 @@ class SubmitHandler extends AuthorHandler {
 		$formClass = "AuthorSubmitStep{$step}Form";
 		import("classes.author.form.submit.$formClass");
 
-		$submitForm = new $formClass($article, $journal);
+		$submitForm = new $formClass($article, $journal, $request);
 		if ($submitForm->isLocaleResubmit()) {
 			$submitForm->readInputData();
 		} else {
@@ -59,7 +59,7 @@ class SubmitHandler extends AuthorHandler {
 	 * @param $request Request
 	 */
 	function saveSubmit($args, &$request) {
-		$step = isset($args[0]) ? (int) $args[0] : 0;
+		$step = (int) array_shift($args);
 		$articleId = $request->getUserVar('articleId');
 		$journal =& $request->getJournal();
 
@@ -70,7 +70,7 @@ class SubmitHandler extends AuthorHandler {
 		$formClass = "AuthorSubmitStep{$step}Form";
 		import("classes.author.form.submit.$formClass");
 
-		$submitForm = new $formClass($article, $journal);
+		$submitForm = new $formClass($article, $journal, $request);
 		$submitForm->readInputData();
 
 		if (!HookRegistry::call('SubmitHandler::saveSubmit', array($step, &$article, &$submitForm))) {
@@ -152,7 +152,7 @@ class SubmitHandler extends AuthorHandler {
 			}
 
 			if (!isset($editData) && $submitForm->validate()) {
-				$articleId = $submitForm->execute($request);
+				$articleId = $submitForm->execute();
 				HookRegistry::call('Author::SubmitHandler::saveSubmit', array(&$step, &$article, &$submitForm));
 
 				if ($step == 5) {
@@ -293,20 +293,20 @@ class SubmitHandler extends AuthorHandler {
 		Request::redirect(null, null, 'submit', '4', array('articleId' => $articleId));
 	}
 
-	function expediteSubmission() {
-		$articleId = (int) Request::getUserVar('articleId');
+	function expediteSubmission($args, $request) {
+		$articleId = (int) $request->getUserVar('articleId');
 		$this->validate($articleId);
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		$article =& $this->article;
 
 		// The author must also be an editor to perform this task.
 		if (Validation::isEditor($journal->getId()) && $article->getSubmissionFileId()) {
 			import('classes.submission.editor.EditorAction');
-			EditorAction::expediteSubmission($article);
-			Request::redirect(null, 'editor', 'submissionEditing', array($article->getId()));
+			EditorAction::expediteSubmission($article, $request);
+			$request->redirect(null, 'editor', 'submissionEditing', array($article->getId()));
 		}
 
-		Request::redirect(null, null, 'track');
+		$request->redirect(null, null, 'track');
 	}
 
 	/**

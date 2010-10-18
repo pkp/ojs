@@ -69,14 +69,14 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 	/**
 	 * Sets proofreader completion date
 	 */
-	function completeProofreader($args) {
-		$articleId = Request::getUserVar('articleId');
+	function completeProofreader($args, $request) {
+		$articleId = $request->getUserVar('articleId');
 
 		$this->validate($articleId);
 		$this->setupTemplate(true);
 
-		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_COMPLETE', Request::getUserVar('send')?'':Request::url(null, 'proofreader', 'completeProofreader'))) {
-			Request::redirect(null, null, 'submission', $articleId);
+		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_COMPLETE', $request, $request->getUserVar('send')?'':$request->url(null, 'proofreader', 'completeProofreader'))) {
+			$request->redirect(null, null, 'submission', $articleId);
 		}		
 	}
 

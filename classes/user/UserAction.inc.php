@@ -118,9 +118,9 @@ class UserAction {
 		}
 
 		$articleEmailLogDao =& DAORegistry::getDAO('ArticleEmailLogDAO');
-		$articleEmailLogDao->transferArticleLogEntries($oldUserId, $newUserId);
+		$articleEmailLogDao->changeUser($oldUserId, $newUserId);
 		$articleEventLogDao =& DAORegistry::getDAO('ArticleEventLogDAO');
-		$articleEventLogDao->transferArticleLogEntries($oldUserId, $newUserId);
+		$articleEventLogDao->changeUser($oldUserId, $newUserId);
 
 		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
 		foreach ($articleCommentDao->getArticleCommentsByUserId($oldUserId) as $articleComment) {

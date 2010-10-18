@@ -108,6 +108,11 @@
 		<data file="dbscripts/xml/upgrade/2.3.3_preaffiliations.xml" condition="return $installer->columnExists('users', 'affiliation') &amp;&amp; $installer->columnExists('authors', 'affiliation');" />
 	</upgrade>
 
+	<upgrade minversion="2.0.0.0" maxversion="2.3.3.9">
+		<!-- 2.x to 2.3.4 -->
+		<data file="dbscripts/xml/upgrade/2.3.4_preupdate.xml" />
+	</upgrade>
+
 	<!-- PKP schema components -->
 	<schema file="lib/pkp/xml/schema/common.xml" />
 	<schema file="lib/pkp/xml/schema/groups.xml" />
@@ -220,8 +225,10 @@
 		<data file="dbscripts/xml/upgrade/2.3.3_update.xml" />
 		<note file="docs/release-notes/README-2.3.3" />
 	</upgrade>
-	
-	 <upgrade minversion="2.0.0.0" maxversion="2.3.3.1">
-    <data file="dbscripts/xml/upgrade/2.3.4_update.xml" />
-  </upgrade>
+
+	<upgrade minversion="2.0.0.0" maxversion="2.3.3.9">
+		<!-- 2.x to 2.3.4 -->
+		<data file="dbscripts/xml/upgrade/2.3.4_update.xml" />
+		<note file="docs/release-notes/README-2.3.4" />
+	</upgrade>
 </install>

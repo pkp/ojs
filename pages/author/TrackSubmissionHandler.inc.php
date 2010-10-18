@@ -331,15 +331,15 @@ class TrackSubmissionHandler extends AuthorHandler {
 	/**
 	 * Upload the author's revised version of an article.
 	 */
-	function uploadRevisedVersion() {
-		$articleId = Request::getUserVar('articleId');
+	function uploadRevisedVersion($args, $request) {
+		$articleId = $request->getUserVar('articleId');
 		$this->validate($articleId);
 		$submission =& $this->submission;
 		$this->setupTemplate(true);
 
-		AuthorAction::uploadRevisedVersion($submission);
+		AuthorAction::uploadRevisedVersion($submission, $request);
 
-		Request::redirect(null, null, 'submissionReview', $articleId);
+		$request->redirect(null, null, 'submissionReview', $articleId);
 	}
 
 	function viewMetadata($args, $request) {
@@ -391,9 +391,9 @@ class TrackSubmissionHandler extends AuthorHandler {
 		Request::redirect(null, null, 'viewMetadata', $articleId);
 	}
 
-	function uploadCopyeditVersion() {
-		$copyeditStage = Request::getUserVar('copyeditStage');
-		$articleId = Request::getUserVar('articleId');
+	function uploadCopyeditVersion($args, $request) {
+		$copyeditStage = $request->getUserVar('copyeditStage');
+		$articleId = $request->getUserVar('articleId');
 
 		$this->validate($articleId);
 		$submission =& $this->submission;
@@ -401,17 +401,17 @@ class TrackSubmissionHandler extends AuthorHandler {
 
 		AuthorAction::uploadCopyeditVersion($submission, $copyeditStage);
 
-		Request::redirect(null, null, 'submissionEditing', $articleId);
+		$request->redirect(null, null, 'submissionEditing', $articleId);
 	}
 
-	function completeAuthorCopyedit($args) {
-		$articleId = Request::getUserVar('articleId');
+	function completeAuthorCopyedit($args, $request) {
+		$articleId = $request->getUserVar('articleId');
 		$this->validate($articleId);
 		$submission =& $this->submission;
 		$this->setupTemplate(true);
 
-		if (AuthorAction::completeAuthorCopyedit($submission, Request::getUserVar('send'))) {
-			Request::redirect(null, null, 'submissionEditing', $articleId);
+		if (AuthorAction::completeAuthorCopyedit($submission, $request->getUserVar('send'), $request)) {
+			$request->redirect(null, null, 'submissionEditing', $articleId);
 		}
 	}
 
@@ -494,17 +494,17 @@ class TrackSubmissionHandler extends AuthorHandler {
 	/**
 	 * Set the author proofreading date completion
 	 */
-	function authorProofreadingComplete($args) {
-		$articleId = Request::getUserVar('articleId');
+	function authorProofreadingComplete($args, $request) {
+		$articleId = (int) $request->getUserVar('articleId');
 		$this->validate($articleId);
 		$this->setupTemplate(true);
 
-		$send = isset($args[0]) && $args[0] == 'send' ? true : false;
+		$send = (int) array_shift($args);
 
 		import('classes.submission.proofreader.ProofreaderAction');
 
-		if (ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_AUTHOR_COMPLETE', $send?'':Request::url(null, 'author', 'authorProofreadingComplete', 'send'))) {
-			Request::redirect(null, null, 'submissionEditing', $articleId);
+		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_AUTHOR_COMPLETE', $request, $send?'':$request->url(null, 'author', 'authorProofreadingComplete', 'send'))) {
+			$request->redirect(null, null, 'submissionEditing', $articleId);
 		}
 	}
 

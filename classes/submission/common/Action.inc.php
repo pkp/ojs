@@ -162,8 +162,7 @@ class Action extends PKPAction {
 				// Add log entry
 				$user =& $request->getUser();
 				import('classes.article.log.ArticleLog');
-				import('classes.article.log.ArticleEventLogEntry');
-				ArticleLog::logEvent($article->getId(), ARTICLE_LOG_METADATA_UPDATE, ARTICLE_LOG_TYPE_DEFAULT, 0, 'log.editor.metadataModified', Array('editorName' => $user->getFullName()));
+				ArticleLog::logEvent($request, $article, ARTICLE_LOG_METADATA_UPDATE, 'log.editor.metadataModified', array('editorName' => $user->getFullName()));
 
 				return true;
 			}
@@ -255,7 +254,7 @@ class Action extends PKPAction {
 	 * Save comment.
 	 * @param $commentId int
 	 */
-	function saveComment($article, &$comment, $emailComment) {
+	function saveComment($article, &$comment, $emailComment, $request) {
 		if (!HookRegistry::call('Action::saveComment', array(&$article, &$comment, &$emailComment))) {
 			import('classes.submission.form.comment.EditCommentForm');
 
@@ -270,7 +269,7 @@ class Action extends PKPAction {
 				$notificationManager = new NotificationManager();
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
 				foreach ($notificationUsers as $userRole) {
-					$url = Request::url(null, $userRole['role'], 'submissionReview', $article->getId(), null, 'editorDecision');
+					$url = $request->url(null, $userRole['role'], 'submissionReview', $article->getId(), null, 'editorDecision');
 					$notificationManager->createNotification(
 						$userRole['id'], 'notification.type.submissionComment',
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_SUBMISSION_COMMENT
@@ -278,7 +277,7 @@ class Action extends PKPAction {
 				}
 
 				if ($emailComment) {
-					$commentForm->email($commentForm->emailHelper());
+					$commentForm->email($commentForm->emailHelper(), $request);
 				}
 
 			} else {

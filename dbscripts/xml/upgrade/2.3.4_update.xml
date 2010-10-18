@@ -2,12 +2,12 @@
 <!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
 
 <!--
-  * 2.3.3.2_update.xml
+  * 2.3.4_update.xml
   *
   * Copyright (c) 2003-2010 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * 2.3.3.2 database updates XML file.
+  * 2.3.4 database updates XML file.
   -->
 <data>
 	<!-- Bug #5919: Re-implement submission 'type' column as int -->
@@ -27,4 +27,14 @@
 		<query>ALTER TABLE article_files MODIFY type BIGINT(20)</query>
 	</sql>
 
+	<!-- Bug #6021: port logs to pkp-lib -->
+	<sql>
+		<!-- article_event_log -->
+		<query>UPDATE event_log SET assoc_type = 257</query><!-- ASSOC_TYPE_ARTICLE -->
+		<query>INSERT INTO event_log_settings (log_id, setting_name, setting_value, setting_type) SELECT log_id, 'assoc_type', assoc_type_old, 'string' FROM event_log WHERE assoc_id IS NOT NULL AND assoc_id &lt;&gt; 0</query>
+		<query>INSERT INTO event_log_settings (log_id, setting_name, setting_value, setting_type) SELECT log_id, 'assoc_type', assoc_type_old, 'string' FROM event_log WHERE assoc_type IS NOT NULL AND assoc_type &lt;&gt; 0</query>
+
+		<!-- article_email_log -->
+		<query>UPDATE email_log SET assoc_type = 257</query><!-- ASSOC_TYPE_ARTICLE -->
+	</sql>
 </data>

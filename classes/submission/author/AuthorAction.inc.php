@@ -89,8 +89,9 @@ class AuthorAction extends Action {
 	/**
 	 * Upload the revised version of an article.
 	 * @param $authorSubmission object
+	 * @param $request object
 	 */
-	function uploadRevisedVersion($authorSubmission) {
+	function uploadRevisedVersion($authorSubmission, $request) {
 		import('classes.file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($authorSubmission->getId());
 		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
@@ -111,29 +112,30 @@ class AuthorAction extends Action {
 			$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
 
 			// Add log entry
-			$user =& Request::getUser();
+			$user =& $request->getUser();
 			import('classes.article.log.ArticleLog');
-			import('classes.article.log.ArticleEventLogEntry');
-			ArticleLog::logEvent($authorSubmission->getId(), ARTICLE_LOG_AUTHOR_REVISION, ARTICLE_LOG_TYPE_AUTHOR, $user->getId(), 'log.author.documentRevised', array('authorName' => $user->getFullName(), 'fileId' => $fileId, 'articleId' => $authorSubmission->getId()));
+			ArticleLog::logEvent($request, $authorSubmission, ARTICLE_LOG_AUTHOR_REVISION, 'log.author.documentRevised', array('authorName' => $user->getFullName(), 'fileId' => $fileId));
 		}
 	}
 
 	/**
 	 * Author completes editor / author review.
 	 * @param $authorSubmission object
+	 * @param $send boolean
+	 * @param $request object
 	 */
-	function completeAuthorCopyedit($authorSubmission, $send = false) {
+	function completeAuthorCopyedit($authorSubmission, $send, $request) {
 		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 		$userDao =& DAORegistry::getDAO('UserDAO');
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 
 		$authorSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $authorSubmission->getId());
 		if ($authorSignoff->getDateCompleted() != null) {
 			return true;
 		}
 
-		$user =& Request::getUser();
+		$user =& $request->getUser();
 		import('classes.mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($authorSubmission, 'COPYEDIT_AUTHOR_COMPLETE');
 
@@ -144,8 +146,7 @@ class AuthorAction extends Action {
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
 			HookRegistry::call('AuthorAction::completeAuthorCopyedit', array(&$authorSubmission, &$email));
 			if ($email->isEnabled()) {
-				$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_AUTHOR_COMPLETE, ARTICLE_EMAIL_TYPE_COPYEDIT, $authorSubmission->getId());
-				$email->send();
+				$email->send($request);
 			}
 
 			$authorSignoff->setDateCompleted(Core::getCurrentDate());
@@ -159,13 +160,11 @@ class AuthorAction extends Action {
 
 			// Add log entry
 			import('classes.article.log.ArticleLog');
-			import('classes.article.log.ArticleEventLogEntry');
-			ArticleLog::logEvent($authorSubmission->getId(), ARTICLE_LOG_COPYEDIT_REVISION, ARTICLE_LOG_TYPE_AUTHOR, $user->getId(), 'log.copyedit.authorFile');
+			ArticleLog::logEvent($request, $authorSubmission, ARTICLE_LOG_COPYEDIT_REVISION, 'log.copyedit.authorFile');
 
 			return true;
-
 		} else {
-			if (!Request::getUserVar('continued')) {
+			if (!$request->getUserVar('continued')) {
 				if (isset($copyeditor)) {
 					$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
 					$assignedSectionEditors = $email->ccAssignedEditingSectionEditors($authorSubmission->getId());
@@ -197,7 +196,7 @@ class AuthorAction extends Action {
 				);
 				$email->assignParams($paramArray);
 			}
-			$email->displayEditForm(Request::url(null, 'author', 'completeAuthorCopyedit', 'send'), array('articleId' => $authorSubmission->getId()));
+			$email->displayEditForm($request->url(null, 'author', 'completeAuthorCopyedit', 'send'), array('articleId' => $authorSubmission->getId()));
 
 			return false;
 		}
@@ -276,7 +275,7 @@ class AuthorAction extends Action {
 	 * @param $article object
 	 * @param $emailComment boolean
 	 */
-	function postLayoutComment($article, $emailComment) {
+	function postLayoutComment($article, $emailComment, $request) {
 		if (!HookRegistry::call('AuthorAction::postLayoutComment', array(&$article, &$emailComment))) {
 			import('classes.submission.form.comment.LayoutCommentForm');
 
@@ -291,7 +290,7 @@ class AuthorAction extends Action {
 				$notificationManager = new NotificationManager();
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
 				foreach ($notificationUsers as $userRole) {
-					$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'layout');
+					$url = $request->url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'layout');
 					$notificationManager->createNotification(
 						$userRole['id'], 'notification.type.layoutComment',
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_LAYOUT_COMMENT
@@ -299,9 +298,8 @@ class AuthorAction extends Action {
 				}
 
 				if ($emailComment) {
-					$commentForm->email();
+					$commentForm->email($request);
 				}
-
 			} else {
 				$commentForm->display();
 				return false;
@@ -328,12 +326,14 @@ class AuthorAction extends Action {
 	 * Email editor decision comment.
 	 * @param $authorSubmission object
 	 * @param $send boolean
+	 * @param $request object
 	 */
-	function emailEditorDecisionComment($authorSubmission, $send) {
+	function emailEditorDecisionComment($authorSubmission, $send, $request) {
 		$userDao =& DAORegistry::getDAO('UserDAO');
-		$journal =& Request::getJournal();
 
-		$user =& Request::getUser();
+		$journal =& $request->getJournal();
+		$user =& $request->getUser();
+
 		import('classes.mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($authorSubmission);
 
@@ -345,7 +345,7 @@ class AuthorAction extends Action {
 
 		if ($send && !$email->hasErrors()) {
 			HookRegistry::call('AuthorAction::emailEditorDecisionComment', array(&$authorSubmission, &$email));
-			$email->send();
+			$email->send($request);
 
 			$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
 			$articleComment = new ArticleComment();
@@ -362,7 +362,7 @@ class AuthorAction extends Action {
 
 			return true;
 		} else {
-			if (!Request::getUserVar('continued')) {
+			if (!$request->getUserVar('continued')) {
 				$email->setSubject($authorSubmission->getLocalizedTitle());
 				if (!empty($editors)) {
 					foreach ($editors as $editor) {
@@ -396,8 +396,10 @@ class AuthorAction extends Action {
 	/**
 	 * Post copyedit comment.
 	 * @param $article object
+	 * @param $emailComment boolean
+	 * @param $request object
 	 */
-	function postCopyeditComment($article, $emailComment) {
+	function postCopyeditComment($article, $emailComment, $request) {
 		if (!HookRegistry::call('AuthorAction::postCopyeditComment', array(&$article, &$emailComment))) {
 			import('classes.submission.form.comment.CopyeditCommentForm');
 
@@ -412,7 +414,7 @@ class AuthorAction extends Action {
 				$notificationManager = new NotificationManager();
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
 				foreach ($notificationUsers as $userRole) {
-					$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'copyedit');
+					$url = $request->url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'copyedit');
 					$notificationManager->createNotification(
 						$userRole['id'], 'notification.type.copyeditComment',
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_COPYEDIT_COMMENT
@@ -420,9 +422,8 @@ class AuthorAction extends Action {
 				}
 
 				if ($emailComment) {
-					$commentForm->email();
+					$commentForm->email($request);
 				}
-
 			} else {
 				$commentForm->display();
 				return false;
@@ -449,8 +450,9 @@ class AuthorAction extends Action {
 	 * Post proofread comment.
 	 * @param $article object
 	 * @param $emailComment boolean
+	 * @param $request object
 	 */
-	function postProofreadComment($article, $emailComment) {
+	function postProofreadComment($article, $emailComment, $request) {
 		if (!HookRegistry::call('AuthorAction::postProofreadComment', array(&$article, &$emailComment))) {
 			import('classes.submission.form.comment.ProofreadCommentForm');
 
@@ -465,14 +467,14 @@ class AuthorAction extends Action {
 				$notificationManager = new NotificationManager();
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
 				foreach ($notificationUsers as $userRole) {
-					$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'proofread');
+					$url = $request->url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'proofread');
 					$notificationManager->createNotification($userRole['id'], 'notification.type.proofreadComment',
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_PROOFREAD_COMMENT
 					);
 				}
 
 				if ($emailComment) {
-					$commentForm->email();
+					$commentForm->email($request);
 				}
 
 			} else {

@@ -289,11 +289,12 @@ class EditCommentForm extends Form {
 	/**
 	 * Email the comment.
 	 * @param $recipients array of recipients (email address => name)
+	 * @param $request object
 	 */
-	function email($recipients) {
+	function email($recipients, $request) {
 		import('classes.mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($this->article, 'SUBMISSION_COMMENT');
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		if ($journal) $email->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 
 		foreach ($recipients as $emailAddress => $name) {
@@ -307,7 +308,7 @@ class EditCommentForm extends Form {
 			);
 			$email->assignParams($paramArray);
 
-			$email->send();
+			$email->send($request);
 			$email->clearRecipients();
 		}
 	}

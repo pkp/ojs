@@ -2,12 +2,12 @@
 <!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
 
 <!--
-  * 2.3.2_preupdate.xml
+  * 2.3.3_preupdate.xml
   *
   * Copyright (c) 2003-2010 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * 2.3.2 database updates XML file, run prior to schema sync.
+  * 2.3.3 database updates XML file, run prior to schema sync.
   *
   * $Id$
   -->

@@ -823,12 +823,9 @@ class NativeImportDom {
 
 		// Log the import in the article event log.
 		import('classes.article.log.ArticleLog');
-		import('classes.article.log.ArticleEventLogEntry');
-		ArticleLog::logEvent(
-			$article->getId(),
+		ArticleLog::logEventHeadless(
+			$journal, $user->getId(), $article,
 			ARTICLE_LOG_ARTICLE_IMPORT,
-			ARTICLE_LOG_TYPE_DEFAULT,
-			0,
 			'log.imported',
 			array('userName' => $user->getFullName(), 'articleId' => $article->getId())
 		);

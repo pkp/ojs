@@ -50,7 +50,7 @@
 		<td>{$logEntry->getFrom()|truncate:40:"..."|escape}</td>
 		<td>{$logEntry->getRecipients()|truncate:40:"..."|escape}</td>
 		<td>{$logEntry->getSubject()|truncate:60:"..."|escape}</td>
-		<td align="right">{if $logEntry->getAssocType()}<a href="{url op="submissionEmailLogType" path=$submission->getArticleId()|to_array:$logEntry->getAssocType():$logEntry->getAssocId()}" class="action">{translate key="common.related"}</a>&nbsp;|&nbsp;{/if}<a href="{url op="submissionEmailLog" path=$submission->getArticleId()|to_array:$logEntry->getId()}" class="action">{translate key="common.view"}</a>{if $isEditor}&nbsp;|&nbsp;<a href="{url op="clearSubmissionEmailLog" path=$submission->getArticleId()|to_array:$logEntry->getId()}" onclick="return confirm('{translate|escape:"jsparam" key="submission.email.confirmDeleteLogEntry"}')" class="action">{translate key="common.delete"}</a>{/if}</td>
+		<td align="right"><a href="{url op="submissionEmailLog" path=$submission->getArticleId()|to_array:$logEntry->getId()}" class="action">{translate key="common.view"}</a>{if $isEditor}&nbsp;|&nbsp;<a href="{url op="clearSubmissionEmailLog" path=$submission->getArticleId()|to_array:$logEntry->getId()}" onclick="return confirm('{translate|escape:"jsparam" key="submission.email.confirmDeleteLogEntry"}')" class="action">{translate key="common.delete"}</a>{/if}</td>
 	</tr>
 	<tr valign="top">
 		<td colspan="5" class="{if $emailLogEntries->eof()}end{/if}separator">&nbsp;</td>

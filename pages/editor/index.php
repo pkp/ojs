@@ -98,10 +98,8 @@ switch ($op) {
 	// Submission History
 	//
 	case 'submissionEventLog':
-	case 'submissionEventLogType':
 	case 'clearSubmissionEventLog':
 	case 'submissionEmailLog':
-	case 'submissionEmailLogType':
 	case 'clearSubmissionEmailLog':
 	case 'addSubmissionNote':
 	case 'removeSubmissionNote':

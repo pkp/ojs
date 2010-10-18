@@ -48,12 +48,12 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 	/**
 	 * Post peer review comments.
 	 */
-	function postPeerReviewComment() {
-		$articleId = Request::getUserVar('articleId');
-		$reviewId = Request::getUserVar('reviewId');
+	function postPeerReviewComment($args, $request) {
+		$articleId = (int) $request->getUserVar('articleId');
+		$reviewId = (int) $request->getUserVar('reviewId');
 
 		// If the user pressed the "Save and email" button, then email the comment.
-		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
+		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;
 
 		$submissionReviewHandler = new SubmissionReviewHandler();
 		$submissionReviewHandler->validate($reviewId);
@@ -61,7 +61,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$user =& $submissionReviewHandler->user;
 
 		$this->setupTemplate(true);
-		if (ReviewerAction::postPeerReviewComment($user, $submission, $reviewId, $emailComment)) {
+		if (ReviewerAction::postPeerReviewComment($user, $submission, $reviewId, $emailComment, $request)) {
 			ReviewerAction::viewPeerReviewComments($user, $submission, $reviewId);
 		}
 	}
@@ -93,11 +93,13 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 
 	/**
 	 * Save comment.
+	 * @param $args array
+	 * @param $request object
 	 */
-	function saveComment() {
-		$articleId = Request::getUserVar('articleId');
-		$commentId = Request::getUserVar('commentId');
-		$reviewId = Request::getUserVar('reviewId');
+	function saveComment($args, $request) {
+		$articleId = (int) $request->getUserVar('articleId');
+		$commentId = (int) $request->getUserVar('commentId');
+		$reviewId = (int) $request->getUserVar('reviewId');
 
 		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
 		$this->validate();
@@ -106,7 +108,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$this->setupTemplate(true);
 		
 		// If the user pressed the "Save and email" button, then email the comment.
-		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;		
+		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;		
 
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$article = $articleDao->getArticle($articleId);
@@ -116,7 +118,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$submission =& $submissionReviewHandler->submission;
 		$user =& $submissionReviewHandler->user;
 
-		ReviewerAction::saveComment($article, $comment, $emailComment);
+		ReviewerAction::saveComment($article, $comment, $emailComment, $request);
 
 		// Refresh the comment
 		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
@@ -124,7 +126,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 
 		// Redirect back to initial comments page
 		if ($comment->getCommentType() == COMMENT_TYPE_PEER_REVIEW) {
-			Request::redirect(null, null, 'viewPeerReviewComments', array($articleId, $comment->getAssocId()));
+			$request->redirect(null, null, 'viewPeerReviewComments', array($articleId, $comment->getAssocId()));
 		}
 	}
 

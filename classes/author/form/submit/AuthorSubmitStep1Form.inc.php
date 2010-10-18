@@ -36,8 +36,8 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 	 * Display the form.
 	 */
 	function display() {
-		$journal =& Request::getJournal();
-		$user =& Request::getUser();
+		$journal =& $this->request->getJournal();
+		$user =& $this->request->getUser();
 
 		$templateMgr =& TemplateManager::getManager();
 
@@ -96,7 +96,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 				'commentsToEditor' => $this->article->getCommentsToEditor()
 			);
 		} else {
-			$journal =& Request::getJournal();
+			$journal =& $this->request->getJournal();
 			$supportedSubmissionLocales = $journal->getSetting('supportedSubmissionLocales');
 			// Try these locales in order until we find one that's
 			// supported to use as a default.
@@ -144,8 +144,8 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 
 		} else {
 			// Insert new article
-			$journal =& Request::getJournal();
-			$user =& Request::getUser();
+			$journal =& $this->request->getJournal();
+			$user =& $this->request->getUser();
 
 			$this->article = new Article();
 			$this->article->setLocale($this->getData('locale'));
@@ -158,7 +158,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 			$this->article->setCommentsToEditor($this->getData('commentsToEditor'));
 
 			// Set user to initial author
-			$user =& Request::getUser();
+			$user =& $this->request->getUser();
 			$author = new Author();
 			$author->setFirstName($user->getFirstName());
 			$author->setMiddleName($user->getMiddleName());

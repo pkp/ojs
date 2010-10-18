@@ -10,17 +10,11 @@
  * @ingroup article_log
  * @see ArticleEventLogDAO
  *
- * @brief Describes an entry in the article history log.
+ * @brief Extension to EventLogEntry for article-specific log entries.
  */
 
-// $Id$
 
-
-// Log levels
-define('ARTICLE_LOG_LEVEL_INFO', 'I');
-define('ARTICLE_LOG_LEVEL_NOTICE', 'N');
-define('ARTICLE_LOG_LEVEL_WARNING', 'W');
-define('ARTICLE_LOG_LEVEL_ERROR', 'E');
+import('lib.pkp.classes.log.EventLogEntry');
 
 // Log entry associative types. All types must be defined here
 define('ARTICLE_LOG_TYPE_DEFAULT', 			0);
@@ -34,273 +28,78 @@ define('ARTICLE_LOG_TYPE_PROOFREAD', 			0x06);
 // Log entry event types. All types must be defined here
 define('ARTICLE_LOG_DEFAULT', 0);
 
-// General events 				0x10000000
-define('ARTICLE_LOG_ARTICLE_SUBMIT', 		0x10000001);
-define('ARTICLE_LOG_METADATA_UPDATE', 		0x10000002);
-define('ARTICLE_LOG_SUPPFILE_UPDATE', 		0x10000003);
-define('ARTICLE_LOG_ISSUE_SCHEDULE', 		0x10000004);
-define('ARTICLE_LOG_ISSUE_ASSIGN', 		0x10000005);
-define('ARTICLE_LOG_ARTICLE_PUBLISH', 		0x10000006);
-define('ARTICLE_LOG_ARTICLE_IMPORT',		0x10000007);
+// General events 					0x10000000
+define('ARTICLE_LOG_ARTICLE_SUBMIT', 			0x10000001);
+define('ARTICLE_LOG_METADATA_UPDATE', 			0x10000002);
+define('ARTICLE_LOG_SUPPFILE_UPDATE', 			0x10000003);
+define('ARTICLE_LOG_ISSUE_SCHEDULE', 			0x10000004);
+define('ARTICLE_LOG_ISSUE_ASSIGN', 			0x10000005);
+define('ARTICLE_LOG_ARTICLE_PUBLISH', 			0x10000006);
+define('ARTICLE_LOG_ARTICLE_IMPORT',			0x10000007);
 
-// Author events 				0x20000000
-define('ARTICLE_LOG_AUTHOR_REVISION', 		0x20000001);
+// Author events 					0x20000000
+define('ARTICLE_LOG_AUTHOR_REVISION', 			0x20000001);
 
-// Editor events 				0x30000000
-define('ARTICLE_LOG_EDITOR_ASSIGN', 		0x30000001);
-define('ARTICLE_LOG_EDITOR_UNASSIGN',	 	0x30000002);
-define('ARTICLE_LOG_EDITOR_DECISION', 		0x30000003);
-define('ARTICLE_LOG_EDITOR_FILE', 		0x30000004);
-define('ARTICLE_LOG_EDITOR_ARCHIVE', 		0x30000005);
-define('ARTICLE_LOG_EDITOR_RESTORE', 		0x30000006);
-define('ARTICLE_LOG_EDITOR_EXPEDITE', 		0x30000007);
+// Editor events 					0x30000000
+define('ARTICLE_LOG_EDITOR_ASSIGN', 			0x30000001);
+define('ARTICLE_LOG_EDITOR_UNASSIGN',		 	0x30000002);
+define('ARTICLE_LOG_EDITOR_DECISION', 			0x30000003);
+define('ARTICLE_LOG_EDITOR_FILE', 			0x30000004);
+define('ARTICLE_LOG_EDITOR_ARCHIVE', 			0x30000005);
+define('ARTICLE_LOG_EDITOR_RESTORE', 			0x30000006);
+define('ARTICLE_LOG_EDITOR_EXPEDITE', 			0x30000007);
 
-// Reviewer events 				0x40000000
-define('ARTICLE_LOG_REVIEW_ASSIGN', 		0x40000001);
-define('ARTICLE_LOG_REVIEW_UNASSIGN',	 	0x40000002);
-define('ARTICLE_LOG_REVIEW_INITIATE', 		0x40000003);
-define('ARTICLE_LOG_REVIEW_CANCEL', 		0x40000004);
-define('ARTICLE_LOG_REVIEW_REINITIATE', 	0x40000005);
-define('ARTICLE_LOG_REVIEW_ACCEPT', 		0x40000006);
-define('ARTICLE_LOG_REVIEW_DECLINE', 		0x40000007);
-define('ARTICLE_LOG_REVIEW_REVISION', 		0x40000008);
-define('ARTICLE_LOG_REVIEW_RECOMMENDATION', 	0x40000009);
-define('ARTICLE_LOG_REVIEW_RATE', 		0x40000010);
-define('ARTICLE_LOG_REVIEW_SET_DUE_DATE', 	0x40000011);
-define('ARTICLE_LOG_REVIEW_RESUBMIT', 		0x40000012);
-define('ARTICLE_LOG_REVIEW_FILE', 		0x40000013);
-define('ARTICLE_LOG_REVIEW_CLEAR', 		0x40000014);
-define('ARTICLE_LOG_REVIEW_CONFIRM_BY_PROXY', 	0x40000015);
+// Reviewer events 					0x40000000
+define('ARTICLE_LOG_REVIEW_ASSIGN', 			0x40000001);
+define('ARTICLE_LOG_REVIEW_UNASSIGN',		 	0x40000002);
+define('ARTICLE_LOG_REVIEW_INITIATE', 			0x40000003);
+define('ARTICLE_LOG_REVIEW_CANCEL', 			0x40000004);
+define('ARTICLE_LOG_REVIEW_REINITIATE',	 		0x40000005);
+define('ARTICLE_LOG_REVIEW_ACCEPT', 			0x40000006);
+define('ARTICLE_LOG_REVIEW_DECLINE', 			0x40000007);
+define('ARTICLE_LOG_REVIEW_REVISION', 			0x40000008);
+define('ARTICLE_LOG_REVIEW_RECOMMENDATION', 		0x40000009);
+define('ARTICLE_LOG_REVIEW_RATE', 			0x40000010);
+define('ARTICLE_LOG_REVIEW_SET_DUE_DATE', 		0x40000011);
+define('ARTICLE_LOG_REVIEW_RESUBMIT', 			0x40000012);
+define('ARTICLE_LOG_REVIEW_FILE', 			0x40000013);
+define('ARTICLE_LOG_REVIEW_CLEAR', 			0x40000014);
+define('ARTICLE_LOG_REVIEW_CONFIRM_BY_PROXY', 		0x40000015);
 define('ARTICLE_LOG_REVIEW_RECOMMENDATION_BY_PROXY', 	0x40000016);
-define('ARTICLE_LOG_REVIEW_FILE_BY_PROXY', 	0x40000017);
+define('ARTICLE_LOG_REVIEW_FILE_BY_PROXY', 		0x40000017);
 
-// Copyeditor events 				0x50000000
-define('ARTICLE_LOG_COPYEDIT_ASSIGN', 		0x50000001);
-define('ARTICLE_LOG_COPYEDIT_UNASSIGN',	 	0x50000002);
-define('ARTICLE_LOG_COPYEDIT_INITIATE', 	0x50000003);
-define('ARTICLE_LOG_COPYEDIT_REVISION', 	0x50000004);
-define('ARTICLE_LOG_COPYEDIT_INITIAL', 		0x50000005);
-define('ARTICLE_LOG_COPYEDIT_FINAL', 		0x50000006);
-define('ARTICLE_LOG_COPYEDIT_SET_FILE',		0x50000007);
+// Copyeditor events 					0x50000000
+define('ARTICLE_LOG_COPYEDIT_ASSIGN', 			0x50000001);
+define('ARTICLE_LOG_COPYEDIT_UNASSIGN',	 		0x50000002);
+define('ARTICLE_LOG_COPYEDIT_INITIATE', 		0x50000003);
+define('ARTICLE_LOG_COPYEDIT_REVISION', 		0x50000004);
+define('ARTICLE_LOG_COPYEDIT_INITIAL', 			0x50000005);
+define('ARTICLE_LOG_COPYEDIT_FINAL', 			0x50000006);
+define('ARTICLE_LOG_COPYEDIT_SET_FILE',			0x50000007);
 define('ARTICLE_LOG_COPYEDIT_COPYEDIT_FILE',		0x50000008);
 define('ARTICLE_LOG_COPYEDIT_COPYEDITOR_FILE',		0x50000009);
 
-// Proofreader events 				0x60000000
-define('ARTICLE_LOG_PROOFREAD_ASSIGN', 		0x60000001);
-define('ARTICLE_LOG_PROOFREAD_UNASSIGN', 	0x60000002);
-define('ARTICLE_LOG_PROOFREAD_INITIATE', 	0x60000003);
-define('ARTICLE_LOG_PROOFREAD_REVISION', 	0x60000004);
-define('ARTICLE_LOG_PROOFREAD_COMPLETE', 	0x60000005);
+// Proofreader events 					0x60000000
+define('ARTICLE_LOG_PROOFREAD_ASSIGN', 			0x60000001);
+define('ARTICLE_LOG_PROOFREAD_UNASSIGN', 		0x60000002);
+define('ARTICLE_LOG_PROOFREAD_INITIATE', 		0x60000003);
+define('ARTICLE_LOG_PROOFREAD_REVISION', 		0x60000004);
+define('ARTICLE_LOG_PROOFREAD_COMPLETE', 		0x60000005);
 
-// Layout events 				0x70000000
-define('ARTICLE_LOG_LAYOUT_ASSIGN', 		0x70000001);
-define('ARTICLE_LOG_LAYOUT_UNASSIGN', 		0x70000002);
-define('ARTICLE_LOG_LAYOUT_INITIATE', 		0x70000003);
-define('ARTICLE_LOG_LAYOUT_GALLEY', 		0x70000004);
-define('ARTICLE_LOG_LAYOUT_COMPLETE', 		0x70000005);
+// Layout events 					0x70000000
+define('ARTICLE_LOG_LAYOUT_ASSIGN', 			0x70000001);
+define('ARTICLE_LOG_LAYOUT_UNASSIGN', 			0x70000002);
+define('ARTICLE_LOG_LAYOUT_INITIATE', 			0x70000003);
+define('ARTICLE_LOG_LAYOUT_GALLEY', 			0x70000004);
+define('ARTICLE_LOG_LAYOUT_COMPLETE', 			0x70000005);
 
 
-class ArticleEventLogEntry extends DataObject {
-
+class ArticleEventLogEntry extends EventLogEntry {
 	/**
-	 * Constructor.
+	 * Constructor
 	 */
 	function ArticleEventLogEntry() {
-		parent::DataObject();
-	}
-
-	/**
-	 * Set localized log message (in the journal's primary locale)
-	 * @param $key localization message key
-	 * @param $params array optional array of parameters
-	 */
-	function setLogMessage($key, $params = array()) {
-		$this->setMessage(Locale::translate($key, $params, Locale::getPrimaryLocale()));
-	}
-
-	//
-	// Get/set methods
-	//
-
-	/**
-	 * Get ID of log entry.
-	 * @return int
-	 */
-	function getLogId() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getId();
-	}
-
-	/**
-	 * Set ID of log entry.
-	 * @param $logId int
-	 */
-	function setLogId($logId) {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->setId($logId);
-	}
-
-	/**
-	 * Get ID of article.
-	 * @return int
-	 */
-	function getArticleId() {
-		return $this->getData('articleId');
-	}
-
-	/**
-	 * Set ID of article.
-	 * @param $articleId int
-	 */
-	function setArticleId($articleId) {
-		return $this->setData('articleId', $articleId);
-	}
-
-	/**
-	 * Get user ID of user that initiated the event.
-	 * @return int
-	 */
-	function getUserId() {
-		return $this->getData('userId');
-	}
-
-	/**
-	 * Set user ID of user that initiated the event.
-	 * @param $userId int
-	 */
-	function setUserId($userId) {
-		return $this->setData('userId', $userId);
-	}
-
-	/**
-	 * Get date entry was logged.
-	 * @return datestamp
-	 */
-	function getDateLogged() {
-		return $this->getData('dateLogged');
-	}
-
-	/**
-	 * Set date entry was logged.
-	 * @param $dateLogged datestamp
-	 */
-	function setDateLogged($dateLogged) {
-		return $this->setData('dateLogged', $dateLogged);
-	}
-
-	/**
-	 * Get IP address of user that initiated the event.
-	 * @return string
-	 */
-	function getIPAddress() {
-		return $this->getData('ipAddress');
-	}
-
-	/**
-	 * Set IP address of user that initiated the event.
-	 * @param $ipAddress string
-	 */
-	function setIPAddress($ipAddress) {
-		return $this->setData('ipAddress', $ipAddress);
-	}
-
-	/**
-	 * Get the log level.
-	 * @return int
-	 */
-	function getLogLevel() {
-		return $this->getData('logLevel');
-	}
-
-	/**
-	 * Set the log level.
-	 * @param $logLevel char
-	 */
-	function setLogLevel($logLevel) {
-		return $this->setData('logLevel', $logLevel);
-	}
-
-	/**
-	 * Get event type.
-	 * @return int
-	 */
-	function getEventType() {
-		return $this->getData('eventType');
-	}
-
-	/**
-	 * Set event type.
-	 * @param $eventType int
-	 */
-	function setEventType($eventType) {
-		return $this->setData('eventType', $eventType);
-	}
-
-	/**
-	 * Get associated type.
-	 * @return int
-	 */
-	function getAssocType() {
-		return $this->getData('assocType');
-	}
-
-	/**
-	 * Set associated type.
-	 * @param $assocType int
-	 */
-	function setAssocType($assocType) {
-		return $this->setData('assocType', $assocType);
-	}
-
-	/**
-	 * Get associated ID.
-	 * @return int
-	 */
-	function getAssocId() {
-		return $this->getData('assocId');
-	}
-
-	/**
-	 * Set associated ID.
-	 * @param $assocId int
-	 */
-	function setAssocId($assocId) {
-		return $this->setData('assocId', $assocId);
-	}
-
-	/**
-	 * Get custom log message (non-localized).
-	 * @return string
-	 */
-	function getMessage() {
-		return $this->getData('message');
-	}
-
-	/**
-	 * Set custom log message (non-localized).
-	 * @param $message string
-	 */
-	function setMessage($message) {
-		return $this->setData('message', $message);
-	}
-
-	/**
-	 * Return locale message key for the log level.
-	 * @return string
-	 */
-	function getLogLevelString() {
-		switch ($this->getData('logLevel')) {
-			case ARTICLE_LOG_LEVEL_INFO:
-				return 'submission.event.logLevel.info';
-			case ARTICLE_LOG_LEVEL_NOTICE:
-				return 'submission.event.logLevel.notice';
-			case ARTICLE_LOG_LEVEL_WARNING:
-				return 'submission.event.logLevel.warning';
-			case ARTICLE_LOG_LEVEL_ERROR:
-				return 'submission.event.logLevel.error';
-			default:
-				return 'submission.event.logLevel.notice';
-		}
+		parent::EventLogEntry();
 	}
 
 	/**
@@ -415,82 +214,4 @@ class ArticleEventLogEntry extends DataObject {
 				return 'submission.event.general.defaultEvent';
 		}
 	}
-
-	/**
-	 * Return the full name of the user.
-	 * @return string
-	 */
-	function getUserFullName() {
-		$userFullName =& $this->getData('userFullName');
-		if(!isset($userFullName)) {
-			$userDao =& DAORegistry::getDAO('UserDAO');
-			$userFullName = $userDao->getUserFullName($this->getUserId(), true);
-		}
-
-		return $userFullName ? $userFullName : '';
-	}
-
-	/**
-	 * Return the email address of the user.
-	 * @return string
-	 */
-	function getUserEmail() {
-		$userEmail =& $this->getData('userEmail');
-
-		if(!isset($userEmail)) {
-			$userDao =& DAORegistry::getDAO('UserDAO');
-			$userEmail = $userDao->getUserEmail($this->getUserId(), true);
-		}
-
-		return $userEmail ? $userEmail : '';
-	}
-
-	/**
-	 * Return string representation of the associated type.
-	 * @return string
-	 */
-	function getAssocTypeString() {
-		switch ($this->getData('assocType')) {
-			case ARTICLE_LOG_TYPE_AUTHOR:
-				return 'AUT';
-			case ARTICLE_LOG_TYPE_EDITOR:
-				return 'EDR';
-			case ARTICLE_LOG_TYPE_REVIEW:
-				return 'REV';
-			case ARTICLE_LOG_TYPE_COPYEDIT:
-				return 'CPY';
-			case ARTICLE_LOG_TYPE_LAYOUT:
-				return 'LYT';
-			case ARTICLE_LOG_TYPE_PROOFREAD:
-				return 'PRF';
-			default:
-				return 'ART';
-		}
-	}
-
-	/**
-	 * Return locale message key for the long format of the associated type.
-	 * @return string
-	 */
-	function getAssocTypeLongString() {
-		switch ($this->getData('assocType')) {
-			case ARTICLE_LOG_TYPE_AUTHOR:
-				return 'submission.logType.author';
-			case ARTICLE_LOG_TYPE_EDITOR:
-				return 'submission.logType.editor';
-			case ARTICLE_LOG_TYPE_REVIEW:
-				return 'submission.logType.review';
-			case ARTICLE_LOG_TYPE_COPYEDIT:
-				return 'submission.logType.copyedit';
-			case ARTICLE_LOG_TYPE_LAYOUT:
-				return 'submission.logType.layout';
-			case ARTICLE_LOG_TYPE_PROOFREAD:
-				return 'submission.logType.proofread';
-			default:
-				return 'submission.logType.article';
-		}
-	}
-
 }
-
-?>

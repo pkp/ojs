@@ -42,8 +42,6 @@ class ReviewReminder extends ScheduledTask {
 		$email->setJournal($journal);
 		$email->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 		$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
-		$email->setAssoc(ARTICLE_EMAIL_REVIEW_REMIND, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
-
 		$email->setSubject($email->getSubject($journal->getPrimaryLocale()));
 		$email->setBody($email->getBody($journal->getPrimaryLocale()));
 

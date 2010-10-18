@@ -107,6 +107,7 @@ class SwordPlugin extends GenericPlugin {
 	 */
 	function callbackAuthorDeposits($hookName, $args) {
 		$sectionEditorSubmission =& $args[0];
+		$request =& $args[2];
 
 		// Determine if the most recent decision was an "Accept"
 		$decisions = $sectionEditorSubmission->getDecisions();
@@ -165,7 +166,7 @@ class SwordPlugin extends GenericPlugin {
 				)
 			));
 
-			$mail->send();
+			$mail->send($request);
 		}
 
 		return false;

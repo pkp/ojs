@@ -95,15 +95,15 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	/**
 	 * Mark assignment as complete.
 	 */
-	function completeAssignment($args) {
-		$articleId = Request::getUserVar('articleId');
+	function completeAssignment($args, $request) {
+		$articleId = $request->getUserVar('articleId');
 		$this->setupTemplate(true, $articleId, 'editing');
 		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 		$submission =& $submissionLayoutHandler->submission;
 
-		if (LayoutEditorAction::completeLayoutEditing($submission, Request::getUserVar('send'))) {
-			Request::redirect(null, null, 'submission', $articleId);
+		if (LayoutEditorAction::completeLayoutEditing($submission, $request->getUserVar('send'), $request)) {
+			$request->redirect(null, null, 'submission', $articleId);
 		}		
 	}
 
@@ -518,20 +518,20 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	/**
 	 * Sets the date of layout editor proofreading completion
 	 */
-	function layoutEditorProofreadingComplete($args) {
-		$articleId = Request::getUserVar('articleId');
+	function layoutEditorProofreadingComplete($args, $request) {
+		$articleId = (int) $request::getUserVar('articleId');
 
 		list($journal, $submission) = $this->validate($articleId);
 		$this->setupTemplate(true, $articleId);
 
 		$send = false;
 		if (isset($args[0])) {
-			$send = Request::getUserVar('send') ? true : false;
+			$send = $request->getUserVar('send') ? true : false;
 		}
 
 		import('classes.submission.proofreader.ProofreaderAction');
-		if (ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_LAYOUT_COMPLETE', $send?'':Request::url(null, 'layoutEditor', 'layoutEditorProofreadingComplete', 'send'))) {
-			Request::redirect(null, null, 'submission', $articleId);
+		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUT_COMPLETE', $request, $send?'':$request->url(null, 'layoutEditor', 'layoutEditorProofreadingComplete', 'send'))) {
+			$request->redirect(null, null, 'submission', $articleId);
 		}
 	}
 

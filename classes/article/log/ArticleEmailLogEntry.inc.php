@@ -10,339 +10,59 @@
  * @ingroup article_log
  * @see ArticleEmailLogDAO
  *
- * @brief Describes an entry in the article email log.
+ * @brief Extension to EmailLogEntry for article-specific log entries.
  */
 
-// $Id$
 
+import('lib.pkp.classes.log.EmailLogEntry');
 
-// Email associative types. All types must be defined here
-define('ARTICLE_EMAIL_TYPE_DEFAULT', 		0);
-define('ARTICLE_EMAIL_TYPE_AUTHOR', 		0x01);
-define('ARTICLE_EMAIL_TYPE_EDITOR', 		0x02);
-define('ARTICLE_EMAIL_TYPE_REVIEW', 		0x03);
-define('ARTICLE_EMAIL_TYPE_COPYEDIT', 		0x04);
-define('ARTICLE_EMAIL_TYPE_LAYOUT', 		0x05);
-define('ARTICLE_EMAIL_TYPE_PROOFREAD', 		0x06);
+// Editor events 						0x30000000
+define('ARTICLE_EMAIL_EDITOR_NOTIFY_AUTHOR', 			0x30000001);
+define('ARTICLE_EMAIL_EDITOR_ASSIGN',				0x30000002);
+define('ARTICLE_EMAIL_EDITOR_NOTIFY_AUTHOR_UNSUITABLE',		0x30000003);
 
-// General events 				0x10000000
+// Reviewer events 						0x40000000
+define('ARTICLE_EMAIL_REVIEW_NOTIFY_REVIEWER', 			0x40000001);
+define('ARTICLE_EMAIL_REVIEW_THANK_REVIEWER', 			0x40000002);
+define('ARTICLE_EMAIL_REVIEW_CANCEL',				0x40000003);
+define('ARTICLE_EMAIL_REVIEW_REMIND',				0x40000004);
+define('ARTICLE_EMAIL_REVIEW_CONFIRM',				0x40000005);
+define('ARTICLE_EMAIL_REVIEW_DECLINE',				0x40000006);
+define('ARTICLE_EMAIL_REVIEW_COMPLETE',				0x40000007);
+define('ARTICLE_EMAIL_REVIEW_CONFIRM_ACK',			0x40000008);
 
-// Author events 				0x20000000
-
-// Editor events 				0x30000000
-define('ARTICLE_EMAIL_EDITOR_NOTIFY_AUTHOR', 		0x30000001);
-define('ARTICLE_EMAIL_EDITOR_ASSIGN',		0x30000002);
-define('ARTICLE_EMAIL_EDITOR_NOTIFY_AUTHOR_UNSUITABLE',	0x30000003);
-
-// Reviewer events 				0x40000000
-define('ARTICLE_EMAIL_REVIEW_NOTIFY_REVIEWER', 		0x40000001);
-define('ARTICLE_EMAIL_REVIEW_THANK_REVIEWER', 		0x40000002);
-define('ARTICLE_EMAIL_REVIEW_CANCEL',		0x40000003);
-define('ARTICLE_EMAIL_REVIEW_REMIND',		0x40000004);
-define('ARTICLE_EMAIL_REVIEW_CONFIRM',		0x40000005);
-define('ARTICLE_EMAIL_REVIEW_DECLINE',		0x40000006);
-define('ARTICLE_EMAIL_REVIEW_COMPLETE',		0x40000007);
-define('ARTICLE_EMAIL_REVIEW_CONFIRM_ACK',	0x40000008);
-
-// Copyeditor events 			0x50000000
-define('ARTICLE_EMAIL_COPYEDIT_NOTIFY_COPYEDITOR', 		0x50000001);
-define('ARTICLE_EMAIL_COPYEDIT_NOTIFY_AUTHOR', 			0x50000002);
-define('ARTICLE_EMAIL_COPYEDIT_NOTIFY_FINAL', 			0x50000003);
+// Copyeditor events 						0x50000000
+define('ARTICLE_EMAIL_COPYEDIT_NOTIFY_COPYEDITOR',		0x50000001);
+define('ARTICLE_EMAIL_COPYEDIT_NOTIFY_AUTHOR',			0x50000002);
+define('ARTICLE_EMAIL_COPYEDIT_NOTIFY_FINAL',			0x50000003);
 define('ARTICLE_EMAIL_COPYEDIT_NOTIFY_COMPLETE', 		0x50000004);
-define('ARTICLE_EMAIL_COPYEDIT_NOTIFY_AUTHOR_COMPLETE', 0x50000005);
-define('ARTICLE_EMAIL_COPYEDIT_NOTIFY_FINAL_COMPLETE',	0x50000006);
-define('ARTICLE_EMAIL_COPYEDIT_NOTIFY_ACKNOWLEDGE', 	0x50000007);
+define('ARTICLE_EMAIL_COPYEDIT_NOTIFY_AUTHOR_COMPLETE',		0x50000005);
+define('ARTICLE_EMAIL_COPYEDIT_NOTIFY_FINAL_COMPLETE',		0x50000006);
+define('ARTICLE_EMAIL_COPYEDIT_NOTIFY_ACKNOWLEDGE',	 	0x50000007);
 define('ARTICLE_EMAIL_COPYEDIT_NOTIFY_AUTHOR_ACKNOWLEDGE', 	0x50000008);
 define('ARTICLE_EMAIL_COPYEDIT_NOTIFY_FINAL_ACKNOWLEDGE', 	0x50000009);
 
-// Proofreader events 			0x60000000
-define('ARTICLE_EMAIL_PROOFREAD_NOTIFY_AUTHOR',					0x60000001);
-define('ARTICLE_EMAIL_PROOFREAD_NOTIFY_AUTHOR_COMPLETE', 		0x60000002);
-define('ARTICLE_EMAIL_PROOFREAD_THANK_AUTHOR',					0x60000003);
-define('ARTICLE_EMAIL_PROOFREAD_NOTIFY_PROOFREADER', 			0x60000004);
+// Proofreader events 						0x60000000
+define('ARTICLE_EMAIL_PROOFREAD_NOTIFY_AUTHOR',			0x60000001);
+define('ARTICLE_EMAIL_PROOFREAD_NOTIFY_AUTHOR_COMPLETE', 	0x60000002);
+define('ARTICLE_EMAIL_PROOFREAD_THANK_AUTHOR',			0x60000003);
+define('ARTICLE_EMAIL_PROOFREAD_NOTIFY_PROOFREADER', 		0x60000004);
 define('ARTICLE_EMAIL_PROOFREAD_NOTIFY_PROOFREADER_COMPLETE',	0x60000005);
-define('ARTICLE_EMAIL_PROOFREAD_THANK_PROOFREADER',				0x60000006);
-define('ARTICLE_EMAIL_PROOFREAD_NOTIFY_LAYOUTEDITOR',			0x60000007);
+define('ARTICLE_EMAIL_PROOFREAD_THANK_PROOFREADER',		0x60000006);
+define('ARTICLE_EMAIL_PROOFREAD_NOTIFY_LAYOUTEDITOR',		0x60000007);
 define('ARTICLE_EMAIL_PROOFREAD_NOTIFY_LAYOUTEDITOR_COMPLETE', 	0x60000008);
-define('ARTICLE_EMAIL_PROOFREAD_THANK_LAYOUTEDITOR', 			0x60000009);
+define('ARTICLE_EMAIL_PROOFREAD_THANK_LAYOUTEDITOR', 		0x60000009);
 
-// Layout events 				0x70000000
-define('ARTICLE_EMAIL_LAYOUT_NOTIFY_EDITOR', 		0x70000001);
-define('ARTICLE_EMAIL_LAYOUT_THANK_EDITOR', 		0x70000002);
-define('ARTICLE_EMAIL_LAYOUT_NOTIFY_COMPLETE',		0x70000003);
+// Layout events 						0x70000000
+define('ARTICLE_EMAIL_LAYOUT_NOTIFY_EDITOR', 			0x70000001);
+define('ARTICLE_EMAIL_LAYOUT_THANK_EDITOR', 			0x70000002);
+define('ARTICLE_EMAIL_LAYOUT_NOTIFY_COMPLETE',			0x70000003);
 
-class ArticleEmailLogEntry extends DataObject {
-
+class ArticleEmailLogEntry extends EmailLogEntry {
 	/**
-	 * Constructor.
+	 * Constructor
 	 */
 	function ArticleEmailLogEntry() {
-		parent::DataObject();
+		parent::EmailLogEntry();
 	}
-
-	//
-	// Get/set methods
-	//
-
-	/**
-	 * Get ID of log entry.
-	 * @return int
-	 */
-	function getLogId() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getId();
-	}
-
-	/**
-	 * Set ID of log entry.
-	 * @param $logId int
-	 */
-	function setLogId($logId) {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->setId($logId);
-	}
-
-	/**
-	 * Get ID of article.
-	 * @return int
-	 */
-	function getArticleId() {
-		return $this->getData('articleId');
-	}
-
-	/**
-	 * Set ID of article.
-	 * @param $articleId int
-	 */
-	function setArticleId($articleId) {
-		return $this->setData('articleId', $articleId);
-	}
-
-	/**
-	 * Get user ID of sender.
-	 * @return int
-	 */
-	function getSenderId() {
-		return $this->getData('senderId');
-	}
-
-	/**
-	 * Set user ID of sender.
-	 * @param $senderId int
-	 */
-	function setSenderId($senderId) {
-		return $this->setData('senderId', $senderId);
-	}
-
-	/**
-	 * Get date email was sent.
-	 * @return datestamp
-	 */
-	function getDateSent() {
-		return $this->getData('dateSent');
-	}
-
-	/**
-	 * Set date email was sent.
-	 * @param $dateSent datestamp
-	 */
-	function setDateSent($dateSent) {
-		return $this->setData('dateSent', $dateSent);
-	}
-
-	/**
-	 * Get IP address of sender.
-	 * @return string
-	 */
-	function getIPAddress() {
-		return $this->getData('ipAddress');
-	}
-
-	/**
-	 * Set IP address of sender.
-	 * @param $ipAddress string
-	 */
-	function setIPAddress($ipAddress) {
-		return $this->setData('ipAddress', $ipAddress);
-	}
-
-	/**
-	 * Get event type.
-	 * @return int
-	 */
-	function getEventType() {
-		return $this->getData('eventType');
-	}
-
-	/**
-	 * Set event type.
-	 * @param $eventType int
-	 */
-	function setEventType($eventType) {
-		return $this->setData('eventType', $eventType);
-	}
-
-	/**
-	 * Get associated type.
-	 * @return int
-	 */
-	function getAssocType() {
-		return $this->getData('assocType');
-	}
-
-	/**
-	 * Set associated type.
-	 * @param $assocType int
-	 */
-	function setAssocType($assocType) {
-		return $this->setData('assocType', $assocType);
-	}
-
-	/**
-	 * Get associated ID.
-	 * @return int
-	 */
-	function getAssocId() {
-		return $this->getData('assocId');
-	}
-
-	/**
-	 * Set associated ID.
-	 * @param $assocId int
-	 */
-	function setAssocId($assocId) {
-		return $this->setData('assocId', $assocId);
-	}
-
-	/**
-	 * Return the full name of the sender (not necessarily the same as the from address).
-	 * @return string
-	 */
-	function getSenderFullName() {
-		$senderFullName =& $this->getData('senderFullName');
-
-		if(!isset($senderFullName)) {
-			$userDao =& DAORegistry::getDAO('UserDAO');
-			$senderFullName = $userDao->getUserFullName($this->getSenderId(), true);
-		}
-
-		return $senderFullName ? $senderFullName : '';
-	}
-
-	/**
-	 * Return the email address of sender.
-	 * @return string
-	 */
-	function getSenderEmail() {
-		$senderEmail =& $this->getData('senderEmail');
-
-		if(!isset($senderEmail)) {
-			$userDao =& DAORegistry::getDAO('UserDAO');
-			$senderEmail = $userDao->getUserEmail($this->getSenderId(), true);
-		}
-
-		return $senderEmail ? $senderEmail : '';
-	}
-
-	/**
-	 * Return string representation of the associated type.
-	 * @return string
-	 */
-	function getAssocTypeString() {
-		switch ($this->getData('assocType')) {
-			case ARTICLE_LOG_TYPE_AUTHOR:
-				return 'AUT';
-			case ARTICLE_LOG_TYPE_EDITOR:
-				return 'EDR';
-			case ARTICLE_LOG_TYPE_REVIEW:
-				return 'REV';
-			case ARTICLE_LOG_TYPE_COPYEDIT:
-				return 'CPY';
-			case ARTICLE_LOG_TYPE_LAYOUT:
-				return 'LYT';
-			case ARTICLE_LOG_TYPE_PROOFREAD:
-				return 'PRF';
-			default:
-				return 'ART';
-		}
-	}
-
-	/**
-	 * Return locale message key for the long format of the associated type.
-	 * @return string
-	 */
-	function getAssocTypeLongString() {
-		switch ($this->getData('assocType')) {
-			case ARTICLE_LOG_TYPE_AUTHOR:
-				return 'submission.logType.author';
-			case ARTICLE_LOG_TYPE_EDITOR:
-				return 'submission.logType.editor';
-			case ARTICLE_LOG_TYPE_REVIEW:
-				return 'submission.logType.review';
-			case ARTICLE_LOG_TYPE_COPYEDIT:
-				return 'submission.logType.copyedit';
-			case ARTICLE_LOG_TYPE_LAYOUT:
-				return 'submission.logType.layout';
-			case ARTICLE_LOG_TYPE_PROOFREAD:
-				return 'submission.logType.proofread';
-			default:
-				return 'submission.logType.article';
-		}
-	}
-
-
-	//
-	// Email data
-	//
-
-	function getFrom() {
-		return $this->getData('from');
-	}
-
-	function setFrom($from) {
-		return $this->setData('from', $from);
-	}
-
-	function getRecipients() {
-		return $this->getData('recipients');
-	}
-
-	function setRecipients($recipients) {
-		return $this->setData('recipients', $recipients);
-	}
-
-	function getCcs() {
-		return $this->getData('ccs');
-	}
-
-	function setCcs($ccs) {
-		return $this->setData('ccs', $ccs);
-	}
-
-	function getBccs() {
-		return $this->getData('bccs');
-	}
-
-	function setBccs($bccs) {
-		return $this->setData('bccs', $bccs);
-	}
-
-	function getSubject() {
-		return $this->getData('subject');
-	}
-
-	function setSubject($subject) {
-		return $this->setData('subject', $subject);
-	}
-
-	function getBody() {
-		return $this->getData('body');
-	}
-
-	function setBody($body) {
-		return $this->setData('body', $body);
-	}
-
 }
-
-?>

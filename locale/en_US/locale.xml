@@ -275,12 +275,6 @@
 	 * LOG - This section contains entries related to log entries.
 	 *
 	-->
-	<message key="submission.event.logLevel">Level</message>
-	<message key="submission.event.logLevel.info">Info</message>
-	<message key="submission.event.logLevel.notice">Notice</message>
-	<message key="submission.event.logLevel.warning">Warning</message>
-	<message key="submission.event.logLevel.error">Error</message>
-	
 	<message key="submission.event.general.defaultEvent">Submission event</message>
 	<message key="submission.event.general.articleSubmitted">Article submitted</message>
 	<message key="submission.event.general.issueScheduled">Submission sent to issue scheduling queue</message>

@@ -391,13 +391,13 @@ class EditorHandler extends SectionEditorHandler {
 	/**
 	 * Assigns the selected editor to the submission.
 	 */
-	function assignEditor($args) {
+	function assignEditor($args, $request) {
 		$this->validate();
 		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_MANAGER)); // manager.people.noneEnrolled
 
-		$journal =& Request::getJournal();
-		$articleId = Request::getUserVar('articleId');
-		$editorId = Request::getUserVar('editorId');
+		$journal =& $request->getJournal();
+		$articleId = $request->getUserVar('articleId');
+		$editorId = $request->getUserVar('editorId');
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 
 		$isSectionEditor = $roleDao->roleExists($journal->getId(), $editorId, ROLE_ID_SECTION_EDITOR);
@@ -412,7 +412,7 @@ class EditorHandler extends SectionEditorHandler {
 			$this->setupTemplate(EDITOR_SECTION_SUBMISSIONS, $articleId, 'summary');
 
 			// FIXME: Prompt for due date.
-			if (EditorAction::assignEditor($articleId, $editorId, $isEditor, Request::getUserVar('send'))) {
+			if (EditorAction::assignEditor($articleId, $editorId, $isEditor, Request::getUserVar('send'), $request)) {
 				Request::redirect(null, null, 'submission', $articleId);
 			}
 		} else {

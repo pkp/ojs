@@ -34,7 +34,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId);
 
-		CopyeditorAction::copyeditUnderway($submission);
+		CopyeditorAction::copyeditUnderway($submission, $request);
 
 		$journal =& $router->getContext($request);
 		$useLayoutEditors = $journal->getSetting('useLayoutEditors');
@@ -53,37 +53,42 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		$templateMgr->display('copyeditor/submission.tpl');
 	}
 
-	function completeCopyedit($args) {
-		$articleId = Request::getUserVar('articleId');
+	function completeCopyedit($args, $request) {
+		$articleId = $request->getUserVar('articleId');
 		$this->validate($articleId);
 		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId);
 
-		if (CopyeditorAction::completeCopyedit($submission, Request::getUserVar('send'))) {
-			Request::redirect(null, null, 'submission', $articleId);
+		if (CopyeditorAction::completeCopyedit($submission, $request->getUserVar('send'), $request)) {
+			$request->redirect(null, null, 'submission', $articleId);
 		}
 	}
 
-	function completeFinalCopyedit($args) {
-		$articleId = Request::getUserVar('articleId');
+	function completeFinalCopyedit($args, $request) {
+		$articleId = $request->getUserVar('articleId');
 		$this->validate($articleId);
 		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId);;
 
-		if (CopyeditorAction::completeFinalCopyedit($submission, Request::getUserVar('send'))) {
-			Request::redirect(null, null, 'submission', $articleId);
+		if (CopyeditorAction::completeFinalCopyedit($submission, $request->getUserVar('send'), $request)) {
+			$request->redirect(null, null, 'submission', $articleId);
 		}
 	}
 
-	function uploadCopyeditVersion() {
-		$articleId = Request::getUserVar('articleId');
+	/**
+	 * Upload a copyedit version
+	 * @param $args array
+	 * @param $request object
+	 */
+	function uploadCopyeditVersion($args, $request) {
+		$articleId = $request->getUserVar('articleId');
 		$this->validate($articleId);
 		$submission =& $this->submission;
 
-		$copyeditStage = Request::getUserVar('copyeditStage');
-		CopyeditorAction::uploadCopyeditVersion($submission, $copyeditStage);
+		$copyeditStage = $request->getUserVar('copyeditStage');
+		CopyeditorAction::uploadCopyeditVersion($submission, $copyeditStage, $request);
 
-		Request::redirect(null, null, 'submission', $articleId);
+		$request->redirect(null, null, 'submission', $articleId);
 	}
 
 	//
@@ -169,17 +174,17 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 	/**
 	 * Set the author proofreading date completion
 	 */
-	function authorProofreadingComplete($args) {
-		$articleId = Request::getUserVar('articleId');
+	function authorProofreadingComplete($args, $request) {
+		$articleId = (int) $request->getUserVar('articleId');
 		$this->validate($articleId);
 		$this->setupTemplate(true, $articleId);
 
-		$send = Request::getUserVar('send') ? true : false;
+		$send = $request->getUserVar('send') ? true : false;
 
 		import('classes.submission.proofreader.ProofreaderAction');
 
-		if (ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_AUTHOR_COMPLETE', $send?'':Request::url(null, 'copyeditor', 'authorProofreadingComplete', 'send'))) {
-			Request::redirect(null, null, 'submission', $articleId);
+		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_AUTHOR_COMPLETE', $request, $send?'':$request->url(null, 'copyeditor', 'authorProofreadingComplete', 'send'))) {
+			$request->redirect(null, null, 'submission', $articleId);
 		}
 	}
 

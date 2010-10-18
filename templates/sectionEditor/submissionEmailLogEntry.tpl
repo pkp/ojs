@@ -42,10 +42,6 @@
 		<td class="value">{$logEntry->getDateSent()|date_format:$datetimeFormatLong}</td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{translate key="common.type"}</td>
-		<td class="value">{translate key=$logEntry->getAssocTypeLongString()}</td>
-	</tr>
-	<tr valign="top">
 		<td class="label">{translate key="email.sender"}</td>
 		<td class="value">
 			{if $logEntry->getSenderFullName()}

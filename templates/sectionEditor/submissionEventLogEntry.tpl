@@ -42,14 +42,6 @@
 		<td class="value">{$logEntry->getDateLogged()|date_format:$datetimeFormatLong}</td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{translate key="submission.event.logLevel"}</td>
-		<td class="value">{translate key=$logEntry->getLogLevelString()}</td>
-	</tr>
-	<tr valign="top">
-		<td class="label">{translate key="common.type"}</td>
-		<td class="value">{translate key=$logEntry->getAssocTypeLongString()}</td>
-	</tr>
-	<tr valign="top">
 		<td class="label">{translate key="common.user"}</td>
 		<td class="value">
 			{assign var=emailString value=$logEntry->getUserFullName()|concat:" <":$logEntry->getUserEmail():">"}

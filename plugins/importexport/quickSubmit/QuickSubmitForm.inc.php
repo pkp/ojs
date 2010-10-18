@@ -16,15 +16,18 @@
 import('lib.pkp.classes.form.Form');
 
 class QuickSubmitForm extends Form {
+	/** @var $request object */
+	var $request;
 
 	/**
 	 * Constructor
 	 * @param $plugin object
 	 */
-	function QuickSubmitForm(&$plugin) {
+	function QuickSubmitForm(&$plugin, $request) {
 		parent::Form($plugin->getTemplatePath() . 'index.tpl');
 
-		$journal =& Request::getJournal();
+		$this->request =& $request;
+		$journal =& $request->getJournal();
 
 		$this->addCheck(new FormValidatorPost($this));
 		$this->addCheck(new FormValidator($this, 'sectionId', 'required', 'author.submit.form.sectionRequired'));
@@ -52,8 +55,9 @@ class QuickSubmitForm extends Form {
 	 */
 	function display() {
 		$templateMgr =& TemplateManager::getManager();
-		$user =& Request::getUser();
-		$journal =& Request::getJournal();
+		$request =& $this->request;
+		$user =& $request->getUser();
+		$journal =& $request->getJournal();
 		$formLocale = $this->getFormLocale();
 
 		$templateMgr->assign('journal', $journal);
@@ -85,14 +89,14 @@ class QuickSubmitForm extends Form {
 			$templateMgr->assign_by_ref('submissionFile', $submissionFile);
 		}
 
-		if (Request::getUserVar('addAuthor') || Request::getUserVar('delAuthor')  || Request::getUserVar('moveAuthor')) {
+		if ($request->getUserVar('addAuthor') || $request->getUserVar('delAuthor')  || $request->getUserVar('moveAuthor')) {
 			$templateMgr->assign('scrollToAuthor', true);
 		}
 
-		if (Request::getUserVar('destination') == 'queue' ) {
+		if ($request->getUserVar('destination') == 'queue' ) {
 			$templateMgr->assign('publishToIssue', false);
 		} else {
-			$templateMgr->assign('issueNumber', Request::getUserVar('issueId'));
+			$templateMgr->assign('issueNumber', $request->getUserVar('issueId'));
 			$templateMgr->assign('publishToIssue', true);
 		}
 
@@ -147,7 +151,8 @@ class QuickSubmitForm extends Form {
 	function uploadSubmissionFile($fileName) {
 		import('classes.file.TemporaryFileManager');
 		$temporaryFileManager = new TemporaryFileManager();
-		$user =& Request::getUser();
+		$request =& $this->request;
+		$user =& $request->getUser();
 
 		$temporaryFile = $temporaryFileManager->handleUpload($fileName, $user->getId());
 
@@ -167,7 +172,7 @@ class QuickSubmitForm extends Form {
 		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
 
 		$application =& PKPApplication::getApplication();
-		$request =& $application->getRequest();
+		$request =& $this->request;
 		$user =& $request->getUser();
 		$router =& $request->getRouter();
 		$journal =& $router->getContext($request);
@@ -306,7 +311,7 @@ class QuickSubmitForm extends Form {
 		$articleFileManager = new ArticleFileManager($articleId);
 		$sectionEditorSubmission->setReviewFile($articleFileManager->getFile($article->getSubmissionFileId()));
 		import('classes.submission.sectionEditor.SectionEditorAction');
-		SectionEditorAction::recordDecision($sectionEditorSubmission, SUBMISSION_EDITOR_DECISION_ACCEPT);
+		SectionEditorAction::recordDecision($sectionEditorSubmission, SUBMISSION_EDITOR_DECISION_ACCEPT, $this->request);
 
 		// Create signoff infrastructure
 		$copyeditInitialSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $articleId);
@@ -340,7 +345,7 @@ class QuickSubmitForm extends Form {
 
 		// Add to end of editing queue
 		import('classes.submission.editor.EditorAction');
-		if (isset($galley)) EditorAction::expediteSubmission($article);
+		if (isset($galley)) EditorAction::expediteSubmission($article, $this->request);
 
 		if ($this->getData('destination') == "issue") {
 			// Add to an existing issue
@@ -367,7 +372,8 @@ class QuickSubmitForm extends Form {
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 
-		$journal =& Request::getJournal();
+		$request =& $this->request;
+		$journal =& $request->getJournal();
 		$submission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
 		$issue =& $issueDao->getIssueById($issueId, $journal->getId());

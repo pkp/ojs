@@ -140,11 +140,12 @@ class LayoutEditorAction extends Action {
 	 * Marks layout assignment as completed.
 	 * @param $submission object
 	 * @param $send boolean
+	 * @param $request object
 	 */
-	function completeLayoutEditing($submission, $send = false) {
+	function completeLayoutEditing($submission, $send, $request) {
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 		$userDao =& DAORegistry::getDAO('UserDAO');
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 
 		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getArticleId());
 		if ($layoutSignoff->getDateCompleted() != null) {
@@ -160,23 +161,21 @@ class LayoutEditorAction extends Action {
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
 			HookRegistry::call('LayoutEditorAction::completeLayoutEditing', array(&$submission, &$editAssignments, &$email));
 			if ($email->isEnabled()) {
-				$email->setAssoc(ARTICLE_EMAIL_LAYOUT_NOTIFY_COMPLETE, ARTICLE_EMAIL_TYPE_LAYOUT, $layoutSignoff->getId());
-				$email->send();
+				$email->send($request);
 			}
 
 			$layoutSignoff->setDateCompleted(Core::getCurrentDate());
 			$signoffDao->updateObject($layoutSignoff);
 
 			// Add log entry
-			$user =& Request::getUser();
+			$user =& $request->getUser();
 			import('classes.article.log.ArticleLog');
-			import('classes.article.log.ArticleEventLogEntry');
-			ArticleLog::logEvent($submission->getArticleId(), ARTICLE_LOG_LAYOUT_COMPLETE, ARTICLE_LOG_TYPE_LAYOUT, $user->getId(), 'log.layout.layoutEditComplete', Array('editorName' => $user->getFullName(), 'articleId' => $submission->getArticleId()));
+			ArticleLog::logEvent($request, $submission, ARTICLE_LOG_LAYOUT_COMPLETE, 'log.layout.layoutEditComplete', array('editorName' => $user->getFullName()));
 
 			return true;
 		} else {
-			$user =& Request::getUser();
-			if (!Request::getUserVar('continued')) {
+			$user =& $request->getUser();
+			if (!$request->getUserVar('continued')) {
 				$assignedSectionEditors = $email->toAssignedEditingSectionEditors($submission->getArticleId());
 				$assignedEditors = $email->ccAssignedEditors($submission->getArticleId());
 				if (empty($assignedSectionEditors) && empty($assignedEditors)) {
@@ -193,7 +192,7 @@ class LayoutEditorAction extends Action {
 				);
 				$email->assignParams($paramArray);
 			}
-			$email->displayEditForm(Request::url(null, 'layoutEditor', 'completeAssignment', 'send'), array('articleId' => $submission->getArticleId()));
+			$email->displayEditForm($request->url(null, 'layoutEditor', 'completeAssignment', 'send'), array('articleId' => $submission->getArticleId()));
 
 			return false;
 		}
@@ -244,8 +243,10 @@ class LayoutEditorAction extends Action {
 	/**
 	 * Post layout comment.
 	 * @param $article object
+	 * @param $emailComment boolean
+	 * @param $request object
 	 */
-	function postLayoutComment($article, $emailComment) {
+	function postLayoutComment($article, $emailComment, $request) {
 		if (!HookRegistry::call('LayoutEditorAction::postLayoutComment', array(&$article, &$emailComment))) {
 			import('classes.submission.form.comment.LayoutCommentForm');
 
@@ -260,7 +261,7 @@ class LayoutEditorAction extends Action {
 				$notificationManager = new NotificationManager();
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
 				foreach ($notificationUsers as $userRole) {
-					$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'layout');
+					$url = $request->url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'layout');
 					$notificationManager->createNotification(
 						$userRole['id'], 'notification.type.layoutComment',
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_LAYOUT_COMMENT
@@ -268,9 +269,8 @@ class LayoutEditorAction extends Action {
 				}
 				
 				if ($emailComment) {
-					$commentForm->email();
+					$commentForm->email($request);
 				}
-
 			} else {
 				$commentForm->display();
 				return false;
@@ -296,8 +296,10 @@ class LayoutEditorAction extends Action {
 	/**
 	 * Post proofread comment.
 	 * @param $article object
+	 * @param $emailComment boolean
+	 * @param $request object
 	 */
-	function postProofreadComment($article, $emailComment) {
+	function postProofreadComment($article, $emailComment, $request) {
 		if (!HookRegistry::call('LayoutEditorAction::postProofreadComment', array(&$article, &$emailComment))) {
 			import('classes.submission.form.comment.ProofreadCommentForm');
 
@@ -312,7 +314,7 @@ class LayoutEditorAction extends Action {
 				$notificationManager = new NotificationManager();
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
 				foreach ($notificationUsers as $userRole) {
-					$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'proofread');
+					$url = $request->url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'proofread');
 					$notificationManager->createNotification(
 						$userRole['id'], 'notification.type.proofreadComment',
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_PROOFREAD_COMMENT
@@ -320,7 +322,7 @@ class LayoutEditorAction extends Action {
 				}
 				
 				if ($emailComment) {
-					$commentForm->email();
+					$commentForm->email($request);
 				}
 
 			} else {

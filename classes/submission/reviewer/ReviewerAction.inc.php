@@ -36,8 +36,9 @@ class ReviewerAction extends Action {
 	 * @param $reviewerSubmission object
 	 * @param $decline boolean
 	 * @param $send boolean
+	 * @param $request object
 	 */
-	function confirmReview($reviewerSubmission, $decline, $send) {
+	function confirmReview($reviewerSubmission, $decline, $send, $request) {
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao =& DAORegistry::getDAO('UserDAO');
 
@@ -58,8 +59,7 @@ class ReviewerAction extends Action {
 			if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
 				HookRegistry::call('ReviewerAction::confirmReview', array(&$reviewerSubmission, &$email, $decline));
 				if ($email->isEnabled()) {
-					$email->setAssoc($decline?ARTICLE_EMAIL_REVIEW_DECLINE:ARTICLE_EMAIL_REVIEW_CONFIRM, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
-					$email->send();
+					$email->send($request);
 				}
 
 				$reviewAssignment->setDeclined($decline);
@@ -69,26 +69,14 @@ class ReviewerAction extends Action {
 
 				// Add log
 				import('classes.article.log.ArticleLog');
-				import('classes.article.log.ArticleEventLogEntry');
-
-				$entry = new ArticleEventLogEntry();
-				$entry->setArticleId($reviewAssignment->getSubmissionId());
-				$entry->setUserId($reviewer->getId());
-				$entry->setDateLogged(Core::getCurrentDate());
-				$entry->setEventType($decline?ARTICLE_LOG_REVIEW_DECLINE:ARTICLE_LOG_REVIEW_ACCEPT);
-				$entry->setLogMessage($decline?'log.review.reviewDeclined':'log.review.reviewAccepted', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getSubmissionId(), 'round' => $reviewAssignment->getRound()));
-				$entry->setAssocType(ARTICLE_LOG_TYPE_REVIEW);
-				$entry->setAssocId($reviewAssignment->getId());
-
-				ArticleLog::logEventEntry($reviewAssignment->getSubmissionId(), $entry);
-
+				ArticleLog::logEvent($request, $reviewerSubmission, $decline?ARTICLE_LOG_REVIEW_DECLINE:ARTICLE_LOG_REVIEW_ACCEPT, $decline?'log.review.reviewDeclined':'log.review.reviewAccepted', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getSubmissionId(), 'round' => $reviewAssignment->getRound(), 'reviewId' => $reviewAssignment->getId()));
 				return true;
 			} else {
-				if (!Request::getUserVar('continued')) {
+				if (!$request->getUserVar('continued')) {
 					$assignedEditors = $email->ccAssignedEditors($reviewerSubmission->getArticleId());
 					$reviewingSectionEditors = $email->toAssignedReviewingSectionEditors($reviewerSubmission->getArticleId());
 					if (empty($assignedEditors) && empty($reviewingSectionEditors)) {
-						$journal =& Request::getJournal();
+						$journal =& $request->getJournal();
 						$email->addRecipient($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 						$editorialContactName = $journal->getSetting('contactName');
 					} else {
@@ -112,7 +100,7 @@ class ReviewerAction extends Action {
 				}
 				$paramArray = array('reviewId' => $reviewId);
 				if ($decline) $paramArray['declineReview'] = 1;
-				$email->displayEditForm(Request::url(null, 'reviewer', 'confirmReview'), $paramArray);
+				$email->displayEditForm($request->url(null, 'reviewer', 'confirmReview'), $paramArray);
 				return false;
 			}
 		}
@@ -124,8 +112,9 @@ class ReviewerAction extends Action {
 	 * @param $reviewId int
 	 * @param $recommendation int
 	 * @param $send boolean
+	 * @param $request object
 	 */
-	function recordRecommendation(&$reviewerSubmission, $recommendation, $send) {
+	function recordRecommendation(&$reviewerSubmission, $recommendation, $send, $request) {
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao =& DAORegistry::getDAO('UserDAO');
 
@@ -149,8 +138,7 @@ class ReviewerAction extends Action {
 			if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
 				HookRegistry::call('ReviewerAction::recordRecommendation', array(&$reviewerSubmission, &$email, $recommendation));
 				if ($email->isEnabled()) {
-					$email->setAssoc(ARTICLE_EMAIL_REVIEW_COMPLETE, ARTICLE_EMAIL_TYPE_REVIEW, $reviewerSubmission->getReviewId());
-					$email->send();
+					$email->send($request);
 				}
 
 				$reviewAssignment->setRecommendation($recommendation);
@@ -160,20 +148,9 @@ class ReviewerAction extends Action {
 
 				// Add log
 				import('classes.article.log.ArticleLog');
-				import('classes.article.log.ArticleEventLogEntry');
-
-				$entry = new ArticleEventLogEntry();
-				$entry->setArticleId($reviewAssignment->getSubmissionId());
-				$entry->setUserId($reviewer->getId());
-				$entry->setDateLogged(Core::getCurrentDate());
-				$entry->setEventType(ARTICLE_LOG_REVIEW_RECOMMENDATION);
-				$entry->setLogMessage('log.review.reviewRecommendationSet', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getSubmissionId(), 'round' => $reviewAssignment->getRound()));
-				$entry->setAssocType(ARTICLE_LOG_TYPE_REVIEW);
-				$entry->setAssocId($reviewAssignment->getId());
-
-				ArticleLog::logEventEntry($reviewAssignment->getSubmissionId(), $entry);
+				ArticleLog::logEvent($request, $reviewerSubmission, ARTICLE_LOG_REVIEW_RECOMMENDATION, 'log.review.reviewRecommendationSet', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getSubmissionId(), 'round' => $reviewAssignment->getRound(), 'reviewId' => $reviewAssignment->getId()));
 			} else {
-				if (!Request::getUserVar('continued')) {
+				if (!$request->getUserVar('continued')) {
 					$assignedEditors = $email->ccAssignedEditors($reviewerSubmission->getArticleId());
 					$reviewingSectionEditors = $email->toAssignedReviewingSectionEditors($reviewerSubmission->getArticleId());
 					if (empty($assignedEditors) && empty($reviewingSectionEditors)) {
@@ -196,7 +173,7 @@ class ReviewerAction extends Action {
 					));
 				}
 
-				$email->displayEditForm(Request::url(null, 'reviewer', 'recordRecommendation'),
+				$email->displayEditForm($request->url(null, 'reviewer', 'recordRecommendation'),
 					array('reviewId' => $reviewerSubmission->getReviewId(), 'recommendation' => $recommendation)
 				);
 				return false;
@@ -208,8 +185,10 @@ class ReviewerAction extends Action {
 	/**
 	 * Upload the annotated version of an article.
 	 * @param $reviewId int
+	 * @param $reviewerSubmission object
+	 * @param $request object
 	 */
-	function uploadReviewerVersion($reviewId) {
+	function uploadReviewerVersion($reviewId, $reviewerSubmission, $request) {
 		import('classes.file.ArticleFileManager');
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');		
 		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
@@ -235,23 +214,12 @@ class ReviewerAction extends Action {
 			$reviewAssignment->stampModified();
 			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 
-			// Add log
-			import('classes.article.log.ArticleLog');
-			import('classes.article.log.ArticleEventLogEntry');
-
 			$userDao =& DAORegistry::getDAO('UserDAO');
 			$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId());
 
-			$entry = new ArticleEventLogEntry();
-			$entry->setArticleId($reviewAssignment->getSubmissionId());
-			$entry->setUserId($reviewer->getId());
-			$entry->setDateLogged(Core::getCurrentDate());
-			$entry->setEventType(ARTICLE_LOG_REVIEW_FILE);
-			$entry->setLogMessage('log.review.reviewerFile');
-			$entry->setAssocType(ARTICLE_LOG_TYPE_REVIEW);
-			$entry->setAssocId($reviewAssignment->getId());
-
-			ArticleLog::logEventEntry($reviewAssignment->getSubmissionId(), $entry);
+			// Add log
+			import('classes.article.log.ArticleLog');
+			ArticleLog::logEvent($request, $reviewerSubmission, ARTICLE_LOG_REVIEW_FILE, 'log.review.reviewerFile', array('reviewId' => $reviewAssignment->getId()));
 		}
 	}
 
@@ -298,8 +266,9 @@ class ReviewerAction extends Action {
 	 * @param $article object
 	 * @param $reviewId int
 	 * @param $emailComment boolean
+	 * @param $request object
 	 */
-	function postPeerReviewComment(&$user, &$article, $reviewId, $emailComment) {
+	function postPeerReviewComment(&$user, &$article, $reviewId, $emailComment, $request) {
 		if (!HookRegistry::call('ReviewerAction::postPeerReviewComment', array(&$user, &$article, &$reviewId, &$emailComment))) {
 			import('classes.submission.form.comment.PeerReviewCommentForm');
 
@@ -315,7 +284,7 @@ class ReviewerAction extends Action {
 				$notificationManager = new NotificationManager();
 				$notificationUsers = $article->getAssociatedUserIds();
 				foreach ($notificationUsers as $userRole) {
-					$url = Request::url(null, $userRole['role'], 'submissionReview', $article->getId(), null, 'peerReview');
+					$url = $request->url(null, $userRole['role'], 'submissionReview', $article->getId(), null, 'peerReview');
 					$notificationManager->createNotification(
 						$userRole['id'], 'notification.type.reviewerComment',
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_REVIEWER_COMMENT
@@ -323,7 +292,7 @@ class ReviewerAction extends Action {
 				}
 				
 				if ($emailComment) {
-					$commentForm->email();
+					$commentForm->email($request);
 				}
 
 			} else {

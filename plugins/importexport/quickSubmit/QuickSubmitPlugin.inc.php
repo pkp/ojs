@@ -46,20 +46,20 @@ class QuickSubmitPlugin extends ImportExportPlugin {
 		return Locale::translate('plugins.importexport.quickSubmit.description');
 	}
 
-	function display(&$args) {
+	function display(&$args, $request) {
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 		Locale::requireComponents(array(LOCALE_COMPONENT_OJS_AUTHOR, LOCALE_COMPONENT_OJS_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION));
 		$this->setBreadcrumbs();
 
 		if (array_shift($args) == 'saveSubmit') {
-			$this->saveSubmit($args);
+			$this->saveSubmit($args, $request);
 		} else {
 			$this->import('QuickSubmitForm');
 			if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
-				$form = new QuickSubmitForm($this);
+				$form = new QuickSubmitForm($this, $request);
 			} else {
-				$form =& new QuickSubmitForm($this);
+				$form =& new QuickSubmitForm($this, $request);
 			}
 			if ($form->isLocaleResubmit()) {
 				$form->readInputData();
@@ -74,14 +74,14 @@ class QuickSubmitPlugin extends ImportExportPlugin {
 	 * Save the submitted form
 	 * @param $args array
 	 */
-	function saveSubmit($args) {
+	function saveSubmit($args, $request) {
 		$templateMgr =& TemplateManager::getManager();
 
 		$this->import('QuickSubmitForm');
 		if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
-			$form = new QuickSubmitForm($this);
+			$form = new QuickSubmitForm($this, $request);
 		} else {
-			$form =& new QuickSubmitForm($this);
+			$form =& new QuickSubmitForm($this, $request);
 		}
 		$form->readInputData();
 		$formLocale = $form->getFormLocale();

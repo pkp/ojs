@@ -125,7 +125,7 @@ class CommentForm extends Form {
 	 * Email the comment.
 	 * @param $recipients array of recipients (email address => name)
 	 */
-	function email($recipients) {
+	function email($recipients, $request) {
 		$article = $this->article;
 		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
 		$journal =& Request::getJournal();
@@ -146,7 +146,7 @@ class CommentForm extends Form {
 				'comments' => $commentText	
 			);
 
-			$email->sendWithParams($paramArray);
+			$email->sendWithParams($paramArray, $request);
 			$email->clearRecipients();
 		}
 	}

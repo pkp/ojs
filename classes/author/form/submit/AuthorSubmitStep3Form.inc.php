@@ -142,7 +142,7 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 		$countries =& $countryDao->getCountries();
 		$templateMgr->assign_by_ref('countries', $countries);
 
-		if (Request::getUserVar('addAuthor') || Request::getUserVar('delAuthor')  || Request::getUserVar('moveAuthor')) {
+		if ($this->request->getUserVar('addAuthor') || $this->request->getUserVar('delAuthor')  || $this->request->getUserVar('moveAuthor')) {
 			$templateMgr->assign('scrollToAuthor', true);
 		}
 
@@ -154,7 +154,7 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 	 * @param $request Request
 	 * @return int the article ID
 	 */
-	function execute(&$request) {
+	function execute() {
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$authorDao =& DAORegistry::getDAO('AuthorDAO');
 		$article =& $this->article;
@@ -232,7 +232,7 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 		$citationDao =& DAORegistry::getDAO('CitationDAO');
 		$rawCitationList = $article->getCitations();
 		if ($previousRawCitationList != $rawCitationList) {
-			$citationDao->importCitations($request, ASSOC_TYPE_ARTICLE, $article->getId(), $rawCitationList);
+			$citationDao->importCitations($this->request, ASSOC_TYPE_ARTICLE, $article->getId(), $rawCitationList);
 		}
 
 		return $this->articleId;

@@ -31,12 +31,6 @@ class ArticleMailTemplate extends MailTemplate {
 	/** @var int Event type of this email */
 	var $eventType;
 
-	/** @var int Associated type of this email */
-	var $assocType;
-
-	/** @var int Associated ID of this email */
-	var $assocId;
-
 	/**
 	 * Constructor.
 	 * @param $article object
@@ -70,13 +64,14 @@ class ArticleMailTemplate extends MailTemplate {
 	/**
 	 * @see parent::send()
 	 */
-	function send() {
+	function send($request = null) {
 		if (parent::send(false)) {
-			if (!isset($this->skip) || !$this->skip) $this->log();
-			$user =& Request::getUser();
-			if ($this->attachmentsEnabled) $this->_clearAttachments($user->getId());
+			if (!isset($this->skip) || !$this->skip) $this->log($request);
+			if ($request) {
+				$user =& $request->getUser();
+				if ($user && $this->attachmentsEnabled) $this->_clearAttachments($user->getId());
+			}
 			return true;
-
 		} else {
 			return false;
 		}
@@ -84,31 +79,21 @@ class ArticleMailTemplate extends MailTemplate {
 
 	/**
 	 * @see parent::sendWithParams()
+	 * @param $paramArray array
+	 * @param $request object
 	 */
-	function sendWithParams($paramArray) {
+	function sendWithParams($paramArray, $request) {
 		$savedSubject = $this->getSubject();
 		$savedBody = $this->getBody();
 
 		$this->assignParams($paramArray);
 
-		$ret = $this->send();
+		$ret = $this->send($request);
 
 		$this->setSubject($savedSubject);
 		$this->setBody($savedBody);
 
 		return $ret;
-	}
-
-	/**
-	 * Add a generic association between this email and some event type / type / ID tuple.
-	 * @param $eventType int
-	 * @param $assocType int
-	 * @param $assocId int
-	 */
-	function setAssoc($eventType, $assocType, $assocId) {
-		$this->eventType = $eventType;
-		$this->assocType = $assocType;
-		$this->assocId = $assocId;
 	}
 
 	/**
@@ -121,19 +106,15 @@ class ArticleMailTemplate extends MailTemplate {
 
 	/**
 	 * Save the email in the article email log.
+	 * @param $request object
 	 */
-	function log() {
-		import('classes.article.log.ArticleEmailLogEntry');
-		import('classes.article.log.ArticleLog');
-		$entry = new ArticleEmailLogEntry();
+	function log($request = null) {
+		$articleEmailLogDao =& DAORegistry::getDAO('ArticleEmailLogDAO');
+		$entry = $articleEmailLogDao->newDataObject();
 		$article =& $this->article;
 
 		// Log data
 		$entry->setEventType($this->eventType);
-		$entry->setAssocType($this->assocType);
-		$entry->setAssocId($this->assocId);
-
-		// Email data
 		$entry->setSubject($this->getSubject());
 		$entry->setBody($this->getBody());
 		$entry->setFrom($this->getFromString(false));
@@ -142,7 +123,8 @@ class ArticleMailTemplate extends MailTemplate {
 		$entry->setBccs($this->getBccString());
 
 		// Add log entry
-		$logEntryId = ArticleLog::logEmailEntry($article->getId(), $entry);
+		import('classes.article.log.ArticleLog');
+		$logEntryId = ArticleLog::logEmail($article->getId(), $entry, $request);
 
 		// Add attachments
 		import('classes.file.ArticleFileManager');
