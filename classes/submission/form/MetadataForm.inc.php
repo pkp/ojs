@@ -251,7 +251,7 @@ class MetadataForm extends Form {
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$section =& $sectionDao->getSection($this->article->getSectionId());
 		if (!$section->getAbstractsNotRequired()) {
-			$this->addCheck(new FormValidatorLocale($this, 'abstract', 'required', 'author.submit.form.abstractRequired'));
+			$this->addCheck(new FormValidatorLocale($this, 'abstract', 'required', 'author.submit.form.abstractRequired', $this->getRequiredLocale()));
 		}
 
 	}
