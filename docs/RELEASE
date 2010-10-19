@@ -1,6 +1,6 @@
-OJS 2.3.3-1 Release Notes
-GIT tag: ojs-2_3_3-1
-Release date: Oct 1, 2010
+OJS 2.3.3-2 Release Notes
+GIT tag: ojs-2_3_3-2
+Release date: Oct 18, 2010
 =================================
 
 New Features
@@ -275,3 +275,8 @@ Bug Fixes
 	#6003# Numerous reference and constant abuses in MetsExport plugin
 	#6004# Recommendation for persistent connections in config template
 	#6015# Fixed form validator for localized emails
+	#6050# Fixed metadata form required language for abstracts
+	#6012# Fixed authorization policy for "login required" journals
+	#6051# Fixed router warning on 404s
+	#6052# Fixed "missing plugin" text key for embedded PDFs
+	#6047# Fixed automated reminder URLs
