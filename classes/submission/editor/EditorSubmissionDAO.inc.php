@@ -610,7 +610,7 @@ class EditorSubmissionDAO extends DAO {
 	function &getUsersNotAssignedToArticle($journalId, $articleId, $roleId, $searchType=null, $search=null, $searchMatch=null, $rangeInfo = null) {
 		$users = array();
 
-		$paramArray = array('interest', $articleId, $journalId, $roleId);
+		$paramArray = array(ASSOC_TYPE_USER, 'interest', $articleId, $journalId, $roleId);
 		$searchSql = '';
 
 		$searchTypeMap = array(
@@ -653,7 +653,7 @@ class EditorSubmissionDAO extends DAO {
 			'SELECT DISTINCT
 				u.*
 			FROM	users u
-				LEFT JOIN controlled_vocabs cv ON (cv.assoc_id = u.user_id AND cv.symbolic = ?)
+				LEFT JOIN controlled_vocabs cv ON (cv.assoc_type = ? AND cv.assoc_id = u.user_id AND cv.symbolic = ?)
 				LEFT JOIN controlled_vocab_entries cve ON (cve.controlled_vocab_id = cv.controlled_vocab_id)
 				LEFT JOIN controlled_vocab_entry_settings cves ON (cves.controlled_vocab_entry_id = cve.controlled_vocab_entry_id)
 				LEFT JOIN roles r ON (r.user_id = u.user_id)

@@ -738,7 +738,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * @return DAOResultFactory containing matching Users
 	 */
 	function &getReviewersForArticle($journalId, $articleId, $round, $searchType = null, $search = null, $searchMatch = null, $rangeInfo = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
-		$paramArray = array($articleId, $round, 'interest', $journalId, RoleDAO::getRoleIdFromPath('reviewer'));
+		$paramArray = array($articleId, $round, ASSOC_TYPE_USER, 'interest', $journalId, RoleDAO::getRoleIdFromPath('reviewer'));
 		$searchSql = '';
 
 		$searchTypeMap = array(
@@ -794,7 +794,7 @@ class SectionEditorSubmissionDAO extends DAO {
 				LEFT JOIN review_assignments ar ON (ar.reviewer_id = u.user_id AND ar.cancelled = 0 AND ar.submission_id = ? AND ar.round = ?)
 				LEFT JOIN roles r ON (r.user_id = u.user_id)
 				LEFT JOIN articles a ON (ra.submission_id = a.article_id)
-				LEFT JOIN controlled_vocabs cv ON (cv.assoc_id = u.user_id AND cv.symbolic = ?)
+				LEFT JOIN controlled_vocabs cv ON (cv.assoc_type = ? AND cv.assoc_id = u.user_id AND cv.symbolic = ?)
 				LEFT JOIN controlled_vocab_entries cve ON (cve.controlled_vocab_id = cv.controlled_vocab_id)
 				LEFT JOIN controlled_vocab_entry_settings cves ON (cves.controlled_vocab_entry_id = cve.controlled_vocab_entry_id)
 			WHERE u.user_id = r.user_id AND
@@ -871,7 +871,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	function &getCopyeditorsNotAssignedToArticle($journalId, $articleId, $searchType = null, $search = null, $searchMatch = null) {
 		$users = array();
 
-		$paramArray = array('interest', $articleId, ASSOC_TYPE_ARTICLE, 'SIGNOFF_COPYEDITING_INITIAL', $journalId, RoleDAO::getRoleIdFromPath('copyeditor'));
+		$paramArray = array(ASSOC_TYPE_USER, 'interest', $articleId, ASSOC_TYPE_ARTICLE, 'SIGNOFF_COPYEDITING_INITIAL', $journalId, RoleDAO::getRoleIdFromPath('copyeditor'));
 		$searchSql = '';
 
 		$searchTypeMap = array(
@@ -913,7 +913,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		$result =& $this->retrieve(
 			'SELECT	u.*
 			FROM	users u
-				LEFT JOIN controlled_vocabs cv ON (cv.assoc_id = u.user_id AND cv.symbolic = ?)
+				LEFT JOIN controlled_vocabs cv ON (cv.assoc_type = ? AND cv.assoc_id = u.user_id AND cv.symbolic = ?)
 				LEFT JOIN controlled_vocab_entries cve ON (cve.controlled_vocab_id = cv.controlled_vocab_id)
 				LEFT JOIN controlled_vocab_entry_settings cves ON (cves.controlled_vocab_entry_id = cve.controlled_vocab_entry_id)
 				LEFT JOIN roles r ON (r.user_id = u.user_id)
