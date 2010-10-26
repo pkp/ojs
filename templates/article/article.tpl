@@ -36,7 +36,9 @@
 					}
 				}
 			});
-		{/literal}--></script>
+		{/literal}
+		// -->
+		</script>
 		<div id="articlePdfResizer">
 			<div id="articlePdf" class="ui-widget-content">
 				{translate key="article.pdf.pluginMissing"}
