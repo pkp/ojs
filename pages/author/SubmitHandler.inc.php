@@ -60,7 +60,7 @@ class SubmitHandler extends AuthorHandler {
 	 */
 	function saveSubmit($args, &$request) {
 		$step = (int) array_shift($args);
-		$articleId = $request->getUserVar('articleId');
+		$articleId = (int) $request->getUserVar('articleId');
 		$journal =& $request->getJournal();
 
 		$this->validate($articleId, $step);
@@ -328,7 +328,7 @@ class SubmitHandler extends AuthorHandler {
 		$article = null;
 
 		// Check that article exists for this journal and user and that submission is incomplete
-		if (isset($articleId)) {
+		if ($articleId) {
 			$article =& $articleDao->getArticle((int) $articleId);
 			if (!$article || $article->getUserId() !== $user->getId() || $article->getJournalId() !== $journal->getId() || ($step !== false && $step > $article->getSubmissionProgress())) {
 				Request::redirect(null, null, 'submit');
