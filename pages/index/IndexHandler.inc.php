@@ -58,7 +58,7 @@ class IndexHandler extends Handler {
 			if ($displayCurrentIssue && isset($issue)) {
 				import('pages.issue.IssueHandler');
 				// The current issue TOC/cover page should be displayed below the custom home page.
-				IssueHandler::setupIssueTemplate($issue);
+				IssueHandler::_setupIssueTemplate($issue);
 			}
 
 			// Display creative commons logo/licence if enabled

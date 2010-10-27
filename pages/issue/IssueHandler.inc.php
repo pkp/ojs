@@ -163,7 +163,7 @@ class IssueHandler extends Handler {
 		if (!$issue) Request::redirect(null, null, 'current');
 
 		$templateMgr =& TemplateManager::getManager();
-		$this->setupIssueTemplate($issue, ($showToc == 'showToc') ? true : false);
+		$this->_setupIssueTemplate($issue, ($showToc == 'showToc') ? true : false);
 
 		// Display creative commons logo/licence if enabled
 		$templateMgr->assign('displayCreativeCommons', $journal->getSetting('includeCreativeCommons'));
@@ -181,7 +181,7 @@ class IssueHandler extends Handler {
 	 * 	the cover page will be displayed. Otherwise table of contents
 	 * 	will be displayed.
 	 */
-	function setupIssueTemplate(&$issue, $showToc = false) {
+	function _setupIssueTemplate(&$issue, $showToc = false) {
 		$journal =& Request::getJournal();
 		$journalId = $journal->getId();
 		$templateMgr =& TemplateManager::getManager();

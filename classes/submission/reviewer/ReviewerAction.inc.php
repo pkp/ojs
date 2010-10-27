@@ -23,7 +23,6 @@ class ReviewerAction extends Action {
 	 * Constructor.
 	 */
 	function ReviewerAction() {
-
 	}
 
 	/**

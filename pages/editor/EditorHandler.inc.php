@@ -56,8 +56,8 @@ class EditorHandler extends SectionEditorHandler {
 
 		$sections =& $sectionDao->getSectionTitles($journal->getId());
 		$templateMgr->assign('sectionOptions', array(0 => Locale::Translate('editor.allSections')) + $sections);
-		$templateMgr->assign('fieldOptions', $this->getSearchFieldOptions());
-		$templateMgr->assign('dateFieldOptions', $this->getDateFieldOptions());
+		$templateMgr->assign('fieldOptions', $this->_getSearchFieldOptions());
+		$templateMgr->assign('dateFieldOptions', $this->_getDateFieldOptions());
 
 		// Bring in the print_issue_id function (FIXME?)
 		import('classes.issue.IssueAction');
@@ -135,7 +135,7 @@ class EditorHandler extends SectionEditorHandler {
 			$templateMgr->assign('section', Request::getUserVar('section'));
 
 			// Set search parameters
-			foreach ($this->getSearchFormDuplicateParameters() as $param)
+			foreach ($this->_getSearchFormDuplicateParameters() as $param)
 				$templateMgr->assign($param, Request::getUserVar($param));
 
 			$templateMgr->assign('dateFrom', $fromDate);
@@ -269,13 +269,13 @@ class EditorHandler extends SectionEditorHandler {
 		$templateMgr->assign('filterSection', $filterSection);
 
 		// Set search parameters
-		foreach ($this->getSearchFormDuplicateParameters() as $param)
+		foreach ($this->_getSearchFormDuplicateParameters() as $param)
 			$templateMgr->assign($param, Request::getUserVar($param));
 
 		$templateMgr->assign('dateFrom', $fromDate);
 		$templateMgr->assign('dateTo', $toDate);
-		$templateMgr->assign('fieldOptions', $this->getSearchFieldOptions());
-		$templateMgr->assign('dateFieldOptions', $this->getDateFieldOptions());
+		$templateMgr->assign('fieldOptions', $this->_getSearchFieldOptions());
+		$templateMgr->assign('dateFieldOptions', $this->_getDateFieldOptions());
 
 		import('classes.issue.IssueAction');
 		$issueAction = new IssueAction();
@@ -293,7 +293,7 @@ class EditorHandler extends SectionEditorHandler {
 	 * based on supplied user data).
 	 * @return array
 	 */
-	function getSearchFormDuplicateParameters() {
+	function _getSearchFormDuplicateParameters() {
 		return array(
 			'searchField', 'searchMatch', 'search',
 			'dateFromMonth', 'dateFromDay', 'dateFromYear',
@@ -306,7 +306,7 @@ class EditorHandler extends SectionEditorHandler {
 	 * Get the list of fields that can be searched by contents.
 	 * @return array
 	 */
-	function getSearchFieldOptions() {
+	function _getSearchFieldOptions() {
 		return array(
 			SUBMISSION_FIELD_TITLE => 'article.title',
 			SUBMISSION_FIELD_AUTHOR => 'user.role.author',
@@ -322,7 +322,7 @@ class EditorHandler extends SectionEditorHandler {
 	 * Get the list of date fields that can be searched.
 	 * @return array
 	 */
-	function getDateFieldOptions() {
+	function _getDateFieldOptions() {
 		return array(
 			SUBMISSION_FIELD_DATE_SUBMITTED => 'submissions.submitted',
 			SUBMISSION_FIELD_DATE_COPYEDIT_COMPLETE => 'submissions.copyeditComplete',

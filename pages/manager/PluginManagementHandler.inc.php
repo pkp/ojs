@@ -95,7 +95,7 @@ class PluginManagementHandler extends ManagerHandler {
 		$templateMgr->assign('plugin', $plugin);
 		$templateMgr->assign('uploaded', false);
 
-		$category = $this->getPluginCategory($plugin);
+		$category = $this->_getPluginCategory($plugin);
 		$templateMgr->assign('pageHierarchy', $this->setBreadcrumbs(true, $category));
 
 		$templateMgr->display('manager/plugins/managePlugins.tpl');
@@ -115,7 +115,7 @@ class PluginManagementHandler extends ManagerHandler {
 		$templateMgr->assign('deleted', false);
 		$templateMgr->assign('error', false);
 
-		$category = $this->getPluginCategory($plugin);
+		$category = $this->_getPluginCategory($plugin);
 		$templateMgr->assign('pageHierarchy', $this->setBreadcrumbs(true, $category));
 
 		$templateMgr->display('manager/plugins/managePlugins.tpl');
@@ -223,7 +223,7 @@ class PluginManagementHandler extends ManagerHandler {
 			// If plugin has an install.xml file, update database with it
 			$installFile = $pluginDest . INSTALL_FILE;
 			if(FileManager::fileExists($installFile)) {
-				$params = $this->setConnectionParams();
+				$params = $this->_setConnectionParams();
 				$installer = new Install($params, $installFile, true);
 				$installer->setCurrentVersion($pluginVersion);
 
@@ -243,7 +243,7 @@ class PluginManagementHandler extends ManagerHandler {
 			$versionDao->insertVersion($pluginVersion, true);
 			return true;
 		} else {
-			if ($this->checkIfNewer($pluginVersion->getProduct(), $pluginVersion)) {
+			if ($this->_checkIfNewer($pluginVersion->getProduct(), $pluginVersion)) {
 				$templateMgr->assign('message', 'manager.plugins.pleaseUpgrade');
 				return false;
 			} else {
@@ -276,7 +276,7 @@ class PluginManagementHandler extends ManagerHandler {
 			return false;
 		}
 
-		if ($this->checkIfNewer($pluginVersion->getProduct(), $pluginVersion)) {
+		if ($this->_checkIfNewer($pluginVersion->getProduct(), $pluginVersion)) {
 			$templateMgr->assign('message', 'manager.plugins.installedVersionNewer');
 			return false;
 		} else {
@@ -294,7 +294,7 @@ class PluginManagementHandler extends ManagerHandler {
 
 			$upgradeFile = $pluginDest . UPGRADE_FILE;
 			if(FileManager::fileExists($upgradeFile)) {
-				$params = $this->setConnectionParams();
+				$params = $this->_setConnectionParams();
 				$installer = new Upgrade($params, $upgradeFile, true);
 
 				if (!$installer->execute()) {
@@ -330,7 +330,7 @@ class PluginManagementHandler extends ManagerHandler {
 
 		$versionDao =& DAORegistry::getDAO('VersionDAO');
 		$installedPlugin = $versionDao->getCurrentVersion($plugin, true);
-		$category = $this->getPluginCategory($plugin);
+		$category = $this->_getPluginCategory($plugin);
 
 		if ($installedPlugin) {
 			$pluginDest = Core::getBaseDir() . DIRECTORY_SEPARATOR . 'plugins' . DIRECTORY_SEPARATOR . $category . DIRECTORY_SEPARATOR . $plugin;
@@ -363,7 +363,7 @@ class PluginManagementHandler extends ManagerHandler {
 	 * @param $newVersion Version Version object of plugin to check against database
 	 * @return boolean
 	 */
-	function checkIfNewer($pluginName, $newVersion) {
+	function _checkIfNewer($pluginName, $newVersion) {
 		$versionDao =& DAORegistry::getDAO('VersionDAO');
 		$installedPlugin = $versionDao->getCurrentVersion($pluginName, true);
 
@@ -416,7 +416,7 @@ class PluginManagementHandler extends ManagerHandler {
 	 * @param string
 	 * @return string
 	 */
-	function getPluginCategory($plugin) {
+	function _getPluginCategory($plugin) {
 		$versionDao =& DAORegistry::getDAO('VersionDAO');
 		$installedPlugin = $versionDao->getCurrentVersion($plugin, true);
 		if ($installedPlugin) {
@@ -429,7 +429,7 @@ class PluginManagementHandler extends ManagerHandler {
 	 * Load database connection parameters into an array (needed for upgrade).
 	 * @return array
 	 */
-	function setConnectionParams() {
+	function _setConnectionParams() {
 		return array(
 			'clientCharset' => Config::getVar('i18n', 'client_charset'),
 			'connectionCharset' => Config::getVar('i18n', 'connection_charset'),

@@ -133,9 +133,9 @@ class RTHandler extends ArticleHandler {
 		$searchParams = array();
 		foreach ($context->getSearches() as $search) {
 			$params = array();
-			$searchParams += RTHandler::getParameterNames($search->getSearchUrl());
+			$searchParams += RTHandler::_getParameterNames($search->getSearchUrl());
 			if ($search->getSearchPost()) {
-				$searchParams += RTHandler::getParameterNames($search->getSearchPost());
+				$searchParams += RTHandler::_getParameterNames($search->getSearchPost());
 				$postParams = explode('&', $search->getSearchPost());
 				foreach ($postParams as $param) {
 					// Split name and value from each parameter
@@ -476,7 +476,7 @@ class RTHandler extends ArticleHandler {
 	/**
 	 * Get parameter values: Used internally for RT searches
 	 */
-	function getParameterNames($value) {
+	function _getParameterNames($value) {
 		$matches = null;
 		String::regexp_match_all('/\{\$([a-zA-Z0-9]+)\}/', $value, $matches);
 		// Remove the entire string from the matches list

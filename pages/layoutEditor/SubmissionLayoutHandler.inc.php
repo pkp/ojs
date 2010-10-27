@@ -60,7 +60,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			$signoffDao->updateObject($layoutSignoff);
 		}
 
-		$disableEdit = !$this->layoutEditingEnabled($submission);
+		$disableEdit = !$this->_layoutEditingEnabled($submission);
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('submission', $submission);
@@ -162,7 +162,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 
 		$this->setupTemplate(true, $articleId, 'editing');
 
-		if ($this->layoutEditingEnabled($submission)) {
+		if ($this->_layoutEditingEnabled($submission)) {
 			import('classes.submission.form.ArticleGalleyForm');
 
 			$submitForm = new ArticleGalleyForm($articleId, $galleyId);
@@ -371,7 +371,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 
 		$this->setupTemplate(true, $articleId, 'editing');
 
-		if ($this->layoutEditingEnabled($submission)) {
+		if ($this->_layoutEditingEnabled($submission)) {
 			import('classes.submission.form.SuppFileForm');
 
 			$submitForm = new SuppFileForm($submission, $journal, $suppFileId);
@@ -563,7 +563,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			if (!isset($layoutSignoff)) $isValid = false;
 			elseif ($layoutSignoff->getUserId() == $user->getId()) {
 				if ($checkEdit) {
-					$isValid = $this->layoutEditingEnabled($submission);
+					$isValid = $this->_layoutEditingEnabled($submission);
 				} else {
 					$isValid = true;
 				}
@@ -586,7 +586,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	 * @param $submission LayoutEditorSubmission
 	 * @return boolean true if layout editor can modify the submission
 	 */
-	function layoutEditingEnabled(&$submission) {
+	function _layoutEditingEnabled(&$submission) {
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 		$layoutEditorProofreadSignoff = $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getArticleId());
 		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getArticleId());

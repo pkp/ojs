@@ -29,7 +29,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		parent::SectionEditorHandler();
 	}
 
-	function getFrom($default = 'submissionEditing') {
+	function _getFrom($default = 'submissionEditing') {
 		$from = Request::getUserVar('from');
 		if (!in_array($from, array('submission', 'submissionEditing'))) return $default;
 		return $from;
@@ -1345,7 +1345,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				);
 			}
 
-			$request->redirect(null, null, $this->getFrom(), $articleId);
+			$request->redirect(null, null, $this->_getFrom(), $articleId);
 		} else {
 			$submitForm->display();
 		}
@@ -1379,7 +1379,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		SectionEditorAction::deleteSuppFile($submission, $suppFileId);
 
-		$request->redirect(null, null, $this->getFrom(), $articleId);
+		$request->redirect(null, null, $this->_getFrom(), $articleId);
 	}
 
 	function archiveSubmission($args, $request) {
@@ -1458,7 +1458,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$this->uploadSuppFile('layoutFile', $request);
 
 		} else {
-			$request->redirect(null, null, $this->getFrom(), Request::getUserVar('articleId'));
+			$request->redirect(null, null, $this->_getFrom(), $request->getUserVar('articleId'));
 		}
 	}
 

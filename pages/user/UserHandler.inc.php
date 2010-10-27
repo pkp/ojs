@@ -61,12 +61,12 @@ class UserHandler extends Handler {
 				$journalId = $journal->getId();
 				
 				// Determine if journal setup is incomplete, to provide a message for JM
-				$setupIncomplete[$journalId] = $this->checkIncompleteSetup($journal);
+				$setupIncomplete[$journalId] = $this->_checkIncompleteSetup($journal);
 							
 				$roles =& $roleDao->getRolesByUserId($userId, $journalId);
 				if (!empty($roles)) {
 					$userJournals[] =& $journal;
-					$this->getRoleDataForJournal($userId, $journalId, $submissionsCount, $isValid);
+					$this->_getRoleDataForJournal($userId, $journalId, $submissionsCount, $isValid);
 				}
 
 				unset($journal);
@@ -79,11 +79,11 @@ class UserHandler extends Handler {
 			$journalId = $journal->getId();
 			
 			// Determine if journal setup is incomplete, to provide a message for JM
-			$setupIncomplete[$journalId] = $this->checkIncompleteSetup($journal);
+			$setupIncomplete[$journalId] = $this->_checkIncompleteSetup($journal);
 			
 			$userJournals = array($journal);
 			
-			$this->getRoleDataForJournal($userId, $journalId, $submissionsCount, $isValid);
+			$this->_getRoleDataForJournal($userId, $journalId, $submissionsCount, $isValid);
 			
 			$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
 			$subscriptionsEnabled = $journal->getSetting('publishingMode') ==  PUBLISHING_MODE_SUBSCRIPTION
@@ -183,7 +183,7 @@ class UserHandler extends Handler {
 	 * @param $isValid array reference
 	
 	 */
-	function getRoleDataForJournal($userId, $journalId, &$submissionsCount, &$isValid) {
+	function _getRoleDataForJournal($userId, $journalId, &$submissionsCount, &$isValid) {
 		if (Validation::isJournalManager($journalId)) {
 			$journalDao =& DAORegistry::getDAO('JournalDAO');
 			$isValid["JournalManager"][$journalId] = true;
@@ -233,7 +233,7 @@ class UserHandler extends Handler {
 	 * @param $journal Object 
 	 * @return boolean True iff setup is incomplete
 	 */
-	function checkIncompleteSetup($journal) {
+	function _checkIncompleteSetup($journal) {
 		if($journal->getLocalizedInitials() == "" || $journal->getSetting('contactEmail') == "" || 
 		   $journal->getSetting('contactName') == "" || $journal->getLocalizedSetting('abbreviation') == "") {
 			return true;
@@ -244,11 +244,11 @@ class UserHandler extends Handler {
 	 * Change the locale for the current user.
 	 * @param $args array first parameter is the new locale
 	 */
-	function setLocale($args) {
-		$setLocale = isset($args[0]) ? $args[0] : null;
+	function setLocale($args, $request) {
+		$setLocale = array_shift($args);
 
-		$site =& Request::getSite();
-		$journal =& Request::getJournal();
+		$site =& $request->getSite();
+		$journal =& $request->getJournal();
 		if ($journal != null) {
 			$journalSupportedLocales = $journal->getSetting('supportedLocales');
 			if (!is_array($journalSupportedLocales)) {
@@ -257,20 +257,20 @@ class UserHandler extends Handler {
 		}
 
 		if (Locale::isLocaleValid($setLocale) && (!isset($journalSupportedLocales) || in_array($setLocale, $journalSupportedLocales)) && in_array($setLocale, $site->getSupportedLocales())) {
-			$session =& Request::getSession();
+			$session =& $request->getSession();
 			$session->setSessionVar('currentLocale', $setLocale);
 		}
 
 		if(isset($_SERVER['HTTP_REFERER'])) {
-			Request::redirectUrl($_SERVER['HTTP_REFERER']);
+			$request->redirectUrl($_SERVER['HTTP_REFERER']);
 		}
 
-		$source = Request::getUserVar('source');
+		$source = $request->getUserVar('source');
 		if (isset($source) && !empty($source)) {
-			Request::redirectUrl(Request::getProtocol() . '://' . Request::getServerHost() . $source, false);
+			$request->redirectUrl($request->getProtocol() . '://' . $request->getServerHost() . $source, false);
 		}
 
-		Request::redirect(null, 'index');
+		$request->redirect(null, 'index');
 	}
 
 	/**
@@ -342,7 +342,7 @@ class UserHandler extends Handler {
 	// Captcha
 	//
 
-	function viewCaptcha($args) {
+	function viewCaptcha($args, $request) {
 		$captchaId = (int) array_shift($args);
 		import('lib.pkp.classes.captcha.CaptchaManager');
 		$captchaManager = new CaptchaManager();
@@ -354,7 +354,7 @@ class UserHandler extends Handler {
 				exit();
 			}
 		}
-		Request::redirect(null, 'user');
+		$request->redirect(null, 'user');
 	}
 
 	/**

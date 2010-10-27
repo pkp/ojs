@@ -66,11 +66,14 @@ switch ($op) {
 		import('pages.rtadmin.RTSearchHandler');
 		break;
 	case 'index':
-	case 'configureSharing':
-	case 'saveConfigureSharing':
 	case 'validateUrls':
 		define('HANDLER_CLASS', 'RTAdminHandler');
 		import('pages.rtadmin.RTAdminHandler');
+		break;
+	case 'configureSharing':
+	case 'saveConfigureSharing':
+		define('HANDLER_CLASS', 'RTSharingHandler');
+		import('pages.rtadmin.RTSharingHandler');
 		break;
 }
 

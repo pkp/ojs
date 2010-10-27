@@ -36,15 +36,15 @@ class FilesHandler extends ManagerHandler {
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy', array(array(Request::url(null, 'manager'), 'manager.journalManagement')));
 
-		FilesHandler::parseDirArg($args, $currentDir, $parentDir);
-		$currentPath = FilesHandler::getRealFilesDir($currentDir);
+		FilesHandler::_parseDirArg($args, $currentDir, $parentDir);
+		$currentPath = FilesHandler::_getRealFilesDir($currentDir);
 
 		if (@is_file($currentPath)) {
 			$fileMgr = new FileManager();
 			if (Request::getUserVar('download')) {
 				$fileMgr->downloadFile($currentPath);
 			} else {
-				$fileMgr->viewFile($currentPath, FilesHandler::fileMimeType($currentPath));
+				$fileMgr->viewFile($currentPath, FilesHandler::_fileMimeType($currentPath));
 			}
 
 		} else {
@@ -57,7 +57,7 @@ class FilesHandler extends ManagerHandler {
 						$info = array(
 							'name' => $file,
 							'isDir' => $isDir,
-							'mimetype' => $isDir ? '' : FilesHandler::fileMimeType($filePath),
+							'mimetype' => $isDir ? '' : FilesHandler::_fileMimeType($filePath),
 							'mtime' => filemtime($filePath),
 							'size' => $isDir ? '' : FileManager::getNiceFileSize(filesize($filePath)),
 						);
@@ -81,13 +81,13 @@ class FilesHandler extends ManagerHandler {
 	function fileUpload($args) {
 		$this->validate();
 
-		FilesHandler::parseDirArg($args, $currentDir, $parentDir);
-		$currentPath = FilesHandler::getRealFilesDir($currentDir);
+		FilesHandler::_parseDirArg($args, $currentDir, $parentDir);
+		$currentPath = FilesHandler::_getRealFilesDir($currentDir);
 
 		import('lib.pkp.classes.file.FileManager');
 		$fileMgr = new FileManager();
 		if ($fileMgr->uploadedFileExists('file')) {
-			$destPath = $currentPath . '/' . FilesHandler::cleanFileName($fileMgr->getUploadedFileName('file'));
+			$destPath = $currentPath . '/' . FilesHandler::_cleanFileName($fileMgr->getUploadedFileName('file'));
 			@$fileMgr->uploadFile('file', $destPath);
 		}
 
@@ -101,11 +101,11 @@ class FilesHandler extends ManagerHandler {
 	function fileMakeDir($args) {
 		$this->validate();
 
-		FilesHandler::parseDirArg($args, $currentDir, $parentDir);
+		FilesHandler::_parseDirArg($args, $currentDir, $parentDir);
 
 		if ($dirName = Request::getUserVar('dirName')) {
-			$currentPath = FilesHandler::getRealFilesDir($currentDir);
-			$newDir = $currentPath . '/' . FilesHandler::cleanFileName($dirName);
+			$currentPath = FilesHandler::_getRealFilesDir($currentDir);
+			$newDir = $currentPath . '/' . FilesHandler::_cleanFileName($dirName);
 
 			import('lib.pkp.classes.file.FileManager');
 			$fileMgr = new FileManager();
@@ -118,8 +118,8 @@ class FilesHandler extends ManagerHandler {
 	function fileDelete($args) {
 		$this->validate();
 
-		FilesHandler::parseDirArg($args, $currentDir, $parentDir);
-		$currentPath = FilesHandler::getRealFilesDir($currentDir);
+		FilesHandler::_parseDirArg($args, $currentDir, $parentDir);
+		$currentPath = FilesHandler::_getRealFilesDir($currentDir);
 
 		import('lib.pkp.classes.file.FileManager');
 		$fileMgr = new FileManager();
@@ -140,31 +140,31 @@ class FilesHandler extends ManagerHandler {
 	// FIXME Move some of these functions into common class (FileManager?)
 	//
 
-	function parseDirArg($args, &$currentDir, &$parentDir) {
-		$pathArray = array_filter($args, array('FilesHandler', 'fileNameFilter'));
+	function _parseDirArg($args, &$currentDir, &$parentDir) {
+		$pathArray = array_filter($args, array('FilesHandler', '_fileNameFilter'));
 		$currentDir = join($pathArray, '/');
 		array_pop($pathArray);
 		$parentDir = join($pathArray, '/');
 	}
 
-	function getRealFilesDir($currentDir) {
+	function _getRealFilesDir($currentDir) {
 		$journal =& Request::getJournal();
 		return Config::getVar('files', 'files_dir') . '/journals/' . $journal->getId() .'/' . $currentDir;
 	}
 
-	function fileNameFilter($var) {
+	function _fileNameFilter($var) {
 		return (!empty($var) && $var != '..' && $var != '.');
 	}
 
-	function cleanFileName($var) {
+	function _cleanFileName($var) {
 		$var = String::regexp_replace('/[^\w\-\.]/', '', $var);
-		if (!FilesHandler::fileNameFilter($var)) {
+		if (!FilesHandler::_fileNameFilter($var)) {
 			$var = time() . '';
 		}
 		return $var;
 	}
 
-	function fileMimeType($filePath) {
+	function _fileMimeType($filePath) {
 		return String::mime_content_type($filePath);
 	}
 

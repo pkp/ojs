@@ -64,7 +64,7 @@ class SearchHandler extends Handler {
 			$yearRange = $publishedArticleDao->getArticleYearRange($journal->getId());
 		}	
 
-		$this->assignAdvancedSearchParameters($templateMgr, $yearRange);
+		$this->_assignAdvancedSearchParameters($templateMgr, $yearRange);
 
 		$templateMgr->display('search/advancedSearch.tpl');
 	}
@@ -256,7 +256,7 @@ class SearchHandler extends Handler {
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('results', $results);
-		$this->assignAdvancedSearchParameters($templateMgr, $yearRange);
+		$this->_assignAdvancedSearchParameters($templateMgr, $yearRange);
 
 		$templateMgr->display('search/searchResults.tpl');
 	}	
@@ -280,7 +280,7 @@ class SearchHandler extends Handler {
 		}
 	}
 
-	function assignAdvancedSearchParameters(&$templateMgr, $yearRange) {
+	function _assignAdvancedSearchParameters(&$templateMgr, $yearRange) {
 		$templateMgr->assign('query', Request::getUserVar('query'));
 		$templateMgr->assign('searchJournal', Request::getUserVar('searchJournal'));
 		$templateMgr->assign('author', Request::getUserVar('author'));

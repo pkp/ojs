@@ -26,7 +26,7 @@ class PaymentHandler extends Handler {
 	}
 		 
 	/**
-	 * Display scheduled conference view page.
+	 * Pass request to plugin.
 	 */
 	function plugin($args) {
 		$paymentMethodPlugins =& PluginRegistry::loadCategory('paymethod');

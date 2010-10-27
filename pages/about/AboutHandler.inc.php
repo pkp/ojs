@@ -46,7 +46,7 @@ class AboutHandler extends Handler {
 			if (isset($customAboutItems[Locale::getLocale()])) $templateMgr->assign('customAboutItems', $customAboutItems[Locale::getLocale()]);
 			elseif (isset($customAboutItems[Locale::getPrimaryLocale()])) $templateMgr->assign('customAboutItems', $customAboutItems[Locale::getPrimaryLocale()]);
 
-			foreach ($this->getPublicStatisticsNames() as $name) {
+			foreach ($this->_getPublicStatisticsNames() as $name) {
 				if ($journal->getSetting($name)) {
 					$templateMgr->assign('publicStatisticsEnabled', true);
 					break;
@@ -541,7 +541,7 @@ class AboutHandler extends Handler {
 		if (!is_array($sectionIds)) $sectionIds = array();
 		$templateMgr->assign('sectionIds', $sectionIds);
 
-		foreach ($this->getPublicStatisticsNames() as $name) {
+		foreach ($this->_getPublicStatisticsNames() as $name) {
 			$templateMgr->assign($name, $journal->getSetting($name));
 		}
 		$fromDate = mktime(0, 0, 0, 1, 1, $statisticsYear);
@@ -581,10 +581,10 @@ class AboutHandler extends Handler {
 		$templateMgr->display('about/statistics.tpl');
 	}
 
-	function getPublicStatisticsNames() {
+	function _getPublicStatisticsNames() {
 		import ('pages.manager.ManagerHandler');
 		import ('pages.manager.StatisticsHandler');
-		return StatisticsHandler::getPublicStatisticsNames();
+		return StatisticsHandler::_getPublicStatisticsNames();
 	}
 
 }

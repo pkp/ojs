@@ -81,16 +81,6 @@ class RTAdminHandler extends Handler {
 		}
 	}
 
-	function configureSharing() {
-		import('pages.rtadmin.RTSharingHandler');
-		RTSharingHandler::settings();
-	}
-
-	function saveConfigureSharing() {
-		import('pages.rtadmin.RTSharingHandler');
-		RTSharingHandler::saveSettings();
-	}	
-
 	function validateUrls($args) {
 		$this->validate();
 

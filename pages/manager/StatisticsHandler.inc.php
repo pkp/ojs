@@ -43,7 +43,7 @@ class StatisticsHandler extends ManagerHandler {
 		if (!is_array($sectionIds)) $sectionIds = array();
 		$templateMgr->assign('sectionIds', $sectionIds);
 
-		foreach ($this->getPublicStatisticsNames() as $name) {
+		foreach ($this->_getPublicStatisticsNames() as $name) {
 			$templateMgr->assign($name, $journal->getSetting($name));
 		}
 		$templateMgr->assign('statViews', $journal->getSetting('statViews'));
@@ -108,7 +108,7 @@ class StatisticsHandler extends ManagerHandler {
 		Request::redirect(null, null, 'statistics', null, array('statisticsYear' => Request::getUserVar('statisticsYear')));
 	}
 
-	function getPublicStatisticsNames() {
+	function _getPublicStatisticsNames() {
 		return array(
 			'statNumPublishedIssues',
 			'statItemsPublished',
@@ -129,7 +129,7 @@ class StatisticsHandler extends ManagerHandler {
 		$this->validate();
 
 		$journal =& Request::getJournal();
-		foreach ($this->getPublicStatisticsNames() as $name) {
+		foreach ($this->_getPublicStatisticsNames() as $name) {
 			$journal->updateSetting($name, Request::getUserVar($name)?true:false);
 		}
 		$journal->updateSetting('statViews', Request::getUserVar('statViews')?true:false);
