@@ -47,9 +47,9 @@ class PubMedExportPlugin extends ImportExportPlugin {
 		return Locale::translate('plugins.importexport.pubmed.description');
 	}
 
-	function display(&$args) {
+	function display(&$args, $request) {
 		$templateMgr =& TemplateManager::getManager();
-		parent::display($args);
+		parent::display($args, $request);
 
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 

@@ -47,9 +47,9 @@ class METSExportPlugin extends ImportExportPlugin {
 		return Locale::translate('plugins.importexport.METSExport.description');
 	}
 
-	function display(&$args) {
+	function display(&$args, $request) {
 		$templateMgr =& TemplateManager::getManager();
-		parent::display($args);
+		parent::display($args, $request);
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		$journal =& Request::getJournal();
 		switch (array_shift($args)) {

@@ -49,9 +49,9 @@ class EruditExportPlugin extends ImportExportPlugin {
 		return Locale::translate('plugins.importexport.erudit.description');
 	}
 
-	function display(&$args) {
+	function display(&$args, $request) {
 		$templateMgr =& TemplateManager::getManager();
-		parent::display($args);
+		parent::display($args, $request);
 
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');

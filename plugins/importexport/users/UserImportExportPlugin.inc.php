@@ -49,9 +49,9 @@ class UserImportExportPlugin extends ImportExportPlugin {
 		return Locale::translate('plugins.importexport.users.description');
 	}
 
-	function display(&$args) {
+	function display(&$args, $request) {
 		$templateMgr =& TemplateManager::getManager();
-		parent::display($args);
+		parent::display($args, $request);
 
 		$templateMgr->assign('roleOptions', array(
 			'' => 'manager.people.doNotEnroll',

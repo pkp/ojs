@@ -56,7 +56,7 @@ class SampleImportExportPlugin extends ImportExportPlugin {
 		return Locale::translate('plugins.importexport.sample.description');
 	}
 
-	function display(&$args) {
+	function display(&$args, $request) {
 		parent::display($args);
 		switch (array_shift($args)) {
 			case 'exportIssue':
