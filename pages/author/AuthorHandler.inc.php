@@ -31,17 +31,17 @@ class AuthorHandler extends Handler {
 	/**
 	 * Display journal author index page.
 	 */
-	function index($args) {
+	function index($args, $request) {
 		$this->validate();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 		
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 
-		$user =& Request::getUser();
+		$user =& $request->getUser();
 		$rangeInfo =& Handler::getRangeInfo('submissions');
 		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
 
-		$page = isset($args[0]) ? $args[0] : '';
+		$page = array_shift($args);
 		switch($page) {
 			case 'completed':
 				$active = false;
@@ -51,9 +51,9 @@ class AuthorHandler extends Handler {
 				$active = true;
 		}
 
-		$sort = Request::getUserVar('sort');
+		$sort = $request->getUserVar('sort');
 		$sort = isset($sort) ? $sort : 'title';
-		$sortDirection = Request::getUserVar('sortDirection');
+		$sortDirection = $request->getUserVar('sortDirection');
 		$sortDirection = (isset($sortDirection) && ($sortDirection == SORT_DIRECTION_ASC || $sortDirection == SORT_DIRECTION_DESC)) ? $sortDirection : SORT_DIRECTION_ASC;
 
 		if ($sort == 'status') {
@@ -117,13 +117,13 @@ class AuthorHandler extends Handler {
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null) {
+	function setupTemplate($request, $subclass = false, $articleId = 0, $parentPage = null) {
 		parent::setupTemplate();
 		Locale::requireComponents(array(LOCALE_COMPONENT_OJS_AUTHOR, LOCALE_COMPONENT_PKP_SUBMISSION));
 		$templateMgr =& TemplateManager::getManager();
 
-		$pageHierarchy = $subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'author'), 'user.role.author'), array(Request::url(null, 'author'), 'article.submissions'))
-			: array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'author'), 'user.role.author'));
+		$pageHierarchy = $subclass ? array(array($request->url(null, 'user'), 'navigation.user'), array($request->url(null, 'author'), 'user.role.author'), array($request->url(null, 'author'), 'article.submissions'))
+			: array(array($request->url(null, 'user'), 'navigation.user'), array($request->url(null, 'author'), 'user.role.author'));
 
 		import('classes.submission.sectionEditor.SectionEditorAction');
 		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'author');
@@ -140,7 +140,7 @@ class AuthorHandler extends Handler {
 	function instructions($args) {
 		import('classes.submission.proofreader.ProofreaderAction');
 		if (!isset($args[0]) || !ProofreaderAction::instructions($args[0], array('copy', 'proof'))) {
-			Request::redirect(null, null, 'index');
+			$request->redirect(null, null, 'index');
 		}
 	}
 }

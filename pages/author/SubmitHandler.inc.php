@@ -37,9 +37,9 @@ class SubmitHandler extends AuthorHandler {
 		$articleId = $request->getUserVar('articleId');
 		$journal =& $request->getJournal();
 
-		$this->validate($articleId, $step, 'author.submit.authorSubmitLoginMessage');
+		$this->validate($request, $articleId, $step, 'author.submit.authorSubmitLoginMessage');
 		$article =& $this->article;
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		$formClass = "AuthorSubmitStep{$step}Form";
 		import("classes.author.form.submit.$formClass");
@@ -58,13 +58,13 @@ class SubmitHandler extends AuthorHandler {
 	 * @param $args array first parameter is the step being saved
 	 * @param $request Request
 	 */
-	function saveSubmit($args, &$request) {
+	function saveSubmit($args, $request) {
 		$step = (int) array_shift($args);
 		$articleId = (int) $request->getUserVar('articleId');
 		$journal =& $request->getJournal();
 
-		$this->validate($articleId, $step);
-		$this->setupTemplate(true);
+		$this->validate($request, $articleId, $step);
+		$this->setupTemplate($request, true);
 		$article =& $this->article;
 
 		$formClass = "AuthorSubmitStep{$step}Form";
@@ -206,16 +206,16 @@ class SubmitHandler extends AuthorHandler {
 		$articleId = $request->getUserVar('articleId');
 		$journal =& $request->getJournal();
 
-		$this->validate($articleId, 4);
+		$this->validate($request, $articleId, 4);
 		$article =& $this->article;
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		import('classes.author.form.submit.AuthorSubmitSuppFileForm');
 		$submitForm = new AuthorSubmitSuppFileForm($article, $journal);
 		$submitForm->setData('title', array($article->getLocale() => Locale::translate('common.untitled')));
 		$suppFileId = $submitForm->execute();
 
-		Request::redirect(null, null, 'submitSuppFile', $suppFileId, array('articleId' => $articleId));
+		$request->redirect(null, null, 'submitSuppFile', $suppFileId, array('articleId' => $articleId));
 	}
 
 	/**
@@ -227,9 +227,9 @@ class SubmitHandler extends AuthorHandler {
 		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
 		$journal =& $request->getJournal();
 
-		$this->validate($articleId, 4);
+		$this->validate($request, $articleId, 4);
 		$article =& $this->article;
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		import('classes.author.form.submit.AuthorSubmitSuppFileForm');
 		$submitForm = new AuthorSubmitSuppFileForm($article, $journal, $suppFileId);
@@ -251,9 +251,9 @@ class SubmitHandler extends AuthorHandler {
 		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
 		$journal =& $request->getJournal();
 
-		$this->validate($articleId, 4);
+		$this->validate($request, $articleId, 4);
 		$article =& $this->article;
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		import('classes.author.form.submit.AuthorSubmitSuppFileForm');
 		$submitForm = new AuthorSubmitSuppFileForm($article, $journal, $suppFileId);
@@ -261,7 +261,7 @@ class SubmitHandler extends AuthorHandler {
 
 		if ($submitForm->validate()) {
 			$submitForm->execute();
-			Request::redirect(null, null, 'submit', '4', array('articleId' => $articleId));
+			$request->redirect(null, null, 'submit', '4', array('articleId' => $articleId));
 		} else {
 			$submitForm->display();
 		}
@@ -271,15 +271,15 @@ class SubmitHandler extends AuthorHandler {
 	 * Delete a supplementary file.
 	 * @param $args array, the first parameter is the supplementary file to delete
 	 */
-	function deleteSubmitSuppFile($args) {
+	function deleteSubmitSuppFile($args, $request) {
 		import('classes.file.ArticleFileManager');
 
-		$articleId = Request::getUserVar('articleId');
-		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
+		$articleId = (int) $request->getUserVar('articleId');
+		$suppFileId =(int) array_shift($args);
 
-		$this->validate($articleId, 4);
+		$this->validate($request, $articleId, 4);
 		$article =& $this->article;
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
 		$suppFile = $suppFileDao->getSuppFile($suppFileId, $articleId);
@@ -290,12 +290,12 @@ class SubmitHandler extends AuthorHandler {
 			$articleFileManager->deleteFile($suppFile->getFileId());
 		}
 
-		Request::redirect(null, null, 'submit', '4', array('articleId' => $articleId));
+		$request->redirect(null, null, 'submit', '4', array('articleId' => $articleId));
 	}
 
 	function expediteSubmission($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
-		$this->validate($articleId);
+		$this->validate($request, $articleId);
 		$journal =& $request->getJournal();
 		$article =& $this->article;
 
@@ -315,14 +315,14 @@ class SubmitHandler extends AuthorHandler {
 	 * @param $articleId int
 	 * @param $step int
 	 */
-	function validate($articleId = null, $step = false, $reason = null) {
+	function validate($request, $articleId = null, $step = false, $reason = null) {
 		parent::validate($reason);
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
-		$user =& Request::getUser();
-		$journal =& Request::getJournal();
+		$user =& $request->getUser();
+		$journal =& $request->getJournal();
 
 		if ($step !== false && ($step < 1 || $step > 5 || (!isset($articleId) && $step != 1))) {
-			Request::redirect(null, null, 'submit', array(1));
+			$request->redirect(null, null, 'submit', array(1));
 		}
 
 		$article = null;
@@ -331,7 +331,7 @@ class SubmitHandler extends AuthorHandler {
 		if ($articleId) {
 			$article =& $articleDao->getArticle((int) $articleId);
 			if (!$article || $article->getUserId() !== $user->getId() || $article->getJournalId() !== $journal->getId() || ($step !== false && $step > $article->getSubmissionProgress())) {
-				Request::redirect(null, null, 'submit');
+				$request->redirect(null, null, 'submit');
 			}
 		}
 
@@ -339,4 +339,5 @@ class SubmitHandler extends AuthorHandler {
 		return true;
 	}
 }
+
 ?>

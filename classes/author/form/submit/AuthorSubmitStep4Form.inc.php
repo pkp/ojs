@@ -21,8 +21,8 @@ class AuthorSubmitStep4Form extends AuthorSubmitForm {
 	/**
 	 * Constructor.
 	 */
-	function AuthorSubmitStep4Form(&$article, &$journal) {
-		parent::AuthorSubmitForm($article, 4, $journal);
+	function AuthorSubmitStep4Form(&$article, &$journal, $request) {
+		parent::AuthorSubmitForm($article, 4, $journal, $request);
 	}
 
 	/**
