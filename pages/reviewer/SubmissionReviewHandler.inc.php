@@ -34,11 +34,11 @@ class SubmissionReviewHandler extends ReviewerHandler {
 	 * Display the submission review page.
 	 * @param $args array
 	 */
-	function submission($args) {
-		$journal =& Request::getJournal();
+	function submission($args, $request) {
+		$journal =& $request->getJournal();
 		$reviewId = $args[0];
 
-		$this->validate($reviewId);
+		$this->validate($request, $reviewId);
 		$user =& $this->user;
 		$submission =& $this->submission;
 
@@ -86,7 +86,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 
 		$reviewerSubmissionDao =& DAORegistry::getDAO('ReviewerSubmissionDAO');
 
-		$this->validate($reviewId);
+		$this->validate($request, $reviewId);
 		$reviewerSubmission =& $this->submission;
 
 		$this->setupTemplate();
@@ -105,18 +105,18 @@ class SubmissionReviewHandler extends ReviewerHandler {
 	/**
 	 * Save the competing interests statement, if allowed.
 	 */
-	function saveCompetingInterests() {
-		$reviewId = Request::getUserVar('reviewId');
-		$this->validate($reviewId);
+	function saveCompetingInterests($args, $request) {
+		$reviewId = $request->getUserVar('reviewId');
+		$this->validate($request, $reviewId);
 		$reviewerSubmission =& $this->submission;
 
 		if ($reviewerSubmission->getDateConfirmed() && !$reviewerSubmission->getDeclined() && !$reviewerSubmission->getCancelled() && !$reviewerSubmission->getRecommendation()) {
 			$reviewerSubmissionDao =& DAORegistry::getDAO('ReviewerSubmissionDAO');
-			$reviewerSubmission->setCompetingInterests(Request::getUserVar('competingInterests'));
+			$reviewerSubmission->setCompetingInterests($request->getUserVar('competingInterests'));
 			$reviewerSubmissionDao->updateReviewerSubmission($reviewerSubmission);
 		}
 
-		Request::redirect(null, 'reviewer', 'submission', array($reviewId));
+		$request->redirect(null, 'reviewer', 'submission', array($reviewId));
 	}
 
 	/**
@@ -126,7 +126,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 		$reviewId = (int) $request->getUserVar('reviewId');
 		$recommendation = (int) $request->getUserVar('recommendation');
 
-		$this->validate($reviewId);
+		$this->validate($request, $reviewId);
 		$reviewerSubmission =& $this->submission;
 
 		$this->setupTemplate(true);
@@ -149,7 +149,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 		$articleId = (int) array_shift($args);
 		$journal =& $request->getJournal();
 
-		$this->validate($reviewId);
+		$this->validate($request, $reviewId);
 		$reviewerSubmission =& $this->submission;
 
 		$this->setupTemplate(true, $articleId, $reviewId);
@@ -165,7 +165,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 	function uploadReviewerVersion($args, $request) {
 		$reviewId = $request->getUserVar('reviewId');
 
-		$this->validate($reviewId);
+		$this->validate($request, $reviewId);
 		$this->setupTemplate(true);
 		
 		ReviewerAction::uploadReviewerVersion($reviewId, $this->submission, $request);
@@ -175,16 +175,17 @@ class SubmissionReviewHandler extends ReviewerHandler {
 	/*
 	 * Delete one of the reviewer's annotated versions of an article.
 	 */
-	function deleteReviewerVersion($args) {		
-		$reviewId = isset($args[0]) ? (int) $args[0] : 0;
-		$fileId = isset($args[1]) ? (int) $args[1] : 0;
-		$revision = isset($args[2]) ? (int) $args[2] : null;
+	function deleteReviewerVersion($args, $request) {		
+		$reviewId = (int) array_shift($args);
+		$fileId = (int) array_shift($args);
+		$revision = (int) array_shift($args);
+		if (!$revision) $revision = null;
 
-		$this->validate($reviewId);
+		$this->validate($request, $reviewId);
 		$reviewerSubmission =& $this->submission;
 
 		if (!$reviewerSubmission->getCancelled()) ReviewerAction::deleteReviewerVersion($reviewId, $fileId, $revision);
-		Request::redirect(null, null, 'submission', $reviewId);
+		$request->redirect(null, null, 'submission', $reviewId);
 	}
 
 	//
@@ -195,17 +196,18 @@ class SubmissionReviewHandler extends ReviewerHandler {
 	 * Download a file.
 	 * @param $args array ($articleId, $fileId, [$revision])
 	 */
-	function downloadFile($args) {
-		$reviewId = isset($args[0]) ? $args[0] : 0;
-		$articleId = isset($args[1]) ? $args[1] : 0;
-		$fileId = isset($args[2]) ? $args[2] : 0;
-		$revision = isset($args[3]) ? $args[3] : null;
+	function downloadFile($args, $request) {
+		$reviewId = (int) array_shift($args);
+		$articleId = (int) array_shift($args);
+		$fileId = (int) array_shift($args);
+		$revision = (int) array_shift($args);
+		if (!$revision) $revision = null;
 
-		$this->validate($reviewId);
+		$this->validate($request, $reviewId);
 		$reviewerSubmission =& $this->submission;
 
 		if (!ReviewerAction::downloadReviewerFile($reviewId, $reviewerSubmission, $fileId, $revision)) {
-			Request::redirect(null, null, 'submission', $reviewId);
+			$request->redirect(null, null, 'submission', $reviewId);
 		}
 	}
 
@@ -217,10 +219,10 @@ class SubmissionReviewHandler extends ReviewerHandler {
 	 * Edit or preview review form response.
 	 * @param $args array
 	 */
-	function editReviewFormResponse($args) {
-		$reviewId = isset($args[0]) ? $args[0] : 0;
+	function editReviewFormResponse($args, $request) {
+		$reviewId = (int) array_shift($args);
 		
-		$this->validate($reviewId);
+		$this->validate($request, $reviewId);
 		$reviewerSubmission =& $this->submission;
 
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
@@ -238,7 +240,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 	function saveReviewFormResponse($args, $request) {
 		$reviewId = (int) array_shift($args);
 		$reviewFormId = (int) array_shift($args);
-		$this->validate($reviewId);
+		$this->validate($request, $reviewId);
 		if (ReviewerAction::saveReviewFormResponse($reviewId, $reviewFormId)) {
 			$request->redirect(null, null, 'submission', $reviewId);
 		}
@@ -253,13 +255,13 @@ class SubmissionReviewHandler extends ReviewerHandler {
 	 * the article.
 	 * Redirects to reviewer index page if validation fails.
 	 */
-	function validate($reviewId) {
+	function validate($request, $reviewId) {
 		$reviewerSubmissionDao =& DAORegistry::getDAO('ReviewerSubmissionDAO');
-		$journal =& Request::getJournal();
-		$user =& Request::getUser();
+		$journal =& $request->getJournal();
+		$user =& $request->getUser();
 
 		$isValid = true;
-		$newKey = Request::getUserVar('key');
+		$newKey = $request->getUserVar('key');
 
 		$reviewerSubmission =& $reviewerSubmissionDao->getReviewerSubmission($reviewId);
 
@@ -270,12 +272,12 @@ class SubmissionReviewHandler extends ReviewerHandler {
 				$isValid = false;
 			}
 		} else {
-			$user =& SubmissionReviewHandler::validateAccessKey($reviewerSubmission->getReviewerId(), $reviewId, $newKey);
+			$user =& SubmissionReviewHandler::validateAccessKey($request, $reviewerSubmission->getReviewerId(), $reviewId, $newKey);
 			if (!$user) $isValid = false;
 		}
 
 		if (!$isValid) {
-			Request::redirect(null, Request::getRequestedPage());
+			$request->redirect(null, $request->getRequestedPage());
 		}
 
 		$this->submission =& $reviewerSubmission;
@@ -283,4 +285,5 @@ class SubmissionReviewHandler extends ReviewerHandler {
 		return true;
 	}
 }
+
 ?>

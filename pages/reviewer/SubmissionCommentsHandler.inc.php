@@ -56,7 +56,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;
 
 		$submissionReviewHandler = new SubmissionReviewHandler();
-		$submissionReviewHandler->validate($reviewId);
+		$submissionReviewHandler->validate($request, $reviewId);
 		$submission =& $submissionReviewHandler->submission;
 		$user =& $submissionReviewHandler->user;
 
@@ -69,10 +69,12 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 	/**
 	 * Edit comment.
 	 */
-	function editComment($args) {
-		$articleId = $args[0];
-		$commentId = $args[1];
-		$reviewId = Request::getUserVar('reviewId');
+	function editComment($args, $request) {
+		$articleId = (int) array_shift($args);
+		$commentId = (int) array_shift($args);
+		if (!$commentId) $commentId = null;
+
+		$reviewId = (int) $request->getUserVar('reviewId');
 
 		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
 		$this->validate();
@@ -84,7 +86,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$article = $articleDao->getArticle($articleId);
 
 		$submissionReviewHandler = new SubmissionReviewHandler();
-		$submissionReviewHandler->validate($reviewId);
+		$submissionReviewHandler->validate($request, $reviewId);
 		$submission =& $submissionReviewHandler->submission;
 		$user =& $submissionReviewHandler->user;
 		
@@ -114,7 +116,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$article = $articleDao->getArticle($articleId);
 
 		$submissionReviewHandler = new SubmissionReviewHandler();
-		$submissionReviewHandler->validate($reviewId);
+		$submissionReviewHandler->validate($request, $reviewId);
 		$submission =& $submissionReviewHandler->submission;
 		$user =& $submissionReviewHandler->user;
 
@@ -133,16 +135,16 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 	/**
 	 * Delete comment.
 	 */
-	function deleteComment($args) {
-		$articleId = $args[0];
-		$commentId = $args[1];
-		$reviewId = Request::getUserVar('reviewId');
+	function deleteComment($args, $request) {
+		$articleId = (int) array_shift($args);
+		$commentId = (int) array_shift($args);
+		$reviewId = (int) $request->getUserVar('reviewId');
 
 		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
 		$this->validate();
 		$comment =& $this->comment;
 		
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 		
 		$submissionReviewHandler = new SubmissionReviewHandler();
 		$submissionReviewHandler->validate($reviewId);
@@ -153,7 +155,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 
 		// Redirect back to initial comments page
 		if ($comment->getCommentType() == COMMENT_TYPE_PEER_REVIEW) {
-			Request::redirect(null, null, 'viewPeerReviewComments', array($articleId, $comment->getAssocId()));
+			$request->redirect(null, null, 'viewPeerReviewComments', array($articleId, $comment->getAssocId()));
 		}
 	}
 }

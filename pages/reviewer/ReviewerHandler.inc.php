@@ -32,12 +32,12 @@ class ReviewerHandler extends Handler {
 	/**
 	 * Display reviewer index page.
 	 */
-	function index($args) {
+	function index($args, $request) {
 		$this->validate();
 		$this->setupTemplate();
 
-		$journal =& Request::getJournal();
-		$user =& Request::getUser();
+		$journal =& $request->getJournal();
+		$user =& $request->getUser();
 		$reviewerSubmissionDao =& DAORegistry::getDAO('ReviewerSubmissionDAO');
 		$rangeInfo = Handler::getRangeInfo('submissions');
 
@@ -51,9 +51,9 @@ class ReviewerHandler extends Handler {
 				$active = true;
 		}
 
-		$sort = Request::getUserVar('sort');
+		$sort = $request->getUserVar('sort');
 		$sort = isset($sort) ? $sort : 'title';
-		$sortDirection = Request::getUserVar('sortDirection');
+		$sortDirection = $request->getUserVar('sortDirection');
 
 		if ($sort == 'decision') {			
 			$submissions = $reviewerSubmissionDao->getReviewerSubmissionsByReviewerId($user->getId(), $journal->getId(), $active, $rangeInfo);
@@ -96,8 +96,8 @@ class ReviewerHandler extends Handler {
 	 * @param $newKey string The new key name, if one was supplied; otherwise, the existing one (if it exists) is used
 	 * @return object Valid user object if the key was valid; otherwise NULL.
 	 */
-	function &validateAccessKey($userId, $reviewId, $newKey = null) {
-		$journal =& Request::getJournal();
+	function &validateAccessKey($request, $userId, $reviewId, $newKey = null) {
+		$journal =& $request->getJournal();
 		if (!$journal || !$journal->getSetting('reviewerAccessKeysEnabled')) {
 			$accessKey = false;
 			return $accessKey;
@@ -108,7 +108,7 @@ class ReviewerHandler extends Handler {
 		import('lib.pkp.classes.security.AccessKeyManager');
 		$accessKeyManager = new AccessKeyManager();
 
-		$session =& Request::getSession();
+		$session =& $request->getSession();
 		// Check to see if a new access key is being used.
 		if (!empty($newKey)) {
 			if (Validation::isLoggedIn()) {
