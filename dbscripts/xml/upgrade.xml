@@ -116,6 +116,7 @@
 	<!-- PKP schema components -->
 	<schema file="lib/pkp/xml/schema/common.xml" />
 	<schema file="lib/pkp/xml/schema/groups.xml" />
+	<schema file="lib/pkp/xml/schema/log.xml" />
 	<schema file="lib/pkp/xml/schema/announcements.xml" />
 	<schema file="lib/pkp/xml/schema/scheduledTasks.xml" />
 	<schema file="lib/pkp/xml/schema/temporaryFiles.xml" />
