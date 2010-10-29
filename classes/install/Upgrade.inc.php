@@ -715,36 +715,6 @@ class Upgrade extends Installer {
 	}
 
 	/**
-	 * For 2.3 upgrade:  Add initial plugin data to versions table
-	 * @return boolean
-	 */
-	function addPluginVersions() {
-		$versionDao =& DAORegistry::getDAO('VersionDAO');
-		import('lib.pkp.classes.site.VersionCheck');
-		$categories = PluginRegistry::getCategories();
-		foreach ($categories as $category) {
-			PluginRegistry::loadCategory($category);
-			$plugins = PluginRegistry::getPlugins($category);
-			if (is_array($plugins)) foreach ($plugins as $plugin) {
-				$versionFile = $plugin->getPluginPath() . '/version.xml';
-
-				if (FileManager::fileExists($versionFile)) {
-					$versionInfo =& VersionCheck::parseVersionXML($versionFile);
-					$pluginVersion = $versionInfo['version'];
-				} else {
-					$pluginVersion = new Version(
-						1, 0, 0, 0, Core::getCurrentDate(), 1,
-						'plugins.'.$category, basename($plugin->getPluginPath()), '', 0
-					);
-				}
-				$versionDao->insertVersion($pluginVersion, true);
-			}
-		}
-
-		return true;
-	}
-
-	/**
 	 * For 2.3.3 upgrade:  Migrate reviewing interests from free text to controlled vocab structure
 	 * @return boolean
 	 */
