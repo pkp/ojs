@@ -2376,15 +2376,16 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 * Payments
 	 */
 
-	function waiveSubmissionFee($args) {
+	function waiveSubmissionFee($args, $request) {
 		$articleId = (int) array_shift($args);
-		$markAsPaid = Request::getUserVar('markAsPaid');
+		$markAsPaid = $request->getUserVar('markAsPaid');
 
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		$submission =& $this->submission;
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
-		$user =& Request::getUser();
+		$user =& $request->getUser();
+		$journal =& $request->getJournal();
 
 		$queuedPayment =& $paymentManager->createQueuedPayment(
 			$journal->getId(),
@@ -2399,7 +2400,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		// Since this is a waiver, fulfill the payment immediately
 		$paymentManager->fulfillQueuedPayment($queuedPayment, $markAsPaid?'ManualPayment':'Waiver');
-		Request::redirect(null, null, 'submission', array($articleId));
+		$request->redirect(null, null, 'submission', array($articleId));
 	}
 
 	function waiveFastTrackFee($args) {
