@@ -447,7 +447,10 @@ class ArticleHandler extends Handler {
 		if (($article || $publishedArticle) && (($article && IssueAction::allowedPrePublicationAccess($journal, $article) || ($publishedArticle && IssueAction::allowedPrePublicationAccess($journal, $publishedArticle))))) {
 			$this->journal =& $journal;
 			$this->issue =& $issue;
-			$this->article =& $publishedArticle?$publishedArticle:$article;
+			if(isset($publishedArticle)) {
+				$this->article =& $publishedArticle;
+			} else $this->article =& $article;
+
 			return true;
 		}
 
