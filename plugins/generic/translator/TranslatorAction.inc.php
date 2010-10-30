@@ -12,8 +12,6 @@
  * @brief Perform various tasks related to translation.
  */
 
-// $Id$
-
 
 class TranslatorAction {
 	/**
@@ -57,7 +55,10 @@ class TranslatorAction {
 		foreach (array_keys($plugins) as $key) {
 			$plugin =& $plugins[$key];
 			$localeFile = $plugin->getLocaleFilename($locale);
-			if (!empty($localeFile)) $localeFiles[] = $localeFile;
+			if (!empty($localeFile)) {
+				if (is_scalar($localeFile)) $localeFiles[] = $localeFile;
+				if (is_array($localeFile)) $localeFiles = array_merge($localeFiles, $localeFile);
+			}
 			unset($plugin);
 		}
 		return $localeFiles;
@@ -148,13 +149,20 @@ class TranslatorAction {
 		$plugins =& PluginRegistry::loadAllPlugins();
 		foreach (array_keys($plugins) as $key) {
 			$plugin =& $plugins[$key];
-			$referenceLocaleFilename = $plugin->getLocaleFilename($referenceLocale);
-			if ($referenceLocaleFilename) {
-				$localeFile = new LocaleFile($locale, $plugin->getLocaleFilename($locale));
-				$referenceLocaleFile = new LocaleFile($referenceLocale, $referenceLocaleFilename);
-				$errors = array_merge_recursive($errors, $localeFile->testLocale($referenceLocaleFile));
-				unset($localeFile);
-				unset($referenceLocaleFile);
+			$referenceLocaleFilenames = $plugin->getLocaleFilename($referenceLocale);
+			if ($referenceLocaleFilenames) {
+				if (is_scalar($referenceLocaleFilenames)) $referenceLocaleFilenames = array($referenceLocaleFilenames);
+				$localeFilenames = $plugin->getLocaleFilename($locale);
+				if (is_scalar($localeFilenames)) $localeFilenames = array($localeFilenames);
+				assert(count($localeFilenames) == count($referenceLocaleFilenames));
+				foreach($referenceLocaleFilenames as $index => $referenceLocaleFilename) {
+					assert(isset($localeFilenames[$index]));
+					$localeFile = new LocaleFile($locale, $localeFilenames[$index]);
+					$referenceLocaleFile = new LocaleFile($referenceLocale, $referenceLocaleFilename);
+					$errors = array_merge_recursive($errors, $localeFile->testLocale($referenceLocaleFile));
+					unset($localeFile);
+					unset($referenceLocaleFile);
+				}
 			}
 			unset($plugin);
 		}
