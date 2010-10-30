@@ -159,7 +159,7 @@ class SectionEditorAction extends Action {
 			// Add log
 			import('classes.article.log.ArticleLog');
 			import('classes.article.log.ArticleEventLogEntry');
-			ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_REVIEW_CLEAR, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getId(), 'log.review.reviewCleared', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $sectionEditorSubmission->getArticleId(), 'round' => $reviewAssignment->getRound()));
+			ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_REVIEW_CLEAR, 'log.review.reviewCleared', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $sectionEditorSubmission->getArticleId(), 'round' => $reviewAssignment->getRound()));
 		}
 	}
 
