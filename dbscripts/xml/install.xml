@@ -34,4 +34,5 @@
 	<!-- Other install tasks -->
 	<code function="createData"/>
 	<code function="createConfig"/>
+	<code function="addPluginVersions"/>
 </install>
