@@ -12,7 +12,6 @@
  * @brief Handle requests for plugin management functions.
  */
 
-// $Id$
 
 import('pages.manager.ManagerHandler');
 

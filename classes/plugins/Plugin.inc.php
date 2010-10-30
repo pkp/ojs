@@ -12,8 +12,6 @@
  * @brief Abstract class for plugins
  */
 
-// $Id$
-
 
 import('lib.pkp.classes.plugins.PKPPlugin');
 

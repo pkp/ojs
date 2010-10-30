@@ -37,7 +37,8 @@ class PluginManagementHandler extends ManagerHandler {
 	function managePlugins($args) {
 		$this->validate();
 		$path = isset($args[0])?$args[0]:null;
-		$plugin = isset($args[1])?$args[1]:null;
+		$category = isset($args[1])?$args[1]:null;
+		$plugin = isset($args[2])?$args[2]:null;
 
 		switch($path) {
 			case 'install':
@@ -47,16 +48,16 @@ class PluginManagementHandler extends ManagerHandler {
 				$this->uploadPlugin('install');
 				break;
 			case 'upgrade':
-				$this->showUpgradeForm($plugin);
+				$this->showUpgradeForm($category, $plugin);
 				break;
 			case 'upgradePlugin':
-				$this->uploadPlugin('upgrade');
+				$this->uploadPlugin('upgrade', $category, $plugin);
 				break;
 			case 'delete':
-				$this->showDeleteForm($plugin);
+				$this->showDeleteForm($category, $plugin);
 				break;
 			case 'deletePlugin':
-				$this->deletePlugin($plugin);
+				$this->deletePlugin($category, $plugin);
 				break;
 			default:
 				Request::redirect(null, 'manager', 'plugins');
@@ -84,18 +85,18 @@ class PluginManagementHandler extends ManagerHandler {
 
 	/**
 	 * Show form to select plugin for upgrade.
-	 * @param plugin string
+	 * @param $category string
+	 * @param $plugin string
 	 */
-	function showUpgradeForm($plugin) {
+	function showUpgradeForm($category, $plugin) {
 		$this->validate();
 		$templateMgr =& TemplateManager::getManager();
 		$this->setupTemplate(true);
 
 		$templateMgr->assign('path', 'upgrade');
+		$templateMgr->assign('category', $category);
 		$templateMgr->assign('plugin', $plugin);
 		$templateMgr->assign('uploaded', false);
-
-		$category = $this->_getPluginCategory($plugin);
 		$templateMgr->assign('pageHierarchy', $this->setBreadcrumbs(true, $category));
 
 		$templateMgr->display('manager/plugins/managePlugins.tpl');
@@ -103,19 +104,19 @@ class PluginManagementHandler extends ManagerHandler {
 
 	/**
 	 * Confirm deletion of plugin.
-	 * @param plugin string
+	 * @param $category string
+	 * @param $plugin string
 	 */
-	function showDeleteForm($plugin) {
+	function showDeleteForm($category, $plugin) {
 		$this->validate();
 		$templateMgr =& TemplateManager::getManager();
 		$this->setupTemplate(true);
 
 		$templateMgr->assign('path', 'delete');
+		$templateMgr->assign('category', $category);
 		$templateMgr->assign('plugin', $plugin);
 		$templateMgr->assign('deleted', false);
 		$templateMgr->assign('error', false);
-
-		$category = $this->_getPluginCategory($plugin);
 		$templateMgr->assign('pageHierarchy', $this->setBreadcrumbs(true, $category));
 
 		$templateMgr->display('manager/plugins/managePlugins.tpl');
@@ -124,9 +125,11 @@ class PluginManagementHandler extends ManagerHandler {
 
 	/**
 	 * Decompress uploaded plugin and install in the correct plugin directory.
-	 * $param function string type of operation to perform after upload ('upgrade' or 'install')
+	 * @param $function string type of operation to perform after upload ('upgrade' or 'install')
+	 * @param $category string the category of the uploaded plugin (upgrade only)
+	 * @param $plugin string the name of the uploaded plugin (upgrade only)
 	 */
-	function uploadPlugin($function) {
+	function uploadPlugin($function, $category = null, $plugin = null) {
 		$this->validate();
 		$templateMgr =& TemplateManager::getManager();
 		$this->setupTemplate(true);
@@ -134,7 +137,6 @@ class PluginManagementHandler extends ManagerHandler {
 		$templateMgr->assign('error', false);
 		$templateMgr->assign('uploaded', false);
 		$templateMgr->assign('path', $function);
-		$templateMgr->assign('pageHierarchy', $this->setBreadcrumbs(true));
 
 		$errorMsg = '';
 		if (Request::getUserVar('uploadPlugin')) {
@@ -178,7 +180,7 @@ class PluginManagementHandler extends ManagerHandler {
 				if ($function == 'install') {
 					$this->installPlugin($pluginDir, $templateMgr);
 				} else if ($function == 'upgrade') {
-					$this->upgradePlugin($pluginDir, $templateMgr);
+					$this->upgradePlugin($pluginDir, $templateMgr, $category, $plugin);
 				}
 			} else {
 				$errorMsg = 'manager.plugins.invalidPluginArchive';
@@ -203,14 +205,14 @@ class PluginManagementHandler extends ManagerHandler {
 		$this->validate();
 		$versionFile = $path . VERSION_FILE;
 		$templateMgr->assign('error', true);
-		$templateMgr->assign('path', 'install');
+		$templateMgr->assign('pageHierarchy', $this->setBreadcrumbs(true));
 
 		$pluginVersion =& VersionCheck::getValidPluginVersionInfo($versionFile, $templateMgr);
 		if (is_null($pluginVersion)) return false;
 		assert(is_a($pluginVersion, 'Version'));
 
 		$versionDao =& DAORegistry::getDAO('VersionDAO');
-		$installedPlugin = $versionDao->getCurrentVersion($pluginVersion->getProduct(), true);
+		$installedPlugin = $versionDao->getCurrentVersion($pluginVersion->getProductType(), $pluginVersion->getProduct(), true);
 
 		if(!$installedPlugin) {
 			$pluginDest = Core::getBaseDir() . DIRECTORY_SEPARATOR . strtr($pluginVersion->getProductType(), '.', DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR . $pluginVersion->getProduct();
@@ -243,7 +245,7 @@ class PluginManagementHandler extends ManagerHandler {
 			$versionDao->insertVersion($pluginVersion, true);
 			return true;
 		} else {
-			if ($this->_checkIfNewer($pluginVersion->getProduct(), $pluginVersion)) {
+			if ($this->_checkIfNewer($pluginVersion->getProductType(), $pluginVersion->getProduct(), $pluginVersion)) {
 				$templateMgr->assign('message', 'manager.plugins.pleaseUpgrade');
 				return false;
 			} else {
@@ -257,26 +259,38 @@ class PluginManagementHandler extends ManagerHandler {
 	 * Upgrade a plugin to a newer version from the user's filesystem
 	 * @param $path string path to plugin Directory
 	 * @param $templateMgr reference to template manager
+	 * @param $category string
+	 * @param $plugin string
 	 * @return boolean
 	 */
-	function upgradePlugin($path, &$templateMgr) {
+	function upgradePlugin($path, &$templateMgr, $category, $plugin) {
 		$this->validate();
 		$versionFile = $path . VERSION_FILE;
 		$templateMgr->assign('error', true);
-		$templateMgr->assign('path', 'upgrade');
+		$templateMgr->assign('pageHierarchy', $this->setBreadcrumbs(true, $category));
 
 		$pluginVersion =& VersionCheck::getValidPluginVersionInfo($versionFile, $templateMgr);
 		if (is_null($pluginVersion)) return false;
 		assert(is_a($pluginVersion, 'Version'));
 
+		// Check whether the uploaded plug-in fits the original plug-in.
+		if ('plugins.'.$category != $pluginVersion->getProductType()) {
+			$templateMgr->assign('message', 'manager.plugins.wrongCategory');
+			return false;
+		}
+		if ($plugin != $pluginVersion->getProduct()) {
+			$templateMgr->assign('message', 'manager.plugins.wrongName');
+			return false;
+		}
+
 		$versionDao =& DAORegistry::getDAO('VersionDAO');
-		$installedPlugin = $versionDao->getCurrentVersion($pluginVersion->getProduct(), true);
+		$installedPlugin = $versionDao->getCurrentVersion($pluginVersion->getProductType(), $pluginVersion->getProduct(), true);
 		if(!$installedPlugin) {
 			$templateMgr->assign('message', 'manager.plugins.pleaseInstall');
 			return false;
 		}
 
-		if ($this->_checkIfNewer($pluginVersion->getProduct(), $pluginVersion)) {
+		if ($this->_checkIfNewer($pluginVersion->getProductType(), $pluginVersion->getProduct(), $pluginVersion)) {
 			$templateMgr->assign('message', 'manager.plugins.installedVersionNewer');
 			return false;
 		} else {
@@ -307,6 +321,8 @@ class PluginManagementHandler extends ManagerHandler {
 			$pluginVersion->setCurrent(1);
 			$versionDao->insertVersion($pluginVersion, true);
 
+			$templateMgr->assign('category', $category);
+			$templateMgr->assign('plugin', $plugin);
 			$templateMgr->assign('message', array('manager.plugins.upgradeSuccessful', $pluginVersion->getVersionString()));
 			$templateMgr->assign('uploaded', true);
 			$templateMgr->assign('error', false);
@@ -317,9 +333,10 @@ class PluginManagementHandler extends ManagerHandler {
 
 	/**
 	 * Delete a plugin from the system
-	 * @param plugin string
+	 * @param $category string
+	 * @param $plugin string
 	 */
-	function deletePlugin($plugin) {
+	function deletePlugin($category, $plugin) {
 		$this->validate();
 		$templateMgr =& TemplateManager::getManager();
 		$this->setupTemplate(true);
@@ -329,8 +346,7 @@ class PluginManagementHandler extends ManagerHandler {
 		$templateMgr->assign('error', false);
 
 		$versionDao =& DAORegistry::getDAO('VersionDAO');
-		$installedPlugin = $versionDao->getCurrentVersion($plugin, true);
-		$category = $this->_getPluginCategory($plugin);
+		$installedPlugin = $versionDao->getCurrentVersion('plugins.'.$category, $plugin, true);
 
 		if ($installedPlugin) {
 			$pluginDest = Core::getBaseDir() . DIRECTORY_SEPARATOR . 'plugins' . DIRECTORY_SEPARATOR . $category . DIRECTORY_SEPARATOR . $plugin;
@@ -359,13 +375,14 @@ class PluginManagementHandler extends ManagerHandler {
 
 	/**
 	 * Checks to see if local version of plugin is newer than installed version
-	 * @param $pluginName string Product name of plugin
+	 * @param $productType string Product type of plugin
+	 * @param $productName string Product name of plugin
 	 * @param $newVersion Version Version object of plugin to check against database
 	 * @return boolean
 	 */
-	function _checkIfNewer($pluginName, $newVersion) {
+	function _checkIfNewer($productType, $productName, $newVersion) {
 		$versionDao =& DAORegistry::getDAO('VersionDAO');
-		$installedPlugin = $versionDao->getCurrentVersion($pluginName, true);
+		$installedPlugin = $versionDao->getCurrentVersion($productType, $productName, true);
 
 		if (!$installedPlugin) return false;
 		if ($installedPlugin->compare($newVersion) > 0) return true;
@@ -409,20 +426,6 @@ class PluginManagementHandler extends ManagerHandler {
 		}
 
 		return $pageCrumbs;
-	}
-
-	/**
-	 * Get the plugin category from the version.
-	 * @param string
-	 * @return string
-	 */
-	function _getPluginCategory($plugin) {
-		$versionDao =& DAORegistry::getDAO('VersionDAO');
-		$installedPlugin = $versionDao->getCurrentVersion($plugin, true);
-		if ($installedPlugin) {
-			$productType = explode(".", $installedPlugin->getProductType());
-			return $productType[1];
-		} else return false;
 	}
 
 	/**
