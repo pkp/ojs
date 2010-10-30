@@ -52,7 +52,6 @@
 
 </div>
 </div>
-</div>
 
 {if $defineTermsContextId}
 <script type="text/javascript">
