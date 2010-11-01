@@ -48,9 +48,6 @@ class ArticleLog {
 	 * @return object ArticleLogEntry iff the event was logged
 	 */
 	function logEventHeadless(&$journal, $userId, &$article, $eventType, $messageKey, $params = array()) {
-		// Check if logging is enabled for this journal
-		if (!$journal->getSetting('articleEventLog')) return null;
-
 
 		// Create a new entry object
 		$articleEventLogDao =& DAORegistry::getDAO('ArticleEventLogDAO');
@@ -87,12 +84,6 @@ class ArticleLog {
 
 		if (!$journalId) {
 			// Invalid article
-			return false;
-		}
-
-		$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-		if (!$settingsDao->getSetting($journalId, 'articleEmailLog')) {
-			// Email logging is disabled
 			return false;
 		}
 

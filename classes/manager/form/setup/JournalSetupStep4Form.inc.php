@@ -31,8 +31,6 @@ class JournalSetupStep4Form extends JournalSetupForm {
 				'allowRegReviewer' => 'bool',
 				'restrictSiteAccess' => 'bool',
 				'restrictArticleAccess' => 'bool',
-				'articleEventLog' => 'bool',
-				'articleEmailLog' => 'bool',
 				'publicationFormatVolume' => 'bool',
 				'publicationFormatNumber' => 'bool',
 				'publicationFormatYear' => 'bool',
