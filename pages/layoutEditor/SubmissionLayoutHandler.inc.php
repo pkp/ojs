@@ -9,7 +9,7 @@
  * @class SubmissionLayoutHandler
  * @ingroup pages_layoutEditor
  *
- * @brief Handle requests related to submission layout editing. 
+ * @brief Handle requests related to submission layout editing.
  */
 
 // $Id$
@@ -19,10 +19,10 @@ import('pages.layoutEditor.LayoutEditorHandler');
 class SubmissionLayoutHandler extends LayoutEditorHandler {
 	/** journal associated with the request **/
 	var $journal;
-	
+
 	/** submission associated with the request **/
 	var $submission;
-	
+
 	/**
 	 * Constructor
 	 **/
@@ -41,7 +41,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	function submission($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$journal =& Request::getJournal();
-		
+
 		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 		$submission =& $submissionLayoutHandler->submission;
@@ -104,7 +104,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 
 		if (LayoutEditorAction::completeLayoutEditing($submission, $request->getUserVar('send'), $request)) {
 			$request->redirect(null, null, 'submission', $articleId);
-		}		
+		}
 	}
 
 
@@ -212,7 +212,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			// Send a notification to associated users
 			import('lib.pkp.classes.notification.NotificationManager');
 			$notificationManager = new NotificationManager();
-			$articleDao =& DAORegistry::getDAO('ArticleDAO'); 
+			$articleDao =& DAORegistry::getDAO('ArticleDAO');
 			$article =& $articleDao->getArticle($articleId);
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
 			foreach ($notificationUsers as $userRole) {
@@ -247,7 +247,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 		$submission =& $submissionLayoutHandler->submission;
-		
+
 		LayoutEditorAction::deleteGalley($submission, $galleyId);
 
 		Request::redirect(null, null, 'submission', $articleId);
@@ -260,7 +260,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$articleId = Request::getUserVar('articleId');
 		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
-		$submission =& $submissionLayoutHandler->submission;		
+		$submission =& $submissionLayoutHandler->submission;
 
 		LayoutEditorAction::orderGalley($submission, Request::getUserVar('galleyId'), Request::getUserVar('d'));
 
@@ -344,7 +344,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$revisionId = isset($args[3]) ? (int) $args[3] : 0;
 		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
-		$submission =& $submissionLayoutHandler->submission;		
+		$submission =& $submissionLayoutHandler->submission;
 		LayoutEditorAction::deleteArticleImage($submission, $fileId, $revisionId);
 
 		Request::redirect(null, null, 'editGalley', array($articleId, $galleyId));
@@ -394,7 +394,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign_by_ref('suppFile', $suppFile);
-			$templateMgr->display('submission/suppFile/suppFileView.tpl');	
+			$templateMgr->display('submission/suppFile/suppFileView.tpl');
 		}
 	}
 
@@ -423,7 +423,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			// Send a notification to associated users
 			import('lib.pkp.classes.notification.NotificationManager');
 			$notificationManager = new NotificationManager();
-			$articleDao =& DAORegistry::getDAO('ArticleDAO'); 
+			$articleDao =& DAORegistry::getDAO('ArticleDAO');
 			$article =& $articleDao->getArticle($articleId);
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
 			foreach ($notificationUsers as $userRole) {
@@ -433,7 +433,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_SUPP_FILE_MODIFIED
 				);
 			}
-			
+
 			$request->redirect(null, null, 'submission', $articleId);
 		} else {
 			$submitForm->display();
@@ -517,9 +517,11 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 
 	/**
 	 * Sets the date of layout editor proofreading completion
+	 * @param $args array
+	 * @param $request Request
 	 */
 	function layoutEditorProofreadingComplete($args, $request) {
-		$articleId = (int) $request::getUserVar('articleId');
+		$articleId = (int) $request->getUserVar('articleId');
 
 		list($journal, $submission) = $this->validate($articleId);
 		$this->setupTemplate(true, $articleId);
@@ -567,13 +569,13 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 				} else {
 					$isValid = true;
 				}
-			}			
+			}
 		}
 
 		if (!$isValid) {
 			Request::redirect(null, Request::getRequestedPage());
 		}
-		
+
 		$this->journal =& $journal;
 		$this->submission =& $submission;
 		return true;
@@ -590,7 +592,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 		$layoutEditorProofreadSignoff = $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getArticleId());
 		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getArticleId());
-		
+
 		return(($layoutSignoff->getDateNotified() != null
 			&& $layoutSignoff->getDateCompleted() == null)
 		|| ($layoutEditorProofreadSignoff->getDateNotified() != null
