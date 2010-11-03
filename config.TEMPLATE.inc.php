@@ -325,11 +325,11 @@ result_cache_hours = 1
 ; indexed.
 
 ; PDF
-; index[application/pdf] = "/usr/bin/pstotext %s -enc UTF-8 -nopgbrk %s - | /usr/bin/tr '[:cntrl:]' ' '"
-; index[application/pdf] = "/usr/bin/pdftotext %s -enc UTF-8 -nopgbrk %s - | /usr/bin/tr '[:cntrl:]' ' '"
+; index[application/pdf] = "/usr/bin/pstotext -enc UTF-8 -nopgbrk %s - | /usr/bin/tr '[:cntrl:]' ' '"
+; index[application/pdf] = "/usr/bin/pdftotext -enc UTF-8 -nopgbrk %s - | /usr/bin/tr '[:cntrl:]' ' '"
 
 ; PostScript
-; index[application/postscript] = "/usr/bin/pstotext %s -enc UTF-8 -nopgbrk %s - | /usr/bin/tr '[:cntrl:]' ' '"
+; index[application/postscript] = "/usr/bin/pstotext -enc UTF-8 -nopgbrk %s - | /usr/bin/tr '[:cntrl:]' ' '"
 ; index[application/postscript] = "/usr/bin/ps2ascii %s | /usr/bin/tr '[:cntrl:]' ' '"
 
 ; Microsoft Word
