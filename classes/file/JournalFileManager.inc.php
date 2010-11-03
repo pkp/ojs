@@ -12,8 +12,6 @@
  * @brief Class defining operations for private journal file management.
  */
 
-// $Id$
-
 
 import('lib.pkp.classes.file.FileManager');
 

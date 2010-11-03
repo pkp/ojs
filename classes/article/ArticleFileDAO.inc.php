@@ -13,8 +13,6 @@
  * @brief Operations for retrieving and modifying ArticleFile objects.
  */
 
-// $Id$
-
 
 import('classes.article.ArticleFile');
 

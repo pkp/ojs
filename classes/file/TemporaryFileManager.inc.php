@@ -13,8 +13,6 @@
  * @brief Class defining operations for temporary file management.
  */
 
-// $Id$
-
 
 import('lib.pkp.classes.file.PKPTemporaryFileManager');
 

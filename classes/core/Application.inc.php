@@ -133,7 +133,7 @@ class Application extends PKPApplication {
 		return array(
 			// NB: Meta-data plug-ins are first in the list as this
 			// will make them being loaded (and installed) first.
-			// This is necessary as many other plug-in categories
+			// This is necessary as several other plug-in categories
 			// depend on meta-data. This is a very rudimentary type of
 			// dependency management for plug-ins.
 			'metadata',
