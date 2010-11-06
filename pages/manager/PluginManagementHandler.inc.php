@@ -237,19 +237,22 @@ class PluginManagementHandler extends ManagerHandler {
 				return false;
 			}
 
-			// If plugin has an install.xml file, update database with it
-			$installFile = $pluginDest . INSTALL_FILE;
-			if(FileManager::fileExists($installFile)) {
-				$params = $this->_setConnectionParams();
-				$installer = new Install($params, $installFile, true);
-				$installer->setCurrentVersion($pluginVersion);
+			// Remove the temporary folder.
+			FileManager::rmtree(dirname($path));
 
-				if (!$installer->execute()) {
-					// Roll back the copy
-					FileManager::rmtree($pluginDest);
-					$templateMgr->assign('message', array('manager.plugins.installFailed', $installer->getErrorString()));
-					return false;
-				}
+			// Upgrade the database with the new plug-in.
+			$installFile = $pluginDest . INSTALL_FILE;
+			if(!is_file($installFile)) $installFile = Core::getBaseDir() . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'pkp' . DIRECTORY_SEPARATOR . 'xml' . DIRECTORY_SEPARATOR . 'defaultPluginInstall.xml';
+			assert(is_file($installFile));
+			$params = $this->_setConnectionParams();
+			$installer = new Install($params, $installFile, true);
+			$installer->setCurrentVersion($pluginVersion);
+			if (!$installer->execute()) {
+				// Roll back the copy
+				if (is_dir($pluginLibDest)) FileManager::rmtree($pluginLibDest);
+				if (is_dir($pluginDest)) FileManager::rmtree($pluginDest);
+				$templateMgr->assign('message', array('manager.plugins.installFailed', $installer->getErrorString()));
+				return false;
 			}
 
 			$message = array('manager.plugins.installSuccessful', $pluginVersion->getVersionString());
