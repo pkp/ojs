@@ -404,7 +404,7 @@ class PluginManagementHandler extends ManagerHandler {
 				$templateMgr->assign('error', true);
 				$templateMgr->assign('message', 'manager.plugins.deleteError');
 			} else {
-				$versionDao->disableVersion($plugin);
+				$versionDao->disableVersion('plugins.'.$category, $plugin);
 				$templateMgr->assign('deleted', true);
 			}
 
