@@ -284,6 +284,8 @@ class PublishedArticle extends Article {
 				$suffixPattern = String::regexp_replace('/%v/', $issue->getVolume(), $suffixPattern);
 				// %i - issue number
 				$suffixPattern = String::regexp_replace('/%i/', $issue->getNumber(), $suffixPattern);
+                // %Y - year
+				$suffixPattern = String::regexp_replace('/%Y/', $issue->getYear(), $suffixPattern);
 				// %a - article id
 				$suffixPattern = String::regexp_replace('/%a/', $this->getArticleId(), $suffixPattern);
 				// %p - page number
