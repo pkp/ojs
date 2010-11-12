@@ -41,7 +41,7 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 			HookRegistry::register('metadataform::execute', array($this, 'metadataExecute'));
 
 			// Add element for AuthorDAO for storage
-			HookRegistry::register('authordao::getAdditionalFieldNames', array($this, 'authorSubmitGetFieldNames'));
+			HookRegistry::register('pkpauthordao::getAdditionalFieldNames', array($this, 'authorSubmitGetFieldNames'));
 
 			// Insert Google Analytics page tag to common footer
 			HookRegistry::register('Templates::Common::Footer::PageFooter', array($this, 'insertFooter'));
