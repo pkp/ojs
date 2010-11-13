@@ -578,7 +578,6 @@ la contraseña actual.<br /><br />Introduzca su dirección de correo-e para camb
 
 	
 	<!-- Registration -->
-	<message key="user.register.repeatPassword">Repita la contraseña</message>
 	<message key="user.register.selectJournal">Seleccione una revista para registrarse</message>
 	<message key="user.register.noJournals">En este sitio no hay revistas en las que se pueda registrar.</message>
 	<message key="user.register.privacyStatement">Declaración de privacidad</message>

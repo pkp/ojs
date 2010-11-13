@@ -628,7 +628,6 @@ aktuelle adgangskode.<br /><br />Angiv din e-mail-adresse nedenfor for at nulsti
 	<!-- Profile -->
 	
 	<!-- Registration -->
-	<message key="user.register.repeatPassword">Gentag adgangskode</message>
 	<message key="user.register.selectJournal">Vælg et tidsskrift, du vil registreres hos</message>
 	<message key="user.register.noJournals">Der findes ingen tidsskrifter, du kan blive registreret hos, på dette websted.</message>
 	<message key="user.register.privacyStatement">Erklæring om beskyttelse af personlige oplysninger</message>

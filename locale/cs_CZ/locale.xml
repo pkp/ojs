@@ -622,7 +622,6 @@ současného hesla.<br /><br />Pro resetování Vašeho hesla vložte níže Va�
 	<!-- Profile -->
 	
 	<!-- Registration -->
-	<message key="user.register.repeatPassword">Zopakujte heslo</message>
 	<message key="user.register.selectJournal">Zvolte časopis, do kterého se chcete zaregistrovat</message>
 	<message key="user.register.noJournals">Na této stránce nejsou žádné časopisy, do kterých byste se mohl zaregistrovat.</message>
 	<message key="user.register.privacyStatement">Prohlášení o soukromí</message>

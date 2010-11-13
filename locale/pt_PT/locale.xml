@@ -545,7 +545,6 @@ Activo indica revisão em consideração ou em progresso.]]></message>
 	<!-- Profile -->
 	
 	<!-- Registration -->
-	<message key="user.register.repeatPassword">Repetir senha</message>
 	<message key="user.register.selectJournal">Escolha em qual revista pretende efectuar o registo</message>
 	<message key="user.register.noJournals">Não há revistas para se registar neste portal.</message>	
 	<message key="user.register.privacyStatement">Política de Privacidade</message>

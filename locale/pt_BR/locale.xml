@@ -547,7 +547,6 @@ Ativo indica avaliação em consideração ou andamento.]]></message>
 	<!-- Profile -->
 	
 	<!-- Registration -->
-	<message key="user.register.repeatPassword">Repetir senha</message>
 	<message key="user.register.selectJournal">Escolha em qual revista realizar o cadastro</message>
 	<message key="user.register.noJournals">Não há revistas para se cadastrar neste portal.</message>	
 	<message key="user.register.privacyStatement">Política de Privacidade</message>

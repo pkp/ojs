@@ -673,7 +673,6 @@ El camp Actives llista les revisions en curs.]]></message>
 	<message key="user.profile.form.profileImageInvalid">El format de la imatge del perfil no és vàlid, o bé la imatge és massa gran. Els formats acceptats són .gif, .jpg i .png, i la mida de la imatge no pot superar els 150x150 píxels.</message>
 	
 	<!-- Registration -->
-	<message key="user.register.repeatPassword">Repetiu la contrasenya</message>
 	<message key="user.register.selectJournal">Seleccioneu una revista per a registrar-vos-hi</message>
 	<message key="user.register.noJournals">Aquest lloc no conté cap revista a la qual us pugueu registrar.</message>
 	<message key="user.register.privacyStatement">Declaració de privacitat</message>

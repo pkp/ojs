@@ -795,7 +795,6 @@ Note that if your site administrator has already registered this site with these
 	<message key="user.login.resetPasswordInstructions"><![CDATA[基于安全性的理由，这个系统将一个重新配置的密码寄发给注册用户，而不是取回目前的密码。<br /><br />请在下面输入您的电子邮件地址以重新配置您的密码。系统会寄发一封确认信到这个地址去。]]></message>
 	
 	<!-- Registration -->
-	<message key="user.register.repeatPassword">重复密码</message>
 	<message key="user.register.selectJournal">选择一份期刊进行注册</message>
 	<message key="user.register.noJournals">本站目前尚无任何期刊可供注册.</message>
 	<message key="user.register.privacyStatement">隐私权声明</message>

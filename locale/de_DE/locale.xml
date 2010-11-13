@@ -524,7 +524,6 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br/>
 Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. Eine Bestätigung geht an diese E-Mail-Adresse.]]></message>
 	<!-- Profile -->
 	<!-- Registrierung -->
-	<message key="user.register.repeatPassword">Passwort wiederholen</message>
 	<message key="user.register.selectJournal">Wählen Sie die Zeitschrift aus, für die Sie sich registrieren wollen</message>
 	<message key="user.register.noJournals">Auf dieser Seite gibt es keine Zeitschriften, bei denen Sie sich eintragen könnten.</message>
 	<message key="user.register.privacyStatement">Schutz persönlicher Daten</message>

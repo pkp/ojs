@@ -624,7 +624,6 @@
         <!-- Profile -->
 
         <!-- Registration -->
-        <message key="user.register.repeatPassword">Επαναλάβετε τον κωδικό πρόσβασης (password)</message>
         <message key="user.register.selectJournal">Επιλέξτε ένα  περιοδικό για να εγγραφείτε</message>
         <message key="user.register.noJournals">Δεν υπάρχουν περιοδικά στα οποία μπορείτε να εγγραφείτε στον ιστότοπο αυτό.</message>
         <message key="user.register.privacyStatement">Πολιτική Προστασίας Προσωπικών Δεδομένων</message>

@@ -683,7 +683,6 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 	<!-- Profile -->
 	
 	<!-- Registration -->
-	<message key="user.register.repeatPassword">Upprepa lösenord</message>
 	<message key="user.register.selectJournal">Välj tidskrift du vill registrera dig hos</message>
 	<message key="user.register.noJournals">Det finns inga tidskrifter att registrera sig hos på den här sidan.</message>
 	<message key="user.register.privacyStatement">Sekretesspolicy</message>

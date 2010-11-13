@@ -551,7 +551,6 @@ nåværende passordet.<br /><br />Skriv inn e-postadressen din nedenfor for å t
 	<!-- Profile -->
 	
 	<!-- Registration -->
-	<message key="user.register.repeatPassword">Gjenta passord</message>
 	<message key="user.register.selectJournal">Velg et tidsskrift du vil registrere deg hos</message>
 	<message key="user.register.noJournals">Det finnes ingen tidsskrift å registrere seg hos på dette nettstedet.</message>
 	<message key="user.register.privacyStatement">Erklæring om personopplysninger</message>

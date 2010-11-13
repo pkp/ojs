@@ -621,7 +621,6 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<!-- Profile -->
 	
 	<!-- Registration -->
-	<message key="user.register.repeatPassword">Herhaal wachtwoord</message>
 	<message key="user.register.selectJournal">Kies een tijdschrift om u bij te registreren</message>
 	<message key="user.register.noJournals">Deze site heeft geen tijdschriften waarbij u zich kunt registreren.</message>
 	<message key="user.register.privacyStatement">Privacyverklaring</message>

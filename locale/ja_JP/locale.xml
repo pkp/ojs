@@ -462,7 +462,6 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   <message key="user.login.resetPasswordInstructions"><![CDATA[セキュリティ上の理由により、本システムでは現行のパスワードをお知らせするのではなく、リセットするためのパスワードをお送りしています。<br /><br />パスワードをリセットするには、以下の記入欄にメールアドレスを入力してください。入力されたメールアドレスに確認メールを送信します。]]></message>
   <!-- Profile -->
   <!-- Registration -->
-  <message key="user.register.repeatPassword">もう一度パスワードを入力してください</message>
   <message key="user.register.selectJournal">登録する雑誌を選択してください</message>
   <message key="user.register.noJournals">登録できる雑誌はありません。</message>
   <message key="user.register.privacyStatement">個人情報の扱いについて</message>

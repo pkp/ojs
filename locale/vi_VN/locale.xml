@@ -564,7 +564,6 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<!-- Profile -->
 	
 	<!-- Registration -->
-	<message key="user.register.repeatPassword">Nhập lại mật khẩu</message>
 	<message key="user.register.selectJournal">Chọn một tạp chí muốn đăng ký</message>
 	<message key="user.register.noJournals">Không có tạp chí nào quý vị có thể đăng ký trên web site này.</message>
 	<message key="user.register.privacyStatement">Tuyên bố về bí mật cá nhân</message>

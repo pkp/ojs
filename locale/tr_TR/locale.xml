@@ -601,7 +601,6 @@ artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<!-- Profile -->
 	
 	<!-- Registration -->
-	<message key="user.register.repeatPassword">Şifreyi tekrarlayınız </message>
 	<message key="user.register.selectJournal">Kayıt için bir dergi seçiniz</message>
 	<message key="user.register.noJournals">Bu sitede kayıt olabileceğiniz bir dergi yok.</message>
 	<message key="user.register.privacyStatement">Özellik ifadesi</message>

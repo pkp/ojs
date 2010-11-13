@@ -724,8 +724,6 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 
 
 	<!-- Registration -->
-
-	<message key="user.register.repeatPassword">Повторить пароль</message>
 	<message key="user.register.selectJournal">Выбрать журнал для регистрации</message>
 
 	<message key="user.register.privacyStatement">Конфиденциальность</message>

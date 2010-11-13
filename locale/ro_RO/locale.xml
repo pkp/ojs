@@ -787,7 +787,6 @@ parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta 
 
 
 	<!-- Registration -->
-	<message key="user.register.repeatPassword">Repetă parola</message>
 	<message key="user.register.selectJournal">Selectează o revistă la care să te înscrii</message>
 	<message key="user.register.noJournals">Nu există reviste la care să te poţi înscrie pe acest site.</message>
 	<message key="user.register.privacyStatement">Declaraţie de confidenţialitate</message>

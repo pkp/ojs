@@ -684,7 +684,6 @@ Active is how many reviews are currently being considered or underway.]]></messa
 current password.<br /><br />Enter your email address below to reset your password. A confirmation will be sent to this email address.]]></message>
 	
 	<!-- Registration -->
-	<message key="user.register.repeatPassword">Repeat password</message>
 	<message key="user.register.selectJournal">Select a journal to register with</message>
 	<message key="user.register.noJournals">There are no journals you may register with on this site.</message>
 	<message key="user.register.privacyStatement">Privacy Statement</message>

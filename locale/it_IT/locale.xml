@@ -590,7 +590,6 @@ Attivo &#x00E8; il numero di quante revisioni si stanno considerando o stanno an
 
 
 	<!-- Registration -->
-	<message key="user.register.repeatPassword">Ripeti password</message>
 	<message key="user.register.selectJournal">Seleziona una rivista a cui registrarsi</message>
 	<message key="user.register.noJournals">Non ci sono riviste a cui ti puoi registrare in questo sito.</message>
 	<message key="user.register.privacyStatement">Tutela della privacy</message>

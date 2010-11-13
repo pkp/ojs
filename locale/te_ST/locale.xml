@@ -1717,7 +1717,6 @@ Thè fîlè çåñ bè vîèwèð bý çlîçkîñg óñ thè fîlè ñåmè. Æ
 	<message key="user.profile.form.newPasswordRequired">Ýóü müþt èñtèr ýóür ñèw påþþwórð.</message>
 	<message key="user.profile.form.publishedNotifications">Ñèw îþþüè püblîþhèð èmåîl ñótîfîçåtîóñþ</message>
 	<message key="user.profile.form.openAccessNotifications">Îþþüè ópèñ åççèþþ èmåîl ñótîfîçåtîóñþ</message>
-	<message key="user.register.repeatPassword">Rèpèåt påþþwórð</message>
 	<message key="user.register.form.usernameExists">Thè þèlèçtèð üþèrñåmè îþ ålrèåðý îñ üþè bý åñóthèr üþèr.</message>
 	<message key="user.register.form.usernameAlphaNumeric">Thè üþèrñåmè çåñ çóñtåîñ óñlý ålphåñümèrîç çhåråçtèrþ, üñðèrþçórèþ, åñð hýphèñþ, åñð müþt bègîñ åñð èñð wîth åñ ålphåñümèrîç çhåråçtèr.</message>
 	<message key="user.register.form.emailExists">Thè þèlèçtèð èmåîl åððrèþþ îþ ålrèåðý îñ üþè bý åñóthèr üþèr.</message>

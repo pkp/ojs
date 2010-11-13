@@ -550,7 +550,6 @@ Active indique combien d'évaluations sont présentement considérées ou en cou
 	<!-- Profile -->
 	
 	<!-- Registration -->
-	<message key="user.register.repeatPassword">Répéter le mot de passe</message>
 
 	<message key="user.register.selectJournal">Sélectionner une revue pour vous y inscrire</message>
 	<message key="user.register.noJournals">Il n'y a pas de revues auxquelles vous pouvez vous inscrire à ce site.</message>
