@@ -265,7 +265,7 @@ class MetadataForm extends Form {
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$authorDao =& DAORegistry::getDAO('AuthorDAO');
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$citationDao =& DAORegistry::getDAO('CitationDAO');
+		$citationDao =& DAORegistry::getDAO('CitationDAO'); /* @var $citationDao CitationDAO */
 		$article =& $this->article;
 
 		// Retrieve the previous citation list for comparison.
