@@ -165,7 +165,7 @@ class IssueManagementHandler extends EditorHandler {
 
 		if ($issueForm->validate()) {
 			$issueForm->execute();
-			$this->futureIssues();
+			$this->futureIssues($args, $request);
 		} else {
 			$templateMgr =& TemplateManager::getManager();
 			import('classes.issue.IssueAction');
