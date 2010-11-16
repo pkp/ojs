@@ -201,7 +201,7 @@ class Validation {
 		$user =& $session->getUser();
 
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		return $roleDao->roleExists($journalId, $user->getId(), $roleId);
+		return $roleDao->userHasRole($journalId, $user->getId(), $roleId);
 	}
 
 	/**
