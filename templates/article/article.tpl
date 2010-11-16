@@ -5,8 +5,6 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Article View.
- *
- * $Id$
  *}
 {include file="article/header.tpl"}
 
@@ -84,7 +82,7 @@
 		</div>
 	{/if}
 
-	{if $citationFactory}
+	{if $citationFactory->getCount()}
 		<h4>{translate key="submission.citations"}</h4>
 		<br />
 		<div>
