@@ -85,7 +85,7 @@ class EditorHandler extends SectionEditorHandler {
 			if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
 
 			if ($sort == 'status') {
-				$rawSubmissions =& $editorSubmissionDao->getUnfilteredEditorSubmissions(
+				$rawSubmissions =& $editorSubmissionDao->_getUnfilteredEditorSubmissions(
 					$journal->getId(),
 					$request->getUserVar('section'),
 					0,
@@ -113,7 +113,7 @@ class EditorHandler extends SectionEditorHandler {
 				import('lib.pkp.classes.core.ArrayItemIterator');
 				$submissions =& ArrayItemIterator::fromRangeInfo($submissionsArray, $rangeInfo);
 			}  else {
-				$rawSubmissions =& $editorSubmissionDao->getUnfilteredEditorSubmissions(
+				$rawSubmissions =& $editorSubmissionDao->_getUnfilteredEditorSubmissions(
 					$journal->getId(),
 					$request->getUserVar('section'),
 					0,
