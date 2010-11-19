@@ -55,7 +55,6 @@ function chooseEndDate() {
 				break;
 			}
 		}
-		document.subscriptionForm.membership.value = months;
 	}
 }
 {/literal}
