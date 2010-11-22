@@ -102,10 +102,32 @@
 		<data file="dbscripts/xml/upgrade/2.3.0_subscription_ip.xml" />
 	</upgrade>
 
+	<!--
+	  - The 2.3.3 preupdate scripts have been broken into pieces because
+	  - the features they affect were added in different versions of OJS.
+	  -->
+	<upgrade minversion="2.0.0.0" maxversion="2.3.2.9">
+		<data file="dbscripts/xml/upgrade/2.3.3_preupdate1.xml" />
+	</upgrade>
+
+	<upgrade minversion="2.2.0.0" maxversion="2.3.2.9">
+		<data file="dbscripts/xml/upgrade/2.3.3_preupdate2.xml" /><!-- author_settings -->
+	</upgrade>
+
 	<upgrade minversion="2.2.1.0" maxversion="2.3.2.9">
-		<!-- 2.2.1 to 2.3.3 -->
-		<data file="dbscripts/xml/upgrade/2.3.3_preupdate.xml" />
-		<data file="dbscripts/xml/upgrade/2.3.3_preaffiliations.xml" condition="return $installer->columnExists('users', 'affiliation') &amp;&amp; $installer->columnExists('authors', 'affiliation');" />
+		<data file="dbscripts/xml/upgrade/2.3.3_preupdate3.xml" /><!-- review_forms -->
+	</upgrade>
+
+	<upgrade minversion="2.2.0.0" maxversion="2.3.3.9">
+		<!--
+		  - Not including 2.1.1, where user_settings first became available, because the 2.2.0_usersettings migration process
+		  - has renamed it to user_settings_old by this point.
+		  -->
+		<data file="dbscripts/xml/upgrade/2.3.3_preaffiliations1.xml" condition="return $installer->columnExists('users', 'affiliation');" />
+	</upgrade>
+
+	<upgrade minversion="2.2.0.0" maxversion="2.3.3.9">
+		<data file="dbscripts/xml/upgrade/2.3.3_preaffiliations2.xml" condition="return $installer->columnExists('authors', 'affiliation');" />
 	</upgrade>
 
 	<upgrade minversion="2.0.0.0" maxversion="2.3.3.9">

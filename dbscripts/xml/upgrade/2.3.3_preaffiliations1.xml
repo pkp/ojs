@@ -2,12 +2,12 @@
 <!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
 
 <!--
-  * 2.3.2_preaffiliations.xml
+  * 2.3.3_preaffiliations1.xml
   *
   * Copyright (c) 2003-2010 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * 2.3.2 affiliations update XML file, run prior to schema sync.
+  * 2.3.3 affiliations update XML file, run prior to schema sync.
   *
   * $Id$
   -->
@@ -15,13 +15,6 @@
 <data>
 	<!-- Bug #5550: make affiliations localized -->
 	<sql>
-		<query>
-			<!-- Make the process idempotent -->
-			DELETE FROM author_settings WHERE setting_name = 'affiliation'
-		</query>
-		<query>
-			INSERT INTO author_settings (author_id, setting_name, setting_type, setting_value, locale) SELECT aa.author_id, 'affiliation', 'string', aa.affiliation, j.primary_locale FROM authors aa, articles a, journals j WHERE aa.submission_id = a.article_id AND a.journal_id = j.journal_id
-		</query>
 		<query>
 			<!-- Make the process idempotent -->
 			DELETE FROM user_settings WHERE setting_name = 'affiliation'
