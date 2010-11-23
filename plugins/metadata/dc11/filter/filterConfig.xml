@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filterConfig SYSTEM "../../../../lib/pkp/dtd/filterConfig.dtd">
+
+<!--
+  * filterConfig.xml
+  *
+  * Copyright (c) 2003-2010 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Filter Configuration.
+  -->
+<filterConfig>
+	<filterGroups>
+		<!-- DC 1.1 article adapters -->
+		<filterGroup
+			symbolic="article=>dc11"
+			displayName="plugins.metadata.dc11.articleAdapter.displayName"
+			description="plugins.metadata.dc11.articleAdapter.description"
+			inputType="class::classes.article.Article"
+			outputType="metadata::plugins.metadata.dc11.schema.Dc11Schema(ARTICLE)" />
+	</filterGroups>
+	<filters>
+		<!-- DC 1.1 article adapters -->
+		<filter
+			inGroup="article=>dc11"
+			class="plugins.metadata.dc11.filter.Dc11SchemaArticleAdapter"
+			isTemplate="0" />
+	</filters>
+</filterConfig>

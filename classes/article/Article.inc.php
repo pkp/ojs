@@ -48,6 +48,9 @@ class Article extends Submission {
 	 * Constructor.
 	 */
 	function Article() {
+		// Switch on meta-data adapter support.
+		$this->setHasLoadableAdapters(true);
+
 		parent::Submission();
 	}
 

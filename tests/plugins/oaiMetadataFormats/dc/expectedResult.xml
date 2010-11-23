@@ -1,0 +1,29 @@
+<oai_dc:dc
+	xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+	http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+	<dc:title xml:lang="en-US">article-title-en</dc:title>
+	<dc:title xml:lang="de-DE">article-title-de</dc:title>
+	<dc:creator>author-lastname, author-firstname; author-affiliation</dc:creator>
+	<dc:subject xml:lang="en-US">article-discipline</dc:subject>
+	<dc:subject xml:lang="en-US">article-subject</dc:subject>
+	<dc:subject xml:lang="en-US">article-subject-class</dc:subject>
+	<dc:description xml:lang="en-US">article-abstract</dc:description>
+	<dc:publisher xml:lang="en-US">journal-publisher</dc:publisher>
+	<dc:contributor xml:lang="en-US">article-sponsor</dc:contributor>
+	<dc:date>2010-11-05</dc:date>
+	<dc:type xml:lang="en-US">section-identify-type</dc:type>
+	<dc:type xml:lang="en-US">art-type</dc:type>
+	<dc:format>galley-filetype</dc:format>
+	<dc:identifier>router-url</dc:identifier>
+	<dc:identifier xsi:type="dcterms:DOI">article-doi</dc:identifier>
+	<dc:source xml:lang="en-US">journal-title; issue-identification; 15</dc:source>
+	<dc:language>en_US</dc:language>
+	<dc:relation>router-url</dc:relation>
+	<dc:coverage xml:lang="en-US">article-coverage-geo</dc:coverage>
+	<dc:coverage xml:lang="en-US">article-coverage-chron</dc:coverage>
+	<dc:coverage xml:lang="en-US">article-coverage-sample</dc:coverage>
+	<dc:rights xml:lang="en-US">journal-copyright</dc:rights>
+</oai_dc:dc>
