@@ -53,7 +53,7 @@ class SectionEditorSubmission extends Article {
 	 */
 	function addReviewAssignment($reviewAssignment) {
 		if ($reviewAssignment->getSubmissionId() == null) {
-			$reviewAssignment->setSubmissionId($this->getArticleId());
+			$reviewAssignment->setSubmissionId($this->getId());
 		}
 
 		if (isset($this->reviewAssignments[$reviewAssignment->getRound()])) {
@@ -519,7 +519,7 @@ class SectionEditorSubmission extends Article {
 			// COPYEDITING
 
 			// First round of copyediting
-			$initialSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $this->getArticleId());
+			$initialSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $this->getId());
 			$dateCopyeditorNotified = $initialSignoff->getDateNotified() ?
 				strtotime($initialSignoff->getDateNotified()) : 0;
 			$dateCopyeditorUnderway = $initialSignoff->getDateUnderway() ?
@@ -543,7 +543,7 @@ class SectionEditorSubmission extends Article {
 			if ($dateCopyeditorCompleted && !$dateCopyeditorAcknowledged) return $highlightClass;
 
 			// Second round of copyediting
-			$authorSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $this->getArticleId());
+			$authorSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $this->getId());
 			$dateCopyeditorAuthorNotified = $authorSignoff->getDateNotified() ?
 				strtotime($authorSignoff->getDateNotified()) : 0;
 			$dateCopyeditorAuthorUnderway = $authorSignoff->getDateUnderway() ?
@@ -567,7 +567,7 @@ class SectionEditorSubmission extends Article {
 			) return $highlightClass;
 
 			// Third round of copyediting
-			$finalSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $this->getArticleId());
+			$finalSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $this->getId());
 			$dateCopyeditorFinalNotified = $finalSignoff->getDateNotified() ?
 				strtotime($finalSignoff->getDateNotified()) : 0;
 			$dateCopyeditorFinalUnderway = $finalSignoff->getDateUnderway() ?
@@ -589,7 +589,7 @@ class SectionEditorSubmission extends Article {
 			if ($dateCopyeditorFinalCompleted && !$dateCopyeditorFinalAcknowledged) return $highlightClass;
 
 			// LAYOUT EDITING
-			$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $this->getArticleId());
+			$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $this->getId());
 			$dateLayoutNotified = $layoutSignoff->getDateNotified() ?
 				strtotime($layoutSignoff->getDateNotified()) : 0;
 			$dateLayoutUnderway = $layoutSignoff->getDateUnderway() ?
@@ -616,7 +616,7 @@ class SectionEditorSubmission extends Article {
 			$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 
 			// First round of proofreading
-			$authorSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_AUTHOR', ASSOC_TYPE_ARTICLE, $this->getArticleId());
+			$authorSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_AUTHOR', ASSOC_TYPE_ARTICLE, $this->getId());
 			$dateAuthorNotified = $authorSignoff->getDateNotified() ?
 				strtotime($authorSignoff->getDateNotified()) : 0;
 			$dateAuthorUnderway = $authorSignoff->getDateUnderway() ?
@@ -640,7 +640,7 @@ class SectionEditorSubmission extends Article {
 			if ($dateAuthorCompleted && !$dateAuthorAcknowledged) return $highlightClass;
 
 			// Second round of proofreading
-			$proofreaderSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $this->getArticleId());
+			$proofreaderSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $this->getId());
 			$dateProofreaderNotified = $proofreaderSignoff->getDateNotified() ?
 				strtotime($proofreaderSignoff->getDateNotified()) : 0;
 			$dateProofreaderUnderway = $proofreaderSignoff->getDateUnderway() ?
@@ -664,7 +664,7 @@ class SectionEditorSubmission extends Article {
 			) return $highlightClass;
 
 			// Third round of proofreading
-			$layoutEditorSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $this->getArticleId());
+			$layoutEditorSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $this->getId());
 			$dateLayoutEditorNotified = $layoutEditorSignoff->getDateNotified() ?
 				strtotime($layoutEditorSignoff->getDateNotified()) : 0;
 			$dateLayoutEditorUnderway = $layoutEditorSignoff->getDateUnderway() ?

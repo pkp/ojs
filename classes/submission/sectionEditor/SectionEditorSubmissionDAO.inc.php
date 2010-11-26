@@ -183,13 +183,13 @@ class SectionEditorSubmissionDAO extends DAO {
 								(article_id, round, editor_id, decision, date_decided)
 								VALUES (?, ?, ?, ?, %s)',
 								$this->datetimeToDB($editorDecision['dateDecided'])),
-							array($sectionEditorSubmission->getArticleId(), $sectionEditorSubmission->getCurrentRound(), $editorDecision['editorId'], $editorDecision['decision'])
+							array($sectionEditorSubmission->getId(), $sectionEditorSubmission->getCurrentRound(), $editorDecision['editorId'], $editorDecision['decision'])
 						);
 					}
 				}
 			}
 		}
-		if ($this->reviewRoundExists($sectionEditorSubmission->getArticleId(), $sectionEditorSubmission->getCurrentRound())) {
+		if ($this->reviewRoundExists($sectionEditorSubmission->getId(), $sectionEditorSubmission->getCurrentRound())) {
 			$this->update(
 				'UPDATE review_rounds
 					SET
@@ -197,28 +197,28 @@ class SectionEditorSubmissionDAO extends DAO {
 					WHERE submission_id = ? AND round = ?',
 				array(
 					$sectionEditorSubmission->getReviewRevision(),
-					$sectionEditorSubmission->getArticleId(),
+					$sectionEditorSubmission->getId(),
 					$sectionEditorSubmission->getCurrentRound()
 				)
 			);
 		} elseif ($sectionEditorSubmission->getReviewRevision()!=null) {
 			$this->createReviewRound(
-				$sectionEditorSubmission->getArticleId(),
+				$sectionEditorSubmission->getId(),
 				$sectionEditorSubmission->getCurrentRound() === null ? 1 : $sectionEditorSubmission->getCurrentRound(),
 				$sectionEditorSubmission->getReviewRevision()
 			);
 		}
 
 		// Update copyeditor assignment
-		$copyeditSignoff = $this->signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $sectionEditorSubmission->getArticleId());
+		$copyeditSignoff = $this->signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $sectionEditorSubmission->getId());
 		if ($copyeditSignoff) {
-			$copyeditorSubmission =& $this->copyeditorSubmissionDao->getCopyeditorSubmission($sectionEditorSubmission->getArticleId());
+			$copyeditorSubmission =& $this->copyeditorSubmissionDao->getCopyeditorSubmission($sectionEditorSubmission->getId());
 		} else {
 			$copyeditorSubmission = new CopyeditorSubmission();
 		}
 
 		// Only update the fields that an editor can modify.
-		$copyeditorSubmission->setArticleId($sectionEditorSubmission->getArticleId());
+		$copyeditorSubmission->setId($sectionEditorSubmission->getId());
 		$copyeditorSubmission->setDateStatusModified($sectionEditorSubmission->getDateStatusModified());
 		$copyeditorSubmission->setLastModified($sectionEditorSubmission->getLastModified());
 
@@ -228,7 +228,7 @@ class SectionEditorSubmissionDAO extends DAO {
 				if ($reviewAssignment->getId() > 0) {
 					$this->reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 				} else {
-					$this->reviewAssignmentDao->insertReviewAssignment($reviewAssignment);
+					$this->reviewAssignmentDao->insertObject($reviewAssignment);
 				}
 			}
 		}
@@ -240,9 +240,9 @@ class SectionEditorSubmissionDAO extends DAO {
 		}
 
 		// Update article
-		if ($sectionEditorSubmission->getArticleId()) {
+		if ($sectionEditorSubmission->getId()) {
 
-			$article =& $this->articleDao->getArticle($sectionEditorSubmission->getArticleId());
+			$article =& $this->articleDao->getArticle($sectionEditorSubmission->getId());
 
 			// Only update fields that can actually be edited.
 			$article->setSectionId($sectionEditorSubmission->getSectionId());
