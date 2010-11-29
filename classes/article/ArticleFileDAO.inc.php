@@ -200,18 +200,18 @@ class ArticleFileDAO extends DAO {
 	}
 
 	/**
-	 * Retrieve all article files for a type and assoc ID.
+	 * Retrieve all article files for a file stage and assoc ID.
 	 * @param $assocId int
-	 * @param $type int
+	 * @param $fileStage int
 	 * @return array ArticleFiles
 	 */
-	function &getArticleFilesByAssocId($assocId, $type) {
+	function &getArticleFilesByAssocId($assocId, $fileStage) {
 		import('classes.file.ArticleFileManager');
 		$articleFiles = array();
 
 		$result =& $this->retrieve(
-			'SELECT * FROM article_files WHERE assoc_id = ? AND type = ?',
-			array($assocId, $type)
+			'SELECT * FROM article_files WHERE assoc_id = ? AND file_stage = ?',
+			array($assocId, $fileStage)
 		);
 
 		while (!$result->EOF) {
@@ -241,7 +241,7 @@ class ArticleFileDAO extends DAO {
 		$articleFile->setFileType($row['file_type']);
 		$articleFile->setFileSize($row['file_size']);
 		$articleFile->setOriginalFileName($row['original_file_name']);
-		$articleFile->setType($row['type']);
+		$articleFile->setFileStage($row['file_stage']);
 		$articleFile->setAssocId($row['assoc_id']);
 		$articleFile->setDateUploaded($this->datetimeFromDB($row['date_uploaded']));
 		$articleFile->setDateModified($this->datetimeFromDB($row['date_modified']));
@@ -267,7 +267,7 @@ class ArticleFileDAO extends DAO {
 			$articleFile->getFileType(),
 			$articleFile->getFileSize(),
 			$articleFile->getOriginalFileName(),
-			$articleFile->getType(),
+			$articleFile->getFileStage(),
 			(int) $articleFile->getRound(),
 			$articleFile->getViewable(),
 			$articleFile->getAssocId()
@@ -279,7 +279,7 @@ class ArticleFileDAO extends DAO {
 
 		$this->update(
 			sprintf('INSERT INTO article_files
-				(' . ($fileId ? 'file_id, ' : '') . 'revision, article_id, source_file_id, source_revision, file_name, file_type, file_size, original_file_name, type, date_uploaded, date_modified, round, viewable, assoc_id)
+				(' . ($fileId ? 'file_id, ' : '') . 'revision, article_id, source_file_id, source_revision, file_name, file_type, file_size, original_file_name, file_stage, date_uploaded, date_modified, round, viewable, assoc_id)
 				VALUES
 				(' . ($fileId ? '?, ' : '') . '?, ?, ?, ?, ?, ?, ?, ?, ?, %s, %s, ?, ?, ?)',
 				$this->datetimeToDB($articleFile->getDateUploaded()), $this->datetimeToDB($articleFile->getDateModified())),
@@ -308,7 +308,7 @@ class ArticleFileDAO extends DAO {
 					file_type = ?,
 					file_size = ?,
 					original_file_name = ?,
-					type = ?,
+					file_stage = ?,
 					date_uploaded = %s,
 					date_modified = %s,
 					round = ?,
@@ -324,7 +324,7 @@ class ArticleFileDAO extends DAO {
 				$articleFile->getFileType(),
 				$articleFile->getFileSize(),
 				$articleFile->getOriginalFileName(),
-				$articleFile->getType(),
+				$articleFile->getFileStage(),
 				(int) $articleFile->getRound(),
 				$articleFile->getViewable(),
 				$articleFile->getAssocId(),

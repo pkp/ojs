@@ -42,7 +42,7 @@ class ArticleGalleyDAO extends DAO {
 		if ($articleId !== null) $params[] = (int) $articleId;
 		$result =& $this->retrieve(
 			'SELECT	g.*,
-				a.file_name, a.original_file_name, a.type, a.file_type, a.file_size, a.date_uploaded, a.date_modified
+				a.file_name, a.original_file_name, a.file_stage, a.file_type, a.file_size, a.date_uploaded, a.date_modified
 			FROM	article_galleys g
 				LEFT JOIN article_files a ON (g.file_id = a.file_id)
 			WHERE	g.galley_id = ?' .
@@ -97,7 +97,7 @@ class ArticleGalleyDAO extends DAO {
 	function &getGalleyByPublicGalleyId($publicGalleyId, $articleId) {
 		$result =& $this->retrieve(
 			'SELECT	g.*,
-				a.file_name, a.original_file_name, a.type, a.file_type, a.file_size, a.date_uploaded, a.date_modified
+				a.file_name, a.original_file_name, a.file_stage, a.file_type, a.file_size, a.date_uploaded, a.date_modified
 			FROM	article_galleys g
 				LEFT JOIN article_files a ON (g.file_id = a.file_id)
 			WHERE	g.public_galley_id = ? AND
@@ -128,7 +128,7 @@ class ArticleGalleyDAO extends DAO {
 
 		$result =& $this->retrieve(
 			'SELECT g.*,
-			a.file_name, a.original_file_name, a.type, a.file_type, a.file_size, a.date_uploaded, a.date_modified
+			a.file_name, a.original_file_name, a.file_stage, a.file_type, a.file_size, a.date_uploaded, a.date_modified
 			FROM article_galleys g
 			LEFT JOIN article_files a ON (g.file_id = a.file_id)
 			WHERE g.article_id = ? ORDER BY g.seq',
@@ -189,7 +189,7 @@ class ArticleGalleyDAO extends DAO {
 		$galley->setLocale($row['locale']);
 		$galley->setFileId($row['file_id']);
 		$galley->setLabel($row['label']);
-		$galley->setType($row['type']);
+		$galley->setFileStage($row['type']);
 		$galley->setSequence($row['seq']);
 		$galley->setViews($row['views']);
 
