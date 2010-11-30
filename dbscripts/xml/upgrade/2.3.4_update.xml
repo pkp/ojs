@@ -42,4 +42,10 @@
 		<!-- article_email_log -->
 		<query>UPDATE email_log SET assoc_type = 257</query><!-- ASSOC_TYPE_ARTICLE -->
 	</sql>
+
+	<!-- Bug #6257: normalize plug-in names to lowercase
+	     NB: LOWER() is compatible with both MySQL and PostreSQL. -->
+	<sql>
+		<query>UPDATE plugin_settings SET plugin_name = LOWER(plugin_name);</query>
+	</sql>
 </data>
