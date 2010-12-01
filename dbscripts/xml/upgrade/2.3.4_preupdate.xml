@@ -14,12 +14,6 @@
 <data>
 	<!-- Bug #6021: port logs to pkp-lib -->
 	<sql>
-		<!-- article_event_log -->
-		<rename table="article_event_log" to="event_log" />
-		<rename table="event_log" column="assoc_type" to="assoc_type_old" />
-		<rename table="event_log" column="assoc_id" to="assoc_id_old" />
-		<rename table="event_log" column="article_id" to="assoc_id" />
-
 		<!-- article_email_log -->
 		<rename table="article_email_log" to="email_log" />
 		<rename table="event_log" column="article_id" to="assoc_id" />
