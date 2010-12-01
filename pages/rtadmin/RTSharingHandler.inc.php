@@ -12,15 +12,18 @@
  * @brief Handle Reading Tools sharing requests -- setup section.
  */
 
-// $Id$
-
-
-import('classes.rt.ojs.JournalRTAdmin');
 import('pages.rtadmin.RTAdminHandler');
 import('classes.rt.ojs.SharingRT');
 
-class RTSharingHandler {
-	function settings() {
+class RTSharingHandler extends RTAdminHandler {
+	/**
+	 * Constructor
+	 **/
+	function RTSharingHandler() {
+		parent::RTAdminHandler();
+	}
+
+	function sharingSettings() {
 		$this->validate();
 		$journal = Request::getJournal();
 		if ($journal) {
@@ -50,7 +53,7 @@ class RTSharingHandler {
 		}
 	}
 
-	function saveSettings() {
+	function saveSharingSettings() {
 		$this->validate();
 
 		$journal = Request::getJournal();

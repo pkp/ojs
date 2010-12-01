@@ -12,10 +12,6 @@
  * @brief Handle Reading Tools administration requests -- setup section.
  */
 
-// $Id$
-
-
-import('classes.rt.ojs.JournalRTAdmin');
 import('pages.rtadmin.RTAdminHandler');
 
 class RTVersionHandler extends RTAdminHandler {

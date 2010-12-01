@@ -13,7 +13,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<form method="post" action='{url op="saveConfigureSharing"}'>
+<form method="post" action='{url op="saveSharingSettings"}'>
 
 <p>{translate key="rt.admin.sharing.description"}</p>
 

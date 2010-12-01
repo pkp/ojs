@@ -39,7 +39,7 @@
 <div id="rtAdminSharing">
 <h3>{translate key="rt.admin.sharing"}</h3>
 <ul class="plain">
-	<li>&#187; <a href="{url op="configureSharing"}">{translate key="rt.admin.configureSharing"}</a></li>
+	<li>&#187; <a href="{url op="sharingSettings"}">{translate key="rt.admin.configureSharing"}</a></li>
 </ul>
 </div>
 

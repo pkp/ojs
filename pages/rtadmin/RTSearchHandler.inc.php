@@ -12,10 +12,6 @@
  * @brief Handle Reading Tools administration requests -- contexts section.
  */
 
-// $Id$
-
-
-import('classes.rt.ojs.JournalRTAdmin');
 import('pages.rtadmin.RTAdminHandler');
 
 class RTSearchHandler extends RTAdminHandler {

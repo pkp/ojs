@@ -16,8 +16,6 @@
  * @brief OJS-specific AddThis end-user interface.
  */
 
-// $Id$
-
 import('classes.i18n.Locale');
 
 class SharingRT {
