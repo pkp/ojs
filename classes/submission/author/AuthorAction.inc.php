@@ -152,7 +152,7 @@ class AuthorAction extends Action {
 			$authorSignoff->setDateCompleted(Core::getCurrentDate());
 
 			$finalSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $authorSubmission->getId());
-			$finalSignoff->setUserId($copyeditor->getId());
+			if ($copyeditor) $finalSignoff->setUserId($copyeditor->getId());
 			$finalSignoff->setDateNotified(Core::getCurrentDate());
 
 			$signoffDao->updateObject($authorSignoff);
