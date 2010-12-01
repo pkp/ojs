@@ -25,6 +25,7 @@
 	<!-- Bug #5440: port submission notes to PKP "notes" -->
 	<sql>
 		<rename table="article_notes" column="article_id" to="assoc_id" />
+		<rename table="article_notes" column="journal_id" to="context_id" />
 		<rename table="article_notes" column="note" to="contents" />
 		<rename table="article_notes" to="notes" />
 	</sql>
