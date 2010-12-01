@@ -28,8 +28,8 @@
 	</sql>
 	<!-- Bug #5440: Migrate submission notes into PKP "notes" -->
 	<sql>
-		<query>UPDATE notes SET assoc_type = 257</query><!-- ASSOC_TYPE_ARTICLE -->
-		<query>UPDATE notes, articles SET notes.context_id = articles.journal_id WHERE articles.article_id = notes.assoc_id</query>
+		<query>INSERT INTO notes (note_id, assoc_type, assoc_id, user_id, date_created, date_modified, title, file_id, context_id, contents) SELECT n.note_id, 257, n.article_id, n.user_id, n.date_created, n.date_modified, n.title, n.file_id, a.journal_id, n.note FROM article_notes n, articles a WHERE a.article_id = n.article_id</query><!-- 257 = ASSOC_TYPE_ARTICLE -->
+		<query>DROP TABLE article_notes</query>
 	</sql>
 	<!-- Bug #5543: Implement multilingual specification -->
 	<sql>
