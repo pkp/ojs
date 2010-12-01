@@ -24,4 +24,9 @@
 		<rename table="article_email_log" to="email_log" />
 		<rename table="event_log" column="article_id" to="assoc_id" />
 	</sql>
+
+	<!-- Bug #6128: Change paper_files 'type' column to 'file_stage' -->
+	<sql>
+		<rename table="article_files" column="type" to="file_stage" />
+	</sql>
 </data>
