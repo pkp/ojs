@@ -7,8 +7,8 @@
  * Article View -- Footer component.
  *}
 
-<!-- start AddThis -->
 {if $sharingEnabled}
+<!-- start AddThis -->
 	{if isset($sharingDropDownMenu)}
 		{if isset($sharingUserName)}
 			<script type="text/javascript">
@@ -33,8 +33,8 @@
 				<img src="{$sharingButtonUrl}" width="{$sharingButtonWidth}" height="{$sharingButtonHeight}" border="0" alt="Bookmark and Share" style="border:0;padding:0" />
 		</a>
 	{/if}
-{/if}
 <!-- end AddThis -->
+{/if}
 
 {if $currentJournal && $currentJournal->getSetting('includeCreativeCommons')}
 {translate key="common.ccLicense"}
@@ -45,10 +45,9 @@
 {$pageFooter}
 {/if}
 {call_hook name="Templates::Article::Footer::PageFooter"}
-</div>
-
-</div>
-</div>
+</div><!-- content -->
+</div><!-- main -->
+</div><!-- body -->
 
 {if $defineTermsContextId}
 <script type="text/javascript">
@@ -80,7 +79,7 @@
 
 {get_debug_info}
 {if $enableDebugStats}{include file=$pqpTemplate}{/if}
-
+</div> <!-- container -->
 </body>
 </html>
 
