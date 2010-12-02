@@ -18,9 +18,11 @@
 	$(document).ready(function(){
 		$("#interestsTextOnly").hide();
 		$("#interests").tagit({
-			{/literal}{if $existingInterests}{literal} availableTags: [{/literal}{foreach name=existingInterests from=$existingInterests item=interest}"{$interest|escape:"javascript"}"{if !$smarty.foreach.existingInterests.last}, {/if}{/foreach}{literal}],{/literal}{/if}
-			{if $interestsKeywords}{literal}currentTags: [{/literal}{foreach name=currentInterests from=$interestsKeywords item=interest}"{$interest|escape|escape:"javascript"}"{if !$smarty.foreach.currentInterests.last}, {/if}{/foreach}{literal}]{/literal}
-					  {else}{literal}currentTags: []{/literal}{/if}{literal}
+			{/literal}{if $existingInterests}{literal}
+			// This is the list of interests in the system used to populate the autocomplete
+			availableTags: [{/literal}{foreach name=existingInterests from=$existingInterests item=interest}"{$interest|escape:'javascript'}"{if !$smarty.foreach.existingInterests.last}, {/if}{/foreach}{literal}],{/literal}{/if}
+			// There are no current interests for the user since they're just registering; Assign an empty list
+			currentTags: []
 		});
 	});
 </script>
