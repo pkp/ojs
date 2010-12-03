@@ -13,7 +13,7 @@
  * @brief Operations for retrieving and modifying BookForReview objects.
  */
 
-import('db.DAO');
+import('lib.pkp.classes.db.DAO');
 
 /* These constants are used for user-selectable search fields. */
 define('BFR_FIELD_PUBLISHER', 	'publisher');
@@ -309,7 +309,7 @@ class BookForReviewDAO extends DAO {
 			$this->bookForReviewAuthorDao->deleteAuthorsByBookForReview($bookId);
 
 			// Delete cover image files (for all locales) from the filesystem
-			import('file.PublicFileManager');
+			import('classes.file.PublicFileManager');
 			$publicFileManager = new PublicFileManager();
 			$locales = Locale::getSupportedLocales();
 			foreach ($locales as $locale) {	
@@ -588,7 +588,7 @@ class BookForReviewDAO extends DAO {
 
 		if ($book) {
 			// Delete cover image file from the filesystem and settings
-			import('file.PublicFileManager');
+			import('classes.file.PublicFileManager');
 			$publicFileManager = new PublicFileManager();
 			$publicFileManager->removeJournalFile($book->getJournalId(), $book->getFileName($locale));
 

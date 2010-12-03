@@ -411,7 +411,7 @@ class BooksForReviewPlugin extends GenericPlugin {
 			$book =& $bfrDao->getSubmittedBookForReviewByArticle($journalId, $articleId);
 
 			if ($book) {
-				import('lib.pkp.classes.file.PublicFileManager');
+				import('classes.file.PublicFileManager');
 				$publicFileManager = new PublicFileManager();
 				$baseCoverPagePath = Request::getBaseUrl() . '/';
 				$baseCoverPagePath .= $publicFileManager->getJournalFilesPath($journalId) . '/';
