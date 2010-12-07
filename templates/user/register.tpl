@@ -20,7 +20,7 @@
 		$("#interests").tagit({
 			{/literal}{if $existingInterests}{literal}
 			// This is the list of interests in the system used to populate the autocomplete
-			availableTags: [{/literal}{foreach name=existingInterests from=$existingInterests item=interest}"{$interest|escape:'javascript'}"{if !$smarty.foreach.existingInterests.last}, {/if}{/foreach}{literal}],{/literal}{/if}
+			availableTags: [{/literal}{foreach name=existingInterests from=$existingInterests item=interest}"{$interest|escape|escape:'javascript'}"{if !$smarty.foreach.existingInterests.last}, {/if}{/foreach}{literal}],{/literal}{/if}
 			// There are no current interests for the user since they're just registering; Assign an empty list
 			currentTags: []
 		});
@@ -228,7 +228,7 @@
 </table>
 <div id="reviewerInterestsContainer" style="margin-left:40px;">
 	<label class="desc">{translate key="user.register.reviewerInterests"}</label>
-	<ul id="interests"></ul>
+	<ul id="interests"><li></li></ul>
 	<textarea name="interests" id="interestsTextOnly" rows="5" cols="40" class="textArea">
 			{foreach name=currentInterests from=$interestsKeywords item=interest}{$interest|urldecode}{if !$smarty.foreach.currentInterests.last}, {/if}{/foreach}
 	</textarea>

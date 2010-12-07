@@ -21,9 +21,9 @@
 		$("#interests").tagit({
 			{/literal}{if $existingInterests}{literal}
 			// This is the list of interests in the system used to populate the autocomplete
-			availableTags: [{/literal}{foreach name=existingInterests from=$existingInterests item=interest}"{$interest|escape:'javascript'}"{if !$smarty.foreach.existingInterests.last}, {/if}{/foreach}{literal}],{/literal}{/if}
+			availableTags: [{/literal}{foreach name=existingInterests from=$existingInterests item=interest}"{$interest|escape|escape:'javascript'}"{if !$smarty.foreach.existingInterests.last}, {/if}{/foreach}{literal}],{/literal}{/if}
 			// This is the list of the user's interests that have already been saved
-			{if $interestsKeywords}{literal}currentTags: [{/literal}{foreach name=currentInterests from=$interestsKeywords item=interest}"{$interest|escape:'javascript'}"{if !$smarty.foreach.currentInterests.last}, {/if}{/foreach}{literal}]{/literal}
+			{if $interestsKeywords}{literal}currentTags: [{/literal}{foreach name=currentInterests from=$interestsKeywords item=interest}"{$interest|escape|escape:'javascript'}"{if !$smarty.foreach.currentInterests.last}, {/if}{/foreach}{literal}]{/literal}
 			{else}{literal}currentTags: []{/literal}{/if}{literal}
 		});
 	});
@@ -230,8 +230,8 @@
 		<td class="value"><input type="text" name="fax" id="fax" value="{$fax|escape}" size="15" maxlength="24" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{fieldLabel key="user.interests"}</td>
-		<td class="value"><ul id="interests"></ul><br />
+		<td class="label">{fieldLabel for="interests" key="user.interests"}</td>
+		<td class="value"><ul id="interests"><li></li></ul><br />
 			<textarea name="interests" id="interestsTextOnly" rows="5" cols="40" class="textArea">
 				{foreach name=currentInterests from=$interestsKeywords item=interest}{$interest|urldecode}{if !$smarty.foreach.currentInterests.last}, {/if}{/foreach}
 			</textarea>

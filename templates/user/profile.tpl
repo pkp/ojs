@@ -22,9 +22,9 @@
 		$("#interests").tagit({
 			{/literal}{if $existingInterests}{literal}
 			// This is the list of interests in the system used to populate the autocomplete
-			availableTags: [{/literal}{foreach name=existingInterests from=$existingInterests item=interest}"{$interest|escape:'javascript'}"{if !$smarty.foreach.existingInterests.last}, {/if}{/foreach}{literal}],{/literal}{/if}
+			availableTags: [{/literal}{foreach name=existingInterests from=$existingInterests item=interest}"{$interest|escape|escape:'javascript'}"{if !$smarty.foreach.existingInterests.last}, {/if}{/foreach}{literal}],{/literal}{/if}
 			// This is the list of the user's interests that have already been saved
-			{if $interestsKeywords}{literal}currentTags: [{/literal}{foreach name=currentInterests from=$interestsKeywords item=interest}"{$interest|escape:'javascript'}"{if !$smarty.foreach.currentInterests.last}, {/if}{/foreach}{literal}]{/literal}
+			{if $interestsKeywords}{literal}currentTags: [{/literal}{foreach name=currentInterests from=$interestsKeywords item=interest}"{$interest|escape|escape:'javascript'}"{if !$smarty.foreach.currentInterests.last}, {/if}{/foreach}{literal}]{/literal}
 			{else}{literal}currentTags: []{/literal}{/if}{literal}
 		});
 	});
@@ -136,10 +136,10 @@
 	</tr>
 {/if}
 <tr valign="top">
-	<td class="label">{fieldLabel key="user.interests"}</td>
+	<td class="label">{fieldLabel name="interests" key="user.interests"}</td>
 	<td class="value">
 		<!-- The container which will be processed by tag-it.js as the interests widget -->
-		<ul id="interests"></ul><br />
+		<ul id="interests"><li></li></ul><br />
 		<!-- If Javascript is disabled, this field will be visible -->
 		<textarea name="interests" id="interestsTextOnly" rows="5" cols="40" class="textArea">
 			{foreach name=currentInterests from=$interestsKeywords item=interest}{$interest|escape}{if !$smarty.foreach.currentInterests.last}, {/if}{/foreach}
