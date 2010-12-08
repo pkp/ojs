@@ -74,7 +74,7 @@
 				<td width="95%" class="value">
 					{fieldLabel name="doiSuffix" key="manager.setup.doiSuffixPattern"}
 					<br />
-					<input type="text" name="doiSuffixPattern" value="{$doiSuffixPattern|escape}" size="15" maxlength="15" id="doiSuffixPattern" class="textField" />
+					<input type="text" name="doiSuffixPattern" value="{$doiSuffixPattern|escape}" size="15" maxlength="50" id="doiSuffixPattern" class="textField" />
 					<br />
 					<span class="instruct">{fieldLabel name="doiSuffixPattern" key="manager.setup.doiSuffixPattern.example"}</span>
 				</td>
