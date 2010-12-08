@@ -24,8 +24,8 @@ class CoinsPlugin extends GenericPlugin {
 	 */
 	function register($category, $path) {
 		$success = parent::register($category, $path);
-		if (!Config::getVar('general', 'installed')) return false;
-		if ($success) {
+		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return true;
+		if ($success && $this->getEnabled()) {
 			HookRegistry::register('Templates::Article::Footer::PageFooter', array($this, 'insertFooter'));
 		}
 		return $success;
