@@ -77,45 +77,9 @@ class UserAction {
 			unset($reviewAssignment);
 		}
 
+		// Transfer signoffs (e.g. copyediting, layout editing)
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-
-		$copyeditorSubmissionDao =& DAORegistry::getDAO('CopyeditorSubmissionDAO');
-		$copyeditorSubmissions =& $copyeditorSubmissionDao->getCopyeditorSubmissionsByCopyeditorId($oldUserId);
-		while ($copyeditorSubmission =& $copyeditorSubmissions->next()) {
-			$initialCopyeditSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $copyeditorSubmission->getArticleId());
-			$finalCopyeditSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $copyeditorSubmission->getArticleId());
-			$initialCopyeditSignoff->setUserId($newUserId);
-			$finalCopyeditSignoff->setUserId($newUserId);
-			$signoffDao->updateObject($initialCopyeditSignoff);			
-			$signoffDao->updateObject($finalCopyeditSignoff);
-			unset($copyeditorSubmission);
-			unset($initialCopyeditSignoff);
-			unset($finalCopyeditSignoff);
-		}
-
-		$layoutEditorSubmissionDao =& DAORegistry::getDAO('LayoutEditorSubmissionDAO');
-		$layoutEditorSubmissions =& $layoutEditorSubmissionDao->getSubmissions($oldUserId);
-		while ($layoutEditorSubmission =& $layoutEditorSubmissions->next()) {
-			$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $layoutEditorSubmission->getArticleId());
-			$layoutProofreadSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $layoutEditorSubmission->getArticleId());
-			$layoutSignoff->setUserId($newUserId);
-			$layoutProofreadSignoff->setUserId($newUserId);
-			$signoffDao->updateObject($layoutSignoff);
-			$signoffDao->updateObject($layoutProofreadSignoff);
-			unset($layoutSignoff);
-			unset($layoutProofreadSignoff);
-			unset($layoutEditorSubmission);
-		}
-
-		$proofreaderSubmissionDao =& DAORegistry::getDAO('ProofreaderSubmissionDAO');
-		$proofreaderSubmissions =& $proofreaderSubmissionDao->getSubmissions($oldUserId);
-		while ($proofreaderSubmission =& $proofreaderSubmissions->next()) {
-			$proofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $proofreaderSubmission->getArticleId());
-			$proofSignoff->setUserId($newUserId);
-			$signoffDao->updateObject($proofSignoff);
-			unset($proofSignoff);
-			unset($proofreaderSubmission);
-		}
+		$signoffDao->transferSignoffs($oldUserId, $newUserId);
 
 		$articleEmailLogDao =& DAORegistry::getDAO('ArticleEmailLogDAO');
 		$articleEmailLogDao->changeUser($oldUserId, $newUserId);
@@ -188,7 +152,7 @@ class UserAction {
 
 		$roles =& $roleDao->getRolesByUserId($oldUserId);
 		foreach ($roles as $role) {
-			if (!$roleDao->roleExists($role->getJournalId(), $newUserId, $role->getRoleId())) {
+			if (!$roleDao->userHasRole($role->getJournalId(), $newUserId, $role->getRoleId())) {
 				$role->setUserId($newUserId);
 				$roleDao->insertRole($role);
 			}
