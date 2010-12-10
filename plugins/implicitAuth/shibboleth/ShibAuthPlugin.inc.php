@@ -224,7 +224,7 @@ class ShibAuthPlugin extends ImplicitAuthPlugin {
 		
 			// and if they are not already an admin
 			
-			if(!$roleDao->roleExists(0, $userID, ROLE_ID_SITE_ADMIN)) {
+			if(!$roleDao->userHasRole(0, $userID, ROLE_ID_SITE_ADMIN)) {
 
 				syslog(LOG_ERR, "Implicit Auth - Making Admin: " . $userID);
 				

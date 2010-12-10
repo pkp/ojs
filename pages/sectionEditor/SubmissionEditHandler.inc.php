@@ -53,7 +53,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$journalSettings = $journalSettingsDao->getJournalSettings($journal->getId());
 
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		$isEditor = $roleDao->roleExists($journal->getId(), $user->getId(), ROLE_ID_EDITOR);
+		$isEditor = $roleDao->userHasRole($journal->getId(), $user->getId(), ROLE_ID_EDITOR);
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$section =& $sectionDao->getSection($submission->getSectionId());
@@ -288,7 +288,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$user =& Request::getUser();
-		$templateMgr->assign('isEditor', $roleDao->roleExists($journal->getId(), $user->getId(), ROLE_ID_EDITOR));
+		$templateMgr->assign('isEditor', $roleDao->userHasRole($journal->getId(), $user->getId(), ROLE_ID_EDITOR));
 
 		import('classes.issue.IssueAction');
 		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
@@ -604,7 +604,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		// Enroll reviewer
 		for ($i=0; $i<count($users); $i++) {
-			if (!$roleDao->roleExists($journal->getId(), $users[$i], $roleId)) {
+			if (!$roleDao->userHasRole($journal->getId(), $users[$i], $roleId)) {
 				$role = new Role();
 				$role->setJournalId($journal->getId());
 				$role->setUserId($users[$i]);
@@ -1061,7 +1061,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 
-		if ($roleDao->roleExists($journal->getId(), $userId, ROLE_ID_COPYEDITOR)) {
+		if ($roleDao->userHasRole($journal->getId(), $userId, ROLE_ID_COPYEDITOR)) {
 			SectionEditorAction::selectCopyeditor($submission, $userId, $request);
 			$request->redirect(null, null, 'submissionEditing', $articleId);
 		} else {
@@ -1508,7 +1508,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 
-		if ($editorId && $roleDao->roleExists($journal->getId(), $editorId, ROLE_ID_LAYOUT_EDITOR)) {
+		if ($editorId && $roleDao->userHasRole($journal->getId(), $editorId, ROLE_ID_LAYOUT_EDITOR)) {
 			SectionEditorAction::assignLayoutEditor($submission, $editorId, $request);
 			$request->redirect(null, null, 'submissionEditing', $articleId);
 		} else {
@@ -2077,7 +2077,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 
-		if ($userId && $articleId && $roleDao->roleExists($journal->getId(), $userId, ROLE_ID_PROOFREADER)) {
+		if ($userId && $articleId && $roleDao->userHasRole($journal->getId(), $userId, ROLE_ID_PROOFREADER)) {
 			import('classes.submission.proofreader.ProofreaderAction');
 			ProofreaderAction::selectProofreader($userId, $submission, $request);
 			$request->redirect(null, null, 'submissionEditing', $articleId);

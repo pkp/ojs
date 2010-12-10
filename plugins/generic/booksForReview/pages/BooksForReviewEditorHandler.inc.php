@@ -610,7 +610,7 @@ class BooksForReviewEditorHandler extends Handler {
 
 			// Ensure user is an author for this journal
 			$roleDao =& DAORegistry::getDAO('RoleDAO');
-			if ($roleDao->roleExists($journalId, $userId, ROLE_ID_AUTHOR)) {
+			if ($roleDao->userHasRole($journalId, $userId, ROLE_ID_AUTHOR)) {
 				import('classes.mail.MailTemplate');
 				$email = new MailTemplate('BFR_BOOK_ASSIGNED');
 				$send = $request->getUserVar('send');

@@ -271,7 +271,7 @@ class PeopleHandler extends ManagerHandler {
 
 		if ($users != null && is_array($users) && $rolePath != '' && $rolePath != 'admin') {
 			for ($i=0; $i<count($users); $i++) {
-				if (!$roleDao->roleExists($journal->getId(), $users[$i], $roleId)) {
+				if (!$roleDao->userHasRole($journal->getId(), $users[$i], $roleId)) {
 					$role = new Role();
 					$role->setJournalId($journal->getId());
 					$role->setUserId($users[$i]);
@@ -352,7 +352,7 @@ class PeopleHandler extends ManagerHandler {
 			while (!$roles->eof()) {
 				$role =& $roles->next();
 				$role->setJournalId($journal->getId());
-				if ($role->getRolePath() != 'admin' && !$roleDao->roleExists($role->getJournalId(), $role->getUserId(), $role->getRoleId())) {
+				if ($role->getRolePath() != 'admin' && !$roleDao->userHasRole($role->getJournalId(), $role->getUserId(), $role->getRoleId())) {
 					$roleDao->insertRole($role);
 				}
 			}

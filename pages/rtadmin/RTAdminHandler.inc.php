@@ -61,7 +61,7 @@ class RTAdminHandler extends Handler {
 			$allJournals =& $allJournals->toArray();
 
 			foreach ($allJournals as $journal) {
-				if ($roleDao->roleExists($journal->getId(), $user->getId(), ROLE_ID_JOURNAL_MANAGER)) {
+				if ($roleDao->userHasRole($journal->getId(), $user->getId(), ROLE_ID_JOURNAL_MANAGER)) {
 					$journals[] = $journal;
 				}
 			}

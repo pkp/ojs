@@ -400,8 +400,8 @@ class EditorHandler extends SectionEditorHandler {
 		$editorId = $request->getUserVar('editorId');
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 
-		$isSectionEditor = $roleDao->roleExists($journal->getId(), $editorId, ROLE_ID_SECTION_EDITOR);
-		$isEditor = $roleDao->roleExists($journal->getId(), $editorId, ROLE_ID_EDITOR);
+		$isSectionEditor = $roleDao->userHasRole($journal->getId(), $editorId, ROLE_ID_SECTION_EDITOR);
+		$isEditor = $roleDao->userHasRole($journal->getId(), $editorId, ROLE_ID_EDITOR);
 
 		if (isset($editorId) && $editorId != null && ($isEditor || $isSectionEditor)) {
 			// A valid section editor has already been chosen;
