@@ -24,7 +24,7 @@
 		<link rel="stylesheet" href="{$cssUrl}" type="text/css" />
 	{/foreach}
 
-	<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/general.js"></script>
+	<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/functions/general.js"></script>
 	{$additionalHeadData}
 </head>
 {url|assign:"galleyUrl" op="proofGalleyFile" path=$articleId|to_array:$galleyId}

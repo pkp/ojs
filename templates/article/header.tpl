@@ -60,8 +60,8 @@
 	<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/jqueryUi.min.js"></script>
 	{/if}
 
-	<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/jquery.cookie.js"></script>
-	<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/fontController.js" ></script>
+	<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/jquery.cookie.js"></script>
+	<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/functions/fontController.js" ></script>
 	<script type="text/javascript">{literal}
 		$(function(){
 			fontSize("#sizer", "body", 9, 16, 32, "{/literal}{$basePath|escape:"javascript"}{literal}"); // Initialize the font sizer
@@ -69,7 +69,7 @@
 	{/literal}</script>
 
 
-	<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/general.js"></script>
+	<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/functions/general.js"></script>
 	{$additionalHeadData}
 </head>
 <body>

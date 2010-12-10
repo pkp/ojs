@@ -25,7 +25,7 @@
 		<link rel="stylesheet" href="{$cssUrl}" type="text/css" />
 	{/foreach}
 
-	<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/general.js"></script>
+	<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/functions/general.js"></script>
 	{$additionalHeadData}
 </head>
 <body>
@@ -41,18 +41,18 @@
 <div id="body">
 
 	<div id="main" style="width: 650px;">
-	
+
 		<br />
-	
+
 		<div class="thickSeparator"></div>
-		
+
 		<h2>{translate key=$pageTitle}</h2>
-		
+
 		<div id="content">
 			<p>{$instructions|nl2br}</p>
 			<p><input type="button" onclick="window.close()" value="{translate key="common.close"}" class="button defaultButton" /></p>
 		</div>
-		
+
 	</div>
 
 </div>
