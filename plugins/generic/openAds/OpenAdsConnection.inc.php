@@ -42,7 +42,7 @@ class OpenAdsConnection {
 		$variablesScriptPath = $this->installPath . '/variables.php';
 		if (!file_exists($variablesScriptPath)) return null;
 		require_once($variablesScriptPath);
-		return $this->installPath . '/var/' . getHostName() . '.conf.php';
+		return $this->installPath . '/var/' . Request::getServerHost() . '.conf.php';
 	}
 
 	function isConfigured() {
