@@ -130,7 +130,7 @@ class EditorSubmissionDAO extends DAO {
 				(?, ?, %s, %s, %s)',
 				$this->datetimeToDB($editorSubmission->getDateNotified()), $this->datetimeToDB($editorSubmission->getDateCompleted()), $this->datetimeToDB($editorSubmission->getDateAcknowledged())),
 			array(
-				$editorSubmission->getArticleId(),
+				$editorSubmission->getId(),
 				$editorSubmission->getEditorId()
 			)
 		);
@@ -140,7 +140,7 @@ class EditorSubmissionDAO extends DAO {
 		// Insert review assignments.
 		$reviewAssignments =& $editorSubmission->getReviewAssignments();
 		for ($i=0, $count=count($reviewAssignments); $i < $count; $i++) {
-			$reviewAssignments[$i]->setArticleId($editorSubmission->getArticleId());
+			$reviewAssignments[$i]->setArticleId($editorSubmission->getId());
 			$this->reviewAssignmentDao->insertReviewAssignment($reviewAssignments[$i]);
 		}
 

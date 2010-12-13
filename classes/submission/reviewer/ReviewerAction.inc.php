@@ -72,8 +72,8 @@ class ReviewerAction extends Action {
 				return true;
 			} else {
 				if (!$request->getUserVar('continued')) {
-					$assignedEditors = $email->ccAssignedEditors($reviewerSubmission->getArticleId());
-					$reviewingSectionEditors = $email->toAssignedReviewingSectionEditors($reviewerSubmission->getArticleId());
+					$assignedEditors = $email->ccAssignedEditors($reviewerSubmission->getId());
+					$reviewingSectionEditors = $email->toAssignedReviewingSectionEditors($reviewerSubmission->getId());
 					if (empty($assignedEditors) && empty($reviewingSectionEditors)) {
 						$journal =& $request->getJournal();
 						$email->addRecipient($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
@@ -150,8 +150,8 @@ class ReviewerAction extends Action {
 				ArticleLog::logEvent($request, $reviewerSubmission, ARTICLE_LOG_REVIEW_RECOMMENDATION, 'log.review.reviewRecommendationSet', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getSubmissionId(), 'round' => $reviewAssignment->getRound(), 'reviewId' => $reviewAssignment->getId()));
 			} else {
 				if (!$request->getUserVar('continued')) {
-					$assignedEditors = $email->ccAssignedEditors($reviewerSubmission->getArticleId());
-					$reviewingSectionEditors = $email->toAssignedReviewingSectionEditors($reviewerSubmission->getArticleId());
+					$assignedEditors = $email->ccAssignedEditors($reviewerSubmission->getId());
+					$reviewingSectionEditors = $email->toAssignedReviewingSectionEditors($reviewerSubmission->getId());
 					if (empty($assignedEditors) && empty($reviewingSectionEditors)) {
 						$journal =& Request::getJournal();
 						$email->addRecipient($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));

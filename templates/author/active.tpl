@@ -22,7 +22,7 @@
 	<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 
 {iterate from=submissions item=submission}
-	{assign var="articleId" value=$submission->getArticleId()}
+	{assign var="articleId" value=$submission->getId()}
 	{assign var="progress" value=$submission->getSubmissionProgress()}
 
 	<tr valign="top">
@@ -55,7 +55,7 @@
 
 				{** Payment related actions *}
 				{if $status==STATUS_QUEUED_UNASSIGNED || $status==STATUS_QUEUED_REVIEW}
-					{if $submissionEnabled && !$completedPaymentDAO->hasPaidSubmission($submission->getJournalId(), $submission->getArticleId())}
+					{if $submissionEnabled && !$completedPaymentDAO->hasPaidSubmission($submission->getJournalId(), $submission->getId())}
 						<br />
 						<a href="{url op="paySubmissionFee" path="$articleId"}" class="action">{translate key="payment.submission.paySubmission"}</a>					
 					{elseif $fastTrackEnabled}
@@ -69,7 +69,7 @@
 				{elseif $status==STATUS_QUEUED_EDITING}
 					{if $publicationEnabled}
 						<br />
-						{if $completedPaymentDAO->hasPaidPublication($submission->getJournalId(), $submission->getArticleId())}
+						{if $completedPaymentDAO->hasPaidPublication($submission->getJournalId(), $submission->getId())}
 							{translate key="payment.publication.publicationPaid}
 						{else}
 						 	<a href="{url op="payPublicationFee" path="$articleId"}" class="action">{translate key="payment.publication.payPublication"}</a>

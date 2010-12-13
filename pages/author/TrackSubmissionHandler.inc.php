@@ -90,7 +90,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$templateMgr =& TemplateManager::getManager();
 
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($submission->getArticleId());
+		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($submission->getId());
 		if ($publishedArticle) {
 			$issueDao =& DAORegistry::getDAO('IssueDAO');
 			$issue =& $issueDao->getIssueById($publishedArticle->getIssueId());
@@ -362,7 +362,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		// If the copy editor has completed copyediting, disallow
 		// the author from changing the metadata.
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$initialSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $submission->getArticleId());
+		$initialSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $submission->getId());
 		if ($initialSignoff->getDateCompleted() != null || AuthorAction::saveMetadata($submission, $request)) {
  			$request->redirect(null, null, 'submission', $articleId);
  		}

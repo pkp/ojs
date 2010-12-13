@@ -498,7 +498,7 @@ class BooksForReviewPlugin extends GenericPlugin {
 			$submission =& $smarty->get_template_vars("submission");
 
 			if ($submission) {
-				$articleId = $submission->getArticleId();
+				$articleId = $submission->getId();
 				$journal =& Request::getJournal();
 				$journalId = $journal->getId();
 				$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');

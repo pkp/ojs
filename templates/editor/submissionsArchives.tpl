@@ -26,7 +26,7 @@
 	</tr>
 	
 	{iterate from=submissions item=submission}
-	{assign var="articleId" value=$submission->getArticleId()}
+	{assign var="articleId" value=$submission->getId()}
 
 	<tr valign="top" {if $submission->getFastTracked()} class="fastTracked"{/if}>
 		<td>{$articleId|escape}</td>

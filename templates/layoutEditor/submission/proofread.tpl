@@ -79,7 +79,7 @@
 				{icon name="mail" disabled="disabled"}
 			{else}
 				{translate|assign:"confirmMessage" key="common.confirmComplete"}
-				{url|assign:"url" op="layoutEditorProofreadingComplete" articleId=$submission->getArticleId()}
+				{url|assign:"url" op="layoutEditorProofreadingComplete" articleId=$submission->getId()}
 				{icon name="mail" onclick="return confirm('$confirmMessage')" url=$url}
 			{/if}
 			{$layoutEditorProofreadSignoff->getDateCompleted()|date_format:$dateFormatShort|default:""}
@@ -93,9 +93,9 @@
 {translate key="submission.proofread.corrections"}
 {if $submission->getMostRecentProofreadComment()}
 	{assign var="comment" value=$submission->getMostRecentProofreadComment()}
-	<a href="javascript:openComments('{url op="viewProofreadComments" path=$submission->getArticleId() anchor=$comment->getId()}');" class="icon">{icon name="comment"}</a>{$comment->getDatePosted()|date_format:$dateFormatShort}
+	<a href="javascript:openComments('{url op="viewProofreadComments" path=$submission->getId() anchor=$comment->getId()}');" class="icon">{icon name="comment"}</a>{$comment->getDatePosted()|date_format:$dateFormatShort}
 {else}
-	<a href="javascript:openComments('{url op="viewProofreadComments" path=$submission->getArticleId()}');" class="icon">{icon name="comment"}</a>{translate key="common.noComments"}
+	<a href="javascript:openComments('{url op="viewProofreadComments" path=$submission->getId()}');" class="icon">{icon name="comment"}</a>{translate key="common.noComments"}
 {/if}
 
 {if $currentJournal->getLocalizedSetting('proofInstructions')}

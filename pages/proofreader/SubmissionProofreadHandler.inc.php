@@ -55,7 +55,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		$templateMgr->assign('helpTopicId', 'editorial.proofreadersRole.proofreading');		
 
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($submission->getArticleId());
+		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($submission->getId());
 		if ($publishedArticle) {
 			$issueDao =& DAORegistry::getDAO('IssueDAO');
 			$issue =& $issueDao->getIssueById($publishedArticle->getIssueId());

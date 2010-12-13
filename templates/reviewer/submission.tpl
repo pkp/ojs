@@ -11,7 +11,7 @@
  * $Id$
  *}
 {strip}
-{assign var="articleId" value=$submission->getArticleId()}
+{assign var="articleId" value=$submission->getId()}
 {assign var="reviewId" value=$reviewAssignment->getId()}
 {translate|assign:"pageTitleTranslated" key="submission.page.review" id=$articleId}
 {assign var="pageCrumbTitle" value="submission.review"}

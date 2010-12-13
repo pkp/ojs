@@ -72,7 +72,7 @@ function sortSearch(heading, direction) {
 	</tr>
 	<tr><td colspan="7" class="headseparator">&nbsp;</td></tr>
 {iterate from=submissions item=submission}
-	{assign var="articleId" value=$submission->getArticleId()}
+	{assign var="articleId" value=$submission->getId()}
 	{assign var="layoutSignoff" value=$submission->getSignoff('SIGNOFF_LAYOUT')}
 
 	<tr valign="top">

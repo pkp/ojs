@@ -88,8 +88,8 @@ class LayoutEditorAction extends Action {
 		foreach ($submission->getGalleys() as $galley) {
 			$images =& $articleGalleyDao->getGalleyImages($galley->getId());
 			foreach ($images as $imageFile) {
-				if ($imageFile->getArticleId() == $submission->getArticleId() && $fileId == $imageFile->getFileId() && $imageFile->getRevision() == $revision) {
-					$articleFileManager = new ArticleFileManager($submission->getArticleId());
+				if ($imageFile->getArticleId() == $submission->getId() && $fileId == $imageFile->getFileId() && $imageFile->getRevision() == $revision) {
+					$articleFileManager = new ArticleFileManager($submission->getId());
 					$articleFileManager->deleteFile($imageFile->getFileId(), $imageFile->getRevision());
 				}
 			}
@@ -147,7 +147,7 @@ class LayoutEditorAction extends Action {
 		$userDao =& DAORegistry::getDAO('UserDAO');
 		$journal =& $request->getJournal();
 
-		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getArticleId());
+		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getId());
 		if ($layoutSignoff->getDateCompleted() != null) {
 			return true;
 		}
@@ -176,8 +176,8 @@ class LayoutEditorAction extends Action {
 		} else {
 			$user =& $request->getUser();
 			if (!$request->getUserVar('continued')) {
-				$assignedSectionEditors = $email->toAssignedEditingSectionEditors($submission->getArticleId());
-				$assignedEditors = $email->ccAssignedEditors($submission->getArticleId());
+				$assignedSectionEditors = $email->toAssignedEditingSectionEditors($submission->getId());
+				$assignedEditors = $email->ccAssignedEditors($submission->getId());
 				if (empty($assignedSectionEditors) && empty($assignedEditors)) {
 					$email->addRecipient($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 					$editorialContactName = $journal->getSetting('contactName');
@@ -192,7 +192,7 @@ class LayoutEditorAction extends Action {
 				);
 				$email->assignParams($paramArray);
 			}
-			$email->displayEditForm($request->url(null, 'layoutEditor', 'completeAssignment', 'send'), array('articleId' => $submission->getArticleId()));
+			$email->displayEditForm($request->url(null, 'layoutEditor', 'completeAssignment', 'send'), array('articleId' => $submission->getId()));
 
 			return false;
 		}
@@ -204,11 +204,11 @@ class LayoutEditorAction extends Action {
 	 */
 	function uploadLayoutVersion($submission) {
 		import('classes.file.ArticleFileManager');
-		$articleFileManager = new ArticleFileManager($submission->getArticleId());
+		$articleFileManager = new ArticleFileManager($submission->getId());
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 		$layoutEditorSubmissionDao =& DAORegistry::getDAO('LayoutEditorSubmissionDAO');
 
-		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getArticleId());
+		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getId());
 
 		$fileName = 'layoutFile';
 		if ($articleFileManager->uploadedFileExists($fileName) && !HookRegistry::call('LayoutEditorAction::uploadLayoutVersion', array(&$submission))) {

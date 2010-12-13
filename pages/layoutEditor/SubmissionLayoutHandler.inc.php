@@ -70,7 +70,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$templateMgr->assign('helpTopicId', 'editorial.layoutEditorsRole.layout');
 
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($submission->getArticleId());
+		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($submission->getId());
 		if ($publishedArticle) {
 			$issueDao =& DAORegistry::getDAO('IssueDAO');
 			$issue =& $issueDao->getIssueById($publishedArticle->getIssueId());
@@ -590,8 +590,8 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	 */
 	function _layoutEditingEnabled(&$submission) {
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$layoutEditorProofreadSignoff = $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getArticleId());
-		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getArticleId());
+		$layoutEditorProofreadSignoff = $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getId());
+		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getId());
 
 		return(($layoutSignoff->getDateNotified() != null
 			&& $layoutSignoff->getDateCompleted() == null)
