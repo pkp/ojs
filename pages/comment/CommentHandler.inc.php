@@ -120,8 +120,8 @@ class CommentHandler extends Handler {
 				// Send a notification to associated users
 				import('lib.pkp.classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
-				$articleDAO =& DAORegistry::getDAO('ArticleDAO');
-				$article =& $articleDAO->getArticle($articleId);
+				$articleDao =& DAORegistry::getDAO('ArticleDAO');
+				$article =& $articleDao->getArticle($articleId);
 				$notificationUsers = $article->getAssociatedUserIds();
 				foreach ($notificationUsers as $userRole) {
 					$url = Request::url(null, null, 'view', array($articleId, $galleyId, $parentId));

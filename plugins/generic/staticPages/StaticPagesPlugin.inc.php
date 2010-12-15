@@ -45,11 +45,11 @@ class StaticPagesPlugin extends GenericPlugin {
 			if ($this->getEnabled()) {
 				$this->import('StaticPagesDAO');
 				if (checkPhpVersion('5.0.0')) { // WARNING: see http://pkp.sfu.ca/wiki/index.php/Information_for_Developers#Use_of_.24this_in_the_constructor
-					$staticPagesDAO = new StaticPagesDAO($this->getName());
+					$staticPagesDao = new StaticPagesDAO($this->getName());
 				} else {
-					$staticPagesDAO =& new StaticPagesDAO($this->getName());
+					$staticPagesDao =& new StaticPagesDAO($this->getName());
 				}
-				$returner =& DAORegistry::registerDAO('StaticPagesDAO', $staticPagesDAO);
+				$returner =& DAORegistry::registerDAO('StaticPagesDAO', $staticPagesDao);
 
 				HookRegistry::register('LoadHandler', array(&$this, 'callbackHandleContent'));
 			}
@@ -178,8 +178,8 @@ class StaticPagesPlugin extends GenericPlugin {
 			case 'delete':
 				$journal =& Request::getJournal();
 				$staticPageId = isset($args[0])?(int) $args[0]:null;
-				$staticPagesDAO =& DAORegistry::getDAO('StaticPagesDAO');
-				$staticPagesDAO->deleteStaticPageById($staticPageId);
+				$staticPagesDao =& DAORegistry::getDAO('StaticPagesDAO');
+				$staticPagesDao->deleteStaticPageById($staticPageId);
 
 				$templateMgr->assign(array(
 					'currentUrl' => Request::url(null, null, null, array($this->getCategory(), $this->getName(), 'settings')),

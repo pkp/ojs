@@ -118,18 +118,18 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$paymentManager =& OJSPaymentManager::getManager();
 		if ( $paymentManager->submissionEnabled() || $paymentManager->fastTrackEnabled() || $paymentManager->publicationEnabled()) {
 			$templateMgr->assign('authorFees', true);
-			$completedPaymentDAO =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
+			$completedPaymentDao =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
 
-			if ( $paymentManager->submissionEnabled() ) {
-				$templateMgr->assign_by_ref('submissionPayment', $completedPaymentDAO->getSubmissionCompletedPayment ( $journal->getId(), $articleId ));
+			if ($paymentManager->submissionEnabled()) {
+				$templateMgr->assign_by_ref('submissionPayment', $completedPaymentDao->getSubmissionCompletedPayment ($journal->getId(), $articleId));
 			}
 
-			if ( $paymentManager->fastTrackEnabled()  ) {
-				$templateMgr->assign_by_ref('fastTrackPayment', $completedPaymentDAO->getFastTrackCompletedPayment ( $journal->getId(), $articleId ));
+			if ($paymentManager->fastTrackEnabled()) {
+				$templateMgr->assign_by_ref('fastTrackPayment', $completedPaymentDao->getFastTrackCompletedPayment ($journal->getId(), $articleId));
 			}
 
-			if ( $paymentManager->publicationEnabled()  ) {
-				$templateMgr->assign_by_ref('publicationPayment', $completedPaymentDAO->getPublicationCompletedPayment ( $journal->getId(), $articleId ));
+			if ($paymentManager->publicationEnabled()) {
+				$templateMgr->assign_by_ref('publicationPayment', $completedPaymentDao->getPublicationCompletedPayment ($journal->getId(), $articleId));
 			}
 		}
 

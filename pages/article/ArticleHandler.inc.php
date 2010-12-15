@@ -481,11 +481,11 @@ class ArticleHandler extends Handler {
 						/* if only pdf files are being restricted, then approve all non-pdf galleys
 						 * and continue checking if it is a pdf galley */
 						if ( $paymentManager->onlyPdfEnabled() ) {
-							$galleyDAO =& DAORegistry::getDAO('ArticleGalleyDAO');
+							$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 							if ($journal->getSetting('enablePublicGalleyId')) {
-								$galley =& $galleyDAO->getGalley($galleyId, $articleId);
+								$galley =& $galleyDao->getGalley($galleyId, $articleId);
 							} else {
-								$galley =& $galleyDAO->getGalleyByBestGalleyId($galleyId, $articleId);
+								$galley =& $galleyDao->getGalleyByBestGalleyId($galleyId, $articleId);
 							}
 							if ( $galley && !$galley->isPdfGalley() ) {
 								$this->journal =& $journal;
@@ -501,10 +501,9 @@ class ArticleHandler extends Handler {
 
 						/* if the article has been paid for then forget about everything else
 						 * and just let them access the article */
-						$completedPaymentDAO =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
+						$completedPaymentDao =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
 						$dateEndMembership = $user->getSetting('dateEndMembership', 0);
-						if ( $completedPaymentDAO->hasPaidPerViewArticle($userId, $articleId)
-							|| (!is_null($dateEndMembership) && $dateEndMembership > time()) ) {
+						if ($completedPaymentDao->hasPaidPerViewArticle($userId, $articleId) || (!is_null($dateEndMembership) && $dateEndMembership > time())) {
 							$this->journal =& $journal;
 							$this->issue =& $issue;
 							$this->article =& $publishedArticle;

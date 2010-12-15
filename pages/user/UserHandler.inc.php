@@ -85,10 +85,10 @@ class UserHandler extends Handler {
 			
 			$this->_getRoleDataForJournal($userId, $journalId, $submissionsCount, $isValid);
 			
-			$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
+			$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
 			$subscriptionsEnabled = $journal->getSetting('publishingMode') ==  PUBLISHING_MODE_SUBSCRIPTION
-				&& ($subscriptionTypeDAO->subscriptionTypesExistByInstitutional($journalId, false)
-					|| $subscriptionTypeDAO->subscriptionTypesExistByInstitutional($journalId, true)) ? true : false;
+				&& ($subscriptionTypeDao->subscriptionTypesExistByInstitutional($journalId, false)
+					|| $subscriptionTypeDao->subscriptionTypesExistByInstitutional($journalId, true)) ? true : false;
 			$templateMgr->assign('subscriptionsEnabled', $subscriptionsEnabled);
 
 			import('classes.payment.ojs.OJSPaymentManager');
@@ -125,9 +125,9 @@ class UserHandler extends Handler {
 			Request::redirect(null, 'user');
 		
 		$journalId = $journal->getId();
-		$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
-		$individualSubscriptionTypesExist = $subscriptionTypeDAO->subscriptionTypesExistByInstitutional($journalId, false);
-		$institutionalSubscriptionTypesExist = $subscriptionTypeDAO->subscriptionTypesExistByInstitutional($journalId, true);
+		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$individualSubscriptionTypesExist = $subscriptionTypeDao->subscriptionTypesExistByInstitutional($journalId, false);
+		$institutionalSubscriptionTypesExist = $subscriptionTypeDao->subscriptionTypesExistByInstitutional($journalId, true);
 		if (!$individualSubscriptionTypesExist && !$institutionalSubscriptionTypesExist) Request::redirect(null, 'user');
 
 		$user =& Request::getUser();
@@ -142,13 +142,13 @@ class UserHandler extends Handler {
 		$subscriptionAdditionalInformation = $journal->getLocalizedSetting('subscriptionAdditionalInformation');
 		// Get subscriptions and options for current journal
 		if ($individualSubscriptionTypesExist) {
-			$subscriptionDAO =& DAORegistry::getDAO('IndividualSubscriptionDAO');
-			$userIndividualSubscription =& $subscriptionDAO->getSubscriptionByUserForJournal($userId, $journalId);
+			$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+			$userIndividualSubscription =& $subscriptionDao->getSubscriptionByUserForJournal($userId, $journalId);
 		}
 
 		if ($institutionalSubscriptionTypesExist) {
-			$subscriptionDAO =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
-			$userInstitutionalSubscriptions =& $subscriptionDAO->getSubscriptionsByUserForJournal($userId, $journalId);
+			$subscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+			$userInstitutionalSubscriptions =& $subscriptionDao->getSubscriptionsByUserForJournal($userId, $journalId);
 		}
 
 		import('classes.payment.ojs.OJSPaymentManager');
@@ -588,22 +588,22 @@ class UserHandler extends Handler {
 		$subscriptionId = (int) array_shift($args);
 
 		if ($institutional == 'institutional') {
-			$subscriptionDAO =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+			$subscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 		} else {
-			$subscriptionDAO =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+			$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 		}
 
-		if (!$subscriptionDAO->subscriptionExistsByUser($subscriptionId, $userId)) Request::redirect(null, 'user');
+		if (!$subscriptionDao->subscriptionExistsByUser($subscriptionId, $userId)) Request::redirect(null, 'user');
 
-		$subscription =& $subscriptionDAO->getSubscription($subscriptionId);
+		$subscription =& $subscriptionDao->getSubscription($subscriptionId);
 		$subscriptionStatus = $subscription->getStatus();
 		import('classes.subscription.Subscription');
 		$validStatus = array(SUBSCRIPTION_STATUS_ACTIVE, SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT);
 
 		if (!in_array($subscriptionStatus, $validStatus)) Request::redirect(null, 'user'); 
 
-		$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
-		$subscriptionType =& $subscriptionTypeDAO->getSubscriptionType($subscription->getTypeId());
+		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
 
 		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_PURCHASE_SUBSCRIPTION, $user->getId(), $subscriptionId, $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
@@ -635,14 +635,14 @@ class UserHandler extends Handler {
 		$subscriptionId = (int) array_shift($args);
 
 		if ($institutional == 'institutional') {
-			$subscriptionDAO =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+			$subscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 		} else {
-			$subscriptionDAO =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+			$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 		}
 
-		if (!$subscriptionDAO->subscriptionExistsByUser($subscriptionId, $userId)) Request::redirect(null, 'user');
+		if (!$subscriptionDao->subscriptionExistsByUser($subscriptionId, $userId)) Request::redirect(null, 'user');
 
-		$subscription =& $subscriptionDAO->getSubscription($subscriptionId);
+		$subscription =& $subscriptionDao->getSubscription($subscriptionId);
 
 		if ($subscription->isNonExpiring()) Request::redirect(null, 'user'); 
 
@@ -656,8 +656,8 @@ class UserHandler extends Handler {
 
 		if (!in_array($subscriptionStatus, $validStatus)) Request::redirect(null, 'user'); 
 
-		$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
-		$subscriptionType =& $subscriptionTypeDAO->getSubscriptionType($subscription->getTypeId());
+		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
 
 		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_RENEW_SUBSCRIPTION, $user->getId(), $subscriptionId, $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);

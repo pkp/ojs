@@ -47,10 +47,10 @@ class StaticPagesSettingsForm extends Form {
 		$journalId = $this->journalId;
 		$plugin =& $this->plugin;
 
-		$staticPagesDAO =& DAORegistry::getDAO('StaticPagesDAO');
+		$staticPagesDao =& DAORegistry::getDAO('StaticPagesDAO');
 
 		$rangeInfo =& Handler::getRangeInfo('staticPages');
-		$staticPages = $staticPagesDAO->getStaticPagesByJournalId($journalId);
+		$staticPages = $staticPagesDao->getStaticPagesByJournalId($journalId);
 		$this->setData('staticPages', $staticPages);
 	}
 

@@ -14,19 +14,17 @@
  *
  */
 
-//$Id$
-
 import('classes.payment.ojs.OJSQueuedPayment');
 import('lib.pkp.classes.payment.PaymentManager');
 
-define('PAYMENT_TYPE_MEMBERSHIP',		0x000000001 );
-define('PAYMENT_TYPE_RENEW_SUBSCRIPTION',	0x000000002 );
-define('PAYMENT_TYPE_PURCHASE_ARTICLE',		0x000000003 );
-define('PAYMENT_TYPE_DONATION',			0x000000004 );
-define('PAYMENT_TYPE_SUBMISSION',		0x000000005 );
-define('PAYMENT_TYPE_FASTTRACK',		0x000000006 );
-define('PAYMENT_TYPE_PUBLICATION',		0x000000007 );
-define('PAYMENT_TYPE_PURCHASE_SUBSCRIPTION',	0x000000008 );
+define('PAYMENT_TYPE_MEMBERSHIP',		0x000000001);
+define('PAYMENT_TYPE_RENEW_SUBSCRIPTION',	0x000000002);
+define('PAYMENT_TYPE_PURCHASE_ARTICLE',		0x000000003);
+define('PAYMENT_TYPE_DONATION',			0x000000004);
+define('PAYMENT_TYPE_SUBMISSION',		0x000000005);
+define('PAYMENT_TYPE_FASTTRACK',		0x000000006);
+define('PAYMENT_TYPE_PUBLICATION',		0x000000007);
+define('PAYMENT_TYPE_PURCHASE_SUBSCRIPTION',	0x000000008);
 
 class OJSPaymentManager extends PaymentManager {
 	function &getManager() {
@@ -43,25 +41,25 @@ class OJSPaymentManager extends PaymentManager {
 	}
 
 	function &createQueuedPayment($journalId, $type, $userId, $assocId, $amount, $currencyCode = null) {
-		$journalSettingsDAO =& DAORegistry::getDAO('JournalSettingsDAO');
-		if ( is_null($currencyCode) ) $currencyCode = $journalSettingsDAO->getSetting($journalId, 'currency');
+		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		if (is_null($currencyCode)) $currencyCode = $journalSettingsDao->getSetting($journalId, 'currency');
 		$payment = new OJSQueuedPayment($amount, $currencyCode, $userId, $assocId);
 		$payment->setJournalId($journalId);
 		$payment->setType($type);
 
-	 	switch ( $type ) {
+	 	switch ($type) {
 			case PAYMENT_TYPE_PURCHASE_ARTICLE:
-				$payment->setRequestUrl(Request::url(null, 'article', 'view', $assocId ) );
+				$payment->setRequestUrl(Request::url(null, 'article', 'view', $assocId));
 				break;
 			case PAYMENT_TYPE_MEMBERSHIP:
-				$payment->setRequestUrl(Request::url(null, 'user') );
+				$payment->setRequestUrl(Request::url(null, 'user'));
 				break;
 			case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
 			case PAYMENT_TYPE_RENEW_SUBSCRIPTION:
-				$payment->setRequestUrl(Request::url(null, 'user', 'subscriptions') );
+				$payment->setRequestUrl(Request::url(null, 'user', 'subscriptions'));
 				break;
 			case PAYMENT_TYPE_DONATION:
-				$payment->setRequestUrl(Request::url(null, 'donations', 'thankYou') );
+				$payment->setRequestUrl(Request::url(null, 'donations', 'thankYou'));
 				break;
 			case PAYMENT_TYPE_FASTTRACK:
 			case PAYMENT_TYPE_PUBLICATION:
@@ -71,7 +69,7 @@ class OJSPaymentManager extends PaymentManager {
 				if ($authorSubmission->getSubmissionProgress()!=0) {
 					$payment->setRequestUrl(Request::url(null, 'author', 'submit', $authorSubmission->getSubmissionProgress(), array('articleId' => $assocId)));
 				} else {
-					$payment->setRequestUrl(Request::url(null, 'author') );
+					$payment->setRequestUrl(Request::url(null, 'author'));
 				}
 				break;
 			default:
@@ -82,7 +80,7 @@ class OJSPaymentManager extends PaymentManager {
 		return $payment;
 	}
 
-	function &createCompletedPayment( $queuedPayment, $payMethod ) {
+	function &createCompletedPayment($queuedPayment, $payMethod) {
 		import('classes.payment.ojs.OJSCompletedPayment');
 		$payment = new OJSCompletedPayment();
 		$payment->setJournalId($queuedPayment->getJournalId());
@@ -245,10 +243,10 @@ class OJSPaymentManager extends PaymentManager {
 				$returner = true;
 				break;
 			case PAYMENT_TYPE_FASTTRACK:
-				$articleDAO =& DAORegistry::getDAO('ArticleDAO');
-				$article =& $articleDAO->getArticle($queuedPayment->getAssocId(), $queuedPayment->getJournalId());
+				$articleDao =& DAORegistry::getDAO('ArticleDAO');
+				$article =& $articleDao->getArticle($queuedPayment->getAssocId(), $queuedPayment->getJournalId());
 				$article->setFastTracked(true);
-				$articleDAO->updateArticle($article);
+				$articleDao->updateArticle($article);
 				$returner = true;
 				break;
 			case PAYMENT_TYPE_PURCHASE_ARTICLE:
