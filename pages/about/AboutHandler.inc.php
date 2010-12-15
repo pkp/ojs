@@ -69,7 +69,7 @@ class AboutHandler extends Handler {
 			$about = $site->getLocalizedAbout();
 			$templateMgr->assign('about', $about);
 
-			$journals =& $journalDao->getEnabledJournals(); //Enabled Added
+			$journals =& $journalDao->getJournals(true);
 			$templateMgr->assign_by_ref('journals', $journals);
 			$templateMgr->display('about/site.tpl');
 		}
@@ -462,7 +462,7 @@ class AboutHandler extends Handler {
 
 		if ($user) {
 			$rolesByJournal = array();
-			$journals =& $journalDao->getEnabledJournals();
+			$journals =& $journalDao->getJournals(true);
 			// Fetch the user's roles for each journal
 			foreach ($journals->toArray() as $journal) {
 				$roles =& $roleDao->getRolesByUserId($user->getId(), $journal->getId());
@@ -472,7 +472,7 @@ class AboutHandler extends Handler {
 			}
 		}
 
-		$journals =& $journalDao->getEnabledJournals();
+		$journals =& $journalDao->getJournals(true);
 		$templateMgr->assign_by_ref('journals', $journals->toArray());
 		if (isset($rolesByJournal)) {
 			$templateMgr->assign_by_ref('rolesByJournal', $rolesByJournal);

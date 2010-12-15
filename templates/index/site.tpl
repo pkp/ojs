@@ -19,8 +19,13 @@
 
 {if $intro}{$intro|nl2br}{/if}
 
-{iterate from=journals item=journal}
+<a name="journals"></a>
 
+{if $useAlphalist}
+	<p>{foreach from=$alphaList item=letter}<a href="{url searchInitial=$letter sort="title"}">{if $letter == $searchInitial}<strong>{$letter|escape}</strong>{else}{$letter|escape}{/if}</a> {/foreach}<a href="{url}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
+{/if}
+
+{iterate from=journals item=journal}
 	{assign var="displayHomePageImage" value=$journal->getLocalizedSetting('homepageImage')}
 	{assign var="displayHomePageLogo" value=$journal->getLocalizedPageHeaderLogo(true)}
 	{assign var="displayPageHeaderLogo" value=$journal->getLocalizedPageHeaderLogo()}
@@ -45,6 +50,10 @@
 
 	<p><a href="{url journal=$journal->getPath()}" class="action">{translate key="site.journalView"}</a> | <a href="{url journal=$journal->getPath() page="issue" op="current"}" class="action">{translate key="site.journalCurrent"}</a> | <a href="{url journal=$journal->getPath() page="user" op="register"}" class="action">{translate key="site.journalRegister"}</a></p>
 {/iterate}
+{if $journals->wasEmpty()}
+	{translate key="site.noJournals"}
+{/if}
+
 <div id="journalListPageInfo">{page_info iterator=$journals}</div>
 <div id="journalListPageLinks">{page_links anchor="journals" name="journals" iterator=$journals}
 

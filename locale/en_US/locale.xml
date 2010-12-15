@@ -774,6 +774,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="site.journalView">View Journal</message>
 	<message key="site.journalRegister">Register</message>
 	<message key="site.journalCurrent">Current Issue</message>
+	<message key="site.noJournals">There are no journals available.</message>
 	
 
 	<!-- Current index -->

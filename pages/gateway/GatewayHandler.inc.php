@@ -107,7 +107,7 @@ class GatewayHandler extends Handler {
 
 		} else {
 			$journalDao =& DAORegistry::getDAO('JournalDAO');
-			$journals =& $journalDao->getEnabledJournals();
+			$journals =& $journalDao->getJournals(true);
 			$templateMgr->assign_by_ref('journals', $journals);
 		}
 

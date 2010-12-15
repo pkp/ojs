@@ -15,6 +15,8 @@
 <locale name="en_US" full_name = "English">
 	<message key="admin.hostedJournals">Hosted Journals</message>
 	<message key="admin.settings.journalRedirect">Journal redirect</message>
+	<message key="admin.settings.options">Options</message>
+	<message key="admin.settings.useAlphalist.description">For sites with many journals, show an alphalist on the homepage allowing for quick alphabetical navigation between journals.</message>
 	<message key="admin.settings.journalRedirectInstructions">Requests to the main site will be redirected to this journal. This may be useful if the site is hosting only a single journal, for example.</message>
 	<message key="admin.settings.noJournalRedirect">Do not redirect</message>
 	<message key="admin.languages.primaryLocaleInstructions">This will be the default language for the site and any hosted journals.</message>

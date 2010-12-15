@@ -54,7 +54,7 @@ class SearchHandler extends Handler {
 
 		if (Request::getJournal() == null) {
 			$journalDao =& DAORegistry::getDAO('JournalDAO');
-			$journals =& $journalDao->getEnabledJournalTitles();  //Enabled added
+			$journals =& $journalDao->getJournalTitles(true);
 			$templateMgr->assign('siteSearch', true);
 			$templateMgr->assign('journalOptions', array('' => Locale::Translate('search.allJournals')) + $journals);
 			$journalPath = Request::getRequestedJournalPath();

@@ -94,15 +94,21 @@
 		<td class="label">{fieldLabel name="minPasswordLength" key="admin.settings.minPasswordLength" required="true"}</td>
 		<td colspan="2" class="value"><input type="text" id="minPasswordLength" name="minPasswordLength" value="{$minPasswordLength|escape}" size="4" maxlength="2" class="textField" /> {translate key="admin.settings.passwordCharacters"}</td>
 	</tr>
-	<tr>
-		<td width="20%" valign="top" class="label">{translate key="admin.settings.siteStyleSheet"}</td>
-		<td colspan="2" width="80%" valign="top" class="value">
+	<tr valign="top">
+		<td width="20%" class="label">{translate key="admin.settings.siteStyleSheet"}</td>
+		<td colspan="2" width="80%" class="value">
 			<input type="file" name="siteStyleSheet" class="uploadField" /> <input type="submit" name="uploadSiteStyleSheet" value="{translate key="common.upload"}" class="button" />
 			{if $siteStyleFileExists}
 				<br />
 				{translate key="common.fileName"}: <a href="{$publicFilesDir}/{$styleFilename}" class="file">{$originalStyleFilename|escape}</a> {$dateStyleFileUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deleteSiteStyleSheet" value="{translate key="common.delete"}" class="button" />
 			{/if}
 		</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{translate key="admin.settings.options"}</td>
+		<td class="value" colspan="2">
+			<input type="checkbox" id="useAlphalist" name="useAlphalist" {if $useAlphalist}checked="checked" {/if}/>
+			{fieldLabel name="useAlphalist" key="admin.settings.useAlphalist.description"}
 	</tr>
 </table>
 

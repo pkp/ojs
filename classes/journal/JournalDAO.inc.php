@@ -18,6 +18,9 @@
 
 import ('classes.journal.Journal');
 
+define('JOURNAL_FIELD_TITLE', 1);
+define('JOURNAL_FIELD_SEQUENCE', 2);
+
 class JournalDAO extends DAO {
 	/**
 	 * Retrieve a journal by ID.
@@ -185,11 +188,79 @@ class JournalDAO extends DAO {
 	/**
 	 * Retrieve all journals.
 	 * @return DAOResultFactory containing matching journals
+	 * @param $enabledOnly boolean True iff only enabled jourals wanted
+	 * @param $rangeInfo object optional
+	 * @param $sortBy JOURNAL_FIELD_... optional sorting parameter
+	 * @param $searchField JOURNAL_FIELD_... optional filter parameter
+	 * @param $searchMatch string 'is', 'contains', 'startsWith' optional
+	 * @param $search string optional
 	 */
-	function &getJournals($rangeInfo = null) {
+	function &getJournals($enabledOnly = false, $rangeInfo = null, $sortBy = JOURNAL_FIELD_SEQUENCE, $searchField = null, $searchMatch = null, $search = null) {
+		$joinSql = $whereSql = $orderBySql = '';
+		$params = array();
+		$needTitleJoin = false;
+
+		// Handle sort conditions
+		switch ($sortBy) {
+			case JOURNAL_FIELD_TITLE:
+				$needTitleJoin = true;
+				$orderBySql = 'COALESCE(jsl.setting_value, jsl.setting_name)';
+				break;
+			case JOURNAL_FIELD_SEQUENCE:
+				$orderBySql = 'j.seq';
+				break;
+		}
+
+		// Handle search conditions
+		switch ($searchField) {
+			case JOURNAL_FIELD_TITLE:
+				$needTitleJoin = true;
+				$whereSql .= ($whereSql?' AND ':'') . ' COALESCE(jsl.setting_value, jsl.setting_name) ';
+				switch ($searchMatch) {
+					case 'is':
+						$whereSql .= ' = ?';
+						$params[] = $search;
+						break;
+					case 'contains':
+						$whereSql .= ' LIKE ?';
+						$params[] = "%search%";
+						break;
+					default: // $searchMatch === 'startsWith'
+						$whereSql .= ' LIKE ?';
+						$params[] = "$search%";
+						break;
+				}
+				break;
+		}
+
+		// If we need to join on the journal title (for sort or filter),
+		// include it.
+		if ($needTitleJoin) {
+			$joinSql .= ' LEFT JOIN journal_settings jspl ON (jspl.setting_name = ? AND jspl.locale = ? AND jspl.journal_id = j.journal_id) LEFT JOIN journal_settings jsl ON (jsl.setting_name = ? AND jsl.locale = ? AND jsl.journal_id = j.journal_id)';
+			$params = array_merge(
+				array(
+					'title',
+					Locale::getPrimaryLocale(),
+					'title',
+					Locale::getLocale()
+				),
+				$params
+			);
+		}
+
+		// Handle filtering conditions
+		if ($enabledOnly) $whereSql .= ($whereSql?'AND ':'') . 'j.enabled=1 ';
+
+		// Clean up SQL strings
+		if ($whereSql) $whereSql = "WHERE $whereSql";
+		if ($orderBySql) $orderBySql = "ORDER BY $orderBySql";
 		$result =& $this->retrieveRange(
-			'SELECT * FROM journals ORDER BY seq',
-			false, $rangeInfo
+			"SELECT	j.*
+			FROM	journals j
+				$joinSql
+				$whereSql
+				$orderBySql",
+			$params, $rangeInfo
 		);
 
 		$returner = new DAOResultFactory($result, $this, '_returnJournalFromRow');
@@ -201,12 +272,8 @@ class JournalDAO extends DAO {
 	 * @return array Journals ordered by sequence
 	 */
 	function &getEnabledJournals($rangeInfo = null) {
-		$result =& $this->retrieveRange(
-			'SELECT * FROM journals WHERE enabled=1 ORDER BY seq',
-			false, $rangeInfo
-		);
-
-		$returner = new DAOResultFactory($result, $this, '_returnJournalFromRow');
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
+		$returner =& $this->getJournals(true, $rangeInfo);
 		return $returner;
 	}
 
@@ -214,10 +281,10 @@ class JournalDAO extends DAO {
 	 * Retrieve the IDs and titles of all journals in an associative array.
 	 * @return array
 	 */
-	function &getJournalTitles() {
+	function &getJournalTitles($enabledOnly = false) {
 		$journals = array();
 
-		$journalIterator =& $this->getJournals();
+		$journalIterator =& $this->getJournals($enabledOnly);
 		while ($journal =& $journalIterator->next()) {
 			$journals[$journal->getId()] = $journal->getLocalizedTitle();
 			unset($journal);
@@ -232,16 +299,9 @@ class JournalDAO extends DAO {
 	 * @return array
 	 */
 	function &getEnabledJournalTitles() {
-		$journals = array();
-
-		$journalIterator =& $this->getEnabledJournals();
-		while ($journal =& $journalIterator->next()) {
-			$journals[$journal->getId()] = $journal->getLocalizedTitle();
-			unset($journal);
-		}
-		unset($journalIterator);
-
-		return $journals;
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
+		$titles =& $this->getJournalTitles(true);
+		return $titles;
 	}
 
 	/**

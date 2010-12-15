@@ -111,7 +111,7 @@ class ProfileForm extends Form {
 		$userSettingsDao =& DAORegistry::getDAO('UserSettingsDAO');
 		$userDao =& DAORegistry::getDAO('UserDAO');
 
-		$journals =& $journalDao->getEnabledJournals();
+		$journals =& $journalDao->getJournals(true);
 		$journals =& $journals->toArray();
 
 		foreach ($journals as $thisJournal) {
@@ -124,7 +124,7 @@ class ProfileForm extends Form {
 
 		$templateMgr->assign('genderOptions', $userDao->getGenderOptions());
 
-		$journals =& $journalDao->getEnabledJournals();
+		$journals =& $journalDao->getJournals(true);
 		$journals =& $journals->toArray();
 
 		$countryDao =& DAORegistry::getDAO('CountryDAO');
@@ -318,7 +318,7 @@ class ProfileForm extends Form {
 		$openAccessNotify = Request::getUserVar('openAccessNotify');
 
 		$userSettingsDao =& DAORegistry::getDAO('UserSettingsDAO');
-		$journals =& $journalDao->getEnabledJournals();
+		$journals =& $journalDao->getJournals(true);
 		$journals =& $journals->toArray();
 
 		foreach ($journals as $thisJournal) {

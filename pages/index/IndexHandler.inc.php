@@ -87,8 +87,21 @@ class IndexHandler extends Handler {
 			$templateMgr->assign('journalFilesPath', $request->getBaseUrl() . '/' . Config::getVar('files', 'public_files_dir') . '/journals/');
 
 			$rangeInfo =& Handler::getRangeInfo('journals');
-			$journals =& $journalDao->getEnabledJournals($rangeInfo);
+			$searchInitial = Request::getUserVar('searchInitial');
+			$templateMgr->assign('searchInitial', $searchInitial);
+			$templateMgr->assign('useAlphalist', $site->getSetting('useAlphalist'));
+
+			$journals =& $journalDao->getJournals(
+				true,
+				$rangeInfo,
+				$searchInitial?JOURNAL_FIELD_TITLE:JOURNAL_FIELD_SEQUENCE,
+				$searchInitial?JOURNAL_FIELD_TITLE:null,
+				$searchInitial?'startsWith':null,
+				$searchInitial
+			);
 			$templateMgr->assign_by_ref('journals', $journals);
+
+			$templateMgr->assign('alphaList', explode(' ', Locale::translate('common.alphaList')));
 
 			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
 			$templateMgr->display('index/site.tpl');

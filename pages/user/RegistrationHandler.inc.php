@@ -50,7 +50,7 @@ class RegistrationHandler extends UserHandler {
 
 		} else {
 			$journalDao =& DAORegistry::getDAO('JournalDAO');
-			$journals =& $journalDao->getEnabledJournals(); //Enabled added
+			$journals =& $journalDao->getJournals(true);
 			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign('source', Request::getUserVar('source'));
 			$templateMgr->assign_by_ref('journals', $journals);

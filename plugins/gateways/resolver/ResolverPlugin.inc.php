@@ -133,7 +133,7 @@ class ResolverPlugin extends GatewayPlugin {
 	function exportHoldings() {
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$journals =& $journalDao->getEnabledJournals();
+		$journals =& $journalDao->getJournals(true);
 		header('content-type: text/plain');
 		header('content-disposition: attachment; filename=holdings.txt');
 		echo "title\tissn\te_issn\tstart_date\tend_date\tembargo_months\tembargo_days\tjournal_url\tvol_start\tvol_end\tiss_start\tiss_end\n";

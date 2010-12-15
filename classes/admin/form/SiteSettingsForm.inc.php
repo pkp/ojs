@@ -19,7 +19,6 @@
 import('lib.pkp.classes.admin.form.PKPSiteSettingsForm');
 
 class SiteSettingsForm extends PKPSiteSettingsForm {
-
 	/**
 	 * Constructor.
 	 */
@@ -36,6 +35,36 @@ class SiteSettingsForm extends PKPSiteSettingsForm {
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('redirectOptions', $journals);
 		return parent::display();
+	}
+
+	/**
+	 * Initialize the form from the current settings.
+	 */
+	function initData() {
+		parent::initData();
+
+		$siteDao =& DAORegistry::getDAO('SiteDAO');
+		$site =& $siteDao->getSite();
+
+		$this->_data['useAlphalist'] = $site->getSetting('useAlphalist');
+	}
+
+	/**
+	 * Assign user-submitted data to form.
+	 */
+	function readInputData() {
+		$this->readUserVars(array('useAlphalist'));
+		return parent::readInputData();
+	}
+
+	/**
+	 * Save the from parameters.
+	 */
+	function execute() {
+		parent::execute();
+
+		$siteSettingsDao =& $this->siteSettingsDao;
+		$siteSettingsDao->updateSetting('useAlphalist', (boolean) $this->getData('useAlphalist'), 'bool');
 	}
 }
 

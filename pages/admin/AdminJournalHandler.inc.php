@@ -34,7 +34,7 @@ class AdminJournalHandler extends AdminHandler {
 		$rangeInfo = Handler::getRangeInfo('journals');
 
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journals =& $journalDao->getJournals($rangeInfo);
+		$journals =& $journalDao->getJournals(false, $rangeInfo);
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->addJavaScript('lib/pkp/js/lib/jquery/plugins/jquery.tablednd.js');
