@@ -421,6 +421,13 @@ a.largeFont:hover {
 	color: none;
 }
 
+#journalListPageInfo {
+	float: right;
+}
+
+#journalListPageLinks {
+	float: left;
+}
 
 
 /* @group Tag-it */

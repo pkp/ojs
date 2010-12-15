@@ -200,13 +200,14 @@ class JournalDAO extends DAO {
 	 * Retrieve all enabled journals
 	 * @return array Journals ordered by sequence
 	 */
-	function &getEnabledJournals() {
-		$result =& $this->retrieve(
-			'SELECT * FROM journals WHERE enabled=1 ORDER BY seq'
+	function &getEnabledJournals($rangeInfo = null) {
+		$result =& $this->retrieveRange(
+			'SELECT * FROM journals WHERE enabled=1 ORDER BY seq',
+			false, $rangeInfo
 		);
 
-		$resultFactory = new DAOResultFactory($result, $this, '_returnJournalFromRow');
-		return $resultFactory;
+		$returner = new DAOResultFactory($result, $this, '_returnJournalFromRow');
+		return $returner;
 	}
 
 	/**

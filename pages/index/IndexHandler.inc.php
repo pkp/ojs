@@ -85,8 +85,11 @@ class IndexHandler extends Handler {
 
 			$templateMgr->assign('intro', $site->getLocalizedIntro());
 			$templateMgr->assign('journalFilesPath', $request->getBaseUrl() . '/' . Config::getVar('files', 'public_files_dir') . '/journals/');
-			$journals =& $journalDao->getEnabledJournals();
+
+			$rangeInfo =& Handler::getRangeInfo('journals');
+			$journals =& $journalDao->getEnabledJournals($rangeInfo);
 			$templateMgr->assign_by_ref('journals', $journals);
+
 			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
 			$templateMgr->display('index/site.tpl');
 		}
