@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2010 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.reports.subscriptions.displayName">Subscriptions Report</message>
+	<message key="plugins.reports.subscriptions.description">This plugin implements a CSV report containing a list of subscriptions and their info.</message>
+	<message key="plugins.reports.subscriptions.individualSubscriptions">Individual Subscriptions</message>
+	<message key="plugins.reports.subscriptions.institutionalSubscriptions">Institutional Subscriptions</message>
+	<message key="plugins.reports.subscriptions.subscriptionId">ID</message>
+	<message key="plugins.reports.subscriptions.status">Status</message>
+	<message key="plugins.reports.subscriptions.type">Type</message>
+	<message key="plugins.reports.subscriptions.format">Format</message>
+	<message key="plugins.reports.subscriptions.dateStart">Start</message>
+	<message key="plugins.reports.subscriptions.dateEnd">End</message>
+	<message key="plugins.reports.subscriptions.membership">Membership</message>
+	<message key="plugins.reports.subscriptions.referenceNumber">Reference #</message>
+	<message key="plugins.reports.subscriptions.notes">Notes</message>
+	<message key="plugins.reports.subscriptions.name">User Name</message>
+	<message key="plugins.reports.subscriptions.mailingAddress">Mailing Address</message>
+	<message key="plugins.reports.subscriptions.country">Country</message>
+	<message key="plugins.reports.subscriptions.email">Email</message>
+	<message key="plugins.reports.subscriptions.phone">Phone</message>
+	<message key="plugins.reports.subscriptions.fax">Fax</message>
+	<message key="plugins.reports.subscriptions.institutionName">Institution Name</message>
+	<message key="plugins.reports.subscriptions.institutionMailingAddress">Institution Mailing Address</message>
+	<message key="plugins.reports.subscriptions.domain">Domain</message>
+	<message key="plugins.reports.subscriptions.ipRanges">IP Ranges</message>
+	<message key="plugins.reports.subscriptions.contact">Contact Name</message>
+</locale>
