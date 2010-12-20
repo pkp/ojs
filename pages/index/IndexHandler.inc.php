@@ -86,7 +86,13 @@ class IndexHandler extends Handler {
 			$templateMgr->assign('intro', $site->getLocalizedIntro());
 			$templateMgr->assign('journalFilesPath', $request->getBaseUrl() . '/' . Config::getVar('files', 'public_files_dir') . '/journals/');
 
-			$rangeInfo =& Handler::getRangeInfo('journals');
+			// If we're using paging, fetch the parameters
+			$usePaging = $site->getSetting('usePaging');
+			if ($usePaging) $rangeInfo =& Handler::getRangeInfo('journals');
+			else $rangeInfo = null;
+			$templateMgr->assign('usePaging', $usePaging);
+
+			// Fetch the alpha list parameters
 			$searchInitial = Request::getUserVar('searchInitial');
 			$templateMgr->assign('searchInitial', $searchInitial);
 			$templateMgr->assign('useAlphalist', $site->getSetting('useAlphalist'));

@@ -47,13 +47,14 @@ class SiteSettingsForm extends PKPSiteSettingsForm {
 		$site =& $siteDao->getSite();
 
 		$this->_data['useAlphalist'] = $site->getSetting('useAlphalist');
+		$this->_data['usePaging'] = $site->getSetting('usePaging');
 	}
 
 	/**
 	 * Assign user-submitted data to form.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('useAlphalist'));
+		$this->readUserVars(array('useAlphalist', 'usePaging'));
 		return parent::readInputData();
 	}
 
@@ -65,6 +66,7 @@ class SiteSettingsForm extends PKPSiteSettingsForm {
 
 		$siteSettingsDao =& $this->siteSettingsDao;
 		$siteSettingsDao->updateSetting('useAlphalist', (boolean) $this->getData('useAlphalist'), 'bool');
+		$siteSettingsDao->updateSetting('usePaging', (boolean) $this->getData('usePaging'), 'bool');
 	}
 }
 

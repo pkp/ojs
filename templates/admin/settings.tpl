@@ -105,10 +105,16 @@
 		</td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{translate key="admin.settings.options"}</td>
+		<td rowspan="2" class="label">{translate key="admin.settings.options"}</td>
 		<td class="value" colspan="2">
 			<input type="checkbox" id="useAlphalist" name="useAlphalist" {if $useAlphalist}checked="checked" {/if}/>
-			{fieldLabel name="useAlphalist" key="admin.settings.useAlphalist.description"}
+			{fieldLabel name="useAlphalist" key="admin.settings.useAlphalist"}
+	</tr>
+	<tr valign="top">
+		<td class="value" colspan="2">
+			<input type="checkbox" id="usePaging" name="usePaging" {if $usePaging}checked="checked" {/if}/>
+			{fieldLabel name="usePaging" key="admin.settings.usePaging"}
+		</td>
 	</tr>
 </table>
 
