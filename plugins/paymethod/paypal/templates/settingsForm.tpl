@@ -1,5 +1,5 @@
 {**
- * @file settingsForm.tpl
+ * settingsForm.tpl
  *
  * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
