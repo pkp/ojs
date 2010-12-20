@@ -1,5 +1,5 @@
 {**
- * settingsForm.tpl
+ * plugins/generic/openAds/settingsForm.tpl
  *
  * Copyright (c) 2003-2009 Siavash Miri and Alec Smecher
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
