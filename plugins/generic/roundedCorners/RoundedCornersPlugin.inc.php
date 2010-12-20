@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file RoundedCornersPlugin.inc.php
+ * @file plugins/generic/roundedCorners/RoundedCornersPlugin.inc.php
  *
  * Copyright (c) 2007-2009 Juan Pablo Alperin, Gunther Eysenbach
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
