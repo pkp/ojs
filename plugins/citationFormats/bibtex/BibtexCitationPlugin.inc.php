@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file BibtexCitationPlugin.inc.php
+ * @file plugins/citationFormats/bibtex/BibtexCitationPlugin.inc.php
  *
  * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.

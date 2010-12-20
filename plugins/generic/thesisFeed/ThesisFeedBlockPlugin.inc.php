@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file ThesisFeedBlockPlugin.inc.php
+ * @file plugins/generic/thesisFeed/ThesisFeedBlockPlugin.inc.php
  *
  * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.

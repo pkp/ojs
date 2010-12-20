@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file OpenAdsBlockPlugin.inc.php
+ * @file plugins/generic/openAds/OpenAdsBlockPlugin.inc.php
  *
  * Copyright (c) 2003-2009 Siavash Miri and Alec Smecher
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file GroupHandler.inc.php
+ * @file pages/manager/GroupHandler.inc.php
  *
  * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file TranslatorPlugin.inc.php
+ * @file plugins/generic/translator/TranslatorPlugin.inc.php
  *
  * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.

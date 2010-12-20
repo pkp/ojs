@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file UserExportDom.inc.php
+ * @file plugins/importexport/users/UserExportDom.inc.php
  *
  * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
