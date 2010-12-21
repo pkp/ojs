@@ -442,12 +442,12 @@ class SectionEditorSubmissionDAO extends DAO {
 				scf.date_completed as copyedit_completed,
 				spr.date_completed as proofread_completed,
 				sle.date_completed as layout_completed,
-				COALESCE(atl.setting_value, atpl.setting_value) AS submission_title,
+				SUBSTRING(COALESCE(atl.setting_value, atpl.setting_value) FROM 1 FOR 255) AS submission_title,
 				aap.last_name AS author_name,
 				e.can_review AS can_review,
 				e.can_edit AS can_edit,
-				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
-				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev,
+				SUBSTRING(COALESCE(stl.setting_value, stpl.setting_value) FROM 1 FOR 255) AS section_title,
+				SUBSTRING(COALESCE(sal.setting_value, sapl.setting_value) FROM 1 FOR 255) AS section_abbrev,
 				r2.review_revision
 			FROM	articles a
 				LEFT JOIN authors aa ON (aa.submission_id = a.article_id)
@@ -788,7 +788,7 @@ class SectionEditorSubmissionDAO extends DAO {
 				MAX(ac.date_notified) AS latest,
 				AVG(ac.date_completed-ac.date_notified) AS average
 			FROM	users u
-			  LEFT JOIN review_assignments ra ON (ra.reviewer_id = u.user_id)
+				LEFT JOIN review_assignments ra ON (ra.reviewer_id = u.user_id)
 				LEFT JOIN review_assignments ac ON (ac.reviewer_id = u.user_id AND ac.date_completed IS NOT NULL)
 				LEFT JOIN review_assignments ai ON (ai.reviewer_id = u.user_id AND ai.date_completed IS NULL)
 				LEFT JOIN review_assignments ar ON (ar.reviewer_id = u.user_id AND ar.cancelled = 0 AND ar.submission_id = ? AND ar.round = ?)

@@ -91,8 +91,8 @@ class PublishedArticleDAO extends DAO {
 		$sql = 'SELECT DISTINCT
 				pa.*,
 				a.*,
-				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
-				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev,
+				SUBSTRING(COALESCE(stl.setting_value, stpl.setting_value) FROM 1 FOR 255) AS section_title,
+				SUBSTRING(COALESCE(sal.setting_value, sapl.setting_value) FROM 1 FOR 255) AS section_abbrev,
 				COALESCE(o.seq, s.seq) AS section_seq,
 				pa.seq
 			FROM	published_articles pa,
@@ -249,8 +249,8 @@ class PublishedArticleDAO extends DAO {
 			'SELECT DISTINCT
 				pa.*,
 				a.*,
-				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
-				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev,
+				SUBSTRING(COALESCE(stl.setting_value, stpl.setting_value) FROM 1 FOR 255) AS section_title,
+				SUBSTRING(COALESCE(sal.setting_value, sapl.setting_value) FROM 1 FOR 255) AS section_abbrev,
 				s.abstracts_not_required AS abstracts_not_required,
 				s.hide_title AS section_hide_title,
 				s.hide_author AS section_hide_author,

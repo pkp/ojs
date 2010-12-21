@@ -142,9 +142,9 @@ class AuthorDAO extends PKPAuthorDAO {
 				aa.first_name,
 				aa.middle_name,
 				aa.last_name,
-				asl.setting_value AS affiliation_l,
+				SUBSTRING(asl.setting_value FROM 1 FOR 255) AS affiliation_l,
 				asl.locale,
-				aspl.setting_value AS affiliation_pl,
+				SUBSTRING(aspl.setting_value FROM 1 FOR 255) AS affiliation_pl,
 				aspl.locale AS primary_locale,
 				aa.country
 			FROM	authors aa
