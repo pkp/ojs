@@ -7,13 +7,11 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PaymentSettingsForm
- * @ingroup payments 
+ * @ingroup payments
  *
  * @brief Form for managers to modify Payment costs and settings
  *
  */
-
-// $Id$
 
 import('lib.pkp.classes.form.Form');
 
@@ -54,6 +52,10 @@ class PaymentSettingsForm extends Form {
 						  	'purchaseArticleFee' => 'float',
 							'purchaseArticleFeeName' => 'string',
 							'purchaseArticleFeeDescription' => 'string',
+							'purchaseIssueFeeEnabled' => 'bool',
+							'purchaseIssueFee' => 'float',
+							'purchaseIssueFeeName' => 'string',
+							'purchaseIssueFeeDescription' => 'string',
 							'membershipFeeEnabled' => 'bool',
 							'membershipFee' => 'float',
 							'membershipFeeName' => 'string',
@@ -70,6 +72,7 @@ class PaymentSettingsForm extends Form {
 		$this->addCheck(new FormValidatorCustom($this, 'publicationFee', 'optional', 'manager.payment.form.numeric', create_function('$publicationFee', 'return is_numeric($publicationFee) && $publicationFee >= 0;')));
 		$this->addCheck(new FormValidatorCustom($this, 'fastTrackFee', 'optional', 'manager.payment.form.numeric', create_function('$fastTrackFee', 'return is_numeric($fastTrackFee) && $fastTrackFee >= 0;')));
 		$this->addCheck(new FormValidatorCustom($this, 'purchaseArticleFee', 'optional', 'manager.payment.form.numeric', create_function('$purchaseArticleFee', 'return is_numeric($purchaseArticleFee) && $purchaseArticleFee >= 0;')));
+		$this->addCheck(new FormValidatorCustom($this, 'purchaseIssueFee', 'optional', 'manager.payment.form.numeric', create_function('$purchaseIssueFee', 'return is_numeric($purchaseIssueFee) && $purchaseIssueFee >= 0;')));
 		$this->addCheck(new FormValidatorCustom($this, 'membershipFee', 'optional', 'manager.payment.form.numeric', create_function('$membershipFee', 'return is_numeric($membershipFee) && $membershipFee >= 0;')));
 
 		// grab valid currencies and add Validator
@@ -90,7 +93,23 @@ class PaymentSettingsForm extends Form {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('submissionFeeName', 'submissionFeeDescription', 'publicationFeeName', 'publicationFeeDescription', 'waiverPolicy', 'fastTrackFeeName', 'fastTrackFeeDescription', 'purchaseArticleFeeName', 'purchaseArticleFeeDescription', 'membershipFeeName', 'membershipFeeDescription', 	'donationFeeName', 'donationFeeDescription');
+		return array(
+			'submissionFeeName',
+			'submissionFeeDescription',
+			'publicationFeeName',
+			'publicationFeeDescription',
+			'waiverPolicy',
+			'fastTrackFeeName',
+			'fastTrackFeeDescription',
+			'purchaseArticleFeeName',
+			'purchaseArticleFeeDescription',
+			'purchaseIssueFeeName',
+			'purchaseIssueFeeDescription',
+			'membershipFeeName',
+			'membershipFeeDescription',
+			'donationFeeName',
+			'donationFeeDescription'
+		);
 	}
 
 	/**

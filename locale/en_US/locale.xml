@@ -9,9 +9,8 @@
   *
   * Localization strings for the en_US (U.S. English) locale.
   *
-  * $Id$
   -->
- 
+
 <locale name="en_US" full_name="U.S. English">
 	<!--
 	 * This file is organized into several major sections, separated
@@ -42,9 +41,9 @@
 	<message key="submission.reviewFormResponse">Review Form Response</message>
 
 
-	<message key="reviewer.article.enterReviewForm">Click on icon to fill in the review form.</message>	
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Please fill in required fields.</message>	
-	
+	<message key="reviewer.article.enterReviewForm">Click on icon to fill in the review form.</message>
+	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Please fill in required fields.</message>
+
 	<!-- review forms end -->
 
 	<!--
@@ -63,13 +62,13 @@
 	<message key="common.journalHomepageImage.altText">Journal Homepage Image</message>
 
 	<!-- Common Form Messages -->
-	
+
 	<!-- Common Email Messages -->
 
 	<!-- Common Localization Terms -->
 
 	<!-- Common Error Messages -->
-		
+
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Journal Help</message>
 	<message key="navigation.archives">Archives</message>
@@ -82,7 +81,7 @@
 	<message key="navigation.competingInterestGuidelines">Competing Interest Guidelines</message>
 	<message key="navigation.infoForAuthors.long">Information For Authors</message>
 	<message key="navigation.infoForLibrarians.long">Information For Librarians</message>
-	
+
 	<!-- Article Queues -->
 	<message key="common.queue.long.submissionsUnassigned">Unassigned</message>
 	<message key="common.queue.short.submissionsUnassigned">Unassigned</message>
@@ -96,7 +95,7 @@
 	<message key="common.queue.short.active">Active</message>
 	<message key="common.queue.long.completed">Archive</message>
 	<message key="common.queue.short.completed">Archive</message>
-	
+
 	<!--
 	 *
 	 * ENTITIES - This section contains terms pertaining to the system's
@@ -170,7 +169,7 @@
 	<message key="submission.proofreading">Proofreading</message>
 	<message key="submission.scheduling">Scheduling</message>
 	<message key="submission.scheduledIn">Scheduled for publication in {$issueName}.</message>
-	<message key="submission.scheduledIn.tba">(TBA)</message>	
+	<message key="submission.scheduledIn.tba">(TBA)</message>
 	<message key="submissions.sec">Sec</message>
 	<message key="submissions.step1">Step 1</message>
 	<message key="submissions.step3">Step 3</message>
@@ -193,7 +192,7 @@
 	<message key="submissions.proofreadingComplete">Proofread</message>
 
 	<!-- Submission Notes -->
-	
+
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">Current Issue</message>
 	<message key="journal.journals">Journals</message>
@@ -230,7 +229,7 @@
 	<message key="user.role.proofreaders">Proofreaders</message>
 	<message key="user.role.authors">Authors</message>
 	<message key="user.role.subscriptionManagers">Subscription Managers</message>
-	
+
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">Issue</message>
 	<message key="issue.issues">Issues</message>
@@ -244,6 +243,10 @@
 	<message key="issue.toc">Table of Contents</message>
 	<message key="issue.abstract">Abstract</message>
 	<message key="issue.coverPage.altText">Cover Page</message>
+	<message key="issue.fullIssue">Full Issue</message>
+	<message key="issue.nonpdf.title">Issue Download</message>
+	<message key="issue.viewIssue">View Issue</message>
+	<message key="issue.viewIssueDescription">View or download the full issue</message>
 
 	<!-- Common Subscription Type Terms -->
 	<message key="subscriptionTypes.currency">Currency</message>
@@ -284,15 +287,15 @@
 	<message key="submission.event.author.authorRevision">Author revision submitted</message>
 
 	<message key="submission.event.general.authorRevision">Author revision file updated</message>
-	
+
 	<message key="submission.event.editor.editorAssigned">Editor assigned to submission</message>
 	<message key="submission.event.editor.editorUnassigned">Editor unassigned from submission</message>
 	<message key="submission.event.editor.editorDecision">Editor decision submitted</message>
 	<message key="submission.event.editor.editorFile">Editor file updated</message>
 	<message key="submission.event.editor.submissionArchived">Submission sent to archive</message>
 	<message key="submission.event.editor.submissionRestored">Submission restored from archive</message>
-	
-	
+
+
 	<message key="submission.event.copyedit.copyeditorAssigned">Copyeditor assigned to submission</message>
 	<message key="submission.event.copyedit.copyeditorUnassigned">Copyeditor unassigned from submission</message>
 	<message key="submission.event.copyedit.copyeditInitiated">Copyedit assignment initiated</message>
@@ -300,13 +303,13 @@
 	<message key="submission.event.copyedit.copyeditInitialCompleted">Initial copyedit completed</message>
 	<message key="submission.event.copyedit.copyeditFinalCompleted">Final copyedit completed</message>
 	<message key="submission.event.copyedit.copyeditSetFile">Copyedit file updated</message>
-	
+
 	<message key="submission.event.proofread.proofreaderAssigned">Proofreader assigned to submission</message>
 	<message key="submission.event.proofread.proofreaderUnassigned">Proofreader unassigned from submission</message>
 	<message key="submission.event.proofread.proofreadInitiated">Proofread assignment initiated</message>
 	<message key="submission.event.proofread.proofreadRevision">Proofreader revisions file updated</message>
 	<message key="submission.event.proofread.proofreadCompleted">Proofread assignment completed</message>
-	
+
 	<message key="submission.event.layout.layoutEditorAssigned">Layout editor assigned to submission</message>
 	<message key="submission.event.layout.layoutEditorUnassigned">Layout editor unassigned from submission</message>
 	<message key="submission.event.layout.layoutInitiated">Layout assignment initiated</message>
@@ -321,7 +324,7 @@
 
 	<!-- Reader article view -->
 	<message key="reader.subscribersOnly">Subscribers Only</message>
-	<message key="reader.subscriptionRequiredLoginText">Subscription required to access item. To verify subscription, log in to journal.</message>  
+	<message key="reader.subscriptionRequiredLoginText">Subscription required to access item. To verify subscription, log in to journal.</message>
 	<message key="reader.openAccess">Open Access</message>
 	<message key="reader.subscriptionAccess">Subscription Access</message>
 	<message key="reader.subscriptionOrFeeAccess">Subscription or Fee Access</message>
@@ -331,15 +334,15 @@
 	<message key="comments.authenticated"><![CDATA[by <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
 
 	<!-- Site Administration -->
-	
+
 	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[To have the contents of all journals hosted on this site indexed within a globally distributed system of research databases, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">register</a> your site's URL with the Public Knowledge Project metadata <a href="http://pkp.sfu.ca/harvester/" target="_blank">harvester</a>. This tool collects the metadata from each indexed item in this journal, enabling accurate and collective searching among the research sites that adhere to the <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
 <br /><br />
 <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Click here</a> and enter <span class="highlight">{$siteUrl}</span> under <strong>Site URL</strong>, and <span class="highlight">{$oaiUrl}</span> under <strong>Base URL for OAI Archive</strong>.
 <br /><br />
 Note that the OAI interface can be disabled for this site by editing the OJS system configuration. Future versions of OJS will allow the OAI interface to be enabled or disabled for individual journals within the site.]]></message>
 
-	
-	
+
+
 	<!-- Languages -->
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Downloading language packs from the Public Knowledge Project web server is not currently available because:</p>
 	<ul>
@@ -352,29 +355,29 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 <ul>
 	<li>If a user attempts to register a new account with this site with a username that exists on the authentication source (but not in the OJS database), the registration attempt is only allowed if the supplied password is valid for that user account.</li>
 </ul>]]></message>
-	
+
 	<!-- System Information -->
 	<message key="admin.editSystemConfigInstructions"><![CDATA[Use this form to modify your system configuration (the <tt>config.inc.php</tt> file). Click Save to save your new configuration, or "Display" to simply display the updated configuration file and not modify your existing configuration.
 <br /><br />
 <span class="formError">Warning: Modifying these settings can potentially leave your site in an inaccessible state (requiring your configuration file to be manually fixed). It is strongly recommended that you do not make any changes unless you know exactly what you are doing.</span>]]></message>
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NOTE!</div>
 <p>The system could not automatically overwrite the configuration file. To apply your configuration changes you must open <tt>config.inc.php</tt> in a suitable text editor and replace its contents with the contents of the text field below.</p>]]></message>
-	
 
-	<!-- Site Administrator Merge Users -->	
+
+	<!-- Site Administrator Merge Users -->
 
 	<!-- Subscription Management -->
 	<message key="subscriptionManager.subscriptionManagement">Subscription Management</message>
 	<message key="subscriptionManager.individualSubscriptions">Individual Subscriptions</message>
 	<message key="subscriptionManager.institutionalSubscriptions">Institutional Subscriptions</message>
 	<message key="subscriptionManager.subscriptionTypes">Subscription Types</message>
-	
+
 	<!-- Journal Management -->
 
 	<!-- Statistics & Reports -->
 
 	<!-- Plugin Management -->
-	
+
 	<!-- Payment Management -->
 
 	<!-- General plugin information -->
@@ -389,7 +392,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<!-- Files Browser -->
 
 	<!-- Journal Setup -->
-	
+
 	<!-- Setup Step 1 -->
 
 	<!-- Setup Step 2 -->
@@ -402,7 +405,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems supports the <a href="http://lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) system to ensure a secure and permanent archive for the journal. LOCKSS is open source software developed at Stanford University Library that enables libraries to preserve selected web journals by regularly polling registered journal websites for newly published content and archiving it. Each archive is continually validated against other library caches, and if content is found to be corrupted or lost, the other caches or the journal is used to restore it.
 <br /><br />
 Setting up LOCKSS support for Open Journal Systems does not need to take place until after publishing is fully underway, at which point follow these two steps:]]></message>
-	
+
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Proposed Creative Commons Copyright Notices</h3>
 <h4>1. Proposed Policy for Journals That Offer Open Access</h4>
@@ -440,7 +443,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<!-- Setup Step 5 -->
 
 	<!-- Languages -->
-	
+
 	<!-- Section Management -->
 
 	<!-- Import/Export -->
@@ -462,7 +465,7 @@ You may optionally provide the user with a reason for disabling their account.</
 	]]></message>
 
 
-	
+
 	<!-- Email Management -->
 
 	<!-- Subscription Policy Management -->
@@ -490,7 +493,7 @@ You may optionally provide the user with a reason for disabling their account.</
 	<!-- Live Issues -->
 
 	<!-- Navigation sidebar menu -->
-	
+
 	<!-- Used by editor in submission review / editing -->
 	<message key="editor.article.selectReviewerNotes"><![CDATA[Name links to reviewer's profile.<br/>
 Ratings is out of 5 (Excellent).<br/>
@@ -502,7 +505,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 
 
 
-	
+
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Active Editorial Assignments</message>
 	<message key="sectionEditor.completedEditorialAssignments">Completed Editorial Assignments</message>
@@ -533,12 +536,12 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="layoutEditor.galley.replaceGalley">Replace File</message>
 	<message key="layoutEditor.galley.uploadSuppFile">Upload supplementary file</message>
 	<message key="submission.layout.imageInvalid">Invalid image format. Accepted formats are .gif, .jpg, and .png.</message>
-	
+
 	<!-- Reviewer -->
 	<message key="reviewer.pendingReviews">Articles Pending Review</message>
 	<message key="reviewer.completedReviews">Done</message>
 	<message key="reviewer.averageQuality">Rating</message>
-	
+
 	<!-- Used in submission review -->
 	<message key="reviewer.article.fileToBeReviewed">File to be reviewed</message>
 	<message key="reviewer.article.notifyTheEditor">Notify The Editor</message>
@@ -590,7 +593,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="copyeditor.article.copyeditorFile">Copyeditor File</message>
 	<message key="copyeditor.article.uploadedFile">Uploaded File</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Copyeditor File</message>
-	
+
 	<!-- Proofreader -->
 	<message key="proofreader.noProofreadingAssignments">No Proofreading Assignments</message>
 
@@ -599,9 +602,9 @@ Active is how many reviews are currently being considered or underway.]]></messa
 
 	<!-- Article Submission Step 1 -->
 
-	
+
 	<!-- Article Submission Step 2 -->
-	
+
 	<!-- Article Submission Step 3 -->
 	<message key="author.submit.uploadInstructions"><![CDATA[
 <p>To upload a manuscript to this journal, complete the following steps.</p>
@@ -614,9 +617,9 @@ Active is how many reviews are currently being considered or underway.]]></messa
 </ol>]]></message>
 
 	<!-- Article Submission Step 4 -->
-	
+
 	<!-- Article Submission Step 4a: Supplementary Files -->
-	
+
 	<!-- Article Submission Step 5 -->
 
 	<!-- Used in submission review / editing -->
@@ -634,7 +637,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="submission.copyedit.useFile">Use File</message>
 	<message key="submission.copyedit.copyeditComments">Copyedit Comments</message>
 	<message key="submission.copyedit.instructions">Copyedit Instructions</message>
-	
+
 	<!-- Submission Tracking - Layout Specific -->
 	<message key="submission.layout.noLayoutFile">None (Upload final copyedit version as Layout Version prior to sending request)</message>
 	<message key="submission.layout.publicGalleyId">Public Galley Identifier</message>
@@ -644,15 +647,15 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="submission.layout.layoutComments">Layout Comments</message>
 	<message key="submission.layout.instructions">Layout Instructions</message>
 	<message key="submission.layout.referenceLinking">Reference Linking</message>
-	
-	
+
+
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Proofreading Comments</message>
 	<message key="submission.proofread.corrections">Proofreading Corrections</message>
 	<message key="submission.proofread.instructions">Proofing Instructions</message>
 
 	<!-- Submission History -->
-	
+
 	<message key="submission.logType.article">Article</message>
 	<message key="submission.logType.author">Author</message>
 	<message key="submission.logType.editor">Editor</message>
@@ -660,11 +663,11 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="submission.logType.copyedit">Copyedit</message>
 	<message key="submission.logType.layout">Layout</message>
 	<message key="submission.logType.proofread">Proofread</message>
-	
+
 	<!-- Submission Event Log -->
 
 	<!-- Submission Email Log -->
-	
+
 	<!-- Submission Comments -->
 	<message key="submission.comments.editorAuthorCorrespondence">Editor/Author Correspondence</message>
 	<message key="submission.comments.copyeditComments">Copyedit Comments</message>
@@ -677,12 +680,12 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="submission.comments.forEditor">For editor</message>
 	<message key="submission.comments.saveAndEmailAuthor">Save and Email Author</message>
 	<message key="submission.comments.saveAndEmailEditor">Save and Email Editor</message>
-	
+
 	<!-- Login -->
 	<message key="user.login.registerNewAccount">Not a user? Register with this site</message>
 	<message key="user.login.resetPasswordInstructions"><![CDATA[For security reasons, this system emails a reset password to registered users, rather than recalling the 
 current password.<br /><br />Enter your email address below to reset your password. A confirmation will be sent to this email address.]]></message>
-	
+
 	<!-- Registration -->
 	<message key="user.register.selectJournal">Select a journal to register with</message>
 	<message key="user.register.noJournals">There are no journals you may register with on this site.</message>
@@ -698,7 +701,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="user.register.reviewerDescriptionNoInterests">Willing to conduct peer review of submissions to the journal.</message>
 	<message key="user.register.reviewerDescription">Willing to conduct peer review of submissions to the press.</message>
 	<message key="user.register.reviewerInterests">Identify reviewing interests (substantive areas and research methods):</message>
-	
+
 	<!-- Subscriptions -->
 	<message key="user.subscriptions.mySubscriptions">My Subscriptions</message>
 	<message key="user.subscriptions.subscriptionStatus">Subscription Status</message>
@@ -764,18 +767,17 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="article.pdf.download">Download this PDF file</message>
 	<message key="article.pdf.pluginMissing"><![CDATA[<p>The PDF file you selected should load here if your Web browser has a PDF reader plug-in installed (for example, a recent version of <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Alternatively, you can also download the PDF file directly to your computer, from where it can be opened using a PDF reader. To download the PDF, click the Download link below.</p> <p>If you would like more information about how to print, save, and work with PDFs, Highwire Press provides a helpful <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions about PDFs</a>.</p>]]></message>
 
-	
+
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Article Download</message>
 	<message key="article.nonpdf.note"><![CDATA[The file you selected should begin downloading automatically. If it does not, click the link below. Note that this file may require a special viewer or plugin to view.<br /><br />If the file does not download automatically, <a href="{$url}">click here</a>.]]></message>
-	
+
 	<!-- Site index -->
 	<message key="site.journalsHosted">Journals hosted on this site</message>
 	<message key="site.journalView">View Journal</message>
 	<message key="site.journalRegister">Register</message>
 	<message key="site.journalCurrent">Current Issue</message>
 	<message key="site.noJournals">There are no journals available.</message>
-	
 
 	<!-- Current index -->
 	<message key="current.current">Current</message>
@@ -786,7 +788,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="archive.archives">Archives</message>
 	<message key="archive.browse">Browse through the older issues</message>
 	<message key="archive.issueUnavailable">Issue Unavailable</message>
-	
+
 	<!-- About The Journal -->
 	<message key="about.statistics">Statistics</message>
 	<message key="about.journalContact">Journal Contact</message>
@@ -836,23 +838,24 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="about.aboutThisPublishingSystem.altText">OJS Editorial and Publishing Process</message>
 	<message key="about.aboutOJSJournal"><![CDATA[This journal uses Open Journal Systems {$ojsVersion}, which is open source journal management and publishing software developed, supported, and freely distributed by the <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> under the GNU General Public License.]]></message>
 	<message key="about.aboutOJSSite"><![CDATA[This site uses Open Journal Systems {$ojsVersion}, which is open source journal management and publishing software developed, supported, and freely distributed by the <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> under the GNU General Public License.]]></message>
-	
+
 	<!-- Announcement -->
 
 	<!-- Help -->
 	<message key="help.ojsHelp">Open Journal Systems Help</message>
-	<message key="help.ojsHelpAbbrev">OJS Help</message>	
+	<message key="help.ojsHelpAbbrev">OJS Help</message>
 	<message key="help.searchReturnResults">Return to Search Results</message>
 
 	<!-- Donations -->
 	<message key="donations.thankYou">Thank You</message>
 	<message key="donations.thankYouMessage">Thank you for making a contribution.  Your contribution is much appreciated.</message>
-	
+
 	<!-- Payments -->
 	<message key="payment.loginRequired">You must be logged in to make a payment.</message>
 	<message key="payment.loginRequired.forArticle">Subscription or article purchase required to access item. To verify subscription, access previous purchase, or purchase article, log in to journal.</message>
+	<message key="payment.loginRequired.forIssue">Subscription or issue purchase required to access item. To verify subscription, access previous purchase, or purchase issue, log in to journal.</message>
 	<message key="payment.loginRequired.forDonation">You must be logged in to make a donation.</message>
-	
+
 	<message key="payment.paid">Paid</message>
 	<message key="payment.payNow">Pay Now</message>
 	<message key="payment.waive">Waive</message>
@@ -866,24 +869,25 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="payment.type.fastTrack">Fast Track Review Fee</message>
 	<message key="payment.type.membership">Individual Membership Fee</message>
 	<message key="payment.type.purchaseArticle">Purchase Article Fee</message>
+	<message key="payment.type.purchaseIssue">Purchase Issue Fee</message>
 	<message key="payment.type.subscription">Subscription Fee</message>
 	<message key="payment.type.donation">Donations</message>
-	
+
 	<message key="payment.donation.makeDonation">Make a donation</message>
-	
+
 	<message key="payment.submission.paySubmission">Pay Submission Fee</message>
 	<message key="payment.fastTrack.payFastTrack">Pay to FastTrack</message>
 	<message key="payment.fastTrack.inFastTrack">in FastTrack</message>
 	<message key="payment.publication.payPublication">Pay to Publish</message>
 	<message key="payment.publication.publicationPaid">Publication Fee Paid</message>
-	
+
 	<message key="payment.membership.buyMembership">Buy Individual Membership</message>
-	<message key="payment.membership.renewMembership">Renew Individual Membership</message>	
+	<message key="payment.membership.renewMembership">Renew Individual Membership</message>
 	<message key="payment.membership.ends">Ends</message>
 
 	<message key="payment.subscription.purchase">Purchase Subscription</message>
 	<message key="payment.subscription.renew">Renew Subscription</message>
-	<message key="payment.subscription.expires">Expires</message>	
+	<message key="payment.subscription.expires">Expires</message>
 
 	<!-- Installer -->
 	<message key="installer.ojsInstallation">OJS Installation</message>
@@ -931,7 +935,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 
 <p>Select <strong>Manual Install</strong> to display the SQL statements necessary to create the OJS database schema and initial data so that database installation can be performed manually. This option is useful when debugging installation problems, particularly on unsupported platforms. Note that this installation method will not attempt to create the database or any tables, although the configuration file will still be written with the supplied database settings.</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS Version {$version}</h4>
-	
+
 <p>Thank you for downloading the Public Knowledge Project's <strong>Open Journal Systems</strong>. Before proceeding, please read the <a href="{$baseUrl}/docs/README">README</a> and <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> files included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. If you have bug reports or technical support inquiries about Open Journal Systems, see the <a href="http://pkp.sfu.ca/support/forum" target="_blank">support forum</a> or visit PKP's online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">bug reporting system</a>. Although the support forum is the preferred method of contact, you can also email the team at <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 <p>It is <strong>strongly recommended</strong> that you back up your database, files directory, and OJS installation directory before proceeding.</p>
 <p>If you are running in <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, please ensure that the max_execution_time directive in your php.ini configuration file is set to a high limit. If this or any other time limit (e.g. Apache's "Timeout" directive) is reached and the upgrade process is interrupted, manual intervention will be required.</p>]]></message>
@@ -1039,7 +1043,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="rt.admin.validateUrls.description"><![CDATA[Possibly invalid URLs for search sites are displayed below.<br/>
 You should manually verify any URLs marked as invalid, as this test is not 100% accurate.<br/>
 Validation may fail on search URLs that require posted form data.]]></message>
-	
+
 	<!-- RT Entities -->
 
 
@@ -1058,12 +1062,12 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="rt.beNotifiedWhen">Be notified when...</message>
 
 	<message key="rt.thisJournal">Search journal</message>
-	
+
 
 	<message key="rt.context.authorTermsDescription">For items with more than one author, leave all names checked to search for similarly co-authored work, or search one at a time by checking only a single name. To learn more about the resource searched, click on ABOUT. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</message>
-	
-	
-	
+
+
+
 	<!-- Notification Types -->
 	<message key="notification.mailListDescription">Enter your email address to receive immediate notifications of important new content added to the journal.</message>
 	<message key="notification.notificationsPublicDescription">This page shows important updates associated with this journal such as new issues or announcements.  You may subscribe to these notifications through RSS feeds (by clicking on the images to the right), or <![CDATA[  <a href="{$emailUrl}">through email.</a>]]></message>
@@ -1098,9 +1102,9 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="user.authorization.sectionAssignment">You are trying to access an article that is not part of your section.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Invalid copyeditor submission or no copyeditor submission requested!</message>
 	<message key="user.authorization.invalidSectionEditorSubmission">Invalid section editor submission or no section editor submission requested!</message>
-	
+
 	<!-- Icons: Default "alt" text -->
-	
+
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">Loaded currency list "{$filename}" from XML</message>
 	<message key="debug.notes.helpMappingLoad">Reloaded XML help mapping file {$filename} in search of {$id}.</message>

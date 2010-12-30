@@ -129,6 +129,12 @@ class OJSCompletedPayment extends Payment {
 				} else {
 					return Locale::translate('payment.type.purchaseArticle');
 				}
+			case PAYMENT_TYPE_PURCHASE_ISSUE:
+				if ($journal->getLocalizedSetting('purchaseIssueFeeName') != '') {
+					return $journal->getLocalizedSetting('purchaseIssueFeeName');
+				} else {
+					return Locale::translate('payment.type.purchaseIssue');
+				}
 			case PAYMENT_TYPE_SUBMISSION:
 				if ($journal->getLocalizedSetting('submissionFeeName') != '') {
 					return $journal->getLocalizedSetting('submissionFeeName');
@@ -193,6 +199,12 @@ class OJSCompletedPayment extends Payment {
 					return $journal->getLocalizedSetting('purchaseArticleFeeDescription');
 				} else {
 					return Locale::translate('payment.type.purchaseArticle');
+				}
+			case PAYMENT_TYPE_PURCHASE_ISSUE:
+				if ($journal->getLocalizedSetting('purchaseIssueFeeDescription') != '') {
+					return $journal->getLocalizedSetting('purchaseIssueFeeDescription');
+				} else {
+					return Locale::translate('payment.type.purchaseIssue');
 				}
 			case PAYMENT_TYPE_SUBMISSION:
 				if ($journal->getLocalizedSetting('submissionFeeDescription') != '') {
@@ -313,6 +325,12 @@ class OJSCompletedPayment extends Payment {
 				$article =& $articleDao->getArticle($this->assocId, $this->journalId);
 				if (!$article) return Locale::translate('manager.payment.notFound');
 				return $article->getLocalizedTitle();
+			case PAYMENT_TYPE_PURCHASE_ISSUE:
+				// Purchase issue payment should output the issue title
+				$issueDao =& DAORegistry::getDAO('IssueDAO');
+				$issue =& $issueDao->getIssueById($this->assocId, $this->journalId);
+				if (!$issue) return Locale::translate('manager.payment.notFound');
+				return $issue->getIssueIdentification(false, true);
 			case PAYMENT_TYPE_MEMBERSHIP:
 			case PAYMENT_TYPE_DONATION:
 				return false;

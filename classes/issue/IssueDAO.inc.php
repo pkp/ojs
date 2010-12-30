@@ -406,7 +406,7 @@ class IssueDAO extends DAO {
 	}
 
 	/**
-	 * Delete issue. Deletes associated published articles and cover file.
+	 * Delete issue. Deletes associated issue galleys, cover pages, and published articles.
 	 * @param $issue object issue
 	 */
 	function deleteIssue(&$issue) {
@@ -428,9 +428,22 @@ class IssueDAO extends DAO {
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$sectionDao->deleteCustomSectionOrdering($issueId);
 
+		// Delete published issue galleys and issue files
+		$issueGalleyDao =& DAORegistry::getDAO('IssueGalleyDAO');
+		$issueGalleyDao->deleteGalleysByIssue($issueId);
+
+		$issueFileDao =& DAORegistry::getDAO('IssueFileDAO');
+		$issueFileDao->deleteIssueFiles($issueId);
+
+		import('classes.file.IssueFileManager');
+		$issueFileManager = new IssueFileManager($issueId);
+		$issueFileManager->deleteIssueTree();
+
+		// Delete published articles
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticleDao->deletePublishedArticlesByIssueId($issueId);
 
+		// Delete issue settings and issue
 		$this->update('DELETE FROM issue_settings WHERE issue_id = ?', $issueId);
 		$this->update('DELETE FROM issues WHERE issue_id = ?', $issueId);
 		$this->resequenceCustomIssueOrders($issue->getJournalId());

@@ -9,7 +9,6 @@
   *
   * OJS database schema in XML.
   *
-  * $Id$
   -->
 
 <schema version="0.2">
@@ -44,7 +43,7 @@
 			<UNIQUE />
 		</index>
 	</table>
-	
+
 	<!--
 	  *
 	  * TABLE journal_settings
@@ -77,7 +76,7 @@
 			<UNIQUE />
 		</index>
 	</table>
-	
+
 	<!--
 	  *
 	  * TABLE plugin_settings
@@ -114,7 +113,7 @@
 			<UNIQUE />
 		</index>
 	</table>
-	
+
 	<!--
 	  *
 	  * TABLE roles
@@ -204,7 +203,7 @@
 			<col>journal_id</col>
 		</index>
 	</table>
-	
+
 	<!--
 	  *
 	  * TABLE section_settings
@@ -237,7 +236,7 @@
 			<UNIQUE />
 		</index>
 	</table>
-	
+
 	<!--
 	  *
 	  * TABLE section_editors
@@ -278,7 +277,7 @@
 			<UNIQUE />
 		</index>
 	</table>
-	
+
 	<!--
 	  *
 	  * TABLE issues
@@ -369,6 +368,81 @@
 			<col>locale</col>
 			<col>setting_name</col>
 			<UNIQUE />
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE issue_galleys
+	  *
+	  -->
+	<table name="issue_galleys">
+		<field name="galley_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+		<field name="public_galley_id" type="C2" size="255" />
+		<field name="locale" type="C2" size="5"/>
+		<field name="issue_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="file_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="label" type="C2" size="32"/>
+		<field name="seq" type="F">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="views" type="I4">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<descr>Issue galleys.</descr>
+		<index name="issue_galleys_issue_id">
+			<col>issue_id</col>
+		</index>
+		<index name="issue_galleys_public_id">
+			<col>public_galley_id</col>
+			<col>issue_id</col>
+			<UNIQUE/>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE issue_files
+	  *
+	  -->
+	<table name="issue_files">
+		<field name="file_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+		<field name="issue_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="file_name" type="C2" size="90">
+			<NOTNULL/>
+		</field>
+		<field name="file_type" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="file_size" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="content_type" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="original_file_name" type="C2" size="127"/>
+		<field name="date_uploaded" type="T">
+			<NOTNULL/>
+		</field>
+		<field name="date_modified" type="T">
+			<NOTNULL/>
+		</field>
+		<index name="issue_files_issue_id">
+			<col>issue_id</col>
 		</index>
 	</table>
 
@@ -480,7 +554,7 @@
 			<col>section_id</col>
 		</index>
 	</table>
-	
+
 	<!--
 	  *
 	  * TABLE article_settings
@@ -606,7 +680,7 @@
 			<col>article_id</col>
 		</index>
 	</table>
-	
+
 	<!--
 	  *
 	  * TABLE article_supplementary_files
@@ -722,7 +796,7 @@
 			<col>file_id</col>
 		</index>
 	</table>
-	
+
 	<!--
 	  *
 	  * TABLE edit_assignments
@@ -758,7 +832,7 @@
 			<col>editor_id</col>
 		</index>
 	</table>
-	
+
 	<!--
 	  *
 	  * TABLE edit_decisions
@@ -792,7 +866,7 @@
 			<col>editor_id</col>
 		</index>
 	</table>
-	
+
 	<!--
 	  *
 	  * TABLE article_galleys
@@ -835,7 +909,7 @@
 			<UNIQUE/>
 		</index>
 	</table>
-	
+
 	<!--
 	  *
 	  * TABLE article_html_galley_images
@@ -855,7 +929,7 @@
 			<UNIQUE/>
 		</index>
 	</table>
-	
+
 	<!--
 	  *
 	  * TABLE article_event_log
@@ -888,7 +962,7 @@
 			<col>article_id</col>
 		</index>
 	</table>
-	
+
 	<!--
 	  *
 	  * TABLE article_email_log
@@ -923,7 +997,7 @@
 			<col>article_id</col>
 		</index>
 	</table>
-	
+
 	<!--
 	  *
 	  * TABLE article_comments
@@ -959,7 +1033,7 @@
 			<col>article_id</col>
 		</index>
 	</table>
-	
+
 	<!--
 	 *
 	 * TABLE article_search_keyword_list
@@ -979,7 +1053,7 @@
 			<UNIQUE/>
 		</index>
 	</table>
-	
+
 	<!--
 	 *
 	 * TABLE article_search_objects
@@ -1002,7 +1076,7 @@
 		</field>
 		<descr>Indexed objects.</descr>
 	</table>
-	
+
 	<!--
 	 *
 	 * TABLE article_search_object_keywords
@@ -1029,9 +1103,9 @@
 			<UNIQUE />
 		</index>
 	</table>
-	
+
 	<!-- Reading Tools Tables -->
-	
+
 	<!--
 	 *
 	 * TABLE rt_versions
@@ -1063,7 +1137,7 @@
 			<col>version_key</col>
 		</index>
 	</table>
-	
+
 	<!--
 	 *
 	 * TABLE rt_contexts
@@ -1109,7 +1183,7 @@
 			<col>version_id</col>
 		</index>
 	</table>
-	
+
 	<!--
 	 *
 	 * TABLE rt_searches
@@ -1142,7 +1216,7 @@
 
 	<!--
 	 *
-	 * TABLE subscription_types 
+	 * TABLE subscription_types
 	 *
 	 -->
 	<table name="subscription_types">
@@ -1330,7 +1404,7 @@
 		<field name="payment_data" type="X" />
 		<descr>Logs queued (unfulfilled) payments.</descr>
 	</table>
-	
+
 	<!--
 	  *
 	  * TABLE completed_payments
@@ -1354,7 +1428,7 @@
 		<field name="assoc_id" type="I8" />
 		<field name="amount" type="F">
 			<NOTNULL/>
-		</field>		
+		</field>
 		<field name="currency_code_alpha" type="C2" size="3" />
 		<field name="payment_method_plugin_name" type="C2" size="80" />
 		<descr>Logs completed (fulfilled) payments.</descr>

@@ -5,8 +5,6 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Form for creation and modification of an issue
- *
- * $Id$
  *}
 {strip}
 {assign var="pageTitleTranslated" value=$issue->getIssueIdentification()}
@@ -32,6 +30,7 @@
 <ul class="menu">
 	<li><a href="{url op="issueToc" path=$issueId}">{translate key="issue.toc"}</a></li>
 	<li class="current"><a href="{url op="issueData" path=$issueId}">{translate key="editor.issues.issueData"}</a></li>
+	<li><a href="{url op="issueGalleys" path=$issueId}">{translate key="editor.issues.galleys"}</a></li>
 	{if $unpublished}<li><a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">{translate key="editor.issues.previewIssue"}</a></li>{/if}
 </ul>
 

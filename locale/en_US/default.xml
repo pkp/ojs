@@ -149,6 +149,8 @@ Please follow the following protocol for making electronic revisions to your man
 	<message key="default.journalSettings.waiverPolicy">If you do not have funds to pay such fees, you will have an opportunity to waive each fee. We do not want fees to prevent the publication of worthy work.</message>
 	<message key="default.journalSettings.purchaseArticleFee">Purchase Article</message>
 	<message key="default.journalSettings.purchaseArticleFeeDescription">The payment of this fee will enable you to view, download, and print this article.</message>
+	<message key="default.journalSettings.purchaseIssueFee">Purchase Issue</message>
+	<message key="default.journalSettings.purchaseIssueFeeDescription">The payment of this fee will enable you to view, download, and print this issue.</message>
 	<message key="default.journalSettings.membershipFee">Association Membership</message>
 	<message key="default.journalSettings.membershipFeeDescription">The payment of this fee will enroll you as a member in this association for one year and provide you with free access to this journal.</message>
 	<message key="default.journalSettings.donationFee">Donations to journal</message>

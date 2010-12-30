@@ -104,7 +104,8 @@ class ArticleHandler extends Handler {
 		}
 
 		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->addJavaScript('js/articleView.js');
+		$templateMgr->addJavaScript('js/relatedItems.js');
+		$templateMgr->addJavaScript('js/inlinePdf.js');
 		$templateMgr->addJavaScript('js/pdfobject.js');
 
 		if (!$galley) {
@@ -503,7 +504,7 @@ class ArticleHandler extends Handler {
 						 * and just let them access the article */
 						$completedPaymentDao =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
 						$dateEndMembership = $user->getSetting('dateEndMembership', 0);
-						if ($completedPaymentDao->hasPaidPerViewArticle($userId, $articleId) || (!is_null($dateEndMembership) && $dateEndMembership > time())) {
+						if ($completedPaymentDao->hasPaidPurchaseArticle($userId, $articleId) || (!is_null($dateEndMembership) && $dateEndMembership > time())) {
 							$this->journal =& $journal;
 							$this->issue =& $issue;
 							$this->article =& $publishedArticle;

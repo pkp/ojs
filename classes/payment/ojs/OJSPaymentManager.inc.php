@@ -25,6 +25,7 @@ define('PAYMENT_TYPE_SUBMISSION',		0x000000005);
 define('PAYMENT_TYPE_FASTTRACK',		0x000000006);
 define('PAYMENT_TYPE_PUBLICATION',		0x000000007);
 define('PAYMENT_TYPE_PURCHASE_SUBSCRIPTION',	0x000000008);
+define('PAYMENT_TYPE_PURCHASE_ISSUE',		0x000000009);
 
 class OJSPaymentManager extends PaymentManager {
 	function &getManager() {
@@ -50,6 +51,9 @@ class OJSPaymentManager extends PaymentManager {
 	 	switch ($type) {
 			case PAYMENT_TYPE_PURCHASE_ARTICLE:
 				$payment->setRequestUrl(Request::url(null, 'article', 'view', $assocId));
+				break;
+			case PAYMENT_TYPE_PURCHASE_ISSUE:
+				$payment->setRequestUrl(Request::url(null, 'issue', 'view', $assocId));
 				break;
 			case PAYMENT_TYPE_MEMBERSHIP:
 				$payment->setRequestUrl(Request::url(null, 'user'));
@@ -122,6 +126,11 @@ class OJSPaymentManager extends PaymentManager {
 	function purchaseArticleEnabled() {
 		$journal =& Request::getJournal();
 		return $this->isConfigured() && $journal->getSetting('purchaseArticleFeeEnabled') && $journal->getSetting('purchaseArticleFee') > 0;
+	}
+
+	function purchaseIssueEnabled() {
+		$journal =& Request::getJournal();
+		return $this->isConfigured() && $journal->getSetting('purchaseIssueFeeEnabled') && $journal->getSetting('purchaseIssueFee') > 0;
 	}
 
 	function onlyPdfEnabled() {
@@ -250,6 +259,7 @@ class OJSPaymentManager extends PaymentManager {
 				$returner = true;
 				break;
 			case PAYMENT_TYPE_PURCHASE_ARTICLE:
+			case PAYMENT_TYPE_PURCHASE_ISSUE:
 			case PAYMENT_TYPE_DONATION:
 			case PAYMENT_TYPE_SUBMISSION:
 			case PAYMENT_TYPE_PUBLICATION:

@@ -15,8 +15,6 @@
  *
  */
 
-// $Id$
-
 switch ($op) {
 	//
 	// Submission Tracking
@@ -174,6 +172,16 @@ switch ($op) {
 	case 'editIssue':
 	case 'removeCoverPage':
 	case 'removeStyleFile':
+	case 'issueGalleys':
+	case 'uploadIssueGalley':
+	case 'editIssueGalley':
+	case 'saveIssueGalley':
+	case 'orderIssueGalley':
+	case 'deleteIssueGalley':
+	case 'proofIssueGalley':
+	case 'proofIssueGalleyTop':
+	case 'proofIssueGalleyFile':
+	case 'downloadIssueFile':
 	case 'issueToc':
 	case 'updateIssueToc':
 	case 'setCurrentIssue':

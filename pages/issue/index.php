@@ -15,14 +15,15 @@
  *
  */
 
-// $Id$
-
-
 switch ($op) {
 	case 'index':
 	case 'current':
 	case 'view':
 	case 'archive':
+	case 'viewIssue':
+	case 'viewDownloadInterstitial':
+	case 'viewFile':
+	case 'download':
 		define('HANDLER_CLASS', 'IssueHandler');
 		import('pages.issue.IssueHandler');
 		break;

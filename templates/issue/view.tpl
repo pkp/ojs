@@ -6,8 +6,6 @@
  *
  * View issue -- This displays the issue TOC or title page, as appropriate,
  * *without* header or footer HTML (see viewPage.tpl)
- *
- * $Id$
  *}
 {if $subscriptionRequired && $showGalleyLinks && $showToc}
 	<div id="accessKey">
@@ -35,10 +33,47 @@
 	<div id="issueCoverDescription">{$issue->getLocalizedCoverPageDescription()|strip_unsafe_html|nl2br}</div>
 {elseif $issue}
 	<div id="issueDescription">{$issue->getLocalizedDescription()|strip_unsafe_html|nl2br}</div>
+	{if $issueGalleys}
+		<h3>{translate key="issue.fullIssue"}</h3>
+		{if (!$subscriptionRequired || $issue->getAccessStatus() == $smarty.const.ISSUE_ACCESS_OPEN || $subscribedUser || $subscribedDomain || ($subscriptionExpiryPartial && $issueExpiryPartial))}
+			{assign var=hasAccess value=1}
+		{else}
+			{assign var=hasAccess value=0}
+		{/if}
+		<table class="tocArticle" width="100%">
+		<tr valign="top">
+			<td class="tocTitle">{translate key="issue.viewIssueDescription"}</td>
+			<td class="tocGalleys">
+			{if $hasAccess || ($subscriptionRequired && $showGalleyLinks)}
+				{foreach from=$issueGalleys item=issueGalley}
+					{if $issueGalley->isPdfGalley()}
+						<a href="{url op="viewIssue" path=$issue->getBestIssueId()|to_array:$issueGalley->getBestGalleyId($currentJournal)}" class="file">{$issueGalley->getGalleyLabel()|escape}</a>
+					{else}
+						<a href="{url op="viewDownloadInterstitial" path=$issue->getBestIssueId()|to_array:$issueGalley->getBestGalleyId($currentJournal)}" class="file">{$issueGalley->getGalleyLabel()|escape}</a>
+					{/if}
+					{if $subscriptionRequired && $showGalleyLinks && $restrictOnlyPdf}
+						{if $issue->getAccessStatus() == $smarty.const.ISSUE_ACCESS_OPEN || !$issueGalley->isPdfGalley()}
+							<img class="accessLogo" src="{$baseUrl}/lib/pkp/templates/images/icons/fulltext_open_medium.gif" alt="{translate key="article.accessLogoOpen.altText"}" />
+						{else}
+							<img class="accessLogo" src="{$baseUrl}/lib/pkp/templates/images/icons/fulltext_restricted_medium.gif" alt="{translate key="article.accessLogoRestricted.altText"}" />
+						{/if}
+					{/if}
+				{/foreach}
+				{if $subscriptionRequired && $showGalleyLinks && !$restrictOnlyPdf}
+					{if $issue->getAccessStatus() == $smarty.const.ISSUE_ACCESS_OPEN}
+						<img class="accessLogo" src="{$baseUrl}/lib/pkp/templates/images/icons/fulltext_open_medium.gif" alt="{translate key="article.accessLogoOpen.altText"}" />
+					{else}
+						<img class="accessLogo" src="{$baseUrl}/lib/pkp/templates/images/icons/fulltext_restricted_medium.gif" alt="{translate key="article.accessLogoRestricted.altText"}" />
+					{/if}
+				{/if}
+			{/if}
+			</td>
+		</tr>
+		</table>
+		<br />
+	{/if}
 	<h3>{translate key="issue.toc"}</h3>
 	{include file="issue/issue.tpl"}
 {else}
 	{translate key="current.noCurrentIssueDesc"}
 {/if}
-
-

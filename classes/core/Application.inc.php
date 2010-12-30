@@ -96,6 +96,8 @@ class Application extends PKPApplication {
 			'IndividualSubscriptionDAO' => 'classes.subscription.IndividualSubscriptionDAO',
 			'InstitutionalSubscriptionDAO' => 'classes.subscription.InstitutionalSubscriptionDAO',
 			'IssueDAO' => 'classes.issue.IssueDAO',
+			'IssueGalleyDAO' => 'classes.issue.IssueGalleyDAO',
+			'IssueFileDAO' => 'classes.issue.IssueFileDAO',
 			'JournalDAO' => 'classes.journal.JournalDAO',
 			'JournalSettingsDAO' => 'classes.journal.JournalSettingsDAO',
 			'JournalStatisticsDAO' => 'classes.journal.JournalStatisticsDAO',

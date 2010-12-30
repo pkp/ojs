@@ -73,12 +73,34 @@ class OJSCompletedPaymentDAO extends DAO {
 	 * @param int $journalId
 	 * @param int $articleId
 	 */
-	function hasPaidPerViewArticle ( $userId, $articleId ) {
+	function hasPaidPurchaseArticle ( $userId, $articleId ) {
 		$result =& $this->retrieve(
 			'SELECT count(*) FROM completed_payments WHERE payment_type = ? AND user_id = ? AND assoc_id = ?',
 				array(PAYMENT_TYPE_PURCHASE_ARTICLE,
 					$userId,
 					$articleId )
+		);
+
+		$returner = false;
+		if (isset($result->fields[0]) && $result->fields[0] != 0) {
+			$returner = true;
+		}
+
+		$result->Close();
+		return $returner;
+	}
+
+	/**
+	 * Look for a completed PURCHASE_ISSUE payment matching the journal and issue IDs
+	 * @param int $journalId
+	 * @param int $issueId
+	 */
+	function hasPaidPurchaseIssue ( $userId, $issueId ) {
+		$result =& $this->retrieve(
+			'SELECT count(*) FROM completed_payments WHERE payment_type = ? AND user_id = ? AND assoc_id = ?',
+				array(PAYMENT_TYPE_PURCHASE_ISSUE,
+					$userId,
+					$issueId )
 		);
 
 		$returner = false;

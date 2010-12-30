@@ -60,9 +60,10 @@
 	<message key="manager.payment.options.feeDescription">Fee Description</message>
 	<message key="manager.payment.options.feeName">Fee Name</message>
 	<message key="manager.payment.options.membershipFee">Association Membership</message>
-	<message key="manager.payment.options.onlypdf">Only Restrict Access to PDF version of articles</message>
+	<message key="manager.payment.options.onlypdf">Only Restrict Access to PDF version of issues and articles</message>
 	<message key="manager.payment.options.publicationFee">Article Publication</message>
 	<message key="manager.payment.options.purchaseArticleFee">Purchase Article</message>
+	<message key="manager.payment.options.purchaseIssueFee">Purchase Issue</message>
 	<message key="manager.payment.options.submissionFee">Article Submission</message>
 	<message key="manager.payment.options.text">Description of Payment Method</message>
 	<message key="manager.payment.options.waiverPolicy">Waiver Policy</message>

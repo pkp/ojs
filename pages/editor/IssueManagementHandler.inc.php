@@ -12,8 +12,6 @@
  * @brief Handle requests for issue management in publishing.
  */
 
-// $Id$
-
 import('pages.editor.EditorHandler');
 
 class IssueManagementHandler extends EditorHandler {
@@ -289,6 +287,222 @@ class IssueManagementHandler extends EditorHandler {
 		$issueDao->updateIssue($issue);
 
 		$request->redirect(null, null, 'issueData', $issueId);
+	}
+
+	/**
+	 * Displays the issue galleys page.
+	 */
+	function issueGalleys($args, $request) {
+		$issueId = isset($args[0]) ? (int) $args[0] : 0;
+		$this->validate($issueId, true);
+		$issue =& $this->issue;
+		$this->setupTemplate(EDITOR_SECTION_ISSUES);
+
+		$templateMgr =& TemplateManager::getManager();
+		import('classes.issue.IssueAction');
+		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
+
+		$templateMgr->assign('issueId', $issueId);
+		$templateMgr->assign('unpublished',!$issue->getPublished());
+		$templateMgr->assign('helpTopicId', 'publishing.index');
+		$templateMgr->assign_by_ref('issue', $issue);
+
+		$issueGalleyDao =& DAORegistry::getDAO('IssueGalleyDAO');
+		$templateMgr->assign_by_ref('issueGalleys', $issueGalleyDao->getGalleysByIssue($issue->getId()));
+
+		$templateMgr->display('editor/issues/issueGalleys.tpl');
+	}
+
+	/**
+	 * Create a new issue galley with the uploaded file.
+	 */
+	function uploadIssueGalley($args, $request) {
+		$issueId = isset($args[0]) ? (int) $args[0] : 0;
+		$this->validate($issueId, true);
+
+		import('classes.issue.form.IssueGalleyForm');
+		if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
+			$galleyForm = new IssueGalleyForm($issueId);
+		} else {
+			$galleyForm =& new IssueGalleyForm($issueId);
+		}
+
+		$galleyId = $galleyForm->execute();
+		$request->redirect(null, null, 'editIssueGalley', array($issueId, $galleyId));
+	}
+
+	/**
+	 * Edit an issue galley.
+	 * @param $args array ($issueId, $galleyId)
+	 */
+	function editIssueGalley($args, $request) {
+		$issueId = isset($args[0]) ? (int) $args[0] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+
+		$this->validate($issueId, true);
+		$this->setupTemplate(EDITOR_SECTION_ISSUES);
+
+		import('classes.issue.form.IssueGalleyForm');
+		if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
+			$submitForm = new IssueGalleyForm($issueId, $galleyId);
+		} else {
+			$submitForm =& new IssueGalleyForm($issueId, $galleyId);
+		}
+
+		if ($submitForm->isLocaleResubmit()) {
+			$submitForm->readInputData();
+		} else {
+			$submitForm->initData();
+		}
+		$submitForm->display();
+	}
+
+	/**
+	 * Save changes to an issue galley.
+	 * @param $args array ($issueId, $galleyId)
+	 */
+	function saveIssueGalley($args, $request) {
+		$issueId = isset($args[0]) ? (int) $args[0] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+
+		$this->validate($issueId, true);
+		$this->setupTemplate(EDITOR_SECTION_ISSUES);
+
+		import('classes.issue.form.IssueGalleyForm');
+		if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
+			$submitForm = new IssueGalleyForm($issueId, $galleyId);
+		} else {
+			$submitForm =& new IssueGalleyForm($issueId, $galleyId);
+		}
+
+		$submitForm->readInputData();
+		if ($submitForm->validate()) {
+			$submitForm->execute();
+			$request->redirect(null, null, 'issueGalleys', $issueId);
+		} else {
+			$submitForm->display();
+		}
+	}
+
+	/**
+	 * Change the sequence order of an issue galley.
+	 */
+	function orderIssueGalley($args, $request) {
+		$issueId = (int) $request->getUserVar('issueId');
+		$galleyId = (int) $request->getUserVar('galleyId');
+		$direction = $request->getUserVar('d');
+
+		$this->validate($issueId, true);
+
+		$galleyDao =& DAORegistry::getDAO('IssueGalleyDAO');
+		$galley =& $galleyDao->getGalley($galleyId, $issueId);
+
+		if (isset($galley)) {
+			$galley->setSequence($galley->getSequence() + ($direction == 'u' ? -1.5 : 1.5));
+			$galleyDao->updateGalley($galley);
+			$galleyDao->resequenceGalleys($issueId);
+		}
+		$request->redirect(null, null, 'issueGalleys', $issueId);
+	}
+
+	/**
+	 * Delete an issue galley.
+	 * @param $args array ($issueId, $galleyId)
+	 */
+	function deleteIssueGalley($args, $request) {
+		$issueId = isset($args[0]) ? (int) $args[0] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+
+		$this->validate($issueId, true);
+
+		$galleyDao =& DAORegistry::getDAO('IssueGalleyDAO');
+		$galley =& $galleyDao->getGalley($galleyId, $issueId);
+
+		if (isset($galley)) {
+			import('classes.file.IssueFileManager');
+			$issueFileManager = new IssueFileManager($issueId);
+
+			if ($galley->getFileId()) {
+				$issueFileManager->deleteFile($galley->getFileId());
+			}
+			$galleyDao->deleteGalley($galley);
+		}
+		$request->redirect(null, null, 'issueGalleys', $issueId);
+	}
+
+	/**
+	 * Preview an issue galley.
+	 * @param $args array ($issueId, $galleyId)
+	 */
+	function proofIssueGalley($args, $request) {
+		$issueId = isset($args[0]) ? (int) $args[0] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+
+		$this->validate($issueId, true);
+		$this->setupTemplate(EDITOR_SECTION_ISSUES);
+
+		$templateMgr =& TemplateManager::getManager();
+		$templateMgr->assign('issueId', $issueId);
+		$templateMgr->assign('galleyId', $galleyId);
+		$templateMgr->display('editor/issues/proofIssueGalley.tpl');
+	}
+
+	/**
+	 * Proof issue galley (shows frame header).
+	 * @param $args array ($issueId, $galleyId)
+	 */
+	function proofIssueGalleyTop($args, $request) {
+		$issueId = isset($args[0]) ? (int) $args[0] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+
+		$this->validate($issueId, true);
+		$this->setupTemplate(EDITOR_SECTION_ISSUES);
+
+		$templateMgr =& TemplateManager::getManager();
+		$templateMgr->assign('issueId', $issueId);
+		$templateMgr->assign('galleyId', $galleyId);
+		$templateMgr->display('editor/issues/proofIssueGalleyTop.tpl');
+	}
+
+	/**
+	 * Preview an issue galley (outputs file contents).
+	 * @param $args array ($issueId, $galleyId)
+	 */
+	function proofIssueGalleyFile($args, $request) {
+		$issueId = isset($args[0]) ? (int) $args[0] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+
+		$this->validate($issueId, true);
+
+		$galleyDao =& DAORegistry::getDAO('IssueGalleyDAO');
+		$galley =& $galleyDao->getGalley($galleyId, $issueId);
+
+		if (isset($galley)) {
+			if ($galley->getFileId()) {
+				import('classes.file.IssueFileManager');
+				$issueFileManager = new IssueFileManager($issueId);
+				return $issueFileManager->downloadFile($galley->getFileId());
+			}
+		}
+		$request->redirect(null, null, 'issueGalleys', $issueId);
+	}
+
+	/**
+	 * Download an issue file.
+	 * @param $args array ($issueId, $fileId)
+	 */
+	function downloadIssueFile($args, $request) {
+		$issueId = isset($args[0]) ? (int) $args[0] : 0;
+		$fileId = isset($args[1]) ? (int) $args[1] : 0;
+
+		$this->validate($issueId, true);
+
+		if ($fileId) {
+			import('classes.file.IssueFileManager');
+			$issueFileManager = new IssueFileManager($issueId);
+			return $issueFileManager->downloadFile($fileId);
+		}
+		$request->redirect(null, null, 'issueGalleys', $issueId);
 	}
 
 	/**
@@ -811,7 +1025,7 @@ class IssueManagementHandler extends EditorHandler {
 
 		if (!isset($journal)) Validation::redirectLogin();
 
-		if ($issueId) {
+		if ($issueId !== null) {
 			$issueDao =& DAORegistry::getDAO('IssueDAO');
 			$issue = $issueDao->getIssueById($issueId, $journal->getId());
 
@@ -819,6 +1033,7 @@ class IssueManagementHandler extends EditorHandler {
 				Request::redirect(null, null, 'createIssue');
 			}
 		}
+
 
 		if (!Validation::isEditor($journal->getId())) {
 			if (isset($journal) && $allowLayoutEditor && Validation::isLayoutEditor($journal->getId())) {

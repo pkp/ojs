@@ -75,7 +75,6 @@
 <body>
 
 <div id="container">
-<div id="fade" class="black_overlay"></div>{* The background 'lightbox' effect *}
 
 <div id="header">
 <div id="headerTitle">

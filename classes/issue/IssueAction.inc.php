@@ -13,9 +13,6 @@
  * @brief IssueAction class.
  */
 
-// $Id$
-
-
 class IssueAction {
 
 	/**
@@ -106,6 +103,37 @@ class IssueAction {
 			}
 		}
 
+		return false;
+	}
+
+	/**
+	 * Checks if this user is granted access to pre-publication issue galleys
+	 * based on their roles in the journal (i.e. Manager, Editor, etc).
+	 * @param $journal object
+	 * @param $issue object
+	 * @return bool
+	 */
+	function allowedIssuePrePublicationAccess($journal) {
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$user =& Request::getUser();
+		if ($user && $journal) {
+			$journalId = $journal->getId();
+			$userId = $user->getId();
+			$subscriptionAssumedRoles = array(
+				ROLE_ID_JOURNAL_MANAGER,
+				ROLE_ID_EDITOR,
+				ROLE_ID_SECTION_EDITOR,
+				ROLE_ID_LAYOUT_EDITOR,
+				ROLE_ID_COPYEDITOR,
+				ROLE_ID_PROOFREADER,
+				ROLE_ID_SUBSCRIPTION_MANAGER
+			);
+
+			$roles =& $roleDao->getRolesByUserId($userId, $journalId);
+			foreach ($roles as $role) {
+				if (in_array($role->getRoleId(), $subscriptionAssumedRoles)) return true;
+			}
+		}
 		return false;
 	}
 
