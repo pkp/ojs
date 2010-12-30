@@ -359,7 +359,7 @@ class ArticleDAO extends DAO {
 		$articleEventLogDao->deleteArticleLogEntries($articleId);
 
 		$articleEmailLogDao =& DAORegistry::getDAO('ArticleEmailLogDAO');
-		$articleEmailLogDao->deleteArticleLogEntries($articleId);
+		$articleEmailLogDao->deleteByAssoc(ASSOC_TYPE_ARTICLE, $articleId);
 
 		$articleEventLogDao =& DAORegistry::getDAO('ArticleEventLogDAO');
 		$articleEventLogDao->deleteArticleLogEntries($articleId);
