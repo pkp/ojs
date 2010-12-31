@@ -14,7 +14,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<form name="disableUser" method="post" action="{url op="disableUser"}">
+<form id="disableUser" method="post" action="{url op="disableUser"}">
 	<input type="hidden" name="reason" value=""/>
 	<input type="hidden" name="userId" value=""/>
 </form>
@@ -45,7 +45,7 @@ function toggleChecked() {
 </script>
 
 {if not $omitSearch}
-	<form method="post" name="submit" action="{url op="enrollSearch"}">
+	<form method="post" id="submit" action="{url op="enrollSearch"}">
 	<input type="hidden" name="roleId" value="{$roleId|escape}"/>
 		<select name="searchField" size="1" class="selectMenu">
 			{html_options_translate options=$fieldOptions selected=$searchField}
@@ -61,7 +61,7 @@ function toggleChecked() {
 	<p>{foreach from=$alphaList item=letter}<a href="{url op="enrollSearch" searchInitial=$letter roleId=$roleId}">{if $letter == $searchInitial}<strong>{$letter|escape}</strong>{else}{$letter|escape}{/if}</a> {/foreach}<a href="{url op="enrollSearch" roleId=$roleId}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
 {/if}
 
-<form name="enroll" onsubmit="return enrollUser(0)" action="{if $roleId}{url op="enroll" path=$roleId}{else}{url op="enroll"}{/if}" method="post">
+<form id="enroll" onsubmit="return enrollUser(0)" action="{if $roleId}{url op="enroll" path=$roleId}{else}{url op="enroll"}{/if}" method="post">
 {if !$roleId}
 	<p>
 	{translate key="manager.people.enrollUserAs"} <select name="roleId" size="1"  class="selectMenu">

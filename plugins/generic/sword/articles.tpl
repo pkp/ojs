@@ -56,7 +56,7 @@ function changeDepositPoint() {
 </script>
 
 <br/>
-<form action="{plugin_url path="deposit"}" method="post" name="articles">
+<form action="{plugin_url path="deposit"}" method="post" id="articles">
 
 <div id="settings">
 <table width="100%" class="data">
@@ -118,7 +118,7 @@ function changeDepositPoint() {
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
-	
+
 	{iterate from=articles item=articleData}
 	{assign var=article value=$articleData.article}
 	{assign var=issue value=$articleData.issue}

@@ -26,10 +26,10 @@ function sortSearch(heading, direction) {
 }
 // -->
 {/literal}
-</script> 
+</script>
 
 <div id="search">
-<form method="post" name="submit" action="{url op="submissions" path=$pageToDisplay}">
+<form method="post" id="submit" action="{url op="submissions" path=$pageToDisplay}">
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions selected=$searchField}
 	</select>
@@ -89,9 +89,9 @@ function sortSearch(heading, direction) {
 			{elseif $status == STATUS_QUEUED}
 				{translate key="submissions.queued"}
 			{elseif $status == STATUS_PUBLISHED}
-				{print_issue_id articleId="$articleId"}			
+				{print_issue_id articleId="$articleId"}
 			{elseif $status == STATUS_DECLINED}
-				{translate key="submissions.declined"}								
+				{translate key="submissions.declined"}
 			{/if}
 		</td>
 	</tr>

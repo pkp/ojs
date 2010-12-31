@@ -11,7 +11,7 @@
 {assign var="pageTitle" value="manager.setup.journalPolicies"}
 {include file="manager/setup/setupHeader.tpl"}
 
-<form name="setupForm" method="post" action="{url op="saveSetup" path="2"}">
+<form id="setupForm" method="post" action="{url op="saveSetup" path="2"}">
 {include file="common/formErrors.tpl"}
 
 {if count($formLocales) > 1}

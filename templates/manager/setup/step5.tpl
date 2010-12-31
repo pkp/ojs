@@ -91,7 +91,7 @@ function prepBlockFields() {
 {/literal}
 </script>
 
-<form name="setupForm" method="post" action="{url op="saveSetup" path="5"}" enctype="multipart/form-data">
+<form id="setupForm" method="post" action="{url op="saveSetup" path="5"}" enctype="multipart/form-data">
 {include file="common/formErrors.tpl"}
 
 {if count($formLocales) > 1}
@@ -459,7 +459,7 @@ function prepBlockFields() {
 					<option value=""></option>
 				{/foreach}
 			</select>
-		</td> 
+		</td>
 		<td>
 			<input class="button defaultButton" style="width: 30px;" type="button" value="&larr;" onclick="jumpList(this.form.elements['blockSelectRightWidget'],this.form.elements['blockUnselectedWidget']);" /><br/>
 			<input class="button defaultButton" style="width: 30px;" type="button" value="&rarr;" onclick="jumpList(this.form.elements['blockUnselectedWidget'],this.form.elements['blockSelectRightWidget']);" />

@@ -18,7 +18,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<form name="suppFile" method="post" action="{url page=$rolePath op="saveSuppFile" path=$suppFileId}" enctype="multipart/form-data">
+<form id="suppFile" method="post" action="{url page=$rolePath op="saveSuppFile" path=$suppFileId}" enctype="multipart/form-data">
 <input type="hidden" name="articleId" value="{$articleId|escape}" />
 <input type="hidden" name="from" value="{$from|escape}" />
 {include file="common/formErrors.tpl"}
@@ -131,7 +131,7 @@
 		<td class="value">{$suppFile->getDateUploaded()|date_format:$dateFormatShort}</td>
 	</tr>
 </table>
-	
+
 <table width="100%"  class="data">
 	<tr valign="top">
 		<td width="5%" class="label"><input type="checkbox" name="showReviewers" id="showReviewers" value="1"{if $showReviewers==1} checked="checked"{/if} /></td>

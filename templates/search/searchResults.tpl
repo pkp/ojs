@@ -31,14 +31,14 @@ function ensureKeyword() {
 <br/>
 
 {if $basicQuery}
-	<form method="post" name="search" action="{url op="results"}">
+	<form method="post" id="search" action="{url op="results"}">
 		<input type="text" size="40" maxlength="255" class="textField" name="query" value="{$basicQuery|escape}"/>&nbsp;&nbsp;
 		<input type="hidden" name="searchField" value="{$searchField|escape}"/>
 		<input type="submit" class="button defaultButton" onclick="ensureKeyword();" value="{translate key="common.search"}"/>
 	</form>
 	<br />
 {else}
-	<form name="revise" action="{url op="advanced"}" method="post">
+	<form id="revise" action="{url op="advanced"}" method="post">
 		<input type="hidden" name="query" value="{$query|escape}"/>
 		<input type="hidden" name="searchJournal" value="{$searchJournal|escape}"/>
 		<input type="hidden" name="author" value="{$author|escape}"/>
@@ -129,7 +129,7 @@ function ensureKeyword() {
 </table>
 
 <p>{translate key="search.syntaxInstructions"}</p>
-</div>	
+</div>
 
 {include file="common/footer.tpl"}
 

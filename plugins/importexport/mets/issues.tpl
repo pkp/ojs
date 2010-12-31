@@ -43,7 +43,7 @@ function SubmitIfAnyIsChecked() {
 	var elements = document.issues.elements;
 	for (var i=0; i < elements.length; i++) {
 		if (elements[i].name == 'issueId[]') {
-			if(elements[i].checked){ 
+			if(elements[i].checked){
                             document.issues.submit();
                             return true;
                          }
@@ -56,7 +56,7 @@ function SubmitIfAnyIsChecked() {
 {/literal}
 </script>
 
-<form action="{plugin_url path="exportIssues"}" method="post" name="issues">
+<form action="{plugin_url path="exportIssues"}" method="post" id="issues">
 
 <h3>{translate key="plugins.importexport.METSExport.settings"}</h3>
 

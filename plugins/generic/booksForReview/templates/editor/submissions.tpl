@@ -10,7 +10,7 @@
 {assign var="pageTitle" value="plugins.generic.booksForReview.editor.selectSubmission"}
 {include file="common/header.tpl"}
 
-<form method="post" name="submit" action="{url op="selectBookForReviewSubmission" path=$bookId returnPage=$returnPage}">
+<form method="post" id="submit" action="{url op="selectBookForReviewSubmission" path=$bookId returnPage=$returnPage}">
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions selected=$searchField}
 	</select>
@@ -39,7 +39,7 @@
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
-	
+
 {iterate from=submissions item=submission}
 	<tr valign="top">
 		<td>{$submission->getId()}</td>

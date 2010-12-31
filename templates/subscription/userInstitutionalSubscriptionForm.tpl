@@ -17,9 +17,9 @@
 <br/>
 
 {if $subscriptionId}
-<form method="post" name="subscriptionForm" action="{url op="payPurchaseSubscription" path="institutional"|to_array:$subscriptionId}">
+<form method="post" id="subscriptionForm" action="{url op="payPurchaseSubscription" path="institutional"|to_array:$subscriptionId}">
 {else}
-<form method="post" name="subscriptionForm" action="{url op="payPurchaseSubscription" path="institutional"}">
+<form method="post" id="subscriptionForm" action="{url op="payPurchaseSubscription" path="institutional"}">
 {/if}
 
 {include file="common/formErrors.tpl"}
@@ -67,7 +67,7 @@
 		{if $ipRangeIndex == 0}
 		<td width="15%" class="label">{fieldLabel name="ipRanges" key="user.subscriptions.form.ipRange"}</td>
 		{else}
-		<td width="15%">&nbsp;</td>	
+		<td width="15%">&nbsp;</td>
 		{/if}
 		<td width="5%" class="label">{fieldLabel name="ipRanges[$ipRangeIndex]" key="user.subscriptions.form.ipRangeItem}</td>
 		<td width="80%" class="value"><input type="text" name="ipRanges[{$ipRangeIndex|escape}]" id="ipRanges-{$ipRangeIndex|escape}" value="{$ipRange|escape}" size="30" maxlength="40" class="textField" />

@@ -28,7 +28,7 @@
 {translate key="issue.issue"}: <select name="issue" class="selectMenu" onchange="if(this.options[this.selectedIndex].value > 0) location.href='{url|escape:"javascript" op="issueToc" path="ISSUE_ID" escape=false}'.replace('ISSUE_ID', this.options[this.selectedIndex].value)" size="1">{html_options options=$issueOptions selected=$issueId}</select>
 </form>
 
-<form name="issue" method="post" action="{url op="saveIssue"}" enctype="multipart/form-data">
+<form id="issue" method="post" action="{url op="saveIssue"}" enctype="multipart/form-data">
 
 <div class="separator"></div>
 <div id="identification">
@@ -89,7 +89,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="openAccessDate" key="editor.issues.accessDate"}</td>
-		{if ($Date_Year && $Date_Month && $Date_Day)} 
+		{if ($Date_Year && $Date_Month && $Date_Day)}
 			<td class="value">{html_select_date time="$Date_Year-$Date_Month-$Date_Day" end_year="+20" all_extra="class=\"selectMenu\""}</td>
 		{else}
 			<td class="value">{html_select_date end_year="+20" all_extra="class=\"selectMenu\""}</td>

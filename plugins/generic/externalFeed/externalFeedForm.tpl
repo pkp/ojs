@@ -20,7 +20,7 @@
 
 <br/>
 
-<form name="externalFeed" method="post" action="{plugin_url path="update"}">
+<form id="externalFeed" method="post" action="{plugin_url path="update"}">
 {if $feedId}
 <input type="hidden" name="feedId" value="{$feedId|escape}" />
 {/if}

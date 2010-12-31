@@ -46,9 +46,9 @@ function sortSearch(heading, direction) {
 }
 // -->
 {/literal}
-</script> 
+</script>
 
-<form method="post" name="submit" action="{url path="search"}">
+<form method="post" id="submit" action="{url path="search"}">
 	{if $section}<input type="hidden" name="section" value="{$section|escape:"quotes"}"/>{/if}
 	<input type="hidden" name="sort" value="id"/>
 	<input type="hidden" name="sortDirection" value="ASC"/>
@@ -95,7 +95,7 @@ function sortSearch(heading, direction) {
 	<tr>
 		<td colspan="6" class="headseparator">&nbsp;</td>
 	</tr>
-	
+
 	{iterate from=submissions item=submission}
 	{assign var="highlightClass" value=$submission->getHighlightClass()}
 	{assign var="fastTracked" value=$submission->getFastTracked()}
@@ -110,7 +110,7 @@ function sortSearch(heading, direction) {
 			{if $status == STATUS_ARCHIVED}
 				{translate key="submissions.archived"}
 			{elseif $status == STATUS_PUBLISHED}
-				{print_issue_id articleId=$submission->getId()}	
+				{print_issue_id articleId=$submission->getId()}
 			{elseif $status == STATUS_DECLINED}
 				{translate key="submissions.declined"}&nbsp;&nbsp;<a href="{url op="deleteSubmission" path=$articleId}" onclick="return confirm('{translate|escape:"jsparam" key="editor.submissionArchive.confirmDelete"}')" class="action">{translate key="common.delete"}</a>
 			{elseif $status==STATUS_QUEUED_UNASSIGNED}{translate key="submissions.queuedUnassigned"}

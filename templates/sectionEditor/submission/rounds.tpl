@@ -161,7 +161,7 @@
 				{foreach from=$reviewAssignment->getReviewerFileRevisions() item=reviewerFile key=key}
 				<tr valign="top">
 					<td valign="middle">
-						<form name="authorView{$reviewAssignment->getId()}" method="post" action="{url op="makeReviewerFileViewable"}">
+						<form id="authorView{$reviewAssignment->getId()}" method="post" action="{url op="makeReviewerFileViewable"}">
 							<a href="{url op="downloadFile" path=$submission->getId()|to_array:$reviewerFile->getFileId():$reviewerFile->getRevision()}" class="file">{$reviewerFile->getFileName()|escape}</a>&nbsp;&nbsp;{$reviewerFile->getDateModified()|date_format:$dateFormatShort}
 							<input type="hidden" name="reviewId" value="{$reviewAssignment->getId()}" />
 							<input type="hidden" name="articleId" value="{$submission->getId()}" />

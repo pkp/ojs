@@ -34,7 +34,7 @@
 	{if $unpublished}<li><a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">{translate key="editor.issues.previewIssue"}</a></li>{/if}
 </ul>
 
-<form name="issue" method="post" action="{url op="editIssue" path=$issueId}" enctype="multipart/form-data">
+<form id="issue" method="post" action="{url op="editIssue" path=$issueId}" enctype="multipart/form-data">
 <input type="hidden" name="fileName[{$formLocale|escape}]" value="{$fileName[$formLocale]|escape}" />
 <input type="hidden" name="originalFileName[{$formLocale|escape}]" value="{$originalFileName[$formLocale]|escape}" />
 {if $styleFileName}

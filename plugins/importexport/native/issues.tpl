@@ -30,7 +30,7 @@ function toggleChecked() {
 <br/>
 
 <div id="issues">
-<form action="{plugin_url path="exportIssues"}" method="post" name="issues">
+<form action="{plugin_url path="exportIssues"}" method="post" id="issues">
 <table width="100%" class="listing">
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
@@ -45,7 +45,7 @@ function toggleChecked() {
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
-	
+
 	{iterate from=issues item=issue}
 	<tr valign="top">
 		<td><input type="checkbox" name="issueId[]" value="{$issue->getId()}"/></td>

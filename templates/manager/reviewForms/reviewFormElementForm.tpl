@@ -31,7 +31,7 @@ function togglePossibleResponses(newValue, multipleResponsesElementTypesString) 
 </script>
 
 <br/>
-<form name="reviewFormElementForm" method="post" action="{url op="updateReviewFormElement" anchor="possibleResponses"}">
+<form id="reviewFormElementForm" method="post" action="{url op="updateReviewFormElement" anchor="possibleResponses"}">
 	<input type="hidden" name="reviewFormId" value="{$reviewFormId}"/>
 	<input type="hidden" name="reviewFormElementId" value="{$reviewFormElementId}"/>
 

@@ -11,7 +11,7 @@
 {strip}
 {if $typeId}
 {assign var="pageTitle" value="manager.subscriptionTypes.edit"}
-	
+
 {else}
 	{assign var="pageTitle" value="manager.subscriptionTypes.create"}
 {/if}
@@ -27,7 +27,7 @@
 
 <br/>
 
-<form name="subscriptionType" method="post" action="{url op="updateSubscriptionType"}">
+<form id="subscriptionType" method="post" action="{url op="updateSubscriptionType"}">
 {if $typeId}
 <input type="hidden" name="typeId" value="{$typeId|escape}" />
 {/if}

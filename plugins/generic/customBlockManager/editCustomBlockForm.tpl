@@ -7,10 +7,10 @@
  * Form for editing a custom sidebar block
  *
  *}
-{assign var="pageTitle" value="plugins.generic.customBlock.editContent"} 
+{assign var="pageTitle" value="plugins.generic.customBlock.editContent"}
 {include file="common/header.tpl"}
 <br />
-<form method="post" name="editCustomBlockForm" action="{plugin_url path="save"}" >
+<form method="post" id="editCustomBlockForm" action="{plugin_url path="save"}" >
 {include file="common/formErrors.tpl"}
 <table class="data" width="100%">
 	<tr>

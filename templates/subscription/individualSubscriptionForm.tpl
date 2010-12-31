@@ -23,7 +23,7 @@
 
 <br/>
 
-<form method="post" name="subscriptionForm" action="{url op="updateSubscription" path="individual"}">
+<form method="post" id="subscriptionForm" action="{url op="updateSubscription" path="individual"}">
 {if $subscriptionId}
 <input type="hidden" name="subscriptionId" value="{$subscriptionId|escape}" />
 {/if}

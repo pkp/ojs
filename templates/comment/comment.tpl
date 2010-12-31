@@ -39,7 +39,7 @@ function handleAnonymousCheckbox(theBox) {
 {include file="common/formErrors.tpl"}
 {assign var=parentId value=$parentId|default:"0"}
 <div id="commentForm">
-<form name="submit" action="{if $commentId}{url op="edit" path=$articleId|to_array:$galleyId:$commentId}{else}{url op="add" path=$articleId|to_array:$galleyId:$parentId:"save"}{/if}" method="post">
+<form id="submit" action="{if $commentId}{url op="edit" path=$articleId|to_array:$galleyId:$commentId}{else}{url op="add" path=$articleId|to_array:$galleyId:$parentId:"save"}{/if}" method="post">
 <table class="data" width="100%">
 	<tr valign="top">
 		<td class="label" width="20%"><label for="posterName">{translate key="comments.name"}</label></td>

@@ -35,7 +35,7 @@ function invokeWLA() {
 <h3>{$article->getLocalizedTitle()|strip_unsafe_html}</h3>
 
 <!-- Include the real forms for each of the search engines -->
-<form name="googleScholar" method="get" action="http://scholar.google.com/scholar">
+<form id="googleScholar" method="get" action="http://scholar.google.com/scholar">
 	<input type="hidden" name="as_q" value="" />
 	<input type="hidden" name="as_sauthors" value="" />
 	<input type="hidden" name="btnG" value="Search Scholar" />
@@ -43,12 +43,12 @@ function invokeWLA() {
 	<input type="hidden" name="as_allsubj" value="all" />
 </form>
 
-<form name="wla" method="get" action="http://search.live.com/results.aspx">
+<form id="wla" method="get" action="http://search.live.com/results.aspx">
 	<input type="hidden" name="q" value="" />
 	<input type="hidden" name="scope" value="academic" />
 </form>
 
-<form name="inputForm" target="#">
+<form id="inputForm" target="#">
 
 <!-- Display the form fields -->
 <table width="100%" class="data">

@@ -15,7 +15,7 @@
 <div id="editEmail">
 <p>{translate key="plugins.generic.translator.email.description"}</p>
 
-<form method="post" action="{url op="saveEmail" path=$locale|to_array:$emailKey}" name="editor">
+<form method="post" action="{url op="saveEmail" path=$locale|to_array:$emailKey}" id="editor">
 <input type="hidden" name="returnToCheck" value="{$returnToCheck|default:0}" />
 <div id="reference">
 <h3>{translate key="plugins.generic.translator.email.reference"}</h3>

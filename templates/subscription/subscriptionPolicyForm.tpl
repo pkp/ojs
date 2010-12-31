@@ -28,7 +28,7 @@
 {translate key="manager.subscriptionPolicies.subscriptionPoliciesSaved"}<br />
 {/if}
 
-<form name="subscriptionPolicies" method="post" action="{url op="saveSubscriptionPolicies"}">
+<form id="subscriptionPolicies" method="post" action="{url op="saveSubscriptionPolicies"}">
 {include file="common/formErrors.tpl"}
 
 	<script type="text/javascript">

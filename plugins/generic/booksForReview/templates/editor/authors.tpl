@@ -10,7 +10,7 @@
 {assign var="pageTitle" value="plugins.generic.booksForReview.editor.assignAuthor"}
 {include file="common/header.tpl"}
 
-<form method="post" name="submit" action="{url op="selectBookForReviewAuthor" path=$bookId returnPage=$returnPage}">
+<form method="post" id="submit" action="{url op="selectBookForReviewAuthor" path=$bookId returnPage=$returnPage}">
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions selected=$searchField}
 	</select>

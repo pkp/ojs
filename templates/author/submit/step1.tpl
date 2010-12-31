@@ -21,7 +21,7 @@
 
 <div class="separator"></div>
 
-<form name="submit" method="post" action="{url op="saveSubmit" path=$submitStep}" onsubmit="return checkSubmissionChecklist()">
+<form id="submit" method="post" action="{url op="saveSubmit" path=$submitStep}" onsubmit="return checkSubmissionChecklist()">
 {include file="common/formErrors.tpl"}
 {if $articleId}<input type="hidden" name="articleId" value="{$articleId|escape}" />{/if}
 
@@ -46,7 +46,7 @@
 <input type="hidden" name="submissionChecklist" value="1" />
 
 <table class="data" width="100%">
-	<tr valign="top">	
+	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="sectionId" required="true" key="section.section"}</td>
 		<td width="80%" class="value"><select name="sectionId" id="sectionId" size="1" class="selectMenu">{html_options options=$sectionOptions selected=$sectionId}</select></td>
 	</tr>
@@ -71,7 +71,7 @@
 	<p>{translate key="author.submit.submissionLocaleDescription"}</p>
 
 	<table class="data" width="100%">
-		<tr valign="top">	
+		<tr valign="top">
 			<td width="20%" class="label">{fieldLabel name="locale" required="true" key="article.language"}</td>
 			<td width="80%" class="value"><select name="locale" id="locale" size="1" class="selectMenu">{html_options options=$supportedSubmissionLocaleNames selected=$locale}</select></td>
 		</tr>
@@ -106,7 +106,7 @@ function checkSubmissionChecklist() {
 
 {if $authorFees}
 	{include file="author/submit/authorFees.tpl" showPayLinks=0}
-	<div class="separator"></div>	
+	<div class="separator"></div>
 {/if}
 
 {if $currentJournal->getLocalizedSetting('submissionChecklist')}

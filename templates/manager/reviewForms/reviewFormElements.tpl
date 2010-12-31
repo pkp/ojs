@@ -45,7 +45,7 @@ function toggleChecked() {
 <br/>
 
 <div id="reviewFormElements">
-<form name="reviewFormElements" action="{url op="copyReviewFormElement"}" method="post">
+<form id="reviewFormElements" action="{url op="copyReviewFormElement"}" method="post">
 <table width="100%" class="listing" id="reviewFormElementsTable">
 	<tr>
 		<td class="headseparator" colspan="3">&nbsp;</td>

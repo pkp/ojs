@@ -34,7 +34,7 @@
 	{if $unpublished}<li><a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">{translate key="editor.issues.previewIssue"}</a></li>{/if}
 </ul>
 
-<form name="issueGalleys" method="post" action="{url op="uploadIssueGalley" path=$issueId}" enctype="multipart/form-data">
+<form id="issueGalleys" method="post" action="{url op="uploadIssueGalley" path=$issueId}" enctype="multipart/form-data">
 {include file="common/formErrors.tpl"}
 <div id="issueId">
 <h3>{translate key="editor.issues.galleys"}</h3>

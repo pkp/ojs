@@ -62,7 +62,7 @@
 
 <br/>
 
-<form name="previewReviewForm" method="post" action="{if $reviewForm->getCompleteCount()!=0 || $reviewForm->getIncompleteCount()!=0}{url op="reviewForms"}{else}{url op="editReviewForm" path=$reviewForm->getId()}{/if}">
+<form id="previewReviewForm" method="post" action="{if $reviewForm->getCompleteCount()!=0 || $reviewForm->getIncompleteCount()!=0}{url op="reviewForms"}{else}{url op="editReviewForm" path=$reviewForm->getId()}{/if}">
 	<p><input type="submit" value="{translate key="common.close"}" class="button defaultButton" /></p>
 </form>
 

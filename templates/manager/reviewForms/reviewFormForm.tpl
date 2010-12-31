@@ -21,7 +21,7 @@
 
 <br/>
 
-<form name="reviewFormForm" method="post" action="{url op="updateReviewForm"}">
+<form id="reviewFormForm" method="post" action="{url op="updateReviewForm"}">
 {if $reviewFormId}
 	<input type="hidden" name="reviewFormId" value="{$reviewFormId}"/>
 {/if}

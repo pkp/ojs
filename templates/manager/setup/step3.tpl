@@ -9,7 +9,7 @@
 {assign var="pageTitle" value="manager.setup.guidingSubmissions"}
 {include file="manager/setup/setupHeader.tpl"}
 
-<form name="setupForm" method="post" action="{url op="saveSetup" path="3"}">
+<form id="setupForm" method="post" action="{url op="saveSetup" path="3"}">
 {include file="common/formErrors.tpl"}
 
 {if count($formLocales) > 1}
@@ -150,11 +150,11 @@
 			<span class="instruct">{translate key="manager.setup.disciplineExamples"}</span>
 		</td>
 	</tr>
-	
+
 	<tr>
 		<td class="separator" colspan="2"><br />&nbsp;</td>
 	</tr>
-	
+
 	<tr valign="top">
 		<td width="5%" class="label" valign="bottom"><input type="checkbox" name="metaSubjectClass" id="metaSubjectClass" value="1"{if $metaSubjectClass} checked="checked"{/if} /></td>
 		<td width="95%" class="value">
@@ -177,11 +177,11 @@
 			<span class="instruct">{translate key="manager.setup.subjectClassificationExamples"}</span>
 		</td>
 	</tr>
-	
+
 	<tr>
 		<td class="separator" colspan="2"><br />&nbsp;</td>
 	</tr>
-	
+
 	<tr valign="top">
 		<td width="5%" class="label" valign="bottom"><input type="checkbox" name="metaSubject" id="metaSubject" value="1"{if $metaSubject} checked="checked"{/if} /></td>
 		<td width="95%" class="value">
@@ -198,11 +198,11 @@
 			<span class="instruct">{translate key="manager.setup.subjectExamples"}</span>
 		</td>
 	</tr>
-	
+
 	<tr>
 		<td class="separator" colspan="2"><br />&nbsp;</td>
 	</tr>
-	
+
 	<tr valign="top">
 		<td width="5%" class="label" valign="bottom"><input type="checkbox" name="metaCoverage" id="metaCoverage" value="1"{if $metaCoverage} checked="checked"{/if} /></td>
 		<td width="95%" class="value">
@@ -249,11 +249,11 @@
 			<span class="instruct">{translate key="manager.setup.coverageResearchSampleExamples"}</span>
 		</td>
 	</tr>
-	
+
 	<tr>
 		<td class="separator" colspan="2"><br />&nbsp;</td>
 	</tr>
-	
+
 	<tr valign="top">
 		<td width="5%" class="label" valign="bottom"><input type="checkbox" name="metaType" id="metaType" value="1"{if $metaType} checked="checked"{/if} /></td>
 		<td width="95%" class="value">
@@ -327,12 +327,12 @@
 			</td>
 		</tr>
 	</table>
-	
+
 	<div id="citationFilterSetupToggle" {if !$metaCitations}style="visible: none"{/if}>
 		<h4>{translate key="manager.setup.citationFilterParser"}</h4>
 		<p>{translate key="manager.setup.citationFilterParserDescription"}</p>
 		{load_url_in_div id="parserFilterGridContainer" loadMessageId="manager.setup.filter.parser.grid.loadMessage" url="$parserFilterGridUrl"}
-		
+
 		<h4>{translate key="manager.setup.citationFilterLookup"}</h4>
 		<p>{translate key="manager.setup.citationFilterLookupDescription"}</p>
 		{load_url_in_div id="lookupFilterGridContainer" loadMessageId="manager.setup.filter.lookup.grid.loadMessage" url="$lookupFilterGridUrl"}
@@ -347,7 +347,7 @@
 			// jQuerify DOM elements
 			$metaCitationsCheckbox = $('#metaCitations');
 			$metaCitationsSetupBox = $('#citationFilterSetupToggle');
-			
+
 			// Set the initial state
 			initialCheckboxState = $metaCitationsCheckbox.attr('checked');
 			if (initialCheckboxState) {
@@ -355,7 +355,7 @@
 			} else {
 				$metaCitationsSetupBox.css('display', 'none');
 			}
-			
+
 			// Toggle the settings box.
 			// NB: Has to be click() rather than change() to work in IE.
 			$metaCitationsCheckbox.click(function(){
@@ -365,7 +365,7 @@
 					$metaCitationsSetupBox.toggle(300);
 				}
 			});
-		});	
+		});
 	</script>{/literal}
 {/if}
 </div>

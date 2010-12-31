@@ -14,7 +14,7 @@
 {/strip}
 
 {assign var=filenameEscaped value=$filename|escape:"url"|escape:"url"}
-<form method="post" action="{url op="saveMiscFile" path=$locale|to_array:$filenameEscaped}" name="editor">
+<form method="post" action="{url op="saveMiscFile" path=$locale|to_array:$filenameEscaped}" id="editor">
 <div id="contact">
 <h3>{translate key="plugins.generic.translator.file.reference"}</h3>
 <textarea readonly="true" name="referenceContents" rows="12" cols="80" class="textArea">

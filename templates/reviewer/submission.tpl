@@ -233,7 +233,7 @@ function confirmSubmissionCheck() {
 	<tr valign="top">
 		<td>&nbsp;</td>
 		<td>
-			{translate key="submission.reviewForm"} 
+			{translate key="submission.reviewForm"}
 			{if $confirmedStatus and not $declined}
 				<a href="{url op="editReviewFormResponse" path=$reviewId|to_array:$reviewAssignment->getReviewFormId()}" class="icon">{icon name="comment"}</a>
 			{else}
@@ -252,7 +252,7 @@ function confirmSubmissionCheck() {
 	<tr valign="top">
 		<td>&nbsp;</td>
 		<td>
-			{translate key="submission.logType.review"} 
+			{translate key="submission.logType.review"}
 			{if $confirmedStatus and not $declined}
 				<a href="javascript:openComments('{url op="viewPeerReviewComments" path=$articleId|to_array:$reviewId}');" class="icon">{icon name="comment"}</a>
 			{else}
@@ -333,15 +333,15 @@ function confirmSubmissionCheck() {
 					<strong>{translate key=$reviewerRecommendationOptions.$recommendation}</strong>&nbsp;&nbsp;
 					{$submission->getDateCompleted()|date_format:$dateFormatShort}
 				{else}
-					<form name="recommendation" method="post" action="{url op="recordRecommendation"}">
+					<form id="recommendation" method="post" action="{url op="recordRecommendation"}">
 					<input type="hidden" name="reviewId" value="{$reviewId|escape}" />
 					<select name="recommendation" {if not $confirmedStatus or $declined or $submission->getCancelled() or (!$reviewFormResponseExists and !$reviewAssignment->getMostRecentPeerReviewComment() and !$uploadedFileExists)}disabled="disabled"{/if} class="selectMenu">
 						{html_options_translate options=$reviewerRecommendationOptions selected=''}
 					</select>&nbsp;&nbsp;&nbsp;&nbsp;
 					<input type="submit" name="submit" onclick="return confirmSubmissionCheck()" class="button" value="{translate key="reviewer.article.submitReview"}" {if not $confirmedStatus or $declined or $submission->getCancelled() or (!$reviewFormResponseExists and !$reviewAssignment->getMostRecentPeerReviewComment() and !$uploadedFileExists)}disabled="disabled"{/if} />
-					</form>					
+					</form>
 				{/if}
-				</td>		
+				</td>
 			</tr>
 		</table>
 	</td>

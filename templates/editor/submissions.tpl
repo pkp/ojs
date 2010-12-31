@@ -48,9 +48,9 @@ function sortSearch(heading, direction) {
 }
 // -->
 {/literal}
-</script> 
+</script>
 
-<form method="post" name="submit" action="{url op="submissions" path=$pageToDisplay}">
+<form method="post" id="submit" action="{url op="submissions" path=$pageToDisplay}">
 	<input type="hidden" name="sort" value="id"/>
 	<input type="hidden" name="sortDirection" value="ASC"/>
 	<select name="searchField" size="1" class="selectMenu">

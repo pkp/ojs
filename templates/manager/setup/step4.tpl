@@ -11,7 +11,7 @@
 {assign var="pageTitle" value="manager.setup.managingTheJournal"}
 {include file="manager/setup/setupHeader.tpl"}
 
-<form name="setupForm" method="post" action="{url op="saveSetup" path="4"}" enctype="multipart/form-data">
+<form id="setupForm" method="post" action="{url op="saveSetup" path="4"}" enctype="multipart/form-data">
 {include file="common/formErrors.tpl"}
 
 {if count($formLocales) > 1}

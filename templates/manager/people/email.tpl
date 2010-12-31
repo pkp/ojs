@@ -25,7 +25,7 @@ function deleteAttachment(fileId) {
 {/literal}
 </script>
 <div id="genericEmail">
-<form method="post" name="submit" action="{$formActionUrl}"{if $attachmentsEnabled} enctype="multipart/form-data"{/if}>
+<form method="post" id="submit" action="{$formActionUrl}"{if $attachmentsEnabled} enctype="multipart/form-data"{/if}>
 <input type="hidden" name="continued" value="1"/>
 {if $attachmentsEnabled}
 	<input type="hidden" name="deleteAttachment" value="" />

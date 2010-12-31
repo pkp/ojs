@@ -29,7 +29,7 @@
 </script>
 {/literal}
 
-<form method="post" name="reviewerForm" action="{url op="createReviewer" path=$articleId|to_array:"create"}">
+<form method="post" id="reviewerForm" action="{url op="createReviewer" path=$articleId|to_array:"create"}">
 
 {include file="common/formErrors.tpl"}
 

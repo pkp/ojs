@@ -13,7 +13,7 @@
 
 {url|assign:"competingInterestGuidelinesUrl" page="information" op="competingInterestGuidelines"}
 
-<form name="metadata" method="post" action="{url op="saveMetadata"}" enctype="multipart/form-data">
+<form id="metadata" method="post" action="{url op="saveMetadata"}" enctype="multipart/form-data">
 <input type="hidden" name="articleId" value="{$articleId|escape}" />
 {include file="common/formErrors.tpl"}
 
@@ -428,7 +428,7 @@ function moveAuthor(dir, authorIndex) {
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="hideAuthor" key="issue.toc"}</td>
-		<td width="80%" class="value">{translate key="editor.article.hideTocAuthorDescription"}: 
+		<td width="80%" class="value">{translate key="editor.article.hideTocAuthorDescription"}:
 			<select name="hideAuthor" id="hideAuthor" class="selectMenu">
 				{html_options options=$hideAuthorOptions selected=$hideAuthor|escape}
 			</select>

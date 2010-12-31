@@ -30,7 +30,7 @@ function toggleChecked() {
 <br/>
 
 <div id="articles">
-<form action="{plugin_url path="exportArticles"}" method="post" name="articles">
+<form action="{plugin_url path="exportArticles"}" method="post" id="articles">
 <table width="100%" class="listing">
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
@@ -45,7 +45,7 @@ function toggleChecked() {
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
-	
+
 	{iterate from=articles item=articleData}
 	{assign var=article value=$articleData.article}
 	{assign var=issue value=$articleData.issue}

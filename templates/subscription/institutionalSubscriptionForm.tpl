@@ -23,7 +23,7 @@
 
 <br/>
 
-<form method="post" name="subscriptionForm" action="{url op="updateSubscription" path="institutional"}">
+<form method="post" id="subscriptionForm" action="{url op="updateSubscription" path="institutional"}">
 {if $subscriptionId}
 <input type="hidden" name="subscriptionId" value="{$subscriptionId|escape}" />
 {/if}
@@ -77,7 +77,7 @@
 		{if $ipRangeIndex == 0}
 		<td width="15%" class="label">{fieldLabel name="ipRanges" key="manager.subscriptions.form.ipRange"}</td>
 		{else}
-		<td width="15%">&nbsp;</td>	
+		<td width="15%">&nbsp;</td>
 		{/if}
 		<td width="5%" class="label">{fieldLabel name="ipRanges[$ipRangeIndex]" key="manager.subscriptions.form.ipRangeItem}</td>
 		<td width="80%" class="value"><input type="text" name="ipRanges[{$ipRangeIndex|escape}]" id="ipRanges-{$ipRangeIndex|escape}" value="{$ipRange|escape}" size="30" maxlength="40" class="textField" />

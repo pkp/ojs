@@ -31,7 +31,7 @@
 </script>
 {/literal}
 
-<form name="profile" method="post" action="{url op="saveProfile"}" enctype="multipart/form-data">
+<form id="profile" method="post" action="{url op="saveProfile"}" enctype="multipart/form-data">
 
 {include file="common/formErrors.tpl"}
 

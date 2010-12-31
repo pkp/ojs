@@ -14,7 +14,7 @@
 
 <p><img src="{$baseUrl}/plugins/paymethod/paypal/images/paypal_cards.png" alt="paypal" /></p>
 <p>{translate key="plugins.paymethod.paypal.warning"}</p>
-<form action="{$paypalFormUrl}" id="paypalPaymentForm" name="paypalPaymentForm" method="post" style="margin-bottom: 0px;">
+<form action="{$paypalFormUrl}" id="paypalPaymentForm" method="post" style="margin-bottom: 0px;">
 	{include file="common/formErrors.tpl"}
 	{if $params.item_name}
 	<table class="data" width="100%">
@@ -38,11 +38,11 @@
 			<td class="label" colspan="2">{$params.item_description|escape|nl2br}</td>
 		</tr>
 	</table>
-	{/if}	
+	{/if}
 	{foreach from=$params key="name" item="value"}
 		<input type="hidden" name="{$name|escape}" value="{$value|escape}" />
 	{/foreach}
-	
+
 	<p><input type="submit" name="submitBtn" value="{translate key="common.continue"}" class="button defaultButton" /></p>
 </form>
 {include file="common/footer.tpl"}
