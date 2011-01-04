@@ -19,7 +19,7 @@ import('lib.pkp.classes.search.SearchFileParser');
 import('lib.pkp.classes.search.SearchHTMLParser');
 import('lib.pkp.classes.search.SearchHelperParser');
 
-define('SEARCH_STOPWORDS_FILE', 'registry/stopwords.txt');
+define('SEARCH_STOPWORDS_FILE', 'lib/pkp/registry/stopwords.txt');
 
 // Words are truncated to at most this length
 define('SEARCH_KEYWORD_MAX_LENGTH', 40);
