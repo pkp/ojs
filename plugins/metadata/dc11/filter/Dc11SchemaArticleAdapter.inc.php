@@ -167,7 +167,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		// Relation
 		if (is_a($article, 'PublishedArticle')) {
 			foreach ($article->getSuppFiles() as $suppFile) {
-				$relation = Request::url($journal->getPath(), 'article', 'download', array($article->getId(), $suppFile->getFileId()));
+				$relation = Request::url($journal->getPath(), 'article', 'downloadSuppFile', array($article->getId(), $suppFile->getId()));
 				$dc11Description->addStatement('dc:relation', $relation);
 			}
 		}
