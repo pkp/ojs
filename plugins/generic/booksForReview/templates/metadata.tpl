@@ -12,4 +12,4 @@
 	<meta name="DC.Relation" scheme="isReviewOf" content="ISBN {$book->getISBN()|escape}"/>
 	<meta name="DC.Relation" scheme="References" content="ISBN {$book->getISBN()|escape}"/>
 {/if}
-	<meta name="DC.Relation" scheme="References" content="{$citation}"/>
+	<meta name="DC.Relation" scheme="References" content="{$citation|escape}"/>
