@@ -7,7 +7,7 @@
 /**
  * @file tests/plugins/metadata/nlm30/Nlm30MetadataPluginTest.inc.php
  *
- * Copyright (c) 2000-2010 John Willinsky
+ * Copyright (c) 2000-2011 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Nlm30MetadataPluginTest
