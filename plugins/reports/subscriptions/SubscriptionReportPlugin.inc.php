@@ -70,26 +70,31 @@ class SubscriptionReportPlugin extends ReportPlugin {
 		$fp = fopen('php://output', 'wt');
 
 		// Columns for individual subscriptions
-		$columns = array(Locale::translate('plugins.reports.subscriptions.individualSubscriptions'));
+		$columns = array(Locale::translate('subscriptionManager.individualSubscriptions'));
 		String::fputcsv($fp, array_values($columns));
 
-		$columns = array(
-			'subscription_id' => Locale::translate('plugins.reports.subscriptions.subscriptionId'),
-			'status' => Locale::translate('plugins.reports.subscriptions.status'),
-			'type' => Locale::translate('plugins.reports.subscriptions.type'),
-			'format' => Locale::translate('plugins.reports.subscriptions.format'),
-			'date_start' => Locale::translate('plugins.reports.subscriptions.dateStart'),
-			'date_end' => Locale::translate('plugins.reports.subscriptions.dateEnd'),
-			'membership' => Locale::translate('plugins.reports.subscriptions.membership'),
-			'reference_number' => Locale::translate('plugins.reports.subscriptions.referenceNumber'),
-			'notes' => Locale::translate('plugins.reports.subscriptions.notes'),
-			'name' => Locale::translate('plugins.reports.subscriptions.name'),
-			'mailing_address' => Locale::translate('plugins.reports.subscriptions.mailingAddress'),
-			'country' => Locale::translate('plugins.reports.subscriptions.country'),
-			'email' => Locale::translate('plugins.reports.subscriptions.email'),
-			'phone' => Locale::translate('plugins.reports.subscriptions.phone'),
-			'fax' => Locale::translate('plugins.reports.subscriptions.fax')
+		$columnsCommon = array(
+			'subscription_id' => Locale::translate('common.id'),
+			'status' => Locale::translate('subscriptions.status'),
+			'type' => Locale::translate('common.type'),
+			'format' => Locale::translate('subscriptionTypes.format'),
+			'date_start' => Locale::translate('manager.subscriptions.dateStart'),
+			'date_end' => Locale::translate('manager.subscriptions.dateEnd'),
+			'membership' => Locale::translate('manager.subscriptions.membership'),
+			'reference_number' => Locale::translate('manager.subscriptions.referenceNumber'),
+			'notes' => Locale::translate('common.notes')
 		);
+
+		$columnsIndividual = array(
+			'name' => Locale::translate('user.name'),
+			'mailing_address' => Locale::translate('common.mailingAddress'),
+			'country' => Locale::translate('common.country'),
+			'email' => Locale::translate('user.email'),
+			'phone' => Locale::translate('user.phone'),
+			'fax' => Locale::translate('user.fax')
+		);
+
+		$columns = array_merge($columnsCommon, $columnsIndividual);
 
 		// Write out individual subscription column headings to file
 		String::fputcsv($fp, array_values($columns));
@@ -159,30 +164,23 @@ class SubscriptionReportPlugin extends ReportPlugin {
 		$columns = array('');
 		String::fputcsv($fp, array_values($columns));
 
-		$columns = array(Locale::translate('plugins.reports.subscriptions.institutionalSubscriptions'));
+		$columns = array(Locale::translate('subscriptionManager.institutionalSubscriptions'));
 		String::fputcsv($fp, array_values($columns));
 
-		$columns = array(
-			'subscription_id' => Locale::translate('plugins.reports.subscriptions.subscriptionId'),
-			'status' => Locale::translate('plugins.reports.subscriptions.status'),
-			'type' => Locale::translate('plugins.reports.subscriptions.type'),
-			'format' => Locale::translate('plugins.reports.subscriptions.format'),
-			'date_start' => Locale::translate('plugins.reports.subscriptions.dateStart'),
-			'date_end' => Locale::translate('plugins.reports.subscriptions.dateEnd'),
-			'membership' => Locale::translate('plugins.reports.subscriptions.membership'),
-			'reference_number' => Locale::translate('plugins.reports.subscriptions.referenceNumber'),
-			'notes' => Locale::translate('plugins.reports.subscriptions.notes'),
-			'institution_name' => Locale::translate('plugins.reports.subscriptions.institutionName'),
+		$columnsInstitution = array(
+			'institution_name' => Locale::translate('manager.subscriptions.institutionName'),
 			'institution_mailing_address' => Locale::translate('plugins.reports.subscriptions.institutionMailingAddress'),
-			'domain' => Locale::translate('plugins.reports.subscriptions.domain'),
+			'domain' => Locale::translate('manager.subscriptions.domain'),
 			'ip_ranges' => Locale::translate('plugins.reports.subscriptions.ipRanges'),
-			'contact' => Locale::translate('plugins.reports.subscriptions.contact'),
-			'mailing_address' => Locale::translate('plugins.reports.subscriptions.mailingAddress'),
-			'country' => Locale::translate('plugins.reports.subscriptions.country'),
-			'email' => Locale::translate('plugins.reports.subscriptions.email'),
-			'phone' => Locale::translate('plugins.reports.subscriptions.phone'),
-			'fax' => Locale::translate('plugins.reports.subscriptions.fax')
+			'contact' => Locale::translate('manager.subscriptions.contact'),
+			'mailing_address' => Locale::translate('common.mailingAddress'),
+			'country' => Locale::translate('common.country'),
+			'email' => Locale::translate('user.email'),
+			'phone' => Locale::translate('user.phone'),
+			'fax' => Locale::translate('user.fax')
 		);
+
+		$columns = array_merge($columnsCommon, $columnsInstitution);
 
 		// Write out institutional subscription column headings to file
 		String::fputcsv($fp, array_values($columns));
