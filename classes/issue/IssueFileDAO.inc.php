@@ -13,11 +13,11 @@
  * @brief Operations for retrieving and modifying IssueFile objects.
  */
 
+import('lib.pkp.classes.file.PKPFileDAO');
 import('classes.issue.IssueFile');
 
-define('INLINEABLE_TYPES_FILE', Config::getVar('general', 'registry_dir') . DIRECTORY_SEPARATOR . 'inlineTypes.txt');
 
-class IssueFileDAO extends DAO {
+class IssueFileDAO extends PKPFileDAO {
 
 	 /* @var array MIME types that can be displayed inline in a browser */
 	var $_inlineableTypes = null;
@@ -63,14 +63,14 @@ class IssueFileDAO extends DAO {
 				FROM issue_files f
 				WHERE f.file_id = ?
 				AND f.issue_id = ?',
-				array($fileId, $issueId)
+				array((int) $fileId, (int) $issueId)
 			);
 		} else {
 			$result =& $this->retrieve(
 				'SELECT f.*
 				FROM issue_files f
 				WHERE f.file_id = ?',
-				$fileId
+				(int) $fileId
 			);
 		}
 
@@ -95,7 +95,7 @@ class IssueFileDAO extends DAO {
 
 		$result =& $this->retrieve(
 			'SELECT * FROM issue_files WHERE issue_id = ?',
-			$issueId
+			(int) $issueId
 		);
 
 		while (!$result->EOF) {
@@ -135,7 +135,6 @@ class IssueFileDAO extends DAO {
 	 * @return int
 	 */
 	function insertIssueFile(&$issueFile) {
-		$fileId = $issueFile->getId();
 		$params = array(
 			(int) $issueFile->getIssueId(),
 			$issueFile->getFileName(),
@@ -145,15 +144,10 @@ class IssueFileDAO extends DAO {
 			$issueFile->getOriginalFileName()
 		);
 
-		if ($fileId) {
-			array_unshift($params, $fileId);
-		}
-
 		$this->update(
 			sprintf(
 				'INSERT INTO issue_files
-					(' . ($fileId ? 'file_id, ' : '') .
-					'issue_id,
+					(issue_id,
 					file_name,
 					file_type,
 					file_size,
@@ -162,18 +156,14 @@ class IssueFileDAO extends DAO {
 					date_uploaded,
 					date_modified)
 				VALUES
-					(' . ($fileId ? '?, ' : '') .
-					'?, ?, ?, ?, ?, ?, %s, %s)',
+					(?, ?, ?, ?, ?, ?, %s, %s)',
 				$this->datetimeToDB($issueFile->getDateUploaded()),
 				$this->datetimeToDB($issueFile->getDateModified())
 			),
 			$params
 		);
 
-		if (!$fileId) {
-			$issueFile->setId($this->getInsertIssueFileId());
-		}
-
+		$issueFile->setId($this->getInsertIssueFileId());
 		return $issueFile->getId();
 	}
 
@@ -227,7 +217,7 @@ class IssueFileDAO extends DAO {
 	 */
 	function deleteIssueFileById($fileId) {
 		return $this->update(
-			'DELETE FROM issue_files WHERE file_id = ?', $fileId
+			'DELETE FROM issue_files WHERE file_id = ?', (int) $fileId
 		);
 	}
 
@@ -237,7 +227,7 @@ class IssueFileDAO extends DAO {
 	 */
 	function deleteIssueFiles($issueId) {
 		return $this->update(
-			'DELETE FROM issue_files WHERE issue_id = ?', $issueId
+			'DELETE FROM issue_files WHERE issue_id = ?', (int) $issueId
 		);
 	}
 
@@ -247,20 +237,6 @@ class IssueFileDAO extends DAO {
 	 */
 	function getInsertIssueFileId() {
 		return $this->getInsertId('issue_files', 'file_id');
-	}
-
-	/**
-	 * Check whether a file may be displayed inline.
-	 * @param $issueFile object
-	 * @return boolean
-	 */
-	function isInlineable(&$issueFile) {
-		$inlineableTypes = $this->getInlineableTypes();
-		if (!$inlineableTypes) {
-			$inlineableTypes = array_filter(file(INLINEABLE_TYPES_FILE), create_function('&$a', 'return ($a = trim($a)) && !empty($a) && $a[0] != \'#\';'));
-			$this->setInlineableTypes($inlineableTypes);
-		}
-		return in_array($issueFile->getFileType(), $inlineableTypes);
 	}
 }
 

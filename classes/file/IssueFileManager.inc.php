@@ -34,10 +34,9 @@ class IssueFileManager extends FileManager {
 	function IssueFileManager($issueId) {
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		$issue =& $issueDao->getIssueById($issueId);
-		$this->setIssueId($issueId);
 
-		$filesDir = Config::getVar('files', 'files_dir') . '/journals/' . $issue->getJournalId() . '/issues/' . $issue->getId();
-		$this->setFilesDir($filesDir);
+		$this->setIssueId($issueId);
+		$this->setFilesDir(Config::getVar('files', 'files_dir') . '/journals/' . $issue->getJournalId() . '/issues/' . $issueId . '/');
 	}
 
 	/**
@@ -91,7 +90,7 @@ class IssueFileManager extends FileManager {
 		$issueFileDao =& DAORegistry::getDAO('IssueFileDAO');
 		$issueFile =& $issueFileDao->getIssueFile($fileId);
 
-		if (parent::deleteFile($this->getFilesDir() . '/' . $this->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getFileName())) {
+		if (parent::deleteFile($this->getFilesDir() . $this->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getFileName())) {
 			$issueFileDao->deleteIssueFileById($fileId);
 			return true;
 		}
@@ -118,7 +117,7 @@ class IssueFileManager extends FileManager {
 
 		if ($issueFile) {
 			$fileType = $issueFile->getFileType();
-			$filePath = $this->getFilesDir() . '/' . $this->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getFileName();
+			$filePath = $this->getFilesDir() . $this->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getFileName();
 
 			return parent::downloadFile($filePath, $fileType, $inline);
 
@@ -172,7 +171,7 @@ class IssueFileManager extends FileManager {
 		$issueFileDao =& DAORegistry::getDAO('IssueFileDAO');
 
 		$contentTypePath = $this->contentTypeToPath($contentType);
-		$dir = $this->getFilesDir() . '/' . $contentTypePath . '/';
+		$dir = $this->getFilesDir() . $contentTypePath . '/';
 
 		$issueFile = new IssueFile();
 		$issueFile->setIssueId($issueId);

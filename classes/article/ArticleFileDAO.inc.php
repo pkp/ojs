@@ -13,16 +13,11 @@
  * @brief Operations for retrieving and modifying ArticleFile objects.
  */
 
-
+import('lib.pkp.classes.file.PKPFileDAO');
 import('classes.article.ArticleFile');
 
-define('INLINEABLE_TYPES_FILE', Core::getBaseDir() . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'pkp' . DIRECTORY_SEPARATOR . 'registry' . DIRECTORY_SEPARATOR . 'inlineTypes.txt');
 
-class ArticleFileDAO extends DAO {
-	/**
-	 * Array of MIME types that can be displayed inline in a browser
-	 */
-	var $inlineableTypes;
+class ArticleFileDAO extends PKPFileDAO {
 
 	/**
 	 * Retrieve an article by ID.
@@ -378,18 +373,6 @@ class ArticleFileDAO extends DAO {
 	 */
 	function getInsertArticleFileId() {
 		return $this->getInsertId('article_files', 'file_id');
-	}
-
-	/**
-	 * Check whether a file may be displayed inline.
-	 * @param $articleFile object
-	 * @return boolean
-	 */
-	function isInlineable(&$articleFile) {
-		if (!isset($this->inlineableTypes)) {
-			$this->inlineableTypes = array_filter(file(INLINEABLE_TYPES_FILE), create_function('&$a', 'return ($a = trim($a)) && !empty($a) && $a[0] != \'#\';'));
-		}
-		return in_array($articleFile->getFileType(), $this->inlineableTypes);
 	}
 }
 

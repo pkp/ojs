@@ -75,25 +75,12 @@ class IssueAction {
 	 * @return bool
 	 */
 	function allowedPrePublicationAccess(&$journal, &$article) {
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		if (IssueAction::_roleAllowedPrePublicationAccess($journal)) return true;
+
 		$user =& Request::getUser();
 		if ($user && $journal) {
 			$journalId = $journal->getId();
 			$userId = $user->getId();
-			$subscriptionAssumedRoles = array(
-				ROLE_ID_JOURNAL_MANAGER,
-				ROLE_ID_EDITOR,
-				ROLE_ID_SECTION_EDITOR,
-				ROLE_ID_LAYOUT_EDITOR,
-				ROLE_ID_COPYEDITOR,
-				ROLE_ID_PROOFREADER,
-				ROLE_ID_SUBSCRIPTION_MANAGER
-			);
-
-			$roles =& $roleDao->getRolesByUserId($userId, $journalId);
-			foreach ($roles as $role) {
-				if (in_array($role->getRoleId(), $subscriptionAssumedRoles)) return true;
-			}
 
 			if (Validation::isAuthor($journalId)) {
 				if ($article && $article->getUserId() == $userId) return true;
@@ -102,7 +89,6 @@ class IssueAction {
 				if (isset($publishedArticle) && $publishedArticle && $publishedArticle->getUserId() == $userId) return true;
 			}
 		}
-
 		return false;
 	}
 
@@ -114,27 +100,7 @@ class IssueAction {
 	 * @return bool
 	 */
 	function allowedIssuePrePublicationAccess($journal) {
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		$user =& Request::getUser();
-		if ($user && $journal) {
-			$journalId = $journal->getId();
-			$userId = $user->getId();
-			$subscriptionAssumedRoles = array(
-				ROLE_ID_JOURNAL_MANAGER,
-				ROLE_ID_EDITOR,
-				ROLE_ID_SECTION_EDITOR,
-				ROLE_ID_LAYOUT_EDITOR,
-				ROLE_ID_COPYEDITOR,
-				ROLE_ID_PROOFREADER,
-				ROLE_ID_SUBSCRIPTION_MANAGER
-			);
-
-			$roles =& $roleDao->getRolesByUserId($userId, $journalId);
-			foreach ($roles as $role) {
-				if (in_array($role->getRoleId(), $subscriptionAssumedRoles)) return true;
-			}
-		}
-		return false;
+		return IssueAction::_roleAllowedPrePublicationAccess($journal);
 	}
 
 	/**
@@ -242,6 +208,37 @@ class IssueAction {
 		}
 
 		return $issueOptions;
+	}
+
+	/**
+	 * Checks if this user is granted access to pre-publication galleys based on role
+	 * based on their roles in the journal (i.e. Manager, Editor, etc).
+	 * @param $journal object
+	 * @param $issue object
+	 * @return bool
+	 */
+	function _roleAllowedPrePublicationAccess($journal) {
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$user =& Request::getUser();
+		if ($user && $journal) {
+			$journalId = $journal->getId();
+			$userId = $user->getId();
+			$subscriptionAssumedRoles = array(
+				ROLE_ID_JOURNAL_MANAGER,
+				ROLE_ID_EDITOR,
+				ROLE_ID_SECTION_EDITOR,
+				ROLE_ID_LAYOUT_EDITOR,
+				ROLE_ID_COPYEDITOR,
+				ROLE_ID_PROOFREADER,
+				ROLE_ID_SUBSCRIPTION_MANAGER
+			);
+
+			$roles =& $roleDao->getRolesByUserId($userId, $journalId);
+			foreach ($roles as $role) {
+				if (in_array($role->getRoleId(), $subscriptionAssumedRoles)) return true;
+			}
+		}
+		return false;
 	}
 
 }
