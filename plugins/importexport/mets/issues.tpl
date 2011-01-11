@@ -20,9 +20,9 @@
 
 
 function selectAll() {
-        document.issues.selButton.value = "Unselect All";
-        document.issues.selButton.attributes["onclick"].value = "javascript:unSelectAll();";
-	var elements = document.issues.elements;
+        document.getElementById('issues').selButton.value = "Unselect All";
+        document.getElementById('issues').selButton.attributes["onclick"].value = "javascript:unSelectAll();";
+	var elements = document.getElementById('issues').elements;
 	for (var i=0; i < elements.length; i++) {
 		if (elements[i].name == 'issueId[]') {
 			elements[i].checked = true;
@@ -30,9 +30,9 @@ function selectAll() {
 	}
 }
 function unSelectAll() {
-        document.issues.selButton.value = "Select All";
-        document.issues.selButton.attributes["onclick"].value  = "javascript:selectAll();";
-	var elements = document.issues.elements;
+        document.getElementById('issues').selButton.value = "Select All";
+        document.getElementById('issues').selButton.attributes["onclick"].value  = "javascript:selectAll();";
+	var elements = document.getElementById('issues').elements;
 	for (var i=0; i < elements.length; i++) {
 		if (elements[i].name == 'issueId[]') {
 			elements[i].checked = false;
@@ -40,11 +40,11 @@ function unSelectAll() {
 	}
 }
 function SubmitIfAnyIsChecked() {
-	var elements = document.issues.elements;
+	var elements = document.getElementById('issues').elements;
 	for (var i=0; i < elements.length; i++) {
 		if (elements[i].name == 'issueId[]') {
 			if(elements[i].checked){
-                            document.issues.submit();
+                            document.getElementById('issues').submit();
                             return true;
                          }
 		}

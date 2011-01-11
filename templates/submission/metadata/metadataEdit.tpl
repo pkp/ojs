@@ -23,7 +23,7 @@
 <!--
 // Move author up/down
 function moveAuthor(dir, authorIndex) {
-	var form = document.metadata;
+	var form = document.getElementById('metadata');
 	form.moveAuthor.value = 1;
 	form.moveAuthorDir.value = dir;
 	form.moveAuthorIndex.value = authorIndex;

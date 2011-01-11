@@ -86,7 +86,7 @@
 {literal}
 <!--
 function checkSubmissionChecklist() {
-	var elements = document.submit.elements;
+	var elements = document.getElementById('submit').elements;
 	for (var i=0; i < elements.length; i++) {
 		if (elements[i].type == 'checkbox' && !elements[i].checked) {
 			if (elements[i].name.match('^checklist')) {

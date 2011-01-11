@@ -20,9 +20,9 @@
 <!--
 // Ensure that the form submit button cannot be double-clicked
 function doSubmit() {
-	if (document.journal.submitted.value != 1) {
-		document.journal.submitted.value = 1;
-		document.journal.submit();
+	if (document.getElementById('journal').submitted.value != 1) {
+		document.getElementById('journal').submitted.value = 1;
+		document.getElementById('journal').submit();
 	}
 	return true;
 }

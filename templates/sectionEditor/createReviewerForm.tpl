@@ -40,17 +40,17 @@
 	function generateUsername() {
 		var req = makeAsyncRequest();
 
-		if (document.reviewerForm.lastName.value == "") {
+		if (document.getElementById('reviewerForm').lastName.value == "") {
 			alert("{/literal}{translate key="manager.people.mustProvideName"}{literal}");
 			return;
 		}
 
 		req.onreadystatechange = function() {
 			if (req.readyState == 4) {
-				document.reviewerForm.username.value = req.responseText;
+				document.getElementById('reviewerForm').username.value = req.responseText;
 			}
 		}
-		sendAsyncRequest(req, '{/literal}{url op="suggestUsername" firstName="REPLACE1" lastName="REPLACE2" escape=false}{literal}'.replace('REPLACE1', escape(document.reviewerForm.firstName.value)).replace('REPLACE2', escape(document.reviewerForm.lastName.value)), null, 'get');
+		sendAsyncRequest(req, '{/literal}{url op="suggestUsername" firstName="REPLACE1" lastName="REPLACE2" escape=false}{literal}'.replace('REPLACE1', escape(document.getElementById('reviewerForm').firstName.value)).replace('REPLACE2', escape(document.getElementById('reviewerForm').lastName.value)), null, 'get');
 	}
 
 

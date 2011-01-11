@@ -17,18 +17,19 @@
 <!--
 {literal}
 function handleAnonymousCheckbox(theBox) {
+	var submitForm = document.getElementById('submit');
 	if (theBox.checked) {
-		document.submit.posterName.disabled = false;
-		document.submit.posterEmail.disabled = false;
-		document.submit.posterName.value = "";
-		document.submit.posterEmail.value = "";
-		document.submit.posterName.focus();
+		submitForm.posterName.disabled = false;
+		submitForm.posterEmail.disabled = false;
+		submitForm.posterName.value = "";
+		submitForm.posterEmail.value = "";
+		submitForm.posterName.focus();
 	} else {
-		document.submit.posterName.disabled = true;
-		document.submit.posterEmail.disabled = true;
+		submitForm.posterName.disabled = true;
+		submitForm.posterEmail.disabled = true;
 		{/literal}{if $isUserLoggedIn && ($enableComments == COMMENTS_ANONYMOUS || $enableComments == COMMENTS_UNAUTHENTICATED)}
-		document.submit.posterName.value = "{$userName|escape}";
-		document.submit.posterEmail.value = "{$userEmail|escape}";
+		submitForm.posterName.value = "{$userName|escape}";
+		submitForm.posterEmail.value = "{$userEmail|escape}";
 		{/if}{literal}
 	}
 }

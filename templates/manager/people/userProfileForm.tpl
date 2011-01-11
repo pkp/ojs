@@ -37,42 +37,45 @@
 <script type="text/javascript">
 <!--
 	function setGenerateRandom(value) {
+		var userForm = document.getElementById('userForm');
 		if (value) {
-			document.userForm.password.value='********';
-			document.userForm.password2.value='********';
-			document.userForm.password.disabled=1;
-			document.userForm.password2.disabled=1;
-			document.userForm.sendNotify.checked=1;
-			document.userForm.sendNotify.disabled=1;
+			userForm.password.value='********';
+			userForm.password2.value='********';
+			userForm.password.disabled=1;
+			userForm.password2.disabled=1;
+			userForm.sendNotify.checked=1;
+			userForm.sendNotify.disabled=1;
 		} else {
-			document.userForm.password.disabled=0;
-			document.userForm.password2.disabled=0;
-			document.userForm.sendNotify.disabled=0;
-			document.userForm.password.value='';
-			document.userForm.password2.value='';
-			document.userForm.password.focus();
+			userForm.password.disabled=0;
+			userForm.password2.disabled=0;
+			userForm.sendNotify.disabled=0;
+			userForm.password.value='';
+			userForm.password2.value='';
+			userForm.password.focus();
 		}
 	}
 
 	function enablePasswordFields() {
-		document.userForm.password.disabled=0;
-		document.userForm.password2.disabled=0;
+		var userForm = document.getElementById('userForm');
+		userForm.password.disabled=0;
+		userForm.password2.disabled=0;
 	}
 
 	function generateUsername() {
+		var userForm = document.getElementById('userForm');
 		var req = makeAsyncRequest();
 
-		if (document.userForm.lastName.value == "") {
+		if (userForm.lastName.value == "") {
 			alert("{/literal}{translate key="manager.people.mustProvideName"}{literal}");
 			return;
 		}
 
 		req.onreadystatechange = function() {
 			if (req.readyState == 4) {
-				document.userForm.username.value = req.responseText;
+				userForm.username.value = req.responseText;
 			}
 		}
-		sendAsyncRequest(req, '{/literal}{url op="suggestUsername" firstName="REPLACE1" lastName="REPLACE2" escape=false}{literal}'.replace('REPLACE1', escape(document.userForm.firstName.value)).replace('REPLACE2', escape(document.userForm.lastName.value)), null, 'get');
+		sendAsyncRequest(req, '{/literal}{url op="suggestUsername" firstName="REPLACE1" lastName="REPLACE2" escape=false}{literal}'.replace('REPLACE1', escape(userForm.firstName.value)).replace('REPLACE2', escape(userForm.lastName.value)), null, 'get');
 	}
 
 // -->

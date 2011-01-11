@@ -25,7 +25,7 @@ $(document).ready(function() { setupTableDND("#reviewFormElementsTable",
 {literal}
 <!--
 function toggleChecked() {
-	var elements = document.reviewFormElements.elements;
+	var elements = document.getElementById('reviewFormElements').elements;
 	for (var i=0; i < elements.length; i++) {
 		if (elements[i].name == 'copy[]') {
 			elements[i].checked = !elements[i].checked;

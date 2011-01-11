@@ -18,12 +18,12 @@
 <!--
 function togglePossibleResponses(newValue, multipleResponsesElementTypesString) {
 	if (multipleResponsesElementTypesString.indexOf(';'+newValue+';') != -1) {
-		document.reviewFormElementForm.addResponse.disabled=false;
+		document.getElementById('reviewFormElementForm').addResponse.disabled=false;
 	} else {
-		if (document.reviewFormElementForm.addResponse.disabled == false) {
+		if (document.getElementById('reviewFormElementForm').addResponse.disabled == false) {
 			alert({/literal}'{translate|escape:"jsparam" key="manager.reviewFormElement.changeType"}'{literal});
 		}
-		document.reviewFormElementForm.addResponse.disabled=true;
+		document.getElementById('reviewFormElementForm').addResponse.disabled=true;
 	}
 }
 // -->

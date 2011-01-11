@@ -24,7 +24,7 @@
 <!--
 // Move author up/down
 function moveAuthor(dir, authorIndex) {
-	var form = document.submit;
+	var form = document.getElementById('submit');
 	form.moveAuthor.value = 1;
 	form.moveAuthorDir.value = dir;
 	form.moveAuthorIndex.value = authorIndex;

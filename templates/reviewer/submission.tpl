@@ -22,7 +22,7 @@
 {literal}
 <!--
 function confirmSubmissionCheck() {
-	if (document.recommendation.recommendation.value=='') {
+	if (document.getElementById('recommendation').recommendation.value=='') {
 		alert('{/literal}{translate|escape:"javascript" key="reviewer.article.mustSelectDecision"}{literal}');
 		return false;
 	}

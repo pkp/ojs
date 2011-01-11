@@ -18,14 +18,17 @@
 <!--
 
 function invokeGoogleScholar() {
-	document.googleScholar.as_q.value = document.inputForm.title.value;
-	document.googleScholar.as_sauthors.value = document.inputForm.author.value;
-	document.googleScholar.submit();
+	var googleScholarForm = document.getElementById('googleScholar');
+
+	googleScholarForm.as_q.value = document.inputForm.title.value;
+	googleScholarForm.as_sauthors.value = document.inputForm.author.value;
+	googleScholarForm.submit();
 }
 
 function invokeWLA() {
-	document.wla.q.value = document.inputForm.title.value + " " + document.inputForm.author.value;
-	document.wla.submit();
+	var wlaForm = document.getElementById('wla');
+	wlaForm.q.value = document.inputForm.title.value + " " + document.inputForm.author.value;
+	wlaForm.submit();
 }
 
 // -->

@@ -18,7 +18,7 @@
 {literal}
 <!--
 function toggleChecked() {
-	var elements = document.issues.elements;
+	var elements = document.getElementById('issues').elements;
 	for (var i=0; i < elements.length; i++) {
 		if (elements[i].name == 'issueId[]') {
 			elements[i].checked = !elements[i].checked;

@@ -22,7 +22,7 @@
 <form id="localeSearch" action="{plugin_url path="editLocaleFile" key=$locale file=$filenameEscaped  anchor="localeContents"}" method="post">
 	{translate key="plugins.generic.customLocale.localeKey"}&nbsp;&nbsp;
 	<input type="text" name="searchKey" class="textField" />&nbsp;&nbsp;
-	<input type="submit" class="button defaultButton" onclick="document.locale.redirectUrl.value=document.localeSearch.action);document.locale.submit();return false;" value="{translate key="common.search"}" /> {translate key="plugins.generic.customLocale.localeKey.description"}
+	<input type="submit" class="button defaultButton" onclick="document.getElementById('locale').redirectUrl.value=document.localeSearch.action);document.getElementById('locale').submit();return false;" value="{translate key="common.search"}" /> {translate key="plugins.generic.customLocale.localeKey.description"}
 </form>
 
 <br />
@@ -80,19 +80,19 @@
 {else}
 	<tr>
 		<td align="left">{page_info iterator=$referenceLocaleContents}</td>
-		<td align="right">{page_links all_extra="onclick=\"document.locale.redirectUrl.value=this.href;this.href='javascript:document.locale.submit()';return true;\"" anchor="localeContents" name="referenceLocaleContents" iterator=$referenceLocaleContents}</td>
+		<td align="right">{page_links all_extra="onclick=\"document.getElementById('locale').redirectUrl.value=this.href;this.href='javascript:document.getElementById(\'locale\').submit()';return true;\"" anchor="localeContents" name="referenceLocaleContents" iterator=$referenceLocaleContents}</td>
 	</tr>
 {/if}
 
 </table>
 
 {if $referenceLocaleContents->getPage() < $referenceLocaleContents->getPageCount()}
-	<input type="submit" onclick="document.locale.redirectUrl.value='{plugin_url path="editLocaleFile" key=$locale file=$filenameEscaped referenceLocaleContentsPage=$referenceLocaleContents->getPage()+1 escape="false"}';return true;" class="button defaultButton" value="{translate key="common.saveAndContinue"}" />
+	<input type="submit" onclick="document.getElementById('locale').redirectUrl.value='{plugin_url path="editLocaleFile" key=$locale file=$filenameEscaped referenceLocaleContentsPage=$referenceLocaleContents->getPage()+1 escape="false"}';return true;" class="button defaultButton" value="{translate key="common.saveAndContinue"}" />
 {else}
-	<input type="submit" onclick="document.locale.redirectUrl.value='{plugin_url path="editLocaleFile" key=$locale file=$filenameEscaped referenceLocaleContentsPage=$referenceLocaleContents->getPage() escape="false"}';return true;" class="button defaultButton" value="{translate key="common.save"}" />
+	<input type="submit" onclick="document.getElementById('locale').redirectUrl.value='{plugin_url path="editLocaleFile" key=$locale file=$filenameEscaped referenceLocaleContentsPage=$referenceLocaleContents->getPage() escape="false"}';return true;" class="button defaultButton" value="{translate key="common.save"}" />
 {/if}
 
-<input type="submit" onclick="document.locale.redirectUrl.value='{plugin_url path="edit" key=$locale escape="false"}';return true;" class="button" value="{translate key="common.done"}" />
+<input type="submit" onclick="document.getElementById('locale').redirectUrl.value='{plugin_url path="edit" key=$locale escape="false"}';return true;" class="button" value="{translate key="common.done"}" />
 
 <input type="button" onclick="document.location.href='{plugin_url path="edit" key=$locale escape="false"}';" class="button" value="{translate key="common.cancel"}" />
 </div>

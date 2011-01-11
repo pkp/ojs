@@ -26,14 +26,14 @@ function confirmAndPrompt(userId) {
 	var reason = prompt('{/literal}{translate|escape:"javascript" key="manager.people.confirmDisable"}{literal}');
 	if (reason == null) return;
 
-	document.disableUser.reason.value = reason;
-	document.disableUser.userId.value = userId;
+	document.getElementById('disableUser').reason.value = reason;
+	document.getElementById('disableUser').userId.value = userId;
 
-	document.disableUser.submit();
+	document.getElementById('disableUser').submit();
 }
 
 function toggleChecked() {
-	var elements = document.enroll.elements;
+	var elements = document.getElementById('enroll').elements;
 	for (var i=0; i < elements.length; i++) {
 		if (elements[i].name == 'users[]') {
 			elements[i].checked = !elements[i].checked;
@@ -89,12 +89,12 @@ function toggleChecked() {
 	<!--
 	function enrollUser(userId) {ldelim}
 		var fakeUrl = '{url op="enroll" path="ROLE_ID" userId="USER_ID"}';
-		if (document.enroll.roleId.options[document.enroll.roleId.selectedIndex].value == '') {ldelim}
+		if (document.getElementById('enroll').roleId.options[document.getElementById('enroll').roleId.selectedIndex].value == '') {ldelim}
 			alert("{translate|escape:"javascript" key="manager.people.mustChooseRole"}");
 			return false;
 		{rdelim}
 		if (userId != 0){ldelim}
-		fakeUrl = fakeUrl.replace('ROLE_ID', document.enroll.roleId.options[document.enroll.roleId.selectedIndex].value);
+		fakeUrl = fakeUrl.replace('ROLE_ID', document.getElementById('enroll').roleId.options[document.getElementById('enroll').roleId.selectedIndex].value);
 		fakeUrl = fakeUrl.replace('USER_ID', userId);
 		location.href = fakeUrl;
 	{rdelim}

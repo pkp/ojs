@@ -68,7 +68,7 @@ function jumpList(a, b) {
 
 function prepBlockFields() {
 	var i;
-	var theForm = document.setupForm;
+	var theForm = document.getElementById('setupForm');
 
 	theForm.elements["blockSelectLeft"].value = "";
 	for (i=0; i<theForm.blockSelectLeftWidget.options.length; i++) {

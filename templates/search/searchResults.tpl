@@ -17,11 +17,11 @@
 {literal}
 <!--
 function ensureKeyword() {
-	if (document.search.query.value == '') {
+	if (document.getElementById('search').query.value == '') {
 		alert({/literal}'{translate|escape:"jsparam" key="search.noKeywordError"}'{literal});
 		return false;
 	}
-	document.search.submit();
+	document.getElementById('search').submit();
 	return true;
 }
 // -->
@@ -56,7 +56,7 @@ function ensureKeyword() {
 		<input type="hidden" name="dateToDay" value="{$dateToDay|escape}"/>
 		<input type="hidden" name="dateToYear" value="{$dateToYear|escape}"/>
 	</form>
-	<a href="javascript:document.revise.submit()" class="action">{translate key="search.reviseSearch"}</a><br />
+	<a href="javascript:document.getElementById('revise').submit()" class="action">{translate key="search.reviseSearch"}</a><br />
 {/if}
 
 {call_hook name="Templates::Search::SearchResults::PreResults"}

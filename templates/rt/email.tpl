@@ -21,8 +21,8 @@
 {literal}
 <!--
 function deleteAttachment(fileId) {
-	document.emailForm.deleteAttachment.value = fileId;
-	document.emailForm.submit();
+	document.getElementById('emailForm').deleteAttachment.value = fileId;
+	document.getElementById('emailForm').submit();
 }
 // -->
 {/literal}

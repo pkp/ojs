@@ -18,8 +18,8 @@
 {literal}
 <!--
 function deleteAttachment(fileId) {
-	document.submit.deleteAttachment.value = fileId;
-	document.submit.submit();
+	document.getElementById('submit').deleteAttachment.value = fileId;
+	document.getElementById('submit').submit();
 }
 // -->
 {/literal}

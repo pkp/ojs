@@ -17,22 +17,23 @@
 {literal}
 <!--
 function ensureKeyword() {
-	var allBlank = document.search.query.value == '';
+	var searchForm = document.getElementById('search');
+	var allBlank = searchForm.query.value == '';
 
-	if (allBlank) {allBlank = document.search.author.value == '';}
-	if (allBlank) {allBlank = document.search.title.value == '';}
-	if (allBlank) {allBlank = document.search.discipline.value == '';}
-	if (allBlank) {allBlank = document.search.subject.value == '';}
-	if (allBlank) {allBlank = document.search.type.value == '';}
-	if (allBlank) {allBlank = document.search.coverage.value == '';}
-	if (allBlank) {allBlank = document.search.supplementaryFiles.value == '';}
-	if (allBlank) {allBlank = document.search.fullText.value == '';}
+	if (allBlank) {allBlank = searchForm.author.value == '';}
+	if (allBlank) {allBlank = searchForm.title.value == '';}
+	if (allBlank) {allBlank = searchForm.discipline.value == '';}
+	if (allBlank) {allBlank = searchForm.subject.value == '';}
+	if (allBlank) {allBlank = searchForm.type.value == '';}
+	if (allBlank) {allBlank = searchForm.coverage.value == '';}
+	if (allBlank) {allBlank = searchForm.supplementaryFiles.value == '';}
+	if (allBlank) {allBlank = searchForm.fullText.value == '';}
 
 	if (allBlank) {
 		alert({/literal}'{translate|escape:"jsparam" key="search.noKeywordError"}'{literal});
 		return false;
 	}
-	document.search.submit();
+	searchForm.submit();
 	return true;
 }
 // -->
@@ -123,7 +124,7 @@ function ensureKeyword() {
 
 <script type="text/javascript">
 <!--
-	document.search.query.focus();
+	document.getElementById('search').query.focus();
 // -->
 </script>
 </form>

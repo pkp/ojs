@@ -22,7 +22,7 @@
 {literal}
 <!--
 function toggleChecked() {
-	var elements = document.people.elements;
+	var elements = document.getElementById('people').elements;
 	for (var i=0; i < elements.length; i++) {
 		if (elements[i].name == 'bcc[]') {
 			elements[i].checked = !elements[i].checked;
@@ -34,10 +34,10 @@ function confirmAndPrompt(userId) {
 	var reason = prompt('{/literal}{translate|escape:"javascript" key="manager.people.confirmDisable"}{literal}');
 	if (reason == null) return;
 
-	document.disableUser.reason.value = reason;
-	document.disableUser.userId.value = userId;
+	document.getElementById('disableUser').reason.value = reason;
+	document.getElementById('disableUser').userId.value = userId;
 
-	document.disableUser.submit();
+	document.getElementById('disableUser').submit();
 }
 // -->
 {/literal}

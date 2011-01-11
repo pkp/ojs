@@ -22,15 +22,16 @@ function chooseEndDate() {
 		{/foreach}
 	{literal}};
 
-	var selectedTypeIndex = document.subscriptionForm.typeId.selectedIndex;
-	var selectedTypeId = document.subscriptionForm.typeId.options[selectedTypeIndex].value;
+	var subscriptionForm = document.getElementById('subscriptionForm');
+	var selectedTypeIndex = subscriptionForm.typeId.selectedIndex;
+	var selectedTypeId = subscriptionForm.typeId.options[selectedTypeIndex].value;
 
 	if (typeof(lengths[selectedTypeId]) != "undefined") {
 		var duration = lengths[selectedTypeId];
 		var dateStart = new Date(
-			document.subscriptionForm.dateStartYear.options[document.subscriptionForm.dateStartYear.selectedIndex].value,
-			document.subscriptionForm.dateStartMonth.options[document.subscriptionForm.dateStartMonth.selectedIndex].value - 1,
-			document.subscriptionForm.dateStartDay.options[document.subscriptionForm.dateStartDay.selectedIndex].value,
+			subscriptionForm.dateStartYear.options[subscriptionForm.dateStartYear.selectedIndex].value,
+			subscriptionForm.dateStartMonth.options[subscriptionForm.dateStartMonth.selectedIndex].value - 1,
+			subscriptionForm.dateStartDay.options[subscriptionForm.dateStartDay.selectedIndex].value,
 			0, 0, 0
 		);
 		var dateEnd = dateStart;
@@ -45,13 +46,13 @@ function chooseEndDate() {
 		dateEnd.setMonth((dateStart.getMonth() + months) % 12);
 
 		// dateEnd now contains the calculated date of the subscription expiry.
-		document.subscriptionForm.dateEndDay.selectedIndex = dateEnd.getDate() - 1;
-		document.subscriptionForm.dateEndMonth.selectedIndex = dateEnd.getMonth();
+		subscriptionForm.dateEndDay.selectedIndex = dateEnd.getDate() - 1;
+		subscriptionForm.dateEndMonth.selectedIndex = dateEnd.getMonth();
 
 		var i;
-		for (i=0; i < document.subscriptionForm.dateEndYear.length; i++) {
-			if (document.subscriptionForm.dateEndYear.options[i].value == dateEnd.getFullYear()) {
-				document.subscriptionForm.dateEndYear.selectedIndex = i;
+		for (i=0; i < subscriptionForm.dateEndYear.length; i++) {
+			if (subscriptionForm.dateEndYear.options[i].value == dateEnd.getFullYear()) {
+				subscriptionForm.dateEndYear.selectedIndex = i;
 				break;
 			}
 		}

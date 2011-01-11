@@ -23,15 +23,17 @@
 <!--
 
 function addSectionEditor(editorId) {
-	document.section.editorAction.value = "addSectionEditor";
-	document.section.userId.value = editorId;
-	document.section.submit();
+	var sectionForm = document.getElementById('section');
+	sectionForm.editorAction.value = "addSectionEditor";
+	sectionForm.userId.value = editorId;
+	sectionForm.submit();
 }
 
 function removeSectionEditor(editorId) {
-	document.section.editorAction.value = "removeSectionEditor";
-	document.section.userId.value = editorId;
-	document.section.submit();
+	var sectionForm = document.getElementById('section');
+	sectionForm.editorAction.value = "removeSectionEditor";
+	sectionForm.userId.value = editorId;
+	sectionForm.submit();
 }
 
 function checkEditorAssignments() {
@@ -40,7 +42,7 @@ function checkEditorAssignments() {
 	{foreach from=$assignedEditors item=editorEntry}
 	{assign var=editor value=$editorEntry.user}
 	{literal}
-		if (!document.section.canReview{/literal}{$editor->getId()}{literal}.checked && !document.section.canEdit{/literal}{$editor->getId()}{literal}.checked) {
+		if (!document.getElementById('section').canReview{/literal}{$editor->getId()}{literal}.checked && !document.getElementById('section').canEdit{/literal}{$editor->getId()}{literal}.checked) {
 			isOk = false;
 		}
 	{/literal}{/foreach}{literal}
