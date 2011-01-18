@@ -199,7 +199,7 @@ name="viewable" value="1"{if $reviewerFile->getViewable()} checked="checked"{/if
 			{foreach from=$roundDecisions item=editorDecision key=decisionKey}
 				{if $decisionKey neq 0} | {/if}
 				{assign var="decision" value=$editorDecision.decision}
-				{translate key=$editorDecisionOptions.$decision} {$editorDecision.dateDecided|date_format:$dateFormatShort}
+				{translate key=$editorDecisionOptions.$decision}{if $editorDecision.dateDecided}&nbsp;&nbsp;{$editorDecision.dateDecided|date_format:$dateFormatShort}{/if}{* #6351 *}
 			{foreachelse}
 				{translate key="common.none"}
 			{/foreach}
