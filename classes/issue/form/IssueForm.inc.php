@@ -338,14 +338,14 @@ class IssueForm extends Form {
 
 		// if issueId is supplied, then update issue otherwise insert a new one
 		if ($issueId) {
-			$issue->setIssueId($issueId);
+			$issue->setId($issueId);
 			$issueDao->updateIssue($issue);
 		} else {
 			$issue->setPublished(0);
 			$issue->setCurrent(0);
 
 			$issueId = $issueDao->insertIssue($issue);
-			$issue->setIssueId($issueId);
+			$issue->setId($issueId);
 		}
 
 		import('classes.file.PublicFileManager');

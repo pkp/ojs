@@ -789,7 +789,7 @@ class IssueManagementHandler extends EditorHandler {
 			}
 		}
 		$publishedArticleDao->updatePublishedArticle($publishedArticle);
-		$publishedArticleDao->resequencePublishedArticles($publishedArticle->getSectionId(), $issue->getIssueId());
+		$publishedArticleDao->resequencePublishedArticles($publishedArticle->getSectionId(), $issue->getId());
 
 		// Only redirect if we're not doing drag and drop
 		if ($d) {

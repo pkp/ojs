@@ -260,7 +260,7 @@ class NativeImportDom {
 			if ($issue->getCurrent()) {
 				$issueDao->updateCurrentIssue($journal->getId());
 			}
-			$issue->setIssueId($issueDao->insertIssue($issue));
+			$issue->setId($issueDao->insertIssue($issue));
 			$dependentItems[] = array('issue', $issue);
 		}
 
