@@ -45,7 +45,7 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 			$sectionSeq = array();
 			$i=0;
 			foreach ($sections as $thisSection) {
-				$sectionSeq[$thisSection->getSectionId()] = $i++;
+				$sectionSeq[$thisSection->getId()] = $i++;
 			}
 			unset($sections);
 		}

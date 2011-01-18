@@ -88,7 +88,7 @@ class SuppFileForm extends Form {
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('enablePublicSuppFileId', $journal->getSetting('enablePublicSuppFileId'));
 		$templateMgr->assign('rolePath', Request::getRequestedPage());
-		$templateMgr->assign('articleId', $this->article->getArticleId());
+		$templateMgr->assign('articleId', $this->article->getId());
 		$templateMgr->assign('suppFileId', $this->suppFileId);
 
 		$typeOptionsOutput = array(
@@ -198,7 +198,7 @@ class SuppFileForm extends Form {
 	 */
 	function execute($fileName = null) {
 		import('classes.file.ArticleFileManager');
-		$articleFileManager = new ArticleFileManager($this->article->getArticleId());
+		$articleFileManager = new ArticleFileManager($this->article->getId());
 		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
 
 		$fileName = isset($fileName) ? $fileName : 'uploadSuppFile';
@@ -210,7 +210,7 @@ class SuppFileForm extends Form {
 			if ($articleFileManager->uploadedFileExists($fileName)) {
 				$articleFileManager->uploadSuppFile($fileName, $suppFile->getFileId());
 				import('classes.search.ArticleSearchIndex');
-				ArticleSearchIndex::updateFileIndex($this->article->getArticleId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $suppFile->getFileId());
+				ArticleSearchIndex::updateFileIndex($this->article->getId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $suppFile->getFileId());
 			}
 
 			// Index metadata
@@ -225,14 +225,14 @@ class SuppFileForm extends Form {
 			if ($articleFileManager->uploadedFileExists($fileName)) {
 				$fileId = $articleFileManager->uploadSuppFile($fileName);
 				import('classes.search.ArticleSearchIndex');
-				ArticleSearchIndex::updateFileIndex($this->article->getArticleId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $fileId);
+				ArticleSearchIndex::updateFileIndex($this->article->getId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $fileId);
 			} else {
 				$fileId = 0;
 			}
 
 			// Insert new supplementary file		
 			$suppFile = new SuppFile();
-			$suppFile->setArticleId($this->article->getArticleId());
+			$suppFile->setArticleId($this->article->getId());
 			$suppFile->setFileId($fileId);
 			$this->setSuppFileData($suppFile);
 			$suppFileDao->insertSuppFile($suppFile);

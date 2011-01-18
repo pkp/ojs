@@ -107,7 +107,7 @@ class ReferralForm extends Form {
 			$referral->setLinkCount(0);
 		}
 
-		$referral->setArticleId($this->article->getArticleId());
+		$referral->setArticleId($this->article->getId());
 		$referral->setName($this->getData('name'), null); // Localized
 		$referral->setUrl($this->getData('url'));
 		$referral->setStatus($this->getData('status'));

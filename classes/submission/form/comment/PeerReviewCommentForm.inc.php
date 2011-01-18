@@ -40,7 +40,7 @@ class PeerReviewCommentForm extends CommentForm {
 	function display() {
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewAssignment =& $reviewAssignmentDao->getById($this->reviewId);
-		$reviewLetters =& $reviewAssignmentDao->getReviewIndexesForRound($this->article->getArticleId(), $this->article->getCurrentRound());
+		$reviewLetters =& $reviewAssignmentDao->getReviewIndexesForRound($this->article->getId(), $this->article->getCurrentRound());
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('commentType', 'peerReview');
@@ -54,7 +54,7 @@ class PeerReviewCommentForm extends CommentForm {
 		$templateMgr->assign('reviewer', ROLE_ID_REVIEWER);
 		$templateMgr->assign('hiddenFormParams', 
 			array(
-				'articleId' => $this->article->getArticleId(),
+				'articleId' => $this->article->getId(),
 				'reviewId' => $this->reviewId
 			)
 		);
@@ -88,7 +88,7 @@ class PeerReviewCommentForm extends CommentForm {
 		$comment = new ArticleComment();
 		$comment->setCommentType($this->commentType);
 		$comment->setRoleId($this->roleId);
-		$comment->setArticleId($this->article->getArticleId());
+		$comment->setArticleId($this->article->getId());
 		$comment->setAssocId($this->assocId);
 		$comment->setAuthorId($this->user->getId());
 		$comment->setCommentTitle($this->getData('commentTitle'));

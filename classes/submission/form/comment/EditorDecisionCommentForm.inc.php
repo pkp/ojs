@@ -33,11 +33,11 @@ class EditorDecisionCommentForm extends CommentForm {
 	function display() {
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('pageTitle', 'submission.comments.editorAuthorCorrespondence');
-		$templateMgr->assign('articleId', $this->article->getArticleId());
+		$templateMgr->assign('articleId', $this->article->getId());
 		$templateMgr->assign('commentAction', 'postEditorDecisionComment');
 		$templateMgr->assign('hiddenFormParams', 
 			array(
-				'articleId' => $this->article->getArticleId()
+				'articleId' => $this->article->getId()
 			)
 		);
 
@@ -88,7 +88,7 @@ class EditorDecisionCommentForm extends CommentForm {
 		} else {
 			// Then add editor
 			$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
-			$editAssignments =& $editAssignmentDao->getEditAssignmentsByArticleId($this->article->getArticleId());
+			$editAssignments =& $editAssignmentDao->getEditAssignmentsByArticleId($this->article->getId());
 			$editorAddresses = array();
 			while (!$editAssignments->eof()) {
 				$editAssignment =& $editAssignments->next();

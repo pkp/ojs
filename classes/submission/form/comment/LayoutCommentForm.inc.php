@@ -37,7 +37,7 @@ class LayoutCommentForm extends CommentForm {
 		$templateMgr->assign('commentType', 'layout');
 		$templateMgr->assign('hiddenFormParams', 
 			array(
-				'articleId' => $this->article->getArticleId()
+				'articleId' => $this->article->getId()
 			)
 		);
 
@@ -75,7 +75,7 @@ class LayoutCommentForm extends CommentForm {
 		if ($this->roleId == ROLE_ID_EDITOR || $this->roleId == ROLE_ID_SECTION_EDITOR) {
 			// Then add layout editor
 			$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-			$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $this->article->getArticleId());
+			$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $this->article->getId());
 
 			// Check to ensure that there is a layout editor assigned to this article.
 			if ($layoutSignoff != null && $layoutSignoff->getUserId() > 0) {
@@ -86,7 +86,7 @@ class LayoutCommentForm extends CommentForm {
 		} else {
 			// Then add editor
 			$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
-			$editAssignments =& $editAssignmentDao->getEditAssignmentsByArticleId($this->article->getArticleId());
+			$editAssignments =& $editAssignmentDao->getEditAssignmentsByArticleId($this->article->getId());
 			$editorAddresses = array();
 			while (!$editAssignments->eof()) {
 				$editAssignment =& $editAssignments->next();

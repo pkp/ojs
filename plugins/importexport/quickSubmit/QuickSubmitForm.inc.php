@@ -385,7 +385,7 @@ class QuickSubmitForm extends Form {
 				$publishedArticleDao->updatePublishedArticle($publishedArticle);
 			} else {
 				$publishedArticle = new PublishedArticle();
-				$publishedArticle->setArticleId($submission->getId());
+				$publishedArticle->setId($submission->getId());
 				$publishedArticle->setIssueId($issueId);
 				$publishedArticle->setDatePublished(Core::getCurrentDate());
 				$publishedArticle->setSeq(REALLY_BIG_NUMBER);

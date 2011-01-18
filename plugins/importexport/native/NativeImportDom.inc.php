@@ -563,7 +563,7 @@ class NativeImportDom {
 		foreach($abbrevs as $locale => $abbrev) {
 			$abbrevSection = $sectionDao->getSectionByAbbrev($abbrev, $journal->getId());
 			if ($abbrevSection) {
-				$sectionId = $abbrevSection->getSectionId();
+				$sectionId = $abbrevSection->getId();
 				if ($foundSectionId) {
 					if ($foundSectionId != $sectionId) {
 						// Mismatching sections found. Throw an error.
@@ -603,7 +603,7 @@ class NativeImportDom {
 			$section->setSequence(REALLY_BIG_NUMBER);
 			$section->setMetaIndexed(1);
 			$section->setEditorRestricted(1);
-			$section->setSectionId($sectionDao->insertSection($section));
+			$section->setId($sectionDao->insertSection($section));
 			$sectionDao->resequenceSections($journal->getId());
 		}
 
@@ -832,7 +832,7 @@ class NativeImportDom {
 
 		// Insert published article entry.
 		$publishedArticle = new PublishedArticle();
-		$publishedArticle->setArticleId($article->getId());
+		$publishedArticle->setId($article->getId());
 		$publishedArticle->setIssueId($issue->getId());
 
 		for ($index=0; ($node = $articleNode->getChildByName('id', $index)); $index++) {

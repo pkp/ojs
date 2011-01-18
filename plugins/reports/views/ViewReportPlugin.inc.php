@@ -66,7 +66,7 @@ class ViewReportPlugin extends ReportPlugin {
 
 		$publishedArticles =& $publishedArticleDao->getPublishedArticlesByJournalId($journal->getJournalId());
 		while ($publishedArticle =& $publishedArticles->next()) {
-			$articleId = $publishedArticle->getArticleId();
+			$articleId = $publishedArticle->getId();
 			$issueId = $publishedArticle->getIssueId();
 			$articleTitles[$articleId] = $publishedArticle->getArticleTitle();
 
