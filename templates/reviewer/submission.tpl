@@ -170,7 +170,7 @@ function confirmSubmissionCheck() {
 				<td class="value" width="70%">
 					{if $reviewFile}
 					{if $submission->getDateConfirmed() or not $journal->getSetting('restrictReviewerAccessToFile')}
-						<a href="{url op="downloadFile" path=$reviewId|to_array:$articleId:$reviewFile->getFileId():$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()|escape}</a>
+						<a href="{url op="downloadFile" path=$reviewId|to_array:$articleId:$reviewFile->getId():$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()|escape}</a>
 					{else}{$reviewFile->getFileName()|escape}{/if}
 					&nbsp;&nbsp;{$reviewFile->getDateModified()|date_format:$dateFormatShort}
 					{else}
@@ -281,10 +281,10 @@ function confirmSubmissionCheck() {
 					{/if}
 				</td>
 				<td class="value" width="70%">
-					<a href="{url op="downloadFile" path=$reviewId|to_array:$articleId:$reviewerFile->getFileId():$reviewerFile->getRevision()}" class="file">{$reviewerFile->getFileName()|escape}</a>
+					<a href="{url op="downloadFile" path=$reviewId|to_array:$articleId:$reviewerFile->getId():$reviewerFile->getRevision()}" class="file">{$reviewerFile->getFileName()|escape}</a>
 					{$reviewerFile->getDateModified()|date_format:$dateFormatShort}
 					{if ($submission->getRecommendation() === null || $submission->getRecommendation() === '') && (!$submission->getCancelled())}
-						<a class="action" href="{url op="deleteReviewerVersion" path=$reviewId|to_array:$reviewerFile->getFileId():$reviewerFile->getRevision()}">{translate key="common.delete"}</a>
+						<a class="action" href="{url op="deleteReviewerVersion" path=$reviewId|to_array:$reviewerFile->getId():$reviewerFile->getRevision()}">{translate key="common.delete"}</a>
 					{/if}
 				</td>
 				</tr>

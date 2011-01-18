@@ -365,7 +365,7 @@ class NativeExportDom {
 			if ($styleFile) {
 				$styleNode =& XMLCustomWriter::createElement($doc, 'stylesheet');
 				XMLCustomWriter::appendChild($root, $styleNode);
-				$embedNode =& XMLCustomWriter::createChildWithText($doc, $styleNode, 'embed', base64_encode($articleFileManager->readFile($styleFile->getFileId())));
+				$embedNode =& XMLCustomWriter::createChildWithText($doc, $styleNode, 'embed', base64_encode($articleFileManager->readFile($styleFile->getId())));
 				XMLCustomWriter::setAttribute($embedNode, 'filename', $styleFile->getOriginalFileName());
 				XMLCustomWriter::setAttribute($embedNode, 'encoding', 'base64');
 				XMLCustomWriter::setAttribute($embedNode, 'mime_type', 'text/css');
@@ -374,7 +374,7 @@ class NativeExportDom {
 			foreach ($galley->getImageFiles() as $imageFile) {
 				$imageNode =& XMLCustomWriter::createElement($doc, 'image');
 				XMLCustomWriter::appendChild($root, $imageNode);
-				$embedNode =& XMLCustomWriter::createChildWithText($doc, $imageNode, 'embed', base64_encode($articleFileManager->readFile($imageFile->getFileId())));
+				$embedNode =& XMLCustomWriter::createChildWithText($doc, $imageNode, 'embed', base64_encode($articleFileManager->readFile($imageFile->getId())));
 				XMLCustomWriter::setAttribute($embedNode, 'filename', $imageFile->getOriginalFileName());
 				XMLCustomWriter::setAttribute($embedNode, 'encoding', 'base64');
 				XMLCustomWriter::setAttribute($embedNode, 'mime_type', $imageFile->getFileType());

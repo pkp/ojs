@@ -273,7 +273,7 @@ class RTHandler extends ArticleHandler {
 			$templateMgr->addStyleSheet($router->url($request, null, 'article', 'viewFile', array(
 				$article->getId(),
 				$galley->getBestGalleyId($journal),
-				$styleFile->getFileId()
+				$styleFile->getId()
 			)));
 		}
 

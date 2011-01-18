@@ -52,7 +52,7 @@
 		<td class="label" width="20%">{translate key="submission.reviewVersion"}</td>
 		{if $reviewFile}
 			<td width="80%" class="value">
-				<a href="{url op="downloadFile" path=$submission->getId()|to_array:$reviewFile->getFileId():$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()|escape}</a>&nbsp;&nbsp;
+				<a href="{url op="downloadFile" path=$submission->getId()|to_array:$reviewFile->getId():$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()|escape}</a>&nbsp;&nbsp;
 				{$reviewFile->getDateModified()|date_format:$dateFormatShort}{if $currentJournal->getSetting('showEnsuringLink')}&nbsp;&nbsp;&nbsp;&nbsp;<a class="action" href="javascript:openHelp('{get_help_id key="editorial.sectionEditorsRole.review.blindPeerReview" url="true"}')">{translate key="reviewer.article.ensuringBlindReview"}</a>{/if}
 			</td>
 		{else}
@@ -254,10 +254,10 @@
 					<tr valign="top">
 						<td valign="middle">
 							<form id="authorView{$reviewAssignment->getId()}" method="post" action="{url op="makeReviewerFileViewable"}">
-								<a href="{url op="downloadFile" path=$submission->getId()|to_array:$reviewerFile->getFileId():$reviewerFile->getRevision()}" class="file">{$reviewerFile->getFileName()|escape}</a>&nbsp;&nbsp;{$reviewerFile->getDateModified()|date_format:$dateFormatShort}
+								<a href="{url op="downloadFile" path=$submission->getId()|to_array:$reviewerFile->getId():$reviewerFile->getRevision()}" class="file">{$reviewerFile->getFileName()|escape}</a>&nbsp;&nbsp;{$reviewerFile->getDateModified()|date_format:$dateFormatShort}
 								<input type="hidden" name="reviewId" value="{$reviewAssignment->getId()}" />
 								<input type="hidden" name="articleId" value="{$submission->getId()}" />
-								<input type="hidden" name="fileId" value="{$reviewerFile->getFileId()}" />
+								<input type="hidden" name="fileId" value="{$reviewerFile->getId()}" />
 								<input type="hidden" name="revision" value="{$reviewerFile->getRevision()}" />
 								{translate key="editor.article.showAuthor"} <input type="checkbox" name="viewable" value="1"{if $reviewerFile->getViewable()} checked="checked"{/if} />
 								<input type="submit" value="{translate key="common.record"}" class="button" />

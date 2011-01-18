@@ -162,7 +162,7 @@ class ArticleGalleyForm extends Form {
 				// Delete stylesheet file
 				$styleFile =& $galley->getStyleFile();
 				if (isset($styleFile)) {
-					$articleFileManager->deleteFile($styleFile->getFileId());
+					$articleFileManager->deleteFile($styleFile->getId());
 				}
 			}
 

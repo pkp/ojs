@@ -67,7 +67,7 @@
 		<td class="value" width="80%">
 			{assign var="reviewFile" value=$reviewFilesByRound[$roundPlusOne]}
 			{if $reviewFile}
-				<a href="{url op="downloadFile" path=$submission->getId()|to_array:$reviewFile->getFileId():$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()|escape}</a>&nbsp;&nbsp;{$reviewFile->getDateModified()|date_format:$dateFormatShort}
+				<a href="{url op="downloadFile" path=$submission->getId()|to_array:$reviewFile->getId():$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()|escape}</a>&nbsp;&nbsp;{$reviewFile->getDateModified()|date_format:$dateFormatShort}
 			{else}
 				{translate key="common.none"}
 			{/if}
@@ -162,10 +162,10 @@
 				<tr valign="top">
 					<td valign="middle">
 						<form id="authorView{$reviewAssignment->getId()}" method="post" action="{url op="makeReviewerFileViewable"}">
-							<a href="{url op="downloadFile" path=$submission->getId()|to_array:$reviewerFile->getFileId():$reviewerFile->getRevision()}" class="file">{$reviewerFile->getFileName()|escape}</a>&nbsp;&nbsp;{$reviewerFile->getDateModified()|date_format:$dateFormatShort}
+							<a href="{url op="downloadFile" path=$submission->getId()|to_array:$reviewerFile->getId():$reviewerFile->getRevision()}" class="file">{$reviewerFile->getFileName()|escape}</a>&nbsp;&nbsp;{$reviewerFile->getDateModified()|date_format:$dateFormatShort}
 							<input type="hidden" name="reviewId" value="{$reviewAssignment->getId()}" />
 							<input type="hidden" name="articleId" value="{$submission->getId()}" />
-							<input type="hidden" name="fileId" value="{$reviewerFile->getFileId()}" />
+							<input type="hidden" name="fileId" value="{$reviewerFile->getId()}" />
 							<input type="hidden" name="revision" value="{$reviewerFile->getRevision()}" />
 							{translate key="editor.article.showAuthor"} <input type="checkbox"
 name="viewable" value="1"{if $reviewerFile->getViewable()} checked="checked"{/if} />
@@ -223,7 +223,7 @@ name="viewable" value="1"{if $reviewerFile->getViewable()} checked="checked"{/if
 				{assign var="authorRevisionExists" value=true}
 				<td width="20%" class="label" rowspan="{$authorFiles|@count}" class="label">{translate key="submission.authorVersion"}</td>
 			{/if}
-			<td width="80%" class="value"><a href="{url op="downloadFile" path=$submission->getId()|to_array:$authorFile->getFileId():$authorFile->getRevision()}" class="file">{$authorFile->getFileName()|escape}</a>&nbsp;&nbsp;{$authorFile->getDateModified()|date_format:$dateFormatShort}</td>
+			<td width="80%" class="value"><a href="{url op="downloadFile" path=$submission->getId()|to_array:$authorFile->getId():$authorFile->getRevision()}" class="file">{$authorFile->getFileName()|escape}</a>&nbsp;&nbsp;{$authorFile->getDateModified()|date_format:$dateFormatShort}</td>
 		</tr>
 	{foreachelse}
 		<tr valign="top">
@@ -238,7 +238,7 @@ name="viewable" value="1"{if $reviewerFile->getViewable()} checked="checked"{/if
 				<td width="20%" class="label" rowspan="{$editorFiles|@count}" class="label">{translate key="submission.editorVersion"}</td>
 			{/if}
 
-			<td width="30%"><a href="{url op="downloadFile" path=$submission->getId()|to_array:$editorFile->getFileId():$editorFile->getRevision()}" class="file">{$editorFile->getFileName()|escape}</a>&nbsp;&nbsp;{$editorFile->getDateModified()|date_format:$dateFormatShort}</td>
+			<td width="30%"><a href="{url op="downloadFile" path=$submission->getId()|to_array:$editorFile->getId():$editorFile->getRevision()}" class="file">{$editorFile->getFileName()|escape}</a>&nbsp;&nbsp;{$editorFile->getDateModified()|date_format:$dateFormatShort}</td>
 		</tr>
 	{foreachelse}
 		<tr valign="top">

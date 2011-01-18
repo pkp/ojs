@@ -192,7 +192,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 				$templateMgr->assign_by_ref('galley', $galley);
 				if ($galley->isHTMLGalley() && $styleFile =& $galley->getStyleFile()) {
 					$templateMgr->addStyleSheet(Request::url(null, 'article', 'viewFile', array(
-						$articleId, $galleyId, $styleFile->getFileId()
+						$articleId, $galleyId, $styleFile->getId()
 					)));
 				}
 				$templateMgr->display('submission/layout/proofGalleyHTML.tpl');

@@ -134,7 +134,7 @@ class CopyeditorAction extends Action {
 				if (!$layoutSignoff->getFileId()) {
 					import('classes.file.ArticleFileManager');
 					$articleFileManager = new ArticleFileManager($copyeditorSubmission->getId());
-					if ($layoutFileId = $articleFileManager->copyToLayoutFile($copyEdFile->getFileId(), $copyEdFile->getRevision())) {
+					if ($layoutFileId = $articleFileManager->copyToLayoutFile($copyEdFile->getId(), $copyEdFile->getRevision())) {
 						$layoutSignoff->setFileId($layoutFileId);
 						$signoffDao->updateObject($layoutSignoff);
 					}

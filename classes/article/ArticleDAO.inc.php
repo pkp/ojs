@@ -371,7 +371,7 @@ class ArticleDAO extends DAO {
 
 		$articleFileManager = new ArticleFileManager($articleId);
 		foreach ($articleFiles as $articleFile) {
-			$articleFileManager->deleteFile($articleFile->getFileId());
+			$articleFileManager->deleteFile($articleFile->getId());
 		}
 
 		$articleFileDao->deleteArticleFiles($articleId);

@@ -478,7 +478,7 @@ class ArticleFileManager extends FileManager {
 	 */
 	function generateFilename(&$articleFile, $fileStage, $originalName) {
 		$extension = $this->parseFileExtension($originalName);
-		$newFileName = $articleFile->getArticleId().'-'.$articleFile->getFileId().'-'.$articleFile->getRevision().'-'.$this->fileStageToAbbrev($fileStage).'.'.$extension;
+		$newFileName = $articleFile->getArticleId().'-'.$articleFile->getId().'-'.$articleFile->getRevision().'-'.$this->fileStageToAbbrev($fileStage).'.'.$extension;
 		$articleFile->setFileName($newFileName);
 		return $newFileName;
 	}
@@ -523,7 +523,7 @@ class ArticleFileManager extends FileManager {
 
 		if (!$this->uploadFile($fileName, $dir.$newFileName)) {
 			// Delete the dummy file we inserted
-			$articleFileDao->deleteArticleFileById($articleFile->getFileId());
+			$articleFileDao->deleteArticleFileById($articleFile->getId());
 
 			return false;
 		}
@@ -531,9 +531,9 @@ class ArticleFileManager extends FileManager {
 		if ($dummyFile) $articleFileDao->updateArticleFile($articleFile);
 		else $articleFileDao->insertArticleFile($articleFile);
 
-		if ($overwrite) $this->removePriorRevisions($articleFile->getFileId(), $articleFile->getRevision());
+		if ($overwrite) $this->removePriorRevisions($articleFile->getId(), $articleFile->getRevision());
 
-		return $articleFile->getFileId();
+		return $articleFile->getId();
 	}
 
 	/**
@@ -578,7 +578,7 @@ class ArticleFileManager extends FileManager {
 
 		if (!$this->writeFile($dir.$newFileName, $contents)) {
 			// Delete the dummy file we inserted
-			$articleFileDao->deleteArticleFileById($articleFile->getFileId());
+			$articleFileDao->deleteArticleFileById($articleFile->getId());
 
 			return false;
 		}
@@ -586,9 +586,9 @@ class ArticleFileManager extends FileManager {
 		if ($dummyFile) $articleFileDao->updateArticleFile($articleFile);
 		else $articleFileDao->insertArticleFile($articleFile);
 
-		if ($overwrite) $this->removePriorRevisions($articleFile->getFileId(), $articleFile->getRevision());
+		if ($overwrite) $this->removePriorRevisions($articleFile->getId(), $articleFile->getRevision());
 
-		return $articleFile->getFileId();
+		return $articleFile->getId();
 	}
 
 	/**
@@ -631,7 +631,7 @@ class ArticleFileManager extends FileManager {
 
 		if (!$this->copyFile($url, $dir.$newFileName)) {
 			// Delete the dummy file we inserted
-			$articleFileDao->deleteArticleFileById($articleFile->getFileId());
+			$articleFileDao->deleteArticleFileById($articleFile->getId());
 
 			return false;
 		}
@@ -641,9 +641,9 @@ class ArticleFileManager extends FileManager {
 		if ($dummyFile) $articleFileDao->updateArticleFile($articleFile);
 		else $articleFileDao->insertArticleFile($articleFile);
 
-		if ($overwrite) $this->removePriorRevisions($articleFile->getFileId(), $articleFile->getRevision());
+		if ($overwrite) $this->removePriorRevisions($articleFile->getId(), $articleFile->getRevision());
 
-		return $articleFile->getFileId();
+		return $articleFile->getId();
 	}
 
 	/**
@@ -670,16 +670,16 @@ class ArticleFileManager extends FileManager {
 
 		if (!$this->copyFile($temporaryFile->getFilePath(), $dir.$newFileName)) {
 			// Delete the dummy file we inserted
-			$articleFileDao->deleteArticleFileById($articleFile->getFileId());
+			$articleFileDao->deleteArticleFileById($articleFile->getId());
 
 			return false;
 		}
 
 		$articleFile->setFileSize(filesize($dir.$newFileName));
 		$articleFileDao->updateArticleFile($articleFile);
-		$this->removePriorRevisions($articleFile->getFileId(), $articleFile->getRevision());
+		$this->removePriorRevisions($articleFile->getId(), $articleFile->getRevision());
 
-		return $articleFile->getFileId();
+		return $articleFile->getId();
 	}
 }
 
