@@ -525,7 +525,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 				$templateMgr->assign_by_ref('galley', $galley);
 				if ($galley->isHTMLGalley() && $styleFile =& $galley->getStyleFile()) {
 					$templateMgr->addStyleSheet($request->url(null, 'article', 'viewFile', array(
-						$articleId, $galleyId, $styleFile->getId()
+						$articleId, $galleyId, $styleFile->getFileId()
 					)));
 				}
 				$templateMgr->display('submission/layout/proofGalleyHTML.tpl');

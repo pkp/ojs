@@ -38,7 +38,7 @@
 	<tr>
 		<td colspan="2">
 			{if $layoutFile}
-				<a href="{url op="downloadFile" path=$submission->getId()|to_array:$layoutFile->getId()}" class="file">{$layoutFile->getFileName()|escape}</a>&nbsp;&nbsp;{$layoutFile->getDateModified()|date_format:$dateFormatShort}
+				<a href="{url op="downloadFile" path=$submission->getId()|to_array:$layoutFile->getFileId()}" class="file">{$layoutFile->getFileName()|escape}</a>&nbsp;&nbsp;{$layoutFile->getDateModified()|date_format:$dateFormatShort}
 			{else}
 				{translate key="common.none"}
 			{/if}

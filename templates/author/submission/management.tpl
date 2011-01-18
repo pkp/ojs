@@ -23,7 +23,7 @@
 		<td width="20%" class="label">{translate key="submission.originalFile"}</td>
 		<td width="80%" colspan="2" class="data">
 			{if $submissionFile}
-				<a href="{url op="downloadFile" path=$submission->getId()|to_array:$submissionFile->getId():$submissionFile->getRevision()}" class="file">{$submissionFile->getFileName()|escape}</a>&nbsp;&nbsp;{$submissionFile->getDateModified()|date_format:$dateFormatShort}
+				<a href="{url op="downloadFile" path=$submission->getId()|to_array:$submissionFile->getFileId():$submissionFile->getRevision()}" class="file">{$submissionFile->getFileName()|escape}</a>&nbsp;&nbsp;{$submissionFile->getDateModified()|date_format:$dateFormatShort}
 			{else}
 				{translate key="common.none"}
 			{/if}

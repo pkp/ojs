@@ -43,7 +43,7 @@ class AuthorAction extends Action {
 		if ($designate && !HookRegistry::call('AuthorAction::designateReviewVersion', array(&$authorSubmission))) {
 			$submissionFile =& $authorSubmission->getSubmissionFile();
 			if ($submissionFile) {
-				$reviewFileId = $articleFileManager->copyToReviewFile($submissionFile->getId());
+				$reviewFileId = $articleFileManager->copyToReviewFile($submissionFile->getFileId());
 
 				$authorSubmission->setReviewFileId($reviewFileId);
 
@@ -77,9 +77,9 @@ class AuthorAction extends Action {
 			HookRegistry::call('AuthorAction::deleteArticleFile', array(&$articleFile, &$authorRevisions));
 			foreach ($authorRevisions as $round) {
 				foreach ($round as $revision) {
-					if ($revision->getFileId() == $articleFile->getId() &&
+					if ($revision->getFileId() == $articleFile->getFileId() &&
 						$revision->getRevision() == $articleFile->getRevision()) {
-						$articleFileManager->deleteFile($articleFile->getId(), $articleFile->getRevision());
+						$articleFileManager->deleteFile($articleFile->getFileId(), $articleFile->getRevision());
 					}
 				}
 			}
@@ -572,14 +572,14 @@ class AuthorAction extends Action {
 			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 			$reviewFilesByRound =& $reviewAssignmentDao->getReviewFilesByRound($article->getId());
 			$reviewFile = @$reviewFilesByRound[$article->getCurrentRound()];
-			if ($reviewFile && $fileId == $reviewFile->getId()) {
+			if ($reviewFile && $fileId == $reviewFile->getFileId()) {
 				$canDownload = true;
 			}
 
 			// Check editor version
 			$editorFiles = $authorSubmission->getEditorFileRevisions($article->getCurrentRound());
 			if (is_array($editorFiles)) foreach ($editorFiles as $editorFile) {
-				if ($editorFile->getId() == $fileId) {
+				if ($editorFile->getFileId() == $fileId) {
 					$canDownload = true;
 				}
 			}

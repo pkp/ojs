@@ -252,7 +252,7 @@ class ArticleFileDAO extends PKPFileDAO {
 	 * @return int
 	 */
 	function insertArticleFile(&$articleFile) {
-		$fileId = $articleFile->getId();
+		$fileId = $articleFile->getFileId();
 		$params = array(
 			$articleFile->getRevision() === null ? 1 : $articleFile->getRevision(),
 			(int) $articleFile->getArticleId(),
@@ -285,7 +285,7 @@ class ArticleFileDAO extends PKPFileDAO {
 			$articleFile->setFileId($this->getInsertArticleFileId());
 		}
 
-		return $articleFile->getId();
+		return $articleFile->getFileId();
 	}
 
 	/**
@@ -323,12 +323,12 @@ class ArticleFileDAO extends PKPFileDAO {
 				(int) $articleFile->getRound(),
 				$articleFile->getViewable(),
 				$articleFile->getAssocId(),
-				$articleFile->getId(),
+				$articleFile->getFileId(),
 				$articleFile->getRevision()
 			)
 		);
 
-		return $articleFile->getId();
+		return $articleFile->getFileId();
 
 	}
 
@@ -337,7 +337,7 @@ class ArticleFileDAO extends PKPFileDAO {
 	 * @param $article ArticleFile
 	 */
 	function deleteArticleFile(&$articleFile) {
-		return $this->deleteArticleFileById($articleFile->getId(), $articleFile->getRevision());
+		return $this->deleteArticleFileById($articleFile->getFileId(), $articleFile->getRevision());
 	}
 
 	/**

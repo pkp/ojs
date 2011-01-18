@@ -326,7 +326,7 @@ class ArticleDAO extends DAO {
 		$sectionEditorSubmissionDao->deleteReviewRoundsByArticle($articleId);
 
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-		$reviewAssignmentDao->deleteReviewAssignmentsByArticle($articleId);
+		$reviewAssignmentDao->deleteBySubmissionId($articleId);
 
 		$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
 		$editAssignmentDao->deleteEditAssignmentsByArticle($articleId);
@@ -371,7 +371,7 @@ class ArticleDAO extends DAO {
 
 		$articleFileManager = new ArticleFileManager($articleId);
 		foreach ($articleFiles as $articleFile) {
-			$articleFileManager->deleteFile($articleFile->getId());
+			$articleFileManager->deleteFile($articleFile->getFileId());
 		}
 
 		$articleFileDao->deleteArticleFiles($articleId);

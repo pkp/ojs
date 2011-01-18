@@ -90,7 +90,7 @@
 {if $styleFile}
 <tr valign="top">
 	<td width="20%" class="label">{translate key="common.fileName"}</td>
-	<td width="80%" class="value"><a class="action" href="{url op="downloadFile" path=$articleId|to_array:$styleFile->getId()}">{$styleFile->getFileName()|escape}</a></td>
+	<td width="80%" class="value"><a class="action" href="{url op="downloadFile" path=$articleId|to_array:$styleFile->getFileId()}">{$styleFile->getFileName()|escape}</a></td>
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="common.fileSize"}</td>
@@ -139,11 +139,11 @@
 <tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 {foreach name=images from=$galley->getImageFiles() item=imageFile}
 <tr valign="top">
-	<td><a class="action" href="{url op="downloadFile" path=$articleId|to_array:$imageFile->getId()}">{$imageFile->getFileName()|escape}</a></td>
+	<td><a class="action" href="{url op="downloadFile" path=$articleId|to_array:$imageFile->getFileId()}">{$imageFile->getFileName()|escape}</a></td>
 	<td>{$imageFile->getOriginalFileName()|escape}</td>
 	<td>{$imageFile->getNiceFileSize()}</td>
 	<td>{$imageFile->getDateUploaded()|date_format:$dateFormatShort}</td>
-	<td align="right"><input type="button" name="deleteImage[{$imageFile->getId()}]" value="{translate key="common.delete"}" class="button" onclick="return confirmAction('{url escape="false" op="deleteArticleImage" path=$galley->getArticleId()|to_array:$galley->getId():$imageFile->getId():$imageFile->getRevision()}', '{translate|escape:"jsparam" key="submission.layout.confirmDeleteGalleyImage"}')" /></td>
+	<td align="right"><input type="button" name="deleteImage[{$imageFile->getFileId()}]" value="{translate key="common.delete"}" class="button" onclick="return confirmAction('{url escape="false" op="deleteArticleImage" path=$galley->getArticleId()|to_array:$galley->getId():$imageFile->getFileId():$imageFile->getRevision()}', '{translate|escape:"jsparam" key="submission.layout.confirmDeleteGalleyImage"}')" /></td>
 </tr>
 <tr>
 	<td colspan="6" class="{if $smarty.foreach.images.last}end{/if}separator">&nbsp;</td>

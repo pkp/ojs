@@ -1333,7 +1333,7 @@ class SectionEditorAction extends Action {
 			if (!$layoutSignoff->getFileId()) {
 				import('classes.file.ArticleFileManager');
 				$articleFileManager = new ArticleFileManager($sectionEditorSubmission->getId());
-				if ($layoutFileId = $articleFileManager->copyToLayoutFile($copyEdFile->getId(), $copyEdFile->getRevision())) {
+				if ($layoutFileId = $articleFileManager->copyToLayoutFile($copyEdFile->getFileId(), $copyEdFile->getRevision())) {
 					$layoutSignoff->setFileId($layoutFileId);
 					$signoffDao->updateObject($layoutSignoff);
 				}
@@ -1652,9 +1652,9 @@ class SectionEditorAction extends Action {
 		foreach ($submission->getGalleys() as $galley) {
 			$images =& $articleGalleyDao->getGalleyImages($galley->getId());
 			foreach ($images as $imageFile) {
-				if ($imageFile->getArticleId() == $submission->getId() && $fileId == $imageFile->getId() && $imageFile->getRevision() == $revision) {
+				if ($imageFile->getArticleId() == $submission->getId() && $fileId == $imageFile->getFileId() && $imageFile->getRevision() == $revision) {
 					$articleFileManager = new ArticleFileManager($submission->getId());
-					$articleFileManager->deleteFile($imageFile->getId(), $imageFile->getRevision());
+					$articleFileManager->deleteFile($imageFile->getFileId(), $imageFile->getRevision());
 				}
 			}
 			unset($images);

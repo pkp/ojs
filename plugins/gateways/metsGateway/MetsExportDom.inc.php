@@ -108,7 +108,7 @@ class MetsExportDom {
 
 	function generateArticleHtmlGalleyImageFileDiv(&$doc, &$root, &$imageFile, &$article) {
 		$fDiv =& XMLCustomWriter::createElement($doc, 'METS:fptr');
-		XMLCustomWriter::setAttribute($fDiv, 'FILEID', 'F'.$imageFile->getId().'-A'.$article->getId());
+		XMLCustomWriter::setAttribute($fDiv, 'FILEID', 'F'.$imageFile->getFileId().'-A'.$article->getId());
 		XMLCustomWriter::appendChild($root, $fDiv);
 	}
 
@@ -479,7 +479,7 @@ class MetsExportDom {
 		$journal =& $journalDao->getJournal($article->getJournalId());
 
 		$chkmd5return = md5_file($filePath);
-		XMLCustomWriter::setAttribute($mfile, 'ID', 'F'.$imageFile->getId().'-A'.$article->getId());
+		XMLCustomWriter::setAttribute($mfile, 'ID', 'F'.$imageFile->getFileId().'-A'.$article->getId());
 		if($useAttribute != null) XMLCustomWriter::setAttribute($mfile, 'USE', $useAttribute);
 		XMLCustomWriter::setAttribute($mfile, 'SIZE', $imageFile->getFileSize());
 		XMLCustomWriter::setAttribute($mfile, 'MIMETYPE', $imageFile->getFileType());
@@ -493,7 +493,7 @@ class MetsExportDom {
 			XMLCustomWriter::appendChild($mfile, $fContent);
 		} else {
 			$fLocat =& XMLCustomWriter::createElement($doc, 'METS:FLocat');
-			$fileUrl = Request::url(null, 'article', 'viewFile', array($article->getId(), $galley->getBestGalleyId($journal), $imageFile->getId()));
+			$fileUrl = Request::url(null, 'article', 'viewFile', array($article->getId(), $galley->getBestGalleyId($journal), $imageFile->getFileId()));
 			XMLCustomWriter::setAttribute($fLocat, 'xlink:href', $fileUrl);
 			XMLCustomWriter::setAttribute($fLocat, 'LOCTYPE', 'URL');
 			XMLCustomWriter::appendChild($mfile, $fLocat);

@@ -108,11 +108,11 @@
 			<td width="20%" class="label">{translate key="submission.reviewVersion"}</td>
 			<td width="50%" class="value">
 				{if $lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT || $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT}
-					<input type="radio" name="editorDecisionFile" value="{$reviewFile->getId()},{$reviewFile->getRevision()}" />
+					<input type="radio" name="editorDecisionFile" value="{$reviewFile->getFileId()},{$reviewFile->getRevision()}" />
 				{/if}
-				<a href="{url op="downloadFile" path=$submission->getId()|to_array:$reviewFile->getId():$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()|escape}</a>&nbsp;&nbsp;
+				<a href="{url op="downloadFile" path=$submission->getId()|to_array:$reviewFile->getFileId():$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()|escape}</a>&nbsp;&nbsp;
 				{$reviewFile->getDateModified()|date_format:$dateFormatShort}
-				{if $copyeditFile && $copyeditFile->getSourceFileId() == $reviewFile->getId()}
+				{if $copyeditFile && $copyeditFile->getSourceFileId() == $reviewFile->getFileId()}
 					&nbsp;&nbsp;&nbsp;&nbsp;{translate key="submission.sent"}&nbsp;&nbsp;{$copyeditFile->getDateUploaded()|date_format:$dateFormatShort}
 				{/if}
 			</td>
@@ -126,9 +126,9 @@
 				<td width="20%" rowspan="{$authorFiles|@count}" class="label">{translate key="submission.authorVersion"}</td>
 			{/if}
 			<td width="80%" class="value">
-				{if $lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT || $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT}<input type="radio" name="editorDecisionFile" value="{$authorFile->getId()},{$authorFile->getRevision()}" /> {/if}<a href="{url op="downloadFile" path=$submission->getId()|to_array:$authorFile->getId():$authorFile->getRevision()}" class="file">{$authorFile->getFileName()|escape}</a>&nbsp;&nbsp;
+				{if $lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT || $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT}<input type="radio" name="editorDecisionFile" value="{$authorFile->getFileId()},{$authorFile->getRevision()}" /> {/if}<a href="{url op="downloadFile" path=$submission->getId()|to_array:$authorFile->getFileId():$authorFile->getRevision()}" class="file">{$authorFile->getFileName()|escape}</a>&nbsp;&nbsp;
 				{$authorFile->getDateModified()|date_format:$dateFormatShort}
-				{if $copyeditFile && $copyeditFile->getSourceFileId() == $authorFile->getId()}
+				{if $copyeditFile && $copyeditFile->getSourceFileId() == $authorFile->getFileId()}
 					&nbsp;&nbsp;&nbsp;&nbsp;{translate key="submission.sent"}&nbsp;&nbsp;{$copyeditFile->getDateUploaded()|date_format:$dateFormatShort}
 				{/if}
 			</td>
@@ -147,12 +147,12 @@
 				<td width="20%" rowspan="{$editorFiles|@count}" class="label">{translate key="submission.editorVersion"}</td>
 			{/if}
 			<td width="80%" class="value">
-				{if $lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT || $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT}<input type="radio" name="editorDecisionFile" value="{$editorFile->getId()},{$editorFile->getRevision()}" /> {/if}<a href="{url op="downloadFile" path=$submission->getId()|to_array:$editorFile->getId():$editorFile->getRevision()}" class="file">{$editorFile->getFileName()|escape}</a>&nbsp;&nbsp;
+				{if $lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT || $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT}<input type="radio" name="editorDecisionFile" value="{$editorFile->getFileId()},{$editorFile->getRevision()}" /> {/if}<a href="{url op="downloadFile" path=$submission->getId()|to_array:$editorFile->getFileId():$editorFile->getRevision()}" class="file">{$editorFile->getFileName()|escape}</a>&nbsp;&nbsp;
 				{$editorFile->getDateModified()|date_format:$dateFormatShort}&nbsp;&nbsp;&nbsp;&nbsp;
-				{if $copyeditFile && $copyeditFile->getSourceFileId() == $editorFile->getId()}
+				{if $copyeditFile && $copyeditFile->getSourceFileId() == $editorFile->getFileId()}
 					{translate key="submission.sent"}&nbsp;&nbsp;{$copyeditFile->getDateUploaded()|date_format:$dateFormatShort}&nbsp;&nbsp;&nbsp;&nbsp;
 				{/if}
-				<a href="{url op="deleteArticleFile" path=$submission->getId()|to_array:$editorFile->getId():$editorFile->getRevision()}" class="action">{translate key="common.delete"}</a>
+				<a href="{url op="deleteArticleFile" path=$submission->getId()|to_array:$editorFile->getFileId():$editorFile->getRevision()}" class="action">{translate key="common.delete"}</a>
 			</td>
 		</tr>
 	{foreachelse}
