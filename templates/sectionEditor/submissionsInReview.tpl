@@ -65,8 +65,8 @@
 		<td>
 			{foreach from=$submission->getDecisions() item=decisions}
 				{foreach from=$decisions item=decision name=decisionList}
-					{if $smarty.foreach.decisionList.last && $decision.dateDecided}{* #6351 *}
-						{$decision.dateDecided|date_format:$dateFormatTrunc}
+					{if $smarty.foreach.decisionList.last}
+						{$decision.dateDecided|date_format:$dateFormatTrunc}				
 					{/if}
 				{foreachelse}
 					&mdash;
