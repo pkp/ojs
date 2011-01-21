@@ -1,4 +1,4 @@
-?php
+<?php
 
 /**
  * @file plugins/importexport/quickSubmit/QuickSubmitForm.inc.php
