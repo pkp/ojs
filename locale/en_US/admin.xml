@@ -63,4 +63,15 @@
 	<message key="admin.mergeUsers.allUsers">All Enrolled Users</message>
 	<message key="admin.mergeUsers.confirm">Are you sure you wish to merge the selected {$oldAccountCount} account(s) into the account with the username "{$newUsername}"? The selected {$oldAccountCount} accounts will not exist afterwards. This action is not reversible.</message>
 	<message key="admin.mergerUsers.noneEnrolled">No enrolled users.</message>
+
+	<!-- Categories -->
+	<message key="admin.categories">Categories</message>
+	<message key="admin.categories.editTitle">Edit Category</message>
+	<message key="admin.categories.createTitle">Create Category</message>
+	<message key="admin.categories.create">Create a new Category</message>
+	<message key="admin.categories.noneCreated">No categories have been created.</message>
+	<message key="admin.categories.confirmDelete">Are you sure you wish to delete this category?</message>
+	<message key="admin.categories.name">Name</message>
+	<message key="admin.categories.nameRequired">A category name is required.</message>
+	
 </locale>

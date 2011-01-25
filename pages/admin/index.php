@@ -83,6 +83,16 @@ switch ($op) {
 		import('pages.admin.AdminFunctionsHandler');
 		break;
 	// Main administration page
+	// Categories
+	case 'categories':
+	case 'createCategory':
+	case 'editCategory':
+	case 'updateCategory':
+	case 'deleteCategory':
+	case 'moveCategory':
+		define('HANDLER_CLASS', 'AdminCategoriesHandler');
+		import('pages.admin.AdminCategoriesHandler');
+		break;
 	case 'index':
 		define('HANDLER_CLASS', 'AdminHandler');
 		import('pages.admin.AdminHandler');

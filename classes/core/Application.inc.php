@@ -86,6 +86,7 @@ class Application extends PKPApplication {
 			'ArticleSearchDAO' => 'classes.search.ArticleSearchDAO',
 			'AuthorDAO' => 'classes.article.AuthorDAO',
 			'AuthorSubmissionDAO' => 'classes.submission.author.AuthorSubmissionDAO',
+			'CategoryDAO' => 'classes.journal.categories.CategoryDAO',
 			'CommentDAO' => 'lib.pkp.classes.comment.CommentDAO',
 			'CopyeditorSubmissionDAO' => 'classes.submission.copyeditor.CopyeditorSubmissionDAO',
 			'EditAssignmentDAO' => 'classes.submission.editAssignment.EditAssignmentDAO',

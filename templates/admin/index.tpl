@@ -20,6 +20,7 @@
 	<li>&#187; <a href="{url op="journals"}">{translate key="admin.hostedJournals"}</a></li>
 	<li>&#187; <a href="{url op="languages"}">{translate key="common.languages"}</a></li>
 	<li>&#187; <a href="{url op="auth"}">{translate key="admin.authSources"}</a></li>
+	<li>&#187; <a href="{url op="categories"}">{translate key="admin.categories"}</a></li>
 	{call_hook name="Templates::Admin::Index::SiteManagement"}
 </ul>
 </div>
