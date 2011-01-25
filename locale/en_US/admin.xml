@@ -66,6 +66,9 @@
 
 	<!-- Categories -->
 	<message key="admin.categories">Categories</message>
+	<message key="admin.categories.enable.description">The Site Administrator may choose to define a set of categories here to help organize large sets of journals. Journal Managers may then choose several of these categories for each journal, and readers can browse journal collections by category.</message>
+	<message key="admin.categories.disableCategories">Do not organise journals into categories.</message>
+	<message key="admin.categories.enableCategories">Permit Journal Managers to organize journals into categories.</message>
 	<message key="admin.categories.editTitle">Edit Category</message>
 	<message key="admin.categories.createTitle">Create Category</message>
 	<message key="admin.categories.create">Create a new Category</message>
@@ -73,5 +76,4 @@
 	<message key="admin.categories.confirmDelete">Are you sure you wish to delete this category?</message>
 	<message key="admin.categories.name">Name</message>
 	<message key="admin.categories.nameRequired">A category name is required.</message>
-	
 </locale>

@@ -24,6 +24,8 @@ switch ($op) {
 	case 'advanced':
 	case 'authors':
 	case 'titles':
+	case 'categories':
+	case 'category':
 	case 'results':
 	case 'advancedResults':
 		define('HANDLER_CLASS', 'SearchHandler');

@@ -38,7 +38,8 @@
 		<li><a href="{url page="search" op="authors"}">{translate key="navigation.browseByAuthor"}</a></li>
 		<li><a href="{url page="search" op="titles"}">{translate key="navigation.browseByTitle"}</a></li>
 		{if $hasOtherJournals}
-		<li><a href="{url journal="index"}">{translate key="navigation.otherJournals"}</a></li>
+			<li><a href="{url journal="index"}">{translate key="navigation.otherJournals"}</a></li>
+			{if $siteCategoriesEnabled}<li><a href="{url journal="index" page="search" op="categories"}">{translate key="navigation.categories"}</a></li>{/if}
 		{/if}
 	</ul>
 	{/if}

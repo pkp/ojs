@@ -34,6 +34,7 @@ class JournalSetupStep1Form extends JournalSetupForm {
 				'doiSuffix' => 'string',
 				'doiSuffixPattern' => 'string',
 				'mailingAddress' => 'string',
+				'categories' => 'object',
 				'useEditorialBoard' => 'bool',
 				'contactName' => 'string',
 				'contactTitle' => 'string',
@@ -99,6 +100,10 @@ class JournalSetupStep1Form extends JournalSetupForm {
 			$this->setData($element, $elementValue);
 		}
 
+		// In case the category list changed, flush the cache.
+		$categoryDao =& DAORegistry::getDAO('CategoryDAO');
+		$categoryDao->rebuildCache();
+
 		return parent::execute();
 	}
 
@@ -109,6 +114,17 @@ class JournalSetupStep1Form extends JournalSetupForm {
 		$templateMgr =& TemplateManager::getManager();
 		if (Config::getVar('email', 'allow_envelope_sender'))
 			$templateMgr->assign('envelopeSenderEnabled', true);
+
+		// If Categories are enabled by Site Admin, make selection
+		// tools available to Journal Manager
+		$categoryDao =& DAORegistry::getDAO('CategoryDAO');
+		$categories =& $categoryDao->getCategories();
+		$site =& $request->getSite();
+		if ($site->getSetting('categoriesEnabled') && !empty($categories)) {
+			$templateMgr->assign('categoriesEnabled', true);
+			$templateMgr->assign('allCategories', $categories);
+		}
+
 		parent::display($request, $dispatcher);
 	}
 }

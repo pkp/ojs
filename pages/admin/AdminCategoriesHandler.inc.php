@@ -50,6 +50,10 @@ class AdminCategoriesHandler extends AdminHandler {
 		$templateMgr->addJavaScript('lib/pkp/js/lib/jquery/plugins/jquery.tablednd.js');
 		$templateMgr->addJavaScript('lib/pkp/js/functions/tablednd.js');
 		$templateMgr->assign_by_ref('categories', $categories);
+
+		$site =& $request->getSite();
+		$templateMgr->assign('categoriesEnabled', $site->getSetting('categoriesEnabled'));
+
 		$templateMgr->display('admin/categories/categories.tpl');
 	}
 
@@ -185,6 +189,14 @@ class AdminCategoriesHandler extends AdminHandler {
 
 			$categoryForm->display();
 		}
+	}
+
+	function setCategoriesEnabled($args, &$request) {
+		$this->validate();
+		$categoriesEnabled = $request->getUserVar('categoriesEnabled')==1?true:false;
+		$siteSettingsDao =& DAORegistry::getDAO('SiteSettingsDAO');
+		$siteSettingsDao->updateSetting('categoriesEnabled', $categoriesEnabled);
+		$request->redirect(null, null, 'categories');
 	}
 
 	function setupTemplate($request = null, $category = null, $subclass = false) {

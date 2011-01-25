@@ -62,6 +62,8 @@ class TemplateManager extends PKPTemplateManager {
 
 			$this->assign('homeContext', array());
 
+			$this->assign('siteCategoriesEnabled', $site->getSetting('categoriesEnabled'));
+
 			if (isset($journal)) {
 
 				$this->assign_by_ref('currentJournal', $journal);

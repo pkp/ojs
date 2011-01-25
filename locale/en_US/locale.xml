@@ -31,10 +31,9 @@
 
 	<!-- Journal Management -->
 
-
-
-
-
+	<!-- Categories -->
+	<message key="navigation.categories">Categories</message>
+	<message key="navigation.categories.browse">Browse</message>
 
 	<!--  peer review -->
 	<message key="submission.reviewForm">Review Form</message>

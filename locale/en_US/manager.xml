@@ -686,4 +686,8 @@
 	<message key="manager.subscriptionTypes.name">Subscription type</message>
 	<message key="manager.subscriptionTypes.noneCreated">No subscription types have been created.</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Subscription type created successfully.</message>
+
+	<!-- Categories -->
+	<message key="manager.setup.categories">Categories</message>
+	<message key="manager.setup.categories.description">Choose the most appropriate categories from the set listed above. Readers will be able to browse by category from the complete journal set.</message>
 </locale>

@@ -183,6 +183,56 @@ class SearchHandler extends Handler {
 		$templateMgr->display('search/titleIndex.tpl');
 	}
 
+	function categories($args, &$request) {
+		$this->validate();
+		$this->setupTemplate();
+
+		$site =& $request->getSite();
+		$journal =& $request->getJournal();
+
+		$categoryDao =& DAORegistry::getDAO('CategoryDAO');
+		$cache =& $categoryDao->getCache();
+
+		if ($journal || !$site->getSetting('categoriesEnabled') || !$cache) {
+			$request->redirect('index');
+		}
+
+		// Sort by category name
+		uasort($cache, create_function('$a, $b', '$catA = $a[\'category\']; $catB = $b[\'category\']; return strcasecmp($catA->getLocalizedName(), $catB->getLocalizedName());'));
+
+		$templateMgr =& TemplateManager::getManager();
+		$templateMgr->assign('categories', $cache);
+		$templateMgr->display('search/categories.tpl');
+	}
+
+	function category($args, &$request) {
+		$categoryId = (int) array_shift($args);
+
+		$this->validate();
+		$this->setupTemplate(true, 'categories');
+
+		$site =& $request->getSite();
+		$journal =& $request->getJournal();
+
+		$categoryDao =& DAORegistry::getDAO('CategoryDAO');
+		$cache =& $categoryDao->getCache();
+
+		if ($journal || !$site->getSetting('categoriesEnabled') || !$cache || !isset($cache[$categoryId])) {
+			$request->redirect('index');
+		}
+
+		$journals =& $cache[$categoryId]['journals'];
+		$category =& $cache[$categoryId]['category'];
+
+		// Sort by journal name
+		uasort($journals, create_function('$a, $b', 'return strcasecmp($a->getLocalizedTitle(), $b->getLocalizedTitle());'));
+
+		$templateMgr =& TemplateManager::getManager();
+		$templateMgr->assign_by_ref('journals', $journals);
+		$templateMgr->assign_by_ref('category', $category);
+		$templateMgr->display('search/category.tpl');
+	}
+
 	/**
 	 * Show basic search results.
 	 */
@@ -265,12 +315,18 @@ class SearchHandler extends Handler {
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate($subclass = false) {
+	function setupTemplate($subclass = false, $op = 'index') {
 		parent::setupTemplate();
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', 'user.searchAndBrowse');
+
+		$opMap = array(
+			'index' => 'navigation.search',
+			'categories' => 'navigation.categories'
+		);
+
 		$templateMgr->assign('pageHierarchy',
-			$subclass ? array(array(Request::url(null, 'search'), 'navigation.search'))
+			$subclass ? array(array(Request::url(null, 'search', $op), $opMap[$op]))
 				: array()
 		);
 

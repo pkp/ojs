@@ -114,6 +114,18 @@
 			<span class="instruct">{translate key="manager.setup.mailingAddressDescription"}</span>
 		</td>
 	</tr>
+	{if $categoriesEnabled}
+		<tr valign="top">
+			<td class="label">{fieldLabel name=categories key="manager.setup.categories"}</td>
+			<td class="value">
+				<select id="categories" name="categories[]" class="selectMenu" multiple="multiple">
+					{html_options options=$allCategories selected=$categories}
+				</select>
+				<br/>
+				{translate key="manager.setup.categories.description"}
+			</td>
+		</tr>
+	{/if}{* $categoriesEnabled *}
 </table>
 </div>
 
