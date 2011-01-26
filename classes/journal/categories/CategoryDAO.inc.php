@@ -54,7 +54,7 @@ class CategoryDAO extends ControlledVocabDAO {
 					'category' => $allCategories[$categoryId],
 					'journals' => array()
 				);
-				$categories[$categoryId]['journals'][] =& $journal;
+				$categories[$categoryId]['journals'][] = $journal;
 			}
 			unset($journal);
 		}

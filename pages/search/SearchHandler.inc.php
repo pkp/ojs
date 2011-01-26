@@ -230,6 +230,7 @@ class SearchHandler extends Handler {
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('journals', $journals);
 		$templateMgr->assign_by_ref('category', $category);
+		$templateMgr->assign('journalFilesPath', $request->getBaseUrl() . '/' . Config::getVar('files', 'public_files_dir') . '/journals/');
 		$templateMgr->display('search/category.tpl');
 	}
 
