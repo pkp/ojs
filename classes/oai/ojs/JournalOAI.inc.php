@@ -166,13 +166,16 @@ class JournalOAI extends OAI {
 	 * @see OAI#records
 	 */
 	function &records($metadataPrefix, $from, $until, $set, $offset, $limit, &$total) {
-		$sectionId = null;
-		if (isset($set)) {
-			list($journalId, $sectionId) = $this->setSpecToSectionId($set);
-		} else {
-			$journalId = $this->journalId;
+		$records = null;
+		if (!HookRegistry::call('JournalOAI::records', array(&$this, $from, $until, $set, $offset, $limit, $total, &$records))) {
+			$sectionId = null;
+			if (isset($set)) {
+				list($journalId, $sectionId) = $this->setSpecToSectionId($set);
+			} else {
+				$journalId = $this->journalId;
+			}
+			$records =& $this->dao->getRecords($journalId, $sectionId, $from, $until, $offset, $limit, $total);
 		}
-		$records =& $this->dao->getRecords($journalId, $sectionId, $from, $until, $offset, $limit, $total);
 		return $records;
 	}
 
@@ -180,13 +183,16 @@ class JournalOAI extends OAI {
 	 * @see OAI#identifiers
 	 */
 	function &identifiers($metadataPrefix, $from, $until, $set, $offset, $limit, &$total) {
-		$sectionId = null;
-		if (isset($set)) {
-			list($journalId, $sectionId) = $this->setSpecToSectionId($set);
-		} else {
-			$journalId = $this->journalId;
+		$records = null;
+		if (!HookRegistry::call('JournalOAI::identifiers', array(&$this, $from, $until, $set, $offset, $limit, $total, &$records))) {
+			$sectionId = null;
+			if (isset($set)) {
+				list($journalId, $sectionId) = $this->setSpecToSectionId($set);
+			} else {
+				$journalId = $this->journalId;
+			}
+			$records =& $this->dao->getIdentifiers($journalId, $sectionId, $from, $until, $offset, $limit, $total);
 		}
-		$records =& $this->dao->getIdentifiers($journalId, $sectionId, $from, $until, $offset, $limit, $total);
 		return $records;
 	}
 
@@ -194,7 +200,10 @@ class JournalOAI extends OAI {
 	 * @see OAI#sets
 	 */
 	function &sets($offset, &$total) {
-		$sets =& $this->dao->getJournalSets($this->journalId, $offset, $total);
+		$sets = null;
+		if (!HookRegistry::call('JournalOAI::sets', array(&$this, $offset, $total, &$sets))) {
+			$sets =& $this->dao->getJournalSets($this->journalId, $offset, $total);
+		}
 		return $sets;
 	}
 

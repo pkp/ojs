@@ -348,6 +348,8 @@ class OAIDAO extends DAO {
 		$record->datestamp = OAIUtils::UTCDate(strtotime($this->datetimeFromDB($row['last_modified'])));
 		$record->sets = array($journal->getPath() . ':' . $section->getLocalizedAbbrev());
 
+		HookRegistry::call('OAIDAO::_returnRecordFromRow', array(&$record, &$row));
+		
 		return $record;
 	}
 
@@ -366,6 +368,8 @@ class OAIDAO extends DAO {
 		$record->datestamp = OAIUtils::UTCDate(strtotime($this->datetimeFromDB($row['last_modified'])));
 		$record->sets = array($journal->getPath() . ':' . $section->getLocalizedAbbrev());
 
+		HookRegistry::call('OAIDAO::_returnIdentifierFromRow', array(&$record, &$row));
+		
 		return $record;
 	}
 

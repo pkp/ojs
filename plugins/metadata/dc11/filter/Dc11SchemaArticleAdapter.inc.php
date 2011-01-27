@@ -91,6 +91,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 				$authorName .= '; ' . $affiliation;
 			}
 			$dc11Description->addStatement('dc:creator', $authorName);
+			unset($authorName);
 		}
 
 		// Subject
@@ -169,6 +170,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 			foreach ($article->getSuppFiles() as $suppFile) {
 				$relation = Request::url($journal->getPath(), 'article', 'downloadSuppFile', array($article->getId(), $suppFile->getId()));
 				$dc11Description->addStatement('dc:relation', $relation);
+				unset($relation);
 			}
 		}
 
@@ -181,6 +183,8 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 
 		// Rights
 		$this->_addLocalizedElements($dc11Description, 'dc:rights', $journal->getSetting('copyrightNotice'));
+
+		Hookregistry::call('Dc11SchemaArticleAdapter::extractMetadataFromDataObject', array(&$this, $article, $journal, $issue, &$dc11Description));
 
 		return $dc11Description;
 	}
