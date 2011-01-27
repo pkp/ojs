@@ -10,7 +10,7 @@
  *}
 {strip}
 {assign var="pageTitle" value="editor.issues.futureIssues"}
-{url|assign:"currentUrl" page="editor" op="issues"}
+{url|assign:"currentUrl" page="editor" op="futureIssues"}
 {include file="common/header.tpl"}
 {/strip}
 
