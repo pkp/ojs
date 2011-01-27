@@ -168,6 +168,8 @@
 </table>
 </div>
 
+{call_hook name="Templates::Submission::Metadata::Metadata::AdditionalMetadata"}
+
 {if $currentJournal->getSetting('metaCitations')}
 	<div id="citations">
 	<h4>{translate key="submission.citations"}</h4>

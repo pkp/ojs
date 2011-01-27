@@ -389,6 +389,8 @@ function moveAuthor(dir, authorIndex) {
 
 <div class="separator"></div>
 
+{call_hook name="Templates::Submission::MetadataEdit::AdditionalMetadata"}
+
 {if $journalSettings.metaCitations}
 <div id="metaCitations">
 <h3>{translate key="submission.citations"}</h3>
