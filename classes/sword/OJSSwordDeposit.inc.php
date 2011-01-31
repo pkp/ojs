@@ -79,7 +79,10 @@ class OJSSwordDeposit {
 		}
 
 		foreach ($this->article->getAuthors() as $author) {
-			$this->package->addCreator($author->getFullName());
+			$creator = $author->getFullName(true);
+			$affiliation = $author->getAffiliation($this->journal->getPrimaryLocale());
+			if (!empty($affiliation)) $creator .= "; $affiliation";
+			$this->package->addCreator($creator);
 		}
 
 		// The article can be published or not. Support either.
