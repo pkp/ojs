@@ -811,7 +811,7 @@ class IssueManagementHandler extends EditorHandler {
 
 		if (!isset($journal)) Validation::redirectLogin();
 
-		if (isset($issueId)) {
+		if ($issueId) {
 			$issueDao =& DAORegistry::getDAO('IssueDAO');
 			$issue = $issueDao->getIssueById($issueId, $journal->getId());
 
