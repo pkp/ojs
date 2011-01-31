@@ -1,7 +1,7 @@
 {**
  * @file plugins/generic/booksForReview/templates/coverPageIssue.tpl
  *
- * Copyright (c) 2003-2010 John Willinsky
+ * Copyright (c) 2003-2011 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Display book cover image as article cover image in issue table of contents.
