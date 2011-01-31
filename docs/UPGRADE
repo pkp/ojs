@@ -128,6 +128,31 @@ latest release of OJS:
 
 
 
+Applying the Latest Recommended Patches
+---------------------------------------
+
+Starting with OJS version 2.3.3-2, the Public Knowledge Project development 
+team maintains a publicly-available list of recommended patches for each 
+release. These will add no new functionality and will typically consist of small, 
+easy-to-read patches for specific issues. A Recommended Patches list for your
+version of OJS  can be found on the PKP development wiki: 
+
+    <http://pkp.sfu.ca/wiki/index.php/OJS_Recommended_Patches> 
+
+Regardless of the method you used to download and apply the official system 
+files, you will also want to review the list of recommended patches specific 
+to your OJS version, and apply as necessary.
+
+To apply a recommended patch, open the bug report and download the attached 
+patch file(s), and run the following command from that directory:
+
+    $ patch -p1 < PATCH_FILE
+
+"PATCH_FILE" should be replaced with the path to the patch file that was 
+downloaded, e.g. "6276-ojs.patch".
+
+
+
 Upgrading the OJS database
 --------------------------
 
