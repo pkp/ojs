@@ -55,7 +55,6 @@ function chooseEndDate() {
 				break;
 			}
 		}
-		document.subscriptionForm.membership.value = months;
 	}
 }
 {/literal}
@@ -102,12 +101,11 @@ function chooseEndDate() {
 	</td>
 </tr>
 
-<script type="text/javascript">
-<!--
-
-// Select an end date that's appropriate for the default subscription type
-chooseEndDate();
-
-// -->
-</script>
-
+{* For new subscriptions, select end date for default subscription type *}
+{if !$subscriptionId}
+	<script type="text/javascript">
+	<!--
+	chooseEndDate();
+	// -->
+	</script>
+{/if}
