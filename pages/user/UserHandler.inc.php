@@ -314,6 +314,21 @@ class UserHandler extends Handler {
 	}
 
 	/**
+	 * Display an authorization denied message.
+	 * @param $args array
+	 * @param $request Request
+	 */
+	function authorizationDenied($args, &$request) {
+		$this->validate(true);
+		$authorizationMessage = htmlentities($request->getUserVar('message'));
+		$this->setupTemplate(true);
+		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_USER));
+		$templateMgr =& TemplateManager::getManager();
+		$templateMgr->assign('message', $authorizationMessage);
+		return $templateMgr->display('common/message.tpl');
+	}
+
+	/**
 	 * Validate that user is logged in.
 	 * Redirects to login form if not logged in.
 	 * @param $loginCheck boolean check if user is logged in
