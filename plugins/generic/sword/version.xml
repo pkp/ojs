@@ -14,4 +14,6 @@
 	<type>plugins.generic</type>
 	<release>1.0.0.0</release>
 	<date>2010-05-07</date>
+	<lazy-load>1</lazy-load>
+	<class>SwordPlugin</class>
 </version>
