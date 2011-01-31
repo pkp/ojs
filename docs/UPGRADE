@@ -144,7 +144,17 @@ files, you will also want to review the list of recommended patches specific
 to your OJS version, and apply as necessary.
 
 To apply a recommended patch, open the bug report and download the attached 
-patch file(s), and run the following command from that directory:
+patch file(s). (Note that bug reports can quite often include a number of 
+patches, some relevant to the application (ie. OJS) and version you are 
+running, and some not. Ensure that you download all and only the patches 
+specific to your application and version.) For each patch you download, 
+first attempt a dry-run application of the patch, to ensure that it applies 
+cleanly: 
+
+    $ patch -p1 --dry-run < PATCH_FILE
+
+If the patch applies cleanly, then run the following command, which will
+actually apply the patch: 
 
     $ patch -p1 < PATCH_FILE
 
