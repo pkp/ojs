@@ -84,7 +84,7 @@ class CommentHandler extends Handler {
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
 
 		$parent =& $commentDao->getById($parentId, $articleId);
-		if (isset($parent) && $parent->getArticleId() != $articleId) {
+		if (isset($parent) && $parent->getSubmissionId() != $articleId) {
 			Request::redirect(null, null, 'view', array($articleId, $galleyId));
 		}
 
