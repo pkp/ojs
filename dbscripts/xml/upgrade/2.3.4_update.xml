@@ -2,12 +2,12 @@
 <!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
 
 <!--
-  * 2.3.3-4_update.xml
+  * 2.3.4_update.xml
   *
   * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * 2.3.3-4 database updates XML file.
+  * 2.3.4 database updates XML file.
   -->
 <data>
 	<!-- Bug #6257: normalize plug-in names to lowercase
