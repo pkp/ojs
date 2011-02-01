@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/openAIRE/locale/de_DE/locale.xml
+  *
+  * Copyright (c) 2003-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * OpenAIRE plugin localization strings for the de_DE (Deutschland) locale.
+  -->
+ 
+<locale name="de_DE" full_name = "Deutsch (Deutschland)">
+		<message key="plugins.generic.openAIRE.displayName">OpenAIRE</message>
+		<message key="plugins.generic.openAIRE.description">Das OpenAIRE-PLug-In fügt das projectID-Element zu den Metadaten eines Artikels hinzu und erweitert die OAI-PMH-Schnittstelle gemäß den OpenAIRE Guidelines 1.1, um auf diese Weise OJS-Zeitschriften dabei zu unterstützen, OpenAIRE-konform zu werden.</message>
+		<message key="plugins.generic.openAIRE.projectID">ProjectID</message>
+		<message key="plugins.generic.openAIRE.metadata">OpenAIRE-spezifische Metadaten</message>
+		<message key="plugins.generic.openAIRE.projectID.description">(Die projectID entspricht der Grant Agreement number.)</message>
+		<message key="plugins.generic.openAIRE.projectIDValid">Bitte geben Sie eine gültige projectID ein (6 Ziffern)</message>
+</locale> 
