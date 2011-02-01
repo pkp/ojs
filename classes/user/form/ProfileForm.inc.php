@@ -194,7 +194,7 @@ class ProfileForm extends Form {
 			'isReader' => Validation::isReader(),
 			'isReviewer' => Validation::isReviewer(),
 			'existingInterests' => $existingInterests,
-			'currentInterests' => $currentInterests
+			'interestsKeywords' => $currentInterests
 		);
 	}
 

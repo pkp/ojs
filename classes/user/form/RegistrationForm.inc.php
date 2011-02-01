@@ -260,6 +260,22 @@ class RegistrationForm extends Form {
 				return false;
 			}
 
+			// Add reviewing interests to interests table
+			$interestDao =& DAORegistry::getDAO('InterestDAO');
+			$interests = Request::getUserVar('interestsKeywords');
+			$interests = array_map('urldecode', $interests); // The interests are coming in encoded -- Decode them for DB storage
+			$interestTextOnly = Request::getUserVar('interests');
+			if(!empty($interestsTextOnly)) {
+				// If JS is disabled, this will be the input to read
+				$interestsTextOnly = explode(",", $interestTextOnly);
+			} else $interestsTextOnly = null;
+			if ($interestsTextOnly && !isset($interests)) {
+				$interests = $interestsTextOnly;
+			} elseif (isset($interests) && !is_array($interests)) {
+				$interests = array($interests);
+			}
+			$interestDao->insertInterests($interests, $user->getId(), true);
+
 			$sessionManager =& SessionManager::getManager();
 			$session =& $sessionManager->getUserSession();
 			$session->setSessionVar('username', $user->getUsername());
@@ -328,21 +344,6 @@ class RegistrationForm extends Form {
 				unset($mail);
 			}
 		}
-
-		// Add reviewing interests to interests table
-		$interestDao =& DAORegistry::getDAO('InterestDAO');
-		$interests = Request::getUserVar('interestsKeywords');
-		$interestTextOnly = Request::getUserVar('interests');
-		if(!empty($interestsTextOnly)) {
-			// If JS is disabled, this will be the input to read
-			$interestsTextOnly = explode(",", $interestTextOnly);
-		} else $interestsTextOnly = null;
-		if ($interestsTextOnly && !isset($interests)) {
-			$interests = $interestsTextOnly;
-		} elseif (isset($interests) && !is_array($interests)) {
-			$interests = array($interests);
-		}
-		$interestDao->insertInterests($interests, $user->getId(), true);
 
 		if (isset($allowedRoles['reader']) && $this->getData('openAccessNotification')) {
 			$userSettingsDao =& DAORegistry::getDAO('UserSettingsDAO');

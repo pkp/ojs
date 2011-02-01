@@ -233,7 +233,7 @@
 		<td class="label">{fieldLabel for="interests" key="user.interests"}</td>
 		<td class="value"><ul id="interests"><li></li></ul><br />
 			<textarea name="interests" id="interestsTextOnly" rows="5" cols="40" class="textArea">
-				{foreach name=currentInterests from=$currentInterests item=interest}{$interest|urldecode}{if !$smarty.foreach.currentInterests.last}, {/if}{/foreach}
+				{foreach name=currentInterests from=$interestsKeywords item=interest}{$interest|urldecode}{if !$smarty.foreach.currentInterests.last}, {/if}{/foreach}
 			</textarea>
 		</td>
 	</tr>
