@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE version SYSTEM "../../../lib/pkp/dtd/pluginVersion.dtd">
+
+<!--
+  * version.xml
+  *
+  * Copyright (c) 2003-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Plugin version information.
+  -->
+<version>
+	<application>openAIRE</application>
+	<type>plugins.generic</type>
+	<release>1.0.0.0</release>
+	<date>2011-01-27</date>
+	<lazy-load>1</lazy-load>
+	<class>OpenAIREPlugin</class>
+</version>
