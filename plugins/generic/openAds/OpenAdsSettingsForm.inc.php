@@ -57,6 +57,8 @@ class OpenAdsSettingsForm extends Form {
 		$this->setData('headerAdOrientation', $plugin->getSetting($journalId, 'headerAdOrientation'));
 		$this->setData('sidebarAdId', $plugin->getSetting($journalId, 'sidebarAdId'));
 		$this->setData('contentAdId', $plugin->getSetting($journalId, 'contentAdId'));
+
+		$this->setData('pluginName', $plugin->getName());
 	}
 
 	/**
