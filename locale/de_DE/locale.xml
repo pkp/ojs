@@ -310,7 +310,7 @@ Bitte beachten Sie, dass die OAI-Schnittstelle für diese Website in der OJS-Sys
 <br /><br />
 LOCKSS muss erst dann eingerichtet werden, wenn die Zeitschrift vollständig in Betrieb genommen wurde. Dann führen Sie bitte die folgenden beiden Schritte aus:]]></message>
 	<!-- 3. Einrichtungsschritt  -->
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Empfohlene Creative Commons Copyright-Lizenz</h3>
+	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Empfohlene Creative-Commons-Lizenz</h3>
 <h4>1. Empfohlene Copyright-Regelungen für Zeitschriften mit Open Access</h4>
 Autor/innen, die in dieser Zeitschrift publizieren möchten, stimmen den folgenden Bedingungen zu:
 <ol type="a">
@@ -326,7 +326,7 @@ Autor/innen, die in dieser Zeitschrift publizieren möchten, stimmen den folgend
 	<li>Die Autor/innen können zusätzliche Verträge für die nicht-exklusive Verbreitung der in der Zeitschrift veröffentlichten Version ihrer Arbeit unter Nennung der Erstpublikation in dieser Zeitschrift eingehen (z.B. sie in Sammelpublikation oder einem Buch veröffentlichen).</li>
 	<li>Die Autor/innen werden dazu ermutigt, ihre Arbeit parallel zur Einreichung bei dieser Zeitschrift online zu veröffentlichen (z.B. auf den Homepages von Institutionen oder auf ihrer eigenen Homepage), weil so produktive Austauschprozesse wie auch eine frühe und erweiterte Bezugnahme auf das veröffentlichte Werk gefördert werden (siehe <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
 </ol>]]></message>
-	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Damit der Inhalt dieser Zeitschrift in einem weltweiten System von Forschungsdatenbanken indiziert wird, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registrieren Sie </a>die URL Ihrer Zeitschrift beim <a href="http://pkp.sfu.ca/harvester/" target="_blank">Metadaten-Harvester</a> des Public Knowledge Project. Der Harvester nimmt dann die Metadaten von jedem Beitrag der Zeitschrift auf und ermöglicht so eine genaue und umfassende Suche auf allen Forschungswebsites, die das Protocol for Metadata Harvesting der <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> verwenden.
+	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Damit der Inhalt dieser Zeitschrift in einem weltweiten System von Forschungsdatenbanken indiziert wird, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registrieren Sie</a> die URL Ihrer Zeitschrift beim <a href="http://pkp.sfu.ca/harvester/" target="_blank">Metadaten-Harvester</a> des Public Knowledge Project. Der Harvester nimmt dann die Metadaten von jedem Beitrag der Zeitschrift auf und ermöglicht so eine genaue und umfassende Suche auf allen Forschungswebsites, die das Protocol for Metadata Harvesting der <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> verwenden.
 <br /><br />
 Beachten Sie, dass Ihre Zeitschrift automatisch aufgenommen wird, wenn die gesamte Website schon beim PKP-Harvester registriert ist, und Sie sie nicht gesondert registrieren müssen.
 <br /><br />
@@ -425,7 +425,7 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br/>
 	<message key="reviewer.article.schedule.submitted">Gutachten eingereicht</message>
 	<message key="reviewer.article.schedule.due">Gutachten fällig</message>
 	<message key="reviewer.article.decision.accept">Beitrag annehmen</message>
-	<message key="reviewer.article.decision.pendingRevisions">Gutachten erforderlich</message>
+	<message key="reviewer.article.decision.pendingRevisions">Überarbeitung erforderlich</message>
 	<message key="reviewer.article.decision.resubmitHere">Erneut zur Begutachtung einreichen</message>
 	<message key="reviewer.article.decision.resubmitElsewhere">Anderswo erneut einreichen</message>
 	<message key="reviewer.article.decision.decline">Beitrag ablehnen</message>

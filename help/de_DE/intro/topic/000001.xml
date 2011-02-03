@@ -34,7 +34,7 @@
 		<![CDATA[
 <ol type="a">
 	<li><a href="http://pkp.sfu.ca/ojs_download" target="_blank">Laden Sie OJS herunter</a>  und installieren Sie die Software, indem Sie den Installationsanweisungen folgen, auf einem Server, der die erforderlichen Voraussetzungen erfüllt.</li>
-	<li><li>Benutzen Sie Administrationsnamen und -Passwort, die während der Installation generiert werden, und loggen Sie sich ein.</li>
+	<li><li>Benutzen Sie Administrationsnamen und -passwort, die während der Installation generiert werden, und loggen Sie sich ein.</li>
 	<li>Generieren Sie eine neue Zeitschrift unter "Hosted Journals".</li>
 	<li>Die Administration der Webseite wird automatisch als "Journal Manager" für die neue Zeitschrift eingetragen; diese Rolle kann aber auch weiteren Nutzer/innen zugewiesen werden.</li>
 	<li>In der Rolle als "Journal Manager" müssen dann im Setup fünf Stufen bearbeitet werden (nicht notwendigerweise in einem Durchgang). Danach können über die Webseite Beiträge eingereicht und redaktionelle Arbeitsabläufe verwaltet werden, und die Zeitschrift kann online veröffentlicht werden.</li>
@@ -59,7 +59,7 @@
 	</section>
 	<section title='5. Wie ist vorzugehen, wenn vor der eigentlichen Publikation Zugang zu Manuskripten gewährt werden soll, die noch unter Begutachtung oder in einem Preprint-Stadium sind?'>
 		<![CDATA[
-<p>Herausgeber/innen haben zwei Möglichkeiten, um Zugang zu Preprints zu ermöglichen:  Sie können eine eigene Rubrik für Preprints erzeugen, in die Artikel aufgenommen werden, die für eine spätere Ausgabe vorgesehen und noch nicht publikationsfertig sind. Die Preprints werden in das Inhaltsverzeichnis der aktuellen Ausgabe aufgenommen. Sobald diese Ausgabe veröffentlicht werden soll, werden sie aus dem Inhaltsverzeichnis entfernt und in das der folgenden Ausgabe übernommen. Alternativ kann der URL der Korrekturfassung der Layoutphase genutzt werden, um Preprints sichtbar zu machen.  Dieser URL erlaubt (ausgewählten Nutzer/innen) Zugang vor der eigentlichen Veröffentlichung. PKP sondiert derzeit außerdem mögliche Interessen an dieser Funktionalität, um sie perspektivisch ggf. in den regulären Ablauf zu integrieren.</p>
+<p>Herausgeber/innen haben zwei Möglichkeiten, um Zugang zu Preprints zu ermöglichen:  Sie können eine eigene Rubrik für Preprints erzeugen, in die Artikel aufgenommen werden, die für eine spätere Ausgabe vorgesehen und noch nicht publikationsfertig sind. Die Preprints werden in das Inhaltsverzeichnis der aktuellen Ausgabe aufgenommen. Sobald diese Ausgabe veröffentlicht werden soll, werden sie aus dem Inhaltsverzeichnis entfernt und in das der folgenden Ausgabe übernommen. Alternativ kann die URL der Korrekturfassung der Layoutphase genutzt werden, um Preprints sichtbar zu machen. Diese URL erlaubt (ausgewählten Nutzer/innen) Zugang vor der eigentlichen Veröffentlichung. PKP sondiert derzeit außerdem mögliche Interessen an dieser Funktionalität, um sie perspektivisch ggf. in den regulären Ablauf zu integrieren.</p>
 		]]>
 	</section>
 	<section title="6. Wie kann ich Informationen über meine Zeitschrift im Internet verbreiten?">

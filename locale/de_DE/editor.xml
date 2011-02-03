@@ -77,7 +77,7 @@
 	<message key="editor.issues.preview">(Voransicht)</message>
 	<message key="editor.issues.confirmPublish">Sind Sie sicher, dass Sie die neue Ausgabe veröffentlichen wollen?</message>
 	<message key="editor.issues.publicArticleIdExists">Die öffentliche Kennzeichnung für den folgenden Beitrag konnte nicht gespeichert werden:</message>
-	<message key="editor.issues.noLiveIssues">Keine aktuelle Ausgaben</message>
+	<message key="editor.issues.noLiveIssues">Keine aktuelle Ausgabe</message>
 	<message key="editor.issues.open">Offen</message>
 	<message key="editor.issues.pages">Seiten</message>
 	<message key="editor.navigation.issues">Ausgaben</message>
@@ -105,7 +105,7 @@
 	<message key="editor.article.replaceReviewer">Die Gutachterin/den Gutachter ersetzen</message>
 	<message key="editor.article.editorToEnter">Hier können Redakteur/innen Empfehlungen/Kommentare für die Gutachterin/den Gutachter eingeben.</message>
 	<message key="editor.article.uploadReviewForReviewer">Gutachten hochladen</message>
-	<message key="editor.article.peerReviewOptions">Peer Review-Optionen</message>
+	<message key="editor.article.peerReviewOptions">Peer-Review-Optionen</message>
 	<message key="editor.article.decision">Entscheidung</message>
 	<message key="editor.article.noEditorSelected">Kein/e Redakteur/in ausgewählt.</message>
 	<message key="editor.article.recordDecision">Entscheidung protokollieren</message>
@@ -138,7 +138,7 @@
 	<message key="editor.article.selectEditor">{$roleName} auswählen</message>
 	<message key="editor.article.selectDecision">Entscheidung auswählen</message>
 	<message key="editor.article.decision.accept">Beitrag annehmen</message>
-	<message key="editor.article.decision.pendingRevisions">Gutachten werden benötigt</message>
+	<message key="editor.article.decision.pendingRevisions">Überarbeitung erforderlich</message>
 	<message key="editor.article.decision.resubmit">Erneut zur Begutachtung einreichen</message>
 	<message key="editor.article.decision.decline">Beitrag ablehnen</message>
 	<message key="editor.article.selectLayoutEditor">Layouter/in auswählen</message>
