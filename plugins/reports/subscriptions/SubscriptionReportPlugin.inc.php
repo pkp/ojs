@@ -224,7 +224,7 @@ class SubscriptionReportPlugin extends ReportPlugin {
 						$columns[$index] = $subscription->getInstitutionName();
 						break;
 					case 'institution_mailing_address':
-						$columns[$index] = $subscription->getInstitutionMailingAddress();
+						$columns[$index] = $this->_html2text($subscription->getInstitutionMailingAddress());
 						break;
 					case 'domain':
 						$columns[$index] = $subscription->getDomain();
