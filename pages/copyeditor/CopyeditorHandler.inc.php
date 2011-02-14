@@ -84,12 +84,13 @@ class CopyeditorHandler extends Handler {
 
 		$templateMgr->assign('dateFrom', $fromDate);
 		$templateMgr->assign('dateTo', $toDate);
-		$templateMgr->assign('fieldOptions', Array(
+		$templateMgr->assign('fieldOptions', array(
 			SUBMISSION_FIELD_TITLE => 'article.title',
+			SUBMISSION_FIELD_ID => 'article.submissionId',
 			SUBMISSION_FIELD_AUTHOR => 'user.role.author',
 			SUBMISSION_FIELD_EDITOR => 'user.role.editor'
 		));
-		$templateMgr->assign('dateFieldOptions', Array(
+		$templateMgr->assign('dateFieldOptions', array(
 			SUBMISSION_FIELD_DATE_SUBMITTED => 'submissions.submitted',
 			SUBMISSION_FIELD_DATE_COPYEDIT_COMPLETE => 'submissions.copyeditComplete',
 			SUBMISSION_FIELD_DATE_LAYOUT_COMPLETE => 'submissions.layoutComplete',

@@ -112,7 +112,7 @@ class EditorHandler extends SectionEditorHandler {
 				// Convert submission array back to an ItemIterator class
 				import('lib.pkp.classes.core.ArrayItemIterator');
 				$submissions =& ArrayItemIterator::fromRangeInfo($submissionsArray, $rangeInfo);
-			}  else {
+			} else {
 				$rawSubmissions =& $editorSubmissionDao->_getUnfilteredEditorSubmissions(
 					$journal->getId(),
 					$request->getUserVar('section'),
@@ -129,6 +129,13 @@ class EditorHandler extends SectionEditorHandler {
 					$sortDirection
 				);
 				$submissions = new DAOResultFactory($rawSubmissions, $editorSubmissionDao, '_returnEditorSubmissionFromRow');
+			}
+
+
+			// If only result is returned from a search, fast-forward to it
+			if ($search && $submissions && $submissions->getCount() == 1) {
+				$submission =& $submissions->next();
+				$request->redirect(null, null, 'submission', array($submission->getId()));
 			}
 
 			$templateMgr->assign_by_ref('submissions', $submissions);
@@ -309,6 +316,7 @@ class EditorHandler extends SectionEditorHandler {
 	function _getSearchFieldOptions() {
 		return array(
 			SUBMISSION_FIELD_TITLE => 'article.title',
+			SUBMISSION_FIELD_ID => 'article.submissionId',
 			SUBMISSION_FIELD_AUTHOR => 'user.role.author',
 			SUBMISSION_FIELD_EDITOR => 'user.role.editor',
 			SUBMISSION_FIELD_REVIEWER => 'user.role.reviewer',
@@ -467,7 +475,7 @@ class EditorHandler extends SectionEditorHandler {
 			$templateMgr->assign('search', $search);
 			$templateMgr->assign('searchInitial', Request::getUserVar('searchInitial'));
 
-			$templateMgr->assign('fieldOptions', Array(
+			$templateMgr->assign('fieldOptions', array(
 				USER_FIELD_FIRSTNAME => 'user.firstName',
 				USER_FIELD_LASTNAME => 'user.lastName',
 				USER_FIELD_USERNAME => 'user.username',
