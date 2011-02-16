@@ -15,10 +15,14 @@
 <locale name="de_DE" full_name = "Deutsch (Deutschland)">
 	<message key="admin.hostedJournals">Zeitschriften auf dieser Website</message>
 	<message key="admin.settings.journalRedirect">Umleitung zu der Zeitschrift</message>
+	<message key="admin.settings.options">Optionen</message>
+	<message key="admin.settings.useAlphalist">Zeige bei Installationen mit mehreren Zeitschriften eine alphabetische Liste auf der Startseite, um eine schnelle alphabetische Nabigation zwischen den Zeitschriften zu ermöglichen.</message>
+	<message key="admin.settings.usePaging">Teile bei Installationen mit mehreren Zeitschriften die Liste der Zeitschriften auf mehrere Seiten auf.</message>
 	<message key="admin.settings.journalRedirectInstructions">Anfragen bei der Startseite werden zu dieser Zeitschrift umgeleitet. Dies kann hilfreich sein, wenn auf der Website z.B. nur eine einzige Zeitschrift angeboten wird.</message>
 	<message key="admin.settings.noJournalRedirect">Nicht umleiten</message>
 	<message key="admin.languages.primaryLocaleInstructions">Diese Regionaleinstellung wird die Standardeinstellung der Website und aller ihrer Zeitschriften.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Wählen Sie alle Regionaleinstellungen aus, die die Website anbieten soll. Die gewählten Parameter können von allen Zeitschriften, die auf der Website angeboten werden, verwendet werden und erscheinen auch im Sprachenmenü auf jeder Seite der Website (die Seiten bestimmter Zeitschriften können davon ausgenommen werden). Wenn nur eine Regionaleinstellung ausgewählt wird, erscheint das Sprachenmenü nicht, und den Zeitschriften stehen keine erweiterten Spracheinstellungen zur Verfügung.</message>
+	<message key="admin.locale.maybeIncomplete">Gekennzeichnete Lokaleinstellungen können unvollständig sein.</message>	
 	<message key="admin.languages.confirmUninstall">Sind Sie sicher, dass Sie diese Regionaleinstellung deinstallieren wollen? Jede Zeitschrift, die diesen Datensatz verwendet, wird davon betroffen sein.</message>
 	<message key="admin.languages.installNewLocalesInstructions">Wählen Sie zusätzliche Regionaleinstellungen, die dieses System unterstützen soll. Die Regionaleinstellungen müssen installiert sein, bevor sie von den angebotenen Zeitschriften verwendet werden können. Weitere Informationen zum Hinzufügen neuer Regionaleinstellungen finden Sie in der OJS-Dokumentation.</message>
 	<message key="admin.languages.downloadLocales">Regionaleinstellungen herunterladen</message>
@@ -59,5 +63,17 @@
 	<message key="admin.mergeUsers.allUsers">Alle registrierten Benutzer/innen</message>
 	<message key="admin.mergeUsers.confirm">Sind Sie sicher, dass Sie den Datensatz mit dem Benutzer/innen-Namen "{$oldUsername}" in den Datensatz mit dem Benutzer/innen-Namen "{$newUsername}" übertragen wollen? Der Datensatz mit dem Benutzer/innen-Namen "{$oldUsername}" wird dabei gelöscht. Diese Aktion kann nicht rückgängig gemacht werden.</message>
 	<message key="admin.mergerUsers.noneEnrolled">Keine registrierten Benutzer/innen.</message>
-	<message key="admin.locale.maybeIncomplete">Gekennzeichnete Lokaleinstellungen können unvollständig sein.</message>
+
+	<!-- Kategorien -->
+	<message key="admin.categories">Kategorien</message>
+	<message key="admin.categories.enable.description">Die Website-Administratorin/der Website-Administrator kann sich dafür entscheiden, eine Menge von Kategorien zu definieren, um die Organisation einer großen Menge von Zeitschriften zu erleichtern. Zeitschriftenverwalter/innen können dann mehrere dieser Kategorien für jede Zeitschrift auswählen, und Leser/innen können Zeitschriftensammlungen nach Kategorien durchsehen.</message>
+	<message key="admin.categories.disableCategories">Zeitschriften nicht in Kategorien organisieren.</message>
+	<message key="admin.categories.enableCategories">Den Zeitschriftenverwalter/innen erlauben, Zeitschriften in Kategorien zu organisieren.</message>
+	<message key="admin.categories.editTitle">Kategorie bearbeiten</message>
+	<message key="admin.categories.createTitle">Kategorie anlegen</message>
+	<message key="admin.categories.create">Eine neue Kategorie anlegen</message>
+	<message key="admin.categories.noneCreated">Es wurden keine Kategorien angelegt.</message>
+	<message key="admin.categories.confirmDelete">Sind Sie sicher, dass Sie diese Kategorie löschen wollen?</message>
+	<message key="admin.categories.name">Name</message>
+	<message key="admin.categories.nameRequired">Ein Kategorienname ist notwendig.</message>
 </locale>
