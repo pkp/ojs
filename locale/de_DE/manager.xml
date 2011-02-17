@@ -108,7 +108,6 @@
 	<message key="manager.plugins.invalidPluginArchive">Das hochgeladene Plug-In-Archiv enthält keinen zum Plug-In-Namen passenden Ordner.</message>
 	<message key="manager.plugins.wrongCategory">Das hochgeladene Plug-In passt nicht zu der Kategorie des aktualisierten Plug-Ins.</message>
 	<message key="manager.plugins.wrongName">Die version.xml in dem hochgeladenen Plug-In enthält einen Plug-In-Namen, der nicht zu dem Namen des aktualisierten Plug-Ins passt.</message>
-
 	<message key="manager.plugins.pleaseInstall">Plug-In nicht verfügbar. Bitte wählen Sie installieren</message>
 	<message key="manager.plugins.pleaseUpgrade">Das Plug-In existiert bereits, ist aber neuer als die installierte Version. Bitte wählen Sie Upgrade</message>
 	<message key="manager.plugins.tarCommandNotFound">Der tar-Befehl ist nicht verfügbar. Bitte konfigurieren Sie ihn in Ihrer  "config.inc.php".</message>
@@ -120,7 +119,6 @@
 	<message key="manager.plugins.uploadPluginDir">Plug-In-Datei auswählen</message>
 	<message key="manager.plugins.versionFileInvalid">version.xml im Plug-In-Verzeichnis enthält ungültige Daten.</message>
 	<message key="manager.plugins.versionFileNotFound">Version.xml wurde im Plug-In-Verzeichnis nicht gefunden</message>
-
 	<message key="manager.reviewFormElement.changeType">Ändern des Typs des Formularelements...</message>
 	<message key="manager.reviewFormElements">Formularelemente</message>
 	<message key="manager.reviewFormElements.addResponseItem">Eine Auswahl hinzufügen</message>
@@ -131,7 +129,6 @@
 	<message key="manager.reviewFormElements.create">Neues Element anlegen</message>
 	<message key="manager.reviewFormElements.dropdownbox">Auswahlfeld</message>
 	<message key="manager.reviewFormElements.edit">Formularelement bearbeiten</message>
-
 	<message key="manager.reviewFormElements.elementType">Typ des Elements</message>
 	<message key="manager.reviewFormElements.form.elementTypeRequired">Für das Formularelement ist ein Elementtyp erforderlich.</message>
 	<message key="manager.reviewFormElements.form.questionRequired">Für das Formularelement ist eine Frage erforderlich.</message>
@@ -144,7 +141,6 @@
 	<message key="manager.reviewFormElements.smalltextfield">Textfeld für ein Wort</message>
 	<message key="manager.reviewFormElements.textarea">Erweitertes Textfeld</message>
 	<message key="manager.reviewFormElements.textfield">Textfeld für eine Zeile</message>
-
 	<message key="manager.reviewForms">Begutachtungsformulare</message>
 	<message key="manager.reviewForms.completed">Beendet</message>
 	<message key="manager.reviewForms.confirmDeleteUnpublished">Bestätigen Sie das Löschen eines nicht veröffentlichten Begutachtungsformulars...</message>
@@ -158,7 +154,6 @@
 	<message key="manager.reviewForms.noneCreated">Es wurde kein Peer-Review-Formular erzeugt.</message>
 	<message key="manager.reviewForms.preview">Vorschau des Formulars</message>
 	<message key="manager.reviewForms.title">Titel</message>
-
 	<message key="manager.sections.abstractsNotRequired">Benötigt keine Abstracts.</message>
 	<message key="manager.sections.assigned">Rubrikredakteur/innen dieser Rubrik</message>
 	<message key="manager.sections.confirmDelete">Sind Sie sicher, dass Sie diese Rubrik endgültig entfernen wollen? Dadurch müssen Sie alle Artikel dieser Rubrik erneut veröffentlichen.</message>
@@ -189,7 +184,6 @@
 	<message key="manager.sections.wordCount">Wort-Anzahl</message>
 	<message key="manager.sections.wordCountInstructions">Wortanzahl für Abstracts für diese Rubrik begrenzen (0 für keine Begrenzung):</message>
 	<message key="manager.setup">Setup</message>
-
 	<message key="manager.setup.aboutItemContent">Inhalt</message>
 	<message key="manager.setup.addAboutItem">Eine "Über uns"-Eingabe einfügen</message>
 	<message key="manager.setup.addChecklistItem">Der Checkliste einen Punkt hinzufügen</message>
@@ -225,7 +219,6 @@
 	<message key="manager.setup.history">Zeitschriften-Geschichte</message>
 	<message key="manager.setup.historyDescription">Dieser Text erscheint auf der "Über uns"-Seite der Zeitschrift und kann genutzt werden, um Änderungen des Titels, in der Besetzung des Beirats und in anderen wesentlichen Belangen der Zeitschriftengeschichte zu beschreiben.</message>
 	<message key="manager.setup.copyediting">Lektor/in</message>
-
 	<message key="manager.setup.copyeditInstructions">Anweisungen für das Lektorat</message>
 	<message key="manager.setup.copyeditInstructionsDescription">Die Anweisungen werden den Lektor/innen, Autor/innen und Redakteur/innen mit dem zu bearbeitenden Beitrag übermittelt. Nachstehend finden Sie eine Reihe von Standardanweisungen im HTML-Format. Sie können jederzeit von der Zeitschriftenverwaltung ersetzt oder geändert werden (in HTML oder einfachem Text).</message>
 	<message key="manager.setup.copyrightNotice">Copyright-Vermerk</message>
@@ -252,7 +245,6 @@
 	<message key="manager.setup.doiPrefix">DOI-Präfix</message>
 	<message key="manager.setup.doiPrefixDescription"><![CDATA[Das DOI (Digital Object Identifier) Präfix wird von <a href="http://www.crossref.org" target="_new">CrossRef</a> vergeben und hat das Format 10.xxxx (z.B. 10.1234).]]></message>
 	<message key="manager.setup.doiSuffix">DOI-Suffix</message>
-
 	<message key="manager.setup.doiSuffixDefault">Nutzen Sie die Standardeinstellung (%j.v%vi%i.%a).</message>
 	<message key="manager.setup.doiSuffixPattern">Verwenden Sie das unten angegebene Muster, um DOI-Suffixe zu erzeugen. Nutzen Sie %j für die Initialen der Zeitschrift, %v für die Nummer des Jahrgangs, %i für die Nummer der Ausgabe, %a für den OJS-Artikel-ID und %p für die Seitenzahl.</message>
 	<message key="manager.setup.doiSuffixPattern.example">vol%viss%ipp%p würde z-B. einen DOI 10.1234/vol3iss2pp230 erzeugen</message>
@@ -271,7 +263,6 @@
 	<message key="manager.setup.emailBounceAddressDescription">Jede E-Mail, die nicht zugestellt werden kann, erzeugt eine Fehlermeldung, die an diese Adresse geschickt wird.</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Anmerkung:</strong> Die Website-Administrator/in muss in der OJS-Konfigurationsdatei die Option <tt>allow_envelope_sender</tt> aktivieren, um dies zu ermöglichen. Weitere Servereinstellungen können erforderlich sein (und sind nicht unbedingt auf allen Servern verfügbar). Siehe OJS-Dokumentation.]]></message>
 	<message key="manager.setup.emails">E-Mail-Kennzeichnung </message>
-
 	<message key="manager.setup.emailSignatureDescription">Alle E-Mail-Vorlagen, die vom System im Namen der Zeitschrift verschickt werden, tragen die folgende Signatur. Die E-Mail-Vorlagen können unter "Zeitschriftenverwaltung" bearbeitet werden.</message>
 	<message key="manager.setup.emailSignature">Signatur</message>
 	<message key="manager.setup.enableAnnouncements">Erlauben Sie den Zeitschriftenverwalter/innen, Mitteilungen hinzuzufügen.</message>
@@ -290,7 +281,6 @@
 	<message key="manager.setup.focusAndScopeDescription">Geben Sie hier eine Beschreibung der Zeitschrift ein, die unter "Über uns" erscheinen soll, und die Autor/innen, Leser/innen und Bibliothekar/innen die Bandbreite der Artikel und anderer Beiträge der Zeitschrift näher bringt.</message>
 	<message key="manager.setup.focusAndScopeOfJournal">Konzept</message>
 	<message key="manager.setup.focusScope">Konzept</message>
-
 	<message key="manager.setup.focusScopeDescription"><![CDATA[<b>BEISPIEL FÜR HTML-DATEN</strong>]]></message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Indizierung von Arbeiten für Autor/innen</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJS unterstützt das Protocol for Metadata Harvesting der <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a>, das den Zugang zu gut katalogisierten Forschungsquellen weltweit eröffnet. Die Autor/innen veröffentlichen Metadaten ihrer Beiträge nach einer ähnlichen Vorlage. Die Zeitschriftenverwalterin/der Zeitschriftenverwalter sollte die Kategorien für die Indizierung auswählen und den Autor/innen passende Beispiele an die Hand geben, die die Indizierung ihrer Arbeit erleichtern, wobei die Begriffe durch Semikolon getrennt werden (z.B. Begriff1; Begriff2). Die Einträge sollten als Beispiele (mit "z.B." oder "zum Beispiel") gekennzeichnet sein.]]></message>
@@ -300,7 +290,6 @@
 	<message key="manager.setup.form.journalTitleRequired">Der Titel der Zeitschrift ist erforderlich.</message>
 	<message key="manager.setup.form.numReviewersPerSubmission">Die Zahl der Gutachter/innen pro Beitrag wird benötigt.</message>
 	<message key="manager.setup.form.doiPrefixPattern">Das DOI.M pattern must be in the form 10.xxxx.</message>
-
 	<message key="manager.setup.form.supportEmailRequired">Die E-Mail-Adresse des Kontakts bei technischen Fragen ist erforderlich.</message>
 	<message key="manager.setup.form.supportNameRequired">Der Name des Kontakts bei technischen Fragen ist erforderlich</message>
 	<message key="manager.setup.frequencyOfPublication">Beginn und Erscheinungsfrequenz </message>
@@ -310,7 +299,6 @@
 	<message key="manager.setup.gettingDownTheDetails">1. Schritt: Angaben zur Zeitschrift festlegen</message>
 	<message key="manager.setup.guidelines">Richtlinien</message>
 	<message key="manager.setup.guidingSubmissions">3. Schritt: Beitragseinreichung</message>
-
 	<message key="manager.setup.homepageImage">Startseitengrafik </message>
 	<message key="manager.setup.homepageImageDescription">Fügen Sie in die  Mitte der Seite ein Bild oder eine Grafikdatei ein.</message>
 	<message key="manager.setup.includeCreativeCommons">Für Zeitschriften, die sofortigen oder verzögerten freien Zugang (Open Access) zu ihren Inhalten anbieten: Fügen Sie allen Beiträgen eine Creative-Commons-Lizenz zum entsprechenden Beitrag bei.</message>
@@ -322,7 +310,6 @@
 	<message key="manager.setup.initialIssue">Startausgabe</message>
 	<message key="manager.setup.initialIssueDescription">Geben Sie der Startausgabe (je nach gewähltem Format) eine eindeutige Bezeichnung:</message>
 	<message key="manager.setup.institution">Institution</message>
-
 	<message key="manager.setup.issnDescription"><![CDATA[Die ISSN (International Standard Serial Number) ist eine achtstellige Zahl, die periodischen Veröffentlichungen (einschließlich der elektronischen) zugeordnet ist. Die Verwaltung obliegt einem weltweiten Netzwerk nationaler Einrichtungen, das von einem internationalen Zentrum in Paris koordiniert und durch die UNESCO und die französische Regierung unterstützt wird. Eine Nummer erhalten Sie auf der <a href="http://www.issn.org" target="_new">ISSN-Website</a>. Sie kann jederzeit beantragt werden.]]></message>
 	<message key="manager.setup.issuePerVolume">Ausgaben pro Band</message>
 	<message key="manager.setup.itemsDescription">Es können jederzeit Einträge in die Navigationsleiste (Standard: "Startseite", "Über uns", "Benutzer/innen") am Kopf der Seite  hinzugefügt werden</message>
@@ -343,7 +330,6 @@
 	<message key="manager.setup.journalLayout">Zeitschriftenlayout</message>
 	<message key="manager.setup.journalLayoutDescription">Entscheiden Sie sich für eine Designvorlage für Ihre Zeitschrift und wählen Sie hier mögliche Layout-Bestandteile aus. Sie können auch ein Zeitschriften-Style Sheet hochladen, mit dessen Hilfe Sie die durch die System- und Themen-Style Sheets vorgegebenen Einstellungen ersetzen können.</message>
 	<message key="manager.setup.journalLogo">Logo der Zeitschrift</message>
-
 	<message key="manager.setup.journalLogo.altText">Logo der Zeitschrift</message>
 	<message key="manager.setup.journalPageFooter">Fußzeile der Zeitschrift </message>
 	<message key="manager.setup.journalPageFooterDescription">Dies ist der Fußzeile Ihrer Zeitschrift. Sollten Sie sie ändern oder aktualisieren wollen, kopieren Sie den neuen HTML-Text in das nachstehende Textfeld (z.B. einen weiteren Navigationbalken, einen Zähler usw. einfügen). Die Fußzeile erscheint auf allen Seiten der Zeitschrift.</message>
@@ -372,7 +358,6 @@
 	<message key="manager.setup.look.description">Titel der Startseite, Inhalt, Kopfzeile der Zeitschrift, Fußzeile, Navigationsleiste und Style Sheet.</message>
 	<message key="manager.setup.mailingAddressDescription">Ort und Postanschrift der Zeitschrift</message>
 	<message key="manager.setup.management">Management</message>
-
 	<message key="manager.setup.management.description">Zugang und Sicherheit, Planung, Ankündigungen, Lektorat, Layout und Korrekturlektorat.</message>
 	<message key="manager.setup.managementOfBasicEditorialSteps">Grundlegende Schritte bei der redaktionellen Arbeit</message>
 	<message key="manager.setup.managingPublishingSetup">Einstellungen zur Zeitschriftenverwaltung</message>
@@ -384,7 +369,6 @@
 	<message key="manager.setup.noImageFileUploaded">Keine Grafikdatei hochgeladen.</message>
 	<message key="manager.setup.noStyleSheetUploaded">Kein Style Sheet hochgeladen.</message>
 	<message key="manager.setup.note">Anmerkung</message>
-
 	<message key="manager.setup.notifications">Bestätigung der Beitragseinreichung durch die Autor/innen</message>
 	<message key="manager.setup.notifications.copyPrimaryContact">Schicken Sie eine Kopie an den in Schritt 1 festgelegten Hauptkontakt der Zeitschrift. </message>
 	<message key="manager.setup.notifications.copySpecifiedAddress">Schicken Sie eine Kopie an diese E-Mail-Adresse:</message>
@@ -417,7 +401,6 @@
 	<message key="manager.setup.proofreading">Korrekturlektor/innen</message>
 	<message key="manager.setup.provideRefLinkInstructions">Layouter/innen Anweisungen geben</message>
 	<message key="manager.setup.publicationFormat">Format</message>
-
 	<message key="manager.setup.publicationFormatDescription">Die Zeitschrift wird die folgenden Angaben zur Kennzeichnung ihrer Ausgaben verwenden (bei einzelnen Ausgaben kann von diesen Vorgaben abgewichen werden):</message>
 	<message key="manager.setup.publicationFormatNumber">Nummer</message>
 	<message key="manager.setup.publicationFormatTitle">Titel</message>
@@ -430,7 +413,6 @@
 	<message key="manager.setup.publisher">Verlag, Organisation</message>
 	<message key="manager.setup.publisherNoteDescription">Dieser Text erscheint unterhalb der Überschrift "Verlag, Organisation" und über dem Namen/URL des Verlags/der Organisation unter "Unterstützung" auf der "Über uns"-Seite.</message>
 	<message key="manager.setup.publisherDescription">Der Name der Organisation, die die Zeitschrift herausgibt, erscheint unter "Über uns".</message>
-
 	<message key="manager.setup.referenceLinking">Verlinkung von Literaturverweisen</message>
 	<message key="manager.setup.refLinkInstructions.description">Layout-Anweisungen für das Verlinken von Literaturverweisen</message>
 	<message key="manager.setup.registerJournalForIndexing">Die Zeitschrift für die Indizierung registrieren (Metadaten-Harvesting)</message>
@@ -441,7 +423,6 @@
 	<message key="manager.setup.reviewGuidelines">Begutachtungsrichtlinien</message>
 	<message key="manager.setup.reviewGuidelinesDescription">Die Begutachtungsrichtlinien beinhalten die Kriterien, an denen die Gutachter/innen ihre Entscheidung, ob sich ein Beitrag zur Veröffentlichung eignet, ausrichten sollen, sowie weitere Anweisungen für die Erstellung von effektiven und hilfreichen Gutachten.</message>
 	<message key="manager.setup.reviewOptions">Optionen für die Begutachtung</message>
-
 	<message key="manager.setup.reviewOptions.automatedReminders">Automatische Erinnerung der Gutachter/innen per E-Mail (aus den OJS-Standard-E-Mails) kann an zwei Stellen erfolgen. Die Redakteurin/der Redakteur kann hingegen den Gutachter/innen zu jeder Zeit direkt eine E-Mail schicken</message>
 	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[<strong>Anmerkung:</strong> Hierfür muss die/der Website-Administrator/in die <tt>scheduled_tasks</tt>-Option in der Konfigurationsdatei von OJS aktivieren. Weitere Servereinstellungen können erforderlich sein (und sind nicht unbedingt auf allen Servern verfügbar). Siehe OJS-Dokumentation.]]></message>
 	<message key="manager.setup.reviewOptions.blindReview">Anonyme Begutachtung</message>
@@ -461,7 +442,6 @@
 	<message key="manager.setup.reviewOptions.reviewTime">Zeitaufwand der Begutachtung</message>
 	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Bietet Links zu <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Anonyme Begutachtung sicherstellen</a> auf den Seiten, auf denen Autor/innen und Gutachter/innen Dateien hochladen.]]></message>
 	<message key="manager.setup.reviewPolicy">Richtlinien für die Begutachtung</message>
-
 	<message key="manager.setup.reviewProcess">Begutachtungsverfahren</message>
 	<message key="manager.setup.reviewProcessDescription"><![CDATA[OJS unterstützt zwei Modelle für die Verwaltung des Begutachtungsverfahrens. Es empfiehlt sich, das Standardbegutachtungsverfahren zu wählen, weil es die Gutachter/innen Schritt für Schritt durch das Verfahren führt und somit einen vollständigen Begutachtungsverlauf für jeden Beitrag garantiert. Außerdem enthält es eine automatische Erinnerungsfunktion sowie Standardempfehlungen zu den Beiträgen (Beitrag annehmen; Überarbeitung erforderlich; Erneut zur Begutachtung einreichen; Anderswo erneut einreichen; Beitrag ablehnen; Siehe Kommentare).<br /><br /> Wählen Sie unter den folgenden:]]></message>
 	<message key="manager.setup.reviewProcessEmail">Begutachtungsverfahren über E-Mail-Anhänge</message>
@@ -486,7 +466,6 @@
 	<message key="manager.setup.subjectClassificationExamples">(z.B. Mathematics Subject Classification; Library of Congress Classification)</message>
 	<message key="manager.setup.subjectExamples">(z.B. Photosynthese; Schwarze Löcher; Vier-Farben-Theorem; Bayes' Theorie)</message>
 	<message key="manager.setup.subjectKeywordTopic">Schlagworte</message>
-
 	<message key="manager.setup.subjectProvideExamples">Geben Sie Beispiele für Schlagworte oder Themen als Hilfestellung für die Autor/innen an.</message>
 	<message key="manager.setup.submissionGuidelines">Richtlinien für die Beitragseinreichung</message>
 	<message key="manager.setup.submissionPreparationChecklist">Checkliste für die Beitragseinreichung</message>
@@ -498,7 +477,6 @@
 	<message key="manager.setup.noPublishing">OJS wird nicht verwandt, um die Zeitschrifteninhalte online zu veröffentlichen.</message>
 	<message key="manager.setup.technicalSupportContact">Kontakt bei technischen Fragen</message>
 	<message key="manager.setup.technicalSupportContactDescription">Diese Person erscheint auf der "Kontakt"-Seite der Zeitschrift und kann von Redakteur/innen, Autor/innen und Gutachter/innen genutzt werden. Sie sollte mit der Handhabung des Systems aus all diesen Perspektiven vertraut sein. Da dieses Zeitschriftensystem nur sehr geringe technische Unterstützung benötigt, handelt es sich um eine Teilzeitaufgabe. Es könnte zum Beispiel vorkommen, dass Autor/innen und Gutachter/innen Schwierigkeiten mit den Anweisungen oder den Dateiformaten haben. Außerdem muss eine regelmäßige Sicherung der Zeitschriftendaten auf dem Server gewährleistet sein.</message>
-
 	<message key="manager.setup.typeExamples">(z.B. historische Untersuchung; quasi-experimentell; Literaturanalyse; Umfrage/Interview)</message>
 	<message key="manager.setup.typeMethodApproach">Forschungsansatz, -methode oder -verfahren</message>
 	<message key="manager.setup.typeProvideExamples">Beispiele für im Fachgebiet relevante Forschungsansätze, -methoden oder -verfahren angeben.</message>
@@ -507,7 +485,6 @@
 	<message key="manager.setup.useCopyeditors">Jeder Beitrag wird einer Lektorin/einem Lektor zugeteilt.</message>
 	<message key="manager.setup.useEditorialReviewBoard">Die Zeitschrift hat eine Redaktion/ein Herausgeber/innen- und Gutachter/innengremium.</message>
 	<message key="manager.setup.useImageLogo">Logo-Grafik</message>
-
 	<message key="manager.setup.useImageTitle">Titelgrafik</message>
 	<message key="manager.setup.useJournalStyleSheet">Style Sheet für die Zeitschrift</message>
 	<message key="manager.setup.useLayoutEditors">Ein/e Layouter/in wird damit beauftragt, die HTML-, PDF- oder sonstigen Dateien für die elektronische Publikation vorzubereiten.</message>
@@ -515,7 +492,6 @@
 	<message key="manager.setup.userRegistration">Registrierung von Benutzer/innen</message>
 	<message key="manager.setup.useTextTitle">Titeltext</message>
 	<message key="manager.setup.volumePerYear">Bände pro Jahr</message>
-
 	<message key="manager.statistics.reports">Berichterstellung</message>
 	<message key="manager.statistics.reports.description">OJS erstellt Berichte, die die Details der Verarbeitung von Beiträgen aus der Perspektive von Beiträgen, Redakteur/innen, Gutachter/innen sowie Rubriken über einen festgelegten Zeitraum nachzeichnen. Die Berichte werden im CSV-Format erstellt, die mit einer Tabellenkalkulation betrachtet werden können.</message>
 	<message key="manager.statistics.statistics">Zeitschriftenstatistik</message>
@@ -540,7 +516,6 @@
 	<message key="manager.statistics.statistics.reviewsPerReviewer">Anzahl der Gutachten pro Gutachter/in</message>
 	<message key="manager.statistics.statistics.selectSections">Wählen Sie die Rubriken für die Berechnung der Peer-Review-Statistiken der Zeitschrift aus.</message>
 	<message key="manager.statistics.statistics.subscriptions">Abonnements</message>
-
 	<message key="manager.subscriptionPolicies">Abonnementrichtlinien</message>
 	<message key="manager.subscriptionPolicies.authorSelfArchive">Richtlinien zur Selbstarchivierung durch die/den Autor/in</message>
 	<message key="manager.subscriptionPolicies.authorSelfArchiveDescription">Die folgenden Richtlinien zur Selbstarchivierung durch die/den Autor/in erscheinen im "Über uns" unter "Zur Zeitschrift"</message>
@@ -550,12 +525,10 @@
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">Monat(e) nach Erscheinen frei zugänglich</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Bitte wählen Sie eine gültige Frist.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">Die folgenden Richtlinien zu verzögertem Open Access erscheinen im "Über uns" unter "Zur Zeitschrift".</message>
-
 	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Bitte ankreuzen</message>
 	<message key="manager.subscriptionPolicies.expiry">Ende des Abonnements</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">Zum Ende des Abonnements kann den Leser/innen der Zugang zu sämtlichen Abonnement-Inhalten  verwehrt werden, oder sie können weiterhin Zugang zu Abonnement-Inhalten erhalten, die vor dem Abonnement-Ende veröffentlicht wurden.</message>
 	<message key="manager.subscriptionPolicies.expiryFull">Volles Abonnement-Ende</message>
-
 	<message key="manager.subscriptionPolicies.expiryFullDescription">Leser/innen wird der Zugang zu sämtlichen Abonnement-Inhalten verwehrt, wenn ihr Abonnement endet.</message>
 	<message key="manager.subscriptionPolicies.expiryPartial">Teilweises Abonnement-Ende</message>
 	<message key="manager.subscriptionPolicies.expiryPartialDescription">Leser/innen wird der Zugang zu aktuell veröffentlichten Abonnement-Inhalten verwehrt, aber sie erhalten weiterhin Zugriff auf Abonnement-Inhalte, die vor ihrem Abonnement-Ende veröffentlicht wurden.</message>
@@ -576,7 +549,6 @@
 	<message key="manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid">Bitte eine gültige Zahl vor "Monat(e) vor Ablauf des Abonnements" eintragen.</message>
 	<message key="manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid">Bitte eine gültige Zahl vor "Woche(n) nach Ablauf des Abonnements" eintragen</message>
 	<message key="manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid">Bitte eine gültige Zahl vor "Woche(n) vor Ablauf des Abonnements" eintragen.</message>
-
 	<message key="manager.subscriptionPolicies.openAccessNotificationDescription">Eingetragene Benutzer/innen können sich das Inhaltsverzeichnis einer Ausgabe per E-Mail zuschicken lassen, sobald sie frei zugänglich ist.</message>
 	<message key="manager.subscriptionPolicies.openAccessNotificationDisabled"><![CDATA[<strong>Anmerkung:</strong>Hierfür muss die/der Website-Adminstrator/in die <tt>scheduled_tasks</tt>-Option in der Konfigurationsdatei von OJS aktivieren. Weitere Servereinstellungen können erforderlich sein (und sind nicht unbedingt auf allen Servern verfügbar). Siehe OJS-Dokumentation.]]></message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotifications">Online-Zahlungs-Benachrichtigungen</message>
@@ -586,8 +558,7 @@
 	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual">Abonnementverwalter/innen per E-Mail über die Online-Erneuerung eines individuellen Abonnements informieren.</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional">Abonnementverwalter/innen per E-Mail über die Online-Erneuerung eines institutionellen Abonnements informieren.</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"><![CDATA[<strong>Hinweis:</strong> Für online erworbene institutionelle Abonnements sind die Bewilligung der  Domain und der IP-Bereiche und die Aktivierung des Abonnements durch die Abonnementverwalter/innen erforderlich.]]></message>
-
-xxx	<message key="manager.subscriptionPolicies.onlinePaymentDisabled"><![CDATA[<strong>Note:</strong> To enable these options, the Journal Manager must enable the online payments module, including online payments for subscriptions, under Reader Fees.]]></message>
+	<message key="manager.subscriptionPolicies.onlinePaymentDisabled"><![CDATA[<strong>Hinweis:</strong> Um diese Optionen zu aktivieren, muss die Zeitschriftenverwalterin/der Zeitschriftenverwalter iunter Leser/innengebühren die Onlinezahlungsmodule aktivieren, incl. der Onlinezahlungen für Abonnements.]]></message>
 	<message key="manager.subscriptionPolicies.openAccessOptions">Open-Access-Optionen für Abonnement-Zeitschriften</message>
 	<message key="manager.subscriptionPolicies.openAccessOptionsDescription">Zeitschriften mit Abonnement können "verzögerten Open Access" und/oder "Selbstarchivierung durch die/den Autor/in" anbieten und damit die Leser/innenschaft vergrößern und die Häufigkeit, in der Beiträge zitiert werden, heraufsetzen.</message>
 	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformation">Informationen zum Abonnement</message>
@@ -597,10 +568,8 @@ xxx	<message key="manager.subscriptionPolicies.onlinePaymentDisabled"><![CDATA[<
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Geben Sie bitte eine gültige E-Mail-Adresse ein.</message>
 	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Ihre Abonnementeinstellungen wurden aktualisiert</message>
 	<message key="manager.subscriptions">Abonnements</message>
-
 	<message key="manager.individualSubscriptions">Individuelle Abonnements</message>
 	<message key="manager.institutionalSubscriptions">Institutionelle Abonnements</message>
-
 	<message key="manager.subscriptions.confirmDelete">Sind Sie sicher, dass Sie dieses Abonnement löschen wollen?</message>
 	<message key="manager.subscriptions.summary">Zusammenfassung der Abonnements</message>
 	<message key="manager.subscriptions.create">Ein neues Abonnement erstellen</message>
@@ -611,10 +580,8 @@ xxx	<message key="manager.subscriptionPolicies.onlinePaymentDisabled"><![CDATA[<
 	<message key="manager.subscriptions.dateStart">Beginn</message>
 	<message key="manager.subscriptions.dateStartSearch">Datum Beginn</message>
 	<message key="manager.subscriptions.domain">Domain</message>
-
 	<message key="manager.subscriptions.edit">Abonnement bearbeiten</message>
 	<message key="manager.subscriptions.editTitle">Bearbeiten</message>
-
 	<message key="manager.subscriptions.withStatus">With Status</message>
 	<message key="manager.subscriptions.allStatus">Alle</message>
 	<message key="manager.subscriptions.form.status">Status</message>
@@ -623,21 +590,18 @@ xxx	<message key="manager.subscriptionPolicies.onlinePaymentDisabled"><![CDATA[<
 	<message key="manager.subscriptions.form.typeId">Abonnementtyp</message>
 	<message key="manager.subscriptions.form.typeIdRequired">Ein Abonnementtyp ist erforderlich.</message>
 	<message key="manager.subscriptions.form.typeIdValid">Wählen Sie einen gültigen Abonnementtyp.</message>
-
 	<message key="manager.subscriptions.form.dateStart">Anfangsdatum</message>
 	<message key="manager.subscriptions.form.dateStartRequired"> Ein Anfangsdatum des Abonnements ist erforderlich.</message>
 	<message key="manager.subscriptions.form.dateStartValid">Wählen Sie ein gültiges Anfangsdatum des Abonnements.</message>
 	<message key="manager.subscriptions.form.dateEnd">Enddatum</message>
 	<message key="manager.subscriptions.form.dateEndRequired">Ein Enddatum des Abonnements ist erforderlich.</message>
 	<message key="manager.subscriptions.form.dateEndValid">Wählen Sie ein gültiges Enddatum des Abonnements.</message>
-
 	<message key="manager.subscriptions.form.userProfileInstructions">Hinweis: Alle unten stehenden Veränderungen betreffen Nutzer/innenprofil systemweit.</message>
 	<message key="manager.subscriptions.form.userId">Benutzer/in</message>
 	<message key="manager.subscriptions.form.userContact">Kontakt</message>
 	<message key="manager.subscriptions.form.userIdRequired">Eine Benutzerin/ein Benutzer ist erforderlich.</message>
 	<message key="manager.subscriptions.form.userIdValid">Wählen Sie eine/n gültige/n Benutzer/in.</message>
 	<message key="manager.subscriptions.form.userCountryValid">Bitte wählen Sie ein gültiges Land aus.</message>
-
 	<message key="manager.subscriptions.form.notifyEmail">Senden Sie der Benutzerin/dem Benutzer eine Bestätigungs-E-Mail mit ihrem Benutzer/innen-Namen und den Einzelheiten des Abonnements.</message>
 	<message key="manager.subscriptions.form.notifyEmailValid">Bitte im Kästchen ankreuzen.</message>
 	<message key="manager.subscriptions.form.membership">Mitgliedschaft</message>
@@ -646,19 +610,16 @@ xxx	<message key="manager.subscriptionPolicies.onlinePaymentDisabled"><![CDATA[<
 	<message key="manager.subscriptions.form.membershipRequired">Der gewählte Abonnementtyp erfordert Auskünfte über Mitgliedschaften.</message>
 	<message key="manager.subscriptions.form.notes">Anmerkungen</message>
 	<message key="manager.subscriptions.form.domain">Domain</message>
-
 	<message key="manager.subscriptions.form.institutionName">Name der Einrichtung</message>
 	<message key="manager.subscriptions.form.institutionNameRequired">Ein Einrichtungsname ist erforderlich.</message>
 	<message key="manager.subscriptions.form.institutionMailingAddress">Adresse</message>
 	<message key="manager.subscriptions.form.domainInstructions">Geben Sie eine Domain ein, falls es sich um einen Abonnementtyp für Institutionen handelt. Wenn eine Domain eingegeben wurde, ist die Angabe des IP-Bereichs optional. Gültige Werte sind Domainnamen (z.B. lib.sfu.ca).</message>
 	<message key="manager.subscriptions.form.domainIPRangeRequired">Der gewählte Abonnementtyp macht die Angabe eines IP-Bereichs und/oder eines Domainnamens erforderlich.</message>
 	<message key="manager.subscriptions.form.domainValid">Geben Sie eine gültige Domain ein.</message>
-
 	<message key="manager.subscriptions.form.ipRange">IP-Bereich</message>
 	<message key="manager.subscriptions.form.ipRangeItem"><![CDATA[&#8226;]]></message>
 	<message key="manager.subscriptions.form.ipRangeInstructions">Geben Sie einen IP-Bereich ein, falls es sich um einen Abonnementtyp für Institutionen handelt . Wenn ein IP-Bereich eingegeben wurde, ist die Angabe der Domain optional. Gültige Werte sind IP-Nummern (z.B. 142.58.03.1), ein Bereich von IP-Nummern (z.B. 142.58.103.1 - 142.58.103.4), eine Platzhalter-IP-Nummer (z.B.142.58.103.*) oder eine beliebige Kombination der drei Formen, jeweils durch ";" getrennt (z.B.142.58.103.* - 142.58.107.* ; 142.58.108.1 ; 142.58.106.*)</message>
 	<message key="manager.subscriptions.form.ipRangeValid">Geben Sie einen gültigen IP-Bereich ein.</message>
-
 	<message key="manager.subscriptions.form.deleteIpRange">Löschen</message>
 	<message key="manager.subscriptions.form.addIpRange">Hinzufügen</message>
 	<message key="manager.subscriptions.form.saveAndCreateAnother">Speichern und ein weiteres Abonnement erstellen</message>
@@ -666,43 +627,35 @@ xxx	<message key="manager.subscriptionPolicies.onlinePaymentDisabled"><![CDATA[<
 	<message key="manager.subscriptions.form.subscriptionExists">Diese/r Benutzer/in hat diese Zeitschrift bereits abonniert.</message>
 	<message key="manager.subscriptions.form.typeRequired">Eine Abonnement-Art muss angelegt werden, bevor neue Abonnements vollzogen werden können.</message>
 	<message key="manager.subscriptions.ipRange">IP-Bereich</message>
-
 	<message key="manager.subscriptions.membership">Mitgliedschaft</message>
 	<message key="manager.subscriptions.referenceNumber">Referenznummer</message>
 	<message key="manager.subscriptions.notes">Anmerkungen</message>
-
 	<message key="manager.subscriptions.noneCreated">Es wurde kein Abonnement erstellt.</message>
 	<message key="manager.subscriptions.selectContact">Abonnement-Kontakt auswählen</message>
 	<message key="manager.subscriptions.selectUser">Benutzer/in auswählen</message>
 	<message key="manager.subscriptions.selectSubscriber.desc">Die Zeitschriftenverwalter/innen, Redakteur/innen, Rubrikredakteur/innen, Layouter/innen, Lektor/innen und Korrekturlektor/innen haben automatisch die Zugangsprivilegien von Abonnent/innen.</message>
 	<message key="manager.subscriptions.select">Auswählen</message>
-
 	<message key="manager.subscriptions.subscriptionCreatedSuccessfully">Abonnement erfolgreich erstellt.</message>
 	<message key="manager.subscriptions.subscriptionType">Abonnementtyp</message>
 	<message key="manager.subscriptions.user">Benutzer/in</message>
-
 	<message key="manager.subscriptions.contact">Kontaktname</message>
 	<message key="manager.subscriptions.institutionName">Name der Einrichtung</message>
-
 	<message key="manager.subscriptionTypes">Abonnementarten</message>
 	<message key="manager.subscriptionTypes.confirmDelete">Achtung! Sind Sie sicher, dass Sie diesen Abonnementtyp entfernen wollen? Alle Abonnements dieses Typs werden damit ebenfalls gelöscht.</message>
 	<message key="manager.subscriptionTypes.cost">Kosten</message>
 	<message key="manager.subscriptionTypes.subscriptions">Abonnements</message>
 	<message key="manager.subscriptionTypes.individual">Individuell</message>
 	<message key="manager.subscriptionTypes.institutional">Institutionell</message>
-
 	<message key="manager.subscriptionTypes.create">Einen neuen Abonnementtyp erstellen</message>
 	<message key="manager.subscriptionTypes.createTitle">Erstellen</message>
 	<message key="manager.subscriptionTypes.duration">Dauer</message>
 	<message key="manager.subscriptionTypes.edit">Den Abonnementtyp bearbeiten</message>
-
 	<message key="manager.subscriptionTypes.editTitle">Bearbeiten</message>
 	<message key="manager.subscriptionTypes.form.cost">Kosten</message>
 	<message key="manager.subscriptionTypes.form.costInstructions">Geben Sie bitte nur einen numerischen Wert (z.B. 40 oder 40,00) und keinen zusätzlichen Text (z.B. "EUR") ein.</message>
 	<message key="manager.subscriptionTypes.form.costNumeric">Die Kostenangabe muss ein positiver numerischer Wert sein.</message>
 	<message key="manager.subscriptionTypes.form.costRequired">Eine Kostenangabe ist erforderlich.</message>
 	<message key="manager.subscriptionTypes.form.currency">Währung</message>
-
 	<message key="manager.subscriptionTypes.form.currencyRequired">Eine Währungsangabe ist erforderlich.</message>
 	<message key="manager.subscriptionTypes.form.currencyValid">Wählen Sie eine gültige Währung.</message>
 	<message key="manager.subscriptionTypes.form.description">Beschreibung</message>
@@ -717,7 +670,6 @@ xxx	<message key="manager.subscriptionPolicies.onlinePaymentDisabled"><![CDATA[<
 	<message key="manager.subscriptionTypes.form.format">Format</message>
 	<message key="manager.subscriptionTypes.form.formatRequired">Eine Formatangabe für den Abonnementtyp ist erforderlich.</message>
 	<message key="manager.subscriptionTypes.form.formatValid">Wählen Sie ein gültiges Format für den Abonnementtyp.</message>
-
 	<message key="manager.subscriptionTypes.form.subscriptions">Abonnements</message>
 	<message key="manager.subscriptionTypes.form.individual">Individuell (Benutzer/innen erhalten ihren Zugang durch Einloggen)</message>
 	<message key="manager.subscriptionTypes.form.institutional">Abonnent/innen sollten über eine Domain oder einen IP-Bereich identifizierbar sein.</message>
@@ -735,7 +687,7 @@ xxx	<message key="manager.subscriptionPolicies.onlinePaymentDisabled"><![CDATA[<
 	<message key="manager.subscriptionTypes.noneCreated">Es wurden keine neuen Abonnementtypen erstellt.</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Abonnementtyp erfolgreich erstellt.</message>
 
-	<!-- Categories -->
+	<!-- Kategorien -->
 	<message key="manager.setup.categories">Kategorien</message>
 	<message key="manager.setup.categories.description">Wählen Sie die passendsten Kategorien aus der oben angezeigten Menge. Leser/innen können die gesamte Zeitschriftenmenge dann nach Kategorien durchsuchen.</message>
 </locale>
