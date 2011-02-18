@@ -30,7 +30,7 @@ function doSubmit() {
 {/literal}
 </script>
 
-<form name="journal" method="post" action="{url op="updateJournal"}">
+<form id="journal" method="post" action="{url op="updateJournal"}">
 <input type="hidden" name="submitted" value="0" />
 {if $journalId}
 <input type="hidden" name="journalId" value="{$journalId|escape}" />
